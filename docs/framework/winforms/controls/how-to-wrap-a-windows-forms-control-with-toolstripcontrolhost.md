@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Verwenden eines ToolStripControlHost als Wrapper für ein Windows Forms-Steuerelement'
+title: Wrap-Steuerelement mit ToolStripControlHost
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,62 +10,62 @@ helpviewer_keywords:
 - toolbars [Windows Forms], wrapping controls
 - ToolStrip control [Windows Forms], hosting controls
 ms.assetid: e2ce4990-661d-4882-a116-8a9eb575dc84
-ms.openlocfilehash: 6335d09a89225ae1e202a781a73bfd149608f5fc
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: c7dbe042623006ed9501016669d6451ba0667cbc
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68364189"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76728178"
 ---
-# <a name="how-to-wrap-a-windows-forms-control-with-toolstripcontrolhost"></a><span data-ttu-id="f8f9f-102">Vorgehensweise: Verwenden eines ToolStripControlHost als Wrapper für ein Windows Forms-Steuerelement</span><span class="sxs-lookup"><span data-stu-id="f8f9f-102">How to: Wrap a Windows Forms Control with ToolStripControlHost</span></span>
-<span data-ttu-id="f8f9f-103"><xref:System.Windows.Forms.ToolStripControlHost> dient zum Aktivieren des Hostings von beliebigen Windows Forms-Steuerelementen mithilfe des <xref:System.Windows.Forms.ToolStripControlHost>-Konstruktors oder durch die Erweiterung von <xref:System.Windows.Forms.ToolStripControlHost> selbst.</span><span class="sxs-lookup"><span data-stu-id="f8f9f-103"><xref:System.Windows.Forms.ToolStripControlHost> is designed to enable hosting of arbitrary Windows Forms controls by using the <xref:System.Windows.Forms.ToolStripControlHost> constructor or by extending <xref:System.Windows.Forms.ToolStripControlHost> itself.</span></span> <span data-ttu-id="f8f9f-104">Es ist einfacher, das Steuerelement durch Erweitern von <xref:System.Windows.Forms.ToolStripControlHost> und Implementieren der Eigenschaften und Methoden zu umschließen, die häufig verwendete Eigenschaften und Methoden des Steuerelements verfügbar machen.</span><span class="sxs-lookup"><span data-stu-id="f8f9f-104">It is easier to wrap the control by extending <xref:System.Windows.Forms.ToolStripControlHost> and implementing properties and methods that expose frequently used properties and methods of the control.</span></span> <span data-ttu-id="f8f9f-105">Sie können Ereignisse für das Steuerelement auch auf der <xref:System.Windows.Forms.ToolStripControlHost>-Ebene verfügbar machen.</span><span class="sxs-lookup"><span data-stu-id="f8f9f-105">You can also expose events for the control at the <xref:System.Windows.Forms.ToolStripControlHost> level.</span></span>  
+# <a name="how-to-wrap-a-windows-forms-control-with-toolstripcontrolhost"></a><span data-ttu-id="9858e-102">Gewusst wie: Verwenden eines ToolStripControlHost als Wrapper für ein Windows Forms-Steuerelement</span><span class="sxs-lookup"><span data-stu-id="9858e-102">How to: Wrap a Windows Forms Control with ToolStripControlHost</span></span>
+<span data-ttu-id="9858e-103"><xref:System.Windows.Forms.ToolStripControlHost> dient zum Aktivieren des Hostings von beliebigen Windows Forms-Steuerelementen mithilfe des <xref:System.Windows.Forms.ToolStripControlHost>-Konstruktors oder durch die Erweiterung von <xref:System.Windows.Forms.ToolStripControlHost> selbst.</span><span class="sxs-lookup"><span data-stu-id="9858e-103"><xref:System.Windows.Forms.ToolStripControlHost> is designed to enable hosting of arbitrary Windows Forms controls by using the <xref:System.Windows.Forms.ToolStripControlHost> constructor or by extending <xref:System.Windows.Forms.ToolStripControlHost> itself.</span></span> <span data-ttu-id="9858e-104">Es ist einfacher, das Steuerelement durch Erweitern von <xref:System.Windows.Forms.ToolStripControlHost> und Implementieren der Eigenschaften und Methoden zu umschließen, die häufig verwendete Eigenschaften und Methoden des Steuerelements verfügbar machen.</span><span class="sxs-lookup"><span data-stu-id="9858e-104">It is easier to wrap the control by extending <xref:System.Windows.Forms.ToolStripControlHost> and implementing properties and methods that expose frequently used properties and methods of the control.</span></span> <span data-ttu-id="9858e-105">Sie können Ereignisse für das Steuerelement auch auf der <xref:System.Windows.Forms.ToolStripControlHost>-Ebene verfügbar machen.</span><span class="sxs-lookup"><span data-stu-id="9858e-105">You can also expose events for the control at the <xref:System.Windows.Forms.ToolStripControlHost> level.</span></span>  
   
-### <a name="to-host-a-control-in-a-toolstripcontrolhost-by-derivation"></a><span data-ttu-id="f8f9f-106">So hosten Sie ein Steuerelement in einem "ToolStripControlHost" durch Ableitung</span><span class="sxs-lookup"><span data-stu-id="f8f9f-106">To host a control in a ToolStripControlHost by derivation</span></span>  
+### <a name="to-host-a-control-in-a-toolstripcontrolhost-by-derivation"></a><span data-ttu-id="9858e-106">So hosten Sie ein Steuerelement in einem "ToolStripControlHost" durch Ableitung</span><span class="sxs-lookup"><span data-stu-id="9858e-106">To host a control in a ToolStripControlHost by derivation</span></span>  
   
-1. <span data-ttu-id="f8f9f-107">Erweitern Sie <xref:System.Windows.Forms.ToolStripControlHost>.</span><span class="sxs-lookup"><span data-stu-id="f8f9f-107">Extend <xref:System.Windows.Forms.ToolStripControlHost>.</span></span> <span data-ttu-id="f8f9f-108">Implementieren Sie einen Parameter losen Konstruktor, der den Basisklassenkonstruktor aufruft, der das gewünschte Steuerelement übergibt.</span><span class="sxs-lookup"><span data-stu-id="f8f9f-108">Implement a parameterless constructor that calls the base class constructor passing in the desired control.</span></span>  
+1. <span data-ttu-id="9858e-107">Erweitern Sie <xref:System.Windows.Forms.ToolStripControlHost>.</span><span class="sxs-lookup"><span data-stu-id="9858e-107">Extend <xref:System.Windows.Forms.ToolStripControlHost>.</span></span> <span data-ttu-id="9858e-108">Implementieren Sie einen Parameter losen Konstruktor, der den Basisklassenkonstruktor aufruft, der das gewünschte Steuerelement übergibt.</span><span class="sxs-lookup"><span data-stu-id="9858e-108">Implement a parameterless constructor that calls the base class constructor passing in the desired control.</span></span>  
   
      [!code-cpp[System.Windows.Forms.ToolStripControlHost#10](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.ToolStripControlHost/CPP/form1.cpp#10)]
      [!code-csharp[System.Windows.Forms.ToolStripControlHost#10](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStripControlHost/CS/form1.cs#10)]
      [!code-vb[System.Windows.Forms.ToolStripControlHost#10](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStripControlHost/VB/form1.vb#10)]  
   
-2. <span data-ttu-id="f8f9f-109">Deklarieren Sie eine Eigenschaft mit demselben Typ wie für das umschlossene Steuerelement, und geben Sie `Control` als richtigen Typ des Steuerelements im Accessor der Eigenschaft zurück.</span><span class="sxs-lookup"><span data-stu-id="f8f9f-109">Declare a property of the same type as the wrapped control and return `Control` as the correct type of control in the property's accessor.</span></span>  
+2. <span data-ttu-id="9858e-109">Deklarieren Sie eine Eigenschaft mit demselben Typ wie für das umschlossene Steuerelement, und geben Sie `Control` als richtigen Typ des Steuerelements im Accessor der Eigenschaft zurück.</span><span class="sxs-lookup"><span data-stu-id="9858e-109">Declare a property of the same type as the wrapped control and return `Control` as the correct type of control in the property's accessor.</span></span>  
   
      [!code-cpp[System.Windows.Forms.ToolStripControlHost#11](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.ToolStripControlHost/CPP/form1.cpp#11)]
      [!code-csharp[System.Windows.Forms.ToolStripControlHost#11](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStripControlHost/CS/form1.cs#11)]
      [!code-vb[System.Windows.Forms.ToolStripControlHost#11](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStripControlHost/VB/form1.vb#11)]  
   
-3. <span data-ttu-id="f8f9f-110">Machen Sie andere häufig verwendete Eigenschaften und Methoden des umschlossenen Steuerelements mithilfe von Eigenschaften und Methoden in der erweiterten Klasse verfügbar.</span><span class="sxs-lookup"><span data-stu-id="f8f9f-110">Expose other frequently used properties and methods of the wrapped control with properties and methods in the extended class.</span></span>  
+3. <span data-ttu-id="9858e-110">Machen Sie andere häufig verwendete Eigenschaften und Methoden des umschlossenen Steuerelements mithilfe von Eigenschaften und Methoden in der erweiterten Klasse verfügbar.</span><span class="sxs-lookup"><span data-stu-id="9858e-110">Expose other frequently used properties and methods of the wrapped control with properties and methods in the extended class.</span></span>  
   
      [!code-cpp[System.Windows.Forms.ToolStripControlHost#12](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.ToolStripControlHost/CPP/form1.cpp#12)]
      [!code-csharp[System.Windows.Forms.ToolStripControlHost#12](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStripControlHost/CS/form1.cs#12)]
      [!code-vb[System.Windows.Forms.ToolStripControlHost#12](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStripControlHost/VB/form1.vb#12)]  
   
-4. <span data-ttu-id="f8f9f-111">Überschreiben Sie optional die Methoden <xref:System.Windows.Forms.ToolStripControlHost.OnSubscribeControlEvents%2A> und <xref:System.Windows.Forms.ToolStripControlHost.OnUnsubscribeControlEvents%2A>, und fügen Sie die bereitzustellenden Steuerelementereignisse hinzu.</span><span class="sxs-lookup"><span data-stu-id="f8f9f-111">Optionally, override the <xref:System.Windows.Forms.ToolStripControlHost.OnSubscribeControlEvents%2A>, and <xref:System.Windows.Forms.ToolStripControlHost.OnUnsubscribeControlEvents%2A> methods and add the control events you want to expose.</span></span>  
+4. <span data-ttu-id="9858e-111">Überschreiben Sie optional die Methoden <xref:System.Windows.Forms.ToolStripControlHost.OnSubscribeControlEvents%2A> und <xref:System.Windows.Forms.ToolStripControlHost.OnUnsubscribeControlEvents%2A>, und fügen Sie die bereitzustellenden Steuerelementereignisse hinzu.</span><span class="sxs-lookup"><span data-stu-id="9858e-111">Optionally, override the <xref:System.Windows.Forms.ToolStripControlHost.OnSubscribeControlEvents%2A>, and <xref:System.Windows.Forms.ToolStripControlHost.OnUnsubscribeControlEvents%2A> methods and add the control events you want to expose.</span></span>  
   
      [!code-cpp[System.Windows.Forms.ToolStripControlHost#16](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.ToolStripControlHost/CPP/form1.cpp#16)]
      [!code-csharp[System.Windows.Forms.ToolStripControlHost#16](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStripControlHost/CS/form1.cs#16)]
      [!code-vb[System.Windows.Forms.ToolStripControlHost#16](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStripControlHost/VB/form1.vb#16)]  
   
-5. <span data-ttu-id="f8f9f-112">Geben Sie die erforderlichen Wrapper für die Ereignisse an, die Sie verfügbar machen möchten.</span><span class="sxs-lookup"><span data-stu-id="f8f9f-112">Provide the necessary wrapping for the events you want to expose.</span></span>  
+5. <span data-ttu-id="9858e-112">Geben Sie die erforderlichen Wrapper für die Ereignisse an, die Sie verfügbar machen möchten.</span><span class="sxs-lookup"><span data-stu-id="9858e-112">Provide the necessary wrapping for the events you want to expose.</span></span>  
   
      [!code-cpp[System.Windows.Forms.ToolStripControlHost#17](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.ToolStripControlHost/CPP/form1.cpp#17)]
      [!code-csharp[System.Windows.Forms.ToolStripControlHost#17](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStripControlHost/CS/form1.cs#17)]
      [!code-vb[System.Windows.Forms.ToolStripControlHost#17](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStripControlHost/VB/form1.vb#17)]  
   
-## <a name="example"></a><span data-ttu-id="f8f9f-113">Beispiel</span><span class="sxs-lookup"><span data-stu-id="f8f9f-113">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="9858e-113">Beispiel</span><span class="sxs-lookup"><span data-stu-id="9858e-113">Example</span></span>  
  [!code-cpp[System.Windows.Forms.ToolStripControlHost#13](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.ToolStripControlHost/CPP/form1.cpp#13)]
  [!code-csharp[System.Windows.Forms.ToolStripControlHost#13](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStripControlHost/CS/form1.cs#13)]
  [!code-vb[System.Windows.Forms.ToolStripControlHost#13](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStripControlHost/VB/form1.vb#13)]  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="f8f9f-114">Kompilieren des Codes</span><span class="sxs-lookup"><span data-stu-id="f8f9f-114">Compiling the Code</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="9858e-114">Kompilieren des Codes</span><span class="sxs-lookup"><span data-stu-id="9858e-114">Compiling the Code</span></span>  
   
-<span data-ttu-id="f8f9f-115">Für dieses Beispiel benötigen Sie Folgendes:</span><span class="sxs-lookup"><span data-stu-id="f8f9f-115">This example requires:</span></span>
+<span data-ttu-id="9858e-115">Für dieses Beispiel benötigen Sie Folgendes:</span><span class="sxs-lookup"><span data-stu-id="9858e-115">This example requires:</span></span>
   
-- <span data-ttu-id="f8f9f-116">Verweise auf die Assemblys "System" und "System.Windows.Forms".</span><span class="sxs-lookup"><span data-stu-id="f8f9f-116">References to the System and System.Windows.Forms assemblies.</span></span>  
+- <span data-ttu-id="9858e-116">Verweise auf die Assemblys "System" und "System.Windows.Forms".</span><span class="sxs-lookup"><span data-stu-id="9858e-116">References to the System and System.Windows.Forms assemblies.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f8f9f-117">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="f8f9f-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="9858e-117">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="9858e-117">See also</span></span>
 
 - <xref:System.Windows.Forms.ToolStripControlHost>
-- [<span data-ttu-id="f8f9f-118">Übersicht über das ToolStrip-Steuerelement</span><span class="sxs-lookup"><span data-stu-id="f8f9f-118">ToolStrip Control Overview</span></span>](toolstrip-control-overview-windows-forms.md)
-- [<span data-ttu-id="f8f9f-119">Architektur des ToolStrip-Steuerelements</span><span class="sxs-lookup"><span data-stu-id="f8f9f-119">ToolStrip Control Architecture</span></span>](toolstrip-control-architecture.md)
-- [<span data-ttu-id="f8f9f-120">Zusammenfassung der ToolStrip-Technologie</span><span class="sxs-lookup"><span data-stu-id="f8f9f-120">ToolStrip Technology Summary</span></span>](toolstrip-technology-summary.md)
+- [<span data-ttu-id="9858e-118">Übersicht über das ToolStrip-Steuerelement</span><span class="sxs-lookup"><span data-stu-id="9858e-118">ToolStrip Control Overview</span></span>](toolstrip-control-overview-windows-forms.md)
+- [<span data-ttu-id="9858e-119">Architektur des ToolStrip-Steuerelements</span><span class="sxs-lookup"><span data-stu-id="9858e-119">ToolStrip Control Architecture</span></span>](toolstrip-control-architecture.md)
+- [<span data-ttu-id="9858e-120">Zusammenfassung der ToolStrip-Technologie</span><span class="sxs-lookup"><span data-stu-id="9858e-120">ToolStrip Technology Summary</span></span>](toolstrip-technology-summary.md)
