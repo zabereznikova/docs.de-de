@@ -1,50 +1,50 @@
 ---
-title: Standardfunktionalität des DataGridView-Steuerelements von Windows Forms
+title: Standardfunktionen im DataGridView-Steuerelement
 ms.date: 03/30/2017
 helpviewer_keywords:
 - data grids [Windows Forms], default functionality in DataGridView control
 - DataGridView control [Windows Forms], default functionality
 ms.assetid: 4405f697-cad1-4839-9bcd-8ddb09d9f00e
-ms.openlocfilehash: b84d5a279bfe7cd99262ca904daeceabc9d0355d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b695883ac7ec3fb0c459adb66214b0eceab3a128
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64648068"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76746136"
 ---
 # <a name="default-functionality-in-the-windows-forms-datagridview-control"></a>Standardfunktionalität des DataGridView-Steuerelements von Windows Forms
-Die Windows-Formulare <xref:System.Windows.Forms.DataGridView> Steuerelement bietet Benutzern eine beträchtliche Menge an Standardfunktionen.  
+Das Windows Forms <xref:System.Windows.Forms.DataGridView>-Steuerelement bietet Benutzern eine beträchtliche Menge an Standardfunktionen.  
   
-## <a name="default-functionality"></a>Standardfunktionen  
- Standardmäßig eine <xref:System.Windows.Forms.DataGridView> Steuerelement:  
+## <a name="default-functionality"></a>Standardfunktionalität  
+ Standardmäßig ist ein <xref:System.Windows.Forms.DataGridView>-Steuerelement:  
   
-- Zeigt automatisch Spaltenüberschriften und Zeilenüberschriften, die sichtbar bleiben, wie vertikalem der Tabelle Bildlauf an.  
+- Zeigt automatisch Spaltenkopfzeilen und Zeilen Header an, die sichtbar bleiben, wenn die Tabelle vertikal scrollt.  
   
-- Verfügt über einen Zeilenkopf, der einen Auswahlindikator für die aktuelle Zeile enthält.  
+- Verfügt über einen Zeilen Header, der einen Auswahl Indikator für die aktuelle Zeile enthält.  
   
-- Verfügt über ein Auswahlrechteck in der ersten Zelle ein.  
+- Hat ein Auswahl Rechteck in der ersten Zelle.  
   
-- Enthält Spalten, die automatisch geändert werden können, wenn der Benutzer die Spaltenunterteiler doppelklickt.  
+- Enthält Spalten, deren Größe automatisch geändert werden kann, wenn der Benutzer auf die Spalten unter Teiler doppelklickt.  
   
-- Visuelle Stile automatisch auf Windows XP und Windows Server 2003-Produktfamilie unterstützt bei der <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> Methode wird aufgerufen, von der Anwendung `Main` Methode.  
+- Unterstützt automatisch visuelle Stile unter Windows XP und der Windows Server 2003-Familie, wenn die <xref:System.Windows.Forms.Application.EnableVisualStyles%2A>-Methode von der `Main`-Methode der Anwendung aufgerufen wird.  
   
- Darüber hinaus den Inhalt einer <xref:System.Windows.Forms.DataGridView> -Steuerelement standardmäßig bearbeitet werden kann:  
+ Außerdem kann der Inhalt eines <xref:System.Windows.Forms.DataGridView> Steuer Elements standardmäßig bearbeitet werden:  
   
-- Wenn der Benutzer doppelklickt, oder drücken F2 in einer Zelle, die Zelle in den Bearbeitungsmodus versetzt das Steuerelement automatisch und aktualisiert den Inhalt der Zelle, wenn der Benutzer eingibt.  
+- Wenn der Benutzer auf F2 in einer Zelle doppelklickt oder diese drückt, versetzt das Steuerelement die Zelle automatisch in den Bearbeitungsmodus und aktualisiert den Inhalt der Zelle als Benutzer.  
   
-- Wenn der Benutzer einen Bildlauf bis zum Ende des Rasters durchführt, wird der Benutzer finden Sie, dass eine Zeile für neue Datensätze hinzufügen vorhanden ist. Wenn der Benutzer diese Zeile klickt, wird eine neue Zeile hinzugefügt, um die <xref:System.Windows.Forms.DataGridView> Steuerelement, mit Standardwerten. Wenn der Benutzer die ESC-Taste drückt, wird nicht mehr dieser neuen Zeile.  
+- Wenn der Benutzer einen Bildlauf zum Ende des Rasters durchführt, wird dem Benutzer angezeigt, dass eine Zeile zum Hinzufügen neuer Datensätze vorhanden ist. Wenn der Benutzer auf diese Zeile klickt, wird dem <xref:System.Windows.Forms.DataGridView>-Steuerelement eine neue Zeile mit Standardwerten hinzugefügt. Wenn der Benutzer ESC drückt, verschwindet diese neue Zeile.  
   
-- Wenn der Benutzer einen Zeilenkopf klickt, wird die gesamte Zeile ausgewählt.  
+- Wenn der Benutzer auf einen Zeilen Header klickt, wird die gesamte Zeile ausgewählt.  
   
- Beim Binden einer <xref:System.Windows.Forms.DataGridView> Steuerelement mit einer Datenquelle durch Festlegen seiner <xref:System.Windows.Forms.DataGridView.DataSource%2A> -Eigenschaft, die das Steuerelement:  
+ Wenn Sie ein <xref:System.Windows.Forms.DataGridView>-Steuerelement an eine Datenquelle binden, indem Sie dessen <xref:System.Windows.Forms.DataGridView.DataSource%2A>-Eigenschaft festlegen, wird das-Steuerelement:  
   
-- Verwendet automatisch die Namen der Spalten für die Datenquelle, als den Spaltenkopftext.  
+- Verwendet automatisch die Namen der Datenquellen Spalten als Spaltenheader Text.  
   
 - Wird mit dem Inhalt der Datenquelle aufgefüllt. <xref:System.Windows.Forms.DataGridView> Spalten werden für jede Spalte in der Datenquelle automatisch erstellt.  
   
-- Erstellt eine Zeile für jede sichtbare Zeile in der Tabelle an.  
+- Erstellt eine Zeile für jede sichtbare Zeile in der Tabelle.  
   
-- Automatisch sortiert die Zeilen basierend auf den zugrunde liegenden Daten, wenn der Benutzer einen Spaltenheader klickt.  
+- Sortiert die Zeilen automatisch basierend auf den zugrunde liegenden Daten, wenn der Benutzer auf einen Spaltenheader klickt.  
   
 ## <a name="see-also"></a>Siehe auch
 

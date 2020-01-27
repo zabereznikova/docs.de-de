@@ -1,16 +1,16 @@
 ---
-title: Exemplarische Vorgehensweisen für WPF
+title: Exemplarische Vorgehensweisen
 ms.date: 03/30/2017
 helpviewer_keywords:
 - walkthroughs [WPF]
 - WPF walkthroughs [WPF]
 ms.assetid: c29bde96-0389-4aff-a9fb-cd678f66b7f7
-ms.openlocfilehash: fbd5006611a0a8e0d90b589df7b2cb6a34101457
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: d7853019b109fa7be97f83134be223b1c65375ac
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73977030"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76746912"
 ---
 # <a name="wpf-walkthroughs"></a>Exemplarische Vorgehensweisen für WPF
 Exemplarische Vorgehensweisen sind schrittweise Anleitungen für häufige Szenarien. Dadurch sind sie ein guter Einstieg in das Produkt oder einen bestimmten Funktionsbereich.
@@ -19,7 +19,7 @@ Exemplarische Vorgehensweisen sind schrittweise Anleitungen für häufige Szenar
 
 ## <a name="wpf-designer-walkthroughs"></a>Exemplarische Vorgehensweisen für WPF
 
-|Titel|Beschreibung|
+|Title|Beschreibung|
 |-----------|-----------------|
 |[Exemplarische Vorgehensweise: Entwickeln einer einfachen WPF-Anwendung mit dem WPF-Designer](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb546972(v=vs.100))|Veranschaulicht, wie eine einfache WPF-Anwendung mit dem WPF-Designer erstellt wird.|
 |[Exemplarische Vorgehensweise: Erstellen eines dynamischen Layouts](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb514519(v=vs.100))|Veranschaulicht das Erstellen eines dynamischen Layouts mithilfe eines <xref:System.Windows.Controls.Grid> Panel-Steuer Elements.|
@@ -29,7 +29,7 @@ Exemplarische Vorgehensweisen sind schrittweise Anleitungen für häufige Szenar
 
 ## <a name="wpf-walkthroughs"></a>Exemplarische Vorgehensweisen für WPF
 
-|Titel|Beschreibung|
+|Title|Beschreibung|
 |-----------|-----------------|
 |[Exemplarische Vorgehensweise: Meine erste WPF-Desktopanwendung](walkthrough-my-first-wpf-desktop-application.md)|Veranschaulicht das Erstellen einer WPF-Anwendung mit vielen der allgemeinen Features von WPF, einschließlich Steuerelementen, Layout und Datenbindung.|
 |[Erstellen einer Schaltfläche mit XAML](../controls/walkthrough-create-a-button-by-using-xaml.md)|Veranschaulicht, wie eine animierte Schaltfläche erstellt wird.|
@@ -38,7 +38,7 @@ Exemplarische Vorgehensweisen sind schrittweise Anleitungen für häufige Szenar
 
 ## <a name="migration-and-interoperability-in-wpf"></a>Migration und Interoperabilität in WPF
 
-|Titel|Beschreibung|
+|Title|Beschreibung|
 |-----------|-----------------|
 |[Exemplarische Vorgehensweise: Hosten eines Windows Forms-Steuerelements in WPF](../advanced/walkthrough-hosting-a-windows-forms-control-in-wpf.md)|Veranschaulicht, wie ein Windows Forms <xref:System.Windows.Forms.MaskedTextBox?displayProperty=nameWithType>-Steuerelement in einer WPF-Anwendung gehostet wird.|
 |[Exemplarische Vorgehensweise: Hosten eines zusammengesetzten Windows Forms-Steuerelements in WPF](../advanced/walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)|Veranschaulicht, wie ein Windows Forms zusammengesetztes Dateneingabe-Steuerelement in einer [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Anwendung gehostet wird.|
@@ -48,6 +48,6 @@ Exemplarische Vorgehensweisen sind schrittweise Anleitungen für häufige Szenar
 
 ## <a name="related-sections"></a>Verwandte Abschnitte
 
-|Titel|Beschreibung|
+|Title|Beschreibung|
 |-----------|-----------------|
 |[Exemplarische Vorgehensweisen für Visual Studio](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/szatc41e(v=vs.100))|Enthält eine verwandte Liste der exemplarischen Vorgehensweisen für alle Programmier Bereiche in Visual Studio.|

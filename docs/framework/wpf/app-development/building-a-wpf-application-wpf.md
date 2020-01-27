@@ -1,5 +1,5 @@
 ---
-title: Erstellen einer WPF-Anwendung (WPF)
+title: Kompilieren einer APP
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,14 +7,14 @@ dev_langs:
 helpviewer_keywords:
 - WPF application [WPF], building
 ms.assetid: a58696fd-bdad-4b55-9759-136dfdf8b91c
-ms.openlocfilehash: 48536d8fba3f86c2883e48cd4e5cf9a3a8752fcd
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: 00c76dfcdcedc7ceaefaaae785368f8b343457a7
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75636314"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744761"
 ---
-# <a name="building-a-wpf-application-wpf"></a>Erstellen einer WPF-Anwendung (WPF)
+# <a name="compile-a-wpf-application"></a>Kompilieren einer WPF-Anwendung
 
 WPF-Anwendungen (Windows Presentation Foundation) können als .NET Framework ausführbare Dateien (exe-Dateien), Bibliotheken (DLL-Dateien) oder eine Kombination aus beiden Assemblytypen erstellt werden. In diesem Thema wird erläutert, wie WPF-Anwendungen erstellt und die wichtigsten Schritte im Buildprozess beschrieben werden.
 

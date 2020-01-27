@@ -2,12 +2,12 @@
 title: Beispiel für Ankündigungen
 ms.date: 03/30/2017
 ms.assetid: 954a75e4-9a97-41d6-94fc-43765d4205a9
-ms.openlocfilehash: 57b61dbd82338aafd248285c9cb11ecdf58d25bb
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: c3824fb0dc7ab4169c309d1a5154127d6bc3b78f
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74716152"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76746996"
 ---
 # <a name="announcements-sample"></a>Beispiel für Ankündigungen
 
@@ -71,7 +71,7 @@ static void OnOfflineEvent(object sender, AnnouncementEventArgs e)
 
 #### <a name="to-use-this-sample"></a>So verwenden Sie dieses Beispiel
 
-1. In diesem Beispiel werden HTTP-Endpunkte verwendet. zum Ausführen dieses Beispiels müssen die richtigen URL-ACLs hinzugefügt werden. Weitere Informationen finden Sie unter [Konfigurieren von http und HTTPS](https://go.microsoft.com/fwlink/?LinkId=70353) . Durch die Ausführung des folgenden Befehls mit erweiterten Berechtigungen werden die entsprechenden ACLs hinzugefügt. Es empfiehlt sich, die Domäne und den Benutzernamen durch die folgenden Argumente zu ersetzen, wenn der Befehl nicht funktioniert. `netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%`
+1. In diesem Beispiel werden HTTP-Endpunkte verwendet. Zur Ausführung des Beispiels müssen die richtigen URL-ACLs hinzugefügt werden. Weitere Informationen finden Sie unter [Konfigurieren von http und HTTPS](../feature-details/configuring-http-and-https.md). Durch die Ausführung des folgenden Befehls mit erweiterten Berechtigungen werden die entsprechenden ACLs hinzugefügt. Es empfiehlt sich, die Domäne und den Benutzernamen durch die folgenden Argumente zu ersetzen, wenn der Befehl nicht funktioniert. `netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%`
 
 2. Erstellen Sie die Projektmappe.
 

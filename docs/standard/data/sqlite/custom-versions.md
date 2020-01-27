@@ -2,12 +2,12 @@
 title: Benutzerdefinierte SQLite-Versionen
 ms.date: 12/13/2019
 description: Erfahren Sie, wie Sie eine benutzerdefinierte Version der systemeigenen SQLite-Bibliothek verwenden.
-ms.openlocfilehash: 8a2646138ea9dbecf412a2e8e0e347e2d71a5b0b
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: dd27278c1dbe17b12e5067d04d19043bf259b1e8
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75450387"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76746990"
 ---
 # <a name="custom-sqlite-versions"></a>Benutzerdefinierte SQLite-Versionen
 
@@ -21,9 +21,9 @@ Das Microsoft. Data. sqlite-Hauptpaket führt standardmäßig sqlitepclraw. bund
 
 Wenn Sie ein anderes Paket verwenden möchten, installieren Sie das `Microsoft.Data.Sqlite.Core` Paket und das Paket Paket, das Sie verwenden möchten. Pakete werden automatisch von "Microsoft. Data. sqlite" initialisiert.
 
-| Paket | Beschreibung |
+| Dels | Beschreibung |
 | --- | --- |
-| Sqlitepclraw. bundle_e_sqlite3 | Stellt eine konsistente Version von SQLite auf allen Plattformen bereit. Umfasst FTS4, FTS5, JSON1 und | R *-Struktur Erweiterungen. Dies ist der Standardwert. |
+| Sqlitepclraw. bundle_e_sqlite3 | Stellt eine konsistente Version von SQLite auf allen Plattformen bereit. Schließt die Struktur Erweiterungen FTS4, FTS5, JSON1 und R * ein. Dies ist der Standardwert. |
 | Sqlitepclraw. bundle_green | Identisch mit bundle_e_sqlite3, mit Ausnahme von IOS, wo die System SQLite-Bibliothek verwendet wird. |
 | Sqlitepclraw. bundle_zetetic | Verwendet die offiziellen sqlcipher-Builds aus Zetetic (nicht eingeschlossen). |
 | Sqlitepclraw. bundle_winsqlite3 | Verwendet winsqlite3. dll, die System SQLite-Bibliothek unter Windows 10. |

@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Erkennen der Änderung von Formatierungsattributen im RichTextBox-Steuerelement von Windows Forms'
+title: Bestimmen, wann Formatierungs Attribute im RichTextBox-Steuerelement geändert werden
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,21 +11,21 @@ helpviewer_keywords:
 - text boxes [Windows Forms], determining font changes
 - SelChange event
 ms.assetid: bdfed015-f77a-41e5-b38f-f8629b2fa166
-ms.openlocfilehash: a90affde9de36f1c83d5b7c21b40580cdf53402e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f9b2a1028f79059ec7d4d6bf3683100455bb5dea
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61972288"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76746036"
 ---
-# <a name="how-to-determine-when-formatting-attributes-change-in-the-windows-forms-richtextbox-control"></a>Vorgehensweise: Erkennen der Änderung von Formatierungsattributen im RichTextBox-Steuerelement von Windows Forms
-Eine häufige Verwendung des Windows Forms <xref:System.Windows.Forms.RichTextBox> Steuerelement formatieren von Text mit Attributen wie z. B. Schriftartoptionen oder Absätze. Ihre Anwendung möglicherweise Änderungen an Text für die Anzeige von eine Symbolleiste, wie viele Textverarbeitungsprogrammen Formatierung von.  
+# <a name="how-to-determine-when-formatting-attributes-change-in-the-windows-forms-richtextbox-control"></a>Gewusst wie: Erkennen der Änderung von Formatierungsattributen im RichTextBox-Steuerelement von Windows Forms
+Die Windows Forms <xref:System.Windows.Forms.RichTextBox>-Steuerelement wird häufig verwendet, um Text mit Attributen wie z. b. Schriftart Optionen oder Absatzformaten zu formatieren. Die Anwendung muss möglicherweise Änderungen an der Textformatierung für den Zweck der Anzeige einer Symbolleiste nachverfolgen, wie in vielen Textverarbeitungsanwendungen.  
   
-### <a name="to-respond-to-changes-in-formatting-attributes"></a>Reaktion auf Änderungen bei der Formatierung von Attributen  
+### <a name="to-respond-to-changes-in-formatting-attributes"></a>So reagieren Sie auf Änderungen in Formatierungs Attributen  
   
-1. Schreiben Sie Code in die <xref:System.Windows.Forms.RichTextBox.SelectionChanged> Ereignishandler führen Sie eine geeignete Maßnahme, abhängig vom Wert des Attributs. Im folgende Beispiel ändert die Darstellung einer Symbolleisten-Schaltfläche, abhängig vom Wert der <xref:System.Windows.Forms.RichTextBox.SelectionBullet%2A> Eigenschaft. Die Symbolleisten-Schaltfläche wird nur aktualisiert werden, wenn die Einfügemarke im Steuerelement bewegt wird.  
+1. Schreiben Sie Code in den <xref:System.Windows.Forms.RichTextBox.SelectionChanged>-Ereignishandler, um abhängig vom Wert des Attributs eine geeignete Aktion auszuführen. Im folgenden Beispiel wird die Darstellung einer Symbolleisten Schaltfläche abhängig vom Wert der <xref:System.Windows.Forms.RichTextBox.SelectionBullet%2A>-Eigenschaft geändert. Die Symbolleisten-Schaltfläche wird nur aktualisiert, wenn die Einfügemarke im Steuerelement verschoben wird.  
   
-     Im folgenden Beispiel wird ein Formular mit einem <xref:System.Windows.Forms.RichTextBox> Steuerelement und ein <xref:System.Windows.Forms.ToolBar> Steuerelement, das eine Symbolleisten-Schaltfläche enthält. Weitere Informationen über Symbolleisten und Schaltflächen der Symbolleiste finden Sie unter [Vorgehensweise: Hinzufügen von Schaltflächen zu einem ToolBar-Steuerelement](how-to-add-buttons-to-a-toolbar-control.md).  
+     Im folgenden Beispiel wird ein Formular mit einem <xref:System.Windows.Forms.RichTextBox>-Steuerelement und ein <xref:System.Windows.Forms.ToolBar>-Steuerelement angenommen, das eine Symbolleisten-Schaltfläche enthält Weitere Informationen zu Symbolleisten und Symbolleisten-Schaltflächen finden Sie unter Gewusst [wie: Hinzufügen von Schaltflächen zu einem Toolbar-Steuer](how-to-add-buttons-to-a-toolbar-control.md)Element.  
   
     ```vb  
     ' The following code assumes the existence of a toolbar control  

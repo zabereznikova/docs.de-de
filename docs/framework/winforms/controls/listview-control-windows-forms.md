@@ -1,5 +1,5 @@
 ---
-title: ListView-Steuerelement (Windows Forms)
+title: ListView-Steuerelement
 ms.date: 03/30/2017
 helpviewer_keywords:
 - lists
@@ -11,12 +11,12 @@ helpviewer_keywords:
 - ListView control [Windows Forms]
 - list controls [Windows Forms], List view
 ms.assetid: 9f71cf5c-82da-488a-a04e-ef52c0817187
-ms.openlocfilehash: a5f20ec34a1b4b41ec1aee667b5d4bfb0c3eebb1
-ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
+ms.openlocfilehash: 009739f78f334d09a9f7e4f0e9f171669014b909
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74960356"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76745149"
 ---
 # <a name="listview-control-windows-forms"></a>ListView-Steuerelement (Windows Forms)
 Mit dem `ListView`-Steuerelement in Windows Forms wird eine Liste von Elementen mit Symbolen angezeigt. Mit einer Listenansicht können Sie eine Benutzeroberfläche erstellen, deren Darstellung dem rechten Fensterbereich von Windows Explorer ähnelt.  
@@ -78,4 +78,4 @@ Mit dem `ListView`-Steuerelement in Windows Forms wird eine Liste von Elementen 
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Steuerelemente für Windows Forms](controls-to-use-on-windows-forms.md)
+- [Windows Forms-Steuerelemente](controls-to-use-on-windows-forms.md)

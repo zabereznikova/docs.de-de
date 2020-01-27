@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Anzeigen einer Webseite über ein LinkLabel-Steuerelement in Windows Forms (Visual Basic)'
+title: Webseite aus dem LinkLabel-Steuerelement anzeigen (Visual Basic)
 ms.date: 03/30/2017
 dev_langs:
 - vb
@@ -12,15 +12,15 @@ helpviewer_keywords:
 - Windows Forms, linking to Web pages
 - LinkLabel control [Windows Forms], examples
 ms.assetid: 477a7398-5971-4de3-b24c-f49f32bdb28a
-ms.openlocfilehash: f36f5bbaaf28963fc95440a4f3a174b8b48f6276
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 75373d55b7bc5ef11e39d5b9546996cb1c4f6f7c
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64651797"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76745926"
 ---
-# <a name="how-to-display-a-web-page-from-a-windows-forms-linklabel-control-visual-basic"></a>Vorgehensweise: Anzeigen einer Webseite über ein LinkLabel-Steuerelement in Windows Forms (Visual Basic)
-In diesem Beispiel wird eine Webseite im Standardbrowser, klickt ein Benutzer ein Windows Forms <xref:System.Windows.Forms.LinkLabel> Steuerelement.  
+# <a name="how-to-display-a-web-page-from-a-windows-forms-linklabel-control-visual-basic"></a>Gewusst wie: Anzeigen einer Webseite über ein LinkLabel-Steuerelement in Windows Forms (Visual Basic)
+In diesem Beispiel wird eine Webseite im Standardbrowser angezeigt, wenn ein Benutzer auf eine Windows Forms <xref:System.Windows.Forms.LinkLabel>-Steuerelement klickt.  
   
 ## <a name="example"></a>Beispiel  
   
@@ -44,10 +44,10 @@ End Sub
   
 - Ein <xref:System.Windows.Forms.LinkLabel>-Steuerelement namens `LinkLabel1`.  
   
-- Eine aktive Internetverbindung.  
+- Eine aktive Internet Verbindung.  
   
-## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
- Der Aufruf der <xref:System.Diagnostics.Process.Start%2A> Methode erfordert volles Vertrauen. Weitere Informationen finden Sie unter <xref:System.Security.SecurityException>.  
+## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
+ Der-<xref:System.Diagnostics.Process.Start%2A> Methode erfordert volle Vertrauenswürdigkeit. Weitere Informationen finden Sie unter <xref:System.Security.SecurityException>.  
   
 ## <a name="see-also"></a>Siehe auch
 

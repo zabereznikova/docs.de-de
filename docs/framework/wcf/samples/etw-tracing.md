@@ -2,12 +2,12 @@
 title: ETW-Ablaufverfolgung
 ms.date: 03/30/2017
 ms.assetid: ac99a063-e2d2-40cc-b659-d23c2f783f92
-ms.openlocfilehash: 25a4281cbf5a9ad81a63eee13d768715eebedfb6
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: a62403e61e0566d5e7b753ff951bf4b316209b6f
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837895"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742108"
 ---
 # <a name="etw-tracing"></a>ETW-Ablaufverfolgung
 In diesem Beispiel wird das Implementieren der End-to-End (E2E)-Ablaufverfolgung mit Event Tracing for Windows (ETW) und dem in diesem Beispiel bereitgestellten `ETWTraceListener` veranschaulicht. Das Beispiel basiert auf den ersten [Schritten und umfasst](../../../../docs/framework/wcf/samples/getting-started-sample.md) die ETW-Ablauf Verfolgung.  
@@ -108,4 +108,4 @@ logman stop Wcf
   
 ## <a name="see-also"></a>Siehe auch
 
-- [AppFabric-Überwachungs Beispiele](https://go.microsoft.com/fwlink/?LinkId=193959)
+- [AppFabric-Überwachungs Beispiele](https://docs.microsoft.com/previous-versions/appfabric/ff383407(v=azure.10))

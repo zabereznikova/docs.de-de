@@ -1,17 +1,17 @@
 ---
-title: HelpProvider-Komponente (Windows Forms)
+title: HelpProvider-Komponente
 ms.date: 03/30/2017
 helpviewer_keywords:
 - forms [Windows Forms], Help
 - Help [Windows Forms], displaying on Windows Forms
 - HelpProvider component [Windows Forms]
 ms.assetid: a09a6e0b-79d8-457f-bb36-86fad2beeada
-ms.openlocfilehash: b5da5895b39412052f83cb0a89c3852d28f264bb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 058a90a6d868d051e36523ae93bb1f3f810fc3b2
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62011306"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76745601"
 ---
 # <a name="helpprovider-component-windows-forms"></a>HelpProvider-Komponente (Windows Forms)
 Die `HelpProvider`-Komponente von Windows Forms wird verwendet, um eine HTML Help 1.x-Hilfedatei (entweder eine mit HTML Help Workshop erstellte CHM-Datei oder eine HTM-Datei) mit einer Windows-basierten Anwendung zu verknüpfen.  
@@ -20,7 +20,7 @@ Die `HelpProvider`-Komponente von Windows Forms wird verwendet, um eine HTML Hel
  [Übersicht über die HelpProvider-Komponente](helpprovider-component-overview-windows-forms.md)  
  Stellt die allgemeinen Konzepte der `HelpProvider`-Komponente vor, mit der Sie eine HTML-Hilfedatei mit einer Windows-basierten Anwendung verknüpfen können.  
   
- Finden Sie unter [Hilfesysteme in Windows Forms-Anwendungen](../advanced/help-systems-in-windows-forms-applications.md).  
+ Weitere Informationen finden Sie [unter Hilfesysteme in Windows Forms Anwendungen](../advanced/help-systems-in-windows-forms-applications.md).  
   
 ## <a name="reference"></a>Referenz  
  <xref:System.Windows.Forms.HelpProvider>  
@@ -33,4 +33,4 @@ Die `HelpProvider`-Komponente von Windows Forms wird verwendet, um eine HTML Hel
  [Windows Forms-Steuerelemente](controls-to-use-on-windows-forms.md)  
  Enthält eine vollständige Liste der Windows Forms-Steuerelemente mit Links zu Informationen zur jeweiligen Verwendung.  
   
- Siehe auch [Hilfesysteme in Windows Forms-Anwendungen](../advanced/help-systems-in-windows-forms-applications.md).
+ Siehe auch [Hilfesysteme in Windows Forms Anwendungen](../advanced/help-systems-in-windows-forms-applications.md).

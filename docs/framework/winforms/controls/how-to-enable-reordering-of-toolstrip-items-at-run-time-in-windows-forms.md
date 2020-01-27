@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Aktivieren der Neuanordnung von ToolStrip-Elementen zur Laufzeit in Windows Forms'
+title: 'Gewusst wie: Aktivieren der Neuanordnung von ToolStrip-Elementen zur Laufzeit'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,21 +10,21 @@ helpviewer_keywords:
 - toolbars [Windows Forms], rearranging controls
 - ToolStrip control [Windows Forms], reordering items
 ms.assetid: 8480b69a-379f-4dc2-8dcf-365ed93692b2
-ms.openlocfilehash: 46a5a70206e7620341a484912c7fada82d64747a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 44b52bf997819f090569d08eb395d8af18f61370
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64609850"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76745475"
 ---
-# <a name="how-to-enable-reordering-of-toolstrip-items-at-run-time-in-windows-forms"></a>Vorgehensweise: Aktivieren der Neuanordnung von ToolStrip-Elementen zur Laufzeit in Windows Forms
-Sie können die Benutzer zum Ändern der Anordnung ermöglichen <xref:System.Windows.Forms.ToolStripItem> steuert, auf die <xref:System.Windows.Forms.ToolStrip>.  
+# <a name="how-to-enable-reordering-of-toolstrip-items-at-run-time-in-windows-forms"></a>Gewusst wie: Aktivieren der Neuanordnung von ToolStrip-Elementen zur Laufzeit in Windows Forms
+Sie können es dem Benutzer ermöglichen, <xref:System.Windows.Forms.ToolStripItem> Steuerelemente auf dem <xref:System.Windows.Forms.ToolStrip>neu anzuordnen.  
   
-### <a name="to-enable-toolstripitem-rearrangement-at-run-time"></a>ToolStripItem-neuanordnung zur Laufzeit zu aktivieren  
+### <a name="to-enable-toolstripitem-rearrangement-at-run-time"></a>So aktivieren Sie die Neuanordnung von ToolStripItem zur Laufzeit  
   
-- Legen Sie die <xref:System.Windows.Forms.ToolStrip.AllowItemReorder%2A> -Eigenschaft auf `true`fest. In der Standardeinstellung <xref:System.Windows.Forms.ToolStrip.AllowItemReorder%2A> ist `false`.  
+- Legen Sie die <xref:System.Windows.Forms.ToolStrip.AllowItemReorder%2A> -Eigenschaft auf `true`fest. Standardmäßig ist <xref:System.Windows.Forms.ToolStrip.AllowItemReorder%2A> `false`.  
   
-     Zur Laufzeit wird der Benutzer hält die ALT-Taste und die linke Maustaste gedrückt, ziehen eine <xref:System.Windows.Forms.ToolStripItem> an einen anderen Speicherort auf dem <xref:System.Windows.Forms.ToolStrip>.  
+     Zur Laufzeit hält der Benutzer die Alt-Taste gedrückt und die linke Maustaste, um ein <xref:System.Windows.Forms.ToolStripItem> an einen anderen Speicherort auf dem <xref:System.Windows.Forms.ToolStrip>zu ziehen.  
   
     ```vb  
     toolStrip1.AllowItemReorder = True  

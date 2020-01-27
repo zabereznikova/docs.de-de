@@ -1,5 +1,5 @@
 ---
-title: Bidirektionale Unterstützung für Windows Forms-Anwendungen
+title: Bidirektionale Unterstützung
 ms.date: 09/30/2017
 helpviewer_keywords:
 - globalization [Windows Forms], bi-directional support in Windows
@@ -7,12 +7,12 @@ helpviewer_keywords:
 - localization [Windows Forms], bi-directional support in Windows
 - bi-directional language support [Windows Forms], Windows applications
 - Windows Forms, bi-directional support
-ms.openlocfilehash: 0b99dcdb9549a2319efe8a78eb4bca33f40f2cb0
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: 8b2e842fc08be78b74cede85927352fafca7bc8f
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73197490"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742078"
 ---
 # <a name="bi-directional-support-for-windows-forms-applications"></a>Bidirektionale Unterstützung für Windows Forms-Anwendungen
 Mithilfe von Visual Studio können Sie Windows-basierte Anwendungen erstellen, die bidirektionale (von rechts nach links geschriebene) Sprachen wie Arabisch und Hebräisch unterstützen. Dies beinhaltet Standardformulare, Dialogfelder, MDI-Formulare und alle Steuerelemente, die Sie in diesen Formularen verwenden können, also alle Objekte im <xref:System.Windows.Forms.Control>-Namespace.
@@ -76,7 +76,7 @@ Mithilfe von Visual Studio können Sie Windows-basierte Anwendungen erstellen, d
 |<xref:System.Windows.Forms.UserControl>|Vertikale Scrollleiste wird auf der linken Seite angezeigt. Der Ziehpunkt der horizontalen Scrollleiste befindet sich auf der rechten Seite.|Keine direkte Unterstützung. Verwenden Sie <xref:System.Windows.Forms.TableLayoutPanel>.|Nein|
 |<xref:System.Windows.Forms.VScrollBar>|Wird statt auf der rechten auf der linken Seite von bildlauffähigen Steuerelementen angezeigt.|Keine Auswirkung|Nein|
 
-## <a name="encoding"></a>Codierung
+## <a name="encoding"></a>Codierung von
  Windows Forms unterstützen Unicode, sodass Sie beim Erstellen von bidirektionalen Anwendungen alle Zeichensätze verwenden können. Allerdings wird Unicode nicht auf allen Plattformen von allen Windows Forms-Steuerelementen unterstützt.
 
 ## <a name="gdi"></a>GDI+

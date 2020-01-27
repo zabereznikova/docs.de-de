@@ -1,17 +1,17 @@
 ---
-title: 'Gewusst wie: Aktivieren der Tile-Ansicht in einem ListView-Steuerelement in Windows Forms mithilfe des Designers'
+title: Aktivieren der Kachel Ansicht im ListView-Steuerelement mithilfe des Designers
 ms.date: 03/30/2017
 helpviewer_keywords:
 - tile view feature
 - ListView control [Windows Forms], tile view
 - tiling [Windows Forms], Windows Forms, controls
 ms.assetid: 12f0816a-52b8-41ee-a6d9-ded3a8a5817a
-ms.openlocfilehash: 4f51d3a596bc3358942cdfd654b3e4515d96cd07
-ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
+ms.openlocfilehash: a0429efaab14995ab1e3f3b0dfd91db61de72fbf
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74960098"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76745804"
 ---
 # <a name="how-to-enable-tile-view-in-a-windows-forms-listview-control-using-the-designer"></a>Gewusst wie: Aktivieren der Tile-Ansicht in einem ListView-Steuerelement in Windows Forms mithilfe des Designers
 Mit der Kachel Ansicht des <xref:System.Windows.Forms.ListView>-Steuer Elements können Sie eine visuelle Balance zwischen grafischen und Textinformationen bereitstellen. Die textbasierten Daten, die für ein Element in der Ansicht "Nebeneinander" angezeigt werden, sind die gleichen wie die Spalteninformationen, die für die Detailansicht definiert wurden. Die Kachel Ansicht funktioniert in Kombination mit den Funktionen "Gruppieren" oder "Einfügemarke" im <xref:System.Windows.Forms.ListView> Steuerelement.

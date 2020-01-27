@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Programmgesteuertes Hinzufügen von Elementen zu DomainUpDown-Steuerelementen in Windows Forms'
+title: Programmgesteuertes Hinzufügen von Elementen zu DomainUpDown-Steuerelementen
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,19 +9,19 @@ helpviewer_keywords:
 - spin button control [Windows Forms], adding items
 - DomainUpDown control [Windows Forms], adding items to
 ms.assetid: fd31d314-33eb-4181-90f8-d32ed0c4e072
-ms.openlocfilehash: ef44a9e68b8007d57fc7442a178ae98322747c99
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: 2e9f51fa051bf9b62e95f289db97bffd83450036
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59343674"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76745580"
 ---
-# <a name="how-to-add-items-to-windows-forms-domainupdown-controls-programmatically"></a>Vorgehensweise: Programmgesteuertes Hinzufügen von Elementen zu DomainUpDown-Steuerelementen in Windows Forms
-Sie können Elemente hinzufügen, auf die Windows-Formulare <xref:System.Windows.Forms.DomainUpDown> Steuerelement im Code. Rufen Sie die <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.Add%2A> oder <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.Insert%2A> Methode der <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection> Klasse, um die Elemente des Steuerelements hinzufügen <xref:System.Windows.Forms.DomainUpDown.Items%2A> Eigenschaft. Die <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.Add%2A> Methode fügt ein Element am Ende einer Auflistung während der <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.Insert%2A> Methode fügt ein Element an einer angegebenen Position.  
+# <a name="how-to-add-items-to-windows-forms-domainupdown-controls-programmatically"></a>Gewusst wie: Programmgesteuertes Hinzufügen von Elementen zu DomainUpDown-Steuerelementen in Windows Forms
+Sie können der Windows Forms <xref:System.Windows.Forms.DomainUpDown>-Steuerelement im Code Elemente hinzufügen. Ruft die <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.Add%2A>-oder <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.Insert%2A>-Methode der <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection>-Klasse auf, um der <xref:System.Windows.Forms.DomainUpDown.Items%2A> Eigenschaft des Steuer Elements Elemente hinzuzufügen. Die <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.Add%2A>-Methode fügt ein Element am Ende einer Auflistung hinzu, während die <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.Insert%2A>-Methode ein Element an einer angegebenen Position hinzufügt.  
   
-### <a name="to-add-a-new-item"></a>Um ein neues Element hinzufügen  
+### <a name="to-add-a-new-item"></a>So fügen Sie ein neues Element hinzu  
   
-1. Verwenden der <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.Add%2A> Methode, um ein Element am Ende der Liste der Elemente hinzuzufügen.  
+1. Verwenden Sie die <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.Add%2A>-Methode, um am Ende der Liste der Elemente ein Element hinzuzufügen.  
   
     ```vb  
     DomainUpDown1.Items.Add("noodles")  
@@ -35,9 +35,9 @@ Sie können Elemente hinzufügen, auf die Windows-Formulare <xref:System.Windows
     domainUpDown1->Items->Add("noodles");  
     ```  
   
-     - oder -   
+     \- oder -  
   
-2. Verwenden der <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.Insert%2A> Methode zum Einfügen eines Elements in der Liste an einer angegebenen Position.  
+2. Verwenden Sie die <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.Insert%2A>-Methode, um ein Element an einer bestimmten Position in die Liste einzufügen.  
   
     ```vb  
     ' Inserts an item at the third position in the list  

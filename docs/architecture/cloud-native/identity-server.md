@@ -2,12 +2,12 @@
 title: Identityserver für Native Cloud-apps
 description: Architektur von Cloud Native .net-apps für Azure | IdentityServer
 ms.date: 06/30/2019
-ms.openlocfilehash: e96395766d1a4b63815c10c2c90e35a8f7f9159d
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: 48d0b95a40682f3127127851781b4d0e26e44630
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74568467"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76728581"
 ---
 # <a name="identityserver-for-cloud-native-applications"></a>Identityserver für Native Cloud-Anwendungen
 
@@ -96,13 +96,13 @@ Identityserver hostet außerdem eine öffentliche Demosite, die zum Testen versc
 
 ## <a name="javascript-clients"></a>JavaScript-Clients
 
-Viele Cloud-native Anwendungen nutzen serverseitige APIs und umfassende Client Anwendungen (Single Page Applications, Spas) auf dem Front-End. Identityserver sendet einen [JavaScript-Client](http://docs.identityserver.io/en/latest/quickstarts/6_javascript_client.html) (`oidc-client.js`) über NPM, der Spas hinzugefügt werden kann, um die Verwendung von identityserver für das anmelden, abmelden und die tokenbasierte Authentifizierung von Web-APIs zu ermöglichen.
+Viele Cloud-native Anwendungen nutzen serverseitige APIs und umfassende Client Anwendungen (Single Page Applications, Spas) auf dem Front-End. Identityserver sendet einen [JavaScript-Client](http://docs.identityserver.io/en/latest/quickstarts/4_javascript_client.html) (`oidc-client.js`) über NPM, der Spas hinzugefügt werden kann, um die Verwendung von identityserver für das anmelden, abmelden und die tokenbasierte Authentifizierung von Web-APIs zu ermöglichen.
 
 ## <a name="references"></a>Verweise
 
 - [Identityserver-Dokumentation](http://docs.identityserver.io/en/latest/)
 - [Anwendungs Typen](https://docs.microsoft.com/azure/active-directory/develop/app-types)
-- [JavaScript-oidc-Client](http://docs.identityserver.io/en/latest/quickstarts/6_javascript_client.html)
+- [JavaScript-oidc-Client](http://docs.identityserver.io/en/latest/quickstarts/4_javascript_client.html)
 
 >[!div class="step-by-step"]
 >[Zurück](azure-active-directory.md)

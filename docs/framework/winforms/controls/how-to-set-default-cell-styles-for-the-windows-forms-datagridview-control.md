@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Festlegen von Standardzellenformaten für das DataGridView-Steuerelement in Windows Forms'
+title: Festlegen von Standardzellen Formaten für das DataGridView-Steuerelement
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,17 +9,17 @@ helpviewer_keywords:
 - cells [Windows Forms], styles
 - data grids [Windows Forms], cell styles
 ms.assetid: 1aaaca43-5340-447e-99c0-9177d9776aa1
-ms.openlocfilehash: de939051b613a0622f60178a566fd19dbca53694
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6b2d7de671e48ae8f55987c262e15717138b3fb4
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64638168"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744869"
 ---
-# <a name="how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control"></a>Vorgehensweise: Festlegen von Standardzellenformaten für das DataGridView-Steuerelement in Windows Forms
-Mit dem <xref:System.Windows.Forms.DataGridView>-Steuerelement können Sie Standardzellenstile für das gesamte Steuerelement und für bestimmte Spalten und Zeilen angeben. Diese Standardeinstellungen werden von der Steuerelementebene bis herunter auf die Spaltenebene, dann auf die Zeilenebene und anschließend auf die Zellenebene gefiltert. Wenn eine bestimmte Eigenschaft <xref:System.Windows.Forms.DataGridViewCellStyle> nicht auf Zellenebene festgelegt ist, wird die standardmäßige Eigenschafteneinstellung auf Zeilenebene verwendet. Wenn die Eigenschaft auf Zeilenebene ebenfalls nicht festgelegt ist, wird die Standardspalteneinstellung verwendet. Wenn die Eigenschaft schließlich auf Spaltenebene ebenfalls nicht festgelegt ist, wird die <xref:System.Windows.Forms.DataGridView>-Standardeinstellung verwendet. Mit dieser Einstellung können Sie vermeiden, die Eigenschafteneinstellungen auf mehreren Ebenen duplizieren zu müssen. Geben Sie einfach auf jeder Ebene die Stile an, die sich von den darüber liegenden Ebenen unterscheiden. Weitere Informationen finden Sie unter [Zellstile im DataGridView-Steuerelement in Windows Forms](cell-styles-in-the-windows-forms-datagridview-control.md).  
+# <a name="how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control"></a>Gewusst wie: Festlegen von Standardzellenformaten für das DataGridView-Steuerelement in Windows Forms
+Mit dem <xref:System.Windows.Forms.DataGridView>-Steuerelement können Sie Standardzellenstile für das gesamte Steuerelement und für bestimmte Spalten und Zeilen angeben. Diese Standardeinstellungen werden von der Steuerelementebene bis herunter auf die Spaltenebene, dann auf die Zeilenebene und anschließend auf die Zellenebene gefiltert. Wenn eine bestimmte Eigenschaft <xref:System.Windows.Forms.DataGridViewCellStyle> nicht auf Zellenebene festgelegt ist, wird die standardmäßige Eigenschafteneinstellung auf Zeilenebene verwendet. Wenn die Eigenschaft auf Zeilenebene ebenfalls nicht festgelegt ist, wird die Standardspalteneinstellung verwendet. Wenn die Eigenschaft schließlich auf Spaltenebene ebenfalls nicht festgelegt ist, wird die <xref:System.Windows.Forms.DataGridView>-Standardeinstellung verwendet. Mit dieser Einstellung können Sie vermeiden, die Eigenschafteneinstellungen auf mehreren Ebenen duplizieren zu müssen. Geben Sie einfach auf jeder Ebene die Stile an, die sich von den darüber liegenden Ebenen unterscheiden. Weitere Informationen finden Sie unter [Zellen Stile im Windows Forms DataGridView-Steuer](cell-styles-in-the-windows-forms-datagridview-control.md)Element.  
   
- Visual Studio bietet umfassende Unterstützung für diese Aufgabe.  Weitere Informationen hierzu finden Sie auch unter [Gewusst wie: Festlegen von standardmäßigen Zellenstilen und Datenformaten für die Windows Forms-DataGridView-Steuerelement mithilfe des Designers](default-cell-styles-datagridview.md).  
+ Visual Studio bietet umfassende Unterstützung für diese Aufgabe.  Siehe auch Gewusst [wie: Festlegen von Standardzellen Stilen und Datenformaten für das Windows Forms DataGridView-Steuerelement mithilfe des Designers](default-cell-styles-datagridview.md).  
   
 ### <a name="to-set-the-default-cell-styles-programmatically"></a>Die legen Sie Standardzellenstile programmgesteuert fest  
   
@@ -49,8 +49,8 @@ Mit dem <xref:System.Windows.Forms.DataGridView>-Steuerelement können Sie Stand
   
 - Verweise auf die Assemblys <xref:System?displayProperty=nameWithType>, <xref:System.Drawing?displayProperty=nameWithType> und <xref:System.Windows.Forms?displayProperty=nameWithType>.  
   
-## <a name="robust-programming"></a>Stabile Programmierung  
- Um maximale Skalierbarkeit zu erreichen, wenn Sie mit sehr großen Datenmengen arbeiten, sollten Sie <xref:System.Windows.Forms.DataGridViewCellStyle>-Objekte für mehrere Zeilen, Spalten oder Zellen freigeben, die dieselben Stile verwenden, anstatt die Stileigenschaften für einzelne Elemente separat festzulegen. Darüber hinaus sollten Sie freigegebene Zeilen erstellen und auf diese zugreifen, indem Sie die Eigenschaft <xref:System.Windows.Forms.DataGridViewRowCollection.SharedRow%2A?displayProperty=nameWithType> verwenden. Weitere Informationen finden Sie unter [Best Practices für das Skalieren des DataGridView-Steuerelements in Windows Forms](best-practices-for-scaling-the-windows-forms-datagridview-control.md).  
+## <a name="robust-programming"></a>Robuste Programmierung  
+ Um maximale Skalierbarkeit zu erreichen, wenn Sie mit sehr großen Datenmengen arbeiten, sollten Sie <xref:System.Windows.Forms.DataGridViewCellStyle>-Objekte für mehrere Zeilen, Spalten oder Zellen freigeben, die dieselben Stile verwenden, anstatt die Stileigenschaften für einzelne Elemente separat festzulegen. Darüber hinaus sollten Sie freigegebene Zeilen erstellen und auf diese zugreifen, indem Sie die Eigenschaft <xref:System.Windows.Forms.DataGridViewRowCollection.SharedRow%2A?displayProperty=nameWithType> verwenden. Weitere Informationen finden Sie unter [bewährte Methoden zum Skalieren des Windows Forms DataGridView-Steuer](best-practices-for-scaling-the-windows-forms-datagridview-control.md)Elements.  
   
 ## <a name="see-also"></a>Siehe auch
 
@@ -61,4 +61,4 @@ Mit dem <xref:System.Windows.Forms.DataGridView>-Steuerelement können Sie Stand
 - [Grundlegende Formatierungen und Formate im DataGridView-Steuerelement in Windows Forms](basic-formatting-and-styling-in-the-windows-forms-datagridview-control.md)
 - [Zellstile im DataGridView-Steuerelement in Windows Forms](cell-styles-in-the-windows-forms-datagridview-control.md)
 - [Empfohlene Vorgehensweisen für das Skalieren des DataGridView-Steuerelements in Windows Forms](best-practices-for-scaling-the-windows-forms-datagridview-control.md)
-- [Vorgehensweise: Festlegen von abwechselnden Zeilenstilen für das DataGridView-Steuerelement in Windows Forms](how-to-set-alternating-row-styles-for-the-windows-forms-datagridview-control.md)
+- [Gewusst wie: Festlegen von abwechselnden Zeilenstilen für das DataGridView-Steuerelement in Windows Forms](how-to-set-alternating-row-styles-for-the-windows-forms-datagridview-control.md)

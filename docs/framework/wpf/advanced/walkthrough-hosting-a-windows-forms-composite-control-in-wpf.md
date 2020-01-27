@@ -1,5 +1,6 @@
 ---
-title: 'Exemplarische Vorgehensweise: Hosten eines zusammengesetzten Windows Forms-Steuerelements in WPF'
+title: Hosten eines Windows Forms zusammengesetzten Steuer Elements in WPF
+titleSuffix: ''
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - hosting Windows Forms control in WPF [WPF]
 - composite controls [WPF], hosting in WPF
 ms.assetid: 96fcd78d-1c77-4206-8928-3a0579476ef4
-ms.openlocfilehash: e42737b9fccd3b91dee2c446dfb0653e57f9dd1b
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: 16c09b4bb393fa830412385b4b405dd1fae9878b
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73197953"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744994"
 ---
 # <a name="walkthrough-hosting-a-windows-forms-composite-control-in-wpf"></a>Exemplarische Vorgehensweise: Hosten eines zusammengesetzten Windows Forms-Steuerelements in WPF
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] stellt eine umfangreiche Umgebung zum Erstellen von Anwendungen bereit. Wenn Sie jedoch eine beträchtliche Investition in [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]-Code haben, kann es effektiver sein, zumindest einen Teil dieses Codes in ihrer [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Anwendung wiederzuverwenden, anstatt ihn von Grund auf neu zu schreiben. Das häufigste Szenario ist, wenn Sie über vorhandene Windows Forms Steuerelemente verfügen. In einigen Fällen können Sie vielleicht gar nicht mehr auf den Quellcode für diese Steuerelemente zugreifen. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] bietet ein einfaches Verfahren zum Hosting dieser Steuerelemente in einer [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Anwendung. Beispielsweise können Sie [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] für den größten Teil der Programmierung verwenden, während Sie Ihre spezialisierten <xref:System.Windows.Forms.DataGridView>-Steuerelemente als Host verwenden.  
@@ -30,7 +31,7 @@ ms.locfileid: "73197953"
   
  Eine komplette Code Auflistung der Aufgaben in dieser exemplarischen Vorgehensweise finden Sie unter [Hosting a Windows Forms Composite Control in WPF Sample](https://go.microsoft.com/fwlink/?LinkID=159999).  
   
-## <a name="prerequisites"></a>Erforderliche Voraussetzungen  
+## <a name="prerequisites"></a>Erforderliche Komponenten  
 
 Für diese exemplarische Vorgehensweise benötigen Sie Visual Studio.
   

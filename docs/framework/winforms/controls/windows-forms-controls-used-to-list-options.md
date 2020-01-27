@@ -1,38 +1,38 @@
 ---
-title: Steuerelemente in Windows Forms zum Auflisten von Optionen
+title: Zum Auflisten von Optionen verwendete Steuerelemente
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Forms controls, listing options
 - option lists in Windows Forms
 ms.assetid: 5bc064c7-bc1f-4b62-8f4b-252f864b118e
-ms.openlocfilehash: 92d5f330fbd5269e15bf52dc11ad998939aa18e4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 52e8f2fcae3cbb4dae495cad3b29b647732ad5b7
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62009070"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742351"
 ---
 # <a name="windows-forms-controls-used-to-list-options"></a>Steuerelemente in Windows Forms zum Auflisten von Optionen
-Sie können eine Vielzahl von Steuerelementen zu einem Windows-Formular hinzufügen, wenn Sie Benutzer mit einer Liste von Optionen zur Auswahl bereitstellen möchten. Je nachdem, wie viele Ihrer Benutzer beschränken möchten, geben Sie, Sie hinzufügen, können eine <xref:System.Windows.Forms.ListBox> -Steuerelement, ein <xref:System.Windows.Forms.ComboBox> -Steuerelement oder ein <xref:System.Windows.Forms.CheckedListBox> Steuerelement. Verwenden Sie die folgenden Links, um zu bestimmen, die steuern, die besten Ihren Anforderungen entspricht.  
+Sie können einem Windows Form eine Reihe von Steuerelementen hinzufügen, wenn Sie Benutzern eine Liste von Optionen zur Auswahl stellen möchten. Abhängig davon, wie viel Sie die Eingabe der Benutzer einschränken möchten, können Sie ein <xref:System.Windows.Forms.ListBox>-Steuerelement, ein <xref:System.Windows.Forms.ComboBox>-Steuerelement oder ein <xref:System.Windows.Forms.CheckedListBox>-Steuerelement hinzufügen. Verwenden Sie die folgenden Links, um zu bestimmen, welches Steuerelement Ihren Anforderungen am besten entspricht.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Wann ist ein Kombinationsfeld von Windows Forms dem Listenfeld vorzuziehen?](when-to-use-a-windows-forms-combobox-instead-of-a-listbox.md)  
- Empfiehlt, ein geeignetes listenbasierte Steuerelement abhängig von den Anforderungen und Einschränkungen für das Windows-Formular.  
+ Empfiehlt ein entsprechendes Listen basiertes Steuerelement, abhängig von den Anforderungen und Einschränkungen von Windows Form.  
   
- [Vorgehensweise: Zugreifen auf spezifische Elemente in einer Windows Forms, ComboBox-, ListBox- oder CheckedListBox-Steuerelement](access-specific-items-in-a-wf-combobox-listbox-or-checkedlistbox.md)  
- Enthält Anweisungen zum programmgesteuert zu bestimmen, welches Element in einer Liste in einer bestimmten Position angezeigt wird.  
+ [Gewusst wie: Zugreifen auf spezifische Elemente in ComboBox-, ListBox- oder CheckedListBox-Steuerelementen in Windows Forms](access-specific-items-in-a-wf-combobox-listbox-or-checkedlistbox.md)  
+ Enthält Anweisungen für die programmgesteuerte Bestimmung, welches Element in einer Liste an einer bestimmten Position angezeigt wird.  
   
- [Vorgehensweise: Hinzufügen und Entfernen von Elementen aus einer Windows Forms, ComboBox-, ListBox- oder CheckedListBox-Steuerelement](add-and-remove-items-from-a-wf-combobox.md)  
- Enthält Anweisungen zum Hinzufügen oder Entfernen von Elementen aus der Liste der Elemente eines Steuerelements an.  
+ [Gewusst wie: Hinzufügen und Entfernen von Elementen in bzw. aus ComboBox-, ListBox- oder CheckedListBox-Steuerelementen in Windows Forms](add-and-remove-items-from-a-wf-combobox.md)  
+ Enthält Anweisungen zum Hinzufügen oder Entfernen von Elementen aus der Liste der Elemente eines Steuer Elements.  
   
- [Vorgehensweise: Erstellen einer Nachschlagetabelle für eine Windows-ComboBox-, ListBox- oder CheckedListBox-Steuerelement Forms](create-a-lookup-table-for-a-wf-combobox-listbox.md)  
- Enthält Anweisungen zum Anzeigen und Speichern von Formulardaten in nützliche Formate.  
+ [Gewusst wie: Erstellen einer Suchtabelle für ComboBox-, ListBox- oder CheckedListBox-Steuerelemente in Windows Forms](create-a-lookup-table-for-a-wf-combobox-listbox.md)  
+ Bietet Anleitungen zum Anzeigen und Speichern von Formulardaten in nützlichen Formaten.  
   
- [Vorgehensweise: Binden eines Windows Forms-Kombinationsfeld oder das ListBox-Steuerelement an Daten](how-to-bind-a-windows-forms-combobox-or-listbox-control-to-data.md)  
- Enthält Anweisungen zum Binden eines Steuerelements listenbasierte an eine Datenquelle.  
+ [Gewusst wie: Binden eines ComboBox-Steuerelements oder ListBox-Steuerelements in Windows Forms an Daten](how-to-bind-a-windows-forms-combobox-or-listbox-control-to-data.md)  
+ Gibt Anleitungen zum Binden eines Listen basierten Steuer Elements an eine Datenquelle.  
   
- [Vorgehensweise: Sortieren des Inhalts einer Windows Forms-ComboBox-, ListBox- oder CheckedListBox-Steuerelement](sort-the-contents-of-a-wf-combobox-listbox-or-checkedlistbox-control.md)  
- Erläutert, wie Daten in der Datenquelle sortiert.  
+ [Gewusst wie: Sortieren des Inhalts eines ComboBox-, ListBox- oder CheckedListBox-Steuerelements in Windows Forms](sort-the-contents-of-a-wf-combobox-listbox-or-checkedlistbox-control.md)  
+ Erläutert das Sortieren von Listen Daten in der Datenquelle.  
   
 ## <a name="reference"></a>Referenz  
  <xref:System.Windows.Forms.CheckedListBox>  

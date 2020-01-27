@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Angeben von Standardwerten für neue Zeilen im DataGridView-Steuerelement in Windows Forms'
+title: Angeben von Standardwerten für neue Zeilen im DataGridView-Steuerelement
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,17 +10,17 @@ helpviewer_keywords:
 - rows [Windows Forms], specifying default values
 - DataGridView control [Windows Forms], default values for new rows
 ms.assetid: 8d127963-d9f8-4e4e-9f7f-beb66688f1f2
-ms.openlocfilehash: 879c035366c4686ceff3250a63c6ae8d8d3cfec4
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 364f922aefc10e57f2ed7f3a0c2a5b25c922d87a
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64651952"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742928"
 ---
-# <a name="how-to-specify-default-values-for-new-rows-in-the-windows-forms-datagridview-control"></a>Vorgehensweise: Angeben von Standardwerten für neue Zeilen im DataGridView-Steuerelement in Windows Forms
-Sie können die Dateneingabe praktischer vornehmen, wenn die Anwendung im standardmäßigen Werte für neu hinzugefügte Zeilen füllt. Mit der <xref:System.Windows.Forms.DataGridView> -Klasse, Sie können Standardwerte mit dem <xref:System.Windows.Forms.DataGridView.DefaultValuesNeeded> Ereignis. Dieses Ereignis wird ausgelöst, wenn der Benutzer die Zeile für neue Datensätze eingibt. Wenn Ihr Code auf dieses Ereignis verarbeitet, können Sie die gewünschte Zellen mit den Werten Ihrer Wahl auffüllen.  
+# <a name="how-to-specify-default-values-for-new-rows-in-the-windows-forms-datagridview-control"></a>Gewusst wie: Angeben von Standardwerten für neue Zeilen im DataGridView-Steuerelement in Windows Forms
+Sie können den Dateneintrag bequemer machen, wenn die Anwendung Standardwerte für neu hinzugefügte Zeilen füllt. Mit der <xref:System.Windows.Forms.DataGridView>-Klasse können Sie Standardwerte in das <xref:System.Windows.Forms.DataGridView.DefaultValuesNeeded>-Ereignis eingeben. Dieses Ereignis wird ausgelöst, wenn der Benutzer die Zeile für neue Datensätze eingibt. Wenn Ihr Code dieses Ereignis behandelt, können Sie gewünschte Zellen mit Werten ihrer Wahl auffüllen.  
   
- Im folgenden Codebeispiel wird veranschaulicht, wie zum Angeben von Standardwerten für neue Zeilen mithilfe der <xref:System.Windows.Forms.DataGridView.DefaultValuesNeeded> Ereignis.  
+ Im folgenden Codebeispiel wird veranschaulicht, wie Standardwerte für neue Zeilen mithilfe des <xref:System.Windows.Forms.DataGridView.DefaultValuesNeeded>-Ereignisses angegeben werden.  
   
 ## <a name="example"></a>Beispiel  
  [!code-csharp[System.Windows.Forms.DataGridViewMisc#120](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#120)]
@@ -31,7 +31,7 @@ Sie können die Dateneingabe praktischer vornehmen, wenn die Anwendung im standa
   
 - Ein <xref:System.Windows.Forms.DataGridView>-Steuerelement namens `dataGridView1`.  
   
-- Ein `NewCustomerId` Funktion zum Generieren von eindeutigen `CustomerID` Werte.  
+- Eine `NewCustomerId` Funktion zum Erstellen eindeutiger `CustomerID` Werte.  
   
 - Verweise auf die Assemblys <xref:System?displayProperty=nameWithType> und <xref:System.Windows.Forms?displayProperty=nameWithType>.  
   

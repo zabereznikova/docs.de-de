@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Speichern von Dateien mit dem RichTextBox-Steuerelement von Windows Forms'
+title: Speichern von Dateien mit dem RichTextBox-Steuerelement
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -15,18 +15,18 @@ helpviewer_keywords:
 - .rtf files [Windows Forms], saving in RichTextBox control
 - text files [Windows Forms], saving from RichTextBox control
 ms.assetid: 4a58ec19-84d1-4383-9110-298c06adcfca
-ms.openlocfilehash: c5d88e4942d96ee12e8b9f40156090c874386668
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: a87b93a53347aeba54f944b0f4c455aa272ea243
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70046267"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744818"
 ---
-# <a name="how-to-save-files-with-the-windows-forms-richtextbox-control"></a>Vorgehensweise: Speichern von Dateien mit dem RichTextBox-Steuerelement von Windows Forms
+# <a name="how-to-save-files-with-the-windows-forms-richtextbox-control"></a>Gewusst wie: Speichern von Dateien mit dem RichTextBox-Steuerelement von Windows Forms
 
-Das Windows Forms <xref:System.Windows.Forms.RichTextBox> Steuerelement kann die angezeigten Informationen in einem von mehreren Formaten schreiben:
+Das Windows Forms <xref:System.Windows.Forms.RichTextBox>-Steuerelement kann die angezeigten Informationen in einem von mehreren Formaten schreiben:
 
-- Nur-Text
+- Unverschlüsselter Text
 
 - Unicode-nur-Text
 
@@ -36,17 +36,17 @@ Das Windows Forms <xref:System.Windows.Forms.RichTextBox> Steuerelement kann die
 
 - Klartext mit Textdarstellung von OLE-Objekten
 
-Um eine Datei zu speichern, wird <xref:System.Windows.Forms.RichTextBox.SaveFile%2A> die-Methode aufgerufen. Sie können auch die **SaveFile** -Methode verwenden, um Daten in einem Stream zu speichern. Weitere Informationen finden Sie unter <xref:System.Windows.Forms.RichTextBox.SaveFile%28System.IO.Stream%2CSystem.Windows.Forms.RichTextBoxStreamType%29>.
+Um eine Datei zu speichern, nennen Sie die <xref:System.Windows.Forms.RichTextBox.SaveFile%2A>-Methode. Sie können auch die **SaveFile** -Methode verwenden, um Daten in einem Stream zu speichern. Weitere Informationen finden Sie unter <xref:System.Windows.Forms.RichTextBox.SaveFile%28System.IO.Stream%2CSystem.Windows.Forms.RichTextBoxStreamType%29>.
 
 ### <a name="to-save-the-contents-of-the-control-to-a-file"></a>So speichern Sie den Inhalt des Steuer Elements in einer Datei
 
 1. Bestimmen Sie den Pfad der zu speichernden Datei.
 
-    Um dies in einer realen Anwendung zu erreichen, verwenden Sie in der Regel die <xref:System.Windows.Forms.SaveFileDialog> -Komponente. Eine Übersicht finden Sie unter [Übersicht über die SaveFileDialog-Komponente](savefiledialog-component-overview-windows-forms.md).
+    Um dies in einer realen Anwendung zu erreichen, verwenden Sie in der Regel die <xref:System.Windows.Forms.SaveFileDialog> Komponente. Eine Übersicht finden Sie unter [Übersicht über die SaveFileDialog-Komponente](savefiledialog-component-overview-windows-forms.md).
 
-2. Ruft die <xref:System.Windows.Forms.RichTextBox.SaveFile%2A> -Methode <xref:System.Windows.Forms.RichTextBox> des-Steuer Elements auf und gibt die zu speichernde Datei und optional einen Dateityp an. Wenn Sie die Methode mit einem Dateinamen als einziges Argument aufzurufen, wird die Datei als RTF gespeichert. Rufen Sie zum Angeben eines anderen Dateityps die Methode mit dem Wert der <xref:System.Windows.Forms.RichTextBoxStreamType> -Enumeration als zweites Argument auf.
+2. Ruft die <xref:System.Windows.Forms.RichTextBox.SaveFile%2A>-Methode des <xref:System.Windows.Forms.RichTextBox> Steuer Elements auf und gibt die zu speichernde Datei und optional einen Dateityp an. Wenn Sie die Methode mit einem Dateinamen als einziges Argument aufzurufen, wird die Datei als RTF gespeichert. Rufen Sie zum Angeben eines anderen Dateityps die Methode mit dem Wert der <xref:System.Windows.Forms.RichTextBoxStreamType> -Enumeration als zweites Argument auf.
 
-    Im folgenden Beispiel ist der Pfad, der für den Speicherort der Rich-Text-Datei festgelegt ist, der Ordner " **eigene** Dateien". Dieser Speicherort wird verwendet, da Sie davon ausgehen können, dass die meisten Computer unter dem Windows-Betriebssystem diesen Ordner enthalten. Wenn Sie diesen Speicherort auswählen, können Benutzer mit minimalen System Zugriffsebenen die Anwendung sicher ausführen. Im folgenden Beispiel wird davon ausgegangen, dass <xref:System.Windows.Forms.RichTextBox> ein Formular bereits hinzugefügt wurde.
+    Im folgenden Beispiel ist der Pfad, der für den Speicherort der Rich-Text-Datei festgelegt ist, der Ordner " **eigene** Dateien". Dieser Speicherort wird verwendet, da Sie davon ausgehen können, dass die meisten Computer unter dem Windows-Betriebssystem diesen Ordner enthalten. Wenn Sie diesen Speicherort auswählen, können Benutzer mit minimalen System Zugriffsebenen die Anwendung sicher ausführen. Im folgenden Beispiel wird davon ausgegangen, dass ein <xref:System.Windows.Forms.RichTextBox> Formular bereits hinzugefügt wurde.
 
     ```vb
     Public Sub SaveFile()

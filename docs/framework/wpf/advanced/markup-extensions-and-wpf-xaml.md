@@ -1,5 +1,5 @@
 ---
-title: Markuperweiterungen und WPF-XAML
+title: Markup Erweiterungen und XAML
 ms.date: 03/30/2017
 helpviewer_keywords:
 - brace character [WPF]
@@ -15,12 +15,12 @@ helpviewer_keywords:
 - characters [WPF], curly brace
 - DynamicResource markup extensions [WPF]
 ms.assetid: 618dc745-8b14-4886-833f-486d2254bb78
-ms.openlocfilehash: a9e0657aa9f9dd4de0ff3f8788c686bf1535b1ad
-ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
+ms.openlocfilehash: f4134e9d0b26135d1bd6058ac9ed8941a9c6be34
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75559793"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76727896"
 ---
 # <a name="markup-extensions-and-wpf-xaml"></a>Markuperweiterungen und WPF-XAML
 Dieses Thema bietet eine Einführung das Konzept der Markuperweiterungen für XAML und enthält eine Erläuterung der Syntaxregeln, des Zweck und des zugrunde liegenden Klassenobjektmodels. Markuperweiterungen sind eine allgemeine Funktion der XAML-Sprache und der .NET-Implementierung von XAML-Diensten. In diesem Thema werden speziell Markuperweiterungen zur Verwendung in WPF XAML beschrieben.  

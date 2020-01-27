@@ -2,12 +2,12 @@
 title: Einführung in das Routing
 ms.date: 03/30/2017
 ms.assetid: bf6ceb38-6622-433b-9ee7-f79bc93497a1
-ms.openlocfilehash: bb021f9f90f3dd54106abf12d8274d192dea1076
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 8ce98aab2ed14401fa7c2cbf43eb92a633fa96b0
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70045263"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76746470"
 ---
 # <a name="routing-introduction"></a>Einführung in das Routing
 
@@ -15,13 +15,13 @@ Der Routingdienst stellt einen generischen austauschbaren SOAP-Vermittler bereit
 
 Dieses Thema richtet sich an Personen, die mit dem Routingdienst noch nicht vertraut sind, und behandelt die grundlegende Konfiguration und das Hosten des Routingdiensts.
 
-## <a name="configuration"></a>Konfiguration
+## <a name="configuration"></a>-Konfiguration
 
-Der Routingdienst wird als WCF-Dienst implementiert, der einen oder mehrere Dienstendpunkte verfügbar macht, die Nachrichten von Clientanwendungen empfangen und die Nachrichten an einen oder mehrere Zielendpunkte weiterleiten. Der Dienst stellt ein <xref:System.ServiceModel.Routing.RoutingBehavior>-Objekt bereit, das auf die vom Dienst verfügbar gemachten Dienstendpunkte angewendet wird. Dieses Verhalten wird verwendet, um verschiedene Aspekte in Bezug auf die Funktionsweise des Diensts zu konfigurieren. Zur Erleichterung der Konfiguration bei Verwendung einer Konfigurationsdatei werden die Parameter für **Routing Behavior**angegeben. In Code basierten Szenarien werden diese Parameter als Teil eines <xref:System.ServiceModel.Routing.RoutingConfiguration> -Objekts angegeben, das dann an ein **RoutingBehavior**-Objekt weitergeleitet werden kann.
+Der Routingdienst wird als WCF-Dienst implementiert, der einen oder mehrere Dienstendpunkte verfügbar macht, die Nachrichten von Clientanwendungen empfangen und die Nachrichten an einen oder mehrere Zielendpunkte weiterleiten. Der Dienst stellt ein <xref:System.ServiceModel.Routing.RoutingBehavior>-Objekt bereit, das auf die vom Dienst verfügbar gemachten Dienstendpunkte angewendet wird. Dieses Verhalten wird verwendet, um verschiedene Aspekte in Bezug auf die Funktionsweise des Diensts zu konfigurieren. Zur Erleichterung der Konfiguration bei Verwendung einer Konfigurationsdatei werden die Parameter für **Routing Behavior**angegeben. In Code basierten Szenarien werden diese Parameter als Teil eines <xref:System.ServiceModel.Routing.RoutingConfiguration> Objekts angegeben, das dann an ein **RoutingBehavior**-Objekt weitergeleitet werden kann.
 
 Beim Starten fügt dieses Verhalten den Clientendpunkten das <xref:System.ServiceModel.Routing.SoapProcessingBehavior> hinzu. Dieses Verhalten wird für die SOAP-Verarbeitung von Nachrichten verwendet. Dadurch kann der Routing Dienst Nachrichten an Endpunkte übertragen, die eine andere **MessageVersion** benötigen als der Endpunkt, über den die Nachricht empfangen wurde. Das **RoutingBehavior** registriert auch eine Dienst Erweiterung, die <xref:System.ServiceModel.Routing.RoutingExtension>, die einen Barrierefreiheits Punkt zum Ändern der Routing Dienst Konfiguration zur Laufzeit bereitstellt.
 
-Die **RoutingConfiguration** -Klasse bietet eine konsistente Möglichkeit, die Konfiguration des Routing Dienstanbieter zu konfigurieren und zu aktualisieren.  Sie enthält Parameter, die als Einstellungen für den Routing Dienst fungieren und zum Konfigurieren des **RoutingBehavior** verwendet werden, wenn der Dienst gestartet wird. Sie wird auch verwendet, um die Routing Konfiguration zur Laufzeit zu ändern.
+Die **RoutingConfiguration** -Klasse bietet eine konsistente Möglichkeit, die Konfiguration des Routing Dienstanbieter zu konfigurieren und zu aktualisieren.  Sie enthält Parameter, die als Einstellungen für den Routing Dienst fungieren und zum Konfigurieren des **RoutingBehavior** verwendet werden, wenn der Dienst gestartet wird. Sie wird auch verwendet, um die Routing Konfiguration zur **Laufzeit zu ändern** .
 
 Die Routinglogik, mit der das inhaltsbasierte Routing von Nachrichten durchgeführt wird, wird definiert, indem mehrere <xref:System.ServiceModel.Dispatcher.MessageFilter>-Objekte zu Filtertabellen (<xref:System.ServiceModel.Dispatcher.MessageFilterTable%601>-Objekten) gruppiert werden. Eingehende Nachrichten werden anhand der in der Filter Tabelle enthaltenen Nachrichtenfilter und für jeden **MessageFilter** , der mit der Nachricht übereinstimmt, an einen Ziel Endpunkt weitergeleitet. Die Filter Tabelle, die zum Weiterleiten von Nachrichten verwendet werden soll, wird entweder mithilfe des **RoutingBehavior** in der Konfiguration oder durch Code mithilfe des **RoutingConfiguration** -Objekts angegeben.
 
@@ -101,7 +101,7 @@ serviceHost.Description.Behaviors.Add(
      new RoutingBehavior(rc));
 ```
 
-In diesem Beispiel wird der Routing Dienst konfiguriert, um einen einzelnen Endpunkt mit einer Adresse `http://localhost:8000/routingservice/router`von verfügbar zu machen, der zum Empfangen von Nachrichten verwendet wird, die weitergeleitet werden sollen. Da die Nachrichten an die Anforderung-Antwort-Endpunkte weitergeleitet werden, verwendet der Dienstendpunkt den <xref:System.ServiceModel.Routing.IRequestReplyRouter>-Vertrag. Diese Konfiguration definiert auch einen einzelnen Client Endpunkt `http://localhost:8000/servicemodelsample/service` , an den Nachrichten weitergeleitet werden. Die Filter Tabelle (nicht angezeigt) mit dem Namen "routingTable1" enthält die Routing Logik, die zum Weiterleiten von Nachrichten verwendet wird, und ist mit dem Dienst Endpunkt verknüpft, indem Routing **Verhalten** (für eine Konfigurationsdatei) oder **RoutingConfiguration** (für programmgesteuerte Konfiguration).
+In diesem Beispiel wird der Routing Dienst so konfiguriert, dass ein einzelner Endpunkt mit der Adresse `http://localhost:8000/routingservice/router`verfügbar gemacht wird, der zum Empfangen von Nachrichten verwendet wird, die weitergeleitet werden sollen. Da die Nachrichten an die Anforderung-Antwort-Endpunkte weitergeleitet werden, verwendet der Dienstendpunkt den <xref:System.ServiceModel.Routing.IRequestReplyRouter>-Vertrag. Diese Konfiguration definiert auch einen einzelnen Client Endpunkt `http://localhost:8000/servicemodelsample/service`, an die Nachrichten weitergeleitet werden. Die Filter Tabelle (nicht angezeigt) mit dem Namen "routingTable1" enthält die Routing Logik, die zum Weiterleiten von Nachrichten verwendet wird, und ist mit dem Dienst Endpunkt verknüpft, indem Routing **Verhalten** (für eine Konfigurationsdatei) oder **RoutingConfiguration** (für die programmgesteuerte Konfiguration) verwendet wird.
 
 ### <a name="routing-logic"></a>Routinglogik
 
@@ -164,7 +164,7 @@ Viele Routingdienstkonfigurationen verwenden zwar eine exklusive Filterlogik, di
 
 - Mehrere Filter müssen beim Auswerten der Nachricht `true` zurückgeben.
 
-Falls diese Bedingungen erfüllt sind, wird die Nachricht an alle Endpunkte aller Filter weitergeleitet, für die die Auswertung `true` ergibt. Im folgenden Beispiel wird eine Routing Konfiguration definiert, die dazu führt, dass Nachrichten an beide Endpunkte weitergeleitet werden, wenn `http://localhost:8000/routingservice/router/rounding`die Endpunkt Adresse in der Nachricht ist.
+Falls diese Bedingungen erfüllt sind, wird die Nachricht an alle Endpunkte aller Filter weitergeleitet, für die die Auswertung `true` ergibt. Im folgenden Beispiel wird eine Routing Konfiguration definiert, die dazu führt, dass Nachrichten an beide Endpunkte weitergeleitet werden, wenn die Endpunkt Adresse in der Nachricht `http://localhost:8000/routingservice/router/rounding`ist.
 
 ```xml
 <!--ROUTING SECTION -->
@@ -194,7 +194,7 @@ rc.FilterTable.Add(new EndpointAddressMessageFilter(new EndpointAddress(
 
 ### <a name="soap-processing"></a>SOAP-Verarbeitung
 
-Um das Routing von Nachrichten zwischen unterschiedlichen Protokollen zu unterstützen, fügt das **RoutingBehavior** Standard <xref:System.ServiceModel.Routing.SoapProcessingBehavior> mäßig den allen Client Endpunkten hinzu, an die Nachrichten weitergeleitet werden. Dieses Verhalten erstellt automatisch eine neue **MessageVersion** , bevor die Nachricht an den Endpunkt weitergegeben wird, und erstellt eine kompatible **MessageVersion** für jedes Antwortdokument, bevor es an die anfordernde Client Anwendung zurückgegeben wird.
+Um das Routing von Nachrichten zwischen unterschiedlichen Protokollen zu unterstützen, fügt das **RoutingBehavior** standardmäßig den <xref:System.ServiceModel.Routing.SoapProcessingBehavior> allen Client Endpunkten hinzu, an die Nachrichten weitergeleitet werden. Dieses Verhalten erstellt automatisch eine neue **MessageVersion** , bevor die Nachricht an den Endpunkt weitergegeben wird, und erstellt eine kompatible **MessageVersion** für jedes Antwortdokument, bevor es an die anfordernde Client Anwendung zurückgegeben wird.
 
 Die Schritte zum Erstellen einer neuen **MessageVersion** für die ausgehende Nachricht lauten wie folgt:
 
@@ -206,7 +206,7 @@ Die Schritte zum Erstellen einer neuen **MessageVersion** für die ausgehende Na
 
 - Erstellen Sie eine neue Nachricht mit der gleichen Aktion, dem Text Reader und einer neuen **MessageVersion**.
 
-- Wenn <xref:System.ServiceModel.Channels.MessageVersion.Addressing%2A> ! = **Adressierung. None**, kopieren Sie die Header in, from, FaultTo und RelatesTo in die neue Nachricht.
+- Wenn <xref:System.ServiceModel.Channels.MessageVersion.Addressing%2A>! = **Adressierung. None**, kopieren Sie die Header in, from, FaultTo und RelatesTo in die neue Nachricht.
 
 - Kopieren Sie alle Eigenschaften der Nachricht in die neue Nachricht.
 
@@ -222,13 +222,13 @@ Die Schritte zum Erstellen einer neuen **MessageVersion** für die ausgehende Na
 
 - Erstellen Sie eine neue Antwortnachricht mit der gleichen Aktion, dem Text Reader und der **MessageVersion** der ursprünglichen Anforderungs Nachricht.
 
-- Wenn <xref:System.ServiceModel.Channels.MessageVersion.Addressing%2A> ! = **Adressierung. None**, kopieren Sie die Header in, from, FaultTo und RelatesTo in die neue Nachricht.
+- Wenn <xref:System.ServiceModel.Channels.MessageVersion.Addressing%2A>! = **Adressierung. None**, kopieren Sie die Header in, from, FaultTo und RelatesTo in die neue Nachricht.
 
 - Kopieren Sie die Eigenschaften der Nachricht in die neue Nachricht.
 
 - Geben Sie die neue Antwortnachricht zurück.
 
-Standardmäßig wird das **soapprocessingbehavior** automatisch von <xref:System.ServiceModel.Routing.RoutingBehavior> der Client Endpunkte hinzugefügt, wenn der Dienst gestartet wird. Sie können jedoch steuern, ob die SOAP-Verarbeitung allen Client Endpunkten mithilfe der <xref:System.ServiceModel.Routing.RoutingConfiguration.SoapProcessingEnabled%2A> -Eigenschaft hinzugefügt wird. . Sie können das Verhalten auch direkt einem bestimmten Endpunkt hinzufügen und es auf Endpunktebene aktivieren oder deaktivieren, falls eine präzisere Steuerung der SOAP-Verarbeitung erforderlich ist.
+Standardmäßig wird das **soapprocessingbehavior** automatisch den Client Endpunkten von der <xref:System.ServiceModel.Routing.RoutingBehavior> hinzugefügt, wenn der Dienst gestartet wird. Sie können jedoch steuern, ob die SOAP-Verarbeitung allen Client Endpunkten mithilfe der <xref:System.ServiceModel.Routing.RoutingConfiguration.SoapProcessingEnabled%2A>-Eigenschaft hinzugefügt wird. Sie können das Verhalten auch direkt einem bestimmten Endpunkt hinzufügen und es auf Endpunktebene aktivieren oder deaktivieren, falls eine präzisere Steuerung der SOAP-Verarbeitung erforderlich ist.
 
 > [!NOTE]
 > Wenn die SOAP-Verarbeitung für einen Endpunkt deaktiviert ist, der eine andere MessageVersion als die der ursprünglichen Anforderungsnachricht erfordert, müssen Sie einen benutzerdefinierten Mechanismus zum Ausführen aller SOAP-Änderungen bereitstellen, die vor dem Senden der Nachricht an den Zielendpunkt erforderlich sind.
@@ -256,7 +256,7 @@ rc.SoapProcessingEnabled = false;
 
 Wenn Sie zusätzliche Clientendpunkte hinzufügen oder die Filter zum Weiterleiten von Nachrichten ändern, müssen Sie eine Möglichkeit schaffen, die Konfiguration zur Laufzeit dynamisch zu aktualisieren. Auf diese Weise verhindern Sie die Unterbrechung des Diensts zu den Endpunkten, die momentan Nachrichten über den Routingdienst empfangen. Das Ändern einer Konfigurationsdatei oder des Codes der Hostanwendung ist nicht immer ausreichend, weil bei beiden Verfahren die Wiederverwendung der Anwendung erforderlich ist. Dies kann zum Verlust aller Nachrichten führen, die gerade übertragen werden, und es kann beim Warten auf den Neustart des Diensts zu einer Ausfallzeit kommen.
 
-Sie können **RoutingConfiguration** nur Programm gesteuert ändern. Obwohl Sie den Dienst anfänglich mithilfe einer Konfigurationsdatei konfigurieren können, können Sie die Konfiguration nur zur Laufzeit ändern, indem Sie eine neue **RoutingConfiguration** erstellen und Sie als Parameter an die <xref:System.ServiceModel.Routing.RoutingExtension.ApplyConfiguration%2A> Methode übergeben, die vom <xref:System.ServiceModel.Routing.RoutingExtension>Dienst Erweiterung. Alle Nachrichten, die zurzeit übertragen werden, werden weiterhin mithilfe der vorherigen Konfiguration weitergeleitet, während Nachrichten, die nach dem aufzurufen von **ApplyConfiguration** empfangen werden, die neue Konfiguration Im folgenden Beispiel wird das Erstellen einer Instanz des Routingdiensts und anschließend das Ändern der Konfiguration veranschaulicht.
+Sie können **RoutingConfiguration** nur Programm gesteuert ändern. Obwohl Sie den Dienst anfänglich mithilfe einer Konfigurationsdatei konfigurieren können, können Sie die Konfiguration nur zur Laufzeit ändern, indem Sie eine neue **RoutingConfiguration** erstellen und Sie als Parameter an die <xref:System.ServiceModel.Routing.RoutingExtension.ApplyConfiguration%2A> Methode übergeben, die von der <xref:System.ServiceModel.Routing.RoutingExtension> Dienst Erweiterung verfügbar gemacht wird. Alle Nachrichten, die zurzeit übertragen werden, werden weiterhin mithilfe der vorherigen Konfiguration weitergeleitet, während Nachrichten, die nach dem aufzurufen von **ApplyConfiguration** empfangen werden, die neue Konfiguration Im folgenden Beispiel wird das Erstellen einer Instanz des Routingdiensts und anschließend das Ändern der Konfiguration veranschaulicht.
 
 ```csharp
 RoutingConfiguration routingConfig = new RoutingConfiguration();
@@ -287,12 +287,12 @@ routerHost.routerHost.Extensions.Find<RoutingExtension>().ApplyConfiguration(rc2
 
 ## <a name="error-handling"></a>Fehlerbehandlung
 
-Wenn beim versuchten Senden einer Nachricht eine <xref:System.ServiceModel.CommunicationException> auftritt, wird die Fehlerbehandlung ausgeführt. Diese Ausnahmen weisen in der Regel darauf hin, dass beim Versuch der Kommunikation mit dem definierten Clientendpunkt ein Problem aufgetreten ist, z. B. <xref:System.ServiceModel.EndpointNotFoundException>, <xref:System.ServiceModel.ServerTooBusyException> oder <xref:System.ServiceModel.CommunicationObjectFaultedException>. Der Fehler Behandlungs Code fängt auch auf und versucht, den Sendevorgang zu wiederholen <xref:System.TimeoutException> , wenn ein auftritt. Dies ist eine andere häufige Ausnahme, die nicht von **CommunicationException**abgeleitet ist.
+Wenn beim versuchten Senden einer Nachricht eine <xref:System.ServiceModel.CommunicationException> auftritt, wird die Fehlerbehandlung ausgeführt. Diese Ausnahmen weisen in der Regel darauf hin, dass beim Versuch der Kommunikation mit dem definierten Clientendpunkt ein Problem aufgetreten ist, z. B. <xref:System.ServiceModel.EndpointNotFoundException>, <xref:System.ServiceModel.ServerTooBusyException> oder <xref:System.ServiceModel.CommunicationObjectFaultedException>. Der Fehler Behandlungs Code fängt auch auf und versucht, den Sendevorgang zu wiederholen, wenn ein <xref:System.TimeoutException> auftritt. Dies ist eine andere häufige Ausnahme, die nicht von **CommunicationException**abgeleitet ist.
 
 Wenn eine der vorangehenden Ausnahmen auftritt, führt der Routingdienst ein Failover zu einer Liste von Sicherungsendpunkten aus. Falls für alle Sicherungsendpunkte ein Kommunikationsfehler auftritt oder falls ein Endpunkt eine Ausnahme zurückgibt, die einen Fehler beim Zieldienst angibt, gibt der Routingdienst einen Fehler an die Clientanwendung zurück.
 
 > [!NOTE]
-> Die Fehlerbehandlungsfunktion erfasst und behandelt Ausnahmen, die beim versuchten Senden einer Nachricht oder Schließen eines Kanals auftreten. Der Fehler Behandlungs Code dient nicht zum erkennen oder behandeln von Ausnahmen, die von den Anwendungs Endpunkten erstellt werden, mit denen er kommuniziert. ein <xref:System.ServiceModel.FaultException> , der von einem Dienst ausgelöst wird, wird als **Fehlermeldung** am Routing Dienst angezeigt und an den Client zurückgegeben.
+> Die Fehlerbehandlungsfunktion erfasst und behandelt Ausnahmen, die beim versuchten Senden einer Nachricht oder Schließen eines Kanals auftreten. Der Fehler Behandlungs Code dient nicht zum erkennen oder behandeln von Ausnahmen, die von den Anwendungs Endpunkten erstellt werden, mit denen er kommuniziert. eine <xref:System.ServiceModel.FaultException>, die von einem Dienst ausgelöst wird, wird als **Fehlermeldung** am Routing Dienst angezeigt und an den Client zurückgegeben.
 >
 > Wenn beim Weiterleiten einer Nachricht durch den Routingdienst ein Fehler auftritt, erhalten Sie eventuell auf der Clientseite eine <xref:System.ServiceModel.FaultException> und keine <xref:System.ServiceModel.EndpointNotFoundException>, die Sie normalerweise bei nicht vorhandenem Routingdienst erhalten. Daher maskiert der Routingdienst möglicherweise Ausnahmen und bietet keine vollständige Transparenz, es sei denn, Sie überprüfen geschachtelte Ausnahmen.
 
@@ -367,19 +367,19 @@ In der folgenden Tabelle werden die Muster beschrieben, die mit der Verwendung v
 |Muster|Sitzung|Transaktion|Empfangskontext|Unterstützte Sicherungsliste|Hinweise|
 |-------------|-------------|-----------------|---------------------|---------------------------|-----------|
 |Unidirektional||||Ja|Versucht, die Nachricht erneut an einen Sicherungsendpunkt zu senden. Falls für diese Nachricht ein Multicast ausgeführt wird, wird nur die Nachricht im Kanal mit dem Fehler an das entsprechende Sicherungsziel verschoben.|
-|Unidirektional||✓||Nein|Eine Ausnahme wird ausgelöst, und für die Transaktion wird ein Rollback ausgeführt.|
-|Unidirektional|||✓|Ja|Versucht, die Nachricht erneut an einen Sicherungsendpunkt zu senden. Nachdem die Nachricht erfolgreich empfangen wurde, werden alle Empfangskontexte abgeschlossen. Falls die Nachricht von keinem Endpunkt erfolgreich empfangen wurde, wird der Empfangskontext nicht abgeschlossen.<br /><br /> Wenn für diese Nachricht ein Multicast ausgeführt wird, wird der Empfangskontext nur abgeschlossen, falls die Nachricht von mindestens einem Endpunkt (primär oder Sicherung) erfolgreich empfangen wird. Schließen Sie den Empfangskontext nicht ab, falls der Empfang der Nachricht für keinen Endpunkt in den Multicastpfaden erfolgreich ist.|
-|Unidirektional||✓|✓|Ja|Brechen Sie die vorherige Transaktion ab, erstellen Sie eine neue Transaktion, und senden Sie alle Nachrichten neu. Nachrichten, für die ein Fehler aufgetreten ist, werden an ein Sicherungsziel übertragen.<br /><br /> Nachdem eine Transaktion erstellt wurde, für die alle Übertragungen erfolgreich sind, schließen Sie die Empfangskontexte ab und führen für die Transaktion einen Commit aus.|
-|Unidirektional|✓|||Ja|Versucht, die Nachricht erneut an einen Sicherungsendpunkt zu senden. In einem Multicastszenario werden nur die Nachrichten einer Sitzung, für die ein Fehler aufgetreten ist oder bei der beim Schließen der Sitzung ein Fehler aufgetreten ist, zurück an die Sicherungsziele gesendet.|
-|Unidirektional|✓|✓||Nein|Eine Ausnahme wird ausgelöst, und für die Transaktion wird ein Rollback ausgeführt.|
-|Unidirektional|✓||✓|Ja|Versucht, die Nachricht erneut an einen Sicherungsendpunkt zu senden. Nachdem das Senden für alle Nachrichten erfolgreich abgeschlossen wurde, zeigt die Sitzung keine Nachrichten mehr an, und der Routingdienst schließt alle ausgehenden Sitzungskanäle. Außerdem werden alle Empfangskontexte abgeschlossen und der eingehende Sitzungskanal geschlossen.|
-|Unidirektional|✓|✓|✓|Ja|Brechen Sie die aktuelle Transaktion ab, und erstellen Sie eine neue Transaktion. Senden Sie alle vorherigen Nachrichten der Sitzung neu. Nachdem eine Transaktion erstellt wurde, für die alle Nachrichten erfolgreich gesendet wurden, und die Sitzung keine Nachrichten mehr anzeigt, werden alle ausgehenden Sitzungskanäle geschlossen. Außerdem werden alle Empfangskontexte zusammen mit der Transaktion abgeschlossen, der eingehende Sitzungskanal wird geschlossen und für die Transaktion wird ein Commit ausgeführt.<br /><br /> Wenn für die Sitzungen ein Multicast durchgeführt wird, werden die Nachrichten, für die kein Fehler aufgetreten ist, wie vorher erneut zurück an das gleiche Ziel gesendet. Nachrichten, für die ein Fehler aufgetreten ist, werden an die Sicherungsziele gesendet.|
+|Unidirektional||✔️||Nein|Eine Ausnahme wird ausgelöst, und für die Transaktion wird ein Rollback ausgeführt.|
+|Unidirektional|||✔️|Ja|Versucht, die Nachricht erneut an einen Sicherungsendpunkt zu senden. Nachdem die Nachricht erfolgreich empfangen wurde, werden alle Empfangskontexte abgeschlossen. Falls die Nachricht von keinem Endpunkt erfolgreich empfangen wurde, wird der Empfangskontext nicht abgeschlossen.<br /><br /> Wenn für diese Nachricht ein Multicast ausgeführt wird, wird der Empfangskontext nur abgeschlossen, falls die Nachricht von mindestens einem Endpunkt (primär oder Sicherung) erfolgreich empfangen wird. Schließen Sie den Empfangskontext nicht ab, falls der Empfang der Nachricht für keinen Endpunkt in den Multicastpfaden erfolgreich ist.|
+|Unidirektional||✔️|✔️|Ja|Brechen Sie die vorherige Transaktion ab, erstellen Sie eine neue Transaktion, und senden Sie alle Nachrichten neu. Nachrichten, für die ein Fehler aufgetreten ist, werden an ein Sicherungsziel übertragen.<br /><br /> Nachdem eine Transaktion erstellt wurde, für die alle Übertragungen erfolgreich sind, schließen Sie die Empfangskontexte ab und führen für die Transaktion einen Commit aus.|
+|Unidirektional|✔️|||Ja|Versucht, die Nachricht erneut an einen Sicherungsendpunkt zu senden. In einem Multicastszenario werden nur die Nachrichten einer Sitzung, für die ein Fehler aufgetreten ist oder bei der beim Schließen der Sitzung ein Fehler aufgetreten ist, zurück an die Sicherungsziele gesendet.|
+|Unidirektional|✔️|✔️||Nein|Eine Ausnahme wird ausgelöst, und für die Transaktion wird ein Rollback ausgeführt.|
+|Unidirektional|✔️||✔️|Ja|Versucht, die Nachricht erneut an einen Sicherungsendpunkt zu senden. Nachdem das Senden für alle Nachrichten erfolgreich abgeschlossen wurde, zeigt die Sitzung keine Nachrichten mehr an, und der Routingdienst schließt alle ausgehenden Sitzungskanäle. Außerdem werden alle Empfangskontexte abgeschlossen und der eingehende Sitzungskanal geschlossen.|
+|Unidirektional|✔️|✔️|✔️|Ja|Brechen Sie die aktuelle Transaktion ab, und erstellen Sie eine neue Transaktion. Senden Sie alle vorherigen Nachrichten der Sitzung neu. Nachdem eine Transaktion erstellt wurde, für die alle Nachrichten erfolgreich gesendet wurden, und die Sitzung keine Nachrichten mehr anzeigt, werden alle ausgehenden Sitzungskanäle geschlossen. Außerdem werden alle Empfangskontexte zusammen mit der Transaktion abgeschlossen, der eingehende Sitzungskanal wird geschlossen und für die Transaktion wird ein Commit ausgeführt.<br /><br /> Wenn für die Sitzungen ein Multicast durchgeführt wird, werden die Nachrichten, für die kein Fehler aufgetreten ist, wie vorher erneut zurück an das gleiche Ziel gesendet. Nachrichten, für die ein Fehler aufgetreten ist, werden an die Sicherungsziele gesendet.|
 |Bidirektional||||Ja|Das Senden erfolgt an ein Sicherungsziel.  Nachdem ein Kanal eine Antwortnachricht zurückgegeben hat, wird die Antwort an den ursprünglichen Client zurückgegeben.|
-|Bidirektional|✓|||Ja|Alle Nachrichten im Kanal werden an ein Sicherungsziel gesendet.  Nachdem ein Kanal eine Antwortnachricht zurückgegeben hat, wird die Antwort an den ursprünglichen Client zurückgegeben.|
-|Bidirektional||✓||Nein|Eine Ausnahme wird ausgelöst, und für die Transaktion wird ein Rollback ausgeführt.|
-|Bidirektional|✓|✓||Nein|Eine Ausnahme wird ausgelöst, und für die Transaktion wird ein Rollback ausgeführt.|
+|Bidirektional|✔️|||Ja|Alle Nachrichten im Kanal werden an ein Sicherungsziel gesendet.  Nachdem ein Kanal eine Antwortnachricht zurückgegeben hat, wird die Antwort an den ursprünglichen Client zurückgegeben.|
+|Bidirektional||✔️||Nein|Eine Ausnahme wird ausgelöst, und für die Transaktion wird ein Rollback ausgeführt.|
+|Bidirektional|✔️|✔️||Nein|Eine Ausnahme wird ausgelöst, und für die Transaktion wird ein Rollback ausgeführt.|
 |Duplex||||Nein|Die Duplexkommunikation außerhalb von Sitzungen wird momentan nicht unterstützt.|
-|Duplex|✓|||Ja|Das Senden erfolgt an ein Sicherungsziel.|
+|Duplex|✔️|||Ja|Das Senden erfolgt an ein Sicherungsziel.|
 
 ## <a name="hosting"></a>Hosting
 

@@ -2,12 +2,12 @@
 title: 'Entwurfsmuster: Listenbasiertes Veröffentlichen-Abonnieren'
 ms.date: 03/30/2017
 ms.assetid: f4257abc-12df-4736-a03b-0731becf0fd4
-ms.openlocfilehash: 831e6947c0919e8112627ff0a0697592f598561b
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 3a62b09a29ec0b7e241bf2fdc09df6eaba5420c7
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74716338"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76728827"
 ---
 # <a name="design-patterns-list-based-publish-subscribe"></a>Entwurfsmuster: Listenbasiertes Veröffentlichen-Abonnieren
 Dieses Beispiel veranschaulicht das Listen basierte Veröffentlichen-Abonnieren-Muster, das als Windows Communication Foundation (WCF)-Programm implementiert ist.  
@@ -15,7 +15,7 @@ Dieses Beispiel veranschaulicht das Listen basierte Veröffentlichen-Abonnieren-
 > [!NOTE]
 > Die Setupprozedur und die Buildanweisungen für dieses Beispiel befinden sich am Ende dieses Themas.  
   
- Das Listen basierte veröffentlichen-abonnieren-Entwurfsmuster wird in der Microsoft Patterns & Practices-Veröffentlichung, in den [Integrations Mustern](https://go.microsoft.com/fwlink/?LinkId=95894)beschrieben. Das Veröffentlichen-Abonnieren-Muster übergibt Informationen an eine Auflistung von Empfängern, die ein Informationsthema abonniert haben. Listenbasiertes Veröffentlichen-Abonnieren verwaltet eine Liste von Abonnenten. Wenn für die Veröffentlichung bestimmte Informationen vorhanden sind, wird jedem Abonnenten auf der Liste ein Exemplar geschickt. Dieses Beispiel veranschaulicht ein dynamisches listenbasiertes Veröffentlichen-Abonnieren-Muster, das von Kunden nach Bedarf abonniert und abbestellt werden kann.  
+ Das Listen basierte veröffentlichen-abonnieren-Entwurfsmuster wird in der Microsoft Patterns & Practices-Veröffentlichung, in den [Integrations Mustern](https://docs.microsoft.com/previous-versions/msp-n-p/ff647309(v=pandp.10))beschrieben. Das Veröffentlichen-Abonnieren-Muster übergibt Informationen an eine Auflistung von Empfängern, die ein Informationsthema abonniert haben. Listenbasiertes Veröffentlichen-Abonnieren verwaltet eine Liste von Abonnenten. Wenn für die Veröffentlichung bestimmte Informationen vorhanden sind, wird jedem Abonnenten auf der Liste ein Exemplar geschickt. Dieses Beispiel veranschaulicht ein dynamisches listenbasiertes Veröffentlichen-Abonnieren-Muster, das von Kunden nach Bedarf abonniert und abbestellt werden kann.  
   
  Das Beispiel für listenbasiertes Veröffentlichen-Abonnieren besteht aus einem Client, einem Dienst und einem Datenquellenprogramm. Es können mehrere Clients und mehrere Datenquellenprogramme ausgeführt werden. Clients abonnieren den Dienst, empfangen Benachrichtigungen und bestellen den Dienst ab. Datenquellprogramme senden Informationen an den Dienst, die für alle aktuellen Abonnenten veröffentlicht werden sollte.  
   

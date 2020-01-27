@@ -1,5 +1,5 @@
 ---
-title: Übersicht über die PrintDocument-Komponente (Windows Forms)
+title: Übersicht über die PrintDocument-Komponente
 ms.date: 03/30/2017
 f1_keywords:
 - PrintDocument
@@ -7,12 +7,12 @@ helpviewer_keywords:
 - PrintDocument component [Windows Forms], about PrintDocument component
 - printing [Windows Forms], PrintDocument component
 ms.assetid: b59b4b60-dce5-42ca-8421-3a54a2f7bab0
-ms.openlocfilehash: 16a7f3a34ccb280f7bf91c52e29b20edc22130b9
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: a82cc0cdcb8cfae796c9c6bf60ab73873f85a291
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69928997"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76728538"
 ---
 # <a name="printdocument-component-overview-windows-forms"></a>Übersicht über die PrintDocument-Komponente (Windows Forms)
 
@@ -20,13 +20,13 @@ Die Komponente [PrintDocument](printdocument-component-windows-forms.md) von Win
 
 ## <a name="working-with-the-printdocument-component"></a>Arbeiten mit der PrintDocument-Komponente
 
-Zwei der wichtigsten Szenarien, in denen die <xref:System.Drawing.Printing.PrintDocument> -Komponente enthalten ist, sind:
+Zwei der wichtigsten Szenarien, die die <xref:System.Drawing.Printing.PrintDocument> Komponente einbeziehen, sind:
 
-- Einfache Druckaufträge wie das Drucken einer einzelnen Textdatei. In einem solchen Fall würden Sie die <xref:System.Drawing.Printing.PrintDocument> Komponente zu einem Windows Form hinzufügen und dann eine Programmierlogik hinzufügen, die eine Datei <xref:System.Drawing.Printing.PrintDocument.PrintPage> im-Ereignishandler ausgibt. Die Programmierlogik sollte mit der <xref:System.Drawing.Printing.PrintDocument.Print%2A> -Methode zum Drucken des Dokuments in die-Methode münden. Diese Methode sendet ein <xref:System.Drawing.Graphics> -Objekt, das in <xref:System.Drawing.Printing.PrintPageEventArgs.Graphics%2A> der-Eigenschaft <xref:System.Drawing.Printing.PrintPageEventArgs> der-Klasse enthalten ist, an den Drucker. Ein Beispiel für das Drucken eines Textdokuments mithilfe der <xref:System.Drawing.Printing.PrintDocument> -Komponente finden [Sie unter Gewusst wie: Drucken einer mehrseitigen Textdatei in Windows Forms](../advanced/how-to-print-a-multi-page-text-file-in-windows-forms.md).
+- Einfache Druckaufträge wie das Drucken einer einzelnen Textdatei. In einem solchen Fall würden Sie die <xref:System.Drawing.Printing.PrintDocument> Komponente zu einem Windows Form hinzufügen und dann eine Programmierlogik hinzufügen, die eine Datei im <xref:System.Drawing.Printing.PrintDocument.PrintPage>-Ereignishandler ausgibt. Die Programmierlogik sollte mit der <xref:System.Drawing.Printing.PrintDocument.Print%2A>-Methode zum Drucken des Dokuments in der Sprache stehen. Diese Methode sendet ein <xref:System.Drawing.Graphics> Objekt, das in der <xref:System.Drawing.Printing.PrintPageEventArgs.Graphics%2A>-Eigenschaft der <xref:System.Drawing.Printing.PrintPageEventArgs>-Klasse enthalten ist, an den Drucker. Ein Beispiel, das zeigt, wie Sie ein Textdokument mithilfe der <xref:System.Drawing.Printing.PrintDocument> Komponente drucken, finden Sie unter Gewusst [wie: Drucken einer mehrseitigen Textdatei in Windows Forms](../advanced/how-to-print-a-multi-page-text-file-in-windows-forms.md).
 
-- Komplexere Druckaufträge, z.B. eine Situation, in der Sie bereits geschriebene Drucklogik wiederverwenden möchten. In <xref:System.Drawing.Printing.PrintDocument> einem solchen Fall würden Sie eine neue Komponente von der Komponente ableiten und [über](../../../visual-basic/language-reference/modifiers/overrides.md) schreiben (siehe außer Kraft setzungen für Visual Basic oder C# <xref:System.Drawing.Printing.PrintDocument.PrintPage> [außer Kraft](../../../csharp/language-reference/keywords/override.md) setzung für) das Ereignis.
+- Komplexere Druckaufträge, z.B. eine Situation, in der Sie bereits geschriebene Drucklogik wiederverwenden möchten. In einem solchen Fall würden Sie eine neue Komponente aus der <xref:System.Drawing.Printing.PrintDocument> Komponente ableiten und [über](../../../visual-basic/language-reference/modifiers/overrides.md) schreiben (siehe [außer Kraft](../../../csharp/language-reference/keywords/override.md) setzungen für Visual Basic oder C#außer Kraft setzung für) das <xref:System.Drawing.Printing.PrintDocument.PrintPage> Ereignis.
 
-Wenn Sie einem Formular hinzugefügt wird, wird <xref:System.Drawing.Printing.PrintDocument> die Komponente in der Leiste am unteren Rand des Windows Forms-Designer in Visual Studio angezeigt.
+Wenn Sie einem Formular hinzugefügt wird, wird die <xref:System.Drawing.Printing.PrintDocument> Komponente in der Leiste am unteren Rand des Windows Forms-Designer in Visual Studio angezeigt.
 
 ## <a name="see-also"></a>Siehe auch
 

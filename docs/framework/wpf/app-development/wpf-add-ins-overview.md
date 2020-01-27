@@ -1,5 +1,5 @@
 ---
-title: Übersicht über WPF-Add-Ins
+title: Übersicht über Add-ins
 ms.date: 03/30/2017
 helpviewer_keywords:
 - add-ins and XAML browser applications [WPF]
@@ -12,12 +12,12 @@ helpviewer_keywords:
 - add-ins [WPF], architecture
 - add-ins [WPF], limitations
 ms.assetid: 00b4c776-29a8-4dba-b603-280a0cdc2ade
-ms.openlocfilehash: 319f8b8c0225c7730112b1db073884b391945ac8
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 93904e308932ea41c736ca849ce0efb200502a7e
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73421091"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76738942"
 ---
 # <a name="wpf-add-ins-overview"></a>Übersicht über WPF-Add-Ins
 
@@ -25,7 +25,7 @@ ms.locfileid: "73421091"
 
 <a name="Requirements"></a>
 
-## <a name="prerequisites"></a>Erforderliche Voraussetzungen
+## <a name="prerequisites"></a>Erforderliche Komponenten
 
 Vertrautheit mit dem .NET Framework Add-in-Modell ist erforderlich. Weitere Informationen finden Sie unter [Add-Ins und Erweiterbarkeit](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)).
 
@@ -252,7 +252,7 @@ Naturgemäß hat <xref:System.Windows.Interop.HwndHost> bestimmte Beschränkunge
 
 ## <a name="wpf-add-in-benefits"></a>Vorteile des WPF-Add-Ins
 
-Da WPF-Add-in-Benutzeroberflächen von Host Anwendungen mithilfe einer internen Klasse angezeigt werden, die von <xref:System.Windows.Interop.HwndHost>abgeleitet ist, werden diese Benutzeroberflächen durch die Funktionen von <xref:System.Windows.Interop.HwndHost> in Bezug auf WPF-UI-Dienste wie Layout, Rendering, Daten eingeschränkt. Bindung, Stile, Vorlagen und Ressourcen. WPF erweitert jedoch seine interne <xref:System.Windows.Interop.HwndHost>-Unterklasse mit zusätzlichen Funktionen, die Folgendes umfassen:
+Da WPF-Add-in-Benutzeroberflächen von Host Anwendungen mithilfe einer internen Klasse angezeigt werden, die von <xref:System.Windows.Interop.HwndHost>abgeleitet ist, werden diese Benutzeroberflächen durch die Funktionen von <xref:System.Windows.Interop.HwndHost> in Bezug auf WPF-UI-Dienste wie Layout, Rendering, Datenbindung, Stile, Vorlagen und Ressourcen eingeschränkt. WPF erweitert jedoch seine interne <xref:System.Windows.Interop.HwndHost>-Unterklasse mit zusätzlichen Funktionen, die Folgendes umfassen:
 
 - Tabstopps zwischen der Benutzeroberfläche einer Host Anwendung und der Benutzeroberfläche eines Add-Ins. Beachten Sie, dass das Programmiermodell "Add-in ist eine Benutzeroberfläche" erfordert, dass der Add-in-Side-Adapter <xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A> überschreibt, um Tabstopps zu aktivieren, ob das Add-in voll vertrauenswürdig oder teilweise vertrauenswürdig ist.
 
@@ -315,4 +315,4 @@ Wenn mehrere Anwendungs Domänen verwendet werden, werden standardmäßig die ve
 - [Anwendungsdomänen](../../app-domains/application-domains.md)
 - [Übersicht über .NET Framework Remoting](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/kwdt6w2k(v=vs.100))
 - [Erstellen von Objekten als remotable](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/wcf3swha(v=vs.100))
-- [Themen zu Vorgehensweisen](how-to-topics.md)
+- [Gewusst wie-Themen](how-to-topics.md)

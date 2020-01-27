@@ -1,5 +1,5 @@
 ---
-title: ListBox-Steuerelement (Windows Forms)
+title: ListBox-Steuerelement
 ms.date: 03/30/2017
 helpviewer_keywords:
 - ListBox control [Windows Forms]
@@ -9,15 +9,15 @@ helpviewer_keywords:
 - list items [Windows Forms], Windows Forms controls that display
 - list boxes
 ms.assetid: b0172473-c5f2-411e-aaa4-c8f17cb5eed4
-ms.openlocfilehash: 09b58bb0440f8ec187c4fa047e280d802747cd3c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 36ae8140a2d81aafe983b5f1f56e180a0f91e96c
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62012814"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76745167"
 ---
 # <a name="listbox-control-windows-forms"></a>ListBox-Steuerelement (Windows Forms)
-Ein Windows Forms `ListBox` Steuerelement zeigt eine Liste von Elementen, die von dem der Benutzer eine oder mehrere auswählen kann.  
+Ein Windows Forms `ListBox`-Steuerelement zeigt eine Liste der Elemente an, aus denen der Benutzer eine oder mehrere Elemente auswählen kann.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Übersicht über das ListBox-Steuerelement](listbox-control-overview-windows-forms.md)  
@@ -29,4 +29,4 @@ Ein Windows Forms `ListBox` Steuerelement zeigt eine Liste von Elementen, die vo
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
  [Windows Forms-Steuerelemente zum Auflisten von Optionen](windows-forms-controls-used-to-list-options.md)  
- Enthält eine Liste der Dinge, die mit Listenfeldern, Kombinationsfeldern und aktivierten möglich.
+ Enthält eine Liste der Dinge, die Sie mit Listenfeldern, Kombinations Feldern und aktivierten Listenfeldern ausführen können.

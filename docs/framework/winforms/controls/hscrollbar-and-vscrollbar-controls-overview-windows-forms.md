@@ -1,5 +1,5 @@
 ---
-title: Übersicht über das HScrollBar-Steuerelement und das VScrollBar-Steuerelement (Windows Forms)
+title: Übersicht über das HScrollBar-Steuerelement und das VScrollBar-Steuerelement
 ms.date: 03/30/2017
 f1_keywords:
 - HScrollBar
@@ -11,29 +11,29 @@ helpviewer_keywords:
 - ScrollBar control [Windows Forms], about ScrollBar control
 - scroll bars [Windows Forms], about scroll bars
 ms.assetid: 8b307679-1cae-41d8-99aa-3d1efd207cd6
-ms.openlocfilehash: d4a7912a5781fc583357affa728f7d81059b5cf9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: abe0c8da9723f17cb80715454f6ab7297724a21f
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61928571"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76728163"
 ---
 # <a name="hscrollbar-and-vscrollbar-controls-overview-windows-forms"></a>Übersicht über das HScrollBar-Steuerelement und das VScrollBar-Steuerelement (Windows Forms)
-Windows Forms <xref:System.Windows.Forms.ScrollBar> Steuerelemente werden verwendet, um die einfache Navigation durch eine lange Liste von Elementen oder eine große Menge an Informationen horizontale oder vertikale innerhalb einer Anwendung oder eines Steuerelements angeben. Bildlaufleisten sind ein häufiges Element der Windows-Schnittstelle, sodass die <xref:System.Windows.Forms.ScrollBar> -Steuerelement wird häufig verwendet, mit Steuerelementen, die nicht von abgeleitet sind die <xref:System.Windows.Forms.ScrollableControl> Klasse. Viele Entwickler entscheiden sich auf ähnliche Weise integriert die <xref:System.Windows.Forms.ScrollBar> gesteuert werden, wenn ihre eigenen Benutzersteuerelemente zu erstellen.  
+Windows Forms <xref:System.Windows.Forms.ScrollBar>-Steuerelemente werden verwendet, um eine einfache Navigation durch eine lange Liste von Elementen oder eine große Menge an Informationen zu ermöglichen, indem Sie in einer Anwendung oder einem Steuerelement entweder horizontal oder vertikal scrollen. Scrollleisten sind ein gängiges Element der Windows-Benutzeroberfläche, sodass das <xref:System.Windows.Forms.ScrollBar> Steuerelement häufig mit Steuerelementen verwendet wird, die nicht von der <xref:System.Windows.Forms.ScrollableControl> Klasse abgeleitet werden. Ebenso haben viele Entwickler beim Erstellen Ihrer eigenen Benutzer Steuerelemente die Möglichkeit, das <xref:System.Windows.Forms.ScrollBar>-Steuerelement zu integrieren.  
   
- Die <xref:System.Windows.Forms.HScrollBar> (horizontal) und <xref:System.Windows.Forms.VScrollBar> (vertikal) funktionieren Sie unabhängig von anderen Steuerelementen und verfügen über ihren eigenen Satz von Ereignissen, Eigenschaften und Methoden. <xref:System.Windows.Forms.ScrollBar> Steuerelemente sind nicht identisch mit den integrierten Bildlaufleisten, die Inhalt der Textfelder, Listenfelder, Kombinationsfelder oder MDI-Formularen zugeordnet sind (die <xref:System.Windows.Forms.TextBox> Steuerelement verfügt über eine <xref:System.Windows.Forms.TextBox.ScrollBars%2A> -Eigenschaft zum Anzeigen oder Ausblenden von Bildlaufleisten, die dem Steuerelement zugeordnet sind).  
+ Die <xref:System.Windows.Forms.HScrollBar> (horizontal) und <xref:System.Windows.Forms.VScrollBar> (vertikalen) Steuerelemente agieren unabhängig von anderen Steuerelementen und verfügen über einen eigenen Satz von Ereignissen, Eigenschaften und Methoden. <xref:System.Windows.Forms.ScrollBar> Steuerelemente stimmen nicht mit den integrierten Schiebe leisten überein, die an Textfelder, Listenfelder, Kombinations Felder oder MDI-Formulare angefügt sind (das <xref:System.Windows.Forms.TextBox> Steuerelement verfügt über eine <xref:System.Windows.Forms.TextBox.ScrollBars%2A>-Eigenschaft, um Scrollleisten anzuzeigen oder auszublenden, die an das Steuerelement angefügt sind).  
   
- Die <xref:System.Windows.Forms.ScrollBar> steuert die Verwendung der <xref:System.Windows.Forms.ScrollBar.Scroll> Ereignis zum Überwachen von des Verschieben des Bildlauffelds (auch als Ziehpunkt bezeichnet) auf der Bildlaufleiste. Mithilfe der <xref:System.Windows.Forms.ScrollBar.Scroll> Ereignis ermöglicht den Zugriff auf den Wert der Bildlauf aus, wie es gezogen wird.  
+ Die <xref:System.Windows.Forms.ScrollBar>-Steuerelemente verwenden das <xref:System.Windows.Forms.ScrollBar.Scroll>-Ereignis, um die Bewegung des Bild Lauf Felds (manchmal auch als Ziehpunkt bezeichnet) entlang der Bild Lauf Leiste zu überwachen. Die Verwendung des <xref:System.Windows.Forms.ScrollBar.Scroll> Ereignisses ermöglicht den Zugriff auf den Scrollleisten-Wert, während er gezogen wird.  
   
 ## <a name="value-property"></a>Value-Eigenschaft  
- Die <xref:System.Windows.Forms.ScrollBar.Value%2A> -Eigenschaft (die Standardeinstellung 0 ist) ist ein `integer` Wert, der die Position des Bildlauffelds auf der Bildlaufleiste. Wenn die Position des Bildlauffelds auf der minimale Wert ist, verschiebt ihn auf die linke Position (für horizontale Scrollleisten) oder die obere Position (für vertikale Bildlaufleisten). Wenn das Bildlauffeld auf der maximale Wert, der verschoben, der die äußerste rechte oder die untere Position ist. Ein Wert in der Mitte zwischen dem unteren und oberen Ende des Bereichs platziert die führenden Rands des Bildlauffelds in der Mitte der Bildlaufleiste.  
+ Die <xref:System.Windows.Forms.ScrollBar.Value%2A>-Eigenschaft (standardmäßig 0) ist ein `integer` Wert, der der Position des Bild Lauf Felds auf der Bild Lauf Leiste entspricht. Wenn die Position des Bild Lauf Felds den Minimalwert hat, wechselt es zur äußersten linken Position (bei horizontalen Schiebe leisten) oder zur obersten Position (bei vertikalen Schiebe leisten). Wenn das Bild Lauf Feld den maximalen Wert hat, wechselt das Bild Lauf Feld nach rechts oder unten. Entsprechend wird ein Wert, der sich in der Mitte zwischen dem unteren und oberen Bereich des Bereichs befand, in der Mitte der Bild Lauf Leiste den führenden Rand des Bild Lauf Felds platziert.  
   
- Zusätzlich zur Verwendung von Mausklicks, den Wert des Scroll-Leiste ändern, kann Benutzer auch das Bildlauffeld an einem beliebigen Punkt auf der Leiste ziehen. Der resultierende Wert hängt von der Position des Bildlauffelds, aber es ist immer innerhalb des Bereichs von der <xref:System.Windows.Forms.ScrollBar.Minimum%2A> zu <xref:System.Windows.Forms.ScrollBar.Maximum%2A> Eigenschaften, die vom Benutzer festgelegt wird.  
+ Zusätzlich zur Verwendung von Mausklicks zum Ändern des Bild Lauf leisten Werts kann ein Benutzer auch das Bild Lauf Feld an einen beliebigen Punkt entlang der Leiste ziehen. Der resultierende Wert hängt von der Position des Bild Lauf Felds ab, liegt jedoch immer innerhalb des Bereichs der <xref:System.Windows.Forms.ScrollBar.Minimum%2A>, um die Eigenschaften zu <xref:System.Windows.Forms.ScrollBar.Maximum%2A>, die vom Benutzer festgelegt werden.  
   
-## <a name="largechange-and-smallchange-properties"></a>LargeChange und SmallChange-Eigenschaften  
- Wenn der Benutzer die Bild-auf oder Bild-ab-Taste drückt oder in der Schiebeleiste auf beiden Seiten des Bildlauffelds, klickt auf die <xref:System.Windows.Forms.ScrollBar.Value%2A> eigenschaftenänderungen entsprechend dem Wert, legen Sie in der <xref:System.Windows.Forms.ScrollBar.LargeChange%2A> Eigenschaft.  
+## <a name="largechange-and-smallchange-properties"></a>LargeChange-und SmallChange-Eigenschaften  
+ Wenn der Benutzer die Bild-auf-oder Bild-ab-Taste drückt oder in der Scrollleiste auf beiden Seiten des Bild Lauf Felds klickt, ändert sich die <xref:System.Windows.Forms.ScrollBar.Value%2A>-Eigenschaft entsprechend dem Wert, der in der <xref:System.Windows.Forms.ScrollBar.LargeChange%2A>-Eigenschaft festgelegt ist.  
   
- Tasten, oder auf eine der Schaltflächen der Bildlaufleiste, wenn der Benutzer eine der Pfeiltasten drückt die <xref:System.Windows.Forms.ScrollBar.Value%2A> eigenschaftenänderungen entsprechend dem Wert, legen Sie in der <xref:System.Windows.Forms.ScrollBar.SmallChange%2A> Eigenschaft.  
+ Wenn der Benutzer eine der Pfeiltasten drückt oder auf eine der Schiebe leisten Schaltflächen klickt, ändert sich die <xref:System.Windows.Forms.ScrollBar.Value%2A>-Eigenschaft entsprechend dem Wert, der in der <xref:System.Windows.Forms.ScrollBar.SmallChange%2A>-Eigenschaft festgelegt ist.  
   
 ## <a name="see-also"></a>Siehe auch
 

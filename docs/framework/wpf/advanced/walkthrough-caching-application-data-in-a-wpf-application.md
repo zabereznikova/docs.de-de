@@ -1,5 +1,5 @@
 ---
-title: 'Exemplarische Vorgehensweise: Zwischenspeichern von Anwendungsdaten in einer WPF-Anwendung'
+title: App-Daten zwischenspeichern
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - caching [.NET Framework]
 - caching [WPF]
 ms.assetid: dac2c9ce-042b-4d23-91eb-28f584415cef
-ms.openlocfilehash: 922d91466731b331cc409cc362c4ada2c287916a
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: b7d999f94e2f2ae410a16e537d51c0f890def4e1
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74715893"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76728059"
 ---
 # <a name="walkthrough-caching-application-data-in-a-wpf-application"></a>Exemplarische Vorgehensweise: Zwischenspeichern von Anwendungsdaten in einer WPF-Anwendung
 Das Zwischenspeichern ermöglicht es Ihnen, Daten für schnellen Zugriff im Arbeitsspeicher zu speichern. Wenn erneut auf die Daten zugegriffen wird, erhalten Anwendungen die Daten aus dem Zwischenspeicher, anstatt sie aus der Originalquelle abzurufen. Dies kann die Leistung und Skalierbarkeit verbessern. Darüber hinaus macht das Zwischenspeichern Daten verfügbar, wenn die Datenquelle vorübergehend nicht verfügbar ist.
@@ -40,7 +40,7 @@ Das Zwischenspeichern ermöglicht es Ihnen, Daten für schnellen Zugriff im Arbe
 
 - Überwachen des Pfads der zwischengespeicherten Datei und Benachrichtigen der Cache Instanz über Änderungen am überwachten Element.
 
-## <a name="prerequisites"></a>Erforderliche Voraussetzungen
+## <a name="prerequisites"></a>Erforderliche Komponenten
  Für die Durchführung dieser exemplarischen Vorgehensweise benötigen Sie Folgendes:
 
 - Visual Studio 2010.

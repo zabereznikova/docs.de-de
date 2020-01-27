@@ -1,5 +1,6 @@
 ---
-title: 'Vorgehensweise: Anzeigen der Seitenansicht in Windows Forms-Anwendungen'
+title: Anzeigen der Seitenansicht in Windows Forms-apps
+titleSuffix: ''
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,30 +11,30 @@ helpviewer_keywords:
 - printing [Windows Forms], print preview
 - examples [Windows Forms], print preview
 ms.assetid: e394134c-0886-4517-bd8d-edc4a3749eb5
-ms.openlocfilehash: 8252906de9a574f49617609a4cb08a1e8aa6a992
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: ac02339ad86e491cd047dcd4b0c8841374b3bb2e
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69929006"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76745573"
 ---
-# <a name="how-to-display-print-preview-in-windows-forms-applications"></a>Vorgehensweise: Anzeigen der Seitenansicht in Windows Forms-Anwendungen
-Sie können das- <xref:System.Windows.Forms.PrintPreviewDialog> Steuerelement verwenden, um Benutzern das Anzeigen eines Dokuments zu ermöglichen, das häufig vor dem Drucken angezeigt werden soll.  
+# <a name="how-to-display-print-preview-in-windows-forms-applications"></a>Gewusst wie: Anzeigen der Seitenansicht in Windows Forms-Anwendungen
+Sie können das <xref:System.Windows.Forms.PrintPreviewDialog>-Steuerelement verwenden, um Benutzern das Anzeigen eines Dokuments zu ermöglichen, das häufig vor dem Drucken angezeigt werden soll.  
   
- Zu diesem Zweck müssen Sie eine Instanz der <xref:System.Drawing.Printing.PrintDocument> -Klasse angeben. Dies ist das Dokument, das gedruckt werden soll. Weitere Informationen zum Verwenden der Druckvorschau mit der <xref:System.Drawing.Printing.PrintDocument> Komponente finden [Sie unter Gewusst wie: Drucken in Windows Forms mithilfe der Seiten](../advanced/how-to-print-in-windows-forms-using-print-preview.md)Ansicht.  
+ Zu diesem Zweck müssen Sie eine Instanz der <xref:System.Drawing.Printing.PrintDocument>-Klasse angeben. Dies ist das Dokument, das gedruckt werden soll. Weitere Informationen zum Verwenden der Druckvorschau mit der <xref:System.Drawing.Printing.PrintDocument>-Komponente finden Sie unter Gewusst [wie: Drucken in Windows Forms mithilfe](../advanced/how-to-print-in-windows-forms-using-print-preview.md)der Seitenansicht.  
   
 > [!NOTE]
-> Damit das <xref:System.Windows.Forms.PrintPreviewDialog> Steuerelement zur Laufzeit verwendet werden kann, muss auf dem Computer entweder lokal oder über ein Netzwerk ein Drucker installiert sein, da dies dazu führt, dass <xref:System.Windows.Forms.PrintPreviewDialog> die Komponente bestimmt, wie ein Dokument gedruckt werden soll.  
+> Um das <xref:System.Windows.Forms.PrintPreviewDialog>-Steuerelement zur Laufzeit zu verwenden, muss auf dem Computer entweder lokal oder über ein Netzwerk ein Drucker installiert sein, da dies dazu führt, dass die <xref:System.Windows.Forms.PrintPreviewDialog> Komponente bestimmt, wie ein Dokument gedruckt wird.  
   
- Das <xref:System.Windows.Forms.PrintPreviewDialog> -Steuerelement <xref:System.Drawing.Printing.PrinterSettings> verwendet die-Klasse. Außerdem verwendet das <xref:System.Windows.Forms.PrintPreviewDialog> Steuerelement die <xref:System.Drawing.Printing.PageSettings> -Klasse, genauso wie <xref:System.Windows.Forms.PrintPreviewDialog> die-Komponente. <xref:System.Windows.Forms.PrintPreviewDialog> Das in der- <xref:System.Windows.Forms.PrintPreviewControl.Document%2A> Eigenschaft des <xref:System.Drawing.Printing.PrinterSettings> -Steuer Elements angegebene Druck Dokument bezieht sich auf Instanzen <xref:System.Drawing.Printing.PageSettings> der-Klasse und der-Klasse, die zum Rendering des Dokuments im Vorschaufenster verwendet werden.  
+ Das <xref:System.Windows.Forms.PrintPreviewDialog>-Steuerelement verwendet die <xref:System.Drawing.Printing.PrinterSettings>-Klasse. Außerdem verwendet das <xref:System.Windows.Forms.PrintPreviewDialog>-Steuerelement die <xref:System.Drawing.Printing.PageSettings>-Klasse, ebenso wie die <xref:System.Windows.Forms.PrintPreviewDialog>-Komponente. Das in der <xref:System.Windows.Forms.PrintPreviewControl.Document%2A>-Eigenschaft des <xref:System.Windows.Forms.PrintPreviewDialog>-Steuer Elements angegebene Druck Dokument bezieht sich auf Instanzen der Klassen <xref:System.Drawing.Printing.PrinterSettings> und <xref:System.Drawing.Printing.PageSettings>. Diese werden verwendet, um das Dokument im Vorschaufenster zu Rendering.  
   
 ### <a name="to-view-pages-using-the-printpreviewdialog-control"></a>So zeigen Sie Seiten mit dem PrintPreviewDialog-Steuerelement an  
   
 - Verwenden Sie die <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> -Methode, um das Dialogfeld anzuzeigen, und geben Sie das zu verwendende <xref:System.Drawing.Printing.PrintDocument> an.  
   
-     Im folgenden Codebeispiel <xref:System.Windows.Forms.Button> <xref:System.Windows.Forms.Control.Click> öffnet der-Ereignishandler des-Steuer Elements eine Instanz des- SteuerElements.<xref:System.Windows.Forms.PrintPreviewDialog> Das Druck Dokument wird in der <xref:System.Windows.Forms.PrintDialog.Document%2A> -Eigenschaft angegeben. Im folgenden Beispiel wird kein Druck Dokument angegeben.  
+     Im folgenden Codebeispiel öffnet der <xref:System.Windows.Forms.Control.Click>-Ereignishandler des <xref:System.Windows.Forms.Button>-Steuer Elements eine Instanz des <xref:System.Windows.Forms.PrintPreviewDialog>-Steuer Elements. Das Druck Dokument wird in der <xref:System.Windows.Forms.PrintDialog.Document%2A>-Eigenschaft angegeben. Im folgenden Beispiel wird kein Druck Dokument angegeben.  
   
-     Für das Beispiel muss das Formular über ein <xref:System.Windows.Forms.Button> -Steuerelement <xref:System.Drawing.Printing.PrintDocument> , eine `myDocument`-Komponente mit <xref:System.Windows.Forms.PrintPreviewDialog> dem Namen und ein-Steuerelement verfügen.  
+     Für das Beispiel ist es erforderlich, dass das Formular über ein <xref:System.Windows.Forms.Button>-Steuerelement, eine <xref:System.Drawing.Printing.PrintDocument> Komponente namens `myDocument`und ein <xref:System.Windows.Forms.PrintPreviewDialog>-Steuerelement verfügt.  
   
     ```vb  
     Private Sub Button1_Click(ByVal sender As System.Object, _  

@@ -1,5 +1,5 @@
 ---
-title: Übersicht über WPF-XAML-Browseranwendungen
+title: Übersicht über XAML-Browser Anwendungen
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - XAML browser applications (XBAP)
 - browser-hosted applications [WPF]
 ms.assetid: 3a7a86a8-75d5-4898-96b9-73da151e5e16
-ms.openlocfilehash: a4d3b808aee14d5d2f29053b0c60798f9f626e8c
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: bec7e14ceed867e89c3117efbc245938356b9d78
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75636327"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742281"
 ---
 # <a name="wpf-xaml-browser-applications-overview"></a>Übersicht über WPF-XAML-Browseranwendungen
 <a name="introduction"></a>XAML-Browser Anwendungen (XBAPs) kombiniert Features von Webanwendungen und Rich-Client-Anwendungen. Wie Webanwendungen können XBAPs auf einem Webserver bereitgestellt werden und aus Internet Explorer oder Firefox gestartet werden. Ebenso wie Rich-Client-Anwendungen können XBAPs die Funktionen von WPF nutzen. Auch die Entwicklung von XBAPs ähnelt der Rich Client-Entwicklung. Dieses Thema bietet eine allgemeine einfache Einführung in die XBAP-Entwicklung und beschreibt die Unterschiede zwischen der Entwicklung von XBAP und standardmäßigen Rich Client-Anwendungen.

@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Bestimmen, auf welchen Bereich im StatusBar-Steuerelement in Windows Forms geklickt wurde'
+title: Ermitteln, auf welchen Bereich im StatusBar-Steuerelement geklickt wurde
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,27 +13,27 @@ helpviewer_keywords:
 - PanelClick event [Windows Forms], determining panel clicked
 - Panel control [Windows Forms], determining click
 ms.assetid: d14c6092-04b2-4a07-8ddf-0dd11277ff5f
-ms.openlocfilehash: 6229d8965949641105cd0e9708474c3249d52d1d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 94619f8bd426a42e5dafa0db99880e20d24f9963
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69965721"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76746010"
 ---
-# <a name="how-to-determine-which-panel-in-the-windows-forms-statusbar-control-was-clicked"></a>Vorgehensweise: Bestimmen, auf welchen Bereich im StatusBar-Steuerelement in Windows Forms geklickt wurde
+# <a name="how-to-determine-which-panel-in-the-windows-forms-statusbar-control-was-clicked"></a>Gewusst wie: Bestimmen, auf welchen Bereich im StatusBar-Steuerelement in Windows Forms geklickt wurde
 > [!IMPORTANT]
-> Das <xref:System.Windows.Forms.StatusStrip> - <xref:System.Windows.Forms.ToolStripStatusLabel> Steuerelement und das-Steuerelement <xref:System.Windows.Forms.StatusBar> ersetzen und fügen Funktionen zu den <xref:System.Windows.Forms.StatusBar> Steuer <xref:System.Windows.Forms.StatusBarPanel> Elementen und <xref:System.Windows.Forms.StatusBarPanel> hinzu. die Steuerelemente und werden jedoch sowohl für die Abwärtskompatibilität als auch für die zukünftige Verwendung beibehalten, St.  
+> Die Steuerelemente <xref:System.Windows.Forms.StatusStrip> und <xref:System.Windows.Forms.ToolStripStatusLabel> ersetzen und fügen Funktionen zum <xref:System.Windows.Forms.StatusBar> und <xref:System.Windows.Forms.StatusBarPanel> Steuerelementen hinzu. die <xref:System.Windows.Forms.StatusBar>-und <xref:System.Windows.Forms.StatusBarPanel>-Steuerelemente werden jedoch sowohl für Abwärtskompatibilität als auch für die zukünftige Verwendung beibehalten, wenn Sie sich entscheiden.  
   
- Um das [StatusBar-Steuer](statusbar-control-windows-forms.md) Element für die Reaktion auf Benutzer Klicks zu programmieren, verwenden Sie <xref:System.Windows.Forms.StatusBar.PanelClick> eine Case-Anweisung innerhalb des Ereignisses. Das Ereignis enthält ein Argument (das Panel-Argument), das einen Verweis auf die angeklickte <xref:System.Windows.Forms.StatusBarPanel>enthält. Mithilfe dieses Verweises können Sie den Index des angeklickten Panels ermitteln und entsprechend programmieren.  
+ Um das [StatusBar-Steuer](statusbar-control-windows-forms.md) Element für die Reaktion auf Benutzer Klicks zu programmieren, verwenden Sie eine Case-Anweisung innerhalb des <xref:System.Windows.Forms.StatusBar.PanelClick> Ereignisses. Das Ereignis enthält ein Argument (das Panel-Argument), das einen Verweis auf die <xref:System.Windows.Forms.StatusBarPanel>enthält, auf die geklickt wurde. Mithilfe dieses Verweises können Sie den Index des angeklickten Panels ermitteln und entsprechend programmieren.  
   
 > [!NOTE]
-> Stellen Sie sicher <xref:System.Windows.Forms.StatusBar> , dass <xref:System.Windows.Forms.StatusBar.ShowPanels%2A> die-Eigenschaft des `true`Steuer Elements auf gesetzt ist.  
+> Stellen Sie sicher, dass die <xref:System.Windows.Forms.StatusBar.ShowPanels%2A>-Eigenschaft des <xref:System.Windows.Forms.StatusBar> Steuer Elements auf `true`festgelegt ist.  
   
 ### <a name="to-determine-which-panel-was-clicked"></a>So bestimmen Sie den Bereich, auf den geklickt wurde  
   
-1. `switch case` `Select Case`VerwendenSie im-Ereignishandler eine-Anweisung (in Visual Basic) oder C# eine- C++Anweisung (Visual oder Visual), um zu bestimmen, auf welche Fläche geklickt wurde, indem Sie den Index des angeklickten Panels in den Ereignis Argumenten untersuchen. <xref:System.Windows.Forms.StatusBar.PanelClick>  
+1. Verwenden Sie im Ereignishandler <xref:System.Windows.Forms.StatusBar.PanelClick> eine `Select Case`-Anweisung (in Visual Basic) oder eine `switch case` C# (Visual C++oder Visual)-Anweisung, um zu bestimmen, auf welche Fläche geklickt wurde, indem Sie den Index des angeklickten Panels in den Ereignis Argumenten untersuchen.  
   
-     Für das folgende Codebeispiel ist das vorhanden sein <xref:System.Windows.Forms.StatusBar> eines `StatusBarPanel2`- `StatusBar1`Steuer Elements, des-Steuer Elements, <xref:System.Windows.Forms.StatusBarPanel> des- `StatusBarPanel1` Objekts und des-Objekts erforderlich.  
+     Für das folgende Codebeispiel ist es erforderlich, dass ein <xref:System.Windows.Forms.StatusBar> Steuerelement, `StatusBar1`und zwei <xref:System.Windows.Forms.StatusBarPanel>-Objekte, `StatusBarPanel1` und `StatusBarPanel2`, auf dem Formular vorhanden ist.  
   
     ```vb  
     Private Sub StatusBar1_PanelClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.StatusBarPanelClickEventArgs) Handles StatusBar1.PanelClick  
@@ -97,6 +97,6 @@ ms.locfileid: "69965721"
 
 - <xref:System.Windows.Forms.StatusBar>
 - <xref:System.Windows.Forms.ToolStripStatusLabel>
-- [Vorgehensweise: Festlegen der Größe von Status leisten Panels](how-to-set-the-size-of-status-bar-panels.md)
-- [Exemplarische Vorgehensweise: Aktualisieren von Status leisten Informationen zur Laufzeit](walkthrough-updating-status-bar-information-at-run-time.md)
+- [Gewusst wie: Festlegen der Größe eines Statusleistenbereichs](how-to-set-the-size-of-status-bar-panels.md)
+- [Exemplarische Vorgehensweise: Aktualisieren von Statusleisteninformationen zur Laufzeit](walkthrough-updating-status-bar-information-at-run-time.md)
 - [Übersicht über das StatusBar-Steuerelement](statusbar-control-overview-windows-forms.md)

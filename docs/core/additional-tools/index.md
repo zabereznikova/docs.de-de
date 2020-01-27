@@ -4,12 +4,12 @@ description: Eine Übersicht über zusätzliche Tools, die Sie zum Unterstützen
 author: mlacouture
 ms.date: 12/02/2019
 ms.custom: mvc
-ms.openlocfilehash: 1f066523a24d4e1fd7aaaa5a19e8d6c9d72d35af
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 853633f5ef159eee39ed1a8682372d4291a752f5
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714537"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76740707"
 ---
 # <a name="net-core-additional-tools-overview"></a>Zusätzliche .NET Core-Tools – Übersicht
 
@@ -17,7 +17,7 @@ In diesem Abschnitt werden Tools aufgelistet, die die .NET Core-Funktionalität 
 
 ## <a name="net-core-uninstall-tooluninstall-toolmd"></a>[.NET Core-Deinstallationstool](uninstall-tool.md)
 
-Mit dem [.NET Core-Deinstallationstool](https://dotnet.microsoft.com/download/dotnet-core/uninstall-tool) (`dotnet-core-uninstall`) können Sie veranlassen, dass alle auf einem System installierten .NET Core SDKs und Runtimes entfernt werden, die nicht den angegebenen Versionen entsprechen. Hierfür stehen Ihnen verschiedene Optionen zur Verfügung.
+Mit dem [.NET Core-Deinstallationstool](https://github.com/dotnet/cli-lab/releases) (`dotnet-core-uninstall`) können Sie veranlassen, dass alle auf einem System installierten .NET Core SDKs und Runtimes entfernt werden, die nicht den angegebenen Versionen entsprechen. Hierfür stehen Ihnen verschiedene Optionen zur Verfügung.
 
 ## <a name="wcf-web-service-reference-toolwcf-web-service-reference-guidemd"></a>[WCF Web Service Reference-Tool](wcf-web-service-reference-guide.md)
 

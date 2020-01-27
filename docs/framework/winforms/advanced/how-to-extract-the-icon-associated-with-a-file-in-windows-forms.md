@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Extrahieren eines mit einer Datei verknüpften Symbols in Windows Forms'
+title: 'Gewusst wie: Extrahieren eines mit einer Datei verknüpften Symbols'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,28 +9,28 @@ helpviewer_keywords:
 - file name extension icons [Windows Forms], displaying in a ListView
 - extracting icons associated with a file type [Windows Forms]
 ms.assetid: 88e2ad8b-c34f-415a-84f2-dad756b5c928
-ms.openlocfilehash: c3173a3fa756a3294154217f5cf0a13dbc8721f3
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 28769144b0e1c631a31c3c541747a6215f861d0e
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64645402"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742545"
 ---
-# <a name="how-to-extract-the-icon-associated-with-a-file-in-windows-forms"></a>Vorgehensweise: Extrahieren eines mit einer Datei verknüpften Symbols in Windows Forms
-Viele Dateien verfügen über eingebettete Symbole, die eine visuelle Darstellung des zugeordneten Dateityps bereitstellen. Microsoft Word-Dokumente enthalten z. B. ein Symbol, das sie als Word-Dokumenten identifiziert. Zum Anzeigen von Dateien in einem Listensteuerelement oder Datentabellen-Steuerelement können Sie das Symbol für den Dateityp neben jedem Dateinamen anzeigen möchten. Sie können dazu einfach die <xref:System.Drawing.Icon.ExtractAssociatedIcon%2A> Methode.  
+# <a name="how-to-extract-the-icon-associated-with-a-file-in-windows-forms"></a>Gewusst wie: Extrahieren eines mit einer Datei verknüpften Symbols in Windows Forms
+Viele Dateien verfügen über eingebettete Symbole, die eine visuelle Darstellung des zugeordneten Dateityps bereitstellen. Beispielsweise enthalten Microsoft Word-Dokumente ein Symbol, mit dem Sie als Word-Dokumente identifiziert werden. Wenn Sie Dateien in einem Listen Steuerelement oder Tabellen Steuerelement anzeigen, möchten Sie möglicherweise das Symbol anzeigen, das den Dateityp neben den einzelnen Dateinamen darstellt. Dies lässt sich problemlos mithilfe der <xref:System.Drawing.Icon.ExtractAssociatedIcon%2A>-Methode erreichen.  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Codebeispiel wird veranschaulicht, wie Sie mit einer Datei verknüpften Symbols zu extrahieren und Anzeigen der Dateiname und das zugehörige Symbol im eine <xref:System.Windows.Forms.ListView> Steuerelement.  
+ Im folgenden Codebeispiel wird veranschaulicht, wie das Symbol, das einer Datei zugeordnet ist, extrahiert und der Dateiname und das zugehörige Symbol in einem <xref:System.Windows.Forms.ListView>-Steuerelement angezeigt werden.  
   
  [!code-csharp[System.Drawing.Icon.ExtractAssociatedIconEx#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.Icon.ExtractAssociatedIconEx/CS/Form1.cs#1)]
  [!code-vb[System.Drawing.Icon.ExtractAssociatedIconEx#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.Icon.ExtractAssociatedIconEx/VB/Form1.vb#1)]  
   
 ## <a name="compiling-the-code"></a>Kompilieren des Codes  
- Um das Beispiel zu kompilieren:  
+ So kompilieren Sie das Beispiel:  
   
-- Fügen Sie den vorherigen Code in einem Windows Form, und rufen die `ExtractAssociatedIconExample` Methode aus dem Konstruktor des Formulars oder <xref:System.Windows.Forms.Form.Load> Ereignisbehandlungsmethode.  
+- Fügen Sie den vorangehenden Code in ein Windows Form ein, und nennen Sie die `ExtractAssociatedIconExample`-Methode aus dem Konstruktor des Formulars oder <xref:System.Windows.Forms.Form.Load> Ereignis Behandlungsmethode.  
   
-     Sie müssen sicherstellen, dass das Formular importiert die <xref:System.IO> Namespace.  
+     Sie müssen sicherstellen, dass das Formular den <xref:System.IO>-Namespace importiert.  
   
 ## <a name="see-also"></a>Siehe auch
 

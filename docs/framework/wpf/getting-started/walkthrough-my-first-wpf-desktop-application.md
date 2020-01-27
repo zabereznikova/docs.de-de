@@ -1,5 +1,6 @@
 ---
-title: 'Tutorial: Erstellen Ihrer ersten WPF-Anwendung in Visual Studio 2019-.NET Framework'
+title: Erstellen Sie Ihre erste WPF-App in Visual Studio 2019-.NET Framework
+titleSuffix: ''
 ms.date: 09/06/2019
 dev_langs:
 - csharp
@@ -12,12 +13,12 @@ ms.topic: tutorial
 ms.custom: mvc,vs-dotnet
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7b5f74448ffce448740937c06a476a29c8659879
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 232605850c65aebd9aafdc9b76c90af42f2c901c
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75336807"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76746976"
 ---
 # <a name="tutorial-create-your-first-wpf-application-in-visual-studio-2019"></a>Tutorial: Erstellen Ihrer ersten WPF-Anwendung in Visual Studio 2019
 
@@ -83,7 +84,7 @@ Der erste Schritt besteht darin, die Anwendungs Infrastruktur zu erstellen, die 
 
     [!code-xaml[ExpenseIt#1](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt/App.xaml#1)]
 
-3. Öffnen Sie *MainWindow.xaml*.
+3. Öffnen Sie " *MainWindow. XAML*".
 
     Diese XAML-Datei ist das Hauptfenster der Anwendung und zeigt in Seiten erstellte Inhalte an. Die <xref:System.Windows.Window>-Klasse definiert die Eigenschaften eines Fensters, z. b. Titel, Größe oder Symbol, und behandelt Ereignisse, z. b. das Schließen oder ausblenden.
 
@@ -151,7 +152,7 @@ In diesem Abschnitt fügen Sie der Anwendung zwei Seiten und ein Bild hinzu.
 
     [!code-xaml[ExpenseIt#6](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt2/ExpenseItHome.xaml#6)]
 
-1. Öffnen Sie *MainWindow.xaml*.
+1. Öffnen Sie " *MainWindow. XAML*".
 
 1. Fügen Sie dem <xref:System.Windows.Navigation.NavigationWindow>-Element eine <xref:System.Windows.Navigation.NavigationWindow.Source%2A>-Eigenschaft hinzu, und legen Sie Sie auf "`ExpenseItHome.xaml`" fest.
 
@@ -263,7 +264,7 @@ In diesem Abschnitt erstellen Sie eine einspaltige Tabelle mit drei Zeilen und e
 
     [!code-xaml[ExpenseIt#9](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt3/ExpenseItHome.xaml#9)]
 
-## <a name="add-controls"></a>Hinzufügen von Steuerelementen
+## <a name="add-controls"></a>Steuerelemente hinzufügen
 
 In diesem Abschnitt aktualisieren Sie die Benutzeroberfläche der Startseite, um eine Liste der Personen anzuzeigen, in der Sie eine Person auswählen, um Ihren Abrechnungs Bericht anzuzeigen. Steuerelemente sind Benutzeroberflächenobjekte, die Benutzern die Interaktion mit der Anwendung ermöglichen. Weitere Informationen finden Sie unter [Steuerelemente](../controls/index.md).
 
@@ -483,7 +484,7 @@ In dieser exemplarischen Vorgehensweise haben Sie eine Reihe von Techniken zum E
 
 - [WPF-Architektur](../advanced/wpf-architecture.md)
 - [Übersicht über XAML (WPF)](../advanced/xaml-overview-wpf.md)
-- [Übersicht über Abhängigkeitseigenschaften](../advanced/dependency-properties-overview.md)
+- [Übersicht über Abhängigkeits Eigenschaften](../advanced/dependency-properties-overview.md)
 - [Layout](../advanced/layout.md)
 
 Weitere Informationen zum Erstellen von Anwendungen finden Sie in den folgenden Themen:

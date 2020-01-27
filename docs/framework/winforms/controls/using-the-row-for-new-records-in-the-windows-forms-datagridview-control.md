@@ -1,65 +1,65 @@
 ---
-title: Verwenden der Zeile für neue Datensätze im DataGridView-Steuerelement in Windows Forms
+title: Verwenden der Zeile für neue Datensätze im DataGridView-Steuerelement
 ms.date: 03/30/2017
 helpviewer_keywords:
 - DataGridView control [Windows Forms], adding rows for new records
 - rows [Windows Forms], new records
 - DataGridView control [Windows Forms], data entry
 ms.assetid: 6110f1ea-9794-442c-a98a-f104a1feeaf4
-ms.openlocfilehash: b28a8a8fc2d75f80a14447008c850de63e4e04b3
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 2fcd35f8c4d04909cdbc26f6a4293fdd570385b8
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65882434"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76728332"
 ---
 # <a name="using-the-row-for-new-records-in-the-windows-forms-datagridview-control"></a>Verwenden der Zeile für neue Datensätze im DataGridView-Steuerelement in Windows Forms
-Bei Verwendung einer <xref:System.Windows.Forms.DataGridView> für die Bearbeitung von Daten in Ihrer Anwendung häufig möchten geben Sie Ihren Benutzern die Möglichkeit, neue Zeilen mit Daten im Datenspeicher hinzuzufügen. Die <xref:System.Windows.Forms.DataGridView> -Steuerelement unterstützt diese Funktion durch die Bereitstellung einer Zeile für neue Datensätze, die immer als letzte Zeile angezeigt wird. Er ist mit einem Sternchen (*) im Zeilenkopf gekennzeichnet. Den folgenden Abschnitten werden einige der Dinge, die Sie berücksichtigen sollten, wenn das Programm mit der Zeile für neue Datensätze aktiviert.  
+Wenn Sie einen <xref:System.Windows.Forms.DataGridView> zum Bearbeiten von Daten in der Anwendung verwenden, möchten Sie Ihren Benutzern oft die Möglichkeit geben, dem Datenspeicher neue Daten Zeilen hinzuzufügen. Das <xref:System.Windows.Forms.DataGridView>-Steuerelement unterstützt diese Funktion, indem es eine Zeile für neue Datensätze bereitstellt, die immer als letzte Zeile angezeigt wird. Es ist mit einem Sternchen (*)-Symbol in seiner Zeilen Überschrift markiert. In den folgenden Abschnitten werden einige der Punkte erläutert, die Sie beim Programmieren mit der Zeile für neue aktivierte Datensätze berücksichtigen sollten.  
   
-## <a name="displaying-the-row-for-new-records"></a>Die Zeile anzeigen für neue Datensätze  
- Verwenden der <xref:System.Windows.Forms.DataGridView.AllowUserToAddRows%2A> Eigenschaft, um anzugeben, ob die Zeile für neue Datensätze angezeigt wird. Der Standardwert dieser Eigenschaft ist `true`.  
+## <a name="displaying-the-row-for-new-records"></a>Anzeigen der Zeile für neue Datensätze  
+ Verwenden Sie die <xref:System.Windows.Forms.DataGridView.AllowUserToAddRows%2A>-Eigenschaft, um anzugeben, ob die Zeile für neue Datensätze angezeigt wird. Der Standardwert dieser Eigenschaft ist `true`.  
   
- Für das datengebundene Fall, wird die Zeile für neue Datensätze angezeigt werden Wenn die <xref:System.Windows.Forms.DataGridView.AllowUserToAddRows%2A> -Eigenschaft des Steuerelements und dem <xref:System.ComponentModel.IBindingList.AllowNew%2A?displayProperty=nameWithType> Eigenschaft der Datenquelle sind beide `true`. Wenn entweder `false` und klicken Sie dann die Zeile nicht angezeigt wird.  
+ Für den Daten gebundenen Fall wird die Zeile für neue Datensätze angezeigt, wenn die <xref:System.Windows.Forms.DataGridView.AllowUserToAddRows%2A>-Eigenschaft des-Steuer Elements und die <xref:System.ComponentModel.IBindingList.AllowNew%2A?displayProperty=nameWithType>-Eigenschaft der Datenquelle beide `true`sind. Wenn eine der beiden `false` ist, wird die Zeile nicht angezeigt.  
   
-## <a name="populating-the-row-for-new-records-with-default-data"></a>Die Zeile für neue Datensätze mit Standarddaten aufgefüllt  
- Wenn der Benutzer die Zeile für neue Datensätze als die aktuelle Zeile und wählt die <xref:System.Windows.Forms.DataGridView> -Steuerelement löst die <xref:System.Windows.Forms.DataGridView.DefaultValuesNeeded> Ereignis.  
+## <a name="populating-the-row-for-new-records-with-default-data"></a>Auffüllen der Zeile für neue Datensätze mit Standarddaten  
+ Wenn der Benutzer die Zeile für neue Datensätze als aktuelle Zeile auswählt, löst das <xref:System.Windows.Forms.DataGridView>-Steuerelement das <xref:System.Windows.Forms.DataGridView.DefaultValuesNeeded>-Ereignis aus.  
   
- Dieses Ereignis ermöglicht den Zugriff auf die neue <xref:System.Windows.Forms.DataGridViewRow> und ermöglicht es Ihnen, die neue Zeile mit Standarddaten aufgefüllt. Weitere Informationen finden Sie unter [Vorgehensweise: Angeben von Standardwerten für neue Zeilen im DataGridView-Steuerelement in Windows Forms](specify-default-values-for-new-rows-in-the-datagrid.md)  
+ Dieses Ereignis bietet Zugriff auf den neuen <xref:System.Windows.Forms.DataGridViewRow> und ermöglicht es Ihnen, die neue Zeile mit Standarddaten aufzufüllen. Weitere Informationen finden Sie unter Gewusst [wie: Angeben von Standardwerten für neue Zeilen im Windows Forms DataGridView-Steuer](specify-default-values-for-new-rows-in-the-datagrid.md) Element.  
   
-## <a name="the-rows-collection"></a>Die Auflistung von Zeilen  
- Die Zeile für neue Datensätze ist Bestandteil der <xref:System.Windows.Forms.DataGridView> des Steuerelements <xref:System.Windows.Forms.DataGridView.Rows%2A> Auflistung jedoch verhält sich anders in zweierlei Hinsicht:  
+## <a name="the-rows-collection"></a>Die Rows-Auflistung  
+ Die Zeile für neue Datensätze ist in der <xref:System.Windows.Forms.DataGridView.Rows%2A> Auflistung des <xref:System.Windows.Forms.DataGridView>-Steuer Elements enthalten, verhält sich jedoch in zweierlei Hinsicht anders:  
   
-- Die Zeile für neue Datensätze kann nicht entfernt werden, aus der <xref:System.Windows.Forms.DataGridView.Rows%2A> Auflistung programmgesteuert. Ein <xref:System.InvalidOperationException> wird ausgelöst, wenn dies versucht wird. Der Benutzer kann nicht auch die Zeile für neue Datensätze gelöscht. Die <xref:System.Windows.Forms.DataGridViewRowCollection.Clear%2A?displayProperty=nameWithType> Methode entfernt sich nicht auf diese Zeile aus der <xref:System.Windows.Forms.DataGridView.Rows%2A> Auflistung.  
+- Die Zeile für neue Datensätze kann nicht Programm gesteuert aus der <xref:System.Windows.Forms.DataGridView.Rows%2A> Sammlung entfernt werden. Eine <xref:System.InvalidOperationException> wird ausgelöst, wenn versucht wird, den Vorgang auszuführen. Außerdem kann der Benutzer die Zeile für neue Datensätze nicht löschen. Die <xref:System.Windows.Forms.DataGridViewRowCollection.Clear%2A?displayProperty=nameWithType>-Methode entfernt diese Zeile nicht aus der <xref:System.Windows.Forms.DataGridView.Rows%2A> Auflistung.  
   
-- Nach der Zeile für neue Datensätze kann keine Zeile hinzugefügt werden. Ein <xref:System.InvalidOperationException> wird ausgelöst, wenn dies versucht wird. Daher ist die Zeile für neue Datensätze immer die letzte Zeile in der <xref:System.Windows.Forms.DataGridView> Steuerelement. Die Methoden für <xref:System.Windows.Forms.DataGridViewRowCollection> zum Hinzufügen von Zeilen –<xref:System.Windows.Forms.DataGridViewRowCollection.Add%2A>, <xref:System.Windows.Forms.DataGridViewRowCollection.AddCopy%2A>, und <xref:System.Windows.Forms.DataGridViewRowCollection.AddCopies%2A>– alle rufen Einfügungsmethoden intern, wenn die Zeile für neue Datensätze vorhanden ist.  
+- Nach der Zeile für neue Datensätze kann keine Zeile hinzugefügt werden. Eine <xref:System.InvalidOperationException> wird ausgelöst, wenn versucht wird, diesen Vorgang auszuführen. Folglich ist die Zeile für neue Datensätze immer die letzte Zeile im <xref:System.Windows.Forms.DataGridView>-Steuerelement. Die Methoden auf <xref:System.Windows.Forms.DataGridViewRowCollection>, die Zeilen hinzufügen –<xref:System.Windows.Forms.DataGridViewRowCollection.Add%2A>, <xref:System.Windows.Forms.DataGridViewRowCollection.AddCopy%2A>und <xref:System.Windows.Forms.DataGridViewRowCollection.AddCopies%2A>– alle Methoden zum Einfügen von anrufen, wenn die Zeile für neue Datensätze vorhanden ist.  
   
-## <a name="visual-customization-of-the-row-for-new-records"></a>Visuellen Anpassung der Zeile für neue Datensätze  
- Wenn die Zeile für neue Datensätze erstellt wird, müssen sie basiert auf der Zeile, die gemäß der <xref:System.Windows.Forms.DataGridView.RowTemplate%2A> Eigenschaft. Alle Zellstile, die für diese Zeile nicht angegeben werden, werden aus anderen Eigenschaften geerbt. Weitere Informationen zur Vererbung von Zellenstilen finden Sie unter [Zellstile im DataGridView-Steuerelement in Windows Forms](cell-styles-in-the-windows-forms-datagridview-control.md).  
+## <a name="visual-customization-of-the-row-for-new-records"></a>Visuelle Anpassung der Zeile für neue Datensätze  
+ Wenn die Zeile für neue Datensätze erstellt wird, basiert Sie auf der durch die <xref:System.Windows.Forms.DataGridView.RowTemplate%2A>-Eigenschaft angegebenen Zeile. Alle Zell Stile, die für diese Zeile nicht angegeben sind, werden von anderen Eigenschaften geerbt. Weitere Informationen zur Vererbung von Zellen Formaten finden Sie unter [Zellen Stile im Windows Forms DataGridView-Steuer](cell-styles-in-the-windows-forms-datagridview-control.md)Element.  
   
- Die ursprünglichen Werte von Zellen in der Zeile angezeigt wird, für neue Datensätze aus jeder Zelle abgerufen werden <xref:System.Windows.Forms.DataGridViewCell.DefaultNewRowValue%2A> Eigenschaft. Für die Zellen des Typs <xref:System.Windows.Forms.DataGridViewImageCell>, diese Eigenschaft gibt ein Platzhalterbild zurück. Andernfalls gibt diese Eigenschaft `null` zurück. Sie können diese Eigenschaft, um einen benutzerdefinierten Wert zurückgeben, überschreiben. Allerdings können diese ursprünglichen Werte ersetzt werden, durch eine <xref:System.Windows.Forms.DataGridView.DefaultValuesNeeded> -Ereignishandler, wenn die Zeile für neue Datensätze von den Fokus hat.  
+ Die Anfangswerte, die von Zellen in der Zeile für neue Datensätze angezeigt werden, werden aus der <xref:System.Windows.Forms.DataGridViewCell.DefaultNewRowValue%2A>-Eigenschaft jeder Zelle abgerufen. Bei Zellen vom Typ <xref:System.Windows.Forms.DataGridViewImageCell>gibt diese Eigenschaft ein Platzhalter Bild zurück. Andernfalls gibt diese Eigenschaft `null` zurück. Sie können diese Eigenschaft überschreiben, um einen benutzerdefinierten Wert zurückzugeben. Allerdings können diese anfänglichen Werte durch einen <xref:System.Windows.Forms.DataGridView.DefaultValuesNeeded> Ereignishandler ersetzt werden, wenn der Fokus in der Zeile für neue Datensätze eintritt.  
   
- Standardsymbole für diesen Zeilenheader, die ein Pfeil oder ein Sternchen sind, sind nicht öffentlich verfügbar. Wenn Sie die Symbole anpassen möchten, müssen Sie eine benutzerdefinierte <xref:System.Windows.Forms.DataGridViewRowHeaderCell> Klasse.  
+ Die Standardsymbole für den Header dieser Zeile, die ein Pfeil oder ein Sternchen sind, werden nicht öffentlich verfügbar gemacht. Wenn Sie die Symbole anpassen möchten, müssen Sie eine benutzerdefinierte <xref:System.Windows.Forms.DataGridViewRowHeaderCell> Klasse erstellen.  
   
- Verwenden Sie die Standardsymbole der <xref:System.Windows.Forms.DataGridViewCellStyle.ForeColor%2A> Eigenschaft der <xref:System.Windows.Forms.DataGridViewCellStyle> von die Headerzelle der Zeile verwendet wird. Die standard-Symbole werden nicht gerendert, wenn nicht genügend Speicherplatz für die sie vollständig anzuzeigen.  
+ In den Standardsymbolen wird die <xref:System.Windows.Forms.DataGridViewCellStyle.ForeColor%2A>-Eigenschaft des <xref:System.Windows.Forms.DataGridViewCellStyle> verwendet, der von der Zeilen Header Zelle verwendet wird. Die Standardsymbole werden nicht gerendert, wenn nicht genügend Speicherplatz vorhanden ist, um Sie vollständig anzuzeigen.  
   
- Wenn die Headerzelle der Zeile einen Zeichenfolgenwert, der festgelegt ist, und nicht genügend Platz für den Text und Symbol vorhanden ist, ist das Symbol nicht angezeigt.  
+ Wenn für die Zeilen Header Zelle ein Zeichen folgen Wert festgelegt ist, und wenn nicht genügend Platz für den Text und das Symbol vorhanden ist, wird das Symbol zuerst gelöscht.  
   
 ## <a name="sorting"></a>Sortieren  
- In ungebundenen Modus werden neue Datensätze immer am Ende hinzugefügt werden die <xref:System.Windows.Forms.DataGridView> , selbst wenn der Benutzer den Inhalt des sortiert wurden die <xref:System.Windows.Forms.DataGridView>. Der Benutzer muss die Sortierung erneut anzuwenden, um die Zeile an die korrekte Position zu sortieren, Dieses Verhalten ist vergleichbar mit der <xref:System.Windows.Forms.ListView> Steuerelement.  
+ Im ungebundenen Modus werden neue Datensätze immer am Ende der <xref:System.Windows.Forms.DataGridView> hinzugefügt, auch wenn der Benutzer den Inhalt des <xref:System.Windows.Forms.DataGridView>sortiert hat. Der Benutzer muss die Sortierung erneut anwenden, um die Zeile an die richtige Position zu sortieren. Dieses Verhalten ähnelt dem des <xref:System.Windows.Forms.ListView> Steuer Elements.  
   
- Daten werden hängt von der Implementierung des Datenmodells gebunden ist, und virtuelle Modi, das Einfügeverhalten, wenn eine Sortierung angewendet wird. Für ADO.NET ist die Zeile sofort in der richtigen Position sortiert.  
+ Im Daten gebundenen und virtuellen Modus hängt das Einfügeverhalten, wenn eine Sortierung angewendet wird, von der Implementierung des Datenmodells ab. Für ADO.net wird die Zeile sofort an die richtige Position sortiert.  
   
-## <a name="other-notes-on-the-row-for-new-records"></a>Andere Hinweise auf die Zeile für neue Datensätze  
- Sie können nicht festgelegt werden die <xref:System.Windows.Forms.DataGridViewRow.Visible%2A> Eigenschaft dieser Zeile um `false`. Ein <xref:System.InvalidOperationException> wird ausgelöst, wenn dies versucht wird.  
+## <a name="other-notes-on-the-row-for-new-records"></a>Weitere Hinweise in der Zeile für neue Datensätze  
+ Die <xref:System.Windows.Forms.DataGridViewRow.Visible%2A>-Eigenschaft dieser Zeile kann nicht auf `false`festgelegt werden. Eine <xref:System.InvalidOperationException> wird ausgelöst, wenn versucht wird, diesen Vorgang auszuführen.  
   
- Die Zeile für neue Datensätze wird immer im Zustand "deaktiviert" erstellt.  
+ Die Zeile für neue Datensätze wird immer im nicht ausgewählten Zustand erstellt.  
   
 ## <a name="virtual-mode"></a>Virtueller Modus  
- Wenn Sie virtuellen Modus implementieren, müssen Sie nachverfolgen, wenn eine Zeile für neue Datensätze in das Datenmodell und wann das Hinzufügen der Zeile ein Rollback erforderlich ist. Die genaue Implementierung dieser Funktionalität der Implementierung abhängig von dem Datenmodell und die Transaktionssemantik z. B., ob die Commit-Bereich auf die Zelle oder Zeile ist. Weitere Informationen finden Sie unter [Virtueller Modus im DataGridView-Steuerelement von Windows Forms](virtual-mode-in-the-windows-forms-datagridview-control.md).  
+ Wenn Sie den virtuellen Modus implementieren, müssen Sie nachverfolgen, wann eine Zeile für neue Datensätze im Datenmodell benötigt wird und wann ein Rollback für das Hinzufügen der Zeile ausgeführt werden soll. Die genaue Implementierung dieser Funktionalität hängt von der Implementierung des Datenmodells und seiner Transaktions Semantik ab, z. b. ob der commitbereich auf Zellen-oder Zeilenebene liegt. Weitere Informationen finden Sie [im Windows Forms DataGridView-Steuerelement im virtuellen Modus](virtual-mode-in-the-windows-forms-datagridview-control.md).  
   
 ## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.DefaultValuesNeeded?displayProperty=nameWithType>
 - [Dateneingabe im DataGridView-Steuerelement in Windows Forms](data-entry-in-the-windows-forms-datagridview-control.md)
-- [Vorgehensweise: Angeben von Standardwerten für neue Zeilen im DataGridView-Steuerelement in Windows Forms](specify-default-values-for-new-rows-in-the-datagrid.md)
+- [Gewusst wie: Angeben von Standardwerten für neue Zeilen im DataGridView-Steuerelement in Windows Forms](specify-default-values-for-new-rows-in-the-datagrid.md)

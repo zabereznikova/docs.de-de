@@ -1,5 +1,5 @@
 ---
-title: 'Exemplarische Vorgehensweise: Implementieren des virtuellen Modus im DataGridView-Steuerelement in Windows Forms'
+title: 'Exemplarische Vorgehensweise: Implementieren des virtuellen Modus im DataGridView-Steuerelement'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,27 +12,27 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], large data sets
 - walkthroughs [Windows Forms], DataGridView control
 ms.assetid: 74eb5276-5ab8-4ce0-8005-dae751d85f7c
-ms.openlocfilehash: 9e7fb3a42b56c40f713d73e3734142f4aab335f4
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 5db97b321238bc371c94e627a387bd83ca31b58a
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64649996"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76746518"
 ---
-# <a name="walkthrough-implementing-virtual-mode-in-the-windows-forms-datagridview-control"></a>Exemplarische Vorgehensweise: Implementieren des virtuellen Modus im DataGridView-Steuerelement in Windows Forms
-Bei sehr große Mengen von Tabellendaten in angezeigt werden soll eine <xref:System.Windows.Forms.DataGridView> -Steuerelements legen Sie die <xref:System.Windows.Forms.DataGridView.VirtualMode%2A> Eigenschaft `true` und explizit die Interaktion mit dem Datenspeicher des Steuerelements verwalten. Dadurch können Sie die Leistung des Steuerelements in diesem Fall optimieren.  
+# <a name="walkthrough-implementing-virtual-mode-in-the-windows-forms-datagridview-control"></a>Exemplarische Vorgehensweise: Implementieren des virtuellen Modus im DataGridView-Steuerelement in Windows Forms
+Wenn Sie in einem <xref:System.Windows.Forms.DataGridView> Steuerelement sehr große Mengen an tabellarischen Daten anzeigen möchten, können Sie die <xref:System.Windows.Forms.DataGridView.VirtualMode%2A>-Eigenschaft auf `true` festlegen und die Interaktion des Steuer Elements mit seinem Datenspeicher explizit verwalten. Auf diese Weise können Sie die Leistung des Steuer Elements in dieser Situation optimieren.  
   
- Die <xref:System.Windows.Forms.DataGridView> Steuerelement bietet mehrere Ereignisse, die Sie behandeln können, für die Interaktion mit einem benutzerdefinierten Datenspeicher. Diese exemplarische Vorgehensweise führt Sie durch den Prozess der Implementierung von diesen Ereignishandlern. Das Codebeispiel in diesem Thema wird eine sehr einfache Datenquelle zur Veranschaulichung verwendet. In einer produktionsumgebung werden Sie in der Regel Laden nur die Zeilen, die Sie in einen Cache anzuzeigen und zu behandeln müssen <xref:System.Windows.Forms.DataGridView> Ereignisse interagieren und den Cache zu aktualisieren. Weitere Informationen finden Sie unter [Implementieren des virtuellen Modus mit Just-in-Time-Laden von Daten im DataGridView-Steuerelement in Windows Forms](implementing-virtual-mode-jit-data-loading-in-the-datagrid.md)  
+ Das <xref:System.Windows.Forms.DataGridView>-Steuerelement bietet mehrere Ereignisse, die Sie behandeln können, um mit einem benutzerdefinierten Datenspeicher zu interagieren. Diese exemplarische Vorgehensweise führt Sie durch den Prozess der Implementierung dieser Ereignishandler. Das Codebeispiel in diesem Thema verwendet zur Veranschaulichung eine sehr einfache Datenquelle. In einer Produktionseinstellung laden Sie in der Regel nur die Zeilen, die Sie in einem Cache anzeigen müssen, und behandeln <xref:System.Windows.Forms.DataGridView> Ereignisse, um mit dem Cache zu interagieren und ihn zu aktualisieren. Weitere Informationen finden Sie unter [Implementieren des virtuellen Modus mit Just-in-Time-Laden von Daten in das Windows Forms DataGridView-Steuer](implementing-virtual-mode-jit-data-loading-in-the-datagrid.md) Element.  
   
- Zum Kopieren des Codes in diesem Thema als einzelne Auflistung lesen Sie [Vorgehensweise: Implementieren des virtuellen Modus in der Windows Forms-DataGridView-Steuerelement](how-to-implement-virtual-mode-in-the-windows-forms-datagridview-control.md).  
+ Informationen zum Kopieren des Codes in diesem Thema als einzelne Auflistung finden Sie unter Gewusst [wie: Implementieren des virtuellen Modus im Windows Forms DataGridView-Steuer](how-to-implement-virtual-mode-in-the-windows-forms-datagridview-control.md)Element.  
   
 ## <a name="creating-the-form"></a>Erstellen des Formulars  
   
-#### <a name="to-implement-virtual-mode"></a>Implementieren des virtuellen Modus  
+#### <a name="to-implement-virtual-mode"></a>So implementieren Sie den virtuellen Modus  
   
-1. Erstellen Sie eine abgeleitete Klasse <xref:System.Windows.Forms.Form> und enthält eine <xref:System.Windows.Forms.DataGridView> Steuerelement.  
+1. Erstellen Sie eine Klasse, die von <xref:System.Windows.Forms.Form> abgeleitet ist und ein <xref:System.Windows.Forms.DataGridView> Steuerelement enthält.  
   
-     Der folgende Code enthält einige grundlegende Initialisierung. Diese einige Variablen deklariert, die in späteren Schritten verwendet werden, und bietet eine `Main` -Methode, und bietet ein einfaches Formularlayout im Konstruktor Klasse.  
+     Der folgende Code enthält eine grundlegende Initialisierung. Er deklariert einige Variablen, die in späteren Schritten verwendet werden, stellt eine `Main` Methode bereit und stellt ein einfaches Formularlayout im-Klassenkonstruktor bereit.  
   
      [!code-cpp[System.Windows.Forms.DataGridView.VirtualMode#001](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/CPP/virtualmode.cpp#001)]
      [!code-csharp[System.Windows.Forms.DataGridView.VirtualMode#001](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/CS/virtualmode.cs#001)]
@@ -41,27 +41,27 @@ Bei sehr große Mengen von Tabellendaten in angezeigt werden soll eine <xref:Sys
     [!code-csharp[System.Windows.Forms.DataGridView.VirtualMode#002](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/CS/virtualmode.cs#002)]
     [!code-vb[System.Windows.Forms.DataGridView.VirtualMode#002](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/VB/virtualmode.vb#002)]  
   
-2. Implementieren Sie einen Handler für Ihres Formulars <xref:System.Windows.Forms.Form.Load> -Ereignis, das initialisiert die <xref:System.Windows.Forms.DataGridView> steuern und der Datenspeicher mit Beispieldaten gefüllt.  
+2. Implementieren Sie einen Handler für das <xref:System.Windows.Forms.Form.Load> Ereignis des Formulars, das das <xref:System.Windows.Forms.DataGridView>-Steuerelement initialisiert und den Datenspeicher mit Beispiel Werten füllt.  
   
      [!code-cpp[System.Windows.Forms.DataGridView.VirtualMode#110](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/CPP/virtualmode.cpp#110)]
      [!code-csharp[System.Windows.Forms.DataGridView.VirtualMode#110](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/CS/virtualmode.cs#110)]
      [!code-vb[System.Windows.Forms.DataGridView.VirtualMode#110](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/VB/virtualmode.vb#110)]  
   
-3. Implementieren Sie einen Handler für die <xref:System.Windows.Forms.DataGridView.CellValueNeeded> -Ereignis, das den angeforderten Zelle-Wert aus dem Datenspeicher abruft oder `Customer` Objekt derzeit in Bearbeitung.  
+3. Implementieren Sie einen Handler für das <xref:System.Windows.Forms.DataGridView.CellValueNeeded> Ereignis, das den angeforderten Zellwert aus dem Datenspeicher abruft, oder das `Customer` Objekt, das gerade bearbeitet wird.  
   
-     Dieses Ereignis tritt auf, wenn die <xref:System.Windows.Forms.DataGridView> Steuerelement eine Zelle gezeichnet werden muss.  
+     Dieses Ereignis tritt auf, wenn das <xref:System.Windows.Forms.DataGridView>-Steuerelement eine Zelle zeichnen muss.  
   
      [!code-cpp[System.Windows.Forms.DataGridView.VirtualMode#120](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/CPP/virtualmode.cpp#120)]
      [!code-csharp[System.Windows.Forms.DataGridView.VirtualMode#120](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/CS/virtualmode.cs#120)]
      [!code-vb[System.Windows.Forms.DataGridView.VirtualMode#120](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/VB/virtualmode.vb#120)]  
   
-4. Implementieren Sie einen Handler für die <xref:System.Windows.Forms.DataGridView.CellValuePushed> -Ereignis, das einen bearbeitete Zellenwert in speichert die `Customer` Objekt, das die bearbeitete Zeile darstellt. Dieses Ereignis tritt auf, wenn der Benutzer die Änderung eines Zelle ein Commit ausgeführt.  
+4. Implementieren Sie einen Handler für das <xref:System.Windows.Forms.DataGridView.CellValuePushed>-Ereignis, das einen bearbeiteten Zellwert im `Customer` Objekt speichert, das die bearbeitete Zeile darstellt. Dieses Ereignis tritt auf, wenn der Benutzer eine Änderung eines Zellen Werts durchführt.  
   
      [!code-cpp[System.Windows.Forms.DataGridView.VirtualMode#130](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/CPP/virtualmode.cpp#130)]
      [!code-csharp[System.Windows.Forms.DataGridView.VirtualMode#130](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/CS/virtualmode.cs#130)]
      [!code-vb[System.Windows.Forms.DataGridView.VirtualMode#130](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/VB/virtualmode.vb#130)]  
   
-5. Implementieren Sie einen Handler für die <xref:System.Windows.Forms.DataGridView.NewRowNeeded> -Ereignis, ein neues erstellt `Customer` Objekt, das eine neu erstellte Zeile darstellt.  
+5. Implementieren Sie einen Handler für das <xref:System.Windows.Forms.DataGridView.NewRowNeeded>-Ereignis, das ein neues `Customer`-Objekt erstellt, das eine neu erstellte Zeile darstellt.  
   
      Dieses Ereignis tritt auf, wenn der Benutzer die Zeile für neue Datensätze eingibt.  
   
@@ -69,7 +69,7 @@ Bei sehr große Mengen von Tabellendaten in angezeigt werden soll eine <xref:Sys
      [!code-csharp[System.Windows.Forms.DataGridView.VirtualMode#140](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/CS/virtualmode.cs#140)]
      [!code-vb[System.Windows.Forms.DataGridView.VirtualMode#140](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/VB/virtualmode.vb#140)]  
   
-6. Implementieren Sie einen Handler für die <xref:System.Windows.Forms.DataGridView.RowValidated> Ereignis, neue oder geänderte Zeilen im Datenspeicher gespeichert.  
+6. Implementieren Sie einen Handler für das <xref:System.Windows.Forms.DataGridView.RowValidated>-Ereignis, das neue oder geänderte Zeilen im Datenspeicher speichert.  
   
      Dieses Ereignis tritt auf, wenn der Benutzer die aktuelle Zeile ändert.  
   
@@ -77,31 +77,31 @@ Bei sehr große Mengen von Tabellendaten in angezeigt werden soll eine <xref:Sys
      [!code-csharp[System.Windows.Forms.DataGridView.VirtualMode#150](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/CS/virtualmode.cs#150)]
      [!code-vb[System.Windows.Forms.DataGridView.VirtualMode#150](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/VB/virtualmode.vb#150)]  
   
-7. Implementieren Sie einen Handler für die <xref:System.Windows.Forms.DataGridView.RowDirtyStateNeeded> Ereignis, das angibt, ob die <xref:System.Windows.Forms.DataGridView.CancelRowEdit> Ereignis tritt auf, wenn der Benutzer das Zurücksetzen einer Zeile durch Drücken der ESC-Taste zweimal im Bearbeitungsmodus befindet oder einmal außerhalb des Bearbeitungsmodus signalisiert.  
+7. Implementieren Sie einen Handler für das <xref:System.Windows.Forms.DataGridView.RowDirtyStateNeeded> Ereignis, das angibt, ob das <xref:System.Windows.Forms.DataGridView.CancelRowEdit> Ereignis auftritt, wenn der Benutzer die Zeilen Neuversion durch Drücken der ESC-Taste zweimal im Bearbeitungsmodus oder außerhalb des Bearbeitungsmodus signalisiert.  
   
-     In der Standardeinstellung <xref:System.Windows.Forms.DataGridView.CancelRowEdit> tritt auf, beim Zurücksetzen von Zeilen, wenn keine Zellen in der aktuellen Zeile geändert wurden, wenn die <xref:System.Windows.Forms.QuestionEventArgs.Response%2A?displayProperty=nameWithType> -Eigenschaftensatz auf `true` in die <xref:System.Windows.Forms.DataGridView.RowDirtyStateNeeded> -Ereignishandler. Dieses Ereignis ist nützlich, wenn der Commit-Bereich zur Laufzeit bestimmt wird.  
+     Standardmäßig erfolgt <xref:System.Windows.Forms.DataGridView.CancelRowEdit> bei der Zeilen Neuversion, wenn Zellen in der aktuellen Zeile geändert wurden, es sei denn, die <xref:System.Windows.Forms.QuestionEventArgs.Response%2A?displayProperty=nameWithType>-Eigenschaft ist im <xref:System.Windows.Forms.DataGridView.RowDirtyStateNeeded> Ereignishandler auf `true` festgelegt. Dieses Ereignis ist hilfreich, wenn der Commit-Bereich zur Laufzeit bestimmt wird.  
   
      [!code-cpp[System.Windows.Forms.DataGridView.VirtualMode#160](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/CPP/virtualmode.cpp#160)]
      [!code-csharp[System.Windows.Forms.DataGridView.VirtualMode#160](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/CS/virtualmode.cs#160)]
      [!code-vb[System.Windows.Forms.DataGridView.VirtualMode#160](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/VB/virtualmode.vb#160)]  
   
-8. Implementieren Sie einen Handler für die <xref:System.Windows.Forms.DataGridView.CancelRowEdit> -Ereignis, das die Werte der verwirft die `Customer` Objekt, das die aktuelle Zeile darstellt.  
+8. Implementieren Sie einen Handler für das <xref:System.Windows.Forms.DataGridView.CancelRowEdit> Ereignis, das die Werte des `Customer` Objekts verwirft, das die aktuelle Zeile darstellt.  
   
-     Dieses Ereignis tritt auf, wenn der Benutzer das Zurücksetzen einer Zeile durch Drücken der ESC-Taste zweimal im Bearbeitungsmodus befindet oder einmal außerhalb des Bearbeitungsmodus signalisiert. Dieses Ereignis tritt nicht auf, wenn keine Zellen in der aktuellen Zeile geändert wurden oder wenn der Wert des der <xref:System.Windows.Forms.QuestionEventArgs.Response%2A?displayProperty=nameWithType> eingestellt wurde `false` in einer <xref:System.Windows.Forms.DataGridView.RowDirtyStateNeeded> -Ereignishandler.  
+     Dieses Ereignis tritt auf, wenn der Benutzer die Zeilen Neuversion durch Drücken der ESC-Taste zweimal im Bearbeitungsmodus oder außerhalb des Bearbeitungsmodus signalisiert. Dieses Ereignis tritt nicht auf, wenn keine Zellen in der aktuellen Zeile geändert wurden oder wenn der Wert der <xref:System.Windows.Forms.QuestionEventArgs.Response%2A?displayProperty=nameWithType>-Eigenschaft auf `false` in einem <xref:System.Windows.Forms.DataGridView.RowDirtyStateNeeded>-Ereignishandler festgelegt wurde.  
   
      [!code-cpp[System.Windows.Forms.DataGridView.VirtualMode#170](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/CPP/virtualmode.cpp#170)]
      [!code-csharp[System.Windows.Forms.DataGridView.VirtualMode#170](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/CS/virtualmode.cs#170)]
      [!code-vb[System.Windows.Forms.DataGridView.VirtualMode#170](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/VB/virtualmode.vb#170)]  
   
-9. Implementieren Sie einen Handler für die <xref:System.Windows.Forms.DataGridView.UserDeletingRow> -Ereignis, das Löscht eine vorhandene `Customer` Objekt aus dem Datenspeicher, zusammen oder verwirft eine ungespeicherte `Customer` Objekt, das eine neu erstellte Zeile darstellt.  
+9. Implementieren Sie einen Handler für das <xref:System.Windows.Forms.DataGridView.UserDeletingRow> Ereignis, das ein vorhandenes `Customer` Objekt aus dem Datenspeicher löscht, oder verwirft ein nicht gespeichertes `Customer` Objekt, das eine neu erstellte Zeile darstellt.  
   
-     Dieses Ereignis tritt auf, wenn der Benutzer eine Zeile löscht, indem Sie auf einen Zeilenheader und die ENTF-Taste.  
+     Dieses Ereignis tritt auf, wenn der Benutzer eine Zeile durch Klicken auf einen Zeilen Header und durch Drücken der ENTF-Taste löscht.  
   
      [!code-cpp[System.Windows.Forms.DataGridView.VirtualMode#180](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/CPP/virtualmode.cpp#180)]
      [!code-csharp[System.Windows.Forms.DataGridView.VirtualMode#180](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/CS/virtualmode.cs#180)]
      [!code-vb[System.Windows.Forms.DataGridView.VirtualMode#180](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/VB/virtualmode.vb#180)]  
   
-10. Implementieren Sie eine einfache `Customers` Klasse darstellen, die die Datenelemente, die von diesem Codebeispiel wird verwendet.  
+10. Implementieren Sie eine einfache `Customers`-Klasse, die die Datenelemente darstellt, die in diesem Codebeispiel verwendet werden.  
   
      [!code-cpp[System.Windows.Forms.DataGridView.VirtualMode#200](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/CPP/virtualmode.cpp#200)]
      [!code-csharp[System.Windows.Forms.DataGridView.VirtualMode#200](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/CS/virtualmode.cs#200)]
@@ -114,16 +114,16 @@ Bei sehr große Mengen von Tabellendaten in angezeigt werden soll eine <xref:Sys
   
 - Kompilieren Sie die Anwendung, und führen Sie sie aus.  
   
-     Sie sehen eine <xref:System.Windows.Forms.DataGridView> Steuerelement mit drei Kundendatensätze aufgefüllt. Sie können ändern Sie die Werte aus mehreren Zellen in einer Zeile, und drücken Sie ESC, zweimal im Bearbeitungsmodus befindet und einmal außerhalb Bearbeitungszustand versetzt, damit die gesamte Zeile auf die ursprünglichen Werte zurückgesetzt. Wenn Sie ändern, hinzufügen oder Löschen von Zeilen im Steuerelement `Customer` Objekte im Datenspeicher geändert, hinzugefügt oder ebenfalls gelöscht werden.  
+     Es wird ein <xref:System.Windows.Forms.DataGridView>-Steuerelement mit drei Kundendatensätzen angezeigt. Sie können die Werte mehrerer Zellen in einer Zeile ändern und die ESC-Taste zweimal im Bearbeitungsmodus drücken und einmal außerhalb des Bearbeitungsmodus, um die gesamte Zeile auf ihre ursprünglichen Werte zurückzusetzen. Wenn Sie Zeilen im Steuerelement ändern, hinzufügen oder löschen, werden `Customer` Objekte im Datenspeicher ebenfalls geändert, hinzugefügt oder gelöscht.  
   
 ## <a name="next-steps"></a>Nächste Schritte  
- Diese Anwendung verfügt über einen grundlegenden Überblick über die Ereignisse müssen Sie zum Implementieren virtuellen Modus im behandeln die <xref:System.Windows.Forms.DataGridView> Steuerelement. Sie können diese einfache vorlagenanwendung auf vielfältige Weise verbessern:  
+ Diese Anwendung enthält grundlegende Kenntnisse über die Ereignisse, die Sie behandeln müssen, um den virtuellen Modus im <xref:System.Windows.Forms.DataGridView> Steuerelement zu implementieren. Sie können diese grundlegende Anwendung auf verschiedene Arten verbessern:  
   
-- Implementieren Sie einen Datenspeicher, der Werte aus einer externen Datenbank speichert. Der Cache sollte abrufen und die Werte nach Bedarf zu verwerfen, sodass sie nur enthält, was für die Anzeige während der Verarbeitung von einem kleinen Teil des Arbeitsspeichers auf dem Clientcomputer erforderlich ist.  
+- Implementieren Sie einen Datenspeicher, der Werte aus einer externen Datenbank zwischenspeichert. Der Cache sollte bei Bedarf Werte abrufen und verwerfen, sodass er nur die für die Anzeige erforderlichen Elemente enthält, während ein kleiner Speicherplatz auf dem Client Computer beansprucht wird.  
   
-- Optimieren Sie die Leistung des Datenspeichers je nach Ihren Anforderungen. Beispielsweise empfiehlt es sich um für langsame Netzwerkverbindungen anstelle von Client-Computer-Memory-Einschränkungen zu kompensieren, indem Sie einen größeren Cache und Verringerung der Anzahl von Abfragen.  
+- Optimieren Sie die Leistung des Datenspeicher abhängig von Ihren Anforderungen. Beispielsweise möchten Sie möglicherweise langsame Netzwerkverbindungen anstelle der Arbeitsspeicher Beschränkungen von Client Computern kompensieren, indem Sie eine größere Cache Größe verwenden und die Anzahl der Datenbankabfragen minimieren.  
   
- Weitere Informationen zum Zwischenspeichern von Werten aus einer externen Datenbank finden Sie unter [Vorgehensweise: Implementieren des virtuellen Modus mit Just-in-Time-Daten laden in das Windows Forms-DataGridView-Steuerelement](virtual-mode-with-just-in-time-data-loading-in-the-datagrid.md).  
+ Weitere Informationen zum Zwischenspeichern von Werten aus einer externen Datenbank finden [Sie unter Gewusst wie: Implementieren des virtuellen Modus mit Just-in-Time-Laden von Daten in das Windows Forms DataGridView-Steuer](virtual-mode-with-just-in-time-data-loading-in-the-datagrid.md)Element.  
   
 ## <a name="see-also"></a>Siehe auch
 
@@ -139,4 +139,4 @@ Bei sehr große Mengen von Tabellendaten in angezeigt werden soll eine <xref:Sys
 - [Leistungsoptimierung im DataGridView-Steuerelement in Windows Forms](performance-tuning-in-the-windows-forms-datagridview-control.md)
 - [Empfohlene Vorgehensweisen für das Skalieren des DataGridView-Steuerelements in Windows Forms](best-practices-for-scaling-the-windows-forms-datagridview-control.md)
 - [Implementieren des virtuellen Modus mit Just-In-Time-Laden von Daten in das DataGridView-Steuerelement in Windows Forms](implementing-virtual-mode-jit-data-loading-in-the-datagrid.md)
-- [Vorgehensweise: Implementieren des virtuellen Modus im DataGridView-Steuerelement in Windows Forms](how-to-implement-virtual-mode-in-the-windows-forms-datagridview-control.md)
+- [Gewusst wie: Implementieren des virtuellen Modus im DataGridView-Steuerelement in Windows Forms](how-to-implement-virtual-mode-in-the-windows-forms-datagridview-control.md)

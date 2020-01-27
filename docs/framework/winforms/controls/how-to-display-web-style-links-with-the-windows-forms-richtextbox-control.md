@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Anzeigen von Hyperlinks mit dem RichTextBox-Steuerelement von Windows Forms'
+title: Anzeigen von Links im Webstil mit dem RichTextBox-Steuerelement
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,31 +10,31 @@ helpviewer_keywords:
 - examples [Windows Forms], text boxes
 - RichTextBox control [Windows Forms], linking to Web pages
 ms.assetid: 95089a37-a202-4f7a-94ee-6ee312908851
-ms.openlocfilehash: ce71981f7b233d3e168689c766128646eed3e981
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 78a07a250744018f121b03f2973b1661ed6bf764
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70046185"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76745532"
 ---
-# <a name="how-to-display-web-style-links-with-the-windows-forms-richtextbox-control"></a>Vorgehensweise: Anzeigen von Hyperlinks mit dem RichTextBox-Steuerelement von Windows Forms
+# <a name="how-to-display-web-style-links-with-the-windows-forms-richtextbox-control"></a>Gewusst wie: Anzeigen von Hyperlinks mit dem RichTextBox-Steuerelement von Windows Forms
 
-Das Windows Forms <xref:System.Windows.Forms.RichTextBox> Steuerelement kann Weblinks als farbige und unterstrichen anzeigen. Sie können Code schreiben, mit dem ein Browserfenster geöffnet wird, in dem die im Linktext angegebene Website angezeigt wird, wenn auf den Link geklickt wird.
+Das Windows Forms <xref:System.Windows.Forms.RichTextBox>-Steuerelement kann Weblinks farblich anzeigen und unterstrichen anzeigen. Sie können Code schreiben, mit dem ein Browserfenster geöffnet wird, in dem die im Linktext angegebene Website angezeigt wird, wenn auf den Link geklickt wird.
 
 ### <a name="to-link-to-a-web-page-with-the-richtextbox-control"></a>So verknüpfen Sie eine Webseite mit dem RichTextBox-Steuerelement
 
 1. Legen Sie <xref:System.Windows.Forms.RichTextBox.Text%2A> die-Eigenschaft auf eine Zeichenfolge fest, die eine gültige URL enthält"http://www.microsoft.com/"(z. b.).
 
-2. Stellen Sie sicher <xref:System.Windows.Forms.RichTextBox.DetectUrls%2A> , dass die- `true` Eigenschaft auf festgelegt ist (die Standardeinstellung).
+2. Stellen Sie sicher, dass die <xref:System.Windows.Forms.RichTextBox.DetectUrls%2A>-Eigenschaft auf `true` (Standardeinstellung) festgelegt ist.
 
-3. Erstellen Sie eine neue globale Instanz des <xref:System.Diagnostics.Process> -Objekts.
+3. Erstellen Sie eine neue globale Instanz des <xref:System.Diagnostics.Process> Objekts.
 
-4. Schreiben Sie einen Ereignishandler für <xref:System.Windows.Forms.RichTextBox.LinkClicked> das-Ereignis, das den Browser den gewünschten Text sendet.
+4. Schreiben Sie einen Ereignishandler für das <xref:System.Windows.Forms.RichTextBox.LinkClicked> Ereignis, das den Browser den gewünschten Text sendet.
 
-    Im folgenden Beispiel öffnet das <xref:System.Windows.Forms.RichTextBox.LinkClicked> -Ereignis eine Instanz von Internet Explorer für die URL, die in der <xref:System.Windows.Forms.RichTextBox.Text%2A> -Eigenschaft des <xref:System.Windows.Forms.RichTextBox> -Steuer Elements angegeben ist. In diesem Beispiel wird ein Formular mit <xref:System.Windows.Forms.RichTextBox> einem-Steuerelement angenommen.
+    Im folgenden Beispiel wird mit dem <xref:System.Windows.Forms.RichTextBox.LinkClicked>-Ereignis eine Instanz von Internet Explorer für die URL geöffnet, die in der <xref:System.Windows.Forms.RichTextBox.Text%2A>-Eigenschaft des <xref:System.Windows.Forms.RichTextBox>-Steuer Elements angegeben ist. In diesem Beispiel wird ein Formular mit einem <xref:System.Windows.Forms.RichTextBox>-Steuerelement angenommen.
 
     > [!IMPORTANT]
-    > Beim Aufrufen der <xref:System.Diagnostics.Process.Start%2A?displayProperty=nameWithType> -Methode wird eine <xref:System.Security.SecurityException> -Ausnahme angezeigt, wenn Sie den Code in einem teilweise vertrauenswürdigen Kontext ausführen, weil Sie nicht über ausreichende Berechtigungen verfügen. Weitere Informationen finden Sie unter [Grundlagen der Codezugriffssicherheit](../../misc/code-access-security-basics.md).
+    > Wenn Sie die <xref:System.Diagnostics.Process.Start%2A?displayProperty=nameWithType>-Methode aufrufen, tritt eine <xref:System.Security.SecurityException> Ausnahme auf, wenn Sie den Code in einem teilweise vertrauenswürdigen Kontext ausführen, weil Sie nicht über ausreichende Berechtigungen verfügen. Weitere Informationen finden Sie unter [Grundlagen der Codezugriffssicherheit](../../misc/code-access-security-basics.md).
 
     ```vb
     Public p As New System.Diagnostics.Process
@@ -75,7 +75,7 @@ Das Windows Forms <xref:System.Windows.Forms.RichTextBox> Steuerelement kann Web
        }
     ```
 
-    (Visual C++) Sie müssen den Prozess `p`initialisieren, indem Sie die folgende Anweisung in den Konstruktor Ihres Formulars einschließen:
+    (Visual C++) Sie müssen Prozess `p`initialisieren, indem Sie die folgende Anweisung in den Konstruktor Ihres Formulars einschließen:
 
     ```cpp
     p = gcnew System::Diagnostics::Process();

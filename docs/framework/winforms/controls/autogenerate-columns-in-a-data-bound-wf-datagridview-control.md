@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Automatisches Generieren von Spalten in einem datengebundenen DataGridView-Steuerelement in Windows Forms'
+title: Automatische Generierung von Spalten in einem Daten gebundenen DataGridView-Steuerelement
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,17 +9,17 @@ helpviewer_keywords:
 - columns [Windows Forms], autogenerating
 - DataGridView control [Windows Forms], data-bound columns
 ms.assetid: 699f6f9e-6aa5-4811-902b-6a2c57dec7d6
-ms.openlocfilehash: eb74c1ef1661fc8bd7a57f079f10d24a7eef8187
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 860e640e095537358d2f8778c810aa577e9d7ff0
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64639762"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76746232"
 ---
-# <a name="how-to-autogenerate-columns-in-a-data-bound-windows-forms-datagridview-control"></a>Vorgehensweise: Automatisches Generieren von Spalten in einem datengebundenen DataGridView-Steuerelement in Windows Forms
-Im folgenden Codebeispiel wird veranschaulicht, wie zum Anzeigen der Spalten aus einer Quelle an Sie gebundenen Daten in einem <xref:System.Windows.Forms.DataGridView> Steuerelement. Wenn die <xref:System.Windows.Forms.DataGridView.AutoGenerateColumns%2A> Eigenschaftswert ist `true` (Standardeinstellung), eine <xref:System.Windows.Forms.DataGridViewColumn> für jede Spalte in der Tabelle der Datenquelle erstellt wird.  
+# <a name="how-to-autogenerate-columns-in-a-data-bound-windows-forms-datagridview-control"></a>Gewusst wie: Automatisches Generieren von Spalten in einem datengebundenen DataGridView-Steuerelement in Windows Forms
+Im folgenden Codebeispiel wird veranschaulicht, wie Spalten aus einer gebundenen Datenquelle in einem <xref:System.Windows.Forms.DataGridView>-Steuerelement angezeigt werden. Wenn der <xref:System.Windows.Forms.DataGridView.AutoGenerateColumns%2A>-Eigenschafts Wert `true` (Standardeinstellung) ist, wird für jede Spalte in der Datenquellen Tabelle eine <xref:System.Windows.Forms.DataGridViewColumn> erstellt.  
   
- Wenn die <xref:System.Windows.Forms.DataGridView> Steuerelement bereits über Spalten verfügt, beim Festlegen der <xref:System.Windows.Forms.DataGridViewComboBoxColumn.DataSource%2A> -Eigenschaft, die vorhandene Grenze Spalten sind im Vergleich zu den Spalten in der Datenquelle und beibehalten, wenn eine Übereinstimmung vorliegt. Nicht gebundene Spalten werden immer beibehalten. Gebundene Spalten, die für die keine Übereinstimmung in der Datenquelle vorhanden ist, werden entfernt. Spalten in der Datenquelle, die für die keine Übereinstimmung im Steuerelement vorhanden ist, generieren neue <xref:System.Windows.Forms.DataGridViewColumn> Objekte, die am Ende hinzugefügt werden die <xref:System.Windows.Forms.DataGridView.Columns%2A> Auflistung.  
+ Wenn das <xref:System.Windows.Forms.DataGridView> Steuerelement bereits Spalten enthält, wenn Sie die <xref:System.Windows.Forms.DataGridViewComboBoxColumn.DataSource%2A>-Eigenschaft festlegen, werden die vorhandenen gebundenen Spalten mit den Spalten in der Datenquelle verglichen und immer dann beibehalten, wenn eine Entsprechung vorliegt. Ungebundene Spalten werden immer beibehalten. Gebundene Spalten, für die keine Entsprechung in der Datenquelle vorhanden ist, werden entfernt. Spalten in der Datenquelle, für die keine Entsprechung im-Steuerelement vorhanden ist, generieren neue <xref:System.Windows.Forms.DataGridViewColumn>-Objekte, die am Ende der <xref:System.Windows.Forms.DataGridView.Columns%2A> Auflistung hinzugefügt werden.  
   
 ## <a name="example"></a>Beispiel  
  [!code-csharp[System.Windows.Forms.DataGridViewMisc#020](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#020)]
@@ -30,7 +30,7 @@ Im folgenden Codebeispiel wird veranschaulicht, wie zum Anzeigen der Spalten aus
   
 - Ein <xref:System.Windows.Forms.DataGridView>-Steuerelement namens `customersDataGridView`.  
   
-- Ein <xref:System.Data.DataSet> Objekt mit dem Namen `customersDataSet` , die eine Tabelle namens hat `Customers`.  
+- Ein <xref:System.Data.DataSet> Objekt mit dem Namen `customersDataSet`, das über eine Tabelle mit dem Namen `Customers`verfügt.  
   
 - Verweise auf die Assemblys <xref:System?displayProperty=nameWithType>, <xref:System.Windows.Forms?displayProperty=nameWithType>, <xref:System.Data?displayProperty=nameWithType> und <xref:System.Xml?displayProperty=nameWithType>.  
   
@@ -39,4 +39,4 @@ Im folgenden Codebeispiel wird veranschaulicht, wie zum Anzeigen der Spalten aus
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.AutoGenerateColumns%2A?displayProperty=nameWithType>
 - [Anzeigen von Daten im DataGridView-Steuerelement in Windows Forms](displaying-data-in-the-windows-forms-datagridview-control.md)
-- [Vorgehensweise: Entfernen von automatisch generierten Spalten aus einem DataGridView-Steuerelement in Windows Forms](remove-autogenerated-columns-from-a-wf-datagridview-control.md)
+- [Gewusst wie: Entfernen von automatisch generierten Spalten aus einem DataGridView-Steuerelement in Windows Forms](remove-autogenerated-columns-from-a-wf-datagridview-control.md)

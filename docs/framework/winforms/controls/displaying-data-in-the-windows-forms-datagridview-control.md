@@ -1,5 +1,5 @@
 ---
-title: Anzeigen von Daten im DataGridView-Steuerelement in Windows Forms
+title: Anzeigen von Daten im DataGridView-Steuerelement
 ms.date: 03/30/2017
 helpviewer_keywords:
 - data [Windows Forms], displaying in tabular format
@@ -7,63 +7,63 @@ helpviewer_keywords:
 - displaying data [Windows Forms], data grids
 - DataGridView control [Windows Forms], displaying data
 ms.assetid: b170b52a-2ebd-4948-ac2f-e52d494cebb2
-ms.openlocfilehash: c153d422470ff20491567aed70557e461dc2b4e6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d02362895d75df3735d19554bd44bb8ac443c6c2
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61972223"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76745867"
 ---
 # <a name="displaying-data-in-the-windows-forms-datagridview-control"></a>Anzeigen von Daten im DataGridView-Steuerelement in Windows Forms
-Die `DataGridView` Steuerelement zum Anzeigen von Daten aus einer Vielzahl von Daten aus externen Quellen verwendet wird. Alternativ können Sie Zeilen und Spalten zum Steuerelement hinzufügen und manuell mit Daten aufgefüllt wird.  
+Das `DataGridView`-Steuerelement wird zum Anzeigen von Daten aus einer Vielzahl externer Datenquellen verwendet. Alternativ können Sie dem Steuerelement Zeilen und Spalten hinzufügen und manuell mit Daten auffüllen.  
   
- Wenn Sie das Steuerelement an eine Datenquelle binden, können Sie die Spalten automatisch basierend auf dem Schema der Datenquelle generieren. Wenn diese Spalten nicht angezeigt werden, genau wie gewünscht, können Sie ausblenden, entfernen oder anordnen. Sie können auch hinzufügen ungebundene Spalten, um zusätzliche Daten anzuzeigen, die nicht von der Datenquelle stammt.  
+ Wenn Sie das Steuerelement an eine Datenquelle binden, können Sie Spalten automatisch basierend auf dem Schema der Datenquelle generieren. Wenn diese Spalten nicht wie gewünscht angezeigt werden, können Sie Sie ausblenden, entfernen oder neu anordnen. Sie können auch ungebundene Spalten hinzufügen, um ergänzende Daten anzuzeigen, die nicht aus der Datenquelle stammen.  
   
- Darüber hinaus können Sie Ihre Daten mithilfe von standard-Formate (z. B. Währungsformat) anzeigen, oder Sie können anpassen, die anzeigeformatierung, um Ihre Daten so darzustellen, müssen Sie allerdings auf (z. B. Ändern der Hintergrundfarbe für negative Zahlen oder Ersetzen von Zeichenfolgenwerten durch entsprechende Bilder).  
+ Darüber hinaus können Sie Ihre Daten mithilfe von Standardformaten (z. b. dem Währungs Format) anzeigen, oder Sie können die Anzeige Formatierung anpassen, um Ihre Daten zu präsentieren (z. b. das Ändern der Hintergrundfarbe für negative Zahlen oder das Ersetzen von Zeichen folgen Werten). mit den entsprechenden Bildern).  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Datenanzeigemodi im DataGridView-Steuerelement in Windows Forms](data-display-modes-in-the-windows-forms-datagridview-control.md)  
- Beschreibt die Optionen für das Steuerelement mit Daten auffüllen.  
+ Beschreibt die Optionen zum Auffüllen des-Steuer Elements mit Daten.  
   
  [Datenformatierung im DataGridView-Steuerelement in Windows Forms](data-formatting-in-the-windows-forms-datagridview-control.md)  
- Beschreibt die Optionen für die Formatierung der Zellenwerte.  
+ Beschreibt die Optionen zum Formatieren von Zell Anzeige Werten.  
   
- [Exemplarische Vorgehensweise: Erstellen eine nicht gebundene Windows Forms-DataGridView-Steuerelement](walkthrough-creating-an-unbound-windows-forms-datagridview-control.md)  
- Beschreibt, wie Sie manuell das Steuerelement mit Daten aufgefüllt.  
+ [Exemplarische Vorgehensweise: Erstellen eines ungebundenen DataGridView-Steuerelements in Windows Forms](walkthrough-creating-an-unbound-windows-forms-datagridview-control.md)  
+ Beschreibt, wie das-Steuerelement manuell mit Daten aufgefüllt wird.  
   
- [Vorgehensweise: Binden von Daten an das DataGridView-Steuerelement in Windows Forms](how-to-bind-data-to-the-windows-forms-datagridview-control.md)  
- Beschreibt, wie Sie das Steuerelement mit Daten zu füllen, indem Sie ihn zum Binden einer `BindingSource` mit den Informationen aus einer Datenbank abgerufen.  
+ [Gewusst wie: Binden von Daten an das DataGridView-Steuerelement in Windows Forms](how-to-bind-data-to-the-windows-forms-datagridview-control.md)  
+ Beschreibt, wie das-Steuerelement mit Daten aufgefüllt wird, indem es an eine `BindingSource` gebunden wird, die aus einer Datenbank abgerufene Informationen enthält.  
   
- [Vorgehensweise: Automatisches Generieren von Spalten in einem datengebundenen Windows Forms-DataGridView-Steuerelement](autogenerate-columns-in-a-data-bound-wf-datagridview-control.md)  
- Automatisches Generieren von Spalten, die basierend auf einer gebundenen Datenquelle beschreibt.  
+ [Gewusst wie: Automatisches Generieren von Spalten in einem datengebundenen DataGridView-Steuerelement in Windows Forms](autogenerate-columns-in-a-data-bound-wf-datagridview-control.md)  
+ Beschreibt, wie auf der Grundlage einer gebundenen Datenquelle automatisch Spalten generiert werden.  
   
- [Vorgehensweise: Entfernen von automatisch generierten Spalten aus einem DataGridView-Steuerelement in Windows Forms](remove-autogenerated-columns-from-a-wf-datagridview-control.md)  
- Beschreibt das Ausblenden oder Löschen von Spalten aus einer gebundenen Datenquelle automatisch generiert.  
+ [Gewusst wie: Entfernen von automatisch generierten Spalten aus einem DataGridView-Steuerelement in Windows Forms](remove-autogenerated-columns-from-a-wf-datagridview-control.md)  
+ Beschreibt, wie Spalten, die automatisch aus einer gebundenen Datenquelle generiert werden, ausgeblendet oder gelöscht werden.  
   
- [Vorgehensweise: Ändern Sie die Reihenfolge der Spalten im DataGridView-Steuerelement in Windows Forms](how-to-change-the-order-of-columns-in-the-windows-forms-datagridview-control.md)  
- Beschreibt, wie aus einer gebundenen Datenquelle automatisch generierte Spalten neu anordnen.  
+ [Gewusst wie: Ändern der Reihenfolge von Spalten im DataGridView-Steuerelement in Windows Forms](how-to-change-the-order-of-columns-in-the-windows-forms-datagridview-control.md)  
+ Beschreibt, wie Spalten, die automatisch aus einer gebundenen Datenquelle generiert werden, neu angeordnet werden.  
   
- [Vorgehensweise: Hinzufügen einer ungebundenen Spalte zu einem datengebundenen Windows Forms-DataGridView-Steuerelement](unbound-column-to-a-data-bound-datagridview.md)  
- Beschreibt, wie Daten aus einer gebundenen Datenquelle, die durch das Anzeigen zusätzlicher ungebundener Spalten zu ergänzen.  
+ [Gewusst wie: Hinzufügen einer ungebundenen Spalte zu einem datengebundenen DataGridView-Steuerelement in Windows Forms](unbound-column-to-a-data-bound-datagridview.md)  
+ Beschreibt, wie Daten aus einer gebundenen Datenquelle durch Anzeigen zusätzlicher, ungebundener Spalten ergänzt werden.  
   
- [Vorgehensweise: Binden von Objekten an Windows Forms-DataGridView-Steuerelementen](how-to-bind-objects-to-windows-forms-datagridview-controls.md)  
- Beschreibt, wie das Steuerelement an eine Auflistung von beliebigen Objekten zu binden, sodass jedes Objekt in einer eigenen Zeile angezeigt wird.  
+ [Vorgehensweise: Binden von Objekten an das DataGridView-Steuerelement in Windows Forms](how-to-bind-objects-to-windows-forms-datagridview-controls.md)  
+ Beschreibt, wie das Steuerelement an eine Auflistung beliebiger Objekte gebunden wird, sodass jedes Objekt in einer eigenen Zeile angezeigt wird.  
   
- [Vorgehensweise: Zugreifen auf Objekte an in Windows Forms DataGridView-Zeilen gebunden.](how-to-access-objects-bound-to-windows-forms-datagridview-rows.md)  
- Beschreibt, wie zum Abrufen eines Objekts zu einer bestimmten Zeile des Steuerelements gebunden.  
+ [Vorgehensweise: Aufrufen von Objekten, die an DataGridView-Zeilen in Windows Forms gebunden sind](how-to-access-objects-bound-to-windows-forms-datagridview-rows.md)  
+ Beschreibt, wie ein-Objekt abgerufen wird, das an eine bestimmte Zeile des-Steuer Elements gebunden ist.  
   
- [Exemplarische Vorgehensweise: Erstellen eine Master-/Detailformulars mit zwei DataGridView-Steuerelementen in Windows Forms](creating-a-master-detail-form-using-two-datagridviews.md)  
- Beschreibt, wie Sie Daten aus zwei verknüpften Datenbanktabellen angezeigt, damit die Werte in einem `DataGridView` Steuerelement hängen von der aktuell ausgewählten Zeile in einem anderen Steuerelement.  
+ [Exemplarische Vorgehensweise: Erstellen eines Master-/Detailformulars mit zwei DataGridView-Steuerelementen in Windows Forms](creating-a-master-detail-form-using-two-datagridviews.md)  
+ Beschreibt, wie Daten aus zwei verknüpften Datenbanktabellen angezeigt werden, sodass die Werte, die in einem `DataGridView` Steuerelement angezeigt werden, von der aktuell ausgewählten Zeile in einem anderen Steuerelement abhängen.  
   
- [Vorgehensweise: Anpassen der Datenformatierung im DataGridView-Steuerelement in Windows Forms](how-to-customize-data-formatting-in-the-windows-forms-datagridview-control.md)  
- Beschreibt, wie Sie behandelt die <xref:System.Windows.Forms.DataGridView.CellFormatting?displayProperty=nameWithType> Ereignis, um die Darstellung von Zellen je nach ihren Werten ändern.  
+ [Gewusst wie: Anpassen der Datenformatierung im DataGridView-Steuerelement in Windows Forms](how-to-customize-data-formatting-in-the-windows-forms-datagridview-control.md)  
+ Beschreibt, wie das <xref:System.Windows.Forms.DataGridView.CellFormatting?displayProperty=nameWithType>-Ereignis behandelt wird, um die Darstellung von Zellen in Abhängigkeit von ihren Werten zu ändern.  
   
 ## <a name="reference"></a>Referenz  
  <xref:System.Windows.Forms.DataGridView>  
  Enthält die Referenzdokumentation für das <xref:System.Windows.Forms.DataGridView>-Steuerelement.  
   
  <xref:System.Windows.Forms.DataGridView.DataSource%2A?displayProperty=nameWithType>  
- Enthält die Referenzdokumentation für die <xref:System.Windows.Forms.DataGridView.DataSource%2A> Eigenschaft.  
+ Enthält die Referenz Dokumentation für die <xref:System.Windows.Forms.DataGridView.DataSource%2A>-Eigenschaft.  
   
  <xref:System.Windows.Forms.BindingSource>  
  Enthält die Referenzdokumentation für die <xref:System.Windows.Forms.BindingSource>-Komponente.  

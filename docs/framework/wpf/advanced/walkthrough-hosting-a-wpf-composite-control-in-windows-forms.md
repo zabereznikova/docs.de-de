@@ -1,15 +1,16 @@
 ---
-title: 'Exemplarische Vorgehensweise: Hosten eines zusammengesetzten WPF-Steuerelements in Windows Forms'
+title: Hosten eines zusammengesetzten WPF-Steuer Elements in Windows Forms
+titleSuffix: ''
 ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting WPF content in Windows Forms [WPF]
 ms.assetid: 0ac41286-4c1b-4b17-9196-d985cb844ce1
-ms.openlocfilehash: 39124b03b21fe1bc2a5dce3d8fb90ff372ab4853
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 59243e1810757ff0ff58a60ac3eb007bbc227be0
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458931"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742685"
 ---
 # <a name="walkthrough-hosting-a-wpf-composite-control-in-windows-forms"></a>Exemplarische Vorgehensweise: Hosten eines zusammengesetzten WPF-Steuerelements in Windows Forms
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] stellt eine umfangreiche Umgebung zum Erstellen von Anwendungen bereit. Wenn Sie jedoch eine beträchtliche Investition in [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]-Code haben, kann es effektiver sein, Ihre vorhandene [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] Anwendung mit [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zu erweitern, anstatt Sie von Grund auf neu zu schreiben. Ein häufiges Szenario ist, wenn Sie ein oder mehrere Steuerelemente einbetten möchten, die mit [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] in Ihrer Windows Forms Anwendung implementiert werden. Weitere Informationen zum Anpassen von WPF-Steuerelementen finden Sie unter [Anpassung von Steuer](../controls/control-customization.md)Elementen.  
@@ -26,7 +27,7 @@ ms.locfileid: "73458931"
   
  Eine komplette Code Auflistung der Aufgaben in dieser exemplarischen Vorgehensweise finden Sie unter [Hosting eines zusammengesetzten WPF-Steuer Elements in Windows Forms Beispiel](https://github.com/microsoft/WPF-Samples/tree/master/Migration%20and%20Interoperability/WindowsFormsHostingWpfControl).  
   
-## <a name="prerequisites"></a>Erforderliche Voraussetzungen  
+## <a name="prerequisites"></a>Erforderliche Komponenten  
 
 Für diese exemplarische Vorgehensweise benötigen Sie Visual Studio.  
   
@@ -268,7 +269,7 @@ Die folgende Abbildung zeigt ein zusammengesetztes WPF-Steuerelement, das in ein
     |groupBox7|lblName|Name:|  
     |groupBox7|lblAddress|Straße und Hausnummer:|  
     |groupBox7|lblCity|Ort:|  
-    |groupBox7|lblState|Zustand:|  
+    |groupBox7|lblState|Status:|  
     |groupBox7|lblZip|Postleitzahl:|  
   
 ### <a name="initializing-the-form"></a>Initialisieren des Formulars  

@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Festlegen von Schriftart- und Farbstilen im DataGridView-Steuerelement in Windows Forms'
+title: Festlegen von Schriftart-und Farb Stilen im DataGridView-Steuerelement
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,19 +10,19 @@ helpviewer_keywords:
 - data grids [Windows Forms], font styles
 - data grids [Windows Forms], color styles
 ms.assetid: 588f2c57-d963-41b1-9c1d-d02d71818113
-ms.openlocfilehash: ad2426ed9643fd46927c4f8b6373fedbec372d38
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f1ee9131cfc0b28a5f6263dcd6254d27a092cc62
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64638093"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76746757"
 ---
-# <a name="how-to-set-font-and-color-styles-in-the-windows-forms-datagridview-control"></a>Vorgehensweise: Festlegen von Schriftart- und Farbstilen im DataGridView-Steuerelement in Windows Forms
+# <a name="how-to-set-font-and-color-styles-in-the-windows-forms-datagridview-control"></a>Gewusst wie: Festlegen von Schriftart- und Farbstilen im DataGridView-Steuerelement in Windows Forms
 Sie können die visuelle Darstellung von Zellen in einem <xref:System.Windows.Forms.DataGridView>-Steuerelement angeben, indem Sie die Eigenschaften der <xref:System.Windows.Forms.DataGridViewCellStyle>-Klasse festlegen. Sie können Instanzen dieser Klasse aus verschiedenen Eigenschaften der <xref:System.Windows.Forms.DataGridView>-Klasse und deren Assistentenklassen abrufen, oder Sie können <xref:System.Windows.Forms.DataGridViewCellStyle>-Objekte instanziieren, um sie diesen Eigenschaften zuzuweisen.  
   
- In den folgenden Vorgehensweisen wird grundsätzlich veranschaulicht, wie die Zellendarstellung mithilfe der <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A>-Eigenschaft angepasst werden kann. Jede Zelle in dem Steuerelement erbt die Stile, die über diese Eigenschaft angegeben sind, es sei denn, die Stile werden auf Spalten-, Zeilen- oder Zellenebene überschrieben. Beispielsweise Vererbung von Stilen finden Sie unter [Vorgehensweise: Festlegen von Standardzellenformaten für das Windows-DataGridView-Steuerelement Forms](how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control.md). Informationen über weitere Verwendungsmöglichkeiten der <xref:System.Windows.Forms.DataGridViewCellStyle>-Klasse finden Sie in den Themen, die im Abschnitt "Siehe auch" aufgeführt sind.  
+ In den folgenden Vorgehensweisen wird grundsätzlich veranschaulicht, wie die Zellendarstellung mithilfe der <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A>-Eigenschaft angepasst werden kann. Jede Zelle in dem Steuerelement erbt die Stile, die über diese Eigenschaft angegeben sind, es sei denn, die Stile werden auf Spalten-, Zeilen- oder Zellenebene überschrieben. Ein Beispiel für die Vererbung von Formaten finden Sie unter Gewusst [wie: Festlegen von Standardzellen Formaten für das Windows Forms DataGridView-Steuer](how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control.md)Element. Informationen über weitere Verwendungsmöglichkeiten der <xref:System.Windows.Forms.DataGridViewCellStyle>-Klasse finden Sie in den Themen, die im Abschnitt "Siehe auch" aufgeführt sind.  
   
- Visual Studio bietet umfassende Unterstützung für diese Aufgabe.  Weitere Informationen hierzu finden Sie auch unter [Gewusst wie: Festlegen von standardmäßigen Zellenstilen und Datenformaten für die Windows Forms-DataGridView-Steuerelement mithilfe des Designers](default-cell-styles-datagridview.md).  
+ Visual Studio bietet umfassende Unterstützung für diese Aufgabe.  Siehe auch Gewusst [wie: Festlegen von Standardzellen Stilen und Datenformaten für das Windows Forms DataGridView-Steuerelement mithilfe des Designers](default-cell-styles-datagridview.md).  
   
 ### <a name="to-specify-the-font-used-by-datagridview-cells"></a>So geben Sie die von DataGridView-Zellen verwendete Schriftart an  
   
@@ -56,8 +56,8 @@ Sie können die visuelle Darstellung von Zellen in einem <xref:System.Windows.Fo
   
 - Verweise auf die Assemblys <xref:System?displayProperty=nameWithType>, <xref:System.Drawing?displayProperty=nameWithType> und <xref:System.Windows.Forms?displayProperty=nameWithType>.  
   
-## <a name="robust-programming"></a>Stabile Programmierung  
- Um maximale Skalierbarkeit zu erreichen, sollten Sie <xref:System.Windows.Forms.DataGridViewCellStyle>-Objekte für mehrere Zeilen, Spalten oder Zellen, in denen dieselben Stile verwendet werden, gemeinsam verwenden, anstatt die Stileigenschaften für jedes einzelne Element festzulegen. Weitere Informationen finden Sie unter [Best Practices für das Skalieren des DataGridView-Steuerelements in Windows Forms](best-practices-for-scaling-the-windows-forms-datagridview-control.md).  
+## <a name="robust-programming"></a>Robuste Programmierung  
+ Um maximale Skalierbarkeit zu erreichen, sollten Sie <xref:System.Windows.Forms.DataGridViewCellStyle>-Objekte für mehrere Zeilen, Spalten oder Zellen, in denen dieselben Stile verwendet werden, gemeinsam verwenden, anstatt die Stileigenschaften für jedes einzelne Element festzulegen. Weitere Informationen finden Sie unter [bewährte Methoden zum Skalieren des Windows Forms DataGridView-Steuer](best-practices-for-scaling-the-windows-forms-datagridview-control.md)Elements.  
   
 ## <a name="see-also"></a>Siehe auch
 

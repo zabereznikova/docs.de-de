@@ -1,36 +1,36 @@
 ---
-title: Netzwerkfunktionen in Windows Forms-Anwendungen
+title: -Netzwerk
 ms.date: 03/30/2017
 helpviewer_keywords:
 - networking [Windows Forms], Windows Forms
 - Windows Forms, networking
 ms.assetid: babf8af3-8000-46e2-8c68-a42127efabba
-ms.openlocfilehash: 2432fbd0a2c769efb126e4b9c1dc19e35fbe4c31
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a339792e716e9c23a0c178dc08410aa66988d7c6
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61641501"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76745013"
 ---
 # <a name="networking-in-windows-forms-applications"></a>Netzwerkfunktionen in Windows Forms-Anwendungen
-.NET Framework stellt Klassen für die Anzeige von Webseiten, Web-Inhalte herunterlädt, Interaktion mit File Transfer Protocol (FTP) Sites und Nutzen von Webdiensten, zum Erstellen von Netzwerk-Funktionalität in Ihre Anwendung zu vereinfachen. Die folgenden Ressourcen zeigt Ihnen die networking-Technologien von .NET Framework und wie Sie sie in Windows Forms integrieren können.  
+Der .NET Framework stellt Klassen zum Anzeigen von Webseiten, zum Herunterladen von Webinhalten, zum interagieren mit FTP-Websites (File Transfer Protocol) und zum Nutzen von Webdiensten bereit, sodass Sie problemlos Netzwerkfunktionen in Ihre Anwendung einbauen können. Die folgenden Ressourcen helfen Ihnen, die Netzwerktechnologien des .NET Framework zu verstehen und zu erfahren, wie Sie Sie in Windows Forms integrieren können.  
   
 ## <a name="reference"></a>Referenz  
  <xref:System.Net>  
- Der Stammnamespace für Klassen in .NET Framework die Handle-Netzwerkkonnektivität.  
+ Der Stamm Namespace für Klassen in der .NET Framework, die die Netzwerk Konnektivität verarbeiten.  
   
  <xref:System.Net.WebClient>  
- Eine einfache Klasse zum Abrufen von Web- oder HTTP-basierten Inhalt programmgesteuert.  
+ Eine bequeme Klasse zum programmgesteuerten Abrufen von Web-oder http-basiertem Inhalt.  
   
  <xref:System.Net.FtpWebRequest>  
- Eine Klasse zum Abrufen und Senden von Dateien über FTP.  
+ Eine Klasse zum Abrufen und Senden von Dateien mit FTP.  
   
  <xref:System.Windows.Forms.WebBrowser>  
- Eine verwaltete Wrapperklasse für die `WebBrowser` -Steuerelement, das in Windows enthalten ist.  
+ Eine verwaltete Wrapper Klasse für das `WebBrowser`-Steuerelement, das in Windows enthalten ist.  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
  [Netzwerkprogrammierung in .NET Framework](../../network-programming/index.md)  
- Eine Einführung in Netzwerke im .NET-Framework.  
+ Eine Einführung in das Netzwerk in der .NET Framework.  
   
  [Windows Forms-Datenbindung](../windows-forms-data-binding.md)  
- Beschreibt die Vorgehensweise beim Anzeigen von Inhalt der Datenbank in Ihrer Anwendung, entweder über einen lokalen Datenspeicher oder eine Datenbank, die in einem Netzwerk platziert.
+ Beschreibt das Anzeigen von Daten Bank Inhalt in der Anwendung, entweder aus einem lokalen Datenspeicher oder aus einer Datenbank, die sich in einem Netzwerk befindet.

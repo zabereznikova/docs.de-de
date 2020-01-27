@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Anzeigen von Fehlern innerhalb eines Datasets mit der ErrorProvider-Komponente in Windows Forms'
+title: Anzeigen von Fehlern innerhalb eines Datasets mit der ErrorProvider-Komponente
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,18 +9,18 @@ helpviewer_keywords:
 - error messages [Windows Forms], viewing in datasets
 - ErrorProvider component [Windows Forms], dataset errors
 ms.assetid: cbae023f-d651-4210-bdea-bcc5f037e321
-ms.openlocfilehash: 3dbd2ccca607869a6f28bc5b3bd1c9f0769db9f5
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 8c2155bf288db89b5d53567738fd399b915d50b6
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69950081"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76745453"
 ---
-# <a name="how-to-view-errors-within-a-dataset-with-the-windows-forms-errorprovider-component"></a>Vorgehensweise: Anzeigen von Fehlern innerhalb eines Datasets mit der ErrorProvider-Komponente in Windows Forms
-Sie können die Windows Forms <xref:System.Windows.Forms.ErrorProvider> Komponente verwenden, um Spalten Fehler in einem DataSet oder einer anderen Datenquelle anzuzeigen. Damit eine <xref:System.Windows.Forms.ErrorProvider> -Komponente Datenfehler in einem Formular anzeigt, muss Sie nicht direkt einem-Steuerelement zugeordnet werden. Nachdem Sie an eine Datenquelle gebunden wurde, kann Sie ein Fehler Symbol neben jedem Steuerelement anzeigen, das an dieselbe Datenquelle gebunden ist.  
+# <a name="how-to-view-errors-within-a-dataset-with-the-windows-forms-errorprovider-component"></a>Gewusst wie: Anzeigen von Fehlern innerhalb eines Datasets mit der ErrorProvider-Komponente in Windows Forms
+Sie können die Windows Forms <xref:System.Windows.Forms.ErrorProvider> Komponente verwenden, um Spalten Fehler in einem DataSet oder einer anderen Datenquelle anzuzeigen. Damit eine <xref:System.Windows.Forms.ErrorProvider> Komponente Datenfehler in einem Formular anzeigt, muss Sie nicht direkt einem-Steuerelement zugeordnet werden. Nachdem Sie an eine Datenquelle gebunden wurde, kann Sie ein Fehler Symbol neben jedem Steuerelement anzeigen, das an dieselbe Datenquelle gebunden ist.  
   
 > [!NOTE]
-> Wenn Sie die-und <xref:System.Windows.Forms.ErrorProvider.DataSource%2A> <xref:System.Windows.Forms.ErrorProvider.DataMember%2A> -Eigenschaften des Fehler Anbieters zur Laufzeit ändern, sollten Sie die <xref:System.Windows.Forms.ErrorProvider.BindToDataAndErrors%2A> -Methode verwenden, um Konflikte zu vermeiden.  
+> Wenn Sie die <xref:System.Windows.Forms.ErrorProvider.DataSource%2A>-und <xref:System.Windows.Forms.ErrorProvider.DataMember%2A> Eigenschaften des Fehler Anbieters zur Laufzeit ändern, sollten Sie die <xref:System.Windows.Forms.ErrorProvider.BindToDataAndErrors%2A>-Methode verwenden, um Konflikte zu vermeiden.  
   
 ### <a name="to-display-data-errors"></a>So zeigen Sie Datenfehler an  
   
@@ -40,7 +40,7 @@ Sie können die Windows Forms <xref:System.Windows.Forms.ErrorProvider> Komponen
     errorProvider1.DataMember = "Customers";  
     ```  
   
-2. Legen Sie <xref:System.Windows.Forms.ErrorProvider.ContainerControl%2A> die-Eigenschaft auf das Formular fest.  
+2. Legen Sie die <xref:System.Windows.Forms.ErrorProvider.ContainerControl%2A>-Eigenschaft auf das Formular fest.  
   
     ```vb  
     ErrorProvider1.ContainerControl = Me  
@@ -65,4 +65,4 @@ Sie können die Windows Forms <xref:System.Windows.Forms.ErrorProvider> Komponen
 ## <a name="see-also"></a>Siehe auch
 
 - [Übersicht über die ErrorProvider-Komponente](errorprovider-component-overview-windows-forms.md)
-- [Vorgehensweise: Anzeigen von Fehler Symbolen für die Formular Validierung mit der Windows Forms ErrorProvider-Komponente](display-error-icons-for-form-validation-with-wf-errorprovider.md)
+- [Gewusst wie: Anzeigen von Fehlersymbolen für die Formularvalidierung mit der ErrorProvider-Komponente in Windows Forms](display-error-icons-for-form-validation-with-wf-errorprovider.md)

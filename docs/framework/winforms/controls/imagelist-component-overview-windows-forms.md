@@ -1,5 +1,5 @@
 ---
-title: Übersicht über die ImageList-Komponente (Windows Forms)
+title: Übersicht über die ImageList-Komponente
 ms.date: 03/30/2017
 f1_keywords:
 - ImageList
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - icon list control
 - ImageList component [Windows Forms], about ImageList component
 ms.assetid: 7e25d89b-5633-40c1-afc3-82e0e301ffa2
-ms.openlocfilehash: d4513439594c9bceac3463a5b878f9059a16046e
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: b46204375cb046d637f4c9e1d888f37d10ea1f57
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65645699"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76728106"
 ---
 # <a name="imagelist-component-overview-windows-forms"></a>Übersicht über die ImageList-Komponente (Windows Forms)
 
@@ -30,4 +30,4 @@ Die wichtigste Eigenschaft der <xref:System.Windows.Forms.ImageList>-Komponente 
 ## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Windows.Forms.ImageList>
-- [Vorgehensweise: Hinzufügen oder Entfernen von Bildern mit der ImageList-Komponente in Windows Forms](how-to-add-or-remove-images-with-the-windows-forms-imagelist-component.md)
+- [Gewusst wie: Hinzufügen oder Entfernen von Bildern mit der ImageList-Komponente in Windows Forms](how-to-add-or-remove-images-with-the-windows-forms-imagelist-component.md)

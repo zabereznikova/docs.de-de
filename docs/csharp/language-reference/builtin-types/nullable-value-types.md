@@ -4,16 +4,16 @@ description: Informationen zu Werttypen, die Nullwerte zulassen, in C# und der V
 ms.date: 11/04/2019
 helpviewer_keywords:
 - nullable value types [C#]
-ms.openlocfilehash: 3b9a29e75fe894f7d8a0751feefa9eb0a39baa2c
-ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
+ms.openlocfilehash: 42673d16ac68bbf119e57e4c357b1b2b2a0b5c51
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75964315"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76740949"
 ---
 # <a name="nullable-value-types-c-reference"></a>Nullable-Werttypen (C#-Referenz)
 
-Ein Nullable-Werttyp `T?` stellt alle Werte des zugrunde liegenden [Werttyps](../keywords/value-types.md) `T` und einen zusätzlichen [NULL](../keywords/null.md)-Wert dar. Beispielsweise können Sie einer `bool?`-Variablen einen der folgenden drei Werte zuweisen: `true`, `false` oder `null`. Ein zugrunde liegender Werttyp `T` darf selbst kein Nullable-Werttyp sein.
+Ein Nullable-Werttyp `T?` stellt alle Werte des zugrunde liegenden [Werttyps](value-types.md) `T` und einen zusätzlichen [NULL](../keywords/null.md)-Wert dar. Beispielsweise können Sie einer `bool?`-Variablen einen der folgenden drei Werte zuweisen: `true`, `false` oder `null`. Ein zugrunde liegender Werttyp `T` darf selbst kein Nullable-Werttyp sein.
 
 > [!NOTE]
 > C# 8.0 führt das Feature der Nullable-Verweistypen ein. Weitere Informationen finden Sie unter [Nullable-Verweistypen](../../nullable-references.md). Nullable-Werttypen sind ab C# 2 verfügbar.

@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Aktivieren von Drag & Drop-Operationen mithilfe des RichTextBox-Steuerelements von Windows Forms'
+title: Aktivieren von Drag & Drop-Vorgängen mit dem RichTextBox-Steuerelement
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - text boxes [Windows Forms], drag-and-drop operations
 - RichTextBox control [Windows Forms], drag-and-drop operations
 ms.assetid: ca167d1c-2014-4cf0-96a0-20598470be3b
-ms.openlocfilehash: d1b8f3e1d0ef7d0f83db4a742ab76a05e42f761b
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: 3c17560dee012912aea2938654f1dc4dc56e0725
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66053682"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76745821"
 ---
-# <a name="how-to-enable-drag-and-drop-operations-with-the-windows-forms-richtextbox-control"></a>Vorgehensweise: Aktivieren von Drag & Drop-Operationen mithilfe des RichTextBox-Steuerelements von Windows Forms
+# <a name="how-to-enable-drag-and-drop-operations-with-the-windows-forms-richtextbox-control"></a>Gewusst wie: Aktivieren von Drag & Drop-Operationen mithilfe des RichTextBox-Steuerelements von Windows Forms
 Drag &amp; Drop-Vorgänge mit dem Windows Forms-Steuerelement <xref:System.Windows.Forms.RichTextBox> erfolgen durch Verarbeitung der Ereignisse <xref:System.Windows.Forms.RichTextBox.DragEnter> und <xref:System.Windows.Forms.RichTextBox.DragDrop> . Durch das <xref:System.Windows.Forms.RichTextBox> -Steuerelement werden Drag &amp; Drop-Vorgänge daher sehr einfach.  
   
 ### <a name="to-enable-drag-operations-in-a-richtextbox-control"></a>Aktivieren von Drag-Vorgängen in einem RichTextBox-Steuerelement  
@@ -62,7 +62,7 @@ Drag &amp; Drop-Vorgänge mit dem Windows Forms-Steuerelement <xref:System.Windo
        }  
     ```  
   
-     (Visual C# und visuelle C++) Platzieren Sie den folgenden Code im Konstruktor des Formulars, um den Ereignishandler zu registrieren.  
+     (Visualisierung C# und Visualisierung C++) Fügen Sie den folgenden Code in den Konstruktor des Formulars ein, um den Ereignishandler zu registrieren.  
   
     ```csharp  
     this.richTextBox1.DragEnter += new  
@@ -138,7 +138,7 @@ Drag &amp; Drop-Vorgänge mit dem Windows Forms-Steuerelement <xref:System.Windo
        }  
     ```  
   
-     (Visual C# und visuelle C++) Platzieren Sie den folgenden Code im Konstruktor des Formulars, um den Ereignishandler zu registrieren.  
+     (Visualisierung C# und Visualisierung C++) Fügen Sie den folgenden Code in den Konstruktor des Formulars ein, um den Ereignishandler zu registrieren.  
   
     ```csharp  
     this.richTextBox1.DragDrop += new  
@@ -167,6 +167,6 @@ Drag &amp; Drop-Vorgänge mit dem Windows Forms-Steuerelement <xref:System.Windo
 ## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Windows.Forms.RichTextBox>
-- [Vorgehensweise: Operationen Sie Drag & Drop-zwischen Anwendungen](../advanced/how-to-perform-drag-and-drop-operations-between-applications.md)
+- [Gewusst wie: Ausführen von Drag & Drop-Operationen zwischen Anwendungen](../advanced/how-to-perform-drag-and-drop-operations-between-applications.md)
 - [RichTextBox-Steuerelement](richtextbox-control-windows-forms.md)
 - [Windows Forms-Steuerelemente](controls-to-use-on-windows-forms.md)

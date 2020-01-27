@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Festlegen der Größenanpassungsmodi des DataGridView-Steuerelements in Windows Forms'
+title: Festlegen der Größen Anpassungs Modi des DataGridView-Steuer Elements
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - data grids [Windows Forms], setting sizing modes
 - DataGridView control [Windows Forms], sizing modes
 ms.assetid: e9ad15e6-b4bb-44aa-a767-3738e9db1651
-ms.openlocfilehash: 76d71a7c3c37f53854cf4fd9c6d8300831572d51
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 15b084afa4149ac43d40aeae7f35f0eaff5ac0e1
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65591629"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76738391"
 ---
-# <a name="how-to-set-the-sizing-modes-of-the-windows-forms-datagridview-control"></a>Vorgehensweise: Festlegen der Größenanpassungsmodi des DataGridView-Steuerelements in Windows Forms
+# <a name="how-to-set-the-sizing-modes-of-the-windows-forms-datagridview-control"></a>Gewusst wie: Festlegen der Größenanpassungsmodi des DataGridView-Steuerelements in Windows Forms
 Die folgenden Prozeduren veranschaulichen einige allgemeinen Szenarien, die die Größenanpassungsoptionen für das <xref:System.Windows.Forms.DataGridView>-Steuerelement und für bestimmte Spalten in einem Steuerelement anpassen oder kombinieren.  
   
 ### <a name="to-create-a-fixed-width-column"></a>So erstellen Sie eine Spalte mit fester Breite  
@@ -45,7 +45,7 @@ Die folgenden Prozeduren veranschaulichen einige allgemeinen Szenarien, die die 
  [!code-csharp[System.Windows.Forms.DataGridViewSizingScenarios#00](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewSizingScenarios/CS/sizingscenarios.cs#00)]
  [!code-vb[System.Windows.Forms.DataGridViewSizingScenarios#00](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewSizingScenarios/vb/sizingscenarios.vb#00)]  
   
- So verwenden Sie diese Beispielanwendung  
+ So verwenden Sie diese Beispielanwendung:  
   
 - Ändern Sie die Größe des Formulars. Beachten Sie, wie sich die Breite der Füllmodusspalten ändert, während die Proportionen, die durch die <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A>-Eigenschaftenwerte angegeben werden, beibehalten werden. Beachten Sie, wie das <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A> einer Spalte verhindert, dass diese sich ändert, wenn das Formular zu klein ist.  
   

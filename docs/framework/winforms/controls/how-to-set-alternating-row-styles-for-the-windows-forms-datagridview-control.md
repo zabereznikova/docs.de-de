@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Festlegen von abwechselnden Zeilenstilen für das DataGridView-Steuerelement in Windows Forms'
+title: Festlegen von abwechselnden Zeilen Stilen für das DataGridView-Steuerelement
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,19 +9,19 @@ helpviewer_keywords:
 - data grids [Windows Forms], row styles
 - rows [Windows Forms], data grids
 ms.assetid: 699ef759-458c-426d-ac87-7c7e71b018ae
-ms.openlocfilehash: d113c45469f6a78c94b9489bd82f9e55b5b96bba
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: b87ad50ef7e5118a95998949bc62299955856b27
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69962279"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76747134"
 ---
-# <a name="how-to-set-alternating-row-styles-for-the-windows-forms-datagridview-control"></a>Vorgehensweise: Festlegen von abwechselnden Zeilenstilen für das DataGridView-Steuerelement in Windows Forms
+# <a name="how-to-set-alternating-row-styles-for-the-windows-forms-datagridview-control"></a>Gewusst wie: Festlegen von abwechselnden Zeilenstilen für das DataGridView-Steuerelement in Windows Forms
 Tabellendaten werden oft in einem Ledger-ähnlichen Format präsentiert, bei dem die einzelnen Zeilen abwechselnde Hintergrundfarben haben. Dieses Format erleichtert es dem Benutzer, zu erkennen, welche Zellen sich in jeder Zeile befinden, insbesondere bei breiten Tabellen mit vielen Spalten.  
   
  Mit dem <xref:System.Windows.Forms.DataGridView>-Steuerelement können Sie vollständige Stilinformationen für abwechselnde Zeilen angeben. Auf diese Weise können Sie Stileigenschaften wie Vordergrundfarbe und Schriftart zusätzlich zur Hintergrundfarbe verwenden, um abwechselnde Zeilen zu unterscheiden.  
   
- Visual Studio bietet Unterstützung für diese Aufgabe.  Weitere Informationen hierzu finden Sie auch unter [Gewusst wie: Festlegen von abwechselnden Zeilen Stilen für das Windows Forms DataGridView-Steuer](set-alternating-row-styles-for-the-datagrid-using-the-designer.md)Element mithilfe des Designers.  
+ Visual Studio bietet Unterstützung für diese Aufgabe.  Siehe auch Gewusst [wie: Festlegen von abwechselnden Zeilen Stilen für das Windows Forms DataGridView-Steuerelement mithilfe des Designers](set-alternating-row-styles-for-the-datagrid-using-the-designer.md).  
   
 ### <a name="to-set-alternating-row-styles-programmatically"></a>So legen Sie abwechselnde Zeilenstile programmgesteuert fest  
   
@@ -40,7 +40,7 @@ Tabellendaten werden oft in einem Ledger-ähnlichen Format präsentiert, bei dem
   
 - Verweise auf die Assemblys <xref:System?displayProperty=nameWithType>, <xref:System.Drawing?displayProperty=nameWithType> und <xref:System.Windows.Forms?displayProperty=nameWithType>.  
   
-## <a name="robust-programming"></a>Stabile Programmierung  
+## <a name="robust-programming"></a>Robuste Programmierung  
  Um maximale Skalierbarkeit zu erreichen, sollten Sie <xref:System.Windows.Forms.DataGridViewCellStyle>-Objekte für mehrere Zeilen, Spalten oder Zellen, in denen dieselben Stile verwendet werden, gemeinsam verwenden, anstatt die Stileigenschaften für jedes einzelne Element festzulegen. Weitere Informationen finden Sie unter [bewährte Methoden zum Skalieren des Windows Forms DataGridView-Steuer](best-practices-for-scaling-the-windows-forms-datagridview-control.md)Elements.  
   
 ## <a name="see-also"></a>Siehe auch
@@ -52,4 +52,4 @@ Tabellendaten werden oft in einem Ledger-ähnlichen Format präsentiert, bei dem
 - [Grundlegende Formatierungen und Formate im DataGridView-Steuerelement in Windows Forms](basic-formatting-and-styling-in-the-windows-forms-datagridview-control.md)
 - [Zellstile im DataGridView-Steuerelement in Windows Forms](cell-styles-in-the-windows-forms-datagridview-control.md)
 - [Empfohlene Vorgehensweisen für das Skalieren des DataGridView-Steuerelements in Windows Forms](best-practices-for-scaling-the-windows-forms-datagridview-control.md)
-- [Vorgehensweise: Festlegen von Schriftart-und Farb Stilen im Windows Forms DataGridView-Steuerelement](how-to-set-font-and-color-styles-in-the-windows-forms-datagridview-control.md)
+- [Gewusst wie: Festlegen von Schriftart- und Farbstilen im DataGridView-Steuerelement in Windows Forms](how-to-set-font-and-color-styles-in-the-windows-forms-datagridview-control.md)

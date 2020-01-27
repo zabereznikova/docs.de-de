@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Binden eines Windows Forms-Steuerelements an ein Factoryobjekt'
+title: Binden des Steuer Elements an ein Factory-Objekt
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - BindingSource component [Windows Forms], binding to a factory object
 - BindingSource component [Windows Forms], examples
 ms.assetid: 7d59af89-ff82-41d8-a48a-f1fbae788b0d
-ms.openlocfilehash: b64545528746e50d00f88d626a07ac98839e926c
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 2b4d9aca3345a0cb1e7e995f66a8982dee983ca8
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65589738"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76745091"
 ---
-# <a name="how-to-bind-a-windows-forms-control-to-a-factory-object"></a>Vorgehensweise: Binden eines Windows Forms-Steuerelements an ein Factoryobjekt
+# <a name="how-to-bind-a-windows-forms-control-to-a-factory-object"></a>Gewusst wie: Binden eines Windows Forms-Steuerelements an ein Factoryobjekt
 Beim Erstellen von Steuerelementen, die mit Daten interagieren, ist es manchmal erforderlich, ein Steuerelement an ein Objekt oder eine Methode zu binden, das bzw. die andere Objekte generiert. Diese Art von Objekt oder Methode wird als Factory bezeichnet. Die Datenquelle kann beispielsweise der Rückgabewert aus einem Methodenaufruf anstelle eines Objekts im Arbeitsspeicher oder eines Typs sein. Sie können ein Steuerelement an diese Art von Datenquelle binden, solange die Quelle eine Auflistung zurückgibt.  
   
  Sie können ein Steuerelement problemlos an ein Factoryobjekt binden, indem Sie das <xref:System.Windows.Forms.BindingSource>-Steuerelement verwenden.  

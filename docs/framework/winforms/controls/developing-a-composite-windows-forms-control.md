@@ -1,5 +1,5 @@
 ---
-title: Entwickeln eines zusammengesetzten Windows Forms-Steuerelements
+title: Entwickeln eines zusammengesetzten Steuer Elements
 ms.date: 03/30/2017
 helpviewer_keywords:
 - custom controls [Windows Forms], composite controls
@@ -7,51 +7,51 @@ helpviewer_keywords:
 - composite controls [Windows Forms], Windows Forms
 - controls [Windows Forms], composite
 ms.assetid: d086f2a3-baa3-4e09-b40c-a5bb3cfc51a6
-ms.openlocfilehash: 9ccbf3de3f5c65b99a06c29ffce4c96896d11fae
-ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
+ms.openlocfilehash: d80564c71dad57ce9145fbedd45a1396df1ddfec
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/24/2019
-ms.locfileid: "70015956"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76746031"
 ---
 # <a name="develop-a-composite-windows-forms-control"></a>Entwickeln eines zusammengesetzten Windows Forms-Steuer Elements
 
-Sie können ein zusammengesetztes Windows Forms-Steuerelement entwickeln, indem Sie andere Windows Forms-Steuerelemente kombinieren. Zusammengesetzte Steuerelemente, <xref:System.Web.UI.UserControl> die von abgeleitet werden, sind Benutzer Steuerelemente. Die Basisklasse, <xref:System.Windows.Forms.UserControl>, ermöglicht Tastaturrouting für die untergeordneten Steuerelemente und stellt damit sicher, dass untergeordnete Steuerelemente den Fokus erhalten können. Ein Beispiel für ein Benutzer Steuerelement finden <xref:System.Windows.Forms.UserControl> Sie im Beispiel unter [Gewusst wie: Anwenden von Attributen in Windows Forms](how-to-apply-attributes-in-windows-forms-controls.md)-Steuerelementen.
+Sie können ein zusammengesetztes Windows Forms-Steuerelement entwickeln, indem Sie andere Windows Forms-Steuerelemente kombinieren. Zusammengesetzte Steuerelemente, die von <xref:System.Web.UI.UserControl> abgeleitet werden, werden Benutzer Steuerelemente genannt Die Basisklasse, <xref:System.Windows.Forms.UserControl>, ermöglicht Tastaturrouting für die untergeordneten Steuerelemente und stellt damit sicher, dass untergeordnete Steuerelemente den Fokus erhalten können. Ein Beispiel für ein Benutzer Steuerelement finden Sie im <xref:System.Windows.Forms.UserControl>-Beispiel unter Gewusst [wie: Anwenden von Attributen in Windows Forms Steuerelementen](how-to-apply-attributes-in-windows-forms-controls.md).
 
 Der Windows Forms-Designer in Visual Studio bietet umfangreiche Entwurfszeit Unterstützung für die Erstellung von Benutzer Steuerelementen.
 
-- [Vorgehensweise: Anzeigen eines Steuer Elements im Dialog Feld "Toolbox Elemente auswählen"](how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)
+- [Vorgehensweise: Anzeigen eines Steuerelements im Dialogfeld „Toolboxelemente auswählen“](how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)
 
-- [Exemplarische Vorgehensweise: Serialisieren von Auflistungen von Standard Typen mit dem DesignerSerializationVisibilityAttribute](serializing-collections-designerserializationvisibilityattribute.md)
+- [Exemplarische Vorgehensweise: Serialisieren der Auflistungen von Standardtypen mit dem DesignerSerializationVisibilityAttribute](serializing-collections-designerserializationvisibilityattribute.md)
 
-- [Exemplarische Vorgehensweise: Erben von einem Windows Forms-Steuerelement mit VisualC#](walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)
+- [Exemplarische Vorgehensweise: Vererben von einem Windows Forms-Steuerelement mit Visual C#](walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)
 
-- [Vorgehensweise: Bereitstellen einer Toolbox Bitmap für ein Steuerelement](how-to-provide-a-toolbox-bitmap-for-a-control.md)
+- [Gewusst wie: Bereitstellen einer Toolboxbitmap für ein Steuerelement](how-to-provide-a-toolbox-bitmap-for-a-control.md)
 
-- [Vorgehensweise: Von vorhandenen Windows Forms Steuerelementen erben](how-to-inherit-from-existing-windows-forms-controls.md)
+- [Gewusst wie: Erben von vorhandenen Windows Forms-Steuerelementen](how-to-inherit-from-existing-windows-forms-controls.md)
 
 - [Exemplarische Vorgehensweise: Debuggen von benutzerdefinierten Windows Forms-Steuerelementen zur Entwurfszeit](walkthrough-debugging-custom-windows-forms-controls-at-design-time.md)
 
 - [Vorgehensweise: Erben von der Control-Klasse](how-to-inherit-from-the-control-class.md)
 
-- [Vorgehensweise: Testen des Lauf Zeit Verhaltens eines UserControl-Steuer Elements](how-to-test-the-run-time-behavior-of-a-usercontrol.md)
+- [Gewusst wie: Testen des Laufzeitverhaltens eines UserControl](how-to-test-the-run-time-behavior-of-a-usercontrol.md)
 
-- [Vorgehensweise: Ausrichten eines Steuer Elements an den Kanten von Formularen zur Entwurfszeit](how-to-align-a-control-to-the-edges-of-forms-at-design-time.md)
+- [Gewusst wie: Ausrichten eines Steuerelements an den Rändern eines Formulars zur Entwurfszeit](how-to-align-a-control-to-the-edges-of-forms-at-design-time.md)
 
-- [Vorgehensweise: Erben von der UserControl-Klasse](how-to-inherit-from-the-usercontrol-class.md)
+- [Gewusst wie: Erben von der UserControl-Klasse](how-to-inherit-from-the-usercontrol-class.md)
 
-- [Vorgehensweise: Steuerelemente für Windows Forms erstellen](how-to-author-controls-for-windows-forms.md)
+- [Vorgehensweise: Erstellen von Steuerelementen für Windows Forms](how-to-author-controls-for-windows-forms.md)
 
-- [Vorgehensweise: Zusammengesetzte Steuerelemente verfassen](how-to-author-composite-controls.md)
+- [Vorgehensweise: Erstellen von zusammengesetzten Steuerelementen](how-to-author-composite-controls.md)
 
-- [Exemplarische Vorgehensweise: Erstellen eines zusammengesetzten Steuer Elements mit VisualC#](walkthrough-authoring-a-composite-control-with-visual-csharp.md)
+- [Exemplarische Vorgehensweise: Erstellen eines zusammengesetzten Steuerelements mit Visual C#](walkthrough-authoring-a-composite-control-with-visual-csharp.md)
 
-- [Exemplarische Vorgehensweise: Erstellen eines Windows Forms-Steuer Elements, das Visual Studio-Entwurfszeit Funktionen nutzt](creating-a-wf-control-design-time-features.md)
+- [Exemplarische Vorgehensweise: Erstellen eines Windows Forms-Steuerelements, das Visual Studio-Entwurfszeitfunktion nutzt](creating-a-wf-control-design-time-features.md)
 
-- [Vorgehensweise: Erstellen eines Windows Forms-Steuer Elements, das Entwurfszeit Features nutzt](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/307hck25(v=vs.120))
+- [Vorgehensweise: Erstellen eines Windows Forms-Steuerelements, das Entwurfszeitfeatures nutzt](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/307hck25(v=vs.120))
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Vorgehensweise: Anwenden von Attributen in Windows Forms Steuerelementen](how-to-apply-attributes-in-windows-forms-controls.md)
+- [Vorgehensweise: Anwenden von Attributen auf Windows Forms-Steuerelemente](how-to-apply-attributes-in-windows-forms-controls.md)
 - [Entwickeln benutzerdefinierter Windows Forms-Steuerelemente mit .NET Framework](developing-custom-windows-forms-controls.md)
-- [Varieties of Custom Controls (Vielfalt benutzerdefinierter Steuerelemente)](varieties-of-custom-controls.md)
+- [Vielfalt benutzerdefinierter Steuerelemente](varieties-of-custom-controls.md)
