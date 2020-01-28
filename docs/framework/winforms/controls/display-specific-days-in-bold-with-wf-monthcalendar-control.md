@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Anzeigen einzelner Tage in Fettschrift mit dem MonthCalendar-Steuerelement in Windows Forms'
+title: Anzeigen bestimmter Tage in Fett Schrift mit dem MonthCalendar-Steuerelement
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,21 +11,21 @@ helpviewer_keywords:
 - GetDayBold event
 - MonthCalendar control [Windows Forms], dates displayed in bold
 ms.assetid: 8b20db5b-8118-4825-90e8-2c45c186ac7d
-ms.openlocfilehash: 27b19e47d108b9af43a6d8882264d62c726ffe56
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 377eb76f562fff20aae2136ddb7130516d2d76f7
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61972080"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76745880"
 ---
-# <a name="how-to-display-specific-days-in-bold-with-the-windows-forms-monthcalendar-control"></a>Vorgehensweise: Anzeigen einzelner Tage in Fettschrift mit dem MonthCalendar-Steuerelement in Windows Forms
-Die Windows-Formulare <xref:System.Windows.Forms.MonthCalendar> Steuerelement kann Tage in Fettschrift, anzeigen, entweder als einzelne Datumsangaben oder einer wiederholten Basis. Diese Option, um die Aufmerksamkeit auf spezielle Datumsangaben, z. B. Feiertage und für Wochenenden empfiehlt sich.  
+# <a name="how-to-display-specific-days-in-bold-with-the-windows-forms-monthcalendar-control"></a>Gewusst wie: Anzeigen einzelner Tage in Fettschrift mit dem MonthCalendar-Steuerelement in Windows Forms
+Das Windows Forms <xref:System.Windows.Forms.MonthCalendar>-Steuerelement kann Tage in fettem Typ anzeigen, entweder als einzelne Datumsangaben oder wiederholt. Dies kann dazu führen, dass besondere Datumsangaben, z. b. Feiertage und Wochenenden, berücksichtigt werden.  
   
- Drei Eigenschaften steuern, diese Funktion. Die <xref:System.Windows.Forms.MonthCalendar.BoldedDates%2A> Eigenschaft enthält die einzelne Datumsangaben. Die <xref:System.Windows.Forms.MonthCalendar.AnnuallyBoldedDates%2A> Eigenschaft enthält die Datumsangaben, die jedes Jahr fett formatiert sein. Die <xref:System.Windows.Forms.MonthCalendar.MonthlyBoldedDates%2A> Eigenschaft enthält die Datumsangaben, die jeden Monat fett formatiert sein. Jede dieser Eigenschaften enthält ein Array von <xref:System.DateTime> Objekte. Zum Hinzufügen oder entfernen ein Datum aus diesen Listen, müssen Sie hinzufügen oder Entfernen einer <xref:System.DateTime> Objekt.  
+ Diese Funktion wird von drei Eigenschaften gesteuert. Die <xref:System.Windows.Forms.MonthCalendar.BoldedDates%2A>-Eigenschaft enthält einzelne Datumsangaben. Die <xref:System.Windows.Forms.MonthCalendar.AnnuallyBoldedDates%2A>-Eigenschaft enthält Datumsangaben, die jedes Jahr fett formatiert angezeigt werden. Die <xref:System.Windows.Forms.MonthCalendar.MonthlyBoldedDates%2A>-Eigenschaft enthält Datumsangaben, die jeden Monat fett formatiert angezeigt werden. Jede dieser Eigenschaften enthält ein Array von <xref:System.DateTime>-Objekten. Wenn Sie ein Datum aus einer dieser Listen hinzufügen oder entfernen möchten, müssen Sie ein <xref:System.DateTime> Objekt hinzufügen oder entfernen.  
   
-### <a name="to-make-a-date-appear-in-bold-type"></a>Um ein Datum in Fettschrift anzeigen  
+### <a name="to-make-a-date-appear-in-bold-type"></a>So geben Sie ein Datum als fett formatierten Typ an  
   
-1. Erstellen der <xref:System.DateTime> Objekte.  
+1. Erstellen Sie die <xref:System.DateTime>-Objekte.  
   
     ```vb  
     Dim myVacation1 As Date = New DateTime(2001, 6, 10)  
@@ -42,7 +42,7 @@ Die Windows-Formulare <xref:System.Windows.Forms.MonthCalendar> Steuerelement ka
     DateTime myVacation2 = DateTime(2001, 6, 17);  
     ```  
   
-2. Ein einzelnes Datum fett formatieren, durch den Aufruf der <xref:System.Windows.Forms.MonthCalendar.AddBoldedDate%2A>, <xref:System.Windows.Forms.MonthCalendar.AddAnnuallyBoldedDate%2A>, oder <xref:System.Windows.Forms.MonthCalendar.AddMonthlyBoldedDate%2A> Methode der <xref:System.Windows.Forms.MonthCalendar> Steuerelement.  
+2. Erstellen Sie ein einzelnes Datum fett, indem Sie die <xref:System.Windows.Forms.MonthCalendar.AddBoldedDate%2A>-, <xref:System.Windows.Forms.MonthCalendar.AddAnnuallyBoldedDate%2A>-oder <xref:System.Windows.Forms.MonthCalendar.AddMonthlyBoldedDate%2A>-Methode des <xref:System.Windows.Forms.MonthCalendar> Steuer Elements aufrufen.  
   
     ```vb  
     MonthCalendar1.AddBoldedDate(myVacation1)  
@@ -61,7 +61,7 @@ Die Windows-Formulare <xref:System.Windows.Forms.MonthCalendar> Steuerelement ka
   
      – oder –  
   
-     Formatieren Sie einen Satz mit Datumsangaben fett gleichzeitig durch Erstellen eines Arrays von <xref:System.DateTime> Objekte und auf eine der Eigenschaften zuweisen.  
+     Legen Sie alle Daten auf einmal fett formatiert, indem Sie ein Array von <xref:System.DateTime> Objekten erstellen und es einer der Eigenschaften zuweisen.  
   
     ```vb  
     Dim VacationDates As DateTime() = {myVacation1, myVacation2}  
@@ -78,9 +78,9 @@ Die Windows-Formulare <xref:System.Windows.Forms.MonthCalendar> Steuerelement ka
     monthCalendar1->BoldedDates = VacationDates;  
     ```  
   
-### <a name="to-make-a-date-appear-in-the-regular-font"></a>Um ein Datum in normaler Schrift anzeigen  
+### <a name="to-make-a-date-appear-in-the-regular-font"></a>So geben Sie ein Datum in der regulären Schriftart an  
   
-1. Stellen Sie ein einzelnes fett formatiertes Datum in normaler Schrift angezeigt werden, durch den Aufruf der <xref:System.Windows.Forms.MonthCalendar.RemoveBoldedDate%2A>, <xref:System.Windows.Forms.MonthCalendar.RemoveAnnuallyBoldedDate%2A>, oder <xref:System.Windows.Forms.MonthCalendar.RemoveMonthlyBoldedDate%2A> Methode.  
+1. Erstellen Sie ein einzelnes fett formatierten Datum in der regulären Schriftart, indem Sie die <xref:System.Windows.Forms.MonthCalendar.RemoveBoldedDate%2A>-, <xref:System.Windows.Forms.MonthCalendar.RemoveAnnuallyBoldedDate%2A>-oder <xref:System.Windows.Forms.MonthCalendar.RemoveMonthlyBoldedDate%2A>-Methode aufrufen.  
   
     ```vb  
     MonthCalendar1.RemoveBoldedDate(myVacation1)  
@@ -99,7 +99,7 @@ Die Windows-Formulare <xref:System.Windows.Forms.MonthCalendar> Steuerelement ka
   
      – oder –  
   
-     Entfernen Sie alle fett formatierten Datumsangaben aus einem der drei Listen durch Aufrufen der <xref:System.Windows.Forms.MonthCalendar.RemoveAllBoldedDates%2A>, <xref:System.Windows.Forms.MonthCalendar.RemoveAllAnnuallyBoldedDates%2A>, oder <xref:System.Windows.Forms.MonthCalendar.RemoveAllMonthlyBoldedDates%2A> Methode.  
+     Entfernen Sie alle fett formatierten Datumsangaben aus einer der drei Listen, indem Sie die <xref:System.Windows.Forms.MonthCalendar.RemoveAllBoldedDates%2A>-, <xref:System.Windows.Forms.MonthCalendar.RemoveAllAnnuallyBoldedDates%2A>-oder <xref:System.Windows.Forms.MonthCalendar.RemoveAllMonthlyBoldedDates%2A>-Methode aufrufen.  
   
     ```vb  
     MonthCalendar1.RemoveAllBoldedDates()  
@@ -113,7 +113,7 @@ Die Windows-Formulare <xref:System.Windows.Forms.MonthCalendar> Steuerelement ka
     monthCalendar1->RemoveAllBoldedDates();  
     ```  
   
-2. Aktualisieren Sie die Darstellung der Schriftart durch Aufrufen der <xref:System.Windows.Forms.MonthCalendar.UpdateBoldedDates%2A> Methode.  
+2. Aktualisieren Sie die Darstellung der Schriftart, indem Sie die <xref:System.Windows.Forms.MonthCalendar.UpdateBoldedDates%2A>-Methode aufrufen.  
   
     ```vb  
     MonthCalendar1.UpdateBoldedDates()  
@@ -130,6 +130,6 @@ Die Windows-Formulare <xref:System.Windows.Forms.MonthCalendar> Steuerelement ka
 ## <a name="see-also"></a>Siehe auch
 
 - [MonthCalendar-Steuerelement](monthcalendar-control-windows-forms.md)
-- [Vorgehensweise: Auswählen eines Datumsbereichs in das Windows Forms-MonthCalendar-Steuerelement](how-to-select-a-range-of-dates-in-the-windows-forms-monthcalendar-control.md)
-- [Vorgehensweise: Ändern Sie die Windows Forms MonthCalendar Darstellung des Steuerelements](how-to-change-monthcalendar-control-appearance.md)
-- [Vorgehensweise: Anzeigen von mehr als einen Monat in der Windows Forms-MonthCalendar-Steuerelement](display-more-than-one-month-wf-monthcalendar-control.md)
+- [Gewusst wie: Auswählen eines Datumsbereichs mithilfe des MonthCalendar-Steuerelements in Windows Forms](how-to-select-a-range-of-dates-in-the-windows-forms-monthcalendar-control.md)
+- [Gewusst wie: Ändern der Darstellung des MonthCalendar-Steuerelements in Windows Forms](how-to-change-monthcalendar-control-appearance.md)
+- [Gewusst wie: Anzeigen mehrerer Monate mit dem MonthCalendar-Steuerelement in Windows Forms](display-more-than-one-month-wf-monthcalendar-control.md)

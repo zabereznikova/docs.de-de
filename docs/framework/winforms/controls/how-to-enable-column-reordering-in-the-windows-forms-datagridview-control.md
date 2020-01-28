@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Aktivieren der Neuanordnung von Spalten im DataGridView-Steuerelement in Windows Forms'
+title: Neuanordnung von Spalten im DataGridView-Steuerelement aktivieren
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,17 +9,17 @@ helpviewer_keywords:
 - data grids [Windows Forms], reordering columns
 - columns [Windows Forms], reordering
 ms.assetid: cc20eae3-e4db-493f-95ce-a4215e29472a
-ms.openlocfilehash: c4c92a51f2e209f814ac34b39a0c6ba35f0bf56b
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 681489cdb874677079e2577140040921e587d21e
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64651733"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76745495"
 ---
-# <a name="how-to-enable-column-reordering-in-the-windows-forms-datagridview-control"></a>Vorgehensweise: Aktivieren der Neuanordnung von Spalten im DataGridView-Steuerelement in Windows Forms
+# <a name="how-to-enable-column-reordering-in-the-windows-forms-datagridview-control"></a>Gewusst wie: Aktivieren der Neuanordnung von Spalten im DataGridView-Steuerelement in Windows Forms
 Wenn Sie die Neuanordnung von Spalten im <xref:System.Windows.Forms.DataGridView>-Steuerelement aktivieren, können die Benutzer eine Spalte an eine neuen Position ziehen, indem sie den Spaltenkopf mit der Maus ziehen. Im <xref:System.Windows.Forms.DataGridView>-Steuerelement bestimmt der Wert der Eigenschaftswert <xref:System.Windows.Forms.DataGridView.AllowUserToOrderColumns%2A?displayProperty=nameWithType>, ob Benutzer Spalten an andere Positionen ziehen können.  
   
- Visual Studio bietet Unterstützung für diese Aufgabe.  Weitere Informationen hierzu finden Sie auch unter [Gewusst wie: Enable Neuanordnung von Spalten in der Windows Forms-DataGridView-Steuerelement mithilfe des Designers](enable-column-reordering-in-the-datagrid-using-the-designer.md).  
+ Visual Studio bietet Unterstützung für diese Aufgabe.  Siehe auch Gewusst [wie: Aktivieren der Neuanordnung von Spalten im Windows Forms DataGridView-Steuerelement mithilfe des Designers](enable-column-reordering-in-the-datagrid-using-the-designer.md).  
   
 ### <a name="to-enable-column-reordering-programmatically"></a>So aktivieren Sie die Neuanordnung von Spalten programmgesteuert  
   
@@ -40,4 +40,4 @@ Wenn Sie die Neuanordnung von Spalten im <xref:System.Windows.Forms.DataGridView
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.AllowUserToOrderColumns%2A?displayProperty=nameWithType>
 - [Grundlegende Spalten-, Zeilen- und Zellfunktionen im DataGridView-Steuerelement in Windows Forms](basic-column-row-and-cell-features-wf-datagridview-control.md)
-- [Vorgehensweise: Einfrieren von Spalten im DataGridView-Steuerelement in Windows Forms](how-to-freeze-columns-in-the-windows-forms-datagridview-control.md)
+- [Gewusst wie: Fixieren von Spalten im DataGridView-Steuerelement in Windows Forms](how-to-freeze-columns-in-the-windows-forms-datagridview-control.md)

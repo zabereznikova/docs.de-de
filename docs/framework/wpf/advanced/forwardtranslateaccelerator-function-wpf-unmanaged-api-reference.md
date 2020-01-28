@@ -1,5 +1,6 @@
 ---
-title: ForwardTranslateAccelerator-Funktion (WPF nicht verwaltete API-Referenz)
+title: 'Forwardtranslateaccelerator-Funktion: Referenz zur nicht verwalteten WPF-API'
+titleSuffix: ''
 ms.date: 03/30/2017
 dev_langs:
 - cpp
@@ -8,17 +9,17 @@ api_name:
 api_location:
 - PresentationHost_v0400.dll
 ms.assetid: fff47a86-9d9f-4176-9530-10e1876e393f
-ms.openlocfilehash: 4bb7e665bb836dc5f95b14f39179f1d4b9f8173d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f6e8208ffe2c186234f30f31e346ca6b1d0be4c0
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61960913"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76747040"
 ---
-# <a name="forwardtranslateaccelerator-function-wpf-unmanaged-api-reference"></a>ForwardTranslateAccelerator-Funktion (WPF nicht verwaltete API-Referenz)
-Diese API unterstützt die Infrastruktur von Windows Presentation Foundation (WPF) und nicht direkt aus Ihrem Code verwendet werden soll.  
+# <a name="forwardtranslateaccelerator-function-wpf-unmanaged-api-reference"></a>Forwardtranslateaccelerator-Funktion (Referenz zur nicht verwalteten WPF-API)
+Diese API unterstützt die Windows Presentation Foundation-Infrastruktur (WPF) und ist nicht für die direkte Verwendung im Code vorgesehen.  
   
- Von der Windows Presentation Foundation (WPF)-Infrastruktur verwendet, für die Windows-Verwaltung.  
+ Wird von der Windows Presentation Foundation (WPF)-Infrastruktur für die Windows-Verwaltung verwendet.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -29,21 +30,21 @@ HRESULT ForwardTranslateAccelerator(
 )  
 ```  
   
-## <a name="parameters"></a>Parameter  
- pMsg  
- Ein Zeiger auf eine Nachricht.  
+## <a name="parameters"></a>Parameters  
+ pmsg  
+ Ein Zeiger auf eine Meldung.  
   
- appUnhandled  
- `true` Wenn Sie die app hat bereits wurde die Möglichkeit erhält, die eingabemeldung zu verarbeiten, aber wurde nicht behandelt; andernfalls `false`.  
+ appunbehandelte  
+ `true`, wenn der App bereits die Möglichkeit gegeben wurde, die Eingabe Nachricht zu verarbeiten, Sie aber nicht behandelt hat. Andernfalls `false`.  
   
-## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Finden Sie unter [Systemanforderungen für .NET Framework](../../get-started/system-requirements.md).  
+## <a name="requirements"></a>-Anforderungen  
+ **Plattformen:** Siehe [.NET Framework System Anforderungen](../../get-started/system-requirements.md).  
   
- **DLL:**  
+ **DLL**  
   
- In .NET Framework 3.0 und 3.5: PresentationHostDLL.dll  
+ In den .NET Framework 3,0 und 3,5: presentationhostdll. dll  
   
- In .NET Framework 4 und höher: PresentationHost_v0400.dll  
+ In den .NET Framework 4 und höher: PresentationHost_v0400. dll  
   
  **.NET Framework Version:** [!INCLUDE[net_current_v30plus](../../../../includes/net-current-v30plus-md.md)]  
   

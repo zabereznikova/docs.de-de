@@ -1,50 +1,46 @@
 ---
 title: Leitfaden für .NET
-description: Informationen zu .NET
+description: In diesem Leitfaden erfahren Sie mehr über .NET und .NET Standard.
 author: cartermp
-ms.date: 05/02/2017
+ms.date: 12/27/2019
 ms.technology: dotnet-standard
 ms.assetid: bbfe6465-329d-4982-869d-472e7ef85d93
-ms.openlocfilehash: 8a989ed4ff0d670296fc255733d01ddd5b5a8f1e
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: ce76448b69a002216125192f75d24b38e7582260
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74838103"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76730773"
 ---
 # <a name="net-guide"></a>Leitfaden für .NET
 
-Der Leitfaden für .NET enthält viele Informationen zu .NET.  Je nachdem, wie vertraut Sie mit .NET sind, können Sie sich unterschiedliche Abschnitte des Leitfadens und weitere Teile der .NET-Dokumentation anschauen.
+Der Leitfaden für .NET enthält Informationen zu .NET. Je nachdem, wie vertraut Sie mit .NET sind, können Sie sich unterschiedliche Abschnitte oder auch andere Leitfäden ansehen, z. B. für [.NET Core](../core/index.md) oder [.NET Framework](../framework/index.md).
 
 ## <a name="new-to-net"></a>Neu bei .NET?
 
-Einen allgemeinen Überblick über .NET finden Sie unter [What is .NET? (Was ist .NET?)](https://dotnet.microsoft.com/learn/dotnet/what-is-dotnet).
+Eine allgemeine Übersicht über .NET finden Sie auf [dieser Seite](https://dotnet.microsoft.com/learn/dotnet/what-is-dotnet).
 
-Wenn .NET für Sie neu ist, schauen Sie sich den Artikel zu den [ersten Schritten](get-started.md) an.
+Wenn Sie noch nicht mit .NET vertraut sind, finden Sie im Artikel [Erste Schritte](get-started.md) weitere Informationen.
 
-Wenn Sie lieber eine Tour durch die Hauptfunktionen von .NET haben, schauen Sie sich diesen Artikel an: [Einführung in .NET](tour.md).
+Wenn Sie einen geführten Einblick in die Hauptfunktionen von .NET bekommen möchte, lesen Sie den Artikel [Einführung in .NET](tour.md).
 
-Darüber hinaus können Sie sich über die [.NET-Architekturkomponenten](components.md) informieren, um einen Überblick über die verschiedenen Teile von .NET zu erhalten und zu verstehen, wie diese sich zusammenfügen.
+Einen Überblick über die verschiedenen Teile von .NET und wie diese zusammenhängen, erhalten Sie im Artikel [.NET-Architekturkomponenten](components.md).
 
 ## <a name="new-to-net-core"></a>Neu bei .NET Core?
 
-Wenn .NET Core für Sie neu ist, schauen Sie sich den Artikel [Erste Schritte mit .NET Core](../core/get-started.md) an.
+Wenn Sie noch nicht mit .NET Core vertraut sind, finden Sie im Artikel [Erste Schritte mit .NET Core](../core/get-started.md) weitere Informationen.
 
 ## <a name="new-to-net-standard"></a>Neu bei .NET-Standard?
 
 Wenn .NET Standard für Sie neu ist, schauen Sie sich den Artikel zu [.NET Standard an](net-standard.md) an.
 
-## <a name="porting-net-framework-code-to-net-core"></a>Portieren von .NET Framework Code auf .NET Core
+## <a name="port-net-framework-code-to-net-standard-or-net-core"></a>Portieren von .NET Framework-Code zu .NET Standard oder .NET Core
 
-Wenn Sie eine Anwendung, einen Dienst oder Komponenten eines Systems zu .NET Core portieren möchten, schauen Sie sich den Artikel [Portieren von .NET Framework auf .NET Core](../core/porting/index.md) an.
+Informationen zum Portieren von Anwendungen, Diensten, Komponenten oder NuGet-Paketen zu .NET Standard oder .NET Core finden Sie in [diesem Artikel](../core/porting/index.md). Da für .NET Standard und .NET Core dieselben Tools verwendet werden, gilt der Artikel für beide Frameworks.
 
-## <a name="porting-a-nuget-package-from-net-framework-to-net-standard-or-net-core"></a>Portieren eines NuGet-Pakets aus .NET Framework auf .NET Standard oder .NET Core
+## <a name="net-concepts"></a>.NET-Konzepte
 
-Wenn Sie ein NuGet-Paket auf .NET Standard portieren möchten, schauen Sie sich den Artikel [Portieren von .NET Framework auf .NET Core](../core/porting/index.md) an.  Tools für .NET Standard und .NET Core sind freigegeben, sodass der Inhalt sowohl für das Portieren auf .NET Standard als auch auf .NET Core relevant ist.
-
-## <a name="interested-in-major-net-concepts"></a>Interesse an den Hauptkonzepten von .NET?
-
-Wenn Sie Interesse an den Hauptkonzepten von .NET haben, können Sie sich hier informieren:
+Weitere Informationen zu den wichtigsten Konzepten von .NET finden Sie unter:
 
 * [.NET-Architekturkomponenten](components.md)
 * [.NET-Standard](net-standard.md)
@@ -55,12 +51,12 @@ Wenn Sie Interesse an den Hauptkonzepten von .NET haben, können Sie sich hier i
 * [Datumsangaben, Uhrzeiten und Zeitzonen](datetime/index.md)
 * [Asynchrone Programmierung](async.md)
 
-Schauen Sie sich zusätzlich auch die Leitfäden zu den drei Hauptprogrammiersprachen von .NET an:
+Informationen zu den drei wichtigsten .NET-Sprachen finden Sie unter:
 
 * [Leitfaden für C#](../csharp/index.yml)
 * [Leitfaden für F#](../fsharp/index.yml)
 * [Leitfaden für Visual Basic](../visual-basic/index.yml)
 
-## <a name="api-reference"></a>API-Referenz
+## <a name="api-reference"></a>API-Verweis
 
-In der [.NET-API-Referenz](../../api/index.md) finden Sie die gesamte Auswahl verfügbarer APIs.
+Ausführliche Informationen zu allen in .NET verfügbaren APIs finden Sie in der [Referenz zur .NET-API](../../api/index.md).

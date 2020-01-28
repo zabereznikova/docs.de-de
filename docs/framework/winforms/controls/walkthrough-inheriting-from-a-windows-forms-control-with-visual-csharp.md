@@ -1,5 +1,5 @@
 ---
-title: 'Exemplarische Vorgehensweise: Vererben von einem Windows Forms-Steuerelement mit Visual C#'
+title: Erben von einem Steuerelement
 ms.date: 03/30/2017
 helpviewer_keywords:
 - inheritance [Windows Forms], custom controls
@@ -11,16 +11,16 @@ ms.assetid: 09476da0-8d4c-4a4c-b969-649519dfb438
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: c54733a340b1855b3fc7b90ff2b5178fad8c5303
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 713ccf97a73ce9684b9124a121369f22751861d0
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460595"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76740139"
 ---
 # <a name="walkthrough-inherit-from-a-windows-forms-control-with-c"></a>Exemplarische Vorgehensweise: Erben von einem Windows Forms-Steuerelement mit C\#
 
-Mit Visual C#können Sie durch *Vererbung*leistungsstarke benutzerdefinierte Steuerelemente erstellen. Durch Vererbung können Sie Steuerelemente erstellen, die die gesamte Funktionalität der standardmäßigen Windows Forms-Steuerelemente, aber auch benutzerdefinierte Funktionen enthalten. In dieser exemplarischen Vorgehensweise erstellen Sie ein einfaches geerbtes Steuerelement mit dem Namen `ValueButton`. Diese Schaltfläche erbt Funktionen von der Standard Windows Forms <xref:System.Windows.Forms.Button>-Steuerelement und macht eine benutzerdefinierte Eigenschaft mit dem Namen `ButtonValue`verfügbar.
+Mit C#können Sie durch *Vererbung*leistungsstarke benutzerdefinierte Steuerelemente erstellen. Durch Vererbung können Sie Steuerelemente erstellen, die die gesamte Funktionalität der standardmäßigen Windows Forms-Steuerelemente, aber auch benutzerdefinierte Funktionen enthalten. In dieser exemplarischen Vorgehensweise erstellen Sie ein einfaches geerbtes Steuerelement mit dem Namen `ValueButton`. Diese Schaltfläche erbt Funktionen von der Standard Windows Forms <xref:System.Windows.Forms.Button>-Steuerelement und macht eine benutzerdefinierte Eigenschaft mit dem Namen `ButtonValue`verfügbar.
 
 ## <a name="create-the-project"></a>Erstellen des Projekts
 
@@ -55,7 +55,7 @@ Eine Verwendungsmöglichkeit von geerbten Windows Forms-Steuerelementen ist das 
 
 1. Klicken Sie im **Projektmappen-Explorer** mit der rechten Maustaste auf **ValueButton.cs**, und klicken Sie im Kontextmenü auf **Code anzeigen**.
 
-2. Suchen Sie die `class`-Anweisung. Geben Sie direkt nach `{` den folgenden Code ein:
+2. Suchen Sie die Anweisung `class`. Geben Sie direkt nach `{` den folgenden Code ein:
 
     ```csharp
     // Creates the private variable that will store the value of your

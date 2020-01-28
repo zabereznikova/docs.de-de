@@ -1,5 +1,5 @@
 ---
-title: Rand und Abstand in Windows Forms-Steuerelementen
+title: Margin und Padding in Steuerelementen
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Padding property [Windows Forms]
@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Windows Forms, layout
 - Margin property [Windows Forms]
 ms.assetid: 3781b5a1-3085-4072-bed0-44670c23ffdc
-ms.openlocfilehash: bf1f88f6efcedd740bff92dda391470391f16ce5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 02cabccd0d51a3501a8aafb8733a5273deef6c49
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61752516"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76728571"
 ---
 # <a name="margin-and-padding-in-windows-forms-controls"></a>Rand und Abstand in Windows Forms-Steuerelementen
 Die präzise Platzierung von Steuerelementen auf dem Formular hat für viele Anwendungen einen hohen Stellenwert. Der <xref:System.Windows.Forms?displayProperty=nameWithType>-Namespace bietet Ihnen hierfür zahlreiche Layoutfunktionen. Zwei der wichtigsten Funktionen sind die <xref:System.Windows.Forms.Control.Margin%2A>-Eigenschaft und die <xref:System.Windows.Forms.Control.Padding%2A>-Eigenschaft.  
@@ -23,9 +23,9 @@ Die präzise Platzierung von Steuerelementen auf dem Formular hat für viele Anw
   
  Die folgende Abbildung zeigt die <xref:System.Windows.Forms.Control.Padding%2A>-Eigenschaft und die <xref:System.Windows.Forms.Control.Margin%2A>-Eigenschaft für ein Steuerelement.  
   
- ![Ränder und Abstände für Windows Forms-Steuerelementen](./media/vs-winformpadmargin.gif "VS_WinFormPadMargin")  
+ ![Abstand und Rand für Windows Forms Steuerelemente](./media/vs-winformpadmargin.gif "VS_WinFormPadMargin")  
   
- Diese Funktion wird zur Entwurfszeit in Visual Studio unterstützt. Siehe auch [Exemplarische Vorgehensweise: Anordnen von Windows Forms-Steuerelementen mithilfe von Abständen, Rändern und der AutoSize-Eigenschaft](windows-forms-controls-padding-autosize.md).  
+ Diese Funktion wird zur Entwurfszeit in Visual Studio unterstützt. Siehe auch Exemplarische Vorgehensweise: Anordnen [von Windows Forms-Steuerelementen mit Auffüll Zeichen, Rändern und der AutoSize-Eigenschaft](windows-forms-controls-padding-autosize.md).  
   
 ## <a name="see-also"></a>Siehe auch
 

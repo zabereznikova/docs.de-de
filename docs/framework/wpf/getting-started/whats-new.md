@@ -1,19 +1,20 @@
 ---
 title: Neues in WPF Version 4.5
+titleSuffix: ''
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Presentation Foundation [WPF], what's new
 - WPF [WPF], what's new
 ms.assetid: db086ae4-70bb-4862-95db-2eaca5216bc3
-ms.openlocfilehash: 0dbe038bed3fd62589b2f3906441e27761e0438a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 8eff8da7746047c450b2e23af63d43b13f3b970c
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64649164"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76746922"
 ---
 # <a name="whats-new-in-wpf-version-45"></a>Neues in WPF Version 4.5
-<a name="introduction"></a> Dieses Thema enthält Informationen zu neuen und verbesserten Features in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Version 4.5.  
+<a name="introduction"></a>Dieses Thema enthält Informationen zu neuen und verbesserten Features in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Version 4,5.  
   
  Dieses Thema enthält folgende Abschnitte:  
   
@@ -51,7 +52,7 @@ ms.locfileid: "64649164"
   
 <a name="grouped_virtualization"></a>   
 ## <a name="improved-performance-when-displaying-large-sets-of-grouped-data"></a>Verbesserte Leistung bei der Anzeige großer Mengen gruppierter Daten  
- UI-Virtualisierung liegt vor, wenn eine Teilmenge von UI-Elementen aus einer größeren Anzahl von Datenelementen generiert wird, wobei berücksichtigt wird, welche Elemente auf dem Bildschirm angezeigt werden. Das <xref:System.Windows.Controls.VirtualizingPanel> definiert die angefügte <xref:System.Windows.Controls.VirtualizingPanel.IsVirtualizingWhenGrouping%2A>-Eigenschaft, die die UI-Virtualisierung für gruppierte Daten ermöglicht.  Weitere Informationen zum Gruppieren von Daten finden Sie unter Vorgehensweise: Sortieren und Gruppieren von Daten mit einer Ansicht in XAML.  Weitere Informationen zum Virtualisieren von gruppierten Daten finden Sie in der angefügten Eigenschaft <xref:System.Windows.Controls.VirtualizingPanel.IsVirtualizingWhenGrouping%2A>.  
+ UI-Virtualisierung liegt vor, wenn eine Teilmenge von UI-Elementen aus einer größeren Anzahl von Datenelementen generiert wird, wobei berücksichtigt wird, welche Elemente auf dem Bildschirm angezeigt werden. Das <xref:System.Windows.Controls.VirtualizingPanel> definiert die angefügte <xref:System.Windows.Controls.VirtualizingPanel.IsVirtualizingWhenGrouping%2A>-Eigenschaft, die die UI-Virtualisierung für gruppierte Daten ermöglicht.  Weitere Informationen zum Gruppieren von Daten finden Sie in der Anleitung zum Sortieren und Gruppieren von Daten mit einer Ansicht in XAML.  Weitere Informationen zum Virtualisieren von gruppierten Daten finden Sie in der angefügten Eigenschaft <xref:System.Windows.Controls.VirtualizingPanel.IsVirtualizingWhenGrouping%2A>.  
   
 <a name="VirtualizingPanel"></a>   
 ## <a name="new-features-for-the-virtualizingpanel"></a>Neue Funktionen für das VirtualizingPanel  
@@ -68,7 +69,7 @@ ms.locfileid: "64649164"
   
 - `public static event EventHandler<PropertyChangedEventArgs> StaticPropertyChanged;`  
   
- Beachten Sie, dass im ersten Fall ist die Klasse ein statisches Ereignis namens stellt *PropertyName* `Changed` übergibt <xref:System.EventArgs> an den Ereignishandler.  Im zweiten Fall macht die Klasse ein statisches Ereignis namens `StaticPropertyChanged` verfügbar, das den <xref:System.ComponentModel.PropertyChangedEventArgs>-Ereignishandler übergibt. Eine Klasse, die die statische Eigenschaft implementiert, kann Benachrichtigungen über Eigenschaftsänderungen nach Wahl mit einer der beiden Methode auslösen.  
+ Beachten Sie, dass die-Klasse im ersten Fall ein statisches Ereignis namens *propertyName*`Changed` verfügbar macht, das <xref:System.EventArgs> an den-Ereignishandler übergibt.  Im zweiten Fall macht die Klasse ein statisches Ereignis namens `StaticPropertyChanged` verfügbar, das den <xref:System.ComponentModel.PropertyChangedEventArgs>-Ereignishandler übergibt. Eine Klasse, die die statische Eigenschaft implementiert, kann Benachrichtigungen über Eigenschaftsänderungen nach Wahl mit einer der beiden Methode auslösen.  
   
 <a name="xthread_access"></a>   
 ## <a name="accessing-collections-on-non-ui-threads"></a>Zugriff auf Auflistungen in Nicht-UI-Threads  
@@ -119,7 +120,7 @@ ms.locfileid: "64649164"
   
 <a name="async"></a>   
 ## <a name="new-methods-for-the-dispatcher-class"></a>Neue Methoden für die Verteilerklasse  
- Die Verteilerklasse definiert neue Methoden für synchrone und asynchrone Vorgänge.  Die synchrone <xref:System.Windows.Threading.Dispatcher.Invoke%2A>-Methode definiert Überladungen, die einen <xref:System.Action>- oder <xref:System.Func%601>-Parameter entgegennehmen. Die neue asynchrone Methode <xref:System.Windows.Threading.Dispatcher.InvokeAsync%2A> nimmt ebenfalls <xref:System.Action> oder <xref:System.Func%601> als Rückrufparameter entgegen und gibt <xref:System.Windows.Threading.DispatcherOperation> oder <xref:System.Windows.Threading.DispatcherOperation%601> zurück.   Die <xref:System.Windows.Threading.DispatcherOperation>- und <xref:System.Windows.Threading.DispatcherOperation%601>-Klassen definieren eine <xref:System.Threading.Tasks.Task>-Eigenschaft.  Wenn Sie <xref:System.Windows.Threading.Dispatcher.InvokeAsync%2A> aufrufen, können Sie das Schlüsselwort `await` entweder mit <xref:System.Windows.Threading.DispatcherOperation> oder mit dem zugehörigen <xref:System.Threading.Tasks.Task> verwenden. Wenn Sie synchron auf das <xref:System.Threading.Tasks.Task> warten müssen, das von <xref:System.Windows.Threading.DispatcherOperation> oder <xref:System.Windows.Threading.DispatcherOperation%601> zurückgegeben wird, rufen Sie die <xref:System.Windows.Threading.TaskExtensions.DispatcherOperationWait%2A>-Erweiterungsmethode auf. Wenn Sie <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> aufrufen, führt das zu einem Deadlock, wenn der Vorgang auf einem aufrufenden Thread in die Warteschlange gestellt wird. Weitere Informationen zur Verwendung einer <xref:System.Threading.Tasks.Task> zum Ausführen von asynchroner Vorgängen finden Sie unter [Aufgabenparallelität (Task Parallel Library)](../../../standard/parallel-programming/task-based-asynchronous-programming.md).  
+ Die Verteilerklasse definiert neue Methoden für synchrone und asynchrone Vorgänge.  Die synchrone <xref:System.Windows.Threading.Dispatcher.Invoke%2A>-Methode definiert Überladungen, die einen <xref:System.Action>- oder <xref:System.Func%601>-Parameter entgegennehmen. Die neue asynchrone Methode <xref:System.Windows.Threading.Dispatcher.InvokeAsync%2A> nimmt ebenfalls <xref:System.Action> oder <xref:System.Func%601> als Rückrufparameter entgegen und gibt <xref:System.Windows.Threading.DispatcherOperation> oder <xref:System.Windows.Threading.DispatcherOperation%601> zurück.   Die <xref:System.Windows.Threading.DispatcherOperation>- und <xref:System.Windows.Threading.DispatcherOperation%601>-Klassen definieren eine <xref:System.Threading.Tasks.Task>-Eigenschaft.  Wenn Sie <xref:System.Windows.Threading.Dispatcher.InvokeAsync%2A> aufrufen, können Sie das Schlüsselwort `await` entweder mit <xref:System.Windows.Threading.DispatcherOperation> oder mit dem zugehörigen <xref:System.Threading.Tasks.Task> verwenden. Wenn Sie synchron auf das <xref:System.Threading.Tasks.Task> warten müssen, das von <xref:System.Windows.Threading.DispatcherOperation> oder <xref:System.Windows.Threading.DispatcherOperation%601> zurückgegeben wird, rufen Sie die <xref:System.Windows.Threading.TaskExtensions.DispatcherOperationWait%2A>-Erweiterungsmethode auf. Wenn Sie <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> aufrufen, führt das zu einem Deadlock, wenn der Vorgang auf einem aufrufenden Thread in die Warteschlange gestellt wird. Weitere Informationen zum Verwenden einer <xref:System.Threading.Tasks.Task> zum Ausführen von asynchronen Vorgängen finden Sie unter [Task parallelism (Task Parallel Library)](../../../standard/parallel-programming/task-based-asynchronous-programming.md).  
   
 <a name="events_markup_extenions"></a>   
 ## <a name="markup-extensions-for-events"></a>Markuperweiterungen für Ereignisse  

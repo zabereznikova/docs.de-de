@@ -1,28 +1,28 @@
 ---
-title: Übersicht über Windows Forms
+title: Übersicht über
 ms.date: 03/30/2017
 helpviewer_keywords:
 - smart clients
 - Windows Forms, about Windows Forms
 ms.assetid: 3a2b6284-c8d6-4e1c-8c69-0bed38f38cd4
-ms.openlocfilehash: 71bf50bdcf058e94981dc5df4731b5d32dcc2069
-ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
+ms.openlocfilehash: c3a8394086c9d744630179b089a1f986af12b339
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67487208"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76734554"
 ---
 # <a name="windows-forms-overview"></a>Übersicht über Windows Forms
 
 Der folgende Abschnitt enthält eine Übersicht über die Vorteile von intelligenten Clientanwendungen, die wichtigsten Funktionen der Windows Forms-Programmierung und die Verwendung von Windows Forms zur Erstellung von intelligenten Clients, die die Anforderungen moderner Unternehmen und Endbenutzer erfüllen.
 
-## <a name="windows-forms-and-smart-client-apps"></a>Windows Forms und smart Client-apps
+## <a name="windows-forms-and-smart-client-apps"></a>Windows Forms-und Smart Client-apps
 
  Windows Forms dient der Entwicklung von intelligenten Clients. *Intelligente Clients* sind grafisch anspruchsvolle Anwendungen, die einfach bereitgestellt und aktualisiert werden können. Darüber hinaus kann eine intelligente Clientanwendung sowohl im Online- als auch im Offlinebetrieb verwendet werden und bietet gegenüber herkömmlichen Windows-Anwendungen erhöhte Sicherheit beim Zugriff auf lokale Computerressourcen.
 
-### <a name="build-rich-interactive-user-interfaces"></a>Erstellen Sie vielseitige, interaktive Benutzeroberflächen
+### <a name="build-rich-interactive-user-interfaces"></a>Erstellen Sie umfangreiche interaktive Benutzeroberflächen
 
- Windows Forms ist eine smart Clienttechnologie für die .NET Framework, ein Satz verwalteter Bibliotheken, die generelle Anwendungsaufgaben wie Lesen und Schreiben in das Dateisystem zu vereinfachen. Wenn Sie eine Entwicklungsumgebung wie Visual Studio verwenden, können Sie die Windows Forms-Smart Client-Anwendungen, die Informationen anzeigen, Eingaben von Benutzern anfordern, und die Kommunikation mit Remotecomputern erstellen, über ein Netzwerk.
+ Windows Forms ist eine intelligente Client Technologie für die .NET Framework, eine Reihe verwalteter Bibliotheken, die gängige Anwendungsaufgaben vereinfachen, wie z. b. das Lesen und Schreiben in das Dateisystem. Wenn Sie eine Entwicklungsumgebung wie Visual Studio verwenden, können Sie Windows Forms Smart-Client-Anwendungen erstellen, die Informationen anzeigen, Eingaben von Benutzern anfordern und über ein Netzwerk mit Remote Computern kommunizieren.
 
  In Windows Forms stellt ein *Formular* eine visuelle Oberfläche dar, auf der Informationen für den Benutzer angezeigt werden. In der Regel erstellen Sie Windows Forms-Anwendungen, indem Sie Steuerelemente in Formulare einfügen und Antworten auf Benutzeraktionen, wie Maus- und Tastatureingaben, entwickeln. Ein *Steuerelement* ist ein diskretes Benutzeroberflächenelement (UI-Element), das Daten anzeigt oder Dateneingaben akzeptiert.
 
@@ -32,7 +32,7 @@ Der folgende Abschnitt enthält eine Übersicht über die Vorteile von intellige
 
  Windows Forms verfügt über komplexe Steuerelemente für die Benutzeroberfläche, mit denen Funktionen aus Anwendungen wie Microsoft Office emuliert werden können. Mit dem <xref:System.Windows.Forms.ToolStrip>-Steuerelement und dem <xref:System.Windows.Forms.MenuStrip>-Steuerelement können Sie Symbolleisten und Menüs erstellen, die Texte und Bilder, Untermenüs oder weitere Steuerelemente enthalten, z. B. Textfelder und Kombinationsfelder.
 
- Mit der Drag & Drop **Windows Forms-Designer** in Visual Studio können Sie problemlos Windows Forms-Anwendungen erstellen. Wählen Sie Steuerelemente einfach mit dem Mauszeiger aus, und fügen Sie sie an der gewünschten Stelle im Formular ein. Der Designer stellt Tools wie Rasterlinien und Ausrichtungslinien bereit, um das Anordnen von Steuerelementen zu erleichtern. Und, ob Sie Visual Studio oder über die Befehlszeile kompilieren, können Sie die <xref:System.Windows.Forms.FlowLayoutPanel>, <xref:System.Windows.Forms.TableLayoutPanel> und <xref:System.Windows.Forms.SplitContainer> Steuerelemente zum Erstellen erweiterter Formularlayouts in kürzerer Zeit.
+ Mit der Drag & Drop- **Windows Forms-Designer** in Visual Studio können Sie problemlos Windows Forms Anwendungen erstellen. Wählen Sie Steuerelemente einfach mit dem Mauszeiger aus, und fügen Sie sie an der gewünschten Stelle im Formular ein. Der Designer stellt Tools wie Rasterlinien und Ausrichtungslinien bereit, um das Anordnen von Steuerelementen zu erleichtern. Und unabhängig davon, ob Sie Visual Studio verwenden oder in der Befehlszeile kompilieren, können Sie die Steuerelemente <xref:System.Windows.Forms.FlowLayoutPanel>, <xref:System.Windows.Forms.TableLayoutPanel> und <xref:System.Windows.Forms.SplitContainer> verwenden, um erweiterte Formularlayouts in kürzerer Zeit zu erstellen.
 
  Schließlich enthält der <xref:System.Drawing>-Namespace zum Erstellen eigener Benutzeroberflächenelemente eine Vielzahl von Klassen, um Linien, Kreise und andere Formen direkt auf einem Formular zu zeichnen.
 
@@ -46,18 +46,18 @@ Ausführliche Informationen zur Verwendung dieser Features finden Sie in den fol
 |Beschreibung|Hilfethema|
 |-----------------|----------------|
 |Verwenden von Steuerelementen auf Formularen|[Vorgehensweise: Hinzufügen von Steuerelementen zu Windows Forms](./controls/how-to-add-controls-to-windows-forms.md)|
-|Verwenden des <xref:System.Windows.Forms.ToolStrip>-Steuerelements|[Vorgehensweise: Erstellen eines einfachen ToolStrip mit Standardelementen mithilfe des Designers](./controls/create-a-basic-wf-toolstrip-with-standard-items-using-the-designer.md)|
+|Verwenden des <xref:System.Windows.Forms.ToolStrip>-Steuerelements|[Vorgehensweise: Erstellen eines einfachen ToolStrip mit Standardelementen im Designer](./controls/create-a-basic-wf-toolstrip-with-standard-items-using-the-designer.md)|
 |Erstellen von Grafiken mithilfe von <xref:System.Drawing>|[Erste Schritte mit Grafikprogrammierung](./advanced/getting-started-with-graphics-programming.md)|
-|Erstellen benutzerdefinierter Steuerelemente|[Vorgehensweise: Erben von der UserControl-Klasse](./controls/how-to-inherit-from-the-usercontrol-class.md)|
+|Erstellen benutzerdefinierter Steuerelemente|[Gewusst wie: Erben von der UserControl-Klasse](./controls/how-to-inherit-from-the-usercontrol-class.md)|
 
 ### <a name="display-and-manipulate-data"></a>Anzeigen und Bearbeiten von Daten
  Viele Anwendungen müssen Daten aus einer Datenbank, einer XML-Datei, einem XML-Webdienst oder einer anderen Datenquelle anzeigen. Mit dem <xref:System.Windows.Forms.DataGridView>-Steuerelement bietet Windows Forms ein flexibles Steuerelement zum Anzeigen von Tabellendaten im herkömmlichen Zeilen- und Spaltenformat, bei dem jedes Datenelement in einer eigenen Zelle enthalten ist. Mit <xref:System.Windows.Forms.DataGridView> können Sie die Darstellung einzelner Zellen anpassen, die Position beliebiger Zeilen oder Spalten fixieren und komplexe Steuerelemente in einer Zelle anzeigen, um nur einige Features zu nennen.
 
- Mit intelligenten Windows Forms-Clients kann problemlos eine Netzwerkverbindung zu Datenquellen hergestellt werden. Die <xref:System.Windows.Forms.BindingSource> Komponente stellt eine Verbindung mit einer Datenquelle dar und stellt Methoden zum Binden von Daten an Steuerelemente, Navigieren zum vorherigen oder nächsten Datensatz, Bearbeiten von Datensätzen und Speichern von Änderungen in der ursprünglichen Quelle zurück. Das <xref:System.Windows.Forms.BindingNavigator>-Steuerelement stellt über die <xref:System.Windows.Forms.BindingSource>-Komponente eine einfache Schnittstelle zum Navigieren zwischen Datensätzen bereit.
+ Mit intelligenten Windows Forms-Clients kann problemlos eine Netzwerkverbindung zu Datenquellen hergestellt werden. Die <xref:System.Windows.Forms.BindingSource> Komponente stellt eine Verbindung mit einer Datenquelle dar und macht Methoden zum Binden von Daten an Steuerelemente, zum Navigieren zum vorherigen und nächsten Datensätzen, zum Bearbeiten von Datensätzen und zum Speichern der Änderungen in der ursprünglichen Quelle verfügbar. Das <xref:System.Windows.Forms.BindingNavigator>-Steuerelement stellt über die <xref:System.Windows.Forms.BindingSource>-Komponente eine einfache Schnittstelle zum Navigieren zwischen Datensätzen bereit.
 
  Mit dem Datenquellenfenster können datengebundene Steuerelemente problemlos erstellt werden. In diesem Fenster werden die Datenquellen in Ihrem Projekt angezeigt, z. B. Datenbanken, Webdienste oder Objekte. Zum Erstellen datengebundener Steuerelemente können Sie Elemente aus diesem Fenster auf Formulare im Projekt ziehen. Darüber hinaus können Sie auch bestehende Steuerelemente an Daten binden, indem Sie Objekte aus dem Datenquellenfenster auf bestehende Steuerelemente ziehen.
 
- Ein weiterer Datenbindungstyp, der in Windows Forms verwaltet werden kann, lautet *Einstellungen*. Die meisten intelligenten Clientanwendungen müssen bestimmte Informationen über ihren Laufzeitzustand, z. B. die zuletzt bekannte Größe des Formulars, sowie Benutzereinstellungen wie Standardspeicherorte von Dateien erhalten. Die Funktion "Anwendungseinstellungen" trägt diesen Anforderungen Rechnung und stellt eine einfache Möglichkeit dar, beide Arten von Einstellungen auf dem Clientcomputer zu speichern. Nachdem Sie diese Einstellungen mithilfe von Visual Studio oder einem Code-Editor definiert haben, werden die Einstellungen als XML beibehalten und zur Laufzeit automatisch in den Arbeitsspeicher eingelesen.
+ Ein weiterer Datenbindungstyp, der in Windows Forms verwaltet werden kann, lautet *Einstellungen*. Die meisten intelligenten Clientanwendungen müssen bestimmte Informationen über ihren Laufzeitzustand, z. B. die zuletzt bekannte Größe des Formulars, sowie Benutzereinstellungen wie Standardspeicherorte von Dateien erhalten. Die Funktion "Anwendungseinstellungen" trägt diesen Anforderungen Rechnung und stellt eine einfache Möglichkeit dar, beide Arten von Einstellungen auf dem Clientcomputer zu speichern. Nachdem Sie diese Einstellungen entweder mithilfe von Visual Studio oder einem Code-Editor definiert haben, werden die Einstellungen als XML beibehalten und zur Laufzeit automatisch in den Arbeitsspeicher eingelesen.
 
 #### <a name="display-and-manipulate-data"></a>Anzeigen und Bearbeiten von Daten
 
@@ -65,34 +65,34 @@ Ausführliche Informationen zur Verwendung dieser Features finden Sie in den fol
 
 |Beschreibung|Hilfethema|
 |-----------------|----------------|
-|Verwenden der <xref:System.Windows.Forms.BindingSource>-Komponente|[Vorgehensweise: Binden von Windows Forms-Steuerelementen mithilfe der BindingSource-Komponente, die mithilfe des Designers](./controls/bind-wf-controls-with-the-bindingsource.md)|
-|Arbeiten mit Datenquellen von ADO.NET|[Vorgehensweise: Sortieren und Filtern von ADO.NET-Daten mit der Windows Forms-BindingSource-Komponente](./controls/sort-and-filter-ado-net-data-with-wf-bindingsource-component.md)|
+|Verwenden der <xref:System.Windows.Forms.BindingSource>-Komponente|[Vorgehensweise: Binden von Windows Forms-Steuerelementen an die BindingSource-Komponente mithilfe des Designers](./controls/bind-wf-controls-with-the-bindingsource.md)|
+|Arbeiten mit ADO.NET-Datenquellen|[Vorgehensweise: Sortieren und Filtern von ADO.NET-Daten mit der BindingSource-Komponente in Windows Forms](./controls/sort-and-filter-ado-net-data-with-wf-bindingsource-component.md)|
 |Verwenden des Datenquellenfensters|[Binden von Windows Forms-Steuerelementen an Daten in Visual Studio](/visualstudio/data-tools/bind-windows-forms-controls-to-data-in-visual-studio)|
 |Verwenden von Anwendungseinstellungen|[Vorgehensweise: Erstellen von Anwendungseinstellungen](./advanced/how-to-create-application-settings.md)|
 
-### <a name="deploy-apps-to-client-computers"></a>Bereitstellen von apps auf Client-Computern
+### <a name="deploy-apps-to-client-computers"></a>Bereitstellen von apps auf Client Computern
 
-Nach dem Erstellen müssen Sie die Anwendung an Ihre Benutzer senden, damit diese die Anwendung auf dem eigenen Clientcomputer installieren und ausführen können. Wenn Sie die ClickOnce-Technologie verwenden, können Sie Ihre Anwendungen innerhalb von Visual Studio mit nur wenigen Klicks bereitstellen und Ihren Benutzern eine URL verweist auf die Anwendung im Web bereitstellen. ClickOnce verwaltet alle Elemente und Abhängigkeiten in Ihrer Anwendung und stellt sicher, dass die Anwendung ordnungsgemäß auf dem Clientcomputer installiert ist.
+Nach dem Erstellen müssen Sie die Anwendung an Ihre Benutzer senden, damit diese die Anwendung auf dem eigenen Clientcomputer installieren und ausführen können. Wenn Sie die ClickOnce-Technologie verwenden, können Sie Ihre Anwendungen in Visual Studio mit wenigen Klicks bereitstellen und ihren Benutzern eine URL bereitstellen, die auf Ihre Anwendung im Web verweist. ClickOnce verwaltet alle Elemente und Abhängigkeiten in der Anwendung und stellt sicher, dass die Anwendung ordnungsgemäß auf dem Client Computer installiert ist.
 
-ClickOnce-Anwendungen können nur ausgeführt, wenn der Benutzer mit dem Netzwerk verbunden ist oder beide online ausführen, konfiguriert und offline sein. Wenn Sie angeben, dass eine Anwendung den Offlinebetrieb unterstützen soll, fügt ClickOnce eine Verknüpfung zur Anwendung des Benutzers **starten** Menü. Der Benutzer kann die Anwendung dann auch ohne die URL öffnen.
+ClickOnce-Anwendungen können so konfiguriert werden, dass Sie nur ausgeführt werden, wenn der Benutzer mit dem Netzwerk verbunden ist oder sowohl online als auch offline ausgeführt wird. Wenn Sie angeben, dass eine Anwendung den Offline Betrieb unterstützen soll, fügt ClickOnce im **Startmenü** des Benutzers einen Link zur Anwendung hinzu. Der Benutzer kann die Anwendung dann auch ohne die URL öffnen.
 
-Wenn Sie die Anwendung aktualisieren, veröffentlichen Sie auf dem Webserver ein neues Bereitstellungsmanifest und eine neue Kopie der Anwendung. ClickOnce erkennt, dass es ein Update verfügbar ist, und aktualisieren die Installation des Benutzers. Es ist keine benutzerdefinierte Programmierung erforderlich, zum Aktualisieren von alten Assemblys.
+Wenn Sie die Anwendung aktualisieren, veröffentlichen Sie auf dem Webserver ein neues Bereitstellungsmanifest und eine neue Kopie der Anwendung. ClickOnce erkennt, dass ein Update verfügbar ist, und aktualisiert die Installation des Benutzers. zum Aktualisieren von alten Assemblys ist keine benutzerdefinierte Programmierung erforderlich.
 
-#### <a name="deploy-clickonce-apps"></a>Bereitstellen von ClickOnce-apps
+#### <a name="deploy-clickonce-apps"></a>ClickOnce-apps bereitstellen
 
-Eine vollständige Einführung zu ClickOnce finden Sie unter [ClickOnce-Sicherheit und Bereitstellung](/visualstudio/deployment/clickonce-security-and-deployment). Ausführliche Informationen zur Verwendung dieser Funktionen finden Sie in den folgenden Hilfethemen.
+Eine vollständige Einführung in ClickOnce finden Sie unter [ClickOnce-Sicherheit und-Bereitstellung](/visualstudio/deployment/clickonce-security-and-deployment). Ausführliche Informationen zur Verwendung dieser Funktionen finden Sie in den folgenden Hilfethemen.
 
 |Beschreibung|Hilfethema|
 |-----------------|----------------|
-|Bereitstellen einer Anwendung mithilfe von ClickOnce|[Vorgehensweise: Veröffentlichen einer ClickOnce-Anwendung mit dem Webpublishing-Assistenten](/visualstudio/deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard)<br /><br /> [Exemplarische Vorgehensweise: Manuelles Bereitstellen einer ClickOnce-Anwendung](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)|
-|Aktualisiert eine ClickOnce-Bereitstellung|[Vorgehensweise: Verwalten von Aktualisierungen für eine ClickOnce-Anwendung](/visualstudio/deployment/how-to-manage-updates-for-a-clickonce-application)|
-|Verwalten der Sicherheit mit ClickOnce|[Vorgehensweise: Aktivieren von ClickOnce-Sicherheitseinstellungen](/visualstudio/deployment/how-to-enable-clickonce-security-settings)|
+|Bereitstellen einer Anwendung mithilfe von ClickOnce|[Gewusst wie: Veröffentlichen einer ClickOnce-Anwendung mit dem Webpublishing-Assistenten](/visualstudio/deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard)<br /><br /> [Exemplarische Vorgehensweise: Manuelles Bereitstellen einer ClickOnce-Anwendung](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)|
+|Aktualisieren einer ClickOnce-Bereitstellung|[Gewusst wie: Verwalten von Aktualisierungen für eine ClickOnce-Anwendung](/visualstudio/deployment/how-to-manage-updates-for-a-clickonce-application)|
+|Verwalten der Sicherheit mit ClickOnce|[Gewusst wie: Aktivieren von ClickOnce-Sicherheitseinstellungen](/visualstudio/deployment/how-to-enable-clickonce-security-settings)|
 
-### <a name="other-controls-and-features"></a>Andere Steuerelemente und features
+### <a name="other-controls-and-features"></a>Weitere Steuerelemente und Features
 
-In Windows Forms stehen viele weitere Features bereit, mit denen häufige Aufgaben schnell und einfach ausgeführt werden können, beispielsweise zum Erstellen von Dialogfeldern, Drucken, Hinzufügen von Hilfe und Dokumentation sowie zum Lokalisieren von Anwendungen in mehrere Sprachen. Darüber hinaus verwendet die stabiles Sicherheitssystem von .NET Framework Windows Forms. Mit diesem System können Sie für Ihre Kunden Anwendungen bereitstellen, die erhöhte Sicherheitsanforderungen erfüllen.
+In Windows Forms stehen viele weitere Features bereit, mit denen häufige Aufgaben schnell und einfach ausgeführt werden können, beispielsweise zum Erstellen von Dialogfeldern, Drucken, Hinzufügen von Hilfe und Dokumentation sowie zum Lokalisieren von Anwendungen in mehrere Sprachen. Außerdem wird Windows Forms auf dem robusten Sicherheitssystem des .NET Framework basiert. Mit diesem System können Sie für Ihre Kunden Anwendungen bereitstellen, die erhöhte Sicherheitsanforderungen erfüllen.
 
-#### <a name="implement-other-controls-and-features"></a>Implementieren Sie weiterer Steuerelemente und features
+#### <a name="implement-other-controls-and-features"></a>Implementieren anderer Steuerelemente und Features
 
 Ausführliche Informationen zur Verwendung dieser Features finden Sie in den folgenden Hilfethemen.
 

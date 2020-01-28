@@ -9,16 +9,16 @@ helpviewer_keywords:
 - unboxing [C#]
 - boxing [C#]
 ms.assetid: 8da9bbf4-bce9-4b08-b2e5-f64c11c56514
-ms.openlocfilehash: 32156ad0fe4b3dce4371fe757d15f5b8040aaf19
-ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
+ms.openlocfilehash: 62df08bf4ae3580e9b8d5b3aab0697d396674ca1
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76115850"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76745416"
 ---
 # <a name="boxing-and-unboxing-c-programming-guide"></a>Boxing und Unboxing (C#-Programmierhandbuch)
 
-Beim Boxing handelt es sich um die Konvertierung eines [Werttyps](../../language-reference/keywords/value-types.md) in den Typ `object` oder in einen beliebigen anderen Schnittstellentyp, der durch diesen Werttyp implementiert wird. Wenn die Common Language Runtime (CLR) für einen Werttyp das Boxing durchführt, wird der Wert mit einer <xref:System.Object?displayProperty=nameWithType>-Instanz umschlossen und im verwalteten Heap gespeichert. Durch Unboxing wird der Werttyp aus dem Objekt extrahiert. Boxing ist implizit, Unboxing ist explizit. Das Konzept von Boxing und Unboxing unterliegt der einheitlichen C#-Ansicht des Typsystems, in dem ein Wert eines beliebigen Typs als Objekt behandelt werden kann.
+Beim Boxing handelt es sich um die Konvertierung eines [Werttyps](../../language-reference/builtin-types/value-types.md) in den Typ `object` oder in einen beliebigen anderen Schnittstellentyp, der durch diesen Werttyp implementiert wird. Wenn die Common Language Runtime (CLR) für einen Werttyp das Boxing durchführt, wird der Wert mit einer <xref:System.Object?displayProperty=nameWithType>-Instanz umschlossen und im verwalteten Heap gespeichert. Durch Unboxing wird der Werttyp aus dem Objekt extrahiert. Boxing ist implizit, Unboxing ist explizit. Das Konzept von Boxing und Unboxing unterliegt der einheitlichen C#-Ansicht des Typsystems, in dem ein Wert eines beliebigen Typs als Objekt behandelt werden kann.
 
 Im folgenden Beispiel wird die ganzzahlige Variable `i` mittels *Boxing* konvertiert und dem Objekt `o` zugewiesen.
 
@@ -38,7 +38,7 @@ Im Verhältnis zu einfachen Zuweisungen sind Boxing und Unboxing rechentechnisch
 
 ## <a name="boxing"></a>Boxing
 
-Boxing wird verwendet, um Werttypen im Heap der Garbage Collection zu speichern. Beim Boxing handelt es sich um die implizite Konvertierung eines [Werttyps](../../language-reference/keywords/value-types.md) in den Typ `object` oder in einen beliebigen anderen Schnittstellentyp, der durch diesen Werttyp implementiert wird. Beim Boxing eines Werttyps wird auf dem Heap eine Objektinstanz zugeordnet. Anschließend wird der Wert in das neue Objekt kopiert.
+Boxing wird verwendet, um Werttypen im Heap der Garbage Collection zu speichern. Beim Boxing handelt es sich um die implizite Konvertierung eines [Werttyps](../../language-reference/builtin-types/value-types.md) in den Typ `object` oder in einen beliebigen anderen Schnittstellentyp, der durch diesen Werttyp implementiert wird. Beim Boxing eines Werttyps wird auf dem Heap eine Objektinstanz zugeordnet. Anschließend wird der Wert in das neue Objekt kopiert.
 
 Beachten Sie die folgende Deklaration einer Werttypvariablen:
 
@@ -66,7 +66,7 @@ In diesem Beispiel wird die Ganzzahlvariable `i` mittels Boxing in das Objekt `o
 
 ## <a name="unboxing"></a>Unboxing
 
-Beim Unboxing handelt es sich um eine explizite Konvertierung vom `object`-Typ in einen [Werttyp](../../language-reference/keywords/value-types.md) bzw. von einem Schnittstellentyp in einen Werttyp, durch den die Schnittstelle implementiert wird. Ein Unboxing-Vorgang umfasst folgende Schritte:
+Beim Unboxing handelt es sich um eine explizite Konvertierung vom `object`-Typ in einen [Werttyp](../../language-reference/builtin-types/value-types.md) bzw. von einem Schnittstellentyp in einen Werttyp, durch den die Schnittstelle implementiert wird. Ein Unboxing-Vorgang umfasst folgende Schritte:
 
 - Überprüfen der Objektinstanz, um sicherzustellen, dass es sich um einen mittels Boxing "verpackten" Wert des jeweiligen Werttyps handelt.
 
@@ -112,14 +112,8 @@ int j = (int) o;
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="related-sections"></a>Verwandte Abschnitte
-
-Weitere Informationen finden Sie unter:
-
-- [Verweistypen](../../language-reference/keywords/reference-types.md)
-
-- [Werttypen](../../language-reference/keywords/value-types.md)
-
 ## <a name="see-also"></a>Siehe auch
 
 - [C#-Programmierhandbuch](../index.md)
+- [Verweistypen](../../language-reference/keywords/reference-types.md)
+- [Werttypen](../../language-reference/builtin-types/value-types.md)

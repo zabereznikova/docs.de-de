@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Festlegen des durch ein Windows Forms-Steuerelement angezeigten Bildes'
+title: Festlegen des von einem Steuerelement angezeigten Bilds
 ms.date: 08/20/2019
 dev_langs:
 - csharp
@@ -12,22 +12,22 @@ helpviewer_keywords:
 - images [Windows Forms], Windows Forms controls
 - examples [Windows Forms], controls
 ms.assetid: 9445af8f-4f62-48b0-a3f6-068058964b9f
-ms.openlocfilehash: b1b1dbbb50c3b19cf8d8a7d7030d0bc168afb6a7
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 5df0068c8462bbaab0cb0135de1dd1b91ababe06
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69666185"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76746874"
 ---
-# <a name="how-to-set-the-image-displayed-by-a-windows-forms-control"></a>Vorgehensweise: Festlegen des von einem Windows Forms Steuerelement angezeigten Bilds
+# <a name="how-to-set-the-image-displayed-by-a-windows-forms-control"></a>Gewusst wie: Festlegen des von einem Windows Forms Steuerelement angezeigten Bilds
 
 Mehrere Windows Forms Steuerelemente können Bilder anzeigen. Diese Bilder können Symbole sein, die den Zweck des Steuer Elements verdeutlichen, wie z. b. ein Diskettensymbol auf einer Schaltfläche, die den Befehl "Speichern" bezeichnet. Alternativ können die Symbole Hintergrundbilder sein, um dem Steuerelement das gewünschte Aussehen und Verhalten zu geben.
 
 ## <a name="programmatic"></a>Programmgesteuerten
 
-Legen Sie die- `Image` Eigenschaft `BackgroundImage` oder-Eigenschaft des Steuer Elements <xref:System.Drawing.Image>auf ein Objekt vom Typ fest. Im allgemeinen laden Sie das Bild mithilfe der <xref:System.Drawing.Image.FromFile%2A> -Methode aus einer Datei.
+Legen Sie die `Image`-oder `BackgroundImage`-Eigenschaft des Steuer Elements auf ein Objekt vom Typ <xref:System.Drawing.Image>fest. Im allgemeinen laden Sie das Image mithilfe der <xref:System.Drawing.Image.FromFile%2A>-Methode aus einer Datei.
 
-Im folgenden Codebeispiel ist der Pfad, der für den Speicherort des Bilds festgelegt wurde, der Ordner **eigene Bilder** . Die meisten Computer unter dem Windows-Betriebssystem enthalten dieses Verzeichnis. Dies ermöglicht es Benutzern mit minimalen System Zugriffsebenen, die Anwendung sicher auszuführen. Im folgenden Codebeispiel ist es erforderlich, dass Sie bereits über ein <xref:System.Windows.Forms.PictureBox> Formular mit einem hinzugefügten Steuerelement verfügen.
+Im folgenden Codebeispiel ist der Pfad, der für den Speicherort des Bilds festgelegt wurde, der Ordner **eigene Bilder** . Die meisten Computer unter dem Windows-Betriebssystem enthalten dieses Verzeichnis. Dies ermöglicht es Benutzern mit minimalen System Zugriffsebenen, die Anwendung sicher auszuführen. Das folgende Codebeispiel setzt voraus, dass Sie bereits über ein Formular mit einem hinzugefügten <xref:System.Windows.Forms.PictureBox> Steuerelement verfügen.
 
 ```vb
 ' Replace the image named below with your own icon.
@@ -54,9 +54,9 @@ pictureBox1->Image = Image::FromFile(String::Concat
    "\\Image.gif"));
 ```
 
-## <a name="designer"></a>Designer
+## <a name="designer"></a>-Designer
 
-1. Wählen Sie im **Eigenschaften** Fenster von Visual Studio die **Bild** -oder **BackgroundImage** -Eigenschaft des Steuer Elements aus, und klicken Sie dann auf![die Schaltfläche mit den Auslassungs Zeichen (Ellipsen in Visual Studio](./media/visual-studio-ellipsis-button.png)), um die **Auswahl** Dialogfeld Ressource.
+1. Wählen Sie im **Eigenschaften** Fenster von Visual Studio die **Bild** -oder **BackgroundImage** -Eigenschaft des Steuer Elements aus, und klicken Sie dann auf die Schaltfläche mit den Auslassungs Punkten (![Auslassungs Zeichen in Visual Studio](./media/visual-studio-ellipsis-button.png)), um das Dialogfeld **Ressource auswählen** anzuzeigen.
 
 2. Wählen Sie das Abbild aus, das Sie anzeigen möchten.
 

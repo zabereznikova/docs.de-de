@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Formatieren des DataGrid-Steuerelements in Windows Forms mithilfe des Designers'
+title: Formatieren des DataGrid-Steuer Elements mithilfe des Designers
 ms.date: 03/30/2017
 helpviewer_keywords:
 - columns [Windows Forms], DataGrid controls
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - tables [Windows Forms], formatting in DataGrid control
 - formatting [Windows Forms]
 ms.assetid: 533b9814-6124-49dc-9fda-085f1502609f
-ms.openlocfilehash: b3a85f5f9e51dae50a40058b8f07f92976da66f2
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 548acac0fc7724490bfe89927ec0662b3488c230
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "69666164"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76736796"
 ---
 # <a name="how-to-format-the-windows-forms-datagrid-control-using-the-designer"></a>Gewusst wie: Formatieren des DataGrid-Steuerelements in Windows Forms mithilfe des Designers
 
@@ -41,11 +41,11 @@ Das folgende Verfahren erfordert ein **Windows-Anwendungs** Projekt mit einem Fo
 
 2. Legen Sie im **Eigenschaften** Fenster die folgenden Eigenschaften entsprechend fest.
 
-    |property|Beschreibung|
+    |Die Eigenschaften-|Beschreibung|
     |--------------|-----------------|
     |<xref:System.Windows.Forms.DataGrid.AlternatingBackColor%2A>|Die `BackColor`-Eigenschaft definiert die Farbe der gerade nummerierten Zeilen im Raster. Wenn Sie die <xref:System.Windows.Forms.DataGrid.AlternatingBackColor%2A>-Eigenschaft auf eine andere Farbe festlegen, wird jede andere Zeile auf diese neue Farbe festgelegt (Zeilen 1, 3, 5 usw.).|
     |<xref:System.Windows.Forms.DataGrid.BackColor%2A>|Die Hintergrundfarbe der gerade nummerierten Zeilen des Rasters (Zeilen 0, 2, 4, 6 usw.).|
-    |<xref:System.Windows.Forms.DataGrid.BackgroundColor%2A>|Während die Eigenschaften <xref:System.Windows.Forms.DataGrid.BackColor%2A> und <xref:System.Windows.Forms.DataGrid.AlternatingBackColor%2A> die Farbe der Zeilen im Raster bestimmen, bestimmt die <xref:System.Windows.Forms.DataGrid.BackgroundColor%2A>-Eigenschaft die Farbe des Bereichs außerhalb des Zeilen Bereichs, der nur sichtbar ist, wenn das Raster zum unteren Rand bewegt wird, oder wenn nur wenige Zeilen in der Netz.|
+    |<xref:System.Windows.Forms.DataGrid.BackgroundColor%2A>|Während die Eigenschaften <xref:System.Windows.Forms.DataGrid.BackColor%2A> und <xref:System.Windows.Forms.DataGrid.AlternatingBackColor%2A> die Farbe der Zeilen im Raster bestimmen, bestimmt die <xref:System.Windows.Forms.DataGrid.BackgroundColor%2A>-Eigenschaft die Farbe des Bereichs außerhalb des Zeilen Bereichs, der nur sichtbar ist, wenn ein Raster nach unten bewegt wird oder nur einige Zeilen im Raster enthalten sind.|
     |<xref:System.Windows.Forms.DataGrid.BorderStyle%2A>|Die Rahmenart des Rasters, einer der <xref:System.Windows.Forms.BorderStyle> Enumerationswerte.|
     |<xref:System.Windows.Forms.DataGrid.CaptionBackColor%2A>|Die Hintergrundfarbe der Fenster Beschriftung des Rasters, die unmittelbar oberhalb des Rasters angezeigt wird.|
     |<xref:System.Windows.Forms.DataGrid.CaptionFont%2A>|Die Schriftart der Beschriftung am oberen Rand des Rasters.|
@@ -76,7 +76,7 @@ Das folgende Verfahren erfordert ein **Windows-Anwendungs** Projekt mit einem Fo
 
 1. Wählen Sie das <xref:System.Windows.Forms.DataGrid>-Steuerelement auf dem Formular aus.
 
-2. Wählen Sie im Fenster **Eigenschaften** die Eigenschaft <xref:System.Windows.Forms.DataGrid.TableStyles%2A> aus, und klicken Sie auf die Schaltfläche mit den Auslassungs **Punkten (![The** Auslassungs Zeichen (...) in der Eigenschaftenfenster von Visual Studio. ](./media/visual-studio-ellipsis-button.png)).
+2. Wählen Sie im Fenster **Eigenschaften** die Eigenschaft <xref:System.Windows.Forms.DataGrid.TableStyles%2A> aus, und klicken Sie auf die Schaltfläche mit den Auslassungs **Punkten (![** der Schaltfläche mit den Auslassungs Punkten (...) in der Eigenschaftenfenster von Visual Studio.](./media/visual-studio-ellipsis-button.png)).
 
 3. Klicken Sie im Dialogfeld **DataGridTableStyle** -Auflistungs-Editor auf **Hinzufügen** , um der Sammlung einen Tabellen Stil hinzuzufügen.
 
@@ -86,7 +86,7 @@ Das folgende Verfahren erfordert ein **Windows-Anwendungs** Projekt mit einem Fo
 
      Der Zuordnungsname wird verwendet, um anzugeben, welcher Tabellen Stil mit welcher Tabelle verwendet werden soll.
 
-5. Wählen Sie im **DataGridTableStyle**-Auflistungs-Editor die Eigenschaft <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A> aus, und klicken Sie auf die Schaltfläche mit den Auslassungs Punkten (![The Schaltfläche mit den Auslassungs Punkten (...) im Eigenschaftenfenster von Visual Studio. ](./media/visual-studio-ellipsis-button.png)
+5. Wählen Sie im **DataGridTableStyle**-Auflistungs-Editor die <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A>-Eigenschaft aus, und klicken Sie auf die Schaltfläche mit den Auslassungs Zeichen![(...) im Eigenschaftenfenster von Visual Studio.](./media/visual-studio-ellipsis-button.png)).
 
 6. Fügen Sie im Dialogfeld **DataGridColumnStyle** -Auflistungs-Editor dem Tabellenformat, das Sie erstellt haben, Spalten Formate hinzu.
 

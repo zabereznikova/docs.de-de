@@ -1,5 +1,5 @@
 ---
-title: Windows Forms-Koordinaten
+title: EO
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Forms coordinates
@@ -7,26 +7,26 @@ helpviewer_keywords:
 - client coordinates
 - coordinates [Windows Forms], Windows Forms
 ms.assetid: cc06e61f-43b6-4408-a676-2542dcfcd96e
-ms.openlocfilehash: 6feabadff17538f4a7368c348f7b72226e2d678e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c95888f31bfc867e9c028d53072ab3d710256708
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61800151"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76734659"
 ---
 # <a name="windows-forms-coordinates"></a>Windows Forms-Koordinaten
-Das Koordinatensystem für eine Windows-Formular auf Gerätekoordinaten basiert, und die grundlegende Maßeinheit beim Zeichnen in Windows Forms ist die Einheit des Geräts (in der Regel die Pixel). Punkte auf dem Bildschirm werden von x- und y-Koordinate-Paare, mit den X-Koordinaten, erhöhen nach rechts und die y-Koordinaten erhöhen von oben nach unten beschrieben. Die Position des Ursprungs, relativ zum Bildschirm, hängen davon ab, ob Sie Bildschirm- oder Clientkoordinaten angeben.  
+Das Koordinatensystem für ein Windows Form basiert auf Geräte Koordinaten, und die grundlegende Maßeinheit beim Zeichnen in Windows Forms ist die Geräteeinheit (in der Regel das Pixel). Die Punkte auf dem Bildschirm werden durch x-und y-Koordinatenpaare beschrieben, wobei die x-Koordinaten nach rechts und die y-Koordinaten von oben nach unten vergrößert werden. Die Position des Ursprungs (relativ zum Bildschirm) variiert abhängig davon, ob Sie Bildschirm-oder Client Koordinaten angeben.  
   
-## <a name="screen-coordinates"></a>Bildschirmkoordinaten  
- Eine Windows Forms-Anwendung gibt die Position eines Fensters auf dem Bildschirm in Bildschirmkoordinaten. Für die Bildschirmkoordinaten ist der Ursprung die linke obere Ecke des Bildschirms. Die vollständige Position eines Fensters wird häufig durch beschrieben eine <xref:System.Drawing.Rectangle> -Struktur, enthält die Bildschirmkoordinaten von zwei Punkten, die die linken, oberen und unteren rechten Ecke des Fensters definieren.  
+## <a name="screen-coordinates"></a>Bildschirm Koordinaten  
+ Eine Windows Forms Anwendung gibt die Position eines Fensters auf dem Bildschirm in Bildschirm Koordinaten an. Bei Bildschirm Koordinaten wird der Ursprung in der oberen linken Ecke des Bildschirms angezeigt. Die vollständige Position eines Fensters wird häufig durch eine <xref:System.Drawing.Rectangle> Struktur beschrieben, die die Bildschirm Koordinaten zweier Punkte enthält, die die oberen linken und unteren rechten Ecke des Fensters definieren.  
   
-## <a name="client-coordinates"></a>Clientkoordinaten  
- Eine Windows Forms-Anwendung gibt die Position der Punkte in einem Formular oder Steuerelement unter Verwendung der Clientkoordinaten. Der Ursprung Clientkoordinaten ist der linke obere Ecke des Clientbereichs des Steuerelements oder Formulars. Clientkoordinaten stellen Sie sicher, dass eine Anwendung in einem Formular oder Steuerelement, unabhängig von der Position des Formulars oder Steuerelements auf dem Bildschirm zeichnen konsistente Koordinatenwerte verwenden kann.  
+## <a name="client-coordinates"></a>Client Koordinaten  
+ Eine Windows Forms Anwendung gibt die Position von Punkten in einem Formular oder Steuerelement mithilfe von Client Koordinaten an. Der Ursprung für Client Koordinaten ist die linke obere Ecke des Client Bereichs des Steuer Elements oder Formulars. Mithilfe von Client Koordinaten wird sichergestellt, dass eine Anwendung beim Zeichnen in einem Formular oder Steuerelement konsistente Koordinaten Werte verwenden kann, unabhängig von der Position des Formulars oder Steuer Elements auf dem Bildschirm.  
   
- Darüber hinaus werden die Abmessungen des Clientbereichs beschrieben durch einen <xref:System.Drawing.Rectangle> -Struktur, die Clientkoordinaten für den Bereich enthält. In allen Fällen ist die linke obere Koordinate des Rechtecks im Clientbereich, enthalten, während die untere rechte Koordinate ausgeschlossen ist. Grafikoperationen enthalten nicht den rechten und unteren Rand des Clientbereichs für einen. Zum Beispiel die <xref:System.Drawing.Graphics.FillRectangle%2A> Methode an den rechten und unteren Rand des angegebenen Rechtecks gefüllt wird, enthalten aber keine dieser Kanten.  
+ Die Abmessungen des Client Bereichs werden auch durch eine <xref:System.Drawing.Rectangle> Struktur beschrieben, die Client Koordinaten für den Bereich enthält. In allen Fällen ist die obere linke Koordinate des Rechtecks im Client Bereich enthalten, während die Koordinate der unteren rechten Seite ausgeschlossen wird. Grafik Vorgänge enthalten nicht den rechten und unteren Rand eines Client Bereichs. Beispielsweise wird die <xref:System.Drawing.Graphics.FillRectangle%2A>-Methode am rechten und unteren Rand des angegebenen Rechtecks aufgefüllt, diese Ränder werden jedoch nicht eingeschlossen.  
   
-## <a name="mapping-from-one-type-of-coordinate-to-another"></a>Zuordnung von einer Koordinate zu einer anderen  
- In einigen Fällen müssen Sie möglicherweise das Zuordnen von Bildschirmkoordinaten in Clientkoordinaten. Ganz einfach erreichen Sie dies mithilfe der <xref:System.Windows.Forms.Control.PointToClient%2A> und <xref:System.Windows.Forms.Control.PointToScreen%2A> in verfügbaren Methoden der <xref:System.Windows.Forms.Control> Klasse. Z. B. die <xref:System.Windows.Forms.Control.MousePosition%2A> Eigenschaft <xref:System.Windows.Forms.Control> wird gemeldet, in Bildschirmkoordinaten, aber Sie können diese in Clientkoordinaten konvertieren.  
+## <a name="mapping-from-one-type-of-coordinate-to-another"></a>Zuordnung von einem Koordinatentyp zu einem anderen  
+ Gelegentlich müssen Sie möglicherweise von Bildschirm Koordinaten zu Client Koordinaten zuordnen. Dies können Sie problemlos erreichen, indem Sie die <xref:System.Windows.Forms.Control.PointToClient%2A>-und <xref:System.Windows.Forms.Control.PointToScreen%2A> Methoden verwenden, die in der <xref:System.Windows.Forms.Control>-Klasse verfügbar sind. Beispielsweise wird die <xref:System.Windows.Forms.Control.MousePosition%2A>-Eigenschaft von <xref:System.Windows.Forms.Control> in Bildschirm Koordinaten gemeldet, Sie möchten Sie jedoch möglicherweise in Client Koordinaten konvertieren.  
   
 ## <a name="see-also"></a>Siehe auch
 

@@ -1,5 +1,5 @@
 ---
-title: FolderBrowserDialog-Komponente (Windows Forms)
+title: FolderBrowserDialog-Komponente
 ms.date: 03/30/2017
 helpviewer_keywords:
 - folders [Windows Forms], browsing
@@ -7,22 +7,22 @@ helpviewer_keywords:
 - browsing folders
 - directories [Windows Forms], browsing
 ms.assetid: d71a0c5e-898a-4eea-be74-93bdf50d1852
-ms.openlocfilehash: 6359ea9683b9a418b7fe92dacc6140865dd01a11
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c218edb639edb9b630527c2e77125358400cf3e7
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62011332"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76745713"
 ---
 # <a name="folderbrowserdialog-component-windows-forms"></a>FolderBrowserDialog-Komponente (Windows Forms)
-Die Windows-Formulare `FolderBrowserDialog` Komponente zeigt eine Schnittstelle, mit denen Benutzer können Suchen und wählen Sie einen Ordner oder eine neue erstellen. Es ist eine Ergänzung der [OpenFileDialog-Komponente](openfiledialog-component-windows-forms.md) -Komponente, die für das Durchsuchen und Auswählen von Dateien verwendet wird.  
+Die Windows Forms `FolderBrowserDialog` Komponente zeigt eine Schnittstelle an, mit der Benutzer einen Ordner durchsuchen und auswählen oder einen neuen erstellen können. Es ist eine Ergänzung zur [OpenFileDialog-Komponenten](openfiledialog-component-windows-forms.md) Komponente, die zum Durchsuchen und Auswählen von Dateien verwendet wird.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Übersicht über die FolderBrowserDialog-Komponente (Windows Forms)](folderbrowserdialog-component-overview-windows-forms.md)  
  Hier werden das Steuerelement und seine wichtigsten Funktionen und Eigenschaften erläutert.  
   
- [Vorgehensweise: Wählen Sie Ordner mit der FolderBrowserDialog-Komponente in Windows Forms](how-to-choose-folders-with-the-windows-forms-folderbrowserdialog-component.md)  
- Erläutert, wie Sie programmgesteuert extrahieren Sie den ausgewählten Ordner aus dem Dialogfeld, als auch mit einigen der anderen, optionalen Eigenschaften der Komponente zu arbeiten.  
+ [Gewusst wie: Auswählen von Ordnern mit der FolderBrowserDialog-Komponente in Windows Forms](how-to-choose-folders-with-the-windows-forms-folderbrowserdialog-component.md)  
+ Erläutert, wie Sie den ausgewählten Ordner Programm gesteuert aus dem Dialogfeld extrahieren und mit einigen der anderen optionalen Eigenschaften der Komponente arbeiten können.  
   
 ## <a name="reference"></a>Referenz  
  <xref:System.Windows.Forms.FolderBrowserDialog>  

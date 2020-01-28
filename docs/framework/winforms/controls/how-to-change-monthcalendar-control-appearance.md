@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Ändern der Darstellung des MonthCalendar-Steuerelements in Windows Forms'
+title: Darstellung des MonthCalendar-Steuer Elements ändern
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,19 +9,19 @@ helpviewer_keywords:
 - examples [Windows Forms], calendar controls
 - MonthCalendar control [Windows Forms], formatting display
 ms.assetid: d09b95c9-e108-4608-9b31-b9100c0677bf
-ms.openlocfilehash: 5582624d881b2d8039bcd5e8ac45e548c7b38f57
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: ded9059ede4ad03f637c0e697b880c41a9a8ba32
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69929045"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76746657"
 ---
-# <a name="how-to-change-the-windows-forms-monthcalendar-controls-appearance"></a>Vorgehensweise: Ändern der Darstellung des MonthCalendar-Steuerelements in Windows Forms
-Mit dem <xref:System.Windows.Forms.MonthCalendar> Windows Forms-Steuerelement können Sie die Darstellung des Kalenders in vielerlei Hinsicht anpassen. Beispielsweise können Sie das Farbschema festlegen und angeben, ob Wochen Nummern und das aktuelle Datum angezeigt oder ausgeblendet werden sollen.  
+# <a name="how-to-change-the-windows-forms-monthcalendar-controls-appearance"></a>Gewusst wie: Ändern der Darstellung des MonthCalendar-Steuerelements in Windows Forms
+Mit dem Windows Forms <xref:System.Windows.Forms.MonthCalendar>-Steuerelement können Sie die Darstellung des Kalenders in vielerlei Hinsicht anpassen. Beispielsweise können Sie das Farbschema festlegen und angeben, ob Wochen Nummern und das aktuelle Datum angezeigt oder ausgeblendet werden sollen.  
   
 ### <a name="to-change-the-month-calendars-color-scheme"></a>So ändern Sie das Farbschema des Monats Kalenders  
   
-- Legen Sie Eigenschaften wie <xref:System.Windows.Forms.MonthCalendar.TitleBackColor%2A>, <xref:System.Windows.Forms.MonthCalendar.TitleForeColor%2A> und <xref:System.Windows.Forms.MonthCalendar.TrailingForeColor%2A>fest. Die <xref:System.Windows.Forms.MonthCalendar.TitleBackColor%2A> -Eigenschaft bestimmt auch die Schriftfarbe für die Wochentage. Die <xref:System.Windows.Forms.MonthCalendar.TrailingForeColor%2A> -Eigenschaft bestimmt die Farbe der Datumsangaben, die vorangestellt sind, und folgt den angezeigten Monaten oder Monaten.  
+- Legen Sie Eigenschaften fest, z. b. <xref:System.Windows.Forms.MonthCalendar.TitleBackColor%2A>, <xref:System.Windows.Forms.MonthCalendar.TitleForeColor%2A> und <xref:System.Windows.Forms.MonthCalendar.TrailingForeColor%2A>. Die <xref:System.Windows.Forms.MonthCalendar.TitleBackColor%2A>-Eigenschaft bestimmt auch die Schriftfarbe für die Wochentage. Die <xref:System.Windows.Forms.MonthCalendar.TrailingForeColor%2A>-Eigenschaft bestimmt die Farbe der Datumsangaben, die vorangestellt sind, und folgt den angezeigten Monaten oder Monaten.  
   
     ```vb  
     MonthCalendar1.TitleBackColor = System.Drawing.Color.Blue  
@@ -42,7 +42,7 @@ Mit dem <xref:System.Windows.Forms.MonthCalendar> Windows Forms-Steuerelement k�
     ```  
   
     > [!NOTE]
-    > Beginnend mit Windows Vista und abhängig vom Design wird durch das Festlegen einiger Eigenschaften möglicherweise nicht die Darstellung des Kalenders geändert. Wenn Windows z. b. für die Verwendung des Aero-Designs festgelegt <xref:System.Windows.Forms.MonthCalendar.BackColor%2A>ist, <xref:System.Windows.Forms.MonthCalendar.TitleForeColor%2A>hat das <xref:System.Windows.Forms.MonthCalendar.TrailingForeColor%2A> Festlegen der Eigenschaften, <xref:System.Windows.Forms.MonthCalendar.TitleBackColor%2A>, oder keine Auswirkungen. Dies liegt daran, dass eine aktualisierte Version des Kalenders mit einer Darstellung gerendert wird, die zur Laufzeit aus dem aktuellen Betriebssystemdesign abgeleitet wird. Wenn Sie diese Eigenschaften verwenden und die frühere Version des Kalenders aktivieren möchten, können Sie visuelle Stile für die Anwendung deaktivieren. Das Deaktivieren von visuellen Stilen kann sich auf die Darstellung und das Verhalten anderer Steuerelemente in der Anwendung auswirken. Um visuelle Stile in Visual Basic zu deaktivieren, öffnen Sie den Projekt-Designer, und deaktivieren Sie das Kontrollkästchen **Visual XP-Stile aktivieren** . Um visuelle Stile in C#zu deaktivieren, öffnen Sie Program.cs, `Application.EnableVisualStyles();`und kommentieren Sie aus. Weitere Informationen zu visuellen Stilen finden Sie unter [Aktivieren von visuellen Stilen](/windows/desktop/controls/cookbook-overview).  
+    > Beginnend mit Windows Vista und abhängig vom Design wird durch das Festlegen einiger Eigenschaften möglicherweise nicht die Darstellung des Kalenders geändert. Wenn Windows z. b. für die Verwendung des Aero-Designs festgelegt ist, hat das Festlegen der Eigenschaften <xref:System.Windows.Forms.MonthCalendar.BackColor%2A>, <xref:System.Windows.Forms.MonthCalendar.TitleBackColor%2A>, <xref:System.Windows.Forms.MonthCalendar.TitleForeColor%2A>oder <xref:System.Windows.Forms.MonthCalendar.TrailingForeColor%2A> keinerlei Auswirkungen. Dies liegt daran, dass eine aktualisierte Version des Kalenders mit einer Darstellung gerendert wird, die zur Laufzeit aus dem aktuellen Betriebssystemdesign abgeleitet wird. Wenn Sie diese Eigenschaften verwenden und die frühere Version des Kalenders aktivieren möchten, können Sie visuelle Stile für die Anwendung deaktivieren. Das Deaktivieren von visuellen Stilen kann sich auf die Darstellung und das Verhalten anderer Steuerelemente in der Anwendung auswirken. Um visuelle Stile in Visual Basic zu deaktivieren, öffnen Sie den Projekt-Designer, und deaktivieren Sie das Kontrollkästchen **Visual XP-Stile aktivieren** . Um visuelle Stile in C#zu deaktivieren, öffnen Sie Program.cs, und kommentieren Sie `Application.EnableVisualStyles();`aus. Weitere Informationen zu visuellen Stilen finden Sie unter [Aktivieren von visuellen Stilen](/windows/desktop/controls/cookbook-overview).  
   
 ### <a name="to-display-the-current-date-at-the-bottom-of-the-control"></a>So zeigen Sie das aktuelle Datum am unteren Rand des Steuer Elements an  
   
@@ -106,6 +106,6 @@ Mit dem <xref:System.Windows.Forms.MonthCalendar> Windows Forms-Steuerelement k�
 ## <a name="see-also"></a>Siehe auch
 
 - [MonthCalendar-Steuerelement](monthcalendar-control-windows-forms.md)
-- [Vorgehensweise: Wählen Sie einen Datumsbereich im Windows Forms MonthCalendar-Steuerelement aus.](how-to-select-a-range-of-dates-in-the-windows-forms-monthcalendar-control.md)
-- [Vorgehensweise: Anzeigen bestimmter Tage in Fett Schrift mit dem Windows Forms MonthCalendar-Steuerelement](display-specific-days-in-bold-with-wf-monthcalendar-control.md)
-- [Vorgehensweise: Mehr als einen Monat im Windows Forms MonthCalendar-Steuerelement anzeigen](display-more-than-one-month-wf-monthcalendar-control.md)
+- [Gewusst wie: Auswählen eines Datumsbereichs mithilfe des MonthCalendar-Steuerelements in Windows Forms](how-to-select-a-range-of-dates-in-the-windows-forms-monthcalendar-control.md)
+- [Gewusst wie: Anzeigen einzelner Tage in Fettschrift mit dem MonthCalendar-Steuerelement in Windows Forms](display-specific-days-in-bold-with-wf-monthcalendar-control.md)
+- [Gewusst wie: Anzeigen mehrerer Monate mit dem MonthCalendar-Steuerelement in Windows Forms](display-more-than-one-month-wf-monthcalendar-control.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - class library design guidelines [.NET Framework], enumerations
 - flags enumerations
 ms.assetid: dd53c952-9d9a-4736-86ff-9540e815d545
-ms.openlocfilehash: 130e9b4e7f8d7076d1dc3f21f51dc07a68799bbe
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 3b24bfefd3edb0585e9c6369e9b8151b17151661
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75709451"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76741715"
 ---
 # <a name="enum-design"></a>Enum-Entwurf
 
@@ -24,29 +24,29 @@ Einfache Aufstellungen stellen kleine geschlossene Sätze von Auswahlmöglichkei
 
 Flag-Enumerationen sind so konzipiert, dass bitweise Vorgänge für die Enumerationswerte unterstützt werden. Ein gängiges Beispiel für die Flags-Enumeration ist eine Liste von Optionen.
 
-**✓ DO** mit, dass eine Enumeration typisieren Parameter, Eigenschaften und Rückgabewerte, die Sätze von Werten darstellen.
+✔️ eine Enumeration verwenden, um Parameter, Eigenschaften und Rückgabewerte, die Sätze von Werten darstellen, stark einzugeben.
 
-**✓ DO** statische Konstanten anstelle einer Enumeration begünstigen.
+✔️ bevorzugen die Verwendung einer Enumeration anstelle von statischen Konstanten.
 
-**X DO NOT** Enum für offene Gruppen (z. B. die Version des Betriebssystems, Namen von Ihrer Freunde usw.) verwenden.
+❌ keine Enumeration für geöffnete Sätze verwenden (z. b. die Betriebssystemversion, die Namen Ihrer Freunde usw.).
 
-**X DO NOT** Geben Sie für die zukünftige Verwendung reservierte Enumerationswerte, die vorgesehen sind.
+❌ keine reservierten Enumerationswerte bereit, die für die zukünftige Verwendung vorgesehen sind.
 
 Sie können der vorhandenen Enumeration jederzeit einfach Werte hinzufügen. Weitere Informationen zum Hinzufügen von Werten zu enumeraten finden [Sie unter Hinzufügen von Werten zu](#add_value) Enumerationswerten Reservierte Werte verschmutzen lediglich den Satz realer Werte und führen tendenziell zu Benutzerfehlern.
 
-**X AVOID** öffentlich verfügbar machen Enumerationen mit nur einem Wert.
+❌ vermeiden, dass Enumerationswerte nur mit einem Wert öffentlich verfügbar gemacht werden
 
 Eine gängige Vorgehensweise, um die zukünftige Erweiterbarkeit von C-APIs sicherzustellen, besteht darin, den Methoden Signaturen reservierte Parameter hinzuzufügen. Solche reservierten Parameter können als Enumerationswerte mit einem einzelnen Standardwert ausgedrückt werden. Dies sollte nicht in verwalteten APIs erfolgen. Die Methoden Überladung ermöglicht das Hinzufügen von Parametern in zukünftigen Versionen.
 
-**X DO NOT** Sentinel Werte in Enumerationen enthalten.
+❌ keine Sentinel-Werte in Enumerationswerte einschließen.
 
 Obwohl Sie für Frameworkentwickler manchmal hilfreich sind, sind Sentinel-Werte für Benutzer des Frameworks verwirrend. Sie werden verwendet, um den Zustand der Enumeration zu verfolgen, anstatt einen der Werte aus dem Satz zu verwenden, der durch die Enumeration repräsentiert wird.
 
-**✓ DO** Geben Sie einen Wert von 0 zu einfachen Enumerationen.
+✔️ für einfache Enumerationswerte den Wert 0 (null) bereitstellen.
 
 Es empfiehlt sich, den Wert in etwa "None" zu aufrufen. Wenn ein solcher Wert für diese bestimmte Enumeration nicht geeignet ist, sollte dem am häufigsten voreingestellten Standardwert für die Enumeration der zugrunde liegende Wert 0 (null) zugewiesen werden.
 
-**✓ CONSIDER** mit <xref:System.Int32> (die Standardeinstellung in den meisten Programmiersprachen) als zugrunde liegende Typ einer Enumeration, wenn eine der folgenden Aussagen zutrifft:
+✔️ sollten Sie in Erwägung gezogen werden, in den meisten Programmiersprachen <xref:System.Int32> als zugrunde liegenden Typ einer-Aufzählung zu verwenden, es sei denn, eine der folgenden Werte ist true:
 
 - Die Enumeration ist eine Flags-Enumeration, und Sie verfügen über mehr als 32 Flags oder erwarten, dass in der Zukunft mehr vorhanden sind.
 
@@ -62,9 +62,9 @@ Es empfiehlt sich, den Wert in etwa "None" zu aufrufen. Wenn ein solcher Wert f�
 
 Beachten Sie bei der in-Memory-Verwendung, dass verwaltete Objekte stets `DWORD`ausgerichtet sind, sodass Sie tatsächlich mehrere Enumerationen oder andere kleine Strukturen in einer Instanz benötigen, um eine kleinere Aufzählung mit zu erstellen, um einen Unterschied zu schaffen, da die gesamte instanzgröße immer auf einen `DWORD`aufgerundet wird.
 
-**✓ DO** benennen Flags-Enumerationen mit Nomen im plural oder Substantivausdrücke und einfache Enumerationen mit Nomen im singular oder nominale Ausdrücke.
+✔️ durch eine namensflag-Enumerationen mit Plural-Nomen oder nominalen Ausdrücken und einfachen Enumerationen mit Singular-Nomen oder Substantiv Ausdrücken.
 
-**X DO NOT** erweitern <xref:System.Enum?displayProperty=nameWithType> direkt.
+❌ <xref:System.Enum?displayProperty=nameWithType> nicht direkt erweitern.
 
 <xref:System.Enum?displayProperty=nameWithType> ist ein spezieller Typ, der von der CLR verwendet wird, um benutzerdefinierte Enumerationen zu erstellen. Die meisten Programmiersprachen bieten ein Programmier Element, das Ihnen den Zugriff auf diese Funktionalität ermöglicht. Beispielsweise wird im C# `enum`-Schlüsselwort verwendet, um eine Enumeration zu definieren.
 
@@ -72,19 +72,19 @@ Beachten Sie bei der in-Memory-Verwendung, dass verwaltete Objekte stets `DWORD`
 
 ### <a name="designing-flag-enums"></a>Entwerfen von Flag-Aufständen
 
-**✓ DO** gelten die <xref:System.FlagsAttribute?displayProperty=nameWithType> Flags-Enumerationen. Wenden Sie dieses Attribut nicht auf einfache auffüge Aufgaben an.
+✔️ die <xref:System.FlagsAttribute?displayProperty=nameWithType> zum Markieren von Aufständen anwenden. Wenden Sie dieses Attribut nicht auf einfache auffüge Aufgaben an.
 
-**✓ DO** Potenzen von 2 für die Kennzeichnung Enum-Werte verwenden, damit diese problemlos kombiniert werden, können mit dem bitweisen OR-Operation.
+✔️ für die Flag-Enumerationswerte zwei Möglichkeiten verwenden, damit Sie mit der bitweisen OR-Operation frei kombiniert werden können.
 
-**✓ CONSIDER** Kombinationen der Flags verwendet spezielle Enumerationswerte für häufig bereitstellen.
+✔️ sollten besondere Enumerationswerte für häufig verwendete Kombinationen von Flags bereitgestellt werden.
 
 Bitweise Vorgänge sind ein erweitertes Konzept, das für einfache Aufgaben nicht erforderlich ist. <xref:System.IO.FileAccess.ReadWrite> ist ein Beispiel für einen solchen besonderen Wert.
 
-**X AVOID** Erstellen von Flags-Enumerationen, in denen bestimmte Kombinationen von Werten ungültig sind.
+❌ vermeiden Sie das Erstellen von Flag-enumeraten, wenn bestimmte Kombinationen von Werten ungültig sind
 
-**X AVOID** mit Flagwerten Enum 0 (null), wenn der Wert "deaktiviert sind alle Flags" darstellt und Sie heißt entsprechend, wie der nächsten Richtlinie vorgesehen.
+❌ vermeiden Sie die Verwendung von Flag-Enumerationswerten von 0 (null), es sei denn, der Wert steht für "alle Flags sind gelöscht" und entsprechend der Bezeichnung durch die nächste Richtlinie
 
-**✓ DO** benennen Sie den Wert 0 (null) von Flags-Enumerationen `None`. Bei einer Flag-Enumeration muss der Wert immer lauten, dass alle Flags gelöscht werden.
+✔️ den Wert 0 (null) der Flag-enumerationszeichen `None`. Bei einer Flag-Enumeration muss der Wert immer lauten, dass alle Flags gelöscht werden.
 
 <a name="add_value"></a>
 
@@ -92,7 +92,7 @@ Bitweise Vorgänge sind ein erweitertes Konzept, das für einfache Aufgaben nich
 
 Es kommt häufig vor, dass Sie einer Enumeration Werte hinzufügen müssen, nachdem Sie Sie bereits geliefert haben. Es gibt ein potenzielles Problem mit der Anwendungs Kompatibilität, wenn der neu hinzugefügte Wert von einer vorhandenen API zurückgegeben wird, da schlecht geschriebene Anwendungen den neuen Wert möglicherweise nicht ordnungsgemäß verarbeiten.
 
-**✓ CONSIDER** Enumerationen, die trotz eines geringen Kompatibilitätsproblems Werte hinzugefügt.
+✔️ ggf. Werte zu Enumerationswerten hinzufügen, trotz eines geringen Kompatibilitäts Risikos.
 
 Wenn Sie über echte Daten über Anwendungs Inkompatibilitäten verfügen, die durch Ergänzungen zu einer Enumeration verursacht werden, sollten Sie eine neue API hinzufügen, die die neuen und alten Werte zurückgibt, und die alte API als veraltet kennzeichnen, sodass nur die alten Werte zurückgegeben werden sollten. Dadurch wird sichergestellt, dass Ihre vorhandenen Anwendungen kompatibel bleiben.
 

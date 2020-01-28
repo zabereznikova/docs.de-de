@@ -1,5 +1,5 @@
 ---
-title: Programmieren mit Zellen, Zeilen und Spalten im DataGridView-Steuerelement in Windows Forms
+title: Programmieren mit Zellen, Zeilen und Spalten im DataGridView-Steuerelement
 ms.date: 03/30/2017
 helpviewer_keywords:
 - data grids [Windows Forms], elements
@@ -8,51 +8,51 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], programming with grid elements
 - rows [Windows Forms], data grids
 ms.assetid: 0d76f7e4-4149-42c6-9118-bb37d6669dc5
-ms.openlocfilehash: 085fcd0114742e787c8cbcaabf89a354b0e3e830
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e2d5927ecff734b359b860701e094480bbf3188f
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62012528"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76741350"
 ---
 # <a name="programming-with-cells-rows-and-columns-in-the-windows-forms-datagridview-control"></a>Programmieren mit Zellen, Zeilen und Spalten im DataGridView-Steuerelement in Windows Forms
-Dieser Abschnitt enthält Themen, die verschiedene Aufgaben der Programmierung mit Zellen-, Zeilen- und Spaltenobjekten zu veranschaulichen.  
+Dieser Abschnitt enthält Themen, in denen verschiedene Programmieraufgaben im Zusammenhang mit Zellen-, Zeilen-und Spalten Objekten veranschaulicht werden.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Vorgehensweise: Hinzufügen von QuickInfos zu einzelnen Zellen in einem DataGridView-Steuerelement in Windows Forms](add-tooltips-to-individual-cells-in-a-wf-datagridview-control.md)  
- Beschreibt, wie Sie behandelt die <xref:System.Windows.Forms.DataGridView.CellFormatting> Ereignis, um unterschiedliche QuickInfos für einzelne Zellen bereitzustellen.  
+ [Gewusst wie: Hinzufügen von QuickInfos zu einzelnen Zellen in einem DataGridView-Steuerelement in Windows Forms](add-tooltips-to-individual-cells-in-a-wf-datagridview-control.md)  
+ Beschreibt, wie das <xref:System.Windows.Forms.DataGridView.CellFormatting> Ereignis behandelt wird, um unterschiedliche Quick Infos für einzelne Zellen bereitzustellen.  
   
- [Vorgehensweise: Ausführen einer benutzerdefinierten Aktion basierend auf Änderungen in einer Zelle des DataGridView-Steuerelement für eine Windows Forms](perform-a-custom-action-based-on-changes-in-a-cell-of-a-datagrid.md)  
- Beschreibt, wie Sie behandelt die <xref:System.Windows.Forms.DataGridView.CellValueChanged> und <xref:System.Windows.Forms.DataGridView.CellStateChanged> Ereignisse.  
+ [Gewusst wie: Ausführen einer benutzerdefinierten Aktion aufgrund von Änderungen in einer Zelle des DataGridView-Steuerelements in Windows Forms](perform-a-custom-action-based-on-changes-in-a-cell-of-a-datagrid.md)  
+ Beschreibt, wie die <xref:System.Windows.Forms.DataGridView.CellValueChanged> und <xref:System.Windows.Forms.DataGridView.CellStateChanged> Ereignisse behandelt werden.  
   
- [Vorgehensweise: Bearbeiten von Bändern im DataGridView-Steuerelement in Windows Forms](how-to-manipulate-bands-in-the-windows-forms-datagridview-control.md)  
- Beschreibt, wie Sie mit Objekten vom Typ <xref:System.Windows.Forms.DataGridViewBand>, dies ist der Basistyp für Zeilen und Spalten.  
+ [Gewusst wie: Bearbeiten von Bändern im DataGridView-Steuerelement in Windows Forms](how-to-manipulate-bands-in-the-windows-forms-datagridview-control.md)  
+ Beschreibt, wie mit Objekten vom Typ <xref:System.Windows.Forms.DataGridViewBand>programmiert werden kann. Dies ist der Basistyp für Zeilen und Spalten.  
   
- [Vorgehensweise: Bearbeiten von Zeilen im DataGridView-Steuerelement in Windows Forms](how-to-manipulate-rows-in-the-windows-forms-datagridview-control.md)  
- Beschreibt, wie Sie mit Objekten vom Typ `DataGridViewRow`.  
+ [Gewusst wie: Bearbeiten von Zeilen im DataGridView-Steuerelement in Windows Forms](how-to-manipulate-rows-in-the-windows-forms-datagridview-control.md)  
+ Beschreibt, wie mit Objekten vom Typ `DataGridViewRow`programmiert werden kann.  
   
- [Vorgehensweise: Bearbeiten der Spalten im DataGridView-Steuerelement in Windows Forms](how-to-manipulate-columns-in-the-windows-forms-datagridview-control.md)  
- Beschreibt, wie Sie mit Objekten vom Typ `DataGridViewColumn`.  
+ [Gewusst wie: Bearbeiten von Spalten im DataGridView-Steuerelement in Windows Forms](how-to-manipulate-columns-in-the-windows-forms-datagridview-control.md)  
+ Beschreibt, wie mit Objekten vom Typ `DataGridViewColumn`programmiert werden kann.  
   
- [Vorgehensweise: Arbeiten Sie mit Bildspalten im DataGridView-Steuerelement in Windows Forms](how-to-work-with-image-columns-in-the-windows-forms-datagridview-control.md)  
- Beschreibt die Programmierung mit der `DataGridViewImageColumn` Klasse.  
+ [Gewusst wie: Arbeiten mit Bildspalten im DataGridView-Steuerelement in Windows Forms](how-to-work-with-image-columns-in-the-windows-forms-datagridview-control.md)  
+ Beschreibt das Programmieren mit der `DataGridViewImageColumn`-Klasse.  
   
 ## <a name="reference"></a>Referenz  
  <xref:System.Windows.Forms.DataGridView>  
  Enthält die Referenzdokumentation für das <xref:System.Windows.Forms.DataGridView>-Steuerelement.  
   
  <xref:System.Windows.Forms.DataGridViewCell>  
- Enthält die Referenzdokumentation für die <xref:System.Windows.Forms.DataGridViewCell> Klasse.  
+ Enthält die Referenz Dokumentation für die <xref:System.Windows.Forms.DataGridViewCell>-Klasse.  
   
  <xref:System.Windows.Forms.DataGridViewRow>  
- Enthält die Referenzdokumentation für die <xref:System.Windows.Forms.DataGridViewRow> Klasse.  
+ Enthält die Referenz Dokumentation für die <xref:System.Windows.Forms.DataGridViewRow>-Klasse.  
   
  <xref:System.Windows.Forms.DataGridViewColumn>  
- Enthält die Referenzdokumentation für die <xref:System.Windows.Forms.DataGridViewColumn> Klasse.  
+ Enthält die Referenz Dokumentation für die <xref:System.Windows.Forms.DataGridViewColumn>-Klasse.  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
  [Grundlegende Spalten-, Zeilen- und Zellfunktionen im DataGridView-Steuerelement in Windows Forms](basic-column-row-and-cell-features-wf-datagridview-control.md)  
- Enthält Themen, in denen häufig Eigenschaften von Zellen, Zeilen und Spalten verwendet.  
+ Stellt Themen bereit, in denen häufig verwendete Zellen-, Zeilen-und Spalten Eigenschaften beschrieben werden.  
   
 ## <a name="see-also"></a>Siehe auch
 

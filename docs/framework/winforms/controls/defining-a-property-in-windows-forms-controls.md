@@ -1,5 +1,5 @@
 ---
-title: Definieren einer Eigenschaft in Windows Forms-Steuerelementen
+title: Definieren von Steuerelement Eigenschaften
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,19 +8,19 @@ helpviewer_keywords:
 - properties [Windows Forms], defining in code
 - custom controls [Windows Forms], defining properties in code
 ms.assetid: c2eb8277-a842-4d99-89a9-647b901a0434
-ms.openlocfilehash: a641b1e7565842a1edf6aeec88bdc37ee0786ab4
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 0fec817226a7da4b44ec992f9e384a2ad5449001
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69969113"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76746106"
 ---
 # <a name="defining-a-property-in-windows-forms-controls"></a>Definieren einer Eigenschaft in Windows Forms-Steuerelementen
 Eine Übersicht über Eigenschaften finden Sie unter [Übersicht über Eigenschaften](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/65zdfbdt(v=vs.120)). Es gibt einige wichtige Überlegungen beim Definieren einer Eigenschaft:  
   
 - Sie müssen auf die Eigenschaften, die Sie definieren, Attribute anwenden. Attribute geben an, wie der Designer eine Eigenschaft anzeigen sollte. Einzelheiten hierzu finden Sie unter [Attribute für Komponenten in der Entwurfszeit](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/tk67c2t8(v=vs.120)).  
   
-- Wenn sich die Änderung der-Eigenschaft auf die visuelle Darstellung des Steuer Elements <xref:System.Windows.Forms.Control.Invalidate%2A> auswirkt, müssen Sie die-Methode ( <xref:System.Windows.Forms.Control>die von Ihrem `set` Steuerelement erbt) aus der-Zugriffsmethode aufrufen. <xref:System.Windows.Forms.Control.Invalidate%2A>Ruft wiederum die <xref:System.Windows.Forms.Control.OnPaint%2A> -Methode auf, die das-Steuerelement neu zeichnet. Mehrere Aufrufe <xref:System.Windows.Forms.Control.Invalidate%2A> von führen zu einem einzigen <xref:System.Windows.Forms.Control.OnPaint%2A> Aufruf von aus Gründen der Effizienz.  
+- Wenn sich die Änderung der-Eigenschaft auf die visuelle Darstellung des Steuer Elements auswirkt, können Sie die <xref:System.Windows.Forms.Control.Invalidate%2A>-Methode aufrufen (die das-Steuerelement von <xref:System.Windows.Forms.Control>) aus dem `set`-Accessor erbt. <xref:System.Windows.Forms.Control.Invalidate%2A> wiederum ruft die <xref:System.Windows.Forms.Control.OnPaint%2A>-Methode auf, die das-Steuerelement neu zeichnet. Mehrere Aufrufe von <xref:System.Windows.Forms.Control.Invalidate%2A> führen zu einem einzigen Aufruf von <xref:System.Windows.Forms.Control.OnPaint%2A> aus Gründen der Effizienz.  
   
 - Die .NET Framework-Klassenbibliothek stellt Typkonverter für häufig verwendete Datentypen wie z.B. ganze Zahlen, Dezimalzahlen, boolesche Werte und andere bereit. Der Zweck eines Typkonverters ist im Allgemeinen, die Konvertierung von einer Zeichenfolge in einen Wert (von Zeichenfolgedaten in andere Datentypen) bereitzustellen. Allgemeine Datentypen sind Standardtypkonverter, die Werte in Zeichenfolgen und Zeichenfolgen in die entsprechenden Datentypen konvertieren. Wenn Sie eine Eigenschaft definieren (d.h. nicht dem Standard entsprechend), die einen benutzerdefinierten Datentyp aufweist, müssen Sie ein Attribut anwenden, das den dieser Eigenschaft zuzuordnenden Typkonverter angibt. Sie können ein Attribut auch verwenden, um einer Eigenschaft einen benutzerdefinierten Typeditor für die Benutzeroberfläche zuzuordnen. Ein Typeditor für die Benutzeroberfläche stellt eine Benutzeroberfläche für die Bearbeitung einer Eigenschaft oder eines Datentyps bereit. So ist beispielsweise ein Farbwähler ein Typeditor für die Benutzeroberfläche. Beispiele für Attribute werden am Ende dieses Themas angegeben.  
   
@@ -95,7 +95,7 @@ public class FlashTrackBar : Control {
 }  
 ```  
   
- Das folgende Codefragment ordnet der Eigenschaft `Value` einen Typkonverter und einen Typeditor für die Benutzeroberfläche zu. In diesem Fall `Value` ist eine ganze Zahl, die über einen Standardtyp Konverter <xref:System.ComponentModel.TypeConverterAttribute> verfügt, aber das-Attribut wendet`FlashTrackBarValueConverter`einen benutzerdefinierten Typkonverter () an, der es dem Designer ermöglicht, ihn als Prozentsatz anzuzeigen. Im Typeditor für die Benutzeroberfläche, `FlashTrackBarValueEditor`, kann der Prozentwert visuell angezeigt werden. Dieses Beispiel zeigt auch, dass der vom <xref:System.ComponentModel.TypeConverterAttribute> -oder <xref:System.ComponentModel.EditorAttribute> -Attribut angegebene Typkonverter oder Editor den Standard Konverter überschreibt.  
+ Das folgende Codefragment ordnet der Eigenschaft `Value` einen Typkonverter und einen Typeditor für die Benutzeroberfläche zu. In diesem Fall ist `Value` eine ganze Zahl und verfügt über einen Standardtyp Konverter, aber das <xref:System.ComponentModel.TypeConverterAttribute>-Attribut wendet einen benutzerdefinierten Typkonverter (`FlashTrackBarValueConverter`) an, der es dem Designer ermöglicht, ihn als Prozentsatz anzuzeigen. Im Typeditor für die Benutzeroberfläche, `FlashTrackBarValueEditor`, kann der Prozentwert visuell angezeigt werden. Dieses Beispiel zeigt auch, dass der vom <xref:System.ComponentModel.TypeConverterAttribute> oder <xref:System.ComponentModel.EditorAttribute> Attribut angegebene Typkonverter oder Editor den Standard Konverter überschreibt.  
   
 ```vb  
 <Category("Flash"), _  
@@ -122,7 +122,7 @@ public int Value {
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Eigenschaften in Windows Forms-Steuerelementen](properties-in-windows-forms-controls.md)
+- [Eigenschaften von Windows Forms-Steuerelementen](properties-in-windows-forms-controls.md)
 - [Definieren von Standardwerten mit der ShouldSerialize-Methode und der Reset-Methode](defining-default-values-with-the-shouldserialize-and-reset-methods.md)
 - [Durch geänderte Eigenschaften ausgelöste Ereignisse](property-changed-events.md)
 - [Attribute in Windows Forms-Steuerelementen](attributes-in-windows-forms-controls.md)

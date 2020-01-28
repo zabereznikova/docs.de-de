@@ -2,15 +2,16 @@
 title: Beispiel für Ermittlungssicherheit
 ms.date: 03/30/2017
 ms.assetid: b8db01f4-b4a1-43fe-8e31-26d4e9304a65
-ms.openlocfilehash: 8469b69baabcd2ba9185956c276554b4bb929d85
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: cfee226f52bc5f001b2952b76b40ce0eb8aebceb
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74712056"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76728856"
 ---
 # <a name="discovery-security-sample"></a>Beispiel für Ermittlungssicherheit
-Die Discovery-Spezifikation erfordert nicht, dass Endpunkte, die am Suchvorgang beteiligt sind, sicher sein müssen. Die Erweiterung der Sicherheit von Suchmeldungen mindert das Risiko für verschiedene Angriffe (Meldungsänderung, Denial of Service, Wiederholung, Spoofing). In diesem Beispiel werden benutzerdefinierte Kanäle implementiert, die Meldungssignaturen mit dem kompakten Signaturformat berechnen und verifizieren. (Dies wird in Abschnitt 8.2 der WS-Discovery-Spezifikation beschrieben.) Das Beispiel unterstützt sowohl die [2005 Discovery-Spezifikation](https://go.microsoft.com/fwlink/?LinkId=177912) als auch die [1,1-Version](https://go.microsoft.com/fwlink/?LinkId=179677).  
+
+Die Discovery-Spezifikation erfordert nicht, dass Endpunkte, die am Suchvorgang beteiligt sind, sicher sein müssen. Die Erweiterung der Sicherheit von Suchmeldungen mindert das Risiko für verschiedene Angriffe (Meldungsänderung, Denial of Service, Wiederholung, Spoofing). In diesem Beispiel werden benutzerdefinierte Kanäle implementiert, die Meldungssignaturen mit dem kompakten Signaturformat berechnen und verifizieren. (Dies wird in Abschnitt 8.2 der WS-Discovery-Spezifikation beschrieben.) Das Beispiel unterstützt sowohl die [2005 Discovery-Spezifikation](http://specs.xmlsoap.org/ws/2005/04/discovery/ws-discovery.pdf) als auch die [1,1-Version](http://docs.oasis-open.org/ws-dd/discovery/1.1/cs-01/wsdd-discovery-1.1-spec-cs-01.pdf).  
   
  Der benutzerdefinierte Kanal wird an die oberste Stelle des vorhandenen Kanalstapels für Ermittlungs- und Ankündigungsendpunkte gesetzt. Auf diese Weise wird ein Signaturheader für jede gesendete Meldung übernommen. Die Signatur wird im Hinblick auf empfangene Meldungen überprüft. Wenn die Signatur nicht übereinstimmt oder die Meldungen nicht über eine Signatur verfügen, werden sie verworfen. Im Beispiel werden Zertifikate verwendet, um Meldungen zu signieren und zu überprüfen.  
   

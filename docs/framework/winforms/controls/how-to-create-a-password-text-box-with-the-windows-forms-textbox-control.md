@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Erstellen eines Kennwort-Textfelds mit dem TextBox-Steuerelement in Windows Forms'
+title: Textfeld "Kennwort" mit TextBox-Steuerelement erstellen
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,29 +12,29 @@ helpviewer_keywords:
 - passwords [Windows Forms], input mask
 - passwords [Windows Forms], password text box
 ms.assetid: d105d6b9-3d50-44cd-80d8-2c0e2f486727
-ms.openlocfilehash: 56391777c75db288c33d1b2192355be0df50f7ee
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: ff4706a736d15f14cf437c808219e9088773dc6d
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70046123"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76731280"
 ---
-# <a name="how-to-create-a-password-text-box-with-the-windows-forms-textbox-control"></a>Vorgehensweise: Erstellen eines Kennwort-Textfelds mit dem TextBox-Steuerelement in Windows Forms
+# <a name="how-to-create-a-password-text-box-with-the-windows-forms-textbox-control"></a>Gewusst wie: Erstellen eines Kennwort-Textfelds mit dem TextBox-Steuerelement in Windows Forms
 
 Ein Kennwortfeld ist ein Windows Forms Textfeld, in dem Platzhalter Zeichen angezeigt werden, während ein Benutzer eine Zeichenfolge eingibt.
 
 ### <a name="to-create-a-password-text-box"></a>So erstellen Sie ein Kennwort-Textfeld
 
-1. Legen Sie <xref:System.Windows.Forms.TextBox.PasswordChar%2A> die-Eigenschaft <xref:System.Windows.Forms.TextBox> des-Steuer Elements auf ein bestimmtes Zeichen fest.
+1. Legen Sie die <xref:System.Windows.Forms.TextBox.PasswordChar%2A>-Eigenschaft des <xref:System.Windows.Forms.TextBox>-Steuer Elements auf ein bestimmtes Zeichen fest.
 
-    Die <xref:System.Windows.Forms.TextBox.PasswordChar%2A> -Eigenschaft gibt das Zeichen an, das im Textfeld angezeigt wird. Wenn Sie z. b. Sternchen im Feld Kennwort anzeigen möchten, geben Sie für die <xref:System.Windows.Forms.TextBox.PasswordChar%2A> -Eigenschaft im Eigenschaftenfenster * an. Unabhängig davon, welches Zeichen ein Benutzer im Textfeld eingibt, wird ein Sternchen angezeigt.
+    Die <xref:System.Windows.Forms.TextBox.PasswordChar%2A>-Eigenschaft gibt das Zeichen an, das im Textfeld angezeigt wird. Wenn Sie z. b. Sternchen im Feld Kennwort anzeigen möchten, geben Sie * für die <xref:System.Windows.Forms.TextBox.PasswordChar%2A>-Eigenschaft in der Eigenschaftenfenster an. Unabhängig davon, welches Zeichen ein Benutzer im Textfeld eingibt, wird ein Sternchen angezeigt.
 
-2. Optionale Legen Sie <xref:System.Windows.Forms.TextBoxBase.MaxLength%2A> die-Eigenschaft fest. Die-Eigenschaft bestimmt, wie viele Zeichen in das Textfeld eingegeben werden können. Wenn die maximale Länge überschritten wird, gibt das System ein Signal aus, und das Textfeld akzeptiert keine weiteren Zeichen. Beachten Sie, dass Sie dies möglicherweise nicht tun möchten, da die maximale Länge eines Kennworts für Hacker verwendet werden kann, die versuchen, das Kennwort zu erraten.
+2. Optionale Legen Sie die <xref:System.Windows.Forms.TextBoxBase.MaxLength%2A>-Eigenschaft fest. Die-Eigenschaft bestimmt, wie viele Zeichen in das Textfeld eingegeben werden können. Wenn die maximale Länge überschritten wird, gibt das System ein Signal aus, und das Textfeld akzeptiert keine weiteren Zeichen. Beachten Sie, dass Sie dies möglicherweise nicht tun möchten, da die maximale Länge eines Kennworts für Hacker verwendet werden kann, die versuchen, das Kennwort zu erraten.
 
-    Im folgenden Codebeispiel wird veranschaulicht, wie ein Textfeld initialisiert wird, das eine Zeichenfolge mit einer Länge von bis zu 14 Zeichen akzeptiert und Sternchen anstelle der Zeichenfolge anzeigt. Die `InitializeMyControl` Prozedur wird nicht automatisch ausgeführt. Sie muss aufgerufen werden.
+    Im folgenden Codebeispiel wird veranschaulicht, wie ein Textfeld initialisiert wird, das eine Zeichenfolge mit einer Länge von bis zu 14 Zeichen akzeptiert und Sternchen anstelle der Zeichenfolge anzeigt. Die `InitializeMyControl` Prozedur wird nicht automatisch ausgeführt. Es muss aufgerufen werden.
 
     > [!IMPORTANT]
-    > Mithilfe der <xref:System.Windows.Forms.TextBox.PasswordChar%2A> -Eigenschaft in einem Textfeld können Sie sicherstellen, dass andere Personen das Kennwort eines Benutzers nicht ermitteln können, wenn der Benutzer die Eingabe des Benutzers eingibt. Diese Sicherheitsmaßnahme deckt keinerlei Speicherung oder Übertragung des Kennworts ab, das aufgrund ihrer Anwendungslogik auftreten kann. Da der eingegebene Text in keiner Weise verschlüsselt ist, sollten Sie ihn wie alle anderen vertraulichen Daten behandeln. Obwohl es nicht als solches erscheint, wird das Kennwort immer noch als nur-Text-Zeichenfolge behandelt (es sei denn, Sie haben eine zusätzliche Sicherheitsmaßnahme implementiert).
+    > Mithilfe der Eigenschaft <xref:System.Windows.Forms.TextBox.PasswordChar%2A> in einem Textfeld können Sie sicherstellen, dass andere Personen das Kennwort eines Benutzers nicht ermitteln können, wenn der Benutzer die Eingabe des Benutzers eingibt. Diese Sicherheitsmaßnahme deckt keinerlei Speicherung oder Übertragung des Kennworts ab, das aufgrund ihrer Anwendungslogik auftreten kann. Da der eingegebene Text in keiner Weise verschlüsselt ist, sollten Sie ihn wie alle anderen vertraulichen Daten behandeln. Obwohl es nicht als solches erscheint, wird das Kennwort immer noch als nur-Text-Zeichenfolge behandelt (es sei denn, Sie haben eine zusätzliche Sicherheitsmaßnahme implementiert).
 
     ```vb
     Private Sub InitializeMyControl()
@@ -76,9 +76,9 @@ Ein Kennwortfeld ist ein Windows Forms Textfeld, in dem Platzhalter Zeichen ange
 
 - <xref:System.Windows.Forms.TextBox>
 - [Übersicht über das TextBox-Steuerelement](textbox-control-overview-windows-forms.md)
-- [Vorgehensweise: Steuern der Einfügemarke in einem Windows Forms TextBox-Steuerelement](how-to-control-the-insertion-point-in-a-windows-forms-textbox-control.md)
+- [Vorgehensweise: Steuern der Einfügemarke in einem TextBox-Steuerelement in Windows Forms](how-to-control-the-insertion-point-in-a-windows-forms-textbox-control.md)
 - [Vorgehensweise: Erstellen eines schreibgeschützten Textfelds](how-to-create-a-read-only-text-box-windows-forms.md)
-- [Vorgehensweise: Anführungszeichen in eine Zeichenfolge einfügen](how-to-put-quotation-marks-in-a-string-windows-forms.md)
-- [Vorgehensweise: Text im TextBox-Steuerelement Windows Forms auswählen](how-to-select-text-in-the-windows-forms-textbox-control.md)
-- [Vorgehensweise: Anzeigen mehrerer Zeilen im TextBox-Steuerelement Windows Forms](how-to-view-multiple-lines-in-the-windows-forms-textbox-control.md)
+- [Gewusst wie: Setzen von Anführungszeichen in Zeichenfolgen](how-to-put-quotation-marks-in-a-string-windows-forms.md)
+- [Vorgehensweise: Programmgesteuertes Auswählen von Text im TextBox-Steuerelement in Windows Forms](how-to-select-text-in-the-windows-forms-textbox-control.md)
+- [Vorgehensweise: Anzeigen mehrerer Zeilen im TextBox-Steuerelement in Windows Forms](how-to-view-multiple-lines-in-the-windows-forms-textbox-control.md)
 - [TextBox-Steuerelement](textbox-control-windows-forms.md)

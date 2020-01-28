@@ -1,5 +1,5 @@
 ---
-title: Übersicht über die Sicherheit in Windows Forms
+title: Sicherheitsübersicht
 ms.date: 03/30/2017
 helpviewer_keywords:
 - code access security [Windows Forms], Windows Forms
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - security [Windows Forms], about security
 - access control [Windows Forms], Windows Forms
 ms.assetid: 4810dc9f-ea23-4ce1-8ea1-657f0ff1d820
-ms.openlocfilehash: 08c80eccee395d9141978a7d4594205af1a51ed9
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 9010b45383f856079661359fdf82180526d96dde
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70972133"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76734842"
 ---
 # <a name="security-in-windows-forms-overview"></a>Übersicht über die Sicherheit in Windows Forms
 
@@ -56,7 +56,7 @@ Manchmal ist es schwierig zu wissen, ob Sie alle entsprechenden Berechtigungen b
 
 In den folgenden Themen sind zusätzliche Sicherheitsfeatures von Windows Forms beschrieben.
 
-|Thema|Beschreibung|
+|Topic|Beschreibung|
 |-----------|-----------------|
 |- [Mehr Sicherheit beim Datei- und Datenzugriff in Windows Forms](more-secure-file-and-data-access-in-windows-forms.md)|Beschreibt, wie in einer teilweise vertrauenswürdigen Umgebung auf Dateien und Daten zugegriffen wird.|
 |- [Mehr Sicherheit beim Drucken in Windows Forms](more-secure-printing-in-windows-forms.md)|Beschreibt, wie in einer teilweise vertrauenswürdigen Umgebung auf Druckfunktionen zugegriffen wird.|
@@ -77,13 +77,13 @@ In der folgenden Liste sind diese Technologien beschrieben.
 
 Welche Technologie Sie wählen, hängt von Ihrer Bereitstellungsumgebung ab. Weitere Informationen finden Sie unter [Auswählen einer Strategie für die ClickOnce-Bereitstellung](/visualstudio/deployment/choosing-a-clickonce-deployment-strategy).
 
-Standardmäßig sind ClickOnce-Anwendungen, die entweder mit Visual Studio oder den .NET Framework SDK-Tools (Mage. exe und MageUI. exe) bereitgestellt werden, für die Verwendung auf einem Client Computer mit voller Vertrauenswürdigkeit konfiguriert. Wenn Sie Ihre Anwendung so bereitstellen, dass sie teilweise Vertrauenswürdigkeit oder nur einige zusätzlichen Berechtigungen hat, müssen Sie diese Standardeinstellung ändern. Hierfür können Sie entweder Visual Studio oder das .NET Framework SDK-Tool "MageUI. exe" verwenden, wenn Sie die Bereitstellung konfigurieren. Weitere Informationen zur Verwendung von "MageUI. exe" finden [Sie unter Exemplarische Vorgehensweise: Manuelles Bereitstellen einer ClickOnce-Anwendung](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application).  Weitere Informationen hierzu finden Sie auch unter [Gewusst wie: Legen Sie benutzerdefinierte Berechtigungen für eine ClickOnce -Anwendung](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2012/hafybdaa(v=vs.110)) fest, oder [Gewusst wie: Legen Sie benutzerdefinierte Berechtigungen für eine ClickOnce-Anwendung](/visualstudio/deployment/how-to-set-custom-permissions-for-a-clickonce-application)fest.
+Standardmäßig sind ClickOnce-Anwendungen, die entweder mit Visual Studio oder den .NET Framework SDK-Tools (Mage. exe und MageUI. exe) bereitgestellt werden, für die Verwendung auf einem Client Computer mit voller Vertrauenswürdigkeit konfiguriert. Wenn Sie Ihre Anwendung so bereitstellen, dass sie teilweise Vertrauenswürdigkeit oder nur einige zusätzlichen Berechtigungen hat, müssen Sie diese Standardeinstellung ändern. Hierfür können Sie entweder Visual Studio oder das .NET Framework SDK-Tool "MageUI. exe" verwenden, wenn Sie die Bereitstellung konfigurieren. Weitere Informationen zur Verwendung von "MageUI. exe" finden Sie unter Exemplarische Vorgehensweise [: Manuelles Bereitstellen einer ClickOnce-Anwendung](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application).  Siehe auch [Vorgehensweise: Festlegen benutzerdefinierter Berechtigungen für eine ClickOnce-Anwendung](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2012/hafybdaa(v=vs.110)) oder [Vorgehensweise: Festlegen benutzerdefinierter Berechtigungen für eine ClickOnce-Anwendung](/visualstudio/deployment/how-to-set-custom-permissions-for-a-clickonce-application).
 
 Weitere Informationen zu den Sicherheitsaspekten von ClickOnce und Berechtigungs Erweiterung finden Sie unter [Sichern von ClickOnce-Anwendungen](/visualstudio/deployment/securing-clickonce-applications). Weitere Informationen zur Bereitstellung vertrauenswürdiger Anwendungen finden Sie unter [Übersicht über die Bereitstellung vertrauenswürdiger Anwendungen](/visualstudio/deployment/trusted-application-deployment-overview).
 
 ### <a name="testing-the-application"></a>Testen der Anwendung
 
-Wenn Sie die Windows Forms Anwendung mithilfe von Visual Studio bereitgestellt haben, können Sie das Debuggen in teilweiser Vertrauenswürdigkeit oder in einem eingeschränkten Berechtigungs Satz aus der Entwicklungsumgebung aktivieren.  Weitere Informationen hierzu finden Sie auch unter [Gewusst wie: Debuggen einer ClickOnce-Anwendung mit eingeschränkten Berechtigungen](/visualstudio/deployment/how-to-debug-a-clickonce-application-with-restricted-permissions).
+Wenn Sie die Windows Forms Anwendung mithilfe von Visual Studio bereitgestellt haben, können Sie das Debuggen in teilweiser Vertrauenswürdigkeit oder in einem eingeschränkten Berechtigungs Satz aus der Entwicklungsumgebung aktivieren.  Siehe auch Gewusst [wie: Debuggen einer ClickOnce-Anwendung mit eingeschränkten Berechtigungen](/visualstudio/deployment/how-to-debug-a-clickonce-application-with-restricted-permissions).
 
 ## <a name="see-also"></a>Siehe auch
 
@@ -92,4 +92,4 @@ Wenn Sie die Windows Forms Anwendung mithilfe von Visual Studio bereitgestellt h
 - [ClickOnce-Sicherheit und Bereitstellung](/visualstudio/deployment/clickonce-security-and-deployment)
 - [Überblick über die Bereitstellung vertrauenswürdiger Anwendungen](/visualstudio/deployment/trusted-application-deployment-overview)
 - [Mage.exe (Tool zum Generieren und Bearbeiten von Manifesten)](../tools/mage-exe-manifest-generation-and-editing-tool.md)
-- [MageUI.exe (Tool zum Generieren und Bearbeiten von Manifesten, grafischer Client)](../tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client.md)
+- [„MageUI.exe“ (Tool zum Generieren und Bearbeiten von Manifesten, grafischer Client)](../tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client.md)

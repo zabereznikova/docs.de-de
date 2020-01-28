@@ -1,5 +1,5 @@
 ---
-title: Grundlegende Spalten-, Zeilen- und Zellfunktionen im DataGridView-Steuerelement in Windows Forms
+title: Grundlegende Spalten-, Zeilen-und Zellfunktionen im DataGridView-Steuerelement
 ms.date: 03/30/2017
 helpviewer_keywords:
 - DataGridView control [Windows Forms], basic features
@@ -7,44 +7,44 @@ helpviewer_keywords:
 - data grids [Windows Forms], examples
 - DataGridView control [Windows Forms], examples
 ms.assetid: 78085f26-d5d2-4b75-813e-e932b72fd06f
-ms.openlocfilehash: 4c755d5f0c2e134b83beb27ebbd06080bad620b6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 02f8ad7e11a61e9434748a8b3b2f853f98b013d1
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61942855"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76746216"
 ---
-# <a name="basic-column-row-and-cell-features-in-the-windows-forms-datagridview-control"></a>Grundlegende Spalten-, Zeilen- und Zellfunktionen im DataGridView-Steuerelement in Windows Forms
-Viele grundlegende Verhaltensweisen von `DataGridView` Zellen, Zeilen und Spalten können durch das Festlegen einzelner Eigenschaften geändert werden. Die Themen in diesem Abschnitt werden einige der am häufigsten verwendeten Features beschrieben.  
+# <a name="basic-column-row-and-cell-features-in-the-windows-forms-datagridview-control"></a>Grundlegende Spalten-, Zeilen- und Zellfeatures im DataGridView-Steuerelement in Windows Forms
+Viele grundlegende Verhalten `DataGridView` Zellen, Zeilen und Spalten können durch Festlegen einzelner Eigenschaften geändert werden. In den Themen in diesem Abschnitt werden einige der am häufigsten verwendeten Funktionen beschrieben.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Vorgehensweise: Ausblenden von Spalten im DataGridView-Steuerelement in Windows Forms](how-to-hide-columns-in-the-windows-forms-datagridview-control.md)  
- Beschreibt, wie ein, um zu verhindern, dass bestimmte Spalten im Steuerelement angezeigt werden.  
+ [Gewusst wie: Ausblenden von Spalten im DataGridView-Steuerelement in Windows Forms](how-to-hide-columns-in-the-windows-forms-datagridview-control.md)  
+ Beschreibt, wie verhindert wird, dass bestimmte Spalten im-Steuerelement angezeigt werden.  
   
- [Vorgehensweise: Ausblenden von Spaltenüberschriften in der DataGridView-Steuerelement in Windows Forms](how-to-hide-column-headers-in-the-windows-forms-datagridview-control.md)  
- Beschreibt, wie ein, um zu verhindern, dass die Spaltenheader im Steuerelement angezeigt werden.  
+ [Gewusst wie: Ausblenden von Spaltenheadern im DataGridView-Steuerelement in Windows Forms](how-to-hide-column-headers-in-the-windows-forms-datagridview-control.md)  
+ Beschreibt, wie verhindert wird, dass die Spaltenheader im-Steuerelement angezeigt werden.  
   
- [Vorgehensweise: Aktivieren der Neuanordnung von Spalten im DataGridView-Steuerelement in Windows Forms](how-to-enable-column-reordering-in-the-windows-forms-datagridview-control.md)  
- Beschreibt, wie Benutzer zum Neuanordnen von Spalten im Steuerelement zu aktivieren.  
+ [Gewusst wie: Aktivieren der Neuanordnung von Spalten im DataGridView-Steuerelement in Windows Forms](how-to-enable-column-reordering-in-the-windows-forms-datagridview-control.md)  
+ Beschreibt, wie Sie es Benutzern ermöglichen, Spalten im-Steuerelement neu anzuordnen.  
   
- [Vorgehensweise: Einfrieren von Spalten im DataGridView-Steuerelement in Windows Forms](how-to-freeze-columns-in-the-windows-forms-datagridview-control.md)  
- Beschreibt, wie verhindern, dass eine oder mehrere angrenzende Spalten scrollen.  
+ [Gewusst wie: Fixieren von Spalten im DataGridView-Steuerelement in Windows Forms](how-to-freeze-columns-in-the-windows-forms-datagridview-control.md)  
+ Beschreibt, wie das Scrollen von einer oder mehreren angrenzenden Spalten verhindert wird.  
   
- [Vorgehensweise: Schreibschutz Spalten im DataGridView-Steuerelement in Windows Forms](how-to-make-columns-read-only-in-the-windows-forms-datagridview-control.md)  
- Beschreibt, wie Sie verhindern, dass Benutzer bestimmte Spalten im Steuerelement bearbeiten.  
+ [Gewusst wie: Zuweisen von schreibgeschützten Spalten im DataGridView-Steuerelement in Windows Forms](how-to-make-columns-read-only-in-the-windows-forms-datagridview-control.md)  
+ Beschreibt, wie Benutzer daran gehindert werden, bestimmte Spalten im-Steuerelement zu bearbeiten.  
   
- [Vorgehensweise: Zu verhindern, dass Hinzufügens und Löschens im DataGridView-Steuerelement in Windows Forms](prevent-row-addition-and-deletion-datagridview.md)  
- Beschreibt, wie die Zeile für neue Datensätze am unteren Rand das Steuerelement, um Benutzer daran zu hindern, Hinzufügen von Zeilen zu entfernen. Beschreibt außerdem, wie Sie verhindern, dass Benutzer das Löschen von Zeilen.  
+ [Gewusst wie: Verhindern, das Zeilen im DataGridView-Steuerelement in Windows Forms hinzugefügt und gelöscht werden](prevent-row-addition-and-deletion-datagridview.md)  
+ Beschreibt, wie die Zeile für neue Datensätze am unteren Rand des-Steuer Elements entfernt wird, um Benutzer daran zu hindern, Zeilen hinzuzufügen. Außerdem wird beschrieben, wie Sie verhindern können, dass Benutzer Zeilen löschen.  
   
- [Vorgehensweise: Abrufen und Festlegen der aktuellen Zelle im DataGridView-Steuerelement in Windows Forms](get-and-set-the-current-cell-wf-datagridview-control.md)  
- Beschreibt, wie auf die Zelle, die gerade den Fokus in das Steuerelement besitzt.  
+ [Gewusst wie: Abrufen und Festlegen der aktuellen Zelle im DataGridView-Steuerelement in Windows Forms](get-and-set-the-current-cell-wf-datagridview-control.md)  
+ Beschreibt den Zugriff auf die Zelle, die derzeit im-Steuerelement den Fokus besitzt.  
   
- [Vorgehensweise: Anzeigen von Bildern in Zellen des DataGridView-Steuerelement von Windows Forms](how-to-display-images-in-cells-of-the-windows-forms-datagridview-control.md)  
- Beschreibt, wie eine Image-Spalte zu erstellen, die in jede Zelle ein Symbol angezeigt.  
+ [Vorgehensweise: Anzeigen von Bildern in Zellen des DataGridView-Steuerelements in Windows Forms](how-to-display-images-in-cells-of-the-windows-forms-datagridview-control.md)  
+ Beschreibt, wie eine Bild Spalte erstellt wird, in der in jeder Zelle ein Symbol angezeigt wird.  
   
 ## <a name="reference"></a>Referenz  
  <xref:System.Windows.Forms.DataGridView>  
- Enthält die Referenzdokumentation für das Steuerelement.  
+ Enthält die Referenz Dokumentation für das-Steuerelement.  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
  [Grundlegende Formatierungen und Formate im DataGridView-Steuerelement in Windows Forms](basic-formatting-and-styling-in-the-windows-forms-datagridview-control.md)  

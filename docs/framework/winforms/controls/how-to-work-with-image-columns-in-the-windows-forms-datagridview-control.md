@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Arbeiten mit Bildspalten im DataGridView-Steuerelement in Windows Forms'
+title: Arbeiten mit Bild Spalten im DataGridView-Steuerelement
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - image columns [Windows Forms], Windows Forms
 - DataGridView control [Windows Forms], image columns
 ms.assetid: 8a37aa75-3c6e-4893-91d0-7a5f34bfe287
-ms.openlocfilehash: 110422000fad3d52d936302cca7a3d635f44b917
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 0ec51b825c476576a224b43c5431ba230018ef7e
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65591399"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76728255"
 ---
-# <a name="how-to-work-with-image-columns-in-the-windows-forms-datagridview-control"></a>Vorgehensweise: Arbeiten mit Bildspalten im DataGridView-Steuerelement in Windows Forms
+# <a name="how-to-work-with-image-columns-in-the-windows-forms-datagridview-control"></a>Gewusst wie: Arbeiten mit Bildspalten im DataGridView-Steuerelement in Windows Forms
 Im folgenden Codebeispiel wird die Verwendung der <xref:System.Windows.Forms.DataGridView>-Bildspalten auf einer interaktiven Benutzeroberfläche (UI) veranschaulicht. Darüber hinaus werden in dem Beispiel auch die mit <xref:System.Windows.Forms.DataGridViewImageColumn> verfügbaren Bildanpassungs- und Layoutoptionen veranschaulicht.  
   
 ## <a name="example"></a>Beispiel  
@@ -35,4 +35,4 @@ Im folgenden Codebeispiel wird die Verwendung der <xref:System.Windows.Forms.Dat
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridViewImageColumn>
 - [Programmieren mit Zellen, Zeilen und Spalten im DataGridView-Steuerelement in Windows Forms](programming-with-cells-rows-and-columns-in-the-datagrid.md)
-- [Vorgehensweise: Anzeigen von Bildern in Zellen des DataGridView-Steuerelement von Windows Forms](how-to-display-images-in-cells-of-the-windows-forms-datagridview-control.md)
+- [Vorgehensweise: Anzeigen von Bildern in Zellen des DataGridView-Steuerelements in Windows Forms](how-to-display-images-in-cells-of-the-windows-forms-datagridview-control.md)

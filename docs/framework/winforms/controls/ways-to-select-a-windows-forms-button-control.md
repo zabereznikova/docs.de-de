@@ -1,35 +1,35 @@
 ---
-title: Methoden zur Auswahl eines Button-Steuerelements in Windows Forms
+title: Möglichkeiten zum Auswählen eines Schaltflächen-Steuer Elements
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Button control [Windows Forms], selecting
 ms.assetid: fe2fc058-5118-4f70-b264-6147d64a7a8d
-ms.openlocfilehash: e511b0d7bcac725ed477678ab4c865f5337e658d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 145166d182f1ec51068ab3e0c23c12b471b69231
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64584959"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76740003"
 ---
 # <a name="ways-to-select-a-windows-forms-button-control"></a>Methoden zur Auswahl eines Button-Steuerelements in Windows Forms
-Eine Windows Forms-Schaltfläche kann auf folgende Weise ausgewählt werden:  
+Eine Schaltfläche "Windows Forms" kann auf folgende Weise ausgewählt werden:  
   
-- Verwenden Sie eine Maus, um auf die Schaltfläche klicken.  
+- Klicken Sie mit der Maus auf die Schaltfläche.  
   
-- Rufen Sie der Schaltfläche " <xref:System.Windows.Forms.Control.Click> Ereignis im Code.  
+- Rufen Sie das <xref:System.Windows.Forms.Control.Click>-Ereignis der Schaltfläche im Code auf.  
   
-- Den Fokus auf die Schaltfläche mit den durch Drücken der TAB-Taste, und wählen Sie dann die Schaltfläche mit den durch Drücken der LEERTASTE oder EINGABETASTE.  
+- Verschieben Sie den Fokus auf die Schaltfläche, indem Sie die Tab-Taste drücken, und wählen Sie dann die Schaltfläche durch Drücken der Leertaste oder EINGABETASTE aus.  
   
-- Drücken Sie die Zugriffsschlüssel (ALT + unterstrichener Buchstabe) für die Schaltfläche aus. Weitere Informationen zu Zugriffsschlüsseln finden Sie unter [Vorgehensweise: Erstellen von Zugriffstasten für Windows-Steuerelemente Forms](how-to-create-access-keys-for-windows-forms-controls.md).  
+- Drücken Sie die Zugriffstaste (alt + den unterstrichenen Buchstaben) für die Schaltfläche. Weitere Informationen zu Zugriffs Schlüsseln finden Sie unter Gewusst [wie: Erstellen von Zugriffs Schlüsseln für Windows Forms](how-to-create-access-keys-for-windows-forms-controls.md)-Steuerelemente.  
   
-- Wenn die Schaltfläche des Formulars die Schaltfläche "accept" ist, Drücken der EINGABETASTE auswählt, die Schaltfläche, auch wenn ein anderes Steuerelement den Fokus besitzt, außer wenn das andere Steuerelement ist eine weitere Schaltfläche, ein mehrzeiliges Textfeld oder ein benutzerdefiniertes Steuerelement, das fängt die EINGABETASTE.  
+- Wenn die Schaltfläche die "Accept"-Schaltfläche des Formulars ist, wählt durch Drücken der EINGABETASTE die Schaltfläche aus. Dies gilt auch dann, wenn ein anderes Steuerelement den Fokus besitzt – es sei denn, das andere Steuerelement ist eine andere Schaltfläche, ein mehrzeilige Textfeld oder ein benutzerdefiniertes Steuerelement  
   
-- Ist die Schaltfläche mit der auf die Schaltfläche "Abbrechen" des Formulars, wählt das Drücken der ESC-Taste die Schaltfläche, selbst wenn ein anderes Steuerelement den Fokus besitzt.  
+- Wenn die Schaltfläche die Schaltfläche "Abbrechen" im Formular ist, wählt die Taste ESC die Schaltfläche aus, auch wenn ein anderes Steuerelement den Fokus besitzt.  
   
-- Rufen Sie die <xref:System.Windows.Forms.Button.PerformClick%2A> Methode, um programmgesteuert auf die Schaltfläche klicken.  
+- Ruft die <xref:System.Windows.Forms.Button.PerformClick%2A>-Methode auf, um die Schaltfläche Programm gesteuert auszuwählen.  
   
 ## <a name="see-also"></a>Siehe auch
 
 - [Übersicht über das Button-Steuerelement](button-control-overview-windows-forms.md)
-- [Vorgehensweise: Reagieren Sie auf eine Windows Forms-Schaltfläche geklickt](how-to-respond-to-windows-forms-button-clicks.md)
+- [Gewusst wie: Reagieren auf das Anklicken von Schaltflächen in Windows Forms](how-to-respond-to-windows-forms-button-clicks.md)
 - [Button-Steuerelement](button-control-windows-forms.md)

@@ -1,19 +1,19 @@
 ---
-title: MainMenu-Komponente (Windows Forms)
+title: MainMenu-Komponente
 ms.date: 03/30/2017
 helpviewer_keywords:
 - MainMenu control [Windows Forms]
 ms.assetid: 7cd22f29-828b-42e8-9c88-f08aa4533850
-ms.openlocfilehash: f177ee397b0641645d55de9e805543a68fa75672
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 6b56ae27d32d85ca75f749727674ea24e91d82ac
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69952124"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76747140"
 ---
 # <a name="mainmenu-component-windows-forms"></a>MainMenu-Komponente (Windows Forms)
 > [!NOTE]
-> Obwohl `MenuStrip` `MainMenu` und `ContextMenuStrip` die-und- <xref:System.Windows.Forms.ContextMenu> Steuerelemente früherer Versionen ersetzen und Funktionen hinzu `MainMenu` fügen <xref:System.Windows.Forms.ContextMenu> , werden Sie sowohl für die Abwärtskompatibilität als auch für die zukünftige Verwendung beibehalten, wenn Sie auswählen.  
+> Obwohl `MenuStrip` und `ContextMenuStrip` die-`MainMenu` und <xref:System.Windows.Forms.ContextMenu>-Steuerelemente früherer Versionen ersetzen und Funktionen hinzufügen, werden `MainMenu` und <xref:System.Windows.Forms.ContextMenu> sowohl für Abwärtskompatibilität als auch für die zukünftige Verwendung beibehalten.  
   
  Die Windows Forms `MainMenu` Komponente zeigt ein Menü zur Laufzeit an.  
   

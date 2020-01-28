@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Binden an einen Webdienst mithilfe der BindingSource in Windows Forms'
+title: Binden an einen Webdienst mithilfe von BindingSource
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - controls [Windows Forms], binding to Web service
 - BindingSource component [Windows Forms], examples
 ms.assetid: ee261207-4573-4cb9-a8cb-5185037e0fba
-ms.openlocfilehash: 94564ba2614e335da36828912e43fb9db7eca91b
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.openlocfilehash: 0680c73e578577cf40158761f6c635fe30ff9f4d
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66833994"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76746681"
 ---
-# <a name="how-to-bind-to-a-web-service-using-the-windows-forms-bindingsource"></a>Vorgehensweise: Binden an einen Webdienst mithilfe der BindingSource in Windows Forms
+# <a name="how-to-bind-to-a-web-service-using-the-windows-forms-bindingsource"></a>Gewusst wie: Binden an einen Webdienst mithilfe der BindingSource in Windows Forms
 Wenn Sie ein Windows Form-Steuerelements an die Ergebnisse des Aufrufs eines XML-Webdiensts binden möchten, können Sie eine <xref:System.Windows.Forms.BindingSource>-Komponente verwenden. Dieses Verfahren ähnelt der Bindung einer <xref:System.Windows.Forms.BindingSource>-Komponente an einen Typ. Sie müssen einen clientseitigen Proxy erstellen, der die Methoden und Typen enthält, die vom Webdienst bereitgestellt werden. Sie generieren einen clientseitigen Proxy über den Webdienst (.asmx) selbst oder über seine WSDL-Datei (Web Services Description Language). Darüber hinaus muss der clientseitige Proxy die Felder von komplexen Typen verfügbar machen, die vom Webdienst als öffentliche Eigenschaften verwendet werden. Anschließend binden Sie <xref:System.Windows.Forms.BindingSource> an einen der im Webdienstproxy bereitgestellten Typen.  
   
 ### <a name="to-create-and-bind-to-a-client-side-proxy"></a>So erstellen und binden Sie einen clientseitigen Proxy  
@@ -28,11 +28,11 @@ Wenn Sie ein Windows Form-Steuerelements an die Ergebnisse des Aufrufs eines XML
   
 2. Fügen Sie eine <xref:System.Windows.Forms.BindingSource>-Komponente zum Formular hinzu.  
   
-3. Öffnen Sie die Eingabeaufforderung von Windows Software Development Kit (SDK), und navigieren Sie zu, dem das Formular sich im befindet gleichen Verzeichnis.  
+3. Öffnen Sie die Windows Software Development Kit (SDK)-Eingabeaufforderung, und navigieren Sie zu demselben Verzeichnis, in dem sich das Formular befindet.  
   
 4. Geben Sie mithilfe des WSDL-Tools `wsdl` und die URL für die ASMX- oder WSDL-Datei für den Webdienst gefolgt vom Namespace der Anwendung und wahlweise der verwendeten Programmiersprache ein.  
   
-     Das folgende Codebeispiel verwendet den Webdienst, der am `http://webservices.eraserver.net/zipcoderesolver/zipcoderesolver.asmx`. Geben Sie z.B. für C# `wsdl http://webservices.eraserver.net.zipcoderesolver/zipcoderesolver.asmx /n:BindToWebService` oder für Visual Basic `wsdl http://webservices.eraserver.net.zipcoderesolver/zipcoderesolver.asmx /n:BindToWebService /language:VB` ein. Durch die Übergabe des Pfads als Argument an das WSDL-Tool wird ein clientseitiger Proxy in demselben Verzeichnis und Namespace wie Ihre Anwendung sowie in der angegebenen Sprache generiert. Wenn Sie Visual Studio verwenden, können fügen Sie die Datei zu Ihrem Projekt hinzu.  
+     Im folgenden Codebeispiel wird der-Webdienst unter `http://webservices.eraserver.net/zipcoderesolver/zipcoderesolver.asmx`verwendet. Geben Sie z.B. für C# `wsdl http://webservices.eraserver.net.zipcoderesolver/zipcoderesolver.asmx /n:BindToWebService` oder für Visual Basic `wsdl http://webservices.eraserver.net.zipcoderesolver/zipcoderesolver.asmx /n:BindToWebService /language:VB` ein. Durch die Übergabe des Pfads als Argument an das WSDL-Tool wird ein clientseitiger Proxy in demselben Verzeichnis und Namespace wie Ihre Anwendung sowie in der angegebenen Sprache generiert. Wenn Sie Visual Studio verwenden, fügen Sie die Datei Ihrem Projekt hinzu.  
   
 5. Wählen Sie im clientseitigen Proxy einen Typ für die Bindung aus.  
   

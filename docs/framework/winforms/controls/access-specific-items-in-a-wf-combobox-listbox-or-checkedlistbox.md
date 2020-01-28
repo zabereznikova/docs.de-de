@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Zugreifen auf spezifische Elemente in ComboBox-, ListBox- oder CheckedListBox-Steuerelementen in Windows Forms'
+title: Zugreifen auf bestimmte Elemente in der ComboBox-, ListBox-oder CheckedListBox-Steuerelement
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,19 +13,19 @@ helpviewer_keywords:
 - combo boxes [Windows Forms], accessing items
 - CheckedListBox control [Windows Forms], accessing items
 ms.assetid: 1216742f-bcf9-4ff8-8a62-d7c9053c2b96
-ms.openlocfilehash: fbdd9168fe286823db7cf066ae0f821b8db88ecb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 67673ec7f136f1466d4fd091e691324c53e7de06
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62011826"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76746327"
 ---
-# <a name="how-to-access-specific-items-in-a-windows-forms-combobox-listbox-or-checkedlistbox-control"></a>Vorgehensweise: Zugreifen auf spezifische Elemente in ComboBox-, ListBox- oder CheckedListBox-Steuerelementen in Windows Forms
-Zugreifen auf spezifische Elemente in einer Windows Forms-Kombinationsfeld, Listenfeld oder ausgewählten Listenfeld ist eine wichtige Aufgabe. Sie können Sie programmgesteuert zu ermitteln, was in einer Liste an einer bestimmten Position ist.  
+# <a name="how-to-access-specific-items-in-a-windows-forms-combobox-listbox-or-checkedlistbox-control"></a>Gewusst wie: Zugreifen auf spezifische Elemente in ComboBox-, ListBox- oder CheckedListBox-Steuerelementen in Windows Forms
+Der Zugriff auf bestimmte Elemente in einem Kombinations Feld (Windows Forms), einem Listenfeld oder einem aktivierten Listenfeld ist eine wesentliche Aufgabe. Mit dieser Option können Sie Programm gesteuert ermitteln, was in einer Liste an einer beliebigen Position vorhanden ist.  
   
-### <a name="to-access-a-specific-item"></a>Auf ein bestimmtes Element zugreifen.  
+### <a name="to-access-a-specific-item"></a>So greifen Sie auf ein bestimmtes Element zu  
   
-1. Abfrage der `Items` Auflistung über den Index des bestimmten Elements:  
+1. Abfragen der `Items` Auflistung mit dem Index des jeweiligen Elements:  
   
     ```vb  
     Private Function GetItemText(i As Integer) As String  

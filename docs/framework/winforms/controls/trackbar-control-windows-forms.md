@@ -1,24 +1,24 @@
 ---
-title: TrackBar-Steuerelement (Windows Forms)
+title: TrackBar-Steuerelement
 ms.date: 03/30/2017
 helpviewer_keywords:
 - sliders
 - slider controls [Windows Forms]
 - TrackBar control [Windows Forms]
 ms.assetid: 37d6aee3-7e8a-4a10-a99c-3a6e09199553
-ms.openlocfilehash: adeb796b0411473d8e17f164f2f87bdf6ed7ae0e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f5efdcbefe97156338439c14a6203a75c1bc3fdb
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62009245"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76747241"
 ---
 # <a name="trackbar-control-windows-forms"></a>TrackBar-Steuerelement (Windows Forms)
-Die Windows-Formulare `TrackBar` Control (manchmal auch als "ein"Slider"Steuerelement" bezeichnet) Dient zum Navigieren durch eine große Menge an Informationen oder für die visuelle Anpassung einer numerischen Einstellung. Die `TrackBar` Steuerelement besteht aus zwei Teilen: dem Ziehpunkt, auch bekannt als einen Schieberegler, und die Teilstriche. Der Ziehpunkt ist der Teil, das angepasst werden kann. Entspricht die Position der <xref:System.Windows.Forms.TrackBar.Value%2A> Eigenschaft. Die Teilstriche sind visuelle Indikatoren, die in regelmäßigen Abständen angeordnet sind. Die Trackleiste verschiebt, die Sie angeben und horizontal oder vertikal ausgerichtet werden können. Eine Beispiel für die Verwendung einer Trackleiste wäre zum Festlegen der Cursor Blink Rate oder der Maus Geschwindigkeit.  
+Das Windows Forms `TrackBar`-Steuerelement (auch als "Schieberegler" bezeichnet) wird zum Navigieren durch eine große Menge an Informationen oder zum visuellen Anpassen einer numerischen Einstellung verwendet. Das `TrackBar` Steuerelement besteht aus zwei Teilen: dem Thumb-Steuerelement, auch als Schieberegler bezeichnet, und den Teil Strichen. Der Ziehpunkt ist der Teil, der angepasst werden kann. Seine Position entspricht der <xref:System.Windows.Forms.TrackBar.Value%2A>-Eigenschaft. Bei den Teil Strichen handelt es sich um visuelle Indikatoren, deren Abstand in regelmäßigen Abständen liegt. Die Trackleiste wird in von Ihnen angegebenen Inkrementen verschoben und kann horizontal oder vertikal ausgerichtet werden. Ein Beispiel für die Verwendung einer Trackleiste wäre das Festlegen der Cursor Blink Rate oder der Maus Geschwindigkeit.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Übersicht über das TrackBar-Steuerelement](trackbar-control-overview-windows-forms.md)  
- Stellt die allgemeinen Konzepte des der `TrackBar` -Steuerelement, das Benutzern ermöglicht, die durch Daten, die durch die visuelle Anpassung einer numerischen Einstellung zu navigieren.  
+ Führt die allgemeinen Konzepte des `TrackBar`-Steuer Elements ein, das Benutzern das Navigieren durch Informationen ermöglicht, indem eine numerische Einstellung visuell angepasst wird.  
   
 ## <a name="reference"></a>Referenz  
  <xref:System.Windows.Forms.TrackBar>-Klasse  

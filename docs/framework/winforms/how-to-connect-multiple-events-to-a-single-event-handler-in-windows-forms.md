@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Verbinden mehrerer Ereignisse mit einem einzelnen Ereignishandler in Windows Forms'
+title: 'Gewusst wie: Verbinden mehrerer Ereignisse mit einem einzelnen Ereignis Handler'
 ms.date: 03/30/2017
 dev_langs:
 - vb
@@ -10,25 +10,25 @@ helpviewer_keywords:
 - Windows Forms controls, events
 - menu items [Windows Forms], multicasting event-handling methods
 ms.assetid: 5a20749a-41b5-4acc-8eb1-9e5040b0a2c4
-ms.openlocfilehash: eec6a754b885cd169e5542221caefb3233c4c8af
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0591291522ab1da04fef90bf1c0a73cf33ba0518
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61967027"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76739607"
 ---
-# <a name="how-to-connect-multiple-events-to-a-single-event-handler-in-windows-forms"></a>Vorgehensweise: Verbinden mehrerer Ereignisse mit einem einzelnen Ereignishandler in Windows Forms
-In Ihrem Datenbankentwurf möglicherweise finden Sie es auf einen einzelnen Ereignishandler mehrere Ereignisse oder bei mehreren Ereignissen führen Sie das gleiche Verfahren erforderlich. Beispielsweise ist es oft eine leistungsstarke Zeitersparnis haben Sie einen Menübefehl, der das gleiche Ereignis auslösen, wie eine Schaltfläche im Formular ausgeführt werden, wenn sie die gleiche Funktionalität verfügbar machen. Sie erreichen dies, indem Sie die Ansicht "Ereignisse" im Eigenschaftenfenster in C# oder mithilfe der `Handles` Schlüsselwort und die **Klassenname** und **Methodenname** Dropdownfelder in Visual Basic-Code-Editor.  
+# <a name="how-to-connect-multiple-events-to-a-single-event-handler-in-windows-forms"></a>Gewusst wie: Verbinden mehrerer Ereignisse mit einem einzelnen Ereignishandler in Windows Forms
+Beim Anwendungs Entwurf ist es möglicherweise erforderlich, dass ein einzelner Ereignishandler für mehrere Ereignisse verwendet wird, oder dass mehrere Ereignisse dieselbe Prozedur ausführen. Beispielsweise ist es häufig ein leistungsfähiger Zeitersparnis, wenn ein Menübefehl dasselbe Ereignis wie eine Schaltfläche auf dem Formular aufhebt, wenn Sie die gleiche Funktionalität verfügbar machen. Hierzu können Sie die Ereignisansicht der Eigenschaftenfenster in C# oder das `Handles`-Schlüsselwort und die Dropdown Felder **Klassenname** und **Methodenname** im Visual Basic Code-Editor verwenden.  
   
-### <a name="to-connect-multiple-events-to-a-single-event-handler-in-visual-basic"></a>Zum Verbinden mehrerer Ereignisse mit einem einzelnen Ereignishandler in Visual Basic  
+### <a name="to-connect-multiple-events-to-a-single-event-handler-in-visual-basic"></a>So verbinden Sie mehrere Ereignisse mit einem einzelnen Ereignishandler in Visual Basic  
   
-1. Mit der rechten Maustaste in des Formulars, und wählen Sie **Ansichtscode**.  
+1. Klicken Sie mit der rechten Maustaste, und wählen Sie **Code anzeigen**aus.  
   
-2. Von der **Klassenname** Dropdown-Feld, wählen Sie eines der Steuerelemente, die die Ereignishandler, die verarbeitet werden sollen.  
+2. Wählen Sie im Dropdown Feld **Klassen Name** eines der Steuerelemente aus, für das Sie den ereignishandlerhandle festlegen möchten.  
   
-3. Von der **Methodenname** Dropdown-Feld, wählen Sie eines der Ereignisse, die Sie den Ereignishandler behandeln möchten.  
+3. Wählen Sie im Dropdown Feld **Methoden Name** eines der Ereignisse aus, die vom Ereignishandler behandelt werden sollen.  
   
-4. Code-Editor fügt den passenden Ereignishandler ein und positioniert die Einfügemarke innerhalb der Methode. Im folgenden Beispiel ist es die <xref:System.Windows.Forms.Control.Click> -Ereignis für die <xref:System.Windows.Forms.Button> Steuerelement.  
+4. Der Code-Editor fügt den entsprechenden Ereignishandler ein und positioniert die Einfügemarke innerhalb der Methode. Im folgenden Beispiel ist es das <xref:System.Windows.Forms.Control.Click>-Ereignis für das <xref:System.Windows.Forms.Button>-Steuerelement.  
   
     ```vb  
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click  
@@ -36,7 +36,7 @@ In Ihrem Datenbankentwurf möglicherweise finden Sie es auf einen einzelnen Erei
     End Sub  
     ```  
   
-5. Fügen Sie die anderen Ereignisse werden soll behandelt der `Handles` Klausel.  
+5. Fügen Sie die anderen Ereignisse, die Sie behandeln möchten, an die `Handles`-Klausel an.  
   
     ```vb  
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click, Button2.Click  
@@ -44,21 +44,21 @@ In Ihrem Datenbankentwurf möglicherweise finden Sie es auf einen einzelnen Erei
     End Sub  
     ```  
   
-6. Fügen Sie den entsprechenden Code zum Ereignishandler hinzu.  
+6. Fügen Sie dem-Ereignishandler den entsprechenden Code hinzu.  
   
-### <a name="to-connect-multiple-events-to-a-single-event-handler-in-c"></a>So verbinden mehrere Ereignisse mit einem einzelnen Ereignishandler in C\#
+### <a name="to-connect-multiple-events-to-a-single-event-handler-in-c"></a>So verbinden Sie mehrere Ereignisse mit einem einzelnen Ereignishandler in C\#
   
-1. Wählen Sie das Steuerelement, das Sie einen Ereignishandler eine Verbindung herstellen möchten.  
+1. Wählen Sie das Steuerelement aus, mit dem Sie einen Ereignishandler verbinden möchten.  
   
-2. Klicken Sie im Eigenschaftenfenster auf die **Ereignisse** Schaltfläche (![Schaltfläche "Ereignisse"](./media/vxeventsbutton-propertieswindow.png "VxEventsButton_PropertiesWindow")).  
+2. Klicken Sie im Eigenschaftenfenster auf die Schaltfläche **Ereignisse** (![Ereignis Schaltfläche](./media/vxeventsbutton-propertieswindow.png "vxEventsButton_PropertiesWindow")).  
   
 3. Klicken Sie auf den Namen des Ereignisses, das Sie behandeln möchten.  
   
-4. Klicken Sie im Abschnitt Value neben dem Ereignisnamen auf die Dropdown-Schaltfläche, um eine Liste der vorhandenen Ereignishandler anzuzeigen, die die Signatur der Methode des Ereignisses zu entsprechen, die Sie behandeln möchten.  
+4. Klicken Sie im Abschnitt Wert neben dem Ereignis Namen auf die Dropdown Schaltfläche, um eine Liste mit den vorhandenen Ereignis Handlern anzuzeigen, die der Methoden Signatur des Ereignisses entsprechen, das Sie verarbeiten möchten.  
   
 5. Wählen Sie den entsprechenden Ereignishandler aus der Liste aus.  
   
-     Code wird das Formular, um das Ereignis zu binden, auf dem vorhandenen Ereignishandler hinzugefügt werden.  
+     Der Code wird dem Formular hinzugefügt, um das Ereignis an den vorhandenen Ereignishandler zu binden.  
   
 ## <a name="see-also"></a>Siehe auch
 

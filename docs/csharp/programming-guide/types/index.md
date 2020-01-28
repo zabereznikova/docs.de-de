@@ -11,12 +11,12 @@ helpviewer_keywords:
 - C# language, types
 - strong typing [C#]
 ms.assetid: f782d7cc-035e-4500-b1b1-36a9881130ad
-ms.openlocfilehash: 0b7c9fc0e9dd0f559c52f692c405a3f9e68814d0
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: be2af77f9680ab3285720525638bba8ef2041999
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75711882"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76745375"
 ---
 # <a name="types-c-programming-guide"></a>Typen (C#-Programmierhandbuch)
 
@@ -113,7 +113,7 @@ Sie können das [struct](../../language-reference/keywords/struct.md)-Schlüssel
 
 [!code-csharp[csProgGuideObjects#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#1)]
 
-Weitere Informationen über Strukturen finden Sie unter [Strukturen](../classes-and-structs/structs.md). Weitere Informationen über Werttypen in .NET finden Sie unter [Werttypen](../../language-reference/keywords/value-types.md).
+Weitere Informationen über Strukturen finden Sie unter [Strukturen](../classes-and-structs/structs.md). Weitere Informationen zu Werttypen finden Sie unter [Werttypen](../../language-reference/builtin-types/value-types.md).
 
 Die andere Kategorie von Werttypen ist [enum](../../language-reference/builtin-types/enum.md). Eine Enumeration definiert einen Satz benannter ganzzahliger Konstanten. So enthält z.B. die <xref:System.IO.FileMode?displayProperty=nameWithType>-Enumeration in der .NET-Klassenbibliothek mehrere benannte ganzzahlige Konstanten, die festlegen, wie eine Datei geöffnet werden soll. Die Definition erfolgt wie im folgenden Beispiel:
 
@@ -148,7 +148,7 @@ Referenztypen bieten volle Vererbungsunterstützung. Wenn Sie eine Klasse erstel
 
 ## <a name="types-of-literal-values"></a>Typen von Literalwerten
 
-In C# erhalten Literalwerte einen Typ vom Compiler. Sie können festlegen, wie ein numerisches Literal eingegeben werden soll, indem Sie am Ende der Zahl einen Buchstaben anfügen. Um z. B. anzugeben, dass der Wert 4.56 als Gleitkommazahl behandelt werden soll, fügen Sie nach der Zahl `4.56f` ein "f" oder "F" an: Wenn kein Buchstabe angefügt wird, leitet der Compiler einen Typ für das Literal ab. Weitere Informationen darüber, welche Typen mit Buchstabensuffixen angegeben werden können, finden Sie auf den Referenzseiten für einzelne Typen unter [Werttypen](../../language-reference/keywords/value-types.md).
+In C# erhalten Literalwerte einen Typ vom Compiler. Sie können festlegen, wie ein numerisches Literal eingegeben werden soll, indem Sie am Ende der Zahl einen Buchstaben anfügen. Um z. B. anzugeben, dass der Wert 4.56 als Gleitkommazahl behandelt werden soll, fügen Sie nach der Zahl `4.56f` ein "f" oder "F" an: Wenn kein Buchstabe angefügt wird, leitet der Compiler einen Typ für das Literal ab. Weitere Informationen darüber, welche Typen mit Buchstabensuffixen angegeben werden können, finden Sie unter [Integrale numerische Typen](../../language-reference/builtin-types/integral-numeric-types.md) und unter [Numerische Gleitkommatypen](../../language-reference/builtin-types/floating-point-numeric-types.md).
 
 Da Literale typisiert sind und alle Typen letztlich von <xref:System.Object?displayProperty=nameWithType> abgeleitet werden, können Sie Code der folgenden Art erstellen und kompilieren:
 
@@ -185,7 +185,7 @@ Weitere Informationen finden Sie unter den folgenden Themen:
 
 - [Verwenden von dynamischen Typen](./using-type-dynamic.md)
 
-- [Werttypen](../../language-reference/keywords/value-types.md)
+- [Werttypen](../../language-reference/builtin-types/value-types.md)
 
 - [Verweistypen](../../language-reference/keywords/reference-types.md)
 

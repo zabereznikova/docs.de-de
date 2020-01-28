@@ -2,12 +2,12 @@
 title: Richtlinieneinstellungen für die Laufzeitanweisung
 ms.date: 03/30/2017
 ms.assetid: cb52b1ef-47fd-4609-b69d-0586c818ac9e
-ms.openlocfilehash: 6001e3855610e7da5262c46413b775da3bea305c
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 7a8933decaec45e8000f3f3d1717847f333deddd
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73128151"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76738505"
 ---
 # <a name="runtime-directive-policy-settings"></a>Richtlinieneinstellungen für die Laufzeitanweisung
 
@@ -34,22 +34,22 @@ In Laufzeitdirektivendateien werden drei Kategorien von Richtlinientypen erkannt
 
   |Element|Activate|Durchsuchen|Dynamic|
   |-------------|--------------|------------|-------------|
-  |[\<Anwendung>](application-element-net-native.md)|.|.|.|
-  |[\<Assembly>](assembly-element-net-native.md)|.|.|.|
-  |[\<AttributeImplies>](attributeimplies-element-net-native.md)|.|.|.|
-  |[\<Event>](event-element-net-native.md)||.|.|
-  |[\<Field>](field-element-net-native.md)||.|.|
-  |[\<GenericParameter>](genericparameter-element-net-native.md)|.|.|.|
-  |[\<ImpliesType>](impliestype-element-net-native.md)|.|.|.|
-  |[\<Method>](method-element-net-native.md)||.|.|
-  |[\<MethodInstantiation>](methodinstantiation-element-net-native.md)||.|.|
-  |[\<Namespace>](namespace-element-net-native.md)|.|.|.|
-  |[\<Parameter>](parameter-element-net-native.md)|.|.|.|
-  |[\<Property>](property-element-net-native.md)||.|.|
-  |[\<Subtypes>](subtypes-element-net-native.md)|.|.|.|
-  |[\<Type>](type-element-net-native.md)|.|.|.|
-  |[\<TypeInstantiation>](typeinstantiation-element-net-native.md)|.|.|.|
-  |[\<TypeParameter>](typeparameter-element-net-native.md)|.|.|.|
+  |[\<Anwendung>](application-element-net-native.md)|✔️|✔️|✔️|
+  |[\<Assembly>](assembly-element-net-native.md)|✔️|✔️|✔️|
+  |[\<AttributeImplies>](attributeimplies-element-net-native.md)|✔️|✔️|✔️|
+  |[\<Event>](event-element-net-native.md)||✔️|✔️|
+  |[\<Field>](field-element-net-native.md)||✔️|✔️|
+  |[\<GenericParameter>](genericparameter-element-net-native.md)|✔️|✔️|✔️|
+  |[\<ImpliesType>](impliestype-element-net-native.md)|✔️|✔️|✔️|
+  |[\<Method>](method-element-net-native.md)||✔️|✔️|
+  |[\<MethodInstantiation>](methodinstantiation-element-net-native.md)||✔️|✔️|
+  |[\<Namespace>](namespace-element-net-native.md)|✔️|✔️|✔️|
+  |[\<Parameter>](parameter-element-net-native.md)|✔️|✔️|✔️|
+  |[\<Property>](property-element-net-native.md)||✔️|✔️|
+  |[\<Subtypes>](subtypes-element-net-native.md)|✔️|✔️|✔️|
+  |[\<Type>](type-element-net-native.md)|✔️|✔️|✔️|
+  |[\<TypeInstantiation>](typeinstantiation-element-net-native.md)|✔️|✔️|✔️|
+  |[\<TypeParameter>](typeparameter-element-net-native.md)|✔️|✔️|✔️|
 
 - Serialisierungsrichtlinientypen bestimmen, welche Metadaten zur Laufzeit für Serialisierung und Deserialisierung zur Verfügung gestellt werden:
 
@@ -65,22 +65,22 @@ In Laufzeitdirektivendateien werden drei Kategorien von Richtlinientypen erkannt
 
   |Element|Serialisieren|DataContractSerializer|DataContractJsonSerializer|XmlSerializer|
   |-------------|---------------|----------------------------|--------------------------------|-------------------|
-  |[\<Anwendung>](application-element-net-native.md)|.|.|.|.|
-  |[\<Assembly>](assembly-element-net-native.md)|.|.|.|.|
-  |[\<AttributeImplies>](attributeimplies-element-net-native.md)|.|.|.|.|
+  |[\<Anwendung>](application-element-net-native.md)|✔️|✔️|✔️|✔️|
+  |[\<Assembly>](assembly-element-net-native.md)|✔️|✔️|✔️|✔️|
+  |[\<AttributeImplies>](attributeimplies-element-net-native.md)|✔️|✔️|✔️|✔️|
   |[\<Event>](event-element-net-native.md)|||||
-  |[\<Field>](field-element-net-native.md)|.||||
-  |[\<GenericParameter>](genericparameter-element-net-native.md)|.|.|.|.|
-  |[\<ImpliesType>](impliestype-element-net-native.md)|.|.|.|.|
+  |[\<Field>](field-element-net-native.md)|✔️||||
+  |[\<GenericParameter>](genericparameter-element-net-native.md)|✔️|✔️|✔️|✔️|
+  |[\<ImpliesType>](impliestype-element-net-native.md)|✔️|✔️|✔️|✔️|
   |[\<Method>](method-element-net-native.md)|||||
   |[\<MethodInstantiation>](methodinstantiation-element-net-native.md)|||||
-  |[\<Namespace>](namespace-element-net-native.md)|.|.|.|.|
-  |[\<Parameter>](parameter-element-net-native.md)|.|.|.|.|
-  |[\<Property>](property-element-net-native.md)|.||||
-  |[\<Subtypes>](subtypes-element-net-native.md)|.|.|.|.|
-  |[\<Type>](type-element-net-native.md)|.|.|.|.|
-  |[\<TypeInstantiation>](typeinstantiation-element-net-native.md)|.|.|.|.|
-  |[\<TypeParameter>](typeparameter-element-net-native.md)|.|.|.|.|
+  |[\<Namespace>](namespace-element-net-native.md)|✔️|✔️|✔️|✔️|
+  |[\<Parameter>](parameter-element-net-native.md)|✔️|✔️|✔️|✔️|
+  |[\<Property>](property-element-net-native.md)|✔️||||
+  |[\<Subtypes>](subtypes-element-net-native.md)|✔️|✔️|✔️|✔️|
+  |[\<Type>](type-element-net-native.md)|✔️|✔️|✔️|✔️|
+  |[\<TypeInstantiation>](typeinstantiation-element-net-native.md)|✔️|✔️|✔️|✔️|
+  |[\<TypeParameter>](typeparameter-element-net-native.md)|✔️|✔️|✔️|✔️|
 
 - Interop-Richtlinientypen bestimmen, welche Metadaten zur Laufzeit verfügbar gemacht werden, um Verweistypen, Werttypen und Funktionszeiger an COM und Windows-Runtime zu übergeben:
 
@@ -94,22 +94,22 @@ In Laufzeitdirektivendateien werden drei Kategorien von Richtlinientypen erkannt
 
   |Element|MarshalObject|MarshalDelegate|MarshalStructure|
   |-------------|-------------------|---------------------|----------------------|
-  |[\<Anwendung>](application-element-net-native.md)|.|.|.|
-  |[\<Assembly>](assembly-element-net-native.md)|.|.|.|
-  |[\<AttributeImplies>](attributeimplies-element-net-native.md)|.|.|.|
+  |[\<Anwendung>](application-element-net-native.md)|✔️|✔️|✔️|
+  |[\<Assembly>](assembly-element-net-native.md)|✔️|✔️|✔️|
+  |[\<AttributeImplies>](attributeimplies-element-net-native.md)|✔️|✔️|✔️|
   |[\<Event>](event-element-net-native.md)||||
   |[\<Field>](field-element-net-native.md)||||
-  |[\<GenericParameter>](genericparameter-element-net-native.md)|.|.|.|
-  |[\<ImpliesType>](impliestype-element-net-native.md)|.|.|.|
+  |[\<GenericParameter>](genericparameter-element-net-native.md)|✔️|✔️|✔️|
+  |[\<ImpliesType>](impliestype-element-net-native.md)|✔️|✔️|✔️|
   |[\<Method>](method-element-net-native.md)||||
   |[\<MethodInstantiation>](methodinstantiation-element-net-native.md)||||
-  |[\<Namespace>](namespace-element-net-native.md)|.|.|.|
-  |[\<Parameter>](parameter-element-net-native.md)|.|.|.|
+  |[\<Namespace>](namespace-element-net-native.md)|✔️|✔️|✔️|
+  |[\<Parameter>](parameter-element-net-native.md)|✔️|✔️|✔️|
   |[\<Property>](property-element-net-native.md)||||
-  |[\<Subtypes>](subtypes-element-net-native.md)|.|.|.|
-  |[\<Type>](type-element-net-native.md)|.|.|.|
-  |[\<TypeInstantiation>](typeinstantiation-element-net-native.md)|.|.|.|
-  |[\<TypeParameter>](typeparameter-element-net-native.md)|.|.|.|
+  |[\<Subtypes>](subtypes-element-net-native.md)|✔️|✔️|✔️|
+  |[\<Type>](type-element-net-native.md)|✔️|✔️|✔️|
+  |[\<TypeInstantiation>](typeinstantiation-element-net-native.md)|✔️|✔️|✔️|
+  |[\<TypeParameter>](typeparameter-element-net-native.md)|✔️|✔️|✔️|
 
 ## <a name="policy-settings"></a>Richtlinieneinstellungen
 
@@ -117,16 +117,16 @@ Jeder Richtlinientyp kann auf einen der in der folgenden Tabelle aufgeführten W
 
 |Richtlinieneinstellung|Beschreibung|`Assembly`-, `Namespace`-, `Type`- und `TypeInstantiation`-Elemente|`Event`-, `Field`-, `Method`-, `MethodInstantiation`- und `Property`-Elemente|
 |--------------------|-----------------|-----------------------------------------------------------------------|--------------------------------------------------------------------------------|
-|`All`|Aktiviert die Richtlinie für alle Typen und Member, die die .NET Native-Toolkette nicht entfernt.|.||
-|`Auto`|Gibt an, dass die Standardrichtlinie für den Richtlinientyp für dieses Programmelement verwendet werden soll. Dies entspricht dem Auslassen einer Richtlinie für diesen Richtlinientyp. `Auto` wird normalerweise verwendet, um anzugeben, dass die Richtlinie von einem übergeordneten Element geerbt wird.|.|.|
-|`Excluded`|Gibt an, dass die Richtlinie für ein bestimmtes Programmelement deaktiviert ist. Beispiel: Die Laufzeitanweisung:<br /><br /> `<Type Name="BusinessClasses.Person" Browse="Excluded" Dynamic="Excluded" />`<br /><br /> gibt an, dass die Metadaten für die `BusinessClasses.Person`-Klasse zum Durchsuchen oder zum dynamischen Instanziieren und Ändern von `Person`-Objekten nicht verfügbar sind.|.|.|
-|`Included`|Aktiviert eine Richtlinie, wenn Metadaten für den übergeordneten Typ verfügbar sind.||.|
-|`Public`|Aktiviert die Richtlinie für öffentliche Typen oder Member, sofern die Toolkette nicht bestimmt, dass der Typ oder Member unnötig ist und daher entfernt wird. Diese Einstellung unterscheidet sich von der Einstellung `Required Public`, durch die sichergestellt wird, dass Metadaten für öffentliche Typen und Member immer verfügbar sind, auch wenn die Toolkette bestimmt, dass sie nicht erforderlich sind.|.||
-|`PublicAndInternal`|Aktiviert die Richtlinie für öffentliche und interne Typen oder Member, sofern die Toolkette nicht bestimmt, dass der Typ oder Member unnötig ist und daher entfernt wird. Diese Einstellung unterscheidet sich von der Einstellung `Required PublicAndInternal`, durch die sichergestellt wird, dass Metadaten für öffentliche und interne Typen und Member immer verfügbar sind, auch wenn die Toolkette bestimmt, dass sie nicht erforderlich sind.|.||
-|`Required`|Gibt an, dass die Richtlinie für einen Member aktiviert ist und Metadaten verfügbar sind, selbst wenn der Member anscheinend verwendet wird.||.|
-|`Required Public`|Aktiviert die Richtlinie für öffentliche Typen oder Member und stellt sicher, dass die Metadaten für öffentliche Typen und Member immer verfügbar sind. Diese Einstellung unterscheidet sich von der Einstellung `Public`, durch die Metadaten für öffentliche Typen und Member nur verfügbar gemacht werden, wenn die Toolkette bestimmt, dass es erforderlich ist.|.||
-|`Required PublicAndInternal`|Aktiviert die Richtlinie für öffentliche und interne Typen oder Member und stellt sicher, dass die Metadaten für öffentliche und interne Typen und Member immer verfügbar sind. Diese Einstellung unterscheidet sich von der Einstellung `PublicAndInternal`, durch die Metadaten für öffentliche und interne Typen und Member nur verfügbar gemacht werden, wenn die Toolkette bestimmt, dass es erforderlich ist.|.||
-|`Required All`|Fordert, dass die Toolkette alle Typen und Member unabhängig von ihrer Verwendung beibehält, und aktiviert die Richtlinie für diese.|.||
+|`All`|Aktiviert die Richtlinie für alle Typen und Member, die die .NET Native-Toolkette nicht entfernt.|✔️||
+|`Auto`|Gibt an, dass die Standardrichtlinie für den Richtlinientyp für dieses Programmelement verwendet werden soll. Dies entspricht dem Auslassen einer Richtlinie für diesen Richtlinientyp. `Auto` wird normalerweise verwendet, um anzugeben, dass die Richtlinie von einem übergeordneten Element geerbt wird.|✔️|✔️|
+|`Excluded`|Gibt an, dass die Richtlinie für ein bestimmtes Programmelement deaktiviert ist. Beispiel: Die Laufzeitanweisung:<br /><br /> `<Type Name="BusinessClasses.Person" Browse="Excluded" Dynamic="Excluded" />`<br /><br /> gibt an, dass die Metadaten für die `BusinessClasses.Person`-Klasse zum Durchsuchen oder zum dynamischen Instanziieren und Ändern von `Person`-Objekten nicht verfügbar sind.|✔️|✔️|
+|`Included`|Aktiviert eine Richtlinie, wenn Metadaten für den übergeordneten Typ verfügbar sind.||✔️|
+|`Public`|Aktiviert die Richtlinie für öffentliche Typen oder Member, sofern die Toolkette nicht bestimmt, dass der Typ oder Member unnötig ist und daher entfernt wird. Diese Einstellung unterscheidet sich von der Einstellung `Required Public`, durch die sichergestellt wird, dass Metadaten für öffentliche Typen und Member immer verfügbar sind, auch wenn die Toolkette bestimmt, dass sie nicht erforderlich sind.|✔️||
+|`PublicAndInternal`|Aktiviert die Richtlinie für öffentliche und interne Typen oder Member, sofern die Toolkette nicht bestimmt, dass der Typ oder Member unnötig ist und daher entfernt wird. Diese Einstellung unterscheidet sich von der Einstellung `Required PublicAndInternal`, durch die sichergestellt wird, dass Metadaten für öffentliche und interne Typen und Member immer verfügbar sind, auch wenn die Toolkette bestimmt, dass sie nicht erforderlich sind.|✔️||
+|`Required`|Gibt an, dass die Richtlinie für einen Member aktiviert ist und Metadaten verfügbar sind, selbst wenn der Member anscheinend verwendet wird.||✔️|
+|`Required Public`|Aktiviert die Richtlinie für öffentliche Typen oder Member und stellt sicher, dass die Metadaten für öffentliche Typen und Member immer verfügbar sind. Diese Einstellung unterscheidet sich von der Einstellung `Public`, durch die Metadaten für öffentliche Typen und Member nur verfügbar gemacht werden, wenn die Toolkette bestimmt, dass es erforderlich ist.|✔️||
+|`Required PublicAndInternal`|Aktiviert die Richtlinie für öffentliche und interne Typen oder Member und stellt sicher, dass die Metadaten für öffentliche und interne Typen und Member immer verfügbar sind. Diese Einstellung unterscheidet sich von der Einstellung `PublicAndInternal`, durch die Metadaten für öffentliche und interne Typen und Member nur verfügbar gemacht werden, wenn die Toolkette bestimmt, dass es erforderlich ist.|✔️||
+|`Required All`|Fordert, dass die Toolkette alle Typen und Member unabhängig von ihrer Verwendung beibehält, und aktiviert die Richtlinie für diese.|✔️||
 
 ## <a name="see-also"></a>Siehe auch
 

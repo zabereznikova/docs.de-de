@@ -1,19 +1,19 @@
 ---
-title: 'Vorgehensweise: Hinzufügen von ActiveX-Steuerelementen zu Windows Forms'
+title: ActiveX-Steuerelemente zu Formularen hinzufügen
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Forms controls, ActiveX controls
 - forms [Windows Forms], adding ActiveX controls
 - ActiveX controls [Windows Forms], adding
 ms.assetid: 54a61e5b-555e-4887-b41e-6244fed271eb
-ms.openlocfilehash: 8c4c6c3f96c49401b032e360314794cc800c0551
-ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.openlocfilehash: 920c1111a5703352a4b624068e3d5ceae9892591
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69987059"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76746840"
 ---
-# <a name="how-to-add-activex-controls-to-windows-forms"></a>Vorgehensweise: Hinzufügen von ActiveX-Steuerelementen zu Windows Forms
+# <a name="how-to-add-activex-controls-to-windows-forms"></a>Gewusst wie: Hinzufügen von ActiveX-Steuerelementen zu Windows Forms
 
 Während der Windows Forms-Designer in Visual Studio für das Hosten von Windows Forms Steuerelementen optimiert ist, können Sie auch ActiveX-Steuerelemente auf Windows Forms platzieren.
 

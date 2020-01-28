@@ -1,25 +1,25 @@
 ---
-title: Drag &amp; Drop-Funktionen in Windows Forms
+title: Drag & amp; Drop-Funktionalität
 ms.date: 03/30/2017
 helpviewer_keywords:
 - drag and drop [Windows Forms], Windows Forms
 - Windows Forms, drag and drop
 ms.assetid: 65cd2c03-8782-474e-b958-cbe43eeb902c
-ms.openlocfilehash: 437b632706b27cd487d60c2ad23db3f9a3c96c09
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 603dc158719c0b11def4386eb24a33f235cf3a42
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61966856"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76732759"
 ---
 # <a name="drag-and-drop-functionality-in-windows-forms"></a>Drag &amp; Drop-Funktionen in Windows Forms
-Windows Forms umfasst eine Reihe von Methoden, Ereignissen und Klassen, die das Drag &amp; Drop-Verhalten implementieren. Dieses Thema enthält eine Übersicht über die Drag &amp; Drop-Unterstützung in Windows Forms.  Siehe auch [Drag & Drop-Operationen und Unterstützung der Zwischenablage](./advanced/drag-and-drop-operations-and-clipboard-support.md).  
+Windows Forms umfasst eine Reihe von Methoden, Ereignissen und Klassen, die das Drag &amp; Drop-Verhalten implementieren. Dieses Thema enthält eine Übersicht über die Drag &amp; Drop-Unterstützung in Windows Forms.  Siehe auch [Drag & Drop-Vorgänge und Unterstützung der Zwischenablage](./advanced/drag-and-drop-operations-and-clipboard-support.md).  
   
 ## <a name="performing-drag-and-drop-operations"></a>Ausführen von Drag &amp; Drop-Vorgängen  
  Um einen Drag &amp; Drop-Vorgang auszuführen, verwenden Sie die <xref:System.Windows.Forms.Control.DoDragDrop%2A>-Methode der <xref:System.Windows.Forms.Control>-Klasse. Weitere Informationen, wie ein Drag &amp; Drop-Vorgang ausgeführt wird, finden Sie unter <xref:System.Windows.Forms.Control.DoDragDrop%2A>. Um das Rechteck abzurufen, über das der Mauszeiger gezogen werden muss, bevor ein Drag &amp; Drop-Vorgang beginnt, verwenden Sie die <xref:System.Windows.Forms.SystemInformation.DragSize%2A>-Eigenschaft der <xref:System.Windows.Forms.SystemInformation>-Klasse.  
   
 ## <a name="events-related-to-drag-and-drop-operations"></a>Ereignisse im Zusammenhang mit Drag &amp; Drop-Vorgängen  
- Es gibt zwei Kategorien von Ereignissen in einem Drag &amp; Drop-Vorgang: Ereignisse, die im aktuellen Ziel des Drag &amp; Drop-Vorgangs auftreten, und Ereignisse, die in der Quelle des Drag &amp; Drop-Vorgangs auftreten.  
+ Es gibt zwei Kategorien von Ereignissen in einem Drag & Drop-Vorgang: Ereignisse, die im aktuellen Ziel des Drag &amp; Drop-Vorgangs auftreten, und Ereignisse, die in der Quelle des Drag &amp; Drop-Vorgangs auftreten.  
   
 ### <a name="events-on-the-current-target"></a>Ereignisse im aktuellen Ziel  
  Die folgende Tabelle zeigt die Ereignisse, die im aktuellen Ziel eines Drag &amp; Drop--Vorgangs auftreten.  
@@ -39,7 +39,7 @@ Windows Forms umfasst eine Reihe von Methoden, Ereignissen und Klassen, die das 
 |Mausereignis|Beschreibung|  
 |-----------------|-----------------|  
 |<xref:System.Windows.Forms.Control.GiveFeedback>|Dieses Ereignis tritt während eines Ziehvorgangs auf. Es bietet die Möglichkeit, dem Benutzer einen visuellen Hinweis zu geben, dass der Drag &amp; Drop-Vorgang auftritt, z. B. Ändern des Mauszeigers. Der Handler für dieses Ereignis empfängt ein Argument des Typs <xref:System.Windows.Forms.GiveFeedbackEventArgs>.|  
-|<xref:System.Windows.Forms.Control.QueryContinueDrag>|Dieses Ereignis wird während eines Drag &amp; Drop-Vorgangs ausgelöst. Dadurch kann die Quelle des Ziehvorgangs bestimmen, ob der Drag &amp; Drop-Vorgang abgebrochen werden soll. Der Handler für dieses Ereignis empfängt ein Argument des Typs <xref:System.Windows.Forms.QueryContinueDragEventArgs>.|  
+|<xref:System.Windows.Forms.Control.QueryContinueDrag>|Dieses Ereignis wird während eines Drag & Drop-Vorgangs ausgelöst. Dadurch kann die Quelle des Ziehvorgangs bestimmen, ob der Drag &amp;amp; Drop-Vorgang abgebrochen werden soll. Der Handler für dieses Ereignis empfängt ein Argument des Typs <xref:System.Windows.Forms.QueryContinueDragEventArgs>.|  
   
  Die <xref:System.Windows.Forms.QueryContinueDragEventArgs>-Klasse stellt Folgendes bereit: den aktuellen Zustand der Maus und der Zusatztasten der Tastatur, einen Wert, der angibt, ob die ESC-Taste gedrückt wurde, und einen <xref:System.Windows.Forms.DragAction>-Wert, der festgelegt werden kann, um anzugeben, ob der Drag &amp; Drop-Vorgang fortgesetzt werden soll.  
   

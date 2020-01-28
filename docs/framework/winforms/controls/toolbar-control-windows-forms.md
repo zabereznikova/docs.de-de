@@ -1,16 +1,16 @@
 ---
-title: ToolBar-Steuerelement (Windows Forms)
+title: ToolBar-Steuerelement
 ms.date: 03/30/2017
 helpviewer_keywords:
 - toolbars [Windows Forms]
 - ToolBar control [Windows Forms]
 ms.assetid: 6b40e9ce-6a7a-4784-bfc9-7f1d36b7462e
-ms.openlocfilehash: 13a56af0e52897a6fd4e11516fbf4c0b8f6d6b5d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 027c96bb49e9446244e4b08ba93c551ef043b3c0
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69929563"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76735453"
 ---
 # <a name="toolbar-control-windows-forms"></a>ToolBar-Steuerelement (Windows Forms)
 > [!NOTE]
@@ -25,16 +25,16 @@ ms.locfileid: "69929563"
  [Übersicht über das ToolBar-Steuerelement](toolbar-control-overview-windows-forms.md)  
  Stellt die allgemeinen Konzepte des `ToolBar`-Steuerelements vor, mit dem Sie benutzerdefinierte Symbolleisten entwerfen können, mit denen Benutzer arbeiten können.  
   
- [Vorgehensweise: Hinzufügen von Schaltflächen zu Symbolleisten](how-to-add-buttons-to-a-toolbar-control.md)  
+ [Gewusst wie: Hinzufügen von Schaltflächen zu einem ToolBar-Steuerelement](how-to-add-buttons-to-a-toolbar-control.md)  
  Beschreibt, wie ein `ToolBar`-Steuerelement hinzugefügt wird.  
   
- [Vorgehensweise: Definieren eines Symbols für eine Symbolleisten-Schaltfläche](how-to-define-an-icon-for-a-toolbar-button.md)  
+ [Gewusst wie: Definieren eines Symbols für eine Symbolleistenschaltfläche](how-to-define-an-icon-for-a-toolbar-button.md)  
  Beschreibt, wie Symbole auf den Schaltflächen eines `ToolBar`-Steuerelements angezeigt werden.  
   
- [Vorgehensweise: Triggermenü Ereignisse für Symbolleisten-Schaltflächen](how-to-trigger-menu-events-for-toolbar-buttons.md)  
+ [Gewusst wie: Auslösen von Menüereignissen für Symbolleistenschaltflächen](how-to-trigger-menu-events-for-toolbar-buttons.md)  
  Bietet Anweisungen zum Schreiben von Code, in dem interpretiert wird, auf welche Schaltfläche ein Benutzer in einem `ToolBar`-Steuerelement geklickt hat.  
   
- Weitere Informationen hierzu finden Sie auch unter [Gewusst wie: Definieren eines Symbols für eine Symbolleisten-Schaltfläche](how-to-define-an-icon-for-a-toolbar-button-using-the-designer.md)mithilfe [des Designers, Vorgehensweise: Hinzufügen von Schaltflächen zu einem Symbolleisten](how-to-add-buttons-to-a-toolbar-control-using-the-designer.md)-Steuerelement mithilfe des Designers  
+ Siehe auch Gewusst [wie: Definieren eines Symbols für eine Symbolleisten-Schaltfläche mithilfe des Designers](how-to-define-an-icon-for-a-toolbar-button-using-the-designer.md), Gewusst [wie: Hinzufügen von Schaltflächen zu einem Symbolleisten-Steuerelement mithilfe des Designers](how-to-add-buttons-to-a-toolbar-control-using-the-designer.md).  
   
 ## <a name="reference"></a>Referenz  
  <xref:System.Windows.Forms.ToolBar>-Klasse  

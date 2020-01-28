@@ -3,12 +3,12 @@ title: Das .NET Compiler Platform SDK (Roslyn APIs)
 description: Erfahren Sie, wie das .NET Compiler Platform-SDK (auch als „Roslyn-APIs“ bezeichnet) verwendet wird, um den .NET-Code zu analysieren, Fehler zu erkennen und diese Fehler zu beheben.
 ms.date: 10/10/2017
 ms.custom: mvc
-ms.openlocfilehash: 98984edad3a25daa8b0ea13b903c4e6447b8a22a
-ms.sourcegitcommit: 5d769956a04b6d68484dd717077fabc191c21da5
+ms.openlocfilehash: a1ceb1d11cf846e67be2c6558978e01133e591da
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/17/2020
-ms.locfileid: "76163136"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742738"
 ---
 # <a name="the-net-compiler-platform-sdk"></a>.NET Compiler Platform-SDK
 
@@ -43,7 +43,7 @@ Teams können Analysetools und Codefehlerbehebungen erstellen, die nach den am h
 
 ## <a name="provide-guidance-with-library-packages"></a>Bereitstellen von Leitfäden mit Bibliothekspaketen
 
-Für .NET-Entwickler steht eine Vielzahl von Bibliotheken zu NuGet zur Verfügung.
+NuGet bietet .NET-Entwicklern eine Vielzahl von Bibliotheken.
 Diese stammen von Microsoft, Drittanbietern sowie von Communitymitgliedern und Freiwilligen. Diese Bibliotheken erhalten mehr Akzeptanz und höhere Bewertungen, wenn Entwickler mit diesen Bibliotheken erfolgreich sein können.
 
 Neben der Dokumentation können Sie Analysetools und Codefehlerbehebungen bereitstellen, die häufige Verstöße gegen Ihre Bibliothek aufspüren und korrigieren. Diese unmittelbaren Korrekturen verhelfen Entwickler schneller zum Erfolg.
@@ -58,7 +58,7 @@ Diese Analysetools können im [Visual Studio Marketplace](https://marketplace.vi
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Das .NET Compiler Platform-SDK enthält die neuesten Sprachobjektmodelle für die Codegenerierung, die Analyse und das Refactoring. Dieser Abschnitt enthält einen konzeptionellen Überblick über das .NET Compiler Platform-SDK. Einzelheiten finden Sie in den Abschnitten zu den Schnellstarts, Beispielen und Tutorials.
+Das .NET Compiler Platform-SDK enthält die neuesten Sprachobjektmodelle für die Codegenerierung, die Analyse und das Refactoring. Dieser Abschnitt enthält einen konzeptionellen Überblick über das .NET Compiler Platform-SDK. Einzelheiten finden Sie in den Abschnitten „Schnellstarts“, „Beispiele“ und „Tutorials“.
 
 In den folgenden fünf Themenbereichen erfahren Sie mehr über die Konzepte im .NET Compiler Platform-SDK:
 

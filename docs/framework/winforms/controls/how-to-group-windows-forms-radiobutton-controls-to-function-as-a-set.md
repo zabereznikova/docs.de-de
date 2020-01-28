@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Gruppieren von RadioButton-Steuerelementen in Windows Forms für die Verwendung als Set'
+title: Gruppieren von RadioButton-Steuerelementen als Satz
 ms.date: 03/30/2017
 helpviewer_keywords:
 - radio buttons [Windows Forms], grouping
@@ -7,23 +7,23 @@ helpviewer_keywords:
 - Windows Forms controls, grouping
 - RadioButton control [Windows Forms], grouping
 ms.assetid: 58f8fe34-50b7-49d8-a2be-c271be3c6b32
-ms.openlocfilehash: 857e61bc89e072aebcf34793d7e8504ece3318c7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c4b37c84bf0f93837b91c743c7681d39fd83a659
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61941309"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76732955"
 ---
-# <a name="how-to-group-windows-forms-radiobutton-controls-to-function-as-a-set"></a>Vorgehensweise: Gruppieren von RadioButton-Steuerelementen in Windows Forms für die Verwendung als Set
-Windows Forms <xref:System.Windows.Forms.RadioButton> Steuerelemente Benutzern eine Auswahl aus zwei oder mehr Einstellungen geben die nur eine an eine Prozedur oder dem Objekt zugewiesen werden kann sollen. Z. B. eine Gruppe von <xref:System.Windows.Forms.RadioButton> Steuerelemente können eine Auswahl von Transportunternehmen für einen Auftrag anzeigen, aber nur ein Unternehmen ausgewählt werden kann. Aus diesem Grund nur eine <xref:System.Windows.Forms.RadioButton> zu einem Zeitpunkt kann ausgewählt werden, auch wenn es sich um einen Teil einer funktionalen Gruppe ist.  
+# <a name="how-to-group-windows-forms-radiobutton-controls-to-function-as-a-set"></a>Gewusst wie: Gruppieren von RadioButton-Steuerelementen in Windows Forms für die Verwendung als Set
+Windows Forms <xref:System.Windows.Forms.RadioButton>-Steuerelemente sollen Benutzern eine Auswahl zwischen zwei oder mehr Einstellungen geben, von denen nur eine einer Prozedur oder einem Objekt zugewiesen werden kann. Beispielsweise kann eine Gruppe von <xref:System.Windows.Forms.RadioButton>-Steuerelementen eine Auswahl von Paket Trägern für eine Bestellung anzeigen, es wird jedoch nur einer der Betreiber verwendet. Daher kann jeweils nur eine <xref:System.Windows.Forms.RadioButton> ausgewählt werden, auch wenn Sie Teil einer Funktionsgruppe ist.  
   
- Gruppieren, Optionsfelder werden in einem Container z. B. eine <xref:System.Windows.Forms.Panel> -Steuerelement, ein <xref:System.Windows.Forms.GroupBox> Steuerelement oder Formular. Alle Optionsfelder, die direkt zu einer Form werden einer Gruppe hinzugefügt werden. Um separate Gruppen hinzuzufügen, müssen Sie sie innerhalb von Bereichen oder Gruppenfelder platzieren. Weitere Informationen zu Bereichen oder Gruppenfelder, finden Sie unter [Übersicht über Panel-Steuerelement](panel-control-overview-windows-forms.md) oder [Übersicht über das GroupBox-Steuerelement](groupbox-control-overview-windows-forms.md).  
+ Sie gruppieren Options Felder, indem Sie Sie in einen Container, z. b. ein <xref:System.Windows.Forms.Panel> Steuerelement, ein <xref:System.Windows.Forms.GroupBox> Steuerelement oder ein Formular, zeichnen. Alle Options Felder, die einem Formular direkt hinzugefügt werden, werden zu einer Gruppe. Um separate Gruppen hinzuzufügen, müssen Sie Sie in Panels oder Gruppen Feldern platzieren. Weitere Informationen zu Panels oder Gruppen Feldern finden Sie unter Übersicht über das [Panel-Steuer](panel-control-overview-windows-forms.md) Element oder Übersicht über das [GroupBox-Steuer](groupbox-control-overview-windows-forms.md)Element.  
   
-### <a name="to-group-radiobutton-controls-as-a-set-to-function-independently-of-other-sets"></a>Zum Gruppieren von RadioButton-Steuerelementen als Gruppe unabhängig von anderen-Funktion  
+### <a name="to-group-radiobutton-controls-as-a-set-to-function-independently-of-other-sets"></a>So gruppieren Sie RadioButton-Steuerelemente als eine Menge, die unabhängig von anderen Sätzen funktioniert  
   
-1. Ziehen Sie eine <xref:System.Windows.Forms.GroupBox> oder <xref:System.Windows.Forms.Panel> -Steuerelement aus der **Windows Forms** Registerkarte die **Toolbox** auf das Formular.  
+1. Ziehen Sie ein <xref:System.Windows.Forms.GroupBox> oder <xref:System.Windows.Forms.Panel> Steuerelement von der Registerkarte **Windows Forms** der **Toolbox** auf das Formular.  
   
-2. Zeichnen Sie <xref:System.Windows.Forms.RadioButton> steuert, auf die <xref:System.Windows.Forms.GroupBox> oder <xref:System.Windows.Forms.Panel> Steuerelement.  
+2. Zeichnen Sie <xref:System.Windows.Forms.RadioButton> Steuerelemente auf der <xref:System.Windows.Forms.GroupBox> oder <xref:System.Windows.Forms.Panel> Steuerelement.  
   
 ## <a name="see-also"></a>Siehe auch
 

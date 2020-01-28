@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - certificates [WCF]
 ms.assetid: 6ffb8682-8f07-4a45-afbb-8d2487e9dbc3
-ms.openlocfilehash: 0764ca29fc959092e77629ff3888e65f0d68d70c
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: e38ead0d378092af086218277fd2e85b4a6396c3
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75938055"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76746891"
 ---
 # <a name="working-with-certificates"></a>Verwenden von Zertifikaten
 
@@ -164,9 +164,9 @@ Sie können Zertifikate auch in der Konfiguration festlegen. Wenn Sie einen Dien
 
 ## <a name="mapping-a-certificate-to-a-user-account"></a>Zuordnen eines Zertifikats zu einem Benutzerkonto
 
-IIS und Active Directory bieten u. a. die Möglichkeit, ein Zertifikat einem Windows-Benutzerkonto zuzuordnen. Weitere Informationen über das Feature finden Sie unter [Map certificates to user accounts (Zuordnen von Zertifikaten zu Benutzerkonten)](https://go.microsoft.com/fwlink/?LinkId=88917).
+IIS und Active Directory bieten u. a. die Möglichkeit, ein Zertifikat einem Windows-Benutzerkonto zuzuordnen. Weitere Informationen über das Feature finden Sie unter [Map certificates to user accounts (Zuordnen von Zertifikaten zu Benutzerkonten)](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc736706(v=ws.10)).
 
-Informationen zur Verwendung der Azure Directory-Zuweisung finden Sie unter [Mapping Client Certificates with Directory Service Mapping (Zuordnen von Clientzertifikaten mit der Verzeichnisdienstzuordnung)](https://go.microsoft.com/fwlink/?LinkId=88918).
+Informationen zur Verwendung der Azure Directory-Zuweisung finden Sie unter [Mapping Client Certificates with Directory Service Mapping (Zuordnen von Clientzertifikaten mit der Verzeichnisdienstzuordnung)](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc758484(v=ws.10)).
 
 Wenn diese Funktion aktiviert ist, können Sie die <xref:System.ServiceModel.Security.X509ClientCertificateAuthentication.MapClientCertificateToWindowsAccount%2A>-Eigenschaft der <xref:System.ServiceModel.Security.X509ClientCertificateAuthentication>-Klasse auf `true` festlegen. In der Konfiguration können Sie das `mapClientCertificateToWindowsAccount`-Attribut des [\<authentication>](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-servicecertificate-element.md)-Elements wie im folgenden Codebeispiel auf `true` festlegen.
 
