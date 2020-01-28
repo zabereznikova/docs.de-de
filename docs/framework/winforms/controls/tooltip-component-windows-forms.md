@@ -1,37 +1,37 @@
 ---
-title: ToolTip-Komponente (Windows Forms)
+title: ToolTip-Komponente
 ms.date: 03/30/2017
 helpviewer_keywords:
 - tooltips [Windows Forms]
 - ToolTip component [Windows Forms]
 ms.assetid: 82e71dc3-0159-4f91-9f22-499224f004a0
-ms.openlocfilehash: eb68b614046fc10c4af9d58354125f76e119c782
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c905fe493d3f49bef414853814fef174140e3120
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62009278"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76747247"
 ---
-# <a name="tooltip-component-windows-forms"></a><span data-ttu-id="7f3b5-102">ToolTip-Komponente (Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="7f3b5-102">ToolTip Component (Windows Forms)</span></span>
-<span data-ttu-id="7f3b5-103">Die <xref:System.Windows.Forms.ToolTip>-Komponente in Windows Forms zeigt Text an, wenn der Benutzer auf Steuerelemente zeigt.</span><span class="sxs-lookup"><span data-stu-id="7f3b5-103">The Windows Forms <xref:System.Windows.Forms.ToolTip> component displays text when the user points at controls.</span></span> <span data-ttu-id="7f3b5-104">Jedem Steuerelement kann eine QuickInfo zugeordnet werden.</span><span class="sxs-lookup"><span data-stu-id="7f3b5-104">A ToolTip can be associated with any control.</span></span> <span data-ttu-id="7f3b5-105">Ein Beispiel für die Verwendung dieses Steuerelements: Um Speicherplatz auf einem Formular zu sparen, können Sie ein kleines Symbol auf einer Schaltfläche anzeigen und verwenden eine QuickInfo, um die Funktion der Schaltfläche zu erklären.</span><span class="sxs-lookup"><span data-stu-id="7f3b5-105">An example use of this control: In order to save space on a form, you can display a small icon on a button and use a ToolTip to explain the button's function.</span></span>  
+# <a name="tooltip-component-windows-forms"></a><span data-ttu-id="2a426-102">ToolTip-Komponente (Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="2a426-102">ToolTip Component (Windows Forms)</span></span>
+<span data-ttu-id="2a426-103">Die <xref:System.Windows.Forms.ToolTip>-Komponente in Windows Forms zeigt Text an, wenn der Benutzer auf Steuerelemente zeigt.</span><span class="sxs-lookup"><span data-stu-id="2a426-103">The Windows Forms <xref:System.Windows.Forms.ToolTip> component displays text when the user points at controls.</span></span> <span data-ttu-id="2a426-104">Jedem Steuerelement kann eine QuickInfo zugeordnet werden.</span><span class="sxs-lookup"><span data-stu-id="2a426-104">A ToolTip can be associated with any control.</span></span> <span data-ttu-id="2a426-105">Sie könnten dieses Steuerelement beispielsweise verwenden, um Platz auf einem Formular zu sparen, indem Sie ein kleines Symbol auf einer Schaltfläche anzeigen und die Funktion der Schaltfläche mit einer QuickInfo erklären.</span><span class="sxs-lookup"><span data-stu-id="2a426-105">An example use of this control: In order to save space on a form, you can display a small icon on a button and use a ToolTip to explain the button's function.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="7f3b5-106">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="7f3b5-106">In This Section</span></span>  
- [<span data-ttu-id="7f3b5-107">Übersicht über die ToolTip-Komponente</span><span class="sxs-lookup"><span data-stu-id="7f3b5-107">ToolTip Component Overview</span></span>](tooltip-component-overview-windows-forms.md)  
- <span data-ttu-id="7f3b5-108">Stellt die allgemeinen Konzepte der <xref:System.Windows.Forms.ToolTip>-Komponente vor, mit der Benutzern Text angezeigt werden kann, wenn sie mit der Maus auf ein Steuerelement zeigen.</span><span class="sxs-lookup"><span data-stu-id="7f3b5-108">Introduces the general concepts of the <xref:System.Windows.Forms.ToolTip> component, which allows users to see text when they point the mouse at a control.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="2a426-106">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="2a426-106">In This Section</span></span>  
+ [<span data-ttu-id="2a426-107">Übersicht über die ToolTip-Komponente</span><span class="sxs-lookup"><span data-stu-id="2a426-107">ToolTip Component Overview</span></span>](tooltip-component-overview-windows-forms.md)  
+ <span data-ttu-id="2a426-108">Stellt die allgemeinen Konzepte der <xref:System.Windows.Forms.ToolTip>-Komponente vor, mit der Benutzern Text angezeigt werden kann, wenn sie mit der Maus auf ein Steuerelement zeigen.</span><span class="sxs-lookup"><span data-stu-id="2a426-108">Introduces the general concepts of the <xref:System.Windows.Forms.ToolTip> component, which allows users to see text when they point the mouse at a control.</span></span>  
   
- [<span data-ttu-id="7f3b5-109">Vorgehensweise: Festlegen von QuickInfos für Steuerelemente in Windows Forms zur Entwurfszeit</span><span class="sxs-lookup"><span data-stu-id="7f3b5-109">How to: Set ToolTips for Controls on a Windows Form at Design Time</span></span>](how-to-set-tooltips-for-controls-on-a-windows-form-at-design-time.md)  
- <span data-ttu-id="7f3b5-110">Beschreibt das Festlegen von QuickInfos im Code oder im Designer.</span><span class="sxs-lookup"><span data-stu-id="7f3b5-110">Describes how to set Tooltips in code or in the designer.</span></span>  
+ [<span data-ttu-id="2a426-109">Gewusst wie: Festlegen von QuickInfos für Steuerelemente auf einem Windows Form zur Entwurfszeit</span><span class="sxs-lookup"><span data-stu-id="2a426-109">How to: Set ToolTips for Controls on a Windows Form at Design Time</span></span>](how-to-set-tooltips-for-controls-on-a-windows-form-at-design-time.md)  
+ <span data-ttu-id="2a426-110">Beschreibt das Festlegen von QuickInfos im Code oder im Designer.</span><span class="sxs-lookup"><span data-stu-id="2a426-110">Describes how to set Tooltips in code or in the designer.</span></span>  
   
- [<span data-ttu-id="7f3b5-111">Vorgehensweise: Ändern der Verzögerung der ToolTip-Komponente von Windows Forms</span><span class="sxs-lookup"><span data-stu-id="7f3b5-111">How to: Change the Delay of the Windows Forms ToolTip Component</span></span>](how-to-change-the-delay-of-the-windows-forms-tooltip-component.md)  
- <span data-ttu-id="7f3b5-112">Erläutert das Festlegen von Werten, mit denen die Einblendezeit einer QuickInfo sowie die Dauer ihrer Anzeige gesteuert wird.</span><span class="sxs-lookup"><span data-stu-id="7f3b5-112">Explains how to set values that control how long a Tooltip takes to appear and the length of time for which it is shown.</span></span>  
+ [<span data-ttu-id="2a426-111">Gewusst wie: Ändern der Verzögerung der ToolTip-Komponente in Windows Forms</span><span class="sxs-lookup"><span data-stu-id="2a426-111">How to: Change the Delay of the Windows Forms ToolTip Component</span></span>](how-to-change-the-delay-of-the-windows-forms-tooltip-component.md)  
+ <span data-ttu-id="2a426-112">Erläutert das Festlegen von Werten, mit denen die Einblendezeit einer QuickInfo sowie die Dauer ihrer Anzeige gesteuert wird.</span><span class="sxs-lookup"><span data-stu-id="2a426-112">Explains how to set values that control how long a Tooltip takes to appear and the length of time for which it is shown.</span></span>  
   
-## <a name="reference"></a><span data-ttu-id="7f3b5-113">Referenz</span><span class="sxs-lookup"><span data-stu-id="7f3b5-113">Reference</span></span>  
- <span data-ttu-id="7f3b5-114"><xref:System.Windows.Forms.ToolTip>-Klasse</span><span class="sxs-lookup"><span data-stu-id="7f3b5-114"><xref:System.Windows.Forms.ToolTip> class</span></span>  
- <span data-ttu-id="7f3b5-115">Enthält Referenzinformationen zur Klasse und zu ihren Membern.</span><span class="sxs-lookup"><span data-stu-id="7f3b5-115">Provides reference information on the class and its members.</span></span>  
+## <a name="reference"></a><span data-ttu-id="2a426-113">Referenz</span><span class="sxs-lookup"><span data-stu-id="2a426-113">Reference</span></span>  
+ <span data-ttu-id="2a426-114"><xref:System.Windows.Forms.ToolTip>-Klasse</span><span class="sxs-lookup"><span data-stu-id="2a426-114"><xref:System.Windows.Forms.ToolTip> class</span></span>  
+ <span data-ttu-id="2a426-115">Enthält Referenzinformationen zur Klasse und zu ihren Membern.</span><span class="sxs-lookup"><span data-stu-id="2a426-115">Provides reference information on the class and its members.</span></span>  
   
-## <a name="related-sections"></a><span data-ttu-id="7f3b5-116">Verwandte Abschnitte</span><span class="sxs-lookup"><span data-stu-id="7f3b5-116">Related Sections</span></span>  
- [<span data-ttu-id="7f3b5-117">Windows Forms-Steuerelemente</span><span class="sxs-lookup"><span data-stu-id="7f3b5-117">Controls to Use on Windows Forms</span></span>](controls-to-use-on-windows-forms.md)  
- <span data-ttu-id="7f3b5-118">Enthält eine vollständige Liste der Windows Forms-Steuerelemente mit Links zu Informationen zur jeweiligen Verwendung.</span><span class="sxs-lookup"><span data-stu-id="7f3b5-118">Provides a complete list of Windows Forms controls, with links to information on their use.</span></span>  
+## <a name="related-sections"></a><span data-ttu-id="2a426-116">Verwandte Abschnitte</span><span class="sxs-lookup"><span data-stu-id="2a426-116">Related Sections</span></span>  
+ [<span data-ttu-id="2a426-117">Windows Forms-Steuerelemente</span><span class="sxs-lookup"><span data-stu-id="2a426-117">Controls to Use on Windows Forms</span></span>](controls-to-use-on-windows-forms.md)  
+ <span data-ttu-id="2a426-118">Enthält eine vollständige Liste der Windows Forms-Steuerelemente mit Links zu Informationen zur jeweiligen Verwendung.</span><span class="sxs-lookup"><span data-stu-id="2a426-118">Provides a complete list of Windows Forms controls, with links to information on their use.</span></span>  
   
- [<span data-ttu-id="7f3b5-119">Benutzerführung mithilfe von QuickInfos</span><span class="sxs-lookup"><span data-stu-id="7f3b5-119">Control Help Using ToolTips</span></span>](../advanced/control-help-using-tooltips.md)  
- <span data-ttu-id="7f3b5-120">Erläutert QuickInfos als Möglichkeit, in Windows Forms kurze prägnante Hilfemeldungen für einzelne Steuerelemente bereitzustellen.</span><span class="sxs-lookup"><span data-stu-id="7f3b5-120">Discusses Tooltips as a way to make brief, specialized Help messages for individual controls on Windows Forms.</span></span>
+ [<span data-ttu-id="2a426-119">Benutzerführung mithilfe von QuickInfos</span><span class="sxs-lookup"><span data-stu-id="2a426-119">Control Help Using ToolTips</span></span>](../advanced/control-help-using-tooltips.md)  
+ <span data-ttu-id="2a426-120">Erläutert QuickInfos als Möglichkeit, in Windows Forms kurze prägnante Hilfemeldungen für einzelne Steuerelemente bereitzustellen.</span><span class="sxs-lookup"><span data-stu-id="2a426-120">Discusses Tooltips as a way to make brief, specialized Help messages for individual controls on Windows Forms.</span></span>

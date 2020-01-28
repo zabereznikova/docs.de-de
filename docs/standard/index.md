@@ -1,66 +1,62 @@
 ---
 title: Leitfaden für .NET
-description: Informationen zu .NET
+description: In diesem Leitfaden erfahren Sie mehr über .NET und .NET Standard.
 author: cartermp
-ms.date: 05/02/2017
+ms.date: 12/27/2019
 ms.technology: dotnet-standard
 ms.assetid: bbfe6465-329d-4982-869d-472e7ef85d93
-ms.openlocfilehash: 8a989ed4ff0d670296fc255733d01ddd5b5a8f1e
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: ce76448b69a002216125192f75d24b38e7582260
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74838103"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76730773"
 ---
-# <a name="net-guide"></a><span data-ttu-id="40587-103">Leitfaden für .NET</span><span class="sxs-lookup"><span data-stu-id="40587-103">.NET Guide</span></span>
+# <a name="net-guide"></a><span data-ttu-id="14060-103">Leitfaden für .NET</span><span class="sxs-lookup"><span data-stu-id="14060-103">.NET guide</span></span>
 
-<span data-ttu-id="40587-104">Der Leitfaden für .NET enthält viele Informationen zu .NET.</span><span class="sxs-lookup"><span data-stu-id="40587-104">The .NET Guide provides a large amount of information about .NET.</span></span>  <span data-ttu-id="40587-105">Je nachdem, wie vertraut Sie mit .NET sind, können Sie sich unterschiedliche Abschnitte des Leitfadens und weitere Teile der .NET-Dokumentation anschauen.</span><span class="sxs-lookup"><span data-stu-id="40587-105">Depending on your familiarity with .NET, you may wish to explore different sections of this guide and other sections of the .NET documentation.</span></span>
+<span data-ttu-id="14060-104">Der Leitfaden für .NET enthält Informationen zu .NET.</span><span class="sxs-lookup"><span data-stu-id="14060-104">The .NET guide provides information about .NET.</span></span> <span data-ttu-id="14060-105">Je nachdem, wie vertraut Sie mit .NET sind, können Sie sich unterschiedliche Abschnitte oder auch andere Leitfäden ansehen, z. B. für [.NET Core](../core/index.md) oder [.NET Framework](../framework/index.md).</span><span class="sxs-lookup"><span data-stu-id="14060-105">Depending on your familiarity with .NET, you may wish to explore different sections of this guide and other guides such as [.NET Core](../core/index.md) or [.NET Framework](../framework/index.md).</span></span>
 
-## <a name="new-to-net"></a><span data-ttu-id="40587-106">Neu bei .NET?</span><span class="sxs-lookup"><span data-stu-id="40587-106">New to .NET</span></span>
+## <a name="new-to-net"></a><span data-ttu-id="14060-106">Neu bei .NET?</span><span class="sxs-lookup"><span data-stu-id="14060-106">New to .NET</span></span>
 
-<span data-ttu-id="40587-107">Einen allgemeinen Überblick über .NET finden Sie unter [What is .NET? (Was ist .NET?)](https://dotnet.microsoft.com/learn/dotnet/what-is-dotnet).</span><span class="sxs-lookup"><span data-stu-id="40587-107">If you want a high-level overview about .NET, check out [What is .NET?](https://dotnet.microsoft.com/learn/dotnet/what-is-dotnet).</span></span>
+<span data-ttu-id="14060-107">Eine allgemeine Übersicht über .NET finden Sie auf [dieser Seite](https://dotnet.microsoft.com/learn/dotnet/what-is-dotnet).</span><span class="sxs-lookup"><span data-stu-id="14060-107">If you want a high-level overview of .NET, see [What is .NET?](https://dotnet.microsoft.com/learn/dotnet/what-is-dotnet).</span></span>
 
-<span data-ttu-id="40587-108">Wenn .NET für Sie neu ist, schauen Sie sich den Artikel zu den [ersten Schritten](get-started.md) an.</span><span class="sxs-lookup"><span data-stu-id="40587-108">If you're new to .NET, check out the [Get Started](get-started.md) article.</span></span>
+<span data-ttu-id="14060-108">Wenn Sie noch nicht mit .NET vertraut sind, finden Sie im Artikel [Erste Schritte](get-started.md) weitere Informationen.</span><span class="sxs-lookup"><span data-stu-id="14060-108">If you're new to .NET, see [Get started](get-started.md).</span></span>
 
-<span data-ttu-id="40587-109">Wenn Sie lieber eine Tour durch die Hauptfunktionen von .NET haben, schauen Sie sich diesen Artikel an: [Einführung in .NET](tour.md).</span><span class="sxs-lookup"><span data-stu-id="40587-109">If you prefer to have a guided tour through major features of .NET, check out the [Tour of .NET](tour.md).</span></span>
+<span data-ttu-id="14060-109">Wenn Sie einen geführten Einblick in die Hauptfunktionen von .NET bekommen möchte, lesen Sie den Artikel [Einführung in .NET](tour.md).</span><span class="sxs-lookup"><span data-stu-id="14060-109">If you prefer to have a guided tour through major features of .NET, see [Tour of .NET](tour.md).</span></span>
 
-<span data-ttu-id="40587-110">Darüber hinaus können Sie sich über die [.NET-Architekturkomponenten](components.md) informieren, um einen Überblick über die verschiedenen Teile von .NET zu erhalten und zu verstehen, wie diese sich zusammenfügen.</span><span class="sxs-lookup"><span data-stu-id="40587-110">You can also read about [.NET Architectural Components](components.md) to get an overview of the various "pieces" of .NET and how they fit together.</span></span>
+<span data-ttu-id="14060-110">Einen Überblick über die verschiedenen Teile von .NET und wie diese zusammenhängen, erhalten Sie im Artikel [.NET-Architekturkomponenten](components.md).</span><span class="sxs-lookup"><span data-stu-id="14060-110">For an overview of the various pieces of .NET and how they fit together, see [.NET architectural components](components.md).</span></span>
 
-## <a name="new-to-net-core"></a><span data-ttu-id="40587-111">Neu bei .NET Core?</span><span class="sxs-lookup"><span data-stu-id="40587-111">New to .NET Core</span></span>
+## <a name="new-to-net-core"></a><span data-ttu-id="14060-111">Neu bei .NET Core?</span><span class="sxs-lookup"><span data-stu-id="14060-111">New to .NET Core</span></span>
 
-<span data-ttu-id="40587-112">Wenn .NET Core für Sie neu ist, schauen Sie sich den Artikel [Erste Schritte mit .NET Core](../core/get-started.md) an.</span><span class="sxs-lookup"><span data-stu-id="40587-112">If you're new to .NET Core, check out [Get Started with .NET Core](../core/get-started.md).</span></span>
+<span data-ttu-id="14060-112">Wenn Sie noch nicht mit .NET Core vertraut sind, finden Sie im Artikel [Erste Schritte mit .NET Core](../core/get-started.md) weitere Informationen.</span><span class="sxs-lookup"><span data-stu-id="14060-112">If you're new to .NET Core, check out [Get started with .NET Core](../core/get-started.md).</span></span>
 
-## <a name="new-to-net-standard"></a><span data-ttu-id="40587-113">Neu bei .NET-Standard?</span><span class="sxs-lookup"><span data-stu-id="40587-113">New to .NET Standard</span></span>
+## <a name="new-to-net-standard"></a><span data-ttu-id="14060-113">Neu bei .NET-Standard?</span><span class="sxs-lookup"><span data-stu-id="14060-113">New to .NET Standard</span></span>
 
-<span data-ttu-id="40587-114">Wenn .NET Standard für Sie neu ist, schauen Sie sich den Artikel zu [.NET Standard an](net-standard.md) an.</span><span class="sxs-lookup"><span data-stu-id="40587-114">If you're new to .NET Standard, check out [.NET Standard](net-standard.md).</span></span>
+<span data-ttu-id="14060-114">Wenn .NET Standard für Sie neu ist, schauen Sie sich den Artikel zu [.NET Standard an](net-standard.md) an.</span><span class="sxs-lookup"><span data-stu-id="14060-114">If you're new to .NET Standard, check out [.NET Standard](net-standard.md).</span></span>
 
-## <a name="porting-net-framework-code-to-net-core"></a><span data-ttu-id="40587-115">Portieren von .NET Framework Code auf .NET Core</span><span class="sxs-lookup"><span data-stu-id="40587-115">Porting .NET Framework Code to .NET Core</span></span>
+## <a name="port-net-framework-code-to-net-standard-or-net-core"></a><span data-ttu-id="14060-115">Portieren von .NET Framework-Code zu .NET Standard oder .NET Core</span><span class="sxs-lookup"><span data-stu-id="14060-115">Port .NET Framework code to .NET Standard or .NET Core</span></span>
 
-<span data-ttu-id="40587-116">Wenn Sie eine Anwendung, einen Dienst oder Komponenten eines Systems zu .NET Core portieren möchten, schauen Sie sich den Artikel [Portieren von .NET Framework auf .NET Core](../core/porting/index.md) an.</span><span class="sxs-lookup"><span data-stu-id="40587-116">If you're looking to port an application, service, or some component of a system to .NET Core, check out [Porting to .NET Core from .NET Framework](../core/porting/index.md).</span></span>
+<span data-ttu-id="14060-116">Informationen zum Portieren von Anwendungen, Diensten, Komponenten oder NuGet-Paketen zu .NET Standard oder .NET Core finden Sie in [diesem Artikel](../core/porting/index.md).</span><span class="sxs-lookup"><span data-stu-id="14060-116">To port an application, service, component, or NuGet package to .NET Standard or .NET Core, see [Port to .NET Core from .NET Framework](../core/porting/index.md).</span></span> <span data-ttu-id="14060-117">Da für .NET Standard und .NET Core dieselben Tools verwendet werden, gilt der Artikel für beide Frameworks.</span><span class="sxs-lookup"><span data-stu-id="14060-117">Tooling for .NET Standard and .NET Core is shared, so the content is relevant for porting to both frameworks.</span></span>
 
-## <a name="porting-a-nuget-package-from-net-framework-to-net-standard-or-net-core"></a><span data-ttu-id="40587-117">Portieren eines NuGet-Pakets aus .NET Framework auf .NET Standard oder .NET Core</span><span class="sxs-lookup"><span data-stu-id="40587-117">Porting a NuGet package from .NET Framework to .NET Standard or .NET Core</span></span>
+## <a name="net-concepts"></a><span data-ttu-id="14060-118">.NET-Konzepte</span><span class="sxs-lookup"><span data-stu-id="14060-118">.NET concepts</span></span>
 
-<span data-ttu-id="40587-118">Wenn Sie ein NuGet-Paket auf .NET Standard portieren möchten, schauen Sie sich den Artikel [Portieren von .NET Framework auf .NET Core](../core/porting/index.md) an.</span><span class="sxs-lookup"><span data-stu-id="40587-118">If you're looking to port a NuGet package to .NET Standard, check out [Porting to .NET Core from .NET Framework](../core/porting/index.md).</span></span>  <span data-ttu-id="40587-119">Tools für .NET Standard und .NET Core sind freigegeben, sodass der Inhalt sowohl für das Portieren auf .NET Standard als auch auf .NET Core relevant ist.</span><span class="sxs-lookup"><span data-stu-id="40587-119">Tooling for .NET Standard and .NET Core are shared, so the content will be relevant for porting to .NET Standard as well as .NET Core.</span></span>
+<span data-ttu-id="14060-119">Weitere Informationen zu den wichtigsten Konzepten von .NET finden Sie unter:</span><span class="sxs-lookup"><span data-stu-id="14060-119">For more information about the major concepts of .NET, see:</span></span>
 
-## <a name="interested-in-major-net-concepts"></a><span data-ttu-id="40587-120">Interesse an den Hauptkonzepten von .NET?</span><span class="sxs-lookup"><span data-stu-id="40587-120">Interested in Major .NET Concepts</span></span>
+* [<span data-ttu-id="14060-120">.NET-Architekturkomponenten</span><span class="sxs-lookup"><span data-stu-id="14060-120">.NET architectural components</span></span>](components.md)
+* [<span data-ttu-id="14060-121">.NET-Standard</span><span class="sxs-lookup"><span data-stu-id="14060-121">.NET Standard</span></span>](net-standard.md)
+* [<span data-ttu-id="14060-122">Native Interoperabilität</span><span class="sxs-lookup"><span data-stu-id="14060-122">Native interoperability</span></span>](native-interop/index.md)
+* [<span data-ttu-id="14060-123">Garbage Collection</span><span class="sxs-lookup"><span data-stu-id="14060-123">Garbage collection</span></span>](garbage-collection/index.md)
+* [<span data-ttu-id="14060-124">Basistypen in .NET</span><span class="sxs-lookup"><span data-stu-id="14060-124">Base types in .NET</span></span>](base-types/index.md)
+* [<span data-ttu-id="14060-125">Sammlungen</span><span class="sxs-lookup"><span data-stu-id="14060-125">Collections</span></span>](collections/index.md)
+* [<span data-ttu-id="14060-126">Datumsangaben, Uhrzeiten und Zeitzonen</span><span class="sxs-lookup"><span data-stu-id="14060-126">Dates, times, and time zones</span></span>](datetime/index.md)
+* [<span data-ttu-id="14060-127">Asynchrone Programmierung</span><span class="sxs-lookup"><span data-stu-id="14060-127">Asynchronous programming</span></span>](async.md)
 
-<span data-ttu-id="40587-121">Wenn Sie Interesse an den Hauptkonzepten von .NET haben, können Sie sich hier informieren:</span><span class="sxs-lookup"><span data-stu-id="40587-121">If you're interested in some of the major concepts of .NET, check out:</span></span>
+<span data-ttu-id="14060-128">Informationen zu den drei wichtigsten .NET-Sprachen finden Sie unter:</span><span class="sxs-lookup"><span data-stu-id="14060-128">For information about the three major .NET languages, see:</span></span>
 
-* [<span data-ttu-id="40587-122">.NET-Architekturkomponenten</span><span class="sxs-lookup"><span data-stu-id="40587-122">.NET Architectural Components</span></span>](components.md)
-* [<span data-ttu-id="40587-123">.NET-Standard</span><span class="sxs-lookup"><span data-stu-id="40587-123">.NET Standard</span></span>](net-standard.md)
-* [<span data-ttu-id="40587-124">Native Interoperabilität</span><span class="sxs-lookup"><span data-stu-id="40587-124">Native Interoperability</span></span>](native-interop/index.md)
-* [<span data-ttu-id="40587-125">Garbage Collection</span><span class="sxs-lookup"><span data-stu-id="40587-125">Garbage Collection</span></span>](garbage-collection/index.md)
-* [<span data-ttu-id="40587-126">Basistypen in .NET</span><span class="sxs-lookup"><span data-stu-id="40587-126">Base Types in .NET</span></span>](base-types/index.md)
-* [<span data-ttu-id="40587-127">Sammlungen</span><span class="sxs-lookup"><span data-stu-id="40587-127">Collections</span></span>](collections/index.md)
-* [<span data-ttu-id="40587-128">Datumsangaben, Uhrzeiten und Zeitzonen</span><span class="sxs-lookup"><span data-stu-id="40587-128">Dates, times, and time zones</span></span>](datetime/index.md)
-* [<span data-ttu-id="40587-129">Asynchrone Programmierung</span><span class="sxs-lookup"><span data-stu-id="40587-129">Asynchronous Programming</span></span>](async.md)
+* [<span data-ttu-id="14060-129">Leitfaden für C#</span><span class="sxs-lookup"><span data-stu-id="14060-129">C# guide</span></span>](../csharp/index.yml)
+* [<span data-ttu-id="14060-130">Leitfaden für F#</span><span class="sxs-lookup"><span data-stu-id="14060-130">F# guide</span></span>](../fsharp/index.yml)
+* [<span data-ttu-id="14060-131">Leitfaden für Visual Basic</span><span class="sxs-lookup"><span data-stu-id="14060-131">Visual Basic guide</span></span>](../visual-basic/index.yml)
 
-<span data-ttu-id="40587-130">Schauen Sie sich zusätzlich auch die Leitfäden zu den drei Hauptprogrammiersprachen von .NET an:</span><span class="sxs-lookup"><span data-stu-id="40587-130">Additionally, check out each language guide to learn about the three major .NET languages:</span></span>
+## <a name="api-reference"></a><span data-ttu-id="14060-132">API-Verweis</span><span class="sxs-lookup"><span data-stu-id="14060-132">API reference</span></span>
 
-* [<span data-ttu-id="40587-131">Leitfaden für C#</span><span class="sxs-lookup"><span data-stu-id="40587-131">C# Guide</span></span>](../csharp/index.yml)
-* [<span data-ttu-id="40587-132">Leitfaden für F#</span><span class="sxs-lookup"><span data-stu-id="40587-132">F# Guide</span></span>](../fsharp/index.yml)
-* [<span data-ttu-id="40587-133">Leitfaden für Visual Basic</span><span class="sxs-lookup"><span data-stu-id="40587-133">Visual Basic Guide</span></span>](../visual-basic/index.yml)
-
-## <a name="api-reference"></a><span data-ttu-id="40587-134">API-Referenz</span><span class="sxs-lookup"><span data-stu-id="40587-134">API Reference</span></span>
-
-<span data-ttu-id="40587-135">In der [.NET-API-Referenz](../../api/index.md) finden Sie die gesamte Auswahl verfügbarer APIs.</span><span class="sxs-lookup"><span data-stu-id="40587-135">Check out the [.NET API Reference](../../api/index.md) to see the breadth of APIs available.</span></span>
+<span data-ttu-id="14060-133">Ausführliche Informationen zu allen in .NET verfügbaren APIs finden Sie in der [Referenz zur .NET-API](../../api/index.md).</span><span class="sxs-lookup"><span data-stu-id="14060-133">For detailed information about all of the APIs that are available in .NET, see [.NET API reference](../../api/index.md).</span></span>

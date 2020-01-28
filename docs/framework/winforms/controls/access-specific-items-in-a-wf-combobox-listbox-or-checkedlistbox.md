@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Zugreifen auf spezifische Elemente in ComboBox-, ListBox- oder CheckedListBox-Steuerelementen in Windows Forms'
+title: Zugreifen auf bestimmte Elemente in der ComboBox-, ListBox-oder CheckedListBox-Steuerelement
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,19 +13,19 @@ helpviewer_keywords:
 - combo boxes [Windows Forms], accessing items
 - CheckedListBox control [Windows Forms], accessing items
 ms.assetid: 1216742f-bcf9-4ff8-8a62-d7c9053c2b96
-ms.openlocfilehash: fbdd9168fe286823db7cf066ae0f821b8db88ecb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 67673ec7f136f1466d4fd091e691324c53e7de06
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62011826"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76746327"
 ---
-# <a name="how-to-access-specific-items-in-a-windows-forms-combobox-listbox-or-checkedlistbox-control"></a><span data-ttu-id="6286e-102">Vorgehensweise: Zugreifen auf spezifische Elemente in ComboBox-, ListBox- oder CheckedListBox-Steuerelementen in Windows Forms</span><span class="sxs-lookup"><span data-stu-id="6286e-102">How to: Access Specific Items in a Windows Forms ComboBox, ListBox, or CheckedListBox Control</span></span>
-<span data-ttu-id="6286e-103">Zugreifen auf spezifische Elemente in einer Windows Forms-Kombinationsfeld, Listenfeld oder ausgewählten Listenfeld ist eine wichtige Aufgabe.</span><span class="sxs-lookup"><span data-stu-id="6286e-103">Accessing specific items in a Windows Forms combo box, list box, or checked list box is an essential task.</span></span> <span data-ttu-id="6286e-104">Sie können Sie programmgesteuert zu ermitteln, was in einer Liste an einer bestimmten Position ist.</span><span class="sxs-lookup"><span data-stu-id="6286e-104">It enables you to programmatically determine what is in a list, at any given position.</span></span>  
+# <a name="how-to-access-specific-items-in-a-windows-forms-combobox-listbox-or-checkedlistbox-control"></a><span data-ttu-id="81a2b-102">Gewusst wie: Zugreifen auf spezifische Elemente in ComboBox-, ListBox- oder CheckedListBox-Steuerelementen in Windows Forms</span><span class="sxs-lookup"><span data-stu-id="81a2b-102">How to: Access Specific Items in a Windows Forms ComboBox, ListBox, or CheckedListBox Control</span></span>
+<span data-ttu-id="81a2b-103">Der Zugriff auf bestimmte Elemente in einem Kombinations Feld (Windows Forms), einem Listenfeld oder einem aktivierten Listenfeld ist eine wesentliche Aufgabe.</span><span class="sxs-lookup"><span data-stu-id="81a2b-103">Accessing specific items in a Windows Forms combo box, list box, or checked list box is an essential task.</span></span> <span data-ttu-id="81a2b-104">Mit dieser Option können Sie Programm gesteuert ermitteln, was in einer Liste an einer beliebigen Position vorhanden ist.</span><span class="sxs-lookup"><span data-stu-id="81a2b-104">It enables you to programmatically determine what is in a list, at any given position.</span></span>  
   
-### <a name="to-access-a-specific-item"></a><span data-ttu-id="6286e-105">Auf ein bestimmtes Element zugreifen.</span><span class="sxs-lookup"><span data-stu-id="6286e-105">To access a specific item</span></span>  
+### <a name="to-access-a-specific-item"></a><span data-ttu-id="81a2b-105">So greifen Sie auf ein bestimmtes Element zu</span><span class="sxs-lookup"><span data-stu-id="81a2b-105">To access a specific item</span></span>  
   
-1. <span data-ttu-id="6286e-106">Abfrage der `Items` Auflistung über den Index des bestimmten Elements:</span><span class="sxs-lookup"><span data-stu-id="6286e-106">Query the `Items` collection using the index of the specific item:</span></span>  
+1. <span data-ttu-id="81a2b-106">Abfragen der `Items` Auflistung mit dem Index des jeweiligen Elements:</span><span class="sxs-lookup"><span data-stu-id="81a2b-106">Query the `Items` collection using the index of the specific item:</span></span>  
   
     ```vb  
     Private Function GetItemText(i As Integer) As String  
@@ -51,9 +51,9 @@ ms.locfileid: "62011826"
        }  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="6286e-107">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="6286e-107">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="81a2b-107">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="81a2b-107">See also</span></span>
 
 - <xref:System.Windows.Forms.ComboBox>
 - <xref:System.Windows.Forms.ListBox>
 - <xref:System.Windows.Forms.CheckedListBox>
-- [<span data-ttu-id="6286e-108">Windows Forms-Steuerelemente zum Auflisten von Optionen</span><span class="sxs-lookup"><span data-stu-id="6286e-108">Windows Forms Controls Used to List Options</span></span>](windows-forms-controls-used-to-list-options.md)
+- [<span data-ttu-id="81a2b-108">Windows Forms-Steuerelemente zum Auflisten von Optionen</span><span class="sxs-lookup"><span data-stu-id="81a2b-108">Windows Forms Controls Used to List Options</span></span>](windows-forms-controls-used-to-list-options.md)
