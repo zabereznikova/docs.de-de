@@ -1,38 +1,38 @@
 ---
-title: 'Vorgehensweise: Gruppieren von Steuerelementen mit dem GroupBox-Steuerelement in Windows Forms'
+title: Gruppen Steuerelemente mit GroupBox-Steuerelement
 ms.date: 03/30/2017
 helpviewer_keywords:
 - controls [Windows Forms], grouping
 - GroupBox control [Windows Forms], grouping controls
 - Windows Forms controls, grouping
 ms.assetid: 0bda316d-bd2a-43aa-ac73-342453303169
-ms.openlocfilehash: f5b8c5ef47063663d5f8fcd2f80317e6cf6c91e6
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: bb7476c410d2802b5d32cc9842a778f290765e32
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64609481"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76736649"
 ---
-# <a name="how-to-group-controls-with-the-windows-forms-groupbox-control"></a><span data-ttu-id="6669a-102">Vorgehensweise: Gruppieren von Steuerelementen mit dem GroupBox-Steuerelement in Windows Forms</span><span class="sxs-lookup"><span data-stu-id="6669a-102">How to: Group Controls with the Windows Forms GroupBox Control</span></span>
-<span data-ttu-id="6669a-103">Windows Forms <xref:System.Windows.Forms.GroupBox> Steuerelemente werden verwendet, um die Gruppierung anderer Steuerelemente.</span><span class="sxs-lookup"><span data-stu-id="6669a-103">Windows Forms <xref:System.Windows.Forms.GroupBox> controls are used to group other controls.</span></span> <span data-ttu-id="6669a-104">Es gibt drei Gründe zum Gruppieren von Steuerelementen:</span><span class="sxs-lookup"><span data-stu-id="6669a-104">There are three reasons to group controls:</span></span>  
+# <a name="how-to-group-controls-with-the-windows-forms-groupbox-control"></a><span data-ttu-id="6a22f-102">Gewusst wie: Gruppieren von Steuerelementen mit dem GroupBox-Steuerelement in Windows Forms</span><span class="sxs-lookup"><span data-stu-id="6a22f-102">How to: Group Controls with the Windows Forms GroupBox Control</span></span>
+<span data-ttu-id="6a22f-103">Windows Forms <xref:System.Windows.Forms.GroupBox>-Steuerelemente werden verwendet, um andere Steuerelemente zu gruppieren.</span><span class="sxs-lookup"><span data-stu-id="6a22f-103">Windows Forms <xref:System.Windows.Forms.GroupBox> controls are used to group other controls.</span></span> <span data-ttu-id="6a22f-104">Es gibt drei Gründe für das Gruppieren von Steuerelementen:</span><span class="sxs-lookup"><span data-stu-id="6a22f-104">There are three reasons to group controls:</span></span>  
   
-- <span data-ttu-id="6669a-105">Um eine visuelle Gruppierung von verwandten Form-Elemente für eine übersichtliche Benutzeroberfläche zu erstellen.</span><span class="sxs-lookup"><span data-stu-id="6669a-105">To create a visual grouping of related form elements for a clear user interface.</span></span>  
+- <span data-ttu-id="6a22f-105">Zum Erstellen einer visuellen Gruppierung verwandter Formularelemente für eine eindeutige Benutzeroberfläche.</span><span class="sxs-lookup"><span data-stu-id="6a22f-105">To create a visual grouping of related form elements for a clear user interface.</span></span>  
   
-- <span data-ttu-id="6669a-106">Um programmgesteuerte Gruppierung (von Optionsfeldern an, z. B.) zu erstellen.</span><span class="sxs-lookup"><span data-stu-id="6669a-106">To create programmatic grouping (of radio buttons, for example).</span></span>  
+- <span data-ttu-id="6a22f-106">Zum Erstellen einer programmatischen Gruppierung (z. b. von Options Feldern).</span><span class="sxs-lookup"><span data-stu-id="6a22f-106">To create programmatic grouping (of radio buttons, for example).</span></span>  
   
-- <span data-ttu-id="6669a-107">Für das Verschieben von der Steuerelements zur Entwurfszeit als eine Einheit.</span><span class="sxs-lookup"><span data-stu-id="6669a-107">For moving the controls as a unit at design time.</span></span>  
+- <span data-ttu-id="6a22f-107">Zum Verschieben der Steuerelemente als Einheit zur Entwurfszeit.</span><span class="sxs-lookup"><span data-stu-id="6a22f-107">For moving the controls as a unit at design time.</span></span>  
   
-### <a name="to-create-a-group-of-controls"></a><span data-ttu-id="6669a-108">Um eine Gruppe von Steuerelementen zu erstellen.</span><span class="sxs-lookup"><span data-stu-id="6669a-108">To create a group of controls</span></span>  
+### <a name="to-create-a-group-of-controls"></a><span data-ttu-id="6a22f-108">So erstellen Sie eine Gruppe von Steuerelementen</span><span class="sxs-lookup"><span data-stu-id="6a22f-108">To create a group of controls</span></span>  
   
-1. <span data-ttu-id="6669a-109">Zeichnen einer <xref:System.Windows.Forms.GroupBox> Steuerelement in einem Formular.</span><span class="sxs-lookup"><span data-stu-id="6669a-109">Draw a <xref:System.Windows.Forms.GroupBox> control on a form.</span></span>  
+1. <span data-ttu-id="6a22f-109">Zeichnen Sie ein <xref:System.Windows.Forms.GroupBox>-Steuerelement in einem Formular.</span><span class="sxs-lookup"><span data-stu-id="6a22f-109">Draw a <xref:System.Windows.Forms.GroupBox> control on a form.</span></span>  
   
-2. <span data-ttu-id="6669a-110">Fügen Sie weitere Steuerelemente, dem Gruppenfeld, jede Gruppe im Feld zu zeichnen.</span><span class="sxs-lookup"><span data-stu-id="6669a-110">Add other controls to the group box, drawing each inside the group box.</span></span>  
+2. <span data-ttu-id="6a22f-110">Fügen Sie dem Gruppenfeld weitere Steuerelemente hinzu, und zeichnen Sie die einzelnen Elemente innerhalb des Gruppen Felds.</span><span class="sxs-lookup"><span data-stu-id="6a22f-110">Add other controls to the group box, drawing each inside the group box.</span></span>  
   
-     <span data-ttu-id="6669a-111">Wenn Sie vorhandene Steuerelemente verfügen, die Sie in einem Gruppenfeld einschließen möchten, können Sie wählen Sie alle Steuerelemente, verschieben Sie sie in die Zwischenablage, wählen Sie die <xref:System.Windows.Forms.GroupBox> steuern, und fügen Sie sie in das Gruppenfeld.</span><span class="sxs-lookup"><span data-stu-id="6669a-111">If you have existing controls that you want to enclose in a group box, you can select all the controls, cut them to the Clipboard, select the <xref:System.Windows.Forms.GroupBox> control, and then paste them into the group box.</span></span> <span data-ttu-id="6669a-112">Sie können auch in das Gruppenfeld ziehen.</span><span class="sxs-lookup"><span data-stu-id="6669a-112">You can also drag them into the group box.</span></span>  
+     <span data-ttu-id="6a22f-111">Wenn Sie über vorhandene Steuerelemente verfügen, die Sie in ein Gruppenfeld einschließen möchten, können Sie alle Steuerelemente auswählen, Sie in die Zwischenablage Ausschneiden, das <xref:System.Windows.Forms.GroupBox> Steuerelement auswählen und dann in das Gruppenfeld einfügen.</span><span class="sxs-lookup"><span data-stu-id="6a22f-111">If you have existing controls that you want to enclose in a group box, you can select all the controls, cut them to the Clipboard, select the <xref:System.Windows.Forms.GroupBox> control, and then paste them into the group box.</span></span> <span data-ttu-id="6a22f-112">Sie können Sie auch in das Feld Gruppe ziehen.</span><span class="sxs-lookup"><span data-stu-id="6a22f-112">You can also drag them into the group box.</span></span>  
   
-3. <span data-ttu-id="6669a-113">Legen Sie die <xref:System.Windows.Forms.GroupBox.Text%2A> Eigenschaft des Gruppenfelds eine geeignete Beschriftung.</span><span class="sxs-lookup"><span data-stu-id="6669a-113">Set the <xref:System.Windows.Forms.GroupBox.Text%2A> property of the group box to an appropriate caption.</span></span>  
+3. <span data-ttu-id="6a22f-113">Legen Sie die <xref:System.Windows.Forms.GroupBox.Text%2A>-Eigenschaft des Gruppen Felds auf eine entsprechende Beschriftung fest.</span><span class="sxs-lookup"><span data-stu-id="6a22f-113">Set the <xref:System.Windows.Forms.GroupBox.Text%2A> property of the group box to an appropriate caption.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="6669a-114">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="6669a-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="6a22f-114">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="6a22f-114">See also</span></span>
 
 - <xref:System.Windows.Forms.GroupBox>
-- [<span data-ttu-id="6669a-115">GroupBox-Steuerelement</span><span class="sxs-lookup"><span data-stu-id="6669a-115">GroupBox Control</span></span>](groupbox-control-windows-forms.md)
+- [<span data-ttu-id="6a22f-115">GroupBox-Steuerelement</span><span class="sxs-lookup"><span data-stu-id="6a22f-115">GroupBox Control</span></span>](groupbox-control-windows-forms.md)

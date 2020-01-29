@@ -1,5 +1,5 @@
 ---
-title: CheckedListBox-Steuerelement (Windows Forms)
+title: CheckedListBox-Steuerelement
 ms.date: 03/30/2017
 helpviewer_keywords:
 - CheckedListBox control [Windows Forms], reference
@@ -13,30 +13,30 @@ helpviewer_keywords:
 - list items [Windows Forms], Windows Forms controls that display
 - list boxes
 ms.assetid: 2a525f72-0245-41d7-94e9-b9c971dc4484
-ms.openlocfilehash: 4d24a25a0b033caeb165566eb0dc5a2e189a8d4a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 069c0a2332f7035ce59f17058f388f9fb452b720
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61956454"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76736997"
 ---
-# <a name="checkedlistbox-control-windows-forms"></a><span data-ttu-id="126c7-102">CheckedListBox-Steuerelement (Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="126c7-102">CheckedListBox Control (Windows Forms)</span></span>
-<span data-ttu-id="126c7-103">Die Windows-Formulare `CheckedListBox` Steuerelement zeigt eine Liste von Elementen, wie z. B. die <xref:System.Windows.Forms.ListBox> steuern und auch ein Häkchen neben den Elementen in der Liste anzeigen können.</span><span class="sxs-lookup"><span data-stu-id="126c7-103">The Windows Forms `CheckedListBox` control displays a list of items, like the <xref:System.Windows.Forms.ListBox> control, and also can display a check mark next to items in the list.</span></span>  
+# <a name="checkedlistbox-control-windows-forms"></a><span data-ttu-id="d5b00-102">CheckedListBox-Steuerelement (Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="d5b00-102">CheckedListBox Control (Windows Forms)</span></span>
+<span data-ttu-id="d5b00-103">Das Windows Forms `CheckedListBox`-Steuerelement zeigt eine Liste von Elementen an, wie z. b. das <xref:System.Windows.Forms.ListBox>-Steuerelement, und kann neben den Elementen in der Liste auch ein Häkchen anzeigen.</span><span class="sxs-lookup"><span data-stu-id="d5b00-103">The Windows Forms `CheckedListBox` control displays a list of items, like the <xref:System.Windows.Forms.ListBox> control, and also can display a check mark next to items in the list.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="126c7-104">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="126c7-104">In This Section</span></span>  
- [<span data-ttu-id="126c7-105">Übersicht über das CheckedListBox-Steuerelement</span><span class="sxs-lookup"><span data-stu-id="126c7-105">CheckedListBox Control Overview</span></span>](checkedlistbox-control-overview-windows-forms.md)  
- <span data-ttu-id="126c7-106">Hier werden das Steuerelement und seine wichtigsten Funktionen und Eigenschaften erläutert.</span><span class="sxs-lookup"><span data-stu-id="126c7-106">Explains what this control is and its key features and properties.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="d5b00-104">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="d5b00-104">In This Section</span></span>  
+ [<span data-ttu-id="d5b00-105">Übersicht über das CheckedListBox-Steuerelement</span><span class="sxs-lookup"><span data-stu-id="d5b00-105">CheckedListBox Control Overview</span></span>](checkedlistbox-control-overview-windows-forms.md)  
+ <span data-ttu-id="d5b00-106">Hier werden das Steuerelement und seine wichtigsten Funktionen und Eigenschaften erläutert.</span><span class="sxs-lookup"><span data-stu-id="d5b00-106">Explains what this control is and its key features and properties.</span></span>  
   
- [<span data-ttu-id="126c7-107">Vorgehensweise: Bestimmen der aktivierten Elemente im CheckedListBox-Steuerelement von Windows Forms</span><span class="sxs-lookup"><span data-stu-id="126c7-107">How to: Determine Checked Items in the Windows Forms CheckedListBox Control</span></span>](how-to-determine-checked-items-in-the-windows-forms-checkedlistbox-control.md)  
- <span data-ttu-id="126c7-108">Beschreibt das Durchlaufen einer Liste, um zu bestimmen, welche Elemente aktiviert sind.</span><span class="sxs-lookup"><span data-stu-id="126c7-108">Describes how to step through a list to determine which items are checked.</span></span>  
+ [<span data-ttu-id="d5b00-107">Gewusst wie: Bestimmen der aktivierten Elemente im CheckedListBox-Steuerelement von Windows Forms</span><span class="sxs-lookup"><span data-stu-id="d5b00-107">How to: Determine Checked Items in the Windows Forms CheckedListBox Control</span></span>](how-to-determine-checked-items-in-the-windows-forms-checkedlistbox-control.md)  
+ <span data-ttu-id="d5b00-108">Beschreibt, wie eine Liste durchlaufen wird, um zu bestimmen, welche Elemente geprüft werden.</span><span class="sxs-lookup"><span data-stu-id="d5b00-108">Describes how to step through a list to determine which items are checked.</span></span>  
   
-## <a name="reference"></a><span data-ttu-id="126c7-109">Referenz</span><span class="sxs-lookup"><span data-stu-id="126c7-109">Reference</span></span>  
- <span data-ttu-id="126c7-110"><xref:System.Windows.Forms.CheckedListBox>-Klasse</span><span class="sxs-lookup"><span data-stu-id="126c7-110"><xref:System.Windows.Forms.CheckedListBox> class</span></span>  
- <span data-ttu-id="126c7-111">Beschreibt diese Klasse und enthält Links zu allen deren Membern.</span><span class="sxs-lookup"><span data-stu-id="126c7-111">Describes this class and has links to all its members.</span></span>  
+## <a name="reference"></a><span data-ttu-id="d5b00-109">Referenz</span><span class="sxs-lookup"><span data-stu-id="d5b00-109">Reference</span></span>  
+ <span data-ttu-id="d5b00-110"><xref:System.Windows.Forms.CheckedListBox>-Klasse</span><span class="sxs-lookup"><span data-stu-id="d5b00-110"><xref:System.Windows.Forms.CheckedListBox> class</span></span>  
+ <span data-ttu-id="d5b00-111">Beschreibt diese Klasse und enthält Links zu allen deren Membern.</span><span class="sxs-lookup"><span data-stu-id="d5b00-111">Describes this class and has links to all its members.</span></span>  
   
-## <a name="related-sections"></a><span data-ttu-id="126c7-112">Verwandte Abschnitte</span><span class="sxs-lookup"><span data-stu-id="126c7-112">Related Sections</span></span>  
- [<span data-ttu-id="126c7-113">Windows Forms-Steuerelemente zum Auflisten von Optionen</span><span class="sxs-lookup"><span data-stu-id="126c7-113">Windows Forms Controls Used to List Options</span></span>](windows-forms-controls-used-to-list-options.md)  
- <span data-ttu-id="126c7-114">Enthält eine Liste der Dinge, die mit Listenfeldern, Kombinationsfeldern und aktivierten möglich.</span><span class="sxs-lookup"><span data-stu-id="126c7-114">Provides a list of things you can do with list boxes, combo boxes, and checked list boxes.</span></span>  
+## <a name="related-sections"></a><span data-ttu-id="d5b00-112">Verwandte Abschnitte</span><span class="sxs-lookup"><span data-stu-id="d5b00-112">Related Sections</span></span>  
+ [<span data-ttu-id="d5b00-113">Windows Forms-Steuerelemente zum Auflisten von Optionen</span><span class="sxs-lookup"><span data-stu-id="d5b00-113">Windows Forms Controls Used to List Options</span></span>](windows-forms-controls-used-to-list-options.md)  
+ <span data-ttu-id="d5b00-114">Enthält eine Liste der Dinge, die Sie mit Listenfeldern, Kombinations Feldern und aktivierten Listenfeldern ausführen können.</span><span class="sxs-lookup"><span data-stu-id="d5b00-114">Provides a list of things you can do with list boxes, combo boxes, and checked list boxes.</span></span>  
   
- [<span data-ttu-id="126c7-115">Windows Forms-Steuerelemente</span><span class="sxs-lookup"><span data-stu-id="126c7-115">Controls to Use on Windows Forms</span></span>](controls-to-use-on-windows-forms.md)  
- <span data-ttu-id="126c7-116">Enthält eine vollständige Liste der Windows Forms-Steuerelemente mit Links zu Informationen zur jeweiligen Verwendung.</span><span class="sxs-lookup"><span data-stu-id="126c7-116">Provides a complete list of Windows Forms controls, with links to information on their use.</span></span>
+ [<span data-ttu-id="d5b00-115">Windows Forms-Steuerelemente</span><span class="sxs-lookup"><span data-stu-id="d5b00-115">Controls to Use on Windows Forms</span></span>](controls-to-use-on-windows-forms.md)  
+ <span data-ttu-id="d5b00-116">Enthält eine vollständige Liste der Windows Forms-Steuerelemente mit Links zu Informationen zur jeweiligen Verwendung.</span><span class="sxs-lookup"><span data-stu-id="d5b00-116">Provides a complete list of Windows Forms controls, with links to information on their use.</span></span>

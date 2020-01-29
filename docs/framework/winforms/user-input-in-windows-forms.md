@@ -1,5 +1,5 @@
 ---
-title: Benutzereingaben in Windows Forms
+title: Benutzereingaben
 ms.date: 03/30/2017
 helpviewer_keywords:
 - keyboard input [Windows Forms], using in Windows Forms
@@ -7,34 +7,34 @@ helpviewer_keywords:
 - mouse input [Windows Forms], using in Windows Forms
 - keyboards [Windows Forms], keyboard input
 ms.assetid: 1486075f-1e06-4c9e-82c6-f948331db6d6
-ms.openlocfilehash: 5b66e60fa2d28528a9e60d20bb101bc2d19bec3e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ddcda02cbce56e47b0041f8738e2027139e34719
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61966997"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76734727"
 ---
-# <a name="user-input-in-windows-forms"></a><span data-ttu-id="cd800-102">Benutzereingaben in Windows Forms</span><span class="sxs-lookup"><span data-stu-id="cd800-102">User Input in Windows Forms</span></span>
-<span data-ttu-id="cd800-103">Windows Forms umfasst ein Modell für Benutzereingaben auf der Grundlage von Ereignissen, die ausgelöst werden, während zugehörige Windows-Nachrichten verarbeitet werden.</span><span class="sxs-lookup"><span data-stu-id="cd800-103">Windows Forms includes a user input model based on events that are raised while processing related Windows messages.</span></span> <span data-ttu-id="cd800-104">Die Themen in diesem Abschnitt enthalten Informationen zu Benutzereingaben über die Maus und Tastatur, einschließlich Codebeispielen, die zeigen, wie bestimmte Aufgaben ausgeführt werden.</span><span class="sxs-lookup"><span data-stu-id="cd800-104">The topics in this section provide information on mouse and keyboard user input, including code examples that demonstrate how to perform specific tasks.</span></span>  
+# <a name="user-input-in-windows-forms"></a><span data-ttu-id="b0e1c-102">Benutzereingaben in Windows Forms</span><span class="sxs-lookup"><span data-stu-id="b0e1c-102">User Input in Windows Forms</span></span>
+<span data-ttu-id="b0e1c-103">Windows Forms umfasst ein Modell für Benutzereingaben auf der Grundlage von Ereignissen, die ausgelöst werden, während zugehörige Windows-Nachrichten verarbeitet werden.</span><span class="sxs-lookup"><span data-stu-id="b0e1c-103">Windows Forms includes a user input model based on events that are raised while processing related Windows messages.</span></span> <span data-ttu-id="b0e1c-104">Die Themen in diesem Abschnitt enthalten Informationen zu Benutzereingaben über die Maus und Tastatur, einschließlich Codebeispielen, die zeigen, wie bestimmte Aufgaben ausgeführt werden.</span><span class="sxs-lookup"><span data-stu-id="b0e1c-104">The topics in this section provide information on mouse and keyboard user input, including code examples that demonstrate how to perform specific tasks.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="cd800-105">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="cd800-105">In This Section</span></span>  
- [<span data-ttu-id="cd800-106">Benutzereingabe in einer Windows Forms-Anwendung</span><span class="sxs-lookup"><span data-stu-id="cd800-106">User Input in a Windows Forms Application</span></span>](user-input-in-a-windows-forms-application.md)  
- <span data-ttu-id="cd800-107">Bietet eine Übersicht über Benutzereingabeereignisse und die Methoden, die Windows-Nachrichten verarbeiten.</span><span class="sxs-lookup"><span data-stu-id="cd800-107">Provides an overview of user input events and the methods that process Windows messages.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="b0e1c-105">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="b0e1c-105">In This Section</span></span>  
+ [<span data-ttu-id="b0e1c-106">Benutzereingabe in einer Windows Forms-Anwendung</span><span class="sxs-lookup"><span data-stu-id="b0e1c-106">User Input in a Windows Forms Application</span></span>](user-input-in-a-windows-forms-application.md)  
+ <span data-ttu-id="b0e1c-107">Bietet eine Übersicht über Benutzereingabeereignisse und die Methoden, die Windows-Nachrichten verarbeiten.</span><span class="sxs-lookup"><span data-stu-id="b0e1c-107">Provides an overview of user input events and the methods that process Windows messages.</span></span>  
   
- [<span data-ttu-id="cd800-108">Tastatureingaben in einer Windows Forms-Anwendung</span><span class="sxs-lookup"><span data-stu-id="cd800-108">Keyboard Input in a Windows Forms Application</span></span>](keyboard-input-in-a-windows-forms-application.md)  
- <span data-ttu-id="cd800-109">Stellt Informationen zur Tastaturnachrichtenbehandlung, zu den verschiedenen Typen von Tasten und zu Tastaturereignissen zur Verfügung.</span><span class="sxs-lookup"><span data-stu-id="cd800-109">Provides information on keyboard message handling, the different types of keys, and the keyboard events.</span></span>  
+ [<span data-ttu-id="b0e1c-108">Tastatureingaben in einer Windows Forms-Anwendung</span><span class="sxs-lookup"><span data-stu-id="b0e1c-108">Keyboard Input in a Windows Forms Application</span></span>](keyboard-input-in-a-windows-forms-application.md)  
+ <span data-ttu-id="b0e1c-109">Stellt Informationen zur Tastaturnachrichtenbehandlung, zu den verschiedenen Typen von Tasten und zu Tastaturereignissen zur Verfügung.</span><span class="sxs-lookup"><span data-stu-id="b0e1c-109">Provides information on keyboard message handling, the different types of keys, and the keyboard events.</span></span>  
   
- [<span data-ttu-id="cd800-110">Mauseingabe in einer Windows Forms-Anwendung</span><span class="sxs-lookup"><span data-stu-id="cd800-110">Mouse Input in a Windows Forms Application</span></span>](mouse-input-in-a-windows-forms-application.md)  
- <span data-ttu-id="cd800-111">Stellt Informationen zu Mausereignissen und anderen mausbezogenen Features einschließlich Mauscursor und Mausaufzeichnung bereit.</span><span class="sxs-lookup"><span data-stu-id="cd800-111">Provides information on the mouse events and other mouse-related features, including mouse cursors and mouse capture.</span></span>  
+ [<span data-ttu-id="b0e1c-110">Mauseingabe in einer Windows Forms-Anwendung</span><span class="sxs-lookup"><span data-stu-id="b0e1c-110">Mouse Input in a Windows Forms Application</span></span>](mouse-input-in-a-windows-forms-application.md)  
+ <span data-ttu-id="b0e1c-111">Stellt Informationen zu Mausereignissen und anderen mausbezogenen Features einschließlich Mauscursor und Mausaufzeichnung bereit.</span><span class="sxs-lookup"><span data-stu-id="b0e1c-111">Provides information on the mouse events and other mouse-related features, including mouse cursors and mouse capture.</span></span>  
   
- [<span data-ttu-id="cd800-112">Vorgehensweise: Simulieren von Maus- und Tastaturereignissen in Code</span><span class="sxs-lookup"><span data-stu-id="cd800-112">How to: Simulate Mouse and Keyboard Events in Code</span></span>](how-to-simulate-mouse-and-keyboard-events-in-code.md)  
- <span data-ttu-id="cd800-113">Zeigt verschiedene Möglichkeiten, Maus- und Tastatureingaben programmgesteuert zu simulieren.</span><span class="sxs-lookup"><span data-stu-id="cd800-113">Demonstrates several different ways to programmatically simulate mouse and keyboard input.</span></span>  
+ [<span data-ttu-id="b0e1c-112">Gewusst wie: Simulieren von Maus- und Tastaturereignissen in Code</span><span class="sxs-lookup"><span data-stu-id="b0e1c-112">How to: Simulate Mouse and Keyboard Events in Code</span></span>](how-to-simulate-mouse-and-keyboard-events-in-code.md)  
+ <span data-ttu-id="b0e1c-113">Zeigt verschiedene Möglichkeiten, Maus- und Tastatureingaben programmgesteuert zu simulieren.</span><span class="sxs-lookup"><span data-stu-id="b0e1c-113">Demonstrates several different ways to programmatically simulate mouse and keyboard input.</span></span>  
   
- [<span data-ttu-id="cd800-114">Vorgehensweise: Behandeln von Benutzereingabeereignisse in Windows Forms-Steuerelementen</span><span class="sxs-lookup"><span data-stu-id="cd800-114">How to: Handle User Input Events in Windows Forms Controls</span></span>](how-to-handle-user-input-events-in-windows-forms-controls.md)  
- <span data-ttu-id="cd800-115">Enthält ein Codebeispiel, das die meisten Benutzereingabeereignisse verarbeitet und Informationen zu jedem Ereignis bereitstellt.</span><span class="sxs-lookup"><span data-stu-id="cd800-115">Presents a code example that handles most user input events and reports information about each event.</span></span>  
+ [<span data-ttu-id="b0e1c-114">Gewusst wie: Behandeln von Benutzereingabeereignissen in Windows Forms-Steuerelementen</span><span class="sxs-lookup"><span data-stu-id="b0e1c-114">How to: Handle User Input Events in Windows Forms Controls</span></span>](how-to-handle-user-input-events-in-windows-forms-controls.md)  
+ <span data-ttu-id="b0e1c-115">Enthält ein Codebeispiel, das die meisten Benutzereingabeereignisse verarbeitet und Informationen zu jedem Ereignis bereitstellt.</span><span class="sxs-lookup"><span data-stu-id="b0e1c-115">Presents a code example that handles most user input events and reports information about each event.</span></span>  
   
- [<span data-ttu-id="cd800-116">Validierung von Benutzereingaben in Windows Forms</span><span class="sxs-lookup"><span data-stu-id="cd800-116">User Input Validation in Windows Forms</span></span>](user-input-validation-in-windows-forms.md)  
- <span data-ttu-id="cd800-117">Beschreibt die Methoden zum Überprüfen von Benutzereingaben in Windows Forms-Anwendungen.</span><span class="sxs-lookup"><span data-stu-id="cd800-117">Describes the methods to validate user input in Windows Forms applications.</span></span>  
+ [<span data-ttu-id="b0e1c-116">Validierung von Benutzereingaben in Windows Forms</span><span class="sxs-lookup"><span data-stu-id="b0e1c-116">User Input Validation in Windows Forms</span></span>](user-input-validation-in-windows-forms.md)  
+ <span data-ttu-id="b0e1c-117">Beschreibt die Methoden zum Überprüfen von Benutzereingaben in Windows Forms-Anwendungen.</span><span class="sxs-lookup"><span data-stu-id="b0e1c-117">Describes the methods to validate user input in Windows Forms applications.</span></span>  
   
-## <a name="related-sections"></a><span data-ttu-id="cd800-118">Verwandte Abschnitte</span><span class="sxs-lookup"><span data-stu-id="cd800-118">Related Sections</span></span>  
- <span data-ttu-id="cd800-119">Siehe auch [Erstellen von Ereignishandlern in Windows Forms](creating-event-handlers-in-windows-forms.md).</span><span class="sxs-lookup"><span data-stu-id="cd800-119">Also see [Creating Event Handlers in Windows Forms](creating-event-handlers-in-windows-forms.md).</span></span>
+## <a name="related-sections"></a><span data-ttu-id="b0e1c-118">Verwandte Abschnitte</span><span class="sxs-lookup"><span data-stu-id="b0e1c-118">Related Sections</span></span>  
+ <span data-ttu-id="b0e1c-119">Siehe auch [Erstellen von Ereignis Handlern in Windows Forms](creating-event-handlers-in-windows-forms.md).</span><span class="sxs-lookup"><span data-stu-id="b0e1c-119">Also see [Creating Event Handlers in Windows Forms](creating-event-handlers-in-windows-forms.md).</span></span>
