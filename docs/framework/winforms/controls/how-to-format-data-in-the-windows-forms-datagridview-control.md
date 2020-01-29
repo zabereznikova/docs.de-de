@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Formatieren von Daten im DataGridView-Steuerelement in Windows Forms'
+title: Formatieren von Daten im DataGridView-Steuerelement
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -15,40 +15,40 @@ helpviewer_keywords:
 - data grids [Windows Forms], date values
 - cells [Windows Forms], text alignment
 ms.assetid: 8c33543c-9c08-4636-a65a-fdf714a529b7
-ms.openlocfilehash: 0f295b44bf1dfffc7f4b6c52b54705bba1d82a81
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 9ee2869cf4085b5acfdf1f8c440151be506dbe3e
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64609766"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76736790"
 ---
-# <a name="how-to-format-data-in-the-windows-forms-datagridview-control"></a>Vorgehensweise: Formatieren von Daten im DataGridView-Steuerelement in Windows Forms
-Die folgenden Prozeduren veranschaulichen grundlegende Formatierung von Zellenwerten durch die <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A> Eigenschaft eine <xref:System.Windows.Forms.DataGridView> Steuerelement sowie von bestimmten Spalten in einem Steuerelement. Weitere Informationen über die Erweiterte Formatierung finden Sie unter [Vorgehensweise: Anpassen der Datenformatierung im DataGridView-Steuerelement in Windows Forms](how-to-customize-data-formatting-in-the-windows-forms-datagridview-control.md).  
+# <a name="how-to-format-data-in-the-windows-forms-datagridview-control"></a>Gewusst wie: Formatieren von Daten im DataGridView-Steuerelement in Windows Forms
+Die folgenden Prozeduren veranschaulichen die grundlegende Formatierung von Zellwerten mithilfe der <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A>-Eigenschaft eines <xref:System.Windows.Forms.DataGridView> Steuer Elements und bestimmter Spalten in einem-Steuerelement. Weitere Informationen zur erweiterten Datenformatierung finden Sie unter Gewusst [wie: Anpassen der Datenformatierung im Windows Forms DataGridView-Steuer](how-to-customize-data-formatting-in-the-windows-forms-datagridview-control.md)Element.  
   
-### <a name="to-format-currency-and-date-values"></a>Formatieren von Währung und Datumswerte  
+### <a name="to-format-currency-and-date-values"></a>So formatieren Sie Currency-und Date-Werte  
   
-- Legen Sie die <xref:System.Windows.Forms.DataGridViewCellStyle.Format%2A>-Eigenschaft einer <xref:System.Windows.Forms.DataGridViewCellStyle>-Instanz fest. Das folgende Codebeispiel legt das Format für bestimmte Spalten mithilfe der <xref:System.Windows.Forms.DataGridViewColumn.DefaultCellStyle%2A> -Eigenschaft der Spalten. Werte in der `UnitPrice` Spalte in der aktuellen kulturspezifische Währungsformat angezeigt werden, mit negativen Werten, die in Klammern eingeschlossen sind. Werte in der `ShipDate` Spalte in der aktuellen kulturspezifische kurzen Datumsformat angezeigt werden. Weitere Informationen zu <xref:System.Windows.Forms.DataGridViewCellStyle.Format%2A> Werte finden Sie unter [Formatierung von Typen](../../../standard/base-types/formatting-types.md).  
+- Legen Sie die <xref:System.Windows.Forms.DataGridViewCellStyle.Format%2A>-Eigenschaft einer <xref:System.Windows.Forms.DataGridViewCellStyle>-Instanz fest. Im folgenden Codebeispiel wird das Format für bestimmte Spalten mithilfe der <xref:System.Windows.Forms.DataGridViewColumn.DefaultCellStyle%2A>-Eigenschaft der Spalten festgelegt. Werte in der Spalte `UnitPrice` werden im aktuellen Kultur abhängigen Währungs Format angezeigt, wobei negative Werte in Klammern eingeschlossen sind. Werte in der Spalte `ShipDate` werden im aktuellen kulturspezifischen kurzen Datumsformat angezeigt. Weitere Informationen zu <xref:System.Windows.Forms.DataGridViewCellStyle.Format%2A> Werten finden Sie unter [Formatieren von Typen](../../../standard/base-types/formatting-types.md).  
   
      [!code-csharp[System.Windows.Forms.DataGridViewMisc#071](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#071)]
      [!code-vb[System.Windows.Forms.DataGridViewMisc#071](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#071)]  
   
-### <a name="to-customize-the-display-of-null-database-values"></a>Die Anzeige der Datenbank-Nullwerte anpassen  
+### <a name="to-customize-the-display-of-null-database-values"></a>So passen Sie die Anzeige von NULL-Daten bankwerten an  
   
-- Legen Sie die <xref:System.Windows.Forms.DataGridViewCellStyle.NullValue%2A>-Eigenschaft einer <xref:System.Windows.Forms.DataGridViewCellStyle>-Instanz fest. Im folgenden Codebeispiel wird die <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A?displayProperty=nameWithType> Eigenschaft "keinen Eintrag" in allen Zellen mit Werten, die gleich angezeigt <xref:System.DBNull.Value?displayProperty=nameWithType>.  
+- Legen Sie die <xref:System.Windows.Forms.DataGridViewCellStyle.NullValue%2A>-Eigenschaft einer <xref:System.Windows.Forms.DataGridViewCellStyle>-Instanz fest. Im folgenden Codebeispiel wird die <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A?displayProperty=nameWithType>-Eigenschaft verwendet, um in allen Zellen, die Werte gleich <xref:System.DBNull.Value?displayProperty=nameWithType>enthalten, den Eintrag No Entry anzuzeigen.  
   
      [!code-csharp[System.Windows.Forms.DataGridViewMisc#073](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#073)]
      [!code-vb[System.Windows.Forms.DataGridViewMisc#073](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#073)]  
   
-### <a name="to-enable-wordwrap-in-text-based-cells"></a>Wordwrap in textbasierten Zellen aktivieren  
+### <a name="to-enable-wordwrap-in-text-based-cells"></a>So aktivieren Sie WordWrap in textbasierten Zellen  
   
-- Legen Sie die <xref:System.Windows.Forms.DataGridViewCellStyle.WrapMode%2A> Eigenschaft eine <xref:System.Windows.Forms.DataGridViewCellStyle> eines der <xref:System.Windows.Forms.DataGridViewTriState> Enumerationswerte. Im folgenden Codebeispiel wird die <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A?displayProperty=nameWithType> Eigenschaft, um den Umbruchmodus für das gesamte Steuerelement festzulegen.  
+- Legen Sie die <xref:System.Windows.Forms.DataGridViewCellStyle.WrapMode%2A>-Eigenschaft eines <xref:System.Windows.Forms.DataGridViewCellStyle> auf einen der <xref:System.Windows.Forms.DataGridViewTriState>-Enumerationswerte fest. Im folgenden Codebeispiel wird die <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A?displayProperty=nameWithType>-Eigenschaft verwendet, um den Umbruch Modus für das gesamte-Steuerelement festzulegen.  
   
      [!code-csharp[System.Windows.Forms.DataGridViewMisc#074](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#074)]
      [!code-vb[System.Windows.Forms.DataGridViewMisc#074](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#074)]  
   
-### <a name="to-specify-the-text-alignment-of-datagridview-cells"></a>Die Ausrichtung des Texts von DataGridView-Zellen an  
+### <a name="to-specify-the-text-alignment-of-datagridview-cells"></a>So geben Sie die Textausrichtung von DataGridView-Zellen an  
   
-- Legen Sie die <xref:System.Windows.Forms.DataGridViewCellStyle.Alignment%2A> Eigenschaft eine <xref:System.Windows.Forms.DataGridViewCellStyle> eines der <xref:System.Windows.Forms.DataGridViewContentAlignment> Enumerationswerte. Das folgende Codebeispiel legt die Ausrichtung für eine bestimmte Spalte mit dem <xref:System.Windows.Forms.DataGridViewColumn.DefaultCellStyle%2A> -Eigenschaft der Spalte.  
+- Legen Sie die <xref:System.Windows.Forms.DataGridViewCellStyle.Alignment%2A>-Eigenschaft eines <xref:System.Windows.Forms.DataGridViewCellStyle> auf einen der <xref:System.Windows.Forms.DataGridViewContentAlignment>-Enumerationswerte fest. Im folgenden Codebeispiel wird die Ausrichtung für eine bestimmte Spalte mithilfe der <xref:System.Windows.Forms.DataGridViewColumn.DefaultCellStyle%2A>-Eigenschaft der Spalte festgelegt.  
   
      [!code-csharp[System.Windows.Forms.DataGridViewMisc#072](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#072)]
      [!code-vb[System.Windows.Forms.DataGridViewMisc#072](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#072)]  
@@ -60,12 +60,12 @@ Die folgenden Prozeduren veranschaulichen grundlegende Formatierung von Zellenwe
 ## <a name="compiling-the-code"></a>Kompilieren des Codes  
  Diese Beispiele erfordern Folgendes:  
   
-- Ein <xref:System.Windows.Forms.DataGridView> Steuerelement mit dem Namen `dataGridView1` , enthält eine Spalte namens `UnitPrice`, eine Spalte namens `ShipDate`, und eine Spalte mit dem Namen `CustomerName`.  
+- Ein <xref:System.Windows.Forms.DataGridView> Steuerelement mit dem Namen `dataGridView1`, das eine Spalte mit dem Namen `UnitPrice`, eine Spalte mit dem Namen `ShipDate`und eine Spalte mit dem Namen `CustomerName`enthält.  
   
 - Verweise auf die Assemblys <xref:System?displayProperty=nameWithType>, <xref:System.Drawing?displayProperty=nameWithType> und <xref:System.Windows.Forms?displayProperty=nameWithType>.  
   
-## <a name="robust-programming"></a>Stabile Programmierung  
- Sie sollten für maximale Skalierbarkeit gibt freigeben <xref:System.Windows.Forms.DataGridViewCellStyle> Objekten über mehrere Zeilen, Spalten oder Zellen, die dieselben Stile, anstatt die Stileigenschaften für jedes Element einzeln zu verwenden. Weitere Informationen finden Sie unter [Best Practices für das Skalieren des DataGridView-Steuerelements in Windows Forms](best-practices-for-scaling-the-windows-forms-datagridview-control.md).  
+## <a name="robust-programming"></a>Robuste Programmierung  
+ Um maximale Skalierbarkeit zu ermöglichen, sollten Sie <xref:System.Windows.Forms.DataGridViewCellStyle> Objekte für mehrere Zeilen, Spalten oder Zellen freigeben, die dieselben Stile verwenden, anstatt die Stileigenschaften für jedes Element separat festzulegen. Weitere Informationen finden Sie unter [bewährte Methoden zum Skalieren des Windows Forms DataGridView-Steuer](best-practices-for-scaling-the-windows-forms-datagridview-control.md)Elements.  
   
 ## <a name="see-also"></a>Siehe auch
 
@@ -75,5 +75,5 @@ Die folgenden Prozeduren veranschaulichen grundlegende Formatierung von Zellenwe
 - [Grundlegende Formatierungen und Formate im DataGridView-Steuerelement in Windows Forms](basic-formatting-and-styling-in-the-windows-forms-datagridview-control.md)
 - [Zellstile im DataGridView-Steuerelement in Windows Forms](cell-styles-in-the-windows-forms-datagridview-control.md)
 - [Datenformatierung im DataGridView-Steuerelement in Windows Forms](data-formatting-in-the-windows-forms-datagridview-control.md)
-- [Vorgehensweise: Anpassen der Datenformatierung im DataGridView-Steuerelement in Windows Forms](how-to-customize-data-formatting-in-the-windows-forms-datagridview-control.md)
+- [Gewusst wie: Anpassen der Datenformatierung im DataGridView-Steuerelement in Windows Forms](how-to-customize-data-formatting-in-the-windows-forms-datagridview-control.md)
 - [Formatierung von Typen](../../../standard/base-types/formatting-types.md)

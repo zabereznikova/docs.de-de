@@ -1,5 +1,5 @@
 ---
-title: CheckedListBox-Steuerelement (Windows Forms)
+title: CheckedListBox-Steuerelement
 ms.date: 03/30/2017
 helpviewer_keywords:
 - CheckedListBox control [Windows Forms], reference
@@ -13,22 +13,22 @@ helpviewer_keywords:
 - list items [Windows Forms], Windows Forms controls that display
 - list boxes
 ms.assetid: 2a525f72-0245-41d7-94e9-b9c971dc4484
-ms.openlocfilehash: 4d24a25a0b033caeb165566eb0dc5a2e189a8d4a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 069c0a2332f7035ce59f17058f388f9fb452b720
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61956454"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76736997"
 ---
 # <a name="checkedlistbox-control-windows-forms"></a>CheckedListBox-Steuerelement (Windows Forms)
-Die Windows-Formulare `CheckedListBox` Steuerelement zeigt eine Liste von Elementen, wie z. B. die <xref:System.Windows.Forms.ListBox> steuern und auch ein Häkchen neben den Elementen in der Liste anzeigen können.  
+Das Windows Forms `CheckedListBox`-Steuerelement zeigt eine Liste von Elementen an, wie z. b. das <xref:System.Windows.Forms.ListBox>-Steuerelement, und kann neben den Elementen in der Liste auch ein Häkchen anzeigen.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Übersicht über das CheckedListBox-Steuerelement](checkedlistbox-control-overview-windows-forms.md)  
  Hier werden das Steuerelement und seine wichtigsten Funktionen und Eigenschaften erläutert.  
   
- [Vorgehensweise: Bestimmen der aktivierten Elemente im CheckedListBox-Steuerelement von Windows Forms](how-to-determine-checked-items-in-the-windows-forms-checkedlistbox-control.md)  
- Beschreibt das Durchlaufen einer Liste, um zu bestimmen, welche Elemente aktiviert sind.  
+ [Gewusst wie: Bestimmen der aktivierten Elemente im CheckedListBox-Steuerelement von Windows Forms](how-to-determine-checked-items-in-the-windows-forms-checkedlistbox-control.md)  
+ Beschreibt, wie eine Liste durchlaufen wird, um zu bestimmen, welche Elemente geprüft werden.  
   
 ## <a name="reference"></a>Referenz  
  <xref:System.Windows.Forms.CheckedListBox>-Klasse  
@@ -36,7 +36,7 @@ Die Windows-Formulare `CheckedListBox` Steuerelement zeigt eine Liste von Elemen
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
  [Windows Forms-Steuerelemente zum Auflisten von Optionen](windows-forms-controls-used-to-list-options.md)  
- Enthält eine Liste der Dinge, die mit Listenfeldern, Kombinationsfeldern und aktivierten möglich.  
+ Enthält eine Liste der Dinge, die Sie mit Listenfeldern, Kombinations Feldern und aktivierten Listenfeldern ausführen können.  
   
  [Windows Forms-Steuerelemente](controls-to-use-on-windows-forms.md)  
  Enthält eine vollständige Liste der Windows Forms-Steuerelemente mit Links zu Informationen zur jeweiligen Verwendung.

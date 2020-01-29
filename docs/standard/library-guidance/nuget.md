@@ -2,12 +2,12 @@
 title: NuGet für .NET-Bibliotheken
 description: Best Practices für die Paketerstellung mit NuGet für .NET-Bibliotheken
 ms.date: 01/15/2019
-ms.openlocfilehash: 71c380f6062c09a8951769009b29b567fddfddfc
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: f1e8d39fe2988f11ce7fd351a4d6bee6d322f2b5
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75706477"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76731377"
 ---
 # <a name="nuget"></a>NuGet
 
@@ -34,7 +34,7 @@ Sie haben im Wesentlichen zwei Optionen, ein NuGet-Paket zu erstellen. Der neuer
 
 Der ältere Ansatz zum Erstellen eines NuGet-Pakets erfordert eine `*.nuspec`-Datei und das Befehlszeilentool `nuget.exe`. Mit einer NUSPEC-Datei haben Sie umfangreiche Kontrolle, doch Sie müssen sorgfältig angeben, welche Assemblys und Ziele in das endgültige NuGet-Paket aufgenommen werden. Achten Sie darauf, dass Ihnen keine Fehler unterlaufen, und dass Sie nicht vergessen, die NUSPEC-Datei zu aktualisieren, nachdem Sie Änderungen vorgenommen haben. Der Vorteil einer NUSPEC-Datei ist, dass Sie mit ihr NuGet-Pakete für Frameworks erstellen können, die noch keine im SDK-Projektdatei unterstützen.
 
-**✔️ Verwenden** Sie eine SDK-Projektdatei zum Erstellen des NuGet-Pakets.
+✔️ Verwenden Sie eine SDK-Projektdatei zum Erstellen des NuGet-Pakets.
 
 ## <a name="package-dependencies"></a>Paketabhängigkeiten
 
@@ -59,15 +59,15 @@ Ein NuGet-Paket unterstützt viele [Metadateneigenschaften](/nuget/reference/nus
 > [!IMPORTANT]
 > Ein Projekt ohne Lizenz unterliegt standardmäßig [exklusivem Copyright](https://choosealicense.com/no-permission/), sodass es nicht rechtmäßig von anderen Benutzern verwendet werden kann.
 
-**✔️ Wählen** Sie einen NuGet-Paketnamen mit einem Präfix aus, das den [Kriterien](/nuget/reference/id-prefix-reservation) der NuGet-Präfixreservierung entspricht.
+✔️ Wählen Sie einen NuGet-Paketnamen mit einem Präfix aus, das den [Kriterien](/nuget/reference/id-prefix-reservation) der NuGet-Präfixreservierung entspricht.
 
-**✔️ Verwenden** Sie einen HTTPS-Hypertextverweis für Ihr Paketsymbol.
+✔️ Verwenden Sie einen HTTPS-Hypertextverweis für Ihr Paketsymbol.
 
 > Websites wie NuGet.org werden mit aktiviertem HTTPS ausgeführt, und die Anzeige eines Nicht-HTTPS-Bildes generiert eine Warnung vor gemischten Inhalten.
 
-**✔️ Verwenden** Sie ein Paketsymbolbild, das 64x64 groß ist und einen transparenten Hintergrund für die ideale Darstellung hat.
+✔️ Verwenden Sie ein Paketsymbolbild, das 64x64 groß ist und einen transparenten Hintergrund für die ideale Darstellung hat.
 
-**✔️ Richten** Sie [SourceLink](./sourcelink.md) ein, um Ihren Assemblys und dem NuGet-Paket Metadaten der Quellcodeverwaltung hinzuzufügen.
+✔️ Erwägen Sie die Einrichtung von [Source Link](./sourcelink.md), um Ihren Assemblys und dem NuGet-Paket Metadaten der Quellcodeverwaltung hinzuzufügen.
 
 > SourceLink fügt dem NuGet-Paket automatisch `RepositoryUrl`- und `RepositoryType`-Metadaten hinzu. SourceLink fügt auch Informationen zum genauen Quellcode hinzu, mit dem das Paket erstellt wurde. Beispielsweise wird einem Paket, das aus einem Git-Repository erstellt wurde, der Commithash als Metadaten hinzugefügt.
 
@@ -84,9 +84,9 @@ NuGet-Pakete mit einem Versionssuffix gelten als [Vorabversion](/nuget/create-pa
 
 ![Vorabrelease der NuGet-Paketabhängigkeit](./media/nuget/nuget-prerelease-package.png "Vorabrelease der NuGet-Paketabhängigkeit")
 
-**✔️ Veröffentlichen** Sie ein Vorabversionspaket für Tests und Vorschauen.
+✔️ Veröffentlichen Sie ein Vorabversionspaket für Tests und Vorschauen.
 
-**✔️ Veröffentlichen** Sie ein stabiles Paket, wenn es fertig ist, sodass andere stabile Pakete es referenzieren können.
+✔️ Veröffentlichen Sie ein stabiles Paket, sobald es fertig ist, sodass andere stabile Pakete es referenzieren können.
 
 ## <a name="symbol-packages"></a>Symbolpakete
 
@@ -112,7 +112,7 @@ Eine Alternative zum Erstellen eines Symbolpakets ist das Einbetten von Symbolda
 
 Der Nachteil von eingebetteten Symboldateien ist, dass sie die Paketgröße für .NET-Bibliotheken, die mit SDK-Projekten kompiliert wurden, um etwa 30 % erhöhen. Wenn die Paketgröße ein Problem darstellt, sollten Sie Symbole stattdessen in einem Symbolpaket veröffentlichen.
 
-**✔️ Überlegen** Sie sich, ob Sie Symbole als Symbolpaket (`*.snupkg`) auf NuGet.org veröffentlichen möchten
+✔️ Überlegen Sie sich, ob Sie Symbole als Symbolpaket (`*.snupkg`) auf NuGet.org veröffentlichen möchten
 
 > Mit Symbolpaketen (`*.snupkg`) erhalten Entwickler eine gute abrufbare Debugfunktion, ohne dass die Größe des Hauptpakets und die Wiederherstellungsleistung für diejenigen, die das NuGet-Paket nicht debuggen möchten, beeinträchtigt wird.
 >

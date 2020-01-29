@@ -3,33 +3,37 @@ title: Erste Schritte mit .NET
 description: Listet verschiedene Artikel für den Einstieg in .NET auf, unterteilt nach Sprache und Plattform.
 author: cartermp
 ms.author: mairaw
-ms.date: 05/01/2017
+ms.date: 01/21/2020
 ms.technology: dotnet-standard
 ms.assetid: 81c07080-acdf-4aef-a66d-0ab52fab2c04
-ms.openlocfilehash: ac9ad7e3730f8c430d42c4c8c8b63ab3d9cd091f
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 98134478e8fef37e5cc6193a656d9baa3a41a482
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73423826"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76733669"
 ---
 # <a name="get-started"></a>Erste Schritte
 
-Es gibt verschiedene Möglichkeiten für die ersten Schritte mit .NET. Da .NET eine umfangreiche Plattform ist, enthält diese Dokumentation zahlreiche Artikel, die zeigen, wie Sie mit der .NET-Nutzung beginnen können, jeweils aus einer anderen Perspektive.
+Es gibt verschiedene Möglichkeiten für die ersten Schritte mit .NET. Da .NET eine umfangreiche Plattform ist, enthält diese Dokumentation zahlreiche Artikel, die Ihnen beim Einstieg in .NET helfen, jeweils aus einer anderen Perspektive.
 
 ## <a name="get-started-using-net-languages"></a>Erste Schritte bei der Verwendung von .NET-Sprachen
 
-* Die Artikel zu den [ersten Schritten mit C#](../csharp/getting-started/index.md) und die [C#-Tutorials](../csharp/tutorials/index.md) bieten eine Reihe von Möglichkeiten für die ersten Schritte unter Verwendung von C#.
+* Die [Artikel zu den ersten Schritten mit C#](../csharp/getting-started/index.md) und die [C#-Tutorials](../csharp/tutorials/index.md) ermöglichen Ihnen den Einstieg in C#.
 
-* Die Tutorials zu den [ersten Schritten mit F#](../fsharp/get-started/index.md) enthalten drei Hauptmethoden für die Verwendung von F#: mit Visual Studio, Visual Studio Code oder Befehlszeilentools.
+* In den [Tutorials zu den ersten Schritten mit F#](../fsharp/get-started/index.md) werden die drei Hauptmethoden für die Verwendung von F# vorgestellt: Visual Studio, Visual Studio Code oder Befehlszeilentools.
 
-* Die Artikel mit den [ersten Schritten mit Visual Basic](../visual-basic/getting-started/index.md) bieten Anleitungen für die Verwendung von Visual Basic in Visual Studio.
+* Die [Artikel zu den ersten Schritten bei Visual Basic](../visual-basic/getting-started/index.md) bieten Anleitungen für die Verwendung von Visual Basic in Visual Studio.
 
 ## <a name="get-started-using-net-core"></a>Erste Schritte bei der Verwendung von .NET Core
 
-* [Erste Schritte mit .NET Core](../core/get-started.md) bietet einen Überblick über die Artikel, die die ersten Schritte mit .NET Core auf verschiedenen Betriebssystemen und mit anderen Tools veranschaulichen.
+* Der Artikel [Erste Schritte mit .NET Core](../core/get-started.md) bietet einen Überblick über die Artikel, in denen die ersten Schritte mit .NET Core auf verschiedenen Betriebssystemen und mit verschiedenen Tools erläutert sind.
 
-* Die [.NET Core-Tutorials](../core/tutorials/index.md) erläutern eine Reihe von Möglichkeiten für den Einstieg in .NET Core mithilfe des Betriebssystems und der Tools Ihrer Wahl.
+* In den [.NET Core-Tutorials](../core/tutorials/index.md) erfahren Sie, wie Sie mit dem Betriebssystem und den Tools Ihrer Wahl in .NET Core einsteigen.
+
+## <a name="get-started-using-net-standard"></a>Erste Schritte bei der Verwendung von .NET Standard
+
+* Ein einführendes Tutorial finden Sie unter [Erstellen einer .NET Standard-Bibliothek in Visual Studio](../core/tutorials/library-with-visual-studio.md).
 
 ## <a name="get-started-using-net-core-on-docker"></a>Erste Schritte bei der Verwendung von .NET Core mit Docker
 

@@ -1,5 +1,5 @@
 ---
-title: Druckunterstützung in Windows Forms
+title: Druckunterstützung
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Forms, printing
@@ -8,57 +8,57 @@ helpviewer_keywords:
 - printing [Windows Forms], Windows Forms, support
 - printing [Windows Forms], print support
 ms.assetid: a4a2960c-eb70-48e2-b641-cfb222704e46
-ms.openlocfilehash: 8e008f2cb4b2f32cdba676e68d9fd790530e2b06
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d6e8f60db7afe2f1b04eaae6fe71aa93e5c22cae
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62011847"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76732492"
 ---
 # <a name="windows-forms-print-support"></a>Druckunterstützung in Windows Forms
-Beim Drucken in Windows Forms besteht in erster Linie mit der [PrintDocument-Komponente](../controls/printdocument-component-windows-forms.md) Komponente, bei dem Benutzer ermöglichen, zu drucken, und die [PrintPreviewDialog-Steuerelement](../controls/printpreviewdialog-control-windows-forms.md) Steuerelement ["PrintDialog" Komponente](../controls/printdialog-component-windows-forms.md) und [PageSetupDialog-Komponente](../controls/pagesetupdialog-component-windows-forms.md) Komponenten eine vertraute grafische Oberfläche für Benutzer, die mit dem Windows-Betriebssystem vertraut zu sein.  
+Das Drucken in Windows Forms besteht hauptsächlich aus der Verwendung der [PrintDocument-Komponenten](../controls/printdocument-component-windows-forms.md) Komponente, um dem Benutzer das Drucken zu ermöglichen, und dem [PrintPreviewDialog-Steuer](../controls/printpreviewdialog-control-windows-forms.md) Element-Steuerelement, der [PrintDialog-Komponente](../controls/printdialog-component-windows-forms.md) und den [PageSetupDialog](../controls/pagesetupdialog-component-windows-forms.md) -Komponenten Komponenten, um Benutzern eine vertraute grafische Oberfläche bereitzustellen  
   
- Normalerweise erstellen Sie eine neue Instanz der der <xref:System.Drawing.Printing.PrintDocument> Komponente legen Sie die Eigenschaften, die beschreiben, was gedruckt, mit der <xref:System.Drawing.Printing.PrinterSettings> und <xref:System.Drawing.Printing.PageSettings> Klassen, und rufen die <xref:System.Drawing.Printing.PrintDocument.Print%2A> Methode, um das Dokument zu drucken.  
+ In der Regel erstellen Sie eine neue Instanz der <xref:System.Drawing.Printing.PrintDocument> Komponente, legen die Eigenschaften fest, die beschreiben, was mithilfe der Klassen <xref:System.Drawing.Printing.PrinterSettings> und <xref:System.Drawing.Printing.PageSettings> gedruckt werden soll, und rufen die <xref:System.Drawing.Printing.PrintDocument.Print%2A>-Methode auf, um das Dokument tatsächlich zu drucken.  
   
- Im Verlauf der Druck aus einer Windows-basierten Anwendung die <xref:System.Drawing.Printing.PrintDocument> Komponente zeigt ein Dialogfeld abbrechen, um Benutzer auf die Tatsache, dass die Drucken stattfindet und den Druckauftrag abgebrochen werden soll.  
+ Während des Druckens aus einer Windows-basierten Anwendung zeigt die <xref:System.Drawing.Printing.PrintDocument> Komponente ein Dialogfeld zum Abbrechen des Abbruchs an, in dem Benutzer darauf aufmerksam gemacht werden, dass der Druckvorgang abgebrochen wird und der Druckauftrag abgebrochen werden kann.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Vorgehensweise: Erstellen von Druckaufträgen in Standard-Windows Forms](how-to-create-standard-windows-forms-print-jobs.md)  
- Erläutert, wie die <xref:System.Drawing.Printing.PrintDocument> Komponente zum Drucken in Windows Forms.  
+ [Gewusst wie: Erstellen von standardmäßigen Druckaufträgen in Windows Forms](how-to-create-standard-windows-forms-print-jobs.md)  
+ Erläutert, wie die <xref:System.Drawing.Printing.PrintDocument> Komponente zum Drucken aus einem Windows Form verwendet wird.  
   
- [Vorgehensweise: Erfassen von Benutzereingaben in einem "PrintDialog" zur Laufzeit](how-to-capture-user-input-from-a-printdialog-at-run-time.md)  
- Erläutert, wie so ändern Sie die ausgewählten Druckoptionen programmgesteuert mithilfe der <xref:System.Windows.Forms.PrintDialog> Komponente.  
+ [Gewusst wie: Erfassen von Benutzereingaben in einem „PrintDialog“ zur Laufzeit](how-to-capture-user-input-from-a-printdialog-at-run-time.md)  
+ Erläutert, wie ausgewählte Druckoptionen Programm gesteuert mithilfe der <xref:System.Windows.Forms.PrintDialog> Komponente geändert werden.  
   
- [Vorgehensweise: Auswählen der Drucker, die angefügt werden, auf dem Computer eines Benutzers in Windows Forms](how-to-choose-the-printers-attached-to-user-computer-in-windows-forms.md)  
- Beschreibt das Ändern der Drucker zum Drucken auf mit der <xref:System.Windows.Forms.PrintDialog> -Komponente zur Laufzeit.  
+ [Gewusst wie: Auswählen der einem Benutzercomputer zugewiesenen Drucker in Windows Forms](how-to-choose-the-printers-attached-to-user-computer-in-windows-forms.md)  
+ Beschreibt das Ändern des Druckers für das Drucken in mithilfe der <xref:System.Windows.Forms.PrintDialog> Komponente zur Laufzeit.  
   
  [Vorgehensweise: Drucken von Grafiken in Windows Forms](how-to-print-graphics-in-windows-forms.md)  
- Beschreibt, sendende von Grafiken an den Drucker.  
+ Beschreibt das Senden von Grafiken an den Drucker.  
   
  [Vorgehensweise: Drucken einer mehrseitigen Textdatei in Windows Forms](how-to-print-a-multi-page-text-file-in-windows-forms.md)  
- Beschreibt senden Text an den Drucker.  
+ Beschreibt das Senden von Text an den Drucker.  
   
- [Vorgehensweise: Vollständige Windows Forms-Druckaufträge](how-to-complete-windows-forms-print-jobs.md)  
- Erläutert, wie Benutzer bis zum Abschluss eines Druckauftrags benachrichtigt.  
+ [Gewusst wie: Fertigstellen von Druckaufträgen in Windows Forms](how-to-complete-windows-forms-print-jobs.md)  
+ Erläutert, wie Benutzer zur Beendigung eines Druckauftrags gewarnt werden.  
   
- [Vorgehensweise: Drucken eines Windows Form](how-to-print-a-windows-form.md)  
- Zeigt, wie eine Kopie des aktuellen Formulars gedruckt.  
+ [Gewusst wie: Drucken eines Windows Form](how-to-print-a-windows-form.md)  
+ Zeigt, wie eine Kopie des aktuellen Formulars gedruckt wird.  
   
- [Vorgehensweise: Drucken Sie in Windows Forms unter Verwendung der Seitenansicht](how-to-print-in-windows-forms-using-print-preview.md)  
- Zeigt, wie eine <xref:System.Windows.Forms.PrintPreviewDialog> zum Drucken eines Dokuments.  
+ [Gewusst wie: Drucken in Windows Forms unter Verwendung der Seitenansicht](how-to-print-in-windows-forms-using-print-preview.md)  
+ Zeigt, wie ein <xref:System.Windows.Forms.PrintPreviewDialog> zum Drucken eines Dokuments verwendet wird.  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
  [PrintDocument-Komponente](../controls/printdocument-component-windows-forms.md)  
- Erläutert die Verwendung des der <xref:System.Drawing.Printing.PrintDocument> Komponente.  
+ Erläutert die Verwendung der <xref:System.Drawing.Printing.PrintDocument> Komponente.  
   
  [PrintDialog-Komponente](../controls/printdialog-component-windows-forms.md)  
- Erläutert die Verwendung des der <xref:System.Windows.Forms.PrintDialog> Komponente.  
+ Erläutert die Verwendung der <xref:System.Windows.Forms.PrintDialog> Komponente.  
   
  [PrintPreviewDialog-Steuerelement](../controls/printpreviewdialog-control-windows-forms.md)  
- Erläutert die Verwendung des der <xref:System.Windows.Forms.PrintPreviewDialog> Steuerelement.  
+ Erläutert die Verwendung des <xref:System.Windows.Forms.PrintPreviewDialog>-Steuer Elements.  
   
- [PageSetupDialog-Komponente](../controls/pagesetupdialog-component-windows-forms.md)  
- Erläutert die Verwendung des der <xref:System.Windows.Forms.PageSetupDialog> Komponente.  
+ [PageSetupDialog Component](../controls/pagesetupdialog-component-windows-forms.md)  
+ Erläutert die Verwendung der <xref:System.Windows.Forms.PageSetupDialog> Komponente.  
   
  <xref:System.Drawing.Printing>  
- Beschreibt die Klassen in der <xref:System.Drawing.Printing> Namespace.
+ Beschreibt die Klassen im <xref:System.Drawing.Printing>-Namespace.

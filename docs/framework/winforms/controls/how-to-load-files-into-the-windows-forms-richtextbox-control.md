@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Laden von Dateien in das RichTextBox-Steuerelement von Windows Forms'
+title: Laden von Dateien in das RichTextBox-Steuerelement
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - RichTextBox control [Windows Forms], opening files
 - RTF files [Windows Forms], displaying in RichTextBox control
 ms.assetid: c03451be-f285-4428-a71a-c41e002cc919
-ms.openlocfilehash: 0f52b4ff869d7a2220dd2d40e0ab90bbfb7d24ae
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: c31e004ea4cd0821b5f18f0ab0fe2708e6ac4b59
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70046169"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76736287"
 ---
-# <a name="how-to-load-files-into-the-windows-forms-richtextbox-control"></a>Vorgehensweise: Laden von Dateien in das RichTextBox-Steuerelement von Windows Forms
+# <a name="how-to-load-files-into-the-windows-forms-richtextbox-control"></a>Gewusst wie: Laden von Dateien in das RichTextBox-Steuerelement von Windows Forms
 
 Das <xref:System.Windows.Forms.RichTextBox> -Steuerelement von Windows Forms kann eine Nur-Text-, Unicode-Nur-Text- oder Rich-Text-Format-Datei (RTF) anzeigen. Rufen Sie dazu die <xref:System.Windows.Forms.RichTextBox.LoadFile%2A> -Methode auf. Sie können die <xref:System.Windows.Forms.RichTextBox.LoadFile%2A> -Methode auch zum Laden von Daten aus einem Stream verwenden. Weitere Informationen finden Sie unter <xref:System.Windows.Forms.RichTextBox.LoadFile%28System.IO.Stream%2CSystem.Windows.Forms.RichTextBoxStreamType%29>.
 

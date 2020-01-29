@@ -2,30 +2,30 @@
 title: Befehl „dotnet add package“
 description: Der Paketbefehl „dotnet add“ bietet eine praktische Option zum Hinzufügen von NuGet-Paketverweisen zu einem Projekt.
 ms.date: 06/26/2019
-ms.openlocfilehash: 9445cf686ec1733f5a8b3403b7efea3a544fbc99
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: 210dcf0efe06672264ebfa297589bdb387591a42
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117792"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76733329"
 ---
 # <a name="dotnet-add-package"></a>dotnet add package
 
-**Dieser Artikel gilt für: ✓**.NET Core 1.x SDK und spätere Versionen
+**Dieser Artikel gilt für:** ✔️ .NET Core 1.x SDK und neuere Versionen
 
 <!-- todo: uncomment when all CLI commands are reviewed
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 -->
 
-## <a name="name"></a>NAME
+## <a name="name"></a>name
 
 `dotnet add package`: Fügt einen Paketverweis zu einer Projektdatei hinzu.
 
-## <a name="synopsis"></a>Zusammenfassung
+## <a name="synopsis"></a>Übersicht
 
 `dotnet add [<PROJECT>] package <PACKAGE_NAME> [-h|--help] [-f|--framework] [--interactive] [-n|--no-restore] [--package-directory] [-s|--source] [-v|--version]`
 
-## <a name="description"></a>BESCHREIBUNG
+## <a name="description"></a>Beschreibung
 
 Der `dotnet add package`-Befehl bietet eine praktische Option zum Hinzufügen von Paketverweisen zu einer Projektdatei. Nach dem Ausführen des Befehls wird die Kompatibilität überprüft, um sicherzustellen, dass das Paket mit den Frameworks im Projekt kompatibel ist. Wenn die Überprüfung erfolgreich ist, wird ein `<PackageReference>`-Element zur Projektdatei hinzugefügt, und [dotnet restore](dotnet-restore.md) wird ausgeführt.
 

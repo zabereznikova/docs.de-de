@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Festlegen des durch ein Windows Forms-Steuerelement angezeigten Textes'
+title: Festlegen des von einem Steuerelement angezeigten Texts
 ms.date: 08/20/2019
 dev_langs:
 - csharp
@@ -21,16 +21,16 @@ helpviewer_keywords:
 - controls [Windows Forms], captions
 - forms [Windows Forms], captions
 ms.assetid: 36b95bff-8780-479d-b86a-f1a0673653aa
-ms.openlocfilehash: 887aa5ec9b97770903cd87459d6df5adc3f7ddf0
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: eb02cbc3b335b0d5856f786b21d1d202cf444211
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69666156"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76738422"
 ---
-# <a name="how-to-set-the-text-displayed-by-a-windows-forms-control"></a>Vorgehensweise: Festlegen des von einem Windows Forms-Steuerelement angezeigten Texts
+# <a name="how-to-set-the-text-displayed-by-a-windows-forms-control"></a>Gewusst wie: Festlegen des von einem Windows Forms-Steuerelement angezeigten Texts
 
-Windows Forms Steuerelemente zeigen normalerweise Text an, der mit der primären Funktion des Steuer Elements verknüpft ist. Ein <xref:System.Windows.Forms.Button> Steuerelement zeigt beispielsweise in der Regel eine Beschriftung an, die angibt, welche Aktion ausgeführt wird, wenn auf die Schaltfläche geklickt wird. Bei allen Steuerelementen können Sie den Text mithilfe der <xref:System.Windows.Forms.Control.Text%2A>-Eigenschaft festlegen oder zurückgeben. Sie können die Schriftart ändern, indem Sie die <xref:System.Windows.Forms.Control.Font%2A>-Eigenschaft verwenden.
+Windows Forms Steuerelemente zeigen normalerweise Text an, der mit der primären Funktion des Steuer Elements verknüpft ist. Beispielsweise zeigt ein <xref:System.Windows.Forms.Button> Steuerelement in der Regel eine Beschriftung an, die angibt, welche Aktion ausgeführt wird, wenn auf die Schaltfläche geklickt wird. Bei allen Steuerelementen können Sie den Text mithilfe der <xref:System.Windows.Forms.Control.Text%2A>-Eigenschaft festlegen oder zurückgeben. Sie können die Schriftart ändern, indem Sie die <xref:System.Windows.Forms.Control.Font%2A>-Eigenschaft verwenden.
 
 Sie können den Text auch mit dem- [Designer](#designer)festlegen.
 
@@ -72,18 +72,18 @@ Sie können den Text auch mit dem- [Designer](#designer)festlegen.
     mpMenuItem->Text = "&& Now For Something Completely Different";
     ```
 
-## <a name="designer"></a>Designer
+## <a name="designer"></a>-Designer
 
 1. Legen Sie im **Eigenschaften** Fenster von Visual Studio die **Text** -Eigenschaft des-Steuer Elements auf eine entsprechende Zeichenfolge fest.
 
    Zum Erstellen einer unterstrichenen Tastenkombination enthält ein kaufmännisches und-(&) vor dem Buchstaben, der als Tastenkombination verwendet werden soll.
 
-2. Wählen Sie im Fenster **Eigenschaften** die Schaltfläche mit den Auslassungs Punkten (![Auslassungs Zeichen (...) im Eigenschaftenfenster von Visual Studio](./media/visual-studio-ellipsis-button.png)) neben der Eigenschaft **Schriftart** aus.
+2. Wählen Sie im Fenster **Eigenschaften** die Schaltfläche mit den Auslassungs Punkten (![Schaltfläche mit den Auslassungs Punkten (...) in der Eigenschaftenfenster von Visual Studio](./media/visual-studio-ellipsis-button.png)) neben der Eigenschaft **Schriftart** aus.
 
    Wählen Sie im Dialogfeld Standard Schriftart die Schriftart, den Schrift Schnitt, die Größe, die Effekte (z. b. durchgestrichen oder unterstreichen) und das gewünschte Skript aus.
 
 ## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Windows.Forms.Control.Text%2A?displayProperty=nameWithType>
-- [Vorgehensweise: Erstellen von Zugriffs Schlüsseln für Windows Forms Steuerelemente](how-to-create-access-keys-for-windows-forms-controls.md)
-- [Vorgehensweise: Antworten auf Windows Forms Schaltflächen Klicks](how-to-respond-to-windows-forms-button-clicks.md)
+- [Gewusst wie: Erstellen von Zugriffstasten für Windows Forms-Steuerelemente](how-to-create-access-keys-for-windows-forms-controls.md)
+- [Gewusst wie: Reagieren auf das Anklicken von Schaltflächen in Windows Forms](how-to-respond-to-windows-forms-button-clicks.md)

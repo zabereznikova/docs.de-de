@@ -1,5 +1,5 @@
 ---
-title: Übersicht über das MonthCalendar-Steuerelement (Windows Forms)
+title: Übersicht über das MonthCalendar-Steuerelement
 ms.date: 03/30/2017
 f1_keywords:
 - MonthCalendar
@@ -8,22 +8,22 @@ helpviewer_keywords:
 - calendar controls [Windows Forms], Windows Forms
 - MonthCalendar control [Windows Forms], setting the first day of the week
 ms.assetid: 788c5325-b721-44ec-95bf-9b680ba0f6a2
-ms.openlocfilehash: 8928a78735392920d893661c70554bd35eba2886
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a9b56164339d03b380a564b21855f6d94ec06af5
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61768484"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76734939"
 ---
 # <a name="monthcalendar-control-overview-windows-forms"></a>Übersicht über das MonthCalendar-Steuerelement (Windows Forms)
-Die Windows-Formulare <xref:System.Windows.Forms.MonthCalendar> Steuerelement stellt eine intuitive grafische Benutzeroberfläche für Benutzer anzeigen und Festlegen von Datumsinformationen. Das Steuerelement zeigt einen Kalender: ein Raster mit die nummerierten Tage des Monats, um unter den Tagen der Woche mit den ausgewählten Datumsbereich hervorgehoben in Spalten angeordnet. Sie können einen anderen Monat auswählen, indem Sie auf die Pfeilschaltflächen auf beiden Seiten der Monat Beschriftung. Anders als die ähnliche <xref:System.Windows.Forms.DateTimePicker> -Steuerelement, können Sie mehr als ein Datum mit diesem Steuerelement auswählen. Weitere Informationen zu den <xref:System.Windows.Forms.DateTimePicker> steuern, finden Sie unter [DateTimePicker-Steuerelement](datetimepicker-control-windows-forms.md).  
+Das Windows Forms <xref:System.Windows.Forms.MonthCalendar>-Steuerelement stellt eine intuitive grafische Oberfläche für Benutzer dar, um Datumsinformationen anzuzeigen und festzulegen. Das-Steuerelement zeigt einen Kalender an: ein Raster mit den nummerierten Tagen des Monats, angeordnet in Spalten unterhalb der Wochentage, wobei der ausgewählte Bereich von Datumsangaben hervorgehoben ist. Sie können einen anderen Monat auswählen, indem Sie auf beiden Seiten der Monats Beschriftung auf die Pfeil Schaltflächen klicken. Im Gegensatz zum ähnlichen <xref:System.Windows.Forms.DateTimePicker> Steuerelement können Sie mit diesem Steuerelement mehr als ein Datum auswählen. Weitere Informationen zum <xref:System.Windows.Forms.DateTimePicker> Steuerelement finden Sie unter [DateTimePicker-Steuer](datetimepicker-control-windows-forms.md)Element.  
   
-## <a name="configuring-the-monthcalendar-control"></a>Konfigurieren des MonthCalendar-Steuerelements  
- Die <xref:System.Windows.Forms.MonthCalendar> Darstellung des Steuerelements ist hochgradig konfigurierbar. In der Standardeinstellung des heutigen Datums wird angezeigt, wie markiert, und finden Sie auch am unteren Rand des Rasters. Sie können dieses Feature ändern, durch Festlegen der <xref:System.Windows.Forms.MonthCalendar.ShowToday%2A> und <xref:System.Windows.Forms.MonthCalendar.ShowTodayCircle%2A> Eigenschaften `false`. Sie können auch Wochennummern zum Kalender hinzufügen, durch Festlegen der <xref:System.Windows.Forms.MonthCalendar.ShowWeekNumbers%2A> Eigenschaft `true`. Durch Festlegen der <xref:System.Windows.Forms.MonthCalendar.CalendarDimensions%2A> -Eigenschaft, dass mehrere Monate horizontal und vertikal. Standardmäßig ist Sonntag als erster Tag der Woche angezeigt, aber jeden Tag kann festgelegt werden, mithilfe der <xref:System.Windows.Forms.MonthCalendar.FirstDayOfWeek%2A> Eigenschaft.  
+## <a name="configuring-the-monthcalendar-control"></a>Konfigurieren des MonthCalendar-Steuer Elements  
+ Die Darstellung des <xref:System.Windows.Forms.MonthCalendar> Steuer Elements ist hochgradig konfigurierbar. Standardmäßig wird das heutige Datum als Kreis angezeigt und auch am unteren Ende des Rasters angegeben. Sie können diese Funktion ändern, indem Sie die Eigenschaften <xref:System.Windows.Forms.MonthCalendar.ShowToday%2A> und <xref:System.Windows.Forms.MonthCalendar.ShowTodayCircle%2A> auf `false`festlegen. Sie können dem Kalender auch Wochen Nummern hinzufügen, indem Sie die <xref:System.Windows.Forms.MonthCalendar.ShowWeekNumbers%2A>-Eigenschaft auf `true`festlegen. Wenn Sie die <xref:System.Windows.Forms.MonthCalendar.CalendarDimensions%2A>-Eigenschaft festlegen, können mehrere Monate horizontal und vertikal angezeigt werden. Standardmäßig wird Sonntag als erster Tag der Woche angezeigt, aber jeder Tag kann mit der <xref:System.Windows.Forms.MonthCalendar.FirstDayOfWeek%2A>-Eigenschaft festgelegt werden.  
   
- Sie können bestimmte Daten angezeigt werden auch einmalig, monatlich oder jährlich fett festlegen, durch Hinzufügen von <xref:System.DateTime> Objekte die <xref:System.Windows.Forms.MonthCalendar.BoldedDates%2A>, <xref:System.Windows.Forms.MonthCalendar.AnnuallyBoldedDates%2A>, und <xref:System.Windows.Forms.MonthCalendar.MonthlyBoldedDates%2A> Eigenschaften. Weitere Informationen finden Sie unter [Vorgehensweise: Anzeigen einzelner Tage in mit dem Windows Fettschrift Forms-MonthCalendar-Steuerelement](display-specific-days-in-bold-with-wf-monthcalendar-control.md).  
+ Sie können auch festlegen, dass bestimmte Datumsangaben auf einmal, jährlich oder monatlich angezeigt werden, indem Sie <xref:System.DateTime> Objekte zu den Eigenschaften <xref:System.Windows.Forms.MonthCalendar.BoldedDates%2A>, <xref:System.Windows.Forms.MonthCalendar.AnnuallyBoldedDates%2A>und <xref:System.Windows.Forms.MonthCalendar.MonthlyBoldedDates%2A> hinzufügen. Weitere Informationen finden Sie unter Gewusst [wie: Anzeigen bestimmter Tage in Fett Schrift mit dem Windows Forms MonthCalendar-Steuer](display-specific-days-in-bold-with-wf-monthcalendar-control.md)Element.  
   
- Die wichtigste Eigenschaft von der <xref:System.Windows.Forms.MonthCalendar> Steuerelement <xref:System.Windows.Forms.MonthCalendar.SelectionRange%2A>, den Datumsbereich, der im Steuerelement ausgewählt. Die <xref:System.Windows.Forms.MonthCalendar.SelectionRange%2A> Wert darf nicht, überschreiten die maximale Anzahl von Tagen an, die ausgewählt werden können, legen Sie in der <xref:System.Windows.Forms.MonthCalendar.MaxSelectionCount%2A> Eigenschaft. Die frühesten und späteste Datumsangaben, die der Benutzer auswählen kann, hängen von der <xref:System.Windows.Forms.MonthCalendar.MaxDate%2A> und <xref:System.Windows.Forms.MonthCalendar.MinDate%2A> Eigenschaften.  
+ Die Schlüsseleigenschaft des <xref:System.Windows.Forms.MonthCalendar> Steuer Elements ist <xref:System.Windows.Forms.MonthCalendar.SelectionRange%2A>, der Bereich der im Steuerelement ausgewählten Datumsangaben. Der <xref:System.Windows.Forms.MonthCalendar.SelectionRange%2A> Wert darf die maximale Anzahl von Tagen, die ausgewählt werden können, nicht überschreiten, die in der <xref:System.Windows.Forms.MonthCalendar.MaxSelectionCount%2A>-Eigenschaft festgelegt ist. Die frühesten und letzten Datumsangaben, die der Benutzer auswählen kann, werden durch die Eigenschaften <xref:System.Windows.Forms.MonthCalendar.MaxDate%2A> und <xref:System.Windows.Forms.MonthCalendar.MinDate%2A> bestimmt.  
   
 ## <a name="see-also"></a>Siehe auch
 

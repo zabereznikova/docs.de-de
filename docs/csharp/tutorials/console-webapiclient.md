@@ -3,12 +3,12 @@ title: Erstellen eines REST-Clients mithilfe von .NET Core
 description: In diesem Tutorial lernen Sie verschiedene Features in .NET Core und der Sprache C# kennen.
 ms.date: 01/09/2020
 ms.assetid: 51033ce2-7a53-4cdd-966d-9da15c8204d2
-ms.openlocfilehash: 85a3c8e17e14db86786950380ba745ae286dccca
-ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
+ms.openlocfilehash: 09eda08f82490070c66d0b290359872c1043b0c2
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76115872"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76737573"
 ---
 # <a name="rest-client"></a>REST-Client
 
@@ -71,7 +71,7 @@ private static async Task ProcessRepositories()
 }
 ```
 
-Sie müssen am Anfang Ihrer `Main`-Methode eine `using`-Anweisung hinzufügen, damit der C#-Compiler den <xref:System.Threading.Tasks.Task> -Typ erkennt:
+Sie müssen am Anfang Ihrer `Main`-Methode eine `using`-Anweisung hinzufügen, damit der C#-Compiler den <xref:System.Threading.Tasks.Task>-Typ erkennt:
 
 ```csharp
 using System.Threading.Tasks;
@@ -81,10 +81,10 @@ Wenn Sie zu diesem Zeitpunkt Ihr Projekt erstellen, erhalten Sie eine Warnung f�
 
 Als Nächstes benennen Sie den in der `namespace`-Anweisung definierten Namespace vom Standardwert `ConsoleApp` in `WebAPIClient` um. Später definieren wir eine `repo`-Klasse in diesem Namespace.
 
-Aktualisieren Sie jetzt die `Main`-Methode, um diese Methode aufzurufen. Die `ProcessRepositories`-Methode gibt einen Task zurück, und Sie dürfen das Programm nicht beenden, bevor dieser Task abgeschlossen wurde. Daher müssen Sie die Signatur von `Main` ändern. Fügen Sie den `async`-Modifizierer hinzu, und ändern Sie den Rückgabetyp in `Task`. Fügen Sie dann im Textkörper der Methode einen Aufruf von `ProcessRepositories`hinzu. Fügen Sie diesem Methodenaufruf das `await`-Schlüsselwort „when“ hinzu:
+Aktualisieren Sie jetzt die `Main`-Methode, um diese Methode aufzurufen. Die `ProcessRepositories`-Methode gibt einen Task zurück. Sie dürfen das Programm nicht beenden, bevor dieser Task abgeschlossen wurde. Daher müssen Sie die Signatur von `Main` ändern. Fügen Sie den `async`-Modifizierer hinzu, und ändern Sie den Rückgabetyp in `Task`. Fügen Sie dann im Textkörper der Methode einen Aufruf von `ProcessRepositories`hinzu. Fügen Sie diesem Methodenaufruf das Schlüsselwort `await` hinzu:
 
 ```csharp
-static Task Main(string[] args)
+static async Task Main(string[] args)
 {
     await ProcessRepositories();
 }
@@ -92,7 +92,7 @@ static Task Main(string[] args)
 
 Sie verfügen jetzt über ein Programm, das keinerlei Vorgänge ausführt, aber asynchron arbeitet. Es gibt aber noch Raum zur Verbesserung.
 
-Zunächst benötigen Sie ein Objekt, das dazu fähig ist, Daten aus dem Web abzurufen. Hierfür können Sie <xref:System.Net.Http.HttpClient> verwenden. Dieses Objekt verarbeitet die Anforderung und die Antworten. Instanziieren Sie eine einzelne Instanz dieses Typs in der Klasse `Program` innerhalb der Datei „Program.cs“.
+Zunächst benötigen Sie ein Objekt, das dazu fähig ist, Daten aus dem Web abzurufen. Hierfür können Sie <xref:System.Net.Http.HttpClient> verwenden. Dieses Objekt verarbeitet die Anforderung und die Antworten. Instanziieren Sie eine einzelne Instanz dieses Typs in der Klasse `Program` innerhalb der Datei *Program.cs*.
 
 ```csharp
 namespace WebAPIClient
@@ -101,7 +101,7 @@ namespace WebAPIClient
     {
         private static readonly HttpClient client = new HttpClient();
 
-        static Task Main(string[] args)
+        static async Task Main(string[] args)
         {
             //...
         }
@@ -126,7 +126,7 @@ private static async Task ProcessRepositories()
 }
 ```
 
-Damit eine Kompilierung möglich ist, müssen Sie am Anfang der Datei außerdem zwei neue using-Anweisungen hinzufügen:
+Damit eine Kompilierung möglich ist, müssen Sie am Anfang der Datei außerdem zwei neue `using`-Anweisungen hinzufügen:
 
 ```csharp
 using System.Net.Http;
@@ -206,6 +206,12 @@ Bevor Sie weitere Features hinzufügen, wenden wir uns der `name`-Eigenschaft mi
 public string Name { get; set; }
 ```
 
+Um das `[JsonPropertyName]`-Attribut verwenden zu können, müssen Sie den <xref:System.Text.Json.Serialization>-Namespace zu den `using`-Anweisungen hinzufügen:
+
+```csharp
+using System.Text.Json.Serialization;
+```
+
 Diese Änderung bedeutet, dass Sie den Code ändern müssen, mit dem der Name jedes Repositorys in „program.cs“ geschrieben wird:
 
 ```csharp
@@ -233,7 +239,7 @@ Der Compiler generiert das `Task<T>`-Objekt für die Rückgabe, weil Sie diese M
 Ändern wir dann die `Main`-Methode, sodass sie diese Ergebnisse erfasst und den Namen jedes Repositorys an die Konsole schreibt. Ihre `Main`-Methode sieht nun folgendermaßen aus:
 
 ```csharp
-public static Task Main(string[] args)
+public static async Task Main(string[] args)
 {
     var repositories = await ProcessRepositories();
 
@@ -296,7 +302,7 @@ public DateTime LastPush =>
 
 Gehen wir die soeben definierten neuen Konstrukte einzeln durch. Die `LastPush`-Eigenschaft wird mit einem *Ausdruckskörpermember* für die `get`-Zugriffsmethode definiert. Es ist kein `set`-Accessor vorhanden. Durch Auslassen der `set`-Zugriffsmethode definieren Sie eine *schreibgeschützte* Eigenschaft in C#. (Ja, Sie können *lesegeschützte* Eigenschaften in C# erstellen, aber ihr Wert ist begrenzt.) Die <xref:System.DateTime.ParseExact(System.String,System.String,System.IFormatProvider)>-Methode analysiert eine Zeichenfolge und erstellt ein <xref:System.DateTime>-Objekt mit dem angegebenen Datumsformat. Außerdem werden mit einem `CultureInfo`-Objekt zusätzliche Metadaten zu `DateTime` hinzugefügt. Wenn die Analyse nicht erfolgreich ist, löst der Eigenschaftsaccessor eine Ausnahme aus.
 
-Zur Verwendung von <xref:System.Globalization.CultureInfo.InvariantCulture> müssen Sie den <xref:System.Globalization> -Namespace zu den `using`-Anweisungen in `repo.cs` hinzufügen:
+Um <xref:System.Globalization.CultureInfo.InvariantCulture> verwenden zu können, müssen Sie den <xref:System.Globalization>-Namespace zu den `using`-Anweisungen in `repo.cs` hinzufügen:
 
 ```csharp
 using System.Globalization;

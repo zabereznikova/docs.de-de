@@ -2,37 +2,37 @@
 title: Befehl „dotnet pack“
 description: Der dotnet pack-Befehl erstellt NuGet-Pakete für ein .NET Core-Projekt.
 ms.date: 08/08/2019
-ms.openlocfilehash: 99dd8e35601f82adf2a3101121028f191a4c3da4
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: 057d1029e5c933912c43c178b6db8a8498f2ed57
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117656"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76734118"
 ---
 # <a name="dotnet-pack"></a>dotnet pack
 
-**Dieses Thema gilt für: ✓**.NET Core 1.x SDK und spätere Versionen
+**Dieser Artikel gilt für:** ✔️ .NET Core 1.x SDK und neuere Versionen
 
 <!-- todo: uncomment when all CLI commands are reviewed
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 -->
 
-## <a name="name"></a>NAME
+## <a name="name"></a>name
 
 `dotnet pack`: Packt den Code in ein NuGet-Paket
 
-## <a name="synopsis"></a>Zusammenfassung
+## <a name="synopsis"></a>Übersicht
 
 ```dotnetcli
-dotnet pack [<PROJECT>|<SOLUTION>] [-c|--configuration] [--force] [--include-source] [--include-symbols] [--interactive] 
-    [--no-build] [--no-dependencies] [--no-restore] [--nologo] [-o|--output] [--runtime] [-s|--serviceable] 
+dotnet pack [<PROJECT>|<SOLUTION>] [-c|--configuration] [--force] [--include-source] [--include-symbols] [--interactive]
+    [--no-build] [--no-dependencies] [--no-restore] [--nologo] [-o|--output] [--runtime] [-s|--serviceable]
     [-v|--verbosity] [--version-suffix]
 dotnet pack [-h|--help]
 ```
 
-## <a name="description"></a>BESCHREIBUNG
+## <a name="description"></a>Beschreibung
 
-Der Befehl `dotnet pack` erstellt das Projekt und NuGet-Pakete. Das Ergebnis dieses Befehls ist ein NuGet-Paket (d. h., eine *NUPKG*-Datei). 
+Der Befehl `dotnet pack` erstellt das Projekt und NuGet-Pakete. Das Ergebnis dieses Befehls ist ein NuGet-Paket (d. h., eine *NUPKG*-Datei).
 
 Wenn Sie ein Paket generieren möchten, das die Debugsymbole enthält, stehen Ihnen zwei Optionen zur Verfügung:
 
@@ -65,7 +65,7 @@ Webprojekte können standardmäßig nicht verpackt werden. Um das Standardverhal
 
 - **`-c|--configuration {Debug|Release}`**
 
-  Legt die Buildkonfiguration fest. Standardwert: `Debug`.
+  Legt die Buildkonfiguration fest. Der Standardwert ist `Debug`.
 
 - **`--force`**
 

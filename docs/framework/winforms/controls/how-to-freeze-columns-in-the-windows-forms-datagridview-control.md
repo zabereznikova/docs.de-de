@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Fixieren von Spalten im DataGridView-Steuerelement in Windows Forms'
+title: Fixieren von Spalten im DataGridView-Steuerelement
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], freezing columns
 - DataGridView control [Windows Forms], columns always in view
 ms.assetid: 2ef8b1de-782e-4867-af8d-58171ab5c106
-ms.openlocfilehash: a83c5078d67be40fda2ae3382b8124594ee78103
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 6d1a98e5c4332078c6012cb7c9ed836108abd86c
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69966657"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76736742"
 ---
-# <a name="how-to-freeze-columns-in-the-windows-forms-datagridview-control"></a>Vorgehensweise: Fixieren von Spalten im DataGridView-Steuerelement in Windows Forms
+# <a name="how-to-freeze-columns-in-the-windows-forms-datagridview-control"></a>Gewusst wie: Fixieren von Spalten im DataGridView-Steuerelement in Windows Forms
 Wenn Benutzer Daten anzeigen, die in einem <xref:System.Windows.Forms.DataGridView>-Steuerelement in Windows Forms angezeigt werden, müssen sie mitunter häufig auf eine bestimmte Spalte oder Gruppe von Spalten zugreifen. Wenn Sie beispielsweise eine Tabelle mit Kundendaten anzeigen, die viele Spalten enthält, ist es hilfreich, wenn die Namen der Kunden immer angezeigt werden, während andere Spalten außerhalb des sichtbaren Bereichs liegen.  
   
  Zu diesem Zweck können Sie Spalten im Steuerelement fixieren. Wenn Sie eine Spalte fixieren, werden automatisch auch alle Spalten links daneben (bzw. rechts daneben in von rechts nach links geschriebenen Sprachen) fixiert. Fixierte Spalten behalten ihre Position bei, während alle anderen Spalten bei einem Bildlauf mitwandern.  
@@ -26,7 +26,7 @@ Wenn Benutzer Daten anzeigen, die in einem <xref:System.Windows.Forms.DataGridVi
   
  Die <xref:System.Windows.Forms.DataGridViewColumn.Frozen%2A>-Eigenschaft einer Spalte bestimmt, ob die Spalte immer innerhalb des Rasters sichtbar ist.  
   
- Visual Studio bietet Unterstützung für diese Aufgabe.  Weitere Informationen hierzu finden Sie auch unter [Gewusst wie: Fixieren Sie die Spalten im Windows Forms DataGridView-Steuerelement](freeze-columns-in-the-datagrid-using-the-designer.md)mithilfe des Designers.  
+ Visual Studio bietet Unterstützung für diese Aufgabe.  Siehe auch Gewusst [wie: Fixieren von Spalten im Windows Forms DataGridView-Steuerelement mithilfe des Designers](freeze-columns-in-the-datagrid-using-the-designer.md).  
   
 ### <a name="to-freeze-a-column-programmatically"></a>So fixieren Sie eine Spalte programmgesteuert  
   
@@ -47,4 +47,4 @@ Wenn Benutzer Daten anzeigen, die in einem <xref:System.Windows.Forms.DataGridVi
 - <xref:System.Windows.Forms.DataGridViewColumn.Frozen%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridView>
 - [Grundlegende Spalten-, Zeilen- und Zellfunktionen im DataGridView-Steuerelement in Windows Forms](basic-column-row-and-cell-features-wf-datagridview-control.md)
-- [Vorgehensweise: Aktivieren der Neuanordnung von Spalten im Windows Forms DataGridView-Steuerelement](how-to-enable-column-reordering-in-the-windows-forms-datagridview-control.md)
+- [Gewusst wie: Aktivieren der Neuanordnung von Spalten im DataGridView-Steuerelement in Windows Forms](how-to-enable-column-reordering-in-the-windows-forms-datagridview-control.md)

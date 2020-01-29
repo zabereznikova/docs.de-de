@@ -2,34 +2,34 @@
 title: Befehl „dotnet clean“
 description: Mit dem Befehl „dotnet clean“ wird das aktuelle Verzeichnis bereinigt.
 ms.date: 06/26/2019
-ms.openlocfilehash: 982232833b460b4ea4181acebee74dcef54d3131
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: 736c0bba5d156e919534f1ad811641e815b3ffac
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117743"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76734252"
 ---
 # <a name="dotnet-clean"></a>dotnet clean
 
-**Dieses Thema gilt für: ✓**.NET Core 1.x SDK und spätere Versionen
+**Dieser Artikel gilt für:** ✔️ .NET Core 1.x SDK und neuere Versionen
 
 <!-- todo: uncomment when all CLI commands are reviewed
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 -->
 
-## <a name="name"></a>NAME
+## <a name="name"></a>name
 
 `dotnet clean`: Löscht die Ausgabe eines Projekts.
 
-## <a name="synopsis"></a>Zusammenfassung
+## <a name="synopsis"></a>Übersicht
 
 ```dotnetcli
-dotnet clean [<PROJECT>|<SOLUTION>] [-c|--configuration] [-f|--framework] [--interactive] 
+dotnet clean [<PROJECT>|<SOLUTION>] [-c|--configuration] [-f|--framework] [--interactive]
     [--nologo] [-o|--output] [-r|--runtime] [-v|--verbosity]
 dotnet clean [-h|--help]
 ```
 
-## <a name="description"></a>BESCHREIBUNG
+## <a name="description"></a>Beschreibung
 
 Der Befehl `dotnet clean` löscht die Ausgabe des vorherigen Builds. Er ist als [MSBuild-Ziel](/visualstudio/msbuild/msbuild-targets) implementiert, sodass das Projekt ausgewertet wird, wenn der Befehl ausgeführt wird. Es werden nur die Ausgaben gelöscht, die während des Builds erstellt wurden. Sowohl der Ordner für Zwischenausgabe (*obj*) als auch der Ordner für die endgültige Ausgabe (*bin*) werden bereinigt.
 
@@ -43,7 +43,7 @@ MSBuild-Projekt oder Projektmappe, das/die bereinigt werden soll. Wenn Sie keine
 
 * **`-c|--configuration {Debug|Release}`**
 
-  Legt die Buildkonfiguration fest. Standardwert: `Debug`. Diese Option ist bei der Bereinigung nur erforderlich, wenn Sie sie bei der Erstellung angegeben haben.
+  Legt die Buildkonfiguration fest. Der Standardwert ist `Debug`. Diese Option ist bei der Bereinigung nur erforderlich, wenn Sie sie bei der Erstellung angegeben haben.
 
 * **`-f|--framework <FRAMEWORK>`**
 
@@ -71,7 +71,7 @@ MSBuild-Projekt oder Projektmappe, das/die bereinigt werden soll. Wenn Sie keine
 
 * **`-v|--verbosity <LEVEL>`**
 
-  Legt den MSBuild-Ausführlichkeitsgrad fest. Zulässige Werte sind `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` und `diag[nostic]`. Der Standardwert lautet `normal`.
+  Legt den MSBuild-Ausführlichkeitsgrad fest. Zulässige Werte sind `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` und `diag[nostic]`. Der Standardwert ist `normal`.
 
 ## <a name="examples"></a>Beispiele
 

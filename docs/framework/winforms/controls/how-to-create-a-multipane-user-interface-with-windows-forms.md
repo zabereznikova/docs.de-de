@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Erstellen einer Multipane-Benutzeroberfläche mit Windows Forms'
+title: Erstellen einer Multipane-Benutzeroberfläche
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,25 +12,25 @@ helpviewer_keywords:
 - TreeView control [Windows Forms], examples
 - Splitter control [Windows Forms], examples
 ms.assetid: e79f6bcc-3740-4d1e-b46a-c5594d9b7327
-ms.openlocfilehash: 8650ba3b8011e50779080e31d94727609f2d08f1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4b168a6d566e20814d4403f90e157d80efe3bf12
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61747094"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76731335"
 ---
-# <a name="how-to-create-a-multipane-user-interface-with-windows-forms"></a>Vorgehensweise: Erstellen einer Multipane-Benutzeroberfläche mit Windows Forms
-Im folgenden Verfahren erstellen Sie eine multipane-Benutzeroberfläche, die der ähnelt der Verwendung in Microsoft Outlook ist eine **Ordner** Liste eine **Nachrichten** Bereich und eine **Vorschau** Bereich. In dieser Anordnung erfolgt hauptsächlich durch Andocken von Steuerelementen mit dem Formular.  
+# <a name="how-to-create-a-multipane-user-interface-with-windows-forms"></a>Gewusst wie: Erstellen einer Multipane-Benutzeroberfläche mit Windows Forms
+Im folgenden Verfahren erstellen Sie eine Multipane-Benutzeroberfläche, die der in Microsoft Outlook verwendeten Benutzeroberfläche mit einer **Ordner** Liste **, einem** Meldungs Bereich und einem **Vorschau** Bereich ähnelt. Diese Anordnung wird hauptsächlich durch Andocken von Steuerelementen im Formular erreicht.  
   
- Wenn Sie ein Steuerelement andocken, legen Sie fest, welchen Rand des übergeordneten Containers ein Steuerelement angedockt ist. Folglich setzen Sie die <xref:System.Windows.Forms.SplitContainer.Dock%2A> Eigenschaft <xref:System.Windows.Forms.DockStyle.Right>, dem rechten Rand des Steuerelements an den rechten Rand seines übergeordneten Steuerelements angedockt wird. Darüber hinaus wird der verankerte Rand des Steuerelements Größe des Containersteuerelements entsprechen. Weitere Informationen zur Funktionsweise des <xref:System.Windows.Forms.SplitContainer.Dock%2A> -Eigenschaft funktioniert, finden Sie unter [Vorgehensweise: Andocken von Steuerelementen in Windows Forms](how-to-dock-controls-on-windows-forms.md).  
+ Wenn Sie ein Steuerelement andocken, legen Sie fest, an welchen Rand des übergeordneten Containers ein Steuerelement angedockt ist. Wenn Sie die <xref:System.Windows.Forms.SplitContainer.Dock%2A>-Eigenschaft auf <xref:System.Windows.Forms.DockStyle.Right>festlegen, wird der Rechte Rand des Steuer Elements an den rechten Rand des übergeordneten Steuer Elements angedockt. Außerdem wird die Größe des angedockten Randes des Steuer Elements geändert, sodass es mit dem des zugehörigen Container Steuer Elements identisch ist. Weitere Informationen zur Funktionsweise der <xref:System.Windows.Forms.SplitContainer.Dock%2A>-Eigenschaft finden Sie unter Gewusst [wie: Andocken von Steuerelementen auf Windows Forms](how-to-dock-controls-on-windows-forms.md).  
   
- Dieses Verfahren konzentriert sich auf die Anordnung der <xref:System.Windows.Forms.SplitContainer> und andere Steuerelemente auf dem Formular und nicht zum Hinzufügen von Funktionen, die Anwendung, die Microsoft Outlook nachahmen soll.  
+ Dieses Verfahren konzentriert sich auf das Anordnen der <xref:System.Windows.Forms.SplitContainer> und der anderen Steuerelemente im Formular, nicht auf das Hinzufügen von Funktionen, damit die Anwendung Microsoft Outlook imitiert.  
   
- Um diese Benutzeroberfläche zu erstellen, platzieren Sie alle Steuerelemente innerhalb einer <xref:System.Windows.Forms.SplitContainer> -Steuerelement, das enthält eine <xref:System.Windows.Forms.TreeView> Steuerelement im linken Bereich. Der rechte Bereich des der <xref:System.Windows.Forms.SplitContainer> Steuerelement enthält eine zweite <xref:System.Windows.Forms.SplitContainer> steuern Sie mit einer <xref:System.Windows.Forms.ListView> -Steuerelement über eine <xref:System.Windows.Forms.RichTextBox> Steuerelement. Diese <xref:System.Windows.Forms.SplitContainer> Steuerelemente ermöglichen unabhängigen Ändern der Größe der anderen Steuerelemente im Formular. Sie können die Verfahren in diesem Verfahren zum Erstellen benutzerdefinierter Benutzeroberflächen selbst anpassen.  
+ Um diese Benutzeroberfläche zu erstellen, platzieren Sie alle Steuerelemente in einem <xref:System.Windows.Forms.SplitContainer>-Steuerelement, das ein <xref:System.Windows.Forms.TreeView>-Steuerelement im linken Bereich enthält. Der Rechte Bereich des <xref:System.Windows.Forms.SplitContainer> Steuer Elements enthält ein zweites <xref:System.Windows.Forms.SplitContainer> Steuerelement mit einem <xref:System.Windows.Forms.ListView>-Steuerelement oberhalb eines <xref:System.Windows.Forms.RichTextBox> Steuer Elements. Diese <xref:System.Windows.Forms.SplitContainer> Steuerelemente ermöglichen eine unabhängige Größe der anderen Steuerelemente im Formular. Sie können die Techniken in diesem Verfahren anpassen, um eigene benutzerdefinierte Benutzeroberflächen zu erstellen.  
   
-### <a name="to-create-an-outlook-style-user-interface-programmatically"></a>So erstellen Sie programmgesteuert eine Outlook-Stil-Benutzeroberfläche  
+### <a name="to-create-an-outlook-style-user-interface-programmatically"></a>So erstellen Sie eine Benutzeroberfläche im Outlook-Stil Programm gesteuert  
   
-1. Deklarieren Sie innerhalb eines Formulars jedes Steuerelement, das die Benutzeroberfläche besteht. In diesem Beispiel verwenden Sie die <xref:System.Windows.Forms.TreeView>, <xref:System.Windows.Forms.ListView>, <xref:System.Windows.Forms.SplitContainer>, und <xref:System.Windows.Forms.RichTextBox> Steuerelemente, um die Microsoft Outlook-Benutzeroberfläche zu imitieren.  
+1. Deklarieren Sie jedes Steuerelement, das Ihre Benutzeroberfläche umfasst, in einem Formular. Verwenden Sie für dieses Beispiel die Steuerelemente <xref:System.Windows.Forms.TreeView>, <xref:System.Windows.Forms.ListView>, <xref:System.Windows.Forms.SplitContainer>und <xref:System.Windows.Forms.RichTextBox>, um die Microsoft Outlook-Benutzeroberfläche zu imitieren.  
   
     ```vb  
     Private WithEvents treeView1 As System.Windows.Forms.TreeView  
@@ -50,7 +50,7 @@ Im folgenden Verfahren erstellen Sie eine multipane-Benutzeroberfläche, die der
     private System.Windows.Forms. SplitContainer splitContainer1;  
     ```  
   
-2. Erstellen Sie eine Prozedur, die Benutzeroberfläche definiert. Der folgende Code legt die Eigenschaften fest, sodass das Formular die Benutzeroberfläche in Microsoft Outlook ähnelt. Es ist jedoch mithilfe von anderen Steuerelementen, oder sie anders andocken, andere Benutzeroberflächen zu erstellen, die gleichermaßen flexibles sind genauso einfach.  
+2. Erstellen Sie eine Prozedur, die die Benutzeroberfläche definiert. Im folgenden Code werden die Eigenschaften so festgelegt, dass das Formular der Benutzeroberfläche in Microsoft Outlook ähnelt. Wenn Sie jedoch andere Steuerelemente verwenden oder diese anders andocken, ist es genauso einfach, andere Benutzeroberflächen zu erstellen, die gleichermaßen flexibel sind.  
   
     ```vb  
     Public Sub CreateOutlookUI()  
@@ -164,7 +164,7 @@ Im folgenden Verfahren erstellen Sie eine multipane-Benutzeroberfläche, die der
     }  
     ```  
   
-3. Fügen Sie in Visual Basic einen Aufruf an die Prozedur, die Sie gerade erstellt, in haben der `New()` Verfahren. In visuellen C#, fügen Sie diese Zeile des Codes, an den Konstruktor für die Klasse.  
+3. Fügen Sie in Visual Basic einen aufzurufenden Vorgang hinzu, den Sie im `New()` Verfahren erstellt haben. Fügen Sie C#diese Codezeile in Visual dem Konstruktor für die Formular Klasse hinzu.  
   
     ```vb  
     ' Add this to the New procedure.  
@@ -180,4 +180,4 @@ Im folgenden Verfahren erstellen Sie eine multipane-Benutzeroberfläche, die der
 
 - <xref:System.Windows.Forms.SplitContainer>
 - [SplitContainer-Steuerelement](splitcontainer-control-windows-forms.md)
-- [Vorgehensweise: Erstellen einer Multipane-Benutzeroberfläche mit Windows Forms mithilfe des Designers](create-a-multipane-user-interface-with-wf-using-the-designer.md)
+- [Gewusst wie: Erstellen einer Multipane-Benutzeroberfläche mit Windows Forms mithilfe des Designers](create-a-multipane-user-interface-with-wf-using-the-designer.md)

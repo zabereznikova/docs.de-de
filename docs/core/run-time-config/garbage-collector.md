@@ -3,12 +3,12 @@ title: Garbage-Collector-Konfigurationseinstellungen
 description: Erfahren Sie mehr über Laufzeiteinstellungen, um zu konfigurieren, wie der Garbage Collector Arbeitsspeicher für .NET Core-Apps verwaltet.
 ms.date: 01/09/2020
 ms.topic: reference
-ms.openlocfilehash: 24e5c47de781e7eed5f76d2c551cac2dce1e8f05
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.openlocfilehash: 044083d69601f5092724a46d358b2ee5673d428d
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75900094"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76733516"
 ---
 # <a name="run-time-configuration-options-for-garbage-collection"></a>Laufzeitkonfigurationsoptionen für die Garbage Collection
 
@@ -38,10 +38,13 @@ Verwenden Sie die folgenden Einstellungen, um Varianten der Garbage Collection a
 | | Einstellungsname | Werte | Eingeführt in Version |
 | - | - | - | - |
 | **runtimeconfig.json** | `System.GC.Server` | `false` – Arbeitsstation<br/>`true` – Server | .NET Core 1.0 |
+| **MSBuild-Eigenschaft** | `ServerGarbageCollection` | `false` – Arbeitsstation<br/>`true` – Server | .NET Core 1.0 |
 | **Umgebungsvariable** | `COMPlus_gcServer` | `0` – Arbeitsstation<br/>`1` – Server | .NET Core 1.0 |
 | **app.config für .NET Framework** | [GCServer](../../framework/configure-apps/file-schema/runtime/gcserver-element.md) | `false` – Arbeitsstation<br/>`true` – Server |  |
 
-Beispiel:
+### <a name="examples"></a>Beispiele
+
+*runtimeconfig.json*-Datei:
 
 ```json
 {
@@ -53,6 +56,18 @@ Beispiel:
 }
 ```
 
+Projektdatei:
+
+```xml
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <ServerGarbageCollection>true</ServerGarbageCollection>
+  </PropertyGroup>
+
+</Project>
+```
+
 ### <a name="systemgcconcurrentcomplus_gcconcurrent"></a>System.GC.Concurrent/COMPlus_gcConcurrent
 
 - Konfiguriert, ob die (gleichzeitige) Hintergrund-GC aktiviert ist
@@ -62,10 +77,13 @@ Beispiel:
 | | Einstellungsname | Werte | Eingeführt in Version |
 | - | - | - | - |
 | **runtimeconfig.json** | `System.GC.Concurrent` | `true` – Hintergrund-GC<br/>`false` – nicht gleichzeitige GC | .NET Core 1.0 |
+| **MSBuild-Eigenschaft** | `ConcurrentGarbageCollection` | `true` – Hintergrund-GC<br/>`false` – nicht gleichzeitige GC | .NET Core 1.0 |
 | **Umgebungsvariable** | `COMPlus_gcConcurrent` | `true` – Hintergrund-GC<br/>`false` – nicht gleichzeitige GC | .NET Core 1.0 |
 | **app.config für .NET Framework** | [gcConcurrent](../../framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) | `true` – Hintergrund-GC<br/>`false` – nicht gleichzeitige GC |  |
 
-Beispiel:
+### <a name="examples"></a>Beispiele
+
+*runtimeconfig.json*-Datei:
 
 ```json
 {
@@ -75,6 +93,18 @@ Beispiel:
       }
    }
 }
+```
+
+Projektdatei:
+
+```xml
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <ConcurrentGarbageCollection>false</ConcurrentGarbageCollection>
+  </PropertyGroup>
+
+</Project>
 ```
 
 ## <a name="manage-resource-usage"></a>Verwalten des Ressourceneinsatzes
@@ -261,10 +291,13 @@ Beispiel:
 
 | | Einstellungsname | Werte | Eingeführt in Version |
 | - | - | - | - |
-| **runtimeconfig.json** | `System.GC.RetainVM` | `false` – Freigabe an Betriebssystem<br/>`true` – in Standbymodus versetzen| .NET Core 1.0 |
+| **runtimeconfig.json** | `System.GC.RetainVM` | `false` – Freigabe an Betriebssystem<br/>`true` – in Standbymodus versetzen | .NET Core 1.0 |
+| **MSBuild-Eigenschaft** | `RetainVMGarbageCollection` | `false` – Freigabe an Betriebssystem<br/>`true` – in Standbymodus versetzen | .NET Core 1.0 |
 | **Umgebungsvariable** | `COMPlus_GCRetainVM` | `0` – Freigabe an Betriebssystem<br/>`1` – in Standbymodus versetzen | .NET Core 1.0 |
 
-Beispiel:
+### <a name="examples"></a>Beispiele
+
+*runtimeconfig.json*-Datei:
 
 ```json
 {
@@ -274,6 +307,18 @@ Beispiel:
       }
    }
 }
+```
+
+Projektdatei:
+
+```xml
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <RetainVMGarbageCollection>true</RetainVMGarbageCollection>
+  </PropertyGroup>
+
+</Project>
 ```
 
 ## <a name="large-pages"></a>Umfangreiche Seiten

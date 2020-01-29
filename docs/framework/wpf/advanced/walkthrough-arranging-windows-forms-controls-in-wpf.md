@@ -1,5 +1,6 @@
 ---
-title: 'Exemplarische Vorgehensweise: Anordnen von Windows Forms-Steuerelementen in WPF'
+title: Anordnen von Windows Forms Steuerelementen in WPF
+titleSuffix: ''
 ms.date: 04/03/2018
 dev_langs:
 - csharp
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - hybrid applications [WPF interoperability]
 - arranging controls [WPF]
 ms.assetid: a1db8049-15c7-45d6-ae3d-36a6735cb848
-ms.openlocfilehash: 484895db539b288bf388ff6c2ce3c29db55080b1
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
-ms.translationtype: MT
+ms.openlocfilehash: 5e7544dfdbee234bb968c9a7f39814e8749ece15
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73197841"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76735289"
 ---
 # <a name="walkthrough-arranging-windows-forms-controls-in-wpf"></a>Exemplarische Vorgehensweise: Anordnen von Windows Forms-Steuerelementen in WPF
 
@@ -21,7 +22,7 @@ In dieser exemplarischen Vorgehensweise erfahren Sie, wie Sie mit [!INCLUDE[TLA2
 
 In dieser exemplarischen Vorgehensweise werden u. a. folgende Aufgaben veranschaulicht:
 
-- Erstellen des Projekts.
+- Erstellen des Projekts
 - Verwenden der Standardlayouteinstellungen.
 - Anpassen der Größe an Inhalt.
 - Verwenden der absoluten Positionierung.
@@ -31,7 +32,7 @@ In dieser exemplarischen Vorgehensweise werden u. a. folgende Aufgaben veranscha
 - Andocken.
 - Einstellen der Sichtbarkeit.
 - Hosten eines Steuerelements, das nicht gestreckt wird.
-- Skalieren.
+- Scaling.
 - Drehen.
 - Einstellen von Abständen und Rändern.
 - Verwenden von dynamischen Layoutcontainern.
@@ -40,7 +41,7 @@ Eine umfassende Code Auflistung der Aufgaben in dieser exemplarischen Vorgehensw
 
 Wenn Sie fertig sind, verfügen Sie über die [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] Layoutfeatures in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-basierten Anwendungen.
 
-## <a name="prerequisites"></a>Erforderliche Voraussetzungen
+## <a name="prerequisites"></a>Erforderliche Komponenten
 
 Für diese exemplarische Vorgehensweise benötigen Sie Visual Studio.
 
@@ -149,7 +150,7 @@ Sichtbare <xref:System.Windows.Forms.Integration.WindowsFormsHost> Elemente werd
 
 2. Drücken Sie <kbd>F5</kbd>, um die Anwendung zu erstellen und auszuführen. Das <xref:System.Windows.Forms.Integration.WindowsFormsHost>-Element wird über das Label-Element gezeichnet.
 
-## <a name="docking"></a>Andocken
+## <a name="docking"></a>Docking
 
 <xref:System.Windows.Forms.Integration.WindowsFormsHost>-Element unterstützt [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] andocken. Legen Sie die <xref:System.Windows.Controls.DockPanel.Dock%2A> angefügte-Eigenschaft fest, um das gehostete-Steuerelement in einem <xref:System.Windows.Controls.DockPanel>-Element
 

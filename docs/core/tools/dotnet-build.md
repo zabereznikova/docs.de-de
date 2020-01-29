@@ -2,16 +2,16 @@
 title: Befehl „dotnet build“
 description: Der dotnet build-Befehl erstellt ein Projekt und alle seine Abhängigkeiten.
 ms.date: 10/14/2019
-ms.openlocfilehash: b85ef06aa445e4708487deed9ec6bfeffeab3657
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: ec37d82c9e22a59acf7617f80a7491c0bcab89c9
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73454215"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76734313"
 ---
 # <a name="dotnet-build"></a>dotnet build
 
-**Dieser Artikel gilt für: ✓**.NET Core 1.x SDK und spätere Versionen
+**Dieser Artikel gilt für:** ✔️ .NET Core 1.x SDK und neuere Versionen
 
 <!-- todo: uncomment when all CLI commands are reviewed
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
@@ -25,13 +25,13 @@ ms.locfileid: "73454215"
 
 ```dotnetcli
 dotnet build [<PROJECT>|<SOLUTION>] [-c|--configuration] [-f|--framework] [--force]
-    [--interactive] [--no-dependencies] [--no-incremental] [--no-restore] [--nologo] 
+    [--interactive] [--no-dependencies] [--no-incremental] [--no-restore] [--nologo]
     [-o|--output] [-r|--runtime] [-v|--verbosity] [--version-suffix]
 
 dotnet build [-h|--help]
 ```
 
-## <a name="description"></a>BESCHREIBUNG
+## <a name="description"></a>Beschreibung
 
 Der `dotnet build`-Befehl erstellt das Projekt und die zugehörigen Abhängigkeiten in einen Satz von Binärdateien. Die Binärdateien enthalten den Projektcode in IL-Dateien (Intermediate Language) mit der Erweiterung *DLL*.  Abhängig vom Projekttyp und den Einstellungen können auch andere Dateien enthalten sein, beispielsweise:
 
@@ -121,7 +121,7 @@ Die zu erstellende Projekt- oder Projektmappendatei. Wenn Sie keine Projekt- ode
 
 - **`-v|--verbosity <LEVEL>`**
 
-  Legt den MSBuild-Ausführlichkeitsgrad fest. Zulässige Werte sind `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` und `diag[nostic]`. Die Standardeinstellung ist `minimal`.
+  Legt den MSBuild-Ausführlichkeitsgrad fest. Zulässige Werte sind `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` und `diag[nostic]`. Der Standardwert ist `minimal`.
 
 - **`--version-suffix <VERSION_SUFFIX>`**
 
@@ -153,7 +153,7 @@ Die zu erstellende Projekt- oder Projektmappendatei. Wenn Sie keine Projekt- ode
   dotnet build --source c:\packages\mypackages
   ```
 
-- Erstellen Sie das Projekt, und legen Sie Version 1.2.3.4 als Buildparameter mithilfe der `-p` [MSBuild-Option](#msbuild) fest:
+- Erstellen eines Projekts und festlegen der Version 1.2.3.4 als Buildparameter mithilfe der `-p`[MSBuild-Option](#msbuild):
 
   ```dotnetcli
   dotnet build -p:Version=1.2.3.4

@@ -1,13 +1,13 @@
 ---
 title: Codekonventionen für F#
 description: Hier finden Sie allgemeine Richtlinien und Idiome beim Schreiben F# von Code.
-ms.date: 11/04/2019
-ms.openlocfilehash: 60eff6392d71caa54eeb438f2f6ba9db910f1bc1
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.date: 01/15/2020
+ms.openlocfilehash: ca86bcf714d2fb4ee5f173ee54ba12c317f9abe7
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73978228"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76737824"
 ---
 # <a name="f-coding-conventions"></a>Codekonventionen für F#
 
@@ -36,7 +36,7 @@ type MyClass() =
     ...
 ```
 
-Die Verwendung eines Moduls der obersten Ebene ist möglicherweise nicht anders, wenn F#Sie nur von C# aufgerufen wird, aber für Consumer werden Aufrufer möglicherweise überrascht, wenn Sie`MyClass`mit dem`MyCode`Modul qualifizieren müssen.
+Die Verwendung eines Moduls der obersten Ebene ist möglicherweise nicht anders, wenn F#Sie nur von C# aufgerufen wird, aber für Consumer werden Aufrufer möglicherweise überrascht, wenn Sie `MyClass` mit dem `MyCode` Modul qualifizieren müssen.
 
 ```fsharp
 // Bad!
@@ -48,7 +48,7 @@ type MyClass() =
 
 ### <a name="carefully-apply-autoopen"></a>`[<AutoOpen>]` sorgfältig anwenden
 
-Das `[<AutoOpen>]` Konstrukt kann den Umfang der für Aufrufer verfügbaren Elemente verschmutzen, und die Antwort auf den Ort, an dem sich etwas ergibt, ist "Magic". Dies ist in der Regel kein gutes Problem. Eine Ausnahme von dieser Regel ist die F# Kernbibliothek selbst (obwohl diese Tatsache auch etwas strittig ist).
+Das `[<AutoOpen>]` Konstrukt kann den Umfang der für Aufrufer verfügbaren Elemente verschmutzen, und die Antwort auf den Ort, an dem sich etwas ergibt, ist "Magic". Dies ist keine gute Sache. Eine Ausnahme von dieser Regel ist die F# Kernbibliothek selbst (obwohl diese Tatsache auch etwas strittig ist).
 
 Es ist jedoch eine bequeme Methode, wenn Sie über Hilfsfunktionen für eine öffentliche API verfügen, die Sie separat von der öffentlichen API organisieren möchten.
 
@@ -89,9 +89,9 @@ let parsed = StringTokenization.parse s // Must qualify to use 'parse'
 
 ### <a name="sort-open-statements-topologically"></a>Sortieren von `open`-Anweisungen topologisch
 
-In F# wird die Reihenfolge der Deklarationen von Bedeutung ist, einschließlich mit `open` Anweisungen. Dies unterscheidet C#sich von, wenn die Auswirkung von`using`und`using static`unabhängig von der Reihenfolge dieser Anweisungen in einer Datei ist.
+In F# wird die Reihenfolge der Deklarationen von Bedeutung ist, einschließlich mit `open` Anweisungen. Dies unterscheidet C#sich von, wenn die Auswirkung von `using` und `using static` unabhängig von der Reihenfolge dieser Anweisungen in einer Datei ist.
 
-In F# können Elemente in einem Bereich geöffnet Shadowing für andere bereits vorhanden. Dies bedeutet, dass das Neuordnen `open`-Anweisungen die Bedeutung von Code ändern könnte. Folglich wird eine beliebige Sortierung aller `open` Anweisungen (z. b. alphanumerisch) in der Regel nicht empfohlen, sodass Sie kein anderes Verhalten generieren, das Sie möglicherweise erwarten.
+In F# können Elemente in einem Bereich geöffnet Shadowing für andere bereits vorhanden. Dies bedeutet, dass das Neuordnen `open`-Anweisungen die Bedeutung von Code ändern könnte. Daher wird jede beliebige Sortierung aller `open` Anweisungen (z. b. alphanumerisch) nicht empfohlen, sodass Sie kein anderes Verhalten generieren, das Sie möglicherweise erwarten.
 
 Stattdessen wird empfohlen, dass Sie Sie [topologisch](https://en.wikipedia.org/wiki/Topological_sorting)sortieren. Ordnen Sie also Ihre `open` Anweisungen in der Reihenfolge an, in der die _Ebenen_ Ihres Systems definiert sind. Eine alphanumerische Sortierung innerhalb verschiedener topologischer Ebenen kann auch berücksichtigt werden.
 
@@ -189,7 +189,7 @@ Die Fehler Verwaltung in großen Systemen ist ein komplexes und differenziertes 
 
 ### <a name="represent-error-cases-and-illegal-state-in-types-intrinsic-to-your-domain"></a>Darstellen von Fehler Fällen und ungültigen Zuständen in Typen, die in Ihrer Domäne intrinsisch sind
 
-Mit [Unterscheidungs-Unions](../language-reference/discriminated-unions.md), F# gibt Ihnen die Möglichkeit, fehlerhafte Programmstatus in Ihrem Typsystem darstellen. Zum Beispiel:
+Mit [Unterscheidungs-Unions](../language-reference/discriminated-unions.md), F# gibt Ihnen die Möglichkeit, fehlerhafte Programmstatus in Ihrem Typsystem darstellen. Beispiel:
 
 ```fsharp
 type MoneyWithdrawalResult =
@@ -239,7 +239,7 @@ Die Funktionen `failwith` und `failwithf` sollten im allgemeinen vermieden werde
 
 ### <a name="using-exception-handling-syntax"></a>Verwenden der Syntax für die Ausnahmebehandlung
 
-F#unterstützt Ausnahme Muster über die`try...with`-Syntax:
+F#unterstützt Ausnahme Muster über die `try...with`-Syntax:
 
 ```fsharp
 try
@@ -320,7 +320,7 @@ Typen wie `Result<'Success, 'Error>` eignen sich für grundlegende Vorgänge, in
 
 ## <a name="partial-application-and-point-free-programming"></a>Partielle Anwendungs-und punktfreie Programmierung
 
-F#unterstützt die partielle Anwendung und somit verschiedene Methoden zum Programmieren in einem Point-Free-Stil. Dies kann für die Wiederverwendung von Code in einem Modul oder die Implementierung von etwas von Vorteil sein, aber es ist in der Regel nicht öffentlich verfügbar. Im Allgemeinen ist die Point-Free-Programmierung keine Grundlage für sich selbst und kann eine bedeutende kognitive Barriere für Personen hinzufügen, die nicht in den Stil eintauchen.
+F#unterstützt die partielle Anwendung und somit verschiedene Methoden zum Programmieren in einem Point-Free-Stil. Dies kann für die Wiederverwendung von Code innerhalb eines Moduls oder die Implementierung von etwas von Vorteil sein, aber es ist nicht möglich, öffentlich verfügbar zu machen. Im Allgemeinen ist die Point-Free-Programmierung keine Grundlage für sich selbst und kann eine bedeutende kognitive Barriere für Personen hinzufügen, die nicht in den Stil eintauchen.
 
 ### <a name="do-not-use-partial-application-and-currying-in-public-apis"></a>Verwenden Sie keine partielle Anwendung und Currying in öffentlichen APIs.
 
@@ -443,11 +443,118 @@ Schließlich ist automatische Verallgemeinerung nicht immer ein Segen für Perso
 
 ## <a name="performance"></a>Leistung
 
+### <a name="prefer-structs-for-small-data-types"></a>Strukturen für kleine Datentypen bevorzugen
+
+Die Verwendung von Strukturen (auch als Werttypen bezeichnet) kann für Code zu einer höheren Leistung führen, da Sie in der Regel die Zuordnung von Objekten vermeidet. Strukturen sind jedoch nicht immer eine "schnellere Schaltfläche": Wenn die Größe der Daten in einer Struktur 16 Bytes überschreitet, kann das Kopieren der Daten oft zu mehr CPU-Zeit als die Verwendung eines Referenz Typs führen.
+
+Berücksichtigen Sie die folgenden Bedingungen, um zu bestimmen, ob Sie eine Struktur verwenden sollten:
+
+- Wenn die Größe Ihrer Daten 16 Bytes oder kleiner ist.
+- Wenn es wahrscheinlich ist, dass viele dieser Datentypen im Arbeitsspeicher in einem laufenden Programm ansässig sind.
+
+Wenn die erste Bedingung zutrifft, sollten Sie im Allgemeinen eine Struktur verwenden. Wenn beides zutrifft, sollten Sie fast immer eine Struktur verwenden. Es gibt möglicherweise Fälle, in denen die vorherigen Bedingungen zutreffen, aber die Verwendung einer Struktur ist nicht besser oder schlechter als die Verwendung eines Referenz Typs, aber Sie sind wahrscheinlich selten. Es ist wichtig, immer zu messen, wenn Änderungen wie diese vorgenommen werden, und nicht mit Annahmen oder intuitions arbeiten.
+
+#### <a name="prefer-struct-tuples-when-grouping-small-value-types"></a>Strukturtupel beim Gruppieren kleiner Werttypen bevorzugen
+
+Beachten Sie die folgenden zwei Funktionen:
+
+```fsharp
+let rec runWithTuple t offset times =
+    let offsetValues x y z offset =
+        (x + offset, y + offset, z + offset)
+
+    if times <= 0 then
+        t
+    else
+        let (x, y, z) = t
+        let r = offsetValues x y z offset
+        runWithTuple r offset (times - 1)
+
+let rec runWithStructTuple t offset times =
+    let offsetValues x y z offset =
+        struct(x + offset, y + offset, z + offset)
+
+    if times <= 0 then
+        t
+    else
+        let struct(x, y, z) = t
+        let r = offsetValues x y z offset
+        runWithStructTuple r offset (times - 1)
+```
+
+Wenn Sie diese Funktionen mit einem statistischen [Benchmarktool wie benchmarkdotnet](https://benchmarkdotnet.org/)vergleichen, werden Sie feststellen, dass die `runWithStructTuple` Funktion, die strukturtupel verwendet, 40% schneller ausführt und keinen Arbeitsspeicher zuweist.
+
+Diese Ergebnisse sind jedoch nicht immer in Ihrem eigenen Code zu sehen. Wenn Sie eine Funktion als `inline`markieren, kann der Code, der referenztupel verwendet, einige zusätzliche Optimierungen erhalten, oder der Code, der zuordnen würde, könnte einfach entfernt werden. Sie sollten die Ergebnisse immer Messen, wenn die Leistung relevant ist, und niemals basierend auf Annahme oder Intuition arbeiten.
+
+#### <a name="prefer-struct-records-when-the-data-type-is-small"></a>Strukturdaten Sätze bevorzugen, wenn der Datentyp klein ist
+
+Die zuvor beschriebene Faustregel enthält auch für [ F# Daten Satz Typen](../language-reference/records.md). Beachten Sie die folgenden Datentypen und Funktionen, die Sie verarbeiten:
+
+```fsharp
+type Point = { X: float; Y: float; Z: float }
+
+[<Struct>]
+type SPoint = { X: float; Y: float; Z: float }
+
+let rec processPoint (p: Point) offset times =
+    let inline offsetValues (p: Point) offset =
+        { p with X = p.X + offset; Y = p.Y + offset; Z = p.Z + offset }
+
+    if times <= 0 then
+        p
+    else
+        let r = offsetValues p offset
+        processPoint r offset (times - 1)
+
+let rec processStructPoint (p: SPoint) offset times =
+    let inline offsetValues (p: SPoint) offset =
+        { p with X = p.X + offset; Y = p.Y + offset; Z = p.Z + offset }
+
+    if times <= 0 then
+        p
+    else
+        let r = offsetValues p offset
+        processStructPoint r offset (times - 1)
+```
+
+Dies ähnelt dem vorherigen tupelcode, aber dieses Mal verwendet das Beispiel Datensätze und eine Inline interne Funktion.
+
+Wenn Sie diese Funktionen mit einem statistischen [Benchmarktool wie benchmarkdotnet](https://benchmarkdotnet.org/)vergleichen, werden Sie feststellen, dass `processStructPoint` fast 60% schneller ausgeführt wird und nichts auf dem verwalteten Heap zuweist.
+
+#### <a name="prefer-struct-discriminated-unions-when-the-data-type-is-small"></a>Struktur Unterscheidungs Unions bevorzugen, wenn der Datentyp klein ist
+
+Die vorherigen Beobachtungen zur Leistung mit strukturtupeln und Datensätzen sind auch für Unterscheidungs- [ F# Unions](../language-reference/discriminated-unions.md)vorgesehen. Betrachten Sie folgenden Code:
+
+```fsharp
+    type Name = Name of string
+    
+    [<Struct>]
+    type SName = SName of string
+
+    let reverseName (Name s) =
+        s.ToCharArray()
+        |> Array.rev
+        |> string
+        |> Name
+
+    let structReverseName (SName s) =
+        s.ToCharArray()
+        |> Array.rev
+        |> string
+        |> SName
+```
+
+Es ist üblich, bei der Domänen Modellierung eine diskriminierte Einzelfall-Unions wie diese zu definieren. Wenn Sie diese Funktionen mit einem statistischen [Benchmarktool wie benchmarkdotnet](https://benchmarkdotnet.org/)vergleichen, werden Sie feststellen, dass `structReverseName` ungefähr 25% schneller ausgeführt wird als `reverseName` bei kleinen Zeichen folgen. Bei großen Zeichen folgen werden beide ungefähr identisch sein. Daher ist es in diesem Fall immer empfehlenswert, eine Struktur zu verwenden. Wie bereits erwähnt, sollten Sie immer Messen und nicht auf Annahmen oder Intuitionen anwenden.
+
+Obwohl im vorherigen Beispiel gezeigt wurde, dass eine strukturunterscheidungs-Union eine bessere Leistung erzielt hat, sind beim Modellieren einer Domäne häufig größere Unterscheidungs-Unions vorhanden. Größere Datentypen wie können nicht auch durchgeführt werden, wenn es sich um Strukturen handelt, die von den Vorgängen für Sie abhängig sind, da mehr Kopiervorgänge beteiligt sein könnten.
+
+### <a name="functional-programming-and-mutation"></a>Funktionale Programmierung und Mutation
+
 F#Werte sind standardmäßig unveränderlich, sodass Sie bestimmte Klassen von Fehlern vermeiden können (insbesondere solche, die Parallelität und Parallelität betreffen). In bestimmten Fällen, um eine optimale (oder sogar sinnvolle) Effizienz der Ausführungszeit oder Speicher Belegungen zu erzielen, kann jedoch eine bestimmte arbeitsspanne am besten mithilfe einer direkten Mutation des Zustands implementiert werden. Dies ist möglich, in einer Basis Opt-in mit F# mit der `mutable` Schlüsselwort.
 
-Allerdings verwenden der `mutable` in F# echtzeiteinschränkungen funktionale Reinheit fühlen. Dies ist in Ordnung, wenn Sie die Erwartungen von der Reinheit an die [referenzielle Transparenz](https://en.wikipedia.org/wiki/Referential_transparency)anpassen. Referenzieller Transparenz - nicht Reinheit – ist das Ziel beim Schreiben von F#-Funktionen. Dies ermöglicht es Ihnen, eine funktionale Schnittstelle über eine mutations basierte Implementierung für Leistungs kritischen Code zu schreiben.
+Die Verwendung von `mutable` F# in kann sich im Hinblick auf die funktionale Reinheit widersprechen. Dies ist verständlich, aber die funktionale Reinheit überall kann mit den Leistungszielen in Konflikt stehen. Eine Gefährdung besteht darin, die Mutation so zu kapseln, dass Aufrufer nicht darauf achten müssen, was geschieht, wenn eine Funktion aufgerufen wird. Dies ermöglicht es Ihnen, eine funktionale Schnittstelle über eine mutations basierte Implementierung für Leistungs kritischen Code zu schreiben.
 
-### <a name="wrap-mutable-code-in-immutable-interfaces"></a>Umbruch von änderbaren Code in unveränderlichen Schnittstellen
+#### <a name="wrap-mutable-code-in-immutable-interfaces"></a>Umbruch von änderbaren Code in unveränderlichen Schnittstellen
 
 Mit referenzieller Transparenz als Ziel ist es wichtig, Code zu schreiben, der den änderbaren Unterbauch von Leistungs kritischen Funktionen nicht verfügbar macht. Der folgende Code implementiert beispielsweise die `Array.contains`-Funktion in der F# Kernbibliothek:
 
@@ -465,7 +572,7 @@ let inline contains value (array:'T[]) =
 
 Wenn Sie diese Funktion mehrmals aufrufen, wird das zugrunde liegende Array nicht geändert, und es ist nicht erforderlich, dass Sie einen änderbaren Zustand bei der Nutzung beibehalten. Sie ist referenziell transparent, obwohl fast jede Codezeile darin eine Mutation verwendet.
 
-### <a name="consider-encapsulating-mutable-data-in-classes"></a>Sie sollten änderbare Daten in Klassen kapseln.
+#### <a name="consider-encapsulating-mutable-data-in-classes"></a>Sie sollten änderbare Daten in Klassen kapseln.
 
 Im vorherigen Beispiel wurde eine einzelne Funktion verwendet, um Vorgänge mit veränderbaren Daten zu kapseln. Dies ist für komplexere Datensätze nicht immer ausreichend. Beachten Sie die folgenden Funktions Sätze:
 
@@ -511,9 +618,9 @@ type Closure1Table() =
 
 `Closure1Table` kapselt die zugrunde liegende mutations basierte Datenstruktur und erzwingt dadurch keine Aufrufer, die zugrunde liegende Datenstruktur beizubehalten. Klassen sind eine leistungsstarke Möglichkeit, Daten und Routinen zu kapseln, die mutations basiert sind, ohne die Details für Aufrufer verfügbar zu machen.
 
-### <a name="prefer-let-mutable-to-reference-cells"></a>`let mutable` für den Verweis auf Zellen bevorzugen
+#### <a name="prefer-let-mutable-to-reference-cells"></a>`let mutable` für den Verweis auf Zellen bevorzugen
 
-Verweis Zellen können anstelle des Werts selbst den Verweis auf einen Wert darstellen. Obwohl Sie für Leistungs kritischen Code verwendet werden können, werden Sie im Allgemeinen nicht empfohlen. Betrachten Sie das folgende Beispiel:
+Verweis Zellen können anstelle des Werts selbst den Verweis auf einen Wert darstellen. Obwohl Sie für Leistungs kritischen Code verwendet werden können, wird dies nicht empfohlen. Betrachten Sie das folgende Beispiel:
 
 ```fsharp
 let kernels =

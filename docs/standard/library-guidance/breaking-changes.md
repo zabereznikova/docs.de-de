@@ -2,12 +2,12 @@
 title: Breaking Changes und .NET-Bibliotheken
 description: Empfehlungen für bewährte Methoden zum Umgang mit Breaking Changes beim Erstellen von .NET-Bibliotheken.
 ms.date: 10/02/2018
-ms.openlocfilehash: 8536662ae1cd9733efbcc0c6526bd69d34a13177
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 2cbd9e0a818b52aede6c9b1f60fdf52dcbd7b96f
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75740983"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76731464"
 ---
 # <a name="breaking-changes"></a>Breaking Changes
 
@@ -25,11 +25,11 @@ Wie eine Bibliothek von der .NET-Community verwendet wird, ändert die Auswirkun
 
   Bibliotheken auf hoher Ebene werden direkt in einer Endbenutzeranwendung referenziert. Wenn Breaking Changes auftreten, kann der Entwickler ein Update auf die neueste Version ausführen oder seine Anwendung ändern, um die Breaking Changes zu verwenden.
 
-**✔️️ Überlegen** Sie, wie Ihre Bibliothek verwendet wird. Welche Auswirkungen haben Breaking Changes auf Anwendungen und Bibliotheken, die diese verwenden?
+✔️️ Überlegen Sie, wie Ihre Bibliothek verwendet werden wird. Welche Auswirkungen haben Breaking Changes auf Anwendungen und Bibliotheken, die diese verwenden?
 
-**✔️ Minimieren** Sie Breaking Changes beim Entwickeln einer .NET-Bibliothek auf niedriger Ebene.
+✔️ Minimieren Sie Breaking Changes beim Entwickeln einer .NET-Bibliothek auf niedriger Ebene.
 
-**✔️ Veröffentlichen** Sie ggf. ein größeres Rewrite einer Bibliothek als neues NuGet-Paket.
+✔️ Veröffentlichen Sie eine in großen Teilen umgeschriebene Bibliothek gegebenenfalls als neues NuGet-Paket.
 
 ## <a name="types-of-breaking-changes"></a>Arten von Breaking Changes
 
@@ -56,7 +56,7 @@ Das Hinzufügen von Funktionen und Verbessern von schlechtem Verhalten wird empf
 
 So umfasst ASP.NET Core MVC beispielsweise das Konzept einer [Kompatibilitätsversion](/aspnet/core/mvc/compatibility-version), die die unter `MvcOptions` aktivierten und deaktivierten Funktionen ändert.
 
-**✔️ Deaktivieren**  Sie neue Features ggf. standardmäßig, wenn sie vorhandene Benutzer beeinträchtigen. Geben Sie Entwicklern die Möglichkeit, diese Features mit einer Einstellung auszuwählen.
+✔️ Deaktivieren Sie neue Features gegebenenfalls standardmäßig, wenn sie vorhandene Benutzer beeinträchtigen. Geben Sie Entwicklern die Möglichkeit, diese Features mit einer Einstellung zu aktivieren.
 
 ### <a name="binary-breaking-change"></a>Binäre Breaking Changes
 
@@ -64,15 +64,15 @@ Ein binärer Breaking Change tritt auf, wenn Sie die öffentliche API Ihrer Bibl
 
 Eine binärer Breaking Change kann auch eine **ganze Assembly** unterbrechen. Das Umbenennen einer Assembly mit `AssemblyName` ändert die Identität der Assembly ebenso wie das Hinzufügen, Entfernen oder Ändern des starken Namensschlüssels der Assembly. Eine Änderung der Identität einer Assembly unterbricht alle kompilierten Codes, die diese verwenden.
 
-**❌ ÄNDERN SIE KEINE** Assemblynamen.
+❌ Ändern Sie keine Assemblynamen.
 
-**❌ NICHT** den Schlüssel mit starkem Namen hinzufügen, entfernen oder ändern.
+❌ Den Schlüssel für die eindeutige Benennung weder hinzufügen, noch ändern oder entfernen
 
-**✔️ Verwenden Sie** abstrakte Basisklassen anstelle von Schnittstellen.
+✔️ Verwenden Sie abstrakte Basisklassen anstelle von Schnittstellen.
 
 > Wenn Sie einer Schnittstelle etwas hinzufügen, tritt ein Fehler für vorhandene Typen auf, die diese implementieren. Mit einer abstrakten Basisklasse können Sie eine standardmäßige virtuelle Implementierung hinzufügen.
 
-**✔️ Platzieren** Sie ggf. <xref:System.ObsoleteAttribute> auf Typen und Membern, die Sie entfernen möchten. Das Attribut muss Anweisungen zum Aktualisieren des Codes enthalten, damit die veraltete API nicht mehr verwendet wird.
+✔️ Platzieren Sie auf Typen und Membern, die Sie entfernen möchten, gegebenenfalls das <xref:System.ObsoleteAttribute>. Das Attribut muss Anweisungen zum Aktualisieren des Codes enthalten, damit die veraltete API nicht mehr verwendet wird.
 
 > Code, der Typen und Methoden mit <xref:System.ObsoleteAttribute> aufruft, generiert eine Buildwarnung mit der Meldung, die an das Attribut übergeben wird. Warnungen geben Personen, die die veraltete API verwenden, Zeit zum Migrieren, sodass die meisten Benutzer, wenn die veraltete API entfernt wird, diese nicht mehr verwenden.
 
@@ -92,7 +92,7 @@ public class Document
 }
 ```
 
-**✔️ Behalten** Sie Typen und Methoden mit <xref:System.ObsoleteAttribute> auf unbestimmte Zeit in Bibliotheken auf niedriger und mittlerer Ebene bei.
+✔️ Behalten Sie Typen und Methoden mit <xref:System.ObsoleteAttribute> auf unbestimmte Zeit in Bibliotheken auf niedriger und mittlerer Ebene bei.
 
 > Das Entfernen von APIs ist eine binärer Breaking Change. Erwägen Sie, veraltete Typen und Methoden beizubehalten, falls ihre Verwaltung keinen kostspieligen und großen technischen Aufwand für die Bibliothek bedeutet. Wenn Sie Typen und Methoden nicht entfernen, können Sie so die obigen Worst-Case-Szenarios vermeiden.
 

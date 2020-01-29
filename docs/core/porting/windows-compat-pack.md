@@ -3,20 +3,18 @@ title: Verwenden des Windows Compatibility Pack zum Portieren auf .NET Core
 description: Erfahren Sie mehr über Windows Compatibility Pack und die Verwendungsmöglichkeiten, um vorhandenen .NET Framework-Code in .NET Core zu portieren.
 author: terrajobst
 ms.date: 12/07/2018
-ms.openlocfilehash: 65530987a3cded941b6a292118ed9bfdb6f5b86c
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 91a653b2345d414c18ebdb6e8b7d6d49bbdbb83e
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75715469"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76733607"
 ---
 # <a name="use-the-windows-compatibility-pack-to-port-code-to-net-core"></a>Verwenden des Windows Compatibility Pack zum Portieren auf .NET Core
 
 Einige der beim Portieren von vorhandenem Code in .NET Core am häufigsten auftretenden Probleme sind Abhängigkeiten von APIs und Technologien, die nur in .NET Framework vorhanden sind. Das *Windows Compatibility Pack* bietet viele dieser Technologien, daher ist es viel einfacher, .NET Core-Anwendungen und .NET Standard-Bibliotheken zu erstellen.
 
-Bei diesem Paket handelt es sich um eine logische [Erweiterung von .NET Standard 2.0](../whats-new/dotnet-core-2-0.md#api-changes-and-library-support), durch die der API-Satz erheblich erhöht wird und vorhandener Code nahezu ohne Änderungen kompiliert wird. Damit das Versprechen von .NET Standard („der API-Satz, den alle .NET-Implementierungen bereitstellen“) eingehalten werden kann, enthält das Paket keine Technologien, die nicht auf allen Plattformen funktionieren, z. B. die Registrierung, Windows-Verwaltungsinstrumentation (WMI) oder APIs für die Reflektionsausgabe.
-
-Windows Compatibility Pack basiert auf .NET Standard und stellt Technologien bereit, die nur unter Windows verfügbar sind. Für Kunden, die zu .NET Core wechseln, aber Windows beibehalten möchten, ist dies ein nützlicher erster Schritt. In diesem Szenario ist der Verzicht auf reine Windows-Technologien nur eine Migrationshürde ohne architektonische Vorteile.
+Das Compatibility Pack ist eine logische [Erweiterung von .NET Standard 2.0](../whats-new/dotnet-core-2-0.md#api-changes-and-library-support), die den API-Satz erheblich erhöht. Vorhandener Code wird mit fast allen Änderungen kompiliert. Damit das Versprechen („der API-Satz, den alle .NET-Implementierungen bereitstellen“) eingehalten werden kann, enthält .NET-Standard keine Technologien, die nicht auf allen Plattformen funktionieren können, wie z. B. die Registrierung, die Windows-Verwaltungsinstrumentation (WMI) oder APIs für die Reflektionsausgabe. Windows Compatibility Pack basiert auf .NET Standard und stellt diese Technologien bereit, die nur unter Windows verfügbar sind. Für Kunden, die zu .NET Core wechseln, aber Windows beibehalten möchten, ist dies zumindest ein nützlicher erster Schritt. In diesem Szenario wird die Migrationshürde durch die Möglichkeit beseitigt, ausschließlich Windows-Technologien zu verwenden.
 
 ## <a name="package-contents"></a>Paketinhalt
 

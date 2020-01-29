@@ -1,5 +1,5 @@
 ---
-title: Übersicht über das CheckedListBox-Steuerelement (Windows Forms)
+title: Übersicht über das CheckedListBox-Steuerelement
 ms.date: 03/30/2017
 f1_keywords:
 - CheckedListBox
@@ -8,17 +8,17 @@ helpviewer_keywords:
 - check marks
 - list boxes [Windows Forms], about list boxes
 ms.assetid: e6cff3ce-e2ba-458e-851f-299e8e9c8abf
-ms.openlocfilehash: 8ff23ff449bc3b90fbd51bab1d73f8a7268bee05
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f3825fccbd881a3081d0f9954c81d18df5183325
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61956363"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76736975"
 ---
 # <a name="checkedlistbox-control-overview-windows-forms"></a>Übersicht über das CheckedListBox-Steuerelement (Windows Forms)
-Die Windows-Formulare <xref:System.Windows.Forms.CheckedListBox> Steuerelement erweitert die <xref:System.Windows.Forms.ListBox> Steuerelement. Dies erfolgt fast alle Aufgaben, die ein Listenfeld, und auch ein Häkchen neben den Elementen in der Liste anzeigen kann. Andere Unterschiede zwischen den beiden Steuerelementen sind, die überprüft, Listenfeldern unterstützen nur <xref:System.Windows.Forms.DrawMode.Normal?displayProperty=nameWithType>; und, die überprüft, Listenfelder können nur ein Element oder keine ausgewählt. Beachten Sie, dass ein ausgewähltes Element hervorgehoben, auf dem Formular wird, und keines aktivierten Elements identisch.  
+Das Windows Forms <xref:System.Windows.Forms.CheckedListBox>-Steuerelement erweitert das <xref:System.Windows.Forms.ListBox>-Steuerelement. Das führt fast alles aus, was in einem Listenfeld der Fall ist, und es kann auch ein Häkchen neben den Elementen in der Liste angezeigt werden. Andere Unterschiede zwischen den beiden Steuerelementen bestehen darin, dass aktivierte Listenfelder nur <xref:System.Windows.Forms.DrawMode.Normal?displayProperty=nameWithType>unterstützen; und bei aktivierten Listenfeldern ist nur ein Element oder keines ausgewählt. Beachten Sie, dass ein ausgewähltes Element im Formular hervorgehoben erscheint und nicht mit einem aktivierten Element identisch ist.  
   
- Eingecheckt Listenfelder können zur Entwurfszeit mit hinzugefügten Elemente haben die **Zeichenfolgen-Editor** oder ihre Elemente können dynamisch aus einer Auflistung zur Laufzeit hinzugefügt. die <xref:System.Windows.Forms.CheckedListBox.Items%2A> Eigenschaft. Weitere Informationen finden Sie unter [Vorgehensweise: Hinzufügen und Entfernen von Elementen aus einer Windows Forms, ComboBox-, ListBox- oder CheckedListBox-Steuerelement](add-and-remove-items-from-a-wf-combobox.md).  
+ Aktivierte Listenfelder können Elemente zur Entwurfszeit mithilfe des Zeichen folgen-Auflistungs- **Editors** hinzugefügt werden, oder ihre Elemente können zur Laufzeit dynamisch aus einer Auflistung hinzugefügt werden. verwenden Sie dazu die <xref:System.Windows.Forms.CheckedListBox.Items%2A>-Eigenschaft Weitere Informationen finden Sie unter Gewusst [wie: Hinzufügen und Entfernen von Elementen aus einem Windows Forms ComboBox-, ListBox-oder CheckedListBox-Steuer](add-and-remove-items-from-a-wf-combobox.md)Element.  
   
 ## <a name="see-also"></a>Siehe auch
 
@@ -27,4 +27,4 @@ Die Windows-Formulare <xref:System.Windows.Forms.CheckedListBox> Steuerelement e
 - <xref:System.Windows.Forms.ListControl.DataSource%2A?displayProperty=nameWithType>
 - [Übersicht über das ListBox-Steuerelement](listbox-control-overview-windows-forms.md)
 - [Windows Forms-Steuerelemente zum Auflisten von Optionen](windows-forms-controls-used-to-list-options.md)
-- [Vorgehensweise: Bestimmen der aktivierten Elemente im CheckedListBox-Steuerelement von Windows Forms](how-to-determine-checked-items-in-the-windows-forms-checkedlistbox-control.md)
+- [Gewusst wie: Bestimmen der aktivierten Elemente im CheckedListBox-Steuerelement von Windows Forms](how-to-determine-checked-items-in-the-windows-forms-checkedlistbox-control.md)

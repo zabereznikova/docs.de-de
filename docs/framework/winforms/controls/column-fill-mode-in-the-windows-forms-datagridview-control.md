@@ -1,5 +1,5 @@
 ---
-title: Spaltenfüllmodus im DataGridView-Steuerelement in Windows Forms
+title: Spalten Füll Modus im DataGridView-Steuerelement
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], column fill mode
 - data grids [Windows Forms], column fill mode
 ms.assetid: b4ef7411-ebf4-4e26-bb33-aecec90de80c
-ms.openlocfilehash: f9eb45e9b96ccb97938c7396d177ccedbea329e6
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 43b8915efe303b6f56cd4adf5fdbd69f51b0b754
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65590369"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76736875"
 ---
 # <a name="column-fill-mode-in-the-windows-forms-datagridview-control"></a>Spaltenfüllmodus im DataGridView-Steuerelement in Windows Forms
 Im Spaltenfüllmodus passt das <xref:System.Windows.Forms.DataGridView>-Steuerelement seine Spalten automatisch so an, dass sie die Breite des verfügbaren Anzeigebereichs ausfüllen. Das Steuerelement zeigt die horizontale Bildlaufleiste nur an, wenn es erforderlich ist, dass die Breite jeder Spalte gleich oder größer als sein <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A>-Eigenschaftenwert ist.  
@@ -24,7 +24,7 @@ Im Spaltenfüllmodus passt das <xref:System.Windows.Forms.DataGridView>-Steuerel
  Jede Spalte kann einen anderen Größenmodus aufweisen. Alle Spalten mit einem Größenmodus von <xref:System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill> verwenden jedoch die Breite des Anzeigebereichs gemeinsam, die nicht von anderen Spalten verwendet wird. Diese Breite wird unter den Spalten im Füllmodus in einem Verhältnis relativ zu ihren <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A>-Eigenschaftenwerten aufgeteilt. Wenn zwei Spalten z. B. die <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A>-Werte 100 und 200 aufweisen, ist die erste Spalte halb so breit wie die zweite Spalte.  
   
 ## <a name="user-resizing-in-fill-mode"></a>Größenänderung in Füllmodus durch Benutzer  
- Im Gegensatz zu Größenanpassungsmodi, die die Größe basierend die auf dem Zelleninhalt anpassen, verhindert der Füllmodus nicht, dass Benutzer eine Größenänderung von Spalten vornehmen können, die <xref:System.Windows.Forms.DataGridViewColumn.Resizable%2A>-Eigenschaftenwerte von `true` aufweisen. Wenn ein Benutzer die Größe einer Spalte im Füllmodus ändert, werden alle Spalten im Füllmodus hinter der geänderten Spalte ebenfalls geändert (nach rechts, wenn <xref:System.Windows.Forms.Control.RightToLeft%2A> `false` ist, andernfalls auf der linken Seite), um die Änderung in der verfügbaren Breite zu berücksichtigen. Wenn hinter der Spalte, deren Größe geändert wurde, keine Spalten im Füllmodus vorhanden sind, wird die Größe aller Spalten im Füllmodus im Steuerelement geändert, um dies auszugleichen. Wenn im Steuerelement keine weiteren Spalten im Füllmodus vorhanden sind, wird die Größenänderung ignoriert. Wenn die Größe einer Spalte geändert wird, die sich nicht im Füllmodus befindet, wird die Größe aller Spalten im Füllmodus im Steuerelement geändert, um dies auszugleichen.  
+ Im Gegensatz zu Größenanpassungsmodi, die die Größe basierend die auf dem Zelleninhalt anpassen, verhindert der Füllmodus nicht, dass Benutzer eine Größenänderung von Spalten vornehmen können, die <xref:System.Windows.Forms.DataGridViewColumn.Resizable%2A>-Eigenschaftenwerte von `true` aufweisen. Wenn ein Benutzer die Größe einer Spalte im Füllmodus ändert, werden alle Spalten im Füllmodus hinter der geänderten Spalte ebenfalls geändert (nach rechts, wenn <xref:System.Windows.Forms.Control.RightToLeft%2A>`false` ist, andernfalls auf der linken Seite), um die Änderung in der verfügbaren Breite zu berücksichtigen. Wenn hinter der Spalte, deren Größe geändert wurde, keine Spalten im Füllmodus vorhanden sind, wird die Größe aller Spalten im Füllmodus im Steuerelement geändert, um dies auszugleichen. Wenn im Steuerelement keine weiteren Spalten im Füllmodus vorhanden sind, wird die Größenänderung ignoriert. Wenn die Größe einer Spalte geändert wird, die sich nicht im Füllmodus befindet, wird die Größe aller Spalten im Füllmodus im Steuerelement geändert, um dies auszugleichen.  
   
  Nachdem die Größe einer Spalte im Füllmodus geändert wurde, werden die <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A>-Werte für alle Spalten, die geändert wurden, proportional angepasst. Wenn vier Spalten im Füllmodus z. B. <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A>-Werte von 100 aufweisen, führt das Ändern der Größe der zweiten Spalte in die Hälfte der ursprünglichen Breite zu <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A>-Werte von 100, 50, 125 und 125. Durch das Ändern der Größe einer Spalte, die sich nicht im Füllmodus befindet, werden keine <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A>-Werte geändert, weil die Größe der Spalten im Füllmodus unter Beibehaltung der Proportionen einfach geändert wird, um dies auszugleichen.  
   
@@ -42,7 +42,7 @@ Im Spaltenfüllmodus passt das <xref:System.Windows.Forms.DataGridView>-Steuerel
  [!code-csharp[System.Windows.Forms.DataGridViewFillColumnsDemo#00](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewFillColumnsDemo/CS/fillcolumns.cs#00)]
  [!code-vb[System.Windows.Forms.DataGridViewFillColumnsDemo#00](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewFillColumnsDemo/vb/fillcolumns.vb#00)]  
   
-### <a name="comments"></a>Kommentare  
+### <a name="comments"></a>Comments  
  So verwenden Sie diese Beispielanwendung:  
   
 - Ändern Sie die Größe des Formulars. Beachten Sie, wie sich die Breite der Spalten ändert, während die Proportionen, die durch die <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A>-Eigenschaftenwerte angegeben werden, beibehalten werden.  

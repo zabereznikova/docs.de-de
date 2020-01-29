@@ -3,18 +3,18 @@ title: 'global.json: Übersicht'
 description: In diesem Artikel erfahren Sie, wie Sie mit der global.json-Datei die .NET Core SDK-Version beim Ausführen eines .NET Core-CLI-Befehls festgelegen.
 ms.date: 01/14/2020
 ms.custom: updateeachrelease
-ms.openlocfilehash: fedfe168e2c1a0555c2d4499ba02d270033e0d1a
-ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
+ms.openlocfilehash: f02c9129a707ddddb2c5e1975b75cc35abc5cd55
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76115776"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76733974"
 ---
 # <a name="globaljson-overview"></a>global.json: Übersicht
 
-**Dieser Artikel gilt für: ✓** .NET Core 2.0 SDK und neuere Versionen
+**Dieser Artikel gilt für:** ✔️ .NET Core 2.0 SDK und neuere Versionen
 
-Mit der *global.json*-Datei können Sie definieren, welche .NET Core SDK-Version verwendet wird, wenn Sie .NET Core-CLI-Befehle ausführen. Die Auswahl der .NET Core SDK ist unabhängig von der Angabe der Laufzeit Ihrer Projektziele. Die .NET Core SDK-Version gibt an, welche Versionen der .NET Core-CLI-Tools verwendet werden. 
+Mit der *global.json*-Datei können Sie definieren, welche .NET Core SDK-Version verwendet wird, wenn Sie .NET Core-CLI-Befehle ausführen. Die Auswahl der .NET Core SDK ist unabhängig von der Angabe der Laufzeit Ihrer Projektziele. Die .NET Core SDK-Version gibt an, welche Versionen der .NET Core-CLI-Tools verwendet werden.
 
 Wenn Sie die neueste Version der SDK-Tools verwenden möchten, wird in der Regel keine *global.json*-Datei benötigt. In einigen Szenarios für Fortgeschrittene sollten Sie die Version der SDK-Tools überwachen. Wie Sie dabei vorgehen müssen, wird in diesem Artikel erläutert.
 
@@ -62,7 +62,7 @@ Wenn Sie diesen Wert nicht explizit festlegen, ist der Standardwert davon abhän
 
 - Verfügbar seit dem .NET Core 3.0 SDK.
 
-Die Rollforwardrichtlinie, die beim Auswählen einer SDK-Version verwendet werden soll, entweder als Fallback, wenn eine bestimmte SDK-Version fehlt, oder als Anweisung, damit eine höhere Version verwendet wird. Eine [Version](#version) muss mit einem `rollForward`-Wert angegeben werden, wenn sie nicht auf `latestMajor` festgelegt ist. 
+Die Rollforwardrichtlinie, die beim Auswählen einer SDK-Version verwendet werden soll, entweder als Fallback, wenn eine bestimmte SDK-Version fehlt, oder als Anweisung, damit eine höhere Version verwendet wird. Eine [Version](#version) muss mit einem `rollForward`-Wert angegeben werden, wenn sie nicht auf `latestMajor` festgelegt ist.
 
 Lesen Sie sich die folgenden Definitionen für SDK-Versionen im Format `x.y.znn` durch, um sich ein Bild von den verfügbaren Richtlinien und deren Verhalten zu machen.
 

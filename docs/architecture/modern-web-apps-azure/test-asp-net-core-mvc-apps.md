@@ -4,12 +4,12 @@ description: Entwerfen moderner Webanwendungen mit ASP.NET Core und Azure | Test
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 6096bd3aa35a27c97862089d09d537bdc5b1fff0
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 82c9815abdd5140340f9a8ea39be23496d433889
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73971543"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76738381"
 ---
 # <a name="test-aspnet-core-mvc-apps"></a>Testen von ASP.NET Core MVC-Apps
 
@@ -94,7 +94,7 @@ Eine Variante dieses Ansatzes beendet jeden Testklassennamen mit „Should“ un
 
 - `CatalogControllerGetImage`**Should**`.`**Log**`WarningGivenImageMissingException`
 
-Einige Teams finden den zweiten Ansatz für die Benennung klarer, obwohl er etwas ausführlicher ist. In jedem Fall sollten Sie versuchen, eine Namenskonvention zu verwenden, die einen Einblick zum Verhalten des Tests bietet, damit klar ist, welche Fälle fehlschlagen. Vermeiden Sie ungenaue Namen, z.B. „ControllerTests.Test1“, da diese keine Informationen bieten, wenn diese in den Testergebnissen angezeigt werden.
+Einige Teams finden den zweiten Ansatz für die Benennung klarer, obwohl er etwas ausführlicher ist. In jedem Fall sollten Sie versuchen, eine Namenskonvention zu verwenden, die einen Einblick zum Verhalten des Tests bietet, damit klar ist, welche Fälle fehlschlagen. Vermeiden Sie ungenaue Namen, z. B. „ControllerTests.Test1“, da diese keine Informationen bieten, wenn sie in den Testergebnissen angezeigt werden.
 
 Wenn Sie eine Namenskonvention befolgen, die viele kleine Testklassen produziert, wie eine der oben genannten, empfiehlt es sich, Ihre Tests auch mit Ordnern und Namespaces zu sortieren. Abbildung 9–4 veranschaulicht einen Ansatz zum Organisieren von Tests mit Ordnern in mehreren Testprojekten.
 

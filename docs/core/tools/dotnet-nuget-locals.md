@@ -3,16 +3,16 @@ title: Befehl „dotnet nuget locals“
 description: Der dotnet nuget locals-Befehl löscht lokale NuGet-Ressourcen, z.B. den http-Anforderungscache, den temporären Cache oder Ordner mit globalen Paketen auf dem Computer, bzw. listet diese Ressourcen auf.
 author: karann-msft
 ms.date: 06/26/2019
-ms.openlocfilehash: cb5747636aa9d04f1ef6a6ff9309ba29c0630dd6
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.openlocfilehash: b57c127650555e412af08df6656fb62d75c8ed7c
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74087407"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76734080"
 ---
 # <a name="dotnet-nuget-locals"></a>dotnet nuget locals
 
-**Dieses Thema gilt für: ✓**.NET Core 1.x SDK und spätere Versionen
+**Dieser Artikel gilt für:** ✔️ .NET Core 1.x SDK und neuere Versionen
 
 <!-- todo: uncomment when all CLI commands are reviewed
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]

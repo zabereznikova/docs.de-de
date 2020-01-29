@@ -2,12 +2,12 @@
 title: Implementieren widerstandsfähiger Entity Framework Core-SQL-Verbindungen
 description: Erfahren Sie, wie Sie widerstandsfähige Entity Framework Core-SQL-Verbindungen implementieren. Diese Technik ist besonders wichtig, wenn Sie Azure SQL-Datenbank in der Cloud verwenden.
 ms.date: 10/16/2018
-ms.openlocfilehash: 3128cf1be7f2dc8804a002556db232f4e0fc8c33
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 7899fc263ab3cde6ac2410ca614a7e5fa285576b
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73094047"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76732723"
 ---
 # <a name="implement-resilient-entity-framework-core-sql-connections"></a>Implementieren widerstandsfähiger Entity Framework Core-SQL-Verbindungen
 
@@ -88,7 +88,7 @@ public async Task<IActionResult> UpdateProduct(
 }
 ```
 
-Der erste <xref:Microsoft.EntityFrameworkCore.DbContext> ist `_catalogContext`, und der zweite `DbContext` ist innerhalb des `_integrationEventLogService`-Objekts. Die Commitaktion wird unter Verwendung einer EF-Ausführungsstrategie für alle `DbContext`-Objekte ausgeführt.
+Der erste <xref:Microsoft.EntityFrameworkCore.DbContext> ist `_catalogContext`, und der zweite `DbContext` ist innerhalb des `_catalogIntegrationEventService`-Objekts. Die Commitaktion wird unter Verwendung einer EF-Ausführungsstrategie für alle `DbContext`-Objekte ausgeführt.
 
 Zum Erreichen dieses vielfachen `DbContext`-Commits verwendet `SaveEventAndCatalogContextChangesAsync` eine `ResilientTransaction`-Klasse, wie im folgenden Code gezeigt:
 

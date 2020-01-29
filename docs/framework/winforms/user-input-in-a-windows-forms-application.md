@@ -1,37 +1,38 @@
 ---
-title: Benutzereingabe in einer Windows Forms-Anwendung
+title: Benutzereingabe in einer Windows Forms-App
+titleSuffix: ''
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Forms, user input
 ms.assetid: 9d61fa96-70f7-4754-885a-49a4a6316bdb
-ms.openlocfilehash: 0eb39f0ecd8fcd12918b38bd77fed2ff32cac1d8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8e82276f14519c4ef54948744c93014232bdff52
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61800138"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76734808"
 ---
 # <a name="user-input-in-a-windows-forms-application"></a>Benutzereingabe in einer Windows Forms-Anwendung
-In Windows Forms wird eine Benutzereingabe an Anwendungen in Form von Windows-Nachrichten gesendet. Eine Reihe von überschreibbaren Methoden verarbeitet diese Nachrichten in der Anwendung, die Form, und steuern. Wenn diese Methoden Maus-und tastaturmeldungen erhalten, auslösen diese Ereignisse, die zum Abrufen von Informationen über die Maus oder Tastatur Eingabe behandelt werden können. In vielen Fällen werden Windows Forms-Anwendungen können alle Benutzereingaben zu verarbeiten, indem Sie einfach die Bearbeitung dieser Ereignisse. In anderen Fällen kann eine Anwendung muss, um eine der Methoden überschreiben, die Verarbeitung von Nachrichten aus, um eine bestimmte Nachricht abzufangen, bevor sie von der Anwendung, Formular oder Steuerelement empfangen wird.  
+In Windows Forms wird die Benutzereingabe in Form von Windows-Meldungen an Anwendungen gesendet. Eine Reihe von über schreibbaren Methoden verarbeitet diese Nachrichten auf Anwendungs-, Formular-und Steuerelement Ebene. Wenn diese Methoden Maus-und Tastatur Meldungen empfangen, werden Ereignisse ausgegeben, die behandelt werden können, um Informationen über die Maus oder die Tastatureingabe zu erhalten. In vielen Fällen können Windows Forms Anwendungen alle Benutzereingaben verarbeiten, indem Sie diese Ereignisse einfach verarbeiten. In anderen Fällen muss eine Anwendung möglicherweise eine der Methoden überschreiben, die Nachrichten verarbeiten, um eine bestimmte Nachricht abzufangen, bevor Sie von der Anwendung, dem Formular oder dem Steuerelement empfangen wird.  
   
-## <a name="mouse-and-keyboard-events"></a>Maus- und Tastaturereignissen  
- Alle Windows Forms-Steuerelemente erben, einen Satz von Ereignissen im Zusammenhang mit der Maus und Tastatur. Z. B. ein Steuerelement behandeln kann die <xref:System.Windows.Forms.Control.KeyPress> Ereignis, um den Zeichencode der einen Schlüssel zu ermitteln, die gedrückt wurde, oder ein Steuerelement kann verarbeiten die <xref:System.Windows.Forms.Control.MouseClick> Ereignis, um zu bestimmen, der Speicherort der Maus klicken Sie auf. Weitere Informationen zu den Ereignissen mit Maus und Tastatur finden Sie unter [Verwenden von Tastaturereignissen](using-keyboard-events.md) und [Mausereignisse in Windows Forms](mouse-events-in-windows-forms.md).  
+## <a name="mouse-and-keyboard-events"></a>Maus-und Tastatur Ereignisse  
+ Alle Windows Forms-Steuerelemente erben eine Reihe von Ereignissen im Zusammenhang mit Maus-und Tastatureingaben. Ein Steuerelement kann z. b. das <xref:System.Windows.Forms.Control.KeyPress>-Ereignis behandeln, um den Zeichencode einer Taste zu bestimmen, die gedrückt wurde, oder ein Steuerelement kann das <xref:System.Windows.Forms.Control.MouseClick> Ereignis verarbeiten, um die Position eines Mausklicks zu bestimmen. Weitere Informationen über die Maus-und Tastatur Ereignisse finden [Sie unter Verwenden von Tastatur Ereignissen](using-keyboard-events.md) und [Mausereignissen in Windows Forms](mouse-events-in-windows-forms.md).  
   
-## <a name="methods-that-process-user-input-messages"></a>Methoden, die Benutzer eingehende Nachrichten zu verarbeiten  
- Formulare und Steuerelemente haben Sie Zugriff auf die <xref:System.Windows.Forms.IMessageFilter> -Schnittstelle und eine Reihe von überschreibbare Methoden, die Windows-Nachrichten an verschiedenen Punkten in der Nachrichtenwarteschlange verarbeiten. Diese Methoden alle verfügen über eine <xref:System.Windows.Forms.Message> -Parameter, der kapselt die Details auf niedriger Ebene, der Windows-Meldungen. Sie können zu implementieren oder Überschreiben dieser Methoden, um die Nachricht überprüfen und verarbeiten die Nachricht oder an der nächste Consumer in die Warteschlange übergeben. Die folgende Tabelle enthält die Methoden, die alle Windows-Nachrichten in Windows Forms zu verarbeiten.  
+## <a name="methods-that-process-user-input-messages"></a>Methoden zum Verarbeiten von Benutzereingabe Meldungen  
+ Formulare und Steuerelemente haben Zugriff auf die <xref:System.Windows.Forms.IMessageFilter>-Schnittstelle und einen Satz von über schreibbaren Methoden, die Windows-Meldungen an verschiedenen Punkten in der Nachrichten Warteschlange verarbeiten. Diese Methoden verfügen alle über einen <xref:System.Windows.Forms.Message>-Parameter, der die Details von Windows-Meldungen auf niedriger Ebene kapselt. Sie können diese Methoden implementieren oder außer Kraft setzen, um die Nachricht zu untersuchen und anschließend die Nachricht zu verarbeiten oder an den nächsten Consumer in der Nachrichten Warteschlange zu übergeben. In der folgenden Tabelle werden die Methoden dargestellt, die alle Windows-Meldungen in Windows Forms verarbeiten.  
   
-|Methode|Hinweise|  
+|-Methode|Hinweise|  
 |------------|-----------|  
-|<xref:System.Windows.Forms.IMessageFilter.PreFilterMessage%2A>|Diese Methode fängt die in der Warteschlange (auch bekannt als bereitgestellte) Windows-Nachrichten auf Anwendungsebene ab.|  
-|<xref:System.Windows.Forms.Control.PreProcessMessage%2A>|Diese Methode fängt die Windows-Nachrichten auf dem Formular und Steuerelement-Ebene ab, bevor sie verarbeitet wurden.|  
-|<xref:System.Windows.Forms.Control.WndProc%2A>|Diese Methode verarbeitet Windows-Nachrichten auf dem Formular und Steuerelement-Ebene.|  
-|<xref:System.Windows.Forms.Control.DefWndProc%2A>|Diese Methode führt die standardverarbeitung von Windows-Meldungen auf der Ebene Formular und Steuerelement. Dadurch wird die minimale Funktionalität eines Fensters.|  
-|<xref:System.Windows.Forms.Control.OnNotifyMessage%2A>|Diese Methode fängt die Nachrichten auf der Ebene Formular und Steuerelement ab, nachdem sie verarbeitet wurden. Die <xref:System.Windows.Forms.ControlStyles.EnableNotifyMessage> Formatbit muss festgelegt werden, damit diese Methode aufgerufen werden.|  
+|<xref:System.Windows.Forms.IMessageFilter.PreFilterMessage%2A>|Diese Methode fängt in die Warteschlange eingereihte Windows-Nachrichten auf Anwendungsebene ab.|  
+|<xref:System.Windows.Forms.Control.PreProcessMessage%2A>|Diese Methode fängt Windows-Meldungen auf der Formular-und Steuerelement Ebene ab, bevor Sie verarbeitet wurden.|  
+|<xref:System.Windows.Forms.Control.WndProc%2A>|Diese Methode verarbeitet Windows-Meldungen auf Formular-und Steuerelement Ebene.|  
+|<xref:System.Windows.Forms.Control.DefWndProc%2A>|Diese Methode führt die Standard Verarbeitung von Windows-Meldungen auf der Formular-und der Steuerelement Ebene aus. Dadurch wird die minimale Funktionalität eines Fensters bereitstellt.|  
+|<xref:System.Windows.Forms.Control.OnNotifyMessage%2A>|Diese Methode fängt Nachrichten auf der Formular-und Steuerelement Ebene ab, nachdem Sie verarbeitet wurden. Das <xref:System.Windows.Forms.ControlStyles.EnableNotifyMessage> Stilbit muss festgelegt werden, damit diese Methode aufgerufen wird.|  
   
- Tastatur und Maus-Nachrichten werden ebenfalls durch einen zusätzlichen Satz von überschreibbaren Methoden verarbeitet, die den Typen von Nachrichten spezifisch sind. Weitere Informationen finden Sie unter [Funktionsweise von Tastatureingaben](how-keyboard-input-works.md) und [Maus Funktionsweise in Windows Forms](how-mouse-input-works-in-windows-forms.md).  
+ Tastatur-und Maus Meldungen werden auch von einem zusätzlichen Satz von über schreibbaren Methoden verarbeitet, die für diese Nachrichten Typen spezifisch sind. Weitere Informationen finden Sie unter [Funktionsweise von Tastatureingaben](how-keyboard-input-works.md) und [Funktionsweise von Maus Eingaben in Windows Forms](how-mouse-input-works-in-windows-forms.md).  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Benutzereingaben in Windows Forms](user-input-in-windows-forms.md)
+- [Benutzereingabe in Windows Forms](user-input-in-windows-forms.md)
 - [Tastatureingaben in einer Windows Forms-Anwendung](keyboard-input-in-a-windows-forms-application.md)
 - [Mauseingabe in einer Windows Forms-Anwendung](mouse-input-in-a-windows-forms-application.md)

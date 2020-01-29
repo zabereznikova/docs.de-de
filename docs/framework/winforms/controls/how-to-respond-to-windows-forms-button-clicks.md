@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Reagieren auf das Anklicken von Schaltflächen in Windows Forms'
+title: Reagieren auf Button-Klicks
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -15,23 +15,23 @@ helpviewer_keywords:
 - examples [Windows Forms], controls
 - Click event [Windows Forms], responding to
 ms.assetid: 7a4951bd-369c-4662-b246-28ad83eda484
-ms.openlocfilehash: ebcde2b5e749c5a3621c623a864578b2a654ce63
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: dd6cf75a316257c86a23b44a818422336c12aa67
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64638355"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76735716"
 ---
-# <a name="how-to-respond-to-windows-forms-button-clicks"></a>Vorgehensweise: Reagieren auf das Anklicken von Schaltflächen in Windows Forms
-Die grundlegende Verwendung von einer Windows Forms <xref:System.Windows.Forms.Button> Steuerelement ist, Code ausführen, wenn die Schaltfläche geklickt wird.  
+# <a name="how-to-respond-to-windows-forms-button-clicks"></a>Gewusst wie: Reagieren auf das Anklicken von Schaltflächen in Windows Forms
+Die grundlegende Verwendung eines Windows Forms <xref:System.Windows.Forms.Button> Steuer Elements ist das Ausführen von Code, wenn auf die Schaltfläche geklickt wird.  
   
- Klicken auf eine <xref:System.Windows.Forms.Button> Steuerelement generiert auch eine Reihe anderer Ereignisse, z. B. die <xref:System.Windows.Forms.Control.MouseEnter>, <xref:System.Windows.Forms.Control.MouseDown>, und <xref:System.Windows.Forms.Control.MouseUp> Ereignisse. Wenn Sie beabsichtigen, fügen Sie Ereignishandler für diese verwandten Ereignisse, achten Sie darauf, dass ihre Aktionen nicht in Konflikt stehen. Z. B. wenn die Informationen, die der Benutzer in einem Textfeld eingegeben hat, auf die Schaltfläche gelöscht werden, sollen durch das Anhalten des Mauszeigers über der Schaltfläche keine QuickInfo mit diesen jetzt nicht werden vorhandene Informationen angezeigt werden.  
+ Wenn Sie auf ein <xref:System.Windows.Forms.Button> Steuerelement klicken, werden auch eine Reihe weiterer Ereignisse generiert, z. b. die Ereignisse <xref:System.Windows.Forms.Control.MouseEnter>, <xref:System.Windows.Forms.Control.MouseDown>und <xref:System.Windows.Forms.Control.MouseUp>. Wenn Sie beabsichtigen, Ereignishandler für diese verknüpften Ereignisse anzufügen, stellen Sie sicher, dass Ihre Aktionen nicht in Konflikt stehen. Wenn Sie beispielsweise auf die Schaltfläche klicken, um die Informationen zu löschen, die der Benutzer in ein Textfeld eingegeben hat, sollte mit dem Mauszeiger auf die Schaltfläche keine QuickInfo mit den jetzt nicht vorhandenen Informationen angezeigt werden.  
   
- Wenn der Benutzer versucht, doppelklicken Sie auf die <xref:System.Windows.Forms.Button> -Steuerelement, jedem Klick wird separat verarbeitet werden; d. h. das Steuerelement nicht das Doppelklickereignis unterstützt.  
+ Wenn der Benutzer versucht, auf das <xref:System.Windows.Forms.Button>-Steuerelement zu doppelklicken, wird jeder Klick separat verarbeitet. Das heißt, das-Steuerelement unterstützt das Double-Click-Ereignis nicht.  
   
-### <a name="to-respond-to-a-button-click"></a>Zum Antworten auf eine Schaltfläche klicken.  
+### <a name="to-respond-to-a-button-click"></a>So reagieren Sie auf einen Klick auf eine Schaltfläche  
   
-- In der Schaltfläche `Click` <xref:System.EventHandler> Ausführung des Codes zu schreiben. `Button1_Click` muss auf das Steuerelement gebunden werden. Weitere Informationen finden Sie unter [Vorgehensweise: Erstellen von Ereignishandlern für Windows Forms zur Laufzeit](../how-to-create-event-handlers-at-run-time-for-windows-forms.md).  
+- Schreiben Sie im `Click` der Schaltfläche <xref:System.EventHandler> den Code, der ausgeführt werden soll. `Button1_Click` müssen an das-Steuerelement gebunden werden. Weitere Informationen finden Sie unter Gewusst [wie: Erstellen von Ereignis Handlern zur Laufzeit für Windows Forms](../how-to-create-event-handlers-at-run-time-for-windows-forms.md).  
   
     ```vb  
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click  

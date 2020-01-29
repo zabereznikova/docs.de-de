@@ -2,12 +2,12 @@
 title: Form von WordprocessingML-Dokumenten (C#)
 ms.date: 07/20/2015
 ms.assetid: 3791b5e0-c502-469b-bb75-a7bf6fdd0a94
-ms.openlocfilehash: 84d893267c37ecf99a457ebb683d0451e2b4b68f
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 58c028fed465f45fdcf8f63f2119eb8e8b201e32
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69591058"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76732677"
 ---
 # <a name="shape-of-wordprocessingml-documents-c"></a>Form von WordprocessingML-Dokumenten (C#)
 Dieses Thema enthält eine Einführung in die XML-Form von WordprocessingML-Dokumenten.  
@@ -87,13 +87,13 @@ using (Package wdPackage = Package.Open("SampleDoc.docx", FileMode.Open, FileAcc
 }  
 ```  
   
-## <a name="external-resources"></a>Externe Ressourcen  
- [Einführung in die Microsoft Office (2007) Open XML-Dateiformate](https://docs.microsoft.com/previous-versions/office/developer/office-2007/aa338205%28v=office.12%29)  
- [Übersicht über WordprocessingML](https://docs.microsoft.com/previous-versions/office/developer/office-2003/aa212812%28v=office.11%29)  
- [Anatomy of a WordProcessingML File (Aufbau einer WordprocessingML-Datei)](http://officeopenxml.com/anatomyofOOXML.php)  
- [Introduction to WordprocessingML (Einführung in WordprocessingML)](https://ericwhite.com/blog/introduction-to-wordprocessingml-series/)  
- [Office 2003: Downloadseite für XML-Referenzschemas](https://www.microsoft.com/download/details.aspx?id=101)  
-  
+## <a name="external-resources"></a>Externe Ressourcen
+
+- [Einführung in die Microsoft Office (2007) Open XML-Dateiformate](https://docs.microsoft.com/previous-versions/office/developer/office-2007/aa338205%28v=office.12%29)
+- [Übersicht über WordprocessingML](https://docs.microsoft.com/previous-versions/office/developer/office-2003/aa212812%28v=office.11%29)
+- [Anatomy of a WordProcessingML File (Aufbau einer WordprocessingML-Datei)](http://officeopenxml.com/anatomyofOOXML.php)
+- [Introduction to WordprocessingML (Einführung in WordprocessingML)](https://ericwhite.com/blog/introduction-to-wordprocessingml-series/)
+
 ## <a name="see-also"></a>Siehe auch
 
 - [Tutorial: Bearbeiten von Inhalten in einem WordprocessingML-Dokument (C#)](./shape-of-wordprocessingml-documents.md)

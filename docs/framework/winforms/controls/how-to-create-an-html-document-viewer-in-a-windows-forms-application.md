@@ -1,5 +1,6 @@
 ---
-title: 'Vorgehensweise: Erstellen eines HTML-Dokumentviewers in einer Windows Forms-Anwendung'
+title: Erstellen eines HTML-Dokument-Viewers in einer Windows Forms-App
+titleSuffix: ''
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,24 +10,24 @@ helpviewer_keywords:
 - document viewers
 - Windows Forms, creating document viewers
 ms.assetid: 6a6338fe-f7ee-4f5e-9d8f-0465c57e9039
-ms.openlocfilehash: 4118f526af1e02982f181dba9e86f8ce5b806fbb
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 913bc86af034645b4b8cf3d69da4c9def58fc19c
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64612149"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76732844"
 ---
-# <a name="how-to-create-an-html-document-viewer-in-a-windows-forms-application"></a>Vorgehensweise: Erstellen eines HTML-Dokumentviewers in einer Windows Forms-Anwendung
-Sie können die <xref:System.Windows.Forms.WebBrowser> Steuerelement zum Anzeigen und Drucken von HTML-Dokumente ohne den vollen Funktionsumfang von einem Internet-Web-Browser. Dies ist nützlich, wenn Sie die Formatierungsfunktionen von HTML nutzen möchten, aber möchten nicht, dass Ihre Benutzer, beliebige Webseiten zu laden, die nicht vertrauenswürdigen Websteuerelemente oder potenziell bösartige Skriptcode enthalten kann. Möglicherweise möchten Sie die Funktionalität des Einschränken der <xref:System.Windows.Forms.WebBrowser> Steuern auf diese Weise kann z. B. für die Verwendung als eine HTML-e-Mail-Viewer oder zum HTML-Hilfe in Ihrer Anwendung bereitstellen.  
+# <a name="how-to-create-an-html-document-viewer-in-a-windows-forms-application"></a>Gewusst wie: Erstellen eines HTML-Dokumentviewers in einer Windows Forms-Anwendung
+Sie können das <xref:System.Windows.Forms.WebBrowser>-Steuerelement verwenden, um HTML-Dokumente anzuzeigen und zu drucken, ohne die vollständige Funktionalität eines Internet-Webbrowsers bereitzustellen. Dies ist hilfreich, wenn Sie die Formatierungsfunktionen von HTML nutzen möchten, aber nicht möchten, dass Benutzer beliebige Webseiten laden, die möglicherweise nicht vertrauenswürdige websteuer Elemente oder potenziell bösartigen Skriptcode enthalten. Möglicherweise möchten Sie die Funktionalität des <xref:System.Windows.Forms.WebBrowser>-Steuer Elements auf diese Weise einschränken, um es z. b. als HTML-e-Mail-Viewer zu verwenden oder um HTML-formatierte Hilfe in der Anwendung bereitzustellen.  
   
-### <a name="to-create-an-html-document-viewer"></a>Erstellen Sie eine HTML-Dokument-viewer  
+### <a name="to-create-an-html-document-viewer"></a>So erstellen Sie einen HTML-Dokument-Viewer  
   
-1. Festlegen der <xref:System.Windows.Forms.WebBrowser.AllowWebBrowserDrop%2A> Eigenschaft `false` um zu verhindern, dass die <xref:System.Windows.Forms.WebBrowser> -Steuerelement aus, Öffnen von Dateien, die auf ihm abgelegt werden.  
+1. Legen Sie die <xref:System.Windows.Forms.WebBrowser.AllowWebBrowserDrop%2A>-Eigenschaft auf `false` fest, um zu verhindern, dass das <xref:System.Windows.Forms.WebBrowser> Steuerelement Dateien öffnet, die auf diesem  
   
      [!code-csharp[WebBrowserMisc#20](~/samples/snippets/csharp/VS_Snippets_Winforms/WebBrowserMisc/CS/WebBrowserMisc.cs#20)]
      [!code-vb[WebBrowserMisc#20](~/samples/snippets/visualbasic/VS_Snippets_Winforms/WebBrowserMisc/vb/WebBrowserMisc.vb#20)]  
   
-2. Legen Sie die <xref:System.Windows.Forms.WebBrowser.Url%2A> -Eigenschaft auf die Position der ersten Datei angezeigt.  
+2. Legen Sie die <xref:System.Windows.Forms.WebBrowser.Url%2A>-Eigenschaft auf den Speicherort der anzuzeigenden anfangs Datei fest.  
   
      [!code-csharp[WebBrowserMisc#21](~/samples/snippets/csharp/VS_Snippets_Winforms/WebBrowserMisc/CS/WebBrowserMisc.cs#21)]
      [!code-vb[WebBrowserMisc#21](~/samples/snippets/visualbasic/VS_Snippets_Winforms/WebBrowserMisc/vb/WebBrowserMisc.vb#21)]  
@@ -45,5 +46,5 @@ Sie können die <xref:System.Windows.Forms.WebBrowser> Steuerelement zum Anzeige
 - <xref:System.Windows.Forms.WebBrowser.Url%2A>
 - [Übersicht über das WebBrowser-Steuerelement](webbrowser-control-overview.md)
 - [WebBrowser-Sicherheit](webbrowser-security.md)
-- [Vorgehensweise: Navigieren Sie zu einer URL mit dem WebBrowser-Steuerelement](how-to-navigate-to-a-url-with-the-webbrowser-control.md)
-- [Vorgehensweise: Drucken Sie mit einem WebBrowser-Steuerelement](how-to-print-with-a-webbrowser-control.md)
+- [Gewusst wie: Navigieren zu einer URL mit dem WebBrowser-Steuerelement](how-to-navigate-to-a-url-with-the-webbrowser-control.md)
+- [Gewusst wie: Drucken mit einem WebBrowser-Steuerelement](how-to-print-with-a-webbrowser-control.md)

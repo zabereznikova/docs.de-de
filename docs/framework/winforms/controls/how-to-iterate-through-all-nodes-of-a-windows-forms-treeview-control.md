@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Durchlaufen aller Knoten eines TreeView-Steuerelements in Windows Forms'
+title: Durchlaufen aller Knoten des TreeView-Steuer Elements
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,17 +10,17 @@ helpviewer_keywords:
 - TreeView control [Windows Forms], iterating through nodes
 - tree nodes in TreeView control [Windows Forms], iterating through
 ms.assetid: 427f8928-ebcf-4beb-887f-695b905d5134
-ms.openlocfilehash: 00a0f19803967f02795e3eade767786eecc1f4dd
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 010932fa3fdfaa907325b9934682dcbf889265c1
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69966546"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76736365"
 ---
-# <a name="how-to-iterate-through-all-nodes-of-a-windows-forms-treeview-control"></a>Vorgehensweise: Durchlaufen aller Knoten eines TreeView-Steuerelements in Windows Forms
-Es ist manchmal hilfreich, jeden Knoten in einem Windows Forms <xref:System.Windows.Forms.TreeView> -Steuerelement zu untersuchen, um eine Berechnung der Knotenwerte auszuführen. Dieser Vorgang kann über eine rekursive Prozedur (rekursive Methode in C# und C++) ausgeführt werden, die jeden Knoten in jeder Auflistung der Struktur durchläuft.  
+# <a name="how-to-iterate-through-all-nodes-of-a-windows-forms-treeview-control"></a>Gewusst wie: Durchlaufen aller Knoten eines TreeView-Steuerelements in Windows Forms
+Es ist manchmal hilfreich, jeden Knoten in einem Windows Forms <xref:System.Windows.Forms.TreeView>-Steuerelement zu untersuchen, um eine Berechnung der Knotenwerte durchzuführen. Dieser Vorgang kann über eine rekursive Prozedur (rekursive Methode in C# und C++) ausgeführt werden, die jeden Knoten in jeder Auflistung der Struktur durchläuft.  
   
- Jedes <xref:System.Windows.Forms.TreeNode> Objekt in einer Strukturansicht verfügt über Eigenschaften, mit denen Sie in der Strukturansicht navigieren <xref:System.Windows.Forms.TreeNode.FirstNode%2A>können <xref:System.Windows.Forms.TreeNode.LastNode%2A>: <xref:System.Windows.Forms.TreeNode.NextNode%2A>, <xref:System.Windows.Forms.TreeNode.PrevNode%2A>,, <xref:System.Windows.Forms.TreeNode.Parent%2A>und. Der Wert <xref:System.Windows.Forms.TreeNode.Parent%2A> der-Eigenschaft ist der übergeordnete Knoten des aktuellen Knotens. Die untergeordneten Knoten des aktuellen Knotens (sofern vorhanden) werden in der <xref:System.Windows.Forms.TreeNode.Nodes%2A> -Eigenschaft aufgelistet. Das <xref:System.Windows.Forms.TreeView> -Steuerelement verfügt <xref:System.Windows.Forms.TreeView.TopNode%2A> über die-Eigenschaft, die den Stamm Knoten der gesamten Strukturansicht enthält.  
+ Jedes <xref:System.Windows.Forms.TreeNode> Objekt in einer Strukturansicht verfügt über Eigenschaften, mit denen Sie in der Strukturansicht navigieren können: <xref:System.Windows.Forms.TreeNode.FirstNode%2A>, <xref:System.Windows.Forms.TreeNode.LastNode%2A>, <xref:System.Windows.Forms.TreeNode.NextNode%2A>, <xref:System.Windows.Forms.TreeNode.PrevNode%2A>und <xref:System.Windows.Forms.TreeNode.Parent%2A>. Der Wert der <xref:System.Windows.Forms.TreeNode.Parent%2A>-Eigenschaft ist der übergeordnete Knoten des aktuellen Knotens. Die untergeordneten Knoten des aktuellen Knotens (sofern vorhanden) werden in der <xref:System.Windows.Forms.TreeNode.Nodes%2A>-Eigenschaft aufgelistet. Das <xref:System.Windows.Forms.TreeView> Steuerelement selbst verfügt über die <xref:System.Windows.Forms.TreeView.TopNode%2A>-Eigenschaft, die der Stamm Knoten der gesamten Strukturansicht ist.  
   
 ### <a name="to-iterate-through-all-nodes-of-the-treeview-control"></a>So durchlaufen Sie alle Knoten des TreeView-Steuerelements  
   
@@ -28,7 +28,7 @@ Es ist manchmal hilfreich, jeden Knoten in einem Windows Forms <xref:System.Wind
   
 2. Rufen Sie die Prozedur auf.  
   
-     Im folgenden Beispiel wird gezeigt, wie die <xref:System.Windows.Forms.TreeNode> -Eigenschaft <xref:System.Windows.Forms.TreeNode.Text%2A> jedes-Objekts gedruckt wird:  
+     Im folgenden Beispiel wird gezeigt, wie die <xref:System.Windows.Forms.TreeNode.Text%2A> Eigenschaft jedes <xref:System.Windows.Forms.TreeNode> Objekts gedruckt wird:  
   
     ```vb  
     Private Sub PrintRecursive(ByVal n As TreeNode)  

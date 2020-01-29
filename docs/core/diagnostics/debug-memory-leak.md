@@ -3,16 +3,16 @@ title: 'Tutorial: Debuggen eines Arbeitsspeicherverlusts'
 description: Erfahren Sie, wie Sie einen Arbeitsspeicherverlust in .NET Core debuggen.
 ms.topic: tutorial
 ms.date: 12/17/2019
-ms.openlocfilehash: cb137503cbc81f5ab9438dadcf1dc1c6750a1ca8
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 014945394f87edd02c94f7c3b28043bd07470d8b
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75715603"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76737727"
 ---
 # <a name="tutorial-debug-a-memory-leak-in-net-core"></a>Tutorial: Debuggen eines Arbeitsspeicherverlusts in .NET Core
 
-**Dieser Artikel gilt für: ✓** .NET Core 3.0 SDK und neuere Versionen
+**Dieser Artikel gilt für:** ✔️ .NET Core 3.0 SDK und neuere Versionen
 
 In diesem Tutorial werden die Tools zum Analysieren eines .NET Core-Arbeitsspeicherverlusts vorgestellt.
 

@@ -2,12 +2,12 @@
 title: Abhängigkeiten und .NET-Bibliotheken
 description: Hier finden Sie Empfehlungen zu Best Practices für die Verwaltung von NuGet-Abhängigkeiten in .NET-Bibliotheken.
 ms.date: 10/02/2018
-ms.openlocfilehash: b5742bf4724c4aff4beb4ca40a543bd096528a00
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 6a260b54c45a0cd231059ab3bc6f2707ef7fb20e
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75706503"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76731481"
 ---
 # <a name="dependencies"></a>Abhängigkeiten
 
@@ -29,7 +29,7 @@ Die meisten Rautenabhängigkeiten lassen sich recht einfach auflösen. Unter bes
 
 Es ist unmöglich zu bestimmen, welche Pakete neben Ihrem eigenen noch verwendet werden. Eine gute Möglichkeit, die Wahrscheinlichkeit von Rautenabhängigkeiten für Ihre Bibliothek zu senken, besteht darin, die Anzahl von benötigten Paketen zu reduzieren.
 
-**✔️ ÜBERPRÜFEN** Sie Ihre .NET-Bibliothek auf unnötige Abhängigkeiten.
+✔️ Überprüfen Sie Ihre .NET-Bibliothek auf unnötige Abhängigkeiten.
 
 ## <a name="nuget-dependency-version-ranges"></a>Versionsbereiche bei NuGet-Abhängigkeiten
 
@@ -56,11 +56,11 @@ Obergrenzen für Versionen verursachen einen Fehler in NuGet, wenn ein Konflikt 
 
 ![Rautenabhängigkeitskonflikt](./media/dependencies/diamond-dependency-conflict.png "Rautenabhängigkeitskonflikt")
 
-**❌ VERWENDEN SIE KEINE** NuGet-Paketverweise ohne Mindestversion.
+❌ Verwenden Sie keine NuGet-Paketverweise ohne Mindestversion.
 
-**❌VERMEIDEN** Sie NuGet-Paketverweise, die eine exakte Version erfordern.
+❌ Vermeiden Sie NuGet-Paketverweise, die eine exakte Version erfordern.
 
-**❌ VERMEIDEN** Sie NuGet-Paketverweise mit Angabe einer Höchstversion.
+❌ Vermeiden Sie NuGet-Paketverweise mit Angabe einer Höchstversion.
 
 ## <a name="nuget-shared-source-packages"></a>NuGet-Pakete mit freigegebenen Quellen
 
@@ -78,19 +78,19 @@ Pakete mit freigegebenen Quellen eignen sich hervorragend für kleine Funktionst
 
 Pakete mit freigegebenen Quellen weisen einige Einschränkungen auf. Auf sie kann nur durch `PackageReference` verwiesen werden, ältere `packages.config`-Projekte sind also ausgeschlossen. Pakete mit freigegebenen Quellen können nur von Paketen mit dem gleichen Sprachtyp verwendet werden. Aufgrund dieser Einschränkungen eignen sich Pakete mit freigegebenen Quellen am besten für die Freigabe von Funktionen in einem Open Source-Projekt.
 
-**✔️ ERWÄGEN** Sie Verweise auf freigegebene Quellen für kleine, interne Funktionsteile.
+✔️ Erwägen Sie Verweise auf freigegebene Quellen für kleine, interne Funktionsteile.
 
-**✔️ ERWÄGEN** Sie die Festlegung Ihres Pakets als Paket mit freigegebenen Quellen, wenn es kleine, interne Funktionsteile bereitstellt.
+✔️ Erwägen Sie, Ihr Paket als Paket mit freigegebenen Quellen festzulegen, wenn es kleine, interne Funktionsteile bereitstellt.
 
-**✔️ VERWEISEN** Sie mit `PrivateAssets="All"` auf Pakete mit freigegebenen Quellen.
+✔️ Verweisen Sie mit `PrivateAssets="All"` auf Pakete mit freigegebenen Quellen.
 
 > Diese Einstellung informiert NuGet darüber, dass das Paket nur während der Entwicklung verwendet werden soll und nicht als öffentliche Abhängigkeit verfügbar gemacht werden darf.
 
-**❌ VERWENDEN SIE KEINE** Pakettypen mit freigegebenen Quellen in Ihrer öffentlichen API.
+❌ Verwenden Sie in Ihrer öffentlichen API keine Pakettypen mit freigegebenen Quellen.
 
 > Pakettypen mit freigegebenen Quellen werden in die verweisende Assembly kompiliert und können nicht über Assemblygrenzen hinweg ausgetauscht werden. Ein `IRepository`-Typ mit freigegebenen Quellen in einem Projekt ist ein anderer Typ als der gleiche `IRepository`-Typ mit freigegebenen Quellen in einem anderen Projekt. Für Typen in Paketen mit freigegebenen Quellen sollte die Sichtbarkeit auf `internal` festgelegt werden.
 
-**❌ VERÖFFENTLICHEN SIE KEINE** Pakete mit freigegebenen Quellen in NuGet.org.
+❌ Veröffentlichen Sie keine Pakete mit freigegebenen Quellen in NuGet.org.
 
 > Pakete mit freigegebenen Quellen enthalten Quellcode und können nur von Projekten mit dem gleichen Sprachtyp verwendet werden. Ein in C# geschriebenes Paket mit freigegebenen Quellen kann z.B. nicht von einer F#-Anwendung verwendet werden.
 >

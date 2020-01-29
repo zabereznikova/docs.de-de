@@ -1,5 +1,5 @@
 ---
-title: Erstellen eines InkCanvas in einer WPF-App in Visual Studio
+title: Erstellen von InkCanvas in Visual Studio
 ms.date: 08/15/2018
 dev_langs:
 - csharp
@@ -9,22 +9,22 @@ helpviewer_keywords:
 - XAML [WPF], procedural code in lieu of
 - InkCanvas (WPF)
 ms.assetid: 760332dd-594a-475d-865b-01659db8cab7
-ms.openlocfilehash: ebbf25037921e7802b2bfcb6ffa562d16a849ffa
-ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
+ms.openlocfilehash: b8087d6db04f7024b9ee48f28002bee04045a14b
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72920252"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76737890"
 ---
 # <a name="get-started-with-ink-in-wpf"></a>Ersten Einstieg in WPF
 
 Windows Presentation Foundation (WPF) verfügt über eine Ink-Funktion, die das Integrieren von digitalem frei Hand Eingaben in Ihre APP erleichtert.
 
-## <a name="prerequisites"></a>Erforderliche Voraussetzungen
+## <a name="prerequisites"></a>Erforderliche Komponenten
 
 Wenn Sie die folgenden Beispiele verwenden möchten, installieren Sie zunächst [Visual Studio](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019). Außerdem ist es hilfreich zu wissen, wie Sie grundlegende WPF-apps schreiben können. Hilfe zu den ersten Schritten mit WPF finden Sie unter Exemplarische Vorgehensweise [: meine erste WPF-Desktop Anwendung](../getting-started/walkthrough-my-first-wpf-desktop-application.md).
 
-## <a name="quick-start"></a>Schnellstart
+## <a name="quick-start"></a>-Schnelleinstieg
 
 Dieser Abschnitt unterstützt Sie beim Schreiben einer einfachen WPF-Anwendung, die frei Hand Eingaben sammelt.
 
@@ -32,7 +32,7 @@ Dieser Abschnitt unterstützt Sie beim Schreiben einer einfachen WPF-Anwendung, 
 
 So erstellen Sie eine WPF-App, die frei Hand Eingaben unterstützt
 
-1. Öffnen Sie Visual Studio.
+1. Öffnen Sie Visual Studio.
 
 2. Erstellen Sie eine neue **WPF-App**.
 

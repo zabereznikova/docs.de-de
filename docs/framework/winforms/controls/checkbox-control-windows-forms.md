@@ -1,5 +1,5 @@
 ---
-title: CheckBox-Steuerelement (Windows Forms)
+title: CheckBox-Steuerelement
 ms.date: 03/30/2017
 helpviewer_keywords:
 - checked list items [Windows Forms], Windows Forms controls
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - checked list items
 - check boxes
 ms.assetid: 0719d798-c307-40d3-9040-72a62679c227
-ms.openlocfilehash: 207f8f884e8382614bf7d6cbc4a628d98fb3542b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e0a1b2aa16db2ad78f7f16d9bf4819e24c04fa86
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61956324"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76737076"
 ---
 # <a name="checkbox-control-windows-forms"></a>CheckBox-Steuerelement (Windows Forms)
 Das Windows Forms-Steuerelement `CheckBox` zeigt an, ob eine bestimmte Bedingung aktiviert oder deaktiviert ist. Es wird häufig verwendet, um dem Benutzer eine Ja/Nein- oder Wahr/Falsch-Auswahl zu präsentieren. Sie können Kontrollkästchen-Steuerelemente in Gruppen verwenden, um mehrere Optionen anzuzeigen, unter denen der Benutzer eine oder mehrere auswählen kann. Es ähnelt dem <xref:System.Windows.Forms.RadioButton>-Steuerelement, jedoch kann eine beliebige Anzahl von gruppierten `CheckBox`-Steuerelementen ausgewählt werden.  
@@ -23,10 +23,10 @@ Das Windows Forms-Steuerelement `CheckBox` zeigt an, ob eine bestimmte Bedingung
  [Übersicht über das CheckBox-Steuerelement](checkbox-control-overview-windows-forms.md)  
  Hier werden das Steuerelement und seine wichtigsten Funktionen und Eigenschaften erläutert.  
   
- [Vorgehensweise: Reagieren Sie auf Windows Forms das Klicken auf Kontrollkästchen](how-to-respond-to-windows-forms-checkbox-clicks.md)  
+ [Gewusst wie: Reagieren auf das Klicken auf Kontrollkästchen in Windows Forms](how-to-respond-to-windows-forms-checkbox-clicks.md)  
  Erklärt, wie Sie mithilfe eines Kontrollkästchens die Aktionen Ihrer Anwendung bestimmen.  
   
- [Vorgehensweise: Festlegen von Optionen mit CheckBox-Steuerelementen für Windows Forms](how-to-set-options-with-windows-forms-checkbox-controls.md)  
+ [Gewusst wie: Festlegen von Optionen mit CheckBox-Steuerelementen in Windows Forms](how-to-set-options-with-windows-forms-checkbox-controls.md)  
  Beschreibt, wie Sie mithilfe eines Kontrollkästchens Optionen wie die Eigenschaften eines Objekts festlegen.  
   
 ## <a name="reference"></a>Referenz  

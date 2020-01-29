@@ -2,12 +2,12 @@
 title: Leitfaden zur Open Source-Bibliothek für .NET
 description: Empfehlungen für bewährte Methoden für Entwickler zum Erstellen von qualitativ hochwertigen .NET-Bibliotheken
 ms.date: 10/17/2018
-ms.openlocfilehash: c1e1c302eede86fd5555a8e84630e216e96f1ce7
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 4c76dfae6ffc39df7f15381be64e33657067d79d
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75706451"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76731428"
 ---
 # <a name="open-source-library-guidance"></a>Leitfaden für die Open Source-Bibliothek
 
@@ -32,19 +32,19 @@ Jeder Artikel enthält vier Empfehlungstypen: **Do**, **Erwägen**, **Vermeiden*
 
 Eine **Do**-Empfehlung sollten Sie fast immer befolgen. Zum Beispiel:
 
-**✔️ DO** Verteilen Sie Ihre Bibliothek mithilfe eines NuGet-Pakets.
+✔️ DO Verteilen Sie Ihre Bibliothek mithilfe eines NuGet-Pakets.
 
 Andererseits gibt es Empfehlungen, die Sie **erwägen** sollten. Berechtigte Ausnahmen bestätigen jedoch die Regel, und es ist auch nicht weiter schlimm, wenn Sie die folgende Anweisung nicht befolgen:
 
-**✔️ ERWÄGEN** Sie, [SemVer 2.0.0](https://semver.org/) für die Versionskontrolle Ihres NuGet-Pakets zu verwenden.
+✔️ ERWÄGEN Sie, [SemVer 2.0.0](https://semver.org/) für die Versionskontrolle Ihres NuGet-Pakets zu verwenden.
 
 Empfehlungen hinsichtlich **Vermeiden** geben Dinge an, die allgemein als keine gute Idee angesehen werden, jedoch kann das Brechen dieser Regel manchmal auch sinnvoll sein:
 
-**❌VERMEIDEN** Sie NuGet-Paketverweise, die eine exakte Version erfordern.
+❌ VERMEIDEN Sie NuGet-Paketverweise, die eine exakte Version erfordern.
 
 Schließlich kennzeichnen **Do not**-Empfehlungen Vorgänge, die Sie niemals ausführen sollten:
 
-**❌ NICHT** die Versionen mit oder ohne starkem Namen Ihrer Bibliothek veröffentlichen. Beispiel: `Contoso.Api` und `Contoso.Api.StrongNamed`.
+❌ Veröffentlichen Sie NICHT die Versionen Ihrer Bibliothek mit oder ohne starkem Namen. Beispiel: `Contoso.Api` und `Contoso.Api.StrongNamed`.
 
 >[!div class="step-by-step"]
 >[Nächste](get-started.md)

@@ -1317,14 +1317,15 @@
           items:
             - name: Werttypen
               items:
-                - name: Funktionen von Werttypen
-                  href: language-reference/keywords/value-types.md
+                - name: Übersicht
+                  href: language-reference/builtin-types/value-types.md
+                  displayName: 'value types, simple types'
                 - name: Integrale numerische Typen
-                  displayName: 'sbyte, byte, short, ushort, int, uint, long, ulong, integer, literal'
                   href: language-reference/builtin-types/integral-numeric-types.md
+                  displayName: 'sbyte, byte, short, ushort, int, uint, long, ulong, integer, literal'
                 - name: Numerische Gleitkommatypen
-                  displayName: 'float, decimal, double, rational, real, literal'
                   href: language-reference/builtin-types/floating-point-numeric-types.md
+                  displayName: 'float, decimal, double, rational, real, literal'
                 - name: Integrierte numerischer Konvertierungen
                   href: language-reference/builtin-types/numeric-conversions.md
                 - name: bool
@@ -1364,8 +1365,6 @@
               items:
                 - name: Tabelle integrierter Typen
                   href: language-reference/keywords/built-in-types-table.md
-                - name: Tabelle der Werttypen
-                  href: language-reference/keywords/value-types-table.md
                 - name: Tabelle zur Formatierung numerischer Ergebnisse
                   href: language-reference/keywords/formatting-numeric-results-table.md
         - name: Modifizierer

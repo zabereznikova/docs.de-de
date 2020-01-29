@@ -1,5 +1,5 @@
 ---
-title: Sicherheit in Windows Forms
+title: Sicherheit
 ms.date: 03/30/2017
 helpviewer_keywords:
 - designer access security [Windows Forms]
@@ -9,53 +9,53 @@ helpviewer_keywords:
 - access control [Windows Forms], Windows Forms
 - security policy [Windows Forms], Windows Forms
 ms.assetid: 932d438a-5285-46d8-a958-8c93d0ad6cae
-ms.openlocfilehash: f64d5ef2e9bb0e977b4c007e8c5109ac0c331a84
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a3debf487b9b2a04277d9ce3007f28662fa4899e
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61799371"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76734499"
 ---
 # <a name="windows-forms-security"></a>Sicherheit in Windows Forms
-Windows Forms bietet ein Sicherheitsmodell, das festgelegte Ebenen für Code, unabhängig von der Benutzer, den Code ausführt codebasierten (Sicherheit) ist. Dies erfolgt zusätzlich zu Sicherheit Schemas, die bereits auf Ihrem Computer werden. Diese können in den Browser (z. B. die Zone-basierten Sicherheit in Internet Explorer verfügbar) oder des Betriebssystems (z.B. die Anmeldeinformationen-basierte Sicherheit von Windows NT) beinhalten.  
+Windows Forms verfügt über ein Code basiertes Sicherheitsmodell (Sicherheitsstufen werden für Code festgelegt, unabhängig davon, welcher Benutzer den Code ausführen muss). Dies gilt zusätzlich zu allen Sicherheits Schemas, die möglicherweise bereits auf Ihrem Computersystem vorhanden sind. Diese können die im Browser (z. b. die zonenbasierte Sicherheit in Internet Explorer) oder das Betriebssystem (z. b. die auf Anmelde Informationen basierende Sicherheit von Windows NT) enthalten.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Übersicht über die Sicherheit in Windows Forms](security-in-windows-forms-overview.md)  
- Wird kurz erläutert, dass das .NET Framework-Sicherheitsmodell und die grundlegenden Schritte erforderlich, um sicherzustellen, dass die Windows-Formulare in Ihrer Anwendung sicher sind.  
+ Erläutert kurz das .NET Framework Sicherheitsmodell und die grundlegenden Schritte, die erforderlich sind, um sicherzustellen, dass die Windows Forms in Ihrer Anwendung sicher sind.  
   
  [Mehr Sicherheit beim Datei- und Datenzugriff in Windows Forms](more-secure-file-and-data-access-in-windows-forms.md)  
- Beschreibt, wie Zugriff auf Dateien und Daten in einer teilweise vertrauenswürdigen Umgebung.  
+ Beschreibt, wie in einer teilweise vertrauenswürdigen Umgebung auf Dateien und Daten zugegriffen wird.  
   
  [Mehr Sicherheit beim Drucken in Windows Forms](more-secure-printing-in-windows-forms.md)  
- Beschreibt das Drucken-Funktionen in einer teilweise vertrauenswürdigen Umgebung zugreifen.  
+ Hier wird beschrieben, wie Sie in einer teilweise vertrauenswürdigen Umgebung auf Druck Features zugreifen.  
   
  [Weitere Überlegungen zur Sicherheit in Windows Forms](additional-security-considerations-in-windows-forms.md)  
- Beschreibt, Fenstern, verwenden die Zwischenablage, und das Aufrufen von nicht verwaltetem Code in einer teilweise vertrauenswürdigen Umgebung.  
+ Beschreibt das Ausführen von Fenster Manipulationen, das Verwenden der Zwischenablage und das Aufrufen von nicht verwaltetem Code in einer teilweise vertrauenswürdigen Umgebung.  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
- [Standard-Sicherheitsrichtlinie](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/03kwzyfc(v=vs.100))  
- Listet die Standardberechtigungen, die in die Berechtigungssätze für volle Vertrauenswürdigkeit, Lokales Intranet und Internet.  
+ [Standard Sicherheitsrichtlinie](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/03kwzyfc(v=vs.100))  
+ Listet die Standard Berechtigungen auf, die in den Berechtigungs Sätzen Full Trust, local Intranet und Internet erteilt wurden.  
   
- [Verwaltung der Sicherheitsrichtlinien Allgemein](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ed5htz45(v=vs.100))  
- Enthält Informationen über die Verwaltung von der .NET Framework-Sicherheitsrichtlinie und erhöhen von Berechtigungen.  
+ [Allgemeine Verwaltung von Sicherheitsrichtlinien](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ed5htz45(v=vs.100))  
+ Enthält Informationen über die Verwaltung der .NET Framework Sicherheitsrichtlinie und die Erhöhung der Berechtigungen.  
   
- [Problematische Berechtigungen und Verwaltung von Gruppenrichtlinien](../misc/dangerous-permissions-and-policy-administration.md)  
- Erläutert einige der.NET Framework-Berechtigungen, die potenziell das Sicherheitssystem, umgangen werden können.  
+ [Gefährliche Berechtigungen und Richtlinien Verwaltung](../misc/dangerous-permissions-and-policy-administration.md)  
+ Erläutert einige der The.NET Framework-Berechtigungen, die möglicherweise eine Umgehung des Sicherheitssystems ermöglichen.  
   
  [Richtlinien für das Schreiben von sicherem Code](../../standard/security/secure-coding-guidelines.md)  
- Enthält Links zu Themen, in denen die bewährten Methoden zum Schreiben von sicheren Code mit .NET Framework.  
+ Links zu Themen, in denen die bewährten Methoden zum sicheren Schreiben von Code für die .NET Framework erläutert werden.  
   
  [Anfordern von Berechtigungen](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/yd267cce(v=vs.100))  
- Erläutert die Verwendung von Attributen, die die Laufzeit Berechtigungen zu ermitteln, der Code ausführen muss, können.  
+ Erläutert die Verwendung von Attributen, um der Laufzeit mitzuteilen, welche Berechtigungen Ihr Code ausführen muss.  
   
  [Schlüsselbegriffe der Sicherheit](../../standard/security/key-security-concepts.md)  
- Links zu Themen, die die grundlegenden Aspekte der Codezugriffssicherheit abdecken.  
+ Links zu Themen, in denen die grundlegenden Aspekte der Code Sicherheit behandelt werden.  
   
  [Grundlagen der Codezugriffssicherheit](../misc/code-access-security-basics.md)  
- Erläutert die Grundlagen der Arbeit mit der .NET Framework-Sicherheitsrichtlinie Zeit ausführen.  
+ Erläutert die Grundlagen der Arbeit mit der Sicherheitsrichtlinie für die .NET Framework Laufzeit.  
   
- [Wann die Sicherheitsrichtlinie ändern](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/xky659fc(v=vs.100))  
- Erläutert, wie Sie ermitteln, wenn Ihre Anwendungen von der Standardsicherheitsrichtlinie voneinander abweichen müssen.  
+ [Festlegen, wann die Sicherheitsrichtlinie geändert werden soll](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/xky659fc(v=vs.100))  
+ Erläutert, wie Sie ermitteln können, wann Ihre Anwendungen von der Standard Sicherheitsrichtlinie abweichen müssen.  
   
  [Bereitstellen von Sicherheitsrichtlinien](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/13wcxx6y(v=vs.100))  
- Erläutert die beste Art und Weise für die Bereitstellung von Änderungen von Sicherheitsrichtlinien an.
+ Erläutert die beste Vorgehensweise zum Bereitstellen von Sicherheitsrichtlinien Änderungen.

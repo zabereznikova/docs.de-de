@@ -1,34 +1,34 @@
 ---
-title: Automatische Skalierung in Windows Forms
+title: Automatische Skalierung
 ms.date: 06/15/2017
 helpviewer_keywords:
 - scalability [Windows Forms], automatic in Windows Forms
 - Windows Forms, automatic scaling
 ms.assetid: 68fad25b-afbc-44bd-8e1b-966fc43507a4
-ms.openlocfilehash: f8afece073076b9ae94faaba8477f2a13e11b295
-ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
+ms.openlocfilehash: 96dbbb5ed20027e25f1bde89748710766ec06506
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67268082"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76732374"
 ---
 # <a name="automatic-scaling-in-windows-forms"></a>Automatische Skalierung in Windows Forms
 
-Die automatische Skalierung ermöglicht, dass ein Formular und seine Steuerelemente, die auf einem Computer mit einer bestimmten Bildschirmauflösung oder Systemschriftart entworfen wurden, ordnungsgemäß auf einem anderen Computer angezeigt werden, der eine andere Bildschirmauflösung oder Systemschriftart hat. Durch sie wird sichergestellt, dass die Größen des Formulars und seiner Steuerelemente intelligent geändert werden, sodass diese sowohl auf den Computern von Benutzern als auch auf denen von anderen Entwicklern konsistent zu systemeigenen Fenstern sowie anderen Anwendungen sind. Die Unterstützung von .NET Framework für die automatische Skalierung und visuelle Stile aktiviert .NET Framework-Anwendungen ein konsistentes Aussehen und Verhalten im Vergleich zu systemeigenen Windows-Anwendungen auf dem Computer jedes Benutzers zu verwalten.
+Die automatische Skalierung ermöglicht, dass ein Formular und seine Steuerelemente, die auf einem Computer mit einer bestimmten Bildschirmauflösung oder Systemschriftart entworfen wurden, ordnungsgemäß auf einem anderen Computer angezeigt werden, der eine andere Bildschirmauflösung oder Systemschriftart hat. Durch sie wird sichergestellt, dass die Größen des Formulars und seiner Steuerelemente intelligent geändert werden, sodass diese sowohl auf den Computern von Benutzern als auch auf denen von anderen Entwicklern konsistent zu systemeigenen Fenstern sowie anderen Anwendungen sind. Durch die Unterstützung der .NET Framework für die automatische Skalierung und visuelle Stile können .NET Framework Anwendungen im Vergleich zu systemeigenen Windows-Anwendungen auf den Computern der einzelnen Benutzer ein konsistentes Aussehen und Gefühl gewährleisten.
 
-Zum größten Teil, erwartet funktioniert die automatische Skalierung als in .NET Framework-Version, 2.0 und höher. Änderungen des Schriftartenschemas können jedoch problematisch sein. Ein Beispiel dafür, wie zum Beheben dieses Problems finden Sie unter [Vorgehensweise: Reagieren auf Änderungen des Schriftartenschemas in einer Windows Forms-Anwendung](how-to-respond-to-font-scheme-changes-in-a-windows-forms-application.md).
+Zum größten Teil funktioniert die automatische Skalierung in .NET Framework Version 2,0 und höher erwartungsgemäß. Änderungen des Schriftartenschemas können jedoch problematisch sein. Ein Beispiel dazu, wie Sie dieses Problem beheben können, finden Sie unter Gewusst [wie: reagieren auf Änderungen an Schriftart Schemas in einer Windows Forms Anwendung](how-to-respond-to-font-scheme-changes-in-a-windows-forms-application.md).
 
-## <a name="need-for-automatic-scaling"></a>Erforderlich für die automatische Skalierung
+## <a name="need-for-automatic-scaling"></a>Automatische Skalierung erforderlich
 
 Ohne automatische Skalierung würde eine Anwendung, die für eine bestimmte Bildschirmauflösung oder Schriftart entworfen wurde, entweder zu klein oder zu groß angezeigt, wenn diese Auflösung oder Schriftart geändert wird. Wurde die Anwendung beispielsweise mit Tahoma 9 Punkt als Basis entworfen, würde sie ohne Anpassung zu klein angezeigt, wenn sie auf einem Computer ausgeführt würde, der die Systemschriftart Tahoma 12 Punkt hat. Textelemente wie Titel, Menüs, Textfeldinhalt usw. werden kleiner gerendert als andere Anwendungen. Darüber hinaus richtet sich die Größe der Benutzeroberflächenelemente, die Text enthalten, etwa die Titelleiste, Menüs und viele Steuerelemente, nach der verwendeten Schriftart. In diesem Beispiel werden diese Elemente zusätzlich relativ kleiner angezeigt.
 
-Die gleiche Situation ergibt sich, wenn eine Anwendung für eine bestimmte Bildschirmauflösung entworfen wurde. Die häufigste Bildschirmauflösung ist 96 dpi (Dots per Inch), die gleich 100 % anzeigeskalierung, aber höhere Auflösung angezeigt, die Unterstützung von 125 %, 150 %, 200 % (die jeweils gleich 120, 144 und Unterstützung von 192 DPI) und höher werden immer häufiger. Ohne Anpassung wird eine Anwendung, insbesondere eine Grafikanwendung, die für eine bestimme Auflösung entworfen wurde, entweder zu groß oder zu klein angezeigt, wenn sie mit einer anderen Auflösung ausgeführt wird.
+Die gleiche Situation ergibt sich, wenn eine Anwendung für eine bestimmte Bildschirmauflösung entworfen wurde. Die häufigste Bildschirmauflösung ist 96 Punkte pro Zoll (dpi), die eine Anzeige Skalierung von 100% gleich ist, aber eine höhere Auflösung zeigt die Unterstützung von 125%, 150%, 200% (jeweils gleich 120, 144 und 192 dpi) und höher wird immer häufiger. Ohne Anpassung wird eine Anwendung, insbesondere eine Grafikanwendung, die für eine bestimme Auflösung entworfen wurde, entweder zu groß oder zu klein angezeigt, wenn sie mit einer anderen Auflösung ausgeführt wird.
 
-Mit der automatischen Skalierung lassen sich diese Probleme abschwächen, indem die Größen des Formulars und seiner untergeordneten Steuerelemente entsprechend der relativen Schriftgröße oder Bildschirmauflösung geändert werden. Windows unterstützt die automatische Skalierung von Dialogfeldern durch Verwenden einer relativen Maßeinheit, die als Dialogeinheiten bezeichnet wird. Eine Dialogeinheit basiert auf der Systemschriftart, und ihre Beziehung zu Pixeln kann über die Win32 SDK-Funktion `GetDialogBaseUnits` bestimmt werden. Wenn ein Benutzer das von Windows verwendete Design ändert, werden alle Dialogfelder automatisch entsprechend angepasst. Darüber hinaus unterstützt .NET Framework, automatische Skalierung entweder entsprechend der Standardsystemschriftart oder Auflösung. Optional kann die automatische Skalierung in einer Anwendung deaktiviert werden.
+Mit der automatischen Skalierung lassen sich diese Probleme abschwächen, indem die Größen des Formulars und seiner untergeordneten Steuerelemente entsprechend der relativen Schriftgröße oder Bildschirmauflösung geändert werden. Windows unterstützt die automatische Skalierung von Dialogfeldern durch Verwenden einer relativen Maßeinheit, die als Dialogeinheiten bezeichnet wird. Eine Dialogeinheit basiert auf der Systemschriftart, und ihre Beziehung zu Pixeln kann über die Win32 SDK-Funktion `GetDialogBaseUnits` bestimmt werden. Wenn ein Benutzer das von Windows verwendete Design ändert, werden alle Dialogfelder automatisch entsprechend angepasst. Außerdem unterstützt der .NET Framework die automatische Skalierung gemäß der Standardsystem Schriftart oder der Bildschirmauflösung. Optional kann die automatische Skalierung in einer Anwendung deaktiviert werden.
 
 ## <a name="original-support-for-automatic-scaling"></a>Ursprüngliche Unterstützung für die automatische Skalierung
 
-Die Versionen 1.0 und 1.1 von .NET Framework unterstützt automatische Skalierung auf einfache Weise, die von der für die Benutzeroberfläche, dargestellt durch den Win32 SDK-Wert verwendeten Windows-Standardschriftart abhängt **DEFAULT_GUI_FONT**. Diese Schriftart wird normalerweise nur geändert, wenn sich die Bildschirmauflösung ändert. Der folgende Mechanismus wurde verwendet, um die automatische Skalierung zu implementieren:
+In den Versionen 1,0 und 1,1 des .NET Framework wird die automatische Skalierung auf einfache Weise unterstützt, die von der Windows-Standard Schriftart abhängig ist, die für die Benutzeroberfläche verwendet wird, dargestellt durch den Win32 SDK-Wert **DEFAULT_GUI_FONT**. Diese Schriftart wird normalerweise nur geändert, wenn sich die Bildschirmauflösung ändert. Der folgende Mechanismus wurde verwendet, um die automatische Skalierung zu implementieren:
 
 1. Zur Entwurfszeit wurde die <xref:System.Windows.Forms.Form.AutoScaleBaseSize%2A>-Eigenschaft (die jetzt veraltet ist) auf die Höhe und die Breite der Systemstandardschriftart des Entwicklercomputers festgelegt.
 
@@ -40,30 +40,30 @@ Die Versionen 1.0 und 1.1 von .NET Framework unterstützt automatische Skalierun
 
 Während dieser Mechanismus für die meisten Zwecke ausreichend war, brachte er folgenden Einschränkungen mit sich:
 
-- Da die <xref:System.Windows.Forms.Form.AutoScaleBaseSize%2A> Eigenschaft steht für den Baseline-Schriftgrad als ganze Zahlen, treten Rundungsfehler auf, die offensichtlich werden, wenn ein Formular mehrere Auflösungen durchlaufen hat.
+- Da die <xref:System.Windows.Forms.Form.AutoScaleBaseSize%2A>-Eigenschaft den Baseline-Schrift Grad als ganzzahlige Werte darstellt, treten Rundungsfehler auf, die deutlich werden, wenn ein Formular durch mehrere Auflösungen durchlaufen wird.
 
 - Automatische Skalierung war nur in der <xref:System.Windows.Forms.Form>-Klasse, nicht in der <xref:System.Windows.Forms.ContainerControl>-Klasse implementiert. Daher wurden Benutzersteuerelemente nur ordnungsgemäß skaliert, wenn das Benutzersteuerelement mit derselben Auflösung wie das Formular entworfen und zur Entwurfszeit im Formular positioniert wurde.
 
 - Formulare und deren untergeordneten Steuerelemente konnten nur dann gleichzeitig von mehreren Entwicklern gestaltet werden, wenn die Bildschirmauflösungen ihrer Computer identisch waren. Dies bedingte außerdem, dass das Erben durch ein Formular von der Auflösung abhängig war, die dem übergeordneten Formular zugeordnet war.
 
-- Es ist nicht kompatibel mit neueren Layout-Managern, die mit .NET Framework, Version 2.0, eingeführt wurde, z. B. <xref:System.Windows.Forms.FlowLayoutPanel> und <xref:System.Windows.Forms.TableLayoutPanel>.
+- Sie ist nicht mit den neueren Layout-Managern kompatibel, die mit der .NET Framework Version 2,0 eingeführt wurden, z. b. <xref:System.Windows.Forms.FlowLayoutPanel> und <xref:System.Windows.Forms.TableLayoutPanel>.
 
-- Unterstützte keine Skalierung direkt auf die Bildschirmauflösung, die für Kompatibilität mit .NET Compact Framework erforderlich ist.
+- Die Skalierung auf Basis der Bildschirmauflösung, die für die Kompatibilität mit dem .NET Compact Framework erforderlich ist, wurde nicht unterstützt.
 
-Obwohl dieser Mechanismus in .NET Framework, Version 2.0 Abwärtskompatibilität beibehalten wird, wurde es durch den robusteren Skalierungsmechanismus beschrieben abgelöst. Als Folge davon sind <xref:System.Windows.Forms.Form.AutoScale%2A>, <xref:System.Windows.Forms.Form.ApplyAutoScaling%2A>, <xref:System.Windows.Forms.Form.AutoScaleBaseSize%2A> und bestimmte <xref:System.Windows.Forms.Control.Scale%2A>-Überladungen als veraltet gekennzeichnet.
+Obwohl dieser Mechanismus in der .NET Framework Version 2,0 beibehalten wird, um die Abwärtskompatibilität zu gewährleisten, wurde er durch den stabileren Skalierungs Mechanismus ersetzt, der als nächstes beschrieben wird. Als Folge davon sind <xref:System.Windows.Forms.Form.AutoScale%2A>, <xref:System.Windows.Forms.Form.ApplyAutoScaling%2A>, <xref:System.Windows.Forms.Form.AutoScaleBaseSize%2A> und bestimmte <xref:System.Windows.Forms.Control.Scale%2A>-Überladungen als veraltet gekennzeichnet.
 
 > [!NOTE]
-> Sie können Verweise auf diese Member problemlos löschen, wenn Sie Ihren Legacycode auf .NET Framework, Version 2.0 aktualisieren.
+> Sie können Verweise auf diese Member problemlos löschen, wenn Sie Ihren Legacy Code auf die .NET Framework Version 2,0 aktualisieren.
 
 ## <a name="current-support-for-automatic-scaling"></a>Aktuelle Unterstützung für die automatische Skalierung
 
-.NET Framework, Version 2.0 deutlich besser abschneidet zuvor enthaltene Einschränkungen durch die folgenden Änderungen eingeführt, um die automatische Skalierung von Windows Forms:
+In der .NET Framework Version 2,0 werden vorherige Einschränkungen durch die folgenden Änderungen an der automatischen Skalierung der Windows Forms eingeführt:
 
 - Die Grundunterstützung für Skalierung wurde in die <xref:System.Windows.Forms.ContainerControl>-Klasse verschoben, sodass Formulare, systemeigene zusammengesetzte Steuerelemente und Benutzersteuerelemente eine einheitliche Skalierungsunterstützung haben. Die neuen Member <xref:System.Windows.Forms.ContainerControl.AutoScaleFactor%2A>, <xref:System.Windows.Forms.ContainerControl.AutoScaleDimensions%2A>, <xref:System.Windows.Forms.ContainerControl.AutoScaleMode%2A> und <xref:System.Windows.Forms.ContainerControl.PerformAutoScale%2A> wurden hinzugefügt.
 
 - Die <xref:System.Windows.Forms.Control>-Klasse hat außerdem mehrere neue Member, die ihre Mitwirkung an der Skalierung und die Unterstützung der gemischten Skalierung im selben Formular ermöglichen. Insbesondere die Member <xref:System.Windows.Forms.Control.Scale%2A>, <xref:System.Windows.Forms.Control.ScaleChildren%2A> und <xref:System.Windows.Forms.Control.GetScaledBounds%2A> unterstützen die Skalierung.
 
-- Unterstützung für Skalierung auf Basis der Bildschirmauflösung wurde hinzugefügt, um die Unterstützung der Systemschriftarten zu ergänzen, wie dies durch die <xref:System.Windows.Forms.AutoScaleMode>-Enumeration definiert ist. Dieser Modus ist kompatibel mit der automatischen Skalierung von .NET Compact Framework ermöglichen die einfachere Anwendungsmigration unterstützt werden.
+- Unterstützung für Skalierung auf Basis der Bildschirmauflösung wurde hinzugefügt, um die Unterstützung der Systemschriftarten zu ergänzen, wie dies durch die <xref:System.Windows.Forms.AutoScaleMode>-Enumeration definiert ist. Dieser Modus ist mit der automatischen Skalierung kompatibel, die von der .NET Compact Framework unterstützt wird.
 
 - Kompatibilität mit Layout-Managern wie <xref:System.Windows.Forms.FlowLayoutPanel> und <xref:System.Windows.Forms.TableLayoutPanel> wurde der Implementierung der automatischen Skalierung hinzugefügt.
 
@@ -105,4 +105,4 @@ Windows Forms verwendet jetzt die folgende Logik, um Formulare und deren Inhalte
 - <xref:System.Windows.Forms.ContainerControl.PerformAutoScale%2A>
 - <xref:System.Windows.Forms.ContainerControl.AutoScaleDimensions%2A>
 - [Rendering von Steuerelementen mit visuellen Stilen](./controls/rendering-controls-with-visual-styles.md)
-- [Vorgehensweise: Verbessern der Leistung durch Vermeiden der automatischen Skalierung](./advanced/how-to-improve-performance-by-avoiding-automatic-scaling.md)
+- [Gewusst wie: Verbessern der Leistung durch das Vermeiden der automatischen Skalierung](./advanced/how-to-improve-performance-by-avoiding-automatic-scaling.md)

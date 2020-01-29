@@ -1,5 +1,5 @@
 ---
-title: Dokumente in WPF
+title: Dokumente
 ms.date: 03/30/2017
 helpviewer_keywords:
 - documents [WPF], packaging
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - documents [WPF], types of
 - documents [WPF], browser-viewable
 ms.assetid: 6e8db7bc-050a-4070-aa72-bb8c46e87ff8
-ms.openlocfilehash: 36704d56b66de977ac7f63fd7e766c925ef9023b
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: eccb333b8e9a71ea30454f8bdf9fd2bf6dc90b9b
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73974685"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76737968"
 ---
 # <a name="documents-in-wpf"></a>Dokumente in WPF
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] bietet eine Vielzahl von Dokument Funktionen, die die Erstellung von hochwertigen Inhalten ermöglichen, auf die einfacher zugegriffen werden kann und die besser als in früheren Generationen von Windows gelesen werden konnten. Neben erweiterten Funktionen und verbesserter Qualität bietet [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] auch integrierte Dienste für Dokumentanzeige, Packen und Sicherheit. Dieses Thema enthält eine Einführung zu [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Dokumenttypen und dem Packen von Dokumenten.  
@@ -26,7 +26,7 @@ ms.locfileid: "73974685"
   
  Fixierte Dokumente sind für Anwendungen gedacht, die eine genaue Darstellung von "was Sie sehen, was Sie sehen" (WYSIWYG), unabhängig von der verwendeten Anzeige-oder Drucker Hardware erfordern. Typische Verwendungen für fixierte Dokumente sind Desktoppublishing, Textverarbeitung und Formularlayout, bei denen die Beibehaltung des ursprünglichen Seitenentwurfs sehr wichtig ist. Ein fixiertes Dokument behält die exakte Positionierung von Inhaltselementen als Teil seines Layouts bei, unabhängig davon, welches Anzeige- oder Druckgerät verwendet wird. Beispielsweise wird die Seite eines fixierten Dokuments auf einem 96-DPI-Anzeigegerät genau gleich angezeigt wie bei einem Laserdrucker mit 600-DPI-Auflösung oder in einem 4800-DPI-Fotosatz. Das Seitenlayout bleibt in allen Fällen gleich, während die Qualität des Dokuments entsprechend der Funktionen der einzelnen Geräte maximiert wird.  
   
- Flussdokumente sollen dagegen Anzeige und Lesbarkeit optimieren und werden daher bevorzugt verwendet, wenn das Hauptaugenmerk auf der Erleichterung des Lesens liegt. Statt auf ein vordefiniertes Layout festgelegt zu werden, passen Flussdokumente ihren Inhalt basierend auf Laufzeitvariablen dynamisch an Variablen wie Fenstergröße, Geräteauflösung und optionale Benutzereinstellungen an und brechen den Inhalt dynamisch um. Ein einfaches Beispiel für ein Flussdokument ist eine Webseite, bei der der Seiteninhalt dynamisch formatiert wird, um sich dem aktuellen Fenster anzupassen. Flussdokumente optimieren Anzeige und Lesbarkeit für den Benutzer basierend auf der Laufzeitumgebung. So wird im Sinne der optimalen Lesbarkeit z.B. dasselbe Flussdokument auf einem hochauflösenden 19-Zoll-Anzeigegerät anders dynamisch umformatiert als auf einem kleinen PDA-Bildschirm mit 2x3 Zoll. Zudem verfügen Flussdokumente über eine Vielzahl integrierter Funktionen, inklusive der Suche, Anzeigemodi zur Optimierung der Lesbarkeit und der Möglichkeit zum Ändern der Größe und Darstellung von Schriftarten.  Abbildungen, Beispiele und ausführliche Informationen zu Flussdokumenten finden Sie unter [Übersicht über Flussdokumente](flow-document-overview.md).  
+ Flussdokumente sollen dagegen Anzeige und Lesbarkeit optimieren und werden daher bevorzugt verwendet, wenn das Hauptaugenmerk auf der Erleichterung des Lesens liegt. Flussdokumente sind nicht auf ein vordefiniertes Layout festgelegt, sondern passen ihren Inhalt auf Grundlage von Laufzeitvariablen wie Fenstergröße, Geräteauflösung und optionalen Benutzereinstellungen dynamisch an und brechen ihn dynamisch um. Ein einfaches Beispiel für ein Flussdokument ist eine Webseite, bei der der Seiteninhalt dynamisch formatiert wird, um sich dem aktuellen Fenster anzupassen. Flussdokumente optimieren Anzeige und Lesbarkeit für den Benutzer basierend auf der Laufzeitumgebung. So wird im Sinne der optimalen Lesbarkeit z.B. dasselbe Flussdokument auf einem hochauflösenden 19-Zoll-Anzeigegerät anders dynamisch umformatiert als auf einem kleinen PDA-Bildschirm mit 2x3 Zoll. Zudem verfügen Flussdokumente über eine Vielzahl integrierter Funktionen, inklusive der Suche, Anzeigemodi zur Optimierung der Lesbarkeit und der Möglichkeit zum Ändern der Größe und Darstellung von Schriftarten.  Abbildungen, Beispiele und ausführliche Informationen zu Flussdokumenten finden Sie unter [Übersicht über Flussdokumente](flow-document-overview.md).  
   
 <a name="document_viewer"></a>   
 ## <a name="document-controls-and-text-layout"></a>Dokumentsteuerelemente und Textlayout  
@@ -46,7 +46,7 @@ ms.locfileid: "73974685"
  Die Anzeige von Inhalt von Fluss Dokumenten wird von drei Steuerelementen unterstützt: <xref:System.Windows.Controls.FlowDocumentReader>, <xref:System.Windows.Controls.FlowDocumentPageViewer>und <xref:System.Windows.Controls.FlowDocumentScrollViewer>.  
   
 #### <a name="flowdocumentreader"></a>FlowDocumentReader  
- <xref:System.Windows.Controls.FlowDocumentReader> enthält Funktionen, die es dem Benutzer ermöglichen, dynamisch zwischen verschiedenen Anzeigemodi zu wählen, z. b. einem einseitigen Anzeigemodus (seitenweise), einem zwei-Seite-mal (Buch lese Format) und einem kontinuierlichen Bildlauf (in der untersten). Anzeigemodus.  Weitere Informationen zu diesen Anzeigemodi finden Sie unter <xref:System.Windows.Controls.FlowDocumentReaderViewingMode>.  Wenn Sie nicht in der Lage sein müssen, dynamisch zwischen verschiedenen Anzeigemodi zu wechseln, können <xref:System.Windows.Controls.FlowDocumentPageViewer> und <xref:System.Windows.Controls.FlowDocumentScrollViewer> hellere fortlaufende Inhalts-Viewer bereitstellen, die in einem bestimmten Anzeigemodus korrigiert sind.  
+ <xref:System.Windows.Controls.FlowDocumentReader> enthält Funktionen, die es dem Benutzer ermöglichen, dynamisch zwischen verschiedenen Anzeigemodi zu wählen, z. b. einem einseitigen Anzeigemodus (seitenweise), einem zweiseitigen Zeit-in-a-Mal-Anzeigemodus (Buch lese Format) und einem fortlaufenden Scrollmodus (in der untersten Größe).  Weitere Informationen zu diesen Anzeigemodi finden Sie unter <xref:System.Windows.Controls.FlowDocumentReaderViewingMode>.  Wenn Sie nicht in der Lage sein müssen, dynamisch zwischen verschiedenen Anzeigemodi zu wechseln, können <xref:System.Windows.Controls.FlowDocumentPageViewer> und <xref:System.Windows.Controls.FlowDocumentScrollViewer> hellere fortlaufende Inhalts-Viewer bereitstellen, die in einem bestimmten Anzeigemodus korrigiert sind.  
   
 #### <a name="flowdocumentpageviewer-and-flowdocumentscrollviewer"></a>FlowDocumentPageViewer und FlowDocumentScrollViewer  
  <xref:System.Windows.Controls.FlowDocumentPageViewer> zeigt den Inhalt im Seiten-zu-Uhrzeit-Anzeigemodus an, während <xref:System.Windows.Controls.FlowDocumentScrollViewer> den Inhalt im fortlaufenden Bild Lauf Modus anzeigt.  Sowohl <xref:System.Windows.Controls.FlowDocumentPageViewer> als auch <xref:System.Windows.Controls.FlowDocumentScrollViewer> werden in einem bestimmten Anzeigemodus korrigiert. Vergleichen Sie <xref:System.Windows.Controls.FlowDocumentReader>mit Features, die es dem Benutzer ermöglichen, sich dynamisch zwischen verschiedenen Anzeigemodi (wie von der <xref:System.Windows.Controls.FlowDocumentReaderViewingMode>-Enumeration bereitgestellt) zu entscheiden. Dies ist kostengünstiger als <xref:System.Windows.Controls.FlowDocumentPageViewer> oder <xref:System.Windows.Controls.FlowDocumentScrollViewer>.  
@@ -55,7 +55,7 @@ ms.locfileid: "73974685"
   
 <a name="text_in_the_user_interface"></a>   
 ### <a name="text-in-the-user-interface"></a>Text in der Benutzeroberfläche  
- Text kann nicht nur Dokumenten hinzugefügt werden, sondern wird auch in Benutzeroberflächen von Anwendungen, wie z.B. Formularen, verwendet. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] enthält zahlreiche Steuerelemente für das Zeichnen von Text auf dem Bildschirm. Jedes Steuerelement dient einem anderen Szenario und verfügt über eine eigene Liste von Funktionen und Einschränkungen. Im Allgemeinen sollte das <xref:System.Windows.Controls.TextBlock>-Element verwendet werden, wenn eingeschränkte Textunterstützung erforderlich ist, z. b. ein kurzer Satz in einer [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]. <xref:System.Windows.Controls.Label> kann verwendet werden, wenn nur minimale Textunterstützung erforderlich ist. Weitere Informationen finden Sie unter [Übersicht über TextBlock](../controls/textblock-overview.md).  
+ Text kann nicht nur Dokumenten hinzugefügt werden, sondern wird auch in Benutzeroberflächen von Anwendungen, wie z.B. Formularen, verwendet. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] enthält zahlreiche Steuerelemente zum Zeichnen von Text auf dem Bildschirm. Jedes Steuerelement ist einem bestimmten Szenario zugeordnet und besitzt eine eigene Liste von Funktionen und Einschränkungen. Im Allgemeinen sollte das <xref:System.Windows.Controls.TextBlock>-Element verwendet werden, wenn eingeschränkte Textunterstützung erforderlich ist, z. b. ein kurzer Satz in einer [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]. <xref:System.Windows.Controls.Label> kann verwendet werden, wenn nur minimale Textunterstützung erforderlich ist. Weitere Informationen finden Sie unter [Übersicht über TextBlock](../controls/textblock-overview.md).  
   
 <a name="packaging"></a>   
 ## <a name="document-packaging"></a>Packen von Dokumenten  

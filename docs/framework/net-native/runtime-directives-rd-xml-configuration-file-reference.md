@@ -2,12 +2,12 @@
 title: Laufzeitanweisungs-Konfigurationsdatei (rd.xml) Referenz
 ms.date: 03/30/2017
 ms.assetid: 8241523f-d8e1-4fb6-bf6a-b29bfe07b38a
-ms.openlocfilehash: f4c51dc269775d14d395cb464b3787cc987e086d
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: e74d34693446cca645003a9f93bc1777849e3182
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73128127"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76738407"
 ---
 # <a name="runtime-directives-rdxml-configuration-file-reference"></a>Laufzeitanweisungs-Konfigurationsdatei (rd.xml) Referenz
 
@@ -39,27 +39,69 @@ Das Stammelement ist [Directives](directives-element-net-native.md). Wie in der 
 
 Um Referenzinformationen anzuzeigen, wählen Sie Elemente aus der folgenden Struktur aus, oder lesen Sie unter [Laufzeitanweisungselemente](runtime-directive-elements.md) nach. In der folgenden Hierarchie kennzeichnet die Ellipse eine rekursive Struktur. Die Informationen in Klammern zeigen an, ob dieses Element optional oder erforderlich ist, und wenn es verwendet wird, wie viele Instanzen (eine oder viele) zulässig sind.
 
-[Direktiven](directives-element-net-native.md) [1:1] [Anwendungs](application-element-net-native.md) [0:1] [Assembly](assembly-element-net-native.md) [0: m] [Namespace](namespace-element-net-native.md) [0: m]. sein. sein.
-[Geben](type-element-net-native.md) Sie [0: M] ein. sein. sein.
-[Typeinstantiations](typeinstantiation-element-net-native.md) (konstruierter generischer Typ) [0: M]. sein. sein.
-[Namespace](namespace-element-net-native.md) [0: m] [Namespace](namespace-element-net-native.md) [0: m]. sein. sein.
-[Geben](type-element-net-native.md) Sie [0: M] ein. sein. sein.
-[Typeinstantiations](typeinstantiation-element-net-native.md) (konstruierter generischer Typ) [0: M]. sein. sein.
-[Type](type-element-net-native.md) [0: m] [subtypes](subtypes-element-net-native.md) (Unterklassen des enthaltenden Typs) [o:1] [Type](type-element-net-native.md) [0: m]. sein. sein.
-[Typeinstantiations](typeinstantiation-element-net-native.md) (konstruierter generischer Typ) [0: M]. sein. sein.
-[Attributeimplies](attributeimplies-element-net-native.md) (der enthaltende Typ ist ein Attribut) [o:1] [genericparameter](genericparameter-element-net-native.md) [0: m] [method](method-element-net-native.md) [0: m] [Parameter](parameter-element-net-native.md) [0: m] [typeparameter](typeparameter-element-net-native.md) [0: m] [genericparameter](genericparameter-element-net-native.md) [0: m] [methodinstantiations](methodinstantiation-element-net-native.md) ( konstruierte generische Methode) [0: m] [Eigenschaft](property-element-net-native.md) [0: m] [Feld](field-element-net-native.md) [0: m] [Ereignis](event-element-net-native.md) [0: m] [typeinstantiierung](typeinstantiation-element-net-native.md) (konstruierter generischer Typ) [0: m] [Typ](type-element-net-native.md) [0: m]. sein. sein.
-[Typeinstantiations](typeinstantiation-element-net-native.md) (konstruierter generischer Typ) [0: M]. sein. sein.
-[Method](method-element-net-native.md) [0: m] [Parameter](parameter-element-net-native.md) [0: m] [typeparameter](typeparameter-element-net-native.md) [0: m] [genericparameter](genericparameter-element-net-native.md) [0: m] [methodinstantiations](methodinstantiation-element-net-native.md) (konstruierte generische Methode) [0: m] [Eigenschaft](property-element-net-native.md) [0: m] [Feld](field-element-net-native.md) [0: m] [Ereignis](event-element-net-native.md) [0: m] [ Bibliothek](library-element-net-native.md) [0: m] [Assembly](assembly-element-net-native.md) [0: m] [Namespace](namespace-element-net-native.md) [0: m]. sein. sein.
-[Geben](type-element-net-native.md) Sie [0: M] ein. sein. sein.
-[Typeinstantiations](typeinstantiation-element-net-native.md) (konstruierter generischer Typ) [0: M]. sein. sein.
-[Namespace](namespace-element-net-native.md) [0: m] [Namespace](namespace-element-net-native.md) [0: m]. sein. sein.
-[Geben](type-element-net-native.md) Sie [0: M] ein. sein. sein.
-[Typeinstantiations](typeinstantiation-element-net-native.md) (konstruierter generischer Typ) [0: M]. sein. sein.
-[Type](type-element-net-native.md) [0: m] [subtypes](subtypes-element-net-native.md) (Unterklassen des enthaltenden Typs) [o:1] [Type](type-element-net-native.md) [0: m]. sein. sein.
-[Typeinstantiations](typeinstantiation-element-net-native.md) (konstruierter generischer Typ) [0: M]. sein. sein.
-[Attributeimplies](attributeimplies-element-net-native.md) (der enthaltende Typ ist ein Attribut) [o:1] [genericparameter](genericparameter-element-net-native.md) [0: m] [method](method-element-net-native.md) [0: m] [methodinstantiations](methodinstantiation-element-net-native.md) (konstruierte generische Methode) [0: m] [Eigenschaft](property-element-net-native.md) [0: m] [Feld](field-element-net-native.md) [0: m] [Ereignis](event-element-net-native.md) [0 : M] [typeinstantiung](typeinstantiation-element-net-native.md) (konstruierter generischer Typ) [0: m] [Typ](type-element-net-native.md) [0: m]. sein. sein.
-[Typeinstantiations](typeinstantiation-element-net-native.md) (konstruierter generischer Typ) [0: M]. sein. sein.
-[Method](method-element-net-native.md) [0: m] [methodinstantiations](methodinstantiation-element-net-native.md) (konstruierte generische Methode) [0: m] [Eigenschaft](property-element-net-native.md) [0: m] [Field](field-element-net-native.md) [0: m] [Ereignis](event-element-net-native.md) [0: m]
+- [Directives](directives-element-net-native.md) [1:1]
+  - [Application](application-element-net-native.md) [0:1]
+    - [Assembly](assembly-element-net-native.md) [0:M]
+      - [Namespace](namespace-element-net-native.md) [0: M]. . .
+      - [Geben](type-element-net-native.md) Sie [0: M] ein. . .
+      - [Typeinstantiations](typeinstantiation-element-net-native.md) (konstruierter generischer Typ) [0: M]. . .
+    - [Namespace](namespace-element-net-native.md) [0:M]
+      - [Namespace](namespace-element-net-native.md) [0: M]. . .
+      - [Geben](type-element-net-native.md) Sie [0: M] ein. . .
+      - [Typeinstantiations](typeinstantiation-element-net-native.md) (konstruierter generischer Typ) [0: M]. . .
+    - [Type](type-element-net-native.md) [0:M]
+      - [Subtypes](subtypes-element-net-native.md) (Unterklassen des enthaltenden Typs) [O:1]
+      - [Geben](type-element-net-native.md) Sie [0: M] ein. . .
+      - [Typeinstantiations](typeinstantiation-element-net-native.md) (konstruierter generischer Typ) [0: M]. . .
+      - [AttributeImplies](attributeimplies-element-net-native.md) (der enthaltende Typ ist ein Attribut) [O:1]
+      - [GenericParameter](genericparameter-element-net-native.md) [0:M]
+      - [Method](method-element-net-native.md) [0:M]
+        - [Parameter](parameter-element-net-native.md) [0:M]
+        - [TypeParameter](typeparameter-element-net-native.md) [0:M]
+        - [GenericParameter](genericparameter-element-net-native.md) [0:M]
+      - [MethodInstantiation](methodinstantiation-element-net-native.md) (konstruierte generische Methode) [0:M]
+      - [Property](property-element-net-native.md) [0:M]
+      - [Field](field-element-net-native.md) [0:M]
+      - [Event](event-element-net-native.md) [0:M]
+    - [TypeInstantiation](typeinstantiation-element-net-native.md) (konstruierter generischer Typ) [0:M]
+      - [Geben](type-element-net-native.md) Sie [0: M] ein. . .
+      - [Typeinstantiations](typeinstantiation-element-net-native.md) (konstruierter generischer Typ) [0: M]. . .
+      - [Method](method-element-net-native.md) [0:M]
+        - [Parameter](parameter-element-net-native.md) [0:M]
+        - [TypeParameter](typeparameter-element-net-native.md) [0:M]
+        - [GenericParameter](genericparameter-element-net-native.md) [0:M]
+      - [MethodInstantiation](methodinstantiation-element-net-native.md) (konstruierte generische Methode) [0:M]
+      - [Property](property-element-net-native.md) [0:M]
+      - [Field](field-element-net-native.md) [0:M]
+      - [Event](event-element-net-native.md) [0:M]
+  - [Library](library-element-net-native.md) [0:M]
+    - [Assembly](assembly-element-net-native.md) [0:M]
+      - [Namespace](namespace-element-net-native.md) [0: M]. . .
+      - [Geben](type-element-net-native.md) Sie [0: M] ein. . .
+      - [Typeinstantiations](typeinstantiation-element-net-native.md) (konstruierter generischer Typ) [0: M]. . .
+    - [Namespace](namespace-element-net-native.md) [0:M]
+      - [Namespace](namespace-element-net-native.md) [0: M]. . .
+      - [Geben](type-element-net-native.md) Sie [0: M] ein. . .
+      - [Typeinstantiations](typeinstantiation-element-net-native.md) (konstruierter generischer Typ) [0: M]. . .
+    - [Type](type-element-net-native.md) [0:M]
+      - [Subtypes](subtypes-element-net-native.md) (Unterklassen des enthaltenden Typs) [O:1]
+      - [Geben](type-element-net-native.md) Sie [0: M] ein. . .
+      - [Typeinstantiations](typeinstantiation-element-net-native.md) (konstruierter generischer Typ) [0: M]. . .
+      - [AttributeImplies](attributeimplies-element-net-native.md) (der enthaltende Typ ist ein Attribut) [O:1]
+      - [GenericParameter](genericparameter-element-net-native.md) [0:M]
+      - [Method](method-element-net-native.md) [0:M]
+      - [MethodInstantiation](methodinstantiation-element-net-native.md) (konstruierte generische Methode) [0:M]
+      - [Property](property-element-net-native.md) [0:M]
+      - [Field](field-element-net-native.md) [0:M]
+      - [Event](event-element-net-native.md) [0:M]
+    - [TypeInstantiation](typeinstantiation-element-net-native.md) (konstruierter generischer Typ) [0:M]
+      - [Geben](type-element-net-native.md) Sie [0: M] ein. . .
+      - [Typeinstantiations](typeinstantiation-element-net-native.md) (konstruierter generischer Typ) [0: M]. . .
+      - [Method](method-element-net-native.md) [0:M]
+      - [MethodInstantiation](methodinstantiation-element-net-native.md) (konstruierte generische Methode) [0:M]
+      - [Property](property-element-net-native.md) [0:M]
+      - [Field](field-element-net-native.md) [0:M]
+      - [Event](event-element-net-native.md) [0:M]
 
 Das [Application](application-element-net-native.md)-Element kann entweder keine Attribute oder die im [Abschnitt zu Laufzeitanweisungen und -richtlinien](#Directives) beschriebenen Richtlinienattribute besitzen.
 
@@ -90,43 +132,43 @@ Die Richtlinie, die durch die Elemente [Application](application-element-net-nat
 
 Die Elemente [Application](application-element-net-native.md), [Assembly](assembly-element-net-native.md), [AttributeImplies](attributeimplies-element-net-native.md), [Namespace](namespace-element-net-native.md), [Subtypes](subtypes-element-net-native.md) und [Type](type-element-net-native.md) unterstützen folgende Richtlinientypen:
 
-- `Activate` Steuert den Laufzeitzugriff auf Konstruktoren, um die Aktivierung von Instanzen zu ermöglichen.
+- `Activate`. Steuert den Laufzeitzugriff auf Konstruktoren, um die Aktivierung von Instanzen zu ermöglichen.
 
-- `Browse` Steuert das Abfragen von Informationen über Programmelemente, ermöglicht jedoch keinen Laufzeitzugriff.
+- `Browse`. Steuert das Abfragen von Informationen über Programmelemente, ermöglicht jedoch keinen Laufzeitzugriff.
 
-- `Dynamic` Steuert den Laufzeitzugriff auf alle Typmember, einschließlich Konstruktoren, Methoden, Felder, Eigenschaften und Ereignisse, um die dynamische Programmierung zu ermöglichen.
+- `Dynamic`. Steuert den Laufzeitzugriff auf alle Typmember, einschließlich Konstruktoren, Methoden, Felder, Eigenschaften und Ereignisse, um die dynamische Programmierung zu ermöglichen.
 
-- `Serialize` Steuert den Laufzeitzugriff auf Konstruktoren, Felder und Eigenschaften, um Serialisierung und Deserialisierung von Typinstanzen durch Bibliotheken von Drittanbietern wie das Newtonsoft JSON-Serialisierungsprogramm zu ermöglichen.
+- `Serialize`. Steuert den Laufzeitzugriff auf Konstruktoren, Felder und Eigenschaften, um Serialisierung und Deserialisierung von Typinstanzen durch Bibliotheken von Drittanbietern wie das Newtonsoft JSON-Serialisierungsprogramm zu ermöglichen.
 
-- `DataContractSerializer` Steuert die Richtlinie für die Serialisierung, die die <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType>-Klasse verwendet.
+- `DataContractSerializer`. Steuert die Richtlinie für die Serialisierung, die die <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType>-Klasse verwendet.
 
-- `DataContractJsonSerializer` Steuert die Richtlinie für die JSON-Serialisierung, die die <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType>-Klasse verwendet.
+- `DataContractJsonSerializer`. Steuert die Richtlinie für die JSON-Serialisierung, die die <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType>-Klasse verwendet.
 
-- `XmlSerializer` Steuert die Richtlinie für die XML-Serialisierung, die die <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType>-Klasse verwendet.
+- `XmlSerializer`. Steuert die Richtlinie für die XML-Serialisierung, die die <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType>-Klasse verwendet.
 
-- `MarshalObject` Steuert die Richtlinie für das Marshalling von Verweistypen zu WinRT und COM.
+- `MarshalObject`. Steuert die Richtlinie für das Marshalling von Verweistypen zu WinRT und COM.
 
-- `MarshalDelegate` Steuert die Richtlinie für das Marshalling von Delegattypen als Funktionszeiger zu systemeigenem Code.
+- `MarshalDelegate`. Steuert die Richtlinie für das Marshalling von Delegattypen als Funktionszeiger zu systemeigenem Code.
 
 - `MarshalStructure` . Steuert die Richtlinie für das Marshalling von Strukturen zu nativem Code.
 
 Die Einstellungen für diese Richtlinientypen sind:
 
-- `All` Aktiviert die Richtlinie für alle Typen und Member, die die Toolkette nicht entfernt.
+- `All`. Aktiviert die Richtlinie für alle Typen und Member, die die Toolkette nicht entfernt.
 
-- `Auto` Verwendet das Standardverhalten. (Fehlende Angabe einer Richtlinie entspricht dem Festlegen der Richtlinie auf `Auto`, sofern die Richtlinie nicht, beispielsweise durch ein übergeordnetes Element, überschrieben wird.)
+- `Auto`. Verwendet das Standardverhalten. (Fehlende Angabe einer Richtlinie entspricht dem Festlegen der Richtlinie auf `Auto`, sofern die Richtlinie nicht, beispielsweise durch ein übergeordnetes Element, überschrieben wird.)
 
-- `Excluded` Deaktiviert die Richtlinie für das Programmelement.
+- `Excluded`. Deaktiviert die Richtlinie für das Programmelement.
 
-- `Public` Aktiviert die Richtlinie für öffentliche Typen oder Member, sofern die Toolkette nicht bestimmt, dass der Member unnötig ist und daher entfernt wird. (In letzterem Fall müssen Sie `Required Public` verwenden, um sicherzustellen, dass der Member beibehalten wird und über Reflektionsfunktionen verfügt.)
+- `Public`. Aktiviert die Richtlinie für öffentliche Typen oder Member, sofern die Toolkette nicht bestimmt, dass der Member unnötig ist und daher entfernt wird. (In letzterem Fall müssen Sie `Required Public` verwenden, um sicherzustellen, dass der Member beibehalten wird und über Reflektionsfunktionen verfügt.)
 
-- `PublicAndInternal` Aktiviert die Richtlinie für öffentliche und interne Typen oder Member, sofern die Toolkette diese nicht entfernt.
+- `PublicAndInternal`. Aktiviert die Richtlinie für öffentliche und interne Typen oder Member, sofern die Toolkette diese nicht entfernt.
 
-- `Required Public` Fordert, dass die Toolkette öffentliche Typen und Member unabhängig von ihrer Verwendung beibehält und die Richtlinie für sie aktiviert.
+- `Required Public`. Fordert, dass die Toolkette öffentliche Typen und Member unabhängig von ihrer Verwendung beibehält und die Richtlinie für sie aktiviert.
 
-- `Required PublicAndInternal` Fordert, dass die Toolkette öffentliche und interne Typen und Member unabhängig von ihrer Verwendung beibehält und die Richtlinie für sie aktiviert.
+- `Required PublicAndInternal`. Fordert, dass die Toolkette öffentliche und interne Typen und Member unabhängig von ihrer Verwendung beibehält und die Richtlinie für sie aktiviert.
 
-- `Required All` Fordert, dass die Toolkette alle Typen und Member unabhängig von ihrer Verwendung beibehält und die Richtlinie für sie aktiviert.
+- `Required All`. Fordert, dass die Toolkette alle Typen und Member unabhängig von ihrer Verwendung beibehält und die Richtlinie für sie aktiviert.
 
 Die folgende Laufzeitanweisungsdatei definiert z. B. die Richtlinie für alle Typen und Member in der Assembly DataClasses.dll. Sie aktiviert die Reflektion für die Serialisierung aller öffentlichen Eigenschaften, ermöglicht das Durchsuchen nach allen Typen und Typmembern (aufgrund des `Dynamic`-Attributs) und aktiviert die Reflektion für alle öffentlichen Typen und Member.
 

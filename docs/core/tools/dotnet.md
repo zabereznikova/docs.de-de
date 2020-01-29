@@ -2,22 +2,22 @@
 title: dotnet-Befehl
 description: Informationen zum dotnet-Befehl (generischer Treiber für die .NET Core CLI-Tools) und dessen Verwendung.
 ms.date: 06/04/2018
-ms.openlocfilehash: a22340c26ca2e483e43857e2ecb31f2ab53b60f4
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: fe90968560b58471c279fcd2097741ea476cef0b
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117505"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76734068"
 ---
 # <a name="dotnet-command"></a>dotnet-Befehl
 
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
-## <a name="name"></a>NAME
+## <a name="name"></a>name
 
 `dotnet`: Ein Tool für das Verwalten von .NET-Quellcode und Binärdateien.
 
-## <a name="synopsis"></a>Zusammenfassung
+## <a name="synopsis"></a>Übersicht
 
 <!-- markdownlint-disable MD025 -->
 
@@ -45,7 +45,7 @@ dotnet [command] [arguments] [--additionalprobingpath] [--depsfile] [-d|--diagno
 
 ---
 
-## <a name="description"></a>BESCHREIBUNG
+## <a name="description"></a>Beschreibung
 
 `dotnet` ist ein Tool für das Verwalten von .NET-Quellcode und Binärdateien. Es stellt Befehle zur Verfügung, die bestimmte Aufgaben erfüllen, z.B. [`dotnet build`](dotnet-build.md) und [`dotnet run`](dotnet-run.md). Jeder Befehl definiert seine eigenen Argumente. Geben Sie nach jedem Befehl `--help` ein, um auf eine kurze Hilfsdokumentation zuzugreifen.
 
@@ -67,7 +67,7 @@ Pfad, der die Suchrichtlinie und die zu suchenden Assemblys enthält.
 
 Pfad zu einer *deps.json*-Datei.
 
-Eine *deps.json*-Datei enthält eine Liste mit (Kompilierungs-)Abhängigkeiten und Versionsinformationen, die verwendet werden, um Assemblykonflikte zu bearbeiten. Weitere Informationen zu dieser Datei finden Sie auf GitHub unter [Laufzeitkonfigurationsdateien](https://github.com/dotnet/cli/blob/master/Documentation/specs/runtime-configuration-file.md).
+Eine *deps.json*-Datei enthält eine Liste mit Abhängigkeiten, Kompilierungsabhängigkeiten und Versionsinformationen, die verwendet werden, um Assemblykonflikte zu bearbeiten. Weitere Informationen zu dieser Datei finden Sie auf GitHub unter [Laufzeitkonfigurationsdateien](https://github.com/dotnet/cli/blob/master/Documentation/specs/runtime-configuration-file.md).
 
 `-d|--diagnostics`
 
@@ -107,7 +107,7 @@ Definiert ein Verhalten, wenn das erforderliche freigegebene Framework nicht ver
 
 Der Pfad zu einer *runtimeconfig.json*-Datei.
 
-Eine *runtimeconfig.json*-Datei ist eine Konfigurationsdatei mit Einstellungen für die Laufzeitkonfiguration. Weitere Informationen finden Sie auf GitHub unter [Laufzeitkonfigurationsdateien](https://github.com/dotnet/cli/blob/master/Documentation/specs/runtime-configuration-file.md).
+Eine *runtimeconfig.json*-Datei ist eine Konfigurationsdatei mit Einstellungen für die Runtime. Weitere Informationen finden Sie unter [Konfigurationseinstellungen für die .NET Core-Runtime](../run-time-config/index.md#runtimeconfigjson).
 
 `-v|--verbosity <LEVEL>`
 
@@ -157,7 +157,7 @@ Gibt ausführliche Informationen über eine .NET Core-Installation und die Compu
 
 Der Pfad zu einer *runtimeconfig.json*-Datei.
 
-Eine *runtimeconfig.json*-Datei ist eine Konfigurationsdatei mit Einstellungen für die Laufzeitkonfiguration. Weitere Informationen finden Sie auf [GitHub unter Laufzeitkonfigurationsdateien](https://github.com/dotnet/cli/blob/master/Documentation/specs/runtime-configuration-file.md).
+Eine *runtimeconfig.json*-Datei ist eine Konfigurationsdatei mit Einstellungen für die Runtime. Weitere Informationen finden Sie unter [Konfigurationseinstellungen für die .NET Core-Runtime](../run-time-config/index.md#runtimeconfigjson).
 
 `-v|--verbosity <LEVEL>`
 
@@ -199,7 +199,7 @@ Gibt ausführliche Informationen über eine .NET Core-Installation und die Compu
 
 Der Pfad zu einer *runtimeconfig.json*-Datei.
 
-Eine *runtimeconfig.json*-Datei ist eine Konfigurationsdatei mit Einstellungen für die Laufzeitkonfiguration. Weitere Informationen finden Sie auf [GitHub unter Laufzeitkonfigurationsdateien](https://github.com/dotnet/cli/blob/master/Documentation/specs/runtime-configuration-file.md).
+Eine *runtimeconfig.json*-Datei ist eine Konfigurationsdatei mit Einstellungen für die Runtime. Weitere Informationen finden Sie unter [Konfigurationseinstellungen für die .NET Core-Runtime](../run-time-config/index.md#runtimeconfigjson).
 
 `-v|--verbosity <LEVEL>`
 
@@ -217,7 +217,7 @@ Druckt die Version des verwendeten .NET Core-SDK aus.
 
 # <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
 
-| Get-Help                                       | Funktion                                                            |
+| Befehl                                       | Funktion                                                            |
 | --------------------------------------------- | ------------------------------------------------------------------- |
 | [dotnet build](dotnet-build.md)               | Erstellt eine .NET Core-Anwendung.                                     |
 | [dotnet build-server](dotnet-build-server.md) | Interagiert mit Servern, die von einem Build gestartet wurden.                          |
@@ -236,7 +236,7 @@ Druckt die Version des verwendeten .NET Core-SDK aus.
 
 # <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
 
-| Get-Help                             | Funktion                                                            |
+| Befehl                             | Funktion                                                            |
 | ----------------------------------- | ------------------------------------------------------------------- |
 | [dotnet build](dotnet-build.md)     | Erstellt eine .NET Core-Anwendung.                                     |
 | [dotnet clean](dotnet-clean.md)     | Bereinigen von Buildausgaben.                                              |
@@ -254,7 +254,7 @@ Druckt die Version des verwendeten .NET Core-SDK aus.
 
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
-| Get-Help                             | Funktion                                                            |
+| Befehl                             | Funktion                                                            |
 | ----------------------------------- | ------------------------------------------------------------------- |
 | [dotnet build](dotnet-build.md)     | Erstellt eine .NET Core-Anwendung.                                     |
 | [dotnet clean](dotnet-clean.md)     | Bereinigen von Buildausgaben.                                              |
@@ -272,7 +272,7 @@ Druckt die Version des verwendeten .NET Core-SDK aus.
 
 ### <a name="project-references"></a>Projektverweise
 
-Get-Help | Funktion
+Befehl | Funktion
 --- | ---
 [dotnet add reference](dotnet-add-reference.md) | Fügt einen Projektverweis hinzu.
 [dotnet list reference](dotnet-list-reference.md) | Listet Projektverweise auf.
@@ -280,14 +280,14 @@ Get-Help | Funktion
 
 ### <a name="nuget-packages"></a>NuGet-Pakete
 
-Get-Help | Funktion
+Befehl | Funktion
 --- | ---
 [dotnet add package](dotnet-add-package.md) | Fügt ein NuGet-Paket hinzu.
 [dotnet remove package](dotnet-remove-package.md) | Entfernt ein NuGet-Paket.
 
 ### <a name="nuget-commands"></a>NuGet-Befehle
 
-Get-Help | Funktion
+Befehl | Funktion
 --- | ---
 [dotnet nuget delete](dotnet-nuget-delete.md) | Löscht ein Paket vom Server oder hebt dessen Auflistung auf.
 [dotnet nuget locals](dotnet-nuget-locals.md) | Löscht lokale NuGet-Ressourcen, z.B. den http-Anforderungscache, den temporären Cache oder den Ordner mit globalen Paketen auf dem Computer, oder listet diese Ressourcen auf.
@@ -297,7 +297,7 @@ Get-Help | Funktion
 
 [Globale .NET Core-Tools](global-tools.md) sind beginnend mit .NET Core SDK 2.1.300 verfügbar:
 
-Get-Help | Funktion
+Befehl | Funktion
 --- | ---
 [dotnet tool install](dotnet-tool-install.md) | Installiert ein Global Tool auf dem Computer.
 [dotnet tool list](dotnet-tool-list.md) | Listet alle globalen Tools auf, die derzeit im Standardverzeichnis oder unter dem angegebenen Pfad auf Ihrem Computer installiert sind.
@@ -399,3 +399,4 @@ Gibt an, ob Daten zur Nutzung von .NET Core-Tools gesammelt und an Microsoft ges
 ## <a name="see-also"></a>Siehe auch
 
 - [Laufzeitkonfigurationsdateien](https://github.com/dotnet/cli/blob/master/Documentation/specs/runtime-configuration-file.md)
+- [Konfigurationseinstellungen für die .NET Core-Runtime](../run-time-config/index.md)

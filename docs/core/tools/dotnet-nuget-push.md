@@ -3,16 +3,16 @@ title: Befehl „dotnet nuget push“
 description: Der dotnet nuget push-Befehl überträgt ein Paket auf den Server und veröffentlicht es.
 author: karann-msft
 ms.date: 12/04/2019
-ms.openlocfilehash: 5e80295a570adc30a06d86b6735cb0387e39d5a3
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: a483c559dee8b4a82cc2c792f5c2c5e4a8ff3f87
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74835518"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76733109"
 ---
 # <a name="dotnet-nuget-push"></a>dotnet nuget push
 
-**Dieses Thema gilt für: ✓**.NET Core 1.x SDK und spätere Versionen
+**Dieser Artikel gilt für:** ✔️ .NET Core 1.x SDK und neuere Versionen
 
 <!-- todo: uncomment when all CLI commands are reviewed
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
@@ -30,7 +30,7 @@ dotnet nuget push [<ROOT>] [-d|--disable-buffering] [--force-english-output] [--
 dotnet nuget push [-h|--help]
 ```
 
-## <a name="description"></a>BESCHREIBUNG
+## <a name="description"></a>Beschreibung
 
 Der `dotnet nuget push`-Befehl überträgt ein Paket auf den Server und veröffentlicht es. Der Pushbefehl verwendet Details zum Server und den Anmeldeinformationen aus der NuGet-Konfigurationsdatei oder der Kette von Konfigurationsdateien des Systems. Weitere Informationen zu Konfigurationsdateien finden Sie unter [Configuring NuGet Behavior](/nuget/consume-packages/configuring-nuget-behavior) (Konfigurieren des Verhaltens von NuGet). Die NuGet-Standardkonfiguration wird abgerufen, indem *%AppData%\NuGet\NuGet.config* (Windows) oder *$HOME/.local/share* (Linux/macOS) geladen wird. Anschließend wird eine beliebige Datei *nuget.config* oder *.nuget\nuget.config* geladen (beginnend mit dem Stamm des Laufwerks und endend im aktuellen Verzeichnis).
 
@@ -77,7 +77,7 @@ Der `dotnet nuget push`-Befehl überträgt ein Paket auf den Server und veröffe
 * **`--skip-duplicate`**
 
   Wenn Sie mehrere Pakete per Push an einen HTTP(S)-Server senden, werden alle Antworten des Typs „409 (Konflikt)“ als Warnung behandelt, sodass der Pushvorgang fortgesetzt werden kann. Verfügbar seit .NET Core 3.1 SDK.
-                                 
+
 * **`-sk|--symbol-api-key <API_KEY>`**
 
   Der API-Schlüssel für den Symbolserver.
@@ -127,11 +127,11 @@ Der `dotnet nuget push`-Befehl überträgt ein Paket auf den Server und veröffe
   ```dotnetcli
   dotnet nuget push *.nupkg
   ```
-  
+
   > [!NOTE]
   > Wenn dieser Befehl nicht funktioniert, kann dies an einem Fehler aus früheren Versionen des SDK liegen (.NET Core 2.1 SDK und frühere Versionen).
   > Führen Sie ein Upgrade für das SDK durch, oder führen Sie stattdessen den folgenden Befehl aus, um diesen Fehler zu beheben: `dotnet nuget push **/*.nupkg`.
-  
+
 * Überträgt alle *.nupkg*-Dateien per Push, auch wenn eine Antwort des Typs „409 (Konflikt)“ von einem HTTP(S)-Server zurückgegeben wird:
 
   ```dotnetcli
