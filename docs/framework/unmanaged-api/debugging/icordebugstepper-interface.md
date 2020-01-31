@@ -14,28 +14,28 @@ helpviewer_keywords:
 ms.assetid: ed8364eb-f01b-46f6-b5e3-5dda9cae2dfe
 topic_type:
 - apiref
-ms.openlocfilehash: 3ca062231fd482c1f0d888935e882513461838ef
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: e9bb69567a247472af42efb08b609d3474c87ed2
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73137597"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76791793"
 ---
 # <a name="icordebugstepper-interface"></a>ICorDebugStepper-Schnittstelle
 Stellt einen Schritt in der Codeausführung dar, der von einem Debugger ausgeführt wird, dient zwischen der Veröffentlichung und dem Abschluss eines Befehls als Bezeichner und ermöglicht das Abbrechen eines Schritts.  
   
 ## <a name="methods"></a>Methoden  
   
-|Methode|Beschreibung|  
+|-Methode|Beschreibung|  
 |------------|-----------------|  
-|[Deactivate-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-deactivate-method.md)|Bewirkt, dass dieser `ICorDebugStepper` den Befehl für den letzten Schritt abgebrochen hat.|  
-|[IsActive-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-isactive-method.md)|Ruft einen Wert ab, der angibt, ob dieses `ICorDebugStepper` gerade einen Schritt ausführt.|  
-|[SetInterceptMask-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-setinterceptmask-method.md)|Legt einen CorDebugIntercept-Wert fest, der die Typen von Code angibt, die in Einzelschritten werden.|  
-|[SetRangeIL-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-setrangeil-method.md)|Legt einen Wert fest, der angibt, ob Aufrufe von [ICorDebugStepper:: StepRange](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-steprange-method.md) Argument Werte in Bezug auf den systemeigenen Code oder den MSIL-Code (Microsoft Intermediate Language) der Methode übergeben, die durchlaufen wird.|  
-|[SetUnmappedStopMask-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-setunmappedstopmask-method.md)|Legt einen CorDebugUnmappedStop-Wert fest, der den Typ des nicht zugeordneten Codes angibt, in dem die Ausführung angehalten wird.|  
-|[Step-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-step-method.md)|Bewirkt, dass diese `ICorDebugStepper` einen einzigen Schritt durch den enthaltenden Thread durchläuft, und optional, um die Einzelschritt Weise durch Funktionen fortzusetzen, die innerhalb des Threads aufgerufen werden.|  
-|[StepOut-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-stepout-method.md)|Bewirkt, dass diese `ICorDebugStepper` einen Einzelschritt durch den enthaltenden Thread durchführt und fertiggestellt wird, wenn der aktuelle Frame die Steuerung an den aufrufenden Frame zurückgibt.|  
-|[StepRange-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-steprange-method.md)|Bewirkt, dass diese `ICorDebugStepper` einen einzigen Schritt durch den enthaltenden Thread durchläuft und zurückgegeben wird, wenn der Code über den letzten der angegebenen Bereiche hinausgeht.|  
+|[Deactivate-Methode](icordebugstepper-deactivate-method.md)|Bewirkt, dass dieser `ICorDebugStepper` den Befehl für den letzten Schritt abgebrochen hat.|  
+|[IsActive-Methode](icordebugstepper-isactive-method.md)|Ruft einen Wert ab, der angibt, ob dieses `ICorDebugStepper` gerade einen Schritt ausführt.|  
+|[SetInterceptMask-Methode](icordebugstepper-setinterceptmask-method.md)|Legt einen CorDebugIntercept-Wert fest, der die Typen von Code angibt, die in Einzelschritten werden.|  
+|[SetRangeIL-Methode](icordebugstepper-setrangeil-method.md)|Legt einen Wert fest, der angibt, ob Aufrufe von [ICorDebugStepper:: StepRange](icordebugstepper-steprange-method.md) Argument Werte in Bezug auf den systemeigenen Code oder den MSIL-Code (Microsoft Intermediate Language) der Methode übergeben, die durchlaufen wird.|  
+|[SetUnmappedStopMask-Methode](icordebugstepper-setunmappedstopmask-method.md)|Legt einen CorDebugUnmappedStop-Wert fest, der den Typ des nicht zugeordneten Codes angibt, in dem die Ausführung angehalten wird.|  
+|[Step-Methode](icordebugstepper-step-method.md)|Bewirkt, dass diese `ICorDebugStepper` einen einzigen Schritt durch den enthaltenden Thread durchläuft, und optional, um die Einzelschritt Weise durch Funktionen fortzusetzen, die innerhalb des Threads aufgerufen werden.|  
+|[StepOut-Methode](icordebugstepper-stepout-method.md)|Bewirkt, dass diese `ICorDebugStepper` einen Einzelschritt durch den enthaltenden Thread durchführt und fertiggestellt wird, wenn der aktuelle Frame die Steuerung an den aufrufenden Frame zurückgibt.|  
+|[StepRange-Methode](icordebugstepper-steprange-method.md)|Bewirkt, dass diese `ICorDebugStepper` einen einzigen Schritt durch den enthaltenden Thread durchläuft und zurückgegeben wird, wenn der Code über den letzten der angegebenen Bereiche hinausgeht.|  
   
 ## <a name="remarks"></a>Hinweise  
  Die `ICorDebugStepper`-Schnittstelle dient folgenden Zwecken:  
@@ -53,15 +53,15 @@ Stellt einen Schritt in der Codeausführung dar, der von einem Debugger ausgefü
 > [!NOTE]
 > Diese Schnittstelle kann weder computerübergreifend noch prozessübergreifend remote aufgerufen werden.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>-Anforderungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   
  **Bibliothek:** CorGuids.lib  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Debuggen von Schnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Debuggen von Schnittstellen](debugging-interfaces.md)

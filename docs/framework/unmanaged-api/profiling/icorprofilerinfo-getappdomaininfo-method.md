@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a6bf5a04-e03e-44f0-917a-96f6a6d3cc96
 topic_type:
 - apiref
-ms.openlocfilehash: 8c13ce443037d706f9eba49760ba76f47c5a6538
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 0407b7057753f7fdee6ea6b1d05144b135b6378a
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74448174"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76864088"
 ---
 # <a name="icorprofilerinfogetappdomaininfo-method"></a>ICorProfilerInfo::GetAppDomainInfo-Methode
 Akzeptiert eine Anwendungsdomänen-ID. Gibt den Namen einer Anwendungsdomäne und die ID des Prozesses zurück, in dem diese enthalten ist.  
@@ -37,7 +37,7 @@ HRESULT GetAppDomainInfo(
     [out] ProcessID   *pProcessId);  
 ```  
   
-## <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameters  
  `appDomainId`  
  [in] Die ID der Anwendungsdomäne.  
   
@@ -58,17 +58,17 @@ HRESULT GetAppDomainInfo(
   
  Alternativ können Sie zuerst `GetAppDomainInfo` mit einem `szName`-Puffer der Länge 0 (NULL) aufrufen, um die richtige Puffergröße zu ermitteln. Sie können die Puffergröße dann auf den Wert festlegen, der von `pcchName` zurückgegeben wurde, und `GetAppDomainInfo` erneut aufrufen.  
   
-## <a name="requirements"></a>Voraussetzungen  
+## <a name="requirements"></a>-Anforderungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  
   
  **Bibliothek:** CorGuids.lib  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [ICorProfilerInfo-Schnittstelle](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
-- [Profilerstellungsschnittstellen](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
-- [Profilerstellung](../../../../docs/framework/unmanaged-api/profiling/index.md)
+- [ICorProfilerInfo-Schnittstelle](icorprofilerinfo-interface.md)
+- [Profilerstellungsschnittstellen](profiling-interfaces.md)
+- [Profilerstellung](index.md)

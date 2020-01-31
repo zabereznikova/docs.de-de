@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 41af93c7-e448-4251-8d4d-413d38c635f2
 topic_type:
 - apiref
-ms.openlocfilehash: 9e1a5ba65da09c90f33e5e8108c3bd91f3aee4a1
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: cfec84483d387630623f77c176c668171303dd0f
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73131294"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76791990"
 ---
 # <a name="icordebugremotecreateprocessex-method"></a>ICorDebugRemote::CreateProcessEx-Methode
 Startet einen Prozess auf einem Remote Computer unter dem Debugger.  
@@ -45,9 +45,9 @@ HRESULT CreateProcessEx (
 );  
 ```  
   
-## <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameters  
  `pRemoteTarget`  
- in Zeiger auf eine [icordebugremotetarget-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/icordebugremotetarget-interface.md). Wird verwendet, um den Remote Computer zu ermitteln, auf dem der Prozess gestartet wird.  
+ [in] Zeiger auf eine [ICorDebugRemoteTarget-Schnittstelle](icordebugremotetarget-interface.md). Wird verwendet, um den Remote Computer zu ermitteln, auf dem der Prozess gestartet wird.  
   
  `lpApplicationName`  
  in Zeiger auf eine auf NULL endende Zeichenfolge, die das Modul angibt, das vom gestarteten Prozess ausgeführt werden soll. Das Modul wird im Sicherheitskontext des aufrufenden Prozesses ausgeführt.  
@@ -87,15 +87,15 @@ HRESULT CreateProcessEx (
   
 ## <a name="return-value"></a>Rückgabewert  
  S_OK  
- Der Prozess wurde erfolgreich auf dem Remote Computer gestartet, und es wurde eine ICorDebugProcess-Schnittstelle für das Debuggen zurückgegeben.  
+ Wurde erfolgreich gestartet den Prozess auf dem Remotecomputer und zurückgegebenen ein "ICorDebugProcess-Schnittstelle" für das Debuggen.  
   
  E_FAIL (oder andere E_-Rückgabecodes)  
- Der Prozess kann auf dem Remote Computer nicht gestartet werden, und es wird eine ICorDebugProcess-Schnittstelle für das Debuggen zurückgegeben.  
+ Starten Sie den Prozess auf dem Remotecomputer und Zurückgeben von "ICorDebugProcess-Schnittstelle" für das Debuggen nicht möglich.  
   
 ## <a name="remarks"></a>Hinweise  
  Das Debuggen im gemischten Modus wird in Silverlight nicht unterstützt.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>-Anforderungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** Cordebug. idl  
@@ -106,7 +106,7 @@ HRESULT CreateProcessEx (
   
 ## <a name="see-also"></a>Siehe auch
 
-- [ICorDebugRemote-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/icordebugremote-interface.md)
-- [ICorDebug-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
+- [ICorDebugRemote-Schnittstelle](icordebugremote-interface.md)
+- [ICorDebug-Schnittstelle](icordebug-interface.md)
 
-- [Debuggen von Schnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Debuggen von Schnittstellen](debugging-interfaces.md)

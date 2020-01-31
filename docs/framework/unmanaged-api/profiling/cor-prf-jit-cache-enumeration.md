@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: e7b8f6b4-95bc-4ba5-b9eb-f5590a7326a4
 topic_type:
 - apiref
-ms.openlocfilehash: 57d6ba77081536eb2bce0bf62d43ac080b2f5554
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 0061e0772c48626a7ba88280e44b74ef32838a41
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74447345"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76867138"
 ---
 # <a name="cor_prf_jit_cache-enumeration"></a>COR_PRF_JIT_CACHE-Enumeration
 Zeigt das Ergebnis einer zwischengespeicherten Funktionssuche.  
@@ -43,15 +43,15 @@ typedef enum {
 |`COR_PRF_FUNCTION_FOUND`|Bei der Suche wurde die-Funktion gefunden.|  
 |`COR_PRF_FUNCTION_NOT_FOUND`|Die Funktion wurde von der Suche nicht gefunden.|  
   
-## <a name="requirements"></a>Voraussetzungen  
+## <a name="requirements"></a>-Anforderungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  
   
  **Bibliothek:** CorGuids.lib  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Profilerstellungsenumerationen](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)
+- [Profilerstellungsenumerationen](profiling-enumerations.md)

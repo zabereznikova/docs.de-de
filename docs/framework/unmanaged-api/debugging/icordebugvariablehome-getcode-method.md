@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: ef002890-4a7b-4a5d-abbf-16c60083f794
 topic_type:
 - apiref
-ms.openlocfilehash: 4770eb3e93104dd3862eb2163faf1dc7fe9008ba
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: fdfa38a4cdbbaad2fc2c987a10a122af4a1fc9a9
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73125133"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76791039"
 ---
 # <a name="icordebugvariablehomegetcode-method"></a>Icordebugvariablehome:: GetCode-Methode
-Ruft die ICorDebugCode-Instanz ab, die dieses [icordebugvariablehome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md) -Objekt enthält.  
+Ruft die ICorDebugCode-Instanz ab, die dieses [icordebugvariablehome](icordebugvariablehome-interface.md) -Objekt enthält.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -33,19 +33,19 @@ HRESULT GetCode(
 );  
 ```  
   
-## <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameters  
  `ppCode`  
- vorgenommen Ein Zeiger auf die Adresse der ICorDebugCode-Instanz, die dieses [icordebugvariablehome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md) -Objekt enthält.  
+ vorgenommen Ein Zeiger auf die Adresse der ICorDebugCode-Instanz, die dieses [icordebugvariablehome](icordebugvariablehome-interface.md) -Objekt enthält.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>-Anforderungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   
  **Bibliothek:** CorGuids.lib  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
+ **.NET Framework Versionen:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [ICorDebugVariableHome-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md)
+- [ICorDebugVariableHome-Schnittstelle](icordebugvariablehome-interface.md)

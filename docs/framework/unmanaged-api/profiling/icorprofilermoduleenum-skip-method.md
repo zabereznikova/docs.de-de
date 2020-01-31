@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8dc29c6a-e2ba-41d8-a1e0-0fdd21421e0b
 topic_type:
 - apiref
-ms.openlocfilehash: d8c0f69ce407638aed6475c4d84d0e032cc6a8f5
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: fb7a2a6d8bac7e9a67a5275694fc07e0f1d469e1
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74435981"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76861332"
 ---
 # <a name="icorprofilermoduleenumskip-method"></a>ICorProfilerModuleEnum::Skip-Methode
 Verschiebt den Cursor des Enumerators so aus seiner aktuellen Position, dass die angegebene Anzahl von Elementen übersprungen wird.  
@@ -31,7 +31,7 @@ Verschiebt den Cursor des Enumerators so aus seiner aktuellen Position, dass die
 HRESULT Skip([in] ULONG celt);  
 ```  
   
-## <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameters  
  `celt`  
  in Die Anzahl der Elemente, die übersprungen werden sollen.  
   
@@ -46,16 +46,16 @@ HRESULT Skip([in] ULONG celt);
 ## <a name="remarks"></a>Hinweise  
  Die neue Position des Cursors dieses Enumerators ist (aktuelle Position) + `celt`.  
   
-## <a name="requirements"></a>Voraussetzungen  
+## <a name="requirements"></a>-Anforderungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  
   
  **Bibliothek:** CorGuids.lib  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework Versionen:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [ICorProfilerModuleEnum-Schnittstelle](../../../../docs/framework/unmanaged-api/profiling/icorprofilermoduleenum-interface.md)
-- [Profilerstellungsschnittstellen](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+- [ICorProfilerModuleEnum-Schnittstelle](icorprofilermoduleenum-interface.md)
+- [Profilerstellungsschnittstellen](profiling-interfaces.md)

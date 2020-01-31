@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b0df5c5d-9a2e-47bf-894c-6f8a9fe24a1f
 topic_type:
 - apiref
-ms.openlocfilehash: 83cc4eadca7c337c06c5fbf9f0e74306c2b9cb99
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: b78bff2994cefc6c35a4bd59133338392c3a1b24
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73131274"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76791971"
 ---
 # <a name="icordebugremotedebugactiveprocessex-method"></a>ICorDebugRemote::DebugActiveProcessEx-Methode
 Startet einen Prozess auf einem Remote Computer unter dem Debugger.  
@@ -36,9 +36,9 @@ HRESULT DebugActiveProcessEx (
 );  
 ```  
   
-## <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameters  
  `pRemoteTarget`  
- in Zeiger auf eine [icordebugremotetarget-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/icordebugremotetarget-interface.md). Dieser Parameter wird verwendet, um den Computer zu ermitteln, auf dem der Prozess ausgeführt wird.  
+ [in] Zeiger auf eine [ICorDebugRemoteTarget-Schnittstelle](icordebugremotetarget-interface.md). Dieser Parameter wird verwendet, um den Computer zu ermitteln, auf dem der Prozess ausgeführt wird.  
   
  `id`  
  in Die ID des Prozesses, an den der Debugger angefügt werden soll.  
@@ -59,7 +59,7 @@ HRESULT DebugActiveProcessEx (
 ## <a name="remarks"></a>Hinweise  
  Das Debuggen im gemischten Modus wird in Silverlight nicht unterstützt.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>-Anforderungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
@@ -70,7 +70,7 @@ HRESULT DebugActiveProcessEx (
   
 ## <a name="see-also"></a>Siehe auch
 
-- [ICorDebugRemote-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/icordebugremote-interface.md)
-- [ICorDebug-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
+- [ICorDebugRemote-Schnittstelle](icordebugremote-interface.md)
+- [ICorDebug-Schnittstelle](icordebug-interface.md)
 
-- [Debuggen von Schnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Debuggen von Schnittstellen](debugging-interfaces.md)

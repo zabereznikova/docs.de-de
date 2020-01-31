@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: bda75017-739f-4ce5-9000-f3b526e8473c
 topic_type:
 - apiref
-ms.openlocfilehash: 97b127c9a6aac0a0fefe25faf294791dcd2c8e41
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 839cd574e5352b74b47cd6242d5706bc6405d439
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74436029"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76862918"
 ---
 # <a name="icorprofilerinfo2getarrayobjectinfo-method"></a>ICorProfilerInfo2::GetArrayObjectInfo-Methode
 Ruft ausführliche Informationen zu einem Array Objekt ab.  
@@ -36,7 +36,7 @@ HRESULT GetArrayObjectInfo(
     [out] BYTE **ppData);  
 ```  
   
-## <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameters  
  `objectId`  
  in Die ID eines gültigen Array Objekts.  
   
@@ -55,16 +55,16 @@ HRESULT GetArrayObjectInfo(
 ## <a name="remarks"></a>Hinweise  
  Die `pDimensionSizes` und `pDimensionLowerBounds` sind parallele Arrays, sodass die Elemente, die sich am selben Index in jedem Array befinden, Merkmale derselben Entität sind.  
   
-## <a name="requirements"></a>Voraussetzungen  
+## <a name="requirements"></a>-Anforderungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  
   
  **Bibliothek:** CorGuids.lib  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [ICorProfilerInfo-Schnittstelle](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
-- [ICorProfilerInfo2-Schnittstelle](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)
+- [ICorProfilerInfo-Schnittstelle](icorprofilerinfo-interface.md)
+- [ICorProfilerInfo2-Schnittstelle](icorprofilerinfo2-interface.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 54d9a5a5-3877-49c1-a503-ce7c7943bc2a
 topic_type:
 - apiref
-ms.openlocfilehash: ae9cb089ad6c0b0422063d3db413b97eb6ff1405
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 8ae58344a7a17637bf08b9b5179abdba7e7060d6
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74445800"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76866025"
 ---
 # <a name="icorprofilercallbackremotingclientsendingmessage-method"></a>ICorProfilerCallback::RemotingClientSendingMessage-Methode
 Benachrichtigt den Profiler, dass der Client eine Anforderung an den Server sendet.  
@@ -33,9 +33,9 @@ HRESULT RemotingClientSendingMessage(
     [in] BOOL fIsAsync);  
 ```  
   
-## <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameters  
  `pCookie`  
- in Ein Wert, der dem Wert entspricht, der in [ICorProfilerCallback:: RemotingServerReceivingMessage](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingserverreceivingmessage-method.md) unter den folgenden Bedingungen bereitgestellt wird:  
+ in Ein Wert, der dem Wert entspricht, der in [ICorProfilerCallback:: RemotingServerReceivingMessage](icorprofilercallback-remotingserverreceivingmessage-method.md) unter den folgenden Bedingungen bereitgestellt wird:  
   
 - Remoting-GUID-Cookies sind aktiv.  
   
@@ -48,15 +48,15 @@ HRESULT RemotingClientSendingMessage(
  `fIsAsync`  
  in Ein-Wert, der `true` wird, wenn der-Befehl asynchron ist. Andernfalls `false`.  
   
-## <a name="requirements"></a>Voraussetzungen  
+## <a name="requirements"></a>-Anforderungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  
   
  **Bibliothek:** CorGuids.lib  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [ICorProfilerCallback-Schnittstelle](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [ICorProfilerCallback-Schnittstelle](icorprofilercallback-interface.md)

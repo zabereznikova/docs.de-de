@@ -11,12 +11,12 @@ api_type:
 - COM
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: c33a868b643cb3e3fd5dfaf436e3078bc590705c
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 5822136eb1a7f582bcfae901a99775950e586198
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74449820"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76863178"
 ---
 # <a name="icorprofilerinfo10requestrejitwithinliners-method"></a>ICorProfilerInfo10:: requestrejitwithinliners-Methode
 
@@ -31,25 +31,29 @@ HRESULT RequestReJITWithInliners( [in]                       DWORD       dwRejit
                                   [in, size_is(cFunctions)]  mdMethodDef methodIds[]);
 ```
 
-#### <a name="parameters"></a>Parameter
+## <a name="parameters"></a>Parameters
 
-`dwRejitFlags` \
-in Eine Bitmaske [COR_PRF_REJIT_FLAGS](../../../../docs/framework/unmanaged-api/profiling/cor-prf-rejit-flags-enumeration.md).
+- `dwRejitFlags`
 
-`cFunctions` \
-[in] Die Anzahl der neu zu kompilierenden Funktionen.
+  \[in] eine Bitmaske [COR_PRF_REJIT_FLAGS](cor-prf-rejit-flags-enumeration.md).
 
-`moduleIds` \
-[in] Gibt den `moduleId`-Teil der (`module`, `methodDef`)-Paare an, mit denen die neu zu kompilierenden Funktionen identifiziert werden.
+- `cFunctions`
 
-`methodIds` \
-[in] Gibt den `methodId`-Teil der (`module`, `methodDef`)-Paare an, mit denen die neu zu kompilierenden Funktionen identifiziert werden.
+  \[in] die Anzahl der neu zu kompilierenden Funktionen.
+
+- `moduleIds`
+
+  \[in] gibt den `moduleId` Teil der (`module`, `methodDef`) Paare an, die die neu zu kompilierenden Funktionen identifizieren.
+
+- `methodIds`
+
+  \[in] gibt den `methodId` Teil der (`module`, `methodDef`) Paare an, die die neu zu kompilierenden Funktionen identifizieren.
 
 ## <a name="remarks"></a>Hinweise
 
-[Requestrejit](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-requestrejit-method.md) führt keine Nachverfolgung von Inline Methoden aus. Der Profiler sollte entweder Inlining blockieren oder Inlining nachverfolgen und `RequestReJIT` für alle inlineanrufe abrufen, um sicherzustellen, dass jede Instanz einer Inline Methode erneut generiert wurde. Dies stellt ein Problem mit ReJIT beim Anfügen dar, da der Profiler nicht zum Überwachen des Inlining vorhanden ist. Diese Methode kann aufgerufen werden, um sicherzustellen, dass auch der vollständige Satz von Inliners erneut generiert wird.
+[Requestrejit](icorprofilerinfo4-requestrejit-method.md) führt keine Nachverfolgung von Inline Methoden aus. Der Profiler sollte entweder Inlining blockieren oder Inlining nachverfolgen und `RequestReJIT` für alle inlineanrufe abrufen, um sicherzustellen, dass jede Instanz einer Inline Methode erneut generiert wurde. Dies stellt ein Problem mit ReJIT beim Anfügen dar, da der Profiler nicht zum Überwachen des Inlining vorhanden ist. Diese Methode kann aufgerufen werden, um sicherzustellen, dass auch der vollständige Satz von Inliners erneut generiert wird.
 
-## <a name="requirements"></a>Voraussetzungen
+## <a name="requirements"></a>-Anforderungen
 
 **Plattformen:** Siehe [unterstützte .net Core-Betriebssysteme](../../../core/install/dependencies.md?tabs=netcore30&pivots=os-windows).
 
@@ -61,4 +65,4 @@ in Eine Bitmaske [COR_PRF_REJIT_FLAGS](../../../../docs/framework/unmanaged-api/
 
 ## <a name="see-also"></a>Siehe auch
 
-- [ICorProfilerInfo10-Schnittstelle](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo10-interface.md)
+- [ICorProfilerInfo10-Schnittstelle](icorprofilerinfo10-interface.md)

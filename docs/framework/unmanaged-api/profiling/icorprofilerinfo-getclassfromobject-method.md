@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b97493fb-713e-49d5-a73e-5688b2ad0700
 topic_type:
 - apiref
-ms.openlocfilehash: 460162f0fbc9993635d1bce0c5b130358ced4fa7
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: a5573765486112a83f5ea7cc9258447692f72166
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74448148"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76864065"
 ---
 # <a name="icorprofilerinfogetclassfromobject-method"></a>ICorProfilerInfo::GetClassFromObject-Methode
 Ruft den `ClassID` eines-Objekts ab, wenn dessen `ObjectID`.  
@@ -33,7 +33,7 @@ HRESULT GetClassFromObject(
     [out] ClassID *pClassId);  
 ```  
   
-## <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameters  
  `objectId`  
  in Die ID des Objekts, für das die `ClassID`erhalten werden soll.  
   
@@ -43,15 +43,15 @@ HRESULT GetClassFromObject(
 ## <a name="remarks"></a>Hinweise  
  Ein NULL-`pClassId` gibt an, dass `objectId` einen Typ aufweist, der entladen wird.  
   
-## <a name="requirements"></a>Voraussetzungen  
+## <a name="requirements"></a>-Anforderungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  
   
  **Bibliothek:** CorGuids.lib  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [ICorProfilerInfo-Schnittstelle](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [ICorProfilerInfo-Schnittstelle](icorprofilerinfo-interface.md)

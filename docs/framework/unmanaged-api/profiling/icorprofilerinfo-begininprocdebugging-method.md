@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c5c82c69-99f8-4447-aee0-42cca0a5eb5c
 topic_type:
 - apiref
-ms.openlocfilehash: fffc028c7706c86e8384483cc92ebad90b292861
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: c14979fa711145b9f1a134f90d7450b24e6d8a15
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74447751"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76864296"
 ---
 # <a name="icorprofilerinfobegininprocdebugging-method"></a>ICorProfilerInfo::BeginInprocDebugging-Methode
 Initialisiert die Prozess interne Debugunterstützung. Diese Methode ist in der .NET Framework Version 2,0 veraltet.  
@@ -33,7 +33,7 @@ HRESULT BeginInprocDebugging(
     [out] DWORD *pdwProfilerContext);  
 ```  
   
-## <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameters  
  `fThisThreadOnly`  
  in Legen Sie diesen Wert auf `true` fest, um die Debugunterstützung nur für den aktuellen Thread zu initialisieren. Legen Sie Sie auf `false`, um die Debugunterstützung für alle Threads zu initialisieren.  
   
@@ -43,7 +43,7 @@ HRESULT BeginInprocDebugging(
 ## <a name="remarks"></a>Hinweise  
  Die CLR-debuggingdienste unterstützten das eingeschränkte Prozess interne Debuggen in den .NET Framework-Versionen 1,0 und 1,1. Das Prozess interne Debuggen ermöglichte es einem Profiler, die Inspektions Teile der Debug-API zu verwenden. Aufgrund des Feedbacks von Kunden wurde das Prozess interne Debuggen aus der .NET Framework in Version 2,0 entfernt und durch eine Reihe von Funktionen ersetzt, die mit der Profilerstellungs-API mehr übereinstimmen.  
   
-## <a name="requirements"></a>Voraussetzungen  
+## <a name="requirements"></a>-Anforderungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  
@@ -54,4 +54,4 @@ HRESULT BeginInprocDebugging(
   
 ## <a name="see-also"></a>Siehe auch
 
-- [ICorProfilerInfo-Schnittstelle](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [ICorProfilerInfo-Schnittstelle](icorprofilerinfo-interface.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d2ca20db-df22-4528-a0dd-a09ea62c8998
 topic_type:
 - apiref
-ms.openlocfilehash: aa06b7db6b7371e66853ed242f5e118fb5e5ff0c
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: aeaa706ef35413a728f8b254cd325f0bcc83acd1
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73096201"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76792711"
 ---
 # <a name="icordebugnativeframe2ismatchingparentframe-method"></a>ICorDebugNativeFrame2::IsMatchingParentFrame-Methode
 Bestimmt, ob der angegebene Frame dem aktuellen Frame übergeordnet ist.  
@@ -33,7 +33,7 @@ HRESULT IsMatchingParentFrame([in] ICorDebugNativeFrame2
                               [out] BOOL *pIsParent);  
 ```  
   
-## <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameters  
  `pPotentialParentFrame`  
  in Ein Zeiger auf das Frame Objekt, das Sie für den übergeordneten Status auswerten möchten.  
   
@@ -54,17 +54,17 @@ HRESULT IsMatchingParentFrame([in] ICorDebugNativeFrame2
 ## <a name="remarks"></a>Hinweise  
  `IsMatchingParentFrame` gibt `true` zurück, wenn das Frame Objekt, das Sie an die Methode übergeben, das übergeordnete Element des Frame Objekts ist, für das die Methode aufgerufen wurde. Wenn Sie die-Methode für einen Frame aufzurufen, der kein untergeordnetes Element des angegebenen Frames ist, wird ein Fehler zurückgegeben.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>-Anforderungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   
  **Bibliothek:** CorGuids.lib  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework Versionen:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [ICorDebugNativeFrame2-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe2-interface.md)
-- [Debuggen von Schnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [Debuggen](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [ICorDebugNativeFrame2-Schnittstelle](icordebugnativeframe2-interface.md)
+- [Debuggen von Schnittstellen](debugging-interfaces.md)
+- [Debuggen](index.md)

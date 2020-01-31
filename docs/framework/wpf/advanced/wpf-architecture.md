@@ -16,12 +16,12 @@ helpviewer_keywords:
 - data templates [WPF]
 - thread [WPF], affinity
 ms.assetid: 8579c10b-76ab-4c52-9691-195ce02333c8
-ms.openlocfilehash: db9938f26f31506737eb0395fa389da01a1ee444
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
-ms.translationtype: HT
+ms.openlocfilehash: 6d8dedafd4ffc582b529289d3583f90d81779762
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76735065"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76794040"
 ---
 # <a name="wpf-architecture"></a>WPF-Architektur
 Dieses Thema enthält eine Einführung in die Windows Presentation Foundation (WPF)-Klassenhierarchie. Die meisten der wichtigsten Subsysteme von WPF werden behandelt, und es wird beschrieben, wie Sie interagieren. Außerdem werden einige der von den Architekten von WPF getroffenen Optionen ausführlich erläutert.  
@@ -116,7 +116,7 @@ Dieses Thema enthält eine Einführung in die Windows Presentation Foundation (W
   
  Die zwei wichtigsten Dinge, die <xref:System.Windows.FrameworkElement> eingeführt, sind die Datenbindung und Stile.  
   
- Das Daten Bindungs Subsystem in WPF sollte allen Personen, die [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] oder ASP.net zum Erstellen einer Anwendungs [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]verwendet haben, relativ vertraut sein. In jedem dieser Systeme besteht eine einfache Möglichkeit, um auszudrücken, dass Sie eine oder mehrere Eigenschaften aus einem angegebenen Element an Daten binden möchten. WPF bietet vollständige Unterstützung für die Bindungs-, Transformations-und Listen Bindung von Eigenschaften.  
+ Das Daten Bindungs Subsystem in WPF sollte allen Personen, die Windows Forms oder ASP.net zum Erstellen einer Anwendungs [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]verwendet haben, relativ vertraut sein. In jedem dieser Systeme besteht eine einfache Möglichkeit, um auszudrücken, dass Sie eine oder mehrere Eigenschaften aus einem angegebenen Element an Daten binden möchten. WPF bietet vollständige Unterstützung für die Bindungs-, Transformations-und Listen Bindung von Eigenschaften.  
   
  Eines der interessantesten Features der Datenbindung in WPF ist die Einführung von Datenvorlagen. Mit Datenvorlagen können Sie deklarativ angeben, wie Daten visualisiert werden sollen. Statt eine benutzerdefinierte Benutzeroberfläche zu erzeugen, die an Daten gebunden werden kann, können Sie stattdessen das Problem umzukehren, und die Daten selbst die Anzeige bestimmen lassen, die erstellt werden soll.  
   
@@ -130,7 +130,7 @@ Dieses Thema enthält eine Einführung in die Windows Presentation Foundation (W
   
  Diese Auftrennung zwischen Datenmodell (Eigenschaften), Interaktionsmodell (Befehle und Ereignisse) und Anzeigemodell (Vorlagen) ermöglicht die vollständige Anpassung von Aussehen und Verhalten eines Steuerelements.  
   
- Ein allgemeiner Aspekt des Datenmodells von Steuerelementen ist das Inhaltsmodell. Wenn Sie ein Steuerelement wie <xref:System.Windows.Controls.Button>betrachten, sehen Sie, dass es über eine Eigenschaft mit dem Namen "Content" vom Typ "<xref:System.Object>" verfügt. In [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] und ASP.net wäre diese Eigenschaft normalerweise eine Zeichenfolge, die den Typ des Inhalts einschränkt, den Sie in eine Schaltfläche einfügen können. Der Inhalt einer Schaltfläche kann entweder eine einfache Zeichenfolge, ein komplexes Datenobjekt oder eine komplette Elementstruktur sein. Bei einem Datenobjekt wird die Anzeige mithilfe einer Datenvorlage erstellt.  
+ Ein allgemeiner Aspekt des Datenmodells von Steuerelementen ist das Inhaltsmodell. Wenn Sie ein Steuerelement wie <xref:System.Windows.Controls.Button>betrachten, sehen Sie, dass es über eine Eigenschaft mit dem Namen "Content" vom Typ "<xref:System.Object>" verfügt. In Windows Forms und ASP.net wäre diese Eigenschaft normalerweise eine Zeichenfolge, die den Typ des Inhalts einschränkt, den Sie in eine Schaltfläche einfügen können. Der Inhalt einer Schaltfläche kann entweder eine einfache Zeichenfolge, ein komplexes Datenobjekt oder eine komplette Elementstruktur sein. Bei einem Datenobjekt wird die Anzeige mithilfe einer Datenvorlage erstellt.  
   
 <a name="Summary"></a>   
 ## <a name="summary"></a>Summary  
@@ -138,7 +138,7 @@ Dieses Thema enthält eine Einführung in die Windows Presentation Foundation (W
   
  Herkömmliche Anwendungen erzeugen eine Anzeige und binden anschließend Daten an. In WPF wird alles über das Steuerelement, jeder Aspekt der Anzeige, durch eine Art von Datenbindung generiert. Der Text in einer Schaltfläche wird angezeigt, indem ein zusammengesetztes Steuerelement in der Schaltfläche erstellt und seine Anzeige an die Content-Eigenschaft der Schaltfläche gebunden wird.  
   
- Wenn Sie mit der Entwicklung von WPF-basierten Anwendungen beginnen, sollte dies sehr vertraut sein. Sie können Eigenschaften festlegen, Objekte und Daten Bindungen auf die gleiche Weise wie [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] oder ASP.NET verwenden. Mit einer tieferen Untersuchung der Architektur von WPF werden Sie feststellen, dass die Möglichkeit besteht, umfangreichere Anwendungen zu erstellen, die Daten als Kern Treiber der Anwendung behandeln.  
+ Wenn Sie mit der Entwicklung von WPF-basierten Anwendungen beginnen, sollte dies sehr vertraut sein. Sie können Eigenschaften festlegen, Objekte und Daten Bindungen auf die gleiche Weise wie Windows Forms oder ASP.NET verwenden. Mit einer tieferen Untersuchung der Architektur von WPF werden Sie feststellen, dass die Möglichkeit besteht, umfangreichere Anwendungen zu erstellen, die Daten als Kern Treiber der Anwendung behandeln.  
   
 ## <a name="see-also"></a>Siehe auch
 

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: bd9936a6-cc24-4869-8761-0988664464e6
 topic_type:
 - apiref
-ms.openlocfilehash: 97c4e6d3c9de7dcb8d399a956a4a58c49ca6e3b9
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: bab6b7f683b5563cf362366dfb007f83caeee12d
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73131875"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76791937"
 ---
 # <a name="icordebugremotetarget-interface"></a>ICorDebugRemoteTarget-Schnittstelle
 Stellt Methoden bereit, die es Entwicklern ermöglichen, Silverlight-basierte Anwendungen in der Umgebung der Common Language Runtime (CLR) zu debuggen.  
@@ -41,14 +41,14 @@ interface ICorDebugRemoteTarget  : IUnknown
   
 ## <a name="methods"></a>Methoden  
   
-|Methode|Beschreibung|  
+|-Methode|Beschreibung|  
 |------------|-----------------|  
-|[ICorDebugRemoteTarget::GetHostName-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugremotetarget-gethostname-method.md)|Gibt den Hostnamen oder die IP-Adresse eines Remotecomputers zurück.|  
+|[ICorDebugRemoteTarget::GetHostName-Methode](icordebugremotetarget-gethostname-method.md)|Gibt den Hostnamen oder die IP-Adresse eines Remotecomputers zurück.|  
   
 ## <a name="remarks"></a>Hinweise  
  Debuggen im gemischten Modus (verwalteter und nativer Code) wird unter Windows 95, Windows 98 und Windows Me sowie auf Nicht-x86-Plattformen (z. B. IA-64 und AMD64) nicht unterstützt.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>-Anforderungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** Cordebug. idl  
@@ -59,6 +59,6 @@ interface ICorDebugRemoteTarget  : IUnknown
   
 ## <a name="see-also"></a>Siehe auch
 
-- [ICorDebugRemote-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/icordebugremote-interface.md)
-- [ICorDebug-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
-- [Debuggen von Schnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [ICorDebugRemote-Schnittstelle](icordebugremote-interface.md)
+- [ICorDebug-Schnittstelle](icordebug-interface.md)
+- [Debuggen von Schnittstellen](debugging-interfaces.md)
