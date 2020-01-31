@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f1a23f3b-ac21-4905-8abf-8ea59f15af53
 topic_type:
 - apiref
-ms.openlocfilehash: 332f88388ac72c11d273fc4d62d6684adae35b86
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
-ms.translationtype: HT
+ms.openlocfilehash: b1799472c4923aaccfabeae459ad72f6ae94c80d
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76790113"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76866376"
 ---
 # <a name="icorprofilercallbackexceptionthrown-method"></a>ICorProfilerCallback::ExceptionThrown-Methode
 Benachrichtigt den Profiler, dass eine Ausnahme ausgelöst wurde.  
@@ -57,4 +57,4 @@ HRESULT ExceptionThrown(
   
 ## <a name="see-also"></a>Siehe auch
 
-- [ICorProfilerCallback-Schnittstelle](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [ICorProfilerCallback-Schnittstelle](icorprofilercallback-interface.md)

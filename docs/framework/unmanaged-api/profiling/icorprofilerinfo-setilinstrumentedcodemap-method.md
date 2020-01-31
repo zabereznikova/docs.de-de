@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: bce1dcf8-b4ec-4e73-a917-f2df1ad49c8a
 topic_type:
 - apiref
-ms.openlocfilehash: 32e63a6d2b6f739025d4c5558c16fe2d74fde73c
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 99e473268fd0d5bb8ce120b97576277949b86508
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74449864"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76868996"
 ---
 # <a name="icorprofilerinfosetilinstrumentedcodemap-method"></a>ICorProfilerInfo::SetILInstrumentedCodeMap-Methode
 
@@ -39,7 +39,7 @@ HRESULT SetILInstrumentedCodeMap(
     [in, size_is(cILMapEntries)] COR_IL_MAP rgILMapEntries[]);
 ```
 
-## <a name="parameters"></a>Parameter
+## <a name="parameters"></a>Parameters
 
 `functionId`\
 in Die ID der Funktion, für die die Code Map festgelegt werden soll.
@@ -55,7 +55,7 @@ in Ein Array von COR_IL_MAP-Strukturen, von denen jede einen MSIL-Offset angibt.
 
 ## <a name="remarks"></a>Hinweise
 
-Ein Profiler fügt häufig Anweisungen innerhalb des Quellcodes einer Methode ein, um diese Methode zu instrumentieren (z. b. um zu benachrichtigen, wenn eine bestimmte Quellzeile erreicht ist). `SetILInstrumentedCodeMap` ermöglicht einem Profiler, die ursprünglichen MSIL-Anweisungen ihren neuen Speicherorten zuzuordnen. Ein Profiler kann die [ICorProfilerInfo:: GetILToNativeMapping](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getiltonativemapping-method.md) -Methode verwenden, um den ursprünglichen MSIL-Offset für einen angegebenen systemeigenen Offset zu erhalten.
+Ein Profiler fügt häufig Anweisungen innerhalb des Quellcodes einer Methode ein, um diese Methode zu instrumentieren (z. b. um zu benachrichtigen, wenn eine bestimmte Quellzeile erreicht ist). `SetILInstrumentedCodeMap` ermöglicht einem Profiler, die ursprünglichen MSIL-Anweisungen ihren neuen Speicherorten zuzuordnen. Ein Profiler kann die [ICorProfilerInfo:: GetILToNativeMapping](icorprofilerinfo-getiltonativemapping-method.md) -Methode verwenden, um den ursprünglichen MSIL-Offset für einen angegebenen systemeigenen Offset zu erhalten.
 
 Der Debugger geht davon aus, dass jeder alte Offset in dem ursprünglichen, nicht geänderten MSIL-Code auf einen MSIL-Offset verweist und dass jeder neue Offset auf den MSIL-Offset innerhalb des neuen, instrumentierten Codes verweist. Die Zuordnung sollte in steigender Reihenfolge sortiert werden. Befolgen Sie die folgenden Richtlinien, um die ordnungsgemäße Ausführung von Schritt zu
 
@@ -85,7 +85,7 @@ Der Debugger geht davon aus, dass jeder alte Offset in dem ursprünglichen, nich
 
 In den .NET Framework 3,5 und früheren Versionen weisen Sie das `rgILMapEntries` Array zu, indem Sie die [CoTaskMemAlloc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemalloc) -Methode aufrufen. Da die Laufzeit den Besitz dieses Speichers übernimmt, sollte der Profiler nicht versuchen, ihn freizugeben.
 
-## <a name="requirements"></a>Voraussetzungen
+## <a name="requirements"></a>-Anforderungen
 
 **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).
 
@@ -93,8 +93,8 @@ In den .NET Framework 3,5 und früheren Versionen weisen Sie das `rgILMapEntries
 
 **Bibliothek:** CorGuids.lib
 
-**.NET Framework-Versionen:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]
+**.NET Framework Versionen:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]
 
 ## <a name="see-also"></a>Siehe auch
 
-- [ICorProfilerInfo-Schnittstelle](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [ICorProfilerInfo-Schnittstelle](icorprofilerinfo-interface.md)

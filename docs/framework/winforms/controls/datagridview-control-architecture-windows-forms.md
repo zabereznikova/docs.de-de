@@ -1,30 +1,30 @@
 ---
-title: Architektur des DataGridView-Steuerelements (Windows Forms)
+title: Architektur des DataGridView-Steuerelements
 ms.date: 03/30/2017
 helpviewer_keywords:
 - DataGridView control [Windows Forms], architecture
 ms.assetid: 1c6cabf0-02ee-4bbc-9574-b54bb7f5b19e
-ms.openlocfilehash: 15d10ed2ec0bc78acfe887fe583d4850425eeab9
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 2e1884383cca87f8d4ff84f486e2b29761a0c55d
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64648106"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742531"
 ---
 # <a name="datagridview-control-architecture-windows-forms"></a>Architektur des DataGridView-Steuerelements (Windows Forms)
-Die <xref:System.Windows.Forms.DataGridView> Steuerelement und seinen verwandten Klassen dienen als ein flexibles, erweiterbares System zum Anzeigen und Bearbeiten von Tabellendaten. Diese Klassen sind in enthalten die <xref:System.Windows.Forms?displayProperty=nameWithType> -Namespace, und sie sind alle mit dem Namen mit dem Präfix "DataGridView".  
+Das <xref:System.Windows.Forms.DataGridView> Steuerelement und die zugehörigen Klassen sind als flexibles, erweiterbares System zum Anzeigen und Bearbeiten von Tabellendaten konzipiert. Diese Klassen sind alle im <xref:System.Windows.Forms?displayProperty=nameWithType>-Namespace enthalten, und alle werden mit dem Präfix "DataGridView" benannt.  
   
 ## <a name="architecture-elements"></a>Architekturelemente  
- Die primäre <xref:System.Windows.Forms.DataGridView> Assistentenklassen abgeleitet <xref:System.Windows.Forms.DataGridViewElement>. Das folgende Objektmodell veranschaulicht die <xref:System.Windows.Forms.DataGridViewElement> Vererbungshierarchie.  
+ Die primären <xref:System.Windows.Forms.DataGridView> Begleit Klassen werden von <xref:System.Windows.Forms.DataGridViewElement>abgeleitet. Das folgende Objektmodell veranschaulicht die <xref:System.Windows.Forms.DataGridViewElement> Vererbungs Hierarchie.  
   
- ![Diagramm, das die Hierarchie DataGridViewElement-Objektmodell veranschaulicht.](./media/datagridview-control-architecture-windows-forms/datagridviewelement-object-model.gif)  
+ ![Diagramm, das die datagridviewelements-Objektmodell Hierarchie anzeigt.](./media/datagridview-control-architecture-windows-forms/datagridviewelement-object-model.gif)  
   
- Die <xref:System.Windows.Forms.DataGridViewElement> Klasse stellt einen Verweis auf das übergeordnete Element <xref:System.Windows.Forms.DataGridView> steuern und verfügt über eine <xref:System.Windows.Forms.DataGridViewElement.State%2A> -Eigenschaft, die einen Wert enthält, die eine Kombination von Werten aus darstellt. die <xref:System.Windows.Forms.DataGridViewElementStates> Enumeration.  
+ Die <xref:System.Windows.Forms.DataGridViewElement>-Klasse stellt einen Verweis auf das übergeordnete <xref:System.Windows.Forms.DataGridView> Steuerelement bereit und verfügt über eine <xref:System.Windows.Forms.DataGridViewElement.State%2A>-Eigenschaft, die einen Wert enthält, der eine Kombination von Werten aus der <xref:System.Windows.Forms.DataGridViewElementStates> Enumeration darstellt.  
   
- Die folgenden Abschnitte beschreiben die <xref:System.Windows.Forms.DataGridView> Assistentenklassen im Detail.  
+ In den folgenden Abschnitten werden die <xref:System.Windows.Forms.DataGridView> Begleit Klassen ausführlicher beschrieben.  
   
 ### <a name="datagridviewelementstates"></a>DataGridViewElementStates  
- Die <xref:System.Windows.Forms.DataGridViewElementStates> Enumeration enthält die folgenden Werte:  
+ Die <xref:System.Windows.Forms.DataGridViewElementStates>-Enumeration verfügt über folgende Werte:  
   
 - <xref:System.Windows.Forms.DataGridViewElementStates.None>  
   
@@ -40,23 +40,23 @@ Die <xref:System.Windows.Forms.DataGridView> Steuerelement und seinen verwandten
   
 - <xref:System.Windows.Forms.DataGridViewElementStates.Visible>  
   
- Die Werte dieser Enumeration können mit der bitweisen logischen Operatoren kombiniert werden also die <xref:System.Windows.Forms.DataGridViewElement.State%2A> Eigenschaft kann mehreren Zuständen gleichzeitig Ausdrücken. Z. B. eine <xref:System.Windows.Forms.DataGridViewElement> gleichzeitig möglich <xref:System.Windows.Forms.DataGridViewElementStates.Frozen>, <xref:System.Windows.Forms.DataGridViewElementStates.Selected>, und <xref:System.Windows.Forms.DataGridViewElementStates.Visible>.  
+ Die Werte dieser Enumeration können mit den bitweisen logischen Operatoren kombiniert werden, sodass die <xref:System.Windows.Forms.DataGridViewElement.State%2A>-Eigenschaft mehr als einen Status gleichzeitig Ausdrücken kann. Beispielsweise kann ein <xref:System.Windows.Forms.DataGridViewElement> gleichzeitig <xref:System.Windows.Forms.DataGridViewElementStates.Frozen>, <xref:System.Windows.Forms.DataGridViewElementStates.Selected>und <xref:System.Windows.Forms.DataGridViewElementStates.Visible>sein.  
   
 ### <a name="cells-and-bands"></a>Zellen und Bänder  
- Die <xref:System.Windows.Forms.DataGridView> Steuerelement besteht aus zwei grundlegende Arten von Objekten: Zellen und Bänder. Leiten Sie alle Zellen von der <xref:System.Windows.Forms.DataGridViewCell> Basisklasse. Die beiden Arten von Bändern, <xref:System.Windows.Forms.DataGridViewColumn> und <xref:System.Windows.Forms.DataGridViewRow>, beide leiten Sie von der <xref:System.Windows.Forms.DataGridViewBand> Basisklasse.  
+ Das <xref:System.Windows.Forms.DataGridView> Steuerelement besteht aus zwei grundlegenden Arten von Objekten: Zellen und Bänder. Alle Zellen werden von der <xref:System.Windows.Forms.DataGridViewCell> Basisklasse abgeleitet. Die beiden Arten von Bändern, <xref:System.Windows.Forms.DataGridViewColumn> und <xref:System.Windows.Forms.DataGridViewRow>, werden von der <xref:System.Windows.Forms.DataGridViewBand>-Basisklasse abgeleitet.  
   
- Die <xref:System.Windows.Forms.DataGridView> -Steuerelement wirkt mit mehreren Klassen, jedoch die am häufigsten auftretenden <xref:System.Windows.Forms.DataGridViewCell>, <xref:System.Windows.Forms.DataGridViewColumn>, und <xref:System.Windows.Forms.DataGridViewRow>.  
+ Das <xref:System.Windows.Forms.DataGridView>-Steuerelement interagiert mit mehreren Klassen, aber die am häufigsten gefundenen sind <xref:System.Windows.Forms.DataGridViewCell>, <xref:System.Windows.Forms.DataGridViewColumn>und <xref:System.Windows.Forms.DataGridViewRow>.  
   
 ### <a name="datagridviewcell"></a>DataGridViewCell  
- Die Zelle ist die grundlegende Einheit für die Interaktion der <xref:System.Windows.Forms.DataGridView>. Anzeige beruht auf Zellen, und die Dateneingabe wird häufig Zellen. Sie Zugriff auf Zellen mithilfe der <xref:System.Windows.Forms.DataGridViewRow.Cells%2A> Auflistung von der <xref:System.Windows.Forms.DataGridViewRow> -Klasse, und Sie können die ausgewählten Zellen zugreifen, indem Sie mit der <xref:System.Windows.Forms.DataGridView.SelectedCells%2A> Auflistung von der <xref:System.Windows.Forms.DataGridView> Steuerelement. Das folgende Objektmodell veranschaulicht diese Verwendung sowie die <xref:System.Windows.Forms.DataGridViewCell> Vererbungshierarchie.  
+ Die Zelle ist die grundlegende Einheit der Interaktion für die <xref:System.Windows.Forms.DataGridView>. Die Anzeige wird auf Zellen zentriert, und der Dateneintrag wird häufig durch Zellen durchgeführt. Sie können mit der <xref:System.Windows.Forms.DataGridViewRow.Cells%2A>-Auflistung der <xref:System.Windows.Forms.DataGridViewRow>-Klasse auf Zellen zugreifen, und Sie können auf die ausgewählten Zellen zugreifen, indem Sie die <xref:System.Windows.Forms.DataGridView.SelectedCells%2A>-Auflistung des <xref:System.Windows.Forms.DataGridView> Steuer Elements verwenden. Das folgende Objektmodell veranschaulicht diese Verwendung und zeigt die <xref:System.Windows.Forms.DataGridViewCell> Vererbungs Hierarchie.  
   
- ![Diagramm, das die Hierarchie der DataGridViewCell-Objektmodell veranschaulicht.](./media/datagridview-control-architecture-windows-forms/datagridviewcell-object-model.gif)  
+ ![Diagramm, das die DataGridViewCell-Objektmodell Hierarchie anzeigt.](./media/datagridview-control-architecture-windows-forms/datagridviewcell-object-model.gif)  
   
- Die <xref:System.Windows.Forms.DataGridViewCell> Typ ist eine abstrakte Basisklasse, von der alle Arten der Zelle abgeleitet werden. <xref:System.Windows.Forms.DataGridViewCell> und seinen abgeleiteten Typen sind nicht an Windows Forms-Steuerelemente, aber einige Windows Forms-Hoststeuerelemente. Weiteren Bearbeitungsfunktionen unterstützt, die eine Zelle wird in der Regel von eines gehosteten Steuerelements behandelt.  
+ Der <xref:System.Windows.Forms.DataGridViewCell>-Typ ist eine abstrakte Basisklasse, von der alle Zelltypen abgeleitet werden. <xref:System.Windows.Forms.DataGridViewCell> und die abgeleiteten Typen sind keine Windows Forms Steuerelemente, sondern einige Host Windows Forms-Steuerelemente. Alle von einer Zelle unterstützten Bearbeitungsfunktionen werden in der Regel von einem gehosteten Steuerelement behandelt.  
   
- <xref:System.Windows.Forms.DataGridViewCell> Objekte können nicht ihre eigenen Darstellung und das Zeichnen-Funktionen auf dieselbe Weise steuern wie Windows Forms-Steuerelemente. Stattdessen die <xref:System.Windows.Forms.DataGridView> ist verantwortlich für die Darstellung der <xref:System.Windows.Forms.DataGridViewCell> Objekte. Sie können das Aussehen und Verhalten von Zellen erheblich beeinflussen, indem die Interaktion mit der <xref:System.Windows.Forms.DataGridView> Eigenschaften und Ereignisse des Steuerelements. Wenn Sie über besondere Anforderungen für Anpassungen, die über die Funktionen der verfügen die <xref:System.Windows.Forms.DataGridView> -Steuerelement, können Sie eigene abgeleitete Klasse implementieren <xref:System.Windows.Forms.DataGridViewCell> oder eine ihrer untergeordneten Klassen.  
+ <xref:System.Windows.Forms.DataGridViewCell> Objekte steuern ihre eigenen Erscheinungsbild-und Zeichnungsfunktionen nicht auf die gleiche Weise wie Windows Forms Steuerelemente. Stattdessen ist der <xref:System.Windows.Forms.DataGridView> für das Aussehen seiner <xref:System.Windows.Forms.DataGridViewCell> Objekte verantwortlich. Sie können die Darstellung und das Verhalten von Zellen erheblich beeinflussen, indem Sie mit den Eigenschaften und Ereignissen des <xref:System.Windows.Forms.DataGridView> Steuer Elements interagieren. Wenn Sie besondere Anforderungen an Anpassungen haben, die über die Funktionen des <xref:System.Windows.Forms.DataGridView>-Steuer Elements hinausgehen, können Sie eine eigene Klasse implementieren, die von <xref:System.Windows.Forms.DataGridViewCell> oder einer der untergeordneten Klassen abgeleitet ist.  
   
- Die folgende Liste enthält die von abgeleiteten Klassen <xref:System.Windows.Forms.DataGridViewCell>:  
+ Die folgende Liste zeigt die Klassen, die von <xref:System.Windows.Forms.DataGridViewCell>abgeleitet sind:  
   
 - <xref:System.Windows.Forms.DataGridViewTextBoxCell>  
   
@@ -78,16 +78,16 @@ Die <xref:System.Windows.Forms.DataGridView> Steuerelement und seinen verwandten
   
 - <xref:System.Windows.Forms.DataGridViewTopLeftHeaderCell>  
   
-- Die benutzerdefinierte Zellentypen  
+- Ihre benutzerdefinierten Zelltypen  
   
 ### <a name="datagridviewcolumn"></a>DataGridViewColumn  
- Das Schema der <xref:System.Windows.Forms.DataGridView> angefügten Datenspeicher des Steuerelements, ausgedrückt in der <xref:System.Windows.Forms.DataGridView> des Steuerelements Spalten. Sie erreichen die <xref:System.Windows.Forms.DataGridView> des Steuerelements Spalten mithilfe der <xref:System.Windows.Forms.DataGridView.Columns%2A> Auflistung. Sie können die ausgewählten Spalten zugreifen, indem Sie mit der <xref:System.Windows.Forms.DataGridView.SelectedColumns%2A> Auflistung. Das folgende Objektmodell veranschaulicht diese Verwendung sowie die <xref:System.Windows.Forms.DataGridViewColumn> Vererbungshierarchie.  
+ Das Schema des angefügten Datenspeicher des <xref:System.Windows.Forms.DataGridView>-Steuer Elements wird in den Spalten des <xref:System.Windows.Forms.DataGridView> Steuer Elements ausgedrückt. Sie können auf die Spalten des <xref:System.Windows.Forms.DataGridView> Steuer Elements mithilfe der <xref:System.Windows.Forms.DataGridView.Columns%2A> Auflistung zugreifen. Sie können auf die ausgewählten Spalten zugreifen, indem Sie die <xref:System.Windows.Forms.DataGridView.SelectedColumns%2A> Sammlung verwenden. Das folgende Objektmodell veranschaulicht diese Verwendung und zeigt die <xref:System.Windows.Forms.DataGridViewColumn> Vererbungs Hierarchie.  
   
- ![Diagramm, das die Hierarchie DataGridViewColumn-Objektmodell veranschaulicht.](./media/datagridview-control-architecture-windows-forms/datagridviewcolumn-object-model.gif)  
+ ![Diagramm, das die DataGridViewColumn-Objektmodell Hierarchie anzeigt.](./media/datagridview-control-architecture-windows-forms/datagridviewcolumn-object-model.gif)  
   
- Einige der wichtigsten Zellentypen verfügen über entsprechende Spaltentypen. Diese stammen von der <xref:System.Windows.Forms.DataGridViewColumn> Basisklasse.  
+ Einige der Schlüssel Zelltypen weisen entsprechende Spaltentypen auf. Diese werden von der <xref:System.Windows.Forms.DataGridViewColumn> Basisklasse abgeleitet.  
   
- Die folgende Liste enthält die von abgeleiteten Klassen <xref:System.Windows.Forms.DataGridViewColumn>:  
+ Die folgende Liste zeigt die Klassen, die von <xref:System.Windows.Forms.DataGridViewColumn>abgeleitet sind:  
   
 - <xref:System.Windows.Forms.DataGridViewButtonColumn>  
   
@@ -101,40 +101,40 @@ Die <xref:System.Windows.Forms.DataGridView> Steuerelement und seinen verwandten
   
 - <xref:System.Windows.Forms.DataGridViewLinkColumn>  
   
-- Benutzerdefinierte Spaltentypen  
+- Ihre benutzerdefinierten Spaltentypen  
   
-### <a name="datagridview-editing-controls"></a>Bearbeiten von DataGridView-Steuerelement  
- Zellen, die erweiterte Bearbeitungsfunktionen, in der Regel unterstützen, verwenden Sie ein gehostetes Steuerelement, das von einer Windows Forms-Steuerelement abgeleitet wird. Diese Steuerelemente implementieren, auch die <xref:System.Windows.Forms.IDataGridViewEditingControl> Schnittstelle. Das folgende Objektmodell veranschaulicht die Verwendung dieser Steuerelemente.  
+### <a name="datagridview-editing-controls"></a>DataGridView-Bearbeitungs Steuerelemente  
+ Zellen, die erweiterte Bearbeitungsfunktionen unterstützen, verwenden normalerweise ein gehosteter Steuerelement, das von einem Windows Forms Steuerelement abgeleitet ist. Diese Steuerelemente implementieren auch die <xref:System.Windows.Forms.IDataGridViewEditingControl>-Schnittstelle. Das folgende Objektmodell veranschaulicht die Verwendung dieser Steuerelemente.  
   
- ![Das Diagramm zeigt die Hierarchie DataGridView bearbeiten-Steuerelement-Objektmodell.](./media/datagridview-control-architecture-windows-forms/datagridviewediting-object-model.gif)  
+ ![Diagramm, das die DataGridView-Bearbeitungs Steuerelement-Objektmodell Hierarchie anzeigt.](./media/datagridview-control-architecture-windows-forms/datagridviewediting-object-model.gif)  
   
- Die folgenden Bearbeitungssteuerelemente sind im Lieferumfang der <xref:System.Windows.Forms.DataGridView> Steuerelement:  
+ Die folgenden Bearbeitungs Steuerelemente werden mit dem <xref:System.Windows.Forms.DataGridView>-Steuerelement bereitgestellt:  
   
 - <xref:System.Windows.Forms.DataGridViewComboBoxEditingControl>  
   
 - <xref:System.Windows.Forms.DataGridViewTextBoxEditingControl>  
   
- Weitere Informationen zum Erstellen eigener Bearbeitungssteuerelemente, finden Sie unter [Vorgehensweise: Hosten von Steuerelementen in Windows Forms DataGridView-Zellen](how-to-host-controls-in-windows-forms-datagridview-cells.md).  
+ Weitere Informationen zum Erstellen eigener Bearbeitungs Steuerelemente finden Sie unter Gewusst [wie: Hosten von Steuerelementen in Windows Forms DataGridView-Zellen](how-to-host-controls-in-windows-forms-datagridview-cells.md).  
   
- Die folgende Tabelle zeigt die Beziehung zwischen Zellentypen, Spaltentypen und Bearbeitung von Steuerelementen.  
+ In der folgenden Tabelle wird die Beziehung zwischen Zellen Typen, Spaltentypen und Bearbeitungs Steuerelementen veranschaulicht.  
   
-|Zellentyp|Gehostete Steuerelement|Spaltentyp|  
+|Zellentyp|Gehosteter Steuerelement|Spaltentyp|  
 |---------------|--------------------|-----------------|  
-|<xref:System.Windows.Forms.DataGridViewButtonCell>|n/v|<xref:System.Windows.Forms.DataGridViewButtonColumn>|  
-|<xref:System.Windows.Forms.DataGridViewCheckBoxCell>|n/v|<xref:System.Windows.Forms.DataGridViewCheckBoxColumn>|  
+|<xref:System.Windows.Forms.DataGridViewButtonCell>|nicht verfügbar|<xref:System.Windows.Forms.DataGridViewButtonColumn>|  
+|<xref:System.Windows.Forms.DataGridViewCheckBoxCell>|nicht verfügbar|<xref:System.Windows.Forms.DataGridViewCheckBoxColumn>|  
 |<xref:System.Windows.Forms.DataGridViewComboBoxCell>|<xref:System.Windows.Forms.DataGridViewComboBoxEditingControl>|<xref:System.Windows.Forms.DataGridViewComboBoxColumn>|  
-|<xref:System.Windows.Forms.DataGridViewImageCell>|n/v|<xref:System.Windows.Forms.DataGridViewImageColumn>|  
-|<xref:System.Windows.Forms.DataGridViewLinkCell>|n/v|<xref:System.Windows.Forms.DataGridViewLinkColumn>|  
+|<xref:System.Windows.Forms.DataGridViewImageCell>|nicht verfügbar|<xref:System.Windows.Forms.DataGridViewImageColumn>|  
+|<xref:System.Windows.Forms.DataGridViewLinkCell>|nicht verfügbar|<xref:System.Windows.Forms.DataGridViewLinkColumn>|  
 |<xref:System.Windows.Forms.DataGridViewTextBoxCell>|<xref:System.Windows.Forms.DataGridViewTextBoxEditingControl>|<xref:System.Windows.Forms.DataGridViewTextBoxColumn>|  
   
 ### <a name="datagridviewrow"></a>DataGridViewRow  
- Die <xref:System.Windows.Forms.DataGridViewRow> Klasse angezeigt, die Daten des Datensatzes aus den Daten Felder zu speichern, zu dem die <xref:System.Windows.Forms.DataGridView> Steuerelement angefügt ist. Sie können den Zugriff auf die <xref:System.Windows.Forms.DataGridView> des Steuerelements Zeilen mithilfe der <xref:System.Windows.Forms.DataGridView.Rows%2A> Auflistung. Sie können die ausgewählten Zeilen zugreifen, indem Sie mit der <xref:System.Windows.Forms.DataGridView.SelectedRows%2A> Auflistung. Das folgende Objektmodell veranschaulicht diese Verwendung sowie die <xref:System.Windows.Forms.DataGridViewRow> Vererbungshierarchie.  
+ Die <xref:System.Windows.Forms.DataGridViewRow>-Klasse zeigt die Datenfelder eines Datensatzes aus dem Datenspeicher an, an den das <xref:System.Windows.Forms.DataGridView>-Steuerelement angefügt ist. Sie können mithilfe der <xref:System.Windows.Forms.DataGridView.Rows%2A> Auflistung auf die Zeilen des <xref:System.Windows.Forms.DataGridView>-Steuer Elements zugreifen. Sie können auf die ausgewählten Zeilen zugreifen, indem Sie die <xref:System.Windows.Forms.DataGridView.SelectedRows%2A> Sammlung verwenden. Das folgende Objektmodell veranschaulicht diese Verwendung und zeigt die <xref:System.Windows.Forms.DataGridViewRow> Vererbungs Hierarchie.  
   
- ![Diagramm, das die Hierarchie DataGridViewRow-Objektmodell veranschaulicht.](./media/datagridview-control-architecture-windows-forms/datagridviewrow-object-model.gif)
+ ![Diagramm, das die DataGridViewRow-Objektmodell Hierarchie anzeigt.](./media/datagridview-control-architecture-windows-forms/datagridviewrow-object-model.gif)
   
- Sie können Ihre eigenen Typen von Ableiten der <xref:System.Windows.Forms.DataGridViewRow> Klasse, obwohl dies in der Regel nicht notwendig ist. Die <xref:System.Windows.Forms.DataGridView> Steuerelement verfügt über mehrere zeilenbezogenen Ereignisse und Eigenschaften zum Anpassen des Verhaltens des seine <xref:System.Windows.Forms.DataGridViewRow> Objekte.  
+ Sie können Ihre eigenen Typen aus der <xref:System.Windows.Forms.DataGridViewRow>-Klasse ableiten, obwohl dies in der Regel nicht erforderlich ist. Das <xref:System.Windows.Forms.DataGridView>-Steuerelement verfügt über mehrere Zeilen bezogene Ereignisse und Eigenschaften zum Anpassen des Verhaltens seiner <xref:System.Windows.Forms.DataGridViewRow> Objekte.  
   
- Wenn Sie aktivieren die <xref:System.Windows.Forms.DataGridView> des Steuerelements <xref:System.Windows.Forms.DataGridView.AllowUserToAddRows%2A> -Eigenschaft, eine spezielle Zeile für neue Zeilen hinzugefügt, die als letzte Zeile angezeigt wird. Diese Zeile ist Teil der <xref:System.Windows.Forms.DataGridView.Rows%2A> -Auflistung, aber es verfügt über spezielle Funktionen, die möglicherweise Ihre Aufmerksamkeit erfordern. Weitere Informationen finden Sie unter [verwenden die Zeile für neue Datensätze im DataGridView-Steuerelement in Windows Forms](using-the-row-for-new-records-in-the-windows-forms-datagridview-control.md).  
+ Wenn Sie die <xref:System.Windows.Forms.DataGridView.AllowUserToAddRows%2A>-Eigenschaft des <xref:System.Windows.Forms.DataGridView> Steuer Elements aktivieren, wird eine spezielle Zeile zum Hinzufügen neuer Zeilen als letzte Zeile angezeigt. Diese Zeile ist Teil der <xref:System.Windows.Forms.DataGridView.Rows%2A>-Sammlung, verfügt jedoch über spezielle Funktionen, die möglicherweise Ihre Aufmerksamkeit erfordern. Weitere Informationen finden Sie unter [Verwenden der Zeile für neue Datensätze im Windows Forms DataGridView-Steuer](using-the-row-for-new-records-in-the-windows-forms-datagridview-control.md)Element.  
   
 ## <a name="see-also"></a>Siehe auch
 

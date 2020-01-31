@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 880ca92a-42d4-42a5-9b9c-c2848eb39c6a
 topic_type:
 - apiref
-ms.openlocfilehash: b954aa0e4db10fd4b3bde951c7f27d18b8634f5a
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 6f4c96517375df4cd249b72953bf37812a498c0c
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73132186"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76789363"
 ---
 # <a name="cordebuggctype-enumeration"></a>CorDebugGCType-Enumeration
 Gibt an, ob die Garbage Collection auf einer Arbeitsstation oder einen Server ausgeführt wird.  
@@ -33,26 +33,26 @@ typedef enum CorDebugGCType {
 } CorDebugGCType;  
 ```  
   
-## <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameters  
   
 ## <a name="members"></a>Member  
   
-|Membername|Beschreibung|  
+|Mitgliedsname|Beschreibung|  
 |-----------------|-----------------|  
 |`CorDebugWorkstationGC`|Der Garbage Collector wird auf einer Arbeitsstation ausgeführt.|  
 |`CorDebugServerGC`|Der Garbage Collector wird auf einem Server ausgeführt.|  
   
 ## <a name="remarks"></a>Hinweise  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>-Anforderungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   
  **Bibliothek:** CorGuids.lib  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework Versionen:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Debuggen von Enumerationen](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+- [Debuggen von Enumerationen](debugging-enumerations.md)

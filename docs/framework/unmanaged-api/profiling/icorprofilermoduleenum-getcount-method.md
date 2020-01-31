@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f0a4a5e0-4689-474b-b0f4-37ca0639c918
 topic_type:
 - apiref
-ms.openlocfilehash: 9aaf1a282435e3f52b2c2d8f3d17254b877e61cc
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 772a7c08c934fda59a2764e1fbe22d3d2b08a620
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74442768"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76861501"
 ---
 # <a name="icorprofilermoduleenumgetcount-method"></a>ICorProfilerModuleEnum::GetCount-Methode
 Ruft die Anzahl der verwalteten Module ab, die in die Anwendung geladen wurden.  
@@ -31,20 +31,20 @@ Ruft die Anzahl der verwalteten Module ab, die in die Anwendung geladen wurden.
 HRESULT GetCount([out] ULONG * pcelt);  
 ```  
   
-## <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameters  
  `celt`  
  vorgenommen Die Anzahl der Lauf Zeit Module in der Auflistung.  
   
-## <a name="requirements"></a>Voraussetzungen  
+## <a name="requirements"></a>-Anforderungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  
   
  **Bibliothek:** CorGuids.lib  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework Versionen:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [ICorProfilerModuleEnum-Schnittstelle](../../../../docs/framework/unmanaged-api/profiling/icorprofilermoduleenum-interface.md)
-- [Profilerstellungsschnittstellen](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+- [ICorProfilerModuleEnum-Schnittstelle](icorprofilermoduleenum-interface.md)
+- [Profilerstellungsschnittstellen](profiling-interfaces.md)

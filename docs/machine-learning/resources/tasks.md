@@ -2,12 +2,12 @@
 title: Machine Learning-Aufgaben
 description: Untersuchen Sie die anderen in ML.NET unterstützten Machine Learning-Aufgaben und zugehörigen Aufgaben.
 ms.date: 12/23/2019
-ms.openlocfilehash: badb096ab3e7fbd575d8594b4fbd0e2ebaf63820
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 6cd41065e668375537b9816ef7a208a65e0a523b
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75739628"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76745102"
 ---
 # <a name="machine-learning-tasks-in-mlnet"></a>Machine Learning-Aufgaben in ML.NET
 
@@ -85,6 +85,7 @@ Sie können ein Modell zur Multiklassenklassifizierung mithilfe der folgenden Al
 * <xref:Microsoft.ML.Trainers.NaiveBayesMulticlassTrainer>
 * <xref:Microsoft.ML.Trainers.OneVersusAllTrainer>
 * <xref:Microsoft.ML.Trainers.PairwiseCouplingTrainer>
+* <xref:Microsoft.ML.Vision.ImageClassificationTrainer>
 
 ### <a name="multiclass-classification-inputs-and-outputs"></a>Eingaben und Ausgaben für die Multiklassenklassifizierung
 
@@ -219,3 +220,13 @@ Mit einer Empfehlungsaufgabe kann eine Liste empfohlener Produkte oder Dienste e
 Sie können ein Empfehlungsmodell mithilfe der folgenden Algorithmen trainieren:
 
 * <xref:Microsoft.ML.Trainers.MatrixFactorizationTrainer>
+
+## <a name="forecasting"></a>Vorhersage
+
+Bei der Aufgabe „Vorhersage“ werden anhand von Daten aus vergangenen Zeitreihen Vorhersagen über zukünftiges Verhalten getroffen. Sie eignet sich unter anderem für Wettervorhersagen, Vorhersagen zum Saisonumsatz und Predictive Maintenance.
+
+### <a name="forecasting-trainers"></a>Trainer für die Aufgabe „Vorhersage“
+
+Sie können ein Vorhersagemodell mithilfe der folgenden Algorithmen trainieren:
+
+<xref:Microsoft.ML.TimeSeriesCatalog.ForecastBySsa*>

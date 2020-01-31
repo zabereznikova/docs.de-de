@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 00c64533-15dd-47f4-bb97-fe80a1ebadef
 topic_type:
 - apiref
-ms.openlocfilehash: 9f54fdfe16bc24394503ba6f5a9b906a32ec2c8b
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 57eb284bfe39ce92b2d6c03a2aeb4ae84d6aba91
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73091101"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76788664"
 ---
 # <a name="icordebugexceptionobjectvalueenumerateexceptioncallstack-method"></a>ICorDebugExceptionObjectValue::EnumerateExceptionCallStack-Methode
 Ruft einen Enumerator für die in einem Ausnahme Objekt eingebettete-Aufzählung ab.  
@@ -33,25 +33,25 @@ HRESULT EnumerateExceptionCallStack(
 );  
 ```  
   
-## <a name="parameters"></a>Parameter  
- ppcallstackaufumum  
- vorgenommen Ein Zeiger auf die Adresse eines [icordebugexceptionobjectcallstackenum](../../../../docs/framework/unmanaged-api/debugging/icordebugexceptionobjectcallstackenum-interface.md) -Schnittstellen Objekts, bei dem es sich um einen Stapel Verfolgungs Enumerator für ein verwaltetes Ausnahme Objekt handelt.  
+## <a name="parameters"></a>Parameters  
+ ppCallStackEnum  
+ vorgenommen Ein Zeiger auf die Adresse eines [icordebugexceptionobjectcallstackenum](icordebugexceptionobjectcallstackenum-interface.md) -Schnittstellen Objekts, bei dem es sich um einen Stapel Verfolgungs Enumerator für ein verwaltetes Ausnahme Objekt handelt.  
   
 ## <a name="remarks"></a>Hinweise  
- Wenn keine Aufruf Listen Informationen verfügbar sind, gibt die Methode `S_OK`und [icordebugexceptionobjectcallstackenum](../../../../docs/framework/unmanaged-api/debugging/icordebugexceptionobjectcallstackenum-interface.md) einen gültigen Enumerator mit einer Länge von 0 (null) zurück. Wenn die Methode keine Stapel Überwachungsinformationen abrufen kann, ist der Rückgabewert `E_FAIL`, und es wird kein Enumerator zurückgegeben.  
+ Wenn keine Aufruf Listen Informationen verfügbar sind, gibt die Methode `S_OK`und [icordebugexceptionobjectcallstackenum](icordebugexceptionobjectcallstackenum-interface.md) einen gültigen Enumerator mit einer Länge von 0 (null) zurück. Wenn die Methode keine Stapel Überwachungsinformationen abrufen kann, ist der Rückgabewert `E_FAIL`, und es wird kein Enumerator zurückgegeben.  
   
- Das [icordebugexceptionobjectcallstackenum](../../../../docs/framework/unmanaged-api/debugging/icordebugexceptionobjectcallstackenum-interface.md) -Objekt ist verantwortlich für das Decodieren der Stapel Verfolgungs Daten aus dem `_stackTrace`-Feld des Ausnahme Objekts.  
+ Das [icordebugexceptionobjectcallstackenum](icordebugexceptionobjectcallstackenum-interface.md) -Objekt ist verantwortlich für das Decodieren der Stapel Verfolgungs Daten aus dem `_stackTrace`-Feld des Ausnahme Objekts.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>-Anforderungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   
  **Bibliothek:** CorGuids.lib  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework Versionen:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [ICorDebugExceptionObjectValue-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/icordebugexceptionobjectvalue-interface.md)
-- [Debuggen von Schnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [ICorDebugExceptionObjectValue-Schnittstelle](icordebugexceptionobjectvalue-interface.md)
+- [Debuggen von Schnittstellen](debugging-interfaces.md)

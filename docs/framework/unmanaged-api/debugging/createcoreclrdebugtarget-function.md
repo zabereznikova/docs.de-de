@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 1cf4ca8e-d9bb-4633-9adf-5e24315bf87a
 topic_type:
 - apiref
-ms.openlocfilehash: d52757f82a950c382c7c8f2162630eda7d7795e7
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a7fed8cb70785f0ccfcadf1e16181db303ac98e0
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73132091"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76789196"
 ---
 # <a name="createcoreclrdebugtarget-function"></a>CreateCoreClrDebugTarget-Funktion
-Erstellt eine Verbindung mit einem debuggerproxy, der auf einem Remote Computer ausgeführt wird, und gibt ein [icoreclrdebugtarget](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-interface.md) -Objekt zurück, das zum Abfragen von laufenden Prozessen und geladenen Laufzeiten auf dem Remote Computer verwendet werden kann.  
+Erstellt eine Verbindung mit einem debuggerproxy, der auf einem Remote Computer ausgeführt wird, und gibt ein [icoreclrdebugtarget](icoreclrdebugtarget-interface.md) -Objekt zurück, das zum Abfragen von laufenden Prozessen und geladenen Laufzeiten auf dem Remote Computer verwendet werden kann.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -35,12 +35,12 @@ HRESULT CreateCoreClrDebugTarget (
 );  
 ```  
   
-## <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameters  
  `dwAddress`  
  [in] IPv4-Adresse eines Remotezielcomputers.  
   
  `ppTarget`  
- vorgenommen Zeiger auf einen Zeiger auf ein [icoreclrdebugtarget](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-interface.md) -Objekt, das erstellt wird.  
+ vorgenommen Zeiger auf einen Zeiger auf ein [icoreclrdebugtarget](icoreclrdebugtarget-interface.md) -Objekt, das erstellt wird.  
   
 ## <a name="return-value"></a>Rückgabewert  
  S_OK  
@@ -52,7 +52,7 @@ HRESULT CreateCoreClrDebugTarget (
  E_FAIL (oder andere E_-Rückgabecodes)  
  Andere Fehler.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>-Anforderungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** Coreclrremotedebugginginterfaces. h  

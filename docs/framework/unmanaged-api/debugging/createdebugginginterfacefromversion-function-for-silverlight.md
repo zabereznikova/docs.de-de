@@ -8,15 +8,15 @@ helpviewer_keywords:
 - debugging API [Silverlight]
 - Silverlight, debugging
 ms.assetid: 35c7a18f-133a-4584-bd25-bb338568b0c6
-ms.openlocfilehash: 438af9f191f48a86207c3b343ba428eef2c1fabc
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 85b5a5a630f399d0e036de434365e2e4f8f02dea
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73132202"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76793828"
 ---
 # <a name="createdebugginginterfacefromversion-function-for-silverlight"></a>CreateDebuggingInterfaceFromVersion-Funktion für Silverlight
-Akzeptiert eine (CLR)-Versions Zeichenfolge (Common Language Runtime), die von der [Funktion "deateversionstringfrommodule](../../../../docs/framework/unmanaged-api/debugging/createversionstringfrommodule-function.md)" zurückgegeben wird, und gibt eine entsprechende Debuggerschnittstelle zurück (in der Regel [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)).  
+Akzeptiert eine (CLR)-Versions Zeichenfolge (Common Language Runtime), die von der [Funktion "deateversionstringfrommodule](createversionstringfrommodule-function.md)" zurückgegeben wird, und gibt eine entsprechende Debuggerschnittstelle zurück (in der Regel [ICorDebug](icordebug-interface.md)).  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -27,16 +27,16 @@ HRESULT CreateDebuggingInterfaceFromVersion (
 );  
 ```  
   
-## <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameters  
  `szDebuggeeVersion`  
- in Die Versions Zeichenfolge der CLR im Ziel-zu debuggenden Ziel, die von der [Funktion "Funktion](../../../../docs/framework/unmanaged-api/debugging/createversionstringfrommodule-function.md)" von "debuggende Komponente" zurückgegeben wird.  
+ in Die Versions Zeichenfolge der CLR im Ziel-zu debuggenden Ziel, die von der [Funktion "Funktion](createversionstringfrommodule-function.md)" von "debuggende Komponente" zurückgegeben wird.  
   
  `ppCordb`  
- Zeiger auf einen Zeiger auf ein COM-Objekt (`IUnknown`). Dieses Objekt wird in ein [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) -Objekt umgewandelt, bevor es zurückgegeben wird.  
+ Zeiger auf einen Zeiger auf ein COM-Objekt (`IUnknown`). Dieses Objekt wird in ein [ICorDebug](icordebug-interface.md) -Objekt umgewandelt, bevor es zurückgegeben wird.  
   
 ## <a name="return-value"></a>Rückgabewert  
  S_OK  
- `ppCordb` verweist auf ein gültiges Objekt, das die [ICorDebug-Schnittstellen](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) Schnittstelle implementiert.  
+ `ppCordb` verweist auf ein gültiges Objekt, das die [ICorDebug-Schnittstellen](icordebug-interface.md) Schnittstelle implementiert.  
   
  E_INVALIDARG  
  Entweder `szDebuggeeVersion` oder `ppCordb` ist null.  
@@ -48,12 +48,12 @@ HRESULT CreateDebuggingInterfaceFromVersion (
  Entweder mscordbi.dll oder mscordaccore.dll haben nicht dieselbe Version wie die Ziel-CoreCLR.dll.  
   
  E_FAIL (oder andere E_-Rückgabecodes)  
- Eine [ICorDebug-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)kann nicht zurückgegeben werden.  
+ Eine [ICorDebug-Schnittstelle](icordebug-interface.md)kann nicht zurückgegeben werden.  
   
 ## <a name="remarks"></a>Hinweise  
  Die zurückgegebene Schnittstelle stellt die Funktionen zum Anfügen an eine CLR in einem Zielprozess und zum Debuggen von verwaltetem Code bereit, der von der CLR ausgeführt wird.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>-Anforderungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** dbgshim. h  

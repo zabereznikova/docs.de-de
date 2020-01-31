@@ -1,5 +1,5 @@
 ---
-title: PageSetupDialog-Komponente (Windows Forms)
+title: PageSetupDialog-Komponente
 ms.date: 03/30/2017
 helpviewer_keywords:
 - printing [Windows Forms], page setup
@@ -19,22 +19,22 @@ helpviewer_keywords:
 - page header
 - printing [Windows Forms], headers and footers
 ms.assetid: 1c7ccb02-ac62-4fc8-8e4f-c67b01a86802
-ms.openlocfilehash: 93d5466c1f528ea3c8fa360222f046b0c2672fa6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.openlocfilehash: 94626ff5d0d8625433f950528d65919023c0f853
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62012697"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744330"
 ---
 # <a name="pagesetupdialog-component-windows-forms"></a>PageSetupDialog-Komponente (Windows Forms)
-Die Windows-Formulare <xref:System.Windows.Forms.PageSetupDialog> Komponente ist ein vorkonfiguriertes Dialogfeld zum Festlegen von Seitendetails für das Drucken in Windows-basierten Anwendungen verwendet. Verwenden Sie es in Ihrer Windows-basierten Anwendung als einfache Lösung, die für Benutzer zum Festlegen der Einstellungen anstatt ein eigenes Dialogfeld zu konfigurieren. Sie können die Benutzer zum Festlegen von Rahmen und Rand Anpassungen, Kopf- und Fußzeilen sowie Hochformat und Querformat aktivieren. Durch die Verwendung von Windows-Standarddialogfeldern erstellen Sie Anwendungen, deren Basisfunktionen Benutzern sofort vertraut sind.  
+Bei der Windows Forms <xref:System.Windows.Forms.PageSetupDialog> Komponente handelt es sich um ein vorkonfiguriertes Dialogfeld, das zum Festlegen von Seitendetails für das Drucken in Windows-basierten Anwendungen verwendet wird. Verwenden Sie es in Ihrer Windows-basierten Anwendung als einfache Lösung, damit Benutzer Seiteneinstellungen festlegen können, anstatt ein eigenes Dialogfeld zu konfigurieren. Sie können es Benutzern ermöglichen, Rahmen-und Rand Anpassungen, Kopf-und Fußzeilen sowie hoch-und Querformat Ausrichtung festzulegen. Durch die Verwendung von Windows-Standarddialogfeldern erstellen Sie Anwendungen, deren Basisfunktionen Benutzern sofort vertraut sind.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Übersicht über die PageSetupDialog-Komponente](pagesetupdialog-component-overview-windows-forms.md)  
- Stellt die allgemeinen Konzepte des der <xref:System.Windows.Forms.PageSetupDialog> -Komponente, die Sie verwenden können, um ein vorkonfiguriertes Dialogfeld anzuzeigen, die Benutzer verwenden können, um Einstellungen zu bearbeiten.  
+ Führt die allgemeinen Konzepte der <xref:System.Windows.Forms.PageSetupDialog>-Komponente ein, die Sie verwenden können, um ein vorkonfiguriertes Dialogfeld anzuzeigen, das Benutzer zum Bearbeiten von Seiteneinstellungen verwenden können.  
   
- [Vorgehensweise: Bestimmen von Seiteneigenschaften mit der PageSetupDialog-Komponente](how-to-determine-page-properties-using-the-pagesetupdialog-component.md)  
- Erläutert, wie Eigenschaften festgelegt werden, mithilfe einer Instanz von der <xref:System.Windows.Forms.PageSetupDialog> -Komponente zur Laufzeit.  
+ [Gewusst wie: Bestimmen von Seiteneigenschaften mit der PageSetupDialog-Komponente](how-to-determine-page-properties-using-the-pagesetupdialog-component.md)  
+ Erläutert, wie Seiteneigenschaften mithilfe einer Instanz der <xref:System.Windows.Forms.PageSetupDialog> Komponente zur Laufzeit festgelegt werden.  
   
 ## <a name="reference"></a>Referenz  
  <xref:System.Windows.Forms.PageSetupDialog>  

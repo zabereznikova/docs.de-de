@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d7888aa9-dfaa-420f-9f99-e06ab35ca482
 topic_type:
 - apiref
-ms.openlocfilehash: 6ea9dee6e83870d1f2e0fdccffa53f16e6f18dba
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 66195ea9df4c8e9ce847b38f7d020a3bebffcd37
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74430108"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76865180"
 ---
 # <a name="icorprofilercallback4rejiterror-method"></a>ICorProfilerCallback4::ReJITError-Methode
 Benachrichtigt den Profiler, dass der JIT-Compiler (Just-in-Time) einen Fehler im neukompilierungs Prozess festgestellt hat.  
@@ -35,7 +35,7 @@ HRESULT ReJITError(
     [in] HRESULT     hrStatus);  
 ```  
   
-## <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameters  
  `moduleID`  
  in Die `ModuleID`, in der der fehlgeschlagene neukompilierungs Versuch erfolgte.  
   
@@ -60,18 +60,18 @@ HRESULT ReJITError(
 |CORPROF_E_MODULE_IS_DYNAMIC|Das angegebene Modul wurde dynamisch generiert (z. b. durch `Reflection.Emit`) und wird daher von dieser Methode nicht unterstützt.|  
 |CORPROF_E_FUNCTION_IS_COLLECTIBLE|Die-Methode wird in einer entladbaren Assembly instanziiert und kann daher nicht erneut kompiliert werden. Beachten Sie, dass Typen und Funktionen, die in einem nicht Reflektionskontext (z. b. `List<MyCollectibleStruct>`) definiert sind, in einer entladbaren Assembly instanziiert werden können.|  
 |E_OUTOFMEMORY|Die CLR hatte beim Versuch, die angegebene Methode für die JIT-Neukompilierung zu markieren, nicht genügend Arbeitsspeicher.|  
-|Andere|Das Betriebssystem hat einen Fehler außerhalb der Kontrolle der CLR zurückgegeben. Wenn beispielsweise ein Systemaufrufe zum Ändern des Zugriffs Schutzes einer Arbeitsspeicher Seite fehlschlägt, wird der Fehler des Betriebssystems angezeigt.|  
+|Sonstige|Das Betriebssystem hat einen Fehler außerhalb der Kontrolle der CLR zurückgegeben. Wenn beispielsweise ein Systemaufrufe zum Ändern des Zugriffs Schutzes einer Arbeitsspeicher Seite fehlschlägt, wird der Fehler des Betriebssystems angezeigt.|  
   
-## <a name="requirements"></a>Voraussetzungen  
+## <a name="requirements"></a>-Anforderungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  
   
  **Bibliothek:** CorGuids.lib  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework Versionen:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [ICorProfilerCallback-Schnittstelle](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
-- [ICorProfilerCallback4-Schnittstelle](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-interface.md)
+- [ICorProfilerCallback-Schnittstelle](icorprofilercallback-interface.md)
+- [ICorProfilerCallback4-Schnittstelle](icorprofilercallback4-interface.md)

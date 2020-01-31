@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 532da6ee-7f0a-401b-a61e-fc47ec235d2e
 topic_type:
 - apiref
-ms.openlocfilehash: 5149e3fab023de42d03673ec5d3e5ae888a9ed5a
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 9295ea8b22f72529f55cbe13f6a79a0aa34d2fa0
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74433285"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76868795"
 ---
 # <a name="icorprofilerinfo2getcodeinfo2-method"></a>ICorProfilerInfo2::GetCodeInfo2-Methode
 Ruft die Wertebereiche von nativem Code ab, der der angegebenen `FunctionID` zugeordnet ist.  
@@ -36,7 +36,7 @@ HRESULT GetCodeInfo2(
     COR_PRF_CODE_INFO codeInfos[]);  
 ```  
   
-## <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameters  
  `functionID`  
  [in] Die ID der Funktion, der der systemeigene Code zugeordnet ist.  
   
@@ -44,7 +44,7 @@ HRESULT GetCodeInfo2(
  [in] Die Größe des `codeInfos`-Arrays.  
   
  `pcCodeInfos`  
- vorgenommen Ein Zeiger auf die Gesamtzahl der verfügbaren [COR_PRF_CODE_INFO](../../../../docs/framework/unmanaged-api/profiling/cor-prf-code-info-structure.md) Strukturen.  
+ vorgenommen Ein Zeiger auf die Gesamtzahl der verfügbaren [COR_PRF_CODE_INFO](cor-prf-code-info-structure.md) Strukturen.  
   
  `codeInfos`  
  [out] Ein vom Aufrufer bereitgestellter Puffer. Nach dem Ausführen enthält die Methode ein Array aus `COR_PRF_CODE_INFO`-Strukturen, von denen jede einen Block des systemeigenen Codes beschreibt.  
@@ -56,18 +56,18 @@ HRESULT GetCodeInfo2(
   
  Alternativ können Sie zuerst `GetCodeInfo2` mit einem `codeInfos`-Puffer der Länge 0 (NULL) aufrufen, um die richtige Puffergröße zu ermitteln. Sie können dann die Größe des `codeInfos`-Puffers auf den von `pcCodeInfos` zurückgegebenen Wert multipliziert mit der Größe einer `COR_PRF_CODE_INFO`-Struktur festlegen und `GetCodeInfo2` erneut aufrufen.  
   
-## <a name="requirements"></a>Voraussetzungen  
+## <a name="requirements"></a>-Anforderungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  
   
  **Bibliothek:** CorGuids.lib  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [GetCodeInfo3-Methode](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-getcodeinfo3-method.md)
-- [ICorProfilerInfo2-Schnittstelle](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)
-- [Profilerstellungsschnittstellen](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
-- [Profilerstellung](../../../../docs/framework/unmanaged-api/profiling/index.md)
+- [GetCodeInfo3-Methode](icorprofilerinfo4-getcodeinfo3-method.md)
+- [ICorProfilerInfo2-Schnittstelle](icorprofilerinfo2-interface.md)
+- [Profilerstellungsschnittstellen](profiling-interfaces.md)
+- [Profilerstellung](index.md)

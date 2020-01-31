@@ -7,12 +7,12 @@ helpviewer_keywords:
 - printing [Windows Forms], print preview (using designer)
 - print preview [Windows Forms], default interface (using designer)
 ms.assetid: bfb5a3d7-021e-44f4-90f3-d435467f51d6
-ms.openlocfilehash: 459ff62c5645704d5cbf688af37302500f47e54a
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 784a099aa8e53d855bd134e5a557b976bf8c3708
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76741364"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76868056"
 ---
 # <a name="printpreviewdialog-control-windows-forms"></a>PrintPreviewDialog-Steuerelement (Windows Forms)
 Das `PrintPreviewDialog`-Steuerelement von Windows Forms ist ein vorkonfiguriertes Dialogfeld, das verwendet wird, um das Erscheinungsbild eines Dokuments anzuzeigen, wenn es gedruckt wird. Verwenden Sie es in Ihrer auf Windows basierenden Anwendung als einfache Lösung, anstatt ein eigenes Dialogfeld zu konfigurieren. Das Steuerelement enthält Schaltflächen zum Drucken, Vergrößern, Anzeigen mindestens einer Seite und Schließen des Dialogfelds.  
@@ -31,9 +31,6 @@ Das `PrintPreviewDialog`-Steuerelement von Windows Forms ist ein vorkonfiguriert
 ## <a name="related-sections"></a>Verwandte Abschnitte  
  [Windows Forms-Steuerelemente](controls-to-use-on-windows-forms.md)  
  Enthält eine vollständige Liste der Windows Forms-Steuerelemente mit Links zu Informationen zur jeweiligen Verwendung.  
-  
- [Erforderlicher Code für Windows Forms-Dialogfelder](https://go.microsoft.com/fwlink/?LinkID=102575)  
- Beschreibt die Dialogfeldsteuerelemente und Komponenten von Windows Forms sowie den Code, der zum Ausführen ihrer grundlegenden Funktionen erforderlich ist. (Technischer Artikel der MSDN Online Library)  
   
  [Dialogfeld-Steuerelemente und -Komponenten](dialog-box-controls-and-components-windows-forms.md)  
  Listet die verschiedenen Dialogfeldsteuerelemente für Windows Forms auf.  

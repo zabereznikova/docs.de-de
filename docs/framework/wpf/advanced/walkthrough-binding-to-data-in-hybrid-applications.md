@@ -8,20 +8,20 @@ helpviewer_keywords:
 - hybrid applications [WPF interoperability]
 - data binding [WPF interoperability]
 ms.assetid: 18997e71-745a-4425-9c69-2cbce1d8669e
-ms.openlocfilehash: 92d267ee9e87e9d204fe76172ca7e0fe33cf1a1b
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 1bb38436049e338ab6033ae3b6370732a457d520
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73976579"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76794224"
 ---
 # <a name="walkthrough-binding-to-data-in-hybrid-applications"></a>Exemplarische Vorgehensweise: Datenbindung in Hybridanwendungen
 
-Das Binden einer Datenquelle an ein Steuerelement ist entscheidend, um Benutzern den Zugriff auf die zugrunde liegenden Daten zu gewähren, unabhängig davon, ob Sie [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] oder [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]verwenden. In dieser exemplarischen Vorgehensweise wird gezeigt, wie Sie die Datenbindung in Hybrid Anwendungen verwenden können, die sowohl [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] als auch [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Steuerelemente enthalten
+Das Binden einer Datenquelle an ein Steuerelement ist entscheidend, um Benutzern den Zugriff auf die zugrunde liegenden Daten zu gewähren, unabhängig davon, ob Sie Windows Forms oder [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]verwenden. In dieser exemplarischen Vorgehensweise wird gezeigt, wie Sie die Datenbindung in Hybrid Anwendungen verwenden können, die sowohl Windows Forms als auch [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Steuerelemente enthalten
 
 In dieser exemplarischen Vorgehensweise werden u. a. folgende Aufgaben veranschaulicht:
 
-- Erstellen des Projekts.
+- Erstellen des Projekts
 
 - Definieren der Datenvorlage.
 
@@ -39,11 +39,11 @@ Eine komplette Code Auflistung der Aufgaben, die in dieser exemplarischen Vorgeh
 
 Anschließend werden Sie verstehen, welche Rolle Datenbindungsfunktionen bei Hybridanwendungen spielen.
 
-## <a name="prerequisites"></a>Erforderliche Voraussetzungen
+## <a name="prerequisites"></a>Erforderliche Komponenten
 
 Zum Durchführen dieser exemplarischen Vorgehensweise benötigen Sie die folgenden Komponenten:
 
-- Visual Studio.
+- Visual Studio erstellen.
 
 - Zugriff auf die Beispieldatenbank Northwind, die auf Microsoft SQL Server ausgeführt wird.
 
@@ -53,7 +53,7 @@ Zum Durchführen dieser exemplarischen Vorgehensweise benötigen Sie die folgend
 
 1. Erstellen Sie ein WPF-Anwendungsprojekt mit dem Namen `WPFWithWFAndDatabinding`.
 
-2. Fügen Sie im Projektmappen-Explorer Verweise auf die folgenden Assemblys hinzu.
+2. Fügen Sie im Projektmappen-Explorer die Verweise auf die folgenden Assemblys hinzu.
 
     - WindowsFormsIntegration
 
@@ -61,7 +61,7 @@ Zum Durchführen dieser exemplarischen Vorgehensweise benötigen Sie die folgend
 
 3. Öffnen Sie die Datei "MainWindow. XAML" im WPF-Designer.
 
-4. Fügen Sie im <xref:System.Windows.Window>-Element die folgenden [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] Namespace Zuordnung hinzu.
+4. Fügen Sie im <xref:System.Windows.Window>-Element die folgenden Windows Forms Namespace Zuordnung hinzu.
 
     ```xaml
     xmlns:wf="clr-namespace:System.Windows.Forms;assembly=System.Windows.Forms"
@@ -113,7 +113,7 @@ Die Details der einzelnen Kundendaten Sätze werden in mehreren <xref:System.Win
 
 ## <a name="displaying-data-by-using-interoperation"></a>Anzeigen von Daten mithilfe von Interoperation
 
-Die Aufträge, die dem ausgewählten Kunden entsprechen, werden in einem <xref:System.Windows.Forms.DataGridView?displayProperty=nameWithType>-Steuerelement mit dem Namen `dataGridView1`angezeigt. Das `dataGridView1`-Steuerelement ist an die Datenquelle in der Code-Behind-Datei gebunden. Ein <xref:System.Windows.Forms.Integration.WindowsFormsHost>-Steuerelement ist das übergeordnete Element dieses [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] Steuer Elements.
+Die Aufträge, die dem ausgewählten Kunden entsprechen, werden in einem <xref:System.Windows.Forms.DataGridView?displayProperty=nameWithType>-Steuerelement mit dem Namen `dataGridView1`angezeigt. Das `dataGridView1`-Steuerelement ist an die Datenquelle in der Code-Behind-Datei gebunden. Ein <xref:System.Windows.Forms.Integration.WindowsFormsHost>-Steuerelement ist das übergeordnete Element dieses Windows Forms Steuer Elements.
 
 ### <a name="to-display-data-in-the-datagridview-control"></a>Anzeigen von Daten im DataGridView-Steuerelement
 

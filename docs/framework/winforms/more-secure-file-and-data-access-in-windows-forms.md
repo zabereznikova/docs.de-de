@@ -1,5 +1,5 @@
 ---
-title: Mehr Sicherheit beim Datei- und Datenzugriff in Windows Forms
+title: Sicherere Datei-und Datenzugriff
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,12 +13,12 @@ helpviewer_keywords:
 - file access [Windows Forms]
 - security [Windows Forms], data access
 ms.assetid: 3cd3e55b-2f5e-40dd-835d-f50f7ce08967
-ms.openlocfilehash: 94b165757de636b2570798a21fd7c483264e37c5
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 49ba1919f68f35e9d72b012540b785e05c307c39
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69949953"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76743748"
 ---
 # <a name="more-secure-file-and-data-access-in-windows-forms"></a>Mehr Sicherheit beim Datei- und Datenzugriff in Windows Forms
 Der .NET Framework verwendet Berechtigungen zum Schützen von Ressourcen und Daten. In welchen Situationen Daten von einer Anwendung gelesen oder geschrieben werden können, hängt davon ab, welche Berechtigungen der Anwendung gewährt wurden. Wenn die Anwendung in einer Umgebung mit teilweiser Vertrauenswürdigkeit ausgeführt wird, können Sie unter Umständen auf bestimmte Daten nicht zugreifen oder müssen die Art des Zugriffs auf bestimmte Daten ändern.  
@@ -29,7 +29,7 @@ Der .NET Framework verwendet Berechtigungen zum Schützen von Ressourcen und Dat
 > Standardmäßig verfügen Tools, die ClickOnce-bereit Stellungen generieren, standardmäßig über diese bereit Stellungen, um die volle Vertrauenswürdigkeit von den Computern anzufordern, auf denen Sie ausgeführt werden. Wenn Sie die zusätzlichen Sicherheitsvorteile der Ausführung mit teilweiser Vertrauenswürdigkeit festlegen möchten, müssen Sie diese Standardeinstellung entweder in Visual Studio oder in einem der Windows SDK Tools ("Mage. exe" oder "MageUI. exe") ändern. Weitere Informationen zur Windows Forms Sicherheit und zum Ermitteln der entsprechenden Vertrauens Ebene für Ihre Anwendung finden Sie unter [Sicherheit in Windows Forms Übersicht](security-in-windows-forms-overview.md).  
   
 ## <a name="file-access"></a>Dateizugriff  
- Die <xref:System.Security.Permissions.FileIOPermission> -Klasse steuert den Zugriff auf Dateien und Ordner in der .NET Framework. Standardmäßig gewährt das Sicherheitssystem teilweise vertrauenswürdigen Umgebungen wie der lokalen Intranetzone oder der Internetzone keine <xref:System.Security.Permissions.FileIOPermission>. Eine Anwendung, die Dateizugriff erfordert, kann in diesen Umgebungen dennoch ausgeführt werden, wenn Sie sie ändern oder andere Methoden für den Zugriff auf Dateien verwenden. Standardmäßig wird der lokalen Intranetzone die Berechtigung gewährt, auf dieselbe Site und dasselbe Verzeichnis zuzugreifen, die Verbindung mit der Ursprungssite wiederherzustellen und Daten im Installationsverzeichnis zu lesen. Der Internetzone wird in der Standardeinstellung nur die Berechtigung gewährt, die Verbindung mit der Ursprungssite wiederherzustellen.  
+ Die <xref:System.Security.Permissions.FileIOPermission>-Klasse steuert den Zugriff auf Dateien und Ordner im .NET Framework. Standardmäßig gewährt das Sicherheitssystem teilweise vertrauenswürdigen Umgebungen wie der lokalen Intranetzone oder der Internetzone keine <xref:System.Security.Permissions.FileIOPermission>. Eine Anwendung, die Dateizugriff erfordert, kann in diesen Umgebungen dennoch ausgeführt werden, wenn Sie sie ändern oder andere Methoden für den Zugriff auf Dateien verwenden. Standardmäßig wird der lokalen Intranetzone die Berechtigung gewährt, auf dieselbe Site und dasselbe Verzeichnis zuzugreifen, die Verbindung mit der Ursprungssite wiederherzustellen und Daten im Installationsverzeichnis zu lesen. Der Internetzone wird in der Standardeinstellung nur die Berechtigung gewährt, die Verbindung mit der Ursprungssite wiederherzustellen.  
   
 ### <a name="user-specified-files"></a>Benutzerdefinierte Dateien  
  Wenn keine Dateizugriffsberechtigung vorliegt, können Sie z. B. den Benutzer mithilfe der <xref:System.Windows.Forms.OpenFileDialog>-Klasse oder der <xref:System.Windows.Forms.SaveFileDialog>-Klasse auffordern, bestimmte Dateiinformationen bereitzustellen. Durch diese Interaktion mit dem Benutzer soll verhindert werden, dass die Anwendung in böser Absicht vertrauliche Dateien lädt oder wichtige Dateien überschreibt. Die <xref:System.Windows.Forms.OpenFileDialog.OpenFile%2A>-Methode und die <xref:System.Windows.Forms.SaveFileDialog.OpenFile%2A>-Methode ermöglichen den Lese- und Schreibzugriff durch Öffnen des vom Benutzer für die Datei angegebenen Dateistreams. Diese Methoden dienen ebenfalls dem Schutz der Datei des Benutzers, indem der Dateipfad verdeckt wird.  
@@ -138,7 +138,7 @@ private void ButtonOpen_Click(object sender, System.EventArgs e)
 ### <a name="other-files"></a>Weitere Dateien  
  Gelegentlich müssen Sie Dateien lesen oder in Dateien schreiben, die der Benutzer nicht angibt, beispielsweise beim Speichern von Anwendungseinstellungen. In der lokalen Intranetzone und der Internetzone haben Anwendungen keine Berechtigung zum Speichern von Daten in einer lokalen Datei. Die Anwendung jedoch Daten in isoliertem Speicher ablegen. Der isolierte Speicher ist ein abstraktes Datendepot (kein bestimmter Speicherort), das aus einer oder mehreren isolierten Speicherdateien, so genannten Speichern, besteht. Diese Speicher enthalten die tatsächlichen Speicherorte der Verzeichnisse, in denen Daten gespeichert werden. Berechtigungen für den Dateizugriff wie <xref:System.Security.Permissions.FileIOPermission> sind nicht erforderlich. Stattdessen werden die Berechtigungen für isolierten Speicher von der <xref:System.Security.Permissions.IsolatedStoragePermission>-Klasse gesteuert. Standardmäßig können Anwendungen, die in der lokalen Intranetzone oder der Internetzone ausgeführt werden, Daten mithilfe des isolierten Speichers ablegen. Einstellungen wie das Datenträgerkontingent können jedoch variieren. Weitere Informationen zu isoliertem Speicher finden Sie unter [isolierter Speicher](../../standard/io/isolated-storage.md).  
   
- Im folgenden Beispiel wird der isolierte Speicher dazu verwendet, Daten in eine Datei in einem Speicher zu schreiben. Für dieses Beispiel sind <xref:System.Security.Permissions.IsolatedStorageFilePermission> und der <xref:System.Security.Permissions.IsolatedStorageContainment.DomainIsolationByUser>-Enumerationswert erforderlich. In diesem Beispiel wird das Lesen und Schreiben bestimmter Eigenschaftswerte des <xref:System.Windows.Forms.Button>-Steuerelements in einer Datei im isolierten Speicher gezeigt. Die `Read`-Funktion wird nach dem Starten der Anwendung aufgerufen, und die `Write`-Funktion vor dem Beenden der Anwendung. Das Beispiel setzt voraus, `Read` dass `Write` die Funktionen und als Member eines <xref:System.Windows.Forms.Form> vorhanden sind, <xref:System.Windows.Forms.Button> das ein `MainButton`-Steuerelement mit dem Namen enthält.  
+ Im folgenden Beispiel wird der isolierte Speicher dazu verwendet, Daten in eine Datei in einem Speicher zu schreiben. Für dieses Beispiel sind <xref:System.Security.Permissions.IsolatedStorageFilePermission> und der <xref:System.Security.Permissions.IsolatedStorageContainment.DomainIsolationByUser>-Enumerationswert erforderlich. In diesem Beispiel wird das Lesen und Schreiben bestimmter Eigenschaftswerte des <xref:System.Windows.Forms.Button>-Steuerelements in einer Datei im isolierten Speicher gezeigt. Die `Read`-Funktion wird nach dem Starten der Anwendung aufgerufen, und die `Write`-Funktion vor dem Beenden der Anwendung. Das Beispiel setzt voraus, dass die Funktionen `Read` und `Write` als Member eines <xref:System.Windows.Forms.Form> vorhanden sind, das ein <xref:System.Windows.Forms.Button> Steuerelement mit dem Namen `MainButton`enthält.  
   
 ```vb  
 ' Reads the button options from the isolated storage. Uses Default values   
@@ -365,4 +365,4 @@ public void Write()
 - [Übersicht über die Sicherheit in Windows Forms](security-in-windows-forms-overview.md)
 - [Sicherheit in Windows Forms](windows-forms-security.md)
 - [Mage.exe (Tool zum Generieren und Bearbeiten von Manifesten)](../tools/mage-exe-manifest-generation-and-editing-tool.md)
-- [MageUI.exe (Tool zum Generieren und Bearbeiten von Manifesten, grafischer Client)](../tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client.md)
+- [„MageUI.exe“ (Tool zum Generieren und Bearbeiten von Manifesten, grafischer Client)](../tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client.md)

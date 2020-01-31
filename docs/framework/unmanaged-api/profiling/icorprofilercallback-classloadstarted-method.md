@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9f728de8-45c2-45a5-ac4a-45660bd36ecf
 topic_type:
 - apiref
-ms.openlocfilehash: c9faff2d616d03d823c80fb2d9cd71d5fd5759ae
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 5b465216da39e8cf207f0614519720453c384ae9
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74445085"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76866584"
 ---
 # <a name="icorprofilercallbackclassloadstarted-method"></a>ICorProfilerCallback::ClassLoadStarted-Methode
 Benachrichtigt den Profiler, dass eine Klasse geladen wird.  
@@ -32,22 +32,24 @@ HRESULT ClassLoadStarted(
     [in] ClassID classId);  
 ```  
   
-## <a name="parameters"></a>Parameter  
- `classId`  
- in Identifiziert die Klasse, die geladen wird.  
-  
+## <a name="parameters"></a>Parameters
+
+- `classId`
+
+  \[in] identifiziert die Klasse, die geladen wird.
+
 ## <a name="remarks"></a>Hinweise  
- Der Wert von `classId` ist erst gültig für eine Informationsanforderung, wenn die [ICorProfilerCallback:: classloadabgeschlossene](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-classloadfinished-method.md) -Methode aufgerufen wird.  
+ Der Wert von `classId` ist erst gültig für eine Informationsanforderung, wenn die [ICorProfilerCallback:: classloadabgeschlossene](icorprofilercallback-classloadfinished-method.md) -Methode aufgerufen wird.  
   
-## <a name="requirements"></a>Voraussetzungen  
+## <a name="requirements"></a>-Anforderungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  
   
  **Bibliothek:** CorGuids.lib  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [ICorProfilerCallback-Schnittstelle](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [ICorProfilerCallback-Schnittstelle](icorprofilercallback-interface.md)

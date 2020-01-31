@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 297d7721-3911-4f36-9e34-d9da0c33e22a
 topic_type:
 - apiref
-ms.openlocfilehash: 5e718d05f033cc46fa460a81f6816a13ec32476d
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: daca2849908a7798b588ff06f6e117d412db1b33
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74428351"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76867268"
 ---
 # <a name="cor_prf_finalizer_flags-enumeration"></a>COR_PRF_FINALIZER_FLAGS-Enumeration
 Beschreibt den Finalizer für ein Objekt.  
@@ -39,17 +39,17 @@ typedef enum {
 |`COR_PRF_FINALIZER_CRITICAL`|Der Finalizer ist kritisch.|  
   
 ## <a name="remarks"></a>Hinweise  
- Die `COR_PRF_FINALIZER_FLAGS`-Enumeration wird von der [ICorProfilerCallback2:: FinalizeableObjectQueued](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-finalizeableobjectqueued-method.md) -Methode verwendet, um den Finalizer für ein Objekt zu beschreiben.  
+ Die `COR_PRF_FINALIZER_FLAGS`-Enumeration wird von der [ICorProfilerCallback2:: FinalizeableObjectQueued](icorprofilercallback2-finalizeableobjectqueued-method.md) -Methode verwendet, um den Finalizer für ein Objekt zu beschreiben.  
   
-## <a name="requirements"></a>Voraussetzungen  
+## <a name="requirements"></a>-Anforderungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  
   
  **Bibliothek:** CorGuids.lib  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Profilerstellungsenumerationen](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)
+- [Profilerstellungsenumerationen](profiling-enumerations.md)

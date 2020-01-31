@@ -9,12 +9,12 @@ api_location:
 api_type:
 - COM
 ms.assetid: f362a896-3247-4894-9727-e48dbbcd2c78
-ms.openlocfilehash: b9e404de96fa42509144904f5b2ff58e341578a9
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 6fbb86fc63a26599ae83c81817dbcb9abfb88cc8
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75740443"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76864687"
 ---
 # <a name="icorprofilercallback7moduleinmemorysymbolsupdated-method"></a>ICorProfilerCallback7::ModuleInMemorySymbolsUpdated Method
 [Wird nur in .NET Framework 4.6.1 und höheren Versionen unterstützt]  
@@ -34,12 +34,12 @@ HRESULT ModuleInMemorySymbolsUpdated(
  Der Bezeichner des Moduls im Arbeitsspeicher, dessen symbolstream aktualisiert wird.  
   
 ## <a name="remarks"></a>Hinweise  
- Dieser Rückruf wird gesteuert, indem das Flag für die [COR_PRF_HIGH_IN_MEMORY_SYMBOLS_UPDATED](../../../../docs/framework/unmanaged-api/profiling/cor-prf-high-monitor-enumeration.md) -Ereignis Maske beim Aufrufen der [ICorProfilerCallback5:: SetEventMask2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo5-seteventmask2-method.md) -Methode festgelegt wird.  
+ Dieser Rückruf wird gesteuert, indem das Flag für die [COR_PRF_HIGH_IN_MEMORY_SYMBOLS_UPDATED](cor-prf-high-monitor-enumeration.md) -Ereignis Maske beim Aufrufen der [ICorProfilerCallback5:: SetEventMask2](icorprofilerinfo5-seteventmask2-method.md) -Methode festgelegt wird.  
   
 > [!NOTE]
 > Dieses Ereignis wird derzeit nicht für Symbole ausgelöst, die über <xref:System.Reflection.Emit> APIs implizit erstellt oder geändert werden.  
   
- Auch wenn Symbole in einem Aufrufs einer der über Ladungen der verwalteten <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>-Methoden bereitgestellt werden, die ein `rawSymbolStore`-Argument zum Angeben der Symbole für die Assembly enthalten, ordnet die Runtime die symbolischen Daten möglicherweise erst dann dem Modul zu, wenn der [moduleloadbeendeten](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleloadfinished-method.md) -Rückruf aufgetreten ist. Dieses Ereignis bietet eine spätere Gelegenheit, Symbole für solche Module zu erfassen.  
+ Auch wenn Symbole in einem Aufrufs einer der über Ladungen der verwalteten <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>-Methoden bereitgestellt werden, die ein `rawSymbolStore`-Argument zum Angeben der Symbole für die Assembly enthalten, ordnet die Runtime die symbolischen Daten möglicherweise erst dann dem Modul zu, wenn der [moduleloadbeendeten](icorprofilercallback-moduleloadfinished-method.md) -Rückruf aufgetreten ist. Dieses Ereignis bietet eine spätere Gelegenheit, Symbole für solche Module zu erfassen.  
   
 ## <a name="requirements"></a>-Anforderungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
@@ -52,6 +52,6 @@ HRESULT ModuleInMemorySymbolsUpdated(
   
 ## <a name="see-also"></a>Siehe auch
 
-- [ModuleLoadFinished-Methode](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleloadfinished-method.md)
-- [SetEventMask2-Methode](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo5-seteventmask2-method.md)
-- [CorProfilerCallback7-Schnittstelle](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback7-interface.md)
+- [ModuleLoadFinished-Methode](icorprofilercallback-moduleloadfinished-method.md)
+- [SetEventMask2-Methode](icorprofilerinfo5-seteventmask2-method.md)
+- [CorProfilerCallback7-Schnittstelle](icorprofilercallback7-interface.md)

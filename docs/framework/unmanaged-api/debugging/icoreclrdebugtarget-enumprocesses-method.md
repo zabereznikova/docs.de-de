@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: e00fd477-4f49-43d3-bd0e-3094824b1136
 topic_type:
 - apiref
-ms.openlocfilehash: 4d1404e3f7565ee26edd94e059b7f01f8edd4dd6
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 11b1072b3467f7d0a3f223fbc2151ec9ccf461ad
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73121848"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76790800"
 ---
 # <a name="icoreclrdebugtargetenumprocesses-method"></a>ICoreClrDebugTarget::EnumProcesses-Methode
 Listet die Prozesse auf, die auf einem Remotecomputer ausgeführt werden.  
@@ -36,12 +36,12 @@ HRESULT EnumProcesses (
 );  
 ```  
   
-## <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameters  
  `pcProcs`  
  [out] Die Anzahl der in `ppProcs` zurückgegebenen Prozesse. Dieser Wert kann 0 (null) sein.  
   
  `ppProcs`  
- vorgenommen Ein Array von [coreclrdebugprocinfo](../../../../docs/framework/unmanaged-api/debugging/coreclrdebugprocinfo-structure.md) -Strukturen, die die Prozesse darstellen, die auf dem Remote Computer ausgeführt werden.  
+ vorgenommen Ein Array von [coreclrdebugprocinfo](coreclrdebugprocinfo-structure.md) -Strukturen, die die Prozesse darstellen, die auf dem Remote Computer ausgeführt werden.  
   
 ## <a name="return-value"></a>Rückgabewert  
  S_OK  
@@ -54,9 +54,9 @@ HRESULT EnumProcesses (
  Andere Fehler.  
   
 ## <a name="remarks"></a>Hinweise  
- Um den von dieser Methode belegten Arbeitsspeicher freizugeben, müssen Sie die [icoreclrdebugtarget:: FreeMemory](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-freememory-method.md) -Methode aufrufen.  
+ Um den von dieser Methode belegten Arbeitsspeicher freizugeben, müssen Sie die [icoreclrdebugtarget:: FreeMemory](icoreclrdebugtarget-freememory-method.md) -Methode aufrufen.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>-Anforderungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** Coreclrremotedebugginginterfaces. h  
@@ -67,4 +67,4 @@ HRESULT EnumProcesses (
   
 ## <a name="see-also"></a>Siehe auch
 
-- [ICoreClrDebugTarget-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-interface.md)
+- [ICoreClrDebugTarget-Schnittstelle](icoreclrdebugtarget-interface.md)

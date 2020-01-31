@@ -2,12 +2,12 @@
 title: 'Tutorial: Erstellen einer .NET Core-Lösung unter macOS mit Visual Studio Code'
 description: Dieses Dokument bietet einen Überblick über die Schritte und den Workflow zum Erstellen einer .NET Core-Projektmappe mithilfe von Visual Studio Code.
 ms.date: 12/19/2019
-ms.openlocfilehash: 4dc44a0aa155dca3c106a7da68cf100ef644b58b
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: e3c210d4391c0e3c9c3455ecf23dd138abdb4363
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75715303"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76741538"
 ---
 # <a name="tutorial-create-a-net-core-solution-in-macos-using-visual-studio-code"></a>Tutorial: Erstellen einer .NET Core-Lösung unter macOS mit Visual Studio Code
 
@@ -28,7 +28,7 @@ Installieren Sie die C#-Erweiterung für Visual Studio Code, indem Sie Visual St
 
 In diesem Tutorial erstellen Sie drei Projekte: ein Bibliotheksprojekt, Tests für dieses Bibliotheksprojekt sowie eine Konsolenanwendung, die die Bibliothek nutzt. Sie können die Quelle für diesen Artikel im Repository „dotnet/samples“ auf GitHub [anzeigen oder herunterladen](https://github.com/dotnet/samples/tree/master/core/getting-started/golden). Anweisungen zum Herunterladen finden Sie unter [Beispiele und Lernprogramme](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
 
-Starten Sie Visual Studio Code. Drücken Sie <kbd>STRG</kbd>+<kbd>\`</kbd> (das Zeichen für das invertierte Hochkomma oder das Graviszeichen), oder wählen Sie **Anzeigen > Terminal** aus dem Menü aus, um ein eingebettetes Terminal in Visual Studio Code zu öffnen. Sie können noch immer eine externe Shell mit dem Explorer-Befehl **In Eingabeaufforderung öffnen** (**In Terminal öffnen** unter Mac oder Linux) öffnen, wenn Sie lieber außerhalb von Visual Studio Code arbeiten möchten.
+Starten Sie Visual Studio Code. Drücken Sie <kbd>STRG</kbd><kbd>\`</kbd> (das Zeichen für das invertierte Hochkomma oder das Graviszeichen), oder wählen Sie **Anzeigen** > **Terminal** aus dem Menü aus, um ein eingebettetes Terminal in Visual Studio Code zu öffnen. Sie können noch immer eine externe Shell mit dem Explorer-Befehl **In Eingabeaufforderung öffnen** (**In Terminal öffnen** unter macOS oder Linux) öffnen, wenn Sie lieber außerhalb von Visual Studio Code arbeiten möchten.
 
 Beginnen Sie, indem Sie eine Projektmappendatei erstellen, die als Container für mindestens ein .NET Core-Projekt dient. Führen Sie im Terminal den Befehl [`dotnet new`](../tools/dotnet-new.md) aus, um eine neue Projektmappe *golden.sln* in einem neuen Ordner namens *golden* zu erstellen:
 
@@ -142,7 +142,8 @@ namespace TestApp
     public class LibraryTests
     {
         [Fact]
-        public void TestThing() {
+        public void TestThing()
+        {
             Assert.NotEqual(42, new Thing().Get(19, 23));
         }
     }
@@ -211,7 +212,7 @@ dotnet run -p app/app.csproj
 
 Legen Sie bei der Anweisung `WriteLine` in der `Main`-Methode einen Haltepunkt fest. Sie erreichen dies, indem Sie entweder die <kbd>Fn</kbd>+<kbd>F9</kbd>-Taste drücken, wenn sich der Cursor in der `WriteLine`-Zeile befindet, oder indem Sie auf den linken Rand der Zeile klicken, in der Sie den Breakpoint festlegen möchten. Es erscheint ein Roter Kreis im Rand neben der Codezeile. Wenn der Haltepunkt erreicht ist, wird die Ausführung des Codes angehalten, *bevor* die Haltepunktzeile ausgeführt wird.
 
-Öffnen Sie die Registerkarte „Debugger“, indem Sie das Debugger-Symbol in der Visual Studio Code-Symbolleiste auswählen, **Anzeigen > Debuggen** aus der Menüleiste auswählen oder die Tastenkombination <kbd>Befehl</kbd>+<kbd>UMSCHALT</kbd>+<kbd>D</kbd> verwenden:
+Öffnen Sie die Registerkarte „Debugger“, indem Sie das Symbol zum Debuggen in der Visual Studio Code-Symbolleiste auswählen. Wählen Sie **Anzeigen** > **Debuggen** aus der Menüleiste aus, oder verwenden Sie die Tastenkombination<kbd>&#8679;</kbd><kbd>&#8984;</kbd><kbd>D</kbd>:
 
 ![Visual Studio Code-Debugger](./media/using-on-macos/visual-studio-code-debugger.png)
 
