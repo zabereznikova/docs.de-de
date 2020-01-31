@@ -3,12 +3,12 @@ title: Service Mesh-Kommunikationsinfrastruktur
 description: Erfahren Sie, wie Service Mesh-Technologien die cloudbasierte mikroservicekommunikation optimieren.
 author: robvet
 ms.date: 09/10/2019
-ms.openlocfilehash: a9192bf9f5827d05b2453c796c72e11782f9f911
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 66bc69580cc56efe725683c16a047aeb07e7e840
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "73841282"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76780931"
 ---
 # <a name="service-mesh-communication-infrastructure"></a>Service Mesh-Kommunikationsinfrastruktur
 
@@ -36,7 +36,7 @@ Ein Dienst Netz verwaltet den Datenverkehr, die Kommunikation und Netzwerkproble
 
 In Kapitel 6 werden die Service Mesh-Technologien ausführlich erläutert, einschließlich einer Erörterung der Architektur und der verfügbaren Open Source-Implementierungen.
 
-## <a name="summary"></a>Zusammenfassung
+## <a name="summary"></a>Summary
 
 In diesem Kapitel haben wir die cloudbasierten Kommunikationsmuster erläutert. Wir haben damit begonnen, die Kommunikation von Front-End-Clients mit Back-End-Webdiensten zu untersuchen. Gleichzeitig haben wir uns mit API-gatewayplattformen und Echtzeit-Kommunikation beschäftigt. Anschließend haben wir uns mit der Kommunikation zwischen den Webdiensten und anderen Back-End-Diensten beschäftigt. Wir haben sowohl die synchrone HTTP-Kommunikation als auch das asynchrone Messaging über Dienste hinweg betrachtet. Wir haben GrpC behandelt, eine bevorstehende Technologie in der Cloud-Native Welt. Schließlich haben wir eine neue und schnell entwickelnde Technologie mit dem Service Mesh eingeführt, mit der die Kommunikation zwischen den Diensten optimiert werden kann.
 
@@ -74,4 +74,4 @@ Wir wechseln als nächstes zu verteilten Daten in cloudbasierten Systemen und de
 
 >[!div class="step-by-step"]
 >[Zurück](rest-grpc.md)
->[Weiter](distributed-data.md)
+>[Weiter](Database-per-microservice.md)

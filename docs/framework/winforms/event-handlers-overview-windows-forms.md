@@ -1,5 +1,5 @@
 ---
-title: Übersicht über Ereignishandler (Windows Forms)
+title: Übersicht über Ereignishandler
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,15 +10,15 @@ helpviewer_keywords:
 - event handling [Windows Forms], Windows Forms
 - event handlers [Windows Forms], about event handlers
 ms.assetid: 228112e1-1711-42ee-8ffa-ff3555bffe66
-ms.openlocfilehash: 05acbfaf427060d015c2445360a7d73ebe97d070
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 10ba458197973ede35849a86fec35003f139b8d2
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61966828"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76743498"
 ---
-# <a name="event-handlers-overview-windows-forms"></a>Übersicht über Ereignishandler (Windows Forms)
-Ein Ereignishandler ist eine Methode, die auf ein Ereignis gebunden ist. Wenn das Ereignis ausgelöst wird, wird der Code innerhalb des ereignishandlers ausgeführt. Jeder Ereignishandler enthält zwei Parameter, die Ihnen ermöglichen, die das Ereignis ordnungsgemäß zu behandeln. Das folgende Beispiel zeigt einen Ereignishandler für ein <xref:System.Windows.Forms.Button> des Steuerelements <xref:System.Windows.Forms.Control.Click> Ereignis.  
+# <a name="event-handlers-overview-windows-forms"></a>Übersicht über Ereignishandler (Windows Forms)
+Ein Ereignishandler ist eine Methode, die an ein Ereignis gebunden ist. Wenn das-Ereignis ausgelöst wird, wird der Code im-Ereignishandler ausgeführt. Jeder Ereignishandler stellt zwei Parameter bereit, mit denen Sie das Ereignis ordnungsgemäß behandeln können. Das folgende Beispiel zeigt einen Ereignishandler für das <xref:System.Windows.Forms.Control.Click> Ereignis eines <xref:System.Windows.Forms.Button>-Steuer Elements.  
   
 ```vb  
 Private Sub button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles button1.Click  
@@ -42,11 +42,11 @@ private:
   }  
 ```  
   
- Der erste Parameter,`sender`, stellt einen Verweis auf das Objekt, das das Ereignis ausgelöst hat. Der zweite Parameter, `e`, im obigen Beispiel übergibt ein spezifisches Objekt an das Ereignis, das behandelt wird. Durch Verweisen auf die Eigenschaften des Objekts (und in einigen Fällen ihre Methoden), erhalten Sie Informationen wie z. B. die Position des Mauszeigers für Mausereignisse oder Daten, die Drag & Drop-Ereignisse übertragen werden.  
+ Der erste Parameter,`sender`, stellt einen Verweis auf das Objekt bereit, das das Ereignis ausgelöst hat. Der zweite Parameter, `e`im obigen Beispiel, übergibt ein Objekt, das für das behandelte Ereignis spezifisch ist. Wenn Sie auf die Eigenschaften des Objekts (und manchmal auf seine Methoden) verweisen, können Sie Informationen wie die Position der Maus für Mausereignisse oder Daten abrufen, die in Drag & Drop-Ereignissen übertragen werden.  
   
- In der Regel führt jedes Ereignis einen Ereignishandler mit einem anderen Ereignis-Objekt für den zweiten Parameter. Einige Ereignishandler, etwa solche für die <xref:System.Windows.Forms.Control.MouseDown> und <xref:System.Windows.Forms.Control.MouseUp> Ereignisse weisen denselben Objekttyp für ihre zweite Parameter. Für diese Arten von Ereignissen können Sie denselben Ereignishandler, um beide Ereignisse zu behandeln.  
+ In der Regel erzeugt jedes Ereignis einen Ereignishandler mit einem anderen Ereignis Objekttyp für den zweiten Parameter. Einige Ereignishandler, z. b. die Ereignisse für das <xref:System.Windows.Forms.Control.MouseDown>-Ereignis und das <xref:System.Windows.Forms.Control.MouseUp>-Ereignis, haben den gleichen Objekttyp für den zweiten Parameter. Für diese Ereignis Typen können Sie denselben Ereignishandler zum Verarbeiten beider Ereignisse verwenden.  
   
- Sie können auch den Ereignishandler zum Behandeln des gleichen Ereignisses für verschiedene Steuerelemente verwenden. Für, wenn Sie z. B. eine Gruppe von <xref:System.Windows.Forms.RadioButton> Steuerelemente eines Formulars, können Sie einen einzelnen Ereignishandler für erstellen die <xref:System.Windows.Forms.Control.Click> Ereignis und jedes Steuerelement die <xref:System.Windows.Forms.Control.Click> Ereignis gebunden, um die einzelnen Ereignishandler. Weitere Informationen finden Sie unter [Vorgehensweise: Verbinden mehrerer Ereignisse mit einem einzelnen Ereignishandler in Windows Forms](how-to-connect-multiple-events-to-a-single-event-handler-in-windows-forms.md).  
+ Sie können auch denselben Ereignishandler verwenden, um das gleiche Ereignis für verschiedene Steuerelemente zu verarbeiten. Wenn Sie z. b. über eine Gruppe von <xref:System.Windows.Forms.RadioButton>-Steuerelementen in einem Formular verfügen, können Sie einen einzelnen Ereignishandler für das <xref:System.Windows.Forms.Control.Click>-Ereignis erstellen und festlegen, dass das <xref:System.Windows.Forms.Control.Click> Ereignis jedes Steuer Elements an den einzelnen Ereignishandler gebunden ist. Weitere Informationen finden Sie unter Gewusst [wie: Verbinden mehrerer Ereignisse mit einem einzelnen Ereignis Handler in Windows Forms](how-to-connect-multiple-events-to-a-single-event-handler-in-windows-forms.md).  
   
 ## <a name="see-also"></a>Siehe auch
 

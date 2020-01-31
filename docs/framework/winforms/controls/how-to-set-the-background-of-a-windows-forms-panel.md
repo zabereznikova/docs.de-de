@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Festlegen des Hintergrunds eines Windows Forms-Bereichs'
+title: Festlegen des Hintergrunds eines Bereichs
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,19 +11,19 @@ helpviewer_keywords:
 - Panel control [Windows Forms], background
 - colors [Windows Forms], Windows Forms Panel controls
 ms.assetid: 096cbd8d-45cc-47b8-b1ef-a27f60ea8be0
-ms.openlocfilehash: 9336be2aebb10e5c0bd0bf4648cae34a3b5fe7c3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ba2619354403793aea7ca15d43649da9637079a6
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62013178"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744746"
 ---
-# <a name="how-to-set-the-background-of-a-windows-forms-panel"></a>Vorgehensweise: Festlegen des Hintergrunds eines Windows Forms-Bereichs
-Ein Windows Forms <xref:System.Windows.Forms.Panel> Steuerelement kann sowohl eine Hintergrundfarbe und ein Bild als Hintergrund anzeigen. Die <xref:System.Windows.Forms.Control.BackColor%2A> Eigenschaft legt die Hintergrundfarbe für die Steuerelemente, z. B. Beschriftungen oder Optionsfelder fest. Wenn die <xref:System.Windows.Forms.Control.BackgroundImage%2A> Eigenschaft nicht festgelegt ist, die <xref:System.Windows.Forms.Control.BackColor%2A> Auswahl füllt den gesamten Bereich. Wenn die <xref:System.Windows.Forms.Control.BackgroundImage%2A> -Eigenschaft festgelegt ist, wird das Bild hinter den enthaltenen Steuerelementen angezeigt werden.  
+# <a name="how-to-set-the-background-of-a-windows-forms-panel"></a>Gewusst wie: Festlegen des Hintergrunds eines Windows Forms-Bereichs
+Ein Windows Forms <xref:System.Windows.Forms.Panel> Steuerelement kann sowohl eine Hintergrundfarbe als auch ein Hintergrundbild anzeigen. Die <xref:System.Windows.Forms.Control.BackColor%2A>-Eigenschaft legt die Hintergrundfarbe für die enthaltenen Steuerelemente fest, z. b. Bezeichnungen und Options Felder. Wenn die <xref:System.Windows.Forms.Control.BackgroundImage%2A>-Eigenschaft nicht festgelegt ist, wird der gesamte Bereich durch die <xref:System.Windows.Forms.Control.BackColor%2A> Auswahl aufgefüllt. Wenn die <xref:System.Windows.Forms.Control.BackgroundImage%2A>-Eigenschaft festgelegt ist, wird das Bild hinter den enthaltenen Steuerelementen angezeigt.  
   
-### <a name="to-set-the-background-programmatically"></a>Um den Hintergrund programmgesteuert festzulegen.  
+### <a name="to-set-the-background-programmatically"></a>So legen Sie den Hintergrundprogramm gesteuert fest  
   
-1. Festlegen des Bereichs <xref:System.Windows.Forms.Control.BackColor%2A> Eigenschaft auf einen Wert vom Typ <xref:System.Drawing.Color?displayProperty=nameWithType>.  
+1. Legen Sie die <xref:System.Windows.Forms.Control.BackColor%2A>-Eigenschaft des Bereichs auf einen Wert vom Typ <xref:System.Drawing.Color?displayProperty=nameWithType>fest.  
   
     ```vb  
     Panel1.BackColor = Color.AliceBlue  
@@ -37,7 +37,7 @@ Ein Windows Forms <xref:System.Windows.Forms.Panel> Steuerelement kann sowohl ei
     panel1->BackColor = Color::AliceBlue;  
     ```  
   
-2. Festlegen des Bereichs <xref:System.Windows.Forms.Control.BackgroundImage%2A> Eigenschaft mit dem <xref:System.Drawing.Image.FromFile%2A> Methode der <xref:System.Drawing.Image?displayProperty=nameWithType> Klasse.  
+2. Legen Sie die <xref:System.Windows.Forms.Control.BackgroundImage%2A>-Eigenschaft des Panels mithilfe der <xref:System.Drawing.Image.FromFile%2A>-Methode der <xref:System.Drawing.Image?displayProperty=nameWithType>-Klasse fest.  
   
     ```vb  
     ' You should replace the bolded image   

@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Hinzufügen und Entfernen von Elementen mit dem ListView-Steuerelement in Windows Forms'
+title: Hinzufügen und Entfernen von Elementen mit ListView-Steuerelement
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,26 +9,26 @@ helpviewer_keywords:
 - list views [Windows Forms], adding list items
 - ListView control [Windows Forms], adding list items
 ms.assetid: 1b35a80a-edd8-495f-a807-a28c4aae52c6
-ms.openlocfilehash: 8a97d73b9b2c46d02ae0794ad66b20a04db58af6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bbfe99db857ebe3a80bf99926f3ce0bec38a1f3f
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62011124"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76743142"
 ---
-# <a name="how-to-add-and-remove-items-with-the-windows-forms-listview-control"></a>Vorgehensweise: Hinzufügen und Entfernen von Elementen mit dem ListView-Steuerelement in Windows Forms
-Beim Hinzufügen eines Elements zu einer Windows Forms <xref:System.Windows.Forms.ListView> -Steuerelement besteht aus in erster Linie das Element angeben, und Eigenschaften zuweisen. Hinzufügen oder Entfernen von Elementen kann jederzeit erfolgen.  
+# <a name="how-to-add-and-remove-items-with-the-windows-forms-listview-control"></a>Gewusst wie: Hinzufügen und Entfernen von Elementen mit dem ListView-Steuerelement in Windows Forms
+Das Hinzufügen eines Elements zu einem Windows Forms <xref:System.Windows.Forms.ListView> Steuerelement besteht hauptsächlich darin, das Element anzugeben und ihm Eigenschaften zuzuweisen. Das Hinzufügen oder Entfernen von Listenelementen ist jederzeit möglich.  
   
-### <a name="to-add-items-programmatically"></a>Elemente programmgesteuert hinzuzufügen.  
+### <a name="to-add-items-programmatically"></a>So fügen Sie Elemente Programm gesteuert hinzu  
   
-1. Verwenden der <xref:System.Windows.Forms.ListView.ListViewItemCollection.Add%2A> Methode der <xref:System.Windows.Forms.ListView.Items%2A> Eigenschaft.  
+1. Verwenden Sie die <xref:System.Windows.Forms.ListView.ListViewItemCollection.Add%2A>-Methode der <xref:System.Windows.Forms.ListView.Items%2A>-Eigenschaft.  
   
      [!code-csharp[System.Windows.Forms.ListViewLegacyTopics#11](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ListViewLegacyTopics/CS/Class1.cs#11)]
      [!code-vb[System.Windows.Forms.ListViewLegacyTopics#11](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ListViewLegacyTopics/VB/Class1.vb#11)]  
   
-### <a name="to-remove-items-programmatically"></a>Das programmgesteuerte Entfernen von Elementen  
+### <a name="to-remove-items-programmatically"></a>So entfernen Sie Elemente Programm gesteuert  
   
-1. Verwenden der <xref:System.Windows.Forms.ListView.ListViewItemCollection.RemoveAt%2A> oder <xref:System.Windows.Forms.ListView.ListViewItemCollection.Clear%2A> Methode der <xref:System.Windows.Forms.ListView.Items%2A> Eigenschaft. Die <xref:System.Windows.Forms.ListView.ListViewItemCollection.RemoveAt%2A> -Methode entfernt ein einzelnes Element; die <xref:System.Windows.Forms.ListView.ListViewItemCollection.Clear%2A> -Methode entfernt alle Elemente aus der Liste.  
+1. Verwenden Sie die <xref:System.Windows.Forms.ListView.ListViewItemCollection.RemoveAt%2A>-oder <xref:System.Windows.Forms.ListView.ListViewItemCollection.Clear%2A>-Methode der <xref:System.Windows.Forms.ListView.Items%2A>-Eigenschaft. Die <xref:System.Windows.Forms.ListView.ListViewItemCollection.RemoveAt%2A>-Methode entfernt ein einzelnes Element. mit der <xref:System.Windows.Forms.ListView.ListViewItemCollection.Clear%2A>-Methode werden alle Elemente aus der Liste entfernt.  
   
      [!code-csharp[System.Windows.Forms.ListViewLegacyTopics#12](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ListViewLegacyTopics/CS/Class1.cs#12)]
      [!code-vb[System.Windows.Forms.ListViewLegacyTopics#12](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ListViewLegacyTopics/VB/Class1.vb#12)]  

@@ -1,5 +1,5 @@
 ---
-title: Übersicht über das WPF-Grafikrendering
+title: Übersicht über das Grafik Rendering
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - graphics [WPF], rendering
 - rendering graphics [WPF]
 ms.assetid: 6dec9657-4d8c-4e46-8c54-40fb80008265
-ms.openlocfilehash: 09f5f026ed320aaa253d8cdf6e0b271235aff604
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: 103d086857bce8ae0960452bb92a69b68dc49dfa
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72004170"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744809"
 ---
 # <a name="wpf-graphics-rendering-overview"></a>Übersicht über das WPF-Grafikrendering
 Das Thema bietet einen Überblick über die visuelle [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Schicht. Der Schwerpunkt liegt auf der Rolle der <xref:System.Windows.Media.Visual>-Klasse für das Rendern von Unterstützung im [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Modell.  
@@ -51,7 +51,7 @@ Das Thema bietet einen Überblick über die visuelle [!INCLUDE[TLA2#tla_winclien
  ![Diagramm der vom Visual-Objekt abgeleiteten Klassen](./media/wpf-graphics-rendering-overview/classes-derived-visual-object.png)    
   
 ### <a name="drawingvisual-class"></a>DrawingVisual-Klasse  
- Der <xref:System.Windows.Media.DrawingVisual> ist eine vereinfachte Zeichnungs Klasse, die zum Rendering von Formen, Bildern oder Text verwendet wird. Diese Klasse wird als einfach angesehen, da sie keine Layout- oder Ereignisbehandlung bereitstellt, was die Laufzeitleistung verbessert. Aus diesem Grund eignen sich Zeichnungen für Hintergründe und ClipArt. Der <xref:System.Windows.Media.DrawingVisual> kann verwendet werden, um ein benutzerdefiniertes visuelles Objekt zu erstellen. Weitere Informationen finden Sie unter [Verwenden von DrawingVisual-Objekten](using-drawingvisual-objects.md).  
+ Der <xref:System.Windows.Media.DrawingVisual> ist eine vereinfachte Zeichnungs Klasse, die zum Rendering von Formen, Bildern oder Text verwendet wird. Diese Klasse wird als einfach angesehen, da sie keine Layout- oder Ereignisbehandlung bereitstellt, was die Laufzeitleistung verbessert. Aus diesem Grund sind Zeichnungen für Hintergründe und ClipArt ideal. Der <xref:System.Windows.Media.DrawingVisual> kann verwendet werden, um ein benutzerdefiniertes visuelles Objekt zu erstellen. Weitere Informationen finden Sie unter [Verwenden von DrawingVisual-Objekten](using-drawingvisual-objects.md).  
   
 ### <a name="viewport3dvisual-class"></a>Viewport3DVisual-Klasse  
  Der <xref:System.Windows.Media.Media3D.Viewport3DVisual> stellt eine Brücke zwischen 2D-<xref:System.Windows.Media.Visual> und <xref:System.Windows.Media.Media3D.Visual3D> Objekten bereit. Die <xref:System.Windows.Media.Media3D.Visual3D>-Klasse ist die Basisklasse für alle visuellen 3D-Elemente. Der <xref:System.Windows.Media.Media3D.Viewport3DVisual> erfordert, dass Sie einen <xref:System.Windows.Media.Media3D.Viewport3DVisual.Camera%2A> Wert und einen <xref:System.Windows.Media.Media3D.Viewport3DVisual.Viewport%2A> Wert definieren. Die Kamera ermöglicht die Anzeige der Szene. Der Anzeigebereich legt fest, wo die Projektion auf der 2D-Fläche zuordnet. Weitere Informationen über 3D in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] finden Sie unter [Übersicht über 3D-Grafiken](3-d-graphics-overview.md).  
@@ -162,12 +162,12 @@ Reihenfolge der DrawingGroup-Vorgänge
   
  Wenn Sie die logischen Objekte auflisten, die das <xref:System.Windows.Controls.DockPanel>-Element im Markup Beispiel bilden, finden Sie die unten dargestellte Hierarchie von logischen Objekten:  
   
- Struktur ![Diagramm](./media/tree1-wcp.gif "Tree1_wcp")  
+ ![Strukturdiagramm](./media/tree1-wcp.gif "Tree1_wcp")  
 Diagramm der logischen Struktur  
   
  Die visuelle Struktur und die logische Struktur werden mit dem aktuellen Satz von Anwendungselementen synchronisiert und spiegeln dabei alle Hinzufügungen, Löschungen oder Änderungen von Elementen wider. Die Strukturen liefern jedoch verschiedene Ansichten der Anwendung. Anders als bei der visuellen Struktur, erweitert die logische Struktur nicht das <xref:System.Windows.Controls.ContentPresenter> Element eines Steuer Elements. Dies bedeutet, dass keine direkte 1:1-Entsprechung zwischen einer logischen Struktur und einer visuellen Struktur für den gleichen Satz von Objekten vorhanden ist. Tatsächlich führt das Aufrufen der <xref:System.Windows.LogicalTreeHelper.GetChildren%2A>-Methode des **LogicalTreeHelper** -Objekts und der <xref:System.Windows.Media.VisualTreeHelper.GetChild%2A>-Methode des **VisualTreeHelper** -Objekts, die das gleiche Element wie ein Parameter verwendet, zu unterschiedlichen Ergebnissen.  
   
- Weitere Informationen zu der logischen Struktur finden Sie unter [Strukturen in WPF](../advanced/trees-in-wpf.md).  
+ Weitere Informationen zur logischen Struktur finden Sie unter [Strukturen in WPF](../advanced/trees-in-wpf.md).  
   
 ### <a name="viewing-the-visual-tree-with-xamlpad"></a>Anzeigen der visuellen Struktur mit XamlPad  
  Das [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Tool XamlPad bietet eine Option zum Anzeigen und untersuchen der visuellen Struktur, die dem aktuell definierten XAML-Inhalt entspricht. Klicken Sie auf die Schaltfläche **Visuelle Struktur anzeigen** der Menüleiste, um die visuelle Struktur anzuzeigen. Das folgende Beispiel veranschaulicht die Erweiterung von XAML-Inhalt in visuelle Struktur Knoten im Panel des visuellen Struktur- **Explorers** von XamlPad:  
@@ -179,7 +179,7 @@ Diagramm der logischen Struktur
 ### <a name="profiling-visual-performance"></a>Erstellung von visuellen Leistungsprofilen  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] stellt eine Suite von Leistungsprofilerstellungstools bereit, mit deren Hilfe Sie das Laufzeitverhalten der Anwendung analysieren und die Typen der anwendbaren Leistungsoptimierungen bestimmen können. Das Visual Profiler-Tool bietet eine umfassende grafische Sicht der Leistungsdaten, indem diese direkt der visuellen Struktur der Anwendung zugeordnet werden. In diesem Screenshot verschafft Ihnen der Abschnitt **CPU-Auslastung** von Visual Profiler eine genaue Aufschlüsselung der Nutzung von [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Diensten eines Objekts, z.B. Rendering und Layout.  
   
- ![Visual Profiler-Anzeige Ausgabe](./media/wpfperf-visualprofiler-04.png "WPFPerf_VisualProfiler_04")  
+ ![Visual Profiler-Anzeigeausgabe](./media/wpfperf-visualprofiler-04.png "WPFPerf_VisualProfiler_04")  
 Visual Profiler-Anzeigeausgabe  
   
 <a name="visual_rendering_behavior"></a>   
@@ -220,7 +220,7 @@ Visual Profiler-Anzeigeausgabe
   
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] unterstützt die automatische Skalierung mit geräteunabhängigen Pixeln als primärer Maßeinheit anstelle von Hardwarepixeln. Grafiken und Text skalieren ordnungsgemäß ohne zusätzlichen Eingriff seitens des Entwicklers der Anwendung. Die folgende Abbildung veranschaulicht anhand eines Beispiels, wie [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Text und -Grafiken mit unterschiedlichen DPI-Einstellungen angezeigt werden.  
   
- ![Grafiken und Text mit unterschiedlichen dpi-Einstellungen](./media/graphicsmm-dpi-setting-examples.png "graphicsmm_dpi_setting_examples")  
+ ![Grafiken und Text mit unterschiedlichen DPI-Einstellungen](./media/graphicsmm-dpi-setting-examples.png "graphicsmm_dpi_setting_examples")  
 Grafiken und Text mit unterschiedlichen DPI-Einstellungen  
   
 <a name="visualtreehelper_class"></a>   
@@ -240,7 +240,7 @@ Grafiken und Text mit unterschiedlichen DPI-Einstellungen
  [!code-csharp[VisualsOverview#101](~/samples/snippets/csharp/VS_Snippets_Wpf/VisualsOverview/CSharp/Window1.xaml.cs#101)]
  [!code-vb[VisualsOverview#101](~/samples/snippets/visualbasic/VS_Snippets_Wpf/VisualsOverview/visualbasic/window1.xaml.vb#101)]  
   
- In den meisten Fällen ist die logische Struktur eine sinnvollere Darstellung der Elemente in einer [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Anwendung. Obwohl Sie die logische Struktur nicht ändern, ist diese Ansicht der Anwendung nützlich, um die Vererbung von Eigenschaften und das Ereignisrouting nachzuvollziehen. Anders als bei der visuellen Struktur kann die logische Struktur nicht visuelle Datenobjekte, z. b. <xref:System.Windows.Documents.ListItem>, darstellen. Weitere Informationen zu der logischen Struktur finden Sie unter [Strukturen in WPF](../advanced/trees-in-wpf.md).  
+ In den meisten Fällen ist die logische Struktur eine sinnvollere Darstellung der Elemente in einer [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Anwendung. Obwohl Sie die logische Struktur nicht ändern, ist diese Ansicht der Anwendung nützlich, um die Vererbung von Eigenschaften und das Ereignisrouting nachzuvollziehen. Anders als bei der visuellen Struktur kann die logische Struktur nicht visuelle Datenobjekte, z. b. <xref:System.Windows.Documents.ListItem>, darstellen. Weitere Informationen zur logischen Struktur finden Sie unter [Strukturen in WPF](../advanced/trees-in-wpf.md).  
   
  Die <xref:System.Windows.Media.VisualTreeHelper>-Klasse stellt Methoden zum Zurückgeben des umgebenden Rechtecks von visuellen Objekten bereit. Sie können das umgebende Rechteck eines visuellen Objekts zurückgeben, indem Sie <xref:System.Windows.Media.VisualTreeHelper.GetContentBounds%2A>aufrufen. Sie können das umgebende Rechteck aller Nachfolger eines visuellen Objekts, einschließlich des visuellen Objekts selbst, durch Aufrufen von <xref:System.Windows.Media.VisualTreeHelper.GetDescendantBounds%2A>zurückgeben. Der folgende Code zeigt, wie Sie das umschließende Rechteck des visuellen Objekts und aller Nachfolgerknoten berechnen.  
   

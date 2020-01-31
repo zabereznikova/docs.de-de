@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Erstellen eines Rahmens um ein Windows Forms-Steuerelement mithilfe von Abständen'
+title: Erstellen eines Rahmens um ein Steuerelement mithilfe von Padding
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -14,15 +14,15 @@ helpviewer_keywords:
 - margins [Windows Forms], Windows Forms
 - Margin property [Windows Forms]
 ms.assetid: bac7ed4d-a163-4259-98bd-155a36345890
-ms.openlocfilehash: e3bbf43dbe45e675df172a6c3e1db16a3ba9caa8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 114186ab5784cf892cb01e9fe2648ce22cecc4b7
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61746840"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742190"
 ---
-# <a name="how-to-create-a-border-around-a-windows-forms-control-using-padding"></a>Vorgehensweise: Erstellen eines Rahmens um ein Windows Forms-Steuerelement mithilfe von Abständen
-Im folgenden Codebeispiel wird veranschaulicht, wie zum Erstellen eines Rahmens oder eine Kontur um eine <xref:System.Windows.Forms.RichTextBox> Steuerelement. Im Beispiel wird den Wert des einem <xref:System.Windows.Forms.Panel> des Steuerelements <xref:System.Windows.Forms.Padding> -Eigenschaft auf 5 und legt die <xref:System.Windows.Forms.Control.Dock%2A> Eigenschaft eines untergeordneten Elements <xref:System.Windows.Forms.RichTextBox> die Steuerung an <xref:System.Windows.Forms.DockStyle.Fill>. Die <xref:System.Windows.Forms.Control.BackColor%2A> von der <xref:System.Windows.Forms.Panel> -Steuerelement so eingestellt ist, dass <xref:System.Drawing.Color.Blue%2A>, erstellt einen blauen Rahmen um die <xref:System.Windows.Forms.RichTextBox> Steuerelement.  
+# <a name="how-to-create-a-border-around-a-windows-forms-control-using-padding"></a>Gewusst wie: Erstellen eines Rahmens um ein Windows Forms-Steuerelement mithilfe von Abständen
+Im folgenden Codebeispiel wird veranschaulicht, wie ein Rahmen oder eine Gliederung um ein <xref:System.Windows.Forms.RichTextBox> Steuerelement erstellt wird. Im Beispiel wird der Wert der <xref:System.Windows.Forms.Padding>-Eigenschaft eines <xref:System.Windows.Forms.Panel> Steuer Elements auf 5 festgelegt und die <xref:System.Windows.Forms.Control.Dock%2A>-Eigenschaft eines untergeordneten <xref:System.Windows.Forms.RichTextBox> Steuer Elements auf <xref:System.Windows.Forms.DockStyle.Fill>festgelegt. Die <xref:System.Windows.Forms.Control.BackColor%2A> des <xref:System.Windows.Forms.Panel> Steuer Elements ist auf <xref:System.Drawing.Color.Blue%2A>festgelegt, wodurch ein blauer Rahmen um das <xref:System.Windows.Forms.RichTextBox> Steuerelement erstellt wird.  
   
 ## <a name="example"></a>Beispiel  
  [!code-csharp[System.Windows.Forms.Padding#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Padding/CS/Form1.cs#1)]

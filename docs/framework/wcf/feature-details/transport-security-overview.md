@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 00959326-aa9d-44d0-af61-54933d4adc7f
-ms.openlocfilehash: 463d2fc374870661185a625a0b07a102aa54498c
-ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.openlocfilehash: ba5f963ebb33da0aaf2c33c776fee7f226e52e85
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69988613"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742710"
 ---
 # <a name="transport-security-overview"></a>Übersicht über die Transportsicherheit
 Transport Sicherheitsmechanismen in Windows Communication Foundation (WCF) richten sich nach der verwendeten Bindung und dem verwendeten Transport. Wenn Sie z. B. die <xref:System.ServiceModel.WSHttpBinding>-Klasse verwenden, lautet der Transportmechanismus HTTP, und der primäre Mechanismus zum Sichern des Transports ist Secure Sockets Layer (SSL) über HTTP, allgemein als HTTPS bezeichnet. In diesem Thema werden die wichtigsten Transport Sicherheitsmechanismen erläutert, die in den vom WCF-System bereitgestellten Bindungen verwendet werden.  
@@ -19,7 +19,7 @@ Transport Sicherheitsmechanismen in Windows Communication Foundation (WCF) richt
 > Wenn SSL-Sicherheit mit .NET Framework 3,5 und höher verwendet wird, verwendet ein WCF-Client sowohl die zwischen Zertifikate im Zertifikat Speicher als auch die zwischen Zertifikate, die während der SSL-Aushandlung empfangen werden, um die Überprüfung der Zertifikat Kette für den Dienst auszuführen. stellt. Bei .NET Framework 3.0 werden nur die im lokalen Zertifikatspeicher installierten Zwischenzertifikate verwendet.  
   
 > [!WARNING]
-> Wenn die Transportsicherheit verwendet wird, kann die <xref:System.Threading.Thread.CurrentPrincipal%2A?displayProperty=nameWithType>-Eigenschaft überschrieben werden. Um dies zu verhindern, legen <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.PrincipalPermissionMode%2A?displayProperty=nameWithType> Sie auf <xref:System.ServiceModel.Description.PrincipalPermissionMode.None?displayProperty=nameWithType>fest. <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior> ist ein Dienstverhalten, das für die Dienstbeschreibung festgelegt werden kann.  
+> Wenn die Transportsicherheit verwendet wird, kann die <xref:System.Threading.Thread.CurrentPrincipal%2A?displayProperty=nameWithType>-Eigenschaft überschrieben werden. Um dies zu verhindern, legen Sie die <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.PrincipalPermissionMode%2A?displayProperty=nameWithType> auf <xref:System.ServiceModel.Description.PrincipalPermissionMode.None?displayProperty=nameWithType>fest. <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior> ist ein Dienstverhalten, das für die Dienstbeschreibung festgelegt werden kann.  
   
 ## <a name="basichttpbinding"></a>BasicHttpBinding  
  Die <xref:System.ServiceModel.BasicHttpBinding>-Klasse bietet standardmäßig keine Sicherheit. Diese Bindung ist für die Interoperabilität mit Webdienstanbietern ausgelegt, die keine Sicherheit implementieren. Sie können jedoch die Sicherheit aktivieren, indem Sie die <xref:System.ServiceModel.BasicHttpSecurity.Mode%2A>-Eigenschaft auf einen beliebigen Wert außer <xref:System.ServiceModel.BasicHttpSecurityMode.None> festlegen. Wenn Sie die Transportsicherheit aktivieren möchten, legen Sie die Eigenschaft auf <xref:System.ServiceModel.BasicHttpSecurityMode.Transport> fest.  
@@ -46,20 +46,20 @@ Transport Sicherheitsmechanismen in Windows Communication Foundation (WCF) richt
   
  In den folgenden Abschnitten werden andere Client-Anmeldeinformationstypen erläutert.  
   
-#### <a name="basic"></a>Einfach  
- Dies entspricht der Authentifizierungsmethode Standard in IIS. Wenn Sie diesen Modus verwenden, muss der IIS-Server mit Windows-Benutzerkonten und den entsprechenden NTFS-Dateisystemberechtigungen konfiguriert sein. Weitere Informationen zu IIS 6,0 finden Sie unter [Aktivieren der Standard Authentifizierung und Konfigurieren des Bereichs namens](https://go.microsoft.com/fwlink/?LinkId=88592). Weitere Informationen zu IIS 7,0 finden Sie unter [Konfigurieren der Standard Authentifizierung (IIS 7)](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc772009(v=ws.10)).  
+#### <a name="basic"></a>Standard  
+ Dies entspricht der Authentifizierungsmethode Standard in IIS. Wenn Sie diesen Modus verwenden, muss der IIS-Server mit Windows-Benutzerkonten und den entsprechenden NTFS-Dateisystemberechtigungen konfiguriert sein. Weitere Informationen zu IIS 6,0 finden Sie unter [Aktivieren der Standard Authentifizierung und Konfigurieren des Bereichs namens](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc785293(v=ws.10)). Weitere Informationen zu IIS 7,0 finden Sie unter [Konfigurieren der Standard Authentifizierung (IIS 7)](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc772009(v=ws.10)).  
   
-#### <a name="certificate"></a>Zertifikat  
- IIS verfügt über eine Option, mit der sich die Clients mit einem Zertifikat anmelden müssen. Mit dieser Funktion können die Internetinformationsdienste auch einem Windows-Konto ein Clientzertifikat zuordnen. Weitere Informationen zu IIS 6,0 finden Sie unter [Aktivieren von Client Zertifikaten in IIS 6,0](https://go.microsoft.com/fwlink/?LinkId=88594). Weitere Informationen zu IIS 7,0 finden Sie unter [Konfigurieren von Server Zertifikaten in IIS 7](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc732230(v=ws.10)).  
+#### <a name="certificate"></a>Certificate  
+ IIS verfügt über eine Option, mit der sich die Clients mit einem Zertifikat anmelden müssen. Mit dieser Funktion können die Internetinformationsdienste auch einem Windows-Konto ein Clientzertifikat zuordnen. Weitere Informationen zu IIS 6,0 finden Sie unter [Aktivieren von Client Zertifikaten in IIS 6,0](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc727994(v=ws.10)). Weitere Informationen zu IIS 7,0 finden Sie unter [Konfigurieren von Server Zertifikaten in IIS 7](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc732230(v=ws.10)).  
   
 #### <a name="digest"></a>Digest  
- Die Hashwertauthentifizierung ähnelt der Standardauthentifizierung, bietet jedoch den Vorteil, die Anmeldeinformationen als Hash zu senden und nicht als Klartext. Weitere Informationen zu IIS 6,0 finden Sie unter [Digest-Authentifizierung in IIS 6,0](https://go.microsoft.com/fwlink/?LinkID=88443). Weitere Informationen zu IIS 7,0 finden Sie unter [Konfigurieren der Digest-Authentifizierung (IIS 7)](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc754104(v=ws.10)).  
+ Die Hashwertauthentifizierung ähnelt der Standardauthentifizierung, bietet jedoch den Vorteil, die Anmeldeinformationen als Hash zu senden und nicht als Klartext. Weitere Informationen zu IIS 6,0 finden Sie unter [Digest-Authentifizierung in IIS 6,0](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc782661(v=ws.10)). Weitere Informationen zu IIS 7,0 finden Sie unter [Konfigurieren der Digest-Authentifizierung (IIS 7)](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc754104(v=ws.10)).  
   
 #### <a name="windows"></a>Windows  
- Dies entspricht der integrierten Windows-Authentifizierungsmethode in IIS. Bei dieser Methode muss sich auch der Server in einer Windows-Domäne befinden, die das Kerberos-Protokoll als Domänencontroller verwendet. Falls sich der Server nicht in einer Kerberos-Domäne befindet oder falls das Kerberos-System fehlschlägt, können Sie den im nächsten Abschnitt beschriebenen NTLM-Wert verwenden. Weitere Informationen zu IIS 6,0 finden Sie unter [integrierte Windows-Authentifizierung in IIS 6,0](https://go.microsoft.com/fwlink/?LinkId=88597). Weitere Informationen zu IIS 7,0 finden Sie unter [Konfigurieren von Server Zertifikaten in IIS 7](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc732230(v=ws.10)).
+ Dies entspricht der integrierten Windows-Authentifizierungsmethode in IIS. Bei dieser Methode muss sich auch der Server in einer Windows-Domäne befinden, die das Kerberos-Protokoll als Domänencontroller verwendet. Falls sich der Server nicht in einer Kerberos-Domäne befindet oder falls das Kerberos-System fehlschlägt, können Sie den im nächsten Abschnitt beschriebenen NTLM-Wert verwenden. Weitere Informationen zu IIS 6,0 finden Sie unter [integrierte Windows-Authentifizierung in IIS 6,0](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc738016(v=ws.10)). Weitere Informationen zu IIS 7,0 finden Sie unter [Konfigurieren von Server Zertifikaten in IIS 7](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc732230(v=ws.10)).
   
 #### <a name="ntlm"></a>NTLM  
- Dadurch kann der Server NTLM für die Authentifizierung verwenden, falls das Kerberos-Protokoll fehlschlägt. Weitere Informationen zum Konfigurieren von IIS in IIS 6,0 finden Sie unter [erzwingen der NTLM-Authentifizierung](https://go.microsoft.com/fwlink/?LinkId=88598). Für IIS 7,0 enthält die Windows-Authentifizierung die NTLM-Authentifizierung. Weitere Informationen finden Sie unter [Konfigurieren von Server Zertifikaten in IIS 7](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc732230(v=ws.10)).
+ Dadurch kann der Server NTLM für die Authentifizierung verwenden, falls das Kerberos-Protokoll fehlschlägt. Weitere Informationen zum Konfigurieren von IIS in IIS 6,0 finden Sie unter [erzwingen der NTLM-Authentifizierung](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc786486(v=ws.10)). Für IIS 7,0 enthält die Windows-Authentifizierung die NTLM-Authentifizierung. Weitere Informationen finden Sie unter [Konfigurieren von Server Zertifikaten in IIS 7](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc732230(v=ws.10)).
   
 ## <a name="wshttpbinding"></a>WsHttpBinding  
  Die <xref:System.ServiceModel.WSHttpBinding>-Klasse ist für die Zusammenarbeit mit Diensten vorgesehen, die WS-*-Spezifikationen implementieren. Die Transportsicherheit für diese Bindung ist SSL (Secure Sockets Layer) über HTTP oder HTTPS. Zum Erstellen einer WCF-Anwendung, die SSL verwendet, verwenden Sie IIS zum Hosten der Anwendung. Wenn Sie eine selbst gehostete Anwendung erstellen, können Sie mit dem Tool HttpCfg.exe ein X.509-Zertifikat an einen bestimmten Anschluss eines Computers binden. Die Portnummer wird als Teil der WCF-Anwendung als Endpunkt Adresse angegeben. Bei Verwendung des Transportmodus muss die Endpunktadresse das HTTPS-Protokoll enthalten. Andernfalls wird zur Laufzeit eine Ausnahme ausgelöst. Weitere Informationen finden Sie unter [http-Transport Sicherheit](../../../../docs/framework/wcf/feature-details/http-transport-security.md).  
@@ -93,7 +93,7 @@ Transport Sicherheitsmechanismen in Windows Communication Foundation (WCF) richt
  [!code-csharp[c_ProgrammingSecurity#13](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_programmingsecurity/cs/source.cs#13)]
  [!code-vb[c_ProgrammingSecurity#13](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_programmingsecurity/vb/source.vb#13)]  
   
- Alternativ können Sie das Zertifikat in der Konfiguration des Clients mithilfe eines [ \<Clientanmelde Informationen >](../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md) -Elements im Verhaltens Abschnitt angeben.  
+ Alternativ können Sie das Zertifikat in der Konfiguration des Clients mithilfe eines [\<Clientanmelde Informationen >](../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md) -Elements im Verhalten-Abschnitt angeben.  
   
 ```xml  
 <behaviors>  

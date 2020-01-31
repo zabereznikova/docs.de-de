@@ -1,40 +1,40 @@
 ---
-title: Größenanpassung bei Spalten und Zeilen im DataGridView-Steuerelement in Windows Forms
+title: Ändern der Größe von Spalten und Zeilen im DataGridView-Steuerelement
 ms.date: 03/30/2017
 helpviewer_keywords:
 - DataGridView control [Windows Forms], sizing rows and columns
 - columns [Windows Forms], resizing in grids
 - data grids [Windows Forms], resizing columns and rows
 ms.assetid: 7532764d-e5c1-4943-a08b-6377a722d3b6
-ms.openlocfilehash: e1fa2d57cfb2cd374d691fe03a0e0bdbd3ad7141
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8f8394a837ccc11c469f9ad4feeb60464d0014fe
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61903187"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742416"
 ---
 # <a name="resizing-columns-and-rows-in-the-windows-forms-datagridview-control"></a>Größenanpassung bei Spalten und Zeilen im DataGridView-Steuerelement in Windows Forms
-Die `DataGridView` Steuerelement bietet zahlreiche Optionen für das Größenanpassungsverhalten der Spalten und Zeilen. In der Regel `DataGridView` passen Sie Zellen werden nicht basierend auf deren Inhalte. Stattdessen schneiden sie jede Anzeigewert, der größer als die Zelle ist. Wenn der Inhalt als Zeichenfolge angezeigt werden kann, von die Zelle in einer QuickInfo angezeigt.  
+Das `DataGridView`-Steuerelement bietet zahlreiche Optionen zum Anpassen des Größen Anpassungs Verhaltens der Spalten und Zeilen. In der Regel werden `DataGridView` Zellen nicht auf Grundlage ihres Inhalts angepasst. Stattdessen wird jeder Anzeige Wert, der größer ist als die Zelle, zugeschnitten. Wenn der Inhalt als Zeichenfolge angezeigt werden kann, zeigt die Zelle ihn in einer QuickInfo an.  
   
- Standardmäßig können Benutzer ziehen, Zeilen-, Spalten- und Headerunterteiler mit der Maus, um weitere Informationen anzuzeigen. Benutzer können auch einen Unterteiler automatisch das zugeordnete Zeilen-, Spalten- oder Header Band entsprechend seines Inhalts ändern doppelklicken.  
+ Standardmäßig können Benutzer Zeilen-, Spalten-und Header Teiler mit der Maus ziehen, um weitere Informationen anzuzeigen. Benutzer können auch auf einen unter Teiler doppelklicken, um die zugehörige Zeile, Spalte oder das Header Band basierend auf dem Inhalt automatisch zu ändern.  
   
- Die `DataGridView` -Steuerelement bietet Eigenschaften, Methoden und Ereignisse, mit denen Sie anpassen oder deaktivieren alle diese Verhaltensweisen Benutzer gesteuert. Darüber hinaus können Sie programmgesteuert Größe Zeilen, Spalten und Header an ihren Inhalt angepasst, oder Sie können konfigurieren, um die Größe automatisch selbst wenn deren Inhalt ändern. Sie können auch konfigurieren, dass Spalten, um die verfügbare Breite des Steuerelements in Proportionen automatisch zu unterteilen, die Sie angeben.  
+ Das `DataGridView`-Steuerelement stellt Eigenschaften, Methoden und Ereignisse bereit, mit denen Sie alle diese vom Benutzer gerichteten Verhalten anpassen oder deaktivieren können. Darüber hinaus können Sie die Größe von Zeilen, Spalten und Headern Programm gesteuert ändern, damit Sie an ihren Inhalt angepasst werden, oder Sie können Sie so konfigurieren, dass Sie sich automatisch ändern, wenn sich Ihre Inhalte ändern. Sie können auch Spalten konfigurieren, um die verfügbare Breite des Steuer Elements in von Ihnen angegebenen Proportionen automatisch aufzuteilen.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Größenänderungsoptionen im DataGridView-Steuerelement in Windows Forms](sizing-options-in-the-windows-forms-datagridview-control.md)  
- Beschreibt die Optionen für die größenanpassung von Zeilen, Spalten und Header. Außerdem enthält Details zu größenanpassung-bezogene Eigenschaften und Methoden und beschreibt allgemeine Verwendungsszenarien kennen.  
+ Beschreibt die Optionen zum Anpassen der Größe von Zeilen, Spalten und Headern. Bietet auch Details zu Größen bezogenen Eigenschaften und Methoden und beschreibt häufige Verwendungs Szenarien.  
   
  [Spaltenfüllmodus im DataGridView-Steuerelement in Windows Forms](column-fill-mode-in-the-windows-forms-datagridview-control.md)  
- Spaltenfüllmodus im Detail beschreibt und enthält Beispielcode, mit denen Sie mit Spaltenfüllmodus und andere Modi zu experimentieren.  
+ Beschreibt den Spalten Füll Modus ausführlich und bietet Demonstrations Code, den Sie verwenden können, um mit dem Spalten Füll Modus und anderen Modi zu experimentieren.  
   
- [Vorgehensweise: Festlegen der Größenanpassungsmodi des DataGridView-Steuerelement von Windows Forms](how-to-set-the-sizing-modes-of-the-windows-forms-datagridview-control.md)  
- Beschreibt, wie der Größenanpassungsmodi für allgemeine Zwecke zu konfigurieren.  
+ [Gewusst wie: Festlegen der Größenanpassungsmodi des DataGridView-Steuerelements in Windows Forms](how-to-set-the-sizing-modes-of-the-windows-forms-datagridview-control.md)  
+ Beschreibt, wie die Größen Anpassungs Modi für allgemeine Zwecke konfiguriert werden.  
   
- [Vorgehensweise: Programmgesteuertes Ändern der Größe Zellen an Inhalt im DataGridView-Steuerelement in Windows Forms](programmatically-resize-cells-to-fit-content-in-the-datagrid.md)  
- Enthält Beispielcode, mit denen Sie experimentieren Sie mit programmgesteuerten Größenänderung.  
+ [Gewusst wie: Programmgesteuertes Anpassen der Zellengröße an den Inhalt im DataGridView-Steuerelement von Windows Forms](programmatically-resize-cells-to-fit-content-in-the-datagrid.md)  
+ Bietet Demonstrations Code, den Sie verwenden können, um mit der programmatischen Größe zu experimentieren.  
   
- [Vorgehensweise: Größe automatisch Zellen aus, wenn Inhalt geändert wird, in das DataGridView-Steuerelement in Windows Forms](automatically-resize-cells-when-content-changes-in-the-datagrid.md)  
- Enthält Beispielcode, die Sie verwenden können, um mit automatischen Größenanpassungsmodi zu experimentieren.  
+ [Gewusst wie: Automatisches Anpassen der Zellengröße bei Änderungen des Inhalts im DataGridView-Steuerelement von Windows Forms](automatically-resize-cells-when-content-changes-in-the-datagrid.md)  
+ Bietet Demonstrations Code, den Sie verwenden können, um mit automatischen Größen Anpassungs Modi zu experimentieren.  
   
 ## <a name="reference"></a>Referenz  
  <xref:System.Windows.Forms.DataGridView>  

@@ -1,84 +1,84 @@
 ---
-title: Spaltentypen im DataGridView-Steuerelement in Windows Forms
+title: Spaltentypen im DataGridView-Steuerelement
 ms.date: 03/30/2017
 helpviewer_keywords:
 - columns [Windows Forms], types
 - DataGridView control [Windows Forms], column types
 - data grids [Windows Forms], columns
 ms.assetid: f0a0a9f1-8757-4bfd-891f-d7d12870dbed
-ms.openlocfilehash: a33cf4cd865921c04ef10c7fccf3a67c3d22de73
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e918394cca6350854074d4c1567890138b2a1462
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61956246"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76743854"
 ---
 # <a name="column-types-in-the-windows-forms-datagridview-control"></a>Spaltentypen im DataGridView-Steuerelement in Windows Forms
-Die <xref:System.Windows.Forms.DataGridView> Steuerelement verwendet mehrere Spaltentypen, die Informationen anzeigen und Benutzern ermöglichen, ändern oder Hinzufügen von Informationen.  
+Das <xref:System.Windows.Forms.DataGridView>-Steuerelement verwendet mehrere Spaltentypen, um seine Informationen anzuzeigen, und ermöglicht es Benutzern, Informationen zu ändern oder hinzuzufügen.  
   
- Beim Binden einer <xref:System.Windows.Forms.DataGridView> steuern und Festlegen der <xref:System.Windows.Forms.DataGridView.AutoGenerateColumns%2A> Eigenschaft `true`, Spalten werden automatisch generiert, mit Standardspaltentypen für die Datentypen, die in der gebundenen Datenquelle enthalten sind.  
+ Wenn Sie ein <xref:System.Windows.Forms.DataGridView> Steuerelement binden und die <xref:System.Windows.Forms.DataGridView.AutoGenerateColumns%2A>-Eigenschaft auf `true`festlegen, werden Spalten automatisch mit den Standard Spaltentypen generiert, die für die in der gebundenen Datenquelle enthaltenen Datentypen geeignet sind.  
   
- Sie können auch Instanzen aller Spaltenklassen selbst zu erstellen und Hinzufügen von zurückgegebene Auflistung der <xref:System.Windows.Forms.DataGridView.Columns%2A> Eigenschaft. Sie können diese Instanzen für die Verwendung als ungebundene Spalten erstellen, oder Sie können diese manuell binden. Manuell gebundene Spalten sind nützlich, z. B. Wenn Sie eine automatisch generierte Spalte eines bestimmten Typs mit einer Spalte eines anderen Typs ersetzen möchten.  
+ Sie können auch Instanzen der Spalten Klassen selbst erstellen und Sie der Auflistung hinzufügen, die von der <xref:System.Windows.Forms.DataGridView.Columns%2A>-Eigenschaft zurückgegeben wird. Sie können diese Instanzen für die Verwendung als ungebundene Spalten erstellen, oder Sie können Sie manuell binden. Manuell gebundene Spalten sind nützlich, wenn Sie z. b. eine automatisch generierte Spalte eines Typs durch eine Spalte eines anderen Typs ersetzen möchten.  
   
- Die folgende Tabelle beschreibt die verschiedenen Spaltenklassen, die verfügbar sind, für die Verwendung in der <xref:System.Windows.Forms.DataGridView> Steuerelement.  
+ In der folgenden Tabelle werden die verschiedenen Spalten Klassen beschrieben, die für die Verwendung im <xref:System.Windows.Forms.DataGridView>-Steuerelement verfügbar sind.  
   
 |Klasse|Beschreibung|  
 |-----------|-----------------|  
-|<xref:System.Windows.Forms.DataGridViewTextBoxColumn>|Mit dem textbasierten verwendet. Beim Binden an Zahlen und Zeichenfolgen automatisch generiert.|  
-|<xref:System.Windows.Forms.DataGridViewCheckBoxColumn>|Mit verwendet <xref:System.Boolean> und <xref:System.Windows.Forms.CheckState> Werte. Beim Binden an die Werte der folgenden Typen automatisch generiert.|  
-|<xref:System.Windows.Forms.DataGridViewImageColumn>|Zum Anzeigen von Bildern verwendet. Automatisch generiert, wenn die Bindung in Bytearrays <xref:System.Drawing.Image> Objekte oder <xref:System.Drawing.Icon> Objekte.|  
-|<xref:System.Windows.Forms.DataGridViewButtonColumn>|Verwendet in Zellen angezeigt werden sollen. Beim Binden nicht automatisch generiert. In der Regel verwendet als ungebundene Spalten.|  
-|<xref:System.Windows.Forms.DataGridViewComboBoxColumn>|Verwendet, um die Dropdownlisten in Zellen angezeigt werden. Beim Binden nicht automatisch generiert. In der Regel datengebundenen Sie von manuell.|  
-|<xref:System.Windows.Forms.DataGridViewLinkColumn>|Verwendet, um Links in Zellen angezeigt werden. Beim Binden nicht automatisch generiert. In der Regel datengebundenen Sie von manuell.|  
-|Ihr benutzerdefinierter Spaltentyp|Sie können eine eigene Spaltenklasse erstellen, durch Vererbung der <xref:System.Windows.Forms.DataGridViewColumn> Klasse oder eines seiner abgeleiteten Klassen, die benutzerdefinierte Darstellung, die Verhalten oder die gehosteten Steuerelemente bereitstellen. Weitere Informationen finden Sie unter [Vorgehensweise: Anpassen von Zellen und Spalten im DataGridView-Steuerelement in Windows Forms durch Erweitern Aussehens und Verhaltens](customize-cells-and-columns-in-the-datagrid-by-extending-behavior.md)|  
+|<xref:System.Windows.Forms.DataGridViewTextBoxColumn>|Wird mit textbasierten Werten verwendet. Wird automatisch generiert, wenn an Zahlen und Zeichen folgen gebunden wird.|  
+|<xref:System.Windows.Forms.DataGridViewCheckBoxColumn>|Wird mit den Werten <xref:System.Boolean> und <xref:System.Windows.Forms.CheckState> verwendet. Wird automatisch generiert, wenn an Werte dieser Typen gebunden wird.|  
+|<xref:System.Windows.Forms.DataGridViewImageColumn>|Wird verwendet, um Bilder anzuzeigen. Wird automatisch beim Binden an Byte Arrays, <xref:System.Drawing.Image> Objekten oder <xref:System.Drawing.Icon> Objekten generiert.|  
+|<xref:System.Windows.Forms.DataGridViewButtonColumn>|Wird verwendet, um Schaltflächen in Zellen anzuzeigen. Wird bei der Bindung nicht automatisch generiert. Wird normalerweise als ungebundene Spalten verwendet.|  
+|<xref:System.Windows.Forms.DataGridViewComboBoxColumn>|Wird verwendet, um Dropdown Listen in Zellen anzuzeigen. Wird bei der Bindung nicht automatisch generiert. In der Regel manuell Daten gebunden.|  
+|<xref:System.Windows.Forms.DataGridViewLinkColumn>|Wird verwendet, um Links in Zellen anzuzeigen. Wird bei der Bindung nicht automatisch generiert. In der Regel manuell Daten gebunden.|  
+|Ihr benutzerdefinierter Spaltentyp|Sie können eine eigene Spalten Klasse erstellen, indem Sie die <xref:System.Windows.Forms.DataGridViewColumn> Klasse oder eine der abgeleiteten Klassen erbt, um benutzerdefinierte Darstellung, Verhalten oder gehostete Steuerelemente bereitzustellen. Weitere Informationen finden Sie unter Gewusst [wie: Anpassen von Zellen und Spalten im Windows Forms DataGridView-Steuerelement durch Erweiterung ihres Verhaltens und ihrer](customize-cells-and-columns-in-the-datagrid-by-extending-behavior.md) Darstellung|  
   
  Diese Spaltentypen werden in den folgenden Abschnitten ausführlicher beschrieben.  
   
 ## <a name="datagridviewtextboxcolumn"></a>DataGridViewTextBoxColumn  
- Die <xref:System.Windows.Forms.DataGridViewTextBoxColumn> ist ein allgemeines Spaltentyp für die Verwendung mit einem textbasierten-Werten, z. B. Zahlen und Zeichenfolgen. Im Bearbeitungsmodus eine <xref:System.Windows.Forms.TextBox> in der aktiven Zelle,-Steuerelements angezeigt wird, ermöglicht den Benutzern auf den Zellenwert zu ändern.  
+ Der <xref:System.Windows.Forms.DataGridViewTextBoxColumn> ist ein allgemeiner Spaltentyp für die Verwendung mit textbasierten Werten, wie z. b. Zahlen und Zeichen folgen. Im Bearbeitungsmodus wird ein <xref:System.Windows.Forms.TextBox>-Steuerelement in der aktiven Zelle angezeigt, sodass Benutzer den Zellwert ändern können.  
   
- Werte der Zellen werden automatisch in Zeichenfolgen für die Anzeige konvertiert. Werte eingegeben haben, oder vom Benutzer geändert werden automatisch analysiert, um einen Zellenwert des entsprechenden Datentyps zu erstellen. Sie können diese Konvertierungen anpassen, indem die Behandlung der <xref:System.Windows.Forms.DataGridView.CellFormatting> und <xref:System.Windows.Forms.DataGridView.CellParsing> Ereignisse der <xref:System.Windows.Forms.DataGridView> Steuerelement.  
+ Zellwerte werden für die Anzeige automatisch in Zeichen folgen konvertiert. Werte, die vom Benutzer eingegeben oder geändert werden, werden automatisch so analysiert, dass ein Zellwert des entsprechenden Datentyps erstellt wird. Sie können diese Konvertierungen anpassen, indem Sie die <xref:System.Windows.Forms.DataGridView.CellFormatting>-und <xref:System.Windows.Forms.DataGridView.CellParsing> Ereignisse des <xref:System.Windows.Forms.DataGridView>-Steuer Elements verarbeiten.  
   
- Der Zellwerttyp Daten einer Spalte wird angegeben, der <xref:System.Windows.Forms.DataGridViewColumn.ValueType%2A> -Eigenschaft der Spalte.  
+ Der zellwertdatentyp einer Spalte wird in der <xref:System.Windows.Forms.DataGridViewColumn.ValueType%2A>-Eigenschaft der Spalte angegeben.  
   
 ## <a name="datagridviewcheckboxcolumn"></a>DataGridViewCheckBoxColumn  
- Die <xref:System.Windows.Forms.DataGridViewCheckBoxColumn> wird zusammen mit <xref:System.Boolean> und <xref:System.Windows.Forms.CheckState> Werte. <xref:System.Boolean> Werte anzeigen als zwei oder drei-Status-Kontrollkästchen, abhängig vom Wert der <xref:System.Windows.Forms.DataGridViewCheckBoxColumn.ThreeState%2A> Eigenschaft. Wenn die Spalte gebunden ist, um <xref:System.Windows.Forms.CheckState> Werte, die <xref:System.Windows.Forms.DataGridViewCheckBoxColumn.ThreeState%2A> Eigenschaftswert ist `true` standardmäßig.  
+ Der <xref:System.Windows.Forms.DataGridViewCheckBoxColumn> wird mit <xref:System.Boolean>-und <xref:System.Windows.Forms.CheckState>-Werten verwendet. <xref:System.Boolean> Werte werden als Kontrollkästchen mit zwei oder drei Zuständen angezeigt, abhängig vom Wert der Eigenschaft <xref:System.Windows.Forms.DataGridViewCheckBoxColumn.ThreeState%2A>. Wenn die Spalte an <xref:System.Windows.Forms.CheckState> Werte gebunden ist, wird standardmäßig der <xref:System.Windows.Forms.DataGridViewCheckBoxColumn.ThreeState%2A>-Eigenschafts Wert `true`.  
   
- In der Regel dienen Kontrollkästchenzellenwerte für Speicher, wie alle anderen Daten oder für Massenvorgänge. Wenn Sie reagieren, sofort bei der Benutzer auf eine Zelle Kontrollkästchen klicken, können Sie behandeln möchten die <xref:System.Windows.Forms.DataGridView.CellClick> Ereignis, aber dieses Ereignis tritt auf, bevor der Wert der Zelle aktualisiert wird. Wenn Sie den neuen Wert zum Zeitpunkt des Klicks benötigen, wird eine Möglichkeit besteht, zu berechnen, was mit dem erwarteten Wert werden basierend auf den aktuellen Wert. Ein anderer Ansatz ist die Änderung sofort einen Commit auszuführen, und behandeln die <xref:System.Windows.Forms.DataGridView.CellValueChanged> Ereignis, um darauf zu reagieren. Um die Änderung zu übernehmen, wenn die Zelle geklickt wird, müssen Sie behandeln die <xref:System.Windows.Forms.DataGridView.CurrentCellDirtyStateChanged> Ereignis. Wenn die aktuelle Zelle ein Kontrollkästchen ist, rufen Sie in den Handler auf, die <xref:System.Windows.Forms.DataGridView.CommitEdit%2A> -Methode und übergeben Sie die <xref:System.Windows.Forms.DataGridViewDataErrorContexts.Commit> Wert.  
+ Kontrollkästchen Zellen Werte werden in der Regel entweder für den Speicher, z. b. für andere Daten, oder für die Durchführung von Massen Vorgängen bestimmt. Wenn Sie sofort reagieren möchten, wenn Benutzer auf eine Kontrollkästchen Zelle klicken, können Sie das <xref:System.Windows.Forms.DataGridView.CellClick>-Ereignis behandeln, aber dieses Ereignis tritt auf, bevor der Zellwert aktualisiert wird. Wenn Sie zum Zeitpunkt des klickfalls den neuen Wert benötigen, können Sie mit einer Option berechnen, welcher Wert auf Grundlage des aktuellen Werts erwartet wird. Ein anderer Ansatz besteht darin, die Änderung sofort zu übernehmen und das <xref:System.Windows.Forms.DataGridView.CellValueChanged> Ereignis zu behandeln, um darauf zu reagieren. Um die Änderung zu übernehmen, wenn auf die Zelle geklickt wird, müssen Sie das <xref:System.Windows.Forms.DataGridView.CurrentCellDirtyStateChanged>-Ereignis behandeln. Wenn die aktive Zelle im-Handler eine Kontrollkästchen Zelle ist, müssen Sie die <xref:System.Windows.Forms.DataGridView.CommitEdit%2A>-Methode aufzurufen und den <xref:System.Windows.Forms.DataGridViewDataErrorContexts.Commit>-Wert übergeben.  
   
 ## <a name="datagridviewimagecolumn"></a>DataGridViewImageColumn  
- Die <xref:System.Windows.Forms.DataGridViewImageColumn> wird verwendet, um Bilder anzuzeigen. Image-Spalten können aus einer Datenquelle automatisch aufgefüllt, manuell für ungebundene Spalten aufgefüllt oder dynamisch aufgefüllt werden, in einem Handler für die <xref:System.Windows.Forms.DataGridView.CellFormatting> Ereignis.  
+ Der <xref:System.Windows.Forms.DataGridViewImageColumn> wird zum Anzeigen von Bildern verwendet. Bild Spalten können automatisch aus einer Datenquelle aufgefüllt, manuell für ungebundene Spalten aufgefüllt oder dynamisch in einem Handler für das <xref:System.Windows.Forms.DataGridView.CellFormatting>-Ereignis aufgefüllt werden.  
   
- Die automatische Auffüllung des eine Image-Spalte aus einer Datenquelle mit Byte-Arrays in einer Vielzahl von Bildformate, alle von unterstützten Formate wie funktioniert die <xref:System.Drawing.Image> -Klasse und das OLE-Bild-Format, die von Microsoft® Access und der Beispieldatenbank Northwind verwendet.  
+ Die automatische Auffüllung einer Bild Spalte aus einer Datenquelle funktioniert mit Byte Arrays in einer Vielzahl von Bildformaten, einschließlich aller Formate, die von der <xref:System.Drawing.Image>-Klasse unterstützt werden, und dem von Microsoft® Access und der Northwind-Beispieldatenbank verwendeten OLE-Bildformat.  
   
- Eine Image-Spalte manuell zu füllen ist nützlich, wenn Sie die Funktionalität bereitstellen möchten eine <xref:System.Windows.Forms.DataGridViewButtonColumn>, aber das angepasste aussehen. Sie können behandeln die <xref:System.Windows.Forms.DataGridView.CellClick?displayProperty=nameWithType> Ereignis, um auf Klicks in eine Bildzelle reagieren.  
+ Das manuelle Auffüllen einer Bild Spalte ist hilfreich, wenn Sie die Funktionalität einer <xref:System.Windows.Forms.DataGridViewButtonColumn>bereitstellen möchten, aber mit einer angepassten Darstellung. Sie können das <xref:System.Windows.Forms.DataGridView.CellClick?displayProperty=nameWithType>-Ereignis behandeln, um auf Klicks innerhalb einer Bildzelle zu reagieren.  
   
- Füllen die Zellen der Image-Spalte in einen Handler für die <xref:System.Windows.Forms.DataGridView.CellFormatting> Ereignis ist hilfreich, wenn Sie Abbilder für berechnete Werte oder Werte in nicht-Bildformate bereitstellen möchten. Angenommen, Sie möglicherweise eine Spalte "Risiko" mit Zeichenfolgenwerten wie z. B. `"high"`, `"middle"`, und `"low"` , die als Symbole angezeigt werden soll. Klicken Sie alternativ müssen Sie eine Spalte "Image" möglicherweise, die die Positionen der Bilder enthält, die statt der binären Inhalt der Bilder geladen werden muss.  
+ Das Auffüllen der Zellen einer Bild Spalte in einem Handler für das <xref:System.Windows.Forms.DataGridView.CellFormatting> Ereignis ist hilfreich, wenn Sie Bilder für berechnete Werte oder Werte in nicht Bildformaten bereitstellen möchten. Sie können z. b. eine "Risk"-Spalte mit Zeichen folgen Werten wie `"high"`, `"middle"`und `"low"` haben, die als Symbole angezeigt werden sollen. Alternativ haben Sie möglicherweise eine Spalte "Image", die die Speicherorte von Bildern enthält, die geladen werden müssen, und nicht den binären Inhalt der Bilder.  
   
 ## <a name="datagridviewbuttoncolumn"></a>DataGridViewButtonColumn  
- Mit der <xref:System.Windows.Forms.DataGridViewButtonColumn>, können Sie eine Spalte von Zellen, die Schaltflächen anzeigen. Dies ist nützlich, wenn Sie eine einfache Möglichkeit für Ihre Benutzer zum Ausführen von Aktionen für bestimmte Datensätze, z. B. Bestellung oder Anzeigen von untergeordneten Datensätzen in einem separaten Fenster bereitstellen möchten.  
+ Mit dem <xref:System.Windows.Forms.DataGridViewButtonColumn>können Sie eine Spalte mit Zellen anzeigen, die Schaltflächen enthalten. Dies ist hilfreich, wenn Sie Ihren Benutzern eine einfache Möglichkeit zum Ausführen von Aktionen für bestimmte Datensätze bereitstellen möchten, z. b. das Platzieren einer Bestellung oder das Anzeigen von untergeordneten Datensätzen in einem separaten Fenster.  
   
- Schaltflächenspalten werden nicht automatisch generiert, wenn die Datenbindung einer <xref:System.Windows.Forms.DataGridView> Steuerelement. Um Schaltflächenspalten verwenden zu können, müssen sie manuell erstellen und Hinzufügen von zurückgegebene Auflistung der <xref:System.Windows.Forms.DataGridView.Columns%2A?displayProperty=nameWithType> Eigenschaft.  
+ Schaltflächen Spalten werden nicht automatisch generiert, wenn ein <xref:System.Windows.Forms.DataGridView> Steuerelement an Daten gebunden wird. Wenn Sie Schaltflächen Spalten verwenden möchten, müssen Sie diese manuell erstellen und der Auflistung hinzufügen, die von der <xref:System.Windows.Forms.DataGridView.Columns%2A?displayProperty=nameWithType>-Eigenschaft zurückgegeben wird.  
   
- Sie können von Benutzern in Schaltflächenzellen reagieren, durch Behandeln der <xref:System.Windows.Forms.DataGridView.CellClick?displayProperty=nameWithType> Ereignis.  
+ Sie können auf Benutzer Klicks in Schaltflächen Zellen reagieren, indem Sie das <xref:System.Windows.Forms.DataGridView.CellClick?displayProperty=nameWithType>-Ereignis behandeln.  
   
 ## <a name="datagridviewcomboboxcolumn"></a>DataGridViewComboBoxColumn  
- Mit der <xref:System.Windows.Forms.DataGridViewComboBoxColumn>, Sie können anzeigen, eine Spalte von Zellen, die Dropdown-Listenfelder enthalten. Dies ist nützlich für die Dateneingabe in Feldern, die nur bestimmte Werte, z. B. der Kategoriespalte der Products-Tabelle in der Northwind-Beispieldatenbank enthalten kann.  
+ Mit dem <xref:System.Windows.Forms.DataGridViewComboBoxColumn>können Sie eine Spalte mit Zellen anzeigen, die Dropdown-Listenfelder enthalten. Dies ist nützlich für die Dateneingabe in Feldern, die nur bestimmte Werte enthalten können, z. b. die Kategoriespalte der Products-Tabelle in der Northwind-Beispieldatenbank.  
   
- Sie können die Dropdown-Liste verwendet für alle Zellen die gleiche Weise, die Sie füllen würde Auffüllen eine <xref:System.Windows.Forms.ComboBox> Dropdown Liste entweder manuell über die zurückgegebene Auflistung der <xref:System.Windows.Forms.DataGridViewComboBoxColumn.Items%2A> -Eigenschaft, oder durch deren Bindung an eine Datenquelle über die <xref:System.Windows.Forms.DataGridViewComboBoxColumn.DataSource%2A>, <xref:System.Windows.Forms.DataGridViewComboBoxColumn.DisplayMember%2A>, und <xref:System.Windows.Forms.DataGridViewComboBoxColumn.ValueMember%2A> Eigenschaften. Weitere Informationen finden Sie unter [ComboBox-Steuerelement](combobox-control-windows-forms.md).  
+ Sie können die Dropdown Liste, die für alle Zellen verwendet wird, auf dieselbe Weise Auffüllen wie eine <xref:System.Windows.Forms.ComboBox> Dropdown Liste, entweder manuell durch die Auflistung, die von der <xref:System.Windows.Forms.DataGridViewComboBoxColumn.Items%2A>-Eigenschaft zurückgegeben wird, oder indem Sie Sie über die Eigenschaften <xref:System.Windows.Forms.DataGridViewComboBoxColumn.DataSource%2A>, <xref:System.Windows.Forms.DataGridViewComboBoxColumn.DisplayMember%2A>und <xref:System.Windows.Forms.DataGridViewComboBoxColumn.ValueMember%2A> an eine Datenquelle binden. Weitere Informationen finden Sie unter [ComboBox-Steuer](combobox-control-windows-forms.md)Element.  
   
- Sie können die Werte des tatsächlichen Zellenwertes binden, mit der Datenquelle ein, die die <xref:System.Windows.Forms.DataGridView> Steuerelement durch Festlegen der <xref:System.Windows.Forms.DataGridViewColumn.DataPropertyName%2A> Eigenschaft der <xref:System.Windows.Forms.DataGridViewComboBoxColumn?displayProperty=nameWithType>.  
+ Sie können die eigentlichen Zellwerte an die Datenquelle binden, die vom <xref:System.Windows.Forms.DataGridView>-Steuerelement verwendet wird, indem Sie die <xref:System.Windows.Forms.DataGridViewColumn.DataPropertyName%2A>-Eigenschaft der <xref:System.Windows.Forms.DataGridViewComboBoxColumn?displayProperty=nameWithType>festlegen.  
   
- Kombinationsfeld-Box-Spalten werden nicht automatisch generiert, wenn die Datenbindung einer <xref:System.Windows.Forms.DataGridView> Steuerelement. Um Combo Box Spalten verwenden, müssen sie manuell erstellen und Hinzufügen von zurückgegebene Auflistung der <xref:System.Windows.Forms.DataGridView.Columns%2A> Eigenschaft.  
+ Kombinations Feld Spalten werden nicht automatisch generiert, wenn ein <xref:System.Windows.Forms.DataGridView> Steuerelement an Daten gebunden wird. Wenn Sie Kombinations Feld Spalten verwenden möchten, müssen Sie diese manuell erstellen und der Auflistung hinzufügen, die von der <xref:System.Windows.Forms.DataGridView.Columns%2A>-Eigenschaft zurückgegeben wird.  
   
 ## <a name="datagridviewlinkcolumn"></a>DataGridViewLinkColumn  
- Mit der <xref:System.Windows.Forms.DataGridViewLinkColumn>, Sie können anzeigen, eine Spalte von Zellen, die Links enthalten. Dies ist nützlich für URL-Werte in der Datenquelle oder alternativ auf die Schaltfläche "-Spalte für bestimmte Verhalten, z. B. Öffnen eines Fensters mit untergeordneten Datensätzen.  
+ Mit dem <xref:System.Windows.Forms.DataGridViewLinkColumn>können Sie eine Spalte mit Zellen anzeigen, die Hyperlinks enthalten. Dies ist nützlich für URL-Werte in der Datenquelle oder als Alternative zur Schaltflächen Spalte, um besondere Verhaltensweisen wie das Öffnen eines Fensters mit untergeordneten Datensätzen zu untersuchen.  
   
- Linkspalten werden nicht automatisch generiert, wenn die Datenbindung einer <xref:System.Windows.Forms.DataGridView> Steuerelement. Um Linkspalten verwenden, müssen sie manuell erstellen und Hinzufügen von zurückgegebene Auflistung der <xref:System.Windows.Forms.DataGridView.Columns%2A> Eigenschaft.  
+ Verknüpfungs Spalten werden nicht automatisch generiert, wenn ein <xref:System.Windows.Forms.DataGridView> Steuerelement an Daten gebunden wird. Wenn Sie Link Spalten verwenden möchten, müssen Sie diese manuell erstellen und der Auflistung hinzufügen, die von der <xref:System.Windows.Forms.DataGridView.Columns%2A>-Eigenschaft zurückgegeben wird.  
   
- Sie können auf Klicks auf Links reagieren, durch Behandeln der <xref:System.Windows.Forms.DataGridView.CellContentClick> Ereignis. Dieses Ereignis unterscheidet sich von der <xref:System.Windows.Forms.DataGridView.CellClick> und <xref:System.Windows.Forms.DataGridView.CellMouseClick> Ereignisse, die auftreten, wenn ein Benutzer eine beliebige Stelle in einer Zelle klickt.  
+ Sie können auf Verknüpfungen von Benutzern reagieren, indem Sie das <xref:System.Windows.Forms.DataGridView.CellContentClick>-Ereignis behandeln. Dieses Ereignis unterscheidet sich von den <xref:System.Windows.Forms.DataGridView.CellClick>-und <xref:System.Windows.Forms.DataGridView.CellMouseClick> Ereignissen, die auftreten, wenn ein Benutzer auf eine beliebige Stelle in einer Zelle klickt.  
   
- Die <xref:System.Windows.Forms.DataGridViewLinkColumn> Klasse stellt mehrere Eigenschaften bereit, zum Ändern der Darstellung von Links vor, während und nach dem geklickt wird.  
+ Die <xref:System.Windows.Forms.DataGridViewLinkColumn>-Klasse stellt mehrere Eigenschaften zum Ändern der Darstellung von Verknüpfungen vor, während und nach dem Klicken auf Sie bereit.  
   
 ## <a name="see-also"></a>Siehe auch
 
@@ -91,6 +91,6 @@ Die <xref:System.Windows.Forms.DataGridView> Steuerelement verwendet mehrere Spa
 - <xref:System.Windows.Forms.DataGridViewTextBoxColumn>
 - <xref:System.Windows.Forms.DataGridViewLinkColumn>
 - [DataGridView-Steuerelement](datagridview-control-windows-forms.md)
-- [Vorgehensweise: Anzeigen von Bildern in Zellen des DataGridView-Steuerelement von Windows Forms](how-to-display-images-in-cells-of-the-windows-forms-datagridview-control.md)
-- [Vorgehensweise: Arbeiten Sie mit Bildspalten im DataGridView-Steuerelement in Windows Forms](how-to-work-with-image-columns-in-the-windows-forms-datagridview-control.md)
+- [Vorgehensweise: Anzeigen von Bildern in Zellen des DataGridView-Steuerelements in Windows Forms](how-to-display-images-in-cells-of-the-windows-forms-datagridview-control.md)
+- [Gewusst wie: Arbeiten mit Bildspalten im DataGridView-Steuerelement in Windows Forms](how-to-work-with-image-columns-in-the-windows-forms-datagridview-control.md)
 - [Anpassen des DataGridView-Steuerelements von Windows Forms](customizing-the-windows-forms-datagridview-control.md)

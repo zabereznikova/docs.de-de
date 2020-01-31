@@ -1,5 +1,5 @@
 ---
-title: Übersicht über WPF-Pinsel
+title: Übersicht über Pinsel
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - brushes [WPF], about brushes
 ms.assetid: ecea1955-420b-45c6-bf43-c1404c072c41
-ms.openlocfilehash: 8a1d05ad48ce75ce67d21d5a4d508015fea879b2
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 18ca9b79a6ee801638a54fcb227c44e9aea21fd0
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458626"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76746209"
 ---
 # <a name="wpf-brushes-overview"></a>Übersicht über WPF-Pinsel
 Alle Elemente, die auf dem Bildschirm sichtbar sind, sind sichtbar, da Sie von einem Pinsel gezeichnet wurden. Beispielsweise wird ein Pinsel verwendet, um den Hintergrund einer Schaltfläche, den Vordergrund von Text und das Ausfüllen einer Form zu beschreiben. Dieses Thema enthält eine Einführung in die Konzepte der Zeichnung mit [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Pinsel und stellt Beispiele bereit. Mithilfe von Pinseln können Sie [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]-Objekte, angefangen von einfachen Objekten, über Objekte in Volltonfarbe bis hin zu Objekten mit komplexen von Mustern und Bildern, zeichnen.  
@@ -153,7 +153,7 @@ Ein mithilfe eines VisualBrush gezeichnetes Rechteck
  Da es sich um <xref:System.Windows.Media.Animation.Animatable> Objekte handelt, können <xref:System.Windows.Media.Brush> Objekte animiert werden. Weitere Informationen finden Sie unter [Übersicht über Animation](animation-overview.md).  
   
 <a name="freezable_features"></a>   
-### <a name="freezable-features"></a>Funktionen von Freezable-Objekten  
+### <a name="freezable-features"></a>Features von Freezable  
  Da es von der <xref:System.Windows.Freezable>-Klasse erbt, bietet die <xref:System.Windows.Media.Brush>-Klasse mehrere besondere Features: <xref:System.Windows.Media.Brush> Objekte können als [Ressourcen](../../../desktop-wpf/fundamentals/xaml-resources-define.md)deklariert, von mehreren Objekten gemeinsam genutzt und geklont werden. Außerdem können alle <xref:System.Windows.Media.Brush> Typen außer <xref:System.Windows.Media.VisualBrush> schreibgeschützt werden, um die Leistung zu verbessern und Thread sicher zu machen.  
   
  Weitere Informationen zu den verschiedenen Funktionen, die von <xref:System.Windows.Freezable> Objekten bereitgestellt werden, finden Sie unter [Übersicht über](../advanced/freezable-objects-overview.md)frei wählbare Objekte.  
@@ -170,5 +170,5 @@ Ein mithilfe eines VisualBrush gezeichnetes Rechteck
 - [Beispiel für Pinsel](https://go.microsoft.com/fwlink/?LinkID=159973)
 - [ImageBrush-Beispiel](https://go.microsoft.com/fwlink/?LinkID=160005)
 - [VisualBrush-Beispiel](https://go.microsoft.com/fwlink/?LinkID=160049)
-- [Themen zu Vorgehensweisen](brushes-how-to-topics.md)
+- [Gewusst wie-Themen](brushes-how-to-topics.md)
 - [Weitere Leistungsempfehlungen](../advanced/optimizing-performance-other-recommendations.md)

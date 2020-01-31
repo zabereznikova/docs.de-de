@@ -5,12 +5,12 @@ helpviewer_keywords:
 - UI Automation, providers
 - providers, UI Automation
 ms.assetid: 859557b8-51e1-4d15-92e8-318d2dcdb2f7
-ms.openlocfilehash: f41fc102dfbe24d47e194da7477791a46f8d712d
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 98208f1e1fa1b540bf3880e33478854128505233
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75741745"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76778784"
 ---
 # <a name="ui-automation-providers-overview"></a>Übersicht über die Benutzeroberflächenautomatisierungs-Anbieter
 > [!NOTE]
@@ -18,9 +18,9 @@ ms.locfileid: "75741745"
   
  Benutzeroberflächenautomatisierungs-Anbieter ermöglichen Steuerelementen die Kommunikation mit Clientanwendungen für die Automatisierung der Benutzeroberfläche. Im Allgemeinen wird jedes Steuerelement oder anderes eindeutiges Element auf einer [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] von einem Anbieter dargestellt. Der Anbieter macht Informationen zum Element verfügbar und implementiert optional Steuerelementmuster, die es der Clientanwendung ermöglichen, mit dem Steuerelement zu interagieren.  
   
- Clientanwendungen müssen normalerweise nicht direkt mit Anbietern arbeiten. Die meisten Standard Steuerelemente in Anwendungen, die die Win32-, [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]-oder [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]-Frameworks verwenden, werden automatisch dem [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]-System ausgesetzt. Anwendungen, die benutzerdefinierte Steuerelemente implementieren, können auch [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Anbieter für diese Steuerelemente implementieren, und die Clientanwendungen müssen keine besonderen Schritte ausführen, um Zugriff auf diese zu erlangen.  
+ Clientanwendungen müssen normalerweise nicht direkt mit Anbietern arbeiten. Die meisten Standard Steuerelemente in Anwendungen, die die Win32-, Windows Forms-oder [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]-Frameworks verwenden, werden automatisch dem [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]-System ausgesetzt. Anwendungen, die benutzerdefinierte Steuerelemente implementieren, können auch [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Anbieter für diese Steuerelemente implementieren, und die Clientanwendungen müssen keine besonderen Schritte ausführen, um Zugriff auf diese zu erlangen.  
   
- Dieses Thema bietet einen Überblick darüber, wie Steuerelement Entwickler [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]-Anbieter implementieren, insbesondere für Steuerelemente in [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)] und Win32-Fenstern.  
+ Dieses Thema bietet einen Überblick darüber, wie Steuerelement Entwickler [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]-Anbieter implementieren, insbesondere für Steuerelemente in Windows Forms und Win32-Fenstern.  
   
 <a name="Types_of_Providers"></a>   
 ## <a name="types-of-providers"></a>Anbietertypen  

@@ -1,16 +1,16 @@
 ---
-title: PrintDocument-Komponente (Windows Forms)
+title: PrintDocument-Komponente
 ms.date: 03/30/2017
 helpviewer_keywords:
 - PrintDocument component [Windows Forms]
 - printing [Windows Forms], documents
 ms.assetid: 5af6a51d-66f6-43cd-a8cd-d64eb18fe7e7
-ms.openlocfilehash: 4bb03ef95f10f5eb1795e50f5147d245623e18e8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f8908a8161a60a5edf384da6f37746d04c0d5655
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62012601"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76741445"
 ---
 # <a name="printdocument-component-windows-forms"></a>PrintDocument-Komponente (Windows Forms)
 Die `PrintDocument`-Komponente von Windows Forms wird verwendet, um die Eigenschaften festzulegen, die beschreiben, was gedruckt werden soll, und das Dokument anschließend in Windows-basierten Anwendungen zu drucken. Sie kann zusammen mit der <xref:System.Windows.Forms.PrintDialog>-Komponente verwendet werden, um alle Aspekte des Druckens eines Dokuments zu steuern.  

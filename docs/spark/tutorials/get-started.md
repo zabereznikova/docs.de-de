@@ -4,12 +4,12 @@ description: Erfahren Sie, wie Sie mit .NET Core unter Windows eine .NET für Ap
 ms.date: 11/04/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 934b91a258937a976804109c71df232b8ce6d6d7
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 679ee7660e96504768a781e1e384acab80362736
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75337590"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76743201"
 ---
 # <a name="tutorial-get-started-with-net-for-apache-spark"></a>Tutorial: Erste Schritte mit .NET für Apache Spark
 
@@ -94,7 +94,7 @@ Wenn Sie einen `'spark-submit' is not recognized as an internal or external comm
 
 ### <a name="5-install-net-for-apache-spark"></a>5. Installieren von .NET für Apache Spark
 
-Laden Sie das [Microsoft.Spark.Worker](https://github.com/dotnet/spark/releases)-Release von GitHub für .NET für Apache Spark herunter. Wenn Sie sich beispielsweise auf einem Windows-Computer befinden und die Verwendung von .NET Core planen, [laden Sie das Windows x64 netcoreapp2.1-Release herunter](https://github.com/dotnet/spark/releases/download/v0.5.0/Microsoft.Spark.Worker.netcoreapp2.1.win-x64-0.6.0.zip).
+Laden Sie das [Microsoft.Spark.Worker](https://github.com/dotnet/spark/releases)-Release von GitHub für .NET für Apache Spark herunter. Wenn Sie sich beispielsweise auf einem Windows-Computer befinden und die Verwendung von .NET Core planen, [laden Sie das Windows x64 netcoreapp2.1-Release herunter](https://github.com/dotnet/spark/releases/download/v0.6.0/Microsoft.Spark.Worker.netcoreapp2.1.win-x64-0.6.0.zip).
 
 So extrahieren Sie Microsoft.Spark.Worker:
 

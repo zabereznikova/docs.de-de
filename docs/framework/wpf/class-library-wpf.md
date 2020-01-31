@@ -1,19 +1,19 @@
 ---
-title: Klassenbibliothek (WPF)
+title: Klassenbibliothek
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WPF class library [WPF]
 - Windows Presentation Foundation class library [WPF]
 ms.assetid: dcb35927-00ad-4141-a1ab-a7a524dd3f10
-ms.openlocfilehash: d43b46be2e05561eadcba12c744368db056a3ce5
-ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
+ms.openlocfilehash: bd099cbbbf96c71749375dab0aadfe84412ca103
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67859707"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742294"
 ---
 # <a name="class-library-wpf"></a>Klassenbibliothek (WPF)
-Die folgenden Links verweisen auf Namespaces, die enthalten [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] APIs.  
+Die folgenden Links verweisen auf Namespaces, die [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]-APIs enthalten.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
@@ -21,19 +21,19 @@ Die folgenden Links verweisen auf Namespaces, die enthalten [!INCLUDE[TLA#tla_wi
   
 - <xref:Microsoft.Build.Tasks.Windows>  
   
-- <xref:Microsoft.Win32> (shared)  
+- <xref:Microsoft.Win32> (Shared)  
   
 - <xref:Microsoft.Windows.Themes>  
   
-- <xref:System.Collections.ObjectModel> (shared)  
+- <xref:System.Collections.ObjectModel> (Shared)  
   
-- <xref:System.Collections.Specialized> (shared)  
+- <xref:System.Collections.Specialized> (Shared)  
   
-- <xref:System.ComponentModel> (shared)  
+- <xref:System.ComponentModel> (Shared)  
   
-- <xref:System.Diagnostics> (shared)  
+- <xref:System.Diagnostics> (Shared)  
   
-- <xref:System.IO> (shared)  
+- <xref:System.IO> (Shared)  
   
 - <xref:System.IO.Packaging>  
   
@@ -43,7 +43,7 @@ Die folgenden Links verweisen auf Namespaces, die enthalten [!INCLUDE[TLA#tla_wi
   
 - <xref:System.Printing.Interop>  
   
-- <xref:System.Security.Permissions> (shared)  
+- <xref:System.Security.Permissions> (Shared)  
   
 - <xref:System.Security.RightsManagement>  
   
@@ -85,7 +85,7 @@ Die folgenden Links verweisen auf Namespaces, die enthalten [!INCLUDE[TLA#tla_wi
   
 - <xref:System.Windows.Interop>  
   
-- <xref:System.Windows.Markup> (shared)  
+- <xref:System.Windows.Markup> (Shared)  
   
 - <xref:System.Windows.Markup.Localizer>  
   
@@ -124,9 +124,9 @@ Die folgenden Links verweisen auf Namespaces, die enthalten [!INCLUDE[TLA#tla_wi
 - <xref:UIAutomationClientsideProviders>  
   
 ## <a name="xaml-support-in-net-4"></a>XAML-Unterstützung in .NET 4  
- Die folgenden Namespaces enthalten Typen, die aus der Assembly "System.xaml" enthalten. "System.xaml" enthält allgemeine XAML-sprachunterstützung für Frameworks wie WPF, die von .NET Framework 4 erstellt wurden.  
+ Die folgenden Namespaces enthalten Typen aus der System. XAML-Assembly. System. XAML bietet allgemeine Unterstützung für die XAML-Sprache für Frameworks wie WPF, die auf .NET Framework 4 erstellt werden.  
   
-- <xref:System.Windows.Markup> (shared)  
+- <xref:System.Windows.Markup> (Shared)  
   
 - <xref:System.Xaml>  
   

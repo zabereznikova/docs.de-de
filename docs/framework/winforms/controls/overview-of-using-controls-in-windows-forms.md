@@ -1,5 +1,5 @@
 ---
-title: Übersicht über die Verwendung von Steuerelementen in Windows Forms
+title: Übersicht über die Verwendung von Steuerelementen
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,24 +9,24 @@ helpviewer_keywords:
 - controls [Windows Forms]
 - custom controls [Windows Forms]
 ms.assetid: fddbe951-4485-459d-a5fd-665ea346dbc1
-ms.openlocfilehash: 16a28db6477ea86a8bc853fbf506cf6d6d4fa5e0
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ca8b9fab3c53e256792faf0969b5066d5e35f6c7
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64654590"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744351"
 ---
 # <a name="overview-of-using-controls-in-windows-forms"></a>Übersicht über die Verwendung von Steuerelementen in Windows Forms
-In diesem Thema wird beschrieben, die wesentlichen Bestandteile einer Windows Forms-Anwendung und bietet ein einfaches Beispiel, das Steuerelemente verwendet und behandelt Ereignisse, die in einer Windows Forms-Anwendung.  
+In diesem Thema werden die wesentlichen Elemente einer Windows Forms Anwendung beschrieben, und es wird ein einfaches Beispiel bereitstellen, das Steuerelemente verwendet und Ereignisse in einer Windows Forms Anwendung behandelt.  
   
-## <a name="simple-windows-forms-applications"></a>Einfaches Windows Forms-Anwendungen  
- Besteht aus mindestens eine Windows Forms-Anwendung die folgenden Elemente:  
+## <a name="simple-windows-forms-applications"></a>Einfache Windows Forms Anwendungen  
+ Eine Windows Forms-Anwendung besteht mindestens aus den folgenden Elementen:  
   
-- Eine oder mehrere abgeleitete Klassen <xref:System.Windows.Forms.Form?displayProperty=nameWithType>.  
+- Eine oder mehrere Klassen, die von <xref:System.Windows.Forms.Form?displayProperty=nameWithType>abgeleitet werden.  
   
-- Ein `Main` Methode, die aufruft der `static` (`shared` in Visual Basic) <xref:System.Windows.Forms.Application.Run%2A> -Methode auf und übergibt eine <xref:System.Windows.Forms.Form> Instanz darauf. Die <xref:System.Windows.Forms.Application.Run%2A> Methode verarbeitet Nachrichten aus dem Betriebssystem zur Anwendung.  
+- Eine `Main` Methode, die die `static`-Methode (`shared` in Visual Basic) aufruft und eine <xref:System.Windows.Forms.Application.Run%2A> Instanz übergibt. Die <xref:System.Windows.Forms.Application.Run%2A>-Methode verarbeitet Nachrichten vom Betriebssystem an die Anwendung.  
   
- Das folgende Codebeispiel zeigt die wesentlichen Bestandteile einer Windows Forms-Anwendung.  
+ Das folgende Codebeispiel zeigt die wesentlichen Elemente einer Windows Forms-Anwendung.  
   
 ```vb  
 Option Explicit  
@@ -74,8 +74,8 @@ public class MyForm : Form {
 }  
 ```  
   
-## <a name="using-controls-in-a-windows-forms-application"></a>Verwenden von Steuerelementen in einer Windows Forms-Anwendung  
- Das folgende Codebeispiel zeigt eine einfache Anwendung, die veranschaulicht, wie Windows Forms-Anwendungen verwenden von Steuerelementen und Behandeln von Ereignissen. Das Beispiel besteht aus drei Schaltflächen in einem Formular. jede Schaltfläche ändert sich beim Klicken auf die Farbe des Hintergrunds.  
+## <a name="using-controls-in-a-windows-forms-application"></a>Verwenden von Steuerelementen in einer Windows Forms Anwendung  
+ Das folgende Codebeispiel zeigt eine einfache Anwendung, die veranschaulicht, wie Windows Forms Anwendungen Steuerelemente verwenden und Ereignisse behandeln. Das Beispiel besteht aus drei Schaltflächen in einem Formular. jede Schaltfläche ändert die Hintergrundfarbe, wenn darauf geklickt wird.  
   
 ```vb  
 Option Explicit  

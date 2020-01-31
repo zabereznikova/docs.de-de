@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Festlegen des Auswahlmodus des DataGridView-Steuerelements in Windows Forms'
+title: Festlegen des Auswahlmodus des DataGridView-Steuer Elements
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,15 +9,15 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], selection mode
 - data grids [Windows Forms], selection mode
 ms.assetid: 2f241643-7f82-4583-8757-03494f63b465
-ms.openlocfilehash: 22db5c1438405fc830202ec7baac6b6fcd631b41
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: da866aac3ac5b08a06ec71744aadb4260bd0cfc4
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64620797"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76743502"
 ---
-# <a name="how-to-set-the-selection-mode-of-the-windows-forms-datagridview-control"></a>Vorgehensweise: Festlegen des Auswahlmodus des DataGridView-Steuerelements in Windows Forms
-Im folgenden Codebeispiel wird veranschaulicht, wie so konfigurieren Sie eine <xref:System.Windows.Forms.DataGridView> Steuerelement, damit an einer beliebigen Stelle innerhalb einer Zeile automatisch auf die gesamte Zeile ausgewählt, und so, dass nur eine Zeile zu einem Zeitpunkt ausgewählt werden kann.  
+# <a name="how-to-set-the-selection-mode-of-the-windows-forms-datagridview-control"></a>Gewusst wie: Festlegen des Auswahlmodus des DataGridView-Steuerelements in Windows Forms
+Im folgenden Codebeispiel wird veranschaulicht, wie ein <xref:System.Windows.Forms.DataGridView> Steuerelement so konfiguriert wird, dass beim Klicken auf eine beliebige Stelle in einer Zeile automatisch die gesamte Zeile ausgewählt wird, sodass nur jeweils eine Zeile ausgewählt werden kann.  
   
 ## <a name="example"></a>Beispiel  
  [!code-csharp[System.Windows.Forms.DataGridViewMisc#065](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#065)]

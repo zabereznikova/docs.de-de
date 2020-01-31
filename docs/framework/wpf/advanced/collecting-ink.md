@@ -1,5 +1,5 @@
 ---
-title: Sammeln von frei Hand Eingaben in WPF-apps
+title: Erfassen digitaler Freihand
 ms.date: 08/15/2018
 dev_langs:
 - csharp
@@ -13,18 +13,18 @@ helpviewer_keywords:
 - properties [WPF], DefaultDrawingAttributes
 - DefaultDrawingAttributes property [WPF]
 ms.assetid: 66a3129d-9577-43eb-acbd-56c147282016
-ms.openlocfilehash: 8109e0d6a746d6ca23c25643c510014c1a1e656c
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 813a5313a6fbf83c36cdbed1f64ce69a217ad788
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73740870"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76747029"
 ---
 # <a name="collect-ink"></a>Frei Hand Eingaben erfassen
 
 Als einen ihrer zentralen Funktionsbestandteile erfasst die [Windows Presentation Foundation](../index.md)-Plattform Freihandeingaben. In diesem Thema werden die Methoden für die Sammlung von frei Hand Eingaben in Windows Presentation Foundation (WPF) erläutert.
 
-## <a name="prerequisites"></a>Erforderliche Voraussetzungen
+## <a name="prerequisites"></a>Erforderliche Komponenten
 
 Um die folgenden Beispiele verwenden zu können, müssen Sie zuerst Visual Studio und den Windows SDK installieren. Außerdem sollten Sie wissen, wie Anwendungen für das WPF geschrieben werden. Weitere Informationen zu den ersten Schritten mit WPF finden Sie unter Exemplarische Vorgehensweise [: meine erste WPF-Desktop Anwendung](../getting-started/walkthrough-my-first-wpf-desktop-application.md).
 
@@ -52,7 +52,7 @@ Der <xref:System.Windows.Controls.InkCanvas> bietet Unterstützung für verschie
 
 Der <xref:System.Windows.Controls.InkCanvas> bietet Unterstützung für viele Handschrift Bearbeitungsvorgänge. <xref:System.Windows.Controls.InkCanvas> unterstützt z. b. das Löschen von abblicken, und es ist kein zusätzlicher Code erforderlich, um dem-Element die Funktionalität hinzuzufügen.
 
-#### <a name="selection"></a>Auswahl
+#### <a name="selection"></a>Markierung
 
 Das Festlegen des Auswahlmodus ist so einfach wie das Festlegen der <xref:System.Windows.Controls.InkCanvasEditingMode>-Eigenschaft auf **Select**.
 

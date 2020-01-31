@@ -1,25 +1,25 @@
 ---
-title: Mauserfassung in Windows Forms
+title: Mausaufzeichnung
 ms.date: 03/30/2017
 helpviewer_keywords:
 - mouse [Windows Forms], capture
 ms.assetid: 8911d4b0-a4f8-4f93-8246-371aebd27d0c
-ms.openlocfilehash: 30432c6978f60cc9ad47d5df5dafc7aa45229f3b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 10583f074831b16dce3c713b4ac9a76c7005c9f5
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61800957"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76741022"
 ---
 # <a name="mouse-capture-in-windows-forms"></a>Mauserfassung in Windows Forms
-*Erfassen von Mausereignissen* bezieht sich auf, wenn ein Befehl, der alle Mauseingabe hat. Wenn ein Steuerelement die Maus erfasst hat, empfängt es Mauseingaben, und zwar unabhängig davon, ob der Zeiger innerhalb seiner Grenzen befindet.  
+Die *Maus Aufzeichnung* verweist auf, wenn ein Steuerelement den Befehl für alle Maus Eingaben annimmt. Wenn ein Steuerelement die Maus erfasst hat, empfängt es Maus Eingaben, unabhängig davon, ob sich der Zeiger innerhalb seines Rahmens befindet.  
   
-## <a name="setting-mouse-capture"></a>Die Erfassung von Mauseingaben festlegen  
- In Windows Forms ist die Maus vom Steuerelement erfasst, wenn der Benutzer eine Maustaste auf einem Steuerelement drückt, und die Maus vom Steuerelement freigegeben wird, wenn der Benutzer die Maustaste loslässt.  
+## <a name="setting-mouse-capture"></a>Festlegen der Maus Aufzeichnung  
+ In Windows Forms die Maus vom Steuerelement aufgezeichnet, wenn der Benutzer eine Maustaste auf ein Steuerelement drückt, und die Maus wird vom-Steuerelement losgelassen, wenn der Benutzer die Maustaste loslässt.  
   
- Die <xref:System.Windows.Forms.Control.Capture%2A> Eigenschaft der <xref:System.Windows.Forms.Control> Klasse gibt an, ob ein Steuerelement die Maus erfasst hat. Um zu bestimmen, wenn ein Steuerelement die Mausauswahl verliert, behandelt der <xref:System.Windows.Forms.Control.MouseCaptureChanged> Ereignis.  
+ Die <xref:System.Windows.Forms.Control.Capture%2A>-Eigenschaft der <xref:System.Windows.Forms.Control>-Klasse gibt an, ob ein Steuerelement die Maus erfasst hat. Behandeln Sie das <xref:System.Windows.Forms.Control.MouseCaptureChanged>-Ereignis, um zu bestimmen, wann ein Steuerelement die Maus Aufzeichnung verliert.  
   
- Nur das Vordergrundfenster kann die Maus erfassen. Wenn einem Hintergrundfenster versucht, die die Maus erfassen, empfängt das Fenster Nachrichten nur von den Mausereignissen, die auftreten, wenn der Mauszeiger in den sichtbaren Teil des Fensters befindet. Darüber hinaus auch, wenn das Vordergrundfenster die Maus erfasst hat, kann der Benutzer noch einem anderen Fenster klicken es in den Vordergrund zu bringen. Wenn die Maus erfasst wird, funktionieren Tastenkombinationen nicht.  
+ Nur im Vordergrund Fenster kann die Maus erfasst werden. Wenn ein Hintergrund Fenster versucht, die Maus zu erfassen, empfängt das Fenster nur Meldungen für Mausereignisse, die auftreten, wenn sich der Mauszeiger innerhalb des sichtbaren Teils des Fensters befindet. Auch wenn das Vordergrund Fenster die Maus erfasst hat, kann der Benutzer weiterhin auf ein anderes Fenster klicken, um ihn in den Vordergrund zu bringen. Wenn die Maus aufgezeichnet wird, funktionieren Tastenkombinationen nicht.  
   
 ## <a name="see-also"></a>Siehe auch
 
