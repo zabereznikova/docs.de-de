@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2b374116-0972-416a-8cf5-79213129be9a
 topic_type:
 - apiref
-ms.openlocfilehash: d5d7da343148d5f1c2aa9b2b639b094f8269199b
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: d99e5000cdd0d7252764554025815dbace2289f4
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74433204"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76868680"
 ---
 # <a name="icorprofilerinfo2getcontextstaticaddress-method"></a>ICorProfilerInfo2::GetContextStaticAddress-Methode
 Ruft die Adresse für das angegebene Kontext statische Feld ab, das sich im Gültigkeitsbereich des angegebenen Kontexts befindet.  
@@ -35,7 +35,7 @@ HRESULT GetContextStaticAddress(
     [out] void **ppAddress);  
 ```  
   
-## <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameters  
  `classId`  
  in Die ID der Klasse, die das angeforderte Kontext statische Feld enthält.  
   
@@ -57,16 +57,16 @@ HRESULT GetContextStaticAddress(
   
  Bevor der Klassenkonstruktor einer Klasse abgeschlossen ist, gibt `GetContextStaticAddress` CORPROF_E_DATAINCOMPLETE für alle statischen Felder zurück, obwohl einige der statischen Felder möglicherweise bereits initialisiert sind und Garbage Collection Objekte rooting.  
   
-## <a name="requirements"></a>Voraussetzungen  
+## <a name="requirements"></a>-Anforderungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  
   
  **Bibliothek:** CorGuids.lib  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [ICorProfilerInfo-Schnittstelle](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
-- [ICorProfilerInfo2-Schnittstelle](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)
+- [ICorProfilerInfo-Schnittstelle](icorprofilerinfo-interface.md)
+- [ICorProfilerInfo2-Schnittstelle](icorprofilerinfo2-interface.md)

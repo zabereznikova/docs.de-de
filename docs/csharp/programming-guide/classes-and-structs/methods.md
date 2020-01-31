@@ -5,12 +5,12 @@ helpviewer_keywords:
 - methods [C#]
 - C# language, methods
 ms.assetid: cc738f07-e8cd-4683-9585-9f40c0667c37
-ms.openlocfilehash: 5955228d51d2f6845a363bcaf32581b6598273f6
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 8c90f06bfadc528bd9575ead30e6b01263055fe8
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714772"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76743906"
 ---
 # <a name="methods-c-programming-guide"></a>Methoden (C#-Programmierhandbuch)
 
@@ -44,7 +44,7 @@ Die Methodendefinition gibt die Namen und Typen aller ggf. erforderlichen Parame
 
 ## <a name="passing-by-reference-vs-passing-by-value"></a>Übergeben nach Verweis und Übergeben nach Wert
 
-Wenn ein Werttyp an eine Methode übergeben wird, wird anstelle des eigentlichen Objekts standardmäßig eine Kopie übergeben. Änderungen am Argument haben daher keine Auswirkungen auf die ursprüngliche Kopie in der aufrufenden Methode. Sie können einen Werttyp als Verweis übergeben, indem Sie das ref-Schlüsselwort verwenden. Weitere Informationen finden Sie unter [Übergeben von Werttypparametern](./passing-value-type-parameters.md). Eine Liste der integrierten Werttypen finden Sie unter [Tabelle der Typen und Variablen](../../language-reference/keywords/value-types-table.md).
+Wenn eine Instanz eines [Werttyps](../../language-reference/builtin-types/value-types.md) an eine Methode übergeben wird, wird standardmäßig die zugehörige Kopie anstelle der Instanz selbst übermittelt. Änderungen am Argument haben daher keine Auswirkungen auf die originale Instanz in der aufrufenden Methode. Verwenden Sie das Schlüsselwort `ref`, um eine Werttypinstanz als Verweis zu übergeben. Weitere Informationen finden Sie unter [Übergeben von Werttypparametern](./passing-value-type-parameters.md).
 
 Wenn ein Objekt eines Verweistyps an eine Methode übergeben wird, wird ein Verweis auf das Objekt übergeben. Das heißt, die Methode erhält nicht das Objekt selbst, sondern ein Argument, das den Speicherort des Objekts angibt. Wenn Sie einen Member des Objekts unter Verwendung dieses Verweises ändern, wird die Änderung im Argument in der aufrufenden Methode berücksichtigt, selbst wenn Sie das Objekt als Wert übergeben.
 

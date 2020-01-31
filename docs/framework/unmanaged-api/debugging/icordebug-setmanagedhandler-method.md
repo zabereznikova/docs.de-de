@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d079131b-685b-4869-95be-826b88d28bd2
 topic_type:
 - apiref
-ms.openlocfilehash: 88a007654646ba42ebcaf1b42e002282a1040c7f
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 54ef1cab27a39de39b39996729be6b8160570745
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73134054"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76788974"
 ---
 # <a name="icordebugsetmanagedhandler-method"></a>ICorDebug::SetManagedHandler-Methode
 Gibt das Ereignishandlerobjekt für verwaltete Ereignisse an.  
@@ -33,24 +33,24 @@ HRESULT SetManagedHandler (
 );  
 ```  
   
-## <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameters  
  `pCallback`  
- in Ein Zeiger auf ein [ICorDebugManagedCallback](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md) -Objekt, das das Ereignishandlerobjekt ist.  
+ in Ein Zeiger auf ein [ICorDebugManagedCallback](icordebugmanagedcallback-interface.md) -Objekt, das das Ereignishandlerobjekt ist.  
   
 ## <a name="remarks"></a>Hinweise  
  `SetManagedHandler` muss zur Erstellungszeit aufgerufen werden.  
   
- Wenn die `ICorDebugManagedCallback`-Implementierung nicht genügend Schnittstellen zum Verarbeiten von Debugereignissen für die zu debuggende Anwendung enthält, gibt `SetManagedHandler` ein HRESULT von E_NOINTERFACE zurück.  
+ Wenn die `ICorDebugManagedCallback`-Implementierung nicht genügend Schnittstellen zum Verarbeiten von Debugereignissen für die zu debuggende Anwendung enthält, gibt `SetManagedHandler` ein HRESULT E_NOINTERFACE zurück.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>-Anforderungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   
  **Bibliothek:** CorGuids.lib  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [ICorDebug-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
+- [ICorDebug-Schnittstelle](icordebug-interface.md)

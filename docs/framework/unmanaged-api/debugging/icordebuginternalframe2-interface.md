@@ -14,22 +14,22 @@ helpviewer_keywords:
 ms.assetid: d4755569-85b8-4ff4-bf50-0e608e76429f
 topic_type:
 - apiref
-ms.openlocfilehash: 5a451218e0fdc32132a4e79d091ada8355d32fe7
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 9e333d71505a055cfe27df2c79a102c939bafc9d
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73122685"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76788478"
 ---
 # <a name="icordebuginternalframe2-interface"></a>ICorDebugInternalFrame2-Schnittstelle
-Stellt Informationen zu internen Frames bereit, einschließlich Stapel Adresse und Position in Bezug auf ICorDebugFrame-Objekte.  
+Stellt Informationen zu internen Frames bereit, u. a. Stapeladresse und Position in Bezug auf ICorDebugFrame-Objekte.  
   
 ## <a name="methods"></a>Methoden  
   
-|Methode|Beschreibung|  
+|-Methode|Beschreibung|  
 |------------|-----------------|  
-|[GetFrameAddress-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebuginternalframe2-getframeaddress-method.md)|Gibt die Stapel Adresse des internen Frames zurück.|  
-|[IsCloserToLeaf-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebuginternalframe2-isclosertoleaf-method.md)|Überprüft, ob sich der `this` internen Frame näher an dem Blatt als das angegebene ICorDebugFrame-Objekt befindet.|  
+|[GetFrameAddress-Methode](icordebuginternalframe2-getframeaddress-method.md)|Gibt die Stapel Adresse des internen Frames zurück.|  
+|[IsCloserToLeaf-Methode](icordebuginternalframe2-isclosertoleaf-method.md)|Überprüft, ob sich der `this` internen Frame näher an dem Blatt als das angegebene ICorDebugFrame-Objekt befindet.|  
   
 ## <a name="remarks"></a>Hinweise  
  Diese Schnittstelle erweitert die ICorDebug-internalframe-Schnittstelle.  
@@ -37,16 +37,16 @@ Stellt Informationen zu internen Frames bereit, einschließlich Stapel Adresse u
 > [!NOTE]
 > Diese Schnittstelle kann weder computerübergreifend noch prozessübergreifend remote aufgerufen werden.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>-Anforderungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   
  **Bibliothek:** CorGuids.lib  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework Versionen:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Debuggen von Schnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [Debuggen](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [Debuggen von Schnittstellen](debugging-interfaces.md)
+- [Debuggen](index.md)

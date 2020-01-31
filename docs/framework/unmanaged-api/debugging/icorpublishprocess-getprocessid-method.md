@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f31185e0-f01d-463a-b392-42163e39bfe9
 topic_type:
 - apiref
-ms.openlocfilehash: 728e8bdbce7f93176324d8f80261030f8cbae283
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 4cc6bbde2c7367c1109ca73e66f2670a56b2cdbe
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73140420"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76790554"
 ---
 # <a name="icorpublishprocessgetprocessid-method"></a>ICorPublishProcess::GetProcessID-Methode
 Ruft den Betriebssystem Bezeichner für diesen Prozess ab.  
@@ -33,19 +33,19 @@ HRESULT GetProcessID (
 );  
 ```  
   
-## <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameters  
  `pid`  
- vorgenommen Ein Zeiger auf den Bezeichner des Prozesses, der durch dieses [ICorPublishProcess](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md) -Objekt dargestellt wird.  
+ vorgenommen Ein Zeiger auf den Bezeichner des Prozesses, der durch dieses [ICorPublishProcess](icorpublishprocess-interface.md) -Objekt dargestellt wird.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>-Anforderungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** Corpub. idl, Corpub. h  
   
  **Bibliothek:** CorGuids.lib  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [ICorPublishProcess-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md)
+- [ICorPublishProcess-Schnittstelle](icorpublishprocess-interface.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b9d8c3b5-3a2e-4225-95d4-dd052c4532c3
 topic_type:
 - apiref
-ms.openlocfilehash: 0d34577f0f785bc851646423b8cd732ab4d1dae0
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: b5f6a830cbe601443f03cd91a356c7e49450e7f3
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73113861"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76793731"
 ---
 # <a name="iclrdatatargetgetthreadcontext-method"></a>ICLRDataTarget::GetThreadContext-Methode
 Ruft den aktuellen Ausführungs Kontext für den angegebenen Thread im Ziel Prozess ab. Diese Methode wird vom Common Language Runtime Data Access Services aufgerufen.  
@@ -37,7 +37,7 @@ HRESULT GetThreadContext (
 );  
 ```  
   
-## <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameters  
  `threadID`  
  in Der Betriebssystem Bezeichner eines Threads im Ziel Prozess.  
   
@@ -55,15 +55,15 @@ HRESULT GetThreadContext (
 ## <a name="remarks"></a>Hinweise  
  Diese Methode wird vom Writer der Debuganwendung implementiert.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>-Anforderungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** Clrdata. idl, Clrdata. h  
   
  **Bibliothek:** CorGuids.lib  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [ICLRDataTarget-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md)
+- [ICLRDataTarget-Schnittstelle](iclrdatatarget-interface.md)

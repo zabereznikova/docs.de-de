@@ -1,17 +1,18 @@
 ---
 title: Einführung in WPF
+titleSuffix: ''
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: b8d7cf43-d1f2-4f3d-adb0-4f3a6428edc0
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: d8ea49bbe400c5ec478a94ad7c1adb759af28abb
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: ecdd3b3c24b71917efb0d982d1f23737673622f9
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73454193"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744713"
 ---
 # <a name="wpf-overview"></a>WPF-Übersicht
 
@@ -206,7 +207,7 @@ Im folgenden Beispiel wird ein-<xref:System.Windows.Controls.DockPanel> verwende
 
 [!code-xaml[IntroToWPFSnippets#LayoutMARKUP](~/samples/snippets/xaml/wpf/introduction-to-wpf/introduction-to-wpf_1.xaml)]
 
-Das <xref:System.Windows.Controls.DockPanel>-Objekt ermöglicht es den untergeordneten <xref:System.Windows.Controls.TextBox>-Steuerelementen, ihm Informationen über ihre Anordnung bereitzustellen. Dazu wird von der <xref:System.Windows.Controls.DockPanel>-Klasse die angehängte `Dock`-Eigenschaft implementiert, die für die untergeordneten Steuerelemente verfügbar gemacht wird, damit jedes von ihnen eine Andockart festlegen kann.
+Das <xref:System.Windows.Controls.DockPanel> -Objekt ermöglicht es den untergeordneten <xref:System.Windows.Controls.TextBox> -Steuerelementen, ihm Informationen über ihre Anordnung bereitzustellen. Dazu wird von der <xref:System.Windows.Controls.DockPanel>-Klasse die angehängte `Dock`-Eigenschaft implementiert, die für die untergeordneten Steuerelemente verfügbar gemacht wird, damit jedes von ihnen eine Andockart festlegen kann.
 
 > [!NOTE]
 > Eine Eigenschaft, die von einem übergeordneten Steuerelement zur Verwendung durch untergeordnete Steuerelemente implementiert wird, ist ein WPF-Konstrukt, das als [angefügte Eigenschaft](advanced/attached-properties-overview.md) bezeichnet wird.
@@ -503,11 +504,11 @@ Die folgende Abbildung zeigt die Auswirkung dieses Codes:
 
 ![Listenfeld, das eine Datenvorlage verwendet](media/introduction-to-wpf/wpfintrofigure19.png)
 
-Beachten Sie, dass das Verhalten und die Gesamtdarstellung des <xref:System.Windows.Controls.ListBox>-Steuerelements beibehalten wurden. Lediglich die Darstellung der vom Listenfeld angezeigten Inhalte wurde geändert.
+Beachten Sie, dass das Verhalten und die Gesamtdarstellung des <xref:System.Windows.Controls.ListBox> -Steuerelements beibehalten wurden. Lediglich die Darstellung der vom Listenfeld angezeigten Inhalte wurde geändert.
 
 Weitere Informationen finden Sie unter [Übersicht über Datenvorlagen](data/data-templating-overview.md).
 
-### <a name="styles"></a>Stile
+### <a name="styles"></a>Formatvorlagen
 
 Stile ermöglichen Entwicklern und Designern die Standardisierung auf ein bestimmtes Erscheinungsbild ihres Produkts. WPF stellt ein solides Formatmodell bereit, dessen Grundlage das <xref:System.Windows.Style> -Element bildet. Im folgenden Beispiel wird ein Stil erstellt, mit dem die Hintergrundfarbe für jede <xref:System.Windows.Controls.Button> in einem Fenster auf `Orange`festgelegt wird:
 
@@ -649,7 +650,7 @@ Weitere Informationen zu benutzerdefinierten Steuerelementen finden Sie unter [�
 
 ## <a name="wpf-best-practices"></a>Bewährte Methoden für WPF
 
-Wie bei jeder Entwicklungsplattform kann das gewünschte Ergebnis mit WPF auf verschiedene Arten erreicht werden. Um sichergehen zu können, dass Ihre WPF-Anwendungen die geforderte Benutzerfreundlichkeit bereitstellen und grundsätzlich den Ansprüche der Zielgruppe entsprechen, gibt es empfohlene bewährte Methoden in Bezug auf Barrierefreiheit, Globalisierung, Lokalisierung und Leistung. Weitere Informationen finden Sie unter:
+Wie bei jeder Entwicklungsplattform kann das gewünschte Ergebnis mit WPF auf verschiedene Arten erreicht werden. Um sichergehen zu können, dass Ihre WPF-Anwendungen die geforderte Benutzerfreundlichkeit bereitstellen und grundsätzlich den Ansprüche der Zielgruppe entsprechen, gibt es empfohlene bewährte Methoden in Bezug auf Barrierefreiheit, Globalisierung, Lokalisierung und Leistung. Weitere Informationen finden Sie unter: .
 
 - [Barrierefreiheit](../ui-automation/accessibility-best-practices.md)
 - [Übersicht über WPF-Globalisierung und -Lokalisierung](advanced/wpf-globalization-and-localization-overview.md)

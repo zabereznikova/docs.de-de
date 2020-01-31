@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ad37cd10-0339-4d08-9b0e-4b3428bb4dc3
 topic_type:
 - apiref
-ms.openlocfilehash: 0553d8b07e3a16dc31474b5470ba2dd8ba365cb2
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: c8866e98be0dd064138acdf5e0f6fb9c339fb3d2
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73140505"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76790652"
 ---
 # <a name="icorpublishappdomainenumnext-method"></a>ICorPublishAppDomainEnum::Next-Methode
 Ruft die angegebene Anzahl von Anwendungs Domänen ab, die derzeit im Prozess vorhanden sind, beginnend an der aktuellen Position.  
@@ -36,25 +36,25 @@ HRESULT Next (
 );  
 ```  
   
-## <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameters  
  `celt`  
  in Die Anzahl der abzurufenden Elemente.  
   
  `objects`  
- vorgenommen Ein Zeiger auf das Array von abgerufenen [ICorPublishAppDomain](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomain-interface.md) -Objekten, von denen jedes eine Anwendungsdomäne darstellt.  
+ vorgenommen Ein Zeiger auf das Array von abgerufenen [ICorPublishAppDomain](icorpublishappdomain-interface.md) -Objekten, von denen jedes eine Anwendungsdomäne darstellt.  
   
  `pceltFetched`  
- vorgenommen Ein Zeiger auf die Anzahl der tatsächlich zurückgegebenen Anwendungs Domänen. Dieser Wert kann NULL sein, wenn `celt` ein Wert ist.  
+ vorgenommen Ein Zeiger auf die Anzahl der tatsächlich zurückgegebenen Anwendungs Domänen. Dieser Wert kann NULL sein, wenn `celt` 1 ist.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>-Anforderungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** Corpub. idl, Corpub. h  
   
  **Bibliothek:** CorGuids.lib  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [ICorPublishAppDomainEnum-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomainenum-interface.md)
+- [ICorPublishAppDomainEnum-Schnittstelle](icorpublishappdomainenum-interface.md)

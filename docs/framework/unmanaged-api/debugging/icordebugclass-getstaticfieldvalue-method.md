@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 56e718b4-fabd-418b-a5b3-3cc33c745683
 topic_type:
 - apiref
-ms.openlocfilehash: 867db3325f9b18b31f66429d01ea02be3603c0f6
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 873dd5a1eb2c9356049d2d0c0cb495b963c2ae46
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73125758"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76784190"
 ---
 # <a name="icordebugclassgetstaticfieldvalue-method"></a>ICorDebugClass::GetStaticFieldValue-Methode
 Ruft den Wert des angegebenen statischen Felds ab.  
@@ -35,7 +35,7 @@ HRESULT GetStaticFieldValue (
 );  
 ```  
   
-## <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameters  
  `fieldDef`  
  in Ein Feld `Def` Token, das auf das Feld verweist, das abgerufen werden soll.  
   
@@ -48,13 +48,13 @@ HRESULT GetStaticFieldValue (
  vorgenommen Ein Zeiger auf die Adresse eines ICorDebugValue-Objekts, das den Wert des statischen Felds darstellt.  
   
 ## <a name="remarks"></a>Hinweise  
- Bei parametrisierten Typen ist der Wert eines statischen Felds relativ zur jeweiligen Instanziierung. Wenn der Klassenkonstruktor Parameter vom Typ <xref:System.Type>annimmt, müssen Sie daher [ICorDebugType:: GetStaticFieldValue](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-getstaticfieldvalue-method.md) anstelle von `ICorDebugClass::GetStaticFieldValue`aufrufen.  
+ Bei parametrisierten Typen ist der Wert eines statischen Felds relativ zur jeweiligen Instanziierung. Wenn der Klassenkonstruktor Parameter vom Typ <xref:System.Type>annimmt, müssen Sie daher [ICorDebugType:: GetStaticFieldValue](icordebugtype-getstaticfieldvalue-method.md) anstelle von `ICorDebugClass::GetStaticFieldValue`aufrufen.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>-Anforderungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   
  **Bibliothek:** CorGuids.lib  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

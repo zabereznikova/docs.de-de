@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a684f7d7-d0c2-4690-b721-639e613f11f8
 topic_type:
 - apiref
-ms.openlocfilehash: cc02f63808b1929b93777c8bbc67c47000b0b424
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 23e168b0f322a580917c3fcfcb767a7d4d4628f6
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73132746"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76793889"
 ---
 # <a name="cordebugunmappedstop-enumeration"></a>CorDebugUnmappedStop-Enumeration
 Gibt den Typ von nicht zugeordnetem Code an, der eine Unterbrechung der Codeausführung durch die Schritte auslösen kann.  
@@ -51,17 +51,17 @@ typedef enum CorDebugUnmappedStop {
 |`STOP_ALL`|Wird in allen Typen von nicht zugeordnetem Code beendet.|  
   
 ## <a name="remarks"></a>Hinweise  
- Verwenden Sie die [ICorDebugStepper:: SetUnmappedStopMask](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-setunmappedstopmask-method.md) -Methode, um die Flags festzulegen, die den nicht zugeordneten Code angeben, in dem der Stepper angehalten wird.  
+ Verwenden Sie die [ICorDebugStepper:: SetUnmappedStopMask](icordebugstepper-setunmappedstopmask-method.md) -Methode, um die Flags festzulegen, die den nicht zugeordneten Code angeben, in dem der Stepper angehalten wird.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>-Anforderungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   
  **Bibliothek:** CorGuids.lib  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Debuggen von Enumerationen](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+- [Debuggen von Enumerationen](debugging-enumerations.md)

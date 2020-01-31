@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d9f16439-5a36-4474-8ffd-4f0b2c2bb686
 topic_type:
 - apiref
-ms.openlocfilehash: eafae181c74d9f3842f7f0d547bcccbbb28c09e6
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 17d47b6242bb12ff5ca3cfbde3e4ec183b9c19fc
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73132124"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76793864"
 ---
 # <a name="corgcreferencetype-enumeration"></a>CorGCReferenceType-Enumeration
 Identifiziert die Quelle eines Objekts, das speicherbereinigt werden soll.  
@@ -48,7 +48,7 @@ typedef enum {
   
 ## <a name="members"></a>Member  
   
-|Membername|Beschreibung|  
+|Mitgliedsname|Beschreibung|  
 |-----------------|-----------------|  
 |`CorHandleStrong`|Ein Handle für einen starken Verweis von der Objekthandletabelle.|  
 |`CorHandleStrongPinning`|Ein Handle für einen fixierten starken Verweis aus der Objekt Handle-Tabelle.|  
@@ -60,26 +60,26 @@ typedef enum {
 |`CorHandleStrongSizedByref`|Ein starkes Handle, das eine ungefähre Größe des kollektiven Abschlusses aller Objekte und Objektstämme zur Garbage Collection-Zeit enthält.|  
 |`CorReferenceStack`|Ein Verweis aus dem verwalteten Stapel.|  
 |`CorReferenceFinalizer`|Ein Verweis aus der Finalizerwarteschlange.|  
-|Corlenker strongonly|Gibt nur starke Verweise aus der Handle-Tabelle zurück. Dieser Wert wird nur von der [ICorDebugProcess5:: enumeratehandles](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumeratehandles-method.md) -Methode verwendet.|  
-|`CorHandleWeakOnly`|Gibt nur schwache Verweise aus der Handle-Tabelle zurück. Dieser Wert wird nur von der [ICorDebugProcess5:: enumeratehandles](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumeratehandles-method.md) -Methode verwendet.|  
-|`CorHandleAll`|Gibt alle Verweise aus der Handle-Tabelle zurück. Dieser Wert wird nur von der [ICorDebugProcess5:: enumeratehandles](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumeratehandles-method.md) -Methode verwendet.|  
+|Corlenker strongonly|Gibt nur starke Verweise aus der Handle-Tabelle zurück. Dieser Wert wird nur von der [ICorDebugProcess5:: enumeratehandles](icordebugprocess5-enumeratehandles-method.md) -Methode verwendet.|  
+|`CorHandleWeakOnly`|Gibt nur schwache Verweise aus der Handle-Tabelle zurück. Dieser Wert wird nur von der [ICorDebugProcess5:: enumeratehandles](icordebugprocess5-enumeratehandles-method.md) -Methode verwendet.|  
+|`CorHandleAll`|Gibt alle Verweise aus der Handle-Tabelle zurück. Dieser Wert wird nur von der [ICorDebugProcess5:: enumeratehandles](icordebugprocess5-enumeratehandles-method.md) -Methode verwendet.|  
   
 ## <a name="remarks"></a>Hinweise  
  Die `CorGCReferenceType`-Enumeration wird wie folgt verwendet:  
   
-- Als Wert für das `type`-Feld der [COR_GC_REFERENCE](../../../../docs/framework/unmanaged-api/debugging/cor-gc-reference-structure.md) -Struktur wird die Quelle eines Verweises oder eines Handles angegeben.  
+- Als Wert des `type` Felds der [COR_GC_REFERENCE](cor-gc-reference-structure.md) Struktur wird die Quelle eines Verweises oder eines Handles angegeben.  
   
-- Als `types` Argument der [ICorDebugProcess5:: enumeratehandles](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumeratehandles-method.md) -Methode gibt es die Typen von Handles an, die in der-Enumeration enthalten sein sollen.  
+- Als `types` Argument der [ICorDebugProcess5:: enumeratehandles](icordebugprocess5-enumeratehandles-method.md) -Methode gibt es die Typen von Handles an, die in der-Enumeration enthalten sein sollen.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>-Anforderungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   
  **Bibliothek:** CorGuids.lib  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework Versionen:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Debuggen von Enumerationen](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+- [Debuggen von Enumerationen](debugging-enumerations.md)

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0b69f945-263a-4e11-8512-89d27f6ea296
 topic_type:
 - apiref
-ms.openlocfilehash: 07919398b658d735fe4c9818ab24d27d586b6629
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 33acc4d9a0819c43d17c362fcbea2e7636521fd3
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73122561"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76792935"
 ---
 # <a name="icordebugmodule3-interface"></a>ICorDebugModule3-Schnittstelle
 Erstellt einen Symbolreader für ein dynamisches Modul.  
@@ -39,9 +39,9 @@ interface ICorDebugModule3 : IUnknown
   
 ## <a name="methods"></a>Methoden  
   
-|Methode|Beschreibung|  
+|-Methode|Beschreibung|  
 |------------|-----------------|  
-|[ICorDebugModule3::CreateReaderForInMemorySymbols-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule3-createreaderforinmemorysymbols-method.md)|Erstellt einen Symbol Reader (in der Regel [ISymUnmanagedReader-Schnittstelle](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)) für ein dynamisches Modul.|  
+|[ICorDebugModule3::CreateReaderForInMemorySymbols-Methode](icordebugmodule3-createreaderforinmemorysymbols-method.md)|Erstellt einen Symbol Reader (in der Regel [ISymUnmanagedReader-Schnittstelle](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)) für ein dynamisches Modul.|  
   
 ## <a name="remarks"></a>Hinweise  
  Diese Schnittstelle erweitert logisch die Schnittstellen "ICorDebugModule" und "ICorDebugModule2".  
@@ -49,7 +49,7 @@ interface ICorDebugModule3 : IUnknown
 > [!NOTE]
 > Diese Schnittstelle kann weder computerübergreifend noch prozessübergreifend remote aufgerufen werden.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>-Anforderungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
@@ -60,7 +60,7 @@ interface ICorDebugModule3 : IUnknown
   
 ## <a name="see-also"></a>Siehe auch
 
-- [ICorDebugRemoteTarget-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/icordebugremotetarget-interface.md)
-- [ICorDebug-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
+- [ICorDebugRemoteTarget-Schnittstelle](icordebugremotetarget-interface.md)
+- [ICorDebug-Schnittstelle](icordebug-interface.md)
 
-- [Debuggen von Schnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Debuggen von Schnittstellen](debugging-interfaces.md)

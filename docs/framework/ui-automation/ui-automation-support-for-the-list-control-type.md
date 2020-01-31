@@ -6,12 +6,12 @@ helpviewer_keywords:
 - List control type
 - UI Automation, List control type
 ms.assetid: 0e959fcb-50f2-413b-948d-7167d279bc11
-ms.openlocfilehash: d870452348f8837ec6773fc066ed52844f7acccd
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 17c0116ba6610ef28e873696bbf3162175bc0601
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75741610"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76778609"
 ---
 # <a name="ui-automation-support-for-the-list-control-type"></a>Benutzeroberflächenautomatisierungs-Unterstützung für den Listen-Steuerelementtyp
 > [!NOTE]
@@ -21,7 +21,7 @@ ms.locfileid: "75741610"
   
  Der Steuerelementtyp „List“ bietet eine Möglichkeit zum Organisieren von unstrukturierten Elementgruppen und ermöglicht dem Benutzer, eines oder mehrere der Elemente auszuwählen. Der Steuerelementtyp „List“ ist hinsichtlich der Typen, die er als untergeordnete Elemente enthalten kann, nur wenig eingeschränkt. Dadurch können Benutzeroberflächenautomatisierungs-Anbieter bekannte Elemente für Auswahlcontainer unterstützen.  
   
- Die [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Anforderungen in den folgenden Abschnitten gelten für alle Steuerelemente, die den Steuerelement Typ "List" implementieren, egal ob [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], Win32 oder [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]. Ein Beispiel für Steuerelemente, die den Steuerelementtyp „List“ implementieren, sind Listencontainer-Steuerelemente.  
+ Die [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Anforderungen in den folgenden Abschnitten gelten für alle Steuerelemente, die den Steuerelement Typ "List" implementieren, egal ob [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], Win32 oder Windows Forms. Ein Beispiel für Steuerelemente, die den Steuerelementtyp „List“ implementieren, sind Listencontainer-Steuerelemente.  
   
 <a name="Required_UI_Automation_Tree_Structure"></a>   
 ## <a name="required-ui-automation-tree-structure"></a>Erforderliche Benutzeroberflächenautomatisierungs-Struktur  

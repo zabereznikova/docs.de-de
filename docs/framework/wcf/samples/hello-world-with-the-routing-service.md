@@ -2,12 +2,12 @@
 title: Hello World mit dem Routingdienst
 ms.date: 03/30/2017
 ms.assetid: 0f4b0d5b-6522-4ad5-9f3a-baa78316d7d1
-ms.openlocfilehash: 7a41a1b552e220dcb6367ae59876da4570bab909
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: ae0615c8cf2fa33f3bb363f77c0d06440b6afc13
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74716919"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76743707"
 ---
 # <a name="hello-world-with-the-routing-service"></a>Hello World mit dem Routingdienst
 In diesem Beispiel wird der Windows Communication Foundation (WCF)-Routing Dienst veranschaulicht. Der Routing Dienst ist eine WCF-Komponente, mit der Sie ganz einfach einen Inhalts basierten Router in Ihre Anwendung integrieren können. In diesem Beispiel wird das standardmäßige WCF-Rechner Beispiel für die Kommunikation über den Routing Dienst angepasst. In diesem Beispiel ist der Rechnerclient so konfiguriert, dass er Nachrichten an einen vom Router verfügbar gemachten Endpunkt sendet. Der Routingdienst ist so konfiguriert, dass er alle gesendeten Nachrichten akzeptiert und diese an einen Endpunkt weiterleitet, der dem Rechnerdienst entspricht. Somit werden vom Client gesendete Nachrichten vom Router empfangen und zum eigentlichen Rechnerdienst umgeleitet. Nachrichten vom Rechnerdienst werden an den Router zurückgesendet, der sie dann zurück an den Rechnerclient übergibt.
@@ -59,4 +59,4 @@ In diesem Beispiel wird der Windows Communication Foundation (WCF)-Routing Diens
   
 ## <a name="see-also"></a>Siehe auch
 
-- [AppFabric-Hosting-und persistenzbeispiele](https://go.microsoft.com/fwlink/?LinkId=193961)
+- [AppFabric-Hosting-und persistenzbeispiele](https://docs.microsoft.com/previous-versions/appfabric/ff383418(v=azure.10))

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4c6f4f6e-52cc-402e-881b-7b8526544c90
 topic_type:
 - apiref
-ms.openlocfilehash: 5fb4a8a508cde4455bbee8c08432d3549e3fac43
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 22ae1d24040a8ee5000e0ff2fbeb2b45e08050df
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73122753"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76784342"
 ---
 # <a name="icordebugbreakpointenum-interface"></a>ICorDebugBreakpointEnum-Schnittstelle
 
@@ -27,24 +27,24 @@ Implementiert ICorDebugEnum-Methoden und listet ICorDebugBreakpoint-Arrays auf.
   
 ## <a name="methods"></a>Methoden  
   
-|Methode|Beschreibung|  
+|-Methode|Beschreibung|  
 |------------|-----------------|  
-|[Next-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugbreakpointenum-next-method.md)|Ruft die angegebene Anzahl von `ICorDebugBreakpoint` Instanzen aus der-Enumeration ab der aktuellen Position ab.|  
+|[Next-Methode](icordebugbreakpointenum-next-method.md)|Ruft die angegebene Anzahl von `ICorDebugBreakpoint` Instanzen aus der-Enumeration ab der aktuellen Position ab.|  
   
 ## <a name="remarks"></a>Hinweise  
   
 > [!NOTE]
 > Diese Schnittstelle kann weder computerübergreifend noch prozessübergreifend remote aufgerufen werden.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>-Anforderungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   
  **Bibliothek:** CorGuids.lib  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Debuggen von Schnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Debuggen von Schnittstellen](debugging-interfaces.md)

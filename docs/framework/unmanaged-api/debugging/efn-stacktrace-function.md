@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: caea7754-867c-4360-a65c-5ced4408fd9d
 topic_type:
 - apiref
-ms.openlocfilehash: 272856c7eedbdc577158edcc463535a7946bb060
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: cc5093a5ba0afcccaf960e9b8776f93a061cc2f5
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73122992"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76785669"
 ---
 # <a name="_efn_stacktrace-function"></a>\_EFN\_StackTrace-Funktion
 Stellt eine Textdarstellung einer verwalteten Stapelüberwachung und ein Array von `CONTEXT`-Datensätzen bereit, einen Datensatz für jeden Übergang zwischen nicht verwaltetem und verwaltetem Code.  
@@ -38,7 +38,7 @@ HRESULT CALLBACK _EFN_StackTrace(
 );  
 ```  
   
-## <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameters  
  `Client`  
  in Der Client, der deentschlgt wird.  
   
@@ -65,13 +65,13 @@ HRESULT CALLBACK _EFN_StackTrace(
   
 - Wenn `wszTextOut` NULL ist und `puiTextLength` nicht NULL ist, gibt die Funktion die Zeichen folgen Länge in `puiTextLength`zurück.  
   
-- Wenn `wszTextOut` nicht NULL ist, speichert die Funktion Text in `wszTextOut` bis zu dem Speicherort, der durch `puiTextLength`angegeben wird. Es wird erfolgreich zurückgegeben, wenn genügend Platz im Puffer vorhanden ist, oder gibt E_OUTOFMEMORY zurück, wenn der Puffer nicht lang genug ist.  
+- Wenn `wszTextOut` nicht NULL ist, speichert die Funktion Text in `wszTextOut` bis zu dem Speicherort, der durch `puiTextLength`angegeben wird. Es wird erfolgreich zurückgegeben, wenn genügend Platz im Puffer vorhanden ist, oder es wird E_OUTOFMEMORY zurückgegeben, wenn der Puffer nicht lang genug ist.  
   
 - Der Übergangsteil der Funktion wird ignoriert, wenn `pTransitionContexts` und `puiTransitionContextCount` beide NULL sind. In diesem Fall stellt die-Funktion Aufrufern nur die Textausgabe der Funktionsnamen bereit.  
   
 - Wenn `pTransitionContexts` NULL ist und `puiTransitionContextCount` nicht NULL ist, gibt die Funktion die erforderliche Anzahl von Kontext Einträgen in `puiTransitionContextCount`zurück.  
   
-- Wenn `pTransitionContexts` nicht NULL ist, behandelt die Funktion Sie als Array von Strukturen der Länge `puiTransitionContextCount`. Die Struktur Größe wird von `uiSizeOfContext`angegeben, und es muss sich um die Größe von [SimpleContext](../../../../docs/framework/unmanaged-api/debugging/stacktrace-simplecontext-structure.md) oder `CONTEXT` für die Architektur handeln.  
+- Wenn `pTransitionContexts` nicht NULL ist, behandelt die Funktion Sie als Array von Strukturen der Länge `puiTransitionContextCount`. Die Struktur Größe wird von `uiSizeOfContext`angegeben, und es muss sich um die Größe von [SimpleContext](stacktrace-simplecontext-structure.md) oder `CONTEXT` für die Architektur handeln.  
   
 - `wszTextOut` wird im folgenden Format geschrieben:  
   
@@ -92,13 +92,13 @@ HRESULT CALLBACK _EFN_StackTrace(
     #define SOS_STACKTRACE_SHOWADDRESSES   0x00000001  
     ```  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>-Anforderungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** SOS_Stacktrace. h  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Debuggen von globalen statischen Funktionen](../../../../docs/framework/unmanaged-api/debugging/debugging-global-static-functions.md)
+- [Debuggen von globalen statischen Funktionen](debugging-global-static-functions.md)

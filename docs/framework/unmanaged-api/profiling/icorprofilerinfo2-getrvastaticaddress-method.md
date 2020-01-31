@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a25a8f8b-5cfa-440d-9376-a1a1c3a9fc11
 topic_type:
 - apiref
-ms.openlocfilehash: db768c97a2d1a0fd5ee42ecfb121fb96d3092e79
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: ca64d4f5932fb4a0c0486fee5ca1017a6d3adaf2
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74433024"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76868628"
 ---
 # <a name="icorprofilerinfo2getrvastaticaddress-method"></a>ICorProfilerInfo2::GetRVAStaticAddress-Methode
 Ruft die Adresse des angegebenen statischen Felds der relativen virtuellen Adresse (RVA) ab.  
@@ -34,7 +34,7 @@ HRESULT GetRVAStaticAddress(
     [out] void **ppAddress);  
 ```  
   
-## <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameters  
  `classId`  
  in Die ID der Klasse, die das angeforderte RVA-statische Feld enthält.  
   
@@ -53,16 +53,16 @@ HRESULT GetRVAStaticAddress(
   
  Bevor der Klassenkonstruktor einer Klasse abgeschlossen ist, werden `GetRVAStaticAddress` für alle statischen Felder CORPROF_E_DATAINCOMPLETE zurückgegeben, obwohl einige der statischen Felder möglicherweise bereits initialisiert wurden und Garbage Collection Objekte als rooting verwendet werden.  
   
-## <a name="requirements"></a>Voraussetzungen  
+## <a name="requirements"></a>-Anforderungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  
   
  **Bibliothek:** CorGuids.lib  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [ICorProfilerInfo-Schnittstelle](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
-- [ICorProfilerInfo2-Schnittstelle](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)
+- [ICorProfilerInfo-Schnittstelle](icorprofilerinfo-interface.md)
+- [ICorProfilerInfo2-Schnittstelle](icorprofilerinfo2-interface.md)

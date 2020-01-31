@@ -1,15 +1,15 @@
 ---
-title: 'Icordebugmergedassemblyrecord:: getSimpleName-Methode'
+title: ICorDebugMergedAssemblyRecord::GetSimpleName-Methode
 ms.date: 03/30/2017
 ms.assetid: bc3410f6-ebca-4bca-9b45-fc38c74fa9cb
-ms.openlocfilehash: 565e27b47f2454dec1e4c2b89ee46ac5279b08b7
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 21e8ebeabd3b082361ca3307240cfca58835b066
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73130550"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76793093"
 ---
-# <a name="icordebugmergedassemblyrecordgetsimplename-method"></a>Icordebugmergedassemblyrecord:: getSimpleName-Methode
+# <a name="icordebugmergedassemblyrecordgetsimplename-method"></a>ICorDebugMergedAssemblyRecord::GetSimpleName-Methode
 Ruft den einfachen Namen der Assembly ab.  
   
 ## <a name="syntax"></a>Syntax  
@@ -22,7 +22,7 @@ HRESULT GetSimpleName(
 );  
 ```  
   
-## <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameters  
  `cchName`  
  [in] Die Anzahl der Zeichen im `szName`-Puffer.  
   
@@ -38,16 +38,16 @@ HRESULT GetSimpleName(
 > [!NOTE]
 > Diese Methode ist nur mit .NET Native verfügbar.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>-Anforderungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   
  **Bibliothek:** CorGuids.lib  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **.NET Framework Versionen:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [ICorDebugMergedAssemblyRecord-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/icordebugmergedassemblyrecord-interface.md)
-- [Debuggen von Schnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [ICorDebugMergedAssemblyRecord-Schnittstelle](icordebugmergedassemblyrecord-interface.md)
+- [Debuggen von Schnittstellen](debugging-interfaces.md)

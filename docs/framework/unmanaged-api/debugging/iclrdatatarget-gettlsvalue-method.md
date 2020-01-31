@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0d8a7730-edc9-4728-898f-41b219cf5a28
 topic_type:
 - apiref
-ms.openlocfilehash: 205ad3af81fb6fabda5cbe291536f8858999f831
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: d4e7c055480ea611357d5d3e18ac4306acf4d0b0
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73113700"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76785420"
 ---
 # <a name="iclrdatatargetgettlsvalue-method"></a>ICLRDataTarget::GetTLSValue-Methode
 Ruft einen Wert aus dem lokalen Thread Speicher (TLS) des angegebenen Threads im Ziel Prozess ab. Diese Methode wird vom Common Language Runtime (CLR)-Datenzugriffs Dienst aufgerufen.  
@@ -35,7 +35,7 @@ HRESULT GetTLSValue (
 );  
 ```  
   
-## <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameters  
  `threadID`  
  in Der Betriebssystem Bezeichner eines Threads im Ziel Prozess.  
   
@@ -48,15 +48,15 @@ HRESULT GetTLSValue (
 ## <a name="remarks"></a>Hinweise  
  Diese Methode wird vom Writer der Debuganwendung implementiert.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>-Anforderungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** Clrdata. idl, Clrdata. h  
   
  **Bibliothek:** CorGuids.lib  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [ICLRDataTarget-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md)
+- [ICLRDataTarget-Schnittstelle](iclrdatatarget-interface.md)

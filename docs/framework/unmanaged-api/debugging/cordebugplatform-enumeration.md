@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: c5444816-7378-4521-afd3-bf5e4b5303d5
 topic_type:
 - apiref
-ms.openlocfilehash: 5d66503487e1b997e2b8cc7d3d46e210a4dbbe05
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 2ed32449c4a133e6e72ec44f9cb57f49de22164a
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73132761"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76778233"
 ---
 # <a name="cordebugplatform-enumeration"></a>CorDebugPlatform-Enumeration
-Stellt Ziel Platt Form Werte bereit, die von der [ICorDebugDataTarget:: GetPlatform](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-getplatform-method.md) -Methode verwendet werden.  
+Stellt Ziel Platt Form Werte bereit, die von der [ICorDebugDataTarget:: GetPlatform](icordebugdatatarget-getplatform-method.md) -Methode verwendet werden.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -51,17 +51,17 @@ typedef enum CorDebugPlatform
 |CORDB_PLATFORM_WINDOWS_ARM|Die Zielplattform ist das Macintosh-Betriebssystem, das auf Windows-Arm-Hardware ausgeführt wird.|  
 |CORDB_PLATFORM_MAC_AMD64|Die Zielplattform ist das Macintosh-Betriebssystem, das auf AMD64-Hardware ausgeführt wird.|  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>-Anforderungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   
  **Bibliothek:** CorGuids.lib  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework Versionen:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
  Die `CORDB_PLATFORM_WINDOWS_ARM`- und `CORDB_PLATFORM_MAC_AMD64`-Member sind in .NET Framework 4.5.2 und höheren Versionen verfügbar.  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Debuggen von Enumerationen](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+- [Debuggen von Enumerationen](debugging-enumerations.md)

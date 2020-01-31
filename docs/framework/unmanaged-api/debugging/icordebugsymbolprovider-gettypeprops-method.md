@@ -1,15 +1,15 @@
 ---
-title: 'Icordebugsymbolprovider:: gettypeer-Eigenschaften Methode'
+title: ICorDebugSymbolProvider::GetTypeProps-Methode
 ms.date: 03/30/2017
 ms.assetid: 35ac4140-91ea-4c77-b1c4-1daf41986ca5
-ms.openlocfilehash: c87d9f6d0a719dae5e532e9c0369a7f9fc03748a
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 5fa091eaf2cf93b0c645effeec3c959d42665fc9
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73133664"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76791548"
 ---
-# <a name="icordebugsymbolprovidergettypeprops-method"></a>Icordebugsymbolprovider:: gettypeer-Eigenschaften Methode
+# <a name="icordebugsymbolprovidergettypeprops-method"></a>ICorDebugSymbolProvider::GetTypeProps-Methode
 Gibt anhand einer relativen virtuellen Adresse (RVA) in einem VTable Informationen zu den Eigenschaften eines Typs wie die Anzahl der Signaturen der generischen Parameter zurück.  
   
 ## <a name="syntax"></a>Syntax  
@@ -23,7 +23,7 @@ HRESULT GetTypeProps(
 );  
 ```  
   
-## <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameters  
  `tableRva`  
  [in] Eine relative virtuelle Adresse (RVA) in einem VTable.  
   
@@ -42,17 +42,17 @@ HRESULT GetTypeProps(
 > [!NOTE]
 > Diese Methode ist nur mit .NET Native verfügbar.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>-Anforderungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   
  **Bibliothek:** CorGuids.lib  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **.NET Framework Versionen:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [GetMethodProps-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider-getmethodprops-method.md)
-- [ICorDebugSymbolProvider-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider-interface.md)
-- [Debuggen von Schnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [GetMethodProps-Methode](icordebugsymbolprovider-getmethodprops-method.md)
+- [ICorDebugSymbolProvider-Schnittstelle](icordebugsymbolprovider-interface.md)
+- [Debuggen von Schnittstellen](debugging-interfaces.md)

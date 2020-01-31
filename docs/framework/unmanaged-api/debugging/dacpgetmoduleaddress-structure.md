@@ -1,5 +1,5 @@
 ---
-title: DacpGetModuleAddress-Struktur
+title: Dacpgetmoduleaddress-Struktur
 ms.date: 01/16/2019
 api.name:
 - DacpGetModuleAddress Structure
@@ -15,16 +15,16 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 145b06f89b45b165b9d6329a4c16ac5739406113
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1e3a62de3259c012438c64ece26e696682ec96e6
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67739181"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76789208"
 ---
-# <a name="dacpgetmoduleaddress-structure"></a>DacpGetModuleAddress-Struktur
+# <a name="dacpgetmoduleaddress-structure"></a>Dacpgetmoduleaddress-Struktur
 
-Definiert den Container für eine Anforderung zum modulimport Adresse an.
+Definiert den Container für eine Modul Adress Anforderung.
 
 [!INCLUDE[debugging-api-recommended-note](../../../../includes/debugging-api-recommended-note.md)]
 
@@ -45,21 +45,21 @@ struct DacpGetModuleAddress
 
 ## <a name="methods"></a>Methoden
 
-| Methode                                                                                               | Beschreibung                                                                    |
+| -Methode                                                                                               | Beschreibung                                                                    |
 | ---------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------ |
-| [Anforderung](../../../../docs/framework/unmanaged-api/debugging/dacpgetmoduleaddress-request-method.md) | Führt eine Anforderung zum Auffüllen der Struktur aus der angegebenen Runtime-Struktur. |
+| [Anforderung](dacpgetmoduleaddress-request-method.md) | Führt eine Anforderung aus, um die-Struktur aus der angegebenen Laufzeitstruktur aufzufüllen. |
 
 ## <a name="remarks"></a>Hinweise
 
-Diese Struktur befindet sich in der Common Language Runtime und nicht über Header oder Bibliotheksdateien verfügbar gemacht. Um es zu verwenden, definieren Sie die Struktur wie oben angegeben, in dem `CLRDATA_ADDRESS` ist eine 64-Bit-Ganzzahl ohne Vorzeichen.
+Diese Struktur befindet sich innerhalb der Laufzeit und wird nicht durch Header oder Bibliotheksdateien verfügbar gemacht. Um es zu verwenden, definieren Sie die Struktur wie oben angegeben, wobei `CLRDATA_ADDRESS` eine 64-Bit-Ganzzahl ohne Vorzeichen ist.
 
-## <a name="requirements"></a>Anforderungen
-**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
-**Header:** Keiner  
-**Bibliothek:** Keiner  
-**.NET Framework-Versionen:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
+## <a name="requirements"></a>-Anforderungen
+**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+**Header:** Gar  
+**Bibliothek:** Gar  
+**.NET Framework Versionen:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Debuggen](../../../../docs/framework/unmanaged-api/debugging/index.md)
-- [Debuggen von Strukturen](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
+- [Debuggen](index.md)
+- [Debuggen von Strukturen](debugging-structures.md)

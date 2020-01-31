@@ -15,12 +15,12 @@ helpviewer_keywords:
 - button set [WPF], grouped
 - bubbling [WPF]
 ms.assetid: 1a2189ae-13b4-45b0-b12c-8de2e49c29d2
-ms.openlocfilehash: ecd340d00e7f02655dfdcd8eee548309d424a5ea
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: f47eccac4e960bd6869da0da139803cd4e433393
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458743"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76794304"
 ---
 # <a name="routed-events-overview"></a>Übersicht über Routingereignisse
 
@@ -28,7 +28,7 @@ Dieses Thema beschreibt das Konzept von Routingereignissen in [!INCLUDE[TLA#tla_
 
 <a name="prerequisites"></a>
 
-## <a name="prerequisites"></a>Erforderliche Voraussetzungen
+## <a name="prerequisites"></a>Erforderliche Komponenten
 
 In diesem Thema wird davon ausgegangen, dass Sie über grundlegende Kenntnisse der Common Language Runtime (CLR) und der objektorientierten Programmierung verfügen. Außerdem wird erläutert, wie die Beziehungen zwischen [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Elementen als Baumstruktur verstanden werden können. Um den Beispielen in diesem Thema zu folgen, sollten Sie zudem [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] verstehen und wissen, wie sehr einfache [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Anwendungen oder -Seiten geschrieben werden. Weitere Informationen finden Sie unter Exemplarische Vorgehensweise [: meine erste WPF-Desktop Anwendung](../getting-started/walkthrough-my-first-wpf-desktop-application.md) und [Übersicht über XAML (WPF)](../../../desktop-wpf/fundamentals/xaml.md).
 
@@ -64,7 +64,7 @@ Im folgenden finden Sie eine kurze Zusammenfassung der Szenarien, die das Routin
 
 **Zusammensetzung und Kapselung von Steuerelementen:** Verschiedene Steuerelemente in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] verfügen über ein umfangreiches Inhaltsmodell. Beispielsweise können Sie ein Bild in einer <xref:System.Windows.Controls.Button>platzieren, wodurch die visuelle Struktur der Schaltfläche effektiv erweitert wird. Das hinzugefügte Image darf jedoch das Treffer Testverhalten nicht unterbrechen, das bewirkt, dass eine Schaltfläche auf eine <xref:System.Windows.Controls.Primitives.ButtonBase.Click> des Inhalts antwortet, auch wenn der Benutzer auf Pixel klickt, die in technischer Hinsicht Teil des Bilds sind.
 
-**Einzelne Anfügepunkte für Handler:** In [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] müssen Sie den gleichen Handler mehrmals zur Verarbeitung der Ereignisse anfügen, die von mehreren Elementen ausgelöst werden können. Routingereignisse ermöglichen es Ihnen, diesen Handler nur einmal anzufügen, wie im vorherigen Beispiel gezeigt wurde, und verwenden Handlerlogik, um ggf. zu bestimmen, woher das Ereignis stammt. Dies kann z.B. der Handler für die zuvor gezeigte [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] sein:
+**Einzelne Handleranfügepunkte:** In Windows Forms müssten Sie denselben Handler mehrmals anfügen, um Ereignisse zu verarbeiten, die aus mehreren Elementen ausgelöst werden könnten. Routingereignisse ermöglichen es Ihnen, diesen Handler nur einmal anzufügen, wie im vorherigen Beispiel gezeigt wurde, und verwenden Handlerlogik, um ggf. zu bestimmen, woher das Ereignis stammt. Dies kann z.B. der Handler für die zuvor gezeigte [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] sein:
 
 [!code-csharp[EventOvwSupport#GroupButtonCodeBehind](~/samples/snippets/csharp/VS_Snippets_Wpf/EventOvwSupport/CSharp/default.xaml.cs#groupbuttoncodebehind)]
 [!code-vb[EventOvwSupport#GroupButtonCodeBehind](~/samples/snippets/visualbasic/VS_Snippets_Wpf/EventOvwSupport/visualbasic/default.xaml.vb#groupbuttoncodebehind)]
@@ -98,7 +98,7 @@ Routingereignisse verwenden eine von drei Routingstrategien:
 
 - **Bubbling:** Ereignishandler werden auf der Ereignisquelle aufgerufen. Das Routingereignis wird dann auf nachfolgenden übergeordnete Elemente weitergeleitet, bis es den Stamm der Elementstruktur erreicht. Die meisten Routingereignisse verwenden die Bubblingroutingstrategie. Bubblingroutingereignisse werden üblicherweise verwendet, um Eingabe- oder Zustandänderungen von unterschiedlichen Steuerelemente oder andere Elementen der Benutzeroberfläche zu melden.
 
-- **Direkt:** Nur das Quellelement selbst kann als Reaktion Handler aufrufen. Dies entspricht dem „Routing“, das [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] für Ereignisse verwendet. Anders als bei einem Standard-CLR-Ereignis unterstützen direkte Routing Ereignisse jedoch die Klassen Behandlung (die Klassen Behandlung wird in einem zukünftigen Abschnitt erläutert) und können von <xref:System.Windows.EventSetter> und <xref:System.Windows.EventTrigger>verwendet werden.
+- **Direkt:** Nur das Quellelement selbst kann als Reaktion Handler aufrufen. Dies entspricht dem Routing, das Windows Forms für Ereignisse verwendet. Anders als bei einem Standard-CLR-Ereignis unterstützen direkte Routing Ereignisse jedoch die Klassen Behandlung (die Klassen Behandlung wird in einem zukünftigen Abschnitt erläutert) und können von <xref:System.Windows.EventSetter> und <xref:System.Windows.EventTrigger>verwendet werden.
 
 - **Tunneling:** Zunächst werden Ereignishandler am Stamm der Elementstruktur aufgerufen. Das Routingereignis bewegt sich dann über eine Route durch die nachfolgenden untergeordneten Elemente in Richtung des Knotenelements, das die Quelle des Routingereignisses ist (das Element, das das Routingereignis ausgelöst). Tunnelingroutingereignisse werden oft als Teil der Zusammensetzung eines Steuerelements verwendet oder behandelt, sodass Elemente der einzelnen Teile von Ereignissen, die für das vollständige Steuerelement spezifisch sind, bewusst unterdrückt oder ersetzt werden können. Eingabeereignisse aus [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] sind oft als Tunneling/Bubbling-Paar implementiert. Tunnelingereignisse werden manchmal auch als Vorschauereignisse bezeichnet; dies liegt an einer Benennungskonvention für Paare.
 
@@ -179,7 +179,7 @@ Zusätzlich zu dem Verhalten, das <xref:System.Windows.RoutedEventArgs.Handled%2
 
   - Führen Sie Code als Reaktion auf das Ereignis aus. Markieren Sie das Ereignis in den an den Handler übergebenen Ereignisdaten als „handled“, weil die ausgeführte Aktion umfangreich genug war, um das Markieren als „handled“ zu rechtfertigen. Das Ereignis leitet weiterhin an den nächsten Listener weiter, aber mit <xref:System.Windows.RoutedEventArgs.Handled%2A>=`true` in seinen Ereignisdaten, sodass nur `handledEventsToo` Listener weitere Handler aufrufen können.
 
-Dieses konzeptionelle Design wird durch das zuvor erwähnte Routing Verhalten verstärkt: Es ist schwieriger (obwohl es im Code oder in Stilen immer noch möglich ist), Handler für Routing Ereignisse anzufügen, die aufgerufen werden, auch wenn ein vorheriger Handler entlang der Route bereits festgelegt wurde <xref:System.Windows.RoutedEventArgs.Handled%2A> zum `true`.
+Dieses konzeptionelle Design wird durch das zuvor erwähnte Routing Verhalten verstärkt: Es ist schwieriger (obwohl es im Code oder in Stilen immer noch möglich ist), Handler für Routing Ereignisse anzufügen, die aufgerufen werden, auch wenn ein vorheriger Handler entlang der Route bereits <xref:System.Windows.RoutedEventArgs.Handled%2A> auf `true`festgelegt hat.
 
 Weitere Informationen zu <xref:System.Windows.RoutedEventArgs.Handled%2A>, Klassen Behandlung von Routing Ereignissen sowie Empfehlungen dazu, wann ein Routing Ereignis als <xref:System.Windows.RoutedEventArgs.Handled%2A>markiert werden kann, finden Sie unter Markieren von Routing [Ereignissen als behandelt und Klassen Behandlung](marking-routed-events-as-handled-and-class-handling.md).
 

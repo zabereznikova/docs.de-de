@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5854bfb2-c568-4f19-904a-7c9d41e7b995
 topic_type:
 - apiref
-ms.openlocfilehash: fe204bbe6154bf3d512a998818cf053d1e96ab3d
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: c7b52954a6be449de0c3633f0ac648980c6d13f6
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74433533"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76865921"
 ---
 # <a name="icorprofilercallbackruntimeresumestarted-method"></a>ICorProfilerCallback::RuntimeResumeStarted-Methode
 Benachrichtigt den Profiler, dass die Laufzeit alle Laufzeitthreads fortsetzt.  
@@ -31,16 +31,16 @@ Benachrichtigt den Profiler, dass die Laufzeit alle Laufzeitthreads fortsetzt.
 HRESULT RuntimeResumeStarted();  
 ```  
   
-## <a name="requirements"></a>Voraussetzungen  
+## <a name="requirements"></a>-Anforderungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  
   
  **Bibliothek:** CorGuids.lib  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [ICorProfilerCallback-Schnittstelle](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
-- [RuntimeResumeFinished-Methode](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimeresumefinished-method.md)
+- [ICorProfilerCallback-Schnittstelle](icorprofilercallback-interface.md)
+- [RuntimeResumeFinished-Methode](icorprofilercallback-runtimeresumefinished-method.md)

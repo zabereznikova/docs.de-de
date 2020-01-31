@@ -21,16 +21,16 @@ helpviewer_keywords:
 - discovering type information at run time
 - type system, reflection
 ms.assetid: d1a58e7f-fb39-4d50-bf84-e3b8f9bf9775
-ms.openlocfilehash: 1768acd65b738af068cf98a8b8340c3179e9b885
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 42944d8267d2e99fd9eb1a2cb28c0c81d3e9af75
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73130052"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744569"
 ---
 # <a name="reflection-in-net"></a>Reflektion in .NET
 
-Die Klassen im <xref:System.Reflection>-Namespace ermöglichen Ihnen zusammen mit <xref:System.Type?displayProperty=nameWithType>, Informationen zu geladenen [Assemblys](../../standard/assembly/index.md) und den hierin definierten Typen wie [Klassen](../../standard/base-types/common-type-system.md#classes), [Schnittstellen](../../standard/base-types/common-type-system.md#interfaces) und [Werttypen](../../csharp/language-reference/keywords/value-types.md) abzurufen. Sie können auch mithilfe von Reflektion Typeninstanzen zur Laufzeit erstellen, diese aufrufen und darauf zugreifen. Themen zu bestimmten Aspekten der Reflektion finden Sie unter [Verwandte Themen](#related_topics) am Ende dieser Übersicht.
+Mit den Klassen im <xref:System.Reflection>-Namespace sowie mit <xref:System.Type?displayProperty=nameWithType>können Sie Informationen [zu geladenen](../../standard/assembly/index.md) Assemblys und den darin definierten Typen abrufen, z. b [. Klassen](../../standard/base-types/common-type-system.md#classes), [Schnittstellen](../../standard/base-types/common-type-system.md#interfaces)und Werttypen (d. h. [Strukturen](../../standard/base-types/common-type-system.md#structures) und [Enumerationen](../../standard/base-types/common-type-system.md#enumerations)). Sie können auch mithilfe von Reflektion Typeninstanzen zur Laufzeit erstellen, diese aufrufen und darauf zugreifen. Themen zu bestimmten Aspekten der Reflektion finden Sie unter [Verwandte Themen](#related_topics) am Ende dieser Übersicht.
   
 Das [Common Language Runtime](../../standard/clr.md)-Ladeprogramm verwaltet [Anwendungsdomänen](../app-domains/application-domains.md), bei denen es sich um definierte Begrenzungen um Objekte im gleichen Anwendungsbereich handelt. Diese Verwaltung umfasst das Laden jeder Assembly in die geeignete Anwendungsdomäne und das Steuern des Speicherlayouts der Typenhierarchie in jeder Assembly.  
   
@@ -71,13 +71,13 @@ Diese Laufzeitklassen sind `internal` (`Friend` in Visual Basic). Sie werden nic
 
 ## <a name="related-topics"></a>Verwandte Themen  
   
-|Titel|Beschreibung|  
+|Title|Beschreibung|  
 |-----------|-----------------|  
 |[Anzeigen von Typinformationen](viewing-type-information.md)|Beschreibt die <xref:System.Type>-Klasse und stellt Codebeispiele bereit, die zeigen, wie <xref:System.Type> mit verschiedenen Reflektionsklassen verwendet wird, um Informationen zu Konstruktoren, Methoden, Feldern, Eigenschaften und Ereignissen abzurufen.|  
 |[Reflektion und generische Typen](reflection-and-generic-types.md)|Erläutert, wie die Reflektion die Typparameter und die Typargumente von generischen Typen und generischen Methoden behandelt.|  
 |[Sicherheitsüberlegungen für die Reflektion](security-considerations-for-reflection.md)|Beschreibt die Regeln, die festlegen, bis zu welchem Grad Reflektion verwendet werden kann, um Typinformationen abzurufen und auf Typen zuzugreifen.|  
 |[Dynamically Loading and Using Types (Dynamisches Laden und Verwenden von Typen)](dynamically-loading-and-using-types.md)|Beschreibt die benutzerdefinierte Bindungsschnittstelle der Reflektion, die spätes Binden unterstützt.|  
-|[Gewusst wie: Laden von Assemblys in den reflexionsbezogenen Kontext](how-to-load-assemblies-into-the-reflection-only-context.md)|Beschreibt den reflektionsbezogenen Ladungskontext. Zeigt, wie eine Assembly geladen wird, wie der Kontext getestet und wie die Attribute überprüft werden, die im reflektionsbezogenen Kontext auf eine Assembly angewendet wurden.|  
+|[Gewusst wie: Laden von Assemblys in den reflektionsbezogenen Kontext](how-to-load-assemblies-into-the-reflection-only-context.md)|Beschreibt den reflektionsbezogenen Ladungskontext. Zeigt, wie eine Assembly geladen wird, wie der Kontext getestet und wie die Attribute überprüft werden, die im reflektionsbezogenen Kontext auf eine Assembly angewendet wurden.|  
 |[Accessing Custom Attributes (Zugreifen auf benutzerdefinierte Attribute)](accessing-custom-attributes.md)|Zeigt, wie mithilfe der Reflektion das Vorhandensein von Attributen und Werten abgefragt werden kann.|  
 |[Specifying Fully Qualified Type Names (Angeben vollqualifizierter Typnamen)](specifying-fully-qualified-type-names.md)|Beschreibt das Format von vollqualifizierten Typnamen mit den Begriffen von BNF (Backus-Naur Form) sowie die Syntax, die erforderlich ist, um Sonderzeichen, Assemblynamen, Zeiger, Verweise und Arrays anzugeben.|  
 |[ How to: Hook Up a Delegate Using Reflection (Vorgehensweise: Verknüpfen mit einem Delegaten mit Reflektion)](how-to-hook-up-a-delegate-using-reflection.md)|Erläutert, wie ein Delegat für eine Methode erstellt und dieser Delegat mit einem Ereignis verknüpft wird. Beschreibt, wie eine Ereignisbehandlungsmethode zur Laufzeit mit <xref:System.Reflection.Emit.DynamicMethod> erstellt wird.|  

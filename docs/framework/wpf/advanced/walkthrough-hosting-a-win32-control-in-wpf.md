@@ -1,5 +1,6 @@
 ---
-title: 'Exemplarische Vorgehensweise: Hosten eines Win32-Steuerelements in WPF'
+title: Hosten eines Win32-Steuer Elements in WPF
+titleSuffix: ''
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,20 +9,20 @@ helpviewer_keywords:
 - hosting Win32 control in WPF [WPF]
 - Win32 code [WPF], WPF interoperation
 ms.assetid: a676b1eb-fc55-4355-93ab-df840c41cea0
-ms.openlocfilehash: 56f096dd7ba4feb677394cd26be9858a33842018
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: eb497a88c119dece85d61d6a32e7b86fb03b44b5
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73040817"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744931"
 ---
-# <a name="walkthrough-hosting-a-win32-control-in-wpf"></a>Exemplarische Vorgehensweise: Hosten eines Win32-Steuerelements in WPF
+# <a name="walkthrough-host-a-win32-control-in-wpf"></a>Exemplarische Vorgehensweise: Hosten eines Win32-Steuer Elements in WPF
 Windows Presentation Foundation (WPF) bietet eine umfangreiche Umgebung zum Erstellen von Anwendungen. Wenn Sie jedoch eine beträchtliche Investition in Win32-Code haben, kann es effektiver sein, zumindest einen Teil dieses Codes in Ihrer WPF-Anwendung wiederzuverwenden, anstatt ihn vollständig neu zu schreiben. WPF bietet einen einfachen Mechanismus zum Hosting eines Win32-Fensters auf einer WPF-Seite.  
   
  Dieses Thema führt Sie durch eine Anwendung, die [ein Win32-ListBox-Steuerelement in WPF hostet](https://github.com/Microsoft/WPF-Samples/tree/master/Migration%20and%20Interoperability/WPFHostingWin32Control), das ein Win32-Listenfeld-Steuerelement hostet. Dieses allgemeine Verfahren kann so erweitert werden, dass ein beliebiges Win32-Fenster gehostet wird.  
 
 <a name="requirements"></a>   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>-Anforderungen  
  In diesem Thema wird eine grundlegende Vertrautheit mit der WPF-und Windows-API-Programmierung vorausgesetzt. Eine grundlegende Einführung in die WPF-Programmierung finden Sie unter [Getting Started](../getting-started/index.md). Eine Einführung in die Windows-API-Programmierung finden Sie in den zahlreichen Büchern zu diesem Thema, insbesondere in den *Programmier Fenstern* von Charles Petzold.  
   
  Da das Beispiel für dieses Thema in C#implementiert ist, nutzt es Platform invoations Services (PInvoke) für den Zugriff auf die Windows-API. Eine Vertrautheit mit PInvoke ist hilfreich, aber nicht unbedingt erforderlich.  
@@ -45,7 +46,7 @@ Windows Presentation Foundation (WPF) bietet eine umfangreiche Umgebung zum Erst
   
 5. Sobald Sie das Hostfenster erstellt haben, geben Sie das HWND des gehosteten Fensters zurück. Wenn Sie ein oder mehrere Win32-Steuerelemente hosten möchten, erstellen Sie in der Regel ein Host Fenster als untergeordnetes Element des HWND, und legen Sie die Steuerelemente in diesem Host Fenster als untergeordnete Elemente fest. Das umwickeln der Steuerelemente in einem Host Fenster bietet eine einfache Möglichkeit für Ihre WPF-Seite, Benachrichtigungen von den Steuerelementen zu empfangen, die bestimmte Win32-Probleme mit Benachrichtigungen über die HWND-Grenze behandeln.  
   
-6. Behandeln Sie spezifische an das Hostfenster gesendete Nachrichten, z.B. Benachrichtigungen von untergeordneten Steuerelementen. Hierfür gibt es zwei Möglichkeiten.  
+6. Behandeln Sie spezifische an das Hostfenster gesendete Nachrichten, z.B. Benachrichtigungen von untergeordneten Steuerelementen. Es gibt dafür zwei Möglichkeiten:  
   
     - Wenn Sie die Verarbeitung von Nachrichten in ihrer Hostingklasse bevorzugen, überschreiben Sie die <xref:System.Windows.Interop.HwndHost.WndProc%2A>-Methode der <xref:System.Windows.Interop.HwndHost>-Klasse.  
   
@@ -61,7 +62,7 @@ Windows Presentation Foundation (WPF) bietet eine umfangreiche Umgebung zum Erst
 ## <a name="implement-the-page-layout"></a>Implementieren des Seitenlayouts  
  Das Layout für die WPF-Seite, die das ListBox-Steuerelement hostet, besteht aus zwei Bereichen. Die linke Seite der Seite hostet mehrere WPF-Steuerelemente, die eine [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] bereitstellen, mit der Sie das Win32-Steuerelement bearbeiten können. In der oberen rechten Ecke der Seite befindet sich ein quadratischer Bereich für das gehostete ListBox-Steuerelement.  
   
- Der Code zum Implementieren dieses Layouts ist ziemlich einfach. Das Stamm Element ist eine <xref:System.Windows.Controls.DockPanel>, die über zwei untergeordnete Elemente verfügt. Der erste ist ein <xref:System.Windows.Controls.Border> Element, das das ListBox-Steuerelement hostet. Es belegt einen 200x200 großen quadratischen Bereich in der oberen rechten Ecke der Seite. Die zweite ist ein <xref:System.Windows.Controls.StackPanel> Element, das eine Reihe von WPF-Steuerelementen enthält, die Informationen anzeigen und Ihnen ermöglichen, das ListBox-Steuerelement zu bearbeiten, indem Sie die verfügbar gemachten Interoperation-Eigenschaften festlegen Informationen zu den Elementen, die untergeordnete Elemente des-<xref:System.Windows.Controls.StackPanel>sind, finden Sie im Referenzmaterial für die verschiedenen Elemente, die Sie verwenden, um zu erfahren, was diese Elemente sind oder was Sie tun. Diese werden im folgenden Beispielcode aufgeführt, werden hier aber nicht erläutert. Das Interoperation-Modell erfordert keines dieser Elemente, Sie werden bereitgestellt, um dem Beispiel Interaktivität hinzuzufügen.  
+ Der Code zum Implementieren dieses Layouts ist ziemlich einfach. Das Stamm Element ist eine <xref:System.Windows.Controls.DockPanel>, die über zwei untergeordnete Elemente verfügt. Der erste ist ein <xref:System.Windows.Controls.Border> Element, das das ListBox-Steuerelement hostet. Es belegt einen 200x200 großen quadratischen Bereich in der oberen rechten Ecke der Seite. Die zweite ist ein <xref:System.Windows.Controls.StackPanel> Element, das eine Reihe von WPF-Steuerelementen enthält, die Informationen anzeigen und Ihnen ermöglichen, das ListBox-Steuerelement zu bearbeiten, indem Sie die verfügbar gemachten Interoperation-Eigenschaften festlegen Informationen zu den Elementen, die untergeordnete Elemente des-<xref:System.Windows.Controls.StackPanel>sind, finden Sie im Referenzmaterial für die verschiedenen Elemente, die für ausführliche Informationen zu den Elementen verwendet werden, oder was Sie tun. Diese werden im folgenden Beispielcode aufgeführt, werden hier aber nicht erläutert (das grundlegende Interoperation-Modell erfordert keines dieser Elemente, Sie werden bereitgestellt, um dem Beispiel Interaktivität hinzuzufügen).  
   
  [!code-xaml[WPFHostingWin32Control#WPFUI](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFHostingWin32Control/CSharp/Page1.xaml#wpfui)]  
   

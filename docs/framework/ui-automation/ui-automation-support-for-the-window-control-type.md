@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Window control type
 - control types, Window
 ms.assetid: 53be78a6-cdcc-4af3-a464-5927d19c54e8
-ms.openlocfilehash: 6e8d854cf38f1ad5db29520e1bd4e9039497856f
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: a80002cbaee2f2135809701c6db99f7ceea6766a
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75741400"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76793939"
 ---
 # <a name="ui-automation-support-for-the-window-control-type"></a>Benutzeroberflächenautomatisierungs-Unterstützung für den Fenster-Steuerelementtyp
 > [!NOTE]
@@ -21,7 +21,7 @@ ms.locfileid: "75741400"
   
  Das Window-Steuerelement besteht aus dem Fensterrahmen, der untergeordnete Objekte wie Titelleiste, Client sowie andere Objekte enthält.  
   
- Die [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Anforderungen in den folgenden Abschnitten gelten für alle Steuerelemente, die den Fenster Steuerelement-Typ implementieren, egal ob [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], Win32 oder [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)].  
+ Die [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Anforderungen in den folgenden Abschnitten gelten für alle Steuerelemente, die den Fenster Steuerelement-Typ implementieren, egal ob [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], Win32 oder Windows Forms.  
   
 ## <a name="required-ui-automation-tree-structure"></a>Erforderliche Benutzeroberflächenautomatisierungs-Struktur  
  In der folgenden Tabelle werden die Steuerelementansicht und die Inhaltsansicht der [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Struktur für Window-Steuerelemente sowie die möglichen Inhalte der Ansichten beschrieben. Weitere Informationen zur [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Struktur finden Sie unter [UI Automation Tree Overview](ui-automation-tree-overview.md).  

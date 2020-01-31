@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f1a23f3b-ac21-4905-8abf-8ea59f15af53
 topic_type:
 - apiref
-ms.openlocfilehash: 4ecbe0ef3c3021c5633b9380da2eb31cf22aa4b1
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
-ms.translationtype: MT
+ms.openlocfilehash: 332f88388ac72c11d273fc4d62d6684adae35b86
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74445330"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76790113"
 ---
 # <a name="icorprofilercallbackexceptionthrown-method"></a>ICorProfilerCallback::ExceptionThrown-Methode
 Benachrichtigt den Profiler, dass eine Ausnahme ausgelöst wurde.  
@@ -35,23 +35,25 @@ HRESULT ExceptionThrown(
     [in] ObjectID thrownObjectId);  
 ```  
   
-## <a name="parameters"></a>Parameter  
- `thrownObjectId`  
- in Die ID des Objekts, das bewirkt hat, dass die Ausnahme ausgelöst wurde.  
+## <a name="parameters"></a>Parameters
+
+- `thrownObjectId`
+
+  \[in] die ID des Objekts, das bewirkt hat, dass die Ausnahme ausgelöst wurde.
   
 ## <a name="remarks"></a>Hinweise  
  Der Profiler sollte in seiner Implementierung dieser Methode nicht blockieren, da sich der Stapel möglicherweise nicht in einem Zustand befindet, der Garbage Collection zulässt, und daher können präemptiv Garbage Collection nicht aktiviert werden. Wenn der Profiler hier blockiert wird und Garbage Collection versucht wird, wird die Laufzeit blockiert, bis dieser Rückruf zurückgegeben wird.  
   
  Die Implementierung dieser Methode des Profilers sollte nicht in verwalteten Code oder auf irgendeine Weise eine verwaltete Speicher Belegung verursachen.  
   
-## <a name="requirements"></a>Voraussetzungen  
+## <a name="requirements"></a>-Anforderungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  
   
  **Bibliothek:** CorGuids.lib  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
 

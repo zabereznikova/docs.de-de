@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b420433c-5ebe-4986-bba1-97902e6db819
 topic_type:
 - apiref
-ms.openlocfilehash: 5b58b7131d015353c2276b6f422e93e5d6a09109
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 0c833416cca965f2655266152c5bdf5f11624d14
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74428156"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76861137"
 ---
 # <a name="icorprofilerobjectenumnext-method"></a>ICorProfilerObjectEnum::Next-Methode
 Ruft die angegebene Anzahl von zusammenhängenden Objekten aus einer sequenziellen Auflistung von-Objekten ab, beginnend bei der aktuellen Position des Enumerators in der Sequenz.  
@@ -36,7 +36,7 @@ HRESULT Next (
 );  
 ```  
   
-## <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameters  
  `celt`  
  [in] Die Anzahl der abzurufenden Objekte.  
   
@@ -46,15 +46,15 @@ HRESULT Next (
  `pceltFetched`  
  [out] Ein Zeiger auf die Anzahl von Elementen, die tatsächlich im `objects`-Array zurückgegeben werden.  
   
-## <a name="requirements"></a>Voraussetzungen  
+## <a name="requirements"></a>-Anforderungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  
   
  **Bibliothek:** CorGuids.lib  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [ICorProfilerObjectEnum-Schnittstelle](../../../../docs/framework/unmanaged-api/profiling/icorprofilerobjectenum-interface.md)
+- [ICorProfilerObjectEnum-Schnittstelle](icorprofilerobjectenum-interface.md)

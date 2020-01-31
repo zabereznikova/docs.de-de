@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b25c88f0-71b9-443b-8eea-1c94db0a44b9
 topic_type:
 - apiref
-ms.openlocfilehash: 5b6c0159b432d2a70f583357bbcf714b27399633
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: e0663ff122397ba639a0a219e513be2f3f0cbbef
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74447174"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76862762"
 ---
 # <a name="icorprofilerinfo2getclassfromtokenandtypeargs-method"></a>ICorProfilerInfo2::GetClassFromTokenAndTypeArgs-Methode
 Ruft den `ClassID` eines Typs unter Verwendung des angegebenen Metadatentokens und der `ClassID` Werte beliebiger Typargumente ab.  
@@ -36,7 +36,7 @@ HRESULT GetClassFromTokenAndTypeArgs(
     [out] ClassID* pClassID);  
 ```  
   
-## <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameters  
  `moduleID`  
  in Die ID des Moduls, in dem sich der Typ befindet.  
   
@@ -57,18 +57,18 @@ HRESULT GetClassFromTokenAndTypeArgs(
   
  Wenn der Typ nicht bereits geladen ist, wird beim Aufrufen von `GetClassFromTokenAndTypeArgs` das Laden auslöst, was in vielen Kontexten eine gefährliche Operation ist. Wenn Sie diese Methode z. b. beim Laden von Modulen oder anderen Typen aufrufen, kann dies zu einer Endlosschleife führen, da die Laufzeit versucht, Vorgänge zirkulär zu laden.  
   
- Im Allgemeinen wird die Verwendung von `GetClassFromTokenAndTypeArgs` davon abgeraten. Wenn Profiler an Ereignissen für einen bestimmten Typ interessiert sind, sollten Sie die `ModuleID` und `mdTypeDef` dieses Typs speichern und [ICorProfilerInfo2:: GetClassIDInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getclassidinfo2-method.md) verwenden, um zu überprüfen, ob ein bestimmtes `ClassID` der gewünschte Typ ist.  
+ Im Allgemeinen wird die Verwendung von `GetClassFromTokenAndTypeArgs` davon abgeraten. Wenn Profiler an Ereignissen für einen bestimmten Typ interessiert sind, sollten Sie die `ModuleID` und `mdTypeDef` dieses Typs speichern und [ICorProfilerInfo2:: GetClassIDInfo2](icorprofilerinfo2-getclassidinfo2-method.md) verwenden, um zu überprüfen, ob ein bestimmtes `ClassID` der gewünschte Typ ist.  
   
-## <a name="requirements"></a>Voraussetzungen  
+## <a name="requirements"></a>-Anforderungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  
   
  **Bibliothek:** CorGuids.lib  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [ICorProfilerInfo-Schnittstelle](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
-- [ICorProfilerInfo2-Schnittstelle](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)
+- [ICorProfilerInfo-Schnittstelle](icorprofilerinfo-interface.md)
+- [ICorProfilerInfo2-Schnittstelle](icorprofilerinfo2-interface.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 55e57640-b3d2-413d-b4f4-fbc27fb8e37c
 topic_type:
 - apiref
-ms.openlocfilehash: 87316b20c5835d9b887355a1f9374fa5f2156e5c
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 20cea94961a250c3981d892910da1dcee20a060b
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73122172"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76783742"
 ---
 # <a name="icordebugdatatargetreadvirtual-method"></a>ICorDebugDataTarget::ReadVirtual-Methode
 Ruft einen Block von zusammenhängenden Arbeitsspeicher ab, der bei der angegebenen Adresse beginnt, und gibt ihn im angegebenen Puffer zurück.  
@@ -36,7 +36,7 @@ HRESULT ReadVirtual(
     [out] ULONG32 *  pBytesRead);  
 ```  
   
-## <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameters  
  `address`  
  in Die Startadresse des angeforderten Speichers.  
   
@@ -52,17 +52,17 @@ HRESULT ReadVirtual(
 ## <a name="remarks"></a>Hinweise  
  Wenn das erste Byte (an der angegebenen Startadresse) gelesen werden kann, sollte der-Befehl einen Erfolg zurückgeben (um das effiziente Lesen von Datenstrukturen mit selbst beschreibender Länge zu unterstützen, wie z. b. auf NULL endende Zeichen folgen).  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>-Anforderungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   
  **Bibliothek:** CorGuids.lib  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework Versionen:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [ICorDebugDataTarget-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-interface.md)
-- [Debuggen von Schnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [Debuggen](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [ICorDebugDataTarget-Schnittstelle](icordebugdatatarget-interface.md)
+- [Debuggen von Schnittstellen](debugging-interfaces.md)
+- [Debuggen](index.md)

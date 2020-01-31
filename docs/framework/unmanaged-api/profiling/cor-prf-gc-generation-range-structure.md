@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: e7e07273-8d10-4a68-807e-59634e3f8c5e
 topic_type:
 - apiref
-ms.openlocfilehash: 0bdb8cd02e0beb69e3ec594b0aadd741a5f0d924
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 682aac9729519e0861ae6e6f60df78a30063c278
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74428334"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76867207"
 ---
 # <a name="cor_prf_gc_generation_range-structure"></a>COR_PRF_GC_GENERATION_RANGE-Struktur
 Beschreibt einen Bereich (d. h. einen Block) des Speichers, der einer Garbage Collection unterzogen wird.  
@@ -39,23 +39,23 @@ typedef struct COR_PRF_GC_GENERATION_RANGE {
   
 |Member|Beschreibung|  
 |------------|-----------------|  
-|`generation`|Ein Wert der [COR_PRF_GC_GENERATION](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-generation-enumeration.md) -Enumeration, die die Generierung angibt, zu der der Speicherblock gehört.|  
+|`generation`|Ein Wert der [COR_PRF_GC_GENERATION](cor-prf-gc-generation-enumeration.md) -Enumeration, die die Generierung angibt, zu der der Speicherblock gehört.|  
 |`rangeStart`|Die ID eines Objekts, das die Startposition des Speicherblocks angibt.|  
 |`rangeLength`|Ein Zeiger auf eine ganze Zahl, die die Größe des verwendeten Teils des Speicherblocks angibt (d. h. die Menge an Arbeitsspeicher, die im Block verwendet wird).|  
 |`rangeLengthReserved`|Ein Zeiger auf eine ganze Zahl, die die Größe des Speicherblocks angibt (d. h. die Menge an Arbeitsspeicher, die für den Block reserviert ist).|  
   
 ## <a name="remarks"></a>Hinweise  
- Der `rangeLength` Wert ist garantiert nur dann genau, wenn [ICorProfilerInfo2:: GetGenerationBounds](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getgenerationbounds-method.md) oder [ICorProfilerInfo2:: getobjectgene Ration](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getobjectgeneration-method.md), die beide die `COR_PRF_GC_GENERATION_RANGE` Struktur verwenden, von der [ICorProfilerCallback2:: GarbageCollectionStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionstarted-method.md) -Methode oder der [ICorProfilerCallback2:: GarbageCollectionStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md) -Methode aufgerufen wird.  
+ Der `rangeLength` Wert ist garantiert nur dann genau, wenn [ICorProfilerInfo2:: GetGenerationBounds](icorprofilerinfo2-getgenerationbounds-method.md) oder [ICorProfilerInfo2:: getobjectgene Ration](icorprofilerinfo2-getobjectgeneration-method.md), die beide die `COR_PRF_GC_GENERATION_RANGE` Struktur verwenden, von der [ICorProfilerCallback2:: GarbageCollectionStarted](icorprofilercallback2-garbagecollectionstarted-method.md) -Methode oder der [ICorProfilerCallback2:: GarbageCollectionStarted](icorprofilercallback2-garbagecollectionfinished-method.md) -Methode aufgerufen wird.  
   
-## <a name="requirements"></a>Voraussetzungen  
+## <a name="requirements"></a>-Anforderungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** Corprof. idl  
   
  **Bibliothek:** CorGuids.lib  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Profilerstellungsstrukturen](../../../../docs/framework/unmanaged-api/profiling/profiling-structures.md)
+- [Profilerstellungsstrukturen](profiling-structures.md)

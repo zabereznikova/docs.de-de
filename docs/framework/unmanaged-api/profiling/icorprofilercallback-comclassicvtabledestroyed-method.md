@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 29da20ca-bf39-4356-8099-d9c3ac3423a9
 topic_type:
 - apiref
-ms.openlocfilehash: 0b0683d43778c4733b476e9feef459207b9d1ee6
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
-ms.translationtype: MT
+ms.openlocfilehash: e82133f3b05740dff0e88db3bace0441a1e72bf6
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74445026"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76790160"
 ---
 # <a name="icorprofilercallbackcomclassicvtabledestroyed-method"></a>ICorProfilerCallback::COMClassicVTableDestroyed-Methode
 Benachrichtigt den Profiler, dass eine COM-Interop-Vtable zerstört wird.  
@@ -37,29 +37,33 @@ HRESULT COMClassicVTableDestroyed(
     [in] void    *pVTable);  
 ```  
   
-## <a name="parameters"></a>Parameter  
- `wrappedClassId`  
- in Die ID der Klasse, für die diese Vtable erstellt wurde.  
-  
- `implementedIID`  
- in Die ID der Schnittstelle, die von der-Klasse implementiert wird. Dieser Wert kann NULL sein, wenn die Schnittstelle nur intern ist.  
-  
- `pVTable`  
- in Ein Zeiger auf den Anfang der vtable.  
-  
+## <a name="parameters"></a>Parameters
+
+- `wrappedClassId`
+
+  \[in] die ID der Klasse, für die diese Vtable erstellt wurde.
+
+- `implementedIID`
+
+  \[in] die ID der Schnittstelle, die von der-Klasse implementiert wird. Dieser Wert kann NULL sein, wenn die Schnittstelle nur intern ist.
+
+- `pVTable`
+
+  \[in] ein Zeiger auf den Anfang der vtable.
+
 ## <a name="remarks"></a>Hinweise  
  Der Profiler sollte in seiner Implementierung dieser Methode nicht blockieren, da sich der Stapel möglicherweise nicht in einem Zustand befindet, der Garbage Collection zulässt, und daher können präemptiv Garbage Collection nicht aktiviert werden. Wenn der Profiler hier blockiert wird und Garbage Collection versucht wird, wird die Laufzeit blockiert, bis dieser Rückruf zurückgegeben wird.  
   
  Die Implementierung dieser Methode des Profilers sollte nicht in verwalteten Code oder auf irgendeine Weise eine verwaltete Speicher Belegung verursachen.  
   
-## <a name="requirements"></a>Voraussetzungen  
+## <a name="requirements"></a>-Anforderungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  
   
  **Bibliothek:** CorGuids.lib  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
 

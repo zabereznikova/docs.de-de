@@ -9,12 +9,12 @@ helpviewer_keywords:
 - ActiveX controls [WPF interoperability]
 - hosting ActiveX controls [WPF]
 ms.assetid: 1931d292-0dd1-434f-963c-dcda7638d75a
-ms.openlocfilehash: f2d9345eaaba7b85a217e6b230ae202f27ad3af8
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
-ms.translationtype: HT
+ms.openlocfilehash: 4ca40c0f6e62fd413e7f305649c5c01ddc152b2a
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76742621"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76794146"
 ---
 # <a name="walkthrough-hosting-an-activex-control-in-wpf"></a>Exemplarische Vorgehensweise: Hosten eines ActiveX-Steuerelements in WPF
 Um eine verbesserte Interaktion mit Browsern zu ermöglichen, können Sie Microsoft-ActiveX-Steuerelemente in ihrer [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]basierten Anwendung verwenden. In dieser exemplarischen Vorgehensweise wird veranschaulicht, wie Sie die Microsoft Windows-Media Player als Steuerelement auf einer [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Seite hosten können.
@@ -83,7 +83,7 @@ Visual Studio generiert automatisch eine <xref:System.Windows.Forms.AxHost> Wrap
 
 2. Fügen Sie einen Verweis auf die WindowsFormsIntegration-Assembly mit dem Namen "WindowsFormsIntegration. dll" hinzu.
 
-3. Fügen Sie einen Verweis auf die [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] Assembly mit dem Namen "System. Windows. Forms. dll" hinzu.
+3. Fügen Sie einen Verweis auf die Windows Forms Assembly mit dem Namen "System. Windows. Forms. dll" hinzu.
 
 4. Öffnen Sie die Datei "MainWindow. XAML" im WPF-Designer.
 

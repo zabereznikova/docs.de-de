@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: bf4ffa50-4506-4dd4-aa13-a0457b47ca74
 topic_type:
 - apiref
-ms.openlocfilehash: ad34592223433f0bf541c390674bcf96839b6ca8
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
-ms.translationtype: MT
+ms.openlocfilehash: 38ed7de647aabefc95f515d9aa627b0e9c8d9015
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74440818"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76790258"
 ---
 # <a name="functionenter-function"></a>FunctionEnter-Funktion
 Benachrichtigt den Profiler, dass das Steuerelement an eine Funktion übermittelt wird.  
@@ -35,10 +35,12 @@ void __stdcall FunctionEnter (
 );  
 ```  
   
-## <a name="parameters"></a>Parameter  
- `funcID`  
- in Der Bezeichner der Funktion, an die das Steuerelement übermittelt wird.  
-  
+## <a name="parameters"></a>Parameters
+
+- `funcID`
+
+  \[in] der Bezeichner der Funktion, an die das Steuerelement übermittelt wird.
+
 ## <a name="remarks"></a>Hinweise  
  Die `FunctionEnter` Funktion ist ein Rückruf. Sie müssen ihn implementieren. Die-Implementierung muss das `__declspec`(`naked`)-Speicher Klassen Attribut verwenden.  
   
@@ -52,7 +54,7 @@ void __stdcall FunctionEnter (
   
  Außerdem darf die `FunctionEnter` Funktion keinen verwalteten Code aufruft oder eine verwaltete Speicher Belegung verursachen.  
   
-## <a name="requirements"></a>Voraussetzungen  
+## <a name="requirements"></a>-Anforderungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** Corprof. idl  

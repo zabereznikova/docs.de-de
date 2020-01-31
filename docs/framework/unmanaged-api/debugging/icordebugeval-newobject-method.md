@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: ce3025e8-defa-4c5e-8298-f49d71fa5736
 topic_type:
 - apiref
-ms.openlocfilehash: 68a7e911c2bd1798ea8f34f6a6e24299fe68775d
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 38cc98f1bfd966d1f764e43b30003a2bae66297d
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73137623"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76793473"
 ---
 # <a name="icordebugevalnewobject-method"></a>ICorDebugEval::NewObject-Methode
 Ordnet eine neue Objektinstanz zu und ruft die angegebene Konstruktormethode auf.  
   
- Diese Methode ist in der .NET Framework Version 2,0 veraltet. Verwenden Sie stattdessen [ICorDebugEval2:: NewParameterizedObject](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-newparameterizedobject-method.md) .  
+ Diese Methode ist in der .NET Framework Version 2,0 veraltet. Verwenden Sie stattdessen [ICorDebugEval2:: NewParameterizedObject](icordebugeval2-newparameterizedobject-method.md) .  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -37,7 +37,7 @@ HRESULT NewObject (
 );  
 ```  
   
-## <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameters  
  `pConstructor`  
  in Der aufzurufende Konstruktor.  
   
@@ -47,7 +47,7 @@ HRESULT NewObject (
  `ppArgs`  
  in Ein Array von ICorDebugValue-Objekten, von denen jedes ein Argument darstellt, das an den Konstruktor übergeben werden soll.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>-Anforderungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
@@ -58,4 +58,4 @@ HRESULT NewObject (
   
 ## <a name="see-also"></a>Siehe auch
 
-- [NewParameterizedObject-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-newparameterizedobject-method.md)
+- [NewParameterizedObject-Methode](icordebugeval2-newparameterizedobject-method.md)

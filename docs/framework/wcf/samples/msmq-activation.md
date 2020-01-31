@@ -2,12 +2,12 @@
 title: MSMQ-Aktivierung
 ms.date: 03/30/2017
 ms.assetid: e3834149-7b8c-4a54-806b-b4296720f31d
-ms.openlocfilehash: 2afcfbee69f8257e4ed0b1c352ef29e4af9ddb84
-ms.sourcegitcommit: 8c99457955fc31785b36b3330c4ab6ce7984a7ba
+ms.openlocfilehash: 805ab78908b4d1146cce94cac5357bafbb35c832
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/29/2019
-ms.locfileid: "75544715"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744790"
 ---
 # <a name="msmq-activation"></a>MSMQ-Aktivierung
 
@@ -269,7 +269,7 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
 
         Dieser Befehl ermöglicht den Zugriff auf die Anwendung/ServiceModelSamples-Anwendung mithilfe von `http://localhost/servicemodelsamples` und `net.msmq://localhost/servicemodelsamples`.
 
-7. Falls noch nicht geschehen, stellen Sie sicher, dass der MSMQ-Aktivierungsdienst aktiviert ist. Klicken Sie im **Startmenü** auf **Ausführen**, und geben Sie `Services.msc`ein. Durchsuchen Sie die Liste der Dienste für den **net. MSMQ-Listeneradapter**. Klicken Sie mit der rechten Maustaste, und wählen Sie **Eigenschaften**aus. Legen Sie den **Starttyp** auf **automatisch**fest, klicken Sie auf übernehmen und **dann** auf **Start** . Dieser Schritt muss nur einmal vor der ersten Verwendung des Net.Msmq-Listeneradapterdiensts durchgeführt werden.
+7. Falls noch nicht geschehen, stellen Sie sicher, dass der MSMQ-Aktivierungsdienst aktiviert ist. Klicken Sie im **Startmenü** auf **Ausführen**, und geben Sie `Services.msc`ein. Durchsuchen Sie die Liste der Dienste für den **net. MSMQ-Listeneradapter**. Klicken Sie mit der rechten Maustaste, und wählen Sie **Eigenschaften**. Legen Sie den **Starttyp** auf **automatisch**fest, klicken Sie auf übernehmen und **dann** auf **Start** . Dieser Schritt muss nur einmal vor der ersten Verwendung des Net.Msmq-Listeneradapterdiensts durchgeführt werden.
 
 8. Um das Beispiel in einer Konfiguration mit einem Computer oder Computer übergreifend auszuführen, befolgen Sie die Anweisungen unter [Ausführen der Windows Communication Foundation Beispiele](../../../../docs/framework/wcf/samples/running-the-samples.md). Ändern Sie zusätzlich den Code auf dem Client, der die Bestellung einsendet, sodass beim Einsenden der Bestellung der Computername im URI der Warteschlange angegeben wird. Verwenden Sie folgenden Code:
 
@@ -349,4 +349,4 @@ Standardmäßig wird mit der `netMsmqBinding`-Bindung die Transportsicherheit ak
 
 ## <a name="see-also"></a>Siehe auch
 
-- [AppFabric-Hosting-und persistenzbeispiele](https://go.microsoft.com/fwlink/?LinkId=193961)
+- [AppFabric-Hosting-und persistenzbeispiele](https://docs.microsoft.com/previous-versions/appfabric/ff383418(v=azure.10))

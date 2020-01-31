@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Anpassen von Zellen und Spalten im DataGridView-Steuerelement in Windows Forms durch Erweitern des Aussehens und Verhaltens'
+title: Anpassen von Zellen und Spalten im DataGridView-Steuerelement durch Erweiterung ihres Verhaltens und ihrer Darstellung
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,15 +9,15 @@ helpviewer_keywords:
 - columns [Windows Forms], customizing in DataGridView control
 - cells [Windows Forms], customizing in DataGridView control
 ms.assetid: 9b7dc7b6-5ce6-4566-9949-902f74f17a81
-ms.openlocfilehash: 0976a0e07aead1bbaf951c6db8266c5de1a31cd8
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: be01e085d4fa74c0c49f0a0494183482875c6a09
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69929702"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744061"
 ---
-# <a name="how-to-customize-cells-and-columns-in-the-windows-forms-datagridview-control-by-extending-their-behavior-and-appearance"></a>Vorgehensweise: Anpassen von Zellen und Spalten im DataGridView-Steuerelement in Windows Forms durch Erweitern des Aussehens und Verhaltens
-Das <xref:System.Windows.Forms.DataGridView>-Steuerelement bietet eine Reihe von Möglichkeiten, sein Aussehen und Verhalten mithilfe von Eigenschaften, Ereignissen und Assistentenklassen anzupassen. Gelegentlich haben Sie möglicherweise Anforderungen an die Zellen, die über die Möglichkeiten hinausgehen, die diese Features bieten können. Sie können Ihre eigene benutzerdefinierte <xref:System.Windows.Forms.DataGridViewCell>-Klasse erstellen, um erweiterte Funktionalität bereitzustellen.  
+# <a name="how-to-customize-cells-and-columns-in-the-windows-forms-datagridview-control-by-extending-their-behavior-and-appearance"></a>Gewusst wie: Anpassen von Zellen und Spalten im DataGridView-Steuerelement in Windows Forms durch Erweitern des Aussehens und Verhaltens
+Das <xref:System.Windows.Forms.DataGridView>-Steuerelement bietet eine Reihe von Möglichkeiten, sein Aussehen und Verhalten mithilfe von Eigenschaften, Ereignissen und Assistentenklassen anzupassen. Gelegentlich haben Sie möglicherweise Anforderungen an die Zellen, die über die Möglichkeiten hinausgehen, die diese Funktionen bieten können. Sie können Ihre eigene benutzerdefinierte <xref:System.Windows.Forms.DataGridViewCell>-Klasse erstellen, um erweiterte Funktionalität bereitzustellen.  
   
  Sie erstellen eine benutzerdefinierte <xref:System.Windows.Forms.DataGridViewCell>-Klasse, indem Sie von der <xref:System.Windows.Forms.DataGridViewCell>-Basisklasse oder einer ihrer abgeleiteten Klassen ableiten. Auch wenn Sie in jedem Spaltentyp jeden Zellentyp anzeigen können, erstellen Sie in der Regel außerdem eine benutzerdefinierte <xref:System.Windows.Forms.DataGridViewColumn>-Klasse speziell zum Anzeigen des Zellentyps. Spaltenklassen werden von <xref:System.Windows.Forms.DataGridViewColumn> oder einem davon abgeleiteten Typ abgeleitet.  
   
