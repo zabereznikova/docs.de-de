@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 48d410d7-6749-4125-a8fd-f9562c7088e9
 topic_type:
 - apiref
-ms.openlocfilehash: fa829d0a08846287835d2ac66a461b4b9b27a09a
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 35ea69d32ee9b994cc0bf91339c798edcd472f44
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73090246"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76788425"
 ---
 # <a name="icordebugmanagedcallbackcreateappdomain-method"></a>ICorDebugManagedCallback::CreateAppDomain-Methode
 Benachrichtigt den Debugger, dass eine Anwendungsdomäne erstellt wurde.  
@@ -34,22 +34,22 @@ HRESULT CreateAppDomain (
 );  
 ```  
   
-## <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameters  
  `pProcess`  
  in Ein Zeiger auf ein ICorDebugProcess-Objekt, das den Prozess darstellt, in dem die Anwendungsdomäne erstellt wurde.  
   
  `pAppDomain`  
  in Ein Zeiger auf ein ICorDebugAppDomain-Objekt, das die erstellte Anwendungsdomäne darstellt.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>-Anforderungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   
  **Bibliothek:** CorGuids.lib  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [ICorDebugManagedCallback-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+- [ICorDebugManagedCallback-Schnittstelle](icordebugmanagedcallback-interface.md)

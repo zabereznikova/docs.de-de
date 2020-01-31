@@ -6,12 +6,12 @@ helpviewer_keywords:
 - testing, UI Automation
 - UI Automation, automated testing
 ms.assetid: 3a0435c0-a791-4ad7-ba92-a4c1d1231fde
-ms.openlocfilehash: 59c4076712823faa1602448653680a31b8cd8c69
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 5668e14cd0aed33a29fd43661363131879419e61
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75741072"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76793926"
 ---
 # <a name="using-ui-automation-for-automated-testing"></a>Verwenden von Benutzeroberflächenautomatisierung für automatisierte Tests
 > [!NOTE]
@@ -37,7 +37,7 @@ ms.locfileid: "75741072"
 > Bei anderen Barrierefreiheitsmodellen müssen Entwickler Informationen direkt von einzelnen Schaltflächen, Menüs oder anderen Steuerelementen erfassen. Leider weist jeder Steuerelementtyp viele Varianten mit kleinen Unterschieden auf. Anders ausgedrückt müssen zehn Varianten eines PushButtons, obwohl sie möglicherweise genau gleich funktionieren und den gleichen Zweck erfüllen, alle als eigene Steuerelemente behandelt werden. Es gibt keine Möglichkeit festzustellen, dass diese Steuerelemente über identische Funktionsweisen verfügen. Steuerelementmuster wurden entwickelt, um diese allgemeinen Steuerelementverhaltensweisen darzustellen. Weitere Informationen finden Sie unter [UI Automation Control Patterns Overview](ui-automation-control-patterns-overview.md).  
   
 ### <a name="implementing-ui-automation"></a>Implementieren von Benutzeroberflächenautomatisierung  
- Wie bereits erwähnt benötigen Testtools und Entwickler ohne das vereinheitlichte, von [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]zur Verfügung gestellte Modell Framework-spezifische Informationen, um Eigenschaften und Verhalten von Steuerelementen in diesem Framework verfügbar zu machen. Da in Windows-Betriebssystemen verschiedene Benutzeroberflächen-Frameworks vorhanden sein können, einschließlich Win32, [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]und Windows Presentation Foundation (WPF), kann es eine schwierige Aufgabe sein, mehrere Anwendungen mit ähnlichen Steuerelementen zu testen. In der folgenden Tabelle werden beispielsweise Framework-spezifische Eigenschaftennamen, die zum Abrufen des einem Schaltflächen-Steuerelement zugeordneten Namens (oder Texts) erforderlich sind, und die entsprechende einzelne, gleichwertige [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Eigenschaft aufgeführt.  
+ Wie bereits erwähnt benötigen Testtools und Entwickler ohne das vereinheitlichte, von [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]zur Verfügung gestellte Modell Framework-spezifische Informationen, um Eigenschaften und Verhalten von Steuerelementen in diesem Framework verfügbar zu machen. Da in Windows-Betriebssystemen verschiedene Benutzeroberflächen-Frameworks vorhanden sein können, einschließlich Win32, Windows Forms und Windows Presentation Foundation (WPF), kann es eine gewaltige Aufgabe sein, mehrere Anwendungen mit Steuerelementen zu testen, die Es scheint ähnlich. In der folgenden Tabelle werden beispielsweise Framework-spezifische Eigenschaftennamen, die zum Abrufen des einem Schaltflächen-Steuerelement zugeordneten Namens (oder Texts) erforderlich sind, und die entsprechende einzelne, gleichwertige [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Eigenschaft aufgeführt.  
   
 |Steuerelementtyp der Benutzeroberflächenautomatisierung|Benutzeroberflächen-Framework|Framework-spezifische Eigenschaft|Benutzeroberflächenautomatisierungs-Eigenschaft|  
 |--------------------------------|------------------|---------------------------------|----------------------------|  

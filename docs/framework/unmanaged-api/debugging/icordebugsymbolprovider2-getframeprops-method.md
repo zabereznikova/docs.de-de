@@ -1,15 +1,15 @@
 ---
-title: 'ICorDebugSymbolProvider2:: getframerequismethode'
+title: ICorDebugSymbolProvider2::GetFrameProps-Methode
 ms.date: 03/30/2017
 ms.assetid: f07b73f3-188d-43a9-8f7d-44dce2f1ddb7
-ms.openlocfilehash: 39bdb93fcb48da6667d982ca2d511ee5e499ae32
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: dc64152938c46945978715251286ecb6c6d8983c
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73133646"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76791512"
 ---
-# <a name="icordebugsymbolprovider2getframeprops-method"></a>ICorDebugSymbolProvider2:: getframerequismethode
+# <a name="icordebugsymbolprovider2getframeprops-method"></a>ICorDebugSymbolProvider2::GetFrameProps-Methode
 Gibt die relative virtuelle Startadresse einer Methode und den übergeordneten Frame zurück, wenn eine coderelative virtuelle Adresse angegeben wird.  
   
 ## <a name="syntax"></a>Syntax  
@@ -22,7 +22,7 @@ HRESULT GetFrameProps(
 );  
 ```  
   
-## <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameters  
  `codeRva`  
  [in] Eine coderelative virtuelle Adresse.  
   
@@ -37,16 +37,16 @@ HRESULT GetFrameProps(
 > [!NOTE]
 > Diese Methode ist nur mit .NET Native verfügbar.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>-Anforderungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   
  **Bibliothek:** CorGuids.lib  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **.NET Framework Versionen:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [ICorDebugSymbolProvider2-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider2-interface.md)
-- [Debuggen von Schnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [ICorDebugSymbolProvider2-Schnittstelle](icordebugsymbolprovider2-interface.md)
+- [Debuggen von Schnittstellen](debugging-interfaces.md)

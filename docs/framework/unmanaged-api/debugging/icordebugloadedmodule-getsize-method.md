@@ -1,15 +1,15 @@
 ---
-title: ICorDebugLoadedModule::GetSize-Methode
+title: ICorDebugLoadedModule::GetSize Method
 ms.date: 03/30/2017
 ms.assetid: aaa0e5c0-be9d-4fe1-8418-5295b9b184d6
-ms.openlocfilehash: 3f2f8a1721847b8f7b845c42aa3c91e032c2d474
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: f207cd1c612b6444a9512adaa356ac2d01de7b9f
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73122636"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76788466"
 ---
-# <a name="icordebugloadedmodulegetsize-method"></a>ICorDebugLoadedModule::GetSize-Methode
+# <a name="icordebugloadedmodulegetsize-method"></a>ICorDebugLoadedModule::GetSize Method
 Ruft die Größe des geladenen Moduls in Bytes ab.  
   
 ## <a name="syntax"></a>Syntax  
@@ -20,7 +20,7 @@ HRESULT GetSize(
 );  
 ```  
   
-## <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameters  
  `pcBytes`  
  [out] Ein Zeiger auf die Anzahl von Bytes im geladenen Modul.  
   
@@ -29,16 +29,16 @@ HRESULT GetSize(
 > [!NOTE]
 > Diese Methode ist nur mit .NET Native verfügbar.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>-Anforderungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   
  **Bibliothek:** CorGuids.lib  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **.NET Framework Versionen:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [ICorDebugLoadedModule-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/icordebugloadedmodule-interface.md)
-- [Debuggen von Schnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [ICorDebugLoadedModule-Schnittstelle](icordebugloadedmodule-interface.md)
+- [Debuggen von Schnittstellen](debugging-interfaces.md)

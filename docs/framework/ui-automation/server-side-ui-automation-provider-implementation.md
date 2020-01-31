@@ -6,12 +6,12 @@ helpviewer_keywords:
 - UI Automation, server-side provider implementation
 - provider implementation, UI Automation
 ms.assetid: 6acc6d08-bd67-4e2e-915c-9c1d34eb86fe
-ms.openlocfilehash: 25f22d5e8caacc69643f6d79e109ebaa94159d80
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: 8a52d84f7152b9cb431ad0aa97c88b143463be2d
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75632310"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76789624"
 ---
 # <a name="server-side-ui-automation-provider-implementation"></a>Implementierung eines serverseitigen Benutzeroberflächenautomatisierungs-Anbieters
 
@@ -20,7 +20,7 @@ ms.locfileid: "75632310"
 
 In diesem Abschnitt wird beschrieben, wie ein serverseitiger Benutzeroberflächenautomatisierungs-Anbieter für ein benutzerdefiniertes Steuerelement implementiert wird.
 
-Die Implementierung für Windows Presentation Foundation (WPF)-Elemente und nicht-WPF-Elemente (z. b. die für [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]vorgesehenen) unterscheiden sich grundlegend. WPF-Elemente bieten Unterstützung für [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] über eine Klasse, die von <xref:System.Windows.Automation.Peers.AutomationPeer>abgeleitet ist. Nicht-WPF-Elemente bieten Unterstützung durch Implementierungen von Anbieter Schnittstellen.
+Die Implementierung für Windows Presentation Foundation (WPF)-Elemente und nicht-WPF-Elemente (z. b. die für Windows Forms vorgesehenen) unterscheiden sich grundlegend. WPF-Elemente bieten Unterstützung für [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] über eine Klasse, die von <xref:System.Windows.Automation.Peers.AutomationPeer>abgeleitet ist. Nicht-WPF-Elemente bieten Unterstützung durch Implementierungen von Anbieter Schnittstellen.
 
 <a name="Security_Considerations"></a>
 
@@ -40,7 +40,7 @@ Weitere Informationen zu diesem Thema finden Sie unter [Benutzeroberflächenauto
 
 ## <a name="provider-implementation-by-non-wpf-elements"></a>Anbieterimplementierung durch Nicht-WPF-Elemente
 
-Benutzerdefinierte Steuerelemente, die nicht Teil des WPF-Frameworks, jedoch in verwaltetem Code geschrieben sind (meistens handelt es sich hierbei um [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]-Steuerelemente), bieten Unterstützung für [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] durch Implementieren von Schnittstellen. Jedes Element muss mindestens eine der in der ersten Tabelle des nächsten Abschnitts aufgeführten Schnittstellen implementieren. Außerdem muss ein Element, das ein oder mehrere Steuerelementmuster unterstützt, für jedes Steuerelementmuster die entsprechende Schnittstelle implementieren.
+Benutzerdefinierte Steuerelemente, die nicht Teil des WPF-Frameworks, jedoch in verwaltetem Code geschrieben sind (meistens handelt es sich hierbei um Windows Forms-Steuerelemente), bieten Unterstützung für [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] durch Implementieren von Schnittstellen. Jedes Element muss mindestens eine der in der ersten Tabelle des nächsten Abschnitts aufgeführten Schnittstellen implementieren. Außerdem muss ein Element, das ein oder mehrere Steuerelementmuster unterstützt, für jedes Steuerelementmuster die entsprechende Schnittstelle implementieren.
 
 Das [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] --Anbieterprojekt muss auf die folgenden Assemblys verweisen:
 
@@ -117,7 +117,7 @@ Anbieter für HWND-basierte Steuerelemente müssen die folgenden Eigenschaften (
 > [!NOTE]
 > Die <xref:System.Windows.Automation.AutomationElementIdentifiers.RuntimeIdProperty> eines in einem Fenster gehosteten einfachen Elements oder Fragmentstamms wird vom Fenster bezogen. Fragmentelemente unterhalb des Stamms (wie Listeneinträge in einem Listenfeld) müssen jedoch eigene Bezeichner bereitstellen. Weitere Informationen finden Sie unter <xref:System.Windows.Automation.Provider.IRawElementProviderFragment.GetRuntimeId%2A>.
 >
-> Die <xref:System.Windows.Automation.AutomationElementIdentifiers.IsKeyboardFocusableProperty> sollte für Anbieter zurückgegeben werden, die in einem [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)] -Steuerelement gehostet werden. In diesem Fall ist der Standardfensteranbieter möglicherweise nicht in der Lage, den richtigen Wert abzurufen.
+> Der <xref:System.Windows.Automation.AutomationElementIdentifiers.IsKeyboardFocusableProperty> sollte für Anbieter zurückgegeben werden, die in einem Windows Forms-Steuerelement gehostet werden. In diesem Fall ist der Standardfensteranbieter möglicherweise nicht in der Lage, den richtigen Wert abzurufen.
 >
 > Die <xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty> wird in der Regel vom Hostanbieter bereitgestellt. Wenn ein benutzerdefiniertes Steuerelement beispielsweise von <xref:System.Windows.Forms.Control>abgeleitet ist, wird der Name von der `Text` -Eigenschaft des Steuerelements abgeleitet
 

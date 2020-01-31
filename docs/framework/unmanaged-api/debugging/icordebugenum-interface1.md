@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 80be7efe-2c32-4b9f-8c52-40c6f6268219
 topic_type:
 - apiref
-ms.openlocfilehash: 59dcb7ae6f27f8d049cd4dc2d313f7f1130fc503
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: cc5598f9cbec4b97bb75f83fb18ccf8742904272
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73085263"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76783008"
 ---
 # <a name="icordebugenum-interface"></a>ICorDebugEnum-Schnittstelle
 
@@ -27,70 +27,70 @@ Dient als abstrakte Basisschnittstelle für die Enumeratoren, die von einer debu
   
 ## <a name="methods"></a>Methoden  
   
-|Methode|Beschreibung|  
+|-Methode|Beschreibung|  
 |------------|-----------------|  
-|[Clone-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugenum-clone-method.md)|Erstellt eine Kopie dieses `ICorDebugEnum` Objekts.|  
-|[GetCount-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugenum-getcount-method.md)|Ruft die Anzahl der Elemente in der-Enumeration ab.|  
-|[Reset-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugenum-reset-method.md)|Verschiebt den Cursor an den Anfang der Enumeration.|  
-|[Skip-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugenum-skip-method.md)|Verschiebt den Cursor in der-Enumeration um die angegebene Anzahl von Elementen vorwärts.|  
+|[Clone-Methode](icordebugenum-clone-method.md)|Erstellt eine Kopie dieses `ICorDebugEnum` Objekts.|  
+|[GetCount-Methode](icordebugenum-getcount-method.md)|Ruft die Anzahl der Elemente in der-Enumeration ab.|  
+|[Reset-Methode](icordebugenum-reset-method.md)|Verschiebt den Cursor an den Anfang der Enumeration.|  
+|[Skip-Methode](icordebugenum-skip-method.md)|Verschiebt den Cursor in der-Enumeration um die angegebene Anzahl von Elementen vorwärts.|  
   
 ## <a name="remarks"></a>Hinweise  
  Die folgenden Enumeratoren werden von `ICorDebugEnum`abgeleitet:  
   
-- ICorDebugAppDomainEnum  
+- "ICorDebugAppDomainEnum"  
   
-- ICorDebugAssemblyEnum  
+- "ICorDebugAssemblyEnum"  
   
-- [ICorDebugBlockingObjectEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugblockingobjectenum-interface.md)  
+- [ICorDebugBlockingObjectEnum](icordebugblockingobjectenum-interface.md)  
   
-- ICorDebugBreakpointEnum  
+- "ICorDebugBreakpointEnum"  
   
 - ICorDebugChainEnum  
   
-- ICorDebugCodeEnum  
+- "ICorDebugCodeEnum"  
   
 - ICorDebugErrorInfoEnum  
   
-- [ICorDebugExceptionObjectCallStackEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugexceptionobjectcallstackenum-interface.md)  
+- [ICorDebugExceptionObjectCallStackEnum](icordebugexceptionobjectcallstackenum-interface.md)  
   
-- ICorDebugFrameEnum  
+- "ICorDebugFrameEnum"  
   
-- [ICorDebugGCReferenceEnum](../../../../docs/framework/unmanaged-api/debugging/icordebuggcreferenceenum-interface.md)  
+- [ICorDebugGCReferenceEnum](icordebuggcreferenceenum-interface.md)  
   
-- [ICorDebugGuidToTypeEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugguidtotypeenum-interface.md)  
+- [ICorDebugGuidToTypeEnum](icordebugguidtotypeenum-interface.md)  
   
-- [ICorDebugHeapEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugheapenum-interface.md)  
+- [ICorDebugHeapEnum](icordebugheapenum-interface.md)  
   
-- [ICorDebugHeapSegmentEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugheapsegmentenum-interface.md)  
+- [ICorDebugHeapSegmentEnum](icordebugheapsegmentenum-interface.md)  
   
 - ICorDebugModuleEnum  
   
-- ICorDebugObjectEnum  
+- "ICorDebugObjectEnum"  
   
-- ICorDebugProcessEnum  
+- "ICorDebugProcessEnum"  
   
-- ICorDebugStepperEnum  
+- "ICorDebugStepperEnum"  
   
-- ICorDebugThreadEnum  
+- "ICorDebugThreadEnum"  
   
-- ICorDebugTypeEnum  
+- "ICorDebugTypeEnum"  
   
 - ICorDebugValueEnum  
   
-- [ICorDebugVariableHomeEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehomeenum-interface.md)  
+- [ICorDebugVariableHomeEnum](icordebugvariablehomeenum-interface.md)  
   
 > [!NOTE]
 > Diese Schnittstelle kann weder computerübergreifend noch prozessübergreifend remote aufgerufen werden.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>-Anforderungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   
  **Bibliothek:** CorGuids.lib  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Debuggen von Schnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Debuggen von Schnittstellen](debugging-interfaces.md)

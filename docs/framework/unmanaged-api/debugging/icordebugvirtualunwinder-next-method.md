@@ -1,15 +1,15 @@
 ---
-title: 'Icordebugvirtualunwinder:: Next-Methode'
+title: ICorDebugVirtualUnwinder::Next-Methode
 ms.date: 03/30/2017
 ms.assetid: 790e0426-e5cd-49fd-a792-f8c8635d72fe
-ms.openlocfilehash: ed80b7a630f78002ded14a1bec206cc8712bd504
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 06d5377ef123cc3f9c91fbfbcf0b0f17a14eb629
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73121860"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76790815"
 ---
-# <a name="icordebugvirtualunwindernext-method"></a>Icordebugvirtualunwinder:: Next-Methode
+# <a name="icordebugvirtualunwindernext-method"></a>ICorDebugVirtualUnwinder::Next-Methode
 Wechselt zum Kontext eines Aufrufers.  
   
 ## <a name="syntax"></a>Syntax  
@@ -18,7 +18,7 @@ Wechselt zum Kontext eines Aufrufers.
 HRESULT Next();  
 ```  
   
-## <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameters  
  Keine  
   
 ## <a name="return-value"></a>Rückgabewert  
@@ -32,16 +32,16 @@ HRESULT Next();
 > [!NOTE]
 > Diese Methode ist nur mit .NET Native verfügbar.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>-Anforderungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   
  **Bibliothek:** CorGuids.lib  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **.NET Framework Versionen:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [ICorDebugMemoryBuffer-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/icordebugmemorybuffer-interface.md)
-- [Debuggen von Schnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [ICorDebugMemoryBuffer-Schnittstelle](icordebugmemorybuffer-interface.md)
+- [Debuggen von Schnittstellen](debugging-interfaces.md)

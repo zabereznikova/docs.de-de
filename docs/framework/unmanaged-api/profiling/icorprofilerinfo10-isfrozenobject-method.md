@@ -11,12 +11,12 @@ api_type:
 - COM
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: 250021c9eb475d0cbcb1bd14c8515b969fc9d30b
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: b6dabefceba038a129148f7ba36d4ffcfc425c80
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74449828"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76790041"
 ---
 # <a name="icorprofilerinfo10isfrozenobject-method"></a>ICorProfilerInfo10:: isfrozenobject-Methode
 
@@ -29,15 +29,17 @@ HRESULT IsFrozenObject( [in]  ObjectID objectId,
                         [out] BOOL *pbFrozen);
 ```
 
-#### <a name="parameters"></a>Parameter
+## <a name="parameters"></a>Parameters
 
-`objectId` \
-in Das zu überprüfende Objekt.
+- `objectId`
 
-`pbFrozen` \
-vorgenommen Ein `BOOL` der angibt, ob das Objekt ein Schreib geschütztes Segment ist.
+  \[in] das zu überprüfende-Objekt.
 
-## <a name="requirements"></a>Voraussetzungen
+- `pbFrozen`
+
+  \[out] ein `BOOL`, der angibt, ob das Objekt ein Schreib geschütztes Segment ist.
+
+## <a name="requirements"></a>-Anforderungen
 
 **Plattformen:** Siehe [unterstützte .net Core-Betriebssysteme](../../../core/install/dependencies.md?tabs=netcore30&pivots=os-windows).
 
@@ -49,4 +51,4 @@ vorgenommen Ein `BOOL` der angibt, ob das Objekt ein Schreib geschütztes Segmen
 
 ## <a name="see-also"></a>Siehe auch
 
-- [ICorProfilerInfo10-Schnittstelle](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo10-interface.md)
+- [ICorProfilerInfo10-Schnittstelle](icorprofilerinfo10-interface.md)

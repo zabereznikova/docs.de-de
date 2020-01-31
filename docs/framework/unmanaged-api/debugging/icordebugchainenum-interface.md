@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6639335c-48e1-4e74-a4f3-70a6a0f54af1
 topic_type:
 - apiref
-ms.openlocfilehash: 63588a3d33577ff58c99e796e8e5453d2a6a9381
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 1f94e2e1f6b376a1998ba4fbcc940147eb16272a
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73123815"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76784205"
 ---
 # <a name="icordebugchainenum-interface"></a>ICorDebugChainEnum-Schnittstelle
 
@@ -27,24 +27,24 @@ Implementiert ICorDebugEnum-Methoden und listet ICorDebugChain-Arrays auf.
   
 ## <a name="methods"></a>Methoden  
   
-|Methode|Beschreibung|  
+|-Methode|Beschreibung|  
 |------------|-----------------|  
-|[Next-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugchainenum-next-method.md)|Ruft die angegebene Anzahl von `ICorDebugChain` Instanzen aus der-Enumeration ab der aktuellen Position ab.|  
+|[Next-Methode](icordebugchainenum-next-method.md)|Ruft die angegebene Anzahl von `ICorDebugChain` Instanzen aus der-Enumeration ab der aktuellen Position ab.|  
   
 ## <a name="remarks"></a>Hinweise  
   
 > [!NOTE]
 > Diese Schnittstelle kann weder computerübergreifend noch prozessübergreifend remote aufgerufen werden.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>-Anforderungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   
  **Bibliothek:** CorGuids.lib  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Debuggen von Schnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Debuggen von Schnittstellen](debugging-interfaces.md)

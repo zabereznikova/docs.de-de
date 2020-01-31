@@ -5,15 +5,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting WPF content in Windows Forms [WPF]
 ms.assetid: 0ac41286-4c1b-4b17-9196-d985cb844ce1
-ms.openlocfilehash: 59243e1810757ff0ff58a60ac3eb007bbc227be0
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 05ba8120c90175801aa2cb61499c48133853e8f7
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76742685"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76794171"
 ---
 # <a name="walkthrough-hosting-a-wpf-composite-control-in-windows-forms"></a>Exemplarische Vorgehensweise: Hosten eines zusammengesetzten WPF-Steuerelements in Windows Forms
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] stellt eine umfangreiche Umgebung zum Erstellen von Anwendungen bereit. Wenn Sie jedoch eine beträchtliche Investition in [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]-Code haben, kann es effektiver sein, Ihre vorhandene [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] Anwendung mit [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zu erweitern, anstatt Sie von Grund auf neu zu schreiben. Ein häufiges Szenario ist, wenn Sie ein oder mehrere Steuerelemente einbetten möchten, die mit [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] in Ihrer Windows Forms Anwendung implementiert werden. Weitere Informationen zum Anpassen von WPF-Steuerelementen finden Sie unter [Anpassung von Steuer](../controls/control-customization.md)Elementen.  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] stellt eine umfangreiche Umgebung zum Erstellen von Anwendungen bereit. Wenn Sie jedoch eine beträchtliche Investition in Windows Forms-Code haben, kann es effektiver sein, Ihre vorhandene Windows Forms Anwendung mit [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zu erweitern, anstatt Sie von Grund auf neu zu schreiben. Ein häufiges Szenario ist, wenn Sie ein oder mehrere Steuerelemente einbetten möchten, die mit [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] in Ihrer Windows Forms Anwendung implementiert werden. Weitere Informationen zum Anpassen von WPF-Steuerelementen finden Sie unter [Anpassung von Steuer](../controls/control-customization.md)Elementen.  
   
  Diese exemplarische Vorgehensweise führt Sie durch eine Anwendung, die ein [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zusammengesetztes Steuerelement hostet, um einen Dateneintrag in einer Windows Forms Anwendung auszuführen. Das zusammengesetzte Steuerelement ist in eine DLL verpackt. Dieses allgemeine Verfahren kann für komplexere Anwendungen und Steuerelemente erweitert werden. Diese exemplarische Vorgehensweise ist so konzipiert, dass Sie in Darstellung und Funktionalität nahezu identisch ist mit Exemplarische Vorgehensweise [: Hosting eines Windows Forms zusammengesetzten Steuer Elements in WPF](walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md). Der Hauptunterschied besteht darin, dass das Hosting-Szenario umgekehrt ist.  
   

@@ -5,20 +5,20 @@ helpviewer_keywords:
 - localization [WPF interoperability]
 - hybrid applications [WPF interoperability]
 ms.assetid: fbc0c54e-930a-4c13-8e9c-27b83665010a
-ms.openlocfilehash: 281afad0c0de856ca67abc74c65aff0e7afc3e01
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: b406d539f2446824027e9462c8ecbe20c18cfb27
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73976503"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76794125"
 ---
 # <a name="walkthrough-localizing-a-hybrid-application"></a>Exemplarische Vorgehensweise: Lokalisieren einer Hybridanwendung
 
-In dieser exemplarischen Vorgehensweise wird gezeigt, wie [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Elemente in einer [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]basierten Hybrid Anwendung lokalisiert werden.
+In dieser exemplarischen Vorgehensweise wird gezeigt, wie [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Elemente in einer Windows Forms basierten Hybrid Anwendung lokalisiert werden.
 
 In dieser exemplarischen Vorgehensweise werden u. a. folgende Aufgaben veranschaulicht:
 
-- Das [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] Host Projekt wird erstellt.
+- Das Windows Forms Host Projekt wird erstellt.
 
 - Lokalisierbaren Inhalt hinzufügen
 
@@ -32,7 +32,7 @@ Eine komplette Code Auflistung der Aufgaben, die in dieser exemplarischen Vorgeh
 
 Am Ende werden Sie eine lokalisierte Hybridanwendung haben.
 
-## <a name="prerequisites"></a>Erforderliche Voraussetzungen
+## <a name="prerequisites"></a>Erforderliche Komponenten
 
 Zum Durchführen dieser exemplarischen Vorgehensweise benötigen Sie die folgenden Komponenten:
 
@@ -40,7 +40,7 @@ Zum Durchführen dieser exemplarischen Vorgehensweise benötigen Sie die folgend
 
 ## <a name="creating-the-windows-forms-host-project"></a>Erstellen des Windows Forms-Hostprojekts
 
-Der erste Schritt besteht darin, das [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] Anwendungsprojekt zu erstellen und ein [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Element mit Inhalt hinzuzufügen, den Sie lokalisieren werden.
+Der erste Schritt besteht darin, das Windows Forms Anwendungsprojekt zu erstellen und ein [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Element mit Inhalt hinzuzufügen, den Sie lokalisieren werden.
 
 ### <a name="to-create-the-host-project"></a>So erstellen Sie das Hostprojekt
 
@@ -52,7 +52,7 @@ Der erste Schritt besteht darin, das [!INCLUDE[TLA#tla_winforms](../../../../inc
 
 ## <a name="adding-localizable-content"></a>Hinzufügen von lokalisierbarem Inhalt
 
-Fügen Sie als nächstes ein [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] Label-Steuerelement hinzu, und legen Sie den Inhalt des [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Elements auf eine lokalisierbare Zeichenfolge fest.
+Fügen Sie als nächstes ein Windows Forms Label-Steuerelement hinzu, und legen Sie den Inhalt des [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Elements auf eine lokalisierbare Zeichenfolge fest.
 
 ### <a name="to-add-localizable-content"></a>So fügen Sie lokalisierbaren Inhalt hinzu
 

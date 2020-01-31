@@ -7,19 +7,19 @@ helpviewer_keywords:
 - Windows Forms [WPF], WPF interoperation
 - interoperability [WPF], Windows Forms
 ms.assetid: 8a157e6b-8054-46db-a5cf-a78966acc7a1
-ms.openlocfilehash: 7f531b60d8b31181688f3d0a6753b234ffc6c7dd
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
-ms.translationtype: HT
+ms.openlocfilehash: 729f893a94688f4a1d8b0a770a3624b27ddfe1c1
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76735210"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76794084"
 ---
 # <a name="windows-forms-controls-and-equivalent-wpf-controls"></a>Windows Forms-Steuerelemente und entsprechende WPF-Steuerelemente
-Viele [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] Steuerelemente verfügen über äquivalente [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Steuerelemente, einige [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] Steuerelemente haben jedoch keine Entsprechungen in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. In diesem Thema werden die von den beiden Technologien bereitgestellten Steuerelement Typen verglichen.  
+Viele Windows Forms Steuerelemente verfügen über äquivalente [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Steuerelemente, einige Windows Forms Steuerelemente haben jedoch keine Entsprechungen in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. In diesem Thema werden die von den beiden Technologien bereitgestellten Steuerelement Typen verglichen.  
   
- Sie können jederzeit Interoperation verwenden, um [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] Steuerelemente zu hosten, die keine Entsprechungen in ihren [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]basierten Anwendungen aufweisen.  
+ Sie können jederzeit Interoperation verwenden, um Windows Forms Steuerelemente zu hosten, die keine Entsprechungen in ihren [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]basierten Anwendungen aufweisen.  
   
- In der folgenden Tabelle wird gezeigt, welche [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]-Steuerelemente und-Komponenten über äquivalente [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Steuerungsfunktionen verfügen  
+ In der folgenden Tabelle wird gezeigt, welche Windows Forms-Steuerelemente und-Komponenten über äquivalente [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Steuerungsfunktionen verfügen  
   
 |Windows Forms-Steuerelemente|Entsprechendes WPF-Steuerelement|Hinweise|  
 |---------------------------|----------------------------|-------------|  

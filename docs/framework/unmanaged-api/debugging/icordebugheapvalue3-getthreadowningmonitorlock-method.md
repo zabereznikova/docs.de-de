@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e06fc19d-2cf4-4cad-81a3-137a68af8969
 topic_type:
 - apiref
-ms.openlocfilehash: ec265525d01dab0669939569501fce91b500a900
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 8be7c0e32f6183deb354d8b3936ef55c2520fe9f
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73127488"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76788621"
 ---
 # <a name="icordebugheapvalue3getthreadowningmonitorlock-method"></a>ICorDebugHeapValue3::GetThreadOwningMonitorLock-Methode
 Gibt den verwalteten Thread zurück, der die Monitor Sperre für dieses Objekt besitzt.  
@@ -34,7 +34,7 @@ HRESULT GetThreadOwningMonitorLock (
 );  
 ```  
   
-## <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameters  
  `ppThread`  
  vorgenommen Der verwaltete Thread, der die Monitor Sperre für dieses Objekt besitzt.  
   
@@ -46,7 +46,7 @@ HRESULT GetThreadOwningMonitorLock (
   
 |HRESULT|Beschreibung|  
 |-------------|-----------------|  
-|S_OK|Die Methode wurde erfolgreich abgeschlossen.|  
+|S_OK|Die Methode wurde abgeschlossen.|  
 |S_FALSE|Kein verwalteter Thread besitzt die Monitor Sperre für dieses Objekt.|  
   
 ## <a name="exceptions"></a>Ausnahmen  
@@ -64,16 +64,16 @@ HRESULT GetThreadOwningMonitorLock (
   
  Wenn ein Fehler auftritt, sodass nicht bestimmt werden kann, welcher Thread, sofern vorhanden, die Monitor Sperre für dieses Objekt besitzt, gibt die Methode ein HRESULT zurück, das einen Fehler anzeigt.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>-Anforderungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   
  **Bibliothek:** CorGuids.lib  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework Versionen:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Debuggen von Schnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [Debuggen](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [Debuggen von Schnittstellen](debugging-interfaces.md)
+- [Debuggen](index.md)

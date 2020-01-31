@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: fdab0ade-7f56-4fa2-b3ef-f7a1d2852bba
 topic_type:
 - apiref
-ms.openlocfilehash: 5b988b110100cd159b8e262573df409847d635c6
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 2d71cebb77ed3ca586e857710667c0077f4f76ed
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73134124"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76793587"
 ---
 # <a name="icordebugdebugactiveprocess-method"></a>ICorDebug::DebugActiveProcess-Methode
 Fügt den Debugger an einen vorhandenen Prozess an.  
@@ -35,7 +35,7 @@ HRESULT DebugActiveProcess (
 );  
 ```  
   
-## <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameters  
  `id`  
  in Die ID des Prozesses, an den der Debugger angefügt werden soll.  
   
@@ -48,15 +48,15 @@ HRESULT DebugActiveProcess (
 ## <a name="remarks"></a>Hinweise  
  Interop-Debuggen wird auf Win9x-und nicht-x86-Plattformen wie IA-64-basierten und AMD64-basierten Plattformen nicht unterstützt.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>-Anforderungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   
  **Bibliothek:** CorGuids.lib  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [ICorDebug-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
+- [ICorDebug-Schnittstelle](icordebug-interface.md)

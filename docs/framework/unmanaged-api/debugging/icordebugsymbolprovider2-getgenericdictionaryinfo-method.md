@@ -1,15 +1,15 @@
 ---
-title: 'ICorDebugSymbolProvider2:: getgenericdiktattionaryinfo-Methode'
+title: ICorDebugSymbolProvider2::GetGenericDictionaryInfo-Methode
 ms.date: 03/30/2017
 ms.assetid: ba28fe4e-5491-4670-bff7-7fde572d7593
-ms.openlocfilehash: c9f7206cac54d64c28eb50d81fea00a6f3c494d4
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 02ecaf56e845680472f42c04f3978e54e7a69272
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73133630"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76791510"
 ---
-# <a name="icordebugsymbolprovider2getgenericdictionaryinfo-method"></a>ICorDebugSymbolProvider2:: getgenericdiktattionaryinfo-Methode
+# <a name="icordebugsymbolprovider2getgenericdictionaryinfo-method"></a>ICorDebugSymbolProvider2::GetGenericDictionaryInfo-Methode
 
 Ruft eine generische Wörterbuchzuordnung ab.
 
@@ -21,10 +21,10 @@ HRESULT GetGenericDictionaryInfo(
 );
 ```
 
-## <a name="parameters"></a>Parameter
+## <a name="parameters"></a>Parameters
 
 `ppMemoryBuffer`\
-vorgenommen Ein Zeiger auf die Adresse eines [icorentbugmemorybuffer](../../../../docs/framework/unmanaged-api/debugging/icordebugmemorybuffer-interface.md) -Objekts, das die generische Wörterbuch Zuordnung enthält. Weitere Informationen finden Sie im Abschnitt Hinweise.
+vorgenommen Ein Zeiger auf die Adresse eines [icorentbugmemorybuffer](icordebugmemorybuffer-interface.md) -Objekts, das die generische Wörterbuch Zuordnung enthält. Weitere Informationen finden Sie im Abschnitt Hinweise.
 
 ## <a name="remarks"></a>Hinweise
 
@@ -75,7 +75,7 @@ Das folgende Format wird für jedes Instanziierungsinformationselement auf dem H
 
 Die Berücksichtigung der Länge für jedes Heapelement ermöglicht eine einfache Sortierung des Verzeichnisabschnitts ohne Auswirkungen auf den Heap.
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>-Anforderungen
 
 **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).
 
@@ -83,9 +83,9 @@ Die Berücksichtigung der Länge für jedes Heapelement ermöglicht eine einfach
 
 **Bibliothek:** CorGuids.lib
 
-**.NET Framework-Versionen:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]
+**.NET Framework Versionen:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]
 
 ## <a name="see-also"></a>Siehe auch
 
-- [ICorDebugSymbolProvider2-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider2-interface.md)
-- [Debuggen von Schnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [ICorDebugSymbolProvider2-Schnittstelle](icordebugsymbolprovider2-interface.md)
+- [Debuggen von Schnittstellen](debugging-interfaces.md)

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8635ee3a-c84b-4626-876c-416bee54f787
 topic_type:
 - apiref
-ms.openlocfilehash: 861d5daa481132d3d6527e8d5fbccfab6436c5fe
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 1aa59ee559abff8006f0ac63a812e4315aa48154
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73139121"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76790314"
 ---
 # <a name="variablelocationtype-enumeration"></a>VariableLocationType-Enumeration
 Gibt den Typ des systemeigenen Standorts einer Variablen an.  
@@ -44,17 +44,17 @@ typedef enum VariableLocationType
 |`VLT_INVALID`|Die Variable wird nicht in einer Register-oder Register-relativen Speicheradresse gespeichert.|  
   
 ## <a name="remarks"></a>Hinweise  
- Ein Member der `VariableLocationType` Enumeration wird von der [icordebugvariablehome:: getlocationtype](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-getlocationtype-method.md) -Methode zurückgegeben.  
+ Ein Member der `VariableLocationType` Enumeration wird von der [icordebugvariablehome:: getlocationtype](icordebugvariablehome-getlocationtype-method.md) -Methode zurückgegeben.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>-Anforderungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   
  **Bibliothek:** CorGuids.lib  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
+ **.NET Framework Versionen:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Debuggen von Enumerationen](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+- [Debuggen von Enumerationen](debugging-enumerations.md)

@@ -2,12 +2,12 @@
 title: Cloudbasierte Resilienz
 description: Architektur von Cloud Native .net-apps für Azure | Native Cloud-Resilienz
 ms.date: 06/30/2019
-ms.openlocfilehash: 680542abc5d8c43c577321d5ae834f0a13290da3
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 427405d95534c4467ab519c2188fe88e2f18e2b2
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "73841042"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76781082"
 ---
 # <a name="cloud-native-resiliency"></a>Cloudbasierte Resilienz
 
@@ -41,5 +41,5 @@ Bei einem kleinen verteilten System ist der Ausfall seltener, aber wenn das Syst
 Daher müssen Ihre Anwendung und Infrastruktur robust sein. In den folgenden Abschnitten werden die Verteidigungstechniken erläutert, die Sie Ihrer Anwendung hinzufügen können, sowie integrierte cloudanwendungen, die Sie nutzen können, um die Benutzeroberflächen zu unterstützen.
 
 >[!div class="step-by-step"]
->[Zurück](azure-data-storage.md)
+>[Zurück](elastic-search-in-azure.md)
 >[Weiter](application-resiliency-patterns.md)

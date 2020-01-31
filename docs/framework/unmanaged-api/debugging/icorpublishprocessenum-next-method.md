@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6c399f37-1e38-4ca1-b70d-8ae41f7228b7
 topic_type:
 - apiref
-ms.openlocfilehash: d79b642735543ff84f6211fe5ca2e5b424be1f2e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 084af87acd73ef65739ba69ef2bd66d10d7c27c2
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73103443"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76790516"
 ---
 # <a name="icorpublishprocessenumnext-method"></a>ICorPublishProcessEnum::Next-Methode
 Ruft die angegebene Anzahl von Prozessen ab der aktuellen Cursorposition aus der Auflistung ab.  
@@ -36,25 +36,25 @@ HRESULT Next (
 );  
 ```  
   
-## <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameters  
  `celt`  
  in Die Anzahl der abzurufenden Prozesse.  
   
  `objects`  
- vorgenommen Ein Zeiger auf das Array von abgerufenen [ICorPublishProcess](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md) -Objekten, von denen jedes einen Prozess darstellt.  
+ vorgenommen Ein Zeiger auf das Array von abgerufenen [ICorPublishProcess](icorpublishprocess-interface.md) -Objekten, von denen jedes einen Prozess darstellt.  
   
  `pceltFetched`  
- vorgenommen Zeiger auf die Anzahl der tatsächlich zurückgegebenen Prozesse. Dieser Wert kann NULL sein, wenn `celt` ein Wert ist.  
+ vorgenommen Zeiger auf die Anzahl der tatsächlich zurückgegebenen Prozesse. Dieser Wert kann NULL sein, wenn `celt` 1 ist.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>-Anforderungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** Corpub. idl, Corpub. h  
   
  **Bibliothek:** CorGuids.lib  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [ICorPublishProcessEnum-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocessenum-interface.md)
+- [ICorPublishProcessEnum-Schnittstelle](icorpublishprocessenum-interface.md)

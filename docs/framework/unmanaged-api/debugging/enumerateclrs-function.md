@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f8d50cb3-ec4f-4529-8fe3-bd61fd28e13c
 topic_type:
 - apiref
-ms.openlocfilehash: 69288e995ec789091bf089368cd9a60f003df86e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: cdf88ef193df71a638fff43add1a9648d8631731
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73122972"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76789130"
 ---
 # <a name="enumerateclrs-function"></a>EnumerateCLRs-Funktion
 Stellt einen Mechanismus für das Auflisten der CLRs in einem Prozess bereit.  
@@ -37,7 +37,7 @@ HRESULT EnumerateCLRs (
 );  
 ```  
   
-## <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameters  
  `debuggeePID`  
  [in] Die Prozess-ID des Prozesses aus dem geladene CLRs aufgezählt werden.  
   
@@ -68,11 +68,11 @@ HRESULT EnumerateCLRs (
   
  Unter dem Windows-Betriebssystem wird `debuggeePID` einem Betriebssystem-Prozessbezeichner zugeordnet.  
   
- Der Arbeitsspeicher für `ppHandleArrayOut` und `ppStringArrayOut` wird von dieser Funktion zugeordnet. Um den zugeordneten Arbeitsspeicher freizugeben, müssen Sie die [closeclrenumeration-Funktion](../../../../docs/framework/unmanaged-api/debugging/closeclrenumeration-function.md)abrufen.  
+ Der Arbeitsspeicher für `ppHandleArrayOut` und `ppStringArrayOut` wird von dieser Funktion zugeordnet. Um den zugeordneten Arbeitsspeicher freizugeben, müssen Sie die [closeclrenumeration-Funktion](closeclrenumeration-function.md)abrufen.  
   
  Diese Funktion kann mit beiden auf null festgelegten Arrayparametern aufgerufen werden, um die Anzahl der CLRs im Zielprozess zurückzugeben. Aus dieser Anzahl kann ein Aufrufer die Größe des Puffers ableiten, der erstellt wird: `(sizeof(HANDLE) * count) + (sizeof(LPWSTR) * count) + (sizeof(WCHAR*) * count * MAX_PATH)`.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>-Anforderungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** dbgshim. h  

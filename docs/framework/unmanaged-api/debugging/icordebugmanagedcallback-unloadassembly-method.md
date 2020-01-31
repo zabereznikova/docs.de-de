@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6734321c-c8a9-401f-a558-cad715ec4a77
 topic_type:
 - apiref
-ms.openlocfilehash: 4ae4856eca2c1441ea53df0d9ed3648700b39b24
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 06c08499298656c8314d72667d9dac88c8d11e6a
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73130659"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76788344"
 ---
 # <a name="icordebugmanagedcallbackunloadassembly-method"></a>ICorDebugManagedCallback::UnloadAssembly-Methode
 Benachrichtigt den Debugger, dass eine Common Language Runtime Assembly entladen wurde.  
@@ -34,7 +34,7 @@ HRESULT UnloadAssembly (
 );  
 ```  
   
-## <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameters  
  `pAppDomain`  
  in Ein Zeiger auf ein ICorDebugAppDomain-Objekt, das die Anwendungsdomäne darstellt, in der die Assembly enthalten ist.  
   
@@ -44,16 +44,16 @@ HRESULT UnloadAssembly (
 ## <a name="remarks"></a>Hinweise  
  Die Assembly sollte nach diesem Rückruf nicht verwendet werden.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>-Anforderungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   
  **Bibliothek:** CorGuids.lib  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [LoadAssembly-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-loadassembly-method.md)
-- [ICorDebugManagedCallback-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+- [LoadAssembly-Methode](icordebugmanagedcallback-loadassembly-method.md)
+- [ICorDebugManagedCallback-Schnittstelle](icordebugmanagedcallback-interface.md)
