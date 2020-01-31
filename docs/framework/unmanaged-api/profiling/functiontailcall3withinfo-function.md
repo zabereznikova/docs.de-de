@@ -14,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: 46380fcc-0198-43ae-a1f5-2d4939425886
 topic_type:
 - apiref
-ms.openlocfilehash: 202aed64de78675c79f998afb4483e0d19b811de
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
-ms.translationtype: MT
+ms.openlocfilehash: 33400f6b2700bbdbf9c2ccb8a61da192066c0e2f
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74445971"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76790245"
 ---
-# <a name="functiontailcall3withinfo-function"></a><span data-ttu-id="bd7a7-102">FunctionTailcall3WithInfo-Funktion</span><span class="sxs-lookup"><span data-stu-id="bd7a7-102">FunctionTailcall3WithInfo Function</span></span>
-<span data-ttu-id="bd7a7-103">Benachrichtigt den Profiler, dass die gerade ausgeführte Funktion gerade einen Tail-Aufruf einer anderen Funktion ausführt, und stellt ein Handle bereit, das an die [ICorProfilerInfo3:: GetFunctionTailcall3Info-Methode](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getfunctiontailcall3info-method.md) zum Abrufen des Stapel Rahmens übermittelt werden kann.</span><span class="sxs-lookup"><span data-stu-id="bd7a7-103">Notifies the profiler that the currently executing function is about to perform a tail call to another function, and provides a handle that can be passed to the [ICorProfilerInfo3::GetFunctionTailcall3Info method](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getfunctiontailcall3info-method.md) to retrieve the stack frame.</span></span>  
+# <a name="functiontailcall3withinfo-function"></a><span data-ttu-id="ed3a9-102">FunctionTailcall3WithInfo-Funktion</span><span class="sxs-lookup"><span data-stu-id="ed3a9-102">FunctionTailcall3WithInfo Function</span></span>
+<span data-ttu-id="ed3a9-103">Benachrichtigt den Profiler, dass die gerade ausgeführte Funktion gerade einen Tail-Aufruf einer anderen Funktion ausführt, und stellt ein Handle bereit, das an die [ICorProfilerInfo3:: GetFunctionTailcall3Info-Methode](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getfunctiontailcall3info-method.md) zum Abrufen des Stapel Rahmens übermittelt werden kann.</span><span class="sxs-lookup"><span data-stu-id="ed3a9-103">Notifies the profiler that the currently executing function is about to perform a tail call to another function, and provides a handle that can be passed to the [ICorProfilerInfo3::GetFunctionTailcall3Info method](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getfunctiontailcall3info-method.md) to retrieve the stack frame.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="bd7a7-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="bd7a7-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ed3a9-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="ed3a9-104">Syntax</span></span>  
   
 ```cpp  
 void __stdcall FunctionTailcall3WithInfo(  
@@ -32,46 +32,49 @@ void __stdcall FunctionTailcall3WithInfo(
                [in] COR_PRF_ELT_INFO eltInfo);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="bd7a7-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="bd7a7-105">Parameters</span></span>  
- `functionIDOrClientID`  
- <span data-ttu-id="bd7a7-106">in Der Bezeichner der aktuell ausgeführten Funktion, die einen Tail-Aufruf durchführen soll.</span><span class="sxs-lookup"><span data-stu-id="bd7a7-106">[in] The identifier of the currently executing function that is about to make a tail call.</span></span>  
-  
- `eltInfo`  
- <span data-ttu-id="bd7a7-107">[in] Ein nicht transparentes Handle, das Informationen über einen bestimmten Stapelrahmen entspricht.</span><span class="sxs-lookup"><span data-stu-id="bd7a7-107">[in] An opaque handle that represents information about a given stack frame.</span></span> <span data-ttu-id="bd7a7-108">Dieses Handle ist nur während des Rückrufs gültig, an den er übermittelt wird.</span><span class="sxs-lookup"><span data-stu-id="bd7a7-108">This handle is valid only during the callback to which it is passed.</span></span>  
-  
-## <a name="remarks"></a><span data-ttu-id="bd7a7-109">Hinweise</span><span class="sxs-lookup"><span data-stu-id="bd7a7-109">Remarks</span></span>  
- <span data-ttu-id="bd7a7-110">Die `FunctionTailcall3WithInfo` Rückruf Methode benachrichtigt den Profiler, wenn Funktionen aufgerufen werden, und ermöglicht es dem Profiler, mithilfe der [ICorProfilerInfo3:: GetFunctionTailcall3Info-Methode](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getfunctiontailcall3info-method.md) den Stapel Rahmen zu überprüfen.</span><span class="sxs-lookup"><span data-stu-id="bd7a7-110">The `FunctionTailcall3WithInfo` callback method notifies the profiler as functions are called, and allows the profiler to use the [ICorProfilerInfo3::GetFunctionTailcall3Info method](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getfunctiontailcall3info-method.md) to inspect the stack frame.</span></span> <span data-ttu-id="bd7a7-111">Für den Zugriff auf Stapel Rahmen Informationen muss das `COR_PRF_ENABLE_FRAME_INFO`-Flag festgelegt werden.</span><span class="sxs-lookup"><span data-stu-id="bd7a7-111">To access stack frame information, the `COR_PRF_ENABLE_FRAME_INFO` flag has to be set.</span></span> <span data-ttu-id="bd7a7-112">Der Profiler kann die [ICorProfilerInfo:: SetEventMask-Methode](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md) verwenden, um die Ereignisflags festzulegen, und dann die [ICorProfilerInfo3:: SetEnterLeaveFunctionHooks3WithInfo-Methode](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-setenterleavefunctionhooks3withinfo-method.md) verwenden, um die Implementierung dieser Funktion zu registrieren.</span><span class="sxs-lookup"><span data-stu-id="bd7a7-112">The profiler can use the [ICorProfilerInfo::SetEventMask method](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md) to set the event flags, and then use the [ICorProfilerInfo3::SetEnterLeaveFunctionHooks3WithInfo method](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-setenterleavefunctionhooks3withinfo-method.md) to register your implementation of this function.</span></span>  
-  
- <span data-ttu-id="bd7a7-113">Die `FunctionTailcall3WithInfo` Funktion ist ein Rückruf. Sie müssen ihn implementieren.</span><span class="sxs-lookup"><span data-stu-id="bd7a7-113">The `FunctionTailcall3WithInfo` function is a callback; you must implement it.</span></span> <span data-ttu-id="bd7a7-114">Die-Implementierung muss das `__declspec(naked)`-Speicher Klassen Attribut verwenden.</span><span class="sxs-lookup"><span data-stu-id="bd7a7-114">The implementation must use the `__declspec(naked)` storage-class attribute.</span></span>  
-  
- <span data-ttu-id="bd7a7-115">Die Ausführungs-Engine speichert vor dem Aufrufen dieser Funktion keine Register.</span><span class="sxs-lookup"><span data-stu-id="bd7a7-115">The execution engine does not save any registers before calling this function.</span></span>  
-  
-- <span data-ttu-id="bd7a7-116">Beim Eintrag müssen Sie alle von Ihnen verwendeten Register speichern, einschließlich der in der Gleit Komma Einheit (Gleit Komma Einheit).</span><span class="sxs-lookup"><span data-stu-id="bd7a7-116">On entry, you must save all registers that you use, including those in the floating-point unit (FPU).</span></span>  
-  
-- <span data-ttu-id="bd7a7-117">Beim Beenden müssen Sie den Stapel wiederherstellen, indem Sie alle Parameter, die vom Aufrufer per Pushvorgang übermittelt wurden, per Ping löschen.</span><span class="sxs-lookup"><span data-stu-id="bd7a7-117">On exit, you must restore the stack by popping off all the parameters that were pushed by its caller.</span></span>  
-  
- <span data-ttu-id="bd7a7-118">Die Implementierung von `FunctionTailcall3WithInfo` sollte nicht blockiert werden, da Sie Garbage Collection verzögert.</span><span class="sxs-lookup"><span data-stu-id="bd7a7-118">The implementation of `FunctionTailcall3WithInfo` should not block, because it will delay garbage collection.</span></span> <span data-ttu-id="bd7a7-119">Die-Implementierung sollte keine Garbage Collection versuchen, weil der Stapel möglicherweise nicht in einem Garbage Collection freundlichen Zustand ist.</span><span class="sxs-lookup"><span data-stu-id="bd7a7-119">The implementation should not attempt a garbage collection, because the stack may not be in a garbage collection-friendly state.</span></span> <span data-ttu-id="bd7a7-120">Wenn versucht wird, eine Garbage Collection auszuführen, wird die Laufzeit blockiert, bis `FunctionTailcall3WithInfo` zurückgibt.</span><span class="sxs-lookup"><span data-stu-id="bd7a7-120">If a garbage collection is attempted, the runtime will block until `FunctionTailcall3WithInfo` returns.</span></span>  
-  
- <span data-ttu-id="bd7a7-121">Außerdem darf die FunctionTailcall3WithInfo-Funktion keinen verwalteten Code abrufen oder eine verwaltete Speicher Belegung in irgendeiner Weise auslösen.</span><span class="sxs-lookup"><span data-stu-id="bd7a7-121">Also, the FunctionTailcall3WithInfo function must not call into managed code or cause a managed memory allocation in any way.</span></span>  
-  
-## <a name="requirements"></a><span data-ttu-id="bd7a7-122">Voraussetzungen</span><span class="sxs-lookup"><span data-stu-id="bd7a7-122">Requirements</span></span>  
- <span data-ttu-id="bd7a7-123">**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="bd7a7-123">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
-  
- <span data-ttu-id="bd7a7-124">**Header:** Corprof. idl</span><span class="sxs-lookup"><span data-stu-id="bd7a7-124">**Header:** CorProf.idl</span></span>  
-  
- <span data-ttu-id="bd7a7-125">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="bd7a7-125">**Library:** CorGuids.lib</span></span>  
-  
- <span data-ttu-id="bd7a7-126">**.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="bd7a7-126">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="bd7a7-127">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="bd7a7-127">See also</span></span>
+## <a name="parameters"></a><span data-ttu-id="ed3a9-105">Parameters</span><span class="sxs-lookup"><span data-stu-id="ed3a9-105">Parameters</span></span>  
 
-- [<span data-ttu-id="bd7a7-128">FunctionEnter3</span><span class="sxs-lookup"><span data-stu-id="bd7a7-128">FunctionEnter3</span></span>](../../../../docs/framework/unmanaged-api/profiling/functionenter3-function.md)
-- [<span data-ttu-id="bd7a7-129">FunctionLeave3</span><span class="sxs-lookup"><span data-stu-id="bd7a7-129">FunctionLeave3</span></span>](../../../../docs/framework/unmanaged-api/profiling/functionleave3-function.md)
-- [<span data-ttu-id="bd7a7-130">FunctionTailcall3</span><span class="sxs-lookup"><span data-stu-id="bd7a7-130">FunctionTailcall3</span></span>](../../../../docs/framework/unmanaged-api/profiling/functiontailcall3-function.md)
-- [<span data-ttu-id="bd7a7-131">FunctionEnter3WithInfo</span><span class="sxs-lookup"><span data-stu-id="bd7a7-131">FunctionEnter3WithInfo</span></span>](../../../../docs/framework/unmanaged-api/profiling/functiontailcall3-function.md)
-- [<span data-ttu-id="bd7a7-132">FunctionLeave3WithInfo</span><span class="sxs-lookup"><span data-stu-id="bd7a7-132">FunctionLeave3WithInfo</span></span>](../../../../docs/framework/unmanaged-api/profiling/functionleave3withinfo-function.md)
-- [<span data-ttu-id="bd7a7-133">SetEnterLeaveFunctionHooks3</span><span class="sxs-lookup"><span data-stu-id="bd7a7-133">SetEnterLeaveFunctionHooks3</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-setenterleavefunctionhooks3-method.md)
-- [<span data-ttu-id="bd7a7-134">SetEnterLeaveFunctionHooks3WithInfo</span><span class="sxs-lookup"><span data-stu-id="bd7a7-134">SetEnterLeaveFunctionHooks3WithInfo</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-setenterleavefunctionhooks3withinfo-method.md)
-- [<span data-ttu-id="bd7a7-135">SetFunctionIDMapper</span><span class="sxs-lookup"><span data-stu-id="bd7a7-135">SetFunctionIDMapper</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setfunctionidmapper-method.md)
-- [<span data-ttu-id="bd7a7-136">SetFunctionIDMapper2</span><span class="sxs-lookup"><span data-stu-id="bd7a7-136">SetFunctionIDMapper2</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-setfunctionidmapper2-method.md)
-- [<span data-ttu-id="bd7a7-137">Profilerstellung für globale statische Funktionen</span><span class="sxs-lookup"><span data-stu-id="bd7a7-137">Profiling Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-global-static-functions.md)
+- `functionIDOrClientID`
+
+  <span data-ttu-id="ed3a9-106">\[in] der Bezeichner der aktuell ausgeführten Funktion, die einen Tail-Aufruf durchführen soll.</span><span class="sxs-lookup"><span data-stu-id="ed3a9-106">\[in] The identifier of the currently executing function that is about to make a tail call.</span></span>
+
+- `eltInfo`
+
+  <span data-ttu-id="ed3a9-107">\[in] ein undurchsichtiges handle, das Informationen zu einem angegebenen Stapel Rahmen darstellt.</span><span class="sxs-lookup"><span data-stu-id="ed3a9-107">\[in] An opaque handle that represents information about a given stack frame.</span></span> <span data-ttu-id="ed3a9-108">Dieses Handle ist nur während des Rückrufs gültig, an den er übermittelt wird.</span><span class="sxs-lookup"><span data-stu-id="ed3a9-108">This handle is valid only during the callback to which it is passed.</span></span>
+
+## <a name="remarks"></a><span data-ttu-id="ed3a9-109">Hinweise</span><span class="sxs-lookup"><span data-stu-id="ed3a9-109">Remarks</span></span>  
+ <span data-ttu-id="ed3a9-110">Die `FunctionTailcall3WithInfo` Rückruf Methode benachrichtigt den Profiler, wenn Funktionen aufgerufen werden, und ermöglicht es dem Profiler, mithilfe der [ICorProfilerInfo3:: GetFunctionTailcall3Info-Methode](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getfunctiontailcall3info-method.md) den Stapel Rahmen zu überprüfen.</span><span class="sxs-lookup"><span data-stu-id="ed3a9-110">The `FunctionTailcall3WithInfo` callback method notifies the profiler as functions are called, and allows the profiler to use the [ICorProfilerInfo3::GetFunctionTailcall3Info method](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getfunctiontailcall3info-method.md) to inspect the stack frame.</span></span> <span data-ttu-id="ed3a9-111">Für den Zugriff auf Stapel Rahmen Informationen muss das `COR_PRF_ENABLE_FRAME_INFO`-Flag festgelegt werden.</span><span class="sxs-lookup"><span data-stu-id="ed3a9-111">To access stack frame information, the `COR_PRF_ENABLE_FRAME_INFO` flag has to be set.</span></span> <span data-ttu-id="ed3a9-112">Der Profiler kann die [ICorProfilerInfo:: SetEventMask-Methode](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md) verwenden, um die Ereignisflags festzulegen, und dann die [ICorProfilerInfo3:: SetEnterLeaveFunctionHooks3WithInfo-Methode](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-setenterleavefunctionhooks3withinfo-method.md) verwenden, um die Implementierung dieser Funktion zu registrieren.</span><span class="sxs-lookup"><span data-stu-id="ed3a9-112">The profiler can use the [ICorProfilerInfo::SetEventMask method](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md) to set the event flags, and then use the [ICorProfilerInfo3::SetEnterLeaveFunctionHooks3WithInfo method](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-setenterleavefunctionhooks3withinfo-method.md) to register your implementation of this function.</span></span>  
+  
+ <span data-ttu-id="ed3a9-113">Die `FunctionTailcall3WithInfo` Funktion ist ein Rückruf. Sie müssen ihn implementieren.</span><span class="sxs-lookup"><span data-stu-id="ed3a9-113">The `FunctionTailcall3WithInfo` function is a callback; you must implement it.</span></span> <span data-ttu-id="ed3a9-114">Die-Implementierung muss das `__declspec(naked)`-Speicher Klassen Attribut verwenden.</span><span class="sxs-lookup"><span data-stu-id="ed3a9-114">The implementation must use the `__declspec(naked)` storage-class attribute.</span></span>  
+  
+ <span data-ttu-id="ed3a9-115">Die Ausführungs-Engine speichert vor dem Aufrufen dieser Funktion keine Register.</span><span class="sxs-lookup"><span data-stu-id="ed3a9-115">The execution engine does not save any registers before calling this function.</span></span>  
+  
+- <span data-ttu-id="ed3a9-116">Beim Eintrag müssen Sie alle von Ihnen verwendeten Register speichern, einschließlich der in der Gleit Komma Einheit (Gleit Komma Einheit).</span><span class="sxs-lookup"><span data-stu-id="ed3a9-116">On entry, you must save all registers that you use, including those in the floating-point unit (FPU).</span></span>  
+  
+- <span data-ttu-id="ed3a9-117">Beim Beenden müssen Sie den Stapel wiederherstellen, indem Sie alle Parameter, die vom Aufrufer per Pushvorgang übermittelt wurden, per Ping löschen.</span><span class="sxs-lookup"><span data-stu-id="ed3a9-117">On exit, you must restore the stack by popping off all the parameters that were pushed by its caller.</span></span>  
+  
+ <span data-ttu-id="ed3a9-118">Die Implementierung von `FunctionTailcall3WithInfo` sollte nicht blockiert werden, da Sie Garbage Collection verzögert.</span><span class="sxs-lookup"><span data-stu-id="ed3a9-118">The implementation of `FunctionTailcall3WithInfo` should not block, because it will delay garbage collection.</span></span> <span data-ttu-id="ed3a9-119">Die-Implementierung sollte keine Garbage Collection versuchen, weil der Stapel möglicherweise nicht in einem Garbage Collection freundlichen Zustand ist.</span><span class="sxs-lookup"><span data-stu-id="ed3a9-119">The implementation should not attempt a garbage collection, because the stack may not be in a garbage collection-friendly state.</span></span> <span data-ttu-id="ed3a9-120">Wenn versucht wird, eine Garbage Collection auszuführen, wird die Laufzeit blockiert, bis `FunctionTailcall3WithInfo` zurückgibt.</span><span class="sxs-lookup"><span data-stu-id="ed3a9-120">If a garbage collection is attempted, the runtime will block until `FunctionTailcall3WithInfo` returns.</span></span>  
+  
+ <span data-ttu-id="ed3a9-121">Außerdem darf die FunctionTailcall3WithInfo-Funktion keinen verwalteten Code abrufen oder eine verwaltete Speicher Belegung in irgendeiner Weise auslösen.</span><span class="sxs-lookup"><span data-stu-id="ed3a9-121">Also, the FunctionTailcall3WithInfo function must not call into managed code or cause a managed memory allocation in any way.</span></span>  
+  
+## <a name="requirements"></a><span data-ttu-id="ed3a9-122">-Anforderungen</span><span class="sxs-lookup"><span data-stu-id="ed3a9-122">Requirements</span></span>  
+ <span data-ttu-id="ed3a9-123">**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="ed3a9-123">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+  
+ <span data-ttu-id="ed3a9-124">**Header:** Corprof. idl</span><span class="sxs-lookup"><span data-stu-id="ed3a9-124">**Header:** CorProf.idl</span></span>  
+  
+ <span data-ttu-id="ed3a9-125">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="ed3a9-125">**Library:** CorGuids.lib</span></span>  
+  
+ <span data-ttu-id="ed3a9-126">**.NET Framework Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ed3a9-126">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="ed3a9-127">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="ed3a9-127">See also</span></span>
+
+- [<span data-ttu-id="ed3a9-128">FunctionEnter3</span><span class="sxs-lookup"><span data-stu-id="ed3a9-128">FunctionEnter3</span></span>](../../../../docs/framework/unmanaged-api/profiling/functionenter3-function.md)
+- [<span data-ttu-id="ed3a9-129">FunctionLeave3</span><span class="sxs-lookup"><span data-stu-id="ed3a9-129">FunctionLeave3</span></span>](../../../../docs/framework/unmanaged-api/profiling/functionleave3-function.md)
+- [<span data-ttu-id="ed3a9-130">FunctionTailcall3</span><span class="sxs-lookup"><span data-stu-id="ed3a9-130">FunctionTailcall3</span></span>](../../../../docs/framework/unmanaged-api/profiling/functiontailcall3-function.md)
+- [<span data-ttu-id="ed3a9-131">FunctionEnter3WithInfo</span><span class="sxs-lookup"><span data-stu-id="ed3a9-131">FunctionEnter3WithInfo</span></span>](../../../../docs/framework/unmanaged-api/profiling/functiontailcall3-function.md)
+- [<span data-ttu-id="ed3a9-132">FunctionLeave3WithInfo</span><span class="sxs-lookup"><span data-stu-id="ed3a9-132">FunctionLeave3WithInfo</span></span>](../../../../docs/framework/unmanaged-api/profiling/functionleave3withinfo-function.md)
+- [<span data-ttu-id="ed3a9-133">SetEnterLeaveFunctionHooks3</span><span class="sxs-lookup"><span data-stu-id="ed3a9-133">SetEnterLeaveFunctionHooks3</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-setenterleavefunctionhooks3-method.md)
+- [<span data-ttu-id="ed3a9-134">SetEnterLeaveFunctionHooks3WithInfo</span><span class="sxs-lookup"><span data-stu-id="ed3a9-134">SetEnterLeaveFunctionHooks3WithInfo</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-setenterleavefunctionhooks3withinfo-method.md)
+- [<span data-ttu-id="ed3a9-135">SetFunctionIDMapper</span><span class="sxs-lookup"><span data-stu-id="ed3a9-135">SetFunctionIDMapper</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setfunctionidmapper-method.md)
+- [<span data-ttu-id="ed3a9-136">SetFunctionIDMapper2</span><span class="sxs-lookup"><span data-stu-id="ed3a9-136">SetFunctionIDMapper2</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-setfunctionidmapper2-method.md)
+- [<span data-ttu-id="ed3a9-137">Profilerstellung für globale statische Funktionen</span><span class="sxs-lookup"><span data-stu-id="ed3a9-137">Profiling Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-global-static-functions.md)
