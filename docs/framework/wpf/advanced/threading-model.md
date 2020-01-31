@@ -18,12 +18,12 @@ helpviewer_keywords:
 - nested message processing [WPF]
 - reentrancy [WPF]
 ms.assetid: 02d8fd00-8d7c-4604-874c-58e40786770b
-ms.openlocfilehash: 72fa95bde0c41e913bdaa35da7fdcd34f81b3057
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 550ba74c7ceba16c2040932918364ae2a59ea665
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75740267"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76794276"
 ---
 # <a name="threading-model"></a>Threading-Modell
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] soll Entwicklern bei Problemen mit Threading helfen. Folglich müssen die meisten [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Entwickler keine Schnittstelle schreiben, die mehr als einen Thread verwendet. Da Multithreadprogramme komplex und schwierig zu debuggen sind, sollten sie vermieden werden, wenn Singlethread-Lösungen vorhanden sind.
@@ -177,7 +177,7 @@ ms.locfileid: "75740267"
 
  `GetWeatherAsync` würde eine der zuvor beschriebenen Techniken wie z.B. das Erstellen eines Hintergrundthreads verwenden, um die Arbeit asynchron auszuführen und den aufrufenden Thread nicht zu blockieren.
 
- Einer der wichtigsten Teile dieses Musters ist das Aufrufen der *MethodName* -`Completed`-Methode für denselben Thread, der die *MethodName* -`Async` Methode aufgerufen hat, mit der begonnen werden soll. Dies könnten Sie mithilfe [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] recht einfach tun, indem Sie <xref:System.Windows.Threading.Dispatcher.CurrentDispatcher%2A>speichern – aber die nicht grafische Komponente kann nur in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Anwendungen verwendet werden, nicht in [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]-oder ASP.NET-Programmen.
+ Einer der wichtigsten Teile dieses Musters ist das Aufrufen der *MethodName* -`Completed`-Methode für denselben Thread, der die *MethodName* -`Async` Methode aufgerufen hat, mit der begonnen werden soll. Dies könnten Sie mithilfe [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] recht einfach tun, indem Sie <xref:System.Windows.Threading.Dispatcher.CurrentDispatcher%2A>speichern – aber die nicht grafische Komponente kann nur in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Anwendungen verwendet werden, nicht in Windows Forms-oder ASP.NET-Programmen.
 
  Die <xref:System.Windows.Threading.DispatcherSynchronizationContext>-Klasse erfüllt diese Anforderung – stellen Sie sich dies als vereinfachte Version von <xref:System.Windows.Threading.Dispatcher> vor, die auch mit anderen [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] Frameworks funktioniert.
 

@@ -1,41 +1,41 @@
 ---
-title: TextBox-Steuerelement (Windows Forms)
+title: TextBox-Steuerelement
 ms.date: 03/30/2017
 helpviewer_keywords:
 - text boxes
 - TextBox control [Windows Forms]
 ms.assetid: e5a06987-8aec-4271-b196-2245ba992d62
-ms.openlocfilehash: b687f83562b3a6f9dd5993f2af1c55ffe6dc8042
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7bdca52e62b6e7b014d28478b291a1157486527b
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61932508"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742791"
 ---
 # <a name="textbox-control-windows-forms"></a>TextBox-Steuerelement (Windows Forms)
-Windows Forms-Textfelder werden Eingaben von den Benutzer erhalten oder zum Anzeigen von Text verwendet. Die `TextBox` Steuerelement wird im Allgemeinen für bearbeitbaren Text verwendet, obwohl sie auch schreibgeschützt festgelegt werden kann. Textfelder können mehrere Zeilen angezeigt, Umbrechen von Text auf die Größe des Steuerelements und fügen die einfache Formatierung. Die `TextBox` Steuerelement ermöglicht es, ein einzelnes Format für Text angezeigt oder in das Steuerelement eingegeben haben.  
+Windows Forms Textfelder werden verwendet, um Eingaben vom Benutzer zu erhalten oder Text anzuzeigen. Das `TextBox` Steuerelement wird im Allgemeinen für bearbeitbaren Text verwendet, obwohl es auch als schreibgeschützt festgelegt werden kann. Textfelder können mehrere Zeilen anzeigen, Text in die Größe des Steuer Elements umschließen und grundlegende Formatierung hinzufügen. Das `TextBox` Steuerelement ermöglicht ein einzelnes Format für Text, das im Steuerelement angezeigt oder eingegeben wird.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Übersicht über das TextBox-Steuerelement](textbox-control-overview-windows-forms.md)  
  Hier werden das Steuerelement und seine wichtigsten Funktionen und Eigenschaften erläutert.  
   
  [Vorgehensweise: Steuern der Einfügemarke in einem TextBox-Steuerelement in Windows Forms](how-to-control-the-insertion-point-in-a-windows-forms-textbox-control.md)  
- Enthält Anweisungen zum angeben, in dem die Einfügemarke angezeigt wird, wenn ein Bearbeitungssteuerelement zunächst den Fokus erhält.  
+ Gibt an, wo die Einfügemarke angezeigt wird, wenn ein Bearbeitungs Steuerelement zum ersten Mal den Fokus erhält.  
   
- [Vorgehensweise: Erstellen Sie ein Kennwort-Textfeld mit dem TextBox-Steuerelement in Windows Forms](how-to-create-a-password-text-box-with-the-windows-forms-textbox-control.md)  
- Erläutert das verbergen, was in das Textfeld eingegeben wird.  
+ [Vorgehensweise: Erstellen eines Kennwort-Textfelds mit dem TextBox-Steuerelement in Windows Forms](how-to-create-a-password-text-box-with-the-windows-forms-textbox-control.md)  
+ Erläutert, wie die typisierten Elemente in ein Textfeld verborgen werden.  
   
  [Vorgehensweise: Erstellen eines schreibgeschützten Textfelds](how-to-create-a-read-only-text-box-windows-forms.md)  
- Beschreibt, wie der Inhalt eines Textfelds zu verhindern.  
+ Beschreibt, wie verhindert wird, dass der Inhalt eines Textfelds geändert wird.  
   
- [Vorgehensweise: Setzen von Anführungszeichen in Zeichenfolgen](how-to-put-quotation-marks-in-a-string-windows-forms.md)  
- Erläutert, Hinzufügen von Anführungszeichen in eine Zeichenfolge in einem Textfeld.  
+ [Gewusst wie: Setzen von Anführungszeichen in Zeichenfolgen](how-to-put-quotation-marks-in-a-string-windows-forms.md)  
+ Erläutert das Hinzufügen von Anführungszeichen zu einer Zeichenfolge in einem Textfeld.  
   
- [Vorgehensweise: Wählen Sie Text im TextBox-Steuerelement von Windows Forms](how-to-select-text-in-the-windows-forms-textbox-control.md)  
- Erläutert das Markieren von Text in einem Textfeld.  
+ [Vorgehensweise: Programmgesteuertes Auswählen von Text im TextBox-Steuerelement in Windows Forms](how-to-select-text-in-the-windows-forms-textbox-control.md)  
+ Erläutert, wie Text in einem Textfeld hervorgehoben wird.  
   
- [Vorgehensweise: Zeigen Sie mehrerer Zeilen in der TextBox-Steuerelement in Windows Forms an](how-to-view-multiple-lines-in-the-windows-forms-textbox-control.md)  
- Beschreibt, wie ein Textfeld bildlauffähigen vornehmen.  
+ [Vorgehensweise: Anzeigen mehrerer Zeilen im TextBox-Steuerelement in Windows Forms](how-to-view-multiple-lines-in-the-windows-forms-textbox-control.md)  
+ Beschreibt, wie Sie ein Textfeld ScrollBar machen können.  
   
 ## <a name="reference"></a>Referenz  
  <xref:System.Windows.Forms.TextBox>-Klasse  
