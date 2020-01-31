@@ -2,12 +2,12 @@
 title: Dienstendpunkte und Adressieren von Warteschlangen
 ms.date: 03/30/2017
 ms.assetid: 7d2d59d7-f08b-44ed-bd31-913908b83d97
-ms.openlocfilehash: 6bdd3b0966f85ff456e0e2ed0b6da773046201dc
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: ec932e83a2b37330f54be545a45358a5ab055423
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837986"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744617"
 ---
 # <a name="service-endpoints-and-queue-addressing"></a>Dienstendpunkte und Adressieren von Warteschlangen
 In diesem Thema wird erläutert, wie Clients Dienste adressieren, die Daten aus Warteschlangen auslesen, und wie Dienstendpunkte Warteschlangen zugeordnet werden. Zur Erinnerung: die folgende Abbildung zeigt die Bereitstellung der Bereitstellung der klassischen Windows Communication Foundation (WCF) in der Warteschlange.  
@@ -21,7 +21,7 @@ In diesem Thema wird erläutert, wie Clients Dienste adressieren, die Daten aus 
   
  Pfadnamen werden "FormatNames" zugeordnet, um weitere Aspekte der Adresse zu bestimmen, einschließlich Routing und Warteschlangen-Manager-Übertragungsprotokoll. Der Warteschlangen-Manager unterstützt zwei Übertragungsprotokolle: das systemeigene MSMQ-Protokoll und das SOAP Reliable Messaging Protocol (SRMP).  
   
- Weitere Informationen zu MSMQ-Pfad-und-Format Namen finden Sie unter [Informationen zu Message Queuing](https://go.microsoft.com/fwlink/?LinkId=94837).  
+ Weitere Informationen zu MSMQ-Pfad-und-Format Namen finden Sie unter [Informationen zu Message Queuing](https://docs.microsoft.com/previous-versions/windows/desktop/legacy/ms706032(v=vs.85)).  
   
 ## <a name="netmsmqbinding-and-service-addressing"></a>NetMsmqBinding und Dienstadressierung  
  Bei der Adressierung einer Nachricht an einen Dienst wird das Schema in dem URI anhand des für die Kommunikation verwendeten Transports ausgewählt. Jeder Transport in WCF verfügt über ein eindeutiges Schema. Das Schema muss die Art des für die Kommunikation verwendeten Transports wiedergeben, z. B. net.tcp, net.pipe, HTTP usw.  
@@ -96,7 +96,7 @@ In diesem Thema wird erläutert, wie Clients Dienste adressieren, die Daten aus 
   
  MSMQ. Format Name:\<*MSMQ-Format-Name*>>  
   
- Der MSMQ-Format-Name hat das von MSMQ in [Informationen zu Message Queuing](https://go.microsoft.com/fwlink/?LinkId=94837)angegebene Format.  
+ Der MSMQ-Format-Name hat das von MSMQ in [Informationen zu Message Queuing](https://docs.microsoft.com/previous-versions/windows/desktop/legacy/ms706032(v=vs.85))angegebene Format.  
   
  Beachten Sie, dass Sie nur direkte Formatnamen verwenden können und dass Sie öffentliche und private Formatnamen (dies erfordert die Integration von Active Directory) verwenden können, wenn Nachrichten von einer Warteschlange mithilfe von `MsmqIntegrationBinding` empfangen werden. Es wird jedoch empfohlen, direkte Formatnamen zu verwenden. Beispielsweise verursacht unter Windows Vista die Verwendung eines beliebigen anderen Format namens einen Fehler, da das System versucht, eine unter Warteschlange zu öffnen, die nur mit direkten Format Namen geöffnet werden kann.  
   

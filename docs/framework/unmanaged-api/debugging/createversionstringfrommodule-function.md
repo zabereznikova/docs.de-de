@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 3d2fe9bd-75ef-4364-84a6-da1e1994ac1a
 topic_type:
 - apiref
-ms.openlocfilehash: 1571ff796a10c5ddcd85cc2ce130e62eab2ed8f2
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 609d6e47c951aa104cb23084b65e98827a6851f1
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73132084"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76789176"
 ---
 # <a name="createversionstringfrommodule-function"></a>CreateVersionStringFromModule-Funktion
 Erstellt eine Versionszeichenfolge aus einem CLR-Pfad (Common Language Runtime) in einem Zielprozess.  
@@ -39,7 +39,7 @@ HRESULT CreateVersionStringFromModule (
 );  
 ```  
   
-## <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameters  
  `pidDebuggee`  
  [in] Bezeichner des Prozesses, in den die Ziel-CLR geladen wird.  
   
@@ -72,11 +72,11 @@ HRESULT CreateVersionStringFromModule (
  `pidDebuggee` verweist auf keinen gültigen Prozess, oder anderer Fehler,  
   
 ## <a name="remarks"></a>Hinweise  
- Diese Funktion akzeptiert einen CLR-Prozess, der von `pidDebuggee` und einem Zeichenfolgepfad identifiziert wird, der durch `szModuleName` angegeben wird. Die Versionszeichenfolge wird im Puffer zurückgegeben, auf den `pBuffer` zeigt. Diese Zeichenfolge ist für den Funktionsbenutzer nicht transparent. Das heißt, gibt es keine systeminterne Bedeutung in der Versionszeichenfolge selbst. Sie wird nur im Kontext dieser Funktion und der Funktion "| [atedebugginginterfakefromversion](../../../../docs/framework/unmanaged-api/debugging/createdebugginginterfacefromversion-function-for-silverlight.md)" verwendet.  
+ Diese Funktion akzeptiert einen CLR-Prozess, der von `pidDebuggee` und einem Zeichenfolgepfad identifiziert wird, der durch `szModuleName` angegeben wird. Die Versionszeichenfolge wird im Puffer zurückgegeben, auf den `pBuffer` zeigt. Diese Zeichenfolge ist für den Funktionsbenutzer nicht transparent. Das heißt, gibt es keine systeminterne Bedeutung in der Versionszeichenfolge selbst. Sie wird nur im Kontext dieser Funktion und der Funktion "| [atedebugginginterfakefromversion](createdebugginginterfacefromversion-function-for-silverlight.md)" verwendet.  
   
  Diese Funktion sollte zweimal aufgerufen werden. Übergeben Sie beim ersten Aufruf NULL für `pBuffer` und `cchBuffer`. In diesem Fall wird die für `pBuffer` erforderliche Größe des Puffers in `pdwLength` zurückgegeben. Sie können dann die Funktion ein zweites Mal aufrufen und den Puffer in `pBuffer` und dessen Größe in `cchBuffer` übergeben.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>-Anforderungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** dbgshim. h  

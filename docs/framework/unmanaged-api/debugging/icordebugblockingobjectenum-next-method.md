@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0121753f-ebea-48d0-aeb2-ed7fda76dc60
 topic_type:
 - apiref
-ms.openlocfilehash: 3a1c4a931a61186c4737aada47ceb861e7848e7b
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: c25f26bb0f1f34e3799bab4bec7e697d393cccb4
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73122830"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76784512"
 ---
 # <a name="icordebugblockingobjectenumnext-method"></a>ICorDebugBlockingObjectEnum::Next-Methode
-Ruft die angegebene Anzahl von [Cordebug-blockingobject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md) -Objekten ab der aktuellen Position aus der-Enumeration ab.  
+Ruft die angegebene Anzahl von [Cordebug-blockingobject](cordebugblockingobject-structure.md) -Objekten ab der aktuellen Position aus der-Enumeration ab.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -34,12 +34,12 @@ HRESULT Next([in] ULONG  celt,
              [out] ULONG *pceltFetched;  
 ```  
   
-## <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameters  
  `celt`  
  in Die Anzahl der abzurufenden-Objekte.  
   
  `values`  
- vorgenommen Ein Array von Zeigern auf [corentbugblockingobject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md) -Objekte.  
+ vorgenommen Ein Array von Zeigern auf [corentbugblockingobject](cordebugblockingobject-structure.md) -Objekte.  
   
  `pceltFetched`  
  vorgenommen Ein Zeiger auf die Anzahl der abgerufenen Objekte.  
@@ -49,7 +49,7 @@ HRESULT Next([in] ULONG  celt,
   
 |HRESULT|Beschreibung|  
 |-------------|-----------------|  
-|S_OK|Die Methode wurde erfolgreich abgeschlossen.|  
+|S_OK|Die Methode wurde abgeschlossen.|  
 |S_FALSE|`pceltFetched` entspricht nicht `celt`.|  
   
 ## <a name="remarks"></a>Hinweise  
@@ -58,19 +58,19 @@ HRESULT Next([in] ULONG  celt,
  Die Eingabe Array Werte müssen mindestens eine `celt`Größe aufweisen. Das Array wird entweder mit den nächsten `celt` Werten in der-Enumeration oder mit allen verbleibenden Werten gefüllt, wenn weniger als `celt` verbleiben. Wenn diese Methode zurückgegeben wird, wird `pceltFetched` mit der Anzahl der abgerufenen Werte aufgefüllt. Wenn `values` ungültige Zeiger enthält oder auf einen Puffer zeigt, der kleiner als `celt`ist, oder wenn `pceltFetched` ein ungültiger Zeiger ist, ist das Ergebnis nicht definiert.  
   
 > [!NOTE]
-> Obwohl die [Cordebug-blockingobject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md) -Struktur nicht freigegeben werden muss, muss die Schnittstelle "ICorDebug Value" in der IT-Abteilung freigegeben werden.  
+> Obwohl die [Cordebug-blockingobject](cordebugblockingobject-structure.md) -Struktur nicht freigegeben werden muss, muss die Schnittstelle "ICorDebug Value" in der IT-Abteilung freigegeben werden.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>-Anforderungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   
  **Bibliothek:** CorGuids.lib  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework Versionen:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [ICorDebugDataTarget-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-interface.md)
-- [Debuggen von Schnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [Debuggen](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [ICorDebugDataTarget-Schnittstelle](icordebugdatatarget-interface.md)
+- [Debuggen von Schnittstellen](debugging-interfaces.md)
+- [Debuggen](index.md)

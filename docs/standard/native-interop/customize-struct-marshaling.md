@@ -5,12 +5,12 @@ ms.date: 01/18/2019
 dev_langs:
 - csharp
 - cpp
-ms.openlocfilehash: e69746e03cefa2444d4c34b582730824ff357858
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 7f8d1ad93633d6feef9c3c6f5d19aad52105968c
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75706347"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76741534"
 ---
 # <a name="customizing-structure-marshaling"></a>Anpassen des Marshallings für Strukturen
 
@@ -20,11 +20,11 @@ Manchmal entsprechen die Standardregeln für das Marshallen nicht genau Ihren An
 
 .NET bietet das <xref:System.Runtime.InteropServices.StructLayoutAttribute?displayProperty=nameWithType>-Attribut und die <xref:System.Runtime.InteropServices.LayoutKind?displayProperty=nameWithType>-Enumeration, damit Sie anpassen können, wie Felder im Arbeitsspeicher abgelegt werden. Die folgende Anleitung hilft Ihnen dabei, gängige Probleme zu vermeiden.
 
-**✔️ ERWÄGEN SIE** nach Möglichkeit die Verwendung von `LayoutKind.Sequential`.
+✔️ sollten Sie `LayoutKind.Sequential` verwenden, wenn dies möglich ist.
 
-**✔️ VERWENDEN SIE**`LayoutKind.Explicit` beim Marshallen nur dann, wenn die native Struktur ebenfalls ein explizites Layout aufweist, beispielsweise eine Union.
+✔️ nur `LayoutKind.Explicit` beim Marshalling verwenden, wenn die native Struktur auch ein explizites Layout aufweist, z. b. eine Union.
 
-**❌ vermeiden** Sie die Verwendung von `LayoutKind.Explicit` beim Marshalling von Strukturen auf nicht-Windows-Plattformen, wenn Sie Laufzeiten vor .net Core 3,0 ausrichten müssen. Die .net Core-Runtime vor 3,0 unterstützt nicht das Übergeben von expliziten Strukturen nach Wert an systemeigene Funktionen auf Intel-oder 64 AMD-nicht-Windows-Systemen. Die Runtime unterstützt jedoch auf allen Plattformen die Übergabe expliziter Strukturen per Verweis.
+❌ vermeiden Sie die Verwendung von `LayoutKind.Explicit` beim Marshalling von Strukturen auf nicht-Windows-Plattformen, wenn Sie Laufzeiten vor .net Core 3,0 ausrichten müssen. Die .net Core-Runtime vor 3,0 unterstützt nicht das Übergeben von expliziten Strukturen nach Wert an systemeigene Funktionen auf Intel-oder 64 AMD-nicht-Windows-Systemen. Die Runtime unterstützt jedoch auf allen Plattformen die Übergabe expliziter Strukturen per Verweis.
 
 ## <a name="customizing-boolean-field-marshaling"></a>Anpassen des Marshallens boolescher Felder
 

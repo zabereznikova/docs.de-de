@@ -1,5 +1,5 @@
 ---
-title: Übersicht über die NotifyIcon-Komponente (Windows Forms)
+title: Übersicht über die NotifyIcon-Komponente
 ms.date: 03/30/2017
 f1_keywords:
 - NotifyIcon
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - system tray icons [Windows Forms], about system tray icons
 - system tray icons [Windows Forms], using in Windows Forms
 ms.assetid: 5b9189fa-d4ae-41a6-9b97-eb1f44bb1a69
-ms.openlocfilehash: def109799ddfb25b6f56a4f18d52bb19f62842f5
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 587bf514db853f1122ed16abc05a195985c5ce8d
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65645711"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742126"
 ---
 # <a name="notifyicon-component-overview-windows-forms"></a>Übersicht über die NotifyIcon-Komponente (Windows Forms)
 
@@ -27,7 +27,7 @@ Jede <xref:System.Windows.Forms.NotifyIcon>-Komponente zeigt ein einzelnes Symbo
 
 Sie können SprechblasenInfos, Kontextmenüs und QuickInfos mit einem <xref:System.Windows.Forms.NotifyIcon> verknüpfen, um den Benutzer zu unterstützen.
 
-Sie können eine SprechblasenInfo für ein <xref:System.Windows.Forms.NotifyIcon> anzeigen, indem Sie die <xref:System.Windows.Forms.NotifyIcon.ShowBalloonTip%2A>-Methode aufrufen und die Zeitspanne angeben, für die die SprechblasenInfo angezeigt werden soll. Über <xref:System.Windows.Forms.NotifyIcon.BalloonTipText%2A>, <xref:System.Windows.Forms.NotifyIcon.BalloonTipIcon%2A> bzw. <xref:System.Windows.Forms.NotifyIcon.BalloonTipTitle%2A> können Sie auch den Text, das Symbol bzw. den Titel der SprechblasenInfo angeben. <xref:System.Windows.Forms.NotifyIcon>-Komponenten können auch zugeordnete QuickInfos und Kontextmenüs haben. Weitere Informationen finden Sie unter [Übersicht über die ToolTip-Komponente](tooltip-component-overview-windows-forms.md) und [Übersicht über die ContextMenu-Komponente](contextmenu-component-overview-windows-forms.md).
+Sie können eine SprechblasenInfo für ein <xref:System.Windows.Forms.NotifyIcon> anzeigen, indem Sie die <xref:System.Windows.Forms.NotifyIcon.ShowBalloonTip%2A>-Methode aufrufen und die Zeitspanne angeben, für die die SprechblasenInfo angezeigt werden soll. Über <xref:System.Windows.Forms.NotifyIcon.BalloonTipText%2A>, <xref:System.Windows.Forms.NotifyIcon.BalloonTipIcon%2A> bzw. <xref:System.Windows.Forms.NotifyIcon.BalloonTipTitle%2A> können Sie auch den Text, das Symbol bzw. den Titel der SprechblasenInfo angeben. <xref:System.Windows.Forms.NotifyIcon>-Komponenten können auch zugeordnete QuickInfos und Kontextmenüs haben. Weitere Informationen finden Sie unter Übersicht über die [ToolTip-Komponente](tooltip-component-overview-windows-forms.md) und [Übersicht über die ContextMenu-Komponente](contextmenu-component-overview-windows-forms.md).
 
 ## <a name="see-also"></a>Siehe auch
 

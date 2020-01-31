@@ -5,18 +5,18 @@ helpviewer_keywords:
 - controls, UI Automation support for
 - UI Automation, support for standard controls
 ms.assetid: 3770ea8a-2655-4add-9c59-fe0610ad5084
-ms.openlocfilehash: ed5e4f6ab23fe9ae77c94616a668da8accb46d4b
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 49277073706444fd611ae41e762442388ac50b71
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75741698"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76789606"
 ---
 # <a name="ui-automation-support-for-standard-controls"></a>Benutzeroberflächenautomatisierungs-Unterstützung für Standardsteuerelemente
 > [!NOTE]
 > Diese Dokumentation ist für .NET Framework-Entwickler vorgesehen, die die verwalteten [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]-Klassen verwenden möchten, die im <xref:System.Windows.Automation>-Namespace definiert sind. Aktuelle Informationen zur [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]finden Sie auf der Seite zur [Windows-Automatisierungs-API: UI-Automatisierung](/windows/win32/winauto/entry-uiauto-win32).  
   
- Dieses Thema enthält Informationen über [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] Unterstützung für Standard Steuerelemente in Anwendungen, die für die Frameworks [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)], Win32 und [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)] entwickelt wurden.  
+ Dieses Thema enthält Informationen über [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] Unterstützung für Standard Steuerelemente in Anwendungen, die für die Frameworks [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)], Win32 und Windows Forms entwickelt wurden.  
   
 <a name="Windows_Presentation_Foundation_Controls"></a>   
 ## <a name="windows-presentation-foundation-controls"></a>WPF-Steuerelemente (Windows Presentation Foundation)  
@@ -169,4 +169,4 @@ ms.locfileid: "75741698"
   
 ## <a name="see-also"></a>Siehe auch
 
-- [UI Automation Control Types](ui-automation-control-types.md)
+- [Steuerelementtypen der Benutzeroberflächenautomatisierung](ui-automation-control-types.md)

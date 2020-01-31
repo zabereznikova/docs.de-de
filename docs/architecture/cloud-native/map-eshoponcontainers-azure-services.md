@@ -2,12 +2,12 @@
 title: Zuordnen von eShopOnContainers zu Azure-Diensten
 description: Zuordnung von eshoponcontainers zu Azure-Diensten wie Azure Kubernetes Service, API-Gateway und Azure Service Bus.
 ms.date: 06/30/2019
-ms.openlocfilehash: 67430da18c0a12c694426214de33e85c2113e454
-ms.sourcegitcommit: 992f80328b51b165051c42ff5330788627abe973
+ms.openlocfilehash: eb37be94461a5373afe328572a94892dec50432d
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "73841192"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76781217"
 ---
 # <a name="mapping-eshoponcontainers-to-azure-services"></a>Zuordnen von eShopOnContainers zu Azure-Diensten
 
@@ -44,7 +44,7 @@ Mithilfe von APIM können Anwendungen verschiedene Dienstgruppen verfügbar mach
 
 Eine weitere Option, wenn Ihre Anwendung AKS verwendet, ist die Bereitstellung des Eingangs Controllers des Azure-Gateways als Pod innerhalb Ihres AKS-Clusters. Dadurch kann Ihr Cluster in ein Azure-Anwendung Gateway integriert werden, sodass das Gateway den Lastenausgleich für den Datenverkehr zu den AKS-Pods ermöglicht. [Erfahren Sie mehr über den Eingangs Controller des Azure-Gateways für AKS](https://github.com/Azure/application-gateway-kubernetes-ingress).
 
-## <a name="data"></a>Daten
+## <a name="data"></a>importieren
 
 Die verschiedenen Back-End-Dienste, die von eshoponcontainers verwendet werden, haben unterschiedliche Speicheranforderungen. Mehrere-Webdienste verwenden SQL Server-Datenbanken. Der Warenkorb-microservice nutzt einen redis-Cache für seine Persistenz. Der-Speicherort-mikroservice erwartet eine MongoDB-API für seine Daten. Azure unterstützt jedes dieser Datenformate.
 
@@ -54,7 +54,7 @@ Die eshoponcontainers-Anwendung speichert den aktuellen Einkaufskorb des Benutze
 
 Der Speicherorte für den Speicherort verwendet eine MongoDB-nosql-Datenbank für seine Persistenz. Während der Entwicklung kann die Datenbank in einem eigenen Container bereitgestellt werden, während der Dienst in der Produktionsumgebung [Azure Cosmos DB-API für MongoDB](https://docs.microsoft.com/azure/cosmos-db/mongodb-introduction)nutzen kann. Einer der Vorteile von Azure Cosmos DB ist die Möglichkeit, mehrere verschiedene Kommunikationsprotokolle zu nutzen, darunter eine SQL-API und gängige nosql-APIs, einschließlich MongoDB, Cassandra, Gremlin und Azure Table Storage. Azure Cosmos DB bietet eine vollständig verwaltete und global verteilte Database as a Service, die skaliert werden kann, um die Anforderungen der Dienste zu erfüllen, die Sie verwenden.
 
-Verteilte Daten in Cloud-native Anwendungen werden in [Kapitel 5](distributed-data.md)ausführlicher behandelt.
+Verteilte Daten in Cloud-native Anwendungen werden in [Kapitel 5](database-per-microservice.md)ausführlicher behandelt.
 
 ## <a name="event-bus"></a>Ereignisbus
 

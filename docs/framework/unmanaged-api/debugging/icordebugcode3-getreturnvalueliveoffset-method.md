@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 8c2ff5d8-8c04-4423-b1e1-e1c8764b36d3
 topic_type:
 - apiref
-ms.openlocfilehash: 77cda2c3d30b5926da219a38b762295818ca54a1
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: dc03365b72a5f3613402faf1aed44b5683e9892c
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73121198"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76777836"
 ---
 # <a name="icordebugcode3getreturnvalueliveoffset-method"></a>ICorDebugCode3::GetReturnValueLiveOffset-Methode
 Ruft während eines festgelegten IL-Offsets die systemeigenen Offsets ab, in denen ein Haltepunkt eingefügt werden sollte, damit der Debugger den Rückgabewert aus einer Funktion abrufen kann.  
@@ -38,7 +38,7 @@ HRESULT GetReturnValueLiveOffset(
 );  
 ```  
   
-## <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameters  
  `ILoffset`  
  Der IL-Offset. Es muss sich um eine Funktionsaufrufsite handeln, andernfalls schlägt der Funktionsaufruf fehl.  
   
@@ -52,14 +52,14 @@ HRESULT GetReturnValueLiveOffset(
  Ein Array systemeigener Offsets. Normalerweise enthält `pOffsets` einen einzelnen Offset, obwohl eine einzelne IL-Anweisung mehreren `CALL`-Assemblyanweisungen zugeordnet werden kann.  
   
 ## <a name="remarks"></a>Hinweise  
- Diese Methode wird zusammen mit der [ICorDebugILFrame3:: getreturnvalueforiloffset](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe3-getreturnvalueforiloffset-method.md) -Methode verwendet, um den Rückgabewert einer Methode, die einen Verweistyp zurückgibt, zu erhalten. Durch die Übergabe eines IL-Offsets an eine Funktionsaufrufsite für diese Methode wird mindestens ein systemeigener Offset zurückgegeben. In diesem Fall kann der Debugger Haltepunkte für diese systemeigenen Offsets in der Funktion festlegen. Wenn der Debugger auf einen der Breakpoints trifft, können Sie denselben IL-Offset übergeben, den Sie an diese Methode übergeben haben, an die [ICorDebugILFrame3:: getreturnvalueforiloffset](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe3-getreturnvalueforiloffset-method.md) -Methode, um den Rückgabewert zu erhalten. Der Debugger sollte dann alle von ihm festgelegten Haltepunkte entfernen.  
+ Diese Methode wird zusammen mit der [ICorDebugILFrame3:: getreturnvalueforiloffset](icordebugilframe3-getreturnvalueforiloffset-method.md) -Methode verwendet, um den Rückgabewert einer Methode, die einen Verweistyp zurückgibt, zu erhalten. Durch die Übergabe eines IL-Offsets an eine Funktionsaufrufsite für diese Methode wird mindestens ein systemeigener Offset zurückgegeben. In diesem Fall kann der Debugger Haltepunkte für diese systemeigenen Offsets in der Funktion festlegen. Wenn der Debugger auf einen der Breakpoints trifft, können Sie denselben IL-Offset übergeben, den Sie an diese Methode übergeben haben, an die [ICorDebugILFrame3:: getreturnvalueforiloffset](icordebugilframe3-getreturnvalueforiloffset-method.md) -Methode, um den Rückgabewert zu erhalten. Der Debugger sollte dann alle von ihm festgelegten Haltepunkte entfernen.  
   
 > [!WARNING]
-> Die Methoden `ICorDebugCode3::GetReturnValueLiveOffset` und [ICorDebugILFrame3:: getreturnvalueforiloffset](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe3-getreturnvalueforiloffset-method.md) ermöglichen es Ihnen, Rückgabewert Informationen nur für Verweis Typen zu erhalten. Das Abrufen von Rückgabewertinformationen für Werttypen wird nicht unterstützt (alle Typen, die von <xref:System.ValueType> abgeleitet werden).  
+> Die Methoden `ICorDebugCode3::GetReturnValueLiveOffset` und [ICorDebugILFrame3:: getreturnvalueforiloffset](icordebugilframe3-getreturnvalueforiloffset-method.md) ermöglichen es Ihnen, Rückgabewert Informationen nur für Verweis Typen zu erhalten. Das Abrufen von Rückgabewertinformationen für Werttypen wird nicht unterstützt (alle Typen, die von <xref:System.ValueType> abgeleitet werden).  
   
  Die Funktion gibt die `HRESULT`-Werte zurück, die in der folgenden Tabelle dargestellt sind.  
   
-|`HRESULT` -Wert|Beschreibung|  
+|`HRESULT`-Wert|Beschreibung|  
 |---------------------|-----------------|  
 |`S_OK`|Erfolgreich.|  
 |`CORDBG_E_INVALID_OPCODE`|Die angegebene IL-Offsetsite ist keine Aufrufanweisung, oder die Funktion gibt `void` zurück.|  
@@ -67,16 +67,16 @@ HRESULT GetReturnValueLiveOffset(
   
  Die `ICorDebugCode3::GetReturnValueLiveOffset`-Methode ist nur auf x86- und AMD64-basierten Systemen verfügbar.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>-Anforderungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   
  **Bibliothek:** CorGuids.lib  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v451plus](../../../../includes/net-current-v451plus-md.md)]  
+ **.NET Framework Versionen:** [!INCLUDE[net_current_v451plus](../../../../includes/net-current-v451plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [GetReturnValueForILOffset-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe3-getreturnvalueforiloffset-method.md)
-- [ICorDebugCode3-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/icordebugcode3-interface.md)
+- [GetReturnValueForILOffset-Methode](icordebugilframe3-getreturnvalueforiloffset-method.md)
+- [ICorDebugCode3-Schnittstelle](icordebugcode3-interface.md)

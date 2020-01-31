@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Festlegen und Zurückgeben von numerischen Werten mit dem NumericUpDown-Steuerelement in Windows Forms'
+title: Festlegen und Zurückgeben von numerischen Werten mit dem NumericUpDown-Steuerelement
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,19 +11,19 @@ helpviewer_keywords:
 - Windows Forms controls, NumericUpDown
 - NumericUpDown control [Windows Forms], setting and returning values
 ms.assetid: 5bd8f8cd-4c12-49ea-9cc3-2a647d064689
-ms.openlocfilehash: 3da2c7b057732e9b2db5e048dec037e4e9910c0a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: a0b264fec9619b467c293bcb96278c4517775ac3
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64625734"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76743022"
 ---
-# <a name="how-to-set-and-return-numeric-values-with-the-windows-forms-numericupdown-control"></a>Vorgehensweise: Festlegen und Zurückgeben von numerischen Werten mit dem NumericUpDown-Steuerelement in Windows Forms
-Der numerische Wert, der die Windows-Formulare <xref:System.Windows.Forms.NumericUpDown> Steuerelement richtet sich nach der <xref:System.Windows.Forms.NumericUpDown.Value%2A> Eigenschaft. Sie können bedingte Tests für den Wert des Steuerelements genau wie bei einer anderen Eigenschaft schreiben. Nach der <xref:System.Windows.Forms.NumericUpDown.Value%2A> festgelegt wird, können Sie sie direkt vom Schreiben von Code zum Ausführen von Operationen anpassen oder Sie rufen die <xref:System.Windows.Forms.NumericUpDown.UpButton%2A> und <xref:System.Windows.Forms.NumericUpDown.DownButton%2A> Methoden.  
+# <a name="how-to-set-and-return-numeric-values-with-the-windows-forms-numericupdown-control"></a>Gewusst wie: Festlegen und Zurückgeben von numerischen Werten mit dem NumericUpDown-Steuerelement in Windows Forms
+Der numerische Wert des Windows Forms <xref:System.Windows.Forms.NumericUpDown> Steuer Elements wird durch seine <xref:System.Windows.Forms.NumericUpDown.Value%2A>-Eigenschaft bestimmt. Sie können bedingte Tests für den Wert des Steuer Elements wie jede andere Eigenschaft schreiben. Nachdem Sie die <xref:System.Windows.Forms.NumericUpDown.Value%2A>-Eigenschaft festgelegt haben, können Sie Sie direkt anpassen, indem Sie Code zum Ausführen von Vorgängen schreiben, oder Sie können die Methoden <xref:System.Windows.Forms.NumericUpDown.UpButton%2A> und <xref:System.Windows.Forms.NumericUpDown.DownButton%2A> aufzurufen.  
   
-### <a name="to-set-the-numeric-value"></a>Zum Festlegen des numerischen Werts  
+### <a name="to-set-the-numeric-value"></a>So legen Sie den numerischen Wert fest  
   
-1. Weisen Sie einen Wert, der <xref:System.Windows.Forms.NumericUpDown.Value%2A> Eigenschaft im Code oder in das Fenster "Eigenschaften".  
+1. Weisen Sie der <xref:System.Windows.Forms.NumericUpDown.Value%2A>-Eigenschaft im Code oder in der Eigenschaftenfenster einen Wert zu.  
   
     ```vb  
     NumericUpDown1.Value = 55  
@@ -37,9 +37,9 @@ Der numerische Wert, der die Windows-Formulare <xref:System.Windows.Forms.Numeri
     numericUpDown1->Value = 55;  
     ```  
   
-     - oder -   
+     \- oder -  
   
-2. Rufen Sie die <xref:System.Windows.Forms.NumericUpDown.UpButton%2A> oder <xref:System.Windows.Forms.NumericUpDown.DownButton%2A> Methode zu erhöhen oder verringern Sie den Wert entsprechend der Angabe in der <xref:System.Windows.Forms.NumericUpDown.Increment%2A> Eigenschaft.  
+2. Ruft den <xref:System.Windows.Forms.NumericUpDown.UpButton%2A> oder <xref:System.Windows.Forms.NumericUpDown.DownButton%2A> Methode auf, um den Wert um den in der <xref:System.Windows.Forms.NumericUpDown.Increment%2A>-Eigenschaft angegebenen Betrag zu vergrößern oder zu verkleinern.  
   
     ```vb  
     NumericUpDown1.UpButton()  
@@ -53,9 +53,9 @@ Der numerische Wert, der die Windows-Formulare <xref:System.Windows.Forms.Numeri
     numericUpDown1->UpButton();  
     ```  
   
-### <a name="to-return-the-numeric-value"></a>Den numerischen Wert zurückgegeben.  
+### <a name="to-return-the-numeric-value"></a>So geben Sie den numerischen Wert zurück  
   
-- Zugriff die <xref:System.Windows.Forms.NumericUpDown.Value%2A> Eigenschaft im Code.  
+- Greifen Sie im Code auf die <xref:System.Windows.Forms.NumericUpDown.Value%2A>-Eigenschaft zu.  
   
     ```vb  
     If NumericUpDown1.Value >= 65 Then  

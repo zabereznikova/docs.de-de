@@ -1,5 +1,5 @@
 ---
-title: WPF-Sicherheitsstrategie – Sicherheitsentwicklung
+title: Sicherheitsstrategie und Engineering
 ms.date: 03/30/2017
 helpviewer_keywords:
 - security [WPF], testing techniques
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Security Development Lifecycle (SDL), critical code management
 - threat modeling [WPF]
 ms.assetid: 0fc04394-4e47-49ca-b0cf-8cd1161d95b9
-ms.openlocfilehash: 5dd80cff7675a7d3236c7409fd882ebf3a3cd7b1
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 57ee0c8242c0bca1b2c76e7751ed25f6a889c264
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73424919"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76741836"
 ---
 # <a name="wpf-security-strategy---security-engineering"></a>WPF-Sicherheitsstrategie – Sicherheitsentwicklung
 Trustworthy Computing ist eine Microsoft-Initiative, die sicherstellen soll, dass sicherer Code entwickelt wird. Ein wichtiges Element der Initiative zum vertrauenswürdigen Computing ist die Microsoft Security Development Lifecycle (SDL). Die SDL ist eine Engineering-Übung, die in Verbindung mit standardmäßigen Entwicklungsprozessen verwendet wird, um die Bereitstellung von sicherem Code zu vereinfachen. Das SDL besteht aus zehn Phasen, die bewährte Methoden mit Formalisierung, Measurability und zusätzlicher Struktur kombinieren, einschließlich:  
@@ -87,7 +87,7 @@ Trustworthy Computing ist eine Microsoft-Initiative, die sicherstellen soll, das
   
 <a name="critical_code"></a>   
 ### <a name="critical-code-management"></a>Verwaltung von sicherheitsrelevantem Code  
- Bei XAML-Browser Anwendungen (XBAPs) erstellt [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] eine Sicherheits Sandbox mithilfe .NET Framework Unterstützung für das Markieren und Nachverfolgen von Sicherheits kritischem Code, der Berechtigungen erweitert (siehe **sicherheitsrelevante Methodik** in [WPF-Sicherheitsstrategie). Plattformsicherheit](wpf-security-strategy-platform-security.md)). Angesichts der hohen Qualitätsanforderungen bei sicherheitskritischem Code wird derartiger Code durch eine zusätzliche Ebene der Quellcodeverwaltung und Sicherheitsüberwachung geschützt. Annähernd 5 % bis 10 % von [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] bestehen aus sicherheitskritischem Code, der von einem dedizierten Team überprüft wird. Der Quellcode und der Eincheckvorgang werden verwaltet, indem sicherheitskritischer Code nachverfolgt und jede kritischen Entität (d. h. eine Methode, die kritischen Code enthält) ihrem abgezeichneten Zustand zugeordnet wird. Der abgezeichnete Zustand schließt die Namen eines oder mehrerer Prüfer ein. Bei jedem täglichen Build von [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] wird der kritische Code mit dem in vorhergehenden Builds verglichen, um nicht genehmigte Änderungen aufzuspüren. Wenn ein Programmierer kritischen Code ohne Genehmigung des Prüferteams ändert, wird der betreffende Code erkannt und sofort ersetzt. Dieses Vorgehen ermöglicht die Anwendung und Aufrechterhaltung eines sehr hohen Maßes an Genauigkeit bei [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)]-Sandboxcode.  
+ Bei XAML-Browser Anwendungen (XBAPs) erstellt [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] eine Sicherheits Sandbox mithilfe .NET Framework Unterstützung für das Markieren und Nachverfolgen von Sicherheits kritischem Code, der Berechtigungen erhöht (siehe **sicherheitskritische Methodik** in [WPF-Sicherheitsstrategie-Plattformsicherheit](wpf-security-strategy-platform-security.md)). Angesichts der hohen Qualitätsanforderungen bei sicherheitskritischem Code wird derartiger Code durch eine zusätzliche Ebene der Quellcodeverwaltung und Sicherheitsüberwachung geschützt. Annähernd 5 % bis 10 % von [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] bestehen aus sicherheitskritischem Code, der von einem dedizierten Team überprüft wird. Der Quellcode und der Eincheckvorgang werden verwaltet, indem sicherheitskritischer Code nachverfolgt und jede kritischen Entität (d. h. eine Methode, die kritischen Code enthält) ihrem abgezeichneten Zustand zugeordnet wird. Der abgezeichnete Zustand schließt die Namen eines oder mehrerer Prüfer ein. Bei jedem täglichen Build von [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] wird der kritische Code mit dem in vorhergehenden Builds verglichen, um nicht genehmigte Änderungen aufzuspüren. Wenn ein Programmierer kritischen Code ohne Genehmigung des Prüferteams ändert, wird der betreffende Code erkannt und sofort ersetzt. Dieses Vorgehen ermöglicht die Anwendung und Aufrechterhaltung eines sehr hohen Maßes an Genauigkeit bei [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)]-Sandboxcode.  
   
 ## <a name="see-also"></a>Siehe auch
 

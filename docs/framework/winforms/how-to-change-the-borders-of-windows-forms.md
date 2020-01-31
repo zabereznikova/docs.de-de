@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Ändern der Rahmen von Windows Forms'
+title: Formular Rahmen ändern
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,23 +8,23 @@ dev_langs:
 helpviewer_keywords:
 - Windows Forms, changing the borders
 ms.assetid: b3d5fa56-80c6-4b10-b505-f9672307ed55
-ms.openlocfilehash: 036bef79e83350801ce45e6b77691339c6548d15
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 2c8eb25b44c7406e4312f432f2d69524346f94d6
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64665250"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76739564"
 ---
-# <a name="how-to-change-the-borders-of-windows-forms"></a>Vorgehensweise: Ändern der Rahmen von Windows Forms
+# <a name="how-to-change-the-borders-of-windows-forms"></a>Gewusst wie: Ändern der Rahmen von Windows Forms
 Sie können aus mehreren Rahmenformatvorlagen auswählen, wenn Sie das Aussehen und Verhalten Ihres Windows Forms-Elements festlegen möchten. Durch Ändern der <xref:System.Windows.Forms.Form.FormBorderStyle%2A>-Eigenschaft können Sie das Verhalten des Formulars bei das Größenanpassung steuern. Zudem wirkt sich das Festlegen von <xref:System.Windows.Forms.Form.FormBorderStyle%2A> darauf aus, wie die Titelleiste angezeigt wird und mit welchen Schaltflächen. Weitere Informationen finden Sie unter <xref:System.Windows.Forms.FormBorderStyle>.  
   
  Visual Studio bietet umfassende Unterstützung für diese Aufgabe.  
   
- Weitere Information finden Sie unter [How to: Ändern der Rahmen von Windows Forms mithilfe des Designers](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/yettzh3e(v=vs.100)).  
+ Siehe auch Gewusst [wie: Ändern der Rahmen Windows Forms mithilfe des Designers](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/yettzh3e(v=vs.100)).  
   
 ### <a name="to-set-the-border-style-of-windows-forms-programmatically"></a>So legen Sie die Rahmenart von Windows Forms programmgesteuert fest  
   
-- Legen Sie die Eigenschaft <xref:System.Windows.Forms.Form.FormBorderStyle%2A> auf die gewünschte Rahmenart fest. Im folgenden Codebeispiel wird die Rahmenart des Formulars `DlgBx1` zu <xref:System.Windows.Forms.FormBorderStyle.FixedDialog>.  
+- Legen Sie die Eigenschaft <xref:System.Windows.Forms.Form.FormBorderStyle%2A> auf die gewünschte Rahmenart fest. Im folgenden Codebeispiel wird die Rahmenart von Formular `DlgBx1` auf <xref:System.Windows.Forms.FormBorderStyle.FixedDialog>festgelegt.  
   
     ```vb  
     DlgBx1.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog  
@@ -39,9 +39,9 @@ Sie können aus mehreren Rahmenformatvorlagen auswählen, wenn Sie das Aussehen 
        System::Windows::Forms::FormBorderStyle::FixedDialog;  
     ```  
   
-     Weitere Informationen hierzu finden Sie auch unter [Gewusst wie: Erstellen von Dialogfeldern zur Entwurfszeit](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/55cz5x2c(v=vs.100)).  
+     Siehe auch Gewusst [wie: Erstellen von Dialog Feldern zur Entwurfszeit](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/55cz5x2c(v=vs.100)).  
   
-     Darüber hinaus, wenn Sie eine Rahmenart für das Formular ausgewählt haben, die optionale **Minimieren** und **Maximieren** Schaltflächen können Sie angeben, ob eine oder beide Schaltflächen funktionsfähig sein sollen. Diese Schaltflächen sind hilfreich, wenn Sie die Benutzeroberfläche genau steuern möchten. Die **Minimieren** und **Maximieren** Schaltflächen sind standardmäßig aktiviert, und ihre Funktionen bearbeitet wird, über die **Eigenschaften** Fenster.  
+     Wenn Sie eine Rahmenart für das Formular ausgewählt haben, das optionale Schaltflächen zum **minimieren** und **maximieren** bereitstellt, können Sie außerdem angeben, ob eine oder beide dieser Schaltflächen funktionsfähig sein sollen. Diese Schaltflächen sind hilfreich, wenn Sie die Benutzeroberfläche genau steuern möchten. Die Schaltflächen **minimieren** und **maximieren** sind standardmäßig aktiviert, und ihre Funktionalität wird über das Fenster **Eigenschaften** geändert.  
   
 ## <a name="see-also"></a>Siehe auch
 

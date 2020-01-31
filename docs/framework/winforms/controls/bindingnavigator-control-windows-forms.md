@@ -1,17 +1,17 @@
 ---
-title: BindingNavigator-Steuerelement (Windows Forms)
+title: BindingNavigator-Steuerelement
 ms.date: 03/30/2017
 helpviewer_keywords:
 - BindingNavigator control [Windows Forms]
 - data [Windows Forms], navigating
 - data navigation
 ms.assetid: 18c1e2a5-9834-40d3-9b2e-2b545e4e769e
-ms.openlocfilehash: ce67a06a5fe43602258d52548e8d933b99548f44
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 96a14ac95afd9131faf1a1687bfde7f0b0c0b73a
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61961719"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744371"
 ---
 # <a name="bindingnavigator-control-windows-forms"></a>BindingNavigator-Steuerelement (Windows Forms)
 Das `BindingNavigator`-Steuerelement dient als Benutzeroberfläche zum Navigieren und Bearbeiten von Steuerelementen, die an Daten gebunden sind. Mithilfe des `BindingNavigator`-Steuerelements können Benutzer durch Daten in einem Windows Form navigieren und diese bearbeiten.  
@@ -25,10 +25,10 @@ Das `BindingNavigator`-Steuerelement dient als Benutzeroberfläche zum Navigiere
  [Vorgehensweise: Datennavigation mithilfe des BindingNavigator-Steuerelements in Windows Forms](how-to-navigate-data-with-the-windows-forms-bindingnavigator-control.md)  
  Enthält schrittweise Anleitungen zum Binden eines `BindingNavigator`-Steuerelements an eine Datenquelle.  
   
- [Vorgehensweise: Navigieren Sie durch ein DataSet mit dem BindingNavigator-Steuerelement in Windows Forms](move-through-a-dataset-with-wf-bindingnavigator-control.md)  
+ [Vorgehensweise: Navigieren durch ein DataSet mithilfe des BindingNavigator-Steuerelements in Windows Forms](move-through-a-dataset-with-wf-bindingnavigator-control.md)  
  Veranschaulicht die Verwendung eines `BindingNavigator`-Steuerelements zum Navigieren durch Datensätze in einem <xref:System.Data.DataSet>.  
   
- Weitere Informationen hierzu finden Sie auch unter [Gewusst wie: Hinzufügen der laden, speichern und Abbrechen von Schaltflächen auf der Windows Forms BindingNavigator-Steuerelement](load-save-and-cancel-bindingnavigator.md).  
+ Weitere Informationen finden Sie unter [Vorgehensweise: Hinzufügen der Schaltflächen für das Laden, Speichern und Abbrechen zum BindingNavigator-Steuerelement in Windows Forms](load-save-and-cancel-bindingnavigator.md).  
   
 ## <a name="reference"></a>Referenz  
  <xref:System.Windows.Forms.BindingNavigator>  

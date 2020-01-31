@@ -2,12 +2,12 @@
 title: Starke Namen und .NET-Bibliotheken
 description: Empfehlungen für bewährte Methoden für starke Namen für .NET-Bibliotheken.
 ms.date: 10/16/2018
-ms.openlocfilehash: 0c2dba06413bc6435e3350bf6cc48f1b5882a261
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: db268093b07a2ece7cdb8329fd789b52da9c5c32
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75706425"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744531"
 ---
 # <a name="strong-naming"></a>Starke Namen
 
@@ -45,26 +45,26 @@ Sie sollten Ihren .NET-Open-Source-Bibliotheken einen starken Namen geben. Der s
 > [!NOTE]
 > Diese Anleitung bezieht sich auf öffentlich verteilte .NET-Bibliotheken, wie z.B. auf NuGet.org veröffentlichte .NET-Bibliotheken. Ein starker Namen ist für die meisten .NET-Anwendungen nicht erforderlich und sollte nicht standardmäßig vorgenommen werden.
 
-**✔️ ERWÄGEN** Sie, Ihren Bibliotheksassemblys einen starken Namen zu geben.
+✔️ Erwägen Sie, Ihren Bibliotheksassemblys einen starken Namen zu geben.
 
-**✔️ ERWÄGEN** Sie, den starken Namensschlüssel zu Ihrem Quellcodeverwaltungssystem hinzuzufügen.
+✔️ Erwägen Sie, den Schlüssel für die eindeutige Benennung zu Ihrem Quellcodeverwaltungssystem hinzuzufügen.
 
 > Ein öffentlich verfügbarer Schlüssel ermöglicht es Entwicklern, den Quellcode Ihrer Bibliothek mit demselben Schlüssel zu ändern und neu zu kompilieren.
-> 
+>
 > Sie sollten den starken Namensschlüssel nicht öffentlich machen, wenn er in der Vergangenheit zur Vergabe von Sonderrechten in [teilweise vertrauenswürdigen Szenarien](../../framework/misc/using-libraries-from-partially-trusted-code.md) verwendet wurde. Andernfalls können Sie vorhandene Umgebungen beeinträchtigen.
 
 > [!IMPORTANT]
 > Wenn die Identität des Herausgebers des Codes erwünscht ist, werden [Authenticode](/windows-hardware/drivers/install/authenticode) und [NuGet-Paketsignierung](/nuget/create-packages/sign-a-package) empfohlen. Die Codezugriffssicherheit (Code Access Security, CAS) sollte nicht zur Risikominderung verwendet werden.
 
-**✔️ ERWÄGEN** Sie, die Assemblyversion nur bei größeren Versionsänderungen zu erhöhen, um Benutzern zu helfen, Bindungsumleitungen und die Häufigkeit ihrer Aktualisierung zu reduzieren.
+✔️ Erwägen Sie, die Assemblyversion nur bei größeren Versionsänderungen zu erhöhen, um Benutzern zu helfen, Bindungsumleitungen und die Häufigkeit ihrer Aktualisierung zu reduzieren.
 
 > Erfahren Sie mehr über die [Versionsverwaltung und die Assemblyversion](./versioning.md#assembly-version).
 
-**❌ NICHT** den Schlüssel mit starkem Namen hinzufügen, entfernen oder ändern.
+❌ Den Schlüssel für die eindeutige Benennung weder hinzufügen, noch ändern oder entfernen
 
 > Das Ändern des starken Namensschlüssels einer Assembly ändert die Identität der Assembly und zerlegt kompilierten Code, der ihn verwendet. Weitere Informationen finden Sie unter [Binäre Breaking Changes](./breaking-changes.md#binary-breaking-change).
 
-**❌ NICHT** die Versionen mit oder ohne starkem Namen Ihrer Bibliothek veröffentlichen. Beispiel: `Contoso.Api` und `Contoso.Api.StrongNamed`.
+❌ Veröffentlichen Sie NICHT die Versionen Ihrer Bibliothek mit oder ohne starkem Namen. Beispiel: `Contoso.Api` und `Contoso.Api.StrongNamed`.
 
 > Die Veröffentlichung von zwei Paketen verzweigt Ihr Entwicklerökosystem. Auch wenn eine Anwendung letztendlich von beiden Paketen abhängig ist, kann es bei dem Entwickler zu Typnamenskonflikten kommen. Was .NET betrifft, so sind sie verschiedene Typen in verschiedenen Assemblys.
 

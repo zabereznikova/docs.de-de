@@ -6,12 +6,12 @@ dev_langs:
 author: thraka
 ms.author: adegeo
 ms.date: 10/22/2019
-ms.openlocfilehash: eb1815f965e86a6f8f709b32f84f879eb03de447
-ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
+ms.openlocfilehash: 4bf1c4826273535bfe824828f0fad96998b29483
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76115799"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742593"
 ---
 # <a name="whats-new-in-net-core-30"></a>Neuerungen in .NET Core 3.0
 
@@ -112,20 +112,20 @@ Weitere Informationen zum Tool IL Linker finden Sie in der [Dokumentation](https
 
 ### <a name="tiered-compilation"></a>Mehrstufig Kompilierung
 
-Die [mehrstufige Kompilierung](https://devblogs.microsoft.com/dotnet/tiered-compilation-preview-in-net-core-2-1/) (Tiered Compilation, TC) ist bei .NET Core 3.0 standardmäßig aktiviert. Dieses Feature ermöglicht der Runtime, den Just-In-Time-Compiler (JIT) adaptiver zu nutzen, um eine bessere Leistung zu erzielen.
+Die [mehrstufige Kompilierung](https://github.com/dotnet/runtime/blob/master/docs/design/features/tiered-compilation-guide.md) (Tiered Compilation, TC) ist bei .NET Core 3.0 standardmäßig aktiviert. Dieses Feature ermöglicht der Runtime, den Just-In-Time-Compiler (JIT) adaptiver zu nutzen, um eine bessere Leistung zu erzielen.
 
-Der Hauptvorteil von TC ist, Methoden zur (erneuten) Just-in-Time-Kompilierung mit einer „Lower-Quality-but-faster“- oder „Higher-Quality-but-slower“-Stufe zu ermöglichen. Dies steigert die Leistung einer Anwendung, während sie verschiedene Phasen der Ausführung vom Start bis zum stabilen Zustand durchläuft. Dies steht im Gegensatz zum Nicht-TC-Ansatz, wo jede Methode auf eine einzelne Art kompiliert wird (identisch mit der Hochwertigkeitsstufe) und der Trend eher zum stabilen Zustand als zur Startleistung geht.
+Der Hauptvorteil der mehrstufigen Kompilierung (TC, Tiered Compilation) besteht darin, dass sie zwei Methoden zur Just-in-Time-Kompilierung bietet: in einer Stufe mit geringerer Qualität, die aber schneller ist, oder in einer Stufe mit höherer Qualität, die aber langsamer ist. Die Qualität bezieht sich darauf, wie gut die Methode optimiert ist. Die TC verbessert die Leistung einer Anwendung, während sie verschiedene Phasen der Ausführung vom Start bis zum stabilen Zustand durchläuft. Wenn die TC deaktiviert ist, wird jede Methode auf eine einzige Weise kompiliert, die auf eine stabile Leistung gegenüber der Startleistung ausgerichtet ist.
 
-Wenn TC während des Starts einer Methode aktiviert ist, die aufgerufen wird:
+Wenn TC aktiviert ist, gilt beim Start einer App das folgende Verhalten für die Methodenkompilierung:
 
-- Wenn die Methode über AOT-kompilierten Code (ReadyToRun) verfügt, wird der zuvor generierte Code verwendet.
-- Andernfalls wird die Methode mit JIT kompiliert. In der Regel sind diese Methoden derzeit Generika über Werttypen.
-  - Die schnelle Just-In-Time-Kompilierung (JIT) erzeugt schneller Code von niedrigerer Qualität. Die schnelle Just-In-Time-Kompilierung ist standardmäßig in .NET Core 3.0 für Methoden aktiviert, die keine Schleifen enthalten, und wird während des Starts bevorzugt.
-  - Die vollständig optimierte Just-In-Time-Kompilierung erzeugt langsamer Code von höherer Qualität. Für Methoden wird die vollständig optimierte Just-In-Time-Kompilierung verwendet, bei denen die schnelle JIT-Kompilierung nicht verwendet werden würde (z. B wenn die Methode mit den Attribut `[MethodImpl(MethodImplOptions.AggressiveOptimization)]` versehen ist).
+- Wenn die Methode über AOT-kompilierten Code oder [ReadyToRun](#readytorun-images) verfügt, wird der zuvor generierte Code verwendet.
+- Andernfalls wird die Methode mit JIT kompiliert. In der Regel sind diese Methoden Generics über Werttypen.
+  - *Quick JIT* erzeugt schneller Code geringerer Qualität (oder weniger optimiert). In .NET Core 3.0 ist Quick JIT standardmäßig für Methoden aktiviert, die keine Schleifen enthalten. Während des Starts wird dies bevorzugt.
+  - Die vollständig optimierte Just-In-Time-Kompilierung erzeugt langsamer Code von höherer Qualität (oder optimierter). Für Methoden wird die vollständig optimierte Just-In-Time-Kompilierung verwendet, bei denen die schnelle JIT-Kompilierung nicht verwendet werden würde (z. B wenn die Methode mit den Attribut <xref:System.Runtime.CompilerServices.MethodImplOptions.AggressiveOptimization?displayProperty=nameWithType> versehen ist).
 
-Wenn die Methoden einige Male aufgerufen wurden, werden sie letztendlich erneut mit der vollständig optimierten JIT-Kompilierung im Hintergrund kompiliert.
+Bei häufig aufgerufenen Methoden erzeugt der Just-in-Time-Compiler schließlich vollständig optimierten Code im Hintergrund. Der optimierte Code ersetzt dann den vorkompilierten Code für diese Methode.
 
-Code, der von der schnellen JIT-Kompilierung generiert wurde, wird möglicherweise langsamer ausgeführt, belegt mehr Arbeitsspeicher oder nutzt mehr Stapelspeicher. Falls es zu Problemen kommt, kann die schnelle JIT-Kompilierung mithilfe folgender Einstellung in Ihrer Projektdatei deaktiviert werden:
+Code, der von der schnellen JIT-Kompilierung generiert wurde, wird möglicherweise langsamer ausgeführt, belegt mehr Arbeitsspeicher oder nutzt mehr Stapelspeicher. Wenn es Probleme gibt, können Sie Quick JIT mit dieser MSBuild-Eigenschaft in der Projektdatei deaktivieren:
 
 ```xml
 <PropertyGroup>
@@ -133,7 +133,7 @@ Code, der von der schnellen JIT-Kompilierung generiert wurde, wird möglicherwei
 </PropertyGroup>
 ```
 
-Um TC vollständig zu deaktivieren, verwenden Sie diese Einstellung in Ihrer Projektdatei:
+Verwenden Sie diese MSBuild-Eigenschaft in der Projektdatei, um die TC vollständig zu deaktivieren:
 
 ```xml
 <PropertyGroup>
@@ -141,7 +141,10 @@ Um TC vollständig zu deaktivieren, verwenden Sie diese Einstellung in Ihrer Pro
 </PropertyGroup>
 ```
 
-Alle Änderungen an den oben genannten Einstellungen in der Projektdatei erfordern möglicherweise, dass ein bereinigter Build dargestellt werden muss (löschen Sie die Verzeichnisse `obj` und `bin`, und erstellen Sie sie neu).
+> [!TIP]
+> Wenn Sie diese Einstellungen in der Projektdatei ändern, müssen Sie möglicherweise einen bereinigten Build durchführen, damit die neuen Einstellungen reflektiert werden. (Löschen Sie die Verzeichnisse `obj` und `bin`, und erstellen Sie diese neu).
+
+Weitere Informationen zum Konfigurieren der Kompilierung zur Laufzeit finden Sie unter [Laufzeitkonfigurationsoptionen für die Kompilierung](../run-time-config/compilation.md).
 
 ### <a name="readytorun-images"></a>ReadyToRun-Images
 
@@ -182,7 +185,7 @@ Ausnahmen für die versionsübergreifende Angabe von Zielen:
 Mit .NET Core 3.0 wird ein Aktivierungsfeature eingeführt, das Ihrer App ein Rollforward auf die neueste Hauptversion von .NET Core ermöglicht. Darüber hinaus wurde eine neue Einstellung hinzugefügt, um zu steuern, wie ein Rollforward auf Ihre App angewendet wird. Diese kann folgendermaßen konfiguriert werden:
 
 - Projektdateieigenschaft: `RollForward`
-- Runtimekonfigurationsdatei-Eigenschaft: `rollForward`
+- Eigenschaft der Runtimekonfigurationsdatei: `rollForward`
 - Umgebungsvariable: `DOTNET_ROLL_FORWARD`
 - Befehlszeilenargument: `--roll-forward`
 

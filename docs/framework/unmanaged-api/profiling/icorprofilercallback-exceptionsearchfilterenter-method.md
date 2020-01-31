@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: acc239ce-3eef-418c-b1df-c5a6dd8e8a4c
 topic_type:
 - apiref
-ms.openlocfilehash: 65765795c13948175a7eb5bd78843968d55953d8
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
-ms.translationtype: MT
+ms.openlocfilehash: 96ca2b926217ced6c88f8890f0facc7346fe10c7
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74445385"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76790140"
 ---
 # <a name="icorprofilercallbackexceptionsearchfilterenter-method"></a>ICorProfilerCallback::ExceptionSearchFilterEnter-Methode
 Benachrichtigt den Profiler, dass die Such Phase der Ausnahmebehandlung mit dem Ausführen eines benutzerdefinierten Ausnahme Filters begonnen hat.  
@@ -32,18 +32,20 @@ HRESULT ExceptionSearchFilterEnter(
     [in] FunctionID functionId);  
 ```  
   
-## <a name="parameters"></a>Parameter  
- `functionId`  
- in Die ID der Funktion, die den Filter enthält.  
-  
-## <a name="requirements"></a>Voraussetzungen  
+## <a name="parameters"></a>Parameters
+
+- `functionId`
+
+  \[in] die ID der Funktion, die den Filter enthält.
+
+## <a name="requirements"></a>-Anforderungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  
   
  **Bibliothek:** CorGuids.lib  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
 

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4275af0c-b5a7-4e4c-97c9-7e41f36b2dd8
 topic_type:
 - apiref
-ms.openlocfilehash: fb8cfb2d1c5902ecd0d5858ef21ba48b65b12506
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 851a127c117b826c271dd021c41cfdb36045a1ff
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73125334"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76783752"
 ---
 # <a name="icordebugcontrollerterminate-method"></a>ICorDebugController::Terminate-Methode
 Beendet den Prozess mit dem angegebenen Exitcode.  
@@ -36,23 +36,23 @@ HRESULT Terminate (
 );  
 ```  
   
-## <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameters  
  `exitCode`  
  in Ein numerischer Wert, der der Exitcode ist. Die gültigen numerischen Werte werden in Winbase. h definiert.  
   
 ## <a name="remarks"></a>Hinweise  
- Wenn der Prozess beendet wird, wenn `Terminate` aufgerufen wird, sollte der Prozess mit der [ICorDebugController:: Continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md) -Methode fortgesetzt werden, damit der Debugger eine Bestätigung der Beendigung durch [ICorDebugManagedCallback erhält: ExitProcess](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-exitprocess-method.md) -oder [ICorDebugManagedCallback:: ExitAppDomain](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-exitappdomain-method.md) -Rückruf.  
+ Wenn der Prozess beendet wird, wenn `Terminate` aufgerufen wird, sollte der Prozess mit der [ICorDebugController:: Continue](icordebugcontroller-continue-method.md) -Methode fortgesetzt werden, damit der Debugger eine Bestätigung der Beendigung durch den [ICorDebugManagedCallback:: ExitProcess](icordebugmanagedcallback-exitprocess-method.md) -oder [ICorDebugManagedCallback:: ExitAppDomain](icordebugmanagedcallback-exitappdomain-method.md) -Rückruf erhält.  
   
 > [!NOTE]
 > Diese Methode wird nicht von einer Anwendungsdomäne implementiert. Das heißt, es ist nicht auf <xref:System.AppDomain> Ebene implementiert.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>-Anforderungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   
  **Bibliothek:** CorGuids.lib  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch

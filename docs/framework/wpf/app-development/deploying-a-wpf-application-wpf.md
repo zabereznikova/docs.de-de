@@ -1,19 +1,20 @@
 ---
-title: Bereitstellen von WPF-Anwendungen (WPF)
+title: Bereitstellen einer APP
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WPF applications [WPF], deployment
 - deployment [WPF], applications
 ms.assetid: 12cadca0-b32c-4064-9a56-e6a306dcc76d
-ms.openlocfilehash: d67919ba38c2e306672966ddc2f62140ef92b638
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: 9d4b7dd0464960441410d8ff2a196f0912354e5f
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75636301"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76741946"
 ---
-# <a name="deploying-a-wpf-application-wpf"></a>Bereitstellen von WPF-Anwendungen (WPF)
-Nachdem Windows Presentation Foundation (WPF)-Anwendungen erstellt wurden, müssen Sie bereitgestellt werden. Windows und die .NET Framework umfassen mehrere Bereitstellungs Technologien. Die Bereitstellungs Technologie, die für die Bereitstellung einer WPF-Anwendung verwendet wird, hängt vom Anwendungstyp ab. Dieses Thema enthält eine kurze Übersicht über die einzelnen Bereitstellungs Technologien und deren Verwendung in Verbindung mit den Bereitstellungs Anforderungen der einzelnen WPF-Anwendungstyp.  
+# <a name="deploy-a-wpf-application"></a>Bereitstellen einer WPF-Anwendung
+
+Nachdem Windows Presentation Foundation (WPF)-Anwendungen erstellt wurden, müssen Sie bereitgestellt werden. Windows und die .NET Framework umfassen mehrere Bereitstellungs Technologien. Die Bereitstellungs Technologie, die für die Bereitstellung einer WPF-Anwendung verwendet wird, hängt vom Anwendungstyp ab. Dieses Thema enthält eine kurze Übersicht über die einzelnen Bereitstellungs Technologien und deren Verwendung in Verbindung mit den Bereitstellungs Anforderungen der einzelnen WPF-Anwendungstyp.
 
 <a name="Deployment_Technologies"></a>   
 ## <a name="deployment-technologies"></a>Bereitstellungstechnologien  

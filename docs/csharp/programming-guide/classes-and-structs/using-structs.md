@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - structs [C#], using
 ms.assetid: cea4a459-9eb9-442b-8d08-490e0797ba38
-ms.openlocfilehash: 22d63465c534090a8918348ea5f050739c0cf01c
-ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
+ms.openlocfilehash: 47a1da4982d22c63cb762a27313590c8ec0c5dd4
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75964745"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76743976"
 ---
 # <a name="using-structs-c-programming-guide"></a>Verwenden von Strukturen (C#-Programmierhandbuch)
 
@@ -27,7 +27,7 @@ Wenn Sie einen Konstruktor mit Parametern für eine Struktur schreiben, müssen 
 
 Bei Strukturen findet keine Vererbung wie bei Klassen statt. Eine Struktur kann nicht von einer anderen Struktur oder Klasse erben, und sie kann auch nicht die Basis einer Klasse sein. Stattdessen erben Strukturen von der <xref:System.Object>-Basisklasse. Eine Struktur kann Schnittstellen implementieren. Dies geschieht auf dieselbe Weise wie bei Klassen.
 
-Sie können keine Klasse mit dem `struct`-Schlüsselwort deklarieren. Klassen und Strukturen weisen in C# semantische Unterschiede auf. Eine Struktur ist ein Werttyp, während eine Klasse ein Referenztyp ist. Weitere Informationen finden Sie unter [Werttypen](../../language-reference/keywords/value-types.md) und [Verweistypen](../../language-reference/keywords/reference-types.md).
+Sie können keine Klasse mit dem `struct`-Schlüsselwort deklarieren. Klassen und Strukturen weisen in C# semantische Unterschiede auf. Eine Struktur ist ein Werttyp, während eine Klasse ein Referenztyp ist. Weitere Informationen finden Sie unter [Werttypen](../../language-reference/builtin-types/value-types.md) und [Verweistypen](../../language-reference/keywords/reference-types.md).
 
 Sofern keine Semantik für Verweistypen benötigt wird, kann das System kleine Klassen effizienter verarbeiten, wenn diese als Struktur definiert werden.
 

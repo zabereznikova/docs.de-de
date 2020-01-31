@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 21ceed9e-62b2-4024-b027-6d095109955a
 topic_type:
 - apiref
-ms.openlocfilehash: 9bcc03cc97a62b4c1cadacd7c0b2bc46b9fec470
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 824be4a401d265575b48f66045dd944d521e64a4
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73134143"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76789155"
 ---
 # <a name="_efn_getmanagedexcepstack-function"></a>\_EFN\_getmanagedexcepstack-Funktion
 Gibt bei Angabe der Adresse eines verwalteten Ausnahmeobjekts eine Zeichenfolgenversion der enthaltenen Stapelüberwachung zurück.  
@@ -35,7 +35,7 @@ HRESULT _EFN_GetManagedExcepStack(
 );  
 ```  
   
-## <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameters  
  `Client`  
  in Der Client, der deentschlgt wird.  
   
@@ -51,7 +51,7 @@ HRESULT _EFN_GetManagedExcepStack(
 ## <a name="remarks"></a>Hinweise  
  Wenn im Thread derzeit kein verwalteter Code vorhanden ist, gibt die Funktion HRESULT SOS_E_NOMANAGEDCODE mit einem Einrichtungs Wert von 0xa0 und dem Fehlercode 0x1000 zurück.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>-Anforderungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** SOS_Stacktrace. h  
@@ -60,4 +60,4 @@ HRESULT _EFN_GetManagedExcepStack(
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Debuggen von globalen statischen Funktionen](../../../../docs/framework/unmanaged-api/debugging/debugging-global-static-functions.md)
+- [Debuggen von globalen statischen Funktionen](debugging-global-static-functions.md)

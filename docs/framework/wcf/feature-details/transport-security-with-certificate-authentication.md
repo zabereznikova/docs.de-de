@@ -4,21 +4,22 @@ ms.date: 03/30/2017
 dev_langs:
 - csharp
 ms.assetid: 3d726b71-4d8b-4581-a3bb-02b9af51d11b
-ms.openlocfilehash: f94be530fb680320813a93e256e8e411234f2e40
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 9ac563ad237749665e9cc53c15aec35f461abfc0
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69968647"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742666"
 ---
 # <a name="transport-security-with-certificate-authentication"></a>Transportsicherheit mit Zertifikatauthentifizierung
-In diesem Thema wird die Server- und Clientauthentifizierung mit X.509-Zertifikaten bei Verwendung der Transportsicherheit behandelt. Weitere Informationen zu X.509-Zertifikaten finden Sie unter [X.509 Public Key Certificates (X.509-Zertifikate mit öffentlichem Schlüssel)](/windows/desktop/SecCertEnroll/about-x-509-public-key-certificates). Zertifikate müssen von einer Zertifizierungsstelle ausgestellt werden, bei der es sich oft um einen Drittanbieter von Zertifikaten handelt. In einer Windows Server-Domäne können Sie Active Directory-Zertifikatdienste verwenden, um Zertifikate für Clientcomputer in der Domäne auszustellen. Weitere Informationen finden Sie unter [Windows 2008 R2-Zertifikat Dienste](https://go.microsoft.com/fwlink/?LinkID=209949&clcid=0x409). In diesem Szenario wird der Dienst unter Internetinformationsdienste (IIS) konfiguriert mit Secure Sockets Layer (SSL) gehostet. Der Dienst ist mit einem SSL-Zertifikat (X.509) konfiguriert, um Clients das Überprüfen der Identität des Servers zu ermöglichen. Der Client ist ebenfalls mit einem X.509-Zertifikat konfiguriert, das es dem Dienst ermöglicht, die Identität des Clients zu überprüfen. Das Zertifikat des Servers muss für den Client vertrauenswürdig sein und das Zertifikat des Clients für den Server. Die eigentlichen Mechanismen, anhand derer der Dienst und der Client die Identität des anderen überprüfen, werden in diesem Thema nicht behandelt. Weitere Informationen finden Sie [unter digitale Signatur auf Wikipedia](https://go.microsoft.com/fwlink/?LinkId=253157).  
+
+In diesem Artikel wird die Verwendung von X. 509-Zertifikaten für die Server-und Client Authentifizierung bei der Transportsicherheit erläutert. Weitere Informationen zu X.509-Zertifikaten finden Sie unter [X.509 Public Key Certificates (X.509-Zertifikate mit öffentlichem Schlüssel)](/windows/desktop/SecCertEnroll/about-x-509-public-key-certificates). Zertifikate müssen von einer Zertifizierungsstelle ausgestellt werden, bei der es sich oft um einen Drittanbieter von Zertifikaten handelt. In einer Windows Server-Domäne können Sie Active Directory-Zertifikatdienste verwenden, um Zertifikate für Clientcomputer in der Domäne auszustellen. In diesem Szenario wird der Dienst unter Internetinformationsdienste (IIS) konfiguriert mit Secure Sockets Layer (SSL) gehostet. Der Dienst ist mit einem SSL-Zertifikat (X.509) konfiguriert, um Clients das Überprüfen der Identität des Servers zu ermöglichen. Der Client ist ebenfalls mit einem X.509-Zertifikat konfiguriert, das es dem Dienst ermöglicht, die Identität des Clients zu überprüfen. Das Zertifikat des Servers muss für den Client vertrauenswürdig sein und das Zertifikat des Clients für den Server. Die tatsächliche Funktionsweise, in der der Dienst und der Client die Identität der anderen überprüfen, würde den Rahmen dieses Artikels sprengen. Weitere Informationen finden Sie unter [digitale Signatur](https://en.wikipedia.org/wiki/Digital_signature) auf Wikipedia.
   
  In diesem Szenario wird das im folgenden Diagramm dargestellte Anforderungs-/Antwortnachrichtenmuster implementiert.  
   
- ![Sichere Übertragung mit Zertifikaten](../../../../docs/framework/wcf/feature-details/media/8f7b8968-899f-4538-a9e8-0eaa872a291c.gif "8F 7b8968-899f-4538-a9e8-0eaa872a291c")  
+ ![Sichere Übertragung mit Zertifikaten](../../../../docs/framework/wcf/feature-details/media/8f7b8968-899f-4538-a9e8-0eaa872a291c.gif "8f 7b8968-899f-4538-a9e8-0eaa872a291c")  
   
- Weitere Informationen zum Verwenden eines Zertifikats mit einem Dienst finden Sie unter [Arbeiten mit Zertifikaten](../../../../docs/framework/wcf/feature-details/working-with-certificates.md) und [Gewusst wie: Konfigurieren Sie einen Port mit einem SSL](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)-Zertifikat. In der folgenden Tabelle werden die verschiedenen Merkmale des Szenarios beschrieben.  
+ Weitere Informationen zum Verwenden eines Zertifikats mit einem Dienst finden Sie unter [Arbeiten mit Zertifikaten](../../../../docs/framework/wcf/feature-details/working-with-certificates.md) und Gewusst [wie: Konfigurieren eines Ports mit einem SSL-Zertifikat](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md). In der folgenden Tabelle werden die verschiedenen Merkmale des Szenarios beschrieben.  
   
 |Merkmal|Beschreibung|  
 |--------------------|-----------------|  
@@ -140,4 +141,4 @@ cc.Close();
 ## <a name="see-also"></a>Siehe auch
 
 - [Übersicht über die Sicherheit](../../../../docs/framework/wcf/feature-details/security-overview.md)
-- [Sicherheitsmodell für Windows Server-App-Fabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+- [Sicherheitsmodell für Windows Server-App-Fabric](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

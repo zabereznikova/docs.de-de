@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 96dd26e2-46e7-4de0-9a29-4fcb05bf187b
-ms.openlocfilehash: 38f425e50b7981c17a96a78e1e28bafb2cf258fc
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6392ea0f17596406a8671a039bd78777d9e11e42
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64635139"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742645"
 ---
 # <a name="transport-security-with-windows-authentication"></a>Transportsicherheit mit Windows-Authentifizierung
-Das folgende Szenario zeigt einen Windows Communication Foundation (WCF)-Client und Dienst, die durch die Windows-Sicherheit geschützt. Weitere Informationen zur Programmierung finden Sie unter [Vorgehensweise: Sichern eines Diensts mit Windows-Anmeldeinformationen](../../../../docs/framework/wcf/how-to-secure-a-service-with-windows-credentials.md).  
+Das folgende Szenario zeigt einen von der Windows-Sicherheit gesicherten Windows Communication Foundation (WCF)-Client und-Dienst. Weitere Informationen zum Programmieren finden Sie unter Vorgehens [Weise: Sichern eines Dienstanbieter mit Windows-Anmelde](../../../../docs/framework/wcf/how-to-secure-a-service-with-windows-credentials.md)Informationen.  
   
  Ein Intranetwebdienst zeigt Personalinformationen an. Der Client ist eine Windows Forms-Anwendung. Die Anwendung wird in einer Domäne mit einem Kerberos-Controller bereitgestellt, der die Domäne sichert.  
   
@@ -30,7 +30,7 @@ Das folgende Szenario zeigt einen Windows Communication Foundation (WCF)-Client 
 |Bindung|<xref:System.ServiceModel.NetTcpBinding>|  
   
 ## <a name="service"></a>Dienst  
- Der folgende Code und die folgende Konfiguration werden unabhängig voneinander ausgeführt. Führen Sie einen der folgenden Schritte aus:  
+ Der folgende Code und die folgende Konfiguration werden unabhängig voneinander ausgeführt. Führen Sie eine der folgenden Aktionen aus:  
   
 - Erstellen Sie einen separaten Dienst, indem Sie den Code ohne Konfiguration verwenden.  
   
@@ -42,7 +42,7 @@ Das folgende Szenario zeigt einen Windows Communication Foundation (WCF)-Client 
  [!code-csharp[C_SecurityScenarios#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#3)]
  [!code-vb[C_SecurityScenarios#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#3)]  
   
-### <a name="configuration"></a>Konfiguration  
+### <a name="configuration"></a>-Konfiguration  
  Die folgende Konfiguration kann statt des Codes verwendet werden, um den Dienstendpunkt einzurichten:  
   
 ```xml  
@@ -74,11 +74,11 @@ Das folgende Szenario zeigt einen Windows Communication Foundation (WCF)-Client 
 ```  
   
 ## <a name="client"></a>Client  
- Der folgende Code und die folgende Konfiguration werden unabhängig voneinander ausgeführt. Führen Sie einen der folgenden Schritte aus:  
+ Der folgende Code und die folgende Konfiguration werden unabhängig voneinander ausgeführt. Führen Sie eine der folgenden Aktionen aus:  
   
 - Erstellen Sie mit dem Code (und Clientcode) einen eigenständigen Client.  
   
-- Erstellen Sie einen Client, der keine Endpunktadressen definiert. Verwenden Sie stattdessen den Clientkonstruktor, der den Konfigurationsnamen als Argument verwendet. Zum Beispiel:  
+- Erstellen Sie einen Client, der keine Endpunktadressen definiert. Verwenden Sie stattdessen den Clientkonstruktor, der den Konfigurationsnamen als Argument verwendet. Beispiel:  
   
      [!code-csharp[C_SecurityScenarios#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#0)]
      [!code-vb[C_SecurityScenarios#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#0)]  
@@ -89,7 +89,7 @@ Das folgende Szenario zeigt einen Windows Communication Foundation (WCF)-Client 
  [!code-csharp[C_SecurityScenarios#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#4)]
  [!code-vb[C_SecurityScenarios#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#4)]  
   
-### <a name="configuration"></a>Konfiguration  
+### <a name="configuration"></a>-Konfiguration  
  Die folgende Konfiguration kann statt des Codes verwendet werden, um den Client zu erstellen.  
   
 ```xml  
@@ -120,5 +120,5 @@ Das folgende Szenario zeigt einen Windows Communication Foundation (WCF)-Client 
 ## <a name="see-also"></a>Siehe auch
 
 - [Übersicht über die Sicherheit](../../../../docs/framework/wcf/feature-details/security-overview.md)
-- [Vorgehensweise: Sichern eines Diensts mit Windows-Anmeldeinformationen](../../../../docs/framework/wcf/how-to-secure-a-service-with-windows-credentials.md)
-- [Sicherheitsmodell für Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+- [Vorgehensweise: Sichern eines Dienstes mit Windows-Anmeldeinformationen](../../../../docs/framework/wcf/how-to-secure-a-service-with-windows-credentials.md)
+- [Sicherheitsmodell für Windows Server-App-Fabric](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

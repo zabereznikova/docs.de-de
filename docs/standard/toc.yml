@@ -111,6 +111,8 @@
           href: native-interop/qualify-net-types-for-interoperation.md
     - name: Anwenden von Interop-Attributen
       href: native-interop/apply-interop-attributes.md
+    - name: Ausnahmen
+      href: native-interop/exceptions-interoperability.md
 - name: Auflistungen und Datenstrukturen
   href: collections/
 - name: Numerische Ausdrücke in .NET

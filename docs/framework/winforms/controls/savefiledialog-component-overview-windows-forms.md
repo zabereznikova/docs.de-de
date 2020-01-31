@@ -1,5 +1,5 @@
 ---
-title: Übersicht über die SaveFileDialog-Komponente (Windows Forms)
+title: Übersicht über die SaveFileDialog-Komponente
 ms.date: 03/30/2017
 f1_keywords:
 - SaveFileDialog
@@ -7,24 +7,24 @@ helpviewer_keywords:
 - Save File dialog box [Windows Forms], displaying
 - SaveFileDialog component [Windows Forms], about SaveFileDialog
 ms.assetid: be7a625f-46fd-4d06-9985-b613dcbf9bd2
-ms.openlocfilehash: 1e4269129f17c10056af2765c7a0e74537918ae5
-ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
+ms.openlocfilehash: 7609c29b7e932ecee7dc8a289617094bd8d480e2
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65211606"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76743098"
 ---
 # <a name="savefiledialog-component-overview-windows-forms"></a>Übersicht über die SaveFileDialog-Komponente (Windows Forms)
 
-Bei der Windows Forms-Komponente <xref:System.Windows.Forms.SaveFileDialog> handelt es sich um ein vorkonfiguriertes Dialogfeld. Dies entspricht dem als Standard **Datei speichern** Dialogfeld von Windows verwendet. Sie erbt von der <xref:System.Windows.Forms.CommonDialog>-Klasse.
+Bei der Windows Forms-Komponente <xref:System.Windows.Forms.SaveFileDialog> handelt es sich um ein vorkonfiguriertes Dialogfeld. Dies ist das gleiche wie das von Windows verwendete Standard Dialogfeld zum **Speichern von Dateien** . Sie erbt von der <xref:System.Windows.Forms.CommonDialog>-Klasse.
 
 ## <a name="working-with-the-savefiledialog-component"></a>Arbeiten mit der SaveFileDialog-Komponente
 
-Verwenden Sie es als eine einfache Lösung zum Aktivieren von Benutzern zum Speichern von Dateien anstatt ein eigenes Dialogfeld zu konfigurieren. Auf Windows-Standarddialogfelder ist, die grundlegende Funktionalität von Anwendungen, die Sie erstellen Benutzern sofort vertraut. Jedoch darüber im Klaren sein, die bei Verwendung der <xref:System.Windows.Forms.SaveFileDialog> -Komponente verwenden, müssen Sie Ihre eigene Logik zum Speichern von Dateien schreiben.
+Verwenden Sie es als einfache Lösung, um Benutzern das Speichern von Dateien zu ermöglichen, anstatt ein eigenes Dialogfeld zu konfigurieren. Wenn Sie sich auf standardmäßige Windows-Dialogfelder verlassen, sind die grundlegenden Funktionen der Anwendungen, die Sie erstellen, Benutzern sofort vertraut. Beachten Sie jedoch, dass Sie bei Verwendung der <xref:System.Windows.Forms.SaveFileDialog> Komponente eine eigene Logik zum Speichern von Dateien schreiben müssen.
 
-Sie können die <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> Methode, um das Dialogfeld zur Laufzeit anzuzeigen. Öffnen Sie eine Datei im Lese-/Schreibzugriff mit der <xref:System.Windows.Forms.SaveFileDialog.OpenFile%2A> Methode.
+Sie können die <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A>-Methode verwenden, um das Dialogfeld zur Laufzeit anzuzeigen. Sie können eine Datei im Lese-/Schreibmodus öffnen, indem Sie die <xref:System.Windows.Forms.SaveFileDialog.OpenFile%2A>-Methode verwenden.
 
-Wenn es auf ein Formular hinzugefügt wird die <xref:System.Windows.Forms.SaveFileDialog> Komponente in der Taskleiste am unteren Rand der Windows Forms-Designer in Visual Studio angezeigt.
+Wenn Sie einem Formular hinzugefügt wird, wird die <xref:System.Windows.Forms.SaveFileDialog> Komponente in der Leiste am unteren Rand des Windows Forms-Designer in Visual Studio angezeigt.
 
 ## <a name="see-also"></a>Siehe auch
 

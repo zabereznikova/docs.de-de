@@ -29,6 +29,8 @@
       href: how-to-guides/hdinsight-deploy-methods.md
     - name: Übermitteln von Aufträgen an Databricks
       href: how-to-guides/databricks-deploy-methods.md
+    - name: Bereitstellen von Workern und UDF-Binärdateien
+      href: how-to-guides/deploy-worker-udf-binaries.md
 - name: Referenz
   items:
     - name: API-Referenz

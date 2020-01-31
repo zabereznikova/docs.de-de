@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: d492284f-d3c5-4614-adb8-d718d5042500
 topic_type:
 - apiref
-ms.openlocfilehash: 199f58456e64ccf7ef771d42d5c7d64b189cb670
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: f720b06581ac60c8bd68dc5e85f15843fd9425f6
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73125499"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76788909"
 ---
 # <a name="icordebugcomobjectvaluegetcachedinterfacetypes-method"></a>ICorDebugComObjectValue::GetCachedInterfaceTypes-Methode
 Stellt einen Enumerator für die Schnittstellentypen bereit, in die das aktuelle-Objekt umgewandelt oder verwendet wurde.  
@@ -31,25 +31,25 @@ HRESULT GetCachedInterfaceTypes(
     [out] ICorDebugTypeEnum **ppInterfacesEnum);  
 ```  
   
-## <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameters  
  `bIInspectableOnly`  
  in Ein Wert, der angibt, ob die Methode nur Windows-Runtime Schnittstellen (`IInspectable` Schnittstellen) oder alle vom Runtime Callable Wrapper (RCW) zwischengespeicherten com-Schnittstellen zurückgibt.  
   
  `ppInterfacesEnum`  
- vorgenommen Ein Zeiger auf die Adresse eines icordebugtypeenumerators, der den Zugriff auf ICorDebugType-Objekte bereitstellt, die zwischengespeicherte Schnittstellentypen darstellen, die nach `bIInspectableOnly`gefiltert sind.  
+ [out] Ein Zeiger auf die Adresse des ein ICorDebugTypeEnum-Enumerator, der Zugriff auf ICorDebugType-Objekte enthält, die zwischengespeicherten Schnittstellentypen darstellen laut gefiltert `bIInspectableOnly`.  
   
 ## <a name="remarks"></a>Hinweise  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>-Anforderungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   
  **Bibliothek:** CorGuids.lib  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework Versionen:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [ICorDebugComObjectValue-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/icordebugcomobjectvalue-interface.md)
-- [Debuggen von Schnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [ICorDebugComObjectValue-Schnittstelle](icordebugcomobjectvalue-interface.md)
+- [Debuggen von Schnittstellen](debugging-interfaces.md)

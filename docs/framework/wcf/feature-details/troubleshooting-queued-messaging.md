@@ -2,12 +2,12 @@
 title: Problembehandlung bei Nachrichtenwarteschlangen
 ms.date: 03/30/2017
 ms.assetid: a5f2836f-018d-42f5-a571-1e97e64ea5b0
-ms.openlocfilehash: ed114cc9a37fff549e8bfc874765252fd18893a9
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 3d2d48076fafe44687546ca27e4d8670b81ce433
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75345589"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742670"
 ---
 # <a name="troubleshooting-queued-messaging"></a>Problembehandlung bei Nachrichtenwarteschlangen
 
@@ -113,10 +113,6 @@ Informationen zu Webhost Problemen, die nicht sicherheitsrelevant sind, finden S
 
 **A:** Legen Sie AutoComplete =`true` für den Vorgang fest, der der letzten Meldung in der Sitzung entspricht, und legen Sie AutoComplete =`false` für alle verbleibenden Dienst Vorgänge fest.
 
-**F:** Wo finde ich Antworten auf häufig gestellte Fragen zu MSMQ?
-
-**A:** Weitere Informationen zu MSMQ finden Sie unter [Microsoft Message Queuing](https://go.microsoft.com/fwlink/?LinkId=87810).
-
 **F:** Warum löst der Dienst beim Lesen aus einer Warteschlange, die sowohl Sitzungsnachrichten in Warteschlangen als auch in der Warteschlange befindliche Datagrammnachrichten enthält, eine `ProtocolException` aus?
 
 **A:** Es gibt einen grundlegenden Unterschied bei der Zusammenstellung von Sitzungsnachrichten in der Warteschlange und in der Warteschlange befindliche Datagrammnachrichten. Deshalb kann ein Dienst, der eine Sitzungsnachricht in einer Warteschlange lesen soll, keine Datagrammnachricht empfangen, und kann ein Dienst, der eine Datagrammnachricht in einer Warteschlange lesen soll, keine Sitzungsnachricht empfangen. Bei dem Versuch, beide Nachrichtentypen in derselben Warteschlange zu lesen, wird die folgende Ausnahme ausgelöst:
@@ -174,7 +170,7 @@ Sie können das Problem auch beheben, indem Sie MSMQ mit Active Directory-Integr
 
 6. Fügen Sie als nächstes ein zweites Zertifikat-Snap-in mit den vorherigen Schritten hinzu. Wählen Sie dieses Mal jedoch **Computer Konto** aus, und klicken Sie auf **weiter**.
 
-7. Klicken Sie auf **Lokaler Computer**, und klicken Sie dann auf **Fertig stellen**. Sie können jetzt Zertifikate per Drag &amp; Drop aus dem Computerzertifikatspeicher in den Speicher des aktuellen Benutzers verschieben.
+7. Wählen Sie **lokaler Computer** , und klicken Sie auf **Fertig**stellen. Sie können jetzt Zertifikate per Drag &amp; Drop aus dem Computerzertifikatspeicher in den Speicher des aktuellen Benutzers verschieben.
 
 **F:** Wenn mein Dienst aus einer Warteschlange auf einem anderen Computer im Arbeitsgruppen Modus liest, wird eine Ausnahme vom Typ "Zugriff verweigert" angezeigt.
 
@@ -186,7 +182,7 @@ Sie können das Problem auch beheben, indem Sie MSMQ mit Active Directory-Integr
 
 ### <a name="remote-transacted-receives"></a>Remote durchgeführte Empfangsvorgänge
 
-**F:** Wenn eine Warteschlange auf Computer a vorhanden ist, und ein WCF-Dienst, der Nachrichten aus einer Warteschlange auf Computer B (dem transaktiven Remote Empfangs Szenario) liest, werden Nachrichten nicht aus der Warteschlange gelesen. Ablauf Verfolgungs Informationen geben an, dass der Empfangs Fehler mit der Meldung "die Transaktion kann nicht importiert werden". Wie kann ich dieses Problem beheben?
+**F:** Wenn eine Warteschlange auf Computer a vorhanden ist, und ein WCF-Dienst, der Nachrichten aus einer Warteschlange auf Computer B (dem transaktiven Remote Empfangs Szenario) liest, werden Nachrichten nicht aus der Warteschlange gelesen. Ablauf Verfolgungs Informationen geben an, dass der Empfangs Fehler mit der Meldung "die Transaktion kann nicht importiert werden". Was kann ich tun, um dieses Problem zu beheben?
 
 **A:** Hierfür gibt es drei mögliche Gründe:
 

@@ -1,5 +1,6 @@
 ---
-title: ProcessUnhandledException-Funktion (WPF nicht verwaltete API-Referenz)
+title: 'Processunprocessdexception-Funktion: Referenz zur nicht verwalteten WPF-API'
+titleSuffix: ''
 ms.date: 03/30/2017
 dev_langs:
 - cpp
@@ -8,17 +9,17 @@ api_name:
 api_location:
 - PresentationHost_v0400.dll
 ms.assetid: 495ce5f6-bb4d-4b30-807a-c3c35f1ca95c
-ms.openlocfilehash: 0c8751454be6e0eed547c38e9d0bc7931abaec3d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 757e5ac3aa2dc4c87b210b026998523bd82045c1
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62030351"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76743919"
 ---
-# <a name="processunhandledexception-function-wpf-unmanaged-api-reference"></a>ProcessUnhandledException-Funktion (WPF nicht verwaltete API-Referenz)
-Diese API unterstützt die Infrastruktur von Windows Presentation Foundation (WPF) und nicht direkt aus Ihrem Code verwendet werden soll.  
+# <a name="processunhandledexception-function-wpf-unmanaged-api-reference"></a>Processunprocessdexception-Funktion (Referenz zur nicht verwalteten WPF-API)
+Diese API unterstützt die Windows Presentation Foundation-Infrastruktur (WPF) und ist nicht für die direkte Verwendung im Code vorgesehen.  
   
- Von der Windows Presentation Foundation (WPF)-Infrastruktur verwendet, für die Ausnahmebehandlung.  
+ Wird von der Windows Presentation Foundation (WPF)-Infrastruktur für die Ausnahmebehandlung verwendet.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -28,18 +29,18 @@ void __stdcall ProcessUnhandledException(
 )  
 ```  
   
-## <a name="parameters"></a>Parameter  
- errorMsg  
+## <a name="parameters"></a>Parameters  
+ ERRORMSG  
  Die Fehlermeldung.  
   
-## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Finden Sie unter [Systemanforderungen für .NET Framework](../../get-started/system-requirements.md).  
+## <a name="requirements"></a>-Anforderungen  
+ **Plattformen:** Siehe [.NET Framework System Anforderungen](../../get-started/system-requirements.md).  
   
- **DLL:**  
+ **DLL**  
   
- In .NET Framework 3.0 und 3.5: PresentationHostDLL.dll  
+ In den .NET Framework 3,0 und 3,5: presentationhostdll. dll  
   
- In .NET Framework 4 und höher: PresentationHost_v0400.dll  
+ In den .NET Framework 4 und höher: PresentationHost_v0400. dll  
   
  **.NET Framework Version:** [!INCLUDE[net_current_v30plus](../../../../includes/net-current-v30plus-md.md)]  
   

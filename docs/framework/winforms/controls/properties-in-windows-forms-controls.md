@@ -1,20 +1,20 @@
 ---
-title: Eigenschaften von Windows Forms-Steuerelementen
+title: Eigenschaften von Steuerelementen
 ms.date: 03/30/2017
 helpviewer_keywords:
 - custom controls [Windows Forms], properties overview (using code)
 - controls [Windows Forms], properties
 - properties [Windows Forms]
 ms.assetid: 2785279b-fb57-4937-8f6b-2050e475db6f
-ms.openlocfilehash: e531b80cffabb94d2589383936a425b740c9cc07
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 82bfab15cef4946661a37d2d88fbe1b797f3d816
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62012502"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76741184"
 ---
 # <a name="properties-in-windows-forms-controls"></a>Eigenschaften von Windows Forms-Steuerelementen
-Ein Windows Forms-Steuerelement erbt viele Eigenschaften die Basisklasse <xref:System.Windows.Forms.Control?displayProperty=nameWithType>. Hierzu gehören Eigenschaften wie z. B. <xref:System.Windows.Forms.Control.Font%2A>, <xref:System.Windows.Forms.Control.ForeColor%2A>, <xref:System.Windows.Forms.Control.BackColor%2A>, <xref:System.Windows.Forms.Control.Bounds%2A>, <xref:System.Windows.Forms.Control.ClientRectangle%2A>, <xref:System.Windows.Forms.Control.DisplayRectangle%2A>, <xref:System.Windows.Forms.Control.Enabled%2A>, <xref:System.Windows.Forms.Control.Focused%2A>, <xref:System.Windows.Forms.Control.Height%2A>, <xref:System.Windows.Forms.Control.Width%2A>, <xref:System.Windows.Forms.Control.Visible%2A>, <xref:System.Windows.Forms.Control.AutoSize%2A>, und viele andere. Weitere Informationen zu geerbten Eigenschaften finden Sie unter <xref:System.Windows.Forms.Control?displayProperty=nameWithType>.  
+Ein Windows Forms-Steuerelement erbt viele Eigenschaften, die die Basisklasse <xref:System.Windows.Forms.Control?displayProperty=nameWithType>bilden. Hierzu gehören Eigenschaften wie <xref:System.Windows.Forms.Control.Font%2A>, <xref:System.Windows.Forms.Control.ForeColor%2A>, <xref:System.Windows.Forms.Control.BackColor%2A>, <xref:System.Windows.Forms.Control.Bounds%2A>, <xref:System.Windows.Forms.Control.ClientRectangle%2A>, <xref:System.Windows.Forms.Control.DisplayRectangle%2A>, <xref:System.Windows.Forms.Control.Enabled%2A>, <xref:System.Windows.Forms.Control.Focused%2A>, <xref:System.Windows.Forms.Control.Height%2A>, <xref:System.Windows.Forms.Control.Width%2A>, <xref:System.Windows.Forms.Control.Visible%2A>und vielen anderen. Ausführliche Informationen zu geerbten Eigenschaften finden Sie unter <xref:System.Windows.Forms.Control?displayProperty=nameWithType>.  
   
  Sie können geerbte Eigenschaften in Ihrem Steuerelement außer Kraft setzen oder neue Eigenschaften definieren.  
   
@@ -39,10 +39,10 @@ Ein Windows Forms-Steuerelement erbt viele Eigenschaften die Basisklasse <xref:S
  Dokumentiert die Basisklasse für das Implementieren von zusammengesetzten Steuerelementen.  
   
  <xref:System.ComponentModel.TypeConverterAttribute>  
- Dokumentiert das Attribut aus, der angibt, die <xref:System.ComponentModel.TypeConverter> , die für einen benutzerdefinierten Eigenschaftentyp verwendet.  
+ Dokumentiert das Attribut, das die <xref:System.ComponentModel.TypeConverter> angibt, die für einen benutzerdefinierten Eigenschaftentyp verwendet werden sollen.  
   
  <xref:System.ComponentModel.EditorAttribute>  
- Dokumentiert das Attribut aus, der angibt, die <xref:System.Drawing.Design.UITypeEditor> für eine benutzerdefinierte Eigenschaft zu verwenden.  
+ Dokumentiert das-Attribut, das die <xref:System.Drawing.Design.UITypeEditor> angibt, die für eine benutzerdefinierte Eigenschaft verwendet werden sollen.  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
  [Attribute in Windows Forms-Steuerelementen](attributes-in-windows-forms-controls.md)  

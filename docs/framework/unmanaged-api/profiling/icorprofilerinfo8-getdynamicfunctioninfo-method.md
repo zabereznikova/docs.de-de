@@ -11,12 +11,12 @@ api_type:
 - COM
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: 45a40d49cea2dd5f881fbd47cc2fb4bd96e8f9ff
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
-ms.translationtype: MT
+ms.openlocfilehash: 66a08cf60ae4ca9bb6e373d230d0819ee6f9b28c
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70243988"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76790008"
 ---
 # <a name="icorprofilerinfo8getdynamicfunctioninfo-method"></a>ICorProfilerInfo8:: getdynamicfunctioninfo-Methode
 
@@ -34,28 +34,35 @@ HRESULT GetDynamicFunctionInfo( [in]  FunctionID              functionId,
                                 [out] WCHAR                   wszName[]);
 ```
 
-#### <a name="parameters"></a>Parameter
+## <a name="parameters"></a>Parameters
 
-`functionId` \
-in Die ID der Funktion, für die Informationen abgerufen werden sollen.
+- `functionId`
 
-`moduleId` \
-in Ein Zeiger auf das Modul, in dem die übergeordnete Klasse der Funktion definiert ist.
+  \[in] die ID der Funktion, für die Informationen abgerufen werden sollen.
 
-`ppvSig` \
-vorgenommen Ein Zeiger auf die Signatur der Funktion.
+- `moduleId`
 
-`pbSig` \
-vorgenommen Ein Zeiger auf die Anzahl von Bytes für die Funktions Signatur.
+  \[in] ein Zeiger auf das Modul, in dem die übergeordnete Klasse der Funktion definiert ist.
 
-`cchName` \
-[in] Die maximale Größe des `wszName`-Arrays.
+- `ppvSig`
 
-`pcchName` \
-vorgenommen Die Anzahl der Zeichen im `wszName` Array.
+  \[out] ein Zeiger auf die Signatur der Funktion.
 
-`wszName` \
-vorgenommen Ein Array von `WCHAR` , bei dem es sich um den Namen der Funktion handelt, sofern vorhanden.
+- `pbSig`
+
+  \[out] ein Zeiger auf die Anzahl von Bytes für die Funktions Signatur.
+
+- `cchName`
+
+  \[in] die maximale Größe des `wszName` Arrays.
+
+- `pcchName`
+
+  \[out] die Anzahl der Zeichen im `wszName` Array.
+
+- `wszName`
+
+  \[out] ein Array von `WCHAR`, bei dem es sich um den Namen der Funktion handelt, sofern vorhanden.
 
 ## <a name="remarks"></a>Hinweise
 
@@ -63,15 +70,15 @@ Bestimmte Methoden wie IL-Stub oder LCG verfügen über keine zugeordneten Metad
 
 Diese API kann verwendet werden, um Informationen zu dynamischen Methoden, einschließlich eines anzeigen Amens, abzurufen, falls verfügbar.
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>-Anforderungen
 
-**Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).
+**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).
 
-**Header:** Corprof. idl, Corprof. h
+**Header:** CorProf.idl, CorProf.h
 
-**Fern** CorGuids.lib
+**Bibliothek:** CorGuids.lib
 
-**.NET Framework-Versionen:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
+**.NET Framework Versionen:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 
 ## <a name="see-also"></a>Siehe auch
 

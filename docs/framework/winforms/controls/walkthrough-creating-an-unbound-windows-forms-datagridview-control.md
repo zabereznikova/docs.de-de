@@ -1,5 +1,5 @@
 ---
-title: 'Exemplarische Vorgehensweise: Erstellen eines ungebundenen DataGridView-Steuerelements in Windows Forms'
+title: Erstellen eines ungebundenen DataGridView-Steuer Elements
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,61 +11,61 @@ helpviewer_keywords:
 - data [Windows Forms], unbound
 - walkthroughs [Windows Forms], DataGridView control
 ms.assetid: 5a8d6afa-1b4b-4b24-8db8-501086ffdebe
-ms.openlocfilehash: ba821b461434cb7a5247d2962a161a1c171bbd14
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ceb75d4ee845d1f643d4d88d5a9f1bde73edcc70
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64651461"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76740174"
 ---
 # <a name="walkthrough-creating-an-unbound-windows-forms-datagridview-control"></a>Exemplarische Vorgehensweise: Erstellen eines ungebundenen DataGridView-Steuerelements in Windows Forms
-Möglicherweise möchten Sie häufig Tabellendaten anzeigen, die nicht aus einer Datenbank stammen. Beispielsweise empfiehlt es sich um den Inhalt eines zweidimensionalen Arrays von Zeichenfolgen anzuzeigen. Die <xref:System.Windows.Forms.DataGridView> -Klasse bietet eine einfache und äußerst anpassbare Möglichkeit zum Anzeigen von Daten ohne Bindung an eine Datenquelle. Diese exemplarische Vorgehensweise zeigt das Auffüllen einer <xref:System.Windows.Forms.DataGridView> steuern und verwalten Sie das Hinzufügen und Löschen von Zeilen in "ungebunden"-Modus. Standardmäßig kann Benutzer neue Zeilen hinzufügen. Um Zeilen zu verhindern, legen die <xref:System.Windows.Forms.DataGridView.AllowUserToAddRows%2A> Eigenschaft `false`.  
+Möglicherweise möchten Sie häufig Tabellendaten anzeigen, die nicht aus einer Datenbank stammen. Beispielsweise möchten Sie möglicherweise den Inhalt eines zweidimensionalen Arrays von Zeichen folgen anzeigen. Die <xref:System.Windows.Forms.DataGridView>-Klasse bietet eine einfache und hochgradig anpassbare Möglichkeit zum Anzeigen von Daten ohne Bindung an eine Datenquelle. In dieser exemplarischen Vorgehensweise wird gezeigt, wie ein <xref:System.Windows.Forms.DataGridView>-Steuerelement aufgefüllt und das Hinzufügen und Löschen von Zeilen im "ungebundenen" Modus verwaltet wird. Standardmäßig kann der Benutzer neue Zeilen hinzufügen. Legen Sie zum Verhindern der Zeilen Addition fest, dass die <xref:System.Windows.Forms.DataGridView.AllowUserToAddRows%2A>-Eigenschaft `false`ist.  
   
- Zum Kopieren des Codes in diesem Thema als einzelne Auflistung lesen Sie [Vorgehensweise: Erstellen eines ungebundenen Windows Forms-DataGridView-Steuerelements](how-to-create-an-unbound-windows-forms-datagridview-control.md).  
+ Informationen zum Kopieren des Codes in diesem Thema als einzelne Auflistung finden Sie unter Gewusst [wie: Erstellen eines ungebundenen Windows Forms DataGridView-Steuer](how-to-create-an-unbound-windows-forms-datagridview-control.md)Elements.  
   
 ## <a name="creating-the-form"></a>Erstellen des Formulars  
   
-#### <a name="to-use-an-unbound-datagridview-control"></a>Verwendung ein ungebundenes DataGridView-Steuerelements  
+#### <a name="to-use-an-unbound-datagridview-control"></a>So verwenden Sie ein ungebundenes DataGridView-Steuerelement  
   
-1. Erstellen Sie eine abgeleitete Klasse <xref:System.Windows.Forms.Form> und enthält die folgenden Variablendeklarationen und `Main` Methode.  
+1. Erstellen Sie eine Klasse, die von <xref:System.Windows.Forms.Form> abgeleitet ist und die folgenden Variablen Deklarationen und `Main` Methode enthält.  
   
      [!code-csharp[System.Windows.Forms.DataGridViewSimpleUnbound#01](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewSimpleUnbound/CS/simpleunbound.cs#01)]
      [!code-vb[System.Windows.Forms.DataGridViewSimpleUnbound#01](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewSimpleUnbound/VB/simpleunbound.vb#01)]  
     [!code-csharp[System.Windows.Forms.DataGridViewSimpleUnbound#02](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewSimpleUnbound/CS/simpleunbound.cs#02)]
     [!code-vb[System.Windows.Forms.DataGridViewSimpleUnbound#02](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewSimpleUnbound/VB/simpleunbound.vb#02)]  
   
-2. Implementieren einer `SetupLayout` -Methode in der Klassendefinition Ihres Formulars, das Layout des Formulars einrichten.  
+2. Implementieren Sie eine `SetupLayout`-Methode in der Klassendefinition Ihres Formulars, um das Layout des Formulars einzurichten.  
   
      [!code-csharp[System.Windows.Forms.DataGridViewSimpleUnbound#20](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewSimpleUnbound/CS/simpleunbound.cs#20)]
      [!code-vb[System.Windows.Forms.DataGridViewSimpleUnbound#20](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewSimpleUnbound/VB/simpleunbound.vb#20)]  
   
-3. Erstellen Sie eine `SetupDataGridView` Methode zum Einrichten der <xref:System.Windows.Forms.DataGridView> Spalten und Eigenschaften.  
+3. Erstellen Sie eine `SetupDataGridView`-Methode, um die <xref:System.Windows.Forms.DataGridView> Spalten und Eigenschaften einzurichten.  
   
-     Diese Methode fügt zunächst die <xref:System.Windows.Forms.DataGridView> -Steuerelement des Formulars <xref:System.Windows.Forms.Control.Controls%2A> Auflistung. Als Nächstes wird die Anzahl der anzuzeigenden Spalten mit festgelegt die <xref:System.Windows.Forms.DataGridView.ColumnCount%2A> Eigenschaft. Das Standardformat für die Spaltenüberschriften festgelegt ist, durch Festlegen der <xref:System.Windows.Forms.DataGridViewCellStyle.BackColor%2A>, <xref:System.Windows.Forms.DataGridViewCellStyle.ForeColor%2A>, und <xref:System.Windows.Forms.DataGridViewCellStyle.Font%2A> Eigenschaften der <xref:System.Windows.Forms.DataGridViewCellStyle> zurückgegebenes der <xref:System.Windows.Forms.DataGridView.ColumnHeadersDefaultCellStyle%2A> Eigenschaft.  
+     Diese Methode fügt der <xref:System.Windows.Forms.Control.Controls%2A> Auflistung des Formulars zunächst das <xref:System.Windows.Forms.DataGridView>-Steuerelement hinzu. Als nächstes wird die Anzahl der anzuzeigenden Spalten mithilfe der <xref:System.Windows.Forms.DataGridView.ColumnCount%2A>-Eigenschaft festgelegt. Der Standardstil für die Spaltenheader wird festgelegt, indem die Eigenschaften <xref:System.Windows.Forms.DataGridViewCellStyle.BackColor%2A>, <xref:System.Windows.Forms.DataGridViewCellStyle.ForeColor%2A>und <xref:System.Windows.Forms.DataGridViewCellStyle.Font%2A> der <xref:System.Windows.Forms.DataGridViewCellStyle> festgelegt werden, die von der <xref:System.Windows.Forms.DataGridView.ColumnHeadersDefaultCellStyle%2A>-Eigenschaft zurückgegeben werden.  
   
-     Layout und die Darstellung Eigenschaften festgelegt werden, und klicken Sie dann die Namen der Spalten zugewiesen werden. Wenn diese Methode beendet wird, die <xref:System.Windows.Forms.DataGridView> Steuerelement ist gefüllt werden.  
+     Layout-und Darstellungs Eigenschaften werden festgelegt, und dann werden die Spaltennamen zugewiesen. Wenn diese Methode beendet wird, kann das <xref:System.Windows.Forms.DataGridView> Steuerelement aufgefüllt werden.  
   
      [!code-csharp[System.Windows.Forms.DataGridViewSimpleUnbound#30](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewSimpleUnbound/CS/simpleunbound.cs#30)]
      [!code-vb[System.Windows.Forms.DataGridViewSimpleUnbound#30](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewSimpleUnbound/VB/simpleunbound.vb#30)]  
   
-4. Erstellen Sie eine `PopulateDataGridView` Methode zum Hinzufügen von Zeilen, die <xref:System.Windows.Forms.DataGridView> Steuerelement.  
+4. Erstellen Sie eine `PopulateDataGridView`-Methode, um dem <xref:System.Windows.Forms.DataGridView> Steuerelement Zeilen hinzuzufügen.  
   
-     Jede Zeile stellt einen Titel und die dazugehörigen Informationen.  
+     Jede Zeile stellt einen Song und die zugehörigen Informationen dar.  
   
      [!code-csharp[System.Windows.Forms.DataGridViewSimpleUnbound#40](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewSimpleUnbound/CS/simpleunbound.cs#40)]
      [!code-vb[System.Windows.Forms.DataGridViewSimpleUnbound#40](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewSimpleUnbound/VB/simpleunbound.vb#40)]  
   
-5. Mit dem Hilfsprogrammmethoden können Sie Ereignishandler anfügen.  
+5. Wenn die Hilfsprogrammmethoden vorhanden sind, können Sie Ereignishandler anfügen.  
   
-     Behandeln Sie die **hinzufügen** und **löschen** Schaltflächen <xref:System.Windows.Forms.Control.Click> Ereignisse, des Formulars <xref:System.Windows.Forms.Form.Load> Ereignis und die <xref:System.Windows.Forms.DataGridView> des Steuerelements <xref:System.Windows.Forms.DataGridView.CellFormatting> Ereignis.  
+     Sie behandeln die <xref:System.Windows.Forms.Control.Click> Ereignisse der Schaltflächen **Hinzufügen** und **Löschen** , das <xref:System.Windows.Forms.Form.Load> Ereignis des Formulars und das <xref:System.Windows.Forms.DataGridView.CellFormatting> Ereignis des <xref:System.Windows.Forms.DataGridView>-Steuer Elements.  
   
-     Wenn die **hinzufügen** Schaltfläche <xref:System.Windows.Forms.Control.Click> -Ereignis ausgelöst wird, eine neue, leere Zeile hinzugefügt wird die <xref:System.Windows.Forms.DataGridView>.  
+     Wenn das <xref:System.Windows.Forms.Control.Click>-Ereignis der Schaltfläche " **Hinzufügen** " ausgelöst wird, wird der <xref:System.Windows.Forms.DataGridView>eine neue leere Zeile hinzugefügt.  
   
-     Wenn die **löschen** Schaltfläche <xref:System.Windows.Forms.Control.Click> -Ereignis ausgelöst wird, wird die ausgewählte Zeile gelöscht, es sei denn, es ist die Zeile für neue Datensätze, die der Benutzer kann neue Zeilen hinzufügen. Diese Zeile ist immer die letzte Zeile in der <xref:System.Windows.Forms.DataGridView> Steuerelement.  
+     Wenn das <xref:System.Windows.Forms.Control.Click> Ereignis der **Lösch** Schaltfläche ausgelöst wird, wird die ausgewählte Zeile gelöscht, es sei denn, es handelt sich um die Zeile für neue Datensätze, sodass der Benutzer neue Zeilen hinzufügen kann. Diese Zeile ist immer die letzte Zeile im <xref:System.Windows.Forms.DataGridView>-Steuerelement.  
   
-     Wenn des Formulars <xref:System.Windows.Forms.Form.Load> Ereignis wird ausgelöst, die `SetupLayout`, `SetupDataGridView`, und `PopulateDataGridView` Utility-Methoden aufgerufen werden.  
+     Wenn das <xref:System.Windows.Forms.Form.Load>-Ereignis des Formulars ausgelöst wird, werden die Methoden `SetupLayout`, `SetupDataGridView`und `PopulateDataGridView` Utility aufgerufen.  
   
-     Wenn die <xref:System.Windows.Forms.DataGridView.CellFormatting> -Ereignis ausgelöst wird, jede Zelle in der `Date` Spalte ist als ein langes Datumsformat formatiert, es sei denn, der den Wert der Zelle kann nicht analysiert werden.  
+     Wenn das <xref:System.Windows.Forms.DataGridView.CellFormatting>-Ereignis ausgelöst wird, wird jede Zelle in der Spalte `Date` als langes Datum formatiert, es sei denn, der Wert der Zelle kann nicht analysiert werden.  
   
      [!code-csharp[System.Windows.Forms.DataGridViewSimpleUnbound#10](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewSimpleUnbound/CS/simpleunbound.cs#10)]
      [!code-vb[System.Windows.Forms.DataGridViewSimpleUnbound#10](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewSimpleUnbound/VB/simpleunbound.vb#10)]  
@@ -77,24 +77,24 @@ Möglicherweise möchten Sie häufig Tabellendaten anzeigen, die nicht aus einer
   
 - Drücken Sie F5, um die Anwendung auszuführen.  
   
-     Sie sehen eine <xref:System.Windows.Forms.DataGridView> -Steuerelement, das den in aufgeführten Lieder angezeigt `PopulateDataGridView`. Sie können neue Zeilen mit Hinzufügen der **Zeile hinzufügen** Schaltfläche, und Sie können ausgewählte Zeilen mit Löschen der **Zeile löschen** Schaltfläche. Die ungebundenen <xref:System.Windows.Forms.DataGridView> Steuerelement Datenspeicher, und die Daten ist unabhängig von einer externen Quelle, z. B. eine <xref:System.Data.DataSet> oder ein Array.  
+     Sie sehen ein <xref:System.Windows.Forms.DataGridView> Steuerelement, in dem die in `PopulateDataGridView`aufgeführten Titel angezeigt werden. Mit der Schaltfläche **Zeile hinzufügen** können Sie neue Zeilen hinzufügen, und Sie können die ausgewählten Zeilen mit der Schaltfläche **Zeile löschen** löschen. Das ungebundene <xref:System.Windows.Forms.DataGridView>-Steuerelement ist der Datenspeicher, und seine Daten sind unabhängig von einer externen Quelle, z. b. ein <xref:System.Data.DataSet> oder ein Array.  
   
 ## <a name="next-steps"></a>Nächste Schritte  
- Diese Anwendung verfügt über einen grundlegenden Überblick der <xref:System.Windows.Forms.DataGridView> Funktionen des Steuerelements. Sie können das Aussehen und Verhalten der Anpassen der <xref:System.Windows.Forms.DataGridView> Steuerelement auf verschiedene Weise:  
+ Diese Anwendung bietet grundlegende Kenntnisse über die Funktionen des <xref:System.Windows.Forms.DataGridView>-Steuer Elements. Sie können die Darstellung und das Verhalten des <xref:System.Windows.Forms.DataGridView> Steuer Elements auf verschiedene Weise anpassen:  
   
-- Ändern von Rahmen und Header-Formaten. Weitere Informationen finden Sie unter [Vorgehensweise: Ändern des Rahmen- und Rasterlinienstils in der Windows Forms DataGridView-Steuerelement](change-the-border-and-gridline-styles-in-the-datagrid.md).  
+- Ändern von Rahmen-und Header Stilen. Weitere Informationen finden Sie unter Gewusst [wie: Ändern der Rahmen-und Rasterlinien Stile im Windows Forms DataGridView-Steuer](change-the-border-and-gridline-styles-in-the-datagrid.md)Element.  
   
-- Aktivieren oder Einschränken von Benutzereingaben in die <xref:System.Windows.Forms.DataGridView> Steuerelement. Weitere Informationen finden Sie unter [Vorgehensweise: Verhindern des Hinzufügens der Zeile, und Löschen in der Windows Forms-DataGridView-Steuerelement](prevent-row-addition-and-deletion-datagridview.md), und [Vorgehensweise: Festlegen von Spalten schreibgeschützt in der Windows Forms-DataGridView-Steuerelement](how-to-make-columns-read-only-in-the-windows-forms-datagridview-control.md).  
+- Aktiviert oder schränkt die Benutzereingabe auf das <xref:System.Windows.Forms.DataGridView> Steuerelement ein. Weitere Informationen finden Sie unter Gewusst [wie: verhindern des Hinzufügens und Löschens von Zeilen im Windows Forms DataGridView-Steuer](prevent-row-addition-and-deletion-datagridview.md)Element und Gewusst wie: Festlegen von schreibgeschützten [Spalten im Windows Forms DataGridView-Steuer](how-to-make-columns-read-only-in-the-windows-forms-datagridview-control.md)Element.  
   
-- Überprüfen Sie Benutzereingaben für Fehler im Zusammenhang mit Datenbank. Weitere Informationen finden Sie unter [Exemplarische Vorgehensweise: Behandeln von Fehlern, die auftreten, während der Dateneingabe in das Windows Forms-DataGridView-Steuerelement](handling-errors-that-occur-during-data-entry-in-the-datagrid.md).  
+- Überprüfen Sie die Benutzereingaben auf datenbankbezogene Fehler. Weitere Informationen finden Sie unter Exemplarische Vorgehensweise [: Behandeln von Fehlern, die während der Dateneingabe im Windows Forms DataGridView-Steuerelement auftreten](handling-errors-that-occur-during-data-entry-in-the-datagrid.md).  
   
-- Behandeln Sie sehr großen Datasets, die Verwendung des virtuellen Modus. Weitere Informationen finden Sie unter [Exemplarische Vorgehensweise: Implementieren des virtuellen Modus in der Windows Forms-DataGridView-Steuerelement](implementing-virtual-mode-wf-datagridview-control.md).  
+- Verarbeiten Sie sehr große Datasets im virtuellen Modus. Weitere Informationen finden Sie unter Exemplarische [Vorgehensweise: Implementieren des virtuellen Modus im Windows Forms DataGridView-Steuer](implementing-virtual-mode-wf-datagridview-control.md)Element.  
   
-- Anpassen der Darstellung von Zellen an. Weitere Informationen finden Sie unter [Vorgehensweise: Anpassen der Darstellung von Zellen in der DataGridView-Steuerelement in Windows Forms](customize-the-appearance-of-cells-in-the-datagrid.md) und [Vorgehensweise: Festlegen von Standardzellenformaten für das Windows-DataGridView-Steuerelement Forms](how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control.md).  
+- Passen Sie die Darstellung von Zellen an. Weitere Informationen finden Sie unter Gewusst [wie: Anpassen der Darstellung von Zellen im Windows Forms DataGridView-Steuer](customize-the-appearance-of-cells-in-the-datagrid.md) Element und Gewusst [wie: Festlegen von Standardzellen Formaten für das Windows Forms DataGridView-Steuer](how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control.md)Element.  
   
 ## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Windows.Forms.DataGridView>
 - [Anzeigen von Daten im DataGridView-Steuerelement in Windows Forms](displaying-data-in-the-windows-forms-datagridview-control.md)
-- [Vorgehensweise: Erstellen eines ungebundenen Windows Forms-DataGridView-Steuerelements](how-to-create-an-unbound-windows-forms-datagridview-control.md)
+- [Gewusst wie: Erstellen eines ungebundenen DataGridView-Steuerelements in Windows Forms](how-to-create-an-unbound-windows-forms-datagridview-control.md)
 - [Datenanzeigemodi im DataGridView-Steuerelement in Windows Forms](data-display-modes-in-the-windows-forms-datagridview-control.md)

@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 316df866-442d-40cc-b049-45e8adcb65d1
 topic_type:
 - apiref
-ms.openlocfilehash: 2579bed9ae432a2b9460c421c6ee5bdc40d1e149
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 4b55ac1d895bfecbe74be447bd06f4aa22b9d04f
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73121839"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76790792"
 ---
 # <a name="icoreclrdebugtargetenumruntimes-method"></a>ICoreClrDebugTarget::EnumRuntimes-Methode
 Listet die CLR-Laufzeiten (Common Language Runtime) im angegebenen Prozess auf, der auf einem Remotecomputer ausgeführt wird.  
@@ -37,15 +37,15 @@ HRESULT EnumRuntimes (
     );  
 ```  
   
-## <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameters  
  `dwInternalProcessID`  
- [in] Die interne Prozess-ID des Prozesses, für den Laufzeiten aufgelistet werden sollen. Dies wird aus der entsprechenden [coreclrdebugprocinfo](../../../../docs/framework/unmanaged-api/debugging/coreclrdebugprocinfo-structure.md)`m_dwInternalID`.  
+ [in] Die interne Prozess-ID des Prozesses, für den Laufzeiten aufgelistet werden sollen. Dies wird aus der entsprechenden [coreclrdebugprocinfo](coreclrdebugprocinfo-structure.md)`m_dwInternalID`.  
   
  `pcRuntimes`  
  [out] Die Anzahl der in `ppRuntimes` zurückgegebenen Laufzeiten. Dieser Wert kann 0 (null) sein.  
   
  `ppRuntimes`  
- vorgenommen Ein Array von [coreclrdebugruntimeingefo](../../../../docs/framework/unmanaged-api/debugging/coreclrdebugruntimeinfo-structure.md) -Strukturen, die die Laufzeiten darstellen, die im Remote Ziel Prozess geladen wurden.  
+ vorgenommen Ein Array von [coreclrdebugruntimeingefo](coreclrdebugruntimeinfo-structure.md) -Strukturen, die die Laufzeiten darstellen, die im Remote Ziel Prozess geladen wurden.  
   
 ## <a name="return-value"></a>Rückgabewert  
  S_OK  
@@ -61,9 +61,9 @@ HRESULT EnumRuntimes (
  Andere Fehler.  
   
 ## <a name="remarks"></a>Hinweise  
- Um den von dieser Methode belegten Arbeitsspeicher freizugeben, müssen Sie die [icoreclrdebugtarget:: FreeMemory](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-freememory-method.md) -Methode aufrufen.  
+ Um den von dieser Methode belegten Arbeitsspeicher freizugeben, müssen Sie die [icoreclrdebugtarget:: FreeMemory](icoreclrdebugtarget-freememory-method.md) -Methode aufrufen.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>-Anforderungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** Coreclrremotedebugginginterfaces. h  
@@ -74,4 +74,4 @@ HRESULT EnumRuntimes (
   
 ## <a name="see-also"></a>Siehe auch
 
-- [ICoreClrDebugTarget-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-interface.md)
+- [ICoreClrDebugTarget-Schnittstelle](icoreclrdebugtarget-interface.md)

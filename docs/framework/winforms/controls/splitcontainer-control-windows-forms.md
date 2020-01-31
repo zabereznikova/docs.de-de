@@ -1,16 +1,16 @@
 ---
-title: SplitContainer-Steuerelement (Windows Forms)
+title: SplitContainer-Steuerelement
 ms.date: 03/30/2017
 helpviewer_keywords:
 - splitter windows
 - SplitContainer control [Windows Forms]
 ms.assetid: 2e36f17f-5c39-4fb4-bb09-7ce3ef823402
-ms.openlocfilehash: d860763e935c88619e3355661038757d00247dfd
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: ac04f60847aa6f77c11637f37b5ec94b6f7ef341
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69963590"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742902"
 ---
 # <a name="splitcontainer-control-windows-forms"></a>SplitContainer-Steuerelement (Windows Forms)
 Das `SplitContainer`-Steuerelement in Windows Forms kann als zusammengesetztes Steuerelement betrachtet werden. Es setzt sich aus zwei Bereichen zusammen, die durch eine verschiebbare Leiste getrennt sind. Wenn sich der Mauszeiger über der Leiste befindet, ändert sich seine Form und zeigt an, dass die Leiste verschiebbar ist.  
@@ -24,16 +24,16 @@ Das `SplitContainer`-Steuerelement in Windows Forms kann als zusammengesetztes S
  [Übersicht über das SplitContainer-Steuerelement](splitcontainer-control-overview-windows-forms.md)  
  Stellt das `SplitContainer`-Steuerelement vor und beschreibt die am häufigsten verwendeten Eigenschaften, Methoden und Ereignisse.  
   
- [Vorgehensweise: Definieren des Verhaltens der Größenänderung und Positionierung in einem geteilten Fenster](how-to-define-resize-and-positioning-behavior-in-a-split-window.md)  
+ [Gewusst wie: Definieren des Verhaltens bei Größen- und Positionsänderungen in einem geteilten Fenster](how-to-define-resize-and-positioning-behavior-in-a-split-window.md)  
  Beschreibt, wie der Splitter innerhalb des `SplitContainer`-Steuerelements gesteuert wird.  
   
- [Vorgehensweise: Fenster horizontal aufteilen](how-to-split-a-window-horizontally.md)  
+ [Gewusst wie: Horizontales Teilen eines Fensters](how-to-split-a-window-horizontally.md)  
  Beschreibt, wie die Ausrichtung des Splitters im `SplitContainer`-Steuerelement gesteuert wird.  
   
- [Vorgehensweise: Erstellen einer Multipane-Benutzeroberfläche mit Windows Forms](how-to-create-a-multipane-user-interface-with-windows-forms.md)  
+ [Gewusst wie: Erstellen einer Multipane-Benutzeroberfläche mit Windows Forms](how-to-create-a-multipane-user-interface-with-windows-forms.md)  
  Erstellt eine Multipane-Benutzeroberfläche, die der in Microsoft Outlook ähnelt.  
   
- Weitere Informationen hierzu finden Sie auch unter [Gewusst wie: Horizontales Teilen eines Fensters mithilfe des](how-to-split-a-window-horizontally-using-the-designer.md)Designers [, Vorgehensweise: Erstellen Sie eine Windows-Explorer-–-Schnittstelle](how-to-create-a-windows-explorer-style-interface-on-a-windows-form.md)in [einem Windows Form, Vorgehensweise: Erstellen Sie mit dem-Designer](create-a-multipane-user-interface-with-wf-using-the-designer.md)eine Multipane-Benutzeroberfläche mit Windows Forms.  
+ Weitere Informationen finden Sie unter Gewusst wie: [horizontales Teilen eines Fensters mithilfe des Designers](how-to-split-a-window-horizontally-using-the-designer.md), Gewusst [wie: Erstellen einer Windows-Explorer – stilschnittstelle in einem Windows Form](how-to-create-a-windows-explorer-style-interface-on-a-windows-form.md), Gewusst [wie: Erstellen einer Multipane-Benutzeroberfläche mit Windows Forms mithilfe des Designers](create-a-multipane-user-interface-with-wf-using-the-designer.md).  
   
 ## <a name="reference"></a>Referenz  
  <xref:System.Windows.Forms.SplitContainer>-Klasse  

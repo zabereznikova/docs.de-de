@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Festlegen des vom ProgressBar-Steuerelement für Windows Forms angezeigten Werts'
+title: Festlegen des vom ProgressBar-Steuerelement angezeigten Werts
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - ProgressBar control [Windows Forms], setting value displayed
 - progress controls [Windows Forms], setting value displayed
 ms.assetid: 0e5010ad-1e9a-4271-895e-5a3d24d37a26
-ms.openlocfilehash: 2e0134206ba3ebdce35f5374cbad575e34483d58
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 79ce1e576652d00b323d31dfc6551e168ea0a9a0
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69956080"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76743798"
 ---
-# <a name="how-to-set-the-value-displayed-by-the-windows-forms-progressbar-control"></a>Vorgehensweise: Festlegen des vom ProgressBar-Steuerelement für Windows Forms angezeigten Werts
+# <a name="how-to-set-the-value-displayed-by-the-windows-forms-progressbar-control"></a>Gewusst wie: Festlegen des vom ProgressBar-Steuerelement für Windows Forms angezeigten Werts
 > [!IMPORTANT]
 > Obwohl das <xref:System.Windows.Forms.ToolStripProgressBar>-Steuerelement das <xref:System.Windows.Forms.ProgressBar>-Steuerelement ersetzt und funktionell erweitert, wird das <xref:System.Windows.Forms.ProgressBar>-Steuerelement sowohl aus Gründen der Abwärtskompatibilität als auch, falls gewünscht, für die zukünftige Verwendung beibehalten.  
   
@@ -24,21 +24,21 @@ ms.locfileid: "69956080"
 |Ansatz|Beschreibung|  
 |--------------|-----------------|  
 |Legen Sie den Wert des <xref:System.Windows.Forms.ProgressBar> Steuer Elements direkt fest.|Diese Vorgehensweise eignet sich für Aufgaben, bei denen Sie wissen, wie viel von dem Element gemessen werden muss, z. b. das Lesen von Datensätzen aus einer Datenquelle. Wenn Sie den Wert nur einmal oder zweimal festlegen müssen, ist dies eine einfache Möglichkeit. Verwenden Sie abschließend diesen Prozess, wenn Sie den von der Statusanzeige angezeigten Wert verringern müssen.|  
-|Vergrößern Sie <xref:System.Windows.Forms.ProgressBar> die Anzeige durch einen Fixed-Wert.|Diese Vorgehensweise ist nützlich, wenn Sie eine einfache Anzahl zwischen dem minimal-und Maximalwert anzeigen, z. b. der verstrichenen Zeit oder der Anzahl der Dateien, die aus einem bekannten Gesamtwert verarbeitet wurden.|  
-|Vergrößern Sie <xref:System.Windows.Forms.ProgressBar> die Anzeige durch einen Wert, der abweicht.|Diese Vorgehensweise ist hilfreich, wenn Sie den angezeigten Wert in unterschiedlichen Mengen mehrmals ändern müssen. Ein Beispiel wäre die Anzeige der Menge an Festplattenspeicher, die beim Schreiben einer Reihe von Dateien auf den Datenträger verbraucht wird.|  
+|Vergrößern Sie die <xref:System.Windows.Forms.ProgressBar> Anzeige durch einen Fixed-Wert.|Diese Vorgehensweise ist nützlich, wenn Sie eine einfache Anzahl zwischen dem minimal-und Maximalwert anzeigen, z. b. der verstrichenen Zeit oder der Anzahl der Dateien, die aus einem bekannten Gesamtwert verarbeitet wurden.|  
+|Vergrößern Sie die <xref:System.Windows.Forms.ProgressBar> Anzeige durch einen Wert, der variiert.|Diese Vorgehensweise ist hilfreich, wenn Sie den angezeigten Wert in unterschiedlichen Mengen mehrmals ändern müssen. Ein Beispiel wäre die Anzeige der Menge an Festplattenspeicher, die beim Schreiben einer Reihe von Dateien auf den Datenträger verbraucht wird.|  
   
- Der direkteste Weg, um den Wert festzulegen, der von einer Statusanzeige angezeigt <xref:System.Windows.Forms.ProgressBar.Value%2A> wird, ist das Festlegen der-Eigenschaft. Dies kann entweder zur Entwurfszeit oder zur Laufzeit erfolgen.  
+ Die direkteste Möglichkeit zum Festlegen des Werts, der von einer Statusanzeige angezeigt wird, besteht darin, die <xref:System.Windows.Forms.ProgressBar.Value%2A>-Eigenschaft festzulegen. Dies kann entweder zur Entwurfszeit oder zur Laufzeit erfolgen.  
   
 ### <a name="to-set-the-progressbar-value-directly"></a>So legen Sie den Wert "ProgressBar" direkt fest  
   
-1. Legen Sie <xref:System.Windows.Forms.ProgressBar> die- <xref:System.Windows.Forms.ProgressBar.Minimum%2A> und <xref:System.Windows.Forms.ProgressBar.Maximum%2A> -Werte des Steuer Elements fest.  
+1. Legen Sie die <xref:System.Windows.Forms.ProgressBar.Minimum%2A>-und <xref:System.Windows.Forms.ProgressBar.Maximum%2A> Werte des <xref:System.Windows.Forms.ProgressBar>-Steuer Elements fest.  
   
-2. Legen Sie im Code die- <xref:System.Windows.Forms.ProgressBar.Value%2A> Eigenschaft des Steuer Elements auf einen ganzzahligen Wert zwischen den minimalen und maximalen Werten fest, die Sie festgelegt haben.  
+2. Legen Sie im Code die <xref:System.Windows.Forms.ProgressBar.Value%2A>-Eigenschaft des Steuer Elements auf einen ganzzahligen Wert zwischen den minimalen und maximalen Werten fest, die Sie festgelegt haben.  
   
     > [!NOTE]
-    > Wenn Sie die <xref:System.Windows.Forms.ProgressBar.Value%2A> -Eigenschaft außerhalb der von der <xref:System.Windows.Forms.ProgressBar.Minimum%2A> -Eigenschaft und <xref:System.Windows.Forms.ProgressBar.Maximum%2A> der-Eigenschaft festgelegten Grenzen <xref:System.ArgumentException> festlegen, löst das-Steuerelement eine Ausnahme aus  
+    > Wenn Sie die <xref:System.Windows.Forms.ProgressBar.Value%2A>-Eigenschaft außerhalb der Grenzen festlegen, die durch die Eigenschaften <xref:System.Windows.Forms.ProgressBar.Minimum%2A> und <xref:System.Windows.Forms.ProgressBar.Maximum%2A> festgelegt wurden, löst das Steuerelement eine <xref:System.ArgumentException> Ausnahme aus.  
   
-     Im folgenden Codebeispiel wird veranschaulicht, wie der <xref:System.Windows.Forms.ProgressBar> Wert direkt festgelegt wird. Der Code liest Datensätze aus einer Datenquelle und aktualisiert die Statusanzeige und die Bezeichnung jedes Mal, wenn ein Datensatz gelesen wird. Dieses Beispiel erfordert, dass das Formular über <xref:System.Windows.Forms.Label> ein-Steuer <xref:System.Windows.Forms.ProgressBar> Element, ein-Steuerelement und eine Datentabelle mit `FirstName` einer `LastName` Zeile mit dem Namen `CustomerRow` und den Feldern verfügt.  
+     Im folgenden Codebeispiel wird veranschaulicht, wie der <xref:System.Windows.Forms.ProgressBar> Wert direkt festgelegt wird. Der Code liest Datensätze aus einer Datenquelle und aktualisiert die Statusanzeige und die Bezeichnung jedes Mal, wenn ein Datensatz gelesen wird. Für dieses Beispiel ist es erforderlich, dass das Formular über ein <xref:System.Windows.Forms.Label>-Steuerelement, ein <xref:System.Windows.Forms.ProgressBar>-Steuerelement und eine Datentabelle mit einer Zeile namens `CustomerRow` mit `FirstName` und `LastName` Feldern verfügt.  
   
     ```vb  
     Public Sub CreateNewRecords()  
@@ -83,19 +83,19 @@ ms.locfileid: "69956080"
     }  
     ```  
   
-     Wenn Sie den Fortschritt in einem festgelegten Intervall anzeigen, können Sie den Wert festlegen und dann eine Methode aufzurufen, die <xref:System.Windows.Forms.ProgressBar> den Wert des Steuer Elements um dieses Intervall erhöht. Dies ist nützlich für Timer und andere Szenarien, in denen der Fortschritt nicht als Prozentsatz des ganzen gemessen wird.  
+     Wenn Sie den Fortschritt in einem festgelegten Intervall anzeigen, können Sie den Wert festlegen und dann eine Methode aufzurufen, die den Wert des <xref:System.Windows.Forms.ProgressBar> Steuer Elements um dieses Intervall erhöht. Dies ist nützlich für Timer und andere Szenarien, in denen der Fortschritt nicht als Prozentsatz des ganzen gemessen wird.  
   
 ### <a name="to-increase-the-progress-bar-by-a-fixed-value"></a>So erhöhen Sie die Statusanzeige durch einen Fixed-Wert  
   
-1. Legen Sie <xref:System.Windows.Forms.ProgressBar> die- <xref:System.Windows.Forms.ProgressBar.Minimum%2A> und <xref:System.Windows.Forms.ProgressBar.Maximum%2A> -Werte des Steuer Elements fest.  
+1. Legen Sie die <xref:System.Windows.Forms.ProgressBar.Minimum%2A>-und <xref:System.Windows.Forms.ProgressBar.Maximum%2A> Werte des <xref:System.Windows.Forms.ProgressBar>-Steuer Elements fest.  
   
-2. Legen Sie die- <xref:System.Windows.Forms.ProgressBar.Step%2A> Eigenschaft des Steuer Elements auf eine ganze Zahl fest, die den Betrag angibt, um den angezeigten Wert der Statusanzeige zu erhöhen  
+2. Legen Sie die <xref:System.Windows.Forms.ProgressBar.Step%2A>-Eigenschaft des Steuer Elements auf eine ganze Zahl fest, die den Betrag angibt, um den angezeigten Wert der Statusanzeige zu erhöhen  
   
-3. Mit der <xref:System.Windows.Forms.ProgressBar.PerformStep%2A> -Methode können Sie den Wert ändern, der von dem in <xref:System.Windows.Forms.ProgressBar.Step%2A> der-Eigenschaft festgelegten Betrag angezeigt wird.  
+3. Wenden Sie die <xref:System.Windows.Forms.ProgressBar.PerformStep%2A>-Methode an, um den Wert zu ändern, der von dem in der <xref:System.Windows.Forms.ProgressBar.Step%2A>-Eigenschaft festgelegten Betrag  
   
      Im folgenden Codebeispiel wird veranschaulicht, wie eine Statusanzeige die Anzahl der Dateien in einem Kopiervorgang beibehalten kann.  
   
-     Im folgenden Beispiel werden beim Lesen der einzelnen Dateien in den Arbeitsspeicher die Statusanzeige und die Bezeichnung aktualisiert, um die insgesamt gelesenen Dateien widerzuspiegeln. Dieses Beispiel erfordert, dass das Formular über <xref:System.Windows.Forms.Label> ein-Steuer <xref:System.Windows.Forms.ProgressBar> Element und ein-Steuerelement verfügt.  
+     Im folgenden Beispiel werden beim Lesen der einzelnen Dateien in den Arbeitsspeicher die Statusanzeige und die Bezeichnung aktualisiert, um die insgesamt gelesenen Dateien widerzuspiegeln. Dieses Beispiel erfordert, dass das Formular über ein <xref:System.Windows.Forms.Label>-Steuerelement und ein <xref:System.Windows.Forms.ProgressBar>-Steuerelement verfügt.  
   
     ```vb  
     Public Sub LoadFiles()  
@@ -153,13 +153,13 @@ ms.locfileid: "69956080"
   
 ### <a name="to-increase-the-progress-bar-by-a-dynamic-value"></a>So erhöhen Sie die Statusanzeige durch einen dynamischen Wert  
   
-1. Legen Sie <xref:System.Windows.Forms.ProgressBar> die- <xref:System.Windows.Forms.ProgressBar.Minimum%2A> und <xref:System.Windows.Forms.ProgressBar.Maximum%2A> -Werte des Steuer Elements fest.  
+1. Legen Sie die <xref:System.Windows.Forms.ProgressBar.Minimum%2A>-und <xref:System.Windows.Forms.ProgressBar.Maximum%2A> Werte des <xref:System.Windows.Forms.ProgressBar>-Steuer Elements fest.  
   
-2. Mit der <xref:System.Windows.Forms.ProgressBar.Increment%2A> -Methode können Sie den Wert ändern, der von einer angegebenen Ganzzahl angezeigt wird.  
+2. Ruft die <xref:System.Windows.Forms.ProgressBar.Increment%2A>-Methode auf, um den Wert zu ändern, der von einer angegebenen Ganzzahl angezeigt wird.  
   
      Im folgenden Codebeispiel wird veranschaulicht, wie eine Statusanzeige berechnen kann, wie viel Speicherplatz während eines Kopiervorgangs verwendet wurde.  
   
-     Im folgenden Beispiel werden beim Schreiben der einzelnen Dateien auf die Festplatte die Statusanzeige und die Bezeichnung aktualisiert, um den verfügbaren Festplatten Speicherplatz widerzuspiegeln. Dieses Beispiel erfordert, dass das Formular über <xref:System.Windows.Forms.Label> ein-Steuer <xref:System.Windows.Forms.ProgressBar> Element und ein-Steuerelement verfügt.  
+     Im folgenden Beispiel werden beim Schreiben der einzelnen Dateien auf die Festplatte die Statusanzeige und die Bezeichnung aktualisiert, um den verfügbaren Festplatten Speicherplatz widerzuspiegeln. Dieses Beispiel erfordert, dass das Formular über ein <xref:System.Windows.Forms.Label>-Steuerelement und ein <xref:System.Windows.Forms.ProgressBar>-Steuerelement verfügt.  
   
     ```vb  
     Public Sub ReadFiles()  
