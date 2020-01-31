@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - what's new [.NET Framework]
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
-ms.openlocfilehash: ab14e6cb7d9bd4c1571040280dc35233e9b89d43
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: 538806627a31366d4b8597eb010a4bbe3f8f9202
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75937981"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76860958"
 ---
 # <a name="whats-new-in-the-net-framework"></a>Neues in .NET Framework
 
@@ -600,7 +600,7 @@ Ein Hauptschwerpunkt von .NET Framework 4.7.1 ist außerdem die Verbesserung der
 
 **Unterstützung für .NET Standard 2.0**
 
-[.NET Standard](../../standard/net-standard.md) definiert einen Satz von APIs, die in jeder .NET Implementierung verfügbar sein müssen, die diese Version des Standards unterstützt. .NET Framework 4.7.1 unterstützt den .NET Standard 2.0 vollständig und fügt [etwa 200 APIs](https://github.com/dotnet/standard/blob/master/netstandard/src/ApiCompatBaseline.net461.txt) hinzu, die in .NET Standard 2.0 definiert sind und in .NET Framework 4.6.1, 4.6.2 und 4.7 fehlen. (Beachten Sie, dass diese Versionen von .NET Framework .NET Standard 2.0 nur dann unterstützen, wenn zusätzliche .NET Standard-Unterstützungsdateien auch auf dem Zielsystem bereitgestellt werden.) Weitere Informationen finden Sie unter „BCL: Unterstützung für .NET 2.0 Standard“ im Blogbeitrag zu [.NET Framework 4.7.1 Runtime und Compilerfeatures](https://devblogs.microsoft.com/dotnet/net-framework-4-7-1-runtime-and-compiler-features/).
+[.NET Standard](../../standard/net-standard.md) definiert einen Satz von APIs, die in jeder .NET Implementierung verfügbar sein müssen, die diese Version des Standards unterstützt. .NET Framework 4.7.1 unterstützt den .NET Standard 2.0 vollständig und fügt [etwa 200 APIs](https://github.com/dotnet/standard/blob/master/src/netstandard/src/ApiCompatBaseline.net461.txt) hinzu, die in .NET Standard 2.0 definiert sind und in .NET Framework 4.6.1, 4.6.2 und 4.7 fehlen. (Beachten Sie, dass diese Versionen von .NET Framework .NET Standard 2.0 nur dann unterstützen, wenn zusätzliche .NET Standard-Unterstützungsdateien auch auf dem Zielsystem bereitgestellt werden.) Weitere Informationen finden Sie unter „BCL: Unterstützung für .NET 2.0 Standard“ im Blogbeitrag zu [.NET Framework 4.7.1 Runtime und Compilerfeatures](https://devblogs.microsoft.com/dotnet/net-framework-4-7-1-runtime-and-compiler-features/).
 
 **Unterstützung für Konfiguratiosgeneratoren**
 
@@ -685,7 +685,7 @@ Eine Liste der neuen APIs, die .NET Framework 4.7 hinzugefügt wurden, finden Si
 
 .NET Framework 4.7 verbessert die Serialisierung durch die <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>:
 
-**Verbesserte Funktionalität mit Elliptic Curve Cryptography (ECC)** *
+**Verbesserte Funktionalität mit Elliptic Curve Cryptography (ECC)***
 
 In .NET Framework 4.7 wurden `ImportParameters(ECParameters)`-Methoden den Klassen <xref:System.Security.Cryptography.ECDsa> und <xref:System.Security.Cryptography.ECDiffieHellman> hinzugefügt, damit ein Objekt einen bereits eingerichteten Schlüssel darstellen kann. Eine `ExportParameters(Boolean)`-Methode wurde auch zum Exportieren des Schlüssels unter Verwendung expliziter Kurvenparameter hinzugefügt.
 

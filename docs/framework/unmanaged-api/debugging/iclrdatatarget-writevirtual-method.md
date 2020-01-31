@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d627e8b7-a605-40ac-b9bb-da9a3f1b66d9
 topic_type:
 - apiref
-ms.openlocfilehash: c6b4303163140c9c5553d02855c64dd2a3f5b134
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 4382d3c9f69df2808f8cd0aaf7f8eaf19bc9891e
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73112739"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76793677"
 ---
 # <a name="iclrdatatargetwritevirtual-method"></a>ICLRDataTarget::WriteVirtual-Methode
 Schreibt Daten aus dem angegebenen Puffer in die angegebene Adresse für den virtuellen Speicher.  
@@ -37,9 +37,9 @@ HRESULT WriteVirtual (
 );  
 ```  
   
-## <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameters  
  `address`  
- in Ein CLRDATA_ADDRESS, in dem die Adresse des virtuellen Speichers gespeichert wird.  
+ in Ein-CLRDATA_ADDRESS, in dem die Adresse des virtuellen Speichers gespeichert wird.  
   
  `buffer`  
  in Ein Zeiger auf einen Puffer, in dem die zu schreibenden Daten gespeichert werden.  
@@ -50,15 +50,15 @@ HRESULT WriteVirtual (
  `bytesWritten`  
  vorgenommen Ein Zeiger auf die tatsächliche Anzahl der geschriebenen Bytes.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>-Anforderungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** Clrdata. idl, Clrdata. h  
   
  **Bibliothek:** CorGuids.lib  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [ICLRDataTarget-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md)
+- [ICLRDataTarget-Schnittstelle](iclrdatatarget-interface.md)

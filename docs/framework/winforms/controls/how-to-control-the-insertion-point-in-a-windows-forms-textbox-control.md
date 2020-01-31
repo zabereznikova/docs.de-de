@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Steuern der Einfügemarke in einem TextBox-Steuerelement in Windows Forms'
+title: Steuern der Einfügemarke im TextBox-Steuerelement
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,25 +10,25 @@ helpviewer_keywords:
 - insertion points [Windows Forms], TextBox controls
 - text boxes [Windows Forms], controlling insertion point
 ms.assetid: 5bee7d34-5121-429e-ab1f-d8ff67bc74c1
-ms.openlocfilehash: a9d8c02a05723814d074ff91c847471287588618
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: fd4803820921f0c922a4ce885f809abee8fd4c6c
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64642977"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742201"
 ---
-# <a name="how-to-control-the-insertion-point-in-a-windows-forms-textbox-control"></a>Vorgehensweise: Steuern der Einfügemarke in einem TextBox-Steuerelement in Windows Forms
-Wenn ein Windows Forms <xref:System.Windows.Forms.TextBox> Steuerelement zunächst den Fokus erhält, wird das standardmäßige einfügen in das Textfeld auf der linken Seite des vorhandenen Text. Der Benutzer kann die Einfügemarke die Tastatur oder Maus verschieben. Wenn das Textfeld eingeschränkt, und klicken Sie dann wieder den Fokus erhält, wird die Einfügemarke ablegen, wo der Benutzer zuletzt es platziert werden.  
+# <a name="how-to-control-the-insertion-point-in-a-windows-forms-textbox-control"></a>Gewusst wie: Steuern der Einfügemarke in einem TextBox-Steuerelement in Windows Forms
+Wenn ein Windows Forms <xref:System.Windows.Forms.TextBox>-Steuerelement den Fokus erhält, wird die Standard Einfügung innerhalb des Textfelds auf der linken Seite von vorhandenem Text angezeigt. Der Benutzer kann die Einfügemarke mit der Tastatur oder der Maus verschieben. Wenn das Textfeld den Fokus verliert und dann wieder erhält, ist die Einfügemarke an der Stelle, an der der Benutzer Sie zuletzt platziert hat.  
   
- In einigen Fällen kann dieses Verhalten für den Benutzer verwirrend sein. In einem Textverarbeitungsprogramm, erwarten die Benutzer neue Zeichen nach der vorhandenen Text angezeigt werden. In eine Anwendung zur Dateneingabe erwarten die Benutzer neue Zeichen bestehende Einträge zu ersetzen. Die <xref:System.Windows.Forms.TextBoxBase.SelectionStart%2A> und <xref:System.Windows.Forms.TextBoxBase.SelectionLength%2A> Eigenschaften können Sie das Verhalten entsprechend Ihren Zweck zu ändern.  
+ In einigen Fällen kann dieses Verhalten dem Benutzer zu einem verwirrend werden. In einer Textverarbeitungsanwendung erwartet der Benutzer möglicherweise, dass neue Zeichen nach vorhandenem Text angezeigt werden. In einer Dateneingabe Anwendung erwartet der Benutzer möglicherweise, dass neue Zeichen einen vorhandenen Eintrag ersetzen. Mit den Eigenschaften <xref:System.Windows.Forms.TextBoxBase.SelectionStart%2A> und <xref:System.Windows.Forms.TextBoxBase.SelectionLength%2A> können Sie das Verhalten an ihren Zweck anpassen.  
   
-### <a name="to-control-the-insertion-point-in-a-textbox-control"></a>Zum Steuern der Einfügemarke in einem TextBox-Steuerelement  
+### <a name="to-control-the-insertion-point-in-a-textbox-control"></a>So steuern Sie die Einfügemarke in einem TextBox-Steuerelement  
   
-1. Legen Sie für die <xref:System.Windows.Forms.TextBoxBase.SelectionStart%2A>-Eigenschaft einen geeigneten Wert fest. 0 (null) platziert die Einfügemarke direkt auf der linken Seite des ersten Zeichens.  
+1. Legen Sie für die <xref:System.Windows.Forms.TextBoxBase.SelectionStart%2A>-Eigenschaft einen geeigneten Wert fest. NULL platziert die Einfügemarke direkt links vom ersten Zeichen.  
   
-2. (Optional) Legen Sie die <xref:System.Windows.Forms.TextBoxBase.SelectionLength%2A> Eigenschaft, um die Länge des Texts, die Sie auswählen möchten.  
+2. Optionale Legen Sie die <xref:System.Windows.Forms.TextBoxBase.SelectionLength%2A>-Eigenschaft auf die Länge des Texts fest, den Sie auswählen möchten.  
   
-     Der folgende Code gibt die Einfügemarke immer 0 zurück. Die `TextBox1_Enter` Ereignishandler muss gebunden sein, auf das Steuerelement; Weitere Informationen, wie unter [Erstellen von Ereignishandlern in Windows Forms](../creating-event-handlers-in-windows-forms.md).  
+     Der folgende Code gibt immer die Einfügemarke auf 0 zurück. Der `TextBox1_Enter` Ereignishandler muss an das-Steuerelement gebunden werden. Weitere Informationen finden Sie unter [Erstellen von Ereignis Handlern in Windows Forms](../creating-event-handlers-in-windows-forms.md).  
   
     ```vb  
     Private Sub TextBox1_Enter(ByVal sender As Object, ByVal e As System.EventArgs) Handles TextBox1.Enter  
@@ -54,20 +54,20 @@ Wenn ein Windows Forms <xref:System.Windows.Forms.TextBox> Steuerelement zunäch
        }  
     ```  
   
-## <a name="making-the-insertion-point-visible-by-default"></a>Sichtbarmachen wird standardmäßig der Einfügemarke ein.  
- Die <xref:System.Windows.Forms.TextBox> Einfügemarke ist standardmäßig sichtbar in einer neuen Form nur, wenn die <xref:System.Windows.Forms.TextBox> Steuerelement wird in der Reihenfolge an erster Stelle. Andernfalls die Einfügemarke angezeigt wird, nur, wenn Sie geben die <xref:System.Windows.Forms.TextBox> der Fokus mit der Tastatur oder Maus.  
+## <a name="making-the-insertion-point-visible-by-default"></a>Standardmäßiges sichtbar machen der Einfügemarke  
+ Die <xref:System.Windows.Forms.TextBox> Einfügemarke ist standardmäßig nur in einem neuen Format sichtbar, wenn das <xref:System.Windows.Forms.TextBox> Steuerelement in der Aktivier Reihenfolge an erster Stelle steht. Andernfalls wird die Einfügemarke nur angezeigt, wenn Sie die <xref:System.Windows.Forms.TextBox> den Fokus mit der Tastatur oder der Maus versehen.  
   
-#### <a name="to-make-the-text-box-insertion-point-visible-by-default-on-a-new-form"></a>Um den Text die Einfügemarke auf eine neue Form standardmäßig sichtbar zu machen  
+#### <a name="to-make-the-text-box-insertion-point-visible-by-default-on-a-new-form"></a>So machen Sie die Textfeld-Einfügemarke standardmäßig in einem neuen Formular sichtbar  
   
-- Legen Sie die <xref:System.Windows.Forms.TextBox> des Steuerelements <xref:System.Windows.Forms.Control.TabIndex%2A> Eigenschaft `0`.  
+- Legen Sie die <xref:System.Windows.Forms.Control.TabIndex%2A>-Eigenschaft des <xref:System.Windows.Forms.TextBox>-Steuer Elements auf `0`fest.  
   
 ## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Windows.Forms.TextBox>
 - [Übersicht über das TextBox-Steuerelement](textbox-control-overview-windows-forms.md)
-- [Vorgehensweise: Erstellen Sie ein Kennwort-Textfeld mit dem TextBox-Steuerelement in Windows Forms](how-to-create-a-password-text-box-with-the-windows-forms-textbox-control.md)
+- [Vorgehensweise: Erstellen eines Kennwort-Textfelds mit dem TextBox-Steuerelement in Windows Forms](how-to-create-a-password-text-box-with-the-windows-forms-textbox-control.md)
 - [Vorgehensweise: Erstellen eines schreibgeschützten Textfelds](how-to-create-a-read-only-text-box-windows-forms.md)
-- [Vorgehensweise: Setzen von Anführungszeichen in Zeichenfolgen](how-to-put-quotation-marks-in-a-string-windows-forms.md)
-- [Vorgehensweise: Wählen Sie Text im TextBox-Steuerelement von Windows Forms](how-to-select-text-in-the-windows-forms-textbox-control.md)
-- [Vorgehensweise: Zeigen Sie mehrerer Zeilen in der TextBox-Steuerelement in Windows Forms an](how-to-view-multiple-lines-in-the-windows-forms-textbox-control.md)
+- [Gewusst wie: Setzen von Anführungszeichen in Zeichenfolgen](how-to-put-quotation-marks-in-a-string-windows-forms.md)
+- [Vorgehensweise: Programmgesteuertes Auswählen von Text im TextBox-Steuerelement in Windows Forms](how-to-select-text-in-the-windows-forms-textbox-control.md)
+- [Vorgehensweise: Anzeigen mehrerer Zeilen im TextBox-Steuerelement in Windows Forms](how-to-view-multiple-lines-in-the-windows-forms-textbox-control.md)
 - [TextBox-Steuerelement](textbox-control-windows-forms.md)

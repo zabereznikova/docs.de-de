@@ -11,12 +11,12 @@ api_type:
 - COM
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: 7593e8873c2714df85146903c0052a9909a95ccd
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 8412020fb98fde245b873a2f0c6a355f6436f712
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74444718"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76868277"
 ---
 # <a name="icorprofilerinfo9getnativecodestartaddresses-method"></a>ICorProfilerInfo9:: getnativecodestartadressen-Methode
 
@@ -32,28 +32,33 @@ HRESULT GetNativeCodeStartAddresses( [in]  FunctionID functionID,
                                      [out] UINT_PTR codeStartAddresses[]);
 ```
 
-#### <a name="parameters"></a>Parameter
+## <a name="parameters"></a>Parameters
 
-`functionId` \
-in Die ID der Funktion, deren Start Adressen für den ursprünglichen Code zurückgegeben werden sollen.
+- `functionId`
 
-`reJitId` \
-[in] Die Identität der erneut JIT-kompilierten Funktion.
+  \[in] die ID der Funktion, deren Start Adressen für den nativen Code zurückgegeben werden sollen.
 
-`cCodeStartAddresses` \
-[in] Die maximale Größe des `codeStartAddresses`-Arrays.
+- `reJitId`
 
-`pcCodeStartAddresses` \
-vorgenommen Die Anzahl der verfügbaren Adressen.
+  \[in] die Identität der JIT-neu kompilierten Funktion.
 
-`codeStartAddresses` \
-vorgenommen Ein Array von `UINT_PTR`, von denen jedes die Startadresse für einen systemeigenen Text für die angegebene Funktion ist.
+- `cCodeStartAddresses`
+
+  \[in] die maximale Größe des `codeStartAddresses` Arrays.
+
+- `pcCodeStartAddresses`
+
+  \[out] die Anzahl der verfügbaren Adressen.
+
+- `codeStartAddresses`
+
+  \[out] ein Array von `UINT_PTR`, von denen jedes die Startadresse für einen systemeigenen Text für die angegebene Funktion ist.
 
 ## <a name="remarks"></a>Hinweise
 
 Wenn die mehrstufige Kompilierung aktiviert ist, kann eine Funktion mehr als einen nativen Code Körper aufweisen.
 
-## <a name="requirements"></a>Voraussetzungen
+## <a name="requirements"></a>-Anforderungen
 
 **Plattformen:** Siehe [unterstützte .net Core-Betriebssysteme](../../../core/install/dependencies.md?tabs=netcore30&pivots=os-windows).
 
@@ -65,4 +70,4 @@ Wenn die mehrstufige Kompilierung aktiviert ist, kann eine Funktion mehr als ein
 
 ## <a name="see-also"></a>Siehe auch
 
-- [ICorProfilerInfo9-Schnittstelle](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo9-interface.md)
+- [ICorProfilerInfo9-Schnittstelle](icorprofilerinfo9-interface.md)

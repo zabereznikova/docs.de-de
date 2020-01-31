@@ -11,12 +11,12 @@ api_type:
 - COM
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: df9ecc9bc355c12f993763820eb5065ba8bcc36b
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 6d50a5d74eccff6fe39aca111f768bac4d8f2e2e
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70855915"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76868329"
 ---
 # <a name="icorprofilerinfo8getfunctionfromip3-method"></a>ICorProfilerInfo8:: GetFunctionFromIP3-Methode
 
@@ -30,31 +30,34 @@ HRESULT GetFunctionFromIP3([in] LPCBYTE ip,
                            [out] ReJITID * pReJitId);
 ```
 
-#### <a name="parameters"></a>Parameter
+## <a name="parameters"></a>Parameters
 
-`ip` \
-in Der Anweisungs Zeiger in verwaltetem Code.
+- `ip`
 
-`pFunctionId` \
-vorgenommen Die Funktions-ID.
+  \[in] der Anweisungs Zeiger in verwaltetem Code.
 
-`pReJitId` \
-vorgenommen Die Identität der neu kompilierten JIT-Version der Funktion.
+- `pFunctionId`
+
+  \[out] die Funktions-ID.
+
+- `pReJitId`
+
+  \[out] die Identität der neu kompilierten JIT-Version der Funktion.
 
 ## <a name="remarks"></a>Hinweise
 
 Diese Methode funktioniert sowohl für dynamische als auch für nicht dynamische Methoden. Es ist eine supermenge von [GetFunctionFromIP2](icorprofilerinfo4-getfunctionfromip2-method.md), die nur für Funktionen mit Metadaten funktioniert.
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>-Anforderungen
 
-**Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).
+**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).
 
-**Header:** Corprof. idl, Corprof. h
+**Header:** CorProf.idl, CorProf.h
 
-**Fern** CorGuids.lib
+**Bibliothek:** CorGuids.lib
 
-**.NET Framework-Versionen:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
+**.NET Framework Versionen:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 
 ## <a name="see-also"></a>Siehe auch
 
-- [ICorProfilerInfo8-Schnittstelle](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo8-interface.md)
+- [ICorProfilerInfo8-Schnittstelle](icorprofilerinfo8-interface.md)

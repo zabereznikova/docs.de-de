@@ -1,32 +1,32 @@
 ---
-title: Sortieren von Daten in Windows Forms-DataGridView-Steuerelement
+title: Sortieren von Daten im DataGridView-Steuerelement
 ms.date: 02/13/2018
 helpviewer_keywords:
 - data [Windows Forms], sorting in grids
 - data grids [Windows Forms], sorting data
 - DataGridView control [Windows Forms], sorting data
 ms.assetid: c1d4f24c-d961-4181-809d-5a5caa6122e4
-ms.openlocfilehash: 606ffc7bd6136b775adaaaa79cf5042cf1e2dd70
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1fcd5a5f5c6d690c573c4c2c5fa7c32aa0292441
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62012146"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742943"
 ---
-# <a name="sorting-data-in-the-windows-forms-datagridview-control"></a>Sortieren von Daten in Windows Forms-DataGridView-Steuerelement
+# <a name="sorting-data-in-the-windows-forms-datagridview-control"></a>Sortieren von Daten im Windows Forms DataGridView-Steuerelement
 
-Standardmäßig können Benutzer sortieren Sie die Daten in einem <xref:System.Windows.Forms.DataGridView> Steuerelement, indem Sie auf die Kopfzeile der Spalte einen Text-Feld (oder durch Drücken von F3, wenn sich der Fokus einer Textfeldzelle auf .NET Framework 4.7.2 und höher ist). Sie können die <xref:System.Windows.Forms.DataGridViewColumn.SortMode> -Eigenschaft bestimmter Spalten, damit Benutzer unter Verwendung anderer Spalte sortiert werden soll, sofern es sinnvoll, die dazu. Sie können auch die Daten programmgesteuert, durch eine Spalte oder mehreren Spalten sortieren.
+Standardmäßig können Benutzer die Daten in einem <xref:System.Windows.Forms.DataGridView>-Steuerelement sortieren, indem Sie auf den Header einer Textfeld Spalte klicken (oder indem Sie F3 drücken, wenn sich eine Textfeld Zelle auf .NET Framework 4.7.2 und höhere Versionen konzentriert). Sie können die <xref:System.Windows.Forms.DataGridViewColumn.SortMode>-Eigenschaft bestimmter Spalten ändern, um Benutzern das Sortieren nach anderen Spaltentypen zu ermöglichen, wenn dies sinnvoll ist. Sie können die Daten auch Programm gesteuert nach beliebigen Spalten oder nach mehreren Spalten sortieren.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
 [Spaltensortiermodi im DataGridView-Steuerelement von Windows Forms](column-sort-modes-in-the-windows-forms-datagridview-control.md)  
-Beschreibt die Optionen zum Sortieren von Daten im Steuerelement.
+Beschreibt die Optionen zum Sortieren von Daten im-Steuerelement.
 
 [Vorgehensweise: Festlegen der Sortierungsmodi für Spalten im DataGridView-Steuerelement in Windows Forms](set-the-sort-modes-for-columns-wf-datagridview-control.md)  
-Beschreibt, wie Sie Benutzern das Sortieren nach Spalten, die nicht standardmäßig sortierbar sind aktiviert.
+Beschreibt, wie Sie es Benutzern ermöglichen, nach Spalten zu sortieren, die nicht standardmäßig sortierbar sind.
 
-[Vorgehensweise: Anpassen der Sortierung im DataGridView-Steuerelement in Windows Forms](how-to-customize-sorting-in-the-windows-forms-datagridview-control.md)  
-Beschreibt, wie Daten programmgesteuert sortiert und Gewusst wie: Anpassen der Sortierung mit der <xref:System.Windows.Forms.DataGridView.SortCompare?displayProperty=nameWithType> Ereignis oder durch die Implementierung der <xref:System.Collections.IComparer> Schnittstelle.
+[Gewusst wie: Anpassen der Sortierung im DataGridView-Steuerelement in Windows Forms](how-to-customize-sorting-in-the-windows-forms-datagridview-control.md)  
+Beschreibt, wie Daten Programm gesteuert sortiert werden und wie die Sortierung mithilfe des <xref:System.Windows.Forms.DataGridView.SortCompare?displayProperty=nameWithType> Ereignisses oder durch Implementieren der <xref:System.Collections.IComparer> Schnittstelle angepasst wird.
 
 ## <a name="reference"></a>Referenz
 
@@ -34,13 +34,13 @@ Beschreibt, wie Daten programmgesteuert sortiert und Gewusst wie: Anpassen der S
 Enthält die Referenzdokumentation für das <xref:System.Windows.Forms.DataGridView>-Steuerelement.  
 
 <xref:System.Windows.Forms.DataGridView.Sort%2A?displayProperty=nameWithType>  
-Enthält die Referenzdokumentation für die <xref:System.Windows.Forms.DataGridView.Sort%2A> Methode.
+Enthält die Referenz Dokumentation für die <xref:System.Windows.Forms.DataGridView.Sort%2A>-Methode.
 
 <xref:System.Windows.Forms.DataGridViewColumn.SortMode%2A?displayProperty=nameWithType>  
-Enthält die Referenzdokumentation für die <xref:System.Windows.Forms.DataGridViewColumn.SortMode%2A> Eigenschaft.
+Enthält die Referenz Dokumentation für die <xref:System.Windows.Forms.DataGridViewColumn.SortMode%2A>-Eigenschaft.
 
 <xref:System.Windows.Forms.DataGridViewColumnSortMode>  
-Enthält die Referenzdokumentation für die <xref:System.Windows.Forms.DataGridViewColumnSortMode> Enumeration.
+Enthält die Referenz Dokumentation für die <xref:System.Windows.Forms.DataGridViewColumnSortMode>-Enumeration.
 
 ## <a name="see-also"></a>Siehe auch
 

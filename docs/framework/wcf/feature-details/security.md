@@ -6,24 +6,24 @@ helpviewer_keywords:
 - security [WCF]
 - Windows Communication Foundation, security
 ms.assetid: 7ea87fcb-dcfb-4a4a-8b03-6b954575d45b
-ms.openlocfilehash: 58bec40f197dd1f2b104607a65c3ad456b95f69d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0f79ac28af45e8c05922373955c5317095d2c682
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61748462"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744635"
 ---
 # <a name="windows-communication-foundation-security"></a>Windows Communication Foundation-Sicherheit
-Die Themen in diesem Abschnitt wird beschrieben, Sicherheitsfunktionen von Windows Communication Foundation (WCF) und deren Verwendung zur Sicherung von Nachrichten.  
+In den Themen in diesem Abschnitt werden Windows Communication Foundation (WCF)-Sicherheitsfeatures und deren Verwendung zum Sichern von Nachrichten beschrieben.  
   
- Weitere Informationen zu Windows Server AppFabric und Sicherheit finden Sie unter [Sicherheit-Modell für Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)  
+ Weitere Informationen zu Windows Server AppFabric und Sicherheit finden Sie unter [Sicherheitsmodell für Windows Server AppFabric](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10)) .  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Übersicht über die Sicherheit](../../../../docs/framework/wcf/feature-details/security-overview.md)  
  Beschreibt die Sicherheitsfunktionen in WCF.  
   
  [Begriffe der Sicherheit](../../../../docs/framework/wcf/feature-details/security-concepts.md)  
- Beschreibt die grundlegende Terminologie und Konzepte, die in WCF-Sicherheit verwendet.  
+ Beschreibt die grundlegende Terminologie und Konzepte der WCF-Sicherheit.  
   
  [Häufige Sicherheitsszenarien](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md)  
  Beschreibt Szenarien und Topologien, die Sie mit WCF konfigurieren können.  
@@ -34,8 +34,8 @@ Die Themen in diesem Abschnitt wird beschrieben, Sicherheitsfunktionen von Windo
  [Bindungen und Sicherheit](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)  
  Eine sicherheitsorientierte Ansicht der Bindungen, einschließlich Themen, die veranschaulichen, wie benutzerdefinierte Sicherheitsbindungen erstellt werden.  
   
- [Sichern von Diensten und Clients](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
- Beschreibt, wie Nachrichten mithilfe von WCF-Sicherheitsfunktionen zu schützen.  
+ [Securing Services and Clients](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
+ Beschreibt, wie Nachrichten mithilfe von WCF-Sicherheitsfunktionen gesichert werden.  
   
  [Authentifizierung](../../../../docs/framework/wcf/feature-details/authentication-in-wcf.md)  
  Veranschaulicht allgemeine Authentifizierungsaufgaben.  
@@ -47,13 +47,13 @@ Die Themen in diesem Abschnitt wird beschrieben, Sicherheitsfunktionen von Windo
  Beschreibt die Grundlagen des Verbunds und wie Clients, die mit Verbundservern kommunizieren, erstellt werden.  
   
  [Teilweise Vertrauenswürdigkeit](../../../../docs/framework/wcf/feature-details/partial-trust.md)  
- Beschreibt, wie teilweise vertrauenswürdige Szenarien und WCF-Einschränkungen ausgeführt werden, wenn teilweise vertrauenswürdig ausgeführt.  
+ Beschreibt das Ausführen teilweise vertrauenswürdiger Szenarien und WCF-Einschränkungen bei der Ausführung teilweise vertrauenswürdiger Anwendungen.  
   
  [Überwachung](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)  
  Beschreibt, wie Sicherheitsereignisse überwacht werden.  
   
  [Sicherheitsleitfaden und bewährte Methoden](../../../../docs/framework/wcf/feature-details/security-guidance-and-best-practices.md)  
- Richtlinien zum Erstellen sicherer WCF-Anwendungen.  
+ Richtlinien zum Erstellen von sicheren WCF-Anwendungen.  
   
 ## <a name="reference"></a>Referenz  
  <xref:System.ServiceModel>  

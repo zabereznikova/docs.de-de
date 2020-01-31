@@ -6,12 +6,12 @@ helpviewer_keywords:
 - event handlers [WPF], weak event pattern
 - IWeakEventListener interface [WPF]
 ms.assetid: e7c62920-4812-4811-94d8-050a65c856f6
-ms.openlocfilehash: c0bf92c9b6046d531e75771a9205e6dffe0fd367
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 9f61a5a60b2ba1305158d1ab570079fe6aac19ac
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458482"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76870739"
 ---
 # <a name="weak-event-patterns"></a>Schwache Ereignismuster
 In-Anwendungen ist es möglich, dass an Ereignis Quellen angefügte Handler nicht in Abstimmung mit dem Listenerobjekt zerstört werden, das den Handler an die Quelle angefügt hat. Diese Situation kann zu Speicher Verlusten führen. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] führt ein Entwurfsmuster ein, das verwendet werden kann, um dieses Problem zu beheben, indem es eine dedizierte Manager-Klasse für bestimmte Ereignisse bereitstellt und eine Schnittstelle für Listener für dieses Ereignis implementiert. Dieses Entwurfsmuster wird als *schwaches Ereignis Muster*bezeichnet.  
@@ -36,7 +36,7 @@ In-Anwendungen ist es möglich, dass an Ereignis Quellen angefügte Handler nich
 |Vorhandene schwache Ereignis-Manager-Klasse verwenden|Wenn das Ereignis, das Sie abonnieren möchten, über ein entsprechendes <xref:System.Windows.WeakEventManager>verfügt, verwenden Sie den vorhandenen schwachen Ereignis-Manager. Eine Liste der in WPF enthaltenen schwachen Ereignis-Manager finden Sie in der Vererbungs Hierarchie in der <xref:System.Windows.WeakEventManager>-Klasse. Da die enthaltenen schwachen Ereignis-Manager eingeschränkt sind, müssen Sie wahrscheinlich einen der anderen Ansätze auswählen.|  
 |Verwenden einer generischen Weak EventManager-Klasse|Verwenden Sie einen generischen <xref:System.Windows.WeakEventManager%602>, wenn ein vorhandener <xref:System.Windows.WeakEventManager> nicht verfügbar ist, Sie möchten eine einfache Implementierung durchführen und sich keine Gedanken um die Effizienz machen. Der generische <xref:System.Windows.WeakEventManager%602> ist weniger effizient als ein vorhandener oder benutzerdefinierter schwacher Ereignis-Manager. Die generische Klasse führt z. b. mehr Reflektion aus, um das Ereignis anhand des Ereignis namens zu ermitteln. Außerdem ist der Code zum Registrieren des Ereignisses mit dem generischen <xref:System.Windows.WeakEventManager%602> ausführlicher als die Verwendung eines vorhandenen oder benutzerdefinierten <xref:System.Windows.WeakEventManager>.|  
 |Erstellen einer benutzerdefinierten Weak EventManager-Klasse|Erstellen Sie eine benutzerdefinierte <xref:System.Windows.WeakEventManager>, wenn eine vorhandene <xref:System.Windows.WeakEventManager> nicht verfügbar ist und Sie die beste Effizienz erzielen möchten. Die Verwendung eines benutzerdefinierten <xref:System.Windows.WeakEventManager> zum Abonnieren eines Ereignisses ist effizienter, aber Sie verursachen die Kosten für das Schreiben von mehr Code am Anfang.|  
-|Verwenden eines schwachen Ereignis-Managers von Drittanbietern|Nuget verfügt über [mehrere schwache Ereignis-Manager](https://www.nuget.org/packages?q=weak+event+manager&prerel=false) , und viele WPF-Frameworks unterstützen auch das-Muster (z.b. [in der Prism-Dokumentation zu locker verknüpften Ereignis Abonnements](https://github.com/PrismLibrary/Prism-Documentation/blob/master/docs/wpf/Communication.md#subscribing-to-events)).|
+|Verwenden eines schwachen Ereignis-Managers von Drittanbietern|Nuget verfügt über [mehrere schwache Ereignis-Manager](https://www.nuget.org/packages?q=weak+event+manager&prerel=false) , und viele WPF-Frameworks unterstützen auch das-Muster (z.b. [in der Prism-Dokumentation zu locker verknüpften Ereignis Abonnements](https://github.com/PrismLibrary/Prism-Documentation/blob/master/docs/wpf/legacy/Communication.md#subscribing-to-events)).|
 
  In den folgenden Abschnitten wird beschrieben, wie das schwache Ereignis Muster implementiert wird.  Im Rahmen dieser Erläuterung weist das Ereignis, das abonniert werden soll, die folgenden Eigenschaften auf.  
   

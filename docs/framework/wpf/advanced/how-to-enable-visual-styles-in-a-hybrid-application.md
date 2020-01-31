@@ -8,17 +8,17 @@ helpviewer_keywords:
 - hybrid applications [WPF interoperability]
 - visual styles [Windows Forms]
 ms.assetid: 95de9b9c-d804-405c-b2d1-49a88c1e0fe1
-ms.openlocfilehash: 251c53a8665d2eae7c3b5bb23b0a388009362dcc
-ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
+ms.openlocfilehash: dd52313e9100f9c6a1141b53ccc5a23a4b54410a
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74960111"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76789916"
 ---
 # <a name="how-to-enable-visual-styles-in-a-hybrid-application"></a>Gewusst wie: Aktivieren von visuellen Stilen in einer Hybridanwendung
-In diesem Thema wird gezeigt, wie Sie visuelle Stile für ein [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] Steuerelement aktivieren, das in einer [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]basierten Anwendung gehostet wird.  
+In diesem Thema wird gezeigt, wie Sie visuelle Stile für ein Windows Forms Steuerelement aktivieren, das in einer [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]basierten Anwendung gehostet wird.  
   
- Wenn die Anwendung die <xref:System.Windows.Forms.Application.EnableVisualStyles%2A>-Methode aufruft, werden die meisten [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] Steuerelemente automatisch visuelle Stile verwenden. Weitere Informationen finden Sie unter [Rendering von Steuerelementen mit visuellen Stilen](../../winforms/controls/rendering-controls-with-visual-styles.md).  
+ Wenn die Anwendung die <xref:System.Windows.Forms.Application.EnableVisualStyles%2A>-Methode aufruft, werden die meisten Windows Forms Steuerelemente automatisch visuelle Stile verwenden. Weitere Informationen finden Sie unter [Rendering von Steuerelementen mit visuellen Stilen](../../winforms/controls/rendering-controls-with-visual-styles.md).  
   
  Eine umfassende Code Auflistung der in diesem Thema dargestellten Aufgaben finden Sie unter [Aktivieren von visuellen Stilen in Hybrid Anwendungen](https://go.microsoft.com/fwlink/?LinkID=159986).  
   
@@ -28,7 +28,7 @@ In diesem Thema wird gezeigt, wie Sie visuelle Stile für ein [!INCLUDE[TLA#tla_
   
 1. Erstellen Sie ein [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Anwendungsprojekt mit dem Namen `HostingWfWithVisualStyles`.  
   
-2. Fügen Sie im Projektmappen-Explorer Verweise auf die folgenden Assemblys hinzu.  
+2. Fügen Sie im Projektmappen-Explorer die Verweise auf die folgenden Assemblys hinzu.  
   
     - WindowsFormsIntegration  
   
@@ -51,7 +51,7 @@ In diesem Thema wird gezeigt, wie Sie visuelle Stile für ein [!INCLUDE[TLA#tla_
   
 9. Drücken Sie F5, um die Anwendung zu erstellen und auszuführen.  
   
-     Das [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] Steuerelement wird mit visuellen Stilen gezeichnet.  
+     Das Windows Forms Steuerelement wird mit visuellen Stilen gezeichnet.  
   
 ## <a name="disabling-windows-forms-visual-styles"></a>Deaktivieren visueller Windows Forms-Stile  
  Wenn Sie visuelle Stile deaktivieren möchten, entfernen Sie einfach den aufzurufenden <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> Methode.  
@@ -64,7 +64,7 @@ In diesem Thema wird gezeigt, wie Sie visuelle Stile für ein [!INCLUDE[TLA#tla_
   
 3. Drücken Sie F5, um die Anwendung zu erstellen und auszuführen.  
   
-     Das [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] Steuerelement wird mit dem Standard Systemstil gezeichnet.  
+     Das Windows Forms Steuerelement wird mit dem Standard Systemstil gezeichnet.  
   
 ## <a name="see-also"></a>Siehe auch
 

@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Anzeigen von Dialogfeldern für Windows Forms'
+title: 'Vorgehensweise: Anzeigen von Dialog Feldern'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,21 +11,21 @@ helpviewer_keywords:
 - Windows Forms, calling one form from another
 - dialog boxes [Windows Forms], displaying for Windows Forms
 ms.assetid: aaac1b38-c651-495a-8d3d-5a9bfb32fee3
-ms.openlocfilehash: b99f2273dae88faf86448da6e1d2986a83803abf
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: dd04a06eaa0dd7583ef2f72edb4cffa99aaaa60c
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61802582"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76739464"
 ---
-# <a name="how-to-display-dialog-boxes-for-windows-forms"></a>Vorgehensweise: Anzeigen von Dialogfeldern für Windows Forms
-Sie anzeigen ein Dialogfeld, auf die gleiche Weise, die Sie eine andere Form in einer Anwendung anzeigen. Das Startformular lädt automatisch auf, wenn die Anwendung ausgeführt wird. Damit wird ein zweites Formular oder Dialogfeld in der Anwendung angezeigt werden, Schreiben Sie Code zum Laden und anzeigen. Auf ähnliche Weise, um das Formular oder Dialogfeld auszublenden, Schreiben Sie Code zum Entladen oder auszublenden.  
+# <a name="how-to-display-dialog-boxes-for-windows-forms"></a>Gewusst wie: Anzeigen von Dialogfeldern für Windows Forms
+Sie können ein Dialogfeld auf die gleiche Weise wie andere Formulare in einer Anwendung anzeigen. Das Start Formular wird automatisch geladen, wenn die Anwendung ausgeführt wird. Damit ein zweites Formular oder Dialogfeld in der Anwendung angezeigt wird, schreiben Sie Code, um ihn zu laden und anzuzeigen. Wenn Sie das Formular oder Dialogfeld ausblenden möchten, schreiben Sie den Code, um ihn zu entladen oder auszublenden.  
   
-### <a name="to-display-a-dialog-box"></a>Um ein Dialogfeld anzuzeigen.  
+### <a name="to-display-a-dialog-box"></a>So zeigen Sie ein Dialogfeld an  
   
-1. Navigieren Sie an den Ereignishandler mit dem Sie das Dialogfeld öffnen möchten. Dies kann vorkommen, wenn ein Menübefehl aktiviert ist, wenn auf eine Schaltfläche geklickt wird, oder jedes andere Ereignis auftritt.  
+1. Navigieren Sie zu dem Ereignishandler, mit dem Sie das Dialogfeld öffnen möchten. Dies kann vorkommen, wenn ein Menübefehl ausgewählt wird, wenn auf eine Schaltfläche geklickt wird oder wenn ein beliebiges anderes Ereignis auftritt.  
   
-2. Fügen Sie im Ereignishandler Code, um das Dialogfeld zu öffnen. In diesem Beispiel wird eine Schaltfläche – Click-Ereignis verwendet, um das Dialogfeld anzuzeigen:  
+2. Fügen Sie im-Ereignishandler Code hinzu, um das Dialogfeld zu öffnen. In diesem Beispiel wird ein Button-Click-Ereignis verwendet, um das Dialogfeld anzuzeigen:  
   
     ```vb  
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click  

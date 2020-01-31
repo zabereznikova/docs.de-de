@@ -11,12 +11,12 @@ api_type:
 - COM
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: d6518612c213d21c2dc7d80878121ccd3b7e2abb
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 7fd62e0d3d9173f3b75882131e57126075c0677f
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74449853"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76863308"
 ---
 # <a name="icorprofilerinfo10enumerateobjectreferences-method"></a>ICorProfilerInfo10:: enumerateobjectreferences-Methode
 
@@ -30,22 +30,25 @@ HRESULT EnumerateObjectReferences( [in] ObjectID objectId,
                                    [in] void* clientData);
 ```
 
-#### <a name="parameters"></a>Parameter
+## <a name="parameters"></a>Parameters
 
-`objectId` \
-in Das Objekt, auf das Verweise aufgelistet werden sollen.
+- `objectId`
 
-`callback` \
-in Die Funktion, die mit den verweisen für das-Objekt aufgerufen wird.
+  \[in] das-Objekt, für das Verweise aufgelistet werden sollen.
 
-`clientData` \
-in Vom Profiler bereitgestellte Daten, die an die `callback`-Funktion übergeben werden.
+- `callback`
+
+  \[in] die Funktion, die mit den verweisen für das-Objekt aufgerufen wird.
+
+- `clientData`
+
+  \[in] vom Profiler bereitgestellte Daten, die an die `callback`-Funktion übergeben werden.
 
 ## <a name="remarks"></a>Hinweise
 
-Die `EnumerateObjectReferences`-Methode ähnelt [ObjectReferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-objectreferences-method.md), mit dem Unterschied, dass Sie die Verweise nach Bedarf für den Profiler durchläuft, anstatt ein Array zum Speichern der Verweise vorab zuzuordnen.
+Die `EnumerateObjectReferences`-Methode ähnelt [ObjectReferences](icorprofilercallback-objectreferences-method.md), mit dem Unterschied, dass Sie die Verweise nach Bedarf für den Profiler durchläuft, anstatt ein Array zum Speichern der Verweise vorab zuzuordnen.
 
-## <a name="requirements"></a>Voraussetzungen
+## <a name="requirements"></a>-Anforderungen
 
 **Plattformen:** Siehe [unterstützte .net Core-Betriebssysteme](../../../core/install/dependencies.md?tabs=netcore30&pivots=os-windows).
 
@@ -57,4 +60,4 @@ Die `EnumerateObjectReferences`-Methode ähnelt [ObjectReferences](../../../../d
 
 ## <a name="see-also"></a>Siehe auch
 
-- [ICorProfilerInfo10-Schnittstelle](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo10-interface.md)
+- [ICorProfilerInfo10-Schnittstelle](icorprofilerinfo10-interface.md)

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7bc3a938-0df1-4739-9ff1-89cff454b704
 topic_type:
 - apiref
-ms.openlocfilehash: bdbf93ba4df50cf26538f0e527fdc3c982bb274e
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 0f6fb469aa9d6d40b762bfd2feec28c28299732f
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74447335"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76867112"
 ---
 # <a name="cor_prf_module_flags-enumeration"></a>COR_PRF_MODULE_FLAGS-Enumeration
 Gibt die Eigenschaften eines Moduls an.  
@@ -52,17 +52,17 @@ typedef enum
 |COR_PRF_MODULE_WINDOWS_RUNTIME|Das Flag Windows-Runtime Inhaltstyp wird in den Metadaten für die Assembly dieses Moduls festgelegt. Dies ist der Fall für alle Windows-metadatenmodule (. winmd).|  
   
 ## <a name="remarks"></a>Hinweise  
- Bits aus COR_PRF_MODULE_FLAGS werden an den Profiler im `pdwModuleFlags` Output-Parameter der [ICorProfilerInfo3:: GetModuleInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getmoduleinfo2-method.md) -Methode zurückgegeben. Einige Kombinationen von zwei oder mehr Flags sind möglich, aber nicht alle Kombinationen sind möglich.  
+ Bits aus COR_PRF_MODULE_FLAGS werden an den Profiler im `pdwModuleFlags` Output-Parameter der [ICorProfilerInfo3:: GetModuleInfo2](icorprofilerinfo3-getmoduleinfo2-method.md) -Methode zurückgegeben. Einige Kombinationen von zwei oder mehr Flags sind möglich, aber nicht alle Kombinationen sind möglich.  
   
-## <a name="requirements"></a>Voraussetzungen  
+## <a name="requirements"></a>-Anforderungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  
   
  **Bibliothek:** CorGuids.lib  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework Versionen:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Profilerstellungsenumerationen](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)
+- [Profilerstellungsenumerationen](profiling-enumerations.md)

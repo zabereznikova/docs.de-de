@@ -8,20 +8,20 @@ helpviewer_keywords:
 - mapping properties [WPF]
 - WindowsFormsHost element property mapping [WPF]
 ms.assetid: 74809167-bf8e-48b7-a2e7-b4ea08bc7d8c
-ms.openlocfilehash: 94d175ec58f35b7e807786c221437d05c605c0bc
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: c076937d6431adf1750793d47ece88dc82edf95c
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73974225"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76794101"
 ---
 # <a name="walkthrough-mapping-properties-using-the-windowsformshost-element"></a>Exemplarische Vorgehensweise: Zuordnen von Eigenschaften mit dem WindowsFormsHost-Element
 
-In dieser exemplarischen Vorgehensweise wird gezeigt, wie Sie die <xref:System.Windows.Forms.Integration.WindowsFormsHost.PropertyMap%2A>-Eigenschaft verwenden, um den entsprechenden Eigenschaften eines gehosteten [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] Steuer Elements [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Eigenschaften zuzuordnen.
+In dieser exemplarischen Vorgehensweise wird gezeigt, wie Sie die <xref:System.Windows.Forms.Integration.WindowsFormsHost.PropertyMap%2A>-Eigenschaft verwenden, um den entsprechenden Eigenschaften eines gehosteten Windows Forms Steuer Elements [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Eigenschaften zuzuordnen.
 
 In dieser exemplarischen Vorgehensweise werden u. a. folgende Aufgaben veranschaulicht:
 
-- Erstellen des Projekts.
+- Erstellen des Projekts
 
 - Definieren des Anwendungslayouts
 
@@ -35,9 +35,9 @@ In dieser exemplarischen Vorgehensweise werden u. a. folgende Aufgaben veranscha
 
 Eine komplette Code Auflistung der Aufgaben in dieser exemplarischen Vorgehensweise finden Sie unter [Mapping Properties using the Windows Form shost Element Sample](https://go.microsoft.com/fwlink/?LinkID=160019).
 
-Wenn Sie fertig sind, können Sie [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Eigenschaften den entsprechenden Eigenschaften eines gehosteten [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] Steuer Elements zuordnen.
+Wenn Sie fertig sind, können Sie [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Eigenschaften den entsprechenden Eigenschaften eines gehosteten Windows Forms Steuer Elements zuordnen.
 
-## <a name="prerequisites"></a>Erforderliche Voraussetzungen
+## <a name="prerequisites"></a>Erforderliche Komponenten
 
 Zum Durchführen dieser exemplarischen Vorgehensweise benötigen Sie die folgenden Komponenten:
 
@@ -53,7 +53,7 @@ Zum Durchführen dieser exemplarischen Vorgehensweise benötigen Sie die folgend
 
 ## <a name="defining-the-application-layout"></a>Definieren des Anwendungslayouts
 
-Die [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]basierte Anwendung verwendet das <xref:System.Windows.Forms.Integration.WindowsFormsHost>-Element, um ein [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]-Steuerelement zu hosten.
+Die [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]basierte Anwendung verwendet das <xref:System.Windows.Forms.Integration.WindowsFormsHost>-Element, um ein Windows Forms-Steuerelement zu hosten.
 
 ### <a name="to-define-the-application-layout"></a>So definieren sie das Anwendungslayout
 
@@ -83,7 +83,7 @@ Das <xref:System.Windows.Forms.Integration.WindowsFormsHost>-Element stellt mehr
 
      Mit der `AddClipMapping`-Methode wird eine neue Zuordnung für die <xref:System.Windows.UIElement.Clip%2A>-Eigenschaft hinzugefügt.
 
-     Die `OnClipChange`-Methode übersetzt die <xref:System.Windows.UIElement.Clip%2A>-Eigenschaft in die [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]<xref:System.Windows.Forms.Control.Region%2A>-Eigenschaft.
+     Die `OnClipChange`-Methode übersetzt die <xref:System.Windows.UIElement.Clip%2A>-Eigenschaft in die Windows Forms<xref:System.Windows.Forms.Control.Region%2A>-Eigenschaft.
 
      Die `Window1_SizeChanged`-Methode behandelt das <xref:System.Windows.FrameworkElement.SizeChanged> Ereignis des Fensters und passt die Größe des Clippingbereichs an das Anwendungsfenster an.
 
@@ -113,7 +113,7 @@ Ersetzen Sie eine standardmäßige Eigenschaften Zuordnung, indem Sie die Standa
 
      Die `ReplaceFlowDirectionMapping`-Methode ersetzt die Standard Zuordnung für die <xref:System.Windows.FrameworkElement.FlowDirection%2A>-Eigenschaft.
 
-     Die `OnFlowDirectionChange`-Methode übersetzt die <xref:System.Windows.FrameworkElement.FlowDirection%2A>-Eigenschaft in die [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]<xref:System.Windows.Forms.Control.RightToLeft%2A>-Eigenschaft.
+     Die `OnFlowDirectionChange`-Methode übersetzt die <xref:System.Windows.FrameworkElement.FlowDirection%2A>-Eigenschaft in die Windows Forms<xref:System.Windows.Forms.Control.RightToLeft%2A>-Eigenschaft.
 
      Die `cb_CheckedChanged`-Methode behandelt das <xref:System.Windows.Forms.CheckBox.CheckedChanged>-Ereignis auf dem <xref:System.Windows.Forms.CheckBox>-Steuerelement. Die <xref:System.Windows.FrameworkElement.FlowDirection%2A>-Eigenschaft wird basierend auf dem Wert der <xref:System.Windows.Forms.CheckBox.CheckState%2A>-Eigenschaft zugewiesen.
 
@@ -145,7 +145,7 @@ Richten Sie die Eigenschafts Zuordnungen ein, indem Sie die zuvor beschriebenen 
 
      Die `WindowLoaded`-Methode behandelt das <xref:System.Windows.FrameworkElement.Loaded>-Ereignis und führt die folgende Initialisierung aus.
 
-    - Erstellt eine [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]<xref:System.Windows.Forms.CheckBox> Steuer Elements.
+    - Erstellt eine Windows Forms<xref:System.Windows.Forms.CheckBox> Steuer Elements.
 
     - Sie ruft die Methoden, die Sie zuvor in der exemplarischen Vorgehensweise definiert haben, auf, um die Eigenschaftenzuordnungen einzurichten.
 

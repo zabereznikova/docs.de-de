@@ -1,34 +1,34 @@
 ---
-title: Eigenschaften für Windows Forms-Steuerelemente, die Richtlinien für Eingabehilfen unterstützen
+title: Barrierefreiheits Eigenschaften für Steuerelemente
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Forms, accessibility properties of controls
 - accessibility [Windows Forms], Windows Forms control properties
 ms.assetid: ad3567a6-313b-4708-9e15-f487a831f049
-ms.openlocfilehash: b3f10fe472e449d39385facdbc716cba9b3f7382
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 73d81f5b5f656ed5ef90bdd9b6fe1b3293123f97
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61640494"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76743426"
 ---
 # <a name="properties-on-windows-forms-controls-that-support-accessibility-guidelines"></a>Eigenschaften für Windows Forms-Steuerelemente, die Richtlinien für Eingabehilfen unterstützen
-Steuerelemente auf der standard-Toolbox für Windows Forms unterstützen viele Barrierefreiheits-Richtlinien, einschließlich Verfügbarmachung des Tastaturfokus und die Bildschirmelementen verfügbar zu machen.  
+Steuerelemente in der Standard Toolbox für Windows Forms unterstützen viele der Richtlinien für Barrierefreiheit, einschließlich der Offenlegung des Tastaturfokus und der Bereitstellung der Bildschirmelemente.  
   
-## <a name="planning-ahead-for-accessibility"></a>Vorausplanung für den Zugriff auf  
- Die Eigenschaften des Steuerelements können verwendet werden, um weitere Richtlinien für Barrierefreiheit zu unterstützen, wie in der folgenden Tabelle gezeigt. Darüber hinaus sollten Sie die Menüs verwenden, um Zugriff auf das Programmieren von Funktionen bereitzustellen.  
+## <a name="planning-ahead-for-accessibility"></a>Vorausplanung für Barrierefreiheit  
+ Die Eigenschaften der Steuerelemente können verwendet werden, um andere Barrierefreiheits Richtlinien zu unterstützen, wie in der folgenden Tabelle gezeigt. Außerdem sollten Sie Menüs verwenden, um den Zugriff auf Programm Features zu ermöglichen.  
   
-|Eigenschaft des Steuerelements|Überlegungen zur Barrierefreiheit|  
+|Control-Eigenschaft|Überlegungen zur Barrierefreiheit|  
 |----------------------|--------------------------------------|  
-|AccessibleDescription|Die Beschreibung ist auf Barrierefreiheit-Hilfsmittel, wie z.B. Sprachausgabe gemeldet. Eingabehilfen sind spezielle Programme und Geräte, die es Personen mit Behinderungen ermöglichen, einen Computer effizienter zu nutzen.|  
-|AccessibleName|Der Name, der an die Eingabehilfen gemeldet wird.|  
-|AccessibleRole|Beschreibt die Verwendung des Elements in der Benutzeroberfläche.|  
-|TabIndex|Erstellt einen logischen Navigationspfad durch das Formular an. Es ist wichtig für Steuerelemente ohne systeminterne Bezeichnung, z. B. Textfelder, damit die zugeordnete Bezeichnung, die in der Aktivierreihenfolge direkt vorangestellt.|  
-|Text|Verwenden Sie das Zeichen "&", um Zugriffstasten zu erstellen. Mithilfe von Zugriffsschlüsseln ist Teil der Bereitstellung von dokumentierten tastaturzugriffen auf Features.|  
-|Schriftgrad|Wenn der Schriftgrad nicht anpassbar ist, sollte dann sie auf 10 Punkt oder größer festgelegt werden. Nach der Schriftgrad des Formulars festgelegt ist, werden alle Steuerelemente zum Formular hinzugefügt wurde, danach die gleiche Größe aufweisen.|  
-|Forecolor|Wenn diese Eigenschaft auf den Standardwert festgelegt ist, werden die Farbe von benutzereinstellungen auf dem Formular verwendet werden.|  
-|Backcolor|Wenn diese Eigenschaft auf den Standardwert festgelegt ist, werden die Farbe von benutzereinstellungen auf dem Formular verwendet werden.|  
-|BackgroundImage|Lassen Sie diese Eigenschaft leer, um den Text lesbarer zu gestalten.|  
+|AccessibleDescription|Die Beschreibung wird den Barrierefreiheits Hilfen (z. b. Bildschirmlesern) gemeldet. Eingabehilfen sind spezielle Programme und Geräte, die es Personen mit Behinderungen ermöglichen, einen Computer effizienter zu nutzen.|  
+|AccessibleName|Der Name, der den Barrierefreiheits Hilfen gemeldet wird.|  
+|AccessibleRole|Beschreibt die Verwendung des-Elements in der Benutzeroberfläche.|  
+|TabIndex|Erstellt einen sinnvollen Navigationspfad über das Formular. Es ist wichtig, dass Steuerelemente ohne intrinsische Bezeichnungen, wie z. b. Textfelder, ihre zugehörige Bezeichnung unmittelbar in der Aktivier Reihenfolge voranstellen.|  
+|Text|Verwenden Sie das Zeichen "&", um Zugriffsschlüssel zu erstellen. Die Verwendung von Zugriffs Schlüsseln ist Teil der Bereitstellung dokumentierten Tastatur Zugriffs auf Funktionen.|  
+|Schriftgrad|Wenn die Schriftgröße nicht anpassbar ist, sollte Sie auf 10 Punkte oder größer festgelegt werden. Nachdem die Schriftgröße des Formulars festgelegt wurde, haben alle dem Formular hinzugefügten Steuerelemente dieselbe Größe.|  
+|Forecolor|Wenn diese Eigenschaft auf den Standardwert festgelegt ist, werden die Farbeinstellungen des Benutzers im Formular verwendet.|  
+|Backcolor|Wenn diese Eigenschaft auf den Standardwert festgelegt ist, werden die Farbeinstellungen des Benutzers im Formular verwendet.|  
+|BackgroundImage|Lassen Sie diese Eigenschaft leer, damit der Text besser lesbar ist.|  
   
 ## <a name="see-also"></a>Siehe auch
 

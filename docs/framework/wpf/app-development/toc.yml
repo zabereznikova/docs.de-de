@@ -130,8 +130,6 @@
               href: how-to-configure-iis-5-0-and-iis-6-0-to-deploy-wpf-applications.md
             - name: 'Konfigurieren von Visual Studio zum Debuggen einer XAML-Browseranwendung, um einen Webdienst aufzurufen'
               href: configure-vs-to-debug-a-xaml-browser-to-call-a-web-service.md
-            - name: Bestimmen der installierten Version von WPF
-              href: how-to-determine-the-installed-version-of-wpf.md
             - name: Erkennen einer .NET Framework 3.0-Installation
               href: how-to-detect-whether-the-net-framework-3-0-is-installed.md
             - name: Erkennen einer .NET Framework 3.5-Installation

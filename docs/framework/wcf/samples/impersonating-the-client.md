@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Impersonating the Client Sample [Windows Communication Foundation]
 - impersonation, Windows Communication Foundation sample
 ms.assetid: 8bd974e1-90db-4152-95a3-1d4b1a7734f8
-ms.openlocfilehash: 0c262d8b5460f236ef0429154ae337c7adf96714
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: e9e85729b10d1c992a22f6c0bea65dfd1e21e7e4
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75338713"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742552"
 ---
 # <a name="impersonating-the-client"></a>Durchführen eines Identitätswechsels für den Client
 Das Beispiel für einen Identitätswechsel veranschaulicht, wie die Identität der Aufruferanwendung vom Dienst angenommen wird, sodass der Dienst im Namen des Aufrufers auf Systemressourcen zugreifen kann.  
@@ -102,7 +102,7 @@ client.ClientCredentials.Windows.AllowedImpersonationLevel = TokenImpersonationL
  Wenn Sie das Beispiel ausführen, werden die Anforderungen und Antworten für den Vorgang im Dienst- und Clientkonsolenfenster angezeigt. Drücken Sie die EINGABETASTE in den einzelnen Konsolenfenstern, um den Dienst und den Client zu schließen.  
   
 > [!NOTE]
-> Der Dienst muss entweder unter einem Administrator Konto ausgeführt werden, oder das Konto, unter dem er ausgeführt wird, muss über Rechte verfügen, um den `http://localhost:8000/ServiceModelSamples`-URI bei der HTTP-Ebene zu registrieren. Solche Rechte können durch das Einrichten einer [Namespace Reservierung](https://go.microsoft.com/fwlink/?LinkId=95012) mit dem [Tool Httpcfg. exe](https://go.microsoft.com/fwlink/?LinkId=95010)erteilt werden.  
+> Der Dienst muss entweder unter einem Administrator Konto ausgeführt werden, oder das Konto, unter dem er ausgeführt wird, muss über Rechte verfügen, um den `http://localhost:8000/ServiceModelSamples`-URI bei der HTTP-Ebene zu registrieren. Solche Rechte können durch das Einrichten einer [Namespace Reservierung](/windows/win32/http/namespace-reservations-registrations-and-routing) mit dem [Tool Httpcfg. exe](/windows/win32/http/httpcfg-exe)erteilt werden.  
   
 > [!NOTE]
 > Auf Computern, auf denen Windows Server 2003 ausgeführt wird, wird der Identitätswechsel nur unterstützt, wenn die Host. exe-Anwendung über das Identitätswechsel Privileg verfügt. (Standardmäßig verfügen nur Administratoren über diese Berechtigung.) Um dieses Privileg einem Konto hinzuzufügen, unter dem der-Dienst ausgeführt wird, wechseln Sie zu **Verwaltung**, öffnen Sie **lokale Sicherheitsrichtlinie**, öffnen Sie **lokale Richtlinien**, klicken Sie auf Zuweisen von **Benutzerrechten**, und wählen Sie dann Identität **eines Clients nach Authentifizierung** annehmen aus, und doppelklicken Sie auf **Eigenschaften** , um einen Benutzer oder eine Gruppe  

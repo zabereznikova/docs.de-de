@@ -6,12 +6,12 @@ helpviewer_keywords:
 - colors [Windows Forms], dialog box
 - color dialog box
 ms.assetid: 261793e0-8252-47c5-b76c-621857b8da44
-ms.openlocfilehash: 0b44774fcace82f7e209440bc15705ad632bc223
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 3ac758c353d235183041b6442d4472f863f7ca75
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76736923"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76870803"
 ---
 # <a name="colordialog-component-windows-forms"></a>ColorDialog-Komponente (Windows Forms)
 Bei der Windows Forms <xref:System.Windows.Forms.ColorDialog> Komponente handelt es sich um ein vorkonfiguriertes Dialogfeld, mit dem der Benutzer eine Farbe aus einer Palette auswählen und dieser Palette benutzerdefinierte Farben hinzufügen kann. Es entspricht dem Dialogfeld, das in anderen Windows-basierten Anwendungen zur Farbauswahl angezeigt wird. Verwenden Sie es in Ihrer auf Windows basierenden Anwendung als einfache Lösung, anstatt ein eigenes Dialogfeld zu konfigurieren.  
@@ -32,9 +32,6 @@ Bei der Windows Forms <xref:System.Windows.Forms.ColorDialog> Komponente handelt
   
  <xref:System.Windows.Forms.ColorDialog>  
  Enthält Referenzinformationen zur <xref:System.Windows.Forms.ColorDialog>-Klasse und zu ihren Membern.  
-  
- [Erforderlicher Code für Windows Forms-Dialogfelder](assetId:///VS|dv_vstechart|~\html\vbtchessentialcodeforwindowsformsdialogboxes.htm)  
- Beschreibt die Dialogfeldsteuerelemente und Komponenten von Windows Forms sowie den Code, der zum Ausführen ihrer grundlegenden Funktionen erforderlich ist.  
-  
+ 
  [Dialogfeld-Steuerelemente und -Komponenten](dialog-box-controls-and-components-windows-forms.md)  
  Listet eine Gruppe von Steuerelementen und Komponenten auf, mit deren Hilfe Benutzer Standardinteraktionen mit der Anwendung oder dem System ausführen können.
