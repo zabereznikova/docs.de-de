@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 23682ca0-1bcf-48e6-996e-69f7ba337682
 topic_type:
 - apiref
-ms.openlocfilehash: 0369cc6d98736542b764e5914d733a9341753b24
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 8b259636a8bd28abd3bba12c4a05dda3c13557e1
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73088878"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76784892"
 ---
 # <a name="icordebugappdomain3getcachedwinrttypesforiids-method"></a>ICorDebugAppDomain3::GetCachedWinRTTypesForIIDs-Methode
 Ruft einen Enumerator für zwischengespeicherte Windows-Runtime Typen in einer Anwendungsdomäne auf der Grundlage ihrer Schnittstellen Bezeichner ab.  
@@ -35,7 +35,7 @@ HRESULT GetCachedWinRTTypesForIIDs (
 );  
 ```  
   
-## <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameters  
  `cReqTypes`  
  in Die Anzahl der erforderlichen Typen.  
   
@@ -48,15 +48,15 @@ HRESULT GetCachedWinRTTypesForIIDs (
 ## <a name="remarks"></a>Hinweise  
  Wenn die Methode keine Informationen für einen bestimmten Schnittstellen Bezeichner abrufen kann, weist der entsprechende Eintrag in der ICorDebugTypeEnum-Auflistung aufgrund von Datenabruf Problemen einen Typ von `ELEMENT_TYPE_END` oder `ELEMENT_TYPE_VOID` für unbekannte Schnittstellen Bezeichner auf.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>-Anforderungen  
  **Plattformen:** Windows-Runtime  
   
  **Header:** CorDebug.idl, CorDebug.h  
   
  **Bibliothek:** CorGuids.lib  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework Versionen:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [ICorDebugAppDomain3-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomain3-interface.md)
+- [ICorDebugAppDomain3-Schnittstelle](icordebugappdomain3-interface.md)
