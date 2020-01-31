@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: efc32294-292b-419a-9d6e-24251322a85a
 topic_type:
 - apiref
-ms.openlocfilehash: 6413ac378ec57f13866b63546bcf241890e361de
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: e88a0ffbc167dfefb8efe39f6b5787548bc9460c
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73120657"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76783171"
 ---
-# <a name="icordebugeditandcontinuesnapshotgetrodatarva-method"></a><span data-ttu-id="14ae7-102">ICorDebugEditAndContinueSnapshot::GetRoDataRVA-Methode</span><span class="sxs-lookup"><span data-stu-id="14ae7-102">ICorDebugEditAndContinueSnapshot::GetRoDataRVA Method</span></span>
-<span data-ttu-id="14ae7-103">`GetRoDataRVA` ist veraltet.</span><span class="sxs-lookup"><span data-stu-id="14ae7-103">`GetRoDataRVA` is obsolete.</span></span> <span data-ttu-id="14ae7-104">Diese Methode nicht aufzurufen.</span><span class="sxs-lookup"><span data-stu-id="14ae7-104">Do not call this method.</span></span>  
+# <a name="icordebugeditandcontinuesnapshotgetrodatarva-method"></a><span data-ttu-id="a3fce-102">ICorDebugEditAndContinueSnapshot::GetRoDataRVA-Methode</span><span class="sxs-lookup"><span data-stu-id="a3fce-102">ICorDebugEditAndContinueSnapshot::GetRoDataRVA Method</span></span>
+<span data-ttu-id="a3fce-103">`GetRoDataRVA` ist veraltet.</span><span class="sxs-lookup"><span data-stu-id="a3fce-103">`GetRoDataRVA` is obsolete.</span></span> <span data-ttu-id="a3fce-104">Diese Methode nicht aufzurufen.</span><span class="sxs-lookup"><span data-stu-id="a3fce-104">Do not call this method.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="14ae7-105">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="14ae7-105">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a3fce-105">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="a3fce-105">See also</span></span>
 
-- [<span data-ttu-id="14ae7-106">Debuggen von Schnittstellen</span><span class="sxs-lookup"><span data-stu-id="14ae7-106">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="a3fce-106">Debuggen von Schnittstellen</span><span class="sxs-lookup"><span data-stu-id="a3fce-106">Debugging Interfaces</span></span>](debugging-interfaces.md)
