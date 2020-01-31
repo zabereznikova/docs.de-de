@@ -7,29 +7,29 @@ helpviewer_keywords:
 - WPF application [WPF], building
 - WPF application [WPF], deploying
 ms.assetid: 88952ad2-5b74-48ca-a4c5-3f4fbb53ce12
-ms.openlocfilehash: 4aaeeed4ff6a130c6d3ddda696286222d7c9efaf
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e233b84da1bdecdbc0bdcf676c7bf39125ada6ca
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62052234"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76870709"
 ---
-# <a name="build-and-deploy-how-to-topics"></a><span data-ttu-id="fa2d8-102">Gewusst-wie-Themen zur Erstellung und Bereitstellung</span><span class="sxs-lookup"><span data-stu-id="fa2d8-102">Build and Deploy How-to Topics</span></span>
-<span data-ttu-id="fa2d8-103">In den folgenden Themen zeigen, wie zum Erstellen von Projektdateien für die verschiedenen [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Anwendungstypen.</span><span class="sxs-lookup"><span data-stu-id="fa2d8-103">The following topics show how to create project files for the various [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] application types.</span></span>  
-  
-## <a name="in-this-section"></a><span data-ttu-id="fa2d8-104">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="fa2d8-104">In This Section</span></span>  
- [<span data-ttu-id="fa2d8-105">Konfigurieren von IIS 5.0 und IIS 6.0, um WPF-Anwendungen bereitzustellen</span><span class="sxs-lookup"><span data-stu-id="fa2d8-105">Configure IIS 5.0 and IIS 6.0 to Deploy WPF Applications</span></span>](how-to-configure-iis-5-0-and-iis-6-0-to-deploy-wpf-applications.md)  
- [<span data-ttu-id="fa2d8-106">Vorgehensweise: Konfigurieren von Visual Studio 2005 zum Debuggen einer XAML-Browseranwendung, um einen Webdienst aufzurufen</span><span class="sxs-lookup"><span data-stu-id="fa2d8-106">Configure Visual Studio to Debug a XAML Browser Application to Call a Web Service</span></span>](configure-vs-to-debug-a-xaml-browser-to-call-a-web-service.md)  
- [<span data-ttu-id="fa2d8-107">Bestimmen der installierten Version der Windows Presentation Foundation</span><span class="sxs-lookup"><span data-stu-id="fa2d8-107">Determine the Installed Version of WPF</span></span>](how-to-determine-the-installed-version-of-wpf.md)  
- [<span data-ttu-id="fa2d8-108">Erkennen einer .NET Framework 3.0-Installation</span><span class="sxs-lookup"><span data-stu-id="fa2d8-108">Detect Whether the .NET Framework 3.0 Is Installed</span></span>](how-to-detect-whether-the-net-framework-3-0-is-installed.md)  
- [<span data-ttu-id="fa2d8-109">Erkennen einer .NET Framework 3.5-Installation</span><span class="sxs-lookup"><span data-stu-id="fa2d8-109">Detect Whether the .NET Framework 3.5 Is Installed</span></span>](how-to-detect-whether-the-net-framework-3-5-is-installed.md)  
- [<span data-ttu-id="fa2d8-110">Erkennen einer Installation des WPF-Plug-Ins für Firefox</span><span class="sxs-lookup"><span data-stu-id="fa2d8-110">Detect Whether the WPF Plug-In for Firefox Is Installed</span></span>](how-to-detect-whether-the-wpf-plug-in-for-firefox-is-installed.md)  
-  
-## <a name="related-sections"></a><span data-ttu-id="fa2d8-111">Verwandte Abschnitte</span><span class="sxs-lookup"><span data-stu-id="fa2d8-111">Related Sections</span></span>  
- [<span data-ttu-id="fa2d8-112">Erstellen einer WPF-Anwendung</span><span class="sxs-lookup"><span data-stu-id="fa2d8-112">Building a WPF Application</span></span>](building-a-wpf-application-wpf.md)  
-  
- [<span data-ttu-id="fa2d8-113">Bereitstellen von WPF-Anwendungen</span><span class="sxs-lookup"><span data-stu-id="fa2d8-113">Deploying a WPF Application</span></span>](deploying-a-wpf-application-wpf.md)  
-  
- [<span data-ttu-id="fa2d8-114">Exemplarische Vorgehensweise: Walkthrough: My first WPF desktop application (Exemplarische Vorgehensweise: Meine erste WPF-Desktopanwendung)</span><span class="sxs-lookup"><span data-stu-id="fa2d8-114">Walkthrough: My first WPF desktop application</span></span>](../getting-started/walkthrough-my-first-wpf-desktop-application.md)  
-  
- <span data-ttu-id="fa2d8-115">[Vorgehensweise: Erstellen eines neuen WPF-Browseranwendungsprojekts](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb628663(v=vs.100))</span><span class="sxs-lookup"><span data-stu-id="fa2d8-115">[How to: Create a New WPF Browser Application Project](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb628663(v=vs.100))</span></span>
+# <a name="build-and-deploy-how-to-topics"></a><span data-ttu-id="d40f5-102">Themen zur Vorgehensweise zum Erstellen und bereitstellen</span><span class="sxs-lookup"><span data-stu-id="d40f5-102">Build and deploy how-to topics</span></span>
+
+<span data-ttu-id="d40f5-103">In den folgenden Themen wird gezeigt, wie Projektdateien für die verschiedenen [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Anwendungs Typen erstellt werden.</span><span class="sxs-lookup"><span data-stu-id="d40f5-103">The following topics show how to create project files for the various [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] application types.</span></span>
+
+## <a name="in-this-section"></a><span data-ttu-id="d40f5-104">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="d40f5-104">In this section</span></span>
+
+- [<span data-ttu-id="d40f5-105">Konfigurieren von IIS 5.0 und IIS 6.0, um WPF-Anwendungen bereitzustellen</span><span class="sxs-lookup"><span data-stu-id="d40f5-105">Configure IIS 5.0 and IIS 6.0 to Deploy WPF Applications</span></span>](how-to-configure-iis-5-0-and-iis-6-0-to-deploy-wpf-applications.md)
+- [<span data-ttu-id="d40f5-106">Vorgehensweise: Konfigurieren von Visual Studio 2005 zum Debuggen einer XAML-Browseranwendung, um einen Webdienst aufzurufen</span><span class="sxs-lookup"><span data-stu-id="d40f5-106">Configure Visual Studio to Debug a XAML Browser Application to Call a Web Service</span></span>](configure-vs-to-debug-a-xaml-browser-to-call-a-web-service.md)
+- [<span data-ttu-id="d40f5-107">Erkennen einer .NET Framework 3.0-Installation</span><span class="sxs-lookup"><span data-stu-id="d40f5-107">Detect Whether the .NET Framework 3.0 Is Installed</span></span>](how-to-detect-whether-the-net-framework-3-0-is-installed.md)
+- [<span data-ttu-id="d40f5-108">Erkennen einer .NET Framework 3.5-Installation</span><span class="sxs-lookup"><span data-stu-id="d40f5-108">Detect Whether the .NET Framework 3.5 Is Installed</span></span>](how-to-detect-whether-the-net-framework-3-5-is-installed.md)
+- [<span data-ttu-id="d40f5-109">Erkennen einer Installation des WPF-Plug-Ins für Firefox</span><span class="sxs-lookup"><span data-stu-id="d40f5-109">Detect Whether the WPF Plug-In for Firefox Is Installed</span></span>](how-to-detect-whether-the-wpf-plug-in-for-firefox-is-installed.md)
+
+## <a name="related-sections"></a><span data-ttu-id="d40f5-110">Verwandte Abschnitte</span><span class="sxs-lookup"><span data-stu-id="d40f5-110">Related sections</span></span>
+
+- [<span data-ttu-id="d40f5-111">Erstellen einer WPF-Anwendung</span><span class="sxs-lookup"><span data-stu-id="d40f5-111">Building a WPF Application</span></span>](building-a-wpf-application-wpf.md)
+- [<span data-ttu-id="d40f5-112">Bereitstellen von WPF-Anwendungen</span><span class="sxs-lookup"><span data-stu-id="d40f5-112">Deploying a WPF Application</span></span>](deploying-a-wpf-application-wpf.md)
+- [<span data-ttu-id="d40f5-113">Exemplarische Vorgehensweise: Meine erste WPF-Desktopanwendung</span><span class="sxs-lookup"><span data-stu-id="d40f5-113">Walkthrough: My first WPF desktop application</span></span>](../getting-started/walkthrough-my-first-wpf-desktop-application.md)
+- <span data-ttu-id="d40f5-114">[Gewusst wie: Erstellen eines neuen WPF-Browser-Anwendungs Projekts](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb628663(v=vs.100))</span><span class="sxs-lookup"><span data-stu-id="d40f5-114">[How to: Create a New WPF Browser Application Project](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb628663(v=vs.100))</span></span>
+- <span data-ttu-id="d40f5-115">[Bestimmen der installierten Version von WPF (.NET Framework 3,5)](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/aa349641(v=vs.90))</span><span class="sxs-lookup"><span data-stu-id="d40f5-115">[Determine the Installed Version of WPF (.NET Framework 3.5)](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/aa349641(v=vs.90))</span></span>
