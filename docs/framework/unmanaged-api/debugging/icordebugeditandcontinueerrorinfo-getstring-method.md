@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: 85e2108b-ff03-4a15-ac5c-1eb5d84f38ca
 topic_type:
 - apiref
-ms.openlocfilehash: 5a6c7d6075a114cc6e621108ce217dfdb0d75dc8
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 542b33c82834ccd30c79c78bdcc759cf0c34d36c
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73137063"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76783331"
 ---
-# <a name="icordebugeditandcontinueerrorinfogetstring-method"></a><span data-ttu-id="832a2-102">ICorDebugEditAndContinueErrorInfo::GetString-Methode</span><span class="sxs-lookup"><span data-stu-id="832a2-102">ICorDebugEditAndContinueErrorInfo::GetString Method</span></span>
-<span data-ttu-id="832a2-103">`GetString` ist veraltet.</span><span class="sxs-lookup"><span data-stu-id="832a2-103">`GetString` is obsolete.</span></span> <span data-ttu-id="832a2-104">Diese Methode nicht aufzurufen.</span><span class="sxs-lookup"><span data-stu-id="832a2-104">Do not call this method.</span></span>  
+# <a name="icordebugeditandcontinueerrorinfogetstring-method"></a><span data-ttu-id="48327-102">ICorDebugEditAndContinueErrorInfo::GetString-Methode</span><span class="sxs-lookup"><span data-stu-id="48327-102">ICorDebugEditAndContinueErrorInfo::GetString Method</span></span>
+<span data-ttu-id="48327-103">`GetString` ist veraltet.</span><span class="sxs-lookup"><span data-stu-id="48327-103">`GetString` is obsolete.</span></span> <span data-ttu-id="48327-104">Diese Methode nicht aufzurufen.</span><span class="sxs-lookup"><span data-stu-id="48327-104">Do not call this method.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="832a2-105">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="832a2-105">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="48327-105">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="48327-105">See also</span></span>
 
-- [<span data-ttu-id="832a2-106">Debuggen von Schnittstellen</span><span class="sxs-lookup"><span data-stu-id="832a2-106">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="48327-106">Debuggen von Schnittstellen</span><span class="sxs-lookup"><span data-stu-id="48327-106">Debugging Interfaces</span></span>](debugging-interfaces.md)
