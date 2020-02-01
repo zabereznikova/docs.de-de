@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WS-AT protocol [WCF], configuring WS-Atomic Transaction
 ms.assetid: cb9f1c9c-1439-4172-b9bc-b01c3e09ac48
-ms.openlocfilehash: 068ddcab5cfb7bfb5f37a1858820195a5a05269f
-ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
+ms.openlocfilehash: 6399d64746db158ba0569eaf0137127603973513
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75964583"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76919344"
 ---
 # <a name="configure-ws-atomic-transaction-support"></a>Konfigurieren der WS-Atomic Transaction-Unterstützung
 
@@ -25,7 +25,7 @@ Auf das Befehlszeilenfenster kann in dem Windows SDK-Installationspfad "%WINDIR%
 
 Weitere Informationen zum Befehlszeilen Tool finden Sie unter [WS-AtomicTransaction-Konfigurations Hilfsprogramm (wsatConfig. exe)](../../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md).
 
-Wenn Sie [!INCLUDE[wxp](../../../../includes/wxp-md.md)] oder Windows Server 2003 ausführen, können Sie auf das MMC-Snap-in zugreifen, indem Sie zu **Systemsteuerung/Verwaltung/Komponenten Dienste**navigieren, mit der rechten Maustaste auf **Arbeitsplatz**klicken und **Eigenschaften**auswählen. Dies ist die gleiche Position, an der Sie den Microsoft Distributed Transaction Coordinator (MSDTC) konfigurieren können. Optionen, die für die Konfiguration verfügbar sind, werden auf der Registerkarte **WS-AT** gruppiert. Wenn Sie Windows Vista oder Windows Server 2008 ausführen, finden Sie das MMC-Snap-in. Klicken Sie hierzu auf die Schaltfläche **Start** , und geben Sie `dcomcnfg.exe` in das **Suchfeld** ein. Wenn die MMC geöffnet ist, navigieren Sie zum Knoten **My computer\verteilte transaktions\lokale DTC** , klicken Sie mit der rechten Maustaste, und wählen Sie **Eigenschaften**aus. Optionen, die für die Konfiguration verfügbar sind, werden auf der Registerkarte **WS-AT** gruppiert.
+Wenn Sie Windows XP oder Windows Server 2003 ausführen, können Sie auf das MMC-Snap-in zugreifen, indem Sie zu Systemsteuerung > Verwaltung > **Komponenten Dienste**navigieren, mit der rechten Maustaste auf **Arbeitsplatz**klicken und **Eigenschaften**auswählen. Dies ist die gleiche Position, an der Sie den Microsoft Distributed Transaction Coordinator (MSDTC) konfigurieren können. Optionen, die für die Konfiguration verfügbar sind, werden auf der Registerkarte **WS-AT** gruppiert. Wenn Sie Windows Vista oder Windows Server 2008 ausführen, finden Sie das MMC-Snap-in. Klicken Sie hierzu auf die Schaltfläche **Start** , und geben Sie `dcomcnfg.exe` in das **Suchfeld** ein. Wenn die MMC geöffnet ist, navigieren Sie zum Knoten **My computer\verteilte transaktions\lokale DTC** , klicken Sie mit der rechten Maustaste, und wählen Sie **Eigenschaften**aus. Optionen, die für die Konfiguration verfügbar sind, werden auf der Registerkarte **WS-AT** gruppiert.
 
 Weitere Informationen zum Snap-in finden Sie im [MMC-Snap-in "WS-AtomicTransaction-Konfiguration](../../../../docs/framework/wcf/ws-atomictransaction-configuration-mmc-snap-in.md)".
 

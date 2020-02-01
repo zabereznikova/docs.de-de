@@ -2,12 +2,12 @@
 title: <tcpTransport>
 ms.date: 03/30/2017
 ms.assetid: 8fcd18c1-9958-42e7-b442-7903f7bdb563
-ms.openlocfilehash: 45b710c3b2d1647e1bf7e57b30a96192abb9d788
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 7101719f77a03909d9a38dca93100ec90c1add13
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75345051"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76921387"
 ---
 # <a name="tcptransport"></a>\<tcpTransport>
 Definiert einen TCP-Transport, der von einem Kanal zum Übertragen von Nachrichten für eine benutzerdefinierte Bindung verwendet werden kann.  
@@ -62,7 +62,7 @@ Definiert einen TCP-Transport, der von einem Kanal zum Übertragen von Nachricht
 |maxPendingConnections|Ruft die maximale Anzahl an Verbindungen ab, die zum Verteilen auf dem Dienst bereitstehen, oder legt sie fest.|  
 |maxReceivedMessageSize|Ruft die maximal zulässige Größe der Nachrichten ab, die empfangen werden können, und legt diese fest.|  
 |portSharingEnabled|Ein boolescher Wert, der angibt, ob die TCP-Anschlussfreigabe für diese Verbindung aktiviert ist. Wenn dies `false` ist, verwendet jede Bindung ihren eigenen Anschluss. Die Standardeinstellung ist `false`.<br /><br /> Diese Einstellung ist nur für Dienste relevant. Auf Clients hat dies keine Auswirkung.<br /><br /> Bei Verwendung dieser Einstellung muss der Windows Communication Foundation (WCF)-TCP-Anschlussfreigabedienst aktiviert werden, indem der Starttyp auf Manuell oder Automatisch gesetzt wird.|  
-|teredoEnabled|Ein boolescher Wert, der angibt, ob das Teredo-Protokoll aktiviert ist, das zur Adressierung von Clients hinter einer Firewall verwendet wird. Die Standardeinstellung ist `false`.<br /><br /> Mit dieser Eigenschaft wird das Teredo-Protokoll für das zugrunde liegende TCP-Socket aktiviert. Weitere Informationen finden Sie unter [Übersicht über Teredo](https://go.microsoft.com/fwlink/?LinkId=95339).<br /><br /> Diese Eigenschaft gilt nur für [!INCLUDE[wxpsp2](../../../../../includes/wxpsp2-md.md)] und Windows Server 2003. Windows Vista verfügt über eine Computer weite Konfigurationsoption für Teredo. Wenn Sie also Vista ausführen, wird diese Eigenschaft ignoriert. Um das Teredo-Protokoll verwenden zu können, müssen der Client und die Dienstcomputer über den IPv6-Stapel von Microsoft verfügen und ordnungsgemäß konfiguriert sein. Weitere Informationen zum Konfigurieren von Teredo finden Sie unter [Übersicht über Teredo](https://go.microsoft.com/fwlink/?LinkId=95339). Weitere Informationen finden Sie unter [Windows Server 2003-Technologie Center](https://go.microsoft.com/fwlink/?LinkId=49888).|  
+|teredoEnabled|Ein boolescher Wert, der angibt, ob das Teredo-Protokoll aktiviert ist, das zur Adressierung von Clients hinter einer Firewall verwendet wird. Die Standardeinstellung ist `false`.<br /><br /> Mit dieser Eigenschaft wird das Teredo-Protokoll für das zugrunde liegende TCP-Socket aktiviert. Weitere Informationen finden Sie unter [Übersicht über Teredo](https://go.microsoft.com/fwlink/?LinkId=95339).<br /><br /> Diese Eigenschaft gilt nur für Windows XP SP2 und Windows Server 2003. Windows Vista verfügt über eine Computer weite Konfigurationsoption für Teredo. Wenn Sie also Vista ausführen, wird diese Eigenschaft ignoriert. Um das Teredo-Protokoll verwenden zu können, müssen der Client und die Dienstcomputer über den IPv6-Stapel von Microsoft verfügen und ordnungsgemäß konfiguriert sein. Weitere Informationen zum Konfigurieren von Teredo finden Sie unter [Übersicht über Teredo](https://go.microsoft.com/fwlink/?LinkId=95339). Weitere Informationen finden Sie unter [Windows Server 2003-Technologie Center](https://go.microsoft.com/fwlink/?LinkId=49888).|  
 |transferMode|Ruft einen Wert ab, oder legt einen Wert fest, der angibt, ob die Nachrichten bei verbindungsorientiertem Transport gepuffert oder per Stream übertragen werden.|  
 |connectionPoolSettings|Gibt zusätzliche Verbindungspooleinstellungen für eine Named Pipe-Bindung an.|  
   

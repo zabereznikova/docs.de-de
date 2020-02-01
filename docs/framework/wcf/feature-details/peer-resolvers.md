@@ -2,12 +2,12 @@
 title: Peerresolver
 ms.date: 03/30/2017
 ms.assetid: d86d12a1-7358-450f-9727-b6afb95adb9c
-ms.openlocfilehash: 33afffcbf11d757dfd003d1fd2bc9a17a3047a69
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 3bcdeffac3673c1c464a35d8b6e089efd7394907
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837375"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76919243"
 ---
 # <a name="peer-resolvers"></a>Peerresolver
 Um eine Verbindung mit einem Mesh herzustellen, erfordert ein Peerknoten die IP-Adressen anderer Knoten. IP-Adressen werden bezogen, indem eine Verbindung zu einem Auflösungsdienst hergestellt wird, der die Netz-ID annimmt und eine Liste von Adressen zurückgibt, die mit dieser bestimmten Netz-ID registrierten Knoten entsprechen. Der Resolver behält eine Liste registrierter Adressen bei, die durch Registrierung jedes Knotens im Mesh mit dem Dienst erstellt wird.  
@@ -20,7 +20,7 @@ Um eine Verbindung mit einem Mesh herzustellen, erfordert ein Peerknoten die IP-
  Standardmäßig verwendet Peerkanal den PNRP-Peerresolverdienst, um Peers und Nachbarn im Netz zu ermitteln. Für Situationen/Plattformen, in denen PNRP nicht verfügbar oder nicht realisierbar ist, bietet Windows Communication Foundation (WCF) einen alternativen serverbasierten Ermittlungsdienst (<xref:System.ServiceModel.PeerResolvers.CustomPeerResolverService>). Sie können auch explizit einen benutzerdefinierten Resolverdienst definieren. Schreiben Sie hierzu eine Klasse, die die <xref:System.ServiceModel.PeerResolvers.IPeerResolverContract>-Schnittstelle implementiert.  
   
 ### <a name="peer-name-resolution-protocol-pnrp"></a>Peer Name Resolution-Protokoll (PNRP)  
- PNRP, der Standard Konflikt Löser für Windows Vista, ist ein verteilter, Server loser Name Konflikt Löser-Dienst. PNRP kann auch auf [!INCLUDE[wxpsp2](../../../../includes/wxpsp2-md.md)] verwendet werden, indem das Advanced Networking Pack installiert wird. Zwei Clients., auf denen die gleiche Version von PNRP ausgeführt wird, können sich mithilfe dieses Protokolls suchen, falls sie bestimmte Voraussetzungen erfüllen (wie das Fehlen einer dazwischen stehenden Unternehmens-Firewall). Beachten Sie, dass die Version von PNRP, die im Lieferumfang von Windows Vista enthalten ist, neuer als die im Advanced Networking Pack enthaltene Version ist. Suchen Sie im Microsoft Download Center nach Updates auf PNRP für [!INCLUDE[wxpsp2](../../../../includes/wxpsp2-md.md)].  
+ PNRP, der Standard Konflikt Löser für Windows Vista, ist ein verteilter, Server loser Name Konflikt Löser-Dienst. PNRP kann auch unter Windows XP SP2 verwendet werden, indem das Advanced Networking Pack installiert wird. Zwei Clients., auf denen die gleiche Version von PNRP ausgeführt wird, können sich mithilfe dieses Protokolls suchen, falls sie bestimmte Voraussetzungen erfüllen (wie das Fehlen einer dazwischen stehenden Unternehmens-Firewall). Beachten Sie, dass die Version von PNRP, die im Lieferumfang von Windows Vista enthalten ist, neuer als die im Advanced Networking Pack enthaltene Version ist. Überprüfen Sie das Microsoft Download Center auf Updates für PNRP für Windows XP SP2.  
   
 ### <a name="custom-resolver-services"></a>Benutzerdefinierte Auflösungsdienste  
  Wenn der PNRP-Dienst nicht verfügbar ist oder Sie die vollständige Kontrolle über die Netzstruktur benötigen, können Sie einen benutzerdefinierten, serverbasierten Resolverdienst verwenden. Dieser Dienst kann durch Schreiben einer Resolverklasse, die die <xref:System.ServiceModel.PeerResolvers.IPeerResolverContract>-Schnittstelle implementiert, oder durch Verwenden der im Lieferumfang enthaltenen Standardimplementierung <xref:System.ServiceModel.PeerResolvers.CustomPeerResolverService> explizit definiert werden.  

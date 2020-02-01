@@ -11,32 +11,32 @@ helpviewer_keywords:
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: 588a36c70d31883f79a4449d69cb4ba3b4239b9f
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 221d19ee6441614324d375b66e8b13a90f683890
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76741555"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76921278"
 ---
-# <a name="how-to-migrate-from-opno-locnewtonsoftjson-to-opno-locsystemtextjson"></a>Migrieren von [!OP.NO-LOC(Newtonsoft.Json)] zu [!OP.NO-LOC(System.Text.Json)]
+# <a name="how-to-migrate-from-newtonsoftjson-to-systemtextjson"></a>Migrieren von "newtonsoft. JSON" zu "System. Text. JSON"
 
-In diesem Artikel wird gezeigt, wie Sie von [[!OP.NO-LOC(Newtonsoft.Json)]](https://www.newtonsoft.com/json) zu <xref:[!OP.NO-LOC(System.Text.Json)]>migrieren.
+In diesem Artikel wird gezeigt, wie Sie von " [newtonsoft. JSON](https://www.newtonsoft.com/json) " zu <xref:System.Text.Json>migrieren.
 
-`[!OP.NO-LOC(System.Text.Json)]` konzentriert sich hauptsächlich auf die Konformität von Leistung, Sicherheit und Standards. Sie hat einige wesentliche Unterschiede im Standardverhalten und zielt nicht darauf ab, Featureparität mit `[!OP.NO-LOC(Newtonsoft.Json)]`zu haben. In einigen Szenarien verfügt `[!OP.NO-LOC(System.Text.Json)]` über keine integrierte Funktionalität, es gibt jedoch empfohlene Problem Umgehungen. In anderen Szenarien sind Problem Umgehungen nicht praktikabel. Wenn Ihre Anwendung von einer fehlenden Funktion abhängig ist, sollten Sie erwägen, [ein Problem](https://github.com/dotnet/runtime/issues/new) zu beheben, um herauszufinden, ob die Unterstützung für das Szenario hinzugefügt werden kann.
+`System.Text.Json` konzentriert sich hauptsächlich auf die Konformität von Leistung, Sicherheit und Standards. Sie hat einige wesentliche Unterschiede im Standardverhalten und zielt nicht darauf ab, Featureparität mit `Newtonsoft.Json`zu haben. In einigen Szenarien verfügt `System.Text.Json` über keine integrierte Funktionalität, es gibt jedoch empfohlene Problem Umgehungen. In anderen Szenarien sind Problem Umgehungen nicht praktikabel. Wenn Ihre Anwendung von einer fehlenden Funktion abhängig ist, sollten Sie erwägen, [ein Problem](https://github.com/dotnet/runtime/issues/new) zu beheben, um herauszufinden, ob die Unterstützung für das Szenario hinzugefügt werden kann.
 
-<!-- For information about which features might be added in future releases, see the [Roadmap](https://github.com/dotnet/runtime/tree/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/[!OP.NO-LOC(System.Text.Json)]/roadmap/README.md). [Restore this when the roadmap is updated.]-->
+<!-- For information about which features might be added in future releases, see the [Roadmap](https://github.com/dotnet/runtime/tree/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/roadmap/README.md). [Restore this when the roadmap is updated.]-->
 
-In diesem Artikel wird in den meisten Fällen erläutert, wie Sie die <xref:[!OP.NO-LOC(System.Text.Json)].JsonSerializer>-API verwenden. Sie enthält jedoch auch Anleitungen zur Verwendung des <xref:[!OP.NO-LOC(System.Text.Json)].JsonDocument> (der die Dokumentobjektmodell-oder Dom-Typen darstellt), <xref:[!OP.NO-LOC(System.Text.Json)].Utf8JsonReader>und <xref:[!OP.NO-LOC(System.Text.Json)].Utf8JsonWriter>.
+In diesem Artikel wird in den meisten Fällen erläutert, wie Sie die <xref:System.Text.Json.JsonSerializer>-API verwenden. Sie enthält jedoch auch Anleitungen zur Verwendung des <xref:System.Text.Json.JsonDocument> (der die Dokumentobjektmodell-oder Dom-Typen darstellt), <xref:System.Text.Json.Utf8JsonReader>und <xref:System.Text.Json.Utf8JsonWriter>.
 
-## <a name="table-of-differences-between-opno-locnewtonsoftjson-and-opno-locsystemtextjson"></a>Tabelle der Unterschiede zwischen [!OP.NO-LOC(Newtonsoft.Json)] und [!OP.NO-LOC(System.Text.Json)]
+## <a name="table-of-differences-between-newtonsoftjson-and-systemtextjson"></a>Tabelle der Unterschiede zwischen "newtonsoft. JSON" und "System. Text. JSON"
 
-In der folgenden Tabelle sind `[!OP.NO-LOC(Newtonsoft.Json)]` Features und `[!OP.NO-LOC(System.Text.Json)]` Entsprechungen aufgeführt. Die Entsprechungen werden in die folgenden Kategorien unterteilt:
+In der folgenden Tabelle sind `Newtonsoft.Json` Features und `System.Text.Json` Entsprechungen aufgeführt. Die Entsprechungen werden in die folgenden Kategorien unterteilt:
 
-* Wird von integrierter Funktionalität unterstützt. Um ein ähnliches Verhalten von `[!OP.NO-LOC(System.Text.Json)]` zu erhalten, ist möglicherweise die Verwendung eines Attributs oder einer globalen Option erforderlich.
-* Nicht unterstützt, Problem Umgehung ist möglich. Die Problem Umgehungen sind [benutzerdefinierte Konverter](system-text-json-converters-how-to.md), die ggf. keine umfassende Parität mit `[!OP.NO-LOC(Newtonsoft.Json)]`-Funktionalität bereitstellen. In einigen dieser Beispiele wird Beispielcode als Beispiele bereitgestellt. Wenn Sie sich auf diese `[!OP.NO-LOC(Newtonsoft.Json)]` Features verlassen, erfordert die Migration Änderungen an Ihren .NET-Objekt Modellen oder anderen Codeänderungen.
-* Nicht unterstützt, Problem Umgehung ist nicht praktikabel oder nicht möglich. Wenn Sie sich auf diese `[!OP.NO-LOC(Newtonsoft.Json)]` Features verlassen, ist die Migration ohne wesentliche Änderungen nicht möglich.
+* Wird von integrierter Funktionalität unterstützt. Um ein ähnliches Verhalten von `System.Text.Json` zu erhalten, ist möglicherweise die Verwendung eines Attributs oder einer globalen Option erforderlich.
+* Nicht unterstützt, Problem Umgehung ist möglich. Die Problem Umgehungen sind [benutzerdefinierte Konverter](system-text-json-converters-how-to.md), die ggf. keine umfassende Parität mit `Newtonsoft.Json`-Funktionalität bereitstellen. In einigen dieser Beispiele wird Beispielcode als Beispiele bereitgestellt. Wenn Sie sich auf diese `Newtonsoft.Json` Features verlassen, erfordert die Migration Änderungen an Ihren .NET-Objekt Modellen oder anderen Codeänderungen.
+* Nicht unterstützt, Problem Umgehung ist nicht praktikabel oder nicht möglich. Wenn Sie sich auf diese `Newtonsoft.Json` Features verlassen, ist die Migration ohne wesentliche Änderungen nicht möglich.
 
-| [!OP.NO-LOC(Newtonsoft.Json)]-Funktion                               | [!OP.NO-LOC(System.Text.Json)] Äquivalent |
+| Funktion "newtonsoft. JSON"                               | System. Text. JSON-Entsprechung |
 |-------------------------------------------------------|-----------------------------|
 | Standardmäßige Deserialisierung der Groß-/Kleinschreibung           | ✔️ [Einstellung "propertynamecaseinsensitive Global](#case-insensitive-deserialization) " |
 | Camel-Case-Eigenschaftsnamen                             | ✔️ [globale Einstellung "propertynamingpolicy](system-text-json-how-to.md#use-camel-case-for-all-json-property-names) " |
@@ -75,33 +75,33 @@ In der folgenden Tabelle sind `[!OP.NO-LOC(Newtonsoft.Json)]` Features und `[!OP
 | Einfache Anführungszeichen um Zeichen folgen Werte zulassen              | ❌ [nicht unterstützt](#json-strings-property-names-and-string-values) . |
 | Nicht-Zeichen folgen-JSON-Werte für Zeichen folgen Eigenschaften zulassen    | ❌ [nicht unterstützt](#non-string-values-for-string-properties) . |
 
-Dabei handelt es sich nicht um eine vollständige Liste der `[!OP.NO-LOC(Newtonsoft.Json)]` Features. Die Liste enthält viele der Szenarien, die bei [GitHub-Problemen](https://github.com/dotnet/runtime/issues?q=is%3Aopen+is%3Aissue+label%3Aarea-[!OP.NO-LOC(System.Text.Json)]) oder [StackOverflow](https://stackoverflow.com/questions/tagged/system.text.json) -Beiträgen angefordert wurden. Wenn Sie eine Problem Umgehung für eines der hier aufgelisteten Szenarios implementieren, das derzeit keinen Beispielcode enthält, und wenn Sie Ihre Projekt Mappe freigeben möchten, wählen Sie **Diese Seite** im [Feedback Abschnitt](/dotnet/standard/serialization/system-text-json-migrate-from-newtonsoft-how-to#feedback) dieser Seite aus. Dadurch wird ein GitHub-Problem erstellt und unten auf dieser Seite aufgelistet.
+Dabei handelt es sich nicht um eine vollständige Liste der `Newtonsoft.Json` Features. Die Liste enthält viele der Szenarien, die bei [GitHub-Problemen](https://github.com/dotnet/runtime/issues?q=is%3Aopen+is%3Aissue+label%3Aarea-System.Text.Json) oder [StackOverflow](https://stackoverflow.com/questions/tagged/system.text.json) -Beiträgen angefordert wurden. Wenn Sie eine Problem Umgehung für eines der hier aufgelisteten Szenarios implementieren, das derzeit keinen Beispielcode enthält, und wenn Sie Ihre Projekt Mappe freigeben möchten, wählen Sie **Diese Seite** im [Feedback Abschnitt](/dotnet/standard/serialization/system-text-json-migrate-from-newtonsoft-how-to#feedback) dieser Seite aus. Dadurch wird ein GitHub-Problem erstellt und unten auf dieser Seite aufgelistet.
 
-## <a name="differences-in-default-jsonserializer-behavior-compared-to-opno-locnewtonsoftjson"></a>Unterschiede beim jsonSerializer-Standardverhalten im Vergleich zu [!OP.NO-LOC(Newtonsoft.Json)]
+## <a name="differences-in-default-jsonserializer-behavior-compared-to-newtonsoftjson"></a>Unterschiede in jsonSerializer-Standardverhalten im Vergleich zu "newtonsoft. JSON"
 
-<xref:[!OP.NO-LOC(System.Text.Json)]> ist standardmäßig strikt und vermeidet jegliche Vermutung oder Interpretation im Auftrag des Aufrufers, wobei deterministisches Verhalten hervorgehoben wird. Die Bibliothek ist auf diese Weise absichtlich für Leistung und Sicherheit konzipiert. `[!OP.NO-LOC(Newtonsoft.Json)]` ist standardmäßig flexibel. Dieser grundlegende Unterschied beim Entwurf liegt hinter vielen der folgenden spezifischen Unterschiede im Standardverhalten.
+<xref:System.Text.Json> ist standardmäßig strikt und vermeidet jegliche Vermutung oder Interpretation im Auftrag des Aufrufers, wobei deterministisches Verhalten hervorgehoben wird. Die Bibliothek ist auf diese Weise absichtlich für Leistung und Sicherheit konzipiert. `Newtonsoft.Json` ist standardmäßig flexibel. Dieser grundlegende Unterschied beim Entwurf liegt hinter vielen der folgenden spezifischen Unterschiede im Standardverhalten.
 
 ### <a name="case-insensitive-deserialization"></a>Deserialisierung der Groß-/Kleinschreibung 
 
-Während der Deserialisierung wird in `[!OP.NO-LOC(Newtonsoft.Json)]` standardmäßig die Groß-/Kleinschreibung nicht beachtet. Beim <xref:[!OP.NO-LOC(System.Text.Json)]> Standard wird die Groß-/Kleinschreibung beachtet, was eine bessere Leistung bietet, da eine genaue Entsprechung vorliegt. Informationen dazu, wie die Groß-/Kleinschreibung nicht beachtet wird, finden Sie unter Nichtbeachtung der [Groß-/Kleinschreibung](system-text-json-how-to.md#case-insensitive-property-matching)
+Während der Deserialisierung wird in `Newtonsoft.Json` standardmäßig die Groß-/Kleinschreibung nicht beachtet. Beim <xref:System.Text.Json> Standard wird die Groß-/Kleinschreibung beachtet, was eine bessere Leistung bietet, da eine genaue Entsprechung vorliegt. Informationen dazu, wie die Groß-/Kleinschreibung nicht beachtet wird, finden Sie unter Nichtbeachtung der [Groß-/Kleinschreibung](system-text-json-how-to.md#case-insensitive-property-matching)
 
-Wenn Sie `[!OP.NO-LOC(System.Text.Json)]` indirekt mit ASP.net Core verwenden, müssen Sie nichts tun, um Verhalten wie `[!OP.NO-LOC(Newtonsoft.Json)]`zu erhalten. ASP.net Core gibt die Einstellungen für [Eigenschaftsnamen mit Kamel](system-text-json-how-to.md#use-camel-case-for-all-json-property-names) Schreibweise und die Groß-/Kleinschreibung bei der Verwendung von `[!OP.NO-LOC(System.Text.Json)]`an.
+Wenn Sie `System.Text.Json` indirekt mit ASP.net Core verwenden, müssen Sie nichts tun, um Verhalten wie `Newtonsoft.Json`zu erhalten. ASP.net Core gibt die Einstellungen für [Eigenschaftsnamen mit Kamel](system-text-json-how-to.md#use-camel-case-for-all-json-property-names) Schreibweise und die Groß-/Kleinschreibung bei der Verwendung von `System.Text.Json`an.
 
 ### <a name="minimal-character-escaping"></a>Minimale Escapezeichen
 
-Während der Serialisierung ist `[!OP.NO-LOC(Newtonsoft.Json)]` relativ vorsichtig, wenn Sie Zeichen durchlassen, ohne Sie zu entweichen. Dies bedeutet, dass Sie nicht durch `\uxxxx` ersetzt wird, wobei `xxxx` der Codepunkt des Zeichens ist. Wenn Sie diese Escapezeichen mit Escapezeichen versehen, wird eine `\` vor dem Zeichen ausgegeben (z. b. `"` wird `\"`). <xref:[!OP.NO-LOC(System.Text.Json)]> schützt standardmäßig mehr Zeichen, um Schutz vor Cross-Site Scripting (XSS)-oder Information-Disclosure-Angriffen bereitzustellen. dabei wird die sechs Zeichenfolge verwendet. `[!OP.NO-LOC(System.Text.Json)]` schützt alle nicht-ASCII-Zeichen standardmäßig, sodass Sie keine Aktion ausführen müssen, wenn Sie `StringEscapeHandling.EscapeNonAscii` in `[!OP.NO-LOC(Newtonsoft.Json)]`verwenden. `[!OP.NO-LOC(System.Text.Json)]` schützt auch standardmäßig HTML-sensible Zeichen. Weitere Informationen zum Überschreiben des standardmäßigen `[!OP.NO-LOC(System.Text.Json)]` Verhaltens finden Sie unter [Anpassen der Zeichencodierung](system-text-json-how-to.md#customize-character-encoding).
+Während der Serialisierung ist `Newtonsoft.Json` relativ vorsichtig, wenn Sie Zeichen durchlassen, ohne Sie zu entweichen. Dies bedeutet, dass Sie nicht durch `\uxxxx` ersetzt wird, wobei `xxxx` der Codepunkt des Zeichens ist. Wenn Sie diese Escapezeichen mit Escapezeichen versehen, wird eine `\` vor dem Zeichen ausgegeben (z. b. `"` wird `\"`). <xref:System.Text.Json> schützt standardmäßig mehr Zeichen, um Schutz vor Cross-Site Scripting (XSS)-oder Information-Disclosure-Angriffen bereitzustellen. dabei wird die sechs Zeichenfolge verwendet. `System.Text.Json` schützt alle nicht-ASCII-Zeichen standardmäßig, sodass Sie keine Aktion ausführen müssen, wenn Sie `StringEscapeHandling.EscapeNonAscii` in `Newtonsoft.Json`verwenden. `System.Text.Json` schützt auch standardmäßig HTML-sensible Zeichen. Weitere Informationen zum Überschreiben des standardmäßigen `System.Text.Json` Verhaltens finden Sie unter [Anpassen der Zeichencodierung](system-text-json-how-to.md#customize-character-encoding).
 
 ### <a name="comments"></a>Comments
 
-Während der Deserialisierung ignoriert `[!OP.NO-LOC(Newtonsoft.Json)]` Kommentare in der JSON-Datei standardmäßig. Der Standard <xref:[!OP.NO-LOC(System.Text.Json)]> ist das Auslösen von Ausnahmen für Kommentare, da die [RFC 8259](https://tools.ietf.org/html/rfc8259) -Spezifikation diese nicht enthält. Weitere Informationen zum Zulassen von Kommentaren finden Sie unter [Zulassen von Kommentaren und nachfolgenden Kommas](system-text-json-how-to.md#allow-comments-and-trailing-commas).
+Während der Deserialisierung ignoriert `Newtonsoft.Json` Kommentare in der JSON-Datei standardmäßig. Der Standard <xref:System.Text.Json> ist das Auslösen von Ausnahmen für Kommentare, da die [RFC 8259](https://tools.ietf.org/html/rfc8259) -Spezifikation diese nicht enthält. Weitere Informationen zum Zulassen von Kommentaren finden Sie unter [Zulassen von Kommentaren und nachfolgenden Kommas](system-text-json-how-to.md#allow-comments-and-trailing-commas).
 
 ### <a name="trailing-commas"></a>Nachfolgende Kommas
 
-Während der Deserialisierung ignoriert `[!OP.NO-LOC(Newtonsoft.Json)]` nachfolgende Kommas standardmäßig. Außerdem werden mehrere nachfolgende Kommas (z. b. `[{"Color":"Red"},{"Color":"Green"},,]`) ignoriert. Der Standard <xref:[!OP.NO-LOC(System.Text.Json)]> ist das Auslösen von Ausnahmen für nachfolgende Kommas, da die [RFC 8259](https://tools.ietf.org/html/rfc8259) -Spezifikation Sie nicht zulässt. Informationen dazu, wie Sie `[!OP.NO-LOC(System.Text.Json)]` akzeptieren, finden Sie unter [Zulassen von Kommentaren und nachfolgenden Kommas](system-text-json-how-to.md#allow-comments-and-trailing-commas). Es gibt keine Möglichkeit, mehrere nachfolgende Kommas zuzulassen.
+Während der Deserialisierung ignoriert `Newtonsoft.Json` nachfolgende Kommas standardmäßig. Außerdem werden mehrere nachfolgende Kommas (z. b. `[{"Color":"Red"},{"Color":"Green"},,]`) ignoriert. Der Standard <xref:System.Text.Json> ist das Auslösen von Ausnahmen für nachfolgende Kommas, da die [RFC 8259](https://tools.ietf.org/html/rfc8259) -Spezifikation Sie nicht zulässt. Informationen dazu, wie Sie `System.Text.Json` akzeptieren, finden Sie unter [Zulassen von Kommentaren und nachfolgenden Kommas](system-text-json-how-to.md#allow-comments-and-trailing-commas). Es gibt keine Möglichkeit, mehrere nachfolgende Kommas zuzulassen.
 
 ### <a name="converter-registration-precedence"></a>Priorität der konverterregistrierung
 
-Die Rangfolge der `[!OP.NO-LOC(Newtonsoft.Json)]` Registrierung für benutzerdefinierte Konverter lautet wie folgt:
+Die Rangfolge der `Newtonsoft.Json` Registrierung für benutzerdefinierte Konverter lautet wie folgt:
 
 * Attribut für Eigenschaft
 * Attribut für Typ
@@ -109,10 +109,10 @@ Die Rangfolge der `[!OP.NO-LOC(Newtonsoft.Json)]` Registrierung für benutzerdef
 
 Diese Reihenfolge bedeutet, dass ein benutzerdefinierter Konverter in der `Converters` Auflistung von einem Konverter überschrieben wird, der durch Anwenden eines Attributs auf der Typebene registriert wird. Beide Registrierungen werden von einem Attribut auf der Eigenschaften Ebene überschrieben.
 
-Die Rangfolge der <xref:[!OP.NO-LOC(System.Text.Json)]> Registrierung für benutzerdefinierte Konverter ist unterschiedlich:
+Die Rangfolge der <xref:System.Text.Json> Registrierung für benutzerdefinierte Konverter ist unterschiedlich:
 
 * Attribut für Eigenschaft
-* <xref:[!OP.NO-LOC(System.Text.Json)].JsonSerializerOptions.Converters> Sammlung
+* <xref:System.Text.Json.JsonSerializerOptions.Converters> Sammlung
 * Attribut für Typ
 
 Der Unterschied besteht darin, dass ein benutzerdefinierter Konverter in der `Converters`-Auflistung ein Attribut auf Typebene überschreibt. Die Absicht hinter dieser Rangfolge besteht darin, dass Lauf Zeit Änderungen zur Entwurfszeit Auswahl überschrieben werden. Es gibt keine Möglichkeit, die Rangfolge zu ändern.
@@ -121,11 +121,11 @@ Weitere Informationen über die benutzerdefinierte konverterregistrierung finden
 
 ### <a name="maximum-depth"></a>Maximale Tiefe
 
-`[!OP.NO-LOC(Newtonsoft.Json)]` hat standardmäßig keine Obergrenze für die Tiefe. Für <xref:[!OP.NO-LOC(System.Text.Json)]> gibt es ein Standard Limit von 64 und kann durch Festlegen von <xref:[!OP.NO-LOC(System.Text.Json)].JsonSerializerOptions.MaxDepth?displayProperty=nameWithType>konfiguriert werden.
+`Newtonsoft.Json` hat standardmäßig keine Obergrenze für die Tiefe. Für <xref:System.Text.Json> gibt es ein Standard Limit von 64 und kann durch Festlegen von <xref:System.Text.Json.JsonSerializerOptions.MaxDepth?displayProperty=nameWithType>konfiguriert werden.
 
 ### <a name="json-strings-property-names-and-string-values"></a>JSON-Zeichen folgen (Eigenschaftsnamen und Zeichen folgen Werte)
 
-Während der Deserialisierung akzeptiert `[!OP.NO-LOC(Newtonsoft.Json)]` Eigenschaftsnamen, die in doppelten Anführungszeichen, einfachen Anführungszeichen oder ohne Anführungszeichen eingeschlossen sind. Sie akzeptiert Zeichen folgen Werte, die in doppelten Anführungszeichen oder einfachen Anführungszeichen eingeschlossen sind. Beispielsweise akzeptiert `[!OP.NO-LOC(Newtonsoft.Json)]` den folgenden JSON-Code:
+Während der Deserialisierung akzeptiert `Newtonsoft.Json` Eigenschaftsnamen, die in doppelten Anführungszeichen, einfachen Anführungszeichen oder ohne Anführungszeichen eingeschlossen sind. Sie akzeptiert Zeichen folgen Werte, die in doppelten Anführungszeichen oder einfachen Anführungszeichen eingeschlossen sind. Beispielsweise akzeptiert `Newtonsoft.Json` den folgenden JSON-Code:
 
 ```json
 {
@@ -135,9 +135,9 @@ Während der Deserialisierung akzeptiert `[!OP.NO-LOC(Newtonsoft.Json)]` Eigensc
 }
 ```
 
-`[!OP.NO-LOC(System.Text.Json)]` akzeptiert nur Eigenschaftsnamen und Zeichen folgen Werte in doppelten Anführungszeichen, da dieses Format für die [RFC 8259](https://tools.ietf.org/html/rfc8259) -Spezifikation erforderlich ist und das einzige Format ist, das als gültiger JSON-Code gilt.
+`System.Text.Json` akzeptiert nur Eigenschaftsnamen und Zeichen folgen Werte in doppelten Anführungszeichen, da dieses Format für die [RFC 8259](https://tools.ietf.org/html/rfc8259) -Spezifikation erforderlich ist und das einzige Format ist, das als gültiger JSON-Code gilt.
 
-Ein in einfache Anführungszeichen eingeschlossener Wert führt zu einer [jsonexception](xref:[!OP.NO-LOC(System.Text.Json)].JsonException) mit der folgenden Meldung:
+Ein in einfache Anführungszeichen eingeschlossener Wert führt zu einer [jsonexception](xref:System.Text.Json.JsonException) mit der folgenden Meldung:
 
 ```
 ''' is an invalid start of a value.
@@ -145,7 +145,7 @@ Ein in einfache Anführungszeichen eingeschlossener Wert führt zu einer [jsonex
 
 ### <a name="non-string-values-for-string-properties"></a>Nicht-Zeichen folgen Werte für Zeichen folgen Eigenschaften
 
-`[!OP.NO-LOC(Newtonsoft.Json)]` akzeptiert Werte, die keine Zeichenfolge sind, wie z. b. eine Zahl oder die Literale `true` und `false`, für die Deserialisierung von Eigenschaften vom Typ "String". Im folgenden finden Sie ein Beispiel für JSON, das `[!OP.NO-LOC(Newtonsoft.Json)]` erfolgreich in die folgende Klasse deserialisiert wurde:
+`Newtonsoft.Json` akzeptiert Werte, die keine Zeichenfolge sind, wie z. b. eine Zahl oder die Literale `true` und `false`, für die Deserialisierung von Eigenschaften vom Typ "String". Im folgenden finden Sie ein Beispiel für JSON, das `Newtonsoft.Json` erfolgreich in die folgende Klasse deserialisiert wurde:
 
 ```json
 {
@@ -164,7 +164,7 @@ public class ExampleClass
 }
 ```
 
-`[!OP.NO-LOC(System.Text.Json)]` deserialisiert keine Werte, die keine Zeichen folgen sind, in Zeichen folgen Eigenschaften. Ein für ein Zeichen folgen Feld empfangener Wert, der keine Zeichenfolge ist, führt zu einer [jsonexception](xref:[!OP.NO-LOC(System.Text.Json)].JsonException) mit der folgenden Meldung:
+`System.Text.Json` deserialisiert keine Werte, die keine Zeichen folgen sind, in Zeichen folgen Eigenschaften. Ein für ein Zeichen folgen Feld empfangener Wert, der keine Zeichenfolge ist, führt zu einer [jsonexception](xref:System.Text.Json.JsonException) mit der folgenden Meldung:
 
 ```
 The JSON value could not be converted to System.String.
@@ -172,11 +172,11 @@ The JSON value could not be converted to System.String.
 
 ## <a name="scenarios-using-jsonserializer-that-require-workarounds"></a>Szenarios mit jsonSerializer, die Problem Umgehungen erfordern
 
-Die folgenden Szenarien werden von der integrierten Funktionalität nicht unterstützt, es sind jedoch keine Problem Umgehungen möglich. Die Problem Umgehungen sind [benutzerdefinierte Konverter](system-text-json-converters-how-to.md), die ggf. keine umfassende Parität mit `[!OP.NO-LOC(Newtonsoft.Json)]`-Funktionalität bereitstellen. In einigen dieser Beispiele wird Beispielcode als Beispiele bereitgestellt. Wenn Sie sich auf diese `[!OP.NO-LOC(Newtonsoft.Json)]` Features verlassen, erfordert die Migration Änderungen an Ihren .NET-Objekt Modellen oder anderen Codeänderungen.
+Die folgenden Szenarien werden von der integrierten Funktionalität nicht unterstützt, es sind jedoch keine Problem Umgehungen möglich. Die Problem Umgehungen sind [benutzerdefinierte Konverter](system-text-json-converters-how-to.md), die ggf. keine umfassende Parität mit `Newtonsoft.Json`-Funktionalität bereitstellen. In einigen dieser Beispiele wird Beispielcode als Beispiele bereitgestellt. Wenn Sie sich auf diese `Newtonsoft.Json` Features verlassen, erfordert die Migration Änderungen an Ihren .NET-Objekt Modellen oder anderen Codeänderungen.
 
 ### <a name="types-without-built-in-support"></a>Typen ohne integrierte Unterstützung
 
-<xref:[!OP.NO-LOC(System.Text.Json)]> bietet keine integrierte Unterstützung für die folgenden Typen:
+<xref:System.Text.Json> bietet keine integrierte Unterstützung für die folgenden Typen:
 
 * <xref:System.Data.DataTable> und verwandte Typen
 * F#Typen, z. b. Unterscheidungs- [Unions](../../fsharp/language-reference/discriminated-unions.md), [Daten Satz Typen](../../fsharp/language-reference/records.md)und [anonyme Daten Satz Typen](../../fsharp/language-reference/anonymous-records.md).
@@ -192,53 +192,60 @@ Benutzerdefinierte Konverter können für Typen implementiert werden, die über 
 
 ### <a name="quoted-numbers"></a>Zahlen in Anführungszeichen
 
-`[!OP.NO-LOC(Newtonsoft.Json)]` können Zahlen Serialisieren oder Deserialisieren, die durch JSON-Zeichen folgen (in Anführungszeichen eingeschlossen) dargestellt werden. Beispielsweise kann Sie Folgendes akzeptieren: `{"DegreesCelsius":"23"}` anstelle von `{"DegreesCelsius":23}`. Um dieses Verhalten in <xref:[!OP.NO-LOC(System.Text.Json)]>zu aktivieren, implementieren Sie einen benutzerdefinierten Konverter wie im folgenden Beispiel. Der Konverter behandelt Eigenschaften, die als `long`definiert sind:
+`Newtonsoft.Json` können Zahlen Serialisieren oder Deserialisieren, die durch JSON-Zeichen folgen (in Anführungszeichen eingeschlossen) dargestellt werden. Beispielsweise kann Sie Folgendes akzeptieren: `{"DegreesCelsius":"23"}` anstelle von `{"DegreesCelsius":23}`. Um dieses Verhalten in <xref:System.Text.Json>zu aktivieren, implementieren Sie einen benutzerdefinierten Konverter wie im folgenden Beispiel. Der Konverter behandelt Eigenschaften, die als `long`definiert sind:
 
 * Sie werden als JSON-Zeichen folgen serialisiert. 
 * Er akzeptiert JSON-Zahlen und-Zahlen in Anführungszeichen während der Deserialisierung.
 
 [!code-csharp[](~/samples/snippets/core/system-text-json/csharp/LongToStringConverter.cs)]
 
-Registrieren Sie diesen benutzerdefinierten Konverter [mithilfe eines Attributs](system-text-json-converters-how-to.md#registration-sample---jsonconverter-on-a-property) für einzelne `long` Eigenschaften oder durch [Hinzufügen des Konverters](system-text-json-converters-how-to.md#registration-sample---converters-collection) zur <xref:[!OP.NO-LOC(System.Text.Json)].JsonSerializerOptions.Converters> Auflistung.
+Registrieren Sie diesen benutzerdefinierten Konverter [mithilfe eines Attributs](system-text-json-converters-how-to.md#registration-sample---jsonconverter-on-a-property) für einzelne `long` Eigenschaften oder durch [Hinzufügen des Konverters](system-text-json-converters-how-to.md#registration-sample---converters-collection) zur <xref:System.Text.Json.JsonSerializerOptions.Converters> Auflistung.
 
 ### <a name="dictionary-with-non-string-key"></a>Wörterbuch mit nicht-Zeichen folgen Schlüssel
 
-`[!OP.NO-LOC(Newtonsoft.Json)]` unterstützt Auflistungen vom Typ `Dictionary<TKey, TValue>`. Die integrierte Unterstützung für Wörterbuch Auflistungen in <xref:[!OP.NO-LOC(System.Text.Json)]> ist auf `Dictionary<string, TValue>`beschränkt. Das heißt, der Schlüssel muss eine Zeichenfolge sein.
+`Newtonsoft.Json` unterstützt Auflistungen vom Typ `Dictionary<TKey, TValue>`. Die integrierte Unterstützung für Wörterbuch Auflistungen in <xref:System.Text.Json> ist auf `Dictionary<string, TValue>`beschränkt. Das heißt, der Schlüssel muss eine Zeichenfolge sein.
 
 Wenn Sie ein Wörterbuch mit einer Ganzzahl oder einem anderen Typ als Schlüssel unterstützen möchten, erstellen Sie einen Konverter wie in dem Beispiel zum [Schreiben von benutzerdefinierten Konvertern](system-text-json-converters-how-to.md#support-dictionary-with-non-string-key).
 
 ### <a name="polymorphic-serialization"></a>Polymorphe Serialisierung
 
-`[!OP.NO-LOC(Newtonsoft.Json)]` automatisch polymorphe Serialisierung. Informationen zu den eingeschränkten polymorphen Serialisierungsfunktionen von <xref:[!OP.NO-LOC(System.Text.Json)]>finden Sie unter [Serialisieren von Eigenschaften abgeleiteter Klassen](system-text-json-how-to.md#serialize-properties-of-derived-classes).
+`Newtonsoft.Json` automatisch polymorphe Serialisierung. Informationen zu den eingeschränkten polymorphen Serialisierungsfunktionen von <xref:System.Text.Json>finden Sie unter [Serialisieren von Eigenschaften abgeleiteter Klassen](system-text-json-how-to.md#serialize-properties-of-derived-classes).
 
 Die hier beschriebene Problem Umgehung besteht darin, Eigenschaften zu definieren, die abgeleitete Klassen als Typ `object`enthalten können. Wenn dies nicht möglich ist, besteht die Möglichkeit, einen Konverter mit einer `Write`-Methode für die gesamte Vererbungs Typen Hierarchie zu erstellen, wie z. b. im Beispiel zum [Schreiben von benutzerdefinierten Konvertern](system-text-json-converters-how-to.md#support-polymorphic-deserialization).
 
 ### <a name="polymorphic-deserialization"></a>Polymorphe Deserialisierung
 
-`[!OP.NO-LOC(Newtonsoft.Json)]` verfügt über eine `TypeNameHandling` Einstellung, mit der dem JSON-Code beim Serialisieren Typnamen Metadaten hinzugefügt werden. Die Metadaten werden während der Deserialisierung verwendet, um die polymorphe Deserialisierung durchzuführen. <xref:[!OP.NO-LOC(System.Text.Json)]> können einen begrenzten Bereich der [polymorphen Serialisierung](system-text-json-how-to.md#serialize-properties-of-derived-classes) , aber nicht die polymorphe Deserialisierung durchführen.
+`Newtonsoft.Json` verfügt über eine `TypeNameHandling` Einstellung, mit der dem JSON-Code beim Serialisieren Typnamen Metadaten hinzugefügt werden. Die Metadaten werden während der Deserialisierung verwendet, um die polymorphe Deserialisierung durchzuführen. <xref:System.Text.Json> können einen begrenzten Bereich der [polymorphen Serialisierung](system-text-json-how-to.md#serialize-properties-of-derived-classes) , aber nicht die polymorphe Deserialisierung durchführen.
 
 Um die polymorphe Deserialisierung zu unterstützen, erstellen Sie einen Konverter wie in dem Beispiel zum [Schreiben von benutzerdefinierten Konvertern](system-text-json-converters-how-to.md#support-polymorphic-deserialization).
 
 ### <a name="deserialization-of-object-properties"></a>Deserialisierung von Objekteigenschaften
 
-Wenn `[!OP.NO-LOC(Newtonsoft.Json)]` deserialisiert, um Eigenschaften in POCOS oder in Wörterbüchern vom Typ `Dictionary<string, object>`zu `object`, liegt Folgendes vor:
+Wenn `Newtonsoft.Json` in <xref:System.Object>deserialisieren, wird Folgendes ausgeführt:
 
 * Leitet den Typ primitiver Werte in der JSON-Nutzlast (außer `null`) ab und gibt die gespeicherten `string`, `long`, `double`, `boolean`oder `DateTime` als geschachteltes Objekt zurück. *Primitive Werte* sind einzelne JSON-Werte, wie z. b. eine JSON-Zahl, eine Zeichenfolge, eine `true`, `false`oder `null`.
 * Gibt eine `JObject` oder `JArray` für komplexe Werte in der JSON-Nutzlast zurück. *Komplexe Werte* sind Auflistungen von JSON-Schlüssel-Wert-Paaren in geschweiften Klammern (`{}`) oder Listen mit Werten innerhalb von Klammern (`[]`). Die Eigenschaften und Werte in geschweiften Klammern oder Klammern können zusätzliche Eigenschaften oder Werte aufweisen.
 * Gibt einen NULL-Verweis zurück, wenn die Nutzlast das `null` JSON-Literals hat.
 
-<xref:[!OP.NO-LOC(System.Text.Json)]> speichert einen geschachtelten `JsonElement` sowohl für primitive als auch für komplexe Werte innerhalb der `System.Object`-Eigenschaft oder des-Wörterbuch Werts. Sie behandelt jedoch `null` identisch mit `[!OP.NO-LOC(Newtonsoft.Json)]` und gibt einen NULL-Verweis zurück, wenn die Nutzlast das `null` JSON-Literale enthält.
+<xref:System.Text.Json> speichert einen geschachtelten `JsonElement` sowohl für primitive als auch für komplexe Werte, wenn die Deserialisierung in <xref:System.Object>erfolgt, z. b.:
+
+* Eine `object`-Eigenschaft.
+* Ein `object`-Wörterbuch Wert.
+* Ein `object` Array-Wert.
+* Ein Stamm `object`.
+
+`System.Text.Json` behandelt `null` jedoch genauso wie `Newtonsoft.Json` und gibt einen NULL-Verweis zurück, wenn die Nutzlast über das `null` JSON-Literale verfügt.
 
 Um den Typrückschluss für `object` Eigenschaften zu implementieren, erstellen Sie einen Konverter wie in dem Beispiel zum [Schreiben von benutzerdefinierten Konvertern](system-text-json-converters-how-to.md#deserialize-inferred-types-to-object-properties).
 
 ### <a name="deserialize-null-to-non-nullable-type"></a>Deserialisieren von NULL in einen Typ, der keine NULL-Werte zulässt 
 
-`[!OP.NO-LOC(Newtonsoft.Json)]` löst im folgenden Szenario keine Ausnahme aus:
+`Newtonsoft.Json` löst im folgenden Szenario keine Ausnahme aus:
 
 * `NullValueHandling` ist auf `Ignore`festgelegt, und
 * Während der Deserialisierung enthält der JSON-Wert einen NULL-Wert für einen Typ, der keine NULL-Werte zulässt.
 
-Im gleichen Szenario löst <xref:[!OP.NO-LOC(System.Text.Json)]> eine Ausnahme aus. (Die entsprechende Einstellung für die NULL-Behandlung ist <xref:[!OP.NO-LOC(System.Text.Json)].JsonSerializerOptions.IgnoreNullValues?displayProperty=nameWithType>.)
+Im gleichen Szenario löst <xref:System.Text.Json> eine Ausnahme aus. (Die entsprechende Einstellung für die NULL-Behandlung ist <xref:System.Text.Json.JsonSerializerOptions.IgnoreNullValues?displayProperty=nameWithType>.)
 
 Wenn Sie den Zieltyp besitzen, besteht die beste Lösung darin, dass die betreffende Eigenschaft NULL-Werte zulässt (z. b. ändern `int` in `int?`).
 
@@ -246,9 +253,9 @@ Eine weitere Problem Umgehung besteht darin, einen Konverter für den Typ zu ers
 
 [!code-csharp[](~/samples/snippets/core/system-text-json/csharp/DateTimeOffsetNullHandlingConverter.cs)]
 
-Registrieren Sie diesen benutzerdefinierten Konverter [mithilfe eines Attributs für die Eigenschaft](system-text-json-converters-how-to.md#registration-sample---jsonconverter-on-a-property) oder durch [Hinzufügen des Konverters](system-text-json-converters-how-to.md#registration-sample---converters-collection) zur <xref:[!OP.NO-LOC(System.Text.Json)].JsonSerializerOptions.Converters> Auflistung.
+Registrieren Sie diesen benutzerdefinierten Konverter [mithilfe eines Attributs für die Eigenschaft](system-text-json-converters-how-to.md#registration-sample---jsonconverter-on-a-property) oder durch [Hinzufügen des Konverters](system-text-json-converters-how-to.md#registration-sample---converters-collection) zur <xref:System.Text.Json.JsonSerializerOptions.Converters> Auflistung.
 
-**Hinweis:** Der vorherige Konverter **verarbeitet NULL-Werte anders** als `[!OP.NO-LOC(Newtonsoft.Json)]` für POCOS, die Standardwerte angeben. Nehmen Sie beispielsweise an, der folgende Code stellt das Zielobjekt dar:
+**Hinweis:** Der vorherige Konverter **verarbeitet NULL-Werte anders** als `Newtonsoft.Json` für POCOS, die Standardwerte angeben. Nehmen Sie beispielsweise an, der folgende Code stellt das Zielobjekt dar:
 
 [!code-csharp[](~/samples/snippets/core/system-text-json/csharp/WeatherForecast.cs?name=SnippetWFWithDefault)]
 
@@ -262,11 +269,11 @@ Angenommen, der folgende JSON-Code wird mithilfe des vorherigen Konverters deser
 }
 ```
 
-Nach der Deserialisierung hat die `Date`-Eigenschaft 1/1/0001 (`default(DateTimeOffset)`), d. h., der im Konstruktor festgelegte Wert wird überschrieben. Beim gleichen poco und JSON würde `[!OP.NO-LOC(Newtonsoft.Json)]` Deserialisierung 1/1/2001 in der `Date`-Eigenschaft belassen.
+Nach der Deserialisierung hat die `Date`-Eigenschaft 1/1/0001 (`default(DateTimeOffset)`), d. h., der im Konstruktor festgelegte Wert wird überschrieben. Beim gleichen poco und JSON würde `Newtonsoft.Json` Deserialisierung 1/1/2001 in der `Date`-Eigenschaft belassen.
 
 ### <a name="deserialize-to-immutable-classes-and-structs"></a>In unveränderliche Klassen und Strukturen Deserialisieren
 
-`[!OP.NO-LOC(Newtonsoft.Json)]` können in unveränderliche Klassen und Strukturen deserialisieren, da Sie Konstruktoren mit Parametern verwenden können. <xref:[!OP.NO-LOC(System.Text.Json)]> unterstützt nur öffentliche Parameter lose Konstruktoren. Um dieses Problem zu umgehen, können Sie einen Konstruktor mit Parametern in einem benutzerdefinierten Konverter aufzurufen.
+`Newtonsoft.Json` können in unveränderliche Klassen und Strukturen deserialisieren, da Sie Konstruktoren mit Parametern verwenden können. <xref:System.Text.Json> unterstützt nur öffentliche Parameter lose Konstruktoren. Um dieses Problem zu umgehen, können Sie einen Konstruktor mit Parametern in einem benutzerdefinierten Konverter aufzurufen.
 
 Im folgenden finden Sie eine unveränderliche Struktur mit mehreren Konstruktorparametern:
 
@@ -276,19 +283,19 @@ Und hier ist ein Konverter, der diese Struktur serialisiert und deserialisiert:
 
 [!code-csharp[](~/samples/snippets/core/system-text-json/csharp/ImmutablePointConverter.cs)]
 
-Registrieren Sie diesen benutzerdefinierten Konverter, indem Sie den Konverter der <xref:[!OP.NO-LOC(System.Text.Json)].JsonSerializerOptions.Converters> Auflistung [Hinzufügen](system-text-json-converters-how-to.md#registration-sample---converters-collection) .
+Registrieren Sie diesen benutzerdefinierten Konverter, indem Sie den Konverter der <xref:System.Text.Json.JsonSerializerOptions.Converters> Auflistung [Hinzufügen](system-text-json-converters-how-to.md#registration-sample---converters-collection) .
 
-Ein Beispiel für einen ähnlichen Konverter, der offene generische Eigenschaften behandelt, finden Sie unter der [integrierte Konverter für Schlüssel-Wert-Paare](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/[!OP.NO-LOC(System.Text.Json)]/src/[!OP.NO-LOC(System/Text/Json)]/Serialization/Converters/JsonValueConverterKeyValuePair.cs).
+Ein Beispiel für einen ähnlichen Konverter, der offene generische Eigenschaften behandelt, finden Sie unter der [integrierte Konverter für Schlüssel-Wert-Paare](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/src/System/Text/Json/Serialization/Converters/JsonValueConverterKeyValuePair.cs).
 
 ### <a name="specify-constructor-to-use"></a>Zu verwendenden Konstruktor angeben
 
-Mit dem `[!OP.NO-LOC(Newtonsoft.Json)]` `[JsonConstructor]`-Attribut können Sie angeben, welcher Konstruktor beim Deserialisieren in ein poco aufgerufen werden soll. <xref:[!OP.NO-LOC(System.Text.Json)]> unterstützt nur Parameter lose Konstruktoren. Um dieses Problem zu umgehen, können Sie den beliebigen Konstruktor, den Sie benötigen, in einem benutzerdefinierten Konverter abrufen. Weitere Informationen finden Sie im Beispiel für die [Deserialisierung in unveränderliche Klassen und Strukturen](#deserialize-to-immutable-classes-and-structs).
+Mit dem `Newtonsoft.Json` `[JsonConstructor]`-Attribut können Sie angeben, welcher Konstruktor beim Deserialisieren in ein poco aufgerufen werden soll. <xref:System.Text.Json> unterstützt nur Parameter lose Konstruktoren. Um dieses Problem zu umgehen, können Sie den beliebigen Konstruktor, den Sie benötigen, in einem benutzerdefinierten Konverter abrufen. Weitere Informationen finden Sie im Beispiel für die [Deserialisierung in unveränderliche Klassen und Strukturen](#deserialize-to-immutable-classes-and-structs).
 
 ### <a name="required-properties"></a>Erforderliche Eigenschaften
 
-In `[!OP.NO-LOC(Newtonsoft.Json)]`geben Sie an, dass eine Eigenschaft erforderlich ist, indem Sie `Required` für das `[JsonProperty]`-Attribut festlegen. `[!OP.NO-LOC(Newtonsoft.Json)]` löst eine Ausnahme aus, wenn im JSON-Code für eine Eigenschaft, die als erforderlich markiert ist, kein Wert empfangen wird.
+In `Newtonsoft.Json`geben Sie an, dass eine Eigenschaft erforderlich ist, indem Sie `Required` für das `[JsonProperty]`-Attribut festlegen. `Newtonsoft.Json` löst eine Ausnahme aus, wenn im JSON-Code für eine Eigenschaft, die als erforderlich markiert ist, kein Wert empfangen wird.
 
-<xref:[!OP.NO-LOC(System.Text.Json)]> löst keine Ausnahme aus, wenn für eine der Eigenschaften des Zieltyps kein Wert empfangen wird. Wenn Sie z. b. über eine `WeatherForecast`-Klasse verfügen:
+<xref:System.Text.Json> löst keine Ausnahme aus, wenn für eine der Eigenschaften des Zieltyps kein Wert empfangen wird. Wenn Sie z. b. über eine `WeatherForecast`-Klasse verfügen:
 
 [!code-csharp[](~/samples/snippets/core/system-text-json/csharp/WeatherForecast.cs?name=SnippetWF)]
 
@@ -305,11 +312,11 @@ Um die Deserialisierung fehlschlagen zu lassen, wenn sich keine `Date` Eigenscha
 
 [!code-csharp[](~/samples/snippets/core/system-text-json/csharp/WeatherForecastRequiredPropertyConverter.cs)]
 
-Registrieren Sie diesen benutzerdefinierten Konverter [mithilfe eines Attributs in der poco-Klasse](system-text-json-converters-how-to.md#registration-sample---jsonconverter-on-a-type) oder durch [Hinzufügen des Konverters](system-text-json-converters-how-to.md#registration-sample---converters-collection) zur <xref:[!OP.NO-LOC(System.Text.Json)].JsonSerializerOptions.Converters> Auflistung.
+Registrieren Sie diesen benutzerdefinierten Konverter [mithilfe eines Attributs in der poco-Klasse](system-text-json-converters-how-to.md#registration-sample---jsonconverter-on-a-type) oder durch [Hinzufügen des Konverters](system-text-json-converters-how-to.md#registration-sample---converters-collection) zur <xref:System.Text.Json.JsonSerializerOptions.Converters> Auflistung.
 
-Wenn Sie dieses Muster befolgen, übergeben Sie das Options-Objekt nicht, wenn Sie <xref:[!OP.NO-LOC(System.Text.Json)].JsonSerializer.Serialize%2A> oder <xref:[!OP.NO-LOC(System.Text.Json)].JsonSerializer.Deserialize%2A>rekursiv aufrufen. Das Options-Objekt enthält die <xref:[!OP.NO-LOC(System.Text.Json)].JsonSerializerOptions.Converters%2A> Auflistung. Wenn Sie Sie an `Serialize` oder `Deserialize`übergeben, ruft der benutzerdefinierte Konverter sich selbst auf, wodurch eine Endlosschleife entsteht, die zu einer Stapelüberlauf Ausnahme führt. Wenn die Standardoptionen nicht möglich sind, erstellen Sie eine neue Instanz der Optionen mit den Einstellungen, die Sie benötigen. Diese Vorgehensweise ist langsam, da jede neue Instanz unabhängig zwischengespeichert wird.
+Wenn Sie dieses Muster befolgen, übergeben Sie das Options-Objekt nicht, wenn Sie <xref:System.Text.Json.JsonSerializer.Serialize%2A> oder <xref:System.Text.Json.JsonSerializer.Deserialize%2A>rekursiv aufrufen. Das Options-Objekt enthält die <xref:System.Text.Json.JsonSerializerOptions.Converters%2A> Auflistung. Wenn Sie Sie an `Serialize` oder `Deserialize`übergeben, ruft der benutzerdefinierte Konverter sich selbst auf, wodurch eine Endlosschleife entsteht, die zu einer Stapelüberlauf Ausnahme führt. Wenn die Standardoptionen nicht möglich sind, erstellen Sie eine neue Instanz der Optionen mit den Einstellungen, die Sie benötigen. Diese Vorgehensweise ist langsam, da jede neue Instanz unabhängig zwischengespeichert wird.
 
-Der vorherige Konvertercode ist ein vereinfachtes Beispiel. Zusätzliche Logik wäre erforderlich, wenn Sie Attribute (z. b. [[jsonignore]](xref:[!OP.NO-LOC(System.Text.Json)].Serialization.JsonIgnoreAttribute) oder andere Optionen (z. b. benutzerdefinierte Encoder) behandeln müssen. Außerdem werden im Beispielcode keine Eigenschaften behandelt, für die im Konstruktor ein Standardwert festgelegt ist. Diese Vorgehensweise unterscheidet sich nicht zwischen den folgenden Szenarien:
+Der vorherige Konvertercode ist ein vereinfachtes Beispiel. Zusätzliche Logik wäre erforderlich, wenn Sie Attribute (z. b. [[jsonignore]](xref:System.Text.Json.Serialization.JsonIgnoreAttribute) oder andere Optionen (z. b. benutzerdefinierte Encoder) behandeln müssen. Außerdem werden im Beispielcode keine Eigenschaften behandelt, für die im Konstruktor ein Standardwert festgelegt ist. Diese Vorgehensweise unterscheidet sich nicht zwischen den folgenden Szenarien:
 
 * Im JSON-Code fehlt eine Eigenschaft.
 * Eine Eigenschaft für einen Typ, der keine NULL-Werte zulässt, ist im JSON-Code vorhanden, aber der Wert ist der Standardwert für den Typ, z. b. 0 (null) für einen `int`.
@@ -317,13 +324,13 @@ Der vorherige Konvertercode ist ein vereinfachtes Beispiel. Zusätzliche Logik w
 
 ### <a name="conditionally-ignore-a-property"></a>Bedingt eine Eigenschaft ignorieren
 
-`[!OP.NO-LOC(Newtonsoft.Json)]` bietet mehrere Möglichkeiten, eine Eigenschaft bei der Serialisierung oder Deserialisierung bedingt zu ignorieren:
+`Newtonsoft.Json` bietet mehrere Möglichkeiten, eine Eigenschaft bei der Serialisierung oder Deserialisierung bedingt zu ignorieren:
 
 * mit `DefaultContractResolver` können Sie basierend auf beliebigen Kriterien Eigenschaften auswählen, die ein-oder ausgeschlossen werden sollen. 
 * Mit den Einstellungen für `NullValueHandling` und `DefaultValueHandling` auf `JsonSerializerSettings` können Sie angeben, dass alle NULL-Wert-oder Standardwert Eigenschaften ignoriert werden sollen.
 * Mit den Einstellungen für `NullValueHandling` und `DefaultValueHandling` des `[JsonProperty]`-Attributs können Sie einzelne Eigenschaften angeben, die ignoriert werden sollen, wenn Sie auf NULL oder den Standardwert festgelegt werden.
 
-<xref:[!OP.NO-LOC(System.Text.Json)]> bietet die folgenden Möglichkeiten, um während der Serialisierung Eigenschaften auszulassen:
+<xref:System.Text.Json> bietet die folgenden Möglichkeiten, um während der Serialisierung Eigenschaften auszulassen:
 
 * Das [[jsonignore]](system-text-json-how-to.md#exclude-individual-properties) -Attribut für eine Eigenschaft bewirkt, dass die-Eigenschaft während der Serialisierung aus dem JSON-Code weggelassen wird.
 * Mit der globalen Option [ignorenullvalues](system-text-json-how-to.md#exclude-all-null-value-properties) können Sie alle NULL-Wert-Eigenschaften ausschließen.
@@ -344,7 +351,7 @@ Für diese Funktion können Sie einen benutzerdefinierten Konverter schreiben. I
 
 Der Konverter bewirkt, dass die `Summary`-Eigenschaft bei der Serialisierung weggelassen wird, wenn der Wert NULL, eine leere Zeichenfolge oder "N/v" ist. 
 
-Registrieren Sie diesen benutzerdefinierten Konverter [mithilfe eines Attributs für die Klasse](system-text-json-converters-how-to.md#registration-sample---jsonconverter-on-a-type) oder durch [Hinzufügen des Konverters](system-text-json-converters-how-to.md#registration-sample---converters-collection) zur <xref:[!OP.NO-LOC(System.Text.Json)].JsonSerializerOptions.Converters> Auflistung.
+Registrieren Sie diesen benutzerdefinierten Konverter [mithilfe eines Attributs für die Klasse](system-text-json-converters-how-to.md#registration-sample---jsonconverter-on-a-type) oder durch [Hinzufügen des Konverters](system-text-json-converters-how-to.md#registration-sample---converters-collection) zur <xref:System.Text.Json.JsonSerializerOptions.Converters> Auflistung.
 
 Diese Vorgehensweise erfordert zusätzliche Logik, wenn Folgendes erforderlich ist:
 
@@ -353,23 +360,23 @@ Diese Vorgehensweise erfordert zusätzliche Logik, wenn Folgendes erforderlich i
 
 ### <a name="specify-date-format"></a>Datumsformat angeben
 
-`[!OP.NO-LOC(Newtonsoft.Json)]` bietet mehrere Möglichkeiten, um zu steuern, wie Eigenschaften von `DateTime` und `DateTimeOffset` Typen serialisiert und deserialisiert werden:
+`Newtonsoft.Json` bietet mehrere Möglichkeiten, um zu steuern, wie Eigenschaften von `DateTime` und `DateTimeOffset` Typen serialisiert und deserialisiert werden:
 
 * Die `DateTimeZoneHandling` Einstellung kann verwendet werden, um alle `DateTime` Werte als UTC-Datumsangaben zu serialisieren.
 * Die `DateFormatString` Einstellung und `DateTime` Konverter können verwendet werden, um das Format von Datums Zeichenfolgen anzupassen.
 
-In <xref:[!OP.NO-LOC(System.Text.Json)]>ist das einzige Format, das über die integrierte Unterstützung verfügt, ISO 8601-1:2019, da es weitgehend übernommen und eindeutig ist und Roundtrips genau durchführt. Wenn Sie ein anderes Format verwenden möchten, erstellen Sie einen benutzerdefinierten Konverter. Weitere Informationen finden Sie [unter Unterstützung von DateTime und DateTimeOffset in [!OP.NO-LOC(System.Text.Json)]](../datetime/system-text-json-support.md).
+In <xref:System.Text.Json>ist das einzige Format, das über die integrierte Unterstützung verfügt, ISO 8601-1:2019, da es weitgehend übernommen und eindeutig ist und Roundtrips genau durchführt. Wenn Sie ein anderes Format verwenden möchten, erstellen Sie einen benutzerdefinierten Konverter. Weitere Informationen finden Sie [unter DateTime-und DateTimeOffset-Unterstützung in System. Text. JSON](../datetime/system-text-json-support.md).
 
 ### <a name="callbacks"></a>Rückrufe
 
-`[!OP.NO-LOC(Newtonsoft.Json)]` ermöglicht Ihnen das Ausführen von benutzerdefiniertem Code an mehreren Punkten im Serialisierungs-oder Deserialisierungsprozess:
+`Newtonsoft.Json` ermöglicht Ihnen das Ausführen von benutzerdefiniertem Code an mehreren Punkten im Serialisierungs-oder Deserialisierungsprozess:
 
 * Ondeserialize (beim Starten der Deserialisierung eines Objekts)
 * OnDeserialized (nach Abschluss der Deserialisierung eines Objekts)
 * Onserialisieren (beim Beginn der Serialisierung eines Objekts)
 * OnSerialized (nach Abschluss der Serialisierung eines Objekts)
 
-In <xref:[!OP.NO-LOC(System.Text.Json)]>können Sie Rückrufe simulieren, indem Sie einen benutzerdefinierten Konverter schreiben. Das folgende Beispiel zeigt einen benutzerdefinierten Konverter für ein poco. Der Konverter enthält Code, der eine Meldung an jedem Punkt anzeigt, der einem `[!OP.NO-LOC(Newtonsoft.Json)]` Rückruf entspricht.
+In <xref:System.Text.Json>können Sie Rückrufe simulieren, indem Sie einen benutzerdefinierten Konverter schreiben. Das folgende Beispiel zeigt einen benutzerdefinierten Konverter für ein poco. Der Konverter enthält Code, der eine Meldung an jedem Punkt anzeigt, der einem `Newtonsoft.Json` Rückruf entspricht.
 
 [!code-csharp[](~/samples/snippets/core/system-text-json/csharp/WeatherForecastCallbacksConverter.cs)]
 

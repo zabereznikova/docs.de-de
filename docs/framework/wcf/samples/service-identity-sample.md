@@ -2,12 +2,12 @@
 title: Dienstidentitätsbeispiel
 ms.date: 03/30/2017
 ms.assetid: 79fa8c1c-85bb-4b67-bc67-bfaf721303f8
-ms.openlocfilehash: 375246127b6b39440360f48fc7b24bd0388a35e5
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 868bd6e0ac7429224462c973c1c48132ec3860ba
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75347923"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76919368"
 ---
 # <a name="service-identity-sample"></a>Dienstidentitätsbeispiel
 Dieses Dienstidentitätsbeispiel veranschaulicht das Festlegen der Identität eines Diensts. Während der Entwurfszeit kann ein Client die Identität mithilfe der Metadaten des Diensts abrufen und zur Laufzeit die Identität des Diensts authentifizieren. Das Konzept der Dienstidentität besteht darin, dass ein Client einen Dienst authentifizieren kann, bevor er einen seiner Vorgänge aufruft. Auf diese Weise wird der Client vor nicht authentifizierten Aufrufen geschützt. Bei einer sicheren Verbindung authentifiziert der Dienst auch die Anmeldeinformationen eines Clients, bevor er diesem Zugriff gewährt. Diese Funktion steht jedoch nicht im Mittelpunkt dieses Beispiels. Sehen Sie sich die Beispiele in [Client](../../../../docs/framework/wcf/samples/client.md) an, die die Server Authentifizierung anzeigen.
@@ -115,7 +115,7 @@ class CustomIdentityVerifier : IdentityVerifier
 
 ### <a name="to-run-the-sample-on-the-same-computer"></a>So führen Sie das Beispiel auf demselben Computer aus
 
-1. Importieren Sie unter [!INCLUDE[wxp](../../../../includes/wxp-md.md)] oder Windows Vista die Identity. pfx-Zertifikat Datei im Identitäts Lösungs Ordner mithilfe des MMC-Snap-in-Tools in den Zertifikat Speicher LocalMachine/My (Personal). Diese Datei ist durch ein Kennwort geschützt. Während des Imports werden Sie um ein Kennwort gebeten. Geben Sie `xyz` in das Feld Kennwort ein. Weitere Informationen finden Sie im Thema Gewusst [wie: Anzeigen von Zertifikaten mit dem MMC-Snap-in](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md) . Führen Sie anschließend die Datei "Setup. bat" in einer Developer-Eingabeaufforderung für Visual Studio mit Administratorrechten aus, die dieses Zertifikat zur Verwendung auf dem Client in den Speicher "CurrentUser/Trusted People" kopiert.
+1. Unter Windows XP oder Windows Vista importieren Sie die Identity. pfx-Zertifikat Datei im Identitäts Projektmappenordner mithilfe des MMC-Snap-in-Tools in den Zertifikat Speicher LocalMachine/My (Personal). Diese Datei ist durch ein Kennwort geschützt. Während des Imports werden Sie um ein Kennwort gebeten. Geben Sie `xyz` in das Feld Kennwort ein. Weitere Informationen finden Sie im Thema Gewusst [wie: Anzeigen von Zertifikaten mit dem MMC-Snap-in](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md) . Führen Sie anschließend die Datei "Setup. bat" in einer Developer-Eingabeaufforderung für Visual Studio mit Administratorrechten aus, die dieses Zertifikat zur Verwendung auf dem Client in den Speicher "CurrentUser/Trusted People" kopiert.
 
 2. Führen Sie unter Windows Server 2003 die Datei Setup. bat aus dem Beispiel Installationsordner innerhalb einer Visual Studio 2012-Eingabeaufforderung mit Administratorrechten aus. Hiermit werden alle Zertifikate installiert, die zum Ausführen des Beispiels erforderlich sind.
 

@@ -2,12 +2,12 @@
 title: Behandlung nicht verarbeitbarer Nachrichten in MSMQ 4,0
 ms.date: 03/30/2017
 ms.assetid: ec8d59e3-9937-4391-bb8c-fdaaf2cbb73e
-ms.openlocfilehash: 71ce6d3df69164aa0d565539bad5e843a7ed6a47
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: cc4da0deea0de2cd8b3bb8e8f2ba9b8a17e3cc60
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75337501"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76919399"
 ---
 # <a name="poison-message-handling-in-msmq-40"></a>Behandlung nicht verarbeitbarer Nachrichten in MSMQ 4,0
 In diesem Beispiel wird veranschaulicht, wie die Handhabung nicht verarbeitbarer Nachrichten in einem Dienst erfolgen soll. Dieses Beispiel basiert auf dem [transaktiven MSMQ-Bindungs](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md) Beispiel. In diesem Beispiel wird der `netMsmqBinding` verwendet. Der Dienst ist eine selbst gehostete Konsolenanwendung, die es Ihnen ermöglicht, den Dienst beim Empfang von Nachrichten in der Warteschlange zu beobachten.
@@ -18,7 +18,7 @@ In diesem Beispiel wird veranschaulicht, wie die Handhabung nicht verarbeitbarer
 
  Je nach MSMQ-Version unterstützt NetMsmqBinding eingeschränkte bis vollständige Erkennung von nicht verarbeitbaren Nachrichten. Nachdem die Nachricht als nicht verarbeitbar erkannt wurde, kann sie auf verschiedene Weisen gehandhabt werden. Wiederum in Abhängigkeit von der MSMQ-Version unterstützt NetMsmqBinding die eingeschränkte bis vollständige Handhabung von nicht verarbeitbaren Nachrichten.
 
- Dieses Beispiel veranschaulicht die eingeschränkten nicht verarbeitbaren Speicherplätze, die auf Windows Server 2003 und [!INCLUDE[wxp](../../../../includes/wxp-md.md)] Plattform bereitgestellt werden, sowie die vollständigen, in Windows Vista bereitgestellten In beiden Beispielen besteht das Ziel darin, die nicht verarbeitbare Nachricht aus der Warteschlange in eine andere Warteschlange zu verschieben, in der dann ein Dienst für nicht verarbeitbare Nachrichten darauf angewendet werden kann.
+ Dieses Beispiel veranschaulicht die eingeschränkten nicht verarbeitbaren Funktionen, die auf Windows Server 2003 und der Windows XP-Plattform bereitgestellt werden, sowie die vollständigen in Windows Vista bereitgestellten In beiden Beispielen besteht das Ziel darin, die nicht verarbeitbare Nachricht aus der Warteschlange in eine andere Warteschlange zu verschieben, in der dann ein Dienst für nicht verarbeitbare Nachrichten darauf angewendet werden kann.
 
 ## <a name="msmq-v40-poison-handling-sample"></a>MSMQ v4.0 &#8211; Beispiel für Handhabung nicht verarbeitbarer Nachrichten
  In Windows Vista stellt MSMQ eine nicht verarbeitbare unter Warteschlange bereit, die zum Speichern von nicht verarbeitbaren Nachrichten verwendet werden kann. Dieses Beispiel veranschaulicht die bewährte Vorgehensweise beim Umgang mit nicht verarbeitbaren Nachrichten unter Verwendung von Windows Vista.

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - queues [WCF]
 ms.assetid: 43008409-1bb4-4bd4-85d7-862c8f10ae20
-ms.openlocfilehash: fbe3a546fd431beb5ddf1d71153d38580a19ecc9
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 92bd3a6809386764251c4a69c6bc583ed745205d
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75348340"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76921358"
 ---
 # <a name="queues-in-windows-communication-foundation"></a>Warteschlangen in Windows Communication Foundation
 In den Themen in diesem Abschnitt wird Windows Communication Foundation (WCF)-Unterstützung für Warteschlangen beschrieben. WCF bietet Unterstützung für Warteschlangen, indem Microsoft Message Queuing (früher als MSMQ bezeichnet) als Transport genutzt wird, und ermöglicht die folgenden Szenarien:  
@@ -50,7 +50,7 @@ In den Themen in diesem Abschnitt wird Windows Communication Foundation (WCF)-Un
  Erläutert den Umgang mit beschädigten (nicht verarbeitbaren) Nachrichten, das heißt Nachrichten, die auch nach der maximalen Anzahl von Versuchen nicht an die Empfängeranwendung gesendet werden konnten.  
   
  [Unterschiede zwischen den Warteschlangenfunktionen in Windows Vista, Windows Server 2003 und Windows XP](../../../../docs/framework/wcf/feature-details/diff-in-queue-in-vista-server-2003-windows-xp.md)  
- Fasst die Unterschiede in der WCF-Warteschlangen Funktion zwischen Windows Vista, Windows Server 2003 und [!INCLUDE[wxp](../../../../includes/wxp-md.md)]zusammen.  
+ Fasst die Unterschiede in der WCF-Warteschlangen Funktion zwischen Windows Vista, Windows Server 2003 und Windows XP zusammen.  
   
  [Sichern von Nachrichten mit Transportsicherheit](../../../../docs/framework/wcf/feature-details/securing-messages-using-transport-security.md)  
  Beschreibt, wie Nachrichten in Warteschlangen mithilfe der Transportsicherheit geschützt werden können.  

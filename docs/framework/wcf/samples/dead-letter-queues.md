@@ -2,12 +2,12 @@
 title: Warteschlangen für unzustellbare Meldungen
 ms.date: 03/30/2017
 ms.assetid: ff664f33-ad02-422c-9041-bab6d993f9cc
-ms.openlocfilehash: d493aba9a3f7a51824243fe8d06441ab563b2261
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 5025aa784817d1189f23918eacfef275abf968e1
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75344538"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76921435"
 ---
 # <a name="dead-letter-queues"></a>Warteschlangen für unzustellbare Meldungen
 Dieses Beispiel veranschaulicht das Behandeln und Verarbeiten von Nachrichten mit Fehlern bei der Zustellung. Es basiert auf dem [transaktiven MSMQ-Bindungs](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md) Beispiel. In diesem Beispiel wird die `netMsmqBinding`-Bindung verwendet. Der Dienst ist eine selbst gehostete Konsolenanwendung, die es Ihnen ermöglicht, den Dienst beim Empfang von Nachrichten in der Warteschlange zu beobachten.
@@ -16,7 +16,7 @@ Dieses Beispiel veranschaulicht das Behandeln und Verarbeiten von Nachrichten mi
 > Die Setupprozedur und die Buildanweisungen für dieses Beispiel befinden sich am Ende dieses Themas.
 
 > [!NOTE]
-> Dieses Beispiel veranschaulicht jede Warteschlange für unzustellbare Nachrichten, die nur unter Windows Vista verfügbar ist. Das Beispiel kann so geändert werden, dass die standardmäßigen systemweiten Warteschlangen für MSMQ 3,0 unter Windows Server 2003 und [!INCLUDE[wxp](../../../../includes/wxp-md.md)]verwendet werden.
+> Dieses Beispiel veranschaulicht jede Warteschlange für unzustellbare Nachrichten, die nur unter Windows Vista verfügbar ist. Das Beispiel kann so geändert werden, dass die standardmäßigen systemweiten Warteschlangen für MSMQ 3,0 unter Windows Server 2003 und Windows XP verwendet werden.
 
  In einer Warteschlangenkommunikation kommuniziert der Client über eine Warteschlange mit dem Dienst. Genauer ausgedrückt bedeutet dies, dass der Client Nachrichten an eine Warteschlange sendet. Der Dienst empfängt Nachrichten aus der Warteschlange. Folglich müssen der Dienst und der Client nicht gleichzeitig ausgeführt werden, um über eine Warteschlange zu kommunizieren.
 

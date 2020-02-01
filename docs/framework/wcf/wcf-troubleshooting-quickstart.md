@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF [WCF], troubleshooting
 - Windows Communication Foundation [WCF], troubleshooting
 ms.assetid: a9ea7a53-f31a-46eb-806e-898e465a4992
-ms.openlocfilehash: dfbf5a9b437d0acea16a75236fd3d2861c0f2e06
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: 2fef4c7b00fd6a1ed8f85a8bfa01ef9cfffa1bbb
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802364"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76919938"
 ---
 # <a name="wcf-troubleshooting-quickstart"></a>Schnelleinstieg zur Problembehandlung in WCF
 In diesem Thema wird eine Reihe bekannter Probleme aufgeführt, denen Kunden beim Entwickeln von WCF-Clients und -Diensten begegnet sind. Wenn Ihr spezifisches Problem nicht in dieser Liste enthalten ist, sollten Sie die Ablaufverfolgung für den Dienst konfigurieren. Dadurch wird eine Ablaufverfolgungsdatei generiert, die Sie im Ablaufverfolgungsdatei-Viewer anzeigen können, um detaillierte Informationen zu Ausnahmen im Dienst zu erhalten. Weitere Informationen zum Konfigurieren der Ablaufverfolgung finden Sie unter [Configuring Tracing](./diagnostics/tracing/configuring-tracing.md). Weitere Informationen zum Ablaufverfolgungsdatei-Viewer finden Sie unter [Service Trace Viewer Tool (SvcTraceViewer.exe)](service-trace-viewer-tool-svctraceviewer-exe.md).  
@@ -158,7 +158,7 @@ public class MyServiceHost : ServiceHost
   
 <a name="BKMK_q77"></a>   
 ## <a name="im-using-an-x509-certificate-with-my-service-and-i-get-a-systemsecuritycryptographycryptographicexception-whats-happening"></a>Ich verwende ein X.509-Zertifikat mit dem Dienst und erhalte eine System.Security.Cryptography.CryptographicException. Woran liegt das?  
- Das Problem tritt in der Regel nach einer Änderung des Benutzerkontos auf, unter dem der IIS-Arbeitsprozess ausgeführt wird. Wenn Sie in [!INCLUDE[wxp](../../../includes/wxp-md.md)]z. B. das Standardbenutzerkonto, unter dem die Datei Aspnet_wp.exe ausgeführt wird, von ASPNET in ein benutzerdefiniertes Konto ändern, wird dieser Fehler vermutlich angezeigt. Bei der Verwendung eines privaten Schlüssels benötigt der entsprechende Prozess die Berechtigungen für den Zugriff auf die Datei, in der der Schlüssel gespeichert ist.  
+ Das Problem tritt in der Regel nach einer Änderung des Benutzerkontos auf, unter dem der IIS-Arbeitsprozess ausgeführt wird. Wenn Sie z. b. unter Windows XP das Standardbenutzer Konto, unter dem die aspnet_wp. exe ausgeführt wird, von ASPNET in ein benutzerdefiniertes Benutzerkonto ändern, wird dieser Fehler möglicherweise angezeigt. Bei der Verwendung eines privaten Schlüssels benötigt der entsprechende Prozess die Berechtigungen für den Zugriff auf die Datei, in der der Schlüssel gespeichert ist.  
   
  In diesem Fall müssen Sie dem Konto des Prozesses Leseberechtigungen für die Datei mit dem Schlüssel erteilen. Wenn z. B. der IIS-Arbeitsprozess unter dem Konto Bob ausgeführt wird, müssen Sie Bob den Lesezugriff auf die Datei erteilen, die den privaten Schlüssel enthält.  
   

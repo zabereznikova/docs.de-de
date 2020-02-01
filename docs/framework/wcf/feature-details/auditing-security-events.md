@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - auditing security events [WCF]
 ms.assetid: 5633f61c-a3c9-40dd-8070-1c373b66a716
-ms.openlocfilehash: 6505cc027b2983fd61ae53ca7ae43319024c74f7
-ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
+ms.openlocfilehash: e1c3e3d7697bf9a85cf0ab7df35a4755939d1df0
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75964715"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76921410"
 ---
 # <a name="auditing-security-events"></a>Überwachen von Sicherheitsereignissen
 Anwendungen, die mit Windows Communication Foundation (WCF) erstellt wurden, können mit der Überwachungsfunktion Sicherheitsereignisse (entweder Erfolg, Fehler oder beides) protokollieren. Die Ereignisse werden in das Ereignisprotokoll von Windows geschrieben und können in der Ereignisanzeige untersucht werden.  
@@ -32,7 +32,7 @@ Anwendungen, die mit Windows Communication Foundation (WCF) erstellt wurden, kö
   
  Zum Schreiben in das Sicherheitsprotokoll ist die Berechtigungsstufe `SeAuditPrivilege` erforderlich. Standardmäßig verfügen nur die Konten "Lokales System" und "Netzwerkdienst" über diese Berechtigung. Zum Verwalten der Sicherheitsprotokollfunktionen `read` und `delete` ist die Berechtigungsstufe `SeSecurityPrivilege` erforderlich. Standardmäßig verfügen nur Administratoren über diese Berechtigung.  
   
- Authentifizierte Benutzer dagegen dürfen das Anwendungsprotokoll anzeigen und in dieses Protokoll schreiben. [!INCLUDE[wxp](../../../../includes/wxp-md.md)] schreibt standardmäßig Überwachungsereignisse in das Anwendungsprotokoll. Dieses Protokoll kann auch persönliche Daten enthalten, die allen authentifizierten Benutzern zugänglich sind.  
+ Authentifizierte Benutzer dagegen dürfen das Anwendungsprotokoll anzeigen und in dieses Protokoll schreiben. Standardmäßig schreibt Windows XP Überwachungs Ereignisse in das Anwendungsprotokoll. Dieses Protokoll kann auch persönliche Daten enthalten, die allen authentifizierten Benutzern zugänglich sind.  
   
 ## <a name="suppressing-audit-failures"></a>Unterdrücken von Überwachungsfehlern  
  Eine weitere Option bei der Überwachung ist die Unterdrückung von Überwachungsfehlern. Standardmäßig wirken sich Überwachungsfehler nicht auf die Anwendung aus. Bei Bedarf können Sie diese Option jedoch auf `false` setzen. In diesem Fall wird eine Ausnahme ausgelöst.  
@@ -78,7 +78,7 @@ Anwendungen, die mit Windows Communication Foundation (WCF) erstellt wurden, kö
 ## <a name="security-considerations"></a>Sicherheitsüberlegungen  
  Wenn böswillige Benutzer erkennen, dass die Überwachung aktiviert ist, können diese Angreifer ungültige Nachrichten senden, die dazu führen, dass Überwachungseinträge geschrieben werden. Wenn das Überwachungsprotokoll auf diese Weise ausgefüllt wird, schlägt das Überwachungssystem fehl. Legen Sie die <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A>-Eigenschaft auf `true` fest, und verwenden Sie die Eigenschaften der Ereignisanzeige zum Steuern des Überwachungsverhaltens, um diese Gefahr zu umgehen.  
   
- Unter [!INCLUDE[wxp](../../../../includes/wxp-md.md)] sind die in das Anwendungsprotokoll geschriebenen Überwachungsereignisse für alle authentifizierten Benutzer sichtbar.  
+ Überwachungs Ereignisse, die in das Anwendungsprotokoll unter Windows XP geschrieben werden, sind für alle authentifizierten Benutzer sichtbar.  
   
 ## <a name="choosing-between-application-and-security-event-logs"></a>Auswählen des Anwendungsereignisprotokolls oder des Sicherheitsereignisprotokolls  
  Die folgenden Tabellen enthalten Informationen, die Ihnen dabei helfen sollen zu entscheiden, ob in das Anwendungsereignisprotokoll oder in das Sicherheitsereignisprotokoll geschrieben werden soll.  
@@ -87,7 +87,7 @@ Anwendungen, die mit Windows Communication Foundation (WCF) erstellt wurden, kö
   
 |System|Anwendungsprotokoll|Sicherheitsprotokoll|  
 |------------|---------------------|------------------|  
-|[!INCLUDE[wxpsp2](../../../../includes/wxpsp2-md.md)] oder höher|unterstützt|Nicht unterstützt|  
+|Windows XP SP2 oder höher|unterstützt|Nicht unterstützt|  
 |Windows Server 2003 SP1 und Windows Vista|unterstützt|Threadkontext muss `SeAuditPrivilege` verarbeiten|  
   
 #### <a name="other-factors"></a>Andere Faktoren  

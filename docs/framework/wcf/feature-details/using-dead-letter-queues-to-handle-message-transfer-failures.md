@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 9e891c6a-d960-45ea-904f-1a00e202d61a
-ms.openlocfilehash: 0be22fa1e81c85d82494bc4b93468a18f05d6423
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 48e3a080097aae2e539c238bfe33c3e107f81bf0
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75345557"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76921152"
 ---
 # <a name="using-dead-letter-queues-to-handle-message-transfer-failures"></a>Verwenden von Warteschlangen für unzustellbare Nachrichten zur Handhabung von Nachrichtenübertragungsfehlern
 Die Zustellung von in der Warteschlange stehenden Nachrichten kann fehlschlagen. Diese fehlgeschlagenen Nachrichten werden in einer Warteschlange für unzustellbare Nachrichten aufgezeichnet. Das Fehlschlagen der Zustellung kann beispielsweise durch Netzwerkfehler, eine gelöschte Warteschlange, eine volle Warteschlange, einen Authentifizierungsfehler oder eine zu späte Zustellung verursacht werden.  
@@ -23,7 +23,7 @@ Die Zustellung von in der Warteschlange stehenden Nachrichten kann fehlschlagen.
   
  Die benutzerdefinierte Warteschlange für unzustellbare Nachrichten ermöglicht eine Isolation zwischen Clients, die den gleichen MSMQ-Dienst verwenden, um Nachrichten zu senden.  
   
- Unter Windows Server 2003 und [!INCLUDE[wxp](../../../../includes/wxp-md.md)]stellt Windows Communication Foundation (WCF) eine systemweite Warteschlange für unzustellbare Nachrichten für alle Client Anwendungen in der Warteschlange bereit. Unter Windows Vista stellt WCF eine Warteschlange für unzustellbare Nachrichten für jede Client Anwendung in der Warteschlange bereit.  
+ Unter Windows Server 2003 und Windows XP bietet Windows Communication Foundation (WCF) eine systemweite Warteschlange für unzustellbare Nachrichten für alle Client Anwendungen in der Warteschlange. Unter Windows Vista stellt WCF eine Warteschlange für unzustellbare Nachrichten für jede Client Anwendung in der Warteschlange bereit.  
   
 ## <a name="specifying-use-of-the-dead-letter-queue"></a>Angeben der Verwendung der Warteschlange für unzustellbare Nachrichten  
  Eine Warteschlange für unzustellbare Nachrichten befindet sich im Warteschlangen-Manager der sendenden Anwendung. Sie speichert Nachrichten, die abgelaufen sind oder nicht zugestellt werden konnten.  
