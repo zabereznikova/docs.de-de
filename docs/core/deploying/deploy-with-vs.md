@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet
-ms.openlocfilehash: 6116b2322ed2071b78bcd77de7c38ad07c327aa6
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 23dc0f691c8a8d80a0bd2a5d301ace0d129007af
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75740839"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920893"
 ---
 # <a name="deploy-net-core-apps-with-visual-studio"></a>Bereitstellen von .NET Core-Apps mit Visual Studio
 
@@ -28,7 +28,7 @@ Informationen zur Verwendung von Visual Studio für die Entwicklung von .NET Cor
 
 ## <a name="framework-dependent-deployment"></a>Framework-abhängige Bereitstellung
 
-Die Bereitstellung einer Framework-abhängigen Bereitstellung ohne Drittanbieter-Abhängigkeiten umfasst nur das Erstellen, Testen und Veröffentlichen der Anwendung. Ein einfaches, in C# geschriebenes Beispiel veranschaulicht den Prozess.  
+Die Bereitstellung einer Framework-abhängigen Bereitstellung ohne Drittanbieter-Abhängigkeiten umfasst nur das Erstellen, Testen und Veröffentlichen der Anwendung. Ein einfaches, in C# geschriebenes Beispiel veranschaulicht den Prozess.
 
 1. Erstellen eines Projekts
 
@@ -189,7 +189,7 @@ Führen Sie die folgenden Schritte für jede Zielplattform der Anwendung durch:
    Wenn Sie bereits ein Profil erstellt haben, klicken Sie mit der rechten Maustaste auf das Projekt, um das Dialogfeld **Veröffentlichen** zu öffnen, sofern dies noch nicht geöffnet ist. Klicken Sie dann auf **Neues Profil**.
 
    Das Dialogfeld **Veröffentlichungsziel auswählen** wird geöffnet.
-  
+
 1. Wählen Sie aus, wo Ihre Anwendung von Visual Studio veröffentlicht werden soll.
 
    Wenn Sie die Anwendung auf einer einzigen Plattform veröffentlichen, können Sie den Standardwert im Textfeld **Ordner auswählen** übernehmen. Die frameworkabhängige Bereitstellung Ihrer Anwendung wird dann im Verzeichnis *\<Projektverzeichnis>\bin\Release\netcoreapp2.1\publish* veröffentlicht.
@@ -244,7 +244,7 @@ Darüber hinaus erstellt Visual Studio ein separates Veröffentlichungsprofil (�
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-https://go.microsoft.com/fwlink/?LinkID=208121. 
+https://go.microsoft.com/fwlink/?LinkID=208121.
 -->
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>

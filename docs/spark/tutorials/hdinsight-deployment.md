@@ -1,15 +1,15 @@
 ---
 title: Bereitstellen einer .NET für Apache Spark-Anwendung in Azure HDInsight
 description: Erfahren Sie, wie Sie eine .NET für Apache Spark-Anwendung in HDInsight bereitstellen.
-ms.date: 05/17/2019
+ms.date: 01/23/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 3604aff5d1f138071c941ea85546af03185d722d
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 76a150879324640352aa36f753ec3d6e7342bcaf
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460722"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76860777"
 ---
 # <a name="tutorial-deploy-a-net-for-apache-spark-application-to-azure-hdinsight"></a>Tutorial: Bereitstellen einer .NET für Apache Spark-Anwendung in Azure HDInsight
 
@@ -25,7 +25,7 @@ In diesem Tutorial lernen Sie, wie die folgenden Aufgaben ausgeführt werden:
 > * Erstellen und Ausführen einer HDInsight-Skriptaktion.
 > * Ausführen einer .NET-App für Apache Spark in einem HDInsight-Cluster.
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
+## <a name="prerequisites"></a>Voraussetzungen
 
 Führen Sie die folgenden Schritte aus, bevor Sie beginnen:
 
@@ -57,7 +57,7 @@ Führen Sie die folgenden Schritte aus, bevor Sie beginnen:
 
 3. Geben Sie unter **Grundlagen** die folgenden Werte an:
 
-    |Eigenschaft  |BESCHREIBUNG  |
+    |Eigenschaft  |Beschreibung  |
     |---------|---------|
     |Abonnement  | Wählen Sie in der Dropdownliste eines Ihrer aktiven Azure-Abonnements aus. |
     |Resource group | Geben Sie an, ob Sie eine neue Ressourcengruppe erstellen oder eine vorhandene Ressourcengruppe verwenden möchten. Eine Ressourcengruppe ist ein Container, der verwandte Ressourcen für eine Azure-Lösung enthält. |
@@ -71,7 +71,7 @@ Führen Sie die folgenden Schritte aus, bevor Sie beginnen:
 
 4. Klicken Sie auf **Weiter: Speicher >>** , um zur Seite **Speicher** zu wechseln. Geben Sie unter **Speicher** die folgenden Werte an:
 
-    |Eigenschaft  |BESCHREIBUNG  |
+    |Eigenschaft  |Beschreibung  |
     |---------|---------|
     |Primärer Speichertyp|Übernehmen Sie den Standardwert **Azure Storage**.|
     |Auswahlmethode|Übernehmen Sie den Standardwert **Aus Liste auswählen**.|
@@ -148,7 +148,7 @@ Sobald der Cluster ausgeführt wird und Sie Ihre Dateien in Azure hochgeladen ha
 
 2. Wählen Sie **+ Neue übermitteln** aus, und geben Sie die folgenden Werte an:
 
-   |Eigenschaft  |BESCHREIBUNG  |
+   |Eigenschaft  |Beschreibung  |
    |---------|---------|
    | Skripttyp |Benutzerdefiniert|
    | name | Installieren des Workers|
@@ -169,7 +169,7 @@ Sobald der Cluster ausgeführt wird und Sie Ihre Dateien in Azure hochgeladen ha
    ```bash
    $SPARK_HOME/bin/spark-submit \
    --master yarn \
-   --class org.apache.spark.deploy.DotnetRunner \
+   --class org.apache.spark.deploy.dotnet.DotnetRunner \
    wasbs://mycontainer@mystorageaccount.blob.core.windows.net/microsoft-spark-2.3.x-0.6.0.jar \
    wasbs://mycontainer@mystorageaccount.blob.core.windows.net/publish.zip mySparkApp
    ```
