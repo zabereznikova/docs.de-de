@@ -16,25 +16,25 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76736587"
 ---
-# <a name="how-to-hide-column-headers-in-the-windows-forms-datagridview-control"></a><span data-ttu-id="24851-102">Gewusst wie: Ausblenden von Spaltenheadern im DataGridView-Steuerelement in Windows Forms</span><span class="sxs-lookup"><span data-stu-id="24851-102">How to: Hide Column Headers in the Windows Forms DataGridView Control</span></span>
-<span data-ttu-id="24851-103">In manchen Fällen ist es ratsam, eine <xref:System.Windows.Forms.DataGridView> ohne Spaltenüberschriften anzuzeigen.</span><span class="sxs-lookup"><span data-stu-id="24851-103">Sometimes you will want to display a <xref:System.Windows.Forms.DataGridView> without column headers.</span></span> <span data-ttu-id="24851-104">Im <xref:System.Windows.Forms.DataGridView>-Steuerelement bestimmt der <xref:System.Windows.Forms.DataGridView.ColumnHeadersVisible%2A>-Eigenschafts Wert, ob die Spaltenüberschriften angezeigt werden.</span><span class="sxs-lookup"><span data-stu-id="24851-104">In the <xref:System.Windows.Forms.DataGridView> control, the <xref:System.Windows.Forms.DataGridView.ColumnHeadersVisible%2A> property value determines whether the column headers are displayed.</span></span>  
+# <a name="how-to-hide-column-headers-in-the-windows-forms-datagridview-control"></a><span data-ttu-id="39076-102">Gewusst wie: Ausblenden von Spaltenheadern im DataGridView-Steuerelement in Windows Forms</span><span class="sxs-lookup"><span data-stu-id="39076-102">How to: Hide Column Headers in the Windows Forms DataGridView Control</span></span>
+<span data-ttu-id="39076-103">In manchen Fällen ist es ratsam, eine <xref:System.Windows.Forms.DataGridView> ohne Spaltenüberschriften anzuzeigen.</span><span class="sxs-lookup"><span data-stu-id="39076-103">Sometimes you will want to display a <xref:System.Windows.Forms.DataGridView> without column headers.</span></span> <span data-ttu-id="39076-104">Im <xref:System.Windows.Forms.DataGridView>-Steuerelement bestimmt der <xref:System.Windows.Forms.DataGridView.ColumnHeadersVisible%2A>-Eigenschafts Wert, ob die Spaltenüberschriften angezeigt werden.</span><span class="sxs-lookup"><span data-stu-id="39076-104">In the <xref:System.Windows.Forms.DataGridView> control, the <xref:System.Windows.Forms.DataGridView.ColumnHeadersVisible%2A> property value determines whether the column headers are displayed.</span></span>  
   
-### <a name="to-hide-the-column-headers"></a><span data-ttu-id="24851-105">So blenden Sie die Spaltenüberschriften aus</span><span class="sxs-lookup"><span data-stu-id="24851-105">To hide the column headers</span></span>  
+### <a name="to-hide-the-column-headers"></a><span data-ttu-id="39076-105">So blenden Sie die Spaltenüberschriften aus</span><span class="sxs-lookup"><span data-stu-id="39076-105">To hide the column headers</span></span>  
   
-- <span data-ttu-id="24851-106">Legen Sie die <xref:System.Windows.Forms.DataGridView.ColumnHeadersVisible%2A?displayProperty=nameWithType> -Eigenschaft auf `false`fest.</span><span class="sxs-lookup"><span data-stu-id="24851-106">Set the <xref:System.Windows.Forms.DataGridView.ColumnHeadersVisible%2A?displayProperty=nameWithType> property to `false`.</span></span>  
+- <span data-ttu-id="39076-106">Setzen Sie die <xref:System.Windows.Forms.DataGridView.ColumnHeadersVisible%2A?displayProperty=nameWithType>-Eigenschaft auf `false`.</span><span class="sxs-lookup"><span data-stu-id="39076-106">Set the <xref:System.Windows.Forms.DataGridView.ColumnHeadersVisible%2A?displayProperty=nameWithType> property to `false`.</span></span>  
   
      [!code-csharp[System.Windows.Forms.DataGridViewMisc#062](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#062)]
      [!code-vb[System.Windows.Forms.DataGridViewMisc#062](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#062)]  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="24851-107">Kompilieren des Codes</span><span class="sxs-lookup"><span data-stu-id="24851-107">Compiling the Code</span></span>  
- <span data-ttu-id="24851-108">Für dieses Beispiel benötigen Sie Folgendes:</span><span class="sxs-lookup"><span data-stu-id="24851-108">This example requires:</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="39076-107">Kompilieren des Codes</span><span class="sxs-lookup"><span data-stu-id="39076-107">Compiling the Code</span></span>  
+ <span data-ttu-id="39076-108">Dieses Beispiel erfordert Folgendes:</span><span class="sxs-lookup"><span data-stu-id="39076-108">This example requires:</span></span>  
   
-- <span data-ttu-id="24851-109">Ein <xref:System.Windows.Forms.DataGridView>-Steuerelement namens `dataGridView1`.</span><span class="sxs-lookup"><span data-stu-id="24851-109">A <xref:System.Windows.Forms.DataGridView> control named `dataGridView1`.</span></span>  
+- <span data-ttu-id="39076-109">Ein <xref:System.Windows.Forms.DataGridView>-Steuerelement namens `dataGridView1`.</span><span class="sxs-lookup"><span data-stu-id="39076-109">A <xref:System.Windows.Forms.DataGridView> control named `dataGridView1`.</span></span>  
   
-- <span data-ttu-id="24851-110">Verweise auf die Assemblys <xref:System?displayProperty=nameWithType> und <xref:System.Windows.Forms?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="24851-110">References to the <xref:System?displayProperty=nameWithType> and <xref:System.Windows.Forms?displayProperty=nameWithType> assemblies.</span></span>  
+- <span data-ttu-id="39076-110">Verweise auf die Assemblys <xref:System?displayProperty=nameWithType> und <xref:System.Windows.Forms?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="39076-110">References to the <xref:System?displayProperty=nameWithType> and <xref:System.Windows.Forms?displayProperty=nameWithType> assemblies.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="24851-111">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="24851-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="39076-111">Weitere Informationen</span><span class="sxs-lookup"><span data-stu-id="39076-111">See also</span></span>
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.ColumnHeadersVisible%2A?displayProperty=nameWithType>
-- [<span data-ttu-id="24851-112">Grundlegende Spalten-, Zeilen- und Zellfunktionen im DataGridView-Steuerelement in Windows Forms</span><span class="sxs-lookup"><span data-stu-id="24851-112">Basic Column, Row, and Cell Features in the Windows Forms DataGridView Control</span></span>](basic-column-row-and-cell-features-wf-datagridview-control.md)
+- [<span data-ttu-id="39076-112">Grundlegende Spalten-, Zeilen- und Zellfunktionen im DataGridView-Steuerelement in Windows Forms</span><span class="sxs-lookup"><span data-stu-id="39076-112">Basic Column, Row, and Cell Features in the Windows Forms DataGridView Control</span></span>](basic-column-row-and-cell-features-wf-datagridview-control.md)

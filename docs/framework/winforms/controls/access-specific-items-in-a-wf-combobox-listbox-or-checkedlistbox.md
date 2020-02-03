@@ -20,12 +20,12 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76746327"
 ---
-# <a name="how-to-access-specific-items-in-a-windows-forms-combobox-listbox-or-checkedlistbox-control"></a><span data-ttu-id="81a2b-102">Gewusst wie: Zugreifen auf spezifische Elemente in ComboBox-, ListBox- oder CheckedListBox-Steuerelementen in Windows Forms</span><span class="sxs-lookup"><span data-stu-id="81a2b-102">How to: Access Specific Items in a Windows Forms ComboBox, ListBox, or CheckedListBox Control</span></span>
-<span data-ttu-id="81a2b-103">Der Zugriff auf bestimmte Elemente in einem Kombinations Feld (Windows Forms), einem Listenfeld oder einem aktivierten Listenfeld ist eine wesentliche Aufgabe.</span><span class="sxs-lookup"><span data-stu-id="81a2b-103">Accessing specific items in a Windows Forms combo box, list box, or checked list box is an essential task.</span></span> <span data-ttu-id="81a2b-104">Mit dieser Option können Sie Programm gesteuert ermitteln, was in einer Liste an einer beliebigen Position vorhanden ist.</span><span class="sxs-lookup"><span data-stu-id="81a2b-104">It enables you to programmatically determine what is in a list, at any given position.</span></span>  
+# <a name="how-to-access-specific-items-in-a-windows-forms-combobox-listbox-or-checkedlistbox-control"></a><span data-ttu-id="b4337-102">Gewusst wie: Zugreifen auf spezifische Elemente in ComboBox-, ListBox- oder CheckedListBox-Steuerelementen in Windows Forms</span><span class="sxs-lookup"><span data-stu-id="b4337-102">How to: Access Specific Items in a Windows Forms ComboBox, ListBox, or CheckedListBox Control</span></span>
+<span data-ttu-id="b4337-103">Der Zugriff auf bestimmte Elemente in einem Kombinations Feld (Windows Forms), einem Listenfeld oder einem aktivierten Listenfeld ist eine wesentliche Aufgabe.</span><span class="sxs-lookup"><span data-stu-id="b4337-103">Accessing specific items in a Windows Forms combo box, list box, or checked list box is an essential task.</span></span> <span data-ttu-id="b4337-104">Mit dieser Option können Sie Programm gesteuert ermitteln, was in einer Liste an einer beliebigen Position vorhanden ist.</span><span class="sxs-lookup"><span data-stu-id="b4337-104">It enables you to programmatically determine what is in a list, at any given position.</span></span>  
   
-### <a name="to-access-a-specific-item"></a><span data-ttu-id="81a2b-105">So greifen Sie auf ein bestimmtes Element zu</span><span class="sxs-lookup"><span data-stu-id="81a2b-105">To access a specific item</span></span>  
+### <a name="to-access-a-specific-item"></a><span data-ttu-id="b4337-105">So greifen Sie auf ein bestimmtes Element zu</span><span class="sxs-lookup"><span data-stu-id="b4337-105">To access a specific item</span></span>  
   
-1. <span data-ttu-id="81a2b-106">Abfragen der `Items` Auflistung mit dem Index des jeweiligen Elements:</span><span class="sxs-lookup"><span data-stu-id="81a2b-106">Query the `Items` collection using the index of the specific item:</span></span>  
+1. <span data-ttu-id="b4337-106">Abfragen der `Items` Auflistung mit dem Index des jeweiligen Elements:</span><span class="sxs-lookup"><span data-stu-id="b4337-106">Query the `Items` collection using the index of the specific item:</span></span>  
   
     ```vb  
     Private Function GetItemText(i As Integer) As String  
@@ -51,9 +51,9 @@ ms.locfileid: "76746327"
        }  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="81a2b-107">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="81a2b-107">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b4337-107">Weitere Informationen</span><span class="sxs-lookup"><span data-stu-id="b4337-107">See also</span></span>
 
 - <xref:System.Windows.Forms.ComboBox>
 - <xref:System.Windows.Forms.ListBox>
 - <xref:System.Windows.Forms.CheckedListBox>
-- [<span data-ttu-id="81a2b-108">Windows Forms-Steuerelemente zum Auflisten von Optionen</span><span class="sxs-lookup"><span data-stu-id="81a2b-108">Windows Forms Controls Used to List Options</span></span>](windows-forms-controls-used-to-list-options.md)
+- [<span data-ttu-id="b4337-108">Windows Forms-Steuerelemente zum Auflisten von Optionen</span><span class="sxs-lookup"><span data-stu-id="b4337-108">Windows Forms Controls Used to List Options</span></span>](windows-forms-controls-used-to-list-options.md)

@@ -12,28 +12,28 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76742294"
 ---
-# <a name="class-library-wpf"></a><span data-ttu-id="7dfb3-102">Klassenbibliothek (WPF)</span><span class="sxs-lookup"><span data-stu-id="7dfb3-102">Class Library (WPF)</span></span>
-<span data-ttu-id="7dfb3-103">Die folgenden Links verweisen auf Namespaces, die [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]-APIs enthalten.</span><span class="sxs-lookup"><span data-stu-id="7dfb3-103">The following links refer to namespaces that contain [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] APIs.</span></span>  
+# <a name="class-library-wpf"></a><span data-ttu-id="d4ca0-102">Klassenbibliothek (WPF)</span><span class="sxs-lookup"><span data-stu-id="d4ca0-102">Class Library (WPF)</span></span>
+<span data-ttu-id="d4ca0-103">Die folgenden Links verweisen auf Namespaces, die [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]-APIs enthalten.</span><span class="sxs-lookup"><span data-stu-id="d4ca0-103">The following links refer to namespaces that contain [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] APIs.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="7dfb3-104">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="7dfb3-104">In This Section</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="d4ca0-104">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="d4ca0-104">In This Section</span></span>  
   
-## <a name="reference"></a><span data-ttu-id="7dfb3-105">Referenz</span><span class="sxs-lookup"><span data-stu-id="7dfb3-105">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="d4ca0-105">Verweis</span><span class="sxs-lookup"><span data-stu-id="d4ca0-105">Reference</span></span>  
   
 - <xref:Microsoft.Build.Tasks.Windows>  
   
-- <span data-ttu-id="7dfb3-106"><xref:Microsoft.Win32> (Shared)</span><span class="sxs-lookup"><span data-stu-id="7dfb3-106"><xref:Microsoft.Win32> (shared)</span></span>  
+- <span data-ttu-id="d4ca0-106"><xref:Microsoft.Win32> (Shared)</span><span class="sxs-lookup"><span data-stu-id="d4ca0-106"><xref:Microsoft.Win32> (shared)</span></span>  
   
 - <xref:Microsoft.Windows.Themes>  
   
-- <span data-ttu-id="7dfb3-107"><xref:System.Collections.ObjectModel> (Shared)</span><span class="sxs-lookup"><span data-stu-id="7dfb3-107"><xref:System.Collections.ObjectModel> (shared)</span></span>  
+- <span data-ttu-id="d4ca0-107"><xref:System.Collections.ObjectModel> (Shared)</span><span class="sxs-lookup"><span data-stu-id="d4ca0-107"><xref:System.Collections.ObjectModel> (shared)</span></span>  
   
-- <span data-ttu-id="7dfb3-108"><xref:System.Collections.Specialized> (Shared)</span><span class="sxs-lookup"><span data-stu-id="7dfb3-108"><xref:System.Collections.Specialized> (shared)</span></span>  
+- <span data-ttu-id="d4ca0-108"><xref:System.Collections.Specialized> (Shared)</span><span class="sxs-lookup"><span data-stu-id="d4ca0-108"><xref:System.Collections.Specialized> (shared)</span></span>  
   
-- <span data-ttu-id="7dfb3-109"><xref:System.ComponentModel> (Shared)</span><span class="sxs-lookup"><span data-stu-id="7dfb3-109"><xref:System.ComponentModel> (shared)</span></span>  
+- <span data-ttu-id="d4ca0-109"><xref:System.ComponentModel> (Shared)</span><span class="sxs-lookup"><span data-stu-id="d4ca0-109"><xref:System.ComponentModel> (shared)</span></span>  
   
-- <span data-ttu-id="7dfb3-110"><xref:System.Diagnostics> (Shared)</span><span class="sxs-lookup"><span data-stu-id="7dfb3-110"><xref:System.Diagnostics> (shared)</span></span>  
+- <span data-ttu-id="d4ca0-110"><xref:System.Diagnostics> (Shared)</span><span class="sxs-lookup"><span data-stu-id="d4ca0-110"><xref:System.Diagnostics> (shared)</span></span>  
   
-- <span data-ttu-id="7dfb3-111"><xref:System.IO> (Shared)</span><span class="sxs-lookup"><span data-stu-id="7dfb3-111"><xref:System.IO> (shared)</span></span>  
+- <span data-ttu-id="d4ca0-111"><xref:System.IO> (Shared)</span><span class="sxs-lookup"><span data-stu-id="d4ca0-111"><xref:System.IO> (shared)</span></span>  
   
 - <xref:System.IO.Packaging>  
   
@@ -43,7 +43,7 @@ ms.locfileid: "76742294"
   
 - <xref:System.Printing.Interop>  
   
-- <span data-ttu-id="7dfb3-112"><xref:System.Security.Permissions> (Shared)</span><span class="sxs-lookup"><span data-stu-id="7dfb3-112"><xref:System.Security.Permissions> (shared)</span></span>  
+- <span data-ttu-id="d4ca0-112"><xref:System.Security.Permissions> (Shared)</span><span class="sxs-lookup"><span data-stu-id="d4ca0-112"><xref:System.Security.Permissions> (shared)</span></span>  
   
 - <xref:System.Security.RightsManagement>  
   
@@ -85,7 +85,7 @@ ms.locfileid: "76742294"
   
 - <xref:System.Windows.Interop>  
   
-- <span data-ttu-id="7dfb3-113"><xref:System.Windows.Markup> (Shared)</span><span class="sxs-lookup"><span data-stu-id="7dfb3-113"><xref:System.Windows.Markup> (shared)</span></span>  
+- <span data-ttu-id="d4ca0-113"><xref:System.Windows.Markup> (Shared)</span><span class="sxs-lookup"><span data-stu-id="d4ca0-113"><xref:System.Windows.Markup> (shared)</span></span>  
   
 - <xref:System.Windows.Markup.Localizer>  
   
@@ -123,10 +123,10 @@ ms.locfileid: "76742294"
   
 - <xref:UIAutomationClientsideProviders>  
   
-## <a name="xaml-support-in-net-4"></a><span data-ttu-id="7dfb3-114">XAML-Unterstützung in .NET 4</span><span class="sxs-lookup"><span data-stu-id="7dfb3-114">XAML Support in .NET 4</span></span>  
- <span data-ttu-id="7dfb3-115">Die folgenden Namespaces enthalten Typen aus der System. XAML-Assembly.</span><span class="sxs-lookup"><span data-stu-id="7dfb3-115">The following namespaces contain types from the System.Xaml assembly.</span></span> <span data-ttu-id="7dfb3-116">System. XAML bietet allgemeine Unterstützung für die XAML-Sprache für Frameworks wie WPF, die auf .NET Framework 4 erstellt werden.</span><span class="sxs-lookup"><span data-stu-id="7dfb3-116">System.Xaml provides common XAML language support for frameworks such as WPF that are built on .NET Framework 4.</span></span>  
+## <a name="xaml-support-in-net-4"></a><span data-ttu-id="d4ca0-114">XAML-Unterstützung in .NET 4</span><span class="sxs-lookup"><span data-stu-id="d4ca0-114">XAML Support in .NET 4</span></span>  
+ <span data-ttu-id="d4ca0-115">Die folgenden Namespaces enthalten Typen aus der System. XAML-Assembly.</span><span class="sxs-lookup"><span data-stu-id="d4ca0-115">The following namespaces contain types from the System.Xaml assembly.</span></span> <span data-ttu-id="d4ca0-116">System. XAML bietet allgemeine Unterstützung für die XAML-Sprache für Frameworks wie WPF, die auf .NET Framework 4 erstellt werden.</span><span class="sxs-lookup"><span data-stu-id="d4ca0-116">System.Xaml provides common XAML language support for frameworks such as WPF that are built on .NET Framework 4.</span></span>  
   
-- <span data-ttu-id="7dfb3-117"><xref:System.Windows.Markup> (Shared)</span><span class="sxs-lookup"><span data-stu-id="7dfb3-117"><xref:System.Windows.Markup> (shared)</span></span>  
+- <span data-ttu-id="d4ca0-117"><xref:System.Windows.Markup> (Shared)</span><span class="sxs-lookup"><span data-stu-id="d4ca0-117"><xref:System.Windows.Markup> (shared)</span></span>  
   
 - <xref:System.Xaml>  
   

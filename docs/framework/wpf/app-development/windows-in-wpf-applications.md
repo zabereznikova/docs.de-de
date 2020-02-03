@@ -15,21 +15,21 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76739013"
 ---
-# <a name="windows-in-wpf-applications"></a><span data-ttu-id="5e875-102">Fenster in WPF-Anwendungen</span><span class="sxs-lookup"><span data-stu-id="5e875-102">Windows in WPF Applications</span></span>
-<span data-ttu-id="5e875-103">Benutzer interagieren über Windows mit Anwendungen.</span><span class="sxs-lookup"><span data-stu-id="5e875-103">Users interact with applications through windows.</span></span> <span data-ttu-id="5e875-104">Der grundlegende Zweck eines Fensters ist das Hosten und Anzeigen von Inhalt.</span><span class="sxs-lookup"><span data-stu-id="5e875-104">The fundamental purpose of a window is to host and display content.</span></span> <span data-ttu-id="5e875-105">Der Inhaltstyp, den ein Fenster hostet, hängt von der Art der Daten ab, über die eine Anwendung arbeitet, die Medien, Extensible Application Markup Language (XAML)-Seiten, Webseiten, Dokumente, Datenbanktabellen und-Einträge sowie Systeminformationen enthalten kann.</span><span class="sxs-lookup"><span data-stu-id="5e875-105">The type of content that a window hosts depends on the type of data that an application operates over, which can include media, Extensible Application Markup Language (XAML) pages, Web pages, documents, database tables and records, and system information.</span></span>  
+# <a name="windows-in-wpf-applications"></a><span data-ttu-id="32775-102">Fenster in WPF-Anwendungen</span><span class="sxs-lookup"><span data-stu-id="32775-102">Windows in WPF Applications</span></span>
+<span data-ttu-id="32775-103">Benutzer interagieren über Windows mit Anwendungen.</span><span class="sxs-lookup"><span data-stu-id="32775-103">Users interact with applications through windows.</span></span> <span data-ttu-id="32775-104">Der grundlegende Zweck eines Fensters ist das Hosten und Anzeigen von Inhalt.</span><span class="sxs-lookup"><span data-stu-id="32775-104">The fundamental purpose of a window is to host and display content.</span></span> <span data-ttu-id="32775-105">Der Inhaltstyp, den ein Fenster hostet, hängt von der Art der Daten ab, über die eine Anwendung arbeitet, die Medien, Extensible Application Markup Language (XAML)-Seiten, Webseiten, Dokumente, Datenbanktabellen und-Einträge sowie Systeminformationen enthalten kann.</span><span class="sxs-lookup"><span data-stu-id="32775-105">The type of content that a window hosts depends on the type of data that an application operates over, which can include media, Extensible Application Markup Language (XAML) pages, Web pages, documents, database tables and records, and system information.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="5e875-106">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="5e875-106">In This Section</span></span>  
- [<span data-ttu-id="5e875-107">Übersicht über WPF-Fenster</span><span class="sxs-lookup"><span data-stu-id="5e875-107">WPF Windows Overview</span></span>](wpf-windows-overview.md)  
- [<span data-ttu-id="5e875-108">Übersicht über Dialogfelder</span><span class="sxs-lookup"><span data-stu-id="5e875-108">Dialog Boxes Overview</span></span>](dialog-boxes-overview.md)  
- [<span data-ttu-id="5e875-109">Gewusst wie-Themen</span><span class="sxs-lookup"><span data-stu-id="5e875-109">How-to Topics</span></span>](window-management-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="32775-106">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="32775-106">In This Section</span></span>  
+ [<span data-ttu-id="32775-107">Übersicht über WPF-Fenster</span><span class="sxs-lookup"><span data-stu-id="32775-107">WPF Windows Overview</span></span>](wpf-windows-overview.md)  
+ [<span data-ttu-id="32775-108">Übersicht über Dialogfelder</span><span class="sxs-lookup"><span data-stu-id="32775-108">Dialog Boxes Overview</span></span>](dialog-boxes-overview.md)  
+ [<span data-ttu-id="32775-109">How-to Topics (Themen zur Vorgehensweise)</span><span class="sxs-lookup"><span data-stu-id="32775-109">How-to Topics</span></span>](window-management-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="5e875-110">Referenz</span><span class="sxs-lookup"><span data-stu-id="5e875-110">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="32775-110">Verweis</span><span class="sxs-lookup"><span data-stu-id="32775-110">Reference</span></span>  
  <xref:System.Windows.Window>  
   
  <xref:System.Windows.Navigation.NavigationWindow>  
   
-## <a name="related-sections"></a><span data-ttu-id="5e875-111">Verwandte Abschnitte</span><span class="sxs-lookup"><span data-stu-id="5e875-111">Related Sections</span></span>  
- [<span data-ttu-id="5e875-112">Übersicht über die Anwendungsverwaltung</span><span class="sxs-lookup"><span data-stu-id="5e875-112">Application Management Overview</span></span>](application-management-overview.md)  
-  [<span data-ttu-id="5e875-113">Übersicht über die Navigation</span><span class="sxs-lookup"><span data-stu-id="5e875-113">Navigation Overview</span></span>](navigation-overview.md)  
-  [<span data-ttu-id="5e875-114">Hosting</span><span class="sxs-lookup"><span data-stu-id="5e875-114">Hosting</span></span>](hosting-wpf-applications.md)  
-  [<span data-ttu-id="5e875-115">Erstellen und Bereitstellen</span><span class="sxs-lookup"><span data-stu-id="5e875-115">Build and Deploy</span></span>](building-and-deploying-wpf-applications.md)
+## <a name="related-sections"></a><span data-ttu-id="32775-111">Verwandte Abschnitte</span><span class="sxs-lookup"><span data-stu-id="32775-111">Related Sections</span></span>  
+ [<span data-ttu-id="32775-112">Übersicht über die Anwendungsverwaltung</span><span class="sxs-lookup"><span data-stu-id="32775-112">Application Management Overview</span></span>](application-management-overview.md)  
+  [<span data-ttu-id="32775-113">Übersicht über die Navigation</span><span class="sxs-lookup"><span data-stu-id="32775-113">Navigation Overview</span></span>](navigation-overview.md)  
+  [<span data-ttu-id="32775-114">Hosting</span><span class="sxs-lookup"><span data-stu-id="32775-114">Hosting</span></span>](hosting-wpf-applications.md)  
+  [<span data-ttu-id="32775-115">Erstellen und Bereitstellen</span><span class="sxs-lookup"><span data-stu-id="32775-115">Build and Deploy</span></span>](building-and-deploying-wpf-applications.md)

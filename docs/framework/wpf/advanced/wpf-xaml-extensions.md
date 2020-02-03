@@ -15,15 +15,15 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76744408"
 ---
-# <a name="wpf-xaml-extensions"></a><span data-ttu-id="c1814-102">WPF-XAML-Erweiterungen</span><span class="sxs-lookup"><span data-stu-id="c1814-102">WPF XAML Extensions</span></span>
-## <a name="in-this-section"></a><span data-ttu-id="c1814-103">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="c1814-103">In This Section</span></span>  
- [<span data-ttu-id="c1814-104">Bindung als Markuperweiterung</span><span class="sxs-lookup"><span data-stu-id="c1814-104">Binding Markup Extension</span></span>](binding-markup-extension.md)  
-  [<span data-ttu-id="c1814-105">ColorConvertedBitmap-Markuperweiterung</span><span class="sxs-lookup"><span data-stu-id="c1814-105">ColorConvertedBitmap Markup Extension</span></span>](colorconvertedbitmap-markup-extension.md)  
-  [<span data-ttu-id="c1814-106">ComponentResourceKey-Markuperweiterung</span><span class="sxs-lookup"><span data-stu-id="c1814-106">ComponentResourceKey Markup Extension</span></span>](componentresourcekey-markup-extension.md)  
-  [<span data-ttu-id="c1814-107">DynamicResource-Markuperweiterung</span><span class="sxs-lookup"><span data-stu-id="c1814-107">DynamicResource Markup Extension</span></span>](dynamicresource-markup-extension.md)  
-  [<span data-ttu-id="c1814-108">RelativeSource-Markuperweiterung</span><span class="sxs-lookup"><span data-stu-id="c1814-108">RelativeSource MarkupExtension</span></span>](relativesource-markupextension.md)  
-  [<span data-ttu-id="c1814-109">StaticResource-Markuperweiterung</span><span class="sxs-lookup"><span data-stu-id="c1814-109">StaticResource Markup Extension</span></span>](staticresource-markup-extension.md)  
-  [<span data-ttu-id="c1814-110">TemplateBinding-Markuperweiterung</span><span class="sxs-lookup"><span data-stu-id="c1814-110">TemplateBinding Markup Extension</span></span>](templatebinding-markup-extension.md)  
-  [<span data-ttu-id="c1814-111">ThemeDictionary-Markuperweiterung</span><span class="sxs-lookup"><span data-stu-id="c1814-111">ThemeDictionary Markup Extension</span></span>](themedictionary-markup-extension.md)  
-  [<span data-ttu-id="c1814-112">XAML-Syntax von PropertyPath</span><span class="sxs-lookup"><span data-stu-id="c1814-112">PropertyPath XAML Syntax</span></span>](propertypath-xaml-syntax.md)  
-  [<span data-ttu-id="c1814-113">PresentationOptions:Freeze-Attribut</span><span class="sxs-lookup"><span data-stu-id="c1814-113">PresentationOptions:Freeze Attribute</span></span>](presentationoptions-freeze-attribute.md)
+# <a name="wpf-xaml-extensions"></a><span data-ttu-id="d395f-102">WPF-XAML-Erweiterungen</span><span class="sxs-lookup"><span data-stu-id="d395f-102">WPF XAML Extensions</span></span>
+## <a name="in-this-section"></a><span data-ttu-id="d395f-103">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="d395f-103">In This Section</span></span>  
+ [<span data-ttu-id="d395f-104">Bindung als Markuperweiterung</span><span class="sxs-lookup"><span data-stu-id="d395f-104">Binding Markup Extension</span></span>](binding-markup-extension.md)  
+  [<span data-ttu-id="d395f-105">ColorConvertedBitmap-Markuperweiterung</span><span class="sxs-lookup"><span data-stu-id="d395f-105">ColorConvertedBitmap Markup Extension</span></span>](colorconvertedbitmap-markup-extension.md)  
+  [<span data-ttu-id="d395f-106">ComponentResourceKey-Markuperweiterung</span><span class="sxs-lookup"><span data-stu-id="d395f-106">ComponentResourceKey Markup Extension</span></span>](componentresourcekey-markup-extension.md)  
+  [<span data-ttu-id="d395f-107">DynamicResource-Markuperweiterung</span><span class="sxs-lookup"><span data-stu-id="d395f-107">DynamicResource Markup Extension</span></span>](dynamicresource-markup-extension.md)  
+  [<span data-ttu-id="d395f-108">RelativeSource-Markuperweiterung</span><span class="sxs-lookup"><span data-stu-id="d395f-108">RelativeSource MarkupExtension</span></span>](relativesource-markupextension.md)  
+  [<span data-ttu-id="d395f-109">StaticResource-Markuperweiterung</span><span class="sxs-lookup"><span data-stu-id="d395f-109">StaticResource Markup Extension</span></span>](staticresource-markup-extension.md)  
+  [<span data-ttu-id="d395f-110">TemplateBinding-Markuperweiterung</span><span class="sxs-lookup"><span data-stu-id="d395f-110">TemplateBinding Markup Extension</span></span>](templatebinding-markup-extension.md)  
+  [<span data-ttu-id="d395f-111">ThemeDictionary-Markuperweiterung</span><span class="sxs-lookup"><span data-stu-id="d395f-111">ThemeDictionary Markup Extension</span></span>](themedictionary-markup-extension.md)  
+  [<span data-ttu-id="d395f-112">XAML-Syntax von PropertyPath</span><span class="sxs-lookup"><span data-stu-id="d395f-112">PropertyPath XAML Syntax</span></span>](propertypath-xaml-syntax.md)  
+  [<span data-ttu-id="d395f-113">PresentationOptions:Freeze-Attribut</span><span class="sxs-lookup"><span data-stu-id="d395f-113">PresentationOptions:Freeze Attribute</span></span>](presentationoptions-freeze-attribute.md)

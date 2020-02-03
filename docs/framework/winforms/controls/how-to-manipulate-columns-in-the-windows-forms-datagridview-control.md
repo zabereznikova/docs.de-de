@@ -17,26 +17,26 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76736091"
 ---
-# <a name="how-to-manipulate-columns-in-the-windows-forms-datagridview-control"></a><span data-ttu-id="d90ea-102">Gewusst wie: Bearbeiten von Spalten im DataGridView-Steuerelement in Windows Forms</span><span class="sxs-lookup"><span data-stu-id="d90ea-102">How to: Manipulate Columns in the Windows Forms DataGridView Control</span></span>
+# <a name="how-to-manipulate-columns-in-the-windows-forms-datagridview-control"></a><span data-ttu-id="1943a-102">Gewusst wie: Bearbeiten von Spalten im DataGridView-Steuerelement in Windows Forms</span><span class="sxs-lookup"><span data-stu-id="1943a-102">How to: Manipulate Columns in the Windows Forms DataGridView Control</span></span>
 
-<span data-ttu-id="d90ea-103">Das folgende Codebeispiel zeigt die verschiedenen Möglichkeiten zum Bearbeiten von <xref:System.Windows.Forms.DataGridView>-Spalten mithilfe der Eigenschaften der <xref:System.Windows.Forms.DataGridViewColumn>-Klasse.</span><span class="sxs-lookup"><span data-stu-id="d90ea-103">The following code example shows the various ways to manipulate <xref:System.Windows.Forms.DataGridView> columns using properties of the <xref:System.Windows.Forms.DataGridViewColumn> class.</span></span>
+<span data-ttu-id="1943a-103">Das folgende Codebeispiel zeigt die verschiedenen Möglichkeiten zum Bearbeiten von <xref:System.Windows.Forms.DataGridView>-Spalten mithilfe der Eigenschaften der <xref:System.Windows.Forms.DataGridViewColumn>-Klasse.</span><span class="sxs-lookup"><span data-stu-id="1943a-103">The following code example shows the various ways to manipulate <xref:System.Windows.Forms.DataGridView> columns using properties of the <xref:System.Windows.Forms.DataGridViewColumn> class.</span></span>
 
-## <a name="example"></a><span data-ttu-id="d90ea-104">Beispiel</span><span class="sxs-lookup"><span data-stu-id="d90ea-104">Example</span></span>
+## <a name="example"></a><span data-ttu-id="1943a-104">Beispiel</span><span class="sxs-lookup"><span data-stu-id="1943a-104">Example</span></span>
 
 [!code-cpp[System.Windows.Forms.DataGridView.ButtonDemos#100](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.ButtonDemos/CPP/DataGridViewColumnDemo.cpp#100)]
 [!code-csharp[System.Windows.Forms.DataGridView.ButtonDemos#100](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.ButtonDemos/CS/DataGridViewColumnDemo.cs#100)]
 [!code-vb[System.Windows.Forms.DataGridView.ButtonDemos#100](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.ButtonDemos/VB/datagridviewcolumndemo.vb#100)]
 
-## <a name="compiling-the-code"></a><span data-ttu-id="d90ea-105">Kompilieren des Codes</span><span class="sxs-lookup"><span data-stu-id="d90ea-105">Compiling the Code</span></span>
+## <a name="compiling-the-code"></a><span data-ttu-id="1943a-105">Kompilieren des Codes</span><span class="sxs-lookup"><span data-stu-id="1943a-105">Compiling the Code</span></span>
 
-<span data-ttu-id="d90ea-106">Für dieses Beispiel benötigen Sie Folgendes:</span><span class="sxs-lookup"><span data-stu-id="d90ea-106">This example requires:</span></span>
+<span data-ttu-id="1943a-106">Dieses Beispiel erfordert Folgendes:</span><span class="sxs-lookup"><span data-stu-id="1943a-106">This example requires:</span></span>
 
-- <span data-ttu-id="d90ea-107">Verweise auf die Assemblys "System", "System.Drawing" und "System.Windows.Forms".</span><span class="sxs-lookup"><span data-stu-id="d90ea-107">References to the System, System.Drawing, and System.Windows.Forms assemblies.</span></span>
+- <span data-ttu-id="1943a-107">Verweise auf die Assemblys "System", "System.Drawing" und "System.Windows.Forms".</span><span class="sxs-lookup"><span data-stu-id="1943a-107">References to the System, System.Drawing, and System.Windows.Forms assemblies.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="d90ea-108">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="d90ea-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="1943a-108">Weitere Informationen</span><span class="sxs-lookup"><span data-stu-id="1943a-108">See also</span></span>
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridViewBand>
 - <xref:System.Windows.Forms.DataGridViewRow>
 - <xref:System.Windows.Forms.DataGridViewColumn>
-- [<span data-ttu-id="d90ea-109">Programmieren mit Zellen, Zeilen und Spalten im DataGridView-Steuerelement in Windows Forms</span><span class="sxs-lookup"><span data-stu-id="d90ea-109">Programming with Cells, Rows, and Columns in the Windows Forms DataGridView Control</span></span>](programming-with-cells-rows-and-columns-in-the-datagrid.md)
+- [<span data-ttu-id="1943a-109">Programmieren mit Zellen, Zeilen und Spalten im DataGridView-Steuerelement in Windows Forms</span><span class="sxs-lookup"><span data-stu-id="1943a-109">Programming with Cells, Rows, and Columns in the Windows Forms DataGridView Control</span></span>](programming-with-cells-rows-and-columns-in-the-datagrid.md)
