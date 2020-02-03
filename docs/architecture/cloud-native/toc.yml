@@ -44,12 +44,16 @@
         - name: Service Mesh-Kommunikationsinfrastruktur
           href: service-mesh-communication-infrastructure.md
     - name: Verteilte Daten
-      href: distributed-data.md
+      href: null
       items:
-        - name: Cloudbasierte Datenmuster
-          href: data-patterns.md
-        - name: Datenspeicherung in Azure
-          href: azure-data-storage.md
+        - name: Database-per-Microservice
+          href: database-per-microservice.md
+        - name: Vergleich der relationalen und NoSQL-Daten
+          href: relational-vs-nosql-data.md
+        - name: Zwischenspeichern einer cloudnativen Anwendung
+          href: azure-caching.md
+        - name: Elasticsearch in Azure
+          href: elastic-search-in-azure.md
     - name: Cloudbasierte Resilienz
       href: resiliency.md
       items:

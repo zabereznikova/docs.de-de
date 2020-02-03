@@ -4,12 +4,12 @@ description: Sicherheit in .NET-Microservices und -Webanwendungen – Lernen Sie
 author: mjrousos
 ms.author: wiwagn
 ms.date: 10/19/2018
-ms.openlocfilehash: b25f02140915ce87c5c478d8a8a5fe28ba7693b3
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 6d318f4efc6958610947f164d6ca63634f3d7db5
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73736958"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76777213"
 ---
 # <a name="make-secure-net-microservices-and-web-applications"></a>Erstellen sicherer .NET-Microservices und -Webanwendungen
 
@@ -121,7 +121,7 @@ else
 }
 ```
 
-Wenn Sie die Authentifizierungsoption **Individual User Account** (Einzelbenutzerkonto) auswählen, wenn Sie das ASP.NET Code-Webanwendungsprojekt in Visual Studio erstellen, befindet sich der Code, der zur Anmeldung mit einem externen Anbieter benötigt wird, bereits im Projekt. Dies ist in Abbildung 9-3 dargestellt.
+Wenn Sie die Authentifizierungsoption **Individual User Account** (Einzelbenutzerkonto) auswählen, wenn Sie das ASP.NET Core-Webanwendungsprojekt in Visual Studio erstellen, befindet sich der Code, der zur Anmeldung mit einem externen Anbieter benötigt wird, bereits im Projekt. Dies ist in Abbildung 9-3 dargestellt.
 
 ![Screenshot des Dialogfelds „Neue ASP.NET Core-Webanwendung“](./media/index/select-external-authentication-option.png)
 
@@ -287,10 +287,10 @@ Die Middleware für die JWT-Bearerauthentifizierung kann auch erweiterte Szenari
 - **Rick Anderson. Zweistufige Authentifizierung mit SMS** \
   [https://docs.microsoft.com/aspnet/core/security/authentication/2fa](/aspnet/core/security/authentication/2fa)
 
-- **Enabling authentication using Facebook, Google and other external providers (Ermöglichen der Authentifizierung mit Facebook, Google und anderen externen Anbietern)** \
+- **Enabling authentication using Facebook, Google and other external providers (Ermöglichen der Authentifizierung mit Facebook, Google und anderen externen Anbietern)**  \
   [https://docs.microsoft.com/aspnet/core/security/authentication/social/](/aspnet/core/security/authentication/social/)
 
-- **Michell Anicas. An Introduction to OAuth 2 (Einführung in OAuth 2)** \
+- **Michell Anicas. An Introduction to OAuth 2 (Einführung in OAuth 2)**  \
   <https://www.digitalocean.com/community/tutorials/an-introduction-to-oauth-2>
 
 - **AspNet.Security.OAuth.Providers** (GitHub repo for ASP.NET OAuth providers) \
