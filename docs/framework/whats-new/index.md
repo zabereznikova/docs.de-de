@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - what's new [.NET Framework]
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
-ms.openlocfilehash: 538806627a31366d4b8597eb010a4bbe3f8f9202
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: c38127281139d0c85b54a5d5077034804f1102a8
+ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76860958"
+ms.lasthandoff: 02/02/2020
+ms.locfileid: "76966009"
 ---
 # <a name="whats-new-in-the-net-framework"></a>Neues in .NET Framework
 
@@ -46,9 +46,9 @@ Dieser Artikel enthält keine umfassenden Informationen zu jeder neuen Funktion 
 
 Sie können .NET Framework 4.8 an folgenden Stellen herunterladen:
 
-- [Webinstaller für .NET Framework 4.8](https://go.microsoft.com/fwlink/?LinkId=2085155)
+- [Webinstaller für .NET Framework 4.8](https://dotnet.microsoft.com/download/dotnet-framework/net48)
 
-- [Offlineinstaller für .NET Framework 4.8](https://go.microsoft.com/fwlink/?linkid=2088631)
+- [Offlineinstaller für .NET Framework 4.8](https://dotnet.microsoft.com/download/dotnet-framework/net48)
 
 .NET Framework 4.8 kann unter Windows 10, Windows 8.1, Windows 7 SP1 und den entsprechenden Serverplattformen (beginnend mit Windows Server 2008 R2 SP1) installiert werden. Sie können .NET Framework 4.8 wahlweise mit dem Webinstaller oder Offlineinstaller installieren. Die empfohlene Vorgehensweise für die meisten Benutzer ist die Verwendung des Webinstallers.
 
@@ -2132,3 +2132,4 @@ Mit dem Projekt „Portable Klassenbibliothek“ in Visual Studio 2012 (und Folg
 - [Neues in Visual Studio 2019](/visualstudio/ide/whats-new-visual-studio-2019)
 - [ASP.NET](/aspnet)
 - [Neuerungen bei C++ in Visual Studio](/cpp/what-s-new-for-visual-cpp-in-visual-studio)
+ 

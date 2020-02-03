@@ -4,12 +4,12 @@ description: Lernen Sie serverlose Architekturen mit einem praktischen Ansatz ke
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: 8a2301b3c7a5f4a1f465677f31371d5b94783692
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 5f0d7a4c5cd736d1168ec76c1c0ea19627505f15
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/08/2019
-ms.locfileid: "72522385"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76787893"
 ---
 # <a name="serverless-business-scenarios-and-use-cases"></a>Geschäftsszenarios für serverlose Architekuren und Anwendungsfälle
 
@@ -33,7 +33,7 @@ Das vollständige Repository und Anleitungen zum Erstellen der Logik-App finden 
 
 Erfahren Sie, wie Sie eine einfache serverlose Azure-Funktion im Azure-Webportal oder in Visual Studio implementieren. Erstellen Sie einen Client mit Xamarin.Forms, der unter Android, iOS und Windows ausgeführt wird. Die Anwendung wird dann verfeinert, um JavaScript Object Notation (JSON) als Kommunikationsmedium zwischen dem Server und den mobilen Clients mit einem serverlosen Back-End zu verwenden.
 
-Weitere Informationen finden Sie unter [Implementieren einer einfachen Azure-Funktion mit einem Xamarin.Forms-Client](https://azure.microsoft.com/resources/samples/functions-xamarin-getting-started/).
+Weitere Informationen finden Sie unter [Implementieren einer einfachen Azure-Funktion mit einem Xamarin.Forms-Client](https://docs.microsoft.com/samples/azure-samples/functions-xamarin-getting-started/implementing-a-simple-azure-function-with-a-xamarinforms-client/).
 
 ## <a name="generate-a-photo-mosaic-with-serverless-image-recognition"></a>Generieren eines Fotomosaiks mit serverloser Bilderkennung
 
@@ -43,7 +43,7 @@ Das Beispiel verwendet Azure Functions und Custom Vision Service von Microsoft C
 
 Beispielsweise können Sie Ihr Modell mit Wahrzeichen aus Orlando (Florida, USA) trainieren, etwa mit dem Riesenrad Orlando Eye. Custom Vision erkennt ein Bild des Riesenrads Orlando Eye, und die Funktion erstellt ein Fotomosaik, das aus den Ergebnissen der Bing-Bildersuche für „Orlando Eye“ besteht.
 
-Weitere Informationen finden Sie unter [Azure Functions-Fotomosaikgenerator](https://azure.microsoft.com/resources/samples/functions-dotnet-photo-mosaic/).
+Weitere Informationen finden Sie unter [Azure Functions-Fotomosaikgenerator](https://github.com/Azure-Samples/functions-dotnet-photo-mosaic).
 
 ## <a name="migrate-an-existing-application-to-the-cloud"></a>Migrieren einer vorhandenen Anwendung in die Cloud
 
@@ -83,17 +83,17 @@ Das vollständige Repository für die Linkkürzung mit Anleitungen finden Sie hi
 
 Das Beispiel besteht aus einem Azure IoT Hub und einer Azure-Funktion. Eine neue Nachricht im IoT Hub löst die Azure-Funktion aus. Der serverlose Code sendet denselben Nachrichteninhalt zurück an das Gerät, von dem er gesendet wurde. Das Projekt verfügt über den gesamten für die Lösung erforderlichen Code und die Bereitstellungskonfiguration.
 
-Weitere Informationen finden Sie unter [Azure IoT Hub – Ping](https://azure.microsoft.com/resources/samples/iot-hub-node-ping/).
+Weitere Informationen finden Sie unter [Azure IoT Hub – Ping](https://github.com/Azure-Samples/iot-hub-node-ping).
 
 ## <a name="recommended-resources"></a>Empfohlene Ressourcen
 
-- [Azure Functions-Fotomosaikgenerator](https://azure.microsoft.com/resources/samples/functions-dotnet-photo-mosaic/)
-- [Azure IoT Hub – Ping](https://azure.microsoft.com/resources/samples/iot-hub-node-ping/)
+- [Azure Functions-Fotomosaikgenerator](https://github.com/Azure-Samples/functions-dotnet-photo-mosaic)
+- [Azure IoT Hub – Ping](https://github.com/Azure-Samples/iot-hub-node-ping)
 - [Azure Storage für serverlose .NET-Apps in wenigen Minuten](https://devblogs.microsoft.com/aspnet/azure-storage-for-serverless-net-apps-in-minutes/)
 - [Bring your own app](https://github.com/JeremyLikness/bring-own-app-connect-17)
 - [CSV-Importlab](https://github.com/JeremyLikness/azure-fn-file-process-hol)
 - [Event Grid-Verbindung](https://github.com/JeremyLikness/Event-Grid-Glue)
-- [Implementieren einer einfachen Azure-Funktion mit einem Xamarin.Forms-Client](https://azure.microsoft.com/resources/samples/functions-xamarin-getting-started/)
+- [Implementieren einer einfachen Azure-Funktion mit einem Xamarin.Forms-Client](https://docs.microsoft.com/samples/azure-samples/functions-xamarin-getting-started/implementing-a-simple-azure-function-with-a-xamarinforms-client/)
 - [„Lift and Shift“ mit serverlosen Azure-Funktionen](https://channel9.msdn.com/Events/Connect/2017/E102)
 - [Serverlose URL-Kürzung](https://github.com/jeremylikness/serverless-url-shortener)
 

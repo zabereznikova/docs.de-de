@@ -3,12 +3,12 @@ title: Installieren von .NET Framework unter Windows 7 SP1
 ms.custom: updateeachrelease
 description: Informationen zum Installieren von .NET Framework unter Windows 7 SP1.
 ms.date: 04/18/2019
-ms.openlocfilehash: 729e1ca86d6f7b4268ce2c8b601b700817501128
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 77177b8c4a40f68eb139f5d765bcb421a4d6bb49
+ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75716348"
+ms.lasthandoff: 02/02/2020
+ms.locfileid: "76965853"
 ---
 # <a name="install-the-net-framework-on-windows-7-sp1-and-windows-server-2008-r2"></a>Installieren von .NET Framework unter Windows 7 SP1 und Windows Server 2008 R2
 
@@ -27,7 +27,7 @@ Diese Anleitung soll Sie bei der Installation der benötigten .NET Framework-Ver
 
 ## <a name="net-framework-35"></a>.NET Framework 3.5
 
-[.NET Framework 3.5](https://www.microsoft.com/download/details.aspx?id=21) ist in Windows 7 enthalten.
+[.NET Framework 3.5](https://dotnet.microsoft.com/download/dotnet-framework/net35-sp1) ist in Windows 7 enthalten.
 
 .NET Framework 3.5 unterstützt Apps, die für .NET Framework 1.0 bis 3.5 entwickelt wurden.
 

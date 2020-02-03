@@ -5,12 +5,12 @@ helpviewer_keywords:
 - builds [C#]
 - command line [C#]
 ms.assetid: 66e70056-dd20-453c-a9b3-507e0478b015
-ms.openlocfilehash: c2b674ba17360c6ee9d2b21683560e840063f17d
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: f692e66672b1804a309c6ac04c158af948a1b1ab
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75636054"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76789870"
 ---
 # <a name="command-line-build-with-cscexe"></a>Erstellen über die Befehlszeile mit csc.exe
 
@@ -24,7 +24,7 @@ Wenn Sie auf einem Computer arbeiten, auf dem nur das Windows Software Developme
 
 Sie können auch MSBuild verwenden, um C#-Programme programmgesteuert zu erstellen. Weitere Informationen finden Sie unter [MSBuild](/visualstudio/msbuild/msbuild).
 
-Die ausführbare Datei *csc.exe* befindet sich in der Regel im *Windows*-Verzeichnis im Ordner Microsoft.NET\Framework\\ *\<Version>* . Der Speicherort unterscheidet sich je nach Konfiguration auf den einzelnen Computern. Wenn mehr als eine Version von .NET Framework auf dem Computer installiert ist, werden Sie mehrere Versionen dieser Datei finden. Weitere Informationen zu dieser Art von Installation finden Sie unter [How to: determine which versions of the .NET Framework are installed (Vorgehensweise: Bestimmen der installierten .NET Framework-Version)](../../../framework/migration-guide/how-to-determine-which-versions-are-installed.md).
+Die ausführbare Datei *csc.exe* befindet sich in der Regel im *Windows*-Verzeichnis im Ordner Microsoft.NET\Framework\\*\<Version>*. Der Speicherort unterscheidet sich je nach Konfiguration auf den einzelnen Computern. Wenn mehr als eine Version von .NET Framework auf dem Computer installiert ist, werden Sie mehrere Versionen dieser Datei finden. Weitere Informationen zu dieser Art von Installation finden Sie unter [How to: determine which versions of the .NET Framework are installed (Vorgehensweise: Bestimmen der installierten .NET Framework-Version)](../../../framework/migration-guide/how-to-determine-which-versions-are-installed.md).
 
 > [!TIP]
 > Wenn Sie ein Projekt mit der Visual Studio-IDE erstellen, können Sie den Befehl **csc** und seine zugeordneten Compileroptionen im Fenster **Ausgabe** anzeigen. Um diese Informationen anzuzeigen, folgen Sie den Anweisungen in [Vorgehensweise: Anzeigen, Speichern und Konfigurieren von Buildprotokolldateien](/visualstudio/ide/how-to-view-save-and-configure-build-log-files#to-change-the-amount-of-information-included-in-the-build-log), in denen erläutert wird, wie der Ausführlichkeitsgrad der Protokolldaten in **Normal** oder **Detailliert** geändert wird. Nachdem Sie das Projekt neu erstellt haben, durchsuchen Sie das Fenster **Ausgabe** nach **csc** nach, um den Aufruf des C#-Compilers zu finden.
@@ -59,42 +59,43 @@ Beim Interpretieren von Argumenten, die in der Befehlszeile des Betriebssystems 
 
 - Kompiliert *file.cs*, sodass *file.exe* entsteht:
 
-```console
-csc File.cs
-```
+  ```console
+  csc File.cs
+  ```
 
 - Kompiliert *file.cs*, sodass *file.exe* entsteht:
 
-```console
-csc -target:library File.cs
-```
+  ```console
+  csc -target:library File.cs
+  ```
 
 - Kompiliert *file.cs* und erstellt *my.exe*:
 
-```console
-csc -out:My.exe File.cs
-```
+  ```console
+  csc -out:My.exe File.cs
+  ```
 
 - Kompiliert alle C#-Dateien im aktuellen Verzeichnis mit aktivierten Optimierungen und definiert das DEBUG-Symbol. Die Ausgabe lautet *File2.exe*:
 
-```console
-csc -define:DEBUG -optimize -out:File2.exe *.cs
-```
+  ```console
+  csc -define:DEBUG -optimize -out:File2.exe *.cs
+  ```
 
 - Kompiliert alle C#-Dateien im aktuellen Verzeichnis, wodurch eine Debugversion von *File2.dll* erstellt wird. Es werden weder Logo noch Warnungen angezeigt:
 
-```console
-csc -target:library -out:File2.dll -warn:0 -nologo -debug *.cs
-```
+  ```console
+  csc -target:library -out:File2.dll -warn:0 -nologo -debug *.cs
+  ```
 
 - Kompiliert alle C#-Dateien im aktuellen Verzeichnis zu *Name.xyz* (eine DLL-Datei):
 
-```console
-csc -target:library -out:Something.xyz *.cs
-```
+  ```console
+  csc -target:library -out:Something.xyz *.cs
+  ```
 
 ## <a name="differences-between-c-compiler-and-c-compiler-output"></a>Unterschiede zwischen der C#-Compiler- und der C++-Compiler-Ausgabe
-Durch den Aufruf des C#-Compilers werden keine Objektdateien ( *.obj*) erstellt, stattdessen werden die Ausgabedateien direkt erstellt. Daher benötigt der C#-Compiler keinen Linker.
+
+Durch den Aufruf des C#-Compilers werden keine Objektdateien (*.obj*) erstellt, stattdessen werden die Ausgabedateien direkt erstellt. Daher benötigt der C#-Compiler keinen Linker.
 
 ## <a name="see-also"></a>Siehe auch
 
