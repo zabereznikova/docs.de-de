@@ -31,10 +31,10 @@ Mit dem Windows Forms `LinkLabel`-Steuerelement können Sie Windows Forms Anwend
  [Gewusst wie: Anzeigen einer Webseite über ein LinkLabel-Steuerelement in Windows Forms (Visual Basic)](display-a-web-page-from-a-wf-linklabel-control-visual-basic.md)  
  Zeigt, wie Sie eine Webseite im Standardbrowser anzeigen, wenn ein Benutzer auf eine Windows Forms `LinkLabel`-Steuerelement klickt.  
   
-## <a name="reference"></a>Referenz  
+## <a name="reference"></a>Verweis  
  <xref:System.Windows.Forms.LinkLabel>-Klasse  
  Beschreibt diese Klasse und enthält Links zu allen deren Membern.  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
- [Windows Forms-Steuerelemente](controls-to-use-on-windows-forms.md)  
+ [Steuerelemente für Windows Forms](controls-to-use-on-windows-forms.md)  
  Stellt eine umfassende Liste der Windows Forms Steuerelemente mit Links zu Informationen zur Verwendung bereit.

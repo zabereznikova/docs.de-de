@@ -40,7 +40,7 @@ Beim Erstellen von Steuerelementen, die mit Daten interagieren, ist es manchmal 
       > [!NOTE]
       > Deaktivieren Sie das Dialogfeld **Assemblys ausblenden, die mit „Microsoft“ oder „System“ beginnen**, wenn Sie an einen Typen in einem Framework oder einer Microsoft-Assembly binden möchten.
 
-7. Klicken Sie auf **Weiter** und anschließend auf **Fertig stellen**.
+7. Klicken Sie auf **Weiter**und anschließend auf **Fertig stellen**.
 
 ### <a name="to-bind-the-control-to-the-bindingsource"></a>So binden Sie das Steuerelement an die BindingSource
 
@@ -52,7 +52,7 @@ Beim Erstellen von Steuerelementen, die mit Daten interagieren, ist es manchmal 
 
 4. Erweitern Sie im **DataSource-Typ-Editor für die Benutzeroberfläche**den Knoten für die <xref:System.Windows.Forms.BindingSource>, die Sie zuvor hinzugefügt haben, und wählen Sie die Eigenschaft des gebundenen Typs aus, die Sie an die <xref:System.Windows.Forms.TextBox.Text%2A>-Eigenschaft der <xref:System.Windows.Forms.TextBox>binden möchten.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [BindingSource-Komponente](bindingsource-component.md)
 - [Vorgehensweise: Binden eines Windows Forms-Steuerelements an einen Typ](how-to-bind-a-windows-forms-control-to-a-type.md)

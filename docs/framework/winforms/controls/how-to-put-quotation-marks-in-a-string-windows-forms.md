@@ -48,7 +48,7 @@ Möglicherweise benötigen Sie manchmal Anführungszeichen („ “) in einer Te
        }  
     ```  
   
-     \- oder -  
+     Oder  
   
 2. Fügen Sie das ASCII- oder Unicode-Zeichen für ein Anführungszeichen ein. Verwenden Sie in Visual Basic das ASCII-Zeichen (34). Verwenden Sie C#in Visual das Unicode-Zeichen (\u0022).  
   
@@ -67,7 +67,7 @@ Möglicherweise benötigen Sie manchmal Anführungszeichen („ “) in einer Te
     > [!NOTE]
     > In diesem Beispiel können Sie \u0022 nicht verwenden, da Sie keinen universellen Zeichennamen verwenden dürfen, der ein Zeichen im Basiszeichensatz bezeichnet. Andernfalls wird C3851 ausgelöst. Weitere Informationen finden Sie unter [Compilerfehler C3851](/cpp/error-messages/compiler-errors-2/compiler-error-c3851).  
   
-     \- oder -  
+     Oder  
   
 3. Sie können auch eine Konstante für das Zeichen definieren und bei Bedarf verwenden.  
   
@@ -88,7 +88,7 @@ Möglicherweise benötigen Sie manchmal Anführungszeichen („ “) in einer Te
        const_cast<String^>(quote));  
     ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Windows.Forms.TextBox>
 - <xref:Microsoft.VisualBasic.ControlChars.Quote>

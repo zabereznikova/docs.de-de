@@ -35,7 +35,7 @@ Sie können Elemente aus der Windows Forms <xref:System.Windows.Forms.DomainUpDo
     domainUpDown1->Items->Remove("noodles");  
     ```  
   
-     \- oder -  
+     Oder  
   
 - Verwenden Sie die <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.RemoveAt%2A>-Methode, um ein Element nach seiner Position zu entfernen.  
   
@@ -54,7 +54,7 @@ Sie können Elemente aus der Windows Forms <xref:System.Windows.Forms.DomainUpDo
     domainUpDown1->Items->RemoveAt(0);  
     ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Windows.Forms.DomainUpDown>
 - <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.Remove%2A?displayProperty=nameWithType>

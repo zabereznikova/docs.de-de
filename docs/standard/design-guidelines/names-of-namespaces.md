@@ -20,7 +20,7 @@ Wie bei anderen Benennungs Richtlinien ist das Ziel bei der Benennung von Namesp
 
  `<Company>.(<Product>|<Technology>)[.<Feature>][.<Subnamespace>]`
 
- Im folgenden finden Sie einige Beispiele:
+ Hier finden Sie einige Beispiele:
 
  `Fabrikam.Math` `Litware.Security`
 
@@ -34,7 +34,7 @@ Wie bei anderen Benennungs Richtlinien ist das Ziel bei der Benennung von Namesp
 
  ✔️ sollten Sie ggf. Plural Namespace Namen verwenden.
 
- Verwenden Sie z. B. `System.Collections` statt `System.Collection`. Markennamen und Akronyme sind jedoch Ausnahmen für diese Regel. Verwenden Sie z. B. `System.IO` statt `System.IOs`.
+ Verwenden Sie beispielsweise `System.Collections` anstelle von `System.Collection`. Markennamen und Akronyme sind jedoch Ausnahmen für diese Regel. Verwenden Sie beispielsweise `System.IO` anstelle von `System.IOs`.
 
  ❌ nicht denselben Namen für einen Namespace und einen Typ in diesem Namespace verwenden.
 
@@ -81,7 +81,7 @@ Wie bei anderen Benennungs Richtlinien ist das Ziel bei der Benennung von Namesp
 
  *Nachdruck mit Genehmigung von Pearson Education, Inc aus [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) von Krzysztof Cwalina und Brad Abrams, veröffentlicht am 22. Oktober 2008 durch Addison-Wesley Professional als Teil der Microsoft Windows Development Series.*
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Frameworkentwurfsrichtlinien](../../../docs/standard/design-guidelines/index.md)
 - [Richtlinien für die Benennung](../../../docs/standard/design-guidelines/naming-guidelines.md)

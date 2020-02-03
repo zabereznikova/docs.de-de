@@ -25,7 +25,7 @@ Im folgenden Verfahren wird veranschaulicht, wie Sie eine <xref:System.Windows.F
 
 3. Wählen Sie im Bereich " **ToolStrip-Aufgaben** " die Option **Standard Elemente einfügen**aus.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Windows.Forms.ToolStrip>
 - [Übersicht über das ToolStrip-Steuerelement](toolstrip-control-overview-windows-forms.md)

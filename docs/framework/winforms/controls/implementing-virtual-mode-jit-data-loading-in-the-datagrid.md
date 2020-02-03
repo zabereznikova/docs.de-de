@@ -70,7 +70,7 @@ Ein Grund für die Implementierung des virtuellen Modus im <xref:System.Windows.
   
  Um die scrollleistung Ihrer Anwendung zu verbessern, können Sie die Datenmenge, die lokal gespeichert ist, erhöhen. Um die Startzeit zu verbessern, müssen Sie jedoch zunächst vermeiden, zu viele Daten zu laden. Möglicherweise möchten Sie die `Cache`-Klasse ändern, um die Anzahl der Datenseiten zu erhöhen, die gespeichert werden können. Die Verwendung von mehr Datenseiten kann die Bild Lauf Effizienz verbessern, Sie müssen jedoch die ideale Anzahl von Zeilen auf einer Datenseite bestimmen, abhängig von der verfügbaren Bandbreite und der Server Latenz. Bei kleineren Seiten erfolgt der Zugriff auf den Server häufiger, aber es dauert weniger Zeit, um die angeforderten Daten zurückzugeben. Wenn die Latenz eher ein Problem als die Bandbreite ist, empfiehlt es sich, größere Datenseiten zu verwenden.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.VirtualMode%2A>

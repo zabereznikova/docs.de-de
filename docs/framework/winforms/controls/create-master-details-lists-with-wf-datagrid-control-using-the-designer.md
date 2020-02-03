@@ -49,7 +49,7 @@ ms.locfileid: "76743385"
 
     2. Wählen Sie die Beziehung (z. b. "Customers. CustOrd") zwischen den Master-und Detailtabellen aus der Dropdown Liste in der <xref:System.Windows.Forms.DataGrid.DataMember%2A>-Eigenschaft aus. Um die Beziehung anzuzeigen, erweitern Sie den Knoten, indem Sie auf das Pluszeichen ( **+** ) neben der Master Tabelle in der Dropdown Liste klicken.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [DataGrid-Steuerelement](datagrid-control-windows-forms.md)
 - [Übersicht über das DataGrid-Steuerelement](datagrid-control-overview-windows-forms.md)

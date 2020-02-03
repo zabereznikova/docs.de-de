@@ -26,7 +26,7 @@ Die <xref:System.Windows.Forms.FolderBrowserDialog> Komponente wird zur Laufzeit
 
 Wenn Sie einem Formular hinzugefügt wird, wird die <xref:System.Windows.Forms.FolderBrowserDialog> Komponente in der Leiste am unteren Rand des Windows Forms-Designer in Visual Studio angezeigt.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Windows.Forms.FolderBrowserDialog>
 - [Gewusst wie: Auswählen von Ordnern mit der FolderBrowserDialog-Komponente in Windows Forms](how-to-choose-folders-with-the-windows-forms-folderbrowserdialog-component.md)

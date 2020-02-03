@@ -44,7 +44,7 @@ In jedem Windows-Formular können Sie ein <xref:System.Windows.Forms.Button>-Ste
        }  
     ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Windows.Forms.Form.CancelButton%2A>
 - [Übersicht über das Button-Steuerelement](button-control-overview-windows-forms.md)

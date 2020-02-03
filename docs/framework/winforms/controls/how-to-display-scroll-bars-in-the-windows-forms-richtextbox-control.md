@@ -18,11 +18,11 @@ Standardmäßig zeigt das Windows Forms <xref:System.Windows.Forms.RichTextBox>-
   
 ### <a name="to-display-scroll-bars-in-a-richtextbox-control"></a>So zeigen Sie Bild Lauf leisten in einem RichTextBox-Steuerelement an  
   
-1. Legen Sie die <xref:System.Windows.Forms.RichTextBox.Multiline%2A> -Eigenschaft auf `true`fest. Wenn die <xref:System.Windows.Forms.RichTextBox.Multiline%2A>-Eigenschaft auf `false`festgelegt ist, wird kein Typ der Bild Lauf Leiste angezeigt, einschließlich der horizontalen.  
+1. Setzen Sie die <xref:System.Windows.Forms.RichTextBox.Multiline%2A>-Eigenschaft auf `true`. Wenn die <xref:System.Windows.Forms.RichTextBox.Multiline%2A>-Eigenschaft auf `false`festgelegt ist, wird kein Typ der Bild Lauf Leiste angezeigt, einschließlich der horizontalen.  
   
 2. Legen Sie die <xref:System.Windows.Forms.RichTextBox.ScrollBars%2A>-Eigenschaft auf einen geeigneten Wert der <xref:System.Windows.Forms.RichTextBoxScrollBars>-Enumeration fest.  
   
-    |{2&gt;Wert&lt;2}|Beschreibung|  
+    |value|BESCHREIBUNG|  
     |-----------|-----------------|  
     |<xref:System.Windows.Forms.RichTextBoxScrollBars.Both> (Standard)|Zeigt horizontale oder vertikale Schiebe leisten (oder beides) nur an, wenn Text die Breite oder Länge des Steuer Elements überschreitet.|  
     |<xref:System.Windows.Forms.RichTextBoxScrollBars.None>|Zeigt nie eine beliebige Bild Lauf Leiste an.|  
@@ -34,14 +34,14 @@ Standardmäßig zeigt das Windows Forms <xref:System.Windows.Forms.RichTextBox>-
   
 3. Legen Sie für die <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A>-Eigenschaft einen geeigneten Wert fest.  
   
-    |{2&gt;Wert&lt;2}|Beschreibung|  
+    |value|BESCHREIBUNG|  
     |-----------|-----------------|  
     |`false`|Der Text im Steuerelement wird nicht automatisch an die Breite des Steuer Elements angepasst, sodass er nach rechts verschoben wird, bis ein Zeilenumbruch erreicht ist. Verwenden Sie diesen Wert, wenn Sie oben horizontale Schiebe leisten oder beides ausgewählt haben.|  
     |`true` (Standard)|Der Text im-Steuerelement wird automatisch an die Breite des-Steuer Elements angepasst. Die horizontale Scrollleiste wird nicht angezeigt. Verwenden Sie diesen Wert, wenn Sie vertikale Bild Lauf leisten ausgewählt haben oder oben, um einen oder mehrere Absätze anzuzeigen.|  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Windows.Forms.RichTextBoxScrollBars>
 - <xref:System.Windows.Forms.RichTextBox>
 - [RichTextBox-Steuerelement](richtextbox-control-windows-forms.md)
-- [Windows Forms-Steuerelemente](controls-to-use-on-windows-forms.md)
+- [Steuerelemente für Windows Forms](controls-to-use-on-windows-forms.md)

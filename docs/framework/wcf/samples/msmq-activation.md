@@ -19,11 +19,11 @@ Dieses Beispiel veranschaulicht das Hosten von Anwendungen in Windows Process Ac
 > [!NOTE]
 > Die Beispiele sind möglicherweise bereits auf dem Computer installiert. Suchen Sie nach dem folgenden Verzeichnis (Standardverzeichnis), bevor Sie fortfahren.
 >
-> \<InstallDrive>:\WF_WCF_Samples
+> \<InstallDrive >: \ WF_WCF_Samples
 >
 > Wenn dieses Verzeichnis nicht vorhanden ist, wechseln Sie zu [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF)-Beispiele für .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) , um alle WCF-und [!INCLUDE[wf1](../../../../includes/wf1-md.md)]-Beispiele herunterzuladen. Dieses Beispiel befindet sich im folgenden Verzeichnis.
 >
-> \<InstallDrive>:\Samples\WCFWFCardSpace\WCF\Basic\Services\Hosting\WASHost\MsmqActivation.
+> \<InstallDrive >: \samples\wcfwfcardspace\wcf\basic\services\hosting\washost\msmqactivation.
 
 Windows Process Activation Service (was), der neue Prozess Aktivierungsmechanismus für Windows Server 2008, bietet IIS-ähnliche Funktionen, die zuvor nur für HTTP-basierte Anwendungen für Anwendungen verfügbar waren, die nicht-HTTP-Protokolle verwenden. Windows Communication Foundation (WCF) verwendet die Listeneradapter-Schnittstelle zum Übermitteln von Aktivierungs Anforderungen, die über die von WCF unterstützten nicht-HTTP-Protokolle, wie z. b. TCP, Named Pipes und MSMQ, empfangen werden. Die Funktionalität für den Empfang von Anforderungen über Nicht-HTTP-Protokolle wird von verwalteten Windows-Diensten gehostet, die in "SMSvcHost.exe" ausgeführt werden.
 
@@ -269,9 +269,9 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
 
         Dieser Befehl ermöglicht den Zugriff auf die Anwendung/ServiceModelSamples-Anwendung mithilfe von `http://localhost/servicemodelsamples` und `net.msmq://localhost/servicemodelsamples`.
 
-7. Falls noch nicht geschehen, stellen Sie sicher, dass der MSMQ-Aktivierungsdienst aktiviert ist. Klicken Sie im **Startmenü** auf **Ausführen**, und geben Sie `Services.msc`ein. Durchsuchen Sie die Liste der Dienste für den **net. MSMQ-Listeneradapter**. Klicken Sie mit der rechten Maustaste, und wählen Sie **Eigenschaften**. Legen Sie den **Starttyp** auf **automatisch**fest, klicken Sie auf übernehmen und **dann** auf **Start** . Dieser Schritt muss nur einmal vor der ersten Verwendung des Net.Msmq-Listeneradapterdiensts durchgeführt werden.
+7. Falls noch nicht geschehen, stellen Sie sicher, dass der MSMQ-Aktivierungsdienst aktiviert ist. Klicken Sie im **Startmenü** auf **Ausführen**, und geben Sie `Services.msc`ein. Durchsuchen Sie die Liste der Dienste für den **net. MSMQ-Listeneradapter**. Führen Sie einen Rechtsklick aus, und wählen Sie **Eigenschaften** aus. Legen Sie den **Starttyp** auf **automatisch**fest, klicken Sie auf übernehmen und **dann** auf **Start** . Dieser Schritt muss nur einmal vor der ersten Verwendung des Net.Msmq-Listeneradapterdiensts durchgeführt werden.
 
-8. Um das Beispiel in einer Konfiguration mit einem Computer oder Computer übergreifend auszuführen, befolgen Sie die Anweisungen unter [Ausführen der Windows Communication Foundation Beispiele](../../../../docs/framework/wcf/samples/running-the-samples.md). Ändern Sie zusätzlich den Code auf dem Client, der die Bestellung einsendet, sodass beim Einsenden der Bestellung der Computername im URI der Warteschlange angegeben wird. Verwenden Sie folgenden Code:
+8. Um das Beispiel in einer Konfiguration mit einem Computer oder Computer übergreifend auszuführen, befolgen Sie die Anweisungen unter [Ausführen der Windows Communication Foundation Beispiele](../../../../docs/framework/wcf/samples/running-the-samples.md). Ändern Sie zusätzlich den Code auf dem Client, der die Bestellung einsendet, sodass beim Einsenden der Bestellung der Computername im URI der Warteschlange angegeben wird. Verwenden Sie den folgenden Code:
 
     ```csharp
     client.SubmitPurchaseOrder(po, "net.msmq://localhost/private/ServiceModelSamples/OrderStatus");
@@ -347,6 +347,6 @@ Standardmäßig wird mit der `netMsmqBinding`-Bindung die Transportsicherheit ak
     sc sidtype netmsmqactivator unrestricted
     ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [AppFabric-Hosting-und persistenzbeispiele](https://docs.microsoft.com/previous-versions/appfabric/ff383418(v=azure.10))

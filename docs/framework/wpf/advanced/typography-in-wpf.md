@@ -19,7 +19,7 @@ In diesem Thema werden die wichtigsten typografischen Funktionen von [!INCLUDE[T
  Text in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] wird mithilfe von Microsoft ClearType gerendert, wodurch die Übersichtlichkeit und Lesbarkeit von Text verbessert wird. ClearType ist eine von Microsoft entwickelte Softwaretechnologie, mit der die Lesbarkeit von Text auf vorhandenen LCDs (Liquid Crystal Displays), wie z. b. Laptop Bildschirmen, Pocket PC-Bildschirme und Flatpanel-Monitoren, verbessert wird. ClearType verwendet das Subpixel-Rendering, das es ermöglicht, Text mit einer größeren Genauigkeit als echte Form anzuzeigen, indem Zeichen an einem Bruchteil eines Pixels ausgerichtet werden. Die zusätzliche Auflösung verbessert die Schärfe der kleinen Details in der Textanzeige, was das Lesen über lange Zeiträume hinweg erleichtert. Eine weitere Verbesserung von ClearType in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ist das Antialiasing in y-Richtung, das die Ober-und Unterstriche von flachen Kurven in Textzeichen glättet. Weitere Informationen zu ClearType-Features finden Sie unter [Übersicht über ClearType](cleartype-overview.md).  
   
  ![Text mit ClearType-Y-Richtung-Antialiasing](./media/typography-in-wpf/text-y-direction-antialiasing.gif)  
-Text mit ClearType-Antialiasing auf der y-Achse  
+Text mit ClearType-Antialiasing in y-Richtung  
   
  Die gesamte Textrendering-Pipeline kann in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] hardwarebeschleunigt erfolgen, vorausgesetzt, dass Ihr Computer die Mindestanforderungen an die Hardware erfüllt. Rendering, das nicht mit der Hardware ausgeführt werden kann, wird als Softwarerendering ausgeführt. Die Hardware Beschleunigung wirkt sich auf alle Phasen der Textrenderingpipeline aus – von der Speicherung einzelner Symbole, der Komposition von Symbolen in Glyphe, dem Anwenden von Effekten bis zum Anwenden des ClearType-Mischungs Algorithmus auf die endgültige angezeigte Ausgabe. Weitere Informationen zur Hardware-Beschleunigung finden Sie unter [Renderingebenen für Grafiken](graphics-rendering-tiers.md).  
   
@@ -95,7 +95,7 @@ Text mit ClearType-Antialiasing auf der y-Achse
   
  ![Textschatten mit einem OuterGlowBitmapEffect](./media/typography-in-wpf/text-shadow-glow-effect.jpg)
   
- Das folgende Beispiel zeigt einen Text mit Weichzeichnereffekt.  
+ Das folgende Beispiel zeigt einen auf einen Text angewendeten Weichzeichnereffekt.  
   
  ![Textschatten mit einem BlurBitmapEffect](./media/typography-in-wpf/text-shadow-blur-effect.jpg)  
 
@@ -148,7 +148,7 @@ Text mit ClearType-Antialiasing auf der y-Achse
   
  Weitere Informationen zum Erstellen von benutzerdefinierten Textlayouts finden Sie unter [Advanced Text Formatting](advanced-text-formatting.md).  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Windows.Media.FormattedText>
 - <xref:System.Windows.Media.TextFormatting.TextFormatter>

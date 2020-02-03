@@ -190,7 +190,7 @@ Benutzer interagieren über Windows Windows Presentation Foundation mit eigenst�
   
 - Das momentan aktivierte Fenster bleibt aktiviert.  
   
- Das Fenster wird jedoch aktiviert, sobald der Benutzer es durch Klicken auf den Client- oder Nicht-Clientbereich aktiviert. In diesem Fall gilt Folgendes:  
+ Das Fenster wird jedoch aktiviert, sobald der Benutzer es durch Klicken auf den Client- oder Nicht-Clientbereich aktiviert. In diesem Fall:  
   
 - Das Fenster wird aktiviert.  
   
@@ -325,13 +325,13 @@ Benutzer interagieren über Windows Windows Presentation Foundation mit eigenst�
   
  Wenn Sie möchten, dass die Breite und Höhe des Fensters auf die Größe des Fenster Inhalts zugeschnitten ist, können Sie die <xref:System.Windows.Window.SizeToContent%2A>-Eigenschaft mit den folgenden Werten verwenden:  
   
-- <xref:System.Windows.SizeToContent.Manual>. Keine Auswirkung (Standard).  
+- [https://login.microsoftonline.com/consumers/](<xref:System.Windows.SizeToContent.Manual>). Keine Auswirkung (Standard).  
   
-- <xref:System.Windows.SizeToContent.Width>. An Inhalts Breite anpassen, was die gleiche Wirkung hat wie das Festlegen von <xref:System.Windows.FrameworkElement.MinWidth%2A> und <xref:System.Windows.FrameworkElement.MaxWidth%2A> auf die Breite des Inhalts.  
+- [https://login.microsoftonline.com/consumers/](<xref:System.Windows.SizeToContent.Width>). An Inhalts Breite anpassen, was die gleiche Wirkung hat wie das Festlegen von <xref:System.Windows.FrameworkElement.MinWidth%2A> und <xref:System.Windows.FrameworkElement.MaxWidth%2A> auf die Breite des Inhalts.  
   
-- <xref:System.Windows.SizeToContent.Height>. An die Höhe des Inhalts anpassen, was die gleiche Wirkung hat wie das Festlegen von <xref:System.Windows.FrameworkElement.MinHeight%2A> und <xref:System.Windows.FrameworkElement.MaxHeight%2A> auf die Höhe des Inhalts.  
+- [https://login.microsoftonline.com/consumers/](<xref:System.Windows.SizeToContent.Height>). An die Höhe des Inhalts anpassen, was die gleiche Wirkung hat wie das Festlegen von <xref:System.Windows.FrameworkElement.MinHeight%2A> und <xref:System.Windows.FrameworkElement.MaxHeight%2A> auf die Höhe des Inhalts.  
   
-- <xref:System.Windows.SizeToContent.WidthAndHeight>. An Inhalts Breite und-Höhe anpassen, was die gleiche Wirkung hat wie das Festlegen von <xref:System.Windows.FrameworkElement.MinHeight%2A> und <xref:System.Windows.FrameworkElement.MaxHeight%2A> auf die Höhe des Inhalts, und das Festlegen von <xref:System.Windows.FrameworkElement.MinWidth%2A> und <xref:System.Windows.FrameworkElement.MaxWidth%2A> auf die Breite des Inhalts.  
+- [https://login.microsoftonline.com/consumers/](<xref:System.Windows.SizeToContent.WidthAndHeight>). An Inhalts Breite und-Höhe anpassen, was die gleiche Wirkung hat wie das Festlegen von <xref:System.Windows.FrameworkElement.MinHeight%2A> und <xref:System.Windows.FrameworkElement.MaxHeight%2A> auf die Höhe des Inhalts, und das Festlegen von <xref:System.Windows.FrameworkElement.MinWidth%2A> und <xref:System.Windows.FrameworkElement.MaxWidth%2A> auf die Breite des Inhalts.  
   
  Im folgenden Beispiel wird ein Fenster dass die Größe automatisch an seinen Inhalt vertikal und horizontal an, wenn es zuerst angezeigt wird.  
   
@@ -466,7 +466,7 @@ Die Standarddarstellung eines Fensters umfasst eine Task leisten Schaltfläche, 
  [!code-xaml[WindowsOverviewSnippets#ShowInTaskbarWindowMARKUP1](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/ShowInTaskbarWindow.xaml#showintaskbarwindowmarkup1)]  
   
 <a name="SecurityConsiderations"></a>   
-## <a name="security-considerations"></a>Sicherheitsüberlegungen  
+## <a name="security-considerations"></a>Überlegungen zur Sicherheit  
  <xref:System.Windows.Window> muss `UnmanagedCode` Sicherheits Berechtigung instanziiert werden. Bei Anwendungen, die auf dem lokalen Computer installiert und gestartet werden, wird dies durch die Berechtigungen abgedeckt, die der Anwendung gewährt werden.  
   
  Dies liegt jedoch außerhalb der Berechtigungs Sätze, die Anwendungen gewährt werden, die über die Internet-oder lokale Intranetzone mithilfe von ClickOnce gestartet werden. Folglich erhalten Benutzer eine ClickOnce-Sicherheitswarnung und müssen den Berechtigungs Satz für die Anwendung auf Full Trust erhöhen.  
@@ -479,7 +479,7 @@ Die Standarddarstellung eines Fensters umfasst eine Task leisten Schaltfläche, 
   
  Dialogfelder sind Fenster, die häufig zum Erfassen von Benutzerinformationen verwendet werden, um eine Funktion ausführen. Wenn ein Benutzer beispielsweise eine Datei öffnen möchte, wird das Dialogfeld **Datei öffnen** normalerweise von einer Anwendung angezeigt, um den Dateinamen vom Benutzer zu erhalten. Weitere Informationen finden Sie unter [Übersicht über Dialogfelder](dialog-boxes-overview.md).  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Windows.Window>
 - <xref:System.Windows.MessageBox>

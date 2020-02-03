@@ -61,20 +61,20 @@ Legen Sie zum Implementieren eines verzögerten Bildlaufs die <xref:System.Windo
 
 In der unten stehenden Tabelle werden gängige Steuerelemente für das Anzeigen von Daten und deren Unterstützung von Leistungsfunktionen aufgelistet. Im vorherigen Abschnitt finden Sie Informationen zum Aktivieren dieser Funktionen.
 
-|Steuerelement|Virtualisierung|Wiederverwenden von Containern|Verzögertes Scrollen|
+|Control|Virtualisierung|Wiederverwenden von Containern|Verzögertes Scrollen|
 |-------------|--------------------|-------------------------|------------------------|
 |<xref:System.Windows.Controls.ComboBox>|Kann aktiviert werden|Kann aktiviert werden|Kann aktiviert werden|
 |<xref:System.Windows.Controls.ContextMenu>|Kann aktiviert werden|Kann aktiviert werden|Kann aktiviert werden|
 |<xref:System.Windows.Controls.DocumentViewer>|Nicht verfügbar|Nicht verfügbar|Kann aktiviert werden|
-|<xref:System.Windows.Controls.ListBox>|Default|Kann aktiviert werden|Kann aktiviert werden|
-|<xref:System.Windows.Controls.ListView>|Default|Kann aktiviert werden|Kann aktiviert werden|
+|<xref:System.Windows.Controls.ListBox>|Standard|Kann aktiviert werden|Kann aktiviert werden|
+|<xref:System.Windows.Controls.ListView>|Standard|Kann aktiviert werden|Kann aktiviert werden|
 |<xref:System.Windows.Controls.TreeView>|Kann aktiviert werden|Kann aktiviert werden|Kann aktiviert werden|
 |<xref:System.Windows.Controls.ToolBar>|Nicht verfügbar|Nicht verfügbar|Kann aktiviert werden|
 
 > [!NOTE]
 > Ein Beispiel zum Aktivieren der Virtualisierung und Wiederverwendung von Containern für eine <xref:System.Windows.Controls.TreeView>finden Sie unter [verbessern der Leistung von TreeView](../controls/how-to-improve-the-performance-of-a-treeview.md).
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Layout](layout.md)
 - [Layout und Entwurf](optimizing-performance-layout-and-design.md)

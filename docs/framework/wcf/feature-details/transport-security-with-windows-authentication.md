@@ -19,7 +19,7 @@ Das folgende Szenario zeigt einen von der Windows-Sicherheit gesicherten Windows
   
  ![Transportsicherheit mit Windows-Authentifizierung](./media/transport-security-with-windows-authentication/secured-windows-authentication.gif)  
   
-|Merkmal|Beschreibung|  
+|Merkmal|BESCHREIBUNG|  
 |--------------------|-----------------|  
 |Sicherheitsmodus|Transport|  
 |Interoperabilität|Nur WCF|  
@@ -30,7 +30,7 @@ Das folgende Szenario zeigt einen von der Windows-Sicherheit gesicherten Windows
 |Bindung|<xref:System.ServiceModel.NetTcpBinding>|  
   
 ## <a name="service"></a>Dienst  
- Der folgende Code und die folgende Konfiguration werden unabhängig voneinander ausgeführt. Führen Sie eine der folgenden Aktionen aus:  
+ Der folgende Code und die folgende Konfiguration werden unabhängig voneinander ausgeführt. Führen Sie eines der folgenden Verfahren aus:  
   
 - Erstellen Sie einen separaten Dienst, indem Sie den Code ohne Konfiguration verwenden.  
   
@@ -42,7 +42,7 @@ Das folgende Szenario zeigt einen von der Windows-Sicherheit gesicherten Windows
  [!code-csharp[C_SecurityScenarios#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#3)]
  [!code-vb[C_SecurityScenarios#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#3)]  
   
-### <a name="configuration"></a>-Konfiguration  
+### <a name="configuration"></a>Konfiguration  
  Die folgende Konfiguration kann statt des Codes verwendet werden, um den Dienstendpunkt einzurichten:  
   
 ```xml  
@@ -74,7 +74,7 @@ Das folgende Szenario zeigt einen von der Windows-Sicherheit gesicherten Windows
 ```  
   
 ## <a name="client"></a>Client  
- Der folgende Code und die folgende Konfiguration werden unabhängig voneinander ausgeführt. Führen Sie eine der folgenden Aktionen aus:  
+ Der folgende Code und die folgende Konfiguration werden unabhängig voneinander ausgeführt. Führen Sie eines der folgenden Verfahren aus:  
   
 - Erstellen Sie mit dem Code (und Clientcode) einen eigenständigen Client.  
   
@@ -89,7 +89,7 @@ Das folgende Szenario zeigt einen von der Windows-Sicherheit gesicherten Windows
  [!code-csharp[C_SecurityScenarios#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#4)]
  [!code-vb[C_SecurityScenarios#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#4)]  
   
-### <a name="configuration"></a>-Konfiguration  
+### <a name="configuration"></a>Konfiguration  
  Die folgende Konfiguration kann statt des Codes verwendet werden, um den Client zu erstellen.  
   
 ```xml  
@@ -117,8 +117,8 @@ Das folgende Szenario zeigt einen von der Windows-Sicherheit gesicherten Windows
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Übersicht über die Sicherheit](../../../../docs/framework/wcf/feature-details/security-overview.md)
+- [Sicherheitsübersicht](../../../../docs/framework/wcf/feature-details/security-overview.md)
 - [Vorgehensweise: Sichern eines Dienstes mit Windows-Anmeldeinformationen](../../../../docs/framework/wcf/how-to-secure-a-service-with-windows-credentials.md)
 - [Sicherheitsmodell für Windows Server-App-Fabric](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

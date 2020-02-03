@@ -49,7 +49,7 @@ Standardmäßig enthält ein <xref:System.Windows.Forms.TabControl>-Steuerelemen
   
 - Um die ausgewählten Registerkarten zu entfernen, verwenden Sie die <xref:System.Windows.Forms.TabControl.TabPageCollection.Remove%2A>-Methode der <xref:System.Windows.Forms.TabControl.TabPages%2A>-Eigenschaft.  
   
-     \- oder -  
+     Oder  
   
 - Um alle Registerkarten zu entfernen, verwenden Sie die <xref:System.Windows.Forms.TabControl.TabPageCollection.Clear%2A>-Methode der <xref:System.Windows.Forms.TabControl.TabPages%2A>-Eigenschaft.  
   
@@ -74,7 +74,7 @@ Standardmäßig enthält ein <xref:System.Windows.Forms.TabControl>-Steuerelemen
     tabControl1->TabPages->Clear();  
     ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Übersicht über das TabControl-Steuerelement](tabcontrol-control-overview-windows-forms.md)
 - [Gewusst wie: Hinzufügen eines Steuerelements zu einer Registerkarte](how-to-add-a-control-to-a-tab-page.md)

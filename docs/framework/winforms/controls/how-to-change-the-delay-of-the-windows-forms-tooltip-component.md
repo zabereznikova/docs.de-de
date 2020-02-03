@@ -42,7 +42,7 @@ Es gibt mehrere Delay-Werte, die Sie für eine Windows Forms <xref:System.Window
     toolTip1->AutoPopDelay = 5000;  
     ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Übersicht über die ToolTip-Komponente](tooltip-component-overview-windows-forms.md)
 - [Gewusst wie: Festlegen von QuickInfos für Steuerelemente auf einem Windows Form zur Entwurfszeit](how-to-set-tooltips-for-controls-on-a-windows-form-at-design-time.md)

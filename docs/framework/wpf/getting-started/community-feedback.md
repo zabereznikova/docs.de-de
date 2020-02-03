@@ -51,7 +51,7 @@ Präzise, aussagekräftige Titel verbessern die Auffindbarkeit ihrer Beiträge. 
 
 Beschreiben Sie das Problem, und erfahren Sie, wie Sie versuchen, es zu bearbeiten. Falls möglich, sollten Sie unterstützende Codeausschnitte oder ein möglichst einfaches Beispiel hinzufügen, das Ihr Problem veranschaulicht. Diese Einzelheiten erhöhen die Chance, dass Ihre Frage rasch beantwortet wird.
 
-## <a name="visual-studio-developer-community"></a>Visual Studio Developer Community
+## <a name="visual-studio-developer-community"></a>Visual Studio-Entwicklercommunity
 
 Mitunter lassen sich Probleme nur schwierig oder gar nicht beheben. Ursache solcher Situationen können Probleme in der Technologie, Schwierigkeiten der Anwendung der Technologie auf bestimmte Szenarien oder eine mangelnde Unterstützung bestimmter Szenarien sein. Diese Informationen sind für Microsoft von Bedeutung und können über die [Visual Studio Developer Community](https://developercommunity.visualstudio.com/) -Website bereitgestellt werden.
 
@@ -104,7 +104,7 @@ Fehler können auf zur Entwicklung und Erstellung von Anwendungen verwendete Too
   - MSBuild
   - Ausdrucks Grafik-Designer
   - Ausdrucks interaktiver Designer
-  - öffnen
+  - Visual Studio
 - Die Projektmappenkonfiguration, z. B.:
   - Eine Lösung
   - Ein einzelnes Projekt
@@ -118,6 +118,6 @@ Geben Sie Informationen zum Szenario an, in dem der Fehler und seine Auswirkung 
 
 In der Regel haben mit Absturz und Datenverlust einhergehende Szenarien große Auswirkungen und können daher am leichtesten priorisiert werden. Einige Fehler treten jedoch nur in ungewöhnlichen Szenarien auf, die in einigen Fällen auch Hauptszenarien sein können. Durch die Bereitstellung eines Kontexts für Szenario und Auswirkung kann das WPF-Team die richtige Entscheidung treffen.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Melden eines Problems mit Visual Studio](/visualstudio/ide/how-to-report-a-problem-with-visual-studio)

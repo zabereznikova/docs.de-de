@@ -31,7 +31,7 @@ Ein Bild oder eine Grafik ist einer der Werte, die in einer Daten Zeile angezeig
  [!code-vb[System.Windows.Forms.DataGridViewMisc#050](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#050)]  
   
 ## <a name="compiling-the-code"></a>Kompilieren des Codes  
- Für dieses Beispiel benötigen Sie Folgendes:  
+ Dieses Beispiel erfordert Folgendes:  
   
 - Ein <xref:System.Windows.Forms.DataGridView>-Steuerelement namens `dataGridView1`.  
   
@@ -39,7 +39,7 @@ Ein Bild oder eine Grafik ist einer der Werte, die in einer Daten Zeile angezeig
   
 - Verweise auf die Assemblys <xref:System?displayProperty=nameWithType>, <xref:System.Windows.Forms?displayProperty=nameWithType> und <xref:System.Drawing?displayProperty=nameWithType>.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Windows.Forms.DataGridView>
 - [Grundlegende Spalten-, Zeilen- und Zellfunktionen im DataGridView-Steuerelement in Windows Forms](basic-column-row-and-cell-features-wf-datagridview-control.md)

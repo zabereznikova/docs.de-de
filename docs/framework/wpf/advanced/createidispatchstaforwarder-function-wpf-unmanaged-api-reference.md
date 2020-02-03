@@ -30,7 +30,7 @@ HRESULT CreateIDispatchSTAForwarder(
 )  
 ```  
   
-## <a name="parameters"></a>Parameters  
+## <a name="parameters"></a>Parameter  
   
 ## <a name="property-valuereturn-value"></a>Eigenschaftswert/Rückgabewert  
  pdispatchdelegat  
@@ -39,7 +39,7 @@ HRESULT CreateIDispatchSTAForwarder(
  ppforwarder  
  Ein Zeiger auf die Adresse einer `IDispatch`-Schnittstelle.  
   
-## <a name="requirements"></a>-Anforderungen  
+## <a name="requirements"></a>Anforderungen  
  **Plattformen:** Siehe [.NET Framework System Anforderungen](../../get-started/system-requirements.md).  
   
  **DLL**  
@@ -50,6 +50,6 @@ HRESULT CreateIDispatchSTAForwarder(
   
  **.NET Framework Version:** [!INCLUDE[net_current_v30plus](../../../../includes/net-current-v30plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [WPF – Referenz zur nicht verwalteten API](wpf-unmanaged-api-reference.md)

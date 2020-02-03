@@ -28,7 +28,7 @@ GDI+ ist eine Graphics Device Interface, mit der Programmierer geräteunabhängi
  [Struktur der grafischen Oberfläche](structure-of-the-graphics-interface.md)  
  Beschreibt die verwaltete Klassen Schnittstelle von GDI+.  
   
-## <a name="reference"></a>Referenz  
+## <a name="reference"></a>Verweis  
  <xref:System.Drawing>  
  Bietet Zugriff auf die grundlegenden GDI+-Grafikfunktionen.  
   

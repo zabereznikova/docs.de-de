@@ -26,10 +26,10 @@ Das Build-und Bereitstellungs Modell bietet die Möglichkeit, Anwendungen lokal 
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Erstellen einer WPF-Anwendung](building-a-wpf-application-wpf.md)  
- [Bereitstellen von WPF-Anwendungen](deploying-a-wpf-application-wpf.md)  
- [Gewusst wie-Themen](build-and-deploy-how-to-topics.md)  
+ [Bereitstellen von WPF-Anwendungen (WPF)](deploying-a-wpf-application-wpf.md)  
+ [How-to Topics (Themen zur Vorgehensweise)](build-and-deploy-how-to-topics.md)  
   
-## <a name="reference"></a>Referenz  
+## <a name="reference"></a>Verweis  
  MSBuild  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  

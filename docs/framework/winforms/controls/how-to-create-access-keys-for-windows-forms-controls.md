@@ -33,7 +33,7 @@ Eine *Zugriffstaste* ist ein unterstrichenes Zeichen im Text eines Menüs, Menü
 
 Steuerelemente, die keinen Fokus erhalten können, dürfen keine Zugriffsschlüssel aufweisen.
 
-## <a name="programmatic"></a>Programmgesteuerten
+## <a name="programmatic"></a>Programmgesteuert
 
 Legen Sie die `Text`-Eigenschaft auf eine Zeichenfolge fest, die ein kaufmännisches und-Zeichen (&) vor dem Buchstaben enthält, der als Verknüpfung verwendet wird.
 
@@ -55,11 +55,11 @@ button1->Text = "&Print";
 > [!NOTE]
 > Wenn Sie ein kaufmännisches und in einer Beschriftung verwenden möchten, ohne einen Zugriffsschlüssel zu erstellen, schließen Sie zwei kaufmännische (& &) ein. Ein kaufmännisches und-Zeichen wird in der Beschriftung angezeigt, und es werden keine Zeichen unterstrichen.
 
-## <a name="designer"></a>-Designer
+## <a name="designer"></a>Designer
 
 Legen Sie im **Eigenschaften** Fenster von Visual Studio die **Text** -Eigenschaft auf eine Zeichenfolge fest, die ein kaufmännisches und-Zeichen ("&") vor dem Buchstaben enthält, der als Zugriffstaste verwendet wird. Wenn Sie z. b. den Buchstaben "P" als Zugriffsschlüssel festlegen möchten, geben Sie **& Print**ein.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Windows.Forms.Button>
 - [Gewusst wie: Reagieren auf das Anklicken von Schaltflächen in Windows Forms](how-to-respond-to-windows-forms-button-clicks.md)

@@ -36,11 +36,11 @@ Wenn Sie diese exemplarische Vorgehensweise abgeschlossen haben, sieht Ihr benut
 
 Das komplette Codelisting finden Sie unter Gewusst [wie: Erstellen eines Windows Forms Steuer Elements, das Entwurfszeit Funktionen](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/307hck25(v=vs.120))nutzt.
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
+## <a name="prerequisites"></a>Voraussetzungen
 
 Um diese exemplarische Vorgehensweise abzuschließen, benötigen Sie Visual Studio.
 
-## <a name="create-the-project"></a>Erstellen eines Projekts
+## <a name="create-the-project"></a>Erstellen des Projekts
 
 Im ersten Schritt erstellen Sie das Anwendungsprojekt. Sie verwenden dieses Projekt, um die Anwendung zu erstellen, die das benutzerdefinierte Steuerelement hostet.
 
@@ -261,7 +261,7 @@ Zum Implementieren des regelmäßigen Animations Features verwenden Sie <xref:Sy
     [!code-csharp[System.Windows.Forms.Design.DocumentDesigner#170](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/CS/marqueetext.cs#170)]
     [!code-vb[System.Windows.Forms.Design.DocumentDesigner#170](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/VB/marqueetext.vb#170)]
 
-14. Drücken Sie **F6** , um die Projekt Mappe zu erstellen.
+14. Drücken Sie **F6**, um die Projektmappe zu erstellen.
 
 ## <a name="create-the-marqueeborder-child-control"></a>Erstellen des untergeordneten MarqueeBorder-Steuer Elements
 
@@ -430,7 +430,7 @@ Im Fall der `MarqueeControlRootDesigner` Klasse wird die <xref:System.Windows.Fo
 
 ## <a name="add-designer-verbs-to-your-custom-designer"></a>Hinzufügen von Designer Verben zum benutzerdefinierten Designer
 
-Ein Designer Verb ist ein Menübefehl, der mit einem Ereignishandler verknüpft ist. Designer Verben werden dem Kontextmenü einer Komponente zur Entwurfszeit hinzugefügt. Weitere Informationen finden Sie unter <xref:System.ComponentModel.Design.DesignerVerb>.
+Ein Designerverb ist ein mit einem Ereignishandler verknüpfter Menübefehl. Designer Verben werden dem Kontextmenü einer Komponente zur Entwurfszeit hinzugefügt. Weitere Informationen finden Sie unter <xref:System.ComponentModel.Design.DesignerVerb>.
 
 Sie fügen den Designern zwei Designer Verben hinzu: **Test ausführen** und **Test abbrechen**. Diese Verben ermöglichen es Ihnen, das Laufzeitverhalten der `MarqueeControl` zur Entwurfszeit anzuzeigen. Diese Verben werden `MarqueeControlRootDesigner`hinzugefügt.
 
@@ -608,7 +608,7 @@ Der `MarqueeControlLibrary` veranschaulicht eine einfache Implementierung von be
 
 - Steuern Sie, wie Ihre Steuerelemente serialisiert werden und wie Code für Sie generiert wird. Weitere Informationen finden Sie unter [dynamische Quell Code Generierung und-Kompilierung](../../reflection-and-codedom/dynamic-source-code-generation-and-compilation.md).
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Windows.Forms.UserControl>
 - <xref:System.Windows.Forms.Design.ParentControlDesigner>

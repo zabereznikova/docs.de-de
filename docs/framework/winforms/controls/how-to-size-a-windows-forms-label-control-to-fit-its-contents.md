@@ -24,7 +24,7 @@ Das Windows Forms <xref:System.Windows.Forms.Label>-Steuerelement kann einzeilig
   
  Wenn <xref:System.Windows.Forms.Label.AutoSize%2A> auf `false`festgelegt ist, werden die in der <xref:System.Windows.Forms.Label.Text%2A>-Eigenschaft angegebenen Wörter nach Möglichkeit in die nächste Zeile eingebunden, aber das Steuerelement wird nicht vergrößert.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Gewusst wie: Erstellen von Zugriffstasten mit Windows Forms-Steuerelementen](how-to-create-access-keys-with-windows-forms-label-controls.md)
 - [Übersicht über das Label-Steuerelement](label-control-overview-windows-forms.md)

@@ -19,13 +19,13 @@ Die Artikel in diesem Abschnitt enthalten Anleitungen für-und-Elemente, die bei
  [Bewährte Methoden für Sicherheit](../../../../docs/framework/wcf/feature-details/best-practices-for-security-in-wcf.md)  
  Empfehlungen zum Absichern von Anwendungen.  
   
- [Sicherheitsüberlegungen](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)  
+ [Sicherheitshinweise](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)  
  Zu berücksichtigende Elemente beim Erstellen einer WCF-Anwendung.  
   
- [Überlegungen zur Leistung](../../../../docs/framework/wcf/feature-details/performance-considerations.md)  
+ [Leistungsaspekte](../../../../docs/framework/wcf/feature-details/performance-considerations.md)  
  Enthält Einträge bezüglich der Leistung und der Sicherheit.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Einfache WCF-Programmierung](../../../../docs/framework/wcf/basic-wcf-programming.md)
 - [Sicherheitsmodell für Windows Server-App-Fabric](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

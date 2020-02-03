@@ -20,7 +20,7 @@ Die <xref:System.Windows.Forms.Timer>-Komponente von Windows Forms ist eine Komp
 ## <a name="key-properties-methods-and-events"></a>Schlüsseleigenschaften, Methoden und Ereignisse  
  Die Länge der Intervalle wird durch die <xref:System.Windows.Forms.Timer.Interval%2A>-Eigenschaft definiert, deren Wert in Millisekunden angegeben ist. Wenn die Komponente aktiviert ist, wird das <xref:System.Windows.Forms.Timer.Tick>-Ereignis jedes Intervall ausgelöst. An dieser Stelle würden Sie Code hinzufügen, der ausgeführt werden soll. Weitere Informationen finden Sie unter Gewusst [wie: Ausführen von Prozeduren in festgelegten Intervallen mit der Windows Forms Timer-Komponente](run-procedures-at-set-intervals-with-wf-timer-component.md). Die Schlüsselmethoden der <xref:System.Windows.Forms.Timer> Komponente sind <xref:System.Windows.Forms.Timer.Start%2A> und <xref:System.Windows.Forms.Timer.Stop%2A>, die den Timer aktivieren und deaktivieren. Wenn der Timer ausgeschaltet ist, wird zurückgesetzt. Es gibt keine Möglichkeit, eine <xref:System.Windows.Forms.Timer> Komponente anzuhalten.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Windows.Forms.Timer>
 - [Timer-Komponente](timer-component-windows-forms.md)

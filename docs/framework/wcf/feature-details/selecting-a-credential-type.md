@@ -23,25 +23,25 @@ ms.locfileid: "76746142"
 ## <a name="transport-credential-types"></a>Transportieren von Anmeldeinformationen-Typen  
  Die folgende Tabelle zeigt die möglichen Typen von Clientanmeldeinformationen, die von einer Bindung im Transportsicherheitsmodus verwendet werden können. Legen Sie die `ClientCredentialType`-Eigenschaft beim Erstellen eines Dienstes auf einen dieser Werte fest, um den Typ der Anmeldeinformationen anzugeben, den der Client zum Kommunizieren mit Ihrem Dienst bereitstellen muss. Sie können die Typen entweder im Code oder in Konfigurationsdateien festlegen.  
   
-|-Einstellung|Beschreibung|  
+|Einstellung|BESCHREIBUNG|  
 |-------------|-----------------|  
-|Keine|Gibt an, dass der Client keine Anmeldeinformationen präsentieren muss. Dies führt zur Verwendung eines anonymen Clients.|  
-|Standard|Gibt die Standardauthentifizierung für den Client an. Weitere Informationen finden Sie unter RFC2617 –[http Authentication: Basic and Digest Authentication](ftp://ftp.rfc-editor.org/in-notes/rfc2617.txt).|  
+|Keiner|Gibt an, dass der Client keine Anmeldeinformationen präsentieren muss. Dies führt zur Verwendung eines anonymen Clients.|  
+|Basic|Gibt die Standardauthentifizierung für den Client an. Weitere Informationen finden Sie unter RFC2617 –[http Authentication: Basic and Digest Authentication](ftp://ftp.rfc-editor.org/in-notes/rfc2617.txt).|  
 |Digest|Gibt die Hashwertauthentifizierung für den Client an. Weitere Informationen finden Sie unter RFC2617 –[http Authentication: Basic and Digest Authentication](ftp://ftp.rfc-editor.org/in-notes/rfc2617.txt).|  
 |Ntlm|Gibt die NT-LAN-Managerauthentifizierung (NTLM) an. Wird verwendet, wenn Sie aus bestimmten Gründen keine Kerberos-Authentifizierung verwenden können. Sie können die Verwendung auch als Fall Back deaktivieren, indem Sie die <xref:System.ServiceModel.Security.WindowsClientCredential.AllowNtlm%2A>-Eigenschaft auf `false`festlegen. Dies bewirkt, dass WCF bei Verwendung von NTLM einen Best-Effort-Vorgang auslöst, um eine Ausnahme auszulösen. Durch das Festlegen dieser Eigenschaft auf `false` wird unter Umständen nicht verhindert, dass NTLM-Anmeldeinformationen über die Verbindung gesendet werden.|  
 |Windows|Gibt die Windows-Authentifizierung an. Um für eine Windows-Domäne nur das Kerberos-Protokoll anzugeben, legen Sie die <xref:System.ServiceModel.Security.WindowsClientCredential.AllowNtlm%2A>-Eigenschaft auf `false` fest (die Standardeinstellung ist `true`).|  
-|Certificate|Führt die Clientauthentifizierung mit einem X.509-Zertifikat aus.|  
+|Zertifikat|Führt die Clientauthentifizierung mit einem X.509-Zertifikat aus.|  
 |Kennwort|Benutzer müssen einen Benutzernamen und ein Kennwort angeben. Überprüfen Sie das Benutzername/Kennwort-Paar mithilfe der Windows-Authentifizierung oder einer anderen benutzerdefinierten Lösung.|  
   
 ### <a name="message-client-credential-types"></a>Typen von Nachrichtenclient-Anmeldeinformationen  
  Die folgende Tabelle zeigt die möglichen Typen von Anmeldeinformationen, die Sie beim Erstellen einer Anwendung verwenden können, die die Nachrichtensicherheit nutzt. Sie können diese Werte entweder im Code oder in Konfigurationsdateien festlegen.  
   
-|-Einstellung|Beschreibung|  
+|Einstellung|BESCHREIBUNG|  
 |-------------|-----------------|  
-|Keine|Gibt an, dass der Client keine Anmeldeinformationen bereitstellen muss. Dies führt zur Verwendung eines anonymen Clients.|  
+|Keiner|Gibt an, dass der Client keine Anmeldeinformationen bereitstellen muss. Dies führt zur Verwendung eines anonymen Clients.|  
 |Windows|Ermöglicht unter dem mit Windows-Anmeldeinformationen eingerichteten Sicherheitskontext den Austausch von SOAP-Nachrichten.|  
-|Benutzername|Ermöglicht es dem Dienst zu fordern, dass sich der Client per Benutzername authentifiziert. Beachten Sie, dass WCF Kryptografievorgänge mit Benutzernamen nicht zulässt, wie z. b. das Erzeugen einer Signatur oder das Verschlüsseln von Daten. WCF stellt sicher, dass der Transport geschützt ist, wenn Benutzernamen-Anmelde Informationen verwendet werden.|  
-|Certificate|Ermöglicht es dem Dienst zu fordern, dass der Client mithilfe eines X.509-Zertifikats authentifiziert wird.|  
+|Username|Ermöglicht es dem Dienst zu fordern, dass sich der Client per Benutzername authentifiziert. Beachten Sie, dass WCF Kryptografievorgänge mit Benutzernamen nicht zulässt, wie z. b. das Erzeugen einer Signatur oder das Verschlüsseln von Daten. WCF stellt sicher, dass der Transport geschützt ist, wenn Benutzernamen-Anmelde Informationen verwendet werden.|  
+|Zertifikat|Ermöglicht es dem Dienst zu fordern, dass der Client mithilfe eines X.509-Zertifikats authentifiziert wird.|  
 |Ausgestelltes Token (Issued Token)|Ein benutzerdefinierter nach einer Sicherheitsrichtlinie konfigurierter Tokentyp. Der Standardtokentyp ist SAML (Security Assertions Markup Language). Das Token wird von einem sicheren Tokendienst ausgegeben. Weitere Informationen finden Sie unter Verbund [-und ausgestellte Token](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md).|  
   
 ### <a name="negotiation-model-of-service-credentials"></a>Aushandlungsmodell von Dienstanmeldeinformationen  
@@ -97,7 +97,7 @@ ms.locfileid: "76746142"
   
  Weitere Informationen zu Anmelde Informationen und sicheren Sitzungen finden Sie unter [Sicherheitsüberlegungen für sichere Sitzungen](../../../../docs/framework/wcf/feature-details/security-considerations-for-secure-sessions.md).  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType>
 - <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A?displayProperty=nameWithType>
@@ -111,6 +111,6 @@ ms.locfileid: "76746142"
 - <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A?displayProperty=nameWithType>
 - <xref:System.ServiceModel.Security.X509CertificateInitiatorServiceCredential.SetCertificate%2A?displayProperty=nameWithType>
 - [Begriffe der Sicherheit](../../../../docs/framework/wcf/feature-details/security-concepts.md)
-- [Securing Services and Clients](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [Sichern von Diensten und Clients](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
 - [Programmieren der WCF-Sicherheit](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md)
 - [HTTP-Transportsicherheit](../../../../docs/framework/wcf/feature-details/http-transport-security.md)

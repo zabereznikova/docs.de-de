@@ -33,12 +33,12 @@ Das Windows Forms `MonthCalendar`-Steuerelement stellt eine intuitive grafische 
  [Gewusst wie: Auswählen eines Datumsbereichs mithilfe des MonthCalendar-Steuerelements in Windows Forms](how-to-select-a-range-of-dates-in-the-windows-forms-monthcalendar-control.md)  
  Erläutert, wie ein Datumsbereich aus dem `MonthCalendar`-Steuerelement Programm gesteuert ausgewählt wird.  
   
-## <a name="reference"></a>Referenz  
+## <a name="reference"></a>Verweis  
  <xref:System.Windows.Forms.MonthCalendar>  
  Enthält Referenzinformationen zur Klasse und zu ihren Membern.  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
- [Windows Forms-Steuerelemente](controls-to-use-on-windows-forms.md)  
+ [Steuerelemente für Windows Forms](controls-to-use-on-windows-forms.md)  
  Enthält eine vollständige Liste der Windows Forms-Steuerelemente mit Links zu Informationen zur jeweiligen Verwendung.  
   
  [DateTimePicker-Steuerelement](datetimepicker-control-windows-forms.md)  

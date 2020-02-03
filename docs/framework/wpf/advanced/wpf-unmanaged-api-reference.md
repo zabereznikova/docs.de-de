@@ -22,6 +22,6 @@ Windows Presentation Foundation (WPF)-Bibliotheken machen eine Reihe von nicht v
  [SaveToHistory Function](savetohistory-function-wpf-unmanaged-api-reference.md) (SaveToHistory-Funktion)  
  [SetFakeActiveWindow Function](setfakeactivewindow-function-wpf-unmanaged-api-reference.md) (SetFakeActiveWindow-Funktion)  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Erweitert](index.md)

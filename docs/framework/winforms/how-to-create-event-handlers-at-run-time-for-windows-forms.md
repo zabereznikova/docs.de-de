@@ -73,7 +73,7 @@ Zusätzlich zum Erstellen von Ereignissen mithilfe des Windows Forms-Designer in
 
      Mit der im obigen Visual Basic Code dargestellten <xref:System.ComponentModel.EventHandlerList.AddHandler%2A>-Methode wird ein Click-Ereignishandler für die Schaltfläche festgelegt.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Erstellen von Ereignishandlern in Windows Forms](creating-event-handlers-in-windows-forms.md)
 - [Übersicht über Ereignishandler](event-handlers-overview-windows-forms.md)

@@ -25,10 +25,10 @@ ms.locfileid: "76741214"
  [Gewusst wie: Festlegen des vom ProgressBar-Steuerelement für Windows Forms angezeigten Werts](how-to-set-the-value-displayed-by-the-windows-forms-progressbar-control.md)  
  Erläutert eine Reihe verschiedener Möglichkeiten, den Wert zu erhöhen, der vom <xref:System.Windows.Forms.ProgressBar>-Steuerelement angezeigt wird.  
   
-## <a name="reference"></a>Referenz  
+## <a name="reference"></a>Verweis  
  <xref:System.Windows.Forms.ProgressBar>  
  Enthält Referenzinformationen zur Klasse und zu ihren Membern.  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
- [Windows Forms-Steuerelemente](controls-to-use-on-windows-forms.md)  
+ [Steuerelemente für Windows Forms](controls-to-use-on-windows-forms.md)  
  Enthält eine vollständige Liste der Windows Forms-Steuerelemente mit Links zu Informationen zur jeweiligen Verwendung.

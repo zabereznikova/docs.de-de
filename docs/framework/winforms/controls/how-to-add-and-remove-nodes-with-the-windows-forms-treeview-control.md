@@ -70,7 +70,7 @@ Das Windows Forms <xref:System.Windows.Forms.TreeView>-Steuerelement speichert d
     treeView1->Nodes->Clear();  
     ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [TreeView-Steuerelement](treeview-control-windows-forms.md)
 - [Übersicht über das TreeView-Steuerelement](treeview-control-overview-windows-forms.md)

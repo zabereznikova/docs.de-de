@@ -62,7 +62,7 @@ Mit dem `ListView`-Steuerelement in Windows Forms wird eine Liste von Elementen 
   
 - [Exemplarische Vorgehensweise: Erstellen einer Explorer-ähnlichen Schnittstelle mit dem ListView-Steuerelement und dem TreeView-Steuerelement im Designer](creating-an-explorer-style-interface-with-the-listview-and-treeview.md)  
   
-## <a name="reference"></a>Referenz  
+## <a name="reference"></a>Verweis  
  <xref:System.Windows.Forms.ListView>-Klasse  
  Beschreibt diese Klasse und enthält Links zu allen deren Membern.  
   
@@ -76,6 +76,6 @@ Mit dem `ListView`-Steuerelement in Windows Forms wird eine Liste von Elementen 
  [Gewusst wie: Erstellen einer Multipane-Benutzeroberfläche mit Windows Forms](how-to-create-a-multipane-user-interface-with-windows-forms.md)  
  Enthält Anweisungen zum Gestalten des Layouts eines Windows Forms mit mehreren Bereichen.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Windows Forms-Steuerelemente](controls-to-use-on-windows-forms.md)
+- [Steuerelemente für Windows Forms](controls-to-use-on-windows-forms.md)

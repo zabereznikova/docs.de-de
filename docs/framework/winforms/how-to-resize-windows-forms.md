@@ -56,7 +56,7 @@ Form1.Width = 300;
 Form1->Width = 300;
 ```
 
-\- oder -
+Oder
 
 Ändern Sie <xref:System.Drawing.Size.Width%2A> oder <xref:System.Drawing.Size.Height%2A>, indem Sie die <xref:System.Windows.Forms.Form.Size%2A>-Eigenschaft festlegen.
 
@@ -113,7 +113,7 @@ Form^ f = gcnew Form();
 f->Size->X += 100;
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Erste Schritte mit Windows Forms](getting-started-with-windows-forms.md)
 - [Erweitern von Windows Forms-Anwendungen](./advanced/index.md)

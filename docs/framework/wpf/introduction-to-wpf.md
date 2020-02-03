@@ -135,13 +135,13 @@ Namespace SDKSample
 End Namespace
 ```
 
-In diesem Beispiel wird im CodeBehind eine Klasse implementiert, die aus der <xref:System.Windows.Window> -Klasse abgeleitet wird. Das `x:Class` -Attribut wird verwendet, um den Markupcode mit der CodeBehind-Klasse zu verknüpfen. `InitializeComponent` wird vom Konstruktor der CodeBehind-Klasse aufgerufen, um die im Markup definierte Benutzeroberfläche mit der CodeBehind-Klasse zusammenzuführen. (`InitializeComponent` für Sie generiert, wenn Ihre Anwendung erstellt wird. aus diesem Grund müssen Sie Sie nicht manuell implementieren.) Durch die Kombination aus `x:Class` und `InitializeComponent` wird sichergestellt, dass die Implementierung bei jeder Erstellung ordnungsgemäß initialisiert wird. In der CodeBehind-Klasse wird außerdem ein Ereignishandler für das <xref:System.Windows.Controls.Primitives.ButtonBase.Click>-Ereignis der Schaltfläche implementiert. Wird auf die Schaltfläche geklickt, zeigt der Ereignishandler ein Meldungsfeld an, indem er die <xref:System.Windows.MessageBox.Show%2A?displayProperty=fullName> -Methode aufruft.
+In diesem Beispiel wird im CodeBehind eine Klasse implementiert, die aus der <xref:System.Windows.Window> -Klasse abgeleitet wird. Das `x:Class` -Attribut wird verwendet, um den Markupcode mit der CodeBehind-Klasse zu verknüpfen. `InitializeComponent` wird vom Konstruktor der CodeBehind-Klasse aufgerufen, um die im Markup definierte Benutzeroberfläche mit der CodeBehind-Klasse zusammenzuführen. (`InitializeComponent` für Sie generiert, wenn Ihre Anwendung erstellt wird. aus diesem Grund müssen Sie Sie nicht manuell implementieren.) Durch die Kombination aus `x:Class` und `InitializeComponent` wird sichergestellt, dass die Implementierung bei jeder Erstellung ordnungsgemäß initialisiert wird. In der CodeBehind-Klasse wird außerdem ein Ereignishandler für das <xref:System.Windows.Controls.Primitives.ButtonBase.Click> -Ereignis der Schaltfläche implementiert. Wird auf die Schaltfläche geklickt, zeigt der Ereignishandler ein Meldungsfeld an, indem er die <xref:System.Windows.MessageBox.Show%2A?displayProperty=fullName> -Methode aufruft.
 
 In der folgenden Abbildung wird das Ergebnis angezeigt, wenn auf die Schaltfläche geklickt wird:
 
 ![Eine MessageBox](media/introduction-to-wpf/wpfintrofigure25.png)
 
-## <a name="controls"></a>Steuerelemente
+## <a name="controls"></a>Kontrollen
 
 Die Elemente einer Benutzeroberfläche, die mit dem Anwendungsmodell bereitgestellt werden, sind konstruierte Steuerelemente. In WPF ist *Steuerelement* ein Sammelbegriff, der sich auf eine Kategorie von WPF-Klassen bezieht, die entweder in einem Fenster oder auf einer Seite gehostet werden, eine Benutzeroberfläche haben und ein bestimmtes Verhalten implementieren.
 
@@ -207,7 +207,7 @@ Im folgenden Beispiel wird ein-<xref:System.Windows.Controls.DockPanel> verwende
 
 [!code-xaml[IntroToWPFSnippets#LayoutMARKUP](~/samples/snippets/xaml/wpf/introduction-to-wpf/introduction-to-wpf_1.xaml)]
 
-Das <xref:System.Windows.Controls.DockPanel> -Objekt ermöglicht es den untergeordneten <xref:System.Windows.Controls.TextBox> -Steuerelementen, ihm Informationen über ihre Anordnung bereitzustellen. Dazu wird von der <xref:System.Windows.Controls.DockPanel>-Klasse die angehängte `Dock`-Eigenschaft implementiert, die für die untergeordneten Steuerelemente verfügbar gemacht wird, damit jedes von ihnen eine Andockart festlegen kann.
+Das <xref:System.Windows.Controls.DockPanel>-Objekt ermöglicht es den untergeordneten <xref:System.Windows.Controls.TextBox>-Steuerelementen, ihm Informationen über ihre Anordnung bereitzustellen. Dazu wird von der <xref:System.Windows.Controls.DockPanel>-Klasse die angehängte `Dock`-Eigenschaft implementiert, die für die untergeordneten Steuerelemente verfügbar gemacht wird, damit jedes von ihnen eine Andockart festlegen kann.
 
 > [!NOTE]
 > Eine Eigenschaft, die von einem übergeordneten Steuerelement zur Verwendung durch untergeordnete Steuerelemente implementiert wird, ist ein WPF-Konstrukt, das als [angefügte Eigenschaft](advanced/attached-properties-overview.md) bezeichnet wird.
@@ -394,7 +394,7 @@ Die folgende Abbildung zeigt das Ergebnis:
 
 ![Ein TextBox-Steuerelement, das Text enthält](media/introduction-to-wpf/wpfintrofigure21.png)
 
-Andere Steuerelemente können dagegen mehrere Elemente verschiedener Inhaltstypen enthalten. Der Inhalt eines <xref:System.Windows.Controls.Button>-Steuerelements, der durch die <xref:System.Windows.Controls.ContentControl.Content%2A>-Eigenschaft angegeben ist, kann eine Vielzahl von Elementen enthalten, etwa Layoutsteuerelemente, Text, Bildern und Formen. Das folgende Beispiel zeigt eine <xref:System.Windows.Controls.Button> mit Inhalten, die eine <xref:System.Windows.Controls.DockPanel>, eine <xref:System.Windows.Controls.Label>, eine <xref:System.Windows.Controls.Border>und eine <xref:System.Windows.Controls.MediaElement>enthalten:
+Andere Steuerelemente können dagegen mehrere Elemente verschiedener Inhaltstypen enthalten. Der Inhalt eines <xref:System.Windows.Controls.Button>-Steuerelements, der durch die <xref:System.Windows.Controls.ContentControl.Content%2A> -Eigenschaft angegeben ist, kann eine Vielzahl von Elementen enthalten, etwa Layoutsteuerelemente, Text, Bildern und Formen. Das folgende Beispiel zeigt eine <xref:System.Windows.Controls.Button> mit Inhalten, die eine <xref:System.Windows.Controls.DockPanel>, eine <xref:System.Windows.Controls.Label>, eine <xref:System.Windows.Controls.Border>und eine <xref:System.Windows.Controls.MediaElement>enthalten:
 
 ```xaml
 <Window
@@ -439,7 +439,7 @@ Im folgenden Beispiel wird gezeigt, wie die Darstellung einer <xref:System.Windo
 [!code-csharp[IntroToWPFSnippets#ButtonControlTemplateWindowCODEBEHIND](~/samples/snippets/csharp/wpf/introduction-to-wpf/introduction-to-wpf_17.cs)]
 [!code-vb[IntroToWPFSnippets#ButtonControlTemplateWindowCODEBEHIND](~/samples/snippets/visualbasic/wpf/introduction-to-wpf/introduction-to-wpf_17.vb)]
 
-In diesem Beispiel wurde die Standardbenutzeroberfläche der Schaltfläche durch ein <xref:System.Windows.Shapes.Ellipse>-Steuerelement ersetzt, das einen dunkelblauem Rand hat und über ein <xref:System.Windows.Media.RadialGradientBrush>-Steuerelement gefüllt wird. Das <xref:System.Windows.Controls.ContentPresenter> -Steuerelement zeigt den Inhalt des <xref:System.Windows.Controls.Button>-Steuerelements an („Click Me!“). Wenn auf das <xref:System.Windows.Controls.Button> -Steuerelement geklickt wird, wird das <xref:System.Windows.Controls.Primitives.ButtonBase.Click> -Ereignis weiterhin als Teil des Standardverhaltens des <xref:System.Windows.Controls.Button> n-Steuerelements ausgelöst. Das Ergebnis ist in der folgenden Abbildung dargestellt:
+In diesem Beispiel wurde die Standardbenutzeroberfläche der Schaltfläche durch ein <xref:System.Windows.Shapes.Ellipse> -Steuerelement ersetzt, das einen dunkelblauem Rand hat und über ein <xref:System.Windows.Media.RadialGradientBrush>-Steuerelement gefüllt wird. Das <xref:System.Windows.Controls.ContentPresenter> -Steuerelement zeigt den Inhalt des <xref:System.Windows.Controls.Button>-Steuerelements an („Click Me!“). Wenn auf das <xref:System.Windows.Controls.Button> -Steuerelement geklickt wird, wird das <xref:System.Windows.Controls.Primitives.ButtonBase.Click> -Ereignis weiterhin als Teil des Standardverhaltens des <xref:System.Windows.Controls.Button> n-Steuerelements ausgelöst. Das Ergebnis ist in der folgenden Abbildung dargestellt:
 
 ![Eine elliptische Schaltfläche und ein zweites Fenster](media/introduction-to-wpf/wpfintrofigure2.png)
 
@@ -504,11 +504,11 @@ Die folgende Abbildung zeigt die Auswirkung dieses Codes:
 
 ![Listenfeld, das eine Datenvorlage verwendet](media/introduction-to-wpf/wpfintrofigure19.png)
 
-Beachten Sie, dass das Verhalten und die Gesamtdarstellung des <xref:System.Windows.Controls.ListBox> -Steuerelements beibehalten wurden. Lediglich die Darstellung der vom Listenfeld angezeigten Inhalte wurde geändert.
+Beachten Sie, dass das Verhalten und die Gesamtdarstellung des <xref:System.Windows.Controls.ListBox>-Steuerelements beibehalten wurden. Lediglich die Darstellung der vom Listenfeld angezeigten Inhalte wurde geändert.
 
 Weitere Informationen finden Sie unter [Übersicht über Datenvorlagen](data/data-templating-overview.md).
 
-### <a name="styles"></a>Formatvorlagen
+### <a name="styles"></a>Stile
 
 Stile ermöglichen Entwicklern und Designern die Standardisierung auf ein bestimmtes Erscheinungsbild ihres Produkts. WPF stellt ein solides Formatmodell bereit, dessen Grundlage das <xref:System.Windows.Style> -Element bildet. Im folgenden Beispiel wird ein Stil erstellt, mit dem die Hintergrundfarbe für jede <xref:System.Windows.Controls.Button> in einem Fenster auf `Orange`festgelegt wird:
 
@@ -650,7 +650,7 @@ Weitere Informationen zu benutzerdefinierten Steuerelementen finden Sie unter [�
 
 ## <a name="wpf-best-practices"></a>Bewährte Methoden für WPF
 
-Wie bei jeder Entwicklungsplattform kann das gewünschte Ergebnis mit WPF auf verschiedene Arten erreicht werden. Um sichergehen zu können, dass Ihre WPF-Anwendungen die geforderte Benutzerfreundlichkeit bereitstellen und grundsätzlich den Ansprüche der Zielgruppe entsprechen, gibt es empfohlene bewährte Methoden in Bezug auf Barrierefreiheit, Globalisierung, Lokalisierung und Leistung. Weitere Informationen finden Sie unter: .
+Wie bei jeder Entwicklungsplattform kann das gewünschte Ergebnis mit WPF auf verschiedene Arten erreicht werden. Um sichergehen zu können, dass Ihre WPF-Anwendungen die geforderte Benutzerfreundlichkeit bereitstellen und grundsätzlich den Ansprüche der Zielgruppe entsprechen, gibt es empfohlene bewährte Methoden in Bezug auf Barrierefreiheit, Globalisierung, Lokalisierung und Leistung. Weitere Informationen finden Sie unter
 
 - [Barrierefreiheit](../ui-automation/accessibility-best-practices.md)
 - [Übersicht über WPF-Globalisierung und -Lokalisierung](advanced/wpf-globalization-and-localization-overview.md)
@@ -664,7 +664,7 @@ In diesem Artikel wurden die Schlüsselfeatures von WPF erläutert. Jetzt könne
 > [!div class="nextstepaction"]
 > [Exemplarische Vorgehensweise: Meine erste WPF-Desktopanwendung](getting-started/walkthrough-my-first-wpf-desktop-application.md)
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Erste Schritte mit WPF](getting-started/index.md)
 - [Windows Presentation Foundation](index.md)

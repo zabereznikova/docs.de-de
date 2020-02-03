@@ -27,6 +27,6 @@ Das `FlowLayoutPanel`-Steuerelement ordnet seinen Inhalt in horizontaler oder ve
   
  Siehe auch Exemplarische Vorgehensweise [: Anordnen von Steuerelementen auf Windows Forms mithilfe von FlowLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md).  
   
-## <a name="reference"></a>Referenz  
+## <a name="reference"></a>Verweis  
  <xref:System.Windows.Forms.FlowLayoutPanel>  
  Enthält die Referenzdokumentation für das <xref:System.Windows.Forms.FlowLayoutPanel>-Steuerelement.

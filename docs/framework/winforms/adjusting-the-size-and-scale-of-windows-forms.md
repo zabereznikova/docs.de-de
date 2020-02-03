@@ -26,7 +26,7 @@ Dieses Thema enthält Links zu Informationen über die Größenänderung von Win
  [Hohe dpi-Unterstützung in Windows Forms](high-dpi-support-in-windows-forms.md)    
  Erläutert die Windows Forms "Unterstützung für hohe dpi-und dynamische Skalierung. 
   
-## <a name="reference"></a>Referenz  
+## <a name="reference"></a>Verweis  
  <xref:System.Drawing.Size>  
  Beschreibt diese Klasse und enthält Links zu allen Membern.  
   

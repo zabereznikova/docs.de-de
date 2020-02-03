@@ -30,11 +30,11 @@ Mit dem <xref:System.Windows.Forms.WebBrowser>-Steuerelement können Sie Webbrow
  [!code-vb[System.Windows.Forms.WebBrowser#0](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.WebBrowser/VB/form1.vb#0)]  
   
 ## <a name="compiling-the-code"></a>Kompilieren des Codes  
- Für dieses Beispiel benötigen Sie Folgendes:  
+ Dieses Beispiel erfordert Folgendes:  
   
 - Verweise auf die Assemblys `System`, `System.Drawing` und `System.Windows.Forms`.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Windows.Forms.WebBrowser>
 - [WebBrowser-Steuerelement](webbrowser-control-windows-forms.md)

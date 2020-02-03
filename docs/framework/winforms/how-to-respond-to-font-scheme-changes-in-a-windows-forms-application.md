@@ -65,7 +65,7 @@ In den Windows-Betriebssystemen kann ein Benutzer die systemweiten Schriftart Ei
   
  Der Konstruktor in diesem Codebeispiel enthält einen aufzurufenden `InitializeComponent`, der definiert wird, wenn Sie ein neues Windows Forms-Projekt in Visual Studio erstellen. Entfernen Sie diese Codezeile, wenn Sie die Anwendung in der Befehlszeile entwickeln.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Windows.Forms.ContainerControl.PerformAutoScale%2A>
 - [Automatische Skalierung in Windows Forms](automatic-scaling-in-windows-forms.md)

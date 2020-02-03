@@ -21,7 +21,7 @@ Das Windows Forms <xref:System.Windows.Forms.Button>-Steuerelement ermöglicht e
   
  Das <xref:System.Windows.Forms.Button> Steuerelement kann auch Bilder mithilfe der Eigenschaften <xref:System.Windows.Forms.ButtonBase.Image%2A> und <xref:System.Windows.Forms.ButtonBase.ImageList%2A> anzeigen. Weitere Informationen finden Sie unter Gewusst [wie: Festlegen des Bilds, das von einem Windows Forms-Steuerelement angezeigt wird](how-to-set-the-image-displayed-by-a-windows-forms-control.md).  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Windows.Forms.Button>
 - [Gewusst wie: Reagieren auf das Anklicken von Schaltflächen in Windows Forms](how-to-respond-to-windows-forms-button-clicks.md)

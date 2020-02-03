@@ -1,5 +1,5 @@
 ---
-title: EO
+title: Koordinaten
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Forms coordinates
@@ -28,7 +28,7 @@ Das Koordinatensystem für ein Windows Form basiert auf Geräte Koordinaten, und
 ## <a name="mapping-from-one-type-of-coordinate-to-another"></a>Zuordnung von einem Koordinatentyp zu einem anderen  
  Gelegentlich müssen Sie möglicherweise von Bildschirm Koordinaten zu Client Koordinaten zuordnen. Dies können Sie problemlos erreichen, indem Sie die <xref:System.Windows.Forms.Control.PointToClient%2A>-und <xref:System.Windows.Forms.Control.PointToScreen%2A> Methoden verwenden, die in der <xref:System.Windows.Forms.Control>-Klasse verfügbar sind. Beispielsweise wird die <xref:System.Windows.Forms.Control.MousePosition%2A>-Eigenschaft von <xref:System.Windows.Forms.Control> in Bildschirm Koordinaten gemeldet, Sie möchten Sie jedoch möglicherweise in Client Koordinaten konvertieren.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Windows.Forms.Control.PointToClient%2A>
 - <xref:System.Windows.Forms.Control.PointToScreen%2A>

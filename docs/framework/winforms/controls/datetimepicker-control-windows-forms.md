@@ -30,7 +30,7 @@ Das Windows Forms `DateTimePicker`-Steuerelement ermöglicht es dem Benutzer, ei
  [Gewusst wie: Anzeigen der Zeit mithilfe des DateTimePicker-Steuerelements](how-to-display-time-with-the-datetimepicker-control.md)  
  Zeigt die Schritte für eine `DateTimePicker` an, um nur Zeiten anzuzeigen.  
   
-## <a name="reference"></a>Referenz  
+## <a name="reference"></a>Verweis  
  <xref:System.Windows.Forms.DateTimePicker>  
  Beschreibt diese Klasse und enthält Links zu allen deren Membern.  
   
@@ -38,7 +38,7 @@ Das Windows Forms `DateTimePicker`-Steuerelement ermöglicht es dem Benutzer, ei
  Beschreibt diese Klasse und enthält Links zu allen deren Membern.  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
- [Windows Forms-Steuerelemente](controls-to-use-on-windows-forms.md)  
+ [Steuerelemente für Windows Forms](controls-to-use-on-windows-forms.md)  
  Enthält eine vollständige Liste der Windows Forms-Steuerelemente mit Links zu Informationen zur jeweiligen Verwendung.  
   
  [MonthCalendar-Steuerelement](monthcalendar-control-windows-forms.md)  

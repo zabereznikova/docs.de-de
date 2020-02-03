@@ -12,13 +12,13 @@ ms.locfileid: "76730942"
 # <a name="security-behaviors-in-wcf"></a>Sicherheitsverhalten in WCF
 In Windows Communication Foundation (WCF) ändern Verhalten das Laufzeitverhalten auf Dienst Ebene oder auf Endpunkt Ebene. (Weitere Informationen zu Verhaltensweisen im Allgemeinen finden Sie unter [angeben des Dienst Lauf Zeit Verhaltens](../../../../docs/framework/wcf/specifying-service-run-time-behavior.md).) Mithilfe von *Sicherheits Verhaltensweisen* können Anmelde Informationen, Authentifizierungs-, Autorisierungs-und Überwachungs Protokolle gesteuert werden. Sie können Verhalten entweder mittels Programmierung oder mittels Konfiguration verwenden. In diesem Thema wird die Konfiguration der folgenden, auf Sicherheitsfunktionen bezogenen Verhalten erläutert:  
   
-- [\<serviceCredentials>](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md).  
+- [\<servicecreden->](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md).  
   
-- [\<clientCredentials>](../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md).  
+- [\<Clientanmelde Informationen >](../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md).  
   
-- [\<serviceAuthorization>](../../../../docs/framework/configure-apps/file-schema/wcf/serviceauthorization-element.md).  
+- [\<ServiceAuthorization >](../../../../docs/framework/configure-apps/file-schema/wcf/serviceauthorization-element.md).  
   
-- [\<serviceSecurityAudit>](../../../../docs/framework/configure-apps/file-schema/wcf/servicesecurityaudit.md).  
+- [\<serviceSecurityAudit >](../../../../docs/framework/configure-apps/file-schema/wcf/servicesecurityaudit.md).  
   
 - [\<serviceMetadata >](../../../../docs/framework/configure-apps/file-schema/wcf/servicemetadata.md), mit dem Sie auch einen sicheren Endpunkt angeben können, auf den Clients für Metadaten zugreifen können.  
   
@@ -62,7 +62,7 @@ In Windows Communication Foundation (WCF) ändern Verhalten das Laufzeitverhalte
  Mit dem [\<Authentication >](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-clientcertificate-element.md) -Element können Sie anpassen, wie Clients authentifiziert werden. Sie können als Wert für das `CertificateValidationMode`-Attribut `None`, `ChainTrust`, `PeerOrChainTrust`, `PeerTrust` oder `Custom` festlegen. Standardmäßig ist die Ebene auf `ChainTrust`festgelegt, wodurch angegeben wird, dass jedes Zertifikat in einer Hierarchie von Zertifikaten gefunden werden muss, die in einer Stamm Zertifizierungs *Stelle am Anfang* der Kette endet. Dies ist der sicherste Modus. Sie können auch den Wert `PeerOrChainTrust` verwenden, der vorgibt, dass neben den Zertifikaten in einer Vertrauenskette auch selbst ausgestellte Zertifikate (Peervertrauen) akzeptiert werden. Sie können diesen Wert beim Entwickeln und Debuggen von Clients und Diensten verwenden, da selbst ausgestellte Zertifikate nicht von einer vertrauenswürdigen Zertifizierungsstelle bezogen werden müssen. Verwenden Sie beim Bereitstellen eines Clients jedoch den Wert `ChainTrust`. Sie können den Wert auch auf `Custom` setzen. Wenn Sie den Wert `Custom` verwenden, müssen Sie für das `CustomCertificateValidatorType`-Attribut zudem ein Assembly und einen Typ, mit dem das Zertifikat überprüft wird, festlegen. Wenn Sie Ihre eigene Überprüfung erstellen möchten, müssen Sie die abstrakte <xref:System.IdentityModel.Selectors.X509CertificateValidator>-Klasse vererben.  
   
 ### <a name="issuedtokenauthentication-element"></a>\<IssuedTokenAuthentication-> Element  
- Das Szenario für ausgestellte Token weist drei Phasen auf. In der ersten Phase wird ein Client, der versucht, auf einen Dienst zuzugreifen, ein Sicherheitstokendienst ( *Secure Token Service* , STS) genannt. Der STS authentifiziert den Client und stellt dann ein Token (in der Regel ein SAML-Token (SAML = Security Assertions Markup Language, XML-basierte Auszeichnungssprache für Sicherheitsbestätigungen) für den Client aus. Der Client kehrt dann mit dem Token zum Dienst zurück. Der Dienst überprüft das Token auf Daten, die ihm die Authentifizierung des Tokens und somit des Clients erlauben. Damit das Token authentifiziert werden kann, muss dem Dienst das vom Sicherheitstokendienst verwendete Zertifikat bekannt sein. Das [\<IssuedTokenAuthentication->](../../../../docs/framework/configure-apps/file-schema/wcf/issuedtokenauthentication-of-servicecredentials.md) Element ist das Repository für alle solchen Zertifikate des Sicherheitstokendiensts. Verwenden Sie zum Hinzufügen von Zertifikaten die [\<knownzertifikats >](../../../../docs/framework/configure-apps/file-schema/wcf/knowncertificates.md). [Fügen Sie ein\<](../../../../docs/framework/configure-apps/file-schema/wcf/add-of-knowncertificates.md) für jedes Zertifikat hinzufügen, wie im folgenden Beispiel gezeigt.  
+ Das Szenario für ausgestellte Token weist drei Phasen auf. In der ersten Phase wird ein Client, der versucht, auf einen Dienst zuzugreifen, ein Sicherheitstokendienst ( *Secure Token Service* , STS) genannt. Der STS authentifiziert den Client und stellt dann ein Token (in der Regel ein SAML-Token (SAML = Security Assertions Markup Language, XML-basierte Auszeichnungssprache für Sicherheitsbestätigungen) für den Client aus. Der Client kehrt dann mit dem Token zum Dienst zurück. Der Dienst überprüft das Token auf Daten, die ihm die Authentifizierung des Tokens und somit des Clients erlauben. Damit das Token authentifiziert werden kann, muss dem Dienst das vom Sicherheitstokendienst verwendete Zertifikat bekannt sein. Das [\<IssuedTokenAuthentication->](../../../../docs/framework/configure-apps/file-schema/wcf/issuedtokenauthentication-of-servicecredentials.md) Element ist das Repository für alle solchen Zertifikate des Sicherheitstokendiensts. Verwenden Sie zum Hinzufügen von Zertifikaten die [\<knownzertifikats >](../../../../docs/framework/configure-apps/file-schema/wcf/knowncertificates.md). [Fügen Sie ein\<>](../../../../docs/framework/configure-apps/file-schema/wcf/add-of-knowncertificates.md) für jedes Zertifikat hinzufügen, wie im folgenden Beispiel gezeigt.  
   
 ```xml  
 <issuedTokenAuthentication>  
@@ -117,16 +117,16 @@ In Windows Communication Foundation (WCF) ändern Verhalten das Laufzeitverhalte
 #### <a name="clientcertificate-element"></a>\<ClientCertificate >-Element  
  Legen Sie mit diesem Element das Zertifikat fest, mit dem der Client authentifiziert wird. Weitere Informationen finden Sie unter Gewusst [wie: Angeben von Client](../../../../docs/framework/wcf/how-to-specify-client-credential-values.md)Anmelde Informations Werten.  
   
-#### <a name="httpdigest"></a>\<httpDigest>  
+#### <a name="httpdigest"></a>\<httpdigest->  
  Diese Funktion muss mit Active Directory unter Windows und unter IIS (Internet Information Services) aktiviert werden. Weitere Informationen finden Sie unter [Digest-Authentifizierung in IIS 6,0](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc782661(v=ws.10)).  
   
 #### <a name="issuedtoken-element"></a>\<IssuedToken >-Element  
  Das [\<IssuedToken >](../../../../docs/framework/configure-apps/file-schema/wcf/issuedtoken.md) enthält die Elemente, die zum Konfigurieren eines lokalen Ausstellers von Token oder Verhalten verwendet werden, die mit einem Sicherheitstokendienst verwendet werden. Anweisungen zum Konfigurieren eines Clients für die Verwendung eines lokalen Ausstellers finden Sie unter Vorgehens [Weise: Konfigurieren eines lokalen Ausstellers](../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md).  
   
-#### <a name="localissueraddress"></a>\<localIssuerAddress>  
+#### <a name="localissueraddress"></a>\<LocalIssuerAddress >  
  Gibt eine Standardadresse für den Sicherheitstokendienst an. Diese wird verwendet, wenn das <xref:System.ServiceModel.WSFederationHttpBinding> keine URL für den Sicherheitstokendienst bereitstellt oder wenn die Aussteller Adresse einer Verbund Bindung `http://schemas.microsoft.com/2005/12/ServiceModel/Addressing/Anonymous` oder `null`ist. In diesem Fall muss <xref:System.ServiceModel.Description.ClientCredentials> mit der Adresse des lokalen Ausstellers und der für die Kommunikation mit diesem Aussteller zu verwendenden Bindung konfiguriert werden.  
   
-#### <a name="issuerchannelbehaviors"></a>\<issuerChannelBehaviors>  
+#### <a name="issuerchannelbehaviors"></a>\<issuerchannelverhaltens>  
  Verwenden Sie die [\<issuerchannelverhaltens>](../../../../docs/framework/configure-apps/file-schema/wcf/issuerchannelbehaviors-element.md) , um WCF-Client Verhalten hinzuzufügen, die bei der Kommunikation mit einem Sicherheitstokendienst Definieren Sie Client Verhalten im Abschnitt [\<endpointverhaltens>](../../../../docs/framework/configure-apps/file-schema/wcf/endpointbehaviors.md) . Um ein definiertes Verhalten zu verwenden, fügen Sie dem `<issuerChannelBehaviors>`-Element mit zwei Attributen eine <`add`>-Element hinzu. Verwenden Sie für `issuerAddress` die URL des Sicherheitstokendiensts, und verwenden Sie für das `behaviorConfiguration`-Attribut den Namen des definierten Endpunktverhaltens, wie im folgenden Beispiel gezeigt:  
   
 ```xml  
@@ -217,7 +217,7 @@ In Windows Communication Foundation (WCF) ändern Verhalten das Laufzeitverhalte
 </behaviors>  
 ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Überwachung](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)
 - [Sicherheitsmodell für Windows Server-App-Fabric](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

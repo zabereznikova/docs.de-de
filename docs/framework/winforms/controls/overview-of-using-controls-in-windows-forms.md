@@ -24,7 +24,7 @@ In diesem Thema werden die wesentlichen Elemente einer Windows Forms Anwendung b
   
 - Eine oder mehrere Klassen, die von <xref:System.Windows.Forms.Form?displayProperty=nameWithType>abgeleitet werden.  
   
-- Eine `Main` Methode, die die `static`-Methode (`shared` in Visual Basic) aufruft und eine <xref:System.Windows.Forms.Application.Run%2A> Instanz übergibt. Die <xref:System.Windows.Forms.Application.Run%2A>-Methode verarbeitet Nachrichten vom Betriebssystem an die Anwendung.  
+- Eine `Main` Methode, die die `static`-Methode (`shared` in Visual Basic) aufruft und eine <xref:System.Windows.Forms.Application.Run%2A> Instanz übergibt.<xref:System.Windows.Forms.Form> Die <xref:System.Windows.Forms.Application.Run%2A>-Methode verarbeitet Nachrichten vom Betriebssystem an die Anwendung.  
   
  Das folgende Codebeispiel zeigt die wesentlichen Elemente einer Windows Forms-Anwendung.  
   
@@ -223,7 +223,7 @@ public class MyForm : Form {
 }  
 ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Entwickeln benutzerdefinierter Windows Forms-Steuerelemente mit .NET Framework](developing-custom-windows-forms-controls.md)
 - [Grundlagen für das Entwickeln von Windows Forms-Steuerelementen](windows-forms-control-development-basics.md)

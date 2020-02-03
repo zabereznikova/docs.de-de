@@ -16,7 +16,7 @@ ms.locfileid: "76738505"
 
 Laufzeitanweisungs-Richtlinieneinstellungen für .NET Native bestimmen die Verfügbarkeit von Metadaten für Typen und Typmember zur Laufzeit. Ohne die erforderlichen Metadaten können Vorgänge, die auf Reflektion, Serialisierung und Deserialisierung oder Marshalling von .NET Framework-Typen zu COM oder Windows-Runtime beruhen, fehlschlagen und eine Ausnahme auslösen. Die häufigsten Ausnahmen sind [MissingMetadataException](missingmetadataexception-class-net-native.md) und (im Fall von Interop) [MissingInteropDataException](missinginteropdataexception-class-net-native.md).
 
-Laufzeitrichtlinieneinstellungen werden über eine Laufzeitdirektivendatei (*.rd.xml) gesteuert. Jede Laufzeitanweisung definiert Richtlinien für ein bestimmtes Programmelement, z.B. eine Assembly (das [\<Assembly>](assembly-element-net-native.md)-Element), einen Typ (das [\<Type>](type-element-net-native.md)-Element) oder eine Methode (das [\<Method>](method-element-net-native.md)-Element). Die Anweisung enthält ein oder mehrere Attribute, die die Reflektionsrichtlinientypen, die Serialisierungsrichtlinientypen und die Interop-Richtlinientypen definieren, die im nächsten Abschnitt erläutert werden. Der Wert des Attributs definiert die Richtlinieneinstellung.
+Laufzeitrichtlinieneinstellungen werden über eine Laufzeitanweisungsdatei (.rd.xml) gesteuert. Jede Laufzeitanweisung definiert Richtlinien für ein bestimmtes Programmelement, z.B. eine Assembly (das [\<Assembly>](assembly-element-net-native.md)-Element), einen Typ (das [\<Type>](type-element-net-native.md)-Element) oder eine Methode (das [\<Method>](method-element-net-native.md)-Element). Die Anweisung enthält ein oder mehrere Attribute, die die Reflektionsrichtlinientypen, die Serialisierungsrichtlinientypen und die Interop-Richtlinientypen definieren, die im nächsten Abschnitt erläutert werden. Der Wert des Attributs definiert die Richtlinieneinstellung.
 
 ## <a name="policy-types"></a>Richtlinientypen
 
@@ -32,7 +32,7 @@ In Laufzeitdirektivendateien werden drei Kategorien von Richtlinientypen erkannt
 
   In der folgenden Tabelle sind die Reflektionsrichtlinientypen und die Programmelemente aufgeführt, mit denen sie verwendet werden können.
 
-  |Element|Activate|Durchsuchen|Dynamic|
+  |Element|Aktivieren|Durchsuchen|Dynamisch|
   |-------------|--------------|------------|-------------|
   |[\<Anwendung>](application-element-net-native.md)|✔️|✔️|✔️|
   |[\<Assembly>](assembly-element-net-native.md)|✔️|✔️|✔️|
@@ -115,7 +115,7 @@ In Laufzeitdirektivendateien werden drei Kategorien von Richtlinientypen erkannt
 
 Jeder Richtlinientyp kann auf einen der in der folgenden Tabelle aufgeführten Werte festgelegt werden. Beachten Sie, dass Elemente, die Typmember darstellen, einen anderen Satz von Richtlinieneinstellungen unterstützen als andere Elemente.
 
-|Richtlinieneinstellung|Beschreibung|`Assembly`-, `Namespace`-, `Type`- und `TypeInstantiation`-Elemente|`Event`-, `Field`-, `Method`-, `MethodInstantiation`- und `Property`-Elemente|
+|Richtlinieneinstellung|BESCHREIBUNG|`Assembly`-, `Namespace`-, `Type`- und `TypeInstantiation`-Elemente|`Event`-, `Field`-, `Method`-, `MethodInstantiation`- und `Property`-Elemente|
 |--------------------|-----------------|-----------------------------------------------------------------------|--------------------------------------------------------------------------------|
 |`All`|Aktiviert die Richtlinie für alle Typen und Member, die die .NET Native-Toolkette nicht entfernt.|✔️||
 |`Auto`|Gibt an, dass die Standardrichtlinie für den Richtlinientyp für dieses Programmelement verwendet werden soll. Dies entspricht dem Auslassen einer Richtlinie für diesen Richtlinientyp. `Auto` wird normalerweise verwendet, um anzugeben, dass die Richtlinie von einem übergeordneten Element geerbt wird.|✔️|✔️|
@@ -128,7 +128,7 @@ Jeder Richtlinientyp kann auf einen der in der folgenden Tabelle aufgeführten W
 |`Required PublicAndInternal`|Aktiviert die Richtlinie für öffentliche und interne Typen oder Member und stellt sicher, dass die Metadaten für öffentliche und interne Typen und Member immer verfügbar sind. Diese Einstellung unterscheidet sich von der Einstellung `PublicAndInternal`, durch die Metadaten für öffentliche und interne Typen und Member nur verfügbar gemacht werden, wenn die Toolkette bestimmt, dass es erforderlich ist.|✔️||
 |`Required All`|Fordert, dass die Toolkette alle Typen und Member unabhängig von ihrer Verwendung beibehält, und aktiviert die Richtlinie für diese.|✔️||
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Runtime Directives (rd.xml) Configuration File Reference (Referenz zur Laufzeitanweisungs-Konfigurationsdatei (rd.xml))](runtime-directives-rd-xml-configuration-file-reference.md)
-- [Elemente der Laufzeitanweisung](runtime-directive-elements.md)
+- [Runtime Directive Elements (Elemente der Laufzeitanweisung)](runtime-directive-elements.md)

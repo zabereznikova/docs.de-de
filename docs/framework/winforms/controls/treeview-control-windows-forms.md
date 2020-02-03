@@ -41,10 +41,10 @@ Mit dem `TreeView`-Steuerelement in Windows Forms wird eine Hierarchie von Knote
 
 Siehe auch Gewusst [wie: Hinzufügen und Entfernen von Knoten mit dem Windows Forms TreeView-Steuerelement mithilfe des Designers](add-and-remove-nodes-with-wf-treeview-control-using-the-designer.md)und Gewusst [wie: Anfügen eines Kontextmenüs an einen TreeNode mithilfe des Designers](how-to-attach-a-shortcut-menu-to-a-treenode-using-the-designer.md).  
   
-## <a name="reference"></a>Referenz  
+## <a name="reference"></a>Verweis  
  <xref:System.Windows.Forms.TreeView>-Klasse  
  Beschreibt diese Klasse und enthält Links zu allen deren Membern.  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
- [Windows Forms-Steuerelemente](controls-to-use-on-windows-forms.md)  
+ [Steuerelemente für Windows Forms](controls-to-use-on-windows-forms.md)  
  Enthält eine vollständige Liste der Windows Forms-Steuerelemente mit Links zu Informationen zur jeweiligen Verwendung.

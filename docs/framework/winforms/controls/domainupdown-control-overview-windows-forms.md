@@ -27,7 +27,7 @@ Das Windows Forms <xref:System.Windows.Forms.DomainUpDown>-Steuerelement ist im 
   
  Dieses Steuerelement zeigt nur Text Zeichenfolgen an. Wenn Sie ein Steuerelement wünschen, das numerische Werte anzeigt, verwenden Sie das <xref:System.Windows.Forms.NumericUpDown>-Steuerelement. Weitere Informationen finden Sie unter [Übersicht über das NumericUpDown-Steuer](numericupdown-control-overview-windows-forms.md)Element.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Windows.Forms.DomainUpDown>
 - [DomainUpDown-Steuerelement](domainupdown-control-windows-forms.md)

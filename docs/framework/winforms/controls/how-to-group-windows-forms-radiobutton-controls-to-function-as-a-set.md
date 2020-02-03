@@ -25,7 +25,7 @@ Windows Forms <xref:System.Windows.Forms.RadioButton>-Steuerelemente sollen Benu
   
 2. Zeichnen Sie <xref:System.Windows.Forms.RadioButton> Steuerelemente auf der <xref:System.Windows.Forms.GroupBox> oder <xref:System.Windows.Forms.Panel> Steuerelement.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Windows.Forms.RadioButton>
 - [Übersicht über das RadioButton-Steuerelement](radiobutton-control-overview-windows-forms.md)

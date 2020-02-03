@@ -66,7 +66,7 @@ Beim darstellen von Daten in einem Windows Forms <xref:System.Windows.Forms.Chec
     }  
     ```  
   
-     - ODER  
+     - oder –  
   
 2. Durchlaufen Sie die <xref:System.Windows.Forms.CheckedListBox.Items%2A> Auflistung, beginnend bei 0, da die Auflistung NULL basiert, und nennen Sie die <xref:System.Windows.Forms.CheckedListBox.GetItemChecked%2A>-Methode für jedes Element. Beachten Sie, dass diese Methode die Element Nummer in der Gesamtliste enthält. wenn das erste Element in der Liste nicht aktiviert und das zweite Element aktiviert ist, wird etwa "Item 2 = MyListItem2" angezeigt.  
   
@@ -111,6 +111,6 @@ Beim darstellen von Daten in einem Windows Forms <xref:System.Windows.Forms.Chec
     MessageBox::Show(s);  
     ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Windows Forms-Steuerelemente zum Auflisten von Optionen](windows-forms-controls-used-to-list-options.md)

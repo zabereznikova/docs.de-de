@@ -1,5 +1,5 @@
 ---
-title: Sicherheitsübersicht
+title: Übersicht über die Sicherheit
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Communication Foundation, security
@@ -94,16 +94,16 @@ Windows Communication Foundation (WCF) ist eine auf SOAP-Nachrichten basierende 
   
  In WCF werden Zugriffs Steuerungsfunktionen durch Integration in die Common Language Runtime (CLR) <xref:System.Security.Permissions.PrincipalPermissionAttribute> und durch eine Reihe von APIs bereitgestellt, die als *Identitäts Modell*bezeichnet werden. Ausführliche Informationen zur Zugriffs Steuerung und zur Anspruchs basierten Autorisierung finden Sie unter [Erweitern der Sicherheit](../../../../docs/framework/wcf/extending/extending-security.md).  
   
-### <a name="auditing"></a>-Überwachung  
+### <a name="auditing"></a>Überwachung  
  Die *Überwachung ist die* Protokollierung von Sicherheits Ereignissen im Windows-Ereignisprotokoll. Sie können sicherheitsbezogene Ereignisse protokollieren, z. B. Authentifizierungsfehler (oder erfolgreiche Authentifizierungen). Weitere Informationen finden Sie unter [Auditing](../../../../docs/framework/wcf/feature-details/auditing-security-events.md). Weitere Informationen zur Programmierung finden [Sie unter Gewusst wie:](../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md)überwachen von Sicherheits Ereignissen.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Security.Permissions.PrincipalPermissionAttribute>
 - [Sichern von Diensten](../../../../docs/framework/wcf/securing-services.md)
 - [Häufige Sicherheitsszenarien](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md)
 - [Bindungen und Sicherheit](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)
-- [Securing Services and Clients](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [Sichern von Diensten und Clients](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
 - [Authentifizierung](../../../../docs/framework/wcf/feature-details/authentication-in-wcf.md)
 - [Autorisierung](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)
 - [Verbund und ausgestellte Token](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)

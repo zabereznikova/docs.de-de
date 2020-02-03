@@ -30,7 +30,7 @@ Windows Forms-Anwendungen und-Steuerelemente können mit einigen Einschränkunge
   
  Siehe auch [Exemplarische Vorgehensweise: Unterstützen von COM-Interop durch das Anzeigen jedes Windows Forms in einem eigenen Thread](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233639(v=vs.100)).  
   
-## <a name="reference"></a>Referenz  
+## <a name="reference"></a>Verweis  
  <xref:System.Windows.Forms.Form.ShowDialog%2A?displayProperty=nameWithType>  
  Wird zum Erstellen eines separaten Threads für ein Windows Form verwendet.  
   

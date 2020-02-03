@@ -20,7 +20,7 @@ ms.locfileid: "76735318"
  In diesem Tutorial wird beschrieben, wie Sie eine Beispielanwendung, die [WPF-Inhalte hostet, in einem Win32-Fenster Beispiel](https://go.microsoft.com/fwlink/?LinkID=160004)schreiben, das [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Inhalt in einem Win32-Fenster hostet. Sie können dieses Beispiel erweitern, um beliebige Win32-Fenster zu hosten. Da verwalteter und nicht verwalteter Code gemischt werden muss, wird die Anwendung C++in/CLI. geschrieben.  
 
 <a name="requirements"></a>   
-## <a name="requirements"></a>-Anforderungen  
+## <a name="requirements"></a>Anforderungen  
  In diesem Tutorial wird davon ausgegangen, dass es sich um [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-und Win32-Programmierung handelt. Eine grundlegende Einführung in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Programmierung finden Sie unter [Getting Started](../getting-started/index.md). Eine Einführung in die Win32-Programmierung finden Sie in den zahlreichen Büchern zu diesem Thema, insbesondere in den *Programmier Fenstern* von Charles Petzold.  
   
  Da das Beispiel für dieses Lernprogramm in/CLI implementiert C++ist, wird in diesem Tutorial die Verwendung von C++ zum Programmieren der Windows-API und ein Verständnis der Programmierung mit verwaltetem Code vorausgesetzt. Vertrautheit mit C++/CLI ist hilfreich, aber nicht unbedingt erforderlich.  
@@ -225,7 +225,7 @@ ms.locfileid: "76735318"
 
  [!code-cpp[Win32HostingWPFPage#WPFPageSetFontFamily](~/samples/snippets/cpp/VS_Snippets_Wpf/Win32HostingWPFPage/CPP/WPFPage.cpp#wpfpagesetfontfamily)]
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Windows.Interop.HwndSource>
 - [Interaktion zwischen WPF und Win32](wpf-and-win32-interoperation.md)

@@ -35,7 +35,7 @@ Sie können der Windows Forms <xref:System.Windows.Forms.DomainUpDown>-Steuerele
     domainUpDown1->Items->Add("noodles");  
     ```  
   
-     \- oder -  
+     Oder  
   
 2. Verwenden Sie die <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.Insert%2A>-Methode, um ein Element an einer bestimmten Position in die Liste einzufügen.  
   
@@ -54,7 +54,7 @@ Sie können der Windows Forms <xref:System.Windows.Forms.DomainUpDown>-Steuerele
     domainUpDown1->Items->Insert(2, "rice");  
     ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Windows.Forms.DomainUpDown>
 - <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.Add%2A?displayProperty=nameWithType>

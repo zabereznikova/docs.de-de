@@ -135,7 +135,7 @@ End Namespace
   
  Kompiliertes BAML (mit PresentationBuildTask generiert) verwendet alle Schritte, obwohl auch BAML keine unqualifizierten Assemblynamen enthalten sollte.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Grundlegendes zu XML-Namespaces](https://go.microsoft.com/fwlink/?LinkId=98069)
 - [Übersicht über XAML (WPF)](../../../desktop-wpf/fundamentals/xaml.md)

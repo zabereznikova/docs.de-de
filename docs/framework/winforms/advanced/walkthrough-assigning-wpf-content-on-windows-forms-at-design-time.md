@@ -23,11 +23,11 @@ ms.locfileid: "76746811"
 
 In diesem Artikel wird gezeigt, wie Sie die Windows Presentation Foundation (WPF)-Steuerelement Typen auswählen, die auf dem Formular angezeigt werden sollen. Sie können beliebige WPF-Steuerelement Typen auswählen, die in Ihrem Projekt enthalten sind.
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
+## <a name="prerequisites"></a>Voraussetzungen
 
 Für diese exemplarische Vorgehensweise benötigen Sie Visual Studio.
 
-## <a name="create-the-project"></a>Erstellen eines Projekts
+## <a name="create-the-project"></a>Erstellen des Projekts
 
 Öffnen Sie Visual Studio, und erstellen Sie ein neues Windows Forms-Anwendungsprojekt C# in Visual Basic oder Visual mit dem Namen `SelectingWpfContent`.
 
@@ -85,7 +85,7 @@ Sie können einem <xref:System.Windows.Forms.Integration.ElementHost>-Steuerelem
 
 9. Das `elementHost2`-Steuerelement hostet jetzt eine Instanz des `UserControl1`-Typs.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>

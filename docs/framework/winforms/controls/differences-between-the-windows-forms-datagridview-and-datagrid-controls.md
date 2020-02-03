@@ -18,7 +18,7 @@ Das <xref:System.Windows.Forms.DataGridView> Steuerelement ist ein neues Steuere
   
  In der folgenden Tabelle werden einige der primären Features beschrieben, die in der <xref:System.Windows.Forms.DataGridView>-Steuerelement verfügbar sind, die im <xref:System.Windows.Forms.DataGrid>-Steuerelement fehlen.  
   
-|Funktion des DataGridView-Steuer Elements|Beschreibung|  
+|Funktion des DataGridView-Steuer Elements|BESCHREIBUNG|  
 |----------------------------------|-----------------|  
 |Mehrere Spaltentypen|Das <xref:System.Windows.Forms.DataGridView>-Steuerelement bietet mehr integrierte Spaltentypen als das <xref:System.Windows.Forms.DataGrid>-Steuerelement. Diese Spaltentypen erfüllen die Anforderungen der gängigsten Szenarien, sind aber auch einfacher zu erweitern oder zu ersetzen, als die Spaltentypen im <xref:System.Windows.Forms.DataGrid>-Steuerelement. Weitere Informationen finden Sie unter [Spaltentypen im Windows Forms DataGridView-Steuer](column-types-in-the-windows-forms-datagridview-control.md)Element.|  
 |Mehrere Möglichkeiten zum Anzeigen von Daten|Das <xref:System.Windows.Forms.DataGrid> Steuerelement ist auf die Anzeige von Daten aus einer externen Datenquelle beschränkt. Das <xref:System.Windows.Forms.DataGridView> Steuerelement kann jedoch ungebundene Daten im-Steuerelement, Daten aus einer gebundenen Datenquelle oder gebundene und ungebundene Daten anzeigen. Sie können den virtuellen Modus auch im <xref:System.Windows.Forms.DataGridView>-Steuerelement implementieren, um die benutzerdefinierte Datenverwaltung bereitzustellen. Weitere Informationen finden Sie unter [Datenanzeige Modi im Windows Forms DataGridView-Steuer](data-display-modes-in-the-windows-forms-datagridview-control.md)Element.|  
@@ -32,7 +32,7 @@ Das <xref:System.Windows.Forms.DataGridView> Steuerelement ist ein neues Steuere
   
  Da das <xref:System.Windows.Forms.DataGridView>-Steuerelement über eine völlig neue Architektur verfügt, gibt es keinen einfachen Konvertierungs Pfad, der es Ihnen ermöglicht, <xref:System.Windows.Forms.DataGrid> Anpassungen mit dem <xref:System.Windows.Forms.DataGridView>-Steuerelement zu verwenden. Viele <xref:System.Windows.Forms.DataGrid> Anpassungen sind aufgrund der integrierten Features, die im neuen Steuerelement verfügbar sind, mit dem <xref:System.Windows.Forms.DataGridView>-Steuerelement nicht erforderlich. Wenn Sie benutzerdefinierte Spaltentypen für das <xref:System.Windows.Forms.DataGrid> Steuerelement erstellt haben, das Sie mit dem <xref:System.Windows.Forms.DataGridView>-Steuerelement verwenden möchten, müssen Sie diese mithilfe der neuen Architektur erneut implementieren. Weitere Informationen finden Sie unter [Anpassen des Windows Forms DataGridView-Steuer](customizing-the-windows-forms-datagridview-control.md)Elements.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGrid>

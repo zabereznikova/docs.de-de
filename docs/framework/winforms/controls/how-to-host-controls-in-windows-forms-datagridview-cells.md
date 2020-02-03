@@ -33,7 +33,7 @@ Das <xref:System.Windows.Forms.DataGridView>Steuerelement bietet mehrere Spalten
   
 - Verweise auf die Assemblys "System" und "System.Windows.Forms".  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridViewColumn>

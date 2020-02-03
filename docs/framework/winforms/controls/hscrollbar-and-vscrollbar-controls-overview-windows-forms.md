@@ -35,8 +35,8 @@ Windows Forms <xref:System.Windows.Forms.ScrollBar>-Steuerelemente werden verwen
   
  Wenn der Benutzer eine der Pfeiltasten drückt oder auf eine der Schiebe leisten Schaltflächen klickt, ändert sich die <xref:System.Windows.Forms.ScrollBar.Value%2A>-Eigenschaft entsprechend dem Wert, der in der <xref:System.Windows.Forms.ScrollBar.SmallChange%2A>-Eigenschaft festgelegt ist.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Windows.Forms.HScrollBar>
 - <xref:System.Windows.Forms.VScrollBar>
-- [Windows Forms-Steuerelemente](controls-to-use-on-windows-forms.md)
+- [Steuerelemente für Windows Forms](controls-to-use-on-windows-forms.md)

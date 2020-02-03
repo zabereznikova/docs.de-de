@@ -19,7 +19,7 @@ In den Themen in diesem Abschnitt werden Windows Communication Foundation (WCF)-
  Weitere Informationen zu Windows Server AppFabric und Sicherheit finden Sie unter [Sicherheitsmodell für Windows Server AppFabric](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10)) .  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Übersicht über die Sicherheit](../../../../docs/framework/wcf/feature-details/security-overview.md)  
+ [Sicherheitsübersicht](../../../../docs/framework/wcf/feature-details/security-overview.md)  
  Beschreibt die Sicherheitsfunktionen in WCF.  
   
  [Begriffe der Sicherheit](../../../../docs/framework/wcf/feature-details/security-concepts.md)  
@@ -34,7 +34,7 @@ In den Themen in diesem Abschnitt werden Windows Communication Foundation (WCF)-
  [Bindungen und Sicherheit](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)  
  Eine sicherheitsorientierte Ansicht der Bindungen, einschließlich Themen, die veranschaulichen, wie benutzerdefinierte Sicherheitsbindungen erstellt werden.  
   
- [Securing Services and Clients](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
+ [Sichern von Diensten und Clients](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
  Beschreibt, wie Nachrichten mithilfe von WCF-Sicherheitsfunktionen gesichert werden.  
   
  [Authentifizierung](../../../../docs/framework/wcf/feature-details/authentication-in-wcf.md)  
@@ -55,7 +55,7 @@ In den Themen in diesem Abschnitt werden Windows Communication Foundation (WCF)-
  [Sicherheitsleitfaden und bewährte Methoden](../../../../docs/framework/wcf/feature-details/security-guidance-and-best-practices.md)  
  Richtlinien zum Erstellen von sicheren WCF-Anwendungen.  
   
-## <a name="reference"></a>Referenz  
+## <a name="reference"></a>Verweis  
  <xref:System.ServiceModel>  
   
  <xref:System.ServiceModel.Security>  
@@ -65,10 +65,10 @@ In den Themen in diesem Abschnitt werden Windows Communication Foundation (WCF)-
   
  [Einfache WCF-Programmierung](../../../../docs/framework/wcf/basic-wcf-programming.md)  
   
- [Tutorial mit ersten Schritten](../../../../docs/framework/wcf/getting-started-tutorial.md)  
+ [Getting Started Tutorial](../../../../docs/framework/wcf/getting-started-tutorial.md)  
   
  [Konzeptionelle Übersicht](../../../../docs/framework/wcf/conceptual-overview.md)  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Konfigurieren der Anwendung](../../../../docs/framework/wcf/diagnostics/configuring-your-application.md)

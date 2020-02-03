@@ -99,11 +99,11 @@ Sie können einzelne Eigenschaften von Zeilen und Spalten mit den <xref:System.W
 
 2. Öffnen Sie im Fenster **Eigenschaften** die <xref:System.Windows.Forms.TableLayoutPanel.ColumnStyles%2A> Auflistung, indem Sie auf die Schaltfläche mit den Auslassungs Punkten (![der Schaltfläche mit den Auslassungs Punkten (...) in der Eigenschaftenfenster der Visual Studio.](./media/visual-studio-ellipsis-button.png))-Schaltfläche neben dem Eintrag **Spalten** klicken.
 
-3. Wählen Sie die erste Spalte aus, und ändern Sie den Wert der <xref:System.Windows.Forms.TableLayoutStyle.SizeType%2A>-Eigenschaft in <xref:System.Windows.Forms.SizeType.AutoSize>. Klicken Sie auf **OK** , um die Änderung zu übernehmen. Beachten Sie, dass die Breite der ersten Spalte so reduziert wird, dass Sie dem <xref:System.Windows.Forms.Button>-Steuerelement entspricht. Beachten Sie außerdem, dass die Breite der Spalte nicht geändert werden kann.
+3. Wählen Sie die erste Spalte aus, und ändern Sie den Wert der <xref:System.Windows.Forms.TableLayoutStyle.SizeType%2A>-Eigenschaft in <xref:System.Windows.Forms.SizeType.AutoSize>. Klicken Sie auf **OK**, um die Änderung anzunehmen. Beachten Sie, dass die Breite der ersten Spalte so reduziert wird, dass Sie dem <xref:System.Windows.Forms.Button>-Steuerelement entspricht. Beachten Sie außerdem, dass die Breite der Spalte nicht geändert werden kann.
 
-4. Öffnen Sie im Fenster **Eigenschaften** die <xref:System.Windows.Forms.TableLayoutPanel.ColumnStyles%2A> Auflistung, und wählen Sie die erste Spalte aus. Legen Sie den Wert seiner <xref:System.Windows.Forms.TableLayoutStyle.SizeType%2A> -Eigenschaft auf <xref:System.Windows.Forms.SizeType.Percent>fest. Klicken Sie auf **OK** , um die Änderung zu übernehmen. Ändern Sie die Größe des <xref:System.Windows.Forms.TableLayoutPanel> Steuer Elements zu einer größeren Breite, und beachten Sie, dass die Breite der ersten Spalte erweitert wird. Ändern Sie die Größe des <xref:System.Windows.Forms.TableLayoutPanel> Steuer Elements auf eine geringere Breite. Beachten Sie, dass die Schaltflächen in der ersten Spalte an die Zelle angepasst werden. Beachten Sie auch, dass die Breite der Spalte in der Größe geändert werden kann.
+4. Öffnen Sie im Fenster **Eigenschaften** die <xref:System.Windows.Forms.TableLayoutPanel.ColumnStyles%2A> Auflistung, und wählen Sie die erste Spalte aus. Legen Sie den Wert seiner <xref:System.Windows.Forms.TableLayoutStyle.SizeType%2A> -Eigenschaft auf <xref:System.Windows.Forms.SizeType.Percent>fest. Klicken Sie auf **OK**, um die Änderung anzunehmen. Ändern Sie die Größe des <xref:System.Windows.Forms.TableLayoutPanel> Steuer Elements zu einer größeren Breite, und beachten Sie, dass die Breite der ersten Spalte erweitert wird. Ändern Sie die Größe des <xref:System.Windows.Forms.TableLayoutPanel> Steuer Elements auf eine geringere Breite. Beachten Sie, dass die Schaltflächen in der ersten Spalte an die Zelle angepasst werden. Beachten Sie auch, dass die Breite der Spalte in der Größe geändert werden kann.
 
-5. Öffnen Sie im Fenster **Eigenschaften** die <xref:System.Windows.Forms.TableLayoutPanel.ColumnStyles%2A> Auflistung, und wählen Sie alle aufgelisteten Spalten aus. Legen Sie den Wert jeder <xref:System.Windows.Forms.TableLayoutStyle.SizeType%2A> Eigenschaft auf <xref:System.Windows.Forms.SizeType.Percent>fest. Klicken Sie auf **OK** , um die Änderung zu übernehmen. Wiederholen Sie diesen Vorgang mit der <xref:System.Windows.Forms.TableLayoutPanel.RowStyles%2A> Auflistung.
+5. Öffnen Sie im Fenster **Eigenschaften** die <xref:System.Windows.Forms.TableLayoutPanel.ColumnStyles%2A> Auflistung, und wählen Sie alle aufgelisteten Spalten aus. Legen Sie den Wert jeder <xref:System.Windows.Forms.TableLayoutStyle.SizeType%2A> Eigenschaft auf <xref:System.Windows.Forms.SizeType.Percent>fest. Klicken Sie auf **OK**, um die Änderung anzunehmen. Wiederholen Sie diesen Vorgang mit der <xref:System.Windows.Forms.TableLayoutPanel.RowStyles%2A> Auflistung.
 
 6. Ziehen Sie eine der Größen Zieh Punkte der Ecke, und ändern Sie die Breite und Höhe des <xref:System.Windows.Forms.TableLayoutPanel> Steuer Elements. Beachten Sie, dass die Größe der Zeilen und Spalten geändert wird, wenn sich die Größe des <xref:System.Windows.Forms.TableLayoutPanel>-Steuer Elements ändert. Beachten Sie außerdem, dass die Größe der Zeilen und Spalten mit den horizontalen und vertikalen Größen Anpassungs Handles geändert werden können.
 
@@ -177,7 +177,7 @@ Mit dem <xref:System.Windows.Forms.TableLayoutPanel>-Steuerelement können Sie d
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Mithilfe einer Kombination aus Layoutbereichen und Steuerelementen können Sie ein komplexes Layout verwirklichen. Hier sind paar Vorschläge für weitere Experimente:
+Mithilfe einer Kombination aus Layoutbereichen und Steuerelementen können Sie ein komplexes Layout verwirklichen. Mit folgenden Funktionen können Sie Ihre Fähigkeiten vertiefen:
 
 - Ändern Sie die Größe eines der <xref:System.Windows.Forms.Button> Steuerelemente in eine größere Größe, und notieren Sie sich die Auswirkung auf das Layout.
 
@@ -187,7 +187,7 @@ Mithilfe einer Kombination aus Layoutbereichen und Steuerelementen können Sie e
 
 - Docken Sie das <xref:System.Windows.Forms.TableLayoutPanel> -Steuerelement am übergeordneten Formular an. Ändern Sie die Größe des Formulars, und beobachten Sie die Auswirkung auf das Layout.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Windows.Forms.FlowLayoutPanel>
 - <xref:System.Windows.Forms.TableLayoutPanel>

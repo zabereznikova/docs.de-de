@@ -25,7 +25,7 @@ Sie können steuern, ob Text und Bilder auf einem <xref:System.Windows.Forms.Too
   
 ### <a name="to-define-what-is-displayed-on-a-toolstripitem"></a>So definieren Sie, was auf einem ToolStripItem angezeigt wird  
   
-- Legen Sie die <xref:System.Windows.Forms.ToolStripItem.DisplayStyle%2A>-Eigenschaft auf den gewünschten Wert fest. Die Möglichkeiten sind `Image`, `ImageAndText`, `None`und `Text`. Die Standardeinstellung ist `ImageAndText`.  
+- Legen Sie die <xref:System.Windows.Forms.ToolStripItem.DisplayStyle%2A>-Eigenschaft auf den gewünschten Wert fest. Die Möglichkeiten sind `Image`, `ImageAndText`, `None`und `Text`. Der Standardwert lautet `ImageAndText`.  
   
     ```vb  
     ToolStripButton2.DisplayStyle = _  
@@ -38,7 +38,7 @@ Sie können steuern, ob Text und Bilder auf einem <xref:System.Windows.Forms.Too
   
 ### <a name="to-align-text-on-a-toolstripitem"></a>So richten Sie Text auf einem Tool Strip Item aus  
   
-- Legen Sie die <xref:System.Windows.Forms.ToolStripItem.TextAlign%2A>-Eigenschaft auf den gewünschten Wert fest. Die Möglichkeiten sind eine beliebige Kombination aus Top, Middle und Bottom mit Links, zentriert und rechts. Die Standardeinstellung ist `MiddleCenter`.  
+- Legen Sie die <xref:System.Windows.Forms.ToolStripItem.TextAlign%2A>-Eigenschaft auf den gewünschten Wert fest. Die Möglichkeiten sind eine beliebige Kombination aus Top, Middle und Bottom mit Links, zentriert und rechts. Der Standardwert lautet `MiddleCenter`.  
   
     ```vb  
     ToolStripSplitButton1.TextAlign = _  
@@ -51,7 +51,7 @@ Sie können steuern, ob Text und Bilder auf einem <xref:System.Windows.Forms.Too
   
 ### <a name="to-align-an-image-on-a-toolstripitem"></a>So richten Sie ein Bild auf einem ToolStripItem-Element aus  
   
-- Legen Sie die <xref:System.Windows.Forms.ToolStripItem.ImageAlign%2A>-Eigenschaft auf den gewünschten Wert fest. Die Möglichkeiten sind eine beliebige Kombination aus Top, Middle und Bottom mit Links, zentriert und rechts. Die Standardeinstellung ist `MiddleLeft`.  
+- Legen Sie die <xref:System.Windows.Forms.ToolStripItem.ImageAlign%2A>-Eigenschaft auf den gewünschten Wert fest. Die Möglichkeiten sind eine beliebige Kombination aus Top, Middle und Bottom mit Links, zentriert und rechts. Der Standardwert lautet `MiddleLeft`.  
   
     ```vb  
     ToolStripSplitButton1.ImageAlign = _  
@@ -64,7 +64,7 @@ Sie können steuern, ob Text und Bilder auf einem <xref:System.Windows.Forms.Too
   
 ### <a name="to-define-how-toolstripitem-text-and-images-are-displayed-relative-to-each-other"></a>So definieren Sie, wie Text und Bilder von ToolStripItem zueinander zueinander angezeigt werden  
   
-- Legen Sie die <xref:System.Windows.Forms.ToolStripItem.TextImageRelation%2A>-Eigenschaft auf den gewünschten Wert fest. Die Möglichkeiten sind `ImageAboveText`, `ImageBeforeText`, `Overlay`, `TextAboveImage`und `TextBeforeImage`. Die Standardeinstellung ist `ImageBeforeText`.  
+- Legen Sie die <xref:System.Windows.Forms.ToolStripItem.TextImageRelation%2A>-Eigenschaft auf den gewünschten Wert fest. Mögliche Werte sind `ImageAboveText`, `ImageBeforeText`, `Overlay`, `TextAboveImage` und `TextBeforeImage`. Der Standardwert lautet `ImageBeforeText`.  
   
     ```vb  
     ToolStripButton1.TextImageRelation = _  
@@ -75,7 +75,7 @@ Sie können steuern, ob Text und Bilder auf einem <xref:System.Windows.Forms.Too
     toolStripButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;  
     ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Windows.Forms.ToolStrip>
 - [Übersicht über das ToolStrip-Steuerelement](toolstrip-control-overview-windows-forms.md)

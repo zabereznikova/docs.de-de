@@ -30,7 +30,7 @@ Der Maus *Zeiger*, der manchmal auch als Cursor bezeichnet wird, ist eine Bitmap
   
  Die primäre Methode zum Ändern des Mauszeigers besteht darin, die <xref:System.Windows.Forms.Control.Cursor%2A?displayProperty=nameWithType> oder <xref:System.Windows.Forms.Control.DefaultCursor%2A>-Eigenschaft eines Steuer Elements auf einen neuen <xref:System.Windows.Forms.Cursor>festzulegen. Beispiele zum Ändern des Mauszeigers finden Sie im Codebeispiel in der <xref:System.Windows.Forms.Cursor>-Klasse. Außerdem macht die <xref:System.Windows.Forms.Cursors>-Klasse eine Reihe von <xref:System.Windows.Forms.Cursor>-Objekten für viele verschiedene Zeiger Typen verfügbar, z. b. einen Zeiger, der einer Hand ähnelt. Um den Wait-Zeiger anzuzeigen, der einem Sanduhr ähnelt, wenn sich der Mauszeiger auf dem Steuerelement befindet, verwenden Sie die <xref:System.Windows.Forms.Control.UseWaitCursor%2A>-Eigenschaft der <xref:System.Windows.Forms.Control>-Klasse.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Windows.Forms.Cursor>
 - [Mauseingabe in einer Windows Forms-Anwendung](mouse-input-in-a-windows-forms-application.md)

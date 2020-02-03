@@ -22,7 +22,7 @@ In diesem Abschnitt werden die mit Windows Communication Foundation (WCF)-Sicher
  [Sicherheitsterminologie](../../../../docs/framework/wcf/feature-details/wcf-security-terminology.md)  
  Ein Glossar der Begriffe, die beim erörtern der WCF-Sicherheit verwendet werden.  
   
-## <a name="reference"></a>Referenz  
+## <a name="reference"></a>Verweis  
  <xref:System.ServiceModel>  
   
  <xref:System.ServiceModel.Channels>  
@@ -36,8 +36,8 @@ In diesem Abschnitt werden die mit Windows Communication Foundation (WCF)-Sicher
 ## <a name="related-sections"></a>Verwandte Abschnitte  
  [Erweitern der Sicherheit](../../../../docs/framework/wcf/extending/extending-security.md)  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Sicherheit](../../../../docs/framework/wcf/feature-details/security.md)
-- [Übersicht über die Sicherheit](../../../../docs/framework/wcf/feature-details/security-overview.md)
+- [Sicherheitsübersicht](../../../../docs/framework/wcf/feature-details/security-overview.md)
 - [Sicherheitsmodell für Windows Server-App-Fabric](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

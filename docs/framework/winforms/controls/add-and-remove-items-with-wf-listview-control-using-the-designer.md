@@ -30,7 +30,7 @@ Das folgende Verfahren erfordert ein **Windows-Anwendungs** Projekt mit einem Fo
 
 4. Um ein Element zu entfernen, wählen Sie es aus und klicken auf die Schaltfläche **Entfernen** .
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Übersicht über das ListView-Steuerelement](listview-control-overview-windows-forms.md)
 - [Gewusst wie: Hinzufügen von Spalten zum ListView-Steuerelement in Windows Forms](how-to-add-columns-to-the-windows-forms-listview-control.md)

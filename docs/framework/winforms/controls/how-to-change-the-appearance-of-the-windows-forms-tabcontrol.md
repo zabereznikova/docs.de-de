@@ -65,7 +65,7 @@ Sie können die Darstellung von Registerkarten in Windows Forms ändern, indem S
   
 - Legen Sie die <xref:System.Windows.Forms.TabControl.Appearance%2A>-Eigenschaft des <xref:System.Windows.Forms.TabControl> auf <xref:System.Windows.Forms.TabAppearance.Buttons> oder <xref:System.Windows.Forms.TabAppearance.FlatButtons>fest.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [TabControl-Steuerelement](tabcontrol-control-windows-forms.md)
 - [Übersicht über das TabControl-Steuerelement](tabcontrol-control-overview-windows-forms.md)

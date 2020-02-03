@@ -29,17 +29,17 @@ Mit dem <xref:System.Windows.Forms.ListView>-Steuerelement in Windows Forms wird
   
 |ListView-Member|Sicht|  
 |---------------------|----------|  
-|<xref:System.Windows.Forms.ListView.Alignment%2A> -Eigenschaft|<xref:System.Windows.Forms.View.SmallIcon> oder <xref:System.Windows.Forms.View.LargeIcon>|  
-|<xref:System.Windows.Forms.ListView.AutoArrange%2A> -Eigenschaft|<xref:System.Windows.Forms.View.SmallIcon> oder <xref:System.Windows.Forms.View.LargeIcon>|  
-|<xref:System.Windows.Forms.ListView.AutoResizeColumn%2A>-Methode|<xref:System.Windows.Forms.View.Details>|  
-|<xref:System.Windows.Forms.ListView.Columns%2A> -Eigenschaft|<xref:System.Windows.Forms.View.Details> oder <xref:System.Windows.Forms.View.Tile>|  
+|<xref:System.Windows.Forms.ListView.Alignment%2A>-Eigenschaft|<xref:System.Windows.Forms.View.SmallIcon> oder <xref:System.Windows.Forms.View.LargeIcon>|  
+|<xref:System.Windows.Forms.ListView.AutoArrange%2A>-Eigenschaft|<xref:System.Windows.Forms.View.SmallIcon> oder <xref:System.Windows.Forms.View.LargeIcon>|  
+|<xref:System.Windows.Forms.ListView.AutoResizeColumn%2A> -Methode|<xref:System.Windows.Forms.View.Details>|  
+|<xref:System.Windows.Forms.ListView.Columns%2A>-Eigenschaft|<xref:System.Windows.Forms.View.Details> oder <xref:System.Windows.Forms.View.Tile>|  
 |<xref:System.Windows.Forms.ListView.DrawSubItem> -Ereignis|<xref:System.Windows.Forms.View.Details>|  
-|<xref:System.Windows.Forms.ListView.FindItemWithText%2A>-Methode|<xref:System.Windows.Forms.View.Details>, <xref:System.Windows.Forms.View.List> oder <xref:System.Windows.Forms.View.Tile>|  
-|<xref:System.Windows.Forms.ListView.FindNearestItem%2A>-Methode|<xref:System.Windows.Forms.View.SmallIcon> oder <xref:System.Windows.Forms.View.LargeIcon>|  
-|<xref:System.Windows.Forms.ListView.GetItemAt%2A>-Methode|<xref:System.Windows.Forms.View.Details> oder <xref:System.Windows.Forms.View.Tile>|  
-|<xref:System.Windows.Forms.ListView.Groups%2A> -Eigenschaft|Alle Sichten außer <xref:System.Windows.Forms.View.List>|  
-|<xref:System.Windows.Forms.ListView.HeaderStyle%2A> -Eigenschaft|<xref:System.Windows.Forms.View.Details>.|  
-|<xref:System.Windows.Forms.ListView.InsertionMark%2A> -Eigenschaft|<xref:System.Windows.Forms.View.LargeIcon>, <xref:System.Windows.Forms.View.SmallIcon> oder <xref:System.Windows.Forms.View.Tile>|  
+|<xref:System.Windows.Forms.ListView.FindItemWithText%2A> -Methode|<xref:System.Windows.Forms.View.Details>, <xref:System.Windows.Forms.View.List> oder <xref:System.Windows.Forms.View.Tile>|  
+|<xref:System.Windows.Forms.ListView.FindNearestItem%2A> -Methode|<xref:System.Windows.Forms.View.SmallIcon> oder <xref:System.Windows.Forms.View.LargeIcon>|  
+|<xref:System.Windows.Forms.ListView.GetItemAt%2A> -Methode|<xref:System.Windows.Forms.View.Details> oder <xref:System.Windows.Forms.View.Tile>|  
+|<xref:System.Windows.Forms.ListView.Groups%2A>-Eigenschaft|Alle Sichten außer <xref:System.Windows.Forms.View.List>|  
+|<xref:System.Windows.Forms.ListView.HeaderStyle%2A>-Eigenschaft|[https://login.microsoftonline.com/consumers/](<xref:System.Windows.Forms.View.Details>).|  
+|<xref:System.Windows.Forms.ListView.InsertionMark%2A>-Eigenschaft|<xref:System.Windows.Forms.View.LargeIcon>, <xref:System.Windows.Forms.View.SmallIcon> oder <xref:System.Windows.Forms.View.Tile>|  
   
  Die Schlüsseleigenschaft des Steuer Elements <xref:System.Windows.Forms.ListView> ist <xref:System.Windows.Forms.ListView.Items%2A>, das die vom Steuerelement angezeigten Elemente enthält. Die <xref:System.Windows.Forms.ListView.SelectedItems%2A>-Eigenschaft enthält eine Sammlung der Elemente, die derzeit im-Steuerelement ausgewählt sind. Der Benutzer kann mehrere Elemente auswählen, z. b. zum Ziehen und Ablegen mehrerer Elemente gleichzeitig auf ein anderes Steuerelement, wenn die <xref:System.Windows.Forms.ListView.MultiSelect%2A>-Eigenschaft auf `true`festgelegt ist. Das <xref:System.Windows.Forms.ListView> Steuerelement kann Kontrollkästchen neben den Elementen anzeigen, wenn die Eigenschaft <xref:System.Windows.Forms.ListView.CheckBoxes%2A> auf `true`festgelegt ist.  
   
@@ -47,7 +47,7 @@ Mit dem <xref:System.Windows.Forms.ListView>-Steuerelement in Windows Forms wird
   
  Das <xref:System.Windows.Forms.ListView> Steuerelement unterstützt auch die visuellen Stile und andere Features, die auf der Windows XP-Plattform verfügbar sind, einschließlich Gruppierung, Kachel Ansicht und Einfügezeichen.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Windows.Forms.ListView>
 - [ListView-Steuerelement](listview-control-windows-forms.md)

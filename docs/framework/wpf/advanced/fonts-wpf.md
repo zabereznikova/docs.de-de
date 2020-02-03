@@ -18,11 +18,11 @@ ms.locfileid: "76737911"
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Features für OpenType-Schriftarten](opentype-font-features.md)  
- [Verpacken von Schriftarten mit Anwendungen](packaging-fonts-with-applications.md)  
+ [Schriftarten mit Anwendungen verpacken](packaging-fonts-with-applications.md)  
  [OpenType-Beispielschriftartenpaket](sample-opentype-font-pack.md)  
- [Gewusst wie-Themen](fonts-how-to-topics.md)  
+ [How-to Topics (Themen zur Vorgehensweise)](fonts-how-to-topics.md)  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Windows.FontStyle>
 - <xref:System.Windows.SystemFonts>

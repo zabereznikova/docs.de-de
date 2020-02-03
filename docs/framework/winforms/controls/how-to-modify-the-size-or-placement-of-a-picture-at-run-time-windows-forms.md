@@ -82,7 +82,7 @@ Wenn Sie die Windows Forms <xref:System.Windows.Forms.PictureBox>-Steuerelement 
        }  
     ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Windows.Forms.PictureBox>
 - [Gewusst wie: Laden eines Bilds mithilfe des Designers](how-to-load-a-picture-using-the-designer-windows-forms.md)

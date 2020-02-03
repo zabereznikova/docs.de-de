@@ -37,7 +37,7 @@ Das `DataGridView` Steuerelement erleichtert das Definieren der grundlegenden Da
  [Gewusst wie: Verwenden der Zeilenvorlage zum Anpassen von Zeilen im DataGridView-Steuerelement in Windows Forms](use-the-row-template-to-customize-rows-in-the-datagrid.md)  
  Beschreibt, wie die `RowTemplate`-Eigenschaft verwendet wird, um Zeilen Eigenschaften festzulegen, die für alle Zeilen im-Steuerelement verwendet werden.  
   
-## <a name="reference"></a>Referenz  
+## <a name="reference"></a>Verweis  
  <xref:System.Windows.Forms.DataGridView>  
  Enthält die Referenzdokumentation für das <xref:System.Windows.Forms.DataGridView>-Steuerelement.  
   
@@ -57,6 +57,6 @@ Das `DataGridView` Steuerelement erleichtert das Definieren der grundlegenden Da
  [Grundlegende Spalten-, Zeilen- und Zellfunktionen im DataGridView-Steuerelement in Windows Forms](basic-column-row-and-cell-features-wf-datagridview-control.md)  
  Stellt Themen bereit, in denen häufig verwendete Zellen-, Zeilen-und Spalten Eigenschaften beschrieben werden.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [DataGridView-Steuerelement](datagridview-control-windows-forms.md)

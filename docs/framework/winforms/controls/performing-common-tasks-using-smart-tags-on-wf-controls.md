@@ -30,7 +30,7 @@ Um die Entwicklung zu beschleunigen, bieten viele Steuerelemente Smarttags, bei 
 
 Smarttags bleiben während ihrer Lebensdauer im Designer an eine Steuerelement Instanz angefügt und sind immer verfügbar.
 
-## <a name="create-the-project"></a>Erstellen eines Projekts
+## <a name="create-the-project"></a>Erstellen des Projekts
 
 Im ersten Schritt wird das Projekt erstellt und das Formular eingerichtet.
 
@@ -54,7 +54,7 @@ Smarttags sind immer zur Entwurfszeit für Steuerelemente verfügbar, die Sie bi
 
 6. Klicken Sie auf das Smarttagsymbol. Wählen Sie im Kontextmenü, das neben dem Symbol angezeigt wird, das Element **horizontale Splitter Ausrichtung** aus. Beachten Sie, dass die Splitter Leiste des <xref:System.Windows.Forms.SplitContainer> Steuer Elements nun horizontal ausgerichtet ist.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Windows.Forms.TextBox>
 - <xref:System.Windows.Forms.TabControl>

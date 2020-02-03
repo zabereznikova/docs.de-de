@@ -305,7 +305,7 @@ Tabelle 1 zeigt die verschiedenen absoluten Paket-URIs, die Sie im Markup angebe
 
 Tabelle 1: Absolute Paket-URIs im Markup
 
-|File|Absoluter Paket-URI|
+|Datei|Absoluter Paket-URI|
 |----------|-------------------------------------------------------------------------------------------------------------------------|
 |Ressourcendatei – lokale Assembly|`"pack://application:,,,/ResourceFile.xaml"`|
 |Ressourcendatei im Unterordner – lokale Assembly|`"pack://application:,,,/Subfolder/ResourceFile.xaml"`|
@@ -321,7 +321,7 @@ Tabelle 2 zeigt die verschiedenen relativen Paket-URIs, die Sie im Markup angebe
 
 Tabelle 2: Relative Paket-URIs im Markup
 
-|File|Relativer Paket-URI|
+|Datei|Relativer Paket-URI|
 |----------|-------------------------------------------------------------------------------------------------------------------------|
 |Ressourcendatei in lokaler Assembly|`"/ResourceFile.xaml"`|
 |Ressourcendatei im Unterordner der lokalen Assembly|`"/Subfolder/ResourceFile.xaml"`|
@@ -368,7 +368,7 @@ Tabelle 3 zeigt die verschiedenen relativen Paket-URIs, die Sie im Code mithilfe
 
 Tabelle 3: Absolute Paket-URIs im Code
 
-|File|Absoluter Paket-URI|
+|Datei|Absoluter Paket-URI|
 |----------|-------------------------------------------------------------------------------------------------------------------------|
 |Ressourcendatei – lokale Assembly|`Uri uri = new Uri("pack://application:,,,/ResourceFile.xaml", UriKind.Absolute);`|
 |Ressourcendatei im Unterordner – lokale Assembly|`Uri uri = new Uri("pack://application:,,,/Subfolder/ResourceFile.xaml", UriKind.Absolute);`|
@@ -384,7 +384,7 @@ Tabelle 4 zeigt die verschiedenen relativen Paket-URIs, die Sie im Code mithilfe
 
 Tabelle 4: Relative Paket-URIs im Code
 
-|File|Relativer Paket-URI|
+|Datei|Relativer Paket-URI|
 |----------|-------------------------------------------------------------------------------------------------------------------------|
 |Ressourcendatei – lokale Assembly|`Uri uri = new Uri("/ResourceFile.xaml", UriKind.Relative);`|
 |Ressourcendatei im Unterordner – lokale Assembly|`Uri uri = new Uri("/Subfolder/ResourceFile.xaml", UriKind.Relative);`|
@@ -459,6 +459,6 @@ Ressourcen Wörterbücher (<xref:System.Windows.ResourceDictionary>) können ver
 
 Eine Übersicht über die Designs in WPF finden Sie unter Erstellen von Formaten [und](../../../desktop-wpf/fundamentals/styles-templates-overview.md)Vorlagen.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [WPF-Anwendungsressource, Inhalts- und Datendateien](wpf-application-resource-content-and-data-files.md)

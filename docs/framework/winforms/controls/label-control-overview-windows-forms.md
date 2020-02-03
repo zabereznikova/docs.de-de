@@ -23,7 +23,7 @@ Windows Forms <xref:System.Windows.Forms.Label>-Steuerelemente werden zum Anzeig
   
  Die in der Bezeichnung angezeigte Beschriftung ist in der <xref:System.Windows.Forms.Label.Text%2A>-Eigenschaft enthalten. Mit der <xref:System.Windows.Forms.Label.TextAlign%2A>-Eigenschaft können Sie die Ausrichtung des Texts innerhalb der Bezeichnung festlegen. Weitere Informationen finden Sie unter Gewusst [wie: Festlegen des Texts, der von einem Windows Forms-Steuerelement angezeigt wird](how-to-set-the-text-displayed-by-a-windows-forms-control.md).  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Windows.Forms.Label>
 - [Gewusst wie: Anpassen der Größe des Label-Steuerelements in Windows Forms an seinen Inhalt](how-to-size-a-windows-forms-label-control-to-fit-its-contents.md)

@@ -44,12 +44,12 @@ Das Windows Forms `RichTextBox`-Steuerelement wird zum Anzeigen, eingeben und Be
  [Gewusst wie: Festlegen von Einzügen, hängenden Einzügen und Absätzen mit Aufzählungszeichen mit dem RichTextBox-Steuerelement von Windows Forms](set-indents-hanging-indents-bulleted-paragraphs-with-wf-richtextbox.md)  
  Beschreibt das Formatieren von Absätzen im `RichTextBox`-Steuerelement.  
   
-## <a name="reference"></a>Referenz  
+## <a name="reference"></a>Verweis  
  <xref:System.Windows.Forms.RichTextBox>-Klasse  
  Beschreibt diese Klasse und enthält Links zu allen deren Membern.  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
- [Windows Forms-Steuerelemente](controls-to-use-on-windows-forms.md)  
+ [Steuerelemente für Windows Forms](controls-to-use-on-windows-forms.md)  
  Enthält eine vollständige Liste der Windows Forms-Steuerelemente mit Links zu Informationen zur jeweiligen Verwendung.  
   
  [TextBox-Steuerelement](textbox-control-windows-forms.md)  

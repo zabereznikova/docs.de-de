@@ -31,11 +31,11 @@ Visual Studio fügt alle Verweise auf das-Steuerelement in Ihrem Projekt hinzu. 
 > [!NOTE]
 > Das Windows Forms ActiveX-Steuerelement-Import Programm (Aximp. exe) erstellt Ereignis Argumente eines anderen Typs als erwartet beim Importieren von ActiveX-Dynamic Link Libraries. Die von "Aximp. exe" erstellten Argumente ähneln den folgenden: `Invoke(object sender, DWebBrowserEvents2_ProgressChangeEvent e)`, wenn `Invoke(object sender, DWebBrowserEvents2_ProgressChangeEventArgs e)` erwartet wird. Beachten Sie, dass diese Unregelmäßigkeiten nicht verhindern, dass Code normal funktioniert. Weitere Informationen finden Sie unter [Windows Forms ActiveX-Steuerelement-Import Programm (Aximp. exe)](../../tools/aximp-exe-windows-forms-activex-control-importer.md).
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Windows Forms-Steuerelemente](index.md)
 - [In zahlreichen Sprachen und Bibliotheken verglichene Steuerelemente und programmierbare Objekte](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/0061wezk(v=vs.100))
 - [Vorgehensweise: Hinzufügen von Steuerelementen zu Windows Forms](how-to-add-controls-to-windows-forms.md)
 - [Beschriften einzelner Steuerelemente für Windows Forms und Konfigurieren von Shortcuts für diese Elemente](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
-- [Windows Forms-Steuerelemente](controls-to-use-on-windows-forms.md)
+- [Steuerelemente für Windows Forms](controls-to-use-on-windows-forms.md)
 - [Windows Forms-Steuerelemente nach Funktion](windows-forms-controls-by-function.md)

@@ -19,7 +19,7 @@ Exemplarische Vorgehensweisen sind schrittweise Anleitungen für häufige Szenar
 
 ## <a name="wpf-designer-walkthroughs"></a>Exemplarische Vorgehensweisen für WPF
 
-|Title|Beschreibung|
+|Titel|BESCHREIBUNG|
 |-----------|-----------------|
 |[Exemplarische Vorgehensweise: Entwickeln einer einfachen WPF-Anwendung mit dem WPF-Designer](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb546972(v=vs.100))|Veranschaulicht, wie eine einfache WPF-Anwendung mit dem WPF-Designer erstellt wird.|
 |[Exemplarische Vorgehensweise: Erstellen eines dynamischen Layouts](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb514519(v=vs.100))|Veranschaulicht das Erstellen eines dynamischen Layouts mithilfe eines <xref:System.Windows.Controls.Grid> Panel-Steuer Elements.|
@@ -29,7 +29,7 @@ Exemplarische Vorgehensweisen sind schrittweise Anleitungen für häufige Szenar
 
 ## <a name="wpf-walkthroughs"></a>Exemplarische Vorgehensweisen für WPF
 
-|Title|Beschreibung|
+|Titel|BESCHREIBUNG|
 |-----------|-----------------|
 |[Exemplarische Vorgehensweise: Meine erste WPF-Desktopanwendung](walkthrough-my-first-wpf-desktop-application.md)|Veranschaulicht das Erstellen einer WPF-Anwendung mit vielen der allgemeinen Features von WPF, einschließlich Steuerelementen, Layout und Datenbindung.|
 |[Erstellen einer Schaltfläche mit XAML](../controls/walkthrough-create-a-button-by-using-xaml.md)|Veranschaulicht, wie eine animierte Schaltfläche erstellt wird.|
@@ -38,7 +38,7 @@ Exemplarische Vorgehensweisen sind schrittweise Anleitungen für häufige Szenar
 
 ## <a name="migration-and-interoperability-in-wpf"></a>Migration und Interoperabilität in WPF
 
-|Title|Beschreibung|
+|Titel|BESCHREIBUNG|
 |-----------|-----------------|
 |[Exemplarische Vorgehensweise: Hosten eines Windows Forms-Steuerelements in WPF](../advanced/walkthrough-hosting-a-windows-forms-control-in-wpf.md)|Veranschaulicht, wie ein Windows Forms <xref:System.Windows.Forms.MaskedTextBox?displayProperty=nameWithType>-Steuerelement in einer WPF-Anwendung gehostet wird.|
 |[Exemplarische Vorgehensweise: Hosten eines zusammengesetzten Windows Forms-Steuerelements in WPF](../advanced/walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)|Veranschaulicht, wie ein Windows Forms zusammengesetztes Dateneingabe-Steuerelement in einer [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Anwendung gehostet wird.|
@@ -48,6 +48,6 @@ Exemplarische Vorgehensweisen sind schrittweise Anleitungen für häufige Szenar
 
 ## <a name="related-sections"></a>Verwandte Abschnitte
 
-|Title|Beschreibung|
+|Titel|BESCHREIBUNG|
 |-----------|-----------------|
 |[Exemplarische Vorgehensweisen für Visual Studio](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/szatc41e(v=vs.100))|Enthält eine verwandte Liste der exemplarischen Vorgehensweisen für alle Programmier Bereiche in Visual Studio.|

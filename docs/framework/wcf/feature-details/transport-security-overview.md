@@ -46,10 +46,10 @@ Transport Sicherheitsmechanismen in Windows Communication Foundation (WCF) richt
   
  In den folgenden Abschnitten werden andere Client-Anmeldeinformationstypen erläutert.  
   
-#### <a name="basic"></a>Standard  
+#### <a name="basic"></a>Basic  
  Dies entspricht der Authentifizierungsmethode Standard in IIS. Wenn Sie diesen Modus verwenden, muss der IIS-Server mit Windows-Benutzerkonten und den entsprechenden NTFS-Dateisystemberechtigungen konfiguriert sein. Weitere Informationen zu IIS 6,0 finden Sie unter [Aktivieren der Standard Authentifizierung und Konfigurieren des Bereichs namens](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc785293(v=ws.10)). Weitere Informationen zu IIS 7,0 finden Sie unter [Konfigurieren der Standard Authentifizierung (IIS 7)](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc772009(v=ws.10)).  
   
-#### <a name="certificate"></a>Certificate  
+#### <a name="certificate"></a>Zertifikat  
  IIS verfügt über eine Option, mit der sich die Clients mit einem Zertifikat anmelden müssen. Mit dieser Funktion können die Internetinformationsdienste auch einem Windows-Konto ein Clientzertifikat zuordnen. Weitere Informationen zu IIS 6,0 finden Sie unter [Aktivieren von Client Zertifikaten in IIS 6,0](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc727994(v=ws.10)). Weitere Informationen zu IIS 7,0 finden Sie unter [Konfigurieren von Server Zertifikaten in IIS 7](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc732230(v=ws.10)).  
   
 #### <a name="digest"></a>Digest  
@@ -59,7 +59,7 @@ Transport Sicherheitsmechanismen in Windows Communication Foundation (WCF) richt
  Dies entspricht der integrierten Windows-Authentifizierungsmethode in IIS. Bei dieser Methode muss sich auch der Server in einer Windows-Domäne befinden, die das Kerberos-Protokoll als Domänencontroller verwendet. Falls sich der Server nicht in einer Kerberos-Domäne befindet oder falls das Kerberos-System fehlschlägt, können Sie den im nächsten Abschnitt beschriebenen NTLM-Wert verwenden. Weitere Informationen zu IIS 6,0 finden Sie unter [integrierte Windows-Authentifizierung in IIS 6,0](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc738016(v=ws.10)). Weitere Informationen zu IIS 7,0 finden Sie unter [Konfigurieren von Server Zertifikaten in IIS 7](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc732230(v=ws.10)).
   
 #### <a name="ntlm"></a>NTLM  
- Dadurch kann der Server NTLM für die Authentifizierung verwenden, falls das Kerberos-Protokoll fehlschlägt. Weitere Informationen zum Konfigurieren von IIS in IIS 6,0 finden Sie unter [erzwingen der NTLM-Authentifizierung](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc786486(v=ws.10)). Für IIS 7,0 enthält die Windows-Authentifizierung die NTLM-Authentifizierung. Weitere Informationen finden Sie unter [Konfigurieren von Server Zertifikaten in IIS 7](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc732230(v=ws.10)).
+ Dadurch kann der Server NTLM für die Authentifizierung verwenden, falls das Kerberos-Protokoll fehlschlägt. Weitere Informationen zum Konfigurieren von IIS in IIS 6,0 finden Sie unter [erzwingen der NTLM-Authentifizierung](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc786486(v=ws.10)). Für IIS 7,0 enthält die Windows-Authentifizierung die NTLM-Authentifizierung. Weitere Informationen finden Sie unter [Konfigurieren von Serverzertifikaten in IIS 7.0](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc732230(v=ws.10)).
   
 ## <a name="wshttpbinding"></a>WsHttpBinding  
  Die <xref:System.ServiceModel.WSHttpBinding>-Klasse ist für die Zusammenarbeit mit Diensten vorgesehen, die WS-*-Spezifikationen implementieren. Die Transportsicherheit für diese Bindung ist SSL (Secure Sockets Layer) über HTTP oder HTTPS. Zum Erstellen einer WCF-Anwendung, die SSL verwendet, verwenden Sie IIS zum Hosten der Anwendung. Wenn Sie eine selbst gehostete Anwendung erstellen, können Sie mit dem Tool HttpCfg.exe ein X.509-Zertifikat an einen bestimmten Anschluss eines Computers binden. Die Portnummer wird als Teil der WCF-Anwendung als Endpunkt Adresse angegeben. Bei Verwendung des Transportmodus muss die Endpunktadresse das HTTPS-Protokoll enthalten. Andernfalls wird zur Laufzeit eine Ausnahme ausgelöst. Weitere Informationen finden Sie unter [http-Transport Sicherheit](../../../../docs/framework/wcf/feature-details/http-transport-security.md).  
@@ -115,11 +115,11 @@ Transport Sicherheitsmechanismen in Windows Communication Foundation (WCF) richt
  Wenn Sie Transportsicherheit verwenden, erfolgt diese Bindung mit SSL über HTTP (als HTTPS bezeichnet) und einem ausgestellten Token (<xref:System.ServiceModel.WSFederationHttpSecurityMode.TransportWithMessageCredential>). Weitere Informationen zu Verbund Anwendungen finden Sie unter Verbund [-und ausgestellte Token](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md).  
   
 ## <a name="netpeertcpbinding"></a>NetPeerTcpBinding  
- Die <xref:System.ServiceModel.NetPeerTcpBinding>-Klasse stellt einen sicheren Transportmechanismus dar, ausgerichtet auf eine effektive Kommunikation, die die Peer-to-Peer-Netzwerkfunktion verwendet. Wie anhand des Namens der Klasse und der Bindung angegeben, ist TCP das Protokoll. Wenn der Sicherheitsmodus auf Transport festgelegt ist, implementiert die Bindung TLS über TCP. Weitere Informationen zur Peer-zu-Peer-Funktion finden Sie unter [Peer-to-Peer-Netzwerke](../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md).  
+ Die <xref:System.ServiceModel.NetPeerTcpBinding>-Klasse stellt einen sicheren Transportmechanismus dar, ausgerichtet auf eine effektive Kommunikation, die die Peer-to-Peer-Netzwerkfunktion verwendet. Wie anhand des Namens der Klasse und der Bindung angegeben, ist TCP das Protokoll. Wenn der Sicherheitsmodus auf {1}Transport{2} festgelegt ist, implementiert die Bindung TLS über TCP. Weitere Informationen zur Peer-zu-Peer-Funktion finden Sie unter [Peer-to-Peer-Netzwerke](../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md).  
   
 ## <a name="msmqintegrationbinding-and-netmsmqbinding"></a>MsmqIntegrationBinding und NetMsmqBinding  
  Eine umfassende Erläuterung der Transportsicherheit mit Message Queuing (zuvor als MSMQ bezeichnet) finden [Sie unter Sichern von Nachrichten mit Transportsicherheit](../../../../docs/framework/wcf/feature-details/securing-messages-using-transport-security.md).  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Programmieren der WCF-Sicherheit](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md)

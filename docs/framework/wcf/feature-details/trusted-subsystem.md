@@ -29,9 +29,9 @@ Ein Client greift auf einen oder mehrere Webdienste zu, die über das Netzwerk v
   
 5. Das vertrauenswürdige Subsystem verarbeitet die Antwort und gibt seine eigene Antwort an den Client heraus.  
   
-|Merkmal|Beschreibung|  
+|Merkmal|BESCHREIBUNG|  
 |--------------------|-----------------|  
-|Sicherheitsmodus|Meldung|  
+|Sicherheitsmodus|`Message`|  
 |Interoperabilität|Nur Windows Communication Foundation (WCF).|  
 |Authentifizierung (Dienst)|Sicherheitstokendienst authentifiziert und autorisiert Clients.|  
 |Authentifizierung (Client)|Das vertrauenswürdige Subsystem authentifiziert den Client, und die Ressource authentifiziert den vertrauenswürdigen Subsystemdienst.|  
@@ -48,7 +48,7 @@ Ein Client greift auf einen oder mehrere Webdienste zu, die über das Netzwerk v
  [!code-csharp[TrustedSubSystemsResource#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/trustedsubsystemsresource/cs/source.cs#1)]
  [!code-vb[TrustedSubSystemsResource#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/trustedsubsystemsresource/vb/source.vb#1)]  
   
-### <a name="configuration"></a>-Konfiguration  
+### <a name="configuration"></a>Konfiguration  
  Mit der folgenden Konfiguration wird derselbe Endpunkt mithilfe von Konfiguration eingerichtet.  
   
 ```xml  
@@ -100,7 +100,7 @@ Ein Client greift auf einen oder mehrere Webdienste zu, die über das Netzwerk v
  [!code-csharp[TrustedSubSystems#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/trustedsubsystems/cs/source.cs#2)]
  [!code-vb[TrustedSubSystems#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/trustedsubsystems/vb/source.vb#2)]  
   
-### <a name="configuration"></a>-Konfiguration  
+### <a name="configuration"></a>Konfiguration  
  Mit der folgenden Konfiguration wird derselbe Endpunkt mithilfe von Konfiguration eingerichtet. Beachten Sie die beiden Bindungen: Eine sichert den im vertrauenswürdigen Subsystem gehosteten Dienst und die andere kommuniziert zwischen dem vertrauenswürdigen Subsystem und dem Back-End-Dienst.  
   
 ```xml  
@@ -171,7 +171,7 @@ Ein Client greift auf einen oder mehrere Webdienste zu, die über das Netzwerk v
  [!code-csharp[TrustedSubSystemsClient#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/trustedsubsystemsclient/cs/source.cs#1)]
  [!code-vb[TrustedSubSystemsClient#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/trustedsubsystemsclient/vb/source.vb#1)]  
   
-### <a name="configuration"></a>-Konfiguration  
+### <a name="configuration"></a>Konfiguration  
  Der folgende Code konfiguriert den Client so, dass Nachrichtensicherheit über das HTTP-Protokoll und Benutzername und Kennwort für die Authentifizierung verwendet werden. Der Benutzername und das Kennwort können nur mit Code (nicht konfigurierbar) angegeben werden.  
   
 ```xml  
@@ -210,7 +210,7 @@ Ein Client greift auf einen oder mehrere Webdienste zu, die über das Netzwerk v
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Übersicht über die Sicherheit](../../../../docs/framework/wcf/feature-details/security-overview.md)
+- [Sicherheitsübersicht](../../../../docs/framework/wcf/feature-details/security-overview.md)
 - [Sicherheitsmodell für Windows Server-App-Fabric](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

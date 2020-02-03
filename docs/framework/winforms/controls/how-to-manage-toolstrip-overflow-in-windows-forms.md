@@ -25,13 +25,13 @@ Wenn Sie <xref:System.Windows.Forms.ToolStripItem>s hinzufügen, die mehr Speich
 
 ## <a name="to-enable-overflow-on-a-toolstrip-control"></a>So aktivieren Sie den Überlauf für ein ToolStrip-Steuerelement
 
-- Stellen Sie sicher, dass die <xref:System.Windows.Forms.ToolStrip.CanOverflow%2A>-Eigenschaft für die <xref:System.Windows.Forms.ToolStrip>nicht auf `false` festgelegt ist. Die Standardeinstellung ist `True`.
+- Stellen Sie sicher, dass die <xref:System.Windows.Forms.ToolStrip.CanOverflow%2A>-Eigenschaft für die <xref:System.Windows.Forms.ToolStrip>nicht auf `false` festgelegt ist. Der Standardwert lautet `True`.
 
      Wenn <xref:System.Windows.Forms.ToolStrip.CanOverflow%2A> `True` (Standard) ist, wird ein <xref:System.Windows.Forms.ToolStripItem> an das Dropdown-Überlauf Menü gesendet, wenn der Inhalt des <xref:System.Windows.Forms.ToolStripItem> die Breite eines horizontalen <xref:System.Windows.Forms.ToolStrip> oder die Höhe eines vertikalen <xref:System.Windows.Forms.ToolStrip>überschreitet.
 
 ## <a name="to-specify-overflow-behavior-of-a-specific-toolstripitem"></a>So geben Sie das Überlauf Verhalten eines bestimmten Tool Strip Item an
 
-- Legen Sie die <xref:System.Windows.Forms.ToolStripItem.Overflow%2A>-Eigenschaft des <xref:System.Windows.Forms.ToolStripItem> auf den gewünschten Wert fest. Die Möglichkeiten sind `Always`, `Never`und `AsNeeded`. Die Standardeinstellung ist `AsNeeded`.
+- Legen Sie die <xref:System.Windows.Forms.ToolStripItem.Overflow%2A>-Eigenschaft des <xref:System.Windows.Forms.ToolStripItem> auf den gewünschten Wert fest. Die Möglichkeiten sind `Always`, `Never`und `AsNeeded`. Der Standardwert lautet `AsNeeded`.
 
     ```vb
     toolStripTextBox1.Overflow = _
@@ -43,7 +43,7 @@ Wenn Sie <xref:System.Windows.Forms.ToolStripItem>s hinzufügen, die mehr Speich
     System.Windows.Forms.ToolStripItemOverflow.Never;
     ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Windows.Forms.ToolStrip>
 - <xref:System.Windows.Forms.ToolStripOverflowButton>

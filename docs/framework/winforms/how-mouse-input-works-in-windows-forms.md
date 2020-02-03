@@ -21,7 +21,7 @@ Das empfangen und Verarbeiten von Maus Eingaben ist ein wichtiger Bestandteil je
 ## <a name="mouse-events"></a>Mausereignisse  
  Die primäre Methode, auf die Maus Eingaben zu reagieren, besteht darin, Mausereignisse zu behandeln. In der folgenden Tabelle werden die Mausereignisse angezeigt, und es wird beschrieben, wann Sie ausgelöst werden.  
   
-|Mausereignis|Beschreibung|  
+|Mausereignis|BESCHREIBUNG|  
 |-----------------|-----------------|  
 |<xref:System.Windows.Forms.Control.Click>|Dieses Ereignis tritt auf, wenn die Maustaste losgelassen wird, in der Regel vor dem <xref:System.Windows.Forms.Control.MouseUp>-Ereignis. Der Handler für dieses Ereignis empfängt ein Argument des Typs <xref:System.EventArgs>. Behandeln Sie dieses Ereignis, wenn Sie nur bestimmen müssen, wann ein Klick auftritt.|  
 |<xref:System.Windows.Forms.Control.MouseClick>|Dieses Ereignis tritt auf, wenn der Benutzer mit der Maus auf das-Steuerelement klickt. Der Handler für dieses Ereignis empfängt ein Argument des Typs <xref:System.Windows.Forms.MouseEventArgs>. Behandeln Sie dieses Ereignis, wenn Sie Informationen über die Maus erhalten müssen, wenn ein Klick auftritt.|  
@@ -38,7 +38,7 @@ Das empfangen und Verarbeiten von Maus Eingaben ist ein wichtiger Bestandteil je
 ## <a name="changing-mouse-input-and-detecting-system-settings"></a>Ändern der Maus Eingaben und erkennen von System Einstellungen  
  Sie können die Methode, mit der ein Steuerelement Maus Eingaben behandelt, erkennen und ändern, indem Sie vom-Steuerelement ableiten und die Methoden <xref:System.Windows.Forms.Control.GetStyle%2A> und <xref:System.Windows.Forms.Control.SetStyle%2A> verwenden. Die <xref:System.Windows.Forms.Control.SetStyle%2A>-Methode verwendet eine bitweise Kombination von <xref:System.Windows.Forms.ControlStyles> Werten, um zu bestimmen, ob das Steuerelement ein Standardmäßiges Click-oder Doppelklick Verhalten aufweist oder ob das Steuerelement seine eigene Maus Verarbeitung behandelt. Außerdem enthält die <xref:System.Windows.Forms.SystemInformation>-Klasse Eigenschaften, die die Funktionen der Maus beschreiben und angeben, wie die Maus mit dem Betriebssystem interagiert. In der folgenden Tabelle werden diese Eigenschaften zusammengefasst.  
   
-|Die Eigenschaften-|Beschreibung|  
+|Eigenschaft|BESCHREIBUNG|  
 |--------------|-----------------|  
 |<xref:System.Windows.Forms.SystemInformation.DoubleClickSize%2A>|Ruft die Abmessungen des Bereichs in Pixel ab, in dem der Benutzer zweimal auf die beiden Klicks klicken muss, damit das Betriebssystem auf einen Doppelklick klickt.|  
 |<xref:System.Windows.Forms.SystemInformation.DoubleClickTime%2A>|Ruft die maximale Anzahl von Millisekunden ab, die zwischen dem ersten und einem zweiten Mausklick vergehen können, damit das Betriebssystem die Maus Aktion als Doppelklick berücksichtigt.|  
@@ -52,7 +52,7 @@ Das empfangen und Verarbeiten von Maus Eingaben ist ein wichtiger Bestandteil je
 |<xref:System.Windows.Forms.SystemInformation.MouseWheelScrollDelta%2A>|Ruft die Menge des Delta Werts für das Inkrement einer einzelnen Mausrad Drehung ab.|  
 |<xref:System.Windows.Forms.SystemInformation.MouseWheelScrollLines%2A>|Ruft die Anzahl der Zeilen ab, die mit einem Bildlauf erfasst werden, wenn das Mausrad gedreht wird.|  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Mauseingabe in einer Windows Forms-Anwendung](mouse-input-in-a-windows-forms-application.md)
 - [Mauserfassung in Windows Forms](mouse-capture-in-windows-forms.md)

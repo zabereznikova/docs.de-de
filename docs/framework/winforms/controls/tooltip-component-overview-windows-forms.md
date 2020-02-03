@@ -22,7 +22,7 @@ Die <xref:System.Windows.Forms.ToolTip>-Komponente in Windows Forms zeigt Text a
   
  Die wichtigsten Methoden der <xref:System.Windows.Forms.ToolTip> Komponente sind <xref:System.Windows.Forms.ToolTip.SetToolTip%2A> und <xref:System.Windows.Forms.ToolTip.GetToolTip%2A>. Sie können die <xref:System.Windows.Forms.ToolTip.SetToolTip%2A>-Methode verwenden, um die für Steuerelemente angezeigten Quick Infos festzulegen. Weitere Informationen finden [Sie unter Gewusst wie: Festlegen von Quick Infos für Steuerelemente auf einem Windows Form zur Entwurfszeit](how-to-set-tooltips-for-controls-on-a-windows-form-at-design-time.md). Die Schlüsseleigenschaften sind <xref:System.Windows.Forms.ToolTip.Active%2A>, die auf `true` festgelegt werden müssen, damit die QuickInfo angezeigt wird, und <xref:System.Windows.Forms.ToolTip.AutomaticDelay%2A>, der die Zeitspanne festlegt, in der die QuickInfo-Zeichenfolge angezeigt wird, die Dauer, die der Benutzer auf das Steuerelement zeigen muss, damit die QuickInfo angezeigt wird, und wie lange es dauert, bis nachfolgende QuickInfo angezeigt werden. Weitere Informationen finden Sie unter Gewusst [wie: Ändern der Verzögerung der Windows Forms ToolTip-Komponente](how-to-change-the-delay-of-the-windows-forms-tooltip-component.md).  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Windows.Forms.ToolTip>
 - [Gewusst wie: Festlegen von QuickInfos für Steuerelemente auf einem Windows Form zur Entwurfszeit](how-to-set-tooltips-for-controls-on-a-windows-form-at-design-time.md)

@@ -93,7 +93,7 @@ ms.locfileid: "76740592"
        }  
     ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [ADO.NET-DataSets](../../data/adonet/ado-net-datasets.md)
 - [Gewusst wie: Löschen oder Ausblenden von Spalten aus dem DataGrid-Steuerelement in Windows Forms](how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)

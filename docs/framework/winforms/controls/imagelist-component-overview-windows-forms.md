@@ -27,7 +27,7 @@ Eine Bildliste kann mit jedem Steuerelement eingesetzt werden, das eine `ImageLi
 
 Die wichtigste Eigenschaft der <xref:System.Windows.Forms.ImageList>-Komponente ist <xref:System.Windows.Forms.ImageList.Images%2A>, in der die Bilder enthalten sind, die vom zugeordneten Steuerelement verwendet werden. Der Zugriff auf jedes einzelne Bild kann über dessen Indexwert oder dessen Schlüssel erfolgen. Mit der <xref:System.Windows.Forms.ImageList.ColorDepth%2A>-Eigenschaft wird die Anzahl der Farben bestimmt, mit denen die Bilder dargestellt werden. Alle Bilder werden in derselben Größe angezeigt, die durch die <xref:System.Windows.Forms.ImageList.ImageSize%2A>-Eigenschaft festgelegt ist. Größere Bilder werden entsprechend angepasst.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Windows.Forms.ImageList>
 - [Gewusst wie: Hinzufügen oder Entfernen von Bildern mit der ImageList-Komponente in Windows Forms](how-to-add-or-remove-images-with-the-windows-forms-imagelist-component.md)

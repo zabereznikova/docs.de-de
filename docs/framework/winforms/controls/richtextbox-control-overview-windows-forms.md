@@ -24,7 +24,7 @@ Das Windows Forms <xref:System.Windows.Forms.RichTextBox>-Steuerelement wird zum
   
  Sie können die meisten Bearbeitungsvorgänge in einem <xref:System.Windows.Forms.RichTextBox>-Steuerelement rückgängig machen und wiederholen, indem Sie die Methoden <xref:System.Windows.Forms.TextBoxBase.Undo%2A> und <xref:System.Windows.Forms.RichTextBox.Redo%2A> aufrufen. Die <xref:System.Windows.Forms.RichTextBox.CanRedo%2A>-Methode ermöglicht Ihnen, zu bestimmen, ob der letzte Vorgang, den der Benutzer rückgängig gemacht hat, erneut auf das Steuerelement angewendet werden kann.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Windows.Forms.RichTextBox>
 - [RichTextBox-Steuerelement](richtextbox-control-windows-forms.md)

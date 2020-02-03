@@ -55,8 +55,8 @@ Ein-Steuerelement, dessen <xref:System.Windows.Forms.Control.TabStop%2A>-Eigensc
 > [!NOTE]
 > Eine Optionsfeld Gruppe verfügt zur Laufzeit über einen einzelnen Tabstopp. Die ausgewählte Schaltfläche (d. h. die Schaltfläche mit der <xref:System.Windows.Forms.RadioButton.Checked%2A>-Eigenschaft, die auf `true`festgelegt ist) hat die <xref:System.Windows.Forms.Control.TabStop%2A>-Eigenschaft automatisch auf `true`festgelegt, während die <xref:System.Windows.Forms.Control.TabStop%2A>-Eigenschaft der anderen Schaltflächen auf `false`festgelegt ist Weitere Informationen zum Gruppieren von <xref:System.Windows.Forms.RadioButton> Steuerelementen finden [Sie unter Gruppieren Windows Forms RadioButton-Steuerelementen, die als Gruppe fungieren](how-to-group-windows-forms-radiobutton-controls-to-function-as-a-set.md).
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Windows Forms-Steuerelemente](index.md)
-- [Windows Forms-Steuerelemente](controls-to-use-on-windows-forms.md)
+- [Steuerelemente für Windows Forms](controls-to-use-on-windows-forms.md)
 - [Windows Forms-Steuerelemente nach Funktion](windows-forms-controls-by-function.md)

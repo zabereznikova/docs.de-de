@@ -32,7 +32,7 @@ Das `DataGridView`-Steuerelement bietet verschiedene Funktionen, mit denen Sie �
  [Exemplarische Vorgehensweise: Behandeln von Fehlern, die während der Dateneingabe im DataGridView-Steuerelement in Windows Forms auftreten](handling-errors-that-occur-during-data-entry-in-the-datagrid.md)  
  Beschreibt, wie Dateneingabe Fehler behandelt werden, die aus der Datenquelle stammen, wenn der Benutzer versucht, ein Commit für einen neuen Wert durchzuführen.  
   
-## <a name="reference"></a>Referenz  
+## <a name="reference"></a>Verweis  
  <xref:System.Windows.Forms.DataGridView>  
  Enthält die Referenzdokumentation für das <xref:System.Windows.Forms.DataGridView>-Steuerelement.  
   
@@ -52,7 +52,7 @@ Das `DataGridView`-Steuerelement bietet verschiedene Funktionen, mit denen Sie �
  [Anzeigen von Daten im DataGridView-Steuerelement in Windows Forms](displaying-data-in-the-windows-forms-datagridview-control.md)  
  Enthält Themen, in denen beschrieben wird, wie das Steuerelement entweder manuell oder aus einer externen Datenquelle mit Daten aufgefüllt wird.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [DataGridView-Steuerelement](datagridview-control-windows-forms.md)
 - [Spaltentypen im DataGridView-Steuerelement in Windows Forms](column-types-in-the-windows-forms-datagridview-control.md)

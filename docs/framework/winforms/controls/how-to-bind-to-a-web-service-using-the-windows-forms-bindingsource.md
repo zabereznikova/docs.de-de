@@ -66,11 +66,11 @@ Wenn Sie ein Windows Form-Steuerelements an die Ergebnisse des Aufrufs eines XML
 ## <a name="compiling-the-code"></a>Kompilieren des Codes  
  Dies ist ein vollständiges Beispiel, das eine `Main`-Methode und eine verkürzte Version des clientseitigen Proxycodes enthält.  
   
- Für dieses Beispiel benötigen Sie Folgendes:  
+ Dieses Beispiel erfordert Folgendes:  
   
 - Verweise auf die Assemblys "System", "System.Drawing", "System.Web.Services", "System.Windows.Forms" und "System.Xml".  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [BindingSource-Komponente](bindingsource-component.md)
 - [Vorgehensweise: Binden eines Windows Forms-Steuerelements an einen Typ](how-to-bind-a-windows-forms-control-to-a-type.md)

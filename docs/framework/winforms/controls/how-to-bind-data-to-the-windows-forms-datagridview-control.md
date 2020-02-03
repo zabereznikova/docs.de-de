@@ -32,7 +32,7 @@ So verbinden Sie ein DataGridView-Steuerelement mit Daten:
 
 Dieses vollständige Codebeispiel ruft Daten aus einer Datenbank ab, um ein DataGridView-Steuerelement in einem Windows Form aufzufüllen. Das Formular enthält auch Schaltflächen zum erneuten Laden von Daten und Übermitteln von Änderungen an die Datenbank.  
 
-Für dieses Beispiel benötigen Sie Folgendes: 
+Dieses Beispiel erfordert Folgendes: 
 
 - Zugriff auf eine Beispieldatenbank für Northwind SQL Server. Weitere Informationen zum Installieren der Beispieldatenbank Northwind finden Sie unter [Get the Sample Database for ADO.NET Code Samples](../../data/adonet/sql/linq/downloading-sample-databases.md). 
 
@@ -45,7 +45,7 @@ Füllen Sie die `connectionString` Variable im Beispiel mit den Werten für die 
 [!code-csharp[System.Windows.Forms.DataGridViewBoundEditable](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewBoundEditable/CS/datagridviewboundeditable.cs)]
 [!code-vb[System.Windows.Forms.DataGridViewBoundEditable](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewBoundEditable/VB/datagridviewboundeditable.vb)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.DataSource%2A?displayProperty=nameWithType>

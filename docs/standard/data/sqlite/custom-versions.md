@@ -21,9 +21,9 @@ Das Microsoft. Data. sqlite-Hauptpaket führt standardmäßig sqlitepclraw. bund
 
 Wenn Sie ein anderes Paket verwenden möchten, installieren Sie das `Microsoft.Data.Sqlite.Core` Paket und das Paket Paket, das Sie verwenden möchten. Pakete werden automatisch von "Microsoft. Data. sqlite" initialisiert.
 
-| Dels | Beschreibung |
+| Paket | BESCHREIBUNG |
 | --- | --- |
-| Sqlitepclraw. bundle_e_sqlite3 | Stellt eine konsistente Version von SQLite auf allen Plattformen bereit. Schließt die Struktur Erweiterungen FTS4, FTS5, JSON1 und R * ein. Dies ist der Standardwert. |
+| Sqlitepclraw. bundle_e_sqlite3 | Stellt eine konsistente Version von SQLite auf allen Plattformen bereit. Schließt die Struktur Erweiterungen FTS4, FTS5, JSON1 und R * ein. Dies ist die Standardoption. |
 | Sqlitepclraw. bundle_green | Identisch mit bundle_e_sqlite3, mit Ausnahme von IOS, wo die System SQLite-Bibliothek verwendet wird. |
 | Sqlitepclraw. bundle_zetetic | Verwendet die offiziellen sqlcipher-Builds aus Zetetic (nicht eingeschlossen). |
 | Sqlitepclraw. bundle_winsqlite3 | Verwendet winsqlite3. dll, die System SQLite-Bibliothek unter Windows 10. |

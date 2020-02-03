@@ -22,7 +22,7 @@ Standardmäßig können Benutzer den Inhalt der aktuellen <xref:System.Windows.F
   
 - Das <xref:System.Windows.Forms.DataGridView> Steuerelement ist aktiviert.  
   
-- Der <xref:System.Windows.Forms.DataGridView.EditMode%2A>-Eigenschafts Wert ist nicht <xref:System.Windows.Forms.DataGridViewEditMode.EditProgrammatically>.  
+- Der <xref:System.Windows.Forms.DataGridView.EditMode%2A>-Eigenschaftswert lautet nicht <xref:System.Windows.Forms.DataGridViewEditMode.EditProgrammatically>.  
   
 - Die `ReadOnly` Eigenschaften von Zelle, Zeile, Spalte und Steuerelement sind auf `false`festgelegt.  
   
@@ -38,13 +38,13 @@ Standardmäßig können Benutzer den Inhalt der aktuellen <xref:System.Windows.F
      [!code-vb[System.Windows.Forms.DataGridViewMisc#067](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#067)]  
   
 ## <a name="compiling-the-code"></a>Kompilieren des Codes  
- Für dieses Beispiel benötigen Sie Folgendes:  
+ Dieses Beispiel erfordert Folgendes:  
   
 - Ein <xref:System.Windows.Forms.DataGridView>-Steuerelement namens `dataGridView1`.  
   
 - Verweise auf die Assemblys <xref:System> und <xref:System.Windows.Forms>.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.EditMode%2A?displayProperty=nameWithType>

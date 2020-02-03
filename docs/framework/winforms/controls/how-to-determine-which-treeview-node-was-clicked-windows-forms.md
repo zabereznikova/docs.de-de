@@ -58,6 +58,6 @@ Beim Arbeiten mit dem Windows Forms <xref:System.Windows.Forms.TreeView>-Steuere
     > [!NOTE]
     > Als Alternative können Sie den <xref:System.Windows.Forms.MouseEventArgs> des <xref:System.Windows.Forms.Control.MouseDown> oder <xref:System.Windows.Forms.Control.MouseUp> Ereignisses verwenden, um die <xref:System.Drawing.Point.X%2A> und <xref:System.Drawing.Point.Y%2A> Koordinaten Werte des <xref:System.Drawing.Point> zu erhalten, in dem der Klick aufgetreten ist. Verwenden Sie dann die <xref:System.Windows.Forms.TreeView.GetNodeAt%2A>-Methode des <xref:System.Windows.Forms.TreeView>-Steuer Elements, um zu ermitteln, auf welchen Knoten geklickt wurde.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [TreeView-Steuerelement](treeview-control-windows-forms.md)

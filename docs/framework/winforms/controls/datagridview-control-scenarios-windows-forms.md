@@ -1,5 +1,5 @@
 ---
-title: Szenarios für das DataGridView-Steuerelement
+title: Szenarien für das DataGridView-Steuerelement
 ms.date: 03/30/2017
 helpviewer_keywords:
 - data [Windows Forms], displaying in tabular format
@@ -86,7 +86,7 @@ Mit dem <xref:System.Windows.Forms.DataGridView>-Steuerelement können Sie tabel
   
 - Sie können Ihre eigenen Zell-und Spalten Klassen implementieren, um die Steuerelemente zu hosten, die von den integrierten Spaltentypen bereitgestellt werden. Weitere Informationen finden Sie unter Gewusst [wie: Hosten von Steuerelementen in Windows Forms DataGridView-Zellen](how-to-host-controls-in-windows-forms-datagridview-cells.md).  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Windows.Forms.DataGridView>
 - [Übersicht über das DataGridView-Steuerelement](datagridview-control-overview-windows-forms.md)

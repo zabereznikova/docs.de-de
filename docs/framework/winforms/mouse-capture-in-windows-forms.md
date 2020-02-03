@@ -21,6 +21,6 @@ Die *Maus Aufzeichnung* verweist auf, wenn ein Steuerelement den Befehl für all
   
  Nur im Vordergrund Fenster kann die Maus erfasst werden. Wenn ein Hintergrund Fenster versucht, die Maus zu erfassen, empfängt das Fenster nur Meldungen für Mausereignisse, die auftreten, wenn sich der Mauszeiger innerhalb des sichtbaren Teils des Fensters befindet. Auch wenn das Vordergrund Fenster die Maus erfasst hat, kann der Benutzer weiterhin auf ein anderes Fenster klicken, um ihn in den Vordergrund zu bringen. Wenn die Maus aufgezeichnet wird, funktionieren Tastenkombinationen nicht.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Mauseingabe in einer Windows Forms-Anwendung](mouse-input-in-a-windows-forms-application.md)

@@ -54,7 +54,7 @@ Sie müssen mehrere MIME-Typen und-Dateierweiterungen registrieren, damit der Br
 
 |Erweiterung|MIME-Typ|
 |---------------|---------------|
-|MANIFEST|application/manifest|
+|.manifest|application/manifest|
 |XAML|application/xaml+xml|
 |APPLICATION|application/x-ms-application|
 |XBAP|application/x-ms-xbap|

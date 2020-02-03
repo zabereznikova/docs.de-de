@@ -27,9 +27,9 @@ In dieser exemplarischen Vorgehensweise rufen Sie Zeilen aus der `Customers` Tab
 
 Informationen zum Kopieren des Codes in diesem Thema als einzelne Auflistung finden Sie unter Gewusst [wie: Behandeln von Fehlern, die während der Dateneingabe im Windows Forms DataGridView-Steuerelement auftreten](handle-errors-that-occur-during-data-entry-in-the-datagrid.md).
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
+## <a name="prerequisites"></a>Voraussetzungen
 
-Für die Durchführung dieser exemplarischen Vorgehensweise benötigen Sie Folgendes:
+Wenn Sie diese exemplarische Vorgehensweise abschließen möchten, müssen folgende Voraussetzungen erfüllt sein:
 
 - Zugriff auf einen Server mit der Beispieldatenbank Northwind SQL Server.
 
@@ -74,7 +74,7 @@ Sie können das Formular jetzt testen, um sicherzustellen, dass das Verhalten wi
 
 #### <a name="to-test-the-form"></a>So testen Sie das Formular
 
-- Drücken Sie F5, um die Anwendung auszuführen.
+- Drücken Sie die Taste F5, um die Anwendung auszuführen.
 
   Sie sehen ein <xref:System.Windows.Forms.DataGridView>-Steuerelement, das mit Daten aus der Customers-Tabelle gefüllt wird. Wenn Sie einen doppelten Wert für `CustomerID` eingeben und den Bearbeitungs Commit durchführen, wird der Zellwert automatisch wieder hergestellt, und es wird eine <xref:System.Windows.Forms.MessageBox> angezeigt, in der der Dateneingabe Fehler angezeigt wird.
 
@@ -92,7 +92,7 @@ Diese Anwendung bietet grundlegende Kenntnisse über die Funktionen des <xref:Sy
 
 - Passen Sie die Darstellung von Zellen an. Weitere Informationen finden Sie unter Gewusst [wie: Anpassen der Darstellung von Zellen im Windows Forms DataGridView-Steuer](customize-the-appearance-of-cells-in-the-datagrid.md) Element und Gewusst [wie: Festlegen von Standardzellen Formaten für das Windows Forms DataGridView-Steuer](how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control.md)Element.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.BindingSource>

@@ -24,11 +24,11 @@ Wenn Sie ein <xref:System.Windows.Forms.TabControl>-Steuerelement auf dem Formul
 
 - Klicken Sie im Smarttags des Steuer Elements auf **Registerkarte hinzufügen** oder **Registerkarte entfernen** .
 
-     \- oder -
+     Oder
 
      Klicken Sie im **Eigenschaften** Fenster **auf die Schaltfläche mit den** Auslassungs Punkten (![die Schaltfläche mit den Auslassungs Punkten (...) im Eigenschaftenfenster von Visual Studio.](./media/visual-studio-ellipsis-button.png)) neben der <xref:System.Windows.Forms.TabControl.TabPages%2A>-Eigenschaft, um den **TabPage**-Auflistungs-Editor zu öffnen. Klicken Sie auf die Schaltfläche **Hinzufügen** oder **Entfernen** .
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [TabControl-Steuerelement](tabcontrol-control-windows-forms.md)
 - [Übersicht über das TabControl-Steuerelement](tabcontrol-control-overview-windows-forms.md)

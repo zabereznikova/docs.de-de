@@ -32,7 +32,7 @@ Windows Forms <xref:System.Windows.Forms.GroupBox>-Steuerelemente werden verwend
   
 3. Legen Sie die <xref:System.Windows.Forms.GroupBox.Text%2A>-Eigenschaft des Gruppen Felds auf eine entsprechende Beschriftung fest.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Windows.Forms.GroupBox>
 - [GroupBox-Steuerelement](groupbox-control-windows-forms.md)

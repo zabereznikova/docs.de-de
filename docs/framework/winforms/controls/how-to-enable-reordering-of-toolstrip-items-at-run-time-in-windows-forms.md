@@ -22,7 +22,7 @@ Sie können es dem Benutzer ermöglichen, <xref:System.Windows.Forms.ToolStripIt
   
 ### <a name="to-enable-toolstripitem-rearrangement-at-run-time"></a>So aktivieren Sie die Neuanordnung von ToolStripItem zur Laufzeit  
   
-- Legen Sie die <xref:System.Windows.Forms.ToolStrip.AllowItemReorder%2A> -Eigenschaft auf `true`fest. Standardmäßig ist <xref:System.Windows.Forms.ToolStrip.AllowItemReorder%2A> `false`.  
+- Setzen Sie die <xref:System.Windows.Forms.ToolStrip.AllowItemReorder%2A>-Eigenschaft auf `true`. Standardmäßig ist <xref:System.Windows.Forms.ToolStrip.AllowItemReorder%2A> `false`.  
   
      Zur Laufzeit hält der Benutzer die Alt-Taste gedrückt und die linke Maustaste, um ein <xref:System.Windows.Forms.ToolStripItem> an einen anderen Speicherort auf dem <xref:System.Windows.Forms.ToolStrip>zu ziehen.  
   
@@ -34,7 +34,7 @@ Sie können es dem Benutzer ermöglichen, <xref:System.Windows.Forms.ToolStripIt
     toolStrip1.AllowItemReorder = true;  
     ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Windows.Forms.ToolStrip>
 - <xref:System.Windows.Forms.ToolStrip.AllowItemReorder%2A>

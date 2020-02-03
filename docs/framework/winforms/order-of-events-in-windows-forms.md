@@ -80,6 +80,6 @@ Die Reihenfolge, in der Ereignisse in Windows Forms-Anwendungen ausgelöst werde
   
 - <xref:System.Windows.Forms.Control.Validated>  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Erstellen von Ereignishandlern in Windows Forms](creating-event-handlers-in-windows-forms.md)

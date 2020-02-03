@@ -25,12 +25,12 @@ Die <xref:System.Windows.Forms.ToolTip>-Komponente in Windows Forms zeigt Text a
  [Gewusst wie: Ändern der Verzögerung der ToolTip-Komponente in Windows Forms](how-to-change-the-delay-of-the-windows-forms-tooltip-component.md)  
  Erläutert das Festlegen von Werten, mit denen die Einblendezeit einer QuickInfo sowie die Dauer ihrer Anzeige gesteuert wird.  
   
-## <a name="reference"></a>Referenz  
+## <a name="reference"></a>Verweis  
  <xref:System.Windows.Forms.ToolTip>-Klasse  
  Enthält Referenzinformationen zur Klasse und zu ihren Membern.  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
- [Windows Forms-Steuerelemente](controls-to-use-on-windows-forms.md)  
+ [Steuerelemente für Windows Forms](controls-to-use-on-windows-forms.md)  
  Enthält eine vollständige Liste der Windows Forms-Steuerelemente mit Links zu Informationen zur jeweiligen Verwendung.  
   
  [Benutzerführung mithilfe von QuickInfos](../advanced/control-help-using-tooltips.md)  

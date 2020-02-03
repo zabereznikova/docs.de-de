@@ -22,7 +22,7 @@ Ein Windows Forms <xref:System.Windows.Forms.ListBox>-Steuerelement zeigt eine L
   
  Um Elemente in einem <xref:System.Windows.Forms.ListBox>-Steuerelement hinzuzufügen oder zu löschen, verwenden Sie die Methode <xref:System.Windows.Forms.ListBox.ObjectCollection.Add%2A>, <xref:System.Windows.Forms.ListBox.ObjectCollection.Insert%2A>, <xref:System.Windows.Forms.ListBox.ObjectCollection.Clear%2A> oder <xref:System.Windows.Forms.ListBox.ObjectCollection.Remove%2A>. Alternativ können Sie der Liste Elemente hinzufügen, indem Sie zur Entwurfszeit die <xref:System.Windows.Forms.ListBox.Items%2A>-Eigenschaft verwenden.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Windows.Forms.ListBox>
 - [Gewusst wie: Hinzufügen und Entfernen von Elementen in bzw. aus ComboBox-, ListBox- oder CheckedListBox-Steuerelementen in Windows Forms](add-and-remove-items-from-a-wf-combobox.md)

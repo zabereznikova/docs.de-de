@@ -22,6 +22,6 @@ Windows Forms <xref:System.Windows.Forms.GroupBox>-Steuerelemente werden verwend
 ## <a name="groupbox-and-panel"></a>GroupBox und Panel  
  Das <xref:System.Windows.Forms.GroupBox> Steuerelement ähnelt dem <xref:System.Windows.Forms.Panel> Steuerelement; Allerdings zeigt nur das <xref:System.Windows.Forms.GroupBox> Steuerelement eine Beschriftung an, und nur das <xref:System.Windows.Forms.Panel> Steuerelement kann Scrollleisten enthalten.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [GroupBox-Steuerelement](groupbox-control-windows-forms.md)

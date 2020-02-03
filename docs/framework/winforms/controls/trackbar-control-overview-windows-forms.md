@@ -23,7 +23,7 @@ Das Windows Forms <xref:System.Windows.Forms.TrackBar>-Steuerelement (auch als "
   
  Zwei weitere wichtige Eigenschaften sind <xref:System.Windows.Forms.TrackBar.SmallChange%2A> und <xref:System.Windows.Forms.TrackBar.LargeChange%2A>. Der Wert der <xref:System.Windows.Forms.TrackBar.SmallChange%2A>-Eigenschaft ist die Anzahl der Positionen, um die der Ziehpunkt bewegt wird, wenn die nach-links-oder nach-rechts-Taste gedrückt wird. Der Wert der <xref:System.Windows.Forms.TrackBar.LargeChange%2A>-Eigenschaft ist die Anzahl der Positionen, um die der Ziehpunkt bewegt wird, wenn die Bild-auf-oder Bild-ab-Taste gedrückt wird, oder als Reaktion auf Mausklicks auf der Trackleiste auf beiden Seiten des Zieh Punkts.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Windows.Forms.TrackBar>
 - [TrackBar-Steuerelement](trackbar-control-windows-forms.md)

@@ -26,13 +26,13 @@ Sie können die Darstellung jeder Zelle anpassen, indem Sie das <xref:System.Win
  [!code-vb[System.Windows.Forms.DataGridViewCellPainting#10](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewCellPainting/VB/form1.vb#10)]  
   
 ## <a name="compiling-the-code"></a>Kompilieren des Codes  
- Für dieses Beispiel benötigen Sie Folgendes:  
+ Dieses Beispiel erfordert Folgendes:  
   
 - Ein <xref:System.Windows.Forms.DataGridView>-Steuerelement mit dem Namen `dataGridView1` mit einer `ContactName` Spalte, z. b. in der Customers-Tabelle der Beispieldatenbank Northwind.  
   
 - Verweise auf die Assemblys "System", "System.Windows.Forms" und "System.Drawing".  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.CellPainting>

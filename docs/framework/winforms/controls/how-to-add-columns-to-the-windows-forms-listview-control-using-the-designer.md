@@ -28,7 +28,7 @@ Das folgende Verfahren erfordert ein **Windows-Anwendungs** Projekt mit einem Fo
 
 3. Verwenden Sie die Schaltfläche **Hinzufügen** , um neue Spalten hinzuzufügen. Sie können dann die Spaltenüberschrift auswählen und Ihren Text (die Beschriftung der Spalte), die Textausrichtung und die Breite festlegen.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Übersicht über das ListView-Steuerelement](listview-control-overview-windows-forms.md)
 - [Gewusst wie: Hinzufügen und Entfernen von Elementen mit dem ListView-Steuerelement in Windows Forms](how-to-add-and-remove-items-with-the-windows-forms-listview-control.md)

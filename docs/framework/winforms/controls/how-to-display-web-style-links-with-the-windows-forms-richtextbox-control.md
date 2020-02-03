@@ -23,7 +23,7 @@ Das Windows Forms <xref:System.Windows.Forms.RichTextBox>-Steuerelement kann Web
 
 ### <a name="to-link-to-a-web-page-with-the-richtextbox-control"></a>So verknüpfen Sie eine Webseite mit dem RichTextBox-Steuerelement
 
-1. Legen Sie <xref:System.Windows.Forms.RichTextBox.Text%2A> die-Eigenschaft auf eine Zeichenfolge fest, die eine gültige URL enthält"http://www.microsoft.com/"(z. b.).
+1. Legen Sie die <xref:System.Windows.Forms.RichTextBox.Text%2A>-Eigenschaft auf eine Zeichenfolge fest, die eine gültige URL enthält (z. b. "http://www.microsoft.com/").
 
 2. Stellen Sie sicher, dass die <xref:System.Windows.Forms.RichTextBox.DetectUrls%2A>-Eigenschaft auf `true` (Standardeinstellung) festgelegt ist.
 
@@ -34,7 +34,7 @@ Das Windows Forms <xref:System.Windows.Forms.RichTextBox>-Steuerelement kann Web
     Im folgenden Beispiel wird mit dem <xref:System.Windows.Forms.RichTextBox.LinkClicked>-Ereignis eine Instanz von Internet Explorer für die URL geöffnet, die in der <xref:System.Windows.Forms.RichTextBox.Text%2A>-Eigenschaft des <xref:System.Windows.Forms.RichTextBox>-Steuer Elements angegeben ist. In diesem Beispiel wird ein Formular mit einem <xref:System.Windows.Forms.RichTextBox>-Steuerelement angenommen.
 
     > [!IMPORTANT]
-    > Wenn Sie die <xref:System.Diagnostics.Process.Start%2A?displayProperty=nameWithType>-Methode aufrufen, tritt eine <xref:System.Security.SecurityException> Ausnahme auf, wenn Sie den Code in einem teilweise vertrauenswürdigen Kontext ausführen, weil Sie nicht über ausreichende Berechtigungen verfügen. Weitere Informationen finden Sie unter [Grundlagen der Codezugriffssicherheit](../../misc/code-access-security-basics.md).
+    > Wenn Sie die <xref:System.Diagnostics.Process.Start%2A?displayProperty=nameWithType>-Methode aufrufen, tritt eine <xref:System.Security.SecurityException> Ausnahme auf, wenn Sie den Code in einem teilweise vertrauenswürdigen Kontext ausführen, weil Sie nicht über ausreichende Berechtigungen verfügen. Weitere Informationen finden Sie unter [Code Access Security Basics](../../misc/code-access-security-basics.md).
 
     ```vb
     Public p As New System.Diagnostics.Process
@@ -117,10 +117,10 @@ Das Windows Forms <xref:System.Windows.Forms.RichTextBox>-Steuerelement kann Web
     }
     ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Windows.Forms.RichTextBox.DetectUrls%2A>
 - <xref:System.Windows.Forms.RichTextBox.LinkClicked>
 - <xref:System.Windows.Forms.RichTextBox>
 - [RichTextBox-Steuerelement](richtextbox-control-windows-forms.md)
-- [Windows Forms-Steuerelemente](controls-to-use-on-windows-forms.md)
+- [Steuerelemente für Windows Forms](controls-to-use-on-windows-forms.md)

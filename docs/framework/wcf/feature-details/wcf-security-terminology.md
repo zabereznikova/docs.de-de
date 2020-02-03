@@ -24,7 +24,7 @@ Einige der Begriffe, die im Zusammenhang mit Sicherheitsaspekten von Bedeutung s
  Authentifizierung  
  Der Prozess, in dem ein Benutzer, ein Computer, ein Dienst oder ein Prozess auf Übereinstimmung mit der vorgegebenen Identität überprüft werden.  
   
- Autorisierung  
+ authorization  
  Die Kontrolle des Zugriffs auf und der Rechte für eine Ressource, Beispielsweise können die Mitglieder einer Gruppe eine Datei lesen, während die Mitglieder einer anderen Gruppe diese auch bearbeiten dürfen.  
   
  Zertifizierungsstellenzertifikat  
@@ -41,7 +41,7 @@ Einige der Begriffe, die im Zusammenhang mit Sicherheitsaspekten von Bedeutung s
  Zertifikatspeicher  
  Normalerweise handelt es sich um einen permanenten Speicher, in dem Zertifikate, Zertifikatsperrlisten (CRL) und Zertifikatvertrauenslisten (CTL) gespeichert werden. Zertifikatspeicher können jedoch auch ausschließlich im Speicher erstellt und geöffnet werden, wenn Sie Zertifikate verwenden, die nicht im permanenten Speicher abgelegt werden müssen.  
   
- Ansprüche  
+ claims  
  Informationen, die zur Feststellung der Identität des Absenders von einer Entität an eine andere übergeben werden, wie z. B. ein Benutzername und ein Kennworttoken oder ein X.509-Zertifikat.  
   
  Clientzertifikat  
@@ -74,10 +74,10 @@ Einige der Begriffe, die im Zusammenhang mit Sicherheitsaspekten von Bedeutung s
  Lokale Sicherheitsauthorität (LSA)  
  Ein geschütztes Subsystem zur Authentifizierung und Anmeldung von Benutzern beim lokalen System. Darüber hinaus verwaltet die LSA auch alle Informationen bezüglich der lokalen Systemsicherheit in einer lokalen Systemsicherheitsrichtlinie.  
   
- Negotiate  
+ Aushandeln  
  Ein Sicherheitsunterstützungsanbieter (SSP), der als Anwendungsschicht zwischen der Security Support Provider Interface (SSPI) und anderen SSPs fungiert. Wenn eine SSPI zur Anmeldung bei einem Netzwerk von einer Anwendung aufgerufen wird, kann ein SSP zur Verarbeitung der Anforderung angegeben werden. Wenn `Negotiate` von der Anwendung angegeben wird, wird die Anforderung von `Negotiate` analysiert, und anhand der benutzerdefinierten Sicherheitsrichtlinie wird der am besten zur Behandlung der Anforderung geeignete SSP ausgewählt.  
   
- Nonce  
+ nonce  
  Ein zufällig generierter Wert, mit dem wiederholte Angriffe vereitelt werden.  
   
  Nichtabstreitbarkeit  
@@ -89,13 +89,13 @@ Einige der Begriffe, die im Zusammenhang mit Sicherheitsaspekten von Bedeutung s
  PKCS #7  
  Der Cryptographic Message Syntax (CMS)-Standard. Eine allgemeine Syntax für Daten, bei denen Kryptografie eingesetzt werden könnte, beispielsweise digitale Signaturen und Verschlüsselungen. Außerdem wird damit eine Syntax zur Verteilung von Zertifikaten oder Zertifikatsperrlisten und anderen Nachrichtenattributen wie Zeitstempeln bereitgestellt.  
   
- Klartext  
+ plaintext  
  Eine unverschlüsselte Nachricht. Nur-Text-Nachrichten werden manchmal als *Klartext* -Nachrichten bezeichnet.  
   
- Berechtigung  
+ privilege  
  Das Recht eines Benutzers zur Durchführung verschiedener Systemvorgänge wie Herunterfahren des Systems, Laden von Gerätetreibern oder Ändern der Systemzeit. Das Zugriffstoken eines Benutzers enthält eine Liste der Berechtigungen des Benutzers oder der Benutzergruppe.  
   
- Private Schlüssel  
+ Privater Schlüssel  
  Der geheime Teil eines Schlüsselpaars, das in einem Algorithmus für öffentliche Schlüssel verwendet wird. Private Schlüssel werden normalerweise zur Verschlüsselung von symmetrischen Sitzungsschlüsseln, zur digitalen Signierung von Nachrichten oder zur Entschlüsselung von Nachrichten, die mit dem entsprechenden öffentlichen Schlüssel verschlüsselt wurden, verwendet. Siehe auch "Öffentlicher Schlüssel".  
   
  Prozess  
@@ -128,7 +128,7 @@ Einige der Begriffe, die im Zusammenhang mit Sicherheitsaspekten von Bedeutung s
  Sicherheitskontext  
  Die aktuell geltenden Sicherheitsattribute oder -regeln. z. B. der Benutzer, der derzeit am Computer angemeldet ist, oder die PIN, die vom Smartcard-Benutzer eingegeben wurde. Im Hinblick auf die SSPI stellt ein Sicherheitskontext eine nicht transparente Datenstruktur mit Sicherheitsdaten für eine Verbindung dar, beispielsweise einen Sitzungsschlüssel oder eine Angabe der Sitzungsdauer.  
   
- Sicherheitsprinzipal  
+ Sicherheitsprinzipal (security principal)  
  Eine Entität, die vom Sicherheitssystem erkannt wird. Prinzipale können menschliche Benutzer sowie autonome Prozesse einschließen.  
   
  Sicherheitsunterstützungsanbieter (SSP)  
@@ -143,7 +143,7 @@ Einige der Begriffe, die im Zusammenhang mit Sicherheitsaspekten von Bedeutung s
  Serverzertifikat  
  Ein Zertifikat, das zur Serverauthentifizierung verwendet wird, beispielsweise zur Authentifizierung eines Webservers gegenüber einem Webbrowser. Wenn ein Webbrowserclient versucht, auf einen sicheren Webserver zuzugreifen, sendet der Server sein Zertifikat an den Browser, um seine Identität prüfen zu lassen.  
   
- Sitzung verknüpfen  
+ session  
  Ein durch eine einzelne Schlüsselinformation geschützter Nachrichtenaustausch. SSL-Sitzungen verwenden beispielsweise einen einzelnen Schlüssel, um mehrere Nachrichten hin- und herzusenden.  
   
  Sitzungsschlüssel  
@@ -181,7 +181,7 @@ Einige der Begriffe, die im Zusammenhang mit Sicherheitsaspekten von Bedeutung s
  X.509  
  Ein international anerkannter Zertifikatstandard zur Definition erforderlicher Bestandteile.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Wesentliche Windows Communication Foundation-Begriffe](../../../../docs/framework/wcf/fundamental-concepts.md)
 - [Begriffe der Sicherheit](../../../../docs/framework/wcf/feature-details/security-concepts.md)

@@ -22,7 +22,7 @@ Das <xref:System.Windows.Forms.DataGridView>-Steuerelement verwendet mehrere Spa
   
  In der folgenden Tabelle werden die verschiedenen Spalten Klassen beschrieben, die für die Verwendung im <xref:System.Windows.Forms.DataGridView>-Steuerelement verfügbar sind.  
   
-|Klasse|Beschreibung|  
+|Klasse|BESCHREIBUNG|  
 |-----------|-----------------|  
 |<xref:System.Windows.Forms.DataGridViewTextBoxColumn>|Wird mit textbasierten Werten verwendet. Wird automatisch generiert, wenn an Zahlen und Zeichen folgen gebunden wird.|  
 |<xref:System.Windows.Forms.DataGridViewCheckBoxColumn>|Wird mit den Werten <xref:System.Boolean> und <xref:System.Windows.Forms.CheckState> verwendet. Wird automatisch generiert, wenn an Werte dieser Typen gebunden wird.|  
@@ -80,7 +80,7 @@ Das <xref:System.Windows.Forms.DataGridView>-Steuerelement verwendet mehrere Spa
   
  Die <xref:System.Windows.Forms.DataGridViewLinkColumn>-Klasse stellt mehrere Eigenschaften zum Ändern der Darstellung von Verknüpfungen vor, während und nach dem Klicken auf Sie bereit.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridViewColumn>

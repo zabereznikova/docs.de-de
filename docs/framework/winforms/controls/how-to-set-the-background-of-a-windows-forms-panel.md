@@ -67,7 +67,7 @@ Ein Windows Forms <xref:System.Windows.Forms.Panel> Steuerelement kann sowohl ei
        "\\Image.gif"));  
     ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Windows.Forms.Control.BackColor%2A>
 - <xref:System.Windows.Forms.Control.BackgroundImage%2A>

@@ -19,13 +19,13 @@ ms.locfileid: "76736326"
 
 Mit dem Windows Forms <xref:System.Windows.Forms.PictureBox>-Steuerelement können Sie ein Bild auf einem Formular zur Entwurfszeit laden und anzeigen, indem Sie die <xref:System.Windows.Forms.PictureBox.Image%2A>-Eigenschaft auf ein gültiges Bild festlegen. In der folgenden Tabelle sind die zulässigen Dateitypen aufgeführt.
 
-|Typ|Dateinamenerweiterung|
+|type|Dateinamenerweiterung|
 |---|---|
 |Bitmap|BMP|
 |Symbol|.ico|
 |GIF|GIF|
 |Metadatei|. WMF|
-|JPEG|JPG|
+|JPEG|.jpg|
 
 ## <a name="to-display-a-picture-at-design-time"></a>So zeigen Sie ein Bild zur Entwurfszeit an
 
@@ -41,7 +41,7 @@ Mit dem Windows Forms <xref:System.Windows.Forms.PictureBox>-Steuerelement könn
 
 1. Wählen Sie im Fenster **Eigenschaften** die <xref:System.Windows.Forms.PictureBox.Image%2A>-Eigenschaft aus. Klicken Sie mit der rechten Maustaste auf das kleine Miniaturbild, das links neben dem Namen des Bildobjekts angezeigt wird, und wählen Sie dann **Zurücksetzen**aus.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Windows.Forms.PictureBox>
 - [Übersicht über das PictureBox-Steuerelement](picturebox-control-overview-windows-forms.md)

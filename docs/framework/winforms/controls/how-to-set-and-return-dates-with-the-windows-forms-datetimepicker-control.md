@@ -72,7 +72,7 @@ Die aktuell im <xref:System.Windows.Forms.DateTimePicker>-Steuerelement von Wind
        dateTimePicker1->Value.Millisecond.ToString()));  
     ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [DateTimePicker-Steuerelement](datetimepicker-control-windows-forms.md)
 - [Gewusst wie: Anzeigen eines Datums im benutzerdefinierten Format mit dem DateTimePicker-Steuerelement in Windows Forms](display-a-date-in-a-custom-format-with-wf-datetimepicker-control.md)

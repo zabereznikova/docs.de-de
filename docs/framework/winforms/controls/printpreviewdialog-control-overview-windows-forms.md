@@ -53,7 +53,7 @@ Wenn der Schalter nicht vorhanden ist oder auf einen anderen Wert festgelegt ist
 
 Wenn Sie das <xref:System.Drawing.Printing.PrintDocument.QueryPageSettings>-Ereignis verwenden, um Druckereinstellungen zu ändern, wird die Leistung des <xref:System.Windows.Forms.PrintPreviewDialog> Steuer Elements nicht verbessert, auch wenn ein Optimierungs Konfigurationsschalter festgelegt ist.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Windows.Forms.PrintPreviewDialog>
 - [Übersicht über das PrintPreviewControl-Steuerelement](printpreviewcontrol-control-overview-windows-forms.md)

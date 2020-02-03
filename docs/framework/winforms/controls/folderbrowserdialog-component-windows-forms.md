@@ -24,7 +24,7 @@ Die Windows Forms `FolderBrowserDialog` Komponente zeigt eine Schnittstelle an, 
  [Gewusst wie: Auswählen von Ordnern mit der FolderBrowserDialog-Komponente in Windows Forms](how-to-choose-folders-with-the-windows-forms-folderbrowserdialog-component.md)  
  Erläutert, wie Sie den ausgewählten Ordner Programm gesteuert aus dem Dialogfeld extrahieren und mit einigen der anderen optionalen Eigenschaften der Komponente arbeiten können.  
   
-## <a name="reference"></a>Referenz  
+## <a name="reference"></a>Verweis  
  <xref:System.Windows.Forms.FolderBrowserDialog>  
  Beschreibt diese Klasse und enthält Links zu allen deren Membern.  
   
@@ -32,5 +32,5 @@ Die Windows Forms `FolderBrowserDialog` Komponente zeigt eine Schnittstelle an, 
  [Dialogfelder in Windows Forms](../dialog-boxes-in-windows-forms.md)  
  Enthält eine Liste von Aufgaben für Dialogfelder, von denen häufig Registerkarten angezeigt werden.  
   
- [Windows Forms-Steuerelemente](controls-to-use-on-windows-forms.md)  
+ [Steuerelemente für Windows Forms](controls-to-use-on-windows-forms.md)  
  Enthält eine vollständige Liste der Windows Forms-Steuerelemente mit Links zu Informationen zur jeweiligen Verwendung.

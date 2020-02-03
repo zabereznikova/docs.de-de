@@ -32,7 +32,7 @@ Wenn Benutzer Daten anzeigen, die in einem <xref:System.Windows.Forms.DataGridVi
     > [!NOTE]
     > Sie können eine Spalte auch beim Hinzufügen fixieren, indem Sie **im Dialog** Feld **Spalte hinzufügen** das Feld fixiert auswählen.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridViewColumn.Frozen%2A?displayProperty=nameWithType>

@@ -23,7 +23,7 @@ Windows Forms <xref:System.Windows.Forms.GroupBox>-Steuerelemente werden verwend
  [Gewusst wie: Gruppieren von Steuerelementen mit dem GroupBox-Steuerelement in Windows Forms](how-to-group-controls-with-the-windows-forms-groupbox-control.md)  
  Beschreibt die Verwendung dieses Steuer Elements zum Gruppieren von-Steuerelementen.  
   
-## <a name="reference"></a>Referenz  
+## <a name="reference"></a>Verweis  
  <xref:System.Windows.Forms.GroupBox>  
  Beschreibt diese Klasse und enthält Links zu allen deren Membern.  
   
@@ -31,5 +31,5 @@ Windows Forms <xref:System.Windows.Forms.GroupBox>-Steuerelemente werden verwend
  Beschreibt diese Klasse und enthält Links zu allen deren Membern.  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
- [Windows Forms-Steuerelemente](controls-to-use-on-windows-forms.md)  
+ [Steuerelemente für Windows Forms](controls-to-use-on-windows-forms.md)  
  Enthält eine vollständige Liste der Windows Forms-Steuerelemente mit Links zu Informationen zur jeweiligen Verwendung.

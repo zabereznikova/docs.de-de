@@ -120,9 +120,9 @@ public int Value {
 }  
 ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Eigenschaften von Windows Forms-Steuerelementen](properties-in-windows-forms-controls.md)
+- [Eigenschaften in Windows Forms-Steuerelementen](properties-in-windows-forms-controls.md)
 - [Definieren von Standardwerten mit der ShouldSerialize-Methode und der Reset-Methode](defining-default-values-with-the-shouldserialize-and-reset-methods.md)
 - [Durch geänderte Eigenschaften ausgelöste Ereignisse](property-changed-events.md)
 - [Attribute in Windows Forms-Steuerelementen](attributes-in-windows-forms-controls.md)

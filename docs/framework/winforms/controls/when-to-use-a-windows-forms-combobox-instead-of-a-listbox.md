@@ -25,7 +25,7 @@ Die <xref:System.Windows.Forms.ComboBox>-und die <xref:System.Windows.Forms.List
   
  Außerdem sparen Kombinations Felder Platz auf einem Formular. Da die vollständige Liste erst angezeigt wird, wenn der Benutzer auf den Pfeil nach unten klickt, kann ein Kombinations Feld problemlos in einen kleinen Bereich passen, in dem ein Listenfeld nicht passt. Eine Ausnahme ist, wenn die <xref:System.Windows.Forms.ComboBox.DropDownStyle%2A>-Eigenschaft auf <xref:System.Windows.Forms.ComboBoxStyle.Simple>festgelegt ist: die vollständige Liste wird angezeigt, und das Kombinations Feld benötigt mehr Platz als ein Listenfeld.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Windows.Forms.ComboBox>
 - <xref:System.Windows.Forms.ListBox>

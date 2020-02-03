@@ -34,7 +34,7 @@ Windows Forms Steuerelemente zeigen normalerweise Text an, der mit der primären
 
 Sie können den Text auch mit dem- [Designer](#designer)festlegen.
 
-## <a name="programmatic"></a>Programmgesteuerten
+## <a name="programmatic"></a>Programmgesteuert
 
 1. Legen Sie für die <xref:System.Windows.Forms.Control.Text%2A>-Eigenschaft eine Zeichenfolge fest.
 
@@ -72,7 +72,7 @@ Sie können den Text auch mit dem- [Designer](#designer)festlegen.
     mpMenuItem->Text = "&& Now For Something Completely Different";
     ```
 
-## <a name="designer"></a>-Designer
+## <a name="designer"></a>Designer
 
 1. Legen Sie im **Eigenschaften** Fenster von Visual Studio die **Text** -Eigenschaft des-Steuer Elements auf eine entsprechende Zeichenfolge fest.
 
@@ -82,7 +82,7 @@ Sie können den Text auch mit dem- [Designer](#designer)festlegen.
 
    Wählen Sie im Dialogfeld Standard Schriftart die Schriftart, den Schrift Schnitt, die Größe, die Effekte (z. b. durchgestrichen oder unterstreichen) und das gewünschte Skript aus.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Windows.Forms.Control.Text%2A?displayProperty=nameWithType>
 - [Gewusst wie: Erstellen von Zugriffstasten für Windows Forms-Steuerelemente](how-to-create-access-keys-for-windows-forms-controls.md)

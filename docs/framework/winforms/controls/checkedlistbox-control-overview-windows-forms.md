@@ -20,7 +20,7 @@ Das Windows Forms <xref:System.Windows.Forms.CheckedListBox>-Steuerelement erwei
   
  Aktivierte Listenfelder können Elemente zur Entwurfszeit mithilfe des Zeichen folgen-Auflistungs- **Editors** hinzugefügt werden, oder ihre Elemente können zur Laufzeit dynamisch aus einer Auflistung hinzugefügt werden. verwenden Sie dazu die <xref:System.Windows.Forms.CheckedListBox.Items%2A>-Eigenschaft Weitere Informationen finden Sie unter Gewusst [wie: Hinzufügen und Entfernen von Elementen aus einem Windows Forms ComboBox-, ListBox-oder CheckedListBox-Steuer](add-and-remove-items-from-a-wf-combobox.md)Element.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Windows.Forms.CheckedListBox>
 - <xref:System.Windows.Forms.CheckedListBox.Items%2A?displayProperty=nameWithType>

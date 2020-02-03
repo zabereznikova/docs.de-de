@@ -152,7 +152,7 @@ Dieses Thema enthält Links zu <xref:System.Windows.Forms.DataGridView>Codebeisp
   
 - [Implementieren des virtuellen Modus mit Just-In-Time-Laden von Daten in das DataGridView-Steuerelement in Windows Forms](implementing-virtual-mode-jit-data-loading-in-the-datagrid.md)  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Windows.Forms.DataGridView>
 - [Übersicht über das DataGridView-Steuerelement](datagridview-control-overview-windows-forms.md)

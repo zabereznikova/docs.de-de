@@ -53,7 +53,7 @@ Mit der Datenbindung in Windows Forms erhalten Sie die Möglichkeit, Information
   
  Weitere Informationen finden Sie auch in [Bezug auf die Datenbindung](interfaces-related-to-data-binding.md), Vorgehens [Weise: Navigieren in Daten in Windows Forms](how-to-navigate-data-in-windows-forms.md)und Gewusst [wie: Erstellen eines einfach gebundenen Steuer Elements in einem Windows Form](how-to-create-a-simple-bound-control-on-a-windows-form.md).  
   
-## <a name="reference"></a>Referenz  
+## <a name="reference"></a>Verweis  
  <xref:System.Windows.Forms.Binding?displayProperty=nameWithType>  
  Beschreibt die Klasse, die für die Bindung zwischen einer bindbaren Komponente und einer Datenquelle steht.  
   

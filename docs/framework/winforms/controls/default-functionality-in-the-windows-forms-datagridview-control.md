@@ -46,7 +46,7 @@ Das Windows Forms <xref:System.Windows.Forms.DataGridView>-Steuerelement bietet 
   
 - Sortiert die Zeilen automatisch basierend auf den zugrunde liegenden Daten, wenn der Benutzer auf einen Spaltenheader klickt.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Windows.Forms.DataGridView>
 - [DataGridView-Steuerelement](datagridview-control-windows-forms.md)

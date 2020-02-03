@@ -45,18 +45,18 @@ Die folgenden Prozeduren veranschaulichen einige allgemeinen Szenarien, die die 
  [!code-csharp[System.Windows.Forms.DataGridViewSizingScenarios#00](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewSizingScenarios/CS/sizingscenarios.cs#00)]
  [!code-vb[System.Windows.Forms.DataGridViewSizingScenarios#00](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewSizingScenarios/vb/sizingscenarios.vb#00)]  
   
- So verwenden Sie diese Beispielanwendung:  
+ So verwenden Sie diese Beispielanwendung  
   
 - Ändern Sie die Größe des Formulars. Beachten Sie, wie sich die Breite der Füllmodusspalten ändert, während die Proportionen, die durch die <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A>-Eigenschaftenwerte angegeben werden, beibehalten werden. Beachten Sie, wie das <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A> einer Spalte verhindert, dass diese sich ändert, wenn das Formular zu klein ist.  
   
 - Ändern Sie die Spaltengrößen, indem Sie die Spaltenunterteiler mit der Maus ziehen. Beachten Sie, dass die Größe einiger Spalten nicht geändert werden kann. Beachten Sie außerdem, dass anpassbare Spalten nicht schmaler als ihre Mindestbreite gemacht werden können.  
   
 ## <a name="compiling-the-code"></a>Kompilieren des Codes  
- Für dieses Beispiel benötigen Sie Folgendes:  
+ Dieses Beispiel erfordert Folgendes:  
   
 - Verweise auf die Assemblys "System" und "System.Windows.Forms".  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridViewColumn.AutoSizeMode%2A?displayProperty=nameWithType>

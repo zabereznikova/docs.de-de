@@ -31,7 +31,7 @@ void Activate(
     );
 ```
 
-## <a name="parameters"></a>Parameters
+## <a name="parameters"></a>Parameter
 
 `pParameters`\
 Ein Zeiger auf die Aktivierungs Parameter des Fensters.
@@ -39,7 +39,7 @@ Ein Zeiger auf die Aktivierungs Parameter des Fensters.
 `ppInner`\
 Ein Zeiger auf die Adresse eines Einzelelement Puffers, der einen Zeiger auf ein <xref:Microsoft.VisualStudio.OLE.Interop.IOleDocument> Objekt enthält.
 
-## <a name="requirements"></a>-Anforderungen
+## <a name="requirements"></a>Anforderungen
 
 **Plattformen:** Siehe [.NET Framework System Anforderungen](../../get-started/system-requirements.md).
 
@@ -51,6 +51,6 @@ In den .NET Framework 4 und höher: PresentationHost_v0400. dll
 
 **.NET Framework Version:** [!INCLUDE[net_current_v30plus](../../../../includes/net-current-v30plus-md.md)]
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [WPF – Referenz zur nicht verwalteten API](wpf-unmanaged-api-reference.md)

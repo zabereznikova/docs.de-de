@@ -66,7 +66,7 @@ Häufig möchten Sie Grafiken in Ihrer Windows-basierten Anwendung drucken. Die 
        (this, &Form1::printDocument1_PrintPage);  
     ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Drawing.Graphics>
 - <xref:System.Drawing.Brush>

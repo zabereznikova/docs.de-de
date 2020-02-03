@@ -25,7 +25,7 @@ ms.locfileid: "76742865"
   
  Sie können eine einzelne Meldung auf der Statusleiste anzeigen, indem Sie die <xref:System.Windows.Forms.StatusBar.ShowPanels%2A>-Eigenschaft auf `false` (Standardeinstellung) festlegen und die <xref:System.Windows.Forms.StatusBar.Text%2A>-Eigenschaft der Statusleiste auf den Text festlegen, der in der Statusleiste angezeigt werden soll. Sie können die Statusleiste in Bereiche aufteilen, um mehr als eine Art von Informationen anzuzeigen, indem Sie die <xref:System.Windows.Forms.StatusBar.ShowPanels%2A>-Eigenschaft auf `true` festlegen und die <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection.Add%2A>-Methode der <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection>verwenden.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Windows.Forms.StatusBar>
 - <xref:System.Windows.Forms.ToolStripStatusLabel>

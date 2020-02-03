@@ -104,7 +104,7 @@ Im folgenden Beispiel wird ein einfaches Formular dargestellt, dass `FirstContro
 [!code-csharp[System.Windows.Forms.FirstControl#10](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/CS/SimpleForm.cs#10)]
 [!code-vb[System.Windows.Forms.FirstControl#10](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/VB/SimpleForm.vb#10)]
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Eigenschaften von Windows Forms-Steuerelementen](properties-in-windows-forms-controls.md)
+- [Eigenschaften in Windows Forms-Steuerelementen](properties-in-windows-forms-controls.md)
 - [Ereignisse in Windows Forms-Steuerelementen](events-in-windows-forms-controls.md)

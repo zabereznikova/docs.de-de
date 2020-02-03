@@ -23,7 +23,7 @@ ms.locfileid: "76746874"
 
 Mehrere Windows Forms Steuerelemente können Bilder anzeigen. Diese Bilder können Symbole sein, die den Zweck des Steuer Elements verdeutlichen, wie z. b. ein Diskettensymbol auf einer Schaltfläche, die den Befehl "Speichern" bezeichnet. Alternativ können die Symbole Hintergrundbilder sein, um dem Steuerelement das gewünschte Aussehen und Verhalten zu geben.
 
-## <a name="programmatic"></a>Programmgesteuerten
+## <a name="programmatic"></a>Programmgesteuert
 
 Legen Sie die `Image`-oder `BackgroundImage`-Eigenschaft des Steuer Elements auf ein Objekt vom Typ <xref:System.Drawing.Image>fest. Im allgemeinen laden Sie das Image mithilfe der <xref:System.Drawing.Image.FromFile%2A>-Methode aus einer Datei.
 
@@ -54,13 +54,13 @@ pictureBox1->Image = Image::FromFile(String::Concat
    "\\Image.gif"));
 ```
 
-## <a name="designer"></a>-Designer
+## <a name="designer"></a>Designer
 
 1. Wählen Sie im **Eigenschaften** Fenster von Visual Studio die **Bild** -oder **BackgroundImage** -Eigenschaft des Steuer Elements aus, und klicken Sie dann auf die Schaltfläche mit den Auslassungs Punkten (![Auslassungs Zeichen in Visual Studio](./media/visual-studio-ellipsis-button.png)), um das Dialogfeld **Ressource auswählen** anzuzeigen.
 
 2. Wählen Sie das Abbild aus, das Sie anzeigen möchten.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Drawing.Image.FromFile%2A>
 - <xref:System.Drawing.Image>

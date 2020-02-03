@@ -94,6 +94,6 @@ Press <ENTER> to terminate client.
 
 4. Um das Beispiel in einer Konfiguration mit einem Computer oder Computer übergreifend auszuführen, befolgen Sie die Anweisungen unter [Ausführen der Windows Communication Foundation Beispiele](../../../../docs/framework/wcf/samples/running-the-samples.md). Ein Beispiel zum Erstellen einer Client Anwendung, die diesen Dienst aufruft, finden Sie unter Gewusst [wie: Erstellen eines Clients](../../../../docs/framework/wcf/how-to-create-a-wcf-client.md).
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [AppFabric-Hosting-und persistenzbeispiele](https://docs.microsoft.com/previous-versions/appfabric/ff383418(v=azure.10))

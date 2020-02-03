@@ -1,5 +1,5 @@
 ---
-title: Übersicht über
+title: Übersicht
 ms.date: 03/30/2017
 helpviewer_keywords:
 - smart clients
@@ -43,12 +43,12 @@ Der folgende Abschnitt enthält eine Übersicht über die Vorteile von intellige
 
 Ausführliche Informationen zur Verwendung dieser Features finden Sie in den folgenden Hilfethemen.
 
-|Beschreibung|Hilfethema|
+|BESCHREIBUNG|Hilfethema|
 |-----------------|----------------|
 |Verwenden von Steuerelementen auf Formularen|[Vorgehensweise: Hinzufügen von Steuerelementen zu Windows Forms](./controls/how-to-add-controls-to-windows-forms.md)|
 |Verwenden des <xref:System.Windows.Forms.ToolStrip>-Steuerelements|[Vorgehensweise: Erstellen eines einfachen ToolStrip mit Standardelementen im Designer](./controls/create-a-basic-wf-toolstrip-with-standard-items-using-the-designer.md)|
 |Erstellen von Grafiken mithilfe von <xref:System.Drawing>|[Erste Schritte mit Grafikprogrammierung](./advanced/getting-started-with-graphics-programming.md)|
-|Erstellen benutzerdefinierter Steuerelemente|[Gewusst wie: Erben von der UserControl-Klasse](./controls/how-to-inherit-from-the-usercontrol-class.md)|
+|Erstellen von benutzerdefinierten Steuerelementen|[Vorgehensweise: Erben von der UserControl-Klasse](./controls/how-to-inherit-from-the-usercontrol-class.md)|
 
 ### <a name="display-and-manipulate-data"></a>Anzeigen und Bearbeiten von Daten
  Viele Anwendungen müssen Daten aus einer Datenbank, einer XML-Datei, einem XML-Webdienst oder einer anderen Datenquelle anzeigen. Mit dem <xref:System.Windows.Forms.DataGridView>-Steuerelement bietet Windows Forms ein flexibles Steuerelement zum Anzeigen von Tabellendaten im herkömmlichen Zeilen- und Spaltenformat, bei dem jedes Datenelement in einer eigenen Zelle enthalten ist. Mit <xref:System.Windows.Forms.DataGridView> können Sie die Darstellung einzelner Zellen anpassen, die Position beliebiger Zeilen oder Spalten fixieren und komplexe Steuerelemente in einer Zelle anzeigen, um nur einige Features zu nennen.
@@ -63,7 +63,7 @@ Ausführliche Informationen zur Verwendung dieser Features finden Sie in den fol
 
 Ausführliche Informationen zur Verwendung dieser Features finden Sie in den folgenden Hilfethemen.
 
-|Beschreibung|Hilfethema|
+|BESCHREIBUNG|Hilfethema|
 |-----------------|----------------|
 |Verwenden der <xref:System.Windows.Forms.BindingSource>-Komponente|[Vorgehensweise: Binden von Windows Forms-Steuerelementen an die BindingSource-Komponente mithilfe des Designers](./controls/bind-wf-controls-with-the-bindingsource.md)|
 |Arbeiten mit ADO.NET-Datenquellen|[Vorgehensweise: Sortieren und Filtern von ADO.NET-Daten mit der BindingSource-Komponente in Windows Forms](./controls/sort-and-filter-ado-net-data-with-wf-bindingsource-component.md)|
@@ -82,7 +82,7 @@ Wenn Sie die Anwendung aktualisieren, veröffentlichen Sie auf dem Webserver ein
 
 Eine vollständige Einführung in ClickOnce finden Sie unter [ClickOnce-Sicherheit und-Bereitstellung](/visualstudio/deployment/clickonce-security-and-deployment). Ausführliche Informationen zur Verwendung dieser Funktionen finden Sie in den folgenden Hilfethemen.
 
-|Beschreibung|Hilfethema|
+|BESCHREIBUNG|Hilfethema|
 |-----------------|----------------|
 |Bereitstellen einer Anwendung mithilfe von ClickOnce|[Gewusst wie: Veröffentlichen einer ClickOnce-Anwendung mit dem Webpublishing-Assistenten](/visualstudio/deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard)<br /><br /> [Exemplarische Vorgehensweise: Manuelles Bereitstellen einer ClickOnce-Anwendung](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)|
 |Aktualisieren einer ClickOnce-Bereitstellung|[Gewusst wie: Verwalten von Aktualisierungen für eine ClickOnce-Anwendung](/visualstudio/deployment/how-to-manage-updates-for-a-clickonce-application)|
@@ -96,12 +96,12 @@ In Windows Forms stehen viele weitere Features bereit, mit denen häufige Aufgab
 
 Ausführliche Informationen zur Verwendung dieser Features finden Sie in den folgenden Hilfethemen.
 
-|Beschreibung|Hilfethema|
+|BESCHREIBUNG|Hilfethema|
 |-----------------|----------------|
 |Drucken des Inhalts eines Formulars|[Vorgehensweise: Drucken von Grafiken in Windows Forms](./advanced/how-to-print-graphics-in-windows-forms.md)<br /><br /> [Vorgehensweise: Drucken einer mehrseitigen Textdatei in Windows Forms](./advanced/how-to-print-a-multi-page-text-file-in-windows-forms.md)|
 |Weitere Informationen zur Windows Forms-Sicherheit|[Übersicht über die Sicherheit in Windows Forms](security-in-windows-forms-overview.md)|
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Erste Schritte mit Windows Forms](getting-started-with-windows-forms.md)
 - [Erstellen neuer Windows Forms](creating-a-new-windows-form.md)

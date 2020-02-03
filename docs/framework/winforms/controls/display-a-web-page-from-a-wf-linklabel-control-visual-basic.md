@@ -38,7 +38,7 @@ End Sub
 ```  
   
 ## <a name="compiling-the-code"></a>Kompilieren des Codes  
- Für dieses Beispiel benötigen Sie Folgendes:  
+ Dieses Beispiel erfordert Folgendes:  
   
 - Ein Windows-Formular mit dem Namen `Form1`.  
   
@@ -46,10 +46,10 @@ End Sub
   
 - Eine aktive Internet Verbindung.  
   
-## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
+## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
  Der-<xref:System.Diagnostics.Process.Start%2A> Methode erfordert volle Vertrauenswürdigkeit. Weitere Informationen finden Sie unter <xref:System.Security.SecurityException>.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Windows.Forms.LinkLabel>
 - [LinkLabel-Steuerelement](linklabel-control-windows-forms.md)

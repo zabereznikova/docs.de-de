@@ -76,7 +76,7 @@ Die Grundlage für das Drucken in Windows Forms ist die <xref:System.Drawing.Pri
   
      Weitere Informationen zu den Besonderheiten Windows Forms Druckaufträgen, einschließlich der programmgesteuerten Erstellung eines Druckauftrags, finden Sie unter <xref:System.Drawing.Printing.PrintPageEventArgs>.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Drawing.Printing.PrintDocument>
 - [Druckunterstützung in Windows Forms](windows-forms-print-support.md)

@@ -27,9 +27,9 @@ In dieser exemplarischen Vorgehensweise rufen Sie Zeilen aus der `Customers` Tab
 
 Informationen zum Kopieren des Codes in diesem Thema als einzelne Auflistung finden Sie unter Gewusst wie: Überprüfen von [Daten im Windows Forms DataGridView-Steuer](how-to-validate-data-in-the-windows-forms-datagridview-control.md)Element.
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
+## <a name="prerequisites"></a>Voraussetzungen
 
-Für die Durchführung dieser exemplarischen Vorgehensweise benötigen Sie Folgendes:
+Wenn Sie diese exemplarische Vorgehensweise abschließen möchten, müssen folgende Voraussetzungen erfüllt sein:
 
 - Zugriff auf einen Server mit der Beispieldatenbank Northwind SQL Server.
 
@@ -92,7 +92,7 @@ Diese Anwendung bietet grundlegende Kenntnisse über die Funktionen des <xref:Sy
 
 - Passen Sie die Darstellung von Zellen an. Weitere Informationen finden Sie unter Gewusst [wie: Anpassen der Darstellung von Zellen im Windows Forms DataGridView-Steuer](customize-the-appearance-of-cells-in-the-datagrid.md) Element und Gewusst [wie: Festlegen von Schriftart-und Farb Stilen im Windows Forms DataGridView-Steuer](how-to-set-font-and-color-styles-in-the-windows-forms-datagridview-control.md)Element.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.BindingSource>

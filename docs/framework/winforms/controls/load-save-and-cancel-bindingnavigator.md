@@ -110,7 +110,7 @@ Im folgenden Verfahren wird ein <xref:System.Windows.Forms.TextBox>-Steuerelemen
     > [!NOTE]
     > Die <xref:System.Windows.Forms.BindingSource.CancelEdit%2A>-Methode wird auf die Daten Zeile festgelegt. Speichern Sie alle Änderungen, die Sie vornehmen, während Sie den einzelnen Datensatz anzeigen, bevor Sie zum nächsten Datensatz navigieren.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Windows.Forms.BindingNavigator>
 - <xref:System.Windows.Forms.BindingSource>

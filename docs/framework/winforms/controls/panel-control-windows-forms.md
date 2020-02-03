@@ -29,12 +29,12 @@ Windows Forms `Panel`-Steuerelemente werden verwendet, um eine identifizierbare 
  [Gewusst wie: Festlegen des Hintergrunds eines Bereichs](how-to-set-the-background-of-a-windows-forms-panel.md)  
  Beschreibt, wie eine Hintergrundfarbe und ein Hintergrundbild in einem Panel angezeigt werden.  
   
-## <a name="reference"></a>Referenz  
+## <a name="reference"></a>Verweis  
  <xref:System.Windows.Forms.Panel>  
  Beschreibt diese Klasse und enthält Links zu allen deren Membern.  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
- [Windows Forms-Steuerelemente](controls-to-use-on-windows-forms.md)  
+ [Steuerelemente für Windows Forms](controls-to-use-on-windows-forms.md)  
  Enthält eine vollständige Liste der Windows Forms-Steuerelemente mit Links zu Informationen zur jeweiligen Verwendung.  
   
  [Gewusst wie: Hinzufügen bzw. Entfernen von Steuerelementen zu bzw. aus einer Auflistung von Steuerelementen zur Laufzeit](how-to-add-to-or-remove-from-a-collection-of-controls-at-run-time.md)  

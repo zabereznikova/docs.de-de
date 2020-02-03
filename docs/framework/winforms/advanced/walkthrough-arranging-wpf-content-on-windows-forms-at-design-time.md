@@ -24,11 +24,11 @@ ms.locfileid: "76746815"
 
 In diesem Artikel erfahren Sie, wie Sie die Windows Forms Layoutfeatures, wie z. b. das verankern und ausrichten, verwenden, um Windows Presentation Foundation (WPF)-Steuerelemente anzuordnen.
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
+## <a name="prerequisites"></a>Voraussetzungen
 
 Für diese exemplarische Vorgehensweise benötigen Sie Visual Studio.
 
-## <a name="create-the-project"></a>Erstellen eines Projekts
+## <a name="create-the-project"></a>Erstellen des Projekts
 
 Öffnen Sie Visual Studio, und erstellen Sie ein neues Windows Forms-Anwendungsprojekt C# in Visual Basic oder Visual mit dem Namen `ArrangeElementHost`.
 
@@ -99,7 +99,7 @@ Ausrichtungslinien erleichtern die Ausrichtung von Steuerelementen auf einem For
 
 Ein auf einem Formular gehostetes WPF-Steuerelement hat dasselbe Verankerungs- und Andockverhalten auf wie andere Windows Forms-Steuerelemente.
 
-1. Klicken Sie auf `elementHost1`.
+1. Wählen Sie `elementHost1`aus.
 
 2. Legen Sie im Fenster **Eigenschaften** die <xref:System.Windows.Forms.Control.Anchor%2A>-Eigenschaft auf **oben, unten, Links und rechts**fest.
 
@@ -107,7 +107,7 @@ Ein auf einem Formular gehostetes WPF-Steuerelement hat dasselbe Verankerungs- u
 
    Die Größe des `elementHost1`-Steuerelements wird geändert, sodass es die Zelle ausfüllt.
 
-4. Klicken Sie auf `elementHost2`.
+4. Wählen Sie `elementHost2`aus.
 
 5. Legen Sie im Fenster **Eigenschaften** den Wert der <xref:System.Windows.Forms.Control.Dock%2A>-Eigenschaft auf <xref:System.Windows.Forms.DockStyle.Fill>fest.
 
@@ -117,7 +117,7 @@ Ein auf einem Formular gehostetes WPF-Steuerelement hat dasselbe Verankerungs- u
 
 7. Legen Sie den Wert von dessen <xref:System.Windows.Forms.Control.Dock%2A>-Eigenschaft auf <xref:System.Windows.Forms.DockStyle.Top> fest.
 
-8. Klicken Sie auf `elementHost3`.
+8. Wählen Sie `elementHost3`aus.
 
 9. Legen Sie den Wert von dessen <xref:System.Windows.Forms.Control.Dock%2A>-Eigenschaft auf <xref:System.Windows.Forms.DockStyle.Fill> fest.
 
@@ -129,7 +129,7 @@ Ein auf einem Formular gehostetes WPF-Steuerelement hat dasselbe Verankerungs- u
 
     Weitere Informationen finden Sie unter Gewusst [wie: verankern und Andocken von untergeordneten Steuerelementen in einem TableLayoutPanel-Steuer](../controls/how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md)Element.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>

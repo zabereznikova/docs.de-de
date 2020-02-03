@@ -121,7 +121,7 @@ Sie können den Text ändern, der vom <xref:System.Windows.Forms.LinkLabel>-Steu
        }  
     ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Windows.Forms.LinkLabel.LinkArea%2A>
 - <xref:System.Windows.Forms.LinkLabel.LinkColor%2A>

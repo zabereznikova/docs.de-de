@@ -1,5 +1,5 @@
 ---
-title: -Netzwerk
+title: Netzwerk
 ms.date: 03/30/2017
 helpviewer_keywords:
 - networking [Windows Forms], Windows Forms
@@ -15,7 +15,7 @@ ms.locfileid: "76745013"
 # <a name="networking-in-windows-forms-applications"></a>Netzwerkfunktionen in Windows Forms-Anwendungen
 Der .NET Framework stellt Klassen zum Anzeigen von Webseiten, zum Herunterladen von Webinhalten, zum interagieren mit FTP-Websites (File Transfer Protocol) und zum Nutzen von Webdiensten bereit, sodass Sie problemlos Netzwerkfunktionen in Ihre Anwendung einbauen können. Die folgenden Ressourcen helfen Ihnen, die Netzwerktechnologien des .NET Framework zu verstehen und zu erfahren, wie Sie Sie in Windows Forms integrieren können.  
   
-## <a name="reference"></a>Referenz  
+## <a name="reference"></a>Verweis  
  <xref:System.Net>  
  Der Stamm Namespace für Klassen in der .NET Framework, die die Netzwerk Konnektivität verarbeiten.  
   

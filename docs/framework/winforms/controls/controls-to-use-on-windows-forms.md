@@ -129,7 +129,7 @@ Im Folgenden finden Sie eine alphabetische Auflistung von Steuerelementen und Ko
  [OpenFileDialog-Komponente](openfiledialog-component-windows-forms.md)  
  Ermöglicht Benutzern das Öffnen von Dateien über ein vorkonfiguriertes Dialogfeld.  
   
- [PageSetupDialog Component](pagesetupdialog-component-windows-forms.md)  
+ [PageSetupDialog-Komponente](pagesetupdialog-component-windows-forms.md)  
  Legt Seitendetails für das Drucken über ein vorkonfiguriertes Dialogfeld fest.  
   
  [Panel-Steuerelement](panel-control-windows-forms.md)  
@@ -141,7 +141,7 @@ Im Folgenden finden Sie eine alphabetische Auflistung von Steuerelementen und Ko
  [PrintDialog-Komponente](printdialog-component-windows-forms.md)  
  Wählt einen Drucker aus, wählt die zu druckenden Seiten aus, und legt weitere druckbezogene Einstellungen fest.  
   
- [PrintDocument-Komponente](printdocument-component-windows-forms.md)  
+ [PrintDialog-Komponente](printdocument-component-windows-forms.md)  
  Legt die Druckeigenschaften fest und druckt das Dokument in Windows-basierten Anwendungen.  
   
  [PrintPreviewControl-Steuerelement](printpreviewcontrol-control-windows-forms.md)  

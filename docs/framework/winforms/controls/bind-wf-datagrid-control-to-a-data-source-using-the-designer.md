@@ -66,7 +66,7 @@ ms.locfileid: "76744087"
 
 3. Schreiben Sie Code, um das DataSet auszufüllen.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Übersicht über das DataGrid-Steuerelement](datagrid-control-overview-windows-forms.md)
 - [Gewusst wie: Hinzufügen von Tabellen und Spalten zum DataGrid-Steuerelement in Windows Forms](how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md)

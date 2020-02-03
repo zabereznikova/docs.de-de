@@ -40,7 +40,7 @@ Elemente können einem Windows Forms Kombinations Feld, einem Listenfeld oder ei
     comboBox1->Items->Add("Tokyo");  
     ```  
   
-     - ODER  
+     - oder –  
   
 2. Fügen Sie die Zeichenfolge oder das Objekt am gewünschten Punkt in der Liste mit der `Insert`-Methode ein:  
   
@@ -56,7 +56,7 @@ Elemente können einem Windows Forms Kombinations Feld, einem Listenfeld oder ei
     checkedListBox1->Items->Insert(0, "Copenhagen");  
     ```  
   
-     - ODER  
+     - oder –  
   
 3. Weisen Sie der `Items` Auflistung ein gesamtes Array zu:  
   
@@ -136,7 +136,7 @@ Elemente können einem Windows Forms Kombinations Feld, einem Listenfeld oder ei
     listBox1->Items->Clear();  
     ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Windows.Forms.ComboBox>
 - <xref:System.Windows.Forms.ListBox>

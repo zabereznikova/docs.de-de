@@ -30,9 +30,9 @@ Ein Windows Forms-Steuerelement ist eine Klasse, die direkt oder indirekt von <x
   
  Die Basisklasse für Windows Forms Steuerelemente, <xref:System.Windows.Forms.Control>, bietet die erforderlichen Maßnahmen für die visuelle Darstellung in Client seitigen Windows-basierten Anwendungen. <xref:System.Windows.Forms.Control> stellt ein Fenster Handle bereit, verarbeitet das Nachrichten Routing und bietet Maus-und Tastatur Ereignisse sowie viele weitere Ereignisse der Benutzeroberfläche. Sie bietet erweiterte Layouts und verfügt über Eigenschaften, die für die visuelle Anzeige spezifisch sind, z. b. <xref:System.Windows.Forms.Control.ForeColor%2A>, <xref:System.Windows.Forms.Control.BackColor%2A>, <xref:System.Windows.Forms.Control.Height%2A>, <xref:System.Windows.Forms.Control.Width%2A>und viele andere. Außerdem bietet Sie Sicherheit, Threading Unterstützung und Interoperabilität mit ActiveX-Steuerelementen. Da der Großteil der Infrastruktur von der Basisklasse bereitgestellt wird, ist es relativ einfach, Ihre eigenen Windows Forms-Steuerelemente zu entwickeln.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Gewusst wie: Entwickeln eines einfachen Windows Forms-Steuerelements](how-to-develop-a-simple-windows-forms-control.md)
 - [Entwickeln eines zusammengesetzten Windows Forms-Steuerelements](developing-a-composite-windows-forms-control.md)
 - [Gewusst wie: Erstellen eines Windows Forms-Steuerelements, das den Fortschritt anzeigt](how-to-create-a-windows-forms-control-that-shows-progress.md)
-- [Vielfalt benutzerdefinierter Steuerelemente](varieties-of-custom-controls.md)
+- [Arten von benutzerdefinierten Steuerelementen](varieties-of-custom-controls.md)

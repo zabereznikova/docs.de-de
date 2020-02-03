@@ -22,11 +22,11 @@ Windows Forms Steuerelemente werden nicht sortiert, wenn Sie Daten gebunden sind
   
 ### <a name="to-sort-the-list"></a>So sortieren Sie die Liste  
   
-1. Legen Sie die `Sorted` -Eigenschaft auf `true`fest.  
+1. Setzen Sie die `Sorted`-Eigenschaft auf `true`.  
   
      Mit dieser Einstellung werden alle vorhandenen Listenelemente in sortierter Reihenfolge neu positioniert.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Windows.Forms.ComboBox>
 - <xref:System.Windows.Forms.ListBox>

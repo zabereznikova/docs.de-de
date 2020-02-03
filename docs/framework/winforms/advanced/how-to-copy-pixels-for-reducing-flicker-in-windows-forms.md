@@ -62,7 +62,7 @@ private void Form1_Paint(System.Object sender,
 ## <a name="compiling-the-code"></a>Kompilieren des Codes  
  Der obige Code wird im <xref:System.Windows.Forms.Control.Paint>-Ereignishandler des Formulars ausgeführt, sodass die Grafik beibehalten wird, wenn das Formular neu gezeichnet wird. Daher sollten Sie keine Grafik bezogenen Methoden im <xref:System.Windows.Forms.Form.Load>-Ereignishandler aufzurufen, da der gezeichnete Inhalt nicht neu gezeichnet wird, wenn die Größe des Formulars geändert oder von einem anderen Formular verdeckt wird.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Drawing.CopyPixelOperation>
 - <xref:System.Drawing.Graphics.FillRectangle%2A?displayProperty=nameWithType>

@@ -67,7 +67,7 @@ Sie können Textprogramm gesteuert in der Windows Forms <xref:System.Windows.For
     }  
     ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Windows.Forms.TextBox>
 - [Übersicht über das TextBox-Steuerelement](textbox-control-overview-windows-forms.md)

@@ -28,9 +28,9 @@ Zwei der wichtigsten Szenarien, die die <xref:System.Drawing.Printing.PrintDocum
 
 Wenn Sie einem Formular hinzugefügt wird, wird die <xref:System.Drawing.Printing.PrintDocument> Komponente in der Leiste am unteren Rand des Windows Forms-Designer in Visual Studio angezeigt.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Drawing.Graphics>
 - <xref:System.Drawing.Printing.PrintDocument>
 - [Druckunterstützung in Windows Forms](../advanced/windows-forms-print-support.md)
-- [PrintDocument-Komponente](printdocument-component-windows-forms.md)
+- [PrintDialog-Komponente](printdocument-component-windows-forms.md)

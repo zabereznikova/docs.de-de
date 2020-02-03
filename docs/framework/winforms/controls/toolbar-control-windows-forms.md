@@ -19,7 +19,7 @@ ms.locfileid: "76735453"
  Das `ToolBar`-Steuerelement von Windows Forms wird in Formularen als eine Steuerleiste verwendet, auf der eine Zeile aus Dropdownmenüs und Bitmapschaltflächen angezeigt wird, die Befehle aktivieren. Daher ist ein Klicken auf eine Symbolleistenschaltfläche mit dem Auswählen eines Menübefehls identisch. Die Schaltflächen können so konfiguriert werden, dass sie so angezeigt werden und sich so verhalten wie Schaltflächen, Dropdownmenüs oder Trennzeichen. In der Regel enthält eine Symbolleiste Schaltflächen und Menüs, die Elementen in der Menüstruktur einer Anwendung entsprechen. Dadurch wird schneller Zugriff auf die am häufigsten verwendeten Funktionen und Befehle einer Anwendung ermöglicht.  
   
 > [!NOTE]
-> Die <xref:System.Windows.Forms.ToolBarButton.DropDownMenu%2A>-Eigenschaft des `ToolBar`-Steuerelements übernimmt eine Instanz der <xref:System.Windows.Forms.ContextMenu>-Klasse als Verweis. Wenn Sie diese Art von Schaltfläche auf einer Symbolleiste in Ihrer Anwendung implementieren, sollten Sie sorgfältig auf den Verweis achten, den Sie übergeben, denn die Eigenschaft akzeptiert jedes Objekt, das von der <xref:System.Windows.Forms.Menu>-Klasse erbt.  
+> Die `ToolBar`-Eigenschaft des <xref:System.Windows.Forms.ToolBarButton.DropDownMenu%2A>-Steuerelements übernimmt eine Instanz der <xref:System.Windows.Forms.ContextMenu>-Klasse als Verweis. Wenn Sie diese Art von Schaltfläche auf einer Symbolleiste in Ihrer Anwendung implementieren, sollten Sie sorgfältig auf den Verweis achten, den Sie übergeben, denn die Eigenschaft akzeptiert jedes Objekt, das von der <xref:System.Windows.Forms.Menu>-Klasse erbt.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Übersicht über das ToolBar-Steuerelement](toolbar-control-overview-windows-forms.md)  
@@ -36,12 +36,12 @@ ms.locfileid: "76735453"
   
  Siehe auch Gewusst [wie: Definieren eines Symbols für eine Symbolleisten-Schaltfläche mithilfe des Designers](how-to-define-an-icon-for-a-toolbar-button-using-the-designer.md), Gewusst [wie: Hinzufügen von Schaltflächen zu einem Symbolleisten-Steuerelement mithilfe des Designers](how-to-add-buttons-to-a-toolbar-control-using-the-designer.md).  
   
-## <a name="reference"></a>Referenz  
+## <a name="reference"></a>Verweis  
  <xref:System.Windows.Forms.ToolBar>-Klasse  
  Enthält Referenzinformationen zur Klasse und zu ihren Membern.  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
- [Windows Forms-Steuerelemente](controls-to-use-on-windows-forms.md)  
+ [Steuerelemente für Windows Forms](controls-to-use-on-windows-forms.md)  
  Enthält eine vollständige Liste der Windows Forms-Steuerelemente mit Links zu Informationen zur jeweiligen Verwendung.  
   
  [ToolStrip-Steuerelement](toolstrip-control-windows-forms.md)  

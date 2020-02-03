@@ -75,13 +75,13 @@ Das `DataGridView`-Steuerelement ermöglicht die flexible Anzeige von Daten in t
   
  Siehe auch [Verwenden des Designers mit dem Windows Forms DataGridView-Steuer](using-the-designer-with-the-windows-forms-datagridview-control.md)Element.  
   
-## <a name="reference"></a>Referenz  
+## <a name="reference"></a>Verweis  
  <xref:System.Windows.Forms.DataGridView>  
  Enthält die Referenzdokumentation für das <xref:System.Windows.Forms.DataGridView>-Steuerelement.  
   
  <xref:System.Windows.Forms.BindingSource>  
  Enthält die Referenzdokumentation für die <xref:System.Windows.Forms.BindingSource>-Komponente. Das <xref:System.Windows.Forms.DataGridView>-Steuerelement und die <xref:System.Windows.Forms.BindingSource>-Komponente sind auf eine enge Zusammenarbeit ausgelegt.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Windows Forms-Steuerelemente](controls-to-use-on-windows-forms.md)
+- [Steuerelemente für Windows Forms](controls-to-use-on-windows-forms.md)

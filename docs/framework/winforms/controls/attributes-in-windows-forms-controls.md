@@ -20,7 +20,7 @@ Das .NET Framework bietet eine Vielzahl von Attributen, die Sie auf die Member d
 ## <a name="attributes-for-control-and-component-properties"></a>Attribute für Steuerelement- und Komponenteneigenschaften  
  Die folgende Tabelle enthält die Attribute, die Sie auf Eigenschaften oder andere Member der benutzerdefinierten Steuerelemente und Komponenten anwenden können. Ein Beispiel, in dem viele dieser Attribute verwendet werden, finden Sie unter [Vorgehensweise: Anwenden von Attributen auf Windows Forms-Steuerelemente](how-to-apply-attributes-in-windows-forms-controls.md).  
   
-|Attribute|Beschreibung|  
+|attribute|BESCHREIBUNG|  
 |---------------|-----------------|  
 |<xref:System.ComponentModel.AmbientValueAttribute>|Gibt den Wert an, der an eine Eigenschaft übergeben werden soll, damit die Eigenschaft den zugehörigen Wert von einer anderen Quelle abrufen kann. Dies wird als *Umgebung* bezeichnet.|  
 |<xref:System.ComponentModel.BrowsableAttribute>|Gibt an, ob eine Eigenschaft oder ein Ereignis im Fenster **Eigenschaften** angezeigt werden soll.|  
@@ -30,7 +30,7 @@ Das .NET Framework bietet eine Vielzahl von Attributen, die Sie auf die Member d
 |<xref:System.ComponentModel.DisplayNameAttribute>|Gibt den Anzeigenamen für eine Eigenschaft, ein Ereignis oder eine `public void`-Methode an, die keine Argumente akzeptiert.|  
 |<xref:System.ComponentModel.EditorAttribute>|Gibt den Editor an, der zum Ändern einer Eigenschaft verwendet wird.|  
 |<xref:System.ComponentModel.EditorBrowsableAttribute>|Gibt an, dass eine Eigenschaft oder Methode in einem Editor angezeigt werden kann.|  
-|<xref:System.ComponentModel.Design.HelpKeywordAttribute>|Gibt das Kontextschlüsselwort für eine Klasse oder einen Member an.|  
+|<xref:System.ComponentModel.Design.HelpKeywordAttribute>|Gibt das Kontextschlüsselwort für eine Klasse oder ein Element an.|  
 |<xref:System.ComponentModel.LocalizableAttribute>|Gibt an, ob eine Eigenschaft lokalisiert werden soll.|  
 |<xref:System.ComponentModel.PasswordPropertyTextAttribute>|Gibt an, dass die Textdarstellung eines Objekts von Zeichen wie Sternchen verdeckt wird.|  
 |<xref:System.ComponentModel.ReadOnlyAttribute>|Gibt an, ob die Eigenschaft, an die dieses Attribut gebunden ist, schreibgeschützt ist oder ob zur Entwurfszeit Lese-/Schreibzugriff gewährt wird.|  
@@ -40,7 +40,7 @@ Das .NET Framework bietet eine Vielzahl von Attributen, die Sie auf die Member d
 ## <a name="attributes-for-data-binding-properties"></a>Attribute für Datenbindungseigenschaften  
  In der folgenden Tabelle werden die Attribute angezeigt, die Sie für die Angabe anwenden können, wie Ihre benutzerdefinierten Steuerelemente und Komponenten mit der Datenbindung interagieren.  
   
-|Attribute|Beschreibung|  
+|attribute|BESCHREIBUNG|  
 |---------------|-----------------|  
 |<xref:System.ComponentModel.BindableAttribute>|Gibt an, ob eine Eigenschaft in der Regel für die Bindung verwendet wird.|  
 |<xref:System.ComponentModel.ComplexBindingPropertiesAttribute>|Gibt die Eigenschaften der Datenquelle und des Datenmembers für eine Komponente an.|  
@@ -51,7 +51,7 @@ Das .NET Framework bietet eine Vielzahl von Attributen, die Sie auf die Member d
 ## <a name="attributes-for-classes"></a>Attribute für Klassen  
  In der folgenden Tabelle werden die Attribute angezeigt, die Sie anwenden können, um das Verhalten Ihrer benutzerdefinierten Steuerelemente und Komponenten zur Entwurfszeit anzugeben.  
   
-|Attribute|Beschreibung|  
+|attribute|BESCHREIBUNG|  
 |---------------|-----------------|  
 |<xref:System.ComponentModel.DefaultEventAttribute>|Gibt das Standardereignis für eine Komponente an.|  
 |<xref:System.ComponentModel.DefaultPropertyAttribute>|Gibt die Standardeigenschaft für eine Komponente an.|  
@@ -60,7 +60,7 @@ Das .NET Framework bietet eine Vielzahl von Attributen, die Sie auf die Member d
 |<xref:System.ComponentModel.ToolboxItemAttribute>|Stellt ein Attribut eines Werkzeugkastenelements dar.|  
 |<xref:System.ComponentModel.ToolboxItemFilterAttribute>|Gibt die Filterzeichenfolge und den Filtertyp an, die für ein Werkzeugkastenelement verwendet werden sollen.|  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Attribute>
 - [Vorgehensweise: Anwenden von Attributen auf Windows Forms-Steuerelemente](how-to-apply-attributes-in-windows-forms-controls.md)

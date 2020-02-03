@@ -41,7 +41,7 @@ Um die Gruppierung zu aktivieren, müssen Sie zunächst ein oder mehrere <xref:S
 
 3. Wählen Sie die <xref:System.Windows.Forms.ListViewItem.Group%2A>-Eigenschaft aus, und wählen Sie eine Gruppe aus der Dropdown Liste aus.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Windows.Forms.ListView>
 - <xref:System.Windows.Forms.ListView.Groups%2A>

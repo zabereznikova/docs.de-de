@@ -59,11 +59,11 @@ ms.locfileid: "76728178"
   
 ## <a name="compiling-the-code"></a>Kompilieren des Codes  
   
-Für dieses Beispiel benötigen Sie Folgendes:
+Dieses Beispiel erfordert Folgendes:
   
 - Verweise auf die Assemblys "System" und "System.Windows.Forms".  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Windows.Forms.ToolStripControlHost>
 - [Übersicht über das ToolStrip-Steuerelement](toolstrip-control-overview-windows-forms.md)

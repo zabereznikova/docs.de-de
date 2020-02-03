@@ -31,10 +31,10 @@ Die Windows Forms `NotifyIcon` Komponente zeigt Symbole im Status Benachrichtigu
  [Gewusst wie: Zuordnen eines Kontextmenüs zu einer NotifyIcon-Komponente in Windows Forms](how-to-associate-a-shortcut-menu-with-a-windows-forms-notifyicon-component.md)  
  Hier finden Sie Schritte zum Hinzufügen eines Kontextmenüs zu einer `NotifyIcon` Komponente.  
   
-## <a name="reference"></a>Referenz  
+## <a name="reference"></a>Verweis  
  <xref:System.Windows.Forms.NotifyIcon>  
  Enthält Referenzinformationen zur Klasse und zu ihren Membern.  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
- [Windows Forms-Steuerelemente](controls-to-use-on-windows-forms.md)  
+ [Steuerelemente für Windows Forms](controls-to-use-on-windows-forms.md)  
  Enthält eine vollständige Liste der Windows Forms-Steuerelemente mit Links zu Informationen zur jeweiligen Verwendung.

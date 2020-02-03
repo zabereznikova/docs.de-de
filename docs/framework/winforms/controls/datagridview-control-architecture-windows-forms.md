@@ -120,11 +120,11 @@ Das <xref:System.Windows.Forms.DataGridView> Steuerelement und die zugehörigen 
   
 |Zellentyp|Gehosteter Steuerelement|Spaltentyp|  
 |---------------|--------------------|-----------------|  
-|<xref:System.Windows.Forms.DataGridViewButtonCell>|nicht verfügbar|<xref:System.Windows.Forms.DataGridViewButtonColumn>|  
-|<xref:System.Windows.Forms.DataGridViewCheckBoxCell>|nicht verfügbar|<xref:System.Windows.Forms.DataGridViewCheckBoxColumn>|  
+|<xref:System.Windows.Forms.DataGridViewButtonCell>|–|<xref:System.Windows.Forms.DataGridViewButtonColumn>|  
+|<xref:System.Windows.Forms.DataGridViewCheckBoxCell>|–|<xref:System.Windows.Forms.DataGridViewCheckBoxColumn>|  
 |<xref:System.Windows.Forms.DataGridViewComboBoxCell>|<xref:System.Windows.Forms.DataGridViewComboBoxEditingControl>|<xref:System.Windows.Forms.DataGridViewComboBoxColumn>|  
-|<xref:System.Windows.Forms.DataGridViewImageCell>|nicht verfügbar|<xref:System.Windows.Forms.DataGridViewImageColumn>|  
-|<xref:System.Windows.Forms.DataGridViewLinkCell>|nicht verfügbar|<xref:System.Windows.Forms.DataGridViewLinkColumn>|  
+|<xref:System.Windows.Forms.DataGridViewImageCell>|–|<xref:System.Windows.Forms.DataGridViewImageColumn>|  
+|<xref:System.Windows.Forms.DataGridViewLinkCell>|–|<xref:System.Windows.Forms.DataGridViewLinkColumn>|  
 |<xref:System.Windows.Forms.DataGridViewTextBoxCell>|<xref:System.Windows.Forms.DataGridViewTextBoxEditingControl>|<xref:System.Windows.Forms.DataGridViewTextBoxColumn>|  
   
 ### <a name="datagridviewrow"></a>DataGridViewRow  
@@ -136,7 +136,7 @@ Das <xref:System.Windows.Forms.DataGridView> Steuerelement und die zugehörigen 
   
  Wenn Sie die <xref:System.Windows.Forms.DataGridView.AllowUserToAddRows%2A>-Eigenschaft des <xref:System.Windows.Forms.DataGridView> Steuer Elements aktivieren, wird eine spezielle Zeile zum Hinzufügen neuer Zeilen als letzte Zeile angezeigt. Diese Zeile ist Teil der <xref:System.Windows.Forms.DataGridView.Rows%2A>-Sammlung, verfügt jedoch über spezielle Funktionen, die möglicherweise Ihre Aufmerksamkeit erfordern. Weitere Informationen finden Sie unter [Verwenden der Zeile für neue Datensätze im Windows Forms DataGridView-Steuer](using-the-row-for-new-records-in-the-windows-forms-datagridview-control.md)Element.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Übersicht über das DataGridView-Steuerelement](datagridview-control-overview-windows-forms.md)
 - [Anpassen des DataGridView-Steuerelements von Windows Forms](customizing-the-windows-forms-datagridview-control.md)

@@ -30,15 +30,15 @@ ms.locfileid: "76746168"
  [Gewusst wie: Hinzufügen und Entfernen von Menüelementen mit der ContextMenu-Komponente von Windows Forms](add-and-remove-menu-items-with-wf-contextmenu-component.md)  
  Erläutert das Hinzufügen und Entfernen von Kontextmenü Elementen in Windows Forms.  
   
-## <a name="reference"></a>Referenz  
+## <a name="reference"></a>Verweis  
  <xref:System.Windows.Forms.ContextMenu>  
  Enthält Referenzinformationen zur <xref:System.Windows.Forms.ContextMenu>-Klasse und zu ihren Membern.  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
- [Windows Forms-Steuerelemente](controls-to-use-on-windows-forms.md)  
+ [Steuerelemente für Windows Forms](controls-to-use-on-windows-forms.md)  
  Enthält eine vollständige Liste der Windows Forms-Steuerelemente mit Links zu Informationen zur jeweiligen Verwendung.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Windows.Forms.MenuStrip>
 - <xref:System.Windows.Forms.ContextMenuStrip>

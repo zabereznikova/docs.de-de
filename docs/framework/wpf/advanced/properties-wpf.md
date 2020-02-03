@@ -34,9 +34,9 @@ ms.locfileid: "76731847"
 - [Sichere Konstruktormuster für DependencyObjects](safe-constructor-patterns-for-dependencyobjects.md)
 - [Abhängigkeitseigenschaften vom Auflistungstyp](collection-type-dependency-properties.md)
 - [Laden von XAML und Abhängigkeitseigenschaften](xaml-loading-and-dependency-properties.md)
-- [Gewusst wie-Themen](properties-how-to-topics.md)
+- [How-to Topics (Themen zur Vorgehensweise)](properties-how-to-topics.md)
   
-## <a name="reference"></a>Referenz  
+## <a name="reference"></a>Verweis  
  <xref:System.Windows.DependencyProperty>  
   
  <xref:System.Windows.PropertyMetadata>  
@@ -51,7 +51,7 @@ ms.locfileid: "76731847"
   [Basiselemente](base-elements.md)  
   [Elementstruktur und Serialisierung](element-tree-and-serialization.md)  
   [Ereignisse](events-wpf.md)  
-  [Eingabe](input-wpf.md)  
+  [Input](input-wpf.md) (Eingabe)  
   [Ressourcen](resources-wpf.md)  
   [WPF-Inhaltsmodell](../controls/wpf-content-model.md)  
   [Threadmodell](threading-model.md)

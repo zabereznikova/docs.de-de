@@ -15,7 +15,7 @@ Der Routingdienst stellt einen generischen austauschbaren SOAP-Vermittler bereit
 
 Dieses Thema richtet sich an Personen, die mit dem Routingdienst noch nicht vertraut sind, und behandelt die grundlegende Konfiguration und das Hosten des Routingdiensts.
 
-## <a name="configuration"></a>-Konfiguration
+## <a name="configuration"></a>Konfiguration
 
 Der Routingdienst wird als WCF-Dienst implementiert, der einen oder mehrere Dienstendpunkte verfügbar macht, die Nachrichten von Clientanwendungen empfangen und die Nachrichten an einen oder mehrere Zielendpunkte weiterleiten. Der Dienst stellt ein <xref:System.ServiceModel.Routing.RoutingBehavior>-Objekt bereit, das auf die vom Dienst verfügbar gemachten Dienstendpunkte angewendet wird. Dieses Verhalten wird verwendet, um verschiedene Aspekte in Bezug auf die Funktionsweise des Diensts zu konfigurieren. Zur Erleichterung der Konfiguration bei Verwendung einer Konfigurationsdatei werden die Parameter für **Routing Behavior**angegeben. In Code basierten Szenarien werden diese Parameter als Teil eines <xref:System.ServiceModel.Routing.RoutingConfiguration> Objekts angegeben, das dann an ein **RoutingBehavior**-Objekt weitergeleitet werden kann.
 
@@ -364,7 +364,7 @@ rc.FilterTable.Add(new MatchAllMessageFilter(), backupList);
 
 In der folgenden Tabelle werden die Muster beschrieben, die mit der Verwendung von Sicherungsendpunktlisten kompatibel sind. Außerdem enthält die Tabelle Hinweise zu den Details der Fehlerbehandlung für bestimmte Muster.
 
-|Muster|Sitzung|Transaktion|Empfangskontext|Unterstützte Sicherungsliste|Hinweise|
+|Muster|Sitzung|Transaktion|Empfangskontext|Unterstützte Sicherungsliste|Notizen|
 |-------------|-------------|-----------------|---------------------|---------------------------|-----------|
 |Unidirektional||||Ja|Versucht, die Nachricht erneut an einen Sicherungsendpunkt zu senden. Falls für diese Nachricht ein Multicast ausgeführt wird, wird nur die Nachricht im Kanal mit dem Fehler an das entsprechende Sicherungsziel verschoben.|
 |Unidirektional||✔️||Nein|Eine Ausnahme wird ausgelöst, und für die Transaktion wird ein Rollback ausgeführt.|
@@ -413,7 +413,7 @@ Um den ASP.NET-Identitätswechsel mit dem Routingdienst zu verwenden, aktivieren
 
 Um Windows-Anmeldeinformationen mit dem Routingdienst zu verwenden, müssen Sie sowohl die Anmeldeinformationen als auch den Dienst konfigurieren. Das Objekt für Clientanmeldeinformationen (<xref:System.ServiceModel.Security.WindowsClientCredential>, auf das von der <xref:System.ServiceModel.ChannelFactory> zugegriffen werden kann) definiert eine <xref:System.ServiceModel.Security.WindowsClientCredential.AllowedImpersonationLevel%2A>-Eigenschaft, die festgelegt werden muss, um den Identitätswechsel zu ermöglichen. Schließlich müssen Sie für den Dienst das <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior>-Verhalten konfigurieren, um `ImpersonateCallerForAllOperations` auf `true` festzulegen. Der Routingdienst verwendet dieses Flag, um zu entscheiden, ob die Clients zum Weiterleiten von Nachrichten mit aktiviertem Identitätswechsel erstellt werden sollen.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Nachrichtenfilter](message-filters.md)
 - [Routingverträge](routing-contracts.md)

@@ -65,7 +65,7 @@ Ein Windows Forms <xref:System.Windows.Forms.CheckBox>-Steuerelement wird verwen
        }  
     ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Windows.Forms.CheckBox>
 - [Übersicht über das CheckBox-Steuerelement](checkbox-control-overview-windows-forms.md)

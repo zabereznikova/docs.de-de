@@ -24,7 +24,7 @@ Das Windows Forms-Steuerelement <xref:System.Windows.Forms.CheckBox> zeigt an, o
   
  Das <xref:System.Windows.Forms.CheckBox>-Steuerelement verfügt über zwei wichtige Eigenschaften, <xref:System.Windows.Forms.CheckBox.Checked%2A> und <xref:System.Windows.Forms.CheckBox.CheckState%2A>. Die <xref:System.Windows.Forms.CheckBox.Checked%2A>-Eigenschaft gibt entweder `true` oder `false`zurück. Die <xref:System.Windows.Forms.CheckBox.CheckState%2A>-Eigenschaft gibt entweder <xref:System.Windows.Forms.CheckState.Checked> oder <xref:System.Windows.Forms.CheckState.Unchecked>zurück. Wenn die <xref:System.Windows.Forms.CheckBox.ThreeState%2A>-Eigenschaft auf `true`festgelegt ist, kann <xref:System.Windows.Forms.CheckBox.CheckState%2A> auch <xref:System.Windows.Forms.CheckState.Indeterminate>zurückgeben. Im unbestimmten Zustand wird das Feld mit einer Abbild Darstellung angezeigt, um anzugeben, dass die Option nicht verfügbar ist.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Windows.Forms.CheckBox>
 - [Gewusst wie: Festlegen von Optionen mit CheckBox-Steuerelementen in Windows Forms](how-to-set-options-with-windows-forms-checkbox-controls.md)

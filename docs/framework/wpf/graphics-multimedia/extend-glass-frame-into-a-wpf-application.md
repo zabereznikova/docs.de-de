@@ -150,7 +150,7 @@ In der folgenden Abbildung wird der in eine WPF-Anwendung erweiterte Glasframe v
 
 ![Screenshot, der einen in eine WPF-Anwendung erweiterten Glasframe zeigt](./media/extend-glass-frame-into-a-wpf-application/glass-frame-extended-wpf-application.png)
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Übersicht über Desktopfenster-Manager](/windows/desktop/dwm/dwm-overview)
 - [Übersicht über Desktopfenster-Manager Unschärfe](/windows/desktop/dwm/blur-ovw)

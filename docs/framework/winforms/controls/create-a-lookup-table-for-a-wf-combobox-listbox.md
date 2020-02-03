@@ -33,7 +33,7 @@ Manchmal ist es sinnvoll, Daten in einem benutzerfreundlichen Format in einem Wi
   
 ### <a name="itemtable"></a>ItemTable  
   
-|Id|-Name|  
+|id|Name|  
 |--------|----------|  
 |12|Kartoffeln|  
 |13|Huhn|  
@@ -54,7 +54,7 @@ Manchmal ist es sinnvoll, Daten in einem benutzerfreundlichen Format in einem Wi
   
 4. Legen Sie die folgenden Eigenschaften fest. Sie können im Code oder im Designer festgelegt werden.  
   
-    |Die Eigenschaften-|-Einstellung|  
+    |Eigenschaft|Einstellung|  
     |--------------|-------------|  
     |<xref:System.Windows.Forms.ListControl.DataSource%2A>|Die Tabelle, die Informationen darüber enthält, welche ID-Nummer welchem Element entspricht. Im vorherigen Szenario ist dies `ItemTable`.|  
     |<xref:System.Windows.Forms.ListControl.DisplayMember%2A>|Die Spalte der Datenquellentabelle, die im Steuerelement angezeigt werden soll. Im vorherigen Szenario ist dies `"Name"` (um im Code festzulegen, verwenden Sie Anführungszeichen).|  
@@ -70,7 +70,7 @@ Manchmal ist es sinnvoll, Daten in einem benutzerfreundlichen Format in einem Wi
     listBox1.DataBindings.Add("SelectedValue", OrderDetailsTable, "ItemID");  
     ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Datenbindung und Windows Forms](../data-binding-and-windows-forms.md)
 - [Übersicht über das ListBox-Steuerelement](listbox-control-overview-windows-forms.md)

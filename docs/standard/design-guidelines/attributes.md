@@ -1,5 +1,5 @@
 ---
-title: Attribute
+title: Attributes
 ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -13,7 +13,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76741789"
 ---
-# <a name="attributes"></a>Attribute
+# <a name="attributes"></a>Attributes
 <xref:System.Attribute?displayProperty=nameWithType> ist eine Basisklasse, die zum Definieren von benutzerdefinierten Attributen verwendet wird.
 
  Attribute sind Anmerkungen, die Programmier Elementen wie Assemblys, Typen, Membern und Parametern hinzugefügt werden können. Sie werden in den Metadaten der Assembly gespeichert und können zur Laufzeit mithilfe der reflektionsapis aufgerufen werden. Das Framework definiert z. b. die <xref:System.ObsoleteAttribute>, die auf einen Typ oder einen Member angewendet werden kann, um anzugeben, dass der Typ oder Member veraltet ist.
@@ -48,7 +48,7 @@ ms.locfileid: "76741789"
 
  *Nachdruck mit Genehmigung von Pearson Education, Inc aus [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) von Krzysztof Cwalina und Brad Abrams, veröffentlicht am 22. Oktober 2008 durch Addison-Wesley Professional als Teil der Microsoft Windows Development Series.*
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Frameworkentwurfsrichtlinien](../../../docs/standard/design-guidelines/index.md)
 - [Verwendungsrichtlinien](../../../docs/standard/design-guidelines/usage-guidelines.md)

@@ -24,7 +24,7 @@ ms.locfileid: "76746976"
 
 In diesem Artikel erfahren Sie, wie Sie eine WPF-Desktop Anwendung (Windows Presentation Foundation) entwickeln, die die Elemente enthält, die den meisten WPF-Anwendungen gemeinsam sind: Extensible Application Markup Language (XAML)-Markup, Code Behind, Anwendungs Definitionen, Steuerelemente, Layout, Datenbindung und Stile. Zum Entwickeln der Anwendung verwenden Sie Visual Studio. 
 
-In diesem Tutorial lernen Sie, wie die folgenden Aufgaben ausgeführt werden:
+In diesem Tutorial lernen Sie Folgendes:
 > [!div class="checklist"]
 >
 > - Erstellen Sie ein WPF-Projekt.
@@ -42,7 +42,7 @@ Am Ende des Tutorials haben Sie eine eigenständige Windows-Anwendung erstellt, 
 >
 > Sie können die Codesprache des Beispielcodes zwischen C# und Visual Basic umschalten, indem Sie die Sprachauswahl auf dieser Seite verwenden.
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
+## <a name="prerequisites"></a>Voraussetzungen
 
 - [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) mit installierter **.net-desktopentwicklungs-** Arbeitsauslastung.
 
@@ -495,7 +495,7 @@ Weitere Informationen zum Erstellen von Anwendungen finden Sie in den folgenden 
 - [Grafiken und Multimedia](../graphics-multimedia/index.md)
 - [Dokumente in WPF](../advanced/documents-in-wpf.md)
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Übersicht über Panels](../controls/panels-overview.md)
 - [Übersicht über Datenvorlagen](../data/data-templating-overview.md)

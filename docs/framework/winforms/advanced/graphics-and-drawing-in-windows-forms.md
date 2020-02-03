@@ -31,7 +31,7 @@ Die Common Language Runtime verwendet eine erweiterte Implementierung der Window
  [Verwenden von verwalteten Grafikklassen](using-managed-graphics-classes.md)  
  Veranschaulicht, wie eine Vielzahl von Tasks mithilfe der verwalteten GDI+-Klassen ausgeführt wird.  
   
-## <a name="reference"></a>Referenz  
+## <a name="reference"></a>Verweis  
  <xref:System.Drawing>  
  Bietet Zugriff auf die grundlegenden GDI+-Grafikfunktionen.  
   
@@ -48,5 +48,5 @@ Die Common Language Runtime verwendet eine erweiterte Implementierung der Window
  Stellt Druckfunktionen bereit.  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
- [Zeichnen und Ausgeben von benutzerdefinierten Steuerelementen](../controls/custom-control-painting-and-rendering.md)  
+ [Zeichnen und Rendern von benutzerdefinierten Steuerelementen](../controls/custom-control-painting-and-rendering.md)  
  Erläutert die Bereitstellung von Code zum Zeichnen von Steuerelementen.

@@ -42,7 +42,7 @@ Viele grundlegende Verhalten `DataGridView` Zellen, Zeilen und Spalten können d
  [Vorgehensweise: Anzeigen von Bildern in Zellen des DataGridView-Steuerelements in Windows Forms](how-to-display-images-in-cells-of-the-windows-forms-datagridview-control.md)  
  Beschreibt, wie eine Bild Spalte erstellt wird, in der in jeder Zelle ein Symbol angezeigt wird.  
   
-## <a name="reference"></a>Referenz  
+## <a name="reference"></a>Verweis  
  <xref:System.Windows.Forms.DataGridView>  
  Enthält die Referenz Dokumentation für das-Steuerelement.  
   
@@ -53,7 +53,7 @@ Viele grundlegende Verhalten `DataGridView` Zellen, Zeilen und Spalten können d
  [Programmieren mit Zellen, Zeilen und Spalten im DataGridView-Steuerelement in Windows Forms](programming-with-cells-rows-and-columns-in-the-datagrid.md)  
  Enthält Themen, in denen die Programmierung mit Zellen-, Zeilen- und Spaltenobjekten beschrieben wird.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [DataGridView-Steuerelement](datagridview-control-windows-forms.md)
 - [Spaltentypen im DataGridView-Steuerelement in Windows Forms](column-types-in-the-windows-forms-datagridview-control.md)

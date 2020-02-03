@@ -24,7 +24,7 @@ Die Implementierung des zirkulären Puffer-Ablaufverfolgungslisteners beruht auf
 
 Dieser Listener wird vom `XmlWriteTraceListener` abgeleitet und ermöglicht das Anzeigen der Protokolle mit dem [Service Trace Viewer-Tool (SvcTraceViewer. exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md). Beim Anzeigen der Protokolle können die beiden Protokolldateien leicht rekombiniert werden, indem man beide Protokolldateien gleichzeitig im Service Trace Viewer öffnet. Der Service Trace Viewer erledigt automatisch das Sortieren der Ablaufverfolgungen, so dass diese in der korrekten Reihenfolge angezeigt werden.
 
-## <a name="configuration"></a>-Konfiguration
+## <a name="configuration"></a>Konfiguration
 
 Durch Hinzufügen des folgenden Codes für einen Listener und Quellelemente kann ein Dienst zum Verwenden des zirkulären Puffer-Ablaufverfolgungslisteners konfiguriert werden. Die maximale Dateigröße wird durch Angeben des `maxFileSizeKB`-Attributs in der Konfiguration des zirkulären Ablaufverfolgungslisteners festlegt. Dies wird im folgenden Code demonstriert.
 
@@ -62,6 +62,6 @@ Durch Hinzufügen des folgenden Codes für einen Listener und Quellelemente kann
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\CircularTracing`
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [AppFabric-Überwachungs Beispiele](https://docs.microsoft.com/previous-versions/appfabric/ff383407(v=azure.10))

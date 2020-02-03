@@ -82,9 +82,9 @@ Sie können das <xref:System.Windows.Forms.PrintPreviewDialog>-Steuerelement ver
        System::EventHandler(this, &Form1::button1_Click);  
     ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [PrintDocument-Komponente](printdocument-component-windows-forms.md)
+- [PrintDialog-Komponente](printdocument-component-windows-forms.md)
 - [PrintPreviewDialog-Steuerelement](printpreviewdialog-control-windows-forms.md)
 - [Druckunterstützung in Windows Forms](../advanced/windows-forms-print-support.md)
 - [Windows Forms](../index.md)

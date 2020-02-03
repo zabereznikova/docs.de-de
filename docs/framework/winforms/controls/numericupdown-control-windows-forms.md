@@ -29,12 +29,12 @@ Das `NumericUpDown`-Steuerelement in Windows Forms sieht wie eine Kombination au
  [Gewusst wie: Festlegen des Formats für das NumericUpDown-Steuerelement in Windows Forms](how-to-set-the-format-for-the-windows-forms-numericupdown-control.md)  
  Beschreibt die Konfiguration der Anzeige von Werten in einem Steuerelement.  
   
-## <a name="reference"></a>Referenz  
+## <a name="reference"></a>Verweis  
  <xref:System.Windows.Forms.NumericUpDown>  
  Enthält Referenzinformationen zur <xref:System.Windows.Forms.NumericUpDown>-Klasse und zu ihren Membern.  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
- [Windows Forms-Steuerelemente](controls-to-use-on-windows-forms.md)  
+ [Steuerelemente für Windows Forms](controls-to-use-on-windows-forms.md)  
  Enthält eine vollständige Liste der Windows Forms-Steuerelemente mit Links zu Informationen zur jeweiligen Verwendung.  
   
  [DomainUpDown-Steuerelement](domainupdown-control-windows-forms.md)  

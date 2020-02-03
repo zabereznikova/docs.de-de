@@ -25,7 +25,7 @@ Das Windows Forms <xref:System.Windows.Forms.RichTextBox>-Steuerelement verfügt
   
 ### <a name="to-format-a-paragraph-as-a-bulleted-list"></a>So formatieren Sie einen Absatz als Aufzählung  
   
-1. Legen Sie die <xref:System.Windows.Forms.RichTextBox.SelectionBullet%2A> -Eigenschaft auf `true`fest.  
+1. Setzen Sie die <xref:System.Windows.Forms.RichTextBox.SelectionBullet%2A>-Eigenschaft auf `true`.  
   
     ```vb  
     RichTextBox1.SelectionBullet = True  
@@ -68,8 +68,8 @@ Das Windows Forms <xref:System.Windows.Forms.RichTextBox>-Steuerelement verfügt
     > [!NOTE]
     > Alle genannten Eigenschaften wirken sich auf sämtliche Absätze, in denen Text markiert ist, sowie auf nach der aktuellen Einfügemarke eingegebenen Text aus. Wenn ein Benutzer beispielsweise ein Wort in einem Absatz markiert und dann den Einzug anpasst, wird die neue Einstellung auf den gesamten Absatz, in dem dieses Wort steht, und auf alle Absätze angewendet, die hinter diesem Absatz eingegeben werden. Informationen zum programmgesteuerten auswählen von Text finden Sie unter <xref:System.Windows.Forms.TextBoxBase.Select%2A>.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Windows.Forms.RichTextBox>
 - [RichTextBox-Steuerelement](richtextbox-control-windows-forms.md)
-- [Windows Forms-Steuerelemente](controls-to-use-on-windows-forms.md)
+- [Steuerelemente für Windows Forms](controls-to-use-on-windows-forms.md)

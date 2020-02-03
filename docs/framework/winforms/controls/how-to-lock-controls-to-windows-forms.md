@@ -47,9 +47,9 @@ Alle zuvor gesperrten Steuerelemente auf dem Formular sind nun entsperrt.
 
 Wählen Sie im Fenster **Eigenschaften** die Eigenschaft **gesperrt** aus, und wählen Sie dann **false**aus. (Doppelklicken Sie auf den Namen, um die Eigenschafts Einstellung zu wechseln.)
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Windows Forms-Steuerelemente](index.md)
 - [Beschriften einzelner Steuerelemente für Windows Forms und Konfigurieren von Shortcuts für diese Elemente](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
-- [Windows Forms-Steuerelemente](controls-to-use-on-windows-forms.md)
+- [Steuerelemente für Windows Forms](controls-to-use-on-windows-forms.md)
 - [Windows Forms-Steuerelemente nach Funktion](windows-forms-controls-by-function.md)
