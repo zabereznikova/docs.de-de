@@ -13,18 +13,18 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76737911"
 ---
-# <a name="fonts-wpf"></a><span data-ttu-id="b442d-102">Schriftarten (WPF)</span><span class="sxs-lookup"><span data-stu-id="b442d-102">Fonts (WPF)</span></span>
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] <span data-ttu-id="b442d-103">bietet Unterstützung für die umfangreiche Darstellung von Text mithilfe von OpenType-Schriftarten.</span><span class="sxs-lookup"><span data-stu-id="b442d-103">includes support for rich presentation of text using OpenType fonts.</span></span> <span data-ttu-id="b442d-104">Ein Beispiel Paket mit OpenType-Schriftarten ist in der Windows SDK enthalten.</span><span class="sxs-lookup"><span data-stu-id="b442d-104">A sample pack of OpenType fonts is included with the Windows SDK.</span></span>  
+# <a name="fonts-wpf"></a><span data-ttu-id="5f12b-102">Schriftarten (WPF)</span><span class="sxs-lookup"><span data-stu-id="5f12b-102">Fonts (WPF)</span></span>
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] <span data-ttu-id="5f12b-103">bietet Unterstützung für die umfangreiche Darstellung von Text mithilfe von OpenType-Schriftarten.</span><span class="sxs-lookup"><span data-stu-id="5f12b-103">includes support for rich presentation of text using OpenType fonts.</span></span> <span data-ttu-id="5f12b-104">Ein Beispiel Paket mit OpenType-Schriftarten ist in der Windows SDK enthalten.</span><span class="sxs-lookup"><span data-stu-id="5f12b-104">A sample pack of OpenType fonts is included with the Windows SDK.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="b442d-105">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="b442d-105">In This Section</span></span>  
- [<span data-ttu-id="b442d-106">Features für OpenType-Schriftarten</span><span class="sxs-lookup"><span data-stu-id="b442d-106">OpenType Font Features</span></span>](opentype-font-features.md)  
- [<span data-ttu-id="b442d-107">Verpacken von Schriftarten mit Anwendungen</span><span class="sxs-lookup"><span data-stu-id="b442d-107">Packaging Fonts with Applications</span></span>](packaging-fonts-with-applications.md)  
- [<span data-ttu-id="b442d-108">OpenType-Beispielschriftartenpaket</span><span class="sxs-lookup"><span data-stu-id="b442d-108">Sample OpenType Font Pack</span></span>](sample-opentype-font-pack.md)  
- [<span data-ttu-id="b442d-109">Gewusst wie-Themen</span><span class="sxs-lookup"><span data-stu-id="b442d-109">How-to Topics</span></span>](fonts-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="5f12b-105">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="5f12b-105">In This Section</span></span>  
+ [<span data-ttu-id="5f12b-106">Features für OpenType-Schriftarten</span><span class="sxs-lookup"><span data-stu-id="5f12b-106">OpenType Font Features</span></span>](opentype-font-features.md)  
+ [<span data-ttu-id="5f12b-107">Schriftarten mit Anwendungen verpacken</span><span class="sxs-lookup"><span data-stu-id="5f12b-107">Packaging Fonts with Applications</span></span>](packaging-fonts-with-applications.md)  
+ [<span data-ttu-id="5f12b-108">OpenType-Beispielschriftartenpaket</span><span class="sxs-lookup"><span data-stu-id="5f12b-108">Sample OpenType Font Pack</span></span>](sample-opentype-font-pack.md)  
+ [<span data-ttu-id="5f12b-109">How-to Topics (Themen zur Vorgehensweise)</span><span class="sxs-lookup"><span data-stu-id="5f12b-109">How-to Topics</span></span>](fonts-how-to-topics.md)  
   
-## <a name="see-also"></a><span data-ttu-id="b442d-110">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="b442d-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="5f12b-110">Weitere Informationen</span><span class="sxs-lookup"><span data-stu-id="5f12b-110">See also</span></span>
 
 - <xref:System.Windows.FontStyle>
 - <xref:System.Windows.SystemFonts>
-- [<span data-ttu-id="b442d-111">Dokumente in WPF</span><span class="sxs-lookup"><span data-stu-id="b442d-111">Documents in WPF</span></span>](documents-in-wpf.md)
-- [<span data-ttu-id="b442d-112">Typografie in WPF</span><span class="sxs-lookup"><span data-stu-id="b442d-112">Typography in WPF</span></span>](typography-in-wpf.md)
+- [<span data-ttu-id="5f12b-111">Dokumente in WPF</span><span class="sxs-lookup"><span data-stu-id="5f12b-111">Documents in WPF</span></span>](documents-in-wpf.md)
+- [<span data-ttu-id="5f12b-112">Typografie in WPF</span><span class="sxs-lookup"><span data-stu-id="5f12b-112">Typography in WPF</span></span>](typography-in-wpf.md)
