@@ -24,7 +24,7 @@ ms.locfileid: "76745118"
 ## <a name="key-properties"></a>Schlüsseleigenschaften  
  Ein Menü Element kann als Standardelement festgelegt werden, indem die <xref:System.Windows.Forms.MenuItem.DefaultItem%2A>-Eigenschaft auf `true`festgelegt wird. Das Standardelement wird in fettem Text angezeigt, wenn auf das Menü geklickt wird. Die <xref:System.Windows.Forms.MenuItem.Checked%2A>-Eigenschaft des Menü Elements ist entweder `true` oder `false`und gibt an, ob das Menü Element ausgewählt ist. Die <xref:System.Windows.Forms.MenuItem.RadioCheck%2A>-Eigenschaft des Menü Elements passt die Darstellung des ausgewählten Elements an: Wenn <xref:System.Windows.Forms.MenuItem.RadioCheck%2A> auf `true`festgelegt ist, wird neben dem Element ein Optionsfeld angezeigt. Wenn <xref:System.Windows.Forms.MenuItem.RadioCheck%2A> auf `false`festgelegt ist, wird neben dem Element ein Häkchen angezeigt.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Windows.Forms.MainMenu>
 - <xref:System.Windows.Forms.Menu>

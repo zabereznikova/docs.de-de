@@ -34,7 +34,7 @@ ms.locfileid: "76742281"
 
 <a name="creating_a_new_xaml_browser_application_xbap"></a>
 ## <a name="creating-a-new-xaml-browser-application-xbap"></a>Erstellen einer neuen XAML-Browseranwendung (XBAP)
- Die einfachste Möglichkeit, ein neues XBAP-Projekt zu erstellen, ist Visual Studio. Wenn Sie ein neues Projekt erstellen, wählen Sie **WPF-Browseranwendung** aus der Liste der Vorlagen aus. Weitere Informationen finden Sie unter [Vorgehensweise: Erstellen eines neuen WPF-Browseranwendungsprojekts](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb628663(v=vs.100)).
+ Die einfachste Möglichkeit, ein neues XBAP-Projekt zu erstellen, ist Visual Studio. Wenn Sie ein neues Projekt erstellen, wählen Sie **WPF-Browseranwendung** aus der Liste der Vorlagen aus. Weitere Informationen finden Sie unter [Gewusst wie: Erstellen eines neuen WPF-Browseranwendungsprojekts](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb628663(v=vs.100)).
 
  Wenn Sie das XBAP-Projekt ausführen, wird es in einem Browserfenster geöffnet, nicht in einem eigenständigen Fenster. Wenn Sie die XBAP aus Visual Studio debuggen, wird die Anwendung mit der Internet Zonen Berechtigung ausgeführt und löst daher Sicherheits Ausnahmen aus, wenn diese Berechtigungen überschritten werden. Weitere Informationen finden Sie unter[ Sicherheit (WPF)](../security-wpf.md) und [WPF-Sicherheit mit teilweiser Vertrauenswürdigkeit](../wpf-partial-trust-security.md).
 
@@ -45,7 +45,7 @@ ms.locfileid: "76742281"
 ## <a name="deploying-an-xbap"></a>Bereitstellen einer XBAP
  Wenn Sie eine XBAP erstellen, schließt die Ausgabe die folgenden drei Dateien ein:
 
-|File|Beschreibung|
+|Datei|BESCHREIBUNG|
 |----------|-----------------|
 |Ausführbare Datei (.exe)|Diese enthält den kompilierten Code und hat die Erweiterung EXE.|
 |Anwendungsmanifest (.manifest)|Dieses enthält die der Anwendung zugeordneten Metadaten und hat die Erweiterung MANIFEST.|
@@ -126,11 +126,11 @@ ms.locfileid: "76742281"
 
 <a name="xbap_security_considerations"></a>
 ## <a name="xbap-security-considerations"></a>XBAP-Sicherheitsüberlegungen
- XBAPs werden in der Regel in einem teilweise vertrauenswürdigen Sicherheitsbereich (Sandbox) ausgeführt, der auf den Berechtigungssatz für die Internetzone beschränkt ist. Folglich muss Ihre Implementierung die Teilmenge der WPF-Elemente unterstützen, die in der Internet Zone unterstützt werden, oder Sie müssen die Berechtigungen der Anwendung erhöhen. Weitere Informationen finden Sie unter [Sicherheit (WPF)](../security-wpf.md).
+ XBAPs werden in der Regel in einem teilweise vertrauenswürdigen Sicherheitsbereich (Sandbox) ausgeführt, der auf den Berechtigungssatz für die Internetzone beschränkt ist. Folglich muss Ihre Implementierung die Teilmenge der WPF-Elemente unterstützen, die in der Internet Zone unterstützt werden, oder Sie müssen die Berechtigungen der Anwendung erhöhen. Weitere Informationen finden Sie unter [Sicherheit](../security-wpf.md).
 
  Wenn Sie ein <xref:System.Windows.Controls.WebBrowser>-Steuerelement in der Anwendung verwenden, instanziiert WPF intern das Native WebBrowser-ActiveX-Steuerelement. Wenn die Anwendung eine teilweise vertrauenswürdige XBAP ist, die in Internet Explorer ausgeführt wird, wird das ActiveX-Steuerelement in einem dedizierten Thread des Internet Explorer-Prozesses ausgeführt. Daher gelten die folgenden Einschränkungen:
 
-- Das <xref:System.Windows.Controls.WebBrowser>-Steuerelement sollte ein ähnliches Verhalten wie der Host Browser bereitstellen, einschließlich Sicherheitseinschränkungen. Einige dieser Sicherheitseinschränkungen können durch die Internet Explorer-Sicherheitseinstellungen gesteuert werden. Weitere Informationen finden Sie unter [Sicherheit (WPF)](../security-wpf.md).
+- Das <xref:System.Windows.Controls.WebBrowser>-Steuerelement sollte ein ähnliches Verhalten wie der Host Browser bereitstellen, einschließlich Sicherheitseinschränkungen. Einige dieser Sicherheitseinschränkungen können durch die Internet Explorer-Sicherheitseinstellungen gesteuert werden. Weitere Informationen finden Sie unter [Sicherheit](../security-wpf.md).
 
 - Eine Ausnahme wird ausgelöst, wenn eine XBAP domänenübergreifend in eine HTML-Seite geladen wird.
 
@@ -164,11 +164,11 @@ ms.locfileid: "76742281"
     ```
 
 ### <a name="deploying-a-full-trust-xbap"></a>Bereitstellen einer XBAP mit voller Vertrauenswürdigkeit
- Wenn Sie eine vollständig vertrauenswürdige XBAP bereitstellen, die nicht dem ClickOnce Trusted-Bereitstellungsmodell folgt, hängt das Verhalten bei der Ausführung der Anwendung durch den Benutzer von der Sicherheitszone ab. In einigen Fällen erhält der Benutzer eine Warnung, wenn er versucht, die jeweilige Anwendung zu installieren. Der Benutzer kann auswählen, ob die Installation fortgesetzt oder abgebrochen werden soll. In der folgenden Tabelle werden das Verhalten der Anwendung für jede Sicherheitszone und die erforderlichen Schritte für die volle Vertrauenswürdigkeit der Anwendung beschrieben.
+ Wenn Sie eine vollständig vertrauenswürdige XBAP bereitstellen, die nicht dem ClickOnce Trusted-Bereitstellungsmodell folgt, hängt das Verhalten bei der Ausführung der Anwendung durch den Benutzer von der Sicherheitszone ab. In einigen Fällen erhält der Benutzer bei der Installation eine Warnung. Der Benutzer kann auswählen, ob die Installation fortgesetzt oder abgebrochen werden soll. In der folgenden Tabelle werden das Verhalten der Anwendung für jede Sicherheitszone und die erforderlichen Schritte für die volle Vertrauenswürdigkeit der Anwendung beschrieben.
 
 |Sicherheitszone|Verhalten|Erhalten der vollen Vertrauenswürdigkeit|
 |-------------------|--------------|------------------------|
-|Lokaler Computer|Automatisch volle Vertrauenswürdigkeit|Keine Aktion erforderlich.|
+|Lokalem Computer|Automatisch volle Vertrauenswürdigkeit|Es ist keine Aktion erforderlich.|
 |Intranet und vertrauenswürdige Websites|Eingabeaufforderung für volle Vertrauenswürdigkeit|Signieren Sie die XBAP mit einem Zertifikat, damit der Benutzer die Quelle in der Eingabeaufforderung sieht.|
 |Internet|Schlägt fehl mit „Vertrauenswürdigkeit nicht gewährt“|Signieren Sie die XBAP mit einem Zertifikat.|
 
@@ -185,7 +185,7 @@ ms.locfileid: "76742281"
 
  Außerdem verbessert die verbesserte Parallelität der ClickOnce-Download Sequenz die Startzeit um bis zu zehn Prozent. Nachdem Sie mit ClickOnce Manifeste heruntergeladen und überprüft haben, wird der Download der Anwendung gestartet, und die Statusanzeige beginnt mit der Aktualisierung.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Vorgehensweise: Konfigurieren von Visual Studio 2005 zum Debuggen einer XAML-Browseranwendung, um einen Webdienst aufzurufen](configure-vs-to-debug-a-xaml-browser-to-call-a-web-service.md)
-- [Bereitstellen von WPF-Anwendungen](deploying-a-wpf-application-wpf.md)
+- [Bereitstellen von WPF-Anwendungen (WPF)](deploying-a-wpf-application-wpf.md)

@@ -21,7 +21,7 @@ In jedem Windows-Formular können Sie ein <xref:System.Windows.Forms.Button>-Ste
 
 2. Legen Sie im Fenster **Eigenschaften** die <xref:System.Windows.Forms.Form.CancelButton%2A>-Eigenschaft des Formulars auf den Namen des <xref:System.Windows.Forms.Button> Steuer Elements fest.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Windows.Forms.Form.CancelButton%2A>
 - [Übersicht über das Button-Steuerelement](button-control-overview-windows-forms.md)

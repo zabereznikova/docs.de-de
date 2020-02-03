@@ -60,7 +60,7 @@ Beim Anwendungs Entwurf ist es möglicherweise erforderlich, dass ein einzelner 
   
      Der Code wird dem Formular hinzugefügt, um das Ereignis an den vorhandenen Ereignishandler zu binden.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Erstellen von Ereignishandlern in Windows Forms](creating-event-handlers-in-windows-forms.md)
 - [Übersicht über Ereignishandler](event-handlers-overview-windows-forms.md)

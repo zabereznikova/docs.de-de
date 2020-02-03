@@ -32,7 +32,7 @@ Eines der Features von objektorientierten Frameworks besteht darin, dass Entwick
 
 - Die Klasse erbt viele virtuelle Member, und die Kosten für eine individuelle Versiegelung würden die Vorteile der nicht versiegelten Klasse überwiegen.
 
-- Bei der-Klasse handelt es sich um ein Attribut, das eine sehr schnelle Lauf Zeit Suche erfordert. Versiegelte Attribute haben etwas höhere Leistungsstufen als nicht versiegelte. Siehe [Attribute](../../../docs/standard/design-guidelines/attributes.md).
+- Bei der-Klasse handelt es sich um ein Attribut, das eine sehr schnelle Lauf Zeit Suche erfordert. Versiegelte Attribute haben etwas höhere Leistungsstufen als nicht versiegelte. siehe [Attribute](../../../docs/standard/design-guidelines/attributes.md).
 
  ❌ keine geschützten oder virtuellen Member für versiegelte Typen deklarieren.
 
@@ -46,7 +46,7 @@ Eines der Features von objektorientierten Frameworks besteht darin, dass Entwick
 
  *Nachdruck mit Genehmigung von Pearson Education, Inc aus [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) von Krzysztof Cwalina und Brad Abrams, veröffentlicht am 22. Oktober 2008 durch Addison-Wesley Professional als Teil der Microsoft Windows Development Series.*
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Frameworkentwurfsrichtlinien](../../../docs/standard/design-guidelines/index.md)
 - [Entwerfen für Erweiterbarkeit](../../../docs/standard/design-guidelines/designing-for-extensibility.md)

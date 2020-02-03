@@ -22,7 +22,7 @@ ms.locfileid: "76739810"
 ## <a name="clipboard-access"></a>Zugriff auf die Zwischenablage  
  Die <xref:System.Security.Permissions.UIPermission>-Klasse steuert den Zugriff auf die Zwischenablage, und der zugeordnete <xref:System.Security.Permissions.UIPermissionClipboard> Enumerationswert gibt die Zugriffsebene an. Die folgende Tabelle enthält die möglichen Berechtigungsebenen.  
   
-|UIPermissionClipboard-Wert|Beschreibung|  
+|UIPermissionClipboard-Wert|BESCHREIBUNG|  
 |---------------------------------|-----------------|  
 |<xref:System.Security.Permissions.UIPermissionClipboard.AllClipboard>|Die Zwischenablage kann ohne Einschränkung verwendet werden.|  
 |<xref:System.Security.Permissions.UIPermissionClipboard.OwnClipboard>|Die Zwischenablage kann mit einigen Einschränkungen verwendet werden. Die Möglichkeit zum Einfügen von Daten in der Zwischenablage (Befehlsvorgang „Kopieren“ oder „Ausschneiden“) ist nicht eingeschränkt. Systeminterne Steuerelemente, die das Einfügen zulassen (z.B. von einem Textfeld), können Daten aus der Zwischenablage annehmen, Benutzersteuerelemente jedoch können nicht programmgesteuert aus der Zwischenablage gelesen werden.|  
@@ -35,7 +35,7 @@ ms.locfileid: "76739810"
   
  Standardmäßig erhält die lokale Intranetzone <xref:System.Security.Permissions.UIPermissionWindow.AllWindows> Zugriff, und die Internet Zone erhält <xref:System.Security.Permissions.UIPermissionWindow.SafeTopLevelWindows> Zugriff. Dies bedeutet, dass die Anwendung in der Internetzone die meisten Fenster- und Benutzeroberflächenaktionen ausführen kann, die Darstellung des Fensters jedoch wird geändert. Das geänderte Fenster zeigt bei Erstausführung eine Sprechblase an, enthält geänderten Titelleistentext und erfordert die Schaltfläche „Schließen“ in der Titelleiste. Die Sprechblase und die Titelleiste zeigen dem Benutzer der Anwendung an, dass die Anwendung mit teilweiser Vertrauenswürdigkeit ausgeführt wird.  
   
-|UIPermissionWindow-Wert|Beschreibung|  
+|UIPermissionWindow-Wert|BESCHREIBUNG|  
 |------------------------------|-----------------|  
 |<xref:System.Security.Permissions.UIPermissionWindow.AllWindows>|Benutzer können alle Fenster und Benutzereingabeereignisse uneingeschränkt verwenden.|  
 |<xref:System.Security.Permissions.UIPermissionWindow.SafeTopLevelWindows>|Benutzer können nur sicherere übergeordnete und sicherere untergeordnete Fenster zum Zeichnen verwenden, und sie können nur Benutzereingabeereignisse in diesen über- und untergeordneten Fenstern für die Benutzeroberfläche verwenden. Diese Safer sind deutlich gekennzeichnet und weisen minimale und maximale Größenbeschränkungen auf. Die Einschränkungen verhindern potenziell schädliche Spoofingangriffe, z. b. das imitieren von System Anmelde Bildschirmen oder des System Desktops, und schränkt den programmgesteuerten Zugriff auf übergeordnete Fenster, Fokus bezogene APIs und die Verwendung des <xref:System.Windows.Forms.ToolTip> Steuer Elements ein.|  
@@ -88,7 +88,7 @@ ms.locfileid: "76739810"
   
  Mit der Berechtigung zum Aufrufen eines nicht verwalteten Codes kann eine Anwendung nahezu jede Aktion ausführen. Aus diesem Grund sollte die Berechtigung zum Aufrufen eines nicht verwalteten Codes nur für Anwendungen erteilt werden, die aus einer vertrauenswürdigen Quelle stammen. Alternativ, abhängig von der Anwendung, könnte der Teil der Anwendungsfunktionalität, über den der nicht verwaltete Code aufgerufen wird, optional sein oder nur in einer vollständig vertrauenswürdigen Umgebung aktiviert werden. Weitere Informationen zu problematischen Berechtigungen finden Sie unter [Problematische Berechtigungen und Richtlinienverwaltung](../misc/dangerous-permissions-and-policy-administration.md). Weitere Informationen zum Erhöhen von Berechtigungen finden Sie unter [Allgemeine Verwaltung der Sicherheitsrichtlinien](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ed5htz45(v=vs.100)).  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Mehr Sicherheit beim Datei- und Datenzugriff in Windows Forms](more-secure-file-and-data-access-in-windows-forms.md)
 - [Mehr Sicherheit beim Drucken in Windows Forms](more-secure-printing-in-windows-forms.md)

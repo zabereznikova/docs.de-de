@@ -31,14 +31,14 @@ Das Windows Forms `Button`-Steuerelement ermöglicht es dem Benutzer, durch Klic
  [Methoden zur Auswahl eines Button-Steuerelements in Windows Forms](ways-to-select-a-windows-forms-button-control.md)  
  Listet die Methoden zum Auswählen einer Schaltfläche auf.  
   
- Siehe auch [wie: eine Windows Forms-Schaltfläche als die akzeptieren Schaltfläche mithilfe der Designer festlegen.](designate-a-wf-button-as-the-accept-button-using-the-designer.md) und [wie: eine Windows Forms-Schaltfläche als das Abbrechen Schaltfläche mithilfe der Designer festlegen](designate-a-wf-button-as-the-cancel-button-using-the-designer.md).  
+ Siehe auch Gewusst [wie: Festlegen einer Windows Forms](designate-a-wf-button-as-the-accept-button-using-the-designer.md) Schaltfläche als "annehmen"-Schaltfläche mithilfe des Designers und Gewusst [wie: Festlegen einer Windows Forms](designate-a-wf-button-as-the-cancel-button-using-the-designer.md)Schaltfläche als Schaltfläche "Abbrechen" mithilfe des Designers.  
   
-## <a name="reference"></a>Referenz  
+## <a name="reference"></a>Verweis  
  <xref:System.Windows.Forms.Button>-Klasse  
  Beschreibt diese Klasse und enthält Links zu allen deren Membern.  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
- [Windows Forms-Steuerelemente](controls-to-use-on-windows-forms.md)  
+ [Steuerelemente für Windows Forms](controls-to-use-on-windows-forms.md)  
  Enthält eine vollständige Liste der Windows Forms-Steuerelemente mit Links zu Informationen zur jeweiligen Verwendung.  
   
  Siehe auch [Benutzereingabe in Dialogfelder](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/1s9ws53w(v=vs.100)) und Gewusst [wie: Schließen von Dialogfeldern und beibehalten von Benutzereingaben](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/65ad5907(v=vs.100)).

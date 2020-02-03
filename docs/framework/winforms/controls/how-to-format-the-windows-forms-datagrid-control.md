@@ -35,7 +35,7 @@ ms.locfileid: "76732958"
   
 1. Legen Sie nach Bedarf die folgenden Eigenschaften fest:  
   
-    |Die Eigenschaften-|Beschreibung|  
+    |Eigenschaft|BESCHREIBUNG|  
     |--------------|-----------------|  
     |<xref:System.Windows.Forms.DataGrid.AlternatingBackColor%2A>|Die <xref:System.Windows.Forms.DataGrid.BackColor%2A>-Eigenschaft definiert die Farbe der gerade nummerierten Zeilen im Raster. Wenn Sie die <xref:System.Windows.Forms.DataGrid.AlternatingBackColor%2A>-Eigenschaft auf eine andere Farbe festlegen, wird jede andere Zeile auf diese neue Farbe festgelegt (Zeilen 1, 3, 5 usw.).|  
     |<xref:System.Windows.Forms.DataGrid.BackColor%2A>|Die Hintergrundfarbe der gerade nummerierten Zeilen des Rasters (Zeilen 0, 2, 4, 6 usw.).|  
@@ -153,7 +153,7 @@ ms.locfileid: "76732958"
        }  
     ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Windows.Forms.GridTableStylesCollection>
 - <xref:System.Windows.Forms.GridColumnStylesCollection>

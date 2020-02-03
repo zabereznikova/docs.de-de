@@ -39,11 +39,11 @@ Die folgende Abbildung zeigt die <xref:System.Windows.Forms.Control.Padding%2A>-
 
 Die <xref:System.Windows.Forms.Control.AutoSize%2A>-Eigenschaft weist ein Steuerelement an, sich automatisch an seinen Inhalt zu anpassen. Die Größe wird nicht so geändert, dass Sie kleiner als der Wert der ursprünglichen <xref:System.Windows.Forms.Control.Size%2A>-Eigenschaft ist, und der Wert ihrer <xref:System.Windows.Forms.Control.Padding%2A>-Eigenschaft wird berücksichtigt.
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
+## <a name="prerequisites"></a>Voraussetzungen
 
 Sie benötigen Visual Studio, um diese exemplarische Vorgehensweise abzuschließen.
 
-## <a name="create-the-project"></a>Erstellen eines Projekts
+## <a name="create-the-project"></a>Erstellen des Projekts
 
 1. Erstellen Sie in Visual Studio ein **Windows-Anwendungs** Projekt mit dem Namen `LayoutExample`.
 
@@ -174,7 +174,7 @@ Es gibt noch viele weitere Layoutfeatures zum Anordnen von Steuerelementen in Ih
 
 - Experimentieren Sie mit dem Andocken von untergeordneten Steuerelementen in einem <xref:System.Windows.Forms.Panel> Die <xref:System.Windows.Forms.Control.Padding%2A>-Eigenschaft ist eine allgemeinere Umsetzung der <xref:System.Windows.Forms.ScrollableControl.DockPadding%2A>-Eigenschaft, und Sie können sich selbst dafür sorgen, dass dies der Fall ist, indem Sie ein untergeordnetes Steuerelement in ein <xref:System.Windows.Forms.Panel>-Steuerelement einfügen und die <xref:System.Windows.Forms.Control.Dock%2A>-Eigenschaft des untergeordneten Steuer Elements auf <xref:System.Windows.Forms.DockStyle.Fill>festlegen. Legen Sie die <xref:System.Windows.Forms.Control.Padding%2A>-Eigenschaft des <xref:System.Windows.Forms.Panel> Steuer Elements auf verschiedene Werte fest, und notieren Sie sich den Effekt.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Windows.Forms.Control.AutoSize%2A>
 - <xref:System.Windows.Forms.ScrollableControl.DockPadding%2A>

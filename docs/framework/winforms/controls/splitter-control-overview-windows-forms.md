@@ -22,8 +22,8 @@ ms.locfileid: "76742897"
 ## <a name="working-with-the-splitter-control"></a>Arbeiten mit dem Splitter Steuerelement  
  Wenn der Benutzer mit dem Mauszeiger auf den nicht angedockten Rand eines Steuer Elements zeigt, dessen Größe durch ein Splitter Steuerelement geändert werden kann, ändert der Zeiger seine Darstellung, um anzugeben, dass die Größe des Steuer Elements geändert werden kann. Mit dem Splitter Steuerelement kann der Benutzer die Größe des angedockten Steuer Elements ändern, das sich unmittelbar vor dem Steuerelement befindet. Damit der Benutzer die Größe eines angedockten Steuer Elements zur Laufzeit ändern kann, docken Sie das Steuerelement so an, dass es an einen Rand eines Containers angepasst wird, und Andocken Sie dann ein Splitter Steuerelement an dieselbe Seite dieses Containers.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Windows.Forms.SplitContainer>
 - [Gewusst wie: Andocken von Steuerelementen in Windows Forms](how-to-dock-controls-on-windows-forms.md)
-- [Windows Forms-Steuerelemente](controls-to-use-on-windows-forms.md)
+- [Steuerelemente für Windows Forms](controls-to-use-on-windows-forms.md)

@@ -44,7 +44,7 @@ Wenn Sie einen <xref:System.Windows.Forms.DataGridView> zum Bearbeiten von Daten
   
  Wenn für die Zeilen Header Zelle ein Zeichen folgen Wert festgelegt ist, und wenn nicht genügend Platz für den Text und das Symbol vorhanden ist, wird das Symbol zuerst gelöscht.  
   
-## <a name="sorting"></a>Sortieren  
+## <a name="sorting"></a>Sortierung  
  Im ungebundenen Modus werden neue Datensätze immer am Ende der <xref:System.Windows.Forms.DataGridView> hinzugefügt, auch wenn der Benutzer den Inhalt des <xref:System.Windows.Forms.DataGridView>sortiert hat. Der Benutzer muss die Sortierung erneut anwenden, um die Zeile an die richtige Position zu sortieren. Dieses Verhalten ähnelt dem des <xref:System.Windows.Forms.ListView> Steuer Elements.  
   
  Im Daten gebundenen und virtuellen Modus hängt das Einfügeverhalten, wenn eine Sortierung angewendet wird, von der Implementierung des Datenmodells ab. Für ADO.net wird die Zeile sofort an die richtige Position sortiert.  
@@ -57,7 +57,7 @@ Wenn Sie einen <xref:System.Windows.Forms.DataGridView> zum Bearbeiten von Daten
 ## <a name="virtual-mode"></a>Virtueller Modus  
  Wenn Sie den virtuellen Modus implementieren, müssen Sie nachverfolgen, wann eine Zeile für neue Datensätze im Datenmodell benötigt wird und wann ein Rollback für das Hinzufügen der Zeile ausgeführt werden soll. Die genaue Implementierung dieser Funktionalität hängt von der Implementierung des Datenmodells und seiner Transaktions Semantik ab, z. b. ob der commitbereich auf Zellen-oder Zeilenebene liegt. Weitere Informationen finden Sie [im Windows Forms DataGridView-Steuerelement im virtuellen Modus](virtual-mode-in-the-windows-forms-datagridview-control.md).  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.DefaultValuesNeeded?displayProperty=nameWithType>

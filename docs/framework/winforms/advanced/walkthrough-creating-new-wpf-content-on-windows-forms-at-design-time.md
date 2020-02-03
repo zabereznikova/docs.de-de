@@ -23,11 +23,11 @@ ms.locfileid: "76746388"
 
 In diesem Artikel erfahren Sie, wie Sie ein Windows Presentation Foundation-Steuerelement (WPF) für die Verwendung in Ihren Windows Forms basierten Anwendungen erstellen.
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
+## <a name="prerequisites"></a>Voraussetzungen
 
 Für diese exemplarische Vorgehensweise benötigen Sie Visual Studio.
 
-## <a name="create-the-project"></a>Erstellen eines Projekts
+## <a name="create-the-project"></a>Erstellen des Projekts
 
 Öffnen Sie Visual Studio, und erstellen Sie ein neues Projekt für **Windows Forms-app (.NET Framework)** in Visual Basic oder Visual C# mit dem Namen `HostingWpf`.
 
@@ -102,7 +102,7 @@ Windows Forms und WPF sind unterschiedliche Technologien, wurden aber für eine 
 
 - Ändern des Stils des WPF-Inhalts. Weitere Informationen finden Sie unter Exemplarische Vorgehensweise: Formatieren von [WPF-Inhalt](walkthrough-styling-wpf-content.md).
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>

@@ -47,17 +47,17 @@ Die Richtlinien in diesem Kapitel stellen eine einfache Methode für den Fall da
 
  In der folgenden Tabelle werden die Regeln für die Groß-und Kleinschreibung für verschiedene Bezeichner Typen beschrieben
 
-|ID|He|Beispiel|
+|Bezeichner|Schreibweise|Beispiel|
 |----------------|------------|-------------|
-|-Namespace|Pas|`namespace System.Security { ... }`|
-|Typ|Pas|`public class StreamReader { ... }`|
-|Benutzeroberfläche|Pas|`public interface IEnumerable { ... }`|
-|-Methode|Pas|`public class Object {` <br />  `public virtual string ToString();` <br /> `}`|
-|Die Eigenschaften-|Pas|`public class String {` <br />  `public int Length { get; }` <br /> `}`|
-|Event|Pas|`public class Process {` <br />  `public event EventHandler Exited;` <br /> `}`|
-|Field|Pas|`public class MessageQueue {` <br />  `public static readonly TimeSpan` <br /> `InfiniteTimeout;` <br /> `}` <br /> `public struct UInt32 {` <br />  `public const Min = 0;` <br /> `}`|
+|Namespace|Pas|`namespace System.Security { ... }`|
+|type|Pas|`public class StreamReader { ... }`|
+|Schnittstelle|Pas|`public interface IEnumerable { ... }`|
+|Methode|Pas|`public class Object {` <br />  `public virtual string ToString();` <br /> `}`|
+|Eigenschaft|Pas|`public class String {` <br />  `public int Length { get; }` <br /> `}`|
+|Ereignis|Pas|`public class Process {` <br />  `public event EventHandler Exited;` <br /> `}`|
+|Feld|Pas|`public class MessageQueue {` <br />  `public static readonly TimeSpan` <br /> `InfiniteTimeout;` <br /> `}` <br /> `public struct UInt32 {` <br />  `public const Min = 0;` <br /> `}`|
 |Enumerationswert|Pas|`public enum FileMode {` <br />  `Append,` <br />  `...` <br /> `}`|
-|Parameter|Erweist|`public class Convert {` <br />  `public static int ToInt32(string value);` <br /> `}`|
+|Parameter|Groß-/Kleinschreibung gemischt|`public class Convert {` <br />  `public static int ToInt32(string value);` <br /> `}`|
 
 ## <a name="capitalizing-compound-words-and-common-terms"></a>Groß Schreibung von zusammengesetzten Wörtern und allgemeinen Begriffen
  Die meisten zusammengesetzten Begriffe werden als einzelne Wörter für die Groß-/Kleinschreibung behandelt.
@@ -66,7 +66,7 @@ Die Richtlinien in diesem Kapitel stellen eine einfache Methode für den Fall da
 
  Dabei handelt es sich um zusammengesetzte Wörter, die als einzelnes Wort (z. b. Endpunkt) Um Richtlinien für die Groß-/Kleinschreibung zu beachten, behandeln Sie ein zusammengesetztes Wort als einzelnes Wort. Verwenden Sie ein Aktuelles Wörterbuch, um zu bestimmen, ob ein Verbund Wort in geschlossener Form geschrieben wurde.
 
-|Pas|Erweist|not|
+|Pas|Groß-/Kleinschreibung gemischt|Not|
 |------------|-----------|---------|
 |`BitFlag`|`bitFlag`|`Bitflag`|
 |`Callback`|`callback`|`CallBack`|
@@ -103,7 +103,7 @@ Die Richtlinien in diesem Kapitel stellen eine einfache Methode für den Fall da
 
  *Nachdruck mit Genehmigung von Pearson Education, Inc aus [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) von Krzysztof Cwalina und Brad Abrams, veröffentlicht am 22. Oktober 2008 durch Addison-Wesley Professional als Teil der Microsoft Windows Development Series.*
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Frameworkentwurfsrichtlinien](../../../docs/standard/design-guidelines/index.md)
 - [Richtlinien für die Benennung](../../../docs/standard/design-guidelines/naming-guidelines.md)

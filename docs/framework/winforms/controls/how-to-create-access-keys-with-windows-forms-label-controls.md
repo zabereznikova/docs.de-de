@@ -31,7 +31,7 @@ Windows Forms <xref:System.Windows.Forms.Label>-Steuerelemente können verwendet
   
 1. Zeichnen Sie zuerst die Bezeichnung, und zeichnen Sie dann das andere Steuerelement.  
   
-     \- oder -  
+     Oder  
   
      Zeichnen Sie die Steuerelemente in beliebiger Reihenfolge, und legen Sie die <xref:System.Windows.Forms.Control.TabIndex%2A>-Eigenschaft der Bezeichnung auf ein kleiner als das andere Steuerelement fest.  
   
@@ -63,7 +63,7 @@ Windows Forms <xref:System.Windows.Forms.Label>-Steuerelemente können verwendet
     label2->Text = "&Copy && Paste";  
     ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Gewusst wie: Anpassen der Größe des Label-Steuerelements in Windows Forms an seinen Inhalt](how-to-size-a-windows-forms-label-control-to-fit-its-contents.md)
 - [Übersicht über das Label-Steuerelement](label-control-overview-windows-forms.md)

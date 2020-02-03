@@ -98,7 +98,7 @@ Windows Forms verwendet jetzt die folgende Logik, um Formulare und deren Inhalte
 
     - Die <xref:System.Windows.Forms.Control.ScaleControl%2A>-Methode kann überschrieben werden, um die Skalierungslogik für das aktuelle Steuerelement zu ändern.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Windows.Forms.ContainerControl.AutoScaleMode%2A>
 - <xref:System.Windows.Forms.Control.Scale%2A>

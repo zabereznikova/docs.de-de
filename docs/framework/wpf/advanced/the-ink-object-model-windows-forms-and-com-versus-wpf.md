@@ -51,13 +51,13 @@ Es gibt im Wesentlichen drei Plattformen, die Digital Ink unterstützen: die Tab
   
  In der folgenden Tabelle wird das Ausführen einiger allgemeiner Aufgaben auf der WPF-Plattform und der Windows Forms-und com-Plattform verglichen.  
   
-|Task|Windows Presentation Foundation|Windows Forms und com|  
+|Aufgabe|Windows Presentation Foundation|Windows Forms und com|  
 |----------|-------------------------------------|---------------------------|  
-|Freihand speichern|<xref:System.Windows.Ink.StrokeCollection.Save%2A>|[Microsoft.Ink.Ink.Save](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms571335(v=vs.90))|  
-|Ink laden|Erstellen Sie eine <xref:System.Windows.Ink.StrokeCollection> mit dem <xref:System.Windows.Ink.StrokeCollection.%23ctor%2A>-Konstruktor.|[Microsoft.Ink.Ink.Load](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms569609(v=vs.90))|  
-|Treffer Test|<xref:System.Windows.Ink.StrokeCollection.HitTest%2A>|[Microsoft.Ink.Ink.HitTest](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms571330(v=vs.90))|  
-|Freihand kopieren|<xref:System.Windows.Controls.InkCanvas.CopySelection%2A>|[Microsoft.Ink.Ink.ClipboardCopy](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms571316(v=vs.90))|  
-|Ink einfügen|<xref:System.Windows.Controls.InkCanvas.Paste%2A>|[Microsoft.Ink.Ink.ClipboardPaste](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms571318(v=vs.90))|  
+|Freihand speichern|<xref:System.Windows.Ink.StrokeCollection.Save%2A>|[Microsoft. Ink. Ink. Save](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms571335(v=vs.90))|  
+|Ink laden|Erstellen Sie eine <xref:System.Windows.Ink.StrokeCollection> mit dem <xref:System.Windows.Ink.StrokeCollection.%23ctor%2A>-Konstruktor.|[Microsoft. Ink. Ink. Load](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms569609(v=vs.90))|  
+|Treffer Test|<xref:System.Windows.Ink.StrokeCollection.HitTest%2A>|[Microsoft. Ink. Ink. HitTest](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms571330(v=vs.90))|  
+|Freihand kopieren|<xref:System.Windows.Controls.InkCanvas.CopySelection%2A>|[Microsoft. Ink. Ink. ClipboardCopy](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms571316(v=vs.90))|  
+|Ink einfügen|<xref:System.Windows.Controls.InkCanvas.Paste%2A>|[Microsoft. Ink. Ink. ClipboardPaste](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms571318(v=vs.90))|  
 |Zugreifen auf benutzerdefinierte Eigenschaften für eine Auflistung von Strichen|<xref:System.Windows.Ink.StrokeCollection.AddPropertyData%2A> (die Eigenschaften werden intern gespeichert, und der Zugriff erfolgt über <xref:System.Windows.Ink.StrokeCollection.AddPropertyData%2A>, <xref:System.Windows.Ink.StrokeCollection.RemovePropertyData%2A>und <xref:System.Windows.Ink.StrokeCollection.ContainsPropertyData%2A>).|Verwenden von " [Microsoft. Ink. Ink. ExtendedProperties](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms582214(v=vs.90)) "|  
   
 ### <a name="sharing-ink-between-platforms"></a>Freigeben von Hand Eingaben zwischen Plattformen  

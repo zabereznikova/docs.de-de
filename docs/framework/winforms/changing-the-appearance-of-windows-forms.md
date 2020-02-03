@@ -18,7 +18,7 @@ Sie können das Aussehen Ihrer Windows Forms-Anwendungen auf viele verschiedene 
  [Gewusst wie: Ändern der Rahmen von Windows Forms](how-to-change-the-borders-of-windows-forms.md)  
  Zeigt, wie Sie die Rahmenart eines Formulars ändern.  
   
-## <a name="reference"></a>Referenz  
+## <a name="reference"></a>Verweis  
  <xref:System.Windows.Forms.Form>  
  Beschreibt diese Klasse und enthält Links zu allen Membern.  
   

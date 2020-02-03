@@ -46,7 +46,7 @@ Mit dem Windows Forms <xref:System.Windows.Forms.MonthCalendar>-Steuerelement k√
   
 ### <a name="to-display-the-current-date-at-the-bottom-of-the-control"></a>So zeigen Sie das aktuelle Datum am unteren Rand des Steuer Elements an  
   
-- Legen Sie die <xref:System.Windows.Forms.MonthCalendar.ShowToday%2A> -Eigenschaft auf `true`fest. Das folgende Beispiel wechselt zwischen dem anzeigen und Weglassen des aktuellen Datums, wenn auf das Formular Doppel geklickt wird.  
+- Setzen Sie die <xref:System.Windows.Forms.MonthCalendar.ShowToday%2A>-Eigenschaft auf `true`. Das folgende Beispiel wechselt zwischen dem anzeigen und Weglassen des aktuellen Datums, wenn auf das Formular Doppel geklickt wird.  
   
     ```vb  
     Private Sub Form1_DoubleClick(ByVal sender As Object, _  
@@ -87,7 +87,7 @@ Mit dem Windows Forms <xref:System.Windows.Forms.MonthCalendar>-Steuerelement k√
   
 ### <a name="to-display-week-numbers"></a>So zeigen Sie Wochen Nummern an  
   
-- Legen Sie die <xref:System.Windows.Forms.MonthCalendar.ShowWeekNumbers%2A> -Eigenschaft auf `true`fest. Sie k√∂nnen diese Eigenschaft entweder im Code oder im Eigenschaftenfenster festlegen.  
+- Setzen Sie die <xref:System.Windows.Forms.MonthCalendar.ShowWeekNumbers%2A>-Eigenschaft auf `true`. Sie k√∂nnen diese Eigenschaft entweder im Code oder im Eigenschaftenfenster festlegen.  
   
      Wochen Nummern werden in einer separaten Spalte auf der linken Seite des ersten Tags der Woche angezeigt.  
   
@@ -103,7 +103,7 @@ Mit dem Windows Forms <xref:System.Windows.Forms.MonthCalendar>-Steuerelement k√
     monthCalendar1->ShowWeekNumbers = true;  
     ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [MonthCalendar-Steuerelement](monthcalendar-control-windows-forms.md)
 - [Gewusst wie: Ausw√§hlen eines Datumsbereichs mithilfe des MonthCalendar-Steuerelements in Windows Forms](how-to-select-a-range-of-dates-in-the-windows-forms-monthcalendar-control.md)

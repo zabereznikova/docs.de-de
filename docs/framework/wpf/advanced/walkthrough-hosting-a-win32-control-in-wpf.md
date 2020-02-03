@@ -22,7 +22,7 @@ Windows Presentation Foundation (WPF) bietet eine umfangreiche Umgebung zum Erst
  Dieses Thema führt Sie durch eine Anwendung, die [ein Win32-ListBox-Steuerelement in WPF hostet](https://github.com/Microsoft/WPF-Samples/tree/master/Migration%20and%20Interoperability/WPFHostingWin32Control), das ein Win32-Listenfeld-Steuerelement hostet. Dieses allgemeine Verfahren kann so erweitert werden, dass ein beliebiges Win32-Fenster gehostet wird.  
 
 <a name="requirements"></a>   
-## <a name="requirements"></a>-Anforderungen  
+## <a name="requirements"></a>Anforderungen  
  In diesem Thema wird eine grundlegende Vertrautheit mit der WPF-und Windows-API-Programmierung vorausgesetzt. Eine grundlegende Einführung in die WPF-Programmierung finden Sie unter [Getting Started](../getting-started/index.md). Eine Einführung in die Windows-API-Programmierung finden Sie in den zahlreichen Büchern zu diesem Thema, insbesondere in den *Programmier Fenstern* von Charles Petzold.  
   
  Da das Beispiel für dieses Thema in C#implementiert ist, nutzt es Platform invoations Services (PInvoke) für den Zugriff auf die Windows-API. Eine Vertrautheit mit PInvoke ist hilfreich, aber nicht unbedingt erforderlich.  
@@ -46,7 +46,7 @@ Windows Presentation Foundation (WPF) bietet eine umfangreiche Umgebung zum Erst
   
 5. Sobald Sie das Hostfenster erstellt haben, geben Sie das HWND des gehosteten Fensters zurück. Wenn Sie ein oder mehrere Win32-Steuerelemente hosten möchten, erstellen Sie in der Regel ein Host Fenster als untergeordnetes Element des HWND, und legen Sie die Steuerelemente in diesem Host Fenster als untergeordnete Elemente fest. Das umwickeln der Steuerelemente in einem Host Fenster bietet eine einfache Möglichkeit für Ihre WPF-Seite, Benachrichtigungen von den Steuerelementen zu empfangen, die bestimmte Win32-Probleme mit Benachrichtigungen über die HWND-Grenze behandeln.  
   
-6. Behandeln Sie spezifische an das Hostfenster gesendete Nachrichten, z.B. Benachrichtigungen von untergeordneten Steuerelementen. Es gibt dafür zwei Möglichkeiten:  
+6. Behandeln Sie spezifische an das Hostfenster gesendete Nachrichten, z.B. Benachrichtigungen von untergeordneten Steuerelementen. Es gibt hierbei zwei Möglichkeiten.  
   
     - Wenn Sie die Verarbeitung von Nachrichten in ihrer Hostingklasse bevorzugen, überschreiben Sie die <xref:System.Windows.Interop.HwndHost.WndProc%2A>-Methode der <xref:System.Windows.Interop.HwndHost>-Klasse.  
   
@@ -153,7 +153,7 @@ Windows Presentation Foundation (WPF) bietet eine umfangreiche Umgebung zum Erst
   
  Legen Sie abschließend `handled` auf `true` fest, um anzugeben, dass die Nachricht behandelt wurde.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Windows.Interop.HwndHost>
 - [Interaktion zwischen WPF und Win32](wpf-and-win32-interoperation.md)

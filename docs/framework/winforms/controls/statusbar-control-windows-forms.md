@@ -34,7 +34,7 @@ ms.locfileid: "76742850"
  [Exemplarische Vorgehensweise: Aktualisieren von Statusleisteninformationen zur Laufzeit](walkthrough-updating-status-bar-information-at-run-time.md)  
  Erläutert, wie die Daten in Status leisten Panels Programm gesteuert gesteuert werden.  
   
-## <a name="reference"></a>Referenz  
+## <a name="reference"></a>Verweis  
  <xref:System.Windows.Forms.StatusBar>  
  Enthält Referenzinformationen zur Klasse und zu ihren Membern.  
   
@@ -42,5 +42,5 @@ ms.locfileid: "76742850"
  Ersetzt und fügt Funktionen zum <xref:System.Windows.Forms.StatusBar> Steuerelement hinzu.  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
- [Windows Forms-Steuerelemente](controls-to-use-on-windows-forms.md)  
+ [Steuerelemente für Windows Forms](controls-to-use-on-windows-forms.md)  
  Enthält eine vollständige Liste der Windows Forms-Steuerelemente mit Links zu Informationen zur jeweiligen Verwendung.

@@ -46,7 +46,7 @@ Die Windows Forms <xref:System.Windows.Forms.ToolStrip>-Steuerelement und die zu
   
 ### <a name="important-toolstrip-members"></a>Wichtige ToolStrip-Member  
   
-|-Name|Beschreibung|  
+|Name|BESCHREIBUNG|  
 |----------|-----------------|  
 |<xref:System.Windows.Forms.ToolStrip.Dock%2A>|Ruft den Rand des übergeordneten Containers ab, an den ein <xref:System.Windows.Forms.ToolStrip> angedockt ist, oder legt diesen fest.|  
 |<xref:System.Windows.Forms.ToolStrip.AllowItemReorder%2A>|Ruft einen Wert ab bzw. legt einen Wert fest, der angibt, ob Drag &amp; Drop und die Neuanordnung von Elementen von der <xref:System.Windows.Forms.ToolStrip>-Klasse privat behandelt werden.|  
@@ -55,14 +55,14 @@ Die Windows Forms <xref:System.Windows.Forms.ToolStrip>-Steuerelement und die zu
 |<xref:System.Windows.Forms.ToolStrip.IsDropDown%2A>|Ruft einen Wert ab, der angibt, ob ein <xref:System.Windows.Forms.ToolStripItem> andere Elemente in einer Dropdown Liste anzeigt, wenn auf die <xref:System.Windows.Forms.ToolStripItem> geklickt wird.|  
 |<xref:System.Windows.Forms.ToolStrip.OverflowButton%2A>|Ruft das <xref:System.Windows.Forms.ToolStripItem>-Objekt ab, das der Überlaufschaltfläche für ein <xref:System.Windows.Forms.ToolStrip>-Objekt mit aktiviertem Überlauf entspricht.|  
 |<xref:System.Windows.Forms.ToolStrip.Renderer%2A>|Ruft einen <xref:System.Windows.Forms.ToolStripRenderer> ab oder legt ihn fest, der zum Anpassen der Darstellung und des Verhaltens (Aussehen und Verhalten) eines <xref:System.Windows.Forms.ToolStrip>verwendet wird.|  
-|<xref:System.Windows.Forms.ToolStrip.RenderMode%2A>|Ruft die Zeichnungs Stile ab, die auf die <xref:System.Windows.Forms.ToolStrip>angewendet werden sollen, oder legt diese fest.|  
+|<xref:System.Windows.Forms.ToolStrip.RenderMode%2A>|Ruft die Zeichenstile ab bzw. legt diese fest, die auf <xref:System.Windows.Forms.ToolStrip> angewendet werden sollen.|  
 |<xref:System.Windows.Forms.ToolStrip.RendererChanged>|Wird ausgelöst, wenn sich die <xref:System.Windows.Forms.ToolStrip.Renderer%2A>-Eigenschaft ändert.|  
   
  Die Flexibilität des <xref:System.Windows.Forms.ToolStrip> Steuer Elements wird durch die Verwendung einer Reihe von begleitenden Klassen erreicht. Unten sind einige der bemerkenswertesten:  
   
 ### <a name="important-toolstrip-companion-classes"></a>Wichtige ToolStrip-Begleit Klassen  
   
-|-Name|Beschreibung|  
+|Name|BESCHREIBUNG|  
 |----------|-----------------|  
 |<xref:System.Windows.Forms.MenuStrip>|Ersetzt und fügt der <xref:System.Windows.Forms.MainMenu>-Klasse Funktionalität hinzu.|  
 |<xref:System.Windows.Forms.StatusStrip>|Ersetzt und fügt der <xref:System.Windows.Forms.StatusBar>-Klasse Funktionalität hinzu.|  
@@ -79,7 +79,7 @@ Die Windows Forms <xref:System.Windows.Forms.ToolStrip>-Steuerelement und die zu
   
  Weitere Informationen finden Sie unter [ToolStrip-Technologie Zusammenfassung](toolstrip-technology-summary.md) und [ToolStrip-Steuerelement Architektur](toolstrip-control-architecture.md).  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Windows.Forms.ToolStrip>
 - <xref:System.Windows.Forms.MenuStrip>

@@ -29,11 +29,11 @@ void __stdcall ProcessUnhandledException(
 )  
 ```  
   
-## <a name="parameters"></a>Parameters  
+## <a name="parameters"></a>Parameter  
  ERRORMSG  
  Die Fehlermeldung.  
   
-## <a name="requirements"></a>-Anforderungen  
+## <a name="requirements"></a>Anforderungen  
  **Plattformen:** Siehe [.NET Framework System Anforderungen](../../get-started/system-requirements.md).  
   
  **DLL**  
@@ -44,6 +44,6 @@ void __stdcall ProcessUnhandledException(
   
  **.NET Framework Version:** [!INCLUDE[net_current_v30plus](../../../../includes/net-current-v30plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [WPF – Referenz zur nicht verwalteten API](wpf-unmanaged-api-reference.md)

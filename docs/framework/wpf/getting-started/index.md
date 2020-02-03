@@ -26,7 +26,7 @@ Windows Presentation Foundation (WPF) ist ein Benutzeroberflächen-Framework, mi
 |Weitere Informationen über WPF...|[Einführung in WPF in Visual Studio](introduction-to-wpf-in-vs.md)<br /><br /> [Übersicht über XAML (WPF)](../advanced/xaml-overview-wpf.md)<br /><br /> [Steuerelemente](../controls/index.md)<br /><br /> [Übersicht zur Datenbindung](../../../desktop-wpf/data/data-binding-overview.md)|  
 |Sind Sie ein Windows Forms-Entwickler?|[Windows Forms-Steuerelemente und entsprechende WPF-Steuerelemente](../advanced/windows-forms-controls-and-equivalent-wpf-controls.md)<br /><br /> [Interaktion zwischen WPF und Windows Forms](../advanced/wpf-and-windows-forms-interoperation.md)|  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Klassenbibliothek](../class-library-wpf.md)
 - [Anwendungsentwicklung](../app-development/index.md)

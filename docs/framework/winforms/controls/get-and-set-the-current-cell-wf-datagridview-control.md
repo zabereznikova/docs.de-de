@@ -39,7 +39,7 @@ Die Interaktion mit dem <xref:System.Windows.Forms.DataGridView> erfordert häuf
      [!code-vb[System.Windows.Forms.DataGridViewMisc#085](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#085)]  
   
 ## <a name="compiling-the-code"></a>Kompilieren des Codes  
- Für dieses Beispiel benötigen Sie Folgendes:  
+ Dieses Beispiel erfordert Folgendes:  
   
 - <xref:System.Windows.Forms.Button> Steuerelemente mit dem Namen `getCurrentCellButton` und `setCurrentCellButton`. In Visual C#müssen Sie die <xref:System.Windows.Forms.Control.Click>-Ereignisse für jede Schaltfläche an den zugeordneten Ereignishandler im Beispielcode anfügen.  
   
@@ -47,7 +47,7 @@ Die Interaktion mit dem <xref:System.Windows.Forms.DataGridView> erfordert häuf
   
 - Verweise auf die Assemblys <xref:System?displayProperty=nameWithType> und <xref:System.Windows.Forms?displayProperty=nameWithType>.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.CurrentCell%2A?displayProperty=nameWithType>

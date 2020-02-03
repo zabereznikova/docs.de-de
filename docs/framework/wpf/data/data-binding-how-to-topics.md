@@ -56,7 +56,7 @@ In den Themen in diesem Abschnitt wird beschrieben, wie die Datenbindung verwend
 - [Suchen von Elementen, die mit einer DataTemplate generiert wurden](how-to-find-datatemplate-generated-elements.md)
 - [Bindung an einen Webdienst](how-to-bind-to-a-web-service.md)
 
-## <a name="reference"></a>Referenz
+## <a name="reference"></a>Verweis
 
 - <xref:System.Windows.Data>
 - <xref:System.Windows.Data.Binding>

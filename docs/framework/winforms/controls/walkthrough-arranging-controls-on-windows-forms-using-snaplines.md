@@ -25,7 +25,7 @@ Mithilfe von Richtungslinien zeigen Sie genau an, wo Sie Steuerelemente mit ande
 
 Ausrichtungs Linien erleichtern Ihnen das Ausrichten ihrer Steuerelemente, um die Darstellung und das Verhalten zu optimieren.
 
-## <a name="create-the-project"></a>Erstellen eines Projekts
+## <a name="create-the-project"></a>Erstellen des Projekts
 
 1. Erstellen Sie in Visual Studio ein Windows-basiertes Anwendungsprojekt mit dem Namen "SnaplineExample".
 
@@ -182,13 +182,13 @@ Es werden keine Ausrichtungs Linien angezeigt, und das Steuerelement wird nicht 
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Ausrichtungs Linien bieten eine intuitive Möglichkeit zum Ausrichten von Steuerelementen auf dem Formular. Hier sind paar Vorschläge für weitere Experimente:
+Ausrichtungs Linien bieten eine intuitive Möglichkeit zum Ausrichten von Steuerelementen auf dem Formular. Mit folgenden Funktionen können Sie Ihre Fähigkeiten vertiefen:
 
 - Versuchen Sie, ein <xref:System.Windows.Forms.GroupBox> Steuerelement in einem anderen <xref:System.Windows.Forms.GroupBox> Steuerelement zu Schachteln Platzieren Sie ein <xref:System.Windows.Forms.Button>-Steuerelement innerhalb des untergeordneten <xref:System.Windows.Forms.GroupBox> Steuer Elements und ein anderes innerhalb des übergeordneten <xref:System.Windows.Forms.GroupBox> Steuer Elements. Verschieben Sie die <xref:System.Windows.Forms.Button>-Steuerelemente, um zu sehen, wie die Richtungslinien Container Grenzen überschreiten.
 
 - Erstellen Sie eine Spalte mit <xref:System.Windows.Forms.TextBox>-Steuerelementen und einer entsprechenden-Spalte <xref:System.Windows.Forms.Label>-Steuerelementen. Legen Sie den Wert der Eigenschaft <xref:System.Windows.Forms.Control.AutoSize%2A> der <xref:System.Windows.Forms.Label> Steuerelemente auf `true`fest. Verwenden Sie Ausrichtungs Linien, um die <xref:System.Windows.Forms.Label>-Steuerelemente zu verschieben, sodass der angezeigte Text an dem Text in den <xref:System.Windows.Forms.TextBox> Steuerelementen ausgerichtet ist.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Windows.Forms.Design.Behavior.SnapLine>
 - [Exemplarische Vorgehensweise: Anordnen von Steuerelementen in Windows Forms mithilfe von FlowLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)

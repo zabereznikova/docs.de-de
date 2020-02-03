@@ -19,13 +19,13 @@ Windows Forms-Steuerelemente sind wiederverwendbare Komponenten, die Funktionen 
  [Übersicht über die Verwendung von Steuerelementen in Windows Forms](overview-of-using-controls-in-windows-forms.md)  
  Hebt die wichtigsten Elemente der Verwendung von Steuerelementen in Windows Forms-Anwendungen hervor.  
   
- [Vielfalt benutzerdefinierter Steuerelemente](varieties-of-custom-controls.md)  
+ [Arten von benutzerdefinierten Steuerelementen](varieties-of-custom-controls.md)  
  Beschreibt die verschiedenen Arten benutzerdefinierter Steuerelemente, die Sie mit dem <xref:System.Windows.Forms?displayProperty=nameWithType>-Namespace erstellen können.  
   
  [Grundlagen für das Entwickeln von Windows Forms-Steuerelementen](windows-forms-control-development-basics.md)  
  Erläutert die ersten Schritte bei der Entwicklung von Windows Forms-Steuerelementen.  
   
- [Eigenschaften von Windows Forms-Steuerelementen](properties-in-windows-forms-controls.md)  
+ [Eigenschaften in Windows Forms-Steuerelementen](properties-in-windows-forms-controls.md)  
  Veranschaulicht, wie Eigenschaften zu Windows Forms-Steuerelementen hinzugefügt werden.  
   
  [Ereignisse in Windows Forms-Steuerelementen](events-in-windows-forms-controls.md)  
@@ -34,7 +34,7 @@ Windows Forms-Steuerelemente sind wiederverwendbare Komponenten, die Funktionen 
  [Attribute in Windows Forms-Steuerelementen](attributes-in-windows-forms-controls.md)  
  Beschreibt die Attribute, die Sie auf Eigenschaften oder andere Member der benutzerdefinierten Steuerelemente und Komponenten anwenden können.  
   
- [Zeichnen und Ausgeben von benutzerdefinierten Steuerelementen](custom-control-painting-and-rendering.md)  
+ [Zeichnen und Rendern von benutzerdefinierten Steuerelementen](custom-control-painting-and-rendering.md)  
  Erläutert, wie die Darstellung von Steuerelementen angepasst werden kann.  
   
  [Layout in Windows Forms-Steuerelementen](layout-in-windows-forms-controls.md)  
@@ -43,7 +43,7 @@ Windows Forms-Steuerelemente sind wiederverwendbare Komponenten, die Funktionen 
  [Multithreading in Windows Forms-Steuerelementen](multithreading-in-windows-forms-controls.md)  
  Veranschaulicht das Implementieren von Multithread-Steuerelementen.  
   
-## <a name="reference"></a>Referenz  
+## <a name="reference"></a>Verweis  
  <xref:System.Windows.Forms.Control?displayProperty=nameWithType>  
  Beschreibt diese Klasse und enthält Links zu allen Membern.  
   

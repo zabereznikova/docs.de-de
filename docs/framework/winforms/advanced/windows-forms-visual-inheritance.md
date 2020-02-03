@@ -42,7 +42,7 @@ Gelegentlich können Sie entscheiden, dass in einem Projekt ein Formular aufgeru
  [Grundlagen der Vererbung (Visual Basic)](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)  
  Beschreibt, wie Visual Basic-Klassen definiert werden, die als Grundlage für andere Klassen dienen.  
   
- [Klasse](../../../csharp/language-reference/keywords/class.md)  
+ [class](../../../csharp/language-reference/keywords/class.md)  
  Beschreibt den C#-Ansatz von Klassen, in denen die einfache Vererbung zulässig ist.  
   
  [Problembehandlung für geerbte Ereignishandler in Visual Basic](../../../visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md)  

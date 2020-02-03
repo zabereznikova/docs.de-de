@@ -35,7 +35,7 @@ Veranschaulicht, wie die <xref:System.Windows.Forms.Control.Padding%2A>-Eigensch
 Gewusst [wie: Implementieren eines benutzerdefinierten Layoutmoduls](how-to-implement-a-custom-layout-engine.md)\
 Veranschaulicht, wie eine <xref:System.Windows.Forms.Layout.LayoutEngine> zum Anordnen von Windows Forms Steuerelementen implementiert wird.
 
-## <a name="reference"></a>Referenz
+## <a name="reference"></a>Verweis
 
 <xref:System.Windows.Forms.TableLayoutPanel>\
 Enthält die Referenzdokumentation für das <xref:System.Windows.Forms.TableLayoutPanel>-Steuerelement.
@@ -43,7 +43,7 @@ Enthält die Referenzdokumentation für das <xref:System.Windows.Forms.TableLayo
 <xref:System.Windows.Forms.FlowLayoutPanel>\
 Enthält die Referenzdokumentation für das <xref:System.Windows.Forms.FlowLayoutPanel>-Steuerelement.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Gewusst wie: Verankern und Andocken von untergeordneten Steuerelementen in einem FlowLayoutPanel-Steuerelement](how-to-anchor-and-dock-child-controls-in-a-flowlayoutpanel-control.md)
 - [Gewusst wie: Verankern und Andocken von untergeordneten Steuerelementen in einem TableLayoutPanel-Steuerelement](how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md)

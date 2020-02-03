@@ -23,7 +23,7 @@ Bei der Windows Forms-Komponente <xref:System.Windows.Forms.FontDialog> handelt 
  [Gewusst wie: Anzeigen einer Schriftartenliste mit der FontDialog-Komponente](how-to-show-a-font-list-with-the-fontdialog-component.md)  
  Erläutert, wie eine Schriftart zur Laufzeit durch eine Instanz der <xref:System.Windows.Forms.FontDialog> Komponente ausgewählt wird.  
   
-## <a name="reference"></a>Referenz  
+## <a name="reference"></a>Verweis  
  <xref:System.Windows.Forms.FontDialog>  
  Enthält Referenzinformationen zur <xref:System.Windows.Forms.FontDialog>-Klasse und zu ihren Membern.  
   
@@ -31,5 +31,5 @@ Bei der Windows Forms-Komponente <xref:System.Windows.Forms.FontDialog> handelt 
  [Dialogfeld-Steuerelemente und -Komponenten](dialog-box-controls-and-components-windows-forms.md)  
  Beschreibt eine Gruppe von Steuerelementen und Komponenten, mit deren Hilfe Benutzer Standard Interaktionen mit der Anwendung oder dem System ausführen können.  
   
- [Windows Forms-Steuerelemente](controls-to-use-on-windows-forms.md)  
+ [Steuerelemente für Windows Forms](controls-to-use-on-windows-forms.md)  
  Stellt eine umfassende Liste der Windows Forms Steuerelemente mit Links zu Informationen zur Verwendung bereit.

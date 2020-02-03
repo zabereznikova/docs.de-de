@@ -125,7 +125,7 @@ Wenn Sie in einem <xref:System.Windows.Forms.DataGridView> Steuerelement sehr gr
   
  Weitere Informationen zum Zwischenspeichern von Werten aus einer externen Datenbank finden [Sie unter Gewusst wie: Implementieren des virtuellen Modus mit Just-in-Time-Laden von Daten in das Windows Forms DataGridView-Steuer](virtual-mode-with-just-in-time-data-loading-in-the-datagrid.md)Element.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.VirtualMode%2A>

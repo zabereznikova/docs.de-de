@@ -50,10 +50,10 @@ Ein Steuerelement stellt eine grafische Verknüpfung zwischen dem Benutzer und d
 
 10. Verpacken Sie das Steuerelement, und stellen Sie es bereit. Weitere Informationen finden Sie unter [erste Betrachtung der Bereitstellung in Visual Studio](/visualstudio/deployment/deploying-applications-services-and-components).
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Gewusst wie: Erben von der UserControl-Klasse](how-to-inherit-from-the-usercontrol-class.md)
-- [Vorgehensweise: Erben von der Control-Klasse](how-to-inherit-from-the-control-class.md)
+- [Vorgehensweise: Erben von der UserControl-Klasse](how-to-inherit-from-the-usercontrol-class.md)
+- [Gewusst wie: Erben von der Control-Klasse](how-to-inherit-from-the-control-class.md)
 - [Gewusst wie: Erben von vorhandenen Windows Forms-Steuerelementen](how-to-inherit-from-existing-windows-forms-controls.md)
-- [Gewusst wie: Testen des Laufzeitverhaltens eines UserControl](how-to-test-the-run-time-behavior-of-a-usercontrol.md)
-- [Vielfalt benutzerdefinierter Steuerelemente](varieties-of-custom-controls.md)
+- [Vorgehensweise: Testen des Laufzeitverhaltens eines UserControl](how-to-test-the-run-time-behavior-of-a-usercontrol.md)
+- [Arten von benutzerdefinierten Steuerelementen](varieties-of-custom-controls.md)

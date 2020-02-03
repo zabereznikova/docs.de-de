@@ -36,10 +36,10 @@ Wählen Sie in Visual Studio das Steuerelement aus, dessen Größe Sie ändern m
 
 2. Wählen Sie im Menü **Format** die Option **Größe angleichen**, und wählen Sie eine der vier Optionen aus. Die ersten drei Befehle ändern die Dimensionen der Steuerelemente so, dass Sie dem ersten ausgewählten Steuerelement entsprechen.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Windows Forms-Steuerelemente](index.md)
 - [Beschriften einzelner Steuerelemente für Windows Forms und Konfigurieren von Shortcuts für diese Elemente](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
-- [Windows Forms-Steuerelemente](controls-to-use-on-windows-forms.md)
+- [Steuerelemente für Windows Forms](controls-to-use-on-windows-forms.md)
 - [Windows Forms-Steuerelemente nach Funktion](windows-forms-controls-by-function.md)
 - [Gewusst wie: Ändern der Größe von Windows Forms mithilfe des Designers](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/37k2zkwx(v=vs.100))

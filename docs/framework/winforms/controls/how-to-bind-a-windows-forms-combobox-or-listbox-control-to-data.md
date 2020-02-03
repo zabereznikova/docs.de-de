@@ -31,7 +31,7 @@ Sie können die <xref:System.Windows.Forms.ComboBox> und <xref:System.Windows.Fo
   
 2. Wenn Sie an eine Tabelle binden, legen Sie die `DisplayMember`-Eigenschaft auf den Namen einer Spalte in der Datenquelle fest.  
   
-     \- oder -  
+     \- oder –  
   
      Wenn Sie an eine <xref:System.Collections.IList>binden, legen Sie den Anzeigemember auf eine öffentliche Eigenschaft des Typs in der Liste fest.  
   
@@ -53,7 +53,7 @@ Sie können die <xref:System.Windows.Forms.ComboBox> und <xref:System.Windows.Fo
     > [!NOTE]
     > Wenn Sie an eine Datenquelle gebunden sind, die die <xref:System.ComponentModel.IBindingList>-Schnittstelle nicht implementiert (z. b. eine <xref:System.Collections.ArrayList>), werden die Daten des gebundenen Steuer Elements nicht aktualisiert, wenn die Datenquelle aktualisiert wird. Wenn Sie z. b. ein Kombinations Feld haben, das an einen <xref:System.Collections.ArrayList> gebunden ist, und dem <xref:System.Collections.ArrayList>Daten hinzugefügt werden, werden diese neuen Elemente nicht im Kombinations Feld angezeigt. Sie können jedoch erzwingen, dass das Kombinations Feld aktualisiert wird, indem Sie die Methoden <xref:System.Windows.Forms.BindingManagerBase.SuspendBinding%2A> und <xref:System.Windows.Forms.BindingManagerBase.ResumeBinding%2A> für die Instanz der <xref:System.Windows.Forms.BindingContext> Klasse aufrufen, an die das Steuerelement gebunden ist.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Windows.Forms.ComboBox>
 - <xref:System.Windows.Forms.ListBox>

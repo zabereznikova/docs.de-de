@@ -31,7 +31,7 @@ Die Windows Forms <xref:System.Windows.Forms.NotifyIcon> Komponente zeigt ein ei
 
 1. Weisen Sie der <xref:System.Windows.Forms.NotifyIcon.Icon%2A>-Eigenschaft einen Wert zu. Der Wert muss vom Typ `System.Drawing.Icon` sein und kann aus einer ICO-Datei geladen werden. Sie können die Symbol Datei im Code oder durch Klicken auf die Schaltfläche mit den Auslassungs Zeichen![(...) im Eigenschaftenfenster von Visual Studio.](./media/visual-studio-ellipsis-button.png)) neben der <xref:System.Windows.Forms.NotifyIcon.Icon%2A>-Eigenschaft im **Eigenschaften** Fenster angeben und dann die Datei im angezeigten Dialogfeld **Öffnen** auswählen.
 
-2. Legen Sie die <xref:System.Windows.Forms.NotifyIcon.Visible%2A> -Eigenschaft auf `true`fest.
+2. Setzen Sie die <xref:System.Windows.Forms.NotifyIcon.Visible%2A>-Eigenschaft auf `true`.
 
 3. Legen Sie die <xref:System.Windows.Forms.NotifyIcon.Text%2A>-Eigenschaft auf eine entsprechende QuickInfo-Zeichenfolge fest
 
@@ -72,7 +72,7 @@ Die Windows Forms <xref:System.Windows.Forms.NotifyIcon> Komponente zeigt ein ei
     notifyIcon1->Text = "Antivirus program";
     ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Windows.Forms.NotifyIcon>
 - <xref:System.Windows.Forms.NotifyIcon.Icon%2A>

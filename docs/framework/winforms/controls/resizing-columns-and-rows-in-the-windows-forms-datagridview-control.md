@@ -36,10 +36,10 @@ Das `DataGridView`-Steuerelement bietet zahlreiche Optionen zum Anpassen des Gr�
  [Gewusst wie: Automatisches Anpassen der Zellengröße bei Änderungen des Inhalts im DataGridView-Steuerelement von Windows Forms](automatically-resize-cells-when-content-changes-in-the-datagrid.md)  
  Bietet Demonstrations Code, den Sie verwenden können, um mit automatischen Größen Anpassungs Modi zu experimentieren.  
   
-## <a name="reference"></a>Referenz  
+## <a name="reference"></a>Verweis  
  <xref:System.Windows.Forms.DataGridView>  
  Enthält die Referenzdokumentation für das <xref:System.Windows.Forms.DataGridView>-Steuerelement.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [DataGridView-Steuerelement](datagridview-control-windows-forms.md)

@@ -17,10 +17,10 @@ In diesem Thema sind Informationen zum `DataGridView`-Steuerelement und den Klas
   
  Das Anzeigen von Daten in einem tabellarischen Format ist eine Aufgabe, die Sie wahrscheinlich häufig ausführen. Das `DataGridView`-Steuerelement ist als umfassende Lösung für die Darstellung von Daten in einem Raster konzipiert.  
   
-## <a name="keywords"></a>Stichwörter  
+## <a name="keywords"></a>Keywords  
  DataGridView, BindingSource, Table, Cell, Data Binding, Virtual Mode  
   
-## <a name="namespaces"></a>-Namespaces  
+## <a name="namespaces"></a>Namespaces  
  <xref:System.Windows.Forms?displayProperty=nameWithType>  
   
  <xref:System.Data?displayProperty=nameWithType>  
@@ -28,7 +28,7 @@ In diesem Thema sind Informationen zum `DataGridView`-Steuerelement und den Klas
 ## <a name="related-technologies"></a>Verwandte Technologien  
  `BindingSource`  
   
-## <a name="background"></a>-Hintergrund  
+## <a name="background"></a>Hintergrund  
  Benutzeroberflächen-Designer finden häufig die Notwendigkeit, Tabellendaten für Benutzer anzuzeigen. Der .NET Framework bietet mehrere Möglichkeiten zum Anzeigen von Daten in einer Tabelle oder einem Raster. Das `DataGridView`-Steuerelement stellt die neueste Entwicklung dieser Technologie für Windows Forms Anwendungen dar.  
   
  Das `DataGridView`-Steuerelement kann Daten Zeilen aus einem Datenspeicher anzeigen. Viele Arten von Daten speichern werden unterstützt. Der Datenspeicher kann einfache, nicht typisierte Daten enthalten, z. b. ein eindimensionales Array, oder es kann typisierte Daten enthalten, z. b. eine <xref:System.Data.DataSet>. Weitere Informationen finden Sie unter Gewusst [wie: Binden von Daten an das Windows Forms DataGridView-Steuer](how-to-bind-data-to-the-windows-forms-datagridview-control.md)Element.  
@@ -60,7 +60,7 @@ In diesem Thema sind Informationen zum `DataGridView`-Steuerelement und den Klas
   
  Das <xref:System.Windows.Forms.DataGridView> Steuerelement kann in enger Verbindung mit der <xref:System.Windows.Forms.BindingSource> Komponente verwendet werden. Diese Komponente ist als primäre Datenquelle eines Formulars konzipiert. Die Interaktion zwischen einem <xref:System.Windows.Forms.DataGridView>-Steuerelement und seiner Datenquelle kann unabhängig vom Daten Quellentyp verwaltet werden.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Übersicht über das DataGridView-Steuerelement](datagridview-control-overview-windows-forms.md)
 - [Architektur des DataGridView-Steuerelements](datagridview-control-architecture-windows-forms.md)

@@ -61,7 +61,7 @@ Wenn ein Windows Forms <xref:System.Windows.Forms.TextBox>-Steuerelement den Fok
   
 - Legen Sie die <xref:System.Windows.Forms.Control.TabIndex%2A>-Eigenschaft des <xref:System.Windows.Forms.TextBox>-Steuer Elements auf `0`fest.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Windows.Forms.TextBox>
 - [Übersicht über das TextBox-Steuerelement](textbox-control-overview-windows-forms.md)

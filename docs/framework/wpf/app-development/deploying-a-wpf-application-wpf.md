@@ -1,5 +1,5 @@
 ---
-title: Bereitstellen einer APP
+title: Bereitstellen einer App
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WPF applications [WPF], deployment
@@ -24,7 +24,7 @@ Nachdem Windows Presentation Foundation (WPF)-Anwendungen erstellt wurden, müss
   
 - Windows Installer Bereitstellung.  
   
-- ClickOnce-Bereitstellung:  
+- ClickOnce-Bereitstellung.  
   
 <a name="XCopy_Deployment"></a>   
 ### <a name="xcopy-deployment"></a>Bereitstellung mit XCopy  
@@ -99,7 +99,7 @@ Nachdem Windows Presentation Foundation (WPF)-Anwendungen erstellt wurden, müss
 > [!NOTE]
 > Weitere Informationen zu Anwendungs- und Bereitstellungsmanifesten finden Sie unter [Erstellen einer WPF-Anwendung](building-a-wpf-application-wpf.md).  
   
- Diese Dateien werden erstellt, wenn eine XBAP erstellt wird. Weitere Informationen finden Sie unter [Vorgehensweise: Erstellen eines neuen WPF-Browseranwendungsprojekts](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb628663(v=vs.100)). Ebenso wie Markup [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Seiten werden XBAPs in der Regel auf einem Webserver veröffentlicht und mithilfe von Internet Explorer angezeigt.  
+ Diese Dateien werden erstellt, wenn eine XBAP erstellt wird. Weitere Informationen finden Sie unter [Gewusst wie: Erstellen eines neuen WPF-Browseranwendungsprojekts](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb628663(v=vs.100)). Ebenso wie Markup [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Seiten werden XBAPs in der Regel auf einem Webserver veröffentlicht und mithilfe von Internet Explorer angezeigt.  
   
  XBAPs können mithilfe einer beliebigen Bereitstellungs Verfahren für Clients bereitgestellt werden. ClickOnce wird jedoch empfohlen, da es die folgenden Funktionen bietet:  
   
@@ -121,7 +121,7 @@ Nachdem Windows Presentation Foundation (WPF)-Anwendungen erstellt wurden, müss
   
  Weitere Informationen finden Sie unter [Bereitstellen von .NET Framework und Anwendungen](../../deployment/index.md).  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Erstellen einer WPF-Anwendung](building-a-wpf-application-wpf.md)
 - [Sicherheit](../security-wpf.md)

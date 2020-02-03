@@ -28,7 +28,7 @@ Das folgende Verfahren erfordert ein **Windows-Anwendungs** Projekt mit einem Fo
 
 3. Klicken Sie auf den nach-oben-oder nach-unten-Pfeil rechts neben der Liste **Ausgewählte Spalten** , bis sich die ausgewählte Spalte an der gewünschten Position befindet.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Windows.Forms.DataGridView>
 - [Vorgehensweise: Hinzufügen und Entfernen von Spalten im DataGridView-Steuerelement in Windows Forms mithilfe des Designers](add-and-remove-columns-in-the-datagrid-using-the-designer.md)

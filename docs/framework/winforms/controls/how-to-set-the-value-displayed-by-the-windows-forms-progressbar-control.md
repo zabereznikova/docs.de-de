@@ -21,7 +21,7 @@ ms.locfileid: "76743798"
   
  Der .NET Framework bietet verschiedene Möglichkeiten, einen bestimmten Wert innerhalb des <xref:System.Windows.Forms.ProgressBar> Steuer Elements anzuzeigen. Welche Methode Sie auswählen, hängt von der Aufgabe oder dem Problem ab, das Sie lösen. In der folgenden Tabelle werden die Ansätze angezeigt, die Sie auswählen können.  
   
-|Ansatz|Beschreibung|  
+|Ansatz|BESCHREIBUNG|  
 |--------------|-----------------|  
 |Legen Sie den Wert des <xref:System.Windows.Forms.ProgressBar> Steuer Elements direkt fest.|Diese Vorgehensweise eignet sich für Aufgaben, bei denen Sie wissen, wie viel von dem Element gemessen werden muss, z. b. das Lesen von Datensätzen aus einer Datenquelle. Wenn Sie den Wert nur einmal oder zweimal festlegen müssen, ist dies eine einfache Möglichkeit. Verwenden Sie abschließend diesen Prozess, wenn Sie den von der Statusanzeige angezeigten Wert verringern müssen.|  
 |Vergrößern Sie die <xref:System.Windows.Forms.ProgressBar> Anzeige durch einen Fixed-Wert.|Diese Vorgehensweise ist nützlich, wenn Sie eine einfache Anzahl zwischen dem minimal-und Maximalwert anzeigen, z. b. der verstrichenen Zeit oder der Anzahl der Dateien, die aus einem bekannten Gesamtwert verarbeitet wurden.|  
@@ -224,7 +224,7 @@ ms.locfileid: "76743798"
     }  
     ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Windows.Forms.ProgressBar>
 - <xref:System.Windows.Forms.ToolStripProgressBar>

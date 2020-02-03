@@ -57,10 +57,10 @@ In diesem Abschnitt werden allgemeine Benennungs Konventionen im Zusammenhang mi
 
  Beispielsweise sollte eine Methode, die in <xref:System.Int64> umwandelt, `ToInt64`, nicht `ToLong` benannt werden (da <xref:System.Int64> ein CLR-Name C#für den-spezifischen Alias `long`ist). In der folgenden Tabelle werden mehrere Basis Datentypen mit den CLR-Typnamen (sowie die entsprechenden Typnamen C#für, Visual Basic und C++) dargestellt.
 
-|C#|Visual Basic|C++|-CLR|
+|C#|Visual Basic|C++|CLR|
 |---------|------------------|-----------|---------|
 |**sbyte**|**SByte**|**char**|**SByte**|
-|**byte**|**Byte**|**unsigned char**|**Byte**|
+|**Byte**|**Byte**|**unsigned char**|**Byte**|
 |**short**|**Short**|**short**|**Int16**|
 |**ushort**|**UInt16**|**unsigned short**|**UInt16**|
 |**int**|**Integer**|**int**|**Int32**|
@@ -69,10 +69,10 @@ In diesem Abschnitt werden allgemeine Benennungs Konventionen im Zusammenhang mi
 |**ulong**|**UInt64**|**__int64 ohne Vorzeichen**|**UInt64**|
 |**float**|**Single**|**float**|**Single**|
 |**double**|**Double**|**double**|**Double**|
-|**bool**|**Boolean**|**bool**|**Boolean**|
+|**bool**|**Boolescher Wert**|**bool**|**Boolescher Wert**|
 |**char**|**Char**|**wchar_t**|**Char**|
 |**string**|**String**|**String**|**String**|
-|**object**|**Objekt**|**Objekt**|**Objekt**|
+|**object**|**Object**|**Object**|**Object**|
 
  ✔️ einen allgemeinen Namen verwenden, z. b. `value` oder `item`, anstatt den Typnamen zu wiederholen, in den seltenen Fällen, in denen ein Bezeichner keine semantische Bedeutung hat und der Typ des Parameters nicht wichtig ist.
 
@@ -97,7 +97,7 @@ In diesem Abschnitt werden allgemeine Benennungs Konventionen im Zusammenhang mi
 
  *Nachdruck mit Genehmigung von Pearson Education, Inc aus [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) von Krzysztof Cwalina und Brad Abrams, veröffentlicht am 22. Oktober 2008 durch Addison-Wesley Professional als Teil der Microsoft Windows Development Series.*
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Frameworkentwurfsrichtlinien](../../../docs/standard/design-guidelines/index.md)
 - [Richtlinien für die Benennung](../../../docs/standard/design-guidelines/naming-guidelines.md)

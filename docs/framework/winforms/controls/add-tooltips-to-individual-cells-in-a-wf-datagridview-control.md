@@ -32,7 +32,7 @@ Standardmäßig werden Quick Infos verwendet, um die Werte <xref:System.Windows.
   
 ## <a name="compiling-the-code"></a>Kompilieren des Codes  
   
-- Für dieses Beispiel benötigen Sie Folgendes:  
+- Dieses Beispiel erfordert Folgendes:  
   
 - Ein <xref:System.Windows.Forms.DataGridView>-Steuerelement mit dem Namen `dataGridView1`, das eine Spalte mit dem Namen `Rating` zum Anzeigen von Zeichen folgen Werten von einem bis vier Sternchen ("*") enthält. Das <xref:System.Windows.Forms.DataGridView.CellFormatting>-Ereignis des-Steuer Elements muss der im Beispiel gezeigten Ereignishandlermethode zugeordnet werden.  
   
@@ -41,7 +41,7 @@ Standardmäßig werden Quick Infos verwendet, um die Werte <xref:System.Windows.
 ## <a name="robust-programming"></a>Robuste Programmierung  
  Wenn Sie das <xref:System.Windows.Forms.DataGridView> Steuerelement an eine externe Datenquelle binden oder durch Implementieren des virtuellen Modus eine eigene Datenquelle bereitstellen, treten möglicherweise Leistungsprobleme auf. Um bei der Arbeit mit großen Datenmengen eine Leistungs Einbuße zu vermeiden, müssen Sie das <xref:System.Windows.Forms.DataGridView.CellToolTipTextNeeded>-Ereignis behandeln, anstatt die <xref:System.Windows.Forms.DataGridViewCell.ToolTipText%2A>-Eigenschaft mehrerer Zellen festzulegen. Wenn Sie dieses Ereignis behandeln, wird durch das erhalten des Werts einer Zelle <xref:System.Windows.Forms.DataGridViewCell.ToolTipText%2A>-Eigenschaft das-Ereignis ausgelöst, und der Wert der <xref:System.Windows.Forms.DataGridViewCellToolTipTextNeededEventArgs.ToolTipText%2A?displayProperty=nameWithType>-Eigenschaft wird entsprechend der Angabe im-Ereignishandler zurückgegeben.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.ShowCellToolTips%2A?displayProperty=nameWithType>

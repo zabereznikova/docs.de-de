@@ -57,7 +57,7 @@ Die folgenden Prozeduren erfordern ein **Windows-Anwendungs** Projekt mit einem 
 
 4. Wenn Sie das <xref:System.Windows.Forms.DataGridView>-Steuerelement an eine Datenquelle binden, die wahrscheinlich NULL-Werte enthält, füllen Sie das Textfeld **NULL-Wert** aus. Dieser Wert wird angezeigt, wenn der Zellwert einem NULL-Verweis (`Nothing` in Visual Basic) oder <xref:System.DBNull.Value?displayProperty=nameWithType>entspricht.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridViewCellStyle>

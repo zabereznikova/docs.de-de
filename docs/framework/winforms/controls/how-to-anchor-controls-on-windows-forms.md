@@ -54,7 +54,7 @@ Wenn das Formular zur Laufzeit angezeigt wird, wird die Größe des Steuer Eleme
 
 Geerbte Steuerelemente müssen `Protected` werden, um verankert werden zu können. Um die Zugriffsebene eines Steuer Elements zu ändern, legen Sie dessen `Modifiers`-Eigenschaft im **Eigenschaften** Fenster fest.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Windows Forms-Steuerelemente](index.md)
 - [Übersicht über die AutoSize-Eigenschaft](autosize-property-overview.md)

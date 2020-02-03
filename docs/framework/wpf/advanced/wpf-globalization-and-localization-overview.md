@@ -170,7 +170,7 @@ Der `RunIcon.JPG` muss nicht lokalisiert werden, da er für alle Kulturen identi
 
 **Lokalisieren des Dialogfelds „Ausführen”**
 
-**Auslesen**
+**Analysieren**
 
 Nachdem die Anwendung erstellt, ist der erste Schritt bei der Lokalisierung, die lokalisierbaren Ressourcen aus der Satellitenassembly auszulesen. Verwenden Sie für dieses Thema das Beispiel-LocBaml-Tool, das Sie unter [LocBaml Tool Sample](https://go.microsoft.com/fwlink/?LinkID=160016)finden. Beachten Sie, dass LocBaml lediglich ein Beispieltool ist, das Ihnen beim Erstellen eines Lokalisierungstools helfen soll, das Ihrem Lokalisierungsprozess entspricht. Führen Sie mithilfe von LocBaml Folgendes aus, um Folgendes zu analysieren: **LocBaml/parse RunDialog. resources. dll/out:** , um eine RunDialog. resources. dll. CSV-Datei zu generieren.
 
@@ -178,29 +178,29 @@ Nachdem die Anwendung erstellt, ist der erste Schritt bei der Lokalisierung, die
 
 Verwenden Sie zum Bearbeiten dieser Datei Ihren bevorzugten Unicode-fähigen CSV-Editor. Filtern Sie alle Einträge mit einer Lokalisierungskategorie von „None” heraus. Sie sollten folgende Einträge sehen:
 
-|Ressourcenschlüssel|Lokalisierungskategorie|{2&gt;Wert&lt;2}|
+|Ressourcenschlüssel|Lokalisierungskategorie|value|
 |-|-|-|
 |Button_1:System.Windows.Controls.Button.$Content|Schaltfläche|OK|
-|Button_2:System.Windows.Controls.Button.$Content|Schaltfläche|Cancel|
-|Button_3:System.Windows.Controls.Button.$Content|Schaltfläche|Durchsuchen ...|
-|ComboBox_1:System.Windows.Controls.ComboBox.$Content|ComboBox||
+|Button_2:System.Windows.Controls.Button.$Content|Schaltfläche|Abbrechen|
+|Button_3:System.Windows.Controls.Button.$Content|Schaltfläche|Durchsuchen...|
+|ComboBox_1:System.Windows.Controls.ComboBox.$Content|Kombinationsfeld||
 |TextBlock_1:System.Windows.Controls.TextBlock.$Content|Text|Geben Sie den Namen eines Programms, Ordners, Dokuments oder einer Internetressource ein, damit Windows das entsprechende Objekt öffnet.|
 |TextBlock_2:System.Windows.Controls.TextBlock.$Content|Text|Öffnen:|
-|Window_1:System.Windows.Window.Title|Title|Führen Sie  aus.|
+|Window_1:System.Windows.Window.Title|Titel|Ausführen|
 
 Um die Anwendung auf Deutsch zu lokalisieren, sind die folgenden Übersetzungen erforderlich:
 
-|Ressourcenschlüssel|Lokalisierungskategorie|{2&gt;Wert&lt;2}|
+|Ressourcenschlüssel|Lokalisierungskategorie|value|
 |-|-|-|
 |Button_1:System.Windows.Controls.Button.$Content|Schaltfläche|OK|
 |Button_2:System.Windows.Controls.Button.$Content|Schaltfläche|Abbrechen|
 |Button_3:System.Windows.Controls.Button.$Content|Schaltfläche|Durchsuchen…|
-|ComboBox_1:System.Windows.Controls.ComboBox.$Content|ComboBox||
+|ComboBox_1:System.Windows.Controls.ComboBox.$Content|Kombinationsfeld||
 |TextBlock_1:System.Windows.Controls.TextBlock.$Content|Text|Geben Sie den Namen eines Programms, Ordners, Dokuments oder einer Internetressource an.|
 |TextBlock_2:System.Windows.Controls.TextBlock.$Content|Text|Öffnen:|
-|Window_1:System.Windows.Window.Title|Title|Führen Sie  aus.|
+|Window_1:System.Windows.Window.Title|Titel|Ausführen|
 
-**Generieren**
+**Generate**
 
 Der letzte Schritt der Lokalisierung umfasst das Erstellen der neu lokalisierten Satellitenassembly. Dies kann mithilfe des folgenden LocBaml-Befehls erreicht werden:
 
@@ -267,9 +267,9 @@ Es gibt viele Fälle, in denen Inhalt mehrdeutig und schwierig zu übersetzen se
 
 Dieser Kommentar wird dem Inhalt von TextBlock_1 zugeordnet, und im Fall des LocBaml-Tools (siehe [Lokalisieren einer Anwendung](how-to-localize-an-application.md)) kann er in der 6. Spalte der TextBlock_1 Zeile in der CSV-Ausgabedatei angezeigt werden:
 
-|Ressourcenschlüssel|Kategorie|Lesbar|Änderbar|Anmerkungen|{2&gt;Wert&lt;2}|
+|Ressourcenschlüssel|Category|Lesbar|Änderbar|Kommentar|value|
 |-|-|-|-|-|-|
-|TextBlock_1:System.Windows.Controls.TextBlock.$Content|Text|true|true|Dieses Zeichen wird als dekorative Abgrenzungslinie verwendet.|&#124;|
+|TextBlock_1:System.Windows.Controls.TextBlock.$Content|Text|TRUE|TRUE|Dieses Zeichen wird als dekorative Abgrenzungslinie verwendet.|&#124;|
 
 Kommentare können auf den Inhalt oder die Eigenschaften jedes Elements mithilfe der folgenden Syntax platziert werden:
 

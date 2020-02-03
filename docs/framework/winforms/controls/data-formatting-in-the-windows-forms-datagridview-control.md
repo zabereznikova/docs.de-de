@@ -31,7 +31,7 @@ Das <xref:System.Windows.Forms.DataGridView> Steuerelement ermöglicht die autom
   
  Wenn die standardmäßige Verarbeitung von benutzerdefinierten Werten nicht Ihren Anforderungen entspricht, können Sie das <xref:System.Windows.Forms.DataGridView.CellParsing>-Ereignis des <xref:System.Windows.Forms.DataGridView> Steuer Elements behandeln, um eine benutzerdefinierte Verarbeitung bereitzustellen.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridViewCellStyle>

@@ -22,7 +22,7 @@ Mit <xref:System.Windows.Forms.TabControl> in Windows Forms werden mehrere Regis
 ## <a name="working-with-tabcontrol"></a>Arbeiten mit TabControl  
  Die wichtigste Eigenschaft des <xref:System.Windows.Forms.TabControl> ist <xref:System.Windows.Forms.TabControl.TabPages%2A>, das die einzelnen Registerkarten enthält. Jede einzelne Registerkarte ist ein <xref:System.Windows.Forms.TabPage> Objekt. Wenn auf eine Registerkarte geklickt wird, wird das <xref:System.Windows.Forms.Control.Click>-Ereignis für dieses <xref:System.Windows.Forms.TabPage> Objekt ausgelöst.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Windows.Forms.TabControl>
 - [TabControl-Steuerelement](tabcontrol-control-windows-forms.md)

@@ -53,7 +53,7 @@ Sie können die Sortier-und Filterfunktion <xref:System.Windows.Forms.BindingSou
 ## <a name="compiling-the-code"></a>Kompilieren des Codes  
  Fügen Sie zum Ausführen dieses Beispiels den Code in ein Formular ein, das eine <xref:System.Windows.Forms.BindingSource> mit dem Namen `BindingSource1` und eine <xref:System.Windows.Forms.DataGridView> mit dem Namen `dataGridView1`enthält. Behandeln Sie das <xref:System.Windows.Forms.Form.Load>-Ereignis für das Formular, und wenden Sie `InitializeSortedFilteredBindingSource` in der Load Ereignishandlermethode an.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Windows.Forms.BindingSource.Sort%2A>
 - <xref:System.Windows.Forms.BindingSource.Filter%2A>

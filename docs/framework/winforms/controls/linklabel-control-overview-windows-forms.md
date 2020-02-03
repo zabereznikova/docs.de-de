@@ -23,7 +23,7 @@ Mit dem Windows Forms <xref:System.Windows.Forms.LinkLabel>-Steuerelement könne
   
  Die einfachste Verwendung des <xref:System.Windows.Forms.LinkLabel>-Steuer Elements ist das Anzeigen eines einzelnen Links mit der <xref:System.Windows.Forms.LinkLabel.LinkArea%2A>-Eigenschaft, Sie können jedoch auch mehrere Hyperlinks mithilfe der <xref:System.Windows.Forms.LinkLabel.Links%2A>-Eigenschaft anzeigen. Die <xref:System.Windows.Forms.LinkLabel.Links%2A>-Eigenschaft ermöglicht den Zugriff auf eine Auflistung von Links. Sie können auch Daten in der <xref:System.Windows.Forms.LinkLabel.Link.LinkData%2A>-Eigenschaft jedes einzelnen <xref:System.Windows.Forms.LinkLabel.Link> Objekts angeben. Der Wert der <xref:System.Windows.Forms.LinkLabel.Link.LinkData%2A>-Eigenschaft kann verwendet werden, um den Speicherort einer Datei zu speichern, die angezeigt werden soll, oder die Adresse einer Website.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Windows.Forms.LinkLabel>
 - [Übersicht über das Label-Steuerelement](label-control-overview-windows-forms.md)

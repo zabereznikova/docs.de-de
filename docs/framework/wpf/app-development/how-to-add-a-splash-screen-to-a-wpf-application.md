@@ -44,7 +44,7 @@ In diesem Thema wird gezeigt, wie Sie einer Windows Presentation Foundation (WPF
 
 Löschen Sie in **Projektmappen-Explorer**das Bild des Begrüßungs Bildschirms.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Windows.SplashScreen>
 - [Gewusst wie: Hinzufügen vorhandener Elemente zu einem Projekt](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/9f4t9t92(v=vs.100))

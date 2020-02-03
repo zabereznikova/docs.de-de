@@ -51,7 +51,7 @@ Der Zugriff auf bestimmte Elemente in einem Kombinations Feld (Windows Forms), e
        }  
     ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Windows.Forms.ComboBox>
 - <xref:System.Windows.Forms.ListBox>

@@ -28,7 +28,7 @@ Eine Schaltfläche "Windows Forms" kann auf folgende Weise ausgewählt werden:
   
 - Ruft die <xref:System.Windows.Forms.Button.PerformClick%2A>-Methode auf, um die Schaltfläche Programm gesteuert auszuwählen.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Übersicht über das Button-Steuerelement](button-control-overview-windows-forms.md)
 - [Gewusst wie: Reagieren auf das Anklicken von Schaltflächen in Windows Forms](how-to-respond-to-windows-forms-button-clicks.md)

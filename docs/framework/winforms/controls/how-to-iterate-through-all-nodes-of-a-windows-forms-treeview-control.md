@@ -123,7 +123,7 @@ Es ist manchmal hilfreich, jeden Knoten in einem Windows Forms <xref:System.Wind
        }  
     ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [TreeView-Steuerelement](treeview-control-windows-forms.md)
 - [Rekursive Prozeduren](../../../visual-basic/programming-guide/language-features/procedures/recursive-procedures.md)

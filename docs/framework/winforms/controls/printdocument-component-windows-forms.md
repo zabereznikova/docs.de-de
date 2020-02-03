@@ -19,7 +19,7 @@ Die `PrintDocument`-Komponente von Windows Forms wird verwendet, um die Eigensch
  [Übersicht über die PrintDocument-Komponente](printdocument-component-overview-windows-forms.md)  
  Stellt die allgemeinen Konzepte der `PrintDocument`-Komponente vor, über die Sie die Eigenschaften festlegen können, mit denen beschrieben wird, was gedruckt werden soll, und die den jeweiligen Druckvorgang in einer Windows-basierten Anwendung startet.  
   
-## <a name="reference"></a>Referenz  
+## <a name="reference"></a>Verweis  
  <xref:System.Drawing.Printing.PrintDocument>  
  Enthält Referenzinformationen zur Klasse und zu ihren Membern.  
   

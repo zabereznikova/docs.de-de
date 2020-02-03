@@ -41,7 +41,7 @@ Das Windows Forms `WebBrowser`-Steuerelement hostet Webseiten und bietet Webbrow
  [Verwenden des verwalteten HTML-Dokumentobjektmodells](using-the-managed-html-document-object-model.md)  
  Stellt Themen bereit, die beschreiben, wie HTML-Seiten, die vom <xref:System.Windows.Forms.WebBrowser>-Steuerelement gehostet werden, bearbeitet oder erstellt  
   
-## <a name="reference"></a>Referenz  
+## <a name="reference"></a>Verweis  
  <xref:System.Windows.Forms.WebBrowser>-Klasse  
  Beschreibt diese Klasse und enthält Links zu allen deren Membern.  
   
@@ -78,6 +78,6 @@ Das Windows Forms `WebBrowser`-Steuerelement hostet Webseiten und bietet Webbrow
  <xref:System.Windows.Forms.WebBrowserRefreshOption>  
  Beschreibt diese Enumeration und alle zugehörigen Werte.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Windows Forms-Steuerelemente](controls-to-use-on-windows-forms.md)
+- [Steuerelemente für Windows Forms](controls-to-use-on-windows-forms.md)

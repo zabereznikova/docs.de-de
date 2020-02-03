@@ -43,7 +43,7 @@ Im folgenden Verfahren erstellen Sie eine Multipane-Benutzeroberfläche, die der
 
 An dieser Stelle der Anwendungsentwicklung haben Sie eine ausgereifte Benutzeroberfläche entwickelt. Der nächste Schritt ist das Fortsetzen der Programmierung der Anwendung selbst, indem das <xref:System.Windows.Forms.TreeView> Steuerelement und <xref:System.Windows.Forms.ListView> Steuerelemente mit einer Art von Datenquelle verbunden werden. Weitere Informationen zum Verbinden von Steuerelementen mit Daten finden Sie unter [Datenbindung und Windows Forms](../data-binding-and-windows-forms.md).
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Windows.Forms.SplitContainer>
 - [SplitContainer-Steuerelement](splitcontainer-control-windows-forms.md)

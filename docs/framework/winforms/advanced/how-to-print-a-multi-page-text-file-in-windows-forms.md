@@ -52,7 +52,7 @@ Texte werden in Windows-basierten Anwendungen häufig gedruckt. Die <xref:System
  [!code-vb[System.Drawing.Printing.PrintExamples#0](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.Printing.PrintExamples/VB/Form1.vb#0)]  
   
 ## <a name="compiling-the-code"></a>Kompilieren des Codes  
- Für dieses Beispiel benötigen Sie Folgendes:  
+ Dieses Beispiel erfordert Folgendes:  
   
 - Eine Textdatei namens „testPage.txt“ im Stammverzeichnis von Laufwerk C:\\, die den zu druckenden Text enthält. Bearbeiten Sie den Code entsprechend, um eine andere Datei zu drucken.  
   
@@ -60,7 +60,7 @@ Texte werden in Windows-basierten Anwendungen häufig gedruckt. Die <xref:System
   
 - Informationen zum aufbauen dieses Beispiels über die Befehlszeile für Visual Basic oder Visual C#finden Sie unter [Building from the Command Line](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) or [Command-Line Building with csc. exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Sie können dieses Beispiel auch in Visual Studio erstellen, indem Sie den Code in ein neues Projekt einfügen.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Drawing.Graphics>
 - <xref:System.Drawing.Brush>

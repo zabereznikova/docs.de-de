@@ -55,7 +55,7 @@ Die grundlegende Verwendung eines Windows Forms <xref:System.Windows.Forms.Butto
        }  
     ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Übersicht über das Button-Steuerelement](button-control-overview-windows-forms.md)
 - [Methoden zur Auswahl eines Button-Steuerelements in Windows Forms](ways-to-select-a-windows-forms-button-control.md)

@@ -17,7 +17,7 @@ Ein Windows Forms-Steuerelement erbt mehr als 60 Ereignisse von <xref:System.Win
   
  Wenn das benutzerdefinierte Steuerelement geerbte Ereignisfunktionen überschreiben muss, hängen Sie keinen Delegaten an, sondern überschreiben Sie die geerbte Methode `On`*EventName*. Wenn Sie mit dem Ereignismodell in .NET Framework nicht vertraut sind, finden Sie unter [Auslösen von Ereignissen aus einer Komponente](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/sh2e3k5z(v=vs.120)) weitere Informationen.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Überschreiben der OnPaint-Methode](overriding-the-onpaint-method.md)
 - [Behandeln von Benutzereingaben](handling-user-input.md)

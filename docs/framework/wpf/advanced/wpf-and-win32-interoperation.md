@@ -169,7 +169,7 @@ Sowohl die <xref:System.Windows.Interop.HwndHost>-Klasse als auch die <xref:Syst
 
 Die Schnittstellen bieten nur Unterstützung für das, was bei der Umstellung zwischen der [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-und Win32-Region geschieht. Innerhalb des Win32-Bereichs wird das Tabstopps-Verhalten vollständig durch die von Win32 implementierte Logik für Tabstopps, sofern vorhanden, gesteuert.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Windows.Interop.HwndHost>
 - <xref:System.Windows.Interop.HwndSource>

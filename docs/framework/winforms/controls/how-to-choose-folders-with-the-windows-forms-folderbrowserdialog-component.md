@@ -63,11 +63,11 @@ Häufig müssen Sie in von Ihnen erstellten Windows-Anwendungen Benutzer aufford
     ```
 
     > [!IMPORTANT]
-    > Um diese Klasse verwenden zu können, benötigt die Assembly eine Berechtigungsebene, die von der <xref:System.Security.Permissions.FileIOPermissionAttribute.PathDiscovery%2A>-Eigenschaft gewährt wird, die Teil der <xref:System.Security.Permissions.FileIOPermissionAccess>-Enumeration ist. Wenn Sie in einem teilweise vertrauenswürdigen Kontext arbeiten, kann der Vorgang aufgrund fehlender Berechtigungen eine Ausnahme auslösen. Weitere Informationen finden Sie unter [Grundlagen der Codezugriffssicherheit](../../misc/code-access-security-basics.md).
+    > Um diese Klasse verwenden zu können, benötigt die Assembly eine Berechtigungsebene, die von der <xref:System.Security.Permissions.FileIOPermissionAttribute.PathDiscovery%2A>-Eigenschaft gewährt wird, die Teil der <xref:System.Security.Permissions.FileIOPermissionAccess>-Enumeration ist. Wenn Sie in einem teilweise vertrauenswürdigen Kontext arbeiten, kann der Vorgang aufgrund fehlender Berechtigungen eine Ausnahme auslösen. Weitere Informationen finden Sie unter [Code Access Security Basics](../../misc/code-access-security-basics.md).
 
 Informationen zum Speichern von Dateien finden Sie unter [Gewusst wie: Speichern von Dateien mit der SaveFileDialog-Komponente](how-to-save-files-using-the-savefiledialog-component.md).
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Windows.Forms.FolderBrowserDialog>
 - [Übersicht über die FolderBrowserDialog-Komponente (Windows Forms)](folderbrowserdialog-component-overview-windows-forms.md)

@@ -48,7 +48,7 @@ Jede Zelle im <xref:System.Windows.Forms.DataGridView> Steuerelement kann über 
   
  In der folgenden Tabelle werden die primären Eigenschaften aufgelistet, die <xref:System.Windows.Forms.DataGridViewCellStyle>-Objekte erhalten oder festgelegt werden.  
   
-|Die Eigenschaften-|Klassen|Beschreibung|  
+|Eigenschaft|Klassen|BESCHREIBUNG|  
 |--------------|-------------|-----------------|  
 |`DefaultCellStyle`|<xref:System.Windows.Forms.DataGridView>-, <xref:System.Windows.Forms.DataGridViewColumn>-, <xref:System.Windows.Forms.DataGridViewRow>-und abgeleitete Klassen|Ruft Standardformate ab, die von allen Zellen im gesamten Steuerelement (einschließlich der Header Zellen), in einer Spalte oder in einer Zeile verwendet werden, oder legt diese fest.|  
 |<xref:System.Windows.Forms.DataGridView.RowsDefaultCellStyle%2A>|<xref:System.Windows.Forms.DataGridView>|Ruft Standard Zellstile ab, die von allen Zeilen im-Steuerelement verwendet werden, oder legt diese Dies schließt keine Header Zellen ein.|  
@@ -144,7 +144,7 @@ Jede Zelle im <xref:System.Windows.Forms.DataGridView> Steuerelement kann über 
 > [!NOTE]
 > Das Zwischenspeichern der in der <xref:System.Windows.Forms.DataGridViewCell.Style%2A>-Eigenschaft der Zelle gespeicherten Werte ist wichtig, unabhängig davon, ob ein bestimmter Stilwert festgelegt ist. Wenn Sie eine Formatvorlage temporär ersetzen, wird durch die Wiederherstellung in den ursprünglichen Zustand "nicht festgelegt" sichergestellt, dass die Zelle zurück wechselt, um die Stil Einstellung von einer höheren Ebene zu erben. Wenn Sie den tatsächlichen Stil für eine Zelle ermitteln müssen, unabhängig davon, ob der Stil geerbt wird, verwenden Sie die <xref:System.Windows.Forms.DataGridViewCell.InheritedStyle%2A>-Eigenschaft der Zelle.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridViewCellStyle>

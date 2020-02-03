@@ -21,9 +21,9 @@ Benutzer interagieren über Windows mit Anwendungen. Der grundlegende Zweck eine
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Übersicht über WPF-Fenster](wpf-windows-overview.md)  
  [Übersicht über Dialogfelder](dialog-boxes-overview.md)  
- [Gewusst wie-Themen](window-management-how-to-topics.md)  
+ [How-to Topics (Themen zur Vorgehensweise)](window-management-how-to-topics.md)  
   
-## <a name="reference"></a>Referenz  
+## <a name="reference"></a>Verweis  
  <xref:System.Windows.Window>  
   
  <xref:System.Windows.Navigation.NavigationWindow>  

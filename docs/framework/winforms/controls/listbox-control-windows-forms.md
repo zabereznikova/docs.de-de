@@ -23,7 +23,7 @@ Ein Windows Forms `ListBox`-Steuerelement zeigt eine Liste der Elemente an, aus 
  [Übersicht über das ListBox-Steuerelement](listbox-control-overview-windows-forms.md)  
  Hier werden das Steuerelement und seine wichtigsten Funktionen und Eigenschaften erläutert.  
   
-## <a name="reference"></a>Referenz  
+## <a name="reference"></a>Verweis  
  <xref:System.Windows.Forms.ListBox>-Klasse  
  Beschreibt diese Klasse und enthält Links zu allen deren Membern.  
   

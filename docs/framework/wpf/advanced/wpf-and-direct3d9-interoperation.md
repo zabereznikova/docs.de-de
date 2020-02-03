@@ -148,7 +148,7 @@ Sie können von Direct3D9-Inhalt in eine WPF-Anwendung (Windows Presentation Fou
 > [!NOTE]
 > Wenn WPF vollständig in der Software gerendert wird, wird <xref:System.Windows.Interop.D3DImage> nicht angezeigt, da WPF keinen Vorder-Puffer enthält.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Windows.Interop.D3DImage>
 - [Überlegungen zur Leistung für die Interoperabilität zwischen Direct3D9 und WPF](performance-considerations-for-direct3d9-and-wpf-interoperability.md)

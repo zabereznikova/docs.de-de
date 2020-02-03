@@ -23,7 +23,7 @@ Bei der Windows Forms <xref:System.Windows.Forms.FontDialog> Komponente handelt 
 ## <a name="key-properties"></a>Schlüsseleigenschaften  
  Die Komponente verfügt über eine Reihe von Eigenschaften, die ihre Darstellung konfigurieren. Die Eigenschaften, die die Auswahl des Dialog Felds festlegen, sind <xref:System.Windows.Forms.FontDialog.Font%2A> und <xref:System.Windows.Forms.FontDialog.Color%2A>. Die <xref:System.Windows.Forms.FontDialog.Font%2A>-Eigenschaft legt die Schriftart, den Stil, die Größe, das Skript und die Effekte fest. beispielsweise `Arial, 10pt, style=Italic, Strikeout`.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Windows.Forms.FontDialog>
 - [FontDialog-Komponente](fontdialog-component-windows-forms.md)

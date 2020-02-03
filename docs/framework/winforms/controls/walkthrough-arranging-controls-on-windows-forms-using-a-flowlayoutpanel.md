@@ -44,7 +44,7 @@ Das <xref:System.Windows.Forms.FlowLayoutPanel> ordnet seinen Inhalt in einer be
 
 Wenn Sie fertig sind, haben Sie ein Verständnis der Rolle, die diese wichtigen Layoutfunktionen spielen.
 
-## <a name="create-the-project"></a>Erstellen eines Projekts
+## <a name="create-the-project"></a>Erstellen des Projekts
 
 1. Erstellen Sie in Visual Studio ein Windows-basiertes Anwendungsprojekt mit dem Namen "FlowLayoutPanelExample" (**Datei** > **Neues** > **Projekt** > **Visual C#**  oder **Visual Basic** >  > **Anwendung**für die **klassische Desktop** Windows Forms).
 
@@ -172,7 +172,7 @@ Wenn Sie fertig sind, haben Sie ein Verständnis der Rolle, die diese wichtigen 
 6. Lassen Sie die Maustaste los. Beachten Sie, dass die drei <xref:System.Windows.Forms.Button> -Steuerelemente in das <xref:System.Windows.Forms.FlowLayoutPanel> -Steuerelement eingefügt werden.
 
 ## <a name="next-steps"></a>Nächste Schritte
- Mithilfe einer Kombination aus Layoutbereichen und Steuerelementen können Sie ein komplexes Layout verwirklichen. Hier sind paar Vorschläge für weitere Experimente:
+ Mithilfe einer Kombination aus Layoutbereichen und Steuerelementen können Sie ein komplexes Layout verwirklichen. Mit folgenden Funktionen können Sie Ihre Fähigkeiten vertiefen:
 
 - Erhöhen Sie die Größe eines der <xref:System.Windows.Forms.Button> -Steuerelemente, und beobachten Sie die Auswirkung auf das Layout.
 
@@ -182,7 +182,7 @@ Wenn Sie fertig sind, haben Sie ein Verständnis der Rolle, die diese wichtigen 
 
 - Legen Sie die <xref:System.Windows.Forms.Control.Visible%2A> -Eigenschaft eines der Steuerelemente auf `false` fest, und beobachten Sie, wie das <xref:System.Windows.Forms.FlowLayoutPanel> als Antwort darauf einen neuen Umbruch durchführt.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Windows.Forms.FlowLayoutPanel>
 - <xref:System.Windows.Forms.TableLayoutPanel>

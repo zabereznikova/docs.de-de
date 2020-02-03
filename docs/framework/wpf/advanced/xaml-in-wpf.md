@@ -42,7 +42,7 @@ ms.locfileid: "76741880"
 [Elementstruktur und Serialisierung](element-tree-and-serialization.md)  
 [Eigenschaften](properties-wpf.md)  
 [Ereignisse](events-wpf.md)  
-[Eingabe](input-wpf.md)  
+[Input](input-wpf.md) (Eingabe)  
 [Ressourcen](resources-wpf.md)  
 [Erstellen von Formaten und Vorlagen](../../../desktop-wpf/fundamentals/styles-templates-overview.md)  
 [Threadmodell](threading-model.md)

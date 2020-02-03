@@ -27,7 +27,7 @@ Die präzise Platzierung von Steuerelementen auf dem Formular hat für viele Anw
   
  Diese Funktion wird zur Entwurfszeit in Visual Studio unterstützt. Siehe auch Exemplarische Vorgehensweise: Anordnen [von Windows Forms-Steuerelementen mit Auffüll Zeichen, Rändern und der AutoSize-Eigenschaft](windows-forms-controls-padding-autosize.md).  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Windows.Forms.Control.AutoSize%2A>
 - <xref:System.Windows.Forms.Control.Margin%2A>

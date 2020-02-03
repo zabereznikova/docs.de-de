@@ -80,7 +80,7 @@ Häufig bieten Word-Prozessoren und andere Anwendungen, die das Drucken einschli
        (this, &Form1::printDocument1_EndPrint);  
     ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Drawing.Printing.PrintDocument>
 - [Druckunterstützung in Windows Forms](windows-forms-print-support.md)

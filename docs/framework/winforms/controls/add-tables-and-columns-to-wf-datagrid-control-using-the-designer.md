@@ -54,7 +54,7 @@ Die folgenden Prozeduren erfordern ein **Windows-Anwendungs** Projekt mit einem 
 
 5. Wählen Sie im **Eigenschaften** Feld des Auflistungs-Editors den <xref:System.Windows.Forms.DataGridColumnStyle.MappingName%2A> Wert für die Spalte aus, die Sie anzeigen möchten.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [DataGrid-Steuerelement](datagrid-control-windows-forms.md)
 - [Gewusst wie: Löschen oder Ausblenden von Spalten aus dem DataGrid-Steuerelement in Windows Forms](how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)

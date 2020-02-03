@@ -30,7 +30,7 @@ Die Informationen in diesem Abschnitt konzentrieren sich auf die Programmier Sic
  [Arbeiten mit Zertifikaten](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)  
  Eine Erläuterung einiger der allgemeinen Aufgaben, die bei Verwendung von X.509-Zertifikaten erforderlich sind.  
   
-## <a name="reference"></a>Referenz  
+## <a name="reference"></a>Verweis  
  <xref:System.ServiceModel>  
   
  <xref:System.ServiceModel.Channels>  
@@ -52,7 +52,7 @@ Die Informationen in diesem Abschnitt konzentrieren sich auf die Programmier Sic
   
  [Autorisierung](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Einfache WCF-Programmierung](../../../../docs/framework/wcf/basic-wcf-programming.md)
 - [Sicherheitsmodell für Windows Server-App-Fabric](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

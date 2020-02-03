@@ -213,10 +213,10 @@ myPolygon.StrokeThickness = 2;
   
  In den vorherigen Beispielen wurde eine einzelne Transformation auf jedes Shape-Objekt angewendet. Wenn Sie mehrere Transformationen auf eine Form (oder ein beliebiges anderes UI-Element) anwenden möchten, verwenden Sie eine <xref:System.Windows.Media.TransformGroup>.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [2D-Grafiken und Bildverarbeitung](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
 - [Übersicht über das Zeichnen mit Volltonfarben und Farbverläufen](painting-with-solid-colors-and-gradients-overview.md)
-- [Übersicht über die Geometrie](geometry-overview.md)
+- [Übersicht über Geometrien](geometry-overview.md)
 - [Exemplarische Vorgehensweise: Meine erste WPF-Desktopanwendung](../getting-started/walkthrough-my-first-wpf-desktop-application.md)
 - [Übersicht über Animationen](animation-overview.md)

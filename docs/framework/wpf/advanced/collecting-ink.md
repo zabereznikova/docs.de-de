@@ -24,7 +24,7 @@ ms.locfileid: "76747029"
 
 Als einen ihrer zentralen Funktionsbestandteile erfasst die [Windows Presentation Foundation](../index.md)-Plattform Freihandeingaben. In diesem Thema werden die Methoden für die Sammlung von frei Hand Eingaben in Windows Presentation Foundation (WPF) erläutert.
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
+## <a name="prerequisites"></a>Voraussetzungen
 
 Um die folgenden Beispiele verwenden zu können, müssen Sie zuerst Visual Studio und den Windows SDK installieren. Außerdem sollten Sie wissen, wie Anwendungen für das WPF geschrieben werden. Weitere Informationen zu den ersten Schritten mit WPF finden Sie unter Exemplarische Vorgehensweise [: meine erste WPF-Desktop Anwendung](../getting-started/walkthrough-my-first-wpf-desktop-application.md).
 
@@ -52,7 +52,7 @@ Der <xref:System.Windows.Controls.InkCanvas> bietet Unterstützung für verschie
 
 Der <xref:System.Windows.Controls.InkCanvas> bietet Unterstützung für viele Handschrift Bearbeitungsvorgänge. <xref:System.Windows.Controls.InkCanvas> unterstützt z. b. das Löschen von abblicken, und es ist kein zusätzlicher Code erforderlich, um dem-Element die Funktionalität hinzuzufügen.
 
-#### <a name="selection"></a>Markierung
+#### <a name="selection"></a>Auswahl
 
 Das Festlegen des Auswahlmodus ist so einfach wie das Festlegen der <xref:System.Windows.Controls.InkCanvasEditingMode>-Eigenschaft auf **Select**.
 
@@ -88,7 +88,7 @@ Nachdem Sie diesen Code kopiert haben, drücken Sie in Visual Studio **F5** , um
 
 Beachten Sie, wie die <xref:System.Windows.Controls.StackPanel> die Schaltflächen oben auf der <xref:System.Windows.Controls.InkCanvas>platziert. Wenn Sie versuchen, über den oberen Rand der Schaltflächen zu übergeben, sammelt und rendert der <xref:System.Windows.Controls.InkCanvas> die frei Hand Eingaben hinter den Schaltflächen. Dies liegt daran, dass die Schaltflächen gleich geordnete Elemente der <xref:System.Windows.Controls.InkCanvas> im Gegensatz zu untergeordneten Elementen sind. Außerdem sind die Schaltflächen in der Z-Reihenfolge weiter oben, weshalb die Freihandeingaben dahinter gerendert werden.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Windows.Ink.DrawingAttributes>
 - <xref:System.Windows.Controls.InkCanvas.DefaultDrawingAttributes%2A>

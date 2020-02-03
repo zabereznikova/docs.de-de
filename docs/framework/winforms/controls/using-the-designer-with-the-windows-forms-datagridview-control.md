@@ -50,10 +50,10 @@ Visual Studio bietet Designer Unterstützung für das `DataGridView`-Steuereleme
  [Gewusst wie: Festlegen von standardmäßigen Zellenstilen und Datenformaten für das DataGridView-Steuerelement in Windows Forms mithilfe des Designers](default-cell-styles-datagridview.md)  
  Beschreibt die Verwendung des Dialog Felds **CellStyle Builder** zum Einrichten der grundlegenden Darstellung und der Datenanzeige Formate für das Steuerelement.  
   
-## <a name="reference"></a>Referenz  
+## <a name="reference"></a>Verweis  
  <xref:System.Windows.Forms.DataGridView>  
  Enthält die Referenzdokumentation für das <xref:System.Windows.Forms.DataGridView>-Steuerelement.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [DataGridView-Steuerelement](datagridview-control-windows-forms.md)

@@ -20,11 +20,11 @@ ms.locfileid: "76737890"
 
 Windows Presentation Foundation (WPF) verfügt über eine Ink-Funktion, die das Integrieren von digitalem frei Hand Eingaben in Ihre APP erleichtert.
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
+## <a name="prerequisites"></a>Voraussetzungen
 
 Wenn Sie die folgenden Beispiele verwenden möchten, installieren Sie zunächst [Visual Studio](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019). Außerdem ist es hilfreich zu wissen, wie Sie grundlegende WPF-apps schreiben können. Hilfe zu den ersten Schritten mit WPF finden Sie unter Exemplarische Vorgehensweise [: meine erste WPF-Desktop Anwendung](../getting-started/walkthrough-my-first-wpf-desktop-application.md).
 
-## <a name="quick-start"></a>-Schnelleinstieg
+## <a name="quick-start"></a>Schnellstart
 
 Dieser Abschnitt unterstützt Sie beim Schreiben einer einfachen WPF-Anwendung, die frei Hand Eingaben sammelt.
 
@@ -32,7 +32,7 @@ Dieser Abschnitt unterstützt Sie beim Schreiben einer einfachen WPF-Anwendung, 
 
 So erstellen Sie eine WPF-App, die frei Hand Eingaben unterstützt
 
-1. Öffnen Sie Visual Studio.
+1. Öffnen Sie Visual Studio.
 
 2. Erstellen Sie eine neue **WPF-App**.
 
@@ -108,7 +108,7 @@ Sie können auf alle WPF-Funktionen über prozeduralen Code zugreifen. Führen S
 
 1. Erstellen Sie die Anwendung, indem Sie **F5**drücken.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Freihandeingaben](digital-ink.md)
 - [Erfassen von Freihandeingaben](collecting-ink.md)

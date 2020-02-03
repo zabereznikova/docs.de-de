@@ -30,6 +30,6 @@ Steuerelemente in der Standard Toolbox für Windows Forms unterstützen viele de
 |Backcolor|Wenn diese Eigenschaft auf den Standardwert festgelegt ist, werden die Farbeinstellungen des Benutzers im Formular verwendet.|  
 |BackgroundImage|Lassen Sie diese Eigenschaft leer, damit der Text besser lesbar ist.|  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Exemplarische Vorgehensweise: Erstellen von behindertengerechten Windows-basierten Anwendungen](walkthrough-creating-an-accessible-windows-based-application.md)

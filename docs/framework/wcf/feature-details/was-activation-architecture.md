@@ -32,7 +32,7 @@ In diesem Thema werden die einzelnen Komponenten des Windows-Prozessaktivierungs
 ### <a name="listener-adapters"></a>Listeneradapter  
  Listeneradapter sind einzelne Windows-Dienste, welche für die Netzwerkprotokolle, bei denen sie lauschen, die Netzwerkprotokolllogik zum Empfang von Nachrichten implementieren. In der folgenden Tabelle sind die Listeneradapter für Windows Communication Foundation (WCF)-Protokolle aufgeführt.  
   
-|Dienstname des Listeneradapters|Protokoll|Hinweise|  
+|Dienstname des Listeneradapters|Protocol|Notizen|  
 |-----------------------------------|--------------|-----------|  
 |W3SVC|http|Allgemeine Komponente, die die HTTP-Aktivierung für IIS 7,0 und WCF bereitstellt.|  
 |NetTcpActivator|net.tcp|Hängt vom NetTcpPortSharing-Dienst ab.|  
@@ -85,7 +85,7 @@ In diesem Thema werden die einzelnen Komponenten des Windows-Prozessaktivierungs
 </system.web>  
 ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Konfigurieren von WAS für die Verwendung mit WCF](../../../../docs/framework/wcf/feature-details/configuring-the-wpa--service-for-use-with-wcf.md)
 - [Windows Server AppFabric-Hostingfunktionen](https://docs.microsoft.com/previous-versions/appfabric/ee677189(v=azure.10))

@@ -26,7 +26,7 @@ ms.locfileid: "76746198"
   
  Die Schlüsseleigenschaft der <xref:System.Windows.Forms.ContextMenu> Komponente ist die <xref:System.Windows.Forms.Menu.MenuItems%2A>-Eigenschaft. Sie können Menü Elemente hinzufügen, indem Sie <xref:System.Windows.Forms.MenuItem> Objekte Programm gesteuert erstellen und Sie dem <xref:System.Windows.Forms.Menu.MenuItemCollection> des Kontextmenüs hinzufügen. Da die Elemente in einem Kontextmenü in der Regel aus anderen Menüs gezeichnet werden, fügen Sie Elemente häufig zu einem Kontextmenü hinzu, indem Sie Sie kopieren.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Windows.Forms.ContextMenu>
 - <xref:System.Windows.Forms.MenuStrip>

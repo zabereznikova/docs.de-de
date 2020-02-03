@@ -32,7 +32,7 @@ Das Windows Forms <xref:System.Windows.Forms.DomainUpDown>-Steuerelement sieht w
  [Gewusst wie: Entfernen von Elementen aus DomainUpDown-Steuerelementen in Windows Forms](how-to-remove-items-from-windows-forms-domainupdown-controls.md)  
  Beschreibt, wie Elemente aus dem <xref:System.Windows.Forms.DomainUpDown>-Steuerelement im Code gelöscht werden.  
   
-## <a name="reference"></a>Referenz  
+## <a name="reference"></a>Verweis  
  <xref:System.Windows.Forms.DomainUpDown>  
  Beschreibt diese Klasse und enthält Links zu allen deren Membern.  
   

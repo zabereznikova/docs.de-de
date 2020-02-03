@@ -142,7 +142,7 @@ Verwenden Sie die folgenden Richtlinien, um zu verhindern, dass Zeilen freigegeb
 
 - Die `Sort(IComparer)` Überladung der <xref:System.Windows.Forms.DataGridView.Sort%2A>-Methode wird nicht aufgerufen. Das Sortieren mit einem benutzerdefinierten Vergleich bewirkt, dass alle Zeilen freigegeben werden.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Windows.Forms.DataGridView>
 - [Leistungsoptimierung im DataGridView-Steuerelement in Windows Forms](performance-tuning-in-the-windows-forms-datagridview-control.md)

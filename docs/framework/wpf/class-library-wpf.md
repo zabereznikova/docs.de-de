@@ -17,7 +17,7 @@ Die folgenden Links verweisen auf Namespaces, die [!INCLUDE[TLA#tla_winclient](.
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
-## <a name="reference"></a>Referenz  
+## <a name="reference"></a>Verweis  
   
 - <xref:Microsoft.Build.Tasks.Windows>  
   

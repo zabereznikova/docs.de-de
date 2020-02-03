@@ -106,6 +106,6 @@ Häufig möchten Benutzer einen anderen Drucker als den Standarddrucker zum Druc
        System::EventHandler(this, &Form1::button1_Click);  
     ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Druckunterstützung in Windows Forms](windows-forms-print-support.md)

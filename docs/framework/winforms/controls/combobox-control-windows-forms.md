@@ -27,7 +27,7 @@ Das Windows Forms `ComboBox`-Steuerelement wird zum Anzeigen von Daten in einem 
  [Gewusst wie: Erstellen von Text mit variabler Größe in einem ComboBox-Steuerelement](how-to-create-variable-sized-text-in-a-combobox-control.md)  
  Veranschaulicht das benutzerdefinierte Zeichnen von Text in einem `ComboBox`-Steuerelement.  
   
-## <a name="reference"></a>Referenz  
+## <a name="reference"></a>Verweis  
  <xref:System.Windows.Forms.ComboBox>-Klasse  
  Beschreibt diese Klasse und enthält Links zu allen deren Membern.  
   
@@ -35,6 +35,6 @@ Das Windows Forms `ComboBox`-Steuerelement wird zum Anzeigen von Daten in einem 
  [Windows Forms-Steuerelemente zum Auflisten von Optionen](windows-forms-controls-used-to-list-options.md)  
  Enthält eine Liste der Dinge, die Sie mit Listenfeldern, Kombinations Feldern und aktivierten Listenfeldern ausführen können.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Windows Forms-Steuerelemente](controls-to-use-on-windows-forms.md)
+- [Steuerelemente für Windows Forms](controls-to-use-on-windows-forms.md)

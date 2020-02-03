@@ -72,7 +72,7 @@ Ein Kennwortfeld ist ein Windows Forms Textfeld, in dem Platzhalter Zeichen ange
        }
     ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Windows.Forms.TextBox>
 - [Übersicht über das TextBox-Steuerelement](textbox-control-overview-windows-forms.md)

@@ -26,7 +26,7 @@ Die <xref:System.Windows.Forms.Timer>-Komponente von Windows Forms ist eine Komp
  [Gewusst wie: Ausführen von Prozeduren in festgelegten Abständen mit der Timer-Komponente in Windows Forms](run-procedures-at-set-intervals-with-wf-timer-component.md)  
  Beschreibt, wie in Windows-basierten Anwendungen auf zeitlich festgelegte Intervalle reagiert werden kann.  
   
-## <a name="reference"></a>Referenz  
+## <a name="reference"></a>Verweis  
  <xref:System.Windows.Forms.Timer?displayProperty=nameWithType>-Klasse  
  Stellt Referenzinformationen zu der Klasse, die für Windows Forms-Timer verwendet wird, und deren Member bereit.  
   
@@ -34,5 +34,5 @@ Die <xref:System.Windows.Forms.Timer>-Komponente von Windows Forms ist eine Komp
  Stellt Referenzinformationen zu der <xref:System.Timers.Timer?displayProperty=nameWithType>-Klasse bereit, die von serverbasierten Timern verwendet wird.  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
- [Windows Forms-Steuerelemente](controls-to-use-on-windows-forms.md)  
+ [Steuerelemente für Windows Forms](controls-to-use-on-windows-forms.md)  
  Enthält eine vollständige Liste der Windows Forms-Steuerelemente mit Links zu Informationen zur jeweiligen Verwendung.  

@@ -18,7 +18,7 @@ Manchmal möchten Sie, dass Ihre Anwendung Aktionen auf der Grundlage der Benutz
 
 Sie können die zulässige Auswahl angeben, indem Sie die <xref:System.Windows.Forms.DataGridView.SelectionMode%2A?displayProperty=nameWithType>-Eigenschaft auf einen der folgenden <xref:System.Windows.Forms.DataGridViewSelectionMode> Enumerationswerte festlegen.
 
-|DataGridViewSelectionMode-Wert|Beschreibung|
+|DataGridViewSelectionMode-Wert|BESCHREIBUNG|
 |-------------------------------------|-----------------|
 |<xref:System.Windows.Forms.DataGridViewSelectionMode.CellSelect>|Durch Klicken auf eine Zelle wird Sie ausgewählt. Zeilen-und Spaltenheader können nicht zur Auswahl verwendet werden.|
 |<xref:System.Windows.Forms.DataGridViewSelectionMode.ColumnHeaderSelect>|Durch Klicken auf eine Zelle wird Sie ausgewählt. Wenn Sie auf einen Spaltenheader klicken, wird die gesamte Spalte ausgewählt. Spaltenheader können nicht für die Sortierung verwendet werden.|
@@ -46,7 +46,7 @@ Sie können eine Sammlung der derzeit ausgewählten Zellen, Zeilen oder Spalten 
 > [!TIP]
 > Beispielcode, der die programmgesteuerte Verwendung ausgewählter Zellen veranschaulicht, finden Sie in der Übersicht über <xref:System.Windows.Forms.DataGridView>-Klasse.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.MultiSelect%2A>

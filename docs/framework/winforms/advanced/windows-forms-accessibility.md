@@ -12,14 +12,14 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76746375"
 ---
-# <a name="windows-forms-accessibility"></a>Windows Forms-Eingabehilfen
+# <a name="windows-forms-accessibility"></a>Windows Forms-Barrierefreiheit
 Mit den Barrierefreiheitsfunktionen von Windows Forms können Sie Ihre Anwendung einer Vielzahl von Benutzern zur Verfügung stellen.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Exemplarische Vorgehensweise: Erstellen von behindertengerechten Windows-basierten Anwendungen](walkthrough-creating-an-accessible-windows-based-application.md)  
  Beschreibt alle Funktionen, die Sie unterstützen sollten, um die Barrierefreiheit zu erhöhen.  
   
-## <a name="reference"></a>Referenz  
+## <a name="reference"></a>Verweis  
  <xref:Accessibility>  
  Ein Namespace, der eine Reihe von Klassen enthält, die mit Barrierefreiheit zusammenhängen.  
   

@@ -42,7 +42,7 @@ Speziell für die Microsoft Visual Basic .NET-Sprache können Sie das sprachspez
 > [!NOTE]
 > In Visual Studio kann IntelliSense Ihnen den Abschluss zeigen, für den Elemente für einen `Handles` Verweis in einer Seite verfügbar sind. Dies kann jedoch einen Kompilierungsschritt dauern, sodass die Zwischendatei alle `Friends`-Verweise auffüllen kann.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Windows.UIElement.AddHandler%2A>
 - [Markieren von Routingereignissen als behandelt und Klassenbehandlung](marking-routed-events-as-handled-and-class-handling.md)

@@ -24,7 +24,7 @@ Windows Forms <xref:System.Windows.Forms.RadioButton>-Steuerelemente stellen dem
   
  Das <xref:System.Windows.Forms.RadioButton> Steuerelement kann wie eine Befehls Schaltfläche angezeigt werden, die ggf. als nicht markiert angezeigt wird, wenn die Eigenschaft <xref:System.Windows.Forms.RadioButton.Appearance%2A> auf <xref:System.Windows.Forms.Appearance.Button>festgelegt ist. Mithilfe von Options Feldern können auch Bilder mithilfe der Eigenschaften <xref:System.Windows.Forms.ButtonBase.Image%2A> und <xref:System.Windows.Forms.ButtonBase.ImageList%2A> angezeigt werden. Weitere Informationen finden Sie unter Gewusst [wie: Festlegen des Bilds, das von einem Windows Forms-Steuerelement angezeigt wird](how-to-set-the-image-displayed-by-a-windows-forms-control.md).  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Windows.Forms.RadioButton>
 - [Übersicht über das Panel-Steuerelement](panel-control-overview-windows-forms.md)

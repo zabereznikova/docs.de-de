@@ -44,7 +44,7 @@ Die ausgewählten Zellen, Zeilen oder Spalten können Sie mithilfe der entsprech
      [!code-vb[System.Windows.Forms.DataGridViewSelectedCollections#30](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewSelectedCollections/VB/DataGridViewSelectedCollections.vb#30)]  
   
 ## <a name="compiling-the-code"></a>Kompilieren des Codes  
- Für dieses Beispiel benötigen Sie Folgendes:  
+ Dieses Beispiel erfordert Folgendes:  
   
 - <xref:System.Windows.Forms.Button> Steuerelemente mit dem Namen `selectedCellsButton`, `selectedRowsButton`und `selectedColumnsButton`, von denen jedes über Handler für das angefügte <xref:System.Windows.Forms.Control.Click> Ereignis verfügt.  
   
@@ -55,7 +55,7 @@ Die ausgewählten Zellen, Zeilen oder Spalten können Sie mithilfe der entsprech
 ## <a name="robust-programming"></a>Robuste Programmierung  
  Die in diesem Thema beschriebenen Sammlungen werden nicht effizient durchgeführt, wenn eine große Anzahl von Zellen, Zeilen oder Spalten ausgewählt ist. Weitere Informationen zur Verwendung dieser Sammlungen mit großen Datenmengen finden Sie unter [bewährte Methoden zum Skalieren des Windows Forms DataGridView-Steuer](best-practices-for-scaling-the-windows-forms-datagridview-control.md)Elements.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.SelectionMode%2A>

@@ -38,7 +38,7 @@ Sie können konfigurieren, wie Werte im Windows Forms <xref:System.Windows.Forms
     numericUpDown1->ThousandsSeparator = true;  
     ```  
   
-     \- oder -  
+     Oder  
   
 - Zeigen Sie einen Hexadezimalwert an, indem Sie die <xref:System.Windows.Forms.NumericUpDown.Hexadecimal%2A>-Eigenschaft auf `true`festlegen.  
   
@@ -57,7 +57,7 @@ Sie können konfigurieren, wie Werte im Windows Forms <xref:System.Windows.Forms
     > [!NOTE]
     > Auch wenn der Wert im Formular als hexadezimal angezeigt wird, testen alle Tests, die Sie für die <xref:System.Windows.Forms.NumericUpDown.Value%2A>-Eigenschaft ausführen, den Dezimalwert.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Windows.Forms.NumericUpDown>
 - [NumericUpDown-Steuerelement](numericupdown-control-windows-forms.md)

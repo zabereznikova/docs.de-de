@@ -26,10 +26,10 @@ Dieses Thema verknüpft Sie mit anderen Informationen über das `MaskedTextBox`-
  [Gewusst wie: Binden von Daten an das MaskedTextBox-Steuerelement](how-to-bind-data-to-the-maskedtextbox-control.md)  
  Veranschaulicht, wie die Daten neu formatiert werden, wenn Daten in der Datenbank nicht dem von ihrer Masken Definition erwarteten Format entsprechen.  
   
-## <a name="reference"></a>Referenz  
+## <a name="reference"></a>Verweis  
  <xref:System.Windows.Forms.MaskedTextBox>  
  Die primäre Klasse für die Implementierung des maskierten Textfeld-Steuer Elements.  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
- [Windows Forms-Steuerelemente](controls-to-use-on-windows-forms.md)  
+ [Steuerelemente für Windows Forms](controls-to-use-on-windows-forms.md)  
  Enthält eine vollständige Liste der Windows Forms-Steuerelemente mit Links zu Informationen zur jeweiligen Verwendung.

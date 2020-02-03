@@ -75,7 +75,7 @@ Möglicherweise möchten Sie häufig Tabellendaten anzeigen, die nicht aus einer
   
 #### <a name="to-test-the-form"></a>So testen Sie das Formular  
   
-- Drücken Sie F5, um die Anwendung auszuführen.  
+- Drücken Sie die Taste F5, um die Anwendung auszuführen.  
   
      Sie sehen ein <xref:System.Windows.Forms.DataGridView> Steuerelement, in dem die in `PopulateDataGridView`aufgeführten Titel angezeigt werden. Mit der Schaltfläche **Zeile hinzufügen** können Sie neue Zeilen hinzufügen, und Sie können die ausgewählten Zeilen mit der Schaltfläche **Zeile löschen** löschen. Das ungebundene <xref:System.Windows.Forms.DataGridView>-Steuerelement ist der Datenspeicher, und seine Daten sind unabhängig von einer externen Quelle, z. b. ein <xref:System.Data.DataSet> oder ein Array.  
   
@@ -92,7 +92,7 @@ Möglicherweise möchten Sie häufig Tabellendaten anzeigen, die nicht aus einer
   
 - Passen Sie die Darstellung von Zellen an. Weitere Informationen finden Sie unter Gewusst [wie: Anpassen der Darstellung von Zellen im Windows Forms DataGridView-Steuer](customize-the-appearance-of-cells-in-the-datagrid.md) Element und Gewusst [wie: Festlegen von Standardzellen Formaten für das Windows Forms DataGridView-Steuer](how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control.md)Element.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Windows.Forms.DataGridView>
 - [Anzeigen von Daten im DataGridView-Steuerelement in Windows Forms](displaying-data-in-the-windows-forms-datagridview-control.md)

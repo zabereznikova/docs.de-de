@@ -26,7 +26,7 @@ Die Windows Forms [ErrorProvider](errorprovider-component-windows-forms.md) -Kom
 > [!NOTE]
 > Die <xref:System.Windows.Forms.ErrorProvider> Komponente bietet keine integrierte Unterstützung für Barrierefreiheits Clients. Um auf die Anwendung zugreifen zu können, wenn Sie diese Komponente verwenden, müssen Sie einen zusätzlichen, zugänglichen Feedback Mechanismus bereitstellen.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Windows.Forms.ErrorProvider>
 - [Gewusst wie: Anzeigen von Fehlern innerhalb eines Datasets mit der ErrorProvider-Komponente in Windows Forms](view-errors-within-a-dataset-with-wf-errorprovider-component.md)

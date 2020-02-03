@@ -21,7 +21,7 @@ ms.locfileid: "76739525"
 
 In den folgenden Verfahren werden die grundlegenden Schritte beschrieben, die Sie zum Erstellen einer Windows Forms-Anwendung und Ausführen dieser Anwendung über die Befehlszeile abschließen müssen. Visual Studio bietet umfassende Unterstützung für diese Verfahren.  Siehe auch Exemplarische Vorgehensweise [: Hosting eines Windows Forms-Steuer Elements in WPF](../wpf/advanced/walkthrough-hosting-a-windows-forms-control-in-wpf.md).
   
-## <a name="procedure"></a>-Prozedur  
+## <a name="procedure"></a>Prozedur  
   
 #### <a name="to-create-the-form"></a>So erstellen Sie das Formular  
   
@@ -111,7 +111,7 @@ Das folgende Codebeispiel ist das komplette Beispiel aus den vorherigen Prozedur
  [!code-csharp[System.Windows.Forms.FormWithButton#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FormWithButton/CS/Form1.cs#1)]
  [!code-vb[System.Windows.Forms.FormWithButton#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FormWithButton/VB/Form1.vb#1)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Windows.Forms.Form>
 - <xref:System.Windows.Forms.Control>

@@ -32,7 +32,7 @@ Eines der wichtigsten Konzepte von Windows Forms Datenbindung ist die *Änderung
 ## <a name="change-notification-for-custom-controls"></a>Änderungs Benachrichtigung für benutzerdefinierte Steuerelemente  
  Schließlich müssen Sie auf der Steuerungs Seite ein *propertyName*Changed-Ereignis für jede Eigenschaft verfügbar machen, die für die Datenbindung entworfen wurde. Die Änderungen an der Steuerelement Eigenschaft werden dann an die gebundene Datenquelle weitergegeben. Weitere Informationen finden Sie unter Vorgehens [Weise: Anwenden des PropertyNameChanged-Musters](how-to-apply-the-propertynamechanged-pattern.md) .  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Windows.Forms.BindingSource>
 - <xref:System.ComponentModel.INotifyPropertyChanged>

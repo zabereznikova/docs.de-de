@@ -40,11 +40,11 @@ Das <xref:System.Windows.Forms.DataGridView>-Steuerelement ermöglicht die autom
  [!code-vb[System.Windows.Forms.DataGridViewIComparerSort#00](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewIComparerSort/VB/form1.vb#00)]  
   
 ## <a name="compiling-the-code"></a>Kompilieren des Codes  
- Diese Beispiele erfordern Folgendes:  
+ Voraussetzungen für diese Beispiele sind:  
   
 - Verweise auf die Assemblys "System", "System.Drawing" und "System.Windows.Forms".  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Windows.Forms.DataGridView>
 - [Sortieren von Daten im DataGridView-Steuerelement in Windows Forms](sorting-data-in-the-windows-forms-datagridview-control.md)

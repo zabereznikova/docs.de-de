@@ -47,15 +47,15 @@ Deklariert und ordnet Speicherplatz für eine oder mehrere Variablen zu.
 Dim [ WithEvents ] variablelist
 ```
 
-## <a name="parts"></a>-Komponenten
+## <a name="parts"></a>Bestandteile
 
 - `attributelist`
 
-  Dies ist optional. Siehe [Attribut Liste](attribute-list.md).
+  Optional. Siehe [Attribut Liste](attribute-list.md).
 
 - `accessmodifier`
 
-  Dies ist optional. Einer der folgenden Werte ist möglich:
+  Optional. Dabei kann es sich um eine der folgenden Methoden handeln:
 
   - [Public](../modifiers/public.md)
 
@@ -63,7 +63,7 @@ Dim [ WithEvents ] variablelist
 
   - [Friend](../modifiers/friend.md)
 
-  - [Private](../modifiers/private.md)
+  - [Privat](../modifiers/private.md)
 
   - [Protected Friend](../modifiers/protected-friend.md)
 
@@ -73,27 +73,27 @@ Dim [ WithEvents ] variablelist
 
 - `Shared`
 
-  Dies ist optional. Siehe [Shared](../modifiers/shared.md).
+  Optional. Siehe [Shared](../modifiers/shared.md).
 
 - `Shadows`
 
-  Dies ist optional. Siehe [Shadows](../modifiers/shadows.md).
+  Optional. Siehe [Shadows](../modifiers/shadows.md).
 
 - `Static`
 
-  Dies ist optional. Siehe [static](../modifiers/static.md).
+  Optional. Siehe [static](../modifiers/static.md).
 
 - `ReadOnly`
 
-  Dies ist optional. Siehe [nur](../modifiers/readonly.md)lesen.
+  Optional. Siehe [nur](../modifiers/readonly.md)lesen.
 
 - `WithEvents`
 
-  Dies ist optional. Gibt an, dass es sich hierbei um Objektvariablen handelt, die auf Instanzen einer Klasse verweisen, die Ereignisse hervorrufen können. Siehe [wiwitvents](../modifiers/withevents.md).
+  Optional. Gibt an, dass es sich hierbei um Objektvariablen handelt, die auf Instanzen einer Klasse verweisen, die Ereignisse hervorrufen können. Siehe [wiwitvents](../modifiers/withevents.md).
 
 - `variablelist`
 
-  Erforderlich Liste der Variablen, die in dieser Anweisung deklariert werden.
+  Erforderlich. Liste der Variablen, die in dieser Anweisung deklariert werden.
 
   `variable [ , variable ... ]`
 
@@ -101,14 +101,14 @@ Dim [ WithEvents ] variablelist
 
   `variablename [ ( [ boundslist ] ) ] [ As [ New ] datatype [ With`{`[ .propertyname = propinitializer [ , ... ] ] } ] ] [ = initializer ]`
 
-  |-Komponente|Beschreibung|
+  |Teil|BESCHREIBUNG|
   |---|---|
-  |`variablename`|Erforderlich Name der Variablen. Siehe [Declared Element Names](../../programming-guide/language-features/declared-elements/declared-element-names.md).|
-  |`boundslist`|Dies ist optional. Die Liste der Begrenzungen der einzelnen Dimensionen einer Array Variablen.|
-  |`New`|Dies ist optional. Erstellt eine neue Instanz der-Klasse, wenn die `Dim`-Anweisung ausgeführt wird.|
-  |`datatype`|Dies ist optional. Datentyp der Variablen.|
-  |`With`|Dies ist optional. Führt die Objektinitialisiererliste ein.|
-  |`propertyname`|Dies ist optional. Der Name einer Eigenschaft in der Klasse, von der Sie eine Instanz erstellen.|
+  |`variablename`|Erforderlich. Name der Variable. Siehe [Declared Element Names](../../programming-guide/language-features/declared-elements/declared-element-names.md).|
+  |`boundslist`|Optional. Die Liste der Begrenzungen der einzelnen Dimensionen einer Array Variablen.|
+  |`New`|Optional. Erstellt eine neue Instanz der-Klasse, wenn die `Dim`-Anweisung ausgeführt wird.|
+  |`datatype`|Optional. Datentyp der Variablen.|
+  |`With`|Optional. Führt die Objektinitialisiererliste ein.|
+  |`propertyname`|Optional. Der Name einer Eigenschaft in der Klasse, von der Sie eine Instanz erstellen.|
   |`propinitializer`|Erforderlich nach `propertyname` =. Der Ausdruck, der ausgewertet und dem Eigenschaftsnamen zugewiesen wird.|
   |`initializer`|Optional, wenn `New` nicht angegeben ist. Ausdruck, der ausgewertet und der Variablen bei der Erstellung zugewiesen wird.|
 
@@ -325,14 +325,14 @@ Im folgenden Beispiel wird die `speedValue` Variable auf Klassenebene deklariert
 
 [!code-vb[VbVbalrStatements#145](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class11.vb#145)]
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Const-Anweisung](const-statement.md)
 - [ReDim-Anweisung](redim-statement.md)
 - [Option Explicit-Anweisung](option-explicit-statement.md)
 - [Option Infer-Anweisung](option-infer-statement.md)
 - [Option Strict-Anweisung](option-strict-statement.md)
-- [Seite "Kompilieren", Projekt-Designer (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic)
+- [Seite „Kompilieren“, Projekt-Designer (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic)
 - [Variablendeklaration](../../programming-guide/language-features/variables/variable-declaration.md)
 - [Arrays](../../programming-guide/language-features/arrays/index.md)
 - [Objektinitialisierer: Benannte und anonyme Typen](../../programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)

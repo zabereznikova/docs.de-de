@@ -96,7 +96,7 @@ Sie können Daten in der Windows Forms <xref:System.Windows.Forms.DataGrid>-Steu
     dataGrid1->TableStyles->Add(ts1);
     ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [DataGrid-Steuerelement](datagrid-control-windows-forms.md)
 - [Gewusst wie: Löschen oder Ausblenden von Spalten aus dem DataGrid-Steuerelement in Windows Forms](how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)

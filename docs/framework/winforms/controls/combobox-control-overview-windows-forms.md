@@ -23,7 +23,7 @@ Das Windows Forms <xref:System.Windows.Forms.ComboBox>-Steuerelement wird zum An
   
  Um Elemente in einem <xref:System.Windows.Forms.ComboBox>-Steuerelement hinzuzufügen oder zu löschen, verwenden Sie die Methode <xref:System.Windows.Forms.ComboBox.ObjectCollection.Add%2A>, <xref:System.Windows.Forms.ComboBox.ObjectCollection.Insert%2A>, <xref:System.Windows.Forms.ComboBox.ObjectCollection.Clear%2A> oder <xref:System.Windows.Forms.ComboBox.ObjectCollection.Remove%2A>. Alternativ können Sie der Liste Elemente hinzufügen, indem Sie die <xref:System.Windows.Forms.ComboBox.Items%2A>-Eigenschaft im-Designer verwenden.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Windows.Forms.ComboBox>
 - [Übersicht über das ListBox-Steuerelement](listbox-control-overview-windows-forms.md)

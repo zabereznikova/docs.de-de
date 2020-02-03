@@ -21,10 +21,10 @@ Windows Forms bietet Steuerelemente und Komponenten, die eine Reihe von Funktion
   
 ## <a name="recommended-controls-and-components-by-function"></a>Empfohlene Steuerelemente und Komponenten nach Funktion  
   
-|Funktion|Steuerelement|Beschreibung|  
+|Funktion|Control|BESCHREIBUNG|  
 |--------------|-------------|-----------------|  
 |Datenanzeige|<xref:System.Windows.Forms.DataGridView>-Steuerelement|Das <xref:System.Windows.Forms.DataGridView>-Steuerelement stellt eine anpassbare Tabelle zum Anzeigen von Daten bereit. Die <xref:System.Windows.Forms.DataGridView>-Klasse ermöglicht die Anpassung von Zellen, Zeilen, Spalten und Rahmen. **Hinweis:**  Das <xref:System.Windows.Forms.DataGridView>-Steuerelement bietet zahlreiche grundlegende und erweiterte Funktionen, die im <xref:System.Windows.Forms.DataGrid>-Steuerelement fehlen. Weitere Informationen finden Sie [unter Unterschiede zwischen dem Windows Forms DataGridView-Steuerelement und dem DataGrid-](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md) Steuerelement|  
-|Datenbindung und-Navigation|<xref:System.Windows.Forms.BindingSource> Komponente|Vereinfacht das Binden von Steuerelementen in einem Formular an Daten durch Bereitstellen von Währungsmanagement, Änderungs Benachrichtigung und anderen Diensten.|  
+|Datenbindung und-Navigation|<xref:System.Windows.Forms.BindingSource>-Komponente|Vereinfacht das Binden von Steuerelementen in einem Formular an Daten durch Bereitstellen von Währungsmanagement, Änderungs Benachrichtigung und anderen Diensten.|  
 ||<xref:System.Windows.Forms.BindingNavigator>-Steuerelement|Stellt eine Schnittstelle vom Typ Toolbar zum Navigieren und Bearbeiten von Daten in einem Formular bereit.|  
 |Text Bearbeitung|<xref:System.Windows.Forms.TextBox>-Steuerelement|Zeigt Text an, der zur Entwurfszeit eingegeben wurde und von Benutzern zur Laufzeit bearbeitet oder Programm gesteuert geändert werden kann.|  
 ||<xref:System.Windows.Forms.RichTextBox>-Steuerelement|Ermöglicht das Anzeigen von Text mit Formatierungen im nur-Text-Format oder im Rich-Text-Format (RTF).|  
@@ -62,8 +62,8 @@ Windows Forms bietet Steuerelemente und Komponenten, die eine Reihe von Funktion
 ||<xref:System.Windows.Forms.LinkLabel>-Steuerelement|Zeigt Text als Link im Webstil an und löst ein Ereignis aus, wenn der Benutzer auf den speziellen Text klickt. Normalerweise ist der Text ein Link zu einem anderen Fenster oder einer Website.|  
 ||<xref:System.Windows.Forms.NotifyIcon>-Steuerelement|Zeigt ein Symbol im Status Benachrichtigungsbereich der Taskleiste an, die eine Anwendung darstellt, die im Hintergrund ausgeführt wird.|  
 ||<xref:System.Windows.Forms.ToolStrip>-Steuerelement|Erstellt Symbolleisten, die über eine Microsoft Windows XP, Microsoft Office, Microsoft Internet Explorer oder ein benutzerdefiniertes Aussehen und Gefühl verfügen, mit oder ohne Designs und mit Unterstützung für Überlauf-und Lauf Zeitelement Neuanordnen. **Hinweis:**  Das <xref:System.Windows.Forms.ToolStrip> Steuerelement ist so konzipiert, dass es das <xref:System.Windows.Forms.ToolBar> Steuerelement ersetzt.|  
-|Benutzerhilfe|<xref:System.Windows.Forms.HelpProvider> Komponente|Stellt Popup-oder Online Hilfe für Steuerelemente bereit.|  
-||<xref:System.Windows.Forms.ToolTip> Komponente|Stellt ein Popup Fenster bereit, in dem eine kurze Beschreibung des Zwecks eines Steuer Elements angezeigt wird, wenn der Benutzer den Zeiger auf das Steuerelement zeigt.|  
+|Hilfe für Benutzer|<xref:System.Windows.Forms.HelpProvider>-Komponente|Stellt Popup- oder Onlinehilfe für Steuerelemente bereit.|  
+||<xref:System.Windows.Forms.ToolTip>-Komponente|Stellt ein Popup Fenster bereit, in dem eine kurze Beschreibung des Zwecks eines Steuer Elements angezeigt wird, wenn der Benutzer den Zeiger auf das Steuerelement zeigt.|  
 |Gruppieren von anderen Steuerelementen|<xref:System.Windows.Forms.Panel>-Steuerelement|Gruppiert eine Reihe von Steuerelementen auf einen nicht beschrifteten Bild lauffähigen Frame.|  
 ||<xref:System.Windows.Forms.GroupBox>-Steuerelement|Gruppiert einen Satz von Steuerelementen (z. b. Options Felder) in einem beschrifteten, nicht Bild lauffähigen Frame.|  
 ||<xref:System.Windows.Forms.TabControl>-Steuerelement|Stellt eine Seite im Register Format zum effizienten organisieren und Zugreifen auf gruppierte Objekte bereit.|  
@@ -84,7 +84,7 @@ Windows Forms bietet Steuerelemente und Komponenten, die eine Reihe von Funktion
 ||<xref:System.Windows.Forms.StatusBar>|<xref:System.Windows.Forms.StatusStrip>|  
 |Formularlayout|<xref:System.Windows.Forms.Splitter>|<xref:System.Windows.Forms.SplitContainer>|  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Windows Forms-Steuerelemente](controls-to-use-on-windows-forms.md)
+- [Steuerelemente für Windows Forms](controls-to-use-on-windows-forms.md)
 - [Entwickeln benutzerdefinierter Windows Forms-Steuerelemente mit .NET Framework](developing-custom-windows-forms-controls.md)

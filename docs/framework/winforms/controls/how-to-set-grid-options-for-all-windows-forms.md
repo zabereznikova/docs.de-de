@@ -30,6 +30,6 @@ Wenn Sie für die Arbeit in der Visual Studio-Entwicklungsumgebung eingesetzt we
 
    Im rechten Bereich können Sie unter der Überschrift **Layouteinstellungen** die Standard Raster Einstellungen für alle neuen Formulare festlegen, die Sie erstellen. Zu diesen Einstellungen gehören die Rastergröße, ob Steuerelemente an der Tabelle ausgerichtet sind und ob Sie standardmäßig aktiviert ist. Außerdem können **Sie zwischen den** Layoutmodi Andocken und Ausrichtungs **Linien** auswählen. Weitere Informationen zu Ausrichtungs Linien finden Sie unter Exemplarische Vorgehensweise [: Anordnen von Steuerelementen auf Windows Forms mithilfe](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)von Ausrichtungs Linien.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Optionen: Windows Forms-Designer](/visualstudio/ide/reference/options-windows-forms-designer)

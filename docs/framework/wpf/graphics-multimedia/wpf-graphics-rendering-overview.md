@@ -36,11 +36,11 @@ Das Thema bietet einen Überblick über die visuelle [!INCLUDE[TLA2#tla_winclien
   
  Das <xref:System.Windows.Media.Visual>-Objekt beinhaltet jedoch keine Unterstützung für nicht-Renderingfeatures, wie z. b.:  
   
-- Ereignisbehandlung  
+- Behandlung von Ereignissen  
   
 - Layout  
   
-- Formatvorlagen  
+- Stile  
   
 - Datenbindung  
   
@@ -62,10 +62,10 @@ Das Thema bietet einen Überblick über die visuelle [!INCLUDE[TLA2#tla_winclien
 ### <a name="drawing-content-in-visual-objects"></a>Zeichnungsinhalt in visuellen Objekten  
  Ein <xref:System.Windows.Media.Visual>-Objekt speichert seine Renderdaten als eine **Vektorgrafik Anweisungs Liste**. Jedes Element in der Anweisungsliste stellt einen Satz von Grafikdaten einer niedrigeren Ebene und dazugehörige Ressourcen in einem serialisierten Format dar. Es gibt vier verschiedene Typen von Renderingdaten, die Zeichnungsinhalt enthalten können.  
   
-|Zeichnungsinhaltstyp|Beschreibung|  
+|Zeichnungsinhaltstyp|BESCHREIBUNG|  
 |--------------------------|-----------------|  
 |Vektorgrafik|Stellt Vektorgrafik Daten und alle zugehörigen <xref:System.Windows.Media.Brush> und <xref:System.Windows.Media.Pen> Informationen dar.|  
-|Bild|Stellt ein Bild innerhalb eines durch einen <xref:System.Windows.Rect>definierten Bereichs dar.|  
+|Image|Stellt ein Bild innerhalb eines durch einen <xref:System.Windows.Rect>definierten Bereichs dar.|  
 |Glyphe|Stellt eine Zeichnung dar, die eine <xref:System.Windows.Media.GlyphRun>rendert, bei der es sich um eine Sequenz von Symbolen aus einer angegebenen Schriftart Ressource handelt. So wird Text dargestellt.|  
 |Video|Stellt eine Zeichnung dar, die Video rendert.|  
   
@@ -77,7 +77,7 @@ Das Thema bietet einen Überblick über die visuelle [!INCLUDE[TLA2#tla_winclien
   
  Die folgende Abbildung zeigt die Reihenfolge, in der <xref:System.Windows.Media.DrawingGroup> Vorgänge während der Renderingsequenz angewendet werden.  
   
- ![DrawingGroup-Reihenfolge der Vorgänge](./media/graphcismm-drawinggroup-order.png "graphcismm_drawinggroup_order")  
+ ![Reihenfolge der DrawingGroup-Vorgänge](./media/graphcismm-drawinggroup-order.png "graphcismm_drawinggroup_order")  
 Reihenfolge der DrawingGroup-Vorgänge  
   
  Weitere Informationen finden Sie unter [Übersicht über Zeichnungsobjekte](drawing-objects-overview.md).  
@@ -167,7 +167,7 @@ Diagramm der logischen Struktur
   
  Die visuelle Struktur und die logische Struktur werden mit dem aktuellen Satz von Anwendungselementen synchronisiert und spiegeln dabei alle Hinzufügungen, Löschungen oder Änderungen von Elementen wider. Die Strukturen liefern jedoch verschiedene Ansichten der Anwendung. Anders als bei der visuellen Struktur, erweitert die logische Struktur nicht das <xref:System.Windows.Controls.ContentPresenter> Element eines Steuer Elements. Dies bedeutet, dass keine direkte 1:1-Entsprechung zwischen einer logischen Struktur und einer visuellen Struktur für den gleichen Satz von Objekten vorhanden ist. Tatsächlich führt das Aufrufen der <xref:System.Windows.LogicalTreeHelper.GetChildren%2A>-Methode des **LogicalTreeHelper** -Objekts und der <xref:System.Windows.Media.VisualTreeHelper.GetChild%2A>-Methode des **VisualTreeHelper** -Objekts, die das gleiche Element wie ein Parameter verwendet, zu unterschiedlichen Ergebnissen.  
   
- Weitere Informationen zur logischen Struktur finden Sie unter [Strukturen in WPF](../advanced/trees-in-wpf.md).  
+ Weitere Informationen über die logische Struktur finden Sie unter [Strukturen in WPF](../advanced/trees-in-wpf.md).  
   
 ### <a name="viewing-the-visual-tree-with-xamlpad"></a>Anzeigen der visuellen Struktur mit XamlPad  
  Das [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Tool XamlPad bietet eine Option zum Anzeigen und untersuchen der visuellen Struktur, die dem aktuell definierten XAML-Inhalt entspricht. Klicken Sie auf die Schaltfläche **Visuelle Struktur anzeigen** der Menüleiste, um die visuelle Struktur anzuzeigen. Das folgende Beispiel veranschaulicht die Erweiterung von XAML-Inhalt in visuelle Struktur Knoten im Panel des visuellen Struktur- **Explorers** von XamlPad:  
@@ -240,14 +240,14 @@ Grafiken und Text mit unterschiedlichen DPI-Einstellungen
  [!code-csharp[VisualsOverview#101](~/samples/snippets/csharp/VS_Snippets_Wpf/VisualsOverview/CSharp/Window1.xaml.cs#101)]
  [!code-vb[VisualsOverview#101](~/samples/snippets/visualbasic/VS_Snippets_Wpf/VisualsOverview/visualbasic/window1.xaml.vb#101)]  
   
- In den meisten Fällen ist die logische Struktur eine sinnvollere Darstellung der Elemente in einer [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Anwendung. Obwohl Sie die logische Struktur nicht ändern, ist diese Ansicht der Anwendung nützlich, um die Vererbung von Eigenschaften und das Ereignisrouting nachzuvollziehen. Anders als bei der visuellen Struktur kann die logische Struktur nicht visuelle Datenobjekte, z. b. <xref:System.Windows.Documents.ListItem>, darstellen. Weitere Informationen zur logischen Struktur finden Sie unter [Strukturen in WPF](../advanced/trees-in-wpf.md).  
+ In den meisten Fällen ist die logische Struktur eine sinnvollere Darstellung der Elemente in einer [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Anwendung. Obwohl Sie die logische Struktur nicht ändern, ist diese Ansicht der Anwendung nützlich, um die Vererbung von Eigenschaften und das Ereignisrouting nachzuvollziehen. Anders als bei der visuellen Struktur kann die logische Struktur nicht visuelle Datenobjekte, z. b. <xref:System.Windows.Documents.ListItem>, darstellen. Weitere Informationen über die logische Struktur finden Sie unter [Strukturen in WPF](../advanced/trees-in-wpf.md).  
   
  Die <xref:System.Windows.Media.VisualTreeHelper>-Klasse stellt Methoden zum Zurückgeben des umgebenden Rechtecks von visuellen Objekten bereit. Sie können das umgebende Rechteck eines visuellen Objekts zurückgeben, indem Sie <xref:System.Windows.Media.VisualTreeHelper.GetContentBounds%2A>aufrufen. Sie können das umgebende Rechteck aller Nachfolger eines visuellen Objekts, einschließlich des visuellen Objekts selbst, durch Aufrufen von <xref:System.Windows.Media.VisualTreeHelper.GetDescendantBounds%2A>zurückgeben. Der folgende Code zeigt, wie Sie das umschließende Rechteck des visuellen Objekts und aller Nachfolgerknoten berechnen.  
   
  [!code-csharp[VisualsOverview#102](~/samples/snippets/csharp/VS_Snippets_Wpf/VisualsOverview/CSharp/Window1.xaml.cs#102)]
  [!code-vb[VisualsOverview#102](~/samples/snippets/visualbasic/VS_Snippets_Wpf/VisualsOverview/visualbasic/window1.xaml.vb#102)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Windows.Media.Visual>
 - <xref:System.Windows.Media.VisualTreeHelper>

@@ -91,7 +91,7 @@ Eine Nachschlagetabelle ist eine Tabelle mit Daten, in der die Daten aus Datens�
   
 8. Binden Sie die Steuerelement außer <xref:System.Windows.Forms.ComboBox> und <xref:System.Windows.Forms.BindingNavigator> an das Feld "Details" aus der <xref:System.Windows.Forms.BindingSource> der untergeordneten Tabelle (z. B. `OrdersBindingSource`), die Sie anzeigen möchten.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Windows.Forms.BindingSource>
 - [BindingSource-Komponente](bindingsource-component.md)

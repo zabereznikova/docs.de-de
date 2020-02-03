@@ -66,7 +66,7 @@ ms.locfileid: "76742514"
  [Gewusst wie: Überprüfen von Eingaben mit dem DataGrid-Steuerelement von Windows Forms](how-to-validate-input-with-the-windows-forms-datagrid-control.md)  
  Beschreibt, wie Eingaben in das an das `DataGrid`-Steuerelement gebundene Dataset validiert werden.  
   
-## <a name="reference"></a>Referenz  
+## <a name="reference"></a>Verweis  
  <xref:System.Windows.Forms.DataGrid>  
  Bietet eine Übersicht über die <xref:System.Windows.Forms.DataGrid>-Klasse.  
   
@@ -77,7 +77,7 @@ ms.locfileid: "76742514"
  [Windows Forms-Datenbindung](../windows-forms-data-binding.md)  
  Enthält Links zu Themen über die Datenbindung in Windows Forms.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [DataGridView-Steuerelement](datagridview-control-windows-forms.md)
 - [Unterschiede zwischen dem DataGridView-Steuerelement und dem DataGrid-Steuerelement in Windows Forms](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)

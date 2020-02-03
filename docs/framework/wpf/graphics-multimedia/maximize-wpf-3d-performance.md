@@ -18,7 +18,7 @@ Wenn Sie die [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-wincl
   
 ## <a name="performance-impact-high"></a>Leistungs Beeinträchtigung: hoch  
   
-|Die Eigenschaften-|Empfehlung|  
+|Eigenschaft|Empfehlung|  
 |-|-|  
 |<xref:System.Windows.Media.Brush>|Pinsel Geschwindigkeit (am schnellsten zum langsamsten):<br /><br /> <xref:System.Windows.Media.SolidColorBrush><br /><br /> <xref:System.Windows.Media.LinearGradientBrush><br /><br /> <xref:System.Windows.Media.ImageBrush><br /><br /> <xref:System.Windows.Media.DrawingBrush> (zwischengespeichert)<br /><br /> <xref:System.Windows.Media.VisualBrush> (zwischengespeichert)<br /><br /> <xref:System.Windows.Media.RadialGradientBrush><br /><br /> <xref:System.Windows.Media.DrawingBrush> (nicht zwischengespeichert)<br /><br /> <xref:System.Windows.Media.VisualBrush> (nicht zwischengespeichert)|  
 |<xref:System.Windows.UIElement.ClipToBoundsProperty>|Legen Sie `Viewport3D.ClipToBounds` auf false fest, wenn der Inhalt einer <xref:System.Windows.Controls.Viewport3D> [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] nicht explizit auf das Viewport3D's-Rechteck zugeschnitten werden muss. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Antialiasing-Clipping kann sehr langsam sein, und `ClipToBounds` ist standardmäßig auf <xref:System.Windows.Controls.Viewport3D>aktiviert (langsam).|  
@@ -32,7 +32,7 @@ Wenn Sie die [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-wincl
   
 ## <a name="performance-impact-medium"></a>Leistungs Beeinträchtigung: Mittel  
   
-|Die Eigenschaften-|Empfehlung|  
+|Eigenschaft|Empfehlung|  
 |-|-|  
 |<xref:System.Windows.Media.Media3D.MeshGeometry3D>|Wenn ein Mesh so definiert ist, dass Dreiecke mit freigegebenen Scheitel Punkten verwendet werden und diese Scheitel Punkte dieselbe Position, normale und Texturkoordinaten aufweisen, definieren Sie jeden freigegebenen Scheitelpunkt nur einmal, und definieren Sie dann die Dreiecke nach Index mit <xref:System.Windows.Media.Media3D.MeshGeometry3D.TriangleIndices%2A>.|  
 |<xref:System.Windows.Media.ImageBrush>|Versuchen Sie, die Textur Größen zu minimieren, wenn Sie die Größe explizit steuern (bei Verwendung einer <xref:System.Windows.Media.Imaging.RenderTargetBitmap> und/oder einer <xref:System.Windows.Media.ImageBrush>).  Beachten Sie, dass mit niedrigerer Auflösung die Qualität der visuellen Qualität beeinträchtigt werden kann, um das richtige Gleichgewicht zwischen Qualität und Leistung zu finden.|  
@@ -50,15 +50,15 @@ Wenn Sie die [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-wincl
   
 ## <a name="performance-impact-low"></a>Leistungs Beeinträchtigung: gering  
   
-|Die Eigenschaften-|Empfehlung|  
+|Eigenschaft|Empfehlung|  
 |-|-|  
 |<xref:System.Windows.Media.Media3D.Transform3DGroup>|Wenn Sie keine Animation oder Datenbindung benötigen, anstatt eine Transformations Gruppe mit mehreren Transformationen zu verwenden, verwenden Sie eine einzelne <xref:System.Windows.Media.Media3D.MatrixTransform3D>, und legen Sie diese so fest, dass Sie das Produkt aller Transformationen ist, die andernfalls unabhängig voneinander in der Transformations Gruppe vorhanden wären.|  
 |<xref:System.Windows.Media.Media3D.Light>|Minimieren Sie die Anzahl der Lichter in Ihrer Szene. Zu viele Lichter in einer Szene erzwingen [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)], dass Sie auf das Software Rendering zurückgreifen.  Die Grenzwerte liegen ungefähr 110 <xref:System.Windows.Media.Media3D.DirectionalLight> Objekten, 70 <xref:System.Windows.Media.Media3D.PointLight> Objekten oder 40 <xref:System.Windows.Media.Media3D.SpotLight> Objekten.|  
 |<xref:System.Windows.Media.Media3D.ModelVisual3D>|Trennen Sie das Verschieben von Objekten von statischen Objekten, indem Sie Sie in separaten <xref:System.Windows.Media.Media3D.ModelVisual3D> Instanzen platzieren.  ModelVisual3D ist "schwerer" als <xref:System.Windows.Media.Media3D.GeometryModel3D>, da transformierte Grenzen zwischengespeichert werden.  GeometryModel3D ist als Modell optimiert. ModelVisual3D ist als Szene Knoten optimiert.  Verwenden Sie ModelVisual3D, um freigegebene Instanzen von GeometryModel3D in die Szene einzufügen.|  
 |<xref:System.Windows.Media.Media3D.Light>|Minimieren Sie die Häufigkeit, mit der Sie die Anzahl der Lichter in der Szene ändern.  Jede Änderung der Licht Anzahl erzwingt die Neugenerierung und Neukompilierung eines Shaders, es sei denn, diese Konfiguration war zuvor vorhanden (und der Shader wurde deshalb zwischengespeichert).|  
-|Light|Schwarze Ampeln sind nicht sichtbar, aber Sie werden der Rendering-Zeit hinzugefügt. Sie sollten Sie weglassen.|  
+|Hell|Schwarze Ampeln sind nicht sichtbar, aber Sie werden der Rendering-Zeit hinzugefügt. Sie sollten Sie weglassen.|  
 |<xref:System.Windows.Media.Media3D.MeshGeometry3D>|Um die Konstruktionszeit von großen Auflistungen in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]zu minimieren, wie z. b. eine MeshGeometry3D's <xref:System.Windows.Media.Media3D.MeshGeometry3D.Positions%2A>, <xref:System.Windows.Media.Media3D.MeshGeometry3D.Normals%2A>, <xref:System.Windows.Media.Media3D.MeshGeometry3D.TextureCoordinates%2A>und <xref:System.Windows.Media.Media3D.MeshGeometry3D.TriangleIndices%2A>, stellen Sie die Auflistungen vorab vor der Wert Population vor. Übergeben Sie, wenn möglich, die von den Auflistungs-Konstruktoren vorab aufgefüllten Datenstrukturen wie Arrays oder Listen.|  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Übersicht über 3D-Grafiken](3-d-graphics-overview.md)

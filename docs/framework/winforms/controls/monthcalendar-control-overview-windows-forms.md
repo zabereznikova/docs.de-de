@@ -25,7 +25,7 @@ Das Windows Forms <xref:System.Windows.Forms.MonthCalendar>-Steuerelement stellt
   
  Die Schlüsseleigenschaft des <xref:System.Windows.Forms.MonthCalendar> Steuer Elements ist <xref:System.Windows.Forms.MonthCalendar.SelectionRange%2A>, der Bereich der im Steuerelement ausgewählten Datumsangaben. Der <xref:System.Windows.Forms.MonthCalendar.SelectionRange%2A> Wert darf die maximale Anzahl von Tagen, die ausgewählt werden können, nicht überschreiten, die in der <xref:System.Windows.Forms.MonthCalendar.MaxSelectionCount%2A>-Eigenschaft festgelegt ist. Die frühesten und letzten Datumsangaben, die der Benutzer auswählen kann, werden durch die Eigenschaften <xref:System.Windows.Forms.MonthCalendar.MaxDate%2A> und <xref:System.Windows.Forms.MonthCalendar.MinDate%2A> bestimmt.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Windows.Forms.MonthCalendar>
 - [MonthCalendar-Steuerelement](monthcalendar-control-windows-forms.md)

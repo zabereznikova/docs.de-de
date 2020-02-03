@@ -153,14 +153,14 @@ Ein mithilfe eines VisualBrush gezeichnetes Rechteck
  Da es sich um <xref:System.Windows.Media.Animation.Animatable> Objekte handelt, können <xref:System.Windows.Media.Brush> Objekte animiert werden. Weitere Informationen finden Sie unter [Übersicht über Animation](animation-overview.md).  
   
 <a name="freezable_features"></a>   
-### <a name="freezable-features"></a>Features von Freezable  
+### <a name="freezable-features"></a>Funktionen von Freezable-Objekten  
  Da es von der <xref:System.Windows.Freezable>-Klasse erbt, bietet die <xref:System.Windows.Media.Brush>-Klasse mehrere besondere Features: <xref:System.Windows.Media.Brush> Objekte können als [Ressourcen](../../../desktop-wpf/fundamentals/xaml-resources-define.md)deklariert, von mehreren Objekten gemeinsam genutzt und geklont werden. Außerdem können alle <xref:System.Windows.Media.Brush> Typen außer <xref:System.Windows.Media.VisualBrush> schreibgeschützt werden, um die Leistung zu verbessern und Thread sicher zu machen.  
   
  Weitere Informationen zu den verschiedenen Funktionen, die von <xref:System.Windows.Freezable> Objekten bereitgestellt werden, finden Sie unter [Übersicht über](../advanced/freezable-objects-overview.md)frei wählbare Objekte.  
   
  Weitere Informationen dazu, warum <xref:System.Windows.Media.VisualBrush> Objekte nicht eingefroren werden können, finden Sie auf der Seite <xref:System.Windows.Media.VisualBrush>-Typ.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Windows.Media.Brush>
 - <xref:System.Windows.Media.Brushes>
@@ -170,5 +170,5 @@ Ein mithilfe eines VisualBrush gezeichnetes Rechteck
 - [Beispiel für Pinsel](https://go.microsoft.com/fwlink/?LinkID=159973)
 - [ImageBrush-Beispiel](https://go.microsoft.com/fwlink/?LinkID=160005)
 - [VisualBrush-Beispiel](https://go.microsoft.com/fwlink/?LinkID=160049)
-- [Gewusst wie-Themen](brushes-how-to-topics.md)
+- [How-to Topics (Themen zur Vorgehensweise)](brushes-how-to-topics.md)
 - [Weitere Leistungsempfehlungen](../advanced/optimizing-performance-other-recommendations.md)

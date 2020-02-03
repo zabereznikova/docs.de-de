@@ -45,7 +45,7 @@ Identityserver stellt Middleware zur Verfügung, die in einer ASP.net Core Anwen
 
 IdentityServer4 ist Open Source und kann kostenlos verwendet werden. Sie können Sie mithilfe ihrer nuget-Pakete zu Ihren Anwendungen hinzufügen. Das Hauptpaket ist [IdentityServer4](https://www.nuget.org/packages/IdentityServer4/) , das über 4 Millionen mal heruntergeladen wurde. Das Basispaket enthält keinen Code für die Benutzeroberfläche und unterstützt nur die Konfiguration im Arbeitsspeicher. Um ihn mit einer Datenbank zu verwenden, benötigen Sie auch einen Datenanbieter wie [IdentityServer4. EntityFramework](https://www.nuget.org/packages/IdentityServer4.EntityFramework) , der Entity Framework Core verwendet, um Konfigurations-und Betriebsdaten für identityserver zu speichern. Für die Benutzeroberfläche können Sie Dateien aus dem [Schnellstart-UI-Repository](https://github.com/IdentityServer/IdentityServer4.Quickstart.UI) in Ihre ASP.net Core MVC-Anwendung kopieren, um Unterstützung für die Anmeldung und Abmeldung mithilfe der identityserver-Middleware hinzuzufügen.
 
-## <a name="configuration"></a>-Konfiguration
+## <a name="configuration"></a>Konfiguration
 
 Identityserver unterstützt verschiedene Arten von Protokollen und Anbietern sozialer Authentifizierung, die im Rahmen jeder benutzerdefinierten Installation konfiguriert werden können. Dies erfolgt in der Regel in der `Startup` Klasse der ASP.net Core Anwendung in der `ConfigureServices`-Methode. Die Konfiguration umfasst die Angabe der unterstützten Protokolle und der Pfade zu den Servern und Endpunkten, die verwendet werden. In Abbildung 8-2 wird ein Beispiel für die Konfiguration des Benutzeroberflächen Projekts "IdentityServer4 Quick Start" gezeigt:
 
@@ -98,7 +98,7 @@ Identityserver hostet außerdem eine öffentliche Demosite, die zum Testen versc
 
 Viele Cloud-native Anwendungen nutzen serverseitige APIs und umfassende Client Anwendungen (Single Page Applications, Spas) auf dem Front-End. Identityserver sendet einen [JavaScript-Client](http://docs.identityserver.io/en/latest/quickstarts/4_javascript_client.html) (`oidc-client.js`) über NPM, der Spas hinzugefügt werden kann, um die Verwendung von identityserver für das anmelden, abmelden und die tokenbasierte Authentifizierung von Web-APIs zu ermöglichen.
 
-## <a name="references"></a>Verweise
+## <a name="references"></a>References
 
 - [Identityserver-Dokumentation](http://docs.identityserver.io/en/latest/)
 - [Anwendungs Typen](https://docs.microsoft.com/azure/active-directory/develop/app-types)

@@ -23,7 +23,7 @@ Eine Ressource ist ein Objekt, das an unterschiedlichen Stellen in der Anwendung
  [WPF-Anwendungsressource, Inhalts- und Datendateien](../app-development/wpf-application-resource-content-and-data-files.md)  
  [Paket-URI in WPF](../app-development/pack-uris-in-wpf.md)  
   
-## <a name="reference"></a>Referenz  
+## <a name="reference"></a>Verweis  
  <xref:System.Windows.ResourceDictionary>  
   
  [StaticResource-Markuperweiterung](staticresource-markup-extension.md)  

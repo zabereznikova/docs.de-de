@@ -17,7 +17,7 @@ ms.locfileid: "76738095"
   
  Dieses Thema enthält folgende Abschnitte:  
   
-- [Erforderliche Komponenten](#Prerequisites)  
+- [Voraussetzungen](#Prerequisites)  
   
 - [Code Behind und XAML-Sprache](#codebehind_and_the_xaml_language)  
   
@@ -28,7 +28,7 @@ ms.locfileid: "76738095"
 - [Einschränkungen für Inline Code](#Inline_Code_Limitations)  
   
 <a name="Prerequisites"></a>   
-## <a name="prerequisites"></a>Erforderliche Komponenten  
+## <a name="prerequisites"></a>Voraussetzungen  
  In diesem Thema wird davon ausgegangen, dass Sie die [Übersicht über XAML (WPF)](../../../desktop-wpf/fundamentals/xaml.md) gelesen haben und über grundlegende Kenntnisse der CLR-und objektorientierten Programmierung verfügen.  
   
 <a name="codebehind_and_the_xaml_language"></a>   
@@ -58,7 +58,7 @@ ms.locfileid: "76738095"
 ## <a name="inline-code-limitations"></a>Einschränkungen für Inline Code  
  Sie sollten in Erwägung gezogen werden, die Verwendung von Inline Code zu vermeiden oder einzuschränken. Im Hinblick auf Architektur-und Codierungs Philosophie sorgt die Beibehaltung einer Trennung zwischen Markup und Code-Behind dafür, dass Designer-und Entwickler Rollen erheblich unterschieden werden. Auf einer komplexeren Ebene kann der Code, den Sie für Inline Code schreiben, umständlich zum Schreiben sein, da Sie immer in die [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] generierte partielle Klasse schreiben und nur die Standard Zuordnungen für XML-Namespaces verwenden können. Da Sie keine `using`-Anweisungen hinzufügen können, müssen Sie viele der API-Aufrufe, die Sie vornehmen, vollständig qualifizieren. Die standardmäßigen [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Zuordnungen umfassen die meisten, aber nicht alle CLR-Namespaces, die in den [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Assemblys vorhanden sind. Sie müssen die Aufrufe von Typen und Membern vollständig qualifizieren, die in den anderen CLR-Namespaces enthalten sind. Sie können auch nichts außerhalb der partiellen Klasse im Inline Code definieren, und alle Benutzercode Entitäten, auf die Sie verweisen, müssen als Member oder Variable innerhalb der generierten partiellen Klasse vorhanden sein. Andere sprachspezifische Programmierfunktionen, z. b. Makros oder `#ifdef` für globale Variablen oder Buildvariablen, sind ebenfalls nicht verfügbar. Weitere Informationen finden Sie unter [x:Code-System interner XAML-Typ](../../../desktop-wpf/xaml-services/xcode-intrinsic-xaml-type.md).  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Übersicht über XAML (WPF)](../../../desktop-wpf/fundamentals/xaml.md)
 - [Systeminterner x:Code-XAML-Typ](../../../desktop-wpf/xaml-services/xcode-intrinsic-xaml-type.md)

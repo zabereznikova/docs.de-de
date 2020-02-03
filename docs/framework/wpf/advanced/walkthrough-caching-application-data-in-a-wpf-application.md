@@ -40,8 +40,8 @@ Das Zwischenspeichern ermöglicht es Ihnen, Daten für schnellen Zugriff im Arbe
 
 - Überwachen des Pfads der zwischengespeicherten Datei und Benachrichtigen der Cache Instanz über Änderungen am überwachten Element.
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
- Für die Durchführung dieser exemplarischen Vorgehensweise benötigen Sie Folgendes:
+## <a name="prerequisites"></a>Voraussetzungen
+ Wenn Sie diese exemplarische Vorgehensweise abschließen möchten, müssen folgende Voraussetzungen erfüllt sein:
 
 - Visual Studio 2010.
 
@@ -56,7 +56,7 @@ Das Zwischenspeichern ermöglicht es Ihnen, Daten für schnellen Zugriff im Arbe
 
 #### <a name="to-create-a-wpf-application"></a>So erstellen Sie eine WPF-Anwendung.
 
-1. Starten Sie Visual Studio.
+1. Starten Sie Visual Studio.
 
 2. Klicken Sie im Menü **Datei** auf **neu**, und klicken Sie dann auf **Neues Projekt**.
 
@@ -325,7 +325,7 @@ Das Zwischenspeichern ermöglicht es Ihnen, Daten für schnellen Zugriff im Arbe
  [!code-csharp[CachingWPFApplications#1](~/samples/snippets/csharp/VS_Snippets_Wpf/CachingWPFApplications/CSharp/MainWindow.xaml.cs#1)]
  [!code-vb[CachingWPFApplications#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CachingWPFApplications/VisualBasic/MainWindow.xaml.vb#1)]
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Runtime.Caching.MemoryCache>
 - <xref:System.Runtime.Caching.ObjectCache>

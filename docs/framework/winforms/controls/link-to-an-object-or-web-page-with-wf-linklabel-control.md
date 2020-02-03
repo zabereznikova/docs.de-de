@@ -180,7 +180,7 @@ Das <xref:System.Windows.Forms.LinkLabel>-Steuerelement kann auch verwendet werd
        }
     ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Diagnostics.Process.Start%2A?displayProperty=nameWithType>
 - [Übersicht über das LinkLabel-Steuerelement](linklabel-control-overview-windows-forms.md)

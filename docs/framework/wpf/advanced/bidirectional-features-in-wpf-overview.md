@@ -198,7 +198,7 @@ Die <xref:System.Windows.Media.NumberSubstitution.CultureOverride%2A>-Eigenschaf
 
 Diese Eigenschaft gibt den Typ der zu ersetzenden Zahl an. Sie nimmt einen der folgenden <xref:System.Windows.Media.NumberSubstitutionMethod> Enumerationswerte an:
 
-- <xref:System.Windows.Media.NumberSubstitutionMethod.AsCulture>: die Ersetzungs Methode wird basierend auf der <xref:System.Globalization.NumberFormatInfo.DigitSubstitution%2A?displayProperty=nameWithType>-Eigenschaft der Zahlen Kultur bestimmt. Dies ist der Standardwert.
+- <xref:System.Windows.Media.NumberSubstitutionMethod.AsCulture>: die Ersetzungs Methode wird basierend auf der <xref:System.Globalization.NumberFormatInfo.DigitSubstitution%2A?displayProperty=nameWithType>-Eigenschaft der Zahlen Kultur bestimmt. Dies ist die Standardoption.
 
 - <xref:System.Windows.Media.NumberSubstitutionMethod.Context>: Wenn die Zahlen Kultur eine arabische oder eine persische Kultur ist, gibt Sie an, dass die Ziffern vom Kontext abhängen.
 

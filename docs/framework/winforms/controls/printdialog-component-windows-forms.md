@@ -25,10 +25,10 @@ Die `PrintDialog`-Komponente in Windows Forms ist ein vorkonfiguriertes Dialogfe
  [Gewusst wie: Anzeigen der PrintDialog-Komponente](how-to-display-the-printdialog-component.md)  
  Erläutert, wie das Dialogfeld angezeigt wird, und wo Eigenschaften gespeichert werden.  
   
-## <a name="reference"></a>Referenz  
+## <a name="reference"></a>Verweis  
  <xref:System.Windows.Forms.PrintDialog>  
  Enthält Referenzinformationen zur Klasse und zu ihren Membern.  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
- [Windows Forms-Steuerelemente](controls-to-use-on-windows-forms.md)  
+ [Steuerelemente für Windows Forms](controls-to-use-on-windows-forms.md)  
  Enthält eine vollständige Liste der Windows Forms-Steuerelemente mit Links zu Informationen zur jeweiligen Verwendung.

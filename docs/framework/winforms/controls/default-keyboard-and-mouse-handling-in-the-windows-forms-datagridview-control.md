@@ -28,33 +28,33 @@ In den folgenden Tabellen wird beschrieben, wie Benutzer mit dem <xref:System.Wi
   
 ### <a name="basic-navigation-and-entry-keys"></a>Grundlegende Navigations-und Eintrags Schlüssel  
   
-|Schlüssel-oder Schlüssel Kombination|Beschreibung|  
+|Schlüssel-oder Schlüssel Kombination|BESCHREIBUNG|  
 |----------------------------|-----------------|  
 |NACH-UNTEN-TASTE|Verschiebt den Fokus direkt unterhalb der aktuellen Zelle in die Zelle. Wenn sich der Fokus in der letzten Zeile befindet, führt keine Aktion aus.|  
-|NACH-LINKS|Verschiebt den Fokus auf die vorherige Zelle in der Zeile. Wenn sich der Fokus in der ersten Zelle in der Zeile befindet, führt keine Aktion aus.|  
-|NACH-RECHTS|Verschiebt den Fokus auf die nächste Zelle in der Zeile. Wenn sich der Fokus in der letzten Zelle in der Zeile befindet, führt keine Aktion aus.|  
+|NACH-LINKS-TASTE|Verschiebt den Fokus auf die vorherige Zelle in der Zeile. Wenn sich der Fokus in der ersten Zelle in der Zeile befindet, führt keine Aktion aus.|  
+|NACH-RECHTS-TASTE|Verschiebt den Fokus auf die nächste Zelle in der Zeile. Wenn sich der Fokus in der letzten Zelle in der Zeile befindet, führt keine Aktion aus.|  
 |NACH-OBEN-TASTE|Verschiebt den Fokus direkt oberhalb der aktuellen Zelle in die Zelle. Wenn sich der Fokus in der ersten Zeile befindet, führt keine Aktion aus.|  
-|START|Verschiebt den Fokus auf die erste Zelle in der aktuellen Zeile.|  
+|POS1|Verschiebt den Fokus auf die erste Zelle in der aktuellen Zeile.|  
 |ENDE|Verschiebt den Fokus auf die letzte Zelle in der aktuellen Zeile.|  
 |BILD-AB|Führt einen Bildlauf nach unten um die Anzahl der Zeilen aus, die vollständig angezeigt werden. Verschiebt den Fokus auf die letzte vollständig angezeigte Zeile, ohne die Spalten zu ändern.|  
 |BILD-AUF|Führt einen Bildlauf nach oben um die Anzahl der Zeilen aus, die vollständig angezeigt werden. Verschiebt den Fokus auf die erste angezeigte Zeile, ohne die Spalten zu ändern.|  
 |TAB|Wenn der <xref:System.Windows.Forms.DataGridView.StandardTab%2A>-Eigenschafts Wert `false`ist, verschiebt den Fokus auf die nächste Zelle in der aktuellen Zeile. Wenn sich der Fokus bereits in der letzten Zelle der Zeile befindet, verschiebt den Fokus auf die erste Zelle in der nächsten Zeile. Wenn sich der Fokus in der letzten Zelle im-Steuerelement befindet, verschiebt den Fokus auf das nächste Steuerelement in der Aktivier Reihenfolge des übergeordneten Containers.<br /><br /> Wenn der <xref:System.Windows.Forms.DataGridView.StandardTab%2A>-Eigenschafts Wert `true`ist, verschiebt den Fokus auf das nächste Steuerelement in der Aktivier Reihenfolge des übergeordneten Containers.|  
-|UMSCHALTTASTE+TAB|Wenn der <xref:System.Windows.Forms.DataGridView.StandardTab%2A>-Eigenschafts Wert `false`ist, verschiebt den Fokus auf die vorherige Zelle in der aktuellen Zeile. Wenn sich der Fokus bereits in der ersten Zelle der Zeile befindet, verschiebt den Fokus auf die letzte Zelle in der vorherigen Zeile. Wenn sich der Fokus in der ersten Zelle im-Steuerelement befindet, verschiebt den Fokus auf das vorherige Steuerelement in der Aktivier Reihenfolge des übergeordneten Containers.<br /><br /> Wenn der <xref:System.Windows.Forms.DataGridView.StandardTab%2A>-Eigenschafts Wert `true`ist, verschiebt den Fokus auf das vorherige Steuerelement in der Aktivier Reihenfolge des übergeordneten Containers.|  
+|UMSCHALT+TAB|Wenn der <xref:System.Windows.Forms.DataGridView.StandardTab%2A>-Eigenschafts Wert `false`ist, verschiebt den Fokus auf die vorherige Zelle in der aktuellen Zeile. Wenn sich der Fokus bereits in der ersten Zelle der Zeile befindet, verschiebt den Fokus auf die letzte Zelle in der vorherigen Zeile. Wenn sich der Fokus in der ersten Zelle im-Steuerelement befindet, verschiebt den Fokus auf das vorherige Steuerelement in der Aktivier Reihenfolge des übergeordneten Containers.<br /><br /> Wenn der <xref:System.Windows.Forms.DataGridView.StandardTab%2A>-Eigenschafts Wert `true`ist, verschiebt den Fokus auf das vorherige Steuerelement in der Aktivier Reihenfolge des übergeordneten Containers.|  
 |STRG+TAB|Wenn der <xref:System.Windows.Forms.DataGridView.StandardTab%2A>-Eigenschafts Wert `false`ist, verschiebt den Fokus auf das nächste Steuerelement in der Aktivier Reihenfolge des übergeordneten Containers.<br /><br /> Wenn der <xref:System.Windows.Forms.DataGridView.StandardTab%2A>-Eigenschafts Wert `true`ist, verschiebt den Fokus auf die nächste Zelle in der aktuellen Zeile. Wenn sich der Fokus bereits in der letzten Zelle der Zeile befindet, verschiebt den Fokus auf die erste Zelle in der nächsten Zeile. Wenn sich der Fokus in der letzten Zelle im-Steuerelement befindet, verschiebt den Fokus auf das nächste Steuerelement in der Aktivier Reihenfolge des übergeordneten Containers.|  
-|STRG+UMSCHALT +TAB|Wenn der <xref:System.Windows.Forms.DataGridView.StandardTab%2A>-Eigenschafts Wert `false`ist, verschiebt den Fokus auf das vorherige Steuerelement in der Aktivier Reihenfolge des übergeordneten Containers.<br /><br /> Wenn der <xref:System.Windows.Forms.DataGridView.StandardTab%2A>-Eigenschafts Wert `true`ist, verschiebt den Fokus auf die vorherige Zelle in der aktuellen Zeile. Wenn sich der Fokus bereits in der ersten Zelle der Zeile befindet, verschiebt den Fokus auf die letzte Zelle in der vorherigen Zeile. Wenn sich der Fokus in der ersten Zelle im-Steuerelement befindet, verschiebt den Fokus auf das vorherige Steuerelement in der Aktivier Reihenfolge des übergeordneten Containers.|  
+|STRG+UMSCHALT+TAB|Wenn der <xref:System.Windows.Forms.DataGridView.StandardTab%2A>-Eigenschafts Wert `false`ist, verschiebt den Fokus auf das vorherige Steuerelement in der Aktivier Reihenfolge des übergeordneten Containers.<br /><br /> Wenn der <xref:System.Windows.Forms.DataGridView.StandardTab%2A>-Eigenschafts Wert `true`ist, verschiebt den Fokus auf die vorherige Zelle in der aktuellen Zeile. Wenn sich der Fokus bereits in der ersten Zelle der Zeile befindet, verschiebt den Fokus auf die letzte Zelle in der vorherigen Zeile. Wenn sich der Fokus in der ersten Zelle im-Steuerelement befindet, verschiebt den Fokus auf das vorherige Steuerelement in der Aktivier Reihenfolge des übergeordneten Containers.|  
 |Strg + Pfeil|Verschiebt den Fokus in Richtung des Pfeils in die am weitesten entfernte Zelle.|  
-|STRG + Startseite|Verschiebt den Fokus auf die erste Zelle im-Steuerelement.|  
-|STRG + Ende|Verschiebt den Fokus auf die letzte Zelle im-Steuerelement.|  
+|STRG+POS1|Verschiebt den Fokus auf die erste Zelle im-Steuerelement.|  
+|STRG+ENDE|Verschiebt den Fokus auf die letzte Zelle im-Steuerelement.|  
 |STRG + Bild-ab/nach-oben|Identisch mit Bild-ab oder Bild-auf.|  
 |F2|Versetzt die aktuelle Zelle in den Bearbeitungsmodus der Zelle, wenn der <xref:System.Windows.Forms.DataGridView.EditMode%2A>-Eigenschafts Wert <xref:System.Windows.Forms.DataGridViewEditMode.EditOnF2> oder <xref:System.Windows.Forms.DataGridViewEditMode.EditOnKeystrokeOrF2>ist.|
 |F3|Sortiert die aktuelle Spalte, wenn der Wert der <xref:System.Windows.Forms.DataGridViewColumn.SortMode%2A?displayProperty=nameWithType>-Eigenschaft <xref:System.Windows.Forms.DataGridViewColumnSortMode.Automatic>ist. Dies entspricht dem Klicken auf den aktuellen Spaltenheader. Verfügbar seit .NET Framework 4.7.2. Um dieses Feature zu aktivieren, müssen Anwendungen auf .NET Framework 4.7.2 oder höhere Versionen abzielen oder die Barrierefreiheits Verbesserungen mithilfe von appContext-Switches explizit abonnieren.|  
 |F4|Wenn die aktive Zelle eine <xref:System.Windows.Forms.DataGridViewComboBoxCell>ist, wird die Zelle in den Bearbeitungsmodus versetzt, und die Dropdown Liste wird angezeigt.|  
 |ALT + nach-oben/nach-unten|Wenn die aktive Zelle eine <xref:System.Windows.Forms.DataGridViewComboBoxCell>ist, wird die Zelle in den Bearbeitungsmodus versetzt, und die Dropdown Liste wird angezeigt.|  
-|LEERTASTE|Wenn es sich bei der aktuellen Zelle um eine <xref:System.Windows.Forms.DataGridViewButtonCell>, <xref:System.Windows.Forms.DataGridViewLinkCell>oder <xref:System.Windows.Forms.DataGridViewCheckBoxCell>handelt, werden die <xref:System.Windows.Forms.DataGridView.CellClick>-und <xref:System.Windows.Forms.DataGridView.CellContentClick> Ereignisse ausgelöst. Wenn die aktive Zelle eine <xref:System.Windows.Forms.DataGridViewButtonCell>ist, wird auch die Schaltfläche gedrückt. Wenn die aktive Zelle eine <xref:System.Windows.Forms.DataGridViewCheckBoxCell>ist, wird auch der Status der Überprüfung geändert.|  
+|SPACE|Wenn es sich bei der aktuellen Zelle um eine <xref:System.Windows.Forms.DataGridViewButtonCell>, <xref:System.Windows.Forms.DataGridViewLinkCell>oder <xref:System.Windows.Forms.DataGridViewCheckBoxCell>handelt, werden die <xref:System.Windows.Forms.DataGridView.CellClick>-und <xref:System.Windows.Forms.DataGridView.CellContentClick> Ereignisse ausgelöst. Wenn die aktive Zelle eine <xref:System.Windows.Forms.DataGridViewButtonCell>ist, wird auch die Schaltfläche gedrückt. Wenn die aktive Zelle eine <xref:System.Windows.Forms.DataGridViewCheckBoxCell>ist, wird auch der Status der Überprüfung geändert.|  
 |EINGABETASTE|Führt einen Commit für alle Änderungen an der aktuellen Zelle und Zeile aus und verschiebt den Fokus direkt unterhalb der aktuellen Zelle in die Zelle. Wenn sich der Fokus in der letzten Zeile befindet, führt einen Commit für alle Änderungen aus, ohne den Fokus zu verschieben.|  
 |ESC|Wenn sich das Steuerelement im Bearbeitungsmodus befindet, wird der Bearbeitungsvorgang abgebrochen. Wenn sich das Steuerelement nicht im Bearbeitungsmodus befindet, werden alle Änderungen, die an der aktuellen Zeile vorgenommen wurden, zurückgesetzt, wenn das Steuerelement an eine Datenquelle gebunden ist, die die Bearbeitung unterstützt, oder der virtuelle Modus wurde mit einem commitbereich auf Zeilenebene implementiert.|  
-|Rücktaste|Löscht das Zeichen vor der Einfügemarke, wenn eine Zelle bearbeitet wird.|  
-|LÖSCHEN|Löscht das Zeichen nach der Einfügemarke, wenn eine Zelle bearbeitet wird.|  
+|RÜCKTASTE|Löscht das Zeichen vor der Einfügemarke, wenn eine Zelle bearbeitet wird.|  
+|Delete|Löscht das Zeichen nach der Einfügemarke, wenn eine Zelle bearbeitet wird.|  
 |STRG+EINGABE|Führt einen Commit für alle Änderungen an der aktuellen Zelle aus, ohne den Fokus zu verschieben. Führt außerdem einen Commit für alle Änderungen an der aktuellen Zeile aus, wenn das Steuerelement an eine Datenquelle gebunden ist, die die Bearbeitung unterstützt, oder der virtuelle Modus mit einem commitbereich auf Zeilenebene implementiert wurde.|  
 |STRG+0|Gibt einen <xref:System.DBNull.Value?displayProperty=nameWithType> Wert in die aktuelle Zelle ein, wenn die Zelle bearbeitet werden kann. Standardmäßig ist der Anzeige Wert für einen <xref:System.DBNull> Zellwert der Wert der <xref:System.Windows.Forms.DataGridViewCellStyle.NullValue%2A>-Eigenschaft der <xref:System.Windows.Forms.DataGridViewCellStyle>, die für die aktuelle Zelle wirksam ist.|  
   
@@ -64,7 +64,7 @@ In den folgenden Tabellen wird beschrieben, wie Benutzer mit dem <xref:System.Wi
   
  Wenn die <xref:System.Windows.Forms.DataGridView.SelectionMode%2A> auf <xref:System.Windows.Forms.DataGridViewSelectionMode.RowHeaderSelect> oder <xref:System.Windows.Forms.DataGridViewSelectionMode.ColumnHeaderSelect>festgelegt ist, tritt das gleiche Verhalten auf, aber mit den folgenden Ergänzungen.  
   
-|Schlüssel-oder Schlüssel Kombination|Beschreibung|  
+|Schlüssel-oder Schlüssel Kombination|BESCHREIBUNG|  
 |----------------------------|-----------------|  
 |UMSCHALT + LEERTASTE|Wählt die vollständige Zeile oder Spalte aus (identisch mit dem Klicken auf die Zeilen-oder Spalten Kopfzeile).|  
 |Navigations Taste (Pfeiltaste, Seite nach oben/unten, Startseite, Ende)|Wenn eine vollständige Zeile oder Spalte ausgewählt ist, wird die Auswahl durch Ändern der aktuellen Zelle in eine neue Zeile oder Spalte in die vollständige neue Zeile oder Spalte verschoben (abhängig vom Auswahlmodus).|  
@@ -82,7 +82,7 @@ In den folgenden Tabellen wird beschrieben, wie Benutzer mit dem <xref:System.Wi
 > [!NOTE]
 > Wenn Sie mit der linken Maustaste auf eine Zelle klicken, wird die aktuelle Zelle immer geändert. Wenn Sie mit der rechten Maustaste auf eine Zelle klicken, wird ein Kontextmenü geöffnet, wenn eine Zelle verfügbar ist.  
   
-|Maus Aktion|Beschreibung|  
+|Maus Aktion|BESCHREIBUNG|  
 |------------------|-----------------|  
 |Linke Maustaste nach unten|Macht die angeklickte Zelle zur aktuellen Zelle und löst das <xref:System.Windows.Forms.DataGridView.CellMouseDown?displayProperty=nameWithType>-Ereignis aus.|  
 |Linke Maustaste nach oben|Löst das <xref:System.Windows.Forms.DataGridView.CellMouseUp?displayProperty=nameWithType>-Ereignis aus.|  
@@ -95,7 +95,7 @@ In den folgenden Tabellen wird beschrieben, wie Benutzer mit dem <xref:System.Wi
   
  Wenn die <xref:System.Windows.Forms.DataGridView.MultiSelect%2A>-Eigenschaft auf `false` festgelegt ist und die-Eigenschaft <xref:System.Windows.Forms.DataGridView.SelectionMode%2A> auf <xref:System.Windows.Forms.DataGridViewSelectionMode.CellSelect>festgelegt ist, tritt das folgende Verhalten auf.  
   
-|Maus Aktion|Beschreibung|  
+|Maus Aktion|BESCHREIBUNG|  
 |------------------|-----------------|  
 |Klicken Sie mit der linken Maustaste.|Wählt nur die aktuelle Zelle aus, wenn der Benutzer auf eine Zelle klickt. Kein Auswahl Verhalten, wenn der Benutzer auf einen Zeilen-oder Spaltenheader klickt.|  
 |Klicken Sie auf die Rechte Maustaste.|Zeigt ein Kontextmenü an, wenn eine verfügbar ist.|  
@@ -114,7 +114,7 @@ In den folgenden Tabellen wird beschrieben, wie Benutzer mit dem <xref:System.Wi
   
  Wenn <xref:System.Windows.Forms.DataGridView.MultiSelect%2A> auf `true` festgelegt ist und <xref:System.Windows.Forms.DataGridView.SelectionMode%2A> auf <xref:System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect> oder <xref:System.Windows.Forms.DataGridViewSelectionMode.FullColumnSelect>festgelegt ist, verhält sich das Klicken auf eine Zelle beim Drücken von UMSCHALT oder STRG auf die gleiche Weise, außer dass nur vollständige Zeilen und Spalten betroffen sind.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Windows.Forms.DataGridView>
 - [DataGridView-Steuerelement](datagridview-control-windows-forms.md)

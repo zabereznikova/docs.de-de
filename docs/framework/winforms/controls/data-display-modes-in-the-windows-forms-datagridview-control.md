@@ -23,7 +23,7 @@ Das <xref:System.Windows.Forms.DataGridView> Steuerelement kann Daten in drei un
   
  Ein Beispiel, das eine schreibgeschützte, nicht gebundene <xref:System.Windows.Forms.DataGridView>verwendet, finden Sie unter Gewusst [wie: Erstellen eines ungebundenen Windows Forms DataGridView-Steuer](how-to-create-an-unbound-windows-forms-datagridview-control.md)Elements.  
   
-## <a name="bound"></a>Gebunden  
+## <a name="bound"></a>Bound  
  Der gebundene Modus eignet sich für die Datenverwaltung mithilfe der automatischen Interaktion mit dem Datenspeicher. Sie können das <xref:System.Windows.Forms.DataGridView>-Steuerelement direkt an seine Datenquelle anfügen, indem Sie die <xref:System.Windows.Forms.DataGridView.DataSource%2A>-Eigenschaft festlegen. Wenn das Steuerelement Daten gebunden ist, werden Daten Zeilen per pushübertragung übertragen und abgerufen, ohne dass eine explizite Verwaltung erforderlich ist. Wenn die <xref:System.Windows.Forms.DataGridView.AutoGenerateColumns%2A>-Eigenschaft `true`ist, bewirkt jede Spalte in der Datenquelle, dass eine entsprechende Spalte im-Steuerelement erstellt wird. Wenn Sie Ihre eigenen Spalten erstellen möchten, können Sie diese Eigenschaft auf `false` festlegen und die <xref:System.Windows.Forms.DataGridViewColumn.DataPropertyName%2A>-Eigenschaft verwenden, um die einzelnen Spalten zu binden, wenn Sie Sie konfigurieren. Dies ist hilfreich, wenn Sie einen anderen Spaltentyp als die standardmäßig generierten Typen verwenden möchten. Weitere Informationen finden Sie unter [Spaltentypen im Windows Forms DataGridView-Steuer](column-types-in-the-windows-forms-datagridview-control.md)Element.  
   
  Ein Beispiel, das ein gebundenes <xref:System.Windows.Forms.DataGridView> Steuerelement verwendet, finden Sie unter Exemplarische Vorgehensweise [: Validieren von Daten im Windows Forms DataGridView-Steuer](walkthrough-validating-data-in-the-windows-forms-datagridview-control.md)Element.  
@@ -32,7 +32,7 @@ Das <xref:System.Windows.Forms.DataGridView> Steuerelement kann Daten in drei un
   
  Das Sortieren nach ungebundenen Spalten im gebundenen Modus wird nicht unterstützt. Wenn Sie eine ungebundene Spalte im gebundenen Modus erstellen, die vom Benutzer bearbeitbare Werte enthält, müssen Sie den virtuellen Modus implementieren, um diese Werte beizubehalten, wenn das Steuerelement nach einer gebundenen Spalte sortiert wird.  
   
-## <a name="virtual"></a>Virtual  
+## <a name="virtual"></a>Optimale virtuelle  
  Mit dem virtuellen Modus können Sie eigene Daten Verwaltungsvorgänge implementieren. Dies ist erforderlich, um die Werte ungebundener Spalten im gebundenen Modus beizubehalten, wenn das Steuerelement nach gebundenen Spalten sortiert wird. Der primäre Einsatz des virtuellen Modus ist jedoch die Optimierung der Leistung bei der Interaktion mit großen Datenmengen.  
   
  Sie fügen das <xref:System.Windows.Forms.DataGridView>-Steuerelement an einen von Ihnen verwalteten Cache an, und der Code steuert, wann Daten Zeilen per pushübertragung und-Pull abgerufen werden. Um den Speicherbedarf gering zu halten, sollte der Cache der Größe entsprechend der Anzahl der derzeit angezeigten Zeilen entsprechen. Wenn der Benutzer einen Bildlauf in neue Zeilen durchführt, fordert der Code neue Daten aus dem Cache an und leert optional alte Daten aus dem Arbeitsspeicher.  
@@ -41,7 +41,7 @@ Das <xref:System.Windows.Forms.DataGridView> Steuerelement kann Daten in drei un
   
  Weitere Informationen zum virtuellen Modus finden Sie [im Windows Forms DataGridView-Steuerelement im virtuellen Modus](virtual-mode-in-the-windows-forms-datagridview-control.md). Ein Beispiel für die Verwendung von Ereignissen im virtuellen Modus finden Sie unter Exemplarische [Vorgehensweise: Implementieren des virtuellen Modus im Windows Forms DataGridView-Steuer](implementing-virtual-mode-wf-datagridview-control.md)Element.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.DataSource%2A?displayProperty=nameWithType>

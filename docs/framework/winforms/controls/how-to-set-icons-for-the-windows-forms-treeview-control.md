@@ -68,7 +68,7 @@ Das Windows Forms <xref:System.Windows.Forms.TreeView>-Steuerelement kann Symbol
     treeView1->SelectedNode->SelectedImageIndex = 1;  
     ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Übersicht über das TreeView-Steuerelement](treeview-control-overview-windows-forms.md)
 - [Gewusst wie: Hinzufügen oder Entfernen von Knoten mit dem TreeView-Steuerelement in Windows Forms](how-to-add-and-remove-nodes-with-the-windows-forms-treeview-control.md)

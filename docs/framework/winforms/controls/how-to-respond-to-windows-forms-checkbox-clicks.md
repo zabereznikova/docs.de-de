@@ -135,7 +135,7 @@ Wenn ein Benutzer auf eine Windows Forms <xref:System.Windows.Forms.CheckBox>-St
     > [!NOTE]
     > Wenn die <xref:System.Windows.Forms.CheckBox.ThreeState%2A>-Eigenschaft auf `true`festgelegt ist, gibt die <xref:System.Windows.Forms.CheckBox.Checked%2A>-Eigenschaft `true` für <xref:System.Windows.Forms.CheckState.Checked> und <xref:System.Windows.Forms.CheckState.Indeterminate>zurück.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Windows.Forms.CheckBox>
 - [Übersicht über das CheckBox-Steuerelement](checkbox-control-overview-windows-forms.md)

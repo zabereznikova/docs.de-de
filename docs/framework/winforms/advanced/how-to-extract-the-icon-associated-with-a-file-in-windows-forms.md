@@ -32,7 +32,7 @@ Viele Dateien verfügen über eingebettete Symbole, die eine visuelle Darstellun
   
      Sie müssen sicherstellen, dass das Formular den <xref:System.IO>-Namespace importiert.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Bilder, Bitmaps und Metadateien](images-bitmaps-and-metafiles.md)
 - [ListView-Steuerelement](../controls/listview-control-windows-forms.md)

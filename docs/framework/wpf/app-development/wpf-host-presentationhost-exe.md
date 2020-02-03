@@ -30,15 +30,15 @@ Windows Presentation Foundation (WPF)-Host (PresentationHost. exe) ist die Anwen
   
  In diesem Thema werden die Befehlszeilenparameter beschrieben, die mit „PresentationHost.exe“ verwendet werden können.  
   
-## <a name="usage"></a>Verwendungs-  
+## <a name="usage"></a>Verwendung  
  `PresentationHost.exe [parameters] uri|filename`  
   
-## <a name="parameters"></a>Parameters  
+## <a name="parameters"></a>Parameter  
   
-|Parameter|Beschreibung|  
+|Parameter|BESCHREIBUNG|  
 |---------------|-----------------|  
 |filename|Der Pfad der zu aktivierenden Datei. Kann auch ein URI sein.|  
-|-debug|Beim Aktivieren einer Anwendung wird diese nicht in den Speicher übernommen oder daraus ausgeführt. Dies funktioniert nur, wenn eine lokale Datei aktiviert wird.|  
+|-Debug|Beim Aktivieren einer Anwendung wird diese nicht in den Speicher übernommen oder daraus ausgeführt. Dies funktioniert nur, wenn eine lokale Datei aktiviert wird.|  
 |-debugSecurityZoneURL \<URL>|Wird mit einem URL-Wert verwendet, um PresentationHost. exe anzugeben, dass eine Anwendung deentschlbelt werden soll, als ob Sie von der angegebenen URL bereitgestellt würde. Dadurch werden die Bereitstellungszone und die Ursprungssite bestimmt.|  
 |-embedding|Wird von OLE benötigt. Wenn der Parameter `-event` oder `-debug` angegeben wird, ist es nicht nötig, den `-embedding`-Parameter anzugeben, da dieser Parameter intern festgelegt wird.|  
 |-event \<Ereignisname>|Öffnen Sie das Ereignis mit diesem Namen, und signalisieren Sie es, wenn PresentationHost. exe initialisiert wird und bereit ist, WPF-Inhalte zu hosten. „PresentationHost.exe“ wird beendet, wenn beim Öffnen des Ereignisses ein Fehler auftritt, z. B. wenn es noch nicht erstellt wurde.|  
@@ -58,6 +58,6 @@ Windows Presentation Foundation (WPF)-Host (PresentationHost. exe) ist die Anwen
 ### <a name="visual-studio-debugging-in-zone"></a>Visual Studio: Debuggen in einer Zone  
  `PresentationHost.exe -debug -debugSecurityZoneURL http://www.example.com c:\folderpath\example.xbap`  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Sicherheit](../security-wpf.md)

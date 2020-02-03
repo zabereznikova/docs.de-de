@@ -62,7 +62,7 @@ In diesem Thema wird beschrieben, wie eine Nachrichten Schleife für die Interop
   
  Eine Nachricht, die an die Tastatur Senke gesendet wird, wird möglicherweise nicht an das HWND gesendet, wenn Sie mit der <xref:System.Windows.Interop.HwndSource.AddHook%2A>-Methode Hooks für diese Nachricht hinzugefügt haben. Die Nachricht wurde möglicherweise direkt auf der nachrichtenpump Ebene verarbeitet und nicht an die `DispatchMessage` Funktion übermittelt.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Windows.Interop.ComponentDispatcher>
 - <xref:System.Windows.Interop.IKeyboardInputSink>

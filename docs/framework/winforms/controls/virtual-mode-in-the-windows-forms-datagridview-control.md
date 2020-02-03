@@ -40,7 +40,7 @@ Mit dem virtuellen Modus können Sie die Interaktion zwischen dem <xref:System.W
   
  Die folgenden Ereignisse treten nur auf, wenn die <xref:System.Windows.Forms.DataGridView.VirtualMode%2A>-Eigenschaft auf `true`festgelegt ist.  
   
-|Event|Beschreibung|  
+|Ereignis|BESCHREIBUNG|  
 |-----------|-----------------|  
 |<xref:System.Windows.Forms.DataGridView.CellValueNeeded>|Wird vom-Steuerelement verwendet, um einen Zellwert aus dem Daten Cache für die Anzeige abzurufen. Dieses Ereignis tritt nur bei Zellen in ungebundenen Spalten auf.|  
 |<xref:System.Windows.Forms.DataGridView.CellValuePushed>|Wird vom-Steuerelement verwendet, um Benutzereingaben für eine Zelle in den Daten Cache zu übertragen. Dieses Ereignis tritt nur bei Zellen in ungebundenen Spalten auf.<br /><br /> Ruft die <xref:System.Windows.Forms.DataGridView.UpdateCellValue%2A>-Methode auf, wenn ein zwischen gespeicherter Wert außerhalb eines <xref:System.Windows.Forms.DataGridView.CellValuePushed> Ereignis Handlers geändert wird, um sicherzustellen, dass der aktuelle Wert im Steuerelement angezeigt wird und alle automatischen Größen Anpassungs Modi angewendet werden, die aktuell gültig sind.|  
@@ -50,7 +50,7 @@ Mit dem virtuellen Modus können Sie die Interaktion zwischen dem <xref:System.W
   
  Die folgenden Ereignisse sind im virtuellen Modus nützlich, können aber unabhängig von der <xref:System.Windows.Forms.DataGridView.VirtualMode%2A>-Eigenschafts Einstellung verwendet werden.  
   
-|Ereignisse|Beschreibung|  
+|Events|BESCHREIBUNG|  
 |------------|-----------------|  
 |<xref:System.Windows.Forms.DataGridView.UserDeletingRow><br /><br /> <xref:System.Windows.Forms.DataGridView.UserDeletedRow><br /><br /> <xref:System.Windows.Forms.DataGridView.RowsRemoved><br /><br /> <xref:System.Windows.Forms.DataGridView.RowsAdded>|Wird vom-Steuerelement verwendet, um anzugeben, wann Zeilen gelöscht oder hinzugefügt werden, sodass Sie den Daten Cache entsprechend aktualisieren können.|  
 |<xref:System.Windows.Forms.DataGridView.CellFormatting><br /><br /> <xref:System.Windows.Forms.DataGridView.CellParsing><br /><br /> <xref:System.Windows.Forms.DataGridView.CellValidating><br /><br /> <xref:System.Windows.Forms.DataGridView.CellValidated><br /><br /> <xref:System.Windows.Forms.DataGridView.RowValidating><br /><br /> <xref:System.Windows.Forms.DataGridView.RowValidated>|Wird vom-Steuerelement zum Formatieren von Zellwerten für die Anzeige und zum Analysieren und Validieren von Benutzereingaben verwendet.|  
@@ -62,7 +62,7 @@ Mit dem virtuellen Modus können Sie die Interaktion zwischen dem <xref:System.W
 ## <a name="best-practices-in-virtual-mode"></a>Bewährte Methoden im virtuellen Modus  
  Wenn Sie den virtuellen Modus implementieren, um effizient mit großen Datenmengen arbeiten zu können, sollten Sie auch sicherstellen, dass Sie mit dem <xref:System.Windows.Forms.DataGridView>-Steuerelement selbst effizient arbeiten. Weitere Informationen zur effizienten Verwendung von Zellen Stilen, der automatischen Größenanpassung, der Auswahl und der Zeilen Freigabe finden Sie unter [bewährte Methoden zum Skalieren des Windows Forms DataGridView-Steuer](best-practices-for-scaling-the-windows-forms-datagridview-control.md)Elements.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.VirtualMode%2A>

@@ -30,7 +30,7 @@ ms.locfileid: "76735484"
   
  Mit dem <xref:System.Windows.Forms.ToolBar>-Steuerelement können Sie Symbolleisten erstellen, indem Sie einer <xref:System.Windows.Forms.ToolBar.Buttons%2A> Auflistung <xref:System.Windows.Forms.Button>-Objekte hinzufügen. Mit dem Auflistungs-Editor können Sie einem <xref:System.Windows.Forms.ToolBar> Steuerelement Schaltflächen hinzufügen. jedem <xref:System.Windows.Forms.Button> Objekt muss Text oder ein Bild zugewiesen werden, obwohl Sie beide zuweisen können. Das Bild wird von einer verknüpften [ImageList](imagelist-component-windows-forms.md)-Komponente zur Verfügung gestellt. Zur Laufzeit können Sie mithilfe der Methoden <xref:System.Windows.Forms.ToolBar.ToolBarButtonCollection.Add%2A> und <xref:System.Windows.Forms.ToolBar.ToolBarButtonCollection.Remove%2A> Schaltflächen der <xref:System.Windows.Forms.ToolBar.ToolBarButtonCollection> hinzufügen oder entfernen. Um die Schaltflächen einer <xref:System.Windows.Forms.ToolBar>zu programmieren, fügen Sie dem <xref:System.Windows.Forms.ToolBar.ButtonClick>-Ereignis des <xref:System.Windows.Forms.ToolBar>Code hinzu, indem Sie die <xref:System.Windows.Forms.ToolBarButtonClickEventArgs.Button%2A>-Eigenschaft der <xref:System.Windows.Forms.ToolBarButtonClickEventArgs>-Klasse verwenden, um zu bestimmen, auf welche Schaltfläche geklickt wurde.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Windows.Forms.ToolBar>
 - [ToolBar-Steuerelement](toolbar-control-windows-forms.md)

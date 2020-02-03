@@ -19,14 +19,14 @@ Windows Forms Anwendungen enthalten häufig Druckfähigkeiten. Der .NET Framewor
   
  In der folgenden Tabelle sind die Funktionen aufgeführt, die auf jeder Druck Berechtigungsebene verfügbar sind.  
   
-|PrintingPermissionLevel|Beschreibung|  
+|PrintingPermissionLevel|BESCHREIBUNG|  
 |-----------------------------|-----------------|  
 |<xref:System.Drawing.Printing.PrintingPermissionLevel.AllPrinting>|Bietet vollständigen Zugriff auf alle installierten Drucker.|  
 |<xref:System.Drawing.Printing.PrintingPermissionLevel.DefaultPrinting>|Ermöglicht die programmgesteuerte Druckfunktion auf den Standarddrucker und das sicherere Drucken über ein restriktives Druck Dialogfeld. <xref:System.Drawing.Printing.PrintingPermissionLevel.DefaultPrinting> ist eine Teilmenge von <xref:System.Drawing.Printing.PrintingPermissionLevel.AllPrinting>.|  
 |<xref:System.Drawing.Printing.PrintingPermissionLevel.SafePrinting>|Bietet Druck nur in einem Dialogfeld mit eingeschränkter Einschränkung. <xref:System.Drawing.Printing.PrintingPermissionLevel.SafePrinting> ist eine Teilmenge von <xref:System.Drawing.Printing.PrintingPermissionLevel.DefaultPrinting>.|  
 |<xref:System.Drawing.Printing.PrintingPermissionLevel.NoPrinting>|Verhindert den Zugriff auf Drucker. <xref:System.Drawing.Printing.PrintingPermissionLevel.NoPrinting> ist eine Teilmenge von <xref:System.Drawing.Printing.PrintingPermissionLevel.SafePrinting>.|  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Mehr Sicherheit beim Datei- und Datenzugriff in Windows Forms](more-secure-file-and-data-access-in-windows-forms.md)
 - [Weitere Überlegungen zur Sicherheit in Windows Forms](additional-security-considerations-in-windows-forms.md)

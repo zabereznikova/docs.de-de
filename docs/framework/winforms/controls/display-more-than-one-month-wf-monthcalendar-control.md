@@ -37,7 +37,7 @@ Die Windows Forms <xref:System.Windows.Forms.MonthCalendar>-Steuerelement kann b
     monthCalendar1->CalendarDimensions = System::Drawing::Size (3,2);  
     ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [MonthCalendar-Steuerelement](monthcalendar-control-windows-forms.md)
 - [Gewusst wie: Auswählen eines Datumsbereichs mithilfe des MonthCalendar-Steuerelements in Windows Forms](how-to-select-a-range-of-dates-in-the-windows-forms-monthcalendar-control.md)

@@ -29,11 +29,11 @@ Standardmäßig zeigt das Windows Forms <xref:System.Windows.Forms.TextBox>-Steu
   
 ### <a name="to-view-multiple-lines-in-the-textbox-control"></a>So zeigen Sie mehrere Zeilen im TextBox-Steuerelement an  
   
-1. Legen Sie die <xref:System.Windows.Forms.TextBox.Multiline%2A> -Eigenschaft auf `true`fest. Wenn <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A> `true` (Standard) ist, wird der Text im-Steuerelement in einem oder mehreren Absätzen angezeigt. Andernfalls wird Sie als Liste angezeigt, in der einige Zeilen am Rand des Steuer Elements abgeschnitten werden können.  
+1. Setzen Sie die <xref:System.Windows.Forms.TextBox.Multiline%2A>-Eigenschaft auf `true`. Wenn <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A> `true` (Standard) ist, wird der Text im-Steuerelement in einem oder mehreren Absätzen angezeigt. Andernfalls wird Sie als Liste angezeigt, in der einige Zeilen am Rand des Steuer Elements abgeschnitten werden können.  
   
 2. Legen Sie für die <xref:System.Windows.Forms.TextBox.ScrollBars%2A>-Eigenschaft einen geeigneten Wert fest.  
   
-    |{2&gt;Wert&lt;2}|Beschreibung|  
+    |value|BESCHREIBUNG|  
     |-----------|-----------------|  
     |<xref:System.Windows.Forms.ScrollBars.None>|Verwenden Sie diesen Wert, wenn es sich bei dem Text um einen Absatz handelt, der fast immer dem Steuerelement entspricht. Der Benutzer kann mit dem Mauszeiger im Steuerelement navigieren, wenn der Text zu lang ist, um alle gleichzeitig anzuzeigen.|  
     |<xref:System.Windows.Forms.ScrollBars.Horizontal>|Verwenden Sie diesen Wert, wenn Sie eine Liste von Zeilen anzeigen möchten, von denen einige möglicherweise länger als die Breite des <xref:System.Windows.Forms.TextBox> Steuer Elements sind.|  
@@ -41,12 +41,12 @@ Standardmäßig zeigt das Windows Forms <xref:System.Windows.Forms.TextBox>-Steu
   
 3. Legen Sie für die <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A>-Eigenschaft einen geeigneten Wert fest.  
   
-    |{2&gt;Wert&lt;2}|Beschreibung|  
+    |value|BESCHREIBUNG|  
     |-----------|-----------------|  
     |`false`|Der Text im-Steuerelement wird nicht automatisch umschließt, sodass er nach rechts verschoben wird, bis ein Zeilenumbruch erreicht ist. Verwenden Sie diesen Wert, wenn Sie oben <xref:System.Windows.Forms.ScrollBars.Horizontal> Scrollleisten oder <xref:System.Windows.Forms.ScrollBars.Both>ausgewählt haben.|  
     |`true` (Standard)|Die horizontale Scrollleiste wird nicht angezeigt. Verwenden Sie diesen Wert, wenn Sie <xref:System.Windows.Forms.ScrollBars.Vertical> Scrollleisten oder <xref:System.Windows.Forms.ScrollBars.None>oben ausgewählt haben, um einen oder mehrere Absätze anzuzeigen.|  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Windows.Forms.TextBox>
 - [Übersicht über das TextBox-Steuerelement](textbox-control-overview-windows-forms.md)

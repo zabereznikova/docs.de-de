@@ -21,7 +21,7 @@ Das Windows Forms <xref:System.Windows.Forms.PictureBox>-Steuerelement wird zum 
 ## <a name="key-properties-and-methods"></a>Schlüsseleigenschaften und-Methoden  
  Das Bild, das angezeigt wird, wird durch die <xref:System.Windows.Forms.PictureBox.Image%2A>-Eigenschaft bestimmt, die zur Laufzeit oder zur Entwurfszeit festgelegt werden kann. Sie können das Bild auch angeben, indem Sie die <xref:System.Windows.Forms.PictureBox.ImageLocation%2A>-Eigenschaft festlegen und das Bild dann synchron mithilfe der <xref:System.Windows.Forms.PictureBox.Load%2A>-Methode oder mithilfe der <xref:System.Windows.Forms.PictureBox.LoadAsync%2A>-Methode asynchron laden. Die <xref:System.Windows.Forms.PictureBox.SizeMode%2A>-Eigenschaft steuert, wie das Bild und das Steuerelement zueinander passen. Weitere Informationen finden Sie unter Gewusst [wie: Ändern der Größe oder Platzierung eines Bilds zur Laufzeit](how-to-modify-the-size-or-placement-of-a-picture-at-run-time-windows-forms.md).  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Windows.Forms.PictureBox>
 - [Gewusst wie: Laden eines Bilds mithilfe des Designers](how-to-load-a-picture-using-the-designer-windows-forms.md)

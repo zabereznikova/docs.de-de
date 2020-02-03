@@ -14,7 +14,7 @@ ms.lasthandoff: 01/24/2020
 ms.locfileid: "76741184"
 ---
 # <a name="properties-in-windows-forms-controls"></a>Eigenschaften von Windows Forms-Steuerelementen
-Ein Windows Forms-Steuerelement erbt viele Eigenschaften, die die Basisklasse <xref:System.Windows.Forms.Control?displayProperty=nameWithType>bilden. Hierzu gehören Eigenschaften wie <xref:System.Windows.Forms.Control.Font%2A>, <xref:System.Windows.Forms.Control.ForeColor%2A>, <xref:System.Windows.Forms.Control.BackColor%2A>, <xref:System.Windows.Forms.Control.Bounds%2A>, <xref:System.Windows.Forms.Control.ClientRectangle%2A>, <xref:System.Windows.Forms.Control.DisplayRectangle%2A>, <xref:System.Windows.Forms.Control.Enabled%2A>, <xref:System.Windows.Forms.Control.Focused%2A>, <xref:System.Windows.Forms.Control.Height%2A>, <xref:System.Windows.Forms.Control.Width%2A>, <xref:System.Windows.Forms.Control.Visible%2A>und vielen anderen. Ausführliche Informationen zu geerbten Eigenschaften finden Sie unter <xref:System.Windows.Forms.Control?displayProperty=nameWithType>.  
+Ein Windows Forms-Steuerelement erbt viele Eigenschaften, die die Basisklasse <xref:System.Windows.Forms.Control?displayProperty=nameWithType>bilden. Hierzu gehören Eigenschaften wie <xref:System.Windows.Forms.Control.Font%2A>, <xref:System.Windows.Forms.Control.ForeColor%2A>, <xref:System.Windows.Forms.Control.BackColor%2A>, <xref:System.Windows.Forms.Control.Bounds%2A>, <xref:System.Windows.Forms.Control.ClientRectangle%2A>, <xref:System.Windows.Forms.Control.DisplayRectangle%2A>, <xref:System.Windows.Forms.Control.Enabled%2A>, <xref:System.Windows.Forms.Control.Focused%2A>, <xref:System.Windows.Forms.Control.Height%2A>, <xref:System.Windows.Forms.Control.Width%2A>, <xref:System.Windows.Forms.Control.Visible%2A>und vielen anderen.<xref:System.Windows.Forms.Control.AutoSize%2A> Ausführliche Informationen zu geerbten Eigenschaften finden Sie unter <xref:System.Windows.Forms.Control?displayProperty=nameWithType>.  
   
  Sie können geerbte Eigenschaften in Ihrem Steuerelement außer Kraft setzen oder neue Eigenschaften definieren.  
   
@@ -34,7 +34,7 @@ Ein Windows Forms-Steuerelement erbt viele Eigenschaften, die die Basisklasse <x
  [Implementierung von Methoden in benutzerdefinierten Steuerelementen](method-implementation-in-custom-controls.md)  
  Beschreibt die Implementierung von Methoden in benutzerdefinierten Steuerelementen und Komponenten.  
   
-## <a name="reference"></a>Referenz  
+## <a name="reference"></a>Verweis  
  <xref:System.Windows.Forms.UserControl>  
  Dokumentiert die Basisklasse für das Implementieren von zusammengesetzten Steuerelementen.  
   

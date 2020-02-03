@@ -13,7 +13,7 @@ ms.locfileid: "76745344"
 Wenn Sie einen Windows Communication Foundation (WCF)-Dienst in Internet Informationsdienste (IIS) gehostet haben, platzieren Sie eine SVC-Datei im virtuellen Verzeichnis. Diese SVC-Datei gibt die zu verwendende Diensthostfactory sowie die Klasse an, die den Dienst implementiert. Wenn Sie Anforderungen an den Dienst senden, geben Sie die. svc-Datei im URI an, z. b.: `http://contoso.com/EmployeeServce.svc`. Für Programmierer, die REST-Dienste schreiben, ist dieser Typ von URI nicht optimal. URIs für REST-Dienste geben eine bestimmte Ressource an und verfügen normalerweise nicht über Erweiterungen. Mit der <xref:System.Web.Routing>-Integrationsfunktion können Sie einen WCF-REST-Dienst hosten, der auf URIs ohne Erweiterung reagiert. Weitere Informationen zum Routing finden Sie unter [ASP.NET Routing](https://docs.microsoft.com/previous-versions/aspnet/cc668201(v=vs.100)).  
   
 ## <a name="using-systemwebrouting-integration"></a>Verwenden der System.Web.Routing-Integration  
- Für die <xref:System.Web.Routing>-Integrationsfunktion verwenden Sie die <xref:System.ServiceModel.Activation.ServiceRoute>-Klasse, um eine oder mehrere Routen zu erstellen und diese dem <xref:System.Web.Routing.RouteTable>-Objekt in einer Global.asax-Datei hinzuzufügen. Diese Routen geben die relativen URIs an, auf die der Dienst reagiert. Das folgende Beispiel zeigt, wie Sie dies durchführen:  
+ Für die <xref:System.Web.Routing>-Integrationsfunktion verwenden Sie die <xref:System.ServiceModel.Activation.ServiceRoute>-Klasse, um eine oder mehrere Routen zu erstellen und diese dem <xref:System.Web.Routing.RouteTable>-Objekt in einer Global.asax-Datei hinzuzufügen. Diese Routen geben die relativen URIs an, auf die der Dienst reagiert. Das folgende Beispiel zeigt die erforderliche Vorgehensweise.  
   
 ```aspx-csharp  
 <%@ Application Language="C#" %>  
@@ -69,7 +69,7 @@ Wenn Sie einen Windows Communication Foundation (WCF)-Dienst in Internet Informa
     }  
 ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [WCF-Web-HTTP-Programmiermodell](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)
 - [ASP.NET Routing](https://docs.microsoft.com/previous-versions/aspnet/cc668201(v=vs.100))

@@ -41,14 +41,14 @@ ms.locfileid: "76743341"
   
  Tabelle 1: WPF-Funktionen, die bei teilweiser Vertrauenswürdigkeit sicher sind  
   
-|Bereich „Funktionen“|Feature|  
+|Bereich „Funktionen“|Funktion|  
 |------------------|-------------|  
 |Allgemein|Browserfenster<br /><br /> Zugriff auf Ursprungswebsite<br /><br /> IsolatedStorage (beschränkt auf 512 KB)<br /><br /> UIAutomation-Anbieter<br /><br /> Befehle<br /><br /> Eingabemethoden-Editoren (Input Method Editors, IMEs)<br /><br /> Tablettstift und Freihandeingaben<br /><br /> Simuliertes Drag & Drop mit Ereignissen für Mausaufzeichnung und Bewegen<br /><br /> OpenFileDialog<br /><br /> XAML-Deserialisierung (über XamlReader.Load)|  
-|Webintegration|Download-Dialogfeld des Browsers<br /><br /> Vom Benutzer initiierte Navigation auf oberster Ebene<br /><br /> mailto:links<br /><br /> Uniform Resource Identifier-Parameter<br /><br /> HTTPWebRequest<br /><br /> In einem IFRAME gehosteter WPF-Inhalt<br /><br /> Hosten von HTML-Seiten aus derselben Website mithilfe eines Frames<br /><br /> Hosten von HTML-Seiten aus derselben Website mithilfe von WebBrowser<br /><br /> Webdienste (ASMX)<br /><br /> Webdienste (über Windows Communication Foundation)<br /><br /> Skripts<br /><br /> Dokumentobjektmodell|  
+|Webintegration|Download-Dialogfeld des Browsers<br /><br /> Vom Benutzer initiierte Navigation auf oberster Ebene<br /><br /> mailto:links<br /><br /> Uniform Resource Identifier-Parameter<br /><br /> HTTPWebRequest<br /><br /> In einem IFRAME gehosteter WPF-Inhalt<br /><br /> Hosten von HTML-Seiten aus derselben Website mithilfe eines Frames<br /><br /> Hosten von HTML-Seiten aus derselben Website mithilfe von WebBrowser<br /><br /> Webdienste (ASMX)<br /><br /> Webdienste (über Windows Communication Foundation)<br /><br /> Skripterstellung<br /><br /> Dokumentobjektmodell|  
 |Visuelle Objekte|2D und 3D<br /><br /> Animation<br /><br /> Medien (Ursprungswebsite und domänenübergreifend)<br /><br /> Imaging/Audio/Video|  
 |Lesen|FlowDocuments<br /><br /> XPS-Dokumente<br /><br /> Eingebettete Schriftarten und Systemschriftarten<br /><br /> CFF- und TrueType-Schriftarten|  
-|Bearbeiten|Rechtschreibprüfung<br /><br /> RichTextBox<br /><br /> Unterstützung der Zwischenablage bei Nur-Text und Freihand<br /><br /> Vom Benutzer initiiertes Einfügen<br /><br /> Kopieren von markiertem Inhalt|  
-|Steuerelemente|Allgemeine Steuerelemente|  
+|Bearbeitung|Rechtschreibprüfung<br /><br /> RichTextBox<br /><br /> Unterstützung der Zwischenablage bei Nur-Text und Freihand<br /><br /> Vom Benutzer initiiertes Einfügen<br /><br /> Kopieren von markiertem Inhalt|  
+|Kontrollen|Allgemeine Steuerelemente|  
   
  In dieser Tabelle werden die WPF-Features auf hoher Ebene behandelt. Ausführlichere Informationen finden Sie in der Windows SDK werden die Berechtigungen dokumentiert, die für die einzelnen Member in WPF erforderlich sind. Zusätzlich gibt es für die folgenden Funktionen ausführlichere Informationen hinsichtlich des Ausführens bei teilweiser Vertrauenswürdigkeit, wozu auch spezielle Aspekte gehören.  
   
@@ -70,19 +70,19 @@ ms.locfileid: "76743341"
   
  Tabelle 2: WPF-Funktionen, die bei teilweiser Vertrauenswürdigkeit nicht sicher sind  
   
-|Bereich „Funktionen“|Feature|  
+|Bereich „Funktionen“|Funktion|  
 |------------------|-------------|  
 |Allgemein|Fenster (anwendungsdefinierte Fenster und Dialogfelder)<br /><br /> SaveFileDialog<br /><br /> Dateisystem<br /><br /> Zugriff auf die Registrierung<br /><br /> Drag &amp; Drop<br /><br /> XAML-Serialisierung (über XamlWriter.Save)<br /><br /> UIAutomation-Clients<br /><br /> Zugriff auf das Quellcodefenster (HwndHost)<br /><br /> Vollständige Sprachunterstützung<br /><br /> Windows Forms-Interoperabilität|  
 |Visuelle Objekte|Bitmapeffekte<br /><br /> Bildcodierung|  
-|Bearbeiten|Rich-Text-Format-Zwischenablage<br /><br /> Vollständige XAML-Unterstützung|  
+|Bearbeitung|Rich-Text-Format-Zwischenablage<br /><br /> Vollständige XAML-Unterstützung|  
   
 <a name="Partial_Trust_Programming"></a>   
 ## <a name="partial-trust-programming"></a>Programmieren für teilweise Vertrauenswürdigkeit  
- Bei XBAP-Anwendungen hat Code, der den Standard Berechtigungs Satz überschreitet, abhängig von der Sicherheitszone ein anderes Verhalten. In einigen Fällen erhält der Benutzer eine Warnung, wenn er versucht, die jeweilige Anwendung zu installieren. Der Benutzer kann auswählen, ob die Installation fortgesetzt oder abgebrochen werden soll. In der folgenden Tabelle werden das Verhalten der Anwendung für jede Sicherheitszone und die erforderlichen Schritte für die volle Vertrauenswürdigkeit der Anwendung beschrieben.  
+ Bei XBAP-Anwendungen hat Code, der den Standard Berechtigungs Satz überschreitet, abhängig von der Sicherheitszone ein anderes Verhalten. In einigen Fällen erhält der Benutzer bei der Installation eine Warnung. Der Benutzer kann auswählen, ob die Installation fortgesetzt oder abgebrochen werden soll. In der folgenden Tabelle werden das Verhalten der Anwendung für jede Sicherheitszone und die erforderlichen Schritte für die volle Vertrauenswürdigkeit der Anwendung beschrieben.  
   
 |Sicherheitszone|Verhalten|Erhalten der vollen Vertrauenswürdigkeit|  
 |-------------------|--------------|------------------------|  
-|Lokaler Computer|Automatisch volle Vertrauenswürdigkeit|Keine Aktion erforderlich.|  
+|Lokalem Computer|Automatisch volle Vertrauenswürdigkeit|Es ist keine Aktion erforderlich.|  
 |Intranet und vertrauenswürdige Websites|Eingabeaufforderung für volle Vertrauenswürdigkeit|Signieren Sie die XBAP mit einem Zertifikat, damit der Benutzer die Quelle in der Eingabeaufforderung sieht.|  
 |Internet|Schlägt fehl mit „Vertrauenswürdigkeit nicht gewährt“|Signieren Sie die XBAP mit einem Zertifikat.|  
   
@@ -128,22 +128,22 @@ ms.locfileid: "76743341"
   
  Tabelle 3: LocalIntranet- und Internetberechtigungen  
   
-|Berechtigung|Attribute|LocalIntranet|Internet|  
+|Berechtigung|attribute|LocalIntranet|Internet|  
 |----------------|---------------|-------------------|--------------|  
 |DNS|Zugriff auf DNS-Server|Ja|Nein|  
-|Umgebungsvariablen|Siehe|Ja|Nein|  
+|Umgebungsvariablen|Lesen|Ja|Nein|  
 |Dateidialogfelder|Öffnen|Ja|Ja|  
-|Dateidialogfelder|Uneingeschränkt|Ja|Nein|  
-|Isolierter Speicher|Assemblyisolation durch Benutzer|Ja|Nein|  
-|Isolierter Speicher|Unbekannte isolation|Ja|Ja|  
-|Isolierter Speicher|Unbegrenztes Benutzerkontingent|Ja|Nein|  
+|Dateidialogfelder|Nicht eingeschränkt|Ja|Nein|  
+|Isolierte Speicherung|Assemblyisolation durch Benutzer|Ja|Nein|  
+|Isolierte Speicherung|Unbekannte isolation|Ja|Ja|  
+|Isolierte Speicherung|Unbegrenztes Benutzerkontingent|Ja|Nein|  
 |Medien|Sicherheit für Audio, Video und Bilder|Ja|Ja|  
 |Wird gedruckt|Standarddruck|Ja|Nein|  
 |Wird gedruckt|Sicheres Drucken|Ja|Ja|  
 |Reflektion|Ausgabe|Ja|Nein|  
 |Sicherheit|Ausführen von verwaltetem Code|Ja|Ja|  
 |Sicherheit|Bestätigen von erteilten Berechtigungen|Ja|Nein|  
-|Benutzeroberfläche|Uneingeschränkt|Ja|Nein|  
+|Benutzeroberfläche|Nicht eingeschränkt|Ja|Nein|  
 |Benutzeroberfläche|Sichere Fenster der obersten Ebene|Ja|Ja|  
 |Benutzeroberfläche|Eigene Zwischenablage|Ja|Ja|  
 |Webbrowser|Sichere Frame-Navigation zu HTML|Ja|Ja|  
@@ -163,7 +163,7 @@ ms.locfileid: "76743341"
   
  Alternativ können Sie das ClickOnce-Modell für vertrauenswürdige Bereitstellung für eine Bereitstellung mit voller Vertrauenswürdigkeit aus einer beliebigen Sicherheitszone verwenden. Weitere Informationen finden Sie unter [Übersicht über die Bereitstellung vertrauenswürdiger Anwendungen](/visualstudio/deployment/trusted-application-deployment-overview) und [Sicherheit](security-wpf.md).  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Sicherheit](security-wpf.md)
 - [WPF-Sicherheitsstrategie – Plattformsicherheit](wpf-security-strategy-platform-security.md)

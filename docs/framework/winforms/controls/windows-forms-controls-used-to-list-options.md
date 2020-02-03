@@ -34,7 +34,7 @@ Sie können einem Windows Form eine Reihe von Steuerelementen hinzufügen, wenn 
  [Gewusst wie: Sortieren des Inhalts eines ComboBox-, ListBox- oder CheckedListBox-Steuerelements in Windows Forms](sort-the-contents-of-a-wf-combobox-listbox-or-checkedlistbox-control.md)  
  Erläutert das Sortieren von Listen Daten in der Datenquelle.  
   
-## <a name="reference"></a>Referenz  
+## <a name="reference"></a>Verweis  
  <xref:System.Windows.Forms.CheckedListBox>  
  Beschreibt diese Klasse und enthält Links zu allen deren Membern.  
   
@@ -54,5 +54,5 @@ Sie können einem Windows Form eine Reihe von Steuerelementen hinzufügen, wenn 
  [Übersicht über das ListBox-Steuerelement](listbox-control-overview-windows-forms.md)  
  Hier werden das Steuerelement und seine wichtigsten Funktionen und Eigenschaften erläutert.  
   
- [Windows Forms-Steuerelemente](controls-to-use-on-windows-forms.md)  
+ [Steuerelemente für Windows Forms](controls-to-use-on-windows-forms.md)  
  Enthält eine vollständige Liste der Windows Forms-Steuerelemente mit Links zu Informationen zur jeweiligen Verwendung.

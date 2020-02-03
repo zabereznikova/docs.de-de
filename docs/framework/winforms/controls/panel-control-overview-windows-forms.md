@@ -23,7 +23,7 @@ Windows Forms <xref:System.Windows.Forms.Panel>-Steuerelemente werden verwendet,
 ## <a name="key-properties"></a>Schlüsseleigenschaften  
  Um Bild Lauf leisten anzuzeigen, legen Sie die <xref:System.Windows.Forms.ScrollableControl.AutoScroll%2A>-Eigenschaft auf `true`fest. Sie können die Darstellung des Panels auch anpassen, indem Sie die Eigenschaften <xref:System.Windows.Forms.Control.BackColor%2A>, <xref:System.Windows.Forms.Control.BackgroundImage%2A>und <xref:System.Windows.Forms.Panel.BorderStyle%2A> festlegen. Weitere Informationen zu den Eigenschaften <xref:System.Windows.Forms.Control.BackColor%2A> und <xref:System.Windows.Forms.Control.BackgroundImage%2A> finden Sie unter Gewusst [wie: Festlegen des Hintergrunds eines Panels](how-to-set-the-background-of-a-windows-forms-panel.md). Die <xref:System.Windows.Forms.Panel.BorderStyle%2A>-Eigenschaft bestimmt, ob der Bereich ohne sichtbaren Rahmen (<xref:System.Windows.Forms.BorderStyle.None>), eine einfache Linie (<xref:System.Windows.Forms.BorderStyle.FixedSingle>) oder eine Schatten Linie (<xref:System.Windows.Forms.BorderStyle.Fixed3D>) dargestellt wird.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Windows.Forms.Panel>
 - [GroupBox-Steuerelement](groupbox-control-windows-forms.md)

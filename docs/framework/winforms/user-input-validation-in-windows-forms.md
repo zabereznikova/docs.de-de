@@ -67,7 +67,7 @@ Wenn Benutzerdaten in die Anwendung eingeben, sollten Sie überprüfen, ob die D
 #### <a name="default-implicit-validation-behavior-for-windows-forms-controls"></a>Standardmäßiges implizites Validierungs Verhalten für Windows Forms Steuerelemente  
  Verschiedene Windows Forms Steuerelemente haben unterschiedliche Standardwerte für Ihre <xref:System.Windows.Forms.ContainerControl.AutoValidate%2A>-Eigenschaft. In der folgenden Tabelle werden die gängigsten Steuerelemente und deren Standardwerte angezeigt.  
   
-|Steuerelement|Standard Validierungs Verhalten|  
+|Control|Standard Validierungs Verhalten|  
 |-------------|---------------------------------|  
 |<xref:System.Windows.Forms.ContainerControl>|<xref:System.Windows.Forms.AutoValidate.Inherit>|  
 |<xref:System.Windows.Forms.Form>|<xref:System.Windows.Forms.AutoValidate.EnableAllowFocusChange>|  
@@ -90,7 +90,7 @@ Wenn Benutzerdaten in die Anwendung eingeben, sollten Sie überprüfen, ob die D
 > [!NOTE]
 > Wenn Sie erzwingen, dass das Formular auf diese Weise geschlossen wird, gehen alle Daten in den Steuerelementen des Formulars, die noch nicht gespeichert wurden, verloren. Außerdem überprüfen modale Formulare nicht den Inhalt von Steuerelementen, wenn Sie geschlossen werden. Sie können die Steuerelement Validierung weiterhin verwenden, um den Fokus auf ein Steuerelement zu sperren, aber Sie müssen sich nicht um das Verhalten im Zusammenhang mit dem Schließen des Formulars kümmern.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Windows.Forms.Control.Validating?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.Form.FormClosing?displayProperty=nameWithType>

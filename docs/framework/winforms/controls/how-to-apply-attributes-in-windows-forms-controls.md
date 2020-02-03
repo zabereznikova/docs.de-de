@@ -77,7 +77,7 @@ Zum Entwickeln von Komponenten und Steuerelementen, die ordnungsgemäß mit der 
   
 - Das Formular, das den `AttributesDemoControl` hostet, erfordert einen Verweis auf die `AttributesDemoControl` Assembly, um zu erstellen.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.IComparable>
 - <xref:System.Windows.Forms.DataGridView>

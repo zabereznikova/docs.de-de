@@ -48,7 +48,7 @@ private:
   
  Sie können auch denselben Ereignishandler verwenden, um das gleiche Ereignis für verschiedene Steuerelemente zu verarbeiten. Wenn Sie z. b. über eine Gruppe von <xref:System.Windows.Forms.RadioButton>-Steuerelementen in einem Formular verfügen, können Sie einen einzelnen Ereignishandler für das <xref:System.Windows.Forms.Control.Click>-Ereignis erstellen und festlegen, dass das <xref:System.Windows.Forms.Control.Click> Ereignis jedes Steuer Elements an den einzelnen Ereignishandler gebunden ist. Weitere Informationen finden Sie unter Gewusst [wie: Verbinden mehrerer Ereignisse mit einem einzelnen Ereignis Handler in Windows Forms](how-to-connect-multiple-events-to-a-single-event-handler-in-windows-forms.md).  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Erstellen von Ereignishandlern in Windows Forms](creating-event-handlers-in-windows-forms.md)
 - [Übersicht über Ereignisse](events-overview-windows-forms.md)

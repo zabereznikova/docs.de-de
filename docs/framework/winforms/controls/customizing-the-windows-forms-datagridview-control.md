@@ -33,7 +33,7 @@ Das `DataGridView`-Steuerelement bietet mehrere Eigenschaften, mit denen Sie die
  [Gewusst wie: Hosten von Steuerelementen in DataGridView-Zellen in Windows Forms](how-to-host-controls-in-windows-forms-datagridview-cells.md)  
  Beschreibt, wie die `IDataGridViewEditingControl`-Schnittstelle implementiert und benutzerdefinierte Typen erstellt werden, die von `DataGridViewCell` und `DataGridViewColumn` abgeleitet sind, um ein <xref:System.Windows.Forms.DateTimePicker>-Steuerelement anzuzeigen, wenn sich eine Zelle im Bearbeitungsmodus befindet.  
   
-## <a name="reference"></a>Referenz  
+## <a name="reference"></a>Verweis  
  <xref:System.Windows.Forms.DataGridView>  
  Enthält die Referenzdokumentation für das <xref:System.Windows.Forms.DataGridView>-Steuerelement.  
   
@@ -53,7 +53,7 @@ Das `DataGridView`-Steuerelement bietet mehrere Eigenschaften, mit denen Sie die
  [Grundlegende Formatierungen und Formate im DataGridView-Steuerelement in Windows Forms](basic-formatting-and-styling-in-the-windows-forms-datagridview-control.md)  
  Enthält Themen, in denen erörtert wird, wie die grundlegende Darstellung des Steuerelements sowie das Anzeigeformat von Zelldaten geändert werden.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [DataGridView-Steuerelement](datagridview-control-windows-forms.md)
 - [Spaltentypen im DataGridView-Steuerelement in Windows Forms](column-types-in-the-windows-forms-datagridview-control.md)

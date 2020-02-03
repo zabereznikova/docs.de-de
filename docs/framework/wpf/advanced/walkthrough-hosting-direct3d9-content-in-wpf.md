@@ -17,7 +17,7 @@ ms.locfileid: "76742603"
 
 In dieser exemplarischen Vorgehensweise wird das Hosten von von Direct3D9-Inhalt in einer Windows Presentation Foundation (WPF)-Anwendung veranschaulicht.
 
-Im Verlauf dieser exemplarischen Vorgehensweise führen Sie die folgenden Aufgaben aus:
+In dieser exemplarischen Vorgehensweise führen Sie folgende Aufgaben aus:
 
 - Erstellen Sie ein WPF-Projekt zum Hosten des von Direct3D9-Inhalts.
 
@@ -27,11 +27,11 @@ Im Verlauf dieser exemplarischen Vorgehensweise führen Sie die folgenden Aufgab
 
  Wenn Sie fertig sind, wissen Sie, wie Sie von Direct3D9-Inhalte in einer WPF-Anwendung hosten.
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
+## <a name="prerequisites"></a>Voraussetzungen
 
-Zum Durchführen dieser exemplarischen Vorgehensweise benötigen Sie die folgenden Komponenten:
+Zum Abschließen dieser exemplarischen Vorgehensweise benötigen Sie Folgendes:
 
-- Visual Studio erstellen.
+- Visual Studio.
 
 - DirectX SDK 9 oder höher.
 
@@ -77,7 +77,7 @@ Verwenden Sie abschließend die <xref:System.Windows.Interop.D3DImage>-Klasse, u
 
     Der von Direct3D9-Inhalt wird in der WPF-Anwendung angezeigt.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Windows.Interop.D3DImage>
 - [Überlegungen zur Leistung für die Interoperabilität zwischen Direct3D9 und WPF](performance-considerations-for-direct3d9-and-wpf-interoperability.md)

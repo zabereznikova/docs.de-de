@@ -28,9 +28,9 @@ Das `BindingNavigator`-Steuerelement dient als Benutzeroberfläche zum Navigiere
  [Vorgehensweise: Navigieren durch ein DataSet mithilfe des BindingNavigator-Steuerelements in Windows Forms](move-through-a-dataset-with-wf-bindingnavigator-control.md)  
  Veranschaulicht die Verwendung eines `BindingNavigator`-Steuerelements zum Navigieren durch Datensätze in einem <xref:System.Data.DataSet>.  
   
- Weitere Informationen finden Sie unter [Vorgehensweise: Hinzufügen der Schaltflächen für das Laden, Speichern und Abbrechen zum BindingNavigator-Steuerelement in Windows Forms](load-save-and-cancel-bindingnavigator.md).  
+ Siehe auch [Vorgehensweise: Hinzufügen der Schaltflächen für das Laden, Speichern und Abbrechen zum BindingNavigator-Steuerelement in Windows Forms](load-save-and-cancel-bindingnavigator.md).  
   
-## <a name="reference"></a>Referenz  
+## <a name="reference"></a>Verweis  
  <xref:System.Windows.Forms.BindingNavigator>  
  Enthält die Referenzdokumentation für das <xref:System.Windows.Forms.BindingNavigator>-Steuerelement.  
   

@@ -24,7 +24,7 @@ Sie können eine bearbeitbare Windows Forms Textfeld in ein Schreib geschütztes
     > [!NOTE]
     > Die <xref:System.Windows.Forms.TextBoxBase.ReadOnly%2A>-Eigenschaft wirkt sich nur auf die Benutzerinteraktion zur Laufzeit aus. Sie können Text Feldinhalte weiterhin Programm gesteuert zur Laufzeit ändern, indem Sie die <xref:System.Windows.Forms.TextBox.Text%2A>-Eigenschaft des Textfelds ändern.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Windows.Forms.TextBox>
 - [Übersicht über das TextBox-Steuerelement](textbox-control-overview-windows-forms.md)

@@ -41,7 +41,7 @@ Das folgende Verfahren erfordert ein **Windows-Anwendungs** Projekt mit einem Fo
 
 2. Legen Sie im **Eigenschaften** Fenster die folgenden Eigenschaften entsprechend fest.
 
-    |Die Eigenschaften-|Beschreibung|
+    |Eigenschaft|BESCHREIBUNG|
     |--------------|-----------------|
     |<xref:System.Windows.Forms.DataGrid.AlternatingBackColor%2A>|Die `BackColor`-Eigenschaft definiert die Farbe der gerade nummerierten Zeilen im Raster. Wenn Sie die <xref:System.Windows.Forms.DataGrid.AlternatingBackColor%2A>-Eigenschaft auf eine andere Farbe festlegen, wird jede andere Zeile auf diese neue Farbe festgelegt (Zeilen 1, 3, 5 usw.).|
     |<xref:System.Windows.Forms.DataGrid.BackColor%2A>|Die Hintergrundfarbe der gerade nummerierten Zeilen des Rasters (Zeilen 0, 2, 4, 6 usw.).|
@@ -95,7 +95,7 @@ Das folgende Verfahren erfordert ein **Windows-Anwendungs** Projekt mit einem Fo
     > [!NOTE]
     > Weitere Informationen zum Formatieren von Zeichen folgen finden Sie unter [Formatieren von Typen](../../../standard/base-types/formatting-types.md).
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Windows.Forms.GridTableStylesCollection>
 - <xref:System.Windows.Forms.GridColumnStylesCollection>

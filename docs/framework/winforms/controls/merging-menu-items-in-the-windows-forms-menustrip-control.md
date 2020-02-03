@@ -37,7 +37,7 @@ Wenn Sie über eine MDI-Anwendung (Multiple Document Interface) verfügen, könn
   
  In der folgenden Tabelle werden die Bedeutung und die typische Verwendung der verfügbaren Merge-Aktionen beschrieben.  
   
-|MergeAction-Wert|Beschreibung|Typische Verwendung|  
+|MergeAction-Wert|BESCHREIBUNG|Typische Verwendung|  
 |-----------------------|-----------------|-----------------|  
 |<xref:System.Windows.Forms.MergeAction.Append>|Vorgegebene Fügt das Quell Element am Ende der Auflistung des Ziel Elements hinzu.|Hinzufügen von Menü Elementen am Ende des Menüs, wenn ein Teil des Programms aktiviert ist.|  
 |<xref:System.Windows.Forms.MergeAction.Insert>|Fügt der Auflistung des Ziel Elements das Quell Element an dem Speicherort hinzu, der durch die <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A>-Eigenschaft für das Quell Element festgelegt wurde.|Hinzufügen von Menü Elementen zur Mitte oder am Anfang des Menüs, wenn ein Teil des Programms aktiviert ist.<br /><br /> Wenn der Wert von <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A> für beide Menü Elemente identisch ist, werden Sie in umgekehrter Reihenfolge hinzugefügt. Legen Sie <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A> entsprechend fest, um die ursprüngliche Reihenfolge beizubehalten.|  
@@ -53,7 +53,7 @@ Wenn Sie über eine MDI-Anwendung (Multiple Document Interface) verfügen, könn
   
  Sie können die automatische Zusammenführung durch Aktivieren der <xref:System.Windows.Forms.MenuStrip> für die MDI-Quelle auslöst. Bei Aktivierung wird die Quell <xref:System.Windows.Forms.MenuStrip> in das MDI-Ziel zusammengeführt. Wenn ein neues Formular aktiv wird, wird die Zusammenführung im letzten Formular wieder hergestellt und im neuen Formular ausgelöst. Sie können dieses Verhalten steuern, indem Sie die <xref:System.Windows.Forms.ToolStripItem.MergeAction%2A>-Eigenschaft bei Bedarf auf jeder <xref:System.Windows.Forms.ToolStripItem>festlegen und die <xref:System.Windows.Forms.ToolStrip.AllowMerge%2A>-Eigenschaft für jede <xref:System.Windows.Forms.MenuStrip>festlegen.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Windows.Forms.ToolStripManager>
 - <xref:System.Windows.Forms.MenuStrip>

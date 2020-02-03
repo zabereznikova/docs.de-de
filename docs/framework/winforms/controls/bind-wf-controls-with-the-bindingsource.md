@@ -56,7 +56,7 @@ Nachdem Sie dem Formular Steuerelemente hinzugefügt und die Benutzeroberfläche
 
      Der Editor für die Benutzeroberflächen Typen der Datenquelle wird geschlossen, und das **DataSet** , der <xref:System.Windows.Forms.BindingSource> und der Tabellen Adapter für diese Datenverbindung werden dem Formular hinzugefügt.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Windows.Forms.BindingSource>
 - <xref:System.Windows.Forms.BindingNavigator>

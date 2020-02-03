@@ -37,7 +37,7 @@ Mit Windows Forms können Sie leistungsstarke Windows-basierte Anwendungen erste
  [Windows Forms-Steuerelemente](./controls/index.md)  
  Enthält Links zu Themen, in denen beschrieben und veranschaulicht wird, wie Windows Forms-Steuerelemente und-Komponenten verwendet werden.  
   
- [Benutzereingabe in Windows Forms](user-input-in-windows-forms.md)  
+ [Benutzereingaben in Windows Forms](user-input-in-windows-forms.md)  
  Enthält Links zu Themen, in denen beschrieben und veranschaulicht wird, wie Benutzereingaben in Windows Forms Anwendungen behandelt werden.  
   
  [Dialogfelder in Windows Forms](dialog-boxes-in-windows-forms.md)  

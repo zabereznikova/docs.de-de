@@ -130,7 +130,7 @@ Sie können einen abgeleiteten Knoten in einem Windows Forms <xref:System.Window
        }  
     ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [TreeView-Steuerelement](treeview-control-windows-forms.md)
 - [ListView-Steuerelement](listview-control-windows-forms.md)

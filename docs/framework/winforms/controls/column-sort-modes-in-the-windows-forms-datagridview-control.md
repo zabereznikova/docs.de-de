@@ -15,7 +15,7 @@ ms.locfileid: "76744196"
 # <a name="column-sort-modes-in-the-windows-forms-datagridview-control"></a>Spaltenssortiermodi im DataGridView-Steuerelement von Windows Forms
 <xref:System.Windows.Forms.DataGridView> Spalten haben drei Sortier Modi. Der Sortiermodus für jede Spalte wird durch die <xref:System.Windows.Forms.DataGridViewColumn.SortMode%2A>-Eigenschaft der Spalte angegeben, die auf einen der folgenden <xref:System.Windows.Forms.DataGridViewColumnSortMode> Enumerationswerte festgelegt werden kann.  
   
-|`DataGridViewColumnSortMode`-Wert|Beschreibung|  
+|Wert vom Typ `DataGridViewColumnSortMode`|BESCHREIBUNG|  
 |----------------------------------------|-----------------|  
 |<xref:System.Windows.Forms.DataGridViewColumnSortMode.Automatic>|Standard für Text Feld Spalten. Wenn Spaltenheader nicht für die Auswahl verwendet werden, wird durch Klicken auf die Spaltenüberschrift automatisch die <xref:System.Windows.Forms.DataGridView> nach dieser Spalte sortiert und ein Symbol angezeigt, das die Sortierreihenfolge angibt.|  
 |<xref:System.Windows.Forms.DataGridViewColumnSortMode.NotSortable>|Standard für nicht-–-Text Feld Spalten. Sie können diese Spalte Programm gesteuert sortieren. Es ist jedoch nicht für die Sortierung vorgesehen, sodass kein Speicherplatz für das Sortier Symbol reserviert ist.|  
@@ -58,7 +58,7 @@ ms.locfileid: "76744196"
 > [!NOTE]
 > Das <xref:System.Windows.Forms.DataGridView.SortCompare>-Ereignis tritt nicht auf, wenn die <xref:System.Windows.Forms.DataGridView.DataSource%2A>-Eigenschaft festgelegt ist oder wenn der <xref:System.Windows.Forms.DataGridView.VirtualMode%2A>-Eigenschafts Wert `true`ist.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.Sort%2A?displayProperty=nameWithType>

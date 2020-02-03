@@ -31,7 +31,7 @@ Wenn Sie ein benutzerdefiniertes Steuerelement erstellen, ist es häufig erforde
 
 Sie können Ihre benutzerdefinierten Steuerelemente mithilfe von Visual Studio debuggen, genauso wie Sie alle anderen .NET Framework Klassen debuggen. Der Unterschied besteht darin, dass Sie eine separate Instanz von Visual Studio debuggen, in der der Code des benutzerdefinierten Steuer Elements ausgeführt wird.
 
-## <a name="create-the-project"></a>Erstellen eines Projekts
+## <a name="create-the-project"></a>Erstellen des Projekts
 
 Im ersten Schritt erstellen Sie das Anwendungsprojekt. Sie verwenden dieses Projekt, um die Anwendung zu erstellen, die das benutzerdefinierte Steuerelement hostet.
 
@@ -149,6 +149,6 @@ Nachdem Sie Ihre benutzerdefinierten Steuerelemente zur Entwurfszeit debuggen k�
 
 - Sie können einen benutzerdefinierten Designer für Ihr benutzerdefiniertes Steuerelement schreiben. Dadurch erhalten Sie die komplette Kontrolle über die Entwurfs Möglichkeiten mithilfe der erweiterbaren Designer Infrastruktur, die von Visual Studio verfügbar gemacht wird. Weitere Informationen finden Sie unter Exemplarische Vorgehensweise [: Erstellen eines Windows Forms-Steuer Elements, das Visual Studio-Entwurfszeit Funktionen](creating-a-wf-control-design-time-features.md)nutzt.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Exemplarische Vorgehensweise: Erstellen eines Windows Forms-Steuerelements, das Visual Studio-Entwurfszeitfunktion nutzt](creating-a-wf-control-design-time-features.md)

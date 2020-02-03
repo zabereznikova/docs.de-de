@@ -20,7 +20,7 @@ Die Windows Forms <xref:System.Windows.Forms.PrintPreviewControl> wird zum Anzei
 ## <a name="key-properties"></a>Schlüsseleigenschaften  
  Die Schlüsseleigenschaft des Steuer Elements ist <xref:System.Windows.Forms.PrintPreviewControl.Document%2A>, wodurch das Dokument als Vorschau angezeigt wird. Das Dokument muss ein <xref:System.Drawing.Printing.PrintDocument> Objekt sein. Eine Übersicht über das Erstellen von Dokumenten für den Druck finden Sie unter Übersicht über die [PrintDocument-Komponente](printdocument-component-overview-windows-forms.md) und [Windows Forms Druckunterstützung](../advanced/windows-forms-print-support.md). Die Eigenschaften <xref:System.Windows.Forms.PrintPreviewControl.Columns%2A> und <xref:System.Windows.Forms.PrintPreviewControl.Rows%2A> bestimmen die Anzahl der Seiten, die auf dem Steuerelement horizontal und vertikal angezeigt werden. Das Antialiasing kann dazu führen, dass der Text glatter erscheint, aber auch die Anzeige langsamer wird. Legen Sie die <xref:System.Windows.Forms.PrintPreviewControl.UseAntiAlias%2A>-Eigenschaft auf `true`fest, um Sie zu verwenden.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Windows.Forms.PrintPreviewControl>
 - [Übersicht über das PrintPreviewDialog-Steuerelement](printpreviewdialog-control-overview-windows-forms.md)

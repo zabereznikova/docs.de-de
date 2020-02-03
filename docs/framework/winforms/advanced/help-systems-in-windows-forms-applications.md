@@ -23,7 +23,7 @@ Eine der wichtigsten Schulungs Elemente, die Sie als Entwickler von Anwendungen 
   
  Sie können HTML-Hilfe-1. x-Dateien mit dem HTML-Hilfe Workshop generieren. Weitere Informationen zur HTML-Hilfe finden Sie im HTML-Hilfe Workshop oder in den anderen Themen der HTML-Hilfe in MSDN.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Integrieren von Benutzerhilfe in Windows Forms](integrating-user-help-in-windows-forms.md)
 - [HelpProvider-Komponente](../controls/helpprovider-component-windows-forms.md)

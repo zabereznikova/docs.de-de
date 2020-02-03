@@ -32,7 +32,7 @@ Das `DataGridView`-Steuerelement bietet Ihnen eine Vielzahl von Optionen, um zu 
  [Gewusst wie: Festlegen, dass mehrere Zellen aus dem DataGridView-Steuerelement in Windows Forms in die Zwischenablage kopiert werden können](enable-users-to-copy-multiple-cells-to-the-clipboard-datagridview.md)  
  Beschreibt, wie die Zwischenablage Unterstützung im-Steuerelement aktiviert wird.  
   
-## <a name="reference"></a>Referenz  
+## <a name="reference"></a>Verweis  
  <xref:System.Windows.Forms.DataGridView>  
  Enthält die Referenzdokumentation für das <xref:System.Windows.Forms.DataGridView>-Steuerelement.  
   
@@ -51,7 +51,7 @@ Das `DataGridView`-Steuerelement bietet Ihnen eine Vielzahl von Optionen, um zu 
  <xref:System.Windows.Forms.DataGridViewSelectedColumnCollection>  
  Enthält die Referenz Dokumentation für die <xref:System.Windows.Forms.DataGridViewSelectedColumnCollection>-Klasse.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [DataGridView-Steuerelement](datagridview-control-windows-forms.md)
 - [Standardbehandlung von Tastatur und Maus im DataGridView-Steuerelement von Windows Forms](default-keyboard-and-mouse-handling-in-the-windows-forms-datagridview-control.md)

@@ -38,7 +38,7 @@ Mit `TabControl` in Windows Forms werden mehrere Registerkarten wie Karteireiter
   
  Siehe auch Gewusst [wie: Hinzufügen und Entfernen von Registerkarten mit dem Windows Forms TabControl mithilfe des Designers](add-and-remove-tabs-with-wf-tabcontrol-using-the-designer.md), Gewusst [wie: Hinzufügen eines Steuer Elements zu einer Registerkarte mithilfe des Designers](how-to-add-a-control-to-a-tab-page-using-the-designer.md)  
   
-## <a name="reference"></a>Referenz  
+## <a name="reference"></a>Verweis  
  <xref:System.Windows.Forms.TabControl>-Klasse  
  Beschreibt diese Klasse und enthält Links zu allen deren Membern.  
   
@@ -46,5 +46,5 @@ Mit `TabControl` in Windows Forms werden mehrere Registerkarten wie Karteireiter
  [Dialogfelder in Windows Forms](../dialog-boxes-in-windows-forms.md)  
  Enthält eine Liste von Aufgaben für Dialogfelder, von denen häufig Registerkarten angezeigt werden.  
   
- [Windows Forms-Steuerelemente](controls-to-use-on-windows-forms.md)  
+ [Steuerelemente für Windows Forms](controls-to-use-on-windows-forms.md)  
  Enthält eine vollständige Liste der Windows Forms-Steuerelemente mit Links zu Informationen zur jeweiligen Verwendung.

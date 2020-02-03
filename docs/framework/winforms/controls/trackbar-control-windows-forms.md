@@ -20,10 +20,10 @@ Das Windows Forms `TrackBar`-Steuerelement (auch als "Schieberegler" bezeichnet)
  [Übersicht über das TrackBar-Steuerelement](trackbar-control-overview-windows-forms.md)  
  Führt die allgemeinen Konzepte des `TrackBar`-Steuer Elements ein, das Benutzern das Navigieren durch Informationen ermöglicht, indem eine numerische Einstellung visuell angepasst wird.  
   
-## <a name="reference"></a>Referenz  
+## <a name="reference"></a>Verweis  
  <xref:System.Windows.Forms.TrackBar>-Klasse  
  Enthält Referenzinformationen zur Klasse und zu ihren Membern.  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
- [Windows Forms-Steuerelemente](controls-to-use-on-windows-forms.md)  
+ [Steuerelemente für Windows Forms](controls-to-use-on-windows-forms.md)  
  Enthält eine vollständige Liste der Windows Forms-Steuerelemente mit Links zu Informationen zur jeweiligen Verwendung.

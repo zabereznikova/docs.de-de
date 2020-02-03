@@ -12,7 +12,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76732792"
 ---
-# <a name="menustrip-control-windows-forms"></a>MenuStrip-Steuerelement (Windows Forms)
+# <a name="menustrip-control-windows-forms"></a>MenuStrip-Steuerelement (Windows Forms)
 Dieses Steuerelement gruppiert Anwendungsbefehle und macht sie leicht zugänglich.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
@@ -69,7 +69,7 @@ Dieses Steuerelement gruppiert Anwendungsbefehle und macht sie leicht zugänglic
   
 - [MenuStrip-Aufgaben (Dialog Feld)](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233645(v=vs.100))  
   
-## <a name="reference"></a>Referenz  
+## <a name="reference"></a>Verweis  
  <xref:System.Windows.Forms.MenuStrip>  
  Beschreibt die Funktionen der <xref:System.Windows.Forms.MenuStrip>-Klasse, die ein Menüsystem für ein Formular bereitstellt.  
   
@@ -80,5 +80,5 @@ Dieses Steuerelement gruppiert Anwendungsbefehle und macht sie leicht zugänglic
  Beschreibt die Funktionen der <xref:System.Windows.Forms.ToolStripMenuItem>-Klasse, die eine auswählbare Option darstellt, die für ein <xref:System.Windows.Forms.MenuStrip> oder <xref:System.Windows.Forms.ContextMenuStrip> angezeigt wird.  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
- [Windows Forms-Steuerelemente](controls-to-use-on-windows-forms.md)  
+ [Steuerelemente für Windows Forms](controls-to-use-on-windows-forms.md)  
  Enthält eine vollständige Liste der Windows Forms-Steuerelemente mit Links zu Informationen zur jeweiligen Verwendung.

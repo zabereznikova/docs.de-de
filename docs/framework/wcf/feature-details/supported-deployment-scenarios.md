@@ -43,7 +43,7 @@ Bestimmte Sicherheitsvorkehrungen müssen getroffen werden, wenn Code von nicht 
 
 WCF kann verwendet werden, um über teilweise vertrauenswürdige Anwendungen, die von der [ClickOnce-Bereitstellung](/visualstudio/deployment/clickonce-security-and-deployment) oder XBAP bereitgestellt wurden, mit Remote Servern zu kommunizieren. Der Berechtigungs Satz für die Internet Zone umfasst <xref:System.Net.WebPermission> für den Ursprungs Host, der es diesen Anwendungen ermöglicht, mit Ihrem Ursprungsserver zu kommunizieren, indem Sie eine der in der [Kompatibilität mit Teil vertrauenswürdigen Funktionen](partial-trust-feature-compatibility.md)beschriebenen unterstützten WCF-Bindungen verwenden
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Codezugriffssicherheit](../../misc/code-access-security.md)
 - [Übersicht über Windows Presentation Foundation Browser gehostete Anwendungen](../../wpf/app-development/wpf-xaml-browser-applications-overview.md)

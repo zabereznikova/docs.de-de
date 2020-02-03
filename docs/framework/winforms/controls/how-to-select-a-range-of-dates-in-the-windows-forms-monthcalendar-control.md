@@ -55,9 +55,9 @@ Ein wichtiges Feature der Windows Forms <xref:System.Windows.Forms.MonthCalendar
        SelectionRange(projectStart, projectEnd);  
     ```  
   
-     – oder –  
+     – Oder –  
   
-     Legen Sie für die Eigenschaften <xref:System.Windows.Forms.MonthCalendar.SelectionStart%2A> und <xref:System.Windows.Forms.MonthCalendar.SelectionEnd%2A> fest.  
+     Legen Sie die Eigenschaften <xref:System.Windows.Forms.MonthCalendar.SelectionStart%2A> und <xref:System.Windows.Forms.MonthCalendar.SelectionEnd%2A> fest.  
   
     ```vb  
     MonthCalendar1.SelectionStart = projectStart  
@@ -74,7 +74,7 @@ Ein wichtiges Feature der Windows Forms <xref:System.Windows.Forms.MonthCalendar
     monthCalendar1->SelectionEnd = projectEnd;  
     ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [MonthCalendar-Steuerelement](monthcalendar-control-windows-forms.md)
 - [Gewusst wie: Ändern der Darstellung des MonthCalendar-Steuerelements in Windows Forms](how-to-change-monthcalendar-control-appearance.md)

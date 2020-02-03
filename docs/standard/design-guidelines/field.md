@@ -41,7 +41,7 @@ Das Prinzip der Kapselung ist einer der wichtigsten Begriffe im objektorientiert
 
  *Nachdruck mit Genehmigung von Pearson Education, Inc aus [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) von Krzysztof Cwalina und Brad Abrams, veröffentlicht am 22. Oktober 2008 durch Addison-Wesley Professional als Teil der Microsoft Windows Development Series.*
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Entwurfsrichtlinien für Member](../../../docs/standard/design-guidelines/member.md)
 - [Frameworkentwurfsrichtlinien](../../../docs/standard/design-guidelines/index.md)

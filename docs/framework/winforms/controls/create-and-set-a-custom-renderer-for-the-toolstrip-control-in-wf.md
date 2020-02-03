@@ -29,7 +29,7 @@ ms.locfileid: "76743411"
   
 1. Erweitern Sie die <xref:System.Windows.Forms.ToolStripRenderer>-Klasse.  
   
-2. Implementieren Sie das gewünschte benutzerdefinierte Rendering, indem Sie die entsprechenden Optionen *überschreiben.* -Elemente  
+2. Implementieren Sie das gewünschte benutzerdefinierte Rendering, indem Sie die entsprechenden Optionen *überschreiben.* members  
   
     ```vb  
     Public Class RedTextRenderer  
@@ -81,7 +81,7 @@ ms.locfileid: "76743411"
     ToolStripManager.Renderer = new RedTextRenderer();  
     ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Windows.Forms.ToolStripManager.Renderer%2A>
 - <xref:System.Windows.Forms.ToolStripRenderer>

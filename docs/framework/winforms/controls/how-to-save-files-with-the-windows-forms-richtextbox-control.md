@@ -26,7 +26,7 @@ ms.locfileid: "76744818"
 
 Das Windows Forms <xref:System.Windows.Forms.RichTextBox>-Steuerelement kann die angezeigten Informationen in einem von mehreren Formaten schreiben:
 
-- Unverschlüsselter Text
+- Nur-Text
 
 - Unicode-nur-Text
 
@@ -88,9 +88,9 @@ Um eine Datei zu speichern, nennen Sie die <xref:System.Windows.Forms.RichTextBo
     > [!IMPORTANT]
     > Mit diesem Beispiel wird eine neue Datei erstellt, wenn diese noch nicht vorhanden ist. Wenn eine Anwendung eine Datei erstellen muss, muss diese Anwendung Zugriff auf den Ordner erstellen. Berechtigungen werden mithilfe von Zugriffssteuerungslisten festgelegt. Wenn die Datei bereits vorhanden ist, benötigt die Anwendung nur Schreibzugriff, eine geringere Berechtigung. Wenn möglich, ist es sicherer, die Datei während der Bereitstellung zu erstellen, und nur Lesezugriff auf eine einzelne Datei zu gewähren, anstatt den Zugriff für einen Ordner zu erstellen. Darüber hinaus ist es sicherer, Daten in Benutzerordner statt in Stammordner oder den Ordner „Programme“ zu schreiben.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Windows.Forms.RichTextBox.SaveFile%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.RichTextBox>
 - [RichTextBox-Steuerelement](richtextbox-control-windows-forms.md)
-- [Windows Forms-Steuerelemente](controls-to-use-on-windows-forms.md)
+- [Steuerelemente für Windows Forms](controls-to-use-on-windows-forms.md)

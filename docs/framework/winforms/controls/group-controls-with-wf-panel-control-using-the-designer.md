@@ -26,7 +26,7 @@ Windows Forms <xref:System.Windows.Forms.Panel>-Steuerelemente werden verwendet,
 
 3. Optionale Wenn Sie einem Panel einen Rahmen hinzufügen möchten, legen Sie dessen <xref:System.Windows.Forms.BorderStyle>-Eigenschaft fest. Es gibt drei Optionen: <xref:System.Windows.Forms.BorderStyle.Fixed3D>, <xref:System.Windows.Forms.BorderStyle.FixedSingle>und <xref:System.Windows.Forms.BorderStyle.None>.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Panel-Steuerelement](panel-control-windows-forms.md)
 - [Übersicht über das Panel-Steuerelement](panel-control-overview-windows-forms.md)

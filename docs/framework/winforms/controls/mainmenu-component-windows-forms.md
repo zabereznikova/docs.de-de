@@ -21,11 +21,11 @@ ms.locfileid: "76747140"
  [Übersicht über die MainMenu-Komponente](mainmenu-component-overview-windows-forms.md)  
  Erläutert, was diese Komponente ist, und die wichtigsten Features und Eigenschaften.  
   
-## <a name="reference"></a>Referenz  
+## <a name="reference"></a>Verweis  
  <xref:System.Windows.Forms.MainMenu>  
  Beschreibt diese Klasse und enthält Links zu allen deren Membern.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Windows.Forms.MenuStrip>
 - <xref:System.Windows.Forms.ContextMenuStrip>

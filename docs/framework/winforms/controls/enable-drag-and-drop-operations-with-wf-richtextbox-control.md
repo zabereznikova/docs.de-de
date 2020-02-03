@@ -164,9 +164,9 @@ Drag &amp; Drop-Vorgänge mit dem Windows Forms-Steuerelement <xref:System.Windo
   
      Wenn Sie die Maustaste loslassen, wird der ausgewählte Text abgelegt (das heißt, das <xref:System.Windows.Forms.RichTextBox.DragDrop> -Ereignis wird ausgelöst) und in das <xref:System.Windows.Forms.RichTextBox> -Steuerelement eingefügt.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Windows.Forms.RichTextBox>
 - [Gewusst wie: Ausführen von Drag & Drop-Operationen zwischen Anwendungen](../advanced/how-to-perform-drag-and-drop-operations-between-applications.md)
 - [RichTextBox-Steuerelement](richtextbox-control-windows-forms.md)
-- [Windows Forms-Steuerelemente](controls-to-use-on-windows-forms.md)
+- [Steuerelemente für Windows Forms](controls-to-use-on-windows-forms.md)

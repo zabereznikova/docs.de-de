@@ -43,7 +43,7 @@ Dieser Abschnitt dient als Referenz für [!INCLUDE[TLA#tla_winclient](../../../.
   
  [Startzeit der Anwendung](application-startup-time.md)  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Windows.Media.RenderOptions>
 - <xref:System.Windows.Media.RenderCapability>

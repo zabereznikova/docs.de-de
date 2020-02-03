@@ -28,7 +28,7 @@ Die Windows Forms <xref:System.Windows.Forms.Timer> Komponente verfügt über ei
   
 - Die Genauigkeit der <xref:System.Windows.Forms.Timer.Interval%2A>-Eigenschaft beträgt Millisekunden. Einige Computer bieten einen Leistungs befassleistungs-Leistungs Bewert, der eine höhere Auflösung als Millisekunden aufweist. Die Verfügbarkeit eines solchen Zählers hängt von der Prozessor Hardware des Computers ab.
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Windows.Forms.Timer>
 - [Timer-Komponente](timer-component-windows-forms.md)

@@ -27,7 +27,7 @@ XAML-Namescopes sind ein Konzept, das Objekte bezeichnet, die in XAML definiert 
  In WPF-XAML steuern Elemente, bei denen es sich um allgemeine Stamm Elemente handelt (z. b. <xref:System.Windows.Controls.Page>und <xref:System.Windows.Window>), immer einen XAML-Namescope. Wenn ein Element, z. b. <xref:System.Windows.FrameworkElement> oder <xref:System.Windows.FrameworkContentElement>, das Stamm Element der Seite in Markup ist, fügt ein [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]-Prozessor einen <xref:System.Windows.Controls.Page> Stamm implizit hinzu, damit der <xref:System.Windows.Controls.Page> einen funktionierenden XAML-Namescope bereitstellen kann.  
   
 > [!NOTE]
-> WPF-Buildvorgänge erstellen für eine XAML-Produktion selbst dann einen XAML-Namescope, wenn für kein Element im [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]-Markup `Name`- oder `x:Name`-Attribute definiert sind.  
+> WPF-Buildvorgänge erstellen für eine XAML-Produktion selbst dann einen XAML-Namescope, wenn für kein Element im `Name`-Markup `x:Name`- oder [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]-Attribute definiert sind.  
   
  Wenn Sie versuchen, denselben Namen in einem beliebigen XAML-Namescope zweimal zu verwenden, wird eine Ausnahme ausgelöst. Für WPF-XAML, das CodeBehind verwendet und Teil einer kompilierten Anwendung ist, wird die Ausnahme während der Erstellung durch WPF-Buildaktionen ausgelöst, wenn die generierende Klasse für die Seite während der Kompilierung des ausgehenden Markups erstellt wird. Für XAML, dessen Markup nicht durch Buildaktionen kompiliert wird, können XAML-Namescope-bezogene Ausnahmen während des Ladens des XAML ausgelöst werden. XAML-Designer können XAML-Namescope-Probleme auch zur Entwurfszeit vorausschauend behandeln.  
   
@@ -53,7 +53,7 @@ XAML-Namescopes sind ein Konzept, das Objekte bezeichnet, die in XAML definiert 
 ## <a name="xaml-namescopes-in-styles-and-templates"></a>XAML-Namescopes in Stilen und Vorlagen  
  Stile und Vorlagen in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] bieten die Möglichkeit, Inhalte auf einfache Weise wieder zu verwenden und sie erneut anzuwenden. Allerdings können Stile und Vorlagen auch Elemente mit XAML-Namen, die auf der Vorlagenebene definiert sind, enthalten. Dieselbe Vorlage wird möglicherweise mehrmals auf einer Seite verwendet. Aus diesem Grund definieren Stile und Vorlagen ihre eigenen XAML-Namescopes, unabhängig davon, an welcher Position in einer Objektstruktur der Stil oder die Vorlage angewendet wird.  
   
- Betrachten Sie das folgende Beispiel:  
+ Betrachten Sie das folgenden Beispiel:  
   
  [!code-xaml[XamlOvwSupport#NameScopeTemplates](~/samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page6.xaml#namescopetemplates)]  
   
@@ -94,7 +94,7 @@ XAML-Namescopes sind ein Konzept, das Objekte bezeichnet, die in XAML definiert 
   
 - <xref:System.Windows.FrameworkContentElement>  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [XAML-Namespaces und Namespacezuordnung für WPF-XAML](xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md)
 - [x:Name-Anweisung](../../../desktop-wpf/xaml-services/xname-directive.md)

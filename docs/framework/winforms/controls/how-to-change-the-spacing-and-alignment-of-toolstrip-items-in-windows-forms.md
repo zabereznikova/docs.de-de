@@ -79,7 +79,7 @@ Das <xref:System.Windows.Forms.ToolStrip>-Steuerelement unterstützt vollständi
         System.Windows.Forms.ToolStripLayoutStyle.Flow;  
     ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Windows.Forms.ToolStrip>
 - <xref:System.Windows.Forms.Control.Layout>

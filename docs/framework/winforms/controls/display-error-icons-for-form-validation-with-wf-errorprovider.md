@@ -92,7 +92,7 @@ Sie können eine Windows Forms <xref:System.Windows.Forms.ErrorProvider> Kompone
   
 4. Führen Sie das Projekt aus. Geben Sie ungültige (in diesem Beispiel nicht numerische) Daten in das erste Steuerelement ein, und drücken Sie dann die Tab-Taste. Wenn das Fehler Symbol angezeigt wird, zeigen Sie mit dem Mauszeiger darauf, um den Fehlertext anzuzeigen.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Windows.Forms.ErrorProvider.SetError%2A>
 - [Übersicht über die ErrorProvider-Komponente](errorprovider-component-overview-windows-forms.md)

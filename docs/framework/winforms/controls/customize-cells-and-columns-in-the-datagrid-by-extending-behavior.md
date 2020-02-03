@@ -23,7 +23,7 @@ Das <xref:System.Windows.Forms.DataGridView>-Steuerelement bietet eine Reihe von
   
  Im folgenden Codebeispiel erstellen Sie eine benutzerdefinierte Zellenklasse namens `DataGridViewRolloverCell`, die erkennt, wann sich der Mauszeiger innerhalb bzw. außerhalb der Zellenumgrenzung befindet. Wenn sich der Mauszeiger innerhalb der Zellenumgrenzungen befindet, wird ein abgesenktes Rechteck gezeichnet. Dieser neue Typ leitet sich von <xref:System.Windows.Forms.DataGridViewTextBoxCell> ab und verhält sich in jeder anderen Hinsicht wie seine Basisklasse. Die Assistentenspaltenklasse heißt `DataGridViewRolloverColumn`.  
   
- Erstellen Sie zum Verwenden dieser Klassen ein Formular mit einem <xref:System.Windows.Forms.DataGridView>-Steuerelement, fügen Sie der <xref:System.Windows.Forms.DataGridView.Columns%2A>-Auflistung ein oder mehrere `DataGridViewRolloverColumn`-Objekte hinzu, und füllen Sie das Steuerelement mit Zeilen, die Werte enthalten.  
+ Erstellen Sie zum Verwenden dieser Klassen ein Formular mit einem <xref:System.Windows.Forms.DataGridView>-Steuerelement, fügen Sie der `DataGridViewRolloverColumn`-Auflistung ein oder mehrere <xref:System.Windows.Forms.DataGridView.Columns%2A>-Objekte hinzu, und füllen Sie das Steuerelement mit Zeilen, die Werte enthalten.  
   
 > [!NOTE]
 > Dieses Beispiel funktioniert nicht ordnungsgemäß, wenn Sie leere Zeilen hinzufügen. Leere Zeilen werden beispielsweise erstellt, wenn Sie dem Steuerelement Zeilen hinzufügen, indem Sie die <xref:System.Windows.Forms.DataGridView.RowCount%2A>-Eigenschaft festlegen. Der Grund dafür ist, dass die in diesem Fall hinzugefügten Zeilen automatisch freigegeben werden. Das heißt, dass `DataGridViewRolloverCell`-Objekte erst instanziiert werden, wenn Sie auf einzelne Zellen klicken und somit die Freigabe der zugeordneten Zeilen aufheben.  
@@ -64,11 +64,11 @@ Das <xref:System.Windows.Forms.DataGridView>-Steuerelement bietet eine Reihe von
  [!code-vb[System.Windows.Forms.DataGridViewRolloverCell#000](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewRolloverCell/VB/rollovercell.vb#000)]  
   
 ## <a name="compiling-the-code"></a>Kompilieren des Codes  
- Für dieses Beispiel benötigen Sie Folgendes:  
+ Dieses Beispiel erfordert Folgendes:  
   
 - Verweise auf die Assemblys "System", "System.Windows.Forms" und "System.Drawing".  
  
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridViewCell>

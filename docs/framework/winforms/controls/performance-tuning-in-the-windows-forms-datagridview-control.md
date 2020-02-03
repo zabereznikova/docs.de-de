@@ -29,14 +29,14 @@ Beim Arbeiten mit großen Datenmengen kann das `DataGridView`-Steuerelement eine
  [Implementieren des virtuellen Modus mit Just-In-Time-Laden von Daten in das DataGridView-Steuerelement in Windows Forms](implementing-virtual-mode-jit-data-loading-in-the-datagrid.md)  
  Beschreibt, wie Daten bei Bedarf geladen werden. Dies ist nützlich, wenn Sie mehr Daten anzeigen müssen, als der verfügbare Client Speicher speichern kann.  
   
-## <a name="reference"></a>Referenz  
+## <a name="reference"></a>Verweis  
  <xref:System.Windows.Forms.DataGridView>  
  Enthält die Referenzdokumentation für das <xref:System.Windows.Forms.DataGridView>-Steuerelement.  
   
  <xref:System.Windows.Forms.DataGridView.VirtualMode%2A>  
  Enthält die Referenz Dokumentation für die <xref:System.Windows.Forms.DataGridView.VirtualMode%2A>-Eigenschaft.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [DataGridView-Steuerelement](datagridview-control-windows-forms.md)
 - [Datenanzeigemodi im DataGridView-Steuerelement in Windows Forms](data-display-modes-in-the-windows-forms-datagridview-control.md)

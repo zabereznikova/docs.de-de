@@ -56,7 +56,7 @@ Manchmal ist es schwierig zu wissen, ob Sie alle entsprechenden Berechtigungen b
 
 In den folgenden Themen sind zusätzliche Sicherheitsfeatures von Windows Forms beschrieben.
 
-|Topic|Beschreibung|
+|Thema|BESCHREIBUNG|
 |-----------|-----------------|
 |- [Mehr Sicherheit beim Datei- und Datenzugriff in Windows Forms](more-secure-file-and-data-access-in-windows-forms.md)|Beschreibt, wie in einer teilweise vertrauenswürdigen Umgebung auf Dateien und Daten zugegriffen wird.|
 |- [Mehr Sicherheit beim Drucken in Windows Forms](more-secure-printing-in-windows-forms.md)|Beschreibt, wie in einer teilweise vertrauenswürdigen Umgebung auf Druckfunktionen zugegriffen wird.|
@@ -70,7 +70,7 @@ ClickOnce verfügt über zwei Technologien zum Anfordern von erweiterten Berecht
 
 In der folgenden Liste sind diese Technologien beschrieben.
 
-|Technologie für erweiterte Berechtigungen|Beschreibung|
+|Technologie für erweiterte Berechtigungen|BESCHREIBUNG|
 |------------------------------------|-----------------|
 |Berechtigungserweiterung|Zeigt dem Benutzer ein Sicherheitsdialogfeld an, wenn er die Anwendung das erste Mal ausführt. Im Dialogfeld **Berechtigungserweiterung** wird der Benutzer darüber informiert, wer die Anwendung veröffentlicht hat. Der Benutzer kann dann anhand dieser Informationen entscheiden, ob er der Anwendung zusätzliche Vertrauenswürdigkeit gewährt.|
 |Bereitstellung einer vertrauenswürdigen Anwendung|Bedingt, dass ein Systemadministrator eine einmalige Installation des Authenticode-Zertifikats eines Herausgebers auf einem Clientcomputer ausführt. Ab diesem Zeitpunkt werden alle Anwendungen, die mit dem Zertifikat signiert sind, als vertrauenswürdig eingestuft, und sie können ohne zusätzliche Eingabeaufforderungen mit voller Vertrauenswürdigkeit auf dem lokalen Computer ausgeführt werden.|
@@ -85,11 +85,11 @@ Weitere Informationen zu den Sicherheitsaspekten von ClickOnce und Berechtigungs
 
 Wenn Sie die Windows Forms Anwendung mithilfe von Visual Studio bereitgestellt haben, können Sie das Debuggen in teilweiser Vertrauenswürdigkeit oder in einem eingeschränkten Berechtigungs Satz aus der Entwicklungsumgebung aktivieren.  Siehe auch Gewusst [wie: Debuggen einer ClickOnce-Anwendung mit eingeschränkten Berechtigungen](/visualstudio/deployment/how-to-debug-a-clickonce-application-with-restricted-permissions).
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Sicherheit in Windows Forms](windows-forms-security.md)
 - [Grundlagen der Codezugriffssicherheit](../misc/code-access-security-basics.md)
 - [ClickOnce-Sicherheit und Bereitstellung](/visualstudio/deployment/clickonce-security-and-deployment)
 - [Überblick über die Bereitstellung vertrauenswürdiger Anwendungen](/visualstudio/deployment/trusted-application-deployment-overview)
 - [Mage.exe (Tool zum Generieren und Bearbeiten von Manifesten)](../tools/mage-exe-manifest-generation-and-editing-tool.md)
-- [„MageUI.exe“ (Tool zum Generieren und Bearbeiten von Manifesten, grafischer Client)](../tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client.md)
+- [MageUI.exe (Tool zum Generieren und Bearbeiten von Manifesten, grafischer Client)](../tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client.md)

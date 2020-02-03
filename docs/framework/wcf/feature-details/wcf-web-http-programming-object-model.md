@@ -44,7 +44,7 @@ Das WCF-Web-HTTP-Programmiermodell ermöglicht es Entwicklern, Windows Communica
 ## <a name="webgetattribute"></a>WebGetAttribute  
  Das <xref:System.ServiceModel.Web.WebGetAttribute>-Attribut wird dazu verwendet, einen Dienstvorgang als Vorgang zu kennzeichnen, der auf HTTP GET-Anforderungen reagiert. Es handelt sich um ein passives Vorgangsverhalten (von den <xref:System.ServiceModel.Description.IOperationBehavior>-Methoden werden keine Aktionen ausgeführt), durch das der Vorgangsbeschreibung Metadaten hinzugefügt werden. Die Anwendung von <xref:System.ServiceModel.Web.WebGetAttribute> hat nur dann Auswirkungen, wenn ein Verhalten, das in der Vorgangsbeschreibung nach diesen Metadaten sucht (insbesondere <xref:System.ServiceModel.Description.WebHttpBehavior>), der Verhaltensauflistung des Diensts hinzugefügt wird. Das <xref:System.ServiceModel.Web.WebGetAttribute>-Attribut verwendet die in der folgenden Tabelle beschriebenen optionalen Parameter.  
   
-|Parameter|Beschreibung|  
+|Parameter|BESCHREIBUNG|  
 |---------------|-----------------|  
 |`BodyStyle`|Steuert, ob Anforderungen und Antworten, die an den Dienstvorgang, auf den das Attribut angewendet wird, gesendet oder von diesem empfangen werden, umschlossen werden.|  
 |`RequestFormat`|Steuert die Formatierung von Anforderungsnachrichten.|  
@@ -59,7 +59,7 @@ Das WCF-Web-HTTP-Programmiermodell ermöglicht es Entwicklern, Windows Communica
   
  Das <xref:System.ServiceModel.Web.WebInvokeAttribute>-Attribut verwendet die in der folgenden Tabelle beschriebenen optionalen Parameter.  
   
-|Parameter|Beschreibung|  
+|Parameter|BESCHREIBUNG|  
 |---------------|-----------------|  
 |`BodyStyle`|Steuert, ob Anforderungen und Antworten, die an den Dienstvorgang, auf den das Attribut angewendet wird, gesendet oder von diesem empfangen werden, umschlossen werden.|  
 |`Method`|Gibt die HTTP-Methode an, der der Dienstvorgang zugeordnet wird.|  
@@ -100,7 +100,7 @@ Das WCF-Web-HTTP-Programmiermodell ermöglicht es Entwicklern, Windows Communica
 
 Da das WCF-Web-HTTP-Programmiermodell die WS-*-Protokolle nicht unterstützt, besteht die einzige Möglichkeit zum Sichern eines Webdiensts, der auf dem WCF-Web-HTTP-Programmiermodell basiert, darin, den Dienst mithilfe von SSL Weitere Informationen zum Einrichten von SSL mit IIS 7,0 finden Sie unter Gewusst [wie: Implementieren von SSL in IIS](https://support.microsoft.com/help/299875/how-to-implement-ssl-in-iis).
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.ServiceModel.WebHttpBinding>
 - <xref:System.ServiceModel.Web.WebGetAttribute>

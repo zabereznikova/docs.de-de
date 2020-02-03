@@ -49,7 +49,7 @@ Sie können die Darstellung der Windows Forms <xref:System.Windows.Forms.ColorDi
     colorDialog1->ShowHelp = true;  
     ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Windows.Forms.ColorDialog>
 - [ColorDialog-Komponente](colordialog-component-windows-forms.md)

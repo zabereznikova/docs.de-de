@@ -31,7 +31,7 @@ Während Windows Presentation Foundation (WPF) eine Vielzahl von Sicherheitsdien
   
  Im restlichen Teil dieses Themas werden die Features auf den einzelnen Ebenen erläutert, die sich speziell auf WPF beziehen.  
 
-## <a name="operating-system-security"></a>Betriebssystemsicherheit  
+## <a name="operating-system-security"></a>Sicherheit des Betriebssystems  
 Der Kern von Windows bietet verschiedene Sicherheitsfeatures, die die Sicherheits Grundlage für alle Windows-Anwendungen bilden, einschließlich derjenigen, die mit WPF erstellt wurden. In diesem Thema wird der Umfang dieser Sicherheitsfeatures erläutert, die für WPF wichtig sind, sowie die Art und Weise, wie WPF in Sie integriert wird, um weitere Schutzmaßnahmen bereitzustellen.  
   
 ### <a name="microsoft-windows-xp-service-pack-2-sp2"></a>Microsoft Windows XP Service Pack 2 (SP2)  
@@ -186,7 +186,7 @@ WPF-Benutzer unter Windows Vista profitieren von den zusätzlichen Sicherheitser
   
  Internet Explorer 7 umfasst und erweitert die Sicherheitsfunktionen von IE6 SP2 im Rahmen eines kontinuierlichen Engagements der Sicherheit.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Codezugriffssicherheit](../misc/code-access-security.md)
 - [Sicherheit](security-wpf.md)

@@ -87,9 +87,9 @@ Die meisten Formulare werden durch das Hinzufügen von Steuerelementen zur Oberf
     > [!IMPORTANT]
     > Sie können den lokalen Computer über das Netzwerk mit einem Sicherheitsrisiko verfügbar machen, indem Sie auf eine böswillige `UserControl`verweisen. Dies wäre nur ein Problem, wenn eine böswillige Person ein schädliches benutzerdefiniertes Steuerelement erstellt, gefolgt von dem, das Sie versehentlich dem Projekt hinzufügen.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Windows Forms-Steuerelemente](index.md)
 - [Gewusst wie: Ändern der Größe von Steuerelementen in Windows Forms](how-to-resize-controls-on-windows-forms.md)
 - [Gewusst wie: Festlegen des durch ein Windows Forms-Steuerelement angezeigten Texts](how-to-set-the-text-displayed-by-a-windows-forms-control.md)
-- [Windows Forms-Steuerelemente](controls-to-use-on-windows-forms.md)
+- [Steuerelemente für Windows Forms](controls-to-use-on-windows-forms.md)

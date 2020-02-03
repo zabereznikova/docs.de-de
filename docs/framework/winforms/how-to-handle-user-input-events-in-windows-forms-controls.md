@@ -25,10 +25,10 @@ In diesem Beispiel wird veranschaulicht, wie die meisten Tastatur-, Maus-, Fokus
  [!code-vb[System.Windows.Forms.UserInputWalkthrough#0](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.UserInputWalkthrough/VB/form1.vb#0)]  
   
 ## <a name="compiling-the-code"></a>Kompilieren des Codes  
- Für dieses Beispiel benötigen Sie Folgendes:  
+ Dieses Beispiel erfordert Folgendes:  
   
 - Verweise auf die Assemblys "System", "System.Drawing" und "System.Windows.Forms".  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Benutzereingabe in Windows Forms](user-input-in-windows-forms.md)
+- [Benutzereingaben in Windows Forms](user-input-in-windows-forms.md)

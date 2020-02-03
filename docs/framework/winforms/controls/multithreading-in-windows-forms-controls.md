@@ -25,7 +25,7 @@ In vielen Anwendungen können Sie die Benutzeroberfläche (UI) reaktionsfähiger
  [Gewusst wie: Verwenden eines Hintergrundthreads zur Dateisuche](how-to-use-a-background-thread-to-search-for-files.md)  
  Zeigt, wie Sie den <xref:System.Threading>-Namespace und die <xref:System.Windows.Forms.Control.BeginInvoke%2A>-Methode verwenden, um Dateien asynchron zu suchen.  
   
-## <a name="reference"></a>Referenz  
+## <a name="reference"></a>Verweis  
  <xref:System.ComponentModel.BackgroundWorker>  
  Dokumentiert eine Komponente, die einen Arbeits Thread für asynchrone Vorgänge kapselt.  
   

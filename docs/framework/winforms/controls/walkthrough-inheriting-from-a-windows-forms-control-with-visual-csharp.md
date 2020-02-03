@@ -55,7 +55,7 @@ Eine Verwendungsmöglichkeit von geerbten Windows Forms-Steuerelementen ist das 
 
 1. Klicken Sie im **Projektmappen-Explorer** mit der rechten Maustaste auf **ValueButton.cs**, und klicken Sie im Kontextmenü auf **Code anzeigen**.
 
-2. Suchen Sie die Anweisung `class`. Geben Sie direkt nach `{` den folgenden Code ein:
+2. Suchen Sie die `class`-Anweisung. Geben Sie direkt nach `{` den folgenden Code ein:
 
     ```csharp
     // Creates the private variable that will store the value of your
@@ -87,7 +87,7 @@ Steuerelemente sind keine eigenständigen Projekte. Sie müssen in einem Contain
 
 ### <a name="to-build-your-control"></a>So erstellen Sie das Steuerelement
 
-Klicken Sie im Menü **Erstellen** auf **Projektmappe erstellen**. Der Build sollte ohne Compilerfehler oder Warnungen erfolgreich sein.
+Klicken Sie im Menü **Build** auf **Projektmappe erstellen**. Der Build sollte ohne Compilerfehler oder Warnungen erfolgreich sein.
 
 ### <a name="to-create-a-test-project"></a>So Erstellen Sie ein Testprojekt
 
@@ -139,9 +139,9 @@ Klicken Sie im Menü **Erstellen** auf **Projektmappe erstellen**. Der Build sol
 
 12. Klicken Sie auf `valueButton1`.
 
-     Die Zahl '5' wird in `label1` angezeigt und zeigt, dass die Eigenschaft `ButtonValue` Ihres geerbten Steuerelements mit der Methode `valueButton1_Click` an `label1` weitergegeben wurde. Daher erbt Ihr `ValueButton`-Steuerelement die gesamte Funktionalität der standardmäßigen Windows Forms-Schaltfläche und macht eine zusätzliche benutzerdefinierte Eigenschaft verfügbar.
+     Die Zahl '5' wird in `label1` angezeigt und zeigt, dass die Eigenschaft `ButtonValue` Ihres geerbten Steuerelements mit der Methode `label1` an `valueButton1_Click` weitergegeben wurde. Daher erbt Ihr `ValueButton`-Steuerelement die gesamte Funktionalität der standardmäßigen Windows Forms-Schaltfläche und macht eine zusätzliche benutzerdefinierte Eigenschaft verfügbar.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Vorgehensweise: Anzeigen eines Steuerelements im Dialogfeld „Toolboxelemente auswählen“](how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)
+- [Gewusst wie: Anzeigen eines Steuerelements im Dialogfeld „Toolboxelemente auswählen“](how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)
 - [Exemplarische Vorgehensweise: Erstellen eines zusammengesetzten Steuerelements mit Visual C#](walkthrough-authoring-a-composite-control-with-visual-csharp.md)

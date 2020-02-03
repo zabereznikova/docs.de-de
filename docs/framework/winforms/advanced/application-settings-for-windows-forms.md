@@ -41,6 +41,6 @@ Das Feature Anwendungseinstellungen von Windows Forms erleichtert das Erstellen,
 [Windows Forms Konfigurations Abschnitts](../../configure-apps/file-schema/winforms/index.md)    
 Dokumentiert die Einstellungen, um Unterstützung für hohe dpi-Unterstützung in Windows Forms Anwendung zu ermöglichen, beginnend mit .NET Framework 4,7.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Windows Forms](../index.md)

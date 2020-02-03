@@ -34,4 +34,4 @@ Windows Presentation Foundation (WPF) in Visual Studio bietet Entwicklern ein ei
   
  [WPF in .NET Framework](../index.md)  
   
- [Erwerben von Visual Studio](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs)
+ [Erwerben von Visual Studio](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs)

@@ -12,7 +12,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76744828"
 ---
-# <a name="enhancing-windows-forms-applications"></a>Erweitern von Windows Forms-Anwendungen
+# <a name="enhancing-windows-forms-applications"></a>Erweitern von Windows Forms-Anwendungen
 Windows Forms enthält viele Funktionen, mit denen Sie die Leistung von Windows-basierten Anwendungen steigern und die spezifischen Anforderungen der Benutzer erfüllen können. Unter den folgenden Themen werden diese Funktionen und ihre Verwendung beschrieben.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
@@ -34,7 +34,7 @@ Windows Forms enthält viele Funktionen, mit denen Sie die Leistung von Windows-
  [Globalisieren von Windows Forms Anwendungen](globalizing-windows-forms.md)  
  Enthält Links zu Themen, in denen veranschaulicht wird, wie Sie Windows Forms-Anwendungen globalisieren.  
   
- [Windows Forms und nicht verwaltete Anwendungen](windows-forms-and-unmanaged-applications.md)  
+ [Windows Forms and Unmanaged Applications](windows-forms-and-unmanaged-applications.md)  
  Enthält Links zu Themen, in denen beschrieben und veranschaulicht wird, wie Sie von Windows Forms-Anwendungen aus auf COM-Komponenten zugreifen.  
   
  [Systeminformationen und Windows Forms](system-information-and-windows-forms.md)  

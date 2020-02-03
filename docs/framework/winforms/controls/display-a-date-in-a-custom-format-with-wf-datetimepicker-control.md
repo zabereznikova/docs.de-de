@@ -22,7 +22,7 @@ Das Windows Forms <xref:System.Windows.Forms.DateTimePicker>-Steuerelement biete
   
 ### <a name="to-display-a-custom-format"></a>Anzeigen eines benutzerdefinierten Formats  
   
-1. Legen Sie die <xref:System.Windows.Forms.DateTimePicker.Format%2A> -Eigenschaft auf `DateTimePickerFormat.Custom`fest.  
+1. Setzen Sie die <xref:System.Windows.Forms.DateTimePicker.Format%2A>-Eigenschaft auf `DateTimePickerFormat.Custom`.  
   
 2. Legen Sie die <xref:System.Windows.Forms.DateTimePicker.CustomFormat%2A>-Eigenschaft auf eine Format Zeichenfolge fest.  
   
@@ -63,7 +63,7 @@ Das Windows Forms <xref:System.Windows.Forms.DateTimePicker>-Steuerelement biete
   
      Abhängig von der Kultur Einstellung können alle Zeichen, die nicht in einfache Anführungszeichen eingeschlossen sind, geändert werden. Die obige Format Zeichenfolge zeigt z. b. das aktuelle Datum mit dem Format "Today is: 05:30:31 Friday March 02, 2012" in der Kultur Englisch (USA) an. Beachten Sie, dass der erste Doppelpunkt in einfache Anführungszeichen eingeschlossen ist, da er nicht als Trennzeichen verwendet werden soll, da er sich in "hh: mm: SS" befindet. In einer anderen Kultur wird das Format möglicherweise als "heute ist: 05.30.31 Freitag, 02, 2012" angezeigt.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [DateTimePicker-Steuerelement](datetimepicker-control-windows-forms.md)
 - [Gewusst wie: Festlegen und Zurückgeben von Datumsangaben mit dem DateTimePicker-Steuerelement in Windows Forms](how-to-set-and-return-dates-with-the-windows-forms-datetimepicker-control.md)

@@ -19,7 +19,7 @@ Bei der Windows Forms <xref:System.Windows.Forms.ColorDialog> Komponente handelt
   
  Die im Dialogfeld ausgewählte Farbe wird in der <xref:System.Windows.Forms.ColorDialog.Color%2A>-Eigenschaft zurückgegeben. Wenn die <xref:System.Windows.Forms.ColorDialog.AllowFullOpen%2A>-Eigenschaft auf `false`festgelegt ist, wird die Schaltfläche "benutzerdefinierte Farben definieren" deaktiviert, und der Benutzer ist auf die vordefinierten Farben in der Palette beschränkt. Wenn die <xref:System.Windows.Forms.ColorDialog.SolidColorOnly%2A>-Eigenschaft auf `true`festgelegt ist, kann der Benutzer keine Dithering-Farben auswählen. Um das Dialogfeld anzuzeigen, müssen Sie dessen <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A>-Methode aufrufen.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Windows.Forms.ColorDialog>
 - [ColorDialog-Komponente](colordialog-component-windows-forms.md)

@@ -28,7 +28,7 @@ Zum Kompilieren einer WPF-Anwendung stehen folgende Methoden zur Verfügung:
 
 - Microsoft Build Engine (MSBuild). Neben dem Code und XAML-Dateien muss die Anwendung eine MSBuild-Projektdatei enthalten. Weitere Informationen finden Sie unter „MSBuild“.
 
-- Visual Studio erstellen. Visual Studio ist eine integrierte Entwicklungsumgebung, die WPF-Anwendungen mit MSBuild kompiliert und einen visuellen Designer für das Erstellen der Benutzeroberfläche enthält. Weitere Informationen finden Sie unter [schreiben und Verwalten von Code mithilfe von Visual Studio](/visualstudio/ide/index-writing-code) und [Entwerfen von XAML in Visual Studio](/visualstudio/xaml-tools/designing-xaml-in-visual-studio).
+- Visual Studio. Visual Studio ist eine integrierte Entwicklungsumgebung, die WPF-Anwendungen mit MSBuild kompiliert und einen visuellen Designer für das Erstellen der Benutzeroberfläche enthält. Weitere Informationen finden Sie unter [schreiben und Verwalten von Code mithilfe von Visual Studio](/visualstudio/ide/index-writing-code) und [Entwerfen von XAML in Visual Studio](/visualstudio/xaml-tools/designing-xaml-in-visual-studio).
 
 <a name="The_Windows_Presentation_Foundation_Build_Pipeline"></a>
 
@@ -186,9 +186,9 @@ Folgende Rekompilierungsszenarien sind möglich:
 
 - Nichts wird neu kompiliert (es hat keine Änderung im Projekt stattgefunden).
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Bereitstellen von WPF-Anwendungen](deploying-a-wpf-application-wpf.md)
+- [Bereitstellen von WPF-Anwendungen (WPF)](deploying-a-wpf-application-wpf.md)
 - [WPF-MSBuild-Referenz](/visualstudio/msbuild/wpf-msbuild-reference)
 - [Paket-URI in WPF](pack-uris-in-wpf.md)
 - [WPF-Anwendungsressource, Inhalts- und Datendateien](wpf-application-resource-content-and-data-files.md)

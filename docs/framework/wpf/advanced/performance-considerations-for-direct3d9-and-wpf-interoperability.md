@@ -60,7 +60,7 @@ Von Direct3D9-Inhalte können mithilfe der <xref:System.Windows.Interop.D3DImage
 |D3DFMT_A8R8G8B8 (nicht Sperr fähig)|**Hardware Update**|Software Update|Software Update|Software Update|  
 |D3DFMT_A8R8G8B8 (Sperr fähig)|**Hardware Update**|Software Update|**Hardware Update**|Software Update|  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Windows.Interop.D3DImage>
 - [Interaktion zwischen WPF und Direct3D9](wpf-and-direct3d9-interoperation.md)

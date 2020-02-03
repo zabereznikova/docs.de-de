@@ -17,7 +17,7 @@ ms.locfileid: "76745980"
 # <a name="dialog-box-controls-and-components-windows-forms"></a>Dialogfeld-Steuerelemente und -Komponenten (Windows Forms)
 Die folgenden Windows Forms-Steuerelemente und -Komponenten stellen Standarddialogfelder dar. Folgen Sie den Links, wenn Sie weitere Informationen zu den Funktionen wünschen, die in jedem Dialogfeld verfügbar sind.  
   
-## <a name="reference"></a>Referenz  
+## <a name="reference"></a>Verweis  
  <xref:System.Windows.Forms.ColorDialog>  
  Enthält Referenzinformationen zur <xref:System.Windows.Forms.ColorDialog>-Klasse und zu ihren Membern.  
   

@@ -81,7 +81,7 @@ XAML wird in Common Language Runtime (CLR)-Frameworks implementiert und unterst�
   
  Die Implementierung von .NET Framework-XAML-Diensten und somit der WPF XAML-Prozessor verwenden die folgende Definition für eine Auflistungseigenschaft. Die Eigenschaftentyp der Eigenschaft muss einen der folgenden implementieren:  
   
-- Implementiert <xref:System.Collections.IList>.  
+- Implementierung von <xref:System.Collections.IList>  
   
 - Implementiert <xref:System.Collections.IDictionary> oder das generische Äquivalent (<xref:System.Collections.Generic.IDictionary%602>).  
   
@@ -110,7 +110,7 @@ XAML wird in Common Language Runtime (CLR)-Frameworks implementiert und unterst�
 ## <a name="serializing-xaml"></a>Serialisieren von XAML  
  Für bestimmte Szenarios, z.B. Wenn Sie Autor eines Steuerelements sind, möchten Sie möglicherweise auch sicherstellen, dass jede Objektdarstellung, die in XAML instanziiert werden kann, auch wieder zurück in das entsprechende XAML-Markup serialisiert werden kann. Serialisierungsanforderungen werden in diesem Thema nicht beschrieben. Informationen hierzu finden Sie unter [Übersicht über das Erstellen von Steuerelementen](../controls/control-authoring-overview.md) und [Elementstruktur und Serialisierung](element-tree-and-serialization.md).  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Übersicht über XAML (WPF)](../../../desktop-wpf/fundamentals/xaml.md)
 - [Benutzerdefinierte Abhängigkeitseigenschaften](custom-dependency-properties.md)

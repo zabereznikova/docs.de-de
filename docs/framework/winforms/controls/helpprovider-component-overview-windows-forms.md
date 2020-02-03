@@ -17,7 +17,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76738725"
 ---
-# <a name="helpprovider-component-overview-windows-forms"></a>Übersicht über die HelpProvider-Komponente (Windows Forms)
+# <a name="helpprovider-component-overview-windows-forms"></a>Übersicht über die HelpProvider-Komponente (Windows Forms)
 Mit der Windows Forms [HelpProvider](helpprovider-component-windows-forms.md) -Komponente wird der Windows-Anwendung eine Hilfedatei der HTML-Hilfe 1. x (entweder mit dem HTML-Hilfe Workshop oder mit einer HTM-Datei erstellt) zugeordnet. Ihnen stehen verschiedene Möglichkeiten zur Verfügung:  
   
 - Bereitstellen kontextbezogener Hilfe für Steuerelemente auf Windows Forms.  
@@ -36,6 +36,6 @@ Mit der Windows Forms [HelpProvider](helpprovider-component-windows-forms.md) -K
 > [!NOTE]
 > Es können Probleme auftreten, wenn Sie den relativen Pfad verwenden, wenn Sie den Pfad zur Hilfedatei in der <xref:System.Windows.Forms.Help.ShowHelp%2A>-Methode oder <xref:System.Windows.Forms.HelpProvider.HelpNamespace%2A>-Eigenschaft des <xref:System.Windows.Forms.HelpProvider>-Steuer Elements angeben. Stellen Sie daher sicher, dass Sie den absoluten Dateipfad verwenden, um die Hilfedatei anzugeben.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Hilfesysteme in Windows Forms-Anwendungen](../advanced/help-systems-in-windows-forms-applications.md)

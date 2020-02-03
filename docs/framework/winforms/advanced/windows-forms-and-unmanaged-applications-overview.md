@@ -15,7 +15,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76732534"
 ---
-# <a name="windows-forms-and-unmanaged-applications-overview"></a>Übersicht über Windows Forms- und nicht verwaltete Anwendungen
+# <a name="windows-forms-and-unmanaged-applications-overview"></a>Übersicht über Windows Forms und nicht verwaltete Anwendungen
 Windows Forms-Anwendungen und-Steuerelemente können mit einigen Einschränkungen mit nicht verwalteten Anwendungen zusammenarbeiten. In den folgenden Abschnitten werden die von Windows Forms-Anwendungen und -Steuerelementen unterstützten und nicht unterstützten Szenarien und Konfigurationen beschrieben.  
   
 ## <a name="windows-forms-controls-and-activex-applications"></a>Windows Forms-Steuerelemente und ActiveX-Anwendungen  
@@ -27,7 +27,7 @@ Windows Forms-Anwendungen und-Steuerelemente können mit einigen Einschränkunge
   
  Die folgende Tabelle zeigt die verfügbare Unterstützung für ActiveX-Hosting für Windows Forms-Steuerelemente.  
   
-|Windows Forms-Version|-Unterstützung|  
+|Windows Forms-Version|Support|  
 |---------------------------|-------------|  
 |.NET Framework Version 1.0|Internet Explorer 5.01 und höhere Versionen|  
 |.NET Framework Version 1.1 und höher|Internet Explorer 5.01 und höhere Versionen<br /><br /> Microsoft Foundation Classes (MFC) 7.0 und höher|  
@@ -51,19 +51,19 @@ Windows Forms-Anwendungen und-Steuerelemente können mit einigen Einschränkunge
   
  Damit ein Windows Form aus einer COM-Clientanwendung heraus ordnungsgemäß funktioniert, müssen Sie es in einer Windows Forms-Nachrichtenschleife ausführen. Hierzu können Sie einen der folgenden Ansätze verwenden:  
   
-- Verwenden Sie die <xref:System.Windows.Forms.Form.ShowDialog%2A?displayProperty=nameWithType> -Methode, um das Windows Form anzuzeigen. Weitere Informationen finden Sie unter [Vorgehensweise: Unterstützen von COM-Interop durch Anzeigen eines Windows Forms mit der ShowDialog-Methode](com-interop-by-displaying-a-windows-form-shadow.md).  
+- Verwenden Sie die <xref:System.Windows.Forms.Form.ShowDialog%2A?displayProperty=nameWithType> -Methode, um das Windows Form anzuzeigen. Weitere Informationen finden Sie unter [How to: Support COM Interop by Displaying a Windows Form with the ShowDialog Method](com-interop-by-displaying-a-windows-form-shadow.md).  
   
-- Zeigen Sie jedes Windows Form in einem neuen Thread an. Weitere Informationen finden Sie unter [Vorgehensweise: Unterstützen von COM-Interop durch Anzeigen jedes Windows Forms in einem eigenen Thread](how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread.md).  
+- Zeigen Sie jedes Windows Form in einem neuen Thread an. Weitere Informationen finden Sie unter [How to: Support COM Interop by Displaying Each Windows Form on Its Own Thread](how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread.md).  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Windows Forms und nicht verwaltete Anwendungen](windows-forms-and-unmanaged-applications.md)
+- [Windows Forms and Unmanaged Applications](windows-forms-and-unmanaged-applications.md)
 - [COM-Interop](../../../visual-basic/programming-guide/com-interop/index.md)
 - [COM-Interoperabilität in .NET Framework-Anwendungen](../../../visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md)
 - [Beispiele für COM-Interoperabilität](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/cxcz83xf(v=vs.90))
 - [Aximp.exe (Windows Forms ActiveX Control Importer-Tool)](../../tools/aximp-exe-windows-forms-activex-control-importer.md)
 - [Verfügbarmachen von .NET Framework-Komponenten in COM](../../interop/exposing-dotnet-components-to-com.md)
-- [Verpacken einer Assembly für COM](../../interop/packaging-an-assembly-for-com.md)
+- [Packaging an Assembly for COM (Verpacken einer Assembly für das COM)](../../interop/packaging-an-assembly-for-com.md)
 - [Registrieren von Assemblys bei COM](../../interop/registering-assemblies-with-com.md)
 - [Gewusst wie: Unterstützen von COM-Interop durch Anzeigen eines Windows Forms mit der ShowDialog-Methode](com-interop-by-displaying-a-windows-form-shadow.md)
 - [How to: Support COM Interop by Displaying Each Windows Form on Its Own Thread](how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread.md)

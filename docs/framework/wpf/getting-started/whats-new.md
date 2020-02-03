@@ -126,6 +126,6 @@ ms.locfileid: "76746922"
 ## <a name="markup-extensions-for-events"></a>Markuperweiterungen für Ereignisse  
  WPF 4.5 unterstützt Markuperweiterungen für Ereignisse.  WPF definiert zwar keine Markuperweiterung zur Verwendung für Ereignisse, diese können aber von Drittanbietern erstellt werden.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Neuigkeiten in .NET Framework](../../whats-new/index.md)

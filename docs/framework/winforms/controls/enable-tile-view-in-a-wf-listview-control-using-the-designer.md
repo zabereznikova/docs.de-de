@@ -30,7 +30,7 @@ Mit der Kachel Ansicht des <xref:System.Windows.Forms.ListView>-Steuer Elements 
 
 2. Wählen Sie im Fenster **Eigenschaften** die Eigenschaft <xref:System.Windows.Forms.ListView.View%2A> aus, und wählen Sie dann die **Kachel**aus.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Windows.Forms.ListView.TileSize%2A>
 - [Übersicht über das ListView-Steuerelement](listview-control-overview-windows-forms.md)

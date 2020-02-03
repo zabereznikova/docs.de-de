@@ -59,7 +59,7 @@ Das Windows Forms <xref:System.Windows.Forms.MonthCalendar>-Steuerelement kann T
     monthCalendar1->AddBoldedDate(myVacation2);  
     ```  
   
-     – oder –  
+     – Oder –  
   
      Legen Sie alle Daten auf einmal fett formatiert, indem Sie ein Array von <xref:System.DateTime> Objekten erstellen und es einer der Eigenschaften zuweisen.  
   
@@ -97,7 +97,7 @@ Das Windows Forms <xref:System.Windows.Forms.MonthCalendar>-Steuerelement kann T
     monthCalendar1->RemoveBoldedDate(myVacation2);  
     ```  
   
-     – oder –  
+     – Oder –  
   
      Entfernen Sie alle fett formatierten Datumsangaben aus einer der drei Listen, indem Sie die <xref:System.Windows.Forms.MonthCalendar.RemoveAllBoldedDates%2A>-, <xref:System.Windows.Forms.MonthCalendar.RemoveAllAnnuallyBoldedDates%2A>-oder <xref:System.Windows.Forms.MonthCalendar.RemoveAllMonthlyBoldedDates%2A>-Methode aufrufen.  
   
@@ -127,7 +127,7 @@ Das Windows Forms <xref:System.Windows.Forms.MonthCalendar>-Steuerelement kann T
     monthCalendar1->UpdateBoldedDates();  
     ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [MonthCalendar-Steuerelement](monthcalendar-control-windows-forms.md)
 - [Gewusst wie: Auswählen eines Datumsbereichs mithilfe des MonthCalendar-Steuerelements in Windows Forms](how-to-select-a-range-of-dates-in-the-windows-forms-monthcalendar-control.md)

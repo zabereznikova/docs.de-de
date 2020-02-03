@@ -35,7 +35,7 @@ Das `SplitContainer`-Steuerelement in Windows Forms kann als zusammengesetztes S
   
  Weitere Informationen finden Sie unter Gewusst wie: [horizontales Teilen eines Fensters mithilfe des Designers](how-to-split-a-window-horizontally-using-the-designer.md), Gewusst [wie: Erstellen einer Windows-Explorer – stilschnittstelle in einem Windows Form](how-to-create-a-windows-explorer-style-interface-on-a-windows-form.md), Gewusst [wie: Erstellen einer Multipane-Benutzeroberfläche mit Windows Forms mithilfe des Designers](create-a-multipane-user-interface-with-wf-using-the-designer.md).  
   
-## <a name="reference"></a>Referenz  
+## <a name="reference"></a>Verweis  
  <xref:System.Windows.Forms.SplitContainer>-Klasse  
  Beschreibt diese Klasse und enthält Links zu allen deren Membern.  
   
@@ -43,5 +43,5 @@ Das `SplitContainer`-Steuerelement in Windows Forms kann als zusammengesetztes S
  [Windows Forms-Steuerelemente](index.md)  
  Enthält Links zu Themen über Steuerelemente, die speziell für Windows Forms vorgesehen sind.  
   
- [Windows Forms-Steuerelemente](controls-to-use-on-windows-forms.md)  
+ [Steuerelemente für Windows Forms](controls-to-use-on-windows-forms.md)  
  Enthält eine vollständige Liste der Windows Forms-Steuerelemente mit Links zu Informationen zur jeweiligen Verwendung.

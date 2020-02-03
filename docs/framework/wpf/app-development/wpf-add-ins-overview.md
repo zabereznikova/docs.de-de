@@ -25,7 +25,7 @@ ms.locfileid: "76738942"
 
 <a name="Requirements"></a>
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
+## <a name="prerequisites"></a>Voraussetzungen
 
 Vertrautheit mit dem .NET Framework Add-in-Modell ist erforderlich. Weitere Informationen finden Sie unter [Add-Ins und Erweiterbarkeit](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)).
 
@@ -189,7 +189,7 @@ Folglich besteht der erste Schritt darin, die Pipeline-und Add-in-Assembly in de
 
 Tabelle 1: Buildausgabepfade für die Pipelineassemblys, die von einer XBAP gehostet werden
 
-|Pipelineassemblyprojekt|Ausgabepfad erstellen|
+|Pipelineassemblyprojekt|Buildausgabepfad|
 |-------------------------------|-----------------------|
 |Vertrag|`..\HostXBAP\Contracts\`|
 |Add-In-Ansicht|`..\HostXBAP\AddInViews\`|
@@ -308,11 +308,11 @@ Abgesehen von den Vorteilen, die WPF den Standardverhalten von <xref:System.Wind
 
 Wenn mehrere Anwendungs Domänen verwendet werden, werden standardmäßig die verschiedenen .NET Framework Assemblys, die von jeder Anwendung benötigt werden, in die Domäne dieser Anwendung geladen. Aufgrund der Zeit, die zum Erstellen neuer Anwendungsdomänen und für das Starten der darin enthaltenen Anwendungen erforderlich ist, kann die Leistung beeinträchtigt werden. Die .NET Framework bietet jedoch die Möglichkeit, die Startzeiten zu verkürzen, indem Anwendungen angewiesen werden, Assemblys über Anwendungs Domänen hinweg freizugeben, wenn Sie bereits geladen sind. Hierzu verwenden Sie das <xref:System.LoaderOptimizationAttribute>-Attribut, das auf die Einstiegspunkt Methode (`Main`) angewendet werden muss. In diesem Fall müssen Sie lediglich zum Implementieren Ihrer Anwendungsdefinition Code verwenden (siehe [Übersicht über die Anwendungsverwaltung](application-management-overview.md)).
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.LoaderOptimizationAttribute>
 - [Add-Ins und Erweiterbarkeit](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))
 - [Anwendungsdomänen](../../app-domains/application-domains.md)
 - [Übersicht über .NET Framework Remoting](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/kwdt6w2k(v=vs.100))
 - [Erstellen von Objekten als remotable](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/wcf3swha(v=vs.100))
-- [Gewusst wie-Themen](how-to-topics.md)
+- [How-to Topics (Themen zur Vorgehensweise)](how-to-topics.md)

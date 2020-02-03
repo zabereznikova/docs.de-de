@@ -137,7 +137,7 @@ ms.locfileid: "76738284"
   
 - Eine Zeichenfolge.  
   
-- Ein <xref:System.DateTime>-Objekt.  
+- Ein <xref:System.DateTime> -Objekt.  
   
 - Ein <xref:System.Windows.UIElement>.  
   
@@ -221,9 +221,9 @@ Textfeld mit einem Rahmen
 ## <a name="classes-that-enable-users-to-enter-text"></a>Klassen, mit denen Benutzer Text eingeben können  
  WPF bietet drei primäre Steuerelemente, mit denen Benutzer Text eingeben können. Jedes Steuerelement zeigt den Text unterschiedlich an. Die folgende Tabelle enthält diese drei textbezogene Steuerelemente, ihre Funktionen bei der Textanzeige und ihre Eigenschaften, die den Text des Steuerelements enthalten.  
   
-|Steuerelement|Text wird angezeigt als|Inhaltseigenschaft|  
+|Control|Text wird angezeigt als|Inhaltseigenschaft|  
 |-------------|--------------------------|----------------------|  
-|<xref:System.Windows.Controls.TextBox>|Unverschlüsselter Text|<xref:System.Windows.Controls.TextBox.Text%2A>|  
+|<xref:System.Windows.Controls.TextBox>|Nur-Text|<xref:System.Windows.Controls.TextBox.Text%2A>|  
 |<xref:System.Windows.Controls.RichTextBox>|Formatierter Text|<xref:System.Windows.Controls.RichTextBox.Document%2A>|  
 |<xref:System.Windows.Controls.PasswordBox>|Ausgeblendeter Text (Zeichen werden maskiert)|<xref:System.Windows.Controls.PasswordBox.Password%2A>|  
   
@@ -235,11 +235,11 @@ Textfeld mit einem Rahmen
   
  In der folgenden Tabelle wird die Content-Eigenschaft für die Klassen <xref:System.Windows.Controls.FlowDocumentReader>, <xref:System.Windows.Controls.FlowDocumentPageViewer>und <xref:System.Windows.Controls.FlowDocumentScrollViewer> aufgelistet.  
   
-|Steuerelement|Inhaltseigenschaft|Inhaltseigenschaftstyp|  
+|Control|Inhaltseigenschaft|Inhaltseigenschaftstyp|  
 |-------------|----------------------|---------------------------|  
-|<xref:System.Windows.Controls.FlowDocumentPageViewer>|Dokumentieren|<xref:System.Windows.Documents.IDocumentPaginatorSource>|  
-|<xref:System.Windows.Controls.FlowDocumentReader>|Dokumentieren|<xref:System.Windows.Documents.FlowDocument>|  
-|<xref:System.Windows.Controls.FlowDocumentScrollViewer>|Dokumentieren|<xref:System.Windows.Documents.FlowDocument>|  
+|<xref:System.Windows.Controls.FlowDocumentPageViewer>|Dokument|<xref:System.Windows.Documents.IDocumentPaginatorSource>|  
+|<xref:System.Windows.Controls.FlowDocumentReader>|Dokument|<xref:System.Windows.Documents.FlowDocument>|  
+|<xref:System.Windows.Controls.FlowDocumentScrollViewer>|Dokument|<xref:System.Windows.Documents.FlowDocument>|  
   
  Der <xref:System.Windows.Documents.FlowDocument> implementiert die <xref:System.Windows.Documents.IDocumentPaginatorSource>-Schnittstelle. Daher können alle drei Klassen eine <xref:System.Windows.Documents.FlowDocument> als Inhalt annehmen.  
   
@@ -247,6 +247,6 @@ Textfeld mit einem Rahmen
 ## <a name="classes-that-format-your-text"></a>Klassen, die den Text formatieren  
  mit <xref:System.Windows.Documents.TextElement> und den zugehörigen Klassen können Sie Text formatieren. <xref:System.Windows.Documents.TextElement> Objekte enthalten und formatieren Text in <xref:System.Windows.Controls.TextBlock>-und <xref:System.Windows.Documents.FlowDocument>-Objekten. Die beiden primären Typen von <xref:System.Windows.Documents.TextElement> Objekten sind <xref:System.Windows.Documents.Block> Elemente und <xref:System.Windows.Documents.Inline> Elemente. Ein <xref:System.Windows.Documents.Block> Element stellt einen TextBlock dar, z. b. einen Absatz oder eine Liste. Ein <xref:System.Windows.Documents.Inline>-Element stellt einen Teil des Texts in einem-Block dar. Viele <xref:System.Windows.Documents.Inline> Klassen geben die Formatierung für den Text an, auf den Sie angewendet werden. Jede <xref:System.Windows.Documents.TextElement> verfügt über ein eigenes Inhalts Modell. Weitere Informationen finden Sie unter [Übersicht über das TextElement-Inhaltsmodell](../advanced/textelement-content-model-overview.md).  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Erweitert](../advanced/index.md)

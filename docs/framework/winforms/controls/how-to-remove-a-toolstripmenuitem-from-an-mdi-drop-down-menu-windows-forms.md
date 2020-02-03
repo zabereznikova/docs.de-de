@@ -44,9 +44,9 @@ In einigen Anwendungen kann sich die Art eines untergeordneten MDI-Fensters (Mul
   
     |Form2 (Menü Element)|MergeAction-Wert|Mergeingedex-Wert|  
     |---------------------|-----------------------|----------------------|  
-    |File|Nur MatchOnly|-1|  
+    |Datei|Nur MatchOnly|-1|  
     |Importieren aus|Nur MatchOnly|-1|  
-    |Word|Diagramm|-1|  
+    |Wort|Remove (Entfernen)|-1|  
   
 10. Erstellen Sie in `Form1`einen Ereignishandler für das <xref:System.Windows.Forms.Control.Click>-Ereignis der `&Open`<xref:System.Windows.Forms.ToolStripMenuItem>.  
   
@@ -86,7 +86,7 @@ In einigen Anwendungen kann sich die Art eines untergeordneten MDI-Fensters (Mul
     ```  
   
 ## <a name="compiling-the-code"></a>Kompilieren des Codes  
- Für dieses Beispiel benötigen Sie Folgendes:  
+ Dieses Beispiel erfordert Folgendes:  
   
 - Zwei <xref:System.Windows.Forms.Form>-Steuerelemente namens `Form1` und `Form2`.  
   
@@ -94,7 +94,7 @@ In einigen Anwendungen kann sich die Art eines untergeordneten MDI-Fensters (Mul
   
 - Verweise auf die Assemblys <xref:System?displayProperty=nameWithType> und <xref:System.Windows.Forms?displayProperty=nameWithType>.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Gewusst wie: Erstellen von übergeordneten MDI-Formularen](../advanced/how-to-create-mdi-parent-forms.md)
 - [Gewusst wie: Erstellen von untergeordneten MDI-Formularen](../advanced/how-to-create-mdi-child-forms.md)

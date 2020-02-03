@@ -15,7 +15,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76746796"
 ---
-# <a name="walkthrough-performing-a-drag-and-drop-operation-in-windows-forms"></a>Exemplarische Vorgehensweise: Ausführen von Drag & Drop-Operationen in Windows Forms
+# <a name="walkthrough-performing-a-drag-and-drop-operation-in-windows-forms"></a>Exemplarische Vorgehensweise: Ausführen von Drag & Drop-Vorgängen in Windows Forms
 Um Drag & Drop-Vorgänge in Windows-basierten Anwendungen auszuführen, müssen Sie eine Reihe von Ereignissen verarbeiten, insbesondere die <xref:System.Windows.Forms.Control.DragEnter>-, <xref:System.Windows.Forms.Control.DragLeave>-und <xref:System.Windows.Forms.Control.DragDrop>-Ereignisse. Wenn Sie die Daten aus den Ereignisargumenten dieser Ereignisse verwenden, können Sie Drag & Drop-Vorgänge problemlos vereinfachen.  
   
 ## <a name="dragging-data"></a>Ziehen von Daten  
@@ -106,7 +106,7 @@ Um Drag & Drop-Vorgänge in Windows-basierten Anwendungen auszuführen, müssen 
     > [!NOTE]
     > Außerdem können Sie mit der <xref:System.Windows.Forms.DragEventArgs.KeyState%2A>-Eigenschaft arbeiten, sodass abhängig von den Schlüsseln, die während des Drag & Drop-Vorgangs gedrückt werden, bestimmte Effekte auftreten (z. b. ist es Standard, die gezogenen Daten zu kopieren, wenn die STRG-Taste gedrückt wird).  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Gewusst wie: Hinzufügen von Daten zur Zwischenablage](how-to-add-data-to-the-clipboard.md)
 - [Gewusst wie: Abrufen von Daten aus der Zwischenablage](how-to-retrieve-data-from-the-clipboard.md)

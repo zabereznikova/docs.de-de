@@ -128,7 +128,7 @@ Sie können auch die Version der .NET Framework überprüfen, für die die Anwen
 Console.WriteLine(AppDomain.CurrentDomain.SetupInformation.TargetFrameworkName);
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Konfigurations Element Windows Forms hinzufügen](../configure-apps/file-schema/winforms/windows-forms-add-configuration-element.md)
 - [Anpassen der Größe und Skalieren von Windows Forms](adjusting-the-size-and-scale-of-windows-forms.md)

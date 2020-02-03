@@ -21,7 +21,7 @@ In Windows Forms wird die Benutzereingabe in Form von Windows-Meldungen an Anwen
 ## <a name="methods-that-process-user-input-messages"></a>Methoden zum Verarbeiten von Benutzereingabe Meldungen  
  Formulare und Steuerelemente haben Zugriff auf die <xref:System.Windows.Forms.IMessageFilter>-Schnittstelle und einen Satz von über schreibbaren Methoden, die Windows-Meldungen an verschiedenen Punkten in der Nachrichten Warteschlange verarbeiten. Diese Methoden verfügen alle über einen <xref:System.Windows.Forms.Message>-Parameter, der die Details von Windows-Meldungen auf niedriger Ebene kapselt. Sie können diese Methoden implementieren oder außer Kraft setzen, um die Nachricht zu untersuchen und anschließend die Nachricht zu verarbeiten oder an den nächsten Consumer in der Nachrichten Warteschlange zu übergeben. In der folgenden Tabelle werden die Methoden dargestellt, die alle Windows-Meldungen in Windows Forms verarbeiten.  
   
-|-Methode|Hinweise|  
+|Methode|Notizen|  
 |------------|-----------|  
 |<xref:System.Windows.Forms.IMessageFilter.PreFilterMessage%2A>|Diese Methode fängt in die Warteschlange eingereihte Windows-Nachrichten auf Anwendungsebene ab.|  
 |<xref:System.Windows.Forms.Control.PreProcessMessage%2A>|Diese Methode fängt Windows-Meldungen auf der Formular-und Steuerelement Ebene ab, bevor Sie verarbeitet wurden.|  
@@ -31,8 +31,8 @@ In Windows Forms wird die Benutzereingabe in Form von Windows-Meldungen an Anwen
   
  Tastatur-und Maus Meldungen werden auch von einem zusätzlichen Satz von über schreibbaren Methoden verarbeitet, die für diese Nachrichten Typen spezifisch sind. Weitere Informationen finden Sie unter [Funktionsweise von Tastatureingaben](how-keyboard-input-works.md) und [Funktionsweise von Maus Eingaben in Windows Forms](how-mouse-input-works-in-windows-forms.md).  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Benutzereingabe in Windows Forms](user-input-in-windows-forms.md)
+- [Benutzereingaben in Windows Forms](user-input-in-windows-forms.md)
 - [Tastatureingaben in einer Windows Forms-Anwendung](keyboard-input-in-a-windows-forms-application.md)
 - [Mauseingabe in einer Windows Forms-Anwendung](mouse-input-in-a-windows-forms-application.md)

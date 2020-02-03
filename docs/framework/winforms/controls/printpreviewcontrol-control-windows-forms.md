@@ -21,7 +21,7 @@ Mit dem `PrintPreviewControl`-Steuerelement von Windows Forms wird ein Dokument 
  [Übersicht über das PrintPreviewControl-Steuerelement](printpreviewcontrol-control-overview-windows-forms.md)  
  Stellt die allgemeinen Konzepte des `PrintPreviewControl`-Steuerelements vor, mit dem Sie ein eigenes Dialogfeld oder eine eigene Komponente für die Seitenansicht entwerfen können.  
   
-## <a name="reference"></a>Referenz  
+## <a name="reference"></a>Verweis  
  <xref:System.Windows.Forms.PrintPreviewControl>  
  Enthält Referenzinformationen zur Klasse und zu ihren Membern.  
   
@@ -29,5 +29,5 @@ Mit dem `PrintPreviewControl`-Steuerelement von Windows Forms wird ein Dokument 
  [PrintPreviewDialog-Steuerelement](printpreviewdialog-control-windows-forms.md)  
  Beschreibt eine alternative Methode zum Erstellen von Seitenansichtsfunktionen.  
   
- [Windows Forms-Steuerelemente](controls-to-use-on-windows-forms.md)  
+ [Steuerelemente für Windows Forms](controls-to-use-on-windows-forms.md)  
  Enthält eine vollständige Liste der Windows Forms-Steuerelemente mit Links zu Informationen zur jeweiligen Verwendung.

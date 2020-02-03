@@ -63,7 +63,7 @@ In diesem Thema wird erläutert, wie Clients Dienste adressieren, die Daten aus 
  Das Angeben der `QueueTransferProtocol`-Eigenschaft wirkt sich nur auf das Senden aus. Dadurch gibt der Client an, welche Art von Warteschlangenübertragungsprotokoll verwendet werden soll.  
   
 ### <a name="using-active-directory"></a>Using Active Directory  
- MSMQ wird mit Unterstützung für Active Directory-Integration geliefert. Wenn MSMQ mit Active Directory-Integration installiert wird, muss der Computer Teil einer Windows-Domäne sein. Active Directory zum Veröffentlichen von Warteschlangen für die Ermittlung verwendet wird. solche Warteschlangen werden als *öffentliche Warteschlangen*bezeichnet. Wenn Sie eine Warteschlange adressieren, kann die Warteschlange mit Active Directory aufgelöst werden. Dies funktioniert auf ähnliche Weise wie bei der Verwendung des DNS-Systems (Domain Name System) für die Auflösung einer IP-Adresse eines Netzwerknamens. Die `UseActiveDirectory`-Eigenschaft in der `NetMsmqBinding` ist ein boolescher Wert, der angibt, ob der in der Warteschlange stehende Kanal Active Directory verwenden muss, um den URI der Warteschlange aufzulösen. In der Standardeinstellung ist die Eigenschaft auf `false` festgelegt. Wenn die `UseActiveDirectory`-Eigenschaft als `true` angegeben wird, verwendet der in der Warteschlange stehende Kanal Active Directory zum Umwandeln des net.msmq://-URI in den Formatnamen.  
+ MSMQ wird mit Unterstützung für Active Directory-Integration geliefert. Wenn MSMQ mit Active Directory-Integration installiert wird, muss der Computer Teil einer Windows-Domäne sein. Active Directory zum Veröffentlichen von Warteschlangen für die Ermittlung verwendet wird. solche Warteschlangen werden als *öffentliche Warteschlangen*bezeichnet. Wenn Sie eine Warteschlange adressieren, kann die Warteschlange mit Active Directory aufgelöst werden. Dies funktioniert auf ähnliche Weise wie bei der Verwendung des DNS-Systems (Domain Name System) für die Auflösung einer IP-Adresse eines Netzwerknamens. Die `UseActiveDirectory`-Eigenschaft in der `NetMsmqBinding` ist ein boolescher Wert, der angibt, ob der in der Warteschlange stehende Kanal Active Directory verwenden muss, um den URI der Warteschlange aufzulösen. Standardwert: `false`. Wenn die `UseActiveDirectory`-Eigenschaft als `true` angegeben wird, verwendet der in der Warteschlange stehende Kanal Active Directory zum Umwandeln des net.msmq://-URI in den Formatnamen.  
   
  Die `UseActiveDirectory`-Eigenschaft hat nur für den Client Bedeutung, der die Nachricht sendet, da sie beim Senden von Nachrichten zur Auflösung der Adresse der Warteschlange verwendet wird.  
   
@@ -73,8 +73,8 @@ In diesem Thema wird erläutert, wie Clients Dienste adressieren, die Daten aus 
 |WCF URI-basierte Warteschlangenadresse|Verwenden Sie die Active Directory-Eigenschaft|Warteschlangen-Übertragungsprotokoll-Eigenschaft|Resultierende MSMQ-Formatnamen|  
 |----------------------------------|-----------------------------------|--------------------------------------|---------------------------------|  
 |NET. MSMQ://\<Computername >/Private/ABC|False (Standardwert)|Systemeigen (Standardwert)|DIRECT=OS:Computername\privat$\abc|  
-|NET. MSMQ://\<Computername >/Private/ABC|Falsch|SRMP|DIRECT=http://machine/msmq/private $/abc|  
-|NET. MSMQ://\<Computername >/Private/ABC|True|Native|PUBLIC=some-guid (die GUID der Warteschlange)|  
+|NET. MSMQ://\<Computername >/Private/ABC|False|SRMP|Direct =http://machine/msmq/private$/ABC|  
+|NET. MSMQ://\<Computername >/Private/ABC|True|Systemeigenes Format|PUBLIC=some-guid (die GUID der Warteschlange)|  
   
 ### <a name="reading-messages-from-the-dead-letter-queue-or-the-poison-message-queue"></a>Lesen von Nachrichten aus der Warteschlange für unzustellbare Nachrichten oder der Warteschlange für potenziell schädliche Nachrichten  
  Zum Lesen von Nachrichten aus einer Warteschlange für potenziell schädliche Nachrichten, bei der es sich um eine Unterwarteschlange der Zielwarteschlange handelt, öffnen Sie den `ServiceHost` mit der Adresse der Unterwarteschlange.  
@@ -100,10 +100,10 @@ In diesem Thema wird erläutert, wie Clients Dienste adressieren, die Daten aus 
   
  Beachten Sie, dass Sie nur direkte Formatnamen verwenden können und dass Sie öffentliche und private Formatnamen (dies erfordert die Integration von Active Directory) verwenden können, wenn Nachrichten von einer Warteschlange mithilfe von `MsmqIntegrationBinding` empfangen werden. Es wird jedoch empfohlen, direkte Formatnamen zu verwenden. Beispielsweise verursacht unter Windows Vista die Verwendung eines beliebigen anderen Format namens einen Fehler, da das System versucht, eine unter Warteschlange zu öffnen, die nur mit direkten Format Namen geöffnet werden kann.  
   
- Bei der Adressierung von SRMP mithilfe von `MsmqIntegrationBinding` ist es nicht erforderlich, /msmq/ zu dem direkten Formatnamen hinzuzufügen, um das Senden durch Internetinformationsdienste (Internet Information Services, IIS) zu unterstützen. Beispiel: Wenn Sie eine Warteschlange mit dem SRMP-Protokoll anstelle von Direct =http://adatum.com/msmq/private $/ABC adressieren, sollten Sie Direct =http://adatum.com/private $/ABC. verwenden.  
+ Bei der Adressierung von SRMP mithilfe von `MsmqIntegrationBinding` ist es nicht erforderlich, /msmq/ zu dem direkten Formatnamen hinzuzufügen, um das Senden durch Internetinformationsdienste (Internet Information Services, IIS) zu unterstützen. Beispiel: Wenn Sie eine Warteschlange mit dem SRMP-Protokoll anstelle von Direct =http://adatum.com/msmq/private$/ABC adressieren, sollten Sie Direct =http://adatum.com/private$/ABC. verwenden.  
   
  Beachten Sie, dass Sie net.msmq:// nicht für die Adressierung mit `MsmqIntegrationBinding` verwenden können. Da `MsmqIntegrationBinding` die Verwendung von MSMQ-Format Namen Adressierung unterstützt, können Sie einen WCF-Dienst verwenden, der diese Bindung verwendet, um Multicast-und Verteilerlisten Features in MSMQ zu verwenden. Eine Ausnahme ist das Angeben von `CustomDeadLetterQueue` bei der Verwendung von `MsmqIntegrationBinding`. Das Format muss net.msmq sein:// sein, ähnlich wie bei der Verwendung von `NetMsmqBinding` festgelegt.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Webhosting einer Anwendung mit Queuing](../../../../docs/framework/wcf/feature-details/web-hosting-a-queued-application.md)

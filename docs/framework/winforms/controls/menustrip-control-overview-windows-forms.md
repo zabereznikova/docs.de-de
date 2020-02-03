@@ -34,7 +34,7 @@ Menüs machen die Funktionalität für Ihre Benutzer verfügbar, indem Sie Befeh
   
  In der folgenden Tabelle werden einige besonders wichtige Eigenschaften von <xref:System.Windows.Forms.MenuStrip> und zugeordneten Klassen angezeigt.  
   
-|Die Eigenschaften-|Beschreibung|  
+|Eigenschaft|BESCHREIBUNG|  
 |--------------|-----------------|  
 |<xref:System.Windows.Forms.MenuStrip.MdiWindowListItem%2A>|Ruft den <xref:System.Windows.Forms.ToolStripMenuItem> ab, mit dem eine Liste von untergeordneten MDI-Formularen angezeigt wird, oder legt diesen fest.|  
 |<xref:System.Windows.Forms.ToolStripItem.MergeAction%2A?displayProperty=nameWithType>|Ruft ab oder legt fest, wie untergeordnete Menüs mit übergeordneten Menüs in MDI-Anwendungen zusammengeführt werden.|  
@@ -42,19 +42,19 @@ Menüs machen die Funktionalität für Ihre Benutzer verfügbar, indem Sie Befeh
 |<xref:System.Windows.Forms.Form.IsMdiContainer%2A?displayProperty=nameWithType>|Dient zum Abrufen oder Festlegen eines Werts, der angibt, ob das Formular ein Container für untergeordnete MDI-Formulare ist.|  
 |<xref:System.Windows.Forms.MenuStrip.ShowItemToolTips%2A>|Ruft einen Wert ab, der angibt, ob Quick Infos für das <xref:System.Windows.Forms.MenuStrip>angezeigt werden, oder legt diesen fest.|  
 |<xref:System.Windows.Forms.MenuStrip.CanOverflow%2A>|Ruft einen Wert ab, der angibt, ob <xref:System.Windows.Forms.MenuStrip> Überlauffunktionen unterstützt, bzw. legt diesen fest.|  
-|<xref:System.Windows.Forms.ToolStripMenuItem.ShortcutKeys%2A>|Ruft die dem <xref:System.Windows.Forms.ToolStripMenuItem>zugeordneten Tastenkombinationen ab oder legt diese fest.|  
-|<xref:System.Windows.Forms.ToolStripMenuItem.ShowShortcutKeys%2A>|Ruft einen Wert ab, der angibt, ob die dem <xref:System.Windows.Forms.ToolStripMenuItem> zugeordneten Tastenkombinationen neben dem <xref:System.Windows.Forms.ToolStripMenuItem>angezeigt werden, oder legt diesen fest.|  
+|<xref:System.Windows.Forms.ToolStripMenuItem.ShortcutKeys%2A>|Ruft die Tastenkombinationen ab, die dem <xref:System.Windows.Forms.ToolStripMenuItem> zugeordnet sind, bzw. legt diese fest.|  
+|<xref:System.Windows.Forms.ToolStripMenuItem.ShowShortcutKeys%2A>|Ruft einen Wert ab, der angibt, ob die Tastenkombinationen, die dem <xref:System.Windows.Forms.ToolStripMenuItem> zugeordnet sind, neben dem <xref:System.Windows.Forms.ToolStripMenuItem> angezeigt werden, bzw. legt diesen fest.|  
   
  In der folgenden Tabelle sind die wichtigen <xref:System.Windows.Forms.MenuStrip>-Begleit Klassen aufgeführt.  
   
-|Klasse|Beschreibung|  
+|Klasse|BESCHREIBUNG|  
 |-----------|-----------------|  
-|<xref:System.Windows.Forms.ToolStripMenuItem>|Stellt eine auswählbare Option dar, die auf einem <xref:System.Windows.Forms.MenuStrip> oder <xref:System.Windows.Forms.ContextMenuStrip>angezeigt wird|  
+|<xref:System.Windows.Forms.ToolStripMenuItem>|Stellt eine Option dar, die in einem <xref:System.Windows.Forms.MenuStrip> oder einem <xref:System.Windows.Forms.ContextMenuStrip> angezeigt wird, und die ausgewählt werden kann.|  
 |<xref:System.Windows.Forms.ContextMenuStrip>|Stellt ein Kontextmenü dar.|  
 |<xref:System.Windows.Forms.ToolStripDropDown>|Stellt ein Steuerelement dar, mit dem der Benutzer ein einzelnes Element aus einer Liste auswählen kann, die angezeigt wird, wenn der Benutzer auf eine <xref:System.Windows.Forms.ToolStripDropDownButton> oder auf ein höheres Menü Element klickt.|  
 |<xref:System.Windows.Forms.ToolStripDropDownItem>|Stellt grundlegende Funktionen für Steuerelemente bereit, die von <xref:System.Windows.Forms.ToolStripItem> abgeleitet werden, die Dropdown Elemente beim Klicken anzeigen|  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Windows.Forms.ToolStrip>
 - <xref:System.Windows.Forms.MenuStrip>

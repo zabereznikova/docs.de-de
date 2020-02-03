@@ -62,7 +62,7 @@ In den folgenden Themen wird ClickOnce beschrieben, eine Technologie, die für d
  [Gewusst wie: Einschließen einer Datendatei in eine ClickOnce-Anwendung](/visualstudio/deployment/how-to-include-a-data-file-in-a-clickonce-application)  
  Veranschaulicht, wie Sie eine Datei so markieren, dass Sie im ClickOnce-Datenverzeichnis verfügbar ist.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Übersicht über Anwendungseinstellungen](./advanced/application-settings-overview.md)
 - [Veröffentlichen von ClickOnce-Anwendungen](/visualstudio/deployment/publishing-clickonce-applications)

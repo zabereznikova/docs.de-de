@@ -48,7 +48,7 @@ Das Drucken in Windows Forms besteht hauptsächlich aus der Verwendung der [Prin
  Zeigt, wie ein <xref:System.Windows.Forms.PrintPreviewDialog> zum Drucken eines Dokuments verwendet wird.  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
- [PrintDocument-Komponente](../controls/printdocument-component-windows-forms.md)  
+ [PrintDialog-Komponente](../controls/printdocument-component-windows-forms.md)  
  Erläutert die Verwendung der <xref:System.Drawing.Printing.PrintDocument> Komponente.  
   
  [PrintDialog-Komponente](../controls/printdialog-component-windows-forms.md)  
@@ -57,7 +57,7 @@ Das Drucken in Windows Forms besteht hauptsächlich aus der Verwendung der [Prin
  [PrintPreviewDialog-Steuerelement](../controls/printpreviewdialog-control-windows-forms.md)  
  Erläutert die Verwendung des <xref:System.Windows.Forms.PrintPreviewDialog>-Steuer Elements.  
   
- [PageSetupDialog Component](../controls/pagesetupdialog-component-windows-forms.md)  
+ [PageSetupDialog-Komponente](../controls/pagesetupdialog-component-windows-forms.md)  
  Erläutert die Verwendung der <xref:System.Windows.Forms.PageSetupDialog> Komponente.  
   
  <xref:System.Drawing.Printing>  

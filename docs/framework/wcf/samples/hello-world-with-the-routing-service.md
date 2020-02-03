@@ -27,7 +27,7 @@ In diesem Beispiel wird der Windows Communication Foundation (WCF)-Routing Diens
 
 3. Drücken Sie die EINGABETASTE, um den Client zu starten.
 
-     Daraufhin sollte die folgende Ausgabe angezeigt werden:
+     Die folgende Ausgabe wird angezeigt.
 
     ```console
      Add(100,15.99) = 115.99
@@ -57,6 +57,6 @@ In diesem Beispiel wird der Windows Communication Foundation (WCF)-Routing Diens
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\RoutingServices\HelloRoutingService`  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [AppFabric-Hosting-und persistenzbeispiele](https://docs.microsoft.com/previous-versions/appfabric/ff383418(v=azure.10))
