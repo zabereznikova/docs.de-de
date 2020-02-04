@@ -2,12 +2,12 @@
 title: Byrefs
 description: Informationen Sie zu Byref und Byref-ähnlichen Typen in F#, die für die Low-Level-Programmierung verwendet werden.
 ms.date: 11/04/2019
-ms.openlocfilehash: 5aaee1e4eac9ce0d7e9ba89a2ab5f745d31367a0
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.openlocfilehash: 05a40059ad5b72829233b0c4135c76eb1cff4da5
+ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75901312"
+ms.lasthandoff: 02/02/2020
+ms.locfileid: "76965814"
 ---
 # <a name="byrefs"></a>Byrefs
 
@@ -166,7 +166,7 @@ type S(count1: Span<int>, count2: Span<int>) =
 
 `IsByRefLike` impliziert keine `Struct`. Beides muss für den Typ vorhanden sein.
 
-Ein "`byref`-wie" "Struct" in F# ist ein Stack gebundene Wert. Sie wird niemals dem verwalteten Heap zugeordnet. Eine `byref`ähnliche Struktur eignet sich für die Hochleistungs Programmierung, da Sie mit einer Reihe von leistungsstarken Überprüfungen zur Lebensdauer und nicht Erfassung erzwungen wird. Dies sind die Regeln:
+Ein "`byref`-wie" "Struct" in F# ist ein Stack gebundene Wert. Sie wird niemals dem verwalteten Heap zugeordnet. Eine `byref`ähnliche Struktur eignet sich für die Hochleistungs Programmierung, da Sie mit einer Reihe von leistungsstarken Überprüfungen zur Lebensdauer und nicht Erfassung erzwungen wird. Die Regeln lauten wie folgt:
 
 * Sie können als Funktionsparameter, Methoden Parameter, lokale Variablen und Methoden Rückgaben verwendet werden.
 * Sie können keine statischen Member oder Instanzmember einer Klasse oder einer normalen Struktur sein.
@@ -182,14 +182,20 @@ Wenngleich diese Regeln die Nutzung stark einschränken, wird dies durchgeführt
 ByRef-Rückgaben von F#-Funktionen oder Elemente erstellt und verwendet werden können. Bei der Verwendung einer `byref`zurück gebenden Methode wird der Wert implizit dereferenziert. Beispiel:
 
 ```fsharp
-let safeSum(bytes: Span<byte>) =
-    let mutable sum = 0
+let squareAndPrint (data : byref<int>) = 
+    let squared = data*data    // data is implicitly dereferenced
+    printfn "%d" squared
+```
+
+Um einen ByRef-Wert zurückzugeben, muss die Variable, die den Wert enthält, länger als der aktuelle Bereich sein.
+Verwenden Sie außerdem & Wert (wobei value eine Variable ist, die länger als der aktuelle Bereich ist), um ByRef zurückzugeben.
+
+```fsharp
+let mutable sum = 0
+let safeSum (bytes: Span<byte>) =
     for i in 0 .. bytes.Length - 1 do
         sum <- sum + int bytes.[i]
-    sum
-
-let sum = safeSum(mySpanOfBytes)
-printfn "%d" sum // 'sum' is of type 'int'
+    &sum  // sum lives longer than the scope of this function.
 ```
 
 Um die implizite Dereferenzierung zu vermeiden, z. b. einen Verweis über mehrere verkettete Aufrufe zu übergeben, verwenden Sie `&x` (wobei `x` der Wert ist).

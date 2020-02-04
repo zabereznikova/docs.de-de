@@ -6,12 +6,12 @@ helpviewer_keywords:
 - cryptography [.NET Framework], model
 - encryption [.NET Framework], model
 ms.assetid: 12fecad4-fbab-432a-bade-2f05976a2971
-ms.openlocfilehash: f0c00e4cc866c537fe26dd1ad466d6cde95bc608
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 964c63e01a6b09e63e305e9a10dca46e62c18648
+ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75706226"
+ms.lasthandoff: 02/02/2020
+ms.locfileid: "76965957"
 ---
 # <a name="net-framework-cryptography-model"></a>Das Kryptografiemodell in .NET Framework
 
@@ -33,15 +33,11 @@ Wird dieses Muster abgeleiteter Klassen verwendet, ist es einfach, einen neuen A
 
 Als ein Beispiel für die verschiedenen Implementierungen eines Algorithmus können Sie sich symmetrische Algorithmen ansehen. Die Basis für alle symmetrischen Algorithmen ist die <xref:System.Security.Cryptography.SymmetricAlgorithm>-Klasse, die von den folgenden Algorithmen geerbt wird:
 
-1. <xref:System.Security.Cryptography.Aes>
-
-2. <xref:System.Security.Cryptography.DES>
-
-3. <xref:System.Security.Cryptography.RC2>
-
-4. <xref:System.Security.Cryptography.Rijndael>
-
-5. <xref:System.Security.Cryptography.TripleDES>
+* <xref:System.Security.Cryptography.Aes>
+* <xref:System.Security.Cryptography.DES>
+* <xref:System.Security.Cryptography.RC2>
+* <xref:System.Security.Cryptography.Rijndael>
+* <xref:System.Security.Cryptography.TripleDES>
 
 <xref:System.Security.Cryptography.Aes> wird von zwei Klassen geerbt: <xref:System.Security.Cryptography.AesCryptoServiceProvider> und <xref:System.Security.Cryptography.AesManaged>. Die <xref:System.Security.Cryptography.AesCryptoServiceProvider>-Klasse ist ein Wrapper um die Implementierung der Windows-Kryptografie-API (CAPI) von Aes, während die <xref:System.Security.Cryptography.AesManaged>-Klasse vollständig in verwaltetem Code geschrieben ist. Außerdem gibt es einen dritten Typ von Implementierung ,Cryptography Next Generation (CNG), zusätzlich zu den verwalteten und den CAPI-Implementierungen. Ein Beispiel für einen CNG-Algorithmus ist <xref:System.Security.Cryptography.ECDiffieHellmanCng>. CNG-Algorithmen sind ab Windows Vista verfügbar.
 
@@ -62,35 +58,22 @@ Sie können einen Algorithmus für unterschiedliche Zwecke wählen: z. B. für 
 Es folgt eine Liste empfohlener Algorithmen nach Anwendung:
 
 - Datenschutz:
-
   - <xref:System.Security.Cryptography.Aes>
-
 - Datenintegrität:
-
   - <xref:System.Security.Cryptography.HMACSHA256>
-
   - <xref:System.Security.Cryptography.HMACSHA512>
-
 - Digitale Signatur:
-
   - <xref:System.Security.Cryptography.ECDsa>
-
   - <xref:System.Security.Cryptography.RSA>
-
 - Schlüsselaustausch:
-
   - <xref:System.Security.Cryptography.ECDiffieHellman>
-
   - <xref:System.Security.Cryptography.RSA>
-
 - Zufallszahlengenerierung:
-
   - <xref:System.Security.Cryptography.RNGCryptoServiceProvider>
-
 - Generieren eines Schlüssels aus einem Kennwort:
-
   - <xref:System.Security.Cryptography.Rfc2898DeriveBytes>
 
 ## <a name="see-also"></a>Siehe auch
 
 - [Cryptographic Services](../../../docs/standard/security/cryptographic-services.md)
+- [Angewendete Kryptografieprotokolle, Algorithmen und Quellcode in C, von Bruce Schneier](https://www.schneier.com/books/applied_cryptography/)
