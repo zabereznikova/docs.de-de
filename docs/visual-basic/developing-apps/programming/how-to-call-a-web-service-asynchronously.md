@@ -5,12 +5,12 @@ helpviewer_keywords:
 - asynchronous calls [Visual Basic]
 - Web services [Visual Basic], accessing
 ms.assetid: ff8046f4-f1f2-4d8b-90b7-95e3f7415418
-ms.openlocfilehash: 0eeb358ba38836ba6302f98f9e3e0314b83510f0
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: d288cc1f2991a8f504dc9f1b206bba76fa378b75
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74352121"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76794565"
 ---
 # <a name="how-to-call-a-web-service-asynchronously-visual-basic"></a>Vorgehensweise: Asynchrones Aufrufen eines Webdiensts (Visual Basic)
 
@@ -23,11 +23,11 @@ Mit der Proxyklasse ist es möglich, die Webdienstmethoden synchron aufzurufen, 
 > [!NOTE]
 > Dieser Code funktioniert nicht in Webanwendungen, denn ASP.NET unterstützt nicht das Objekt `My.WebServices`.
 
-### <a name="to-call-a-web-service-asynchronously"></a>Asynchroner Aufruf eines Webdiensts
+## <a name="call-a-web-service-asynchronously"></a>Asynchrones Aufrufen eines Webdiensts
 
 1. Referenzieren Sie den Webdienst DemoTemperatureService unter `http://www.xmethods.net`. Die Adresse lautet
 
-    ```
+    ```http
     http://www.xmethods.net/sd/2001/DemoTemperatureService.wsdl
     ```
 
@@ -68,5 +68,5 @@ Mit der Proxyklasse ist es möglich, die Webdienstmethoden synchron aufzurufen, 
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Zugreifen auf Anwendungswebdienste](../../../visual-basic/developing-apps/programming/accessing-application-web-services.md)
-- [My.WebServices-Objekt](../../../visual-basic/language-reference/objects/my-webservices-object.md)
+- [Zugreifen auf Anwendungswebdienste](accessing-application-web-services.md)
+- [My.WebServices-Objekt](../../language-reference/objects/my-webservices-object.md)

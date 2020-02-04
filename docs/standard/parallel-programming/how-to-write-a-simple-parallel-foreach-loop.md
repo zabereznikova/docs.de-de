@@ -9,12 +9,12 @@ helpviewer_keywords:
 - foreach, parallel version
 - parallel programming, foreach
 ms.assetid: cb5fab92-1c19-499e-ae91-8b7525dd875f
-ms.openlocfilehash: c2f2484f37c0e99f45b3f10951540c2bb3a4cb8d
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 528e22d6b54179181d1479f4feaedfbf82933c58
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73134174"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76921213"
 ---
 # <a name="how-to-write-a-simple-parallelforeach-loop"></a>Vorgehensweise: Schreiben einer einfachen Parallel.ForEach-Schleife
 
@@ -47,7 +47,7 @@ Sie können den Code als Konsolenanwendung für das .NET Framework oder als Kons
 
 In Visual Studio gibt es Visual Basic- und C#-Konsolenanwendungsvorlagen für Windows Desktop und .NET Core.
 
-Sie können über die Befehlszeile entweder .NET Core und die zugehörigen CLI-Tools (z.B. `dotnet new console` oder `dotnet new console -lang vb`) nutzen oder die Datei erstellen und den Befehlszeilencompiler für eine .NET Framework-Anwendung nutzen.
+Sie können über die Befehlszeile entweder die Befehle der .NET Core-CLI (z. B. `dotnet new console` oder `dotnet new console -lang vb`) verwenden oder die Datei erstellen und den Befehlszeilencompiler für eine .NET Framework-Anwendung nutzen.
 
 Bei einem .NET Core-Projekt müssen Sie auf das NuGet-Paket **System.Drawing.Common** verweisen. Verwenden Sie in Visual Studio den NuGet-Paket-Manager zum Installieren des Pakets. Alternativ können Sie in Ihrer \*.CSPROJ oder \*.VBPROJ-Datei auf das Paket verweisen:
  

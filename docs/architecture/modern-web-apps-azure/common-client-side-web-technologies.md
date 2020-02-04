@@ -4,12 +4,12 @@ description: Entwerfen moderner Webanwendungen mit ASP.NET Core und Azure | Allg
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 4dd747293fba4c18c2d10738d36f4d98cfd3f5b9
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 0e5f3578edc723e2e2a32b9b3a1d8a7dcabd2909
+ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926498"
+ms.lasthandoff: 02/02/2020
+ms.locfileid: "76965749"
 ---
 # <a name="common-client-side-web-technologies"></a>Allgemeine clientseitige Webtechnologien
 
@@ -58,7 +58,7 @@ Diese Aufgaben können Sie alle mit JavaScript alleine durchführen, aber es gib
 
 ### <a name="legacy-web-apps-with-jquery"></a>Legacy-Webanwendungen mit jQuery
 
-Obwohl jQuery für JavaScript-Verhältnisse schon sehr alt ist, ist sie immer noch eine häufig verwendete Bibliothek beim Verwenden von HTML/CSS und beim Erstellen von Anwendungen, die AJAX-Aufrufe an Web-APIs durchführen. jQuery funktioniert auf Ebene des Dokumentobjektmodells (DOM) des Browsers und bietet nur ein imperatives statt eines deklarativen Modells.
+Obwohl jQuery für JavaScript-Verhältnisse schon sehr alt ist, ist sie immer noch eine häufig verwendete Bibliothek bei der Arbeit mit HTML/CSS und beim Erstellen von Anwendungen, die AJAX-Aufrufe an Web-APIs durchführen. jQuery funktioniert auf Ebene des Dokumentobjektmodells (DOM) des Browsers und bietet nur ein imperatives statt eines deklarativen Modells.
 
 Gehen wir z.B. davon aus, dass ein Element auf einer Seite sichtbar gemacht wird, wenn der Wert eines Textfelds höher als 10 ist. Dies sollte in jQuery normalerweise durch das Schreiben eines Ereignishandlers implementiert werden. Dazu wird Code benötigt, der den Wert des Textfelds untersucht und die Sichtbarkeit des Zielelements basierend auf diesem Wert ändert. Dabei handelt es sich um eine imperative, codebasierte Herangehensweise. In einem anderen Framework wird möglicherweise die Datenbindung verwendet, um die Sichtbarkeit von Elementen deklarativ an den Wert des Textfelds zu binden. Dazu ist das Schreiben von Code nicht nötig. Allerdings müssen Sie stattdessen die betreffenden Elemente mit Datenbindungsattributen versehen. Mit steigender Komplexität des clientseitigen Verhaltens gewährleisten Herangehensweisen, die die Datenbindung einsetzen, oft einfachere Lösungen mit weniger Code und weniger bedingter Komplexität.
 
@@ -73,7 +73,7 @@ Gehen wir z.B. davon aus, dass ein Element auf einer Seite sichtbar gemacht wird
 | Vorlagen | **No** | **Ja** |
 | Deep-Link-Routing | **No** | **Ja** |
 
-Die meisten Features, die jQuery fehlen, können durch andere Bibliotheken hinzugefügt werden. Ein SPA-Framework wie Angular stellt diese Features einfacher bereit, da diese von Anfang an bei dessen Entwicklung berücksichtigt wurden. Zudem ist jQuery eine sehr imperative Bibliothek, was bedeutet, dass Sie jQuery-Funktionen aufrufen müssen, um Vorgänge mit jQuery durchführen zu können. Die meiste Arbeit und die meisten Funktionen, die von SPA-Frameworks bereitgestellt werden, können deklarativ durchgeführt werden, sodass kein Code geschrieben werden muss.
+Die meisten Features, die jQuery fehlen, können durch andere Bibliotheken hinzugefügt werden. Ein SPA-Framework wie Angular stellt diese Features einfacher bereit, da diese von Anfang an bei dessen Entwicklung berücksichtigt wurden. Zudem ist jQuery eine imperative Bibliothek, was bedeutet, dass Sie jQuery-Funktionen aufrufen müssen, um Vorgänge mit jQuery durchführen zu können. Die meiste Arbeit und die meisten Funktionen, die von SPA-Frameworks bereitgestellt werden, können deklarativ durchgeführt werden, sodass kein Code geschrieben werden muss.
 
 Die Datenbindung ist ein gutes Beispiel dafür. In jQuery ist normalerweise nur eine Codezeile erforderlich, um den Wert eines DOM-Elements abzurufen oder den Wert eines Elements festzulegen. Diesen Code müssen Sie allerdings immer dann schreiben, wenn Sie den Wert eines Elements verändern möchten, und es kann sein, dass dies für mehrere Funktionen auf einer Seite erforderlich ist. Ein weiteres Beispiel ist die Sichtbarkeit von Elementen. In jQuery müssen Sie an verschiedenen Stellen Code schreiben, um zu steuern, welche Elemente sichtbar sein sollen. In allen diesen Fällen muss jedoch beim Gebrauch der Datenbindung kein Code geschrieben werden. Sie binden lediglich den Wert oder die Sichtbarkeit eines Elementes oder mehrerer Elemente an ein *Anzeigemodell* auf der Seite, und dann werden Änderungen des Ansichtsmodells automatisch bei den gebundenen Elementen widergespiegelt.
 
@@ -98,7 +98,7 @@ Komponenten werden mit der Decorator-Funktion @Component definiert, die Metadate
 
 Da Angular-Anwendungen mit Komponenten und Vorlagen statt mit DOM-Elementen arbeiten, ist ihr Grad an Abstraktion höher, und sie erfordern insgesamt weniger Code als Apps, die nur mit JavaScript (auch als „Vanilla JS“ bezeichnet) oder jQuery geschrieben wurden. Außerdem sorgt Angular für einen gewissen Grad an Ordnung bei der Organisation Ihrer clientseitigen Skriptdateien. Gemäß der Konvention verwenden Angular-Apps eine gemeinsame Ordnerstruktur, wobei sich Modul- und Komponentenskriptdateien in einem App-Ordner befinden. Angular-Skripts zum Erstellen, Bereitstellen und Testen der App befinden sich normalerweise in einem Ordner auf einer höheren Ebene.
 
-Angular setzt CLI-Tools (Befehlszeilenschnittstelle) optimal ein. Um lokal mit der Angular-Entwicklung beginnen zu können (wenn Sie git und npm bereits installiert haben), müssen Sie einfach nur ein Repository von GitHub kopieren und `npm install` und `npm start` ausführen. Darüber hinaus ist ein eigenes CLI-Tool im Lieferumfang von Angular enthalten, mit dem Projekte erstellt, Dateien hinzugefügt und Test-, Bündelungs- und Bereitstellungstasks unterstützt werden können. Durch diese CLI-Toolfähigkeit ist Angular insbesondere kompatibel mit ASP.NET Core, das auch CLI-Unterstützung beinhaltet.
+Angular-Apps können mithilfe einer CLI entwickelt werden. Um lokal mit der Angular-Entwicklung beginnen zu können (wenn Sie git und npm bereits installiert haben), müssen Sie einfach nur ein Repository von GitHub kopieren und `npm install` und `npm start` ausführen. Darüber hinaus ist eine eigene CLI im Lieferumfang von Angular enthalten, mit der Projekte erstellt, Dateien hinzugefügt und Test-, Bündelungs- und Bereitstellungstasks unterstützt werden können. Durch diese CLI-Fähigkeit ist Angular insbesondere kompatibel mit ASP.NET Core, das ebenfalls CLI-Unterstützung beinhaltet.
 
 Microsoft hat die Beispielanwendung [eShopOnContainers](https://aka.ms/MicroservicesArchitecture) entwickelt, die eine Angular-SPA-Implementierung enthält. Diese App beinhaltet Angular-Module zum Verwalten von Einkaufswagen in Onlineshops, zum Laden und Anzeigen von Artikeln aus dem Katalog des Shops und zum Verarbeiten einer Bestellung. Sie können die Beispielanwendung von [GitHub](https://github.com/dotnet-architecture/eShopOnContainers/tree/master/src/Web/WebSPA) herunterladen.
 
@@ -132,7 +132,7 @@ Wenn Sie sich für ein JavaScript-Framework entscheiden müssen, das Ihre SPA am
 
 - Enthält es (oder eine zugehörige Bibliothek) alle Features, die Ihre App benötigt?
 
-- Ist eine ausführliche Dokumentation vorhanden?
+- Ist es gut dokumentiert?
 
 - Wie aktiv ist seine Community? Werden damit neue Projekte erstellt?
 

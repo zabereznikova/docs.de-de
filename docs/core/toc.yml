@@ -22,11 +22,11 @@
           href: install/linux-package-manager-ubuntu-1904.md
         - name: Ubuntu 18.04
           href: install/linux-package-manager-ubuntu-1804.md
-        - name: "Ubuntu\_16.04"
+        - name: Ubuntu 16.04
           href: install/linux-package-manager-ubuntu-1604.md
-        - name: CentOS 7
+        - name: "CentOS\_7:"
           href: install/linux-package-manager-centos7.md
-        - name: "Debian\_10"
+        - name: Debian 10
           href: install/linux-package-manager-debian10.md
         - name: Debian 9
           href: install/linux-package-manager-debian9.md
@@ -40,11 +40,11 @@
           href: install/linux-package-manager-opensuse15.md
         - name: RHEL 8.1
           href: install/linux-package-manager-rhel81.md
-        - name: "RHEL\_7"
+        - name: RHEL 7
           href: install/linux-package-manager-rhel7.md
-        - name: "SLES\_15"
+        - name: SLES 15
           href: install/linux-package-manager-sles15.md
-        - name: "SLES\_12"
+        - name: SLES 12
           href: install/linux-package-manager-sles12.md
     - name: Installieren der lokalisierten IntelliSense-Instanz
       href: install/localized-intellisense.md
@@ -79,7 +79,7 @@
       href: whats-new/dotnet-core-2-1.md
     - name: Neuigkeiten in .NET Core 2.0
       href: whats-new/dotnet-core-2-0.md
-- name: Breaking Changes
+- name: Aktuelle Änderungen
   displayName: app compatibility
   href: compatibility/
 - name: Tutorials
@@ -97,7 +97,7 @@
       href: tutorials/using-on-mac-vs.md
     - name: Erstellen einer vollständigen .NET Core-Lösung unter macOS
       href: tutorials/using-on-mac-vs-full-solution.md
-    - name: Erste Schritte mit .NET Core unter Verwendung der CLI-Tools
+    - name: Erste Schritte mit .NET Core unter Verwendung der CLI
       href: tutorials/cli-create-console-app.md
     - name: Organisieren und Testen von Projekten mit .NET Core CLI
       href: tutorials/testing-with-cli.md
@@ -151,11 +151,11 @@
 - name: Anwendungsbereitstellung
   href: deploying/index.md
   items:
-    - name: Bereitstellen von Apps mit CLI-Tools
+    - name: Veröffentlichen von Apps mit der CLI
       href: deploying/deploy-with-cli.md
     - name: Bereitstellen von Apps mit Visual Studio
       href: deploying/deploy-with-vs.md
-    - name: Erstellen eines NuGet-Pakets mit plattformübergreifenden Tools
+    - name: Erstellen eines NuGet-Pakets mit der CLI
       href: deploying/creating-nuget-packages.md
     - name: Rollforward der eigenständigen Runtimebereitstellung
       href: deploying/runtime-patch-selection.md
@@ -189,7 +189,7 @@
       items:
         - name: Debuggen eines Speicherverlusts
           href: diagnostics/debug-memory-leak.md
-- name: Komponententest
+- name: Komponententests
   href: testing/index.md
   items:
     - name: Bewährte Methoden für Komponententests
@@ -220,7 +220,7 @@
       href: /visualstudio/test/live-unit-testing-start
 - name: Kontinuierliche Integration
   href: tools/using-ci-with-cli.md
-- name: Versionskontrolle
+- name: Versionsverwaltung
   href: versions/index.md
   items:
     - name: .NET Core-Versionsauswahl
@@ -231,7 +231,7 @@
   href: rid-catalog.md
 - name: .NET Core SDK – Übersicht
   href: sdk.md
-- name: .NET Core-CLI
+- name: .NET Core CLI
   items:
     - name: Übersicht
       href: tools/index.md
@@ -259,7 +259,7 @@
       href: tools/telemetry.md
     - name: 'global.json: Übersicht'
       href: tools/global-json.md
-    - name: Referenz
+    - name: Verweis
       items:
         - name: dotnet
           href: tools/dotnet.md

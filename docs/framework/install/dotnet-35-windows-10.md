@@ -2,16 +2,20 @@
 title: Installieren von .NET Framework 3.5 unter Windows 10, 8.1, 8
 description: Informationen zum Installieren von .NET Framework 3.5 auf Windows 10, Windows 8.1 und Windows 8.
 ms.date: 07/16/2018
-ms.openlocfilehash: 208016e22eed324a3996552284072c6ad29637a5
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: cfe21c0821b8f3223301dcc802533e1aaf024a79
+ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75716394"
+ms.lasthandoff: 02/02/2020
+ms.locfileid: "76965944"
 ---
 # <a name="install-the-net-framework-35-on-windows-10-windows-81-and-windows-8"></a>Installieren von .NET Framework 3.5 auf Windows 10, Windows 8.1 und Windows 8
 
 Möglicherweise wird .NET Framework 3.5 zum Ausführen einer App auf Windows 10, Windows 8.1 und Windows 8 benötigt. Sie können diese Schritte auch für frühere Versionen von Windows verwenden.
+
+## <a name="download-the-offline-installer"></a>Herunterladen des Offlineinstallers
+
+Der .NET Framework 3.5 SP1-Offlineinstaller ist auf der [.NET Framework 3.5 SP1-Downloadseite](https://dotnet.microsoft.com/download/dotnet-framework/net35-sp1) für Windows-Versionen vor Windows 10 verfügbar.
 
 ## <a name="install-the-net-framework-35-on-demand"></a>Installieren von .NET Framework 3.5 bei Bedarf
 

@@ -3,20 +3,18 @@ title: Erstellen eines REST-Clients mithilfe von .NET Core
 description: In diesem Tutorial lernen Sie verschiedene Features in .NET Core und der Sprache C# kennen.
 ms.date: 01/09/2020
 ms.assetid: 51033ce2-7a53-4cdd-966d-9da15c8204d2
-ms.openlocfilehash: 09eda08f82490070c66d0b290359872c1043b0c2
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: eb7946d669de60c3469ca8098e40b159082ea270
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76737573"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76921087"
 ---
 # <a name="rest-client"></a>REST-Client
 
-## <a name="introduction"></a>Einführung
-
 In diesem Tutorial lernen Sie verschiedene Features in .NET Core und der Sprache C# kennen. Es werden die folgenden Themen abgedeckt:
 
-* Grundlagen der .NET Core-Befehlszeilenschnittstelle (CLI)
+* Die Grundlagen zur .NET Core-CLI
 * Eine Übersicht über die Features der Sprache C#
 * Verwalten von Abhängigkeiten mit NuGet
 * HTTP-Kommunikation
@@ -154,7 +152,7 @@ namespace WebAPIClient
 {
     public class Repository
     {
-        public string name { get; set; };
+        public string name { get; set; }
     }
 }
 ```
@@ -170,7 +168,6 @@ Als Nächstes verwenden Sie das Serialisierungsprogramm, um JSON-Daten in C#-Obj
 ```csharp
 var streamTask = client.GetStreamAsync("https://api.github.com/orgs/dotnet/repos");
 var repositories = await JsonSerializer.DeserializeAsync<List<Repository>>(await streamTask);
-return repositories;
 ```
 
 Sie verwenden einen neuen Namespace, sodass Sie diesen ebenfalls am Anfang der Datei hinzufügen müssen:
@@ -231,7 +228,8 @@ private static async Task<List<Repository>> ProcessRepositories()
 Geben Sie anschließend einfach die Repositorys zurück, nachdem die JSON-Antwort verarbeitet wurde:
 
 ```csharp
-var repositories = serializer.ReadObject(await streamTask) as List<Repository>;
+var streamTask = client.GetStreamAsync("https://api.github.com/orgs/dotnet/repos");
+var repositories = await JsonSerializer.DeserializeAsync<List<Repository>>(await streamTask);
 return repositories;
 ```
 
@@ -255,16 +253,16 @@ Zum Abschluss verarbeiten wir einige weitere Eigenschaften im JSON-Paket, das vo
 Beginnen wir damit, ein paar weitere einfache Typen in die Definition der `Repository`-Klasse einzufügen. Fügen Sie diese Eigenschaften zu dieser Klasse hinzu:
 
 ```csharp
-[JsonPropertyName(Name="description")]
+[JsonPropertyName("description")]
 public string Description { get; set; }
 
-[JsonPropertyName(Name="html_url")]
+[JsonPropertyName("html_url")]
 public Uri GitHubHomeUrl { get; set; }
 
-[JsonPropertyName(Name="homepage")]
+[JsonPropertyName("homepage")]
 public Uri Homepage { get; set; }
 
-[JsonPropertyName(Name="watchers")]
+[JsonPropertyName("watchers")]
 public int Watchers { get; set; }
 ```
 
@@ -293,7 +291,7 @@ Im letzten Schritt fügen wir jetzt die Informationen für den letzten Pushvorga
 Dieses Format entspricht nicht den standardmäßigen .NET-<xref:System.DateTime> -Formaten. Deshalb müssen Sie eine benutzerdefinierte Konvertierungsmethode schreiben. Darüber hinaus möchten Sie wahrscheinlich nicht, dass die unformatierte Zeichenfolge für Benutzer der `Repository`-Klasse verfügbar gemacht wird. Dies kann ebenfalls mithilfe von Attributen gesteuert werden. Definieren Sie zunächst eine `public`-Eigenschaft, die die Zeichenfolgendarstellung des Datums und der Uhrzeit in Ihrer `Repository`-Klasse enthält, und eine `LastPush` `readonly`-Eigenschaft, die eine formatierte Zeichenfolge zurückgibt, die das zurückgegebene Datum darstellt:
 
 ```csharp
-[JsonPropertyName(Name="pushed_at")]
+[JsonPropertyName("pushed_at")]
 public string JsonDate { get; set; }
 
 public DateTime LastPush =>

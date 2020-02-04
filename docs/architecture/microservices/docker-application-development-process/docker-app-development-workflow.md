@@ -2,12 +2,12 @@
 title: Entwicklungsworkflow für Docker-Apps
 description: Erläuterungen zu den Workflowdetails für die Entwicklung von auf Docker basierenden Anwendungen. Beginnen Sie mit den Grundlagen. Gehen Sie dann ausführlicher auf das Optimieren von Dockerfiles ein. Arbeiten Sie zum Schluss mit dem vereinfachten Workflow, der bei der Verwendung mit Visual Studio verfügbar ist.
 ms.date: 01/07/2019
-ms.openlocfilehash: 0c2789377bc388b8ac7373ee7fa46e3141f1b518
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 53675bf974069e9052d6d03b2743314af6f13cf9
+ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "73740359"
+ms.lasthandoff: 02/02/2020
+ms.locfileid: "76965788"
 ---
 # <a name="development-workflow-for-docker-apps"></a>Entwicklungsworkflow für Docker-Apps
 
@@ -409,7 +409,7 @@ Wir gehen in einem der folgenden Abschnitte erneut auf die Datei docker-compose.
 
 ### <a name="working-with-docker-composeyml-in-visual-studio-2017"></a>Arbeiten mit docker-compose.yml in Visual Studio 2017
 
-Visual Studio 2017 (ab Version 15.8) kann, wie zuvor erwähnt, eine Dockerfile zu einem Projekt hinzufügen und zusätzlich noch Orchestratorunterstützung für Docker Compose zu einer Projektmappe.
+Visual Studio 2017 (ab Version 15.8) kann, wie zuvor erwähnt, einem Projekt ein Dockerfile und außerdem einer Projektmappe noch Orchestratorunterstützung für Docker Compose hinzufügen.
 
 Wenn Sie zum ersten Mal Containerorchestratorunterstützung hinzufügen, wie in Abbildung 5.7 gezeigt, erstellt Visual Studio die Dockerfile für das Projekt sowie ein neues Projekt (Dienstbereich) in Ihrer Projektmappe mit mehreren globalen `docker-compose*.yml`-Dateien. Anschließend wird das Projekt diesen Dateien hinzugefügt. Sie können dann die docker-compose.yml-Dateien öffnen und mit zusätzlichen Features aktualisieren.
 
@@ -442,10 +442,10 @@ Wenn die Anwendung nur über einen einzelnen Container verfügt, können Sie sie
 Sie können einen Docker-Container mit dem Befehl `docker run`, wie in Abbildung 5.9 dargestellt, ausführen:
 
 ```console
-  docker run -t -d -p 80:5000 cesardl/netcore-webapi-microservice-docker:first
+docker run -t -d -p 80:5000 cesardl/netcore-webapi-microservice-docker:first
 ```
 
-Der obige Befehl erstellt bei jeder Ausführung eine neue Containerinstanz aus dem angegebenen Image. Sie können den `--name`-Parameter verwenden, um dem Container einen Namen zu geben und anschließend `docker start {name}` (alternativ die Container-ID oder den automatischen Namen), um eine vorhandene Containerinstanz auszuführen.
+Der obige Befehl erstellt bei jeder Ausführung eine neue Containerinstanz aus dem angegebenen Image. Sie können den `--name`-Parameter verwenden, um dem Container einen Namen zu geben, und anschließend `docker start {name}` (alternativ die Container-ID oder den automatischen Namen) einsetzen, um eine vorhandene Containerinstanz auszuführen.
 
 ![Screenshot, in dem ein Docker-Container mithilfe des Befehls „docker run“ ausgeführt wird.](./media/docker-app-development-workflow/use-docker-run-command.png)
 
@@ -453,7 +453,7 @@ Der obige Befehl erstellt bei jeder Ausführung eine neue Containerinstanz aus d
 
 In diesem Fall bindet der Befehl den internen Port 5000 des Containers an Port 80 des Hostcomputers. Dies bedeutet, dass der Host an Port 80 lauscht und an Port 5000 des Containers weiterleitet.
 
-Der dargestellte Hash ist die Container-ID, zudem wird ihm ein zufälliger lesbarer Name zugewiesen, wenn die `--name`-Option nicht verwendet wird.
+Der dargestellte Hash ist die Container-ID. Zudem wird ihm ein zufälliger lesbarer Name zugewiesen, wenn die `--name`-Option nicht verwendet wird.
 
 #### <a name="using-visual-studio"></a>Verwenden von Visual Studio
 
@@ -500,7 +500,7 @@ Wichtig dabei ist, dass Visual Studio 2017, wie in Abbildung 5-12 dargestellt, �
 
 ### <a name="a-note-about-testing-and-deploying-with-orchestrators"></a>Ein Hinweis zum Testen und Bereitstellen mit Orchestratoren
 
-Die Befehle „docker-compose up“ und „docker run“ (oder Ausführen und Debuggen der Container in Visual Studio) sind zum Testen von Containern in der Entwicklungsumgebung geeignet. Verwenden Sie diesen Ansatz jedoch nicht für Produktionsbereitstellungen. Für diese sollten Sie Orchestratoren wie [Kubernetes](https://kubernetes.io/) oder [Service Fabric](https://azure.microsoft.com/services/service-fabric/) anzielen. Wenn Sie Kubernetes verwenden, müssen Sie [Pods](https://kubernetes.io/docs/concepts/workloads/pods/pod/) zum Organisieren von Container verwenden sowie [Dienste](https://kubernetes.io/docs/concepts/services-networking/service/), um diese zu vernetzen. Sie können ebenso [Bereitstellungen](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/) verwenden, um die Erstellung und Änderung von Pods zu organisieren.
+Die Befehle „docker-compose up“ und „docker run“ (oder Ausführen und Debuggen der Container in Visual Studio) sind zum Testen von Containern in der Entwicklungsumgebung geeignet. Verwenden Sie diesen Ansatz jedoch nicht für Produktionsbereitstellungen. Für diese sollten Sie Orchestratoren wie [Kubernetes](https://kubernetes.io/) oder [Service Fabric](https://azure.microsoft.com/services/service-fabric/) anzielen. Wenn Sie Kubernetes verwenden, müssen Sie [Pods](https://kubernetes.io/docs/concepts/workloads/pods/pod/) zum Organisieren von Containern einsetzen sowie [Dienste](https://kubernetes.io/docs/concepts/services-networking/service/), um diese zu vernetzen. Sie können ebenso [Bereitstellungen](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/) verwenden, um die Erstellung und Änderung von Pods zu organisieren.
 
 ![Abbildung für Schritt 6.](./media/docker-app-development-workflow/step-6-test-app-microservices.png)
 

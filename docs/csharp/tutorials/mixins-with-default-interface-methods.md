@@ -3,12 +3,12 @@ title: Erstellen von Mixin-Typen mithilfe von Standardschnittstellenmethoden
 description: Mithilfe von Standardschnittstellenmembern können Sie Schnittstellen mit optionalen Standardimplementierungen für Implementierungpsprogramme erweitern.
 ms.technology: csharp-advanced-concepts
 ms.date: 10/04/2019
-ms.openlocfilehash: fb8fc1f432bdf909bae4f54bb76d10d7619f71a3
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.openlocfilehash: f97410124a4ca5bbb10972ab5e7942fa4af68d72
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74140845"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76921444"
 ---
 # <a name="tutorial-mix-functionality-in-when-creating-classes-using-interfaces-with-default-interface-methods"></a>Tutorial: Untermischen von Funktionalität beim Erstellen von Klassen mithilfe von Schnittstellen mit Standardschnittstellenmethoden
 
@@ -22,9 +22,9 @@ In diesem Tutorial lernen Sie, wie die folgenden Aufgaben ausgeführt werden:
 > * Erstellen von Klassen, die die Standardimplementierungen verwenden.
 > * Erstellen von Klassen, die einige oder alle Standardimplementierungen überschreiben.
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
+## <a name="prerequisites"></a>Voraussetzungen
 
-Sie müssen Ihren Computer zur Ausführung von .NET Core einrichten, einschließlich des C# 8.0-Compilers. Der C# 8.0-Compiler steht ab [Visual Studio 2019, 16.3 Version 16.3.](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) oder mit dem [.NET Core 3.0 SDK](https://dotnet.microsoft.com/download/dotnet-core) oder höher zur Verfügung.
+Sie müssen Ihren Computer zur Ausführung von .NET Core einrichten, einschließlich des C# 8.0-Compilers. Der C# 8.0-Compiler steht ab [Visual Studio 2019 Version 16.3](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) oder ab dem [.NET Core 3.0 SDK](https://dotnet.microsoft.com/download/dotnet-core) zur Verfügung.
 
 ## <a name="limitations-of-extension-methods"></a>Einschränkungen von Erweiterungsmethoden
 
@@ -45,7 +45,7 @@ Stellen Sie sich eine Anwendung für Smart Home-Automatisierung vor. Sie haben w
 
 Einige dieser erweiterten Funktionen können auf Geräten emuliert werden, die den minimalen Satz unterstützen. Dies bedeutet, dass eine Standardimplementierung bereitgestellt wird. Für Geräte, die über mehr integrierte Funktionen verfügen, würde die Gerätesoftware die nativen Funktionen verwenden. Für andere Leuchten können sie sich entscheiden, die Schnittstelle zu implementieren und die Standardimplementierung zu verwenden.
 
-Standardschnittstellenmember sind eine bessere Lösung für dieses Szenario als Erweiterungsmethoden. Klassenautoren können steuern, welche Schnittstellen sie implementieren möchten. Diese Schnittstellen, die sie auswählen, sind als Methoden verfügbar. Da Standardschnittstellenmethoden standardmäßig virtuell sind, wählt die Methodenbindung außerdem immer die Implementierung in der-Klasse aus. 
+Standardschnittstellenmember sind eine bessere Lösung für dieses Szenario als Erweiterungsmethoden. Klassenautoren können steuern, welche Schnittstellen sie implementieren möchten. Diese Schnittstellen, die sie auswählen, sind als Methoden verfügbar. Da Standardschnittstellenmethoden standardmäßig virtuell sind, wählt die Methodenbindung außerdem immer die Implementierung in der-Klasse aus.
 
 Erstellen wir den Code, um diese Unterschiede zu veranschaulichen.
 
@@ -79,7 +79,7 @@ Ein anderer Leuchtentyp unterstützt möglicherweise ein anspruchsvolleres Proto
 
 [!code-csharp[Override the timer function](~/samples/csharp/tutorials/mixins-with-interfaces/HalogenLight.cs?name=SnippetHalogenLight)]
 
-Im Gegensatz zum Überschreiben von Methoden der virtuellen Klasse verwendet die Deklaration von `TurnOnFor` in der `HalogenLight`-Klasse nicht das Schlüsselwort `override`. 
+Im Gegensatz zum Überschreiben von Methoden der virtuellen Klasse verwendet die Deklaration von `TurnOnFor` in der `HalogenLight`-Klasse nicht das Schlüsselwort `override`.
 
 ## <a name="mix-and-match-capabilities"></a>Mix-und-Match-Funktionen
 

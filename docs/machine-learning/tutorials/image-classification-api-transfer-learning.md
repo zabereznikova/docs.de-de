@@ -6,12 +6,12 @@ ms.author: luquinta
 ms.date: 12/12/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 4781e39a0c8827adb6ab0155d5215645242208a5
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 2dfa3cdab9de47b55f7a3f73f0d6e9460390700c
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75348151"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920100"
 ---
 # <a name="tutorial-automated-visual-inspection-using-transfer-learning-with-the-mlnet-image-classification-api"></a>Tutorial: Automatisierte visuelle Überprüfung mithilfe von Transferlernen mit der ML.NET-Bildklassifizierungs-API
 
@@ -28,7 +28,7 @@ In diesem Tutorial lernen Sie, wie die folgenden Aufgaben ausgeführt werden:
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
-- [Visual Studio 2017 15.6 oder höher](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) mit installierter Workload „Plattformübergreifende .NET Core-Entwicklung“.
+- [Visual Studio 2017 Version 15.6 oder höher](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) mit installierter Workload „Plattformübergreifende .NET Core-Entwicklung“.
 
 ## <a name="image-classification-transfer-learning-sample-overview"></a>Beispielübersicht zur Bildklassifizierung mit Transferlernen
 
@@ -140,10 +140,10 @@ In diesem Tutorial werden ausschließlich Bilder von Brückenbelägen verwendet.
 
         `ModelInput` enthält die folgenden Eigenschaften:
 
-        - `ImagePath` ist der vollqualifizierte Pfad, in dem das Bild gespeichert ist.
-        - `Label` ist die Kategorie, zu der das Bild gehört. Dies ist der vorherzusagende Wert.
         - `Image` ist die `byte[]`-Darstellung des Bilds. Bei dem Modell wird erwartet, dass Bilddaten diesen Typ für das Training aufweisen.
         - `LabelAsKey` ist die numerische Darstellung von `Label`.
+        - `ImagePath` ist der vollqualifizierte Pfad, in dem das Bild gespeichert ist.
+        - `Label` ist die Kategorie, zu der das Bild gehört. Dies ist der vorherzusagende Wert.
 
         Nur `Image` und `LabelAsKey` werden verwendet, um das Modell zu trainieren und Vorhersagen zu treffen. Die Eigenschaften `ImagePath` und `Label` werden beibehalten, damit einfacher auf den Namen und die Kategorie der ursprünglichen Bilddatei zugegriffen werden kann.
 
@@ -171,7 +171,7 @@ Wenn sich Trainings-und Validierungsdaten nicht häufig ändern, empfiehlt es si
 
     [!code-csharp [DefinePaths](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification_Binary/Program.cs#L15-L17)]
 
-1. Initialisieren Sie dann die `mlContext`-Variable mit einer neuen Instanz von [MLContext](xref:Microsoft.ML.MLContext).
+1. Initialisieren Sie die `mlContext`-Variable mit einer neuen Instanz von [MLContext](xref:Microsoft.ML.MLContext).
 
     [!code-csharp [MLContext](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification_Binary/Program.cs#L19)]
 
@@ -253,7 +253,7 @@ public static IEnumerable<ImageData> LoadImagesFromDirectory(string folder, bool
 
 Das Modelltraining umfasst mehrere Schritte. Zunächst wird die Bildklassifizierungs-API verwendet, um das Modell zu trainieren. Anschließend werden die verschlüsselten Bezeichnungen in der Spalte `PredictedLabel` mithilfe der `MapKeyToValue`-Transformation wieder in ihren ursprünglichen kategorischen Wert konvertiert.
 
-1. Erstellen Sie eine neue Variable, um einen Satz erforderlicher und optionaler Parameter für ein `ImageClassificationTrainer`-Element zu speichern. 
+1. Erstellen Sie eine neue Variable, um einen Satz erforderlicher und optionaler Parameter für ein `ImageClassificationTrainer`-Element zu speichern.
 
     [!code-csharp [ClassifierOptions](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification_Binary/Program.cs#L46-L57)]
 

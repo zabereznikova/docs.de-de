@@ -5,12 +5,12 @@ helpviewer_keywords:
 - auto-implemented properties [C#]
 - properties [C#], auto-implemented
 ms.assetid: 1dc5a8ad-a4f7-4f32-8506-3fc6d8c8bfed
-ms.openlocfilehash: 170a36e2a10896d9e4d29af602694700fa122e69
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: c2d4fbd2f9e8a343a81d88bacc54a53335e170ec
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714913"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76867385"
 ---
 # <a name="how-to-implement-a-lightweight-class-with-auto-implemented-properties-c-programming-guide"></a>Gewusst wie: Implementieren einer einfachen Klasse mit automatisch implementierten Eigenschaften (C#-Programmierhandbuch)
 
@@ -21,7 +21,30 @@ Für das Erstellen einer unveränderlichen Eigenschaft gibt es zwei Möglichkeit
 - Sie können deklarieren, dass die [set](../../language-reference/keywords/set.md)-Zugriffsmethode [privat](../../language-reference/keywords/private.md) ist.  Die Eigenschaft kann nur im Typ festgelegt werden. Kunden können sie jedoch nicht verändern.
 
   Beim Deklarieren eines privaten `set`-Accessors können Sie einen Objektinitialisierer nicht verwenden, um die Eigenschaft zu initialisieren. Sie müssen eine Konstruktor oder eine Factorymethode verwenden.
-- Sie können einfach den [get](../../language-reference/keywords/get.md)-Accessor deklarieren. Dieser macht die Eigenschaft mit Ausnahme im Konstruktor des Typs überall unveränderlich.
+- Sie können einfach die [get](../../language-reference/keywords/get.md)-Zugriffsmethode deklarieren. Diese macht die Eigenschaft überall (außer im Konstruktor des Typs) unveränderlich.
+
+Das folgende Beispiel zeigt, wie eine Eigenschaft, die nur eine get-Zugriffsmethode aufweist, sich von einer Eigenschaft mit „get“ und „private set“ unterscheidet.
+
+```csharp
+class Contact
+{
+    public string Name { get; }
+    public string Address { get; private set; }
+
+    public Contact(string contactName, string contactAddress)
+    {
+        // Both properties are accessible in the constructor.
+        Name = contactName;
+        Address = contactAddress;
+    }
+
+    // Name isn't assignable here. This will generate a compile error.
+    //public void ChangeName(string newName) => Name = newName; 
+
+    // Address is assignable here.
+    public void ChangeAddress(string newAddress) => Address = newAddress
+}
+```
 
 ## <a name="example"></a>Beispiel
 
@@ -33,8 +56,10 @@ Im folgenden Beispiel werden zwei Möglichkeiten für die Implementierung einer 
 // constructor to initialize its properties.
 class Contact
 {
-    // Read-only properties.
+    // Read-only property.
     public string Name { get; }
+
+    // Read-write property with a private set accessor.
     public string Address { get; private set; }
 
     // Public constructor.
@@ -50,8 +75,10 @@ class Contact
 // static method and private constructor to initialize its properties.
 public class Contact2
 {
-    // Read-only properties.
+    // Read-write property with a private set accessor.
     public string Name { get; private set; }
+
+    // Read-only property.
     public string Address { get; }
 
     // Private constructor.

@@ -8,32 +8,37 @@ helpviewer_keywords:
 - <returns> C# XML tag
 - returns C# XML tag
 ms.assetid: bb2d9958-62fc-47c7-9511-6311171f119f
-ms.openlocfilehash: 16105ed0f4d7b2ea0067e1b2f0409dfa5b30c4a4
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 784d9effa589c962b8a2b982fd199f74309fb4dc
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75694867"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76789715"
 ---
 # <a name="returns-c-programming-guide"></a>\<returns> (C#-Programmierhandbuch)
-## <a name="syntax"></a>Syntax  
-  
-```xml  
-<returns>description</returns>  
-```  
-  
-## <a name="parameters"></a>Parameter  
- `description`  
- Eine Beschreibung des Rückgabewerts.  
-  
-## <a name="remarks"></a>Hinweise  
- Das \<returns>-Tag sollte im Kommentar für eine Methodendeklaration verwendet werden, um den Rückgabewert zu beschreiben.  
-  
- Kompilieren Sie mit [-doc](../../language-reference/compiler-options/doc-compiler-option.md), um Dokumentationskommentare zu einer Datei zu verarbeiten.  
-  
-## <a name="example"></a>Beispiel  
- [!code-csharp[csProgGuideDocComments#10](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDocComments/CS/DocComments.cs#10)]  
-  
+
+## <a name="syntax"></a>Syntax
+
+```xml
+<returns>description</returns>
+```
+
+## <a name="parameters"></a>Parameter
+
+- `description`
+
+  Eine Beschreibung des Rückgabewerts.
+
+## <a name="remarks"></a>Hinweise
+
+Das \<returns>-Tag sollte im Kommentar für eine Methodendeklaration verwendet werden, um den Rückgabewert zu beschreiben.
+
+Kompilieren Sie mit [-doc](../../language-reference/compiler-options/doc-compiler-option.md), um Dokumentationskommentare zu einer Datei zu verarbeiten.
+
+## <a name="example"></a>Beispiel
+
+[!code-csharp[csProgGuideDocComments#10](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDocComments/CS/DocComments.cs#10)]
+
 ## <a name="see-also"></a>Siehe auch
 
 - [C#-Programmierhandbuch](../index.md)

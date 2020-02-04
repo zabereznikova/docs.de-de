@@ -1,15 +1,15 @@
 ---
 title: Dokumentieren von Code mit XML-Kommentaren
 description: Informationen zum Dokumentieren Ihres Codes mit XML-Dokumentationskommentaren und zum Erstellen einer XML-Dokumentationsdatei zum Zeitpunkt der Kompilierung.
-ms.date: 02/14/2017
+ms.date: 01/21/2020
 ms.technology: csharp-fundamentals
 ms.assetid: 8e75e317-4a55-45f2-a866-e76124171838
-ms.openlocfilehash: 6aa52030e20f61b26311347a57629658ebe0e609
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 1ec088db1de7c953bdb20b1129c5fd40f9e31454
+ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75713937"
+ms.lasthandoff: 02/02/2020
+ms.locfileid: "76965931"
 ---
 # <a name="document-your-code-with-xml-comments"></a>Dokumentieren von Code mit XML-Kommentaren
 
@@ -49,7 +49,7 @@ Hier der Code für die einfache math-Bibliothek:
 
 [!code-csharp[Sample Library](../../samples/snippets/csharp/concepts/codedoc/sample-library.cs)]
 
-Die Beispielbibliothek unterstützt die vier wichtigen arithmetischen Operationen `add`, `subtract`, `multiply` und `divide` auf den Datentypen `int` und `double`.
+Die Beispielbibliothek unterstützt vier wichtige arithmetische Operationen (`add`, `subtract`, `multiply` und `divide`) für die Datentypen `int` und `double`.
 
 Nun möchten Sie in der Lage sein, ein API-Referenzdokument aus dem Code für Entwickler von Drittanbietern zu erstellen, die Ihre Bibliothek verwenden, aber keinen Zugriff auf den Quellcode haben.
 Wie bereits in der vorhandenen Dokumentation zu XML zu lesen ist, können Tags verwendet werden, um dies zu erreichen. Im Folgenden stellen wir Ihnen die XML-Standardtags vor, die vom C#-Compiler unterstützt werden.
@@ -61,7 +61,7 @@ Die Verwendung wird veranschaulicht, indem es zur `Math`-Klassendefinition und z
 
 [!code-csharp[Summary Tag](~/samples/snippets/csharp/concepts/codedoc/summary-tag.cs)]
 
-Das `<summary>`-Tag ist sehr wichtig, und es wird empfohlen, dass Sie es einfügen, da sein Inhalt die primäre Quelle für Informationen über Typ oder Member in IntelliSense oder in einem API-Referenzdokument ist.
+Das `<summary>`-Tag ist wichtig, und wir empfehlen, es einzufügen, da sein Inhalt die primäre Quelle für Informationen über Typ oder Member in IntelliSense oder in einem API-Referenzdokument ist.
 
 ## <a name="remarks"></a>\<remarks>
 
@@ -163,12 +163,17 @@ Sie können die gleiche generische Methode verwenden, die Sie zuvor erstellt hab
 
 ## <a name="list"></a>\<list>
 
-Das `<list>`-Tag wird verwendet, um Dokumentationsinformationen als sortierte Liste, unsortierte Liste oder Tabelle zu formatieren.
-Erstellen Sie eine unsortierte Liste aller mathematischen Operationen, die Ihre `Math`-Bibliothek unterstützt.
+Das `<list>`-Tag wird verwendet, um Dokumentationsinformationen als sortierte Liste, unsortierte Liste oder Tabelle zu formatieren. Erstellen Sie eine unsortierte Liste aller mathematischen Operationen, die Ihre `Math`-Bibliothek unterstützt.
 
 [!code-csharp[List Tag](~/samples/snippets/csharp/concepts/codedoc/list-tag.cs)]
 
 Sie können eine sortierte Liste oder eine Tabelle erstellen, indem Sie das Attribut `type` auf `number` bzw. `table` ändern.
+
+## <a name="inheritdoc"></a>\<inheritdoc>
+
+Sie können das `<inheritdoc>`-Tag verwenden, um XML-Kommentare aus Basisklassen, Schnittstellen und ähnlichen Methoden zu erben. So wird das unerwünschte Kopieren und Einfügen doppelter XML-Kommentare vermieden, und XML-Kommentare werden automatisch synchronisiert.
+
+[!code-csharp-interactive[InheritDoc Tag](~/samples/snippets/csharp/concepts/codedoc/inheritdoc-tag.cs)]
 
 ### <a name="put-it-all-together"></a>Zusammenfassung
 
@@ -201,7 +206,7 @@ Das `path`-Attribut stellt eine [XPath](../standard/data/xml/xpath-queries-and-n
 
 Das `name`-Attribut stellt den Namensbezeichner in dem Tag dar, das sich vor den Kommentaren befindet.
 
-Das `id`-Attribut, das anstelle von `name` verwendet werden kann, stellt die ID für das Tag dar, das sich vor den Kommentaren befindet.
+Das `id`-Attribut, das anstelle von `name` verwendet werden kann, stellt die ID für das Tag dar, das den Kommentaren vorangestellt ist.
 
 ### <a name="user-defined-tags"></a>Benutzerdefinierter Tags
 

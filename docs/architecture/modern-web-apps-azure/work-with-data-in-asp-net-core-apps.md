@@ -4,12 +4,12 @@ description: Entwerfen moderner Webanwendungen mit ASP.NET Core und Azure | Arbe
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: fa30deb16be323f059aa0ec12df08793598a6da2
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: d3c91f594eedd2636cbf08285f0dee352bc4835a
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76738357"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76777115"
 ---
 # <a name="working-with-data-in-aspnet-core-apps"></a>Arbeiten mit Daten in ASP.NET Core-Apps
 
@@ -55,7 +55,7 @@ public class CatalogContext : DbContext
 }
 ```
 
-DbContext muss über einen Konstruktor verfügen, der DbContextOptions akzeptiert und dieses Argument an den Basiskonstruktor „DbContext“ übergibt. Beachten Sie, dass Sie nur eine DbContextOptions-Instanz übergeben können, wenn Sie nur über ein DbContext-Element in Ihrer Anwendung verfügen. Wenn es allerdings mehrere Elemente sind, müssen Sie den generischen DbContextOptions\<T>-Typ verwenden, der Ihren DbContext-Typ als generischen Parameter übergibt.
+DbContext muss über einen Konstruktor verfügen, der DbContextOptions akzeptiert und dieses Argument an den Basiskonstruktor „DbContext“ übergibt. Sie können nur eine DbContextOptions-Instanz übergeben, wenn Sie nur über ein DbContext-Element in Ihrer Anwendung verfügen. Wenn es allerdings mehrere Elemente sind, müssen Sie den generischen DbContextOptions\<T>-Typ verwenden, der Ihren DbContext-Typ als generischen Parameter übergibt.
 
 ### <a name="configuring-ef-core"></a>Konfigurieren von EF Core
 
@@ -180,7 +180,7 @@ public class Basket : BaseEntity
 }
 ```
 
-Beachten Sie, dass bei diesem Entitätstyp keine öffentliche `List`- oder `ICollection`-Eigenschaft sondern ein `IReadOnlyCollection`-Typ verfügbar gemacht wird, der den zugrunde liegenden Listentyp einschließt. Wenn Sie dieses Muster nutzen, können Sie festlegen, dass Entity Framework Core das Unterstützungsfeld folgendermaßen verwendet:
+Bei diesem Entitätstyp wird keine öffentliche `List`- oder `ICollection`-Eigenschaft, sondern ein `IReadOnlyCollection`-Typ verfügbar gemacht, der den zugrunde liegenden Listentyp einschließt. Wenn Sie dieses Muster nutzen, können Sie festlegen, dass Entity Framework Core das Unterstützungsfeld folgendermaßen verwendet:
 
 ```csharp
 private void ConfigureBasket(EntityTypeBuilder<Basket> builder)
@@ -271,11 +271,11 @@ Das erste DbContext-Objekt ist \_catalogContext und das zweite befindet sich im 
 
 > ### <a name="references--entity-framework-core"></a>Ressourcen: Entity Framework Core
 >
-> - **EF Core-Dokumentation**  
+> - **EF Core-Dokumentation**
 >   <https://docs.microsoft.com/ef/>
-> - **EF Core: Laden zugehöriger Daten**  
+> - **EF Core: Zugehörige Daten**
 >   <https://docs.microsoft.com/ef/core/querying/related-data>
-> - **Avoid Lazy Loading Entities in ASPNET Applications (Vermeiden von verzögertem Laden von Entitäten in ASP.NET-Anwendungen)**  
+> - **Avoid Lazy Loading Entities in ASPNET Applications (Vermeiden von verzögertem Laden von Entitäten in ASP.NET-Anwendungen)** 
 >   <https://ardalis.com/avoid-lazy-loading-entities-in-asp-net-applications>
 
 ## <a name="ef-core-or-micro-orm"></a>EF Core oder Mikro-ORM?
@@ -332,7 +332,7 @@ Sowohl für die meisten Anwendungen als auch für die meisten Bestandteile von A
 
 ## <a name="sql-or-nosql"></a>SQL und NoSQL im Vergleich
 
-In der Regel werden vorzugsweise relationale Datenbanken wie SQL Server als beständige Datenspeicher verwendet. Es gibt jedoch auch noch andere Möglichkeiten. Beispielsweise bieten NoSQL-Datenbanken wie [MongoDB](https://www.mongodb.com/what-is-mongodb) eine andere Möglichkeit zum Speichern von Objekten. Sie müssen nicht unbedingt Tabellen oder Zeilen Objekten zuordnen, sondern können auch den vollständigen Objektgraphen serialisieren und das Ergebnis speichern. Dieser Ansatz ist, zumindest auf den ersten Blick, einfacher anzuwenden und hat positive Auswirkungen auf die Leistung. Natürlich ist es einfacher, ein serialisiertes Objekt mit einem Schlüssel zu speichern, als das Objekt in mehrere Tabellen zu zerlegen, die in Beziehung miteinander stehen und aktualisiert werden müssen. Dabei kann es nämlich sein, dass Änderungen an den einzelnen Zeilen vorgenommen wurden, nachdem das Objekt zum letzten Mal aus der Datenbank abgerufen wurde. Gleichzeitig ist das Abrufen und Deserialisieren eines einzelnen Objekts aus einem schlüsselbasiertem Speicher viel einfacher und schneller als bei komplizierten Verknüpfungen oder mehreren Datenbankabfragen, die erforderlich sind, um dieses Objekt vollständig aus einer relationalen Datenbank herzustellen. Im Zusammenhang mit NoSQL-Datenbanken gibt es keine Sperren, Transaktionen oder festgelegte Schemata, wodurch die Skalierung für mehrere Computer, die sehr große Datenbanken unterstützen, einfacher wird.
+In der Regel werden vorzugsweise relationale Datenbanken wie SQL Server als beständige Datenspeicher verwendet. Es gibt jedoch auch noch andere Möglichkeiten. Beispielsweise bieten NoSQL-Datenbanken wie [MongoDB](https://www.mongodb.com/what-is-mongodb) eine andere Möglichkeit zum Speichern von Objekten. Sie müssen nicht unbedingt Tabellen oder Zeilen Objekten zuordnen, sondern können auch den vollständigen Objektgraphen serialisieren und das Ergebnis speichern. Dieser Ansatz ist, zumindest auf den ersten Blick, einfacher anzuwenden und hat positive Auswirkungen auf die Leistung. Es ist einfacher, ein serialisiertes Objekt mit einem Schlüssel zu speichern, als das Objekt in mehrere Tabellen zu zerlegen, die in Beziehung miteinander stehen und aktualisiert werden müssen. Dabei kann es nämlich sein, dass Änderungen an den einzelnen Zeilen vorgenommen wurden, nachdem das Objekt zum letzten Mal aus der Datenbank abgerufen wurde. Gleichzeitig ist das Abrufen und Deserialisieren eines einzelnen Objekts aus einem schlüsselbasiertem Speicher viel einfacher und schneller als bei komplizierten Verknüpfungen oder mehreren Datenbankabfragen, die erforderlich sind, um dieses Objekt vollständig aus einer relationalen Datenbank herzustellen. Im Zusammenhang mit NoSQL-Datenbanken gibt es keine Sperren, Transaktionen oder festgelegte Schemata, wodurch die Skalierung für mehrere Computer, die sehr große Datenbanken unterstützen, einfacher wird.
 
 Trotzdem haben NoSQL-Datenbanken auch Nachteile. Relationale Datenbanken verwenden das Prinzip der Normalisierung, um Konsistenz zu erzwingen und zu vermeiden, dass Daten dupliziert werden. Dadurch wird die Gesamtgröße der Datenbank reduziert und sichergestellt, dass Updates von freigegebenen Daten unmittelbar nach deren Freigabe auch für die gesamte Datenbank verfügbar sind. In einer relationalen Datenbank kann beispielsweise in einer Adresstabelle per ID auf eine Landestabelle verwiesen werden. Wird später der Name eines Landes/einer Region geändert, steht diese Aktualisierung auch für die Adressdatensätze zur Verfügung, ohne dass diese selbst aktualisiert werden müssen. Dann kann es hingegen sein, dass die Adresse und das zugehörige Land in einer NoSQL-Datenbank als Bestandteile vieler gespeicherter Objekte serialisiert werden. Nach der Aktualisierung des Namens eines Landes/einer Region müssten alle entsprechenden Objekte aktualisiert werden (nicht nur eine einzelne Zeile). Relationale Datenbanken können auch die relationale Integrität gewährleisten, indem sie Regeln wie Fremdschlüssel erzwingen. NoSQL-Datenbanken bieten solche Einschränkungen für ihre Daten in der Regel nicht.
 
@@ -354,8 +354,7 @@ Die Azure Cosmos DB-Abfragesprache ist eine einfache und dennoch effektive Schni
 
 **Verweise: Azure Cosmos DB**
 
-- Einführung in Azure Cosmos DB  
-  <https://docs.microsoft.com/azure/cosmos-db/introduction>
+- Einführung in Azure Cosmos DB <https://docs.microsoft.com/azure/cosmos-db/introduction>
 
 ## <a name="other-persistence-options"></a>Andere Persistenzoptionen
 
@@ -371,8 +370,7 @@ Neben relationalen Speicheroptionen und NoSQL-Optionen können ASP.NET Core-Anwe
 
 **Ressourcen: Azure Storage**
 
-- Einführung in Azure Storage  
-  <https://docs.microsoft.com/azure/storage/storage-introduction>
+- Einführung in Azure Storage <https://docs.microsoft.com/azure/storage/storage-introduction>
 
 ## <a name="caching"></a>Zwischenspeicherung
 
@@ -484,7 +482,7 @@ services.AddScoped<ICatalogService, CachedCatalogService>();
 services.AddScoped<CatalogService>();
 ```
 
-Wenn dies funktioniert, sendet die Datenbank anstatt bei jeder Anforderung nur einmal pro Minute einen Aufruf, um die Katalogdaten abzurufen. Je nachdem, wie viel Datenverkehr an die Website gesendet wird, kann dies deutliche Auswirkungen auf die Anzahl von Abfragen, die an die Datenbank gesendet werden, und die durchschnittliche Seitenladezeit der Startseite haben, die zu diesem Zeitpunkt von allen drei Abfragen abhängig ist, die von diesem Dienst zur Verfügung gestellt werden.
+Wenn dies funktioniert, sendet die Datenbank anstatt bei jeder Anforderung nur einmal pro Minute einen Aufruf, um die Katalogdaten abzurufen. Je nachdem, wie viel Datenverkehr an die Website gesendet wird, kann dies deutliche Auswirkungen auf die an die Datenbank gesendete Anzahl von Abfragen und die durchschnittliche Seitenladezeit der Startseite haben, die zurzeit von allen drei von diesem Dienst zur Verfügung gestellten Abfragen abhängig ist.
 
 Wenn Sie allerdings das Caching implementieren, kann dies dazu führen, dass _veraltete Daten_ verwendet werden. Damit sind Daten gemeint, die in der Quelle verändert wurden, von denen aber eine veraltete Version im Cache erhalten bleibt. Dieses Problem können Sie umgehen, wenn Sie eine kurze Cachedauer verwenden, da es für häufig verwendete Anwendungen nur wenig hilfreich ist, diese Dauer auszuweiten. Angenommen, Sie verfügen z.B. über eine Seite, die eine einzelne Datenbankabfrage sendet und zehnmal pro Sekunde abgerufen wird. Wenn diese Seite für eine Minute zwischengespeichert wird, hat dies zur Folge, dass die Anzahl der Datenbankabfragen pro Minute von 600 auf 1, also um 99,8 %, reduziert wird. Wenn die Cachedauer stattdessen auf eine Stunde festgelegt werden würde, würde die Anzahl der Abfragen insgesamt um 99,997 % reduziert werden. Dann kann es jedoch sein, dass die zwischengespeicherten Daten viel häufiger veralten.
 

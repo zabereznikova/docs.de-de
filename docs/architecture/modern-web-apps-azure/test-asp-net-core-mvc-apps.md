@@ -4,23 +4,23 @@ description: Entwerfen moderner Webanwendungen mit ASP.NET Core und Azure | Test
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 82c9815abdd5140340f9a8ea39be23496d433889
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 5f63e350e2f1ba8699bb002a54492cbf9501948e
+ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76738381"
+ms.lasthandoff: 02/02/2020
+ms.locfileid: "76965775"
 ---
 # <a name="test-aspnet-core-mvc-apps"></a>Testen von ASP.NET Core MVC-Apps
 
 > *„Wenn es Ihnen nicht gefällt, Komponententests für Ihr Produkt auszuführen, ist es sehr wahrscheinlich, dass es Ihren Kunden auch nicht gefallen wird.“*
  > \_–Anonym
 
-Software von beliebiger Komplexität kann aufgrund von Änderungen auf unerwartete Weisen fehlschlagen. Daher ist es erforderlich, Anwendungen auf Änderungen zu testen, mit Ausnahme von unbedeutenden (bzw. weniger wichtigen) Anwendungen. Manuelle Tests sind die langsamste, unzuverlässigste und aufwendigste Möglichkeit zum Testen von Software. Leider können diese die einzige verfügbare Methode sein, wenn Anwendungen nicht zum Testen entworfen wurden. Anwendungen, die nach den folgenden, in [Kapitel 4](architectural-principles.md) beschriebenen Architekturprinzipien geschrieben wurden, sollten mit Komponententests testbar sein, und ASP.NET Core-Anwendungen sollten zusätzlich die automatisierte Integration und Funktionstests unterstützen.
+Software von beliebiger Komplexität kann aufgrund von Änderungen auf unerwartete Weisen fehlschlagen. Daher ist es erforderlich, Anwendungen auf Änderungen zu testen, mit Ausnahme von unbedeutenden (bzw. weniger wichtigen) Anwendungen. Manuelle Tests sind die langsamste, unzuverlässigste und aufwendigste Möglichkeit zum Testen von Software. Leider können diese die einzige verfügbare Methode sein, wenn Anwendungen nicht zum Testen entworfen wurden. Anwendungen, die gemäß den in [Kapitel 4](architectural-principles.md) beschriebenen Architekturprinzipien geschrieben wurden, sollten komponententestfähig sein. ASP.NET Core-Anwendungen unterstützen automatisierte Integrations- und Funktionstests.
 
 ## <a name="kinds-of-automated-tests"></a>Arten von automatisierten Tests
 
-Es gibt viele Arten von automatisierten Tests für Softwareanwendungen. Der einfachste, spezifischste Test ist der Komponententest. Integrationstests und Funktionstests sind etwas allgemeiner. Andere Arten von Tests werden in dieser Dokumentation nicht behandelt, z.B. UI-Tests, Auslastungstests, Belastungstests und Buildakzeptanztests.
+Es gibt viele Arten von automatisierten Tests für Softwareanwendungen. Der einfachste, spezifischste Test ist der Komponententest. Integrationstests und Funktionstests sind etwas allgemeiner. Andere Arten von Tests werden in dieser Dokumentation nicht behandelt, z. B. UI-Tests, Auslastungstests, Belastungstests und Buildakzeptanztests.
 
 ### <a name="unit-tests"></a>Komponententests
 
@@ -58,7 +58,7 @@ Die verschiedenen Schichten der Pyramide und ihre Größen stellen verschiedene 
 
 ### <a name="what-to-test"></a>Der Testgegenstand
 
-Herauszufinden, was getestet werden sollte, ist ein häufiges Problem für Entwickler, die noch unerfahren im Schreiben von automatisierten Tests sind. Ein guter Startpunkt ist das Testen der bedingten Logik. An jeder Stelle, an der eine Methode mit einem Verhalten vorhanden ist, das auf einer Bedingungsanweisung basiert (if-else, switch, usw.), sollten Sie ein paar Tests erstellen, die das richtige Verhalten für bestimmte Bedingungen überprüfen. Wenn Ihr Code über Fehlerbedingungen verfügt, sollten Sie mindestens einen Test für den „besten Pfad“ durch den Code (ohne Fehler) und einen Test für den „schlechtesten Pfad“ (mit Fehlern und ungewohnten Ergebnissen) verwenden, um sicherzustellen, dass Ihre Anwendung auf Fehler wie erwartet reagiert. Letztendlich sollten Sie sich darauf konzentrieren, Dinge zu testen, die fehlschlagen können, anstatt sich auf Metriken wie Code Coverage zu konzentrieren. Allgemein ist mehr Code Coverage besser als zu wenig. Allerdings können Sie Ihre Zeit sinnvoller nutzen, wenn Sie ein paar weitere Tests für eine komplexe und unternehmenskritische Methode schreiben, anstatt Tests für Auto-Eigenschaften zu schreiben, um die Code Coverage-Metrik zu verbessern.
+Herauszufinden, was getestet werden sollte, ist ein häufiges Problem für Entwickler, die noch unerfahren im Schreiben von automatisierten Tests sind. Ein guter Startpunkt ist das Testen der bedingten Logik. An jeder Stelle, an der eine Methode mit einem Verhalten vorhanden ist, das auf einer Bedingungsanweisung basiert (if-else, switch usw.), sollten Sie zumindest einige Tests erstellen, die das richtige Verhalten unter bestimmten Bedingungen überprüfen. Wenn Ihr Code über Fehlerbedingungen verfügt, sollten Sie mindestens einen Test für den „besten Pfad“ durch den Code (ohne Fehler) und einen Test für den „schlechtesten Pfad“ (mit Fehlern und ungewohnten Ergebnissen) verwenden, um sicherzustellen, dass Ihre Anwendung auf Fehler wie erwartet reagiert. Letztendlich sollten Sie sich darauf konzentrieren, Dinge zu testen, die fehlschlagen können, anstatt sich auf Metriken wie Code Coverage zu konzentrieren. Allgemein ist mehr Code Coverage besser als zu wenig. Allerdings können Sie Ihre Zeit sinnvoller nutzen, wenn Sie ein paar weitere Tests für eine komplexe und unternehmenskritische Methode schreiben, anstatt Tests für automatische Eigenschaften zu schreiben, um die Code Coverage-Metrik zu verbessern.
 
 ## <a name="organizing-test-projects"></a>Organisieren von Testprojekten
 
@@ -78,7 +78,7 @@ Sie können das Testframework verwenden, das Sie bevorzugen. Das xUnit-Framework
 
 ### <a name="test-naming"></a>Benennen von Tests
 
-Sie sollten Ihren Tests konsistente Namen zuweisen, die angeben, was jeder Test bewirkt. Ein effektiver Ansatz ist, Testklassen nach der Klasse und Methode zu benennen, die sie testen. Dies resultiert in vielen kleinen Testklassen, verdeutlicht jedoch, wofür jeder Test zuständig ist. Mit dem eingerichteten Testklassennamen zum Identifizieren der Klasse und Methode, die getestet werden, kann der Testmethodenname dafür verwendet werden, das zu testende Verhalten anzugeben. Dies sollte das erwartete Verhalten und alle Eingaben oder Annahmen einschließen, die dieses Verhalten verursachen. Beispiele für Testnamen:
+Weisen Sie Ihren Tests konsistente Namen zu, die den Zweck des jeweiligen Test angeben. Ein effektiver Ansatz ist, Testklassen nach der Klasse und Methode zu benennen, die sie testen. Dies resultiert in vielen kleinen Testklassen, verdeutlicht jedoch, wofür jeder Test zuständig ist. Mit dem eingerichteten Testklassennamen zum Identifizieren der Klasse und Methode, die getestet werden, kann der Testmethodenname dafür verwendet werden, das zu testende Verhalten anzugeben. Dies sollte das erwartete Verhalten und alle Eingaben oder Annahmen einschließen, die dieses Verhalten verursachen. Beispiele für Testnamen:
 
 - `CatalogControllerGetImage.CallsImageServiceWithId`
 
@@ -102,7 +102,7 @@ Wenn Sie eine Namenskonvention befolgen, die viele kleine Testklassen produziert
 
 **Abbildung 9–4** Organisieren von Testklassen in Ordnern, basierend auf der Klasse, die getestet wird.
 
-Wenn viele Methoden (d.h. auch viele Testklassen) in einer Anwendungsklasse getestet werden sollen, kann es sinnvoll sein, diese in einem Ordner zu platzieren, der zu der Anwendungsklasse gehört. Diese Organisierung gleicht der Organisierung von Dateien in Ordnern. Wenn mehr als drei oder vier zusammengehörende Dateien in einem Ordner mit vielen anderen Dateien vorhanden sind, empfiehlt es sich, für diese einen Unterordner anzulegen.
+Wenn viele Methoden (d. h. auch viele Testklassen) in einer Anwendungsklasse getestet werden sollen, kann es sinnvoll sein, diese in einem Ordner abzulegen, der der Anwendungsklasse entspricht. Diese Organisierung gleicht der Organisierung von Dateien in Ordnern. Wenn mehr als drei oder vier zusammengehörende Dateien in einem Ordner mit vielen anderen Dateien vorhanden sind, empfiehlt es sich, für diese einen Unterordner anzulegen.
 
 ## <a name="unit-testing-aspnet-core-apps"></a>Komponententests für ASP.NET Core-Apps
 
@@ -143,7 +143,7 @@ public IActionResult GetImage(int id)
 }
 ```
 
-Sowohl \_logger als auch \_imageService werden als Abhängigkeiten eingefügt. Sie können nun prüfen, ob dieselbe ID, die an die Aktionsmethode übergeben wird, an \_imageService übergeben wird, und ob die resultierenden Bytes als Teil von FileResult zurückgegeben werden. Sie können auch überprüfen, ob die Fehlerprotokollierung ordnungsgemäß erfolgt, und ob das Ergebnis „NotFound“ zurückgegeben wird, wenn das Bild fehlt, vorausgesetzt, dass dies wichtig für das Verhalten der Anwendung ist (d.h., dass dies nicht nur temporärer Code ist, der vom Entwickler hinzugefügt wurde, um ein Problem zu diagnostizieren). Die eigentliche Dateilogik wurde in einen separaten Implementierungsdienst verschoben und wurde erweitert, damit sie im Fall einer fehlenden Datei eine anwendungsspezifische Ausnahme zurückgibt. Mit einem Integrationstest können Sie diese Implementierung unabhängig testen.
+`_logger` und `_imageService` werden als Abhängigkeiten eingefügt. Sie können nun prüfen, ob dieselbe ID, die an die Aktionsmethode übergeben wird, an `_imageService` übergeben wird und ob die resultierenden Bytes als Teil von FileResult zurückgegeben werden. Sie können auch überprüfen, ob die Fehlerprotokollierung ordnungsgemäß erfolgt, und ob das Ergebnis `NotFound` zurückgegeben wird, wenn das Bild fehlt, vorausgesetzt, dass dies wichtig für das Verhalten der Anwendung ist (d. h., dass dies nicht nur temporärer Code ist, der vom Entwickler hinzugefügt wurde, um ein Problem zu diagnostizieren). Die eigentliche Dateilogik wurde in einen separaten Implementierungsdienst verschoben und wurde erweitert, damit sie im Fall einer fehlenden Datei eine anwendungsspezifische Ausnahme zurückgibt. Mit einem Integrationstest können Sie diese Implementierung unabhängig testen.
 
 Für die meisten Fälle wird empfohlen, globale Ausnahmehandler in Ihren Controllern zu verwenden. Darum sollten der enthaltene Logikumfang minimal und Komponententests wahrscheinlich nicht notwendig sein. Für die meisten Tests von Controlleraktionen sollten Sie Funktionstests und die unten beschriebene `TestServer`-Klasse verwenden.
 
@@ -153,7 +153,7 @@ Die meisten Integrationstests in Ihren ASP.NET Core-Apps sollten Testdienste und
 
 ## <a name="functional-testing-aspnet-core-apps"></a>Funktionstests für ASP.NET Core-Apps
 
-Die `TestServer`-Klasse macht das Schreiben von Funktionstests für ASP.NET Core-Anwendungen relativ einfach. Verwenden Sie einen `WebHostBuilder`, entweder direkt (wie Sie es normalerweise für Ihre Anwendung tun) oder mit dem `WebApplicationFactory`-Typ (verfügbar seit Version 2.1), um einen `TestServer` zu konfigurieren. Sie sollten versuchen, einen Testhost zu verwenden, der dem Produktionshost so ähnlich wie möglich ist, damit das Verhalten der Tests dem Verhalten der App in der Produktion ähnelt. Die `WebApplicationFactory`-Klasse ist hilfreich für die ContentRoot-Konfiguration der TestServer-Klasse, die von ASP.NET Core verwendet wird, um statische Ressourcen wie Ansichten zu finden.
+Die `TestServer`-Klasse macht das Schreiben von Funktionstests für ASP.NET Core-Anwendungen relativ einfach. Verwenden Sie einen `WebHostBuilder`, entweder direkt (wie Sie normalerweise für Ihre Anwendung vorgehen) oder mit dem `WebApplicationFactory`-Typ (verfügbar seit Version 2.1), um einen `TestServer` zu konfigurieren. Versuchen Sie, einen Testhost zu verwenden, der dem Produktionshost so ähnlich wie möglich ist, damit das Verhalten der Tests dem Verhalten der App in der Produktion ähnelt. Die `WebApplicationFactory`-Klasse ist hilfreich für die ContentRoot-Konfiguration der TestServer-Klasse, die von ASP.NET Core verwendet wird, um statische Ressourcen wie Ansichten zu finden.
 
 Sie können einfache Funktionstests erstellen, indem Sie eine Testklasse erstellen, die IClassFixture\<WebApplicationFactory\<TEntry>> implementiert, wobei es sich bei „TEntry“ um die Startklasse Ihrer Webanwendung handelt. Mit diesen Vorkehrungen kann Ihre Testfixture einen Client mithilfe der CreateClient-Methode der Zuordnungsinstanz erstellen:
 

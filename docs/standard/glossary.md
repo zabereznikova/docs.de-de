@@ -3,12 +3,12 @@ title: .NET-Glossar
 description: Informationen zu den Bedeutungen der ausgewählten Begriffe, die in der .NET-Dokumentation verwendet werden.
 ms.date: 01/22/2019
 ms.technology: dotnet-standard
-ms.openlocfilehash: 9bca68753a93721e48d1ff90aa7baf3a147da0ee
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 822d6c9513d49dcc6bc57421003441d9bcc7c281
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75708203"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76921109"
 ---
 # <a name="net-glossary"></a>.NET-Glossar
 
@@ -167,7 +167,7 @@ Siehe [.NET Core](../core/index.md).
 
 Eine plattformübergreifende Toolkette zum Entwickeln von .NET Core-Anwendungen.
 
-Siehe [Tools für die .NET Core-Befehlszeilenschnittstelle (CLI)](../core/tools/index.md).
+Informationen finden Sie unter [.NET Core-CLI](../core/tools/index.md).
 
 ## <a name="net-core-sdk"></a>.NET Core SDK
 

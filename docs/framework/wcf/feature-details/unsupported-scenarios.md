@@ -2,16 +2,16 @@
 title: Nicht unterstützte Szenarien
 ms.date: 03/30/2017
 ms.assetid: 72027d0f-146d-40c5-9d72-e94392c8bb40
-ms.openlocfilehash: a963b46d22f2103cddcc8fd080feefc39070690c
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.openlocfilehash: b643e6df8a877860ce36fc6ee34c4e4ca08ec748
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75901268"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76921156"
 ---
 # <a name="unsupported-scenarios"></a>Nicht unterstützte Szenarien
 
-Aus verschiedenen Gründen unterstützt Windows Communication Foundation (WCF) einige bestimmte Sicherheits Szenarios nicht. Beispielsweise implementiert [!INCLUDE[wxp](../../../../includes/wxp-md.md)] Home Edition die SSPI-oder Kerberos-Authentifizierungsprotokolle nicht, weshalb WCF das Ausführen eines Dienstanbieter mit Windows-Authentifizierung auf dieser Plattform nicht unterstützt. Andere Authentifizierungsmechanismen, z. b. Benutzername/Kennwort und integrierte HTTP/HTTPS-Authentifizierung, werden bei der Ausführung von WCF unter Windows XP Home Edition unterstützt.
+Aus verschiedenen Gründen unterstützt Windows Communication Foundation (WCF) einige bestimmte Sicherheits Szenarios nicht. Beispielsweise implementiert Windows XP Home Edition die SSPI-oder Kerberos-Authentifizierungsprotokolle nicht, weshalb WCF das Ausführen eines Dienstanbieter mit Windows-Authentifizierung auf dieser Plattform nicht unterstützt. Andere Authentifizierungsmechanismen, z. b. Benutzername/Kennwort und integrierte HTTP/HTTPS-Authentifizierung, werden bei der Ausführung von WCF unter Windows XP Home Edition unterstützt.
 
 ## <a name="impersonation-scenarios"></a>Identitätswechsel Szenarien
 
@@ -22,7 +22,7 @@ Aus verschiedenen Gründen unterstützt Windows Communication Foundation (WCF) e
 
 WCF unterstützt keinen Identitätswechsel, und es wird eine <xref:System.InvalidOperationException> ausgelöst, wenn die folgenden Bedingungen erfüllt sind:
 
-- Das Betriebssystem ist [!INCLUDE[wxp](../../../../includes/wxp-md.md)].
+- Das Betriebssystem ist Windows XP.
 
 - Der Authentifizierungsmodus ruft eine Windows-Identität hervor.
 
@@ -35,7 +35,7 @@ WCF unterstützt keinen Identitätswechsel, und es wird eine <xref:System.Invali
  Alternativ wird das Token in der Konfiguration aktiviert, indem ein <`customBinding`> erstellt, dann ein <`security`> Element hinzugefügt und das `authenticationMode`-Attribut auf SecureConversation und das `requireSecurityContextCancellation`-Attribut auf `true`festgelegt wird.
 
 > [!NOTE]
-> Die zuvor genannten Anforderungen sind spezifisch. Beispielsweise erstellt das <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateKerberosBindingElement%2A> ein Bindungselement, das zu einer Windows-Identität führt, wobei aber kein SCT eingerichtet wird. Sie können es daher mit der `Required`-Option unter [!INCLUDE[wxp](../../../../includes/wxp-md.md)] verwenden.
+> Die zuvor genannten Anforderungen sind spezifisch. Beispielsweise erstellt das <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateKerberosBindingElement%2A> ein Bindungselement, das zu einer Windows-Identität führt, wobei aber kein SCT eingerichtet wird. Daher können Sie Sie mit der Option `Required` unter Windows XP verwenden.
 
 ### <a name="possible-aspnet-conflict"></a>Möglicher ASP.net-Konflikt
 
@@ -118,7 +118,7 @@ WCF erfordert genau ein WSDL-Dokument für jeden Knoten in der Verbund Vertrauen
 
 ## <a name="wsdl-import-attributes-can-be-lost"></a>WSDL-Import Attribute können verloren gehen.
 
-WCF kann die Attribute eines `<wst:Claims>` RST-Elements in einer `RST`-Vorlage beim Ausführen eines WSDL-Imports nicht verfolgen. Dieses Problem tritt im Zuge eines WSDL-Importvorgangs auf, wenn `<Claims>` WSFederationHttpBinding.Security.Message.TokenRequestParameters direkt in`WSFederationHttpBinding.Security.Message.TokenRequestParameters``IssuedSecurityTokenRequestParameters.AdditionalRequestParameters` IssuedSecurityTokenRequestParameters.AdditionalRequestParameters oder in und nicht unter direkter Verwendung der Anspruchstypauflistungen angegeben werden.  Da die Attribute beim Importieren verloren gehen, verläuft der Roundtrip der Bindung durch WSDL nicht ordnungsgemäß, und die Bindung ist auf der Clientseite ungültig.
+WCF kann die Attribute eines `<wst:Claims>`RST-Elements in einer`RST`-Vorlage beim Ausführen eines WSDL-Imports nicht verfolgen. Dieses Problem tritt im Zuge eines WSDL-Importvorgangs auf, wenn `<Claims>`WSFederationHttpBinding.Security.Message.TokenRequestParameters direkt in`WSFederationHttpBinding.Security.Message.TokenRequestParameters``IssuedSecurityTokenRequestParameters.AdditionalRequestParameters`IssuedSecurityTokenRequestParameters.AdditionalRequestParameters oder in und nicht unter direkter Verwendung der Anspruchstypauflistungen angegeben werden.  Da die Attribute beim Importieren verloren gehen, verläuft der Roundtrip der Bindung durch WSDL nicht ordnungsgemäß, und die Bindung ist auf der Clientseite ungültig.
 
  Ändern Sie nach Abschluss des Importvorgangs die Bindung direkt auf dem Client, um dieses Problem zu korrigieren.
 

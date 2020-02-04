@@ -2,12 +2,12 @@
 title: Docker-Terminologie
 description: .NET Microservicesarchitektur für .NET-Containeranwendungen | Docker-Terminologie
 ms.date: 01/07/2019
-ms.openlocfilehash: 2735188c508a7bbb0101946429faec122b13a17b
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 33f2918df5b63cc4bd54ddb84900c6bd91e9f77e
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73090056"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76921009"
 ---
 # <a name="docker-terminology"></a>Docker-Terminologie
 
@@ -47,7 +47,7 @@ In diesem Abschnitt werden die Begriffe und Definitionen aufgelistet, mit denen 
 
 **Cluster:** Eine Sammlung von zur Verfügung gestellten Docker-Hosts, als handele es sich um einen einzelnen, virtuellen Docker-Host, sodass die Anwendung mehrere Instanzen der Dienste skalieren kann, die auf mehrere Hosts im Cluster verteilt sind. Docker-Cluster können mit Kubernetes, Azure Service Fabric, Docker Swarm und Mesosphere DC/OS erstellt werden.
 
-**Orchestrator:** Ein Tool, das die Verwaltung von Clustern und Docker-Hosts vereinfacht. Orchestratoren ermöglichen es Ihnen, Ihre Images, Container und Hosts über eine Befehlszeilenschnittstelle (CLI) oder eine grafische Benutzeroberfläche zu verwalten. Sie können u.a. Containernetzwerke, Konfigurationen, den Lastenausgleich, die Dienstermittlung, die Hochverfügbarkeit und die Konfiguration des Docker-Hosts verwalten. Ein Orchestrator ist verantwortlich für die Ausführung, Verteilung, Skalierung und Reparatur von Workloads in einer Knotensammlung. Orchestratorprodukte sind in der Regel die gleichen Produkte, die Clusterinfrastruktur bereitstellen, wie Kubernetes und Azure Service Fabric, nebst anderen Angeboten am Markt.
+**Orchestrator:** Ein Tool, das die Verwaltung von Clustern und Docker-Hosts vereinfacht. Orchestratoren ermöglichen es Ihnen, Ihre Images, Container und Hosts über eine CLI oder eine grafische Benutzeroberfläche zu verwalten. Sie können u.a. Containernetzwerke, Konfigurationen, den Lastenausgleich, die Dienstermittlung, die Hochverfügbarkeit und die Konfiguration des Docker-Hosts verwalten. Ein Orchestrator ist verantwortlich für die Ausführung, Verteilung, Skalierung und Reparatur von Workloads in einer Knotensammlung. Orchestratorprodukte sind in der Regel die gleichen Produkte, die Clusterinfrastruktur bereitstellen, wie Kubernetes und Azure Service Fabric, nebst anderen Angeboten am Markt.
 
 >[!div class="step-by-step"]
 >[Zurück](docker-defined.md)

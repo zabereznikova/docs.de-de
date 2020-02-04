@@ -4,18 +4,18 @@ description: In diesem Tutorial lernen Sie verschiedene Features in .NET Core un
 ms.date: 03/06/2017
 ms.technology: csharp-fundamentals
 ms.assetid: 883cd93d-50ce-4144-b7c9-2df28d9c11a0
-ms.openlocfilehash: 921c8fc7824bdb48f08e4d9f5a276bf2284f8a17
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 09ce36e7a61f576dc4449976ce676701dc57c9cd
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714602"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76921121"
 ---
 # <a name="console-app"></a>Konsolen-App
 
 In diesem Tutorial lernen Sie verschiedene Features in .NET Core und der Sprache C# kennen. Es werden die folgenden Themen abgedeckt:
 
-- Grundlagen der .NET Core-Befehlszeilenschnittstelle (CLI)
+- Die Grundlagen zur .NET Core-CLI
 - Die Struktur einer C#-Konsolenanwendung
 - Konsolen-E/A
 - Grundlagen der Datei-E/A-APIs in .NET
@@ -311,6 +311,6 @@ RunTeleprompter().Wait();
 
 ## <a name="conclusion"></a>Schlussbemerkung
 
-In diesem Tutorial wurden verschiedene Features von C# und den .NET Core-Bibliotheken vorgestellt, die bei der Arbeit in Konsolenanwendungen benötigt werden. Sie können auf diesem Wissen aufbauen, um C# und die hier beschriebenen Klassen weiter zu erkunden. Sie haben die Grundlagen der Datei- und Konsolen-E/A kennengelernt, und es wurden die blockierende und die nicht blockierende Verwendung der taskbasierten asynchronen Programmierung vorgestellt. Außerdem haben Sie einen Überblick über die Sprache C# und die Struktur von C#-Programmen erhalten, und Sie haben die .NET Core-Befehlszeilenschnittstelle (CLI) und andere Tools kennengelernt.
+In diesem Tutorial wurden verschiedene Features von C# und den .NET Core-Bibliotheken vorgestellt, die bei der Arbeit in Konsolenanwendungen benötigt werden. Sie können auf diesem Wissen aufbauen, um C# und die hier beschriebenen Klassen weiter zu erkunden. Sie haben die Grundlagen der Datei- und Konsolen-E/A kennengelernt, und es wurden die blockierende und die nicht blockierende Verwendung der taskbasierten asynchronen Programmierung vorgestellt. Außerdem haben Sie einen Überblick über die Sprache C# und die Struktur von C#-Programmen erhalten, und Sie haben die .NET Core-CLI kennengelernt.
 
 Weitere Informationen zur Datei-E/A finden Sie im Thema [Datei- und Stream-E/A](../../standard/io/index.md). Weitere Informationen zu dem in diesem Tutorial verwendeten asynchronen Programmiermodell finden sie in den Themen [Aufgabenbasierte asynchrone Programmierung](../..//standard/parallel-programming/task-based-asynchronous-programming.md) und [Asynchrone Programmierung](../async.md).

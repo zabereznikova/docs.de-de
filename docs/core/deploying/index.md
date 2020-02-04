@@ -2,12 +2,12 @@
 title: .NET Core Anwendungsbereitstellung
 description: Erfahren Sie mehr über die Möglichkeiten zum Bereitstellen einer .NET Core-Anwendung.
 ms.date: 12/03/2018
-ms.openlocfilehash: 41c5285f2a9ddf38e4be7326bd5cba1c58370fe7
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 425f0d5bf11fd0572825d2025005aacf65d7d2cd
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75740810"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920874"
 ---
 # <a name="net-core-application-deployment"></a>.NET Core Anwendungsbereitstellung
 
@@ -91,11 +91,11 @@ Es gibt auch einige Nachteile:
 
 ## <a name="step-by-step-examples"></a>Beispiele mit Schrittanleitungen
 
-Beispiele mit Schrittanleitungen für die Bereitstellung von .NET Core-Apps mit Befehlszeilenschnittstellentools finden Sie unter [Veröffentlichen von .NET Core-Apps mit der CLI](deploy-with-cli.md). Beispiele mit Schrittanleitungen für die Bereitstellung von .NET Core-Apps mit Visual Studio finden Sie unter [Bereitstellen von .NET Core-Apps mit Visual Studio](deploy-with-vs.md). 
+Beispiele mit Schrittanleitungen für die Bereitstellung von .NET Core-Apps mit der .NET Core-CLI finden Sie unter [Veröffentlichen von .NET Core-Apps mit der .NET Core-CLI](deploy-with-cli.md). Beispiele mit Schrittanleitungen für die Bereitstellung von .NET Core-Apps mit Visual Studio finden Sie unter [Bereitstellen von .NET Core-Apps mit Visual Studio](deploy-with-vs.md). 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Deploying .NET Core Apps with CLI Tools (Bereitstellen von .NET Core-Apps mit Befehlszeilenschnittstellentools)](deploy-with-cli.md)
+- [Veröffentlichen von .NET Core-Apps mit der .NET Core-CLI](deploy-with-cli.md)
 - [Deploying .NET Core Apps with Visual Studio (Bereitstellen von .NET Core-Apps mit Visual Studio)](deploy-with-vs.md)
 - [Pakete, Metapakete und Frameworks](../packages.md)
 - [.NET Core Runtime-ID (RID)-Katalog](../rid-catalog.md)

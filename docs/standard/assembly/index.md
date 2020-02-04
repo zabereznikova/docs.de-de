@@ -12,16 +12,16 @@ helpviewer_keywords:
 - assemblies [.NET Framework]
 - version boundaries
 - type boundaries
-ms.openlocfilehash: 9fd0c55294815c191f1e116dd4e16a44693f3565
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.openlocfilehash: 968eaf2befb44eb893699d1114b315a4f5df3097
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75900599"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76921368"
 ---
 # <a name="assemblies-in-net"></a>Assemblys in .NET
 
-Assemblys bilden die Grundlage für die Bereitstellung, die Versionskontrolle, die Wiederverwendung, die Festlegung des Aktivierungsumfangs und die Sicherheitsberechtigungen für .NET-basierte Anwendungen. Eine Assembly ist eine Auflistung von Typen und Ressourcen, die so erstellt wurden, dass sie zusammenarbeiten und eine logische funktionelle Einheit bilden. Assemblys sind ausführbare Dateien ( *.exe*) oder Dynamic Link Library-Dateien ( *.dll*) und bilden die Bausteine von .NET-Anwendungen. Sie stellen der Common Language Runtime die Informationen zur Verfügung, die sie zum Erkennen der Typimplementierungen benötigt.
+Assemblys bilden die Grundlage für die Bereitstellung, die Versionskontrolle, die Wiederverwendung, die Festlegung des Aktivierungsumfangs und die Sicherheitsberechtigungen für .NET-basierte Anwendungen. Eine Assembly ist eine Auflistung von Typen und Ressourcen, die so erstellt wurden, dass sie zusammenarbeiten und eine logische funktionelle Einheit bilden. Assemblys sind ausführbare Dateien (*.exe*) oder Dynamic Link Library-Dateien (*.dll*) und bilden die Bausteine von .NET-Anwendungen. Sie stellen der Common Language Runtime die Informationen zur Verfügung, die sie zum Erkennen der Typimplementierungen benötigt.
 
 In .NET Core und .NET Framework können Sie eine Assembly entweder aus einer oder aus mehreren Quellcodedateien erstellen. In .NET Framework können Assemblys ein Modul oder mehrere Module umfassen. Dies macht es möglich, größere Projekte so zu planen, dass mehrere Entwickler an verschiedenen Quellcodedateien oder Modulen arbeiten, die anschließend in einer einzigen Assembly kombiniert werden. Weitere Informationen zu Modulen finden Sie unter [Vorgehensweise: Erstellen einer Assembly aus mehreren Dateien](../../framework/app-domains/build-multifile-assembly.md).
 
@@ -63,7 +63,7 @@ Assemblys können statisch oder dynamisch sein. Statische Assemblys werden auf d
 
 Beim Erstellen von Assemblys stehen Ihnen verschiedene Möglichkeiten zur Verfügung: Sie können Entwicklungstools wie Visual Studio verwenden, die *DLL*- und *EXE*-Dateien erstellen können. Mit den Tools im Windows SDK können Sie Assemblys mit Modulen erstellen, die in anderen Entwicklungsumgebungen erstellt wurden. Außerdem können Sie dynamische Assemblys auch mit Common Language Runtime-APIs wie <xref:System.Reflection.Emit?displayProperty=nameWithType> erstellen.
 
-Sie können Assemblys kompilieren, indem Sie sie in Visual Studio, über Tools für die .NET Core-Befehlszeilenschnittstelle oder .NET Framework-Assemblys mit einem Befehlszeilencompiler erstellen. Weitere Informationen zum Erstellen von Assemblys mit Tools für die .NET Core-Befehlszeilenschnittstelle finden Sie unter [Tools für die .NET Core-Befehlszeilenschnittstelle](../../core/tools/index.md). Informationen zum Erstellen von Assemblys mit einem Befehlszeilencompiler finden Sie unter [Erstellen über die Befehlszeile mit csc.exe](../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md) für C# oder [Erstellen über die Befehlszeile](../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) für Visual Basic.
+Sie können Assemblys kompilieren, indem Sie sie in Visual Studio, über Tools für die .NET Core-Befehlszeilenschnittstelle oder .NET Framework-Assemblys mit einem Befehlszeilencompiler erstellen. Weitere Informationen zum Erstellen von Assemblys mit der .NET Core-CLI finden Sie unter [Übersicht über die .NET Core-CLI](../../core/tools/index.md). Informationen zum Erstellen von Assemblys mit einem Befehlszeilencompiler finden Sie unter [Erstellen über die Befehlszeile mit csc.exe](../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md) für C# oder [Erstellen über die Befehlszeile](../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) für Visual Basic.
 
 > [!NOTE]
 > Sie können eine Assembly in Visual Studio erstellen, indem Sie im Menü **Build** auf die Option **Build** klicken.
@@ -89,7 +89,7 @@ Damit Sie eine Assembly in einer Anwendung verwenden können, müssen Sie einen 
 
 In C# können Sie zwei Versionen derselben Assembly in einer einzigen Anwendung verwenden. Weitere Informationen finden Sie unter [extern-Alias](../../csharp/language-reference/keywords/extern-alias.md).
 
-## <a name="related-content"></a>Verwandter Inhalt
+## <a name="related-content"></a>Verwandte Inhalte
 
 |Titel|Beschreibung|
 |-----------|-----------------|
@@ -104,11 +104,11 @@ In C# können Sie zwei Versionen derselben Assembly in einer einzigen Anwendung 
 |[Ausgeben von dynamischen Methoden und Assemblys](../../../docs/framework/reflection-and-codedom/emitting-dynamic-methods-and-assemblies.md)|Erstellen von dynamischen Assemblys|
 |[So sucht Common Language Runtime nach Assemblys](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)|So löst .NET Framework zur Laufzeit Assemblyverweise auf|
 
-## <a name="reference"></a>Referenz
+## <a name="reference"></a>Verweis
 
 <xref:System.Reflection.Assembly?displayProperty=nameWithType>
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [.NET-Assemblydateiformat](file-format.md)
 - [Friend-Assemblys](friend.md)

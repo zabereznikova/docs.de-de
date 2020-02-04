@@ -2,12 +2,12 @@
 title: Orchestrieren von Microservices und Anwendungen mit mehreren Containern für hohe Skalierbarkeit und Verfügbarkeit
 description: Echte Produktionsanwendungen müssen mithilfe von Orchestratoren bereitgestellt und verwaltet werden, die Status, Workload und Lebenszyklen aller Container behandeln können.
 ms.date: 02/15/2019
-ms.openlocfilehash: eb02a89a58b7df449edc05461e11fbeeec86b4a1
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: e548e6b3816dec1e56c273c53c9fd052443eb09b
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72771090"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76919539"
 ---
 # <a name="orchestrating-microservices-and-multi-container-applications-for-high-scalability-and-availability"></a>Orchestrieren von Microservices und Anwendungen mit mehreren Containern für hohe Skalierbarkeit und Verfügbarkeit
 
@@ -21,7 +21,7 @@ Abbildung 4–6 veranschaulicht die Bereitstellung einer aus mehreren Microservi
 
 Dieser Ansatz mag logisch erscheinen. Nicht offensichtlich ist aber, wie der Lastenausgleich, das Routing und die Orchestrierung dieser zusammengesetzten Anwendungen erfolgen sollen.
 
-Die Docker-Befehlszeilenschnittstelle (CLI) genügt der Anforderung, einen Container auf dem Host zu verwalten, ist aber unzureichend, wenn mehrere Container, die auf mehreren Hosts bereitgestellt werden, für komplexere verteilte Anwendungen verwaltet werden sollen. In den meisten Fällen wird eine Verwaltungsplattform benötigt, die Container automatisch startet, Container mit mehreren Instanzen pro Image horizontal skaliert, diese bei Bedarf anhält oder beendet und idealerweise auch steuert, wie Container auf Ressourcen wie Netzwerke oder Datenspeicher zugreifen.
+Die Docker-CLI genügt der Anforderung, einen Container auf dem Host zu verwalten, ist aber unzureichend, wenn mehrere Container, die auf mehreren Hosts bereitgestellt werden, für komplexere verteilte Anwendungen verwaltet werden sollen. In den meisten Fällen wird eine Verwaltungsplattform benötigt, die Container automatisch startet, Container mit mehreren Instanzen pro Image horizontal skaliert, diese bei Bedarf anhält oder beendet und idealerweise auch steuert, wie Container auf Ressourcen wie Netzwerke oder Datenspeicher zugreifen.
 
 Um anstelle von einzelnen Containern oder einfachen zusammengesetzten Anwendungen größere Unternehmensanwendungen mit Microservices verwalten zu können, sind Orchestrierung und Clusteringplattformen notwendig.
 

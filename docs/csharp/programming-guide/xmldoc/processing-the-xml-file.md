@@ -1,18 +1,18 @@
 ---
-title: Verarbeiten der XML-Datei – C# Programmierhandbuch
+title: Verarbeiten der XML-Datei – C#-Programmierhandbuch
 ms.date: 07/20/2015
 helpviewer_keywords:
 - XML processing [C#]
 - XML [C#], processing
 ms.assetid: 60c71193-9dac-4cd3-98c5-100bd0edcc42
-ms.openlocfilehash: 2c3ba0e12d0d7e6a568c4c3741d99b901fca2722
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: bc72cade9ce6edddb88d741a3424405bba0a7ad8
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75696518"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76793392"
 ---
-# <a name="processing-the-xml-file-c-programming-guide"></a>Verarbeiten der XML-Datei (C# Programmierhandbuch)
+# <a name="processing-the-xml-file-c-programming-guide"></a>Verarbeiten der XML-Datei (C#-Programmierhandbuch)
 
 Für jedes Konstrukt, das zum Generieren von Dokumentation gekennzeichnet ist, wird vom Compiler eine ID-Zeichenfolge generiert. (Weitere Informationen darüber, wie Code mit Tags versehen werden kann, finden Sie unter [Empfohlene Tags für Dokumentationskommentare](./recommended-tags-for-documentation-comments.md).) Das Konstrukt wird über die ID-Zeichenfolge eindeutig identifiziert. Programme, die die XML-Datei verarbeiten, können mithilfe der ID-Zeichenfolge das entsprechende .NET Framework-Metadaten-/Reflektionselement identifizieren, für das die Dokumentation gilt.
 
@@ -27,7 +27,7 @@ Der Compiler beachtet beim Generieren der ID-Zeichenfolgen die folgenden Regeln:
     |Zeichen|Beschreibung|
     |---------------|-----------------|
     |N|namespace<br /><br /> Einem Namespace können keine Dokumentationskommentare hinzugefügt werden. Falls unterstützt, können jedoch cref-Verweise hinzugefügt werden.|
-    |T|Typ: Klasse, Schnittstelle, Struktur, Enumeration, Delegat|
+    |T|Typ: Klasse, Schnittstelle, Struktur, Enumeration oder Delegat|
     |F|Feld|
     |P|Eigenschaft (einschließlich von Indexern oder anderen indizierten Eigenschaften)|
     |M|Methode (einschließlich spezieller Methoden wie Konstruktoren, Operatoren usw.)|

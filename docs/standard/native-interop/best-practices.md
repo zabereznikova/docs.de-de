@@ -13,13 +13,13 @@ ms.locfileid: "76742751"
 
 .NET bietet verschiedene Möglichkeiten zum Anpassen Ihres Codes für die native Interoperabilität. Dieser Artikel bietet einen Leitfaden, den die .NET-Teams von Microsoft in Bezug auf die native Interoperabilität befolgen.
 
-## <a name="general-guidance"></a>Allgemeine Anleitung
+## <a name="general-guidance"></a>Allgemeine Hinweise
 
 Die Anleitungen in diesem Abschnitt gelten für alle Interoperabilitätsszenarien.
 
 - ✔️ Verwenden Sie die gleiche Benennung und groß-und Kleinschreibung für ihre Methoden und Parameter wie die native Methode, die Sie aufzurufen möchten.
 - ✔️ sollten die gleiche Benennung und groß-und Kleinschreibung für konstante Werte verwenden.
-- ✔️ verwenden .NET-Typen, die dem systemeigenen Typ am nächsten sind. Wenn z.B. der native Typ in C# `unsigned int` ist, verwenden Sie `uint`.
+- ✔️ verwenden .NET-Typen, die dem systemeigenen Typ am nächsten sind. Wenn z.B. der native Typ in C# `uint` ist, verwenden Sie `unsigned int`.
 - ✔️ nur `[In]` und `[Out]` Attribute verwenden, wenn sich das gewünschte Verhalten vom Standardverhalten unterscheidet.
 - ✔️ sollten Sie <xref:System.Buffers.ArrayPool%601?displayProperty=nameWithType> verwenden, um die systemeigenen Array Puffer zu bündeln.
 - ✔️ sollten Sie die P/aufrufen-Deklarationen in einer Klasse mit dem gleichen Namen und der gleichen Groß-/Kleinschreibung wie die systemeigene Bibliothek
@@ -27,7 +27,7 @@ Die Anleitungen in diesem Abschnitt gelten für alle Interoperabilitätsszenarie
 
 ## <a name="dllimport-attribute-settings"></a>Attributeinstellungen für „DllImport“
 
-| -Einstellung | Default | Empfehlung | Details |
+| Einstellung | Standard | Empfehlung | Details |
 |---------|---------|----------------|---------|
 | <xref:System.Runtime.InteropServices.DllImportAttribute.PreserveSig>   | `true` |  Behalten Sie den Standardwert bei.  | Wenn diese Einstellung explizit auf „false“ festgelegt wird, werden fehlerhafte HRESULT-Rückgabewerte zu Ausnahmen umgewandelt (und der Rückgabewert in der Definition wird dadurch NULL).|
 | <xref:System.Runtime.InteropServices.DllImportAttribute.SetLastError> | `false`  | Hängt von der API ab.  | Legen Sie diese Einstellung auf „true“ fest, wenn die API „GetLastError“ verwendet, und verwenden Sie „Marshal.GetLastWin32Error“, um den Wert abzurufen. Wenn die API eine Bedingung festlegt, die besagt, dass ein Fehler vorliegt, rufen Sie den Fehler ab, bevor Sie weitere Aufrufe senden, um ein versehentliches Überschreiben zu verhindern.|
@@ -45,17 +45,17 @@ Denken Sie daran, `[DllImport]` als `Charset.Unicode` zu kennzeichnen, es sei de
 ❌ vermeiden Sie `StringBuilder` Parameter. `StringBuilder`Marshalling erzeugt *immer* eine native Pufferkopie. Dies kann extrem ineffizient sein. Sehen Sie sich das folgende typische Szenario an, in dem eine Windows-API aufgerufen wird, die eine Zeichenfolge akzeptiert:
 
 1. Erstellen Sie einen StringBuilder mit der gewünschten Kapazität (ordnet die verwaltete Kapazität zu) **{1}**
-2. Aufrufen
+2. Invoke
    1. Ordnet einen nativen Puffer zu **{2}**
    2. Kopiert den Inhalt, wenn `[In]` _(der Standardwert für einen `StringBuilder`-Parameter)_ .
    3. Kopiert den systemeigenen Puffer in ein neu zugeordneter verwaltetes Array, wenn `[Out]` **{3}** _(auch der Standardwert für `StringBuilder`)_
-3. `ToString()` ordnet ein weiteres verwaltetes Array zu **{4}**
+3. `ToString()` ordnet ein weiteres verwaltetes Array zu **** **
 
 Damit haben wir *{4}* Zuordnungen, um eine Zeichenfolge aus dem nativen Code abzurufen. Die beste Möglichkeit, um dies zu beschränken, besteht darin, den `StringBuilder` in einem weiteren Aufruf wiederzuverwenden, damit wird aber dennoch nur *1* Zuordnung eingespart. Es ist viel besser, einen Zeichenpuffer aus dem `ArrayPool` zu verwenden und zwischenzuspeichern – damit benötigen Sie in nachfolgenden Aufrufen nur die Zuordnung für `ToString()`.
 
 Ein weiteres Problem bei `StringBuilder` ist, dass immer der Rückgabepuffer bis zum ersten NULL-Zeichen zurückkopiert wird. Wenn die zurückgegebene Zeichenfolge nicht beendet oder mit einem doppelten NULL-Zeichen beendet wird, ist „P/Invoke“ bestenfalls falsch.
 
-Wenn Sie `StringBuilder`*tatsächlich* verwenden, besteht eine weitere Besonderheit darin, dass die Kapazität **kein** verborgenes NULL-Zeichen umfasst, das bei der Interoperabilität immer berücksichtigt wird. Das wird häufig falsch gemacht, da die meisten APIs die Größe des Puffers *einschließlich* des NULL-Zeichens erwarten. Dies kann zu unnötigen bzw. verschwendeten Zuordnungen führen. Darüber hinaus verhindert diese Besonderheit, dass die Runtime das Marshalling von `StringBuilder` optimiert, um die Erstellung von Kopien zu minimieren.
+Wenn Sietatsächlich`StringBuilder` verwenden, besteht eine weitere Besonderheit darin, dass die Kapazität **kein** verborgenes NULL-Zeichen umfasst, das bei der Interoperabilität immer berücksichtigt wird. Das wird häufig falsch gemacht, da die meisten APIs die Größe des Puffers *einschließlich* des NULL-Zeichens erwarten. Dies kann zu unnötigen bzw. verschwendeten Zuordnungen führen. Darüber hinaus verhindert diese Besonderheit, dass die Runtime das Marshalling von `StringBuilder` optimiert, um die Erstellung von Kopien zu minimieren.
 
 ✔️ sollten Sie `char[]`s aus einer `ArrayPool`verwenden.
 
@@ -114,13 +114,13 @@ public struct UnicodeCharStruct
 }
 ```
 
-`string` ist für Blitting geeignet, wenn es nicht in einem anderen Typen enthalten ist und als Argument übergeben wird, das mit `[MarshalAs(UnmanagedType.LPWStr)]` gekennzeichnet ist oder in dem `CharSet = CharSet.Unicode` für `[DllImport]` festgelegt ist.
+`string` ist für Blitting geeignet, wenn es nicht in einem anderen Typen enthalten ist und als Argument übergeben wird, das mit `[MarshalAs(UnmanagedType.LPWStr)]` gekennzeichnet ist oder in dem `[DllImport]` für `CharSet = CharSet.Unicode` festgelegt ist.
 
 Sie können feststellen, ob ein Typ für Blitting geeignet ist, indem Sie versuchen, ein angeheftetes `GCHandle` zu erstellen. Wenn der Typ keine Zeichenfolge ist oder nicht als für Blitting geeignet betrachtet wird, löst `GCHandle.Alloc` eine `ArgumentException` aus.
 
 ✔️ machen ihre Strukturen nach Möglichkeit blitfähig.
 
-Weitere Informationen finden Sie unter: .
+Weitere Informationen finden Sie unter
 
 - [Blitfähige und nicht blitfähige Typen](../../framework/interop/blittable-and-non-blittable-types.md)
 - [Marshalling von Typen](type-marshaling.md)

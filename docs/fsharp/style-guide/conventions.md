@@ -89,7 +89,7 @@ let parsed = StringTokenization.parse s // Must qualify to use 'parse'
 
 ### <a name="sort-open-statements-topologically"></a>Sortieren von `open`-Anweisungen topologisch
 
-In F# wird die Reihenfolge der Deklarationen von Bedeutung ist, einschließlich mit `open` Anweisungen. Dies unterscheidet C#sich von, wenn die Auswirkung von `using` und `using static` unabhängig von der Reihenfolge dieser Anweisungen in einer Datei ist.
+In F#ist die Reihenfolge der Deklarationen, einschließlich der `open`-Anweisungen, wichtig. Dies unterscheidet C#sich von, wenn die Auswirkung von `using` und `using static` unabhängig von der Reihenfolge dieser Anweisungen in einer Datei ist.
 
 In F# können Elemente in einem Bereich geöffnet Shadowing für andere bereits vorhanden. Dies bedeutet, dass das Neuordnen `open`-Anweisungen die Bedeutung von Code ändern könnte. Daher wird jede beliebige Sortierung aller `open` Anweisungen (z. b. alphanumerisch) nicht empfohlen, sodass Sie kein anderes Verhalten generieren, das Sie möglicherweise erwarten.
 
@@ -189,7 +189,7 @@ Die Fehler Verwaltung in großen Systemen ist ein komplexes und differenziertes 
 
 ### <a name="represent-error-cases-and-illegal-state-in-types-intrinsic-to-your-domain"></a>Darstellen von Fehler Fällen und ungültigen Zuständen in Typen, die in Ihrer Domäne intrinsisch sind
 
-Mit [Unterscheidungs-Unions](../language-reference/discriminated-unions.md), F# gibt Ihnen die Möglichkeit, fehlerhafte Programmstatus in Ihrem Typsystem darstellen. Beispiel:
+Mit [Discriminated Unions](../language-reference/discriminated-unions.md)Unterscheidungs- F# Unions haben Sie die Möglichkeit, einen fehlerhaften Programmzustand in Ihrem Typsystem darzustellen. Beispiel:
 
 ```fsharp
 type MoneyWithdrawalResult =
@@ -218,7 +218,7 @@ Wenn Sie die verschiedenen Methoden modellieren können, mit denen in Ihrer Dom�
 
 ### <a name="use-exceptions-when-errors-cannot-be-represented-with-types"></a>Verwenden Sie Ausnahmen, wenn Fehler nicht mit Typen dargestellt werden können.
 
-Nicht alle Fehler können in einer Problemdomäne dargestellt werden. Diese Art von Fehlern werden *außergewöhnliche* Natur, daher die Möglichkeit, auslösen und Abfangen von Ausnahmen in F#.
+Nicht alle Fehler können in einer Problemdomäne dargestellt werden. Diese Arten von Fehlern sind *außergewöhnlich* , sodass Ausnahmen in F#ausgelöst und abgefangen werden können.
 
 Zuerst wird empfohlen, dass Sie die [Richtlinien für den Ausnahme Entwurf](../../standard/design-guidelines/exceptions.md)lesen. Diese gelten auch für F#.
 
@@ -316,7 +316,7 @@ let tryReadAllTextIfPresent (path : string) =
 
 Anstatt als Catch-all zu funktionieren, verarbeitet diese Funktion nun ordnungsgemäß den Fall, dass eine Datei nicht gefunden wurde, und weist diese Bedeutung einer Rückgabe zu. Dieser Rückgabewert kann diesem Fehlerfall zugeordnet werden, während keine Kontextinformationen verworfen werden oder Aufrufer gezwungen werden, einen Fall zu behandeln, der an diesem Punkt im Code möglicherweise nicht relevant ist.
 
-Typen wie `Result<'Success, 'Error>` eignen sich für grundlegende Vorgänge, in dem sie geschachtelt sind nicht und optionale F#-Typen sind ideal für darstellen, wenn etwas entweder zurückgeben könnte *etwas* oder *nichts*. Sie sind jedoch kein Ersatz für Ausnahmen und sollten nicht in einem Versuch verwendet werden, Ausnahmen zu ersetzen. Vielmehr sollten Sie umsichtig angewendet werden, um bestimmte Aspekte der Ausnahme-und Fehler Verwaltungs Richtlinie in gezielter Weise zu behandeln.
+Typen wie `Result<'Success, 'Error>` eignen sich für grundlegende Vorgänge, bei denen Sie nicht eingebettet sind F# , und optionale Typen eignen sich perfekt für die Darstellung, wenn *etwas oder* *nichts*zurückgegeben werden könnte. Sie sind jedoch kein Ersatz für Ausnahmen und sollten nicht in einem Versuch verwendet werden, Ausnahmen zu ersetzen. Vielmehr sollten Sie umsichtig angewendet werden, um bestimmte Aspekte der Ausnahme-und Fehler Verwaltungs Richtlinie in gezielter Weise zu behandeln.
 
 ## <a name="partial-application-and-point-free-programming"></a>Partielle Anwendungs-und punktfreie Programmierung
 
@@ -550,7 +550,7 @@ Obwohl im vorherigen Beispiel gezeigt wurde, dass eine strukturunterscheidungs-U
 
 ### <a name="functional-programming-and-mutation"></a>Funktionale Programmierung und Mutation
 
-F#Werte sind standardmäßig unveränderlich, sodass Sie bestimmte Klassen von Fehlern vermeiden können (insbesondere solche, die Parallelität und Parallelität betreffen). In bestimmten Fällen, um eine optimale (oder sogar sinnvolle) Effizienz der Ausführungszeit oder Speicher Belegungen zu erzielen, kann jedoch eine bestimmte arbeitsspanne am besten mithilfe einer direkten Mutation des Zustands implementiert werden. Dies ist möglich, in einer Basis Opt-in mit F# mit der `mutable` Schlüsselwort.
+F#Werte sind standardmäßig unveränderlich, sodass Sie bestimmte Klassen von Fehlern vermeiden können (insbesondere solche, die Parallelität und Parallelität betreffen). In bestimmten Fällen, um eine optimale (oder sogar sinnvolle) Effizienz der Ausführungszeit oder Speicher Belegungen zu erzielen, kann jedoch eine bestimmte arbeitsspanne am besten mithilfe einer direkten Mutation des Zustands implementiert werden. Dies ist in einer Opt-in-Basis F# mit dem `mutable`-Schlüsselwort möglich.
 
 Die Verwendung von `mutable` F# in kann sich im Hinblick auf die funktionale Reinheit widersprechen. Dies ist verständlich, aber die funktionale Reinheit überall kann mit den Leistungszielen in Konflikt stehen. Eine Gefährdung besteht darin, die Mutation so zu kapseln, dass Aufrufer nicht darauf achten müssen, was geschieht, wenn eine Funktion aufgerufen wird. Dies ermöglicht es Ihnen, eine funktionale Schnittstelle über eine mutations basierte Implementierung für Leistungs kritischen Code zu schreiben.
 
@@ -620,7 +620,7 @@ type Closure1Table() =
 
 #### <a name="prefer-let-mutable-to-reference-cells"></a>`let mutable` für den Verweis auf Zellen bevorzugen
 
-Verweis Zellen können anstelle des Werts selbst den Verweis auf einen Wert darstellen. Obwohl Sie für Leistungs kritischen Code verwendet werden können, wird dies nicht empfohlen. Betrachten Sie das folgende Beispiel:
+Verweis Zellen können anstelle des Werts selbst den Verweis auf einen Wert darstellen. Obwohl Sie für Leistungs kritischen Code verwendet werden können, wird dies nicht empfohlen. Betrachten Sie das folgenden Beispiel:
 
 ```fsharp
 let kernels =
@@ -672,7 +672,7 @@ F#bietet vollständige Unterstützung für Objekte und objektorientierte Konzept
 * Auto-Eigenschaften
 * Implementieren von `IDisposable` und `IEnumerable`
 * Typerweiterungen
-* Ereignisse
+* Events
 * Strukturen
 * Delegaten
 * Enumerationen

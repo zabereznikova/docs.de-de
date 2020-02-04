@@ -1,26 +1,20 @@
 ---
-title: Tools für die .NET Core-Befehlszeilenschnittstelle (command-line interface, CLI)
-description: Dies ist ein Überblick über die Tools und Funktionen der .NET Core-Befehlszeilenschnittstelle (Command-Line Interface, CLI).
+title: .NET Core CLI
+titleSuffix: ''
+description: Eine Übersicht über die .NET Core-CLI und ihre Features.
 ms.date: 08/14/2017
-ms.openlocfilehash: f19dcb19fb9d0203b3d3795c3fdc0b026c4c60e3
-ms.sourcegitcommit: 5d769956a04b6d68484dd717077fabc191c21da5
+ms.openlocfilehash: b0a8e0dd8cf77bb6f7567c27e9972f62515ec0f2
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/17/2020
-ms.locfileid: "76163214"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920482"
 ---
-# <a name="net-core-command-line-interface-cli-tools"></a>Tools für die .NET Core-Befehlszeilenschnittstelle (command-line interface, CLI)
+# <a name="net-core-cli-overview"></a>Übersicht über die .NET Core-CLI
 
-Die .NET Core-Befehlszeilenschnittstelle (CLI) ist eine plattformübergreifende Toolkette zur Entwicklung von .NET-Anwendungen. Die CLI ist eine Grundlage, auf der Tools höherer Ebene wie z. B. integrierte Entwicklungsumgebungen (Integrated Development Environments, IDEs), Editoren und Buildorchestratoren aufbauen können.
+Die .NET Core-Befehlszeilenschnittstelle (CLI) ist eine plattformübergreifende Toolkette zum Entwicklung, Erstellen, Ausführen und Veröffentlichen von .NET Core-Anwendungen.
 
-## <a name="installation"></a>Installation
-
-Verwenden Sie entweder die nativen Installer oder die Installations-Shellskripts:
-
-- Die nativen Installer werden vor allem auf Entwicklercomputern verwendet und verwenden den nativen Installationsmechanismus der jeweiligen unterstützten Plattform, z.B. DEB-Pakete unter Ubuntu oder MSI-Bündel unter Windows. Diese Installer installieren und konfigurieren die Umgebung für sofortige Verwendung durch den Entwickler, erfordern jedoch Administratorrechte auf dem Computer. Die Installationsanweisungen finden Sie im [.NET Core-Installationshandbuch](https://aka.ms/dotnetcoregs).
-- Shellskripts werden hauptsächlich für die Einrichtung von Buildservern verwendet, oder wenn Sie die Tools ohne Administratorrechte installieren möchten. Installationsskripts installieren keine erforderlichen Komponenten auf dem Computer, diese müssen manuell installiert werden. Weitere Informationen finden Sie unter [install script reference (Referenz zu Installationsskripts)](dotnet-install-script.md). Informationen zum Einrichten der CLI auf dem Buildserver der fortlaufenden Integration (Continuous Integration, CI) finden Sie unter [Verwenden des .NET Core SDK und der entsprechenden Tools in Continuous Integration (CI)](using-ci-with-cli.md).
-
-Standardmäßig installiert die CLI in paralleler Ausführung (side-by-side, SxS), sodass mehrere Versionen der CLI-Tools auf einem einzelnen Computer gleichzeitig vorhanden sein können. Wie bestimmt wird, welche Version auf einem Computer verwendet wird, auf dem mehrere Versionen installiert sind, wird im Abschnitt [Treiber](#driver) ausführlicher erklärt.
+Die .NET Core-CLI ist im [.NET Core SDK](../sdk.md) enthalten. Informationen zum Installieren des .NET Core SDK finden Sie unter [Installieren des .NET Core SDK](../install/sdk.md).
 
 ## <a name="cli-commands"></a>CLI-Befehle
 
@@ -32,7 +26,7 @@ Die folgenden Befehle werden standardmäßig erstellt:
 
 **Grundlegende Befehle**
 
-- [new](dotnet-new.md)
+- [Neu](dotnet-new.md)
 - [restore](dotnet-restore.md)
 - [build](dotnet-build.md)
 - [publish](dotnet-publish.md)
@@ -40,7 +34,7 @@ Die folgenden Befehle werden standardmäßig erstellt:
 - [test](dotnet-test.md)
 - [vstest](dotnet-vstest.md)
 - [pack](dotnet-pack.md)
-- [migrate](dotnet-migrate.md)
+- [Migrieren](dotnet-migrate.md)
 - [clean](dotnet-clean.md)
 - [sln](dotnet-sln.md)
 - [help](dotnet-help.md)
@@ -66,7 +60,7 @@ Die folgenden Befehle werden standardmäßig erstellt:
 
 **Grundlegende Befehle**
 
-- [new](dotnet-new.md)
+- [Neu](dotnet-new.md)
 - [restore](dotnet-restore.md)
 - [build](dotnet-build.md)
 - [publish](dotnet-publish.md)
@@ -74,7 +68,7 @@ Die folgenden Befehle werden standardmäßig erstellt:
 - [test](dotnet-test.md)
 - [vstest](dotnet-vstest.md)
 - [pack](dotnet-pack.md)
-- [migrate](dotnet-migrate.md)
+- [Migrieren](dotnet-migrate.md)
 - [clean](dotnet-clean.md)
 - [sln](dotnet-sln.md)
 
@@ -127,7 +121,7 @@ Der Treiber trägt den Namen [dotnet](dotnet.md) und hat zwei Aufgaben, entweder
 
 Geben Sie zur Ausführung einer Framework-abhängigen Anwendung nach dem Treiber die Anwendung an, z.B. `dotnet /path/to/my_app.dll`. Führen Sie beim Ausführen des Befehls aus dem Ordner, in dem sich die DLL der Anwendung befindet, einfach `dotnet my_app.dll` aus. Wenn Sie eine bestimmte Version der .NET Core-Runtime verwenden möchten, verwenden Sie die `--fx-version <VERSION>`-Option (weitere Informationen dazu finden Sie in der [Referenz zum dotnet-Befehl](dotnet.md)).
 
-Wenn Sie einen Befehl an den Treiber geben, startet `dotnet.exe` den Ausführungsprozess des CLI-Befehls. Zum Beispiel:
+Wenn Sie einen Befehl an den Treiber geben, startet `dotnet.exe` den Ausführungsprozess des CLI-Befehls. Beispiel:
 
 ```dotnetcli
 dotnet build
@@ -135,7 +129,7 @@ dotnet build
 
 Zunächst bestimmt der Treiber die zu verwendende SDK-Version. Wenn keine [„global.json“](global-json.md)-Datei vorhanden ist, wird die neueste Version des verfügbaren SDK verwendet. Dabei handelt es sich entweder um eine Vorschauversion oder eine stabile Version, je nachdem, welche Version sich aktuell auf dem Computer befindet.  Sobald die SDK-Version bestimmt ist, wird der Befehl ausgeführt.
 
-### <a name="command"></a>Befehl
+### <a name="command"></a>Get-Help
 
 Über den Befehl wird eine Aktion durchgeführt. Beispielsweise erstellt der Befehl `dotnet build` Code und der Befehl `dotnet publish` veröffentlicht Code. Die Befehle werden mit einer `dotnet {command}`-Konvention als Konsolenanwendung implementiert.
 
@@ -143,15 +137,15 @@ Zunächst bestimmt der Treiber die zu verwendende SDK-Version. Wenn keine [„gl
 
 Die Argumente, die Sie in der Befehlszeile übergeben, sind die Argumente für den aufgerufenen Befehl. Wenn Sie z.B. `dotnet publish my_app.csproj` ausführen, gibt das `my_app.csproj`-Argument das zu veröffentlichende Projekt an und wird an den `publish`-Befehl übergeben.
 
-### <a name="options"></a>Optionen
+### <a name="options"></a>Tastatur
 
 Die Optionen, die Sie in der Befehlszeile übergeben, sind die Optionen für den aufgerufenen Befehl. Wenn Sie z.B. `dotnet publish --output /build_output` ausführen, werden die `--output`-Option und ihr Wert an den `publish`-Befehl übergeben.
 
 ## <a name="migration-from-projectjson"></a>Migration von project.json
 
-Wenn Sie Preview 2-Tools verwendet haben, um *project.json*-basierte Projekte zu erzeugen, finden Sie im Thema [dotnet-migrate](dotnet-migrate.md) Informationen zur Migration eines Projekts zu MSBuild/ *.csproj* für die Verwendung mit Versionstools. Aktualisieren Sie für .NET Core-Projekte, die vor der Veröffentlichung der Vorschau 2-Tools erstellt wurden, das Projekt entweder manuell anhand der Anweisungen in [Migrieren von DNX zur .NET Core-CLI (project.json)](../migration/from-dnx.md) und verwenden dann `dotnet migrate`, oder führen Sie direkt ein Upgrade für die Projekte durch.
+Wenn Sie Preview 2-Tools verwendet haben, um *project.json*-basierte Projekte zu erzeugen, finden Sie im Thema [dotnet-migrate](dotnet-migrate.md) Informationen zur Migration eines Projekts zu MSBuild/*.csproj* für die Verwendung mit Versionstools. Aktualisieren Sie für .NET Core-Projekte, die vor der Veröffentlichung der Vorschau 2-Tools erstellt wurden, das Projekt entweder manuell anhand der Anweisungen in [Migrieren von DNX zur .NET Core-CLI (project.json)](../migration/from-dnx.md) und verwenden dann `dotnet migrate`, oder führen Sie direkt ein Upgrade für die Projekte durch.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [dotnet/CLI GitHub Repository (dotnet/CLI-GitHub-Repository)](https://github.com/dotnet/cli/)
+- [GitHub-Repository „dotnet/sdk“](https://github.com/dotnet/sdk/)
 - [.NET Core installation guide (.NET Core-Installationshandbuch)](https://aka.ms/dotnetcoregs)

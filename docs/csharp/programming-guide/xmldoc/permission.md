@@ -8,37 +8,43 @@ helpviewer_keywords:
 - <permission> C# XML tag
 - permission C# XML tag
 ms.assetid: 769e93fe-8404-443f-bf99-577aa42b6a49
-ms.openlocfilehash: 67e9d398d1bb43d480f8ca56733106e0f0a22731
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 14abb5bd181f401a4e6834d110e20fa920566580
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75696570"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76789736"
 ---
 # <a name="permission-c-programming-guide"></a>\<permission> (C#-Programmierhandbuch)
-## <a name="syntax"></a>Syntax  
-  
-```xml  
-<permission cref="member">description</permission>  
-```  
-  
-## <a name="parameters"></a>Parameter  
- cref = " `member`"  
- Ein Verweis auf einen Member oder ein Feld, das von der aktuellen Kompilierungsumgebung aufgerufen werden kann. Der Compiler prüft, ob das angegebene Codeelement vorhanden ist, und übersetzt in der Ausgabe-XML `member` in den kanonischen Elementnamen. *member* muss in doppelte Anführungszeichen (" ") gesetzt werden.  
-  
- Weitere Informationen zum Erstellen eines cref-Verweises auf einen generischen Typ finden Sie unter [\<see>](./see.md).  
-  
- `description`  
- Eine Beschreibung des Zugriffs auf den Member  
-  
-## <a name="remarks"></a>Hinweise  
- Mit dem \<permission>-Tag können Sie den Zugriff auf einen Member dokumentieren. Mit der <xref:System.Security.PermissionSet>-Klasse können Sie den Zugriff auf ein Member angeben.  
-  
- Kompilieren Sie mit [-doc](../../language-reference/compiler-options/doc-compiler-option.md), um Dokumentationskommentare zu einer Datei zu verarbeiten.  
-  
-## <a name="example"></a>Beispiel  
- [!code-csharp[csProgGuideDocComments#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDocComments/CS/DocComments.cs#8)]  
-  
+
+## <a name="syntax"></a>Syntax
+
+```xml
+<permission cref="member">description</permission>
+```
+
+## <a name="parameters"></a>Parameter
+
+- cref = " `member`"
+
+  Ein Verweis auf einen Member oder ein Feld, das von der aktuellen Kompilierungsumgebung aufgerufen werden kann. Der Compiler prüft, ob das angegebene Codeelement vorhanden ist, und übersetzt in der Ausgabe-XML `member` in den kanonischen Elementnamen. *member* muss in doppelte Anführungszeichen (" ") gesetzt werden.
+
+  Weitere Informationen zum Erstellen eines cref-Verweises auf einen generischen Typ finden Sie unter [\<see>](./see.md).
+
+- `description`
+
+  Eine Beschreibung des Zugriffs auf den Member
+
+## <a name="remarks"></a>Hinweise
+
+Mit dem \<permission>-Tag können Sie den Zugriff auf einen Member dokumentieren. Mit der <xref:System.Security.PermissionSet>-Klasse können Sie den Zugriff auf ein Member angeben.
+
+Kompilieren Sie mit [-doc](../../language-reference/compiler-options/doc-compiler-option.md), um Dokumentationskommentare zu einer Datei zu verarbeiten.
+
+## <a name="example"></a>Beispiel
+
+[!code-csharp[csProgGuideDocComments#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDocComments/CS/DocComments.cs#8)]
+
 ## <a name="see-also"></a>Siehe auch
 
 - [C#-Programmierhandbuch](../index.md)

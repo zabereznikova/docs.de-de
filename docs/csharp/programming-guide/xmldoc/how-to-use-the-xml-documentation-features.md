@@ -1,16 +1,16 @@
 ---
-title: 'Vorgehensweise: Verwenden der XML-Dokumentationsfeatures (C#-Programmierleitfaden)'
+title: Verwenden der XML-Dokumentationsfeatures – C#-Programmierhandbuch
 ms.date: 06/01/2018
 helpviewer_keywords:
 - XML documentation [C#]
 - C# language, XML documentation features
 ms.assetid: 8f33917b-9577-4c9a-818a-640dbbb0b399
-ms.openlocfilehash: 5de94b1f1ab44f954b5bab9f8b5212c33325c19d
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 57034fb835d4c82b5bf658e61ec78ef226c2551e
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75696713"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76789773"
 ---
 # <a name="how-to-use-the-xml-documentation-features"></a>Verwenden der XML-Dokumentationsfeatures
 
@@ -20,7 +20,7 @@ Das folgende Beispiel bietet eine grundlegende Übersicht über einen Typ, der d
 
 [!code-csharp[csProgGuideDocComments#15](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDocComments/CS/DocComments.cs#15)]
 
-Im Beispiel wird eine XML-Datei mit folgendem Inhalt generiert:
+Im Beispiel wird eine *XML*-Datei mit dem folgenden Inhalt generiert.
 
 ```xml
 <?xml version="1.0"?>
@@ -120,7 +120,7 @@ XML-Dokumentation beginnt mit ///. Wenn Sie ein neues Projekt erstellen, fügt d
 
 - Die Dokumentation muss wohlgeformtes XML sein. Wenn das XML nicht wohlgeformt ist, wird eine Warnung generiert, und die Dokumentationsdatei enthält einen Kommentar, der besagt, dass ein Fehler aufgetreten ist.
 
-- Entwickler können ihren eigenen Satz von Tags erstellen. Es gibt eine Reihe empfohlener Tags (siehe [Empfohlene Tags für Dokumentationskommentare](recommended-tags-for-documentation-comments.md)). Einige der empfohlenen Tags haben eine besondere Bedeutung:
+- Entwickler können ihren eigenen Satz von Tags erstellen. Es gibt einen [empfohlenen Satz von Tags](recommended-tags-for-documentation-comments.md). Einige der empfohlenen Tags haben eine besondere Bedeutung:
 
   - Das \<param>-Tag wird verwendet, um Parameter zu beschreiben. Wenn es verwendet wird, überprüft der Compiler, ob der Parameter vorhanden ist, und ob alle Parameter in der Dokumentation beschrieben werden. Wenn die Überprüfung fehlschlägt, gibt der Compiler eine Warnung aus.
 

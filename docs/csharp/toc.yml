@@ -1402,7 +1402,7 @@
               href: language-reference/keywords/event.md
             - name: extern
               href: language-reference/keywords/extern.md
-            - name: In (generischer Modifizierer)
+            - name: in (generischer Modifizierer)
               href: language-reference/keywords/in-generic-modifier.md
             - name: new (Membermodifizierer)
               href: language-reference/keywords/new-modifier.md
@@ -1505,17 +1505,17 @@
               href: language-reference/keywords/extern-alias.md
         - name: Typtest-Schlüsselwörter
           items:
-            - name: echt
+            - name: is
               href: language-reference/keywords/is.md
         - name: Generische Schlüsselwörter für die Typeinschränkung
           items:
             - name: new-Einschränkung
               href: language-reference/keywords/new-constraint.md
-            - name: wo
+            - name: where
               href: language-reference/keywords/where-generic-type-constraint.md
         - name: Zugriffsschlüsselwörter
           items:
-            - name: Basis
+            - name: base
               href: language-reference/keywords/base.md
             - name: this
               href: language-reference/keywords/this.md
@@ -1532,7 +1532,7 @@
             - name: Kurzreferenz
               displayName: contextual keywords
               href: language-reference/keywords/contextual-keywords.md
-            - name: Hinzufügen
+            - name: add
               href: language-reference/keywords/add.md
             - name: get
               href: language-reference/keywords/get.md
@@ -1542,11 +1542,11 @@
               href: language-reference/keywords/partial-method.md
             - name: remove
               href: language-reference/keywords/remove.md
-            - name: Festlegen
+            - name: set
               href: language-reference/keywords/set.md
             - name: when (Filterbedingung)
               href: language-reference/keywords/when.md
-            - name: Wert
+            - name: value
               href: language-reference/keywords/value.md
             - name: yield
               href: language-reference/keywords/yield.md
@@ -1575,13 +1575,13 @@
               href: language-reference/keywords/ascending.md
             - name: descending
               href: language-reference/keywords/descending.md
-            - name: an
+            - name: 'on'
               href: language-reference/keywords/on.md
             - name: equals
               href: language-reference/keywords/equals.md
             - name: by
               href: language-reference/keywords/by.md
-            - name: Zoll
+            - name: in
               href: language-reference/keywords/in.md
     - name: 'C#-Operatoren'
       items:
@@ -1642,7 +1642,7 @@
         - name: await-operator
           href: language-reference/operators/await.md
           displayName: async
-        - name: Standardoperator
+        - name: default-operator
           href: language-reference/operators/default.md
           displayName: 'default value, default literal, type default'
         - name: delegate-Operator

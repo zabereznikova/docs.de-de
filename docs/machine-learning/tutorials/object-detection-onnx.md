@@ -6,12 +6,12 @@ ms.author: luquinta
 ms.date: 12/12/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 04d7dedf9f882d9f0e0396949c71e4941c207fe3
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 6aaf5acc605067f378ff5d42f713fe1c63d91e46
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75345030"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76794624"
 ---
 # <a name="tutorial-detect-objects-using-onnx-in-mlnet"></a>Tutorial: Erkennen von Objekten mithilfe von ONNX in ML.NET
 
@@ -213,7 +213,7 @@ Die Daten, die vom Modell ausgegeben werden, enthalten Koordinaten und Dimension
 
     [!code-csharp [DimensionsBaseClass](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/YoloParser/DimensionsBase.cs#L3-L9)]
 
-    `DimensionsBase` verfügt über die folgenden `float`-Felder:
+    `DimensionsBase` weist die folgenden `float`-Eigenschaften auf:
 
     - `X` enthält die Position des Objekts auf der X-Achse.
     - `Y` enthält die Position des Objekts auf der Y-Achse.
@@ -237,7 +237,7 @@ Erstellen Sie nun eine Klasse für Ihre Begrenzungsrahmen.
 
     [!code-csharp [YoloBoundingBoxClass](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/YoloParser/YoloBoundingBox.cs#L7-L21)]
 
-    `YoloBoundingBox` verfügt über die folgenden Felder:
+    `YoloBoundingBox` weist die folgenden Eigenschaften auf:
 
     - `Dimensions` enthält Dimensionen des Begrenzungsrahmens.
     - `Label` enthält die Klasse des Objekts, das innerhalb des Begrenzungsrahmens erkannt wurde.
@@ -260,7 +260,7 @@ Da nun die Klassen für Dimensionen und Begrenzungsrahmen erstellt wurden, ist e
 
     [!code-csharp [YoloParserUsings](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/YoloParser/YoloOutputParser.cs#L10)]
 
-1. Fügen Sie in der `YoloOutputParser`-Klassendefinition die folgende Konstante und die folgenden Felder hinzu.
+1. Fügen Sie in der `YoloOutputParser`-Klassendefinition die folgenden Konstanten und Felder hinzu.
 
     [!code-csharp [ParserVarDefinitions](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/YoloParser/YoloOutputParser.cs#L12-L21)]
 

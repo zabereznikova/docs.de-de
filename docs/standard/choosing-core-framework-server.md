@@ -4,12 +4,12 @@ description: Ein Leitfaden zur Auswahl der NET-Implementierung für die Erstellu
 author: cartermp
 ms.author: mairaw
 ms.date: 06/19/2018
-ms.openlocfilehash: b2b9e15cfdfd63d070ae94c29a9f2d1a5b5c87b2
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: c280e22341a45260a816a36c1148dc8c4f76db09
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75738668"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76921418"
 ---
 # <a name="choosing-between-net-core-and-net-framework-for-server-apps"></a>Wahl zwischen .NET Core und .NET Framework für Server-Apps
 
@@ -38,7 +38,7 @@ In den folgenden Abschnitten werden die zuvor genannten Gründe für eine Entsch
 
 Wenn Ihre Anwendung (Web/Dienst) auf mehreren Plattformen ausgeführt werden muss (Windows, Linux und macOS), verwenden Sie .NET Core.
 
-.NET Core unterstützt die zuvor genannten Betriebssysteme für Ihre Entwicklungsarbeitsstation. Visual Studio bietet eine integrierte Entwicklungsumgebung (Integrated Development Environment, IDE) für Windows und macOS. Sie können auch Visual Studio Code verwenden, das unter macOS, Linux und Windows ausgeführt werden kann. Visual Studio Code unterstützt .NET Core, einschließlich IntelliSense und Debugging. Die meisten Editoren von Drittanbietern, wie etwa Sublime, Emacs und VI, funktionieren mit .NET Core. Diese Editoren von Drittanbietern rufen IntelliSense mit [OmniSharp](https://www.omnisharp.net/) ab. Da Sie die [.NET Core-Befehlszeilentools](../core/tools/index.md) direkt verwenden können, die für alle unterstützten Plattformen verfügbar sind, ist ein Code-Editor überflüssig.
+.NET Core unterstützt die zuvor genannten Betriebssysteme für Ihre Entwicklungsarbeitsstation. Visual Studio bietet eine integrierte Entwicklungsumgebung (Integrated Development Environment, IDE) für Windows und macOS. Sie können auch Visual Studio Code verwenden, das unter macOS, Linux und Windows ausgeführt werden kann. Visual Studio Code unterstützt .NET Core, einschließlich IntelliSense und Debugging. Die meisten Editoren von Drittanbietern, wie etwa Sublime, Emacs und VI, funktionieren mit .NET Core. Diese Editoren von Drittanbietern rufen IntelliSense mit [OmniSharp](https://www.omnisharp.net/) ab. Da Sie die [.NET Core-CLI](../core/tools/index.md) direkt verwenden können und diese für alle unterstützten Plattformen zur Verfügung steht, ist ein Code-Editor nicht notwendig.
 
 ### <a name="microservices-architecture"></a>Microservicearchitektur
 

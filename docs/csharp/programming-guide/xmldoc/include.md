@@ -8,75 +8,84 @@ helpviewer_keywords:
 - <include> C# XML tag
 - include C# XML tag
 ms.assetid: a8a70302-6196-4643-bd09-ef33f411f18f
-ms.openlocfilehash: 125ab9476507babae9a707a6c42d24adda632267
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 1e3722cbed02775d0ad4f392840ea10275c96be1
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75696557"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76793431"
 ---
 # <a name="include-c-programming-guide"></a>\<include> (C#-Programmierhandbuch)
-## <a name="syntax"></a>Syntax  
+
+## <a name="syntax"></a>Syntax
+
+```xml
+<include file='filename' path='tagpath[@name="id"]' />
+```
+
+## <a name="parameters"></a>Parameter
+
+- `filename`
+
+  Der Name der XML-Datei, die die Dokumentation enthält. Der Dateiname kann mit einem Pfad relativ zur Quellcodedatei qualifiziert werden. `filename` muss in einfache Anführungszeichen (‚‘) eingeschlossen werden.
+
+- `tagpath`
+
+  Der Pfad der Tags in `filename`, der zum Tag `name` führt. Der Pfad muss in einfache Anführungszeichen (‚‘) eingeschlossen werden.
+
+- `name`
+
+  Der Namensbezeichner in dem Tag, das sich vor den Kommentaren befindet. `name` besitzt eine `id`.
+
+- `id`
+
+Die ID für das Tag, das sich vor den Kommentaren befindet. Die ID muss in doppelte Anführungszeichen („“) eingeschlossen werden.
+
+## <a name="remarks"></a>Hinweise
+
+Mit dem \<include>-Tag können Sie auf Kommentare in einer anderen Datei verweisen, die die Typen und Member in Ihrem Quellcode beschreiben. Dies ist eine Alternative zum direkten Platzieren von Dokumentationskommentaren in der Quellcodedatei. Durch das Ablegen der Dokumentation in einer separaten Datei können Sie die Quellcodeverwaltung unabhängig vom Quellcode auf die Dokumentation anwenden. Eine Person kann die Quellcodedatei auschecken, eine andere die Dokumentationsdatei.
+
+Das \<include>-Tag verwendet die XPath-Syntax von XML. Weitere Anpassungsmöglichkeiten der Verwendung von \<include> finden Sie in der XPath-Dokumentation.
+
+## <a name="example"></a>Beispiel
+
+Dies ist ein Beispiel einer Mehrfachdatei. Die folgende Datei ist die erste, die \<include> verwendet.
+
+[!code-csharp[csProgGuideDocComments#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDocComments/CS/DocComments.cs#5)]
+
+Die zweite Datei, *xml_include_tag.doc*, enthält die folgenden Dokumentationskommentare.
+
+```xml
+<MyDocs>
+
+<MyMembers name="test">
+<summary>
+The summary for this type.
+</summary>
+</MyMembers>
+
+<MyMembers name="test2">
+<summary>
+The summary for this other type.
+</summary>
+</MyMembers>
+
+</MyDocs>
+```
+
+## <a name="program-output"></a>Programmausgabe
+
+Die folgende Ausgabe wird generiert, wenn Sie die Klassen „Test“ und „Test2“ mit der folgenden Befehlszeile kompilieren: `-doc:DocFileName.xml.` In Visual Studio geben Sie die Option für XML-Dokumentkommentare im Buildbereich des Projekt-Designers an. Erkennt der C#-Compiler das \<include>-Tag, sucht er statt in der aktuellen Quelldatei in „xml_include_tag.doc“ nach Dokumentationskommentaren. Der Compiler generiert dann DocFileName.xml. Dies ist die Datei, die von Dokumentationstools wie z. B. [DocFX](https://dotnet.github.io/docfx/) oder [Sandcastle](https://github.com/EWSoftware/SHFB) genutzt wird, um die endgültige Dokumentation zu erzeugen.  
   
-```xml  
-<include file='filename' path='tagpath[@name="id"]' />  
-```  
-  
-## <a name="parameters"></a>Parameter  
- `filename`  
- Der Name der XML-Datei, die die Dokumentation enthält. Der Dateiname kann mit einem Pfad relativ zur Quellcodedatei qualifiziert werden. `filename` muss in einfache Anführungszeichen (‚‘) eingeschlossen werden.  
-  
- `tagpath`  
- Der Pfad der Tags in `filename`, der zum Tag `name` führt. Der Pfad muss in einfache Anführungszeichen (‚‘) eingeschlossen werden.  
-  
- `name`  
- Der Namensbezeichner in dem Tag, das sich vor den Kommentaren befindet. `name` besitzt eine `id`.  
-  
- `id`  
- Die ID für das Tag, das sich vor den Kommentaren befindet. Die ID muss in doppelte Anführungszeichen („“) eingeschlossen werden.  
-  
-## <a name="remarks"></a>Hinweise  
- Mit dem \<include>-Tag können Sie auf Kommentare in einer anderen Datei verweisen, die die Typen und Member in Ihrem Quellcode beschreiben. Dies ist eine Alternative zum direkten Platzieren von Dokumentationskommentaren in der Quellcodedatei. Durch das Ablegen der Dokumentation in einer separaten Datei können Sie die Quellcodeverwaltung unabhängig vom Quellcode auf die Dokumentation anwenden. Eine Person kann die Quellcodedatei auschecken, eine andere die Dokumentationsdatei.  
-  
- Das \<include>-Tag verwendet die XPath-Syntax von XML. Weitere Anpassungsmöglichkeiten der Verwendung von \<include> finden Sie in der XPath-Dokumentation.  
-  
-## <a name="example"></a>Beispiel  
- Dies ist ein Beispiel einer Mehrfachdatei. Die erste Datei, die \<include> verwendet, wird unten aufgeführt:  
-  
- [!code-csharp[csProgGuideDocComments#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDocComments/CS/DocComments.cs#5)]  
-  
- Die zweite Datei, xml_include_tag.doc, enthält die folgenden Dokumentationskommentare:  
-  
-```xml  
-<MyDocs>  
-  
-<MyMembers name="test">  
-<summary>  
-The summary for this type.  
-</summary>  
-</MyMembers>  
-  
-<MyMembers name="test2">  
-<summary>  
-The summary for this other type.  
-</summary>  
-</MyMembers>  
-  
-</MyDocs>  
-```  
-  
-## <a name="program-output"></a>Programmausgabe  
- Die folgende Ausgabe wird generiert, wenn Sie die Klassen „Test“ und „Test2“ mit der folgenden Befehlszeile kompilieren: `/doc:DocFileName.xml.` In Visual Studio geben Sie die Option für XML-Dokumentkommentare im Buildbereich des Projekt-Designers an. Erkennt der C#-Compiler das \<include>-Tag, sucht er statt in der aktuellen Quelldatei in „xml_include_tag.doc“ nach Dokumentationskommentaren. Der Compiler generiert dann DocFileName.xml. Dies ist die Datei, die von Dokumentationstools wie z. B. [DocFX](https://dotnet.github.io/docfx/) oder [Sandcastle](https://github.com/EWSoftware/SHFB) genutzt wird, um die endgültige Dokumentation zu erzeugen.  
-  
-```xml  
-<?xml version="1.0"?>   
-<doc>   
-    <assembly>   
-        <name>xml_include_tag</name>   
-    </assembly>   
-    <members>   
-        <member name="T:Test">   
-            <summary>   
+```xml
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>xml_include_tag</name>
+    </assembly>
+    <members>
+        <member name="T:Test">
+            <summary>
 The summary for this type.   
 </summary>   
         </member>   

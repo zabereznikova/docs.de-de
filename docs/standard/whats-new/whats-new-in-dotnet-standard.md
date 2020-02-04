@@ -4,12 +4,12 @@ description: In diesem Artikel werden neue Features und Verbesserungen zusammeng
 ms.custom: updateeachrelease
 ms.date: 04/12/2018
 ms.technology: dotnet-standard
-ms.openlocfilehash: ebf656c4a5499fff54cb5a70a93c4e8cc9c82d0a
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a90df0360211c3b02f4f2d8697890180099c5807
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73101757"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76921058"
 ---
 # <a name="whats-new-in-the-net-standard"></a>Neuerungen im .NET Standard
 
@@ -63,7 +63,7 @@ Sie können jetzt .NET Standard-Bibliotheken in Visual Basic entwickeln. Für Vi
 
 ### <a name="tooling-support-for-net-standard-libraries"></a>Toolunterstützung für .NET Standard-Bibliotheken
 
-Mit der Veröffentlichung von .NET Core 2.0 und .NET Standard 2.0 enthalten sowohl Visual Studio 2017 als auch die [.NET Core-Befehlszeilenschnittstelle (CLI)](../../core/tools/index.md) Toolunterstützung für die Erstellung von .NET Standard-Bibliotheken.
+Mit der Veröffentlichung von .NET Core 2.0 und .NET Standard 2.0 enthalten sowohl Visual Studio 2017 als auch die [.NET Core-CLI](../../core/tools/index.md) Toolunterstützung für die Erstellung von .NET Standard-Bibliotheken.
 
 Wenn Sie Visual Studio mit der Workload für die **plattformübergreifende .NET Core-Entwicklung** installieren, können Sie ein .NET Standard 2.0-Bibliotheksprojekt mithilfe einer Projektvorlage wie in der folgenden Abbildung veranschaulicht erstellen:
 
