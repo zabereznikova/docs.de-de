@@ -1,27 +1,27 @@
 - name: Installationshandbuch
   href: index.md
   items:
-    - name: Installieren von .NET Framework unter Windows 10 und Windows Server 2016
-      href: on-windows-10.md
-    - name: Installieren von .NET Framework unter Windows 8.1 und Windows Server 2012 R2
-      href: on-windows-8-1.md
-    - name: Installieren von .NET Framework unter Windows 8 und Windows Server 2012
-      href: on-windows-8.md
-    - name: Installieren von .NET Framework unter Windows 7 SP1 und Windows Server 2008 R2
-      href: on-windows-7.md
-    - name: Installieren von .NET Framework unter Windows Vista und Windows Server 2008
-      href: on-windows-vista.md
-    - name: Installieren von .NET Framework unter Windows XP und Windows Server 2003
-      href: on-windows-xp.md
     - name: Installationshandbuch für Entwickler
       href: guide-for-developers.md
+    - name: Windows 10 und Windows Server 2016
+      href: on-windows-10.md
+    - name: Windows 8.1 und Windows Server 2012 R2
+      href: on-windows-8-1.md
+    - name: Windows 8 und Windows Server 2012
+      href: on-windows-8.md
+    - name: Windows 7 SP1 und Windows Server 2008 R2
+      href: on-windows-7.md
+    - name: Windows Vista und Windows Server 2008
+      href: on-windows-vista.md
+    - name: Windows XP und Windows Server 2003
+      href: on-windows-xp.md
     - name: Reparieren von .NET Framework
       href: repair.md
-    - name: Problembehandlung von blockierten Installationen und Deinstallationen von .NET Framework
+    - name: Problembehandlung bei der Installation und Deinstallation
       href: troubleshoot-blocked-installations-and-uninstallations.md
-    - name: Problembehandlung für die Nachricht „Diese Anwendung konnte nicht gestartet werden“
+    - name: Problembehandlung für „Diese Anwendung konnte nicht gestartet werden“
       href: application-not-started.md
-    - name: 'Installieren von .NET Framework 3.5 auf Windows 10, Windows 8.1 und Windows 8'
+    - name: .NET Framework 3.5 unter Windows 8 bis Windows 10
       href: dotnet-35-windows-10.md
-    - name: 'Ausführen von auf .NET Framework 1.1 basierenden Apps auf Windows 8, Windows 8.1 oder Windows 10'
+    - name: .NET Framework 1.1-Apps unter Windows 8 bis Windows 10
       href: run-net-framework-1-1-apps.md

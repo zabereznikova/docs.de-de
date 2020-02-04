@@ -63,7 +63,7 @@
           href: language-reference/symbol-and-operator-reference/bitwise-operators.md
         - name: 'Operatoren, die NULL-Werte zulassen'
           href: language-reference/symbol-and-operator-reference/nullable-operators.md
-    - name: Funktionen
+    - name: Functions
       href: language-reference/functions/index.md
       items:
         - name: let-Bindungen
@@ -109,7 +109,7 @@
       href: language-reference/sequences.md
     - name: Slices
       href: language-reference/slices.md
-    - name: Optionen
+    - name: Tastatur
       href: language-reference/options.md
     - name: Wertoptionen
       href: language-reference/value-options.md
@@ -146,7 +146,7 @@
       href: language-reference/interfaces.md
     - name: Abstrakte Klassen
       href: language-reference/abstract-classes.md
-    - name: Member
+    - name: Members
       href: language-reference/members/index.md
       items:
         - name: let-Bindungen in Klassen
@@ -161,7 +161,7 @@
           href: language-reference/members/methods.md
         - name: Konstruktoren
           href: language-reference/members/constructors.md
-        - name: Ereignisse
+        - name: Events
           href: language-reference/members/events.md
         - name: 'Explizite Felder: Das `val`-Schlüsselwort'
           href: language-reference/members/explicit-fields-the-val-keyword.md
@@ -212,7 +212,7 @@
           href: language-reference/exception-handling/the-failwith-function.md
         - name: Die invalidArg-Funktion
           href: language-reference/exception-handling/the-invalidArg-function.md
-    - name: Attribute
+    - name: Attributes
       href: language-reference/attributes.md
     - name: 'Ressourcenverwaltung: das use-Schlüsselwort'
       href: language-reference/resource-management-the-use-keyword.md
@@ -256,6 +256,8 @@
       href: language-reference/caller-information.md
     - name: Ausführliche Syntax
       href: language-reference/verbose-syntax.md
+    - name: Compilerfehler und -warnungen
+      href: language-reference/compiler-messages/index.md
 - name: 'F#-Styleguide'
   href: style-guide/index.md
   items:
