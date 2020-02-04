@@ -1,16 +1,16 @@
 ---
-title: SQL Server-Verbindungspooling (ADO.NET)
+title: Verbindungs Pooling für SQL Server
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 7e51d44e-7c4e-4040-9332-f0190fe36f07
-ms.openlocfilehash: 2c73bec644a9a76ba05d3299183e8f1643c8e870
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 3bf0ce98b9b16b8d698a814f3bf2c4f442f3bf06
+ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70794316"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "76980040"
 ---
 # <a name="sql-server-connection-pooling-adonet"></a>SQL Server-Verbindungspooling (ADO.NET)
 Beim Herstellen einer Verbindung mit einem Datenbankserver müssen normalerweise mehrere zeitaufwändige Schritte ausgeführt werden. Es muss u. a. ein physischer Channel (z. B. ein Socket oder eine benannte Pipe) erstellt, der anfängliche Handshake durchgeführt, die Informationen der Verbindungszeichenfolge analysiert, die Verbindung vom Server authentifiziert und Überprüfungen zum Eintragen in die aktuelle Transaktion ausgeführt werden.  
@@ -67,7 +67,7 @@ using (SqlConnection connection = new SqlConnection(
  Die Verbindungspoolfunktion erfüllt diese Verbindungsanforderungen, indem Verbindungen erneut zugewiesen werden, sobald sie wieder für den Pool freigegeben werden. Wenn die maximale Poolgröße erreicht ist und keine verwendbare Verbindung verfügbar ist, wird die Anforderung in die Warteschlange gestellt. Der Pooler versucht anschließend, alle Verbindungen wieder anzufordern, bis das Timeout erreicht ist (der Standardwert beträgt 15 Sekunden). Wenn der Pooler die Anforderung nicht erfüllt, bevor das Zeitlimit für die Verbindung überschritten ist, wird eine Ausnahme ausgelöst.  
   
 > [!CAUTION]
-> Es ist unbedingt zu empfehlen, die Verbindung nach Verwendung stets zu schließen, damit sie in den Pool zurückgegeben wird. Hierzu können Sie entweder `Close` die-Methode oder `Dispose` die-Methode des `Connection` -Objekts verwenden oder alle Verbindungen innerhalb einer `using` -Anweisung C#in oder eine `Using` -Anweisung in Visual Basic öffnen. Verbindungen, die nicht explizit geschlossen werden, werden möglicherweise dem Pool nicht hinzugefügt bzw. nicht an den Pool zurückgegeben. Weitere Informationen finden Sie unter [using](../../../csharp/language-reference/keywords/using-statement.md) -Anweisung [oder Gewusst wie: Löschen Sie eine System Ressource](../../../visual-basic/programming-guide/language-features/control-flow/how-to-dispose-of-a-system-resource.md) für Visual Basic.  
+> Es ist unbedingt zu empfehlen, die Verbindung nach Verwendung stets zu schließen, damit sie in den Pool zurückgegeben wird. Hierzu können Sie entweder die Methoden `Close` oder `Dispose` des `Connection`-Objekts oder alle Verbindungen innerhalb einer `using`-Anweisung in C#oder eine `Using`-Anweisung in Visual Basic öffnen. Verbindungen, die nicht explizit geschlossen werden, werden möglicherweise dem Pool nicht hinzugefügt bzw. nicht an den Pool zurückgegeben. Weitere Informationen finden Sie unter [using-Anweisung](../../../csharp/language-reference/keywords/using-statement.md) oder Vorgehens [Weise: Verwerfen einer System Ressource](../../../visual-basic/programming-guide/language-features/control-flow/how-to-dispose-of-a-system-resource.md) für Visual Basic.  
   
 > [!NOTE]
 > Rufen Sie nicht `Close` oder `Dispose` für eine `Connection`, einen `DataReader` oder ein anderes verwaltetes Objekt in der `Finalize`-Methode der Klasse auf. Geben Sie in einer Finalize-Methode nur nicht verwaltete Ressourcen frei, die der Klasse direkt gehören. Wenn die Klasse keine nicht verwalteten Ressourcen besitzt, definieren Sie in der Klasse keine `Finalize`-Methode. Weitere Informationen finden Sie unter [Garbage Collection](../../../standard/garbage-collection/index.md).  
@@ -80,9 +80,9 @@ Weitere Informationen zu den Ereignissen, die mit dem Öffnen und Schließen von
  Wenn eine Verbindung mit einem nicht mehr vorhandenen Server besteht, kann diese Verbindung aus dem Pool genommen werden, ohne dass die Verbindungspoolfunktion die unterbrochene Verbindung gefunden und als ungültig markiert hat. Dies liegt daran, dass durch den Mehraufwand beim Überprüfen, ob eine Verbindung noch gültig ist, die Vorteile eines Poolers umgangen werden, da eine weitere Schleife zum Server auftritt. In diesem Fall wird bei der ersten Verwendung der Verbindung festgestellt, dass die Verbindung unterbrochen wurde, und es wird eine Ausnahme ausgelöst.  
   
 ## <a name="clearing-the-pool"></a>Löschen des Pools  
- ADO.NET 2,0 hat zwei neue Methoden eingeführt, um den Pool <xref:System.Data.SqlClient.SqlConnection.ClearAllPools%2A> zu <xref:System.Data.SqlClient.SqlConnection.ClearPool%2A>löschen: und. `ClearAllPools` löscht die Verbindungspools für einen angegebenen Anbieter, und `ClearPool` löscht den Verbindungspool, der einer bestimmten Verbindung zugeordnet ist. Wenn Verbindungen während des Aufrufs verwendet werden, werden diese entsprechend markiert. Sie werden nach dem Beenden verworfen und nicht an den Pool zurückgegeben.  
+ ADO.NET 2,0 hat zwei neue Methoden eingeführt, um den Pool zu löschen: <xref:System.Data.SqlClient.SqlConnection.ClearAllPools%2A> und <xref:System.Data.SqlClient.SqlConnection.ClearPool%2A>. `ClearAllPools` löscht die Verbindungspools für einen angegebenen Anbieter, und `ClearPool` löscht den Verbindungspool, der einer bestimmten Verbindung zugeordnet ist. Wenn Verbindungen während des Aufrufs verwendet werden, werden diese entsprechend markiert. Sie werden nach dem Beenden verworfen und nicht an den Pool zurückgegeben.  
   
-## <a name="transaction-support"></a>Transaktionsunterstützung  
+## <a name="transaction-support"></a>Unterstützung von Transaktionen  
  Verbindungen werden aus dem Pool entnommen und basierend auf dem Transaktionskontext zugewiesen. Sofern `Enlist=false` in der Verbindungszeichenfolge angegeben ist, wird durch den Verbindungspool gewährleistet, dass die Verbindung im <xref:System.Transactions.Transaction.Current%2A>-Kontext eingetragen wird. Wenn eine Verbindung geschlossen und mit einer eingetragenen `System.Transactions`-Transaktion an den Pool zurückgegeben wird, wird sie so reserviert, dass bei der nächsten Anforderung für diesen Verbindungspool mit der gleichen `System.Transactions`-Transaktion die gleiche Verbindung zurückgegeben wird, soweit diese verfügbar ist. Wenn eine solche Anforderung ausgegeben wird und keine Verbindungen in einem Pool verfügbar sind, wird eine Verbindung vom nicht transaktiven Teil des Pools erstellt und eingetragen. Wenn in keinem Bereich des Pools Verbindungen verfügbar sind, wird eine neue Verbindung erstellt und eingetragen.  
   
  Wenn eine Verbindung geschlossen wird, wird sie an den Pool und an den entsprechenden Teilbereich auf der Grundlage des Transaktionskontexts zurückgegeben. Sie können die Verbindung daher trennen, ohne einen Fehler zu generieren, auch wenn eine verteilte Transaktion noch aussteht. So haben Sie die Möglichkeit, die verteilte Transaktion zu einem späteren Zeitpunkt durchzuführen oder abzubrechen.  
@@ -133,5 +133,5 @@ using (SqlConnection connection = new SqlConnection(
 
 - [Verbindungspooling](connection-pooling.md)
 - [SQL Server und ADO.NET](./sql/index.md)
-- [Leistungsindikatoren](performance-counters.md)
+- [Performance Counters](performance-counters.md)
 - [Übersicht über ADO.NET](ado-net-overview.md)

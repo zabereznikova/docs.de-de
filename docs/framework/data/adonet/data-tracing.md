@@ -1,13 +1,13 @@
 ---
-title: Datenablaufverfolgung in ADO.NET
+title: Datenablauf Verfolgung
 ms.date: 03/30/2017
 ms.assetid: a6a752a5-d2a9-4335-a382-b58690ccb79f
-ms.openlocfilehash: f92a17374cf3df1281e51d54bae1a1dcf9e5ea03
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: 2b2a33739619ba09e56d4cc9ce99c51423678918
+ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75937630"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "76980222"
 ---
 # <a name="data-tracing-in-adonet"></a>Datenablaufverfolgung in ADO.NET
 
@@ -31,7 +31,7 @@ Weitere Informationen zum Festlegen und Konfigurieren der verwalteten Ablauf Ver
 
 ## <a name="accessing-diagnostic-information-in-the-extended-events-log"></a>Zugriff auf Diagnoseinformationen im Protokoll für erweiterte Ereignisse
 
-In der .NET Framework Datenanbieter für SQL Server wurde die Datenzugriffs-Ablauf Verfolgung ([Datenzugriffs](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/hh880086(v=msdn.10))-Ablauf Verfolgung) aktualisiert, um das korrelieren von Client Ereignissen mit Diagnoseinformationen (z. b. Verbindungsfehlern) aus dem konnektivitätsringpuffer des Servers und den Informationen zur Anwendungsleistung im Protokoll für erweiterte Ereignisse zu vereinfachen. Informationen dazu, wie Sie das Protokoll für erweiterte Ereignisse lesen, finden Sie unter [View Event Session Data](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/hh710068(v=sql.110)).
+In der .NET Framework Datenanbieter für SQL Server wurde die Datenzugriffs-Ablauf Verfolgung ([Datenzugriffs](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/hh880086(v=msdn.10))-Ablauf Verfolgung) aktualisiert, um das korrelieren von Client Ereignissen mit Diagnoseinformationen (z. b. Verbindungsfehlern) aus dem konnektivitätsringpuffer des Servers und den Informationen zur Anwendungsleistung im Protokoll für erweiterte Ereignisse zu vereinfachen. Weitere Informationen zum Lesen des Protokolls für erweiterte Ereignisse finden Sie unter [View Event Session Data](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/hh710068(v=sql.110)).
 
 Für Verbindungsvorgänge sendet ADO.NET eine Clientverbindungs-ID. Wenn die Verbindung nicht hergestellt werden kann, können Sie auf den konnektivitätsringpuffer zugreifen ([Problembehandlung bei der Konnektivität in SQL Server 2008 mit dem konnektivitätsringpuffer](https://docs.microsoft.com/archive/blogs/sql_protocols/connectivity-troubleshooting-in-sql-server-2008-with-the-connectivity-ring-buffer)) und das `ClientConnectionID` Feld Suchen und Diagnoseinformationen zum Verbindungsfehler abrufen. Clientverbindungs-IDs werden nur im Ringpuffer protokolliert, wenn ein Fehler auftritt. (Wenn eine Verbindung nicht hergestellt werden kann, bevor das Paket für die Vorab Anmeldung gesendet wird, wird keine Clientverbindungs-ID generiert.) Die Clientverbindungs-ID ist eine 16-Byte-GUID. Sie finden die Clientverbindungs-ID auch in der Zielausgabe für erweiterte Ereignisse, wenn die `client_connection_id`-Aktion den Ereignissen in einer Sitzung für erweiterte Ereignisse hinzugefügt wurde. Sie können die Ablaufverfolgung für den Datenzugriff aktivieren, den Verbindungsbefehl erneut ausführen und das `ClientConnectionID`-Feld in der Datenzugriffs-Ablaufverfolgung beobachten, wenn Sie weitere Diagnoseinformationen zum Clienttreiber benötigen.
 

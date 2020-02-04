@@ -1,13 +1,13 @@
 ---
-title: Übersicht über ADO.NET
+title: Übersicht über
 ms.date: 03/30/2017
 ms.assetid: ee3bc1d8-11db-4be4-89eb-c708cf04117d
-ms.openlocfilehash: 2d21e5b73757280b679a9c5cd04a56339e7e967e
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: d5dc9cf7081c6876118914a0b95853a5a7ca5e57
+ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70785097"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "76980339"
 ---
 # <a name="adonet-overview"></a>Übersicht über ADO.NET
 ADO.NET stellt konsistenten Zugriff auf Datenquellen wie SQL Server und XML sowie auf Datenquellen bereit, die durch OLE DB und ODBC verfügbar gemacht werden. Verbraucheranwendungen mit Datenfreigabe können mit ADO.NET eine Verbindung mit diesen Datenquellen herstellen und die enthaltenen Daten abrufen, verarbeiten und aktualisieren.  
@@ -20,7 +20,7 @@ ADO.NET stellt konsistenten Zugriff auf Datenquellen wie SQL Server und XML sowi
   
  ADO.NET stellt die direkteste Methode des Datenzugriffs innerhalb von .NET Framework bereit. Eine Abstraktion auf höherer Ebene, die es Anwendungen ermöglicht, anstelle des zugrunde liegenden Speicher Modells mit einem konzeptionellen Modell zu arbeiten, finden Sie unter [ADO.NET Entity Framework](./ef/index.md).  
   
- **Datenschutzbestimmungen**: Die Assemblys System. Data. dll, System. Data. Design. dll, System. Data. OracleClient. dll, System. Data. SQLXML. dll, System. Data. Linq. dll, System. Data. SqlServerCe. dll und System. Data. DataSetExtensions. dll unterscheiden nicht zwischen einem Benutzer Private Daten und nicht private Daten.  Durch diese Assemblys werden keine privaten Daten von Benutzern gesammelt, gespeichert oder transportiert. Es ist aber möglich, dass Drittanbieteranwendungen, die diese Assemblys verwenden, private Daten von Benutzern sammeln, speichern oder transportieren.  
+ **Datenschutzerklärung**: "System. Data. dll", System. Data. Design. dll, System. Data. OracleClient. dll, System. Data. SQLXML. dll, System. Data. Linq. dll, System. Data. SqlServerCe. dll und System. Data. DataSetExtensions. dll-Assemblys unterscheiden sich nicht zwischen den privaten Daten eines Benutzers und nicht privaten Daten.  Durch diese Assemblys werden keine privaten Daten von Benutzern gesammelt, gespeichert oder transportiert. Es ist aber möglich, dass Drittanbieteranwendungen, die diese Assemblys verwenden, private Daten von Benutzern sammeln, speichern oder transportieren.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [ADO.NET-Architektur](ado-net-architecture.md)  

@@ -17,12 +17,12 @@ helpviewer_keywords:
 - Windows Presentation Foundation [WPF], about security model
 - security model [WPF], operating system
 ms.assetid: 2a39a054-3e2a-4659-bcb7-8bcea490ba31
-ms.openlocfilehash: 1ef705fcf046af1f4136ddcf1b29f417c0d72c83
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 4fa01922c5c3097adb124d67272b9f449b70ada3
+ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76741853"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "76979871"
 ---
 # <a name="wpf-security-strategy---platform-security"></a>WPF-Sicherheitsstrategie – Plattformsicherheit
 Während Windows Presentation Foundation (WPF) eine Vielzahl von Sicherheitsdiensten bereitstellt, nutzt es auch die Sicherheitsfunktionen der zugrunde liegenden Plattform, die das Betriebssystem, die CLR und Internet Explorer umfasst. Diese Ebenen werden kombiniert, um WPF ein sicheres, Sicherheits übergreifendes Sicherheitsmodell bereitzustellen, mit dem versucht wird, Single Point of Failure zu vermeiden, wie in der folgenden Abbildung dargestellt:  
@@ -31,18 +31,18 @@ Während Windows Presentation Foundation (WPF) eine Vielzahl von Sicherheitsdien
   
  Im restlichen Teil dieses Themas werden die Features auf den einzelnen Ebenen erläutert, die sich speziell auf WPF beziehen.  
 
-## <a name="operating-system-security"></a>Sicherheit des Betriebssystems  
+## <a name="operating-system-security"></a>Betriebssystemsicherheit  
 Der Kern von Windows bietet verschiedene Sicherheitsfeatures, die die Sicherheits Grundlage für alle Windows-Anwendungen bilden, einschließlich derjenigen, die mit WPF erstellt wurden. In diesem Thema wird der Umfang dieser Sicherheitsfeatures erläutert, die für WPF wichtig sind, sowie die Art und Weise, wie WPF in Sie integriert wird, um weitere Schutzmaßnahmen bereitzustellen.  
   
 ### <a name="microsoft-windows-xp-service-pack-2-sp2"></a>Microsoft Windows XP Service Pack 2 (SP2)  
- Zusätzlich zu einer allgemeinen Überprüfung und Verstärkung von Windows gibt es drei wichtige Features von [!INCLUDE[TLA2#tla_winxpsp2](../../../includes/tla2sharptla-winxpsp2-md.md)], die wir in diesem Thema erörtern werden:  
+ Zusätzlich zu einer allgemeinen Überprüfung und Verstärkung von Windows gibt es drei wichtige Features von Windows XP SP2, die in diesem Thema erläutert werden:  
   
 - /GS-Kompilierung  
   
 - Microsoft-Windows Update.  
   
 #### <a name="gs-compilation"></a>/GS-Kompilierung  
- [!INCLUDE[TLA2#tla_winxpsp2](../../../includes/tla2sharptla-winxpsp2-md.md)] bietet Schutz durch das erneute Kompilieren vieler zentraler Systembibliotheken, einschließlich aller WPF-Abhängigkeiten, wie z. b. der CLR, um Pufferüberläufe zu verringern. Dies wird mit dem /GS-Parameter und dem C/C++-Befehlszeilencompiler erreicht. Obwohl Pufferüberläufe ausdrücklich vermieden werden sollten, ist die Kompilierung mit /GS ein Beispiel für eine tiefgreifende Verteidigungsmaßnahme gegen potenzielle Sicherheitslücken, die versehentlich oder böswillig durch Pufferüberläufe erzeugt werden.  
+ Windows XP SP2 bietet Schutz durch das erneute Kompilieren vieler zentraler Systembibliotheken, einschließlich aller WPF-Abhängigkeiten, wie z. b. CLR, um Pufferüberläufe zu verringern. Dies wird mit dem /GS-Parameter und dem C/C++-Befehlszeilencompiler erreicht. Obwohl Pufferüberläufe ausdrücklich vermieden werden sollten, ist die Kompilierung mit /GS ein Beispiel für eine tiefgreifende Verteidigungsmaßnahme gegen potenzielle Sicherheitslücken, die versehentlich oder böswillig durch Pufferüberläufe erzeugt werden.  
   
  In der Vergangenheit waren Pufferüberläufe die Ursache für viele Sicherheitslücken mit gravierenden Folgen. Ein Pufferüberlauf tritt auf, wenn ein Angreifer die Sicherheitsanfälligkeit eines Codes nutzt, die das Einfügen von schädlichem Code ermöglicht, der über die Begrenzungen eines Puffers schreibt. Ein Angreifer kann dann durch Überschreiben der Rückgabeadresse einer Funktion den Prozess, in dem der Code ausgeführt wird, hacken und die Ausführung des Angreifercodes auslösen. Daraus entsteht bösartiger Code, der beliebigen Code mit den gleichen Berechtigungen wie der gehackte Prozess ausführt.  
   
@@ -186,7 +186,7 @@ WPF-Benutzer unter Windows Vista profitieren von den zusätzlichen Sicherheitser
   
  Internet Explorer 7 umfasst und erweitert die Sicherheitsfunktionen von IE6 SP2 im Rahmen eines kontinuierlichen Engagements der Sicherheit.  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Codezugriffssicherheit](../misc/code-access-security.md)
 - [Sicherheit](security-wpf.md)

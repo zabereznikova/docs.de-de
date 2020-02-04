@@ -1,13 +1,13 @@
 ---
-title: ADO.NET-Architektur
+title: Architektur
 ms.date: 03/30/2017
 ms.assetid: fcd45b99-ae8f-45ab-8b97-d887beda734e
-ms.openlocfilehash: 2692959d5a3e12d503d91b55e19f744bb9abd112
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: de33c9964f3c03b18593b0df0607f941d2117be0
+ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74568461"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "76980313"
 ---
 # <a name="adonet-architecture"></a>ADO.NET-Architektur
 Die traditionelle Datenverarbeitung basierte primär auf einem verbindungsbasierten Modell mit zwei Ebenen. Da für die Datenverarbeitung immer mehr auf Architekturen mit mehreren Ebenen zurückgegriffen wird, wird verstärkt mit nicht verbundenen Lösungen gearbeitet, um eine bessere Skalierbarkeit der Anwendungen zu erzielen.  
@@ -37,7 +37,7 @@ ADO.NET-Architektur
   
 - Ausführen umfangreicher Datenverarbeitungsschritte ohne eine offene Verbindung zur Datenquelle. Dadurch wird die Verbindung zur Nutzung durch andere Clients freigegeben.  
   
- Wenn Sie die vom `DataSet` bereitgestellte Funktionalität nicht benötigen, können Sie die Geschwindigkeit Ihrer Anwendung verbessern, indem Sie den `DataReader` verwenden, der Ihre Daten vorwärts gerichtet und schreibgeschützt zurückgibt. Obwohl der `DataAdapter` die `DataReader` verwendet, um den Inhalt eines `DataSet` auszufüllen (siehe Auffüllen [eines Datasets von einem DataAdapter](populating-a-dataset-from-a-dataadapter.md)), können Sie die Leistung steigern, indem Sie den `DataReader`verwenden, um die Leistung zu verbessern, da Sie Speicherplatz einsparen, der vom `DataSet`beansprucht wird, und die Verarbeitung vermeiden, die zum Erstellen und Ausfüllen des Inhalts der `DataSet`erforderlich ist.  
+ Wenn Sie die vom `DataSet` bereitgestellte Funktionalität nicht benötigen, können Sie die Geschwindigkeit Ihrer Anwendung verbessern, indem Sie den `DataReader` verwenden, der Ihre Daten vorwärts gerichtet und schreibgeschützt zurückgibt. Obwohl die `DataAdapter`-Klasse die `DataReader`-Klasse verwendet, um den Inhalt von `DataSet` mithilfe von `DataReader` aufzufüllen (siehe [Auffüllen eines Datasets über DataAdapter](populating-a-dataset-from-a-dataadapter.md)), können Sie die Leistung steigern, da Sie den Arbeitsspeicher sparen, den `DataSet` verbrauchen würde. Zudem entfällt der Verarbeitungsaufwand, der für das Erstellen und Auffüllen der Inhalte von `DataSet` erforderlich wäre.  
   
 ## <a name="linq-to-dataset"></a>LINQ to DataSet  
  LINQ to DataSet stellt Abfragefunktionen und Typüberprüfungsfunktionen zur Kompilierzeit über die in einem DataSet-Objekt zwischengespeicherten Daten bereit. Sie können damit Abfragen in einer der .NET Framework-Entwicklungssprachen schreiben, z. B. in C# oder Visual Basic. Weitere Informationen finden Sie unter [LINQ to DataSet](linq-to-dataset.md).  

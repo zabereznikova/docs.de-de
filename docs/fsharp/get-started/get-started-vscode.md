@@ -2,12 +2,12 @@
 title: Erste Schritte mit F# in Visual Studio Code
 description: Erfahren Sie, wie Sie F# mit Visual Studio Code und Ionide-Plug-Ins Suite verwenden.
 ms.date: 12/23/2018
-ms.openlocfilehash: 91265303c2954387df0f500940c9af68b3c97dac
-ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
+ms.openlocfilehash: 2aa62bb1afc220348f884865e55c4d7de4359b7f
+ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75559663"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "76980352"
 ---
 # <a name="get-started-with-f-in-visual-studio-code"></a>Erste Schritte mit F# in Visual Studio Code
 
@@ -68,7 +68,7 @@ Da das, was Sie gesendet haben, eine [Funktion](../language-reference/functions/
 toPigLatin "banana";;
 ```
 
-Das folgende Ergebnis wird angezeigt:
+Das folgende Ergebnis sollte angezeigt werden:
 
 ```fsharp
 val it : string = "ananabay"
@@ -80,7 +80,7 @@ Nun versuchen wir, einen Vokal als ersten Buchstaben zu verwenden. Geben Sie Fol
 toPigLatin "apple";;
 ```
 
-Das folgende Ergebnis wird angezeigt:
+Das folgende Ergebnis sollte angezeigt werden:
 
 ```fsharp
 val it : string = "appleyay"
@@ -121,7 +121,7 @@ Der Ablauf der `toPigLatin` ist:
 
 Überprüfen Sie, ob das erste Zeichen des Eingabe Worts ein vowel ist. Wenn dies der Fall ist, fügen Sie "yay" an das Ende des Worts an. Verschieben Sie andernfalls das erste Zeichen an das Ende des Worts, und fügen Sie es hinzu.
 
-Es gibt noch ein letztes, was zu beachten ist: Es gibt keine explizite Anweisung, von der Funktion zurückzugeben, anders als bei vielen anderen Sprachen. Dies ist da F# ausdrucksbasiert ist, und der letzte Ausdruck in den Hauptteil einer Funktion der Rückgabewert ist. Da `if..then..else` selbst ein Ausdruck ist, wird der Text des `then` Blocks oder der Text des `else` Blocks abhängig vom Eingabe Wert zurückgegeben.
+Im folgenden ist ein letztes Hinweis zu beachten: in F#gibt es keine explizite Anweisung, die von der Funktion zurückgegeben wird. Der Grund hierfür F# ist, dass Ausdrucks basiert ist und der letzte Ausdruck, der im Text einer Funktion ausgewertet wurde, den Rückgabewert dieser Funktion bestimmt. Da `if..then..else` selbst ein Ausdruck ist, bestimmt die Auswertung des Texts des `then` Blocks oder der Text des `else` Blocks den Wert, der von der `toPigLatin` Funktion zurückgegeben wird.
 
 ## <a name="turn-the-console-app-into-a-pig-latin-generator"></a>Umwandeln der Konsolen-app in einen Pig Latin-Generator
 

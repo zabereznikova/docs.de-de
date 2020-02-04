@@ -1,23 +1,23 @@
 ---
-title: Datentypzuordnungen in ADO.NET
+title: Datentypzuordnungen
 ms.date: 03/30/2017
 ms.assetid: d4afab94-ada6-4c77-a73c-41f17bae6b5a
-ms.openlocfilehash: 9c0d19f724c1876f7dac86055bed2ef77ac76a77
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 610cdc1a679b0c51125075076120e12db97da421
+ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70785589"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "76980196"
 ---
 # <a name="data-type-mappings-in-adonet"></a>Datentypzuordnungen in ADO.NET
-.NET Framework basiert auf dem allgemeinen Typsystem, das definiert, wie Typen in der Laufzeit deklariert, verwendet und verwaltet werden. Es besteht aus Werttypen und Verweistypen, die alle vom <xref:System.Object>-Basistyp abgeleitet sind. Bei Datenquellen wird über den Datenanbieter auf den Datentyp geschlossen, wenn dieser nicht explizit angegeben ist. Ein <xref:System.Data.DataSet>-Objekt ist z. B. von keiner bestimmten Datenquelle abhängig. Daten in einem `DataSet` werden aus einer Datenquelle abgerufen, und Änderungen werden mithilfe eines `DataAdapter` in die Datenquelle übernommen. Dies bedeutet Folgendes: Wenn `DataAdapter` ein- <xref:System.Data.DataTable> Wert in `DataSet` einem-Wert mit Werten aus einer Datenquelle füllt, `DataTable` sind die resultierenden Datentypen der Spalten in .NET Framework Typen, anstelle von Typen, die für den .NET Framework Datenanbieter spezifisch sind. wird verwendet, um eine Verbindung mit der Datenquelle herzustellen.  
+.NET Framework basiert auf dem allgemeinen Typsystem, das definiert, wie Typen in der Laufzeit deklariert, verwendet und verwaltet werden. Es besteht aus Werttypen und Verweistypen, die alle vom <xref:System.Object>-Basistyp abgeleitet sind. Bei Datenquellen wird über den Datenanbieter auf den Datentyp geschlossen, wenn dieser nicht explizit angegeben ist. Ein <xref:System.Data.DataSet>-Objekt ist z. B. von keiner bestimmten Datenquelle abhängig. Daten in einem `DataSet` werden aus einer Datenquelle abgerufen, und Änderungen werden mithilfe eines `DataAdapter` in die Datenquelle übernommen. Dies bedeutet Folgendes: Wenn ein `DataAdapter` eine <xref:System.Data.DataTable> in einer `DataSet` mit Werten aus einer Datenquelle füllt, sind die resultierenden Datentypen der Spalten in der `DataTable` .NET Framework Typen, anstelle von Typen, die für den .NET Framework Datenanbieter spezifisch sind, der zum Herstellen der Verbindung mit der Datenquelle verwendet wird.  
   
- Ebenso, wenn ein `DataReader` einen Wert aus einer Datenquelle zurückgibt, wird der resultierende Wert in einer lokalen Variablen gespeichert, die einen .NET Framework-Typ aufweist. Sowohl für die `Fill` `DataAdapter` -als`Get` auch die-Methode der-Methode wird der .NET Framework-Typ von dem Wert abgeleitet ,dervom.NETFrameworkDatenanbieterzurückgegebenwird.`DataReader`  
+ Wenn eine `DataReader` einen Wert aus einer Datenquelle zurückgibt, wird der resultierende Wert ebenso in einer lokalen Variablen gespeichert, die einen .NET Framework-Typ aufweist. Sowohl für die `Fill` Vorgänge der `DataAdapter` als auch für die `Get` Methoden der `DataReader`wird der .NET Framework-Typ von dem Wert abgeleitet, der vom .NET Framework Datenanbieter zurückgegeben wird.  
   
  Sie können auch die typisierten Zugriffsmethoden des `DataReader` verwenden, wenn Sie den Typ des zurückgegebenen Werts kennen, anstatt den hergeleiteten Datentyp zu verwenden. Typisierte Accessormethoden bieten eine bessere Leistung, indem ein Wert als bestimmter .NET Framework Typ zurückgegeben wird, wodurch die Notwendigkeit zusätzlicher Typkonvertierungen entfällt.  
   
 > [!NOTE]
-> NULL-Werte für .NET Framework Datenanbieter Datentypen werden `DBNull.Value`durch dargestellt.  
+> NULL-Werte für .NET Framework Datenanbieter Datentypen werden durch `DBNull.Value`dargestellt.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [SQL Server-Datentypzuordnungen](sql-server-data-type-mappings.md)  

@@ -1,19 +1,19 @@
 ---
-title: Aufzählen von SQL Server-Instanzen (ADO.NET)
+title: Auflisten von Instanzen von SQL Server
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: ddf1c83c-9d40-45e6-b04d-9828c6cbbfdc
-ms.openlocfilehash: c464762e82a24aab399a23ecb26420b5dce61f55
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: c59db5869ed848071611cdbf985b45dc59790d69
+ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70782387"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "76979988"
 ---
 # <a name="enumerating-instances-of-sql-server-adonet"></a>Aufzählen von SQL Server-Instanzen (ADO.NET)
-SQL Server ermöglicht es Anwendungen, SQL Server Instanzen im aktuellen Netzwerk zu finden. Die hierzu erforderlichen Informationen werden den Entwicklern von Anwendungen durch die <xref:System.Data.Sql.SqlDataSourceEnumerator>-Klasse als <xref:System.Data.DataTable> verfügbar gemacht, die Informationen zu allen sichtbaren Servern enthält. Diese zurückgegebene Tabelle enthält eine Liste der im Netzwerk verfügbaren Server Instanzen, die der Liste entspricht, wenn ein Benutzer versucht, eine neue Verbindung zu erstellen, und erweitert die Dropdown Liste, die alle verfügbaren Server in den **Verbindungs Eigenschaften enthält.** (Dialogfeld). Die Liste der angezeigten Ergebnisse ist nicht immer vollständig.  
+SQL Server ermöglicht es Anwendungen, SQL Server Instanzen im aktuellen Netzwerk zu finden. Die hierzu erforderlichen Informationen werden den Entwicklern von Anwendungen durch die <xref:System.Data.Sql.SqlDataSourceEnumerator>-Klasse als <xref:System.Data.DataTable> verfügbar gemacht, die Informationen zu allen sichtbaren Servern enthält. Diese zurückgegebene Tabelle enthält eine Liste der im Netzwerk verfügbaren Server Instanzen, die der Liste entspricht, wenn ein Benutzer versucht, eine neue Verbindung zu erstellen, und erweitert die Dropdown Liste, die alle verfügbaren Server enthält, im Dialogfeld **Verbindungs Eigenschaften** . Die Liste der angezeigten Ergebnisse ist nicht immer vollständig.  
   
 > [!NOTE]
 > Wie bei den meisten Windows-Diensten wird auch hier empfohlen, den SQL-Browserdienst mit minimalen Berechtigungen auszuführen. Weitere Informationen zum SQL-Browserdienst und dessen Verwaltung finden Sie in der Onlinedokumentation zu SQL Server.  
@@ -58,7 +58,7 @@ System.Data.DataTable dataTable = instance.GetDataSources();
 > [!NOTE]
 > Serverenumeration ist nur in vollständig vertrauenswürdigen Umgebungen verfügbar. Assemblys, die in einer nur teilweise vertrauenswürdigen Umgebung ausgeführt werden, können die Enumeration nicht verwenden. Dies gilt auch, wenn sie über die <xref:System.Data.SqlClient.SqlClientPermission>-Codezugriffssicherheitsberechtigung (CAS) verfügen.  
   
- SQL Server stellt Informationen für <xref:System.Data.Sql.SqlDataSourceEnumerator> durch die Verwendung eines externen Windows-Dienstanbieter namens SQL-Browser bereit. Dieser Dienst ist in der Standardeinstellung aktiviert, kann vom Administrator jedoch deaktiviert werden. Dadurch wird die Serverinstanz für diese Klasse unsichtbar.  
+ SQL Server stellt Informationen für die <xref:System.Data.Sql.SqlDataSourceEnumerator> durch die Verwendung eines externen Windows-Dienstanbieter namens SQL-Browser bereit. Dieser Dienst ist in der Standardeinstellung aktiviert, kann vom Administrator jedoch deaktiviert werden. Dadurch wird die Serverinstanz für diese Klasse unsichtbar.  
   
 ## <a name="example"></a>Beispiel  
  Die folgende Konsolenanwendung ruft Informationen zu allen sichtbaren Instanzen von SQL Server ab und zeigt diese Informationen im Konsolenfenster an.  

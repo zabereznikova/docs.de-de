@@ -1,13 +1,14 @@
 ---
 title: LINQ und ADO.NET
+titleSuffix: ''
 ms.date: 03/30/2017
 ms.assetid: bf0c8f93-3ff7-49f3-8aed-f2b7ac938dec
-ms.openlocfilehash: f6b956aa4d19a5bf558681975da3125b45b36c5f
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: e24473f68fe5ccd993c5d205660ea8f397b6f797
+ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75634845"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "76980092"
 ---
 # <a name="linq-and-adonet"></a>LINQ und ADO.NET
 Heutzutage müssen viele Entwickler von Unternehmen zwei (oder mehr) Programmiersprachen verwenden: eine Sprache auf hoher Ebene für die Geschäftslogik und Präsentations Schichten (z. C# b. Visual oder Visual Basic) und eine Abfragesprache für die Interaktion mit der Datenbank (z. b. Transact-SQL). Der Entwickler muss also mehrerer Sprachen mächtig sein, um seine Arbeit effektiv erledigen zu können. Außerdem sind dadurch Sprachkonflikte in der Entwicklungsumgebung vorprogrammiert. So ergibt es sich z. B., dass eine Anwendung, die zur Ausführung einer Abfrage von Daten aus einer Datenbank eine Datenzugriffs-API verwendet, die Abfrage als Zeichenfolgenliteral angibt, indem sie Anführungszeichen verwendet. Diese Abfrage ist jedoch für den Compiler nicht lesbar und wird nicht auf Fehler (Syntaxfehler, tatsächliche Existenz der Spalten oder Zeilen, auf die verwiesen wird, usw.) geprüft. Auch der Typ der Abfrageparameter wird nicht geprüft, und es gibt keine `IntelliSense`-Unterstützung.  
@@ -37,7 +38,7 @@ Heutzutage müssen viele Entwickler von Unternehmen zwei (oder mehr) Programmier
 ## <a name="linq-to-entities"></a>LINQ to Entities  
  Die meisten aktuellen Anwendungen basieren auf relationalen Datenbanken. Daher müssen diese Anwendungen mit den relational abgebildeten Daten interagieren. Datenbankschemas sind nicht immer optimal für das Erstellen von Anwendungen geeignet, und die konzeptionellen Modelle von Anwendungen weichen von den logischen Modellen der Datenbanken ab. Der Entity Data Model ist ein konzeptionelles Datenmodell, das verwendet werden kann, um die Daten einer bestimmten Domäne zu modellieren, sodass Anwendungen mit Daten als Objekte interagieren können. Weitere Informationen finden Sie unter [ADO.NET Entity Framework](./ef/index.md) .  
   
- Durch das Entity Data Model werden relationale Daten als Objekte in der .NET-Umgebung verfügbar gemacht. Dadurch wird die Objektebene zu einem idealen Ziel für die LINQ-Unterstützung, sodass Entwickler Abfragen für die Datenbank aus der Sprache formulieren können, die zum Erstellen der Geschäftslogik verwendet wird. Dies wird auch als LINQ to Entities bezeichnet. Weitere Informationen Sie unter [LINQ to Entities](./ef/language-reference/linq-to-entities.md).  
+ Durch das Entity Data Model werden relationale Daten als Objekte in der .NET-Umgebung verfügbar gemacht. Dadurch wird die Objektebene zu einem optimalen Ziel für die LINQ-Unterstützung, die es Entwicklern ermöglicht, Abfragen an die Datenbank in der Sprache der Geschäftlogik zu formulieren. Dies wird auch als LINQ to Entities bezeichnet. Weitere Informationen Sie unter [LINQ to Entities](./ef/language-reference/linq-to-entities.md).  
   
 ## <a name="see-also"></a>Siehe auch
 

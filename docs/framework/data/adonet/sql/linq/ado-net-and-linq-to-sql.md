@@ -1,24 +1,25 @@
 ---
 title: ADO.NET und LINQ to SQL
+titleSuffix: ''
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 49ac6da0-f2e1-46fa-963e-1b6dcb63fef7
-ms.openlocfilehash: 0bebc8d890325ec4ab090470952e11b90d0e37ef
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 4d2376a2e32ff099497a5dbcd6cb68d8ed526884
+ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70248118"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "76980001"
 ---
 # <a name="adonet-and-linq-to-sql"></a>ADO.NET und LINQ to SQL
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]ist Teil der ADO.NET-Technologie Familie. Es basiert auf Diensten, die vom ADO.NET-Anbieter Modell bereitgestellt werden. Daher [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] können Sie Code mit vorhandenen ADO.NET-Anwendungen kombinieren und aktuelle ADO.net- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]Lösungen zu migrieren. Die folgende Abbildung stellt eine allgemeine Ansicht der Beziehung dar.  
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] ist Teil der ADO.NET-Technologie Familie. Es basiert auf Diensten, die vom ADO.NET-Anbieter Modell bereitgestellt werden. Daher können Sie [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Code mit vorhandenen ADO.NET-Anwendungen kombinieren und aktuelle ADO.net-Lösungen zu [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]migrieren. Die folgende Abbildung stellt eine allgemeine Ansicht der Beziehung dar.  
   
  ![LINQ to SQL und ADO.net](./media/dlinq-3.png "DLinq_3")  
   
 ## <a name="connections"></a>Verbindungen  
- Sie können eine vorhandene ADO.NET-Verbindung bereitstellen, wenn [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Sie einen <xref:System.Data.Linq.DataContext>erstellen. Alle Vorgänge <xref:System.Data.Linq.DataContext> für (einschließlich Abfragen) verwenden diese angegebene Verbindung. Wenn die Verbindung bereits geöffnet ist, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] bleibt sie unverändert, wenn Sie Sie fertiggestellt haben.  
+ Sie können eine vorhandene ADO.NET-Verbindung bereitstellen, wenn Sie eine [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <xref:System.Data.Linq.DataContext>erstellen. Alle Vorgänge für den <xref:System.Data.Linq.DataContext> (einschließlich Abfragen) verwenden diese angegebene Verbindung. Wenn die Verbindung bereits geöffnet ist, bleibt [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] unverändert, wenn Sie damit fertig sind.  
   
  [!code-csharp[DLinqCommunicatingWithDatabase#4](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqCommunicatingWithDatabase/cs/Program.cs#4)]
  [!code-vb[DLinqCommunicatingWithDatabase#4](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqCommunicatingWithDatabase/vb/Module1.vb#4)]  
@@ -31,7 +32,7 @@ ms.locfileid: "70248118"
 ## <a name="transactions"></a>Transaktionen  
  Sie können Ihren <xref:System.Data.Linq.DataContext> mit Ihrer eigenen Datenbanktransaktion ergänzen, wenn Ihre Anwendung die Transaktion bereits initiiert hat und Sie möchten, dass der <xref:System.Data.Linq.DataContext> berücksichtigt wird.  
   
- Die bevorzugte Methode zum Durchführen von Transaktionen mit dem .NET Framework ist die <xref:System.Transactions.TransactionScope> Verwendung des-Objekts. Mithilfe dieses Ansatzes können Sie verteilte Transaktionen erstellen, die über Datenbanken hinweg und in Verbindung mit anderen speicherresidenten Ressourcen-Managern funktionieren. Transaktionsbereiche erfordern zunächst wenige Ressourcen. Sie stufen sich selbst nur dann zu verteilten Transaktionen hoch, wenn mehrere Verbindungen innerhalb des Transaktionsbereichs vorliegen.  
+ Die bevorzugte Methode zum Durchführen von Transaktionen mit dem .NET Framework ist die Verwendung des <xref:System.Transactions.TransactionScope>-Objekts. Mithilfe dieses Ansatzes können Sie verteilte Transaktionen erstellen, die über Datenbanken hinweg und in Verbindung mit anderen speicherresidenten Ressourcen-Managern funktionieren. Transaktionsbereiche erfordern zunächst wenige Ressourcen. Sie stufen sich selbst nur dann zu verteilten Transaktionen hoch, wenn mehrere Verbindungen innerhalb des Transaktionsbereichs vorliegen.  
   
  [!code-csharp[DLinqAdoNet#2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqAdoNet/cs/Program.cs#2)]
  [!code-vb[DLinqAdoNet#2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqAdoNet/vb/Module1.vb#2)]  
@@ -46,9 +47,9 @@ ms.locfileid: "70248118"
  [!code-csharp[DLinqAdoNet#3](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqAdoNet/cs/Program.cs#3)]
  [!code-vb[DLinqAdoNet#3](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqAdoNet/vb/Module1.vb#3)]  
   
- Solange die Spaltennamen im tabellarischen Ergebnis den Spalten Eigenschaften ihrer Entitäts Klasse entsprechen, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] erstellt die Objekte aus einer beliebigen SQL-Abfrage.  
+ Solange die Spaltennamen im tabellarischen Ergebnis den Spalten Eigenschaften ihrer Entitäts Klasse entsprechen, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] die Objekte aus einer beliebigen SQL-Abfrage erstellt.  
   
-### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameters  
  Die <xref:System.Data.Linq.DataContext.ExecuteQuery%2A>-Methode akzeptiert Parameter. Der folgende Code führt eine parametrisierte Abfrage aus:  
   
  [!code-csharp[DlinqAdoNet#4](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqAdoNet/cs/Program.cs#4)]
@@ -60,4 +61,4 @@ ms.locfileid: "70248118"
 ## <a name="see-also"></a>Siehe auch
 
 - [Hintergrundinformationen](background-information.md)
-- [Vorgehensweise: Wieder verwenden einer Verbindung zwischen einem ADO.net-Befehl und einem DataContext](how-to-reuse-a-connection-between-an-ado-net-command-and-a-datacontext.md)
+- [Vorgehensweise: Wiederverwenden einer Verbindung zwischen einem ADO.NET-Befehl und einem „DataContext“](how-to-reuse-a-connection-between-an-ado-net-command-and-a-datacontext.md)

@@ -1,16 +1,16 @@
 ---
-title: Codezugriffssicherheit und ADO.NET
+title: Codezugriffssicherheit
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 93e099eb-daa1-4f1e-b031-c1e10a996f88
-ms.openlocfilehash: e83c10d6d7b66723d8347f98c1f7b118d7a2f963
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: c2b6be79855955887988378b9fcffe1891520d68
+ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73040164"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "76980261"
 ---
 # <a name="code-access-security-and-adonet"></a>Codezugriffssicherheit und ADO.NET
 .NET Framework bietet sowohl rollenbasierte Sicherheit als auch Codezugriffssicherheit (Code Access Security, CAS). Beide werden mit einer von der CLR (Common Language Runtime) bereitgestellten gemeinsamen Infrastruktur implementiert. In der Welt des nicht verwalteten Codes werden die meisten Anwendungen mit den Berechtigungen des Benutzers oder Prinzipals ausgeführt. Daher können Computersysteme beschädigt werden und vertrauliche Daten in die falschen Hände gelangen, wenn ein Benutzer mit erweiterten Rechten schädliche oder fehlerhafte Software ausführt.  
@@ -136,7 +136,7 @@ ms.locfileid: "73040164"
 ```  
   
 ### <a name="enabling-partial-trust-with-a-custom-permission-set"></a>Aktivieren einer teilweisen Vertrauenswürdigkeit mit einem benutzerdefinierten Berechtigungssatz  
- Um die Verwendung der <xref:System.Data.SqlClient>-Berechtigungen für eine bestimmte Zone zu aktivieren, muss ein Systemadministrator einen benutzerdefinierten Berechtigungssatz für eine bestimmte Zone erstellen. Standardberechtigungssätze wie `LocalIntranet` können nicht geändert werden. Wenn Sie z. b. <xref:System.Data.SqlClient> Berechtigungen für Code mit einer <xref:System.Security.Policy.Zone> von `LocalIntranet`einschließen möchten, kann ein Systemadministrator den Berechtigungs Satz für `LocalIntranet`kopieren, ihn in "CustomLocalIntranet" umbenennen, die <xref:System.Data.SqlClient> Berechtigungen hinzufügen, "CustomLocalIntranet" importieren. Berechtigungs Satz mithilfe von [Caspol. exe (Code Zugriffs-Sicherheitsrichtlinien Tool)](../../tools/caspol-exe-code-access-security-policy-tool.md), und legen Sie den Berechtigungs Satz `LocalIntranet_Zone` auf CustomLocalIntranet fest.  
+ Um die Verwendung der <xref:System.Data.SqlClient>-Berechtigungen für eine bestimmte Zone zu aktivieren, muss ein Systemadministrator einen benutzerdefinierten Berechtigungssatz für eine bestimmte Zone erstellen. Standardberechtigungssätze wie `LocalIntranet` können nicht geändert werden. Wenn Sie z. b. <xref:System.Data.SqlClient> Berechtigungen für Code mit einer <xref:System.Security.Policy.Zone> von `LocalIntranet`einschließen möchten, kann ein Systemadministrator den Berechtigungs Satz für `LocalIntranet`kopieren, ihn in "CustomLocalIntranet" umbenennen, die <xref:System.Data.SqlClient> Berechtigungen hinzufügen, den CustomLocalIntranet-Berechtigungs Satz mithilfe von " [Caspol](../../tools/caspol-exe-code-access-security-policy-tool.md)  
   
 ### <a name="sample-permission-set"></a>Beispielberechtigungssatz  
  Im Folgenden finden Sie einen Beispielberechtigungssatz für den .NET Framework-Datenanbieter für SQL Server in einem teilweise vertrauenswürdigen Szenario. Weitere Informationen zum Erstellen von benutzerdefinierten Berechtigungs Sätzen finden [Sie unter Konfigurieren von Berechtigungs Sätzen mit Caspol. exe](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/4ybs46y6(v=vs.100)).  

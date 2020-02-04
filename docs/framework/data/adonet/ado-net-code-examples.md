@@ -1,16 +1,16 @@
 ---
-title: ADO.NET-Codebeispiele
+title: Code Beispiele
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: c119657a-9ce6-4940-91e4-ac1d5f0d9584
-ms.openlocfilehash: a66ae2b2b8bed95fd38b71a39682a2a7f42be218
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 4f0cbc06c03c0d122fc69b8a396570919ac14970
+ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74430806"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "76980287"
 ---
 # <a name="adonet-code-examples"></a>ADO.NET-Codebeispiele
 In den Codeauflistungen in diesem Thema wird veranschaulicht, wie Daten mithilfe der folgenden ADO.NET-Technologien aus einer Datenbank abgerufen werden:
@@ -21,7 +21,7 @@ In den Codeauflistungen in diesem Thema wird veranschaulicht, wie Daten mithilfe
 
   - [OleDb](#oledb) (`System.Data.OleDb`)
 
-  - [ODBC](#odbc) (`System.Data.Odbc`)
+  - [Odbc](#odbc) (`System.Data.Odbc`)
 
   - [OracleClient](#oracleclient) (`System.Data.OracleClient`)
 
@@ -57,7 +57,7 @@ Der Code in diesem Beispiel geht davon aus, dass Sie eine Verbindung mit der Mic
 [!code-vb[DataWorks SampleApp.Odbc#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SampleApp.Odbc/VB/source.vb#1)] 
 
 ### <a name="oracleclient"></a>OracleClient
-Der Code in diesem Beispiel setzt eine Verbindung mit DEMO.CUSTOMER auf einem Oracle-Server voraus. Sie müssen auch einen Verweis auf {1}System.Data.OracleClient.dll{2} hinzufügen. Der Code gibt die Daten in einem <xref:System.Data.OracleClient.OracleDataReader> zurück.
+Der Code in diesem Beispiel setzt eine Verbindung mit DEMO.CUSTOMER auf einem Oracle-Server voraus. Sie müssen auch einen Verweis auf System.Data.OracleClient.dll hinzufügen. Der Code gibt die Daten in einem <xref:System.Data.OracleClient.OracleDataReader> zurück.
 
  [!code-csharp[DataWorks SampleApp.Oracle#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SampleApp.Oracle/CS/source.cs#1)]
  [!code-vb[DataWorks SampleApp.Oracle#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SampleApp.Oracle/VB/source.vb#1)]
