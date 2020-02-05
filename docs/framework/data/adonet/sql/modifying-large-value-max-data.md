@@ -1,16 +1,16 @@
 ---
-title: Ändern von Daten mit umfangreichen Werten (max) in ADO.NET
+title: Ändern von Daten mit umfangreichen Werten (max)
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 8aca5f00-d80e-4320-81b3-016d0466f7ee
-ms.openlocfilehash: 0f029c81dd6ba5cd5202e6e59f33edd7cf8c0b90
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: cb37fdb85d323d4f0816a3667a4624da8ec75e65
+ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894442"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "76979845"
 ---
 # <a name="modifying-large-value-max-data-in-adonet"></a>Ändern von Daten mit umfangreichen Werten (max) in ADO.NET
 Bei LOB-Datentypen übersteigt die Zeilengröße die maximal zulässige Zeilengröße von 8 KB. SQL Server umfasst einen `max`-Spezifizierer für die Datentypen `varchar`, `nvarchar` und `varbinary`, der das Speichern Werten mit einer Größe bis zu 2^32 Bytes ermöglicht. Tabellenspalten und Transact-SQL-Variablen können die Datentypen `varchar(max)`, `nvarchar(max)` oder `varbinary(max)` angeben. In ADO.NET können die `max`-Datentypen durch einen `DataReader` abgerufen werden. Außerdem können sie ohne spezielle Behandlung sowohl als Eingabe- als auch als Ausgabeparameterwerte angegeben werden. Bei großen `varchar`-Datentypen können Daten inkrementell abgerufen und aktualisiert werden.  
@@ -37,9 +37,9 @@ Bei LOB-Datentypen übersteigt die Zeilengröße die maximal zulässige Zeilengr
   
  Die `OPENROWSET`-Funktion umfasst den `BULK`-Rowsetanbieter, mit dem Sie Daten direkt aus einer Datei lesen können, ohne sie in eine Zieltabelle zu laden. Auf diese Weise können Sie `OPENROWSET` in einer einfachen INSERT SELECT-Anweisung verwenden.  
   
- Die `OPENROWSET BULK` Options Argumente bieten eine bedeutende Kontrolle darüber, wo Daten gelesen und beendet werden soll, wie mit Fehlern umzugehen ist und wie Daten interpretiert werden. So können Sie z. B. angeben, dass die Datendatei als Rowset mit einer einzelnen Zeile und einer einzelnen Spalte vom Typ `varbinary`, `varchar` oder `nvarchar` gelesen werden soll. Die vollständige Syntax und alle Optionen finden Sie in der SQL Server-Onlinedokumentation.  
+ Die Argumente für die `OPENROWSET BULK` Option bieten eine bedeutende Kontrolle darüber, wo das Lesen von Daten begonnen und beendet werden soll, wie mit Fehlern umzugehen ist und wie Daten interpretiert werden. So können Sie z. B. angeben, dass die Datendatei als Rowset mit einer einzelnen Zeile und einer einzelnen Spalte vom Typ `varbinary`, `varchar` oder `nvarchar` gelesen werden soll. Die vollständige Syntax und alle Optionen finden Sie in der SQL Server-Onlinedokumentation.  
   
- Im folgenden Beispiel wird ein Foto in die ProductPhoto-Tabelle der AdventureWorks-Beispieldatenbank eingefügt. Wenn Sie den `BULK OPENROWSET` -Anbieter verwenden, müssen Sie die benannte Liste der Spalten angeben, auch wenn Sie keine Werte in jede Spalte einfügen. Der Primärschlüssel ist in diesem Fall als Identitätsspalte definiert und kann in der Liste der Spalten weggelassen werden. Beachten Sie, dass Sie am Ende der `OPENROWSET`-Anweisung auch einen Korrelationsnamen angeben müssen. In diesem Fall lautet er "ThumbnailPhoto". Dies korreliert mit der Spalte in der `ProductPhoto`-Tabelle, in die die Datei geladen wird.  
+ Im folgenden Beispiel wird ein Foto in die ProductPhoto-Tabelle der AdventureWorks-Beispieldatenbank eingefügt. Wenn Sie den `BULK OPENROWSET`-Anbieter verwenden, müssen Sie die benannte Liste der Spalten angeben, auch wenn Sie keine Werte in jede Spalte einfügen. Der Primärschlüssel ist in diesem Fall als Identitätsspalte definiert und kann in der Liste der Spalten weggelassen werden. Beachten Sie, dass Sie am Ende der `OPENROWSET`-Anweisung auch einen Korrelationsnamen angeben müssen. In diesem Fall lautet er "ThumbnailPhoto". Dies korreliert mit der Spalte in der `ProductPhoto`-Tabelle, in die die Datei geladen wird.  
   
 ```sql  
 INSERT Production.ProductPhoto (  
@@ -55,22 +55,22 @@ FROM OPENROWSET
 ## <a name="updating-data-using-update-write"></a>Aktualisieren von Daten mithilfe von UPDATE .WRITE  
  Die Transact-SQL-Anweisung UPDATE weist eine neue WRITE-Syntax zum Ändern des Inhalts in den Spalten `varchar(max)`, `nvarchar(max)` oder `varbinary(max)` auf. Dies ermöglicht es Ihnen, teilweise Updates der Daten durchzuführen. Die UPDATE .WRITE-Syntax wird hier in gekürzter Form dargestellt:  
   
- UPDATE  
+ AKTUALISIEREN  
   
- *{\<Object >* }  
+ { *\<Objekt >* }  
   
  SET  
   
- { *column_name* = {. Write ( *Ausdruck* , @Offset , @Length )}  
+ { *column_name* = {. Write ( *Ausdruck* , @Offset @Length)}  
   
- Die Write-Methode gibt an, dass ein Abschnitt des Werts von *column_name* geändert wird. Der Ausdruck ist der Wert, der in *column_name*kopiert wird, `@Offset` ist der Anfangspunkt, an dem der Ausdruck geschrieben wird, und das `@Length` -Argument ist die Länge des Abschnitts in der Spalte.  
+ Die Write-Methode gibt an, dass ein Abschnitt des Werts des *column_name* geändert wird. Der Ausdruck ist der Wert, der in den *column_name*kopiert wird, der `@Offset` ist der Anfangspunkt, an dem der Ausdruck geschrieben wird, und das `@Length`-Argument ist die Länge des Abschnitts in der Spalte.  
   
-|If|Then|  
+|Wenn virtuelle Maschinen mit|Then|  
 |--------|----------|  
-|Der Ausdruck ist auf NULL festgelegt.|`@Length`wird ignoriert, und der Wert in *column_name* wird am angegebenen `@Offset`abgeschnitten.|  
-|`@Offset`ist NULL|Der Aktualisierungs Vorgang fügt den Ausdruck am Ende des vorhandenen *column_name* -Werts an und `@Length` wird ignoriert.|  
+|Der Ausdruck ist auf NULL festgelegt.|`@Length` wird ignoriert, und der Wert in *column_name* wird am angegebenen `@Offset`abgeschnitten.|  
+|`@Offset` ist NULL|Der Aktualisierungs Vorgang fügt den Ausdruck am Ende des vorhandenen *column_name* Werts an, und `@Length` wird ignoriert.|  
 |`@Offset` ist größer als die Länge des &lt;legacyItalic&gt;column_name&lt;/legacyItalic&gt;-Werts|SQL Server gibt einen Fehler zurück.|  
-|`@Length`ist NULL|Beim Updatevorgang werden alle Daten ab `@Offset` bis zum Ende des `column_name`-Werts entfernt.|  
+|`@Length` ist NULL|Beim Updatevorgang werden alle Daten ab `@Offset` bis zum Ende des `column_name`-Werts entfernt.|  
   
 > [!NOTE]
 > Weder `@Offset` noch `@Length` darf eine negative Zahl sein.  
@@ -104,7 +104,7 @@ GO
 ```  
   
 ## <a name="working-with-large-value-types-in-adonet"></a>Arbeiten mit großen Werttypen in ADO.NET  
- Sie können mit großen Werttypen in ADO.net <xref:System.Data.SqlClient.SqlParameter> arbeiten <xref:System.Data.SqlClient.SqlDataAdapter> , indem Sie große Werttypen als <xref:System.Data.SqlClient.SqlDataReader> -Objekte in einem angeben, um ein Resultset zurückzugeben `DataSet`, oder indem Sie einen verwenden, um eine / `DataTable`auszufüllen. Sie können mit großen Datentypen genauso arbeiten wie mit den entsprechenden kleineren Datentypen.  
+ Sie können mit großen Werttypen in ADO.NET arbeiten, indem Sie große Werttypen als <xref:System.Data.SqlClient.SqlParameter> Objekte in einem <xref:System.Data.SqlClient.SqlDataReader> angeben, um ein Resultset zurückzugeben, oder indem Sie einen <xref:System.Data.SqlClient.SqlDataAdapter> zum Ausfüllen eines `DataSet`/`DataTable`verwenden. Sie können mit großen Datentypen genauso arbeiten wie mit den entsprechenden kleineren Datentypen.  
   
 ### <a name="using-getsqlbytes-to-retrieve-data"></a>Abrufen von Daten mit "GetSqlBytes"  
  Mit der `GetSqlBytes`-Methode von <xref:System.Data.SqlClient.SqlDataReader> können Sie den Inhalt einer `varbinary(max)`-Spalte abrufen. Im folgenden Codefragment wird von einem <xref:System.Data.SqlClient.SqlCommand>-Objekt mit dem Namen `cmd` ausgegangen, das `varbinary(max)`-Daten aus einer Tabelle auswählt. Außerdem gibt es ein <xref:System.Data.SqlClient.SqlDataReader>-Objekt mit dem Namen `reader`, das die Daten als <xref:System.Data.SqlTypes.SqlBytes> abruft.  
@@ -222,13 +222,13 @@ while (reader.Read())
 ```  
   
 ### <a name="example"></a>Beispiel  
- Der folgende Code ruft den Namen und das `LargePhoto`-Objekt aus der `ProductPhoto`-Tabelle in der `AdventureWorks`-Datenbank ab und speichert das Objekt in einer Datei. Die Assembly muss mit einem Verweis auf den <xref:System.Drawing>-Namespace kompiliert werden.  Die <xref:System.Data.SqlClient.SqlDataReader.GetSqlBytes%2A>-Methode des <xref:System.Data.SqlClient.SqlDataReader> gibt ein <xref:System.Data.SqlTypes.SqlBytes>-Objekt zurück, das eine `Stream`-Eigenschaft verfügbar macht. Der Code verwendet diese, um ein neues `Bitmap` -Objekt zu erstellen, und speichert es dann `ImageFormat`in der GIF.  
+ Der folgende Code ruft den Namen und das `LargePhoto`-Objekt aus der `ProductPhoto`-Tabelle in der `AdventureWorks`-Datenbank ab und speichert das Objekt in einer Datei. Die Assembly muss mit einem Verweis auf den <xref:System.Drawing>-Namespace kompiliert werden.  Die <xref:System.Data.SqlClient.SqlDataReader.GetSqlBytes%2A>-Methode des <xref:System.Data.SqlClient.SqlDataReader> gibt ein <xref:System.Data.SqlTypes.SqlBytes>-Objekt zurück, das eine `Stream`-Eigenschaft verfügbar macht. Der Code verwendet diese, um ein neues `Bitmap` Objekt zu erstellen, und speichert es dann in der GIF-`ImageFormat`.  
   
  [!code-csharp[DataWorks LargeValueType.Photo#1](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks LargeValueType.Photo/CS/source.cs#1)]
  [!code-vb[DataWorks LargeValueType.Photo#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks LargeValueType.Photo/VB/source.vb#1)]  
   
 ## <a name="using-large-value-type-parameters"></a>Verwenden großer Werttypparameter  
- Große Werttypen können in <xref:System.Data.SqlClient.SqlParameter>-Objekten auf dieselbe Weise verwendet werden wie kleinere Werttypen in <xref:System.Data.SqlClient.SqlParameter>-Objekten. Sie können große Werttypen als <xref:System.Data.SqlClient.SqlParameter> -Werte abrufen, wie im folgenden Beispiel gezeigt. Im Code wird davon ausgegangen, dass in der AdventureWorks-Beispieldatenbank die folgende gespeicherte GetDocumentSummary-Prozedur vorhanden ist. Die gespeicherte Prozedur nimmt einen Eingabeparameter mit @DocumentID dem Namen und gibt den Inhalt der DocumentSummary-Spalte @DocumentSummary im Output-Parameter zurück.  
+ Große Werttypen können in <xref:System.Data.SqlClient.SqlParameter>-Objekten auf dieselbe Weise verwendet werden wie kleinere Werttypen in <xref:System.Data.SqlClient.SqlParameter>-Objekten. Sie können große Werttypen als <xref:System.Data.SqlClient.SqlParameter> Werte abrufen, wie im folgenden Beispiel gezeigt. Im Code wird davon ausgegangen, dass in der AdventureWorks-Beispieldatenbank die folgende gespeicherte GetDocumentSummary-Prozedur vorhanden ist. Die gespeicherte Prozedur nimmt einen Eingabeparameter mit dem Namen @DocumentID und gibt den Inhalt der DocumentSummary-Spalte im @DocumentSummary Output-Parameter zurück.  
   
 ```sql
 CREATE PROCEDURE GetDocumentSummary   
@@ -244,7 +244,7 @@ WHERE   DocumentID=@DocumentID
 ```  
   
 ### <a name="example"></a>Beispiel  
- Der ADO.NET-Code erstellt ein <xref:System.Data.SqlClient.SqlConnection>-Objekt und ein <xref:System.Data.SqlClient.SqlCommand>-Objekt, um die gespeicherte GetDocumentSummary-Prozedur auszuführen und die Dokumentübersicht abzurufen, die als großer Werttyp gespeichert ist. Der Code übergibt einen Wert für den @DocumentID Eingabeparameter und zeigt die Ergebnisse an, die im- @DocumentSummary Konsolenfenster an den Output-Parameter zurückgegeben werden.  
+ Der ADO.NET-Code erstellt ein <xref:System.Data.SqlClient.SqlConnection>-Objekt und ein <xref:System.Data.SqlClient.SqlCommand>-Objekt, um die gespeicherte GetDocumentSummary-Prozedur auszuführen und die Dokumentübersicht abzurufen, die als großer Werttyp gespeichert ist. Der Code übergibt einen Wert für den @DocumentID Eingabeparameter und zeigt die Ergebnisse an, die im @DocumentSummary Output-Parameter im Konsolenfenster zurückgegeben wurden.  
   
  [!code-csharp[DataWorks LargeValueType.Param#1](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks LargeValueType.Param/CS/source.cs#1)]
  [!code-vb[DataWorks LargeValueType.Param#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks LargeValueType.Param/VB/source.vb#1)]  
