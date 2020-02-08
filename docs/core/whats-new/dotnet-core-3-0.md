@@ -5,13 +5,13 @@ dev_langs:
 - csharp
 author: thraka
 ms.author: adegeo
-ms.date: 10/22/2019
-ms.openlocfilehash: 4bf1c4826273535bfe824828f0fad96998b29483
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.date: 01/27/2020
+ms.openlocfilehash: 92d97ca3efe761c879d0940a02342edb5a8180f0
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76742593"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920383"
 ---
 # <a name="whats-new-in-net-core-30"></a>Neuerungen in .NET Core 3.0
 
@@ -121,7 +121,7 @@ Wenn TC aktiviert ist, gilt beim Start einer App das folgende Verhalten für die
 - Wenn die Methode über AOT-kompilierten Code oder [ReadyToRun](#readytorun-images) verfügt, wird der zuvor generierte Code verwendet.
 - Andernfalls wird die Methode mit JIT kompiliert. In der Regel sind diese Methoden Generics über Werttypen.
   - *Quick JIT* erzeugt schneller Code geringerer Qualität (oder weniger optimiert). In .NET Core 3.0 ist Quick JIT standardmäßig für Methoden aktiviert, die keine Schleifen enthalten. Während des Starts wird dies bevorzugt.
-  - Die vollständig optimierte Just-In-Time-Kompilierung erzeugt langsamer Code von höherer Qualität (oder optimierter). Für Methoden wird die vollständig optimierte Just-In-Time-Kompilierung verwendet, bei denen die schnelle JIT-Kompilierung nicht verwendet werden würde (z. B wenn die Methode mit den Attribut <xref:System.Runtime.CompilerServices.MethodImplOptions.AggressiveOptimization?displayProperty=nameWithType> versehen ist).
+  - Die vollständig optimierte Just-In-Time-Kompilierung erzeugt Code höherer Qualität (oder besser optimierten Code), ist aber langsamer. Für Methoden, bei denen die schnelle JIT-Kompilierung nicht verwendet werden würde (beispielsweise dann, wenn die Methode das Attribut <xref:System.Runtime.CompilerServices.MethodImplOptions.AggressiveOptimization?displayProperty=nameWithType> aufweist), wird die vollständig optimierte JIT-Kompilierung verwendet.
 
 Bei häufig aufgerufenen Methoden erzeugt der Just-in-Time-Compiler schließlich vollständig optimierten Code im Hintergrund. Der optimierte Code ersetzt dann den vorkompilierten Code für diese Methode.
 
@@ -180,7 +180,7 @@ Ausnahmen für die versionsübergreifende Angabe von Zielen:
 
 ## <a name="runtimesdk"></a>Runtime/SDK
 
-### <a name="major-version-roll-forward"></a>Rollforward der Hauptversion
+### <a name="major-version-runtime-roll-forward"></a>Runtimerollforward der Hauptversion
 
 Mit .NET Core 3.0 wird ein Aktivierungsfeature eingeführt, das Ihrer App ein Rollforward auf die neueste Hauptversion von .NET Core ermöglicht. Darüber hinaus wurde eine neue Einstellung hinzugefügt, um zu steuern, wie ein Rollforward auf Ihre App angewendet wird. Diese kann folgendermaßen konfiguriert werden:
 
@@ -226,6 +226,15 @@ Mit .NET Core 3.0 werden lokale Tools eingeführt. Lokale Tools ähneln [globale
 Lokale Tools basieren auf einer Manifestdatei `dotnet-tools.json` in Ihrem aktuellen Verzeichnis. In dieser Manifestdatei werden die Tools festgelegt, die im Verzeichnis und in den Unterverzeichnissen verfügbar sind. Sie können die Manifestdatei mit dem Code verteilen, um sicherzustellen, dass jeder Benutzer, der mit Ihrem Code arbeitet, dieselben Tools wiederherstellen und verwenden kann.
 
 Für sowohl globale als auch lokale Tools ist eine kompatible Version der Runtime erforderlich. Die meisten Tools führen derzeit NuGet.org target .NET Core Runtime 2.1 aus. Um diese Tools global oder lokal zu installieren, müssten Sie weiterhin die [NET Core 2.1-Runtime](https://dotnet.microsoft.com/download/dotnet-core/2.1) installieren.
+
+### <a name="new-globaljson-options"></a>Neue global.json-Optionen
+
+Die Datei *global.json* verfügt über neue Optionen, die mehr Flexibilität bei der Definition der verwendeten .NET Core SDK-Version bieten. Folgende neue Optionen sind verfügbar:
+
+- `allowPrerelease`: Gibt an, ob der SDK-Resolver bei der Auswahl der zu verwendenden SDK-Version Vorabversionen berücksichtigen soll.
+- `rollForward`: Gibt die Rollforwardrichtlinie an, die beim Auswählen einer SDK-Version verwendet werden soll, entweder als Fallback, wenn eine bestimmte SDK-Version fehlt, oder als Anweisung, damit eine höhere Version verwendet wird.
+
+Weitere Informationen zu den Änderungen, einschließlich Standardwerten, unterstützten Werten und neuen Abgleichsregeln, finden Sie unter [global.json: Übersicht](../tools/global-json.md).
 
 ### <a name="smaller-garbage-collection-heap-sizes"></a>Kleinere Garbage Collection-Heapgrößen
 
@@ -356,7 +365,7 @@ Das folgende Beispiel für C# 8.0 veranschaulicht das Herstellen der Verbindung 
 
 ### <a name="cryptography-ciphers"></a>Kryptografieverschlüsselungen
 
-.NET 3.0 fügt Unterstützung für **AES-GCM**- und **AES-CCM-** -Verschlüsselungen hinzu, implementiert mit <xref:System.Security.Cryptography.AesGcm?displayProperty=nameWithType> bzw. <xref:System.Security.Cryptography.AesCcm?displayProperty=nameWithType>. Beide Algorithmen sind [AEAD-Algorithmen (Authenticated Encryption with Association Data)](https://en.wikipedia.org/wiki/Authenticated_encryption).
+.NET 3.0 fügt Unterstützung für **AES-GCM**- und **AES-CCM-**-Verschlüsselungen hinzu, implementiert mit <xref:System.Security.Cryptography.AesGcm?displayProperty=nameWithType> bzw. <xref:System.Security.Cryptography.AesCcm?displayProperty=nameWithType>. Beide Algorithmen sind [AEAD-Algorithmen (Authenticated Encryption with Association Data)](https://en.wikipedia.org/wiki/Authenticated_encryption).
 
 Der folgende Code veranschaulicht die Verwendung der `AesGcm`-Verschlüsselung zum Verschlüsseln und Entschlüsseln von Zufallsdaten.
 
@@ -458,7 +467,7 @@ Entspricht der IEEE-Operation `scaleB`, der ein integraler Wert übergeben wird.
 entspricht der IEEE-Operation `log2`, die den Logarithmus zur Basis 2 zurückgibt. Diese Operation minimiert den Rundungsfehler.
 
 - <xref:System.Math.FusedMultiplyAdd(System.Double,System.Double,System.Double)>\
-entspricht der IEEE-Operation `fma`, die eine Fused-Multiply-Add-Operation durchführt. Dabei wird `(x * y) + z` als einzelne Operation ausgeführt, wodurch der Rundungsfehler minimiert wird. `FusedMultiplyAdd(1e308, 2.0, -1e308)` gibt beispielsweise `1e308` zurück. Die reguläre Operation `(1e308 * 2.0) - 1e308` gibt `double.PositiveInfinity` zurück.
+entspricht der IEEE-Operation `fma`, die eine Fused-Multiply-Add-Operation durchführt. Dabei wird `(x * y) + z` als einzelne Operation ausgeführt, wodurch der Rundungsfehler minimiert wird. Ein Beispiel hierfür ist `FusedMultiplyAdd(1e308, 2.0, -1e308)`, diese gibt `1e308` zurück. Die reguläre Operation `(1e308 * 2.0) - 1e308` gibt `double.PositiveInfinity` zurück.
 
 - <xref:System.Math.CopySign(System.Double,System.Double)>\
 entspricht der IEEE-Operation `copySign`. Diese gibt den Wert von `x` mit dem Vorzeichen von `y` zurück.

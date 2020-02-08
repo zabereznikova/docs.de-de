@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet
-ms.openlocfilehash: ec9c6f992bcd4a76e2f70018f3facca42b7b660c
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 4eb75f23359334ea483cba1498f1804c4b24c80c
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714073"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920458"
 ---
 # <a name="consume-a-net-standard-library-in-visual-studio"></a>Verwenden einer .NET Standard-Bibliothek in Visual Studio
 
@@ -48,7 +48,7 @@ Ebenso wie Sie unter [Testen einer .NET Standard-Bibliothek in Visual Studio](te
 
    ![Kontextmenü „Verweis hinzufügen“ in Visual Studio](./media/consuming-library-with-visual-studio/add-reference-context-menu.png)
 
-1. Wählen Sie im Dialogfeld **Verweis-Manager** **StringLibrary**, Ihr Klassenbibliotheksprojekt, aus, und klicken Sie auf die Schaltfläche **OK**.
+1. Wählen Sie im Dialogfeld **Verweis-Manager****StringLibrary**, Ihr Klassenbibliotheksprojekt, aus, und klicken Sie auf die Schaltfläche **OK**.
 
    ![Dialogfeld „Verweis-Manager“ mit ausgewählter StringLibrary](./media/consuming-library-with-visual-studio/manage-project-references.png)
 
@@ -86,4 +86,4 @@ Sie können Ihre Klassenbibliothek allgemein verfügbar machen, indem Sie sie al
    > [!TIP]
    > Wenn sich das Verzeichnis, das die Datei *dotnet.exe* enthält, nicht in Ihrem Pfad befindet, können Sie ihren Speicherort ermitteln, indem Sie im Konsolenfenster `where dotnet.exe` eingeben.
 
-Weitere Informationen zum Erstellen von NuGet-Paketen finden Sie unter [Erstellen eines NuGet-Pakets mit plattformübergreifenden Tools](../deploying/creating-nuget-packages.md).
+Weitere Informationen zum Erstellen von NuGet-Paketen finden Sie unter [Erstellen eines NuGet-Pakets mit der .NET Core-CLI](../deploying/creating-nuget-packages.md).

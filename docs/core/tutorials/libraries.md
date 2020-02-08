@@ -1,18 +1,18 @@
 ---
-title: Entwickeln von Bibliotheken mit plattformübergreifenden Tools
-description: Erfahren Sie, wie Sie mit .NET Core-CLI-Tools .NET-Bibliotheken erstellen. Sie erstellen damit eine Bibliothek, die mehrere Frameworks unterstützt.
+title: Entwickeln von Bibliotheken mit der .NET Core-CLI
+description: Erfahren Sie, wie Sie die .NET Core-CLI verwenden, um .NET-Bibliotheken zu erstellen. Sie erstellen damit eine Bibliothek, die mehrere Frameworks unterstützt.
 author: cartermp
 ms.date: 05/01/2017
-ms.openlocfilehash: 4132113037e6c5ec555d2d1859b8217a1a53d07f
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: a7c0175d29f483571578b58d698dd790cf66f7f4
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714026"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920442"
 ---
-# <a name="develop-libraries-with-cross-platform-tools"></a>Entwickeln von Bibliotheken mit plattformübergreifenden Tools
+# <a name="develop-libraries-with-the-net-core-cli"></a>Entwickeln von Bibliotheken mit der .NET Core-CLI
 
-Dieser Artikel behandelt, wie man mithilfe von plattformübergreifenden CLI-Tools Bibliotheken für .NET schreibt. Die CLI bietet effiziente Funktionalität auf niedriger Stufe, die auf allen unterstützten Betriebssystemen funktioniert. Sie können trotzdem noch Bibliotheken mit Visual Studio erstellen. Wenn das Ihre bevorzugte Methode ist, finden Sie [weitere Informationen im Handbuch für Visual Studio](library-with-visual-studio.md).
+Dieser Artikel erläutert, wie Sie mithilfe der .NET Core-CLI Bibliotheken für .NET schreiben. Die CLI bietet effiziente Funktionalität auf niedriger Stufe, die auf allen unterstützten Betriebssystemen funktioniert. Sie können trotzdem noch Bibliotheken mit Visual Studio erstellen. Wenn das Ihre bevorzugte Methode ist, finden Sie [weitere Informationen im Handbuch für Visual Studio](library-with-visual-studio.md).
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
@@ -216,7 +216,7 @@ Jedes dieser Verzeichnisse enthält die `.dll`-Dateien für jedes Ziel.
 Es ist wichtig, über Plattformen hinweg testen zu können. Sie können entweder [xUnit](https://xunit.github.io/) oder MSTest standardmäßig verwenden. Beide sind bestens für Komponententests für Ihre Bibliothek unter .NET Core geeignet. Wie Sie Ihre Lösung mit Testprojekten einrichten, hängt von der [Struktur Ihrer Lösung](#structuring-a-solution) ab. Im folgenden Beispiel wird davon ausgegangen, dass Test- und Quellverzeichnisse im gleichen Verzeichnis auf oberster Ebene vorhanden sind.
 
 > [!NOTE]
-> Es werden einige [.NET Core CLI commands (.NET Core-CLI-Befehle)](../tools/index.md) verwendet. Weitere Informationen finden Sie unter [dotnet new](../tools/dotnet-new.md) und [dotnet sln](../tools/dotnet-sln.md).
+> Es werden einige [.NET Core-CLI](../tools/index.md)-Befehle verwendet. Weitere Informationen finden Sie unter [dotnet new](../tools/dotnet-new.md) und [dotnet sln](../tools/dotnet-sln.md).
 
 1. Richten Sie Ihre Projektmappe ein. Verwenden Sie dazu folgende Befehle:
 

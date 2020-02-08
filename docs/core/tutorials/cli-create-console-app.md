@@ -1,23 +1,23 @@
 ---
-title: 'Erste Schritte mit .NET Core unter Verwendung der CLI: .NET Core-CLI'
-description: Erste Schritte mit .NET Core unter Windows, Linux oder Mac OS unter Verwendung der .NET Core-Befehlszeilenschnittstelle (CLI).
+title: Erste Schritte mit .NET Core unter Verwendung der CLI
+description: Dies ist ein Tutorial zu den ersten Schritte mit .NET Core unter Windows, Linux oder macOS unter Verwendung der .NET Core-CLI.
 author: thraka
 ms.author: adegeo
 ms.date: 12/05/2019
 ms.technology: dotnet-cli
 ms.custom: updateeachrelease
-ms.openlocfilehash: 4285ed3c0488ea615ca89b0b771bf09c8c29b318
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 6e1c7881aa415ea54307d80214001a2f0fe5b4a6
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76739125"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920464"
 ---
-# <a name="get-started-with-net-core-on-windowslinuxmacos-using-the-command-line"></a>Erste Schritte mit .NET Core unter Windows/Linux/macOS unter Verwendung der Befehlszeile
+# <a name="get-started-with-net-core-using-the-net-core-cli"></a>Erste Schritte mit .NET Core unter Verwendung der .NET Core-CLI
 
-In diesem Artikel erfahren Sie, wie Sie auf Ihrem Computer mit .NET Core CLI-Tools plattformübergreifende Anwendungen erstellen können.
+In diesem Artikel wird erläutert, wie Sie die .NET Core-CLI verwenden, um .NET Core-Apps zu entwickeln, die unter Windows, Linux und macOS funktionieren.
 
-Wenn Sie mit dem Toolset der .NET Core-Befehlszeilenschnittstelle nicht vertraut sind, finden Sie entsprechende Informationen in der [Übersicht über das .NET Core SDK](../tools/index.md).
+Wenn Sie mit der .NET Core-CLI nicht vertraut sind, finden Sie entsprechende Informationen in der [Übersicht über die .NET Core-CLI](../tools/index.md).
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
@@ -194,6 +194,6 @@ Und das ist schon alles! Nun können Sie beginnen, die grundlegenden Konzepte zu
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Organisieren und Testen von Projekten mit .NET Core CLI-Tools](testing-with-cli.md)
-- [Veröffentlichen von .NET Core-Apps mit der CLI](../deploying/deploy-with-cli.md)
-- [Weitere Informationen zur App-Bereitstellung](../deploying/index.md)
+- [Organisieren und Testen von Projekten mit der .NET Core-CLI](testing-with-cli.md)
+- [Veröffentlichen von .NET Core-Apps mit der .NET Core-CLI](../deploying/deploy-with-cli.md)
+- [.NET Core-Anwendungsbereitstellung](../deploying/index.md)

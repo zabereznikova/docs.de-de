@@ -4,12 +4,12 @@ description: Verwenden Sie einen Paket-Manager, um das .NET Core SDK und die -Ru
 author: thraka
 ms.author: adegeo
 ms.date: 12/04/2019
-ms.openlocfilehash: a40180881ec0962d89f03c2c9d7aad9bbb052d2a
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: a6c10c6b11bc57ae4bbe814c66c563b85ce3c22b
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75740662"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920728"
 ---
 # <a name="sles-12-package-manager---install-net-core"></a>SLES 12-Paket-Manager: Installieren von .NET Core
 
@@ -60,3 +60,11 @@ sudo zypper install dotnet-runtime-3.1
 ## <a name="how-to-install-other-versions"></a>Installieren anderer Versionen
 
 [!INCLUDE [package-manager-switcher](./includes/package-manager-heading-hack-pkgname.md)]
+
+## <a name="troubleshoot-the-package-manager"></a>Problembehandlung des Paket-Managers
+
+Dieser Abschnitt enthält Informationen zu häufigen Fehlern, die bei der Verwendung des Paket-Managers zur Installation von .NET Core auftreten können.
+
+### <a name="failed-to-fetch"></a>Fehler beim Abrufen
+
+[!INCLUDE [package-manager-failed-to-fetch-rpm](includes/package-manager-failed-to-fetch-rpm.md)]

@@ -1,20 +1,20 @@
 ---
-title: Veröffentlichen von .NET Core-Apps mit der CLI
-description: Erfahren Sie, wie Sie NET Core-Apps mit den CLI-Tools (command-line interface, Befehlszeilenschnittstelle) des .NET Core SDK veröffentlichen.
+title: Veröffentlichen von Apps mit der .NET Core-CLI
+description: Erfahren Sie, wie Sie mit .NET Core-CLI-Befehlen eine .NET Core-App veröffentlichen.
 author: thraka
 ms.author: adegeo
 ms.date: 12/12/2019
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: 98f1e96ac087727e711f9ebf3d3eaf86c4d4eec9
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: f4c2a4ccf551c53e4aa4e125cb5720d6f1cc9601
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75740857"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920908"
 ---
-# <a name="publish-net-core-apps-with-the-cli"></a>Veröffentlichen von .NET Core-Apps mit der CLI
+# <a name="publish-net-core-apps-with-the-net-core-cli"></a>Veröffentlichen von .NET Core-Apps mit der .NET Core-CLI
 
 In diesem Artikel wird veranschaulicht, wie Sie Ihre .NET Core-Anwendung über die Befehlszeile veröffentlichen. .NET Core bietet drei Möglichkeiten zum Veröffentlichen Ihrer Anwendungen. Die frameworkabhängige Bereitstellung erzeugt eine plattformübergreifende DLL-Datei, die die lokal installierte .NET Core-Runtime verwendet. Die frameworkabhängige ausführbare Datei erzeugt eine plattformspezifische ausführbare Datei, die die lokal installierte .NET Core-Runtime verwendet. Die eigenständige ausführbare Datei erzeugt eine plattformspezifische ausführbare Datei, die eine lokale Kopie der .NET Core-Runtime enthält.
 

@@ -3,12 +3,12 @@ title: Befehl „dotnet nuget push“
 description: Der dotnet nuget push-Befehl überträgt ein Paket auf den Server und veröffentlicht es.
 author: karann-msft
 ms.date: 12/04/2019
-ms.openlocfilehash: a483c559dee8b4a82cc2c792f5c2c5e4a8ff3f87
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: a352120efa199b871e67eb8ba2442bd69a9fc4ed
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76733109"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76789882"
 ---
 # <a name="dotnet-nuget-push"></a>dotnet nuget push
 
@@ -98,7 +98,13 @@ Der `dotnet nuget push`-Befehl überträgt ein Paket auf den Server und veröffe
   dotnet nuget push foo.nupkg -k 4003d786-cc37-4004-bfdf-c4f3e8ef9b3a
   ```
 
-* Überträgt *foo.nupkg* an die benutzerdefinierte Pushquelle `https://customsource` und gibt einen API-Schlüssel an:
+* Überträgt *foo.nupkg* an den offiziellen NuGet-Server und gibt einen API-Schlüssel an:
+
+  ```dotnetcli
+  dotnet nuget push foo.nupkg -k 4003d786-cc37-4004-bfdf-c4f3e8ef9b3a -s https://api.nuget.org/v3/index.json
+  ```
+  
+  * Überträgt *foo.nupkg* an die benutzerdefinierte Pushquelle `https://customsource` und gibt einen API-Schlüssel an:
 
   ```dotnetcli
   dotnet nuget push foo.nupkg -k 4003d786-cc37-4004-bfdf-c4f3e8ef9b3a -s https://customsource/

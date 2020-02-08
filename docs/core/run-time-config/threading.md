@@ -3,12 +3,12 @@ title: Konfigurationseinstellungen für das Threading
 description: Erfahren Sie mehr über Laufzeiteinstellungen, die das Threading für .NET Core-Apps konfigurieren.
 ms.date: 11/27/2019
 ms.topic: reference
-ms.openlocfilehash: ed7688d4d8f7178440fe59afc6e2f5e0a11b2a5c
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 68b8e93ca6ec3f708a7a627307655ada1955500a
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76733436"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76789855"
 ---
 # <a name="run-time-configuration-options-for-threading"></a>Laufzeitkonfigurationsoptionen für das Threading
 
@@ -24,7 +24,7 @@ ms.locfileid: "76733436"
 
 ## <a name="minimum-threads"></a>Mindestanzahl an Threads
 
-- Gibt die Mindestanzahl an Threads für den Arbeitsthreadpool an
+- Gibt die Mindestanzahl an Threads für den Arbeitsthreadpool an.
 - Entspricht der <xref:System.Threading.ThreadPool.SetMinThreads%2A?displayProperty=nameWithType>-Methode
 
 | | Einstellungsname | Werte |
@@ -61,7 +61,7 @@ Projektdatei:
 
 ## <a name="maximum-threads"></a>Maximale Anzahl an Threads
 
-- Gibt die maximale Anzahl an Threads für den Arbeitsthreadpool an
+- Gibt die maximale Anzahl an Threads für den Arbeitsthreadpool an.
 - Entspricht der <xref:System.Threading.ThreadPool.SetMaxThreads%2A?displayProperty=nameWithType>-Methode
 
 | | Einstellungsname | Werte |

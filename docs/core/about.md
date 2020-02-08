@@ -2,12 +2,12 @@
 title: Weitere Informationen zu .NET Core
 description: Erfahren Sie mehr zu .NET Core.
 ms.date: 09/17/2019
-ms.openlocfilehash: 12611c2cd0b872a683d070ff17dcf9f111578627
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.openlocfilehash: e5460fd1d968a49478a1bdc5f18962de2c7cbbe0
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75900621"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920956"
 ---
 # <a name="about-net-core"></a>Weitere Informationen zu .NET Core
 
@@ -58,14 +58,14 @@ Mehrere Frameworks wurden basierend auf .NET Core entwickelt:
 
 - Eine [.NET Core-Runtime](https://github.com/dotnet/runtime/tree/master/src/coreclr), die ein Typsystem, eine Funktion zum Laden von Assemblys, einen Garbage Collector, natives Interop und andere grundlegende Dienste bereitstellt. [.NET Core-Frameworkbibliotheken](https://github.com/dotnet/runtime/tree/master/src/libraries) stellen primitive Datentypen, Typen zur Anwendungsgestaltung und grundlegende Hilfsprogramme bereit.
 - Die [ASP.NET Core-Runtime](https://github.com/dotnet/aspnetcore), die ein Framework zum Erstellen moderner, cloudbasierter Anwendungen mit Internetverbindung, wie etwa Web-Apps, IoT-Apps und mobile Back-Ends, bietet.
-- Die [.NET Core-CLI-Tools](https://github.com/dotnet/sdk) und Sprachcompiler ([Roslyn](https://github.com/dotnet/roslyn) und [F#](https://github.com/microsoft/visualfsharp)), die Funktionen für .NET Core-Entwickler bereitstellen.
-- Der Befehl [dotnet tool](https://github.com/dotnet/core-setup), der zum Starten von .NET Core-Anwendungen und CLI-Tools verwendet wird. Er wählt und hostet die Runtime, stellt eine Richtlinie zum Laden der Assembly bereit und startet die Anwendungen und Tools.
+- Das [.NET Core SDK](https://github.com/dotnet/sdk) und die Sprachcompiler ([Roslyn](https://github.com/dotnet/roslyn) und [F#](https://github.com/microsoft/visualfsharp)), die Funktionen für .NET Core-Entwickler bereitstellen.
+- Der [dotnet-Befehl](./tools/dotnet.md), der zum Starten von .NET Core-Anwendungen und CLI-Befehlen verwendet wird. Er wählt und hostet die Runtime, stellt eine Richtlinie zum Laden der Assembly bereit und startet die Anwendungen und Tools.
 
 Die Komponenten sind wie folgt verfügbar:
 
 - [.NET Core-Runtime:](https://dotnet.microsoft.com/download) enthält die .NET Core-Runtime und -Frameworkbibliotheken.
 - [ASP.NET Core-Runtime:](https://dotnet.microsoft.com/download) enthält die ASP.NET Core-Runtime sowie die .NET Core-Runtime und -Frameworkbibliotheken.
-- [.NET Core SDK:](https://dotnet.microsoft.com/download) enthält die .NET-CLI-Tools, die ASP.NET Core-Runtime, die .NET Core-Runtime und das .NET Core-Framework.
+- [.NET Core SDK:](https://dotnet.microsoft.com/download) enthält die .NET Core-CLI, die ASP.NET Core-Runtime, die .NET Core-Runtime und das .NET Core-Framework.
 
 ### <a name="open-source"></a>Quelle öffnen
 

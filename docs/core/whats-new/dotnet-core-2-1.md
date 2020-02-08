@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.date: 10/10/2018
-ms.openlocfilehash: 603e7ae4ffb9e6a4bb477af9597d6948bd63f55e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 32784f7d4b9e3a93eb7f81b4829b39c1a06ef949
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73100752"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920394"
 ---
 # <a name="whats-new-in-net-core-21"></a>Neuigkeiten in .NET Core 2.1
 
@@ -67,7 +67,7 @@ Eine Reihe von Tools, die nur auf Projektbasis unter Verwendung von [`DotnetCliT
 
 .NET Core 2.1 unterstützt *globale Tools* – d.h. benutzerdefinierte Tools, die global über die Befehlszeile verfügbar sind. Das Erweiterbarkeitsmodell in früheren Versionen von benutzerdefinierten .NET Core-Tools ist auf Projektbasis nur mithilfe von [`DotnetCliToolReference`](../tools/extensibility.md#consuming-per-project-tools) verfügbar.
 
-Verwenden Sie den [dotnet tool install](../tools/dotnet-tool-install.md)-Befehl, um ein globales Tool zu installieren. Beispiel:
+Verwenden Sie den [dotnet tool install](../tools/dotnet-tool-install.md)-Befehl, um ein globales Tool zu installieren. Zum Beispiel:
 
 ```dotnetcli
 dotnet tool install -g dotnetsay
@@ -112,7 +112,7 @@ Sie können diese Einstellung auf drei verschiedene Arten ändern:
    "rollForwardOnNoCandidateFx" : 0
    ```
 
-- Fügen Sie bei Verwendung der [.NET Core-CLI-Tools](../tools/index.md) die folgende Option mit dem gewünschten Wert zu einem .NET Core-Befehl wie `run` hinzu:
+- Fügen Sie bei Verwendung der [.NET Core-CLI](../tools/index.md) die folgende Option mit dem gewünschten Wert zu einem .NET Core-Befehl wie `run` hinzu:
 
    ```dotnetcli
    dotnet run --rollForwardOnNoCandidateFx=0

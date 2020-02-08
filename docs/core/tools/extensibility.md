@@ -1,21 +1,21 @@
 ---
 title: .NET Core-CLI-Erweiterbarkeitsmodell
-description: Erfahren Sie, wie Sie die Tools für die Befehlszeilenschnittstelle (CLI, Command-line Interface) erweitern können.
+description: Erfahren Sie, wie Sie die .NET Core-CLI erweitern können.
 ms.date: 04/12/2017
-ms.openlocfilehash: 4f49735fa94b2a7ee32e0d80590f9e680edeff16
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 74da895fb3a3f6c77640a2b9a64acdb2894a954b
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714181"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920515"
 ---
-# <a name="net-core-cli-tools-extensibility-model"></a>Erweiterbarkeitsmodell für .NET Core-CLI-Tools
+# <a name="net-core-cli-extensibility-model"></a>.NET Core-CLI-Erweiterbarkeitsmodell
 
-Dieses Dokument behandelt die unterschiedlichen Möglichkeiten, wie Sie die .NET Core-CLI-Tools erweitern und die Szenarios erklären können, die jedes steuert.
+In diesem Artikel werden die unterschiedlichen Möglichkeiten vorgestellt, mit denen Sie die .NET Core-CLI erweitern können, und es werden die Szenarien erläutert, in denen diese jeweils genutzt werden.
 Sie sehen, wie Sie die Tools verarbeiten und wie unterschiedliche Typen von Tools erstellt werden können.
 
-## <a name="how-to-extend-cli-tools"></a>So können Sie CLI-Tools erweitern
-Die CLI-Tools können auf drei Arten erweitert werden:
+## <a name="how-to-extend-the-cli"></a>Erweitern der CLI
+Die CLI kann auf drei Arten erweitert werden:
 
 1. [Projektweise über NuGet-Pakete](#per-project-based-extensibility)
 
@@ -79,7 +79,7 @@ Sie finden auch die [Implementierung von verwendeten Tools](https://github.com/d
 
 ## <a name="custom-targets"></a>Benutzerdefinierte Ziele
 
-NuGet kann [benutzerdefinierte MSBuild-Ziele und PROPS-Dateien packen](/nuget/create-packages/creating-a-package#include-msbuild-props-and-targets-in-a-package). Mit dem Schritt der .NET Core-CLI-Tools zum Verwenden von MSBuild gilt nun derselbe Mechanismus für Erweiterbarkeit für .NET Core-Projekte. Sie nutzen diese Art von Erweiterbarkeit, wenn Sie den Buildprozess erweitern möchten, im Buildprozess auf Artefakte wie generierte Dateien zugreifen oder die Konfiguration überprüfen möchten, in der der Build aufgerufen wird usw.
+NuGet kann [benutzerdefinierte MSBuild-Ziele und PROPS-Dateien packen](/nuget/create-packages/creating-a-package#include-msbuild-props-and-targets-in-a-package). Seit .NET Core MSBuild verwendet, gilt derselbe Erweiterbarkeitsmechanismus auch für .NET Core-Projekte. Sie nutzen diese Art von Erweiterbarkeit, wenn Sie den Buildprozess erweitern möchten, im Buildprozess auf Artefakte wie generierte Dateien zugreifen oder die Konfiguration überprüfen möchten, in der der Build aufgerufen wird usw.
 
 Im folgenden Beispiel können Sie die Projektdatei des Ziels mithilfe der `csproj`-Syntax anzeigen. Dies zeigt dem [`dotnet pack`](dotnet-pack.md)-Befehl, was genau gepackt werden soll, wobei die Zieldateien sowie die Assemblys in den Ordner *Erstellen* im Paket platziert werden. Beachten Sie das `<ItemGroup>`-Element, das über die Eigenschaft `Label` verfügt, die auf `dotnet pack instructions` festgelegt ist, sowie das Ziel, das darunter definiert ist.
 

@@ -5,12 +5,12 @@ author: thraka
 ms.date: 12/10/2019
 ms.topic: tutorial
 ms.author: adegeo
-ms.openlocfilehash: a4723d6d63c5739123fad774bc75fae7c9fd6703
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 3a72f68f5634c9ee5b137baf12a279130861e61a
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75340177"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76787839"
 ---
 # <a name="tutorial-create-a-template-pack"></a>Tutorial: Erstellen eines Vorlagenpakets
 
@@ -49,7 +49,7 @@ Navigieren Sie in Ihrem Terminal zum Ordner _working_. Erstellen Sie ein neues P
 dotnet new console -n templatepack -o .
 ```
 
-Der Parameter `-n` legt den Dateinamen der _CSPROJ-Datei_ auf _templatepack.csproj_ fest, und der Parameter `-o` erstellt die Dateien im aktuellen Verzeichnis. Das Ergebnis sollte in etwa wie in der folgenden Ausgabe aussehen:
+Der Parameter `-n` legt den Dateinamen für _.csproj_ auf _templatepack.csproj_ fest. Der Parameter `-o` erstellt die Dateien im aktuellen Verzeichnis. Das Ergebnis sollte in etwa wie in der folgenden Ausgabe aussehen:
 
 ```console
 C:\working> dotnet new console -n templatepack -o .
@@ -91,7 +91,7 @@ Restore succeeded.
 </Project>
 ```
 
-Die Einstellungen vom Typ `<PropertyGroup>` im obigen XML-Code sind in drei Gruppen unterteilt: Die erste Gruppe enthält erforderliche Eigenschaften für ein NuGet-Paket. Die drei Einstellungen vom Typ `<Package` haben mit den NuGet-Paketeigenschaften zu tun, die Ihr Paket in einem NuGet-Feed identifizieren. Der Wert von `<PacakgeId>` dient insbesondere dazu, das Vorlagenpaket mit einem einzelnen Namen zu deinstallieren (anstatt mit einem Verzeichnispfad). Er kann aber auch verwendet werden, um das Vorlagenpaket aus einem NuGet-Feed zu installieren. Die übrigen Einstellungen (etwa `<Title>` und `<Tags>`) hängen mit den im NuGet-Feed angezeigten Metadaten zusammen. Weitere Informationen zu NuGet-Einstellungen finden Sie unter [NuGet pack and restore as MSBuild targets](/nuget/reference/msbuild-targets) (NuGet-Befehle „pack“ und „restore“ als MSBuild-Ziele).
+Die Einstellungen vom Typ `<PropertyGroup>` im obigen XML-Code sind in drei Gruppen unterteilt: Die erste Gruppe enthält erforderliche Eigenschaften für ein NuGet-Paket. Die drei Einstellungen vom Typ `<Package` haben mit den NuGet-Paketeigenschaften zu tun, die Ihr Paket in einem NuGet-Feed identifizieren. Der Wert von `<PackageId>` dient insbesondere dazu, das Vorlagenpaket mit einem einzelnen Namen zu deinstallieren (anstatt mit einem Verzeichnispfad). Er kann aber auch verwendet werden, um das Vorlagenpaket aus einem NuGet-Feed zu installieren. Die übrigen Einstellungen (etwa `<Title>` und `<PackageTags>`) hängen mit den im NuGet-Feed angezeigten Metadaten zusammen. Weitere Informationen zu NuGet-Einstellungen finden Sie unter [NuGet pack and restore as MSBuild targets](/nuget/reference/msbuild-targets) (NuGet-Befehle „pack“ und „restore“ als MSBuild-Ziele).
 
 Die Einstellung `<TargetFramework>` muss festgelegt werden, damit MSBuild ordnungsgemäß ausgeführt wird, wenn Sie das Projekt mithilfe des Befehls „pack“ kompilieren und packen.
 
@@ -178,7 +178,7 @@ Currently installed items:
 
 Führen Sie `dotnet new -u AdatumCorporation.Utility.Templates` aus, um die Vorlage zu deinstallieren. Der Befehl `dotnet new` gibt Hilfeinformationen aus, in denen Ihre zuvor installierten Vorlagen nicht mehr enthalten sein sollten.
 
-Herzlichen Glückwunsch! Sie haben ein Vorlagenpaket installiert und deinstalliert. 
+Herzlichen Glückwunsch! Sie haben ein Vorlagenpaket installiert und deinstalliert.
 
 ## <a name="next-steps"></a>Nächste Schritte
 

@@ -3,18 +3,18 @@ title: .NET Core SDK – Übersicht
 description: Erfahren Sie mehr über das .NET Core SDK, das ein Set von Bibliotheken und Tools zum Erstellen von .NET Core-Projekten ist.
 ms.date: 07/31/2019
 ms.technology: dotnet-cli
-ms.openlocfilehash: f4c4982bacaf58c1b8c7db6c5319bd314e89b7ed
-ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
+ms.openlocfilehash: 09b32b0065326af54da935a810764f93248618af
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2019
-ms.locfileid: "69566244"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920600"
 ---
 # <a name="net-core-sdk-overview"></a>.NET Core SDK – Übersicht
 
 Das .NET Core SDK ist eine Sammlung von Bibliotheken und Tools, mit der Entwickler .NET Core-Anwendungen und -Bibliotheken erstellen können. Sie enthält die folgenden Komponenten zum Erstellen und Ausführen von Anwendungen:
 
-- .NET Core-CLI-Tools
+- .NET Core-CLI
 - .NET Core-Bibliotheken und -Runtime
 - `dotnet`-[Treiber](tools/index.md#driver)
 
@@ -29,11 +29,11 @@ Der native Installer ist in erster Linie für Entwicklercomputer vorgesehen. Das
 
 Installationsskripts hingegen erfordern keine Administratorrechte. Allerdings installieren diese auch keine erforderlichen Komponenten auf dem Computer, sodass Sie alle erforderlichen Komponenten manuell installieren müssen. Die Skripts werden hauptsächlich für das Einrichten von Buildservern verwendet oder in dem Fall, dass Sie die Tools ohne Administratorrechte installieren möchten (beachten Sie hierzu die oben genannten Einschränkungen hinsichtlich der erforderlichen Komponenten). Weitere Informationen finden Sie im Artikel mit der [Referenz zum Installationsskript](tools/dotnet-install-script.md). Falls Sie daran interessiert sind, wie das SDK auf Ihrem CI-Buildserver eingerichtet wird, helfen Ihnen die Informationen im Artikel [Verwenden des .NET Core SDK und der zugehörigen Tools in Continuous Integration (CI)](tools/using-ci-with-cli.md) weiter.
 
-Das SDK wird standardmäßig im SxS-Modus (Side-by-Side) installiert. Dies bedeutet, dass auf einem Computer jederzeit gleichzeitig mehrere Versionen der CLI-Tools vorhanden sein können. Die Auswahl der Version beim Ausführen von CLI-Befehlen ist im Artikel [Auswählen der zu verwendenden .NET Core-Version](versions/selection.md) ausführlicher beschrieben.
+Das SDK wird standardmäßig im parallelen Modus installiert. Das bedeutet, dass auf einem Computer jederzeit mehrere Versionen gleichzeitig vorhanden sein können. Die Auswahl der Version beim Ausführen von CLI-Befehlen ist im Artikel [Auswählen der zu verwendenden .NET Core-Version](versions/selection.md) ausführlicher beschrieben.
 
 ## <a name="see-also"></a>Siehe auch
 
-- [.NET Core-CLI](tools/index.md)
+- [Übersicht über die .NET Core-CLI](tools/index.md)
 - [.NET Core-Versionskontrolle: Übersicht](versions/index.md)
 - [Entfernen von .NET Core-Runtime und SDK](versions/remove-runtime-sdk-versions.md)
 - [Auswählen der zu verwendenden .NET Core-Version](versions/selection.md)

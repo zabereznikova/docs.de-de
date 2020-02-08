@@ -2,12 +2,12 @@
 title: Migrieren von DNX zur .Net Core-CLI
 description: Migrieren der Verwendung von DNX-Tools zu .NET Core-CLI-Tools.
 ms.date: 06/20/2016
-ms.openlocfilehash: 91a43ffda31b34332d2e545a90c857221aa162c4
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: e15e7ce10bb7a36deb2acd2abb9a0bd4ec8cd4a9
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75715528"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920627"
 ---
 # <a name="migrating-from-dnx-to-net-core-cli-projectjson"></a>Migrieren von DNX zur .NET Core-CLI (project.json)
 
@@ -30,9 +30,9 @@ Es gibt einige allgemeine Änderungen in den Tools, die zuerst ausgeführt werde
 ### <a name="no-more-dnvm"></a>DNVM ist nicht mehr vorhanden
 DNVM, kurz für *DotNet Version Manager* war ein Bash/PowerShell-Skript mit dem ein DNX auf Ihrem Computer installiert wurde. Benutzer konnten dadurch das benötigte DNX von einem von ihnen angegebenen Feed (oder Standard-Feeds) erhalten sowie ein bestimmtes DNX als „aktiv“ markieren, das $PATH für die jeweilige Sitzung als Umgebungsvariable setzte. Dies ermöglichte die Nutzung der verschiedenen Tools.
 
-DNVM wurde eingestellt, da dessen Featuregruppe durch die geplanten Änderungen in den .NET Core-CLI-Tools überflüssig wurde.
+DNVM wurde eingestellt, da die zugehörigen Features durch die Änderungen in der .NET Core-CLI überflüssig wurden.
 
-Die CLI-Tools können auf zwei Arten verpackt werden:
+Die CLI wird in zwei Paketen angeboten:
 
 1. Native Installationsprogramme für eine bestimmte Plattform
 2. Installationsskript für andere Situationen (wie CI-Server)
@@ -69,7 +69,7 @@ In DNU war ein Konzept namens „globale Befehle“ enthalten. Im Wesentlichen w
 Dieses Konzept wird in CLI nicht unterstützt. CLI unterstützt jedoch das Konzept, Befehle pro Projekt hinzuzufügen, die mithilfe der bekannten Syntax `dotnet <command>` aufgerufen werden können.
 
 ### <a name="installing-dependencies"></a>Installieren von Abhängigkeiten
-Seit V1 verfügen die .NET Core-CLI-Tools nicht mehr über einen Befehl `install` für das Installieren von Abhängigkeiten. Wenn Sie ein Paket von NuGet installieren möchten, müssen Sie es als Abhängigkeit zu Ihrer Datei `project.json` hinzufügen und dann `dotnet restore` ausführen ([siehe Hinweis](#dotnet-restore-note)).
+In V1 enthält die .NET Core-CLI keinen `install`-Befehl zum Installieren von Abhängigkeiten. Wenn Sie ein Paket von NuGet installieren möchten, müssen Sie es als Abhängigkeit zu Ihrer Datei `project.json` hinzufügen und dann `dotnet restore` ausführen ([siehe Hinweis](#dotnet-restore-note)).
 
 ### <a name="running-your-code"></a>Ausführen des Codes
 Im Wesentlichen gibt es zwei Möglichkeiten, den Code auszuführen. Eine Möglichkeit ist das Ausführen von der Quelle mit dem Befehl `dotnet run`. Im Gegensatz zu `dnx run` führt dieser keine Kompilierung im Speicher durch. Stattdessen wird `dotnet build` aufgerufen, um den Code zu erstellen und dann die erstellte Binärdatei auszuführen.
@@ -84,7 +84,7 @@ Zusätzlich zur Nutzung von neuen Befehlen, wenn Sie mit Code arbeiten, gibt es 
 3. Migrieren weg von beliebigen DNX-APIs zu ihren BLC-Entsprechungen.
 
 ### <a name="changing-the-globaljson-file"></a>Ändern der Datei „global.json“
-Die Datei `global.json` verhält sich wie eine Projektmappendatei für RC1- und RC2- Projekte (oder höhere). Damit die CLI-Tools (wie auch Visual Studio) zwischen RC1 und höheren Versionen unterscheiden können, verwenden sie die Eigenschaft `"sdk": { "version" }`, um zu unterscheiden, welches Projekt RC1 oder höher ist. Wenn `global.json` nicht über diesen Knoten verfügt, wird davon ausgegangen, dass die höchste Version verwendet wird.
+Die Datei `global.json` verhält sich wie eine Projektmappendatei für RC1- und RC2- Projekte (oder höhere). Damit die .NET Core-CLI (wie auch Visual Studio) zwischen RC1 und höheren Versionen unterscheiden kann, verwendet sie die Eigenschaft `"sdk": { "version" }`, um zu ermitteln, welches Projekt RC1 oder höher ist. Wenn `global.json` nicht über diesen Knoten verfügt, wird davon ausgegangen, dass die höchste Version verwendet wird.
 
 Entfernen Sie entweder die Eigenschaft, um die Datei `global.json` zu aktualisieren, oder stellen Sie sie auf die genaue Version der Tools ein, die Sie verwenden möchten, in diesem Fall **1.0.0-preview2-003121**:
 
