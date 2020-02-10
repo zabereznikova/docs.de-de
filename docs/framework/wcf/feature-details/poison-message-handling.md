@@ -2,40 +2,40 @@
 title: Behandlung nicht verarbeitbarer Nachrichten
 ms.date: 03/30/2017
 ms.assetid: 8d1c5e5a-7928-4a80-95ed-d8da211b8595
-ms.openlocfilehash: 389d0651438036cd23d30cf7dd866956ac8e5dae
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: 378849815617f6556a7d9cc7e89c6697bfdd895d
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76921214"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094994"
 ---
 # <a name="poison-message-handling"></a>Behandlung nicht verarbeitbarer Nachrichten
 Eine nicht verarbeitbare *Nachricht* ist eine Nachricht, die die maximale Anzahl von Übermittlungs versuchen an die Anwendung überschritten hat. Diese Situation kann auftreten, wenn eine warteschlangenbasierte Anwendung aufgrund der Fehler keine Nachricht verarbeiten kann. Um Zuverlässigkeitsforderungen zu erfüllen, empfängt eine in der Warteschlange stehende Anwendung Nachrichten unter einer Transaktion. Beim Abbrechen der Transaktion, in der eine in der Warteschlange stehende Nachricht empfangen wurde, bleibt die Nachricht in der Warteschlange und wird dann unter einer neuen Transaktion wiederholt. Wenn das Problem, das zum Abbrechen der Transaktion geführt hat, nicht korrigiert wird, kann die empfangende Anwendung in einer Schleife hängen bleiben, in der sie dieselbe Nachricht immer wieder empfängt und abbricht, bis die maximale Anzahl der Zustellversuche überschritten ist. Auf diese Weise entsteht eine nicht verarbeitbare Nachricht.  
   
- Eine Nachricht kann aus vielen Gründen zu einer nicht verarbeitbaren Nachrichten werden. Die häufigsten Ursachen sind anwendungsspezifisch. Wenn beispielsweise eine Anwendung eine Nachricht aus einer Warteschlange liest und dann Datenbankprozesse durchführt, kann es vorkommen, dass von der Anwendung keine Sperre für die Datenbank bewirkt werden kann. Dies führt dann dazu, dass sie die Transaktion abbricht. Da die Datenbanktransaktion abgebrochen wurde, verbleibt die Nachricht in der Warteschlange, wodurch die Nachricht von der Anwendung ein zweites Mal gelesen und ein neuer Versuch gestartet wird, eine Sperrung der Datenbank zu bewirken. Nachrichten können auch nicht verarbeitbar werden, wenn sie ungültige Informationen enthalten. So enthält z. B. eine Bestellung möglicherweise eine ungültige Kundennummer. In diesen Fällen kann die Anwendung die Transaktion freiwillig abbrechen und die Nachricht zwingen, eine nicht verarbeitbare Nachricht zu werden.  
+ Eine Nachricht kann aus vielen Gründen zu einer nicht verarbeitbaren Nachrichten werden. Die häufigsten Gründe sind anwendungsspezifisch. Wenn beispielsweise eine Anwendung eine Nachricht aus einer Warteschlange liest und dann Datenbankprozesse durchführt, kann es vorkommen, dass von der Anwendung keine Sperre für die Datenbank bewirkt werden kann. Dies führt dann dazu, dass sie die Transaktion abbricht. Da die Datenbanktransaktion abgebrochen wurde, verbleibt die Nachricht in der Warteschlange, wodurch die Nachricht von der Anwendung ein zweites Mal gelesen und ein neuer Versuch gestartet wird, eine Sperrung der Datenbank zu bewirken. Nachrichten können auch nicht verarbeitbar werden, wenn sie ungültige Informationen enthalten. So enthält z. B. eine Bestellung möglicherweise eine ungültige Kundennummer. In diesen Fällen kann die Anwendung die Transaktion freiwillig abbrechen und die Nachricht zwingen, eine nicht verarbeitbare Nachricht zu werden.  
   
  Bei seltenen Gelegenheiten können Nachrichten nicht zur Anwendung weitergeleitet werden. Die Windows Communication Foundation (WCF)-Ebene kann ein Problem mit der Nachricht feststellen, z. b. wenn die Nachricht den falschen Rahmen hat, ungültige Meldungs Anmelde Informationen angefügt sind, oder einen ungültigen Aktions Header. In diesen Fällen empfängt die Anwendung die Nachricht niemals; trotzdem kann die Nachricht noch zu einer nicht verarbeitbaren Nachricht werden, die manuell verarbeitet werden kann.  
   
 ## <a name="handling-poison-messages"></a>Behandeln von nicht verarbeitbaren Nachrichten  
- In WCF bietet die Behandlung von nicht verarbeitbaren Nachrichten einen Mechanismus, mit dem eine empfangende Anwendung Nachrichten verarbeiten kann, die nicht an die Anwendung weitergeleitet werden können, oder Nachrichten, die an die Anwendung gesendet werden, die jedoch aufgrund anwendungsspezifischer rechtlichen. Die Konfiguration der Behandlung nicht verarbeitbarer Nachrichten erfolgt in jeder der verfügbaren, in der Warteschlange stehenden Bindungen durch die folgenden Eigenschaften:  
+ In WCF bietet die Verarbeitung von nicht verarbeitbaren Nachrichten einen Mechanismus, mit dem eine empfangende Anwendung Nachrichten verarbeiten kann, die nicht an die Anwendung gesendet werden können, oder Nachrichten, die an die Anwendung gesendet werden, die jedoch aufgrund von anwendungsspezifischen rechtlichen. Konfigurieren Sie die Verarbeitung nicht verarbeitbarer Nachrichten mit den folgenden Eigenschaften in jeder der verfügbaren Bindungen in der Warteschlange  
   
-- `ReceiveRetryCount`. Ein Ganzzahlwert, die die maximale Anzahl der Neuversuche für den Versand einer Nachricht von der Anwendungswarteschlange zu der Anwendung angibt. Der Standardwert ist 5. Dieser Wert ist in Fällen ausreichend, in denen eine sofortige Wiederholung das Problem behebt, beispielsweise wenn ein temporärer Deadlock für eine Datenbank vorliegt.  
+- [https://login.microsoftonline.com/consumers/](`ReceiveRetryCount`). Ein Ganzzahlwert, die die maximale Anzahl der Neuversuche für den Versand einer Nachricht von der Anwendungswarteschlange zu der Anwendung angibt. Der Standardwert ist 5. Dieser Wert ist in Fällen ausreichend, in denen eine sofortige Wiederholung das Problem behebt, beispielsweise wenn ein temporärer Deadlock für eine Datenbank vorliegt.  
   
-- `MaxRetryCycles`. Ein Ganzzahlwert, der die maximale Anzahl der Wiederholungszyklen angibt. Ein Wiederholungszyklus umfasst die Übertragung einer Nachricht von der Anwendungswarteschlange zur untergeordneten Wiederholungswarteschlange und – nach einer konfigurierbaren Verzögerung – die Rückübertragung der Nachricht aus der untergeordneten Wiederholungswarteschlange zur Anwendungswarteschlange, um einen erneuten Zustellversuch zu unternehmen. Der Standardwert ist 2. Unter Windows Vista wird die Nachricht maximal (`ReceiveRetryCount` + 1) * (`MaxRetryCycles` + 1) mal ausprobiert. `MaxRetryCycles` wird unter Windows Server 2003 und Windows XP ignoriert.  
+- [https://login.microsoftonline.com/consumers/](`MaxRetryCycles`). Ein Ganzzahlwert, der die maximale Anzahl der Wiederholungszyklen angibt. Ein Wiederholungszyklus umfasst die Übertragung einer Nachricht von der Anwendungswarteschlange zur untergeordneten Wiederholungswarteschlange und – nach einer konfigurierbaren Verzögerung – die Rückübertragung der Nachricht aus der untergeordneten Wiederholungswarteschlange zur Anwendungswarteschlange, um einen erneuten Zustellversuch zu unternehmen. Der Standardwert ist 2. Unter Windows Vista wird die Nachricht maximal (`ReceiveRetryCount` + 1) * (`MaxRetryCycles` + 1) mal ausprobiert. `MaxRetryCycles` wird unter Windows Server 2003 und Windows XP ignoriert.  
   
-- `RetryCycleDelay`. Die Verzögerungszeit für Wiederholungszyklen. Der Standardwert beträgt 30 Minuten. `MaxRetryCycles` und `RetryCycleDelay` bieten gemeinsam einen Mechanismus zur Behandlung des Problems, wenn eine Wiederholung nach einer periodischen Verzögerung das Problem behebt. Damit wird z. B. ein gesperrtes Rowset bei einem in SQL Server anstehenden Transaktionscommit behandelt.  
+- [https://login.microsoftonline.com/consumers/](`RetryCycleDelay`). Die Verzögerungszeit für Wiederholungszyklen. Der Standardwert ist 30 Minuten. `MaxRetryCycles` und `RetryCycleDelay` bieten gemeinsam einen Mechanismus zur Behandlung des Problems, wenn eine Wiederholung nach einer periodischen Verzögerung das Problem behebt. Damit wird z. B. ein gesperrtes Rowset bei einem in SQL Server anstehenden Transaktionscommit behandelt.  
   
-- `ReceiveErrorHandling`. Eine Enumeration, die angibt, welche Aktion für eine Nachricht erfolgen soll, deren Zustellung auch nach der maximalen Anzahl von Wiederholungen fehlgeschlagen ist. Die Werte können „Fehler“, „Ablegen“, „Ablehnen“ und „Verschieben“ sein. Die Standardoption ist "Fehler".  
+- [https://login.microsoftonline.com/consumers/](`ReceiveErrorHandling`). Eine Enumeration, die angibt, welche Aktion für eine Nachricht erfolgen soll, deren Zustellung auch nach der maximalen Anzahl von Wiederholungen fehlgeschlagen ist. Die Werte können „Fehler“, „Ablegen“, „Ablehnen“ und „Verschieben“ sein. Die Standardoption ist "Fehler".  
   
 - Fehler. Diese Option sendet einen Fehler an den Listener, der bewirkt hat, dass der `ServiceHost` fehlerhaft agiert. Die Nachricht muss durch einen externen Mechanismus aus der Anwendungswarteschlange entfernt werden, bevor die Anwendung mit der Verarbeitung von Nachrichten aus der Warteschlange fortfahren kann.  
   
 - Drop. Diese Option legt die nicht verarbeitbare Nachricht ab, und die Nachricht wird der Anwendung nie zugestellt. Wenn die Eigenschaft `TimeToLive` der Nachricht zu diesem Zeitpunkt bereits abgelaufen ist, kann die Nachricht in der Warteschlange für unzustellbare Nachrichten des Absenders angezeigt werden. Andernfalls wird die Nachricht nirgendwo angezeigt. Diese Option gibt an, dass vom Benutzer keine Aktion für den Fall angegeben wurde, dass die Nachricht verloren geht.  
   
-- Ablehnen. Diese Option ist nur unter Windows Vista verfügbar. Damit wird das Message Queuing (MSMQ) angewiesen, eine negative Bestätigung mit dem Hinweis, dass die Anwendung die Nachricht nicht empfangen kann, an den sendenden Warteschlangen-Manager zu senden. Die Nachricht wird in die Warteschlange für unzustellbare Nachrichten des sendenden Warteschlangen-Managers eingefügt.  
+- Ablehnen. Diese Option ist nur unter Windows Vista verfügbar. Dadurch wird Message Queuing (MSMQ) angewiesen, eine negative Bestätigung zurück an den sendenden Warteschlangen-Manager zu senden, dass die Anwendung die Nachricht nicht empfangen kann. Die Nachricht wird in die Warteschlange für unzustellbare Nachrichten des sendenden Warteschlangen-Managers eingefügt.  
   
 - Verschieben. Diese Option ist nur unter Windows Vista verfügbar. Damit wird die nicht verarbeitbare Nachricht in eine Warteschlange für potenziell schädliche Nachrichten verschoben, sodass sie später durch eine Anwendung zur Behandlung nicht verarbeitbarer Nachrichten verarbeitet werden kann. Die Warteschlange für potenziell schädliche Nachrichten ist eine untergeordnete Warteschlange der Anwendungswarteschlange. Bei einer Anwendung mit nicht verarbeitbaren Nachrichten kann es sich um einen WCF-Dienst handeln, der Nachrichten aus der Warteschlange für Die Warteschlange für nicht verarbeitbare Nachrichten ist eine unter Warteschlange der Anwendungs Warteschlange und kann als net. MSMQ://\<*Computername*>/*applicationQueue*;p Oison adressiert werden, wobei Computer *Name* der Name des Computers ist, auf dem sich die Warteschlange befindet, und *applicationQueue* der Name der anwendungsspezifischen Warteschlange ist.  
   
- Im Folgenden ist die maximale Anzahl von für eine Nachricht durchgeführten Übermittlungsversuchen dargestellt:  
+Im Folgenden ist die maximale Anzahl von für eine Nachricht durchgeführten Übermittlungsversuchen dargestellt:  
   
 - ((ReceiveRetryCount + 1) * (MaxRetryCycles + 1)) unter Windows Vista.  
   
@@ -52,9 +52,9 @@ Eine nicht verarbeitbare *Nachricht* ist eine Nachricht, die die maximale Anzahl
   
  WCF stellt zwei Standard Bindungen in der Warteschlange bereit:  
   
-- <xref:System.ServiceModel.NetMsmqBinding>. Eine .NET Framework Bindung, die für die Durchführung der Warteschlangen basierten Kommunikation mit anderen WCF-Endpunkten geeignet ist.  
+- [https://login.microsoftonline.com/consumers/](<xref:System.ServiceModel.NetMsmqBinding>). Eine .NET Framework Bindung, die für die Durchführung der Warteschlangen basierten Kommunikation mit anderen WCF-Endpunkten geeignet ist.  
   
-- <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>. Eine Bindung, die zur Kommunikation mit vorhandenen Message Queuing-Anwendungen geeignet ist.  
+- [https://login.microsoftonline.com/consumers/](<xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>). Eine Bindung, die zur Kommunikation mit vorhandenen Message Queuing-Anwendungen geeignet ist.  
   
 > [!NOTE]
 > Sie können Eigenschaften in diesen Bindungen basierend auf den Anforderungen des WCF-Dienstanbieter ändern. Der gesamte Mechanismus zur Behandlung nicht verarbeitbarer Nachrichten ist zur empfangenden Anwendung lokal. Der Prozess ist für die sendende Anwendung unsichtbar, es sei denn, die empfangende Anwendung beendet den Vorgang und sendet eine negative Bestätigung an den Absender zurück. In diesem Fall wird die Nachricht in die Warteschlange für unzustellbare Nachrichten des Absenders verschoben.  
@@ -68,7 +68,7 @@ Eine nicht verarbeitbare *Nachricht* ist eine Nachricht, die die maximale Anzahl
   
 1. Stellen Sie sicher, dass die Einstellungen für nicht verarbeitbare Nachrichten den Anforderungen Ihrer Anwendung entsprechen. Wenn Sie mit den Einstellungen arbeiten, stellen Sie sicher, dass Sie die Unterschiede zwischen den Funktionen von Message Queuing unter Windows Vista, Windows Server 2003 und Windows XP verstanden haben.  
   
-2. Implementieren Sie falls erforderlich den `IErrorHandler`, um Fehler mit nicht verarbeitbaren Nachrichten zu behandeln. Das das Festlegen von `ReceiveErrorHandling` auf `Fault` einen manuellen Mechanismus zum Verschieben der nicht verarbeitbaren Nachricht aus der Warteschlange oder zum Korrigieren eines Problems mit externen Abhängigkeiten erfordert, besteht die typische Nutzung darin, den `IErrorHandler` zu implementieren, wenn `ReceiveErrorHandling` auf `Fault` festgelegt ist, wie im folgenden Code gezeigt:  
+2. Implementieren Sie ggf. die `IErrorHandler`, um Fehlermeldungs Fehler zu behandeln. Das das Festlegen von `ReceiveErrorHandling` auf `Fault` einen manuellen Mechanismus zum Verschieben der nicht verarbeitbaren Nachricht aus der Warteschlange oder zum Korrigieren eines Problems mit externen Abhängigkeiten erfordert, besteht die typische Nutzung darin, den `IErrorHandler` zu implementieren, wenn `ReceiveErrorHandling` auf `Fault` festgelegt ist, wie im folgenden Code gezeigt:  
   
      [!code-csharp[S_UE_MSMQ_Poison#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_ue_msmq_poison/cs/poisonerrorhandler.cs#2)]  
   
@@ -103,7 +103,7 @@ Eine nicht verarbeitbare *Nachricht* ist eine Nachricht, die die maximale Anzahl
   
 - Message Queuing in Windows Vista unterstützt eine Nachrichten Eigenschaft, die die Anzahl der Versuche der Nachrichtenübermittlung beibehält. Diese Abbruch Anzahl Eigenschaft ist unter Windows Server 2003 und Windows XP nicht verfügbar. WCF behält die Abbruch Anzahl im Arbeitsspeicher bei, sodass diese Eigenschaft möglicherweise keinen exakten Wert enthält, wenn dieselbe Nachricht von mehr als einem WCF-Dienst in einer Farm gelesen wird.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Warteschlangenübersicht](../../../../docs/framework/wcf/feature-details/queues-overview.md)
 - [Unterschiede zwischen den Warteschlangenfunktionen in Windows Vista, Windows Server 2003 und Windows XP](../../../../docs/framework/wcf/feature-details/diff-in-queue-in-vista-server-2003-windows-xp.md)

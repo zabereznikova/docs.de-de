@@ -9,12 +9,12 @@ helpviewer_keywords:
 - LocBaml tool [WPF]
 - applications [WPF], localizing
 ms.assetid: 5001227e-9326-48a4-9dcd-ba1b89ee6653
-ms.openlocfilehash: 26c09e547205e7819ebb43d6e34b6e18d6d9ff98
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 7e034e92e1ff2b9bec0eaf8e0f3330f7a832a7e5
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460838"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77095163"
 ---
 # <a name="how-to-localize-an-application"></a>Gewusst wie: Lokalisieren einer Anwendung
 In diesem Lernprogramm wird erläutert, wie eine lokalisierte Anwendung mit dem LocBaml-Tool erstellt wird.  
@@ -27,7 +27,7 @@ In diesem Lernprogramm wird erläutert, wie eine lokalisierte Anwendung mit dem 
  Diese Diskussion bietet einen schrittweisen Ansatz zum Lokalisieren einer Anwendung. Zuerst bereiten Sie Ihre Anwendung so vor, dass der zu übersetzende Text extrahiert werden kann. Nachdem der Text übersetzt wurde, führen Sie den übersetzten Text mit einer neuen Kopie der ursprünglichen Anwendung zusammen.  
   
 <a name="Requirements"></a>   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
  Im Verlauf dieser Diskussion verwenden Sie die Microsoft-Build-Engine (MSBuild), bei der es sich um einen Compiler handelt, der von der Befehlszeile aus ausgeführt wird.  
   
  Darüber hinaus werden Sie aufgefordert, eine Projektdatei zu verwenden. Anweisungen zur Verwendung von MSBuild-und Projektdateien finden Sie unter [Erstellen und](../app-development/building-and-deploying-wpf-applications.md)bereitstellen.  
@@ -81,7 +81,7 @@ In diesem Lernprogramm wird erläutert, wie eine lokalisierte Anwendung mit dem 
 <a name="build_locbaml"></a>   
 ## <a name="build-the-locbaml-tool"></a>Erstellen des LocBaml-Tools  
   
-1. Alle für das Erstellen von LocBaml notwendigen Dateien befinden sich in den [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Beispielen. Laden Sie C# die Dateien aus dem [LocBaml-Tool Beispiel](https://go.microsoft.com/fwlink/?LinkID=160016)herunter.  
+1. Alle für das Erstellen von LocBaml notwendigen Dateien befinden sich in den [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Beispielen. Laden Sie C# die Dateien aus dem [LocBaml-Tool Beispiel](https://github.com/microsoft/WPF-Samples/tree/master/Tools/LocBaml)herunter.  
   
 2. Führen Sie über die Befehlszeile die Projektdatei (locbaml.csproj) aus, um das Tool zu erstellen:  
   
@@ -137,7 +137,7 @@ In diesem Lernprogramm wird erläutert, wie eine lokalisierte Anwendung mit dem 
   
    2. **Ressourcenschlüssel**. Der lokalisierte Ressourcenbezeichner.  
   
-   3. **Category**. Der Werttyp. Siehe [Lokalisierungs Attribute und-Kommentare](localization-attributes-and-comments.md).  
+   3. **Kategorie:** Der Werttyp. Siehe [Lokalisierungs Attribute und-Kommentare](localization-attributes-and-comments.md).  
   
    4. **Readability**. Gibt an, ob der Wert von einem Lokalisierungstool gelesen werden kann. Siehe [Lokalisierungs Attribute und-Kommentare](localization-attributes-and-comments.md).  
   
@@ -149,11 +149,11 @@ In diesem Lernprogramm wird erläutert, wie eine lokalisierte Anwendung mit dem 
   
    Die folgende Tabelle zeigt, wie diese Felder den durch Trennzeichen getrennten Werten der CSV-Datei zugeordnet sind:  
   
-   |BAML-Name|Ressourcenschlüssel|Kategorie|Lesbarkeit|Änderbarkeit|Kommentare|Wert|  
+   |BAML-Name|Ressourcenschlüssel|Category|Lesbarkeit|Änderbarkeit|Kommentare|value|  
    |---------------|------------------|--------------|-----------------|-------------------|--------------|-----------|
-   |HelloApp.g.en-US.resources:window1.baml|Stack1:System.Windows.Controls.StackPanel.$Content|Ignorieren|false|false||#Text1;#Text2|
-   |HelloApp.g.en-US.resources:window1.baml|Text1:System.Windows.Controls.TextBlock.$Content|Keiner|true|true||Hello World|
-   |HelloApp.g.en-US.resources:window1.baml|Text2:System.Windows.Controls.TextBlock.$Content|Keiner|true|true||Goodbye World|
+   |HelloApp.g.en-US.resources:window1.baml|Stack1:System.Windows.Controls.StackPanel.$Content|Ignorieren|FALSE|FALSE||#Text1;#Text2|
+   |HelloApp.g.en-US.resources:window1.baml|Text1:System.Windows.Controls.TextBlock.$Content|Keine|TRUE|TRUE||Hello World|
+   |HelloApp.g.en-US.resources:window1.baml|Text2:System.Windows.Controls.TextBlock.$Content|Keine|TRUE|TRUE||Goodbye World|
   
    Beachten Sie, dass alle Werte für das Feld **Kommentare** keine Werte enthalten. Wenn ein Feld keinen Wert hat, ist es leer. Beachten Sie auch, dass das Element in der ersten Zeile weder lesbar noch änderbar ist und "Ignore" als **Kategoriewert** aufweist. Dies bedeutet, dass der Wert nicht lokalisierbar ist.  
   
@@ -206,10 +206,10 @@ In diesem Lernprogramm wird erläutert, wie eine lokalisierte Anwendung mit dem 
 - Die Version der lokalisierten Ressourcen-DLL muss mit der Hauptassembly synchronisiert werden.  
   
 <a name="Whats_Next"></a>   
-## <a name="whats-next"></a>Weitere Informationen  
+## <a name="whats-next"></a>Nächste Schritte  
  Sie wissen nun in Grundzügen, wie das LocBaml-Tool verwendet werden kann.  Sie sollten in der Lage sein, eine Datei zu erstellen, die UIDs enthält. Mit dem LocBaml-Tool sollten Sie in der Lage sein, eine Datei zu analysieren, um den lokalisierbaren Inhalt zu extrahieren, und nach der Übersetzung des Inhalts sollten Sie eine .resources.dll-Datei generieren können, die den übersetzten Inhalt zusammenführt. Dieses Thema beinhaltet nicht jedes mögliche Detail, aber Sie verfügen nun über das notwendige Wissen, um LocBaml zur Lokalisierung Ihrer Anwendungen zu verwenden.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Globalisierung für WPF](globalization-for-wpf.md)
 - [Übersicht über die Verwendung eines automatischen Layouts](use-automatic-layout-overview.md)

@@ -2,12 +2,12 @@
 title: SQL-Nachverfolgung
 ms.date: 03/30/2017
 ms.assetid: bcaebeb1-b9e5-49e8-881b-e49af66fd341
-ms.openlocfilehash: c1bb4492695df3ff803dff893de24453d7c03dfb
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 88f44e5362684f755695aab154842fad2274134d
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74715563"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094591"
 ---
 # <a name="sql-tracking"></a>SQL-Nachverfolgung
 Dieses Beispiel zeigt, wie ein benutzerdefinierter SQL-nach Verfolgungs Teilnehmer geschrieben wird, der nach Verfolgungs Datensätze in eine SQL-Datenbank schreibt. Windows Workflow Foundation (WF) bietet eine Workflow Überwachung, um Einblick in die Ausführung einer Workflow Instanz zu erhalten. Die Überwachungslaufzeit gibt während der Ausführung des Workflows Workflowüberwachungsdatensätze aus. Weitere Informationen zur Workflow Nachverfolgung finden Sie unter [Workflow Verfolgung und Ablauf](../workflow-tracking-and-tracing.md)Verfolgung.
@@ -23,9 +23,9 @@ Dieses Beispiel zeigt, wie ein benutzerdefinierter SQL-nach Verfolgungs Teilnehm
 
 3. Öffnen Sie sqltrackingsample. sln in Visual Studio 2010.
 
-4. Drücken Sie STRG+UMSCHALT+B, um die Projektmappe zu erstellen.
+4. Drücken Sie STRG+UMSCH+B, um die Lösung zu erstellen.
 
-5. Drücken Sie F5, um die Anwendung auszuführen.
+5. Drücken Sie die Taste F5, um die Anwendung auszuführen.
 
      Das Browserfenster wird geöffnet und zeigt die Verzeichnisliste für die Anwendung an.
 
@@ -37,11 +37,11 @@ Dieses Beispiel zeigt, wie ein benutzerdefinierter SQL-nach Verfolgungs Teilnehm
 
 8. Führen Sie im Datei-Explorer den WCF-Test Client (WcfTestClient. exe) aus. Er befindet im Verzeichnis "Microsoft Visual Studio 10.0 \Common7\IDE".
 
-9. Klicken Sie im WCF-Test Client auf das Menü **Datei** , und wählen Sie **Dienst hinzufügen**aus. Fügen Sie die lokale Dienstadresse in das Textfeld ein. Klicken Sie auf **OK** , um das Dialogfeld zu schließen.
+9. Klicken Sie im WCF-Test Client auf das Menü **Datei** , und wählen Sie **Dienst hinzufügen**aus. Fügen Sie die lokale Dienstadresse in das Textfeld ein. Klicken Sie auf **OK**, um das Dialogfeld zu schließen.
 
 10. Doppelklicken Sie im WCF-Test Client auf **getstockprice**. Dadurch wird der `GetStockPrice` Vorgang geöffnet, der einen Parameter annimmt, geben Sie den Wert `Contoso` ein, und klicken Sie auf **aufrufen**.
 
-11. Die ausgegebenen Nachverfolgungsdatensätze werden in eine SQL-Datenbank geschrieben. Um die Nachverfolgungsdatensätze anzuzeigen, öffnen Sie die Datenbank "TrackingSample" in SQL Management Studio, und navigieren Sie zu den Tabellen. Weitere Informationen zu SQL Server Management Studio finden Sie unter [Introducing SQL Server Management Studio](https://go.microsoft.com/fwlink/?LinkId=165645). SQL Server 2008 Management Studio Express kann [hier](https://go.microsoft.com/fwlink/?LinkId=180520)heruntergeladen werden. Durch Ausführen einer Select-Abfrage in den Tabellen werden die Daten in den Nachverfolgungsdatensätzen angezeigt, die in den jeweiligen Tabellen gespeichert sind.
+11. Die ausgegebenen Nachverfolgungsdatensätze werden in eine SQL-Datenbank geschrieben. Um die Nachverfolgungsdatensätze anzuzeigen, öffnen Sie die Datenbank "TrackingSample" in SQL Management Studio, und navigieren Sie zu den Tabellen. Weitere Informationen zu SQL Server Management Studio finden Sie unter [Introducing SQL Server Management Studio](/sql/ssms/sql-server-management-studio-ssms). SQL Server 2008 Management Studio Express kann [hier](https://www.microsoft.com/download/details.aspx?id=7593)heruntergeladen werden. Durch Ausführen einer Select-Abfrage in den Tabellen werden die Daten in den Nachverfolgungsdatensätzen angezeigt, die in den jeweiligen Tabellen gespeichert sind.
 
 #### <a name="to-uninstall-the-sample"></a>So installieren Sie das Beispiel aus
 
@@ -59,6 +59,6 @@ Dieses Beispiel zeigt, wie ein benutzerdefinierter SQL-nach Verfolgungs Teilnehm
 >
 > `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Tracking\SqlTracking`
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [AppFabric-Überwachungs Beispiele](https://go.microsoft.com/fwlink/?LinkId=193959)
+- [AppFabric-Überwachungs Beispiele](https://docs.microsoft.com/previous-versions/appfabric/ff383407(v=azure.10))

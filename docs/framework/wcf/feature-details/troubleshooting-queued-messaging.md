@@ -2,18 +2,18 @@
 title: Problembehandlung bei Nachrichtenwarteschlangen
 ms.date: 03/30/2017
 ms.assetid: a5f2836f-018d-42f5-a571-1e97e64ea5b0
-ms.openlocfilehash: 5c039c34983647884561f33645f26e4a89280248
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: 7990d4b9847ee2f35b9fe6269bb211763c4c80b6
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76921270"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77095007"
 ---
 # <a name="troubleshooting-queued-messaging"></a>Problembehandlung bei Nachrichtenwarteschlangen
 
 Dieser Abschnitt enthält häufig gestellte Fragen und Hilfe zur Problembehandlung bei der Verwendung von Warteschlangen in Windows Communication Foundation (WCF).
 
-## <a name="common-questions"></a>Allgemeine Fragen
+## <a name="common-questions"></a>Häufig gestellte Fragen
 
 **F:** Ich habe WCF Beta 1 verwendet und den MSMQ-Hotfix installiert. Muss ich den Hotfix entfernen?
 
@@ -53,7 +53,7 @@ Dieser Abschnitt enthält Informationen zur Behandlung der häufigsten Probleme.
 
 **F:** Ich versuche, eine private Warteschlange zu verwenden, und erhalte die folgende Ausnahme: `System.InvalidOperationException`: die URL ist ungültig. Die URL für die Warteschlange darf das Zeichen '$' nicht enthalten. Verwenden Sie die Syntax in net.msmq://machine/private/queueName, um eine private Warteschlange anzugeben.
 
-**A:** Überprüfen Sie die Warteschlangen Uniform Resource Identifier (URI) in der Konfiguration und im Code. Verwenden Sie kein "$"-Zeichen im URI. Geben Sie z. B. zur Adressierung einer privaten Warteschlange mit dem Namen OrdersQueue den URI als net.msmq://localhost/private/ordersQueue an.
+**A:** Überprüfen Sie die Warteschlangen Uniform Resource Identifier (URI) in der Konfiguration und im Code. Verwenden Sie kein "$"-Zeichen im URI. Wenn Sie beispielsweise eine private Warteschlange mit dem Namen ordersQueue adressieren möchten, geben Sie den URI als `net.msmq://localhost/private/ordersQueue`an.
 
 **F:** Das Aufrufen von `ServiceHost.Open()` für meine Anwendung in der Warteschlange löst die folgende Ausnahme aus: `System.ArgumentException`: eine Basisadresse darf keine URI-Abfrage Zeichenfolge enthalten. Warum?
 
@@ -77,7 +77,7 @@ Dieser Abschnitt enthält Informationen zur Behandlung der häufigsten Probleme.
 
 - Überprüfen Sie die ausgehenden Warteschlangen auf Konnektivitäts- oder Adressierungsprobleme.
 
-**F:** Ich habe eine benutzerdefinierte Warteschlange für unzustellbare Nachrichten angegeben, aber beim Starten der Absender Anwendung erhalte ich eine Ausnahme, dass entweder die Warteschlange für unzustellbare Nachrichten nicht gefunden wurde oder dass die sendende Anwendung keine Berechtigung für die Warteschlange für unzustellbare Nachrichten hat. Warum geschieht das?
+**F:** Ich habe eine benutzerdefinierte Warteschlange für unzustellbare Nachrichten angegeben, aber beim Starten der Absender Anwendung erhalte ich eine Ausnahme, dass entweder die Warteschlange für unzustellbare Nachrichten nicht gefunden wurde oder dass die sendende Anwendung keine Berechtigung für die Warteschlange für unzustellbare Nachrichten hat. Warum ist das so?
 
 **A:** Der benutzerdefinierte URI der Warteschlange für unzustellbare Nachrichten muss einen "localhost" oder den Computernamen im ersten Segment enthalten, z. b. "net. MSMQ://localhost/private/myAppdead-Letter Queue".
 
@@ -91,7 +91,7 @@ Wenn Zusicherungen keine (<xref:System.ServiceModel.MsmqBindingBase.ExactlyOnce%
 
 A. Überprüfen Sie den Dienstvertrag. Möglicherweise haben Sie vergessen, "IsOneWay =`true`" für alle Dienst Vorgänge zu platzieren. Warteschlangen unterstützen nur unidirektionale Dienstvorgänge.
 
-**F:** Es sind Nachrichten in der Warteschlange vorhanden, es wird jedoch kein Dienst Vorgang aufgerufen. Wo liegt das Problem?
+**F:** Es sind Nachrichten in der Warteschlange vorhanden, es wird jedoch kein Dienst Vorgang aufgerufen. Welches Problem liegt vor?
 
 **A:** Stellen Sie fest, ob der Dienst Host fehlerhaft ist. Sie können das feststellen, indem Sie die Ablaufverfolgung überprüfen oder `IErrorHandler` implementieren. Der Diensthost schlägt standardmäßig fehl, wenn eine nicht verarbeitbare Nachrichten erkannt wird.
 
@@ -132,7 +132,7 @@ Bei der systemweiten Warteschlange für unzustellbare Nachrichten und auch bei b
 
 **F:** Wenn ich einen öffentlichen oder privaten Format Namen verwende und den Dienst Host unter Windows Vista öffne, erhalte ich eine Fehlermeldung. Warum?
 
-**A:** Der WCF-Integrationskanal unter Windows Vista überprüft, ob eine unter Warteschlange für die Haupt Anwendungs Warteschlange geöffnet werden kann, um nicht verarbeitbare Nachrichten zu verarbeiten. Der Name der untergeordneten Warteschlange wird von einem an den Listener übergebenen msmq.formatname-URI abgeleitet. Der Name der untergeordneten Warteschlange kann in MSMQ nur ein direkter Formatname sein. Deshalb tritt der Fehler auf. Ändern Sie den Warteschlangen-URI in einen direkten Formatnamen.
+**A:** Der WCF-Integrationskanal unter Windows Vista prüft, ob eine unter Warteschlange für die Haupt Anwendungs Warteschlange für die Behandlung nicht verarbeitbarer Nachrichten geöffnet werden kann. Der Name der unter Warteschlange wird von einem MSMQ. formatname-URI abgeleitet, der an den Listener weitergegeben wurde. Der Name der unter Warteschlange in MSMQ kann nur ein direkter Format Name sein. Deshalb tritt der Fehler auf. Ändern Sie den Warteschlangen-URI in einen direkten Formatnamen.
 
 **F:** Wenn eine Nachricht von einer MSMQ-Anwendung empfangen wird, befindet sich die Nachricht in der Warteschlange und wird von der empfangenden WCF-Anwendung nicht gelesen. Warum?
 
@@ -150,11 +150,11 @@ Eine weitere Möglichkeit besteht darin, <xref:System.ServiceModel.MsmqTransport
 
 Sie können das Problem auch beheben, indem Sie MSMQ mit Active Directory-Integration installieren.
 
-**F:** Wenn eine Nachricht mit der Standard Bindung (Transportsicherheit aktiviert) in Active Directory an eine Warteschlange gesendet wird, erhalte ich die Meldung "internes Zertifikat wurde nicht gefunden". Wie kann ich das Problem beheben?
+**F:** Wenn eine Nachricht mit der Standard Bindung (Transportsicherheit aktiviert) in Active Directory an eine Warteschlange gesendet wird, erhalte ich die Meldung "internes Zertifikat wurde nicht gefunden". Wie kann ich dies korrigieren?
 
 **A:** Dies bedeutet, dass das Zertifikat in Active Directory für den Absender erneuert werden muss. Öffnen Sie hierzu die **Systemsteuerung**, **Verwaltung**, **Computer Verwaltung**, klicken Sie mit der rechten Maustaste auf **MSMQ**, und wählen Sie **Eigenschaften**aus. Wählen Sie die Registerkarte **Benutzerzertifikat** aus, und klicken Sie auf **erneuern** .
 
-**F:** Beim Senden einer Nachricht mithilfe <xref:System.ServiceModel.MsmqAuthenticationMode.Certificate> und angeben des zu verwendenden Zertifikats erhalte ich die Meldung "Ungültiges Zertifikat". Wie kann ich das Problem beheben?
+**F:** Beim Senden einer Nachricht mithilfe <xref:System.ServiceModel.MsmqAuthenticationMode.Certificate> und angeben des zu verwendenden Zertifikats erhalte ich die Meldung "Ungültiges Zertifikat". Wie kann ich dies korrigieren?
 
 **A:** Ein Zertifikat Speicher für lokale Computer kann nicht mit dem Zertifikat Modus verwendet werden. Sie müssen das Zertifikat mit dem Zertifikat-Snap-In aus dem Zertifikatspeicher des Computers in den Speicher des aktuellen Benutzers kopieren. So rufen Sie das Zertifikat-Snap-In auf:
 
@@ -170,19 +170,19 @@ Sie können das Problem auch beheben, indem Sie MSMQ mit Active Directory-Integr
 
 6. Fügen Sie als nächstes ein zweites Zertifikat-Snap-in mit den vorherigen Schritten hinzu. Wählen Sie dieses Mal jedoch **Computer Konto** aus, und klicken Sie auf **weiter**.
 
-7. Wählen Sie **lokaler Computer** , und klicken Sie auf **Fertig**stellen. Sie können jetzt Zertifikate per Drag &amp; Drop aus dem Computerzertifikatspeicher in den Speicher des aktuellen Benutzers verschieben.
+7. Klicken Sie auf **Lokaler Computer**, und klicken Sie dann auf **Fertig stellen**. Sie können jetzt Zertifikate per Drag &amp; Drop aus dem Computerzertifikatspeicher in den Speicher des aktuellen Benutzers verschieben.
 
 **F:** Wenn mein Dienst aus einer Warteschlange auf einem anderen Computer im Arbeitsgruppen Modus liest, wird eine Ausnahme vom Typ "Zugriff verweigert" angezeigt.
 
 **A:** Im Arbeitsgruppen Modus muss die Anwendung über die Berechtigung verfügen, auf die Warteschlange zuzugreifen, damit eine Remote Anwendung Zugriff auf die Warteschlange erhält. Fügen Sie der Zugriffs Steuerungs Liste (ACL) der Warteschlange "anonyme Anmeldung" hinzu, und erteilen Sie Ihr die Leseberechtigung.
 
-**F:** Wenn ein Netzwerkdienst Client (oder ein Client, der nicht über ein Domänen Konto verfügt) eine Nachricht in der Warteschlange sendet, schlägt der Sendevorgang mit einem ungültigen Zertifikat fehl. Wie kann ich das Problem beheben?
+**F:** Wenn ein Netzwerkdienst Client (oder ein Client, der nicht über ein Domänen Konto verfügt) eine Nachricht in der Warteschlange sendet, schlägt der Sendevorgang mit einem ungültigen Zertifikat fehl. Wie kann ich dies korrigieren?
 
 **A:** Überprüfen Sie die Bindungs Konfiguration. Für die Standardbindung ist die MSMQ-Transportsicherheit zum Signieren der Nachricht aktiviert. Deaktivieren Sie sie.
 
 ### <a name="remote-transacted-receives"></a>Remote durchgeführte Empfangsvorgänge
 
-**F:** Wenn eine Warteschlange auf Computer a vorhanden ist, und ein WCF-Dienst, der Nachrichten aus einer Warteschlange auf Computer B (dem transaktiven Remote Empfangs Szenario) liest, werden Nachrichten nicht aus der Warteschlange gelesen. Ablauf Verfolgungs Informationen geben an, dass der Empfangs Fehler mit der Meldung "die Transaktion kann nicht importiert werden". Was kann ich tun, um dieses Problem zu beheben?
+**F:** Wenn eine Warteschlange auf Computer a vorhanden ist, und ein WCF-Dienst, der Nachrichten aus einer Warteschlange auf Computer B (dem transaktiven Remote Empfangs Szenario) liest, werden Nachrichten nicht aus der Warteschlange gelesen. Ablauf Verfolgungs Informationen geben an, dass der Empfangs Fehler mit der Meldung "die Transaktion kann nicht importiert werden". Wie kann ich dieses Problem beheben?
 
 **A:** Hierfür gibt es drei mögliche Gründe:
 
@@ -208,4 +208,4 @@ Sie können das Problem auch beheben, indem Sie MSMQ mit Active Directory-Integr
 
 ## <a name="using-custom-msmq-bindings-with-receivecontext-enabled"></a>Verwenden von benutzerdefinierten MSMQ-Bindungen mit aktiviertem ReceiveContext
 
-Bei Verwendung einer benutzerdefinierten MSMQ-Bindung mit aktiviertem <xref:System.ServiceModel.Channels.ReceiveContext> wird eine eingehende Nachricht mit einem Thread aus einem Threadpool verarbeitet, da das systemeigene MSMQ keine E/A-Vervollständigung für den asynchronen <xref:System.ServiceModel.Channels.ReceiveContext>-Empfang unterstützt. Dies liegt daran, dass bei der Verarbeitung einer solchen Nachricht interne Transaktionen für <xref:System.ServiceModel.Channels.ReceiveContext> verwendet werden und MSMQ keine asynchrone Verarbeitung unterstützt. Um dieses Problem zu umgehen, können Sie dem Endpunkt ein <xref:System.ServiceModel.Description.SynchronousReceiveBehavior> hinzufügen, um die asynchrone Verarbeitung zu erzwingen, oder Sie können <xref:System.ServiceModel.Description.DispatcherSynchronizationBehavior.MaxPendingReceives%2A> auf 1 festlegen.
+Bei Verwendung einer benutzerdefinierten MSMQ-Bindung mit aktiviertem <xref:System.ServiceModel.Channels.ReceiveContext> wird bei der Verarbeitung einer eingehenden Nachricht ein Thread Pool Thread verwendet, da Native MSMQ keine e/a-Vervollständigung für asynchrone <xref:System.ServiceModel.Channels.ReceiveContext> empfangene Vorgänge unterstützt. Dies liegt daran, dass bei der Verarbeitung einer solchen Nachricht interne Transaktionen für <xref:System.ServiceModel.Channels.ReceiveContext> verwendet werden und MSMQ die asynchrone Verarbeitung nicht unterstützt. Um dieses Problem zu umgehen, können Sie dem Endpunkt eine <xref:System.ServiceModel.Description.SynchronousReceiveBehavior> hinzufügen, um die synchrone Verarbeitung zu erzwingen oder <xref:System.ServiceModel.Description.DispatcherSynchronizationBehavior.MaxPendingReceives%2A> auf 1 festzulegen.

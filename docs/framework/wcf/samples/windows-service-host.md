@@ -5,12 +5,12 @@ helpviewer_keywords:
 - NT Service
 - NT Service Host Sample [Windows Communication Foundation]
 ms.assetid: 1b2f45c5-2bed-4979-b0ee-8f9efcfec028
-ms.openlocfilehash: 4d5e29f51ab49c142beb97060b719f26b050e767
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: ab1effe93a1572f5d4ce5296bba99dad24f9cbca
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74715012"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094786"
 ---
 # <a name="windows-service-host"></a>Windows-Diensthost
 In diesem Beispiel wird ein Windows Communication Foundation (WCF)-Dienst veranschaulicht, der in einem verwalteten Windows-Dienst gehostet wird. Windows-Dienste werden mithilfe des Applets "Dienste" in der **Systemsteuerung** gesteuert und können so konfiguriert werden, dass Sie nach einem Neustart des Systems automatisch gestartet werden. Das Beispiel besteht aus einem Clientprogramm und einem Windows-Dienstprogramm. Der Dienst wird als EXE-Programm implementiert und enthält seinen eigenen Hostingcode. In anderen Hostumgebungen, z. B. WAS (Windows Process Activation Services, Windows-Prozessaktivierungsdienste) oder IIS (Internet Information Services, Internetinformationsdienste), müssen Sie keinen Hostcode schreiben.
@@ -63,6 +63,6 @@ In diesem Beispiel wird ein Windows Communication Foundation (WCF)-Dienst verans
   
 4. Um das Beispiel in einer Konfiguration mit einem Computer oder Computer übergreifend auszuführen, befolgen Sie die Anweisungen unter [Ausführen der Windows Communication Foundation Beispiele](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [AppFabric-Hosting-und persistenzbeispiele](https://go.microsoft.com/fwlink/?LinkId=193961)
+- [AppFabric-Hosting-und persistenzbeispiele](https://docs.microsoft.com/previous-versions/appfabric/ff383418(v=azure.10))

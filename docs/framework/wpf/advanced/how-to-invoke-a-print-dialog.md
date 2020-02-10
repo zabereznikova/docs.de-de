@@ -8,12 +8,12 @@ helpviewer_keywords:
 - invoking print dialogs [WPF]
 - print dialogs [WPF], invoking
 ms.assetid: e3a2c84c-74fe-45a4-8501-5813f9dbfed2
-ms.openlocfilehash: 6d7bc322079718d17a921ef34af79145b021e3a7
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: f7ef3312d876324b44b055d70fd22e3fba075ec6
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75636093"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77095176"
 ---
 # <a name="how-to-invoke-a-print-dialog"></a>Gewusst wie: Aufrufen eines Druckdialogfelds
 Um die Möglichkeit zum Drucken von Ihrer Anwendung bereitzustellen, können Sie einfach ein <xref:System.Windows.Controls.PrintDialog> Objekt erstellen und öffnen.  
@@ -24,16 +24,16 @@ Um die Möglichkeit zum Drucken von Ihrer Anwendung bereitzustellen, können Sie
  [!code-csharp[printdialog#1](~/samples/snippets/csharp/VS_Snippets_Wpf/PrintDialog/CSharp/Window1.xaml.cs#1)]
  [!code-vb[printdialog#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PrintDialog/visualbasic/window1.xaml.vb#1)]  
   
- Wenn das Dialogfeld geöffnet ist, können Benutzer aus den Druckern auswählen, die auf Ihrem Computer installiert sind. Sie haben auch die Möglichkeit, den [Microsoft XPS-Dokument-Writer](https://go.microsoft.com/fwlink/?LinkId=147319) auszuwählen, um eine XPS-Datei (XML Paper Specification) zu erstellen, anstatt Sie zu drucken.  
+ Wenn das Dialogfeld geöffnet ist, können Benutzer aus den Druckern auswählen, die auf Ihrem Computer installiert sind. Sie haben auch die Möglichkeit, den [Microsoft XPS-Dokument-Writer](/windows/win32/printdocs/microsoft-xps-document-writer) auszuwählen, um eine XPS-Datei (XML Paper Specification) zu erstellen, anstatt Sie zu drucken.  
   
 > [!NOTE]
 > Die in diesem Thema beschriebene <xref:System.Windows.Controls.PrintDialog?displayProperty=nameWithType> Steuerung von WPF sollte nicht mit der <xref:System.Windows.Forms.PrintDialog?displayProperty=nameWithType> Komponente von Windows Forms verwechselt werden.  
   
  Streng genommen können Sie die <xref:System.Windows.Controls.PrintDialog.PrintDocument%2A>-Methode verwenden, ohne das Dialogfeld zu öffnen. In diesem Sinne kann das Steuerelement als nicht gesehene Druckkomponente verwendet werden. Aus Leistungsgründen wäre es jedoch besser, entweder die <xref:System.Printing.PrintQueue.AddJob%2A>-Methode oder eine der vielen <xref:System.Windows.Xps.XpsDocumentWriter.Write%2A>-und <xref:System.Windows.Xps.XpsDocumentWriter.WriteAsync%2A> Methoden der <xref:System.Windows.Xps.XpsDocumentWriter>zu verwenden. Weitere Informationen hierzu finden Sie unter [Programm gesteuertes Drucken von XPS-Dateien](how-to-programmatically-print-xps-files.md) und.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Windows.Controls.PrintDialog>
 - [Dokumente in WPF](documents-in-wpf.md)
 - [Übersicht über das Drucken](printing-overview.md)
-- [Microsoft XPS-Dokumentwriter](https://go.microsoft.com/fwlink/?LinkId=147319)
+- [Microsoft XPS-Dokumentwriter](/windows/win32/printdocs/microsoft-xps-document-writer)

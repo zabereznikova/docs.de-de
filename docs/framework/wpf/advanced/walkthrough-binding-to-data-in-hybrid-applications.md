@@ -8,12 +8,12 @@ helpviewer_keywords:
 - hybrid applications [WPF interoperability]
 - data binding [WPF interoperability]
 ms.assetid: 18997e71-745a-4425-9c69-2cbce1d8669e
-ms.openlocfilehash: 1bb38436049e338ab6033ae3b6370732a457d520
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 0d1e66a1277e6a04d2f49ac91691160f70fb56e4
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76794224"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77095072"
 ---
 # <a name="walkthrough-binding-to-data-in-hybrid-applications"></a>Exemplarische Vorgehensweise: Datenbindung in Hybridanwendungen
 
@@ -21,7 +21,7 @@ Das Binden einer Datenquelle an ein Steuerelement ist entscheidend, um Benutzern
 
 In dieser exemplarischen Vorgehensweise werden u. a. folgende Aufgaben veranschaulicht:
 
-- Erstellen des Projekts
+- Erstellen des Projekts.
 
 - Definieren der Datenvorlage.
 
@@ -35,15 +35,15 @@ In dieser exemplarischen Vorgehensweise werden u. a. folgende Aufgaben veranscha
 
 - Bindung an die Datenquelle.
 
-Eine komplette Code Auflistung der Aufgaben, die in dieser exemplarischen Vorgehensweise veranschaulicht werden, finden Sie unter Beispiel für die [Datenbindung in Hybrid Anwendungen](https://go.microsoft.com/fwlink/?LinkID=159983).
+Eine komplette Code Auflistung der Aufgaben, die in dieser exemplarischen Vorgehensweise veranschaulicht werden, finden Sie unter Beispiel für die [Datenbindung in Hybrid Anwendungen](https://github.com/microsoft/WPF-Samples/tree/master/Migration%20and%20Interoperability/WPFWithWFAndDatabinding).
 
 Anschließend werden Sie verstehen, welche Rolle Datenbindungsfunktionen bei Hybridanwendungen spielen.
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
+## <a name="prerequisites"></a>Voraussetzungen
 
-Zum Durchführen dieser exemplarischen Vorgehensweise benötigen Sie die folgenden Komponenten:
+Zum Abschließen dieser exemplarischen Vorgehensweise benötigen Sie Folgendes:
 
-- Visual Studio erstellen.
+- Visual Studio.
 
 - Zugriff auf die Beispieldatenbank Northwind, die auf Microsoft SQL Server ausgeführt wird.
 
@@ -53,7 +53,7 @@ Zum Durchführen dieser exemplarischen Vorgehensweise benötigen Sie die folgend
 
 1. Erstellen Sie ein WPF-Anwendungsprojekt mit dem Namen `WPFWithWFAndDatabinding`.
 
-2. Fügen Sie im Projektmappen-Explorer die Verweise auf die folgenden Assemblys hinzu.
+2. Fügen Sie im Projektmappen-Explorer Verweise auf die folgenden Assemblys hinzu.
 
     - WindowsFormsIntegration
 
@@ -181,11 +181,11 @@ Die <xref:System.Windows.Forms.BindingSource?displayProperty=nameWithType> Kompo
 
 10. Drücken Sie F5, um die Anwendung zu erstellen und auszuführen.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
 - [Entwerfen von XAML-Code in Visual Studio](/visualstudio/xaml-tools/designing-xaml-in-visual-studio)
-- [Beispiel für Datenbindung in Hybrid Anwendungen](https://go.microsoft.com/fwlink/?LinkID=159983)
+- [Beispiel für Datenbindung in Hybrid Anwendungen](https://github.com/microsoft/WPF-Samples/tree/master/Migration%20and%20Interoperability/WPFWithWFAndDatabinding)
 - [Exemplarische Vorgehensweise: Hosten eines zusammengesetzten Windows Forms-Steuerelements in WPF](walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)
 - [Exemplarische Vorgehensweise: Hosten eines zusammengesetzten WPF-Steuerelements in Windows Forms](walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)

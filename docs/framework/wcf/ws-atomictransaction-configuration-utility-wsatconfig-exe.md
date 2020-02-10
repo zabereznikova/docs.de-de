@@ -2,14 +2,15 @@
 title: WS-AtomicTransaction-Konfigurationshilfsprogramm (wsatConfig.exe)
 ms.date: 03/30/2017
 ms.assetid: 1c56cf98-3963-46d5-a4e1-482deae58c58
-ms.openlocfilehash: 3b37c271afa20de120682d093e40c0f30f4730de
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: 009be8d4c25fd9db5b2f2df6e75fb046e92f389a
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76921333"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094721"
 ---
 # <a name="ws-atomictransaction-configuration-utility-wsatconfigexe"></a>WS-AtomicTransaction-Konfigurationshilfsprogramm (wsatConfig.exe)
+
 Das WS-AtomicTransaction-Konfigurationsdienstprogramm wird zur Konfiguration von grundlegenden WS-AtomicTransaction-Unterstützungseinstellungen verwendet.  
   
 ## <a name="syntax"></a>Syntax  
@@ -18,10 +19,10 @@ Das WS-AtomicTransaction-Konfigurationsdienstprogramm wird zur Konfiguration von
 wsatConfig [Options]  
 ```  
   
-## <a name="remarks"></a>Hinweise  
- Dieses Befehlszeilentool kann nur dazu verwendet werden, grundlegende WS-AT-Einstellungen auf einem lokalen Computer zu konfigurieren. Wenn Sie Einstellungen auf lokalen Computern und Remote Computern konfigurieren müssen, sollten Sie das MMC-Snap-in verwenden, wie [unter Konfigurieren der WS-Atomic Transaction-Unterstützung](./feature-details/configuring-ws-atomic-transaction-support.md)beschrieben.  
+## <a name="remarks"></a>Bemerkungen  
+ Dieses Befehlszeilen Tool kann verwendet werden, um grundlegende WS-AT-Einstellungen nur auf einem lokalen Computer zu konfigurieren. Wenn Sie Einstellungen auf lokalen Computern und Remote Computern konfigurieren müssen, sollten Sie das MMC-Snap-in verwenden, wie [unter Konfigurieren der WS-Atomic Transaction-Unterstützung](./feature-details/configuring-ws-atomic-transaction-support.md)beschrieben.  
   
- Das Befehlszeilentool befindet sich im Windows SDK-Installationspfad:  
+ Sie finden das Befehlszeilen Tool am Windows SDK-Installations Speicherort, insbesondere  
   
  %SystemRoot%\Microsoft.Net\Framework\v3.0\Windows Communication Foundation\wsatConfig.exe  
   
@@ -32,7 +33,7 @@ wsatConfig [Options]
 > [!NOTE]
 > Wenn Sie ein SSL-Zertifikat für einen bestimmten Port festlegen, wird dabei das ursprüngliche SSL-Zertifikat überschrieben, das diesem Port zugeordnet ist (sofern vorhanden).  
   
-|Options|Beschreibung|  
+|Tastatur|BESCHREIBUNG|  
 |-------------|-----------------|  
 |-Konten:\<Konto, >|Gibt eine durch Trennzeichen getrennte Liste von Konten an, die von WS-AtomicTransaction verwendet werden können. Die Gültigkeit dieser Konten wird nicht überprüft.|  
 |-accountsCerts:\<Thumb >&#124;"issuer\subjetname", >|Gibt eine durch Trennzeichen getrennte Liste von Zertifikaten an, die von WS-AtomicTransaction verwendet werden können. Die Zertifikate werden vom Fingerabdruck oder vom Issuer\SubjectName-Paar angegeben. Verwendet {EMPTY} für den Betreffnamen, wenn dieser leer ist.|  
@@ -49,7 +50,7 @@ wsatConfig [Options]
 |-show|Zeigt die aktuellen WS-AtomicTransaction-Protokolleinstellungen an.|  
 |-virtualserver:\<virtualserver >|Gibt den DTC-Ressourcenclusternamen an.|  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Verwenden von WS-AtomicTransaction](./feature-details/using-ws-atomictransaction.md)
 - [Konfigurieren der Unterstützung von WS-Atomic-Transaction](./feature-details/configuring-ws-atomic-transaction-support.md)

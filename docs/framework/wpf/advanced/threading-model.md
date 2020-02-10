@@ -18,12 +18,12 @@ helpviewer_keywords:
 - nested message processing [WPF]
 - reentrancy [WPF]
 ms.assetid: 02d8fd00-8d7c-4604-874c-58e40786770b
-ms.openlocfilehash: 550ba74c7ceba16c2040932918364ae2a59ea665
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 87dcfa22bcce730c5a9b61721c3a846a08146475
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76794276"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094500"
 ---
 # <a name="threading-model"></a>Threading-Modell
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] soll Entwicklern bei Problemen mit Threading helfen. Folglich müssen die meisten [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Entwickler keine Schnittstelle schreiben, die mehr als einen Thread verwendet. Da Multithreadprogramme komplex und schwierig zu debuggen sind, sollten sie vermieden werden, wenn Singlethread-Lösungen vorhanden sind.
@@ -58,7 +58,7 @@ ms.locfileid: "76794276"
 ### <a name="a-single-threaded-application-with-a-long-running-calculation"></a>Eine Singlethread-Anwendung mit einer Berechnung mit langer Laufzeit
  Die meisten grafischen Benutzeroberflächen (GUIs) verbringen einen großen Teil ihrer Zeit im Leerlauf und warten auf Ereignisse, die als Reaktion auf Benutzerinteraktionen generiert werden. Bei sorgfältiger Programmierung kann diese Leerlaufzeit konstruktiv genutzt werden, ohne dass sich dies auf die Reaktionsfähigkeit der [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]auswirkt. Das [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Threading Modell lässt nicht zu, dass Eingaben einen Vorgang im [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] Thread unterbrechen. Dies bedeutet, dass Sie in regelmäßigen Abständen zum <xref:System.Windows.Threading.Dispatcher> zurückkehren müssen, um ausstehende Eingabeereignisse zu verarbeiten, bevor Sie veraltet sind.
 
- Betrachten Sie das folgende Beispiel:
+ Betrachten Sie das folgenden Beispiel:
 
  ![Screenshot, der das Threading von Primzahlen zeigt.](./media/threading-model/threading-prime-numbers.png)
 
@@ -99,7 +99,7 @@ ms.locfileid: "76794276"
 
  Diese Methode überprüft, ob die nächste ungerade Zahl eine Primzahl ist. Wenn es sich um eine Primzahl handelt, aktualisiert die Methode die `bigPrime`<xref:System.Windows.Controls.TextBlock> direkt, um deren Ermittlung widerzuspiegeln. Dies ist möglich, da die Berechnung im selben Thread ausgeführt wird, der für die Erstellung der Komponente verwendet wurde. Hätten wir beschlossen, einen separaten Thread für die Berechnung zu verwenden, müssten wir einen komplizierteren Synchronisierungs Mechanismus verwenden und das Update im [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] Thread ausführen. Wir werden diese Situation im Folgenden zeigen.
 
- Den gesamten Quellcode für dieses Beispiel finden Sie unter Beispiel für [Single Thread-Anwendung mit langer Ausführungszeit](https://go.microsoft.com/fwlink/?LinkID=160038) .
+ Den gesamten Quellcode für dieses Beispiel finden Sie unter Beispiel für [Single Thread-Anwendung mit langer Ausführungszeit](https://github.com/Microsoft/WPF-Samples/tree/master/Threading/SingleThreadedApplication) .
 
 <a name="weather_sim"></a>
 ### <a name="handling-a-blocking-operation-with-a-background-thread"></a>Behandeln eines blockierenden Vorgangs mit einem Hintergrundthread
@@ -215,6 +215,6 @@ ms.locfileid: "76794276"
 
  Der Task für [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] besteht darin, unerwartete Eintritts Übereinstimmung zu vermeiden, ohne dass der Arbeits Speicherplatz neu eingeführt wird. aus diesem Grund blockieren wir den erneuten eintreten nicht überall.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Single-Threaded Application with Long-Running Calculation Sample (Singlethread-Anwendung mit Beispiel für Berechnung mit langer Laufzeit)](https://go.microsoft.com/fwlink/?LinkID=160038)
+- [Single-Threaded Application with Long-Running Calculation Sample (Singlethread-Anwendung mit Beispiel für Berechnung mit langer Laufzeit)](https://github.com/Microsoft/WPF-Samples/tree/master/Threading/SingleThreadedApplication)

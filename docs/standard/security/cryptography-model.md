@@ -6,12 +6,12 @@ helpviewer_keywords:
 - cryptography [.NET Framework], model
 - encryption [.NET Framework], model
 ms.assetid: 12fecad4-fbab-432a-bade-2f05976a2971
-ms.openlocfilehash: 964c63e01a6b09e63e305e9a10dca46e62c18648
-ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
+ms.openlocfilehash: f878f73497b83aaf31f2ba3b23cca1f685867b3e
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/02/2020
-ms.locfileid: "76965957"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77095267"
 ---
 # <a name="net-framework-cryptography-model"></a>Das Kryptografiemodell in .NET Framework
 
@@ -41,7 +41,7 @@ Als ein Beispiel für die verschiedenen Implementierungen eines Algorithmus kön
 
 <xref:System.Security.Cryptography.Aes> wird von zwei Klassen geerbt: <xref:System.Security.Cryptography.AesCryptoServiceProvider> und <xref:System.Security.Cryptography.AesManaged>. Die <xref:System.Security.Cryptography.AesCryptoServiceProvider>-Klasse ist ein Wrapper um die Implementierung der Windows-Kryptografie-API (CAPI) von Aes, während die <xref:System.Security.Cryptography.AesManaged>-Klasse vollständig in verwaltetem Code geschrieben ist. Außerdem gibt es einen dritten Typ von Implementierung ,Cryptography Next Generation (CNG), zusätzlich zu den verwalteten und den CAPI-Implementierungen. Ein Beispiel für einen CNG-Algorithmus ist <xref:System.Security.Cryptography.ECDiffieHellmanCng>. CNG-Algorithmen sind ab Windows Vista verfügbar.
 
-Sie haben die Wahl, welche Implementierung für Sie am besten geeignet ist.  Die verwalteten Implementierungen sind auf allen Plattformen verfügbar, die .NET Framework unterstützen.  Die CAPI-Implementierungen sind unter älteren Betriebssystemen verfügbar und werden nicht mehr entwickelt. CNG ist die neueste Implementierung, in der die neue Entwicklungen erfolgen. Die verwalteten Implementierungen sind nicht durch die FIPS (Federal Information Processing Standards) zertifiziert und möglicherweise langsamer als die Wrapperklassen.
+Sie haben die Wahl, welche Implementierung für Sie am besten geeignet ist. Die verwalteten Implementierungen sind auf allen Plattformen verfügbar, die .NET Framework unterstützen. Die CAPI-Implementierungen sind auf älteren Betriebssystemen verfügbar und werden nicht mehr entwickelt. CNG ist die neueste Implementierung, bei der eine neue Entwicklung stattfindet. Die verwalteten Implementierungen sind nicht durch die FIPS (Federal Information Processing Standards) zertifiziert und möglicherweise langsamer als die Wrapperklassen.
 
 ## <a name="stream-design"></a>Streamdesign (Datenstromdesign)
 
@@ -51,7 +51,7 @@ Die Common Language Runtime verwendet ein streamorientiertes Design für die Imp
 
 Mit einer kryptografischen Konfiguration können Sie eine bestimmte Implementierung eines Algorithmus zu einem Algorithmusnamen auflösen, wodurch Erweiterbarkeit der Kryptografieklassen von .NET Framework ermöglicht wird. Sie können Ihre eigene Hardware- oder Softwareimplementierung eines Algorithmus hinzufügen und die Implementierung dem von Ihnen gewählten Algorithmusnamen zuordnen. Ist in der Konfigurationsdatei kein Algorithmus angegeben, werden die Standardeinstellungen verwendet. Weitere Informationen zur Kryptografiekonfiguration finden Sie unter [Konfigurieren von Kryptografieklassen](../../../docs/framework/configure-apps/configure-cryptography-classes.md).
 
-## <a name="choosing-an-algorithm"></a>Wählen eines Algorithmus
+## <a name="choosing-an-algorithm"></a>Auswählen eines Algorithmus
 
 Sie können einen Algorithmus für unterschiedliche Zwecke wählen: z. B. für Datenintegrität, für Datenschutz oder zum Generieren eines Schlüssels. Symmetrische und Hashalgorithmen sind dazu vorgesehen, Daten entweder aus Integritätsgründen (Schutz vor Änderungen) oder aus Datenschutzgründen (Schutz vor Anzeigen) zu schützen. Hashalgorithmen werden hauptsächlich für die Datenintegrität verwendet.
 
@@ -73,7 +73,7 @@ Es folgt eine Liste empfohlener Algorithmen nach Anwendung:
 - Generieren eines Schlüssels aus einem Kennwort:
   - <xref:System.Security.Cryptography.Rfc2898DeriveBytes>
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Cryptographic Services](../../../docs/standard/security/cryptographic-services.md)
+- [Kryptografische Dienste](../../../docs/standard/security/cryptographic-services.md)
 - [Angewendete Kryptografieprotokolle, Algorithmen und Quellcode in C, von Bruce Schneier](https://www.schneier.com/books/applied_cryptography/)

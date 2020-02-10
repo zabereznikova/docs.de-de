@@ -9,12 +9,12 @@ helpviewer_keywords:
 - dynamic layout [WPF interoperability]
 - device-independent pixels
 ms.assetid: 3c574597-bbde-440f-95cc-01371f1a5d9d
-ms.openlocfilehash: 9f97639447284b792d52cf4aa25b81f584d7291a
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 89ed57a787b93a1326b4accd3bb1bc5ff9a825fd
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76787909"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77095150"
 ---
 # <a name="layout-considerations-for-the-windowsformshost-element"></a>Überlegungen zum Layout für das WindowsFormsHost-Element
 In diesem Thema wird beschrieben, wie das <xref:System.Windows.Forms.Integration.WindowsFormsHost>-Element mit dem [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Layoutsystem interagiert.  
@@ -28,7 +28,7 @@ In diesem Thema wird beschrieben, wie das <xref:System.Windows.Forms.Integration
   
  Das Layout in Windows Forms ist Geräte abhängig und wahrscheinlicher, dass es statisch ist. In der Regel werden Windows Forms-Steuerelemente auf einem Formular mithilfe der in Hardware Pixel angegebenen Dimensionen vollkommen positioniert. Windows Forms unterstützt jedoch einige dynamische Layoutfeatures, wie in der folgenden Tabelle zusammengefasst.  
   
-|Layoutfunktion|Beschreibung|  
+|Layoutfunktion|BESCHREIBUNG|  
 |--------------------|-----------------|  
 |Automatisches Anpassen|Einige Windows Forms Steuerelemente ändern sich an sich selbst, um deren Inhalte ordnungsgemäß anzuzeigen. Weitere Informationen finden Sie unter [Übersicht über die AutoSize-Eigenschaft](../../winforms/controls/autosize-property-overview.md).|  
 |Verankern und Andocken|Windows Forms Steuerelemente unterstützen Positionierung und Größenanpassung basierend auf dem übergeordneten Container. Weitere Informationen finden Sie unter <xref:System.Windows.Forms.Control.Anchor%2A?displayProperty=nameWithType> und <xref:System.Windows.Forms.Control.Dock%2A?displayProperty=nameWithType>.|  
@@ -67,13 +67,13 @@ In diesem Thema wird beschrieben, wie das <xref:System.Windows.Forms.Integration
   
  Zusätzlich zur Skalierung verarbeitet das <xref:System.Windows.Forms.Integration.WindowsFormsHost>-Element Rundungs-und Überlauf Fälle, wie in der folgenden Tabelle beschrieben.  
   
-|Konvertierungs Problem|Beschreibung|  
+|Konvertierungs Problem|BESCHREIBUNG|  
 |----------------------|-----------------|  
 |Rundung (Rounding)|[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] geräteunabhängigen Pixel Dimensionen werden als `double`angegeben, und Windows Forms Hardware Pixel Dimensionen werden als `int`angegeben. In Fällen, in denen `double`-basierte Dimensionen in `int`-basierte Dimensionen konvertiert werden, verwendet das <xref:System.Windows.Forms.Integration.WindowsFormsHost>-Element Standard Rundungen, sodass Bruchzahlen, die kleiner als 0,5 sind, auf 0 gerundet werden.|  
 |Überlauf|Wenn das <xref:System.Windows.Forms.Integration.WindowsFormsHost> Element von `double` Werten in `int` Werte konvertiert, ist ein Überlauf möglich. Werte, die größer als <xref:System.Int32.MaxValue> sind, werden auf <xref:System.Int32.MaxValue>festgelegt.|  
   
 ### <a name="layout-related-properties"></a>Layouteigenschaften  
- Eigenschaften, die das Layoutverhalten in Windows Forms Steuerelementen und [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Elementen steuern, werden entsprechend dem <xref:System.Windows.Forms.Integration.WindowsFormsHost>-Element zugeordnet. Weitere Informationen finden Sie unter [Eigenschaftenzuordnung von Windows Forms und WPF](windows-forms-and-wpf-property-mapping.md).  
+ Eigenschaften, die das Layoutverhalten in Windows Forms Steuerelementen und [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Elementen steuern, werden entsprechend dem <xref:System.Windows.Forms.Integration.WindowsFormsHost>-Element zugeordnet. Weitere Informationen finden Sie unter [Windows Forms and WPF Property Mapping (Eigenschaftenzuordnung von Windows Forms und WPF)](windows-forms-and-wpf-property-mapping.md).  
   
 ### <a name="layout-changes-in-the-hosted-control"></a>Layoutänderungen im gehosteten Steuerelement  
  Layoutänderungen im gehosteten Windows Forms Steuerelement werden an [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] weitergegeben, um layoutaktualisierungen zu initiieren. Die <xref:System.Windows.UIElement.InvalidateMeasure%2A>-Methode auf <xref:System.Windows.Forms.Integration.WindowsFormsHost> stellt sicher, dass Layoutänderungen im gehosteten Steuerelement bewirken, dass die [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Layout-Engine ausgeführt wird.  
@@ -98,11 +98,11 @@ In diesem Thema wird beschrieben, wie das <xref:System.Windows.Forms.Integration
   
 - Wenn die <xref:System.Windows.Forms.Control.Size%2A>-Eigenschaft eine geringere Größe zurückgibt als die angegebene Einschränkung, akzeptiert <xref:System.Windows.Forms.Integration.WindowsFormsHost> diesen Größen Wert und gibt den Wert an das [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Layoutsystem zurück.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
 - [Exemplarische Vorgehensweise: Anordnen von Windows Forms-Steuerelementen in WPF](walkthrough-arranging-windows-forms-controls-in-wpf.md)
-- [Anordnen von Windows Forms Steuerelementen in WPF-Beispiel](https://go.microsoft.com/fwlink/?LinkID=159971)
+- [Anordnen von Windows Forms Steuerelementen in WPF-Beispiel](https://github.com/microsoft/WPF-Samples/tree/master/Migration%20and%20Interoperability/WpfLayoutHostingWfWithXaml)
 - [Eigenschaftenzuordnung von Windows Forms und WPF](windows-forms-and-wpf-property-mapping.md)
 - [Migration und Interoperabilität](migration-and-interoperability.md)

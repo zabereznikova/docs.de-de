@@ -2,12 +2,12 @@
 title: Byrefs
 description: Informationen Sie zu Byref und Byref-ähnlichen Typen in F#, die für die Low-Level-Programmierung verwendet werden.
 ms.date: 11/04/2019
-ms.openlocfilehash: 05a40059ad5b72829233b0c4135c76eb1cff4da5
-ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
+ms.openlocfilehash: 2d98d325dc4ad26548fb2cc6aa5b872e152ee0a8
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/02/2020
-ms.locfileid: "76965814"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77092787"
 ---
 # <a name="byrefs"></a>Byrefs
 
@@ -166,7 +166,7 @@ type S(count1: Span<int>, count2: Span<int>) =
 
 `IsByRefLike` impliziert keine `Struct`. Beides muss für den Typ vorhanden sein.
 
-Ein "`byref`-wie" "Struct" in F# ist ein Stack gebundene Wert. Sie wird niemals dem verwalteten Heap zugeordnet. Eine `byref`ähnliche Struktur eignet sich für die Hochleistungs Programmierung, da Sie mit einer Reihe von leistungsstarken Überprüfungen zur Lebensdauer und nicht Erfassung erzwungen wird. Die Regeln lauten wie folgt:
+Eine "`byref`-like"-Struktur F# in ist ein Stapel gebundener Werttyp. Sie wird niemals dem verwalteten Heap zugeordnet. Eine `byref`ähnliche Struktur eignet sich für die Hochleistungs Programmierung, da Sie mit einer Reihe von leistungsstarken Überprüfungen zur Lebensdauer und nicht Erfassung erzwungen wird. Die Regeln lauten wie folgt:
 
 * Sie können als Funktionsparameter, Methoden Parameter, lokale Variablen und Methoden Rückgaben verwendet werden.
 * Sie können keine statischen Member oder Instanzmember einer Klasse oder einer normalen Struktur sein.
@@ -188,7 +188,7 @@ let squareAndPrint (data : byref<int>) =
 ```
 
 Um einen ByRef-Wert zurückzugeben, muss die Variable, die den Wert enthält, länger als der aktuelle Bereich sein.
-Verwenden Sie außerdem & Wert (wobei value eine Variable ist, die länger als der aktuelle Bereich ist), um ByRef zurückzugeben.
+Verwenden Sie zum Zurückgeben von ByRef `&value` (wobei value eine Variable ist, die länger als der aktuelle Bereich ist).
 
 ```fsharp
 let mutable sum = 0
@@ -252,4 +252,4 @@ let test () =
     ()
 ```
 
-Dadurch wird verhindert, dass Sie unterschiedliche Ergebnisse erhalten, je nachdem, ob Sie mit Optimierungen ein-oder ausschalten.
+Dadurch wird verhindert, dass Sie unterschiedliche Ergebnisse erhalten, je nachdem, ob Sie mit Optimierungen kompilieren oder nicht.

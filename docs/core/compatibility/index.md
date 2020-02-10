@@ -1,13 +1,13 @@
 ---
-title: Typen von Breaking Changes – .NET Core
+title: Arten von Breaking Changes
 description: Erfahren Sie, wie .NET Core versucht, die Kompatibilität für Entwickler für alle .NET-Versionen zu gewährleisten und welche Änderung als Breaking Change angesehen wird.
 ms.date: 06/10/2019
-ms.openlocfilehash: 76d04504c4476f0f7517a633cfbf1c0aa9d5797e
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 1c5790e39754b91aacbde9e87ed99f9dcc36ce9f
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76738576"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77092979"
 ---
 # <a name="changes-that-affect-compatibility"></a>Änderungen, die sich auf die Kompatibilität auswirken
 

@@ -3,15 +3,16 @@ title: LINQ und ADO.NET
 titleSuffix: ''
 ms.date: 03/30/2017
 ms.assetid: bf0c8f93-3ff7-49f3-8aed-f2b7ac938dec
-ms.openlocfilehash: e24473f68fe5ccd993c5d205660ea8f397b6f797
-ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
+ms.openlocfilehash: c5b56fa78ce0276953597d63b3d6e2f45d88c8ab
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/04/2020
-ms.locfileid: "76980092"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094435"
 ---
 # <a name="linq-and-adonet"></a>LINQ und ADO.NET
-Heutzutage müssen viele Entwickler von Unternehmen zwei (oder mehr) Programmiersprachen verwenden: eine Sprache auf hoher Ebene für die Geschäftslogik und Präsentations Schichten (z. C# b. Visual oder Visual Basic) und eine Abfragesprache für die Interaktion mit der Datenbank (z. b. Transact-SQL). Der Entwickler muss also mehrerer Sprachen mächtig sein, um seine Arbeit effektiv erledigen zu können. Außerdem sind dadurch Sprachkonflikte in der Entwicklungsumgebung vorprogrammiert. So ergibt es sich z. B., dass eine Anwendung, die zur Ausführung einer Abfrage von Daten aus einer Datenbank eine Datenzugriffs-API verwendet, die Abfrage als Zeichenfolgenliteral angibt, indem sie Anführungszeichen verwendet. Diese Abfrage ist jedoch für den Compiler nicht lesbar und wird nicht auf Fehler (Syntaxfehler, tatsächliche Existenz der Spalten oder Zeilen, auf die verwiesen wird, usw.) geprüft. Auch der Typ der Abfrageparameter wird nicht geprüft, und es gibt keine `IntelliSense`-Unterstützung.  
+
+Heutzutage müssen viele Entwickler von Unternehmen zwei (oder mehr) Programmiersprachen verwenden: eine Sprache auf hoher Ebene für die Geschäftslogik und Präsentations Schichten (z. C# b. Visual oder Visual Basic) und eine Abfragesprache für die Interaktion mit der Datenbank (z. b. Transact-SQL). Der Entwickler muss also mehrerer Sprachen mächtig sein, um seine Arbeit effektiv erledigen zu können. Außerdem sind dadurch Sprachkonflikte in der Entwicklungsumgebung vorprogrammiert. So ergibt es sich z. B., dass eine Anwendung, die zur Ausführung einer Abfrage von Daten aus einer Datenbank eine Datenzugriffs-API verwendet, die Abfrage als Zeichenfolgenliteral angibt, indem sie Anführungszeichen verwendet. Diese Abfrage Zeichenfolge ist für den Compiler nicht lesbar und wird nicht auf Fehler geprüft, z. b. eine ungültige Syntax oder ob die Spalten oder Zeilen, auf die verwiesen wird, tatsächlich vorhanden ist Auch der Typ der Abfrageparameter wird nicht geprüft, und es gibt keine `IntelliSense`-Unterstützung.  
   
  Language-Integrated Query (LINQ) ermöglicht Entwicklern das Erstellen von Satz basierten Abfragen in Ihrem Anwendungscode, ohne dass eine separate Abfragesprache verwendet werden muss. Sie können LINQ-Abfragen für verschiedene Aufzähl Bare Datenquellen (d. h. eine Datenquelle, die die <xref:System.Collections.IEnumerable>-Schnittstelle implementiert) schreiben, z. b. in-Memory-Datenstrukturen, XML-Dokumente, SQL-Datenbanken und <xref:System.Data.DataSet> Objekte. Auch wenn diese aufzählbaren Datenquellen auf unterschiedliche Art und Weise implementiert sind, weisen sie doch alle dieselben Syntax- und Sprachkonstrukte auf. Da Abfragen direkt in der Programmiersprache formuliert werden können, benötigen Sie keine andere Abfragesprache, mit der Abfragen als Zeichenfolgenliterale eingebettet werden, die vom Compiler weder gelesen noch geprüft werden können. Durch die Integration von Abfragen in die Programmiersprache können Visual Studio-Programmierer auch produktiver arbeiten, indem Sie die Typ-und Syntax Überprüfung der Kompilierzeit bereitstellen und `IntelliSense`. Mit diesen Funktionen wird der für die Beseitigung von Abfragefehlern erforderliche Aufwand beträchtlich reduziert.  
   
@@ -36,11 +37,11 @@ Heutzutage müssen viele Entwickler von Unternehmen zwei (oder mehr) Programmier
  Mit [!INCLUDE[vbtecdlinq](../../../../includes/vbtecdlinq-md.md)]können Entwickler Code direkt für das Speicher Schema schreiben, indem Sie das gleiche LINQ-Programmier Muster wie in-Memory-Auflistungen und die <xref:System.Data.DataSet>zusätzlich zu anderen Datenquellen wie XML verwenden. Weitere Informationen finden Sie unter [LINQ to SQL](./sql/linq/index.md).  
   
 ## <a name="linq-to-entities"></a>LINQ to Entities  
- Die meisten aktuellen Anwendungen basieren auf relationalen Datenbanken. Daher müssen diese Anwendungen mit den relational abgebildeten Daten interagieren. Datenbankschemas sind nicht immer optimal für das Erstellen von Anwendungen geeignet, und die konzeptionellen Modelle von Anwendungen weichen von den logischen Modellen der Datenbanken ab. Der Entity Data Model ist ein konzeptionelles Datenmodell, das verwendet werden kann, um die Daten einer bestimmten Domäne zu modellieren, sodass Anwendungen mit Daten als Objekte interagieren können. Weitere Informationen finden Sie unter [ADO.NET Entity Framework](./ef/index.md) .  
+ Die meisten aktuellen Anwendungen basieren auf relationalen Datenbanken. Daher müssen diese Anwendungen mit den relational abgebildeten Daten interagieren. Datenbankschemas sind nicht immer optimal für das Erstellen von Anwendungen geeignet, und die konzeptionellen Modelle von Anwendungen weichen von den logischen Modellen der Datenbanken ab. Der Entity Data Model ist ein konzeptionelles Datenmodell, das verwendet werden kann, um die Daten einer bestimmten Domäne zu modellieren, sodass Anwendungen mit Daten als Objekte interagieren können. Weitere Informationen finden Sie unter [ADO.NET Entity Framework](./ef/index.md).  
   
- Durch das Entity Data Model werden relationale Daten als Objekte in der .NET-Umgebung verfügbar gemacht. Dadurch wird die Objektebene zu einem optimalen Ziel für die LINQ-Unterstützung, die es Entwicklern ermöglicht, Abfragen an die Datenbank in der Sprache der Geschäftlogik zu formulieren. Dies wird auch als LINQ to Entities bezeichnet. Weitere Informationen Sie unter [LINQ to Entities](./ef/language-reference/linq-to-entities.md).  
+ Durch das Entity Data Model werden relationale Daten als Objekte in der .NET-Umgebung verfügbar gemacht. Dadurch wird die Objektebene zu einem optimalen Ziel für die LINQ-Unterstützung, die es Entwicklern ermöglicht, Abfragen an die Datenbank in der Sprache der Geschäftlogik zu formulieren. Dies wird auch als LINQ to Entities bezeichnet. Weitere Informationen finden Sie unter [LINQ to Entities](./ef/language-reference/linq-to-entities.md).  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [LINQ to DataSet](linq-to-dataset.md)
 - [LINQ to SQL](./sql/linq/index.md)

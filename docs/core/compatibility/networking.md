@@ -1,13 +1,13 @@
 ---
-title: 'Breaking Changes für Netzwerke: .NET Core'
+title: Breaking Changes für Netzwerke
 description: Listet die Breaking Changes für Netzwerke in .NET Core auf.
 ms.date: 10/03/2019
-ms.openlocfilehash: fb53dfc230623d7fda515341209a1853d4319468
-ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
+ms.openlocfilehash: d5d445827554d2c898e07dac53d8a571ebdf9359
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76116433"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77092992"
 ---
 # <a name="networking-breaking-changes"></a>Breaking Changes für Netzwerke
 

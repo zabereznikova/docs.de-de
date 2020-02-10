@@ -6,22 +6,22 @@ helpviewer_keywords:
 - WCF, privacy information
 - privacy information [WCF]
 ms.assetid: c9553724-f3e7-45cb-9ea5-450a22d309d9
-ms.openlocfilehash: 30ea92f09bc655796b6bc268212b6d9e0e05bd9b
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: b724ff1ce85442f64980fdc972188705992d5a4f
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76919331"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094981"
 ---
 # <a name="windows-communication-foundation-privacy-information"></a>Windows Communication Foundation-Datenschutzinformationen
-Microsoft verpflichtet sich, die persönlichen Daten von Endbenutzern vertraulich zu behandeln. Wenn Sie eine Anwendung mit Windows Communication Foundation (WCF), Version 3,0, erstellen, wirkt sich die Anwendung möglicherweise auf den Datenschutz der Endbenutzer aus. Die Anwendung erfasst z. B. unter Umständen explizit Kontaktinformationen des Benutzers oder fordert Informationen an und sendet diese über das Internet an Ihre Website. Wenn Sie Microsoft-Technologie in Ihre Anwendung einbetten, kann sich das Verhalten dieser Technologie ebenfalls auf den Datenschutz auswirken. WCF sendet keine Informationen von Ihrer Anwendung an Microsoft, es sei denn, Sie oder der Endbenutzer haben diese an uns gesendet.  
+Microsoft ist bestrebt, den Schutz von Endbenutzern zu schützen. Wenn Sie eine Anwendung mit Windows Communication Foundation (WCF), Version 3,0, erstellen, wirkt sich die Anwendung möglicherweise auf den Datenschutz der Endbenutzer aus. Die Anwendung erfasst z. B. unter Umständen explizit Kontaktinformationen des Benutzers oder fordert Informationen an und sendet diese über das Internet an Ihre Website. Wenn Sie Microsoft-Technologie in Ihre Anwendung einbetten, kann sich das Verhalten dieser Technologie ebenfalls auf den Datenschutz auswirken. WCF sendet keine Informationen von Ihrer Anwendung an Microsoft, es sei denn, Sie oder der Endbenutzer haben diese an uns gesendet.  
   
 ## <a name="wcf-in-brief"></a>WCF in Kürze  
  WCF ist ein verteiltes Messaging Framework, das das Microsoft .NET Framework verwendet, das Entwicklern das Erstellen verteilter Anwendungen ermöglicht. Zwischen zwei Anwendungen übermittelte Nachrichten enthalten Header- und Textinformationen.  
   
  Header können je nach von der Anwendung verwendeten Diensten unter anderem Meldungsrouting, Sicherheitsinformationen und Transaktionen enthalten. Nachrichten werden in der Regel standardmäßig verschlüsselt. Eine Ausnahme ist die Verwendung der `BasicHttpBinding`, die für nicht gesicherte, ältere Webdienste konzipiert wurde. Als Anwendungs-Designer sind Sie für den abschließenden Entwurf verantwortlich. Nachrichten im SOAP-Text enthalten anwendungsspezifische Daten. Allerdings können diese Daten, z. b. Anwendungs definierte persönliche Informationen, mithilfe von WCF-Verschlüsselungs-oder Vertraulichkeits Features gesichert werden. In den folgenden Abschnitten werden die Funktionen beschrieben, die sich auf den Datenschutz auswirken können.  
   
-## <a name="messaging"></a>Messaging  
+## <a name="messaging"></a>Nachrichten  
  Jede WCF-Nachricht verfügt über einen Adress Header, der das Nachrichten Ziel angibt, und wo die Antwort gesendet werden soll.  
   
  Die Adresskomponente einer Endpunktadresse ist ein URI (Uniform Resource Identifier), der den Endpunkt identifiziert. Die Adresse kann eine Netzwerkadresse oder eine logische Adresse sein. Die Adresse kann den Computernamen (Hostname, vollqualifizierter Domänenname) und eine IP-Adresse einschließen. Die Endpunktadresse kann außerdem eine GUID (Globally Unique Identifier) oder eine Auflistung von GUIDs für die temporäre Adressierung zum Ermitteln jeder Adresse enthalten. Jede Nachricht enthält eine Nachrichten-ID, die eine GUID ist. Dieses Feature folgt dem WS-Addressierungs-Verweisstandard.  
@@ -44,14 +44,14 @@ Microsoft verpflichtet sich, die persönlichen Daten von Endbenutzern vertraulic
   
  Die Authentifizierung kann zu einer sicheren Sitzung zwischen den kommunizierenden Endpunkten führen. Die Sitzung wird durch eine GUID identifiziert, die über die Lebensdauer der Sicherheitssitzung reicht. Die folgende Tabelle zeigt, welche Elemente wo gespeichert werden.  
   
-|importieren|-Speicher|  
+|Data|Storage|  
 |----------|-------------|  
 |Präsentationsanmeldeinformationen, z. B. Benutzername, X.509-Zertifikate, Kerberos-Token und Verweise auf Anmeldeinformationen.|Standardmäßige Windows-Verwaltungsmechanismen für Anmeldeinformationen, z. B. der Windows-Zertifikatspeicher.|  
 |Benutzermitgliedschaftsinformationen, z. B. Benutzernamen und Kennwörter.|ASP.net-Mitgliedschafts Anbieter.|  
 |Identitätsinformationen über den Dienst zum Authentifizieren des Diensts gegenüber Clients.|Endpunktadresse des Diensts.|  
 |Aufruferdaten.|Überwachungsprotokolle.|  
   
-## <a name="auditing"></a>-Überwachung  
+## <a name="auditing"></a>Überwachung  
  Bei der Überwachung wird der Erfolg und das Fehlschlagen von Authentifizierungs- und Autorisierungsereignissen aufgezeichnet. Überwachungsdatensätze enthalten die folgenden Daten: Dienst-URI, Aktions-URI und Identifikation des Aufrufers.  
   
  Bei der Überwachung werden Daten auch dann aufgezeichnet, wenn der Administrator die Konfiguration der Nachrichtenprotokollierung ändert (aktiviert oder deaktiviert), da bei der Nachrichtenprotokollierung anwendungsspezifische Daten im Header und Text erfasst werden können. Für Windows XP wird ein Datensatz im Anwendungs Ereignisprotokoll protokolliert. Für Windows Vista und Windows Server 2003 wird ein Datensatz im Sicherheits Ereignisprotokoll protokolliert.  
@@ -70,17 +70,17 @@ Microsoft verpflichtet sich, die persönlichen Daten von Endbenutzern vertraulic
   
  Zuverlässige Sitzungen werden mit dem WS-RM (WS-ReliableMessaging)-Protokoll implementiert. Sie fügen WS-RM-Header hinzu, die Sitzungsinformationen enthalten, die zum Identifizieren aller einer bestimmten zuverlässigen Sitzung zugeordneten Nachrichten verwendet werden. Jede WS-RM-Sitzung hat einen Bezeichner, der eine GUID ist.  
   
- Auf dem Computer des Endbenutzers werden keine persönlichen Informationen beibehalten.  
+ Auf dem Computer des Endbenutzers werden keine persönlichen Informationen aufbewahrt.  
   
 ## <a name="queued-channels"></a>In der Warteschlange stehende Kanäle  
  Warteschlangen speichern Nachrichten von einer sendenden Anwendung für eine empfangende Anwendung und leiten sie später an die empfangende Anwendung weiter. Sie sichern die Nachrichtenübertragung von sendenden Anwendungen an empfangende Anwendungen, wenn z. B. die empfangende Anwendung flüchtig ist. WCF bietet Unterstützung für Warteschlangen mithilfe von Microsoft Message Queuing (MSMQ) als Transport.  
   
  Das Feature für in der Warteschlange stehende Kanäle fügt einer Nachricht keine Header hinzu. Es erstellt stattdessen eine Message Queuing-Nachricht mit entsprechenden Einstellungen und ruft Message Queuing-Methoden zum Platzieren der Nachricht in die Message Queuing-Warteschlange auf. Message Queuing ist eine in Windows enthaltene optionale Komponente.  
   
- Durch diese Funktion werden auf dem Computer des Endbenutzers keine Informationen beibehalten, da es Message Queuing als Warteschlangeninfrastruktur verwendet.  
+ Auf dem Computer des Endbenutzers werden von der Funktion für die Warteschlangen Kanäle keine Informationen beibehalten, da Message Queuing als Warteschlangen Infrastruktur verwendet wird.  
   
 ## <a name="com-integration"></a>COM+-Integration  
- Diese Funktion umschließt vorhandene com-und com+-Funktionen, um Dienste zu erstellen, die mit WCF-Diensten kompatibel sind. Diese Funktion verwendet keine bestimmten Header, und es behält keine Daten auf dem Computer des Endbenutzers bei.  
+ Diese Funktion umschließt vorhandene com-und com+-Funktionen, um Dienste zu erstellen, die mit WCF-Diensten kompatibel sind. Diese Funktion verwendet keine bestimmten Header und behält keine Daten auf dem Computer des Endbenutzers bei.  
   
 ## <a name="com-service-moniker"></a>COM-Dienstmoniker  
  Dadurch wird ein nicht verwalteter Wrapper für einen WCF-Standard Client bereitstellt. Dieses Feature verwendet keine bestimmten Header, und es behält keine Daten auf dem Computer bei.  
@@ -127,13 +127,13 @@ Microsoft verpflichtet sich, die persönlichen Daten von Endbenutzern vertraulic
   
  Schlüssel, die entfernt werden:  
   
- \- für xmlns:wst="http://schemas.xmlsoap.org/ws/2004/04/trust" und xmlns:wst="http://schemas.xmlsoap.org/ws/2005/02/trust"  
+ \- für xmlns: WST = "http://schemas.xmlsoap.org/ws/2004/04/trust" und xmlns: WST = "http://schemas.xmlsoap.org/ws/2005/02/trust"  
   
  wst:BinarySecret  
   
  wst:Entropy  
   
- \- für xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.1.xsd" und xmlns:wsse="http://docs.oasis-open.org/wss/2005/xx/oasis-2005xx-wss-wssecurity-secext-1.1.xsd"  
+ \- für xmlns: wsse = "http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.1.xsd" und xmlns: wsse = "http://docs.oasis-open.org/wss/2005/xx/oasis-2005xx-wss-wssecurity-secext-1.1.xsd"  
   
  wsse:Password  
   
@@ -141,7 +141,7 @@ Microsoft verpflichtet sich, die persönlichen Daten von Endbenutzern vertraulic
   
  Mögliche persönliche Informationen, die entfernt werden:  
   
- \- für xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.1.xsd" und xmlns:wsse="http://docs.oasis-open.org/wss/2005/xx/oasis-2005xx-wss-wssecurity-secext-1.1.xsd"  
+ \- für xmlns: wsse = "http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.1.xsd" und xmlns: wsse = "http://docs.oasis-open.org/wss/2005/xx/oasis-2005xx-wss-wssecurity-secext-1.1.xsd"  
   
  wsse:Username  
   
@@ -163,13 +163,13 @@ Microsoft verpflichtet sich, die persönlichen Daten von Endbenutzern vertraulic
   
  >  
   
- \<Conditions NotBefore="[dateTime]" NotOnOrAfter="[dateTime]">  
+ \<Bedingungen ' NotBefore = ' [DateTime] ' NotOnOrAfter = ' [DateTime] ' >  
   
- \<AudienceRestrictionCondition>  
+ \<audiencerestrictioncondition >  
   
  \<Audience > [URI]\</Audience > +  
   
- \</AudienceRestrictionCondition>*  
+ \</AudienceRestrictionCondition > *  
   
  \<donotcachecondition/> *  
   
@@ -217,7 +217,7 @@ Microsoft verpflichtet sich, die persönlichen Daten von Endbenutzern vertraulic
   
  \<' subjetconfirmationdata ' > [any]\</SubjectConfirmationData >?  
   
- \<ds:KeyInfo>...\</ds:KeyInfo>?  
+ \<DS: KeyInfo >...\</DS: KeyInfo >?  
   
  \</SubjectConfirmation >?  
   
@@ -257,7 +257,7 @@ Microsoft verpflichtet sich, die persönlichen Daten von Endbenutzern vertraulic
   
  \</AuthenticationStatement > *  
   
- \<AttributeStatement>  
+ \<attributestatement >  
   
  [Subject]  
   
@@ -273,7 +273,7 @@ Microsoft verpflichtet sich, die persönlichen Daten von Endbenutzern vertraulic
   
  \</Attribute > +  
   
- \</AttributeStatement>*  
+ \</AttributeStatement > *  
   
  \<authorizationdecisionstatement  
   
@@ -295,16 +295,16 @@ Microsoft verpflichtet sich, die persönlichen Daten von Endbenutzern vertraulic
   
  \</Evidence >?  
   
- \</AuthorizationDecisionStatement>*  
+ \</AuthorizationDecisionStatement > *  
   
- \</Assertion>  
+ \</Assertion >  
   
 #### <a name="information-removed-from-message-bodies-when-logging-decryptedunencrypted-messages"></a>Aus Nachrichtentext bei der Protokollierung entschlüsselter/unverschlüsselter Nachrichten entfernte Informationen  
  Wie bereits beschrieben, entfernt WCF Schlüssel und bekannte potenziell persönliche Informationen aus Nachrichten Headern für protokollierte entschlüsselte/unverschlüsselte Nachrichten. Außerdem entfernt WCF Schlüssel und bekannte potenziell persönliche Informationen aus Nachrichten Textteilen für die Textelemente und Aktionen in der folgenden Liste, in denen die an den Schlüsselaustausch beteiligten Sicherheitsmeldungen beschrieben werden.  
   
  Für die folgenden Namespaces:  
   
- xmlns:wst="http://schemas.xmlsoap.org/ws/2004/04/trust" und xmlns:wst="http://schemas.xmlsoap.org/ws/2005/02/trust" (z. b. wenn keine Aktion verfügbar ist)  
+ xmlns: WST = "http://schemas.xmlsoap.org/ws/2004/04/trust" und xmlns: WST = "http://schemas.xmlsoap.org/ws/2005/02/trust" (z. b. wenn keine Aktion verfügbar ist)  
   
  Informationen werden für diese Textelemente entfernt, die Schlüsselaustausch einschließen:  
   
@@ -359,17 +359,17 @@ Microsoft verpflichtet sich, die persönlichen Daten von Endbenutzern vertraulic
 #### <a name="no-information-is-removed-from-application-specific-headers-and-body-data"></a>Aus anwendungsspezifischen Headern und Textdaten werden keine Informationen entfernt.  
  WCF verfolgt keine persönlichen Informationen in anwendungsspezifischen Headern (z. b. Abfrage Zeichenfolgen) oder Textdaten (z. b. Kreditkartennummer).  
   
- Bei aktivierter Nachrichtenprotokollierung sind persönliche Informationen in anwendungsspezifischen Headern und Textdaten unter Umständen in den Protokollen sichtbar. Der Anwendungsbereitsteller ist für das Festlegen der ACLs für die Konfigurations- und Protokolldateien verantwortlich. Er kann auch die Protokollierung deaktivieren, wenn diese Informationen nicht sichtbar sein sollen, oder diese Informationen aus den Protokolldateien herausfiltern.  
+ Bei aktivierter Nachrichtenprotokollierung sind persönliche Informationen in anwendungsspezifischen Headern und Textdaten unter Umständen in den Protokollen sichtbar. Der Anwendungsbereitsteller ist für das Festlegen der ACLs für die Konfigurations- und Protokolldateien verantwortlich. Sie können die Protokollierung auch deaktivieren, wenn Sie nicht möchten, dass diese Informationen sichtbar sind, oder diese Informationen nach der Protokollierung aus den Protokolldateien herausfiltern.  
   
 ### <a name="service-model-tracing"></a>Dienstmodell-Ablaufverfolgung  
  Die Dienstmodell-Ablaufverfolgungsquelle (<xref:System.ServiceModel>) aktiviert die Ablaufverfolgung von mit der Nachrichtenverarbeitung verknüpften Aktivitäten und Ereignissen. Diese Funktion verwendet die .NET Framework-Diagnosefunktionalität von <xref:System.Diagnostics>. Wie bei der <xref:System.ServiceModel.Configuration.DiagnosticSection.MessageLogging%2A>-Eigenschaft können der Speicherort und die ACL mit den Konfigurationsdateien der .NET Framework-Anwendung vom Benutzer konfiguriert werden. Wie bei der Nachrichtenprotokollierung wird der Speicherort der Datei immer konfiguriert, wenn der Administrator die Ablaufverfolgung aktiviert; der Administrator steuert also die ACL.  
   
- Ablaufverfolgungen enthalten Nachrichtenheader, wenn sich eine Nachricht im Gültigkeitsbereich befindet. Dabei gilt die gleiche Regel für das Ausblenden möglicher persönlicher Informationen in Nachrichtenheadern wie im vorherigen Abschnitt: Die zuvor identifizierten persönlichen Informationen werden standardmäßig aus den Headern in Ablaufverfolgungen entfernt. Der Computeradministrator und der Anwendungsbereitsteller müssen die Konfiguration ändern, damit mögliche persönliche Informationen protokolliert werden. Allerdings werden in anwendungsspezifischen Headern enthaltene persönliche Informationen in Ablaufverfolgungen protokolliert. Der Anwendungsbereitsteller ist für das Festlegen der ACLs für die Konfigurations- und Ablaufverfolgungsdateien verantwortlich. Er kann auch die Ablaufverfolgung deaktivieren, wenn diese Informationen nicht sichtbar sein sollen, oder diese Informationen nach der Protokollierung aus den Ablaufverfolgungsdateien herausfiltern.  
+ Ablaufverfolgungen enthalten Nachrichtenheader, wenn sich eine Nachricht im Gültigkeitsbereich befindet. Dabei gilt die gleiche Regel für das Ausblenden möglicher persönlicher Informationen in Nachrichtenheadern wie im vorherigen Abschnitt: Die zuvor identifizierten persönlichen Informationen werden standardmäßig aus den Headern in Ablaufverfolgungen entfernt. Der Computeradministrator und der Anwendungsbereitsteller müssen die Konfiguration ändern, damit mögliche persönliche Informationen protokolliert werden. Allerdings werden in anwendungsspezifischen Headern enthaltene persönliche Informationen in Ablaufverfolgungen protokolliert. Der Anwendungsbereitsteller ist für das Festlegen der ACLs für die Konfigurations- und Ablaufverfolgungsdateien verantwortlich. Sie können die Ablauf Verfolgung auch deaktivieren, um diese Informationen auszublenden oder diese Informationen aus den Ablauf Verfolgungs Dateien herausfiltern, nachdem Sie protokolliert wurden.  
   
  Als Teil der Dienstmodell-Ablaufverfolgung verknüpfen eindeutige IDs (die als Aktivitäts-IDs bezeichnet werden, in der Regel eine GUID) unterschiedliche Aktivitäten, wenn eine Nachricht verschiedene Teile der Infrastruktur durchläuft.  
   
 #### <a name="custom-trace-listeners"></a>Benutzerdefinierte Ablaufverfolgungslistener  
- Sowohl für die Nachrichtenprotokollierung als auch die Ablaufverfolgung kann ein benutzerdefinierter Ablaufverfolgungslistener konfiguriert werden, der Ablaufverfolgungen und Nachrichten überträgt, z. B. an eine Remotedatenbank. Der Anwendungsbereitsteller ist für das Konfigurieren benutzerdefinierter Listener oder das Ermöglichen dieser Aktion durch Benutzer verantwortlich. Er ist außerdem für am Remotespeicherort verfügbar gemachte persönliche Informationen und für die korrekte Anwendung von ACLs auf diesen Speicherort verantwortlich.  
+ Sowohl für die Nachrichtenprotokollierung als auch die Ablaufverfolgung kann ein benutzerdefinierter Ablaufverfolgungslistener konfiguriert werden, der Ablaufverfolgungen und Nachrichten überträgt, z. B. an eine Remotedatenbank. Der Anwendungsbereitsteller ist für das Konfigurieren benutzerdefinierter Listener oder das Ermöglichen dieser Aktion durch Benutzer verantwortlich. Sie sind auch für alle persönlichen Informationen verantwortlich, die am Remote Standort verfügbar gemacht werden, und für die korrekte Anwendung von ACLs auf diesen Speicherort.  
   
 ### <a name="other-features-for-it-professionals"></a>Andere Features für IT-Fachleute  
  WCF verfügt über einen WMI-Anbieter, der die Konfigurationsinformationen der WCF-Infrastruktur über WMI (ausgeliefert in Windows) verfügbar macht. Standardmäßig steht die WMI-Schnittstelle Administratoren zur Verfügung.  
@@ -401,7 +401,7 @@ Microsoft verpflichtet sich, die persönlichen Daten von Endbenutzern vertraulic
   
  Die WSDL (Web Services Description Language) enthält eine Definition des Anschlusses. Jeder Anschluss verfügt über eine Endpunktadresse und eine Bindung, die die von der Anwendung verwendeten Dienste darstellt. Das Verfügbarmachen der WSDL kann mithilfe der Konfiguration deaktiviert werden. Auf dem Computer werden keine Informationen beibehalten.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Windows Communication Foundation](index.md)
 - [Sicherheit](./feature-details/security.md)

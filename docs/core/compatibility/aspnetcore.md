@@ -1,15 +1,16 @@
 ---
-title: Breaking Changes in ASP.NET Core – .NET Core
+title: Breaking Changes in ASP.NET Core
+titleSuffix: ''
 description: Listet die Breaking Changes in ASP.NET Core auf.
 ms.date: 01/10/2020
 author: scottaddie
 ms.author: scaddie
-ms.openlocfilehash: 261788722e09a6fa5b9427b5a220b69a2367b751
-ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
+ms.openlocfilehash: c54735cd53fb9cb48eb84045791ccc559fe683cd
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76116589"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77093174"
 ---
 # <a name="aspnet-core-breaking-changes"></a>Breaking Changes in ASP.NET Core
 
@@ -54,7 +55,7 @@ Auf dieser Seite sind die folgenden Breaking Changes dokumentiert:
 - [MVC: Async-Suffix wurde für Controlleraktion entfernt](#mvc-async-suffix-trimmed-from-controller-action-names)
 - [MVC: JsonResult wurde in Microsoft.AspNetCore.Mvc.Core verschoben](#mvc-jsonresult-moved-to-microsoftaspnetcoremvccore)
 - [MVC: Vorkompilierungstool wurde als veraltet markiert](#mvc-precompilation-tool-deprecated)
-- [MVC: Typen wurden in „internal“-Typen geändert](#mvc-pubternal-types-changed-to-internal)
+- [MVC: Typen wurden in „internal“ geändert](#mvc-pubternal-types-changed-to-internal)
 - [MVC: Web-API-Kompatibilitätsshim wurde entfernt](#mvc-web-api-compatibility-shim-removed)
 - [Razor: Laufzeitkompilierung wurde in ein Paket verschoben](#razor-runtime-compilation-moved-to-a-package)
 - [Sitzungszustand: Veraltete APIs wurden entfernt](#session-state-obsolete-apis-removed)

@@ -2,12 +2,12 @@
 title: Sperre der PII-Sicherheit
 ms.date: 03/30/2017
 ms.assetid: c44fb338-9527-4dd0-8607-b8787d15acb4
-ms.openlocfilehash: 63410ecc19e94e57f943e5d7dc13a6098bd91d51
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 56c8acbe53f1e0243f7c679da6ef04f7135bcd3a
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74714631"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094968"
 ---
 # <a name="pii-security-lockdown"></a>Sperre der PII-Sicherheit
 In diesem Beispiel wird veranschaulicht, wie Sie verschiedene sicherheitsrelevante Features eines Windows Communication Foundation (WCF)-Diensts wie folgt steuern:  
@@ -47,7 +47,7 @@ In diesem Beispiel wird veranschaulicht, wie Sie verschiedene sicherheitsrelevan
   
 3. Verschlüsseln Sie die appSettings-Konfigurationseinstellungen im Web.config-Ordner, indem Sie folgenden Befehl ausgeben: `aspnet_regiis -pe "appSettings" -app "/servicemodelsamples" -prov "DataProtectionConfigurationProvider"`.  
   
- Weitere Informationen zum Verschlüsseln von Abschnitten von Konfigurationsdateien finden Sie unter Vorgehensweise bei DPAPI in der ASP.NET-Konfiguration (entwickeln von[sicheren ASP.NET-Anwendungen: Authentifizierung, Autorisierung und sichere Kommunikation](https://go.microsoft.com/fwlink/?LinkId=95137)) und in einer Vorgehensweise bei RSA in ASP.net Configuration (Gewusst[wie: Verschlüsseln von Konfigurations Abschnitten in ASP.NET 2,0 mit RSA](https://go.microsoft.com/fwlink/?LinkId=95138)).  
+ Weitere Informationen zum Verschlüsseln von Abschnitten von Konfigurationsdateien finden Sie unter Vorgehensweise bei DPAPI in der ASP.NET-Konfiguration (entwickeln von[sicheren ASP.NET-Anwendungen: Authentifizierung, Autorisierung und sichere Kommunikation](https://docs.microsoft.com/previous-versions/msp-n-p/ff649248(v=pandp.10))) und in einer Vorgehensweise bei RSA in ASP.net Configuration (Gewusst[wie: Verschlüsseln von Konfigurations Abschnitten in ASP.NET 2,0 mit RSA](https://docs.microsoft.com/previous-versions/msp-n-p/ff650304(v=pandp.10))).  
   
 ## <a name="locking-configuration-file-elements"></a>Sperren von Konfigurationsdateielementen  
  In im Internet gehosteten Szenarien ist es möglich, Dienste in Unterverzeichnissen von Diensten zu haben. In diesen Situationen werden die Konfigurationswerte für den Dienst im Unterverzeichnis berechnet durch die Überprüfung von Werten in "Machine.config", darauf folgendes Zusammenfügen mit Web.config-Dateien in übergeordneten Verzeichnissen im Verzeichnisbaum nach unten gehend sowie durch das Zusammenfügen der Web.config-Datei im Verzeichnis, das den Dienst enthält. Das Standardverhalten der meisten Konfigurationselemente besteht darin, zu erlauben, dass Konfigurationsdateien in Unterverzeichnissen die in den übergeordneten Verzeichnissen gesetzten Werte überschreiben. In bestimmten Situationen kann es erwünscht sein, dass die Konfigurationsdateien in den Unterverzeichnissen die in der Konfiguration des übergeordneten Verzeichnisses gesetzten Werte nicht überschreiben.  
@@ -124,9 +124,9 @@ In diesem Beispiel wird veranschaulicht, wie Sie verschiedene sicherheitsrelevan
   
  Es ist auch möglich, Konfigurationsdateielemente mit DPAPI und RSA zu verschlüsseln. Weitere Informationen finden Sie unter den folgenden Links:  
   
-- [Aufbauen von sicheren ASP.NET-Anwendungen: Authentifizierung, Autorisierung und sichere Kommunikation](https://go.microsoft.com/fwlink/?LinkId=95137)  
+- [Aufbauen von sicheren ASP.NET-Anwendungen: Authentifizierung, Autorisierung und sichere Kommunikation](https://docs.microsoft.com/previous-versions/msp-n-p/ff649248(v=pandp.10))  
   
-- [Gewusst wie: Verschlüsseln von Konfigurations Abschnitten in ASP.NET 2,0 mit RSA](https://go.microsoft.com/fwlink/?LinkId=95138)  
+- [Gewusst wie: Verschlüsseln von Konfigurations Abschnitten in ASP.NET 2,0 mit RSA](https://docs.microsoft.com/previous-versions/msp-n-p/ff650304(v=pandp.10))  
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>So richten Sie das Beispiel ein, erstellen es und führen es aus  
   
@@ -142,6 +142,6 @@ In diesem Beispiel wird veranschaulicht, wie Sie verschiedene sicherheitsrelevan
   
 1. Bearbeiten Sie Machine.config, und legen Sie `enableLoggingKnownPii`-Attribut auf `false` fest.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [AppFabric-Überwachungs Beispiele](https://go.microsoft.com/fwlink/?LinkId=193959)
+- [AppFabric-Überwachungs Beispiele](https://docs.microsoft.com/previous-versions/appfabric/ff383407(v=azure.10))

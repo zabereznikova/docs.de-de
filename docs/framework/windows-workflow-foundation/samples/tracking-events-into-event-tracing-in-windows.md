@@ -2,12 +2,12 @@
 title: Nachverfolgen von Ereignissen in der Ereignisablaufverfolgung in Windows
 ms.date: 03/30/2017
 ms.assetid: f812659b-0943-45ff-9430-4defa733182b
-ms.openlocfilehash: fe50476eedef505258c2e6818e75a32c06ed6fa6
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 2c397bcfa809a1306e9c31bf3f652b055d997f38
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74715933"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094578"
 ---
 # <a name="tracking-events-into-event-tracing-in-windows"></a>Nachverfolgen von Ereignissen in der Ereignisablaufverfolgung in Windows
 
@@ -19,7 +19,7 @@ Der Workflow in dem Beispiel erhält eine Anforderung, weist den Umkehrwert der 
 
 Windows Workflow Foundation stellt eine Überwachungsinfrastruktur bereit, mit der die Ausführung einer Workflow Instanz nachverfolgt werden können. Die Überwachungslaufzeit erstellt eine Workflowinstanz, um Ereignisse in Verbindung mit dem Workflowlebenszyklus, Ereignisse aus den Workflowaktivitäten sowie benutzerdefinierte Ereignissen auszugeben. In der folgenden Tabelle sind die primären Komponenten der Überwachungsinfrastruktur aufgeführt.
 
-|Komponente|Beschreibung|
+|Komponente|BESCHREIBUNG|
 |---------------|-----------------|
 |Überwachungslaufzeit|Stellt die Infrastruktur bereit, um Überwachungsdatensätze auszugeben.|
 |Überwachungsteilnehmer|Greift auf die Nachverfolgungsdatensätze zu. [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)] wird mit einem Nachverfolgungsteilnehmer geliefert, der Nachverfolgungsdatensätze als Ereignisse der Ereignisablaufverfolgung für Windows (ETW) schreibt.|
@@ -27,7 +27,7 @@ Windows Workflow Foundation stellt eine Überwachungsinfrastruktur bereit, mit d
 
 In der folgenden Tabelle sind die Überwachungsdatensätze aufgeführt, die von der Workflowlaufzeit ausgegeben werden.
 
-|Überwachungsdatensatz|Beschreibung|
+|Überwachungsdatensatz|BESCHREIBUNG|
 |---------------------|-----------------|
 |Überwachungsdatensätze zur Workflowinstanz.|Beschreibt den Lebenszyklus der Workflowinstanz. Wenn der Workflow gestartet oder abgeschlossen wird, wird beispielsweise ein Instanzdatensatz ausgegeben.|
 |Überwachungsdatensätze zum Aktivitätszustand.|Führen Einzelheiten zur Aktivitätsausführung auf. Diese Datensätze geben den Zustand einer Workflowaktivität an, z. B. wenn eine Aktivität geplant oder abgeschlossen wird oder wenn ein Fehler ausgelöst wird.|
@@ -57,7 +57,7 @@ Der Überwachungsteilnehmer abonniert eine Teilmenge der ausgegebenen Überwachu
 
 5. Wählen Sie im WCF-Test Client im Menü **Datei** die Option **Dienst hinzufügen** aus.
 
-    Fügen Sie die Endpunktadresse im Eingabefeld hinzu. Der Standardwert ist `http://localhost:53797/SampleWorkflowService.xamlx`.
+    Fügen Sie die Endpunktadresse im Eingabefeld hinzu. Der Standardwert lautet `http://localhost:53797/SampleWorkflowService.xamlx`.
 
 6. Öffnen Sie die Ereignisanzeige.
 
@@ -138,7 +138,7 @@ Das Nachverfolgungsprofil für die Systemüberwachung gibt Workflowinstanzdatens
 > [!NOTE]
 > Es gibt ein bekanntes Problem in der Ereignisanzeige, bei dem bei der Decodierung von ETW-Ereignissen ein Fehler auftritt. Möglicherweise wird eine Fehlermeldung ähnlich der Folgenden angezeigt.
 >
-> Die Beschreibung für die Ereignis-ID \<ID > von der Quelle "Microsoft-Windows-Application Server-Applications" wurde nicht gefunden. Entweder ist die Komponente, die dieses Ereignis auslöst, nicht auf dem lokalen Computer installiert, oder die Installation ist beschädigt. Sie können die Komponente auf dem lokalen Computer installieren oder reparieren.
+> Die Beschreibung für die Ereignis-ID \<ID > von der Quelle "Microsoft-Windows-Application Server-Applications" wurde nicht gefunden. Entweder ist die Komponente, die dieses Ereignis auslöst, auf Ihrem lokalen Computer nicht installiert, oder die Installation ist beschädigt. Sie können die Komponente auf dem lokalen Computer installieren oder reparieren.
 >
 > Wenn dieser Fehler auftritt, klicken Sie im Aktionsbereich auf "Aktualisieren". Das Ereignis sollte jetzt ordnungsgemäß decodiert werden.
 
@@ -151,6 +151,6 @@ Das Nachverfolgungsprofil für die Systemüberwachung gibt Workflowinstanzdatens
 >
 > `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Tracking\EtwTracking`
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [AppFabric-Überwachungs Beispiele](https://go.microsoft.com/fwlink/?LinkId=193959)
+- [AppFabric-Überwachungs Beispiele](https://docs.microsoft.com/previous-versions/appfabric/ff383407(v=azure.10))

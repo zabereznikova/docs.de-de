@@ -2,20 +2,20 @@
 title: Externalisierte Richtlinienaktivität in .NET Framework 4.5
 ms.date: 03/30/2017
 ms.assetid: 92fd6f92-23a1-4adf-b96a-2754ea93ad3e
-ms.openlocfilehash: 9184386751bb44e89dfdcedd34ab0ab84a27323e
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 8fd08c9c29f7a268170aaa101a9bdb85250157dc
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74710928"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094630"
 ---
 # <a name="externalized-policy-activity-in-net-framework-45"></a>Externalisierte Richtlinienaktivität in .NET Framework 4.5
 
-Dieses Beispiel veranschaulicht, wie die ExternalizedPolicy4-Aktivität die Ausführung vorhandener .NET Framework 3,5 Windows Workflow Foundation (WF 3,5) <xref:System.Workflow.Activities.Rules.RuleSet> Objekten in [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] Windows Workflow Foundation (WF 4,5) direkt mithilfe der Regel-Engine ermöglicht, die in WF 3,5 ausgeliefert wird. Mit dieser Aktivität können Sie alle vorhandenen WF 3.5 <xref:System.Workflow.Activities.Rules.RuleSet>-Elemente öffnen und ausführen. Weitere Informationen zur WF 3,5-Regel-Engine, die im Rahmen Windows Workflow Foundation enthalten ist, finden Sie unter [Einführung in das Windows Workflow Foundation Regel-Engine](https://go.microsoft.com/fwlink/?LinkId=166079). Weitere Informationen zum Migrieren von Regeln in [!INCLUDE[wf1](../../../../includes/wf1-md.md)] in [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)]finden Sie in der [Migrations Anleitung](../migration-guidance.md).
+Dieses Beispiel veranschaulicht, wie die ExternalizedPolicy4-Aktivität die Ausführung vorhandener .NET Framework 3,5 Windows Workflow Foundation (WF 3,5) <xref:System.Workflow.Activities.Rules.RuleSet> Objekten in [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] Windows Workflow Foundation (WF 4,5) direkt mithilfe der Regel-Engine ermöglicht, die in WF 3,5 ausgeliefert wird. Mit dieser Aktivität können Sie alle vorhandenen WF 3.5 <xref:System.Workflow.Activities.Rules.RuleSet>-Elemente öffnen und ausführen. Weitere Informationen zur WF 3,5-Regel-Engine, die im Rahmen Windows Workflow Foundation enthalten ist, finden Sie unter [Einführung in das Windows Workflow Foundation Regel-Engine](https://docs.microsoft.com/previous-versions/dotnet/articles/aa480193(v=msdn.10)). Weitere Informationen zum Migrieren von Regeln in [!INCLUDE[wf1](../../../../includes/wf1-md.md)] in [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)]finden Sie in der [Migrations Anleitung](../migration-guidance.md).
 
 ## <a name="projects-in-this-sample"></a>Projekte in diesem Beispiel
 
-|Projektname|Beschreibung|Hauptdateien|
+|Projektname|BESCHREIBUNG|Hauptdateien|
 |-|-|-|
 |ExternalizedPolicy4|Enthält die ExternalizedPolicy4-Aktivität und ihren WF 4.5-Designer.|**ExternalizedPolicy4.cs**: Aktivitäts Definition.<br /><br /> **ExternalizedPolicy4Designer. XAML**: benutzerdefinierter Designer für die ExternalizedPolicy4-Aktivität. Er verwendet den Regeleditor (<xref:System.Workflow.Activities.Rules.Design.RuleSetDialog>) der WF 3.5-Regel-Engine.|
 |ImperativeCodeClientSample|Beispielclientanwendung, die einen Workflow mithilfe einer ExternalizedPolicy4-Anwendung mit obligatorischem C#-Code konfiguriert und ausführt (kein Designer verwendet).|**ApplyDiscount. Rules**: Datei mit [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Regeldefinitionen.<br /><br /> **Order.cs**: Typ, der eine Kundenbestellung darstellt. Regeln werden auf Objekte dieses Typs angewendet.<br /><br /> **Program.cs**: konfiguriert und führt einen Workflow aus, der über eine Policy4-Aktivität verfügt, um in ApplyDiscount. Rules definierte Regeln auf Instanzen von Order-Objekten anzuwenden.<br /><br /> App.config: Die Konfigurationsdatei mit dem Pfad der Regeldatei.|
@@ -42,7 +42,7 @@ public class ExternalizedPolicy4Activity<TResult>: CodeActivity
 }
 ```
 
-|property|Beschreibung|
+|Eigenschaft|BESCHREIBUNG|
 |-|-|
 |RuleSetFilePath|Pfad zur .NET Framework 3.5 <xref:System.Workflow.Activities.Rules.RuleSet> Datei, die beim Ausführen der Aktivität ausgewertet werden soll.|
 |RuleSetName|Name des <xref:System.Workflow.Activities.Rules.RuleSet>, der in der RULES-Datei verwendet werden soll.|
@@ -52,7 +52,7 @@ public class ExternalizedPolicy4Activity<TResult>: CodeActivity
 
 ## <a name="externalizedpolicy4-activity-designer"></a>ExternalizedPolicy4-Aktivitätsdesigner
 
-Mit dem ExternalizedPolicy4-Designer können Sie eine Aktivität zur Verwendung eines vorhandenen RuleSet konfigurieren, ohne dass Sie Code schreiben müssen. Geben Sie den Pfad an, in dem sich die RULES-Datei befindet, und legen Sie den zu verwendenden <xref:System.Workflow.Activities.Rules.RuleSet>-Namen fest. Sie können außerdem das <xref:System.Workflow.Activities.Rules.RuleSet> ändern. Nach dem Erstellen der Projektmappe befindet sich diese im Abschnitt Microsoft.Samples.Activities.Rules in der Toolbox. Mit dem Designer können Sie eine RULES-Datei und ein <xref:System.Workflow.Activities.Rules.RuleSet> auswählen. Wenn auf die Schaltfläche **Regelsatz bearbeiten** geklickt wird, wird der <xref:System.Workflow.Activities.Rules.Design.RuleSetDialog> WF 3,5 angezeigt. Dieses Dialogfeld ist der neu gehostete WF 3.5-Regeleditor. Es wird verwendet, um die von der ExternalizedPolicy4-Aktivität ausgeführten Regeln anzuzeigen und zu bearbeiten.
+Mit dem ExternalizedPolicy4-Designer können Sie eine Aktivität zur Verwendung eines vorhandenen RuleSet konfigurieren, ohne dass Sie Code schreiben müssen. Geben Sie den Pfad an, in dem sich die RULES-Datei befindet, und legen Sie den zu verwendenden <xref:System.Workflow.Activities.Rules.RuleSet>-Namen fest. Sie können außerdem das <xref:System.Workflow.Activities.Rules.RuleSet> ändern. Nach dem Erstellen der Projektmappe befindet sich dies im Abschnitt Microsoft.Samples.Activities.Rules. Mit dem Designer können Sie eine RULES-Datei und ein <xref:System.Workflow.Activities.Rules.RuleSet> auswählen. Wenn auf die Schaltfläche **Regelsatz bearbeiten** geklickt wird, wird der <xref:System.Workflow.Activities.Rules.Design.RuleSetDialog> WF 3,5 angezeigt. Dieses Dialogfeld ist der neu gehostete WF 3.5-Regeleditor. Es wird verwendet, um die von der ExternalizedPolicy4-Aktivität ausgeführten Regeln anzuzeigen und zu bearbeiten.
 
 ## <a name="policy4-and-externalpolicy4"></a>Policy4 und ExternalPolicy4
 

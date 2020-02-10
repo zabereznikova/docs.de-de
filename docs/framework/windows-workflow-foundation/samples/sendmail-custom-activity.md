@@ -2,33 +2,33 @@
 title: Benutzerdefinierte SendMail-Aktivität
 ms.date: 03/30/2017
 ms.assetid: 947a9ae6-379c-43a3-9cd5-87f573a5739f
-ms.openlocfilehash: b1e2d58a09362569d4d408f6e1c9e589aa6bda76
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 90b3192d931b216345b50ba49465455427e43a64
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74715581"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094604"
 ---
 # <a name="sendmail-custom-activity"></a>Benutzerdefinierte SendMail-Aktivität
 In diesem Beispiel wird das Erstellen einer benutzerdefinierten Aktivität veranschaulicht, die von der <xref:System.Activities.AsyncCodeActivity> abgeleitet wird, um E-Mail-Nachrichten zur Verwendung in einer Workflowanwendung via SMTP zu senden. Die benutzerdefinierte Aktivität verwendet die Funktionen von <xref:System.Net.Mail.SmtpClient>, um e-Mail-Nachrichten asynchron zu senden und e-Mails mit Authentifizierung zu senden. Außerdem werden Endbenutzerfunktionen wie Testmodus, Tokenersetzung, Dateivorlagen und Testablagepfad bereitgestellt.  
   
  In der folgenden Tabelle werden die Argumente für die `SendMail`-Aktivität aufgelistet.  
   
-|-Name|Typ|Beschreibung|  
+|Name|type|BESCHREIBUNG|  
 |-|-|-|  
 |Host|String|Die Adresse des SMTP-Serverhosts.|  
 |Port|String|Der Port des SMTP-Diensts auf dem Host.|  
 |EnableSsl|bool|Gibt an, ob der <xref:System.Net.Mail.SmtpClient> die Verbindung mit SSL (Secure Sockets Layer) verschlüsselt.|  
-|UserName-Ansicht|String|Der Benutzername zum Einrichten der Anmeldeinformationen und Authentifizieren der <xref:System.Net.Mail.SmtpClient.Credentials%2A>-Absendereigenschaft.|  
+|UserName|String|Der Benutzername zum Einrichten der Anmeldeinformationen und Authentifizieren der <xref:System.Net.Mail.SmtpClient.Credentials%2A>-Absendereigenschaft.|  
 |Kennwort|String|Das Kennwort zum Einrichten der Anmeldeinformationen und Authentifizieren der <xref:System.Net.Mail.SmtpClient.Credentials%2A>-Absendereigenschaft.|  
-|Betreff|<xref:System.Activities.InArgument%601>\<Zeichenfolge >|Der Betreff der Nachricht.|  
-|Text|<xref:System.Activities.InArgument%601>\<Zeichenfolge >|Der Nachrichtentext.|  
-|Anlagen|<xref:System.Activities.InArgument%601>\<Zeichenfolge >|Anlagen Sammlung zum Speichern von Daten, die an diese e-Mail angefügt sind.|  
-|Von|<xref:System.Net.Mail.MailAddress>|Von der Adresse für diese e-Mail-Nachricht.|  
-|Vorgang|<xref:System.Activities.InArgument%601>\<<xref:System.Net.Mail.MailAddressCollection>>|Adress Sammlung, die die Empfänger dieser e-Mail-Nachricht enthält.|  
+|Subject|<xref:System.Activities.InArgument%601>\<Zeichenfolge >|Der Betreff der Nachricht.|  
+|Body|<xref:System.Activities.InArgument%601>\<Zeichenfolge >|Der Nachrichtentext.|  
+|Attachments|<xref:System.Activities.InArgument%601>\<Zeichenfolge >|Anlagen Sammlung zum Speichern von Daten, die an diese e-Mail angefügt sind.|  
+|From|<xref:System.Net.Mail.MailAddress>|Von der Adresse für diese e-Mail-Nachricht.|  
+|To|<xref:System.Activities.InArgument%601>\<<xref:System.Net.Mail.MailAddressCollection>>|Adress Sammlung, die die Empfänger dieser e-Mail-Nachricht enthält.|  
 |CC|<xref:System.Activities.InArgument%601>\<<xref:System.Net.Mail.MailAddressCollection>>|Adress Sammlung, die die CC-Empfänger für diese e-Mail-Nachricht enthält.|  
 |BCC|<xref:System.Activities.InArgument%601>\<<xref:System.Net.Mail.MailAddressCollection>>|Die Adress Sammlung, die die Bcc-Empfänger (Blind Carbon Copy) für diese e-Mail-Nachricht enthält.|  
-|tokens|<xref:System.Activities.InArgument%601>< IDictionary\<Zeichenfolge, Zeichenfolge > >|Diese Token können im Text ersetzt werden. Mithilfe dieser Funktion können Benutzer bestimmte Werte im Text verwenden, die später durch Tokens ersetzt werden können, die mit dieser Eigenschaft angegeben werden.|  
+|Token|<xref:System.Activities.InArgument%601>< IDictionary\<Zeichenfolge, Zeichenfolge > >|Diese Token können im Text ersetzt werden. Mithilfe dieser Funktion können Benutzer bestimmte Werte im Text verwenden, die später durch Tokens ersetzt werden können, die mit dieser Eigenschaft angegeben werden.|  
 |BodyTemplateFilePath|String|Der Pfad einer Vorlage für den Text. Mit der `SendMail`-Aktivität wird der Inhalt dieser Datei in die body-Eigenschaft kopiert.<br /><br /> Die Vorlage kann Token enthalten, die durch den Inhalt der Tokeneigenschaft ersetzt werden.|  
 |TestMailTo|<xref:System.Net.Mail.MailAddress>|Wenn diese Eigenschaft festgelegt ist, werden alle e-Mails an die darin angegebene Adresse gesendet.<br /><br /> Diese Eigenschaft ist für das Testen von Workflows vorgesehen. Wenn Sie z. b. sicherstellen möchten, dass alle e-Mails gesendet werden, ohne dass Sie an die eigentlichen Empfänger gesendet werden.|  
 |TestDropPath|String|Wenn diese Eigenschaft festgelegt ist, werden alle e-Mails ebenfalls in der angegebenen Datei gespeichert.<br /><br /> Diese Eigenschaft soll beim Testen oder Debuggen von Workflows verwendet werden, um sicherzustellen, dass das Format und der Inhalt der ausgehenden e-Mails angemessen sind.|  
@@ -36,7 +36,7 @@ In diesem Beispiel wird das Erstellen einer benutzerdefinierten Aktivität veran
 ## <a name="solution-contents"></a>Inhalt der Projektmappe  
  Die Projektmappe enthält zwei Projekte.  
   
-|-Projekt|Beschreibung|Wichtige Dateien|  
+|Project|BESCHREIBUNG|Wichtige Dateien|  
 |-------------|-----------------|---------------------|  
 |SendMail|Die SendMail-Aktivität|1. sendmail.cs: Implementierung für die Hauptaktivität<br />2. sendmaildesigner. XAML und SendMailDesigner.XAML.cs: Designer für die sendmail-Aktivität<br />3. mailtemplatebody. htm: Vorlage für die zu sendende e-Mail.|  
 |SendMailTestClient|Ein Client zum Testen der SendMail-Aktivität.  In diesem Projekt werden zwei Möglichkeiten zum Aufrufen der SendMail-Aktivität veranschaulicht: deklarativ und programmgesteuert.|1. Sequence1. XAML: Workflow, der die sendmail-Aktivität aufruft.<br />2. Program.cs: Ruft Sequence1 auf und erstellt auch Programm gesteuert einen Workflow, der sendmail verwendet.|  
@@ -107,13 +107,11 @@ new SendMail
   
  Weitere Informationen zum Einrichten eines SMTP-Servers finden Sie unter den folgenden Links.  
   
-- [Microsoft Technet](https://go.microsoft.com/fwlink/?LinkId=166060)  
+- [Konfigurieren des SMTP-Dienstanbieter (IIS 6,0)](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc784968(v=ws.10))  
   
-- [Konfigurieren des SMTP-Dienstanbieter (IIS 6,0)](https://go.microsoft.com/fwlink/?LinkId=150456)  
+- [IIS 7,0: Konfigurieren von SMTP-e-Mails](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc772058(v=ws.10))  
   
-- [IIS 7,0: Konfigurieren von SMTP-e-Mails](https://go.microsoft.com/fwlink/?LinkId=150457)  
-  
-- [Installieren des SMTP-Dienstanbieter](https://go.microsoft.com/fwlink/?LinkId=150458)  
+- [Installieren des SMTP-Dienstanbieter](https://docs.microsoft.com/previous-versions/tn-archive/aa997480(v=exchg.65))  
   
  SMTP-Emulatoren können von Drittanbietern heruntergeladen werden.  
   

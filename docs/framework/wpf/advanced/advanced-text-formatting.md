@@ -9,12 +9,12 @@ helpviewer_keywords:
 - text [WPF]
 - typography [WPF], text formatting
 ms.assetid: f0a7986e-f5b2-485c-a27d-f8e922022212
-ms.openlocfilehash: d509de02cd1b3f645ee439c0b0eb33fd1ddbdb07
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: 26ee3c2b8a431200c3dc04130deb2247b6c1446d
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75636106"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77095241"
 ---
 # <a name="advanced-text-formatting"></a>Erweiterte Textformatierung
 Windows Presentation Foundation (WPF) bietet einen robusten Satz von APIs zum Einschließen von Text in Ihre Anwendung. Layout-und [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]-APIs, z. b. <xref:System.Windows.Controls.TextBlock>, stellen die am häufigsten verwendeten und allgemeinen Elemente für die Textpräsentation bereit. Das Zeichnen von APIs, z. b. <xref:System.Windows.Media.GlyphRunDrawing> und <xref:System.Windows.Media.FormattedText>, bietet eine Möglichkeit, formatierten Text in Zeichnungen einzubeziehen. Auf der höchsten Ebene bietet WPF eine erweiterbare Textformatierungs-Engine, mit der jeder Aspekt der Textpräsentation gesteuert werden kann, z. b. die Verwaltung von Text speichern, die Formatierung von Text Lauf Formaten und die eingebettete Objekt Verwaltung.  
@@ -22,10 +22,10 @@ Windows Presentation Foundation (WPF) bietet einen robusten Satz von APIs zum Ei
  Dieses Thema enthält eine Einführung in die WPF-Textformatierung. Er konzentriert sich auf die Client Implementierung und die Verwendung der WPF-Textformatierungs-Engine.  
   
 > [!NOTE]
-> Alle Codebeispiele in diesem Dokument finden Sie im Beispiel für die [Erweiterte Text Formatierung](https://go.microsoft.com/fwlink/?LinkID=159965).  
+> Alle Codebeispiele in diesem Dokument finden Sie im Beispiel für die [Erweiterte Text Formatierung](https://github.com/Microsoft/WPF-Samples/tree/master/PerMonitorDPI/TextFormatting).  
 
 <a name="prereq"></a>   
-## <a name="prerequisites"></a>Erforderliche Komponenten  
+## <a name="prerequisites"></a>Voraussetzungen  
  In diesem Thema wird davon ausgegangen, dass Sie mit den APIs auf höherer Ebene vertraut sind, die zur Textpräsentation verwendet werden In den meisten Benutzer Szenarien sind die in diesem Thema beschriebenen erweiterten Text Formatierungs-APIs nicht erforderlich. Eine Einführung in die verschiedenen Text-APIs finden Sie unter [Dokumente in WPF](documents-in-wpf.md).  
   
 <a name="section1"></a>   
@@ -67,7 +67,7 @@ Windows Presentation Foundation (WPF) bietet einen robusten Satz von APIs zum Ei
   
  In der folgenden Tabelle werden einige der vordefinierten <xref:System.Windows.Media.TextFormatting.TextRun> Objekte gezeigt.  
   
-|TextRun-Typ|Verwendungs-|  
+|TextRun-Typ|Verwendung|  
 |------------------|-----------|  
 |<xref:System.Windows.Media.TextFormatting.TextCharacters>|Der spezialisierte Lauftext, der zum Übergeben einer Darstellung von Zeichensymbolen zurück an den Textformatierer verwendet wird|  
 |<xref:System.Windows.Media.TextFormatting.TextEmbeddedObject>|Der spezialisierte Lauftext, der zum Bereitstellen von Inhalt verwendet wird, in dem Messungen, Treffertests und Zeichnungen komplett ausgeführt werden, z.B. eine Schaltfläche oder ein Bild im Text|  
@@ -91,7 +91,7 @@ Windows Presentation Foundation (WPF) bietet einen robusten Satz von APIs zum Ei
 ## <a name="specifying-formatting-properties"></a>Angeben von Formatierungseigenschaften  
  <xref:System.Windows.Media.TextFormatting.TextRun> Objekte werden mithilfe von Eigenschaften formatiert, die vom Text Speicher bereitgestellt werden. Diese Eigenschaften sind in zwei Typen enthalten: <xref:System.Windows.Media.TextFormatting.TextParagraphProperties> und <xref:System.Windows.Media.TextFormatting.TextRunProperties>. <xref:System.Windows.Media.TextFormatting.TextParagraphProperties> handle-Inklusions Eigenschaften wie <xref:System.Windows.TextAlignment> und <xref:System.Windows.FlowDirection>verarbeiten. <xref:System.Windows.Media.TextFormatting.TextRunProperties> sind Eigenschaften, die für jeden innerhalb eines Absatzes ausgeführten Text unterschiedlich sein können, z. b. Vordergrund Pinsel, <xref:System.Windows.Media.Typeface>und Schrift Grad. Um benutzerdefinierte Absatz-und benutzerdefinierte Text Lauf Eigenschafts Typen zu implementieren, muss Ihre Anwendung Klassen erstellen, die von <xref:System.Windows.Media.TextFormatting.TextParagraphProperties> bzw. <xref:System.Windows.Media.TextFormatting.TextRunProperties> abgeleitet werden.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Typografie in WPF](typography-in-wpf.md)
 - [Dokumente in WPF](documents-in-wpf.md)

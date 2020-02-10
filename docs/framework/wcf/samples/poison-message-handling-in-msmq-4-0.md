@@ -2,28 +2,28 @@
 title: Behandlung nicht verarbeitbarer Nachrichten in MSMQ 4,0
 ms.date: 03/30/2017
 ms.assetid: ec8d59e3-9937-4391-bb8c-fdaaf2cbb73e
-ms.openlocfilehash: cc4da0deea0de2cd8b3bb8e8f2ba9b8a17e3cc60
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: 0a9d4ec9657bacdbcb1273791dc7a593a9565c25
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76919399"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094955"
 ---
 # <a name="poison-message-handling-in-msmq-40"></a>Behandlung nicht verarbeitbarer Nachrichten in MSMQ 4,0
 In diesem Beispiel wird veranschaulicht, wie die Handhabung nicht verarbeitbarer Nachrichten in einem Dienst erfolgen soll. Dieses Beispiel basiert auf dem [transaktiven MSMQ-Bindungs](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md) Beispiel. In diesem Beispiel wird der `netMsmqBinding` verwendet. Der Dienst ist eine selbst gehostete Konsolenanwendung, die es Ihnen ermöglicht, den Dienst beim Empfang von Nachrichten in der Warteschlange zu beobachten.
 
  In einer Warteschlangenkommunikation kommuniziert der Client über eine Warteschlange mit dem Dienst. Genauer ausgedrückt bedeutet dies, dass der Client Nachrichten an eine Warteschlange sendet. Der Dienst empfängt Nachrichten aus der Warteschlange. Folglich müssen der Dienst und der Client nicht gleichzeitig ausgeführt werden, um über eine Warteschlange zu kommunizieren.
 
- Eine nicht verarbeitbare Nachricht ist eine Nachricht, die wiederholt aus einer Warteschlange eingelesen wird, wenn der Dienst, der die Nachricht liest, diese nicht verarbeiten kann und daher die Transaktion abbricht, unter der die Nachricht gelesen wird. In solchen Fällen wird erneut versucht, die Nachricht zu verarbeiten. Dies kann theoretisch ewig so weitergehen, wenn ein Problem mit der Nachricht vorliegt. Beachten Sie, dass dieser Fall nur eintreten kann, wenn zum Lesen aus der Warteschlange und zum Aufrufen des Dienstvorgangs Transaktionen verwendet werden.
+ Eine nicht verarbeitbare Nachricht ist eine Nachricht, die wiederholt aus einer Warteschlange eingelesen wird, wenn der Dienst, der die Nachricht liest, diese nicht verarbeiten kann und daher die Transaktion abbricht, unter der die Nachricht gelesen wird. In solchen Fällen wird erneut versucht, die Nachricht zu verarbeiten. Dies kann theoretisch ewig so weitergehen, wenn ein Problem mit der Nachricht vorliegt. Dies kann nur auftreten, wenn Sie Transaktionen verwenden, um aus der Warteschlange zu lesen und den Dienst Vorgang aufzurufen.
 
  Je nach MSMQ-Version unterstützt NetMsmqBinding eingeschränkte bis vollständige Erkennung von nicht verarbeitbaren Nachrichten. Nachdem die Nachricht als nicht verarbeitbar erkannt wurde, kann sie auf verschiedene Weisen gehandhabt werden. Wiederum in Abhängigkeit von der MSMQ-Version unterstützt NetMsmqBinding die eingeschränkte bis vollständige Handhabung von nicht verarbeitbaren Nachrichten.
 
- Dieses Beispiel veranschaulicht die eingeschränkten nicht verarbeitbaren Funktionen, die auf Windows Server 2003 und der Windows XP-Plattform bereitgestellt werden, sowie die vollständigen in Windows Vista bereitgestellten In beiden Beispielen besteht das Ziel darin, die nicht verarbeitbare Nachricht aus der Warteschlange in eine andere Warteschlange zu verschieben, in der dann ein Dienst für nicht verarbeitbare Nachrichten darauf angewendet werden kann.
+ Dieses Beispiel veranschaulicht die eingeschränkten nicht verarbeitbaren Funktionen, die auf Windows Server 2003 und der Windows XP-Plattform bereitgestellt werden, sowie die vollständigen in Windows Vista bereitgestellten In beiden Beispielen besteht das Ziel darin, die nicht verarbeitbare Nachricht aus der Warteschlange in eine andere Warteschlange zu verschieben. Diese Warteschlange kann dann von einem Dienst für nicht verarbeitbare Nachrichten bedient werden.
 
 ## <a name="msmq-v40-poison-handling-sample"></a>MSMQ v4.0 &#8211; Beispiel für Handhabung nicht verarbeitbarer Nachrichten
- In Windows Vista stellt MSMQ eine nicht verarbeitbare unter Warteschlange bereit, die zum Speichern von nicht verarbeitbaren Nachrichten verwendet werden kann. Dieses Beispiel veranschaulicht die bewährte Vorgehensweise beim Umgang mit nicht verarbeitbaren Nachrichten unter Verwendung von Windows Vista.
+ In Windows Vista bietet MSMQ eine nicht verarbeitbare unter Warteschlange, die zum Speichern von nicht verarbeitbaren Nachrichten verwendet werden kann Dieses Beispiel veranschaulicht die bewährte Vorgehensweise beim Umgang mit nicht verarbeitbaren Nachrichten unter Verwendung von Windows Vista.
 
- Die Erkennung nicht verarbeitbarer Nachrichten in Windows Vista ist sehr aufwendig. Es gibt 3 Eigenschaften, die bei der Erkennung behilflich sind. <xref:System.ServiceModel.MsmqBindingBase.ReceiveRetryCount%2A> gibt an, wie oft eine bestimmte Nachricht erneut aus der Warteschlange gelesen und zur Verarbeitung an die Anwendung übergeben wird. Eine Nachricht wird erneut aus der Warteschlange eingelesen, wenn sie wieder in die Warteschlange eingestellt wurde, weil sie nicht an die Anwendung übergeben werden konnte oder weil die Anwendung die Transaktion im Dienstvorgang zurücksetzt. <xref:System.ServiceModel.MsmqBindingBase.MaxRetryCycles%2A> gibt an, wie oft die Nachricht in die Wiederholungswarteschlange verschoben wird. Wenn <xref:System.ServiceModel.MsmqBindingBase.ReceiveRetryCount%2A> erreicht wird, wird die Nachricht in die Wiederholungswarteschlange verschoben. Die Eigenschaft <xref:System.ServiceModel.MsmqBindingBase.RetryCycleDelay%2A> ist die Zeitverzögerung, nach der die Nachricht aus der Wiederholungswarteschlange zurück in die Hauptwarteschlange verschoben wird. <xref:System.ServiceModel.MsmqBindingBase.ReceiveRetryCount%2A> wird auf 0 zurückgesetzt. Es wird ein erneuter Versuch gestartet. Wenn alle Versuche, die Nachricht zu lesen, fehlgeschlagen sind, wird die Nachricht als nicht verarbeitbar markiert.
+ Die Erkennung nicht verarbeitbarer Nachrichten in Windows Vista ist ausgereift. Es gibt 3 Eigenschaften, die bei der Erkennung behilflich sind. <xref:System.ServiceModel.MsmqBindingBase.ReceiveRetryCount%2A> gibt an, wie oft eine bestimmte Nachricht erneut aus der Warteschlange gelesen und zur Verarbeitung an die Anwendung übergeben wird. Eine Nachricht wird erneut aus der Warteschlange eingelesen, wenn sie wieder in die Warteschlange eingestellt wurde, weil sie nicht an die Anwendung übergeben werden konnte oder weil die Anwendung die Transaktion im Dienstvorgang zurücksetzt. <xref:System.ServiceModel.MsmqBindingBase.MaxRetryCycles%2A> gibt an, wie oft die Nachricht in die Wiederholungswarteschlange verschoben wird. Wenn <xref:System.ServiceModel.MsmqBindingBase.ReceiveRetryCount%2A> erreicht wird, wird die Nachricht in die Wiederholungswarteschlange verschoben. Die Eigenschaft <xref:System.ServiceModel.MsmqBindingBase.RetryCycleDelay%2A> ist die Zeitverzögerung, nach der die Nachricht aus der Wiederholungswarteschlange zurück in die Hauptwarteschlange verschoben wird. <xref:System.ServiceModel.MsmqBindingBase.ReceiveRetryCount%2A> wird auf 0 zurückgesetzt. Es wird ein erneuter Versuch gestartet. Wenn alle Versuche, die Nachricht zu lesen, fehlgeschlagen sind, wird die Nachricht als nicht verarbeitbar markiert.
 
  Sobald eine Nachricht als nicht verarbeitbar markiert wurde, wird damit gemäß den Einstellungen in der <xref:System.ServiceModel.MsmqBindingBase.ReceiveErrorHandling%2A>-Enumeration verfahren. So können Sie die möglichen Werte erneut durchlaufen:
 
@@ -31,11 +31,11 @@ In diesem Beispiel wird veranschaulicht, wie die Handhabung nicht verarbeitbarer
 
 - „Drop“: Verwirft die Nachricht.
 
-- "Move": Verschiebt die Nachricht in die Unterwarteschlange für potenziell schädliche Nachrichten. Dieser Wert ist nur unter Windows Vista verfügbar.
+- Verschieben:, um die Nachricht in die unter Warteschlange für beschädigte Nachrichten zu verschieben. Dieser Wert ist nur unter Windows Vista verfügbar.
 
 - "Reject": Lehnt die Nachricht ab und sendet sie zurück in die Warteschlange für unzustellbare Nachrichten des Absenders. Dieser Wert ist nur unter Windows Vista verfügbar.
 
- Im Beispiel wird die Verwendung der `Move`-Disposition für die nicht verarbeitbare Nachricht veranschaulicht. `Move` führt dazu, dass die Nachricht in die Unterwarteschlange für potenziell schädliche Nachrichten verschoben wird.
+ Im Beispiel wird die Verwendung der `Move`-Disposition für die nicht verarbeitbare Nachricht veranschaulicht. `Move` bewirkt, dass die Nachricht in die unter Warteschlange für potenziell schädliche Nachrichten verschoben
 
  Der Dienstvertrag ist `IOrderProcessor`, der einen unidirektionalen Dienst definiert, der für die Verwendung mit Warteschlangen geeignet ist.
 
@@ -48,7 +48,7 @@ public interface IOrderProcessor
 }
 ```
 
- Der Dienstvorgang zeigt eine Nachricht an, die angibt, dass der Auftrag verarbeitet wird. Zur Demonstration der Funktion für nicht verarbeitbare Nachrichten löst der Dienst `SubmitPurchaseOrder` eine Ausnahme auf, um die Transaktion bei einem zufälligen Aufruf des Diensts zurückzusetzen. Dadurch wird die Nachricht in die Warteschlange zurückgestellt. Schließlich wird die Nachricht als nicht verarbeitbar markiert. Die Konfiguration wird so festgelegt, dass die nicht verarbeitbare Nachricht in die Unterwarteschlange für potenziell schädliche Nachrichten verschoben wird.
+ Der Dienstvorgang zeigt eine Nachricht an, die angibt, dass der Auftrag verarbeitet wird. Zum Veranschaulichen der Funktion für nicht verarbeitbare Nachrichten löst der `SubmitPurchaseOrder` Dienst Vorgang eine Ausnahme aus, um ein Rollback der Transaktion bei einem zufälligen Aufruf des dienstangens auszuführen. Dadurch wird die Nachricht in die Warteschlange zurückgestellt. Schließlich wird die Nachricht als nicht verarbeitbar markiert. Die Konfiguration wird so festgelegt, dass die nicht verarbeitbare Nachricht in die unter Warteschlange für beschädigte
 
 ```csharp
 // Service class that implements the service contract.
@@ -206,7 +206,7 @@ public class OrderProcessorService : IOrderProcessor
     }
 ```
 
- Im Gegensatz zum Auftragsverarbeitungsdienst, der Nachrichten aus der Auftragswarteschlange liest, liest der Dienst für nicht verarbeitbare Nachrichten Nachrichten aus der Unterwarteschlange für potenziell schädliche Nachrichten. Die Warteschlange für potenziell schädliche Nachrichten ist eine Unterwarteschlange der Hauptwarteschlange, trägt den Namen "poison" und wird automatisch von MSMQ generiert. Um darauf zuzugreifen, geben Sie den Namen der Hauptwarteschlange, gefolgt von ";" und dem Namen der Unterwarteschlange (in diesem Fall -"poison") an, wie in der folgenden Beispielkonfiguration gezeigt.
+ Im Gegensatz zum Dienst für die Auftrags Verarbeitung, der Nachrichten aus der Auftrags Warteschlange liest, liest der Dienst für nicht verarbeitbare Nachrichten aus der Warteschlange Die Warteschlange für nicht verarbeitbare Nachrichten ist eine unter Warteschlange der Haupt Warteschlange, hat den Namen "nicht verarbeitbar" und wird automatisch von Um darauf zuzugreifen, geben Sie den Namen der Haupt Warteschlange ein, gefolgt von ";" und dem Namen der unter Warteschlange, in diesem Fall "nicht verarbeitbar", wie in der folgenden Beispielkonfiguration gezeigt.
 
 > [!NOTE]
 > Im Beispiel für MSMQ v3.0 handelt es sich beim Namen der Warteschlange für potenziell schädliche Nachrichten ("poison") nicht um eine Unterwarteschlange, sondern vielmehr um die Warteschlange, in die die Nachricht verschoben wurde.
@@ -309,7 +309,7 @@ Processing Purchase Order: 23e0b991-fbf9-4438-a0e2-20adf93a4f89
 
      Stellen Sie sicher, dass der Endpunkt der Bindung zugeordnet wird, indem Sie das bindingConfiguration-Attribut des Endpunkts entsprechend festlegen.
 
-2. Ändern Sie die Konfiguration auf dem PoisonMessageServer, dem Server und dem Client, bevor Sie das Beispiel ausführen.
+2. Stellen Sie sicher, dass Sie die Konfiguration auf dem PoisonMessageServer, dem Server und dem Client ändern, bevor Sie das Beispiel ausführen.
 
     > [!NOTE]
     > Das Festlegen von `security mode` auf `None` entspricht dem Festlegen von `MsmqAuthenticationMode`, `MsmqProtectionLevel` und der `Message`-Sicherheit auf `None`.  

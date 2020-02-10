@@ -1,13 +1,13 @@
 ---
-title: Breaking Changes bei der Kryptografie – .NET Core
+title: Breaking Changes bei der Kryptografie
 description: Listet die Breaking Changes bei der Kryptografie in .NET Core auf.
 ms.date: 09/20/2019
-ms.openlocfilehash: 4b13985a12ee0530edd3a0960923aafef1696d90
-ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
+ms.openlocfilehash: fcef4b65245a5dd9219cbdbb548ca575a823a949
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76116466"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77093031"
 ---
 # <a name="cryptography-breaking-changes"></a>Breaking Changes bei der Kryptografie
 
@@ -15,7 +15,7 @@ Die folgenden Breaking Changes sind auf dieser Seite dokumentiert:
 
 - [EnvelopedCms verwendet standardmäßig AES-256-Verschlüsselung](#envelopedcms-defaults-to-aes-256-encryption)
 - [Die Mindestgröße für die Generierung von RSAOpenSsl-Schlüsseln wurde heraufgesetzt](#minimum-size-for-rsaopenssl-key-generation-has-increased)
-- [.NET Core 3.0 zieht OpenSSL 1.1.x OpenSSL 1.0.x vor](#net-core-30-prefers-openssl-11x-to-openssl-10x)
+- [.NET Core 3.0 zieht OpenSSL 1.1.x OpenSSL 1.0.x vor](#net-core-30-prefers-openssl-11x-to-openssl-10x)
 - [Bessere Argumentvalidierung im Pkcs8PrivateKeyInfo-Konstruktor](#better-argument-validation-in-the-pkcs8privatekeyinfo-constructor)
 
 ## <a name="net-core-30"></a>.NET Core 3.0

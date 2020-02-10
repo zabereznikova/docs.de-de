@@ -2,12 +2,12 @@
 title: Externes RuleSet-Toolkit
 ms.date: 03/30/2017
 ms.assetid: a306d283-a031-475e-aa01-9ae86e7adcb0
-ms.openlocfilehash: b07d2b63d9f3d98b8f08eb697a8d688d8fac1962
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: eb59b02d469788b23126f4e02c5b7ae5a63081f0
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74710895"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094669"
 ---
 # <a name="external-ruleset-toolkit"></a>Externes RuleSet-Toolkit
 
@@ -16,7 +16,7 @@ Wenn Regeln innerhalb einer Workflowanwendung verwendet werden, sind die Regeln 
 Das Beispiel für ein externes RuleSet-Toolkit enthält ein Windows Forms-basiertes Tool, das Sie zum Verwalten und Bearbeiten der RuleSet-Versionen in einer Datenbank verwenden können. Es bietet auch eine Aktivität und einen Hostdienst zum Ausführen dieser Regeln.
 
 > [!NOTE]
-> Für dieses Beispiel ist [Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkId=96181)erforderlich.
+> Für dieses Beispiel ist [Microsoft SQL Server](/sql)erforderlich.
 
 Visual Studio stellt einen RuleSet-Editor als Teil des Windows Workflow Foundation (WF) bereit. Sie können diesen Editor starten, indem Sie auf die `Policy`-Aktivität in einem Workflow doppelklicken. Dadurch wird das definierte RuleSet-Objekt in die dem Workflow zugeordnete RULES-Datei serialisiert (eine `Policy`-Aktivität führt eine RuleSet-Instanz für den Workflow aus). Die RULES-Datei wird beim Erstellen des Workflowprojekts als Ressource in die Assembly kompiliert.
 

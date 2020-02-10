@@ -9,12 +9,12 @@ helpviewer_keywords:
 - unfreezing Freezable objects [WPF]
 - classes [WPF], Freezable
 ms.assetid: 89c71692-4f43-4057-b611-67c6a8a863a2
-ms.openlocfilehash: 755240859829042e9790b9c89e47bb7a2013ceef
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: b1887afd19407898d8de1d92252e29778899fb89
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460446"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77095189"
 ---
 # <a name="freezable-objects-overview"></a>Übersicht über Freezable-Objekte
 
@@ -170,11 +170,11 @@ Wenn die Klasse nicht-Abhängigkeits Eigenschafts Datenmember enthält, die <xre
 > [!NOTE]
 > Es ist sehr wichtig, dass Sie jede <xref:System.Windows.Freezable> Methode, die Sie überschreiben, mit einem-Befehl der Basis Implementierung beginnen.
 
-Ein Beispiel für eine benutzerdefinierte <xref:System.Windows.Freezable>-Klasse finden Sie im Beispiel für eine [Benutzerdefinierte Animation](https://go.microsoft.com/fwlink/?LinkID=159981).
+Ein Beispiel für eine benutzerdefinierte <xref:System.Windows.Freezable>-Klasse finden Sie im Beispiel für eine [Benutzerdefinierte Animation](https://github.com/Microsoft/WPF-Samples/tree/master/Animation/CustomAnimation).
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Windows.Freezable>
-- [Benutzerdefiniertes Animationsbeispiel](https://go.microsoft.com/fwlink/?LinkID=159981)
+- [Benutzerdefiniertes Animationsbeispiel](https://github.com/Microsoft/WPF-Samples/tree/master/Animation/CustomAnimation)
 - [Übersicht über Abhängigkeitseigenschaften](dependency-properties-overview.md)
 - [Benutzerdefinierte Abhängigkeitseigenschaften](custom-dependency-properties.md)

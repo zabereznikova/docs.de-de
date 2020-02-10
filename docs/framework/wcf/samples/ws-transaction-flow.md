@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Transactions
 ms.assetid: f8eecbcf-990a-4dbb-b29b-c3f9e3b396bd
-ms.openlocfilehash: db23c250014006655fa51ee5a2e5b54e15e4f964
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 781934e9ab27f761e71841c2edc509f9b8022aa7
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74714583"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094747"
 ---
 # <a name="ws-transaction-flow"></a>WS-Transaktionsfluss
 In diesem Beispiel werden die Verwendung einer clientkoordinierten Transaktion und die Client- und Serveroptionen für den Transaktionsfluss unter Verwendung des WS-Atomic-Transaktionsprotokolls oder des OleTransactions-Protokolls erläutert. Dieses Beispiel basiert [auf den ersten Schritten, die einen](../../../../docs/framework/wcf/samples/getting-started-sample.md) Rechner Dienst implementieren, aber die Vorgänge werden dazu verwendet, die Verwendung des `TransactionFlowAttribute` mit der **transaktionflowoption** -Enumeration zu veranschaulichen, um zu bestimmen, in welchem Grad Transaktions Fluss aktiviert ist. Innerhalb des Bereichs des Transaktionsflusses wird ein Protokoll der angeforderten Vorgänge in eine Datenbank geschrieben. Dieses bleibt dort erhalten, bis die clientkoordinierte Transaktion fertiggestellt wurde. Wenn die Clienttransaktion nicht fertiggestellt wird, stellt die Webdiensttransaktion sicher, dass die entsprechenden Aktualisierungen der Datenbank nicht ausgeführt werden.  
@@ -230,7 +230,7 @@ Press <ENTER> to terminate the service.
 3. Um das Beispiel in einer Konfiguration mit einem einzigen Computer oder Computer übergreifend auszuführen, befolgen Sie die Anweisungen unter [Ausführen der Windows Communication Foundation Beispiele](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
     > [!NOTE]
-    > Aktivieren Sie bei einer computerübergreifenden Konfiguration Distributed Transaction Coordinator entsprechend den nachfolgenden Anweisungen, und aktivieren Sie mit dem Tool WsatConfig.exe aus dem Windows SDK die Netzwerkunterstützung von WCF-Transaktionen. Weitere Informationen zum Einrichten von "WsatConfig. exe" finden Sie [unter Konfigurieren der WS-Atomic Transaction-Unterstützung](https://go.microsoft.com/fwlink/?LinkId=190370) .  
+    > Aktivieren Sie bei einer computerübergreifenden Konfiguration Distributed Transaction Coordinator entsprechend den nachfolgenden Anweisungen, und aktivieren Sie mit dem Tool WsatConfig.exe aus dem Windows SDK die Netzwerkunterstützung von WCF-Transaktionen. Weitere Informationen zum Einrichten von wsatConfig. exe finden Sie [unter Konfigurieren der WS-Atomic Transaction-Unterstützung](../feature-details/configuring-ws-atomic-transaction-support.md).  
   
  Unabhängig davon, ob Sie das Beispiel auf demselben Computer oder auf unterschiedlichen Computern ausführen, müssen Sie das Microsoft Distributed Transaction Coordinator (MSDTC) konfigurieren, um den Netzwerk Transaktions Fluss zu aktivieren, und das Tool wsatConfig. exe verwenden, um die Netzwerkunterstützung für WCF-Transaktionen zu aktivieren.  
   
@@ -250,7 +250,7 @@ Press <ENTER> to terminate the service.
   
     6. Klicken Sie auf **OK**und dann auf **Ja** , um den MSDTC-Dienst neu zu starten.  
   
-    7. Klicken Sie auf **OK**, um das Dialogfeld zu schließen.  
+    7. Klicken Sie auf **OK** , um das Dialogfeld zu schließen.  
   
 2. Konfigurieren Sie MSDTC auf einem Dienstcomputer unter Windows Server 2008 oder Windows Vista entsprechend den folgenden Anweisungen so, dass eingehende Netzwerktransaktionen zugelassen werden.  
   
@@ -264,7 +264,7 @@ Press <ENTER> to terminate the service.
   
     5. Klicken Sie auf **OK**und dann auf **Ja** , um den MSDTC-Dienst neu zu starten.  
   
-    6. Klicken Sie auf **OK**, um das Dialogfeld zu schließen.  
+    6. Klicken Sie auf **OK** , um das Dialogfeld zu schließen.  
   
 3. Konfigurieren Sie auf dem Clientcomputer MSDTC zum Zulassen von ausgehenden Netzwerktransaktionen:  
   
@@ -278,7 +278,7 @@ Press <ENTER> to terminate the service.
   
     5. Klicken Sie auf **OK**und dann auf **Ja** , um den MSDTC-Dienst neu zu starten.  
   
-    6. Klicken Sie auf **OK**, um das Dialogfeld zu schließen.  
+    6. Klicken Sie auf **OK** , um das Dialogfeld zu schließen.  
   
 > [!IMPORTANT]
 > Die Beispiele sind möglicherweise bereits auf dem Computer installiert. Suchen Sie nach dem folgenden Verzeichnis (Standardverzeichnis), bevor Sie fortfahren.  

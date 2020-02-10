@@ -3,14 +3,15 @@ title: ADO.NET
 titleSuffix: ''
 ms.date: 03/30/2017
 ms.assetid: 5b96ed06-9759-4966-a797-a1d5f6ee50ca
-ms.openlocfilehash: a803c0592cd44801c55a699b56a9a498781a6593
-ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
+ms.openlocfilehash: cca3075a73a7bb45fd6154f760adfcda9064345c
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/04/2020
-ms.locfileid: "76980105"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094396"
 ---
 # <a name="adonet"></a>ADO.NET
+
 Bei ADO.NET handelt es sich um einen Satz von Klassen, die Datenzugriffsdienste für .NET Framework-Programmierer verfügbar machen. ADO.NET umfasst eine Vielzahl von Komponenten zum Erstellen von verteilten Anwendungen mit Datenfreigabe. Es ist in .NET Framework integriert und ermöglicht den Zugriff auf relationale, XML- und Anwendungsdaten. ADO.NET unterstützt eine Reihe von Entwicklungsanforderungen, z. B. das Erstellen von Front-End-Datenbankclients und Geschäftsobjekten mittlerer Ebene, die von Anwendungen, Tools, Sprachen oder Internetbrowsern verwendet werden.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
@@ -36,7 +37,7 @@ Bei ADO.NET handelt es sich um einen Satz von Klassen, die Datenzugriffsdienste 
  Enthält Informationen zu LINQ to DataSet, einschließlich entsprechender Programmierbeispiele.  
   
  [Abrufen und Ändern von Daten in ADO.NET](retrieving-and-modifying-data.md)  
- Beschreibt das Herstellen von Verbindungen mit einer Datenquelle und das Abrufen und Bearbeiten von Daten mit `Commands`, `DataReaders` und `DataAdapters`.  
+ Beschreibt das Herstellen einer Verbindung mit einer Datenquelle und das Abrufen und Ändern von Daten mit `Commands`, `DataReaders`und `DataAdapters`.  
   
  [SQL Server und ADO.NET](./sql/index.md)  
  Beschreibt das Arbeiten mit Funktionen und Funktionalität, die spezifisch für SQL Server sind.  
@@ -60,7 +61,7 @@ Bei ADO.NET handelt es sich um einen Satz von Klassen, die Datenzugriffsdienste 
  [Beispiele und Tutorials](../../../samples-and-tutorials/index.md)  
  Enthält eine Liste der .net-Beispiele und-Tutorials.
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Zugreifen auf Daten in Visual Studio](/visualstudio/data-tools/accessing-data-in-visual-studio)
 - [Übersicht über ADO.NET](ado-net-overview.md)

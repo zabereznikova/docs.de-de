@@ -2,17 +2,17 @@
 title: Zugreifen auf OperationContext
 ms.date: 03/30/2017
 ms.assetid: 4e92efe8-7e79-41f3-b50e-bdc38b9f41f8
-ms.openlocfilehash: b8a09aff7b5a30b5267fbdbd7bd6391996f359c7
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 83f3a6cacd3ee86050f65a886d446ab8da7d3690
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74715091"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094708"
 ---
 # <a name="accessing-operationcontext"></a>Zugreifen auf OperationContext
 In diesem Beispiel wird veranschaulicht, wie die Messaging Aktivitäten (<xref:System.ServiceModel.Activities.Receive> und <xref:System.ServiceModel.Activities.Send>) mit einer benutzerdefinierten Bereichs Aktivität verwendet werden können, um auf <xref:System.ServiceModel.OperationContext.Current%2A> zuzugreifen und einen benutzerdefinierten Nachrichten Header in einer ausgehenden oder eingehenden Nachricht anzufügen oder abzurufen.  
   
-## <a name="demonstrates"></a>Veranschaulicht  
+## <a name="demonstrates"></a>Zeigt  
  Messagingaktivitäten, <xref:System.ServiceModel.Activities.ISendMessageCallback>, <xref:System.ServiceModel.Activities.IReceiveMessageCallback>  
   
 ## <a name="discussion"></a>Diskussion  
@@ -20,7 +20,7 @@ In diesem Beispiel wird veranschaulicht, wie die Messaging Aktivitäten (<xref:S
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>So können Sie das Beispiel einrichten, erstellen und ausführen  
   
-1. Dieses Beispiel macht einen Workflowdienst mithilfe von HTTP-Endpunkten verfügbar. Zum Ausführen dieses Beispiels müssen die richtigen URL-ACLs hinzugefügt werden (Weitere Informationen finden Sie unter [Konfigurieren von http und HTTPS](https://go.microsoft.com/fwlink/?LinkId=70353) ), entweder durch Ausführen von Visual Studio als Administrator oder durch Ausführen des folgenden Befehls an einer Eingabeaufforderung mit erhöhten Rechten, um die entsprechenden ACLs hinzuzufügen. Stellen Sie sicher, dass die Domäne und der Benutzername ersetzt werden.  
+1. Dieses Beispiel macht einen Workflowdienst mithilfe von HTTP-Endpunkten verfügbar. Zum Ausführen dieses Beispiels müssen die richtigen URL-ACLs hinzugefügt werden (Weitere Informationen finden Sie unter [Konfigurieren von http und HTTPS](../../wcf/feature-details/configuring-http-and-https.md) ), entweder durch Ausführen von Visual Studio als Administrator oder durch Ausführen des folgenden Befehls an einer Eingabeaufforderung mit erhöhten Rechten, um die entsprechenden ACLs hinzuzufügen. Stellen Sie sicher, dass die Domäne und der Benutzername ersetzt werden.  
   
     ```console  
     netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%  
