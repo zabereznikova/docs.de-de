@@ -1,21 +1,16 @@
 ---
-title: Einsatz von verallgemeinerten additiven Modellen und shape-Funktionen zur Modellerklärung
-description: Einsatz von verallgemeinerten additiven Modellen und shape-Funktionen zur Modellerklärung in ML.NET
-ms.date: 03/05/2019
+title: Interpretieren von ML.NET-Modellen mit verallgemeinerten additiven Modellen
+description: Verwenden von verallgemeinerten additiven Modellen und Shape-Funktionen zur Modellerklärung in ML.NET
+ms.date: 01/30/2020
 ms.custom: mvc,how-to
-ms.openlocfilehash: c58cf823007196c35da093fab7423c1e40ba1158
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 6df19eff4fec98c5815a9f8f4d8e4e9a80cba6ed
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70855606"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77092472"
 ---
-# <a name="use-generalized-additive-models-and-shape-functions-for-model-explainability-in-mlnet"></a>Einsatz von verallgemeinerten additiven Modellen und shape-Funktionen zur Modellerklärung in ML.NET
-
-> [!NOTE]
-> Dieses Thema bezieht sich auf ML.NET, was derzeit als Vorschau verfügbar ist, und das Material kann jederzeit geändert werden. Weitere Informationen finden Sie auf der Seite [ML.NET](https://dotnet.microsoft.com/apps/machinelearning-ai/ml-dotnet).
-
-Diese Anleitung und das dazugehörte Beispiel verwenden derzeit **ML.NET Version 0.10**. Weitere Informationen finden Sie in den Anmerkungen zur Version im [Dotnet/Machinelearning-GitHub-Repository](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes).
+# <a name="use-generalized-additive-models-and-shape-functions-for-model-interpretability-in-mlnet"></a>Verwenden von verallgemeinerten additiven Modellen und Shape-Funktionen zur Modellerklärung in ML.NET
 
 Bei der Erstellung von Machine Learning-Modellen reicht es oft nicht aus, nur Vorhersagen zu treffen. Häufig müssen Machine Learning- Entwickler, Entscheidungsträger und von den Modellen betroffene Personen erst verstehen, wie Machine Learning-Modelle Entscheidungen treffen und welche Features zu ihrer Leistung beitragen. **Verallgemeinerte additive Modelle (Generalized Additive Models, GAMs)** werden intern bei Microsoft zur Modellerklärung verwendet, um Entwickler von Machine Learning-Prozessen bei der Erstellung leistungsstarker Modelle zu unterstützen, die von anderen leicht interpretiert werden können.
 

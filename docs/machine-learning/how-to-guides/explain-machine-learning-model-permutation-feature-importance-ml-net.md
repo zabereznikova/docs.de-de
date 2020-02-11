@@ -1,20 +1,20 @@
 ---
-title: Erläutern von Modellvorhersagen mit Permutation Feature Importance
+title: Interpretieren von ML.NET-Modellen mit Permutation Feature Importance
 description: Verstehen der Wichtigkeit von Modellfeatures mit Permutation Feature Importance (PFI) in ML.NET
-ms.date: 08/29/2019
+ms.date: 01/30/2020
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc,how-to
-ms.openlocfilehash: 4bad8b0ed17a34ba290bf9c00d65cc3f000a2acf
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: c1163a41cd2feb0e8785ae9d4c6a71dfbedf3f12
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73976684"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77092615"
 ---
-# <a name="explain-model-predictions-using-permutation-feature-importance"></a>Erläutern von Modellvorhersagen mit Permutation Feature Importance
+# <a name="interpret-model-predictions-using-permutation-feature-importance"></a>Interpretieren von Modellvorhersagen mit Permutation Feature Importance
 
-Erfahren Sie, wie Sie ML.NET-Vorhersagen für Machine Learning-Modelle erklären können, indem Sie die Beitragsfeatures für Vorhersagen mit Permutation Feature Importance (PFI) verstehen.
+In diesem Artikel erfahren Sie, wie Sie mithilfe von Permutation Feature Importance (PFI) in ML.NET Vorhersagen von Machine Learning-Modellen interpretieren können. PFI stellt Informationen dazu bereit, welchen relativen Anteil jedes Feature an einer Vorhersage hat.
 
 Machine Learning-Modelle werden oft als Blackboxes betrachtet, die aus Eingaben eine Ausgabe generieren. Die Zwischenschritte oder Interaktionen zwischen den Features, die die Ausgabe beeinflussen, werden nur selten verstanden. Da das maschinelle Lernen in immer mehr Bereichen des täglichen Lebens, wie beispielsweise im Gesundheitswesen, zum Einsatz kommt, ist es von größter Bedeutung zu verstehen, warum ein Machine Learning-Modell die Entscheidungen trifft, die es trifft. Wenn die Diagnosen zum Beispiel durch ein Machine Learning-Modell gestellt werden, brauchen die Mediziner eine Möglichkeit, die Faktoren zu untersuchen, die bei der Erstellung dieser Diagnosen berücksichtigt wurden. Die richtige Diagnose könnte einen großen Unterschied machen, ob die Genesung eines Patienten schnell verläuft oder nicht. Je höher also der Grad der Erklärbarkeit in einem Modell ist, desto größer ist das Vertrauen der Mediziner, die die vom Modell getroffenen Entscheidungen akzeptieren oder ablehnen müssen.
 
@@ -26,7 +26,7 @@ Darüber hinaus können sich Modellersteller durch die Hervorhebung der wichtigs
 
 Die Features im Dataset, das für dieses Beispiel verwendet wird, befinden sich in den Spalten 1-12. Das Ziel ist die Vorhersage von `Price`.
 
-| Spalte | Feature | BESCHREIBUNG
+| Spalte | Feature | Beschreibung
 | --- | --- | --- |
 | 1 | CrimeRate | Pro-Kopf-Kriminalitätsrate
 | 2 | ResidentialZones | Wohngebiete in der Stadt

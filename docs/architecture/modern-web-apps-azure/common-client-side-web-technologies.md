@@ -4,12 +4,12 @@ description: Entwerfen moderner Webanwendungen mit ASP.NET Core und Azure | Allg
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 0e5f3578edc723e2e2a32b9b3a1d8a7dcabd2909
-ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
+ms.openlocfilehash: 7dd3765b1b71d8c1ef22d714a00be3e171fab523
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/02/2020
-ms.locfileid: "76965749"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77093122"
 ---
 # <a name="common-client-side-web-technologies"></a>Allgemeine clientseitige Webtechnologien
 
@@ -18,7 +18,7 @@ ms.locfileid: "76965749"
 
 ASP.NET Core-Anwendungen sind Webanwendungen. Sie bauen normalerweise auf clientseitigen Webtechnologien wie HTML, CSS oder JavaScript auf. Indem der Inhalt der Seite (die HTML) vom Layout und Format (das CSS) und dessen Verhalten (über JavaScript) getrennt wird, können komplexe Web-Apps dem Prinzip der Separation of Concerns folgen. Die Struktur, das Design und das Verhalten der Anwendung können so unkomplizierter angepasst werden, da sie nicht miteinander verknüpft sind.
 
-Während HTML und CSS verhältnismäßig stabil sind, entwickelt sich JavaScript bezüglich Anwendungsframeworks und Dienstprogrammen, die von Entwicklern zum Erstellen webbasierter Anwendungen verwendet werden, in Rekordgeschwindigkeit weiter. In diesem Artikel erfahren Sie, wie JavaScript von Webentwicklern bei der Anwendungsentwicklung verwendet wird. Darüber hinaus wird ein allgemeiner Überblick über die clientseitigen Bibliotheken „Angular“ und „React“ gegeben.
+Während HTML und CSS verhältnismäßig stabil sind, entwickelt sich JavaScript bezüglich Anwendungsframeworks und Dienstprogrammen, die von Entwicklern zum Erstellen webbasierter Anwendungen verwendet werden, in Rekordgeschwindigkeit weiter. In diesem Artikel erfahren Sie, wie JavaScript von Webentwicklern verwendet wird. Darüber hinaus wird ein allgemeiner Überblick über die clientseitigen Bibliotheken „Angular“ und „React“ gegeben.
 
 ## <a name="html"></a>HTML
 
@@ -75,7 +75,7 @@ Gehen wir z.B. davon aus, dass ein Element auf einer Seite sichtbar gemacht wird
 
 Die meisten Features, die jQuery fehlen, können durch andere Bibliotheken hinzugefügt werden. Ein SPA-Framework wie Angular stellt diese Features einfacher bereit, da diese von Anfang an bei dessen Entwicklung berücksichtigt wurden. Zudem ist jQuery eine imperative Bibliothek, was bedeutet, dass Sie jQuery-Funktionen aufrufen müssen, um Vorgänge mit jQuery durchführen zu können. Die meiste Arbeit und die meisten Funktionen, die von SPA-Frameworks bereitgestellt werden, können deklarativ durchgeführt werden, sodass kein Code geschrieben werden muss.
 
-Die Datenbindung ist ein gutes Beispiel dafür. In jQuery ist normalerweise nur eine Codezeile erforderlich, um den Wert eines DOM-Elements abzurufen oder den Wert eines Elements festzulegen. Diesen Code müssen Sie allerdings immer dann schreiben, wenn Sie den Wert eines Elements verändern möchten, und es kann sein, dass dies für mehrere Funktionen auf einer Seite erforderlich ist. Ein weiteres Beispiel ist die Sichtbarkeit von Elementen. In jQuery müssen Sie an verschiedenen Stellen Code schreiben, um zu steuern, welche Elemente sichtbar sein sollen. In allen diesen Fällen muss jedoch beim Gebrauch der Datenbindung kein Code geschrieben werden. Sie binden lediglich den Wert oder die Sichtbarkeit eines Elementes oder mehrerer Elemente an ein *Anzeigemodell* auf der Seite, und dann werden Änderungen des Ansichtsmodells automatisch bei den gebundenen Elementen widergespiegelt.
+Die Datenbindung ist ein gutes Beispiel dafür. In jQuery ist normalerweise nur eine Codezeile erforderlich, um den Wert eines DOM-Elements abzurufen oder den Wert eines Elements festzulegen. Diesen Code müssen Sie allerdings immer dann schreiben, wenn Sie den Wert eines Elements verändern möchten, und es kann sein, dass dies für mehrere Funktionen auf einer Seite erforderlich ist. Ein weiteres Beispiel ist die Sichtbarkeit von Elementen. In jQuery müssen Sie an verschiedenen Stellen Code schreiben, um zu steuern, welche Elemente sichtbar sein sollen. In allen diesen Fällen muss jedoch beim Gebrauch der Datenbindung kein Code geschrieben werden. Sie binden lediglich den Wert oder die Sichtbarkeit eines Elements oder mehrerer Elemente an ein *ViewModel*-Objekt auf der Seite, und dann werden Änderungen an diesem Objekt automatisch in den gebundenen Elementen widergespiegelt.
 
 ### <a name="angular-spas"></a>Angular-SPAs
 

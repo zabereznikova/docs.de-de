@@ -1,17 +1,17 @@
 ---
-title: 'Tutorial: Erkennen von Objekten mithilfe von Deep Learning mit ONNX und ML.NET'
+title: 'Tutorial: Erkennen von Objekten mithilfe eines ONNX-Deep-Learning-Modells'
 description: In diesem Tutorial wird veranschaulicht, wie Sie ein vortrainiertes ONNX Deep Learning-Modell in ML.NET verwenden, um Objekte in Bildern zu erkennen.
 author: luisquintanilla
 ms.author: luquinta
-ms.date: 12/12/2019
+ms.date: 01/30/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 6aaf5acc605067f378ff5d42f713fe1c63d91e46
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 7ff9986c09e39f5c4d24f52c351db6455ff63e77
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76794624"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77092719"
 ---
 # <a name="tutorial-detect-objects-using-onnx-in-mlnet"></a>Tutorial: Erkennen von Objekten mithilfe von ONNX in ML.NET
 

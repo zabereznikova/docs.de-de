@@ -1,15 +1,15 @@
 ---
-title: 'Tutorial: Generieren eines ML.NET-Bildklassifizierungsmodells aus einem vortrainierten TensorFlow-Modell'
+title: 'Tutorial: ML.NET-Bildklassifizierungsmodell aus TensorFlow'
 description: Erfahren Sie, wie Sie das erworbene Wissen aus einem vorhandenen TensorFlow-Modell in ein neues ML.NET-Bildklassifizierungsmodell übertragen können. Das TensorFlow-Modell wurde trainiert, um Bilder in tausend Kategorien zu klassifizieren. Das ML.NET-Modell nutzt Übertragungslernen, um Bilder in weniger umfassendere Kategorien zu klassifizieren.
-ms.date: 11/15/2019
+ms.date: 01/30/2020
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0612
-ms.openlocfilehash: 5fe47c42d0cf24ebfdc33a937e1afbd11a976680
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: f5ec31f8bfdc089d275588b228c8ce6f28a44201
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75738950"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77092550"
 ---
 # <a name="tutorial-generate-an-mlnet-image-classification-model-from-a-pre-trained-tensorflow-model"></a>Tutorial: Generieren eines ML.NET-Bildklassifizierungsmodells aus einem vortrainierten TensorFlow-Modell
 

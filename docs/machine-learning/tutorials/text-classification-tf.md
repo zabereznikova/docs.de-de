@@ -1,15 +1,15 @@
 ---
-title: 'Tutorial: Analysieren der Stimmung von Filmkritiken mithilfe eines vortrainierten TensorFlow-Modells'
+title: 'Tutorial: Analysieren der Überprüfungsstimmung mithilfe eines TensorFlow-Modells'
 description: In diesem Tutorial wird gezeigt, wie Sie ein vortrainiertes TensorFlow-Modell verwenden, um die Stimmung in Websitekommentaren zu klassifizieren. Der binäre Stimmungsklassifizierer ist eine C#-Konsolenanwendung, die mit Visual Studio entwickelt wurde.
 ms.date: 11/15/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 0e80cdc6bb7dcc62a57466e909451da972c92db8
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 7a6043f56a2ecaca633ba5545170f27a85a22efc
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75738701"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77092394"
 ---
 # <a name="tutorial-analyze-sentiment-of-movie-reviews-using-a-pre-trained-tensorflow-model-in-mlnet"></a>Tutorial: Analysieren der Stimmung von Filmkritiken mithilfe eines vortrainierten TensorFlow-Modells in ML.NET
 
