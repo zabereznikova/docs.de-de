@@ -32,16 +32,16 @@ helpviewer_keywords:
 - uint keyword [C#]
 - long keyword [C#]
 - ulong keyword [C#]
-ms.openlocfilehash: 058e75c81c18f0ec73140f6fc13a91f4e0012a61
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 394a809a9a2f45f4aee652d0eca892f62f0f2e54
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73036357"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77093200"
 ---
 # <a name="integral-numeric-types--c-reference"></a>Integrale numerische Typen (C#-Referenz)
 
-Die **integralen numerischen Typen** sind eine Teilmenge der **einfachen Typen** und können mit [*Literalen*](#integer-literals) initialisiert werden. Alle integrale Typen sind auch Werttypen. Alle integralen numerischen Typen unterstützen [arithmetic](../operators/arithmetic-operators.md)-, [bitwise logical](../operators/bitwise-and-shift-operators.md)-, [comparison](../operators/comparison-operators.md)- and [equality](../operators/equality-operators.md)-Operatoren.
+Die *integralen numerischen Typen* stellen ganze Zahlen dar. Alle integralen numerischen Typen sind [Werttypen](value-types.md). Sie sind auch [einfache Typen](value-types.md#built-in-value-types) und können mit [Literalen](#integer-literals) initialisiert werden. Alle integralen numerischen Typen unterstützen [arithmetic](../operators/arithmetic-operators.md)-, [bitwise logical](../operators/bitwise-and-shift-operators.md)-, [comparison](../operators/comparison-operators.md)- and [equality](../operators/equality-operators.md)-Operatoren.
 
 ## <a name="characteristics-of-the-integral-types"></a>Merkmale der integralen Typen
 
@@ -130,7 +130,7 @@ Weitere Informationen finden Sie in den folgenden Abschnitten der [C#-Sprachspez
 ## <a name="see-also"></a>Siehe auch
 
 - [C#-Referenz](../index.md)
-- [Tabelle integrierter Typen](../keywords/built-in-types-table.md)
+- [Werttypen](value-types.md)
 - [Gleitkommatypen](floating-point-numeric-types.md)
-- [Tabelle zur Formatierung numerischer Ergebnisse](../keywords/formatting-numeric-results-table.md)
+- [Standardmäßige Zahlenformatzeichenfolgen](../../../standard/base-types/standard-numeric-format-strings.md)
 - [Numerische Ausdrücke in .NET](../../../standard/numerics.md)

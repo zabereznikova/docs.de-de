@@ -4,12 +4,12 @@ description: In diesem erweiterten Tutorial wird veranschaulicht, wie vorhandene
 ms.date: 02/19/2019
 ms.technology: csharp-null-safety
 ms.custom: mvc
-ms.openlocfilehash: e480cfa7c041d18a2bdaf8caa2468165e855186e
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 4edeab7b2a4211d50c424f567ad7df6ced0bf4ce
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75740467"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77093304"
 ---
 # <a name="tutorial-migrate-existing-code-with-nullable-reference-types"></a>Tutorial: Migrieren vorhandenen Codes mit Verweistypen, die NULL-Werte zulassen
 
@@ -40,7 +40,7 @@ Ihr Ziel beim Migrieren eines Projekts sollte die Nutzung neuer Sprachfeatures s
 
 ## <a name="upgrade-the-projects-to-c-8"></a>Aktualisieren der Projekte auf C# 8
 
-Ein guter erster Schritt ist, den Bereich der Migrationsaufgabe zu bestimmen. Beginnen Sie mit dem Upgrade des Projekts auf C# 8.0 (oder höher). Fügen Sie das `LangVersion`-Element beiden CSPROJ-Dateien für das Webprojekt und das Komponententestprojekt hinzu:
+Ein guter erster Schritt ist, den Bereich der Migrationsaufgabe zu bestimmen. Beginnen Sie mit dem Upgrade des Projekts auf C# 8.0 (oder höher). Fügen Sie der PropertyGroup-Eigenschaft das `LangVersion`-Element in beiden CSPROJ-Dateien für das Webprojekt und das Komponententestprojekt hinzu:
 
 ```xml
 <LangVersion>8.0</LangVersion>

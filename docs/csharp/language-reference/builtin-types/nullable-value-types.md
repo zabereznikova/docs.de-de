@@ -4,16 +4,16 @@ description: Informationen zu Werttypen, die Nullwerte zulassen, in C# und der V
 ms.date: 11/04/2019
 helpviewer_keywords:
 - nullable value types [C#]
-ms.openlocfilehash: 42673d16ac68bbf119e57e4c357b1b2b2a0b5c51
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: bd90a0b1b77349efe581eb8aae44c58802ba756d
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76740949"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77093187"
 ---
 # <a name="nullable-value-types-c-reference"></a>Nullable-Werttypen (C#-Referenz)
 
-Ein Nullable-Werttyp `T?` stellt alle Werte des zugrunde liegenden [Werttyps](value-types.md) `T` und einen zusätzlichen [NULL](../keywords/null.md)-Wert dar. Beispielsweise können Sie einer `bool?`-Variablen einen der folgenden drei Werte zuweisen: `true`, `false` oder `null`. Ein zugrunde liegender Werttyp `T` darf selbst kein Nullable-Werttyp sein.
+Ein *Werttyp, der NULL zulässt* (wie `T?`) stellt alle Werte des zugrunde liegenden [Werttyps](value-types.md) `T` und einen zusätzlichen [NULL](../keywords/null.md)-Wert dar. Beispielsweise können Sie einer `bool?`-Variablen einen der folgenden drei Werte zuweisen: `true`, `false` oder `null`. Ein zugrunde liegender Werttyp `T` darf selbst kein Nullable-Werttyp sein.
 
 > [!NOTE]
 > C# 8.0 führt das Feature der Nullable-Verweistypen ein. Weitere Informationen finden Sie unter [Nullable-Verweistypen](../../nullable-references.md). Nullable-Werttypen sind ab C# 2 verfügbar.
@@ -68,7 +68,7 @@ Ein Nicht-Nullable-Werttyp `T` kann implizit in den entsprechenden Nullable-Wert
 
 ## <a name="lifted-operators"></a>„Lifted“ Operatoren
 
-Die vordefinierten unären und binären Operatoren oder alle überladenen Operatoren, die von einem Werttyp `T` unterstützt werden, werden auch vom entsprechenden Nullable-Werttyp `T?` unterstützt. Durch diese Operatoren (auch als *„lifted“ Operatoren* bezeichnet) wird `null` generiert, wenn mindestens ein Operand `null` ist. Andernfalls verwendet der Operator die enthaltenen Werte seiner Operanden zur Berechnung des Ergebnisses. Zum Beispiel:
+Die vordefinierten unären und binären [Operatoren](../operators/index.md) oder alle überladenen Operatoren, die von einem Werttyp `T` unterstützt werden, werden auch vom entsprechenden Werttyp `T?` unterstützt, der NULL zulässt. Durch diese Operatoren (auch als *„lifted“ Operatoren* bezeichnet) wird `null` generiert, wenn mindestens ein Operand `null` ist. Andernfalls verwendet der Operator die enthaltenen Werte seiner Operanden zur Berechnung des Ergebnisses. Zum Beispiel:
 
 [!code-csharp[lifted operators](~/samples/csharp/language-reference/builtin-types/NullableValueTypes.cs#LiftedOperator)]
 
@@ -82,7 +82,9 @@ Für die [Vergleichsoperatoren](../operators/comparison-operators.md) `<`, `>`, 
 
 [!code-csharp-interactive[relational and equality operators](~/samples/csharp/language-reference/builtin-types/NullableValueTypes.cs#ComparisonOperators)]
 
-Das vorherige Beispiel zeigt außerdem, dass ein Gleichheitsvergleich zweier Nullable-Werttypinstanzen, die beide `null` sind, zu `true` ausgewertet wird.
+Für den [Gleichheitsoperator](../operators/equality-operators.md#equality-operator-) `==` ist das Ergebnis `true`, wenn beide Operanden `null` sind. Das Ergebnis ist `false`, wenn nur einer der Operanden `null` ist. Andernfalls werden die enthaltenen Werte von Operanden verglichen.
+
+Für den [Ungleichheitsoperator](../operators/equality-operators.md#inequality-operator-) `!=` ist das Ergebnis `false`, wenn beide Operanden `null` sind. Das Ergebnis ist `true`, wenn nur einer der Operanden `null` ist. Andernfalls werden die enthaltenen Werte von Operanden verglichen.
 
 Wenn eine [benutzerdefinierte Konvertierung](../operators/user-defined-conversion-operators.md) zwischen zwei Werttypen vorhanden ist, kann die gleiche Konvertierung auch zwischen den entsprechenden Nullable-Werttypen verwendet werden.
 

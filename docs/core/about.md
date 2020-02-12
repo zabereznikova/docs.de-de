@@ -2,12 +2,12 @@
 title: Weitere Informationen zu .NET Core
 description: Erfahren Sie mehr zu .NET Core.
 ms.date: 09/17/2019
-ms.openlocfilehash: e5460fd1d968a49478a1bdc5f18962de2c7cbbe0
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: 7908cf70e91dcd68668008c2c3082dc293330ec1
+ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76920956"
+ms.lasthandoff: 02/02/2020
+ms.locfileid: "76965840"
 ---
 # <a name="about-net-core"></a>Weitere Informationen zu .NET Core
 
@@ -73,7 +73,7 @@ Die Komponenten sind wie folgt verfügbar:
 
 ### <a name="designed-for-adaptability"></a>Konzipiert für Anpassungsfähigkeit
 
-.NET Core wurde als sehr ähnliches, aber auch einzigartiges Produkt im Vergleich zu anderen .NET-Produkten erstellt. Das Produkt wurde entwickelt, um eine umfassende Anpassung an neue Plattformen und Arbeitsauslastungen zu ermöglichen. Es verfügt über mehrere Betriebssysteme und CPU-Ports (und kann auf viele weitere portiert werden).
+.NET Core wurde als ähnliches, aber auch einzigartiges Produkt im Vergleich zu anderen .NET-Produkten erstellt. Das Produkt wurde entwickelt, um eine umfassende Anpassung an neue Plattformen und Arbeitsauslastungen zu ermöglichen. Es verfügt über mehrere Betriebssysteme und CPU-Ports (und kann auf viele weitere portiert werden).
 
 Das Produkt ist in mehrere Teile aufgeteilt, und die verschiedenen Teile können zu unterschiedlichen Zeitpunkten an neue Plattformen angepasst werden. Die Laufzeit und grundlegende plattformspezifische Bibliotheken müssen als eine Einheit portiert werden. Plattformagnostische Bibliotheken sollten wie vorhanden von der Konstruktion auf allen Plattformen funktionieren. Es gibt eine Projektverschiebung zur Verminderung der plattformspezifischen Implementierungen, um die Effizienz der Entwickler zu erhöhen. Wenn ein Algorithmus oder API so vollständig oder teilweise implementiert werden kann, wird ein plattformneutraler C#-Code bevorzugt.
 

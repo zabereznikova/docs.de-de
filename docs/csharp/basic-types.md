@@ -4,12 +4,12 @@ description: Erfahren Sie mehr über die grundlegenden Typen (numerische Werte, 
 ms.date: 10/10/2016
 ms.technology: csharp-fundamentals
 ms.assetid: 95c686ba-ae4f-440e-8e94-0dbd6e04d11f
-ms.openlocfilehash: 7b6dec16b3fd84ced856a9f0e42f38189b1e03fd
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: ad496a9cbb0a654ec10ac38b374a76b042911302
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75339286"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77093291"
 ---
 # <a name="types-variables-and-values"></a>Typen, Variablen und Werte
 
@@ -54,7 +54,7 @@ Weitere Informationen finden Sie unter [Umwandlung und Typkonvertierungen](progr
 
 ## <a name="built-in-types"></a>Integrierte Typen
 
-C# liefert einen Standardsatz mit integrierten numerischen Typen zur Darstellung von ganzen Zahlen, Gleitkommawerten, booleschen Ausdrücken, Textzeichen, Dezimalwerten und anderen Datentypen. Es gibt auch integrierte **Zeichenfolgen**- und **Objekt**-Typen. Diese können Sie in jedem C#-Programm verwenden. Weitere Informationen zu den integrierten Typen finden Sie in der [Referenztabelle für integrierte Typen](language-reference/keywords/built-in-types-table.md).  
+C# liefert einen Standardsatz mit integrierten numerischen Typen zur Darstellung von ganzen Zahlen, Gleitkommawerten, booleschen Ausdrücken, Textzeichen, Dezimalwerten und anderen Datentypen. Es gibt auch integrierte **Zeichenfolgen**- und **Objekt**-Typen. Diese können Sie in jedem C#-Programm verwenden. Eine vollständige Liste der integrierten Typen finden Sie unter [Integrierte Typen](language-reference/builtin-types/built-in-types.md).
   
 ## <a name="custom-types"></a>Benutzerdefinierte Typen
 

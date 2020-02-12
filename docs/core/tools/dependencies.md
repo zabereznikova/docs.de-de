@@ -2,12 +2,12 @@
 title: Verwalten von Abhängigkeiten in .NET Core-Tools
 description: Erläutert, wie Abhängigkeiten mit den .NET Core-Tools verwaltet werden können.
 ms.date: 03/06/2017
-ms.openlocfilehash: 28280dc05e746cdef4e90870cd4cb528382c45bd
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 916daca0240c10dc63ca96048590a426bc51d450
+ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76787861"
+ms.lasthandoff: 02/02/2020
+ms.locfileid: "76965619"
 ---
 # <a name="manage-dependencies-with-net-core-sdk-10"></a>Verwalten von Abhängigkeiten mit .NET Core SDK 1.0
 
@@ -26,21 +26,21 @@ In diesem Dokument wird der neue Verweistyp beschrieben. Es wird außerdem gezei
 Wenn Sie mit MSBuild vertraut sind, kommt es Ihnen durch bereits vorhandene Verweistypen bekannt vor. Der Schlüssel ist die `Include`-Anweisung, mit der die Paket-ID angegeben wird, die Sie dem Projekt hinzufügen möchten. Das untergeordnete `<Version>`-Element gibt die abzurufende Version an. Die Versionen werden gemäß den [NuGet-Versionsregeln](/nuget/create-packages/dependency-versions#version-ranges) angegeben.
 
 > [!NOTE]
-> Wenn Ihnen die allgemeine `csproj`-Syntax noch unbekannt ist, finden Sie weitere Informationen in der Dokumentation zu [MSBuild-Projektverweisen](/visualstudio/msbuild/msbuild-project-file-schema-reference).
+> Wenn Ihnen die Projektdateisyntax noch unbekannt ist, finden Sie weitere Informationen in der Dokumentation zu [MSBuild-Projektverweisen](/visualstudio/msbuild/msbuild-project-file-schema-reference).
 
-Beim Hinzufügen einer Abhängigkeit, die nur für ein bestimmtes Ziel verfügbar ist, werden Bedingungen wie im folgenden Beispiel verwendet:
+Verwenden Sie wie im folgenden Beispiel gezeigt Bedingungen, um eine Abhängigkeit hinzuzufügen, die nur in einem bestimmten Ziel verfügbar ist:
 
 ```xml
 <PackageReference Include="PACKAGE_ID" Version="PACKAGE_VERSION" Condition="'$(TargetFramework)' == 'netcoreapp2.1'" />
 ```
 
-Der obige Code bedeutet, dass die Abhängigkeit nur gültig ist, wenn der Build für das angegebene Ziel erstellt wird. `$(TargetFramework)` in der Bedingung ist eine MSBuild-Eigenschaft, die im Projekt festgelegt wird. Bei den gängigsten .NET Core-Anwendungen ist dies nicht erforderlich.
+Die Abhängigkeit ist nur dann gültig, wenn der Build für das angegebene Ziel erstellt wird. `$(TargetFramework)` in der Bedingung ist eine MSBuild-Eigenschaft, die im Projekt festgelegt wird. Bei den gängigsten .NET Core-Anwendungen ist dies nicht erforderlich.
 
 ## <a name="add-a-dependency-to-the-project"></a>Hinzufügen einer Abhängigkeit zum Projekt
 
 Es ist einfach, eine Abhängigkeit zu Ihrem Projekt hinzuzufügen. Im folgenden Beispiel wird das Hinzufügen der Json.NET-Version `9.0.1` zu Ihrem Projekt veranschaulicht. Natürlich gilt dies für alle anderen NuGet-Abhängigkeiten.
 
-Wenn Sie Ihre Projektdatei öffnen, sehen Sie zwei oder mehr `<ItemGroup>`-Knoten. Sie werden feststellen, dass einer der Knoten bereits `<PackageReference>`-Elemente aufweist. Sie können Ihre neue Abhängigkeit zu diesem Knoten hinzufügen oder einen neuen Knoten erstellen. Sie können frei entscheiden, das Ergebnis ist gleich.
+Ihre Projektdatei verfügt über zwei oder mehr `<ItemGroup>`-Knoten. Einer der Knoten weist bereits `<PackageReference>`-Elemente auf. Sie können Ihre neue Abhängigkeit zu diesem Knoten hinzufügen oder einen neuen Knoten erstellen. Das Ergebnis dieser beiden Optionen ist gleich.
 
 Das folgende Beispiel verwendet die Standardvorlage, die von `dotnet new console` erstellt wird. Dies ist eine einfache Konsolenanwendung. Wenn Sie das Projekt öffnen, sehen Sie die `<ItemGroup>` mit dem bereits vorhandenen `<PackageReference>`-Element. Fügen Sie Folgendes hinzu:
 

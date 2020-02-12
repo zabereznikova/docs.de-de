@@ -3,19 +3,19 @@ title: Kompilierungskonfigurationseinstellungen
 description: Erfahren Sie mehr über Laufzeiteinstellungen, die die Funktionsweise des JIT-Compilers für .NET Core-Apps konfigurieren.
 ms.date: 11/27/2019
 ms.topic: reference
-ms.openlocfilehash: 0dab3b7b7726a232cf293e338308cf898b370759
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: adf1f01dba7387b89ee56784e33653d6a132c0e3
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76733539"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77092888"
 ---
 # <a name="run-time-configuration-options-for-compilation"></a>Laufzeitkonfigurationsoptionen für die Kompilierung
 
 ## <a name="tiered-compilation"></a>Mehrstufig Kompilierung
 
 - Hiermit wird konfiguriert, ob der Just-in-Time-Compiler (JIT) eine [mehrstufige Kompilierung](../whats-new/dotnet-core-3-0.md#tiered-compilation) verwendet. Die mehrstufige Kompilierung übergibt Methoden über zwei Ebenen:
-  - Die erste Stufe erzeugt schneller Code ([Quick JIT](#quick-jit)) oder lädt vorkompilierten Code ([ReadyToRun](../whats-new/dotnet-core-3-0.md#readytorun-images)).
+  - Die erste Stufe erzeugt schneller Code ([Quick JIT](#quick-jit)) oder lädt vorkompilierten Code ([ReadyToRun](#readytorun)).
   - Die zweite Stufe erstellt optimierten Code im Hintergrund („Optimieren von JIT“).
 - In .NET Core 3.0 und höher ist die mehrstufige Kompilierung standardmäßig aktiviert.
 - In .NET Core 2.1 und 2.2 ist die mehrstufige Kompilierung standardmäßig deaktiviert.
@@ -57,7 +57,7 @@ Projektdatei:
 
 - Hiermit wird konfiguriert, ob der JIT-Compiler *Quick JIT* verwendet. Bei Methoden, die keine Schleifen enthalten und für die kein vorkompilierter Code verfügbar ist, kompiliert Quick JIT diese schneller, aber ohne Optimierungen.
 - Die Aktivierung von Quick JIT verringert die Startzeit, kann aber Code mit verminderten Leistungsmerkmalen erzeugen. Zum Beispiel verwendet der Code möglicherweise mehr Stapelspeicher, kann mehr Speicher belegen und langsamer ausgeführt werden.
-- Wenn Quick JIT deaktiviert, aber die [mehrstufige Kompilierung](#tiered-compilation) aktiviert ist, wird nur vorkompilierter Code bei der mehrstufigen Kompilierung verwendet. Wenn eine Methode nicht mit [ReadyToRun](../whats-new/dotnet-core-3-0.md#readytorun-images) vorkompiliert ist, ist das JIT-Verhalten dasselbe, als wenn die [mehrstufige Kompilierung](#tiered-compilation) deaktiviert wäre.
+- Wenn Quick JIT deaktiviert, aber die [mehrstufige Kompilierung](#tiered-compilation) aktiviert ist, wird nur vorkompilierter Code bei der mehrstufigen Kompilierung verwendet. Wenn eine Methode nicht mit [ReadyToRun](#readytorun) vorkompiliert ist, ist das JIT-Verhalten dasselbe, als wenn die [mehrstufige Kompilierung](#tiered-compilation) deaktiviert wäre.
 - In .NET Core 3.0 und höher ist Quick JIT standardmäßig aktiviert.
 - In .NET Core 2.1 und 2.2 ist Quick JIT standardmäßig deaktiviert.
 
@@ -131,3 +131,13 @@ Projektdatei:
 
 </Project>
 ```
+
+## <a name="readytorun"></a>ReadyToRun
+
+- Das ReadyToRun-Image konfiguriert, ob die .NET Core-Runtime vorkompilierten Code für Images mit verfügbaren ReadyToRun-Daten verwendet. Wenn Sie diese Option deaktivieren, erzwingt die Runtime eine JIT-Kompilierung für Frameworkcode.
+- Weitere Informationen finden Sie unter [ReadyToRun](../whats-new/dotnet-core-3-0.md#readytorun-images).
+- Standard: Aktiviert (`1`)
+
+| | Einstellungsname | Werte |
+| - | - | - |
+| **Umgebungsvariable** | `COMPlus_ReadyToRun` | `1` – aktiviert<br/>`0` – deaktiviert |
