@@ -7,21 +7,21 @@ helpviewer_keywords:
 - controls [WPF], TextBox
 - TextBox control [WPF]
 ms.assetid: 2512a277-e9d8-4de8-a12f-2bd95e8e7b60
-ms.openlocfilehash: 5be472d0d4f27c7a9acc966e4d6ffbcf9d7a1b0d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3b1b15739b1ba1787ba160a9a4d829d83fb10db1
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61790831"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77123636"
 ---
-# <a name="textbox"></a><span data-ttu-id="20b36-102">TextBox</span><span class="sxs-lookup"><span data-stu-id="20b36-102">TextBox</span></span>
-<span data-ttu-id="20b36-103">Die <xref:System.Windows.Controls.TextBox> Steuerelement bietet Unterstützung für grundlegende Texteingabe in WPF-Anwendungen.</span><span class="sxs-lookup"><span data-stu-id="20b36-103">The <xref:System.Windows.Controls.TextBox> control provides support for basic text input in WPF applications.</span></span>  
+# <a name="textbox"></a><span data-ttu-id="e25bd-102">TextBox</span><span class="sxs-lookup"><span data-stu-id="e25bd-102">TextBox</span></span>
+<span data-ttu-id="e25bd-103">Das <xref:System.Windows.Controls.TextBox>-Steuerelement bietet Unterstützung für grundlegende Texteingaben in WPF-Anwendungen.</span><span class="sxs-lookup"><span data-stu-id="e25bd-103">The <xref:System.Windows.Controls.TextBox> control provides support for basic text input in WPF applications.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="20b36-104">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="20b36-104">In This Section</span></span>  
- [<span data-ttu-id="20b36-105">Übersicht über TextBox</span><span class="sxs-lookup"><span data-stu-id="20b36-105">TextBox Overview</span></span>](textbox-overview.md)  
- [<span data-ttu-id="20b36-106">Themen zu Vorgehensweisen</span><span class="sxs-lookup"><span data-stu-id="20b36-106">How-to Topics</span></span>](textbox-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="e25bd-104">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="e25bd-104">In This Section</span></span>  
+ [<span data-ttu-id="e25bd-105">Übersicht über TextBox</span><span class="sxs-lookup"><span data-stu-id="e25bd-105">TextBox Overview</span></span>](textbox-overview.md)  
+ [<span data-ttu-id="e25bd-106">Gewusst wie-Themen</span><span class="sxs-lookup"><span data-stu-id="e25bd-106">How-to Topics</span></span>](textbox-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="20b36-107">Referenz</span><span class="sxs-lookup"><span data-stu-id="20b36-107">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="e25bd-107">Verweis</span><span class="sxs-lookup"><span data-stu-id="e25bd-107">Reference</span></span>  
  <xref:System.Windows.Controls.TextBox>  
   
  <xref:System.Windows.Controls.RichTextBox>  
@@ -30,7 +30,7 @@ ms.locfileid: "61790831"
   
  <xref:System.Windows.Controls.PasswordBox>  
   
-## <a name="see-also"></a><span data-ttu-id="20b36-108">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="20b36-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e25bd-108">Weitere Informationen</span><span class="sxs-lookup"><span data-stu-id="e25bd-108">See also</span></span>
 
-- [<span data-ttu-id="20b36-109">Beispiel für WPF-Steuerelementsammlungen</span><span class="sxs-lookup"><span data-stu-id="20b36-109">WPF Controls Gallery Sample</span></span>](https://go.microsoft.com/fwlink/?LinkID=160053)
-- [<span data-ttu-id="20b36-110">TextBox-Stile und -Vorlagen</span><span class="sxs-lookup"><span data-stu-id="20b36-110">TextBox Styles and Templates</span></span>](textbox-styles-and-templates.md)
+- [<span data-ttu-id="e25bd-109">Beispiel für WPF-Steuerelementsammlungen</span><span class="sxs-lookup"><span data-stu-id="e25bd-109">WPF Controls Gallery Sample</span></span>](https://github.com/Microsoft/WPF-Samples/tree/master/Getting%20Started/ControlsAndLayout)
+- [<span data-ttu-id="e25bd-110">TextBox-Stile und -Vorlagen</span><span class="sxs-lookup"><span data-stu-id="e25bd-110">TextBox Styles and Templates</span></span>](textbox-styles-and-templates.md)
