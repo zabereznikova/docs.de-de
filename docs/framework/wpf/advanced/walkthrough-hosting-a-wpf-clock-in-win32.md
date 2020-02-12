@@ -7,24 +7,24 @@ helpviewer_keywords:
 - Win32 code [WPF], WPF interoperation
 - interoperability [WPF], Win32
 ms.assetid: 555e55a7-0851-4ec8-b1c6-0acba7e9b648
-ms.openlocfilehash: 1fdc0c9ccf1464d7519a4c5935520de1206ca9bb
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 0aecde96d182e12ab72b1a6cba129ab1d8a28391
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76794159"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77123778"
 ---
 # <a name="walkthrough-host-a-wpf-clock-in-win32"></a>Exemplarische Vorgehensweise: Hosten einer WPF-Uhr in Win32
 
 Wenn Sie [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] in Win32-Anwendungen einfügen möchten, verwenden Sie <xref:System.Windows.Interop.HwndSource>, der das HWND bereitstellt, das Ihren [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Inhalt enthält. Erstellen Sie zunächst die <xref:System.Windows.Interop.HwndSource>, und geben Sie Ihr Parameter ähnlich wie bei "kreatewindow" an. Dann informieren Sie den <xref:System.Windows.Interop.HwndSource> über den gewünschten [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Inhalt. Schließlich erhalten Sie das HWND aus dem <xref:System.Windows.Interop.HwndSource>. In dieser exemplarischen Vorgehensweise wird veranschaulicht, wie ein gemischtes [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] in einer Win32-Anwendung erstellt wird, die das Eigenschaften Dialogfeld des Betriebssystems für **Datum und Uhrzeit**
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
+## <a name="prerequisites"></a>Voraussetzungen
 
 Siehe [WPF-und Win32-Interoperation](wpf-and-win32-interoperation.md).
 
-## <a name="how-to-use-this-tutorial"></a>Zur Verwendung dieses Lernprogramms
+## <a name="how-to-use-this-tutorial"></a>Verwendung dieses Tutorials
 
-Dieses Tutorial konzentriert sich auf die wichtigsten Schritte zum Erstellen einer interoperativen Anwendung. Das Lernprogramm wird durch ein Beispiel für ein Beispiel für die [Win32-Takt Interaktion](https://go.microsoft.com/fwlink/?LinkID=160051)unterstützt, aber dieses Beispiel reflektiert das Endprodukt. In diesem Tutorial werden die Schritte so beschrieben, als würden Sie mit einem vorhandenen Win32-Projekt beginnen, das möglicherweise ein bereits vorhandenes Projekt ist, und Sie haben der Anwendung einen gehosteten [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] hinzugefügt. Sie können Ihr Endprodukt mit dem [Beispiel für die Win32-Takt Interaktion](https://go.microsoft.com/fwlink/?LinkID=160051)vergleichen.
+Dieses Tutorial konzentriert sich auf die wichtigsten Schritte zum Erstellen einer interoperativen Anwendung. Das Lernprogramm wird durch ein Beispiel für ein Beispiel für die [Win32-Takt Interaktion](https://github.com/Microsoft/WPF-Samples/tree/master/Migration%20and%20Interoperability/Win32Clock)unterstützt, aber dieses Beispiel reflektiert das Endprodukt. In diesem Tutorial werden die Schritte so beschrieben, als würden Sie mit einem vorhandenen Win32-Projekt beginnen, das möglicherweise ein bereits vorhandenes Projekt ist, und Sie haben der Anwendung einen gehosteten [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] hinzugefügt. Sie können Ihr Endprodukt mit dem [Beispiel für die Win32-Takt Interaktion](https://github.com/Microsoft/WPF-Samples/tree/master/Migration%20and%20Interoperability/Win32Clock)vergleichen.
 
 ## <a name="a-walkthrough-of-windows-presentation-framework-inside-win32-hwndsource"></a>Eine exemplarische Vorgehensweise für Windows Presentation Framework in Win32 (HwndSource)
 
@@ -232,10 +232,10 @@ Das Endergebnis sieht folgendermaßen aus:
 
 ![Dialogfeld "endgültige Datums-und Uhrzeit Eigenschaften"](./media/walkthrough-hosting-a-wpf-clock-in-win32/final-result-date-time-properties-dialog.png)
 
-Informationen zum Vergleichen des Ergebnisses mit dem Code, der diesen Screenshot erzeugt hat, finden Sie unter Beispiel für die [Win32-Takt Interaktion](https://go.microsoft.com/fwlink/?LinkID=160051).
+Informationen zum Vergleichen des Ergebnisses mit dem Code, der diesen Screenshot erzeugt hat, finden Sie unter Beispiel für die [Win32-Takt Interaktion](https://github.com/Microsoft/WPF-Samples/tree/master/Migration%20and%20Interoperability/Win32Clock).
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Windows.Interop.HwndSource>
 - [Interaktion zwischen WPF und Win32](wpf-and-win32-interoperation.md)
-- [Beispiel für Interaktion mit der Win32-Uhr](https://go.microsoft.com/fwlink/?LinkID=160051)
+- [Beispiel für Interaktion mit der Win32-Uhr](https://github.com/Microsoft/WPF-Samples/tree/master/Migration%20and%20Interoperability/Win32Clock)

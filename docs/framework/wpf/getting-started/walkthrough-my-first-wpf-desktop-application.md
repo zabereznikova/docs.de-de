@@ -11,14 +11,12 @@ helpviewer_keywords:
 ms.assetid: b96bed40-8946-4285-8fe4-88045ab854ed
 ms.topic: tutorial
 ms.custom: mvc,vs-dotnet
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 232605850c65aebd9aafdc9b76c90af42f2c901c
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: bc47405636c4727f502caf1f6e27050367eda74a
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76746976"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124337"
 ---
 # <a name="tutorial-create-your-first-wpf-application-in-visual-studio-2019"></a>Tutorial: Erstellen Ihrer ersten WPF-Anwendung in Visual Studio 2019
 
@@ -215,7 +213,7 @@ In diesem Abschnitt fügen Sie der Anwendung zwei Seiten und ein Bild hinzu.
 
     2. Legen Sie im Dialogfeld **Vorhandenes Element hinzufügen** für den Dateifilter entweder **alle Dateien** oder **Bilddateien**fest, navigieren Sie zu der Bilddatei, die Sie verwenden möchten, und wählen Sie dann **Hinzufügen**aus.
 
-## <a name="build-and-run-the-application"></a>Erstellen eines Builds und Ausführen der Anwendung
+## <a name="build-and-run-the-application"></a>Erstellen und Ausführen der Anwendung
 
 1. Zum Erstellen und Ausführen der Anwendung drücken Sie **F5** , oder wählen Sie im Menü **Debuggen** die Option **Debuggen starten**
 
@@ -490,7 +488,7 @@ In dieser exemplarischen Vorgehensweise haben Sie eine Reihe von Techniken zum E
 Weitere Informationen zum Erstellen von Anwendungen finden Sie in den folgenden Themen:
 
 - [Anwendungsentwicklung](../app-development/index.md)
-- [Steuerelemente](../controls/index.md)
+- [Kontrollen](../controls/index.md)
 - [Übersicht über Datenbindung](../../../desktop-wpf/data/data-binding-overview.md)
 - [Grafiken und Multimedia](../graphics-multimedia/index.md)
 - [Dokumente in WPF](../advanced/documents-in-wpf.md)

@@ -29,12 +29,12 @@ helpviewer_keywords:
 - attribute syntax [XAML]
 - XAML [WPF], property element syntax
 ms.assetid: 67cce290-ca26-4c41-a797-b68aabc45479
-ms.openlocfilehash: 2c6a8662236b614545e7fb8545b7b60e1b08b6bd
-ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
+ms.openlocfilehash: 38c77086075e79c0ec5b4b1564ed753eded23b34
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75559832"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124493"
 ---
 # <a name="xaml-syntax-in-detail"></a>Ausführliche Erläuterung der XAML-Syntax
 In diesem Thema werden die Begriffe definiert, die verwendet werden, um die Elemente der XAML-Syntax zu beschreiben. Diese Begriffe werden im restlichen Teil dieser Dokumentation häufig verwendet, sowohl für die WPF-Dokumentation als auch für die anderen Frameworks, die XAML oder die grundlegenden XAML-Konzepte verwenden, die von der XAML-Sprachunterstützung auf der System. XAML-Ebene aktiviert werden. Dieses Thema erweitert die grundlegende Terminologie, die im Thema [Übersicht über XAML (WPF)](../../../desktop-wpf/fundamentals/xaml.md)vorgestellt wurde.  
@@ -43,7 +43,7 @@ In diesem Thema werden die Begriffe definiert, die verwendet werden, um die Elem
 ## <a name="the-xaml-language-specification"></a>Die XAML-Sprachspezifikation  
  Die hier definierte XAML-Syntax Terminologie ist auch definiert oder wird innerhalb der XAML-Sprachspezifikation referenziert. XAML ist eine Sprache, die auf XML basiert und auf XML-Struktur Regeln folgt oder Sie erweitert. Einige der Begriffe werden von freigegeben oder basieren auf der Terminologie, die häufig verwendet wird, wenn die XML-Sprache oder das XML-Dokument Objektmodell beschrieben wird.  
   
- Weitere Informationen zur XAML-Sprachspezifikation erhalten Sie, wenn Sie [\[MS-XAML-\]](https://go.microsoft.com/fwlink/?LinkId=114525) aus dem Microsoft Download Center herunterladen.  
+ Weitere Informationen zur XAML-Sprachspezifikation erhalten Sie, wenn Sie [\[MS-XAML-\]](https://download.microsoft.com/download/0/A/6/0A6F7755-9AF5-448B-907D-13985ACCF53E/[MS-XAML].pdf) aus dem Microsoft Download Center herunterladen.  
   
 <a name="xaml_and_clr"></a>   
 ## <a name="xaml-and-clr"></a>XAML und CLR  
@@ -313,7 +313,7 @@ In diesem Thema werden die Begriffe definiert, die verwendet werden, um die Elem
   
  Aber genau wie *tygtame*. Formular für *mitgliedschaftsnamen* für Attribute, *basetyname*. der *Name der Mitgliedschaft* ist im Markup unzureichend, und Sie sollten ihn vermeiden.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Übersicht über XAML (WPF)](../../../desktop-wpf/fundamentals/xaml.md)
 - [Sprachfunktionen des XAML-Namespace (x:)](../../../desktop-wpf/xaml-services/namespace-language-features.md)

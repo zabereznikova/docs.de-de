@@ -12,14 +12,12 @@ helpviewer_keywords:
 - resources, for multiple platforms
 - targeting multiple platforms, resources for
 ms.assetid: 72c76f0b-7255-4576-9261-3587f949669c
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: b32c2e354ea48e25ddb0aa561eb576cbfd89e3fb
-ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
+ms.openlocfilehash: 3bf475117a85c2fced260dcc9460d55cd7007277
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74204739"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77123661"
 ---
 # <a name="app-resources-for-libraries-that-target-multiple-platforms"></a>App-Ressourcen für Bibliotheken, die für mehrere Zielplattformen konfiguriert sind
 Sie können den Projekttyp der .NET Framework [portablen Klassenbibliothek](../../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md) verwenden, um sicherzustellen, dass von mehreren Plattformen auf Ressourcen in den Klassenbibliotheken zugegriffen werden kann. Dieser Projekttyp ist in Visual Studio 2012 verfügbar und dient als Ziel für die Portable Teilmenge der .NET Framework-Klassenbibliothek. Durch die Verwendung einer portablen Klassenbibliothek wird sichergestellt, dass auf Ihre Bibliothek über Desktop-Apps, Silverlight-apps, Windows Phone-apps und Windows 8. x Store-Apps zugegriffen werden kann.
@@ -35,7 +33,7 @@ Sie können den Projekttyp der .NET Framework [portablen Klassenbibliothek](../.
 
  Das Projekt der portablen Klassenbibliothek enthält die vier <xref:System.Resources.ResourceManager> Member, die in der folgenden Tabelle aufgeführt sind. Diese Konstruktoren und Methoden ermöglichen es Ihnen, ein <xref:System.Resources.ResourceManager>-Objekt zu instanziieren und Zeichenfolgenressourcen abzurufen.
 
-|`ResourceManager` -Member|Beschreibung|
+|`ResourceManager` -Member|BESCHREIBUNG|
 |------------------------------|-----------------|
 |<xref:System.Resources.ResourceManager.%23ctor%28System.String%2CSystem.Reflection.Assembly%29>|Erstellt eine <xref:System.Resources.ResourceManager>-Instanz für den Zugriff auf die benannte Ressourcendatei in der angegebenen Assembly.|
 |<xref:System.Resources.ResourceManager.%23ctor%28System.Type%29>|Erstellt eine <xref:System.Resources.ResourceManager>-Instanz, die dem angegebenen Typ entspricht.|
@@ -61,13 +59,13 @@ Sie können den Projekttyp der .NET Framework [portablen Klassenbibliothek](../.
 |BornLength|12|
 |Hired|Hire Date|
 |HiredLength|12|
-|ID|ID|
+|id|id|
 |ID.Length|12|
 |Name|Name|
 |NameLength|25|
 |Titel|Mitarbeiterdatenbank|
 
- Der folgende Code definiert eine `UILibrary` Klasse, die den Ressourcen-Manager Wrapper namens verwendet, der von Visual Studio generiert `resources`, wenn der **Zugriffsmodifizierer** für die Datei in **Public**geändert wird. Die UILibrary-Klasse analysiert die Zeichenfolgendaten nach Bedarf. . Beachten Sie, dass sich die Klasse im `MyCompany.Employees`-Namespace befindet.
+ Der folgende Code definiert eine `UILibrary` Klasse, die den Ressourcen-Manager Wrapper namens verwendet, der von Visual Studio generiert `resources`, wenn der **Zugriffsmodifizierer** für die Datei in **Public**geändert wird. Die UILibrary-Klasse analysiert die Zeichenfolgendaten nach Bedarf. erforderlich. Beachten Sie, dass sich die Klasse im `MyCompany.Employees`-Namespace befindet.
 
  [!code-csharp[Conceptual.Resources.Portable#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.portable/cs/uilibrary.cs#1)]
  [!code-vb[Conceptual.Resources.Portable#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.portable/vb/uilibrary.vb#1)]
@@ -90,7 +88,7 @@ Sie können den Projekttyp der .NET Framework [portablen Klassenbibliothek](../.
 |BornLength|20|
 |Hired|Date embauché|
 |HiredLength|16|
-|ID|ID|
+|id|id|
 |Name|Nom|
 |Titel|Base de données des employés|
 
@@ -104,7 +102,7 @@ Sie können den Projekttyp der .NET Framework [portablen Klassenbibliothek](../.
  [!code-csharp[Conceptual.Resources.PortableMetroLoc#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.portablemetroloc/cs/blankpage.xaml.cs#1)]
  [!code-vb[Conceptual.Resources.PortableMetroLoc#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.portablemetroloc/vb/blankpage.xaml.vb#1)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Resources.ResourceManager>
 - [Ressourcen in Desktop-Apps](../../../docs/framework/resources/index.md)

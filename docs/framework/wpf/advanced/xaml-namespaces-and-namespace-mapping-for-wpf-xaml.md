@@ -14,12 +14,12 @@ helpviewer_keywords:
 - classes [WPF], mapping namespaces to
 - namespaces [WPF]
 ms.assetid: 5c0854e3-7470-435d-9fe2-93eec9d3634e
-ms.openlocfilehash: 85f35c29cdd1d9e4ea9776b756245a75af58e912
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: ac9e028d8804c4fdadf4e6be8d7650afa1406969
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76741826"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124467"
 ---
 # <a name="xaml-namespaces-and-namespace-mapping-for-wpf-xaml"></a>XAML-Namespaces und Namespacezuordnung für WPF-XAML
 Diesem Thema bietet weitere Erläuterungen zu Vorhandensein und Zweck der beiden XAML-Namespacezuordnungen, die häufig im Stammelement einer WPF XAML-Datei zu finden sind. Es wird ebenfalls beschrieben, wie Sie ähnliche Zuordnungen für Elemente in Ihrem eigenen Code und/oder separaten Assemblys erstellen können.  
@@ -107,7 +107,7 @@ End Namespace
 ## <a name="mapping-clr-namespaces-to-xml-namespaces-in-an-assembly"></a>Zuordnen von CLR-Namespaces zu XML-Namespaces in einer Assembly  
  WPF definiert ein CLR-Attribut, das von XAML-Prozessoren verwendet wird, um mehrere CLR-Namespaces einem einzigen XAML-Namespace zuzuordnen. Dieses Attribut, <xref:System.Windows.Markup.XmlnsDefinitionAttribute>, wird auf Assemblyebene im Quellcode platziert, der die Assembly erstellt. Der Quellcode der WPF-Assembly verwendet dieses Attribut, um die verschiedenen allgemeinen Namespaces, z. b. <xref:System.Windows> und <xref:System.Windows.Controls>, dem `http://schemas.microsoft.com/winfx/2006/xaml/presentation`-Namespace zuzuordnen.  
   
- Der <xref:System.Windows.Markup.XmlnsDefinitionAttribute> nimmt zwei Parameter an: den XML/XAML-Namespace Namen und den Namen des CLR-Namespace. Es können mehrere <xref:System.Windows.Markup.XmlnsDefinitionAttribute> vorhanden sein, um dem gleichen XML-Namespace mehrere CLR-Namespaces zuzuordnen. Sind diese einmal zugeordnet, kann in der CodeBehind-Seite der partiellen Klasse auf Mitglieder dieser Namespaces auf Wunsch auch ohne vollqualifizierten Bezeichner durch Angabe des entsprechenden `using`-Statements verwiesen werden. Weitere Informationen finden Sie unter <xref:System.Windows.Markup.XmlnsDefinitionAttribute>.  
+ Der <xref:System.Windows.Markup.XmlnsDefinitionAttribute> nimmt zwei Parameter an: den XML/XAML-Namespace Namen und den Namen des CLR-Namespace. Es können mehrere <xref:System.Windows.Markup.XmlnsDefinitionAttribute> vorhanden sein, um dem gleichen XML-Namespace mehrere CLR-Namespaces zuzuordnen. Sind diese einmal zugeordnet, kann in der CodeBehind-Seite der partiellen Klasse auf Mitglieder dieser Namespaces auf Wunsch auch ohne vollqualifizierten Bezeichner durch Angabe des entsprechenden `using`-Statements verwiesen werden. Weitere Details finden Sie unter <xref:System.Windows.Markup.XmlnsDefinitionAttribute>.  
   
 ## <a name="designer-namespaces-and-other-prefixes-from-xaml-templates"></a>Designer-Namespaces und andere Präfixe aus XAML-Vorlagen  
  Wenn Sie mit Entwicklungsumgebungen und/oder Entwurfstools für WPF-XAML arbeiten, werden Sie bemerken, dass es im XAML-Markup weitere definierte XAML-Namespaces/Präfixe gibt.  
@@ -137,5 +137,5 @@ End Namespace
   
 ## <a name="see-also"></a>Weitere Informationen
 
-- [Grundlegendes zu XML-Namespaces](https://go.microsoft.com/fwlink/?LinkId=98069)
+- [Grundlegendes zu XML-Namespaces](https://docs.microsoft.com/previous-versions/aa468565(v=msdn.10))
 - [Übersicht über XAML (WPF)](../../../desktop-wpf/fundamentals/xaml.md)

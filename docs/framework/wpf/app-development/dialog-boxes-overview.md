@@ -10,12 +10,12 @@ helpviewer_keywords:
 - message boxes [WPF]
 - modal dialog boxes [WPF]
 ms.assetid: 0d23d544-a393-4a02-a3aa-d8cd5d3d6511
-ms.openlocfilehash: 9ec6716fefdc8de75d7e523c56ae0b3a02c8cf02
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: bce2eed5f0e78c16b85b399e588c3d0d68ce7cb7
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73424645"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77123713"
 ---
 # <a name="dialog-boxes-overview"></a>Übersicht über Dialog Felder
 Eigenständige Anwendungen verfügen in der Regel über ein Hauptfenster, in dem die Hauptdaten angezeigt werden, über die die Anwendung ausgeführt wird, und die Funktionalität zur Verarbeitung dieser Daten über [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] Mechanismen wie Menüleisten, Symbolleisten und Status leisten verfügbar macht. Eine nicht triviale Anwendung kann auch zusätzliche Fenster anzeigen, um Folgendes auszuführen:  
@@ -32,7 +32,7 @@ Eigenständige Anwendungen verfügen in der Regel über ein Hauptfenster, in dem
   
  Ein nicht modalem Dialogfeld verhindert hingegen nicht, *dass ein Benutzer* andere Fenster aktiviert, während er geöffnet ist. Wenn ein Benutzer z. B. Vorkommen eines bestimmten Worts in einem Dokument finden möchte, wird in einem Hauptfenster oft ein Dialogfeld geöffnet, um den Benutzer zu fragen, nach welchem Wort er sucht. Da die Suche nach einem Wort einen Benutzer aber nicht an der Bearbeitung des Dokuments hindert, muss das Dialogfeld nicht unbedingt modal sein. Bei einem nicht modalem Dialogfeld wird mindestens eine Schaltfläche zum **Schließen** des Dialog Felds bereitgestellt, und es können zusätzliche Schaltflächen zum Ausführen bestimmter Funktionen bereitgestellt werden, z. b. eine Schaltfläche " **weiter suchen** ", um das nächste Wort zu suchen, das den Suchkriterien einer Wort Suche entspricht.  
   
- Mit Windows Presentation Foundation (WPF) können Sie verschiedene Arten von Dialogfeldern erstellen, einschließlich Meldungs Feldern, allgemeiner Dialogfelder und benutzerdefinierte Dialogfelder. In diesem Thema werden die einzelnen Themen erläutert, und im [Dialog Feld Beispiel](https://go.microsoft.com/fwlink/?LinkID=159984) finden Sie entsprechende Beispiele.  
+ Mit Windows Presentation Foundation (WPF) können Sie verschiedene Arten von Dialogfeldern erstellen, einschließlich Meldungs Feldern, allgemeiner Dialogfelder und benutzerdefinierte Dialogfelder. In diesem Thema werden die einzelnen Themen erläutert, und im [Dialog Feld Beispiel](https://github.com/Microsoft/WPF-Samples/tree/master/Windows/DialogBox) finden Sie entsprechende Beispiele.  
 
 <a name="Message_Boxes"></a>   
 ## <a name="message-boxes"></a>Meldungs Felder  
@@ -55,9 +55,9 @@ Eigenständige Anwendungen verfügen in der Regel über ein Hauptfenster, in dem
  [!code-csharp[DialogBoxesOverviewSnippets#MsgBoxShowAndResultCODEBEHIND1](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxesOverviewSnippets/CSharp/Window1.xaml.cs#msgboxshowandresultcodebehind1)]
  [!code-vb[DialogBoxesOverviewSnippets#MsgBoxShowAndResultCODEBEHIND1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxesOverviewSnippets/VisualBasic/window1.xaml.vb#msgboxshowandresultcodebehind1)]  
   
- Weitere Informationen zum Verwenden von Meldungs Feldern finden Sie unter <xref:System.Windows.MessageBox>, [MessageBox Sample](https://go.microsoft.com/fwlink/?LinkID=160023)und [Dialog Feld Sample](https://go.microsoft.com/fwlink/?LinkID=159984).  
+ Weitere Informationen zum Verwenden von Meldungs Feldern finden Sie unter <xref:System.Windows.MessageBox>, [MessageBox Sample](https://github.com/Microsoft/WPF-Samples/tree/master/Windows/MessageBox)und [Dialog Feld Sample](https://github.com/Microsoft/WPF-Samples/tree/master/Windows/DialogBox).  
   
- Obwohl <xref:System.Windows.MessageBox> eine einfache Dialogfeld Benutzerumgebung anbieten können, ist der Vorteil der Verwendung von <xref:System.Windows.MessageBox>, dass die einzige Art von Fenster ist, die von Anwendungen angezeigt werden kann, die in einer teilweise vertrauenswürdigen Sicherheits Sandbox ausgeführt werden (siehe [Sicherheit](../security-wpf.md)), wie z. b. XAML-Browser. Anwendungen (XBAPs).  
+ Obwohl <xref:System.Windows.MessageBox> eine einfache Dialogfeld-Benutzerumgebung bieten kann, ist der Vorteil der Verwendung von <xref:System.Windows.MessageBox>, dass der einzige Typ von Fenstern ist, der von Anwendungen angezeigt werden kann, die in einer teilweise vertrauenswürdigen Sicherheits Sandbox (siehe Sicherheit) ausgeführt werden (siehe [Sicherheit](../security-wpf.md)), z. b. für XAML-Browser Anwendungen (XBAPs)  
   
  In den meisten Dialogfeldern werden komplexere Daten angezeigt und gesammelt als im Ergebnis eines Meldungsfelds. Dazu zählen Text, Auswahlmöglichkeiten (Kontrollkästchen), sich gegenseitig ausschließende Auswahlmöglichkeiten (Optionsfelder) und Auswahlmöglichkeiten in einer Liste (Listenfelder, Kombinationsfelder, Dropdown-Listenfelder). Windows Presentation Foundation (WPF) bietet mehrere allgemeine Dialogfelder und ermöglicht Ihnen das Erstellen eigener Dialogfelder, obwohl die Verwendung von entweder auf Anwendungen beschränkt ist, die mit voller Vertrauenswürdigkeit ausgeführt werden.  
   
@@ -118,7 +118,7 @@ Obwohl Standarddialogfelder hilfreich sind und nach Möglichkeit verwendet werde
 <a name="Creating_a_Modal_Custom_Dialog_Box"></a>   
 ### <a name="creating-a-modal-custom-dialog-box"></a>Erstellen eines modalen benutzerdefinierten Dialog Felds
 
-In diesem Thema wird gezeigt, wie <xref:System.Windows.Window> verwendet wird, um eine typische modale Dialogfeld Implementierung zu erstellen, indem das Dialogfeld `Margins` als Beispiel verwendet wird (siehe Beispiel für ein [Dialogfeld](https://go.microsoft.com/fwlink/?LinkID=159984)). Das Dialogfeld `Margins` ist in der folgenden Abbildung dargestellt.  
+In diesem Thema wird gezeigt, wie <xref:System.Windows.Window> verwendet wird, um eine typische modale Dialogfeld Implementierung zu erstellen, indem das Dialogfeld `Margins` als Beispiel verwendet wird (siehe Beispiel für ein [Dialogfeld](https://github.com/Microsoft/WPF-Samples/tree/master/Windows/DialogBox)). Das Dialogfeld `Margins` ist in der folgenden Abbildung dargestellt.  
   
  ![Ein Seitenränder-Dialogfeld mit Feldern zum Definieren des linken und oberen Rands, des rechten Rands und des unteren Rands.](./media/dialog-boxes-overview/margin-size-dialog-box.png)  
   
@@ -304,7 +304,7 @@ Alternativ kann der Code <xref:System.Windows.Window.Close%2A> aufzurufen, wenn 
 [!code-csharp[Calling the Close method](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxSample/CSharp/FindDialogBox.xaml.cs?range=1-9,119-126)]
 [!code-vb[Calling the Close method](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxSample/VisualBasic/FindDialogBox.xaml.vb?range=1-9,99-103)]  
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Übersicht über Popups](../controls/popup-overview.md)
-- [Dialog Feld Beispiel](https://go.microsoft.com/fwlink/?LinkID=159984)
+- [Dialog Feld Beispiel](https://github.com/Microsoft/WPF-Samples/tree/master/Windows/DialogBox)

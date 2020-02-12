@@ -9,14 +9,12 @@ helpviewer_keywords:
 - .NET Framework, and Windows Store apps
 - .NET Framework, and Windows Runtime
 ms.assetid: 6fa7d044-ae12-4c54-b8ee-50915607a565
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: dd7e045bf54b09fe2a229efefc0218eb3f2f731a
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: 56c9cb60ab46a583c34f898d20abf85f5ff0fe4c
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802751"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77123700"
 ---
 # <a name="net-framework-support-for-windows-store-apps-and-windows-runtime"></a>.NET Framework-Unterstützung für Windows Store-Apps und Windows-Runtime
 
@@ -92,15 +90,15 @@ Die Darstellungsweise von Schnittstellen in verwaltetem Code wirkt sich auf die 
 
 Weitere Informationen zur Verwendung der .NET Framework zum Erstellen einer Windows-Runtime-Komponente sowie eine exemplarische Vorgehensweise, die zeigt, wie eine solche Komponente mit JavaScript verwendet wird, finden Sie unter [Erstellen von Windows-Runtime Komponenten C# in und Visual Basic](/windows/uwp/winrt-components/creating-windows-runtime-components-in-csharp-and-visual-basic).
 
-### <a name="primitive-types"></a>Primitive Datentypen
+### <a name="primitive-types"></a>Primitive Typen
 
 Um die natürliche Verwendung der Windows-Runtime in verwaltetem Code zu ermöglichen, werden .NET Framework primitive Typen anstelle Windows-Runtime primitiven Typen im Code angezeigt. In .NET Framework haben primitive Typen wie die `Int32`-Struktur viele nützliche Eigenschaften und Methoden, wie die `Int32.TryParse`-Methode. Im Gegensatz dazu haben primitive Typen und Strukturen in der Windows-Runtime nur Felder. Wenn Sie primitive Typen in verwaltetem Code verwenden, verhalten sie sich wie .NET Framework-Typen, und Sie können deren Eigenschaften und Methoden wie gewohnt verwenden. Die folgende Liste enthält eine Zusammenfassung:
 
 - Verwenden Sie für die Windows-Runtime primitiven `Int32`, `Int64`, `Single`, `Double`, `Boolean`, `String` (eine unveränderliche Auflistung von Unicode-Zeichen), `Enum`, `UInt32`, `UInt64`und `Guid`den Typ desselben Namens im `System`-Namespace.
 
-- Verwenden Sie für `UInt8` den Typ `System.Byte`.
+- Verwenden Sie `UInt8` für `System.Byte`.
 
-- Verwenden Sie für `Char16` den Typ `System.Char`.
+- Verwenden Sie `Char16` für `System.Char`.
 
 - Verwenden Sie für die `IInspectable`-Schnittstelle `System.Object`.
 
@@ -112,7 +110,7 @@ Weitere grundlegende, häufig verwendete Windows-Runtime Typen, die in verwaltet
 
 ### <a name="other-differences"></a>Weitere Unterschiede
 
-In einigen Fällen erfordert die Tatsache, dass .NET Framework Typen in Ihrem Code statt Windows-Runtime Typen angezeigt werden, eine Aktion Ihrerseits. Beispielsweise wird die <xref:Windows.Foundation.Uri?displayProperty=nameWithType>-Klasse in .NET Framework Code als <xref:System.Uri?displayProperty=nameWithType> angezeigt. <xref:System.Uri?displayProperty=nameWithType> eine relative URI zulässt, aber <xref:Windows.Foundation.Uri?displayProperty=nameWithType> einen absoluten URI erfordert. Wenn Sie einen URI an eine Windows-Runtime Methode übergeben, müssen Sie daher sicherstellen, dass er absolut ist. Weitere Informationen finden Sie unter [Übergeben eines URI an die Windows-Runtime](../../../docs/standard/cross-platform/passing-a-uri-to-the-windows-runtime.md).
+In einigen Fällen erfordert die Tatsache, dass .NET Framework Typen in Ihrem Code statt Windows-Runtime Typen angezeigt werden, eine Aktion Ihrerseits. Beispielsweise wird die <xref:Windows.Foundation.Uri?displayProperty=nameWithType>-Klasse in .NET Framework Code als <xref:System.Uri?displayProperty=nameWithType> angezeigt. <xref:System.Uri?displayProperty=nameWithType> eine relative URI zulässt, aber <xref:Windows.Foundation.Uri?displayProperty=nameWithType> einen absoluten URI erfordert. Wenn Sie einen URI an eine Windows-Runtime Methode übergeben, müssen Sie daher sicherstellen, dass er absolut ist. Weitere Informationen finden [Sie unter Übergeben eines URI an den Windows-Runtime](../../../docs/standard/cross-platform/passing-a-uri-to-the-windows-runtime.md).
 
 <a name="WindowsRuntimeComponents"></a>
 
@@ -157,7 +155,7 @@ Sie können verwalteten Code aus Ihren vorhandenen Desktop-Apps als eigenständi
 
 ## <a name="related-topics"></a>Verwandte Themen
 
-|Title|Beschreibung|
+|Titel|BESCHREIBUNG|
 |-----------|-----------------|
 |[.NET für Windows Store-Apps – Übersicht](https://docs.microsoft.com/previous-versions/windows/apps/br230302(v=vs.140))|Beschreibt die .NET Framework Typen und Member, die Sie zum Erstellen von Windows 8. x Store-Apps und Windows runtimecomponents verwenden können. (Im Windows Developer Center)|
 |[Roadmap für Windows Store-Apps C# , die oder Visual Basic](https://docs.microsoft.com/previous-versions/windows/apps/br229583(v=win.10))|Bietet wichtige Ressourcen, die Ihnen den Einstieg in die Entwicklung von Windows 8. x Store C# -Apps mithilfe von oder Visual Basic erleichtern, einschließlich vielen Schnellstart Themen, Richtlinien und bewährten Methoden. (Im Windows Developer Center)|

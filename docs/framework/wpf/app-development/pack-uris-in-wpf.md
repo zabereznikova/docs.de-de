@@ -9,12 +9,12 @@ helpviewer_keywords:
 - loading non-resource files
 - application management [WPF]
 ms.assetid: 43adb517-21a7-4df3-98e8-09e9cdf764c4
-ms.openlocfilehash: 0fec72bdedbcc2c84d8bc65e72391366e42d82be
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: a98c97a4aa95fb956a2ca6d417e009a281a938b6
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76739160"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124480"
 ---
 # <a name="pack-uris-in-wpf"></a>Paket-URI in WPF
 
@@ -44,7 +44,7 @@ Zum Bereitstellen eines konsistenten Mechanismus zum Identifizieren und Laden di
 
 ## <a name="the-pack-uri-scheme"></a>Das Paket-URI-Schema
 
-Das Paket-URI-Schema wird von der OPC-Spezifikation ( [Open Packaging Conventions](https://go.microsoft.com/fwlink/?LinkID=71255) ) verwendet, mit der ein Modell zum organisieren und Identifizieren von Inhalten beschrieben wird. Die wichtigsten Elemente dieses Modells sind Pakete und Teile, wobei ein *Paket* ein logischer Container für einen oder mehrere logische *Teile*ist. Die folgende Abbildung veranschaulicht dieses Konzept.
+Das Paket-URI-Schema wird von der OPC-Spezifikation ( [Open Packaging Conventions](https://www.ecma-international.org/publications/standards/Ecma-376.htm) ) verwendet, mit der ein Modell zum organisieren und Identifizieren von Inhalten beschrieben wird. Die wichtigsten Elemente dieses Modells sind Pakete und Teile, wobei ein *Paket* ein logischer Container für einen oder mehrere logische *Teile*ist. Die folgende Abbildung veranschaulicht dieses Konzept.
 
 ![Paket und Teile-Diagramm](./media/pack-uris-in-wpf/wpf-package-parts-diagram.png)
 
@@ -334,7 +334,7 @@ Tabelle 2: Relative Paket-URIs im Markup
 
 ### <a name="using-pack-uris-in-code"></a>Verwenden von Paket-URIs im Code
 
-Sie geben einen Paket-URI im Code an, indem Sie die <xref:System.Uri>-Klasse instanziieren und den Paket-URI als Parameter an den-Konstruktor übergeben. Dies wird im folgenden Beispiel dargestellt.
+Sie geben einen Paket-URI im Code an, indem Sie die <xref:System.Uri>-Klasse instanziieren und den Paket-URI als Parameter an den-Konstruktor übergeben. Dies wird im folgenden Beispiel veranschaulicht.
 
 ```csharp
 Uri uri = new Uri("pack://application:,,,/File.xaml");

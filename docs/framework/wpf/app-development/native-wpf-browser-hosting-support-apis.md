@@ -7,20 +7,20 @@ helpviewer_keywords:
 - browser hosting support [WPF]
 - WPF browser hosting support APIs [WPF]
 ms.assetid: 82c133a8-d760-45fb-a2b9-3a997537f1d4
-ms.openlocfilehash: 7e285b916b076fdf0fc0d6477fba47d946b95726
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 68981f30918b5fff346daa2fce94bbf4601ea2e9
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76744218"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124506"
 ---
 # <a name="native-wpf-browser-hosting-support-apis"></a>Systemeigene WPF-APIs mit Unterstützung für das Hosten in Browsern
 Das Hosten von WPF-Anwendungen in Webbrowsern wird von einem aktiven Dokument Server (auch als DocObject bezeichnet) ermöglicht, der beim WPF-Host registriert ist. Internet Explorer kann direkt aktiviert und in ein aktives Dokument integriert werden. Zum Hosting von XBAPs und losen XAML-Dokumenten in Mozilla-Browsern bietet WPF ein NPAPI-Plug-in, das eine ähnliche Hostingumgebung für den aktiven WPF-Dokument Server wie Internet Explorer bereitstellt. Die einfachste Möglichkeit zum Hosten von XBAPs-und XAML-Dokumenten in anderen Browsern und eigenständigen Anwendungen ist jedoch das Internet Explorer-Webbrowser-Steuerelement. Das WebBrowser-Steuerelement stellt die komplexe aktive Dokument Server-Hostingumgebung bereit, ermöglicht aber seinen eigenen Host, diese Umgebung anzupassen und zu erweitern und direkt mit dem aktuellen aktiven Dokument Objekt zu kommunizieren.  
   
- Der aktive WPF-Dokument Server implementiert verschiedene gängige Hostingschnittstellen, einschließlich [IOleObject](https://go.microsoft.com/fwlink/?LinkId=162049), [IOleDocument](https://go.microsoft.com/fwlink/?LinkId=162050), [IOleInPlaceActiveObject](https://go.microsoft.com/fwlink/?LinkId=162051), [ipersistmoniker](https://go.microsoft.com/fwlink/?LinkId=162045)und [IOleCommandTarget](https://go.microsoft.com/fwlink/?LinkId=162047). Wenn Sie im Webbrowser-Steuerelement gehostet werden, können diese Schnittstellen Abfragen aus dem-Objekt sein, das von der [IWebBrowser2::D ocumschlag](https://go.microsoft.com/fwlink/?LinkId=162048) -Eigenschaft zurückgegeben wird.  
+ Der aktive WPF-Dokument Server implementiert verschiedene gängige Hostingschnittstellen, einschließlich [IOleObject](/windows/win32/api/oleidl/nn-oleidl-ioleobject), [IOleDocument](/windows/win32/api/docobj/nn-docobj-ioledocument), [IOleInPlaceActiveObject](/windows/win32/api/oleidl/nn-oleidl-ioleinplaceactiveobject), [ipersistmoniker](https://docs.microsoft.com/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms775042(v=vs.85))und [IOleCommandTarget](/windows/win32/api/docobj/nn-docobj-iolecommandtarget). Wenn Sie im Webbrowser-Steuerelement gehostet werden, können diese Schnittstellen Abfragen aus dem-Objekt sein, das von der [IWebBrowser2::D ocumschlag](https://docs.microsoft.com/previous-versions/aa752116(v=vs.85)) -Eigenschaft zurückgegeben wird.  
   
 ## <a name="iolecommandtarget"></a>IOleCommandTarget  
- Die [IOleCommandTarget](https://go.microsoft.com/fwlink/?LinkId=162047) -Implementierung des aktiven WPF-Dokument Servers unterstützt zahlreiche Navigations bezogene und browserspezifische Befehle der Standard-OLE-Befehlsgruppe (mit einer Befehls Gruppen-GUID mit null). Außerdem wird eine benutzerdefinierte Befehlsgruppe mit dem Namen CGID_PresentationHost erkannt. Zurzeit ist nur ein Befehl innerhalb dieser Gruppe definiert.  
+ Die [IOleCommandTarget](/windows/win32/api/docobj/nn-docobj-iolecommandtarget) -Implementierung des aktiven WPF-Dokument Servers unterstützt zahlreiche Navigations bezogene und browserspezifische Befehle der Standard-OLE-Befehlsgruppe (mit einer Befehls Gruppen-GUID mit null). Außerdem wird eine benutzerdefinierte Befehlsgruppe mit dem Namen CGID_PresentationHost erkannt. Zurzeit ist nur ein Befehl innerhalb dieser Gruppe definiert.  
   
 ```cpp  
 DEFINE_GUID(CGID_PresentationHost, 0xd0288c55, 0xd6, 0x4f5e, 0xa8, 0x51, 0x79, 0xde, 0xc5, 0x1b, 0x10, 0xec);  

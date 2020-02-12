@@ -10,17 +10,17 @@ helpviewer_keywords:
 - states [WPF]
 - templates [WPF]
 ms.assetid: c19049bb-5ceb-492d-afd2-751dca0ed8e3
-ms.openlocfilehash: 1c6d6b7beba03aaa5c978b5cb72c09ce625e0d7e
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 01b8dc50860757b0eddee477219db1e19d27f40f
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460413"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124402"
 ---
 # <a name="control-styles-and-templates"></a>Steuerelementformate und -vorlagen
 Steuerelemente in Windows Presentation Foundation (WPF) verfügen über eine <xref:System.Windows.Controls.ControlTemplate>, die die visuelle Struktur dieses Steuer Elements enthält. Sie können die Struktur und die Darstellung eines Steuer Elements ändern, indem Sie die <xref:System.Windows.Controls.ControlTemplate> dieses Steuer Elements ändern. Es gibt keine Möglichkeit, nur einen Teil der visuellen Struktur eines Steuer Elements zu ersetzen. um die visuelle Struktur eines Steuer Elements zu ändern, müssen Sie die <xref:System.Windows.Controls.Control.Template%2A>-Eigenschaft des Steuer Elements auf den neuen und den gesamten <xref:System.Windows.Controls.ControlTemplate>festlegen.  
   
- Die Desktopdesigns bestimmen, welches Ressourcenverzeichnis verwendet wird. Die Ressourcenwörterbücher für die Desktopdesigns finden Sie unter [Default WPF Themes (Standard-WPF-Designs)](https://go.microsoft.com/fwlink/?LinkID=158252).  
+ Die Desktopdesigns bestimmen, welches Ressourcenverzeichnis verwendet wird. Die Ressourcenwörterbücher für die Desktopdesigns finden Sie unter [Default WPF Themes (Standard-WPF-Designs)](https://github.com/Microsoft/WPF-Samples/tree/master/Graphics/2DTransforms).  
   
  In der folgenden Tabelle werden die Dateinamen der Ressourcenwörterbücher und die entsprechenden Desktopdesigns beschrieben.  
   
@@ -67,7 +67,7 @@ Steuerelemente in Windows Presentation Foundation (WPF) verfügen über eine <xr
  [TreeView-Stile und -Vorlagen](treeview-styles-and-templates.md)  
  [Window-Stile und -Vorlagen](window-styles-and-templates.md)  
   
-## <a name="reference"></a>Referenz  
+## <a name="reference"></a>Verweis  
  <xref:System.Windows.Controls>  
   
  <xref:System.Windows.Controls.ControlTemplate>  

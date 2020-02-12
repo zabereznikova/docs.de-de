@@ -7,15 +7,15 @@ helpviewer_keywords:
 - controls [WPF], TextBox
 - TextBox control [WPF], how-to topics
 ms.assetid: 006aa461-fe37-4cd8-860a-d38d76e8b9f7
-ms.openlocfilehash: d3d5116a2fa2198661050a1c1adbae9512cd078a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 82da07620135224b5f7353f2acce087d939c1855
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61790883"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124233"
 ---
 # <a name="textbox-how-to-topics"></a>Gewusst-wie-Themen zu TextBox
-Dieser Abschnitt enthält Beispiele, die veranschaulichen, wie Sie häufige Aufgaben mit der <xref:System.Windows.Controls.TextBox> Steuerelement.  
+Dieser Abschnitt enthält Beispiele, die veranschaulichen, wie häufige Aufgaben mit dem <xref:System.Windows.Controls.TextBox>-Steuerelement ausgeführt werden.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Erstellen eines mehrzeiligen TextBox-Steuerelements](how-to-create-a-multiline-textbox-control.md)  
@@ -32,7 +32,7 @@ Dieser Abschnitt enthält Beispiele, die veranschaulichen, wie Sie häufige Aufg
  [Verwenden der Rechtschreibprüfung mit einem Kontextmenü](how-to-use-spell-checking-with-a-context-menu.md)  
  [Hinzufügen eines Wasserzeichens zu einer TextBox](how-to-add-a-watermark-to-a-textbox.md)  
   
-## <a name="reference"></a>Referenz  
+## <a name="reference"></a>Verweis  
  <xref:System.Windows.Controls.TextBox>  
   
  <xref:System.Windows.Controls.RichTextBox>  
@@ -41,7 +41,7 @@ Dieser Abschnitt enthält Beispiele, die veranschaulichen, wie Sie häufige Aufg
   
  <xref:System.Windows.Controls.PasswordBox>  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Beispiel für WPF-Steuerelementsammlungen](https://go.microsoft.com/fwlink/?LinkID=160053)
+- [Beispiel für WPF-Steuerelementsammlungen](https://github.com/Microsoft/WPF-Samples/tree/master/Getting%20Started/ControlsAndLayout)
 - [TextBox-Stile und -Vorlagen](textbox-styles-and-templates.md)
