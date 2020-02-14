@@ -14,14 +14,12 @@ helpviewer_keywords:
 - caller security checks
 - link demands
 ms.assetid: a33fd5f9-2de9-4653-a4f0-d9df25082c4d
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: f040e1e1706e1f84ced8b253ff3fb15dbcbd6e1e
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 31fbd938acb457a4ea803375d18cb1be11d8b287
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70206020"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77217167"
 ---
 # <a name="link-demands"></a>Verknüpfungsaufrufe
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -32,7 +30,7 @@ ms.locfileid: "70206020"
   
  Die Stackwalkmodifizierer <xref:System.Security.CodeAccessPermission.Assert%2A>, <xref:System.Security.CodeAccessPermission.Deny%2A> und <xref:System.Security.CodeAccessPermission.PermitOnly%2A> haben keinen Einfluss auf die Auswertung von Linkaufrufen.  Da Linkaufrufe keinen Stackwalk ausführen, haben die Stackwalkmodifizierer keinen Einfluss auf Linkaufrufe.  
   
- Wenn auf eine durch einen Link Aufruf geschützte Methode über [Reflektion](../reflection-and-codedom/reflection.md)zugegriffen wird, überprüft ein Link Aufruf den unmittelbaren Aufrufer des Codes, auf den über Reflektion zugegriffen wird. Dies gilt sowohl für Methodenerkennungen als auch Methodenaufrufe, die über Reflektion ausgeführt werden. Angenommen, Code verwendet Reflektion, um ein <xref:System.Reflection.MethodInfo> -Objekt zurückzugeben, das eine durch einen Link Aufruf geschützte Methode darstellt, und übergibt dieses **MethodInfo** -Objekt dann an einen anderen Code, der das-Objekt verwendet, um die ursprüngliche Methode aufzurufen. In diesem Fall erfolgt die Überprüfung des Link Bedarfs zweimal: einmal für den Code, der das **MethodInfo** -Objekt zurückgibt, und einmal für den Code, der es aufruft.  
+ Wenn auf eine durch einen Link Aufruf geschützte Methode über [Reflektion](../reflection-and-codedom/reflection.md)zugegriffen wird, überprüft ein Link Aufruf den unmittelbaren Aufrufer des Codes, auf den über Reflektion zugegriffen wird. Dies gilt sowohl für Methodenerkennungen als auch Methodenaufrufe, die über Reflektion ausgeführt werden. Angenommen, Code verwendet Reflektion, um ein <xref:System.Reflection.MethodInfo> Objekt zurückzugeben, das eine durch einen Link Aufruf geschützte Methode darstellt, und übergibt dieses **MethodInfo** -Objekt dann an einen anderen Code, der das-Objekt verwendet, um die ursprüngliche Methode aufzurufen. In diesem Fall erfolgt die Überprüfung des Link Bedarfs zweimal: einmal für den Code, der das **MethodInfo** -Objekt zurückgibt, und einmal für den Code, der es aufruft.  
   
 > [!NOTE]
 > Ein Linkaufruf, der für einen statischen Klassenkonstruktor durchgeführt wird, schützt diesen Konstruktor nicht, da statische Konstruktoren vom System außerhalb des Codeausführungspfades der Anwendung aufgerufen werden. Dies hat zur Folge, dass ein Linkaufruf, wenn er auf eine ganze Klasse angewendet wird, einen statischen Konstruktor nicht schützen kann, obwohl er der Rest der Klasse schützt.  
@@ -54,7 +52,7 @@ public static string ReadData()
 }  
 ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Attribute](../../standard/attributes/index.md)
 - [Codezugriffssicherheit](code-access-security.md)

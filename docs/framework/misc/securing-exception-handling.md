@@ -9,14 +9,12 @@ helpviewer_keywords:
 - secure coding, exception handling
 - exception handling, security
 ms.assetid: 1f3da743-9742-47ff-96e6-d0dd1e9e1c19
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 256d9c9b825081e3bcfafd6e0e09de825d046d20
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: e0465f2eb6be61e161f5e6b8cadf629a53f11906
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894543"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77215787"
 ---
 # <a name="securing-exception-handling"></a>Sichern der Ausnahmebehandlung
 In Visual C++ und Visual Basic wird ein Filter Ausdruck, der den Stapel weiter oben aufführt, vor jeder **abschließend** -Anweisung ausgeführt. Der **catch** -Block, der diesem Filter zugeordnet ist, wird nach der **letztanweisung** ausgeführt. Weitere Informationen finden Sie unter [Verwenden von Benutzer gefilterten Ausnahmen](../../standard/exceptions/using-user-filtered-exception-handlers.md). In diesem Abschnitt werden die Sicherheitsauswirkungen dieser Bestellung erläutert. Sehen Sie sich das folgende Pseudo Codebeispiel an, das die Reihenfolge veranschaulicht, in der Filter Anweisungen und **schließlich** -Anweisungen ausgeführt werden.  
@@ -116,7 +114,7 @@ Thread.CurrentThread.CurrentUICulture)
 End Class  
 ```  
   
- Die korrekte Behebung in diesem Fall besteht darin, den vorhandenen **try**/-Block in einem **try**/-**catch** **-Block zu** wrappen. Wenn Sie einfach eine **catch-throw-** Klausel in den vorhandenen **try**/-**Block einführen** , wird das Problem nicht behoben, wie im folgenden Beispiel gezeigt.  
+ Die korrekte Behebung in diesem Fall besteht darin, den vorhandenen **try**/-Block in einem **try**/**catch** **-Block zu** wrappen. Wenn Sie einfach eine **catch-throw-** Klausel in den vorhandenen **try** **/-** Block einführen, wird das Problem nicht behoben, wie im folgenden Beispiel gezeigt.  
   
 ```cpp  
 YourObject.YourMethod()  
@@ -136,7 +134,7 @@ YourObject.YourMethod()
 }  
 ```  
   
- Dadurch wird das Problem nicht behoben, weil die letzte **-Anweisung nicht** ausgeführt wurde `FilterFunc` , bevor das-Steuerelement abruft.  
+ Dadurch wird das Problem nicht behoben, weil die letzte-Anweisung nicht ausgeführt wurde, bevor die **`FilterFunc` die Steuerung** erhält.  
   
  Im folgenden Beispiel wird das Problem behoben, indem sichergestellt wird, dass die letzte-Klausel ausgeführt wurde, **bevor die Ausnahme** Filter Blöcke der Aufrufer ausgelöst werden.  
   
@@ -160,6 +158,6 @@ YourObject.YourMethod()
 }  
 ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Richtlinien für das Schreiben von sicherem Code](../../standard/security/secure-coding-guidelines.md)

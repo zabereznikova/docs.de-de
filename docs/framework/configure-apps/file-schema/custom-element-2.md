@@ -6,14 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - custom element
 ms.assetid: 2303031f-4c1d-4df4-bca1-e9bd96ca40dc
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: d73c07d58bb226346cb99a1fe50b12bb0e7e746e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: e5c5c6cf5744aa385e6f6700cad623751a4d7427
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73118542"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77215472"
 ---
 # <a name="custom-element-for-namevaluesectionhandler-and-dictionarysectionhandler"></a>Benutzerdefiniertes Element für NameValueSectionHandler und diktarysectionhandler
 
@@ -22,25 +20,25 @@ Definiert Einstellungen für benutzerdefinierte Konfigurations Abschnitte, in de
 [ **\<configuration>** ](configuration-element.md)\
 &nbsp;&nbsp; **\<sectionName >**
 
-## <a name="attributes"></a>Attribute
+## <a name="attributes"></a>Attributes
 
-Keiner
+Keine
 
 ## <a name="parent-element"></a>Übergeordnetes Element
 
-|     | Beschreibung |
+|     | BESCHREIBUNG |
 | --- | ----------- |
 | [ **\<configuration>** ](configuration-element.md) | Das Stammelement in jeder von den Common Language Runtime- und .NET Framework-Anwendungen verwendeten Konfigurationsdatei. |
 
 ## <a name="child-elements"></a>Untergeordnete Elemente
 
-|     | Beschreibung |
+|     | BESCHREIBUNG |
 | --- | ----------- |
-| [ **\<** ](add-element-for-custom-2.md) für <xref:System.Configuration.NameValueSectionHandler> und <xref:System.Configuration.DictionarySectionHandler> hinzufügen  | Fügt benutzerdefinierte Anwendungseinstellungen hinzu. |
-| [ **\<** ](remove-element-for-custom-2.md) für <xref:System.Configuration.NameValueSectionHandler> und <xref:System.Configuration.DictionarySectionHandler> entfernen. | Entfernt eine zuvor definierte Einstellung. |
-| [ **\<** ](clear-element-for-custom-2.md) für <xref:System.Configuration.NameValueSectionHandler> und <xref:System.Configuration.DictionarySectionHandler> löschen. | Löscht alle zuvor definierten Einstellungen in einem Abschnitt. |
+| [ **\<>** ](add-element-for-custom-2.md) für <xref:System.Configuration.NameValueSectionHandler> und <xref:System.Configuration.DictionarySectionHandler> hinzufügen  | Fügt benutzerdefinierte Anwendungseinstellungen hinzu. |
+| [ **\<>** ](remove-element-for-custom-2.md) für <xref:System.Configuration.NameValueSectionHandler> und <xref:System.Configuration.DictionarySectionHandler> entfernen. | Entfernt eine zuvor definierte Einstellung. |
+| [ **\<>** ](clear-element-for-custom-2.md) für <xref:System.Configuration.NameValueSectionHandler> und <xref:System.Configuration.DictionarySectionHandler> löschen. | Löscht alle zuvor definierten Einstellungen in einem Abschnitt. |
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 
 Das **\<sectionName >** -Element ist ein benutzerdefiniertes Element, das durch einen **\<Abschnitt >** -Tag im\<Element > **configabschnitts** definiert wird.
 
@@ -80,6 +78,6 @@ Das erste benutzerdefinierte Element ist **\<"ditaarysample" >** , das die von d
 
 Dieses Element kann in der Anwendungs Konfigurationsdatei, in der Computer Konfigurationsdatei (*Machine. config*) und in den *Web. config* -Dateien verwendet werden, die sich nicht auf der Ebene des Anwendungs Verzeichnisses befinden.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Konfigurationsdatei Schema für die .NET Framework](index.md)

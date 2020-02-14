@@ -1,7 +1,5 @@
 ---
 title: MemoryStream. internalgetoriginandlength-Methode (System.IO)
-author: mairaw
-ms.author: mairaw
 ms.date: 11/19/2019
 topic_type:
 - apiref
@@ -11,12 +9,12 @@ api_location:
 - mscorlib.dll
 api_type:
 - Assembly
-ms.openlocfilehash: d2bfa087fe2fb247f963cfa687c27056363d5696
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: d82b5080e9fbd5fc6603f1cddae996c75a06d3a3
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74284042"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77215459"
 ---
 # <a name="memorystreaminternalgetoriginandlength-method"></a>MemoryStream. internalgetoriginandlength-Methode
 
@@ -34,14 +32,14 @@ internal void InternalGetOriginAndLength(out int origin, out int length)
 - `length` <xref:System.Int32>\
   Wenn diese Methode zurückgegeben wird, wird die Anzahl der Bytes im Arbeitsspeicherstream angezeigt.
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 
 > [!WARNING]
 > Die `MemoryStream.InternalGetOriginAndLength`-Methode ist intern und sollte nicht direkt im Code verwendet werden.
 >
 > Microsoft unterstützt die Verwendung dieser Methode in einer Produktionsanwendung unter keinen Umständen.
 
-## <a name="requirements"></a>Voraussetzungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
 **Namespace:** <xref:System.IO>
 

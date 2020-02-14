@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Hinzufügen von Ablaufverfolgungsanweisungen zu Anwendungscode'
+title: 'Gewusst wie: Hinzufügen von Ablaufverfolgungsanweisungen zu Anwendungscode'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,17 +13,15 @@ helpviewer_keywords:
 - trace switches, conditional writes based on switches
 - WriteIf method
 ms.assetid: f3a93fa7-1717-467d-aaff-393e5c9828b4
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 4517da87603dcdd398d536cd9bf9e441430be375
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 21df0e8129505e50e6b7f29c4f4f5aea94f380e3
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052740"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77217465"
 ---
-# <a name="how-to-add-trace-statements-to-application-code"></a>Vorgehensweise: Hinzufügen von Ablaufverfolgungsanweisungen zu Anwendungscode
-Die am häufigsten für die Ablauf Verfolgung verwendeten Methoden sind die Methoden zum Schreiben der Ausgabe in Listener: **Write, schreiben, schreiben, schreiben, schreiben**, schreiben, schreiben und Fehler **.** Diese Methoden können in zwei Kategorien unterteilt werden:"Write **", "Write"** und "Fail" geben die Ausgabe **nicht** bedingungslos aus, wohingegen "Write **teif**", " **Write telineif**" und " **Assert** " eine boolesche Bedingung testen und auf Grundlage des Werts der Bedingung schreiben oder nicht schreiben. **WriteIf** und **WriteLineIf** führen zu einer Ausgabe, wenn die Bedingung `true` entspricht. **Assert** führt zu einer Ausgabe, wenn die Bedingung `false` entspricht.  
+# <a name="how-to-add-trace-statements-to-application-code"></a>Gewusst wie: Hinzufügen von Ablaufverfolgungsanweisungen zu Anwendungscode
+Die am häufigsten für die Ablaufverfolgung verwendeten Methoden zum Schreiben von Ausgaben in Listener: **Write**, **WriteIf**, **WriteLine**, **WriteLineIf**, **Assert** und **Fail**. Diese Methoden können in zwei Kategorien unterteilt werden: **Write**, **WriteLine** und **Fail** geben alle Ausgaben ohne Bedingungen aus, während **WriteIf**, **WriteLineIf** und **Assert** eine boolesche Bedingung testen und die Ausgabe auf Basis des Werts dieser Bedingung erstellen oder nicht erstellen. **WriteIf** und **WriteLineIf** führen zu einer Ausgabe, wenn die Bedingung `true` entspricht. **Assert** führt zu einer Ausgabe, wenn die Bedingung `false` entspricht.  
   
  Berücksichtigen Sie beim Entwerfen Ihrer Ablaufverfolgungs- und Debugstrategie, wie die Ausgabe aussehen soll. Mehrere **Write**-Anweisungen, die mit beziehungslosen Informationen gefüllt sind, erstellen ein Protokoll, das schwer zu lesen ist. Auf der anderen Seite kann möglicherweise schwer unterschieden werden, welche Informationen zusammengehören, wenn zusammengehörige Anweisungen mithilfe von **WriteLine** in separaten Zeilen angezeigt werden. Verwenden Sie im Allgemeinen mehrere **Write**-Anweisungen, wenn Sie Informationen aus mehreren Quellen zu einer einzelnen Informationsmeldung zusammenfassen möchten. Verwenden Sie die **WriteLine**-Anweisung, wenn Sie eine einzelne vollständige Meldung erstellen möchten.  
   
@@ -69,7 +67,7 @@ Die am häufigsten für die Ablauf Verfolgung verwendeten Methoden sind die Meth
   
 ### <a name="to-verify-that-certain-conditions-exist-either-before-or-after-you-execute-a-method"></a>So überprüfen Sie, ob bestimmte Bedingungen vor oder nach dem Ausführen einer Methode vorhanden sind  
   
-1. Rufen Sie die <xref:System.Diagnostics.Trace.Assert%2A>-Methode auf.  
+1. Rufen Sie die <xref:System.Diagnostics.Trace.Assert%2A> -Methode auf.  
   
     ```vb  
     Dim i As Integer = 4  
@@ -84,13 +82,13 @@ Die am häufigsten für die Ablauf Verfolgung verwendeten Methoden sind die Meth
     > [!NOTE]
     > Sie können **Assert** bei der Ablaufverfolgung und beim Debuggen verwenden. In diesem Beispiel wird die Aufrufliste an alle Listener in der **Listener**-Auflistung ausgegeben. Weitere Informationen finden Sie unter [Assertionen in verwaltetem Code](/visualstudio/debugger/assertions-in-managed-code) und <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType>.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Diagnostics.Debug.WriteIf%2A?displayProperty=nameWithType>
 - <xref:System.Diagnostics.Debug.WriteLineIf%2A?displayProperty=nameWithType>
 - <xref:System.Diagnostics.Trace.WriteIf%2A?displayProperty=nameWithType>
 - <xref:System.Diagnostics.Trace.WriteLineIf%2A?displayProperty=nameWithType>
 - [Ablaufverfolgung und Instrumentieren von Anwendungen](tracing-and-instrumenting-applications.md)
-- [Vorgehensweise: Erstellen, initialisieren und Konfigurieren von Ablauf Verfolgungs Schaltern](how-to-create-initialize-and-configure-trace-switches.md)
+- [Vorgehensweise: Erstellen, Initialisieren und Konfigurieren von Ablaufverfolgungsschaltern](how-to-create-initialize-and-configure-trace-switches.md)
 - [Ablaufverfolgungsschalter](trace-switches.md)
-- [Trace Listeners (Ablaufverfolgungslistener)](trace-listeners.md)
+- [Ablaufverfolgungslistener](trace-listeners.md)

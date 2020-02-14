@@ -1,7 +1,5 @@
 ---
 title: Exception. prepforremoting-Methode (System)
-author: mairaw
-ms.author: mairaw
 ms.date: 10/08/2019
 topic_type:
 - apiref
@@ -11,14 +9,14 @@ api_location:
 - mscorlib.dll
 api_type:
 - Assembly
-ms.openlocfilehash: 057390d64f70d3cb8eba7d4b29b94570fdca77e3
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: ce1c24578690a1643b7f5af0e44eaae95ed7b0a2
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72405897"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77214897"
 ---
-# <a name="exceptionprepforremoting-method"></a>Exception. prepforremoting-Methode
+# <a name="exceptionprepforremoting-method"></a>Exception.PrepForRemoting-Methode
 
 Behält die serverseitige Stapel Überwachung bei, indem Sie an die Nachricht angehängt wird, bevor die Ausnahme erneut an der Client aufrufssite ausgelöst wird.
 
@@ -31,14 +29,14 @@ internal Exception PrepForRemoting();
 <xref:System.Exception>  
 Diese <xref:System.Exception>-Instanz.
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 
 > [!WARNING]
 > Die `Exception.PrepForRemoting`-Methode ist intern und sollte nicht direkt im Code verwendet werden.
 >
 > Microsoft unterstützt die Verwendung dieser Methode in einer Produktionsanwendung unter keinen Umständen.
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
 **Namespace:** <xref:System>
 

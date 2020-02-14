@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Erstellen und Initialisieren von Ablaufverfolgungslistenern'
+title: 'Gewusst wie: Erstellen und Initialisieren von Ablaufverfolgungslistenern'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,16 +11,14 @@ helpviewer_keywords:
 - tracing [.NET Framework], trace listeners
 - logs, trace listeners
 ms.assetid: 21726de1-61ee-4fdc-9dd0-3be49324d066
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a67bd2c0daa8acc81113a1e38ea463753ae34077
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: ce0df0af32d6798c89c8db6761d18febc1c398bb
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052729"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77217444"
 ---
-# <a name="how-to-create-and-initialize-trace-listeners"></a>Vorgehensweise: Erstellen und Initialisieren von Ablaufverfolgungslistenern
+# <a name="how-to-create-and-initialize-trace-listeners"></a>Gewusst wie: Erstellen und Initialisieren von Ablaufverfolgungslistenern
 
 Die Klassen <xref:System.Diagnostics.Debug?displayProperty=nameWithType> und <xref:System.Diagnostics.Trace?displayProperty=nameWithType> senden Nachrichten an Objekte, die Listener genannt werden, welche diese Meldungen empfangen und verarbeiten. Ein solcher Listener, der <xref:System.Diagnostics.DefaultTraceListener?displayProperty=nameWithType>, wird bei Aktivierung der Ablaufverfolgung oder des Debuggens automatisch erstellt und initialisiert. Wenn die <xref:System.Diagnostics.Trace>- oder <xref:System.Diagnostics.Debug>-Ausgabe an zusätzliche Quellen geleitet werden soll, müssen Sie zusätzliche Ablaufverfolgungslistener erstellen und initialisieren.
 
@@ -95,9 +93,9 @@ Sie können Ablaufverfolgungslistener in einer [Anwendungskonfigurationsdatei](.
     myListener.Flush();
     ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Trace Listeners (Ablaufverfolgungslistener)](trace-listeners.md)
+- [Ablaufverfolgungslistener](trace-listeners.md)
 - [Ablaufverfolgungsschalter](trace-switches.md)
-- [Vorgehensweise: Hinzufügen von Ablauf Verfolgungs Anweisungen zum Anwendungs Code](how-to-add-trace-statements-to-application-code.md)
+- [Vorgehensweise: Hinzufügen von Ablaufverfolgungsanweisungen zu Anwendungscode](how-to-add-trace-statements-to-application-code.md)
 - [Ablaufverfolgung und Instrumentieren von Anwendungen](tracing-and-instrumenting-applications.md)

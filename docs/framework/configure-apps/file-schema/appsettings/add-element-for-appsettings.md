@@ -7,14 +7,12 @@ helpviewer_keywords:
 - add Element
 - <add> Element
 ms.assetid: 8734efdc-00f6-4a65-bba6-084c5bc65246
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 865c693bf8f23bf050064ac097b72aa6fa3b371e
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.openlocfilehash: 5c7de79ec626966e71d461dd3865b294a8979db2
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74088749"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77214813"
 ---
 # <a name="add-element-for-appsettings"></a>\<> Element für \<appSettings hinzufügen >
 
@@ -32,22 +30,22 @@ Fügt eine benutzerdefinierte Anwendungs Einstellung hinzu.
 </appSettings>
 ```
 
-## <a name="attributes"></a>Attribute
+## <a name="attributes"></a>Attributes
 
-|           | Beschreibung |
+|           | BESCHREIBUNG |
 | --------- | ----------- |
 | **key**   | Erforderliches Attribut.<br><br>Gibt den Namen des hinzu zufügenden Schlüssels an. |
-| **Wert** | Erforderliches Attribut.<br><br>Gibt den Wert des hinzu zufügenden Schlüssels an. |
+| **value** | Erforderliches Attribut.<br><br>Gibt den Wert des hinzu zufügenden Schlüssels an. |
 
 ## <a name="parent-element"></a>Übergeordnetes Element
 
-|     | Beschreibung |
+|     | BESCHREIBUNG |
 | --- | ----------- |
 | [ **\<appSettings>** ](appsettings-element-for-configuration.md) | Dieses Thema enthält benutzerdefinierte Anwendungseinstellungen, z.B. Dateipfade, URLs für den XML-Webdienst oder andere benutzerdefinierte Konfigurationsinformationen für eine Anwendung. |
 
 ## <a name="child-elements"></a>Untergeordnete Elemente
 
-Keiner
+Keine
 
 ## <a name="example"></a>Beispiel
 
@@ -68,6 +66,6 @@ Im folgenden Beispiel wird das `<add>`-Element verwendet, um zwei Kompatibilitä
 </appSettings>
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Konfigurationsdatei Schema für die .NET Framework](../index.md)

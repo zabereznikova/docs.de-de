@@ -7,14 +7,12 @@ helpviewer_keywords:
 - secure coding, wrapper code
 - code security, wrapper code
 ms.assetid: 1df6c516-5bba-48bd-b450-1070e04b7389
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: ee78c1c1f92515472bb3ea3ce77405a5e3447fd9
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 3d38a4d4fd33798cf5987f5ce67305725ad9daec
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70206103"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77215846"
 ---
 # <a name="securing-wrapper-code"></a>Sichern von Wrappercode
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -76,13 +74,13 @@ ms.locfileid: "70206103"
 - [LinkDemand](link-demands.md) erfolgt zum Zeitpunkt der JIT-Kompilierung (Just-in-Time) und überprüft nur den unmittelbaren Aufrufer. Diese Sicherheitsüberprüfung überprüft nicht den Aufrufer des Aufrufers. Nachdem diese Überprüfung erfolgreich war, werden unabhängig von der Anzahl der Aufrufe durch den Aufrufer keine weiteren Sicherheitsmaßnahmen ergriffen. Es besteht jedoch auch kein Schutz vor Lockangriffen. Mit **LinkDemand**kann jeder Code, der den Test übergibt und auf den Code verweist, die Sicherheit beeinträchtigen, da bösartiger Code mithilfe des autorisierten Codes aufgerufen werden kann. Verwenden Sie daher nicht **LinkDemand** , es sei denn, alle möglichen Schwächen können gründlich vermieden werden.  
   
     > [!NOTE]
-    > In den .NET Framework 4 wurden Link Aufrufe durch das <xref:System.Security.SecurityCriticalAttribute> -Attribut in <xref:System.Security.SecurityRuleSet.Level2> Assemblys ersetzt. <xref:System.Security.SecurityCriticalAttribute> Entspricht einem Link Aufruf für volle Vertrauenswürdigkeit, wirkt sich aber auch auf Vererbungs Regeln aus. Weitere Informationen zu dieser Änderung finden Sie unter [Sicherheits transparenter Code, Ebene 2](security-transparent-code-level-2.md).  
+    > In den .NET Framework 4 wurden Link Aufrufe durch das <xref:System.Security.SecurityCriticalAttribute>-Attribut in <xref:System.Security.SecurityRuleSet.Level2> Assemblys ersetzt. Der <xref:System.Security.SecurityCriticalAttribute> entspricht einem Link Aufruf für volle Vertrauenswürdigkeit. Sie wirkt sich jedoch auch auf Vererbungs Regeln aus. Weitere Informationen zu dieser Änderung finden Sie unter [Sicherheits transparenter Code, Ebene 2](security-transparent-code-level-2.md).  
   
  Die zusätzlichen Vorkehrungen, die bei der Verwendung von **LinkDemand** erforderlich sind, müssen einzeln programmiert werden. das Sicherheitssystem kann bei der Erzwingung helfen. Jeder Fehler stellt ein Sicherheitsrisiko dar. Der gesamte autorisierte Code, der Ihren Code verwendet, muss für die Implementierung zusätzlicher Sicherheit verantwortlich sein, indem die folgenden Maßnahmen ergriffen werden:  
   
 - Einschränken des Zugriffs des aufrufenden Codes auf die Klasse oder Assembly.  
   
-- Verwenden der gleichen Sicherheitsüberprüfungen für den aufrufenden Code, die für den Code verwendet werden, der aufgerufen wird, und Verpflichten seiner Aufrufer zu dieser Überprüfung. Wenn Sie z. b. Code schreiben, der eine Methode aufruft, die mit einem **LinkDemand** für <xref:System.Security.Permissions.SecurityPermission> die mit <xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode> dem angegebenen Flag geschützt ist, sollte Ihre Methode auch einen **LinkDemand** (oder eine höhere **Nachfrage**) für dieses Berechtigung. Die Ausnahme ist, wenn Ihr Code die von **LinkDemand**geschützte Methode auf eingeschränkte Weise verwendet, die Sie als sicher festlegen, wenn andere Sicherheitsmechanismen (z. b. Anforderungen) in Ihrem Code verwendet werden. In diesem Ausnahmefall übernimmt der Aufrufer die Verantwortung für die Herabsetzung des Sicherheitsschutzes des zugrunde liegenden Codes.  
+- Verwenden der gleichen Sicherheitsüberprüfungen für den aufrufenden Code, die für den Code verwendet werden, der aufgerufen wird, und Verpflichten seiner Aufrufer zu dieser Überprüfung. Wenn Sie z. b. Code schreiben, der eine Methode aufruft, die mit einem **LinkDemand** für die <xref:System.Security.Permissions.SecurityPermission> mit dem angegebenen <xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode>-Flag geschützt ist, sollte Ihre Methode für diese Berechtigung auch einen **LinkDemand** (oder eine höhere **Nachfrage**) erstellen. Die Ausnahme ist, wenn Ihr Code die von **LinkDemand**geschützte Methode auf eingeschränkte Weise verwendet, die Sie als sicher festlegen, wenn andere Sicherheitsmechanismen (z. b. Anforderungen) in Ihrem Code verwendet werden. In diesem Ausnahmefall übernimmt der Aufrufer die Verantwortung für die Herabsetzung des Sicherheitsschutzes des zugrunde liegenden Codes.  
   
 - Sicherstellen, dass die Aufrufer Ihres Codes den Code nicht veranlassen können, den geschützten Code in ihrem Auftrag aufzurufen. Dies bedeutet, dass Aufrufer den autorisierten Code nicht zwingen können, bestimmte Parameter an den geschützten Code zu übergeben oder Ergebnisse aus ihm abzurufen.  
   
@@ -101,6 +99,6 @@ ms.locfileid: "70206103"
   
 - Typen und Schnittstellen, die sie implementieren. Diese sollten Verknüpfungsaufrufe einheitlich verwenden.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Richtlinien für das Schreiben von sicherem Code](../../standard/security/secure-coding-guidelines.md)

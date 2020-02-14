@@ -7,15 +7,13 @@ helpviewer_keywords:
 - .NET Framework out-of-band releases
 - out-of-band releases
 ms.assetid: cf2d9006-b631-4e5d-81cd-20aab78c60f1
-author: mairaw
-ms.author: mairaw
 ms.topic: conceptual
-ms.openlocfilehash: e1e2af584c73b1c0b2548cdd3fcbd8517dfa330d
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 3a5134aa4407598e223fd2c938bfaac02cf9178c
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74429339"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77215536"
 ---
 # <a name="additional-class-libraries-and-apis"></a>Zusätzliche Klassenbibliotheken und APIs
 
@@ -25,7 +23,7 @@ Darüber hinaus wurden einige Bibliotheken speziell für bestimmte Plattformen o
   
 ## <a name="oob-projects"></a>OOB-Projekte
   
-| Projekt | Beschreibung |  
+| Project | BESCHREIBUNG |  
 | ------- | ----------- |  
 | <xref:System.Collections.Immutable> | Bietet Auflistungen, die threadsicher sind und garantiert nie ihren Inhalt ändern. |
 | <xref:System.Net.Http.WinHttpHandler> | Stellt einen Meldungshandler für <xref:System.Net.Http.HttpClient> auf Grundlage der WinHTTP-Schnittstelle von Windows bereit. |
@@ -34,7 +32,7 @@ Darüber hinaus wurden einige Bibliotheken speziell für bestimmte Plattformen o
 
 ## <a name="platform-specific-libraries"></a>Plattformspezifische Bibliotheken
   
-| Projekt | Beschreibung |  
+| Project | BESCHREIBUNG |  
 | ------- | ----------- |  
 | <xref:System.Text.CodePagesEncodingProvider> | Erweitert die <xref:System.Text.EncodingProvider>-Klasse, um Code Page Codierungen für Apps zur Verfügung zu stellen, die auf die universelle Windows-Plattform abzielen. |  
   
@@ -92,6 +90,6 @@ Diese APIs unterstützen die Produktinfrastruktur. Sie sind nicht für eine dire
 * [stdole. StdFont-Schnittstelle](stdole.stdfont.md)
 * [stdole. StdPicture-Schnittstelle](stdole.stdpicture.md)
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 * [.NET Framework und Out-of-Band-Releases](../get-started/the-net-framework-and-out-of-band-releases.md)

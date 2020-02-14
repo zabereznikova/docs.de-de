@@ -12,14 +12,12 @@ helpviewer_keywords:
 - message pumping
 - context switching deadlocks
 ms.assetid: 26dfaa15-9ddb-4b0a-b6da-999bba664fa6
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 7bcdb235ff2a73514c5bb3ad7abc3f4c3fc8e441
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: e3fc4a2cb35cdcc713ba0ef362071083af08a27b
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052927"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77217561"
 ---
 # <a name="contextswitchdeadlock-mda"></a>contextSwitchDeadlock-MDA
 
@@ -50,7 +48,7 @@ Um festzustellen, ob der MDA fälschlicherweise aktiviert wurde, deaktivieren Si
 > [!NOTE]
 > Dieser MDA befindet sich in der Standardeinstellung für Visual Studio. Weitere Informationen zum Deaktivieren von MDAs finden Sie unter [Diagnostizieren von Fehlern mit Assistenten für verwaltetes Debuggen](diagnosing-errors-with-managed-debugging-assistants.md#enable-and-disable-mdas).
 
-## <a name="resolution"></a>Auflösung
+## <a name="resolution"></a>Lösung
 
 Befolgen Sie die COM-Regeln hinsichtlich der STA-Meldungsweiterleitung.
 
@@ -58,7 +56,7 @@ Befolgen Sie die COM-Regeln hinsichtlich der STA-Meldungsweiterleitung.
 
 Dieser MDA hat keine Auswirkungen auf die CLR. Es werden nur Angaben über COM-Kontexte gemeldet.
 
-## <a name="output"></a>Ausgabe
+## <a name="output"></a>Output
 
 Eine Meldung, die den aktuellen Kontext und den Zielkontext beschreibt.
 
@@ -72,8 +70,8 @@ Eine Meldung, die den aktuellen Kontext und den Zielkontext beschreibt.
 </mdaConfig>
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
-- [Diagnosing Errors with Managed Debugging Assistants (Diagnostizieren von Fehlern mit Assistenten für verwaltetes Debuggen)](diagnosing-errors-with-managed-debugging-assistants.md)
+- [Diagnosing Errors with Managed Debugging Assistants (Fehlerdiagnose mit den Assistenten für verwaltetes Debugging)](diagnosing-errors-with-managed-debugging-assistants.md)
 - [Interop Marshaling (Interop-Marshalling)](../interop/interop-marshaling.md)

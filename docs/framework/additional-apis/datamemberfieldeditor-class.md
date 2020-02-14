@@ -11,18 +11,16 @@ api_type:
 ms.assetid: 27ae39b7-3491-40f9-9b33-2de798f123ad
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 52c95c5977dafb6d348e69f3c2f5280bafc3b342
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6d57fa30c9221b2b9405b2e146af54b2d6458962
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61706116"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77215698"
 ---
 # <a name="datamemberfieldeditor-class"></a>DataMemberFieldEditor-Klasse
 
-Bietet Benutzeroberfläche zum Bearbeiten der Eigenschaften von datengebundenen Objekten durch das Auflisten aller Eigenschaften der `DataSource` Objekt, das die Wertquelle von auswählen.  
+Stellt eine Benutzeroberfläche zum Bearbeiten von Eigenschaften Daten gebundener Objekte bereit, indem alle Eigenschaften des `DataSource` Objekts aufgelistet werden, aus denen die Wert Quelle ausgewählt werden soll.  
   
 ## <a name="syntax"></a>Syntax
   
@@ -31,18 +29,18 @@ internal class DataMemberFieldEditor : UITypeEditor
 ```
 
 > [!WARNING]
-> Die `DataMemberFieldEditor` -Klasse ist intern und nicht direkt in Ihrem Code verwendet werden soll.
+> Die `DataMemberFieldEditor`-Klasse ist intern und sollte nicht direkt im Code verwendet werden.
 > 
-> Microsoft unterstützt nicht die Verwendung dieser Klasse in einer produktionsanwendung unter keinen Umständen.
+> Microsoft unterstützt die Verwendung dieser Klasse in einer Produktionsanwendung unter keinen Umständen.
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
 **Namespace:** <xref:System.Windows.Forms.Design?displayProperty=nameWithType>  
   
-**Assembly:** "System.Design" (in "System.Design.dll")  
+**Assembly:** System. Design (in "System. Design. dll")  
   
-**.NET Framework-Versionen:** Verfügbar seit 2.0.  
+**.NET Framework Versionen:** Verfügbar seit 2,0.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Windows.Forms.Design?displayProperty=nameWithType>

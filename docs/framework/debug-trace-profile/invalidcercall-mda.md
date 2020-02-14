@@ -9,14 +9,12 @@ helpviewer_keywords:
 - CER calls
 - managed debugging assistants (MDAs), CER calls
 ms.assetid: c4577410-602e-44e5-9dab-fea7c55bcdfe
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: d508beb697e07f7d3b960b6627b9a07ffe25adf4
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: f8e467401f7c50898613c7cf6eca68a8a705431a
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052633"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77217386"
 ---
 # <a name="invalidcercall-mda"></a>invalidCERCall-MDA
 Der `invalidCERCall`-MDA (Assistent für verwaltetes Debuggen) wird aktiviert, wenn ein Aufruf innerhalb des Diagramms des eingeschränkten Ausführungsbereichs (CER) an eine Methode stattfindet, die keinen Zuverlässigkeitsvertrag oder einen übermäßig schwachen Vertrag besitzt. Ein schwacher Vertrag ist ein Vertrag, der deklariert, dass die schlimmste Zustandsbeschädigung einen größeren Umfang hat als die an den Aufruf übergebene Instanz. <xref:System.AppDomain> oder der Prozessstatus werden also möglicherweise beschädigt oder das Ergebnis bei einem Aufruf innerhalb eines CER kann nicht immer deterministisch berechnet werden.  
@@ -33,7 +31,7 @@ Der `invalidCERCall`-MDA (Assistent für verwaltetes Debuggen) wird aktiviert, w
   
  Da jede Methode mit einem schwachen oder nicht vorhandenen Vertrag auf unvorhersehbare Weise fehlschlagen kann, versucht die Common Language Runtime, nicht die eigenen unvorhersehbaren Fehler der Methode zu entfernen, die beispielsweise durch verzögerte JIT-Kompilierung, Generics-Wörterbuchauffüllung oder Threadabbrüche eingeführt werden. Wenn dieser MDA aktiviert wird, bedeutet dies also, dass die Runtime die aufgerufene Methode nicht in den definierten CER einschließt. Das Aufrufdiagramm wurde an diesem Knoten beendet, da die Vorbereitung dieser Teilstruktur potenzielle Fehler maskieren würde.  
   
-## <a name="resolution"></a>Auflösung  
+## <a name="resolution"></a>Lösung  
  Fügen Sie einen gültigen Zuverlässigkeitsvertrag zur Funktion hinzu, oder vermeiden Sie die Verwendung dieses Funktionsaufrufs.  
   
 ## <a name="effect-on-the-runtime"></a>Auswirkungen auf die Laufzeit  
@@ -54,8 +52,8 @@ Der `invalidCERCall`-MDA (Assistent für verwaltetes Debuggen) wird aktiviert, w
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareMethod%2A>
 - <xref:System.Runtime.ConstrainedExecution>
-- [Diagnosing Errors with Managed Debugging Assistants (Diagnostizieren von Fehlern mit Assistenten für verwaltetes Debuggen)](diagnosing-errors-with-managed-debugging-assistants.md)
+- [Diagnosing Errors with Managed Debugging Assistants (Fehlerdiagnose mit den Assistenten für verwaltetes Debugging)](diagnosing-errors-with-managed-debugging-assistants.md)

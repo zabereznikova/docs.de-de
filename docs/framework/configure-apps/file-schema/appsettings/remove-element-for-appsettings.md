@@ -7,14 +7,12 @@ helpviewer_keywords:
 - remove Element
 - <remove> Element
 ms.assetid: 218c4464-e007-4539-803f-7c8b0a909fd8
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a0fcdb75aa733a9d7634ec1c3b31dcbbb87e090e
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.openlocfilehash: 83abbdbf0d3e4dfd16c0e8c649200c4ecc7329f7
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74088720"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77215492"
 ---
 # <a name="remove-element-for-appsettings"></a>\<> Element für \<appSettings entfernen >
 
@@ -32,21 +30,21 @@ Entfernt benutzerdefinierte Anwendungseinstellungen.
 </appSettings>
 ```
 
-### <a name="attribute"></a>Attribut
+### <a name="attribute"></a>attribute
 
-|         | Beschreibung |
+|         | BESCHREIBUNG |
 | ------- | ----------- |
 | **key** | Erforderliches Attribut.<br><br>Gibt den Namen des zu entfernenden Schlüssels an. |
 
 ### <a name="parent-element"></a>Übergeordnetes Element
 
-|     | Beschreibung |
+|     | BESCHREIBUNG |
 | --- | ----------- |
 | [ **\<appSettings>** ](appsettings-element-for-configuration.md) | Dieses Thema enthält benutzerdefinierte Anwendungseinstellungen, z.B. Dateipfade, URLs für den XML-Webdienst oder andere benutzerdefinierte Konfigurationsinformationen für eine Anwendung. |
 
 ## <a name="child-elements"></a>Untergeordnete Elemente
 
-Keiner
+Keine
 
 ## <a name="example"></a>Beispiel
 
@@ -58,6 +56,6 @@ Im folgenden Beispiel wird gezeigt, wie eine benutzerdefinierte Konfigurationsei
 </appSettings>
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Konfigurationsdatei Schema für die .NET Framework](../index.md)

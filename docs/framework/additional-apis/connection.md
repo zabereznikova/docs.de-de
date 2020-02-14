@@ -11,14 +11,12 @@ api_location:
 api_type:
 - Assembly
 ms.assetid: 6f0b8902-f31c-4ab9-a8c9-de43228995ec
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: b3045e9f6a4b3d86580ec3bc5719520fed7d3a35
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: e9e0f4eed5eb4a7efd27177ab65551afa87fb7f6
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74429347"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77215090"
 ---
 # <a name="connection-class"></a>Verbindungsklasse
 
@@ -35,7 +33,7 @@ internal class Connection : PooledStream
 > 
 > Microsoft unterstützt die Verwendung dieser Klasse in einer Produktionsanwendung unter keinen Umständen.
 
-## <a name="requirements"></a>Voraussetzungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
 **Namespace:** <xref:System.Net>
 

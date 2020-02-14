@@ -15,14 +15,12 @@ helpviewer_keywords:
 - user authentication, code access security
 - code access security
 ms.assetid: 859af632-c80d-4736-8d6f-1e01b09ce127
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: bdb4e84170d4d3b95b8b51f12e0787937aaaf961
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: a8021fade8df2c8bee5e3bf26da784a91526540f
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70205658"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77215894"
 ---
 # <a name="code-access-security"></a>Codezugriffssicherheit
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -36,9 +34,9 @@ ms.locfileid: "70205658"
 > [!NOTE]
 > Wichtige Änderungen an der Code Zugriffssicherheit in der .NET Framework 4 wurden vorgenommen. Die wichtigste Änderung ist die [Sicherheits Transparenz](security-transparent-code.md), aber es gibt auch andere bedeutende Änderungen, die die Code Zugriffssicherheit beeinträchtigen. Weitere Informationen zu diesen Änderungen finden Sie unter [Sicherheitsänderungen](../security/security-changes.md).  
   
- Die Codezugriffssicherheit wirkt sich in erster Linie auf Bibliothekscode und teilweise vertrauenswürdige Anwendungen aus. Entwickler von Bibliotheken müssen ihren Code vor nicht autorisiertem Zugriff von teilweise vertrauenswürdigen Anwendungen schützen. Teilweise vertrauenswürdige Anwendungen sind Anwendungen, die aus externen Quellen (wie z. B. dem Internet) geladen werden. Auf dem Desktop oder im lokalen Intranet installierte Anwendungen werden mit vollständiger Vertrauenswürdigkeit ausgeführt. Anwendungen mit vollständiger Vertrauenswürdigkeit sind nicht von der Code Zugriffssicherheit betroffen, es sei denn, Sie sind als [Sicherheits transparent](security-transparent-code.md)gekennzeichnet, weil Sie voll vertrauenswürdig sind. Die einzige Einschränkung für Anwendungen mit vollständiger Vertrauenswürdigkeit ist, dass mit dem <xref:System.Security.SecurityTransparentAttribute>-Attribut markierte Anwendungen keinen Code aufrufen können, der mit dem <xref:System.Security.SecurityCriticalAttribute>-Attribut markiert ist. Teilweise vertrauenswürdige Anwendungen müssen in einem Sandkasten (z. B. in Internet Explorer) ausgeführt werden, damit die Codezugriffssicherheit angewendet werden kann. Wenn Sie eine Anwendung aus dem Internet herunterladen und versuchen, Sie auf Ihrem Desktop auszuführen, erhalten Sie eine <xref:System.NotSupportedException> mit der folgenden Meldung: "Es wurde versucht, eine Assembly von einem Netzwerk Speicherort zu laden, was dazu geführt hätte, dass die Assembly in früheren Versionen der .NET Framework in einen Sandkasten umgewandelt wurde. In dieser Version von .NET Framework wird die CAS-Richtlinie standardmäßig nicht aktiviert, dieser Ladevorgang kann daher gefährlich sein." Wenn Sie sicher sind, dass die Anwendung vertrauenswürdig ist, können Sie Sie mit dem [ \<>-Element loadFromRemoteSources](../configure-apps/file-schema/runtime/loadfromremotesources-element.md)als voll vertrauenswürdig ausführen. Informationen zum Ausführen einer Anwendung in einem Sandkasten finden [Sie unter Gewusst wie: Ausführen von teilweise vertrauenswürdigem Code in einem Sandkasten](how-to-run-partially-trusted-code-in-a-sandbox.md) beschrieben.  
+ Die Codezugriffssicherheit wirkt sich in erster Linie auf Bibliothekscode und teilweise vertrauenswürdige Anwendungen aus. Entwickler von Bibliotheken müssen ihren Code vor nicht autorisiertem Zugriff von teilweise vertrauenswürdigen Anwendungen schützen. Teilweise vertrauenswürdige Anwendungen sind Anwendungen, die aus externen Quellen (wie z. B. dem Internet) geladen werden. Auf dem Desktop oder im lokalen Intranet installierte Anwendungen werden mit vollständiger Vertrauenswürdigkeit ausgeführt. Anwendungen mit vollständiger Vertrauenswürdigkeit sind nicht von der Code Zugriffssicherheit betroffen, es sei denn, Sie sind als [Sicherheits transparent](security-transparent-code.md)gekennzeichnet, weil Sie voll vertrauenswürdig sind. Die einzige Einschränkung für Anwendungen mit vollständiger Vertrauenswürdigkeit ist, dass mit dem <xref:System.Security.SecurityTransparentAttribute>-Attribut markierte Anwendungen keinen Code aufrufen können, der mit dem <xref:System.Security.SecurityCriticalAttribute>-Attribut markiert ist. Teilweise vertrauenswürdige Anwendungen müssen in einem Sandkasten (z. B. in Internet Explorer) ausgeführt werden, damit die Codezugriffssicherheit angewendet werden kann. Wenn Sie eine Anwendung aus dem Internet herunterladen und auf dem Desktop ausführen möchten, wird eine <xref:System.NotSupportedException> mit der folgenden Meldung angezeigt: "Es wurde versucht, eine Assembly von einer Netzwerkadresse zu laden, was in früheren Versionen von .NET Framework zum Ausführen der Assembly als Sandkastenassembly geführt hätte. In dieser Version von .NET Framework wird die CAS-Richtlinie standardmäßig nicht aktiviert, dieser Ladevorgang kann daher gefährlich sein." Wenn Sie sicher sind, dass die Anwendung vertrauenswürdig ist, können Sie Sie mit dem [\<loadFromRemoteSources-> Element](../configure-apps/file-schema/runtime/loadfromremotesources-element.md)als voll vertrauenswürdig einstufen. Informationen zum Ausführen einer Anwendung in einem Sandkasten finden Sie unter Gewusst [wie: Ausführen von teilweise vertrauenswürdigem Code in einem Sandkasten](how-to-run-partially-trusted-code-in-a-sandbox.md).  
   
- Die Vorteile der Codezugriffssicherheit gelten für den gesamten verwalteten Code, der für die Common Language Runtime geschrieben wird, auch wenn dieser Code die Codezugriffssicherheit nicht aufruft. Weitere Informationen finden Sie unter [Grundlagen der Codezugriffssicherheit](code-access-security-basics.md).  
+ Die Vorteile der Codezugriffssicherheit gelten für den gesamten verwalteten Code, der für die Common Language Runtime geschrieben wird, auch wenn dieser Code die Codezugriffssicherheit nicht aufruft. Weitere Informationen finden Sie unter [Code Access Security Basics](code-access-security-basics.md).  
   
 <a name="key_functions"></a>   
 ## <a name="key-functions-of-code-access-security"></a>Hauptfunktionen der Codezugriffssicherheit  
@@ -64,11 +62,11 @@ Sicherheits-Stackwalk
 <a name="related_topics"></a>   
 ## <a name="related-topics"></a>Verwandte Themen  
   
-|Titel|Beschreibung|  
+|Titel|BESCHREIBUNG|  
 |-----------|-----------------|  
 |[Grundlagen der Codezugriffssicherheit](code-access-security-basics.md)|Beschreibt die Codezugriffssicherheit und die häufigsten Anwendungsbereiche.|  
 |[Sicherheits transparenter Code, Ebene 2](security-transparent-code-level-2.md)|Beschreibt das Sicherheits Transparenz Modell in der .NET Framework 4.|  
 |[Verwenden von Bibliotheken aus teilweise vertrauenswürdigem Code](using-libraries-from-partially-trusted-code.md)|Beschreibt das Aktivieren von Bibliotheken zur Verwendung mit nicht verwaltetem Code und das Verwenden von Bibliotheken aus nicht verwaltetem Code.|  
 |[Schlüsselbegriffe der Sicherheit](../../standard/security/key-security-concepts.md)|Bietet eine Übersicht über viele Schlüsselbegriffe und -konzepte, die im Sicherheitssystem von .NET Framework verwendet werden.|  
 |[Rollenbasierte Sicherheit](../../standard/security/role-based-security.md)|Beschreibt die Integration von Sicherheit basierend auf Rollen.|  
-|[Cryptographic Services](../../standard/security/cryptographic-services.md)|Beschreibt die Integration von Kryptografie in Anwendungen.|
+|[Kryptografische Dienste](../../standard/security/cryptographic-services.md)|Beschreibt die Integration von Kryptografie in Anwendungen.|

@@ -7,14 +7,12 @@ helpviewer_keywords:
 - remove Element
 - <remove> Element
 ms.assetid: ae4d82e0-e8fe-468c-81ab-46d63c4d66a8
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: efc7208aa51cbf6abdb2fe151d48071c0aa95b5c
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.openlocfilehash: 99d67bd621390789993caa4862e5ce379135eb92
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74089054"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77215389"
 ---
 # <a name="remove-element-for-configsections"></a>\<> Element für \<configabschnitts entfernen >
 
@@ -30,23 +28,23 @@ Entfernt eine vordefinierte Abschnitts-oder Abschnitts Gruppe.
 <remove name="section name or section group name" />
 ```
 
-## <a name="attribute"></a>Attribut
+## <a name="attribute"></a>attribute
 
-|           | Beschreibung |
+|           | BESCHREIBUNG |
 | --------- | ----------- |
 | **name**  | Erforderliches Attribut.<br><br>Gibt den Namen des Abschnitts oder der Abschnitts Gruppe an, der entfernt werden soll. |
 
 ## <a name="parent-element"></a>Übergeordnetes Element
 
-|     | Beschreibung |
+|     | BESCHREIBUNG |
 | --- | ----------- |
 | [ **\<configabschnitts >** Gewisses](configsections-element-for-configuration.md) | Enthält Konfigurations Abschnitts-und Namespace Deklarationen. |
 
 ## <a name="child-elements"></a>Untergeordnete Elemente
 
-Keiner
+Keine
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 
 Sie können das **\<remove >** -Element verwenden, um Abschnitts-und Abschnitts Gruppen aus der Anwendung zu entfernen, die auf einer höheren Ebene in der Hierarchie der Konfigurationsdatei definiert wurden.
 
@@ -84,6 +82,6 @@ Der folgende Anwendungs Konfigurationsdatei-Code entfernt den Abschnitt **\<Samp
 
 Dieses Element kann in der Anwendungs Konfigurationsdatei, in der Computer Konfigurationsdatei (*Machine. config*) und in den *Web. config* -Dateien verwendet werden, die sich nicht auf der Ebene des Anwendungs Verzeichnisses befinden.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Konfigurationsdatei Schema für die .NET Framework](index.md)

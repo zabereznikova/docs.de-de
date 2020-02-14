@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Erstellen, Initialisieren und Konfigurieren von Ablaufverfolgungsschaltern'
+title: 'Gewusst wie: Erstellen, Initialisieren und Konfigurieren von Ablaufverfolgungsschaltern'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,16 +11,14 @@ helpviewer_keywords:
 - tracing [.NET Framework], enabling or disabling
 - Web.config configuration file, trace switches
 ms.assetid: 5a0e41bf-f99c-4692-8799-f89617f5bcf9
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 13f89af41520fa023d8841d6dc6d7766e2abe6da
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 358e34b2ce5d896ba02b343ce060604f2d42eeeb
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052712"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77216474"
 ---
-# <a name="how-to-create-initialize-and-configure-trace-switches"></a>Vorgehensweise: Erstellen, Initialisieren und Konfigurieren von Ablaufverfolgungsschaltern
+# <a name="how-to-create-initialize-and-configure-trace-switches"></a>Gewusst wie: Erstellen, Initialisieren und Konfigurieren von Ablaufverfolgungsschaltern
 Mit Ablaufverfolgungsschaltern können Sie die Ablaufverfolgungsausgabe aktivieren, deaktivieren und filtern.  
   
 <a name="create"></a>   
@@ -54,7 +52,7 @@ Mit Ablaufverfolgungsschaltern können Sie die Ablaufverfolgungsausgabe aktivier
 ## <a name="configuring-trace-switches"></a>Konfigurieren von Ablaufverfolgungsschaltern  
  Nachdem Ihre Anwendung bereitgestellt wurde, können weiterhin Ablaufverfolgungsausgabe aktivieren oder deaktivieren, indem Sie die Ablaufverfolgungsschalter in der Anwendung konfigurieren. Konfigurieren eines Schalters bedeutet, dass sein Wert aus einer externen Quelle geändert wird, nachdem er initialisiert wurde. Sie können die Werte der Schalterobjekte mithilfe der Konfigurationsdatei ändern. Sie konfigurieren einen Ablaufverfolgungsschalter so, dass er aktiviert oder deaktiviert oder dass seine Ebene festgelegt wird. Dabei bestimmen Sie den Umfang und die Art der Meldungen, die der Schalter an Listener weiterleitet.  
   
- Ihre Schalter werden über die .config-Datei konfiguriert. Für eine Webanwendung ist dies die "Web.config"-Datei, die dem Projekt zugeordnet ist. In einer Windows-Anwendung hat diese Datei den Namen "Anwendungsname.exe.config". In einer bereitgestellten Anwendung muss sich diese Datei im selben Ordner befinden wie die ausführbare Datei.  
+ Ihre Schalter werden über die .config-Datei konfiguriert. Für eine Webanwendung ist dies die "Web.config"-Datei, die dem Projekt zugeordnet ist. In einer Windows-Anwendung heißt diese Datei (Anwendungsname). exe. config. In einer bereitgestellten Anwendung muss sich diese Datei im selben Ordner befinden wie die ausführbare Datei.  
   
  Wenn die Anwendung den Code, der eine Instanz eines Schalters erstellt, zum ersten Mal ausführt, prüft sie die Konfigurationsdatei auf Ablaufverfolgungsebenen-Informationen zu dem angegebenen Schalter. Das Ablaufverfolgungssystem durchsucht die Konfigurationsdatei für jeden Schalter nur ein Mal – wenn die Anwendung den Schalter erstmalig erstellt.  
   
@@ -75,11 +73,11 @@ Mit Ablaufverfolgungsschaltern können Sie die Ablaufverfolgungsausgabe aktivier
   
 2. Enthält Ihr Projekt keine Konfigurationsdatei („app.config“ oder „Web.config“), dann wählen Sie im Menü **Projekt** den Befehl **Neues Element hinzufügen** aus.  
   
-    - **Visual Basic:** Wählen Sie im Dialogfeld **Neues Element hinzufügen** die Option **Anwendungs Konfigurationsdatei**aus.  
+    - **Visual Basic:** Klicken Sie im Dialogfeld **Neues Element hinzufügen** auf **Anwendungskonfigurationsdatei**.  
   
          Die Anwendungskonfigurationsdatei wird erstellt und geöffnet. Diese Datei ist ein XML-Dokument mit dem Stammelement `<configuration>.`  
   
-    - **Visualisierung C#:** Wählen Sie im Dialogfeld **Neues Element hinzufügen** die Option **XML-Datei**aus. Geben Sie dieser Datei den Namen **app.config**. Fügen Sie im XML-Editor nach der XML-Deklaration die folgende XML hinzu:  
+    - **Visual C#:** Klicken Sie im Dialogfeld **Neues Element hinzufügen** auf **XML-Datei**. Nennen Sie diese Datei **app. config**. Fügen Sie im XML-Editor nach der XML-Deklaration den folgenden XML-Code hinzu:  
   
         ```xml  
         <configuration>  
@@ -125,9 +123,9 @@ Mit Ablaufverfolgungsschaltern können Sie die Ablaufverfolgungsausgabe aktivier
     </system.diagnostics>  
     ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Ablaufverfolgung und Instrumentieren von Anwendungen](tracing-and-instrumenting-applications.md)
-- [Vorgehensweise: Hinzufügen von Ablauf Verfolgungs Anweisungen zum Anwendungs Code](how-to-add-trace-statements-to-application-code.md)
+- [Vorgehensweise: Hinzufügen von Ablaufverfolgungsanweisungen zu Anwendungscode](how-to-add-trace-statements-to-application-code.md)
 - [Ablaufverfolgungsschalter](trace-switches.md)
 - [Trace and Debug Settings Schema (Schema für Ablaufverfolgungs- und Debugeinstellungen)](../configure-apps/file-schema/trace-debug/index.md)

@@ -7,14 +7,12 @@ helpviewer_keywords:
 - sectionGroup Element
 - <sectionGroup> Element
 ms.assetid: 6c27f9e2-809c-4bc9-aca9-72f90360e7a3
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 746a997e162b0fd370a249b8d039be623b57d77f
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.openlocfilehash: eb221027470fe6e485f8fcc4b939b71e4f219712
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74089007"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77215266"
 ---
 # <a name="sectiongroup-element-for-configsections"></a>\<sectionGroup-> Element für \<configabschnitts->
 
@@ -32,25 +30,25 @@ Definiert einen Namespace für Konfigurations Abschnitte.
 </sectionGroup>
 ```
 
-## <a name="attribute"></a>Attribut
+## <a name="attribute"></a>attribute
 
-|           | Beschreibung |
+|           | BESCHREIBUNG |
 | --------- | ----------- |
 | **name**  | Erforderliches Attribut.<br><br>Gibt den Namen der Abschnitts Gruppe an, die Sie definieren. |
 
 ## <a name="parent-element"></a>Übergeordnetes Element
 
-|     | Beschreibung |
+|     | BESCHREIBUNG |
 | --- | ----------- |
 | [ **\<configabschnitts >** Gewisses](configsections-element-for-configuration.md) | Enthält Konfigurations Abschnitts-und Namespace Deklarationen. |
 
 ## <a name="child-elements"></a>Untergeordnete Elemente
 
-|     | Beschreibung |
+|     | BESCHREIBUNG |
 | --- | ----------- |
 | [ **\<Abschnitt >** ](section-element.md) | Enthält eine Konfigurations Abschnitts Deklaration. |
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 
 Beim Deklarieren einer Abschnitts Gruppe wird ein containertag für Konfigurations Abschnitte erstellt, und es wird sichergestellt, dass keine Namenskonflikte mit von einer anderen Person definierten Konfigurations Abschnitten bestehen. Sie können **\<sectionGroup->** Elemente in einander Schachteln.
 
@@ -78,6 +76,6 @@ Im folgenden Beispiel wird gezeigt, wie Sie eine Abschnitts Gruppe deklarieren u
 
 Dieses Element kann in der Anwendungs Konfigurationsdatei, in der Computer Konfigurationsdatei (*Machine. config*) und in den *Web. config* -Dateien verwendet werden, die sich nicht auf der Ebene des Anwendungs Verzeichnisses befinden.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Konfigurationsdatei Schema für die .NET Framework](index.md)

@@ -1,7 +1,5 @@
 ---
 title: XmlReader. kreatesqlreader-Methode (System. Xml)
-author: mairaw
-ms.author: mairaw
 ms.date: 10/17/2019
 topic_type:
 - apiref
@@ -11,14 +9,14 @@ api_location:
 - system.xml.dll
 api_type:
 - Assembly
-ms.openlocfilehash: 302be4eff32d2c96a1571d291e0b289e77694db8
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: c65ef7c073175488c11c5e912a44d46fd4319209
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72582781"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77215449"
 ---
-# <a name="xmlreadercreatesqlreader-method"></a>XmlReader. kreatesqlreader-Methode
+# <a name="xmlreadercreatesqlreader-method"></a>XmlReader.CreateSqlReader-Methode
 
 Erstellt mit dem angegebenen Stream, den Einstellungen und den Kontextinformationen für Analysezwecke eine neue <xref:System.Xml.XmlReader>-Instanz.
 
@@ -43,14 +41,14 @@ internal static XmlReader CreateSqlReader(Stream input,
 <xref:System.Xml.XmlReader>  
 Ein Objekt, mit dem die im Stream enthaltenen XML-Daten gelesen werden.
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 
 > [!WARNING]
 > Die `XmlReader.CreateSqlReader`-Methode ist intern und sollte nicht direkt im Code verwendet werden.
 >
 > Microsoft unterstützt die Verwendung dieser Methode in einer Produktionsanwendung unter keinen Umständen.
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
 **Namespace:** <xref:System.Xml>
 

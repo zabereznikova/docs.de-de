@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Ausführen von teilweise vertrauenswürdigem Code in einem Sandkasten'
+title: 'Gewusst wie: Ausführen von teilweise vertrauenswürdigem Code in einer Sandbox'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - partially trusted code
@@ -8,16 +8,14 @@ helpviewer_keywords:
 - restricted security environment
 - code security, sandboxing
 ms.assetid: d1ad722b-5b49-4040-bff3-431b94bb8095
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: e8b1db291fbaf19ae9086fe1e2b76a475d198e19
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 0191846f5589b0162ba342161fb5919ff20099d4
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894565"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77215859"
 ---
-# <a name="how-to-run-partially-trusted-code-in-a-sandbox"></a>Vorgehensweise: Ausführen von teilweise vertrauenswürdigem Code in einem Sandkasten
+# <a name="how-to-run-partially-trusted-code-in-a-sandbox"></a>Gewusst wie: Ausführen von teilweise vertrauenswürdigem Code in einer Sandbox
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
   
  Unter einer Sandkastenumgebung versteht man das Ausführen von Code in einer beschränkten Sicherheitsumgebung, in der die dem Code gewährten Zugriffsrechte eingeschränkt sind. Wenn Sie beispielsweise über eine verwaltete Bibliothek aus einer nicht vollständig vertrauenswürdigen Quelle verfügen, sollten Sie diese nicht als vollständig vertrauenswürdig ausführen. Stattdessen sollten Sie den Code in eine Sandkastenumgebung setzen, in der die Berechtigungen des Codes auf diejenigen beschränkt sind, die er voraussichtlich benötigt (z. B. die Berechtigung <xref:System.Security.Permissions.SecurityPermissionFlag.Execution>).  
@@ -106,17 +104,17 @@ AppDomain.CreateDomain( string friendlyName,
     AppDomain newDomain = AppDomain.CreateDomain("Sandbox", null, adSetup, permSet, fullTrustAssembly);  
     ```  
   
-5. Laden Sie den Code in die <xref:System.AppDomain> der von Ihnen erstellten Sandkastenumgebung. Dazu gibt es zwei Möglichkeiten:  
+5. Laden Sie den Code in die <xref:System.AppDomain> der von Ihnen erstellten Sandkastenumgebung. Dies kann auf zwei Arten erfolgen:  
   
     - Rufen Sie die <xref:System.AppDomain.ExecuteAssembly%2A>-Methode für die Assembly auf.  
   
-    - Verwenden Sie die <xref:System.Activator.CreateInstanceFrom%2A>-Methode, um in der neuen <xref:System.AppDomain> eine Instanz einer von <xref:System.MarshalByRefObject> abgeleiteten Klasse zu erstellen.  
+    - Verwenden Sie die <xref:System.Activator.CreateInstanceFrom%2A>-Methode, um in der neuen <xref:System.MarshalByRefObject> eine Instanz einer von <xref:System.AppDomain> abgeleiteten Klasse zu erstellen.  
   
      Die zweite Methode ist zu bevorzugen, da es hiermit einfacher ist, Parameter an die neue <xref:System.AppDomain>-Instanz zu übergeben. Die <xref:System.Activator.CreateInstanceFrom%2A>-Methode bieten zwei wichtige Funktionen:  
   
     - Sie können eine Codebasis verwenden, die auf einen Speicherort verweist, der nicht Ihre Assembly enthält.  
   
-    - Sie können die Erstellung unter einem <xref:System.Security.CodeAccessPermission.Assert%2A> für vollständige Vertrauenswürdigkeit (<xref:System.Security.Permissions.PermissionState.Unrestricted?displayProperty=nameWithType>) vornehmen, wodurch Sie in der Lage sind, eine Instanz einer kritischen Klasse zu erstellen. (Dies geschieht immer, wenn Ihre Assembly nicht über Transparenzattribute verfügt und als vollständig vertrauenswürdig geladen wird.) Daher müssen Sie darauf achten, mit dieser Funktion nur vertrauenswürdigen Code zu erstellen, und wir empfehlen, in der neuen Anwendungsdomäne nur Instanzen von vollständig vertrauenswürdigen Klassen zu erstellen.  
+    - Sie können die Erstellung unter einem <xref:System.Security.CodeAccessPermission.Assert%2A> für vollständige Vertrauenswürdigkeit (<xref:System.Security.Permissions.PermissionState.Unrestricted?displayProperty=nameWithType>) vornehmen, wodurch Sie in der Lage sind, eine Instanz einer kritischen Klasse zu erstellen. (Dies geschieht, wenn die Assembly keine Transparenz Markierungen aufweist und als vollständig vertrauenswürdig geladen wird.) Daher müssen Sie darauf achten, nur den Code zu erstellen, den Sie mit dieser Funktion als vertrauenswürdig einstufen. es wird empfohlen, dass Sie nur Instanzen von vollständig vertrauenswürdigen Klassen in der neuen Anwendungsdomäne erstellen.  
   
     ```csharp
     ObjectHandle handle = Activator.CreateInstanceFrom(  
@@ -273,6 +271,6 @@ class Sandboxer : MarshalByRefObject
 }  
 ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Richtlinien für das Schreiben von sicherem Code](../../standard/security/secure-coding-guidelines.md)

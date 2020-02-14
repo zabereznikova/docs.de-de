@@ -7,14 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - Code contracts
 ms.assetid: 84526045-496f-489d-8517-a258cf76f040
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 103d668dd7a7436fd1acdccdc0afc2431ed8372a
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: b60f992cf9d934ed622c89a49c491a80377fb6fe
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975009"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77216716"
 ---
 # <a name="code-contracts"></a>Codeverträge
 
@@ -38,7 +36,7 @@ Die meisten Methoden in der Vertragsklasse werden bedingt kompiliert. Das heißt
 
 Tools und ausführliche Anweisungen zur Verwendung von Code Verträgen finden Sie unter [Code Verträge](https://marketplace.visualstudio.com/items?itemName=RiSEResearchinSoftwareEngineering.CodeContractsforNET) auf der Visual Studio Marketplace-Website.
 
-## <a name="preconditions"></a>Vorbedingungen
+## <a name="preconditions"></a>Preconditions
 
 Sie können Vorbedingungen mit der <xref:System.Diagnostics.Contracts.Contract.Requires%2A?displayProperty=nameWithType>-Methode ausdrücken. Vorbedingungen geben den Zustand beim Aufrufen einer Methode an. Sie werden im Allgemeinen zum Angeben gültiger Parameterwerte verwendet. Auf alle Member, die in Vorbedingungen erwähnt werden, muss mindestens wie auf die Methode selbst zugegriffen werden können. Andernfalls wird die Vorbedingung möglicherweise nicht von allen Aufrufern einer Methode verstanden. Die Bedingung darf keine Nebeneffekte haben. Das Laufzeitverhalten fehlerhafter Vorbedingungen wird durch die Laufzeitanalyse bestimmt.
 
@@ -147,7 +145,7 @@ Die folgenden Methoden können nur innerhalb von Nachbedingungen verwendet werde
       Wie bei der <xref:System.Diagnostics.Contracts.Contract.OldValue%2A>-Methode können Sie den generischen Typparameter weglassen, wenn der Compiler den Typ ableiten kann. Der Vertrags-Rewriter ersetzt den Methodenaufruf durch den Wert des `out`-Parameters. Die <xref:System.Diagnostics.Contracts.Contract.ValueAtReturn%2A>-Methode kann nur in Nachbedingungen angezeigt werden. Das Argument für die Methode muss ein `out`-Parameter oder ein Feld eines strukturbezogenen `out`-Parameters sein. Letzteres ist auch hilfreich, wenn auf Felder in der Nachbedingung eines Strukturkonstruktors verwiesen wird.
 
       > [!NOTE]
-      > Derzeit kann von den Tools für die Codevertragsanalyse nicht überprüft werden, ob `out`-Parameter ordnungsgemäß initialisiert werden, und deren Nennung in der Nachbedingung wird ignoriert. Wenn also im vorherigen Beispiel in der Zeile nach dem Vertrag der Wert von `x` verwendet worden wäre, statt der Zeile eine ganze Zahl zuzuweisen, würde ein Compiler nicht den entsprechenden Fehler ausgeben. In einem Build, in dem das CONTRACTS_FULL-Präprozessorsymbol nicht definiert ist (z.B. in einem Releasebuild), gibt der Compiler jedoch einen Fehler aus.
+      > Derzeit kann von den Tools für die Codevertragsanalyse nicht überprüft werden, ob `out`-Parameter ordnungsgemäß initialisiert werden, und deren Nennung in der Nachbedingung wird ignoriert. Wenn also im vorherigen Beispiel in der Zeile nach dem Vertrag der Wert von `x` verwendet worden wäre, statt der Zeile eine ganze Zahl zuzuweisen, würde ein Compiler nicht den entsprechenden Fehler ausgeben. In einem Build, in dem das CONTRACTS_FULL-Präprozessorsymbol nicht definiert ist (z. B. in einemReleasebuild), gibt der Compiler jedoch einen Fehler aus.
 
 ## <a name="invariants"></a>Invarianten
 

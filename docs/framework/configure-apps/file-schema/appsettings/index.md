@@ -7,14 +7,12 @@ helpviewer_keywords:
 - Windows Forms, app settings schema
 - configuration schema [.NET Framework], app settings
 ms.assetid: 99347d62-3ea5-40b6-bfec-c31431011422
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 609ddba9cd4d58f9c388cf669039ee128e87efd0
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.openlocfilehash: 0a3363b35a6fc8bd27753eb034f8a1e95feb5292
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74088081"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77215427"
 ---
 # <a name="app-settings-schema"></a>Schema für App-Einstellungen
 
@@ -26,7 +24,7 @@ Dieses Thema enthält benutzerdefinierte Anwendungseinstellungen, z.B. Dateipfad
 &nbsp;&nbsp;&nbsp;&nbsp;[ **\<clear>** ](clear-element-for-appsettings.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;[ **\<remove>** ](remove-element-for-appsettings.md)
 
-| Element | Beschreibung |
+| Element | BESCHREIBUNG |
 | ------- | ----------- |
 | [ **\<appSettings>** ](appsettings-element-for-configuration.md) | Enthält die Tags **\<add>** , **\<clear>** und **\<remove>** zur Steuerung von App-Einstellungen. Verfügt über ein optionales **file**-Attribut. |
 | [ **\<add>** ](add-element-for-appsettings.md) | Definiert eine Einstellung. Untergeordnetes Element von **\<appSettings>** . Erfordert **key**- und **value**-Attribute. |
@@ -70,7 +68,7 @@ Das folgende Beispiel zeigt eine Anwendungskonfigurationsdatei, die die Einstell
 </configuration>
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Übersicht über Anwendungseinstellungen](../../../winforms/advanced/application-settings-overview.md)
 - [Architektur der Anwendungseinstellungen](../../../winforms/advanced/application-settings-architecture.md)

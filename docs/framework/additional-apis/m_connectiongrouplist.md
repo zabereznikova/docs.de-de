@@ -1,5 +1,5 @@
 ---
-title: ServicePoint. m_ConnectionGroupList-Feld
+title: Service Point. m_ConnectionGroupList-Feld
 ms.date: 05/01/2017
 topic_type:
 - apiref
@@ -10,14 +10,12 @@ api_location:
 api_type:
 - Assembly
 ms.assetid: df8afb59-f0f6-4ddc-b3c1-839b9fc601d8
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 1991dae4d03f617857b860f920077531f7937bf1
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: f2759f82f335415edf7bab33edbd446eec6ffbb5
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73120047"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77215520"
 ---
 # <a name="servicepointm_connectiongrouplist-field"></a>Service Point. m\_connectiongrouplist-Feld
 
@@ -34,7 +32,7 @@ private Hashtable m_ConnectionGroupList
 > 
 > Microsoft unterstützt die Verwendung dieses Felds in einer Produktionsanwendung unter keinen Umständen.
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
 **Namespace:** <xref:System.Net>
 

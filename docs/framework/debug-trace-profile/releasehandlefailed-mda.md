@@ -10,14 +10,12 @@ helpviewer_keywords:
 - SafeHandle class, run-time errors
 - MDAs (managed debugging assistants), handles
 ms.assetid: 44cd98ba-95e5-40a1-874d-e8e163612c51
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 41f6b67ff63d096cc1fa2c599abb06c9c1129952
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 265344cb100a41cde5443cd0914dc66271aabf93
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052314"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77216111"
 ---
 # <a name="releasehandlefailed-mda"></a>ReleaseHandleFailed-MDA
 Der `releaseHandleFailed`-MDA (Managed Debugging Assistant, Assistent für verwaltetes Debuggen) wird aktiviert, um einen Entwickler zu benachrichtigen, wenn die <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A>-Methode einer Klasse, die aus <xref:System.Runtime.InteropServices.SafeHandle> oder <xref:System.Runtime.InteropServices.CriticalHandle> abgeleitet wurde, `false` zurückgibt.  
@@ -34,7 +32,7 @@ Der `releaseHandleFailed`-MDA (Managed Debugging Assistant, Assistent für verwa
   
 - Jeder Fehler, der während der Ausführung von <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> auftritt und die Freigabe der Ressource verhindert, ist ein Fehler in der Implementierung der <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A>-Methode. Es liegt in der Verantwortung des Programmierers, die Erfüllung des Vertrags sicherzustellen, selbst wenn im Code anderer Code aufgerufen wird, für den eine andere Person die Autorisierung erteilt hat, dessen Funktion auszuführen.  
   
-## <a name="resolution"></a>Auflösung  
+## <a name="resolution"></a>Lösung  
  Überprüfen Sie den Code, in dem der spezielle <xref:System.Runtime.InteropServices.SafeHandle>-Typ (oder <xref:System.Runtime.InteropServices.CriticalHandle>-Typ) verwendet wird, der die MDA-Benachrichtigung ausgelöst hat. Suchen Sie nach Stellen, an denen der unformatierte Handlewert aus dem <xref:System.Runtime.InteropServices.SafeHandle>-Objekt extrahiert und an eine andere Stelle Ort kopiert wird. Hier liegt meist der Grund für Fehler in <xref:System.Runtime.InteropServices.SafeHandle>- oder <xref:System.Runtime.InteropServices.CriticalHandle>-Implementierungen, denn die Verwendung des unformatierten Handlewerts wird dann nicht mehr von der Laufzeitumgebung verfolgt. Wenn die Kopie des unformatierten Handles anschließend geschlossen wird, kann dies dazu führen, dass ein späterer <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A>-Aufruf fehlschlägt, weil versucht wird, dasselbe Handle zu schließen, das jetzt ungültig ist.  
   
  Es gibt eine Reihe von Möglichkeiten, die in denen eine fehlerhafte Handleduplizierung auftreten kann:  
@@ -52,7 +50,7 @@ Der `releaseHandleFailed`-MDA (Managed Debugging Assistant, Assistent für verwa
 ## <a name="effect-on-the-runtime"></a>Auswirkungen auf die Laufzeit  
  Dieser MDA hat keine Auswirkungen auf die CLR.  
   
-## <a name="output"></a>Ausgabe  
+## <a name="output"></a>Output  
  Eine Meldung, die angibt, dass ein <xref:System.Runtime.InteropServices.SafeHandle> oder ein <xref:System.Runtime.InteropServices.CriticalHandle> das Handle nicht ordnungsgemäß freigegeben hat. Beispiel:  
   
 ```output
@@ -90,8 +88,8 @@ bool ReleaseHandle()
 }  
 ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
-- [Diagnosing Errors with Managed Debugging Assistants (Diagnostizieren von Fehlern mit Assistenten für verwaltetes Debuggen)](diagnosing-errors-with-managed-debugging-assistants.md)
+- [Diagnosing Errors with Managed Debugging Assistants (Fehlerdiagnose mit den Assistenten für verwaltetes Debugging)](diagnosing-errors-with-managed-debugging-assistants.md)
 - [Interop Marshaling (Interop-Marshalling)](../interop/interop-marshaling.md)

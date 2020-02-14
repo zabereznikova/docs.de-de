@@ -7,14 +7,12 @@ helpviewer_keywords:
 - add Element
 - <add> Element
 ms.assetid: 0d4ddb53-eb2b-49c0-9c33-a8dec5c39b46
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: ac07fc9ba6f030209a5e0d0160689fab95bc1b4a
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.openlocfilehash: 57722f3518fad12cb8e6e35d68f40bb8465bdd86
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74088764"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77215442"
 ---
 # <a name="add-element-for-namevaluesectionhandler-and-dictionarysectionhandler"></a>\<> Element für NameValueSectionHandler und "diktarysectionhandler" hinzufügen
 
@@ -30,22 +28,22 @@ Fügt benutzerdefinierte Anwendungseinstellungen hinzu. Jede **\<Add >** -Tags e
 <add key="key" value="value" />
 ```
 
-## <a name="attributes"></a>Attribute
+## <a name="attributes"></a>Attributes
 
-| Attribut | Beschreibung |
+| attribute | BESCHREIBUNG |
 | --------- | ----------- |
 | **key**   | Erforderliches Attribut.<br><br>Gibt den Namen der Einstellung an. |
-| **Wert** | Erforderliches Attribut.<br><br>Gibt den Wert der Einstellung an. |
+| **value** | Erforderliches Attribut.<br><br>Gibt den Wert der Einstellung an. |
 
 ## <a name="parent-element"></a>Übergeordnetes Element
 
-| Element | Beschreibung |
+| Element | BESCHREIBUNG |
 | ------- | ------------|
 | [ **\<sectionName >** Gewisses](custom-element-2.md) | Definiert Einstellungen für benutzerdefinierte Konfigurations Abschnitte, in denen die Klassen <xref:System.Configuration.NameValueSectionHandler> und <xref:System.Configuration.DictionarySectionHandler> verwendet werden. |
 
 ## <a name="child-elements"></a>Untergeordnete Elemente
 
-Keiner
+Keine
 
 ## <a name="example"></a>Beispiel
 
@@ -66,6 +64,6 @@ Im folgenden Beispiel wird gezeigt, wie ein benutzerdefinierter Konfigurations A
 
 Dieses Element kann in der Anwendungs Konfigurationsdatei, in der Computer Konfigurationsdatei (*Machine. config*) und in den *Web. config* -Dateien verwendet werden, die sich nicht auf der Ebene des Anwendungs Verzeichnisses befinden.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Konfigurationsdatei Schema für die .NET Framework](index.md)

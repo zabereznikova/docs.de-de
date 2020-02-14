@@ -10,14 +10,12 @@ helpviewer_keywords:
 - GetHashCode method
 - modulus of hashcodes
 ms.assetid: b45366ff-2a7a-4b8e-ab01-537b72e9de68
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 1679e283a801044ad5a0baed89f17e6acc74259c
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 65bbdfec2d7050d1b474a8186a9ea6e9bb93bd9e
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052457"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77216181"
 ---
 # <a name="moduloobjecthashcode-mda"></a>moduloObjectHashcode-MDA
 Der `moduloObjectHashcode`-MDA (Assistent für verwaltetes Debuggen) ändert das Verhalten der <xref:System.Object>-Klasse, um einen Modulo-Vorgang auf dem Hashcode auszuführen, der von der <xref:System.Object.GetHashCode%2A>-Methode zurückgegeben wurde. Der Standard-Modulo dieses MDA beträgt 1, wodurch <xref:System.Object.GetHashCode%2A> für alle Objekte 0 zurückgibt.  
@@ -38,7 +36,7 @@ Der `moduloObjectHashcode`-MDA (Assistent für verwaltetes Debuggen) ändert das
   
  Die Reihenfolge der Enumeration aus einem <xref:System.Collections.Hashtable> kann sich möglicherweise von einer Laufzeitversion zur anderen ändern, wenn der Algorithmus für die Berechnung der Hashcodes für die Schlüsseländerung verwendet wird. Sie können diesen MDA aktivieren, um zu überprüfen, ob das Programm eine Abhängigkeit von der Reihenfolge der Enumeration der Schlüssel oder Werte aus einer Hashtabelle erstellt hat.  
   
-## <a name="resolution"></a>Auflösung  
+## <a name="resolution"></a>Lösung  
  Verwenden Sie niemals Hashcodes als Ersatz für die Objektidentität. Implementieren Sie die Außerkraftsetzung der <xref:System.Object.Equals%2A?displayProperty=nameWithType>-Methode, um Hashcodes nicht zu vergleichen.  
   
  Erstellen Sie keine Abhängigkeiten von der Reihenfolge der Schlüsselenumerationen oder Werte in Hashtabellen.  
@@ -46,11 +44,11 @@ Der `moduloObjectHashcode`-MDA (Assistent für verwaltetes Debuggen) ändert das
 ## <a name="effect-on-the-runtime"></a>Auswirkungen auf die Laufzeit  
  Anwendungen werden langsamer ausgeführt, wenn dieser MDA aktiviert ist. Dieser MDA übernimmt lediglich den Hashcode, der zurückgegeben wurde und gibt stattdessen den Rest nach dem Dividieren durch einen Modulo zurück.  
   
-## <a name="output"></a>Ausgabe  
+## <a name="output"></a>Output  
  Es gibt keine Ausgabe für diesen MDA.  
   
 ## <a name="configuration"></a>Konfiguration  
- Das `modulus`-Attribut gibt den Modulo an, der auf dem Hashcode verwendet wird. Der Standardwert ist 1.  
+ Das `modulus`-Attribut gibt den Modulo an, der auf dem Hashcode verwendet wird. Der Standardwert ist 1.  
   
 ```xml  
 <mdaConfig>  
@@ -60,8 +58,8 @@ Der `moduloObjectHashcode`-MDA (Assistent für verwaltetes Debuggen) ändert das
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Object.GetHashCode%2A?displayProperty=nameWithType>
 - <xref:System.Object.Equals%2A?displayProperty=nameWithType>
-- [Diagnosing Errors with Managed Debugging Assistants (Diagnostizieren von Fehlern mit Assistenten für verwaltetes Debuggen)](diagnosing-errors-with-managed-debugging-assistants.md)
+- [Diagnosing Errors with Managed Debugging Assistants (Fehlerdiagnose mit den Assistenten für verwaltetes Debugging)](diagnosing-errors-with-managed-debugging-assistants.md)

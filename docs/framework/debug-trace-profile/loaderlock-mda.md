@@ -10,14 +10,12 @@ helpviewer_keywords:
 - loader locks
 - locks, threads
 ms.assetid: 8c10fa02-1b9c-4be5-ab03-451d943ac1ee
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: c3e8769ec972ec76d04d2f22368fdde99de9c6de
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: cd77640a6566f3fd94631dac184ae5bc3ffab5d1
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052545"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77217349"
 ---
 # <a name="loaderlock-mda"></a>loaderLock-MDA
 Der `loaderLock`-MDA (Assistent für verwaltetes Debuggen) erkennt Versuche zur Ausführung von verwaltetem Code in einem Thread, der die Loadersperre für das Microsoft Windows-Betriebssystem enthält.  Eine solche Ausführung ist ungültig, da sie zu Deadlocks führen und DLLs verwenden kann, bevor sie vom Ladeprogramm des Betriebssystems initialisiert wird.  
@@ -34,7 +32,7 @@ Der `loaderLock`-MDA (Assistent für verwaltetes Debuggen) erkennt Versuche zur 
   
  Eine Mischung aus verwalteten und nicht verwalteten C++-Assemblys für die .NET Framework-Versionen 2.0 ist weniger anfällig für diese Probleme und hat dasselbe verringerte Risiko wie Anwendungen, die nicht verwaltete DLLs verwenden, die gegen die Regeln des Betriebssystems verstoßen.  Wenn beispielsweise der `DllMain`-Einstiegspunkt einer nicht verwalteten DLL `CoCreateInstance` aufruft, um ein verwaltetes Objekt zu erhalten, das für COM verfügbar gemacht wurde, erhält man einen Versuch, verwalteten Code innerhalb der Loadersperre auszuführen. Weitere Informationen zu Problemen mit Loadersperren in .NET Framework Version 2.0 oder höher finden Sie unter [Initialization of Mixed Assemblies (Initialisierung gemischter Assemblys)](/cpp/dotnet/initialization-of-mixed-assemblies).  
   
-## <a name="resolution"></a>Auflösung  
+## <a name="resolution"></a>Lösung  
  In Visual C++ .NET 2002 und Visual C++ .NET 2003 konnten mit der Compileroption `/clr` kompilierte DLLs beim Laden nicht deterministische Deadlocks laden. Dies wurde als Problem beim Laden gemischter DLLs bzw. Loadersperrenproblem bezeichnet. In Visual C++ 2005 und höher wurde fast der gesamte Nichtdeterminismus aus dem Prozess des Ladens gemischter DLLs entfernt. Es verbleiben jedoch weiterhin ein paar Szenarien, bei denen die Loadersperre (deterministisch) auftreten kann. Eine ausführliche Beschreibung der Ursachen und Lösungen für die verbleibenden Loadersperrenprobleme finden Sie unter [Initialization of Mixed Assemblies (Initialisierung gemischter Assemblys)](/cpp/dotnet/initialization-of-mixed-assemblies). Wenn dieses Thema Ihr Loadersperrenproblem nicht abdeckt, dann überprüfen Sie die Threadstapel, um zu bestimmen, warum die Loadersperre geschieht und wie Sie das Problem beheben können. Überprüfen Sie die Stapelüberwachung für den Thread, der diesen MDA aktiviert hat.  Der Thread versucht, verwalteten Code auf illegale Weise aufzurufen, während die Loadersperre des Betriebssystems gehalten wird.  Sie werden wahrscheinlich ein `DllMain` einer DLL oder den entsprechenden Einstiegspunkt auf dem Stapel sehen.  Die Regeln des Betriebssystems für innerhalb dieses Einstiegspunkts legale Verwendungsmöglichkeiten sind recht eingeschränkt.  Diese Regeln schließen eine nicht verwaltete Ausführung aus.  
   
 ## <a name="effect-on-the-runtime"></a>Auswirkungen auf die Laufzeit  
@@ -42,7 +40,7 @@ Der `loaderLock`-MDA (Assistent für verwaltetes Debuggen) erkennt Versuche zur 
   
  In einigen seltenen Fällen ist es auch möglich, dass Zugriffsverletzungen oder ähnlichen Probleme in DLLs ausgelöst werden, die vor ihrer Initialisierung aufgerufen wurden.  
   
-## <a name="output"></a>Ausgabe  
+## <a name="output"></a>Output  
  Dieser MDA meldet, dass eine ungültige verwaltete Ausführung versucht wird.  Überprüfen Sie die Threadstapel, um zu bestimmen, warum die Loadersperre geschieht und wie Sie das Problem beheben können.  
   
 ## <a name="configuration"></a>Konfiguration  
@@ -55,6 +53,6 @@ Der `loaderLock`-MDA (Assistent für verwaltetes Debuggen) erkennt Versuche zur 
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Diagnosing Errors with Managed Debugging Assistants (Diagnostizieren von Fehlern mit Assistenten für verwaltetes Debuggen)](diagnosing-errors-with-managed-debugging-assistants.md)
+- [Diagnosing Errors with Managed Debugging Assistants (Fehlerdiagnose mit den Assistenten für verwaltetes Debugging)](diagnosing-errors-with-managed-debugging-assistants.md)

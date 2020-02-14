@@ -7,14 +7,12 @@ helpviewer_keywords:
 - LoadFrom context
 - LoadFromContext MDA
 ms.assetid: a9b14db1-d3a9-4150-a767-dcf3aea0071a
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 89605a119e8251ffd577ff402366dff0fd4af4d7
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 28ef6e12c82cf5ca56962756b9ea964d0ae9baaa
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052515"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77216172"
 ---
 # <a name="loadfromcontext-mda"></a>loadFromContext-MDA
 Der `loadFromContext`-MDA (Assistent für verwaltetes Debuggen) wird aktiviert, wenn eine Assembly in den `LoadFrom`-Kontext geladen wird. Diese Situation kann als Ergebnis eines <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType>-Aufrufs oder anderer ähnlichen Methoden auftreten.  
@@ -25,7 +23,7 @@ Der `loadFromContext`-MDA (Assistent für verwaltetes Debuggen) wird aktiviert, 
 ## <a name="cause"></a>Ursache  
  Im Allgemeinen wurde eine Assembly in den `LoadFrom`-Kontext geladen, wenn sie aus einem Pfad außerhalb des `Load`-Kontexts geladen wurde, z.B. im globalen Assemblycache oder in der <xref:System.AppDomainSetup.ApplicationBase%2A?displayProperty=nameWithType>-Eigenschaft.  
   
-## <a name="resolution"></a>Auflösung  
+## <a name="resolution"></a>Lösung  
  Konfigurieren Sie Anwendungen so, dass <xref:System.Reflection.Assembly.LoadFrom%2A>-Aufrufe nicht mehr benötigt werden. Hierfür können Sie die folgenden Verfahren verwenden:  
   
 - Installieren Sie Assemblys im globalen Assemblycache.  
@@ -39,7 +37,7 @@ Der `loadFromContext`-MDA (Assistent für verwaltetes Debuggen) wird aktiviert, 
 ## <a name="effect-on-the-runtime"></a>Auswirkungen auf die Laufzeit  
  Der MDA hat keinen Einfluss auf die CLR. Er gibt den Kontext an, der als Ergebnis einer Ladeanforderung verwendet wurde.  
   
-## <a name="output"></a>Ausgabe  
+## <a name="output"></a>Output  
  Der MDA meldet, dass die Assembly in den `LoadFrom`-Kontext geladen wurde. Er gibt den einfachen Namen der Assembly und den Pfad an. Er weist auch auf Möglichkeiten hin, um das Verwenden des `LoadFrom`-Kontexts zu vermeiden.  
   
 ## <a name="configuration"></a>Konfiguration  
@@ -72,6 +70,6 @@ namespace ConsoleApplication1
 }  
 ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Diagnosing Errors with Managed Debugging Assistants (Diagnostizieren von Fehlern mit Assistenten für verwaltetes Debuggen)](diagnosing-errors-with-managed-debugging-assistants.md)
+- [Diagnosing Errors with Managed Debugging Assistants (Fehlerdiagnose mit den Assistenten für verwaltetes Debugging)](diagnosing-errors-with-managed-debugging-assistants.md)

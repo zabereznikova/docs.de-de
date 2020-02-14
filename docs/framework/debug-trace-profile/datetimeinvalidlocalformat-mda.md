@@ -12,14 +12,12 @@ helpviewer_keywords:
 - time formatting
 - UTC formatting
 ms.assetid: c4a942bb-2651-4b65-8718-809f892a0659
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 32217b9e681179c246560ff5b51b65b4f4e044d5
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 2fdace8a9c7bcc090fd801be3bd717e4a2b34a87
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052883"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77217546"
 ---
 # <a name="datetimeinvalidlocalformat-mda"></a>DateTimeInvalidLocalFormat-MDA
 Der `dateTimeInvalidLocalFormat`-MDA (Managed Debugging Assistant, Assistent für verwaltetes Debuggen) wird aktiviert, wenn eine als UTC (Universal Coordinated Time, koordinierte Weltzeit) gespeicherte <xref:System.DateTime>-Instanz mit einem Format formatiert wird, das nur für lokale <xref:System.DateTime>-Instanzen verwendet werden soll. Dieser MDA wird nicht für nicht angegebene oder <xref:System.DateTime>-Standardinstanzen aktiviert.  
@@ -35,7 +33,7 @@ Serialize(myDateTime.ToString("yyyy-MM-dd'T'HH:mm:ss.fffffffzzz"));
 ### <a name="cause"></a>Ursache  
  Das „z“-Format der <xref:System.DateTime.ToString%2A?displayProperty=nameWithType>-Methode beinhaltet die Abweichung der lokalen Zeitzone, beispielsweise „+ 10:00“ für Ortszeit Sydney. Daher wird nur ein aussagekräftiges Ergebnis erzielt, wenn der Wert für <xref:System.DateTime> lokal ist. Gibt der Wert die UTC-Zeit an, beinhaltet <xref:System.DateTime.ToString%2A?displayProperty=nameWithType> zwar die Abweichung der lokalen Zeitzone, der Zeitzonenbezeichner wird aber weder angezeigt noch angepasst.  
   
-### <a name="resolution"></a>Auflösung  
+### <a name="resolution"></a>Lösung  
  <xref:System.DateTime>-UTC-Instanzen sollten so formatiert werden, dass sie als UTC erkennbar sind. Es wird empfohlen, für die Angabe von UTC-Zeiten ein „Z“ zu verwenden:  
   
 ```csharp
@@ -53,7 +51,7 @@ Serialize(myDateTime.ToString("o"));
 ## <a name="effect-on-the-runtime"></a>Auswirkungen auf die Laufzeit  
  Dieser MDA hat keine Auswirkungen auf die Laufzeit.  
   
-## <a name="output"></a>Ausgabe  
+## <a name="output"></a>Output  
  Das Aktivieren dieses MDA erzeugt keine besondere Ausgabe. Die Aufrufliste kann jedoch zur Bestimmung des Speicherorts für den <xref:System.DateTime.ToString%2A>-Aufruf verwendet werden, der den MDA aktiviert hat.  
   
 ## <a name="configuration"></a>Konfiguration  
@@ -86,7 +84,7 @@ String serialized = XmlConvert.ToString(myDateTime,
     XmlDateTimeSerializationMode.RoundtripKind);  
 ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Globalization.DateTimeFormatInfo>
-- [Diagnosing Errors with Managed Debugging Assistants (Diagnostizieren von Fehlern mit Assistenten für verwaltetes Debuggen)](diagnosing-errors-with-managed-debugging-assistants.md)
+- [Diagnosing Errors with Managed Debugging Assistants (Fehlerdiagnose mit den Assistenten für verwaltetes Debugging)](diagnosing-errors-with-managed-debugging-assistants.md)

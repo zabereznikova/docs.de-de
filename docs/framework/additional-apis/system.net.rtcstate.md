@@ -11,14 +11,12 @@ api_location:
 api_type:
 - Assembly
 ms.assetid: 6f0b8902-f31c-4ab9-a8c9-de43228995ec
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 33fda16b4edf2398df56d767ec456e7dd6563009
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 1a88adeefe0095bf514d36cadc9b44efd8ab61ee
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74451293"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77214886"
 ---
 # <a name="rtcstate-class"></a>Rtcstate-Klasse
 
@@ -35,7 +33,7 @@ internal class RtcState
 > 
 > Microsoft unterstützt die Verwendung dieser Klasse in einer Produktionsanwendung unter keinen Umständen.
 
-## <a name="requirements"></a>Voraussetzungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
 **Namespace:** <xref:System.Net>
 

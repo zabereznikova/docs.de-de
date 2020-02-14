@@ -13,14 +13,12 @@ helpviewer_keywords:
 - display attributes for debugger
 - DebuggerBrowsableAttribute attribute
 ms.assetid: 72bb7aa9-459b-42c4-9163-9312fab4c410
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: c27732de448e19c4227062706c7a7d73c98e5f19
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: ca118bffb045a0e7e3a5084916a0ff8020ebda90
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69966880"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77216490"
 ---
 # <a name="enhancing-debugging-with-the-debugger-display-attributes"></a>Verbessern des Debuggens mit den Debuggeranzeigeattributen
 
@@ -95,9 +93,9 @@ class MyHashtable : Hashtable
 
 ## <a name="example"></a>Beispiel
 
-### <a name="description"></a>Beschreibung
+### <a name="description"></a>BESCHREIBUNG
 
-Das folgende Codebeispiel kann in Visual Studio angezeigt werden, um die Ergebnisse der Anwendung der <xref:System.Diagnostics.DebuggerDisplayAttribute>Attribute <xref:System.Diagnostics.DebuggerBrowsableAttribute>, und <xref:System.Diagnostics.DebuggerTypeProxyAttribute> anzuzeigen.
+Das folgende Codebeispiel kann in Visual Studio angezeigt werden, um die Ergebnisse der Anwendung der Attribute "<xref:System.Diagnostics.DebuggerDisplayAttribute>", "<xref:System.Diagnostics.DebuggerBrowsableAttribute>" und "<xref:System.Diagnostics.DebuggerTypeProxyAttribute>" anzuzeigen.
 
 ### <a name="code"></a>Code
 
@@ -105,7 +103,7 @@ Das folgende Codebeispiel kann in Visual Studio angezeigt werden, um die Ergebni
 [!code-csharp[System.Diagnostics.DebuggerBrowsableAttribute#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.Diagnostics.DebuggerBrowsableAttribute/CS/program.cs#1)]
 [!code-vb[System.Diagnostics.DebuggerBrowsableAttribute#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Diagnostics.DebuggerBrowsableAttribute/VB/module1.vb#1)]
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Diagnostics.DebuggerDisplayAttribute>
 - <xref:System.Diagnostics.DebuggerBrowsableAttribute>

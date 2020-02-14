@@ -8,14 +8,12 @@ helpviewer_keywords:
 - threading [.NET Framework], managed debugging assistants
 - MDAs (managed debugging assistants), asynchronous thread aborts
 ms.assetid: 9ebe40b2-d703-421e-8660-984acc42bfe0
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 9bde6f6e625476712c5af516491ab9dd29b7dea3
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: d0c78e6d52ae4a5b3a24e0bb4278b2e8a1b98751
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052961"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77217579"
 ---
 # <a name="asynchronousthreadabort-mda"></a>asynchronousThreadAbort-MDA
 Der `asynchronousThreadAbort`-MDA (Managed Debugging Assistant, Assistent für verwaltetes Debuggen) wird aktiviert, wenn ein Thread versucht, einen asynchronen Abbruch in einem anderen Thread hervorzurufen. Der `asynchronousThreadAbort`-MDA wird nicht durch synchrone Threadabbrüche aktiviert.
@@ -36,13 +34,13 @@ Der `asynchronousThreadAbort`-MDA (Managed Debugging Assistant, Assistent für v
 
  Aufgrund des willkürlichen Auftretens dieses Problems ist die Ursache möglicherweise schwer zu ermitteln.
 
-## <a name="resolution"></a>Auflösung
+## <a name="resolution"></a>Lösung
  Vermeiden Sie Codeentwürfe, die die Verwendung asynchroner Threadabbrüche erfordern. Es gibt mehrere besser geeignete Verfahren zum Unterbrechen eines Zielthreads, die keinen Aufruf von <xref:System.Threading.Thread.Abort%2A> erfordern. Am sichersten ist der Einsatz eines Mechanismus, z.B. eine gemeinsame Eigenschaft, mit der dem Zielprozess die Unterbrechungsanforderung signalisiert wird. Der Zielthread prüft an bestimmten sicheren Anhaltepunkten, ob das Signal übermittelt wurde. Wenn eine Unterbrechungsanforderung festgestellt wird, kann der Thread ordnungsgemäß beendet werden.
 
 ## <a name="effect-on-the-runtime"></a>Auswirkungen auf die Laufzeit
  Dieser MDA hat keine Auswirkungen auf die CLR. Es werden nur Angaben zu asynchronen Threadabbrüchen gemeldet.
 
-## <a name="output"></a>Ausgabe
+## <a name="output"></a>Output
  Der MDA meldet die ID des Threads, der den Abbruch durchführt, und die ID des Zielthreads für den Abbruch. Diese sind niemals gleich, da dieses Problem auf asynchrone Abbrüche beschränkt ist.
 
 ## <a name="configuration"></a>Konfiguration
@@ -70,7 +68,7 @@ void FireMda()
 }
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Threading.Thread>
-- [Diagnosing Errors with Managed Debugging Assistants (Diagnostizieren von Fehlern mit Assistenten für verwaltetes Debuggen)](diagnosing-errors-with-managed-debugging-assistants.md)
+- [Diagnosing Errors with Managed Debugging Assistants (Fehlerdiagnose mit den Assistenten für verwaltetes Debugging)](diagnosing-errors-with-managed-debugging-assistants.md)

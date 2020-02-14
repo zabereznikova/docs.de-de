@@ -16,14 +16,12 @@ helpviewer_keywords:
 - permissions [.NET Framework], overriding security checks
 - permissions [.NET Framework], assertions
 ms.assetid: 1e40f4d3-fb7d-4f19-b334-b6076d469ea9
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: f43ba2963ec447e5193da73452537b2539c51857
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 2bc46714a508990c5ae31b50e7d19a287da2c5c0
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70206039"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77215820"
 ---
 # <a name="using-the-assert-method"></a>Verwenden der Assert-Methode
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -61,16 +59,16 @@ ms.locfileid: "70206039"
   
  In diesem Szenario ruft Methode A B auf, b ruft c auf, c ruft e auf, und e ruft F. Method C die Berechtigung zum Lesen von Dateien auf Laufwerk c (Berechtigung P1) und Methode e die Berechtigung zum Lesen von txt-Dateien auf Laufwerk c (Berechtigung P1A). Wenn die Nachfrage in f zur Laufzeit erreicht wird, wird ein Stackwalk ausgeführt, um die Berechtigungen aller Aufrufer von F zu überprüfen, beginnend mit e. e wurde die P1A-Berechtigung erteilt, sodass der Stapel Durchlauf die Berechtigungen von c überprüfen kann, wobei die c-Assertionen erkannt werden. Da die geforderte Berechtigung (P1A) eine Teilmenge der über "Assert" bereitgestellten Berechtigung (P1) darstellt, wird der Stackwalk beendet, und die Sicherheitsüberprüfung wird automatisch erfolgreich abgeschlossen. Es spielt keine Rolle, dass den Assemblys A und B die Berechtigung P1A nicht erteilt wurde. Durch die Assertion von P1 gewährleistet Methode C, dass ihre Aufrufer auf die von P1 geschützte Ressource zugreifen können, selbst wenn den Aufrufern nicht die Berechtigung für den Zugriff auf diese Ressource erteilt wurde.  
   
- Wenn Sie eine Klassenbibliothek entwerfen und eine Klasse auf eine geschützte Ressource zugreift, müssen Sie in den meisten Fällen eine Sicherheitsforderung vornehmen, die erfordert, dass die Aufrufer der Klasse über die entsprechende Berechtigung verfügen. Wenn die Klasse dann einen Vorgang ausführt, für den Sie wissen, dass die meisten Aufrufer nicht über die erforderliche Berechtigung verfügen, und wenn Sie bereit sind, die Verantwortung dafür zu übernehmen, dass diese Aufrufer Ihren Code aufrufen, können Sie die Berechtigung durch Aufrufen der **Assert** -Methode für einen Berechtigungs Objekt, das den vom Code ausführenden Vorgang darstellt. Durch die Verwendung von **Assert** auf diese Weise können Aufrufer, die normalerweise nicht den Code ausführen können, den Code Daher sollten Sie, wenn Sie eine Berechtigung über "Assert" bereitstellen, die notwendigen Sicherheitsüberprüfungen unbedingt vorab vornehmen, um einen Missbrauch Ihrer Komponente auszuschließen.  
+ Wenn Sie eine Klassenbibliothek entwerfen und eine Klasse auf eine geschützte Ressource zugreift, müssen Sie in den meisten Fällen eine Sicherheitsforderung vornehmen, die erfordert, dass die Aufrufer der Klasse über die entsprechende Berechtigung verfügen. Wenn die Klasse dann einen Vorgang ausführt, für den Sie wissen, dass die meisten Aufrufer nicht über die erforderliche Berechtigung verfügen, und wenn Sie bereit sind, die Verantwortung dafür zu übernehmen, dass diese Aufrufer Ihren Code aufrufen, können Sie die Berechtigung durch Aufrufen der **Assert** -Methode für ein Berechtigungs Objekt bestätigen, das den vom Code ausgeführten Vorgang darstellt. Durch die Verwendung von **Assert** auf diese Weise können Aufrufer, die normalerweise nicht den Code ausführen können, den Code Daher sollten Sie, wenn Sie eine Berechtigung über "Assert" bereitstellen, die notwendigen Sicherheitsüberprüfungen unbedingt vorab vornehmen, um einen Missbrauch Ihrer Komponente auszuschließen.  
   
- Angenommen, Ihre hoch vertrauenswürdige Bibliotheksklasse hat eine Methode, die Dateien löscht. Sie greift auf die jeweilige Datei durch Aufrufen einer nicht verwalteten Win32-Funktion zu. Ein Aufrufer ruft die **Delete** -Methode Ihres Codes auf und übergibt dabei den Namen der zu löschenden Datei (c:\test.txt). Innerhalb der **Delete** -Methode erstellt der Code ein <xref:System.Security.Permissions.FileIOPermission> -Objekt, das den Schreibzugriff auf c:\test.txt darstellt. (Zum Löschen einer Datei ist Schreibzugriff erforderlich.) Der Code ruft dann eine imperative Sicherheitsüberprüfung auf, indem er die " **Demand** "-Methode des Objekts " **fleiopermission** " aufruft. Wenn einer der Aufrufer in der Aufrufliste nicht über diese Berechtigung verfügt, wird eine <xref:System.Security.SecurityException> ausgelöst. Wenn keine Ausnahme ausgelöst wird, wissen Sie, dass alle Aufrufer zum Zugriff auf "C:\Test.txt" berechtigt sind. Da Sie davon ausgehen, dass die meisten Aufrufer nicht über die Berechtigung für den Zugriff auf nicht verwalteten Code verfügen <xref:System.Security.Permissions.SecurityPermission> , erstellt der Code ein-Objekt, das die Berechtigung zum Aufrufen von nicht verwaltetem Code darstellt und die **Assert** -Methode des Objekts aufruft. Schließlich ruft Ihr Code die nicht verwaltete Win32-Funktion auf, um "C:\Test.txt" zu löschen, und gibt die Kontrolle an den Aufrufer zurück.  
+ Angenommen, Ihre hoch vertrauenswürdige Bibliotheksklasse hat eine Methode, die Dateien löscht. Sie greift auf die jeweilige Datei durch Aufrufen einer nicht verwalteten Win32-Funktion zu. Ein Aufrufer ruft die **Delete** -Methode Ihres Codes auf und übergibt dabei den Namen der zu löschenden Datei (c:\test.txt). Innerhalb der **Delete** -Methode erstellt der Code ein <xref:System.Security.Permissions.FileIOPermission> Objekt, das Schreibzugriff auf c:\test.txt darstellt. (Zum Löschen einer Datei ist Schreibzugriff erforderlich.) Der Code ruft dann eine imperative Sicherheitsüberprüfung auf, indem er die " **Demand** "-Methode des Objekts " **fleiopermission** " aufruft. Wenn einer der Aufrufer in der Aufrufliste nicht über diese Berechtigung verfügt, wird eine <xref:System.Security.SecurityException> ausgelöst. Wenn keine Ausnahme ausgelöst wird, wissen Sie, dass alle Aufrufer zum Zugriff auf "C:\Test.txt" berechtigt sind. Da Sie davon ausgehen, dass die meisten Aufrufer nicht über die Berechtigung für den Zugriff auf nicht verwalteten Code verfügen, erstellt der Code dann ein <xref:System.Security.Permissions.SecurityPermission> Objekt, das die Berechtigung zum Aufrufen von nicht verwaltetem Code darstellt und die **Assert** -Methode des Objekts aufruft. Schließlich ruft Ihr Code die nicht verwaltete Win32-Funktion auf, um "C:\Test.txt" zu löschen, und gibt die Kontrolle an den Aufrufer zurück.  
   
 > [!CAUTION]
 > Achten Sie unbedingt darauf, dass Iher Code keine Assertionen in Situationen verwendet, in denen anderer Code Ihren Code für den Zugriff auf eine Ressource verwenden kann, die durch die von Ihnen mit "Assert" bereitgestellte Berechtigung geschützt ist. Beispielsweise würden Sie in Code, der in eine Datei schreibt, deren Name vom Aufrufer als Parameter angegeben wird, nicht die Datei " **fleiopermission** " zum Schreiben in Dateien bestätigen, da Ihr Code für den Missbrauch durch einen Drittanbieter offen wäre.  
   
  Wenn Sie die imperative Sicherheits Syntax verwenden, wird beim Aufrufen der **Assert** -Methode für mehrere Berechtigungen in derselben Methode eine Sicherheits Ausnahme ausgelöst. Stattdessen sollten Sie ein **PermissionSet** -Objekt erstellen, ihm die einzelnen Berechtigungen übergeben, die Sie aufrufen möchten, und dann die **Assert** -Methode für das **PermissionSet** -Objekt aufrufen. Sie können die **Assert** -Methode mehrmals aufzurufen, wenn Sie die deklarative Sicherheits Syntax verwenden.  
   
- Das folgende Beispiel zeigt die deklarative Syntax zum Überschreiben von Sicherheitsüberprüfungen mithilfe der **Assert** -Methode. Beachten Sie, dass die Syntax von " <xref:System.Security.Permissions.SecurityAction> **fileleiopermissionattribute** " zwei Werte annimmt: eine-Enumeration und den Speicherort der Datei oder des Verzeichnisses, dem die Berechtigung gewährt werden soll. Der Aufruf von **Assert** bewirkt, dass Anforderungen für `C:\Log.txt` den Zugriff auf erfolgreich sind, auch wenn Aufrufer nicht auf die Berechtigung für den Zugriff auf die Datei überprüft werden.  
+ Das folgende Beispiel zeigt die deklarative Syntax zum Überschreiben von Sicherheitsüberprüfungen mithilfe der **Assert** -Methode. Beachten Sie, dass die Syntax von " **fileleiopermissionattribute** " zwei Werte annimmt: eine <xref:System.Security.Permissions.SecurityAction> Enumeration und den Speicherort der Datei oder des Verzeichnisses, dem die Berechtigung erteilt werden soll. Der Aufruf von **Assert** bewirkt, dass der Zugriff auf `C:\Log.txt` erfolgreich ist, auch wenn Aufrufer nicht auf die Berechtigung für den Zugriff auf die Datei überprüft werden.  
   
 ```vb  
 Option Explicit  
@@ -167,7 +165,7 @@ namespace LogUtil
 }  
 ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Security.PermissionSet>
 - <xref:System.Security.Permissions.SecurityPermission>

@@ -7,14 +7,12 @@ helpviewer_keywords:
 - executable image for debugging
 - debugging [.NET Framework], executable images for
 ms.assetid: 7d90ea7a-150f-4f97-98a7-f9c26541b9a3
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 1b64bd1e112932f394bb473a21642d37e28e39d3
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 44d512a8ebec0e21e33f51c07428331e5e22b7bf
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052506"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77217339"
 ---
 # <a name="making-an-image-easier-to-debug-in-net"></a>Vereinfachen des Debuggens eines Images in .net
 
@@ -42,7 +40,7 @@ AllowOptimize=0
 
 Sie können für die Optionen jeweils den Wert 0 oder 1 einstellen. Nicht vorhandene Optionen haben standardmäßig den Wert 0. Am einfachsten lässt sich die Assembly debuggen, wenn Sie für `GenerateTrackingInfo` 1 und für `AllowOptimize` 0 festlegen.
 
-Beginnend mit der .NET Framework Version 2,0 generiert der JIT-Compiler immer nach Verfolgungs Informationen, unabhängig vom Wert `GenerateTrackingInfo`für. der `AllowOptimize` Wert hat jedoch weiterhin Auswirkungen. Wenn Sie das native Image mithilfe von [Ngen.exe (Native Image Generator)](../tools/ngen-exe-native-image-generator.md) ohne Optimierung vorkompilieren, muss bei der Ausführung von „Ngen.exe“ die INI-Datei im Zielordner mit der Einstellung `AllowOptimize=0` vorhanden sein. Wenn Sie eine Assembly ohne Optimierung vorkompiliert haben, müssen Sie den vorkompilierten Code mithilfe der Option "ngen. exe **/Uninstall** " entfernen, bevor Sie "ngen. exe" erneut ausführen, um den Code in optimierter Form vorzukompilieren. Wenn die INI-Datei nicht im Ordner vorhanden ist, kompiliert "ngen. exe" standardmäßig den Code so, dass er optimiert ist.
+Beginnend mit der .NET Framework Version 2,0 generiert der JIT-Compiler immer Überwachungsinformationen unabhängig vom Wert für `GenerateTrackingInfo`. der `AllowOptimize` Wert hat jedoch weiterhin Auswirkungen. Wenn Sie das native Image mithilfe von [Ngen.exe (Native Image Generator)](../tools/ngen-exe-native-image-generator.md) ohne Optimierung vorkompilieren, muss bei der Ausführung von „Ngen.exe“ die INI-Datei im Zielordner mit der Einstellung `AllowOptimize=0` vorhanden sein. Wenn Sie eine Assembly ohne Optimierung vorkompiliert haben, müssen Sie den vorkompilierten Code mithilfe der Option "ngen. exe **/Uninstall** " entfernen, bevor Sie "ngen. exe" erneut ausführen, um den Code in optimierter Form vorzukompilieren. Wenn die INI-Datei nicht im Ordner vorhanden ist, kompiliert "ngen. exe" standardmäßig den Code so, dass er optimiert ist.
 
 <xref:System.Diagnostics.DebuggableAttribute?displayProperty=nameWithType> kontrolliert die Einstellungen für eine Assembly. **DebuggableAttribute** enthält zwei Felder, die Steuern, ob der JIT-Compiler Überwachungsinformationen optimieren und/oder generieren soll. Beginnend mit der .NET Framework Version 2,0 generiert der JIT-Compiler immer Überwachungsinformationen.
 
@@ -53,7 +51,7 @@ Bei einem Retail-Build legen Compiler kein "Debug"- **Attribut**fest. Standardm�
 > [!NOTE]
 > In Version 1.0 von .NET Framework fügt der Microsoft Visual C++-Compiler das **DebuggableAttribute** hinzu, wenn die Compileroptionen **/clr** und **/Zi** angegeben werden. In Version 1,1 des .NET Framework müssen Sie das **DebuggableAttribute** entweder manuell in Ihrem Code hinzufügen oder die Option **/ASSEMBLYDEBUG** (Linkeroption) verwenden.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Debuggen, Ablaufverfolgung und Profilerstellung](index.md)
 - [Aktivieren von JIT-attach Debugging](enabling-jit-attach-debugging.md)

@@ -10,14 +10,12 @@ helpviewer_keywords:
 - TRACE directive
 - conditional compilation, tracing code
 ms.assetid: 56d051c3-012c-42c1-9a58-7270edc624aa
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a2cb2ef473d6870da47e0e4c00fecf6bd60707f3
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 2c3ec54535319f4c7507563a5976038ca40d20aa
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975584"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77217454"
 ---
 # <a name="how-to-compile-conditionally-with-trace-and-debug"></a>Gewusst wie: Bedingtes Kompilieren mit Ablaufverfolgung und Debuggen
 Beim Debuggen einer Anwendung während der Entwicklung wird sowohl die Ablaufverfolgungsausgabe als auch die Debugausgabe im Ausgabefenster von Visual Studio angezeigt. Allerdings müssen Sie Ihre instrumentierten Anwendungen mit aktivierter **TRACE**-Compilerdirektive kompilieren, um Ablaufverfolgungsfunktionen in eine bereitgestellte Anwendung aufzunehmen. Dadurch kann der Ablaufverfolgungscode in die Releaseversion der Anwendung kompiliert werden. Wenn Sie die **TRACE**-Anweisung nicht aktivieren, wird der gesamte Ablaufverfolgungscode bei der Kompilierung ignoriert und nicht in den ausführbaren Code aufgenommen, den Sie bereitstellen.  
@@ -59,7 +57,7 @@ Beim Debuggen einer Anwendung während der Entwicklung wird sowohl die Ablaufver
   
      Die in den obigen Beispielen verwendeten Anweisungen zur bedingten Kompilierung bedeuten Folgendes:  
   
-    |Anweisung|Bedeutung|  
+    |Direktive|Bedeutung|  
     |---------------|-------------|  
     |`vbc`|Visual Basic-Compiler|  
     |`csc`|C#-Compiler|  
@@ -73,7 +71,7 @@ Beim Debuggen einer Anwendung während der Entwicklung wird sowohl die Ablaufver
   
 1. Geben Sie am Anfang der Quellcodedatei die entsprechende Anweisung für Ihre Programmiersprache ein.  
   
-    |Sprache|Anweisung|Ergebnis|  
+    |Sprache|-Anweisung.|Ergebnis|  
     |--------------|---------------|------------|  
     |**Visual Basic**|**#CONST TRACE = true**|Aktiviert die Ablaufverfolgung|  
     ||**#CONST TRACE = false**|Deaktiviert die Ablaufverfolgung|  
@@ -88,19 +86,19 @@ Beim Debuggen einer Anwendung während der Entwicklung wird sowohl die Ablaufver
   
 Löschen Sie die Compilerdirektive aus dem Quellcode.  
   
-\- oder -  
+\- oder –  
   
 Kommentieren Sie die Compileranweisung aus.  
   
 > [!NOTE]
 > Wenn Sie kompilieren möchten, können Sie entweder **Erstellen** aus dem Menü **Erstellen** auswählen oder die Befehlszeilenmethode verwenden, allerdings ohne Eingabe von **d:** zum Definieren der Symbole für bedingte Kompilierung.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Ablaufverfolgung und Instrumentieren von Anwendungen](tracing-and-instrumenting-applications.md)
 - [Vorgehensweise: Erstellen, Initialisieren und Konfigurieren von Ablaufverfolgungsschaltern](how-to-create-initialize-and-configure-trace-switches.md)
 - [Ablaufverfolgungsschalter](trace-switches.md)
-- [Trace Listeners (Ablaufverfolgungslistener)](trace-listeners.md)
+- [Ablaufverfolgungslistener](trace-listeners.md)
 - [Vorgehensweise: Hinzufügen von Ablaufverfolgungsanweisungen zu Anwendungscode](how-to-add-trace-statements-to-application-code.md)
 - [Festlegen von Umgebungsvariablen für die Visual Studio-Befehlszeile](../../csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md)
 - [Gewusst wie: Aufrufen des Befehlszeilencompilers](../../visual-basic/reference/command-line-compiler/how-to-invoke-the-command-line-compiler.md)
