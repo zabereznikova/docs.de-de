@@ -2,16 +2,15 @@
 title: .NET-Klassenbibliotheken
 description: Erfahren Sie wie Sie mit Klassenbibliotheken nützliche Funktionalität in Module gruppieren, die von mehreren Anwendungen verwendet werden können.
 author: richlander
-ms.author: mairaw
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: a67484c3-fe92-44d8-8fa3-36fa2071d880
-ms.openlocfilehash: c918883d8620513749826680f9f1b6d89ae87585
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b7934e5def202760ab05d363ee5fcda5d012ca72
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64664601"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124584"
 ---
 # <a name="net-class-libraries"></a>.NET-Klassenbibliotheken
 
