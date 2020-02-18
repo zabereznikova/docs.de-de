@@ -22,11 +22,11 @@
           href: install/linux-package-manager-ubuntu-1904.md
         - name: Ubuntu 18.04
           href: install/linux-package-manager-ubuntu-1804.md
-        - name: Ubuntu 16.04
+        - name: "Ubuntu\_16.04"
           href: install/linux-package-manager-ubuntu-1604.md
-        - name: "CentOS\_7:"
+        - name: CentOS 7
           href: install/linux-package-manager-centos7.md
-        - name: Debian 10
+        - name: "Debian\_10"
           href: install/linux-package-manager-debian10.md
         - name: Debian 9
           href: install/linux-package-manager-debian9.md
@@ -40,17 +40,18 @@
           href: install/linux-package-manager-opensuse15.md
         - name: RHEL 8.1
           href: install/linux-package-manager-rhel81.md
-        - name: RHEL 7
+        - name: "RHEL\_7"
           href: install/linux-package-manager-rhel7.md
-        - name: SLES 15
+        - name: "SLES\_15"
           href: install/linux-package-manager-sles15.md
-        - name: SLES 12
+        - name: "SLES\_12"
           href: install/linux-package-manager-sles12.md
     - name: Installieren der lokalisierten IntelliSense-Instanz
       href: install/localized-intellisense.md
 - name: Erste Schritte
-  href: get-started.md
   items:
+    - name: Erste Schritte
+      href: get-started.md
     - name: 'Erste Schritte mit C# und Visual Studio Code'
       href: tutorials/with-visual-studio-code.md
     - name: Erste Schritte mit .NET Core unter macOS mithilfe von Visual Studio Code
@@ -79,20 +80,13 @@
       href: whats-new/dotnet-core-2-1.md
     - name: Neuigkeiten in .NET Core 2.0
       href: whats-new/dotnet-core-2-0.md
-- name: Aktuelle Änderungen
+- name: Breaking Changes
   displayName: app compatibility
   href: compatibility/
 - name: Tutorials
-  href: tutorials/index.md
   items:
-    - name: Vorlagen für die CLI
-      items:
-        - name: 1. Erstellen einer Elementvorlage
-          href: tutorials/cli-templates-create-item-template.md
-        - name: 2. Erstellen einer Projektvorlage
-          href: tutorials/cli-templates-create-project-template.md
-        - name: 3. Erstellen eines Vorlagenpakets
-          href: tutorials/cli-templates-create-template-pack.md
+    - name: Übersicht
+      href: tutorials/index.md
     - name: Erste Schritte mit .NET Core mit Visual Studio für Mac
       href: tutorials/using-on-mac-vs.md
     - name: Erstellen einer vollständigen .NET Core-Lösung unter macOS
@@ -109,6 +103,14 @@
       href: tutorials/aspnet-core.md
     - name: Hosten von .NET Core aus nativem Code
       href: tutorials/netcore-hosting.md
+    - name: Vorlagenerstellung für die CLI
+      items:
+        - name: 1. Erstellen einer Elementvorlage
+          href: tutorials/cli-templates-create-item-template.md
+        - name: 2. Erstellen einer Projektvorlage
+          href: tutorials/cli-templates-create-project-template.md
+        - name: 3. Erstellen eines Vorlagenpakets
+          href: tutorials/cli-templates-create-template-pack.md
 - name: Laufzeitkonfiguration
   items:
     - name: Einstellungen
@@ -131,13 +133,6 @@
       href: native-interop/expose-components-to-com.md
 - name: 'Pakete, Metapakete und Frameworks'
   href: packages.md
-- name: Änderungen in CLI – Übersicht
-  href: tools/cli-msbuild-architecture.md
-  items:
-    - name: Abhängigkeitsverwaltung
-      href: tools/dependencies.md
-    - name: Erweiterungen des CSPROJ-Formats
-      href: tools/csproj.md
 - name: Migration
   items:
     - name: .NET Core 2.0 bis 2.1
@@ -146,11 +141,16 @@
       href: migration/index.md
     - name: Zuordnung zwischen „project.json“ und „csproj“
       href: tools/project-json-to-csproj.md
+    - name: Änderungen in CLI – Übersicht
+      href: tools/cli-msbuild-architecture.md
+    - name: Erweiterungen des CSPROJ-Formats
+      href: tools/csproj.md
     - name: Migrieren aus DNX
       href: migration/from-dnx.md
 - name: Anwendungsbereitstellung
-  href: deploying/index.md
   items:
+    - name: Übersicht
+      href: deploying/index.md
     - name: Veröffentlichen von Apps mit der CLI
       href: deploying/deploy-with-cli.md
     - name: Bereitstellen von Apps mit Visual Studio
@@ -189,9 +189,11 @@
       items:
         - name: Debuggen eines Speicherverlusts
           href: diagnostics/debug-memory-leak.md
-- name: Komponententests
+- name: Komponententest
   href: testing/index.md
   items:
+    - name: Übersicht
+      href: testing/index.md
     - name: Bewährte Methoden für Komponententests
       href: testing/unit-testing-best-practices.md
     - name: 'Komponententests in C# mit xUnit'
@@ -220,9 +222,10 @@
       href: /visualstudio/test/live-unit-testing-start
 - name: Kontinuierliche Integration
   href: tools/using-ci-with-cli.md
-- name: Versionsverwaltung
-  href: versions/index.md
+- name: Versionskontrolle
   items:
+    - name: Übersicht
+      href: versions/index.md
     - name: .NET Core-Versionsauswahl
       href: versions/selection.md
     - name: Entfernen veralteter Runtimes und SDKs
@@ -231,7 +234,7 @@
   href: rid-catalog.md
 - name: .NET Core SDK – Übersicht
   href: sdk.md
-- name: .NET Core CLI
+- name: .NET Core-CLI
   items:
     - name: Übersicht
       href: tools/index.md
@@ -259,7 +262,7 @@
       href: tools/telemetry.md
     - name: 'global.json: Übersicht'
       href: tools/global-json.md
-    - name: Verweis
+    - name: Referenz
       items:
         - name: dotnet
           href: tools/dotnet.md
@@ -330,8 +333,9 @@
             - name: dotnet remove package
               href: tools/dotnet-remove-package.md
 - name: Zusätzliche Tools für .NET Core
-  href: additional-tools/index.md
   items:
+    - name: Übersicht
+      href: additional-tools/index.md
     - name: .NET Core-Deinstallationstool
       href: additional-tools/uninstall-tool.md
     - name: WCF Web Service Reference-Anbieter
@@ -364,13 +368,15 @@
       href: porting/wpf.md
     - name: Portieren von C++/CLI-Projekten
       href: porting/cpp-cli.md
-- name: Laden von Abhängigkeiten
+- name: Abhängigkeitsverwaltung und Ladevorgang
   items:
-    - name: Übersicht
+    - name: Abhängigkeitsverwaltung
+      href: tools/dependencies.md
+    - name: Laden von Abhängigkeiten
       href: dependency-loading/overview.md
     - name: Grundlegendes zu AssemblyLoadContext
       href: dependency-loading/understanding-assemblyloadcontext.md
-    - name: Laden von Details
+    - name: Details zur Abhängigkeitsverwaltung
       items:
         - name: Suchen der Standardabhängigkeit
           href: dependency-loading/default-probing.md
@@ -387,6 +393,4 @@
         - name: Verwenden und Debuggen von Assemblyentladbarkeit in .NET Core
           href: ../standard/assembly/unloadability-howto.md
 - name: Verpacken einer Verteilung von .NET Core
-  items:
-    - name: Übersicht
-      href: distribution-packaging.md
+  href: distribution-packaging.md
