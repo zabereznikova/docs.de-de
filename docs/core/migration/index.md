@@ -2,12 +2,12 @@
 title: .NET Core-Migration über „project.json“
 description: Erfahren Sie, wie Sie ein älteres .NET Core-Projekt mithilfe von „project.json“ migrieren.
 ms.date: 07/19/2017
-ms.openlocfilehash: f81d01c052c3632c48a5f961be86eab686c2074e
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 8a9dc05c82fd5476a70ee36a294a287abbfb68c4
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714357"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77450686"
 ---
 # <a name="migrating-net-core-projects-from-projectjson"></a>Migrieren von .NET Core-Projekten über „project.json“
 
@@ -65,7 +65,7 @@ Sie erhalten diese Fehlermeldung, wenn sich eine *global.json*-Datei im aktuelle
 Wenn Sie für die .NET Core-Entwicklung noch immer DNX verwenden, sollte der Migrationsvorgang in zwei Phasen erfolgen:
 
 1. Verwenden Sie die [existing DNX migration guidance (Hinweise zur Migration von einer vorhandenen DNX)](from-dnx.md), um von DNX zu project-json-aktivierter CLI zu migrieren.
-2. Führen Sie die Schritte aus dem vorherigen Abschnitt zum Migrieren von *project.json* zu *.csproj* aus.  
+2. Führen Sie die Schritte aus dem vorherigen Abschnitt zum Migrieren von *project.json* zu *.csproj* aus.
 
 > [!NOTE]
 > DNX gilt seit der Preview 1-Version der .NET Core-CLI offiziell als veraltet.
@@ -80,7 +80,7 @@ Das .NET Core-csproj-Format ändert und entwickelt sich mit jeder neuen Vorabver
 - Entfernen Sie die Anweisungen `<Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" />` und `<Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />` vom oberen und unteren Rand des Projekts. Diese Importanweisungen werden durch das SDK impliziert, daher müssen Sie nicht im Projekt enthalten sein.
 - Wenn Ihr Projekt `Microsoft.NETCore.App`- oder `NETStandard.Library` `<PackageReference>`-Elemente enthält, sollten Sie diese entfernen. Diese Paketverweise werden [durch das SDK impliziert](https://aka.ms/sdkimplicitrefs).
 - Entfernen Sie das `Microsoft.NET.Sdk` `<PackageReference>`-Element, sofern vorhanden. Die SDK-Referenz kommt durch das `Sdk`-Attribut auf dem `<Project>`-Element.
-- Entfernen Sie die [Globs](https://en.wikipedia.org/wiki/Glob_(programming)), die [durch das SDK impliziert](../tools/csproj.md#default-compilation-includes-in-net-core-projects) werden. Wenn diese Globs im Projekt bleiben, führt dies zu einem Fehler beim Erstellen, da Compile-Elemente dupliziert werden.
+- Entfernen Sie die [Globs](https://en.wikipedia.org/wiki/Glob_(programming)), die [durch das SDK impliziert](../project-sdk/overview.md#default-compilation-includes) werden. Wenn diese Globs im Projekt bleiben, führt dies zu einem Fehler beim Erstellen, da Compile-Elemente dupliziert werden.
 
 Nach diesen Schritten sollte das Projekt mit dem RTM .NET Core-csproj-Format vollständig kompatibel sein.
 

@@ -1,13 +1,13 @@
 ---
 title: Überwachen in Azure Kubernetes Services
 description: Überwachen in Azure Kubernetes Services
-ms.date: 09/23/2019
-ms.openlocfilehash: fc9d84fd738ff1c40d25860680e14313c9323517
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.date: 02/05/2020
+ms.openlocfilehash: 5c46b9e8599f70d430ad26cf1364343454d30a16
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75711648"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77450062"
 ---
 # <a name="monitoring-in-azure-kubernetes-services"></a>Überwachen in Azure Kubernetes Services
 
@@ -15,28 +15,14 @@ ms.locfileid: "75711648"
 
 Die integrierte Protokollierung in Kubernetes ist primitiv. Es gibt jedoch einige hervorragend Optionen, um die Protokolle aus Kubernetes und an einem Ort zu finden, an dem Sie ordnungsgemäß analysiert werden können. Wenn Sie Ihre AKS-Cluster überwachen müssen, ist das Konfigurieren von Elastic Stack für Kubernetes eine hervorragend Lösung.
 
-## <a name="elastic-stack"></a>Elastischer Stapel
+## <a name="azure-monitor-for-containers"></a>Azure Monitor für Container
 
-Der elastische Stapel ist eine leistungsstarke Option zum Sammeln von Informationen aus einem Kubernetes-Cluster. Kubernetes unterstützt das Senden von Protokollen an einen elasticsearch-Endpunkt, und zum [größten Teil](https://kubernetes.io/docs/tasks/debug-application-cluster/logging-elasticsearch-kibana/)müssen Sie zunächst die Umgebungsvariablen wie in Abbildung 7-5 gezeigt festlegen:
-
-```kubernetes
-KUBE_LOGGING_DESTINATION=elasticsearch
-KUBE_ENABLE_NODE_LOGGING=true
-```
-
-**Abbildung 7-5** -Konfigurationsvariablen für Kubernetes
-
-Dadurch wird elasticsearch auf dem Cluster installiert, und das Ziel ist es, alle Cluster Protokolle an den Cluster zu senden.
-
-![ein Beispiel für ein kibana-Dashboard, das die Ergebnisse einer Abfrage für in Kubernetes erfasste Protokolle anzeigt](./media/kibana-dashboard.png)
-**Abbildung 7-6**. Ein Beispiel für ein kibana-Dashboard, das die Ergebnisse einer Abfrage für Protokolle anzeigt, die von Kubernetes erfasst werden.
-
-## <a name="azure-container-monitoring"></a>Azure-Container Überwachung
-
-Azure Container Monitoring unterstützt das Verarbeiten von Protokollen von nicht nur Kubernetes sondern auch von anderen Orchestrierungs Modulen wie DC/OS, docker Swarm und red hat openshift.
+[Azure Monitor für Container](https://docs.microsoft.com/azure/azure-monitor/insights/container-insights-overview) unterstützt die Nutzung von Protokollen von nicht nur Kubernetes sondern auch von anderen Orchestrierungs Modulen wie DC/OS, docker Swarm und red hat openshift.
 
 ![verarbeiten von Protokollen aus verschiedenen Containern](./media/containers-diagram.png)
-**Abbildung 7-7**.  Verarbeiten von Protokollen aus verschiedenen Containern
+**Abbildung 7-10**. Verarbeiten von Protokollen aus verschiedenen Containern
+
+[Prometheus](https://prometheus.io/) ist eine beliebte Open-Source-metriküberwachungglösung. Es ist Teil der Cloud Native Compute Foundation. In der Regel erfordert die Verwendung von Prometheus die Verwaltung eines Prometheus-Servers mit seinem eigenen Geschäft. [Azure Monitor für Container bietet jedoch eine direkte Integration mit Prometheus-metrikendpunkten](https://docs.microsoft.com/azure/azure-monitor/insights/container-insights-prometheus-integration), sodass kein separater Server erforderlich ist.
 
 Protokoll-und metrikinformationen werden nicht nur aus den Containern, die im Cluster ausgeführt werden, sondern auch aus den Cluster Hosts selbst gesammelt. Er ermöglicht das korrelieren von Protokollinformationen aus den beiden, wodurch es wesentlich einfacher ist, einen Fehler zu finden.
 
@@ -45,7 +31,7 @@ Die Installation der Protokoll Sammler unterscheidet sich in [Windows](https://d
 Unabhängig davon, welcher Orchestrator oder das Betriebssystem den Azure Monitor Daemon ausführen, werden die Protokollinformationen an dieselben Azure Monitor Tools weitergeleitet, mit denen Benutzer vertraut sind. Dies sorgt für eine parallele Umgebung in Umgebungen, in denen verschiedene Protokoll Quellen, z. b. eine hybride Kubernetes/Azure Functions Umgebung, gemischt werden.
 
 ![ein Beispiel Dashboard, das Protokollierungs-und metrikinformationen aus einer Reihe von laufenden Containern anzeigt.](./media/containers-dashboard.png)
-**Abbildung 7-8**. Ein Beispiel Dashboard, in dem Protokollierungs-und metrikinformationen aus einer Reihe von laufenden Containern angezeigt werden.
+**Abbildung 7-11**. Ein Beispiel Dashboard, in dem Protokollierungs-und metrikinformationen aus einer Reihe von laufenden Containern angezeigt werden.
 
 ## <a name="logfinalize"></a>Log. Finalize ()
 
