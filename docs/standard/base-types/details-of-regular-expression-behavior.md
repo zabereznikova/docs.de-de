@@ -9,12 +9,12 @@ helpviewer_keywords:
 - regular expressions, behavior
 - .NET Framework regular expressions, behavior
 ms.assetid: 0ee1a6b8-caac-41d2-917f-d35570021b10
-ms.openlocfilehash: af812e1e42d57c349e94b5992b768636857d2a0c
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 504e315dda4e76f56a88d97149b1515b6743668b
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75348284"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124350"
 ---
 # <a name="details-of-regular-expression-behavior"></a>Einzelheiten zum Verhalten regulärer Ausdrücke
 
@@ -106,7 +106,7 @@ Die .NET Framework-Engine für reguläre Ausdrücke ist eine zurückverfolgende 
 
 - Ausgleichen von Gruppendefinitionen: `(?<`*Name1*`-`*Name2*`>` *Teilausdruck*`)`. Diese Funktion ermöglicht es der Engine für reguläre Ausdrücke, geschachtelte Konstrukte nachzuverfolgen, z.B. runde Klammern oder öffnende und schließende eckige Klammern. Ein Beispiel finden Sie unter [Gruppierungskonstrukte](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).
 
-- Nicht zurückverfolgender Teilausdruck (auch als gierige Teilausdrücke bezeichnet): `(?>`*Teilausdruck*`)`. Durch diese Funktion kann die Rückverfolgungs-Engine sicherstellen, dass nur die erste Übereinstimmung mit einem Teilausdruck geliefert wird, so als wäre der Teilausdruck unabhängig von dem vollständigen Ausdruck. Wenn Sie dieses Konstrukt nicht verwenden, kann das Verhalten eines Teilausdrucks durch Suchläufe mit Rückverfolgung über den längeren Ausdruck beeinflusst werden. Der reguläre Ausdruck `(a+)\w` stimmt beispielsweise mit einem oder mehreren „a“-Zeichen sowie einem Wortzeichen überein, das der Sequenz von „a“-Zeichen folgt, und weist die Sequenz von „a“-Zeichen der ersten Erfassungsgruppe zu. Wenn das abschließende Zeichen der Eingabezeichenfolge jedoch ebenfalls ein „a“ ist, wird es mit dem Sprachelement `\w` abgeglichen und nicht in die Erfassungsgruppe aufgenommen.
+- Atomische Gruppen: `(?>`*Teilausdruck*`)`. Durch diese Funktion kann die Rückverfolgungs-Engine sicherstellen, dass nur die erste Übereinstimmung mit einem Teilausdruck geliefert wird, so als wäre der Teilausdruck unabhängig von dem vollständigen Ausdruck. Wenn Sie dieses Konstrukt nicht verwenden, kann das Verhalten eines Teilausdrucks durch Suchläufe mit Rückverfolgung über den längeren Ausdruck beeinflusst werden. Der reguläre Ausdruck `(a+)\w` stimmt beispielsweise mit einem oder mehreren „a“-Zeichen überein, zusammen mit einem Wortzeichen, das der Sequenz der „a“-Zeichen folgt, und weist die Sequenz dieser Zeichen der ersten Erfassungsgruppe zu. Wenn jedoch das letzte Zeichen der Eingabezeichenfolge ebenso „a“ ist, wird es mit dem Sprachelement `\w` abgeglichen und nicht in die Erfassungsgruppe aufgenommen.
 
      [!code-csharp[Conceptual.RegularExpressions.Design#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.design/cs/nonbacktracking2.cs#7)]
      [!code-vb[Conceptual.RegularExpressions.Design#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.design/vb/nonbacktracking2.vb#7)]
@@ -116,7 +116,7 @@ Die .NET Framework-Engine für reguläre Ausdrücke ist eine zurückverfolgende 
      [!code-csharp[Conceptual.RegularExpressions.Design#8](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.design/cs/nonbacktracking1.cs#8)]
      [!code-vb[Conceptual.RegularExpressions.Design#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.design/vb/nonbacktracking1.vb#8)]
 
-     Weitere Informationen zu nicht zurückverfolgenden Teilausdrücken finden Sie unter [Gruppierungskonstrukte](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).
+     Weitere Informationen zu atomischen Gruppen finden Sie unter [Gruppierungskonstrukte](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).
 
 - Der Abgleich von rechts nach links, der durch Festlegen der <xref:System.Text.RegularExpressions.RegexOptions.RightToLeft?displayProperty=nameWithType>-Option für eine Suchmethode für <xref:System.Text.RegularExpressions.Regex>-Klassenkonstruktoren oder statische Instanzen angegeben wird. Diese Funktion eignet sich für die Suche von rechts nach links (statt von links nach rechts) oder in Fällen, in denen es effektiver ist, auf der rechten Seite eines Musters mit der Suche zu beginnen. Wie im folgenden Beispiel veranschaulicht, kann mit dem Abgleich von rechts nach links das Verhalten gieriger Quantifizierer geändert werden. Im Beispiel werden zwei Suchen nach einem Satz ausgeführt, der auf eine Zahl endet. Mit der Suche von links nach rechts, für die der gierige Quantifizierer `+` verwendet wird, wird eine der sechs Ziffern im Satz gefunden. Hingegen werden bei der Suche von rechts nach links alle sechs Ziffern gefunden. Eine Beschreibung des Musters für reguläre Ausdrücke finden Sie weiter oben in diesem Abschnitt im Beispiel zur Veranschaulichung träger Quantifizierer.
 

@@ -1,7 +1,7 @@
 ---
 title: Numerische Gleitkommatypen – C#-Referenz
-description: Übersicht über die integrierten C#-Gleitkommatypen
-ms.date: 10/22/2019
+description: 'Informationen zu den integrierten C#-Gleitkommatypen: float, double und decimal'
+ms.date: 02/10/2020
 f1_keywords:
 - float
 - float_CSharpKeyword
@@ -18,12 +18,12 @@ helpviewer_keywords:
 - floating-point numbers [C#], float keyword
 - double data type [C#]
 - decimal keyword [C#]
-ms.openlocfilehash: 9c8b11f9337ee9de90f2d4d96b5be162713bfcbd
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: 95b7f266654bbbcdcd0f81e3aa11cfc94af9f0e5
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2020
-ms.locfileid: "77093213"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77215240"
 ---
 # <a name="floating-point-numeric-types-c-reference"></a>Numerische Gleitkommatypen (C#-Referenz)
 
@@ -50,19 +50,21 @@ Der Standardwert jedes Gleitkommatyps ist Null (`0`). Die einzelnen Gleitkommaty
 
 Da der Typ `decimal` über eine höhere Genauigkeit und einen kleineren Bereich verfügt als `float` und `double`, eignet er sich für Finanz- und Währungskalkulationen.
 
-Sie können [integrale](integral-numeric-types.md) Typen und Gleitkommatypen in einem Ausdruck kombinieren. In diesem Fall werden die ganzzahligen Typen in Gleitkommatypen konvertiert. Die Auswertung des Ausdrucks erfolgt gemäß den folgenden Regeln:
+Sie können [integrale](integral-numeric-types.md) Typen sowie die Typen `float` und `double` in einem Ausdruck kombinieren. In diesem Fall werden integrale Typen implizit in einen der Gleitkommatypen konvertiert. Bei Bedarf wird der `float`-Typ implizit in `double` konvertiert. Der Ausdruck wird wie folgt ausgewertet:
 
-- Wenn einer der Gleitkommatypen `double` ist, wird der Ausdruck in `double` oder in [bool](bool.md) in relationalen Vergleichen oder in Vergleichen auf Gleichheit ausgewertet.
-- Wenn kein `double`-Typ im Ausdruck vorhanden ist, wird der Ausdruck in `float` oder in relationalen Vergleichen oder Vergleichen auf Gleichheit in [bool](bool.md) ausgewertet.
+- Wenn der `double`-Typ im Ausdruck vorhanden ist, wird der Ausdruck in `double` oder in relationalen Vergleichen oder Vergleichen auf Gleichheit in [`bool`](bool.md) ausgewertet.
+- Wenn der `double`-Typ im Ausdruck vorhanden ist, wird der Ausdruck in `float` oder in relationalen Vergleichen oder Vergleichen auf Gleichheit in `bool` ausgewertet.
 
-Ein Gleitkomma-Ausdruck kann die folgenden Sätze von Werten enthalten:
+Sie können integrale Typen und den `decimal`-Typ auch in einem Ausdruck miteinander kombinieren. In diesem Fall werden integrale Typen implizit in den `decimal`-Typ konvertiert, und der Ausdruck wird als `decimal` oder `bool` in relationalen Vergleichen und Gleichheitsvergleichen ausgewertet.
 
-- Positiv und negativ 0 (null)
-- Positiv und negativ unendlich
-- Not-a-Number-Wert (NaN)
-- Die begrenzte Menge von Werten ungleich Null
+In einem Ausdruck können Sie den `decimal`-Typ nicht mit den Typen `float` und `double` kombinieren. Wenn Sie aber einen arithmetischen Vorgang, einen Vergleich oder einen Gleichheitsvorgang durchführen möchten, müssen Sie, wie nachfolgend dargestellt, in diesem Fall die Operanden explizit aus dem oder in den `decimal`-Typ konvertieren
 
-Weitere Informationen zu diesen Werten finden Sie im IEEE-Standard für binäre Gleitkommaarithmetik auf der [IEEE](https://www.ieee.org)-Website.
+```csharp-interactive
+double a = 1.0;
+decimal b = 2.1m;
+Console.WriteLine(a + (double)b);
+Console.WriteLine((decimal)a + b);
+```
 
 Zum Formatieren eines Gleitkommawerts können Sie [standardmäßige Zahlenformatzeichenfolgen](../../../standard/base-types/standard-numeric-format-strings.md) oder [benutzerdefinierte Zahlenformatzeichenfolgen](../../../standard/base-types/custom-numeric-format-strings.md) verwenden.
 

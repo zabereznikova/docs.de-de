@@ -2,15 +2,14 @@
 title: .NET API-Analysetool
 description: Erfahren Sie, wie Sie mit dem .NET API-Analysetool veraltete APIs und Kompatibilitätsprobleme bei Plattformen erkennen können.
 author: oliag
-ms.author: mairaw
 ms.date: 04/26/2019
 ms.technology: dotnet-standard
-ms.openlocfilehash: 584f9f952148ebf72c5d5aaed64a2a078be00ce5
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: efbfa89f431bd02cdf86b8eff8704aec63a29b6c
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929355"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124246"
 ---
 # <a name="net-api-analyzer"></a>.NET API-Analysetool
 
@@ -21,7 +20,7 @@ Das API-Analysetool ist als NuGet-Paket [Microsoft.DotNet.Analyzers.Compatibilit
 > [!NOTE]
 > Beim .NET API-Analysetool handelt es sich um eine Vorabversion.
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
+## <a name="prerequisites"></a>Voraussetzungen
 
 - Visual Studio 2017 und höhere Versionen oder Visual Studio für Mac (alle Versionen).
 
@@ -45,7 +44,7 @@ Wenn eine veraltete API, z.B. <xref:System.Net.WebClient>, in einem Code verwend
 
 Das Fenster **Fehlerliste** enthält Warnungen mit einer eindeutigen ID pro veralteter API, wie in folgendem Beispiel (`DE004`) gezeigt: 
 
-![„Screenshot des Fensters mit der Fehlerliste, welche die ID und Beschreibung der Warnungen zeigt“](media/api-analyzer/warnings-id-and-descriptions.jpg "Fehlerliste mit Warnungen")
+![„Screenshot des Fensters mit der Fehlerliste, welche die ID und Beschreibung der Warnungen zeigt“](media/api-analyzer/warnings-id-and-descriptions.jpg "Fenster mit Fehlerliste, die Warnungen enthält")
 
 Wenn Sie auf die ID klicken, gelangen Sie auf eine Webseite mit detaillierten Informationen darüber, warum die API veraltet ist, und mit Vorschlägen zu alternativen APIs, die verwendet werden können.
 

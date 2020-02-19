@@ -14,12 +14,12 @@ helpviewer_keywords:
 - cheat sheet
 - .NET Framework regular expressions, language elements
 ms.assetid: 930653a6-95d2-4697-9d5a-52d11bb6fd4c
-ms.openlocfilehash: fb84e746e1dffedebfbe289c8e7599bc50097f07
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 8acf0886215c2d31f949e38401c4705ac9e2aef5
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73128073"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124311"
 ---
 # <a name="regular-expression-language---quick-reference"></a>Sprachelemente für reguläre Ausdrücke – Kurzübersicht
 
@@ -60,10 +60,10 @@ Eine Zeichenklasse entspricht einer beliebigen Reihe von Zeichen. Zeichenklassen
 |---------------------|-----------------|-------------|-------------|
 |`[` *Zeichengruppe* `]`|Entspricht einem beliebigen einzelnen Zeichen in *Zeichengruppe*. Bei der Entsprechung wird standardmäßig die Groß- und Kleinschreibung berücksichtigt.|`[ae]`|`"a"` in `"gray"`<br /><br /> `"a"`, `"e"` in `"lane"`|
 |`[^` *Zeichengruppe* `]`|Negation: Entspricht jedem beliebigen einzelnen Zeichen, das nicht in *Zeichengruppe* enthalten ist. Standardmäßig wird bei Zeichen in *Zeichengruppe* die Groß-/Kleinschreibung beachtet.|`[^aei]`|`"r"`, `"g"`, `"n"` in `"reign"`|
-|`[` *erstes* `-` *letztes* `]`|Zeichenbereich: Entspricht jedem beliebigen einzelnen Zeichen im Bereich von *erstes* bis *letztes*.|`[A-Z]`|`"A"`, `"B"` in `"AB123"`|
+|`[` *first* `-` *last* `]`|Zeichenbereich: Entspricht jedem beliebigen einzelnen Zeichen im Bereich von *erstes* bis *letztes*.|`[A-Z]`|`"A"`, `"B"` in `"AB123"`|
 |`.`|Platzhalterzeichen: Entspricht jedem beliebigen einzelnen Zeichen außer \n.<br /><br /> Damit es einem Punkt als Literalzeichen entspricht ("." oder oder `\u002E`), muss ihm ein Escapezeichen (`\.`) vorangestellt werden.|`a.e`|`"ave"` in `"nave"`<br /><br /> `"ate"` in `"water"`|
-|`\p{` *Name* `}`|Entspricht jedem beliebigen Zeichen, das sich in der allgemeinen Unicode-Kategorie oder einem von *Name* angegebenen benannten Block befindet.|`\p{Lu}`<br /><br /> `\p{IsCyrillic}`|`"C"`, `"L"` in `"City Lights"`<br /><br /> `"Д"`, `"Ж"` in `"ДЖem"`|
-|`\P{` *Name* `}`|Entspricht jedem beliebigen Zeichen, das sich nicht in der allgemeinen Unicode-Kategorie oder einem von *Name* angegebenen benannten Block befindet.|`\P{Lu}`<br /><br /> `\P{IsCyrillic}`|`"i"`, `"t"`, `"y"` in `"City"`<br /><br /> `"e"`, `"m"` in `"ДЖem"`|
+|`\p{` *name* `}`|Entspricht jedem beliebigen Zeichen, das sich in der allgemeinen Unicode-Kategorie oder einem von *Name* angegebenen benannten Block befindet.|`\p{Lu}`<br /><br /> `\p{IsCyrillic}`|`"C"`, `"L"` in `"City Lights"`<br /><br /> `"Д"`, `"Ж"` in `"ДЖem"`|
+|`\P{` *name* `}`|Entspricht jedem beliebigen Zeichen, das sich nicht in der allgemeinen Unicode-Kategorie oder einem von *Name* angegebenen benannten Block befindet.|`\P{Lu}`<br /><br /> `\P{IsCyrillic}`|`"i"`, `"t"`, `"y"` in `"City"`<br /><br /> `"e"`, `"m"` in `"ДЖem"`|
 |`\w`|Entspricht einem beliebigen Wortzeichen.|`\w`|`"I"`, `"D"`, `"A"`, `"1"`, `"3"` in `"ID A1.3"`|
 |`\W`|Entspricht einem beliebigen Nichtwortzeichen.|`\W`|`" "`, `"."` in `"ID A1.3"`|
 |`\s`|Entspricht einem beliebigen Leerraumzeichen.|`\w\s`|`"D "` in `"ID A1.3"`|
@@ -101,7 +101,7 @@ Gruppierungskonstrukte grenzen Teilausdrücke eines regulären Ausdrucks ab und 
 |`(?!` *Teilausdruck* `)`|Negative Lookaheadassertion mit einer Breite von Null.|`\b(?!un)\w+\b`|`"sure"`, `"used"` in `"unsure sure unity used"`|
 |`(?<=` *Teilausdruck* `)`|Positive Lookbehindassertion mit einer Breite von Null.|`(?<=19)\d{2}\b`|`"99"`, `"50"`, `"05"` in `"1851 1999 1950 1905 2003"`|
 |`(?<!` *Teilausdruck* `)`|Negative Lookbehindassertion mit einer Breite von Null.|`(?<!19)\d{2}\b`|`"51"`, `"03"` in `"1851 1999 1950 1905 2003"`|
-|`(?>` *Teilausdruck* `)`|Nicht zurückverfolgender ("gieriger") Teilausdruck.|`[13579](?>A+B+)`|`"1ABB"`, `"3ABB"` und `"5AB"` in `"1ABB 3ABBC 5AB 5AC"`|
+|`(?>` *Teilausdruck* `)`|Atomische Gruppe|`[13579](?>A+B+)`|`"1ABB"`, `"3ABB"` und `"5AB"` in `"1ABB 3ABBC 5AB 5AC"`|
 
 ## <a name="quantifiers"></a>Quantifizierer
 
@@ -128,8 +128,8 @@ Ein Rückverweis ermöglicht es, einen zuvor gefundenen Teilausdruck später im 
 
 |Rückverweiskonstrukt|Beschreibung|Muster|Übereinstimmungen|
 |-----------------------------|-----------------|-------------|-------------|
-|`\` *Zahl*|Rückverweis. Entspricht dem Wert eines nummerierten Teilausdrucks.|`(\w)\1`|`"ee"` in `"seek"`|
-|`\k<` *Name* `>`|Benannter Rückverweis. Entspricht dem Wert eines benannten Ausdrucks.|`(?<char>\w)\k<char>`|`"ee"` in `"seek"`|
+|`\` *number*|Rückverweis. Entspricht dem Wert eines nummerierten Teilausdrucks.|`(\w)\1`|`"ee"` in `"seek"`|
+|`\k<` *name* `>`|Benannter Rückverweis. Entspricht dem Wert eines benannten Ausdrucks.|`(?<char>\w)\k<char>`|`"ee"` in `"seek"`|
 
 ## <a name="alternation-constructs"></a>Alternierungskonstrukte
 
@@ -138,8 +138,8 @@ Alternierungskonstrukte ändern einen regulären Ausdruck, um entweder/oder-Verg
 |Alternierungskonstrukt|Beschreibung|Muster|Übereinstimmungen|
 |---------------------------|-----------------|-------------|-------------|
 |<code>&#124;</code>|Entspricht jedem beliebigen durch einen senkrechten Strich (<code>&#124;</code>) getrennten Element.|<code>th(e&#124;is&#124;at)</code>|`"the"`, `"this"` in `"this is the day."`|
-|`(?(` *Ausdruck* `)` *ja* <code>&#124;</code> *nein* `)`|Entspricht *ja* , wenn das von *Ausdruck* angegebene Muster für reguläre Ausdrücke übereinstimmt. Andernfalls entspricht es dem optionalen *nein*. *Ausdruck* wird als Assertion mit einer Breite von Null interpretiert.|<code>(?(A)A\d{2}\b&#124;\b\d{3}\b)</code>|`"A10"`, `"910"` in `"A10 C103 910"`|
-|`(?(` *Name* `)` *ja* <code>&#124;</code> *nein* `)`|Entspricht *ja*, wenn *Name*, eine benannte oder nummerierte Erfassungsgruppe, eine Übereinstimmung aufweist. Andernfalls entspricht es dem optionalen *nein*.|<code>(?&lt;quoted&gt;&quot;)?(?(quoted).+?&quot;&#124;\S+\s)</code>|`"Dogs.jpg "`, `"\"Yiska playing.jpg\""` in `"Dogs.jpg \"Yiska playing.jpg\""`|
+|`(?(` *expression* `)` *yes* <code>&#124;</code> *no* `)`|Entspricht *ja* , wenn das von *Ausdruck* angegebene Muster für reguläre Ausdrücke übereinstimmt. Andernfalls entspricht es dem optionalen *nein*. *Ausdruck* wird als Assertion mit einer Breite von Null interpretiert.|<code>(?(A)A\d{2}\b&#124;\b\d{3}\b)</code>|`"A10"`, `"910"` in `"A10 C103 910"`|
+|`(?(` *name* `)` *yes* <code>&#124;</code> *no* `)`|Entspricht *ja*, wenn *Name*, eine benannte oder nummerierte Erfassungsgruppe, eine Übereinstimmung aufweist. Andernfalls entspricht es dem optionalen *nein*.|<code>(?&lt;quoted&gt;&quot;)?(?(quoted).+?&quot;&#124;\S+\s)</code>|`"Dogs.jpg "`, `"\"Yiska playing.jpg\""` in `"Dogs.jpg \"Yiska playing.jpg\""`|
 
 ## <a name="substitutions"></a>Ersetzungen
 
@@ -147,8 +147,8 @@ Ersetzungen sind Sprachelemente regulärer Ausdrücke, die in Ersetzungsmustern 
 
 |Zeichen|Beschreibung|Muster|Ersetzungsmuster|Eingabezeichenfolge|Ergebniszeichenfolge|
 |---------------|-----------------|-------------|-------------------------|------------------|-------------------|
-|`$` *Zahl*|Ersetzt die untergeordnete Zeichenfolge, die der *Zahl* einer Gruppe entspricht.|`\b(\w+)(\s)(\w+)\b`|`$3$2$1`|`"one two"`|`"two one"`|
-|`${` *Name* `}`|Ersetzt die untergeordnete Zeichenfolge, die dem genannten *Namen* der Gruppe entspricht.|`\b(?<word1>\w+)(\s)(?<word2>\w+)\b`|`${word2} ${word1}`|`"one two"`|`"two one"`|
+|`$` *number*|Ersetzt die untergeordnete Zeichenfolge, die der *Zahl* einer Gruppe entspricht.|`\b(\w+)(\s)(\w+)\b`|`$3$2$1`|`"one two"`|`"two one"`|
+|`${` *name* `}`|Ersetzt die untergeordnete Zeichenfolge, die dem genannten *Namen* der Gruppe entspricht.|`\b(?<word1>\w+)(\s)(?<word2>\w+)\b`|`${word2} ${word1}`|`"one two"`|`"two one"`|
 |`$$`|Ersetzt ein "$"-Literal.|`\b(\d+)\s?USD`|`$$$1`|`"103 USD"`|`"$103"`|
 |`$&`|Ersetzt eine Kopie der gesamten Entsprechung.|`\$?\d*\.?\d+`|`**$&**`|`"$1.30"`|`"**$1.30**"`|
 |``$` ``|Ersetzt den gesamten Text der Eingabezeichenfolge vor der Entsprechung.|`B+`|``$` ``|`"AABBCC"`|`"AAAACC"`|

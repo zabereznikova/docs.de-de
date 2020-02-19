@@ -10,12 +10,12 @@ helpviewer_keywords:
 - .NET Framework regular expressions, best practices
 - regular expressions, best practices
 ms.assetid: 618e5afb-3a97-440d-831a-70e4c526a51c
-ms.openlocfilehash: cb1764d1a6f363f3011268eae5fbcb2c76d9cc89
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: 9b09f5a2505888c6154a58a3512c94c51f89295b
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75938000"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124421"
 ---
 # <a name="best-practices-for-regular-expressions-in-net"></a>Empfohlene Vorgehensweisen für die Verwendung von regulären Ausdrücken in .NET
 
@@ -176,7 +176,7 @@ Leistungseinbußen bei Anwendungen kommen häufig vor, wenn die Rückverfolgung 
 
 Da eine Wortgrenze weder mit einem Wortzeichen identisch noch eine Teilmenge eines Wortzeichens ist, ist es nicht möglich, dass die Engine für reguläre Ausdrücke beim Abgleichen von Wortzeichen eine Wortgrenze überschreitet. Das bedeutet, dass das Zurückverfolgen für diesen regulären Ausdruck nie zum Gesamterfolg von Übereinstimmungen beitragen kann – lediglich die Leistung kann beeinträchtigt werden, da die Engine für reguläre Ausdrücke gezwungen wird, den Zustand für jede erfolgreiche vorläufige Übereinstimmung eines Wortzeichens zu speichern.
 
-Wenn Sie feststellen, dass eine Rückverfolgung nicht notwendig ist, können Sie sie mithilfe des Sprachelements `(?>subexpression)` deaktivieren. Im folgenden Beispiel wird eine Eingabezeichenfolge unter Verwendung von zwei regulären Ausdrücken analysiert. Der erste, `\b\p{Lu}\w*\b`, beruht auf Rückverfolgung. Der zweite, `\b\p{Lu}(?>\w*)\b`, deaktiviert die Rückverfolgung. Wie die Ausgabe im Beispiel zeigt, liefern beide dasselbe Ergebnis.
+Wenn Sie feststellen, dass eine Rückverfolgung nicht notwendig ist, können Sie sie mithilfe des als atomische Gruppe bekannten Sprachelements `(?>subexpression)` deaktivieren. Im folgenden Beispiel wird eine Eingabezeichenfolge unter Verwendung von zwei regulären Ausdrücken analysiert. Der erste, `\b\p{Lu}\w*\b`, beruht auf Rückverfolgung. Der zweite, `\b\p{Lu}(?>\w*)\b`, deaktiviert die Rückverfolgung. Wie die Ausgabe im Beispiel zeigt, liefern beide dasselbe Ergebnis.
 
 [!code-csharp[Conceptual.RegularExpressions.BestPractices#10](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.bestpractices/cs/backtrack2.cs#10)]
 [!code-vb[Conceptual.RegularExpressions.BestPractices#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.bestpractices/vb/backtrack2.vb#10)]

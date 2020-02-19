@@ -13,12 +13,12 @@ helpviewer_keywords:
 - constructs, grouping
 - grouping constructs
 ms.assetid: 0fc18634-f590-4062-8d5c-f0b71abe405b
-ms.openlocfilehash: 8bf6870e3eb3ef65b498f431cb2b8805eee7ec3c
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 87cc3d53cf06457191d9c87020c4151e3f848c51
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73140110"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124324"
 ---
 # <a name="grouping-constructs-in-regular-expressions"></a>Gruppierungskonstrukte in regulären Ausdrücken
 Gruppierungskonstrukte grenzen die Teilausdrücke eines regulären Ausdrucks ab und zeichnen die Teilzeichenfolgen einer Eingabezeichenfolge auf. Mit Gruppierungskonstrukten können Sie folgende Schritte ausführen:  
@@ -44,7 +44,7 @@ Gruppierungskonstrukte grenzen die Teilausdrücke eines regulären Ausdrucks ab 
 |[Negative Lookaheadassertionen mit einer Breite von Null](#zerowidth_negative_lookahead_assertion)|Nicht erfassend|  
 |[Positive Lookbehindassertionen mit einer Breite von Null](#zerowidth_positive_lookbehind_assertion)|Nicht erfassend|  
 |[Negative Lookbehindassertionen mit einer Breite von Null](#zerowidth_negative_lookbehind_assertion)|Nicht erfassend|  
-|[Nicht zurückverfolgende Teilausdrücke](#nonbacktracking_subexpression)|Nicht erfassend|  
+|[Atomische Gruppen](#atomic_groups)|Nicht erfassend|  
   
  Weitere Informationen zu Gruppen und dem Objektmodell für reguläre Ausdrücke finden Sie unter [Gruppieren von Konstrukten und Objekten für reguläre Ausdrücke](#Objects).  
   
@@ -80,7 +80,7 @@ Gruppierungskonstrukte grenzen die Teilausdrücke eines regulären Ausdrucks ab 
   
  Die folgende Tabelle zeigt, wie das Muster eines regulären Ausdrucks interpretiert wird.  
   
-|Muster|BESCHREIBUNG|  
+|Muster|Beschreibung|  
 |-------------|-----------------|  
 |`(\w+)`|Übereinstimmung mit mindestens einem Wortzeichen. Dies ist die erste Erfassungsgruppe.|  
 |`\s`|Entsprechung für ein Leerraumzeichen finden.|  
@@ -137,7 +137,7 @@ Gruppierungskonstrukte grenzen die Teilausdrücke eines regulären Ausdrucks ab 
   
  In der folgenden Tabelle wird gezeigt, wie der reguläre Ausdruck interpretiert wird.  
   
-|Muster|BESCHREIBUNG|  
+|Muster|Beschreibung|  
 |-------------|-----------------|  
 |`(?<duplicateWord>\w+)`|Übereinstimmung mit mindestens einem Wortzeichen. Geben Sie für die Erfassungsgruppe `duplicateWord`als Namen an.|  
 |`\s`|Entsprechung für ein Leerraumzeichen finden.|  
@@ -154,7 +154,7 @@ Gruppierungskonstrukte grenzen die Teilausdrücke eines regulären Ausdrucks ab 
   
  In der folgenden Tabelle wird gezeigt, wie der reguläre Ausdruck interpretiert wird.  
   
-|Muster|BESCHREIBUNG|  
+|Muster|Beschreibung|  
 |-------------|-----------------|  
 |`\D+`|Übereinstimmung mit einem oder mehreren Nichtdezimal-Ziffernzeichen.|  
 |`(?<digit>\d+)`|Übereinstimmung mit einem oder mehreren Dezimalziffernzeichen. Weisen Sie die Übereinstimmung der Gruppe namens `digit` zu.|  
@@ -189,7 +189,7 @@ Gruppierungskonstrukte grenzen die Teilausdrücke eines regulären Ausdrucks ab 
   
  Der reguläre Ausdruck wird wie folgt interpretiert:  
   
-|Muster|BESCHREIBUNG|  
+|Muster|Beschreibung|  
 |-------------|-----------------|  
 |`^`|Starten Sie am Beginn der Zeichenfolge.|  
 |`[^<>]*`|Finden Sie eine Entsprechung für null oder mehr Zeichen, die keine linken oder rechten spitzen Klammern sind.|  
@@ -252,7 +252,7 @@ Gruppierungskonstrukte grenzen die Teilausdrücke eines regulären Ausdrucks ab 
   
  Der reguläre Ausdruck `(?:\b(?:\w+)\W*)+\.` stimmt mit einem Satz überein, der durch einen Punkt beendet wird. Da sich der reguläre Ausdruck auf Sätze konzentriert und nicht auf einzelne Wörter, werden Gruppierungskonstrukte ausschließlich als Quantifizierer verwendet. Das Muster für reguläre Ausdrücke wird entsprechend der folgenden Tabelle interpretiert.  
   
-|Muster|BESCHREIBUNG|  
+|Muster|Beschreibung|  
 |-------------|-----------------|  
 |`\b`|Der Vergleich beginnt an einer Wortgrenze.|  
 |`(?:\w+)`|Übereinstimmung mit mindestens einem Wortzeichen. Weisen Sie einer erfassten Gruppe den entsprechenden Text nicht zu.|  
@@ -275,7 +275,7 @@ Gruppierungskonstrukte grenzen die Teilausdrücke eines regulären Ausdrucks ab 
   
  Beispiel: Der reguläre Ausdruck `\b(?ix: d \w+)\s` verwendet Inlineoptionen in einem Gruppierungskonstrukt, um die Groß-/Kleinschreibung nicht beachtende Übereinstimmung zu aktivieren und Musterleerstellen beim Identifizieren aller Wörter zu ignorieren, die mit dem Buchstaben „d“ beginnen. Der reguläre Ausdruck wird entsprechend der Darstellung in der folgenden Tabelle definiert:  
   
-|Muster|BESCHREIBUNG|  
+|Muster|Beschreibung|  
 |-------------|-----------------|  
 |`\b`|Der Vergleich beginnt an einer Wortgrenze.|  
 |`(?ix: d \w+)`|In diesem Muster wird Übereinstimmung ohne Berücksichtigung von Groß- und Kleinschreibung verwendet, und Leerzeichen werden ignoriert (entspricht dem Buchstaben "d" gefolgt von mindestens einem Wortzeichen).|  
@@ -301,7 +301,7 @@ Gruppierungskonstrukte grenzen die Teilausdrücke eines regulären Ausdrucks ab 
   
  Der reguläre Ausdruck `\b\w+(?=\sis\b)` wird entsprechend der Darstellung in der folgenden Tabelle interpretiert.  
   
-|Muster|BESCHREIBUNG|  
+|Muster|Beschreibung|  
 |-------------|-----------------|  
 |`\b`|Der Vergleich beginnt an einer Wortgrenze.|  
 |`\w+`|Übereinstimmung mit mindestens einem Wortzeichen.|  
@@ -324,7 +324,7 @@ Gruppierungskonstrukte grenzen die Teilausdrücke eines regulären Ausdrucks ab 
   
  Der reguläre Ausdruck `\b(?!un)\w+\b` wird entsprechend der Darstellung in der folgenden Tabelle interpretiert.  
   
-|Muster|BESCHREIBUNG|  
+|Muster|Beschreibung|  
 |-------------|-----------------|  
 |`\b`|Der Vergleich beginnt an einer Wortgrenze.|  
 |`(?!un)`|Es wird bestimmt, ob die nächsten zwei Zeichen "un" sind. Trifft dies nicht zu, ist eine Übereinstimmung möglich.|  
@@ -338,7 +338,7 @@ Gruppierungskonstrukte grenzen die Teilausdrücke eines regulären Ausdrucks ab 
   
  Der reguläre Ausdruck `\b\w+\b(?!\p{P})` wird entsprechend der Darstellung in der folgenden Tabelle interpretiert.  
   
-|Muster|BESCHREIBUNG|  
+|Muster|Beschreibung|  
 |-------------|-----------------|  
 |`\b`|Der Vergleich beginnt an einer Wortgrenze.|  
 |`\w+`|Übereinstimmung mit mindestens einem Wortzeichen.|  
@@ -362,7 +362,7 @@ Gruppierungskonstrukte grenzen die Teilausdrücke eines regulären Ausdrucks ab 
   
  Das Muster für reguläre Ausdrücke `(?<=\b20)\d{2}\b` wird entsprechend der folgenden Tabelle interpretiert:  
   
-|Muster|BESCHREIBUNG|  
+|Muster|Beschreibung|  
 |-------------|-----------------|  
 |`\d{2}`|Entsprechung für zwei Dezimalstellen finden.|  
 |`(?<=\b20)`|Die Übereinstimmung wird fortgesetzt, wenn den zwei Dezimalstellen die Dezimalstellen "20" bei einer Wortgrenze vorangestellt sind.|  
@@ -387,7 +387,7 @@ Gruppierungskonstrukte grenzen die Teilausdrücke eines regulären Ausdrucks ab 
   
  Das Muster für reguläre Ausdrücke `(?<!(Saturday|Sunday) )\b\w+ \d{1,2}, \d{4}\b` wird entsprechend der folgenden Tabelle interpretiert:  
   
-|Muster|BESCHREIBUNG|  
+|Muster|Beschreibung|  
 |-------------|-----------------|  
 |`\b`|Der Vergleich beginnt an einer Wortgrenze.|  
 |`\w+`|Suchen Sie nach einer Übereinstimmung mit einem oder mehreren Wortzeichen gefolgt von einem Leerzeichen.|  
@@ -395,9 +395,9 @@ Gruppierungskonstrukte grenzen die Teilausdrücke eines regulären Ausdrucks ab 
 |`\d{4}\b`|Finden Sie eine Entsprechung für vier Dezimalstellen, und beenden Sie die Übereinstimmung an einer Wortgrenze.|  
 |<code>(?<!(Saturday&#124;Sunday) )</code>|Wenn der Übereinstimmung etwas anderes als die Zeichenfolgen "Samstag" oder "Sonntag" (gefolgt von einem Leerzeichen) vorangestellt wird, ist die Übereinstimmung erfolgreich.|  
   
-<a name="nonbacktracking_subexpression"></a>   
-## <a name="nonbacktracking-subexpressions"></a>Nicht zurückverfolgende Teilausdrücke  
- Das folgende Gruppierungskonstrukt stellt einen nicht zurückverfolgenden Teilausdruck (auch bekannt als "gieriger" Teilausdruck) dar:  
+<a name="atomic_groups"></a>   
+## <a name="atomic-groups"></a>Atomische Gruppen  
+ Die folgenden Gruppierungskonstrukte stellen eine atomische Gruppe dar (in anderen Engines für reguläre Ausdrücke als Teilausdruck ohne Rückverfolgung, als atomischer Teilausdruck oder einmaliger Teilausdruck bekannt):
   
  `(?>` *Teilausdruck* `)`  
   
@@ -409,14 +409,14 @@ Gruppierungskonstrukte grenzen die Teilausdrücke eines regulären Ausdrucks ab 
   
  Diese Option wird empfohlen, wenn Sie wissen, dass eine Rückverfolgung nicht erfolgreich ist. Indem verhindert wird, dass von der Engine für reguläre Ausdrücke unnötige Suchläufe durchgeführt werden, wird die Leistung verbessert.  
   
- Im folgenden Beispiel wird veranschaulicht, wie ein nicht zurückverfolgender Teilausdruck die Ergebnisse einer Musterübereinstimmung ändert. Der rückverfolgende reguläre Ausdruck findet erfolgreich eine Entsprechung für eine Reihe von Zeichen, die von einem weiteren Vorkommen des gleichen Zeichens bei einer Wortgrenze gefolgt wird. Beim regulären Ausdruck ohne Rückverfolgung ist dies nicht der Fall.  
+ Im folgenden Beispiel wird veranschaulicht, wie eine atomische Gruppe die Ergebnisse einer Musterübereinstimmung ändert. Der rückverfolgende reguläre Ausdruck findet erfolgreich eine Entsprechung für eine Reihe von Zeichen, die von einem weiteren Vorkommen des gleichen Zeichens bei einer Wortgrenze gefolgt wird. Beim regulären Ausdruck ohne Rückverfolgung ist dies nicht der Fall.  
   
  [!code-csharp[RegularExpressions.Language.Grouping#11](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.grouping/cs/nonbacktracking1.cs#11)]
  [!code-vb[RegularExpressions.Language.Grouping#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.grouping/vb/nonbacktracking1.vb#11)]  
   
  Der nicht zurückverfolgende reguläre Ausdruck `(?>(\w)\1+).\b` wird entsprechend der folgenden Tabelle definiert.  
   
-|Muster|BESCHREIBUNG|  
+|Muster|Beschreibung|  
 |-------------|-----------------|  
 |`(\w)`|Finden Sie eine Entsprechung für ein einzelnes Wortzeichen, und weisen Sie es der ersten Erfassungsgruppe zu.|  
 |`\1+`|Finden Sie mindestens eine Entsprechung für die erste erfasste Teilzeichenfolge.|  
@@ -443,7 +443,7 @@ Gruppierungskonstrukte grenzen die Teilausdrücke eines regulären Ausdrucks ab 
   
  Das Muster eines regulären Ausdrucks `(\b(\w+)\W+)+` extrahiert einzelne Wörter aus einer Zeichenfolge. Das Muster wird wie in der folgenden Tabelle gezeigt definiert.  
   
-|Muster|BESCHREIBUNG|  
+|Muster|Beschreibung|  
 |-------------|-----------------|  
 |`\b`|Der Vergleich beginnt an einer Wortgrenze.|  
 |`(\w+)`|Übereinstimmung mit mindestens einem Wortzeichen. Zusammen bilden diese Zeichen ein Wort. Dies ist die zweite Erfassungsgruppe.|  
