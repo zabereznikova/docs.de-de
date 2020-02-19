@@ -9,24 +9,24 @@ helpviewer_keywords:
 - Viewbox control [WPF]
 - scaling elements [WPF], Viewbox control
 ms.assetid: 00fc0a16-1078-4d55-9849-ffaf7da96531
-ms.openlocfilehash: 707375230acea3558b060f398add919370d352b2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b99bf4cc4ff6288501279730a47c2e9e57662fdd
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61761194"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77452135"
 ---
 # <a name="viewbox"></a>Viewbox
-Die <xref:System.Windows.Controls.Viewbox> Steuerelement gestreckt oder skalieren ein untergeordnetes Element verwendet wird.  
+Das <xref:System.Windows.Controls.Viewbox> Steuerelement wird verwendet, um ein untergeordnetes Element zu Strecken oder zu skalieren.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Anwenden von Stretch-Eigenschaften auf den Inhalt einer Viewbox](how-to-apply-stretch-properties-to-the-contents-of-a-viewbox.md)  
   
-## <a name="reference"></a>Referenz  
+## <a name="reference"></a>Verweis  
  <xref:System.Windows.Controls.Viewbox>  
   
  <xref:System.Windows.Controls.Image>  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Beispiel für WPF-Steuerelementsammlungen](https://go.microsoft.com/fwlink/?LinkID=160053)
+- [Beispiel für WPF-Steuerelementsammlungen](https://github.com/Microsoft/WPF-Samples/tree/master/Getting%20Started/ControlsAndLayout)

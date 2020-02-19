@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Zeichnen einer Ellipse oder eines Kreises'
+title: 'Gewusst wie: Zeichnen einer Ellipse oder eines Kreises'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - ellipses [WPF], drawing
@@ -9,29 +9,29 @@ helpviewer_keywords:
 - graphics [WPF], drawing circles
 - graphics [WPF], drawing ellipses
 ms.assetid: 99763b8c-bfc8-44be-8231-8a70daf5481a
-ms.openlocfilehash: 1393e158c1787dc7d4e44e5e1c90ed2e65666dc3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5f17615da4907cba6e25b68f2f934602c2f8a390
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61947562"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77452921"
 ---
-# <a name="how-to-draw-an-ellipse-or-a-circle"></a>Vorgehensweise: Zeichnen einer Ellipse oder eines Kreises
-In diesem Beispiel wird gezeigt, wie zum Zeichnen von Ellipsen und Kreisen mithilfe der <xref:System.Windows.Shapes.Ellipse> Element. Um eine Ellipse zeichnen, erstellen eine <xref:System.Windows.Shapes.Ellipse> Element, und geben Sie die <xref:System.Windows.FrameworkElement.Width%2A> und <xref:System.Windows.FrameworkElement.Height%2A>. Verwenden der <xref:System.Windows.Shapes.Shape.Fill%2A> -Eigenschaft an die <xref:System.Windows.Media.Brush> , mit dem das Innere der Ellipse gezeichnet werden soll. Verwenden der <xref:System.Windows.Shapes.Shape.Stroke%2A> -Eigenschaft an die <xref:System.Windows.Media.Brush> , wird verwendet, um die Kontur der Ellipse gezeichnet werden soll. Die <xref:System.Windows.Shapes.Shape.StrokeThickness%2A> Eigenschaft gibt die Stärke der Kontur Ellipse an.  
+# <a name="how-to-draw-an-ellipse-or-a-circle"></a>Gewusst wie: Zeichnen einer Ellipse oder eines Kreises
+In diesem Beispiel wird gezeigt, wie Ellipsen und Kreise mithilfe des <xref:System.Windows.Shapes.Ellipse>-Elements gezeichnet werden. Um eine Ellipse zu zeichnen, erstellen Sie ein <xref:System.Windows.Shapes.Ellipse>-Element, und geben Sie dessen <xref:System.Windows.FrameworkElement.Width%2A> und <xref:System.Windows.FrameworkElement.Height%2A>an. Verwenden Sie die <xref:System.Windows.Shapes.Shape.Fill%2A>-Eigenschaft, um die <xref:System.Windows.Media.Brush> anzugeben, die verwendet wird, um das Innere der Ellipse zu zeichnen. Verwenden Sie die <xref:System.Windows.Shapes.Shape.Stroke%2A>-Eigenschaft, um die <xref:System.Windows.Media.Brush> anzugeben, die zum Zeichnen der Gliederung der Ellipse verwendet werden. Die <xref:System.Windows.Shapes.Shape.StrokeThickness%2A>-Eigenschaft gibt die Stärke der Ellipse-Gliederung an.  
   
- Um einen Kreis zu zeichnen, stellen die <xref:System.Windows.FrameworkElement.Width%2A> und <xref:System.Windows.FrameworkElement.Height%2A> von der <xref:System.Windows.Shapes.Ellipse> Element, das jeweils anderen.  
+ Um einen Kreis zu zeichnen, machen Sie die <xref:System.Windows.FrameworkElement.Width%2A> und <xref:System.Windows.FrameworkElement.Height%2A> des <xref:System.Windows.Shapes.Ellipse> Elements gleich einander.  
   
- Das folgende Beispiel zeichnet vier <xref:System.Windows.Shapes.Ellipse> Elemente innerhalb einer <xref:System.Windows.Controls.Canvas>.  
+ Im folgenden Beispiel werden vier <xref:System.Windows.Shapes.Ellipse> Elemente innerhalb eines <xref:System.Windows.Controls.Canvas>gezeichnet.  
   
 ## <a name="example"></a>Beispiel  
  [!code-xaml[drawingwithshapeelements#EllipseExample1](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingWithShapeElements/CS/ellipseexample.xaml#ellipseexample1)]  
   
- Obwohl dieses Beispiel verwendet eine <xref:System.Windows.Controls.Canvas> um die Ellipsen zu enthalten, können Sie Ellipse Elemente (und alle anderen Formelemente) mit einem <xref:System.Windows.Controls.Panel> oder <xref:System.Windows.Controls.Control> , die nicht-Text-Inhalt unterstützt.  
+ Obwohl in diesem Beispiel ein <xref:System.Windows.Controls.Canvas> mit den Auslassungs Zeichen verwendet wird, können Sie Ellipse-Elemente (und alle anderen Shape-Elemente) mit allen <xref:System.Windows.Controls.Panel> oder <xref:System.Windows.Controls.Control> verwenden, die nicht Textinhalte unterstützen.  
   
- Dieses Beispiel ist Teil eines umfangreicheren Beispiels. Das vollständige Beispiel finden Sie unter [Formelemente](https://go.microsoft.com/fwlink/?LinkID=160037).  
+ Dieses Beispiel ist Teil einer größeren Stichprobe. Das komplette Beispiel finden Sie unter [Beispiel für Shape-Elemente](https://github.com/Microsoft/WPF-Samples/tree/master/Graphics/ShapeElements).  
   
 ## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Windows.Shapes.Ellipse>
 - <xref:System.Windows.Shapes.Shape>
-- [Formelemente](https://go.microsoft.com/fwlink/?LinkID=160037)
+- [Beispiel für Shape-Elemente](https://github.com/Microsoft/WPF-Samples/tree/master/Graphics/ShapeElements)

@@ -3,25 +3,25 @@ title: SQL Server-Funktionen und ADO.NET
 titleSuffix: ''
 ms.date: 03/30/2017
 ms.assetid: 2839529b-a79b-4450-be5d-07a98dbc7a0f
-ms.openlocfilehash: a4420799a94b5fa5f37b1e25cf6eb37c130de471
-ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
+ms.openlocfilehash: 30eb7d7f3f98d3cd3999c74f660986bef887c05d
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/04/2020
-ms.locfileid: "76979793"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77451823"
 ---
 # <a name="sql-server-features-and-adonet"></a>SQL Server-Funktionen und ADO.NET
-In den Themen in diesem Abschnitt werden Funktionen von SQL Server für die Entwicklung von Datenbankanwendungen mit ADO.NET beschrieben.  
+In den Themen dieses Abschnitts werden Funktionen von SQL Server diskutiert, die für die Entwicklung von Datenbankanwendungen mit ADO.NET vorgesehen sind.  
   
  Weitere Informationen finden Sie in der Onlinedokumentation zu SQL Server unter der von Ihnen verwendeten Version von SQL Server wie in der folgenden Tabelle aufgeführt.  
   
- **SQL Server Books Online (SQL Server-Onlinedokumentation)**  
+ **SQL Server-Dokumentation**  
   
-1. [Entwicklung (Datenbank-Engine)](https://go.microsoft.com/fwlink/?LinkId=115245)  
+1. [Entwicklung (Datenbank-Engine)](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/bb500155(v=sql.100))  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Aufzählen von SQL Server-Instanzen (ADO.NET)](enumerating-instances-of-sql-server.md)  
- Beschreibt das Auflisten aktiver Instanzen von SQL Server.  
+ Beschreibt das Auflisten aktiver Instanzen von SQL Server 2000.  
   
  [Anbieterstatistiken für SQL Server](provider-statistics-for-sql-server.md)  
  Beschreibt Unterstützung für das Abrufen von SQL Server-Laufzeitstatistik.  
@@ -38,7 +38,7 @@ In den Themen in diesem Abschnitt werden Funktionen von SQL Server für die Entw
  [Abfragebenachrichtigungen in SQL Server](query-notifications-in-sql-server.md)  
  Beschreibt, wie .NET Framework-Anwendungen Benachrichtigungen vom SQL Server anfordern können, wenn Daten geändert wurden.  
   
- [Momentaufnahmenisolation in SQL Server](snapshot-isolation-in-sql-server.md)  
+ [Momentaufnahmeisolation in SQL Server](snapshot-isolation-in-sql-server.md)  
  Beschreibt die Unterstützung für Momentaufnahmenisolation, einem Zeilenversionsmechanismus, der entworfen wurde, um das Blockieren in Transaktionsanwendungen zu reduzieren.  
   
  [SqlClient-Unterstützung für hohe Verfügbarkeit, Notfallwiederherstellung](sqlclient-support-for-high-availability-disaster-recovery.md)  

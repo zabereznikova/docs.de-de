@@ -1,30 +1,30 @@
 ---
-title: 'Vorgehensweise: Ändern des Endes einer Zeile oder eines Segments'
+title: 'Gewusst wie: Ändern des Endes einer Zeile oder eines Segments'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Shape elements [WPF], ends
 - Shape elements [WPF], caps
 - graphics [WPF], Shape caps
 ms.assetid: f4bf3416-b3d8-4568-b98e-3eda8f6dbf7a
-ms.openlocfilehash: 53487417636dae8d855fe70b7b9255351a2dfb1e
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 5f755d7b4d1682755ea461121f91c0666d450ad1
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69916134"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77452778"
 ---
-# <a name="how-to-modify-the-cap-at-the-end-of-a-line-or-segment"></a>Vorgehensweise: Ändern des Endes einer Zeile oder eines Segments
-In diesem Beispiel wird gezeigt, wie die Form am Anfang oder Ende eines geöffneten <xref:System.Windows.Shapes.Shape> Elements geändert wird. Um die Obergrenze am Anfang eines geöffneten <xref:System.Windows.Shapes.Shape>zu ändern, <xref:System.Windows.Shapes.Shape.StrokeStartLineCap%2A> verwenden Sie die zugehörige-Eigenschaft. Um die Obergrenze am Ende eines geöffneten <xref:System.Windows.Shapes.Shape>zu ändern, <xref:System.Windows.Shapes.Shape.StrokeEndLineCap%2A> verwenden Sie die zugehörige-Eigenschaft. Informationen zum Anzeigen der verfügbaren Zeilenenden finden <xref:System.Windows.Media.PenLineCap> Sie unter der-Enumeration.  
+# <a name="how-to-modify-the-cap-at-the-end-of-a-line-or-segment"></a>Gewusst wie: Ändern des Endes einer Zeile oder eines Segments
+In diesem Beispiel wird gezeigt, wie die Form am Anfang oder Ende eines geöffneten <xref:System.Windows.Shapes.Shape> Elements geändert wird. Um die Obergrenze am Anfang eines geöffneten <xref:System.Windows.Shapes.Shape>zu ändern, verwenden Sie die <xref:System.Windows.Shapes.Shape.StrokeStartLineCap%2A>-Eigenschaft. Um die Obergrenze am Ende eines geöffneten <xref:System.Windows.Shapes.Shape>zu ändern, verwenden Sie die <xref:System.Windows.Shapes.Shape.StrokeEndLineCap%2A>-Eigenschaft. Informationen zum Anzeigen der verfügbaren Zeilenenden finden Sie in der <xref:System.Windows.Media.PenLineCap>-Enumeration.  
   
 > [!NOTE]
-> Diese Eigenschaft wirkt sich nur auf eine geöffnete Form aus, <xref:System.Windows.Shapes.Line>z. <xref:System.Windows.Shapes.Polyline>b. ein, <xref:System.Windows.Shapes.Path> ein oder ein offenes Element.  
+> Diese Eigenschaft wirkt sich nur auf eine geöffnete Form aus, z. b. eine <xref:System.Windows.Shapes.Line>, eine <xref:System.Windows.Shapes.Polyline>oder ein offenes <xref:System.Windows.Shapes.Path> Element.  
   
- Im folgenden Beispiel werden vier <xref:System.Windows.Shapes.Polyline> Elemente gezeichnet, und es wird jeweils ein anderer Satz von Formen an den Enden der einzelnen Elemente verwendet.  
+ Im folgenden Beispiel werden vier <xref:System.Windows.Shapes.Polyline> Elemente gezeichnet, und es wird ein anderer Satz von Formen an den Enden der einzelnen Elemente verwendet.  
   
 ## <a name="example"></a>Beispiel  
  [!code-xaml[drawingwithshapeelements#ShapeLineCaps1](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingWithShapeElements/CS/linecapsandjoinsexample.xaml#shapelinecaps1)]  
   
- Dieses Beispiel ist Teil einer größeren Stichprobe. Das komplette Beispiel finden Sie unter [Beispiel für Shape-Elemente](https://go.microsoft.com/fwlink/?LinkID=160037).  
+ Dieses Beispiel ist Teil einer größeren Stichprobe. Das komplette Beispiel finden Sie unter [Beispiel für Shape-Elemente](https://github.com/Microsoft/WPF-Samples/tree/master/Graphics/ShapeElements).  
   
 ## <a name="see-also"></a>Siehe auch
 

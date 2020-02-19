@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Storyboards [WPF], animations
 - animations [WPF], overview
 ms.assetid: bd9ce563-725d-4385-87c9-d7ee38cf79ea
-ms.openlocfilehash: f0f55c948d10c61ebab57f47e3461531ccf5f610
-ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
+ms.openlocfilehash: 00f01b63cdf9397fe25f28fff08767dfc3a83e69
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75559715"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77453116"
 ---
 # <a name="animation-overview"></a>Übersicht über Animationen
 
@@ -229,7 +229,7 @@ In den meisten Fällen empfiehlt es sich, den \<- *Typ*> Animations Klassen wie 
 
 Die folgende Tabelle zeigt mehrere allgemeine Animationstypen und einige Eigenschaften, mit denen sie verwendet werden.
 
-|Eigenschaftentyp|Zugehörige Basisanimation (From/To/By)|Zugehörige Keyframe-Animation|Zugehörige Pfadanimation|Beispiel für die Verwendung|
+|Eigenschaftstyp|Zugehörige Basisanimation (From/To/By)|Zugehörige Keyframe-Animation|Zugehörige Pfadanimation|Verwendungsbeispiel|
 |-------------------|----------------------------------------------------|---------------------------------------|----------------------------------|-------------------|
 |<xref:System.Windows.Media.Color>|<xref:System.Windows.Media.Animation.ColorAnimation>|<xref:System.Windows.Media.Animation.ColorAnimationUsingKeyFrames>|Keine|Animieren des <xref:System.Windows.Media.SolidColorBrush.Color%2A> einer <xref:System.Windows.Media.SolidColorBrush> oder eines <xref:System.Windows.Media.GradientStop>.|
 |<xref:System.Double>|<xref:System.Windows.Media.Animation.DoubleAnimation>|<xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames>|<xref:System.Windows.Media.Animation.DoubleAnimationUsingPath>|Animieren Sie den <xref:System.Windows.FrameworkElement.Width%2A> einer <xref:System.Windows.Controls.DockPanel> oder die <xref:System.Windows.FrameworkElement.Height%2A> einer <xref:System.Windows.Controls.Button>.|
@@ -246,7 +246,7 @@ Da eine Animation eine <xref:System.Windows.Media.Animation.Timeline>ist, stellt
 
 Drei häufig verwendete Zeit Steuerungseigenschaften sind <xref:System.Windows.Media.Animation.Timeline.Duration%2A>, <xref:System.Windows.Media.Animation.Timeline.AutoReverse%2A>und <xref:System.Windows.Media.Animation.Timeline.RepeatBehavior%2A>.
 
-#### <a name="the-duration-property"></a>Duration-Eigenschaft
+#### <a name="the-duration-property"></a>Die Duration-Eigenschaft
 
 Wie bereits erwähnt, stellt eine Zeitachse einen Zeitabschnitt dar. Die Länge dieses Segments wird durch den <xref:System.Windows.Media.Animation.Timeline.Duration%2A> der Zeitachse bestimmt, der in der Regel mit einem <xref:System.Windows.Duration.TimeSpan%2A> Wert angegeben wird. Wenn eine Zeitachse das Ende ihrer Dauer erreicht, hat sie eine Iteration abgeschlossen.
 
@@ -258,7 +258,7 @@ Die folgende Syntax zeigt eine vereinfachte Version der [!INCLUDE[TLA#tla_xaml](
 
 In der folgenden Tabelle werden mehrere <xref:System.Windows.Duration> Einstellungen und deren resultierende Werte angezeigt.
 
-|-Einstellung|Ergebniswert|
+|Einstellung|Ergebniswert|
 |-------------|---------------------|
 |0:0:5.5|5.5 Sekunden.|
 |0:30:5.5|30 Minuten und 5,5 Sekunden.|
@@ -341,7 +341,7 @@ Obwohl eine Uhr auch für die <xref:System.Windows.Media.Animation.Storyboard>er
 
 Damit eine Animation Änderungen der Datenbindung und der Animation widerspiegelt, muss die Uhr erneut generiert werden. Uhren werden nicht automatisch neu generiert. Um eine Animation widerzuspiegeln, wenden Sie das Storyboard erneut an, indem Sie eine <xref:System.Windows.Media.Animation.BeginStoryboard> oder die <xref:System.Windows.Media.Animation.Storyboard.Begin%2A>-Methode verwenden. Wenn Sie eine dieser beiden Methoden anwenden, startet die Animation neu. Im Code können Sie die <xref:System.Windows.Media.Animation.Storyboard.Seek%2A>-Methode verwenden, um das Storyboard zurück zur vorherigen Position zu verschieben.
 
-Ein Beispiel für eine Daten gebundene Animation finden Sie unter Beispiel für eine [KeySpline-Animation](https://go.microsoft.com/fwlink/?LinkID=160011). Weitere Informationen zur Funktionsweise des Animations-und Zeit Steuerungssystems finden Sie unter Übersicht über das [Animations-und Zeit Steuerungssystem](animation-and-timing-system-overview.md).
+Ein Beispiel für eine Daten gebundene Animation finden Sie unter Beispiel für eine [KeySpline-Animation](https://github.com/Microsoft/WPF-Samples/tree/master/Animation/KeySplineAnimations). Weitere Informationen zur Funktionsweise des Animations-und Zeit Steuerungssystems finden Sie unter Übersicht über das [Animations-und Zeit Steuerungssystem](animation-and-timing-system-overview.md).
 
 <a name="otherWaysToAnimateSection"></a>
 
@@ -355,11 +355,11 @@ Die Beispiele in dieser Übersicht zeigen, wie Animationen mithilfe von Storyboa
 
 In den folgenden Beispielen sehen Sie, wie Sie Animationen zu Ihren Anwendungen Hinzufügen können.
 
-- [Beispiel für From-, To- und By-Animationszielwerte](https://go.microsoft.com/fwlink/?LinkID=159988)
+- [From, To, and By Animation Target Values Sample (Beispiel für From-, To- und By-Animationszielwerte)](https://github.com/Microsoft/WPF-Samples/tree/master/Animation/TargetValues)
 
   Veranschaulicht verschiedene From, To, By-Einstellungen.
 
-- [Beispiel zum Verhalten der Animationszeitsteuerung](https://go.microsoft.com/fwlink/?LinkID=159970)
+- [Beispiel des Zeitsteuerungsverhaltens von Animationen](https://github.com/Microsoft/WPF-Samples/tree/master/Animation/AnimationTiming)
 
   Zeigt die verschiedenen Möglichkeiten, wie Sie das Zeitsteuerungsverhalten einer Animation steuern können. Dieses Beispiel zeigt auch, wie Sie die Datenbindung für den Zielwert einer Animation durchführen.
 
@@ -367,7 +367,7 @@ In den folgenden Beispielen sehen Sie, wie Sie Animationen zu Ihren Anwendungen 
 
 ## <a name="related-topics"></a>Verwandte Themen
 
-|Title|Beschreibung|
+|Titel|Beschreibung|
 |-----------|-----------------|
 |[Übersicht über das Animations- und Zeitsteuerungssystem](animation-and-timing-system-overview.md)|Beschreibt, wie das Zeit Steuerungssystem die Klassen <xref:System.Windows.Media.Animation.Timeline> und <xref:System.Windows.Media.Animation.Clock> verwendet, mit denen Sie Animationen erstellen können.|
 |[Tipps und Tricks zu Animationen](animation-tips-and-tricks.md)|Hier sind hilfreiche Tipps zum Beheben von Problemen mit Animationfen, z.B. Leistungsprobleme aufgelistet.|
@@ -380,14 +380,14 @@ In den folgenden Beispielen sehen Sie, wie Sie Animationen zu Ihren Anwendungen 
 |[Übersicht über Storyboards](storyboards-overview.md)|Beschreibt, wie Storyboards mit mehreren Zeitachsen zum Erstellen komplexer Animationen verwendet werden.|
 |[Übersicht über Zeitsteuerungsverhalten](timing-behaviors-overview.md)|Beschreibt die <xref:System.Windows.Media.Animation.Timeline> Typen und Eigenschaften, die in Animationen verwendet werden.|
 |[Übersicht über Zeitsteuerungsereignisse](timing-events-overview.md)|Beschreibt die Ereignisse, die auf dem <xref:System.Windows.Media.Animation.Timeline> und <xref:System.Windows.Media.Animation.Clock> Objekten zum Ausführen von Code an Punkten in der Zeitachse verfügbar sind, wie z. b. Begin, Pause, Resume, Skip oder Break.|
-|[Gewusst wie-Themen](animation-and-timing-how-to-topics.md)|Enthält Codebeispiele für die Verwendung von Animationen und Zeitachsen in der Anwendung.|
+|[How-to Topics (Themen zur Vorgehensweise)](animation-and-timing-how-to-topics.md)|Enthält Codebeispiele für die Verwendung von Animationen und Zeitachsen in der Anwendung.|
 |[Clocks How-to Topics (Themen zur Vorgehensweise zu Uhren)](clocks-how-to-topics.md)|Enthält Codebeispiele für die Verwendung des <xref:System.Windows.Media.Animation.Clock>-Objekts in der Anwendung.|
-|[Gewusst-wie-Themen zu Keyframes](key-frame-animation-how-to-topics.md)|Enthält Codebeispiele für die Verwendung von Keyframe-Animationen in Ihrer Anwendung.|
-|[Path Animation How-to Topics (Themen zur Vorgehensweise zur Pfadanimation)](path-animation-how-to-topics.md)|Enthält Codebeispiele für die Verwendung von Pfadanimationen in Ihrer Anwendung.|
+|[Key-Frame How-to Topics (Themen zur Vorgehensweise zu Keyframes)](key-frame-animation-how-to-topics.md)|Enthält Codebeispiele für die Verwendung von Keyframe-Animationen in Ihrer Anwendung.|
+|[Gewusst-wie-Themen zur Pfadanimation](path-animation-how-to-topics.md)|Enthält Codebeispiele für die Verwendung von Pfadanimationen in Ihrer Anwendung.|
 
 <a name="reference"></a>
 
-## <a name="reference"></a>Referenz
+## <a name="reference"></a>Verweis
 
 - <xref:System.Windows.Media.Animation.Timeline>
 

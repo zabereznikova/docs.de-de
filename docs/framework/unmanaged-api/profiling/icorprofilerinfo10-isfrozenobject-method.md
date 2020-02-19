@@ -11,12 +11,12 @@ api_type:
 - COM
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: b6dabefceba038a129148f7ba36d4ffcfc425c80
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 21f9cb415f913a9c865a487f6e80523344db811e
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76790041"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77452187"
 ---
 # <a name="icorprofilerinfo10isfrozenobject-method"></a>ICorProfilerInfo10:: isfrozenobject-Methode
 
@@ -29,7 +29,7 @@ HRESULT IsFrozenObject( [in]  ObjectID objectId,
                         [out] BOOL *pbFrozen);
 ```
 
-## <a name="parameters"></a>Parameters
+## <a name="parameters"></a>Parameter
 
 - `objectId`
 
@@ -39,9 +39,9 @@ HRESULT IsFrozenObject( [in]  ObjectID objectId,
 
   \[out] ein `BOOL`, der angibt, ob das Objekt ein Schreib geschütztes Segment ist.
 
-## <a name="requirements"></a>-Anforderungen
+## <a name="requirements"></a>Voraussetzungen
 
-**Plattformen:** Siehe [unterstützte .net Core-Betriebssysteme](../../../core/install/dependencies.md?tabs=netcore30&pivots=os-windows).
+**Plattformen:** Siehe [unterstützte .net Core-Betriebssysteme](../../../core/install/dependencies.md?pivots=os-windows).
 
 **Header:** CorProf.idl, CorProf.h
 

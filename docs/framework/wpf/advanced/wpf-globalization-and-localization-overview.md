@@ -5,12 +5,12 @@ helpviewer_keywords:
 - globalization [WPF], about globalization
 - localization [WPF], about localization
 ms.assetid: 56e5a5c8-6c96-4d19-b8e1-a5be1dc564af
-ms.openlocfilehash: 665daa14b543a357b17747a7d9d34dac2224711d
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: ba49b3ec0f6edebff6278f4e90ae22baba9f1edf
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77124558"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77452668"
 ---
 # <a name="wpf-globalization-and-localization-overview"></a>Übersicht über WPF-Globalisierung und -Lokalisierung
 
@@ -178,11 +178,11 @@ Nachdem die Anwendung erstellt, ist der erste Schritt bei der Lokalisierung, die
 
 Verwenden Sie zum Bearbeiten dieser Datei Ihren bevorzugten Unicode-fähigen CSV-Editor. Filtern Sie alle Einträge mit einer Lokalisierungskategorie von „None” heraus. Sie sollten folgende Einträge sehen:
 
-|Ressourcenschlüssel|Lokalisierungskategorie|value|
+|Ressourcenschlüssel|Lokalisierungskategorie|Wert|
 |-|-|-|
-|Button_1:System.Windows.Controls.Button.$Content|Taste|OK|
-|Button_2:System.Windows.Controls.Button.$Content|Taste|Abbrechen|
-|Button_3:System.Windows.Controls.Button.$Content|Taste|Durchsuchen...|
+|Button_1:System.Windows.Controls.Button.$Content|Schaltfläche|OK|
+|Button_2:System.Windows.Controls.Button.$Content|Schaltfläche|Abbrechen|
+|Button_3:System.Windows.Controls.Button.$Content|Schaltfläche|Durchsuchen...|
 |ComboBox_1:System.Windows.Controls.ComboBox.$Content|Kombinationsfeld||
 |TextBlock_1:System.Windows.Controls.TextBlock.$Content|Text|Geben Sie den Namen eines Programms, Ordners, Dokuments oder einer Internetressource ein, damit Windows das entsprechende Objekt öffnet.|
 |TextBlock_2:System.Windows.Controls.TextBlock.$Content|Text|Offen:|
@@ -190,11 +190,11 @@ Verwenden Sie zum Bearbeiten dieser Datei Ihren bevorzugten Unicode-fähigen CSV
 
 Um die Anwendung auf Deutsch zu lokalisieren, sind die folgenden Übersetzungen erforderlich:
 
-|Ressourcenschlüssel|Lokalisierungskategorie|value|
+|Ressourcenschlüssel|Lokalisierungskategorie|Wert|
 |-|-|-|
-|Button_1:System.Windows.Controls.Button.$Content|Taste|OK|
-|Button_2:System.Windows.Controls.Button.$Content|Taste|Abbrechen|
-|Button_3:System.Windows.Controls.Button.$Content|Taste|Durchsuchen…|
+|Button_1:System.Windows.Controls.Button.$Content|Schaltfläche|OK|
+|Button_2:System.Windows.Controls.Button.$Content|Schaltfläche|Abbrechen|
+|Button_3:System.Windows.Controls.Button.$Content|Schaltfläche|Durchsuchen…|
 |ComboBox_1:System.Windows.Controls.ComboBox.$Content|Kombinationsfeld||
 |TextBlock_1:System.Windows.Controls.TextBlock.$Content|Text|Geben Sie den Namen eines Programms, Ordners, Dokuments oder einer Internetressource an.|
 |TextBlock_2:System.Windows.Controls.TextBlock.$Content|Text|Öffnen:|
@@ -215,11 +215,11 @@ Wenn sich diese Datei "Resources. dll" in einem Ordner "de-de" neben der Hauptas
 |Code|Ursprüngliche englische BAML|Lokalisierte BAML|
 |Kulturneutrale Ressourcen|Weitere Ressourcen auf Englisch|Weitere ins Deutsche lokalisierte Ressourcen|
 
-.NET Framework wählt basierend auf dem `Thread.CurrentThread.CurrentUICulture`der Anwendung automatisch aus, welche Satellitenressourcenassembly geladen werden soll. Standardmäßig wird die Kultur Ihres Windows-Betriebssystems verwendet. Wenn Sie also Deutsch Fenster verwenden, lädt de-DE\MyDialog.resources.dll, wenn Sie englische Fenster verwenden, die en-US\MyDialog.resources.dll-Auslastung. Sie können die endgültige Fall Back Ressource für Ihre Anwendung festlegen, indem Sie die NeutralResourcesLanguage in der AssemblyInfo Ihres Projekts angeben.\*. Wenn Sie also z.B. folgendes angeben:
+.Net wählt basierend auf dem <xref:System.Threading.Thread.CurrentUICulture%2A?displayProperty=nameWithType>der Anwendung automatisch aus, welche Satellitenressourcenassembly geladen werden soll. Standardmäßig wird die Kultur Ihres Windows-Betriebssystems verwendet. Bei Verwendung von deutschen Fenstern lädt die Datei *de-DE\MyDialog.resources.dll* . Wenn Sie englische Fenster verwenden, wird die Datei *en-US\MyDialog.resources.dll* geladen. Sie können die endgültige Fall Back Ressource für Ihre Anwendung festlegen, indem Sie das `NeutralResourcesLanguage`-Attribut in der *AssemblyInfo* -Datei Ihres Projekts angeben. Wenn Sie z. b. Folgendes angeben:
 
 `[assembly: NeutralResourcesLanguage("en-US", UltimateResourceFallbackLocation.Satellite)]`
 
-dann wird in einem deutschen Windows die „en-US\MyDialog.resources.dll” verwendet, wenn weder „de-DE\MyDialog.resources.dll” noch „de\MyDialog.resources.dll” verfügbar sind.
+Anschließend wird die Datei *en-US\MyDialog.resources.dll* mit deutschen Fenstern verwendet, wenn keine der folgenden Dateien verfügbar ist: *de-DE\MyDialog.resources.dll* oder *de\MyDialog.resources.dll*.
 
 ### <a name="microsoft-saudi-arabia-homepage"></a>Homepage von Microsoft Saudi-Arabien
 
@@ -267,7 +267,7 @@ Es gibt viele Fälle, in denen Inhalt mehrdeutig und schwierig zu übersetzen se
 
 Dieser Kommentar wird dem Inhalt von TextBlock_1 zugeordnet, und im Fall des LocBaml-Tools (siehe [Lokalisieren einer Anwendung](how-to-localize-an-application.md)) kann er in der 6. Spalte der TextBlock_1 Zeile in der CSV-Ausgabedatei angezeigt werden:
 
-|Ressourcenschlüssel|Category|Lesbar|Änderbar|Comment|value|
+|Ressourcenschlüssel|Kategorie|Lesbar|Änderbar|Anmerkungen|Wert|
 |-|-|-|-|-|-|
 |TextBlock_1:System.Windows.Controls.TextBlock.$Content|Text|TRUE|TRUE|Dieses Zeichen wird als dekorative Abgrenzungslinie verwendet.|&#124;|
 

@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Animieren der Größe eines ArcSegment-Objekts'
+title: 'Gewusst wie: Animieren der Größe eines ArcSegment'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - animation [WPF], ArcSegment size
 - ArcSegment [WPF], animating size
 ms.assetid: f93a1065-b00a-4d7e-9d4b-37023f98186a
-ms.openlocfilehash: de36010e44c2f926b5839f4ec120f90c288f7501
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d1b9db72c9d1ea47f3c1bc6476a3b579bc03eae2
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62010006"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77452869"
 ---
-# <a name="how-to-animate-the-size-of-an-arcsegment"></a>Vorgehensweise: Animieren der Größe eines ArcSegment-Objekts
-Dieses Beispiel zeigt, wie Sie animieren der <xref:System.Windows.Media.ArcSegment.Size%2A> Eigenschaft eine <xref:System.Windows.Media.ArcSegment>.  
+# <a name="how-to-animate-the-size-of-an-arcsegment"></a>Gewusst wie: Animieren der Größe eines ArcSegment
+Dieses Beispiel zeigt, wie Sie die <xref:System.Windows.Media.ArcSegment.Size%2A>-Eigenschaft eines <xref:System.Windows.Media.ArcSegment>animieren.  
   
 ## <a name="example"></a>Beispiel  
- Das folgende Beispiel erstellt eine <xref:System.Windows.Media.ArcSegment> , animiert die <xref:System.Windows.Media.ArcSegment.Size%2A> Wenn dieses geladen wird auf dem Bildschirm.  
+ Im folgenden Beispiel wird eine <xref:System.Windows.Media.ArcSegment> erstellt, die die <xref:System.Windows.Media.ArcSegment.Size%2A> animiert, wenn Sie auf dem Bildschirm geladen wird.  
   
  [!code-csharp[BasicAnimations_snip#SizeAnimationWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/BasicAnimations_snip/CSharp/SizeAnimationExample.cs#sizeanimationwholepage)]
  [!code-vb[BasicAnimations_snip#SizeAnimationWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BasicAnimations_snip/VisualBasic/SizeAnimationExample.vb#sizeanimationwholepage)]  
   
- Zusätzliche Geometrie und Beispiele für Animationen finden Sie in der [Beispiele zu Geometrie](https://go.microsoft.com/fwlink/?LinkID=159989).  
+ Weitere Beispiele für Geometrie und Animation finden Sie im [Beispiel zu et@@](https://github.com/Microsoft/WPF-Samples/tree/master/Graphics/Geometry).  
   
 ## <a name="see-also"></a>Siehe auch
 
@@ -33,5 +33,5 @@ Dieses Beispiel zeigt, wie Sie animieren der <xref:System.Windows.Media.ArcSegme
 - <xref:System.Windows.Media.ArcSegment>
 - [Übersicht über Animationen](animation-overview.md)
 - [Übersicht über Geometrien](geometry-overview.md)
-- [Gewusst-wie-Themen Geometrien](geometries-how-to-topics.md)
-- [Das Animations- und Zeitsteuerungssystem Gewusst-wie-Themen](animation-and-timing-how-to-topics.md)
+- [Gewusst-wie-Themen zu Geometrien](geometries-how-to-topics.md)
+- [Gewusst-wie-Themen zu Animation und zeitliche Steuerung](animation-and-timing-how-to-topics.md)

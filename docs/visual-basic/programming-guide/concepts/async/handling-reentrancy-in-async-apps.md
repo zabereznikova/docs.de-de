@@ -2,12 +2,12 @@
 title: Ablauf des erneuten Eintretens in asynchronen Anwendungen
 ms.date: 07/20/2015
 ms.assetid: ef3dc73d-13fb-4c5f-a686-6b84148bbffe
-ms.openlocfilehash: cd8b43aa9b2373b5ce038e5007678778201f0746
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 44c2cdbadd02aef6b2bbb32bde8bcb9b19f8360d
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74354264"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77452577"
 ---
 # <a name="handling-reentrancy-in-async-apps-visual-basic"></a>Verarbeiten von erneuten eintreten in Async-Apps (Visual Basic)
 
@@ -17,7 +17,7 @@ Wenn Sie asynchronen Code in der App einschließen, sollten Sie erneutes Eintret
 > Um das Beispiel ausführen zu können, muss Visual Studio 2012 oder höher sowie .NET Framework 4.5 oder höher auf Ihrem Computer installiert sein.
 
 > [!NOTE]
-> Für die App-Entwicklung ist ab sofort mindestens Transport Layer Security (TLS) Version 1.2 erforderlich. Wenn Ihre App auf eine .NET Framework-Version vor 4.7 ausgerichtet ist, lesen Sie den Artikel [Bewährte Methoden für Transport Layer Security (TLS) mit .NET Framework](../../../../framework/network-programming/tls.md). 
+> Für die App-Entwicklung ist ab sofort mindestens Transport Layer Security (TLS) Version 1.2 erforderlich. Wenn Ihre APP auf eine .NET Framework Version vor 4,7 ausgerichtet ist, lesen Sie den folgenden Artikel, um [bewährte Methoden für Transport Layer Security (TLS) mit dem .NET Framework](../../../../framework/network-programming/tls.md)zu erhalten.
 
 ## <a name="BKMK_RecognizingReentrancy"></a> Erkennen von Ablaufinvarianz
 
@@ -554,11 +554,11 @@ Der folgende Abschnitt enthält den Code, um das Beispiel als WPF-App zu erstell
 
 ##### <a name="to-build-a-wpf-app"></a>So erstellen Sie eine WPF-App
 
-1. Starten Sie Visual Studio.
+1. Starten Sie Visual Studio.
 
-2. Wählen Sie in der Menüleiste **Datei**, **Neu**, **Projekt**aus.
+2. Wählen Sie auf der Menüleiste **Datei**, **Neu**, **Projekt** aus.
 
-     Das Dialogfeld **Neues Projekt** wird angezeigt.
+     Das Dialogfeld **Neues Projekt** wird geöffnet.
 
 3. Erweitern Sie im Bereich **installierte Vorlagen** den Bereich **Visual Basic**, und erweitern Sie dann **Windows**.
 

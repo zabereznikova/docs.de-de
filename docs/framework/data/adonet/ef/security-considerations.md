@@ -2,12 +2,12 @@
 title: Sicherheitsüberlegungen (Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: 84758642-9b72-4447-86f9-f831fef46962
-ms.openlocfilehash: 9a560db5dbcb7a87a1c933febfb8bf676cc8816b
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: e2e1fc75049d41b50aa59092fe1aa21e8cdab659
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73968415"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77452486"
 ---
 # <a name="security-considerations-entity-framework"></a>Sicherheitsüberlegungen (Entity Framework)
 In diesem Thema werden Sicherheitsüberlegungen beschrieben, die für die Entwicklung, Bereitstellung und Ausführung von Entity Framework-Anwendungen spezifisch sind. Außerdem sollten Sie die Empfehlungen zum Erstellen von sicheren .NET Framework-Anwendungen befolgen. Weitere Informationen finden Sie unter [Sicherheitsübersicht](../security-overview.md).  
@@ -27,7 +27,7 @@ In diesem Thema werden Sicherheitsüberlegungen beschrieben, die für die Entwic
  Während des Anmeldevorgangs werden Informationen auf der Grundlage des Benutzerkennworts über die Netzwerkbibliotheken der zugrunde liegenden Datenquelle an den Server übertragen. Ein böswilliger Anbieter kann Benutzeranmeldeinformationen stehlen, böswillige Abfragen generieren oder das Resultset manipulieren.  
   
 #### <a name="encrypt-your-connection-to-protect-sensitive-data"></a>Verschlüsseln Sie die Verbindung, um vertrauliche Daten zu schützen.  
- Der Entity Framework verarbeitet die Datenverschlüsselung nicht direkt. Wenn Benutzer über ein öffentliches Netzwerk auf Daten zugreifen, sollte die Anwendung eine verschlüsselte Verbindung mit der Datenquelle herstellen, um die Sicherheit zu erhöhen. Weitere Informationen finden Sie in der die Sicherheit betreffenden Dokumentation für die Datenquelle. Eine SQL Server Datenquelle finden Sie unter [Verschlüsseln von Verbindungen zu SQL Server](https://go.microsoft.com/fwlink/?LinkId=119544).  
+ Der Entity Framework verarbeitet die Datenverschlüsselung nicht direkt. Wenn Benutzer über ein öffentliches Netzwerk auf Daten zugreifen, sollte die Anwendung eine verschlüsselte Verbindung mit der Datenquelle herstellen, um die Sicherheit zu erhöhen. Weitere Informationen finden Sie in der die Sicherheit betreffenden Dokumentation für die Datenquelle. Eine SQL Server Datenquelle finden Sie unter [Verschlüsseln von Verbindungen zu SQL Server](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms189067(v=sql.105)).  
   
 #### <a name="secure-the-connection-string"></a>Sichern Sie die Verbindungszeichenfolge ab.  
  Eines der wichtigsten Ziele beim Sichern einer Anwendung besteht darin, den Zugriff auf die Datenquelle zu schützen. Eine Verbindungszeichenfolge stellt ein potenzielles Sicherheitsrisiko dar, wenn sie nicht gesichert wird oder nicht ordnungsgemäß aufgebaut ist. Das Speichern von Verbindungsinformationen als Klartext oder das Aufbewahren dieser Informationen im Arbeitsspeicher gefährdet das gesamte System. Folgende Methoden werden zum Sichern von Verbindungszeichenfolgen empfohlen:  
@@ -51,7 +51,7 @@ In diesem Thema werden Sicherheitsüberlegungen beschrieben, die für die Entwic
  Weitere Informationen finden Sie unter [Protecting Connection Information (Schützen von Verbindungsinformationen)](../protecting-connection-information.md).  
   
 #### <a name="do-not-expose-an-entityconnection-to-untrusted-users"></a>Machen Sie keine EntityConnection für nicht vertrauenswürdige Benutzer verfügbar.  
- Ein <xref:System.Data.EntityClient.EntityConnection>-Objekt macht die Verbindungszeichenfolge der zugrunde liegenden Verbindung verfügbar. Ein Benutzer mit Zugriff auf ein <xref:System.Data.EntityClient.EntityConnection>-Objekt kann auch den <xref:System.Data.ConnectionState> der zugrunde liegenden Verbindung ändern. Die <xref:System.Data.EntityClient.EntityConnection>-Klasse ist nicht threadsicher.  
+ Ein <xref:System.Data.EntityClient.EntityConnection>-Objekt macht die Verbindungszeichenfolge der zugrunde liegenden Verbindung verfügbar. Ein Benutzer mit Zugriff auf ein <xref:System.Data.EntityClient.EntityConnection>-Objekt kann auch den <xref:System.Data.ConnectionState> der zugrunde liegenden Verbindung ändern. Die Threadsicherheit der Klasse <xref:System.Data.EntityClient.EntityConnection> ist nicht gewährleistet.  
   
 #### <a name="do-not-pass-connections-outside-the-security-context"></a>Übergeben Sie Verbindungen nicht außerhalb des Sicherheitskontexts.  
  Nachdem eine Verbindung hergestellt wurde, dürfen Sie diese nicht außerhalb des Sicherheitskontexts übergeben. Ein Thread, der über die Berechtigung zum Öffnen einer Verbindung verfügt, sollte die Verbindung nicht an einem globalen Speicherort speichern. Wenn die Verbindung an einem globalen Speicherort zur Verfügung steht, kann ein bösartiger Thread die offene Verbindung verwenden, ohne dass diesem die Berechtigung dazu explizit gewährt wurde.  
@@ -81,7 +81,7 @@ In diesem Thema werden Sicherheitsüberlegungen beschrieben, die für die Entwic
  Der Entity Framework erzwingt keine Sicherheits Berechtigungen und ruft jeden vom Benutzer bereitgestellten Datenobjekt Code im Prozess auf, unabhängig davon, ob er vertrauenswürdig ist. Stellen Sie sicher, dass die Authentifizierung und die Autorisierung des Clients durch den Datenspeicher und Ihre Anwendung erfolgen.  
   
 #### <a name="restrict-access-to-all-configuration-files"></a>Schränken Sie den Zugriff auf alle Konfigurationsdateien ein.  
- Ein Administrator muss den Schreibzugriff auf alle Dateien beschränken, die die Konfiguration für eine Anwendung angeben, einschließlich der Dateien "enterprisesec. config", "Security. config", "Machine. conf" und der Anwendungs Konfigurationsdatei \<*Anwendungs*>. exe. config.  
+ Ein Administrator muss den Schreibzugriff auf alle Dateien beschränken, die die Konfiguration für eine Anwendung angeben, einschließlich der Dateien "enterprisesec. config", "Security. config", "Machine. conf" und der Anwendungs Konfigurationsdatei \<*Anwendung*>. exe. config.  
   
  Der invariante Name des Anbieters kann in der Datei "App. config" geändert werden. Die Client Anwendung muss die Verantwortung für den Zugriff auf den zugrunde liegenden Anbieter über das standardanbieterfactory-Modell mit einem starken Namen übernehmen.  
   
@@ -137,7 +137,7 @@ In diesem Thema werden Sicherheitsüberlegungen beschrieben, die für die Entwic
 #### <a name="prevent-type-safety-violations"></a>Verhindern Sie Verletzungen der Typsicherheit.  
  Wenn die Typsicherheit verletzt wird, kann die Entity Framework die Integrität der Daten in Objekten nicht garantieren. Verletzungen der Typsicherheit könnten auftreten, wenn Sie zulassen, dass nicht vertrauenswürdige Anwendungen mit voll vertrauenswürdiger Codezugriffssicherheit ausgeführt werden.  
   
-#### <a name="handle-exceptions"></a>Behandeln von Ausnahmen  
+#### <a name="handle-exceptions"></a>Behandeln Sie Ausnahmen.  
  Greifen Sie auf die Methoden und Eigenschaften von <xref:System.Data.Objects.ObjectContext> innerhalb eines try-catch-Blocks zu. Das Abfangen von Ausnahmen verhindert, dass nicht behandelte Ausnahmen Benutzern der Anwendung Einträge im <xref:System.Data.Objects.ObjectStateManager> oder Modellinformationen (beispielsweise Tabellennamen), verfügbar machen.  
   
 ## <a name="security-considerations-for-aspnet-applications"></a>Sicherheitsaspekte für ASP.NET-Anwendungen  

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - visual objects [WPF], hit tests on
 - Win32 host containers [WPF], hit tests using
 ms.assetid: 9491f7f3-d8ba-4573-a888-2f064d1349dc
-ms.openlocfilehash: b71783f2d061c9139de4449d8e0106eb00345894
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: a86c1c36f75fa232d52731959371268a8b2593d7
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75740174"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77452804"
 ---
 # <a name="how-to-hit-test-using-a-win32-host-container"></a>Gewusst wie: Treffertest mithilfe eines Win32-Hostcontainers
 Sie können visuelle Objekte in einem Win32-Fenster erstellen, indem Sie einen Host Fenster Container für die visuellen Objekte bereitstellen. Verarbeiten Sie die Meldungen, die an die Meldungsfilterschleife des Hostcontainers übergeben werden, um für die visuellen Objekte im Container die Ereignisbehandlung bereitzustellen. Weitere Informationen zum Hosten von visuellen Objekten in einem Win32-Fenster finden Sie unter [Tutorial: Hosten von visuellen Objekten in einer Win32-Anwendung](tutorial-hosting-visual-objects-in-a-win32-application.md) .  
@@ -32,7 +32,7 @@ Sie können visuelle Objekte in einem Win32-Fenster erstellen, indem Sie einen H
   
  Das <xref:System.Windows.Interop.HwndSource>-Objekt stellt [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Inhalt in einem Win32-Fenster dar. Der Wert der <xref:System.Windows.Interop.HwndSource.RootVisual%2A>-Eigenschaft des <xref:System.Windows.Interop.HwndSource>-Objekts stellt den obersten Knoten in der visuellen Struktur Hierarchie dar.  
   
- Das komplette Beispiel für Treffer Testobjekte mithilfe eines Win32-Host Containers finden Sie unter [Beispiel für Treffer Tests mit Win32](https://go.microsoft.com/fwlink/?LinkID=159995)-Interoperabilität.  
+ Das komplette Beispiel für Treffer Testobjekte mithilfe eines Win32-Host Containers finden Sie unter [Beispiel für Treffer Tests mit Win32](https://github.com/microsoft/WPF-Samples/tree/master/Visual%20Layer/VisualsHitTesting)-Interoperabilität.  
   
 ## <a name="see-also"></a>Siehe auch
 

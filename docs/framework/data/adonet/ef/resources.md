@@ -2,27 +2,21 @@
 title: Entity Framework-Ressourcen
 ms.date: 03/30/2017
 ms.assetid: 0bb04c18-4a14-42a4-baa9-a63d556c9f49
-ms.openlocfilehash: 405f07245d41b79e014c721c49bf374441c6faad
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 144f237ace3dd02a55fedaa406205c3fbe69dbe8
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70248429"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77452473"
 ---
 # <a name="entity-framework-resources"></a>Entity Framework-Ressourcen
 Die folgenden externen Ressourcen bieten Informationen und Unterstützung zum Erstellen von Entity Framework-Anwendungen.  
   
- [Daten Entwickler Center](https://go.microsoft.com/fwlink/?LinkId=213876)  
- Zentraler Ort für Datenentwicklung mit Microsoft-Technologien.  
-  
- [ADO.NET-Teamblog](https://go.microsoft.com/fwlink/?LinkId=91905)  
+ [ADO.NET-Teamblog](https://docs.microsoft.com/archive/blogs/adonet/)  
  Blog, das Updates von und Diskussionen über ADO.NET-Features und -Funktionen enthält.  
   
- [Blog zu Entity Framework Design](https://go.microsoft.com/fwlink/?LinkId=186888)  
+ [Blog zu Entity Framework Design](https://docs.microsoft.com/archive/blogs/efdesign)  
  Entwurfsdiskussionen und Vorschau auf Funktionen für zukünftige Entity Framework-Versionen.  
-  
- [Vorgehensweise bei der Datenplattform Videos: Entity Framework Reihe](https://go.microsoft.com/fwlink/?LinkId=124600)  
- Enthält eine Reihe von Videos, die die Erstellung von Anwendungen unter Verwendung verschiedener Entity Framework-Komponenten veranschaulichen.  
   
  [FAQ zu Entity Framework](https://social.technet.microsoft.com/wiki/contents/articles/3737.entity-framework-faq.aspx)  
  Wiki-Abschnitt mit häufig gestellten Fragen zum Entity Framework.  

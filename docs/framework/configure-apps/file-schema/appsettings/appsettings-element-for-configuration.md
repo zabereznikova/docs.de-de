@@ -7,12 +7,12 @@ helpviewer_keywords:
 - appSettings Element
 - <appSettings> Element
 ms.assetid: 39694cc4-6b84-45a6-9329-385a0d8b48fe
-ms.openlocfilehash: 47d7648aae08544890a4dd2e42cedbf68a8acc72
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: e1f285aae10a89fa49846534d5b47e15920294ea
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77214736"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77452278"
 ---
 # <a name="appsettings-element-for-configuration"></a>\<appSettings-> Element für \<Configuration >
 
@@ -29,27 +29,27 @@ Enthält benutzerdefinierte Anwendungseinstellungen. Dies ist ein vordefinierter
 </appSettings>
 ```
 
-## <a name="attribute"></a>attribute
+## <a name="attribute"></a>Attribut
 
-|           | BESCHREIBUNG |
+|           | Beschreibung |
 | --------- | ----------- |
-| **file**  | Optionales Attribut.<br><br>Gibt einen relativen Pfad zu einer externen Datei an, die benutzerdefinierte Anwendungs Konfigurationseinstellungen enthält. Die angegebene Datei enthält die gleichen Einstellungen, die im **\<hinzufügen >** , **\<entfernen >** und **\<löschen >** Elemente angegeben sind, und verwendet das gleiche Schlüssel-Wert-Paar-Format wie diese Elemente.<br><br>Der angegebene Pfad ist relativ zur Hauptkonfigurationsdatei. Bei einer Windows Forms Anwendung ist dies der binäre Ordner (z. b. */bin/debug*) und nicht der Speicherort der Anwendungs Konfigurationsdatei. Bei Web Forms Anwendungen ist der Pfad relativ zum Anwendungs Stamm, in dem sich die Datei *Web. config* befindet.<br><br>Beachten Sie, dass die Laufzeit das-Attribut ignoriert, wenn die angegebene Datei nicht gefunden werden kann. |
+| **file**  | Optionales Attribut.<br><br>Gibt einen relativen Pfad zu einer externen Datei an, die benutzerdefinierte Anwendungs Konfigurationseinstellungen enthält. Die angegebene Datei enthält die gleichen Einstellungen, die im **\<hinzufügen >** , **\<entfernen >** und **\<löschen >** Elemente angegeben sind, und verwendet das gleiche Schlüssel-Wert-Paar-Format wie diese Elemente.<br><br>Der angegebene Pfad ist relativ zur Hauptkonfigurationsdatei. Bei einer Windows Forms Anwendung ist dies der binäre Ordner (z. b. */bin/debug*) und nicht der Speicherort der Anwendungs Konfigurationsdatei. Bei Web Forms Anwendungen ist der Pfad relativ zum Anwendungs Stamm, in dem sich die Datei *Web. config* befindet.<br><br>Die Laufzeit ignoriert das-Attribut, wenn die angegebene Datei nicht gefunden werden kann. |
 
 ## <a name="parent-element"></a>Übergeordnetes Element
 
-|     | BESCHREIBUNG |
+|     | Beschreibung |
 | --- | ----------- |
 | [ **\<Konfigurations >** Gewisses](../configuration-element.md) | Das Stammelement in jeder von den Common Language Runtime- und .NET Framework-Anwendungen verwendeten Konfigurationsdatei. |
 
 ## <a name="child-elements"></a>Untergeordnete Elemente
 
-|     | BESCHREIBUNG |
+|     | Beschreibung |
 | --- | ----------- |
 | [ **\<add>** ](add-element-for-appsettings.md) | Fügt eine benutzerdefinierte Anwendungs Einstellung hinzu. |
 | [ **\<clear>** ](clear-element-for-appsettings.md) | Löscht alle zuvor definierten Anwendungseinstellungen. |
 | [ **\<remove>** ](remove-element-for-appsettings.md) | Entfernt eine zuvor definierte Anwendungs Einstellung. |
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Das **\<appSettings >** -Element speichert benutzerdefinierte Konfigurationsinformationen für die Anwendung, z. b. Daten bankverbindungs Zeichenfolgen, Dateipfade, XML-Webdienst-URLs oder andere benutzerdefinierte Konfigurationsinformationen für eine Anwendung. Der Zugriff auf die Schlüssel-Wert-Paare, die im **\<appSettings >** -Element angegeben sind, erfolgt im Code mithilfe der <xref:System.Configuration.ConfigurationSettings>-Klasse.
 
@@ -82,6 +82,6 @@ Das folgende Beispiel zeigt eine Anwendungskonfigurationsdatei, die die Einstell
 
 Dieses Element kann in der Anwendungs Konfigurationsdatei, in der Computer Konfigurationsdatei (*Machine. config*) und in den *Web. config* -Dateien verwendet werden, die sich nicht auf der Ebene des Anwendungs Verzeichnisses befinden.
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Konfigurationsdatei Schema für die .NET Framework](../index.md)

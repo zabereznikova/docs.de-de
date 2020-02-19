@@ -2,16 +2,16 @@
 title: Unterscheidungs-Unions
 description: Erfahren Sie, wie F# diskriminierte Unions verwendet werden.
 ms.date: 05/16/2016
-ms.openlocfilehash: 79da6c6ff9d3699818014d86f6c95edc3e43b4c1
-ms.sourcegitcommit: a2d0e1f66367367065bc8dc0dde488ab536da73f
+ms.openlocfilehash: 539e2843c0bbc8c5ac9c0597ffc5443f8cd127f8
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71083039"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77452642"
 ---
 # <a name="discriminated-unions"></a>Unterscheidungs-Unions
 
-Unterscheidungs-Unions bieten Unterstützung für Werte, bei denen es sich um einen Fall aus einer Anzahl verschiedener benannter Fälle handeln kann, mit jeweils potenziell unterschiedlichen Werten und Typen. Unterscheidungs-Unions sind für heterogene Daten nützlich: Daten, die besondere Fälle enthalten können, einschließlich gültiger und fehlerhafter Fälle, Daten, die sich im Typ von einer Instanz zur nächsten unterscheiden und als Alternative für kleine Objekthierarchien. Außerdem werden rekursive Unterscheidungs-Unions verwendet, um Strukturdatenstrukturen darzustellen.
+Unterscheidungs-Unions bieten Unterstützung für Werte, bei denen es sich um einen Fall aus einer Anzahl verschiedener benannter Fälle handeln kann, mit jeweils potenziell unterschiedlichen Werten und Typen. Unterscheidungs-Unions sind für heterogene Daten nützlich: Daten, die besondere Fälle enthalten können, einschließlich gültiger und fehlerhafter Fälle, Daten, die sich im Typ von einer Instanz zur nächsten unterscheiden und als Alternative für kleine Objekthierarchien. Außerdem werden rekursive Unterscheidungs-Unions verwendet, um Baumstrukturdatenstrukturen darzustellen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -26,9 +26,9 @@ type [accessibility-modifier] type-name =
 
 ## <a name="remarks"></a>Hinweise
 
-Unterscheidungs-Unions ähneln Union-Typen in anderen Sprachen, aber es gibt Unterschiede. Wie bei einem Union-Typ in C++ oder einem Variantentyp in Visual Basic werden die im Wert gespeicherten Daten nicht korrigiert. Der Typ kann eine von mehreren unterschiedlichen Optionen sein. Im Gegensatz zu Unions in diesen anderen Sprachen erhält jede der möglichen Optionen einen *Fall Bezeichner*. Die Fallbezeichner sind Namen für die verschiedenen möglichen Typen von Werten, die Objekte dieses Typs aufweisen können. Die Werte sind optional. Wenn keine Werte vorhanden sind, entspricht der Fall einem Enumerationsfall. Wenn Werte vorhanden sind, kann jeder Wert entweder ein einzelner Wert eines angegebenen Typs oder ein Tupel sein, das mehrere Felder gleicher oder unterschiedlicher Typen aggregiert. Sie können einem einzelnen Feld einen Namen einräumen, aber der Name ist optional, auch wenn andere Felder im gleichen Fall benannt werden.
+Unterscheidungs-Unions ähneln Union-Typen in anderen Sprachen, aber es gibt Unterschiede. Wie bei einem Union-Typ in C++ oder einem Variantentyp in Visual Basic werden die im Wert gespeicherten Daten nicht korrigiert. Der Typ kann einer von mehreren unterschiedlichen Optionen sein. Im Gegensatz zu Unions in diesen anderen Sprachen erhält jede der möglichen Optionen einen *Fall Bezeichner*. Die Fallbezeichner sind Namen für die verschiedenen möglichen Typen von Werten, die Objekte dieses Typs aufweisen können. Die Werte sind optional. Wenn keine Werte vorhanden sind, entspricht der Fall einem Enumerationsfall. Wenn Werte vorhanden sind, kann jeder Wert entweder ein einzelner Wert eines angegebenen Typs oder ein Tupel sein, das mehrere Felder gleicher oder unterschiedlicher Typen aggregiert. Sie können einem einzelnen Feld einen Namen einräumen, aber der Name ist optional, auch wenn andere Felder im gleichen Fall benannt werden.
 
-Der Zugriff auf diskriminierte Unions `public`ist standardmäßig.
+Der Zugriff auf diskriminierte Unions ist standardmäßig `public`.
 
 Betrachten Sie zum Beispiel die folgende Deklaration eines Formtyps:
 
@@ -39,7 +39,7 @@ type Shape =
     | Prism of width : float * float * height : float
 ```
 
-Der vorangehende Code deklariert eine Unterscheidungs-Union-Form, die Werte von drei Fällen aufweisen kann: Rechteck, Kreis und Prism. Jeder Fall hat einen anderen Satz von Feldern. Der Rechteckfall hat zwei benannte Felder, beide vom Typ `float` mit den Namen Breite und Länge. Der Kreisfall hat nur ein benanntes Feld, nämlich Radius. Der Prism-Fall verfügt über drei Felder, von denen zwei (Breite und Höhe) benannte Felder sind. Unbenannte Felder werden als anonyme Felder bezeichnet.
+Der vorangehende Code deklariert eine Unterscheidungs-Union-Form, die Werte der folgenden drei Fälle haben kann: Rechteck, Kreis und Prisma. Jeder Fall hat einen anderen Satz von Feldern. Der Rechteckfall hat zwei benannte Felder, beide vom Typ `float` mit den Namen Breite und Länge. Der Kreisfall hat nur ein benanntes Feld, nämlich Radius. Der Prism-Fall verfügt über drei Felder, von denen zwei (Breite und Höhe) benannte Felder sind. Unbenannte Felder werden als anonyme Felder bezeichnet.
 
 Sie erstellen Objekte, indem Sie Werte für die benannten und anonymen Felder bereitstellen, wie in den folgenden Beispielen dargestellt.
 
@@ -70,14 +70,14 @@ Die Fallbezeichner werden auch in Musterabgleichsausdrücken verwendet. In einem
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet2002.fs)]
 
-In Musterabgleichsausdrücken können Sie benannte Felder verwenden, um Unterscheidungs-Union-Übereinstimmungen anzugeben. Für den zuvor deklarierten Formtyp können Sie die benannten Felder verwenden, um die Werte von Feldern zu extrahieren, wie der folgende Code zeigt.
+in Mustervergleichsausdrücken können Sie benannte Felder verwenden, um Unterscheidungs-Union-Übereinstimmungen anzugeben. Für den zuvor deklarierten Formtyp können Sie die benannten Felder verwenden, um die Werte von Feldern zu extrahieren, wie der folgende Code zeigt.
 
 ```fsharp
-let getShapeHeight shape =
+let getShapeWidth shape =
     match shape with
-    | Rectangle(height = h) -> h
+    | Rectangle(width = w) -> w
     | Circle(radius = r) -> 2. * r
-    | Prism(height = h) -> h
+    | Prism(width = w) -> w
 ```
 
 Normalerweise können die Fallbezeichner verwendet werden, ohne sie durch den Namen der Union zu qualifizieren. Wenn Sie möchten, dass der Name immer mit dem Namen der Union qualifiziert wird, können Sie das Attribut "Requirements [qualifiedaccess](https://msdn.microsoft.com/visualfsharpdocs/conceptual/core.requirequalifiedaccessattribute-class-[fsharp]) " auf die Union-Typdefinition anwenden.
@@ -111,7 +111,7 @@ let someFunctionUsingShaderProgram (ShaderProgram id) =
 
 ## <a name="struct-discriminated-unions"></a>Struktur Unterscheidungs-Unions
 
-Sie können auch Unterscheidungs-Unions als Strukturen darstellen.  Dies erfolgt mit dem `[<Struct>]` -Attribut.
+Sie können auch Unterscheidungs-Unions als Strukturen darstellen.  Dies erfolgt mit dem `[<Struct>]`-Attribut.
 
 ```fsharp
 [<Struct>]
@@ -136,11 +136,11 @@ Sie können oft eine Unterscheidungs-Union als einfachere Alternative zu einer k
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet2003.fs)]
 
-Statt einer virtuellen Methode zur Berechnung eines Bereich oder eines Umkreises, wie sie in einer objektorientierten Implementierung verwendet werden würde, können Sie mithilfe des Mustervergleichs die entsprechenden Formeln branchen, um die Mengen zu berechnen. Im folgenden Beispiel werden andere Formeln verwendet, um den Bereich abhängig von der Form zu berechnen.
+Statt einer virtuellen Methode zur Berechnung eines Bereich oder eines Umkreises, wie sie in einer objektorientierten Implementierung verwendet werden würde, können Sie mithilfe des Mustervergleichs die entsprechenden Formeln aufteilen, um die Mengen zu berechnen. Im folgenden Beispiel werden andere Formeln verwendet, um den Bereich abhängig von der Form zu berechnen.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet2004.fs)]
 
-Die Ausgabe lautet wie folgt:
+Die Ausgabe sieht sinngemäß folgendermaßen aus:
 
 ```console
 Area of circle that has radius 15.000000: 706.858347

@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Verschieben eines Objekts auf einem Pfad (Doppelanimation)'
+title: 'Gewusst wie: Verschieben eines Objekts auf einem Pfad (DoubleAnimation)'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,33 +8,33 @@ helpviewer_keywords:
 - animation [WPF], objects along paths (double animation)
 - double animation [WPF]
 ms.assetid: 5a3c4a99-f303-42ad-a52a-e4794bb1798e
-ms.openlocfilehash: 34fde285cad794c01a509c4a79a7fa3baf61d2c8
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 084caac26fd68b6914ec3858652ec44557a0dbd7
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64651479"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77452856"
 ---
-# <a name="how-to-animate-an-object-along-a-path-double-animation"></a>Vorgehensweise: Verschieben eines Objekts auf einem Pfad (Doppelanimation)
-Dieses Beispiel zeigt, wie Sie mit der <xref:System.Windows.Media.Animation.DoubleAnimationUsingPath> Klasse, um ein Objekt entlang eines Pfads durch Verschieben einer <xref:System.Windows.Media.PathGeometry>.  
+# <a name="how-to-animate-an-object-along-a-path-double-animation"></a>Gewusst wie: Verschieben eines Objekts auf einem Pfad (DoubleAnimation)
+In diesem Beispiel wird gezeigt, wie die <xref:System.Windows.Media.Animation.DoubleAnimationUsingPath>-Klasse verwendet wird, um ein Objekt entlang eines durch ein <xref:System.Windows.Media.PathGeometry>definierten Pfads zu verschieben.  
   
 ## <a name="example"></a>Beispiel  
- Das folgende Beispiel verwendet zwei <xref:System.Windows.Media.Animation.DoubleAnimationUsingPath> Objekte ein Rechteck entlang eines geometrischen Pfads verschoben:  
+ Im folgenden Beispiel werden zwei <xref:System.Windows.Media.Animation.DoubleAnimationUsingPath>-Objekte verwendet, um ein Rechteck entlang eines geometrischen Pfads zu verschieben:  
   
-- Die erste <xref:System.Windows.Media.Animation.DoubleAnimationUsingPath> animiert die <xref:System.Windows.Media.TranslateTransform.X%2A> von der <xref:System.Windows.Media.TranslateTransform> auf das Rechteck angewendet. Das Rechteck wird hierdurch horizontal am Pfad entlang verschoben.  
+- Der erste <xref:System.Windows.Media.Animation.DoubleAnimationUsingPath> animiert die <xref:System.Windows.Media.TranslateTransform.X%2A> des <xref:System.Windows.Media.TranslateTransform>, das auf das Rechteck angewendet wird. Das Rechteck wird hierdurch horizontal am Pfad entlang verschoben.  
   
-- Die zweite <xref:System.Windows.Media.Animation.DoubleAnimationUsingPath> animiert die <xref:System.Windows.Media.TranslateTransform.Y%2A> von der <xref:System.Windows.Media.TranslateTransform> auf das Rechteck angewendet. Das Rechteck wird hierdurch vertikal am Pfad entlang verschoben.  
+- Der zweite <xref:System.Windows.Media.Animation.DoubleAnimationUsingPath> animiert die <xref:System.Windows.Media.TranslateTransform.Y%2A> des <xref:System.Windows.Media.TranslateTransform>, das auf das Rechteck angewendet wird. Das Rechteck wird hierdurch vertikal am Pfad entlang verschoben.  
   
  [!code-xaml[PathAnimationGallery_snippet#DoubleAnimationUsingPathWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/PathAnimationGallery_snippet/CS/doubleanimationusingpathexample.xaml#doubleanimationusingpathwholepage)]  
   
  [!code-csharp[PathAnimationGallery_procedural_snip#DoubleAnimationUsingPathWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/PathAnimationGallery_procedural_snip/CSharp/DoubleAnimationUsingPathExample.cs#doubleanimationusingpathwholepage)]
  [!code-vb[PathAnimationGallery_procedural_snip#DoubleAnimationUsingPathWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PathAnimationGallery_procedural_snip/VisualBasic/DoubleAnimationUsingPathExample.vb#doubleanimationusingpathwholepage)]  
   
- Das vollständige Beispiel finden Sie unter [Beispiel zu Textanimation](https://go.microsoft.com/fwlink/?LinkID=160028).  
+ Das komplette Beispiel finden Sie unter [Beispiel für Pfad Animation](https://github.com/Microsoft/WPF-Samples/tree/master/Animation/PathAnimations).  
   
- Eine weitere Möglichkeit zum Verschieben eines Objekts mithilfe eines geometrischen Pfads ist die Verwendung einer <xref:System.Windows.Media.Animation.MatrixAnimationUsingPath> Objekt. Ein Beispiel finden Sie unter [animieren Sie ein Objekt auf einem Pfad (Matrixanimation)](how-to-animate-an-object-along-a-path-matrix-animation.md).  
+ Eine andere Möglichkeit, ein Objekt mithilfe eines geometrischen Pfads zu verschieben, ist die Verwendung eines <xref:System.Windows.Media.Animation.MatrixAnimationUsingPath> Objekts. Ein Beispiel finden Sie unter [Animieren eines Objekts entlang eines Pfads (Matrix Animation)](how-to-animate-an-object-along-a-path-matrix-animation.md).  
   
 ## <a name="see-also"></a>Siehe auch
 
 - [Übersicht über Animationen](animation-overview.md)
-- [Path Animation How-to Topics (Themen zur Vorgehensweise zur Pfadanimation)](path-animation-how-to-topics.md)
+- [Gewusst-wie-Themen zur Pfadanimation](path-animation-how-to-topics.md)

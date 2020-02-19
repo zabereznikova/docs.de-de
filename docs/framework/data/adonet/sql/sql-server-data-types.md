@@ -3,29 +3,29 @@ title: SQL Server-Datentypen und ADO.NET
 titleSuffix: ''
 ms.date: 03/30/2017
 ms.assetid: 81b43550-23e8-43bb-b460-7eb8ac825c33
-ms.openlocfilehash: 9baffc7a439c851ead7ec0e12899adf418174e22
-ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
+ms.openlocfilehash: f727c69b1dd5c23c6a89911005256de70255fd4c
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/04/2020
-ms.locfileid: "76979858"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77452330"
 ---
 # <a name="sql-server-data-types-and-adonet"></a>SQL Server-Datentypen und ADO.NET
 SQL Server und .NET Framework basieren auf anderen Typsystemen. Dies kann zu Datenverlust führen. Um die Datenintegrität beizubehalten, stellt der .NET Framework-Datenanbieter für SQL Server (<xref:System.Data.SqlClient>) typisierte Zugriffsmethoden zum Arbeiten mit SQL Server-Daten bereit. Sie können mit den Enumerationen in den <xref:System.Data.SqlDbType>-Klassen <xref:System.Data.SqlClient.SqlParameter>-Datentypen angeben.  
   
  Weitere Informationen und eine Tabelle, in der die Datentyp Zuordnungen zwischen SQL Server und .NET Framework Datentypen beschrieben werden, finden Sie unter [SQL Server Datentyp](../sql-server-data-type-mappings.md)Zuordnungen.  
   
- In SQL Server 2008 werden neue Datentypen eingeführt, die für die Anforderungen von Unternehmen im Hinblick auf die Arbeit mit Datums- und Uhrzeitangeben sowie mit strukturierten, halbstrukturierten und unstrukturierten Daten entworfen wurden. Diese Datentypen werden in der SQL Server 2008-Onlinedokumentation dokumentiert.  
+ In SQL Server 2008 werden neue Datentypen eingeführt, die für die Anforderungen von Unternehmen im Hinblick auf die Arbeit mit Datums- und Uhrzeitangeben sowie mit strukturierten, halbstrukturierten und unstrukturierten Daten entworfen wurden. Diese sind in der SQL Server 2008-Onlinedokumentation dokumentiert.  
   
  Die in Ihrer Anwendung verfügbaren SQL Server-Datentypen hängen von der Version von SQL Server ab, die Sie verwenden. Weitere Informationen finden Sie in der Onlinedokumentation zu der entsprechenden Version von SQL Server, die in der folgenden Tabelle angegeben ist.  
   
- **SQL Server Books Online (SQL Server-Onlinedokumentation)**  
+ **SQL Server-Dokumentation**  
   
-1. [Datentypen (Datenbank-Engine)](https://go.microsoft.com/fwlink/?LinkID=107468)  
+1. [Datentypen (Transact-SQL)](/sql/t-sql/data-types/data-types-transact-sql)  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [SqlTypes und DataSet](sqltypes-and-the-dataset.md)  
- Beschreibt die Typunterstützung für `SqlTypes` im `DataSet`.  
+ [SqlTypes und das DataSet](sqltypes-and-the-dataset.md)  
+ Beschreibt die neue Typunterstützung für `SqlTypes` im `DataSet`.  
   
  [Behandeln von NULL-Werten](handling-null-values.md)  
  Beschreibt die Arbeit mit NULL-Werten und dreiwertiger Logik.  
@@ -42,7 +42,7 @@ SQL Server und .NET Framework basieren auf anderen Typsystemen. Dies kann zu Dat
  [XML-Daten in SQL Server](xml-data-in-sql-server.md)  
  Beschreibt das Arbeiten mit XML-Daten, die aus SQL Server abgerufen wurden.  
   
-## <a name="reference"></a>Referenz  
+## <a name="reference"></a>Verweis  
  <xref:System.Data.DataSet>  
  Beschreibt die `DataSet`-Klasse und alle Member dieser Klasse.  
   

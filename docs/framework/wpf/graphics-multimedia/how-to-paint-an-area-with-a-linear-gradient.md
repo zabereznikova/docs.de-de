@@ -1,20 +1,20 @@
 ---
-title: 'Vorgehensweise: Zeichnen eines Bereichs mit einem linearen Farbverlauf'
+title: 'Gewusst wie: Zeichnen eines Bereichs mit einem linearen Farbverlauf'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - linear gradients [WPF], painting with
 - brushes [WPF], painting with linear gradients
 - painting [WPF], with linear gradients
 ms.assetid: 00e0cd04-48c0-4ec5-850e-d321beb37a34
-ms.openlocfilehash: 92c9ccd846dbbce043d13e6ba82b9fa8e72fa8b5
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 76c491632911c48db34d932ba3895278591378a5
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69916163"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77452765"
 ---
-# <a name="how-to-paint-an-area-with-a-linear-gradient"></a>Vorgehensweise: Zeichnen eines Bereichs mit einem linearen Farbverlauf
-In diesem Beispiel wird gezeigt, wie <xref:System.Windows.Media.LinearGradientBrush> die-Klasse verwendet wird, um einen Bereich mit einem linearen Farbverlauf zu zeichnen. Im folgenden Beispiel <xref:System.Windows.Shapes.Rectangle> wird der eines <xref:System.Windows.Shapes.Shape.Fill%2A> mit einem diagonalen linearen Farbverlauf gezeichnet, der von gelb zu rot zu blau in Kalk grün übergeht.  
+# <a name="how-to-paint-an-area-with-a-linear-gradient"></a>Gewusst wie: Zeichnen eines Bereichs mit einem linearen Farbverlauf
+In diesem Beispiel wird gezeigt, wie die <xref:System.Windows.Media.LinearGradientBrush>-Klasse verwendet wird, um einen Bereich mit einem linearen Farbverlauf zu zeichnen. Im folgenden Beispiel wird der <xref:System.Windows.Shapes.Shape.Fill%2A> einer <xref:System.Windows.Shapes.Rectangle> mit einem diagonalen linearen Farbverlauf gezeichnet, der von gelb zu rot zu blau in Kalk grün übergeht.  
   
 ## <a name="example"></a>Beispiel  
  [!code-xaml[GradientBrushExamples_snip#DiagonalGradient1XAML](~/samples/snippets/xaml/VS_Snippets_Wpf/GradientBrushExamples_snip/XAML/LinearGradientBrushExample.xaml#diagonalgradient1xaml)]  
@@ -25,7 +25,7 @@ In diesem Beispiel wird gezeigt, wie <xref:System.Windows.Media.LinearGradientBr
   
  ![Diagonal linearer Farbverlauf](./media/graphicsmm-diagonallgb.jpg "graphicsmm_DiagonalLGB")  
   
- Um einen horizontalen linearen Farbverlauf zu erstellen, <xref:System.Windows.Media.LinearGradientBrush.StartPoint%2A> ändern <xref:System.Windows.Media.LinearGradientBrush.EndPoint%2A> <xref:System.Windows.Media.LinearGradientBrush> Sie und von in (0,0) und (1, 0,5). Im folgenden Beispiel wird ein <xref:System.Windows.Shapes.Rectangle> mit einem horizontalen linearen Farbverlauf gezeichnet.  
+ Um einen horizontalen linearen Farbverlauf zu erstellen, ändern Sie die <xref:System.Windows.Media.LinearGradientBrush.StartPoint%2A> und <xref:System.Windows.Media.LinearGradientBrush.EndPoint%2A> der <xref:System.Windows.Media.LinearGradientBrush> in (0,0) und (1, 0,5). Im folgenden Beispiel wird ein <xref:System.Windows.Shapes.Rectangle> mit einem horizontalen linearen Farbverlauf gezeichnet.  
   
  [!code-xaml[GradientBrushExamples_snip#HorizontalGradient1XAML](~/samples/snippets/xaml/VS_Snippets_Wpf/GradientBrushExamples_snip/XAML/LinearGradientBrushExample.xaml#horizontalgradient1xaml)]  
   
@@ -35,7 +35,7 @@ In diesem Beispiel wird gezeigt, wie <xref:System.Windows.Media.LinearGradientBr
   
  ![Ein horizontaler linearer Farbverlauf](./media/graphicsmm-horizontallgb.jpg "graphicsmm_HorizontalLGB")  
   
- Um einen vertikalen linearen Farbverlauf zu erstellen, <xref:System.Windows.Media.LinearGradientBrush.StartPoint%2A> ändern <xref:System.Windows.Media.LinearGradientBrush.EndPoint%2A> <xref:System.Windows.Media.LinearGradientBrush> Sie und von in (0,5, 0) und (0,5, 1). Im folgenden Beispiel wird ein <xref:System.Windows.Shapes.Rectangle> mit einem vertikalen linearen Farbverlauf gezeichnet.  
+ Um einen vertikalen linearen Farbverlauf zu erstellen, ändern Sie die <xref:System.Windows.Media.LinearGradientBrush.StartPoint%2A> und <xref:System.Windows.Media.LinearGradientBrush.EndPoint%2A> der <xref:System.Windows.Media.LinearGradientBrush> in (0,5, 0) und (0,5, 1). Im folgenden Beispiel wird ein <xref:System.Windows.Shapes.Rectangle> mit einem vertikalen linearen Farbverlauf gezeichnet.  
   
  [!code-xaml[GradientBrushExamples_snip#VerticalGradient1XAML](~/samples/snippets/xaml/VS_Snippets_Wpf/GradientBrushExamples_snip/XAML/LinearGradientBrushExample.xaml#verticalgradient1xaml)]  
   
@@ -46,6 +46,6 @@ In diesem Beispiel wird gezeigt, wie <xref:System.Windows.Media.LinearGradientBr
  ![Vertikaler linearer Verlauf](./media/graphicsmm-verticallgb.jpg "graphicsmm_VerticalLGB")  
   
 > [!NOTE]
-> In den Beispielen in diesem Thema wird das Standard Koordinatensystem zum Festlegen von Startpunkten und Endpunkten verwendet. Das Standard Koordinatensystem ist relativ zu einem umgebenden Feld: 0 gibt 0 Prozent, und 1 gibt 100 Prozent des umgebenden Feldes an. Sie können dieses Koordinatensystem ändern, indem Sie <xref:System.Windows.Media.GradientBrush.MappingMode%2A> die-Eigenschaft auf <xref:System.Windows.Media.BrushMappingMode.Absolute?displayProperty=nameWithType>den Wert festlegen. Ein absolutes Koordinatensystem ist nicht relativ zu einem umgebenden Feld. Werte werden direkt im lokalen Raum interpretiert.  
+> In den Beispielen in diesem Thema wird das Standard Koordinatensystem zum Festlegen von Startpunkten und Endpunkten verwendet. Das Standard Koordinatensystem ist relativ zu einem umgebenden Feld: 0 gibt 0 Prozent des umgebenden Felds an, und 1 gibt 100 Prozent des umgebenden Felds an. Sie können dieses Koordinatensystem ändern, indem Sie die <xref:System.Windows.Media.GradientBrush.MappingMode%2A>-Eigenschaft auf den Wert <xref:System.Windows.Media.BrushMappingMode.Absolute?displayProperty=nameWithType>festlegen. Ein absolutes Koordinatensystem ist nicht relativ zu einem umgebenden Feld. Werte werden direkt im lokalen Raum interpretiert.  
   
- Weitere Beispiele finden Sie unter [Beispiel für Pinsel](https://go.microsoft.com/fwlink/?LinkID=159973). Weitere Informationen zu Farbverläufen und anderen Pinseltypen finden Sie unter Übersicht über das Zeichnen [mit voll Tonfarben und Farbverläufen](painting-with-solid-colors-and-gradients-overview.md).
+ Weitere Beispiele finden Sie unter [Beispiel für Pinsel](https://github.com/Microsoft/WPF-Samples/tree/master/Graphics/Brushes). Weitere Informationen zu Farbverläufen und anderen Pinseltypen finden Sie unter Übersicht über das Zeichnen [mit voll Tonfarben und Farbverläufen](painting-with-solid-colors-and-gradients-overview.md).

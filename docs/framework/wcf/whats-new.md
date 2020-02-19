@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF [WCF], what's new
 - Windows Communication Foundation [WCF], what's new
 ms.assetid: 7e93fe73-af93-46b5-9f63-32f761ee40cf
-ms.openlocfilehash: e01b3a39a004e963e5bb66c5fa71433cb4e7204a
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: b22266efe2e775acd04c400cf9da50bffab28183
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802374"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77449503"
 ---
 # <a name="whats-new-in-windows-communication-foundation-45"></a>Neues in Windows Communication Foundation 4.5
 
@@ -22,7 +22,7 @@ Es wurde viel unternommen, um die Entwicklung und Verwaltung von WCF 4.5-Anwendu
 
 ### <a name="task-based-async-support"></a>Aufgabenbasierte asynchrone Unterstützung
 
-Durch Dienstverweis hinzufügen werden standardmäßig asynchrone Methoden für Dienstvorgänge generiert, die Tasks zurückgeben. Dies erfolgt sowohl für synchrone als auch für asynchrone Methoden. Auf diese Weise können die Dienstvorgänge mithilfe des neuen aufgabenbasierten asynchronen Programmiermodells asynchron aufgerufen werden. Wenn Sie die generierte Proxymethode aufrufen, erstellt WCF ein Taskobjekt, das den asynchronen Vorgang darstellt, und gibt diesen Task an Sie zurück. Die Aufgabe wird abgeschlossen, wenn der Vorgang abgeschlossen ist. Beim Implementieren eines asynchronen Vorgangs können Sie ihn als aufgabenbasierten asynchronen Vorgang implementieren. Weitere Informationen finden Sie unter [synchrone und asynchrone Vorgänge](synchronous-and-asynchronous-operations.md).
+Durch {1}Dienstverweis hinzufügen{2} werden standardmäßig asynchrone Methoden für Dienstvorgänge generiert, die Tasks zurückgeben. Dies erfolgt sowohl für synchrone als auch für asynchrone Methoden. Auf diese Weise können die Dienstvorgänge mithilfe des neuen aufgabenbasierten asynchronen Programmiermodells asynchron aufgerufen werden. Wenn Sie die generierte Proxymethode aufrufen, erstellt WCF ein Taskobjekt, das den asynchronen Vorgang darstellt, und gibt diesen Task an Sie zurück. Die Aufgabe wird abgeschlossen, wenn der Vorgang abgeschlossen ist. Beim Implementieren eines asynchronen Vorgangs können Sie ihn als aufgabenbasierten asynchronen Vorgang implementieren. Weitere Informationen finden Sie unter [synchrone und asynchrone Vorgänge](synchronous-and-asynchronous-operations.md).
 
 ### <a name="simplified-generated-configuration-files"></a>Vereinfachte generierte Konfigurationsdateien
 
@@ -36,7 +36,7 @@ WCF unterstützt jetzt die Vertrag zuerst-Entwicklung. Die Datei "Svcutil. exe" 
 
 ### <a name="add-service-reference-from-a-portable-subset-project"></a>Hinzufügen eines Dienstverweises aus einem Projekt für die portable Teilmenge
 
-Projekte für portable Teilmengen ermöglichen es Programmierern von .NET-Assemblys, eine einzelne Quellstruktur zu verwalten und das System mit Unterstützung mehrerer .NET-Plattformen (Desktop, Silverlight, Windows Phone und XBOX) aufzubauen. Projekte für Portable Teilmengen verweisen nur auf Portable .NET-Bibliotheken, bei denen es sich um eine .NET Framework-Assembly handelt, die auf einer beliebigen .NET-Plattform verwendet Die Entwicklererfahrung ist identisch mit dem Hinzufügen eines Dienstverweises innerhalb einer beliebigen anderen WCF-Clientanwendung. Weitere Informationen finden Sie unter [Dienstverweis hinzufügen in einem Projekt für eine Portable Teilmenge](add-service-reference-in-a-portable-subset-project.md).
+Portable Teilmengen Projekte ermöglichen es .net-assemblyprogrammierern, eine einzelne Quell Struktur und ein Buildsystem zu verwalten, während mehrere .net-Plattformen (Desktop, Silverlight, Windows Phone und Xbox) unterstützt werden. Projekte für Portable Teilmengen verweisen nur auf Portable .NET-Bibliotheken, die Assemblys sind, die auf jeder .NET-Plattform verwendet werden können. Die Entwicklererfahrung ist identisch mit dem Hinzufügen eines Dienstverweises innerhalb einer beliebigen anderen WCF-Clientanwendung. Weitere Informationen finden Sie unter [Dienstverweis hinzufügen in einem Projekt für eine Portable Teilmenge](add-service-reference-in-a-portable-subset-project.md).
 
 ### <a name="aspnet-compatibility-mode-default-changed"></a>Geänderter Standard für den ASP.NET-Kompatibilitätsmodus
 
@@ -72,19 +72,19 @@ WSDL-Verarbeitungsstapel einiger Drittanbieter sind nicht in der Lage, WSDL-Doku
 
 ## <a name="websocket-support"></a>WebSocket-Unterstützung
 
-WebSockets ist eine Technologie, die die echte bidirektionale Kommunikation über die Ports 80 und 443 ermöglicht, wobei die Leistungsmerkmale denen von TCP ähneln. Um die Kommunikation über einen WebSocket-Transport zu unterstützen, wurden zwei neue Bindungen hinzugefügt. <xref:System.ServiceModel.NetHttpBinding> und <xref:System.ServiceModel.NetHttpsBinding>. Weitere Informationen finden Sie unter folgenden Themen: Vom [System bereitgestellte Bindungen](system-provided-bindings.md).
+WebSockets ist eine Technologie, die die echte bidirektionale Kommunikation über die Ports 80 und 443 ermöglicht, wobei die Leistungsmerkmale denen von TCP ähneln. Um die Kommunikation über einen WebSocket-Transport zu unterstützen, wurden zwei neue Bindungen hinzugefügt. <xref:System.ServiceModel.NetHttpBinding> und <xref:System.ServiceModel.NetHttpsBinding>: Weitere Informationen finden Sie unter: vom [System bereitgestellte Bindungen](system-provided-bindings.md).
 
 ## <a name="new-transport-default-values"></a>Neue Standardwerte für Transporte
 
 Anhand der folgenden Tabelle erfahren Sie, welche Einstellungen geändert wurden und wo Sie zusätzliche Informationen finden.
 
-|Eigenschaft|On|Neuer Standard|Weitere Informationen finden Sie unter|
+|Eigenschaft|Ein|Neuer Standard|Weitere Informationen finden Sie unter .|
 |--------------|--------|-----------------|------------------------------|
-|channelInitializationTimeout|<xref:System.ServiceModel.NetTcpBinding>|30 Sekunden|<xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.ChannelInitializationTimeout%2A>|
+|channelInitializationTimeout|<xref:System.ServiceModel.NetTcpBinding>|30 Sekunden|<xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.ChannelInitializationTimeout%2A>|
 |listenBacklog|<xref:System.ServiceModel.NetTcpBinding>|12 * Anzahl der Prozessoren|<xref:System.ServiceModel.NetTcpBinding.ListenBacklog%2A>|
 |maxPendingAccepts|ConnectionOrientedTransportBindingElement<br /><br /> SMSvcHost.exe|2 * Anzahl der Prozessoren für den Transport<br /><br /> 4 \* Anzahl der Prozessoren für "SMSvcHost. exe"|<xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.MaxPendingAccepts%2A> [Konfigurieren des net. TCP-Port Freigabe diensdienstanbieter](./feature-details/configuring-the-net-tcp-port-sharing-service.md)|
 |maxPendingConnections|ConnectionOrientedTransportBindingElement|12 * Anzahl der Prozessoren|<xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.MaxPendingConnections%2A>|
-|receiveTimeout|SMSvcHost.exe|30 Sekunden|[Konfigurieren des Net.TCP-Portfreigabediensts](./feature-details/configuring-the-net-tcp-port-sharing-service.md)|
+|receiveTimeout|SMSvcHost.exe|30 Sekunden|[Konfigurieren des Net.TCP-Portfreigabediensts](./feature-details/configuring-the-net-tcp-port-sharing-service.md)|
 
 ## <a name="xml-editor-tooltips"></a>XML-Editor-QuickInfos
 
@@ -152,11 +152,11 @@ In Visual Studio 2010 wurde von WebServiceHost automatisch ein Standardendpunkt 
 
 ## <a name="ihttpcookiecontainermanager"></a>IHttpCookieContainerManager
 
-Diese von <xref:System.ServiceModel.Channels.IChannelFactory%601> verfügbar gemachte Schnittstelle vereinfacht die Verwendung von Cookies auf der Clientseite. Wenn AllowCookies für die Bindung auf True festgelegt ist, können Sie mit folgendem Code auf Cookies zugreifen:
+Diese von <xref:System.ServiceModel.Channels.IChannelFactory%601> verfügbar gemachte Schnittstelle vereinfacht die Verwendung von Cookies auf der Clientseite. Wenn {1}AllowCookies{2} für die Bindung auf {3}True{4} festgelegt ist, können Sie mit folgendem Code auf Cookies zugreifen:
 
 ```csharp
 IHttpCookieContainerManager cookieManager = factory.GetProperty<IHttpCookieContainerManager>();
 System.Net.CookieContainer container = cookieManager.CookieContainer;
 ```
 
-Anschließend können die Cookies unter Verwendung von <xref:System.Net.CookieContainer> abgerufen oder festgelegt werden. Wenn AllowCookies<xref:System.ServiceModel.OperationContext> auf False<xref:System.ServiceModel.OperationContext> festgelegt ist, können Sie die Cookies mit  manuell abrufen und in anderen Anforderungen unter Verwendung eines anderen  oder Meldungsinspektors senden. Die IHttpCookieContainerManager-Schnittstelle ermöglicht es Ihnen, einen Benutzer bei einem Dienst zu authentifizieren und das vom Dienst zurückgegebene Authentifizierungscookie zum Authentifizieren bei anderen Diensten zu verwenden.
+Anschließend können die Cookies unter Verwendung von <xref:System.Net.CookieContainer> abgerufen oder festgelegt werden. Wenn <xref:System.ServiceModel.OperationContext>AllowCookies<xref:System.ServiceModel.OperationContext> auf {3}False{4} festgelegt ist, können Sie die Cookies mit {5} manuell abrufen und in anderen Anforderungen unter Verwendung eines anderen {6} oder Meldungsinspektors senden. Die IHttpCookieContainerManager-Schnittstelle ermöglicht es Ihnen, einen Benutzer bei einem Dienst zu authentifizieren und das vom Dienst zurückgegebene Authentifizierungscookie zum Authentifizieren bei anderen Diensten zu verwenden.

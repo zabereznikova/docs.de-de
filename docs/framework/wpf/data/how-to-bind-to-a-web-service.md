@@ -9,18 +9,18 @@ helpviewer_keywords:
 - Web service binding [WPF]
 - data binding [WPF], Web service
 ms.assetid: 77e2d373-69ba-4cbd-b6f5-2c83c38fc98b
-ms.openlocfilehash: 76fa13d4a12362d04c832fd59ee69db5a6811029
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 3a3f6edc974448ddab9fe30e97bdc1130d3b97dc
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73454460"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77449971"
 ---
 # <a name="how-to-bind-to-a-web-service"></a>Gewusst wie: Erstellen einer Bindung an einen Webdienst
 Dieses Beispiel zeigt, wie Sie eine Bindung an Objekte herstellen, die von Webdienst Methoden aufrufen zurückgegeben werden.  
   
 ## <a name="example"></a>Beispiel  
- In diesem Beispiel wird der [Inhalts Dienst MSDN/TechNet Publishing System (MTPS)](https://go.microsoft.com/fwlink/?LinkId=95677) verwendet, um die Liste der Sprachen abzurufen, die von einem bestimmten Dokument unterstützt werden.  
+ In diesem Beispiel wird der Inhalts Dienst MSDN/TechNet Publishing System (MTPS) verwendet, um die Liste der Sprachen abzurufen, die von einem bestimmten Dokument unterstützt werden.  
   
  Bevor Sie einen Webdienst aufzurufen, müssen Sie einen Verweis darauf erstellen. Um einen Webverweis auf den MTPS-Dienst mithilfe von Visual Studio zu erstellen, führen Sie die folgenden Schritte aus:  
   

@@ -2,12 +2,12 @@
 title: Datenbindung mit LINQ to XML
 ms.date: 10/22/2019
 ms.topic: conceptual
-ms.openlocfilehash: 3c5567c81d2097a1524f5bbbf9010836ca8c0646
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 65e1524a88f1920c037b2747b0bbe30386951635
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76733819"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77452733"
 ---
 # <a name="overview-of-wpf-data-binding-with-linq-to-xml"></a>Übersicht über die WPF-Datenbindung mit LINQ to XML
 
@@ -29,7 +29,7 @@ In dieser Dokumentation wird das zweite Szenario beschrieben.
 
 Die WPF-Datenbindung ermöglicht es einem Benutzeroberflächenelement, eine seiner Eigenschaften einer Datenquelle zuzuordnen. Ein einfaches Beispiel dafür ist ein <xref:System.Windows.Controls.Label>, dessen Text den Wert einer öffentlichen Eigenschaft in einem benutzerdefinierten Objekt angibt. Die WPF-Datenbindung basiert auf den folgenden Komponenten:
 
-|Komponente|BESCHREIBUNG|
+|Komponente|Beschreibung|
 |---------------|-----------------|
 |Bindungsziel|Das Benutzeroberflächenelement, das der Datenquelle zugeordnet werden soll. Visuelle Elemente in WPF werden von der <xref:System.Windows.UIElement>-Klasse abgeleitet.|
 |Zieleigenschaft|Die *Abhängigkeitseigenschaft* des Bindungsziels, das den Wert der Datenbindungsquelle wiedergibt. Abhängigkeitseigenschaften werden direkt von der <xref:System.Windows.DependencyObject>-Klasse unterstützt, von der sich <xref:System.Windows.UIElement> herleitet.|
@@ -85,10 +85,10 @@ Weitere Informationen finden Sie unter [Dynamische Eigenschaften in LINQ to XML]
 
 Zur Implementierung der dynamischen WPF-Bindung werden die dynamischen Eigenschaften zusammen mit den vom <xref:System.Windows.Data>-Namespace bereitgestellten Funktionen, insbesondere der <xref:System.Windows.Data.Binding>-Klasse, verwendet.
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [WPF-Datenbindung mit LINQ to XML](wpf-data-binding-with-linq-to-xml-overview.md)
 - [Dynamische Eigenschaften in LINQ to XML](linq-to-xml-dynamic-properties.md)
 - [XAML in WPF](../advanced/xaml-in-wpf.md)
 - [Datenbindung (WPF)](/dotnet/framework/wpf/data/data-binding-wpf)
-- [Verwenden von Workflowmarkup](https://go.microsoft.com/fwlink/?LinkId=98685)
+- [Verwenden von Workflowmarkup](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms735921(v=vs.90))

@@ -2,15 +2,16 @@
 title: Hinzufügen eines Dienstverweises in einem Projekt für die portable Teilmenge
 ms.date: 03/30/2017
 ms.assetid: 61ccfe0f-a34b-40ca-8f5e-725fa1b8095e
-ms.openlocfilehash: 764ce487d8f2673eb2c75f8cd05da4ccbae3c935
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 8bedfb44523b4f67845d40fadfaa72d64622ba26
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72320849"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77449477"
 ---
 # <a name="add-service-reference-in-a-portable-subset-project"></a>Hinzufügen eines Dienstverweises in einem Projekt für die portable Teilmenge
-Projekte für Portable Teilmengen ermöglichen es .net-assemblyprogrammierern, eine einzelne Quell Struktur und ein Buildsystem zu verwalten, während mehrere .net-Implementierungen (Desktop, Silverlight, Windows Phone und Xbox) unterstützt werden. Projekte für Portable Teilmengen verweisen nur auf Portable .NET-Bibliotheken, bei denen es sich um eine .NET Framework-Assembly handelt.  
+
+Projekte für Portable Teilmengen ermöglichen es .net-assemblyprogrammierern, eine einzelne Quell Struktur und ein Buildsystem zu verwalten, während mehrere .net-Implementierungen (Desktop, Silverlight, Windows Phone und Xbox) unterstützt werden. Projekte für Portable Teilmengen verweisen nur auf Portable Bibliotheken, die .NET-Assemblys sind, die für jede .NET-Implementierung verwendet werden können.
   
 ## <a name="add-service-reference-details"></a>Details zu "Dienstverweis hinzufügen"  
  Wenn Sie einem Projekt für portable Teilmengen einen Dienstverweis hinzufügen, werden die folgenden Einschränkungen erzwungen:  
@@ -25,7 +26,7 @@ Projekte für Portable Teilmengen ermöglichen es .net-assemblyprogrammierern, e
   
 5. Die nicht portablen Attribute <xref:System.ComponentModel.DesignerCategoryAttribute>, <xref:System.SerializableAttribute> und <xref:System.ServiceModel.TransactionFlowAttribute> werden aus generiertem Clientproxycode entfernt.  
   
-6. Die nicht portablen Eigenschaften ProtectionLevel<xref:System.ServiceModel.ServiceContractAttribute>, SessionMode<xref:System.ServiceModel.OperationContractAttribute>, IsInitiating<xref:System.ServiceModel.FaultContractAttribute> und IsTerminating werden aus ,  und  entfernt.  
+6. Die nicht portablen Eigenschaften <xref:System.ServiceModel.ServiceContractAttribute>ProtectionLevel<xref:System.ServiceModel.OperationContractAttribute>, <xref:System.ServiceModel.FaultContractAttribute>SessionMode{4}, {5}IsInitiating{6} und {7}IsTerminating{8} werden aus {9}, {10} und {11} entfernt.  
   
 7. Alle Dienstvorgänge werden auf dem Clientproxy als asynchrone Vorgänge generiert.  
   

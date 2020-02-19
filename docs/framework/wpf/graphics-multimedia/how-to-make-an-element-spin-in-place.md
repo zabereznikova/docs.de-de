@@ -1,26 +1,26 @@
 ---
-title: 'Vorgehensweise: Drehen von Elementen ohne Positionierung'
+title: 'Gewusst wie: Drehen von Elementen ohne Positionsänderung'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - graphics [WPF], spinning elements
 - spinning elements [WPF]
 ms.assetid: 1f011976-8b07-4c31-9faf-019e0ddaa24c
-ms.openlocfilehash: aca9bd577f2882e31e8d49abe5eeb5ade86f95f7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2e72389a11e48629c2763fcbd9f7b1945ffff5dd
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61947251"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77452791"
 ---
-# <a name="how-to-make-an-element-spin-in-place"></a>Vorgehensweise: Drehen von Elementen ohne Positionierung
-Dieses Beispiel zeigt, wie Sie ein Element, das Starten mit einem <xref:System.Windows.Media.RotateTransform> und <xref:System.Windows.Media.Animation.DoubleAnimation>.  
+# <a name="how-to-make-an-element-spin-in-place"></a>Gewusst wie: Drehen von Elementen ohne Positionsänderung
+In diesem Beispiel wird gezeigt, wie ein Element mit einem <xref:System.Windows.Media.RotateTransform> und einem <xref:System.Windows.Media.Animation.DoubleAnimation>gedreht wird.  
   
- Im folgenden Beispiel wird die <xref:System.Windows.Media.RotateTransform> auf die <xref:System.Windows.UIElement.RenderTransform%2A> -Eigenschaft des Elements. Im Beispiel wird eine <xref:System.Windows.Media.Animation.DoubleAnimation> zum Animieren der <xref:System.Windows.Media.RotateTransform.Angle%2A> von der <xref:System.Windows.Media.RotateTransform>. Damit wird das Element an der Stelle, im Beispiel wird die <xref:System.Windows.UIElement.RenderTransformOrigin%2A> Eigenschaft des Elements, das den Punkt (0,5, 0,5).  
+ Im folgenden Beispiel wird der <xref:System.Windows.Media.RotateTransform> auf die <xref:System.Windows.UIElement.RenderTransform%2A>-Eigenschaft des-Elements angewendet. Das Beispiel verwendet eine <xref:System.Windows.Media.Animation.DoubleAnimation>, um die <xref:System.Windows.Media.RotateTransform.Angle%2A> der <xref:System.Windows.Media.RotateTransform>zu animieren. Damit das Element gedreht wird, wird im Beispiel die <xref:System.Windows.UIElement.RenderTransformOrigin%2A>-Eigenschaft des-Elements auf den Punkt (0,5, 0,5) festgelegt.  
   
 ## <a name="example"></a>Beispiel  
  [!code-xaml[transformanimations_snip#11](~/samples/snippets/xaml/VS_Snippets_Wpf/transformanimations_snip/XAML/RotateAboutCenterExample.xaml#11)]  
   
- Enthält weitere Beispiele für die Transformation für das vollständige Beispiel finden Sie unter [2D-Transformationen Beispiel](https://go.microsoft.com/fwlink/?LinkID=158252).  
+ Das komplette Beispiel, das weitere Transformations Beispiele enthält, finden Sie unter [Beispiel für 2D-Transformationen](https://github.com/Microsoft/WPF-Samples/tree/master/Graphics/2DTransforms).  
   
 ## <a name="see-also"></a>Siehe auch
 

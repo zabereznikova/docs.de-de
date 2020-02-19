@@ -9,12 +9,12 @@ helpviewer_keywords:
 - filtering data in views [WPF]
 - data binding [WPF], filtering data in views
 ms.assetid: c76e8606-4cc4-45a8-9110-e2ec66dc6afd
-ms.openlocfilehash: ea49897ca5e9cb6b639cf7d98ff05bd287c51761
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: f15bcfd1e3c4175f8b4b97244f120d5edbdec9b8
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73453486"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77453077"
 ---
 # <a name="how-to-filter-data-in-a-view"></a>Gewusst wie: Filtern von Daten in einer Ansicht
 In diesem Beispiel wird gezeigt, wie Daten in einer Ansicht gefiltert werden.  
@@ -35,7 +35,7 @@ In diesem Beispiel wird gezeigt, wie Daten in einer Ansicht gefiltert werden.
  [!code-csharp[SortFilter#Unfilter](~/samples/snippets/csharp/VS_Snippets_Wpf/SortFilter/CSharp/Page1.xaml.cs#unfilter)]
  [!code-vb[SortFilter#Unfilter](~/samples/snippets/visualbasic/VS_Snippets_Wpf/SortFilter/VisualBasic/Page1.xaml.vb#unfilter)]  
   
- Weitere Informationen zum Erstellen oder Abrufen einer Ansicht finden Sie unter Abrufen [der Standardansicht einer Datensammlung](how-to-get-the-default-view-of-a-data-collection.md). Das komplette Beispiel finden Sie unter [Sortieren und Filtern von Elementen in einem Ansichts](https://go.microsoft.com/fwlink/?LinkID=160040)Beispiel.  
+ Weitere Informationen zum Erstellen oder Abrufen einer Ansicht finden Sie unter Abrufen [der Standardansicht einer Datensammlung](how-to-get-the-default-view-of-a-data-collection.md). Das komplette Beispiel finden Sie unter [Sortieren und Filtern von Elementen in einem Ansichts](https://github.com/Microsoft/WPF-Samples/tree/master/Data%20Binding/SortFilter)Beispiel.  
   
  Wenn das View-Objekt aus einem <xref:System.Windows.Data.CollectionViewSource>-Objekt stammt, wenden Sie Filter Logik an, indem Sie einen Ereignishandler für das <xref:System.Windows.Data.CollectionViewSource.Filter>-Ereignis festlegen. Im folgenden Beispiel ist `listingDataView` eine Instanz von <xref:System.Windows.Data.CollectionViewSource>.  
   
@@ -53,4 +53,4 @@ In diesem Beispiel wird gezeigt, wie Daten in einer Ansicht gefiltert werden.
 - <xref:System.Windows.Data.BindingListCollectionView.CustomFilter%2A>
 - [Übersicht zur Datenbindung](../../../desktop-wpf/data/data-binding-overview.md)
 - [Sortieren von Daten in einer Ansicht](how-to-sort-data-in-a-view.md)
-- [Themen zu Vorgehensweisen](data-binding-how-to-topics.md)
+- [How-to Topics (Themen zur Vorgehensweise)](data-binding-how-to-topics.md)
