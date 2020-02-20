@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - CLR ETW events, logging
 ms.assetid: ce13088e-3095-4f0e-9f6b-fad30bbd3d41
-ms.openlocfilehash: 180cce516a1209711430429a46cb5b718b29f1d9
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: e7d7d6e60b2f582a579f5811225f4027c37c7876
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75716110"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77504101"
 ---
 # <a name="controlling-net-framework-logging"></a>Steuern der Protokollierung in .NET Framework
 
@@ -17,7 +17,7 @@ Sie können mithilfe der Ereignisablaufverfolgung für Windows (ETW) Common Lang
 
 - Die Befehlszeilentools [Logman](/windows-server/administration/windows-commands/logman) und [Tracerpt](/windows-server/administration/windows-commands/tracerpt_1) sind im Windows-Betriebssystem enthalten.
 
-- Die [Xperf](/windows-hardware/test/wpt/xperf-command-line-reference)-Tools im [Windows Performance Toolkit](/windows-hardware/test/wpt/). Weitere Informationen zu Xperf finden Sie im [Windows Performance-Blog](https://blogs.msdn.microsoft.com/pigscanfly/tag/xperf/).
+- Die [Xperf](/windows-hardware/test/wpt/xperf-command-line-reference)-Tools im [Windows Performance Toolkit](/windows-hardware/test/wpt/). Weitere Informationen zu Xperf finden Sie im [Windows Performance-Blog](https://docs.microsoft.com/archive/blogs/pigscanfly/).
 
 Wenn Sie CLR-Ereignisinformationen erfassen möchten, muss der CLR-Anbieter auf dem Computer installiert werden. Geben Sie an der Eingabeaufforderung `logman query providers` ein, um festzustellen, ob der Anbieter installiert ist. Eine Anbieterliste wird angezeigt. Diese Liste sollte wie folgt einen Eintrag für den CLR-Anbieter enthalten.
 
@@ -109,7 +109,7 @@ Verwenden Sie die unten aufgeführten Befehle, um die CLR-ETW-Ereignisse anzuzei
 
      Dieser Befehl bewirkt, dass XPerf die Ereignisse als CSV-Datei (CSV) sichert, die Sie anzeigen können. Da für unterschiedliche Ereignisse auch unterschiedliche Felder verfügbar sind, enthält diese CSV-Datei vor den Daten mehrere Headerzeilen. Das erste Feld jeder Zeile ist für den Ereignistyp vorgesehen, der den Header angibt, der zum Ermitteln der weiteren Felder verwendet werden soll.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Windows Performance Toolkit](/windows-hardware/test/wpt/)
 - [ETW-Ereignisse in der Common Language Runtime](etw-events-in-the-common-language-runtime.md)

@@ -1,15 +1,15 @@
 ---
-title: Attribute
+title: Attributes
 description: Erfahren Sie F# , wie Attribute das Anwenden von Metadaten auf ein Programmierkonstrukt ermöglichen.
 ms.date: 05/16/2016
-ms.openlocfilehash: 223263f5789b0fc7eb2b3ef2905f6436980bd14a
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 1e42dc61d44f31930a7b34799f28a68a2db69c8c
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73424795"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77504117"
 ---
-# <a name="attributes"></a>Attribute
+# <a name="attributes"></a>Attributes
 
 Attribute ermöglichen das Anwenden von Metadaten auf ein Programmierkonstrukt.
 
@@ -19,7 +19,7 @@ Attribute ermöglichen das Anwenden von Metadaten auf ein Programmierkonstrukt.
 [<target:attribute-name(arguments)>]
 ```
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 
 In der vorherigen Syntax ist das *Ziel* optional und gibt, sofern vorhanden, die Art der Programm Entität an, für die das Attribut gilt. Gültige Werte für das *Ziel* werden in der Tabelle angezeigt, die später in diesem Dokument angezeigt wird.
 
@@ -39,7 +39,7 @@ In diesem Beispiel ist das-Attribut `DllImportAttribute`, das in kürzerer Form 
 
 Attribute sind ein .net-Programmierkonstrukt, mit dem ein Objekt, das als *Attribut* bezeichnet wird, einem Typ oder einem anderen Programmelement zugeordnet werden kann. Das Programmelement, auf das ein Attribut angewendet wird, wird als *Attribut Ziel*bezeichnet. Das Attribut enthält normalerweise Metadaten zum Ziel. In diesem Kontext können Metadaten beliebige Daten über den Typ sein, der nicht die Felder und Member ist.
 
-Attribute in F# können auf die folgenden Programmierkonstrukte angewendet werden: Funktionen, Methoden, Assemblys, Module, Typen (Klassen, Datensätze, Strukturen, Schnittstellen, Delegaten, Enumerationen, Unions usw.), Konstruktoren, Eigenschaften, Felder, Parameter, Typparameter und Rückgabewerte. Attribute sind für `let` Bindungen innerhalb von Klassen, Ausdrücken oder Workflow Ausdrücken nicht zulässig.
+Attribute in F# können angewendet werden, um die folgenden Konstrukte der Programmierung: Funktionen, Methoden, Assemblys, Modulen, Typen (Klassen, Datensätze, Strukturen, Schnittstellen, Delegaten, Enumerationen, Unions und So weiter), Konstruktoren, Eigenschaften, Felder, Parameter Geben Sie Parameter und Rückgabewerte. Attribute sind für `let` Bindungen innerhalb von Klassen, Ausdrücken oder Workflow Ausdrücken nicht zulässig.
 
 In der Regel wird die Attribut Deklaration direkt vor der Deklaration des Attribut Ziels angezeigt. Mehrere Attribut Deklarationen können wie folgt verwendet werden:
 
@@ -77,31 +77,31 @@ Obwohl Sie in der Regel das Attribut Ziel nicht explizit angeben müssen, werden
     <td><pre lang="fsharp"><code>let function1 x : [&lt;return: Obsolete&gt;] int = x + 1</code></pre></td>
   </tr>
   <tr>
-    <td>-Feld</td>
+    <td>Feld</td>
     <td><pre lang="fsharp"><code>[&lt;field: DefaultValue&gt;] val mutable x: int</code></pre></td>
   </tr>
   <tr>
-    <td>Eigenschaft</td>
+    <td>property</td>
     <td><pre lang="fsharp"><code>[&lt;property: Obsolete&gt;] this.MyProperty = x</code></pre></td>
   </tr>
   <tr>
-    <td>Parameter</td>
+    <td>param</td>
     <td><pre lang="fsharp"><code>member this.MyMethod([&lt;param: Out&gt;] x : ref&lt;int&gt;) = x := 10</code></pre></td>
   </tr>
   <tr>
-    <td>Typ</td>
+    <td>type</td>
     <td>
         <pre lang="fsharp"><code>
-[&lt;type: StructLayout(Sequential)&gt;]
+[&lt;type: StructLayout(LayoutKind.Sequential)&gt;]
 type MyStruct =
-struct
-x : byte
-y : int
-end</code></pre>
+  struct
+    val x : byte
+    val y : int
+  end</code></pre>
     </td>
   </tr>
 </table>
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [F#-Sprachreferenz](index.md)

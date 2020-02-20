@@ -7,12 +7,12 @@ helpviewer_keywords:
 - deploying [WCF Data Services
 - developing applications [WCF Data Services]
 ms.assetid: 6557c0e3-5aea-4f6e-bc14-77ad317a168b
-ms.openlocfilehash: e34f7c8a0194e3901453923530a5cd07202801f6
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: 1a017267c034fa1d6ea522855b7e0e7f056637ac
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75937460"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77504024"
 ---
 # <a name="develop-and-deploy-wcf-data-services"></a>Entwickeln und Bereitstellen von WCF Data Services
 
@@ -80,7 +80,7 @@ Beachten Sie beim Entwickeln eines Datendiensts die folgenden Hinweise:
 
 - Ein HTTP-Überprüfungsprogramm kann beim Debuggen eines Datendiensts hilfreich sein, da es Ihnen die Möglichkeit bietet, den Inhalt von Anforderungs- und Antwortnachrichten zu überprüfen. Zum Überprüfen von HTTP-Anforderungen an den Datendienst und HTTP-Antworten vom Datendienst kann eine beliebige Netzwerkpaketanalyse verwendet werden, die die Anzeige von Rohpaketen unterstützt.
 
-- Wenn Sie einen Datendienst Debuggen, können Sie weitere Informationen zu einem Fehler vom Datendienst als während des normalen Vorgangs abrufen. Sie können zusätzliche Fehlerinformationen vom Datendienst abrufen, indem Sie die <xref:System.Data.Services.DataServiceConfiguration.UseVerboseErrors%2A> -Eigenschaft in der <xref:System.Data.Services.DataServiceConfiguration> auf `true` festlegen und die <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A> -Eigenschaft des <xref:System.ServiceModel.Description.ServiceDebugBehavior> -Attributs der Datendienstklasse auf `true`festlegen. Weitere Informationen finden Sie unter WCF Data Services nach dem [Debuggen](https://blogs.msdn.microsoft.com/phaniraj/?m=20086). Sie können die Ablauf Verfolgung auch in WCF aktivieren, um Ausnahmen anzuzeigen, die in der http-Messaging Schicht ausgelöst werden. Weitere Informationen finden Sie unter [Configuring Tracing](../../wcf/diagnostics/tracing/configuring-tracing.md).
+- Wenn Sie einen Datendienst Debuggen, können Sie weitere Informationen zu einem Fehler vom Datendienst als während des normalen Vorgangs abrufen. Sie können zusätzliche Fehlerinformationen vom Datendienst abrufen, indem Sie die <xref:System.Data.Services.DataServiceConfiguration.UseVerboseErrors%2A> -Eigenschaft in der <xref:System.Data.Services.DataServiceConfiguration> auf `true` festlegen und die <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A> -Eigenschaft des <xref:System.ServiceModel.Description.ServiceDebugBehavior> -Attributs der Datendienstklasse auf `true`festlegen. Weitere Informationen finden Sie unter WCF Data Services nach dem [Debuggen](https://docs.microsoft.com/archive/blogs/phaniraj/debugging-wcf-data-services). Sie können die Ablauf Verfolgung auch in WCF aktivieren, um Ausnahmen anzuzeigen, die in der http-Messaging Schicht ausgelöst werden. Weitere Informationen finden Sie unter [Configuring Tracing](../../wcf/diagnostics/tracing/configuring-tracing.md).
 
 - Ein Datendienst wird normalerweise als ASP.NET-Anwendungsprojekt entwickelt, Sie können den Datendienst aber auch als ASP.NET-Website Projekt in Visual Studio erstellen. Informationen zu den Unterschieden zwischen den beiden Projekttypen finden Sie unter [Webanwendungs Projekte im Vergleich zu Website Projekten in Visual Studio](https://docs.microsoft.com/previous-versions/aspnet/dd547590(v=vs.110)).
 
@@ -125,7 +125,7 @@ Beachten Sie beim Bereitstellen eines Datendiensts die folgenden Hinweise:
 
 - Da WCF Data Services eine einfache WCF-Implementierung enthält, können Sie Windows Server AppFabric verwenden, um einen Datendienst zu überwachen, der unter IIS unter Windows Server bereitgestellt wird. Weitere Informationen zur Verwendung von Windows Server AppFabric zum Überwachen eines Daten dienstanzdienstanbieter finden Sie im Beitrag nach [Verfolgung WCF Data Services mit Windows Server AppFabric](https://docs.microsoft.com/archive/blogs/rjacobs/tracking-wcf-data-services-with-windows-server-appfabric).
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Hosten des Datendiensts](hosting-the-data-service-wcf-data-services.md)
 - [Sichern von WCF Data Services](securing-wcf-data-services.md)
