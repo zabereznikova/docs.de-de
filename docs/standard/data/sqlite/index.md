@@ -2,12 +2,12 @@
 title: Übersicht
 ms.date: 12/13/2019
 description: Eine Übersicht über Microsoft.Data.Sqlite
-ms.openlocfilehash: a5dc1366cc0ddfcd5501e26bf2a994456bcd5d98
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: e84c68f0615f187e8dea7ab87ac917c0ad796a1c
+ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75353466"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77543598"
 ---
 # <a name="microsoftdatasqlite-overview"></a>Übersicht über Microsoft.Data.Sqlite
 
@@ -17,13 +17,13 @@ Microsoft.Data.Sqlite ist ein einfacher [ADO.NET](../../../framework/data/adonet
 
 Die neuste stabile Version ist unter [NuGet](https://www.nuget.org/packages/Microsoft.Data.Sqlite) verfügbar.
 
-### <a name="net-core-clitabnetcore-cli"></a>[.NET Core-CLI](#tab/netcore-cli)
+### <a name="net-core-cli"></a>[.NET Core-CLI](#tab/netcore-cli)
 
 ```dotnetcli
 dotnet add package Microsoft.Data.Sqlite
 ```
 
-### <a name="visual-studiotabvisual-studio"></a>[Visual Studio](#tab/visual-studio)
+### <a name="visual-studio"></a>[Visual Studio](#tab/visual-studio)
 
 ``` PowerShell
 Install-Package Microsoft.Data.Sqlite
@@ -40,5 +40,5 @@ Diese Bibliothek implementiert die allgemeinen ADO.NET-Abstraktionen für Verbin
 ## <a name="see-also"></a>Siehe auch
 
 * [Verbindungszeichenfolgen](connection-strings.md)
-* [API-Referenz](/dotnet/api/?view=msdata-sqlite-3.0.0)
+* [API-Referenz](/dotnet/api/?view=msdata-sqlite-3.0)
 * [SQL-Syntax](https://www.sqlite.org/lang.html)

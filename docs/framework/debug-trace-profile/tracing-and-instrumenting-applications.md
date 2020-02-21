@@ -13,12 +13,12 @@ helpviewer_keywords:
 - performance monitoring, tracing code
 - Trace class, instrumentation for .NET applications
 ms.assetid: 773b6fc4-9013-4322-b728-5dec7a72e743
-ms.openlocfilehash: 1dd7317e38b6bee44dda75319c9f7c2a6567e3b4
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: 2dcdbaf50ed053d43fc2df2c80fe7688e7b3e51f
+ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77216041"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77542610"
 ---
 # <a name="tracing-and-instrumenting-applications"></a>Ablaufverfolgung und Instrumentieren von Anwendungen
 Die Ablaufverfolgung ist eine Möglichkeit, die Ausführung der Anwendung zu überwachen, während sie ausgeführt wird. Beim Entwickeln können Sie eine .NET Framework-Anwendung mit einer Ablaufverfolgungs- und Debugginginstrumentierung versehen, die sowohl beim Entwickeln als auch nach der Bereitstellung der Anwendung eingesetzt werden kann. Mit den Klassen <xref:System.Diagnostics.Trace?displayProperty=nameWithType>, <xref:System.Diagnostics.Debug?displayProperty=nameWithType> und <xref:System.Diagnostics.TraceSource?displayProperty=nameWithType> können Sie Informationen zu Fehlern und zur Anwendungsausführung in Protokollen, Textdateien oder auf anderen Medien für eine spätere Analyse aufzeichnen.  
@@ -97,7 +97,7 @@ System.Diagnostics.Debug.WriteLine("Hello World!");
   
 7. Aktivieren Sie den entsprechenden Ablaufverfolgungsschalter, wenn zur Laufzeit ein Problem auftritt. Weitere Informationen finden Sie unter [Konfigurieren von Ablaufverfolgungsschaltern](how-to-create-initialize-and-configure-trace-switches.md).  
   
-     Der Ablaufverfolgungscode schreibt Ablaufverfolgungsmeldungen in ein angegebenes Ziel, z. B. einen Bildschirm, eine Textdatei oder ein Ereignisprotokoll. Das Ziel wird durch den Typ des in der **Trace.Listeners**-Auflistung eingetragenen Listeners bestimmt.  
+     Der Ablaufverfolgungscode schreibt Ablaufverfolgungsmeldungen in ein angegebenes Ziel, z. B. einen Bildschirm, eine Textdatei oder ein Ereignisprotokoll. Der Typ des Listener, den Sie in der <xref:System.Diagnostics.Trace.Listeners%2A?displayProperty=nameWithType> Auflistung enthalten haben, bestimmt das Ziel.  
   
 8. Analysieren Sie die Ablaufverfolgungsmeldungen, um das Problem in der Anwendung zu ermitteln und zu verstehen.  
   
@@ -118,25 +118,25 @@ System.Diagnostics.Debug.WriteLine("Hello World!");
   
  Die sechs <xref:System.Diagnostics.Debug>-Member und <xref:System.Diagnostics.Trace>-Methoden, die Ablaufverfolgungsinformationen schreiben, sind in der folgenden Tabelle aufgeführt.  
   
-|Methode|Output|  
+|Methode|Ausgabe|  
 |------------|------------|  
-|**Assert**|Der angegebene Text oder, falls keiner angegeben ist, die Aufrufliste. Die Ausgabe wird nur geschrieben, wenn die als Argument in der **Assert**-Anweisung angegebene Bedingung **FALSE** ist.|  
-|**Fehler**|Der angegebene Text oder, falls keiner angegeben ist, die Aufrufliste.|  
-|**Schreiben**|Der angegebene Text.|  
-|**WriteIf**|Der angegebene Text, wenn die als Argument in der **WriteIf**-Anweisung angegebene Bedingung erfüllt ist.|  
-|**WriteLine**|Der angegebene Text und ein Wagenrücklaufzeichen.|  
-|**WriteLineIf**|Der angegebene Text und ein Wagenrücklaufzeichen, wenn die als Argument in der **WriteLineIf**-Anweisung angegebene Bedingung erfüllt ist.|  
+|`Assert`|Der angegebene Text oder, falls keiner angegeben ist, die Aufrufliste. Die Ausgabe wird nur geschrieben, wenn die als Argument in der `Assert`-Anweisung angegebene Bedingung **false**ist.|  
+|`Fail`|Der angegebene Text oder, falls keiner angegeben ist, die Aufrufliste.|  
+|`Write`|Der angegebene Text.|  
+|`WriteIf`|Der angegebene Text, wenn die als Argument in der `WriteIf`-Anweisung angegebene Bedingung erfüllt ist.|  
+|`WriteLine`|Der angegebene Text und ein Wagenrücklaufzeichen.|  
+|`WriteLineIf`|Der angegebene Text und ein Wagen Rücklauf Zeichen, wenn die als Argument in der `WriteLineIf`-Anweisung angegebene Bedingung erfüllt ist.|  
   
- Alle Listener in der <xref:System.Diagnostics.Trace.Listeners%2A>-Auflistung empfangen die Meldungen, die in der obigen Tabelle beschrieben sind, doch können die ausgeführten Aktionen variieren, je nachdem, welche Art von Listener die Meldung empfängt. Beispielsweise zeigt <xref:System.Diagnostics.DefaultTraceListener> ein Dialogfeld zur Assertion an, wenn er eine Benachrichtigung über einen **Fehler** oder fehlgeschlagenen **Assert** empfängt, wohingegen <xref:System.Diagnostics.TextWriterTraceListener> lediglich die Ausgabe in seinen Stream schreibt.  
+ Alle Listener in der <xref:System.Diagnostics.Trace.Listeners%2A>-Auflistung empfangen die Meldungen, die in der obigen Tabelle beschrieben sind, doch können die ausgeführten Aktionen variieren, je nachdem, welche Art von Listener die Meldung empfängt. Beispielsweise zeigt das <xref:System.Diagnostics.DefaultTraceListener> ein Dialogfeld für die Übersetzung an, wenn es eine `Fail` oder eine fehlerhafte `Assert` Benachrichtigung empfängt, aber ein <xref:System.Diagnostics.TextWriterTraceListener> schreibt die Ausgabe einfach in den Stream.  
   
  Durch Implementieren eines eigenen Listeners können Sie benutzerdefinierte Ergebnisse erzielen. Ein benutzerdefinierter Ablaufverfolgungslistener könnte die Meldungen z. B. in einem Meldungsfeld anzeigen oder die Verbindung zu einer Datenbank herstellen, in der die Meldungen zu einer Tabelle hinzugefügt werden. Alle benutzerdefinierten Listener sollten die sechs oben genannten Methoden unterstützen. Weitere Informationen zum Erstellen entwicklerdefinierter Listener finden Sie unter <xref:System.Diagnostics.TraceListener> in der Referenz zu .NET Framework.  
   
- Die Methoden **Write** und **WriteLine** schreiben immer den von Ihnen angegebenen Text. **Assert**, **WriteIf** und **WriteLineIf** erfordern ein boolesches Argument, das steuert, ob der angegebene Text geschrieben wird oder nicht. Der angegebene Text wird nur geschrieben, wenn der Ausdruck **TRUE** (bei **WriteIf** und **WriteLineIf**) oder **FALSE** (bei **Assert**) lautet. Die **Fehler**-Methode schreibt immer den angegebenen Text. Weitere Informationen finden Sie unter [Vorgehensweise: Hinzufügen von Ablaufverfolgungsanweisungen zu Anwendungscode](how-to-add-trace-statements-to-application-code.md) und in der .NET Framework-Referenz.  
+ Die Methoden `Write` und `WriteLine` schreiben immer den Text, den Sie angeben. `Assert`, `WriteIf`und `WriteLineIf` erfordern ein boolesches Argument, das steuert, ob der angegebene Text geschrieben wird. der angegebene Text wird nur geschrieben, wenn der Ausdruck **true** ist (für `WriteIf` und `WriteLineIf`) oder **false** (für `Assert`). Die `Fail`-Methode schreibt immer den angegebenen Text. Weitere Informationen finden Sie unter [Vorgehensweise: Hinzufügen von Ablaufverfolgungsanweisungen zu Anwendungscode](how-to-add-trace-statements-to-application-code.md) und in der .NET Framework-Referenz.  
   
 ## <a name="security-concerns"></a>Sicherheitsaspekte  
  Wenn Sie vor der Bereitstellung einer ASP.NET-Anwendung nicht die Ablaufverfolgung und das Debuggen deaktivieren, könnte die Anwendung Informationen über sich selbst offen legen, die von böswilligen Programmen missbraucht werden könnten. Weitere Informationen finden Sie unter [Vorgehensweise: Bedingtes Kompilieren mit Ablaufverfolgung und Debuggen](how-to-compile-conditionally-with-trace-and-debug.md), [Kompilieren und Erstellen](/visualstudio/ide/compiling-and-building-in-visual-studio) und [Vorgehensweise: Erstellen, Initialisieren und Konfigurieren von Ablaufverfolgungsschaltern](how-to-create-initialize-and-configure-trace-switches.md). Das Debuggen kann auch über Internetinformationendienste (IIS) konfiguriert werden.  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Diagnostics.Trace>
 - <xref:System.Diagnostics.TraceSource>
