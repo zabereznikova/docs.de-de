@@ -13,10 +13,10 @@ ms.lasthandoff: 09/14/2019
 ms.locfileid: "70989814"
 ---
 # <a name="how-to-create-a-state-machine-workflow"></a>Vorgehensweise: Erstellen eines Zustandsautomatworkflows
-Workflows können aus integrierten Aktivitäten und aus benutzerdefinierten Aktivitäten erstellt werden. In diesem Thema wird Schritt für Schritt beschrieben, wie Sie einen Workflow erstellen, der sowohl <xref:System.Activities.Statements.StateMachine> integrierte Aktivitäten wie die-Aktivität als auch die [benutzerdefinierten Aktivitäten aus der vorherigen Vorgehensweise verwendet: Erstellen Sie ein](how-to-create-an-activity.md) Aktivitäts Thema. Der Workflow erstellt ein Spiel, das Zahlen errät.  
+Workflows können aus integrierten Aktivitäten und aus benutzerdefinierten Aktivitäten erstellt werden. In diesem Thema wird Schritt für Schritt beschrieben, wie Sie einen Workflow erstellen, der integrierte Aktivitäten verwendet, z. b. die <xref:System.Activities.Statements.StateMachine> Aktivität, und die benutzerdefinierten Aktivitäten aus dem vorherigen [Gewusst wie: Erstellen Sie eine Aktivität](how-to-create-an-activity.md) Thema. Der Workflow erstellt ein Spiel, das Zahlen errät.  
   
 > [!NOTE]
-> Ein Thema im Lernprogramm "Erste Schritte" hängt jeweils von den vorherigen Themen ab. Um dieses Thema abzuschließen, müssen Sie zuerst [Folgendes ausführen: Erstellen Sie eine](how-to-create-an-activity.md)Aktivität.  
+> Ein Thema im Lernprogramm "Erste Schritte" hängt jeweils von den vorherigen Themen ab. Um dieses Thema abzuschließen, müssen Sie zuerst [Gewusst wie: Erstellen Sie eine Aktivitäts](how-to-create-an-activity.md).  
   
 > [!NOTE]
 > Eine abgeschlossene Version des Tutorials können Sie im [Windows Workflow Foundation (WF45) Getting Started Tutorial](https://go.microsoft.com/fwlink/?LinkID=248976)herunterladen.  
@@ -27,7 +27,7 @@ Workflows können aus integrierten Aktivitäten und aus benutzerdefinierten Akti
   
 2. Wählen Sie im Knoten **installierte**, **Allgemeine Elemente** die Option **Workflow**aus. Wählen Sie in der Liste **Workflow** die Option **Aktivität** aus.  
   
-3. Geben `StateMachineNumberGuessWorkflow` Sie im Feld **Name** ein, und klicken Sie auf **Hinzufügen**.  
+3. Geben Sie im Feld **Name** `StateMachineNumberGuessWorkflow` ein, und klicken Sie auf **Hinzufügen**.  
   
 4. Ziehen Sie eine **StateMachine** -Aktivität aus dem Abschnitt **Zustands Automat** der **Toolbox** , und legen Sie Sie auf der Bezeichnung **Aktivität hier ablegen** auf der Workflow Entwurfs Oberfläche ab.  
   
@@ -39,11 +39,11 @@ Workflows können aus integrierten Aktivitäten und aus benutzerdefinierten Akti
   
 3. Klicken Sie auf **Argument erstellen**.  
   
-4. Geben `MaxNumber` Sie in das Feld **Name** ein, wählen Sie **in** der Dropdown Liste **Richtung** die Option in aus, wählen Sie **Int32** aus der Dropdown Liste **Argumenttyp** aus, und drücken Sie dann die EINGABETASTE, um das Argument zu speichern.  
+4. Geben Sie `MaxNumber` in das Feld **Name** ein, wählen Sie **in** der Dropdown Liste **Richtung** die Option ein aus, wählen Sie in der Dropdown Liste **Argumenttyp** die Option **Int32** aus, und drücken Sie dann die EINGABETASTE, um das Argument zu speichern  
   
 5. Klicken Sie auf **Argument erstellen**.  
   
-6. Geben `Turns` Sie in das Feld **Name** unter dem `MaxNumber` neu hinzugefügten Argument ein, wählen Sie aus der Dropdown Liste **Richtung** die Option **aus** , wählen Sie in der Dropdown Liste **Argumenttyp** die Option **Int32** aus, und drücken Sie dann die EINGABETASTE.  
+6. Geben Sie `Turns` in das Feld **Name** ein, das sich unterhalb des neu hinzugefügten `MaxNumber` Arguments befindet, wählen Sie aus der Dropdown Liste **Richtung** die Option **out** aus, wählen Sie **Int32** aus der Dropdown Liste **Argumenttyp** aus, und drücken Sie dann die EINGABETASTE.  
   
 7. Klicken Sie Links unten im Aktivitäts-Designer auf **Argumente** , um den Bereich **Argumente** zu schließen.  
   
@@ -52,26 +52,26 @@ Workflows können aus integrierten Aktivitäten und aus benutzerdefinierten Akti
 9. Klicken Sie auf **Variable erstellen**.  
   
     > [!TIP]
-    > Wenn das Feld **Variable erstellen** nicht angezeigt wird, klicken <xref:System.Activities.Statements.StateMachine> Sie auf der Oberfläche des Workflow-Designers auf die-Aktivität, um Sie auszuwählen.  
+    > Wenn das Feld **Variable erstellen** nicht angezeigt wird, klicken Sie auf der Oberfläche des Workflow-Designers auf die <xref:System.Activities.Statements.StateMachine> Aktivität, um Sie auszuwählen.  
   
-10. Geben `Guess` Sie in das Feld **Name** ein, wählen Sie **Int32** aus der Dropdown Liste **Variablentyp** aus, und drücken Sie dann die EINGABETASTE, um die Variable zu speichern  
+10. Geben Sie `Guess` in das Feld **Name** ein, wählen Sie **Int32** aus der Dropdown Liste **Variablentyp** aus, und drücken Sie dann die EINGABETASTE, um die Variable zu speichern  
   
 11. Klicken Sie auf **Variable erstellen**.  
   
-12. Geben `Target` Sie in das Feld **Name** ein, wählen Sie **Int32** aus der Dropdown Liste **Variablentyp** aus, und drücken Sie dann die EINGABETASTE, um die Variable zu speichern  
+12. Geben Sie `Target` in das Feld **Name** ein, wählen Sie **Int32** aus der Dropdown Liste **Variablentyp** aus, und drücken Sie dann die EINGABETASTE, um die Variable zu speichern  
   
 13. Klicken Sie Links unten im Aktivitäts-Designer auf **Variablen** , um den Bereich **Variablen** zu schließen.  
   
 ### <a name="to-add-the-workflow-activities"></a>So fügen Sie die Workflowaktivitäten hinzu  
   
-1. Klicken Sie auf **state1** , um es auszuwählen. Ändern Sie`Initialize Target`im **Fenster Eigenschaften**den **Display Name** in.  
+1. Klicken Sie auf **state1** , um es auszuwählen. Ändern Sie im **Fenster Eigenschaften**den **Display Name** in `Initialize Target`.  
   
     > [!TIP]
     > Wenn das **Fenster Eigenschaften** nicht angezeigt wird, wählen Sie im Menü **Ansicht** die Option **Eigenschaften Fenster** aus.  
   
 2. Doppelklicken Sie auf den neu umbenannten Zustand **Ziel initialisieren** im Workflow-Designer, um ihn zu erweitern.  
   
-3. Ziehen Sie eine **assign** -Aktivität aus dem Abschnitt **primitive** der **Toolbox** , und legen Sie Sie auf dem Abschnitt **Entry** des Zustands ab. Geben `Target` Sie in das Feld **an** und den folgenden Ausdruck in das Feld  **C# Ausdruck eingeben** oder **VB-Ausdruck eingeben ein** .  
+3. Ziehen Sie eine **assign** -Aktivität aus dem Abschnitt **primitive** der **Toolbox** , und legen Sie Sie auf dem Abschnitt **Entry** des Zustands ab. Geben Sie `Target` in das Feld **an** und den folgenden Ausdruck in das Feld  **C# Ausdruck eingeben** oder **VB-Ausdruck eingeben ein** .  
   
     ```vb  
     New System.Random().Next(1, MaxNumber + 1)  
@@ -104,11 +104,11 @@ Workflows können aus integrierten Aktivitäten und aus benutzerdefinierten Akti
   
 9. Ziehen Sie eine **assign** -Aktivität aus dem Abschnitt **primitive** der **Toolbox** , und legen Sie Sie auf dem **Exit** -Abschnitt des Zustands ab.  
   
-10. Geben `Turns` Sie im Feld **an** und `Turns + 1` im Feld  **C# Ausdruck eingeben** oder **VB-Ausdruck eingeben ein** .  
+10. Geben Sie `Turns` in das Feld **an** ein **C#** , und `Turns + 1` Sie in das Feld Ausdruck eingeben oder **VB-Ausdruck eingeben** .  
   
 11. Kehren Sie im Workflow-Designer zur Ansicht Gesamt Zustands Automat zurück, indem Sie in der Breadcrumb-Anzeige am oberen Rand des Workflow-Designers auf **StateMachine** klicken.  
   
-12. Ziehen Sie eine **FinalState** -Aktivität aus dem Abschnitt **Zustands Automat** der **Toolbox**, zeigen Sie mit dem Mauszeiger auf den Zustand **Enter Guess** , und legen Sie ihn auf dem Dreieck ab, das rechts neben dem Zustand **Eingabe Raten** angezeigt wird, sodass ein Übergang wird zwischen " **Guess** " und " **FinalState**" erstellt.  
+12. Ziehen Sie eine **FinalState** -Aktivität aus dem Abschnitt **Zustands Automat** der **Toolbox**, zeigen Sie mit dem Mauszeiger auf den Status **Enter Guess** , und legen Sie ihn auf dem Dreieck ab, das rechts neben dem Status **Eingabe Raten** angezeigt wird, sodass ein Übergang zwischen **Enter Guess** und **FinalState**erstellt wird.  
   
 13. Der Standardname des Übergangs ist **T2**. Klicken Sie auf den Übergang im Workflow-Designer, um ihn auszuwählen, und legen Sie dessen **Display Name** auf **Guess correct**fest. Klicken Sie anschließend auf **FinalState**, und ziehen Sie ihn nach rechts, damit genügend Platz vorhanden ist, damit der vollständige Übergangs Name angezeigt wird, ohne einen der beiden Zustände zu überlagern. Das vereinfacht die Ausführung der verbleibenden Schritte im Lernprogramm.  
   
@@ -116,7 +116,7 @@ Workflows können aus integrierten Aktivitäten und aus benutzerdefinierten Akti
   
 15. Ziehen Sie eine Aktivität "read **int** " aus dem Abschnitt " **nummeriguess Workflow Activities** " der **Toolbox** , und legen Sie Sie im **triggerabschnitt** des Übergangs ab.  
   
-16. `Guess` Geben SieimEigenschaftenFensterfürdieAktivität"Readint"dieAnführungszeichenindasFeldBookmarkName-EigenschaftsWertein,undgebenSieindasFeldErgebnisEigenschaftsWert`"EnterGuess"` ein.  
+16. Geben Sie im **Eigenschaften Fenster** für die Aktivität "read **int** " `"EnterGuess"` einschließlich der Anführungszeichen in das Feld **BookmarkName** -Eigenschafts Wert ein, und geben Sie `Guess` in das Feld **Ergebnis** Eigenschafts Wert ein.  
   
 17. Geben Sie den folgenden Ausdruck in das Feld **Eigenschafts Wert des Bedingungs** Werts des Übergangs **erraten** ein.  
   
@@ -131,12 +131,12 @@ Workflows können aus integrierten Aktivitäten und aus benutzerdefinierten Akti
 18. Kehren Sie im Workflow-Designer zur Ansicht Gesamt Zustands Automat zurück, indem Sie in der Breadcrumb-Anzeige am oberen Rand des Workflow-Designers auf **StateMachine** klicken.  
   
     > [!NOTE]
-    > Ein Übergang erfolgt, wenn das Triggerereignis empfangen wird und <xref:System.Activities.Statements.Transition.Condition%2A>, falls vorhanden, `True` ergibt. Wenn der Benutzer `Guess` für diesen Übergang mit dem zufällig generierten `Target`übereinstimmt, übergibt die Steuerung an den **FinalState** , und der Workflow wird beendet.  
+    > Ein Übergang erfolgt, wenn das Triggerereignis empfangen wird und <xref:System.Activities.Statements.Transition.Condition%2A>, falls vorhanden, `True` ergibt. Wenn die `Guess` des Benutzers mit der zufällig generierten `Target`übereinstimmt, übergibt die Steuerung für diesen Übergang an den **FinalState** , und der Workflow wird beendet.  
   
 19. Abhängig davon, ob der Schätzwert richtig ist, sollte der Workflow für einen anderen Versuch entweder in den **FinalState** oder zurück in den Zustand " **Enter Guess** " übergehen. Beide Übergänge verwenden denselben-Triggern, der darauf wartet, dass die Schätzung des Benutzers über die Read **int** -Aktivität empfangen wird. Dies wird als gemeinsamer Übergang bezeichnet. Um einen freigegebenen Übergang zu erstellen, klicken Sie auf den Kreis, der den Anfang des **korrekten Guess** -Übergangs angibt, und ziehen Sie ihn in den gewünschten Zustand. In diesem Fall handelt es sich bei dem Übergang um einen selbst Übergang. ziehen Sie daher den Startpunkt des über-/Unterbrechungs **-Übergangs,** und legen Sie ihn wieder am unteren Ende des Zustands für die **Eingabe Vermutung** ab Nachdem Sie den Übergang erstellt haben, wählen Sie ihn im Workflow-Designer aus, und legen Sie dessen Eigenschaft **Display Name** auf nicht **richtig**fest.  
   
     > [!NOTE]
-    > Freigegebene Übergänge können auch aus dem Übergangs-Designer erstellt werden, indem Sie im unteren Bereich des Übergangs-Designers auf frei **gegebenen triggerübergang hinzufügen** klicken und dann den gewünschten Zielzustand aus den **verfügbaren Zuständen auswählen, um eine Verbindung herzustellen** . Dropdown.  
+    > Freigegebene Übergänge können auch aus dem Übergangs-Designer erstellt werden, indem Sie im unteren Bereich des Übergangs-Designers auf frei **gegebenen triggerübergang hinzufügen** klicken und dann den gewünschten Ziel Status aus der Dropdown Liste **Verfügbare Zustände zum Verbinden** auswählen.  
   
     > [!NOTE]
     > Wenn die <xref:System.Activities.Statements.Transition.Condition%2A>-Aktivität eines Übergangs mit `false` ausgewertet wird (oder alle Bedingungen eines Übergangs mit freigegebenem Trigger mit `false` ausgewertet werden), erfolgt der Übergang nicht, und die Trigger aller Übergänge aus dem Zustand werden neu geplant. In diesem Lernprogramm kann diese Situation aufgrund der Konfigurationsmethode für die Bedingungen (es gibt spezielle Aktionen für richtige oder falsche Schätzungen) nicht auftreten.  
@@ -185,7 +185,7 @@ Workflows können aus integrierten Aktivitäten und aus benutzerdefinierten Akti
   
 1. Drücken Sie STRG+UMSCHALT+B, um die Projektmappe zu erstellen.  
   
-     Anweisungen zum Ausführen des Workflows finden Sie im nächsten Thema [Vorgehensweise: Ausführen eines Workflows](how-to-run-a-workflow.md). Wenn Sie bereits die [folgenden Schritte abgeschlossen haben: Führen Sie einen](how-to-run-a-workflow.md) Workflow Schritt mit einem anderen Workflow Workflow aus, und möchten Sie ihn mit dem Zustandsautomatworkflow aus diesem Schritt ausführen, gehen Sie zum Abschnitt [so [Erstellen und führen Sie die Anwendung](how-to-run-a-workflow.md#BKMK_ToRunTheApplication) aus: Ausführen eines Workflows](how-to-run-a-workflow.md).  
+     Anweisungen zum Ausführen des Workflows finden Sie im nächsten Thema [Vorgehensweise: Führt einen Workflow](how-to-run-a-workflow.md)aus. Wenn Sie die [bereits abgeschlossen haben, Vorgehensweise: Führen Sie einen Workflow](how-to-run-a-workflow.md) Schritt mit einem anderen Workflow Workflow aus, und möchten Sie ihn mit dem Zustandsautomatworkflow aus diesem Schritt ausführen, gehen Sie zum Abschnitt so [Erstellen und führen Sie die Anwendung](how-to-run-a-workflow.md#BKMK_ToRunTheApplication) aus [Gewusst wie: Führt einen Workflow aus.](how-to-run-a-workflow.md)  
   
 ## <a name="see-also"></a>Siehe auch
 
@@ -194,5 +194,5 @@ Workflows können aus integrierten Aktivitäten und aus benutzerdefinierten Akti
 - [Windows Workflow Foundation-Programmierung](programming.md)
 - [Entwerfen von Workflows](designing-workflows.md)
 - [Tutorial mit ersten Schritten](getting-started-tutorial.md)
-- [Vorgehensweise: Erstellen einer Aktivität](how-to-create-an-activity.md)
-- [Vorgehensweise: Ausführen eines Workflows](how-to-run-a-workflow.md)
+- [Vorgehensweise: Erstellen einer Aktivitäts](how-to-create-an-activity.md)
+- [Vorgehensweise: Workflow ausführen](how-to-run-a-workflow.md)
