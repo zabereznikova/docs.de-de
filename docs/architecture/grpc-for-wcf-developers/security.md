@@ -2,31 +2,40 @@
 title: 'Sicherheit in GrpC-Anwendungen: GrpC für WCF-Entwickler'
 description: Übersicht über die Authentifizierung und Autorisierung von Anrufen und Kanälen in GrpC.
 ms.date: 09/02/2019
-ms.openlocfilehash: b88ed0c01d1ca4432c7e4fe7115246f4227159df
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: d5804ad5de4a834eb81b90fa1ea7a61969a0b42f
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73967251"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503418"
 ---
 # <a name="security-in-grpc-applications"></a>Sicherheit in gRPC-Anwendungen
 
-In jedem realen Szenario ist das Sichern von Anwendungen und Diensten von entscheidender Bedeutung. Die Sicherheit deckt drei wichtige Bereiche ab: das Verschlüsseln von Netzwerk Datenverkehr, um zu verhindern, dass Sie von böswilligen Actors abgefangen werden. Authentifizieren von Clients und Servern zum Einrichten von Identität und Vertrauensstellung und autorisierender Clients zum Steuern des Zugriffs auf Systeme und Anwenden von Berechtigungen basierend auf der Identität.
+In jedem realen Szenario ist das Sichern von Anwendungen und Diensten von entscheidender Bedeutung. Sicherheit deckt drei wichtige Bereiche ab: 
+
+* Verschlüsseln von Netzwerk Datenverkehr, um zu verhindern, dass böswillige Hacker Sie abfangen.
+* Authentifizieren von Clients und Servern, um Identität und Vertrauensstellung einzurichten.
+* Autorisierungs Clients zum Steuern des Zugriffs auf Systeme und Anwenden von Berechtigungen basierend auf der Identität.
 
 > [!NOTE]
-> Bei der **Authentifizierung** wird die Identität eines Clients oder Servers festgelegt. Bei der **Autorisierung** wird bestimmt, ob ein Client über die Berechtigung verfügt, auf eine Ressource zuzugreifen oder einen Befehl auszugeben.
+> Bei der *Authentifizierung* wird die Identität eines Clients oder Servers festgelegt. Bei der *Autorisierung* wird bestimmt, ob ein Client über die Berechtigung verfügt, auf eine Ressource zuzugreifen oder einen Befehl auszugeben.
 
-In diesem Kapitel werden die Funktionen für die Authentifizierung und Autorisierung in GrpC für ASP.net Core behandelt und die Netzwerksicherheit mithilfe von TLS-verschlüsselten Verbindungen erörtert.
+In diesem Kapitel werden die Funktionen für die Authentifizierung und Autorisierung in GrpC für ASP.net Core behandelt. Außerdem wird die Netzwerksicherheit über TLS-verschlüsselte Verbindungen erörtert.
 
 ## <a name="wcf-authentication-and-authorization"></a>WCF-Authentifizierung und-Autorisierung
 
-In WCF wurden Authentifizierung und Autorisierung je nach verwendeter Transporte und Bindungen auf unterschiedliche Weise gehandhabt. WCF unterstützte verschiedene WS-\*-Sicherheitsstandards sowie die Windows-Authentifizierung für HTTP-Dienste, die in IIS oder NetTcp-Diensten zwischen Windows-Systemen ausgeführt werden.
+In Windows Communication Foundation (WCF) wurden die Authentifizierung und die Autorisierung auf unterschiedliche Weise verarbeitet, je nachdem, welche Transporte und Bindungen verwendet werden. WCF unterstützte verschiedene WS-\*-Sicherheitsstandards. Außerdem wird die Windows-Authentifizierung für HTTP-Dienste unterstützt, die in IIS oder NetTcp-Diensten zwischen Windows-Systemen ausgeführt werden
 
 ## <a name="grpc-authentication-and-authorization"></a>GrpC-Authentifizierung und-Autorisierung
 
-die GrpC-Authentifizierung und-Autorisierung funktioniert auf zwei Ebenen. Die Authentifizierung/Autorisierung auf aufrufsebene wird in der Regel mithilfe von Token gehandhabt, die bei der Anforderung in Metadaten angewendet werden. Bei der Authentifizierung auf Kanal Ebene wird ein Client Zertifikat verwendet, das auf der Verbindungs Ebene angewendet wird. Außerdem können Authentifizierungs-/autorisierungsanmelde-Anmelde Informationen auf Aufrufebene enthalten sein, die automatisch auf jeden Kanal aufgerufen werden. Sie können einen oder beide dieser Mechanismen verwenden, um den Dienst zu sichern.
+die GrpC-Authentifizierung und-Autorisierung funktioniert auf zwei Ebenen:
 
-Die ASP.net Core-Implementierung von GrpC unterstützt die Authentifizierung und Autorisierung unter Verwendung der meisten Standard ASP.net Core Mechanismen:
+* Die Authentifizierung/Autorisierung auf aufrufsebene wird in der Regel durch Token verarbeitet, die beim Ausführen des Aufrufens in Metadaten angewendet werden. 
+* Bei der Authentifizierung auf Kanal Ebene wird ein Client Zertifikat verwendet, das auf der Verbindungs Ebene angewendet wird. Außerdem können Authentifizierungs-/autorisierungsanmelde-Anmelde Informationen auf Aufrufebene enthalten sein, die automatisch auf jeden Kanal aufgerufen werden. 
+
+Sie können einen oder beide dieser Mechanismen verwenden, um den Dienst zu sichern.
+
+Die ASP.net Core-Implementierung von GrpC unterstützt die Authentifizierung und Autorisierung über die meisten Standard ASP.net Core Mechanismen:
 
 - Rückruf Authentifizierung
   - Azure Active Directory
@@ -38,14 +47,14 @@ Die ASP.net Core-Implementierung von GrpC unterstützt die Authentifizierung und
 - Kanal Authentifizierung
   - Clientzertifikat
 
-Die Methoden zum Abrufen von Authentifizierungsmethoden basieren alle auf *Token*. Der einzige wirkliche Unterschied ist die Art und Weise, wie das Token generiert wird, und die Bibliotheken, die zum Überprüfen der Token im ASP.net Core Dienst verwendet werden.
+Die Methoden zum Abrufen von Authentifizierungsmethoden basieren alle auf *Token*. Der einzige wirkliche Unterschied ist die Art und Weise, wie die Token generiert werden, und die Bibliotheken, die zum Überprüfen der Token im ASP.net Core Dienst verwendet werden.
 
-Weitere Informationen finden Sie in der [Dokumentation zur Authentifizierung und Autorisierung auf Microsoft-Dokumentation](https://docs.microsoft.com/aspnet/core/grpc/authn-and-authz?view=aspnetcore-3.0).
+Weitere Informationen finden Sie im Artikel zur [Authentifizierung und Autorisierung](/aspnet/core/grpc/authn-and-authz) .
 
 > [!NOTE]
 > Wenn Sie GrpC über eine TLS-verschlüsselte HTTP/2-Verbindung verwenden, wird der gesamte Datenverkehr zwischen Clients und Servern verschlüsselt, auch wenn Sie keine Authentifizierung auf Kanal Ebene verwenden.
 
-In diesem Kapitel wird erläutert, wie Sie Anmelde Informationen und channelanmelde Informationen für einen GrpC-Dienst anwenden und wie Sie Anmelde Informationen von einem .net Core-GrpC-Client verwenden, um sich beim Dienst zu authentifizieren.
+In diesem Kapitel wird erläutert, wie Sie Anmelde Informationen und channelanmelde Informationen auf einen GrpC-Dienst anwenden. Außerdem wird gezeigt, wie Anmelde Informationen von einem .net Core-GrpC-Client verwendet werden, um sich beim Dienst zu authentifizieren.
 
 >[!div class="step-by-step"]
 >[Zurück](client-libraries.md)

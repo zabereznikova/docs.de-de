@@ -2,12 +2,12 @@
 title: Dienst-Netzen-GrpC für WCF-Entwickler
 description: Verwenden eines Dienst Netzes zum Weiterleiten und Ausgleichen von Anforderungen an GrpC-Dienste in einem Kubernetes-Cluster.
 ms.date: 09/02/2019
-ms.openlocfilehash: cc4855b1ed27e29076e4f13f5c5d3dffa63a6554
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: a29d6893e585c7eb60c847cef0149afeeaebcdab
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74711277"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503386"
 ---
 # <a name="service-meshes"></a>Dienst-Netzen
 
@@ -19,27 +19,27 @@ Ein Dienst Netz ist eine Infrastrukturkomponente, die die Steuerung der Routing 
 - Verschlüsselung
 - Überwachung
 
-Kubernetes Service-Netzen arbeiten durch Hinzufügen eines zusätzlichen Containers ( *Sidecar Proxy*) zu jedem Pod, der im Mesh enthalten ist. Der Proxy übernimmt die Verarbeitung aller eingehenden und ausgehenden Netzwerk Anforderungen, sodass die Konfiguration und Verwaltung von Netzwerken von den Anwendungs Containern getrennt gehalten werden und in vielen Fällen, ohne dass Änderungen am Anwendungscode erforderlich sind.
+Kubernetes Service-Netzen arbeiten durch Hinzufügen eines zusätzlichen Containers ( *Sidecar Proxy*) zu jedem Pod, der im Mesh enthalten ist. Der Proxy übernimmt die Verarbeitung aller eingehenden und ausgehenden Netzwerk Anforderungen. Anschließend können Sie die Konfiguration und Verwaltung von Netzwerken unabhängig von den Anwendungs Containern durchführen. In vielen Fällen erfordern diese Trennung keine Änderungen am Anwendungscode.
 
-Nehmen Sie im vorherigen Kapitel das Beispiel, in dem die GrpC-Anforderungen von der Webanwendung an eine einzelne Instanz des GrpC [-Diensts](kubernetes.md#test-the-application)weitergeleitet wurden. Dies liegt daran, dass der Hostname des Dienstanbieter in eine IP-Adresse aufgelöst wird und diese IP-Adresse für die Lebensdauer der `HttpClientHandler` Instanz zwischengespeichert wird. Es kann möglich sein, dieses Problem zu umgehen, indem DNS-Suchen manuell verarbeitet oder mehrere Clients erstellt werden. Dies würde jedoch den Anwendungscode erheblich erschweren, ohne einen geschäftlichen oder Kunden Wert hinzuzufügen.
+Im [Beispiel im vorherigen Kapitel](kubernetes.md#test-the-application)wurden die GrpC-Anforderungen aus der Webanwendung alle an eine einzelne Instanz des GrpC-Diensts weitergeleitet. Dies liegt daran, dass der Hostname des Diensts in eine IP-Adresse aufgelöst wird und diese IP-Adresse für die Lebensdauer der `HttpClientHandler` Instanz zwischengespeichert wird. Es kann möglich sein, dieses Problem zu umgehen, indem DNS-Suchen manuell verarbeitet oder mehrere Clients erstellt werden. Diese Problem Umgehung erschwert jedoch den Anwendungscode, ohne einen geschäftlichen oder Kunden Wert hinzuzufügen.
 
-Mithilfe eines Dienst Netzes werden die Anforderungen aus dem Anwendungs Container an den Sidecar-Proxy gesendet, der Sie auf intelligente Weise über alle Instanzen des anderen Dienstanbieter verteilen kann. Das Mesh kann auch folgende Aktionen ausführen:
+Wenn Sie ein Dienst Netz verwenden, werden die Anforderungen aus dem Anwendungs Container an den Sidecar-Proxy gesendet. Der Sidecar-Proxy kann Sie dann intelligent über alle Instanzen des anderen Dienstanbieter verteilen. Das Mesh kann auch folgende Aktionen ausführen:
 
 - Reagieren Sie nahtlos auf Fehler einzelner Instanzen eines Dienstanbieter.
-- Verarbeiten von Wiederholungs Semantik für fehlgeschlagene Aufrufe oder Timeouts
-- Umleiten fehlgeschlagener Anforderungen an eine Alternative Instanz, ohne dass an die Client Anwendung zurückgegeben wird.
+- Verarbeiten Sie Wiederholungs Semantik für fehlgeschlagene Aufrufe oder Timeouts.
+- Umleiten fehlgeschlagener Anforderungen an eine Alternative Instanz, ohne zur Client Anwendung zurückzukehren.
 
-Der folgende Screenshot zeigt die stockweb-Anwendung, die mit dem Dienst Netz linkerd ausgeführt wird, ohne Änderungen am Anwendungscode oder sogar das verwendete docker-Image. Die einzige Änderung, die erforderlich war, war das Hinzufügen einer Anmerkung zur Bereitstellung in den YAML-Dateien für die `stockdata`-und `stockweb` Dienste.
+Der folgende Screenshot zeigt die stockweb-Anwendung, die mit dem Dienst Netz linkerd ausgeführt wird. Es gibt keine Änderungen am Anwendungscode, und das docker-Image wird nicht verwendet. Die einzige Änderung, die erforderlich war, war das Hinzufügen einer Anmerkung zur Bereitstellung in den YAML-Dateien für die `stockdata`-und `stockweb` Dienste.
 
 ![Stockweb mit Service Mesh](media/service-mesh/stockweb-servicemesh-screenshot.png)
 
-Sie können in der Spalte Server sehen, dass die Anforderungen aus der stockweb-Anwendung an beide Replikate des StockData-Diensts weitergeleitet wurden, obwohl Sie aus einer einzelnen `HttpClient` Instanz im Anwendungscode stammen. Wenn Sie den Code überprüfen, werden Sie feststellen, dass alle 100-Anforderungen an den StockData-Dienst gleichzeitig mit der gleichen `HttpClient` Instanz erstellt werden, aber mit dem Dienst Mesh werden diese Anforderungen über mehrere Dienst Instanzen hinweg ausgeglichen.
+Sie können in der Spalte **Server** sehen, dass die Anforderungen aus der stockweb-Anwendung an beide Replikate des StockData-Diensts weitergeleitet wurden, obwohl Sie aus einer einzelnen `HttpClient` Instanz im Anwendungscode stammen. Wenn Sie den Code überprüfen, sehen Sie, dass alle 100-Anforderungen an den StockData-Dienst gleichzeitig durch die Verwendung derselben `HttpClient` Instanz hergestellt werden. Bei Verwendung des Dienst Netzes sind diese Anforderungen so ausgeglichen, dass viele Dienst Instanzen verfügbar sind.
 
-Dienst-Netzen gelten nur für Datenverkehr innerhalb eines Clusters. Informationen zu externen Clients finden Sie [im nächsten Kapitel, Lastenausgleich](load-balancing.md).
+Dienst-Netzen gelten nur für Datenverkehr innerhalb eines Clusters. Informationen zu externen Clients finden Sie im nächsten Kapitel, [Lastenausgleich](load-balancing.md).
 
 ## <a name="service-mesh-options"></a>Dienst Gitter Optionen
 
-Es gibt drei allgemeine dienstmesh-Implementierungen, die derzeit für die Verwendung mit Kubernetes verfügbar sind: istio, linkerd und Consul Connect. Alle drei Stellen Anforderungs Routing/Proxy Funktion, Verschlüsselung von Datenverkehr, Ausfallsicherheit, Host-zu-Host-Authentifizierung und Steuerung des Datenverkehrs bereit.
+Drei allgemeine dienstmesh-Implementierungen sind zurzeit für die Verwendung mit Kubernetes: [istio](https://istio.io), [linkerd](https://linkerd.io)und [Consul Connect](https://consul.io/mesh.html)verfügbar. Alle drei Stellen Anforderungs Routing/Proxy Funktion, Verschlüsselung von Datenverkehr, Ausfallsicherheit, Host-zu-Host-Authentifizierung und Steuerung des Datenverkehrs bereit.
 
 Die Auswahl eines Dienst Netzes hängt von mehreren Faktoren ab:
 
@@ -47,18 +47,12 @@ Die Auswahl eines Dienst Netzes hängt von mehreren Faktoren ab:
 - Die Art des Clusters, seine Größe, die Anzahl der bereitgestellten Dienste und die Menge des Datenverkehrs innerhalb des Cluster Netzwerks.
 - Einfache Bereitstellung und Verwaltung des Netzes und dessen Verwendung mit Diensten.
 
-Weitere Informationen zu den einzelnen Dienst Netzen finden Sie auf den jeweiligen Websites.
-
-- [**Istio** -istio.IO](https://istio.io)
-- [**Linkerd** -linkerd.IO](https://linkerd.io)
-- [**Konsul** -Consul.IO/Mesh.html](https://consul.io/mesh.html)
-
 ## <a name="example-add-linkerd-to-a-deployment"></a>Beispiel: Hinzufügen von linkerd zu einer Bereitstellung
 
 In diesem Beispiel erfahren Sie, wie Sie das linkerd-Dienst Mesh mit der *stockkube* -Anwendung aus [dem vorherigen Abschnitt](kubernetes.md)verwenden.
-Zum Befolgen dieses Beispiels müssen Sie [die linkerd-CLI installieren](https://linkerd.io/2/getting-started/#step-1-install-the-cli). Windows-Binärdateien können im Abschnitt "GitHub-Releases" heruntergeladen werden. Stellen Sie sicher, dass Sie die neueste **stabile** Version und nicht eine der Edge-Releases verwenden.
+Zum Befolgen dieses Beispiels müssen Sie [die linkerd-CLI installieren](https://linkerd.io/2/getting-started/#step-1-install-the-cli). Sie können Windows-Binärdateien aus dem Abschnitt herunterladen, in dem GitHub-Releases aufgeführt sind. Stellen Sie sicher, dass Sie die neueste *stabile* Version und nicht eine der Edge-Releases verwenden.
 
-Wenn die linkerd-CLI installiert ist, befolgen Sie die Anweisungen unter [*Getting Started* for the linkerd Web Site], um die linkerd-Komponenten auf Ihrem Kubernetes-Cluster zu installieren. Die Anweisungen sind direkt vorwärts, und die Installation sollte nur einige Minuten in einer lokalen Kubernetes-Instanz dauern.
+Wenn die linkerd-CLI installiert ist, befolgen Sie [die Anweisungen für die ersten](https://linkerd.io/2/getting-started/index.html) Schritte, um die linkerd-Komponenten auf Ihrem Kubernetes-Cluster zu installieren. Die Anweisungen sind einfach, und die Installation sollte in einer lokalen Kubernetes-Instanz nur einige Minuten dauern.
 
 ### <a name="add-linkerd-to-kubernetes-deployments"></a>Hinzufügen von linkerd zu Kubernetes-bereit Stellungen
 
@@ -80,7 +74,7 @@ linkerd inject stockweb.yml | kubectl apply -f -
 
 ### <a name="inspect-services-in-the-linkerd-dashboard"></a>Überprüfen von Diensten im linkerd-Dashboard
 
-Starten Sie das linkerd-Dashboard mithilfe der `linkerd` CLI.
+Öffnen Sie das linkerd-Dashboard mithilfe der `linkerd` CLI.
 
 ```console
 linkerd dashboard
@@ -90,7 +84,7 @@ Das Dashboard enthält ausführliche Informationen zu allen Diensten, die mit de
 
 ![Linkerd-Dashboard mit stockkube-Anwendungen](media/service-mesh/linkerd-screenshot.png)
 
-Wenn Sie die Anzahl der Replikate des StockData-GrpC-Diensts erhöhen, wie im folgenden Beispiel gezeigt, und die stockweb-Seite im Browser aktualisieren, sollte eine Mischung aus IDs in der Spalte Server angezeigt werden, die darauf hinweist, dass Anforderungen von allen verfügbaren Instanzen bedient werden. .
+Wenn Sie die Anzahl der Replikate des StockData-GrpC-Diensts erhöhen, wie im folgenden Beispiel gezeigt, und die stockweb-Seite im Browser aktualisieren, sollten Sie eine Mischung aus IDs in der Spalte **Server** sehen. Diese Mischung zeigt an, dass alle verfügbaren Instanzen Anforderungen erfüllen.
 
 ```yaml
 apiVersion: apps/v1

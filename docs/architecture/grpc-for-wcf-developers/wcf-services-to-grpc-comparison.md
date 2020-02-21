@@ -2,16 +2,16 @@
 title: Vergleichen von WCF mit GrpC-GrpC für WCF-Entwickler
 description: Ein Vergleich der WCF-und GrpC-Frameworks zum entwickeln verteilter Anwendungen.
 ms.date: 09/02/2019
-ms.openlocfilehash: 312492dcce4bdef61feff0bf924c6df287b9c676
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 4f54db76c9512b770b4dd993496d95437dd89753
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73966952"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503333"
 ---
 # <a name="comparing-wcf-to-grpc"></a>Vergleichen von WCF mit GrpC
 
-Im vorherigen Kapitel sollte ein guter Einblick in protobuf und die Art und Weise erläutert werden, wie GrpC Nachrichten verarbeitet. Vor der detaillierten Konvertierung von WCF in GrpC ist es wichtig, zu überprüfen, wie die derzeit in WCF verfügbaren Features in GrpC behandelt werden und welche Problem Umgehungen Sie verwenden können, wenn keine GrpC-Entsprechung vorhanden ist. In diesem Kapitel werden insbesondere die folgenden Themen behandelt:
+Im vorherigen Kapitel haben Sie einen guten Einblick in protobuf und die Art und Weise erläutert, wie GrpC Nachrichten verarbeitet. Bevor Sie eine ausführliche Konvertierung von Windows Communication Foundation (WCF) zu GrpC durchführen, ist es wichtig, dass die in WCF verfügbaren Features in GrpC behandelt werden und welche Problem Umgehungen Sie verwenden können, wenn keine GrpC-Entsprechung vorhanden ist. In diesem Kapitel werden insbesondere die folgenden Themen behandelt:
 
 - Vorgänge und Methoden
 - Bindungen und Transporte
@@ -37,12 +37,12 @@ service Greeter {
   rpc SayHello (HelloRequest) returns (HelloReply);
 }
 
-// The request message containing the user's name.
+// The request message that contains the user's name.
 message HelloRequest {
   string name = 1;
 }
 
-// The response message containing the greetings.
+// The response message that contains the greetings.
 message HelloReply {
   string message = 1;
 }

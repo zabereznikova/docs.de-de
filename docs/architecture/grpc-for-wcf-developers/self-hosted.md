@@ -2,18 +2,18 @@
 title: 'Selbstgeh ostete GrpC-Anwendungen: GrpC für WCF-Entwickler'
 description: Bereitstellen von ASP.net Core GrpC-Anwendungen als selbstgeh ostete Dienste
 ms.date: 09/02/2019
-ms.openlocfilehash: 00b4ad50eae629b5b36a890d1eecf7119386c74c
-ms.sourcegitcommit: 8c99457955fc31785b36b3330c4ab6ce7984a7ba
+ms.openlocfilehash: 2244f161ad4b5d60138ae0f7b4d6a9c8c8829aa8
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/29/2019
-ms.locfileid: "75545062"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503403"
 ---
 # <a name="self-hosted-grpc-applications"></a>Selbstgeh ostete GrpC-Anwendungen
 
-Obwohl ASP.net Core 3,0-Anwendungen in IIS unter Windows Server gehostet werden können, ist es derzeit nicht möglich, eine GrpC-Anwendung in IIS zu hosten, da einige der http/2-Funktionen noch nicht unterstützt werden. Diese Funktionalität wird in einem zukünftigen Update von Windows Server erwartet.
+Obwohl ASP.net Core 3,0-Anwendungen in IIS unter Windows Server gehostet werden können, ist es derzeit nicht möglich, eine GrpC-Anwendung in IIS zu hosten, da einige der http/2-Funktionen nicht unterstützt werden. Diese Funktion ist ein Ziel für ein zukünftiges Update von Windows Server.
 
-Dank einiger neuer Features in den .net Core 3,0-hostingerweiterungen können Sie die Anwendung als Windows-Dienst oder als Linux-Dienst ausführen, der von [systemd](https://en.wikipedia.org/wiki/Systemd)gesteuert wird.
+Sie können Ihre Anwendung als Windows-Dienst ausführen. Oder Sie können Sie als Linux-Dienst ausführen, der von [systemd](https://en.wikipedia.org/wiki/Systemd)gesteuert wird, da neue Features in den .net Core 3,0-hostingerweiterungen enthalten sind.
 
 ## <a name="run-your-app-as-a-windows-service"></a>Ausführen der App als Windows-Dienst
 
@@ -32,31 +32,36 @@ public static IHostBuilder CreateHostBuilder(string[] args) =>
 > [!NOTE]
 > Wenn die Anwendung nicht als Windows-Dienst ausgeführt wird, wird von der `UseWindowsService`-Methode nichts ausgeführt.
 
-Veröffentlichen Sie Ihre Anwendung jetzt entweder aus Visual Studio, indem Sie mit der rechten Maustaste auf das Projekt klicken und im Kontextmenü *veröffentlichen* auswählen, oder klicken Sie auf der .net Core-CLI.
+Veröffentlichen Sie Ihre Anwendung nun mit einer der folgenden Methoden:
+
+* Klicken Sie in Visual Studio mit der rechten Maustaste auf das Projekt, und wählen Sie im Kontextmenü **veröffentlichen** aus.
+* Aus dem .net Core-CLI.
 
 Wenn Sie eine .net Core-Anwendung veröffentlichen, können Sie auswählen, ob Sie eine *Framework-abhängige* Bereitstellung oder eine *eigenständige* Bereitstellung erstellen möchten. Framework-abhängige bereit Stellungen erfordern, dass die freigegebene .net Core-Laufzeit auf dem Host installiert ist, auf dem Sie ausgeführt werden. Eigenständige bereit Stellungen werden mit einer kompletten Kopie der .net Core-Laufzeit und des .net Core-Frameworks veröffentlicht und können auf jedem Host ausgeführt werden. Weitere Informationen, einschließlich der vor-und Nachteile der einzelnen Ansätze, finden Sie in der Dokumentation zur [.net Core-Anwendungs Bereitstellung](../../core/deploying/index.md) .
 
-Um einen eigenständigen Build der Anwendung zu veröffentlichen, bei dem die .net Core 3,0-Runtime nicht auf dem Host installiert werden muss, geben Sie die Runtime an, die in die Anwendung eingeschlossen werden soll, indem Sie das Flag `-r` (oder `--runtime`) verwenden.
+Wenn Sie einen eigenständigen Build der Anwendung veröffentlichen möchten, für den die .net Core 3,0-Runtime nicht auf dem Host installiert werden muss, geben Sie die Runtime an, die in der Anwendung enthalten sein soll. Verwenden Sie das Flag `-r` (oder `--runtime`).
 
-```console
+```dotnetcli
 dotnet publish -c Release -r win-x64 -o ./publish
 ```
 
 Wenn Sie einen Framework-abhängigen Build veröffentlichen möchten, lassen Sie das `-r`-Flag aus.
 
-```console
+```dotnetcli
 dotnet publish -c Release -o ./publish
 ```
 
-Kopieren Sie den gesamten Inhalt des `publish` Verzeichnisses in einen Installationsordner, und erstellen Sie mit dem [Hilfsprogramm SC](https://docs.microsoft.com/windows/desktop/services/controlling-a-service-using-sc) einen Windows-Dienst für die ausführbare Datei.
+Kopieren Sie den gesamten Inhalt des `publish` Verzeichnisses in einen Installationsordner. Verwenden Sie dann das [SC-Tool](/windows/desktop/services/controlling-a-service-using-sc) , um einen Windows-Dienst für die ausführbare Datei zu erstellen.
 
 ```console
 sc create MyService binPath=C:\MyService\MyService.exe
 ```
 
-### <a name="log-to-windows-event-log"></a>In Windows-Ereignisprotokoll protokollieren
+### <a name="log-to-the-windows-event-log"></a>Im Windows-Ereignisprotokoll protokollieren
 
-Die `UseWindowsService`-Methode fügt automatisch einen [Protokollierungs](https://docs.microsoft.com/aspnet/core/fundamentals/logging/?view=aspnetcore-3.0) Anbieter hinzu, der Protokollmeldungen in das Windows-Ereignisprotokoll schreibt. Sie können die Protokollierung für diesen Anbieter konfigurieren, indem Sie dem Abschnitt `Logging` von `appsettings.json` oder einer anderen Konfigurations Quelle einen `EventLog` Eintrag hinzufügen. Der im Ereignisprotokoll verwendete Quellname kann überschrieben werden, indem in diesen Einstellungen eine `SourceName`-Eigenschaft festgelegt wird. Wenn Sie keinen Namen angeben, wird der Standard Anwendungsname (normalerweise der Name der ausführbaren Assembly) verwendet.
+Die `UseWindowsService`-Methode fügt automatisch einen [Protokollierungs](/aspnet/core/fundamentals/logging/) Anbieter hinzu, der Protokollmeldungen in das Windows-Ereignisprotokoll schreibt. Sie können die Protokollierung für diesen Anbieter konfigurieren, indem Sie dem Abschnitt `Logging` von `appsettings.json` oder einer anderen Konfigurations Quelle einen `EventLog` Eintrag hinzufügen. 
+
+Sie können den im Ereignisprotokoll verwendeten Quellnamen überschreiben, indem Sie in diesen Einstellungen eine `SourceName`-Eigenschaft festlegen. Wenn Sie keinen Namen angeben, wird der Standard Anwendungsname (normalerweise der Name der ausführbaren Assembly) verwendet.
 
 Weitere Informationen zur Protokollierung finden Sie am Ende dieses Kapitels.
 
@@ -77,15 +82,17 @@ public static IHostBuilder CreateHostBuilder(string[] args) =>
 > [!NOTE]
 > Wenn die Anwendung nicht als Linux-Dienst ausgeführt wird, wird von der `UseSystemd`-Methode nichts ausgeführt.
 
-Veröffentlichen Sie nun Ihre Anwendung (entweder Framework-abhängig oder eigenständig für die relevante Linux-Laufzeit, z. b. `linux-x64`), indem Sie mit der rechten Maustaste auf das Projekt klicken und im Kontextmenü veröffentlichen auswählen. Sie können auch im .net Core-CLI mit dem folgenden Befehl *veröffentlichen* .
+Veröffentlichen Sie nun Ihre Anwendung. Die Anwendung kann entweder Framework-abhängig oder eigenständig für die relevante Linux-Laufzeit sein (z. b. `linux-x64`). Sie können mit einer der folgenden Methoden veröffentlichen:
 
-```console
-dotnet publish -c Release -r linux-x64 -o ./publish
-```
+* Klicken Sie in Visual Studio mit der rechten Maustaste auf das Projekt, und wählen Sie im Kontextmenü **veröffentlichen** aus. 
+* Verwenden Sie in der .net Core-CLI den folgenden Befehl:
 
-Kopieren Sie den gesamten Inhalt des `publish` Verzeichnisses in einen Installationsordner auf dem Linux-Host. Um den Dienst zu registrieren, muss dem `/etc/systemd/system` Verzeichnis eine spezielle Datei ("Unit file") hinzugefügt werden. Sie benötigen die root-Berechtigung, um eine Datei in diesem Ordner zu erstellen. Benennen Sie die Datei mit dem Bezeichner, den Sie verwenden möchten `systemd` und der `.service` Erweiterung. Beispielsweise `/etc/systemd/system/myapp.service`.
+  ```dotnetcli
+  dotnet publish -c Release -r linux-x64 -o ./publish
+  ```
+Kopieren Sie den gesamten Inhalt des `publish` Verzeichnisses in einen Installationsordner auf dem Linux-Host. Um den Dienst zu registrieren, muss eine spezielle Datei, eine so genannte *Einheits Datei*, dem `/etc/systemd/system` Verzeichnis hinzugefügt werden. Sie benötigen die root-Berechtigung, um eine Datei in diesem Ordner zu erstellen. Benennen Sie die Datei mit dem Bezeichner, den Sie verwenden `systemd` möchten, und `.service` Erweiterung. Verwenden Sie z. B. `/etc/systemd/system/myapp.service`.
 
-Die Dienst Datei verwendet das INI-Format, wie in diesem Beispiel gezeigt.
+Die Dienst Datei verwendet das INI-Format, wie im folgenden Beispiel gezeigt:
 
 ```ini
 [Unit]
@@ -99,7 +106,7 @@ ExecStart=/usr/sbin/myapp
 WantedBy=multi-user.target
 ```
 
-Die `Type=notify`-Eigenschaft teilt `systemd` mit, dass die Anwendung Sie beim Starten und Herunterfahren benachrichtigt. Die `WantedBy=multi-user.target` Einstellung bewirkt, dass der Dienst gestartet wird, wenn das Linux-System "Runlevel 2" erreicht, was bedeutet, dass eine nicht grafische Multi-User-Shell aktiv ist.
+Die `Type=notify`-Eigenschaft teilt `systemd` mit, dass die Anwendung Sie beim Starten und Herunterfahren benachrichtigt. Die `WantedBy=multi-user.target` Einstellung bewirkt, dass der Dienst gestartet wird, wenn das Linux-System "Runlevel 2" erreicht. Dies bedeutet, dass eine nicht grafische Multi-User-Shell aktiv ist.
 
 Bevor `systemd` den Dienst erkennen kann, muss die Konfiguration erneut geladen werden. Sie steuern `systemd` mithilfe des `systemctl`-Befehls. Verwenden Sie nach dem erneuten Laden den Unterbefehl `status`, um zu bestätigen, dass die Anwendung erfolgreich registriert wurde.
 
@@ -108,7 +115,7 @@ sudo systemctl daemon-reload
 sudo systemctl status myapp
 ```
 
-Wenn Sie den Dienst ordnungsgemäß konfiguriert haben, wird die folgende Ausgabe angezeigt:
+Wenn Sie den Dienst ordnungsgemäß konfiguriert haben, erhalten Sie die folgende Ausgabe:
 
 ```text
 myapp.service - My gRPC Application
@@ -123,7 +130,7 @@ sudo systemctl start myapp.service
 ```
 
 > [!TIP]
-> Die `.service`-Erweiterung ist optional, wenn `systemctl start`verwendet wird.
+> Die `.service`-Erweiterung ist optional, wenn Sie `systemctl start`verwenden.
 
 Wenn Sie `systemd` möchten, dass der Dienst beim Systemstart automatisch gestartet wird, verwenden Sie den `enable`-Befehl.
 
@@ -133,9 +140,9 @@ sudo systemctl enable myapp
 
 ### <a name="log-to-journald"></a>In Journal Protokoll protokollieren
 
-Die Linux-Entsprechung des Windows-Ereignis Protokolls ist `journald`, ein strukturierter Protokollierungs Systemdienst, der Teil von `systemd`ist. Protokollmeldungen, die von einem Linux-Daemon in die Standardausgabe geschrieben werden, werden automatisch in `journald`geschrieben. verwenden Sie daher den Abschnitt `Console` der Protokollierungs Konfiguration, um Protokollierungs Ebenen zu konfigurieren. Mit der `UseSystemd` Host-Generator-Methode wird das Konsolenausgabe Format automatisch so konfiguriert, dass es dem Journal entspricht.
+Die Linux-Entsprechung des Windows-Ereignis Protokolls ist `journald`, ein strukturierter Protokollierungs Systemdienst, der Teil von `systemd`ist. Protokollmeldungen, die von einem Linux-Daemon in die Standardausgabe geschrieben werden, werden automatisch in `journald`geschrieben. Verwenden Sie zum Konfigurieren von Protokolliergraden den `Console` Abschnitt der Protokollierungs Konfiguration. Mit der `UseSystemd` Host-Generator-Methode wird das Konsolenausgabe Format automatisch so konfiguriert, dass es dem Journal entspricht.
 
-Da `journald` der Standard für Linux-Protokolle ist, gibt es eine Reihe von Tools, die integriert werden können, und Sie können Protokolle problemlos von `journald` an ein externes Protokollierungs System weiterleiten. Wenn Sie lokal auf dem Host arbeiten, können Sie den `journalctl`-Befehl verwenden, um Protokolle in der Befehlszeile anzuzeigen.
+Da `journald` der Standard für Linux-Protokolle ist, sind eine Reihe von Tools integriert. Sie können Protokolle problemlos von `journald` an ein externes Protokollierungs System weiterleiten. Wenn Sie lokal auf dem Host arbeiten, können Sie den `journalctl`-Befehl verwenden, um Protokolle in der Befehlszeile anzuzeigen.
 
 ```console
 sudo journalctl -u myapp
@@ -144,21 +151,24 @@ sudo journalctl -u myapp
 > [!TIP]
 > Wenn eine GUI-Umgebung auf dem Host verfügbar ist, sind einige grafische Protokoll-Viewer für Linux verfügbar, z. b. *qjournalctl* und *gnome-Logs*.
 
-Weitere Informationen zum Abfragen des systemd-Journal von der Befehlszeile mit `journalctl`finden Sie auf [der Seite "man Pages](https://manpages.debian.org/buster/systemd/journalctl.1)".
+Weitere Informationen zum Abfragen des `systemd` Journal von der Befehlszeile aus mithilfe `journalctl`finden Sie auf [der Seite "man Pages](https://manpages.debian.org/buster/systemd/journalctl.1)".
 
 ## <a name="https-certificates-for-self-hosted-applications"></a>HTTPS-Zertifikate für selbst gehostete Anwendungen
 
 Wenn Sie eine GrpC-Anwendung in der Produktionsumgebung ausführen, sollten Sie ein TLS-Zertifikat von einer vertrauenswürdigen Zertifizierungsstelle (Certificate Authority, ca) verwenden. Diese Zertifizierungsstelle kann eine öffentliche Zertifizierungsstelle oder eine interne Zertifizierungsstelle für Ihre Organisation sein.
 
-Auf Windows-Hosts kann das Zertifikat mithilfe der <xref:System.Security.Cryptography.X509Certificates.X509Store>-Klasse aus einem sicheren [Zertifikat Speicher](/windows/win32/seccrypto/managing-certificates-with-certificate-stores) geladen werden. Die `X509Store`-Klasse kann auch mit dem OpenSSL-Schlüsselspeicher auf einigen Linux-Hosts verwendet werden.
+Auf Windows-Hosts können Sie das Zertifikat mit der <xref:System.Security.Cryptography.X509Certificates.X509Store>-Klasse aus einem sicheren [Zertifikat Speicher](/windows/win32/seccrypto/managing-certificates-with-certificate-stores) laden. Sie können auch die `X509Store`-Klasse mit dem OpenSSL Key Store auf einigen Linux-Hosts verwenden.
 
-Zertifikate können auch mit einem der [X509Certificate2-Konstruktoren](https://docs.microsoft.com/dotnet/api/system.security.cryptography.x509certificates.x509certificate.-ctor?view=netcore-3.0)erstellt werden, entweder aus einer Datei (z. b. einer `.pfx` Datei, die durch ein sicheres Kennwort geschützt ist), oder aus Binärdaten, die von einem sicheren Speicherdienst wie [Azure Key Vault](https://azure.microsoft.com/services/key-vault/)abgerufen werden.
+Sie können Zertifikate auch mit einem der [X509Certificate2-Konstruktoren](xref:System.Security.Cryptography.X509Certificates.X509Certificate2.%23ctor%2A)erstellen, indem Sie Folgendes verwenden:
 
-Kestrel kann so konfiguriert werden, dass ein Zertifikat auf zweierlei Weise verwendet wird: von der Konfiguration oder im Code.
+* Eine Datei, z. b. eine `.pfx` Datei, die durch ein sicheres Kennwort geschützt ist
+* Von einem sicheren Speicherdienst abgerufene Binärdaten, wie z. b. [Azure Key Vault](https://azure.microsoft.com/services/key-vault/)
 
-### <a name="set-https-certificates-using-configuration"></a>Festlegen von HTTPS-Zertifikaten mithilfe der Konfiguration
+Sie können Kestrel so konfigurieren, dass ein Zertifikat auf zweierlei Weise verwendet wird: aus Konfiguration oder Code.
 
-Der Konfigurations Ansatz erfordert, dass der Pfad zum Zertifikat `.pfx` Datei und das Kennwort im Kestrel-Konfigurations Abschnitt festgelegt werden. In `appsettings.json`, die wie folgt aussehen würde.
+### <a name="set-https-certificates-by-using-configuration"></a>Festlegen von HTTPS-Zertifikaten mithilfe der Konfiguration
+
+Der Konfigurations Ansatz erfordert, dass der Pfad zum Zertifikat `.pfx` Datei und das Kennwort im Kestrel-Konfigurations Abschnitt festgelegt werden. In `appsettings.json`sieht dies wie folgt aus:
 
 ```json
 {
@@ -173,9 +183,10 @@ Der Konfigurations Ansatz erfordert, dass der Pfad zum Zertifikat `.pfx` Datei u
 }
 ```
 
-Das Kennwort sollte mithilfe einer sicheren Konfigurations Quelle, z. b. Azure keyvault oder hashicorp Vault, bereitgestellt werden.
+Geben Sie das Kennwort an, indem Sie eine sichere Konfigurations Quelle wie Azure Key Vault oder den hashicorp-Tresor verwenden.
 
-Unverschlüsselte Kenn Wörter sollten nicht in Konfigurationsdateien gespeichert werden.
+> [!IMPORTANT]
+> Speichern Sie unverschlüsselte Kenn Wörter nicht in Konfigurationsdateien.
 
 ### <a name="set-https-certificates-in-code"></a>Festlegen von HTTPS-Zertifikaten im Code
 
@@ -197,7 +208,7 @@ public static IHostBuilder CreateHostBuilder(string[] args) =>
         });
 ```
 
-Das Kennwort für die `.pfx` Datei sollte wiederum in einer sicheren Konfigurations Quelle gespeichert und aus dieser abgerufen werden.
+Stellen Sie auch hier sicher, dass Sie das Kennwort für die `.pfx` Datei in speichern und aus einer sicheren Konfigurations Quelle abrufen.
 
 >[!div class="step-by-step"]
 >[Zurück](grpc-in-production.md)
