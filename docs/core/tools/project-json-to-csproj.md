@@ -3,12 +3,12 @@ title: Vergleich von project.json und csproj
 description: Informationen zur Zuordnung zwischen project.json und csproj-Elementen.
 author: natemcmaster
 ms.date: 03/13/2017
-ms.openlocfilehash: c31590cf34990867b81af4d073846c2952928798
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: abe515007b47b415ac33e3350a29edced1784d68
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714136"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77451104"
 ---
 # <a name="a-mapping-between-projectjson-and-csproj-properties"></a>Die Zuordnung zwischen project.json und csproj-Eigenschaften
 
@@ -337,7 +337,7 @@ Alle Projekte in MSBuild sind während des Buildvorgangs *tragbar*, werden jedoc
 
 `dotnet publish --framework netcoreapp1.0 --runtime osx.10.11-x64`
 
-Weitere Informationen finden Sie unter [Eigenständige Bereitstellungen (SCD)](../deploying/index.md#self-contained-deployments-scd).
+Weitere Informationen finden Sie unter [Eigenständige Bereitstellungen (SCD)](../deploying/index.md#publish-self-contained).
 
 ## <a name="tools"></a>Tools
 

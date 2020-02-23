@@ -2,26 +2,26 @@
 title: Befehl „dotnet publish“
 description: Der „dotnet publish“-Befehl veröffentlicht ein .NET Core-Projekt in einem Verzeichnis.
 ms.date: 05/29/2018
-ms.openlocfilehash: 4612c8cd1f63550905ef7c6d94af050892b1620c
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: 0653a7b1e1abd6d7ffd3d21a0410279235b43a28
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117617"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77451291"
 ---
 # <a name="dotnet-publish"></a>dotnet publish
 
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
-## <a name="name"></a>NAME
+## <a name="name"></a>name
 
 `dotnet publish`: Packt die Anwendung und ihre Abhängigkeiten in einen Ordner für die Bereitstellung auf einem Hostsystem.
 
-## <a name="synopsis"></a>Zusammenfassung
+## <a name="synopsis"></a>Übersicht
 
 <!-- markdownlint-disable MD025 -->
 
-# <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
+# <a name="net-core-21"></a>[.NET Core 2.1](#tab/netcore21)
 
 ```dotnetcli
 dotnet publish [<PROJECT>] [-c|--configuration] [-f|--framework] [--force] [--manifest] [--no-build] [--no-dependencies]
@@ -29,7 +29,7 @@ dotnet publish [<PROJECT>] [-c|--configuration] [-f|--framework] [--force] [--ma
 dotnet publish [-h|--help]
 ```
 
-# <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
+# <a name="net-core-20"></a>[.NET Core 2.0](#tab/netcore20)
 
 ```dotnetcli
 dotnet publish [<PROJECT>] [-c|--configuration] [-f|--framework] [--force] [--manifest] [--no-dependencies]
@@ -37,7 +37,7 @@ dotnet publish [<PROJECT>] [-c|--configuration] [-f|--framework] [--force] [--ma
 dotnet publish [-h|--help]
 ```
 
-# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
+# <a name="net-core-1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
 ```dotnetcli
 dotnet publish [<PROJECT>] [-c|--configuration] [-f|--framework] [-o|--output] [-r|--runtime] [-v|--verbosity]
@@ -47,7 +47,7 @@ dotnet publish [-h|--help]
 
 ---
 
-## <a name="description"></a>BESCHREIBUNG
+## <a name="description"></a>Beschreibung
 
 `dotnet publish` kompiliert die Anwendung, liest ihre Abhängigkeiten, die in der Projektdatei angegeben sind, und veröffentlicht die resultierenden Dateien in einem Verzeichnis. Die Ausgabe umfasst die folgenden Objekte:
 
@@ -68,11 +68,11 @@ Das zu veröffentlichende Projekt. Dies ist entweder der Pfad und der Dateiname 
 
 ## <a name="options"></a>Optionen
 
-# <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
+# <a name="net-core-21"></a>[.NET Core 2.1](#tab/netcore21)
 
 `-c|--configuration {Debug|Release}`
 
-Legt die Buildkonfiguration fest. Standardwert: `Debug`.
+Legt die Buildkonfiguration fest. Der Standardwert ist `Debug`.
 
 `-f|--framework <FRAMEWORK>`
 
@@ -113,7 +113,7 @@ Veröffentlicht die .NET Core-Runtime mit Ihrer Anwendung, sodass die Runtime ni
 
 `-r|--runtime <RUNTIME_IDENTIFIER>`
 
-Veröffentlicht die Anwendung für eine bestimmte Laufzeit. Wird bei der Erstellung einer [eigenständigen Bereitstellung (Self-contained deployments, SCD)](../deploying/index.md#self-contained-deployments-scd) verwendet. Eine Liste der Runtime-IDs (RIDs) finden Sie im [RID-Katalog](../rid-catalog.md). Standardmäßig wird eine [Framework-abhängige Bereitstellung (FDD)](../deploying/index.md#framework-dependent-deployments-fdd) veröffentlicht.
+Veröffentlicht die Anwendung für eine bestimmte Laufzeit. Wird bei der Erstellung einer [eigenständigen Bereitstellung (Self-contained deployments, SCD)](../deploying/index.md#publish-self-contained) verwendet. Eine Liste der Runtime-IDs (RIDs) finden Sie im [RID-Katalog](../rid-catalog.md). Standardmäßig wird eine [Framework-abhängige Bereitstellung (FDD)](../deploying/index.md#publish-runtime-dependent) veröffentlicht.
 
 `-v|--verbosity <LEVEL>`
 
@@ -123,11 +123,11 @@ Legt den Ausführlichkeitsgrad für den Befehl fest. Zulässige Werte sind `q[ui
 
 Definiert das Versionssuffix zum Ersetzen des Sternchens (`*`) im Versionsfeld der Projektdatei.
 
-# <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
+# <a name="net-core-20"></a>[.NET Core 2.0](#tab/netcore20)
 
 `-c|--configuration {Debug|Release}`
 
-Legt die Buildkonfiguration fest. Standardwert: `Debug`.
+Legt die Buildkonfiguration fest. Der Standardwert ist `Debug`.
 
 `-f|--framework <FRAMEWORK>`
 
@@ -164,7 +164,7 @@ Veröffentlicht die .NET Core-Runtime mit Ihrer Anwendung, sodass die Runtime ni
 
 `-r|--runtime <RUNTIME_IDENTIFIER>`
 
-Veröffentlicht die Anwendung für eine bestimmte Laufzeit. Wird bei der Erstellung einer [eigenständigen Bereitstellung (Self-contained deployments, SCD)](../deploying/index.md#self-contained-deployments-scd) verwendet. Eine Liste der Runtime-IDs (RIDs) finden Sie im [RID-Katalog](../rid-catalog.md). Standardmäßig wird eine [Framework-abhängige Bereitstellung (FDD)](../deploying/index.md#framework-dependent-deployments-fdd) veröffentlicht.
+Veröffentlicht die Anwendung für eine bestimmte Laufzeit. Wird bei der Erstellung einer [eigenständigen Bereitstellung (Self-contained deployments, SCD)](../deploying/index.md#publish-self-contained) verwendet. Eine Liste der Runtime-IDs (RIDs) finden Sie im [RID-Katalog](../rid-catalog.md). Standardmäßig wird eine [Framework-abhängige Bereitstellung (FDD)](../deploying/index.md#publish-runtime-dependent) veröffentlicht.
 
 `-v|--verbosity <LEVEL>`
 
@@ -174,11 +174,11 @@ Legt den Ausführlichkeitsgrad für den Befehl fest. Zulässige Werte sind `q[ui
 
 Definiert das Versionssuffix zum Ersetzen des Sternchens (`*`) im Versionsfeld der Projektdatei.
 
-# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
+# <a name="net-core-1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
 `-c|--configuration {Debug|Release}`
 
-Legt die Buildkonfiguration fest. Standardwert: `Debug`.
+Legt die Buildkonfiguration fest. Der Standardwert ist `Debug`.
 
 `-f|--framework <FRAMEWORK>`
 
@@ -199,7 +199,7 @@ Bei einem relativen Pfad ist das generierte Ausgabeverzeichnis relativ zum Speic
 
 `-r|--runtime <RUNTIME_IDENTIFIER>`
 
-Veröffentlicht die Anwendung für eine bestimmte Laufzeit. Wird bei der Erstellung einer [eigenständigen Bereitstellung (Self-contained deployments, SCD)](../deploying/index.md#self-contained-deployments-scd) verwendet. Eine Liste der Runtime-IDs (RIDs) finden Sie im [RID-Katalog](../rid-catalog.md). Standardmäßig wird eine [Framework-abhängige Bereitstellung (FDD)](../deploying/index.md#framework-dependent-deployments-fdd) veröffentlicht.
+Veröffentlicht die Anwendung für eine bestimmte Laufzeit. Wird bei der Erstellung einer [eigenständigen Bereitstellung (Self-contained deployments, SCD)](../deploying/index.md#publish-self-contained) verwendet. Eine Liste der Runtime-IDs (RIDs) finden Sie im [RID-Katalog](../rid-catalog.md). Standardmäßig wird eine [Framework-abhängige Bereitstellung (FDD)](../deploying/index.md#publish-runtime-dependent) veröffentlicht.
 
 `-v|--verbosity <LEVEL>`
 

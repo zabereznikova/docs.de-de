@@ -5,12 +5,12 @@ author: leecow
 ms.author: leecow
 ms.date: 12/04/2019
 zone_pivot_groups: operating-systems-set-one
-ms.openlocfilehash: a535048fc8756b55068098ad61fdc37fc8c1f04e
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 4164ea5a04d80ab20109168a225b793b02ee616a
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74999008"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77448892"
 ---
 # <a name="net-core-dependencies-and-requirements"></a>.NET Core-Abhängigkeiten und -Anforderungen
 
@@ -23,7 +23,7 @@ In diesem Artikel wird erläutert, welche Betriebssysteme und CPU-Architektur vo
 <!-- markdownlint-disable MD025 -->
 <!-- markdownlint-disable MD024 -->
 
-# <a name="net-core-31tabnetcore31"></a>[.NET Core 3.1](#tab/netcore31)
+# <a name="net-core-31"></a>[.NET Core 3.1](#tab/netcore31)
 
 Die folgenden Windows-Versionen werden von .NET Core 3.1 unterstützt:
 
@@ -39,7 +39,7 @@ Die folgenden Windows-Versionen werden von .NET Core 3.1 unterstützt:
 
 Weitere Informationen zu den von .NET Core 3.1 unterstützten Betriebssystemen, Verteilungen und Lebenszyklusrichtlinien finden Sie unter [Von .NET Core 3.1 unterstützte Betriebssystemversionen](https://github.com/dotnet/core/blob/master/release-notes/3.1/3.1-supported-os.md).
 
-# <a name="net-core-30tabnetcore30"></a>[.NET Core 3.0](#tab/netcore30)
+# <a name="net-core-30"></a>[.NET Core 3.0](#tab/netcore30)
 
 Die folgenden Windows-Versionen werden von .NET Core 3.0 unterstützt:
 
@@ -55,7 +55,7 @@ Die folgenden Windows-Versionen werden von .NET Core 3.0 unterstützt:
 
 Weitere Informationen zu den von .NET Core 3.0 unterstützten Betriebssystemen, Verteilungen und Lebenszyklusrichtlinien finden Sie unter [Von .NET Core 3.0 unterstützte Betriebssystemversionen](https://github.com/dotnet/core/blob/master/release-notes/3.0/3.0-supported-os.md).
 
-# <a name="net-core-22tabnetcore22"></a>[.NET Core 2.2](#tab/netcore22)
+# <a name="net-core-22"></a>[.NET Core 2.2](#tab/netcore22)
 
 Die folgenden Windows-Versionen werden von .NET Core 2.2 unterstützt:
 
@@ -71,7 +71,7 @@ Die folgenden Windows-Versionen werden von .NET Core 2.2 unterstützt:
 
 Weitere Informationen zu den von .NET Core 2.2 unterstützten Betriebssystemen, Verteilungen und Lebenszyklusrichtlinien finden Sie unter [Von .NET Core 2.2 unterstützte Betriebssystemversionen](https://github.com/dotnet/core/blob/master/release-notes/2.2/2.2-supported-os.md).
 
-# <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
+# <a name="net-core-21"></a>[.NET Core 2.1](#tab/netcore21)
 
 Die folgenden Windows-Versionen werden von .NET Core 2.1 unterstützt:
 
@@ -110,7 +110,7 @@ Die oben aufgeführten Anforderungen sind auch erforderlich, wenn einer der folg
 
 > Das Programm kann nicht gestartet werden, da *api-ms-win-crt-runtime-l1-1-0.dll* auf dem Computer fehlt. Installieren Sie das Programm erneut, um das Problem zu beheben.
 >
-> \- oder –
+> \- oder -
 >
 > The library *hostfxr.dll* was found, but loading it from *C:\\\<path_to_app>\\hostfxr.dll* failed. (Die Bibliothek „hostfxr.dll“ wurde gefunden, aber der Ladevorgang aus C:\<Pfad_zu_App>\hostfxr.dll ist fehlgeschlagen.)
 
@@ -118,7 +118,7 @@ Die oben aufgeführten Anforderungen sind auch erforderlich, wenn einer der folg
 
 ::: zone pivot="os-linux"
 
-# <a name="net-core-31tabnetcore31"></a>[.NET Core 3.1](#tab/netcore31)
+# <a name="net-core-31"></a>[.NET Core 3.1](#tab/netcore31)
 
 .NET Core 3.1 behandelt Linux als ein einziges Betriebssystem. Es gibt einen Linux-Build (pro Chiparchitektur) für unterstützte Linux-Verteilungen.
 
@@ -147,7 +147,7 @@ Weitere Informationen zum Installieren von .NET Core 3.1 unter ARM64 (Kernel 4
 > [!IMPORTANT]
 > Für die Unterstützung von ARM64 ist Linux-Kernel 4.14 oder höher erforderlich. Einige Linux-Verteilungen erfüllen diese Anforderung, andere hingegen nicht. So wird Ubuntu 18.04 im Gegensatz zu Ubuntu 16.04 unterstützt.
 
-# <a name="net-core-30tabnetcore30"></a>[.NET Core 3.0](#tab/netcore30)
+# <a name="net-core-30"></a>[.NET Core 3.0](#tab/netcore30)
 
 .NET Core 3.0 behandelt Linux als ein einziges Betriebssystem. Es gibt einen Linux-Build (pro Chiparchitektur) für unterstützte Linux-Verteilungen.
 
@@ -173,7 +173,7 @@ Weitere Informationen zu den von .NET Core 3.0 unterstützten Betriebssystemen,
 
 Weitere Informationen zum Installieren von .NET Core 3.0 unter ARM64 finden Sie unter [Installing .NET Core 3.0 on Linux ARM64](https://gist.github.com/richlander/467813274cea8abc624553ee72b28213) (Installieren von .NET Core 3.0 unter Linux ARM64).
 
-# <a name="net-core-22tabnetcore22"></a>[.NET Core 2.2](#tab/netcore22)
+# <a name="net-core-22"></a>[.NET Core 2.2](#tab/netcore22)
 
 .NET Core 2.2 behandelt Linux als ein einziges Betriebssystem. Es gibt einen Linux-Build (pro Chiparchitektur) für unterstützte Linux-Verteilungen.
 
@@ -189,7 +189,7 @@ Weitere Informationen zum Installieren von .NET Core 3.0 unter ARM64 finden Sie 
 | Oracle Linux                   |  7                      | x64 |
 | Fedora                         |  29, 30                 | x64 |
 | Debian                         |  9                      | x64, ARM32 |
-| Ubuntu                         |  16.04, 18.04, 18.10, 19.04    | x64, ARM32 |
+| Ubuntu                         |  16.04, 18.04, 18.10    | x64, ARM32 |
 | Linux Mint                     |  17, 18                 | x64 |
 | openSUSE                       |  15 und höher                    | x64 |
 | SUSE Enterprise Linux (SLES)   |  12 SP2+                | x64 |
@@ -197,7 +197,7 @@ Weitere Informationen zum Installieren von .NET Core 3.0 unter ARM64 finden Sie 
 
 Weitere Informationen zu den von .NET Core 2.2 unterstützten Betriebssystemen, Verteilungen und Lebenszyklusrichtlinien finden Sie unter [Von .NET Core 2.2 unterstützte Betriebssystemversionen](https://github.com/dotnet/core/blob/master/release-notes/2.2/2.2-supported-os.md).
 
-# <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
+# <a name="net-core-21"></a>[.NET Core 2.1](#tab/netcore21)
 
 .NET Core 2.1 behandelt Linux als ein einziges Betriebssystem. Es gibt einen Linux-Build (pro Chiparchitektur) für unterstützte Linux-Verteilungen.
 

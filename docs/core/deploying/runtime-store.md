@@ -2,12 +2,12 @@
 title: Laufzeitpaketspeicher
 description: Erfahren Sie, wie Sie den Laufzeitpaketspeicher für Manifeste nutzen, die von .NET Core verwendet werden.
 ms.date: 08/12/2017
-ms.openlocfilehash: 8c58ccdb90e5ae9830313f52c19f58629ea5b0a2
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 7a833ed95147608c6fb403f8f0dec179d2a73833
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76737791"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77448957"
 ---
 # <a name="runtime-package-store"></a>Laufzeitpaketspeicher
 
@@ -122,11 +122,11 @@ Geben Sie die Zielmanifeste nur in der Projektdatei an, wenn die Zielumgebung f�
 
 Der implizite Speicher für ASP.NET Core gilt nur für ASP.NET Core 2.0. Es wird dringend empfohlen, ASP.NET Core 2.1 und höher für Anwendungen zu verwenden, die den impliziten Speicher **nicht** verwenden. ASP.NET Core 2.1 und höher verwenden das freigegebene Framework.
 
-Das Feature für den Laufzeitpaketspeicher wird implizit von einer ASP.NET Core-App verwendet, wenn die App als [Framework-abhängige Bereitstellung (FDD)](index.md#framework-dependent-deployments-fdd) bereitgestellt wird. Die Ziele in [`Microsoft.NET.Sdk.Web`](https://github.com/aspnet/websdk) beinhalten Manifeste, die auf implizite Paketspeicher auf dem Zielsystem verweisen. Darüber hinaus resultiert jede FDD-App, die vom Paket `Microsoft.AspNetCore.All` abhängig ist, in einer veröffentlichten App, die nur die App und ihre Objekte enthält, nicht aber die Pakete, die im Metapaket `Microsoft.AspNetCore.All` aufgelistet sind. Es wird davon ausgegangen, dass diese Pakete auf dem Zielsystem vorhanden sind.
+Das Feature für den Laufzeitpaketspeicher wird implizit von einer ASP.NET Core-App verwendet, wenn die App als [Framework-abhängige Bereitstellung (FDD)](index.md#publish-runtime-dependent) bereitgestellt wird. Die Ziele in [`Microsoft.NET.Sdk.Web`](https://github.com/aspnet/websdk) beinhalten Manifeste, die auf implizite Paketspeicher auf dem Zielsystem verweisen. Darüber hinaus resultiert jede FDD-App, die vom Paket `Microsoft.AspNetCore.All` abhängig ist, in einer veröffentlichten App, die nur die App und ihre Objekte enthält, nicht aber die Pakete, die im Metapaket `Microsoft.AspNetCore.All` aufgelistet sind. Es wird davon ausgegangen, dass diese Pakete auf dem Zielsystem vorhanden sind.
 
 Der Laufzeitpaketspeicher wird bei der Installation des .NET Core SDK auf dem Host installiert. Andere Installationsprogramme stellen möglicherweise den Laufzeitpaketspeicher bereit, einschließlich der Zip-/Tarball-Installationen des .NET Core SDK, `apt-get`, Red Hat Yum, dem .NET Core Windows Server-Hostingpakets und manuellen Installationen des Laufzeitpaketspeichers.
 
-Versichern Sie sich, dass das .NET Core SDK in der Zielumgebung installiert ist, wenn Sie eine App für [Framework-abhängige Bereitstellung (FDD)](index.md#framework-dependent-deployments-fdd) bereitstellen. Wenn die App für eine Umgebung bereitgestellt wird, die ASP.NET Core nicht enthält, können Sie den impliziten Speicher deaktivieren, indem Sie **\<PublishWithAspNetCoreTargetManifest>** angeben, das in der Projektdatei wie im folgenden Beispiel auf `false` festgelegt ist:
+Versichern Sie sich, dass das .NET Core SDK in der Zielumgebung installiert ist, wenn Sie eine App für [Framework-abhängige Bereitstellung (FDD)](index.md#publish-runtime-dependent) bereitstellen. Wenn die App für eine Umgebung bereitgestellt wird, die ASP.NET Core nicht enthält, können Sie den impliziten Speicher deaktivieren, indem Sie **\<PublishWithAspNetCoreTargetManifest>** angeben, das in der Projektdatei wie im folgenden Beispiel auf `false` festgelegt ist:
 
 ```xml
 <PropertyGroup>
@@ -135,7 +135,7 @@ Versichern Sie sich, dass das .NET Core SDK in der Zielumgebung installiert ist,
 ```
 
 > [!NOTE]
-> Bei Apps für die [eigenständige Bereitstellung (SCD)](index.md#self-contained-deployments-scd) wird davon ausgegangen, dass das Zielsystem die erforderlichen Manifestpakete nicht unbedingt enthält. Deshalb kann **\<PublishWithAspNetCoreTargetManifest>** für eine SCD-App nicht auf `true` festgelegt werden.
+> Bei Apps für die [eigenständige Bereitstellung (SCD)](index.md#publish-self-contained) wird davon ausgegangen, dass das Zielsystem die erforderlichen Manifestpakete nicht unbedingt enthält. Deshalb kann **\<PublishWithAspNetCoreTargetManifest>** für eine SCD-App nicht auf `true` festgelegt werden.
 
 Wenn Sie eine Anwendung bereitstellen, die von einem in der Bereitstellung vorhandenen Manifest abhängig ist (die Assembly ist im Ordner *bin* enthalten), wird der Laufzeitpaketspeicher für diese Assembly auf dem Host *nicht verwendet*. Die Assembly im Ordner *bin* wird unabhängig von ihrem Vorhandensein im Laufzeitpaketspeicher auf dem Host verwendet.
 

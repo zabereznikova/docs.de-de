@@ -6,12 +6,12 @@ dev_langs:
 author: thraka
 ms.author: adegeo
 ms.date: 01/27/2020
-ms.openlocfilehash: 92d97ca3efe761c879d0940a02342edb5a8180f0
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: 60794c4f8a5f9aeb7a4b3cd58c0c9f00e03fa9e7
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76920383"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77450979"
 ---
 # <a name="whats-new-in-net-core-30"></a>Neuerungen in .NET Core 3.0
 
@@ -54,7 +54,7 @@ Wenn Sie Visual Studio verwenden, benötigen Sie [Visual Studio 2019](https://vi
 
 ### <a name="default-executables"></a>Standardmäßig ausführbare Dateien
 
-.NET Core erstellt die [frameworkabhängigen ausführbaren Dateien](../deploying/index.md#framework-dependent-executables-fde) jetzt standardmäßig. Dieses Verhalten ist neu für Anwendungen, die eine global installierte Version von .NET Core verwenden. Vorher produzierten nur [eigenständige Bereitstellungen](../deploying/index.md#self-contained-deployments-scd) eine ausführbare Datei.
+.NET Core erstellt die [frameworkabhängigen ausführbaren Dateien](../deploying/index.md#publish-runtime-dependent) jetzt standardmäßig. Dieses Verhalten ist neu für Anwendungen, die eine global installierte Version von .NET Core verwenden. Vorher produzierten nur [eigenständige Bereitstellungen](../deploying/index.md#publish-self-contained) eine ausführbare Datei.
 
 Während `dotnet build` oder `dotnet publish` wird eine ausführbare Datei erstellt, die der Umgebung und Plattform des von Ihnen verwendeten SDKs entspricht. Diese ausführbaren Dateien bieten Ihnen die gleichen Möglichkeiten wie andere native ausführbare Dateien, wie z.B.:
 
@@ -301,7 +301,7 @@ Windows stellt eine umfassende native API mit grundlegenden C-APIs (ohne C++-Fea
 
 [MSIX](https://docs.microsoft.com/windows/msix/) ist ein neues Windows-Anwendungspaketformat. Es kann zum Bereitstellen von .NET Core 3.0-Desktopanwendungen auf Windows 10 verwendet werden.
 
-In Visual Studio 2019 können mit dem enthaltenen [Paketerstellungsprojekt für Windows-Anwendungen](https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-packaging-dot-net) MSIX-Pakete mit [eigenständigen](../deploying/index.md#self-contained-deployments-scd) .NET Core-Anwendungen erstellt werden.
+In Visual Studio 2019 können mit dem enthaltenen [Paketerstellungsprojekt für Windows-Anwendungen](https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-packaging-dot-net) MSIX-Pakete mit [eigenständigen](../deploying/index.md#publish-self-contained) .NET Core-Anwendungen erstellt werden.
 
 Die unterstützten Laufzeiten müssen in der `<RuntimeIdentifiers>`-Eigenschaft der .NET Core-Projektdatei angegeben werden:
 
@@ -365,7 +365,7 @@ Das folgende Beispiel für C# 8.0 veranschaulicht das Herstellen der Verbindung 
 
 ### <a name="cryptography-ciphers"></a>Kryptografieverschlüsselungen
 
-.NET 3.0 fügt Unterstützung für **AES-GCM**- und **AES-CCM-**-Verschlüsselungen hinzu, implementiert mit <xref:System.Security.Cryptography.AesGcm?displayProperty=nameWithType> bzw. <xref:System.Security.Cryptography.AesCcm?displayProperty=nameWithType>. Beide Algorithmen sind [AEAD-Algorithmen (Authenticated Encryption with Association Data)](https://en.wikipedia.org/wiki/Authenticated_encryption).
+.NET 3.0 fügt Unterstützung für **AES-GCM**- und **AES-CCM-** -Verschlüsselungen hinzu, implementiert mit <xref:System.Security.Cryptography.AesGcm?displayProperty=nameWithType> bzw. <xref:System.Security.Cryptography.AesCcm?displayProperty=nameWithType>. Beide Algorithmen sind [AEAD-Algorithmen (Authenticated Encryption with Association Data)](https://en.wikipedia.org/wiki/Authenticated_encryption).
 
 Der folgende Code veranschaulicht die Verwendung der `AesGcm`-Verschlüsselung zum Verschlüsseln und Entschlüsseln von Zufallsdaten.
 

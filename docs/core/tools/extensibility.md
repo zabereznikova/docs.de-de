@@ -2,12 +2,12 @@
 title: .NET Core-CLI-Erweiterbarkeitsmodell
 description: Erfahren Sie, wie Sie die .NET Core-CLI erweitern können.
 ms.date: 04/12/2017
-ms.openlocfilehash: 74da895fb3a3f6c77640a2b9a64acdb2894a954b
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: 56a9cedc090ddca446c0ee1a60f2ca49590e7635
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76920515"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77451154"
 ---
 # <a name="net-core-cli-extensibility-model"></a>.NET Core-CLI-Erweiterbarkeitsmodell
 
@@ -32,7 +32,7 @@ Die CLI kann auf drei Arten erweitert werden:
 Die drei oben beschriebenen Erweiterbarkeitsmechanismen schließen sich nicht gegenseitig aus. Sie können beide oder nur einen verwenden. Welchen Sie auswählen, hängt größtenteils davon ab, welches Ziel Sie mit der Erweiterung erreichen möchten.
 
 ## <a name="per-project-based-extensibility"></a>Projektbezogene Erweiterbarkeit
-Projektbezogene Tools sind [frameworkabhängige Bereitstellungen](../deploying/index.md#framework-dependent-deployments-fdd), die als NuGet-Pakete verteilt werden. Tools sind nur im Kontext des Projekts verfügbar, das auf sie verweist und für das sie gespeichert sind. Ein Aufruf außerhalb des Projektkontexts (z.B. außerhalb des Verzeichnisses, das das Projekt enthält) schlägt fehl, da der Befehl nicht gefunden werden kann.
+Projektbezogene Tools sind [frameworkabhängige Bereitstellungen](../deploying/index.md#publish-runtime-dependent), die als NuGet-Pakete verteilt werden. Tools sind nur im Kontext des Projekts verfügbar, das auf sie verweist und für das sie gespeichert sind. Ein Aufruf außerhalb des Projektkontexts (z.B. außerhalb des Verzeichnisses, das das Projekt enthält) schlägt fehl, da der Befehl nicht gefunden werden kann.
 
 Diese Tools sind ideal für Buildserver, da nichts außer der Projektdatei erforderlich ist. Der Buildprozess führt die Wiederherstellung für das Projekt, das es erstellt, aus, und die Tools stehen zur Verfügung. Sprachprojekte, wie F#, befinden sich auch in dieser Kategorie, da jedes Projekt nur in einer bestimmten Sprache geschrieben werden kann.
 

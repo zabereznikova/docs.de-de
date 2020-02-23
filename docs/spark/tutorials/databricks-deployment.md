@@ -4,12 +4,12 @@ description: Erfahren Sie, wie Sie eine .NET für Apache Spark-Anwendung in Data
 ms.date: 01/23/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: a117d85ab911b380598c93417f6ff95661ab864c
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: c5308530831fa288bf637849c1342f51769c3ad4
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76868030"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503963"
 ---
 # <a name="tutorial-deploy-a-net-for-apache-spark-application-to-databricks"></a>Tutorial: Bereitstellen einer .NET für Apache Spark-Anwendung in Databricks
 
@@ -126,16 +126,7 @@ Anschließend veröffentlichen Sie die *mySparkApp*, die im Tutorial [.NET für 
 
 1. Führen Sie zum Veröffentlichen der *mySparkApp* die folgenden Befehle aus:
 
-   **Unter Windows:**
-
-   ```console
-   cd mySparkApp
-   dotnet publish -c Release -f netcoreapp3.0 -r ubuntu.16.04-x64
-   ```
-
-   **Unter Linux:**
-
-   ```bash
+   ```dotnetcli
    cd mySparkApp
    dotnet publish -c Release -f netcoreapp3.0 -r ubuntu.16.04-x64
    ```

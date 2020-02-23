@@ -2,12 +2,12 @@
 title: Migrieren von DNX zur .Net Core-CLI
 description: Migrieren der Verwendung von DNX-Tools zu .NET Core-CLI-Tools.
 ms.date: 06/20/2016
-ms.openlocfilehash: e15e7ce10bb7a36deb2acd2abb9a0bd4ec8cd4a9
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: 31317f110ae1e8586b78becd757d0a8ff07f1459
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76920627"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503822"
 ---
 # <a name="migrating-from-dnx-to-net-core-cli-projectjson"></a>Migrieren von DNX zur .NET Core-CLI (project.json)
 
@@ -48,13 +48,13 @@ Die folgende Tabelle stellt die Zuordnung zwischen DNX-/DNU-Befehlen und ihren C
 
 | DNX-Befehl                    | CLI-Befehl    | Beschreibung                                                                                                     |
 |--------------------------------|----------------|-----------------------------------------------------------------------------------------------------------------|
-| dnx run                        | dotnet run     | Code aus Quelle ausführen.                                                                                           |
-| dnu build                      | dotnet build   | Erstellen einer IL-Binärdatei des Codes.                                                                                |
-| dnu pack                       | dotnet pack    | Verpacken eines NuGet-Pakets Ihres Codes.                                                                        |
+| dnx run                        | `dotnet run`     | Code aus Quelle ausführen.                                                                                           |
+| dnu build                      | `dotnet build`   | Erstellen einer IL-Binärdatei des Codes.                                                                                |
+| dnu pack                       | `dotnet pack`    | Verpacken eines NuGet-Pakets Ihres Codes.                                                                        |
 | dnx \[command] (z.B. „dnx web“) | NICHT VERFÜGBAR\*          | In DNX, Ausführen eines Befehls wie in der Datei „project.json“ definiert.                                                     |
 | dnu install                    | NICHT VERFÜGBAR\*          | In DNX, Installieren eines Pakets als Abhängigkeit.                                                            |
-| dnu restore                    | dotnet restore | Wiederherstellen von Abhängigkeiten, die in der Datei „project.json“ angegeben sind. ([Siehe Hinweis](#dotnet-restore-note))                                                            |
-| dnu publish                    | dotnet publish | Veröffentlichen Ihrer Anwendung für die Bereitstellung in einer der drei Formen (portabel, portabel-nativ und eigenständig). |
+| dnu restore                    | `dotnet restore` | Wiederherstellen von Abhängigkeiten, die in der Datei „project.json“ angegeben sind. ([Siehe Hinweis](#dotnet-restore-note))                                                            |
+| dnu publish                    | `dotnet publish` | Veröffentlichen Ihrer Anwendung für die Bereitstellung in einer der drei Formen (portabel, portabel-nativ und eigenständig). |
 | dnu wrap                       | NICHT VERFÜGBAR\*          | In DNX, Umschließen von „project.json“ in „csproj“.                                                                    |
 | dnu commands                   | NICHT VERFÜGBAR\*          | In DNX, Verwalten der global installierten Befehle.                                                           |
 

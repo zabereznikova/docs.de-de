@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet
-ms.openlocfilehash: 23dc0f691c8a8d80a0bd2a5d301ace0d129007af
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: 11a322278ce3ff38964fe2fa389e0b4a58897ec4
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76920893"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77449022"
 ---
 # <a name="deploy-net-core-apps-with-visual-studio"></a>Bereitstellen von .NET Core-Apps mit Visual Studio
 
@@ -24,7 +24,7 @@ Die folgenden Abschnitte zeigen, wie Sie Microsoft Visual Studio zum Erstellen d
 - Eigenständige Bereitstellung
 - Eigenständige Bereitstellung mit Drittanbieterabhängigkeiten
 
-Informationen zur Verwendung von Visual Studio für die Entwicklung von .NET Core-Anwendungen finden Sie unter [.NET Core-Abhängigkeiten und -Anforderungen](../install/dependencies.md?tabs=netcore30&pivots=os-windows).
+Informationen zur Verwendung von Visual Studio für die Entwicklung von .NET Core-Anwendungen finden Sie unter [.NET Core-Abhängigkeiten und -Anforderungen](../install/dependencies.md?pivots=os-windows).
 
 ## <a name="framework-dependent-deployment"></a>Framework-abhängige Bereitstellung
 
@@ -110,7 +110,7 @@ Sobald Sie das Debuggen abgeschlossen haben, können Sie Ihre eigenständige Ber
 
 <!-- markdownlint-disable MD025 -->
 
-# <a name="visual-studio-156-and-earliertabvs156"></a>[Visual Studio 15.6 und frühere Versionen](#tab/vs156)
+# <a name="visual-studio-156-and-earlier"></a>[Visual Studio 15.6 und frühere Versionen](#tab/vs156)
 
 Nachdem Sie das Programm debuggt und getestet haben, erstellen Sie die Dateien, die mit Ihrer App für jede Zielplattform bereitgestellt werden sollen.
 
@@ -176,7 +176,7 @@ Es folgt die vollständige *CSPROJ*-Datei dieses Projekts:
 </Project>
 ```
 
-# <a name="visual-studio-157-and-latertabvs157"></a>[Visual Studio 15.7 und höhere Versionen](#tab/vs157)
+# <a name="visual-studio-157-and-later"></a>[Visual Studio 15.7 und höhere Versionen](#tab/vs157)
 
 Nachdem Sie das Programm debuggt und getestet haben, erstellen Sie die Dateien, die mit Ihrer App für jede Zielplattform bereitgestellt werden sollen. Dafür muss ein separates Profil für jede Zielplattform erstellt werden.
 
@@ -274,7 +274,7 @@ Das Bereitstellen einer eigenständigen Bereitstellung mit einer oder mehreren D
 
 Es folgt die vollständige *CSPROJ*-Datei dieses Projekts:
 
-# <a name="visual-studio-156-and-earliertabvs156"></a>[Visual Studio 15.6 und frühere Versionen](#tab/vs156)
+# <a name="visual-studio-156-and-earlier"></a>[Visual Studio 15.6 und frühere Versionen](#tab/vs156)
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -289,7 +289,7 @@ Es folgt die vollständige *CSPROJ*-Datei dieses Projekts:
 </Project>
 ```
 
-# <a name="visual-studio-157-and-latertabvs157"></a>[Visual Studio 15.7 und höhere Versionen](#tab/vs157)
+# <a name="visual-studio-157-and-later"></a>[Visual Studio 15.7 und höhere Versionen](#tab/vs157)
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">

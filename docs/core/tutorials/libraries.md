@@ -3,12 +3,12 @@ title: Entwickeln von Bibliotheken mit der .NET Core-CLI
 description: Erfahren Sie, wie Sie die .NET Core-CLI verwenden, um .NET-Bibliotheken zu erstellen. Sie erstellen damit eine Bibliothek, die mehrere Frameworks unterstützt.
 author: cartermp
 ms.date: 05/01/2017
-ms.openlocfilehash: a7c0175d29f483571578b58d698dd790cf66f7f4
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: c23c1f027b4d6d09c50eb2257d34f72ec56302f4
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76920442"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503508"
 ---
 # <a name="develop-libraries-with-the-net-core-cli"></a>Entwickeln von Bibliotheken mit der .NET Core-CLI
 
@@ -220,7 +220,7 @@ Es ist wichtig, über Plattformen hinweg testen zu können. Sie können entweder
 
 1. Richten Sie Ihre Projektmappe ein. Verwenden Sie dazu folgende Befehle:
 
-   ```bash
+   ```dotnetcli
    mkdir SolutionWithSrcAndTest
    cd SolutionWithSrcAndTest
    dotnet new sln
@@ -241,7 +241,7 @@ Es ist wichtig, über Plattformen hinweg testen zu können. Sie können entweder
 
 1. Navigieren Sie zum Verzeichnis des Testprojekts, und fügen Sie einen Verweis zu `MyProject.Test` von `MyProject` hinzu.
 
-   ```bash
+   ```dotnetcli
    cd MyProject.Test
    dotnet add reference ../MyProject/MyProject.csproj
    ```
@@ -300,7 +300,7 @@ Solche Nutzungsszenarios bedeuten, dass die APIs, auf die zugegriffen wird, eine
 
 Sie können die folgenden Befehle in Ihrem Terminal ausführen, um die gleiche Struktur wie dieses Handbuch zu erstellen:
 
-```console
+```dotnetcli
 mkdir AwesomeLibrary && cd AwesomeLibrary
 dotnet new sln
 mkdir AwesomeLibrary.Core && cd AwesomeLibrary.Core && dotnet new classlib

@@ -2,12 +2,12 @@
 title: .NET Core Runtime-ID-Katalog (RID)
 description: Erfahren Sie mehr über die Runtime-ID (RID) und wie RIDs in .NET Core verwendet werden.
 ms.date: 02/22/2019
-ms.openlocfilehash: 4369e263f1f46c73f04c65e4124f63c68d133520
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: feb19632f16a047ecfb2dcb697a9b837824a1929
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76789907"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77451732"
 ---
 # <a name="net-core-rid-catalog"></a>.NET Core-RID-Katalog
 
@@ -108,7 +108,7 @@ Nur allgemeine Werte werden aufgeführt. Prüfen Sie die Datei [runtime.json](ht
   - `win10-arm`
   - `win10-arm64`
 
-Weitere Informationen finden Sie unter [.NET Core-Abhängigkeiten und -Anforderungen](install/dependencies.md?tabs=netcore30&pivots=os-windows).
+Weitere Informationen finden Sie unter [.NET Core-Abhängigkeiten und -Anforderungen](install/dependencies.md?pivots=os-windows).
 
 ## <a name="linux-rids"></a>RIDs für Linux
 
@@ -126,7 +126,7 @@ Nur allgemeine Werte werden aufgeführt. Prüfen Sie die Datei [runtime.json](ht
   - `tizen.4.0.0`
   - `tizen.5.0.0`
 
-Weitere Informationen finden Sie unter [.NET Core-Abhängigkeiten und -Anforderungen](install/dependencies.md?tabs=netcore30&pivots=os-linux).
+Weitere Informationen finden Sie unter [.NET Core-Abhängigkeiten und -Anforderungen](install/dependencies.md?pivots=os-linux).
 
 ## <a name="macos-rids"></a>Relative IDs für macOS
 
@@ -145,7 +145,7 @@ Relative IDs für macOS verwenden das ältere Branding „OSX“. Nur allgemeine
 - macOS 10.14 Mojave (.NET Core 1.1 oder höher)
   - `osx.10.14-x64`
 
-Weitere Informationen finden Sie unter [.NET Core-Abhängigkeiten und -Anforderungen](install/dependencies.md?tabs=netcore30&pivots=os-macos).
+Weitere Informationen finden Sie unter [.NET Core-Abhängigkeiten und -Anforderungen](install/dependencies.md?pivots=os-macos).
 
 ## <a name="see-also"></a>Siehe auch
 

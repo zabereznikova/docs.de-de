@@ -3,12 +3,12 @@ title: Erhöhte Zugriffsrechte für dotnet-Befehle
 description: Erfahren Sie mehr über die Best Practices für dotnet-Befehle, die erhöhte Zugriffsrechte erfordern.
 author: wli3
 ms.date: 06/26/2019
-ms.openlocfilehash: cf7c93a0adcae7092a61a6fc6046cd45cf00bf58
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: fe33cbe966d175f71ba350737b283c1e83f64fa6
+ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71216302"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77543429"
 ---
 # <a name="elevated-access-for-dotnet-commands"></a>Erhöhte Zugriffsrechte für dotnet-Befehle
 
@@ -29,9 +29,9 @@ Die folgenden Anweisungen zeigen die empfohlene Vorgehensweise bei der Installat
 
 <!-- markdownlint-disable MD025 -->
 
-# <a name="windowstabwindows"></a>[Windows](#tab/windows)
+# <a name="windows"></a>[Windows](#tab/windows)
 
-### <a name="install-the-global-tool"></a>Installieren des globalen Tools
+### <a name="install-the-tool"></a>Installieren des Tools
 
 Wenn der Ordner `%ProgramFiles%\dotnet-tools` bereits vorhanden ist, überprüfen Sie anhand der folgenden Schritte, ob die Gruppe „Benutzer“ die Berechtigung hat, dieses Verzeichnis zu schreiben oder zu ändern:
 
@@ -73,11 +73,11 @@ Geben Sie in der Eingabeaufforderung mit erhöhten Rechten folgenden Befehl ein:
 dotnet tool uninstall PACKAGEID --tool-path "%ProgramFiles%\dotnet-tools"
 ```
 
-# <a name="linuxtablinux"></a>[Linux](#tab/linux)
+# <a name="linux"></a>[Linux](#tab/linux)
 
 [!INCLUDE [elevated-access-unix](../../../includes/elevated-access-unix.md)]
 
-# <a name="macostabmacos"></a>[macOS](#tab/macos)
+# <a name="macos"></a>[macOS](#tab/macos)
 
 [!INCLUDE [elevated-access-unix](../../../includes/elevated-access-unix.md)]
 
@@ -93,14 +93,14 @@ Während der Entwicklung benötigen Sie möglicherweise erhöhte Zugriffsrechte,
 
 - Verwenden generierter ausführbaren Dateien (die bietet die beste Leistung beim Start):
 
-   ```bash
+   ```dotnetcli
    dotnet build
    sudo ./bin/Debug/netcoreapp3.0/APPLICATIONNAME
    ```
     
 - Verwenden des Befehls [dotnet run](dotnet-run.md) mit dem Flag `—no-build`, um das Generieren neuer Binärdateien zu vermeiden:
 
-   ```bash
+   ```dotnetcli
    dotnet build
    sudo dotnet run --no-build
    ```

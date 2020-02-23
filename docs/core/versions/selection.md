@@ -4,12 +4,12 @@ description: In diesem Artikel erfahren Sie, wie .NET Core automatisch Laufzeitv
 author: thraka
 ms.author: adegeo
 ms.date: 06/26/2019
-ms.openlocfilehash: 546725db907937dea6fe0739656fb585a8855644
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 55f04ce81f63753831fca8fa2e44811c44049733
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75713977"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77450998"
 ---
 # <a name="select-the-net-core-version-to-use"></a>Auswählen der zu verwendenden .NET Core-Version
 
@@ -78,7 +78,7 @@ Ein bestimmtes SDK unterstützt einen festen Satz von Frameworks, der auf das Zi
 
 ## <a name="framework-dependent-apps-roll-forward"></a>Von Frameworks abhängige Apps führen einen Rollforward aus
 
-Wenn Sie eine Anwendung von der Quelle aus mit [`dotnet run`](../tools/dotnet-run.md) ausführen, von einer [**Framework-abhängigen Bereitstellung**](../deploying/index.md#framework-dependent-deployments-fdd) aus mit [`dotnet myapp.dll`](../tools/dotnet.md#description) oder von einer [**Framework-abhängigen ausführbaren Datei**](../deploying/index.md#framework-dependent-executables-fde) aus mit `myapp.exe`, ist die ausführbare `dotnet`-Datei der **Host** für die Anwendung.
+Wenn Sie eine Anwendung von der Quelle aus mit [`dotnet run`](../tools/dotnet-run.md) ausführen, von einer [**Framework-abhängigen Bereitstellung**](../deploying/index.md#publish-runtime-dependent) aus mit [`dotnet myapp.dll`](../tools/dotnet.md#description) oder von einer [**Framework-abhängigen ausführbaren Datei**](../deploying/index.md#publish-runtime-dependent) aus mit `myapp.exe`, ist die ausführbare `dotnet`-Datei der **Host** für die Anwendung.
 
 Der Host wählt die neueste Patchversion aus, die auf dem Computer installiert ist. Wenn Sie beispielsweise `netcoreapp2.0` in Ihrer Projektdatei angegeben haben und `2.0.4` die zuletzt installierte .NET-Laufzeit ist, wird die Laufzeit `2.0.4` verwendet.
 
@@ -101,7 +101,7 @@ Möglicherweise verhalten sich 2.0.5 und 2.2.2 unterschiedlich, insbesondere in 
 
 ## <a name="self-contained-deployments-include-the-selected-runtime"></a>Eigenständige Bereitstellungen umfassen die ausgewählte Laufzeit
 
-Sie können eine Anwendung als [**eigenständige Bereitstellung**](../deploying/index.md#self-contained-deployments-scd) veröffentlichen. Bei diesem Ansatz werden die .NET Core-Laufzeit und -Bibliotheken mit Ihrer Anwendung zusammengeführt. Eigenständige Bereitstellungen sind nicht von Laufzeitumgebungen abhängig. Die Auswahl der Laufzeitversion erfolgt bei der Veröffentlichung, nicht bei der Ausführung.
+Sie können eine Anwendung als [**eigenständige Bereitstellung**](../deploying/index.md#publish-self-contained) veröffentlichen. Bei diesem Ansatz werden die .NET Core-Laufzeit und -Bibliotheken mit Ihrer Anwendung zusammengeführt. Eigenständige Bereitstellungen sind nicht von Laufzeitumgebungen abhängig. Die Auswahl der Laufzeitversion erfolgt bei der Veröffentlichung, nicht bei der Ausführung.
 
 Der Veröffentlichungsprozess wählt die neueste Patchversion der angegebenen Laufzeitfamilie aus. Beispielsweise wählt `dotnet publish` .NET Core 2.0.4 aus, wenn das die neueste Patchversion der .NET Core 2.0-Laufzeitfamilie ist. Das Zielframework (einschließlich der neuesten installierten Sicherheitspatches) ist in der Anwendung enthalten.
 
