@@ -4,12 +4,12 @@ description: Erfahren Sie mehr über den Typ „Struktur“ und wie Sie diesen e
 ms.date: 10/12/2016
 ms.technology: csharp-fundamentals
 ms.assetid: a7094b8c-7229-4b6f-82fc-824d0ea0ec40
-ms.openlocfilehash: cdfe2a763058b8f568ede2ff93c918c2dae874f7
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 540742ea6a215e09f0cc31b218ac10fbf6192352
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75346904"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503991"
 ---
 # <a name="structs"></a>Strukturen
 
@@ -46,9 +46,6 @@ Strukturen teilen sich einen großen Teil der Syntax mit Klassen, obwohl Struktu
 - Strukturen sind Werttypen, und Klassen sind Verweistypen.
 
 - Strukturen können im Gegensatz zu Klassen ohne den Operator `new` instanziiert werden.
-
-   > [!NOTE]
-   > In .NET Core 2.1 oder höher müssen Strukturtypen mit dem [new-Operator](language-reference/operators/new-operator.md) oder [Standardliteral](language-reference/operators/default.md#default-literal) oder durch Initialisieren jedes ihrer privaten Felder instanziiert werden. Weitere Informationen finden Sie unter [Breaking Changes bei der Migration von Version 2.0 zu Version 2.1](../core/compatibility/2.0-2.1.md#corefx).
 
 - Strukturen können Konstruktoren deklarieren, die Parameter besitzen.
 

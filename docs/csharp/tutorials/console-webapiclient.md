@@ -3,12 +3,12 @@ title: Erstellen eines REST-Clients mithilfe von .NET Core
 description: In diesem Tutorial lernen Sie verschiedene Features in .NET Core und der Sprache C# kennen.
 ms.date: 01/09/2020
 ms.assetid: 51033ce2-7a53-4cdd-966d-9da15c8204d2
-ms.openlocfilehash: eb7946d669de60c3469ca8098e40b159082ea270
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: f85d50b222d06caa045e22b452d0902aaac66088
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76921087"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503970"
 ---
 # <a name="rest-client"></a>REST-Client
 
@@ -51,7 +51,7 @@ Eines der wichtigsten Entwurfsziele für .NET Core ist die Minimierung der Grö�
 
 Sie benötigen das `System.Runtime.Serialization.Json`-Paket für diese Anwendung. Fügen Sie es Ihrem Projekt hinzu, indem Sie den folgenden [.NET CLI](../../core/tools/dotnet-add-package.md)-Befehl ausführen:
 
-```console
+```dotnetcli
 dotnet add package System.Text.Json
 ```
 

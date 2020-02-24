@@ -6,12 +6,12 @@ helpviewer_keywords:
 - get accessor [C#]
 - properties [C#], about properties
 ms.assetid: f7f67b05-0983-4cdb-96af-1855d24c967c
-ms.openlocfilehash: 5f4697ea518e7fe03df4ecac9d748386a8ac6313
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: d873f626b660bb6bd94710add4543e21e11823d6
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75705404"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77452018"
 ---
 # <a name="using-properties-c-programming-guide"></a>Verwenden von Eigenschaften (C#-Programmierhandbuch)
 
@@ -53,7 +53,7 @@ Im vorherigen Codesegment wird, wenn Sie der `Name`-Eigenschaft keinen Wert zuwe
 
 ## <a name="the-set-accessor"></a>Der set-Accessor
 
-Der `set`-Accessor ähnelt einer Methode, deren Rückgabetyp [void](../../language-reference/keywords/void.md) ist. Er verwendet einen impliziten Parameter mit dem Namen `value`, dessen Typ der Typ der Eigenschaft ist. Im folgenden Beispiel wird ein `set`-Accessor der `Name`-Eigenschaft hinzugefügt.
+Der `set`-Accessor ähnelt einer Methode, deren Rückgabetyp [void](../../language-reference/builtin-types/void.md) ist. Er verwendet einen impliziten Parameter mit dem Namen `value`, dessen Typ der Typ der Eigenschaft ist. Im folgenden Beispiel wird ein `set`-Accessor der `Name`-Eigenschaft hinzugefügt.
 
 [!code-csharp[csProgGuideProperties#12](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideProperties/CS/Properties.cs#12)]
 
