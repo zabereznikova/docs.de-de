@@ -12,7 +12,7 @@
           href: interface-definition-language.md
         - name: Netzwerkprotokolle
           href: network-protocols.md
-        - name: Gründe für die Empfehlung von gRPC für WCF-Entwickler
+        - name: Darum empfehlen wir gRPC für WCF-Entwickler
           href: Why-grpc.md
     - name: Protokollpuffer
       href: protocol-buffers.md
@@ -27,7 +27,7 @@
           href: protobuf-repeated.md
         - name: Reservierte Protobuf-Felder
           href: protobuf-reserved.md
-        - name: „Any“- und „OneOf“-Felder für Variant-Typen für Protobuf
+        - name: Protobuf-Felder „Any“ und „OneOf“ für Variant-Typen
           href: protobuf-any-oneof.md
         - name: Protobuf-Enumerationen
           href: protobuf-enums.md
@@ -79,11 +79,11 @@
           href: docker.md
         - name: Kubernetes
           href: kubernetes.md
-        - name: gRPC und Service Mesh
+        - name: Dienstmeshes
           href: service-mesh.md
         - name: Lastenausgleich
           href: load-balancing.md
-        - name: Application Performance Management
+        - name: Verwaltung der Anwendungsleistung
           href: application-performance-management.md
     - name: Anhang
       href: appendix.md
