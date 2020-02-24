@@ -193,5 +193,5 @@ Der folgende Code enthält alle Beispiele aus diesem Thema.
 - [Listen](../language-reference/lists.md)
 - [Tupel](../language-reference/tuples.md)
 - [Funktionen](../language-reference/functions/index.md)
-- [`let`Land](../language-reference/functions/let-bindings.md)
+- [`let`Land/Region](../language-reference/functions/let-bindings.md)
 - [Lambda-Ausdrücke: Das `fun`-Schlüsselwort](../language-reference/functions/lambda-expressions-the-fun-keyword.md)
