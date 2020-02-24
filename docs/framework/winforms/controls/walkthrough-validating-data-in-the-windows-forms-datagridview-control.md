@@ -1,5 +1,5 @@
 ---
-title: 'Exemplarische Vorgehensweise: Überprüfen von Daten in DataGridView'
+title: 'Exemplarische Vorgehensweise: Validieren von Daten im DataGridView-Steuerelement'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -19,17 +19,17 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76740102"
 ---
-# <a name="walkthrough-validating-data-in-the-windows-forms-datagridview-control"></a>Exemplarische Vorgehensweise: Validieren von Daten im DataGridView-Steuerelement in Windows Forms
+# <a name="walkthrough-validating-data-in-the-windows-forms-datagridview-control"></a>Exemplarische Vorgehensweise: Überprüfen von Daten im DataGridView-Steuerelement in Windows Forms
 
 Wenn Sie Benutzern Dateneingabe Funktionen anzeigen, müssen Sie häufig die Daten überprüfen, die in das Formular eingegeben wurden. Die <xref:System.Windows.Forms.DataGridView>-Klasse bietet eine bequeme Möglichkeit, die Validierung auszuführen, bevor Daten in den Datenspeicher übertragen werden. Sie können Daten überprüfen, indem Sie das <xref:System.Windows.Forms.DataGridView.CellValidating>-Ereignis behandeln, das von der <xref:System.Windows.Forms.DataGridView> ausgelöst wird, wenn sich die aktuelle Zelle ändert.
 
 In dieser exemplarischen Vorgehensweise rufen Sie Zeilen aus der `Customers` Tabelle in der Northwind-Beispieldatenbank ab und zeigen Sie in einem <xref:System.Windows.Forms.DataGridView>-Steuerelement an. Wenn ein Benutzer eine Zelle in der `CompanyName` Spalte bearbeitet und versucht, die Zelle zu verlassen, prüft der <xref:System.Windows.Forms.DataGridView.CellValidating>-Ereignishandler die neue Firmenname-Zeichenfolge, um sicherzustellen, dass Sie nicht leer ist. Wenn der neue Wert eine leere Zeichenfolge ist, verhindert die <xref:System.Windows.Forms.DataGridView>, dass der Cursor des Benutzers die Zelle verlässt, bis eine nicht leere Zeichenfolge eingegeben wird.
 
-Informationen zum Kopieren des Codes in diesem Thema als einzelne Auflistung finden Sie unter Gewusst wie: Überprüfen von [Daten im Windows Forms DataGridView-Steuer](how-to-validate-data-in-the-windows-forms-datagridview-control.md)Element.
+Zum Kopieren des Codes in diesem Thema als einzelne Auflistung lesen Sie [Vorgehensweise: Überprüfen Sie die Daten im Windows Forms DataGridView-Steuerelement](how-to-validate-data-in-the-windows-forms-datagridview-control.md).
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
-Wenn Sie diese exemplarische Vorgehensweise abschließen möchten, müssen folgende Voraussetzungen erfüllt sein:
+Für die Durchführung dieser exemplarischen Vorgehensweise benötigen Sie Folgendes:
 
 - Zugriff auf einen Server mit der Beispieldatenbank Northwind SQL Server.
 
@@ -82,21 +82,21 @@ Sie können das Formular jetzt testen, um sicherzustellen, dass das Verhalten wi
 
 Diese Anwendung bietet grundlegende Kenntnisse über die Funktionen des <xref:System.Windows.Forms.DataGridView>-Steuer Elements. Sie können die Darstellung und das Verhalten des <xref:System.Windows.Forms.DataGridView> Steuer Elements auf verschiedene Weise anpassen:
 
-- Ändern von Rahmen-und Header Stilen. Weitere Informationen finden Sie unter Gewusst [wie: Ändern der Rahmen-und Rasterlinien Stile im Windows Forms DataGridView-Steuer](change-the-border-and-gridline-styles-in-the-datagrid.md)Element.
+- Ändern von Rahmen-und Header Stilen. Weitere Informationen finden Sie unter [Vorgehensweise: Ändern Sie die Rahmen-und Rasterlinien Stile im Windows Forms DataGridView-Steuerelement](change-the-border-and-gridline-styles-in-the-datagrid.md).
 
-- Aktiviert oder schränkt die Benutzereingabe auf das <xref:System.Windows.Forms.DataGridView> Steuerelement ein. Weitere Informationen finden Sie unter Gewusst [wie: verhindern des Hinzufügens und Löschens von Zeilen im Windows Forms DataGridView-Steuer](prevent-row-addition-and-deletion-datagridview.md)Element und Gewusst wie: Festlegen von schreibgeschützten [Spalten im Windows Forms DataGridView-Steuer](how-to-make-columns-read-only-in-the-windows-forms-datagridview-control.md)Element.
+- Aktiviert oder schränkt die Benutzereingabe auf das <xref:System.Windows.Forms.DataGridView> Steuerelement ein. Weitere Informationen finden Sie unter [Vorgehensweise: Verhindern Sie das Hinzufügen und Löschen von Zeilen im Windows Forms DataGridView -Steuer](prevent-row-addition-and-deletion-datagridview.md), und [Gewusst wie: Legen Sie die Spalten im Windows Forms DataGridView-Steuerelement](how-to-make-columns-read-only-in-the-windows-forms-datagridview-control.md)als schreibgeschützt fest.
 
-- Überprüfen Sie die Benutzereingaben auf datenbankbezogene Fehler. Weitere Informationen finden Sie unter Exemplarische Vorgehensweise [: Behandeln von Fehlern, die während der Dateneingabe im Windows Forms DataGridView-Steuerelement auftreten](handling-errors-that-occur-during-data-entry-in-the-datagrid.md).
+- Überprüfen Sie die Benutzereingaben auf datenbankbezogene Fehler. Weitere Informationen finden Sie unter [Exemplarische Vorgehensweise: Behandlung von Fehlern, die während der Dateneingabe im Windows Forms DataGridView-Steuerelement](handling-errors-that-occur-during-data-entry-in-the-datagrid.md)auftreten.
 
-- Verarbeiten Sie sehr große Datasets im virtuellen Modus. Weitere Informationen finden Sie unter Exemplarische [Vorgehensweise: Implementieren des virtuellen Modus im Windows Forms DataGridView-Steuer](implementing-virtual-mode-wf-datagridview-control.md)Element.
+- Verarbeiten Sie sehr große Datasets im virtuellen Modus. Weitere Informationen finden Sie unter [Exemplarische Vorgehensweise: Der virtuelle Modus wird im Windows Forms DataGridView-Steuerelement](implementing-virtual-mode-wf-datagridview-control.md)implementiert.
 
-- Passen Sie die Darstellung von Zellen an. Weitere Informationen finden Sie unter Gewusst [wie: Anpassen der Darstellung von Zellen im Windows Forms DataGridView-Steuer](customize-the-appearance-of-cells-in-the-datagrid.md) Element und Gewusst [wie: Festlegen von Schriftart-und Farb Stilen im Windows Forms DataGridView-Steuer](how-to-set-font-and-color-styles-in-the-windows-forms-datagridview-control.md)Element.
+- Passen Sie die Darstellung von Zellen an. Weitere Informationen finden Sie unter [Vorgehensweise: Passen Sie die Darstellung von Zellen im Windows Forms DataGridView-Steuerelement an](customize-the-appearance-of-cells-in-the-datagrid.md) und [Vorgehensweise: Legen Sie Schriftart-und Farbstile im Windows Forms DataGridView-Steuerelement](how-to-set-font-and-color-styles-in-the-windows-forms-datagridview-control.md)fest.
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.BindingSource>
 - [Dateneingabe im DataGridView-Steuerelement in Windows Forms](data-entry-in-the-windows-forms-datagridview-control.md)
-- [Gewusst wie: Überprüfen von Daten im DataGridView-Steuerelement in Windows Forms](how-to-validate-data-in-the-windows-forms-datagridview-control.md)
-- [Exemplarische Vorgehensweise: Behandeln von Fehlern, die während der Dateneingabe im DataGridView-Steuerelement in Windows Forms auftreten](handling-errors-that-occur-during-data-entry-in-the-datagrid.md)
+- [Vorgehensweise: Validieren von Daten im Windows Forms DataGridView-Steuerelement](how-to-validate-data-in-the-windows-forms-datagridview-control.md)
+- [Exemplarische Vorgehensweise: Behandeln von Fehlern, die während der Dateneingabe im Windows Forms DataGridView-Steuerelement auftreten](handling-errors-that-occur-during-data-entry-in-the-datagrid.md)
 - [Protecting Connection Information (Schützen von Verbindungsinformationen)](../../data/adonet/protecting-connection-information.md)

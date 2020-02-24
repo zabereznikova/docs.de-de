@@ -1,19 +1,19 @@
 ---
 title: .NET-Microservices. .NET-Microservices-Architektur für .NET-Containeranwendungen
 description: .NET-Microservicesarchitektur für .NET-Containeranwendungen | Microservices sind modulare und unabhängig bereitstellbare Dienste. Docker-Container (für Linux und Windows) vereinfachen die Bereitstellung und das Testen, indem ein Dienst und seine Abhängigkeiten zu einer einzigen Einheit gebündelt werden, die dann in einer isolierten Umgebung ausgeführt wird.
-ms.date: 01/07/2019
-ms.openlocfilehash: 7fa4935fe56ca873a5311812637964083e34170e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.date: 01/30/2020
+ms.openlocfilehash: 5da167de1ffd2169aea44b9872281e71c87927b1
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73089913"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77502633"
 ---
 # <a name="net-microservices-architecture-for-containerized-net-applications"></a>.NET-Microservices: .NET-Microservices-Architektur für .NET-Containeranwendungen
 
 ![Bucheinband](./media/cover-small.png)
 
-**EDITION v2.2**: auf ASP.NET Core 2.2 aktualisiert
+**EDITION v3.1** – für ASP.NET Core 3.1 aktualisiert
 
 Dieser Leitfaden ist eine Einführung in das Entwickeln von auf Microservices basierenden Anwendung und das Verwalten derselben mithilfe von Containern. Er erläutert das Architekturdesign und Implementierungsansätze mithilfe von .NET Core und Docker-Containern.
 
@@ -47,7 +47,7 @@ Der nächste Schritt nach dem Durcharbeiten dieses Leitfadens ist der, mehr übe
 
 ## <a name="version"></a>Version
 
-Dieser Leitfaden wurde für die Version **.NET Core 2.2** überarbeitet und weist viele weitere Aktualisierungen auf, die sich auf die gleiche „Generation“ von Technologien beziehen (also Azure und ergänzende Technologien von Drittanbietern), die zeitlich mit .NET Core 2.2 zusammenfallen. Aus diesem Grund wurde auch die Versionsnummer des Buchs auf Version **2.2** aktualisiert.
+Dieser Leitfaden wurde für Version **.NET Core 3.1** überarbeitet und enthält viele weitere Updates zu artverwandten Technologien (also Azure und Drittanbietertechnologien), die zeitgleich mit dem.NET Core 3.1-Release veröffentlicht wurden. Aus diesem Grund wurde auch die Versionsnummer des Leitfadens auf Version **3.1** aktualisiert.
 
 ## <a name="what-this-guide-does-not-cover"></a>Was in diesem Leitfaden nicht behandelt wird
 
@@ -146,7 +146,7 @@ Teilnehmer und Prüfer:
 >
 > **Charles Lowell**, Softwareentwickler, VS CAT-Team, Microsoft
 >
-> **Miguel Veloso**, leitender Berater bei Turing Challenge
+> **Miguel Veloso**, Software Development Engineer bei Plain Concepts
 
 ## <a name="copyright"></a>Copyright
 
@@ -162,7 +162,7 @@ One Microsoft Way
 
 Redmond, Washington 98052-6399
 
-Copyright © 2019 Microsoft Corporation
+Copyright © 2020 by Microsoft Corporation
 
 Alle Rechte vorbehalten. Die Inhalte dieses Buchs dürfen in keiner Form und für keinen Zweck ohne die schriftliche Genehmigung des Herausgebers reproduziert oder übertragen werden.
 
