@@ -2,20 +2,20 @@
 title: 'Verschlüsselung und Netzwerksicherheit: GrpC für WCF-Entwickler'
 description: Hinweise zur Netzwerksicherheit und-Verschlüsselung in GrpC
 ms.date: 09/02/2019
-ms.openlocfilehash: fd993a2d75e97011c6c92cee02c24c5358a211ad
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: f8a7aeaf2a65e4ff56ac33d728e40f09a436f7a6
+ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73967780"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77542767"
 ---
 # <a name="encryption-and-network-security"></a>Verschlüsselung und Netzwerksicherheit
 
-Das Netzwerk Sicherheitsmodell von WCF ist umfangreich und komplex, einschließlich Sicherheit auf Transport Ebene mithilfe von HTTPS oder TLS-over-TCP und Sicherheit auf Nachrichten Ebene mithilfe der WS-Security-Spezifikation zum Verschlüsseln einzelner Nachrichten.
+Das Netzwerk Sicherheitsmodell für Windows Communication Foundation (WCF) ist umfangreich und komplex. Sie beinhaltet Sicherheit auf Transport Ebene mithilfe von HTTPS oder TLS-over-TCP und Sicherheit auf Nachrichten Ebene, indem die WS-Security-Spezifikation zum Verschlüsseln einzelner Nachrichten verwendet wird.
 
-GrpC verlässt sicheres Netzwerk auf das zugrunde liegende http/2-Protokoll, das mithilfe regulärer TLS-Zertifikate geschützt werden kann.
+GrpC verlässt sicheres Netzwerk auf das zugrunde liegende http/2-Protokoll, das Sie mithilfe von TLS-Zertifikaten sichern können.
 
-Webbrowser sind auf die Verwendung von TLS-Verbindungen für http/2, aber die meisten programmgesteuerten Clients, einschließlich. NET-`HttpClient`, kann http/2 über unverschlüsselte Verbindungen verwenden. `HttpClient` *erfordert* standardmäßig eine Verschlüsselung, aber Sie können dies mithilfe eines <xref:System.AppContext> Schalters außer Kraft setzen.
+Webbrowser sind auf die Verwendung von TLS-Verbindungen für http/2, aber die meisten programmgesteuerten Clients, einschließlich. NET-`HttpClient`, kann http/2 über unverschlüsselte Verbindungen verwenden. `HttpClient` erfordert standardmäßig eine Verschlüsselung, Sie können diese jedoch überschreiben, indem Sie einen <xref:System.AppContext>-Schalter verwenden.
 
 ```csharp
 AppContext.SetSwitch("System.Net.Http.SocketsHttpHandler.Http2UnencryptedSupport", true);
@@ -25,9 +25,7 @@ Für öffentliche APIs sollten Sie immer TLS-Verbindungen verwenden und gültige
 
 Für interne Dienste in einem Unternehmensnetzwerk sollten Sie weiterhin TLS verwenden, um den Netzwerk Datenverkehr zu und von ihren GrpC-Diensten zu sichern.
 
-Die Kommunikation zwischen den-Diensten in einem Cluster wie Kubernetes oder docker Swarm wird im allgemeinen automatisch von der Netzwerkebene des Containers verschlüsselt, sodass die Implementierung von TLS in Diensten, die ausschließlich in einem solchen Cluster ausgeführt werden, nicht erforderlich ist. Weitere Informationen zu diesem Thema finden Sie im Abschnitt "Service Mesh" des nächsten Kapitels.
-
-Wenn Sie explizites TLS zwischen Diensten verwenden müssen, die in Kubernetes ausgeführt werden, sollten Sie die Verwendung einer in-Cluster-Zertifizierungsstelle und eines Zertifikat-Manager-Controllers wie [Cert-Manager](https://docs.cert-manager.io/en/latest/) in Erwägung gezogen werden, um Dienste zum Zeitpunkt der Bereitstellung automatisch
+Wenn Sie explizites TLS zwischen Diensten verwenden müssen, die in Kubernetes ausgeführt werden, sollten Sie eine in-Cluster-Zertifizierungsstelle und einen Zertifikat-Manager-Controller wie [Cert-Manager](https://docs.cert-manager.io/en/latest/)verwenden. Anschließend können Sie den Diensten zum Zeitpunkt der Bereitstellung automatisch Zertifikate zuweisen.
 
 >[!div class="step-by-step"]
 >[Zurück](channel-credentials.md)

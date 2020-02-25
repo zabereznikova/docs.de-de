@@ -1,17 +1,17 @@
 ---
 title: 'Protobuf-Zuordnungen für Wörterbücher: GrpC für WCF-Entwickler'
-description: Erfahren Sie, wie Sie protobuf-Zuordnungen zur Darstellung von verwenden. Die Wörterbuchtypen von net.
+description: Erfahren Sie, wie protobuf-Zuordnungen verwendet werden, um Wörterbuchtypen in .net darzustellen.
 ms.date: 09/09/2019
-ms.openlocfilehash: 8b4f29daa263f329dc533d3ddc596d0f47c1b6e0
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: bf848bbc7e3618f6d78e280fcd85d5eb88d5cfae
+ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73967415"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77543130"
 ---
 # <a name="protobuf-maps-for-dictionaries"></a>Protobuf-Zuordnungen für Wörterbücher
 
-Es ist wichtig, dass Sie beliebige Auflistungen benannter Werte in Nachrichten darstellen können. In .net wird dies häufig mithilfe von Wörterbuchtypen gehandhabt. Die protobuf-Entsprechung des .net-<xref:System.Collections.Generic.IDictionary%602> Typs ist der `map<key_type, value_type>`-Typ. In diesem Abschnitt wird gezeigt, wie Sie eine `map` in protobuf deklarieren und wie Sie den generierten Code verwenden.
+Es ist wichtig, dass Sie beliebige Auflistungen benannter Werte in Nachrichten darstellen können. In .net wird dies häufig durch Wörterbuchtypen gehandhabt. Die Entsprechung des .net-<xref:System.Collections.Generic.IDictionary%602> Typs in Protokollpuffer (protobuf) ist der `map<key_type, value_type>`-Typ. In diesem Abschnitt wird gezeigt, wie Sie einen `map` Typ in protobuf deklarieren und wie Sie den generierten Code verwenden.
 
 ```protobuf
 message StockPrices {
@@ -19,9 +19,9 @@ message StockPrices {
 }
 ```
 
-Im generierten Code verwenden `map` Felder die `Google.Protobuf.Collections.MapField<TKey, TValue>`-Klasse, die die .NET-Standard Auflistungs Schnittstellen implementiert, einschließlich <xref:System.Collections.Generic.IDictionary%602>.
+Im generierten Code verwenden `map` Felder die `Google.Protobuf.Collections.MapField<TKey, TValue>`-Klasse. Diese Klasse implementiert die standardmäßigen .net-Auflistungs Schnittstellen, einschließlich <xref:System.Collections.Generic.IDictionary%602>.
 
-Zuordnungs Felder können nicht direkt in einer Nachrichten Definition wiederholt werden, Sie können jedoch eine Nachricht erstellen, die eine Zuordnung enthält, und `repeated` für den Nachrichtentyp verwenden, wie im folgenden Beispiel gezeigt:
+Karten Felder können nicht direkt in einer Nachrichten Definition wiederholt werden. Sie können jedoch eine Nachricht erstellen, die eine Zuordnung enthält, und `repeated` für den Nachrichtentyp verwenden, wie im folgenden Beispiel gezeigt:
 
 ```protobuf
 message Order {
@@ -45,7 +45,7 @@ public Order CreateOrder(Dictionary<string, string> attributes)
 }
 ```
 
-## <a name="further-reading"></a>Weiterführende Themen
+## <a name="further-reading"></a>Weitere Informationsquellen
 
 Weitere Informationen zu protobuf finden Sie in der offiziellen [protobuf-Dokumentation](https://developers.google.com/protocol-buffers/docs/overview).
 

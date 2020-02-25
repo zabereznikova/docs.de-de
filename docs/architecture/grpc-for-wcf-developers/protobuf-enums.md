@@ -2,18 +2,20 @@
 title: Protobuf-Enumerationen-GrpC für WCF-Entwickler
 description: Erfahren Sie, wie Sie Enumerationen in protobuf deklarieren und verwenden.
 ms.date: 09/09/2019
-ms.openlocfilehash: 4ea4d03bede2a9ebfd1f2c3ee56f299e918800e9
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 01cf4a4e5e0eda1e7ddff2a6780119fcb3120dad
+ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73971575"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77543143"
 ---
 # <a name="protobuf-enumerations"></a>Protobuf-Enumerationen
 
-Protobuf unterstützt Enumerationstypen, wie im vorherigen Abschnitt gezeigt, in dem eine Enumeration verwendet wurde, um den Typ eines `oneof` Felds zu bestimmen. Sie können eigene Enumerationstypen definieren, und protobuf kompiliert Sie C# in Enumerationstypen. Da protobuf mit verschiedenen Sprachen verwendet werden kann, unterscheiden sich die Benennungs Konventionen für Enumerationen C# von den Konventionen. Der Code-Generator ist jedoch clever und konvertiert die Namen in den herkömmlichen C# Fall. Wenn die Pascal-Case-Entsprechung des Feldnamens mit dem Enumerationsnamen beginnt, wird Sie entfernt.
+Protobuf unterstützt Enumerationstypen. Diese Unterstützung wurde im vorherigen Abschnitt erläutert, in dem eine-Auflistung verwendet wurde, um den Typ eines `Oneof` Felds zu bestimmen. Sie können eigene Enumerationstypen definieren, und protobuf kompiliert Sie in C# Enumerationstypen. 
 
-In dieser protobuf-Enumeration werden den Feldern z. b. `ACCOUNT_STATUS`vorangestellt, was dem Namen der Pascal-fallenumeration entspricht: `AccountStatus`.
+Da Sie protobuf mit verschiedenen Sprachen verwenden können, unterscheiden sich die Benennungs Konventionen für Enumerationen C# von den Konventionen. Der Code-Generator konvertiert die Namen jedoch in den herkömmlichen C# Fall. Wenn die Pascal-Case-Entsprechung des Feldnamens mit dem Enumerationsnamen beginnt, wird Sie entfernt.
+
+In der folgenden protobuf-Enumeration werden den Feldern z. b. `ACCOUNT_STATUS`vorangestellt. Dieses Präfix entspricht dem Namen der "Pascal-Case-Enumeration", "`AccountStatus`".
 
 ```protobuf
 enum AccountStatus {
@@ -25,7 +27,7 @@ enum AccountStatus {
 }
 ```
 
-Daher erstellt der Generator eine C# Aufzählung, die dem folgenden Code entspricht:
+Der Generator erstellt eine C# Aufzählung, die dem folgenden Code entspricht:
 
 ```csharp
 public enum AccountStatus
@@ -38,7 +40,7 @@ public enum AccountStatus
 }
 ```
 
-Protobuf-Enumerationsdefinitionen **müssen** als erstes Feld eine Konstante von 0 (null) aufweisen. Wie in C#können Sie mehrere Felder mit demselben Wert deklarieren. Sie müssen diese Option jedoch explizit mithilfe der Option `allow_alias` in der Enumeration aktivieren:
+Protobuf-Enumerationsdefinitionen *müssen* als erstes Feld eine Konstante von 0 (null) aufweisen. Wie in C#können Sie mehrere Felder mit dem gleichen Wert deklarieren. Sie müssen diese Option jedoch explizit aktivieren, indem Sie die Option `allow_alias` in der-Aufzählung verwenden:
 
 ```protobuf
 enum AccountStatus {
@@ -70,7 +72,7 @@ message Product {
 }
 ```
 
-Wenn Sie `product.AvailableIn` auf `Region.NorthAmerica | Region.SouthAmerica`festlegen, wird es als ganzzahliger Wert `3`serialisiert. Wenn ein Client oder Server versucht, den Wert zu deserialisieren, findet keine Entsprechung in der Enumerationsdefinition für `3`, und das Ergebnis wird `Region.None`.
+Wenn Sie `product.AvailableIn` auf `Region.NorthAmerica | Region.SouthAmerica`festlegen, wird es als ganzzahliger Wert `3`serialisiert. Wenn ein Client oder Server versucht, den Wert zu deserialisieren, findet keine Entsprechung in der Enumerationsdefinition für `3`. Das Ergebnis wird `Region.None`.
 
 Die beste Möglichkeit zum Arbeiten mit mehreren Enumerationswerten in protobuf ist die Verwendung eines `repeated` Felds des Enumerationstyps.
 
