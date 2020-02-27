@@ -2,12 +2,12 @@
 title: Azure Monitor
 description: Die Verwendung von Azure Monitor, um Einblick in Ihr System zu erhalten, wird ausgeführt.
 ms.date: 02/05/2020
-ms.openlocfilehash: 961331011db4e59583438a2dbdf366bbe0e34261
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: 87ffca186346c3356c0277809d1d67145d1dd17b
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77448918"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77628032"
 ---
 # <a name="azure-monitor"></a>Azure Monitor
 
@@ -78,7 +78,7 @@ Azure Monitor nutzt Machine Learning automatisch, um die normalen Betriebsparame
 ## <a name="references"></a>Verweise
 
 - [Azure Monitor](https://docs.microsoft.com/azure/azure-monitor/overview)
-- [Smart Warnungsverwaltung-MS Ignite-Video](https://oxfordcomputergroup.com/resourceso365-security-native-cloud-authentication/)
+- [Smart Warnungsverwaltung-MS Ignite-Video](https://oxfordcomputergroup.com/resources/o365-security-native-cloud-authentication/)
 
 >[!div class="step-by-step"]
 >[Zurück](monitoring-azure-kubernetes.md)

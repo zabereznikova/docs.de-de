@@ -2,12 +2,12 @@
 title: Migrieren eines WCF-Anforderungs-/antwortdienstanbieter zu GrpC-GrpC für WCF-Entwickler
 description: Erfahren Sie, wie Sie einen einfachen Anforderungs-Antwort-Dienst von WCF zu GrpC migrieren.
 ms.date: 09/02/2019
-ms.openlocfilehash: f0b20e7b374438f90d83aebc6035a4e4dd94ae18
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 018aa94a15cdcb1e0f559afb7b3a88cd4f915398
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73971786"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77628552"
 ---
 # <a name="migrate-a-wcf-request-reply-service-to-a-grpc-unary-rpc"></a>Migrieren eines WCF-Anforderungs-Antwort-Dienstanbieter zu einem unären GrpC-RPC
 
@@ -29,7 +29,7 @@ public interface IPortfolioService
 }
 ```
 
-Das `Portfolio` Modell ist eine einfache C# , mit [DataContract](xref:System.Runtime.Serialization.DataContractAttribute)markierte Klasse, einschließlich einer Liste von `PortfolioItem` Objekten. Diese Modelle werden im `TraderSys.PortfolioData`-Projekt zusammen mit einer Repository-Klasse definiert, die eine Datenzugriffs Abstraktion darstellt.
+Das `Portfolio` Modell ist eine einfache C# Klasse, die mit [DataContract](xref:System.Runtime.Serialization.DataContractAttribute) gekennzeichnet ist und eine Liste von `PortfolioItem` Objekten einschließt. Diese Modelle werden im `TraderSys.PortfolioData`-Projekt zusammen mit einer Repository-Klasse definiert, die eine Datenzugriffs Abstraktion darstellt.
 
 ```csharp
 [DataContract]
@@ -62,7 +62,7 @@ public class PortfolioItem
 }
 ```
 
-Die `ServiceContract`-Implementierung verwendet eine von der Abhängigkeitsinjektion bereitgestellte Repository-Klasse, die Instanzen der `DataContract` Typen zurückgibt.
+Die `ServiceContract`-Implementierung verwendet eine Repository-Klasse, die über die Abhängigkeitsinjektion bereitgestellt wird und Instanzen der `DataContract` Typen zurückgibt:
 
 ```csharp
 public class PortfolioService : IPortfolioService
@@ -88,7 +88,7 @@ public class PortfolioService : IPortfolioService
 
 ## <a name="the-portfoliosproto-file"></a>Die Datei "Portfolios. proto"
 
-Wenn Sie die Anweisungen im vorherigen Abschnitt befolgt haben, sollten Sie ein GrpC-Projekt mit einer `portfolios.proto`-Datei haben, die wie folgt aussieht.
+Wenn Sie die Anweisungen im vorherigen Abschnitt befolgt haben, sollten Sie ein GrpC-Projekt mit einer `portfolios.proto`-Datei haben, die wie folgt aussieht:
 
 ```protobuf
 syntax = "proto3";
@@ -104,12 +104,12 @@ service Portfolios {
 
 Der erste Schritt besteht darin, die `DataContract` Klassen zu ihren protobuf-Entsprechungen zu migrieren.
 
-## <a name="convert-the-datacontracts-to-grpc-messages"></a>DataContracts in GrpC-Nachrichten konvertieren
+## <a name="convert-the-datacontract-classes-to-grpc-messages"></a>Konvertieren der DataContract-Klassen in GrpC-Nachrichten
 
-Die `PortfolioItem`-Klasse wird zuerst in eine protobuf-Nachricht konvertiert, da die `Portfolio`-Klasse davon abhängt. Die-Klasse ist sehr einfach, und drei der Eigenschaften werden direkt den GrpC-Datentypen zugeordnet. Die `Cost`-Eigenschaft, die den für die Freigaben kostenpflichtigen Preis darstellt, ist ein `decimal` Feld, und GrpC unterstützt nur `float` oder `double` für reelle Zahlen, die nicht für Währungen geeignet sind. Da sich die Freigabe Preise um mindestens einen Cent unterscheiden, können die Kosten als `int32` von Cent ausgedrückt werden.
+Die `PortfolioItem`-Klasse wird zuerst in eine protobuf-Nachricht konvertiert, da die `Portfolio`-Klasse davon abhängt. Die Klasse ist einfach, und drei der Eigenschaften werden direkt den GrpC-Datentypen zugeordnet. Die `Cost`-Eigenschaft, die den Preis darstellt, der für die Freigaben bezahlt wird, ist ein `decimal` Feld. GrpC unterstützt nur `float` oder `double` für reelle Zahlen, die nicht für die Währung geeignet sind. Da sich die Freigabe Preise um mindestens einen Cent unterscheiden, können die Kosten als `int32` von Cent ausgedrückt werden.
 
 > [!NOTE]
-> Denken Sie daran, `camelCase` für Feldnamen in ihrer `.proto` Datei zu verwenden. der C# Code-Generator konvertiert sie für Sie in `PascalCase`, und Benutzer anderer Sprachen werden Ihnen bei der Einhaltung der verschiedenen Codierungsstandards danken.
+> Denken Sie daran, in der `.proto` Datei "CamelCase" für Feldnamen zu verwenden. Der C# Code-Generator konvertiert sie für Sie in PascalCase, und Benutzer anderer Sprachen werden Ihnen bei der Einhaltung der verschiedenen Codierungsstandards danken.
 
 ```protobuf
 message PortfolioItem {
@@ -130,15 +130,15 @@ message Portfolio {
 }
 ```
 
-Nun haben wir unsere Daten Meldungen, wir können die RPC-Endpunkte für den Dienst deklarieren.
+Nachdem Sie nun über die Daten Meldungen verfügen, können Sie die RPC-Endpunkte für den Dienst deklarieren.
 
-## <a name="convert-the-servicecontract-to-a-grpc-service"></a>Konvertieren von ServiceContract in einen GrpC-Dienst
+## <a name="convert-servicecontract-to-a-grpc-service"></a>Konvertieren von ServiceContract in einen GrpC-Dienst
 
-Die WCF-`Get`-Methode nimmt zwei Parameter an: `Guid traderId` und `int portfolioId`. GrpC-Dienst Methoden können nur einen einzelnen Parameter verwenden, sodass eine Nachricht erstellt werden muss, um die beiden Werte aufzunehmen. Es ist üblich, diese Anforderungs Objekte mit dem gleichen Namen wie die-Methode und das Suffix `Request`zu benennen. Auch hier wird `string` für das `traderId` Feld anstelle `Guid`verwendet.
+Die WCF-`Get`-Methode nimmt zwei Parameter an: `Guid traderId` und `int portfolioId`. GrpC-Dienst Methoden können nur einen einzelnen Parameter verwenden. Daher müssen Sie eine Nachricht erstellen, die die beiden Werte enthält. Es ist üblich, diese Anforderungs Objekte mit dem gleichen Namen wie die Methode zu benennen, gefolgt vom Suffix `Request`. Auch hier wird `string` für das `traderId` Feld anstelle `Guid`verwendet.
 
-Der Dienst könnte nur eine `Portfolio` Nachricht direkt zurückgeben, aber dies kann sich in Zukunft auf die Abwärtskompatibilität auswirken. Es empfiehlt sich, separate `Request` und `Response` Nachrichten für jede Methode in einem Dienst zu definieren, auch wenn viele von Ihnen momentan identisch sind. deklarieren Sie daher eine `GetResponse` Nachricht mit einem einzelnen `Portfolio` Feld.
+Der Dienst könnte nur eine `Portfolio` Nachricht direkt zurückgeben, aber dies kann sich in Zukunft auf die Abwärtskompatibilität auswirken. Es empfiehlt sich, separate `Request` und `Response` Nachrichten für jede Methode in einem Dienst zu definieren, auch wenn viele von Ihnen momentan gleich sind. Deklarieren Sie also eine `GetResponse` Nachricht mit einem einzelnen `Portfolio` Feld.
 
-Das folgende Beispiel zeigt die Deklaration der GrpC-Dienst Methode mithilfe der `GetRequest` Nachricht:
+Dieses Beispiel zeigt die Deklaration der GrpC-Dienst Methode mit der `GetRequest` Meldung:
 
 ```protobuf
 message GetRequest {
@@ -155,12 +155,12 @@ service Portfolios {
 }
 ```
 
-Die WCF-`GetAll`-Methode nimmt nur einen einzigen Parameter, `traderId`, auf. es kann vorkommen, dass eine `string` als Parametertyp angegeben werden kann, aber für GrpC ein definierter Nachrichtentyp erforderlich ist. Durch diese Anforderung wird die Verwendung von benutzerdefinierten Nachrichten für alle Eingaben und Ausgaben für zukünftige Abwärtskompatibilität erzwungen.
+Die WCF-`GetAll`-Methode nimmt nur einen einzigen Parameter, `traderId`, an, daher könnten Sie `string` als Parametertyp angeben. GrpC erfordert jedoch einen definierten Nachrichtentyp. Durch diese Anforderung wird die Verwendung von benutzerdefinierten Nachrichten für alle Eingaben und Ausgaben für zukünftige Abwärtskompatibilität erzwungen.
 
-Die WCF-Methode hat ebenfalls eine `List<Portfolio>`zurückgegeben, aber aus demselben Grund lässt Sie einfache Parametertypen nicht zu, da GrpC `repeated Portfolio` nicht als Rückgabetyp zulässt. Erstellen Sie stattdessen einen `GetAllResponse` Typ, um die Liste zu schließen.
+Die WCF-Methode gibt auch eine `List<Portfolio>`zurück, aber aus demselben Grund lässt Sie einfache Parametertypen nicht zu, da GrpC `repeated Portfolio` nicht als Rückgabetyp zulässt. Erstellen Sie stattdessen einen `GetAllResponse` Typ, um die Liste zu schließen.
 
 > [!WARNING]
-> Möglicherweise sind Sie versucht, eine `PortfolioList` Nachricht oder ähnliches zu erstellen und Sie über mehrere Dienst Methoden hinweg zu verwenden, aber Sie sollten dieser Versuchung widerstehen. Es ist unmöglich zu wissen, wie sich die verschiedenen Methoden in einem Dienst in Zukunft weiterentwickeln können, sodass die Nachrichten spezifisch und ordnungsgemäß voneinander getrennt sind.
+> Möglicherweise sind Sie versucht, eine `PortfolioList` Nachricht oder ähnliches zu erstellen und Sie in mehreren Dienst Methoden zu verwenden, aber Sie sollten dieser Versuchung widerstehen. Es ist nicht möglich, zu wissen, wie sich die verschiedenen Methoden in einem Dienst weiterentwickeln, sodass die Nachrichten spezifisch und ordnungsgemäß getrennt werden.
 
 ```protobuf
 message GetAllRequest {
@@ -179,7 +179,7 @@ service Portfolios {
 
 Wenn Sie Ihr Projekt mit diesen Änderungen speichern, wird das GrpC-Buildziel im Hintergrund ausgeführt und generiert alle protobuf-Nachrichten Typen und eine Basisklasse, die Sie erben können, um den Dienst zu implementieren.
 
-Öffnen Sie die `Services/GreeterService.cs`-Klasse, und löschen Sie den Beispielcode. Nun können Sie die Portfolio Service-Implementierung hinzufügen. Die generierte Basisklasse befindet sich im `Protos` Namespace und wird als eine schsted Klasse generiert. GrpC erstellt eine statische Klasse mit dem gleichen Namen wie der Dienst in der `.proto`-Datei und dann eine Basisklasse mit dem Suffix `Base` in dieser statischen Klasse, sodass der vollständige Bezeichner für den Basistyp `TraderSys.Portfolios.Protos.Portfolios.PortfoliosBase`ist.
+Öffnen Sie die `Services/GreeterService.cs`-Klasse, und löschen Sie den Beispielcode. Nun können Sie die Portfolio Service-Implementierung hinzufügen. Die generierte Basisklasse befindet sich im `Protos` Namespace und wird als eine schsted Klasse generiert. GrpC erstellt eine statische Klasse mit dem gleichen Namen wie der Dienst in der `.proto` Datei und eine Basisklasse mit dem Suffix `Base` innerhalb dieser statischen Klasse, sodass der vollständige Bezeichner für den Basistyp `TraderSys.Portfolios.Protos.Portfolios.PortfoliosBase`ist.
 
 ```csharp
 namespace TraderSys.Portfolios.Services
@@ -198,14 +198,14 @@ Der Rückgabetyp der Methode ist eine `Task<T>`, wobei `T` der Antwort Nachricht
 
 ## <a name="migrate-the-portfoliodata-library-to-net-core"></a>Migrieren der videodata-Bibliothek zu .net Core
 
-An diesem Punkt benötigt das Projekt das Portfolio-Repository und die Modelle, die in der `TraderSys.PortfolioData`-Klassenbibliothek in der WCF-Lösung enthalten sind. Die einfachste Möglichkeit, Sie zu übernehmen, besteht darin, eine neue Klassenbibliothek zu erstellen, indem Sie entweder das Visual Studio-Dialogfeld " **Neues Projekt** " mit der Vorlage für die *Klassenbibliothek (.NET Standard)* verwenden, oder über die Befehlszeile mithilfe des .net Core-CLI die folgenden Befehle aus dem Verzeichnis mit der `TraderSys.sln`-Datei ausführen.
+An diesem Punkt benötigt das Projekt das Portfolio-Repository und die Modelle, die in der `TraderSys.PortfolioData`-Klassenbibliothek in der WCF-Lösung enthalten sind. Die einfachste Möglichkeit, Sie zu übernehmen, besteht darin, eine neue Klassenbibliothek zu erstellen, indem Sie entweder das Visual Studio-Dialogfeld " **Neues Projekt** " mit der Vorlage für die Klassenbibliothek (.NET Standard) verwenden, oder über die Befehlszeile in der Befehlszeile, .net Core-CLI indem Sie diese Befehle aus dem Verzeichnis ausführen, das die `TraderSys.sln` Datei enthält:
 
 ```dotnetcli
 dotnet new classlib -o src/TraderSys.PortfolioData
 dotnet sln add src/TraderSys.PortfolioData
 ```
 
-Nachdem die Bibliothek erstellt und der Projekt Mappe hinzugefügt wurde, löschen Sie die generierte `Class1.cs` Datei und kopieren die Dateien aus der Bibliothek der WCF-Projekt Mappe in den Ordner der neuen Klassenbibliothek, wobei die Ordnerstruktur beibehalten wird.
+Nachdem Sie die Bibliothek erstellt und der Projekt Mappe hinzugefügt haben, löschen Sie die generierte `Class1.cs` Datei und kopieren die Dateien aus der Bibliothek der WCF-Projekt Mappe in den Ordner der neuen Klassenbibliothek, wobei die Ordnerstruktur beibehalten wird:
 
 ```
 Models
@@ -215,7 +215,7 @@ IPortfolioRepository.cs
 PortfolioRepository.cs
 ```
 
-.Net-Projekte im SDK-Stil enthalten automatisch alle `.cs` Dateien in oder in Ihrem eigenen Verzeichnis, sodass es nicht erforderlich ist, Sie explizit dem Projekt hinzuzufügen. Der einzige Schritt besteht darin, die Attribute "`DataContract`" und "`DataMember`" aus den Klassen `Portfolio` und `PortfolioItem` zu entfernen C# , sodass Sie einfache Klassen sind.
+.Net-Projekte im SDK-Stil enthalten automatisch alle `.cs` Dateien in oder in Ihrem eigenen Verzeichnis, sodass Sie Sie nicht explizit dem Projekt hinzufügen müssen. Der einzige verbleibende Schritt besteht darin, die `DataContract`-und `DataMember` Attribute aus den Klassen `Portfolio` und `PortfolioItem` zu entfernen, C# sodass Sie einfache Klassen sind:
 
 ```csharp
 public class Portfolio
@@ -236,7 +236,7 @@ public class PortfolioItem
 
 ## <a name="use-aspnet-core-dependency-injection"></a>Verwenden von ASP.net Core-Abhängigkeitsinjektion
 
-Nun können Sie dem GrpC-Anwendungsprojekt einen Verweis auf diese Bibliothek hinzufügen und die `PortfolioRepository` Klasse mithilfe der Abhängigkeitsinjektion in der GrpC-Dienst Implementierung nutzen. In der WCF-Anwendung wurde die Abhängigkeitsinjektion vom autofac IOC-Container bereitgestellt. In ASP.net Core wurde eine Abhängigkeitsinjektion in integriert. das Repository kann in der `ConfigureServices`-Methode in der `Startup`-Klasse registriert werden.
+Nun können Sie dem GrpC-Anwendungsprojekt einen Verweis auf diese Bibliothek hinzufügen und die `PortfolioRepository` Klasse mithilfe der Abhängigkeitsinjektion in der GrpC-Dienst Implementierung verwenden. In der WCF-Anwendung wurde die Abhängigkeitsinjektion vom autofac IOC-Container bereitgestellt. Die Abhängigkeitsinjektion ASP.net Core wurde in integriert. Sie können das Repository in der `ConfigureServices`-Methode in der `Startup`-Klasse registrieren:
 
 ```csharp
 public class Startup
@@ -271,7 +271,7 @@ public class PortfolioService : Protos.Portfolios.PortfoliosBase
 
 Nachdem Sie die Nachrichten und ihren Dienst in der `portfolios.proto`-Datei deklariert haben, müssen Sie die Dienst Methoden in der `PortfolioService`-Klasse implementieren, die von der vom GrpC generierten `Portfolios.PortfoliosBase`-Klasse erbt. Die Methoden werden als `virtual` in der Basisklasse deklariert. Wenn Sie Sie nicht überschreiben, geben Sie standardmäßig den Statuscode "nicht implementiert" von GrpC zurück.
 
-Beginnen Sie, indem Sie die `Get`-Methode implementieren. Die Standard Überschreibung sieht wie im folgenden Beispiel aus:
+Beginnen Sie, indem Sie die `Get`-Methode implementieren. Die Standard Überschreibung sieht wie in diesem Beispiel aus:
 
 ```csharp
 public override Task<GetResponse> Get(GetRequest request, ServerCallContext context)
@@ -280,7 +280,7 @@ public override Task<GetResponse> Get(GetRequest request, ServerCallContext cont
 }
 ```
 
-Das erste Problem besteht darin, dass `request.TraderId` eine Zeichenfolge ist und dass der Dienst eine `Guid`erfordert. Obwohl das erwartete Format für die Zeichenfolge eine `UUID`ist, muss der Code die Möglichkeit behandeln, dass ein Aufrufer einen ungültigen Wert gesendet hat und entsprechend antwortet. Der Dienst kann mit Fehlern Antworten, indem er eine `RpcException`auslöst und den standardmäßigen `InvalidArgument` Statuscode verwendet, um das Problem auszudrücken.
+Das erste Problem besteht darin, dass `request.TraderId` eine Zeichenfolge ist und dass der Dienst eine `Guid`erfordert. Obwohl das erwartete Format für die Zeichenfolge `UUID`ist, muss der Code die Möglichkeit behandeln, dass ein Aufrufer einen ungültigen Wert gesendet hat und entsprechend antwortet. Der Dienst kann mit Fehlern Antworten, indem er eine `RpcException` auslöst und den standardmäßigen `InvalidArgument` Statuscode verwendet, um das Problem auszudrücken:
 
 ```csharp
 public override Task<GetResponse> Get(GetRequest request, ServerCallContext context)
@@ -294,7 +294,7 @@ public override Task<GetResponse> Get(GetRequest request, ServerCallContext cont
 }
 ```
 
-Wenn für `traderId`ein geeigneter `Guid` Wert vorhanden ist, kann das Repository zum Abrufen des Portfolios verwendet und an den Client zurückgegeben werden.
+Wenn für `traderId`ein geeigneter `Guid` Wert vorhanden ist, können Sie das Portfolio mit dem Repository abrufen und an den Client zurückgeben:
 
 ```csharp
     var response = new GetResponse
@@ -305,7 +305,7 @@ Wenn für `traderId`ein geeigneter `Guid` Wert vorhanden ist, kann das Repositor
 
 ### <a name="map-internal-models-to-grpc-messages"></a>Zuordnen interner Modelle zu GrpC-Nachrichten
 
-Der vorherige Code funktioniert nicht tatsächlich, weil das Repository sein eigenes poco-Modell `Portfolio`zurückgibt, aber GrpC benötigt *seine* eigene protobuf-Nachricht `Portfolio`. Ähnlich wie bei der Zuordnung von Entity Framework Typen zu Daten Übertragungs Typen besteht die beste Lösung darin, eine Konvertierung zwischen beiden zu ermöglichen. Ein guter Ort zum Einfügen des Codes ist die von protobuf generierte Klasse, die als `partial`-Klasse deklariert wird, sodass Sie erweitert werden kann.
+Der vorherige Code funktioniert nicht tatsächlich, weil das Repository sein eigenes poco-Modell `Portfolio`zurückgibt, aber GrpC benötigt seine eigene protobuf-Nachricht `Portfolio`. Wenn Sie Daten Übertragungs Typen Entity Framework Typen zuordnen, besteht die beste Lösung darin, eine Konvertierung zwischen beiden zu erstellen. Es empfiehlt sich, den Code für diese Konvertierung in der von protobuf generierten Klasse zu platzieren, die als `partial`-Klasse deklariert wird, sodass Sie erweitert werden kann:
 
 ```csharp
 namespace TraderSys.Portfolios.Protos
@@ -349,7 +349,7 @@ namespace TraderSys.Portfolios.Protos
 > [!NOTE]
 > Sie können eine Bibliothek wie [AutoMapper](https://automapper.org/) verwenden, um diese Konvertierung von internen Modellklassen in protobuf-Typen zu verarbeiten, solange Sie die Typkonvertierungen auf niedrigerer Ebene wie `string`/`Guid` oder `decimal`/`double` und die Listen Zuordnung konfigurieren.
 
-Wenn der Konvertierungs Code vorhanden ist, kann die Implementierung der `Get` Methode abgeschlossen werden.
+Nachdem Sie nun über den Konvertierungs Code verfügen, können Sie die Implementierung der `Get`-Methode vervollständigen:
 
 ```csharp
 public override async Task<GetResponse> Get(GetRequest request, ServerCallContext context)
@@ -369,7 +369,7 @@ public override async Task<GetResponse> Get(GetRequest request, ServerCallContex
 
 ```
 
-Die Implementierung der `GetAll`-Methode ist ähnlich. Beachten Sie, dass die `repeated` Felder für protobuf-Nachrichten als `readonly` Eigenschaften vom Typ `RepeatedField<T>`generiert werden. Daher müssen Sie Elemente mithilfe der `AddRange`-Methode hinzufügen, wie im folgenden Beispiel gezeigt:
+Die Implementierung der `GetAll`-Methode ist ähnlich. Beachten Sie, dass die `repeated` Felder für protobuf-Nachrichten als `readonly` Eigenschaften vom Typ `RepeatedField<T>`generiert werden. Daher müssen Sie diesen Elemente mithilfe der `AddRange`-Methode hinzufügen, wie in diesem Beispiel:
 
 ```csharp
 public override async Task<GetAllResponse> GetAll(GetAllRequest request, ServerCallContext context)
@@ -392,23 +392,23 @@ Nachdem Sie den WCF-Anforderungs-/Antwortdienst erfolgreich zu GrpC migriert hab
 
 ## <a name="generate-client-code"></a>Generieren von Client Code
 
-Erstellen Sie eine .NET Standard-Klassenbibliothek in der gleichen Projekt Mappe, die den-Client enthält. Dies ist in erster Linie ein Beispiel für das Erstellen von Client Code, aber Sie könnten eine solche Bibliothek mithilfe von nuget Verpacken und Sie in einem internen Repository verteilen, damit andere .NET-Teams Sie nutzen können. Fügen Sie der Projekt Mappe eine neue .NET Standard-Klassenbibliothek mit dem Namen `TraderSys.Portfolios.Client` hinzu, und löschen Sie die `Class1.cs` Datei.
+Erstellen Sie eine .NET Standard-Klassenbibliothek in der gleichen Projekt Mappe, die den-Client enthält. Dies ist in erster Linie ein Beispiel für das Erstellen von Client Code, aber Sie könnten eine solche Bibliothek mithilfe von nuget Verpacken und in einem internen Repository verteilen, damit andere .NET-Teams Sie nutzen können. Fügen Sie der Projekt Mappe eine neue .NET Standard-Klassenbibliothek mit dem Namen `TraderSys.Portfolios.Client` hinzu, und löschen Sie die `Class1.cs` Datei.
 
 > [!CAUTION]
 > Das nuget-Paket " [GrpC .net. Client](https://www.nuget.org/packages/Grpc.Net.Client) " erfordert .net Core 3,0 (oder eine andere .NET Standard 2,1-kompatible Laufzeit). Frühere Versionen von .NET Framework und .net Core werden vom nuget-Paket " [GrpC. Core](https://www.nuget.org/packages/Grpc.Core) " unterstützt.
 
-In Visual Studio 2019 können Sie in früheren Versionen von Visual Studio Verweise auf GrpC-Dienste hinzufügen, ähnlich wie in früheren Versionen von Visual Studio. Dienst Verweise und verbundene Dienste werden jetzt auf der gleichen Benutzeroberfläche verwaltet, auf die Sie zugreifen können, indem Sie mit der rechten Maustaste auf den Knoten **Abhängigkeiten** im Projekt `TraderSys.Portfolios.Client` in Projektmappen-Explorer klicken und **verbundenen Dienst hinzufügen**auswählen. Wählen Sie im angezeigten Tool Fenster den Abschnitt **Dienst Verweise** aus, und klicken Sie auf **neuen GrpC-Dienst Verweis hinzufügen**.
+In Visual Studio 2019 können Sie Verweise auf GrpC-Dienste ähnlich wie in früheren Versionen von Visual Studio zu WCF-Projekten hinzufügen. Dienst Verweise und verbundene Dienste werden jetzt auf der gleichen Benutzeroberfläche verwaltet. Sie können auf die Benutzeroberfläche zugreifen, indem Sie mit der rechten Maustaste auf den Knoten **Abhängigkeiten** im Projekt `TraderSys.Portfolios.Client` in Projektmappen-Explorer klicken und **verbundenen Dienst hinzufügen**auswählen. Wählen Sie im angezeigten Tool Fenster den Abschnitt **Dienst Verweise** aus, und wählen Sie dann **neuen GrpC-Dienst Verweis hinzufügen**aus:
 
-![Die verbundene Dienste-Benutzeroberfläche in Visual Studio 2019](media/migrate-request-reply/add-connected-service.png)
+![Verbundene Dienste Benutzeroberfläche in Visual Studio 2019](media/migrate-request-reply/add-connected-service.png)
 
-Navigieren Sie zur `portfolios.proto`-Datei im Projekt `TraderSys.Portfolios`, belassen Sie den **Typ der zu generierenden Klasse** als **Client**, und klicken Sie auf **OK**.
+Navigieren Sie im Projekt `TraderSys.Portfolios` zur Datei `portfolios.proto`, lassen Sie **Client** unter **Wählen Sie den Typ der zu generierenden Klasse**aus, und wählen Sie dann **OK**aus:
 
-![Dialogfeld "Hinzufügen eines neuen GrpC-Dienst Verweises" in Visual Studio 2019](media/migrate-request-reply/add-new-grpc-service-reference.png)
+![Dialogfeld "neues GrpC-Dienst Verweis hinzufügen" in Visual Studio 2019](media/migrate-request-reply/add-new-grpc-service-reference.png)
 
 > [!TIP]
 > Beachten Sie, dass dieses Dialogfeld auch ein URL-Feld enthält. Wenn Ihre Organisation ein Verzeichnis `.proto` Dateien, auf das zugegriffen werden kann, verwaltet, können Sie Clients erstellen, indem Sie einfach diese URL-Adresse festlegen.
 
-Wenn Sie die Funktion " **verbundenen Dienst hinzufügen** " von Visual Studio verwenden, wird die `portfolios.proto`-Datei dem Klassen Bibliotheksprojekt als *verknüpfte Datei*hinzugefügt und nicht als kopiert, sodass Änderungen an der Datei im Dienstprojekt automatisch im Client Projekt angewendet werden. Das `<Protobuf>`-Element in der `csproj` Datei sieht wie folgt aus:
+Wenn Sie die Funktion " **verbundenen Dienst hinzufügen** " von Visual Studio verwenden, wird die `portfolios.proto`-Datei dem Klassen Bibliotheksprojekt als *verknüpfte Datei* hinzugefügt und nicht als kopiert, sodass Änderungen an der Datei im Dienstprojekt automatisch im Client Projekt angewendet werden. Das `<Protobuf>`-Element in der `csproj` Datei sieht wie folgt aus:
 
 ```xml
 <Protobuf Include="..\TraderSys.Portfolios\Protos\portfolios.proto" GrpcServices="Client">
@@ -417,7 +417,7 @@ Wenn Sie die Funktion " **verbundenen Dienst hinzufügen** " von Visual Studio v
 ```
 
 > [!TIP]
-> Wenn Sie Visual Studio nicht verwenden oder von der Befehlszeile aus arbeiten möchten, können Sie das Tool **dotnet-GrpC** Global verwenden, um protobuf-Verweise in einem .net-GrpC-Projekt zu verwalten. [Weitere Informationen finden Sie in der Dokumentation zu **dotnet-GrpC** ](https://docs.microsoft.com/aspnet/core/grpc/dotnet-grpc).
+> Wenn Sie Visual Studio nicht verwenden oder lieber von der Befehlszeile aus arbeiten, können Sie das `dotnet-grpc` Global-Tool verwenden, um protobuf-Verweise in einem .net-GrpC-Projekt zu verwalten. Weitere Informationen finden Sie in der [`dotnet-grpc`-Dokumentation](/aspnet/core/grpc/dotnet-grpc).
 
 ### <a name="use-the-portfolios-service-from-a-client-application"></a>Verwenden des Portfolios-Dienstanbieter aus einer Client Anwendung
 
@@ -449,7 +449,7 @@ public class Program
 }
 ```
 
-Nun haben Sie eine einfache WCF-Anwendung zu einem ASP.net Core GrpC-Dienst migriert und einen Client erstellt, um den Dienst aus einer .NET-Anwendung zu nutzen. Im nächsten Abschnitt werden die mehr beteiligten "Duplex Dienste" behandelt.
+Sie haben nun eine einfache WCF-Anwendung zu einem ASP.net Core GrpC-Dienst migriert und einen Client erstellt, um den Dienst aus einer .NET-Anwendung zu nutzen. Im nächsten Abschnitt werden die mehr beteiligten Duplex Dienste behandelt.
 
 >[!div class="step-by-step"]
 >[Zurück](create-project.md)
