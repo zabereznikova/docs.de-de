@@ -123,8 +123,8 @@ Gruppierungskonstrukte grenzen die Teilausdrücke eines regulären Ausdrucks ab 
 |0|0 (Standardname)|`((?<One>abc)\d+)?(?<Two>xyz)(.*)`|  
 |1|1 (Standardname)|`((?<One>abc)\d+)`|  
 |2|2 (Standardname)|`(.*)`|  
-|3|Eins|`(?<One>abc)`|  
-|4|Zwei|`(?<Two>xyz)`|  
+|3|One|`(?<One>abc)`|  
+|4|Two|`(?<Two>xyz)`|  
   
  Im folgenden Beispiel wird ein regulärer Ausdruck veranschaulicht, der duplizierte Wörter sowie das Wort, das jedem duplizierten Wort direkt folgt, identifiziert. Das Muster eines regulären Ausdrucks definiert zwei benannte Teilausdrücke: `duplicateWord`, der das doppelte Wort darstellt; und `nextWord`, der das Wort darstellt, das auf das doppelte Wort folgt.  
   
