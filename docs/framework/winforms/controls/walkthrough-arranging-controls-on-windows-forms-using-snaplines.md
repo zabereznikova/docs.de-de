@@ -10,12 +10,12 @@ ms.assetid: d5c9edc7-cf30-4a97-8ebe-201d569340f8
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 3b88f64fca8d3f11308f1cbfde97de2e6c2f22cc
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 0b68a70b55cbf03d480fd388a637a4caf78b6eaa
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76740219"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77628799"
 ---
 # <a name="walkthrough-arrange-controls-on-windows-forms-using-snaplines"></a>Exemplarische Vorgehensweise: Anordnen von Steuerelementen auf Windows Forms mithilfe von Richtungslinien
 
@@ -124,7 +124,7 @@ Sie können Ausrichtungs Linien verwenden, um gruppierte Steuerelemente und Steu
 
 ## <a name="align-a-label-to-a-controls-text"></a>Ausrichten einer Bezeichnung an einem Steuerelement Text
 
-1. Ziehen Sie ein <xref:System.Windows.Forms.TextBox> -Steuerelement aus der **Toolbox** auf das Formular. Wenn Sie das <xref:System.Windows.Forms.TextBox> Steuerelement auf dem Formular ablegen, klicken Sie auf das Smarttagsymbol, und wählen Sie die Option **Text auf textBox1 festlegen** aus. Weitere Informationen finden Sie unter Exemplarische Vorgehensweise [: Ausführen allgemeiner Aufgaben mit Smarttags auf Windows Forms](performing-common-tasks-using-smart-tags-on-wf-controls.md)-Steuerelementen.
+1. Ziehen Sie ein <xref:System.Windows.Forms.TextBox> -Steuerelement aus der **Toolbox** auf das Formular. Wenn Sie das <xref:System.Windows.Forms.TextBox> Steuerelement auf dem Formular ablegen, klicken Sie auf das Smarttagsymbol, und wählen Sie die Option **Text auf textBox1 festlegen** aus. Weitere Informationen finden Sie unter Exemplarische [Vorgehensweise: Ausführen allgemeiner Aufgaben mithilfe von Designer Aktionen](perform-common-tasks-design-actions.md).
 
 2. Ziehen Sie ein <xref:System.Windows.Forms.Label> -Steuerelement aus der **Toolbox** auf das Formular.
 

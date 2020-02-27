@@ -2,22 +2,24 @@
 title: Compileroptionen
 description: Verwenden F# Sie Compilerbefehlszeilenoptionen, um die F# Kompilierung Ihrer Apps und Bibliotheken zu steuern.
 ms.date: 12/10/2018
-ms.openlocfilehash: d0f4d1ca5ae45af25d6c304a2920d5c457700b1a
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: ecaae538a5db2f5dfefa79cb8e7b8b51d39c440d
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73424759"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77628877"
 ---
 # <a name="compiler-options"></a>Compileroptionen
 
-In diesem Thema werden Compilerbefehlszeilenoptionen für den F#-Compiler fsc.exe beschrieben. Die Kompilierungsumgebung kann auch durch Festlegen der Projekteigenschaften gesteuert werden.
+In diesem Thema werden Compilerbefehlszeilenoptionen für den F#-Compiler fsc.exe beschrieben.
+
+Die Kompilierungsumgebung kann auch durch Festlegen der Projekteigenschaften gesteuert werden. Für Projekte, die auf .net Core abzielen, wird die Eigenschaft "andere Flags" `<OtherFlags>...</OtherFlags>` in `.fsproj`verwendet, um zusätzliche Befehlszeilenoptionen anzugeben.
 
 ## <a name="compiler-options-listed-alphabetically"></a>Compileroptionen alphabetisch sortiert
 
 In der folgenden Tabelle werden Compileroptionen alphabetisch aufgeführt. Einige der F#-Compileroptionen ähneln den C#-Compileroptionen. Wenn dies der Fall ist, wird ein Link zum Thema für die C#-Compileroptionen zur Verfügung gestellt.
 
-|Compileroptionen|Beschreibung|
+|Compileroptionen|BESCHREIBUNG|
 |---------------|-----------|
 |`-a filename.fs`|Generiert eine Bibliothek aus der angegebenen Datei. Diese Option ist eine Kurzform `--target:library filename.fs`.|
 |`--baseaddress:address`|Gibt die bevorzugte Basisadresse an, unter der eine DLL geladen werden soll.<br /><br />Diese Compileroption entspricht der C#-Compileroption gleichen Namens. Weitere Informationen finden [ &#47;Sie unter baseaddress &#40;C&#35; -Compileroptionen&#41;](https://msdn.microsoft.com/library/2fdbz5xd.aspx).|
@@ -69,7 +71,7 @@ In der folgenden Tabelle werden Compileroptionen alphabetisch aufgeführt. Einig
 
 ## <a name="related-articles"></a>Verwandte Artikel
 
-|Titel|Beschreibung|
+|Titel|BESCHREIBUNG|
 |-----|-----------|
 |[F# Interactive-Optionen](fsharp-interactive-options.md)|Beschreibt vom F#-Interpreter fsi.exe unterstützte Befehlszeilenoptionen.|
 |[Projekteigenschaftenverweise](/visualstudio/ide/reference/project-properties-reference)|Beschreibt die Benutzeroberfläche für Projekte, einschließlich Projekteigenschaftenseiten, die Buildoptionen bereitstellen.|

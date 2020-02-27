@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 2038a90b-92af-4a0a-baaa-08e688d95194
-ms.openlocfilehash: 8c6819b4c1628d9e09a9bbf96ae8d5edbb6c643d
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 577de6b60e579b37eb54ea69de72f3534f1d23ac
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75710075"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77628903"
 ---
 # <a name="unordered-node-retrieval-by-name-or-index"></a>Abrufen von ungeordneten Knoten anhand des Namens oder Indexes
 **XmlNamedNodeMap** wird in der W3C-Spezifikation (World Wide Web Consortium) als „NamedNodeMap“ beschrieben und muss eine ungeordnete Gruppe von Knoten behandeln können und auf Knoten nach Name oder Index verweisen können. Zugriff auf eine **XmlNamedNodeMap** ist nur dann möglich, wenn eine **XmlNamedNodeMap** von einer Methode oder einer Eigenschaft zurückgegeben wurde. Es gibt drei Methoden bzw. Eigenschaften, die eine **XmlNamedNodeMap** zurückgeben:  
@@ -115,8 +115,8 @@ class test {
 }  
 ```  
   
- Ein weiteres Codebeispiel zum Entfernen eines Attributs aus einer **AttributeCollection** finden Sie unter [XmlNamedNodeMap.RemoveNamedItem-Methode](Overload:System.Xml.XmlNamedNodeMap.RemoveNamedItem). Weitere Informationen über die Methoden und Eigenschaften finden Sie unter [XmlNamedNodeMap-Member](AllMembers.T:System.Xml.XmlNamedNodeMap).  
+ Ein weiteres Codebeispiel zum Entfernen eines Attributs aus einer **AttributeCollection** finden Sie unter [XmlNamedNodeMap.RemoveNamedItem-Methode](xref:System.Xml.XmlNamedNodeMap.RemoveNamedItem%2A). Weitere Informationen über die Methoden und Eigenschaften finden Sie unter [XmlNamedNodeMap-Member](xref:System.Xml.XmlNamedNodeMap).  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [XML-Dokumentobjektmodell (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

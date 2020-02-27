@@ -2,12 +2,12 @@
 title: Angeben eines benutzerdefinierten Kryptografiealgorithmus
 ms.date: 03/30/2017
 ms.assetid: d662a305-8e09-451d-9a59-b0f12b012f1d
-ms.openlocfilehash: 55200732b392c15a25853af28ecdf9e32d092da4
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 0bfa6c46f4db1171eb314625e36c267000a0ec12
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70849117"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77628682"
 ---
 # <a name="specifying-a-custom-crypto-algorithm"></a>Angeben eines benutzerdefinierten Kryptografiealgorithmus
 WCF ermöglicht es Ihnen, beim Verschlüsseln von Daten oder Berechnen digitaler Signaturen einen benutzerdefinierten Kryptografiealgorithmus anzugeben. Dazu führen Sie die folgenden Schritte aus:  
@@ -105,7 +105,7 @@ public class MyCustomAlgorithmSuite : SecurityAlgorithmSuite
 </configuration>  
 ```  
   
- Der Abschnitt unter dem <`cryptoClasses`>-Element erstellt die Zuordnung zwischen SHA256CryptoServiceProvider und dem Alias "SHA256CSP". Das <`nameEntry`>-Element erstellt die Zuordnung zwischen dem Alias "SHA256CSP" und der angegebenen URL http://constoso.com/CustomAlgorithms/CustomHashAlgorithm ().  
+ Der Abschnitt unter dem <`cryptoClasses`>-Element erstellt die Zuordnung zwischen SHA256CryptoServiceProvider und dem Alias "SHA256CSP". Das <`nameEntry`>-Element erstellt die Zuordnung zwischen dem Alias "SHA256CSP" und der angegebenen URL `http://constoso.com/CustomAlgorithms/CustomHashAlgorithm`.  
   
  Verwenden Sie zum Registrieren des benutzerdefinierten Algorithmus im Code die <xref:System.Security.Cryptography.CryptoConfig.AddAlgorithm(System.Type,System.String[])>-Methode. Diese Methode erstellt beide Zuordnungen. Das folgende Beispiel zeigt, wie diese Methode aufgerufen wird:  
   
@@ -125,9 +125,9 @@ WSHttpBinding binding = new WSHttpBinding();
   
  Ein umfassendes Codebeispiel finden Sie im Beispiel [kryptografische Agilität in WCF-Sicherheit](../samples/cryptographic-agility-in-wcf-security.md) .  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Sichern von Diensten und Clients](../feature-details/securing-services-and-clients.md)
+- [Securing Services and Clients](../feature-details/securing-services-and-clients.md)
 - [Sichern von Diensten](../securing-services.md)
-- [Übersicht über die Sicherheit](../feature-details/security-overview.md)
+- [Sicherheitsübersicht](../feature-details/security-overview.md)
 - [Begriffe der Sicherheit](../feature-details/security-concepts.md)

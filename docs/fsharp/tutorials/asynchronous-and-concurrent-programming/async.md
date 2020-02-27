@@ -1,13 +1,13 @@
 ---
-title: Asynchrone Programmierung
+title: Async-Programmierung
 description: Erfahren Sie F# , wie Sie eine saubere Unterstützung für Asynchronie basierend auf einem Programmiermodell auf Sprachebene bereitstellen, das aus den Konzepten der funktionalen Programmierung abgeleitet ist.
 ms.date: 12/17/2018
-ms.openlocfilehash: 471566befd69f330fb9254dbd57b19569d9f9ad3
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 7021d7936d10f9ea6fceb4aa56db3285d21624ad
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75344660"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77628851"
 ---
 # <a name="async-programming-in-f"></a>Async-Programmierung in F-\#
 
@@ -39,7 +39,7 @@ In praktischer Hinsicht werden asynchrone Berechnungen in F# so geplant, dass Si
 
 Das wichtigste, was Sie tun sollten, ist, dass asynchrone Berechnungen unabhängig vom Hauptprogramm Fluss sind. Obwohl es nur wenige Garantien gibt, wann oder wie eine asynchrone Berechnung ausgeführt wird, gibt es einige Ansätze zum orchestrieren und planen. Im restlichen Teil dieses Artikels werden die Kernkonzepte F# für asynchroniität und die Verwendung der in F#integrierten Typen, Funktionen und Ausdrücke erläutert.
 
-## <a name="core-concepts"></a>Kernkonzepte
+## <a name="core-concepts"></a>Wichtige Konzepte
 
 In F#wird die asynchrone Programmierung auf drei Kernkonzepte zentriert:
 
@@ -69,7 +69,7 @@ let main argv =
     0
 ```
 
-Im Beispiel ist die `printTotalFileBytes`-Funktion vom Typ `string -> Async<unit>`. Durch den Aufruf der-Funktion wird die asynchrone Berechnung nicht ausgeführt. Stattdessen wird ein `Async<unit>` zurückgegeben, das als *Spezifikation* der Arbeit fungiert, die asynchron ausgeführt werden soll. Es wird `Async.AwaitTask` im Textkörper aufgerufen, der das Ergebnis des <xref:System.IO.File.WriteAllBytesAsync%2A> in einen entsprechenden Typ konvertiert.
+Im Beispiel ist die `printTotalFileBytes`-Funktion vom Typ `string -> Async<unit>`. Durch den Aufruf der-Funktion wird die asynchrone Berechnung nicht ausgeführt. Stattdessen wird ein `Async<unit>` zurückgegeben, das als *Spezifikation* der Arbeit fungiert, die asynchron ausgeführt werden soll. Es wird `Async.AwaitTask` im Textkörper aufgerufen, der das Ergebnis des <xref:System.IO.File.ReadAllBytesAsync%2A> in einen entsprechenden Typ konvertiert.
 
 Eine weitere wichtige Zeile ist der aufzurufende `Async.RunSynchronously`. Dies ist eines der asynchronen Modul Startfunktionen, die Sie aufrufen müssen, wenn Sie eine F# asynchrone Berechnung tatsächlich ausführen möchten.
 
@@ -150,7 +150,7 @@ Signatur:
 computation: Async<'T> - timeout: ?int -> Async<Async<'T>>
 ```
 
-Eignung:
+Verwendungszwecke:
 
 - Wenn Sie mehrere asynchrone Berechnungen gleichzeitig statt einzeln ausführen möchten, diese jedoch nicht parallel geplant sind.
 - , Wenn die Lebensdauer einer untergeordneten Berechnung an die einer übergeordneten Berechnung gebunden werden soll.
@@ -170,7 +170,7 @@ Signatur:
 computation: Async<unit> - cancellationToken: ?CancellationToken -> unit
 ```
 
-Eignung:
+Verwendungszwecke:
 
 - Wenn Sie etwas auf dem aufrufenden Thread in der Mitte einer asynchronen Berechnung aktualisieren müssen.
 
@@ -188,7 +188,7 @@ Signatur:
 computation: Async<'T> - taskCreationOptions: ?TaskCreationOptions - cancellationToken: ?CancellationToken -> Task<'T>
 ```
 
-Eignung:
+Verwendungszwecke:
 
 - Wenn eine .NET-API aufgerufen werden muss, die erwartet, dass eine <xref:System.Threading.Tasks.Task%601> das Ergebnis einer asynchronen Berechnung darstellt.
 
@@ -245,7 +245,7 @@ Signatur:
 task: Task<'T>  -> Async<'T>
 ```
 
-Eignung:
+Verwendungszwecke:
 
 - Wenn Sie eine .NET-API verwenden, die eine <xref:System.Threading.Tasks.Task%601> in einer F# asynchronen Berechnung zurückgibt.
 
@@ -263,7 +263,7 @@ Signatur:
 computation: Async<'T> -> Async<Choice<'T, exn>>
 ```
 
-Eignung:
+Verwendungszwecke:
 
 - Wenn Sie asynchrone Aufgaben ausführen, die möglicherweise mit einer Ausnahme fehlschlagen, und Sie diese Ausnahme im Aufrufer behandeln möchten.
 
@@ -281,7 +281,7 @@ Signatur:
 computation: Async<'T> -> Async<unit>
 ```
 
-Eignung:
+Verwendungszwecke:
 
 - Wenn eine asynchrone Berechnung vorhanden ist, deren Ergebnis nicht benötigt wird. Dies entspricht dem `ignore`-Code für nicht asynchronen Code.
 
@@ -382,7 +382,7 @@ Eine Berechnung kann z. b. tatsächlich auf dem Thread des Aufrufers ausgeführt
 
 Obwohl F# einige Möglichkeiten bietet, eine asynchrone Berechnung auf dem aktuellen Thread (oder explizit nicht auf dem aktuellen Thread) zu starten, ist Asynchronität in der Regel nicht mit einer bestimmten Threading Strategie verknüpft.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Das F# asynchrone Programmiermodell](https://www.microsoft.com/research/publication/the-f-asynchronous-programming-model)
 - [Async- F# Handbuch zu Jet. com](https://medium.com/jettech/f-async-guide-eb3c8a2d180a)

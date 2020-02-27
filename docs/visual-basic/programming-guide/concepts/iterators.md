@@ -1,13 +1,13 @@
 ---
-title: Iteratoren
+title: Iterators
 ms.date: 07/20/2015
 ms.assetid: f26b5c1e-fe9d-4004-b287-da7919d717ae
-ms.openlocfilehash: 465a8e6650c3d015520164030a146c9502ebe603
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 2789ac66690ebfd472b9bae5ccf08b1bdfaa0922
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74353740"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77628734"
 ---
 # <a name="iterators-visual-basic"></a>Iteratoren (Visual Basic)
 
@@ -259,7 +259,7 @@ Wenn der `For Each` Text (anstelle der Iteratormethode) eine Ausnahme auslöst, 
 
 ## <a name="BKMK_AnonymousMethods"></a>Anonyme Methoden
 
-In Visual Basic kann eine anonyme Funktion eine Iteratorfunktion sein. Das folgende Beispiel veranschaulicht dies.
+In Visual Basic kann eine anonyme Funktion eine Iteratorfunktion sein. Dies wird anhand des folgenden Beispiels veranschaulicht.
 
 ```vb
 Dim iterateSequence = Iterator Function() _
@@ -435,7 +435,7 @@ Auch wenn Sie einen Iterator als Methode schreiben, führt der Compiler für die
 
 Um zu sehen, was der Compiler macht, können Sie das Tool Ildasm.exe verwenden, um den Intermediate Language-Code von Microsoft anzuzeigen, der für eine Iteratormethode generiert wird.
 
-Wenn Sie einen Iterator für eine [Klasse](../../../csharp/language-reference/keywords/class.md) oder [Struktur](../../../csharp/language-reference/keywords/struct.md)erstellen, müssen Sie nicht die gesamte <xref:System.Collections.IEnumerator>-Schnittstelle implementieren. Wenn der Compiler einer Iterator erkennt, generiert er automatisch die Methoden `Current`, `MoveNext` und `Dispose` der <xref:System.Collections.IEnumerator>- und <xref:System.Collections.Generic.IEnumerator%601>-Schnittstelle.
+Wenn Sie einen Iterator für eine [Klasse](../../language-reference/statements/class-statement.md) oder [Struktur](../../language-reference/statements/structure-statement.md)erstellen, müssen Sie nicht die gesamte <xref:System.Collections.IEnumerator>-Schnittstelle implementieren. Wenn der Compiler einer Iterator erkennt, generiert er automatisch die Methoden `Current`, `MoveNext` und `Dispose` der <xref:System.Collections.IEnumerator>- und <xref:System.Collections.Generic.IEnumerator%601>-Schnittstelle.
 
 In jeder aufeinanderfolgenden Iteration der `For Each…Next`-Schleife (oder im direkten Aufruf von `IEnumerator.MoveNext`) setzt der nächste Iteratorcodetext den Prozess nach der letzten `Yield`-Anweisung fort. Anschließend wird die nächste `Yield` Anweisung fortgesetzt, bis das Ende des iteratortexts erreicht ist, oder bis eine `Exit Function`-oder `Return`-Anweisung gefunden wird.
 
@@ -453,7 +453,7 @@ Mit Iteratoren können Sie die Einfachheit einer `For Each`-Schleife beibehalten
 
 - Das Einschließen des Erstellens der Liste im Iterator. In der Iteratormethode können Sie die Liste erstellen und anschließend jedes Ergebnis in eine Schleife liefern.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Collections.Generic>
 - <xref:System.Collections.Generic.IEnumerable%601>

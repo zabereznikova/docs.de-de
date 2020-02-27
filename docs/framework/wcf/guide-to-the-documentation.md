@@ -5,17 +5,15 @@ helpviewer_keywords:
 - WCF [WCF], documentation
 - Windows Communication Foundation [WCF], documentation
 ms.assetid: 2aa18c85-a4fd-4bb9-986a-a8249e4f8e0e
-ms.openlocfilehash: 12408bd9f10e7ed147a6c1adc0497d3b8d797e42
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 705e571e11fa7c8276fcb48d15ed0160fbda2bc5
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72319824"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77628760"
 ---
 # <a name="guide-to-the-documentation"></a>Anleitung zur Dokumentation
 Hier finden Sie Anleitungen zur Windows Communication Foundation (WCF)-Dokumentation. Die verknüpften Dokumente sind empfohlene Startpunkte, die nach Sachgebiet und Niveau gruppiert sind.  
-  
- Wenn Sie eine eigenständige Version der Dokumentation und einen Help Viewer installieren möchten, laden Sie die [Microsoft Windows SDK v 7,1](https://go.microsoft.com/fwlink/?LinkID=194146&clcid=0x409)herunter.  
   
 ## <a name="new-to-windows-communication-foundation-programming"></a>Neu bei Windows Communication Foundation-Programmierung  
   
@@ -61,7 +59,7 @@ Hier finden Sie Anleitungen zur Windows Communication Foundation (WCF)-Dokumenta
 ## <a name="ws--protocols-supported-in-windows-communication-foundation"></a>Von Windows Communication Foundation unterstützte WS-*Protokolle  
  Eine Liste der Protokolle, die in den vom System bereitgestellten Bindungen unterstützt werden, finden Sie unter [vom System bereitgestellte Interoperabilitäts Bindungen unterstützte Webdienst Protokolle](./feature-details/web-services-protocols-supported-by-system-provided-interoperability-bindings.md). Die Liste der vom System bereitgestellten Bindungen finden Sie unter vom [System bereitgestellte Bindungen](system-provided-bindings.md).  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Windows Communication Foundation-Beispiele](./samples/index.md)
 - [Konzeptionelle Übersicht](conceptual-overview.md)

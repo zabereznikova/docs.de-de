@@ -12,12 +12,12 @@ ms.assetid: e5a8e088-7ec8-4fd9-bcb3-9078fd134829
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: dac049ea6a51037daa0e23dc93476e4410b2df06
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 7626e1efbb30ef3bfe9b5b1278c0adb18dd5944b
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76745987"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77628708"
 ---
 # <a name="develop-windows-forms-controls-at-design-time"></a>Entwickeln von Windows Forms-Steuerelementen zur Entwurfszeit
 
@@ -36,7 +36,7 @@ Veranschaulicht das Erstellen eines einfachen zusammengesetzten Steuerelements i
 Exemplarische Vorgehensweise [: Vererben von einem Windows Forms-Steuer](walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md) Element\
 Veranschaulicht, wie ein einfaches Windows Forms-Steuerelement unter Verwendung der Vererbung in Visual C# erstellt wird.
 
-Exemplarische Vorgehensweise [: Ausführen allgemeiner Aufgaben mit Smarttags auf Windows Forms Steuerelementen](performing-common-tasks-using-smart-tags-on-wf-controls.md)\
+Exemplarische [Vorgehensweise: Ausführen allgemeiner Aufgaben mithilfe von Designer Aktionen](perform-common-tasks-design-actions.md)\
 Veranschaulicht, wie das Smarttagfeature auf Windows Forms-Steuerelemente angewendet wird.
 
 Exemplarische Vorgehensweise [: Serialisieren von Auflistungen von Standard Typen mit dem DesignerSerializationVisibilityAttribute](serializing-collections-designerserializationvisibilityattribute.md) -\

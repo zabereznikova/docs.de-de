@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Windows Forms, columns
 - data [Windows Forms], displaying
 ms.assetid: 7fe52a98-75d6-448c-97a5-65ca2c568c1a
-ms.openlocfilehash: be4f67ca6530b74fc90cb50a10463b2378edb933
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 7540203fb1c0465caeb045275734d1a7c6f25ee8
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76743158"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77628747"
 ---
 # <a name="how-to-change-the-order-of-columns-in-the-windows-forms-datagridview-control-using-the-designer"></a>Gewusst wie: Ändern der Reihenfolge von Spalten des DataGridView-Steuerelements in Windows Forms mithilfe des Designers
 
@@ -22,7 +22,7 @@ Das folgende Verfahren erfordert ein **Windows-Anwendungs** Projekt mit einem Fo
 
 ## <a name="to-change-the-column-order-using-the-designer"></a>So ändern Sie die Spaltenreihenfolge mithilfe des Designers
 
-1. Klicken Sie in der oberen rechten Ecke![](./media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")des Steuer Elements <xref:System.Windows.Forms.DataGridView> auf das Smarttagsymbol (Smarttagsymbol), und wählen Sie dann **Spalten bearbeiten**aus.
+1. Klicken Sie in der oberen rechten Ecke des <xref:System.Windows.Forms.DataGridView>-Steuer Elements auf das Symbol für Designer Aktionen (![kleinen schwarzen Pfeil](./media/designer-actions-glyph.gif)), und wählen Sie dann **Spalten bearbeiten**aus.
 
 2. Wählen Sie in der Liste **Ausgewählte Spalten** eine Spalte aus.
 

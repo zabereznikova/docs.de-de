@@ -7,12 +7,12 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], adding columns
 - DataGridView control [Windows Forms], removing columns
 ms.assetid: 9e709f35-0a8c-4e7e-b4c4-bacb7a834077
-ms.openlocfilehash: 717a0074f0750352a23b90a9b6e5eab1dc6c925a
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 8843b1d30f3e5f31a060e27b41b0105e6584f155
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76732348"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77628604"
 ---
 # <a name="how-to-add-and-remove-columns-in-the-windows-forms-datagridview-control-using-the-designer"></a>Gewusst wie: Hinzufügen und Entfernen von Spalten im DataGridView-Steuerelement in Windows Forms mithilfe des Designers
 Das Windows Forms <xref:System.Windows.Forms.DataGridView>-Steuerelement muss Spalten enthalten, um Daten anzeigen zu können. Wenn Sie das Steuerelement manuell auffüllen möchten, müssen Sie die Spalten selbst hinzufügen. Alternativ können Sie das Steuerelement an eine Datenquelle binden, die die Spalten automatisch generiert und auffüllt. Wenn die Datenquelle mehr Spalten enthält, als Sie anzeigen möchten, können Sie die unerwünschten Spalten entfernen.
@@ -21,7 +21,7 @@ Das Windows Forms <xref:System.Windows.Forms.DataGridView>-Steuerelement muss Sp
 
 ## <a name="to-add-a-column-using-the-designer"></a>So fügen Sie eine Spalte mithilfe des Designers hinzu
 
-1. Klicken Sie in der oberen rechten Ecke![](./media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")des Steuer Elements <xref:System.Windows.Forms.DataGridView> auf das Smarttagsymbol (Smarttagsymbol), und wählen Sie dann **Spalte hinzufügen**aus.
+1. Klicken Sie in der oberen rechten Ecke des <xref:System.Windows.Forms.DataGridView>-Steuer Elements auf das Symbol für Designer Aktionen (![kleinen schwarzen Pfeil](./media/designer-actions-glyph.gif)), und wählen Sie dann **Spalte hinzufügen**aus.
 
 2. Wählen Sie im Dialogfeld **Spalte hinzufügen** die Option **Daten gebundene Spalte** aus, und wählen Sie eine Spalte aus der Datenquelle aus, oder wählen Sie die Option **ungebundene Spalte** aus, und definieren Sie die Spalte mithilfe der angegebenen Felder.
 

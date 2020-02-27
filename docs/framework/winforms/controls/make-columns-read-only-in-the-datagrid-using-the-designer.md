@@ -7,12 +7,12 @@ helpviewer_keywords:
 - data [Windows Forms], displaying
 - columns [Windows Forms], read-only
 ms.assetid: b4ef7a75-ab33-4ee3-b2cf-201530e454e9
-ms.openlocfilehash: 51d9488ef83f7d2c1c01c9ffd756edf8944d738d
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 2dd3f8bfcad39ca3d530c79a6e6a8170585f7adf
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76744980"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77627954"
 ---
 # <a name="how-to-make-columns-read-only-in-the-windows-forms-datagridview-control-using-the-designer"></a>Gewusst wie: Festlegen von schreibgeschützten Spalten im DataGridView-Steuerelement in Windows Forms mithilfe des Designers
 Standardmäßig können Benutzer Text-und numerische Daten ändern, die im Windows Forms <xref:System.Windows.Forms.DataGridView>-Steuerelement angezeigt werden. Wenn Sie Daten anzeigen möchten, die nicht für Änderungen vorgesehen sind, müssen Sie die Spalten, die die Daten enthalten, als schreibgeschützt festlegen. Informationen dazu, wie das Steuerelement vollständig schreibgeschützt wird, finden Sie unter Gewusst [wie: verhindern des Hinzufügens und Löschens von Zeilen im Windows Forms DataGridView-Steuerelement mithilfe des Designers](prevent-row-addition-and-deletion-in-the-datagrid-using-the-designer.md).
@@ -21,7 +21,7 @@ Standardmäßig können Benutzer Text-und numerische Daten ändern, die im Windo
 
 ## <a name="to-make-a-column-read-only-by-using-the-designer"></a>So machen Sie eine Spalte mithilfe des Designers als schreibgeschützt
 
-1. Klicken Sie in der oberen rechten Ecke![](./media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")des Steuer Elements <xref:System.Windows.Forms.DataGridView> auf das Smarttagsymbol (Smarttagsymbol), und wählen Sie dann **Spalten bearbeiten**aus.
+1. Klicken Sie in der oberen rechten Ecke des <xref:System.Windows.Forms.DataGridView>-Steuer Elements auf das Symbol für Designer Aktionen (![kleinen schwarzen Pfeil](./media/designer-actions-glyph.gif)), und wählen Sie dann **Spalten bearbeiten**aus.
 
 2. Wählen Sie in der Liste **Ausgewählte Spalten** eine Spalte aus.
 

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - controls [Windows Forms], manipulating
 - BindingNavigator control [Windows Forms], adding buttons
 ms.assetid: faa33042-186e-4bb2-8798-17ceb987ec62
-ms.openlocfilehash: ac862d163f1bd8b66f29160d836bc459e4bf4081
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 0305df5e7566f9441ce09fa3346a8b2dc67c8943
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76745127"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77627967"
 ---
 # <a name="how-to-add-load-save-and-cancel-buttons-to-the-windows-forms-bindingnavigator-control"></a>Gewusst wie: Hinzufügen der Schaltflächen für das Laden, Speichern und Abbrechen zum BindingNavigator-Steuerelement in Windows Forms
 
@@ -35,7 +35,7 @@ Im folgenden Verfahren wird ein <xref:System.Windows.Forms.TextBox>-Steuerelemen
 
 5. Wählen Sie das <xref:System.Windows.Forms.BindingNavigator>-Steuerelement.
 
-6. Klicken Sie auf das Smarttagsymbol (![Smarttag](./media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")-Symbol), damit das Dialogfeld **BindingNavigator-Aufgaben** angezeigt wird, und klicken Sie auf **Elemente bearbeiten**.
+6. Klicken Sie auf das Symbol Designer Aktionen (![kleinen schwarzen Pfeil](./media/designer-actions-glyph.gif)), damit das Dialogfeld **BindingNavigator-Aufgaben** angezeigt wird, und klicken Sie auf **Elemente bearbeiten**.
 
      Der Elementauflistungs- **Editor** wird angezeigt.
 
@@ -49,7 +49,7 @@ Im folgenden Verfahren wird ein <xref:System.Windows.Forms.TextBox>-Steuerelemen
 
     4. Legen Sie die <xref:System.Windows.Forms.ToolStripItem.DisplayStyle%2A>-Eigenschaft für jede Schaltfläche auf **Text**fest. Alternativ können Sie diese Eigenschaft auf **Image** oder **ImageAndText**festlegen und das Bild so festlegen, dass es in der <xref:System.Windows.Forms.ToolStripItem.Image%2A>-Eigenschaft angezeigt wird.
 
-    5. Klicken Sie auf **OK**, um das Dialogfeld zu schließen. Die Schaltflächen werden der <xref:System.Windows.Forms.ToolStrip>hinzugefügt.
+    5. Klicken Sie auf **OK** , um das Dialogfeld zu schließen. Die Schaltflächen werden der <xref:System.Windows.Forms.ToolStrip>hinzugefügt.
 
 8. Klicken Sie mit der rechten Maustaste, und wählen Sie **Code anzeigen**aus.
 

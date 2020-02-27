@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data sources [Windows Forms], binding to Windows Forms controls
 - DataGridView control [Windows Forms], data binding
 ms.assetid: f4f46009-cec2-441b-8668-6b5af057558b
-ms.openlocfilehash: d5fab6acc53e5b8be247e958bdba78f0d3647fdc
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: d49a718e42a989c731cdf748fb63a6305ee096bf
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76744114"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77626325"
 ---
 # <a name="how-to-bind-data-to-the-windows-forms-datagridview-control-using-the-designer"></a>Gewusst wie: Binden von Daten an das DataGridView-Steuerelement in Windows Forms mithilfe des Designers
 Sie können den-Designer verwenden, um ein <xref:System.Windows.Forms.DataGridView>-Steuerelement mit Datenquellen verschiedener Variationen, einschließlich Datenbanken, Geschäftsobjekten oder Webdiensten, zu verbinden. Wenn Sie das Steuerelement mithilfe des Designers an eine Datenquelle binden, wird das Steuerelement automatisch an eine <xref:System.Windows.Forms.BindingSource> Komponente gebunden, die die Datenquelle darstellt. Darüber hinaus werden automatisch Spalten im Steuerelement erstellt, damit sie den Schemainformationen der Datenquelle entsprechen.
@@ -24,13 +24,13 @@ Sie können den-Designer verwenden, um ein <xref:System.Windows.Forms.DataGridVi
 
 ## <a name="to-bind-the-control-to-a-data-source"></a>So binden Sie das Steuerelement an eine Datenquelle
 
-1. Klicken Sie in der oberen rechten Ecke des <xref:System.Windows.Forms.DataGridView> Steuer Elements auf das Smarttagsymbol (![smarttagglyphe](./media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")).
+1. Klicken Sie in der rechten oberen Ecke des <xref:System.Windows.Forms.DataGridView>-Steuer Elements auf das Symbol für Designer Aktionen (![kleinen schwarzen Pfeil](./media/designer-actions-glyph.gif)).
 
 2. Klicken Sie auf den Dropdownpfeil für die Option **Datenquelle auswählen**.
 
 3. Klicken Sie auf **Projektdatenquelle hinzufügen**, wenn Ihr Projekt noch nicht über eine Datenquelle verfügt, und befolgen Sie die Schritte des Assistenten.
 
-     Weitere Informationen finden Sie unter [Assistent zum Konfigurieren von Datenquellen](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/w4dd7z6t(v=vs.120)). Die neue Datenquelle wird im Dropdownfenster **Datenquelle auswählen** angezeigt. Wenn Ihre neue Datenquelle nur einen Member enthält, z.B. eine einzelne Datenbanktabelle, bindet das Steuerelement automatisch an diesen Member. Setzen Sie andernfalls den Vorgang mit dem nächsten Schritt fort.
+     Weitere Informationen finden Sie unter [Assistent zum Konfigurieren von Datenquellen](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/w4dd7z6t(v=vs.120)). Die neue Datenquelle wird im Dropdownfenster **Datenquelle auswählen** angezeigt. Wenn Ihre neue Datenquelle nur einen Member enthält, z.B. eine einzelne Datenbanktabelle, bindet das Steuerelement automatisch an diesen Member. Fahren Sie andernfalls mit dem nächsten Schritt fort.
 
 4. Erweitern Sie die Knoten **Weitere Datenquellen** und **Projektdatenquellen**, wenn Sie noch nicht erweitert sind, und wählen Sie die Datenquelle aus, an die Sie das Steuerelement binden wollen.
 
