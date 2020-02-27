@@ -2,12 +2,12 @@
 title: Arten von Breaking Changes
 description: Erfahren Sie, wie .NET Core versucht, die Kompatibilität für Entwickler für alle .NET-Versionen zu gewährleisten und welche Änderung als Breaking Change angesehen wird.
 ms.date: 06/10/2019
-ms.openlocfilehash: 1c5790e39754b91aacbde9e87ed99f9dcc36ce9f
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: bf0cc35d69e6bb501640455604a99a1f48962c4a
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2020
-ms.locfileid: "77092979"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77628591"
 ---
 # <a name="changes-that-affect-compatibility"></a>Änderungen, die sich auf die Kompatibilität auswirken
 
@@ -49,7 +49,7 @@ In den folgenden Abschnitten werden die Kategorien der Änderungen an den .NET C
 
   Die *alte* Assembly muss mit dem <xref:System.Runtime.CompilerServices.TypeForwardedToAttribute> markiert werden muss, das auf die neue Assembly verweist.
 
-- ✔️ **ZULÄSSIG: Ändern des Typs [struct](../../csharp/language-reference/keywords/struct.md) in einen Typ `readonly struct`**
+- ✔️ **ZULÄSSIG: Ändern des Typs [struct](../../csharp/language-reference/builtin-types/struct.md) in einen Typ `readonly struct`**
 
   Ein `readonly struct`-Typ darf nicht in einen `struct`-Typ geändert werden.
 
@@ -77,11 +77,11 @@ In den folgenden Abschnitten werden die Kategorien der Änderungen an den .NET C
 
   Es gibt eine Ausnahme von der Regel zur Entfernung von Schnittstellen: Sie können die Implementierung einer Schnittstelle hinzufügen, die aus der entfernten Schnittstelle abgeleitet ist. Sie können beispielsweise <xref:System.IDisposable> entfernen, wenn der Typ oder die Schnittstelle nun <xref:System.ComponentModel.IComponent> implementiert, wodurch <xref:System.IDisposable> implementiert wird.
 
-- ❌ **NICHT ZULÄSSIG: Ändern eines `readonly struct`-Typs in einen [struct](../../csharp/language-reference/keywords/struct.md)-Typ**
+- ❌ **NICHT ZULÄSSIG: Ändern eines `readonly struct`-Typs in einen [struct](../../csharp/language-reference/builtin-types/struct.md)-Typ**
 
   Ein `struct`-Typ darf nicht in einen `readonly struct`-Typ geändert werden.
 
-- ❌ **NICHT ZULÄSSIG: Ändern eines [struct](../../csharp/language-reference/keywords/struct.md)-Typs in einen `ref struct`-Typ (und umgekehrt)**
+- ❌ **NICHT ZULÄSSIG: Ändern eines [struct](../../csharp/language-reference/builtin-types/struct.md)-Typs in einen `ref struct`-Typ (und umgekehrt)**
 
 - ❌ **NICHT ZULÄSSIG: Reduzieren der Sichtbarkeit eines Typs**
 
@@ -300,7 +300,7 @@ In den folgenden Abschnitten werden die Kategorien der Änderungen an den .NET C
 
 - ✔️ **ZULÄSSIG: Hinzufügen von [params](../../csharp/language-reference/keywords/params.md) zu einem Parameter**
 
-- ❌ **NICHT ZULÄSSIG: Ändern einer [Struktur](../../csharp/language-reference/keywords/struct.md) in eine [Klasse](../../csharp/language-reference/keywords/class.md) und umgekehrt**
+- ❌ **NICHT ZULÄSSIG: Ändern einer [Struktur](../../csharp/language-reference/builtin-types/struct.md) in eine [Klasse](../../csharp/language-reference/keywords/class.md) und umgekehrt**
 
 - ❌ **NICHT ZULÄSSIG: Hinzufügen des Schlüsselworts [checked](../../csharp/language-reference/keywords/virtual.md) zu einem Codeblock**
 

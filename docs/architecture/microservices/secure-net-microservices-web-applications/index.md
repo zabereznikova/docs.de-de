@@ -3,12 +3,12 @@ title: Sichern von .NET-Microservices und Webanwendungen
 description: Sicherheit in .NET-Microservices und -Webanwendungen – Lernen Sie die Authentifizierungsoptionen in ASP.NET Core-Webanwendungen kennen.
 author: mjrousos
 ms.date: 01/30/2020
-ms.openlocfilehash: f82212956f5492a51ec99d092e1a5131d1b31313
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.openlocfilehash: 0ac2591f8650e9f8cf29560735a9ec803d29ee4f
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77501648"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77628331"
 ---
 # <a name="make-secure-net-microservices-and-web-applications"></a>Erstellen sicherer .NET-Microservices und -Webanwendungen
 
@@ -135,8 +135,8 @@ In allen Fällen müssen Sie ein Verfahren zur Anwendungsregistrierung durchlauf
 
 Ausführliche Informationen zum Konfigurieren Ihrer App für einen externen Anbieter finden Sie in der [ASP.NET Core-Dokumentation im Artikel zur Authentifizierung über externe Anbieter](/aspnet/core/security/authentication/social/).
 
-> [!TIP]
-Alle Details werden von den bereits erwähnten Middlewarekomponenten und Diensten zur Autorisierung verarbeitet. Wenn Sie das ASP.NET Core-Webanwendungsprojekt in Visual Studio erstellen, müssen Sie also zusätzlich zur Registrierung der Authentifizierungsanbieter einfach nur die Authentifizierungsoption **Einzelne Benutzerkonten** auswählen, wie in Abbildung 9-3 dargestellt.
+>[!TIP]
+>Alle Details werden von den bereits erwähnten Middlewarekomponenten und Diensten zur Autorisierung verarbeitet. Wenn Sie das ASP.NET Core-Webanwendungsprojekt in Visual Studio erstellen, müssen Sie also zusätzlich zur Registrierung der Authentifizierungsanbieter einfach nur die Authentifizierungsoption **Einzelne Benutzerkonten** auswählen, wie in Abbildung 9-3 dargestellt.
 
 ![Screenshot des Dialogfelds „Neue ASP.NET Core-Webanwendung“](./media/index/select-individual-user-account-authentication-option.png)
 

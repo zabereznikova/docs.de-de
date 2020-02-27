@@ -1,4 +1,4 @@
-- name: Windows Forms-Steuerelemente
+- name: "Steuerelemente für Windows\_Forms"
   href: index.md
   items:
     - name: "Anordnen von Steuerelementen in Windows\_Forms"
@@ -1171,7 +1171,7 @@
               href: how-to-make-thread-safe-calls-to-windows-forms-controls.md
             - name: 'Vorgehensweise: Verwenden eines Hintergrundthreads zur Dateisuche'
               href: how-to-use-a-background-thread-to-search-for-files.md
-    - name: "Nach Funktionen gegliederte Windows\_Forms-Steuerelemente in .NET Framework"
+    - name: Nach Funktionen gegliederte Windows Forms-Steuerelemente in .NET Framework
       href: windows-forms-controls-by-function.md
     - name: Entwickeln von Steuerelementen zur Entwurfszeit
       items:
@@ -1182,7 +1182,7 @@
         - name: 'Exemplarische Vorgehensweise: Erben von einem Steuerelement'
           href: walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md
         - name: 'Exemplarische Vorgehensweise: Ausführen allgemeiner Aufgaben mit Smarttags'
-          href: performing-common-tasks-using-smart-tags-on-wf-controls.md
+          href: perform-common-tasks-design-actions.md
         - name: 'Exemplarische Vorgehensweise: Serialisieren von Sammlungen von Standardtypen'
           href: serializing-collections-designerserializationvisibilityattribute.md
         - name: 'Exemplarische Vorgehensweise: Debuggen benutzerdefinierter Steuerelemente'
