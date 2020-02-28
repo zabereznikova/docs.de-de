@@ -49,25 +49,7 @@
     - name: Installieren der lokalisierten IntelliSense-Instanz
       href: install/localized-intellisense.md
 - name: Erste Schritte
-  items:
-    - name: Erste Schritte
-      href: get-started.md
-    - name: 'Erste Schritte mit C# und Visual Studio Code'
-      href: tutorials/with-visual-studio-code.md
-    - name: Erste Schritte mit .NET Core unter macOS mithilfe von Visual Studio Code
-      href: tutorials/using-on-macos.md
-    - name: Erstellen Ihrer ersten Konsolen-App in Visual Studio
-      href: tutorials/with-visual-studio.md
-    - name: Debuggen einer Anwendung mit Visual Studio
-      href: tutorials/debugging-with-visual-studio.md
-    - name: Veröffentlichen einer Anwendung mit Visual Studio
-      href: tutorials/publishing-with-visual-studio.md
-    - name: Erstellen einer .NET-Standardbibliothek in Visual Studio
-      href: tutorials/library-with-visual-studio.md
-    - name: Testen einer .NET Standard-Bibliothek in Visual Studio
-      href: tutorials/testing-library-with-visual-studio.md
-    - name: Verwenden einer .NET Standard-Bibliothek in Visual Studio
-      href: tutorials/consuming-library-with-visual-studio.md
+  href: get-started.md
 - name: Neuigkeiten in .NET Core
   items:
     - name: Neuerungen in .NET Core 3.1
@@ -87,12 +69,28 @@
   items:
     - name: Übersicht
       href: tutorials/index.md
-    - name: Erste Schritte mit .NET Core mit Visual Studio für Mac
-      href: tutorials/using-on-mac-vs.md
-    - name: Erstellen einer vollständigen .NET Core-Lösung unter macOS
-      href: tutorials/using-on-mac-vs-full-solution.md
+    - name: Erste Schritte mit .NET Core mit Visual Studio
+      href: tutorials/with-visual-studio.md
+    - name: Erste Schritte mit .NET Core mit Visual Studio Code
+      href: tutorials/with-visual-studio-code.md
     - name: Erste Schritte mit .NET Core unter Verwendung der CLI
       href: tutorials/cli-create-console-app.md
+    - name: Erste Schritte mit .NET Core mithilfe von Visual Studio Code unter macOS
+      href: tutorials/using-on-macos.md
+    - name: Erste Schritte mit .NET Core mit Visual Studio für Mac
+      href: tutorials/using-on-mac-vs.md
+    - name: Debuggen einer Anwendung mit Visual Studio
+      href: tutorials/debugging-with-visual-studio.md
+    - name: Veröffentlichen einer Anwendung mit Visual Studio
+      href: tutorials/publishing-with-visual-studio.md
+    - name: Erstellen einer .NET-Standardbibliothek in Visual Studio
+      href: tutorials/library-with-visual-studio.md
+    - name: Testen einer .NET Standard-Bibliothek in Visual Studio
+      href: tutorials/testing-library-with-visual-studio.md
+    - name: Verwenden einer .NET Standard-Bibliothek in Visual Studio
+      href: tutorials/consuming-library-with-visual-studio.md
+    - name: Erstellen einer vollständigen .NET Core-Lösung unter macOS
+      href: tutorials/using-on-mac-vs-full-solution.md
     - name: Organisieren und Testen von Projekten mit .NET Core CLI
       href: tutorials/testing-with-cli.md
     - name: Entwickeln von Bibliotheken mit plattformübergreifenden Tools
