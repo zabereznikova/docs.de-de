@@ -2,24 +2,21 @@
 title: ML.NET-Ressourcen
 description: Weitere Informationen zu Machine Learning und ML.NET
 ms.topic: reference
-ms.date: 11/07/2019
-ms.openlocfilehash: 1bd35c2de807417cd81f2734191f06ccae413b74
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.date: 02/25/2020
+ms.openlocfilehash: 2ec58352a310130d6611ed351ea563aeca558f01
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75739865"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77628695"
 ---
 # <a name="mlnet-resources"></a>ML.NET-Ressourcen
 
 Die folgenden Ressourcen helfen Ihnen dabei, noch mehr über ML.NET zu erfahren
 
 - [Glossar](glossary.md) zur Terminologie für maschinelles Lernen und ML.NET
+- [Azure-Trainingsressourcen für den Modellgenerator](azure-training-concepts-model-builder.md)
 - [ML.NET-CLI-Telemetrie](ml-net-cli-telemetry.md)
-- [Verbessern der ML.NET-Modellgenauigkeit](improve-machine-learning-model-ml-net.md)
-- [Metriken für die Modellauswertung in ML.NET](metrics.md)
-- [Machine Learning-Aufgaben in ML.NET](tasks.md)
-- [Datentransformationen](transforms.md)
 
 ## <a name="next-steps"></a>Nächste Schritte
 

@@ -3,12 +3,12 @@ title: .NET Core-CLI
 titleSuffix: ''
 description: Eine Übersicht über die .NET Core-CLI und ihre Features.
 ms.date: 02/13/2020
-ms.openlocfilehash: 1078d68ddc088274fa14b0094a81765f7af69dad
-ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
+ms.openlocfilehash: c491088f26a9aa1c065414e76fb0b80d554380b4
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77543313"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77625981"
 ---
 # <a name="net-core-cli-overview"></a>Übersicht über die .NET Core-CLI
 
@@ -87,7 +87,7 @@ Wenn Sie einen Befehl an den Treiber geben, startet `dotnet.exe` den Ausführung
 dotnet build
 ```
 
-Zunächst bestimmt der Treiber die zu verwendende SDK-Version. Wenn keine [„global.json“](global-json.md)-Datei vorhanden ist, wird die neueste Version des verfügbaren SDK verwendet. Dabei handelt es sich entweder um eine Vorschauversion oder eine stabile Version, je nachdem, welche Version sich aktuell auf dem Computer befindet.  Sobald die SDK-Version bestimmt ist, wird der Befehl ausgeführt.
+Zunächst bestimmt der Treiber die zu verwendende SDK-Version. Wenn keine [global.json](global-json.md)-Datei vorhanden ist, wird die neueste Version des verfügbaren SDK verwendet. Dabei handelt es sich entweder um eine Vorschauversion oder eine stabile Version, je nachdem, welche Version sich aktuell auf dem Computer befindet.  Sobald die SDK-Version bestimmt ist, wird der Befehl ausgeführt.
 
 ### <a name="command"></a>Befehl
 

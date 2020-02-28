@@ -2,12 +2,12 @@
 title: Einführung in C# - Leitfaden für C#
 description: Neu bei C#? Lernen Sie die Grundlagen der Sprache kennen.
 ms.date: 04/05/2019
-ms.openlocfilehash: e2d7af3a35dc9d4fdeddf9eb742d155ab33094b4
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: b510342f957a259a6c7763441778461b3dd4ef1e
+ms.sourcegitcommit: c2d9718996402993cf31541f11e95531bc68bad0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75711661"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77673289"
 ---
 # <a name="a-tour-of-the-c-language"></a>Überblick über C#
 
@@ -64,8 +64,6 @@ Es gibt noch viel mehr über C# zu erfahren. Die folgenden Themen bieten eine Ü
   - Sie verwenden ***Anweisungen***, um die Aktionen eines Programms auszudrücken.
 - [Klassen und Objekte](classes-and-objects.md)
   - ***Klassen*** sind die grundlegendsten der C#-Typen. ***Objekte*** sind Instanzen einer Klasse. Klassen werden mit ***Membern*** erstellt, die auch in diesem Thema behandelt werden.
-- [Strukturen](structs.md)
-  - ***Strukturen*** sind Datenstrukturen, bei denen es sich im Gegensatz zu Klassen um Werttypen handelt.
 - [Arrays](arrays.md)
   - Ein ***Array*** ist eine Datenstruktur, die eine Anzahl von Variablen enthält, auf die über berechnete Indizes zugegriffen wird.
 - [Schnittstellen](interfaces.md)
