@@ -1,13 +1,13 @@
 ---
 title: Mit .NET-Containern angezieltes Betriebssystem
 description: .NET-Microservicesarchitektur für .NET-Containeranwendungen | Mit .NET-Containern angezieltes Betriebssystem
-ms.date: 01/07/2019
-ms.openlocfilehash: dcf91f5ab808a8704201979f6bab1140c3343bce
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.date: 01/30/2020
+ms.openlocfilehash: a09e3981ece478a9795c0f27acc98d604864cdd5
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73736909"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77501862"
 ---
 # <a name="what-os-to-target-with-net-containers"></a>Mit .NET-Containern angezieltes Betriebssystem
 
@@ -34,10 +34,10 @@ Wenn Sie den Namen des Images zu Ihrer Dockerfile-Datei hinzufügen, können Sie
 
 | Bild | Kommentare |
 |-------|----------|
-| mcr.microsoft.com/dotnet/core/runtime:2.2 | Mehrere .NET Core 2.2-Architekturen: Unterstützt Linux und Windows Nano Server, abhängig vom Docker-Host. |
-| mcr.microsoft.com/dotnet/core/aspnet:2.2 | Mehrere ASP.NET Core 2.2-Architekturen: Unterstützt Linux und Windows Nano Server, abhängig vom Docker-Host. <br/> Das aspnetcore-Image enthält einige Optimierungen für ASP.NET Core. |
-| mcr.microsoft.com/dotnet/core/aspnet:2.2-alpine | Unter Linux Alpine-Distribution nur .NET Core 2.2-Runtime |
-| mcr.microsoft.com/dotnet/core/aspnet:2.2-nanoserver-1803 | Unter Windows Nano Server (Windows Server, Version 1803) nur .NET Core 2.2-Runtime |
+| mcr.microsoft.com/dotnet/core/runtime:3.1 | Mehrere .NET Core 3.1-Architekturen: Unterstützt Linux und Windows Nano Server, abhängig vom Docker-Host. |
+| mcr.microsoft.com/dotnet/core/aspnet:3.1 | Mehrere ASP.NET Core 3.1-Architekturen: Unterstützt Linux und Windows Nano Server, abhängig vom Docker-Host. <br/> Das aspnetcore-Image enthält einige Optimierungen für ASP.NET Core. |
+| mcr.microsoft.com/dotnet/core/aspnet:3.1 | Unter Linux Debian-Distribution nur .NET Core 3.1-Runtime |
+| mcr.microsoft.com/dotnet/core/aspnet:3.1-nanoserver-1809 | Unter Windows Nano Server (Windows Server, Version 1809) nur .NET Core 3.1-Runtime |
 
 ## <a name="additional-resources"></a>Zusätzliche Ressourcen
 

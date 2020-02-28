@@ -1,99 +1,118 @@
 ---
 title: Befehl „dotnet tool install“
-description: Der Befehl „dotnet tool install“ installiert das angegebene globale .NET Core-Tool auf Ihrem Computer.
-ms.date: 05/29/2018
-ms.openlocfilehash: d6f691117e93a39c9837b282dca19e452515c80a
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+description: Der Befehl „dotnet tool install“ installiert das angegebene .NET Core-Tool auf Ihrem Computer.
+ms.date: 02/14/2020
+ms.openlocfilehash: 2705defe9b77009ca1411da28dd86d144ccc19e6
+ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117466"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77543468"
 ---
 # <a name="dotnet-tool-install"></a>dotnet tool install
 
-[!INCLUDE [topic-appliesto-net-core-21plus.md](../../../includes/topic-appliesto-net-core-21plus.md)]
+**Dieser Artikel gilt für:** ✔️ .NET Core 2.1 SDK und neuere Versionen
 
-## <a name="name"></a>NAME
+## <a name="name"></a>name
 
-`dotnet tool install`: Installiert das angegebene [globale .NET Core-Tool](global-tools.md) auf Ihrem Computer.
+`dotnet tool install`: Installiert das angegebene [.NET Core-Tool](global-tools.md) auf Ihrem Computer.
 
-## <a name="synopsis"></a>Zusammenfassung
+## <a name="synopsis"></a>Übersicht
 
 ```dotnetcli
 dotnet tool install <PACKAGE_NAME> <-g|--global> [--add-source] [--configfile] [--framework] [-v|--verbosity] [--version]
 dotnet tool install <PACKAGE_NAME> <--tool-path> [--add-source] [--configfile] [--framework] [-v|--verbosity] [--version]
+dotnet tool install <PACKAGE_NAME> [--add-source] [--configfile] [--framework] [-v|--verbosity] [--version]
 dotnet tool install <-h|--help>
 ```
 
-## <a name="description"></a>BESCHREIBUNG
+## <a name="description"></a>Beschreibung
 
-Der `dotnet tool install`-Befehl ermöglicht Ihnen das Installieren von globalen .NET Core-Tools auf Ihrem Computer. Zum Verwenden des Befehls müssen Sie entweder mit der Option `--global` angeben, dass Sie eine benutzerweite Installation durchführen möchten, oder mit der Option `--tool-path` einen Installationspfad angeben.
+Der Befehl `dotnet tool install` ermöglicht Ihnen das Installieren von .NET Core-Tools auf Ihrem Computer. Um den Befehl zu verwenden, geben Sie eine der folgenden Installationsoptionen an:
 
-Globale Tools werden standardmäßig in den folgenden Verzeichnissen installiert, wenn Sie die Option `-g` (oder `--global`) angeben:
+* Verwenden Sie zum Installieren eines globalen Tools am Standardspeicherort die Option `--tool-path`.
+* Verwenden Sie zum Installieren eines globalen Tools an einem benutzerdefinierten Speicherort die Option `--tool-path`.
+* Wenn Sie ein lokales Tool installieren möchten, lassen Sie die Optionen `--global` und `--tool-path` weg.
 
-| OS          | `Path`                          |
+**Lokale Tools sind ab .NET Core SDK 3.0 verfügbar.**
+
+Globale Tools werden standardmäßig in den folgenden Verzeichnissen installiert, wenn Sie die Option `-g` oder `--global` angeben:
+
+| Betriebssystem          | Pfad                          |
 |-------------|-------------------------------|
 | Linux/macOS | `$HOME/.dotnet/tools`         |
 | Windows     | `%USERPROFILE%\.dotnet\tools` |
 
+Lokale Tools werden zur Datei *tool-manifest.json* im Verzeichnis *.config* unter dem aktuellen Verzeichnis hinzugefügt. Wenn noch keine Manifestdatei vorhanden ist, erstellen Sie sie, indem Sie den folgenden Befehl ausführen:
+
+```dotnetcli
+dotnet new tool-manifest
+```
+
+Weitere Informationen finden Sie unter [Installieren eines lokalen Tools](global-tools.md#install-a-local-tool).
+
 ## <a name="arguments"></a>Argumente
 
-`PACKAGE_NAME`
+- **`PACKAGE_NAME`**
 
-Name oder ID des NuGet-Pakets, das das zu installierende globale .NET Core-Tool enthält.
+  Name oder ID des NuGet-Pakets, das das zu installierende .NET Core-Tool enthält.
 
 ## <a name="options"></a>Optionen
 
-`--add-source <SOURCE>`
+- **`add-source <SOURCE>`**
 
-Fügt eine zusätzliche NuGet-Paketquelle für die Installation hinzu.
+  Fügt eine zusätzliche NuGet-Paketquelle für die Installation hinzu.
 
-`--configfile <FILE>`
+- **`configfile <FILE>`**
 
-Die zu verwendende NuGet-Konfigurationsdatei (*nuget.config*).
+  Die zu verwendende NuGet-Konfigurationsdatei (*nuget.config*).
 
-`--framework <FRAMEWORK>`
+- **`framework <FRAMEWORK>`**
 
-Legt das [Zielframework](../../standard/frameworks.md) des zu installierenden Tools fest. Das .NET Core SDK versucht standardmäßig, das am besten geeignete Zielframework auszuwählen.
+  Legt das [Zielframework](../../standard/frameworks.md) des zu installierenden Tools fest. Das .NET Core SDK versucht standardmäßig, das am besten geeignete Zielframework auszuwählen.
 
-`-g|--global`
+- **`-g|--global`**
 
-Gibt an, dass die Installation benutzerweit ist. Kann nicht mit der Option `--tool-path` kombiniert werden. Wenn Sie diese Option nicht angeben, müssen Sie die Option `--tool-path` angeben.
+  Gibt an, dass die Installation benutzerweit ist. Kann nicht mit der Option `--tool-path` kombiniert werden. Durch Weglassen von `--global` und `--tool-path` wird die Installation eines lokalen Tools angegeben. 
 
-`-h|--help`
+- **`-h|--help`**
 
-Druckt eine kurze Hilfe für den Befehl.
+  Druckt eine kurze Hilfe für den Befehl.
 
-`--tool-path <PATH>`
+- **`tool-path <PATH>`**
 
-Gibt den Speicherort des globalen Tools an, das installiert wird. „PATH“ kann absolut oder relativ sein. Wenn kein Pfad vorhanden ist, versucht der Befehl, ihn zu erstellen. Kann nicht mit der Option `--global` kombiniert werden. Wenn Sie diese Option nicht angeben, müssen Sie die Option `--global` angeben.
+  Gibt den Speicherort des globalen Tools an, das installiert wird. „PATH“ kann absolut oder relativ sein. Wenn kein Pfad vorhanden ist, versucht der Befehl, ihn zu erstellen. Durch Weglassen von `--global` und `--tool-path` wird die Installation eines lokalen Tools angegeben. 
 
-`-v|--verbosity <LEVEL>`
+- **`-v|--verbosity <LEVEL>`**
 
-Legt den Ausführlichkeitsgrad für den Befehl fest. Zulässige Werte sind `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` und `diag[nostic]`.
+  Legt den Ausführlichkeitsgrad für den Befehl fest. Zulässige Werte sind `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` und `diag[nostic]`.
 
-`--version <VERSION_NUMBER>`
+- **`--version <VERSION_NUMBER>`**
 
-Die Version des zu installierenden Tools. Standardmäßig wird die neueste stabile Paketversion installiert. Verwenden Sie diese Optionen zum Installieren von Vorschau- oder früheren Versionen des Tools.
+  Die Version des zu installierenden Tools. Standardmäßig wird die neueste stabile Paketversion installiert. Verwenden Sie diese Optionen zum Installieren von Vorschau- oder früheren Versionen des Tools.
 
 ## <a name="examples"></a>Beispiele
 
-Installiert das globale Tool [dotnetsay](https://www.nuget.org/packages/dotnetsay/) am Standardspeicherort:
+- **`dotnet tool install -g dotnetsay`**
 
-`dotnet tool install -g dotnetsay`
+  Installiert [dotnetsay](https://www.nuget.org/packages/dotnetsay/) als globales Tool am Standardspeicherort.
 
-Installiert das globale Tool [dotnetsay](https://www.nuget.org/packages/dotnetsay/) in einem bestimmten Windows-Ordner:
+- **`dotnet tool install dotnetsay --tool-path c:\global-tools`**
 
-`dotnet tool install dotnetsay --tool-path c:\global-tools`
+  Installiert [dotnetsay](https://www.nuget.org/packages/dotnetsay/) als globales Tool in einem bestimmten Windows-Verzeichnis.
 
-Installiert das globale Tool [dotnetsay](https://www.nuget.org/packages/dotnetsay/) in einem bestimmten Linux-/macOS-Ordner:
+- **`dotnet tool install dotnetsay --tool-path ~/bin`**
 
-`dotnet tool install dotnetsay --tool-path ~/bin`
+  Installiert [dotnetsay](https://www.nuget.org/packages/dotnetsay/) als globales Tool in einem bestimmten Linux/macOS-Verzeichnis.
 
-Installiert Version 2.0.0 des globalen Tools [dotnetsay](https://www.nuget.org/packages/dotnetsay/):
+- **`dotnet tool install -g dotnetsay --version 2.0.0`**
 
-`dotnet tool install -g dotnetsay --version 2.0.0`
+  Installiert Version 2.0.0 von [dotnetsay](https://www.nuget.org/packages/dotnetsay/) als globales Tool.
+
+- **`dotnet tool install dotnetsay`**
+
+  Installiert [dotnetsay](https://www.nuget.org/packages/dotnetsay/) als lokales Tool im aktuellen Verzeichnis.
 
 ## <a name="see-also"></a>Siehe auch
 
-- [.NET Core Global Tools (Globale .NET Core-Tools)](global-tools.md)
+- [.NET Core-Tools](global-tools.md)

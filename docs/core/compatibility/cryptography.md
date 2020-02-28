@@ -1,22 +1,25 @@
 ---
 title: Breaking Changes bei der Kryptografie
 description: Listet die Breaking Changes bei der Kryptografie in .NET Core auf.
-ms.date: 09/20/2019
-ms.openlocfilehash: fcef4b65245a5dd9219cbdbb548ca575a823a949
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.date: 02/10/2020
+ms.openlocfilehash: c25eefa8e3ee01ed7a1df4ec4aa9225f2c347a4d
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2020
-ms.locfileid: "77093031"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77449216"
 ---
 # <a name="cryptography-breaking-changes"></a>Breaking Changes bei der Kryptografie
 
-Die folgenden Breaking Changes sind auf dieser Seite dokumentiert:
+Auf dieser Seite sind die folgenden Breaking Changes dokumentiert:
 
-- [EnvelopedCms verwendet standardmäßig AES-256-Verschlüsselung](#envelopedcms-defaults-to-aes-256-encryption)
-- [Die Mindestgröße für die Generierung von RSAOpenSsl-Schlüsseln wurde heraufgesetzt](#minimum-size-for-rsaopenssl-key-generation-has-increased)
-- [.NET Core 3.0 zieht OpenSSL 1.1.x OpenSSL 1.0.x vor](#net-core-30-prefers-openssl-11x-to-openssl-10x)
-- [Bessere Argumentvalidierung im Pkcs8PrivateKeyInfo-Konstruktor](#better-argument-validation-in-the-pkcs8privatekeyinfo-constructor)
+| Unterbrechende Änderung | Eingeführt in Version |
+| - | :-: |
+| [EnvelopedCms verwendet standardmäßig AES-256-Verschlüsselung](#envelopedcms-defaults-to-aes-256-encryption) | 3.0 |
+| [Die Mindestgröße für die Generierung von RSAOpenSsl-Schlüsseln wurde heraufgesetzt](#minimum-size-for-rsaopenssl-key-generation-has-increased) | 3.0 |
+| [.NET Core 3.0 zieht OpenSSL 1.1.x OpenSSL 1.0.x vor](#net-core-30-prefers-openssl-11x-to-openssl-10x) | 3.0 |
+| [Bessere Argumentvalidierung im Pkcs8PrivateKeyInfo-Konstruktor](#better-argument-validation-in-the-pkcs8privatekeyinfo-constructor) | 3.0 |
+| [Der boolesche Parameter von SignedCms.ComputeSignature wird beachtet](#boolean-parameter-of-signedcmscomputesignature-is-respected) | 2.1 |
 
 ## <a name="net-core-30"></a>.NET Core 3.0
 
@@ -32,8 +35,12 @@ Die folgenden Breaking Changes sind auf dieser Seite dokumentiert:
 
 ***
 
-## <a name="net-core-30-preview-9"></a>.NET Core 3.0 Preview 9
-
 [!INCLUDE[Better argument validation in the Pkcs8PrivateKeyInfo constructor](~/includes/core-changes/cryptography/3.0/better-argument-validation-in-pkcs8privatekeyinfo-ctor.md)]
+
+***
+
+## <a name="net-core-21"></a>.NET Core 2.1
+
+[!INCLUDE [Boolean parameter of SignedCms.ComputeSignature is respected](~/includes/core-changes/cryptography/2.1/compute-signature-silent-parameter.md)]
 
 ***

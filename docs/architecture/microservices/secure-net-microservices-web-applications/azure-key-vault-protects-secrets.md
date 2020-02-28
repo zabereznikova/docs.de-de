@@ -2,14 +2,13 @@
 title: Verwenden von Azure Key Vault zum Schutz von Geheimnissen zur Produktionszeit
 description: Sicherheit in .NET-Microservices und Webanwendungen – Azure Key Vault ist eine hervorragende Möglichkeit, Anwendungsgeheimnisse zu behandeln, die vollständig von Administratoren gesteuert werden. Administratoren können sogar Entwicklungswerte zuweisen und widerrufen, ohne dass Entwickler sie behandeln müssen.
 author: mjrousos
-ms.author: wiwagn
-ms.date: 10/19/2018
-ms.openlocfilehash: 4d121f584188c5d5fa9ddf0d91bea5e107eff0cb
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.date: 01/30/2020
+ms.openlocfilehash: cc95d491136c945255408cec2bd49d4d6579e29a
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75899659"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77501755"
 ---
 # <a name="use-azure-key-vault-to-protect-secrets-at-production-time"></a>Verwenden von Azure Key Vault zum Schutz von Geheimnissen zur Produktionszeit
 

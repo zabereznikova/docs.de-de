@@ -3,13 +3,13 @@ title: Häufig verwendete Webanwendungsarchitekturen
 description: Entwerfen moderner Webanwendungen mit ASP.NET Core und Azure | Häufig verwendete Webanwendungsarchitekturen
 author: ardalis
 ms.author: wiwagn
-ms.date: 01/30/2019
-ms.openlocfilehash: 6a4e971c1cb19a12710ad7893378a49758b4016e
-ms.sourcegitcommit: 68a4b28242da50e1d25aab597c632767713a6f81
+ms.date: 12/04/2019
+ms.openlocfilehash: 7ec0d9cece40ba8a99e8ab5e028f7ac491ed6f4d
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/06/2019
-ms.locfileid: "74884240"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77450177"
 ---
 # <a name="common-web-application-architectures"></a>Häufig verwendete Webanwendungsarchitekturen
 
@@ -40,7 +40,7 @@ Um diese Probleme zu umgehen, greifen Entwickler häufig auf die Möglichkeit zu
 
 ## <a name="what-are-layers"></a>Was sind Schichten?
 
-Wenn eine Anwendung immer komplexer wird, können Sie dagegen vorgehen, indem Sie sie anhand ihrer Zuständigkeiten und Aufgaben aufteilen. Dieses Prinzip wird als „Separation of Concerns“ (Trennung von Belangen“ bezeichnet und hilft Ihnen dabei, die Codebasis zu ordnen, damit Sie problemlos feststellen können, an welcher Stelle bestimmte Funktionen implementiert wurden. Die Strukturierung Ihres Codes ist aber nicht der einzige Vorteil einer aus Schichten bestehenden Architektur.
+Wenn eine Anwendung immer komplexer wird, können Sie dagegen vorgehen, indem Sie sie anhand ihrer Zuständigkeiten und Aufgaben aufteilen. Dieses Prinzip wird als „Separation of Concerns“ (Trennung von Belangen) bezeichnet und hilft Ihnen dabei, die Codebasis zu ordnen, damit Sie problemlos feststellen können, an welcher Stelle bestimmte Funktionalität implementiert wurde. Die Strukturierung Ihres Codes ist aber nicht der einzige Vorteil einer aus Schichten bestehenden Architektur.
 
 Wenn Sie Code in Schichten unterteilen, können häufig verwendete grundlegende Funktionen in der gesamten Anwendung wiederverwendet werden. Dies hat den Vorteil, dass Sie weniger Code schreiben müssen und die Anwendung für eine Implementierung standardisiert wird, was dem [Don‘t Repeat Yourself-Prinzip](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself) entspricht.
 
@@ -99,8 +99,7 @@ Der einfachste Ansatz zum Skalieren einer Webanwendung in Azure ist das manuelle
 
 Anwendungen, die den Prinzipien der Abhängigkeitsumkehr und des domänengesteuerten Entwurfs (DDD) folgen, weisen alle eine ähnliche Architektur auf. Diese Architektur wurde in den vergangenen Jahren unterschiedlich benannt. Zuerst wurde diese Architektur als „Hexagonal Architecture“ bezeichnet. Darauf folgte der Begriff „Ports-and-Adapters“. Heutzutage spricht man aber eher von [Onion Architecture](https://jeffreypalermo.com/blog/the-onion-architecture-part-1/) bzw. [Clean Architecture](https://8thlight.com/blog/uncle-bob/2012/08/13/the-clean-architecture.html). Der zweite Name, „Clean Architecture“, wird in diesem E-Book als Name dieser Architektur verwendet.
 
-> [!NOTE]
-> Die Clean Architecture kann sowohl für Anwendungen erstellt werden, die dem DDD-Prinzip folgen, als auch für Anwendungen, die diesem nicht entsprechen. Wenn das DDD-Prinzip angewendet wird, kann die Architektur als „Clean DDD Architecture“ bezeichnet werden.
+Die Referenzanwendung eShopOnWeb befolgt den Ansatz der Clean Architecture bei der Aufteilung des Codes in Projekte. Eine Projektmappenvorlage, die Sie als Ausgangspunkt für Ihren eigenen ASP.NET Core-Code verwenden können, finden Sie im GitHub-Repository [ardalis/cleanarchitecture](https://github.com/ardalis/cleanarchitecture).
 
 In der Clean Architecture sind die Geschäftslogik und das Anwendungsmodell im Kern der Anwendung enthalten. Es wird dann das Prinzip Dependency Inversion angewendet, bei dem die Geschäftslogik nicht mehr vom Datenzugriff oder anderen Aufgaben, die die Infrastruktur betreffen, abhängig ist. Stattdessen sind die Informationen zur Infrastruktur und Implementierung vom Anwendungskern abhängig. Dafür werden Abstraktionen oder Schnittstellen im Anwendungskern definiert und anschließend anhand von Typen implementiert, die in der Infrastrukturschicht definiert werden. Diese Architektur wird häufig in Kreisringen dargestellt, die dem Aufbau einer Zwiebel ähneln. In Abbildung 5-7 ist ein Beispiel für die Darstellung der Architektur enthalten.
 
@@ -263,21 +262,19 @@ networks:
 Die `docker-compose.yml`-Datei verweist auf die `Dockerfile` im `Web`-Projekt. Die `Dockerfile`-Datei wird verwendet, um anzugeben, welcher Basiscontainer verwendet und wie die Anwendung darauf konfiguriert wird. Die `Dockerfile`-Datei von `Web`:
 
 ```Dockerfile
-FROM mcr.microsoft.com/dotnet/core/sdk:2.2 AS build
+FROM mcr.microsoft.com/dotnet/core/sdk:3.1 AS build
 WORKDIR /app
 
+COPY *.sln .
 COPY . .
 WORKDIR /app/src/Web
 RUN dotnet restore
 
 RUN dotnet publish -c Release -o out
 
-FROM mcr.microsoft.com/dotnet/core/aspnet:2.2 AS runtime
+FROM mcr.microsoft.com/dotnet/core/aspnet:3.1 AS runtime
 WORKDIR /app
 COPY --from=build /app/src/Web/out ./
-
-# Optional: Set this here if not setting it from docker-compose.yml
-# ENV ASPNETCORE_ENVIRONMENT Development
 
 ENTRYPOINT ["dotnet", "Web.dll"]
 ```

@@ -3,12 +3,12 @@ title: Neues in C# 7.0 – C#-Leitfaden
 description: Erhalten Sie einen Überblick über die neuen Funktionen in Version 7.0 der C#-Sprache.
 ms.date: 02/20/2019
 ms.assetid: fd41596d-d0c2-4816-b94d-c4d00a5d0243
-ms.openlocfilehash: 73563a04dea04c942a6326d6a04ddd54bb80b0ed
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: a6ac5c00ceb2ce8e5e56e2a86a8cde937d5108e2
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75694581"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77448633"
 ---
 # <a name="whats-new-in-c-70"></a>Neues in C# 7.0
 
@@ -236,7 +236,7 @@ Diese Ergänzung erleichtert das Schreiben ausdrucksbasierteren Codes. Sie benö
 
 Das Zurückgeben eines `Task`-Objekts von asynchronen Methoden kann Leistungsengpässe in bestimmten Pfaden verursachen. `Task` ist ein Verweistyp, seine Verwendung bedeutet also das Zuordnen eines Objekts. In Fällen, in denen eine mit dem `async`-Modifizierer deklarierte Methode ein zwischengespeichertes Ergebnis zurückgibt oder synchron abschließt, können die zusätzlichen Zuordnungen viel Zeit bei der Ausführung kritischer Codeabschnitte kosten. Es kann kostspielig werden, wenn diese Zuordnungen in engen Schleifen auftreten.
 
-Durch die neue Sprachfunktion sind die Rückgabetypen asynchroner Methoden nicht auf `Task`, `Task<T>` und `void` beschränkt. Der zurückgegebene Typ muss noch immer das asynchrone Muster erfüllen, d.h. dass eine `GetAwaiter`-Methode verfügbar sein muss. Als konkretes Beispiel wurde der `ValueTask`-Typ zu .NET Framework hinzugefügt, um diese neue Sprachfunktion zu nutzen:
+Durch die neue Sprachfunktion sind die Rückgabetypen asynchroner Methoden nicht auf `Task`, `Task<T>` und `void` beschränkt. Der zurückgegebene Typ muss noch immer das asynchrone Muster erfüllen, d.h. dass eine `GetAwaiter`-Methode verfügbar sein muss. Als konkretes Beispiel wurde der `ValueTask`-Typ zu .NET hinzugefügt, um diese neue Sprachfunktion zu nutzen:
 
 [!code-csharp[UsingValueTask](~/samples/snippets/csharp/new-in-7/AsyncWork.cs#UsingValueTask "Using ValueTask")]
 

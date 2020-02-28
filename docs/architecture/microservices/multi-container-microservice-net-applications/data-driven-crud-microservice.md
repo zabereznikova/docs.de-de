@@ -1,13 +1,13 @@
 ---
 title: Erstellen eines einfachen datengesteuerten CRUD-Microservice
 description: .NET-Microservicesarchitektur für .NET-Containeranwendungen | Grundlagen der Erstellung eines einfachen CRUD-Microservice (datengesteuert) im Kontext einer Microserviceanwendung.
-ms.date: 01/07/2019
-ms.openlocfilehash: 56cec488c22b0f3b45b9c1dae9d2f4fd7ef7beaa
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.date: 01/30/2020
+ms.openlocfilehash: b72d7defed81e57e2971c5e2b53df2d86b2dc947
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73737323"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77502356"
 ---
 # <a name="creating-a-simple-data-driven-crud-microservice"></a>Erstellen eines einfachen datengesteuerten CRUD-Microservice
 
@@ -39,7 +39,7 @@ Erstellen Sie zum Implementieren eines einfachen CRUD-Microservice mit .NET Core
 
 ![Screenshot von Visual Studio mit der Einrichtung des Projekts.](./media/data-driven-crud-microservice/create-asp-net-core-web-api-project.png)
 
-**Abbildung 6-6**. Erstellen eines ASP.NET Core-Web-API-Projekts in Visual Studio
+**Abbildung 6-6**. Erstellen eines ASP.NET Core-Web-API-Projekts in Visual Studio 2019
 
 Wählen Sie zuerst eine ASP.NET Core-Webanwendung und dann den API-Typ aus, um ein ASP.NET Core-Web-API-Projekt zu erstellen. Nach dem Erstellen des Projekts können Sie Ihre MVC-Controller wie in jedem anderen Web-API-Projekt mit der Entity Framework-API oder einer anderen API implementieren. In einem neuen Web-API-Projekt können Sie sehen, dass die einzige Abhängigkeit im betreffenden Microservice ASP.NET Core selbst betrifft. Intern (innerhalb der Abhängigkeit *Microsoft.AspNetCore.All*) verweist diese wie in Abbildung 6-7 gezeigt auf Entity Framework und viele andere .NET Core NuGet-Pakete.
 
@@ -129,12 +129,27 @@ public class CatalogController : ControllerBase
 
     // GET api/v1/[controller]/items[?pageSize=3&pageIndex=10]
     [HttpGet]
-    [Route("[action]")]
+    [Route("items")]
     [ProducesResponseType(typeof(PaginatedItemsViewModel<CatalogItem>), (int)HttpStatusCode.OK)]
-    public async Task<IActionResult> Items([FromQuery]int pageSize = 10,
-                                           [FromQuery]int pageIndex = 0)
-
+    [ProducesResponseType(typeof(IEnumerable<CatalogItem>), (int)HttpStatusCode.OK)]
+    [ProducesResponseType((int)HttpStatusCode.BadRequest)]
+    public async Task<IActionResult> ItemsAsync(
+        [FromQuery]int pageSize = 10,
+        [FromQuery]int pageIndex = 0,
+        string ids = null)
     {
+        if (!string.IsNullOrEmpty(ids))
+        {
+            var items = await GetItemsByIdsAsync(ids);
+
+            if (!items.Any())
+            {
+                return BadRequest("ids value invalid. Must be comma-separated list of numbers");
+            }
+
+            return Ok(items);
+        }
+
         var totalItems = await _catalogContext.CatalogItems
             .LongCountAsync();
 
@@ -172,7 +187,7 @@ In ASP.NET Core können Sie die vorkonfigurierte Abhängigkeitseinfügung (DI, D
 
 Im obigen Beispiel für die `CatalogController`-Klasse fügen wir ein Objekt des `CatalogContext`-Typs und andere Objekte über den `CatalogController()`-Konstruktor ein.
 
-Ein wichtiger Konfigurationsschritt bei der Einrichtung des Web-API-Projekts ist die Registrierung der DbContext-Klasse im IoC-Container des Diensts. Hierzu rufen Sie in der Regel in der `Startup`-Klasse die `services.AddDbContext<DbContext>()`-Methode innerhalb der `ConfigureServices()`-Methode auf, wie es im folgenden Beispiel gezeigt wird:
+Ein wichtiger Konfigurationsschritt bei der Einrichtung des Web-API-Projekts ist die Registrierung der DbContext-Klasse im IoC-Container des Diensts. Hierzu rufen Sie in der Regel in der `Startup`-Klasse die `services.AddDbContext<DbContext>()`-Methode innerhalb der `ConfigureServices()`-Methode auf, wie im folgenden **vereinfachten** Beispiel gezeigt:
 
 ```csharp
 public void ConfigureServices(IServiceCollection services)
@@ -240,9 +255,9 @@ Aus Ihren Dateien „docker-compose.yml“ oder „docker-compose.override.yml�
 # docker-compose.override.yml
 
 #
-catalog.api:
+catalog-api:
   environment:
-    - ConnectionString=Server=sql.data;Database=Microsoft.eShopOnContainers.Services.CatalogDb;User Id=sa;Password=Pass@word
+    - ConnectionString=Server=sqldata;Database=Microsoft.eShopOnContainers.Services.CatalogDb;User Id=sa;Password=Pass@word
     # Additional environment variables for this service
   ports:
     - "5101:80"
@@ -350,7 +365,7 @@ Die von Swashbuckle generierte Dokumentation der Swagger-Benutzeroberflächen-AP
 
 Derzeit besteht Swashbuckle aus fünf NuGet-Paketen im allgemeinen Metapaket [Swashbuckle.AspNetCore](https://www.nuget.org/packages/Swashbuckle.AspNetCore) für ASP.NET Core-Anwendungen.
 
-Nachdem Sie diese NuGet-Pakete in Ihrem Web-API-Projekt installiert haben, müssen Sie Swagger wie im folgenden Code gezeigt in der Startup-Klasse konfigurieren (vereinfacht):
+Nachdem Sie diese NuGet-Pakete in Ihrem Web-API-Projekt installiert haben, müssen Sie Swagger wie im folgenden **vereinfachten** Code gezeigt in der Startup-Klasse konfigurieren:
 
 ```csharp
 public class Startup
@@ -366,12 +381,11 @@ public class Startup
         services.AddSwaggerGen(options =>
         {
             options.DescribeAllEnumsAsStrings();
-            options.SwaggerDoc("v1", new Swashbuckle.AspNetCore.Swagger.Info
+            options.SwaggerDoc("v1", new OpenApiInfo
             {
                 Title = "eShopOnContainers - Catalog HTTP API",
                 Version = "v1",
-                Description = "The Catalog Microservice HTTP API. This is a Data-Driven/CRUD microservice sample",
-                TermsOfService = "Terms Of Service"
+                Description = "The Catalog Microservice HTTP API. This is a Data-Driven/CRUD microservice sample"
             });
         });
 
@@ -395,7 +409,7 @@ public class Startup
 
 Anschließend können Sie Ihre Anwendung starten und die folgenden JSON- und UI-Endpunkte von Swagger mit URLs wie den folgenden durchsuchen:
 
-```url
+```console
   http://<your-root-url>/swagger/v1/swagger.json
 
   http://<your-root-url>/swagger/

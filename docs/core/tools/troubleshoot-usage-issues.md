@@ -2,13 +2,13 @@
 title: Behandlung von Problemen bei der Nutzung von .NET Core-Tools
 description: Informieren Sie sich über allgemeine Probleme beim Ausführen von .NET Core-Tools sowie über mögliche Lösungen.
 author: kdollard
-ms.date: 09/23/2019
-ms.openlocfilehash: df896405a122050acba220923eee58e87e0b75b6
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.date: 02/14/2020
+ms.openlocfilehash: ab5d1be8f201ea283f8537f18886feab46157127
+ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74282502"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77543273"
 ---
 # <a name="troubleshoot-net-core-tool-usage-issues"></a>Behandlung von Problemen bei der Nutzung von .NET Core-Tools
 
@@ -59,7 +59,7 @@ Der Name der ausführbaren Datei bestimmt, wie Sie das Tool aufrufen. Das Format
   * Wenn Sie das .NET Core 3.0 SDK installiert und die Umgebungsvariable `DOTNET_ADD_GLOBAL_TOOLS_TO_PATH` auf `false` festgelegt haben.
   * Wenn Sie .NET Core 2.2 SDK oder frühere Versionen installiert und die Umgebungsvariable `DOTNET_SKIP_FIRST_TIME_EXPERIENCE` auf `true` festgelegt haben.
 
-  Weitere Informationen über globale Tools finden Sie unter [Übersicht über globale .NET Core-Tools](global-tools.md).
+  Weitere Informationen finden Sie unter [.NET Core-Tools](global-tools.md).
 
 * Lokale Tools
 
@@ -73,7 +73,7 @@ Der Name der ausführbaren Datei bestimmt, wie Sie das Tool aufrufen. Das Format
 
 ### <a name="runtime-not-found"></a>Runtime nicht gefunden
 
-.NET Core-Tools sind [Framework-abhängige Anwendungen](../deploying/index.md#framework-dependent-deployments-fdd), d. h. sie sind von der auf Ihrem Computer installierten .NET Core-Runtime abhängig. Wenn die erwartete Runtime nicht gefunden wurde, orientieren sie sich an den normalen Regeln für das Rollforward der .NET Core-Runtime, zum Beispiel:
+.NET Core-Tools sind [Framework-abhängige Anwendungen](../deploying/index.md#publish-runtime-dependent), d. h. sie sind von der auf Ihrem Computer installierten .NET Core-Runtime abhängig. Wenn die erwartete Runtime nicht gefunden wurde, orientieren sie sich an den normalen Regeln für das Rollforward der .NET Core-Runtime, zum Beispiel:
 
 * Eine Anwendung wird auf das neueste Patchrelease der angegebenen Haupt- und Nebenversion gebracht.
 * Wenn keine übereinstimmende Runtime mit einer übereinstimmenden Haupt- und Nebenversion vorhanden ist, wird die nächsthöhere Nebenversion verwendet.
@@ -99,7 +99,7 @@ Wenn Sie das .NET Core SDK an einem nicht standardmäßigen Speicherort installi
 
 ## <a name="net-core-tool-installation-fails"></a>Fehler bei der Installation von .NET Core-Tools
 
-Es gibt verschiedene Gründe, warum bei der Installation eines globalen oder lokalen .NET Core-Tools möglicherweise ein Fehler auftritt. Wenn bei der Installation eines Tools ein Fehler auftritt, wird eine Meldung angezeigt, die in etwa wie folgt lautet:
+Es gibt verschiedene Gründe, warum bei der Installation eines globalen oder lokalen .NET Core-Tools möglicherweise ein Fehler auftritt. Wenn bei der Installation eines Tools ein Fehler auftritt, wird eine Meldung angezeigt, die in etwa so lautet:
 
 ```console
 Tool '{0}' failed to install. This failure may have been caused by:
@@ -137,9 +137,6 @@ Bei aktualisierten Paket-IDs müssen Sie zum Abrufen der aktuellen Updates die n
 dotnet tool install -g --version 1.1.0-pre <toolName>
 ```
 
-> [!NOTE]
-> Zur Vereinfachung plant das Team für die .NET Core-CLI die Ergänzung durch einen `--preview`-Switch in einem kommenden Release.
-
 ### <a name="package-isnt-a-net-core-tool"></a>Das Paket ist kein .NET Core-Tool
 
 * Es wurde ein NuGet-Paket mit diesem Namen gefunden. Dabei handelt es sich jedoch nicht um ein .NET Core-Tool.
@@ -162,4 +159,4 @@ Eine häufige Ursache für Fehler ist ein fehlerhafter Toolname. Ursache hierfü
 
 ## <a name="see-also"></a>Siehe auch
 
-* [Übersicht über globale .NET Core-Tools](global-tools.md)
+* [.NET Core-Tools](global-tools.md)

@@ -1,25 +1,27 @@
 ---
 title: Befehl „dotnet remove reference“
-description: Der Befehl „dotnet remove reference“ bietet eine praktische Option zum Entfernen von Projekt-zu-Projekt-Verweisen.
-ms.date: 05/29/2018
-ms.openlocfilehash: bfac4721743babcf48fd8e86a50c8df136e1bfce
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+description: Der Verweisbefehl „dotnet remove“ bietet eine praktische Option zum Entfernen von Projekt-zu-Projekt-Verweisen.
+ms.date: 02/14/2020
+ms.openlocfilehash: fcadf677faaf9281fb019c3c4bb16efc906b1aa1
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53170612"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503617"
 ---
 # <a name="dotnet-remove-reference"></a>dotnet remove reference
 
-[!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
+**Dieser Artikel gilt für:** ✔️ .NET Core 2.x SDK und neuere Versionen
 
-## <a name="name"></a>Name
+## <a name="name"></a>name
 
 `dotnet remove reference`: Entfernt Projekt-zu-Projekt-Verweise.
 
 ## <a name="synopsis"></a>Übersicht
 
-`dotnet remove [<PROJECT>] reference [-f|--framework] <PROJECT_REFERENCES> [-h|--help]`
+```dotnetcli
+dotnet remove [<PROJECT>] reference [-f|--framework] <PROJECT_REFERENCES> [-h|--help]
+```
 
 ## <a name="description"></a>Beschreibung
 
@@ -37,24 +39,30 @@ Zu entfernende Projekt-zu-Projekt-Verweise (P2P). Sie können ein oder mehrere P
 
 ## <a name="options"></a>Optionen
 
-`-h|--help`
+- **`-h|--help`**
 
-Druckt eine kurze Hilfe für den Befehl.
+  Druckt eine kurze Hilfe für den Befehl.
 
-`-f|--framework <FRAMEWORK>`
+- **`-f|--framework <FRAMEWORK>`**
 
-Entfernt den Verweis nur, wenn auf ein bestimmtes [Framework](../../standard/frameworks.md) abgezielt wird.
+  Entfernt den Verweis nur, wenn auf ein bestimmtes [Framework](../../standard/frameworks.md) abgezielt wird.
 
 ## <a name="examples"></a>Beispiele
 
-Entfernen Sie einen Projektverweis aus dem angegebenen Projekt:
+- Entfernen Sie einen Projektverweis aus dem angegebenen Projekt:
 
-`dotnet remove app/app.csproj reference lib/lib.csproj`
+  ```dotnetcli
+  dotnet remove app/app.csproj reference lib/lib.csproj
+  ```
 
-Entfernen Sie mehrere Projektverweise aus dem Projekt im aktuellen Verzeichnis:
+- Entfernen Sie mehrere Projektverweise aus dem Projekt im aktuellen Verzeichnis:
 
-`dotnet remove reference lib1/lib1.csproj lib2/lib2.csproj`
+  ```dotnetcli
+  dotnet remove reference lib1/lib1.csproj lib2/lib2.csproj
+  ```
 
-Entfernen Sie mehrere Projektverweise mithilfe eines Globmusters auf Unix/Linux:
+- Entfernen Sie mehrere Projektverweise mithilfe eines Globmusters auf Unix/Linux:
 
-`dotnet remove app/app.csproj reference **/*.csproj`
+  ```dotnetcli
+  dotnet remove app/app.csproj reference **/*.csproj`
+  ```

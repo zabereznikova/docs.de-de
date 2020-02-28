@@ -4,12 +4,12 @@ description: Erfahren Sie mehr über Musterabgleichausdrücke in C#.
 ms.date: 04/10/2019
 ms.technology: csharp-fundamentals
 ms.assetid: 1e575c32-2e2b-4425-9dca-7d118f3ed15b
-ms.openlocfilehash: ff84ddd4f07fb77dc9fe648a495a441ed8f9198b
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: db509a0ebf1e205e9996ba8102757fe8c0b9ea3a
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039368"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77501625"
 ---
 # <a name="pattern-matching"></a>Musterabgleich
 
@@ -136,3 +136,7 @@ Dies ist ein Beispiel, bei dem Sie einen `var`-case-Ausdruck erwägen können, d
 Musterabgleich funktioniert mit jedem Datentyp. Sie erstellen Ausdrücke, die das Objekt untersuchen und Steuerungsflussentscheidungen anhand dieser Bedingungen treffen.
 
 Vergleichen Sie den Code in diesem Beispiel mit dem Entwurf, der aus dem Erstellen einer Klassenhierarchie für eine abstrakte `Shape` und spezifisch abgeleitete Formen folgen würde, von denen jede ihre eigene Implementierung einer virtuellen Methode hat, um den Bereich zu berechnen. Sie werden häufig feststellen, dass Musterabgleichausdrücke sehr nützlich sein können, wenn Sie mit Daten arbeiten und die Datenspeicherprobleme von den Verhaltensproblemen trennen möchten.
+
+## <a name="see-also"></a>Siehe auch
+
+- [Tutorial: Verwenden von Features für den Musterabgleich, um Datentypen zu erweitern](tutorials/pattern-matching.md)

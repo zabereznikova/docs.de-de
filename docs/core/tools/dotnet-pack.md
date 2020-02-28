@@ -1,21 +1,17 @@
 ---
 title: Befehl „dotnet pack“
 description: Der dotnet pack-Befehl erstellt NuGet-Pakete für ein .NET Core-Projekt.
-ms.date: 08/08/2019
-ms.openlocfilehash: 057d1029e5c933912c43c178b6db8a8498f2ed57
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.date: 02/14/2020
+ms.openlocfilehash: 865262f1eb314f9b7e8ee713c573a965e89ded93
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76734118"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503647"
 ---
 # <a name="dotnet-pack"></a>dotnet pack
 
-**Dieser Artikel gilt für:** ✔️ .NET Core 1.x SDK und neuere Versionen
-
-<!-- todo: uncomment when all CLI commands are reviewed
-[!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
--->
+**Dieser Artikel gilt für:** ✔️ .NET Core 2.x SDK und neuere Versionen
 
 ## <a name="name"></a>name
 
@@ -63,13 +59,13 @@ Webprojekte können standardmäßig nicht verpackt werden. Um das Standardverhal
 
 ## <a name="options"></a>Optionen
 
-- **`-c|--configuration {Debug|Release}`**
+- **`-c|--configuration <CONFIGURATION>`**
 
-  Legt die Buildkonfiguration fest. Der Standardwert ist `Debug`.
+  Legt die Buildkonfiguration fest. Der Standardwert für die meisten Projekte ist `Debug`, aber Sie können die Buildkonfigurationseinstellungen in Ihrem Projekt überschreiben.
 
 - **`--force`**
 
-  Erzwingt das Auflösen aller Abhängigkeiten, auch wenn die letzte Wiederherstellung erfolgreich war. Dieses Flag anzugeben, entspricht dem Löschen der Datei *project.assets.json*. Die Option ist seit dem .NET Core 2.0 SDK verfügbar.
+  Erzwingt das Auflösen aller Abhängigkeiten, auch wenn die letzte Wiederherstellung erfolgreich war. Dieses Flag anzugeben, entspricht dem Löschen der Datei *project.assets.json*.
 
 - **`-h|--help`**
 
@@ -93,11 +89,11 @@ Webprojekte können standardmäßig nicht verpackt werden. Um das Standardverhal
 
 - **`--no-dependencies`**
 
-  Ignoriert Verweise zwischen Projekten und stellt nur das zum Erstellen angegebene Stammprojekt wieder her. Die Option ist seit dem .NET Core 2.0 SDK verfügbar.
+  Ignoriert Verweise zwischen Projekten und stellt nur das zum Erstellen angegebene Stammprojekt wieder her.
 
 - **`--no-restore`**
 
-  Führt keine implizite Wiederherstellung aus, wenn der Befehl ausgeführt wird. Die Option ist seit dem .NET Core 2.0 SDK verfügbar.
+  Führt keine implizite Wiederherstellung aus, wenn der Befehl ausgeführt wird.
 
 - **`--nologo`**
 
@@ -109,7 +105,7 @@ Webprojekte können standardmäßig nicht verpackt werden. Um das Standardverhal
 
 - **`--runtime <RUNTIME_IDENTIFIER>`**
 
-  Gibt die Ziellaufzeit an, für die Pakete wiederhergestellt werden sollen Eine Liste der Runtime-IDs (RIDs) finden Sie unter [RID-Katalog](../rid-catalog.md). Die Option ist seit dem .NET Core 2.0 SDK verfügbar.
+  Gibt die Ziellaufzeit an, für die Pakete wiederhergestellt werden sollen Eine Liste der Runtime-IDs (RIDs) finden Sie unter [RID-Katalog](../rid-catalog.md).
 
 - **`-s|--serviceable`**
 
@@ -167,7 +163,7 @@ Webprojekte können standardmäßig nicht verpackt werden. Um das Standardverhal
   dotnet pack -p:TargetFrameworks=net45
   ```
 
-- Packen Sie das Projekt, und verwenden Sie eine bestimmte Runtime (Windows 10) für den Wiederherstellungsvorgang (.NET Core SDK 2.0 und spätere Versionen):
+- Packen Sie das Projekt, und verwenden Sie eine bestimmte Runtime (Windows 10) für den Wiederherstellungsvorgang:
 
   ```dotnetcli
   dotnet pack --runtime win10-x64

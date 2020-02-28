@@ -1,25 +1,21 @@
 ---
 title: Befehl „dotnet sln“
 description: Der Befehl dotnet-sln bietet eine praktische Option, Projekte zu einer Projektmappendatei hinzuzufügen, Projekte aus einer Projektmappendatei zu entfernen oder die in einer Projektmappendatei enthaltenen Projekte aufzulisten.
-ms.date: 10/29/2019
-ms.openlocfilehash: e344deaae0867202a79a3c38df48a2be8d4d7d13
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.date: 02/14/2020
+ms.openlocfilehash: b2455c04a46b2a10b8142d8ddc2d8129f2154b27
+ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76733082"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77543481"
 ---
 # <a name="dotnet-sln"></a>dotnet sln
 
-**Dieser Artikel gilt für:** ✔️ .NET Core 1.x SDK und neuere Versionen
-
-<!-- todo: uncomment when all CLI commands are reviewed
-[!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
--->
+**Dieser Artikel gilt für:** ✔️ .NET Core 2.x SDK und neuere Versionen
 
 ## <a name="name"></a>name
 
-`dotnet sln`: Ändert eine .NET Core-Projektmappendatei.
+`dotnet sln`: Listet die Projekte in einer .NET Core-Projektmappendatei auf oder ändert sie.
 
 ## <a name="synopsis"></a>Übersicht
 
@@ -29,9 +25,9 @@ dotnet sln [<SOLUTION_FILE>] [command] [-h|--help]
 
 ## <a name="description"></a>Beschreibung
 
-Der Befehl `dotnet sln` bietet eine praktische Möglichkeit, Projekte zu einer Projektmappendatei hinzuzufügen, Projekte aus einer Projektmappendatei zu entfernen oder die in einer Projektmappendatei enthaltenen Projekte aufzulisten.
+Der Befehl `dotnet sln` bietet eine komfortable Möglichkeit, Projekte in einer Projektmappendatei aufzulisten und zu ändern.
 
-Die Projektmappendatei muss immer vorhanden sein, um den Befehl `dotnet sln` verwenden zu können. Wenn Sie eine Datei erstellen müssen, verwenden Sie den Befehl [dotnet new](dotnet-new.md) wie in folgendem Beispiel:
+Die Projektmappendatei muss immer vorhanden sein, um den Befehl `dotnet sln` verwenden zu können. Wenn Sie eine Datei erstellen müssen, verwenden Sie den Befehl [dotnet new](dotnet-new.md) wie im folgenden Beispiel:
 
 ```dotnetcli
 dotnet new sln
@@ -41,24 +37,46 @@ dotnet new sln
 
 - **`SOLUTION_FILE`**
 
-  Dies ist die zu verwendende Projektmappendatei. Wenn keine angegeben ist, sucht der Befehl im aktuellen Verzeichnis nach einer Projektdatei. Gibt es mehrere Projektmappendateien in dem Verzeichnis, muss eine angegeben werden.
+  Dies ist die zu verwendende Projektmappendatei. Wenn dieses Argument weggelassen wird, durchsucht der Befehl das aktuelle Verzeichnis nach einem. Wenn keine oder mehrere Projektmappendateien gefunden werden, schlägt der Befehl fehl.
 
 ## <a name="options"></a>Optionen
 
 - **`-h|--help`**
 
-  Druckt eine kurze Hilfe für den Befehl.
+  Gibt eine Beschreibung zur Verwendung des Befehls aus.
 
 ## <a name="commands"></a>Befehle
 
-### `add`
+### `list`
 
-Fügt mindestens ein Projekt zur Projektmappendatei hinzu.
+Listet alle Projekte auf, die in einer Projektmappendatei enthalten sind.
 
 #### <a name="synopsis"></a>Übersicht
 
 ```dotnetcli
-dotnet sln [<SOLUTION_FILE>] add [--in-root] [-s|--solution-folder] <PROJECT_PATH>
+dotnet sln list [-h|--help]
+```
+
+#### <a name="arguments"></a>Argumente
+
+- **`SOLUTION_FILE`**
+
+  Dies ist die zu verwendende Projektmappendatei. Wenn dieses Argument weggelassen wird, durchsucht der Befehl das aktuelle Verzeichnis nach einem. Wenn keine oder mehrere Projektmappendateien gefunden werden, schlägt der Befehl fehl.
+
+#### <a name="options"></a>Optionen
+
+- **`-h|--help`**
+
+  Gibt eine Beschreibung zur Verwendung des Befehls aus.
+  
+### `add`
+
+Fügt der Projektmappendatei ein oder mehrere Projekte hinzu.
+
+#### <a name="synopsis"></a>Übersicht
+
+```dotnetcli
+dotnet sln [<SOLUTION_FILE>] add [--in-root] [-s|--solution-folder] <PROJECT_PATH> [<PROJECT_PATH>...]
 dotnet sln add [-h|--help]
 ```
 
@@ -66,17 +84,17 @@ dotnet sln add [-h|--help]
 
 - **`SOLUTION_FILE`**
 
-  Dies ist die zu verwendende Projektmappendatei. Wenn keine angegeben ist, sucht der Befehl im aktuellen Verzeichnis nach einer Projektdatei. Gibt es mehrere Projektmappendateien in dem Verzeichnis, muss eine angegeben werden.
+  Dies ist die zu verwendende Projektmappendatei. Falls nicht angegeben, durchsucht der Befehl das aktuelle Verzeichnis nach einer und schlägt fehl, wenn es mehrere Projektmappendateien gibt.
 
 - **`PROJECT_PATH`**
 
-  Dies ist der Pfad zum Projekt, das zur Projektmappe hinzugefügt werden soll. Fügen Sie mehrere Projekte hinzu, indem Sie diese durch Leerzeichen getrennt nacheinander hinzufügen. UNIX-/Linux-Shell-[Globmustererweiterungen](https://en.wikipedia.org/wiki/Glob_(programming)) werden ordnungsgemäß mit dem `dotnet sln`-Befehl verarbeitet.
+  Dies ist der Pfad zum Projekt bzw. den Projekten, die zur Projektmappe hinzugefügt werden sollen. UNIX-/Linux-Shell-[Globmustererweiterungen](https://en.wikipedia.org/wiki/Glob_(programming)) werden ordnungsgemäß mit dem `dotnet sln`-Befehl verarbeitet.
 
 #### <a name="options"></a>Optionen
 
 - **`-h|--help`**
 
-  Druckt eine kurze Hilfe für den Befehl.
+  Gibt eine Beschreibung zur Verwendung des Befehls aus.
 
 - **`--in-root`**
 
@@ -93,7 +111,7 @@ Entfernt mindestens ein Projekt aus der Projektmappendatei.
 #### <a name="synopsis"></a>Übersicht
 
 ```dotnetcli
-dotnet sln [<SOLUTION_FILE>] remove <PROJECT_PATH>
+dotnet sln [<SOLUTION_FILE>] remove <PROJECT_PATH> [<PROJECT_PATH>...]
 dotnet sln [<SOLUTION_FILE>] remove [-h|--help]
 ```
 
@@ -101,52 +119,42 @@ dotnet sln [<SOLUTION_FILE>] remove [-h|--help]
 
 - **`SOLUTION_FILE`**
 
-  Dies ist die zu verwendende Projektmappendatei. Wenn keine angegeben ist, sucht der Befehl im aktuellen Verzeichnis nach einer Projektdatei. Gibt es mehrere Projektmappendateien in dem Verzeichnis, muss eine angegeben werden.
+  Dies ist die zu verwendende Projektmappendatei. Falls nicht angegeben, durchsucht der Befehl das aktuelle Verzeichnis nach einer und schlägt fehl, wenn es mehrere Projektmappendateien gibt.
 
 - **`PROJECT_PATH`**
 
-  Dies ist der Pfad zum Projekt, das aus der Projektmappe entfernt werden soll. Sie können mehrere Projekte entfernen, indem Sie diese durch Leerzeichen getrennt nacheinander hinzufügen. UNIX-/Linux-Shell-[Globmustererweiterungen](https://en.wikipedia.org/wiki/Glob_(programming)) werden ordnungsgemäß mit dem `dotnet sln`-Befehl verarbeitet.
+  Dies ist der Pfad zum Projekt bzw. den Projekten, die zur Projektmappe hinzugefügt werden sollen. UNIX-/Linux-Shell-[Globmustererweiterungen](https://en.wikipedia.org/wiki/Glob_(programming)) werden ordnungsgemäß mit dem `dotnet sln`-Befehl verarbeitet.
 
 #### <a name="options"></a>Optionen
 
 - **`-h|--help`**
 
-  Druckt eine kurze Hilfe für den Befehl.
-
-### `list`
-
-Listet alle Projekte auf, die in einer Projektmappendatei enthalten sind.
-
-#### <a name="synopsis"></a>Übersicht
-
-```dotnetcli
-dotnet sln list [-h|--help]
-```
-
-#### <a name="arguments"></a>Argumente
-
-- **`SOLUTION_FILE`**
-
-  Dies ist die zu verwendende Projektmappendatei. Wenn keine angegeben ist, sucht der Befehl im aktuellen Verzeichnis nach einer Projektdatei. Gibt es mehrere Projektmappendateien in dem Verzeichnis, muss eine angegeben werden.
-
-#### <a name="options"></a>Optionen
-
-- **`-h|--help`**
-
-  Druckt eine kurze Hilfe für den Befehl.
+  Gibt eine Beschreibung zur Verwendung des Befehls aus.
 
 ## <a name="examples"></a>Beispiele
+
+- Listen Sie alle Projekte in einer Projektmappe auf:
+
+  ```dotnetcli
+  dotnet sln todo.sln list
+  ```
 
 - Fügen Sie ein C#-Projekt zu einer Projektmappe hinzu:
 
   ```dotnetcli
-  dotnet sln todo.sln add todo-app/todo-app.csproj
+  dotnet sln add todo-app/todo-app.csproj
   ```
 
 - Entfernen Sie ein C#-Projekt aus einer Projektmappe:
 
   ```dotnetcli
-  dotnet sln todo.sln remove todo-app/todo-app.csproj
+  dotnet sln remove todo-app/todo-app.csproj
+  ```
+
+- Fügen Sie mehrere C#-Projekte zum Stamm einer Projektmappe hinzu:
+
+  ```dotnetcli
+  dotnet sln todo.sln add todo-app/todo-app.csproj back-end/back-end.csproj --in-root
   ```
 
 - Fügen Sie mehrere C#-Projekte zu einer Projektmappe hinzu:

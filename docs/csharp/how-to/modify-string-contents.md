@@ -3,12 +3,12 @@ title: 'Vorgehensweise: Ändern von Zeichenfolgeninhalten – C#-Leitfaden'
 ms.date: 02/26/2018
 helpviewer_keywords:
 - strings [C#], modifying
-ms.openlocfilehash: 539e313173d46c2c92399cefe94207c8beed03b4
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: ecedd9a9027aa925c753f8e187d611b19d3db991
+ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73973258"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77543260"
 ---
 # <a name="how-to-modify-string-contents-in-c"></a>Vorgehensweise: Ändern von Zeichenfolgeninhalten in C\#
 
@@ -62,12 +62,13 @@ In folgendem Beispiel wird gezeigt, wie Sie mehrere Zeichen in einer Zeichenfolg
 
 [!code-csharp-interactive[replace creates a new string](../../../samples/snippets/csharp/how-to/strings/ModifyStrings.cs#6)]
 
-## <a name="unsafe-modifications-to-string"></a>Unsichere Modifizierung einer Zeichenfolge
+## <a name="programmatically-build-up-string-content"></a>Programmgesteuertes Erstellen von Zeichenfolgeninhalten
 
-Mit **unsicherem Code** können Sie eine Zeichenfolge „direkt“ modifizieren, nachdem sie erstellt wurde. Unsicherer Code umgeht viele der Features von .NET, die dazu gedacht sind, bestimmte Fehler in Code zu minimieren. Sie müssen unsicheren Code verwenden, um eine Zeichenfolge direkt zu modifizieren, weil die Zeichenfolgenklasse als **unveränderlicher** Typ konzipiert ist. Sobald Sie erstellt wurde, kann ihr Wert nicht verändert werden. Unsicherer Code umgeht diese Eigenschaft, indem er auf den Speicher zugreift und diesen modifiziert, der von einer `string` verwendet wird, ohne normale `string`-Methoden zu verwenden.
-Das folgende Beispiel können Sie verwenden, falls Sie eine Zeichenfolge direkt mit unsicherem Code modifizieren möchte. Dies kommt jedoch sehr selten vor. Im folgenden Beispiel wird die Verwendung des Schlüsselworts `fixed` veranschaulicht. Das Schlüsselwort `fixed` verhindert, dass der Garbage Collector (GC) das Zeichenfolgenobjekt im Speicher verschiebt, während der Code mit einem unsicheren Zeiger auf den Speicher zugreift. Darüber hinaus wird ein möglicher Nebeneffekt unsicherer Vorgänge auf Zeichenfolgen gezeigt, die daraus entstehen, dass der C#-Compiler Zeichenfolgen intern speichert (hält). Im Allgemeinen sollten Sie dieses Verfahren nicht verwenden, es sei denn, es ist unbedingt notwendig. Weitere Informationen erhalten Sie in den Artikeln zu [unsafe](../language-reference/keywords/unsafe.md) und [fixed](../language-reference/keywords/fixed-statement.md). Die API-Referenz für <xref:System.String.Intern%2A> enthält Informationen zum Internalisieren von Zeichenfolgen.
+Da Zeichenfolgen unveränderlich sind, erzeugen die vorherigen Beispiele alle temporäre Zeichenfolgen oder -arrays. In Hochleistungsszenarien ist es möglicherweise wünschenswert, diese Heapzuordnungen zu vermeiden. .NET Core bietet die Methode <xref:System.String.Create%2A?displayProperty=nameWithType>, mit der Sie den Zeicheninhalt einer Zeichenfolge über einen Rückruf programmgesteuert füllen können, wobei die zwischengeschalteten temporären Zeichenfolgenzuordnungen vermieden werden.
 
-[!code-csharp[unsafe ways to create a new string](../../../samples/snippets/csharp/how-to/strings/ModifyStrings.cs#7)]
+[!code-csharp[using string.Create to programmatically build the string content for a new string](../../../samples/snippets/csharp/how-to/strings/ModifyStrings.cs#7)]
+
+Sie können eine Zeichenfolge in einem festen Block mit unsicherem Code ändern. Es wird jedoch **unbedingt** davon abgeraten, den Inhalt der Zeichenfolge nach deren Erstellung zu ändern. Dadurch können Abläufe auf unvorhersehbare Weise beeinträchtigt werden. Wenn jemand beispielsweise eine Zeichenfolge internalisiert, die den gleichen Inhalt wie Ihre hat, erhält er Ihre Kopie und erwartet nicht, dass Sie seine Zeichenfolge überhaupt ändern.
 
 Sie können diese Beispiele ausprobieren, indem Sie sich den Code in unserem [GitHub-Repository](https://github.com/dotnet/samples/tree/master/snippets/csharp/how-to/strings) ansehen. Alternativ dazu können Sie die Beispiele [als ZIP-Datei](https://github.com/dotnet/samples/raw/master/snippets/csharp/how-to/strings.zip) herunterladen.
 

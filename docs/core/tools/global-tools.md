@@ -1,141 +1,275 @@
 ---
-title: Globale .NET Core-Tools
-description: Eine Übersicht über globale .NET Core-Tools und die .NET Core-CLI-Befehle, die ihnen zur Verfügung stehen.
+title: .NET Core-Tools
+description: Informationen zum Installieren, Verwenden, Aktualisieren und Entfernen von .NET Core-Tools. In diesem Artikel werden globale, Toolpfad- und lokale Tools vorgestellt.
 author: KathleenDollard
-ms.date: 05/29/2018
-ms.openlocfilehash: 1531df48b7ca9c816b897d06e725ec375f6cae31
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.date: 02/12/2020
+ms.openlocfilehash: d8ee30df3fe063fd41a85072d145b1b5eec7d0d0
+ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76920490"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77543390"
 ---
-# <a name="net-core-global-tools-overview"></a>Übersicht über globale .NET Core-Tools
+# <a name="how-to-manage-net-core-tools"></a>Verwalten von .NET Core-Tools
 
-[!INCLUDE [topic-appliesto-net-core-21plus.md](../../../includes/topic-appliesto-net-core-21plus.md)]
+**Dieser Artikel gilt für:** ✔️ .NET Core 2.1 SDK und neuere Versionen
 
-Ein globales .NET Core-Tool ist ein spezielles NuGet-Paket, das eine Konsolenanwendung enthält. Ein globales Tool kann an einem benutzerdefinierten Speicherort oder einem Standardspeicherort auf ihrem Computer installiert werden, der in der Umgebungsvariable „PATH“ enthalten ist.
+Ein .NET Core-Tool ist ein spezielles NuGet-Paket, das eine Konsolenanwendung enthält. Ein Tool kann auf folgende Weisen auf dem Computer installiert werden:
 
-Wenn Sie ein globales .NET Core-Tool verwenden möchten:
+* Als globales Tool.
 
-* Erfahren Sie mehr über das Tool (in der Regel über eine Website oder GitHub-Seite).
-* Überprüfen Sie den Autor und die Statistiken auf der Startseite des Feeds (in der Regel NuGet.org).
-* Installieren Sie das Tool.
-* Rufen Sie das Tool auf.
-* Aktualisieren Sie das Tool.
-* Deinstallieren Sie das Tool.
+  Die Binärdateien für das Tool werden in einem Standardverzeichnis installiert, das der Umgebungsvariablen PATH hinzugefügt wird. Sie können das Tool aus einem beliebigen Verzeichnis auf dem Computer aufrufen, ohne seinen Speicherort anzugeben. Eine Version eines Tools wird für alle Verzeichnisse auf dem Computer verwendet.
+
+* Als globales Tool an einem benutzerdefinierten Speicherort (auch „Toolpfadtool“ genannt).
+
+  Die Binärdateien für das Tool werden an einem von Ihnen angegebenen Speicherort installiert. Sie können das Tool im Installationsverzeichnis aufrufen oder indem Sie das Verzeichnis mit dem Befehlsnamen angeben oder das Verzeichnis zur Umgebungsvariablen PATH hinzufügen. Eine Version eines Tools wird für alle Verzeichnisse auf dem Computer verwendet.
+
+* Als lokales Tool (ab .NET Core SDK 3.0).
+
+  Die Binärdateien des Tools werden in einem Standardverzeichnis installiert. Sie rufen das Tool im Installationsverzeichnis oder einem seiner Unterverzeichnisse auf. Verschiedene Verzeichnisse können unterschiedliche Versionen desselben Tools verwenden.
+  
+  Die .NET-CLI nutzt Manifestdateien, um nachzuverfolgen, welche Tools lokal in einem Verzeichnis installiert sind. Wenn die Manifestdatei im Stammverzeichnis eines Quellcoderepositorys gespeichert ist, kann ein Mitwirkender das Repository klonen und einen einzelnen .NET Core-CLI-Befehl aufrufen, mit dem alle in den Manifestdateien aufgeführten Tools installiert werden.
 
 > [!IMPORTANT]
-> Globale .NET Core-Tools werden in Ihrem Pfad angezeigt und mit voller Vertrauenswürdigkeit ausgeführt. Installieren Sie nur globale .NET Core-Tools von Autoren, denen Sie vertrauen.
+> .NET Core-Tools werden mit voller Vertrauenswürdigkeit ausgeführt. Installieren Sie .NET Core-Tools nur von Autoren, denen Sie vertrauen.
 
-## <a name="find-a-net-core-global-tool"></a>Finden eines globalen .NET Core-Tools
+## <a name="find-a-tool"></a>Suchen eines Tools
 
-Derzeit gibt es kein Suchfeature für globale Tools in der .NET Core-CLI. Im Folgenden finden Sie einige Empfehlungen zum Ermitteln der Tools:
+Derzeit bietet .NET Core keine Suchfunktion für Tools. Es folgen einige Möglichkeiten, Tools zu finden:
 
-* Sie können globale .NET Core-Tools auf [NuGet](https://www.nuget.org) finden. Allerdings können Sie auf der NuGet-Website nicht spezifisch nach globalen .NET Core-Tools suchen.
-* Empfehlungen für Tools finden Sie in Blogbeiträgen oder im GitHub-Repository [natemcmaster/dotnet-tools](https://github.com/natemcmaster/dotnet-tools).
-* Sie können sich den Quellcode für die vom ASP.NET-Team erstellten globalen Tools im GitHub-Repository [dotnet/aspnetcore](https://github.com/dotnet/aspnetcore/tree/master/src/Tools) ansehen.
+* Sehen Sie sich die Liste der Tools im GitHub-Repository [natemcmaster/dotnet-tools](https://github.com/natemcmaster/dotnet-tools) an.
+* Verwenden Sie [ToolGet](https://www.toolget.net/), um nach .NET-Tools zu suchen.
+* Sehen Sie sich den Quellcode der vom ASP.NET Core-Team im [GitHub-Repository dotnet/aspnetcore im Verzeichnis „Tools“](https://github.com/dotnet/aspnetcore/tree/master/src/Tools) erstellten Tools an.
 * Weitere Informationen zu Diagnosetools finden Sie unter [Globale .NET Core-dotnet-Diagnosetools](../diagnostics/index.md#net-core-dotnet-diagnostic-global-tools).
+* Durchsuchen Sie die [NuGet](https://www.nuget.org)-Website. Die NuGet-Website bietet jedoch noch keine Funktion, mit der Sie ausschließlich nach Toolpaketen suchen können.
 
 ## <a name="check-the-author-and-statistics"></a>Überprüfen des Autors und der Statistiken
 
-Da globale .NET Core-Tools mit voller Vertrauenswürdigkeit ausgeführt und in der Regel auf Ihrem Pfad installiert werden, können sie sehr nützlich sein. Laden Sie keine Tools von Personen herunter, denen Sie nicht vertrauen.
+Da .NET Core-Tools mit voller Vertrauenswürdigkeit ausgeführt und globale Tools der Umgebungsvariablen PATH hinzugefügt werden, können sie sehr leistungsfähig sein. Laden Sie keine Tools von Personen herunter, denen Sie nicht vertrauen.
 
 Wenn das Tool auf NuGet gehostet wird, können Sie den Autor und seine Statistiken überprüfen, indem Sie nach dem Tool suchen.
 
 ## <a name="install-a-global-tool"></a>Installieren eines globalen Tools
 
-Verwenden Sie den .NET Core-CLI-Befehl [dotnet tool install](dotnet-tool-install.md), um ein globales Tool zu installieren. Im folgenden Beispiel wird gezeigt, wie ein globales Tool am Standardspeicherort installiert wird:
+Um ein Tool als globales Tool zu installieren, verwenden Sie, wie im folgenden Beispiel gezeigt, mit [dotnet tool install](dotnet-tool-install.md) die Option `-g` oder `--global`:
 
 ```dotnetcli
 dotnet tool install -g dotnetsay
 ```
 
-Wenn das Tool nicht installiert werden kann, werden Fehlermeldungen angezeigt. Stellen Sie sicher, dass die erwarteten Feeds überprüft werden.
-
-Wenn Sie versuchen, eine Vorabversion oder eine spezifische Version des Tools zu installieren, können Sie die Versionsnummer im folgenden Format angeben:
-
-```dotnetcli
-dotnet tool install -g <package-name> --version <version-number>
-```
-
-Wenn die Installation erfolgreich abgeschlossen wurde, wird eine Meldung angezeigt, die den Befehl zum Aufrufen des Tools und die installierte Version ähnlich wie im folgenden Beispiel anzeigt:
+Die Ausgabe zeigt den zum Aufrufen des Tools verwendeten Befehl und die installierte Version, ähnlich wie im folgenden Beispiel:
 
 ```output
 You can invoke the tool using the following command: dotnetsay
-Tool 'dotnetsay' (version '2.0.0') was successfully installed.
+Tool 'dotnetsay' (version '2.1.4') was successfully installed.
 ```
 
-Globale Tools können im Standardverzeichnis oder an einem spezifischen Speicherort installiert werden. Die Standardverzeichnisse sind:
+Der Standardspeicherort der Binärdateien eines Tools hängt vom Betriebssystem ab:
 
 | Betriebssystem          | Pfad                          |
 |-------------|-------------------------------|
 | Linux/macOS | `$HOME/.dotnet/tools`         |
 | Windows     | `%USERPROFILE%\.dotnet\tools` |
 
-Diese Speicherorte werden dem Pfad des Benutzers hinzugefügt, wenn das SDK zum ersten Mal ausgeführt wird, damit dort installierte globale Tools direkt aufgerufen werden können.
+Dieser Speicherort wird beim ersten Ausführen des SDK dem Pfad des Benutzers hinzugefügt, sodass globale Tools in jedem beliebigen Verzeichnis aufgerufen werden können, ohne dass der Speicherort des Tools angegeben werden muss.
 
-Beachten Sie, dass die globalen Tools benutzerspezifisch gespeichert werden und nicht global auf dem Computer. Deshalb können Sie kein globales Tool installieren, das für alle Benutzer auf dem Computer verfügbar ist. Das Tool ist nur für jedes Benutzerprofil verfügbar, auf denen das Tool installiert wurde.
+Der Zugriff auf Tools ist benutzerspezifisch und gilt nicht global auf dem Computer. Ein globales Tool ist nur für den Benutzer verfügbar, der das Tool installiert hat.
 
-Globale Tools können auch in einem spezifischen Verzeichnis installiert werden. Wenn sie in einem spezifischen Verzeichnis installiert werden, muss der Benutzer sicherstellen, dass der Befehl verfügbar ist, indem das Verzeichnis in den Pfad eingefügt, der Befehl mit dem angegebenen Verzeichnis aufgerufen oder das Tool aus dem angegebenen Verzeichnis aufgerufen wird.
-In diesem Fall fügt die .NET Core-CLI diesen Speicherort nicht automatisch der Umgebungsvariable „PATH“ hinzu.
+### <a name="install-a-global-tool-in-a-custom-location"></a>Installieren eines globalen Tools an einem benutzerdefinierten Speicherort
 
-## <a name="use-the-tool"></a>Verwenden des Tools
+Um ein Tool als globales Tool an einem benutzerdefinierten Speicherort zu installieren, verwenden Sie, wie in den folgenden Beispielen gezeigt, mit [dotnet tool install](dotnet-tool-install.md) die Option `--tool-path`.
 
-Nachdem das Tool installiert wurde, können Sie es mit dem entsprechenden Befehl aufrufen. Beachten Sie, dass der Befehl möglicherweise nicht mit dem Paketnamen übereinstimmt.
+Unter Windows:
 
-Wenn der Befehl `dotnetsay` ist, rufen Sie ihn wie folgt auf:
+```dotnetcli
+dotnet tool install dotnetsay --tool-path c:\dotnet-tools
+```
+
+Unter Linux oder macOS:
+
+```dotnetcli
+dotnet tool install dotnetsay --tool-path ~/bin
+```
+
+Das .NET Core SDK fügt diesen Speicherort nicht automatisch der Umgebungsvariablen PATH hinzu. Zum [Aufrufen eines Toolpfadtools](#invoke-a-tool-path-tool) müssen Sie sicherstellen, dass der Befehl verfügbar ist, indem Sie eine der folgenden Methoden verwenden:
+
+* Fügen Sie das Installationsverzeichnis der Umgebungsvariablen PATH hinzu.
+* Geben Sie den vollständigen Pfad zum Tool an, wenn Sie es aufrufen.
+* Rufen das Tool im Installationsverzeichnis auf.
+
+## <a name="install-a-local-tool"></a>Installieren eines lokalen Tools
+
+**Gilt ab .NET Core 3.0 SDK.**
+
+Um ein Tool nur für den lokalen Zugriff (für das aktuelle Verzeichnis und Unterverzeichnisse) zu installieren, muss es der Manifestdatei des Tools hinzugefügt werden. Führen Sie den Befehl `dotnet new tool-manifest` aus, um eine Manifestdatei für das Tool zu erstellen:
+
+```dotnetcli
+dotnet new tool-manifest
+```
+
+Mit diesem Befehl wird im Verzeichnis *.config* eine Manifestdatei mit dem Namen *dotnet-tools.json* erstellt. Um der Manifestdatei ein lokales Tool hinzuzufügen, verwenden Sie den Befehl [dotnet tool install](dotnet-tool-install.md) **ohne** die Optionen `--global` und `--tool-path`, wie im folgenden Beispiel gezeigt:
+
+```dotnetcli
+dotnet tool install dotnetsay
+```
+
+Die Befehlsausgabe zeigt, in welcher Manifestdatei sich das neu installierte Tool befindet, ähnlich wie im folgenden Beispiel:
+
+```console
+You can invoke the tool from this directory using the following command:
+dotnet tool run dotnetsay
+Tool 'dotnetsay' (version '2.1.4') was successfully installed.
+Entry is added to the manifest file /home/name/botsay/.config/dotnet-tools.json.
+```
+
+Das folgende Beispiel zeigt eine Manifestdatei, in der zwei lokale Tools installiert sind:
+
+```json
+{
+  "version": 1,
+  "isRoot": true,
+  "tools": {
+    "botsay": {
+      "version": "1.0.0",
+      "commands": [
+        "botsay"
+      ]
+    },
+    "dotnetsay": {
+      "version": "2.1.3",
+      "commands": [
+        "dotnetsay"
+      ]
+    }
+  }
+}
+```
+
+In der Regel fügen Sie ein lokales Tool zum Stammverzeichnis des Repositorys hinzu. Nach dem Einchecken der Manifestdatei im Repository erhalten Entwickler, die Code aus dem Repository auschecken, die neueste Manifestdatei. Um alle in der Manifestdatei aufgeführten Tools zu installieren, führen sie den Befehl `dotnet tool restore` aus:
+
+```dotnetcli
+dotnet tool restore
+```
+
+Die Ausgabe gibt an, welche Tools wiederhergestellt wurden:
+
+```console
+Tool 'botsay' (version '1.0.0') was restored. Available commands: botsay
+Tool 'dotnetsay' (version '2.1.3') was restored. Available commands: dotnetsay
+Restore was successful.
+```
+
+## <a name="install-a-specific-tool-version"></a>Installieren einer bestimmten Toolversion
+
+Um eine Vorab- oder bestimmte Version eines Tools zu installieren, geben Sie die Versionsnummer mit der Option `--version` an, wie im folgenden Beispiel gezeigt:
+
+```dotnetcli
+dotnet tool install dotnetsay --version 2.1.3
+```
+
+## <a name="use-a-tool"></a>Verwenden eines Tools
+
+Der Befehl zum Aufrufen eines Tools kann sich vom Namen des Pakets, das Sie installieren, unterscheiden. Um alle derzeit für den aktuellen Benutzer auf dem Computer installierten Tools anzuzeigen, führen Sie den Befehl [dotnet tool list](dotnet-tool-list.md) aus:
+
+```dotnetcli
+dotnet tool list
+```
+
+Die Ausgabe zeigt die Version und den Befehl jedes Tools, ähnlich wie im folgenden Beispiel:
+
+```console
+Package Id      Version      Commands       Manifest
+-------------------------------------------------------------------------------------------
+botsay          1.0.0        botsay         /home/name/repository/.config/dotnet-tools.json
+dotnetsay       2.1.3        dotnetsay      /home/name/repository/.config/dotnet-tools.json
+```
+
+Wie in diesem Beispiel gezeigt, enthält die Liste lokale Tools. Zum Anzeigen globaler Tools verwenden Sie die Option `--global`. Zum Anzeigen von Toolpfadtools wählen Sie die Option `--tool-path`.
+
+### <a name="invoke-a-global-tool"></a>Aufrufen eines globalen Tools
+
+Verwenden Sie für globale Tools den Tool-Befehl eigenständig. Wenn der Befehl beispielsweise `dotnetsay` oder `dotnet-doc` lautet, verwenden Sie Folgendes, um den Befehl aufzurufen:
 
 ```console
 dotnetsay
+dotnet-doc
 ```
 
-Wenn der Autor des Tools das Tool im Kontext der `dotnet`-Eingabeaufforderung anzeigen wollte, ist es möglicherweise so geschrieben, dass Sie es als `dotnet <command>` aufrufen, zum Beispiel:
+Wenn der Befehl mit dem Präfix `dotnet-` beginnt, können Sie das Tool alternativ auch mit dem Befehl `dotnet` ohne das Präfix des tool-Befehls aufrufen. Wenn der Befehl z. B. `dotnet-doc` lautet, wird das Tool mit dem folgenden Befehl aufgerufen:
 
 ```dotnetcli
 dotnet doc
 ```
 
-Sie können herausfinden, welche Tools in einem installierten Paket globaler Tools enthalten sind, indem Sie den Befehl [dotnet tool list](dotnet-tool-list.md) verwenden.
+Im folgenden Szenario können Sie jedoch nicht den Befehl `dotnet` verwenden, um ein globales Tool aufzurufen:
 
-Darüber hinaus können Sie sich die Anweisungen auf der Website zum Tool ansehen oder einen der folgenden Befehle eingeben:
+* Für ein globales Tool und ein lokales Tool gilt der gleiche Befehl mit dem Präfix `dotnet-`.
+* Sie möchten das globale Tool in einem Verzeichnis aufrufen, das im Geltungsbereich des lokalen Tools liegt.
 
-```console
-<command> --help
-dotnet <command> --help
+In diesem Fall rufen `dotnet doc` und `dotnet dotnet-doc` das lokale Tool auf. Um das globale Tool aufzurufen, verwenden Sie den Befehl eigenständig:
+
+```dotnetcli
+dotnet-doc
 ```
 
-## <a name="other-cli-commands"></a>Andere CLI-Befehle
+### <a name="invoke-a-tool-path-tool"></a>Aufrufen eines Toolpfadtools
 
-Das .NET Core SDK enthält andere Befehle, die globale .NET Core-Tools unterstützen. Verwenden Sie einen beliebigen `dotnet tool`-Befehl mit einer der folgenden Optionen:
+Um ein globales Tool aufzurufen, das mit der Option `tool-path` installiert wurde, stellen Sie sicher, dass der Befehl verfügbar ist, was [weiter oben in diesem Artikel](#install-a-global-tool-in-a-custom-location) erläutert wurde.
 
-* `--global` oder `-g` gibt an, dass der Befehl für benutzerweite globale Tools anwendbar ist.
-* `--tool-path` legt einen benutzerdefinierten Speicherort für globale Tools fest.
+### <a name="invoke-a-local-tool"></a>Aufrufen eines lokalen Tools
 
-So finden Sie heraus, welche Befehle für globale Tools verfügbar sind:
+Um ein lokales Tool aufzurufen, müssen Sie im Installationsverzeichnis den Befehl `dotnet` ausführen. Sie können die Langform (`dotnet tool run <COMMAND_NAME>`) oder Kurzform (`dotnet <COMMAND_NAME>`) verwenden, wie in den folgenden Beispielen gezeigt:
+
+```dotnetcli
+dotnet tool run dotnetsay
+dotnet dotnetsay
+```
+
+Wenn dem Befehl das Präfix `dotnet-` vorangestellt ist, können Sie das Präfix beim Aufruf des Tools einschließen oder weglassen. Wenn der Befehl z. B. `dotnet-doc` lautet, ruft eines der folgenden Beispiele das lokale Tool auf:
+
+```dotnetcli
+dotnet tool run dotnet-doc
+dotnet dotnet-doc
+dotnet doc
+```
+
+## <a name="update-a-tool"></a>Aktualisieren eines Tools
+
+Das Aktualisieren eines Tools umfasst das Deinstallieren und Neuinstallieren mit der neuesten stabilen Version. Verwenden Sie zum Aktualisieren eines Tools den Befehl [dotnet tool update](dotnet-tool-update.md) mit derselben Option, die Sie auch zur Installation des Tools verwendet haben:
+
+```dotnetcli
+dotnet tool update --global <packagename>
+dotnet tool update --tool-path <packagename>
+dotnet tool update <packagename>
+```
+
+Bei einem lokalen Tool findet das SDK die erste Manifestdatei, die die Paket-ID enthält, indem es im aktuellen Verzeichnis und den übergeordneten Verzeichnissen eine Suche durchführt. Wenn es in keiner Manifestdatei keine solche Paket-ID gibt, fügt das SDK der nächstgelegenen Manifestdatei einen neuen Eintrag hinzu.
+
+## <a name="uninstall-a-tool"></a>Deinstallieren eines Tools
+
+Entfernen Sie ein Tool mit dem Befehl [dotnet tool uninstall](dotnet-tool-uninstall.md) mit der gleichen Option, die Sie zur Installation des Tools verwendet haben:
+
+```dotnetcli
+dotnet tool uninstall --global <packagename>
+dotnet tool uninstall --tool-path<packagename>
+dotnet tool uninstall <packagename>
+```
+
+Bei einem lokalen Tool findet das SDK die erste Manifestdatei, die die Paket-ID enthält, indem es im aktuellen Verzeichnis und den übergeordneten Verzeichnissen eine Suche durchführt.
+
+## <a name="get-help-and-troubleshoot"></a>Hilfe und Problembehandlung
+
+Zum Abrufen einer Liste der verfügbaren `dotnet tool`-Befehle geben Sie den folgenden Befehl ein:
 
 ```dotnetcli
 dotnet tool --help
 ```
 
-Das Aktualisieren eines globalen Tools umfasst das Deinstallieren und Neuinstallieren mit der neuesten stabilen Version. Verwenden Sie den Befehl [dotnet tool update](dotnet-tool-update.md), um ein globales Tool zu aktualisieren:
+Um Anweisungen zur Nutzung des Tools zu erhalten, geben Sie einen der folgenden Befehle ein, oder besuchen Sie die Website des Tools:
 
 ```dotnetcli
-dotnet tool update -g <packagename>
+<command> --help
+dotnet <command> --help
 ```
 
-Entfernen Sie ein globales Tool mit [dotnet tool uninstall](dotnet-tool-uninstall.md):
-
-```dotnetcli
-dotnet tool uninstall -g <packagename>
-```
-
-Verwenden Sie den Befehl [dotnet tool list](dotnet-tool-list.md), um alle derzeit auf dem Computer installierten globalen Tools mit ihren Versionen und Befehlen anzuzeigen:
-
-```dotnetcli
-dotnet tool list -g
-```
-
-## <a name="see-also"></a>Siehe auch
-
-* [Behandlung von Problemen bei der Nutzung von .NET Core-Tools](troubleshoot-usage-issues.md)
+Wenn ein Tool nicht installiert oder ausgeführt werden kann, finden Sie unter [Behandlung von Problemen bei der Nutzung von .NET Core-Tools](troubleshoot-usage-issues.md) weitere Informationen.

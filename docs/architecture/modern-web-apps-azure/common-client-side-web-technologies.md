@@ -3,13 +3,13 @@ title: Allgemeine clientseitige Webtechnologien
 description: Entwerfen moderner Webanwendungen mit ASP.NET Core und Azure | Allgemeine clientseitige Webtechnologien
 author: ardalis
 ms.author: wiwagn
-ms.date: 01/30/2019
-ms.openlocfilehash: 7dd3765b1b71d8c1ef22d714a00be3e171fab523
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.date: 12/04/2019
+ms.openlocfilehash: 2809c8539b42e8e2250039dceed1389b3cbdcd8a
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2020
-ms.locfileid: "77093122"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77449373"
 ---
 # <a name="common-client-side-web-technologies"></a>Allgemeine clientseitige Webtechnologien
 
@@ -18,11 +18,14 @@ ms.locfileid: "77093122"
 
 ASP.NET Core-Anwendungen sind Webanwendungen. Sie bauen normalerweise auf clientseitigen Webtechnologien wie HTML, CSS oder JavaScript auf. Indem der Inhalt der Seite (die HTML) vom Layout und Format (das CSS) und dessen Verhalten (über JavaScript) getrennt wird, können komplexe Web-Apps dem Prinzip der Separation of Concerns folgen. Die Struktur, das Design und das Verhalten der Anwendung können so unkomplizierter angepasst werden, da sie nicht miteinander verknüpft sind.
 
-Während HTML und CSS verhältnismäßig stabil sind, entwickelt sich JavaScript bezüglich Anwendungsframeworks und Dienstprogrammen, die von Entwicklern zum Erstellen webbasierter Anwendungen verwendet werden, in Rekordgeschwindigkeit weiter. In diesem Artikel erfahren Sie, wie JavaScript von Webentwicklern verwendet wird. Darüber hinaus wird ein allgemeiner Überblick über die clientseitigen Bibliotheken „Angular“ und „React“ gegeben.
+Während HTML und CSS verhältnismäßig stabil sind, entwickelt sich JavaScript bezüglich Anwendungsframeworks und Dienstprogrammen, die von Entwicklern zum Erstellen webbasierter Anwendungen verwendet werden, in Rekordgeschwindigkeit weiter. In diesem Artikel erfahren Sie, wie JavaScript von Webentwicklern verwendet wird. Darüber finden Sie einen allgemeinen Überblick über die clientseitigen Bibliotheken Angular und React.
+
+> [!NOTE]
+> Blazor bietet eine Alternative zu JavaScript-Frameworks für die Erstellung komplexer, interaktiver Clientbenutzeroberflächen. Clientseitige Blazor-Unterstützung ist noch immer in der Vorschauphase, weshalb sie in diesem Kapitel nicht berücksichtigt wird.
 
 ## <a name="html"></a>HTML
 
-HTML (Hypertext Markup Language) ist die Standardmarkupsprache zum Erstellen von Webseiten und -anwendungen. Ihre Bestandteile bilden die Grundlage der Seiten und stehen für formatierten Text, Bilder, Formeingaben und andere Strukturen. Wenn ein Browser eine Anforderung an eine URL durchführt, egal ob es sich dabei um das Abrufen einer Seite oder einer Anwendung handelt, ist die erste Rückgabe ein HTML-Dokument. Dieses HTML-Dokument kann auf zusätzliche Informationen zu seinem Aussehen und Layout (in Form von CSS) oder Verhalten (in Form von JavaScript) verweisen oder diese beinhalten.
+HTML ist die standardmäßige Markupsprache zum Erstellen von Webseiten und -anwendungen. Ihre Bestandteile bilden die Grundlage der Seiten und stehen für formatierten Text, Bilder, Formeingaben und andere Strukturen. Wenn ein Browser eine Anforderung an eine URL durchführt, egal ob es sich dabei um das Abrufen einer Seite oder einer Anwendung handelt, ist die erste Rückgabe ein HTML-Dokument. Dieses HTML-Dokument kann auf zusätzliche Informationen zu seinem Aussehen und Layout (in Form von CSS) oder Verhalten (in Form von JavaScript) verweisen oder diese beinhalten.
 
 ## <a name="css"></a>CSS
 
@@ -36,13 +39,13 @@ Es wird empfohlen, Formate in getrennten Stylesheetdateien zu speichern und das 
 
 ### <a name="css-preprocessors"></a>CSS-Präprozessoren
 
-CSS-Stylesheets unterstützen keine bedingte Logik, Variablen oder andere Programmiersprachenfeatures. Deshalb beinhalten große Stylesheets oft viele Wiederholungen, da die gleiche Farbe, Schriftart oder eine andere Einstellung auf verschiedene Varianten von HTML-Elementen und CSS-Klassen angewendet wird. CSS-Präprozessoren tragen dazu bei, dass Ihre Stylesheets dem [DRY-Prinzip](https://deviq.com/don-t-repeat-yourself/) treu bleiben, indem sie Unterstützung für Variablen und Logik hinzufügen.
+CSS-Stylesheets unterstützen keine bedingte Logik, Variablen oder andere Programmiersprachenfeatures. Deshalb enthalten große Stylesheets oft Wiederholungen, da die gleiche Farbe, Schriftart oder eine andere Einstellung auf verschiedene Varianten von HTML-Elementen und CSS-Klassen angewendet wird. CSS-Präprozessoren tragen dazu bei, dass Ihre Stylesheets dem [DRY-Prinzip](https://deviq.com/don-t-repeat-yourself/) treu bleiben, indem sie Unterstützung für Variablen und Logik hinzufügen.
 
 Die bekanntesten CSS-Präprozessoren sind Sass und LESS. Beide erweitern CSS und stellen Rückwärtskompatibilität bereit. Das bedeutet, dass eine CSS-Datei eine gültige Sass- oder LESS-Datei ist. Sass basiert auf Ruby und LESS auf JavaScript. Beide werden normalerweise im Rahmen Ihres lokalen Entwicklungsprozesses ausgeführt. Beide verfügen über Befehlszeilentools. Visual Studio verfügt über integrierte Unterstützung für ihre Ausführung mithilfe von Gulp- und Grunt-Tasks.
 
 ## <a name="javascript"></a>JavaScript
 
-JavaScript ist eine dynamische, interpretierte Programmiersprache, die in der ECMAScript-Sprachspezifikation standardisiert wurde. JavaScript ist die Programmiersprache des Internets. Ähnlich wie CSS kann JavaScript als Attribute innerhalb von HTML-Elementen, als Skriptblöcke auf einer Seite oder in separaten Dateien definiert werden. Genauso wie bei CSS wird auch hier empfohlen, dass Sie JavaScript in separaten Dateien strukturieren, sodass es so weit wie möglich von der HTML getrennt bleibt, die sich auf Webseiten oder in Anwendungsansichten befindet.
+JavaScript ist eine dynamische, interpretierte Programmiersprache, die in der ECMAScript-Sprachspezifikation standardisiert wurde. JavaScript ist die Programmiersprache des Internets. Ähnlich wie CSS kann JavaScript als Attribute innerhalb von HTML-Elementen, als Skriptblöcke auf einer Seite oder in separaten Dateien definiert werden. Genau wie bei CSS wird auch hier empfohlen, dass Sie JavaScript in separaten Dateien strukturieren, sodass es so weit wie möglich von der HTML getrennt bleibt, die sich auf Webseiten oder in Anwendungsansichten befindet.
 
 Wenn Sie JavaScript in Ihrer Webanwendung verwenden, müssen Sie zumeist folgende Aufgaben ausführen:
 
@@ -79,7 +82,7 @@ Die Datenbindung ist ein gutes Beispiel dafür. In jQuery ist normalerweise nur 
 
 ### <a name="angular-spas"></a>Angular-SPAs
 
-AngularJS ist schnell zu einem der beliebtesten JavaScript-Frameworks der Welt geworden. In Angular 2 hat das Team das Framework komplett neu gestaltet (mit [TypeScript](https://www.typescriptlang.org/)). Seitdem ist der Name nicht mehr AngularJS, sondern nur noch Angular. Angular – Version 4 ist die aktuelle Version – ist weiterhin ein widerstandsfähiges Framework zum Erstellen von Single-Page-Webanwendungen.
+Angular bleibt weltweit eines der beliebtesten JavaScript-Frameworks. Ab Angular 2 hat das Team das Framework (mithilfe von [TypeScript](https://www.typescriptlang.org/)) komplett neu gestaltet und den ursprünglichen Namen AngularJS in Angular geändert. Das mehrere Jahre alte, jetzt neu gestaltete Angular ist weiterhin ein solides Framework für die Erstellung von Single-Page-Webanwendungen.
 
 Angular-Anwendungen setzen sich aus Komponenten zusammen. Komponenten vereinen HTML-Vorlagen mit besonderen Objekten und steuern einen Teil der Seite. Hier sehen Sie eine einfache Komponente aus der Angular-Dokumentation:
 
@@ -104,7 +107,7 @@ Microsoft hat die Beispielanwendung [eShopOnContainers](https://aka.ms/Microserv
 
 ### <a name="react"></a>React
 
-Im Gegensatz zu Angular, das eine vollständige Implementierung des MVC-Musters bereitstellt, befasst React sich nur mit Ansichten. React ist kein Framework, sondern lediglich eine Bibliothek, sodass Sie zum Erstellen einer SPA zusätzliche Bibliotheken benötigen.
+Im Gegensatz zu Angular, das eine vollständige Implementierung des MVC-Musters bereitstellt, befasst React sich nur mit Ansichten. React ist kein Framework, sondern lediglich eine Bibliothek, sodass Sie zum Erstellen einer SPA zusätzliche Bibliotheken benötigen. Es gibt eine Reihe von Bibliotheken, die für die Verwendung mit React entwickelt wurden, um komplexe Single-Page-Webanwendungen zu erstellen.
 
 Eines der wichtigsten Features von React ist das virtuelle DOM. Das virtuelle DOM in React hat mehrere Vorteile, u.a. bei der Leistung (das virtuelle DOM optimiert, welche Teile des DOM tatsächlich aktualisiert werden müssen) und bei der Testbarkeit (es wird kein Browser zum Testen von React und dessen Interaktionen mit seinem virtuellen DOM benötigt).
 
@@ -121,6 +124,40 @@ Außerdem arbeitet React auf ungewöhnliche Weise mit HTML. Statt einer strikten
 Wenn Sie bereits mit JavaScript vertraut sind, sollte das Erlernen von React unkompliziert sein. Sie müssen sich bei Weitem nicht so viel Wissen oder besondere Syntax aneignen wie bei Angular oder anderen beliebten Bibliotheken.
 
 Da es sich bei React nicht um ein vollständiges Framework handelt, sollten sich andere Bibliotheken um Routing, Web-API-Aufrufe und die Abhängigkeitsverwaltung kümmern. Der Vorteil besteht darin, dass Sie sich so die beste Bibliothek für jede dieser Aufgaben aussuchen können. Der Nachteil besteht allerdings darin, dass sie sich aktiv mit diesen Entscheidungen auseinandersetzen und sicherstellen müssen, dass die ausgewählten Bibliotheken gut miteinander funktionieren. Wenn Sie einen guten Ausgangspunkt haben möchten, können Sie ein Starter Kit wie React Slingshot verwenden, in dem mehrere kompatible Bibliotheken gemeinsam mit React vorverpackt sind.
+
+### <a name="vue"></a>Vue
+
+Im Leitfaden für die ersten Schritte heißt es: „Vue ist ein fortschrittliches Framework für die Erstellung von Benutzeroberflächen. Im Gegensatz zu anderen monolithischen Frameworks ist Vue von Grund auf so konzipiert, dass es schrittweise angepasst werden kann. Die Kernbibliothek konzentriert sich nur auf die Ansichtsschicht und ist leicht zu übernehmen und in andere Bibliotheken oder bestehende Projekte zu integrieren. Auf der anderen Seite ist Vue perfekt in der Lage, anspruchsvolle Single-Page-Webanwendungen zu ermöglichen, wenn es in Kombination mit modernen Tools und unterstützenden Bibliotheken eingesetzt wird.“
+
+Die ersten Schritte mit Vue erfordern lediglich die Einbindung seines Skripts in eine HTML-Datei:
+
+```html
+<!-- development version, includes helpful console warnings -->
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+```
+
+Bei hinzugefügtem Framework sind Sie anschließend in der Lage, Daten mithilfe der einfachen Vorlagensyntax von Vue deklarativ für das DOM zu rendern:
+
+```html
+<div id="app">
+  {{ message }}
+</div>
+```
+
+und dann das folgende Skript hinzuzufügen:
+
+```js
+var app = new Vue({
+  el: '#app',
+  data: {
+    message: 'Hello Vue!'
+  }
+})
+```
+
+Dies reicht aus, um „Hello Vue!“ auf der Seite zu rendern. Beachten Sie jedoch, dass Vue die Nachricht nicht bloß einmal für das Div-Element rendert. Es unterstützt die Datenbindung und dynamische Aktualisierungen dergestalt, dass bei einer Änderung des Werts von `message` der Wert in `<div>` sofort aktualisiert wird, um ihn widerzuspiegeln.
+
+Freilich kratzt dies nur an der Oberfläche dessen, was Vue zu leisten vermag. Das Framework hat in den letzten Jahren sehr viel an Popularität gewonnen und eine große Community. Es gibt eine [große und wachsende Liste von unterstützenden Komponenten und Bibliotheken](https://github.com/vuejs/awesome-vue#redux), die mit Vue zusammenarbeiten, um das Framework außerdem zu erweitern. Wenn Sie Ihrer Webanwendung clientseitiges Verhalten hinzufügen möchten oder die Einrichtung einer vollständigen SPA in Betracht ziehen, lohnt sich ein Blick auf Vue.
 
 ### <a name="choosing-a-spa-framework"></a>Entscheidung für ein SPA-Framework
 
@@ -157,13 +194,13 @@ JavaScript-Frameworks entwickeln sich in Rekordgeschwindigkeit weiter. Entscheid
 > - **Angular**  
 > <https://angular.io/>
 > - **React**  
-> <https://facebook.github.io/react/>
-> - **React Slingshot**  
-> <https://github.com/coryhouse/react-slingshot>
-> - **Vergleich von React und Angular 2**  
-> <https://www.codementor.io/codementorteam/react-vs-angular-2-comparison-beginners-guide-lvz5710ha>
-> - **5 Best JavaScript Frameworks of 2017 (Die 5 besten JavaScript-Frameworks 2017)**  
-> <https://hackernoon.com/5-best-javascript-frameworks-in-2017-7a63b3870282>
+> <https://reactjs.org/>
+> - **Vue**  
+> <https://vuejs.org/>
+> - **Angular vs React vs Vue: Which Framework to Choose in 2020**
+> <https://www.codeinwp.com/blog/angular-vs-vue-vs-react/> (Vergleich von Angular, React und Vue: Wahlmöglichkeiten bei Frameworks im Jahr 2020)
+> - **The Top JavaScript Frameworks for Front-End Development in 2020** (Die besten JavaScript-Frameworks für die Front-End-Entwicklung)  
+> <https://www.freecodecamp.org/news/complete-guide-for-front-end-developers-javascript-frameworks-2019/>
 
 >[!div class="step-by-step"]
 >[Zurück](common-web-application-architectures.md)

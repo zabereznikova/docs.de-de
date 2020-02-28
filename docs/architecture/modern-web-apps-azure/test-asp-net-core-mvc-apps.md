@@ -3,13 +3,13 @@ title: Testen von ASP.NET Core MVC-Apps
 description: Entwerfen moderner Webanwendungen mit ASP.NET Core und Azure | Testen von ASP.NET Core MVC-Apps
 author: ardalis
 ms.author: wiwagn
-ms.date: 01/30/2019
-ms.openlocfilehash: 5f63e350e2f1ba8699bb002a54492cbf9501948e
-ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
+ms.date: 12/04/2019
+ms.openlocfilehash: 164e820ffa6030b3dcb9180d56e57ce39bb03143
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/02/2020
-ms.locfileid: "76965775"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503934"
 ---
 # <a name="test-aspnet-core-mvc-apps"></a>Testen von ASP.NET Core MVC-Apps
 
@@ -70,7 +70,7 @@ Eine gängige Methode ist, die Anwendungsprojekte in einem SRC-Ordner und die Te
 
 **Abbildung 9-2:** Organisieren von Tests in Ihrer Projektmappe
 
-Sie können das Testframework verwenden, das Sie bevorzugen. Das xUnit-Framework funktioniert gut und wird für alle Tests für ASP.NET Core und EF Core verwendet. Mit der in Abbildung 9–3 gezeigten Vorlage können Sie ein xUnit-Testprojekt in Visual Studio oder über die CLI mithilfe des Befehls „dotnet new xunit“ hinzufügen.
+Sie können das Testframework verwenden, das Sie bevorzugen. Das xUnit-Framework funktioniert gut und wird für alle Tests für ASP.NET Core und EF Core verwendet. Mit der in Abbildung 9.3 gezeigten Vorlage können Sie ein xUnit-Testprojekt in Visual Studio oder über die CLI mithilfe des Befehls `dotnet new xunit` hinzufügen.
 
 ![Hinzufügen eines xUnit-Testprojekts in Visual Studio](./media/image9-3.png)
 
@@ -106,7 +106,7 @@ Wenn viele Methoden (d. h. auch viele Testklassen) in einer Anwendungsklasse ge
 
 ## <a name="unit-testing-aspnet-core-apps"></a>Komponententests für ASP.NET Core-Apps
 
-In einer gut entworfenen ASP.NET Core-Anwendung ist der Großteil der Komplexitäts- und Geschäftslogik in Geschäftselementen und einer Vielzahl von Diensten gekapselt. Die ASP.NET Core MVC-App selbst sollte mitsamt ihrer Controller, Filter, ViewModels und Ansichten nur wenige Komponententests benötigen. Viele der Funktionen einer bestimmten Aktion befinden sich außerhalb der Aktionsmethode. Ob das Routing oder die globale Fehlerbehandlung ordnungsgemäß funktioniert, kann mit einem Komponententest nicht effektiv geprüft werden. Ebenso können alle Filter, einschließlich der Modellvalidierung und die Authentifizierung sowie die Autorisierungsfilter nicht mit Komponententests geprüft werden. Ohne diese Quellen für Verhalten sollten die meisten Aktionsmethoden unbedeutend klein sein und das meiste Ihrer Arbeit an Dienste delegieren, die unabhängig vom Controller geprüft werden, der sie verwendet.
+In einer gut entworfenen ASP.NET Core-Anwendung ist der Großteil der Komplexitäts- und Geschäftslogik in Geschäftselementen und einer Vielzahl von Diensten gekapselt. Die ASP.NET Core MVC-App selbst sollte mitsamt ihrer Controller, Filter, ViewModels und Ansichten nur wenige Komponententests benötigen. Viele der Funktionen einer bestimmten Aktion befinden sich außerhalb der Aktionsmethode. Ob das Routing oder die globale Fehlerbehandlung ordnungsgemäß funktioniert, kann mit einem Komponententest nicht effektiv geprüft werden. Ebenso können alle Filter, einschließlich der Modellvalidierung und die Authentifizierung sowie die Autorisierungsfilter nicht mit Komponententests geprüft werden, die auf die Aktionsmethode eines Controllers ausgerichtet sind. Ohne diese Quellen für Verhalten sollten die meisten Aktionsmethoden unbedeutend klein sein und das meiste Ihrer Arbeit an Dienste delegieren, die unabhängig vom Controller geprüft werden, der sie verwendet.
 
 In manchen Fällen müssen Sie Ihren Code umgestalten, um einen Komponententest durchführen zu können. Dies umfasst häufig das Identifizieren von Abstraktionen und die Verwendung von Abhängigkeitsinjektionen, um auf den Code zuzugreifen, den Sie testen möchten, anstatt direkt auf die Infrastruktur zu codieren. Ziehen Sie zum Beispiel die folgende einfache Aktionsmethode zum Anzeigen von Bildern in Betracht:
 
@@ -153,7 +153,7 @@ Die meisten Integrationstests in Ihren ASP.NET Core-Apps sollten Testdienste und
 
 ## <a name="functional-testing-aspnet-core-apps"></a>Funktionstests für ASP.NET Core-Apps
 
-Die `TestServer`-Klasse macht das Schreiben von Funktionstests für ASP.NET Core-Anwendungen relativ einfach. Verwenden Sie einen `WebHostBuilder`, entweder direkt (wie Sie normalerweise für Ihre Anwendung vorgehen) oder mit dem `WebApplicationFactory`-Typ (verfügbar seit Version 2.1), um einen `TestServer` zu konfigurieren. Versuchen Sie, einen Testhost zu verwenden, der dem Produktionshost so ähnlich wie möglich ist, damit das Verhalten der Tests dem Verhalten der App in der Produktion ähnelt. Die `WebApplicationFactory`-Klasse ist hilfreich für die ContentRoot-Konfiguration der TestServer-Klasse, die von ASP.NET Core verwendet wird, um statische Ressourcen wie Ansichten zu finden.
+Die `TestServer`-Klasse macht das Schreiben von Funktionstests für ASP.NET Core-Anwendungen relativ einfach. Sie konfigurieren einen `TestServer` mit `WebHostBuilder` (oder `HostBuilder`) direkt (wie Sie es normalerweise für Ihre Anwendung tun) oder mit dem Typ `WebApplicationFactory` (verfügbar seit Version 2.1). Sie sollten versuchen, einen Testhost zu verwenden, der dem Produktionshost so ähnlich wie möglich ist, damit das Verhalten der Tests dem Verhalten der App in der Produktion ähnelt. Die `WebApplicationFactory`-Klasse ist hilfreich für die ContentRoot-Konfiguration der TestServer-Klasse, die von ASP.NET Core verwendet wird, um statische Ressourcen wie Ansichten zu finden.
 
 Sie können einfache Funktionstests erstellen, indem Sie eine Testklasse erstellen, die IClassFixture\<WebApplicationFactory\<TEntry>> implementiert, wobei es sich bei „TEntry“ um die Startklasse Ihrer Webanwendung handelt. Mit diesen Vorkehrungen kann Ihre Testfixture einen Client mithilfe der CreateClient-Methode der Zuordnungsinstanz erstellen:
 
@@ -175,6 +175,7 @@ In vielen Fällen führen Sie zusätzliche Konfigurationen für Ihre Website dur
 
 ```cs
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc.Testing;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.eShopWeb.Infrastructure.Data;
@@ -184,32 +185,35 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using System;
 
-namespace Microsoft.eShopWeb.FunctionalTests.Web.Controllers
+namespace Microsoft.eShopWeb.FunctionalTests.Web
 {
-    public class CustomWebApplicationFactory<TStartup>
-    : WebApplicationFactory<Startup>
+    public class WebTestFixture : WebApplicationFactory<Startup>
     {
         protected override void ConfigureWebHost(IWebHostBuilder builder)
         {
+            builder.UseEnvironment("Testing");
+
             builder.ConfigureServices(services =>
             {
+                 services.AddEntityFrameworkInMemoryDatabase();
+
                 // Create a new service provider.
-                var serviceProvider = new ServiceCollection()
+                var provider = services
                     .AddEntityFrameworkInMemoryDatabase()
                     .BuildServiceProvider();
 
-                // Add a database context (ApplicationDbContext) using an in-memory
+                // Add a database context (ApplicationDbContext) using an in-memory 
                 // database for testing.
                 services.AddDbContext<CatalogContext>(options =>
                 {
                     options.UseInMemoryDatabase("InMemoryDbForTesting");
-                    options.UseInternalServiceProvider(serviceProvider);
+                    options.UseInternalServiceProvider(provider);
                 });
 
                 services.AddDbContext<AppIdentityDbContext>(options =>
                 {
                     options.UseInMemoryDatabase("Identity");
-                    options.UseInternalServiceProvider(serviceProvider);
+                    options.UseInternalServiceProvider(provider);
                 });
 
                 // Build the service provider.
@@ -224,7 +228,7 @@ namespace Microsoft.eShopWeb.FunctionalTests.Web.Controllers
                     var loggerFactory = scopedServices.GetRequiredService<ILoggerFactory>();
 
                     var logger = scopedServices
-                        .GetRequiredService<ILogger<CustomWebApplicationFactory<TStartup>>>();
+                        .GetRequiredService<ILogger<WebTestFixture>>();
 
                     // Ensure the database is created.
                     db.Database.EnsureCreated();
@@ -233,6 +237,11 @@ namespace Microsoft.eShopWeb.FunctionalTests.Web.Controllers
                     {
                         // Seed the database with test data.
                         CatalogContextSeed.SeedAsync(db, loggerFactory).Wait();
+
+                        // seed sample user data
+                        var userManager = scopedServices.GetRequiredService<UserManager<ApplicationUser>>();
+                        var roleManager = scopedServices.GetRequiredService<RoleManager<IdentityRole>>();
+                        AppIdentityDbContextSeed.SeedAsync(userManager, roleManager).Wait();
                     }
                     catch (Exception ex)
                     {
@@ -249,17 +258,17 @@ namespace Microsoft.eShopWeb.FunctionalTests.Web.Controllers
 Tests können die benutzerdefinierte WebApplicationFactory nutzen, um einen Client zu erstellen und dann mithilfe dieser Clientinstanz Anforderungen an die Anwendung zu stellen. Die Anwendung verfügt über Daten, die als Teil der Assertionen des Tests verwendet werden können. Der folgende Test überprüft, ob die Startseite der Anwendung „eShopOnWeb“ ordnungsgemäß geladen wird und eine Produktliste enthält, die der Anwendung als Teil des Seedings hinzugefügt wurden.
 
 ```cs
-using Microsoft.eShopWeb.FunctionalTests.Web.Controllers;
-using Microsoft.eShopWeb.Web;
+using Microsoft.eShopWeb.FunctionalTests.Web;
 using System.Net.Http;
 using System.Threading.Tasks;
 using Xunit;
 
 namespace Microsoft.eShopWeb.FunctionalTests.WebRazorPages
 {
-    public class HomePageOnGet : IClassFixture<CustomWebApplicationFactory<Startup>>
+    [Collection("Sequential")]
+    public class HomePageOnGet : IClassFixture<WebTestFixture>
     {
-        public HomePageOnGet(CustomWebApplicationFactory<Startup> factory)
+        public HomePageOnGet(WebTestFixture factory)
         {
             Client = factory.CreateClient();
         }
@@ -293,8 +302,6 @@ Dieser Funktionstest führt den gesamten ASP.NET Core MVC/Razor Pages-Anwendungs
 >   <https://docs.microsoft.com/ef/core/miscellaneous/testing/>
 > - **Integrationstests in ASP.NET Core** \
 >   <https://docs.microsoft.com/aspnet/core/test/integration-tests>
-> - **ASP.NET Community Standup – 15. Mai 2018 – MVC-Tests mit Javier C. Nelson** – YouTube-Video \
->   <https://www.youtube.com/watch?v=wtOE-xmFJkw&list=PL1rZQsJPBU2StolNg0aqvQswETPcYnNKL&index=5>
 
 >[!div class="step-by-step"]
 >[Zurück](work-with-data-in-asp-net-core-apps.md)

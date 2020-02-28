@@ -2,12 +2,12 @@
 title: Befehl „dotnet vstest“
 description: Der dotnet vstest-Befehl erstellt ein Projekt und alle seine Abhängigkeiten.
 ms.date: 05/30/2018
-ms.openlocfilehash: c3838617ed539cf56f2840b826e9de58833820fd
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: 3fdb5443d6d0cfbe1e7e88bc824cbb930f211260
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77215312"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77451180"
 ---
 # <a name="dotnet-vstest"></a>dotnet vstest
 
@@ -21,7 +21,7 @@ ms.locfileid: "77215312"
 
 <!-- markdownlint-disable MD025 -->
 
-# <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
+# <a name="net-core-21"></a>[.NET Core 2.1](#tab/netcore21)
 
 ```dotnetcli
 dotnet vstest [<TEST_FILE_NAMES>] [--Settings|/Settings] [--Tests|/Tests] [--TestAdapterPath|/TestAdapterPath]
@@ -30,7 +30,7 @@ dotnet vstest [<TEST_FILE_NAMES>] [--Settings|/Settings] [--Tests|/Tests] [--Tes
     [[--] <args>...]] [-?|--Help|/?|/Help]
 ```
 
-# <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
+# <a name="net-core-20"></a>[.NET Core 2.0](#tab/netcore20)
 
 ```dotnetcli
 dotnet vstest [<TEST_FILE_NAMES>] [--Settings|/Settings] [--Tests|/Tests] [--TestAdapterPath|/TestAdapterPath] 
@@ -38,7 +38,7 @@ dotnet vstest [<TEST_FILE_NAMES>] [--Settings|/Settings] [--Tests|/Tests] [--Tes
     [-lt|--ListTests|/lt|/ListTests] [--ParentProcessId|/ParentProcessId] [--Port|/Port] [--Diag|/Diag] [[--] <args>...]] [-?|--Help|/?|/Help]
 ```
 
-# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
+# <a name="net-core-1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
 ```dotnetcli
 dotnet vstest [<TEST_FILE_NAMES>] [--Settings|/Settings] [--Tests|/Tests] [--TestAdapterPath|/TestAdapterPath]
@@ -60,7 +60,7 @@ Führt Tests auf Grundlage der angegebenen Assemblys aus. Trennt mehrere Test-As
 
 ## <a name="options"></a>Optionen
 
-# <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
+# <a name="net-core-21"></a>[.NET Core 2.1](#tab/netcore21)
 
 `--Settings|/Settings:<Settings File>`
 
@@ -88,7 +88,7 @@ Führt Tests parallel aus. Standardmäßig stehen alle verfügbaren Kerne auf de
 
 `--TestCaseFilter|/TestCaseFilter:<Expression>`
 
-Führt Tests aus, die mit dem angegebenen Ausdruck übereinstimmen. `<Expression>` hat das Format `<property>Operator<value>[|&<Expression>]`, wobei der Operator `=`, `!=`, oder `~` ist. Operator `~` verfügt über „contains“-Semantik und gilt für Zeichenfolgeneigenschaften wie `DisplayName`. Klammern `()` werden verwendet, um untergeordnete Ausdrücke zu gruppieren.
+Führt Tests aus, die mit dem angegebenen Ausdruck übereinstimmen. `<Expression>` hat das Format `<property>Operator<value>[|&<Expression>]`, wobei der Operator `=`, `!=`, oder `~` ist. Operator `~` verfügt über „contains“-Semantik und gilt für Zeichenfolgeneigenschaften wie `DisplayName`. Klammern `()` werden zum Gruppieren untergeordneter Ausdrücke verwendet.
 
 `-?|--Help|/?|/Help`
 
@@ -148,7 +148,7 @@ Liest eine Antwortdatei für mehrere Optionen.
 
 Gibt zusätzliche Argumente an, die an den Adapter übergeben werden sollen. Argumente werden als Name-Wert-Paare des Formulars `<n>=<v>` angegeben, wobei `<n>` der Argumentname und `<v>` der Argumentwert ist. Trennt mehrere Argumente durch Leerzeichen.
 
-# <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
+# <a name="net-core-20"></a>[.NET Core 2.0](#tab/netcore20)
 
 `--Settings|/Settings:<Settings File>`
 
@@ -176,7 +176,7 @@ Führt Tests parallel aus. Standardmäßig stehen alle verfügbaren Kerne auf de
 
 `--TestCaseFilter|/TestCaseFilter:<Expression>`
 
-Führt Tests aus, die mit dem angegebenen Ausdruck übereinstimmen. `<Expression>` hat das Format `<property>Operator<value>[|&<Expression>]`, wobei der Operator `=`, `!=`, oder `~` ist. Operator `~` verfügt über „contains“-Semantik und gilt für Zeichenfolgeneigenschaften wie `DisplayName`. Klammern `()` werden verwendet, um untergeordnete Ausdrücke zu gruppieren.
+Führt Tests aus, die mit dem angegebenen Ausdruck übereinstimmen. `<Expression>` hat das Format `<property>Operator<value>[|&<Expression>]`, wobei der Operator `=`, `!=`, oder `~` ist. Operator `~` verfügt über „contains“-Semantik und gilt für Zeichenfolgeneigenschaften wie `DisplayName`. Klammern `()` werden zum Gruppieren untergeordneter Ausdrücke verwendet.
 
 `-?|--Help|/?|/Help`
 
@@ -224,7 +224,7 @@ Aktiviert die ausführlichen Protokolle für die Testplattform. Protokolle werde
 
 Gibt zusätzliche Argumente an, die an den Adapter übergeben werden sollen. Argumente werden als Name-Wert-Paare des Formulars `<n>=<v>` angegeben, wobei `<n>` der Argumentname und `<v>` der Argumentwert ist. Trennt mehrere Argumente durch Leerzeichen.
 
-# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
+# <a name="net-core-1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
 `--Settings|/Settings:<Settings File>`
 
@@ -252,7 +252,7 @@ Führt Tests parallel aus. Standardmäßig stehen alle verfügbaren Kerne auf de
 
 `--TestCaseFilter|/TestCaseFilter:<Expression>`
 
-Führt Tests aus, die mit dem angegebenen Ausdruck übereinstimmen. `<Expression>` hat das Format `<property>Operator<value>[|&<Expression>]`, wobei der Operator `=`, `!=`, oder `~` ist. Operator `~` verfügt über „contains“-Semantik und gilt für Zeichenfolgeneigenschaften wie `DisplayName`. Klammern `()` werden verwendet, um untergeordnete Ausdrücke zu gruppieren.
+Führt Tests aus, die mit dem angegebenen Ausdruck übereinstimmen. `<Expression>` hat das Format `<property>Operator<value>[|&<Expression>]`, wobei der Operator `=`, `!=`, oder `~` ist. Operator `~` verfügt über „contains“-Semantik und gilt für Zeichenfolgeneigenschaften wie `DisplayName`. Klammern `()` werden zum Gruppieren untergeordneter Ausdrücke verwendet.
 
 `-?|--Help|/?|/Help`
 

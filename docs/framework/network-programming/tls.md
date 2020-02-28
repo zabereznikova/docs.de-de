@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Internet, security
 - security [.NET Framework], Internet
 - permissions [.NET Framework], Internet
-ms.openlocfilehash: e2f8f1304de587e1bedd8cde60e665971d903183
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: bae6bf6a1a5d87241b619bf024c099c48af6af43
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75937693"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77452681"
 ---
 # <a name="transport-layer-security-tls-best-practices-with-the-net-framework"></a>Bewährte Methoden für Transport Layer Security (TLS) mit .NET Framework
 
@@ -140,7 +140,7 @@ Diese Versionen des WCF-Frameworks sind für die Verwendung der Werte SSL 3.0 un
 
 ## <a name="if-your-app-targets-net-framework-35"></a>Wenn Ihre App auf .NET Framework 3.5 abzielt
 
-Wenn Sie explizit ein Sicherheitsprotokoll festlegen müssen, anstatt .NET-Framework oder das Betriebssystem das Sicherheitsprotokoll auswählen zu lassen, fügen Sie die Enumerationen `SecurityProtocolTypeExtensions` und `SslProtocolsExtension` zu Ihrem Code hinzu. `SecurityProtocolTypeExtensions` und `SslProtocolsExtension` enthalten Werte für `Tls12`, `Tls11` und den Wert `SystemDefault`. Siehe [Unterstützung für Standardversionen des TLS-Systems im .NET Framework 3.5 unter Windows 8.1 und Windows Server 2012 R2](https://support.microsoft.com/help/3154520/support-for-tls-system-default-versions-included-in-the--net-framework).
+Wenn Sie explizit ein Sicherheitsprotokoll festlegen müssen, anstatt .NET oder das Betriebssystem das Sicherheitsprotokoll auswählen zu lassen, fügen Sie Ihrem Code die Enumerationen `SecurityProtocolTypeExtensions` und `SslProtocolsExtension` hinzu. `SecurityProtocolTypeExtensions` und `SslProtocolsExtension` enthalten Werte für `Tls12`, `Tls11` und den Wert `SystemDefault`. Weitere Informationen finden Sie unter [Unterstützung für Standardversionen des TLS-Systems im .NET Framework 3.5 unter Windows 8.1 und Windows Server 2012 R2](https://support.microsoft.com/help/3154520/support-for-tls-system-default-versions-included-in-the--net-framework).
 
 <a name="configuring-security-via-appcontext-switches"></a>
 
@@ -209,7 +209,7 @@ Wenn Ihre App unter .NET Framework 4.7 oder höhere Versionen abzielt, wird dies
 
 Weitere Informationen finden Sie unter [Kumulatives Update für Windows 10 Version 1511 und Windows Server 2016 Technical Preview 4: 10. Mai 2016](https://support.microsoft.com/help/3156421/cumulative-update-for-windows-10-version-1511-and-windows-server-2016).
 
-Weitere Informationen für die Verwendung mit .NET Framework 3.5.1 finden Sie unter [Unterstützung für Standardversionen des TLS-Systems im .NET Framework 3.5.1 unter Windows 7 SP1 und Server 2008 R2 SP1](https://support.microsoft.com/help/3154518/support-for-tls-system-default-versions-included-in-the--net-framework).
+Weitere Informationen für die Verwendung mit .NET Framework 3.5.1 finden Sie unter [Unterstützung für Standardversionen des TLS-Systems im .NET Framework 3.5.1 unter Windows 7 SP1 und Server 2008 R2 SP1](https://support.microsoft.com/help/3154518/support-for-tls-system-default-versions-included-in-the--net-framework).
 
 Die folgende _.REG_-Datei legt die Registrierungsschlüssel und deren Varianten auf die sichersten Werte fest:
 
@@ -260,7 +260,7 @@ Um .NET Framework zu aktualisieren, damit das Betriebssystem die beste Version v
 Siehe auch:
 
 - [.NET Framework-Versionen und -Abhängigkeiten](../migration-guide/versions-and-dependencies.md)
-- [Vorgehensweise: Determine Which .NET Framework Versions Are Installed](../migration-guide/how-to-determine-which-versions-are-installed.md) (Bestimmen der installierten .NET Framework-Versionen).
+- [How to: Bestimmen der installierten .NET Framework-Versionen](../migration-guide/how-to-determine-which-versions-are-installed.md).
 
 ## <a name="support-for-tls-12"></a>Unterstützung für TLS 1.2
 

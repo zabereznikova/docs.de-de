@@ -1,20 +1,20 @@
 ---
 title: .NET-Standard
 description: Erfahren Sie mehr über .NET Standard, dessen Versionen und die .NET-Implementierungen, von denen es unterstützt wird.
-ms.date: 09/23/2019
+ms.date: 02/13/2020
 ms.technology: dotnet-standard
 ms.custom: updateeachrelease
 ms.assetid: c044882c-af15-45f2-96d1-534557a5ee9b
-ms.openlocfilehash: 25490d5063a1f6c31b76af30ac6d37de6cb8c07f
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: 00b40b771a8608bad7e3f992e3c99367ff6bb131
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77124636"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77452590"
 ---
 # <a name="net-standard"></a>.NET-Standard
 
-[.NET Standard](https://github.com/dotnet/standard) ist eine formale Spezifikation von .NET-APIs, die für alle .NET-Implementierungen verfügbar sein sollen. Die Motivation hinter .NET Standard ist das Herstellen einer umfassenderen Einheitlichkeit im .NET-Ökosystem. Auch wenn [ECMA-335](https://github.com/dotnet/runtime/blob/master/docs/project/dotnet-standards.md) weiterhin für Einheitlichkeit im .NET-Implementierungsverhalten sorgt, gibt es keine ähnliche Spezifikation für die .NET-Basisklassenbibliotheken (BCL) für Implementierungen der .NET-Bibliothek.
+[.NET Standard](https://github.com/dotnet/standard) ist eine formale Spezifikation von .NET-APIs, die für alle .NET-Implementierungen verfügbar sein sollen. Die Motivation hinter .NET Standard ist das Schaffen von mehr Einheitlichkeit im .NET-Ökosystem. [ECMA 335](https://github.com/dotnet/runtime/blob/master/docs/project/dotnet-standards.md) setzt die Vereinheitlichung des .NET-Implementierungsverhaltens fort. Während ECMA 335 eine kleine Gruppe von Standardbibliotheken spezifiziert, umfasst die .NET-Standardspezifikation eine breitere Palette von .NET-APIs.
 
 .NET Standard ermöglicht im Wesentlichen die folgenden Szenarien:
 

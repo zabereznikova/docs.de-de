@@ -3,16 +3,16 @@ title: 'Breaking Changes: .NET Framework zu .NET Core'
 titleSuffix: ''
 description: Listet die Breaking Changes von .NET Framework zu .NET Core auf.
 ms.date: 12/18/2019
-ms.openlocfilehash: 407f99adf5d400fce659ef71cda32ceac1e54491
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: f712be14d7debc4b3008f8459e6ee925754b25f0
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2020
-ms.locfileid: "77093057"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77449397"
 ---
 # <a name="breaking-changes-for-migration-from-net-framework-to-net-core"></a>Breaking Changes für die Migration von .NET Framework zu .NET Core
 
-Wenn Sie eine App von .NET Framework zu .NET Core migrieren, können sich die in diesem Artikel aufgeführten Breaking Changes auf Ihre App auswirken. Breaking Changes werden nach Kategorie angeordnet. Innerhalb einer Kategorie sind sie wiederum nach .NET Core-Version sortiert, in der sie eingeführt wurden.
+Wenn Sie eine App von .NET Framework zu .NET Core migrieren, können sich die in diesem Artikel aufgeführten Breaking Changes auf Ihre App auswirken. Breaking Changes werden nach Kategorie angeordnet. Innerhalb einer Kategorie sind sie wiederum nach der .NET Core-Version sortiert, in der sie eingeführt wurden.
 
 > [!NOTE]
 > Dieser Artikel enthält keine vollständige Liste mit Breaking Changes zwischen .NET Framework und .NET Core. Die wichtigsten Breaking Changes werden hier hinzugefügt, sobald wir sie kennen.
@@ -20,10 +20,27 @@ Wenn Sie eine App von .NET Framework zu .NET Core migrieren, können sich die in
 ## <a name="corefx"></a>CoreFx
 
 - [Änderung des Standardwerts von UseShellExecute](#change-in-default-value-of-useshellexecute)
+- [UnauthorizedAccessException, ausgelöst von FileSystemInfo.Attributes](#unauthorizedaccessexception-thrown-by-filesysteminfoattributes)
 
 ### <a name="net-core-21"></a>.NET Core 2.1
 
 [!INCLUDE[Process.Start changes](~/includes/core-changes/corefx/2.1/process-start-changes.md)]
+
+***
+
+### <a name="net-core-10"></a>.NET Core 1.0
+
+[!INCLUDE [UnauthorizedAccessException thrown by FileSystemInfo.Attributes](~/includes/core-changes/corefx/1.0/filesysteminfo-attributes-exceptions.md)]
+
+***
+
+## <a name="cryptography"></a>Kryptografie
+
+- [Der boolesche Parameter von SignedCms.ComputeSignature wird beachtet](#boolean-parameter-of-signedcmscomputesignature-is-respected)
+
+### <a name="net-core-21"></a>.NET Core 2.1
+
+[!INCLUDE [Boolean parameter of SignedCms.ComputeSignature is respected](~/includes/core-changes/cryptography/2.1/compute-signature-silent-parameter.md)]
 
 ***
 

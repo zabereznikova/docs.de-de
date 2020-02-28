@@ -1,13 +1,13 @@
 ---
 title: Implementieren der Microservice-Anwendungsschicht mithilfe der Web-API
-description: .NET-Microservicearchitektur für .NET-Containeranwendungen | Übersicht über die Abhängigkeitsinjektion, das Vermittlermuster und ihre Implementierung in der Web-API Anwendungsschicht
-ms.date: 10/08/2018
-ms.openlocfilehash: 08cb409b06a54c6b30afa393a817e14bd64fbcbf
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+description: Übersicht über die Abhängigkeitsinjektion und Vermittlermuster und ihre Implementierung in der Web-API Anwendungsschicht.
+ms.date: 01/30/2020
+ms.openlocfilehash: a88f3bfd11ea06df085ca82ed7265cb37006fc31
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "73737535"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77502445"
 ---
 # <a name="implement-the-microservice-application-layer-using-the-web-api"></a>Implementieren der Microserviceanwendungsschicht mithilfe der Web-API
 
@@ -92,11 +92,9 @@ public void ConfigureServices(IServiceCollection services)
 {
     // Register out-of-the-box framework services.
     services.AddDbContext<CatalogContext>(c =>
-    {
-        c.UseSqlServer(Configuration["ConnectionString"]);
-    },
-    ServiceLifetime.Scoped
-    );
+        c.UseSqlServer(Configuration["ConnectionString"]),
+        ServiceLifetime.Scoped);
+
     services.AddMvc();
     // Register custom application dependencies.
     services.AddScoped<IMyCustomRepository, MyCustomSQLRepository>();
@@ -289,7 +287,7 @@ Die Befehlsklasse enthält im Grunde die zum Ausführen einer Geschäftstransakt
 
 Befehle haben eine zusätzliche Eigenschaft, d.h. sie sind unveränderlich, da erwartet wird, dass sie direkt vom Domänenmodell verarbeitet werden. Sie müssen während ihrer projizierten Lebensdauer nicht geändert werden. In einer C#-Klasse kann Unveränderlichkeit dadurch erreicht werden, dass keine Setter oder andere Methoden verwendet werden, die den internen Status ändern.
 
-Beachten Sie, dass zum Durchlaufen des Serialisierungs-/Deserialisierungsprozesses durch Befehle die Eigenschaften den Setter „privat“ und das Attribut `[DataMember]` (oder `[JsonProperty]`) erfordern. Andernfalls kann der Deserialisierer das Zielobjekt nicht mit den notwendigen Werten rekonstruieren.
+Beachten Sie, dass zum Durchlaufen des Serialisierungs-/Deserialisierungsprozesses durch Befehle die Eigenschaften den Setter „privat“ und das Attribut `[DataMember]` (oder `[JsonProperty]`) erfordern. Andernfalls kann der Deserialisierer das Objekt im Ziel nicht mit den erforderlichen Werten rekonstruieren. Sie können auch tatsächlich schreibgeschützte Eigenschaften verwenden, wenn die Klasse einen Konstruktor mit Parametern für alle Eigenschaften mit der üblichen camelCase-Benennungskonvention hat, und den Konstruktor mit `[JsonConstructor]` kommentieren. Diese Option erfordert jedoch mehr Code.
 
 Die Befehlsklasse zum Erstellen einer Bestellung beispielsweise ist möglicherweise im Hinblick auf Daten der Bestellung ähnlich, die Sie erstellen möchten, aber Sie benötigen wahrscheinlich nicht die gleichen Attribute. Beispielsweise enthält `CreateOrderCommand` keine Bestell-ID, da die Bestellung noch nicht erstellt wurde.
 
@@ -315,7 +313,7 @@ Einige Entwickler trennen ihre Benutzeroberflächen-Anforderungsobjekte von den 
 
 ### <a name="the-command-handler-class"></a>Die Befehlshandler-Klasse
 
-Sie sollten für jeden Befehl eine bestimmte Befehlshandler-Klasse implementieren. Sie gibt vor, wie das Muster funktioniert, und ist der Ort, an dem Sie das Befehlsobjekt, die Domänenobjekte und die Infrastruktur-Repositoryobjekte verwenden. Der Befehlshandler ist das Herzstück der Anwendungsschicht im Hinblick auf CQRS und DDD. Allerdings sollte die Domänenlogik in den Domänenklassen enthalten sein – in den aggregierten Stämmen (Stammentitäten), untergeordneten Entitäten oder [Domänendiensten](https://lostechies.com/jimmybogard/2008/08/21/services-in-domain-driven-design/), aber nicht im Befehlshandler, der eine Klasse der Anwendungsschicht ist.
+Sie sollten für jeden Befehl eine bestimmte Befehlshandler-Klasse implementieren. Sie gibt vor, wie das Muster funktioniert, und ist der Ort, an dem Sie das Befehlsobjekt, die Domänenobjekte und die Repositoryobjekte der Infrastruktur verwenden. Der Befehlshandler ist das Herzstück der Anwendungsschicht im Hinblick auf CQRS und DDD. Allerdings sollte die Domänenlogik in den Domänenklassen enthalten sein, und zwar in den aggregierten Stämmen (Stammentitäten), untergeordneten Entitäten oder [Domänendiensten](https://lostechies.com/jimmybogard/2008/08/21/services-in-domain-driven-design/), aber nicht im Befehlshandler, der eine Klasse der Anwendungsschicht ist.
 
 Die Befehlshandlerklasse eignet sich ideal zum Erreichen bereits erwähnten Prinzips der einzigen Verantwortung.
 

@@ -2,21 +2,17 @@
 title: Befehl „dotnet nuget push“
 description: Der dotnet nuget push-Befehl überträgt ein Paket auf den Server und veröffentlicht es.
 author: karann-msft
-ms.date: 12/04/2019
-ms.openlocfilehash: a352120efa199b871e67eb8ba2442bd69a9fc4ed
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.date: 02/14/2020
+ms.openlocfilehash: d4ef8e58908fe488c712debff3b313ac0908b43e
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76789882"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503657"
 ---
 # <a name="dotnet-nuget-push"></a>dotnet nuget push
 
-**Dieser Artikel gilt für:** ✔️ .NET Core 1.x SDK und neuere Versionen
-
-<!-- todo: uncomment when all CLI commands are reviewed
-[!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
--->
+**Dieser Artikel gilt für:** ✔️ .NET Core 2.x SDK und neuere Versionen
 
 ## <a name="name"></a>name
 
@@ -36,69 +32,69 @@ Der `dotnet nuget push`-Befehl überträgt ein Paket auf den Server und veröffe
 
 ## <a name="arguments"></a>Argumente
 
-* **`ROOT`**
+- **`ROOT`**
 
   Gibt den Dateipfad des Pakets an, das per Push übertragen werden soll.
 
 ## <a name="options"></a>Optionen
 
-* **`-d|--disable-buffering`**
+- **`-d|--disable-buffering`**
 
   Deaktiviert die Pufferung bei Übertragungen an HTTP(S)-Server, um die Speicherauslastung zu reduzieren.
 
-* **`--force-english-output`**
+- **`--force-english-output`**
 
   Erzwingt die Ausführung der Anwendung mithilfe einer invarianten Kultur, die auf Englisch basiert.
 
-* **`-h|--help`**
+- **`-h|--help`**
 
   Druckt eine kurze Hilfe für den Befehl.
 
-* **`--interactive`**
+- **`--interactive`**
 
   Ermöglicht, den Befehl zu blockieren, und fordert für Vorgänge wie z.B. die Authentifizierung eine manuelle Aktion. Die Option ist seit dem .NET Core 2.2 SDK verfügbar.
 
-* **`-k|--api-key <API_KEY>`**
+- **`-k|--api-key <API_KEY>`**
 
   Der API-Schlüssel für den Server.
 
-* **`-n|--no-symbols`**
+- **`-n|--no-symbols`**
 
   Überträgt keine Symbole (selbst wenn vorhanden).
 
-* **`--no-service-endpoint`**
+- **`--no-service-endpoint`**
 
   Fügt „api/v2/package“ nicht der Quell-URL an. Die Option ist seit dem .NET Core 2.1 SDK verfügbar.
 
-* **`-s|--source <SOURCE>`**
+- **`-s|--source <SOURCE>`**
 
   Gibt die Server-URL an. Diese Option ist erforderlich, es sei denn, der `DefaultPushSource`-Konfigurationswert wurde in der NuGet-Konfigurationsdatei festgelegt.
 
-* **`--skip-duplicate`**
+- **`--skip-duplicate`**
 
   Wenn Sie mehrere Pakete per Push an einen HTTP(S)-Server senden, werden alle Antworten des Typs „409 (Konflikt)“ als Warnung behandelt, sodass der Pushvorgang fortgesetzt werden kann. Verfügbar seit .NET Core 3.1 SDK.
 
-* **`-sk|--symbol-api-key <API_KEY>`**
+- **`-sk|--symbol-api-key <API_KEY>`**
 
   Der API-Schlüssel für den Symbolserver.
 
-* **`-ss|--symbol-source <SOURCE>`**
+- **`-ss|--symbol-source <SOURCE>`**
 
   Gibt die Symbolserver-URL an.
 
-* **`-t|--timeout <TIMEOUT>`**
+- **`-t|--timeout <TIMEOUT>`**
 
   Gibt das Timeout für die Übertragung auf einen Server in Sekunden an. Der Standardwert ist 300 Sekunden (5 Minuten). Wenn 0 (null Sekunden) angegeben wird, gilt der Standardwert.
 
 ## <a name="examples"></a>Beispiele
 
-* Überträgt *foo.nupkg* an die Standardpushquelle und gibt einen API-Schlüssel an:
+- Überträgt *foo.nupkg* an die Standardpushquelle und gibt einen API-Schlüssel an:
 
   ```dotnetcli
   dotnet nuget push foo.nupkg -k 4003d786-cc37-4004-bfdf-c4f3e8ef9b3a
   ```
 
-* Überträgt *foo.nupkg* an den offiziellen NuGet-Server und gibt einen API-Schlüssel an:
+- Überträgt *foo.nupkg* an den offiziellen NuGet-Server und gibt einen API-Schlüssel an:
 
   ```dotnetcli
   dotnet nuget push foo.nupkg -k 4003d786-cc37-4004-bfdf-c4f3e8ef9b3a -s https://api.nuget.org/v3/index.json
@@ -110,25 +106,25 @@ Der `dotnet nuget push`-Befehl überträgt ein Paket auf den Server und veröffe
   dotnet nuget push foo.nupkg -k 4003d786-cc37-4004-bfdf-c4f3e8ef9b3a -s https://customsource/
   ```
 
-* Überträgt *foo.nupkg* an die standardmäßige Pushquelle:
+- Überträgt *foo.nupkg* an die standardmäßige Pushquelle:
 
   ```dotnetcli
   dotnet nuget push foo.nupkg
   ```
 
-* Überträgt *foo.symbols.nupkg* an die standardmäßige Symbolquelle:
+- Überträgt *foo.symbols.nupkg* an die standardmäßige Symbolquelle:
 
   ```dotnetcli
   dotnet nuget push foo.symbols.nupkg
   ```
 
-* Überträgt *foo.nupkg* an die Standardpushquelle und gibt ein Timeout von 360 Sekunden an:
+- Überträgt *foo.nupkg* an die Standardpushquelle und gibt ein Timeout von 360 Sekunden an:
 
   ```dotnetcli
   dotnet nuget push foo.nupkg --timeout 360
   ```
 
-* Überträgt alle *NUPKG*-Dateien im aktuellen Verzeichnis an die standardmäßige Pushquelle:
+- Überträgt alle *NUPKG*-Dateien im aktuellen Verzeichnis an die standardmäßige Pushquelle:
 
   ```dotnetcli
   dotnet nuget push *.nupkg
@@ -138,7 +134,7 @@ Der `dotnet nuget push`-Befehl überträgt ein Paket auf den Server und veröffe
   > Wenn dieser Befehl nicht funktioniert, kann dies an einem Fehler aus früheren Versionen des SDK liegen (.NET Core 2.1 SDK und frühere Versionen).
   > Führen Sie ein Upgrade für das SDK durch, oder führen Sie stattdessen den folgenden Befehl aus, um diesen Fehler zu beheben: `dotnet nuget push **/*.nupkg`.
 
-* Überträgt alle *.nupkg*-Dateien per Push, auch wenn eine Antwort des Typs „409 (Konflikt)“ von einem HTTP(S)-Server zurückgegeben wird:
+- Überträgt alle *.nupkg*-Dateien per Push, auch wenn eine Antwort des Typs „409 (Konflikt)“ von einem HTTP(S)-Server zurückgegeben wird:
 
   ```dotnetcli
   dotnet nuget push *.nupkg --skip-duplicate

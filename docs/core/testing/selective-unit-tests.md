@@ -3,16 +3,20 @@ title: Ausführen von selektiven Komponententests
 description: Es wird erläutert, wie Sie einen Filterausdruck zum Ausführen selektiver Komponententests mit dem dotnet-Testbefehl in .NET Core verwenden.
 author: smadala
 ms.date: 03/22/2017
-ms.openlocfilehash: 57428dad2de6c2507ca2cdc42e3df9e83a1edd69
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: b9156300587215e68c01c609e298dbc1a2c53d11
+ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75715460"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77543507"
 ---
 # <a name="running-selective-unit-tests"></a>Ausführen von selektiven Komponententests
 
 Mit dem Befehl `dotnet test` in .NET Core können Sie einen Filterausdruck zum Ausführen selektiver Tests verwenden. In diesem Artikel wird gezeigt, wie Sie die auszuführenden Tests filtern. Die folgenden Beispiele verwenden `dotnet test`. Wenn Sie `vstest.console.exe` verwenden, ersetzen Sie `--filter` mit `--testcasefilter:`.
+
+> [!NOTE]
+> Die Verwendung von Filtern, die in `*nix` ein Ausrufezeichen (!) enthalten, erfordert Escapezeichen, da `!` reserviert ist. Dieser Filter überspringt beispielsweise alle Tests, wenn der Namespace IntegrationTests enthält: `dotnet test --filter FullyQualifiedName\!~IntegrationTests`.
+> Beachten Sie den umgekehrten Schrägstrich, der dem Ausrufezeichen vorangestellt ist.
 
 ## <a name="mstest"></a>MSTest
 

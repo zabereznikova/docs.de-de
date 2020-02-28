@@ -1,17 +1,17 @@
 ---
-ms.openlocfilehash: 3b94c88809513e31a5f226bcfce39abbfa4de378
-ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
+ms.openlocfilehash: c0be08023f80bf0f96cc08f34b9ea8c5a73839e3
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/24/2019
-ms.locfileid: "70017371"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77466026"
 ---
 ### <a name="aspnet-validationcontextmembername-is-not-null-when-using-custom-dataannotationsvalidationattribute"></a>ASP.NET ValidationContext.MemberName ist bei Verwendung des benutzerdefinierten DataAnnotations.ValidationAttribute nicht NULL
 
 |   |   |
 |---|---|
-|Details|Wenn in .NET Framework 4.7.2 und früheren Versionen ein benutzerdefiniertes <xref:System.ComponentModel.DataAnnotations.ValidationAttribute?displayProperty=nameWithType> verwendet wurde, wurde von der <xref:System.ComponentModel.DataAnnotations.ValidationContext.MemberName?displayProperty=nameWithType>-Eigenschaft <code>null</code> zurückgegeben.  In .NET Framework 4.8 wird der Membername zurückgegeben.|
-|Vorschlag|Fügen Sie die folgende Einstellung zur Konfigurationsdatei Ihrer App hinzu, um das vorherige Verhalten wiederherzustellen:<pre><code class="lang-xml">&lt;configuration&gt;&#13;&#10;&lt;appSettings&gt;&#13;&#10;...&#13;&#10;&lt;add key=&quot;aspnet:GetValidationMemberName&quot;  value=&quot;true&quot;/&gt;&#13;&#10;...&#13;&#10;&lt;/appSettings&gt;&#13;&#10;&lt;/configuration&gt;&#13;&#10;</code></pre>Dieses Verhalten wird in einem zukünftigen Release geändert. Dann müssen Sie das neue Verhalten explizit aktivieren. Die Eigenschaft wird dann einen nicht-NULL-Wert für das benutzerdefinierte `ValidationAttribute`-Element zurückgeben, wenn die Option `aspnet:GetValidationMemberName` auf `true` festgelegt ist.|
+|Details|Wenn in .NET Framework 4.7.2 und früheren Versionen ein benutzerdefiniertes <xref:System.ComponentModel.DataAnnotations.ValidationAttribute?displayProperty=nameWithType> verwendet wurde, wurde von der <xref:System.ComponentModel.DataAnnotations.ValidationContext.MemberName?displayProperty=nameWithType>-Eigenschaft `null` zurückgegeben. In der .NET Framework 4.8-Version vor dem Update vom Oktober 2019 wird der Membername zurückgegeben. Ab der [Vorschauversion des Qualitätsrollups für .NET Framework vom Oktober 2019](https://devblogs.microsoft.com/dotnet/net-framework-october-2019-preview-of-quality-rollup/) für .NET Framework 4.8 wird standardmäßig `null` zurückgegeben, aber Sie können sich dafür entscheiden, stattdessen den Membernamen zurückzugeben. |
+|Vorschlag|Fügen Sie die folgende Einstellung zu Ihrer Datei *web.config* hinzu, damit die Eigenschaft den Membernamen in der [Vorschauversion des Qualitätsrollups für .NET Framework vom Oktober 2019](https://devblogs.microsoft.com/dotnet/net-framework-october-2019-preview-of-quality-rollup/) für .NET Framework 4.8 und spätere Versionen zurückgibt:<pre><code class="lang-xml">&lt;configuration&gt;&#13;&#10;&lt;appSettings&gt;&#13;&#10;...&#13;&#10;&lt;add key=&quot;aspnet:GetValidationMemberName&quot;  value=&quot;true&quot;/&gt;&#13;&#10;...&#13;&#10;&lt;/appSettings&gt;&#13;&#10;&lt;/configuration&gt;&#13;&#10;</code></pre>In der .NET Framework 4.8-Version vor dem Update vom Oktober 2019 stellt das Hinzufügen dieser Eigenschaft zu Ihrer Datei *web.config* das vorherige Verhalten wieder her, und die Eigenschaft gibt `null` zurück.|
 |Bereich|Unbekannt|
 |Version|4.8|
 |Typ|Laufzeit|

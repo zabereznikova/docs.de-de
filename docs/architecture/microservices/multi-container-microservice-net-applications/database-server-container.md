@@ -1,27 +1,29 @@
 ---
-title: Verwenden eines Datenbankservers, der als Container ausgeführt wird
-description: .NET-Microservicearchitektur für .NET-Containeranwendungen | Verwenden eines als Container ausgeführten Datenbankservers nur für die Entwickelung Erfahren Sie den Grund.
-ms.date: 10/02/2018
-ms.openlocfilehash: 371d622dc39681edb0b52e723faccbf611b7797c
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+title: Verwenden eines als Container ausgeführten Datenbankservers
+description: Informationen zur Bedeutung der Verwendung eines als Container ausgeführten Datenbankservers, der ausschließlich für die Entwicklung, jedoch auf keinen Fall in der Produktion zum Einsatz kommen darf.
+ms.date: 01/30/2020
+ms.openlocfilehash: 816ac196636f78a368a9f20e8eedcc6a22567fa7
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74568430"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77502289"
 ---
-# <a name="using-a-database-server-running-as-a-container"></a>Verwenden eines Datenbankservers, der als Container ausgeführt wird
+# <a name="use-a-database-server-running-as-a-container"></a>Verwenden eines als Container ausgeführten Datenbankservers
 
-Sie können Ihre Datenbanken (SQL Server, PostgreSQL, MySQL usw.) auf regulären eigenständigen Servern in lokalen Clustern oder in PaaS-Diensten in der Cloud verwenden wie etwa Azure SQL DB. Für Entwicklungs- und Testumgebungen ist jedoch die Ausführung der Datenbanken als Container praktisch, da keine externen Abhängigkeiten bestehen und die gesamte Anwendung einfach mit dem Befehl `docker-compose up` gestartet werden kann. Die Verwendung dieser Datenbanken als Container bietet sich zudem für Integrationstests an, da die Datenbanken im Container gestartet werden und immer mit denselben Beispieldaten aufgefüllt werden, sodass Tests besser vorhersehbar sind.
+Sie können Ihre Datenbanken (SQL Server, PostgreSQL, MySQL usw.) auf regulären eigenständigen Servern in lokalen Clustern oder in PaaS-Diensten in der Cloud verwenden wie etwa Azure SQL DB. Für Entwicklungs- und Testumgebungen ist jedoch die Ausführung Ihrer Datenbanken als Container praktisch, da keine externen Abhängigkeiten bestehen und die gesamte Anwendung einfach mit dem Befehl `docker-compose up` gestartet werden kann. Die Verwendung dieser Datenbanken als Container bietet sich zudem für Integrationstests an, da die Datenbanken im Container gestartet werden und immer mit denselben Beispieldaten aufgefüllt werden, sodass Tests besser vorhersehbar sind.
 
-### <a name="sql-server-running-as-a-container-with-a-microservice-related-database"></a>SQL Server-Installation, die als Container mit einer microservicebezogenen Datenbank ausgeführt wird
+## <a name="sql-server-running-as-a-container-with-a-microservice-related-database"></a>SQL Server-Installation, die als Container mit einer microservicebezogenen Datenbank ausgeführt wird
 
-In eShopOnContainers gibt es einen Container mit dem Namen „sql.data“, der in der Datei [docker-compose.yml](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/docker-compose.yml) definiert ist und mit dem SQL Server für Linux mit allen für Microservices benötigten SQL Server-Datenbanken ausführt wird. (Sie können auch für jede Datenbank einen SQL Server-Container verwenden. Dann muss Docker jedoch mehr Speicherplatz zugewiesen werden.) Der entscheidende Punkt bei Microservices ist, dass jeder Microservice die ihm gehörenden Daten und damit die ihm gehörende SQL-Datenbank besitzt. Die Datenbanken können sich jedoch an einem beliebigen Ort befinden.
+In eShopOnContainers gibt es einen Container mit dem Namen `sqldata` (gemäß Definition in der Datei [docker-compose.yml](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/docker-compose.yml)), in dem eine SQL Server für Linux-Instanz mit den SQL-Datenbanken für alle Microservices ausgeführt wird, die eine benötigen.
+
+Ein wichtiger Punkt bei Microservices ist, dass jeder Microservice seine zugehörigen Daten besitzt und daher eine eigene Datenbank haben sollte. Die Datenbanken können sich jedoch an einem beliebigen Ort befinden. In diesem Fall befinden sie sich alle im selben Container, um den Arbeitsspeicherbedarf von Docker so gering wie möglich zu halten. Denken Sie daran, dass dies eine Lösung ist, die für die Entwicklung und vielleicht Tests geeignet ist, aber nicht für die Produktion.
 
 Der SQL Server-Container in der Beispielanwendung wurde mit dem folgenden YAML-Code in der Datei „docker-compose.yml“ konfiguriert, die beim Ausführen des Befehls `docker-compose up` ausgeführt wird. Der YAML-Code enthält konsolidierte Konfigurationsinformationen aus den allgemeinen Dateien „docker-compose.yml“ und „docker-compose.override.yml“. (Normalerweise würden Sie die Umgebungseinstellungen von den Basisinformationen oder statischen Informationen zum SQL Server-Image trennen.)
 
 ```yml
-  sql.data:
-    image: microsoft/mssql-server-linux:2017-latest
+  sqldata:
+    image: mcr.microsoft.com/mssql/server:2017-latest
     environment:
       - SA_PASSWORD=Pass@word
       - ACCEPT_EULA=Y
@@ -31,8 +33,8 @@ Der SQL Server-Container in der Beispielanwendung wurde mit dem folgenden YAML-C
 
 Auf ähnliche Weise können Sie anstelle von `docker-compose` den folgenden `docker run`-Befehl zum Ausführen dieses Containers verwenden:
 
-```console
-docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=Pass@word' -p 5433:1433 -d microsoft/mssql-server-linux:2017-latest
+```powershell
+docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=Pass@word' -p 5433:1433 -d mcr.microsoft.com/mssql/server:2017-latest
 ```
 
 Wenn Sie jedoch eine Anwendung mit mehreren Containern wie eShopOnContainers bereitstellen, ist es praktischer, den Befehl `docker-compose up` zu verwenden, sodass alle für die Anwendung erforderlichen Container bereitgestellt werden.
@@ -43,32 +45,117 @@ Die Anwendung eShopOnContainers initialisiert die einzelnen Microservicedatenban
 
 Die Ausführung von SQL Server als Container ist nicht nur für eine Demo nützlich, bei der Sie möglicherweise keinen Zugriff auf eine Instanz von SQL Server haben. Sie ist wie bereits erwähnt auch für Entwicklungs- und Testumgebungen nützlich, sodass Sie problemlos Integrationstests von einem sauberen SQL Server-Image aus mit bekannten Daten durch das Seeding neuer Beispieldaten ausführen können.
 
-#### <a name="additional-resources"></a>Zusätzliche Ressourcen
+### <a name="additional-resources"></a>Zusätzliche Ressourcen
 
-- **Ausführen des Docker-Images von SQL Server unter Linux, Mac oder Windows** \
-    [https://docs.microsoft.com/sql/linux/sql-server-linux-setup-docker](/sql/linux/sql-server-linux-setup-docker)
+- **Ausführen des Docker-Images von SQL Serverunter Linux, Mac oder Windows** \
+    <https://docs.microsoft.com/sql/linux/sql-server-linux-setup-docker>
 
 - **Verbinden und Abfragen von SQL Server unter Linux mit sqlcmd** \
-    [https://docs.microsoft.com/sql/linux/sql-server-linux-connect-and-query-sqlcmd](/sql/linux/sql-server-linux-connect-and-query-sqlcmd)
+    <https://docs.microsoft.com/sql/linux/sql-server-linux-connect-and-query-sqlcmd>
 
-### <a name="seeding-with-test-data-on-web-application-startup"></a>Seeding mit Testdaten beim Starten von Webanwendungen
+## <a name="seeding-with-test-data-on-web-application-startup"></a>Seeding mit Testdaten beim Starten von Webanwendungen
 
-Um der Datenbank beim Starten der Anwendung Daten hinzuzufügen, können Sie der Configure-Methode in der Startup-Klasse des Web-API-Projekts Code wie den folgenden hinzufügen:
+Um der Datenbank beim Starten der Anwendung Daten hinzuzufügen, können Sie der `Main`-Methode in der `Program`-Klasse des Web-API-Projekts Code wie den folgenden hinzufügen:
 
 ```csharp
-public class Startup
+public static int Main(string[] args)
 {
-    // Other Startup code...
-    public void Configure(IApplicationBuilder app,
-        IHostingEnvironment env,
-        ILoggerFactory loggerFactory)
+    var configuration = GetConfiguration();
+
+    Log.Logger = CreateSerilogLogger(configuration);
+
+    try
     {
-        // Other Configure code...
-        // Seed data through our custom class
-        CatalogContextSeed.SeedAsync(app)
-            .Wait();
-        // Other Configure code...
+        Log.Information("Configuring web host ({ApplicationContext})...", AppName);
+        var host = CreateHostBuilder(configuration, args);
+
+        Log.Information("Applying migrations ({ApplicationContext})...", AppName);
+        host.MigrateDbContext<CatalogContext>((context, services) =>
+        {
+            var env = services.GetService<IWebHostEnvironment>();
+            var settings = services.GetService<IOptions<CatalogSettings>>();
+            var logger = services.GetService<ILogger<CatalogContextSeed>>();
+
+            new CatalogContextSeed()
+                .SeedAsync(context, env, settings, logger)
+                .Wait();
+        })
+        .MigrateDbContext<IntegrationEventLogContext>((_, __) => { });
+
+        Log.Information("Starting web host ({ApplicationContext})...", AppName);
+        host.Run();
+
+        return 0;
     }
+    catch (Exception ex)
+    {
+        Log.Fatal(ex, "Program terminated unexpectedly ({ApplicationContext})!", AppName);
+        return 1;
+    }
+    finally
+    {
+        Log.CloseAndFlush();
+    }
+}
+```
+
+Es gibt einen wichtigen Vorbehalt beim Anwenden von Migrationen und Seeding einer Datenbank während des Containerstarts. Da der Datenbankserver möglicherweise aus beliebigen Gründen nicht verfügbar ist, müssen Wiederholungsversuche erfolgen, während Sie darauf warten, dass der Server verfügbar ist. Diese Wiederholungslogik wird von der Erweiterungsmethode `MigrateDbContext()` verarbeitet, wie der folgende Code zeigt:
+
+```cs
+public static IWebHost MigrateDbContext<TContext>(
+    this IWebHost host,
+    Action<TContext,
+    IServiceProvider> seeder)
+      where TContext : DbContext
+{
+    var underK8s = host.IsInKubernetes();
+
+    using (var scope = host.Services.CreateScope())
+    {
+        var services = scope.ServiceProvider;
+
+        var logger = services.GetRequiredService<ILogger<TContext>>();
+
+        var context = services.GetService<TContext>();
+
+        try
+        {
+            logger.LogInformation("Migrating database associated with context {DbContextName}", typeof(TContext).Name);
+
+            if (underK8s)
+            {
+                InvokeSeeder(seeder, context, services);
+            }
+            else
+            {
+                var retry = Policy.Handle<SqlException>()
+                    .WaitAndRetry(new TimeSpan[]
+                    {
+                    TimeSpan.FromSeconds(3),
+                    TimeSpan.FromSeconds(5),
+                    TimeSpan.FromSeconds(8),
+                    });
+
+                //if the sql server container is not created on run docker compose this
+                //migration can't fail for network related exception. The retry options for DbContext only
+                //apply to transient exceptions
+                // Note that this is NOT applied when running some orchestrators (let the orchestrator to recreate the failing service)
+                retry.Execute(() => InvokeSeeder(seeder, context, services));
+            }
+
+            logger.LogInformation("Migrated database associated with context {DbContextName}", typeof(TContext).Name);
+        }
+        catch (Exception ex)
+        {
+            logger.LogError(ex, "An error occurred while migrating the database used on context {DbContextName}", typeof(TContext).Name);
+            if (underK8s)
+            {
+                throw;          // Rethrow under k8s because we rely on k8s to re-run the pod
+            }
+        }
+    }
+
+    return host;
 }
 ```
 
@@ -125,7 +212,7 @@ public class CatalogContextSeed
 
 Beim Ausführen von Integrationstests ist es hilfreich, eine Methode zum Generieren von Daten zu verwenden, die den Integrationstests entsprechen. Besonders günstig für Testumgebungen ist es, wenn alles von Grund auf neu erstellt werden kann, so auch eine Instanz von SQL Server, die in einem Container ausgeführt wird.
 
-### <a name="ef-core-inmemory-database-versus-sql-server-running-as-a-container"></a>EF Core-In-Memory Database und eine als Container ausgeführte SQL Server-Instanz im Vergleich
+## <a name="ef-core-inmemory-database-versus-sql-server-running-as-a-container"></a>EF Core-In-Memory Database und eine als Container ausgeführte SQL Server-Instanz im Vergleich
 
 Eine weitere gute Möglichkeit zum Ausführen von Tests stellt der Entity Framework InMemory-Datenbankanbieter dar. Diese Konfiguration können Sie in der ConfigureServices-Methode der Startup-Klasse im Web-API-Projekt festlegen:
 
@@ -145,7 +232,7 @@ public class Startup
             //
         //});
     }
-  
+
     // Other Startup code ...
 }
 ```
@@ -154,7 +241,7 @@ Diese Option hat jedoch einen Nachteil. Die In-Memory Database unterstützt nur 
 
 Dennoch ist eine In-Memory Database zum Testen und zum Erstellen von Prototypen hilfreich. Wenn Sie jedoch präzise Integrationstests erstellen möchten, bei denen das Verhalten einer bestimmten Datenbankimplementierung berücksichtigt wird, müssen Sie eine echte Datenbank wie etwa SQL Server verwenden. In diesem Fall ist die Ausführung von SQL Server in einem Container eine gute und im Vergleich zum EF Core InMemory-Datenbankanbieter präzisere Option.
 
-### <a name="using-a-redis-cache-service-running-in-a-container"></a>Verwenden eines Redis-Cachediensts, der in einem Container ausgeführt wird
+## <a name="using-a-redis-cache-service-running-in-a-container"></a>Verwenden eines Redis-Cachediensts, der in einem Container ausgeführt wird
 
 Redis kann insbesondere bei der Entwicklung und beim Testen sowie im Rahmen von Proof-of-Concept-Szenarios in einem Container ausgeführt werden. Dieses Szenario ist praktisch, da alle Abhängigkeiten in Containern ausgeführt werden können – nicht nur für lokale Entwicklungscomputer, sondern auch für die Testumgebungen in den CI/CD-Pipelines.
 
@@ -172,30 +259,30 @@ docker run --name some-redis -d redis
 
 Das Redis-Image enthält „expose:6379“ (von Redis verwendeter Port), sodass es durch die übliche Containerverknüpfung für die verknüpften Container automatisch verfügbar wird.
 
-In eShopOnContainers verwendet der Microservice „basket.api“ einen als Container ausgeführten Redis-Cache. Dieser „basket.data“-Container wird im Rahmen der Datei „docker-compose.yml“ mit mehreren Containern definiert, wie das folgende Beispiel zeigt:
+In eShopOnContainers verwendet der Microservice `basket-api` einen als Container ausgeführten Redis-Cache. Dieser Container namens `basketdata` wird als Teil der Datei *docker-compose.yml* mit mehreren Containern definiert, wie das folgende Beispiel zeigt:
 
 ```yml
 #docker-compose.yml file
 #...
-  basket.data:
+  basketdata:
     image: redis
     expose:
       - "6379"
 ```
 
-Dieser Code in der Datei „docker-compose.yml“ definiert einen Container mit dem Namen „basket.data“ basierend auf dem Redis-Image, und Port 6379 wird intern veröffentlicht, sodass nur andere Container, die im Docker-Host ausgeführt werden, darauf zugreifen können.
+Dieser Code in der Datei „docker-compose.yml“ definiert einen Container mit dem Namen `basketdata` basierend auf dem Redis-Image. Port 6379 wird intern veröffentlicht. Das bedeutet, dass nur andere Container, die im Docker-Host ausgeführt werden, darauf zugreifen können.
 
-Und schließlich wird in der Datei „docker-compose.override.yml“ im Microservice „basket.api“ für das eShopOnContainers-Beispiel die für diesen Redis-Container zu verwendende Verbindungszeichenfolge definiert:
+Und schließlich wird in der Datei *docker-compose.override.yml* im Microservice `basket-api` für das eShopOnContainers-Beispiel die für diesen Redis-Container zu verwendende Verbindungszeichenfolge definiert:
 
 ```yml
-  basket.api:
+  basket-api:
     environment:
       # Other data ...
-      - ConnectionString=basket.data
+      - ConnectionString=basketdata
       - EventBusConnection=rabbitmq
 ```
 
-Wie bereits erwähnt, wird der Name des Microservices „basket.data“ durch das DNS des internen Netzwerks von Docker aufgelöst.
+Wie bereits erwähnt, wird der Name des Microservices `basketdata` durch das DNS des internen Netzwerks von Docker aufgelöst.
 
 >[!div class="step-by-step"]
 >[Zurück](multi-container-applications-docker-compose.md)

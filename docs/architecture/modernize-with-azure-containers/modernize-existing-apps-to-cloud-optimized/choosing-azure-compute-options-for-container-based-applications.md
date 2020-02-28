@@ -1,13 +1,13 @@
 ---
 title: Auswählen von Azure Compute-Plattformen für containerbasierte Anwendungen
 description: Modernisieren vorhandener .NET-Anwendungen mit Azure Cloud und Windows-Containern | Auswählen von Azure Compute-Plattformen für containerbasierte Anwendungen
-ms.date: 05/04/2018
-ms.openlocfilehash: 079c9c5ca02b6dc75214d63cb59afdead03d3190
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.date: 02/18/2020
+ms.openlocfilehash: 52e7cf1c5dd3a5850564bdb33ac7a4ac4904f432
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/08/2019
-ms.locfileid: "73736996"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503884"
 ---
 # <a name="choosing-azure-compute-platforms-for-container-based-applications"></a>Auswählen von Azure Compute-Plattformen für containerbasierte Anwendungen
 
@@ -25,9 +25,19 @@ Diese Empfehlung sollte jedoch mit ein wenig Vorsicht genossen werden, da die Au
 
 Nach einer intensiveren Analyse der Anwendungsanforderungen könnte das ausgewählte Produkt abweichen. Als Ausgangspunkt ist es jedoch gut, eine erste Orientierung zu haben, mit der Sie basierend auf einer bestimmten Priorität evaluieren und testen können.
 
-In Abbildung 1 sehen Sie eine Aufschlüsselung der verschiedenen Arten von Apps und ihrer idealen Azure-Hostingszenarios.
+In der folgenden Tabelle sehen Sie eine Aufschlüsselung der verschiedenen Arten von Apps und ihrer möglichen und empfohlenen Szenarien für das Hosting in Azure.
 
-![Tabelle, welche Azure-Hostingszenarios für verschiedene Apps am besten geeignet sind.](./media/choosing-azure-compute-options-for-container-based-applications/azure-hosting-scenarios-for-apps.png)
+| Anwendungsarchitektur | VMs: Azure Virtual Machines | ACI: Azure Container Instances | Azure App Service (mit/ohne Container) | AKS: Azure Kubernetes Services | Überprüfung auf | Azure Batch |
+|:------------------------:|:--:|:--:|:--:|:--:|:--:|:--:|
+| **Web-Apps (monolithisch)**         | ![Mit VMs möglich](media/choosing-azure-compute-options-for-container-based-applications/possible.png) | ![Mit ACI möglich](media/choosing-azure-compute-options-for-container-based-applications/possible.png) | ![Mit App Service empfohlen](media/choosing-azure-compute-options-for-container-based-applications/recommended.png) | ![Mit AKS möglich](media/choosing-azure-compute-options-for-container-based-applications/possible.png) | | |
+| **n-schichtige Apps (Dienste)**        | ![Mit VMs möglich](media/choosing-azure-compute-options-for-container-based-applications/possible.png) | ![Mit ACI möglich](media/choosing-azure-compute-options-for-container-based-applications/possible.png) | ![Mit App Service empfohlen](media/choosing-azure-compute-options-for-container-based-applications/recommended.png) | ![Mit AKS möglich](media/choosing-azure-compute-options-for-container-based-applications/possible.png) | ![Mit Azure Fuctions möglich](media/choosing-azure-compute-options-for-container-based-applications/possible.png) | |
+| **Cloudnativ (Microservices)**  | | ![Mit ACI möglich](media/choosing-azure-compute-options-for-container-based-applications/possible.png) | | ![Mit AKS empfohlen](media/choosing-azure-compute-options-for-container-based-applications/recommended.png) <br/> (Linux-Container)| ![Mit Azure Functions empfohlen](media/choosing-azure-compute-options-for-container-based-applications/recommended.png) <br/> (Ereignisgesteuert) | |
+| **Batch/Aufträge (Hintergrundaufgaben)** | ![Mit VMs möglich](media/choosing-azure-compute-options-for-container-based-applications/possible.png) | ![Mit ACI möglich](media/choosing-azure-compute-options-for-container-based-applications/possible.png) | ![Mit App Service möglich](media/choosing-azure-compute-options-for-container-based-applications/possible.png) | ![Mit AKS möglich](media/choosing-azure-compute-options-for-container-based-applications/possible.png) | ![Mit Azure Functions empfohlen](media/choosing-azure-compute-options-for-container-based-applications/recommended.png) <br/> (Hintergrundaufgaben) | ![Mit Azure Batch empfohlen](media/choosing-azure-compute-options-for-container-based-applications/recommended.png) <br/> (Umfangreiche Skalierung) |
+
+**Legende**
+
+![Symbol „Empfohlen“](media/choosing-azure-compute-options-for-container-based-applications/recommended.png) \ empfohlen
+![Symbol „Möglich“](media/choosing-azure-compute-options-for-container-based-applications/possible.png) Möglich
 
 > [!div class="step-by-step"]
 > [Zurück](when-to-deploy-windows-containers-to-azure-container-service-kubernetes.md)

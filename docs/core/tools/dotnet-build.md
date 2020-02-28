@@ -1,21 +1,17 @@
 ---
 title: Befehl „dotnet build“
 description: Der dotnet build-Befehl erstellt ein Projekt und alle seine Abhängigkeiten.
-ms.date: 10/14/2019
-ms.openlocfilehash: ec37d82c9e22a59acf7617f80a7491c0bcab89c9
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.date: 02/14/2020
+ms.openlocfilehash: 9f9a78ec0a6a25c54c8a727c05081ce6835514ee
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76734313"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503764"
 ---
 # <a name="dotnet-build"></a>dotnet build
 
-**Dieser Artikel gilt für:** ✔️ .NET Core 1.x SDK und neuere Versionen
-
-<!-- todo: uncomment when all CLI commands are reviewed
-[!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
--->
+**Dieser Artikel gilt für:** ✔️ .NET Core 2.x SDK und neuere Versionen
 
 ## <a name="name"></a>name
 
@@ -75,7 +71,7 @@ Die zu erstellende Projekt- oder Projektmappendatei. Wenn Sie keine Projekt- ode
 
 ## <a name="options"></a>Optionen
 
-- **`-c|--configuration {Debug|Release}`**
+- **`-c|--configuration <CONFIGURATION>`**
 
   Legt die Buildkonfiguration fest. Der Standardwert für die meisten Projekte ist `Debug`, aber Sie können die Buildkonfigurationseinstellungen in Ihrem Projekt überschreiben.
 
@@ -85,7 +81,7 @@ Die zu erstellende Projekt- oder Projektmappendatei. Wenn Sie keine Projekt- ode
 
 - **`--force`**
 
-  Erzwingt das Auflösen aller Abhängigkeiten, auch wenn die letzte Wiederherstellung erfolgreich war. Dieses Flag anzugeben, entspricht dem Löschen der Datei *project.assets.json*. Verfügbar seit .NET Core 2.0 SDK.
+  Erzwingt das Auflösen aller Abhängigkeiten, auch wenn die letzte Wiederherstellung erfolgreich war. Dieses Flag anzugeben, entspricht dem Löschen der Datei *project.assets.json*.
 
 - **`-h|--help`**
 
@@ -105,7 +101,7 @@ Die zu erstellende Projekt- oder Projektmappendatei. Wenn Sie keine Projekt- ode
 
 - **`--no-restore`**
 
-  Führt keine implizite Wiederherstellung während der Projekterstellung durch. Verfügbar seit .NET Core 2.0 SDK.
+  Führt keine implizite Wiederherstellung während der Projekterstellung durch.
 
 - **`--nologo`**
 

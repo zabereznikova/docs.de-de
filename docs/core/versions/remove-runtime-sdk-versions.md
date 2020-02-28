@@ -5,12 +5,12 @@ ms.date: 12/17/2019
 author: billwagner
 ms.author: wiwagn
 ms.custom: updateeachrelease
-ms.openlocfilehash: 82fbccdec0323b54d313960279fcbfeeb6033319
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: 71c11825981c6259a779e1ac8f947a41618e922d
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76920400"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503462"
 ---
 # <a name="how-to-remove-the-net-core-runtime-and-sdk"></a>Entfernen von .NET Core-Runtime und SDK
 
@@ -28,10 +28,17 @@ Ab .NET Core 2.1 verfügt die .NET-CLI über Optionen, mit denen Sie die auf Ihr
 
 <!-- markdownlint-disable MD025 -->
 
-# <a name="windowstabwindows"></a>[Windows](#tab/windows)
+# <a name="windows"></a>[Windows](#tab/windows)
+
+Durch Ausführen des folgenden Befehls:
+
+```dotnetcli
+dotnet --list-sdks
+```
+
+Erhalten Sie eine Ausgabe ähnlich der folgenden:
 
 ```console
-C:\> dotnet --list-sdks
 2.1.200-preview-007474 [C:\Program Files\dotnet\sdk]
 2.1.200-preview-007480 [C:\Program Files\dotnet\sdk]
 2.1.200-preview-007509 [C:\Program Files\dotnet\sdk]
@@ -47,8 +54,17 @@ C:\> dotnet --list-sdks
 2.1.400-preview-009063 [C:\Program Files\dotnet\sdk]
 2.1.400-preview-009088 [C:\Program Files\dotnet\sdk]
 2.1.400-preview-009171 [C:\Program Files\dotnet\sdk]
+```
 
-C:\> dotnet --list-runtimes
+Und durch Ausführen des folgenden Befehls:
+
+```dotnetcli
+dotnet --list-runtimes
+```
+
+Erhalten Sie eine Ausgabe ähnlich der folgenden:
+
+```console
 Microsoft.AspNetCore.All 2.1.0-preview2-final [C:\Program Files\dotnet\shared\Microsoft.AspNetCore.All]
 Microsoft.AspNetCore.All 2.1.0 [C:\Program Files\dotnet\shared\Microsoft.AspNetCore.All]
 Microsoft.AspNetCore.All 2.1.1 [C:\Program Files\dotnet\shared\Microsoft.AspNetCore.All]
@@ -66,10 +82,17 @@ Microsoft.NETCore.App 2.1.1 [C:\Program Files\dotnet\shared\Microsoft.NETCore.Ap
 Microsoft.NETCore.App 2.1.2 [C:\Program Files\dotnet\shared\Microsoft.NETCore.App]
 ```
 
-# <a name="linuxtablinux"></a>[Linux](#tab/linux)
+# <a name="linux"></a>[Linux](#tab/linux)
+
+Durch Ausführen des folgenden Befehls:
+
+```dotnetcli
+dotnet --list-sdks
+```
+
+Erhalten Sie eine Ausgabe ähnlich der folgenden:
 
 ```console
-$ dotnet --list-sdks
 1.0.1 [/usr/share/dotnet/sdk]
 1.0.4 [/usr/share/dotnet/sdk]
 2.0.0-preview1-005977 [/usr/share/dotnet/sdk]
@@ -79,8 +102,17 @@ $ dotnet --list-sdks
 2.1.300-preview2-008530 [/usr/share/dotnet/sdk]
 2.1.300 [/usr/share/dotnet/sdk]
 2.1.301 [/usr/share/dotnet/sdk]
+```
 
-$ dotnet --list-runtimes
+Und durch Ausführen des folgenden Befehls:
+
+```dotnetcli
+dotnet --list-runtimes
+```
+
+Erhalten Sie eine Ausgabe ähnlich der folgenden:
+
+```console
 Microsoft.AspNetCore.All 2.1.0-preview2-final [/usr/share/dotnet/shared/Microsoft.AspNetCore.All]
 Microsoft.AspNetCore.All 2.1.0 [/usr/share/dotnet/shared/Microsoft.AspNetCore.All]
 Microsoft.AspNetCore.All 2.1.1 [/usr/share/dotnet/shared/Microsoft.AspNetCore.All]
@@ -100,10 +132,17 @@ Microsoft.NETCore.App 2.1.0 [/usr/share/dotnet/shared/Microsoft.NETCore.App]
 Microsoft.NETCore.App 2.1.1 [/usr/share/dotnet/shared/Microsoft.NETCore.App]
 ```
 
-# <a name="macostabmacos"></a>[macOS](#tab/macos)
+# <a name="macos"></a>[macOS](#tab/macos)
+
+Durch Ausführen des folgenden Befehls:
+
+```dotnetcli
+dotnet --list-sdks
+```
+
+Erhalten Sie eine Ausgabe ähnlich der folgenden:
 
 ```console
-$ dotnet --list-sdks
 1.0.1 [/usr/local/share/dotnet/sdk]
 1.0.4 [/usr/local/share/dotnet/sdk]
 2.0.0-preview1-005977 [/usr/local/share/dotnet/sdk]
@@ -113,8 +152,17 @@ $ dotnet --list-sdks
 2.1.300-preview2-008530 [/usr/local/share/dotnet/sdk]
 2.1.300 [/usr/local/share/dotnet/sdk]
 2.1.301 [/usr/local/share/dotnet/sdk]
+```
 
-$ dotnet --list-runtimes
+Und durch Ausführen des folgenden Befehls:
+
+```dotnetcli
+dotnet --list-runtimes
+```
+
+Erhalten Sie eine Ausgabe ähnlich der folgenden:
+
+```console
 Microsoft.AspNetCore.All 2.1.0-preview2-final [/usr/local/share/dotnet/shared/Microsoft.AspNetCore.All]
 Microsoft.AspNetCore.All 2.1.0 [/usr/local/share/dotnet/shared/Microsoft.AspNetCore.All]
 Microsoft.AspNetCore.All 2.1.1 [/usr/local/share/dotnet/shared/Microsoft.AspNetCore.All]
@@ -138,7 +186,7 @@ Microsoft.NETCore.App 2.1.1 [/usr/local/share/dotnet/shared/Microsoft.NETCore.Ap
 
 ## <a name="uninstall-net-core"></a>Deinstallieren von .NET Core
 
-# <a name="windowstabwindows"></a>[Windows](#tab/windows)
+# <a name="windows"></a>[Windows](#tab/windows)
 
 .NET Core entfernt über das Windows-Dialogfeld **Programme hinzufügen/entfernen** Versionen der .NET Core-Runtime und des SDK. Die folgende Abbildung zeigt das Dialogfeld **Programme hinzufügen/entfernen** mit mehreren installierten Versionen der .NET-Runtime und des SDK.
 
@@ -146,7 +194,7 @@ Microsoft.NETCore.App 2.1.1 [/usr/local/share/dotnet/shared/Microsoft.NETCore.Ap
 
 Wählen Sie sämtliche Versionen aus, die Sie von Ihrem Computer entfernen möchten, und klicken Sie auf **Deinstallieren**.
 
-# <a name="linuxtablinux"></a>[Linux](#tab/linux)
+# <a name="linux"></a>[Linux](#tab/linux)
 
 Für die Deinstallation von .NET Core (Runtime oder SDK) unter Linux gibt es weitere Optionen. Die beste Möglichkeit zur Deinstallation von .NET Core besteht in der Spiegelung der für die Installation von .NET Core verwendeten Aktion. Die Details hängen davon ab, welche Verteilung und Installationsmethode Sie auswählen.
 
@@ -189,7 +237,7 @@ sudo rm -rf /usr/share/dotnet/host/fxr/1.0.1
 
 Die übergeordneten Verzeichnisse für das SDK und die Runtime werden in der Ausgabe des Befehls `dotnet --list-sdks` und `dotnet --list-runtimes` aufgeführt, wie in der obigen Tabelle dargestellt.
 
-# <a name="macostabmacos"></a>[macOS](#tab/macos)
+# <a name="macos"></a>[macOS](#tab/macos)
 
 Unter Mac müssen die SDKs und Runtimes separat entfernt werden, indem das Verzeichnis entfernt wird, das diese Version enthält. Zum Entfernen des SDK und der Runtime von Version 1.0.1 würden Sie beispielsweise die folgenden Bash-Befehle verwenden:
 
@@ -224,7 +272,7 @@ Ab Visual Studio 2019, Version 16.3, verwaltet Visual Studio eine eigene Kopie 
 
 ## <a name="remove-the-nuget-fallback-folder"></a>Entfernen des NuGet-Fallbackordners
 
-Vor dem .NET Core 3.0 SDK verwendeten die .NET Core SDK-Installer den Ordner *NuGetFallbackFolder-*, um einen Cache mit NuGet-Paketen zu speichern. Dieser Cache wurde bei Vorgängen wie `dotnet restore` oder `dotnet build /t:Restore`verwendet. `NuGetFallbackFolder` befindet sich unter Windows unter *C:\Programme\dotnet\sdk* und unter macOS unter */usr/local/share/dotnet/sdk*.
+Vor dem .NET Core 3.0 SDK verwendeten die .NET Core SDK-Installer den Ordner *NuGetFallbackFolder-* , um einen Cache mit NuGet-Paketen zu speichern. Dieser Cache wurde bei Vorgängen wie `dotnet restore` oder `dotnet build /t:Restore`verwendet. `NuGetFallbackFolder` befindet sich unter Windows unter *C:\Programme\dotnet\sdk* und unter macOS unter */usr/local/share/dotnet/sdk*.
 
 Möglicherweise möchten Sie diesen Ordner entfernen, wenn Folgendes zutrifft:
 

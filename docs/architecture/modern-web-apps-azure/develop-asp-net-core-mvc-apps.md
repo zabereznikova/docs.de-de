@@ -3,13 +3,13 @@ title: Entwickeln von ASP.NET Core MVC-Apps
 description: Entwerfen moderner Webanwendungen mit ASP.NET Core und Azure | Entwickeln von ASP.NET Core-Apps
 author: ardalis
 ms.author: wiwagn
-ms.date: 01/30/2019
-ms.openlocfilehash: 7bc30db084f361e6c4654b89e69230b379b0136c
-ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
+ms.date: 12/04/2019
+ms.openlocfilehash: a18b4dfc60c7d3971136f73f333b7225735710b3
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76116532"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503943"
 ---
 # <a name="develop-aspnet-core-mvc-apps"></a>Entwickeln von ASP.NET Core MVC-Apps
 
@@ -26,7 +26,7 @@ Wenn Sie eine neue ASP.NET Core-App erstellen, sollten Sie sich zuvor genau übe
 
 ### <a name="why-razor-pages"></a>Was spricht für Razor Pages?
 
-Razor Pages werden standardmäßig für neue Webanwendungen in Visual Studio verwendet. Mithilfe von Razor Pages können Sie seitenbasierte Anwendungsfeatures (wie Nicht-Single-Page-Formulare) einfacher erstellen. Wenn Controller und Ansichten verwendet werden, enthalten Anwendungen häufig sehr große Controller, die mit mehreren Abhängigkeiten und Ansichtsmodellen arbeiten und viele unterschiedliche Ansichten zurückgeben. Dadurch wird die Anwendung sehr komplex, und häufig sind Controller vorhanden, die das Single Responsibility Principle (Prinzip der eindeutigen Zuständigkeit) oder das Offen-Geschlossen-Prinzip nicht befolgen. Dieses Problem wird durch Razor Pages behoben, indem die serverseitige Logik für eine bestimmte lokale Seite in einer Webanwendung mit entsprechendem Razor-Markup gekapselt wird. Eine Razor Page ohne serverseitige Logik kann aus einer Razor-Datei bestehen (z.B. „Index.cshtml“). Den meisten nicht trivialen Razor Pages ist jedoch eine Seitenmodellklasse zugeordnet, die üblicherweise genauso wie die Razor-Datei benannt wird, aber die Erweiterung „.cs“ aufweist (z.B. „Index.cshtml.cs“).
+Razor Pages werden standardmäßig für neue Webanwendungen in Visual Studio verwendet. Mithilfe von Razor Pages können Sie seitenbasierte Anwendungsfeatures (wie Nicht-Single-Page-Formulare) einfacher erstellen. Wenn Controller und Ansichten verwendet werden, enthalten Anwendungen häufig sehr große Controller, die mit mehreren Abhängigkeiten und Ansichtsmodellen arbeiten und viele unterschiedliche Ansichten zurückgeben. Dadurch wird die Anwendung komplexer, und häufig sind Controller vorhanden, die das Single Responsibility Principle (Prinzip der eindeutigen Verantwortlichkeit) oder das Offen-Geschlossen-Prinzip nicht befolgen. Dieses Problem wird durch Razor Pages behoben, indem die serverseitige Logik für eine bestimmte lokale Seite in einer Webanwendung mit entsprechendem Razor-Markup gekapselt wird. Eine Razor Page ohne serverseitige Logik kann aus einer Razor-Datei bestehen (z.B. „Index.cshtml“). Den meisten nicht trivialen Razor Pages ist jedoch eine Seitenmodellklasse zugeordnet, die üblicherweise genauso wie die Razor-Datei benannt wird, aber die Erweiterung „.cs“ aufweist (z.B. „Index.cshtml.cs“).
 
 Das Seitenmodell einer Razor Page kombiniert die Zuständigkeit eines MVC und eines Ansichtsmodells. Anforderungen werden nicht mit Controlleraktionsmethoden verarbeitet, sondern Seitenmodellhandler wie OnGet() werden ausgeführt, um die zugehörige Seite standardmäßig zu rendern. Durch Razor Pages wird das Erstellen einzelner Seiten in einer ASP.NET Core-App vereinfacht, während alle Architekturfeatures von ASP.NET Core MVC genutzt werden können. Diese sind für neue seitenbasierte Funktionen gut geeignet.
 
@@ -43,9 +43,9 @@ Im Wesentlichen dienen ASP.NET Core-Apps dazu, eingehende Anforderungen ausgehen
 ASP.NET Core MVC-Apps können entweder herkömmliche Routen oder Attributrouten oder beides gleichzeitig verwenden. Herkömmliche Routen werden als Code definiert und geben unter Verwendung einer wie im Folgenden dargestellten Syntax _Routingkonventionen_ an:
 
 ```csharp
-app.UseMvc(routes =>
+app.UseEndpoints(endpoints =>
 {
-    routes.MapRoute("default","{controller=Home}/{action=Index}/{id?}");
+    endpoints.MapControllerRoute(name: "default", pattern: "{controller=Home}/{action=Index}/{id?}");
 });
 ```
 
@@ -129,9 +129,9 @@ public class Startup
     public Startup(IHostingEnvironment env)
     {
         var builder = new ConfigurationBuilder()
-        .SetBasePath(env.ContentRootPath)
-        .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
-        .AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional: true);
+            .SetBasePath(env.ContentRootPath)
+            .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
+            .AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional: true);
     }
 }
 ```
@@ -152,7 +152,7 @@ public void Configure(IApplicationBuilder app,
 Die Methode „ConfigureServices“ stellt eine Ausnahme in Bezug auf dieses Verhalten dar, da sie nur einen Parameter des Typs IServiceCollection benötigt. Sie muss nicht unbedingt Dependency Injection unterstützen, da sie einerseits dafür verantwortlich ist, dem Dienstcontainer Objekte hinzuzufügen, und andererseits über den IServiceCollection-Parameter Zugriff auf alle zu diesem Zeitpunkt konfigurierten Dienste hat. Daher können Sie in der gesamten Startklasse mit Abhängigkeiten arbeiten, die in der ASP.NET Core-Dienstauflistung definiert sind, indem Sie entweder den benötigten Dienst als Parameter anfordern oder Sie mit IServiceCollection in der Methode ConfigureServices arbeiten.
 
 > [!NOTE]
-> Wenn Sie sicherstellen müssen, dass bestimmte Dienste in Ihrer Startklasse verfügbar sind, können Sie diese mithilfe von WebHostBuilder und der Methode ConfigureServices konfigurieren.
+> Wenn Sie sicherstellen müssen, dass bestimmte Dienste in Ihrer Startup-Klasse verfügbar sind, können Sie diese mithilfe von WebHostBuilder und der ConfigureServices-Methode innerhalb des Aufrufs von CreateDefaultBuilder konfigurieren.
 
 Bei der Startklasse handelt es sich um ein Modell zur Vorgehensweise bei der Strukturierung anderer Bestandteile Ihrer ASP.NET Core-Anwendung – angefangen bei Controllern über Middleware bis hin zu Filtern Ihrer eigenen Dienste. Auf jeden Fall sollten Sie das [Prinzip der expliziten Abhängigkeiten](https://deviq.com/explicit-dependencies-principle/) beachten und besser Ihre Abhängigkeiten anfordern als sie direkt zu erstellen sowie in der gesamten Anwendung Dependency Injection nutzen. Achten Sie darauf, wo und wie Sie Implementierungen direkt instanziieren, insbesondere wenn es um Dienste und Objekte geht, die mit der Infrastruktur arbeiten und Nebenwirkungen haben. Sie sollten besser mit Abstraktionen arbeiten, die im Anwendungskern definiert sind und als Argumente an vordefinierte Verweise auf bestimmte Implementierungstypen übergeben wurden.
 
@@ -191,15 +191,10 @@ public class HomeController
 Außerdem müssen Sie die Bereichsunterstützung zu Ihren Routen hinzufügen:
 
 ```csharp
-app.UseMvc(routes =>
+app.UseEndpoints(endpoints =>
 {
-    // Areas support
-    routes.MapRoute(
-    name: "areaRoute",
-    template: "{area:exists}/{controller=Home}/{action=Index}/{id?}");
-    routes.MapRoute(
-    name: "default",
-    template: "{controller=Home}/{action=Index}/{id?}");
+    endpoints.MapControllerRoute(name: "areaRoute", pattern: "{area:exists}/{controller=Home}/{action=Index}/{id?}");
+    endpoints.MapControllerRoute(name: "default", pattern: "{controller=Home}/{action=Index}/{id?}");
 });
 ```
 
@@ -237,7 +232,7 @@ Geben Sie dann diese Konvention als eine Option an, wenn Sie in ConfigureService
 services.AddMvc(o => o.Conventions.Add(new FeatureConvention()));
 ```
 
-ASP.NET Core MVC verwendet außerdem eine Konvention, um Ansichten zu finden. Sie können diese Konvention mit einer benutzerdefinierten Konvention überschreiben, indem Sie den obenstehend unter FeatureConvention angegebenen Featurenamen verwenden, damit in Ihren Featureordnern Ansichten gefunden werden. Mehr Informationen zu diesem Ansatz finden Sie in dem MSDN-Artikel [ASP.NET Core: Feature Slices für ASP.NET Core MVC](https://docs.microsoft.com/archive/msdn-magazine/2016/september/asp-net-core-feature-slices-for-asp-net-core-mvc). Auf dieser Seite können Sie auch ein Beispiel herunterladen.
+ASP.NET Core MVC verwendet außerdem eine Konvention, um Ansichten zu finden. Sie können diese Konvention mit einer benutzerdefinierten Konvention überschreiben, indem Sie den obenstehend unter FeatureConvention angegebenen Featurenamen verwenden, damit in Ihren Featureordnern Ansichten gefunden werden. Weitere Informationen zu diesem Ansatz finden Sie im MSDN Magazine-Artikel [ASP.NET Core: Feature Slices für ASP.NET Core MVC](https://docs.microsoft.com/archive/msdn-magazine/2016/september/asp-net-core-feature-slices-for-asp-net-core-mvc). Auf dieser Seite können Sie auch ein Beispiel herunterladen.
 
 ### <a name="cross-cutting-concerns"></a>Übergreifende Belange
 
@@ -282,7 +277,7 @@ public async Task<IActionResult> Put(int id, [FromBody]Author author)
 }
 ```
 
-Vermeiden Sie, dass Ihre Aktionsmethoden mit bedingtem Code wie diesem überladen werden. Pullen Sie die Richtlinien stattdessen in Filter, die nach Bedarf angewendet werden können. In diesem Beispiel kann die Modellvalidierung, die jedes Mal ausgeführt werden sollte, wenn ein Befehl an die API gesendet wird, durch eins der folgenden Attribute ersetzt werden:
+Vermeiden Sie, dass Ihre Aktionsmethoden mit bedingtem Code wie diesem überladen werden. Pullen Sie die Richtlinien stattdessen in Filter, die nach Bedarf angewendet werden können. In diesem Beispiel kann die Modellvalidierung, die jedes Mal erfolgen sollte, wenn ein Befehl an die API gesendet wird, durch das folgende Attribut ersetzt werden:
 
 ```csharp
 public class ValidateModelAttribute : ActionFilterAttribute
@@ -311,7 +306,7 @@ public async Task<IActionResult> Put(int id, [FromBody]Author author)
 }
 ```
 
-Weitere Informationen zum Implementieren von Filtern und ein Arbeitsbeispiel zum Herunterladen finden Sie in dem MSDN-Artikel [ASP.NET Core – ASP.NET Core MVC-Filter in der Praxis](https://docs.microsoft.com/archive/msdn-magazine/2016/august/asp-net-core-real-world-asp-net-core-mvc-filters).
+Weitere Informationen zum Implementieren von Filtern und ein Arbeitsbeispiel zum Herunterladen finden Sie im MSDN Magazine-Artikel [ASP.NET Core – ASP.NET Core MVC-Filter in der Praxis](https://docs.microsoft.com/archive/msdn-magazine/2016/august/asp-net-core-real-world-asp-net-core-mvc-filters).
 
 > ### <a name="references--structuring-applications"></a>Ressourcen: Strukturieren von Anwendungen
 >
@@ -321,7 +316,7 @@ Weitere Informationen zum Implementieren von Filtern und ein Arbeitsbeispiel zum
 >   <https://docs.microsoft.com/archive/msdn-magazine/2016/september/asp-net-core-feature-slices-for-asp-net-core-mvc>
 > - **Filter**  
 >   <https://docs.microsoft.com/aspnet/core/mvc/controllers/filters>
-> - **ASP.NET Core – ASP.NET Core MVC-Filter in der Praxis**  
+> - **MSDN Magazine: ASP.NET Core MVC-Filter in der Praxis**  
 >   <https://docs.microsoft.com/archive/msdn-magazine/2016/august/asp-net-core-real-world-asp-net-core-mvc-filters>
 
 ## <a name="security"></a>Sicherheit
@@ -356,11 +351,9 @@ public void Configure(IApplicationBuilder app)
 {
     app.UseStaticFiles();
     app.UseIdentity();
-    app.UseMvc(routes =>
+    app.UseEndpoints(endpoints =>
     {
-        routes.MapRoute(
-        name: "default",
-        template: "{controller=Home}/{action=Index}/{id?}");
+        endpoints.MapControllerRoute(name: "default", pattern: "{controller=Home}/{action=Index}/{id?}");
     });
 }
 ```
@@ -445,8 +438,6 @@ Gehen Sie insbesondere mit Bedacht vor, wenn Sie eigene Kryptografien, Benutzerm
 
 ASP.NET Core-Apps können nicht nur Seiten bereitstellen und über Web-APIs auf Anforderungen für Daten antworten, sondern auch direkt mit verbundenen Clients kommunizieren. Für diese ausgehende Kommunikation können verschiedene Transporttechnologien verwendet werden, wobei am häufigsten die Technologie WebSockets verwendet wird. ASP.NET Core SignalR ist eine Bibliothek, mit der Sie Ihren Anwendungen leicht Funktionen für die Echtzeitkommunikation zwischen Server und Client hinzufügen können. SignalR unterstützt verschiedene Transporttechnologien, einschließlich WebSockets, und nimmt dem Entwickler einen Großteil der Implementierungsdetails ab.
 
-ASP.NET Core SignalR ist seit Version 2.1 von ASP.NET Core verfügbar.
-
 Die Clientkommunikation in Echtzeit erweist sich in vielen Anwendungsszenarios als nützlich. Dabei macht es keinen Unterschied, ob Sie WebSockets oder andere Methoden verwenden. Beispiele:
 
 - Anwendungen für Livechats
@@ -520,7 +511,7 @@ Ihr Domänenmodell besteht aus Objekten, die miteinander interagieren, um das Ve
 
 - [Domänenereignisse](https://martinfowler.com/eaaDev/DomainEvent.html), die Vorgänge darstellen, die innerhalb des System ausgeführt werden und für andere Bestandteile des Systems von Bedeutung sind.
 
-Beachten Sie, dass ein DDD-Domänenmodell komplexes Verhalten innerhalb des Modells kapseln sollte. Insbesondere Entitäten sollten nicht nur Auflistungen von Eigenschaften sein. Wenn das Domänenmodell kein Verhalten aufweist und nur den Status des Systems darstellt, wird es als [anämisches Modell](https://deviq.com/anemic-model/) bezeichnet. Diese Art von Modellen sollten in Verbindung mit DDD nicht auftreten.
+Ein DDD-Domänenmodell muss komplexes Verhalten innerhalb des Modells kapseln. Insbesondere Entitäten sollten nicht nur Auflistungen von Eigenschaften sein. Wenn das Domänenmodell kein Verhalten aufweist und nur den Status des Systems darstellt, wird es als [anämisches Modell](https://deviq.com/anemic-model/) bezeichnet. Diese Art von Modellen sollten in Verbindung mit DDD nicht auftreten.
 
 Neben diesen Modelltypen verwendet DDD in der Regel verschiedene Muster:
 
@@ -555,11 +546,11 @@ Sie können auch einen hybriden Ansatz auswählen und DDD nur für Transaktionsb
 
 ## <a name="deployment"></a>Bereitstellung
 
-Unabhängig davon, wo die ASP.NET Core-Anwendung gehostet wird, besteht deren Bereitstellung aus einigen Schritten. Als Erstes muss die Anwendung veröffentlicht werden. Dafür können Sie den CLI-Befehl „dotnet publish“ verwenden. Dadurch wird die Anwendung kompiliert und alle Dateien, die benötigt werden, um die Anwendung auszuführen, werden in einem festgelegten Ordner platziert. Wenn Sie die Bereitstellung über Visual Studio ausführen, wird dieser Schritt automatisch für Sie ausgeführt. Der Ordner „publish“ enthält EXE- und DLL-Dateien für die Anwendung und ihre Abhängigkeiten. Unabhängige Anwendungen umfassen außerdem eine Version der .NET-Runtime. Außerdem enthalten ASP.NET Core-Anwendungen Konfigurationsdateien, statische Clientobjekte und MVC-Ansichten.
+Unabhängig davon, wo die ASP.NET Core-Anwendung gehostet wird, besteht deren Bereitstellung aus einigen Schritten. Als Erstes muss die Anwendung veröffentlicht werden. Dafür können Sie den CLI-Befehl `dotnet publish` verwenden. Dadurch wird die Anwendung kompiliert und alle Dateien, die benötigt werden, um die Anwendung auszuführen, werden in einem festgelegten Ordner platziert. Wenn Sie die Bereitstellung über Visual Studio ausführen, wird dieser Schritt automatisch für Sie ausgeführt. Der Ordner „publish“ enthält EXE- und DLL-Dateien für die Anwendung und ihre Abhängigkeiten. Unabhängige Anwendungen umfassen außerdem eine Version der .NET-Runtime. Außerdem enthalten ASP.NET Core-Anwendungen Konfigurationsdateien, statische Clientobjekte und MVC-Ansichten.
 
 Bei ASP.NET Core-Anwendungen handelt es sich um Konsolenanwendungen, die gestartet werden müssen, wenn der Server startet, und die neugestartet werden müssen, wenn die Anwendung bzw. der Server abstürzt. Wenn Sie diesen Vorgang automatisieren möchten, können Sie einen Prozess-Manager verwenden. Die am häufigsten verwendeten Prozess-Manager für ASP.NET Core sind Nginx und Apache unter Linux und IIS oder Windows Service unter Windows.
 
-ASP.NET Core-Anwendungen, die im Webserver von Kestrel gehostet werden, müssen nicht nur einen Prozess-Manager, sondern auch einen Reverseproxyserver verwenden. Ein Reverseproxyserver empfängt HTTP-Anforderungen über das Internet und leitet diese nach einer vorbereitenden Verarbeitung an Kestrel weiter. Reverseproxyserver stellen eine Sicherheitsschicht für Anwendungen dar und sind für Edge-Bereitstellungen erforderlich, die für Datenverkehr aus dem Internet verfügbar gemacht werden. Kestrel ist noch recht neu und bietet noch keine Schutzmaßnahmen gegen bestimmte Angriffe. Kestrel unterstützt das Hosten von mehreren Anwendungen auf einem Port nicht. Daher können Techniken wie Hostheader nicht verwendet werden, um das Hosten von mehreren Anwendungen auf einem Port und einer IP-Adresse zu ermöglichen.
+Zusätzlich zu einem Prozess-Manager können ASP.NET Core-Anwendungen einen Reverseproxyserver verwenden. Ein Reverseproxyserver empfängt HTTP-Anforderungen aus dem Internet und leitet diese nach einer vorbereitenden Verarbeitung an Kestrel weiter. Reverseproxyserver stellen eine Sicherheitsebene für die Anwendung bereit. Kestrel unterstützt das Hosten von mehreren Anwendungen auf einem Port nicht. Daher können Techniken wie Hostheader nicht verwendet werden, um das Hosten von mehreren Anwendungen auf einem Port und einer IP-Adresse zu ermöglichen.
 
 ![Von Kestrel zum Internet](./media/image7-5.png)
 

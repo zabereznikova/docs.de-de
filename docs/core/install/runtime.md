@@ -6,12 +6,12 @@ ms.author: adegeo
 ms.date: 12/04/2019
 ms.custom: updateeachrelease
 zone_pivot_groups: operating-systems-set-one
-ms.openlocfilehash: d36909e06bd9a3de0940c4c1b2b9eacbf9cafe7f
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: ba50eb222d9eab6bffbb8ebfdf0ecf47951ce719
+ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75740596"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77543520"
 ---
 # <a name="install-the-net-core-runtime"></a>Installieren der .NET Core-Runtime
 
@@ -69,6 +69,8 @@ export PATH=$PATH:$HOME/dotnet
 >
 > Fügen Sie außerdem `export DOTNET_ROOT=$HOME/dotnet` am Ende der Datei hinzu.
 
+Bei diesem Ansatz können Sie unterschiedliche Versionen an separaten Speicherorten installieren und explizit auswählen, welche Version von welcher Anwendung verwendet werden soll.
+
 ::: zone-end
 
 ::: zone pivot="os-windows"
@@ -86,11 +88,30 @@ dotnet-install.ps1 -Channel 3.1 -Runtime aspnetcore
 > [!NOTE]
 > Durch den obigen Befehl wird die ASP.NET Core-Runtime für maximale Kompatibilität installiert. Die ASP.NET Core-Runtime enthält auch die .NET Core-Standardruntime.
 
+## <a name="download-and-manually-install"></a>Herunterladen und manuelles Installieren
+
+[Laden Sie zunächst ein .NET Core-Binärrelease herunter](#all-net-core-downloads), um die Runtime zu extrahieren und die .NET Core-CLI-Befehle im Terminal bereitzustellen. Erstellen Sie dann ein Installationsverzeichnis wie z. B. `%USERPROFILE%\dotnet`. Extrahieren Sie schließlich die heruntergeladene ZIP-Datei in dieses Verzeichnis.
+
+Standardmäßig verwenden .NET Core-CLI-Befehle und -Apps nicht auf diese Weise installiertes .NET Core. Sie müssen dessen Verwendung explizit auswählen. Ändern Sie hierzu die Umgebungsvariablen, mit denen eine Anwendung gestartet wird:
+
+```console
+set DOTNET_ROOT=%USERPROFILE%\dotnet
+set PATH=%USERPROFILE%\dotnet;%PATH%
+```
+
+Bei diesem Ansatz können Sie mehrere Versionen in separaten Speicherorten installieren und dann explizit auswählen, welcher Installationsspeicherort von einer Anwendung verwendet werden soll, indem die Anwendung mit Umgebungsvariablen ausgeführt wird, die auf diesen Speicherort zeigen.
+
+Selbst wenn diese Umgebungsvariablen festgelegt sind, berücksichtigt .NET Core bei der Auswahl des besten Frameworks für die Ausführung der Anwendung nach wie vor den standardmäßigen globalen Installationsspeicherort. Der Standardwert ist normalerweise `C:\Program Files\dotnet`, den die Installationsprogramme verwenden. Sie können die Runtime anweisen, nur den benutzerdefinierten Installationsspeicherort zu verwenden, indem Sie diese Umgebungsvariable festlegen:
+
+```console
+set DOTNET_MULTILEVEL_LOOKUP=0
+```
+
 ::: zone-end
 
 ::: zone pivot="os-linux,os-macos"
 
-## <a name="install-with-bash-automation"></a>Installieren mit der Bash-Automatisierung
+## <a name="install-with-bash-automation"></a>Installieren mit Bash-Automatisierung
 
 Die [dotnet-Installationsskripts](../tools/dotnet-install-script.md) werden für die Automatisierung und Installationen der Runtime von nicht-Administratoren verwendet. Sie können das Skript über die Seite [dotnet-install-Skriptverweis](../tools/dotnet-install-script.md) herunterladen.
 

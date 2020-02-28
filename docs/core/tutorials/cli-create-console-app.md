@@ -6,12 +6,12 @@ ms.author: adegeo
 ms.date: 12/05/2019
 ms.technology: dotnet-cli
 ms.custom: updateeachrelease
-ms.openlocfilehash: 6e1c7881aa415ea54307d80214001a2f0fe5b4a6
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: af1b374cd14d5070194c035024ce2328c9016646
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76920464"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503546"
 ---
 # <a name="get-started-with-net-core-using-the-net-core-cli"></a>Erste Schritte mit .NET Core unter Verwendung der .NET Core-CLI
 
@@ -28,7 +28,7 @@ Wenn Sie mit der .NET Core-CLI nicht vertraut sind, finden Sie entsprechende Inf
 
 Sie können den Beispielcode im Repository „dotnet/samples“ auf GitHub [anzeigen oder herunterladen](https://github.com/dotnet/samples/tree/master/core/console-apps/HelloMsBuild). Anweisungen zum Herunterladen finden Sie unter [Beispiele und Lernprogramme](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
 
-Öffnen Sie eine Eingabeaufforderung, und erstellen Sie einen Ordner mit dem Namen *Hello*. Navigieren Sie zum erstellten Ordner, und geben Sie Folgendes ein:
+Öffnen Sie eine Eingabeaufforderung, und erstellen Sie einen Ordner mit dem Namen *Hello*. Navigieren Sie zum erstellten Ordner, und geben Sie Folgendes ein.
 
 ```dotnetcli
 dotnet new console
@@ -64,17 +64,25 @@ Hier eine kurze Beschreibung der Schritte:
 
     [dotnet run](../tools/dotnet-run.md) ruft [dotnet build](../tools/dotnet-build.md) auf, um sicherzustellen, dass die Buildziele erstellt wurden, und ruft anschließend `dotnet <assembly.dll>` auf, um die Zielanwendung auszuführen.
     
-    ```console
+    ```dotnetcli
     dotnet run
+    ```
 
+    Sie erhalten die folgende Ausgabe.
+
+    ```console
     Hello World!
     ```
     
     Sie können alternativ `dotnet build` ausführen, um den Code zu kompilieren, ohne die Konsolenanwendungen des Builds auszuführen. Dies führt zu einer als DLL-Datei kompilierten Anwendung, die auf dem Namen des Projekts basiert. In diesem Fall wird die erstellte Datei mit *Hello.dll*  benannt. Diese App kann mit `dotnet bin\Debug\netcoreapp3.1\Hello.dll` unter Windows ausgeführt werden (verwenden Sie für Nicht-Windows-Systeme `/`).
     
-    ```console
+    ```dotnetcli
     dotnet bin\Debug\netcoreapp3.1\Hello.dll
+    ```
 
+    Sie erhalten die folgende Ausgabe.
+
+    ```console
     Hello World!
     ```
     
@@ -98,8 +106,13 @@ Hier eine kurze Beschreibung der Schritte:
 
 03. Führen Sie das Programm aus, und übergeben Sie einen Parameter an die App. Wenn Sie den `dotnet`-Befehl verwenden, um eine App auszuführen, fügen Sie `--` am Ende hinzu. Alles rechts von `--` wird als Parameter an die App übergeben. Im folgenden Beispiel wird der Wert `John` an die App übergeben.
 
+    ```dotnetcli
+    dotnet run -- John
+    ```
+
+    Sie erhalten die folgende Ausgabe.
+
     ```console
-    $ dotnet run -- John
     Hello John!
     Fibonacci Numbers 1-15:
     1: 0
@@ -135,10 +148,15 @@ Einzelne Dateien eignen sich gut für einfache einmalige Programme, aber wenn Si
 
 03. Führen Sie [dotnet build](../tools/dotnet-build.md) aus, um diese Änderungen zu kompilieren.
 
-04. Führen Sie Ihre App aus, indem Sie [dotnet run](../tools/dotnet-run.md) ausführen. Nachfolgend sehen Sie die Programmausgabe:
+04. Führen Sie Ihre App aus, indem Sie [dotnet run](../tools/dotnet-run.md) ausführen.
+
+    ```dotnetcli
+    dotnet run
+    ```
+
+    Sie erhalten die folgende Ausgabe.
 
     ```console
-    $ dotnet run
     0
     1
     1
@@ -160,8 +178,13 @@ Einzelne Dateien eignen sich gut für einfache einmalige Programme, aber wenn Si
 
 Sobald Sie bereit sind, Ihre App zu verteilen, führen Sie den Befehl [dotnet publish](../tools/dotnet-publish.md) aus, um den Ordner _publish_ unter _bin\\debug\\netcoreapp3.1\\publish\\_ zu erzeugen (verwenden Sie für Nicht-Windows-Systeme `/`). Sie können den Inhalt des Ordners _publish_ auf andere Plattformen verteilen, sofern auf diesen bereits die .NET-Laufzeit installiert ist.
 
-```console
+```dotnetcli
 dotnet publish
+```
+
+Sie erhalten eine Ausgabe ähnlich der folgenden.
+
+```console
 Microsoft (R) Build Engine version 16.4.0+e901037fe for .NET Core
 Copyright (C) Microsoft Corporation. All rights reserved.
 
@@ -174,9 +197,13 @@ Die obige Ausgabe kann sich je nach Ihrem aktuellen Ordner und Betriebssystem un
 
 Sie können Ihre veröffentlichte App mit dem Befehl [dotnet](../tools/dotnet.md) ausführen:
 
-```console
+```dotnetcli
 dotnet bin\Debug\netcoreapp3.1\publish\Hello.dll
+```
 
+Sie erhalten die folgende Ausgabe.
+
+```console
 Hello World!
 ```
 

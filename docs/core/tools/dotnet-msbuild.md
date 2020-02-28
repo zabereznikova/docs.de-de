@@ -1,17 +1,17 @@
 ---
 title: Befehl „dotnet msbuild“
 description: Der Befehl dotnet msbuild ermöglicht den Zugriff auf die MSBuild-Befehlszeile.
-ms.date: 12/03/2018
-ms.openlocfilehash: dae1e9f0ca355166d41c11fbafb80c7c9fb29748
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.date: 02/14/2020
+ms.openlocfilehash: 28a32a460d644d3e22f16b5dd9416222ae466e2e
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76733195"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503680"
 ---
 # <a name="dotnet-msbuild"></a>dotnet msbuild
 
-[!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
+**Dieser Artikel gilt für:** ✔️ .NET Core 2.x SDK und neuere Versionen
 
 ## <a name="name"></a>name
 
@@ -31,25 +31,25 @@ Der [dotnet build](dotnet-build.md)-Befehl ist äquivalent zu `dotnet msbuild -r
 
 ## <a name="examples"></a>Beispiele
 
-* Erstellt ein Projekt und seine Abhängigkeiten:
+- Erstellt ein Projekt und seine Abhängigkeiten:
 
   ```dotnetcli
   dotnet msbuild
   ```
 
-* Erstellt ein Projekt und seine Abhängigkeiten mithilfe der Release-Konfiguration:
+- Erstellt ein Projekt und seine Abhängigkeiten mithilfe der Release-Konfiguration:
 
   ```dotnetcli
   dotnet msbuild -property:Configuration=Release
   ```
 
-* Führt das Veröffentlichungsziel aus und veröffentlicht für die RID `osx.10.11-x64`:
+- Führt das Veröffentlichungsziel aus und veröffentlicht für die RID `osx.10.11-x64`:
 
   ```dotnetcli
   dotnet msbuild -target:Publish -property:RuntimeIdentifiers=osx.10.11-x64
   ```
 
-* Zeigen Sie das gesamte Projekt mit allen Zielen an, die über das SDK eingeschlossen werden:
+- Zeigen Sie das gesamte Projekt mit allen Zielen an, die über das SDK eingeschlossen werden:
 
   ```dotnetcli
   dotnet msbuild -preprocess

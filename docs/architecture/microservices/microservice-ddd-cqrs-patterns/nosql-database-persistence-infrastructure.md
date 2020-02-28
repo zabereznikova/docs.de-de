@@ -1,13 +1,13 @@
 ---
 title: Verwenden von NoSQL-Datenbanken als Persistenzinfrastruktur
-description: .NET-Microservicearchitektur für .NET-Containeranwendungen | Übersicht über die Verwendung von NoSql-Datenbanken im Allgemeinen – und Azure Cosmos DB im Speziellen – als Option zum Implementieren von Persistenz
-ms.date: 10/08/2018
-ms.openlocfilehash: 44fc2fa01e2d19efed7314f421a682c0a635a9f6
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+description: Übersicht über die Verwendung von NoSql-Datenbanken im Allgemeinen und Azure Cosmos DB im Speziellen als Option zum Implementieren von Persistenz.
+ms.date: 01/30/2020
+ms.openlocfilehash: 7da4141d9aadc4aaa265ac97d328bc4b7569a0cb
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73737403"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77502397"
 ---
 # <a name="use-nosql-databases-as-a-persistence-infrastructure"></a>Verwenden von NoSQL-Datenbanken als Persistenzinfrastruktur
 
@@ -122,9 +122,9 @@ Wenn Sie Ihr Modell jedoch dauerhaft in der NoSQL-Datenbank speichern, führt di
 
 Sie können über .NET-Code, der in Containern ausgeführt wird, auf Azure Cosmos DB-Datenbanken genau wie über eine beliebige andere .NET-Anwendung zugreifen. Die Microservices „Locations.API“ und „Marketing.API“ in eShopOnContainers werden beispielsweise implementiert, damit sie Azure Cosmos DB-Datenbanken verwenden können.
 
-Aus der Sicht einer Docker-Entwicklungsumgebung gibt es in Azure Cosmos DB jedoch eine Einschränkung. Es ist zwar ein lokaler [Azure Cosmos DB-Emulator](https://docs.microsoft.com/azure/cosmos-db/local-emulator) vorhanden, der auf einem lokalen Entwicklungscomputer (z.B. auf einem PC) ausgeführt werden kann, seit Ende 2017 unterstützt dieser jedoch nur noch Windows, nicht Linux.
+Aus der Sicht einer Docker-Entwicklungsumgebung gibt es in Azure Cosmos DB jedoch eine Einschränkung. Es gibt zwar einen lokalen [Azure Cosmos DB-Emulator](https://docs.microsoft.com/azure/cosmos-db/local-emulator), der auf einem lokalen Entwicklungsrechner ausgeführt werden kann, aber nur Windows unterstützt. Linux und macOS werden nicht unterstützt.
 
-Dieser Emulator kann auch in Docker ausgeführt werden, allerdings nur in Windows-Containern, nicht in Linux-Containern. Dies ist ein anfängliches Handicap für die Entwicklungsumgebung, wenn Ihre Anwendung in Linux-Containern bereitgestellt wird, da eine gleichzeitige Bereitstellung von Linux- und Windows-Containern in Docker für Windows derzeit nicht möglich ist. Alle bereitgestellten Container müssen entweder für Linux oder für Windows bestimmt sein.
+Dieser Emulator kann auch in Docker ausgeführt werden, allerdings nur in Windows- und nicht in Linux-Containern. Dies ist ein anfängliches Handicap für die Entwicklungsumgebung, wenn Ihre Anwendung in Linux-Containern bereitgestellt wird, da eine gleichzeitige Bereitstellung von Linux- und Windows-Containern in Docker für Windows derzeit nicht möglich ist. Alle bereitgestellten Container müssen entweder für Linux oder für Windows bestimmt sein.
 
 Der ideale und einfachere Weg zur Bereitstellung für eine Entwicklungs-/Testlösung besteht darin, Ihre Datenbanksysteme zusammen mit Ihren benutzerdefinierten Containern als Container bereitzustellen, damit Ihre Entwicklungs-/Testumgebungen immer konsistent sind.
 
@@ -273,14 +273,14 @@ Bei der Erstellung eines MongoClient-Objekts ist ein grundlegender Parameter erf
 version: '3.4'
 services:
   # Other services
-  locations.api:
+  locations-api:
     environment:
       # Other settings
-      - ConnectionString=${ESHOP_AZURE_COSMOSDB:-mongodb://nosql.data}
+      - ConnectionString=${ESHOP_AZURE_COSMOSDB:-mongodb://nosqldata}
 
 ```
 
-Die Umgebungsvariable `ConnectionString` wird wie folgt aufgelöst: Wenn die globale Variable `ESHOP_AZURE_COSMOSDB` in der Datei `.env` mit der Azure Cosmos DB-Verbindungszeichenfolge definiert wird, verwendet sie diese für den Zugriff auf die Azure Cosmos DB-Datenbank in der Cloud. Wenn sie nicht definiert ist, nimmt sie den Wert `mongodb://nosql.data` an und verwendet den MongoDB-Entwicklungscontainer.
+Die Umgebungsvariable `ConnectionString` wird wie folgt aufgelöst: Wenn die globale Variable `ESHOP_AZURE_COSMOSDB` in der Datei `.env` mit der Azure Cosmos DB-Verbindungszeichenfolge definiert wird, verwendet sie diese für den Zugriff auf die Azure Cosmos DB-Datenbank in der Cloud. Wenn sie nicht definiert ist, nimmt sie den Wert `mongodb://nosqldata` an und verwendet den MongoDB-Entwicklungscontainer.
 
 Im folgenden Code wird dargestellt, wie die `.env`-Datei mit der globalen Umgebungsvariable in der Azure Cosmos DB-Verbindungszeichenfolge in eShopOnContainers implementiert wird:
 
@@ -299,16 +299,16 @@ ESHOP_PROD_EXTERNAL_DNS_NAME_OR_IP=<YourDockerHostIP>
 #ESHOP_AZURE_SERVICE_BUS=<YourAzureServiceBusInfo>
 ```
 
-Sie sollten die Auskommentierung in der Zeile ESHOP_AZURE_COSMOSDB aufheben und diese mit Ihrer Azure Cosmos DB-Verbindungszeichenfolge aktualisieren, die Sie über das Azure-Portal gemäß den Erläuterungen unter [Connect a MongoDB application to Azure Cosmos DB (Verbinden einer MongoDB-Anwendung mit Azure Cosmos DB)](https://docs.microsoft.com/azure/cosmos-db/connect-mongodb-account) abgerufen haben.
+Heben Sie die Auskommentierung in der Zeile ESHOP_AZURE_COSMOSDB auf, und aktualisieren Sie diese mit Ihrer Azure Cosmos DB-Verbindungszeichenfolge, die Sie über das Azure-Portal gemäß den Erläuterungen unter [Verbinden einer MongoDB-Anwendung mit Azure Cosmos DB](https://docs.microsoft.com/azure/cosmos-db/connect-mongodb-account) abgerufen haben.
 
-Wenn die globale Variable `ESHOP_AZURE_COSMOSDB` leer ist, d.h. sie in der `.env`-Datei auskommentiert wurde, verwendet der Container eine standardmäßige MongoDB-Verbindungszeichenfolge, die auf den lokalen MongoDB-Container verweist, der in eShopOnContainers unter dem Namen `nosql.data` bereitgestellt und in der Datei „docker-compose“ definiert wurde. Dies wird im folgenden YML-Code dargestellt.
+Wenn die globale Variable `ESHOP_AZURE_COSMOSDB` leer ist, was bedeutet, dass Sie in der Datei `.env` auskommentiert ist, verwendet der Container eine standardmäßige MongoDB-Verbindungszeichenfolge. Diese Verbindungszeichenfolge verweist auf den lokalen MongoDB-Container, der in eShopOnContainers unter dem Namen `nosqldata` bereitgestellt und in der Datei „docker-compose“ definiert wurde. Dies wird im folgenden YML-Code dargestellt:
 
 ``` yml
 # docker-compose.yml
 version: '3.4'
 services:
   # ...Other services...
-  nosql.data:
+  nosqldata:
     image: mongo
 ```
 

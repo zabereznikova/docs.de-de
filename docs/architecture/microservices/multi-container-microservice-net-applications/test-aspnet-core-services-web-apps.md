@@ -1,13 +1,13 @@
 ---
 title: Testen von ASP.NET Core-Diensten und -Webanwendungen
 description: .NET-Microservicearchitektur für .NET-Containeranwendungen | Übersicht über Architektur zum Testen von ASP.NET Core-Diensten und -Webanwendungen in Containern
-ms.date: 10/02/2018
-ms.openlocfilehash: 324b71d830bca43be71e8847fe2dd1b8b1593556
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.date: 01/30/2020
+ms.openlocfilehash: ab3ae6276ea4e4c741731f050913d956046271ca
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73739473"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77501989"
 ---
 # <a name="testing-aspnet-core-services-and-web-apps"></a>Testen von ASP.NET Core-Diensten und -Webanwendungen
 
@@ -68,7 +68,7 @@ Im Gegensatz zu Komponententests umfassen Integrationstests häufig Infrastruktu
 
 Da Integrationstests größere Codesegmente ausführen als Komponententests, und da Integrationstests von Infrastrukturelementen abhängig sind, sind sie tendenziell erheblich langsamer als Komponententests. Daher ist es ratsam, die Anzahl der Integrationstests, die Sie schreiben und ausführen, zu beschränken.
 
-ASP.NET Core enthält einen integrierte Testwebhost, der zum Verarbeiten von HTTP-Anforderungen ohne Netzwerkmehraufwand verwendet werden kann. Dies bedeutet, dass Sie diese Tests schneller ausführen können als bei der Verwendung eines echten Webhosts. Der Testwebhost (TestServer) ist als Microsoft.AspNetCore.TestHost in einer NuGet-Komponente verfügbar. Er kann zu den Integrationstestprojekten hinzugefügt und zum Hosten von ASP.NET Core-Anwendungen verwendet werden.
+ASP.NET Core bietet einen integrierten Testwebhost, der zum Verarbeiten von HTTP-Anforderungen ohne Netzwerkmehrbelastung verwendet werden kann. Dies bedeutet, dass Sie diese Tests schneller ausführen können als bei Verwendung eines echten Webhosts. Der Testwebhost (TestServer) ist als Microsoft.AspNetCore.TestHost in einer NuGet-Komponente verfügbar. Er kann zu den Integrationstestprojekten hinzugefügt und zum Hosten von ASP.NET Core-Anwendungen verwendet werden.
 
 Wie Sie im folgenden Code sehen können, instanziieren Sie die Controller durch den Testhost, wenn Sie Integrationstest für ASP.NET Core-Controller erstellen. Dies ist vergleichbar mit einer HTTP-Anforderung, aber es wird schneller ausgeführt.
 
@@ -140,8 +140,6 @@ Die Tests der Referenzanwendung (eShopOnContainers) wurden kürzlich neu struktu
 
 3. **Funktions-/Integrationstests von Anwendungen** konzentrieren sich auf die Integration von Microservices und umfassen Testsituationen, die sich auf mehrere Microservices beziehen. Diese Tests befinden sich im **Anwendung.FunctionalTests**-Projekt.
 
-4. **Auslastungstests** konzentrieren sich auf die Antwortzeiten für jeden Microservice. Diese Tests befinden sich im Projekt **LoadTest** und setzen die Edition Visual Studio Enterprise 2017 voraus.
-
 Komponenten- und Integrationstest pro Microservice sind in jedem Microservice in einem Testordner enthalten. Anwendungs- und Auslastungstests befinden sich im Testordner des Projektmappenordners (s. Abbildung 6-25).
 
 ![Screenshot von VS, das auf einige der Testprojekte in der Projektmappe verweist.](./media/test-aspnet-core-services-web-apps/eshoponcontainers-test-folder-structure.png)
@@ -160,9 +158,9 @@ services:
     image: redis:alpine
   rabbitmq:
     image: rabbitmq:3-management-alpine
-  sql.data:
-    image: microsoft/mssql-server-linux:2017-latest
-  nosql.data:
+  sqldata:
+    image: mcr.microsoft.com/mssql/server:2017-latest
+  nosqldata:
     image: mongo
 ```
 
@@ -179,13 +177,13 @@ services:
     ports:
       - "15672:15672"
       - "5672:5672"
-  sql.data:
+  sqldata:
     environment:
       - SA_PASSWORD=Pass@word
       - ACCEPT_EULA=Y
     ports:
       - "5433:1433"
-  nosql.data:
+  nosqldata:
     ports:
       - "27017:27017"
 ```

@@ -3,13 +3,13 @@ title: Arbeiten mit Daten in ASP.NET Core-Apps
 description: Entwerfen moderner Webanwendungen mit ASP.NET Core und Azure | Arbeiten mit Daten in ASP.NET Core-Apps
 author: ardalis
 ms.author: wiwagn
-ms.date: 01/30/2019
-ms.openlocfilehash: d3c91f594eedd2636cbf08285f0dee352bc4835a
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.date: 12/04/2019
+ms.openlocfilehash: f37bdca688559236d9b07b97f7ee7459b3be4f39
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76777115"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77449347"
 ---
 # <a name="working-with-data-in-aspnet-core-apps"></a>Arbeiten mit Daten in ASP.NET Core-Apps
 
@@ -200,9 +200,9 @@ private void ConfigureOrder(EntityTypeBuilder<Order> builder)
 }
 ```
 
-In diesem Beispiel weist die `ShipToAddress`-Eigenschaft den Typ `Address` auf. `Address` ist ein Wertobjekt mit mehreren Eigenschaften wie `Street` und `City`. EF Core ordnet das `Order`-Objekt zu seiner Tabelle zu, die eine Spalte pro `Address`-Eigenschaft enthält. Dabei wird jedem Spaltennamen der Name der Eigenschaft vorangestellt. In diesem Beispiel würde die Tabelle `Order` Spalten wie `ShipToAddress_Street` und `ShipToAddress_City` enthalten.
+In diesem Beispiel weist die `ShipToAddress`-Eigenschaft den Typ `Address` auf. `Address` ist ein Wertobjekt mit mehreren Eigenschaften wie `Street` und `City`. EF Core ordnet das `Order`-Objekt zu seiner Tabelle zu, die eine Spalte pro `Address`-Eigenschaft enthält. Dabei wird jedem Spaltennamen der Name der Eigenschaft vorangestellt. In diesem Beispiel würde die Tabelle `Order` Spalten wie `ShipToAddress_Street` und `ShipToAddress_City` enthalten. Es ist auf Wunsch auch möglich, nicht eigenständige Typen in gesonderten Tabellen zu speichern.
 
-[Ab EF Core 2.2 werden Sammlungen von nicht eigenständigen Entitäten unterstützt](https://docs.microsoft.com/ef/core/what-is-new/ef-core-2.2#collections-of-owned-entities)
+Erfahren Sie mehr über die [Unterstützung nicht eigenständiger Typen in EF Core](/ef/core/modeling/owned-entities).
 
 ### <a name="resilient-connections"></a>Robuste Verbindungen
 

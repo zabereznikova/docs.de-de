@@ -2,14 +2,13 @@
 title: Sicheres Speichern von Anwendungsgeheimnissen während der Entwicklung
 description: 'Sicherheit in .NET-Microservices und Webanwendungen: Speichern Sie Ihre Anwendungsgeheimnisse wie Kennwörter, Verbindungszeichenfolgen oder API-Schlüssel nicht in der Quellcodeverwaltung, und informieren Sie sich über die Optionen, die Sie in ASP.NET Core verwenden können, insbesondere müssen Sie wissen, wie „Benutzergeheimnisse“ behandelt werden.'
 author: mjrousos
-ms.author: wiwagn
-ms.date: 10/19/2018
-ms.openlocfilehash: fe8e7fa11c9a4f4cae133c2e09f9e4b4dd40a546
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.date: 01/30/2020
+ms.openlocfilehash: 1ef2246746b9165f1564fa7be64ff7eb28eb1d32
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68675697"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77501796"
 ---
 # <a name="store-application-secrets-safely-during-development"></a>Sicheres Speichern von Anwendungsgeheimnissen während der Entwicklung
 
@@ -39,7 +38,7 @@ Beachten Sie, dass Umgebungsvariablen in der Regel als Nur-Text gespeichert werd
 
 ## <a name="store-secrets-with-the-aspnet-core-secret-manager"></a>Speichern von Geheimnissen mit Secret Manager von ASP.NET Core
 
-Das ASP.NET Core-Tool [Secret Manager](/aspnet/core/security/app-secrets#secret-manager) stellt eine weitere Methode bereit, um Geheimnisse aus dem Quellcode fernzuhalten. Um das Secret Manager-Tool verwenden zu können, installieren Sie das Paket **Microsoft.Extensions.Configuration.SecretManager** in Ihrer Projektdatei. Sobald diese Abhängigkeit vorhanden ist und wiederhergestellt wurde, kann der Befehl `dotnet user-secrets` verwendet werden, um den Wert der Geheimnisse über die Befehlszeile festzulegen. Diese Geheimnisse werden außerhalb vom Quellcode in einer JSON-Datei im Verzeichnis des Profils vom Benutzer (Details variieren je nach Betriebssystem) gespeichert.
+Das ASP.NET Core-Tool [Secret Manager](/aspnet/core/security/app-secrets#secret-manager) stellt eine weitere Methode bereit, um **während der Entwicklung** Geheimnisse aus dem Quellcode fernzuhalten. Um das Secret Manager-Tool verwenden zu können, installieren Sie das Paket **Microsoft.Extensions.Configuration.SecretManager** in Ihrer Projektdatei. Sobald diese Abhängigkeit vorhanden ist und wiederhergestellt wurde, kann der Befehl `dotnet user-secrets` verwendet werden, um den Wert der Geheimnisse über die Befehlszeile festzulegen. Diese Geheimnisse werden außerhalb vom Quellcode in einer JSON-Datei im Verzeichnis des Profils vom Benutzer (Details variieren je nach Betriebssystem) gespeichert.
 
 Geheimnisse, die durch das Secret Manager-Tool festgelegt wurden, werden von der Eigenschaft `UserSecretsId` des Projekts organisiert, das die Geheimnisse verwendet. Aus diesem Grund sollten Sie sicherstellen, dass Sie die Eigenschaft UserSecretsId, wie im folgenden Codeausschnitt gezeigt wird, in Ihrer Projektdatei festlegen. Der Standardwert ist eine von Visual Studio zugewiesene GUID, aber die tatsächliche Zeichenfolge ist nicht wichtig, solange sie auf dem Computer eindeutig ist.
 

@@ -6,15 +6,16 @@ helpviewer_keywords:
 - Visual C#, coding conventions
 - C# language, coding conventions
 ms.assetid: f4f60de9-d49b-4fb6-bab1-20e19ea24710
-ms.openlocfilehash: c56d673de958f49a9ace60350442e89039e1d69f
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 77b173a420f26834855e0bdca3c8d04406ac65d4
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75712103"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77452005"
 ---
 # <a name="c-coding-conventions-c-programming-guide"></a>Codekonventionen für C# (C#-Programmierhandbuch)
- Codierungskonventionen dienen den folgenden Zwecken:  
+
+Codierungskonventionen dienen den folgenden Zwecken:  
   
 - Sie kreieren ein konsistentes Erscheinungsbild des Codes, sodass Leser sich auf den Inhalt und nicht auf das Layout konzentrieren können.  
   
@@ -24,7 +25,7 @@ ms.locfileid: "75712103"
   
 - Sie zeigen die Best Practices für C#.  
 
- Die Richtlinien in diesem Thema werden von Microsoft verwendet, um Beispiele und die Dokumentation zu entwickeln.  
+Die Leitlinien in diesem Artikel werden von Microsoft befolgt, um Beispiele und Dokumentation zu entwickeln.  
   
 ## <a name="naming-conventions"></a>Namenskonventionen  
   
@@ -35,7 +36,8 @@ ms.locfileid: "75712103"
 - Sie müssen nicht die Namen der Objekte ändern, die mit den Designertools von Visual Studio erstellt wurden, um sie an andere Richtlinien anzupassen.  
   
 ## <a name="layout-conventions"></a>Layoutkonventionen  
- Ein gutes Layout verwendet Formatierungen, um die Struktur des Codes hervorzuheben und um den Code verständlicher zu gestalten. Microsoft-Beispiele entsprechen den folgenden Konventionen:  
+
+Ein gutes Layout verwendet Formatierungen, um die Struktur des Codes hervorzuheben und um den Code verständlicher zu gestalten. Microsoft-Beispiele entsprechen den folgenden Konventionen:  
   
 - Verwenden Sie die Code-Editor-Standardeinstellungen (Intelligenter Einzug, vierstelliger Einzug, als Leerzeichen gespeicherte Tabulatoren). Weitere Informationen finden Sie unter [Optionen, Text-Editor, C#, Formatierung](/visualstudio/ide/reference/options-text-editor-csharp-formatting).  
   
@@ -66,7 +68,8 @@ ms.locfileid: "75712103"
 - Erstellen Sie keine formatierten Blöcke mit Sternchen um Kommentare.  
   
 ## <a name="language-guidelines"></a>Sprachrichtlinien  
- In den folgenden Abschnitten werden die Vorgehensweisen beschrieben, denen das C#-Team folgt, um Codebeispiele zu erstellen.  
+
+In den folgenden Abschnitten werden die Vorgehensweisen beschrieben, denen das C#-Team folgt, um Codebeispiele zu erstellen.  
   
 ### <a name="string-data-type"></a>String-Datentyp  
   
@@ -94,33 +97,38 @@ ms.locfileid: "75712103"
   
 - Vermeiden Sie den Einsatz von `var` anstelle von [dynamic](../../language-reference/builtin-types/reference-types.md).  
   
-- Verwenden Sie die implizite Typisierung, um den Typ der Schleifenvariablen in [for](../../language-reference/keywords/for.md)- und [foreach](../../language-reference/keywords/foreach-in.md)-Schleifen zu bestimmen.  
+- Verwenden Sie die implizite Typisierung, um den Typ der Schleifenvariablen in [for](../../language-reference/keywords/for.md)-Schleifen zu bestimmen.  
   
      Im folgenden Beispiel wird die implizite Typisierung in einer `for`-Anweisung verwendet.  
   
      [!code-csharp[csProgGuideCodingConventions#7](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#7)]  
-  
-     Im folgenden Beispiel wird die implizite Typisierung in einer `foreach`-Anweisung verwendet.  
-  
-     [!code-csharp[csProgGuideCodingConventions#12](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#12)]  
-  
+
+- Verwenden Sie nicht die implizite Typisierung, um den Typ der Schleifenvariablen in [foreach](../../language-reference/keywords/foreach-in.md)-Schleifen zu bestimmen.
+
+     Im folgenden Beispiel wird die explizite Typisierung in einer `foreach`-Anweisung verwendet.
+
+     [!code-csharp[csProgGuideCodingConventions#12](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#12)]
+
+     > [!NOTE]
+     > Achten Sie darauf, nicht versehentlich den Typ eines Elements in der Iterable-Sammlung zu ändern. Beispielsweise ist es einfach, in einer `foreach`-Anweisung von <xref:System.Linq.IQueryable?displayProperty=nameWithType> zu <xref:System.Collections.IEnumerable?displayProperty=nameWithType> zu wechseln, was die Ausführung einer Abfrage ändert.
+
 ### <a name="unsigned-data-type"></a>Datentyp ohne Vorzeichen  
   
-- Verwenden Sie im Allgemeinen `int` anstelle von Typen ohne Vorzeichen. Die Verwendung von `int` ist in C# üblich; durch den Einsatz von `int` wird die Interaktion mit anderen Bibliotheken vereinfacht.  
+Verwenden Sie im Allgemeinen `int` anstelle von Typen ohne Vorzeichen. Die Verwendung von `int` ist in C# üblich; durch den Einsatz von `int` wird die Interaktion mit anderen Bibliotheken vereinfacht.  
   
 ### <a name="arrays"></a>Arrays  
   
-- Verwenden Sie die präzise Syntax, wenn Sie Arrays in der Deklarationszeile initialisieren.  
+Verwenden Sie die präzise Syntax, wenn Sie Arrays in der Deklarationszeile initialisieren.  
   
-     [!code-csharp[csProgGuideCodingConventions#13](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#13)]  
+[!code-csharp[csProgGuideCodingConventions#13](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#13)]  
   
 ### <a name="delegates"></a>Delegaten  
   
-- Verwenden Sie die präzise Syntax, um Instanzen eines Delegattyps zu erstellen.  
+Verwenden Sie die präzise Syntax, um Instanzen eines Delegattyps zu erstellen.  
   
-     [!code-csharp[csProgGuideCodingConventions#14](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#14)]  
+[!code-csharp[csProgGuideCodingConventions#14](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#14)]  
   
-     [!code-csharp[csProgGuideCodingConventions#15](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#15)]  
+[!code-csharp[csProgGuideCodingConventions#15](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#15)]  
   
 ### <a name="try-catch-and-using-statements-in-exception-handling"></a>try-catch- und using-Anweisungen in der Ausnahmebehandlung  
   
@@ -134,9 +142,9 @@ ms.locfileid: "75712103"
   
 ### <a name="-and-124124-operators"></a>&&- und &#124;&#124;-Operatoren  
   
-- Vermeiden Sie Ausnahmen und erhöhen Sie die Leistung durch Überspringen von unnötigen Vergleichen, indem Sie [&&](../../language-reference/operators/boolean-logical-operators.md#conditional-logical-and-operator-) anstelle von [&](../../language-reference/operators/boolean-logical-operators.md#logical-and-operator-) und [&#124;&#124;](../../language-reference/operators/boolean-logical-operators.md#conditional-logical-or-operator-) anstelle von [&#124;](../../language-reference/operators/boolean-logical-operators.md#logical-or-operator-) bei Vergleichen verwenden, wie im folgenden Beispiel gezeigt.  
+Vermeiden Sie Ausnahmen und erhöhen Sie die Leistung durch Überspringen von unnötigen Vergleichen, indem Sie [&&](../../language-reference/operators/boolean-logical-operators.md#conditional-logical-and-operator-) anstelle von [&](../../language-reference/operators/boolean-logical-operators.md#logical-and-operator-) und [&#124;&#124;](../../language-reference/operators/boolean-logical-operators.md#conditional-logical-or-operator-) anstelle von [&#124;](../../language-reference/operators/boolean-logical-operators.md#logical-or-operator-) bei Vergleichen verwenden, wie im folgenden Beispiel gezeigt.  
   
-     [!code-csharp[csProgGuideCodingConventions#18](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#18)]  
+[!code-csharp[csProgGuideCodingConventions#18](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#18)]  
   
 ### <a name="new-operator"></a>New-Operator  
   
@@ -154,15 +162,15 @@ ms.locfileid: "75712103"
   
 ### <a name="event-handling"></a>Ereignisbehandlung  
   
-- Wenn Sie einen Ereignishandler definieren, den Sie später nicht entfernen müssen, verwenden Sie einen Lambdaausdruck.  
+Wenn Sie einen Ereignishandler definieren, den Sie später nicht entfernen müssen, verwenden Sie einen Lambdaausdruck.  
   
-     [!code-csharp[csProgGuideCodingConventions#22](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#22)]  
+[!code-csharp[csProgGuideCodingConventions#22](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#22)]  
   
-     [!code-csharp[csProgGuideCodingConventions#23](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#23)]  
+[!code-csharp[csProgGuideCodingConventions#23](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#23)]  
   
 ### <a name="static-members"></a>Statische Member  
   
-- Rufen Sie [statische](../../language-reference/keywords/static.md) Member über diesen Klassennamen auf: *ClassName.StaticMember*. Durch diese Empfehlung ist der Code besser lesbar, da der statische Zugriff eindeutig ist.  Qualifizieren Sie keinen statischen Member, der in einer Basisklasse mit dem Namen einer abgeleiteten Klasse definiert ist.  Während dieser Code kompiliert wird, ist die Lesbarkeit des Codes irreführend, und der Code kann später beschädigt werden, wenn Sie der abgeleiteten Klasse einen statischen Member mit dem gleichen Namen hinzufügen.  
+Rufen Sie [statische](../../language-reference/keywords/static.md) Member über diesen Klassennamen auf: *ClassName.StaticMember*. Durch diese Empfehlung ist der Code besser lesbar, da der statische Zugriff eindeutig ist.  Qualifizieren Sie keinen statischen Member, der in einer Basisklasse mit dem Namen einer abgeleiteten Klasse definiert ist.  Während dieser Code kompiliert wird, ist die Lesbarkeit des Codes irreführend, und der Code kann später beschädigt werden, wenn Sie der abgeleiteten Klasse einen statischen Member mit dem gleichen Namen hinzufügen.  
   
 ### <a name="linq-queries"></a>LINQ-Abfragen  
   
@@ -193,7 +201,8 @@ ms.locfileid: "75712103"
      [!code-csharp[csProgGuideCodingConventions#30](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#30)]  
   
 ## <a name="security"></a>Sicherheit  
- Befolgen Sie die Richtlinien in [Richtlinien für das Schreiben von sicherem Code](../../../standard/security/secure-coding-guidelines.md).  
+
+Befolgen Sie die Richtlinien in [Richtlinien für das Schreiben von sicherem Code](../../../standard/security/secure-coding-guidelines.md).  
   
 ## <a name="see-also"></a>Siehe auch
 

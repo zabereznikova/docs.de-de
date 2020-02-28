@@ -2,14 +2,14 @@
 title: .NET API-Analysetool
 description: Erfahren Sie, wie Sie mit dem .NET API-Analysetool veraltete APIs und Kompatibilitätsprobleme bei Plattformen erkennen können.
 author: oliag
-ms.date: 04/26/2019
+ms.date: 02/20/2020
 ms.technology: dotnet-standard
-ms.openlocfilehash: efbfa89f431bd02cdf86b8eff8704aec63a29b6c
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: f6cf2d8109c564447972afd18c6d6d587711304b
+ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77124246"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77542623"
 ---
 # <a name="net-api-analyzer"></a>.NET API-Analysetool
 
@@ -24,7 +24,7 @@ Das API-Analysetool ist als NuGet-Paket [Microsoft.DotNet.Analyzers.Compatibilit
 
 - Visual Studio 2017 und höhere Versionen oder Visual Studio für Mac (alle Versionen).
 
-## <a name="discovering-deprecated-apis"></a>Ermittlung von veralteten APIs
+## <a name="discover-deprecated-apis"></a>Ermitteln veralteter APIs
 
 ### <a name="what-are-deprecated-apis"></a>Was sind veraltete APIs?
 
@@ -36,7 +36,21 @@ Die .NET-Familie besteht aus einer Reihe großer Produkte, die ständig aktualis
 
 Das API-Analysetool verwendet API-spezifische Fehlercodes, die mit DE beginnen (welches für „Deprecation Error“ steht), über die die Anzeige einzelner Warnungen gesteuert werden können. Die veralteten APIs, die vom Analysetool identifiziert werden, sind im Repository [Dotnet/Platform-Compat](https://github.com/dotnet/platform-compat) definiert.
 
-### <a name="using-the-api-analyzer"></a>Verwendung des API-Analysetools
+### <a name="add-the-api-analyzer-to-your-project"></a>Hinzufügen des API-Analysetools zu Ihrem Projekt
+
+1. Öffnen Sie Visual Studio.
+2. Öffnen Sie das Projekt, für das Sie das Analysetool ausführen möchten.
+3. Klicken Sie im **Projektmappen-Explorer** mit der rechten Maustaste auf Ihr Projekt, und wählen Sie **NuGet-Pakete verwalten** aus. (Diese Option ist auch im Menü **Projekt** verfügbar.)
+4. Auf der Registerkarte NuGet-Paket-Manager:
+   1. Wählen Sie als Paketquelle „nuget.org“ aus.
+   2. Wechseln Sie zur Registerkarte **Durchsuchen**.
+   3. Wählen Sie **Vorabversion einbeziehen** aus.
+   4. Suchen Sie nach **Microsoft.DotNet.Analyzers.Compatibility**.
+   5. Wählen Sie das Paket in der Liste aus.
+   6. Wählen Sie die Schaltfläche **Installieren** aus. 
+   7. Wählen Sie die Schaltfläche **OK** im Dialogfeld **Vorschau der Änderungen** und dann die Schaltfläche **Ich stimme zu** im Dialogfeld **Zustimmung zur Lizenz** aus, wenn Sie den Lizenzbedingungen für die aufgelisteten Pakete zustimmen.
+
+### <a name="use-the-api-analyzer"></a>Verwenden des API-Analysetools
 
 Wenn eine veraltete API, z.B. <xref:System.Net.WebClient>, in einem Code verwendet wird, hebt das API-Analysetool diese durch eine grüne Wellenlinie hervor. Wenn Sie mit der Maus auf den API-Aufruf zeigen, wird eine Glühbirne mit Informationen über die veraltete API angezeigt, wie in folgendem Beispiel zu sehen:
 
@@ -50,14 +64,14 @@ Wenn Sie auf die ID klicken, gelangen Sie auf eine Webseite mit detaillierten In
 
 Warnungen können unterdrückt werden, indem Sie mit der rechten Maustaste auf das markierte Element klicken und die Option **\<Diagnose-ID> unterdrücken** wählen. Es gibt zwei Möglichkeiten, Warnungen zu unterdrücken: 
 
-- [lokal (in der Quelle)](#suppressing-warnings-locally)
-- [global (in einer Unterdrückungsdatei)](#suppressing-warnings-globally) – empfohlen
+- [lokal (in der Quelle)](#suppress-warnings-locally)
+- [global (in einer Unterdrückungsdatei)](#suppress-warnings-globally) – empfohlen
 
-### <a name="suppressing-warnings-locally"></a>Lokales Unterdrücken von Warnungen
+### <a name="suppress-warnings-locally"></a>Lokales Unterdrücken von Warnungen
 
 Um Warnungen lokal zu unterdrücken, klicken Sie mit der rechten Maustaste auf das Element, für das Sie Warnungen unterdrücken möchten, und wählen Sie dann **Schnellaktionen und Refactorings** >  ***Diagnose-ID* unterdrücken\<Diagnose-ID >**  > **in Quelle**. Die Warnungspräprozessoranweisung [#pragma](../../csharp/language-reference/preprocessor-directives/preprocessor-pragma-warning.md) wird Ihrem Quellcode im definierten Bereich hinzugefügt: ![„Screenshot von Code, eingeschlossen durch #pragma warning disable“](media/api-analyzer/suppress-in-source.jpg)
 
-### <a name="suppressing-warnings-globally"></a>Globales Unterdrücken von Warnungen
+### <a name="suppress-warnings-globally"></a>Globales Unterdrücken von Warnungen
 
 Um Warnungen global zu unterdrücken, klicken Sie mit der rechten Maustaste auf das Element, für das Sie Warnungen unterdrücken möchten, und wählen Sie dann **Schnellaktionen und Refactorings** >  ***Diagnose-ID* unterdrücken\<Diagnose-ID >**  > **in Unterdrückungsdatei**.
 
@@ -69,7 +83,7 @@ Die Datei *GlobalSuppressions.cs* wird nach der ersten Unterdrückung zu Ihrem P
 
 Eine globale Unterdrückung ist die empfohlene Methode, um projektübergreifende Konsistenz bei der Verwendung von APIs sicherzustellen.
 
-## <a name="discovering-cross-platform-issues"></a>Ermittlung plattformübergeifender Probleme
+## <a name="discover-cross-platform-issues"></a>Ermitteln plattformübergeifender Probleme
 
 Ähnlich wie bei den veralteten APIs identifiziert das Analysetool alle APIs, die nicht plattformübergeifend sind. Beispielsweise funktioniert <xref:System.Console.WindowWidth?displayProperty=nameWithType> unter Windows, jedoch nicht unter Linux oder macOS. Die Diagnose-ID wird im Fenster **Fehlerliste** angezeigt. Sie können die Warnung unterdrücken, indem Sie mit der rechten Maustaste darauf klicken und **Schnellaktionen und Refactorings** wählen. Dabei verhält es sich anders als in Fällen veralteter APIs, bei denen Sie zwei Möglichkeiten haben (entweder das veraltete Element weiterhin zu verwenden und Warnungen zu unterdrücken oder es gar nicht zu verwenden). Hier können Sie, wenn Sie Ihren Code nur für bestimmte Plattformen entwickeln, alle Warnungen für alle anderen Plattformen unterdrücken, auf denen Ihr Code später nicht ausgeführt werden soll. Dazu müssen Sie nur Ihre Projektdatei bearbeiten und die Eigenschaft `PlatformCompatIgnore` hinzufügen, die alle zu ignorierenden Plattformen auflistet. Folgende Werte werden akzeptiert: `Linux`, `macOS` und `Windows`.
 

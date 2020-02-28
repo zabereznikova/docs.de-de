@@ -1,13 +1,13 @@
 ---
 title: Docker-Terminologie
 description: .NET Microservicesarchitektur für .NET-Containeranwendungen | Docker-Terminologie
-ms.date: 01/07/2019
-ms.openlocfilehash: 33f2918df5b63cc4bd54ddb84900c6bd91e9f77e
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.date: 01/30/2020
+ms.openlocfilehash: 5ffc7e791df8cbc999c6ababf62670bae46e1d5e
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76921009"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77502838"
 ---
 # <a name="docker-terminology"></a>Docker-Terminologie
 
@@ -31,7 +31,7 @@ In diesem Abschnitt werden die Begriffe und Definitionen aufgelistet, mit denen 
 
 **Registrierung:** Ein Dienst, der Zugriff auf Repositorys bereitstellt. Die Standardregistrierung für die meisten öffentlichen Images ist der [Docker-Hub](https://hub.docker.com/) (im Besitz des Docker-Unternehmens). Eine Registrierung enthält in der Regel Repositorys mehrerer Teams. Unternehmen haben häufig private Registrierungen zum Speichern und Verwalten von Images, die sie erstellt haben. Azure Container Registry ist ein weiteres Beispiel.
 
-**Images für mehrere Architekturen:** Die Eignung für mehrere Architekturen ist ein Feature, das die Auswahl des passenden Images erleichtert, je nach der Plattform, auf der Docker ausgeführt wird – wenn ein Dockerfile beispielsweise ein Basisimage **FROM mcr.microsoft.com/dotnet/core/sdk:2.2** bei der Registrierung anfordert, erhält es tatsächlich **2.2-sdk-nanoserver-1709**, **2.2-sdk-nanoserver-1803**, **2.2-sdk-nanoserver-1809** oder **2.2-sdk-stretch**, je nach Betriebssystem und Version, mit dem bzw. der Docker ausgeführt wird.
+**Images für mehrere Architekturen:** Die Eignung für mehrere Architekturen ist ein Feature, das die Auswahl des passenden Images je nach Plattform erleichtert, auf der Docker ausgeführt wird. Wenn ein Dockerfile beispielsweise ein Basisimage **FROM mcr.microsoft.com/dotnet/core/sdk:3.1** aus der Registrierung anfordert, erhält es tatsächlich **3.1-sdk-nanoserver-1909**, **3.1-sdk-nanoserver-1809** oder **3.1-sdk-buster-slim**, je nach Betriebssystem und Version, mit dem bzw. der Docker ausgeführt wird.
 
 **Docker-Hub:** Eine öffentliche Registrierung zum Hochladen von und Arbeiten mit Images. Docker-Hub bietet Docker-Imagehosts, öffentliche oder private Registrierungen, Buildtrigger, Web-Hooks und Integration mit GitHub und Bitbucket.
 

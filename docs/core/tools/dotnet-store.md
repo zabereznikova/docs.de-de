@@ -1,17 +1,17 @@
 ---
 title: dotnet store-befehl
 description: Der „dotnet store“-Befehl speichert die angegebenen Assemblys im Laufzeitpaketspeicher.
-ms.date: 05/29/2018
-ms.openlocfilehash: cc5b4b6160ba296e1529f006c15e238746d9e08a
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.date: 02/14/2020
+ms.openlocfilehash: da1d132b2b873ff55ec104b5bb092d0194889bdc
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76733050"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503578"
 ---
 # <a name="dotnet-store"></a>dotnet store
 
-[!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-2plus.md)]
+**Dieser Artikel gilt für:** ✔️ .NET Core 2.x SDK und neuere Versionen
 
 ## <a name="name"></a>name
 
@@ -19,7 +19,9 @@ ms.locfileid: "76733050"
 
 ## <a name="synopsis"></a>Übersicht
 
-`dotnet store -m|--manifest -f|--framework -r|--runtime  [--framework-version] [-h|--help] [--output] [--skip-optimization] [--skip-symbols] [-v|--verbosity] [--working-dir]`
+```dotnetcli
+dotnet store -m|--manifest -f|--framework -r|--runtime  [--framework-version] [-h|--help] [--output] [--skip-optimization] [--skip-symbols] [-v|--verbosity] [--working-dir]
+```
 
 ## <a name="description"></a>Beschreibung
 
@@ -27,57 +29,61 @@ ms.locfileid: "76733050"
 
 ## <a name="required-options"></a>Erforderliche Optionen
 
-`-f|--framework <FRAMEWORK>`
+- **`-f|--framework <FRAMEWORK>`**
 
-Gibt das [Zielframework](../../standard/frameworks.md) an.
+  Gibt das [Zielframework](../../standard/frameworks.md) an. Das Zielframework muss in der Projektdatei angegeben werden.
 
-`-m|--manifest <PATH_TO_MANIFEST_FILE>`
+- **`-m|--manifest <PATH_TO_MANIFEST_FILE>`**
 
-Die *Manifestdatei des Paketspeichers* ist eine XML-Datei, die die Liste der zu speichernden Pakete enthält. Das Format der Manifestdatei ist mit dem SDK-Projektformat kompatibel. Also kann eine Projektdatei, die auf das gewünschte Paket verweist, mit der Option `-m|--manifest` verwendet werden, um Assemblys im Laufzeitpaketspeicher zu speichern. Wiederholen Sie die Option und den Pfad für jede Datei, um mehrere Manifestdateien anzugeben. Beispiel: `--manifest packages1.csproj --manifest packages2.csproj`.
+  Die *Manifestdatei des Paketspeichers* ist eine XML-Datei, die die Liste der zu speichernden Pakete enthält. Das Format der Manifestdatei ist mit dem SDK-Projektformat kompatibel. Also kann eine Projektdatei, die auf das gewünschte Paket verweist, mit der Option `-m|--manifest` verwendet werden, um Assemblys im Laufzeitpaketspeicher zu speichern. Wiederholen Sie die Option und den Pfad für jede Datei, um mehrere Manifestdateien anzugeben. Beispiel: `--manifest packages1.csproj --manifest packages2.csproj`.
 
-`-r|--runtime <RUNTIME_IDENTIFIER>`
+- **`-r|--runtime <RUNTIME_IDENTIFIER>`**
 
-Der als Ziel zu verwendende [Laufzeitbezeichner](../rid-catalog.md).
+  Der als Ziel zu verwendende [Laufzeitbezeichner](../rid-catalog.md).
 
 ## <a name="optional-options"></a>Optionale Optionen
 
-`--framework-version <FRAMEWORK_VERSION>`
+- **`--framework-version <FRAMEWORK_VERSION>`**
 
-Gibt die Version des .NET Core SDK an. Mit dieser Option können Sie eine bestimmte Frameworkversion auswählen, die nicht das von der `-f|--framework`-Option angegebene Framework ist.
+  Gibt die Version des .NET Core SDK an. Mit dieser Option können Sie eine bestimmte Frameworkversion auswählen, die nicht das von der `-f|--framework`-Option angegebene Framework ist.
 
-`-h|--help`
+- **`-h|--help`**
 
-Zeigt Hilfeinformationen
+  Zeigt Hilfeinformationen
 
-`-o|--output <OUTPUT_DIRECTORY>`
+- **`-o|--output <OUTPUT_DIRECTORY>`**
 
-Gibt den Pfad zum Laufzeitpaketspeicher an. Wenn nicht angegeben, wird das Unterverzeichnis *store* des .NET Core-Installationsverzeichnisses des Benutzerprofils als Standardeinstellung verwendet.
+  Gibt den Pfad zum Laufzeitpaketspeicher an. Wenn nicht angegeben, wird das Unterverzeichnis *store* des .NET Core-Installationsverzeichnisses des Benutzerprofils als Standardeinstellung verwendet.
 
-`--skip-optimization`
+- **`--skip-optimization`**
 
-Überspringt die Optimierungsphase
+  Überspringt die Optimierungsphase
 
-`--skip-symbols`
+- **`--skip-symbols`**
 
-Überspringt die Symbolgenerierung. Sie können aktuell nur unter Windows und Linux Symbole generieren.
+  Überspringt die Symbolgenerierung. Sie können aktuell nur unter Windows und Linux Symbole generieren.
 
-`-v|--verbosity <LEVEL>`
+- **`-v|--verbosity <LEVEL>`**
 
-Legt den Ausführlichkeitsgrad für den Befehl fest. Zulässige Werte sind `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` und `diag[nostic]`.
+  Legt den Ausführlichkeitsgrad für den Befehl fest. Zulässige Werte sind `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` und `diag[nostic]`.
 
-`-w|--working-dir <INTERMEDIATE_WORKING_DIRECTORY>`
+- **`-w|--working-dir <WORKING_DIRECTORY>`**
 
-Das Arbeitsverzeichnis, das vom Befehl verwendet wird. Wenn nicht angegeben, wird das Unterverzeichnis *obj* des aktuellen Verzeichnisses verwendet.
+  Das Arbeitsverzeichnis, das vom Befehl verwendet wird. Wenn nicht angegeben, wird das Unterverzeichnis *obj* des aktuellen Verzeichnisses verwendet.
 
 ## <a name="examples"></a>Beispiele
 
-Speichern Sie die in der Projektdatei *packages.csproj* für .NET Core 2.0.0 angegebenen Pakete:
+- Speichern Sie die in der Projektdatei *packages.csproj* für .NET Core 2.0.0 angegebenen Pakete:
 
-`dotnet store --manifest packages.csproj --framework-version 2.0.0`
+  ```dotnetcli
+  dotnet store --manifest packages.csproj --framework-version 2.0.0
+  ```
 
-Speichern Sie die in der Datei *packages.csproj* angegebenen Pakete ohne Optimierung:
+- Speichern Sie die in der Datei *packages.csproj* angegebenen Pakete ohne Optimierung:
 
-`dotnet store --manifest packages.csproj --skip-optimization`
+  ```dotnetcli
+  dotnet store --manifest packages.csproj --skip-optimization
+  ```
 
 ## <a name="see-also"></a>Siehe auch
 

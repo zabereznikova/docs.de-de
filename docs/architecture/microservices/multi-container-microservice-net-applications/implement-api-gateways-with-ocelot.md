@@ -1,26 +1,24 @@
 ---
 title: Implementieren von API-Gateways mit Ocelot
 description: Hier erfahren Sie, wie Sie API-Gateways mit Ocelot implementieren und Ocelot in einer containerbasierten Umgebung verwenden.
-ms.date: 10/02/2018
-ms.openlocfilehash: c0bcd240b6bd190dd02266c7faaf9fd668eb23bb
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.date: 01/30/2020
+ms.openlocfilehash: 0eb834829a418cfa1ccdf13c5fc8849f6855c4ba
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76777306"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77502413"
 ---
 # <a name="implement-api-gateways-with-ocelot"></a>Implementieren von API-Gateways mit Ocelot
 
-Die Microservice-Referenzanwendung [eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers) verwendet [Ocelot](https://github.com/ThreeMammals/Ocelot), ein einfaches und leichtes API-Gateway, das Sie überall zusammen mit Ihren Microservices/Containern bereitstellen können, beispielsweise in einer der folgenden von eShopOnContainers verwendeten Umgebungen:
-
-- Docker-Host: auf Ihrem lokalen Entwicklungs-PC, lokal oder in der Cloud
-- Kubernetes-Cluster: lokal oder in einer verwalteten Cloud wie Azure Kubernetes Service (AKS)
-- Service Fabric-Cluster: lokal oder in der Cloud
-- Service Fabric-Mesh: als PaaS/Serverless in Azure
+> [!IMPORTANT]
+> Die Referenzanwendung für Microservices [eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers) verwendet derzeit Features, die von [Envoy](https://www.envoyproxy.io/) zur Verfügung gestellt werden, um das API-Gateway anstelle des bereits erwähnten [Ocelot](https://github.com/ThreeMammals/Ocelot) zu implementieren.
+> Wir haben uns aufgrund der integrierten Unterstützung des WebSocket-Protokolls durch Envoy für die neue, in eShopOnContainers implementierte gRPC-Kommunikation zwischen den Diensten für diese Lösung entschieden.
+> Wir haben diesen Abschnitt jedoch im Leitfaden beibehalten, damit Sie Ocelot als ein einfaches, leistungsfähiges und schlankes API-Gateway in Betracht ziehen können, das sich für Produktionsszenarien eignet.
 
 ## <a name="architect-and-design-your-api-gateways"></a>Erstellen und Entwerfen der API-Gateways
 
-In der folgenden Abbildung ist die Implementierung von API-Gateways mit Ocelot in eShopOnContainers dargestellt.
+Das folgende Architekturdiagramm zeigt die Implementierung von API-Gateways mit Ocelot in eShopOnContainers.
 
 ![Diagramm, das die eShopOnContainers-Architektur zeigt.](./media/implement-api-gateways-with-ocelot/eshoponcontainers-architecture.png)
 
@@ -89,7 +87,7 @@ Die HTTP-Anforderung führt letztendlich diese Art von C#-Code durch Zugriff auf
 Mit Blick auf die Microservice-URL wird bei der Bereitstellung der Container im lokalen Entwicklungs-PC (lokaler Docker-Host) für jeden Container eines Microservices immer ein interner Port (meist Port 80) in der entsprechenden Dockerfile-Datei angegeben, wie im folgenden Beispiel zu sehen:
 
 ```Dockerfile
-FROM microsoft/aspnetcore:2.0.5 AS base
+FROM mcr.microsoft.com/dotnet/core/aspnet:3.1 AS base
 WORKDIR /app
 EXPOSE 80
 ```
@@ -105,7 +103,7 @@ Beim Entwickeln möchten Sie jedoch auf den Microservice bzw. auf den Container 
 Das folgende Beispiel zeigt die Datei `docker-compose.override.yml` für den Microservice „Catalog“:
 
 ```yml
-catalog.api:
+catalog-api:
   environment:
     - ASPNETCORE_ENVIRONMENT=Development
     - ASPNETCORE_URLS=http://0.0.0.0:80
@@ -123,10 +121,10 @@ Normalerweise würde die Bereitstellung mit „docker-compose“ nicht in einer 
 Führen Sie den Microservice „Catalog“ auf Ihrem lokalen Docker-Host aus. Dazu haben Sie zwei Möglichkeiten. Führen Sie entweder die gesamte eShopOnContainers-Projektmappe über Visual Studio aus (dabei werden alle Microservices in den „docker-compose“-Dateien ausgeführt), oder verwenden Sie den folgenden „docker-compose“-Befehl in CMD oder PowerShell, um den Microservice „Catalog“ aus dem Ordner zu starten, in dem sich die Dateien `docker-compose.yml` und `docker-compose.override.yml` befinden.
 
 ```console
-docker-compose run --service-ports catalog.api
+docker-compose run --service-ports catalog-api
 ```
 
-Mit diesem Befehl werden nur der Dienstcontainer „catalog.api“ sowie die Abhängigkeiten ausgeführt, die in der Datei „docker-compose.yml“ angegeben sind. In diesem Beispiel sind das die Container „SQL Server“ und „RabbitMQ“.
+Mit diesem Befehl werden nur der Dienstcontainer „catalog-api“ sowie die Abhängigkeiten ausgeführt, die in der Datei „docker-compose.yml“ angegeben sind. In diesem Beispiel sind das die Container „SQL Server“ und „RabbitMQ“.
 
 Anschließend können Sie direkt auf den Microservice „Catalog“ zugreifen und sich die zugehörigen Methoden über die Swagger-Benutzeroberfläche direkt über diesen „externen“ Port (in diesem Beispiel `http://localhost:5101/swagger`) anzeigen lassen:
 
@@ -142,7 +140,7 @@ Direkte Kommunikation mit dem Microservice, in diesem Beispiel über den externe
 
 Bei Ocelot handelt es sich im Grunde um mehrere Middlewares, die Sie in einer bestimmten Reihenfolge anwenden können.
 
-Ocelot wurde speziell nur für ASP.NET Core entwickelt. Ocelot bezieht sich auf .NET Standard 2.0 und kann somit immer dann verwendet werden, wenn .NET Standard 2.0 unterstützt wird, wie etwa für .NET Core Runtime 2.0 und .NET Framework-Runtime ab Version 4.6.1.
+Ocelot wurde speziell nur für ASP.NET Core entwickelt. Es ist für `netstandard2.0` vorgesehen, sodass es überall verwendet werden kann, wo .NET-Standard 2.0 unterstützt wird, einschließlich der Runtime für .NET Core 2.0 und für .NET Framework 4.6.1 und höher.
 
 Installieren Sie Ocelot und die zugehörigen Abhängigkeiten in Ihrem ASP.NET Core-Projekt mit dem [NuGet-Paket für Ocelot](https://www.nuget.org/packages/Ocelot/) über Visual Studio.
 
@@ -150,7 +148,7 @@ Installieren Sie Ocelot und die zugehörigen Abhängigkeiten in Ihrem ASP.NET Co
 Install-Package Ocelot
 ```
 
-In eShopOnContainers ist die API-Gateway-Implementierung ein einfaches ASP.NET Core WebHost-Projekt. Für die API-Gatewayfeatures ist wie in der folgenden Abbildung dargestellt die Middleware von Ocelot zuständig:
+In eShopOnContainers ist die API-Gateway-Implementierung ein einfaches ASP.NET Core-WebHost-Projekt. Für die API-Gatewayfeatures ist wie in der folgenden Abbildung dargestellt die Middleware von Ocelot zuständig:
 
 ![Screenshot des Projektmappen-Explorers mit dem Ocelot-API-Gatewayprojekt.](./media/implement-api-gateways-with-ocelot/ocelotapigw-base-project.png)
 
@@ -207,7 +205,7 @@ Das folgende Beispiel zeigt eine vereinfachte [ReRoute-Konfigurationsdatei](http
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "catalog.api",
+          "Host": "catalog-api",
           "Port": 80
         }
       ],
@@ -219,7 +217,7 @@ Das folgende Beispiel zeigt eine vereinfachte [ReRoute-Konfigurationsdatei](http
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "basket.api",
+          "Host": "basket-api",
           "Port": 80
         }
       ],
@@ -249,7 +247,7 @@ Betrachten Sie beispielsweise eines der ReRoute-Objekte in der Datei „configur
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "basket.api",
+          "Host": "basket-api",
           "Port": 80
         }
       ],
@@ -318,7 +316,7 @@ Wie Sie im folgenden Auszug aus der Datei „docker-compose.override.yml“ erke
 mobileshoppingapigw:
   environment:
     - ASPNETCORE_ENVIRONMENT=Development
-    - IdentityUrl=http://identity.api
+    - IdentityUrl=http://identity-api
   ports:
     - "5200:80"
   volumes:
@@ -327,7 +325,7 @@ mobileshoppingapigw:
 mobilemarketingapigw:
   environment:
     - ASPNETCORE_ENVIRONMENT=Development
-    - IdentityUrl=http://identity.api
+    - IdentityUrl=http://identity-api
   ports:
     - "5201:80"
   volumes:
@@ -336,7 +334,7 @@ mobilemarketingapigw:
 webshoppingapigw:
   environment:
     - ASPNETCORE_ENVIRONMENT=Development
-    - IdentityUrl=http://identity.api
+    - IdentityUrl=http://identity-api
   ports:
     - "5202:80"
   volumes:
@@ -345,7 +343,7 @@ webshoppingapigw:
 webmarketingapigw:
   environment:
     - ASPNETCORE_ENVIRONMENT=Development
-    - IdentityUrl=http://identity.api
+    - IdentityUrl=http://identity-api
   ports:
     - "5203:80"
   volumes:
@@ -362,13 +360,13 @@ Wenn das API-Gateway in mehrere API-Gateways aufgeteilt wird, können verschiede
 
 Wenn Sie nun beim Öffnen der Projektmappe „eShopOnContainers-ServicesAndWebApps.sln“ oder beim Ausführen von „docker-compose up“ eShopOnContainers mit den API-Gateways ausführen (standardmäßig in VS enthalten), werden die folgenden Beispielrouten ausgeführt.
 
-Beim Aufrufen der vom API-Gateway „webshoppingapigw“ unterstützten Upstream-URL `http://localhost:5202/api/v1/c/catalog/items/2/` erhalten Sie beispielsweise dasselbe Ergebnis von der internen Downstream-URL `http://catalog.api/api/v1/2` im Docker-Host, als in dem folgenden Browser zu sehen ist.
+Beim Aufrufen der vom API-Gateway „webshoppingapigw“ unterstützten Upstream-URL `http://localhost:5202/api/v1/c/catalog/items/2/` erhalten Sie beispielsweise dasselbe Ergebnis von der internen Downstream-URL `http://catalog-api/api/v1/2` im Docker-Host, als in dem folgenden Browser zu sehen ist.
 
 ![Screenshot eines Browsers mit einer Antwort, die das API-Gateway durchläuft.](./media/implement-api-gateways-with-ocelot/access-microservice-through-url.png)
 
 **Abbildung 6-35**. Zugriff auf einen Microservice über eine vom API-Gateway bereitgestellten URL
 
-Wenn Sie – weil „catalog.api“ eine interne DNS-Auflösung im Docker-Host (für die Dienstermittlung sind „docker-compose“-Dienstnamen verantwortlich) ist – zum Testen oder Debuggen ohne Umweg über das API-Gateway direkt auf den Docker-Container „Catalog“ (nur in der Entwicklungsumgebung) zugreifen möchten, haben Sie nur die Möglichkeit, über den in der Datei „docker-compose.override.yml“ veröffentlichten externen Port auf diesen Container zuzugreifen. Diese Datei wird nur für Entwicklungstests (wie `http://localhost:5101/api/v1/Catalog/items/1` im folgenden Browser) bereitgestellt.
+Wenn Sie – weil „catalog-api“ eine interne DNS-Auflösung im Docker-Host (für die Dienstermittlung sind „docker-compose“-Dienstnamen verantwortlich) ist – zum Testen oder Debuggen ohne Umweg über das API-Gateway direkt auf den Docker-Container „Catalog“ (nur in der Entwicklungsumgebung) zugreifen möchten, haben Sie nur die Möglichkeit, über den in der Datei „docker-compose.override.yml“ veröffentlichten externen Port auf diesen Container zuzugreifen. Diese Datei wird nur für Entwicklungstests (wie `http://localhost:5101/api/v1/Catalog/items/1` im folgenden Browser) bereitgestellt.
 
 ![Screenshot eines Browsers mit einer direkten Antwort an die Catalog.api.](./media/implement-api-gateways-with-ocelot/direct-access-microservice-testing.png)
 
@@ -426,7 +424,7 @@ Dienste werden auf der API-Gateway-Ebene mittels Authentifizierung geschützt, i
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "basket.api",
+          "Host": "basket-api",
           "Port": 80
         }
       ],

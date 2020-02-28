@@ -1,21 +1,17 @@
 ---
 title: Befehl „dotnet add package“
 description: Der Paketbefehl „dotnet add“ bietet eine praktische Option zum Hinzufügen von NuGet-Paketverweisen zu einem Projekt.
-ms.date: 06/26/2019
-ms.openlocfilehash: 210dcf0efe06672264ebfa297589bdb387591a42
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.date: 02/14/2020
+ms.openlocfilehash: cb44805f91ac4047dd50fd7e88d4eac5f15f2508
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76733329"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503807"
 ---
 # <a name="dotnet-add-package"></a>dotnet add package
 
-**Dieser Artikel gilt für:** ✔️ .NET Core 1.x SDK und neuere Versionen
-
-<!-- todo: uncomment when all CLI commands are reviewed
-[!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
--->
+**Dieser Artikel gilt für:** ✔️ .NET Core 2.x SDK und neuere Versionen
 
 ## <a name="name"></a>name
 

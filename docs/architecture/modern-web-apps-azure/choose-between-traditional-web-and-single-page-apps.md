@@ -3,22 +3,22 @@ title: Auswählen zwischen herkömmlichen Webanwendungen und Single-Page-Webanwe
 description: In diesem Artikel erfahren Sie, wie Sie beim Erstellen von Webanwendungen zwischen herkömmlichen Web-Apps und Single-Page-Webanwendungen (Single Page Application, SPAs) auswählen.
 author: ardalis
 ms.author: wiwagn
-ms.date: 01/30/2019
-ms.openlocfilehash: 9ede64249705aba3f22a9663b8a258e41f030aca
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.date: 12/04/2019
+ms.openlocfilehash: d4ed76455001c1a0b8e2e2f1bb90ce8715dd0052
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73739456"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77450107"
 ---
 # <a name="choose-between-traditional-web-apps-and-single-page-apps-spas"></a>Auswählen zwischen herkömmlichen Webanwendungen und Single-Page-Webanwendungen (SPAs)
 
 > „Atwoods Gesetz: Alle Anwendungen, die in JavaScript geschrieben werden können, werden früher oder später in JavaScript geschrieben.“  
 > _\- Jeff Atwood_
 
-Heutzutage gibt es zwei allgemeine Ansätze für das Erstellen von Webanwendungen: herkömmliche Webanwendungen, die einen Großteil der Anwendungslogik auf dem Server ausführen, und Single-Page-Webanwendungen (SPAs), die einen Großteil der Logik der Benutzeroberfläche in einem Webbrowser ausführen und mit dem Webserver überwiegend über Web-APIs kommunizieren. Ein hybrider Ansatz ist ebenfalls möglich, am einfachsten ist das Hosten von mindestens einer umfangreichen SPA-ähnlichen Unteranwendung in einer größeren herkömmlichen Webanwendung.
+Heutzutage gibt es zwei allgemeine Ansätze für das Erstellen von Webanwendungen: herkömmliche Webanwendungen, die einen Großteil der Anwendungslogik auf dem Server ausführen, und Single-Page-Webanwendungen (SPAs), die einen Großteil der Logik der Benutzeroberfläche in einem Webbrowser ausführen und mit dem Webserver überwiegend über Web-APIs kommunizieren. Ein hybrider Ansatz ist ebenfalls möglich. Am einfachsten ist das Hosten von mindestens einer umfangreichen SPA-ähnlichen Unteranwendung in einer größeren herkömmlichen Webanwendung.
 
-Sie sollten herkömmliche Webanwendungen in folgenden Szenarios verwenden:
+Verwenden Sie herkömmliche Webanwendungen in folgenden Szenarien:
 
 - Die clientseitigen Anforderungen Ihrer Anwendung sind einfach oder schreibgeschützt.
 
@@ -26,7 +26,7 @@ Sie sollten herkömmliche Webanwendungen in folgenden Szenarios verwenden:
 
 - Ihr Team ist nicht mit Entwicklungstechniken mit JavaScript oder TypeScript vertraut.
 
-In folgenden Szenarios sollten Sie eine Single-Page-Webanwendung verwenden:
+Verwenden Sie eine Single-Page-Webanwendung in folgenden Szenarien:
 
 - Ihre Anwendung muss eine umfangreiche Benutzeroberfläche mit vielen Features zur Verfügung stellen.
 
@@ -34,13 +34,23 @@ In folgenden Szenarios sollten Sie eine Single-Page-Webanwendung verwenden:
 
 - Ihre Anwendung muss bereits eine API für andere (interne oder öffentliche) Clients zur Verfügung stellen.
 
-Darüber hinaus erfordern SPA-Frameworks ausführlichere Kenntnisse zur Architektur und Sicherheit. Aufgrund von regelmäßigen Aktualisierungen und neuen Frameworks erfordern sie einen größeren Änderungsumfang als herkömmliche Webanwendungen. Das Konfigurieren von automatisierten Build- und Bereitstellungsprozessen und die Verwendung von Bereitstellungsoptionen, z.B. Container, ist mit Single-Page-Webanwendungen schwieriger als mit herkömmlichen Webanwendungen.
+Darüber hinaus erfordern SPA-Frameworks ausführlichere Kenntnisse zur Architektur und Sicherheit. Aufgrund von regelmäßigen Aktualisierungen und neuen Frameworks erfordern sie einen größeren Änderungsumfang als herkömmliche Webanwendungen. Das Konfigurieren automatisierter Build- und Bereitstellungsprozesse und das Verwenden von Bereitstellungsoptionen wie Containern ist bei Single-Page-Webanwendungen schwieriger als bei herkömmlichen Webanwendungen.
 
-Die Verbesserungen der Benutzerfreundlichkeit durch das SPA-Modell sollten mit diesen Eigenschaften verglichen werden.
+Die durch den SPA-Ansatz ermöglichte Verbesserung der Benutzererfahrung muss mit diesen Aspekten abgewogen werden.
 
 ## <a name="blazor"></a>Blazor
 
-ASP.NET Core 3.0 führt mit Blazor ein neues Modell zur Erstellung umfassender interaktiver und zusammensetzbarer Benutzeroberflächen ein. Blazor ermöglicht Entwicklern das Erstellen von Benutzeroberflächen mit Razor auf dem Server sowie das Senden des Codes an den Browser und seine clientseitige Ausführung mithilfe der [WebAssembly](https://webassembly.org/). ASP.NET Core 3.0 befindet sich noch in der Entwicklung, in der Updateversion 3.0 dieses E-Books können Sie jedoch mehr über diese Technologie erfahren. Weitere Informationen zu Blazor finden Sie unter [Einführung in Blazor](https://blazor.net/docs/get-started.html).
+ASP.NET Core 3.0 führt mit Blazor ein neues Modell zur Erstellung umfassender interaktiver und zusammensetzbarer Benutzeroberflächen ein. Blazor ermöglicht Entwicklern das Erstellen von Benutzeroberflächen mit Razor auf dem Server sowie das Senden des Codes an den Browser und seine clientseitige Ausführung mithilfe der [WebAssembly](https://webassembly.org/). Serverseitiges Blazor ist nun ab ASP.NET Core 3.0 verfügbar. Clientseitiges Blazor soll 2020 zur Verfügung stehen.
+
+Blazor bietet eine neue, dritte Option, die bei der Beurteilung der Frage, ob eine rein auf dem Server gerenderte Webanwendung oder eine SPA entwickelt werden soll, zu berücksichtigen ist. Mit Blazor können Sie komplexe, SPA-ähnliche Verhaltensweisen auf Clientseite entwickeln, ohne dass eine nennenswerte JavaScript-Entwicklung erforderlich ist. Blazor-Anwendungen können APIs aufrufen, um Daten anzufordern oder serverseitige Vorgänge auszuführen.
+
+Erwägen Sie die Entwicklung Ihrer Webanwendung mit Blazor in folgenden Fällen:
+
+- Ihre Anwendung muss eine komplexe Benutzeroberfläche zur Verfügung stellen.
+
+- Ihr Team ist mit der .NET-Entwicklung besser vertraut als mit der JavaScript- oder TypeScript-Entwicklung.
+
+Weitere Informationen zu Blazor finden Sie unter [Einführung in Blazor](https://blazor.net/docs/get-started.html).
 
 ## <a name="when-to-choose-traditional-web-apps"></a>Fälle für die Verwendung von herkömmlichen Webanwendungen
 
@@ -64,9 +74,9 @@ Im Folgenden finden Sie eine ausführlichere Erläuterung dazu, wann Sie den Ent
 
 **Ihre Anwendung muss eine umfangreiche Benutzeroberfläche mit vielen Features zur Verfügung stellen**
 
-SPAs können umfangreiche clientseitige Funktionalitäten unterstützen, die das erneute Laden der Seite nicht erfordern, wenn Benutzer Aktionen ausführen oder zwischen Bereichen der App navigieren. SPAs können schneller geladen werden, und individuelle Benutzeraktionen reagieren besser, da das erneute Laden von vollständigen Seiten selten ist und Daten im Hintergrund abgerufen werden. SPAs können inkrementelle Updates unterstützen, wodurch teilweise abgeschlossene Formulare oder Dokumente gespeichert werden, ohne dass der Benutzer auf eine Schaltfläche zum Senden eines Formulars klicken muss. SPAs können umfangreiches clientseitiges Verhalten (z.B. Drag & Drop) viel schneller unterstützen als herkömmliche Anwendungen. SPAs können dafür entworfen sein, in einem getrennten Modus ausgeführt zu werden, dabei werden Updates an einem clientseitigen Modell vorgenommen, die schließlich mit dem Server synchronisiert werden, sobald die Verbindung wiederhergestellt wurde. Sie sollten sich für eine Single-Page-Webanwendung entscheiden, wenn die Anforderungen Ihrer App umfangreiche Funktionalitäten beinhalten, die die Grenzen von gewöhnlichen HTML-Formularen übersteigen.
+SPAs können umfangreiche clientseitige Funktionalitäten unterstützen, die das erneute Laden der Seite nicht erfordern, wenn Benutzer Aktionen ausführen oder zwischen Bereichen der App navigieren. SPAs können schneller geladen werden, und individuelle Benutzeraktionen reagieren besser, da das erneute Laden von vollständigen Seiten selten ist und Daten im Hintergrund abgerufen werden. SPAs können inkrementelle Updates unterstützen, wodurch teilweise abgeschlossene Formulare oder Dokumente gespeichert werden, ohne dass der Benutzer auf eine Schaltfläche zum Senden eines Formulars klicken muss. SPAs können umfangreiches clientseitiges Verhalten (z.B. Drag & Drop) viel schneller unterstützen als herkömmliche Anwendungen. SPAs können dafür entworfen sein, in einem getrennten Modus ausgeführt zu werden, dabei werden Updates an einem clientseitigen Modell vorgenommen, die schließlich mit dem Server synchronisiert werden, sobald die Verbindung wiederhergestellt wurde. Entscheiden Sie sich für eine Single-Page-Webanwendung, wenn die Anforderungen Ihrer App komplexe Funktionalität umfassen, die die Grenzen von gewöhnlichen HTML-Formularen übersteigt.
 
-Beachten Sie, dass für SPAs regelmäßig Features implementiert werden müssen, die in herkömmlichen Webanwendungen integriert sind, z.B. das Anzeigen einer aussagekräftige URL in der Adressleiste, die den aktuellen Vorgang angibt (und Benutzern erlaubt, ein Lesezeichen zu setzen oder einen Deep-Link zu dieser URL zu erstellen, um zu einem späteren Zeitpunkt auf diese Seite zurückzukehren). SPAs sollten Benutzern ebenfalls ermöglichen, die Schaltflächen „Zurück“ und „Weiter“ des Browsers zu verwenden, ohne dabei auf überraschende Ergebnisse zu stoßen.
+Für SPAs müssen regelmäßig Features implementiert werden, die in herkömmlichen Webanwendungen integriert sind, z. B. das Anzeigen einer aussagekräftigen URL in der Adressleiste, die den aktuellen Vorgang angibt (und Benutzern erlaubt, ein Lesezeichen zu setzen oder einen Deep-Link zu dieser URL zu erstellen, um zu einem späteren Zeitpunkt zu dieser Seite zurückzukehren). SPAs sollten Benutzern ebenfalls ermöglichen, die Schaltflächen „Zurück“ und „Weiter“ des Browsers zu verwenden, ohne dabei auf überraschende Ergebnisse zu stoßen.
 
 **Ihr Team ist mit der Entwicklung mit JavaScript und bzw. oder TypeScript vertraut**
 
@@ -76,6 +86,8 @@ Das Schreiben von SPAs erfordert Erfahrung mit JavaScript und bzw. oder TypeScri
 >
 > - **Angular**  
 >   <https://angular.io>
+> - **React**
+>   <https://reactjs.org/>
 > - **Vergleich von JavaScript-Frameworks**  
 >   <https://jsreport.io/the-ultimate-guide-to-javascript-frameworks/>
 
@@ -83,16 +95,28 @@ Das Schreiben von SPAs erfordert Erfahrung mit JavaScript und bzw. oder TypeScri
 
 Wenn Sie bereits eine Web-API für die Verwendung durch andere Clients unterstützen, erfordert es möglicherweise weniger Aufwand, eine SPA-Implementierung zu erstellen, die diese APIs nutzt, anstatt die Logik im serverseitigen Format zu reproduzieren. SPAs machen umfangreichen Gebrauch von Web-APIs, um Daten abzufragen und zu aktualisieren, während Benutzer mit der Anwendung interagieren.
 
-## <a name="decision-table--traditional-web-or-spa"></a>Entscheidungstabelle – Herkömmliche Webanwendung oder SPA
+## <a name="when-to-choose-blazor"></a>In welchen Fällen sollte Blazor verwendet werden?
 
-In der folgenden Entscheidungstabelle werden einige der grundlegenden Faktoren zusammengefasst, die bei der Auswahl zwischen einer herkömmlichen Webanwendung und einer SPA beachtet werden sollten.
+Im Folgenden finden Sie eine ausführlichere Erläuterung der Vorteile von Blazor für Ihre Webanwendung.
 
-| **Aspekt**                                           | **Herkömmliche Webanwendung** | **Einzelseitenanwendung** |
-| ---------------------------------------------------- | ----------------------- | --------------------------- |
-| Erforderliche Vertrautheit des Teams mit JavaScript oder TypeScript | **Minimal**             | **Erforderlich**                |
-| Unterstützt Browser ohne Skript                   | **Unterstützt**           | **Nicht unterstützt**           |
-| Minimales clientseitiges Anwendungsverhalten             | **Gut geeignet**         | **Zu viel Aufwand**                |
-| Umfangreiche und komplexe Anforderungen für die Benutzeroberfläche            | **Eingeschränkt**             | **Gut geeignet**             |
+**Ihre Anwendung muss eine komplexe Benutzeroberfläche zur Verfügung stellen**
+
+Wie JavaScript-basierte SPAs können Blazor-Anwendungen Rich-Client-Verhalten unterstützen, ohne dass Seiten neu geladen werden müssen. Diese Anwendungen reagieren besser auf Benutzer, indem sie nur die Daten (oder HTML) abrufen, die für die Reaktion auf eine bestimmte Benutzerinteraktion erforderlich sind. Bei entsprechendem Entwurf können serverseitige Blazor-Apps so konfiguriert werden, dass sie mit minimalen Änderungen als clientseitige Blazor-Apps ausgeführt werden können, sobald dieses Feature unterstützt wird.
+
+**Ihr Team ist mit der .NET-Entwicklung besser vertraut als mit der JavaScript- oder TypeScript-Entwicklung**
+
+Viele Entwickler sind mit .NET und Razor produktiver als mit clientseitigen Sprachen wie JavaScript oder TypeScript. Da die Serverseite der Anwendung bereits mit .NET entwickelt wird, stellt die Verwendung von Blazor sicher, dass jeder .NET-Entwickler im Team das Verhalten des Front-Ends der Anwendung verstehen und möglicherweise entwickeln kann.
+
+## <a name="decision-table"></a>Entscheidungstabelle
+
+In der folgenden Entscheidungstabelle werden einige der grundlegenden Faktoren zusammengefasst, die bei der Wahl zwischen einer herkömmlichen Webanwendung, einer SPA und einer Blazor-App beachtet werden sollten.
+
+| **Aspekt**                                           | **Herkömmliche Webanwendung** | **Einzelseitenanwendung** | **Blazor-App**  |
+| ---------------------------------------------------- | ----------------------- | --------------------------- | --------------- |
+| Erforderliche Vertrautheit des Teams mit JavaScript oder TypeScript | **Minimal**             | **Erforderlich**                | **Minimal**     |
+| Unterstützt Browser ohne Skript                   | **Unterstützt**           | **Nicht unterstützt**           | **Unterstützt**   |
+| Minimales clientseitiges Anwendungsverhalten             | **Gut geeignet**         | **Zu viel Aufwand**                | **Viable**      |
+| Umfangreiche und komplexe Anforderungen für die Benutzeroberfläche            | **Eingeschränkt**             | **Gut geeignet**             | **Gut geeignet** |
 
 >[!div class="step-by-step"]
 >[Zurück](modern-web-applications-characteristics.md)

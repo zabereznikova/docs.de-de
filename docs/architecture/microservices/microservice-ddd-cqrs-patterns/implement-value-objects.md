@@ -1,13 +1,13 @@
 ---
 title: Implementieren von Wertobjekten
 description: .NET-Microservicesarchitektur für .NET-Containeranwendungen | Einführung in die Details und Optionen zum Implementieren von Wertobjekten mithilfe neuer Features von Entity Framework
-ms.date: 10/08/2018
-ms.openlocfilehash: 70c92fe86fda20ed4e909b945b843e8e71092f09
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.date: 01/30/2020
+ms.openlocfilehash: 4ace5c141b1cbd2dcfefb7ea7165a4006b130479
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75899776"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77502514"
 ---
 # <a name="implement-value-objects"></a>Implementieren von Wertobjekten
 
@@ -131,13 +131,13 @@ public class Address : ValueObject
 
 Sie können sehen, wie diese Implementierung des Wertobjekts „Address“ über keine Identität verfügt, weshalb sie weder in der Address-Klasse noch in der ValueObject-Klasse über ein ID-Feld verfügt.
 
-In einer Klasse über kein von Entity Framework verwendbares ID-Feld zu verfügen, war bis EF Core 2.0 nicht möglich. Dies ist für das Implementieren besserer Wertobjekte ohne ID ausgesprochen hilfreich. Außerdem entspricht dies der Erklärung des nächsten Abschnitts.
+In einer Klasse über kein von Entity Framework (EF) verwendbares ID-Feld zu verfügen, war bis EF Core 2.0 nicht möglich. Dies ist für das Implementieren besserer Wertobjekte ohne ID ausgesprochen hilfreich. Außerdem entspricht dies der Erklärung des nächsten Abschnitts.
 
-Man könnte behaupten, dass Wertobjekte schreibgeschützt sein sollten (d.h. schreibgeschützte Eigenschaften), da sie unveränderlich sind, und das ist tatsächlich so. Allerdings werden Wertobjekte in der Regel zum Durchlaufen von Warteschlangen serialisiert und deserialisiert. Wenn sie schreibgeschützt sind, kann das Deserialisierungsprogramm keine Werte zuweisen. Deshalb werden sie privat gelassen, damit sie in gewisser Weise schreibgeschützt sind, aber dennoch verwendet werden können.
+Es lässt sich argumentieren, dass Wertobjekte, da sie unveränderlich sind, schreibgeschützte Eigenschaften haben sollten, was ja auch stimmt. Allerdings werden Wertobjekte in der Regel zum Durchlaufen von Warteschlangen serialisiert und deserialisiert. Wenn sie schreibgeschützt sind, kann das Deserialisierungsprogramm keine Werte zuweisen. Deshalb werden sie privat gelassen, damit sie in gewisser Weise schreibgeschützt sind, aber dennoch verwendet werden können.
 
-## <a name="how-to-persist-value-objects-in-the-database-with-ef-core-20"></a>Beibehalten von Wertobjekten in der Datenbank mit EF Core 2.0
+## <a name="how-to-persist-value-objects-in-the-database-with-ef-core-20-and-later"></a>Beibehalten von Wertobjekten in der Datenbank mit EF Core 2.0 und höher
 
-Obenstehend wurde erläutert, wie Sie ein Wertobjekt in Ihrem Domänenmodell definieren. Nun soll erläutert werden, wie Sie dieses mithilfe von Entity Framework Core (EF Core) beibehalten, obwohl dieser Dienst in der Regel auf Entitäten mit Identitäten ausgerichtet ist.
+Obenstehend wurde erläutert, wie Sie ein Wertobjekt in Ihrem Domänenmodell definieren. Nun soll erläutert werden, wie Sie es mithilfe von Entity Framework Core dauerhaft in der Datenbank speichern, obwohl dieser Dienst in der Regel auf Entitäten mit Identitäten ausgerichtet ist.
 
 ### <a name="background-and-older-approaches-using-ef-core-11"></a>Hintergrund und ältere Ansätze zur Verwendung von EF Core 1.1
 
@@ -160,11 +160,11 @@ void ConfigureAddress(EntityTypeBuilder<Address> addressConfiguration)
 
 Die Persistenz dieses Wertobjekts in die Datenbank wurde wie eine reguläre Entität in einer anderen Tabelle durchgeführt.
 
-Mit EF Core 2.0. gibt es neue und bessere Möglichkeiten, Wertobjekte beizubehalten.
+Ab EF Core 2.0 gibt es neue und bessere Möglichkeiten, Wertobjekte permanent zu speichern.
 
-## <a name="persist-value-objects-as-owned-entity-types-in-ef-core-20"></a>Beibehalten von Wertobjekten als eigene Entitätstypen in EF Core 2.0
+## <a name="persist-value-objects-as-owned-entity-types-in-ef-core-20-and-later"></a>Permanentes Speichern von Wertobjekten als nicht eigenständige Entitätstypen in EF Core 2.0 und höher
 
-Auch wenn das kanonische Wertobjektmuster im domänengesteuerten Design und der eigene Entitätstyp in EF Core Nachteile haben, so stellen diese derzeit die beste Möglichkeit dar, Wertobjekte mit EF Core 2.0 beizubehalten. Einschränkungen werden am Ende dieses Abschnitts erläutert.
+Auch wenn das kanonische Wertobjektmuster im domänengesteuerten Design und der nicht eigenständige Entitätstyp in EF Core Nachteile haben, so stellen diese derzeit die beste Möglichkeit dar, Wertobjekte mit EF Core 2.0 und höher permanent zu speichern. Einschränkungen werden am Ende dieses Abschnitts erläutert.
 
 Das eigene Entitätstypenfeature wurde schon mit Version 2.0 von EF Core hinzugefügt.
 
@@ -178,7 +178,7 @@ Die Identität von Instanzen von eigenen Typen ist nicht ausschließlich auf die
 
 - Der Navigationseigenschaft, die auf diese zeigt
 
-- Einer unabhängigen Komponente, wenn es um Auflistungen von eigenen Typen geht (in EF Core 2.0 noch nicht unterstützt, wird aber ab Version 2.2 unterstützt).
+- Im Fall von Sammlungen nicht eigenständiger Entitätstypen eine unabhängige Komponente (unterstützt ab EF Core 2.2).
 
 Beispielsweise wird im Domänenmodell für die Bestellung in eShopOnContainers das Wertobjekt „Address“ als Teil der Entität „Order“ als eigener Entitätstyp in die besitzende Entität (also der Entität „Order“) implementiert. Bei „Address“ handelt es sich um einen Typ ohne Identitätseigenschaft, der im Domänenmodell definiert ist. Dieser Typ wird als Eigenschaft des Typs „Order“ verwendet, um die Lieferadresse für eine bestimmte Bestellung anzugeben.
 
@@ -275,7 +275,7 @@ public class Address
 
 - Die Identität (der Schlüssel) einer eigenen Typinstanz in diesem Beispiel ist eine Zusammensetzung aus der Identität des Besitzertyps und der Definition des eigenen Typs.
 
-#### <a name="owned-entities-capabilities"></a>Funktionen der eigenen Entitäten:
+#### <a name="owned-entities-capabilities"></a>Funktionen nicht eigenständiger Entitätstypen
 
 - Eigene Typen können auf andere Entitäten verweisen, die entweder eigen (geschachtelte eigene Typen) oder nicht eigen (reguläre Navigationseigenschaften zum Verweis auf andere Entitäten) sind.
 
@@ -283,27 +283,27 @@ public class Address
 
 - Die Tabellenaufteilung wird standardmäßig eingerichtet. Sie können diese Funktion aber auch deaktivieren, indem Sie den eigenen Typ mit ToTable einer anderen Tabelle zuordnen.
 
-- Für eigene Typen wird automatisch Eager Loading (eifriges Laden) durchgeführt. Es besteht also keine Notwendigkeit, „Include()“ in der Abfrage aufzurufen.
+- Für nicht eigenständige Entitätstypen erfolgt automatisch Eager Loading (vorzeitiges Laden). Es besteht also keine Notwendigkeit, `.Include()` in der Abfrage aufzurufen.
 
-- Kann ab EF Core 2.1 mit dem Attribut \[Owned\] konfiguriert werden.
+- Kann ab EF Core 2.1 mit dem Attribut `[Owned]` konfiguriert werden.
 
-#### <a name="owned-entities-limitations"></a>Einschränkungen der eigenen Entitäten:
+- Kann Sammlungen nicht eigenständiger Entitätstypen verarbeiten (ab Version 2.2).
 
-- Sie können kein DbSet\<T\>-Objekt eines eigenen Typs erstellen (entwurfsbedingt).
+#### <a name="owned-entities-limitations"></a>Einschränkungen nicht eigenständiger Entitätstypen
 
-- Sie können für eigene Typen „ModelBuilder.Entity\<T\>()“ nicht aufrufen (derzeit entwurfsbedingt).
+- Sie können (gezielt) kein `DbSet<T>` eines nicht eigenständigen Entitätstyps erstellen.
 
-- Es gibt noch keine Sammlungen von eigenen Typen (Stand: EF Core 2.1, aber sie werden ab Version 2.2 unterstützt).
+- Sie können für nicht eigenständige Entitätstypen (derzeit gezielt) `ModelBuilder.Entity<T>()` nicht aufrufen.
 
-- Optionale eigene Typen (d.h. Nullable-Typen), die (über Tabellenaufteilung) dem Besitzer in derselben Tabelle zugeordnet sind, werden nicht unterstützt. Der Grund hierfür ist, dass die Zuordnung für jede Eigenschaft durchgeführt wird, weshalb es keinen separaten Sentinel für den komplexen NULL-Wert gibt.
+- Optionale (d. h. Nullwerte zulassende) nicht eigenständige Entitätstypen, die (über Tabellenaufteilung) dem Besitzer in derselben Tabelle zugeordnet sind, werden nicht unterstützt. Der Grund hierfür ist, dass die Zuordnung für jede Eigenschaft durchgeführt wird, weshalb es keinen separaten Sentinel für den komplexen NULL-Wert gibt.
 
 - Die Vererbungszuordnung für eigene Typen wird nicht unterstützt, aber Sie sollten zwei Blatttypen derselben Schnittstellenvererbungshierarchie als unterschiedliche eigene Typen zuordnen können. EF Core hat keine Probleme mit der Verarbeitung, weil diese Typen Teil derselben Hierarchie sind.
 
 #### <a name="main-differences-with-ef6s-complex-types"></a>Wichtige Unterschiede zwischen den komplexen Typen für EF 6
 
-- Die Tabellenaufteilung ist optional, d.h., diese Typen können einer anderen Tabelle zugeordnet werden und verlieren trotzdem nicht Ihren Status als eigene Typen.
+- Die Tabellenaufteilung ist optional, d. h., diese Typen können einer anderen Tabelle zugeordnet werden und bleiben trotzdem nicht eigenständige Typen.
 
-- Sie können auf andere Entitäten verweisen, d.h., sie können als Abhängigkeiten in Beziehungen zu anderen nicht eigenen Typen agieren.
+- Sie können auf andere Entitäten verweisen, d. h., sie können als die abhängige Seite in Beziehungen zu anderen eigenständigen Typen fungieren.
 
 ## <a name="additional-resources"></a>Zusätzliche Ressourcen
 
@@ -316,8 +316,11 @@ public class Address
 - **Vaughn Vernon. Implementing Domain-Driven Design (Implementieren des domänengesteuerten Designs.)** (Buch, das Erläuterungen zu Wertobjekten enthält) \
   <https://www.amazon.com/Implementing-Domain-Driven-Design-Vaughn-Vernon/dp/0321834577/>
 
+- **Nicht eigenständige Entitätstypen** \
+  <https://docs.microsoft.com/ef/core/modeling/owned-entities>
+
 - **Shadow Properties (Schatteneigenschaften)**  \
-  [https://docs.microsoft.com/ef/core/modeling/shadow-properties](/ef/core/modeling/shadow-properties)
+  <https://docs.microsoft.com/ef/core/modeling/shadow-properties>
 
 - **Complex types and/or value objects (komplexe Typen und/oder Wertobjekte)** . Diskussion im GitHub-Repository zu EF Core (Registerkarte „Issues“) \
   <https://github.com/dotnet/efcore/issues/246>

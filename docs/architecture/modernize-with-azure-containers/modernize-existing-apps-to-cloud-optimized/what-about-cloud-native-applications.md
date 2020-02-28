@@ -2,12 +2,12 @@
 title: Was gilt für cloudnative Anwendungen?
 description: Modernisieren vorhandener .NET-Anwendungen mit Azure Cloud und Windows-Containern | Was gilt für cloudnative Anwendungen?
 ms.date: 04/28/2018
-ms.openlocfilehash: cf4c3b24a4eeb62ed84a5fccb294b675d38fcc36
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: d2a7f89e347d75ddbdae84c8eb57e32447b83297
+ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/08/2019
-ms.locfileid: "72318436"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77543546"
 ---
 # <a name="what-about-cloud-native-applications"></a>Was gilt für cloudnative Anwendungen?
 
@@ -19,7 +19,7 @@ In Abbildung 4–3 werden Cloud-Native-Apps in den Reifegraden für Anwendungsmo
 
 **Abbildung 4–3.** . Positionierung von Cloud-Native-Anwendungen
 
-Der Modernisierungsreifegrad „Cloud-Native“ erfordert normalerweise neue Entwicklungsinvestitionen. Die Umstellung auf den Reifegrad „Cloud-Native“ ist in der Regel durch geschäftliche Anforderungen motiviert, um Anwendungen so weit wie möglich zu modernisieren und so die Skalierung in großen Anwendungen drastisch zu verbessern, indem autonome Subsysteme (Microservices) erstellt werden, die unabhängig von anderen Bereichen der Anwendung bereitgestellt und skaliert werden können, während langfristig die Kosten gesenkt und die Flexibilität bei der Entwicklung der Teile dieser autonomen App erhöht wird, die bedeutende Wettbewerbsvorteile bieten.
+Der Modernisierungsreifegrad „Cloud-Native“ erfordert normalerweise neue Entwicklungsinvestitionen. Die Umstellung auf den Reifegrad „Cloudnative“ ist in der Regel durch geschäftliche Anforderungen motiviert, um Anwendungen so weit wie möglich zu modernisieren und so die Skalierung in großen Anwendungen drastisch zu verbessern. Dafür werden autonome Subsysteme (Microservices) erstellt, die unabhängig von anderen Bereichen der Anwendung bereitgestellt und skaliert werden können. Zugleich werden langfristig die Kosten gesenkt und die Flexibilität bei der Entwicklung der Teile dieser autonomen App erhöht, die bedeutende Wettbewerbsvorteile bringen.
 
 Die Hauptpfeiler cloudnativer Anwendungen ruhen auf Ansätzen mit Microservices-Architektur, die sich mit Agilität weiterentwickeln und auf Limits skalieren lassen, die sich in einer monolithischen Architektur, die in einer lokalen oder Cloudumgebung bereitgestellt ist, schwer erzielen ließen.
 
@@ -41,7 +41,10 @@ Die [Twelve-Factor-App](https://12factor.net/) (eine Sammlung von Mustern, die i
 
 Die [Cloud Native Computing Foundation (CNCF)](https://www.cncf.io/) ist ein primärer Förderer der cloudnativen Prinzipien. Microsoft ist [Mitglied de CNCF](https://azure.microsoft.com/blog/announcing-cncf/).
 
-Eine Beispieldefinition und weitere Informationen zu den Eigenschaften von cloudnativen Anwendungen finden Sie in dem Gartner-Artikel [How to architect and design cloud-native applications](https://www.gartner.com/doc/3181919/architect-design-cloudnative-applications) (Architektur und Design von Cloud-Native-Anwendungen). Spezifische Anleitungen von Microsoft zur Implementierung einer cloudnativen Anwendung finden Sie unter [.NET-Microservices: Architektur für containerisierte .NET-Anwendungen](https://aka.ms/microservicesebook).
+Eine detaillierte Anleitung zum Entwerfen und Entwickeln cloudnativer Anwendungen finden Sie in den folgenden kostenlosen E-Books:
+
+* [Entwickeln cloudnativer .NET-Anwendungen für Azure](../../cloud-native/introduction.md)
+* [.NET-Microservices: Architektur für containerisierte .NET-Anwendungen](../../microservices/index.md).
 
 Der wichtigste Faktor, der bei der Migration einer vollständigen Anwendung zum cloudnativen Modell zu berücksichtigen ist, besteht darin, dass Sie die Architektur vollständig neu auf eine auf Microservices basierende Architektur umstellen müssen. Dies erfordert aufgrund des umfangreichen Refactoring-Prozesses natürlich erhebliche Investitionen in die Entwicklung. Diese Option wird in der Regel für unternehmenskritische Anwendungen gewählt, die neue Skalierbarkeitsniveaus und langfristige Agilität benötigen. Sie könnten aber auch mit der Umstellung auf Cloud-Native beginnen, indem Sie Microservices nur für ein paar neue Szenarios hinzufügen und schließlich ein vollständiges Refactoring der Anwendung als Microservices durchführen. Dies ist ein inkrementeller Ansatz, der in einigen Szenarien die beste Option darstellt.
 

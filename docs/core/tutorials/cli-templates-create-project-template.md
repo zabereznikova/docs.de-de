@@ -5,12 +5,12 @@ author: thraka
 ms.date: 06/25/2019
 ms.topic: tutorial
 ms.author: adegeo
-ms.openlocfilehash: 64b029f87135c3424d01a6833619f0aec3833883
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: f53f4037f832265a35f65bf2e5096c7e5a37bcf1
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75340363"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503536"
 ---
 # <a name="tutorial-create-a-project-template"></a>Tutorial: Erstellen einer Projektvorlage
 
@@ -47,7 +47,7 @@ working
 
 ## <a name="modify-programcs"></a>Ändern von „Program.cs“
 
-Öffnen Sie die Datei _program.cs_. Da das Konsolenprojekt keinen asynchronen Einstiegspunkt verwendet, fügen wir einen hinzu. Ändern Sie Ihren Code wie folgt, und speichern Sie die Datei:
+Öffnen Sie die Datei _program.cs_. Da das Konsolenprojekt keinen asynchronen Einstiegspunkt verwendet, fügen wir einen hinzu. Ändern Sie Ihren Code wie folgt, und speichern Sie die Datei.
 
 ```csharp
 using System;
@@ -85,10 +85,17 @@ Als Nächstes aktualisieren wir die C#-Sprachversion des Projekts auf die Versio
 
 ## <a name="build-the-project"></a>Erstellen des Projekts
 
-Bevor Sie eine Projektvorlage fertig stellen, sollten Sie sie testen, um sicherzustellen, dass sie ordnungsgemäß kompiliert und ausgeführt wird. Führen Sie in Ihrem Terminal den Befehl `dotnet run` aus. Daraufhin sollte die folgende Ausgabe angezeigt werden:
+Bevor Sie eine Projektvorlage fertig stellen, sollten Sie sie testen, um sicherzustellen, dass sie ordnungsgemäß kompiliert und ausgeführt wird.
+
+Führen Sie in Ihrem Terminal den folgenden Befehl aus.
+
+```dotnetcli
+dotnet run
+```
+
+Sie erhalten die folgende Ausgabe.
 
 ```console
-C:\working\templates\consoleasync> dotnet run
 Hello World with C# 8.0!
 ```
 
@@ -102,7 +109,7 @@ Vorlagen werden in .NET Core anhand eines speziellen Ordners und einer Konfigur
 
 Bei der Vorlagenerstellung werden mit Ausnahme des speziellen Konfigurationsordners alle Dateien und Ordner aus dem Vorlagenordner in die Vorlage eingeschlossen. Dieser Konfigurationsordner heißt _.template.config_.
 
-Erstellen Sie zunächst einen neuen Unterordner namens _.template.config_, und öffnen Sie ihn. Erstellen Sie anschließend eine neue Datei namens _template.json_. Ihre Ordnerstruktur sollte wie folgt aussehen:
+Erstellen Sie zunächst einen neuen Unterordner namens _.template.config_, und öffnen Sie ihn. Erstellen Sie anschließend eine neue Datei namens _template.json_. Ihre Ordnerstruktur sollte wie folgt aussehen.
 
 ```console
 working
@@ -112,7 +119,7 @@ working
                 template.json
 ```
 
-Öffnen Sie die Datei _template.json_ mit Ihrem bevorzugten Text-Editor, fügen Sie den folgenden JSON-Code ein, und speichern Sie die Datei:
+Öffnen Sie die Datei _template.json_ in Ihrem bevorzugten Text-Editor, fügen Sie den folgenden JSON-Code ein, und speichern Sie die Datei.
 
 ```json
 {
@@ -133,12 +140,17 @@ Diese Konfigurationsdatei enthält alle Einstellungen für Ihre Vorlage. Neben G
 
 Das Element `classifications` stellt die Spalte **Tags** dar, die angezeigt wird, wenn Sie `dotnet new` ausführen und eine Vorlagenliste abrufen. Benutzer können auch anhand von Klassifizierungstags suchen. Die Eigenschaft `tags` in der JSON-Datei darf nicht mit der Tagliste `classifications` verwechselt werden. Hierbei handelt es sich um zwei unterschiedliche Dinge, die leider ähnlich heißen. Das vollständige Schema für die Datei *template.json* finden Sie im [JSON-Schemaspeicher](http://json.schemastore.org/template). Weitere Informationen zur Datei *template.json* finden Sie im [Wiki zur Erstellung von .NET-Vorlagen](https://github.com/dotnet/templating/wiki).
 
-Nachdem Sie nun über eine gültige Datei vom Typ _.template.config/template.json_ verfügen, ist die Vorlage installationsbereit. Löschen Sie vor der Installation der Vorlage alle zusätzlichen Dateiordner und Dateien, die nicht in Ihre Vorlage eingeschlossen werden sollen (wie etwa die Ordner _bin_ und _obj_). Navigieren Sie in Ihrem Terminal zum Ordner _consoleasync_, und führen Sie `dotnet new -i .\` aus, um die Vorlage aus dem aktuellen Ordner zu installieren. Bei Verwendung eines Linux- oder macOS-Betriebssystems muss ein Schrägstrich verwendet werden: `dotnet new -i ./`.
+Nachdem Sie nun über eine gültige Datei vom Typ _.template.config/template.json_ verfügen, ist die Vorlage installationsbereit. Löschen Sie vor der Installation der Vorlage alle zusätzlichen Dateiordner und Dateien, die nicht in Ihre Vorlage eingeschlossen werden sollen (wie etwa die Ordner _bin_ und _obj_). Navigieren Sie in Ihrem Terminal zum Ordner _consoleasync_, und führen Sie `dotnet new -i .\` aus, um die Vorlage aus dem aktuellen Ordner zu installieren. Bei Verwenden eines Linux- oder macOS-Betriebssystems muss ein Schrägstrich verwendet werden: `dotnet new -i ./`.
 
 Dieser Befehl gibt eine Liste mit den installierten Vorlagen aus. Darin sollte nun auch Ihre Vorlage enthalten sein.
 
+```dotnetcli
+dotnet new -i .\
+```
+
+Sie erhalten eine Ausgabe ähnlich der folgenden.
+
 ```console
-C:\working\templates\consoleasync> dotnet new -i .\
 Usage: new [options]
 
 Options:
@@ -159,17 +171,33 @@ Worker Service                                    worker                [C#]    
 
 ### <a name="test-the-project-template"></a>Testen der Projektvorlage
 
-Testen Sie als Nächstes Ihre installierte Elementvorlage. Navigieren Sie zum Ordner _test_, und erstellen Sie mithilfe des Befehls `dotnet new consoleasync` eine neue Konsolenanwendung. Dadurch wird ein funktionierendes Projekt generiert, das Sie mühelos mit dem Befehl `dotnet run` testen können.
+Testen Sie als Nächstes Ihre installierte Elementvorlage.
 
-```console
-C:\test> dotnet new consoleasync
-The template "Example templates: async project" was created successfully.
-```
+1. Navigieren Sie zum Ordner _test_.
 
-```console
-C:\test> dotnet run
-Hello World with C# 8.0!
-```
+1. Erstellen Sie mit dem folgenden Befehl eine neue Konsolenanwendung, die ein funktionierendes Projekt generiert, das Sie mit dem `dotnet run`-Befehl problemlos testen können.
+
+    ```dotnetcli
+    dotnet new consoleasync
+    ```
+
+    Sie erhalten die folgende Ausgabe.
+
+    ```console
+    The template "Example templates: async project" was created successfully.
+    ```
+
+1. Führen Sie das Projekt mithilfe des folgenden Befehls aus.
+
+    ```dotnetcli
+    dotnet run
+    ```
+
+    Sie erhalten die folgende Ausgabe.
+
+    ```console
+    Hello World with C# 8.0!
+    ```
 
 Herzlichen Glückwunsch! Sie haben eine Projektvorlage mit .NET Core erstellt und bereitgestellt. Zur Vorbereitung auf den nächsten Teil der Tutorialreihe muss die von Ihnen erstellte Vorlage deinstalliert werden. Löschen Sie außerdem auch alle Dateien aus dem Ordner _test_. Dadurch erhalten Sie eine bereinigte Umgebung, die für den nächsten Hauptabschnitt dieses Tutorials bereit ist.
 
@@ -177,8 +205,13 @@ Herzlichen Glückwunsch! Sie haben eine Projektvorlage mit .NET Core erstellt u
 
 Da Sie die Vorlage unter Verwendung eines Dateipfads installiert haben, muss sie mit dem **absoluten** Dateipfad deinstalliert werden. Mithilfe des Befehls `dotnet new -u` können Sie eine Liste der installierten Vorlagen anzeigen. Ihre Vorlage sollte am Ende der Liste aufgeführt sein. Führen Sie den Befehl `dotnet new -u <ABSOLUTE PATH TO TEMPLATE DIRECTORY>` mit dem angegebenen Pfad aus, um Ihre Vorlage zu deinstallieren.
 
+```dotnetcli
+dotnet new -u
+```
+
+Sie erhalten eine Ausgabe ähnlich der folgenden.
+
 ```console
-C:\working> dotnet new -u
 Template Instantiation Commands for .NET Core CLI
 
 Currently installed items:
@@ -206,8 +239,10 @@ Currently installed items:
       Example templates: async project (consoleasync) C#
 ```
 
-```console
-C:\working> dotnet new -u C:\working\templates\consoleasync
+Führen Sie den folgenden Befehl aus, um die Vorlage zu deinstallieren.
+
+```dotnetcli
+dotnet new -u C:\working\templates\consoleasync
 ```
 
 ## <a name="next-steps"></a>Nächste Schritte

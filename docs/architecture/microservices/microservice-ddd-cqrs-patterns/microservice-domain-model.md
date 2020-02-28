@@ -1,13 +1,13 @@
 ---
 title: Entwerfen eines Domänenmodells für Microservices
 description: .NET-Microservicearchitektur für .NET-Containeranwendungen | Übersicht über die Grundkonzepte beim Entwerfen eines DDD-orientierten Domänenmodells
-ms.date: 10/08/2018
-ms.openlocfilehash: 3a02059064305ca148b7909923e2f51e60ee54d5
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.date: 01/30/2020
+ms.openlocfilehash: 628fb5c76362ec8f48367b3d69d16ea6ebd24f09
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73737462"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77502323"
 ---
 # <a name="design-a-microservice-domain-model"></a>Entwerfen eines Microservicedomänenmodells
 
@@ -74,9 +74,9 @@ Eine Entität in einem Microservice ist in einem anderen Microservice möglicher
 
 Eine Person mit Namen und Nachnamen ist in der Regel eine Entität, da eine Person eine Identität hat, selbst wenn der Name und Nachname mit anderen Werten übereinstimmen, z.B. wenn sich diese Namen auch auf eine andere Person beziehen.
 
-Die Verwaltung von Wertobjekten in relationalen Datenbanken und ORMs wie EF ist schwer. In dokumentorientierten Datenbanken können diese einfacher implementiert und verwendet werden.
+Die Verwaltung von Wertobjekten in relationalen Datenbanken und ORMs wie Entity Framework (EF) ist schwierig. In dokumentorientierten Datenbanken können diese einfacher implementiert und verwendet werden.
 
-EF Core 2.0 umfasst die Funktion [Nicht eigenständige Entitäten](https://devblogs.microsoft.com/dotnet/announcing-entity-framework-core-2-0/#owned-entities-and-table-splitting), die die Verarbeitung von Wertobjekten vereinfacht, wie wir später im Detail sehen werden.
+EF Core 2.0 und neuere Versionen bieten das Feature [Nicht eigenständige Entitäten](https://devblogs.microsoft.com/dotnet/announcing-entity-framework-core-2-0/#owned-entities-and-table-splitting), das die Verarbeitung von Wertobjekten vereinfacht, wie wir später im Detail sehen werden.
 
 #### <a name="additional-resources"></a>Zusätzliche Ressourcen
 

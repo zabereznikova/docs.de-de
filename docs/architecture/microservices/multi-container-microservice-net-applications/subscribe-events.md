@@ -1,19 +1,19 @@
 ---
 title: Abonnieren von Ereignissen
 description: '.NET Microservices: Architektur für .NET-Containeranwendungen | Details verstehen zum Veröffentlichen und Abonnieren von Integrationsereignissen.'
-ms.date: 10/02/2018
-ms.openlocfilehash: facbb04d322c5df03498a0313556dd9b5b3161d2
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.date: 01/30/2020
+ms.openlocfilehash: 544af8035ed23dd6507dfed4944b0c327c81d943
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75937143"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77501814"
 ---
 # <a name="subscribing-to-events"></a>Abonnieren von Ereignissen
 
 Wenn Sie den Ereignisbus verwenden möchten, müssen Sie zunächst mit den Microservices die Ereignisse abonnieren, die sie erhalten sollen. Dies sollte im empfangenden Microservice erfolgen.
 
-Im folgenden einfachen Codebeispiel wird veranschaulicht, was in jedem empfangenden Microservice implementiert werden muss, wenn Sie den Dienst starten (in der `Startup`-Klasse), damit ein Abonnement der nötigen Ereignisse erfolgt. In diesem Fall benötigt der `basket.api`-Microservice ein Abonnement von `ProductPriceChangedIntegrationEvent`- und `OrderStartedIntegrationEvent`-Meldungen.
+Im folgenden einfachen Codebeispiel wird veranschaulicht, was in jedem empfangenden Microservice implementiert werden muss, wenn Sie den Dienst starten (in der `Startup`-Klasse), damit ein Abonnement der nötigen Ereignisse erfolgt. In diesem Fall benötigt der `basket-api`-Microservice ein Abonnement von `ProductPriceChangedIntegrationEvent`- und `OrderStartedIntegrationEvent`-Meldungen.
 
 Wenn z.B. das `ProductPriceChangedIntegrationEvent`-Ereignis abonniert wird, erkennt der Warenkorb-Microservice Änderungen am Produktpreis und warnt den Benutzer, wenn es eine Änderung an einem Produkt gab, das sich in dessen Warenkorb befindet.
 
@@ -301,7 +301,7 @@ Es gibt Meldungsverarbeitungen, die von sich aus idempotent sind. Wenn ein Syste
 
 ### <a name="additional-resources"></a>Zusätzliche Ressourcen
 
-- **Honoring message idempotency (Berücksichtigen der Idempotenz von Nachrichten)**  
+- **Honoring message idempotency (Berücksichtigen der Idempotenz von Nachrichten)**  \
   <https://docs.microsoft.com/previous-versions/msp-n-p/jj591565(v=pandp.10)#honoring-message-idempotency>
 
 ## <a name="deduplicating-integration-event-messages"></a>Deduplizieren von Integrationsereignismeldungen
@@ -338,7 +338,7 @@ Wenn das Flag „Redelivered“ festgelegt ist, muss der Empfänger dies beachte
     <https://docs.microsoft.com/previous-versions/msp-n-p/jj591572(v=pandp.10)>
 
 - **Letztliche Konsistenz** \
-    [https://en.wikipedia.org/wiki/Eventual\_consistency](https://en.wikipedia.org/wiki/Eventual_consistency)
+    <https://en.wikipedia.org/wiki/Eventual_consistency>
 
 - **Philip Brown. Strategies for Integrating Bounded Contexts (Strategien zur Integration gebundener Kontexte)**  \
     <https://www.culttt.com/2014/11/26/strategies-integrating-bounded-contexts/>
@@ -359,7 +359,7 @@ Wenn das Flag „Redelivered“ festgelegt ist, muss der Empfänger dies beachte
     <https://dzone.com/articles/event-driven-data-management-for-microservices-1>
 
 - **The CAP Theorem (Das CAP-Theorem)**  \
-    [https://en.wikipedia.org/wiki/CAP\_theorem](https://en.wikipedia.org/wiki/CAP_theorem)
+    <https://en.wikipedia.org/wiki/CAP_theorem>
 
 - **What is CAP Theorem? (Was ist das CAP-Theorem?)** \
     <https://www.quora.com/What-Is-CAP-Theorem-1>
@@ -377,7 +377,7 @@ Wenn das Flag „Redelivered“ festgelegt ist, muss der Empfänger dies beachte
     <https://code.msdn.microsoft.com/Brokered-Messaging-c0acea25>
 
 - **Reliability Guide (Zuverlässigkeitsleitfaden)** (RabbitMQ-Dokumentation) \
-    [https://www.rabbitmq.com/reliability.html\#consumer](https://www.rabbitmq.com/reliability.html#consumer)
+    <https://www.rabbitmq.com/reliability.html#consumer>
 
 > [!div class="step-by-step"]
 > [Zurück](rabbitmq-event-bus-development-test-environment.md)

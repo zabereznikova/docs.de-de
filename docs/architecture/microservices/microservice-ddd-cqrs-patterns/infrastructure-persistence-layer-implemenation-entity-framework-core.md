@@ -1,13 +1,13 @@
 ---
 title: Implementieren der Infrastrukturpersistenzebene mit Entity Framework Core
-description: .NET-Microservicearchitektur für .NET-Containeranwendungen | Übersicht über Implementierungsdetails für die Infrastrukturpersistenzebene mit Entity Framework Core
-ms.date: 10/08/2018
-ms.openlocfilehash: b70ede6b47cbf990d0435aef841416c68f6439b4
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+description: .NET-Microservices-Architektur für .NET-Containeranwendungen | Übersicht über Implementierungsdetails für die Infrastrukturpersistenzebene mit Entity Framework Core
+ms.date: 01/30/2020
+ms.openlocfilehash: 63579dc74ba52551bc1ee02a57337c1b17fdf396
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73737925"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77502499"
 ---
 # <a name="implement-the-infrastructure-persistence-layer-with-entity-framework-core"></a>Implementieren der Infrastrukturpersistenzebene mit Entity Framework Core
 
@@ -273,49 +273,73 @@ class OrderEntityTypeConfiguration : IEntityTypeConfiguration<Order>
 {
     public void Configure(EntityTypeBuilder<Order> orderConfiguration)
     {
-            orderConfiguration.ToTable("orders", OrderingContext.DEFAULT_SCHEMA);
+        orderConfiguration.ToTable("orders", OrderingContext.DEFAULT_SCHEMA);
 
-            orderConfiguration.HasKey(o => o.Id);
+        orderConfiguration.HasKey(o => o.Id);
 
-            orderConfiguration.Ignore(b => b.DomainEvents);
+        orderConfiguration.Ignore(b => b.DomainEvents);
 
-            orderConfiguration.Property(o => o.Id)
-                .ForSqlServerUseSequenceHiLo("orderseq", OrderingContext.DEFAULT_SCHEMA);
+        orderConfiguration.Property(o => o.Id)
+            .UseHiLo("orderseq", OrderingContext.DEFAULT_SCHEMA);
 
-            //Address Value Object persisted as owned entity type supported since EF Core 2.0
-            orderConfiguration.OwnsOne(o => o.Address);
+        //Address value object persisted as owned entity type supported since EF Core 2.0
+        orderConfiguration
+            .OwnsOne(o => o.Address, a =>
+            {
+                a.WithOwner();
+            });
 
-            orderConfiguration.Property<DateTime>("OrderDate").IsRequired();
-            orderConfiguration.Property<int?>("BuyerId").IsRequired(false);
-            orderConfiguration.Property<int>("OrderStatusId").IsRequired();
-            orderConfiguration.Property<int?>("PaymentMethodId").IsRequired(false);
-            orderConfiguration.Property<string>("Description").IsRequired(false);
+        orderConfiguration
+            .Property<int?>("_buyerId")
+            .UsePropertyAccessMode(PropertyAccessMode.Field)
+            .HasColumnName("BuyerId")
+            .IsRequired(false);
 
-            var navigation = orderConfiguration.Metadata.FindNavigation(nameof(Order.OrderItems));
+        orderConfiguration
+            .Property<DateTime>("_orderDate")
+            .UsePropertyAccessMode(PropertyAccessMode.Field)
+            .HasColumnName("OrderDate")
+            .IsRequired();
 
-            // DDD Patterns comment:
-            //Set as field (New since EF 1.1) to access the OrderItem collection property through its field
-            navigation.SetPropertyAccessMode(PropertyAccessMode.Field);
+        orderConfiguration
+            .Property<int>("_orderStatusId")
+            .UsePropertyAccessMode(PropertyAccessMode.Field)
+            .HasColumnName("OrderStatusId")
+            .IsRequired();
 
-            orderConfiguration.HasOne<PaymentMethod>()
-                .WithMany()
-                .HasForeignKey("PaymentMethodId")
-                .IsRequired(false)
-                .OnDelete(DeleteBehavior.Restrict);
+        orderConfiguration
+            .Property<int?>("_paymentMethodId")
+            .UsePropertyAccessMode(PropertyAccessMode.Field)
+            .HasColumnName("PaymentMethodId")
+            .IsRequired(false);
 
-            orderConfiguration.HasOne<Buyer>()
-                .WithMany()
-                .IsRequired(false)
-                .HasForeignKey("BuyerId");
+        orderConfiguration.Property<string>("Description").IsRequired(false);
 
-            orderConfiguration.HasOne(o => o.OrderStatus)
-                .WithMany()
-                .HasForeignKey("OrderStatusId");
+        var navigation = orderConfiguration.Metadata.FindNavigation(nameof(Order.OrderItems));
+
+        // DDD Patterns comment:
+        //Set as field (New since EF 1.1) to access the OrderItem collection property through its field
+        navigation.SetPropertyAccessMode(PropertyAccessMode.Field);
+
+        orderConfiguration.HasOne<PaymentMethod>()
+            .WithMany()
+            .HasForeignKey("_paymentMethodId")
+            .IsRequired(false)
+            .OnDelete(DeleteBehavior.Restrict);
+
+        orderConfiguration.HasOne<Buyer>()
+            .WithMany()
+            .IsRequired(false)
+            .HasForeignKey("_buyerId");
+
+        orderConfiguration.HasOne(o => o.OrderStatus)
+            .WithMany()
+            .HasForeignKey("_orderStatusId");
     }
 }
 ```
 
-Sie könnten alle Fluent-API-Zuordnungen innerhalb derselben OnModelCreating-Methode festlegen, es ist jedoch ratsam, diesen Code zu untergliedern und wie im Beispiel gezeigt über mehrere Konfigurationsklassen zu verfügen (eine pro Entität). Vor allem bei besonders großen Modellen ist es empfehlenswert, über separate Konfigurationsklassen für das Konfigurieren unterschiedlicher Entitätstypen zu verfügen.
+Sie könnten alle Fluent-API-Zuordnungen innerhalb derselben `OnModelCreating`-Methode festlegen, es ist jedoch ratsam, diesen Code zu untergliedern und wie im Beispiel gezeigt über mehrere Konfigurationsklassen zu verfügen (eine pro Entität). Vor allem bei besonders großen Modellen ist es empfehlenswert, über separate Konfigurationsklassen für das Konfigurieren unterschiedlicher Entitätstypen zu verfügen.
 
 Der Code im Beispiel zeigt einige explizite Deklarationen und Zuordnungen. EF Core-Konventionen führen viele dieser Zuordnungen jedoch automatisch aus, sodass der von Ihnen tatsächlich benötigte Code einen geringeren Umfang hätte.
 
@@ -333,7 +357,7 @@ Der Hi/Lo-Algorithmus beschreibt einen Mechanismus zum Abrufen eines Batches von
 
 - Er generiert einen visuell lesbaren Bezeichner (im Gegensatz zu Techniken, die GUIDs zu verwenden).
 
-EF Core unterstützt wie im vorigen Beispiel gezeigt [HiLo](https://stackoverflow.com/questions/282099/whats-the-hi-lo-algorithm) mit der ForSqlServerUseSequenceHiLo-Methode.
+EF Core unterstützt wie im vorigen Beispiel gezeigt [HiLo](https://stackoverflow.com/questions/282099/whats-the-hi-lo-algorithm) mit der `UseHiLo`-Methode.
 
 ### <a name="map-fields-instead-of-properties"></a>Zuordnen von Feldern anstelle von Eigenschaften
 
@@ -410,6 +434,7 @@ public class BasketWithItemsSpecification : BaseSpecification<Basket>
     {
         AddInclude(b => b.Items);
     }
+
     public BasketWithItemsSpecification(string buyerId)
         : base(b => b.BuyerId == buyerId)
     {
@@ -445,7 +470,7 @@ public IEnumerable<T> List(ISpecification<T> spec)
 
 Zusätzlich zum Kapseln der Filterlogik kann die Spezifikation die Form der zurückzugebenden Daten angeben, einschließlich der aufzufüllenden Eigenschaften.
 
-Obwohl davon abgeraten wird, IQueryable-Objekte aus einem Repository abzurufen, ist es in Ordnung, sie innerhalb des Repositorys zum Erstellen eines Ergebnissatzes zu verwenden. Sie können die Verwendung dieses Ansatzes oben bei der List-Methode sehen, die intermediäre IQueryable-Ausdrücke verwendet, um die Liste der in der Abfrage enthaltenen Elemente zu erstellen, bevor die Abfrage mit den Kriterien der Spezifikation in der letzten Zeile ausgeführt wird.
+Obwohl davon abgeraten wird, `IQueryable`-Objekte aus einem Repository abzurufen, ist es in Ordnung, sie innerhalb des Repositorys zum Erstellen eines Resultsets zu verwenden. Sie können die Befolgung dieses Ansatzes oben bei der List-Methode sehen, die zwischengeschaltete `IQueryable`-Ausdrücke verwendet, um die Liste der in der Abfrage enthaltenen Elemente zu erstellen, bevor die Abfrage mit den Kriterien der Spezifikation in der letzten Zeile ausgeführt wird.
 
 ### <a name="additional-resources"></a>Zusätzliche Ressourcen
 

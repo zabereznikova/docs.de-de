@@ -1,62 +1,73 @@
 ---
 title: Befehl „dotnet tool list“
-description: Der Befehl „dotnet tool list“ listet die angegebenen globalen .NET Core-Tools auf Ihrem Computer auf.
-ms.date: 05/29/2018
-ms.openlocfilehash: 6d35b1dce0c6d57edb0c6dd5f9711f093bc804aa
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+description: Der Befehl „dotnet tool list“ listet die auf Ihrem Computer installierten .NET Core-Tools auf.
+ms.date: 02/14/2020
+ms.openlocfilehash: bb74cfeaf441cf8a1a030d97d16655f85d8267d1
+ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117557"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77543455"
 ---
 # <a name="dotnet-tool-list"></a>dotnet tool list
 
-[!INCLUDE [topic-appliesto-net-core-21plus.md](../../../includes/topic-appliesto-net-core-21plus.md)]
+**Dieser Artikel gilt für:** ✔️ .NET Core 2.1 SDK und neuere Versionen
 
-## <a name="name"></a>NAME
+## <a name="name"></a>name
 
-`dotnet tool list`: listet alle [globalen .NET Core-Tools](global-tools.md) auf, die derzeit im Standardverzeichnis oder unter dem angegebenen Pfad auf Ihrem Computer installiert sind.
+`dotnet tool list`: Listet alle [.NET Core-Tools](global-tools.md) des angegebenen Typs auf, der derzeit auf dem Computer installiert sind.
 
-## <a name="synopsis"></a>Zusammenfassung
+## <a name="synopsis"></a>Übersicht
 
 ```dotnetcli
 dotnet tool list <-g|--global>
 dotnet tool list <--tool-path>
+dotnet tool list
 dotnet tool list <-h|--help>
 ```
 
-## <a name="description"></a>BESCHREIBUNG
+## <a name="description"></a>Beschreibung
 
-Der Befehl `dotnet tool list` ermöglicht Ihnen das Auflisten aller globalen .NET Core-Tools, die benutzerweit (aktuelles Benutzerprofil) oder unter dem angegebenen Pfad auf Ihrem Computer installiert sind. Der Befehl listet den Paketnamen, die installierte Version und den Befehl für das globale Tool auf. Zum Verwenden des list-Befehls müssen Sie entweder mit der Option `--global` angeben, dass alle benutzerweiten Tools angezeigt werden sollen, oder mit der Option `--tool-path` einen benutzerdefinierten Pfad angeben.
+Der Befehl `dotnet tool list` bietet die Möglichkeit, alle globalen, Toolpfad- oder lokalen .NET Core-Tools aufzulisten, die auf Ihrem Computer installiert sind. Der Befehl listet den Paketnamen, die installierte Version und den Befehl für das Tool auf.  Um den Befehl zu verwenden, geben Sie eine der folgenden Optionen an:
+
+* Ein globales Tool, das am Standardspeicherort installiert ist. Verwenden Sie die Option `--global`.
+* Ein globales Tool, das an einem benutzerdefinierten Speicherort installiert ist. Verwenden Sie die `--tool-path`-Option.
+* Ein lokales Tool. Lassen Sie die Optionen `--global` und `--tool-path` weg.
+
+**Lokale Tools sind ab .NET Core SDK 3.0 verfügbar.**
 
 ## <a name="options"></a>Optionen
 
-`-g|--global`
+- **`-g|--global`**
 
-Listet benutzerweite globale Tools auf. Kann nicht mit der Option `--tool-path` kombiniert werden. Wenn Sie diese Option nicht angeben, müssen Sie die Option `--tool-path` angeben.
+  Listet benutzerweite globale Tools auf. Kann nicht mit der Option `--tool-path` kombiniert werden. Bei Weglassen von `--global` und `--tool-path` werden lokale Tools aufgelistet. 
 
-`-h|--help`
+- **`-h|--help`**
 
-Druckt eine kurze Hilfe für den Befehl.
+  Druckt eine kurze Hilfe für den Befehl.
 
-`--tool-path <PATH>`
+- **`--tool-path <PATH>`**
 
-Legt einen benutzerdefinierten Speicherort fest, an dem globale Tools gespeichert sind. „PATH“ kann absolut oder relativ sein. Kann nicht mit der Option `--global` kombiniert werden. Wenn Sie diese Option nicht angeben, müssen Sie die Option `--global` angeben.
+  Legt einen benutzerdefinierten Speicherort fest, an dem globale Tools gespeichert werden. „PATH“ kann absolut oder relativ sein. Kann nicht mit der Option `--global` kombiniert werden. Bei Weglassen von `--global` und `--tool-path` werden lokale Tools aufgelistet. 
 
 ## <a name="examples"></a>Beispiele
 
-Listet alle globale Tools auf, die benutzerweit auf Ihrem Computer installiert sind (aktuelles Benutzerprofil):
+- **`dotnet tool list -g`**
 
-`dotnet tool list -g`
+  Listet alle globale Tools auf, die benutzerweit auf Ihrem Computer installiert sind (aktuelles Benutzerprofil).
 
-Listet die globalen Tools aus einem bestimmten Windows-Ordner auf:
+- **`dotnet tool list --tool-path c:\global-tools`**
 
-`dotnet tool list --tool-path c:\global-tools`
+  Listet die globalen Tools in einem bestimmten Windows-Verzeichnis auf.
 
-Listet die globalen Tools aus einem bestimmten Linux-/macOS-Ordner auf:
+- **`dotnet tool list --tool-path ~/bin`**
 
-`dotnet tool list --tool-path ~/bin`
+  Listet die globalen Tools in einem bestimmten Linux/macOS-Verzeichnis auf.
+
+- **`dotnet tool list`**
+
+  Listet alle lokalen Tools auf, die im aktuellen Verzeichnis verfügbar sind.
 
 ## <a name="see-also"></a>Siehe auch
 
-- [.NET Core Global Tools (Globale .NET Core-Tools)](global-tools.md)
+- [.NET Core-Tools](global-tools.md)

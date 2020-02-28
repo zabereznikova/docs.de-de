@@ -4,12 +4,12 @@ description: Erfahren Sie mehr über C#-Indexer und wie sie indizierte Eigenscha
 ms.date: 06/20/2016
 ms.technology: csharp-fundamentals
 ms.assetid: 0e9496da-e766-45a9-b92b-91820d4a350e
-ms.openlocfilehash: 86e646b341cf098d8621f095d4bfc9ea2191940d
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 966483e80d8dd0421dce1b7fabdb0d443d73a0fc
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039118"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77450881"
 ---
 # <a name="indexers"></a>Indexer
 
@@ -321,7 +321,7 @@ using CityDataMeasurements = System.Collections.Generic.Dictionary<string, Syste
 
 erstellen einen *Alias* für einen konstruierter generischen Typen. Durch diese Anweisungen kann ein Code später die deskriptiveren Namen `DateMeasurements` und `CityDateMeasurements` statt der generischen Konstruktion von `Dictionary<DateTime, Measurements>` und `Dictionary<string, Dictionary<DateTime, Measurements> >` verwenden. Diese Konstruktion erfordert den Gebrauch des vollqualifizierten Typnamens auf der rechten Seite des `=`-Zeichens.
 
-In der zweiten Vorgehensweise entfernen Sie die Uhrzeitteile jedes `DateTime`-Objekts, das verwendet wird, um in die Auflistungen zu indizieren. Das .NET Framework enthält keinen „Date only“-Typ.
+In der zweiten Vorgehensweise entfernen Sie die Uhrzeitteile jedes `DateTime`-Objekts, das verwendet wird, um in die Auflistungen zu indizieren. .NET bietet keinen reinen Datumstyp.
 Entwickler verwenden den `DateTime`-Typ, aber die `Date`-Eigenschaft, um sicherzustellen, das jedes `DateTime`-Objekt dieses Tages gleich ist.
 
 ## <a name="summing-up"></a>Schlussbemerkung

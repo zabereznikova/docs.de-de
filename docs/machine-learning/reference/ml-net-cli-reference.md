@@ -2,16 +2,16 @@
 title: Befehlsreferenz für die ML.NET-CLI
 description: Übersicht, Beispiele und Verweise für den Befehl „auto-train“ im ML.NET-CLI-Tool
 ms.date: 12/18/2019
-ms.openlocfilehash: 5e59eba91721b26622360818a73adb07a654dc28
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: 537f8d361c170378f5fe8cf454320831d7c8cbf2
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75636119"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77449698"
 ---
 # <a name="the-mlnet-cli-command-reference"></a>Befehlsreferenz für die ML.NET-CLI
 
-Der `auto-train`-Befehl ist der Hauptbefehl des ML.NET-CLI-Tools. Mit dem Befehl können Sie ein qualitativ hochwertiges ML.NET-Modell mithilfe von automatisiertem Machine Learning (AutoML) sowie den C#-Beispielcode generieren, um dieses Modell auszuführen bzw. zu bewerten. Außerdem wird der C#-Code zum Trainieren des Modells für Sie generiert, damit Sie den Algorithmus und die Einstellungen des Modells untersuchen können.
+Der `auto-train`-Befehl ist der Hauptbefehl des ML.NET-CLI-Tools. Mit dem Befehl können Sie ein qualitativ hochwertiges ML.NET-Modell mithilfe von automatisiertem maschinellen Lernen (AutoML) sowie den C#-Beispielcode generieren, um dieses Modell auszuführen bzw. zu bewerten. Außerdem wird der C#-Code zum Trainieren des Modells für Sie generiert, damit Sie den Algorithmus und die Einstellungen des Modells untersuchen können.
 
 > [!NOTE]
 > Dieses Thema bezieht sich auf die ML.NET-CLI und ML.NET AutoML, die derzeit als Vorschau verfügbar sind, und das Material kann jederzeit geändert werden.

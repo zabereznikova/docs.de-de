@@ -3,13 +3,13 @@ title: Architekturprinzipien
 description: Entwerfen moderner Webanwendungen mit ASP.NET Core und Azure | Architekturprizipien
 author: ardalis
 ms.author: wiwagn
-ms.date: 02/16/2019
-ms.openlocfilehash: 656c92c417283366e4bb757489c189ecbc0ea815
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.date: 12/04/2019
+ms.openlocfilehash: ffc890bf8cd6b07bd70d8fc7b2b8cfeaf474ae35
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73416692"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77450270"
 ---
 # <a name="architectural-principles"></a>Architekturprinzipien
 
@@ -34,7 +34,7 @@ In Klassen erfolgt die Kapselung durch Verringern des Zugriffs auf den internen 
 
 ### <a name="dependency-inversion"></a>Abhängigkeitsumkehr
 
-Die Abhängigkeitsrichtung innerhalb der Anwendung sollte sich in Richtung der Abstraktion bewegen, nicht in Richtung Implementierungsdetails. Die meisten Anwendungen werden so geschrieben, dass die Kompilierzeitabhängigkeit in Richtung der Laufzeitausführung geht. Dadurch wird ein direktes Abhängigkeitsdiagramm erzeugt. Das bedeutet, dass wenn Modul A eine Funktion in Modul B aufruft, das wiederum eine Funktion in Funktion C aufruft, hängt die Kompilierzeit von A von B ab, dessen Kompilierzeit wiederum von C abhängt, so wie in Abbildung 4-1 dargestellt.
+Die Abhängigkeitsrichtung innerhalb der Anwendung sollte sich in Richtung der Abstraktion bewegen, nicht in Richtung Implementierungsdetails. Die meisten Anwendungen werden so geschrieben, dass die Kompilierzeitabhängigkeit in Richtung der Laufzeitausführung geht. Dadurch wird ein direktes Abhängigkeitsdiagramm erzeugt. Das heißt, wenn Modul A eine Funktion in Modul B aufruft, die eine Funktion in Modul C aufruft, hängt A zur Kompilierzeit von B ab, das von C abhängt, wie in Abbildung 4-1 gezeigt.
 
 ![Diagramm der direkten Abhängigkeit](./media/image4-1.png)
 

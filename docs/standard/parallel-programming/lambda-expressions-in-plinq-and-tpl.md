@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Action delegate, creating with lambda expression
 - lambda expressions, with Action and Func
 ms.assetid: 645b2c17-29d0-4ffa-8684-430743cc2f2d
-ms.openlocfilehash: d1b716e977702d03db176da70be00a1e5c789a4b
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 4e5be295a52edc1a7f0a0a3aa98f55335ae3e31b
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73129028"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77452999"
 ---
 # <a name="lambda-expressions-in-plinq-and-tpl"></a>Lambdaausdrücke in PLINQ und TPL
 
@@ -26,11 +26,11 @@ Die Task Parallel Library (TPL) enthält viele Methoden, die eine der <xref:Syst
 
 ## <a name="func-delegate"></a>Func-Delegat
 
-Ein `Func`-Delegat kapselt eine Methode, die einen Wert zurückgibt. In einer Func-Signatur gibt der letzte bzw. der am weitesten rechts stehende Typparameter immer den Rückgabetyp an. Eine häufige Ursache von Compilerfehlern ist der Versuch, zwei Eingabeparameter an eine <xref:System.Func%602?displayProperty=nameWithType> zu übergeben. Dieser Typ akzeptiert jedoch nur einen Eingabeparameter. Die Framework-Klassenbibliothek definiert 17 Versionen von `Func`: <xref:System.Func%601?displayProperty=nameWithType>, <xref:System.Func%602?displayProperty=nameWithType>, <xref:System.Func%603?displayProperty=nameWithType> usw. bis <xref:System.Func%6017?displayProperty=nameWithType>.
+Ein `Func`-Delegat kapselt eine Methode, die einen Wert zurückgibt. In einer `Func`-Signatur gibt der letzte bzw. der am weitesten rechts stehende Typparameter immer den Rückgabetyp an. Eine häufige Ursache von Compilerfehlern ist der Versuch, zwei Eingabeparameter an eine <xref:System.Func%602?displayProperty=nameWithType> zu übergeben. Dieser Typ akzeptiert jedoch nur einen Eingabeparameter. .NET definiert 17 Versionen von `Func`: <xref:System.Func%601?displayProperty=nameWithType>, <xref:System.Func%602?displayProperty=nameWithType>, <xref:System.Func%603?displayProperty=nameWithType> usw. bis <xref:System.Func%6017?displayProperty=nameWithType>.
 
 ## <a name="action-delegate"></a>Action-Delegat
 
-Ein <xref:System.Action?displayProperty=nameWithType>-Delegat kapselt eine Methode (Untermethode in Visual Basic), die keinen Wert oder [void](../../csharp/language-reference/keywords/void.md) zurückgibt. In einer Signatur vom Typ „Action“ stellen die Typparameter nur Eingabeparameter dar. Die .NET Framework-Klassenbibliothek definiert wie bei Func 17 Versionen von Action, von einer Version ohne Typparameter bis zu einer Version mit 16 Typparametern.
+Ein <xref:System.Action?displayProperty=nameWithType>-Delegat kapselt eine Methode (Sub in Visual Basic), die keinen Wert zurückgibt. In einer Signatur des Typs `Action` stellen die Typparameter nur Eingabeparameter dar. Wie `Func` definiert .NET 17 Versionen von `Action`, und zwar von einer Version ohne Typparameter bis zu einer mit 16 Typparametern.
 
 ## <a name="example"></a>Beispiel
 

@@ -1,23 +1,23 @@
 ---
 title: System.Delegate und das `delegate`-Schlüsselwort
-description: Informationen zu den Klassen in .NET Framework, die Delegaten unterstützen, und wie diese zum Schlüsselwort „delegate“ zugeordnet werden.
+description: Informationen zu den Klassen in .NET, die Delegaten unterstützen, und wie diese zum Schlüsselwort „delegate“ zugeordnet werden.
 ms.date: 06/20/2016
 ms.technology: csharp-fundamentals
 ms.assetid: f3742fda-13c2-4283-8966-9e21c2674393
-ms.openlocfilehash: f4635ff623feec9407021792cabd1677184b4d34
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 3cfc9925be0f191dc3fc93c02f4a8f9a40b71895
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73420370"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77450920"
 ---
 # <a name="systemdelegate-and-the-delegate-keyword"></a>System.Delegate und das `delegate`-Schlüsselwort
 
-[Zurück](delegates-overview.md)
+[Vorherige](delegates-overview.md)
 
-Dieser Artikel behandelt die Klassen in .NET Framework, die Delegaten unterstützen, und wie diese zum `delegate`-Schlüsselwort zugeordnet werden.
+Dieser Artikel enthält Informationen zu den Klassen in .NET, die Delegaten unterstützen, und wie diese dem Schlüsselwort `delegate` zugeordnet werden.
 
-## <a name="defining-delegate-types"></a>Definieren von Delegattypen
+## <a name="define-delegate-types"></a>Definieren von Delegattypen
 
 Wir beginnen mit dem Schlüsselwort „delegate“, da Sie dieses beim Arbeiten mit Delegaten hauptsächlich verwenden werden. Der Code, der vom Compiler bei Verwendung des `delegate`-Schlüsselworts generiert wird, verweist auf Methodenaufrufe, die Member der Klassen <xref:System.Delegate> und <xref:System.MulticastDelegate> aufrufen. 
 
@@ -41,7 +41,7 @@ Beachten Sie, dass es so scheinen kann, als ob die Syntax eine Variable deklarie
 
 Der Compiler generiert auch Handler zum Hinzufügen und Entfernen für diesen neuen Typ, damit Clients dieser Klasse Methoden der Aufrufliste einer Instanz hinzufügen und entfernen können. Der Compiler erzwingt, dass die Signatur der Methode, die hinzugefügt oder entfernt wird, der Signatur bei der Deklaration der Methode entspricht. 
 
-## <a name="declaring-instances-of-delegates"></a>Deklarieren von Instanzen von Delegaten
+## <a name="declare-instances-of-delegates"></a>Deklarieren von Instanzen von Delegaten
 
 Nach dem Definieren des Delegats können Sie eine Instanz dieses Typs erstellen.
 Wie alle Variablen in C# können Sie Delegatinstanzen nicht direkt in einem Namespace oder im globalen Namespace deklarieren.
@@ -57,7 +57,7 @@ Der Typ der Variable ist `Comparison<T>`, der zuvor definierte Delegattyp. Der N
  
  Dieser obenstehende Codeausschnitt hat eine Membervariable innerhalb einer Klasse deklariert. Sie können auch Delegatvariablen deklarieren, die lokale Variablen oder Argumente von Methoden sind.
 
-## <a name="invoking-delegates"></a>Aufrufen von Delegaten
+## <a name="invoke-delegates"></a>Aufrufen von Delegaten
 
 Sie rufen die Methoden in der Aufrufliste eines Delegaten auf, indem Sie diesen Delegaten aufrufen. In der `Sort()`-Methode ruft der Code die Vergleichsmethode an, um zu bestimmen, in welcher Reihenfolge er die Objekte anordnet:
 
@@ -70,7 +70,7 @@ Sie behandeln die Variable als Methodenname und rufen sie mit der üblichen Synt
 
 Diese Codezeile macht eine unsichere Annahme: Es gibt keine Garantie, dass dem Delegaten ein Ziel hinzugefügt wurde. Wenn keine Ziele angehängt wurden, löst die Zeile darüber eine `NullReferenceException` aus. Die Ausdrücke, die verwendet werden, um dieses Problem zu beheben, sind komplizierter als eine einfache NULL-Überprüfung und werden später in dieser [Reihe](delegates-patterns.md) behandelt.
 
-## <a name="assigning-adding-and-removing-invocation-targets"></a>Zuweisen, Hinzufügen und Entfernen von Aufrufzielen
+## <a name="assign-add-and-remove-invocation-targets"></a>Zuweisen, Hinzufügen und Entfernen von Aufrufzielen
 
 So werden Delegattypen definiert und Delegatinstanzen deklariert und aufgerufen.
 
@@ -133,4 +133,4 @@ Die Methoden, die Sie bei der Arbeit mit Delegaten am häufigsten verwenden, sin
 
 Nun haben Sie die Sprachsyntax und die Klassen gesehen, die Delegaten unterstützen. Als Nächstes untersuchen wir, wie stark typisierte Delegaten verwendet, erstellt und aufgerufen werden.
 
-[Weiter](delegates-strongly-typed.md)
+[Nächste](delegates-strongly-typed.md)

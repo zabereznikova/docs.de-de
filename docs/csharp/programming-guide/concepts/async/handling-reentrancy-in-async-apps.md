@@ -2,12 +2,12 @@
 title: Ablaufinvarianz in asynchronen Anwendungen (C#)
 ms.date: 07/20/2015
 ms.assetid: 47c5075e-c448-45ce-9155-ed4e7e98c677
-ms.openlocfilehash: 9a6189624eff988ec6b0ac8a93330d591ed46a8c
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 67fbbd294ffe6219b58065f974543b2dd483a92c
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72772034"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77451862"
 ---
 # <a name="handling-reentrancy-in-async-apps-c"></a>Ablaufinvarianz in asynchronen Anwendungen (C#)
 
@@ -28,10 +28,10 @@ Wenn Sie asynchronen Code in der App einschließen, sollten Sie erneutes Eintret
 - [Die Beispiel-App überprüfen und ausführen](#BKMD_SettingUpTheExample)
 
 > [!NOTE]
-> Um das Beispiel ausführen zu können, muss Visual Studio 2012 oder höher sowie .NET Framework 4.5 oder höher auf Ihrem Computer installiert sein.
+> Um das Beispiel ausführen zu können, muss Visual Studio 2012 oder höher sowie .NET Framework 4.5 oder höher auf Ihrem Computer installiert sein.
 
 > [!NOTE]
-> Für die App-Entwicklung ist ab sofort mindestens Transport Layer Security (TLS) Version 1.2 erforderlich. Wenn Ihre App auf eine .NET Framework-Version vor 4.7 ausgerichtet ist, lesen Sie den Artikel [Bewährte Methoden für Transport Layer Security (TLS) mit .NET Framework](../../../../framework/network-programming/tls.md). 
+> Für die App-Entwicklung ist ab sofort mindestens Transport Layer Security (TLS) Version 1.2 erforderlich. Wenn Ihre App für eine .NET Framework-Version vor 4.7 vorgesehen ist, lesen Sie den Artikel [Bewährte Methoden für Transport Layer Security (TLS) mit .NET Framework](../../../../framework/network-programming/tls.md).
 
 ## <a name="BKMK_RecognizingReentrancy"></a> Erkennen von Ablaufinvarianz
 
@@ -146,7 +146,7 @@ Anstatt die Schaltfläche **Start** zu deaktivieren, kann die Schaltfläche akti
 
 Weitere Informationen zum Abbrechen finden Sie unter [Fine-Tuning Your Async Application (C#) (Abstimmen der asynchronen Anwendung (C#))](./fine-tuning-your-async-application.md).
 
-Um dieses Szenario festzulegen, nehmen Sie am grundlegenden Code aus [Überprüfen und Ausführen der Beispiel-App](#BKMD_SettingUpTheExample) folgende Änderungen vor. Sie können die fertige App auch unter [Async Samples: Reentrancy in .NET Desktop Apps (Eintrittsinvarianz in .NET-Desktop-Apps)](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06). Der Name des Projekts lautet „CancelAndRestart“.
+Um dieses Szenario festzulegen, nehmen Sie am grundlegenden Code aus [Überprüfen und Ausführen der Beispiel-App](#BKMD_SettingUpTheExample) folgende Änderungen vor. Sie können die fertige App auch unter [Async Samples: Reentrancy in .NET Desktop Apps (Asynchrone Beispiele: Eintrittsinvarianz in .NET-Desktop-Apps)](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06) herunterladen. Der Name des Projekts lautet „CancelAndRestart“.
 
 1. Deklarieren Sie eine <xref:System.Threading.CancellationTokenSource>-Variable, `cts`, die im Bereich für alle Methoden liegt.
 
@@ -307,7 +307,7 @@ Das dritte Beispiel ist das schwierigste, da von der App jedes Mal, wenn der Ben
 
 Die Vorgänge geben global <xref:System.Threading.Tasks.Task>, `pendingWork` frei, der als Gatekeeper für den Anzeigenprozess dient.
 
-Um dieses Szenario festzulegen, nehmen Sie am grundlegenden Code aus [Überprüfen und Ausführen der Beispiel-App](#BKMD_SettingUpTheExample) folgende Änderungen vor. Sie können die fertige App auch unter [Async Samples: Reentrancy in .NET Desktop Apps (Eintrittsinvarianz in .NET-Desktop-Apps)](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06). Der Name des Projekts lautet „QueueResults“.
+Um dieses Szenario festzulegen, nehmen Sie am grundlegenden Code aus [Überprüfen und Ausführen der Beispiel-App](#BKMD_SettingUpTheExample) folgende Änderungen vor. Sie können die fertige App auch unter [Async Samples: Reentrancy in .NET Desktop Apps (Asynchrone Beispiele: Eintrittsinvarianz in .NET-Desktop-Apps)](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06) herunterladen. Der Name des Projekts lautet „QueueResults“.
 
 Die folgende Ausgabe zeigt das Ergebnis bei einmaliger Betätigung der Schaltfläche **Start**. Die Buchstabenbezeichnung „A“ gibt an, dass das Ergebnis vom ersten Klick auf die Schaltfläche **Start** stammt. Die Zahlen geben die Reihenfolge der URL in der Liste der Downloadziele wieder.
 

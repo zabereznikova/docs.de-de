@@ -1,13 +1,13 @@
 ---
 title: Definieren Ihrer Anwendung mit mehreren Containern mit docker-compose.yml
 description: Festlegen der Zusammensetzung von Microservices für eine Anwendung mit mehreren Containern mit „docker-compose.yml“
-ms.date: 10/02/2018
-ms.openlocfilehash: f9cab35ac8e11ca89a83f646c29bf72f84e66ef4
-ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
+ms.date: 01/30/2020
+ms.openlocfilehash: 86d6feda343df7f4b72374f93fc45b3246780cdf
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76116540"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77502473"
 ---
 # <a name="defining-your-multi-container-application-with-docker-composeyml"></a>Definieren Ihrer Anwendung mit mehreren Containern mit docker-compose.yml
 
@@ -26,20 +26,20 @@ services:
   webmvc:
     image: eshop/webmvc
     environment:
-      - CatalogUrl=http://catalog.api
-      - OrderingUrl=http://ordering.api
-      - BasketUrl=http://basket.api
+      - CatalogUrl=http://catalog-api
+      - OrderingUrl=http://ordering-api
+      - BasketUrl=http://basket-api
     ports:
       - "5100:80"
     depends_on:
-      - catalog.api
-      - ordering.api
-      - basket.api
+      - catalog-api
+      - ordering-api
+      - basket-api
 
-  catalog.api:
-    image: eshop/catalog.api
+  catalog-api:
+    image: eshop/catalog-api
     environment:
-      - ConnectionString=Server=sql.data;Initial Catalog=CatalogData;User Id=sa;Password=your@password
+      - ConnectionString=Server=sqldata;Initial Catalog=CatalogData;User Id=sa;Password=your@password
     expose:
       - "80"
     ports:
@@ -48,37 +48,37 @@ services:
     extra_hosts:
       - "CESARDLSURFBOOK:10.0.75.1"
     depends_on:
-      - sql.data
+      - sqldata
 
-  ordering.api:
-    image: eshop/ordering.api
+  ordering-api:
+    image: eshop/ordering-api
     environment:
-      - ConnectionString=Server=sql.data;Database=Services.OrderingDb;User Id=sa;Password=your@password
+      - ConnectionString=Server=sqldata;Database=Services.OrderingDb;User Id=sa;Password=your@password
     ports:
       - "5102:80"
     #extra hosts can be used for standalone SQL Server or services at the dev PC
     extra_hosts:
       - "CESARDLSURFBOOK:10.0.75.1"
     depends_on:
-      - sql.data
+      - sqldata
 
-  basket.api:
-    image: eshop/basket.api
+  basket-api:
+    image: eshop/basket-api
     environment:
-      - ConnectionString=sql.data
+      - ConnectionString=sqldata
     ports:
       - "5103:80"
     depends_on:
-      - sql.data
+      - sqldata
 
-  sql.data:
+  sqldata:
     environment:
       - SA_PASSWORD=your@password
       - ACCEPT_EULA=Y
     ports:
       - "5434:1433"
 
-  basket.data:
+  basketdata:
     image: redis
 ```
 
@@ -87,21 +87,21 @@ Der Stammschlüssel in dieser Datei ist „services“. Unter diesem Schlüssel 
 | Dienstname | Beschreibung |
 |--------------|-------------|
 | webmvc       | Container, einschließlich der ASP.NET Core-MVC-Anwendung, die die Microservices der serverseitigen Programmiersprache C\# verwendet|
-| catalog.api  | Container, einschließlich des Katalogmicroservice für die ASP.NET Core-Web-API |
-| ordering.api | Container, einschließlich des Microservice für Bestellungen für die ASP.NET Core-Web-API |
-| sql.data     | Container unter SQL Server für Linux, einschließlich der Microservicesdatenbanken |
-| basket.api   | Container mit dem Warenkorbmicroservice für die ASP.NET Core-Web-API |
-| basket.data  | Container, der den REDIS-Cachedienst mit der basket-Datenbank als REDIS-Cache ausführt |
+| catalog-api  | Container, einschließlich des Katalogmicroservice für die ASP.NET Core-Web-API |
+| ordering-api | Container, einschließlich des Microservice für Bestellungen für die ASP.NET Core-Web-API |
+| sqldata     | Container unter SQL Server für Linux, einschließlich der Microservicesdatenbanken |
+| basket-api   | Container mit dem Warenkorbmicroservice für die ASP.NET Core-Web-API |
+| basketdata  | Container, der den REDIS-Cachedienst mit der basket-Datenbank als REDIS-Cache ausführt |
 
 ### <a name="a-simple-web-service-api-container"></a>Ein einfacher Container für die Webdienst-API
 
 Der Containermicroservice „catalog.api“ hat mit Fokus auf einen einzelnen Container eine klare Definition:
 
 ```yml
-  catalog.api:
-    image: eshop/catalog.api
+  catalog-api:
+    image: eshop/catalog-api
     environment:
-      - ConnectionString=Server=sql.data;Initial Catalog=CatalogData;User Id=sa;Password=your@password
+      - ConnectionString=Server=sqldata;Initial Catalog=CatalogData;User Id=sa;Password=your@password
     expose:
       - "80"
     ports:
@@ -110,32 +110,32 @@ Der Containermicroservice „catalog.api“ hat mit Fokus auf einen einzelnen Co
     extra_hosts:
       - "CESARDLSURFBOOK:10.0.75.1"
     depends_on:
-      - sql.data
+      - sqldata
 ```
 
 Dieser Containerdienst verfügt über die folgende grundlegende Konfiguration:
 
-- Er basiert auf dem benutzerdefinierten „eshop/catalog.api“-Image. Der Einfachheit halber gibt es keine „build: key“-Einstellung in der Datei. Das bedeutet, dass das Image zuvor erstellt worden (mit „docker build“) oder aus einer beliebigen Docker-Registrierung heruntergeladen worden sein muss (mit dem Befehl „docker pull“).
+- Er basiert auf dem benutzerdefinierten Image **eshop/catalog-api**. Der Einfachheit halber gibt es keine „build: key“-Einstellung in der Datei. Das bedeutet, dass das Image zuvor erstellt worden (mit „docker build“) oder aus einer beliebigen Docker-Registrierung heruntergeladen worden sein muss (mit dem Befehl „docker pull“).
 
 - Er definiert die Umgebungsvariable mit der Bezeichnung „ConnectionString“ mit der Verbindungszeichenfolge, die von Entity Framework für den Zugriff auf die SQL Server-Instanz, die das Katalogdatenmodell enthält, verwendet werden soll. In diesem Fall enthält der gleicher SQL Server-Container mehrere Datenbanken. Aus diesem Grund benötigen Sie weniger Arbeitsspeicher in Ihrem Entwicklungscomputer für Docker. Allerdings können Sie auch einen SQL Server-Container für jede Microservicedatenbank bereitstellen.
 
-- Der SQL Server-Name lautet „sql.data“. Dies ist derselbe Name, der für den Container verwendet wird, der die SQL Server-Instanz für Linux ausführt. Das ist wirklich praktisch, denn die Möglichkeit, diese Namensauflösung (intern für den Docker-Host) zu verwenden, löst die Netzwerkadresse auf. Sie müssen die interne IP-Adresse für die Container also nicht kennen, auf die Sie von anderen Container aus zugreifen.
+- Der SQL Server-Name lautet **sqldata**. Dies ist derselbe Name, der für den Container verwendet wird, der die SQL Server-Instanz für Linux ausführt. Das ist wirklich praktisch, denn die Möglichkeit, diese Namensauflösung (intern für den Docker-Host) zu verwenden, löst die Netzwerkadresse auf. Sie müssen die interne IP-Adresse für die Container also nicht kennen, auf die Sie von anderen Container aus zugreifen.
 
 Da die Verbindungszeichenfolge von einer Umgebungsvariable definiert ist, können Sie die Variable über einen anderen Mechanismus und zu einer anderen Zeit festlegen. Sie können beispielsweise eine andere Verbindungszeichenfolge festlegen, wenn Sie eine Bereitstellung zur Produktion in den finalen Hosts durchführen, oder von Ihren CI/CD-Pipelines in Azure DevOps Services bzw. von Ihrem bevorzugten DevOps-System aus.
 
-- Er stellt Port 80 für den internen Zugriff auf den catalog.api-Dienst im Docker-Host zur Verfügung. Der Host ist derzeit eine Linux-VM, da er auf einem Docker-Image für Linux basiert. Sie können den Container jedoch auch so konfigurieren, dass er stattdessen auf einem Windows-Image ausgeführt wird.
+- Er stellt Port 80 für den internen Zugriff auf den Dienst **catalog.api** im Docker-Host zur Verfügung. Der Host ist derzeit eine Linux-VM, da er auf einem Docker-Image für Linux basiert. Sie können den Container jedoch auch so konfigurieren, dass er stattdessen auf einem Windows-Image ausgeführt wird.
 
 - Er leitet den zur Verfügung gestellten Port 80 auf dem Container zu Port 5101 auf dem Docker-Hostcomputer (der Linux-VM) weiter.
 
-- Er verknüpft den Webdienst mit dem sql.data-Dienst (der SQL Server-Instanz für die Linux-Datenbank, die in einem Container ausgeführt wird). Bei Angabe dieser Abhängigkeit wird der catalog.api-Container nicht gestartet, bis der sql.data-Container gestartet wird. Dies ist wichtig, da catalog.api erfordert, dass zunächst die SQL Server-Datenbank verfügbar ist und ausgeführt wird. Diese Art der Containerabhängigkeit reicht jedoch in vielen Fällen nicht aus, da Docker nur auf Containerebene prüft. Manchmal ist der Dienst (in diesem Fall SQL Server) womöglich noch immer nicht verfügbar, deshalb ist es ratsam, die Wiederholungsversuchslogik mit exponentiellem Backoff in Ihren Clientmicroservices zu implementieren. Auf diese Weise ist die Anwendung noch immer widerstandsfähig, wenn ein Abhängigkeitscontainer für kurze Zeit nicht bereit ist.
+- Er verknüpft den Webdienst mit dem Dienst **sqldata** (der SQL Server-Instanz für die Linux-Datenbank, die in einem Container ausgeführt wird). Bei Angabe dieser Abhängigkeit wird der Container „catalog-api“ nicht gestartet, bis der Container „sqldata“ gestartet wird. Dies ist wichtig, da „catalog-api“ verlangt, dass zunächst die SQL Server-Datenbank verfügbar ist und ausgeführt wird. Diese Art der Containerabhängigkeit reicht jedoch in vielen Fällen nicht aus, da Docker nur auf Containerebene prüft. Manchmal ist der Dienst (in diesem Fall SQL Server) womöglich noch immer nicht verfügbar, deshalb ist es ratsam, die Wiederholungsversuchslogik mit exponentiellem Backoff in Ihren Clientmicroservices zu implementieren. Auf diese Weise ist die Anwendung noch immer widerstandsfähig, wenn ein Abhängigkeitscontainer für kurze Zeit nicht bereit ist.
 
 - Er ist so konfiguriert, dass er Zugriff auf externe Server zulässt: Die Einstellung „extra\_hosts“ ermöglicht es Ihnen, auf externe Server oder Computer außerhalb des Docker-Hosts zuzugreifen (das heißt, außerhalb der standardmäßigen Linux-VM, die einen Docker-Entwicklungshost darstellt), z. B. auf eine lokale SQL Server-Instanz auf Ihrem Entwicklungs-PC.
 
-Es sind auch andere, leistungsstärkere docker-compose.yml-Einstellungen verfügbar, die in den folgenden Abschnitten erläutert werden.
+Es sind auch andere, leistungsstärkere `docker-compose.yml`-Einstellungen verfügbar, die in den folgenden Abschnitten erläutert werden.
 
 ### <a name="using-docker-compose-files-to-target-multiple-environments"></a>Verwenden von docker-compose-Dateien für mehrere Umgebungen
 
-Die docker-compose.yml-Dateien sind Definitionsdateien und können von mehreren Infrastrukturen verwendet werden, die dieses Format verwenden können. Das einfachste Tool ist der Befehl „docker-compose“.
+Die `docker-compose.*.yml`-Dateien sind Definitionsdateien und können von mehreren Infrastrukturen verwendet werden, die dieses Format verwenden können. Das einfachste Tool ist der Befehl „docker-compose“.
 
 Aus diesem Grund können Sie durch die Verwendung des „docker-compose“-Befehls auf die folgenden Hauptszenarios abzielen.
 
@@ -179,13 +179,13 @@ Standardmäßig liest Compose zwei Dateien: eine docker-compose.yml- und eine op
 
 ![Screenshot der Dateien in einem Docker Compose-Projekt.](./media/multi-container-applications-docker-compose/docker-compose-file-visual-studio.png)
 
-**Abbildung 6-11**. docker-compose-Dateien in Visual Studio 2017
+**Abbildung 6-11**. docker-compose-Dateien in Visual Studio 2019
 
 **docker-compose**-Projektdateistruktur:
 
-* *.dockerignore*: wird zum Ignorieren von Dateien verwendet.
-* *docker-compose.yml*: wird zum Verfassen von Microservices verwendet.
-* *docker-compose.override.yml*: wird zum Konfigurieren der Microservices-Umgebung verwendet.
+- *.dockerignore*: wird zum Ignorieren von Dateien verwendet.
+- *docker-compose.yml*: wird zum Verfassen von Microservices verwendet.
+- *docker-compose.override.yml*: wird zum Konfigurieren der Microservices-Umgebung verwendet.
 
 Sie können die docker-compose-Dateien mit jedem beliebigen Editor bearbeiten, z.B. mit Visual Studio Code oder Sublime, und die Anwendung mit dem Befehl „docker-compose up“ ausführen.
 
@@ -207,34 +207,34 @@ Sie können mehrere docker.compose*.yml-Dateien kombinieren, wenn verschiedene U
 #docker-compose.yml (Base)
 version: '3.4'
 services:
-  basket.api:
-    image: eshop/basket.api:${TAG:-latest}
+  basket-api:
+    image: eshop/basket-api:${TAG:-latest}
     build:
       context: .
       dockerfile: src/Services/Basket/Basket.API/Dockerfile
     depends_on:
-      - basket.data
-      - identity.api
+      - basketdata
+      - identity-api
       - rabbitmq
 
-  catalog.api:
-    image: eshop/catalog.api:${TAG:-latest}
+  catalog-api:
+    image: eshop/catalog-api:${TAG:-latest}
     build:
       context: .
       dockerfile: src/Services/Catalog/Catalog.API/Dockerfile
     depends_on:
-      - sql.data
+      - sqldata
       - rabbitmq
 
-  marketing.api:
-    image: eshop/marketing.api:${TAG:-latest}
+  marketing-api:
+    image: eshop/marketing-api:${TAG:-latest}
     build:
       context: .
       dockerfile: src/Services/Marketing/Marketing.API/Dockerfile
     depends_on:
-      - sql.data
-      - nosql.data
-      - identity.api
+      - sqldata
+      - nosqldata
+      - identity-api
       - rabbitmq
 
   webmvc:
@@ -243,19 +243,19 @@ services:
       context: .
       dockerfile: src/Web/WebMVC/Dockerfile
     depends_on:
-      - catalog.api
-      - ordering.api
-      - identity.api
-      - basket.api
-      - marketing.api
+      - catalog-api
+      - ordering-api
+      - identity-api
+      - basket-api
+      - marketing-api
 
-  sql.data:
-    image: microsoft/mssql-server-linux:2017-latest
+  sqldata:
+    image: mcr.microsoft.com/mssql/server:2017-latest
 
-  nosql.data:
+  nosqldata:
     image: mongo
 
-  basket.data:
+  basketdata:
     image: redis
 
   rabbitmq:
@@ -286,12 +286,12 @@ version: '3.4'
 services:
 # Simplified number of services here:
 
-  basket.api:
+  basket-api:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
       - ASPNETCORE_URLS=http://0.0.0.0:80
-      - ConnectionString=${ESHOP_AZURE_REDIS_BASKET_DB:-basket.data}
-      - identityUrl=http://identity.api
+      - ConnectionString=${ESHOP_AZURE_REDIS_BASKET_DB:-basketdata}
+      - identityUrl=http://identity-api
       - IdentityUrlExternal=http://${ESHOP_EXTERNAL_DNS_NAME_OR_IP}:5105
       - EventBusConnection=${ESHOP_AZURE_SERVICE_BUS:-rabbitmq}
       - EventBusUserName=${ESHOP_SERVICE_BUS_USERNAME}
@@ -304,11 +304,11 @@ services:
     ports:
       - "5103:80"
 
-  catalog.api:
+  catalog-api:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
       - ASPNETCORE_URLS=http://0.0.0.0:80
-      - ConnectionString=${ESHOP_AZURE_CATALOG_DB:-Server=sql.data;Database=Microsoft.eShopOnContainers.Services.CatalogDb;User Id=sa;Password=Pass@word}
+      - ConnectionString=${ESHOP_AZURE_CATALOG_DB:-Server=sqldata;Database=Microsoft.eShopOnContainers.Services.CatalogDb;User Id=sa;Password=Pass@word}
       - PicBaseUrl=${ESHOP_AZURE_STORAGE_CATALOG_URL:-http://localhost:5202/api/v1/catalog/items/[0]/pic/}
       - EventBusConnection=${ESHOP_AZURE_SERVICE_BUS:-rabbitmq}
       - EventBusUserName=${ESHOP_SERVICE_BUS_USERNAME}
@@ -323,17 +323,17 @@ services:
     ports:
       - "5101:80"
 
-  marketing.api:
+  marketing-api:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
       - ASPNETCORE_URLS=http://0.0.0.0:80
-      - ConnectionString=${ESHOP_AZURE_MARKETING_DB:-Server=sql.data;Database=Microsoft.eShopOnContainers.Services.MarketingDb;User Id=sa;Password=Pass@word}
-      - MongoConnectionString=${ESHOP_AZURE_COSMOSDB:-mongodb://nosql.data}
+      - ConnectionString=${ESHOP_AZURE_MARKETING_DB:-Server=sqldata;Database=Microsoft.eShopOnContainers.Services.MarketingDb;User Id=sa;Password=Pass@word}
+      - MongoConnectionString=${ESHOP_AZURE_COSMOSDB:-mongodb://nosqldata}
       - MongoDatabase=MarketingDb
       - EventBusConnection=${ESHOP_AZURE_SERVICE_BUS:-rabbitmq}
       - EventBusUserName=${ESHOP_SERVICE_BUS_USERNAME}
       - EventBusPassword=${ESHOP_SERVICE_BUS_PASSWORD}
-      - identityUrl=http://identity.api
+      - identityUrl=http://identity-api
       - IdentityUrlExternal=http://${ESHOP_EXTERNAL_DNS_NAME_OR_IP}:5105
       - CampaignDetailFunctionUri=${ESHOP_AZUREFUNC_CAMPAIGN_DETAILS_URI}
       - PicBaseUrl=${ESHOP_AZURE_STORAGE_MARKETING_URL:-http://localhost:5110/api/v1/campaigns/[0]/pic/}
@@ -354,12 +354,12 @@ services:
       - PurchaseUrl=http://webshoppingapigw
       - IdentityUrl=http://10.0.75.1:5105
       - MarketingUrl=http://webmarketingapigw
-      - CatalogUrlHC=http://catalog.api/hc
-      - OrderingUrlHC=http://ordering.api/hc
-      - IdentityUrlHC=http://identity.api/hc
-      - BasketUrlHC=http://basket.api/hc
-      - MarketingUrlHC=http://marketing.api/hc
-      - PaymentUrlHC=http://payment.api/hc
+      - CatalogUrlHC=http://catalog-api/hc
+      - OrderingUrlHC=http://ordering-api/hc
+      - IdentityUrlHC=http://identity-api/hc
+      - BasketUrlHC=http://basket-api/hc
+      - MarketingUrlHC=http://marketing-api/hc
+      - PaymentUrlHC=http://payment-api/hc
       - SignalrHubUrl=http://${ESHOP_EXTERNAL_DNS_NAME_OR_IP}:5202
       - UseCustomizationData=True
       - ApplicationInsights__InstrumentationKey=${INSTRUMENTATION_KEY}
@@ -367,16 +367,16 @@ services:
       - UseLoadTest=${USE_LOADTEST:-False}
     ports:
       - "5100:80"
-  sql.data:
+  sqldata:
     environment:
       - SA_PASSWORD=Pass@word
       - ACCEPT_EULA=Y
     ports:
       - "5433:1433"
-  nosql.data:
+  nosqldata:
     ports:
       - "27017:27017"
-  basket.data:
+  basketdata:
     ports:
       - "6379:6379"
   rabbitmq:
@@ -412,7 +412,7 @@ Umgebungsvariablen werden unterschiedlich erstellt und initialisiert. Dies häng
 
 Das folgende Beispiel zeigt eine ENV-Datei wie die [.env](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/.env)-Datei für die eShopOnContainers-Anwendung.
 
-```env
+```sh
 # .env file
 
 ESHOP_EXTERNAL_DNS_NAME_OR_IP=localhost
@@ -437,7 +437,7 @@ Die in der Laufzeitumgebung festgelegten Werte setzen immer die in der ENV-Datei
 Wenn Sie Docker und .NET Core in Internetquellen untersuchen, finden Sie Docker-Dateien, die die Einfachheit der Erstellung eines Docker-Images darstellen, indem die Quelle ganz einfach in einen Container kopiert wird. In diesen Beispielen wird empfohlen, dass Sie mithilfe einer einfachen Konfiguration ein Docker-Image besitzen, das die Umgebung zusammen mit Ihrer Anwendung enthält. Zu diesem Zweck wird im folgenden Beispiel eine einfache Docker-Datei gezeigt.
 
 ```Dockerfile
-FROM mcr.microsoft.com/dotnet/core/sdk:2.2
+FROM mcr.microsoft.com/dotnet/core/sdk:3.1
 WORKDIR /app
 ENV ASPNETCORE_URLS http://+:80
 EXPOSE 80
@@ -463,7 +463,7 @@ Zu diesem Zweck stellt das .NET-Team vier grundlegende Varianten unter [dotnet/c
 1. **sdk:** für Entwicklungs- und Buildszenarien
 1. **aspnet**: für ASP.NET-Produktionsszenarien
 1. **runtime**: für .NET-Produktionsszenarien
-1. **runtime-deps:** für Produktionsszenarien von [eigenständigen Anwendungen](../../../core/deploying/index.md#self-contained-deployments-scd)
+1. **runtime-deps:** für Produktionsszenarien von [eigenständigen Anwendungen](../../../core/deploying/index.md#publish-self-contained)
 
 Für einen schnelleren Start setzen Runtimeimages auch automatisch aspnetcore\_urls auf Port 80 und verwenden Ngen, um einen nativen Imagecache von Assemblys zu erstellen.
 

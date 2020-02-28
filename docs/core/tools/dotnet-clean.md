@@ -1,21 +1,17 @@
 ---
 title: Befehl „dotnet clean“
 description: Mit dem Befehl „dotnet clean“ wird das aktuelle Verzeichnis bereinigt.
-ms.date: 06/26/2019
-ms.openlocfilehash: 736c0bba5d156e919534f1ad811641e815b3ffac
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.date: 02/14/2020
+ms.openlocfilehash: 186f1ea07718a8e178f88c3d079cf6e2f1f8660b
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76734252"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503753"
 ---
 # <a name="dotnet-clean"></a>dotnet clean
 
-**Dieser Artikel gilt für:** ✔️ .NET Core 1.x SDK und neuere Versionen
-
-<!-- todo: uncomment when all CLI commands are reviewed
-[!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
--->
+**Dieser Artikel gilt für:** ✔️ .NET Core 2.x SDK und neuere Versionen
 
 ## <a name="name"></a>name
 
@@ -41,9 +37,9 @@ MSBuild-Projekt oder Projektmappe, das/die bereinigt werden soll. Wenn Sie keine
 
 ## <a name="options"></a>Optionen
 
-* **`-c|--configuration {Debug|Release}`**
+* **`-c|--configuration <CONFIGURATION>`**
 
-  Legt die Buildkonfiguration fest. Der Standardwert ist `Debug`. Diese Option ist bei der Bereinigung nur erforderlich, wenn Sie sie bei der Erstellung angegeben haben.
+  Legt die Buildkonfiguration fest. Der Standardwert für die meisten Projekte ist `Debug`, aber Sie können die Buildkonfigurationseinstellungen in Ihrem Projekt überschreiben. Diese Option ist bei der Bereinigung nur erforderlich, wenn Sie sie bei der Erstellung angegeben haben.
 
 * **`-f|--framework <FRAMEWORK>`**
 
@@ -67,7 +63,7 @@ MSBuild-Projekt oder Projektmappe, das/die bereinigt werden soll. Wenn Sie keine
 
 * **`-r|--runtime <RUNTIME_IDENTIFIER>`**
 
-  Bereinigt den Ausgabeordner der angegebenen Runtime Wird bei der Erstellung einer [eigenständigen Bereitstellung](../deploying/index.md#self-contained-deployments-scd) verwendet. Die Option ist seit dem .NET Core 2.0 SDK verfügbar.
+  Bereinigt den Ausgabeordner der angegebenen Runtime Wird bei der Erstellung einer [eigenständigen Bereitstellung](../deploying/index.md#publish-self-contained) verwendet.
 
 * **`-v|--verbosity <LEVEL>`**
 

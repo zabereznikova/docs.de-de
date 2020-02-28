@@ -5,12 +5,12 @@ author: thraka
 ms.date: 06/25/2019
 ms.topic: tutorial
 ms.author: adegeo
-ms.openlocfilehash: fa0ae18221c33d196960239411f8860a561b20ee
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 5f4038e863d9bb59df470d3516c08fd2ad29c078
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75340370"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503554"
 ---
 # <a name="tutorial-create-an-item-template"></a>Tutorial: Erstellen einer Elementvorlage
 
@@ -41,7 +41,7 @@ In dieser Reihe werden ein Arbeitsordner als Vorlagenquelle und ein Testordner z
 
 Erstellen Sie zunächst den übergeordneten Ordner. Dieser kann einen beliebigen Namen haben. Erstellen Sie anschließend einen Unterordner mit dem Namen _working_. Erstellen Sie im Ordner _working_ einen Unterordner mit dem Namen _templates_.
 
-Erstellen Sie als Nächstes unter dem übergeordneten Ordner einen Ordner mit dem Namen _test_. Die Ordnerstruktur sollte wie folgt aussehen:
+Erstellen Sie als Nächstes unter dem übergeordneten Ordner einen Ordner mit dem Namen _test_. Die Ordnerstruktur sollte wie folgt aussehen.
 
 ```console
 parent_folder
@@ -99,7 +99,7 @@ working
                 template.json
 ```
 
-Öffnen Sie die Datei _template.json_ mit Ihrem bevorzugten Text-Editor, fügen Sie den folgenden JSON-Code ein, und speichern Sie die Datei:
+Öffnen Sie die Datei _template.json_ mit Ihrem bevorzugten Text-Editor, fügen Sie den folgenden JSON-Code ein, und speichern Sie die Datei.
 
 ```json
 {
@@ -151,8 +151,13 @@ Worker Service                                    worker                [C#]    
 
 Testen Sie als Nächstes Ihre installierte Elementvorlage. Navigieren Sie zum Ordner _test/_ , und erstellen Sie mithilfe des Befehls `dotnet new console` eine neue Konsolenanwendung. Dadurch wird ein funktionierendes Projekt generiert, das Sie mühelos mit dem Befehl `dotnet run` testen können.
 
+```dotnetcli
+dotnet new console
+```
+
+Sie erhalten eine Ausgabe ähnlich der folgenden.
+
 ```console
-C:\test> dotnet new console
 The template "Console Application" was created successfully.
 
 Processing post-creation actions...
@@ -162,15 +167,27 @@ Running 'dotnet restore' on C:\test\test.csproj...
 Restore succeeded.
 ```
 
+Führen Sie das Projekt mit Folgendem aus.
+
+```dotnetcli
+dotnet run
+```
+
+Sie erhalten die folgende Ausgabe.
+
 ```console
-C:\test> dotnet run
 Hello World!
 ```
 
 Führen Sie `dotnet new stringext` aus, um _CommonExtensions.cs_ auf der Grundlage der Vorlage zu generieren.
 
+```dotnetcli
+dotnet new stringext
+```
+
+Sie erhalten die folgende Ausgabe.
+
 ```console
-C:\test> dotnet new stringext
 The template "Example templates: string extensions" was created successfully.
 ```
 
@@ -182,8 +199,13 @@ Console.WriteLine("Hello World!".Reverse());
 
 Führen Sie das Programm erneut aus. Das Ergebnis ist nun umgekehrt:
 
+```dotnetcli
+dotnet run
+```
+
+Sie erhalten die folgende Ausgabe.
+
 ```console
-C:\test> dotnet run
 !dlroW olleH
 ```
 
@@ -193,8 +215,13 @@ Herzlichen Glückwunsch! Sie haben eine Elementvorlage mit .NET Core erstellt u
 
 Da Sie die Vorlage unter Verwendung eines Dateipfads installiert haben, muss sie mit dem **absoluten** Dateipfad deinstalliert werden. Mithilfe des Befehls `dotnet new -u` können Sie eine Liste der installierten Vorlagen anzeigen. Ihre Vorlage sollte am Ende der Liste aufgeführt sein. Führen Sie den Befehl `dotnet new -u <ABSOLUTE PATH TO TEMPLATE DIRECTORY>` mit dem angegebenen Pfad aus, um Ihre Vorlage zu deinstallieren.
 
+```dotnetcli
+dotnet new -u
+```
+
+Sie erhalten eine Ausgabe ähnlich der folgenden.
+
 ```console
-C:\working> dotnet new -u
 Template Instantiation Commands for .NET Core CLI
 
 Currently installed items:
@@ -222,8 +249,10 @@ Currently installed items:
       Example templates: string extensions (stringext) C#
 ```
 
-```console
-C:\working> dotnet new -u C:\working\templates\extensions
+Führen Sie den folgenden Befehl aus, um die Vorlage zu deinstallieren.
+
+```dotnetcli
+dotnet new -u C:\working\templates\extensions
 ```
 
 ## <a name="next-steps"></a>Nächste Schritte
