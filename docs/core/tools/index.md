@@ -3,12 +3,12 @@ title: .NET Core-CLI
 titleSuffix: ''
 description: Eine Übersicht über die .NET Core-CLI und ihre Features.
 ms.date: 02/13/2020
-ms.openlocfilehash: c491088f26a9aa1c065414e76fb0b80d554380b4
-ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
+ms.openlocfilehash: d84f96889cabc3fb4521e39db25050aacdd11546
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77625981"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156711"
 ---
 # <a name="net-core-cli-overview"></a>Übersicht über die .NET Core-CLI
 
@@ -77,7 +77,7 @@ dotnet /build_output/my_app.dll
 
 ### <a name="driver"></a>Treiber
 
-Der Treiber trägt den Namen [dotnet](dotnet.md) und hat zwei Aufgaben, entweder die Ausführung einer [Framework-abhängigen Anwendung](../deploying/index.md) oder die Ausführung eines Befehls. 
+Der Treiber trägt den Namen [dotnet](dotnet.md) und hat zwei Aufgaben, entweder die Ausführung einer [Framework-abhängigen Anwendung](../deploying/index.md) oder die Ausführung eines Befehls.
 
 Geben Sie zur Ausführung einer Framework-abhängigen Anwendung nach dem Treiber die Anwendung an, z.B. `dotnet /path/to/my_app.dll`. Führen Sie beim Ausführen des Befehls aus dem Ordner, in dem sich die DLL der Anwendung befindet, einfach `dotnet my_app.dll` aus. Wenn Sie eine bestimmte Version der .NET Core-Runtime verwenden möchten, verwenden Sie die `--fx-version <VERSION>`-Option (weitere Informationen dazu finden Sie in der [Referenz zum dotnet-Befehl](dotnet.md)).
 

@@ -12,16 +12,16 @@ helpviewer_keywords:
 - assemblies [.NET Framework]
 - version boundaries
 - type boundaries
-ms.openlocfilehash: 968eaf2befb44eb893699d1114b315a4f5df3097
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: f85fef37ac952c91ac73570f26d80d8a46f4eedf
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76921368"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156504"
 ---
 # <a name="assemblies-in-net"></a>Assemblys in .NET
 
-Assemblys bilden die Grundlage für die Bereitstellung, die Versionskontrolle, die Wiederverwendung, die Festlegung des Aktivierungsumfangs und die Sicherheitsberechtigungen für .NET-basierte Anwendungen. Eine Assembly ist eine Auflistung von Typen und Ressourcen, die so erstellt wurden, dass sie zusammenarbeiten und eine logische funktionelle Einheit bilden. Assemblys sind ausführbare Dateien (*.exe*) oder Dynamic Link Library-Dateien (*.dll*) und bilden die Bausteine von .NET-Anwendungen. Sie stellen der Common Language Runtime die Informationen zur Verfügung, die sie zum Erkennen der Typimplementierungen benötigt.
+Assemblys bilden die Grundlage für die Bereitstellung, die Versionskontrolle, die Wiederverwendung, die Festlegung des Aktivierungsumfangs und die Sicherheitsberechtigungen für .NET-basierte Anwendungen. Eine Assembly ist eine Auflistung von Typen und Ressourcen, die so erstellt wurden, dass sie zusammenarbeiten und eine logische funktionelle Einheit bilden. Assemblys sind ausführbare Dateien ( *.exe*) oder Dynamic Link Library-Dateien ( *.dll*) und bilden die Bausteine von .NET-Anwendungen. Sie stellen der Common Language Runtime die Informationen zur Verfügung, die sie zum Erkennen der Typimplementierungen benötigt.
 
 In .NET Core und .NET Framework können Sie eine Assembly entweder aus einer oder aus mehreren Quellcodedateien erstellen. In .NET Framework können Assemblys ein Modul oder mehrere Module umfassen. Dies macht es möglich, größere Projekte so zu planen, dass mehrere Entwickler an verschiedenen Quellcodedateien oder Modulen arbeiten, die anschließend in einer einzigen Assembly kombiniert werden. Weitere Informationen zu Modulen finden Sie unter [Vorgehensweise: Erstellen einer Assembly aus mehreren Dateien](../../framework/app-domains/build-multifile-assembly.md).
 
@@ -85,11 +85,11 @@ Da Assemblys Informationen zu Inhalt, Versionsverwaltung und Abhängigkeiten ent
 Damit Sie eine Assembly in einer Anwendung verwenden können, müssen Sie einen Verweis auf diese hinzufügen. Sobald auf eine Assembly verwiesen wird, sind alle zugänglichen Typen, Eigenschaften, Methoden und andere Member ihrer Namespaces für Ihre Anwendung verfügbar, als wäre ihr Code Teil der Quelldatei.
 
 > [!NOTE]
-> Die meisten Assemblys der .NET-Klassenbibliothek werden automatisch referenziert. Wenn nicht automatisch auf eine Systemassembly verwiesen wird, können Sie für .NET Core einen Verweis auf das NuGet-Paket hinzufügen, in dem die Assembly enthalten ist. Verwenden Sie entweder den NuGet-Paket-Manager in Visual Studio, oder fügen Sie dem *CSPROJ*- oder dem *VBPROJ*-Projekt ein [\<PackageReference>](../../core/tools/dependencies.md#the-new-packagereference-element)-Element für die Assembly hinzu. In .NET Framework können Sie über das Dialogfeld **Verweis hinzufügen** in Visual Studio einen Verweis auf die Assembly hinzufügen, oder Sie verwenden die Befehlszeilenoption `-reference` für den [C#](../../csharp/language-reference/compiler-options/reference-compiler-option.md)- oder [Visual Basic](../../visual-basic/reference/command-line-compiler/reference.md)-Compiler.
+> Die meisten Assemblys der .NET-Klassenbibliothek werden automatisch referenziert. Wenn nicht automatisch auf eine Systemassembly verwiesen wird, können Sie für .NET Core einen Verweis auf das NuGet-Paket hinzufügen, in dem die Assembly enthalten ist. Verwenden Sie entweder den NuGet-Paket-Manager in Visual Studio, oder fügen Sie dem *CSPROJ*- oder dem *VBPROJ*-Projekt ein [\<PackageReference>](../../core/tools/dependencies.md#the-packagereference-element)-Element für die Assembly hinzu. In .NET Framework können Sie über das Dialogfeld **Verweis hinzufügen** in Visual Studio einen Verweis auf die Assembly hinzufügen, oder Sie verwenden die Befehlszeilenoption `-reference` für den [C#](../../csharp/language-reference/compiler-options/reference-compiler-option.md)- oder [Visual Basic](../../visual-basic/reference/command-line-compiler/reference.md)-Compiler.
 
 In C# können Sie zwei Versionen derselben Assembly in einer einzigen Anwendung verwenden. Weitere Informationen finden Sie unter [extern-Alias](../../csharp/language-reference/keywords/extern-alias.md).
 
-## <a name="related-content"></a>Verwandte Inhalte
+## <a name="related-content"></a>Verwandter Inhalt
 
 |Titel|Beschreibung|
 |-----------|-----------------|
@@ -104,15 +104,15 @@ In C# können Sie zwei Versionen derselben Assembly in einer einzigen Anwendung 
 |[Ausgeben von dynamischen Methoden und Assemblys](../../../docs/framework/reflection-and-codedom/emitting-dynamic-methods-and-assemblies.md)|Erstellen von dynamischen Assemblys|
 |[So sucht Common Language Runtime nach Assemblys](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)|So löst .NET Framework zur Laufzeit Assemblyverweise auf|
 
-## <a name="reference"></a>Verweis
+## <a name="reference"></a>Referenz
 
 <xref:System.Reflection.Assembly?displayProperty=nameWithType>
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [.NET-Assemblydateiformat](file-format.md)
 - [Friend-Assemblys](friend.md)
 - [Verweisassemblys](reference-assemblies.md)
-- [Vorgehensweise: Laden und Entladen von Assemblys](load-unload.md)
-- [Vorgehensweise: Verwenden und Debuggen von Assemblyentladbarkeit in .NET Core](unloadability.md)
-- [Vorgehensweise: Bestimmen, ob eine Datei eine Assembly ist](identify.md)
+- [How to: Laden und Entladen von Assemblys](load-unload.md)
+- [How to: Verwenden und Debuggen von Assemblyentladbarkeit in .NET Core](unloadability.md)
+- [How to: Bestimmen, ob eine Datei eine Assembly ist](identify.md)

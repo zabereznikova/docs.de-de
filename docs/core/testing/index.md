@@ -4,12 +4,12 @@ description: Dieser Artikel bietet eine kurze Übersicht über Komponententests 
 author: ardalis
 ms.author: wiwagn
 ms.date: 08/30/2017
-ms.openlocfilehash: 41f4457e636ca495b78109803ca66680e72d007e
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.openlocfilehash: 1263bfe337b9d6609c0ca7df70aa299a61a7f1a0
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75899885"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78157400"
 ---
 # <a name="unit-testing-in-net-core-and-net-standard"></a>Komponententests in .NET Core und .NET Standard
 
@@ -23,9 +23,9 @@ Sie können in .NET Core 2.0 oder höher integrierte Vorlagen für Komponentente
 
 ## <a name="what-are-unit-tests"></a>Was sind Komponententests?
 
-Mit automatisierten Tests können Sie sicherstellen, dass eine Softwareanwendung das tut, was die Autoren möchten. Es gibt mehrere Arten von Tests für Softwareanwendungen. Dazu zählen u.a. Integrationstests, Webtests und Auslastungstests. **Komponententests** testen einzelne Softwarekomponenten und Methoden. Komponententests sollten nur den Code testen, für den der Entwickler zuständig ist. Sie sollten keine Aspekte der Infrastruktur testen. Aspekte der Infrastruktur sind z.B. Datenbanken, Dateisysteme und Netzwerkressourcen. 
+Mit automatisierten Tests können Sie sicherstellen, dass eine Softwareanwendung das tut, was die Autoren möchten. Es gibt mehrere Arten von Tests für Softwareanwendungen. Dazu zählen u.a. Integrationstests, Webtests und Auslastungstests. **Komponententests** testen einzelne Softwarekomponenten und Methoden. Komponententests sollten nur den Code testen, für den der Entwickler zuständig ist. Sie sollten keine Aspekte der Infrastruktur testen. Aspekte der Infrastruktur sind z.B. Datenbanken, Dateisysteme und Netzwerkressourcen.
 
-Beachten Sie, dass es bewährte Methode für das Schreiben von Tests gibt. Bei der [testgesteuerten Entwicklung (Test Driven Development, TDD)](https://deviq.com/test-driven-development/) wird ein Komponententest vor dem Code geschrieben, den er prüfen soll. Stellen Sie sich die TDD wie eine Gliederung für ein Buch vor, bevor dieses geschrieben wird. Dadurch sollen Entwickler einfacheren, lesbareren und effizienteren Code schreiben können. 
+Beachten Sie, dass es bewährte Methode für das Schreiben von Tests gibt. Bei der [testgesteuerten Entwicklung (Test Driven Development, TDD)](https://deviq.com/test-driven-development/) wird ein Komponententest vor dem Code geschrieben, den er prüfen soll. Stellen Sie sich die TDD wie eine Gliederung für ein Buch vor, bevor dieses geschrieben wird. Dadurch sollen Entwickler einfacheren, lesbareren und effizienteren Code schreiben können.
 
 > [!NOTE]
 > Das ASP.NET-Team hält sich an [diese Konventionen](https://github.com/dotnet/aspnetcore/wiki/Engineering-guidelines#unit-tests-and-functional-tests), um Entwicklern das Festlegen von aussagekräftigen Namen für Testklassen und -methoden zu erleichtern.
@@ -40,11 +40,11 @@ Mehr Informationen zu Unittests in .NET Core-Projekten:
 
 - [C#](../../csharp/index.yml)
 - [F#](../../fsharp/index.yml)
-- [Visual Basic](../../visual-basic/index.yml) 
+- [Visual Basic](../../visual-basic/index.yml)
 
 Sie können außerdem zwischen folgenden Frameworks wählen:
 
-- [xUnit](https://xunit.github.io) 
+- [xUnit](https://xunit.github.io)
 - [NUnit](https://nunit.org)
 - [MSTest](https://github.com/Microsoft/testfx-docs)
 

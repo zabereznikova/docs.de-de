@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Collections classes
 - collections [.NET Framework]
 ms.assetid: 60cc581f-1db5-445b-ba04-a173396bf872
-ms.openlocfilehash: 9b868bd5ed77788cd9b44c11623ae38eba58153c
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 3ca340e19d7340d7bea133fa62c6d8bbc3c0512a
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75711362"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78160390"
 ---
 # <a name="collections-and-data-structures"></a>Auflistungen und Datenstrukturen
 Ähnliche Daten können häufig effizienter verarbeitet werden, wenn sie als eine Auflistung gespeichert und bearbeitet werden. Sie können die <xref:System.Array?displayProperty=nameWithType>-Klasse oder die Klassen in den Namespaces <xref:System.Collections>, <xref:System.Collections.Generic>, <xref:System.Collections.Concurrent> und System.Collections.Immutable verwenden, um entweder einzelne Elemente oder Elementbereiche in einer Auflistung hinzuzufügen, zu entfernen und zu bearbeiten.  
@@ -24,7 +24,7 @@ ms.locfileid: "75711362"
   
  Ab .NET Framework 4 stellen die Auflistungen im <xref:System.Collections.Concurrent>-Namespace effiziente threadsichere Vorgänge für den Zugriff auf Auflistungselemente aus mehreren Threads bereit. Die unveränderlichen Auflistungsklassen im Namespace „System.Collections.Immutable“ ([NuGet-Paket](https://www.nuget.org/packages/System.Collections.Immutable)) sind grundsätzlich threadsicher, da Vorgänge mit einer Kopie der ursprünglichen Auflistung ausgeführt werden und die ursprüngliche Auflistung nicht geändert werden kann.  
 
-<a name="BKMK_Commoncollectionfeatures"></a>   
+<a name="BKMK_Commoncollectionfeatures"></a>
 ## <a name="common-collection-features"></a>Allgemeine Auflistungsfunktionen  
  Alle Auflistungen bieten Methoden zum Hinzufügen, Entfernen oder Suchen von Elementen in der Auflistung. Darüber hinaus teilen sich alle Auflistungen, die die <xref:System.Collections.ICollection>-Schnittstelle oder die <xref:System.Collections.Generic.ICollection%601>-Schnittstelle direkt oder indirekt implementieren, diese Funktionen:  
   
@@ -54,10 +54,10 @@ ms.locfileid: "75711362"
   
      Nicht generische Auflistungstypen im <xref:System.Collections>-Namespace bieten ein gewisses Maß an Thread-Sicherheit durch die Synchronisierung; in der Regel werden sie durch die <xref:System.Collections.ICollection.SyncRoot%2A>- und <xref:System.Collections.ICollection.IsSynchronized%2A>-Member verfügbar gemacht. Diese Auflistungen sind nicht standardmäßig Thread-sicher. Wenn Sie skalierbaren und effizienten Multithreadzugriff auf eine Auflistung benötigen, verwenden Sie eine der Klassen im <xref:System.Collections.Concurrent>-Namespace oder ziehen Sie den Einsatz einer unveränderlichen Auflistung in Erwägung. Weitere Informationen finden Sie unter [Threadsichere Auflistungen](../../../docs/standard/collections/thread-safe/index.md).  
   
-<a name="BKMK_Choosingacollection"></a>   
+<a name="BKMK_Choosingacollection"></a>
 ## <a name="choosing-a-collection"></a>Auswählen einer Auflistung  
  Im Allgemeinen sollten Sie generische Auflistungen verwenden. Die folgende Tabelle beschreibt einige häufig auftretende Auflistungsszenarios sowie die Auflistungsklassen, die Sie für diese Szenarien verwenden können. Wenn Sie sich mit der Arbeit mit generischen Auflistungen noch nicht auskennen, hilft Ihnen diese Tabelle bei der Auswahl der generischen Auflistung, die am besten für Ihre Aufgabe geeignet ist.  
- 
+
 |Ziel|Optionen für generische Auflistungen|Optionen für nicht generische Auflistungen|Optionen für threadsichere oder unveränderliche Auflistungen|  
 |-|-|-|-|  
 |Speichern von Elementen als Schlüssel-Wert-Paare für die schnelle Suche nach Schlüssel|<xref:System.Collections.Generic.Dictionary%602>|<xref:System.Collections.Hashtable><br /><br /> (Eine Sammlung von Schlüssel-Wert-Paaren, die auf Grundlage des Hashcodes des Schlüssels geordnet sind.)|<xref:System.Collections.Concurrent.ConcurrentDictionary%602><br /><br /> <xref:System.Collections.ObjectModel.ReadOnlyDictionary%602><br /><br /> <xref:System.Collections.Immutable.ImmutableDictionary%602>|  
@@ -69,7 +69,7 @@ ms.locfileid: "75711362"
 |Sortierte Auflistung|<xref:System.Collections.Generic.SortedList%602>|<xref:System.Collections.SortedList>|<xref:System.Collections.Immutable.ImmutableSortedDictionary%602><br /><br /> <xref:System.Collections.Immutable.ImmutableSortedSet%601>|  
 |Ein Satz für mathematische Funktionen|<xref:System.Collections.Generic.HashSet%601><br /><br /> <xref:System.Collections.Generic.SortedSet%601>|Keine Empfehlung|<xref:System.Collections.Immutable.ImmutableHashSet%601><br /><br /> <xref:System.Collections.Immutable.ImmutableSortedSet%601>|  
   
-<a name="BKMK_RelatedTopics"></a>   
+<a name="BKMK_RelatedTopics"></a>
 ## <a name="related-topics"></a>Verwandte Themen  
   
 |Titel|Beschreibung|  
@@ -83,7 +83,7 @@ ms.locfileid: "75711362"
 |[Threadsichere Sammlungen](../../../docs/standard/collections/thread-safe/index.md)|Beschreibt Auflistungstypen wie <xref:System.Collections.Concurrent.BlockingCollection%601?displayProperty=nameWithType> und <xref:System.Collections.Concurrent.ConcurrentBag%601?displayProperty=nameWithType>, die den sicheren und effizienten gleichzeitigen Zugriff von mehreren Threads unterstützen.|  
 |System.Collections.Immutable|Enthält einführende Informationen zu unveränderlichen Auflistungen und Links zu den Auflistungstypen.|  
   
-<a name="BKMK_Reference"></a>   
+<a name="BKMK_Reference"></a>
 ## <a name="reference"></a>Referenz  
  <xref:System.Array?displayProperty=nameWithType>  
  <xref:System.Collections?displayProperty=nameWithType>  

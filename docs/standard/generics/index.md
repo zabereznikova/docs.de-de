@@ -26,12 +26,12 @@ helpviewer_keywords:
 - generic types
 - generic type parameters
 ms.assetid: 2994d786-c5c7-4666-ab23-4c83129fe39c
-ms.openlocfilehash: f04b6fcd1641a53efe75d38ab7122967bff6a58d
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 7f20e5108ad8bff602f5b761e65f093d987f2608
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75708370"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156308"
 ---
 # <a name="generics-in-net"></a>Generics in .NET
 
@@ -124,7 +124,7 @@ Mit Generics können Sie eine Methode, Klasse, Struktur oder Schnittstelle genau
   
  Die Common Language Runtime bietet neue Opcodes und Präfixe für die Unterstützung generischer Typen in Microsoft Intermediate Language (MSIL), darunter <xref:System.Reflection.Emit.OpCodes.Stelem>, <xref:System.Reflection.Emit.OpCodes.Ldelem>, <xref:System.Reflection.Emit.OpCodes.Unbox_Any>, <xref:System.Reflection.Emit.OpCodes.Constrained>und <xref:System.Reflection.Emit.OpCodes.Readonly>.  
   
- Visual C++, C# und Visual Basic bieten alle vollständige Unterstützung für das Definieren und Verwenden von Generics. Weitere Informationen zur Sprachunterstützung finden Sie unter [Generische Typen in Visual Basic](../../visual-basic/programming-guide/language-features/data-types/generic-types.md), [Einführung in Generics](../../csharp/programming-guide/generics/index.md) und [Übersicht über Generics in C++](/cpp/windows/overview-of-generics-in-visual-cpp). 
+ Visual C++, C# und Visual Basic bieten alle vollständige Unterstützung für das Definieren und Verwenden von Generics. Weitere Informationen zur Sprachunterstützung finden Sie unter [Generische Typen in Visual Basic](../../visual-basic/programming-guide/language-features/data-types/generic-types.md), [Einführung in Generics](../../csharp/programming-guide/generics/index.md) und [Übersicht über Generics in C++](/cpp/windows/overview-of-generics-in-visual-cpp).
 
 ## <a name="nested-types-and-generics"></a>Geschachtelte Typen und Generics  
  Ein Typ, der in einem generischen Typ geschachtelt ist, kann von den Typparametern des einschließenden generischen Typs abhängen. Die Common Language Runtime betrachtet geschachtelte Typen als generisch, auch wenn sie keinen eigenen generischen Typparameter haben. Beim Erstellen einer Instanz eines geschachtelten Typs müssen Sie Typargumente für alle einschließenden generischen Typen festlegen.  
@@ -139,7 +139,7 @@ Mit Generics können Sie eine Methode, Klasse, Struktur oder Schnittstelle genau
 |[Kovarianz und Kontravarianz](../../../docs/standard/generics/covariance-and-contravariance.md)|Beschreibt Kovarianz und Kontravarianz in generischen Typparametern.|  
 |[Häufig verwendete Auflistungstypen](../../../docs/standard/collections/commonly-used-collection-types.md)|Enthält zusammenfassende Informationen über die Merkmale und Verwendungsszenarios der Auflistungstypen in .NET, einschließlich generischer Typen.|  
 |[Verwenden von generischen Auflistungen](../../../docs/standard/collections/when-to-use-generic-collections.md)|Beschreibt die allgemeinen Regeln, um festzulegen, wann generische Auflistungstypen verwendet werden können.|  
-|[Vorgehensweise: Definieren eines generischen Typs mit Reflektionsausgabe](../../../docs/framework/reflection-and-codedom/how-to-define-a-generic-type-with-reflection-emit.md)|Erläutert das Generieren dynamischer Assemblys, die generische Typen und Methoden enthalten.|  
+|[How to: Definieren eines generischen Typs mit Reflektionsausgabe](../../../docs/framework/reflection-and-codedom/how-to-define-a-generic-type-with-reflection-emit.md)|Erläutert das Generieren dynamischer Assemblys, die generische Typen und Methoden enthalten.|  
 |[Generische Typen in Visual Basic (Visual Basic)](../../visual-basic/programming-guide/language-features/data-types/generic-types.md)|Beschreibt das Genericsfeature für Visual Basic-Benutzer, darunter Gewusst-wie-Themen zum Verwenden und Definieren generischer Typen.|  
 |[Einführung in Generics](../../csharp/programming-guide/generics/index.md)|Bietet eine Übersicht über das Definieren und Verwenden generischer Typen für C#-Benutzer.|  
 |[Übersicht über Generics in Visual C++](/cpp/windows/overview-of-generics-in-visual-cpp)|Beschreibt das Genericsfeature für C++-Benutzer, darunter die Unterschiede zwischen Generics und Vorlagen.|  

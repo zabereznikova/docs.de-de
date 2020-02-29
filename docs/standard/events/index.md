@@ -14,12 +14,12 @@ helpviewer_keywords:
 - events [.NET Core]
 - events [.NET Framework]
 ms.assetid: b6f65241-e0ad-4590-a99f-200ce741bb1f
-ms.openlocfilehash: a53a8123db64948503bd6d2da9a27fc414dc1e1f
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: b8ed028bc1edabf14d7b2dd67d94b28d574d2eb4
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73423529"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159623"
 ---
 # <a name="handling-and-raising-events"></a>Behandeln und Auslösen von Ereignissen
 
@@ -78,7 +78,7 @@ Im folgenden Beispiel wird die Ereignishandlermethode `c_ThresholdReached` darge
 [!code-vb[EventsOverview#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/eventsoverview/vb/module1truncated.vb#2)]  
   
 ## <a name="static-and-dynamic-event-handlers"></a>Statische und dynamische Ereignishandler  
- 
+
 Mit .NET können sich Abonnenten entweder statisch oder dynamisch für Ereignisbenachrichtigungen registrieren. Statische Ereignishandler sind für die gesamte Lebensdauer der Klasse gültig, deren Ereignisse sie behandeln. Dynamische Ereignishandler werden bei der Programmausführung explizit aktiviert und deaktiviert. Dies erfolgt in der Regel als Reaktion auf eine bedingte Programmlogik. So können sie beispielsweise verwendet werden, wenn Ereignisbenachrichtigungen nur unter bestimmten Bedingungen erforderlich sind, oder wenn eine Anwendung mehrere Ereignishandler bereitstellt und über die Laufzeitbedingungen definiert wird, welcher davon verwendet wird. Im Beispiel des vorherigen Abschnitts wird das dynamische Hinzufügen eines Ereignishandlers veranschaulicht. Weitere Informationen finden Sie unter [Ereignisse (Visual Basic)](../../visual-basic/programming-guide/language-features/events/index.md) und [Ereignisse (C#-Programmierhandbuch)](../../csharp/programming-guide/events/index.md).  
   
 ## <a name="raising-multiple-events"></a>Auslösen mehrerer Ereignisse  
@@ -88,12 +88,12 @@ Mit .NET können sich Abonnenten entweder statisch oder dynamisch für Ereignisb
   
 ## <a name="related-topics"></a>Verwandte Themen  
   
-|Titel|BESCHREIBUNG|  
+|Titel|Beschreibung|  
 |-----------|-----------------|  
-|[Vorgehensweise: Auslösen und Behandeln von Ereignissen](how-to-raise-and-consume-events.md)|In diesem Abschnitt sind Beispiele zum Auslösen und Verarbeiten von Ereignissen enthalten.|  
-|[Vorgehensweise: Behandeln mehrerer Ereignisse mit Ereigniseigenschaften](how-to-handle-multiple-events-using-event-properties.md)|In diesem Abschnitt wird die Verwendung von Ereigniseigenschaften zum Behandeln mehrerer Ereignisse veranschaulicht.|  
+|[How to: Auslösen und Behandeln von Ereignissen](how-to-raise-and-consume-events.md)|In diesem Abschnitt sind Beispiele zum Auslösen und Verarbeiten von Ereignissen enthalten.|  
+|[How to: Behandeln mehrerer Ereignisse mit Ereigniseigenschaften](how-to-handle-multiple-events-using-event-properties.md)|In diesem Abschnitt wird die Verwendung von Ereigniseigenschaften zum Behandeln mehrerer Ereignisse veranschaulicht.|  
 |[Beobachterentwurfsmuster](observer-design-pattern.md)|Das Entwurfsmuster, mit dem sich ein Abonnent bei einem Anbieter registrieren und Benachrichtigungen von diesem empfangen kann, wird beschrieben.|  
-|[Vorgehensweise: Verarbeiten von Ereignissen in einer Web Forms-Anwendung](how-to-consume-events-in-a-web-forms-application.md)|In diesem Abschnitt wird das Behandeln eines Ereignisses, das von einem Web Forms-Steuerelement ausgelöst wird, veranschaulicht.|  
+|[How to: Verarbeiten von Ereignissen in einer Web Forms-Anwendung](how-to-consume-events-in-a-web-forms-application.md)|In diesem Abschnitt wird das Behandeln eines Ereignisses, das von einem Web Forms-Steuerelement ausgelöst wird, veranschaulicht.|  
   
 ## <a name="see-also"></a>Siehe auch
 

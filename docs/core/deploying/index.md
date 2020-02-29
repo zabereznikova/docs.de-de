@@ -2,18 +2,18 @@
 title: Anwendungsveröffentlichung
 description: Erfahren Sie mehr über die Möglichkeiten zum Veröffentlichen einer .NET Core-Anwendung. Mit .NET Core können plattformspezifische oder plattformübergreifende Apps veröffentlicht werden. Sie können eine App als eigenständige oder als Runtime-abhängige App veröffentlichen. Der Modus wirkt sich darauf aus, wie ein Benutzer Ihre App ausführt.
 ms.date: 01/31/2020
-ms.openlocfilehash: 696cca436c73601a3e7825033152d43a659a7dce
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: 3b9c3b7f29af12477874b7a31ef0de4750719de0
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77448983"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78157934"
 ---
 # <a name="net-core-application-publishing-overview"></a>Übersicht über die .NET Core-Anwendungsveröffentlichung
 
 Mit .NET Core erstellte Anwendungen können in zwei verschiedenen Modi veröffentlicht werden, und der gewählte Modus beeinflusst, wie ein Benutzer Ihre App ausführt.
 
-Die Veröffentlichung als *eigenständige* App erzeugt eine Anwendung, die die .NET Core-Runtime und die Bibliotheken, Ihre Anwendung und zugehörige Abhängigkeiten enthält. Benutzer der Anwendung können diese auf einem Computer ausführen, auf dem die .NET Core-Runtime nicht installiert ist. 
+Die Veröffentlichung als *eigenständige* App erzeugt eine Anwendung, die die .NET Core-Runtime und die Bibliotheken, Ihre Anwendung und zugehörige Abhängigkeiten enthält. Benutzer der Anwendung können diese auf einem Computer ausführen, auf dem die .NET Core-Runtime nicht installiert ist.
 
 Die Veröffentlichung *Runtime-abhängige* App erzeugt eine Anwendung, die nur die Anwendung selbst und die zugehörigen Abhängigkeiten umfasst. Benutzer der Anwendung müssen die .NET Core-Runtime separat installieren.
 
@@ -132,7 +132,7 @@ Da Ihre App die .NET Core-Runtime und sämtliche App-Abhängigkeiten enthält, s
   > Sie können die Größe Ihrer Bereitstellung für Linux-Systeme um etwa 28 MB reduzieren, indem Sie den [*invarianten Globalisierungsmodus*](https://github.com/dotnet/runtime/blob/master/docs/design/features/globalization-invariant-mode.md) von .NET Core verwenden. Hierdurch wird Ihre App gezwungen, alle Kulturen wie die [invariante Kultur](xref:System.Globalization.CultureInfo.InvariantCulture?displayProperty=nameWithType) zu behandeln.
 
 - **Schwierigere Aktualisierung der .NET Core-Version**\
-Die (mit Ihrer App verteilte) .NET Core-Runtime kann nur durch die Veröffentlichung einer neuen Version Ihrer App aktualisiert werden. Es liegt in Ihrer Verantwortung, eine aktualisierte Version Ihrer App für Sicherheitspatches für die .NET Core-Runtime bereitzustellen. 
+Die (mit Ihrer App verteilte) .NET Core-Runtime kann nur durch die Veröffentlichung einer neuen Version Ihrer App aktualisiert werden. Es liegt in Ihrer Verantwortung, eine aktualisierte Version Ihrer App für Sicherheitspatches für die .NET Core-Runtime bereitzustellen.
 
 ### <a name="examples"></a>Beispiele
 
