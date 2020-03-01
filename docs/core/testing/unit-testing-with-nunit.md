@@ -3,12 +3,12 @@ title: Unittests für C# mit NUnit und .NET Core
 description: Erfahren Sie mehr über die Konzepte von Unittests in C# und .NET Core, indem Sie im Rahmen eines interaktiven Tutorials Schritt für Schritt eine Beispielprojektmappe mithilfe von „dotnet test“ und NUnit erstellen.
 author: rprouse
 ms.date: 08/31/2018
-ms.openlocfilehash: 1ea17d9f830d8ac20e2bad79eebab5db767e0af8
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 8c099695b48e96ac47e41794082cd8dccaa0457a
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714228"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78157270"
 ---
 # <a name="unit-testing-c-with-nunit-and-net-core"></a>Unittests für C# mit NUnit und .NET Core
 
@@ -28,7 +28,7 @@ Dieses Tutorial führt Sie interaktiv Schritt für Schritt durch das Erstellen e
 ```dotnetcli
 dotnet new sln
 ```
- 
+
 Erstellen Sie als Nächstes ein *PrimeService*-Verzeichnis. Die folgende Gliederung zeigt die bisherige Verzeichnis- und Dateistruktur:
 
 ```console
@@ -137,11 +137,11 @@ namespace Prime.UnitTests.Services
 
             Assert.IsFalse(result, "1 should not be prime");
         }
-        
+
         /*
         More tests
         */
-        
+
         private PrimeService CreatePrimeService()
         {
              return new PrimeService();

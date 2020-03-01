@@ -4,12 +4,12 @@ description: Erfahren Sie mehr über die Konzepte von Komponententests in C# und
 author: ncarandini
 ms.author: wiwagn
 ms.date: 09/08/2017
-ms.openlocfilehash: 2d432f5efd6f8de3593f939abbd488f9fe68b73e
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 1b21e961ffceb3fce2697ad3254e79ed258aaa1a
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75715399"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78157336"
 ---
 # <a name="unit-testing-c-with-mstest-and-net-core"></a>Komponententests für C# mit MSTest und .NET Core
 
@@ -36,15 +36,15 @@ namespace Prime.Services
 {
     public class PrimeService
     {
-        public bool IsPrime(int candidate) 
+        public bool IsPrime(int candidate)
         {
             throw new NotImplementedException("Please create a test first.");
-        } 
+        }
     }
 }
 ```
 
-Ändern Sie das Verzeichnis wieder in das Verzeichnis *unit-testing-using-mstest*. Führen Sie [`dotnet sln add PrimeService/PrimeService.csproj`](../tools/dotnet-sln.md) aus, um das Klassenbibliotheksprojekt zur Projektmappe hinzuzufügen. 
+Ändern Sie das Verzeichnis wieder in das Verzeichnis *unit-testing-using-mstest*. Führen Sie [`dotnet sln add PrimeService/PrimeService.csproj`](../tools/dotnet-sln.md) aus, um das Klassenbibliotheksprojekt zur Projektmappe hinzuzufügen.
 
 ## <a name="create-the-test-project"></a>Erstellen des Testprojekts
 
@@ -90,7 +90,7 @@ Die folgende Gliederung zeigt das endgültige Projektmappenlayout:
         PrimeServiceTests.csproj
 ```
 
-Führen Sie [`dotnet sln add .\PrimeService.Tests\PrimeService.Tests.csproj`](../tools/dotnet-sln.md) im Verzeichnis *unit-testing-using-mstest* aus. 
+Führen Sie [`dotnet sln add .\PrimeService.Tests\PrimeService.Tests.csproj`](../tools/dotnet-sln.md) im Verzeichnis *unit-testing-using-mstest* aus.
 
 ## <a name="create-the-first-test"></a>Erstellen des ersten Tests
 
@@ -123,7 +123,7 @@ namespace Prime.UnitTests.Services
 }
 ```
 
-Das [TestClass-Attribut](xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute) gibt eine Klasse an, die Komponententests enthält. Das [TestMethod-Attribut](xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute) gibt an, dass es sich bei einer Methode um eine Testmethode handelt. 
+Das [TestClass-Attribut](xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute) gibt eine Klasse an, die Komponententests enthält. Das [TestMethod-Attribut](xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute) gibt an, dass es sich bei einer Methode um eine Testmethode handelt.
 
 Speichern Sie diese Datei und führen Sie [`dotnet test`](../tools/dotnet-test.md) aus, um die Tests und die Klassenbibliothek zu erstellen und anschließend die Tests auszuführen. Der MSTest Test Runner verfügt über den Programmeinstiegspunkt zum Ausführen der Tests. `dotnet test` startet Test Runner mithilfe des von Ihnen erstellten Komponententestprojekts.
 

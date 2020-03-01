@@ -4,12 +4,12 @@ description: Erfahren Sie mehr über die Konzepte von Komponententests in .NET C
 author: billwagner
 ms.author: wiwagn
 ms.date: 09/01/2017
-ms.openlocfilehash: c587aaa5c4c50ec66ac6cd8cd7aefd7b0ca1a80c
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 2a2bed9628d50ea1fc635334766023dfb6de4248
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75715422"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78157296"
 ---
 # <a name="unit-testing-visual-basic-net-core-libraries-using-dotnet-test-and-xunit"></a>Komponententests für Visual Basic .NET Core-Bibliotheken mithilfe von „dotnet test“ und xUnit
 
@@ -87,7 +87,7 @@ Sie verfügen über das folgende endgültige Ordnerlayout:
         PrimeServiceTests.vbproj
 ```
 
-Führen Sie [`dotnet sln add .\PrimeService.Tests\PrimeService.Tests.vbproj`](../tools/dotnet-sln.md) im Verzeichnis *unit-testing-vb-using-dotnet-test* aus. 
+Führen Sie [`dotnet sln add .\PrimeService.Tests\PrimeService.Tests.vbproj`](../tools/dotnet-sln.md) im Verzeichnis *unit-testing-vb-using-dotnet-test* aus.
 
 ## <a name="creating-the-first-test"></a>Erstellen des ersten Tests
 

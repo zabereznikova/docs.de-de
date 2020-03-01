@@ -3,12 +3,12 @@ title: Debuggen Ihrer Hello World-Anwendung (.NET Core) mit Visual Studio
 description: Sie erfahren, wie Sie eine in C# oder Visual Basic geschriebene Hello World-App mit Visual Studio debuggen.
 ms.date: 12/05/2019
 ms.custom: vs-dotnet
-ms.openlocfilehash: bc2736165ec827c1f2670605f23f549ceed4e83a
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: b2ee1401fc89f990c5f930d80d1a510a117e63a0
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714057"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156672"
 ---
 # <a name="debug-your-c-or-visual-basic-net-core-hello-world-application-using-visual-studio"></a>Debuggen einer Hello World-Anwendung (.NET Core) in C# oder Visual Basic mit Visual Studio
 
@@ -28,7 +28,7 @@ Führen Sie Ihr Programm aus, und probieren Sie einige Debugfunktionen aus:
 
 <!-- markdownlint-disable MD025 -->
 
-# <a name="ctabcsharp"></a>[C#](#tab/csharp)
+# <a name="c"></a>[C#](#tab/csharp)
 
 1. Legen Sie einen *Breakpoint* für die Zeile mit dem Text `Console.WriteLine($"\nHello, {name}, on {date:d} at {date:t}!");` fest, indem Sie auf den linken Rand des Codefensters in dieser Zeile klicken. Sie können auch einen Breakpoint festlegen, indem Sie die Einfügemarke in der Codezeile platzieren und dann **F9** drücken oder **Debuggen** > **Breakpoint umschalten** in der Menüleiste auswählen.
 
@@ -64,12 +64,12 @@ Führen Sie Ihr Programm aus, und probieren Sie einige Debugfunktionen aus:
 
 1. Drücken Sie eine beliebige Taste, um die Anwendung und das Debuggen zu beenden.
 
-# <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb)
+# <a name="visual-basic"></a>[Visual Basic](#tab/vb)
 
 1. Legen Sie einen *Breakpoint* für die Zeile mit dem Text `Console.WriteLine($"{vbCrLf}Hello, {name}, on {currentDate:d} at {currentDate:t}!")` fest, indem Sie auf den linken Rand des Codefensters in dieser Zeile klicken. Sie können auch einen Breakpoint festlegen, indem Sie die Einfügemarke in der gewünschten Zeile platzieren und dann **Debuggen** > **Breakpoint umschalten** in der Menüleiste auswählen.
 
    Ein Breakpoint unterbricht vorübergehend die Ausführung der Anwendung, *bevor* die Zeile mit dem Breakpoint ausgeführt wird.
-   
+
    Wie in der folgenden Abbildung gezeigt, hebt Visual Studio die Zeile hervor, in der der Haltepunkt gesetzt ist, und zeigt an ihrem linken Rand einen roten Kreis an.
 
    ![Visual Studio-Programmfenster mit festgelegtem Haltepunkt](./media/debugging-with-visual-studio/vb/set-breakpoint-in-editor.png)
@@ -104,7 +104,7 @@ Ihr Programm zeigt die Zeichenfolge an, die der Benutzer eingibt. Aber was gesch
 
 Um einen bedingten Haltepunkt festzulegen und zu testen, was geschieht, wenn der Benutzer keine Zeichenfolge eingibt, führen Sie folgende Schritte aus:
 
-# <a name="ctabcsharp"></a>[C#](#tab/csharp)
+# <a name="c"></a>[C#](#tab/csharp)
 
 1. Klicken Sie mit der rechten Maustaste auf den roten Punkt, der den Haltepunkt darstellt. Wählen Sie im Kontextmenü **Bedingungen...** zum Öffnen des Dialogfelds **Haltepunkteinstellungen** aus. Aktivieren Sie das Kontrollkästchen für **Bedingungen**, wenn es nicht bereits aktiviert ist.
 
@@ -142,7 +142,7 @@ Um einen bedingten Haltepunkt festzulegen und zu testen, was geschieht, wenn der
 
 1. Löschen Sie den Breakpoint durch Klicken auf den Punkt am linken Rand des Codefensters oder durch Auswählen von **Debuggen > Haltepunkt umschalten**, während die Codezeile ausgewählt ist.
 
-# <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb)
+# <a name="visual-basic"></a>[Visual Basic](#tab/vb)
 
 1. Klicken Sie mit der rechten Maustaste auf den roten Punkt, der den Haltepunkt darstellt. Wählen Sie im Kontextmenü **Bedingungen...** zum Öffnen des Dialogfelds **Haltepunkteinstellungen** aus. Aktivieren Sie das Feld für **Bedingungen**.
 
@@ -185,7 +185,7 @@ Um einen bedingten Haltepunkt festzulegen und zu testen, was geschieht, wenn der
 
 Mit Visual Studio können Sie ein Programm auch zeilenweise durchlaufen und die Ausführung jeder einzelnen Zeile überwachen. Normalerweise würden Sie einen Haltepunkt festlegen und mit diesem Feature den Programmablauf in einem kleinen Teil des Programmcodes verfolgen. Da unser Programm klein ist, können Sie das gesamte Programm schrittweise durchlaufen:
 
-# <a name="ctabcsharp"></a>[C#](#tab/csharp)
+# <a name="c"></a>[C#](#tab/csharp)
 
 1. Wählen Sie auf der Menüleiste **Debuggen** > **Einzelschritt** aus, oder drücken Sie **F11**. Visual Studio markiert einen Pfeil neben der nächsten Zeile der Ausführung und zeigt diesen an.
 
@@ -211,7 +211,7 @@ Mit Visual Studio können Sie ein Programm auch zeilenweise durchlaufen und die 
 
 1. Drücken Sie eine beliebige Taste, um das Konsolenfenster zu schließen und das Debuggen zu beenden.
 
-# <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb)
+# <a name="visual-basic"></a>[Visual Basic](#tab/vb)
 
 1. Wählen Sie auf der Menüleiste **Debuggen** > **Einzelschritt** aus, oder drücken Sie **F11**. Visual Studio markiert einen Pfeil neben der nächsten Zeile der Ausführung und zeigt diesen an.
 

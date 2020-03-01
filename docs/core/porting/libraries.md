@@ -3,12 +3,12 @@ title: Portieren von Bibliotheken auf .NET Core
 description: Erfahren Sie, wie Sie Bibliotheksprojekte von .NET Framework zu .NET Core portieren.
 author: cartermp
 ms.date: 12/07/2018
-ms.openlocfilehash: 646587120de2e51280c2af4de36bf3a6b0f60c2d
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: 68fe36e543d949dc76bdb0c19ef3482936ad9e79
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76920608"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78157530"
 ---
 # <a name="port-net-framework-libraries-to-net-core"></a>Portieren von .NET Framework-Bibliotheken auf .NET Core
 
@@ -97,7 +97,7 @@ Dieser Ansatz ist möglicherweise am besten für größere und komplexere Projek
 1. Ist es sinnvoll, eine eigene Implementierung einer nicht verfügbaren .NET Framework-API zu schreiben?
    Sie könnten das Kopieren, Ändern und Verwenden von Code aus der [.NET Framework-Verweisquelle](https://github.com/Microsoft/referencesource) in Erwägung ziehen. Der Quellcode für den Verweis wird unter der [MIT-Lizenz](https://github.com/Microsoft/referencesource/blob/master/LICENSE.txt) lizenziert. Daher verfügen Sie über eine erhebliche Freiheit, die Quelle als Grundlage für Ihren eigenen Code zu verwenden. Stellen Sie nur sicher, dass Sie Microsoft ordnungsgemäß Ihrem Code zugeordnet haben.
 1. Wiederholen Sie diesen Vorgang für verschiedene Projekte nach Bedarf.
- 
+
 Die Analysephase kann je nach Größe Ihrer Codebasis einige Zeit dauern. Sie können sich auf lange Sicht Zeit in dieser Phase sparen, wenn Sie den Umfang der erforderlichen Änderungen verstehen und einen Plan entwickeln, besonders, wenn sie über eine komplexe Codebasis verfügen.
 
 Ihr Plan kann wichtige Änderungen an Ihrer Codebase erfordern, während Sie noch immer auf .NET Framework 4.7.2 abzielen. Dadurch entsteht eine strukturiertere Version des vorherigen Ansatzes. Wie Sie Ihren Plan ausführen, hängt von Ihrer Codebasis ab.

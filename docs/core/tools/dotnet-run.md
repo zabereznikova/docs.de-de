@@ -2,12 +2,12 @@
 title: Befehl „dotnet run“
 description: Der dotnet run-Befehl bietet eine praktische Option zum Ausführen der Anwendung aus dem Quellcode.
 ms.date: 02/19/2020
-ms.openlocfilehash: 415d7079db6a3da80c4fcf2074307ea760e84982
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.openlocfilehash: e442ed56d676ffd189ef6d394d840cea671c2dc6
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77503610"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78157075"
 ---
 # <a name="dotnet-run"></a>dotnet run
 
@@ -20,8 +20,8 @@ ms.locfileid: "77503610"
 ## <a name="synopsis"></a>Übersicht
 
 ```dotnetcli
-dotnet run [-c|--configuration] [-f|--framework] [--force] [--interactive] [--launch-profile] 
-    [--no-build] [--no-dependencies] [--no-launch-profile] [--no-restore] [-p|--project] 
+dotnet run [-c|--configuration] [-f|--framework] [--force] [--interactive] [--launch-profile]
+    [--no-build] [--no-dependencies] [--no-launch-profile] [--no-restore] [-p|--project]
     [-r|--runtime] [-v|--verbosity] [[--] [application arguments]]
 dotnet run [-h|--help]
 ```
@@ -102,7 +102,7 @@ Der Befehl `dotnet run` löst die Abhängigkeiten der Anwendungen außerhalb der
 
 - **`-v|--verbosity <LEVEL>`**
 
-  Legt den Ausführlichkeitsgrad für den Befehl fest. Zulässige Werte sind `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` und `diag[nostic]`. Der Standardwert ist `m`. Verfügbar ab .NET Core 2.1 SDK. 
+  Legt den Ausführlichkeitsgrad für den Befehl fest. Zulässige Werte sind `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` und `diag[nostic]`. Der Standardwert ist `m`. Verfügbar ab .NET Core 2.1 SDK.
 
 ## <a name="examples"></a>Beispiele
 

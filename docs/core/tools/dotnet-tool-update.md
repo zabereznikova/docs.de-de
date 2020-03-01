@@ -2,12 +2,12 @@
 title: Befehl „dotnet tool update“
 description: Der Befehl „dotnet tool update“ aktualisiert das angegebene .NET Core-Tool auf Ihrem Computer.
 ms.date: 02/14/2020
-ms.openlocfilehash: 50bb366fedfb0ea69b8b6007ff89e366b4f689de
-ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
+ms.openlocfilehash: 80e807a0fc06ad762334f888e701f6d9c448369a
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77543416"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156945"
 ---
 # <a name="dotnet-tool-update"></a>dotnet tool update
 
@@ -58,7 +58,7 @@ Der Befehl `dotnet tool update` ermöglicht Ihnen das Aktualisieren der .NET Cor
 
 - **`-g|--global`**
 
-  Gibt an, dass das Update für ein benutzerweites Tool ist. Kann nicht mit der Option `--tool-path` kombiniert werden. Durch Weglassen von `--global` und `--tool-path` wird angegeben, dass das zu aktualisierende Tool ein lokales Tool ist. 
+  Gibt an, dass das Update für ein benutzerweites Tool ist. Kann nicht mit der Option `--tool-path` kombiniert werden. Durch Weglassen von `--global` und `--tool-path` wird angegeben, dass das zu aktualisierende Tool ein lokales Tool ist.
 
 - **`-h|--help`**
 
@@ -66,7 +66,7 @@ Der Befehl `dotnet tool update` ermöglicht Ihnen das Aktualisieren der .NET Cor
 
 - **`--tool-path <PATH>`**
 
-  Gibt den Speicherort an, in dem das globale Tool installiert ist. „PATH“ kann absolut oder relativ sein. Kann nicht mit der Option `--global` kombiniert werden. Durch Weglassen von `--global` und `--tool-path` wird angegeben, dass das zu aktualisierende Tool ein lokales Tool ist. 
+  Gibt den Speicherort an, in dem das globale Tool installiert ist. „PATH“ kann absolut oder relativ sein. Kann nicht mit der Option `--global` kombiniert werden. Durch Weglassen von `--global` und `--tool-path` wird angegeben, dass das zu aktualisierende Tool ein lokales Tool ist.
 
 - **`-v|--verbosity <LEVEL>`**
 

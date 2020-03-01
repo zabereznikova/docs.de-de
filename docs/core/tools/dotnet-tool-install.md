@@ -2,12 +2,12 @@
 title: Befehl „dotnet tool install“
 description: Der Befehl „dotnet tool install“ installiert das angegebene .NET Core-Tool auf Ihrem Computer.
 ms.date: 02/14/2020
-ms.openlocfilehash: 2705defe9b77009ca1411da28dd86d144ccc19e6
-ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
+ms.openlocfilehash: 641e6a2753b1cf3bfc334ba2495342f7c42421fc
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77543468"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156973"
 ---
 # <a name="dotnet-tool-install"></a>dotnet tool install
 
@@ -30,7 +30,7 @@ dotnet tool install <-h|--help>
 
 Der Befehl `dotnet tool install` ermöglicht Ihnen das Installieren von .NET Core-Tools auf Ihrem Computer. Um den Befehl zu verwenden, geben Sie eine der folgenden Installationsoptionen an:
 
-* Verwenden Sie zum Installieren eines globalen Tools am Standardspeicherort die Option `--tool-path`.
+* Verwenden Sie zum Installieren eines globalen Tools am Standardspeicherort die Option `--global`.
 * Verwenden Sie zum Installieren eines globalen Tools an einem benutzerdefinierten Speicherort die Option `--tool-path`.
 * Wenn Sie ein lokales Tool installieren möchten, lassen Sie die Optionen `--global` und `--tool-path` weg.
 
@@ -73,7 +73,7 @@ Weitere Informationen finden Sie unter [Installieren eines lokalen Tools](global
 
 - **`-g|--global`**
 
-  Gibt an, dass die Installation benutzerweit ist. Kann nicht mit der Option `--tool-path` kombiniert werden. Durch Weglassen von `--global` und `--tool-path` wird die Installation eines lokalen Tools angegeben. 
+  Gibt an, dass die Installation benutzerweit ist. Kann nicht mit der Option `--tool-path` kombiniert werden. Durch Weglassen von `--global` und `--tool-path` wird die Installation eines lokalen Tools angegeben.
 
 - **`-h|--help`**
 
@@ -81,7 +81,7 @@ Weitere Informationen finden Sie unter [Installieren eines lokalen Tools](global
 
 - **`tool-path <PATH>`**
 
-  Gibt den Speicherort des globalen Tools an, das installiert wird. „PATH“ kann absolut oder relativ sein. Wenn kein Pfad vorhanden ist, versucht der Befehl, ihn zu erstellen. Durch Weglassen von `--global` und `--tool-path` wird die Installation eines lokalen Tools angegeben. 
+  Gibt den Speicherort des globalen Tools an, das installiert wird. „PATH“ kann absolut oder relativ sein. Wenn kein Pfad vorhanden ist, versucht der Befehl, ihn zu erstellen. Durch Weglassen von `--global` und `--tool-path` wird die Installation eines lokalen Tools angegeben.
 
 - **`-v|--verbosity <LEVEL>`**
 

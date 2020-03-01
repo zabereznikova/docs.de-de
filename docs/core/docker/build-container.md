@@ -4,12 +4,12 @@ description: In diesem Tutorial erfahren Sie, wie Sie eine .NET Core-Anwendung m
 ms.date: 01/09/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 17d3dfbe58770b19a75be1dad3ae03406584992c
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.openlocfilehash: e1904430a591b0e74a69d50a53869a130fc0a248
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75900115"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78157829"
 ---
 # <a name="tutorial-containerize-a-net-core-app"></a>Tutorial: Containerisieren einer .NET Core-App
 
@@ -141,7 +141,7 @@ dotnet publish -c Release
 
 Dieser Befehl kompiliert Ihre App in den Ordner *publish*. Der Pfad zum Ordner *publish* aus dem Arbeitsordner sollte wie folgt lauten: `.\app\bin\Release\netcoreapp3.1\publish\`
 
-Rufen Sie aus dem Ordner *app* eine Verzeichnisliste des Veröffentlichungsordners ab, um sicherzustellen, dass die Datei *myapp.dll* erstellt wurde. 
+Rufen Sie aus dem Ordner *app* eine Verzeichnisliste des Veröffentlichungsordners ab, um sicherzustellen, dass die Datei *myapp.dll* erstellt wurde.
 
 ```console
 > dir bin\Release\netcoreapp3.1\publish

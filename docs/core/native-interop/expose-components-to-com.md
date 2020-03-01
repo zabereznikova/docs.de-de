@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 21271167-fe7f-46ba-a81f-a6812ea649d4
 author: jkoritzinsky
 ms.author: jekoritz
-ms.openlocfilehash: 8d9b8eb274777a0ed019a207c6e8610cc73ec390
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 301177113f67748b62ea2686615cfe5378fdc2fd
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73973316"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78157543"
 ---
 # <a name="exposing-net-core-components-to-com"></a>Verfügbarmachen von .NET Core-Komponenten in COM
 
@@ -23,7 +23,7 @@ In .NET Core wurde das Verfügbarmachen von .NET-Objekten für COM im Vergleich 
 - Generieren eines COM-Servers bei der Erstellung einer .NET Core-Bibliothek
 - Automatisches Generieren eines Manifests zur parallelen Serverausführung ohne COM-Registrierung
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
+## <a name="prerequisites"></a>Voraussetzungen
 
 - Installieren Sie [.NET Core 3.0 SDK](https://dotnet.microsoft.com/download) oder eine neuere Version.
 
@@ -32,14 +32,14 @@ In .NET Core wurde das Verfügbarmachen von .NET-Objekten für COM im Vergleich 
 Im ersten Schritt erstellen Sie die Bibliothek.
 
 1. Erstellen Sie einen neuen Ordner, und führen Sie in diesem Ordner den folgenden Befehl aus:
-    
+
     ```dotnetcli
     dotnet new classlib
     ```
 
 2. Öffnen Sie `Class1.cs`.
 3. Fügen Sie `using System.Runtime.InteropServices;` am Anfang der Datei ein.
-4. Erstellen Sie eine Schnittstelle mit dem Namen `IServer`. Beispiel:
+4. Erstellen Sie eine Schnittstelle mit dem Namen `IServer`. Zum Beispiel:
 
    [!code-csharp[The IServer interface](~/samples/core/extensions/COMServerDemo/COMContract/IServer.cs)]
 

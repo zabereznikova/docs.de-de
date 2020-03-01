@@ -4,12 +4,12 @@ description: Erfahren Sie mehr über bewährte Methoden zum Schreiben von Kompon
 author: jpreese
 ms.author: wiwagn
 ms.date: 07/28/2018
-ms.openlocfilehash: 387d66bfeaf48359a27a532247a799c319f38caa
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: a65cf3fbfb6562dbd9aaf815e1bfe469585c0fc0
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714286"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78157387"
 ---
 # <a name="unit-testing-best-practices-with-net-core-and-net-standard"></a>Bewährte Methoden für Komponententests mit .NET Core und .NET Standard
 
@@ -169,7 +169,7 @@ Das Benennen von Variablen in Komponententests ist genauso wichtig, wenn nicht n
 
 Magische Zeichenfolgen können den Leser Ihrer Tests verwirren. Wenn eine Zeichenfolge nicht wie gewohnt aussieht, fragt sich der Leser womöglich, warum ein bestimmter Wert für einen Parameter oder Rückgabewert ausgewählt wurde. Dadurch sieht sich der Leser möglicherweise die Implementierungsdetails genauer an und konzentriert sich so nicht mehr auf den Test.
 
-> [!TIP] 
+> [!TIP]
 > Gehen Sie deshalb so genau wie möglich auf die Absicht ein, wenn Sie Tests schreiben. Im Fall von magischen Zeichenfolgen ist es ein guter Ansatz, diese Werte Kontanten zuzuweisen.
 
 #### <a name="bad"></a>Nicht empfohlen:
@@ -208,7 +208,7 @@ Wenn Sie für Ihre Test ein ähnliches Objekt oder einen ähnlichen Zustand ben�
 
 In Komponententestframeworks wird `Setup` vor jedem Komponententest innerhalb Ihrer Testsammlung aufgerufen. Während einige diese Methode als nützlich betrachten, führt sie letztendlich doch zu überfrachteten und schwer zu lesenden Tests. Jeder Test hat in der Regel unterschiedliche Anforderungen, damit er ordnungsgemäß funktioniert. Leider werden Sie mit `Setup` gezwungen, exakt dieselben Anforderungen für jeden Test zu verwenden.
 
-> [!NOTE] 
+> [!NOTE]
 > Ab xUnit Version 2.x sind SetUp und TearDown nicht mehr verfügbar.
 
 #### <a name="bad"></a>Nicht empfohlen:
@@ -239,7 +239,7 @@ Wenn Sie Ihre Tests schreiben, versuchen Sie, nur eine Assert-Anweisung pro Test
 
 - Wenn eine Assert-Anweisung fehlschlägt, werden die darauffolgenden Assert-Vorgänge nicht ausgewertet.
 - Es wird sichergestellt, dass Sie nicht mehrere Fälle in Ihren Tests überprüfen.
-- Sie erhalten einen Überblick, warum Ihre Tests fehlschlagen. 
+- Sie erhalten einen Überblick, warum Ihre Tests fehlschlagen.
 
 Wenn mehrere Assert-Anweisungen in einer Testsituation verwendet werden, kann nicht garantiert werden, dass alle Assert-Anweisungen ausgeführt werden. In den meisten Komponententestframeworks wird automatisch angenommen, dass die nachfolgenden Tests fehlschlagen, sobald eine Überprüfung in einem Komponententest fehlschlägt. Dies kann verwirrend sein, da eine Funktion, die eigentlich funktioniert, als fehlgeschlagen angezeigt wird.
 
@@ -253,7 +253,7 @@ Wenn mehrere Assert-Anweisungen in einer Testsituation verwendet werden, kann ni
 [!code-csharp[AfterMultipleAsserts](../../../samples/csharp/unit-testing-best-practices/after/StringCalculatorTests.cs#AfterMultipleAsserts)]
 
 ### <a name="validate-private-methods-by-unit-testing-public-methods"></a>Überprüfen privater Methoden durch Komponententest von öffentlichen Methoden
-In den meisten Fällen sollte es nicht nötig sein, eine private Methode zu testen. Private Methoden sind ein Implementierungsdetail. Sie können sich diese wie folgt vorstellen: Private Methoden sind nie isoliert vorhanden. Irgendwann wird eine öffentliche Methode die private Methode als Teil ihrer Implementierung aufrufen. Sie sollten sich über das Endergebnis der öffentlichen Methode Gedanken machen, die die private abruft. 
+In den meisten Fällen sollte es nicht nötig sein, eine private Methode zu testen. Private Methoden sind ein Implementierungsdetail. Sie können sich diese wie folgt vorstellen: Private Methoden sind nie isoliert vorhanden. Irgendwann wird eine öffentliche Methode die private Methode als Teil ihrer Implementierung aufrufen. Sie sollten sich über das Endergebnis der öffentlichen Methode Gedanken machen, die die private abruft.
 
 Betrachten Sie folgenden Fall:
 
@@ -270,9 +270,9 @@ private string TrimInput(string input)
 }
 ```
 
-Möglicherweise versuchen Sie zunächst, einen Test für `TrimInput` zu schreiben, da Sie sicherstellen möchten, dass die Methode wie erwartet funktioniert. Es ist jedoch auch möglich, dass `sanitizedInput` von `ParseLogLine` auf unerwartete Weise manipuliert wird, wodurch das Rendern eines Tests für `TrimInput` nutzlos ist. 
+Möglicherweise versuchen Sie zunächst, einen Test für `TrimInput` zu schreiben, da Sie sicherstellen möchten, dass die Methode wie erwartet funktioniert. Es ist jedoch auch möglich, dass `sanitizedInput` von `ParseLogLine` auf unerwartete Weise manipuliert wird, wodurch das Rendern eines Tests für `TrimInput` nutzlos ist.
 
-Der echte Test sollte für die öffentliche Methode, `ParseLogLine`, ausgeführt werden, denn darum sollten Sie sich letztendlich kümmern. 
+Der echte Test sollte für die öffentliche Methode, `ParseLogLine`, ausgeführt werden, denn darum sollten Sie sich letztendlich kümmern.
 
 ```csharp
 public void ParseLogLine_ByDefault_ReturnsTrimmedResult()
@@ -293,11 +293,11 @@ Ein Komponententest muss das zu testende System vollständig steuern können. We
 ```csharp
 public int GetDiscountedPrice(int price)
 {
-    if(DateTime.Now.DayOfWeek == DayOfWeek.Tuesday) 
+    if(DateTime.Now.DayOfWeek == DayOfWeek.Tuesday)
     {
         return price / 2;
     }
-    else 
+    else
     {
         return price;
     }
@@ -326,7 +326,7 @@ public void GetDiscountedPrice_OnTuesday_ReturnsHalfPrice()
 }
 ```
 
-Sie werden wahrscheinlich schnell merken, dass mit Ihren Tests leider einiges nicht stimmt. 
+Sie werden wahrscheinlich schnell merken, dass mit Ihren Tests leider einiges nicht stimmt.
 
 - Wenn die Testsammlung an einem Dienstag ausgeführt wird, ist der zweite Test erfolgreich, der erste schlägt jedoch fehl.
 - Wenn die Testsammlung an einem anderen Tag ausgeführt wird, ist der erste Test erfolgreich, der zweite schlägt jedoch fehl.
@@ -341,11 +341,11 @@ public interface IDateTimeProvider
 
 public int GetDiscountedPrice(int price, IDateTimeProvider dateTimeProvider)
 {
-    if(dateTimeProvider.DayOfWeek() == DayOfWeek.Tuesday) 
+    if(dateTimeProvider.DayOfWeek() == DayOfWeek.Tuesday)
     {
         return price / 2;
     }
-    else 
+    else
     {
         return price;
     }

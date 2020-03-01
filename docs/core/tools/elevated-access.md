@@ -3,16 +3,16 @@ title: Erhöhte Zugriffsrechte für dotnet-Befehle
 description: Erfahren Sie mehr über die Best Practices für dotnet-Befehle, die erhöhte Zugriffsrechte erfordern.
 author: wli3
 ms.date: 06/26/2019
-ms.openlocfilehash: fe33cbe966d175f71ba350737b283c1e83f64fa6
-ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
+ms.openlocfilehash: 4aff9badfa8ad9b83adc4496d4ebd6df29252e36
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77543429"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156763"
 ---
 # <a name="elevated-access-for-dotnet-commands"></a>Erhöhte Zugriffsrechte für dotnet-Befehle
 
-Durch Best Practices in der Softwareentwicklung schreiben Entwickler Software, für die die geringsten Berechtigungen erforderlich sind. Einige Software, wie z.B. Tools zur Leistungsüberwachung, benötigen jedoch aufgrund von Betriebssystemregeln Administratorrechte. Die folgende Anleitung beschreibt unterstützte Szenarien für das Schreiben derartiger Software mit .NET Core. 
+Durch Best Practices in der Softwareentwicklung schreiben Entwickler Software, für die die geringsten Berechtigungen erforderlich sind. Einige Software, wie z.B. Tools zur Leistungsüberwachung, benötigen jedoch aufgrund von Betriebssystemregeln Administratorrechte. Die folgende Anleitung beschreibt unterstützte Szenarien für das Schreiben derartiger Software mit .NET Core.
 
 Die folgenden Befehle können mit erhöhten Rechten ausgeführt werden:
 
@@ -35,8 +35,8 @@ Die folgenden Anweisungen zeigen die empfohlene Vorgehensweise bei der Installat
 
 Wenn der Ordner `%ProgramFiles%\dotnet-tools` bereits vorhanden ist, überprüfen Sie anhand der folgenden Schritte, ob die Gruppe „Benutzer“ die Berechtigung hat, dieses Verzeichnis zu schreiben oder zu ändern:
 
-- Klicken Sie mit der rechten Maustaste auf den Ordner `%ProgramFiles%\dotnet-tools`, und wählen Sie **Eigenschaften** aus. Das Dialogfeld **Allgemeine Eigenschaften** wird geöffnet. 
-- Wählen Sie die Registerkarte **Sicherheit** aus. Überprüfen Sie unter **Gruppen-oder Benutzernamen**, ob die Gruppe „Benutzer“ die Berechtigung hat, dieses Verzeichnis zu schreiben oder zu ändern. 
+- Klicken Sie mit der rechten Maustaste auf den Ordner `%ProgramFiles%\dotnet-tools`, und wählen Sie **Eigenschaften** aus. Das Dialogfeld **Allgemeine Eigenschaften** wird geöffnet.
+- Wählen Sie die Registerkarte **Sicherheit** aus. Überprüfen Sie unter **Gruppen-oder Benutzernamen**, ob die Gruppe „Benutzer“ die Berechtigung hat, dieses Verzeichnis zu schreiben oder zu ändern.
 - Wenn die Gruppe „Benutzer“ das Verzeichnis schreiben oder ändern kann, verwenden Sie bei der Installation der Tools einen anderen Verzeichnisnamen als *dotnet-tools*.
 
 Führen Sie den folgenden Befehl in einer Eingabeaufforderung mit erhöhten Rechten aus, um Tools zu installieren. Damit wird während der Installation der Ordner *dotnet-tools* erstellt.
@@ -97,7 +97,7 @@ Während der Entwicklung benötigen Sie möglicherweise erhöhte Zugriffsrechte,
    dotnet build
    sudo ./bin/Debug/netcoreapp3.0/APPLICATIONNAME
    ```
-    
+
 - Verwenden des Befehls [dotnet run](dotnet-run.md) mit dem Flag `—no-build`, um das Generieren neuer Binärdateien zu vermeiden:
 
    ```dotnetcli

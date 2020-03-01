@@ -3,12 +3,12 @@ title: Erste Schritte mit C# und Visual Studio Code
 description: Erfahren Sie, wie Sie Ihre erste .NET Core-Anwendung in C# mithilfe von Visual Studio Code erstellen und debuggen.
 author: kendrahavens
 ms.date: 12/05/2018
-ms.openlocfilehash: acd1c300545bc6c107552576180afd7dec6b7382
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.openlocfilehash: ef7134e26c1ded3926faa51748c1b6d4a461008f
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77503519"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156607"
 ---
 # <a name="get-started-with-c-and-visual-studio-code"></a>Erste Schritte mit C# und Visual Studio Code
 
@@ -113,7 +113,7 @@ Um weitere Unterstützung beim Setup zu erhalten, können Sie sich auch ein kurz
 
     ```csharp
     using System;
-    
+
     namespace HelloWorld
     {
         class Program

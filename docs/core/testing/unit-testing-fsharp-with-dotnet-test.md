@@ -4,12 +4,12 @@ description: Erfahren Sie mehr über die Konzepte von Komponententests für F# i
 author: billwagner
 ms.author: wiwagn
 ms.date: 08/30/2017
-ms.openlocfilehash: 9cf301533046951f8fd3f9829afabadf6bba3d64
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 5fe4a8faddd87334439513368f24d808abc58e65
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75715426"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78157309"
 ---
 # <a name="unit-testing-f-libraries-in-net-core-using-dotnet-test-and-xunit"></a>Komponententests für F#-Bibliotheken in .NET Core mit „dotnet test“ und xUnit
 
@@ -82,7 +82,7 @@ Sie verfügen über das folgende endgültige Projektmappenlayout:
         MathServiceTests.fsproj
 ```
 
-Führen Sie `dotnet sln add .\MathService.Tests\MathService.Tests.fsproj` im Verzeichnis *unit-testing-with-fsharp* aus. 
+Führen Sie `dotnet sln add .\MathService.Tests\MathService.Tests.fsproj` im Verzeichnis *unit-testing-with-fsharp* aus.
 
 ## <a name="creating-the-first-test"></a>Erstellen des ersten Tests
 
@@ -158,9 +158,9 @@ Sie können den Test beheben, indem Sie für die gefilterte Sequenz einen Zuordn
 let private square x = x * x
 let private isOdd x = x % 2 <> 0
 
-let squaresOfOdds xs = 
-    xs 
-    |> Seq.filter isOdd 
+let squaresOfOdds xs =
+    xs
+    |> Seq.filter isOdd
     |> Seq.map square
 ```
 

@@ -2,12 +2,12 @@
 title: Befehl „dotnet new“
 description: Der dotnet new Befehl erstellt neue .NET Core-Projekte basierend auf der angegebenen Vorlage
 ms.date: 02/13/2020
-ms.openlocfilehash: f11512acf5a1fdc4bde49b3d1212ccf6335dff8b
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: d3c609419596b123f5bfb3ca85cf292a61154a70
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77451329"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78157218"
 ---
 # <a name="dotnet-new"></a>dotnet new
 
@@ -20,7 +20,7 @@ ms.locfileid: "77451329"
 ## <a name="synopsis"></a>Übersicht
 
 ```dotnetcli
-dotnet new <TEMPLATE> [--dry-run] [--force] [-i|--install] [-lang|--language] [-n|--name] 
+dotnet new <TEMPLATE> [--dry-run] [--force] [-i|--install] [-lang|--language] [-n|--name]
     [--nuget-source] [-o|--output] [-u|--uninstall] [--update-apply] [--update-check] [Template options]
 dotnet new <TEMPLATE> [-l|--list] [--type]
 dotnet new [-h|--help]
@@ -145,7 +145,7 @@ Der Befehl ruft die [Vorlagen-Engine](https://github.com/dotnet/templating) zum 
 
 - **`--update-apply`**
 
-  Prüft, ob Updates für die zurzeit installierten Vorlagenpakete verfügbar sind, und installiert diese. Verfügbar seit .NET Co re 3.0 SDK.
+  Prüft, ob Updates für die zurzeit installierten Vorlagenpakete verfügbar sind, und installiert diese. Verfügbar seit .NET Core 3.0 SDK.
 
 - **`--update-check`**
 
@@ -174,7 +174,7 @@ Für jede Projektvorlage kann es zusätzliche Optionen geben. Die Core-Vorlagen 
 
   Eine Liste der C#-Standardversionen finden Sie unter [Defaults](../../csharp/language-reference/configure-language-version.md#defaults).
 
-- **`--no-restore`** 
+- **`--no-restore`**
 
   Falls angegeben, erfolgt während der Projekterstellung keine implizite Wiederherstellung. Verfügbar ab .NET Core 2.2 SDK.
 
@@ -202,7 +202,7 @@ Für jede Projektvorlage kann es zusätzliche Optionen geben. Die Core-Vorlagen 
 
 - **`-f|--framework <FRAMEWORK>`**
 
-  Gibt das [Zielframework](../../standard/frameworks.md) an. Der Standardwert ist `netcoreapp3.1`. Verfügbar seit .NET Core 3.1 SDK. 
+  Gibt das [Zielframework](../../standard/frameworks.md) an. Der Standardwert ist `netcoreapp3.1`. Verfügbar seit .NET Core 3.1 SDK.
 
 - **`--langVersion <VERSION_NUMBER>`**
 
@@ -234,7 +234,7 @@ Für jede Projektvorlage kann es zusätzliche Optionen geben. Die Core-Vorlagen 
 
 - **`-f|--framework <FRAMEWORK>`**
 
-  Gibt das [Zielframework](../../standard/frameworks.md) an. Der Standardwert ist `netcoreapp3.1`. Verfügbar seit .NET Core 3.1 SDK. 
+  Gibt das [Zielframework](../../standard/frameworks.md) an. Der Standardwert ist `netcoreapp3.1`. Verfügbar seit .NET Core 3.1 SDK.
 
 - **`--exclude-launch-settings`**
 
@@ -503,7 +503,7 @@ Für jede Projektvorlage kann es zusätzliche Optionen geben. Die Core-Vorlagen 
 
 - **`-au|--auth <AUTHENTICATION_TYPE>`**
 
-  Der zu verwendende Authentifizierungstyp. Verfügbar seit .NET Core 3.0 SDK. 
+  Der zu verwendende Authentifizierungstyp. Verfügbar seit .NET Core 3.0 SDK.
   
   Mögliche Werte sind:
 
@@ -512,7 +512,7 @@ Für jede Projektvorlage kann es zusätzliche Optionen geben. Die Core-Vorlagen 
 
 - **`--exclude-launch-settings`**
 
-  Schließt *launchSettings.json* aus der generierten Vorlage aus. 
+  Schließt *launchSettings.json* aus der generierten Vorlage aus.
 
 - **`--no-restore`**
 
@@ -544,7 +544,7 @@ Für jede Projektvorlage kann es zusätzliche Optionen geben. Die Core-Vorlagen 
 
 - **`--exclude-launch-settings`**
 
-  Schließt *launchSettings.json* aus der generierten Vorlage aus. 
+  Schließt *launchSettings.json* aus der generierten Vorlage aus.
 
 - **`-f|--framework <FRAMEWORK>`**
 

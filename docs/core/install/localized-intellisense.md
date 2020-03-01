@@ -2,12 +2,12 @@
 title: Installieren der lokalisierten IntelliSense-Dateien
 description: Erfahren Sie, wie Sie Ihren Entwicklungscomputer für die Verwendung lokalisierter IntelliSense-Dateien für .NET Core-Projekte in Visual Studio einrichten.
 ms.date: 01/23/2020
-ms.openlocfilehash: 58b462507edf953a6c28aadbb9e3239a5cbe05b2
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: e45e225e58865ca2b529000ada0984fbeca850f3
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76733653"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78157712"
 ---
 # <a name="how-to-install-localized-intellisense-files-for-net-core"></a>Installieren der lokalisierten IntelliSense-Dateien für .NET Core
 
@@ -42,7 +42,7 @@ ms.locfileid: "76733653"
       | .NET Core       | *Microsoft.NETCore.App.Ref*        |
       | Windows-Desktop | *Microsoft.WindowsDesktop.App.Ref* |
       | .NET-Standard   | *NETStandard.Library.Ref*          |
-   
+
    1. Navigieren Sie zur Version, für die Sie die lokalisierte IntelliSense-Datei installieren möchten. Zum Beispiel *3.1.0*.
    1. Öffnen Sie den *ref*-Ordner.
    1. Öffnen Sie den Monikerordner. Zum Beispiel *netcoreapp3.1*.
@@ -116,7 +116,7 @@ Nachdem Sie die gewünschten Sprachpakete installiert haben, ändern Sie Ihre Vi
 
 1. Wählen Sie unter dem Knoten **Umgebung** **Internationale Einstellungen** aus.
 
-1. Wählen Sie aus der **Sprachen**-Dropdownliste eine Sprache Ihrer Wahl aus. Klicken Sie auf **OK**. 
+1. Wählen Sie aus der **Sprachen**-Dropdownliste eine Sprache Ihrer Wahl aus. Klicken Sie auf **OK**.
 
 1. Ein Dialogfeld informiert Sie, dass Sie Visual Studio neu starten müssen, damit die Änderungen wirksam werden. Klicken Sie auf **OK**.
 

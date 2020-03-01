@@ -2,12 +2,12 @@
 title: Befehl „dotnet tool uninstall“
 description: Der Befehl „dotnet tool uninstall“ deinstalliert das angegebene .NET Core-Tool von Ihrem Computer.
 ms.date: 02/14/2020
-ms.openlocfilehash: 82dad0206d9c3e2ef0f41c353f4a608f10e4f127
-ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
+ms.openlocfilehash: 7a15c169c73cf5a743e0fa6f47645d6bccedbde3
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77543442"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78157044"
 ---
 # <a name="dotnet-tool-uninstall"></a>dotnet tool uninstall
 
@@ -46,7 +46,7 @@ Der `dotnet tool uninstall`-Befehl ermöglicht Ihnen das Deinstallieren von .NET
 
 - **`-g|--global`**
 
-  Gibt an, dass das zu entfernende Tool von einer benutzerweiten Installation stammt. Kann nicht mit der Option `--tool-path` kombiniert werden. Durch Weglassen von `--global` und `--tool-path` wird angegeben, dass das zu entfernende Tool ein lokales Tool ist. 
+  Gibt an, dass das zu entfernende Tool von einer benutzerweiten Installation stammt. Kann nicht mit der Option `--tool-path` kombiniert werden. Durch Weglassen von `--global` und `--tool-path` wird angegeben, dass das zu entfernende Tool ein lokales Tool ist.
 
 - **`-h|--help`**
 
@@ -54,7 +54,7 @@ Der `dotnet tool uninstall`-Befehl ermöglicht Ihnen das Deinstallieren von .NET
 
 - **`--tool-path <PATH>`**
 
-  Gibt den Speicherort des Tools an, das deinstalliert wird. „PATH“ kann absolut oder relativ sein. Kann nicht mit der Option `--global` kombiniert werden. Durch Weglassen von `--global` und `--tool-path` wird angegeben, dass das zu entfernende Tool ein lokales Tool ist. 
+  Gibt den Speicherort des Tools an, das deinstalliert wird. „PATH“ kann absolut oder relativ sein. Kann nicht mit der Option `--global` kombiniert werden. Durch Weglassen von `--global` und `--tool-path` wird angegeben, dass das zu entfernende Tool ein lokales Tool ist.
 
 ## <a name="examples"></a>Beispiele
 

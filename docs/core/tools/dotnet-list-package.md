@@ -2,12 +2,12 @@
 title: Befehl „dotnet list package“
 description: Der Befehl „dotnet list package“ bietet eine praktische Option zum Listen von Pakettverweisen auf ein Projekt oder eine Projektmappe.
 ms.date: 02/14/2020
-ms.openlocfilehash: bd275c308c3a213661d5cc6c7e60817620f076a5
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.openlocfilehash: 1cb52b8de10b2eef2ef7465f04316e9446318763
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77503734"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78157231"
 ---
 # <a name="dotnet-list-package"></a>dotnet list package
 
@@ -20,7 +20,7 @@ ms.locfileid: "77503734"
 ## <a name="synopsis"></a>Übersicht
 
 ```dotnetcli
-dotnet list [<PROJECT>|<SOLUTION>] package [--config] [--framework] [--highest-minor] [--highest-patch] 
+dotnet list [<PROJECT>|<SOLUTION>] package [--config] [--framework] [--highest-minor] [--highest-patch]
    [--include-prerelease] [--include-transitive] [--interactive] [--outdated] [--source]
 dotnet list package [-h|--help]
 ```

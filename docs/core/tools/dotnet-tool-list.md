@@ -2,12 +2,12 @@
 title: Befehl „dotnet tool list“
 description: Der Befehl „dotnet tool list“ listet die auf Ihrem Computer installierten .NET Core-Tools auf.
 ms.date: 02/14/2020
-ms.openlocfilehash: bb74cfeaf441cf8a1a030d97d16655f85d8267d1
-ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
+ms.openlocfilehash: f231dcfe64a925f75f948d508e7a2d83befd9a00
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77543455"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156984"
 ---
 # <a name="dotnet-tool-list"></a>dotnet tool list
 
@@ -40,7 +40,7 @@ Der Befehl `dotnet tool list` bietet die Möglichkeit, alle globalen, Toolpfad- 
 
 - **`-g|--global`**
 
-  Listet benutzerweite globale Tools auf. Kann nicht mit der Option `--tool-path` kombiniert werden. Bei Weglassen von `--global` und `--tool-path` werden lokale Tools aufgelistet. 
+  Listet benutzerweite globale Tools auf. Kann nicht mit der Option `--tool-path` kombiniert werden. Bei Weglassen von `--global` und `--tool-path` werden lokale Tools aufgelistet.
 
 - **`-h|--help`**
 
@@ -48,7 +48,7 @@ Der Befehl `dotnet tool list` bietet die Möglichkeit, alle globalen, Toolpfad- 
 
 - **`--tool-path <PATH>`**
 
-  Legt einen benutzerdefinierten Speicherort fest, an dem globale Tools gespeichert werden. „PATH“ kann absolut oder relativ sein. Kann nicht mit der Option `--global` kombiniert werden. Bei Weglassen von `--global` und `--tool-path` werden lokale Tools aufgelistet. 
+  Legt einen benutzerdefinierten Speicherort fest, an dem globale Tools gespeichert werden. „PATH“ kann absolut oder relativ sein. Kann nicht mit der Option `--global` kombiniert werden. Bei Weglassen von `--global` und `--tool-path` werden lokale Tools aufgelistet.
 
 ## <a name="examples"></a>Beispiele
 

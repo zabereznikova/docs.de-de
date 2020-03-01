@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.date: 12/04/2018
-ms.openlocfilehash: 9495288658fa102df8f0fbd643e2fcdf49d8f3b3
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: e045c39240c99777d05ca86ee0a8cd1fa4309c4f
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77451979"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156581"
 ---
 # <a name="whats-new-in-net-core-22"></a>Neuerungen in .NET Core 2.2
 
@@ -26,7 +26,7 @@ Dieser neue Bereitstellungsmodus hat den entscheidenden Vorteil, dass Sie eine a
 
 **Behandeln von Ereignissen in Runtimediensten**
 
-Möglicherweise möchten Sie die Nutzung von Runtimediensten wie GC, JIT und ThreadPool durch Ihre Anwendung überwachen, um zu verstehen, wie sich diese auf Ihre Anwendung auswirken. Auf Windows-Systemen geschieht dies in der Regel durch die Überwachung der ETW-Ereignisse des aktuellen Prozesses. Obwohl dies weiterhin gut funktioniert, ist es nicht immer möglich, ETW zu verwenden, wenn Sie in einer Umgebung mit niedriger Priorität oder unter Linux oder macOS arbeiten. 
+Möglicherweise möchten Sie die Nutzung von Runtimediensten wie GC, JIT und ThreadPool durch Ihre Anwendung überwachen, um zu verstehen, wie sich diese auf Ihre Anwendung auswirken. Auf Windows-Systemen geschieht dies in der Regel durch die Überwachung der ETW-Ereignisse des aktuellen Prozesses. Obwohl dies weiterhin gut funktioniert, ist es nicht immer möglich, ETW zu verwenden, wenn Sie in einer Umgebung mit niedriger Priorität oder unter Linux oder macOS arbeiten.
 
 Ab .NET Core 2.2 können CoreCLR-Ereignisse nun über die <xref:System.Diagnostics.Tracing.EventListener?displayProperty=nameWithType>-Klasse genutzt werden. Diese Ereignisse beschreiben das Verhalten der Runtimedienste wie GC, JIT-Kompilierung, ThreadPool und Interop. Dies sind die gleichen Ereignisse wie bei Teilen des CoreCLR ETW-Anbieters.  Dies ermöglicht es Anwendungen, diese Ereignisse zu verarbeiten oder einen Transportmechanismus zu nutzen, um sie an einen Telemetrieaggregationsdienst zu senden. Im folgenden Codebeispiel wird erläutert, wie Sie Ereignisse abonnieren:
 
