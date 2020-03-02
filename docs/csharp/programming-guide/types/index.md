@@ -11,12 +11,12 @@ helpviewer_keywords:
 - C# language, types
 - strong typing [C#]
 ms.assetid: f782d7cc-035e-4500-b1b1-36a9881130ad
-ms.openlocfilehash: ade2cba857a1a32039f8fd07881f13f63f0dbe1a
-ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
+ms.openlocfilehash: a094e6e8ab9094fb14ce9a2ca8a180cbf9b273cb
+ms.sourcegitcommit: c2d9718996402993cf31541f11e95531bc68bad0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77628136"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77673393"
 ---
 # <a name="types-c-programming-guide"></a>Typen (C#-Programmierhandbuch)
 
@@ -113,7 +113,7 @@ Sie können das [struct](../../language-reference/builtin-types/struct.md)-Schl�
 
 [!code-csharp[csProgGuideObjects#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#1)]
 
-Weitere Informationen über Strukturen finden Sie unter [Strukturen](../classes-and-structs/structs.md). Weitere Informationen zu Werttypen finden Sie unter [Werttypen](../../language-reference/builtin-types/value-types.md).
+Weitere Informationen über Strukturen finden Sie unter [Struktur-Typen](../../language-reference/builtin-types/struct.md). Weitere Informationen zu Werttypen finden Sie unter [Werttypen](../../language-reference/builtin-types/value-types.md).
 
 Die andere Kategorie von Werttypen ist [enum](../../language-reference/builtin-types/enum.md). Eine Enumeration definiert einen Satz benannter ganzzahliger Konstanten. So enthält z.B. die <xref:System.IO.FileMode?displayProperty=nameWithType>-Enumeration in der .NET-Klassenbibliothek mehrere benannte ganzzahlige Konstanten, die festlegen, wie eine Datei geöffnet werden soll. Die Definition erfolgt wie im folgenden Beispiel:
 
@@ -205,3 +205,4 @@ Weitere Informationen finden Sie unter den folgenden Themen:
 - [C#-Programmierhandbuch](../index.md)
 - [Konvertierung von XML-Datentypen](../../../standard/data/xml/conversion-of-xml-data-types.md)
 - [Integrale Typen](../../language-reference/builtin-types/integral-numeric-types.md)
+ 

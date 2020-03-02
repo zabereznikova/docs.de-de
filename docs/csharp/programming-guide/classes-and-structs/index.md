@@ -10,12 +10,12 @@ helpviewer_keywords:
 - objects [C#]
 - C# language, classes
 ms.assetid: cc39dbda-8754-423e-b5b1-16a1db0734c0
-ms.openlocfilehash: 301ba292010470208e92a225c1014bcb50497106
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: afd9e688bd716375bafb370fad4af082a9498411
+ms.sourcegitcommit: c2d9718996402993cf31541f11e95531bc68bad0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714822"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77673419"
 ---
 # <a name="classes-and-structs-c-programming-guide"></a>Klassen und Strukturen (C#-Programmierhandbuch)
 Klassen und Strukturen sind zwei der grundlegenden Konstrukte des allgemeinen Typsystems in .NET Framework. Bei beiden handelt es sich um eine Datenstruktur, die einen als logische Einheit zusammengehörenden Satz von Daten und Verhalten kapselt. Die Daten und die Verhalten sind die *Member* der Klasse oder Struktur. Diese enthalten deren Methoden, Eigenschaften, Ereignisse usw., die weiter unten in diesem Thema aufgeführt werden.  
@@ -28,7 +28,7 @@ Klassen und Strukturen sind zwei der grundlegenden Konstrukte des allgemeinen Ty
   
  Im Allgemeinen werden Klassen zum Modellieren von komplexerem Verhalten oder von Daten verwendet, die dafür vorgesehen sind, nach der Erstellung eines Klassenobjekts geändert zu werden. Strukturen sind am besten für kleine Datenstrukturen geeignet, die überwiegend Daten enthalten, deren Änderung nach der Erstellung der Struktur nicht vorgesehen ist.  
   
- Weitere Informationen finden Sie unter [Klassen](./classes.md), [Objekte](./objects.md) und [Strukturen](./structs.md).  
+ Weitere Informationen finden Sie unter [Klassen-](./classes.md), [Objekte-](./objects.md) und [Struktur-Typen](../../language-reference/builtin-types/struct.md).  
   
 ## <a name="example"></a>Beispiel  
  Im folgenden Beispiel `CustomClass` in `ProgrammingGuide` weist der Namespace drei Member auf: einen Instanzkonstruktor, eine Eigenschaft mit der Bezeichnung `Number` und eine Methode mit der Bezeichnung `Multiply`. Die `Main`-Methode in der `Program`-Klasse erstellt eine Instanz (Objekt) von `CustomClass`. Auf die Methoden und Eigenschaften des Objekts wird mit der Punktnotation zugegriffen.
