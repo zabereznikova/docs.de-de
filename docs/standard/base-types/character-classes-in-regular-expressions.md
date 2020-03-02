@@ -12,12 +12,12 @@ helpviewer_keywords:
 - characters, matching syntax
 - .NET Framework regular expressions, character classes
 ms.assetid: 0f8bffab-ee0d-4e0e-9a96-2b4a252bb7e4
-ms.openlocfilehash: 047d0ea7b3783f8cf45afde2a15470adda94cd6e
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: 07bd63c90bc8d78c9831e2007695a232a85111b1
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2020
-ms.locfileid: "77095046"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159337"
 ---
 # <a name="character-classes-in-regular-expressions"></a>Zeichenklassen in regulären Ausdrücken
 
@@ -50,7 +50,7 @@ Eine Zeichenklasse definiert einen Satz von Zeichen, von denen jedes in einer Ei
 > [!NOTE]
 > Zeichenklassen, die Zeichen nach Kategorie abgleichen, etwa [\w](#WordCharacter) zum Abgleichen von Wortzeichen oder [\p{}](#CategoryOrBlock) zum Abgleichen mit einer Unicode-Kategorie, setzen auf der <xref:System.Globalization.CharUnicodeInfo>-Klasse auf, um Informationen zu Zeichenkategorien bereitzustellen.  Ab .NET Framework 4.6.2 basieren Zeichenkategorien auf dem [Unicode Standard, Version 8.0.0](https://www.unicode.org/versions/Unicode8.0.0/). In .NET Framework 4 bis .NET Framework 4.6.1 basieren sie auf dem [Unicode-Standard, Version 6.3.0](https://www.unicode.org/versions/Unicode6.3.0/).  
   
-<a name="PositiveGroup"></a>   
+<a name="PositiveGroup"></a>
 ## <a name="positive-character-group--"></a>Positive Zeichengruppe: [ ]  
  In einer positiven Zeichengruppe wird eine Liste von Zeichen festgelegt. Wenn eine Eingabezeichenfolge eines dieser Zeichen aufweist, liegt eine Übereinstimmung vor. Diese Zeichenliste kann einzeln, als Bereich oder beides angegeben werden.  
   
@@ -106,7 +106,7 @@ In der folgenden Tabelle werden einige allgemeine Muster für reguläre Ausdrüc
 |`\w*`|Übereinstimmung mit keinem oder mehreren Wortzeichen.|  
 |`\b`|Übereinstimmung mit einer Wortgrenze.|  
   
-<a name="NegativeGroup"></a>   
+<a name="NegativeGroup"></a>
 ## <a name="negative-character-group-"></a>Negative Zeichengruppe: [^]  
  In einer negativen Zeichengruppe wird eine Liste von Zeichen festgelegt. Eine Eingabezeichenfolge darf keines dieser Zeichen aufweisen, damit eine Übereinstimmung vorliegt. Die Zeichenliste kann einzeln, als Bereich oder beides angegeben werden.  
   
@@ -154,7 +154,7 @@ wobei *firstCharacter* das Zeichen ist, mit dem der Bereich beginnt, und *lastCh
 |`\w+`|Übereinstimmung mit mindestens einem Wortzeichen.|  
 |`\b`|An einer Wortgrenze beenden.|  
   
-<a name="AnyCharacter"></a>   
+<a name="AnyCharacter"></a>
 ## <a name="any-character-"></a>Alle Zeichen: .  
  Das Punktzeichen (.) stimmt mit Ausnahme von `\n` (dem Zeichen für einen Zeilenumbruch, "\u000A") mit allen Zeichen überein. Hierfür gelten die folgenden beiden Qualifikationen:  
   
@@ -176,7 +176,7 @@ wobei *firstCharacter* das Zeichen ist, mit dem der Bereich beginnt, und *lastCh
 > [!NOTE]
 > Aufgrund der Übereinstimmung des `.`-Sprachelements mit jedem Zeichen wird es häufig mit einem verzögerten Quantifizierer verwendet, wenn von einem Muster für einen regulären Ausdruck mehrere Versuche bezüglich der Übereinstimmung eines bestimmten Zeichens ausgeführt werden. Weitere Informationen finden Sie unter [Quantifizierer in regulären Ausdrücken](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md).  
   
-<a name="CategoryOrBlock"></a>   
+<a name="CategoryOrBlock"></a>
 ## <a name="unicode-category-or-unicode-block-p"></a>Unicode-Kategorie oder Unicode-Block: \p{}  
  Jedem Zeichen wird im Unicode-Standard eine allgemeine Kategorie zugewiesen. Beispiel: Bei einem bestimmten Zeichen kann es sich um einen Großbuchstaben (dargestellt durch die `Lu`-Kategorie), ein Dezimalzeichen (die `Nd`-Kategorie), ein mathematisches Symbol (die `Sm`-Kategorie) oder einen Absatzseparator (die `Zl`-Kategorie) handeln. Bestimmte Zeichensätze im Unicode-Standard nehmen auch einen bestimmten Bereich oder einen Block aufeinander folgender Codepunkte ein. Beispielsweise befindet sich der grundlegende lateinische Zeichensatz im Bereich von "\u0000" bis "\u007F", während der arabische Zeichensatz zwischen "\u0600" und "\u06FF" liegt.  
   
@@ -205,7 +205,7 @@ wobei *firstCharacter* das Zeichen ist, mit dem der Bereich beginnt, und *lastCh
 |`(\s)?`|Übereinstimmung mit keinem oder einem Leerzeichen.|  
 |`(\p{IsBasicLatin}+(\s)?)+`|Übereinstimmung mit dem Muster mindestens eines grundlegenden lateinischen Zeichens, ein- oder mehrmals gefolgt von einer Null oder einem Leerzeichen.|  
   
-<a name="NegativeCategoryOrBlock"></a>   
+<a name="NegativeCategoryOrBlock"></a>
 ## <a name="negative-unicode-category-or-unicode-block-p"></a>Negative Unicode-Kategorie oder negativer Unicode-Block: \P{}  
  Jedem Zeichen wird im Unicode-Standard eine allgemeine Kategorie zugewiesen. Beispiel: Bei einem bestimmten Zeichen kann es sich um einen Großbuchstaben (dargestellt durch die `Lu`-Kategorie), ein Dezimalzeichen (die `Nd`-Kategorie), ein mathematisches Symbol (die `Sm`-Kategorie) oder einen Absatzseparator (die `Zl`-Kategorie) handeln. Bestimmte Zeichensätze im Unicode-Standard nehmen auch einen bestimmten Bereich oder einen Block aufeinander folgender Codepunkte ein. Beispielsweise befindet sich der grundlegende lateinische Zeichensatz im Bereich von "\u0000" bis "\u007F", während der arabische Zeichensatz zwischen "\u0600" und "\u06FF" liegt.  
   
@@ -222,7 +222,7 @@ wobei *firstCharacter* das Zeichen ist, mit dem der Bereich beginnt, und *lastCh
   
  Das Muster für den regulären `(\P{Sc})+`-Ausdruck stimmt mit mindestens einem Zeichen überein, bei dem es sich nicht um ein Währungssymbol handelt. Tatsächlich werden alle Währungssymbole aus der Ergebniszeichenfolge entfernt.  
   
-<a name="WordCharacter"></a>   
+<a name="WordCharacter"></a>
 ## <a name="word-character-w"></a>Wortzeichen: \w  
  `\w` entspricht einem beliebigen Wortzeichen. Ein Wortzeichen gehört einer der in der folgenden Tabelle aufgeführten Unicode-Kategorien an.  
   
@@ -252,7 +252,7 @@ wobei *firstCharacter* das Zeichen ist, mit dem der Bereich beginnt, und *lastCh
  [!code-csharp[Conceptual.RegEx.Language.CharacterClasses#8](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.characterclasses/cs/wordchar1.cs#8)]
  [!code-vb[Conceptual.RegEx.Language.CharacterClasses#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/wordchar1.vb#8)]  
   
-<a name="NonWordCharacter"></a>   
+<a name="NonWordCharacter"></a>
 ## <a name="non-word-character-w"></a>Nicht-Wortzeichen: \W  
  `\W` entspricht einem beliebigen Nichtwortzeichen. Das \W-Sprachelement entspricht der folgenden Zeichenklasse:  
   
@@ -289,7 +289,7 @@ wobei *firstCharacter* das Zeichen ist, mit dem der Bereich beginnt, und *lastCh
   
  Da das <xref:System.Text.RegularExpressions.Group>-Objekt für die zweite Erfassungsgruppe nur ein einzelnes erfasstes Nicht-Wortzeichen aufweist, werden im Beispiel alle erfassten Nicht-Wortzeichen aus dem von der <xref:System.Text.RegularExpressions.CaptureCollection>-Eigenschaft zurückgegebenen <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType>-Objekt abgerufen.  
   
-<a name="WhitespaceCharacter"></a>   
+<a name="WhitespaceCharacter"></a>
 ## <a name="whitespace-character-s"></a>Leerraumzeichen: \s  
  `\s` entspricht einem beliebigen Zeichen für Leerraum. Dies ist zu den in der folgenden Tabelle aufgeführten Escapesequenzen und Unicode-Kategorien äquivalent.  
   
@@ -318,7 +318,7 @@ wobei *firstCharacter* das Zeichen ist, mit dem der Bereich beginnt, und *lastCh
  [!code-csharp[Conceptual.RegEx.Language.CharacterClasses#10](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.characterclasses/cs/whitespace1.cs#10)]
  [!code-vb[Conceptual.RegEx.Language.CharacterClasses#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/whitespace1.vb#10)]  
   
-<a name="NonWhitespaceCharacter"></a>   
+<a name="NonWhitespaceCharacter"></a>
 ## <a name="non-whitespace-character-s"></a>Nicht-Leerraumzeichen: \S  
  `\S` entspricht einem beliebigen Nichtleerraumzeichen. Dies ist äquivalent zum Muster für den regulären `[^\f\n\r\t\v\x85\p{Z}]`-Ausdruck bzw. das Gegenteil des Musters für den regulären Ausdruck, der `\s` entspricht und daher mit Leerzeichen übereinstimmt. Weitere Informationen finden Sie unter [Leerzeichen: \s](#WhitespaceCharacter).  
   
@@ -335,7 +335,7 @@ wobei *firstCharacter* das Zeichen ist, mit dem der Bereich beginnt, und *lastCh
  [!code-csharp[Conceptual.RegEx.Language.CharacterClasses#11](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.characterclasses/cs/nonwhitespace1.cs#11)]
  [!code-vb[Conceptual.RegEx.Language.CharacterClasses#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/nonwhitespace1.vb#11)]  
   
-<a name="DigitCharacter"></a>   
+<a name="DigitCharacter"></a>
 ## <a name="decimal-digit-character-d"></a>Dezimalzahl: \d  
  `\d` entspricht einer beliebigen Dezimalziffer. Dies entspricht dem Muster des regulären `\p{Nd}`-Ausdrucks, das neben den Standarddezimalzahlen 0 bis 9 auch die Dezimalzahlen einer Anzahl anderer Zeichensätze einschließt.  
   
@@ -357,7 +357,7 @@ wobei *firstCharacter* das Zeichen ist, mit dem der Bereich beginnt, und *lastCh
  [!code-csharp[Conceptual.RegEx.Language.CharacterClasses#12](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.characterclasses/cs/digit1.cs#12)]
  [!code-vb[Conceptual.RegEx.Language.CharacterClasses#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/digit1.vb#12)]  
   
-<a name="NonDigitCharacter"></a>   
+<a name="NonDigitCharacter"></a>
 ## <a name="non-digit-character-d"></a>Nicht-Zahlen: \D  
  `\D` stimmt mit jedem Zeichen außer Zahlen überein. Dies entspricht dem Muster des regulären Ausdrucks `\P{Nd}`.  
   
@@ -376,7 +376,7 @@ wobei *firstCharacter* das Zeichen ist, mit dem der Bereich beginnt, und *lastCh
  [!code-csharp[Conceptual.RegEx.Language.CharacterClasses#13](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.characterclasses/cs/nondigit1.cs#13)]
  [!code-vb[Conceptual.RegEx.Language.CharacterClasses#13](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/nondigit1.vb#13)]  
   
-<a name="SupportedUnicodeGeneralCategories"></a>   
+<a name="SupportedUnicodeGeneralCategories"></a>
 ## <a name="supported-unicode-general-categories"></a>Unterstützte allgemeine Unicode-Kategorien  
  In der folgenden Tabelle werden die allgemeinen, in Unicode definierten Kategorien aufgeführt. Weitere Informationen finden Sie in den Unterthemen „UCD File Format“ (UCD-Dateiformat) und „General Category Values“ (Allgemeine Kategorienwerte) der [Unicode Character Database](https://www.unicode.org/reports/tr44/).  
   
@@ -425,7 +425,7 @@ wobei *firstCharacter* das Zeichen ist, mit dem der Bereich beginnt, und *lastCh
  [!code-csharp[Conceptual.RegEx.Language.CharacterClasses#14](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.characterclasses/cs/getunicodecategory1.cs#14)]
  [!code-vb[Conceptual.RegEx.Language.CharacterClasses#14](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/getunicodecategory1.vb#14)]  
   
-<a name="SupportedNamedBlocks"></a>   
+<a name="SupportedNamedBlocks"></a>
 ## <a name="supported-named-blocks"></a>Unterstützte benannte Blöcke
 
 In der folgenden Tabelle werden die von .NET bereitgestellten benannten Blöcke aufgelistet. Der Satz von unterstützten benannten Blöcke basiert auf Unicode 4.0 und Perl 5.6. Einen regulären Ausdruck, der benannte Blöcke verwendet, finden Sie im Abschnitt [Unicode-Kategorie oder Unicode-Block: \\p{}](#unicode-category-or-unicode-block-p).  
@@ -538,7 +538,7 @@ In der folgenden Tabelle werden die von .NET bereitgestellten benannten Blöcke 
 |FF00 - FFEF|`IsHalfwidthandFullwidthForms`|  
 |FFF0 - FFFF|`IsSpecials`|  
   
-<a name="CharacterClassSubtraction"></a>   
+<a name="CharacterClassSubtraction"></a>
 ## <a name="character-class-subtraction-base_group---excluded_group"></a>Zeichenklassensubtraktion: [base_group - [excluded_group]]  
  Eine Zeichenklasse definiert einen Satz von Zeichen. Durch Zeichenklassensubtraktion erhalten Sie einen Zeichensatz, der das Ergebnis des Ausschlusses der Zeichen einer Zeichenklasse von einer anderen darstellt.  
   

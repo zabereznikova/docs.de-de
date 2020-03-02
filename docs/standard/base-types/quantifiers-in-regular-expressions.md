@@ -14,17 +14,17 @@ helpviewer_keywords:
 - quantifiers
 - lazy quantifiers
 ms.assetid: 36b81212-6511-49ed-a8f1-ff080415312f
-ms.openlocfilehash: a7a870ac32385bf5015f1a95c0246fed6a5c9c05
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: f1627248cbed0f03c6fb76ce660f9b2bf7764781
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73084237"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78160013"
 ---
 # <a name="quantifiers-in-regular-expressions"></a>Quantifizierer in regulären Ausdrücken
 Quantifizierer geben an, wie viele Instanzen eines Zeichens, einer Gruppe oder einer Zeichenklasse in der Eingabe vorhanden sein müssen, damit eine Übereinstimmung gefunden wird.  In der folgenden Tabelle werden die von .NET unterstützten Quantifizierer aufgeführt.  
   
-|Gieriger Quantifizierer|Träger Quantifizierer|BESCHREIBUNG|  
+|Gieriger Quantifizierer|Träger Quantifizierer|Beschreibung|  
 |-----------------------|---------------------|-----------------|  
 |`*`|`*?`|Übereinstimmung mit null oder mehr Vorkommen.|  
 |`+`|`+?`|Übereinstimmung mit einem oder mehr Vorkommen.|  
@@ -54,7 +54,7 @@ Quantifizierer geben an, wie viele Instanzen eines Zeichens, einer Gruppe oder e
   
  Das Muster für reguläre Ausdrücke ist wie in der folgenden Tabelle gezeigt definiert.  
   
-|Muster|BESCHREIBUNG|  
+|Muster|Beschreibung|  
 |-------------|-----------------|  
 |`\b`|An einer Wortgrenze beginnen.|  
 |`91*`|Übereinstimmung mit „9“, gefolgt von null oder mehr Zeichen „1“.|  
@@ -71,7 +71,7 @@ Quantifizierer geben an, wie viele Instanzen eines Zeichens, einer Gruppe oder e
   
  Das Muster für reguläre Ausdrücke ist wie in der folgenden Tabelle gezeigt definiert.  
   
-|Muster|BESCHREIBUNG|  
+|Muster|Beschreibung|  
 |-------------|-----------------|  
 |`\b`|An einer Wortgrenze beginnen.|  
 |`an+`|Übereinstimmung mit „a“, gefolgt von einem oder mehr Zeichen „n“.|  
@@ -88,7 +88,7 @@ Quantifizierer geben an, wie viele Instanzen eines Zeichens, einer Gruppe oder e
   
  Das Muster für reguläre Ausdrücke ist wie in der folgenden Tabelle gezeigt definiert.  
   
-|Muster|BESCHREIBUNG|  
+|Muster|Beschreibung|  
 |-------------|-----------------|  
 |`\b`|An einer Wortgrenze beginnen.|  
 |`an?`|Übereinstimmung mit „a“, gefolgt von null oder einem Zeichen „n“.|  
@@ -104,7 +104,7 @@ Quantifizierer geben an, wie viele Instanzen eines Zeichens, einer Gruppe oder e
   
  Das Muster für reguläre Ausdrücke ist wie in der folgenden Tabelle gezeigt definiert.  
   
-|Muster|BESCHREIBUNG|  
+|Muster|Beschreibung|  
 |-------------|-----------------|  
 |`\b`|An einer Wortgrenze beginnen.|  
 |`\d+`|Entsprechung für mindestens eine Dezimalstelle finden.|  
@@ -122,7 +122,7 @@ Quantifizierer geben an, wie viele Instanzen eines Zeichens, einer Gruppe oder e
   
  Das Muster für reguläre Ausdrücke ist wie in der folgenden Tabelle gezeigt definiert.  
   
-|Muster|BESCHREIBUNG|  
+|Muster|Beschreibung|  
 |-------------|-----------------|  
 |`\b`|An einer Wortgrenze beginnen.|  
 |`\d{2,}`|Übereinstimmung mit mindestens zwei Dezimalziffern.|  
@@ -147,7 +147,7 @@ Quantifizierer geben an, wie viele Instanzen eines Zeichens, einer Gruppe oder e
   
  Das Muster für reguläre Ausdrücke ist wie in der folgenden Tabelle gezeigt definiert.  
   
-|Muster|BESCHREIBUNG|  
+|Muster|Beschreibung|  
 |-------------|-----------------|  
 |`\b`|An einer Wortgrenze beginnen.|  
 |`\w*?`|Übereinstimmung mit null oder mehr Wortzeichen, aber so wenigen Zeichen wie möglich.|  
@@ -173,7 +173,7 @@ Quantifizierer geben an, wie viele Instanzen eines Zeichens, einer Gruppe oder e
   
  Das Muster für reguläre Ausdrücke ist wie in der folgenden Tabelle gezeigt definiert.  
   
-|Muster|BESCHREIBUNG|  
+|Muster|Beschreibung|  
 |-------------|-----------------|  
 |`^`|Übereinstimmung mit dem Beginn des Eingabestreams.|  
 |`\s*`|Sucht nach 0 (null) oder mehr Leerzeichen.|  
@@ -192,7 +192,7 @@ Quantifizierer geben an, wie viele Instanzen eines Zeichens, einer Gruppe oder e
   
  Das Muster für reguläre Ausdrücke ist wie in der folgenden Tabelle gezeigt definiert.  
   
-|Muster|BESCHREIBUNG|  
+|Muster|Beschreibung|  
 |-------------|-----------------|  
 |`\b`|An einer Wortgrenze beginnen.|  
 |`(\w{3,}?\.)`|Übereinstimmung mit mindestens 3 Wortzeichen, aber so wenigen Zeichen wie möglich, gefolgt von einem Punktzeichen. Dies ist die erste Erfassungsgruppe.|  
@@ -214,7 +214,7 @@ Quantifizierer geben an, wie viele Instanzen eines Zeichens, einer Gruppe oder e
   
  Das Muster für reguläre Ausdrücke ist wie in der folgenden Tabelle gezeigt definiert.  
   
-|Muster|BESCHREIBUNG|  
+|Muster|Beschreibung|  
 |-------------|-----------------|  
 |`\b`|An einer Wortgrenze beginnen.|  
 |`[A-Z]`|Übereinstimmung mit einem Großbuchstaben von A bis Z.|  
@@ -222,7 +222,7 @@ Quantifizierer geben an, wie viele Instanzen eines Zeichens, einer Gruppe oder e
 |`{1,10}`|Übereinstimmung mit dem vorhergehenden Muster zwischen 1- und 10-mal.|  
 |`[.!?]`|Übereinstimmung mit einem der Interpunktionszeichen „.“, „!“ oder „?“.|  
   
-<a name="Greedy"></a>   
+<a name="Greedy"></a>
 ## <a name="greedy-and-lazy-quantifiers"></a>Gierige und träge Quantifizierer  
  Eine Reihe von Quantifizierern gibt es in zwei Versionen:  
   
@@ -258,7 +258,7 @@ Quantifizierer geben an, wie viele Instanzen eines Zeichens, einer Gruppe oder e
   
  Um den praktischen Unterschied zwischen einer Erfassungsgruppe, die eine Mindest- und eine Höchstzahl von Erfassungen definiert, und einer Erfassungsgruppe zu sehen, die eine feste Anzahl von Erfassungen definiert, betrachten Sie die Muster für reguläre Ausdrücke `(a\1|(?(1)\1)){0,2}` und `(a\1|(?(1)\1)){2}`. Beide reguläre Ausdrücke bestehen aus einer einzelnen Erfassungsgruppe, die wie in der folgenden Tabelle gezeigt definiert ist.  
   
-|Muster|BESCHREIBUNG|  
+|Muster|Beschreibung|  
 |-------------|-----------------|  
 |`(a\1`|Entweder „a“ zusammen mit dem Wert der ersten Erfassungsgruppe abgleichen...|  
 |<code>&#124;(?(1)</code>|… oder testen, ob die erste Erfassungsgruppe definiert wurde. (Beachten Sie, dass das `(?(1)`-Konstrukt keine Erfassungsgruppe definiert.)|  
