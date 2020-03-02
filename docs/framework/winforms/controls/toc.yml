@@ -1181,7 +1181,7 @@
           href: walkthrough-authoring-a-composite-control-with-visual-csharp.md
         - name: 'Exemplarische Vorgehensweise: Erben von einem Steuerelement'
           href: walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md
-        - name: 'Exemplarische Vorgehensweise: Ausführen allgemeiner Aufgaben mit Smarttags'
+        - name: 'Exemplarische Vorgehensweise: Ausführen allgemeiner Aufgaben mit Designaktionen'
           href: perform-common-tasks-design-actions.md
         - name: 'Exemplarische Vorgehensweise: Serialisieren von Sammlungen von Standardtypen'
           href: serializing-collections-designerserializationvisibilityattribute.md
