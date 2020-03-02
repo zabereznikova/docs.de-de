@@ -7,12 +7,12 @@ helpviewer_keywords:
 - I/O [.NET], buffers
 author: rick-anderson
 ms.author: riande
-ms.openlocfilehash: e42f165bfedec3b1fa54615ee7e2a2028f40aadb
-ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
+ms.openlocfilehash: f939164cd56b2fb2feeeb171236b0e1171327e19
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74960474"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78160117"
 ---
 # <a name="work-with-buffers-in-net"></a>Arbeiten mit Puffern in .NET
 
@@ -115,6 +115,8 @@ Das folgende Beispiel analysiert eine 4 Byte lange Big-Endian-Ganzzahl ab dem S
 
 [!code-csharp[](~/samples/snippets/csharp/buffers/MyClass.cs?name=snippet5)]
 
+[!INCLUDE [localized code comments](../../../includes/code-comments-loc.md)]
+
 ##### <a name="process-text-data"></a>Verarbeiten von Textdaten
 
 Im Beispiel unten geschieht Folgendes:
@@ -146,7 +148,7 @@ Beim Verarbeiten von `ReadOnlySequence<T>`/`SequencePosition` gibt es im Verglei
 - Zwei `SequencePosition`-Elemente können nicht miteinander verglichen werden, sodass folgende Vorgänge schwierig sind:
   - Ermitteln, ob eine Position größer oder kleiner ist als eine andere Position.
   - Schreiben einiger Analysealgorithmen.
-- `ReadOnlySequence<T>` ist größer als ein Objektverweis und sollte nach Möglichkeit durch [in](../../csharp/language-reference/keywords/in-parameter-modifier.md) oder [ref](../../csharp/language-reference/keywords/ref.md) übergeben werden. Durch Übergeben von `ReadOnlySequence<T>` durch `in` oder `ref` werden weniger Kopien der [Struktur](../../csharp/language-reference/keywords/struct.md) erstellt.
+- `ReadOnlySequence<T>` ist größer als ein Objektverweis und sollte nach Möglichkeit durch [in](../../csharp/language-reference/keywords/in-parameter-modifier.md) oder [ref](../../csharp/language-reference/keywords/ref.md) übergeben werden. Durch Übergeben von `ReadOnlySequence<T>` durch `in` oder `ref` werden weniger Kopien der [Struktur](../../csharp/language-reference/builtin-types/struct.md) erstellt.
 - Für leere Segmente gilt:
   - Sie sind innerhalb eines `ReadOnlySequence<T>`-Elements gültig.
   - Sie können beim Durchlaufen mithilfe der `ReadOnlySequence<T>.TryGet`-Methode angezeigt werden.

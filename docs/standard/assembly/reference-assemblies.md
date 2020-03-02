@@ -4,12 +4,12 @@ description: Erfahren Sie mehr über Verweisassemblys, eine spezielle Art von As
 author: MSDN-WhiteKnight
 ms.date: 09/12/2019
 ms.technology: dotnet-standard
-ms.openlocfilehash: 7d2cc01861e8a3fdc260a2990ca0652878c386b0
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.openlocfilehash: 3b85e51a015cca1e53ee2503c7bfa58c504fc718
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74089270"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156464"
 ---
 # <a name="reference-assemblies"></a>Verweisassemblys
 
@@ -74,4 +74,4 @@ Genaue Details der Verweisassemblystruktur hängen von der Compilerversion ab. N
 
 - [Assemblys in .NET](index.md)
 - [Übersicht über Frameworkziele](/visualstudio/ide/visual-studio-multi-targeting-overview)
-- [Vorgehensweise: Hinzufügen oder Entfernen von Verweisen mit dem Verweis-Manager](/visualstudio/ide/how-to-add-or-remove-references-by-using-the-reference-manager)
+- [How to: Hinzufügen oder Entfernen von Verweisen mit dem Verweis-Manager](/visualstudio/ide/how-to-add-or-remove-references-by-using-the-reference-manager)

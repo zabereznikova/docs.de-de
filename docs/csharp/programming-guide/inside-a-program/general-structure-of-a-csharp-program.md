@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - C# language, program structure
 ms.assetid: 5ae964a5-0ef0-40fe-88fb-6d1793371d0d
-ms.openlocfilehash: cdb739b585722ca5988192d288a7ef4fbcfe7d8c
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 4a2340c29527ac09ba53daee03e06420b269df56
+ms.sourcegitcommit: c2d9718996402993cf31541f11e95531bc68bad0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75702576"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77673341"
 ---
 # <a name="general-structure-of-a-c-program-c-programming-guide"></a>Allgemeine Struktur eines C#-Programms (C#-Programmierhandbuch)
 C#-Programme bestehen aus mindestens einer Datei. Jede Datei kann 0 (null) oder mehrere Namespaces enthalten. Ein Namespace kann Typen, z.B. Klassen, Strukturen, Schnittstellen, Enumerationen und Delegaten sowie andere Namespaces enthalten. Im Folgenden wird das Grundgerüst eines C#-Programms dargestellt, das alle diese Elemente enthält.  
@@ -21,7 +21,7 @@ C#-Programme bestehen aus mindestens einer Datei. Jede Datei kann 0 (null) oder 
   
 - [Klassen](../classes-and-structs/classes.md)  
   
-- [Strukturen](../classes-and-structs/structs.md)  
+- [Strukturen](../../language-reference/builtin-types/struct.md)  
   
 - [Namespaces](../namespaces/index.md)  
   

@@ -6,12 +6,12 @@ ms.author: wiwagn
 ms.date: 05/22/2017
 ms.technology: dotnet-standard
 ms.assetid: bbfe6465-329d-4982-869d-472e7ef85d93
-ms.openlocfilehash: 0154910b91df0b2f72daebe802e4c75bbca964bb
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: f4cd2e47da236d276a42b972265ffd1a2fe27310
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75337577"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78160338"
 ---
 # <a name="tour-of-net"></a>Einführung in .NET
 
@@ -21,13 +21,13 @@ Dieser Artikel bietet eine Einführung in einige der wichtigsten Features von .N
 
 ## <a name="how-to-run-the-code-samples"></a>Ausführen der Codebeispiele
 
-Informationen zum Einrichten einer Entwicklungsumgebung zum Ausführen der Codebeispiele finden Sie im Thema [Erste Schritte](get-started.md). Kopieren Sie Codebeispiele auf dieser Seite, und fügen Sie sie zum Ausführen in Ihrer Umgebung ein. 
+Informationen zum Einrichten einer Entwicklungsumgebung zum Ausführen der Codebeispiele finden Sie im Thema [Erste Schritte](get-started.md). Kopieren Sie Codebeispiele auf dieser Seite, und fügen Sie sie zum Ausführen in Ihrer Umgebung ein.
 
 ## <a name="programming-languages"></a>Programmiersprachen
 
 .NET unterstützt mehrere Programmiersprachen. Die .NET-Implementierungen implementieren die [Common Language Infrastructure (CLI)](https://visualstudio.microsoft.com/license-terms/ecma-c-common-language-infrastructure-standards/), die unter anderem eine sprachunabhängige Runtime und Spracheninteroperabilität angibt. Dies bedeutet, dass Sie zum Erstellen von Apps und Diensten in .NET eine beliebige .NET-Sprache auswählen können.
 
-Microsoft entwickelt und unterstützt aktiv drei .NET-Sprachen: C#, F# und Visual Basic. 
+Microsoft entwickelt und unterstützt aktiv drei .NET-Sprachen: C#, F# und Visual Basic.
 
 * C# ist einfach, leistungsstark, typsicher und objektorientiert, behält aber gleichzeitig die Ausdruckskraft und Eleganz der C-Sprachen bei. Wer sich mit C und ähnlichen Sprachen auskennt, hat wenig Probleme bei der Verwendung von C#. Weitere Informationen zu C# finden Sie im [Leitfaden für C#](../csharp/index.yml).
 

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - fixed size buffers [C#]
 - unsafe buffers [C#]
 - unsafe code [C#], fixed size buffers
-ms.openlocfilehash: b5be6892a265f0a2b7f3109321fdcf46d4b0ea22
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 9005c425badc5a4ed74e6af3447e563daf61229e
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75711843"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77627798"
 ---
 # <a name="fixed-size-buffers-c-programming-guide"></a>Puffer fester Größe (C#-Programmierhandbuch)
 
@@ -22,7 +22,7 @@ private fixed char name[30];
 
 ## <a name="remarks"></a>Hinweise
 
-Eine C#-Struktur in sicherem Code, die ein Array enthält, enthält nicht die Elemente des Arrays. Stattdessen enthält die Struktur einen Verweis auf die Elemente. Sie können ein Array mit einer festen Größe in eine [Struktur](../../language-reference/keywords/struct.md) einbetten, wenn es in einem [unsicheren](../../language-reference/keywords/unsafe.md) Codeblock verwendet wird.
+Eine C#-Struktur in sicherem Code, die ein Array enthält, enthält nicht die Elemente des Arrays. Stattdessen enthält die Struktur einen Verweis auf die Elemente. Sie können ein Array mit einer festen Größe in eine [Struktur](../../language-reference/builtin-types/struct.md) einbetten, wenn es in einem [unsicheren](../../language-reference/keywords/unsafe.md) Codeblock verwendet wird.
 
 Das folgende `struct` ist 8 Byte groß. Das `pathName`-Array ist ein Verweis:
 

@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - interface keyword [C#]
 ms.assetid: 7da38e81-4f99-4bc5-b07d-c986b687eeba
-ms.openlocfilehash: b315d1f04c9e74700afba8ee7871b23ab4b2fd28
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 473f5f8e226f0a144746ac943afcffdccd4777c7
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76744692"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77625851"
 ---
 # <a name="no-loc-textinterface-c-reference"></a>:::no-loc text="interface"::: (C#-Referenz)
 
-Eine Schnittstelle definiert einen Vertrag. Jede [`class`](class.md) oder [`struct`](struct.md), die diesen Vertrag implementiert, muss eine Implementierung der in der Schnittstelle definierten Member bereitstellen. Ab C# 8.0 kann eine Schnittstelle eine Standardimplementierung für Member definieren. Sie kann auch [`static`](static.md)-Member definieren, um eine einzelne Implementierung für allgemeine Funktionen bereitzustellen.
+Eine Schnittstelle definiert einen Vertrag. Jede [`class`](class.md) oder [`struct`](../builtin-types/struct.md), die diesen Vertrag implementiert, muss eine Implementierung der in der Schnittstelle definierten Member bereitstellen. Ab C# 8.0 kann eine Schnittstelle eine Standardimplementierung für Member definieren. Sie kann auch [`static`](static.md)-Member definieren, um eine einzelne Implementierung für allgemeine Funktionen bereitzustellen.
 
 Im folgenden Beispiel muss die Klasse `ImplementationClass` eine Methode mit dem Namen `SampleMethod` implementieren, die keine Parameter hat und `void` zurückgibt.
 
@@ -78,6 +78,4 @@ Weitere Informationen finden Sie im Abschnitt [Schnittstellen](~/_csharplang/spe
 - [Schnittstellen](../../programming-guide/interfaces/index.md)
 - [Verwenden von Eigenschaften](../../programming-guide/classes-and-structs/using-properties.md)
 - [Verwenden von Indexern](../../programming-guide/indexers/using-indexers.md)
-- [class](class.md)
-- [struct](struct.md)
 - [Schnittstellen](../../programming-guide/interfaces/index.md)

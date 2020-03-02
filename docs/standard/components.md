@@ -4,12 +4,12 @@ description: Beschreibt .NET-Architekturkomponenten wie die .NET Standardbibliot
 author: cartermp
 ms.date: 08/23/2017
 ms.technology: dotnet-standard
-ms.openlocfilehash: af28863ac98ff5ffb5a8133fb98f2f1e7036985d
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: eadcf05069edfa32a52c5e73045b4cebd1a9a6ac
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77124389"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78160377"
 ---
 # <a name="net-architectural-components"></a>.NET-Architekturkomponenten
 
@@ -70,7 +70,7 @@ Eine Laufzeit ist die Ausführungsumgebung eines verwalteten Programms. Das Betr
 
 - Die Common Language Runtime (CLR) für das .NET Framework
 - Die Core Common Language Runtime (CoreCLR) für .NET Core
-- .NET Native für die universelle Windows-Plattform 
+- .NET Native für die universelle Windows-Plattform
 - Die Mono-Runtime für Xamarin.iOS, Xamarin.Android, Xamarin.Mac und das Mono-Desktopframework
 
 ## <a name="net-tooling-and-common-infrastructure"></a>.NET-Tools und die allgemeine Infrastruktur
@@ -96,7 +96,7 @@ Die folgenden offiziellen Ecma-Dokumente sind für [C#](http://www.ecma-internat
 - **The C# Language Standard (version 5.0)** (Sprachstandard für C# [Version 5.0]): [ECMA-334.pdf](https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-334.pdf)
 - **The Common Language Infrastructure** (Die Common Language Infrastructure): Das Dokument ist im [PDF](https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-335.pdf)- oder [ZIP](https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-335.zip)-Format verfügbar.
 - **Information Derived from the Partition IV XML File** (Aus Partition IV der XML-Datei abgeleitete Informationen): Das Dokument ist im [PDF](https://www.ecma-international.org/publications/files/ECMA-TR/ECMA%20TR-084.pdf)- oder [ZIP](https://www.ecma-international.org/publications/files/ECMA-TR/TR-084.zip)-Format verfügbar.
- 
+
 Die offiziellen ISO/IEC-Dokumente sind auf der ISO/IEC-Seite [Publicly Available Standards](https://standards.iso.org/ittf/PubliclyAvailableStandards/) (Öffentlich verfügbare Standards) erhältlich. Diese Links stammen direkt von dieser Seite:
 
 - **Information technology - Programming languages - C#** (Informationstechnologie – Programmiersprachen – C#): [ISO/IEC 23270:2018](https://standards.iso.org/ittf/PubliclyAvailableStandards/c075178_ISO_IEC_23270_2018.zip)

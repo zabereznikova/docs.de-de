@@ -13,12 +13,12 @@ helpviewer_keywords:
 - constructs, grouping
 - grouping constructs
 ms.assetid: 0fc18634-f590-4062-8d5c-f0b71abe405b
-ms.openlocfilehash: 87cc3d53cf06457191d9c87020c4151e3f848c51
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: 5b2ea110837d9d5b905f97ab706af52a594f1c43
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77124324"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159220"
 ---
 # <a name="grouping-constructs-in-regular-expressions"></a>Gruppierungskonstrukte in regulären Ausdrücken
 Gruppierungskonstrukte grenzen die Teilausdrücke eines regulären Ausdrucks ab und zeichnen die Teilzeichenfolgen einer Eingabezeichenfolge auf. Mit Gruppierungskonstrukten können Sie folgende Schritte ausführen:  
@@ -48,7 +48,7 @@ Gruppierungskonstrukte grenzen die Teilausdrücke eines regulären Ausdrucks ab 
   
  Weitere Informationen zu Gruppen und dem Objektmodell für reguläre Ausdrücke finden Sie unter [Gruppieren von Konstrukten und Objekten für reguläre Ausdrücke](#Objects).  
   
-<a name="matched_subexpression"></a>   
+<a name="matched_subexpression"></a>
 ## <a name="matched-subexpressions"></a>Übereinstimmende Teilausdrücke  
  Das folgende Gruppierungskonstrukt erfasst einen übereinstimmenden Teilausdruck:  
   
@@ -87,7 +87,7 @@ Gruppierungskonstrukte grenzen die Teilausdrücke eines regulären Ausdrucks ab 
 |`(\1)`|Suchen Sie nach einer Entsprechung für die Zeichenfolge in der ersten erfassten Gruppe. Dies ist die zweite Erfassungsgruppe. Im Beispiel wird sie einer erfassten Gruppe zugewiesen, damit die Anfangsposition des doppelten Worts von der `Match.Index` -Eigenschaft zurückgegeben wird.|  
 |`\W`|Finden Sie eine Entsprechung für ein Nichtwortzeichen, einschließlich Leerzeichen und Interpunktion. Dies verhindert, dass für das Muster eines regulären Ausdrucks eine Entsprechung für ein Wort gefunden wird, das mit dem Wort von der zuerst erfassten Gruppe beginnt.|  
   
-<a name="named_matched_subexpression"></a>   
+<a name="named_matched_subexpression"></a>
 ## <a name="named-matched-subexpressions"></a>Benannte übereinstimmende Teilausdrücke  
  Das folgende Gruppierungskonstrukt erfasst einen übereinstimmenden Teilausdruck und ermöglicht den Zugriff nach Name oder Zahl:  
   
@@ -161,7 +161,7 @@ Gruppierungskonstrukte grenzen die Teilausdrücke eines regulären Ausdrucks ab 
 |`\D+`|Übereinstimmung mit einem oder mehreren Nichtdezimal-Ziffernzeichen.|  
 |`(?<digit>\d+)?`|Übereinstimmung mit keinem oder einem Vorkommen mindestens eines Dezimalziffernzeichens. Weisen Sie die Übereinstimmung der Gruppe namens `digit` zu.|  
   
-<a name="balancing_group_definition"></a>   
+<a name="balancing_group_definition"></a>
 ## <a name="balancing-group-definitions"></a>Ausgleichen von Gruppendefinitionen  
  Eine Ausgleichsgruppendefinition löscht die Definition einer zuvor definierten Gruppe und speichert in der aktuellen Gruppe das Intervall zwischen der zuvor definierten Gruppe und der aktuellen Gruppe. Dieses Gruppierungskonstrukt besitzt das folgende Format:  
   
@@ -234,7 +234,7 @@ Gruppierungskonstrukte grenzen die Teilausdrücke eines regulären Ausdrucks ab 
 |23|`(?(Open)(?!))`|Die `Open` -Gruppe ist nicht definiert, sodass keine Übereinstimmung gesucht wird.|  
 |24|`$`|Gleicht das Ende der Eingabezeichenfolge ab.|  
   
-<a name="noncapturing_group"></a>   
+<a name="noncapturing_group"></a>
 ## <a name="noncapturing-groups"></a>Nicht erfassende Gruppen  
  Das folgende Gruppierungskonstrukt erfasst nicht die Teilzeichenfolge, die zu einem Teilausdruck passt:  
   
@@ -260,7 +260,7 @@ Gruppierungskonstrukte grenzen die Teilausdrücke eines regulären Ausdrucks ab 
 |`(?:\b(?:\w+)\W*)+`|Suchen Sie nach einer Übereinstimmung für das Muster aus einem oder mehreren Wortzeichen, beginnend bei einer Wortgrenze und gefolgt von null oder mehr Nicht-Wortzeichen (ein oder zwei Mal). Weisen Sie einer erfassten Gruppe den entsprechenden Text nicht zu.|  
 |`\.`|Entsprechung für einen Punkt finden.|  
   
-<a name="group_options"></a>   
+<a name="group_options"></a>
 ## <a name="group-options"></a>Gruppenoptionen  
  Das folgende Gruppierungskonstrukt wendet die angegebenen Optionen in einem Teilausdruck an oder deaktiviert sie:  
   
@@ -284,7 +284,7 @@ Gruppierungskonstrukte grenzen die Teilausdrücke eines regulären Ausdrucks ab 
  [!code-csharp[Conceptual.Regex.Language.Options#8](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/example1.cs#8)]
  [!code-vb[Conceptual.Regex.Language.Options#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/example1.vb#8)]  
   
-<a name="zerowidth_positive_lookahead_assertion"></a>   
+<a name="zerowidth_positive_lookahead_assertion"></a>
 ## <a name="zero-width-positive-lookahead-assertions"></a>Positive Lookaheadassertionen mit einer Breite von Null  
  Das folgende Gruppierungskonstrukt definiert eine positive Lookaheadassertion mit einer Breite von Null:  
   
@@ -307,7 +307,7 @@ Gruppierungskonstrukte grenzen die Teilausdrücke eines regulären Ausdrucks ab 
 |`\w+`|Übereinstimmung mit mindestens einem Wortzeichen.|  
 |`(?=\sis\b)`|Bestimmen Sie, ob den Wortzeichen ein Leerstellenzeichen und die Zeichenfolge "is" folgt, die bei einer Wortgrenze endet. Trifft dies zu, ist die Übereinstimmung erfolgreich.|  
   
-<a name="zerowidth_negative_lookahead_assertion"></a>   
+<a name="zerowidth_negative_lookahead_assertion"></a>
 ## <a name="zero-width-negative-lookahead-assertions"></a>Negative Lookaheadassertionen mit einer Breite von Null  
  Das folgende Gruppierungskonstrukt definiert eine negative Lookaheadassertion mit einer Breite von Null:  
   
@@ -345,7 +345,7 @@ Gruppierungskonstrukte grenzen die Teilausdrücke eines regulären Ausdrucks ab 
 |`\b`|Der Vergleich endet an einer Wortgrenze.|  
 |`\p{P})`|Wenn das nächste Zeichen kein Interpunktionszeichen (z. B. ein Punkt oder ein Komma) ist, ist die Übereinstimmung erfolgreich.|  
   
-<a name="zerowidth_positive_lookbehind_assertion"></a>   
+<a name="zerowidth_positive_lookbehind_assertion"></a>
 ## <a name="zero-width-positive-lookbehind-assertions"></a>Positive Lookbehindassertionen mit einer Breite von Null  
  Das folgende Gruppierungskonstrukt definiert eine positive Lookbehindassertion mit einer Breite von Null:  
   
@@ -370,7 +370,7 @@ Gruppierungskonstrukte grenzen die Teilausdrücke eines regulären Ausdrucks ab 
   
  Positive Lookbehindassertions mit einer Breite von Null werden auch verwendet, um das Zurückverfolgen einzuschränken, wenn die letzten Zeichen in einer Erfassungsgruppe eine Teilmenge der Zeichen sein müssen, die dem Muster eines regulären Ausdrucks dieser Gruppe entsprechen. Wenn beispielsweise eine Gruppe alle aufeinander folgenden Wortzeichen erfasst, können Sie mit einer positiven Lookaheadassertion mit einer Breite von Null anfordern, dass das letzte Zeichen alphabetisch ist.  
   
-<a name="zerowidth_negative_lookbehind_assertion"></a>   
+<a name="zerowidth_negative_lookbehind_assertion"></a>
 ## <a name="zero-width-negative-lookbehind-assertions"></a>Negative Lookbehindassertionen mit einer Breite von Null  
  Das folgende Gruppierungskonstrukt definiert eine negative Lookbehindassertion mit einer Breite von Null:  
   
@@ -395,7 +395,7 @@ Gruppierungskonstrukte grenzen die Teilausdrücke eines regulären Ausdrucks ab 
 |`\d{4}\b`|Finden Sie eine Entsprechung für vier Dezimalstellen, und beenden Sie die Übereinstimmung an einer Wortgrenze.|  
 |<code>(?<!(Saturday&#124;Sunday) )</code>|Wenn der Übereinstimmung etwas anderes als die Zeichenfolgen "Samstag" oder "Sonntag" (gefolgt von einem Leerzeichen) vorangestellt wird, ist die Übereinstimmung erfolgreich.|  
   
-<a name="atomic_groups"></a>   
+<a name="atomic_groups"></a>
 ## <a name="atomic-groups"></a>Atomische Gruppen  
  Die folgenden Gruppierungskonstrukte stellen eine atomische Gruppe dar (in anderen Engines für reguläre Ausdrücke als Teilausdruck ohne Rückverfolgung, als atomischer Teilausdruck oder einmaliger Teilausdruck bekannt):
   
@@ -424,7 +424,7 @@ Gruppierungskonstrukte grenzen die Teilausdrücke eines regulären Ausdrucks ab 
 |`\b`|Beendet den Vergleich an einer Wortgrenze.|  
 |`(?>(\w)\1+)`|Finden Sie eine Entsprechung für ein oder mehrere Vorkommen eines duplizierten Wortzeichens, führen Sie jedoch keine Rückverfolgung aus, um für das letzte Zeichen bei einer Wortgrenze eine Entsprechung zu finden.|  
   
-<a name="Objects"></a>   
+<a name="Objects"></a>
 ## <a name="grouping-constructs-and-regular-expression-objects"></a>Gruppieren von Konstrukten und Objekten für reguläre Ausdrücke  
  Teilzeichenfolgen, die von einer Erfassungsgruppe für reguläre Ausdrücke abgeglichen werden, werden durch <xref:System.Text.RegularExpressions.Group?displayProperty=nameWithType> -Objekte dargestellt, die aus dem <xref:System.Text.RegularExpressions.GroupCollection?displayProperty=nameWithType> -Objekt abgerufen werden können, das von der <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> -Eigenschaft zurückgegeben wird. Das <xref:System.Text.RegularExpressions.GroupCollection> -Objekt wird folgendermaßen aufgefüllt:  
   

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - compression
 - compress files
 ms.assetid: e9876165-3c60-4c84-a272-513e47acf579
-ms.openlocfilehash: 6345b467e9ade085a38de6dc9758b1bd99d1ae62
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 5aa25e265ed6ffb613e9916414c6f2335a4aaf57
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75708101"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159376"
 ---
 # <a name="how-to-compress-and-extract-files"></a>Vorgehensweise: Komprimieren und Extrahieren von Dateien
 
@@ -31,9 +31,9 @@ Anhand der folgenden Beispiele werden einige der Vorgänge erläutert, die Sie m
 
 ## <a name="example-1-create-and-extract-a-zip-file"></a>Beispiel 1: Erstellen und Extrahieren einer ZIP-Datei
 
-Das folgende Beispiel zeigt, wie Sie mithilfe der <xref:System.IO.Compression.ZipFile>-Klasse eine komprimierte *ZIP*-Datei erstellen und extrahieren können. In dem Beispiel wird der Inhalt eines Ordners in eine neue *ZIP*-Datei komprimiert, die anschließend in einen neuen Ordner extrahiert wird. 
+Das folgende Beispiel zeigt, wie Sie mithilfe der <xref:System.IO.Compression.ZipFile>-Klasse eine komprimierte *ZIP*-Datei erstellen und extrahieren können. In dem Beispiel wird der Inhalt eines Ordners in eine neue *ZIP*-Datei komprimiert, die anschließend in einen neuen Ordner extrahiert wird.
 
-Wenn Sie das Beispiel ausführen möchten, erstellen Sie in Ihrem Programmordner einen Ordner für den *Start*, und füllen Sie diesen mit Dateien auf, die gezippt werden sollen. 
+Wenn Sie das Beispiel ausführen möchten, erstellen Sie in Ihrem Programmordner einen Ordner für den *Start*, und füllen Sie diesen mit Dateien auf, die gezippt werden sollen.
 
 Wenn der Buildfehler "The name 'ZipFile' does not exist in the current context." (Der Name „ZipFile“ ist im aktuellen Kontext nicht vorhanden.) zurückgegeben wird, fügen Sie dem Projekt einen Verweis auf die `System.IO.Compression.FileSystem`-Assembly hinzu.
 
@@ -42,13 +42,13 @@ Wenn der Buildfehler "The name 'ZipFile' does not exist in the current context."
 
 ## <a name="example-2-extract-specific-file-extensions"></a>Beispiel 2: Extrahieren bestimmter Dateierweiterungen
 
-Im nächsten Beispiel wird der Inhalt einer vorhandenen *ZIP*-Datei durchlaufen, und Dateien mit der Erweiterung *.txt* werden extrahiert. Dabei wird die Klasse <xref:System.IO.Compression.ZipArchive> verwendet, um auf die Zip-Datei zuzugreifen, und mithilfe der Klasse <xref:System.IO.Compression.ZipArchiveEntry> werden die einzelnen Einträge untersucht. Die Erweiterungsmethode <xref:System.IO.Compression.ZipFileExtensions.ExtractToFile%2A> für das <xref:System.IO.Compression.ZipArchiveEntry>-Objekt ist in der Klasse <xref:System.IO.Compression.ZipFileExtensions?displayProperty=nameWithType> verfügbar. 
+Im nächsten Beispiel wird der Inhalt einer vorhandenen *ZIP*-Datei durchlaufen, und Dateien mit der Erweiterung *.txt* werden extrahiert. Dabei wird die Klasse <xref:System.IO.Compression.ZipArchive> verwendet, um auf die Zip-Datei zuzugreifen, und mithilfe der Klasse <xref:System.IO.Compression.ZipArchiveEntry> werden die einzelnen Einträge untersucht. Die Erweiterungsmethode <xref:System.IO.Compression.ZipFileExtensions.ExtractToFile%2A> für das <xref:System.IO.Compression.ZipArchiveEntry>-Objekt ist in der Klasse <xref:System.IO.Compression.ZipFileExtensions?displayProperty=nameWithType> verfügbar.
 
-Wenn Sie das Beispiel ausführen möchten, platzieren Sie die *ZIP*-Datei mit dem Namen *result.zip* in Ihrem Programmordner. Geben Sie einen Ordnernamen an, in den die Datei extrahiert werden soll, wenn Sie dazu aufgefordert werden. 
+Wenn Sie das Beispiel ausführen möchten, platzieren Sie die *ZIP*-Datei mit dem Namen *result.zip* in Ihrem Programmordner. Geben Sie einen Ordnernamen an, in den die Datei extrahiert werden soll, wenn Sie dazu aufgefordert werden.
 
 Wenn der Buildfehler "The name 'ZipFile' does not exist in the current context." (Der Name „ZipFile“ ist im aktuellen Kontext nicht vorhanden.) zurückgegeben wird, fügen Sie dem Projekt einen Verweis auf die `System.IO.Compression.FileSystem`-Assembly hinzu.
 
-Wenn der Fehler "The type 'ZipArchive' is defined in an assembly that is not referenced." (Der Typ „ZipArchive“ ist in einer Assembly definiert, auf die nicht verwiesen wird.) zurückgegeben wird, fügen Sie dem Projekt einen Verweis auf die `System.IO.Compression`-Assembly hinzu. 
+Wenn der Fehler "The type 'ZipArchive' is defined in an assembly that is not referenced." (Der Typ „ZipArchive“ ist in einer Assembly definiert, auf die nicht verwiesen wird.) zurückgegeben wird, fügen Sie dem Projekt einen Verweis auf die `System.IO.Compression`-Assembly hinzu.
 
 > [!IMPORTANT]
 > Beim Entzippen von Dateien müssen Sie auf schädliche Dateipfade achten, die aus dem Verzeichnis weisen können, in das Sie extrahieren möchten. Dies wird als Path Traversal-Angriff bezeichnet. Im folgenden Beispiel wird gezeigt, wie Sie eine Überprüfung auf schädliche Dateipfade durchführen und Dateien sicher entzippen können.

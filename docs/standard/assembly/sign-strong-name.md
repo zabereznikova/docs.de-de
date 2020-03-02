@@ -11,12 +11,12 @@ dev_langs:
 - csharp
 - vb
 - cpp
-ms.openlocfilehash: 64f3a51b29a7116c736fea0e76465a4a73c640c2
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 9998e69e8bf1505bcfc7a9103e9d89616dad9633
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75738771"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78160312"
 ---
 # <a name="how-to-sign-an-assembly-with-a-strong-name"></a>Vorgehensweise: Signieren einer Assembly mit einem starken Namen
 
@@ -73,9 +73,9 @@ Weitere Informationen über die Verwendung dieses Tools finden Sie unter [Assemb
 ## <a name="sign-an-assembly-with-a-strong-name-by-using-attributes"></a>Signieren einer Assembly mit einem starken Namen mithilfe von Attributen  
   
 1. Fügen Sie in Ihrer Codemoduldatei das <xref:System.Reflection.AssemblyKeyFileAttribute?displayProperty=nameWithType> -Attribut oder das <xref:System.Reflection.AssemblyKeyNameAttribute> -Attribut hinzu, und geben Sie den Namen der Datei oder des Containers an, die bzw. der das zum Signieren der Assembly mit einem starken Namen zu verwendende Schlüsselpaar enthält.  
-   
+
 2. Kompilieren Sie die Quellcodedatei normal.  
-   
+
    > [!NOTE]
    > Die C#- und Visual Basic-Compiler geben Compilerwarnungen aus (CS1699 bzw. BC41008), wenn das <xref:System.Reflection.AssemblyKeyFileAttribute> -Attribut oder das <xref:System.Reflection.AssemblyKeyNameAttribute> -Attribut im Quellcode auftreten. Sie können die Warnungen ignorieren.  
 
@@ -110,7 +110,7 @@ csc /t:library UtilityLibrary.cs /keyfile:sgKey.snk
 ## <a name="see-also"></a>Siehe auch
 
 - [Erstellen und Verwenden von Assemblys mit starkem Namen](create-use-strong-named.md)
-- [Vorgehensweise: Erstellen eines öffentlichen/privaten Schlüsselpaars](create-public-private-key-pair.md)
+- [How to: Erstellen eines öffentlichen/privaten Schlüsselpaars](create-public-private-key-pair.md)
 - [Al.exe (Assembly Linker-Tool)](../../framework/tools/al-exe-assembly-linker.md)
 - [Verzögertes Signieren einer Assembly](delay-sign.md)
 - [Verwalten der Signierung von Assemblys und Manifesten](/visualstudio/ide/managing-assembly-and-manifest-signing)

@@ -13,19 +13,19 @@ helpviewer_keywords:
 - constructs, substitutions
 - substitutions
 ms.assetid: d1f52431-1c7d-4dc6-8792-6b988256892e
-ms.openlocfilehash: db0e2234055c6869c4cf55196d9f3b62a6996c96
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 3562bd113ae4c9a3f721d8858a5d3625ef548d3a
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73972063"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78160077"
 ---
 # <a name="substitutions-in-regular-expressions"></a>Ersetzungen in regulären Ausdrücken
 Ersetzungen sind Sprachelemente, die nur in Ersetzungsmustern erkannt werden. Sie definieren den gesamten Text oder einen Teil des Texts, der den entsprechenden Text in der Eingabezeichenfolge ersetzen soll, mithilfe eines Musters eines regulären Ausdrucks. Das Ersetzungsmuster kann zusammen mit Literalzeichen aus einer oder mehreren Ersetzungen bestehen. Ersetzungsmuster werden für Überladungen der <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> -Methode bereitgestellt, die über einen `replacement` -Parameter verfügen, und für die <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> -Methode. Die Methoden ersetzen das übereinstimmende Muster durch das Muster, das durch den `replacement` -Parameter definiert wird.  
   
  .NET Framework definiert die in der folgenden Tabelle aufgeführten Ersetzungselemente.  
   
-|Substitution|BESCHREIBUNG|  
+|Substitution|Beschreibung|  
 |------------------|-----------------|  
 |$ *Zahl*|Schließt die letzte mit der Erfassungsgruppe, die durch *Zahl*identifiziert wird, übereinstimmende Teilzeichenfolge in der Ersetzungszeichenfolge ein. Hierbei ist *Zahl* ein Dezimalwert. Weitere Informationen finden Sie unter [Ersetzen einer nummerierten Gruppe](#substituting-a-numbered-group).|  
 |${ *Name* }|Schließt die letzte Teilzeichenfolge in der Ersetzungszeichenfolge ein, die von der benannten Gruppe gefunden wird, die mit `(?<`*Name*`> )` angegeben wird. Weitere Informationen finden Sie unter [Ersetzen einer benannten Gruppe](#substituting-a-named-group).|  
@@ -60,7 +60,7 @@ Ersetzungen sind Sprachelemente, die nur in Ersetzungsmustern erkannt werden. Si
   
  Das Muster für reguläre Ausdrücke `\p{Sc}*(\s?\d+[.,]?\d*)\p{Sc}*` wird entsprechend der folgenden Tabelle definiert:  
   
-|Muster|BESCHREIBUNG|  
+|Muster|Beschreibung|  
 |-------------|-----------------|  
 |`\p{Sc}*`|Übereinstimmung mit keinem oder mehreren Währungssymbolzeichen.|  
 |`\s?`|Sucht nach einer Übereinstimmung mit keinem oder einem Leerzeichen.|  
@@ -83,7 +83,7 @@ Ersetzungen sind Sprachelemente, die nur in Ersetzungsmustern erkannt werden. Si
   
  Das Muster für reguläre Ausdrücke `\p{Sc}*(?<amount>\s?\d[.,]?\d*)\p{Sc}*` wird entsprechend der folgenden Tabelle definiert:  
   
-|Muster|BESCHREIBUNG|  
+|Muster|Beschreibung|  
 |-------------|-----------------|  
 |`\p{Sc}*`|Übereinstimmung mit keinem oder mehreren Währungssymbolzeichen.|  
 |`\s?`|Sucht nach einer Übereinstimmung mit keinem oder einem Leerzeichen.|  
@@ -102,7 +102,7 @@ Ersetzungen sind Sprachelemente, die nur in Ersetzungsmustern erkannt werden. Si
   
  Das Muster für reguläre Ausdrücke `\b(\d+)(\.(\d+))?` wird entsprechend der folgenden Tabelle definiert:  
   
-|Muster|BESCHREIBUNG|  
+|Muster|Beschreibung|  
 |-------------|-----------------|  
 |`\b`|Beginnt den Abgleich am Anfang einer Wortgrenze.|  
 |`(\d+)`|Entsprechung für mindestens eine Dezimalstelle finden. Dies ist die erste Erfassungsgruppe.|  
@@ -120,7 +120,7 @@ Ersetzungen sind Sprachelemente, die nur in Ersetzungsmustern erkannt werden. Si
   
  Das Muster für reguläre Ausdrücke `^(\w+\s?)+$` wird entsprechend der folgenden Tabelle definiert:  
   
-|Muster|BESCHREIBUNG|  
+|Muster|Beschreibung|  
 |-------------|-----------------|  
 |`^`|Beginnt den Abgleich am Anfang der Eingabezeichenfolge.|  
 |`(\w+\s?)+`|Übereinstimmung mit dem Muster mindestens eines Wortzeichens, ein- oder mehrmals gefolgt von einer Null oder einem Leerzeichen.|  
@@ -144,7 +144,7 @@ Ersetzungen sind Sprachelemente, die nur in Ersetzungsmustern erkannt werden. Si
 |2|5|aa1bb|aaaabb**aa1bb**cc3dd4ee5|  
 |3|8|aa1bb2cc|aaaabbaa1bbcc**aa1bb2cc**dd4ee5|  
 |4|11|aa1bb2cc3dd|aaaabbaa1bbccaa1bb2ccdd**aa1bb2cc3dd**ee5|  
-|5|14|aa1bb2cc3dd4ee|aaaabbaa1bbccaa1bb2ccddaa1bb2cc3ddee**aa1bb2cc3dd4ee**| 
+|5|14|aa1bb2cc3dd4ee|aaaabbaa1bbccaa1bb2ccddaa1bb2cc3ddee**aa1bb2cc3dd4ee**|
 
 ## <a name="substituting-the-text-after-the-match"></a>Ersetzen des Texts nach der Übereinstimmung  
  Die Ersetzung `$'` ersetzt die übereinstimmende Zeichenfolge nach der Übereinstimmung durch die gesamte Eingabezeichenfolge. Das heißt, die Eingabezeichenfolge wird nach der Übereinstimmung dupliziert, während der übereinstimmende Text entfernt wird. Jeder Text, der dem übereinstimmenden Text vorausgeht, bleibt in der Ergebniszeichenfolge unverändert. Wenn keine Übereinstimmung vorhanden ist, wirkt sich die Ersetzung  `$'` nicht aus.  
@@ -174,7 +174,7 @@ Ersetzungen sind Sprachelemente, die nur in Ersetzungsmustern erkannt werden. Si
   
  Das Muster für reguläre Ausdrücke `\b(\w+)\s\1\b` wird entsprechend der folgenden Tabelle definiert:  
   
-|Muster|BESCHREIBUNG|  
+|Muster|Beschreibung|  
 |-------------|-----------------|  
 |`\b`|Der Vergleich beginnt an einer Wortgrenze.|  
 |`(\w+)`|Übereinstimmung mit mindestens einem Wortzeichen. Dies ist die erste Erfassungsgruppe.|  

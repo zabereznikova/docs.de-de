@@ -14,12 +14,12 @@ helpviewer_keywords:
 - uppercase
 - lowercase
 ms.assetid: 6805f81b-e9ad-4387-9f4c-b9bdb21b87c0
-ms.openlocfilehash: 91fc0022eae3f036e0ec046ea12446871926ab27
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 135cfa815c10d1a9dd9056604a4601678da9d5c4
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75711466"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159350"
 ---
 # <a name="changing-case-in-net"></a>Ändern der Groß-/Kleinschreibung in .NET
 Wenn Sie eine Anwendung schreiben, die Benutzereingaben akzeptiert, können Sie nicht sicher sein, ob die Daten in Groß- oder Kleinschreibung eingegeben werden. Häufig möchten Sie, dass Zeichenfolgen in einheitlicher Schreibung vorliegen, insbesondere, wenn sie in der Benutzeroberfläche angezeigt werden. In der folgenden Tabelle sind drei Methoden zur Änderung der Groß-/Kleinschreibung beschrieben. Die ersten beiden Methoden stellen eine Überladung bereit, die eine Kultur akzeptiert.  
@@ -33,7 +33,7 @@ Wenn Sie eine Anwendung schreiben, die Benutzereingaben akzeptiert, können Sie 
 > [!WARNING]
 > Beachten Sie, dass die <xref:System.String.ToUpper%2A?displayProperty=nameWithType>- und die <xref:System.String.ToLower%2A?displayProperty=nameWithType>-Methode nicht dazu verwendet werden sollten, Zeichenfolgen zu konvertieren, um diese zu vergleichen oder auf Gleichheit zu testen. Weitere Informationen finden Sie im Abschnitt [Vergleichen von Zeichenfolgen in gemischter Schreibung](#Comparing).  
   
-<a name="Comparing"></a>   
+<a name="Comparing"></a>
 ## <a name="comparing-strings-of-mixed-case"></a>Vergleichen von Zeichenfolgen in gemischter Schreibung  
  Wenn Sie Zeichenfolgen in gemischter Schreibung vergleichen möchten, um deren Reihenfolge zu ermitteln, rufen Sie eine der Überladungen der <xref:System.String.CompareTo%2A?displayProperty=nameWithType>-Methode mit einem `comparisonType`-Parameter auf, und geben Sie entweder <xref:System.StringComparison.CurrentCultureIgnoreCase?displayProperty=nameWithType> oder <xref:System.StringComparison.InvariantCultureIgnoreCase?displayProperty=nameWithType> oder <xref:System.StringComparison.OrdinalIgnoreCase?displayProperty=nameWithType> als Wert für das `comparisonType`-Argument an. Soll für einen Vergleich eine bestimmte Kultur verwendet werden, die nicht die aktuelle Kultur ist, rufen Sie eine Überladung der <xref:System.String.CompareTo%2A?displayProperty=nameWithType>-Methode mit einem `culture`- und einem `options`-Parameter auf, und geben Sie <xref:System.Globalization.CompareOptions.IgnoreCase?displayProperty=nameWithType> als Wert für das `options`-Argument an.  
   

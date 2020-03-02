@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.date: 09/13/2019
-ms.openlocfilehash: 48e429a6379b0a13cb81f8db6fae27aa31409840
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 5a02c71b16e2c8e5ade5128866af7dc46a03ba4a
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76794611"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78160182"
 ---
 # <a name="how-to-create-user-defined-exceptions-with-localized-exception-messages"></a>Vorgehensweise: Erstellen benutzerdefinierter Ausnahmen mit lokalisierten Ausnahmemeldungen
 
@@ -30,7 +30,7 @@ Führen Sie die folgenden Schritte aus, um eine benutzerdefinierte Ausnahme zu e
     [Serializable]
     public class StudentNotFoundException : Exception { }
     ```
-    
+
     ```vb
     <Serializable>
     Public Class StudentNotFoundException
@@ -53,7 +53,7 @@ Führen Sie die folgenden Schritte aus, um eine benutzerdefinierte Ausnahme zu e
             : base(message, inner) { }
     }
     ```
-    
+
     ```vb
     <Serializable>
     Public Class StudentNotFoundException

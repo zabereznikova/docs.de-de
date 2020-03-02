@@ -10,12 +10,12 @@ helpviewer_keywords:
 - managed execution process
 - common language runtime, managed execution process
 ms.assetid: 476b03dc-2b12-49a7-b067-41caeaa2f533
-ms.openlocfilehash: 0ce7182af33a795188d01ac457b9d45b8ad305dd
-ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
+ms.openlocfilehash: 46a266849f137076170287aeb10becedf83ccf78
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74960390"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78160221"
 ---
 # <a name="managed-execution-process"></a>Verwalteter Ausführungsprozess
 <a name="introduction"></a> Der verwaltete Ausführungsprozess schließt die folgenden Schritte ein, die weiter unten in diesem Thema ausführlich erläutert werden:  
@@ -36,7 +36,7 @@ ms.locfileid: "74960390"
   
      Die Common Language Runtime stellt eine Infrastruktur bereit, die die Ausführung des Codes sowie von Diensten ermöglicht, die während der Ausführung verwendet werden können.  
   
-<a name="choosing_a_compiler"></a>   
+<a name="choosing_a_compiler"></a>
 ## <a name="choosing-a-compiler"></a>Auswählen eines Compilers  
  Um die Vorteile der Common Language Runtime (CLR) nutzen zu können, müssen Sie mindestens einen Sprachcompiler für die Laufzeit verwenden, z. B. Compiler für Visual Basic, C#, Visual C++, F# oder einen der vielen Compiler von Drittanbietern, wie etwa einen Eiffel-, Perl- oder COBOL-Compiler.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "74960390"
   
  [Zurück nach oben](#introduction)  
   
-<a name="compiling_to_msil"></a>   
+<a name="compiling_to_msil"></a>
 ## <a name="compiling-to-msil"></a>Kompilieren in MSIL  
  Beim Kompilieren in verwalteten Code übersetzt der Compiler den Quellcode in MSIL (Microsoft Intermediate Language), ein prozessorunabhängiger Satz von Anweisungen, die auf einfache Weise in systemeigenen Code konvertiert werden können. MSIL enthält Anweisungen zum Laden, Speichern, Initialisieren und Aufrufen von Methoden für Objekte sowie Anweisungen für arithmetische und logische Operationen, Ablaufsteuerung, direkten Speicherzugriff, Ausnahmebehandlung und andere Operationen. Bevor Code ausgeführt werden kann, muss MSIL in prozessorspezifischen Code konvertiert werden, i. d. R. durch eine [JIT-Kompilierung](#compiling_msil_to_native_code). Da die Common Language Runtime für jede unterstützte Computerarchitektur mindestens einen JIT-Compiler bereitstellt, können MSIL-Anweisungen unter jeder unterstützten Architektur JIT-kompiliert und ausgeführt werden.  
   
@@ -52,7 +52,7 @@ ms.locfileid: "74960390"
   
  [Zurück nach oben](#introduction)  
   
-<a name="compiling_msil_to_native_code"></a>   
+<a name="compiling_msil_to_native_code"></a>
 ## <a name="compiling-msil-to-native-code"></a>Kompilieren von MSIL in systemeigenen Code  
  Bevor Microsoft Intermediate Language (MSIL) ausgeführt werden kann, muss sie in der Common Language Runtime in systemeigenen Code für die Architektur des Zielcomputers kompiliert werden. .NET Framework bietet zwei Möglichkeiten zum Ausführen dieser Konvertierung:  
   
@@ -89,7 +89,7 @@ ms.locfileid: "74960390"
   
  [Zurück nach oben](#introduction)  
   
-<a name="running_code"></a>   
+<a name="running_code"></a>
 ## <a name="running-code"></a>Ausführen von Code  
  Die Common Language Runtime stellt eine Infrastruktur bereit, die die verwaltete Ausführung des Codes sowie von Diensten ermöglicht, die während der Ausführung verwendet werden können. Vor Ausführung einer Methode muss diese in prozessorspezifischen Code kompiliert werden. Jede Methode, für die MSIL generiert wurde, wird beim ersten Aufruf JIT-kompiliert und anschließend ausgeführt. Beim nächsten Ausführen der Methode wird der vorhandene JIT-kompilierte, systemeigene Code ausgeführt. Das JIT-Kompilieren und anschließende Ausführen des Codes wird so lange wiederholt, bis die Ausführung vollständig abgeschlossen ist.  
   

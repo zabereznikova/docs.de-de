@@ -6,12 +6,12 @@ f1_keywords:
 - whereconstraint_CSharpKeyword
 helpviewer_keywords:
 - where (generic type constraint) [C#]
-ms.openlocfilehash: 19bf7682916336173ed93619fb6f0ff1242a1b30
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: d236420c5019f7529b729155b13df50807dc1dab
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75712805"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77626710"
 ---
 # <a name="where-generic-type-constraint-c-reference"></a>where (Einschränkung des generischen Typs) (C#-Referenz)
 
@@ -32,7 +32,7 @@ Die `where`-Klausel kann angeben, ob der Typ `class` oder `struct` ist. Aufgrund
 
 [!code-csharp[using the class and struct constraints](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#3)]
 
-Die `where`-Klausel kann die `notnull`-Einschränkung enthalten. Die `notnull`-Einschränkung begrenzt den Typparameter auf Nicht-Nullable-Typen. Bei diesem Typ kann es sich um einen [Werttyp](struct.md) oder einen Nicht-Nullable-Verweistyp handeln. Die `notnull`-Einschränkung ist ab C# 8.0 für Code verfügbar, der in einem [`nullable enable`-Kontext](../../nullable-references.md#nullable-contexts) kompiliert wird. Im Gegensatz zu anderen Einschränkungen generiert der Compiler eine Warnung statt eines Fehlers, wenn ein Typargument die `notnull`-Einschränkung verletzt. Warnungen werden nur in einem `nullable enable`-Kontext generiert. 
+Die `where`-Klausel kann die `notnull`-Einschränkung enthalten. Die `notnull`-Einschränkung begrenzt den Typparameter auf Nicht-Nullable-Typen. Bei diesem Typ kann es sich um einen [Werttyp](../builtin-types/value-types.md) oder einen Nicht-Nullable-Verweistyp handeln. Die `notnull`-Einschränkung ist ab C# 8.0 für Code verfügbar, der in einem [`nullable enable`-Kontext](../../nullable-references.md#nullable-contexts) kompiliert wird. Im Gegensatz zu anderen Einschränkungen generiert der Compiler eine Warnung statt eines Fehlers, wenn ein Typargument die `notnull`-Einschränkung verletzt. Warnungen werden nur in einem `nullable enable`-Kontext generiert.
 
 > [!IMPORTANT]
 > Generische Deklarationen, die die `notnull`-Einschränkung enthalten, können in einem Kontext verwendet werden, in dem nicht bekannt ist, ob NULL-Werte zugelassen sind, aber der Compiler erzwingt die Einschränkung nicht.

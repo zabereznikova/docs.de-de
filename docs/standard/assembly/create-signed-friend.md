@@ -5,12 +5,12 @@ ms.assetid: bab62063-61e6-453f-905f-77673df9534e
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: 52ecfbae11c7be125d0e60a0fce6a05182e2db9e
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 9912fa70014a8828e994cf528644aaa7cb351fea
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72774361"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159493"
 ---
 # <a name="how-to-create-signed-friend-assemblies"></a>Vorgehensweise: Erstellen von signierten Friend-Assemblys
 Dieses Beispiel zeigt, wie Sie Friend-Assemblys mit Assemblys mit starken Namen verwenden. Beide Assemblys müssen starke Namen erhalten. Obwohl beide Assemblys in diesem Beispiel die gleichen Schlüssel verwenden, können Sie unterschiedliche Schlüssel für zwei Assemblys verwenden.  
@@ -34,15 +34,15 @@ Dieses Beispiel zeigt, wie Sie Friend-Assemblys mit Assemblys mit starken Namen 
          `sn -tp FriendAssemblies.publickey`  
   
 3. Erstellen Sie eine C#- oder eine Visual Basic-Datei mit dem Namen *friend_signed_A*, die den folgenden Code enthält. Der Code verwendet das Attribut <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>, um *friend_signed_B* als Friend-Assembly zu deklarieren.  
-   
+
    Das Strong Name-Tool generiert jedes Mal einen neuen öffentlichen Schlüssel, wenn es ausgeführt wird. Aus diesem Grund müssen Sie den öffentlichen Schlüssel im folgenden Code durch den öffentlichen Schlüssel ersetzen, den Sie gerade erstellt haben, so wie im folgenden Beispiel gezeigt.  
-   
+
    ```csharp  
    // friend_signed_A.cs  
-   // Compile with:   
+   // Compile with:
    // csc /target:library /keyfile:FriendAssemblies.snk friend_signed_A.cs  
    using System.Runtime.CompilerServices;  
-   
+
    [assembly: InternalsVisibleTo("friend_signed_B, PublicKey=0024000004800000940000000602000000240000525341310004000001000100e3aedce99b7e10823920206f8e46cd5558b4ec7345bd1a5b201ffe71660625dcb8f9a08687d881c8f65a0dcf042f81475d2e88f3e3e273c8311ee40f952db306c02fbfc5d8bc6ee1e924e6ec8fe8c01932e0648a0d3e5695134af3bb7fab370d3012d083fa6b83179dd3d031053f72fc1f7da8459140b0af5afc4d2804deccb6")]  
    class Class1  
    {  
@@ -53,14 +53,14 @@ Dieses Beispiel zeigt, wie Sie Friend-Assemblys mit Assemblys mit starken Namen 
        }  
    }  
    ```  
-   
+
    ```vb  
    ' friend_signed_A.vb  
-   ' Compile with:   
+   ' Compile with:
    ' Vbc -target:library -keyfile:FriendAssemblies.snk friend_signed_A.vb  
    Imports System.Runtime.CompilerServices  
-   
-   <Assembly: InternalsVisibleTo("friend_signed_B, PublicKey=0024000004800000940000000602000000240000525341310004000001000100e3aedce99b7e10823920206f8e46cd5558b4ec7345bd1a5b201ffe71660625dcb8f9a08687d881c8f65a0dcf042f81475d2e88f3e3e273c8311ee40f952db306c02fbfc5d8bc6ee1e924e6ec8fe8c01932e0648a0d3e5695134af3bb7fab370d3012d083fa6b83179dd3d031053f72fc1f7da8459140b0af5afc4d2804deccb6")>   
+
+   <Assembly: InternalsVisibleTo("friend_signed_B, PublicKey=0024000004800000940000000602000000240000525341310004000001000100e3aedce99b7e10823920206f8e46cd5558b4ec7345bd1a5b201ffe71660625dcb8f9a08687d881c8f65a0dcf042f81475d2e88f3e3e273c8311ee40f952db306c02fbfc5d8bc6ee1e924e6ec8fe8c01932e0648a0d3e5695134af3bb7fab370d3012d083fa6b83179dd3d031053f72fc1f7da8459140b0af5afc4d2804deccb6")>
    Public Class Class1  
        Public Sub Test()  
            System.Console.WriteLine("Class1.Test")  
@@ -68,22 +68,22 @@ Dieses Beispiel zeigt, wie Sie Friend-Assemblys mit Assemblys mit starken Namen 
        End Sub  
    End Class  
    ```  
-   
+
 4. Kompilieren und signieren Sie *friend_signed_A* mithilfe des folgenden Befehls.  
-   
+
    ```csharp
    csc /target:library /keyfile:FriendAssemblies.snk friend_signed_A.cs  
    ```  
-   
+
    ```vb
    Vbc -target:library -keyfile:FriendAssemblies.snk friend_signed_A.vb  
    ```  
-   
+
 5. Erstellen Sie eine C#- oder eine Visual Basic-Datei mit dem Namen *friend_signed_B*, die den folgenden Code enthält. Da *friend_signed_A* *friend_signed_B* als Friend-Assembly angibt, kann der Code in *friend_signed_B* auf `internal` (C#)- oder `Friend`-Typen und -Member (Visual Basic) aus *friend_signed_A* zugreifen. Im Folgenden wird der Code dieser Datei dargestellt:  
-   
+
    ```csharp  
    // friend_signed_B.cs  
-   // Compile with:   
+   // Compile with:
    // csc /keyfile:FriendAssemblies.snk /r:friend_signed_A.dll /out:friend_signed_B.exe friend_signed_B.cs  
    public class Program  
    {  
@@ -94,10 +94,10 @@ Dieses Beispiel zeigt, wie Sie Friend-Assemblys mit Assemblys mit starken Namen 
        }  
    }  
    ```  
-   
+
    ```vb  
    ' friend_signed_B.vb  
-   ' Compile with:   
+   ' Compile with:
    ' Vbc -keyfile:FriendAssemblies.snk -r:friend_signed_A.dll friend_signed_B.vb  
    Module Sample  
        Public Sub Main()  
@@ -106,21 +106,21 @@ Dieses Beispiel zeigt, wie Sie Friend-Assemblys mit Assemblys mit starken Namen 
        End Sub  
    End Module  
    ```  
-   
+
 6. Kompilieren und signieren Sie *friend_signed_B*, indem Sie den folgenden Befehl verwenden.  
-   
+
    ```csharp
    csc /keyfile:FriendAssemblies.snk /r:friend_signed_A.dll /out:friend_signed_B.exe friend_signed_B.cs  
    ```  
-   
+
    ```vb
    vbc -keyfile:FriendAssemblies.snk -r:friend_signed_A.dll friend_signed_B.vb  
    ```  
-   
+
    Der Name der vom Compiler generierten Assembly muss mit dem Namen der Friend-Assembly übereinstimmen, die an das Attribut <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> übergeben wird. Sie müssen den Namen der Ausgabeassembly ( *.exe* oder *.dll*) explizit mit der `-out`-Compileroption angeben. Weitere Informationen finden Sie unter [-out (C#-Compileroptionen)](../../csharp/language-reference/compiler-options/out-compiler-option.md) oder [-out (Visual Basic)](../../visual-basic/reference/command-line-compiler/out.md).  
-   
+
 7. Führen Sie die Datei *friend_signed_B.exe* aus.  
-   
+
    Das Programm gibt die Zeichenfolge **Class1.Test** aus.  
   
 ## <a name="net-security"></a>.NET-Sicherheit  
@@ -131,7 +131,7 @@ Dieses Beispiel zeigt, wie Sie Friend-Assemblys mit Assemblys mit starken Namen 
 - <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>
 - [Assemblys in .NET](index.md)
 - [Friend-Assemblys](friend.md)
-- [Vorgehensweise: Erstellen von unsignierten Friend-Assemblys](create-unsigned-friend.md)
+- [How to: Erstellen von unsignierten Friend-Assemblys](create-unsigned-friend.md)
 - [-keyfile (C#)](../../csharp/language-reference/compiler-options/keyfile-compiler-option.md)
 - [-keyfile (Visual Basic)](../../visual-basic/reference/command-line-compiler/keyfile.md)
 - [Sn.exe (Strong Name-Tool)](../../framework/tools/sn-exe-strong-name-tool.md)

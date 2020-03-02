@@ -3,12 +3,12 @@ title: .NET-Glossar
 description: Informationen zu den Bedeutungen der ausgewählten Begriffe, die in der .NET-Dokumentation verwendet werden.
 ms.date: 01/22/2019
 ms.technology: dotnet-standard
-ms.openlocfilehash: 822d6c9513d49dcc6bc57421003441d9bcc7c281
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: 8da1d858835210590a80a624fb8989fbfe8e0a91
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76921109"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78160091"
 ---
 # <a name="net-glossary"></a>.NET-Glossar
 
@@ -22,11 +22,11 @@ Ahead-of-Time-Compiler
 
 Siehe [CoreRT](#corert) und [.NET Native](#net-native).
 
-## <a name="aspnet"></a>ASP.NET 
+## <a name="aspnet"></a>ASP.NET
 
 Die ursprüngliche ASP.NET-Implementierung, die im Lieferumfang von .NET Framework enthalten ist.
 
-Bei ASP.NET handelt es sich manchmal um einen Oberbegriff, der sich auf ASP.NET-Implementierungen, einschließlich ASP.NET Core, bezieht. Die Bedeutung des Begriffs in einer bestimmten Instanz wird durch den Kontext festgelegt. Beziehen Sie sich auf ASP.NET 4.x, wenn Sie klarstellen möchten, dass Sie ASP.NET nicht für beide Implementierungen verwenden. 
+Bei ASP.NET handelt es sich manchmal um einen Oberbegriff, der sich auf ASP.NET-Implementierungen, einschließlich ASP.NET Core, bezieht. Die Bedeutung des Begriffs in einer bestimmten Instanz wird durch den Kontext festgelegt. Beziehen Sie sich auf ASP.NET 4.x, wenn Sie klarstellen möchten, dass Sie ASP.NET nicht für beide Implementierungen verwenden.
 
 Siehe [ASP.NET-Dokumentation](/aspnet/#pivot=aspnet).
 
@@ -78,7 +78,7 @@ Jede Laufzeitsoftware und alle Entwicklungstools und Communityressourcen, die zu
 
 Der Begriff „.NET-Umgebung“ unterscheidet sich von ähnlichen Begriffen wie „.NET-Stapel“ durch seine Einbindung von Apps und Bibliotheken, die von Drittanbietern stammen. Hier ein Beispiel in einem Satz:
 
-- „Die Motivation hinter [.NET Standard](#net-standard) ist das Herstellen einer umfassenderen Einheitlichkeit in der .NET-Umgebung.“ 
+- „Die Motivation hinter [.NET Standard](#net-standard) ist das Herstellen einer umfassenderen Einheitlichkeit in der .NET-Umgebung.“
 
 ## <a name="framework"></a>Framework
 
@@ -96,7 +96,7 @@ In der bestehenden Dokumentation bezieht sich „Framework“ manchmal auf eine 
 
 Garbage Collector
 
-Der Garbage Collector ist eine Implementierung der automatischen Speicherverwaltung.  Der GC gibt Arbeitsspeicher frei, der durch Objekte belegt ist, die nicht mehr verwendet werden. 
+Der Garbage Collector ist eine Implementierung der automatischen Speicherverwaltung.  Der GC gibt Arbeitsspeicher frei, der durch Objekte belegt ist, die nicht mehr verwendet werden.
 
 Siehe [Garbage Collection](garbage-collection/index.md).
 
@@ -157,7 +157,7 @@ Der Oberbegriff für [.NET Standard](#net-standard) und alle [.NET-Implementieru
 
 Siehe [Leitfaden für .NET](index.md).
 
-## <a name="net-core"></a>.NET Core 
+## <a name="net-core"></a>.NET Core
 
 Eine plattformübergreifende, leistungsstarke Open Source-Implementierung von .NET. Enthält die Common Language Runtime (CoreCLR), die Core AOT Runtime (CoreRT, in der Entwicklung), die Core-Basisklassenbibliothek und das Core SDK.
 
@@ -217,7 +217,7 @@ Ein Betriebssystem (z.B. Windows, macOS, Linux, iOS und Android) und die Hardwar
 
 Hier sind Beispiele für die Verwendung in Sätzen:
 
-- „.NET Core ist eine plattformübergreifende Implementierung von .NET.“ 
+- „.NET Core ist eine plattformübergreifende Implementierung von .NET.“
 - „PCL-Profile stehen für Microsoft-Plattformen, während .NET Standard plattformunabhängig ist.“
 
 Die .NET-Dokumentation verwendet häufig „.NET-Plattform“, um sich entweder auf eine Implementierung von .NET oder den .NET-Stapel, der alle Implementierungen enthält, zu beziehen. Beide dieser Verwendungen werden häufig mit der primären Bedeutung (Betriebssystem/Hardware) verwechselt, sodass wir diese Verwendungen aus der Dokumentation beseitigen werden.
@@ -239,13 +239,13 @@ Die .NET-Dokumentation bezeichnet mit „Runtime“ manchmal eine Implementierun
 - „Bibliotheken, die auf mehreren Runtimes ausgeführt werden sollen, sollten dieses Framework als Ziel haben.“ (bezogen auf .NET Standard)
 - „Die verschiedenen .NET-Runtimes implementieren bestimmte Versionen von .NET Standard. … Jede Version der .NET-Runtime kündigt die höchste Version von .NET Standard an, die sie unterstützt ...“
 
-Diese inkonsistente Verwendung soll beseitigt werden. 
+Diese inkonsistente Verwendung soll beseitigt werden.
 
 ## <a name="stack"></a>Stapel
 
 Eine Reihe von Programmiertechnologien, die zusammen verwendet werden, um Anwendungen zu erstellen und auszuführen.
 
-„Der .NET-Stapel“ bezieht sich auf .NET Standard und alle .NET-Implementierungen. Der Ausdruck „ein .NET-Stapel“ bezieht sich auf eine Implementierung von .NET. 
+„Der .NET-Stapel“ bezieht sich auf .NET Standard und alle .NET-Implementierungen. Der Ausdruck „ein .NET-Stapel“ bezieht sich auf eine Implementierung von .NET.
 
 ## <a name="target-framework"></a>Zielframework
 

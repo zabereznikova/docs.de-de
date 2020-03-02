@@ -14,12 +14,12 @@ helpviewer_keywords:
 - base types, parsing strings
 - DateTime object
 - time strings
-ms.openlocfilehash: 16daa0ef3133b6cd04dc48b7f79fd365098e4bdf
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 9555304e570226b2ed3b040735cf099b5a018f93
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75348069"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156542"
 ---
 # <a name="parsing-date-and-time-strings-in-net"></a>Analysieren von Zeichenfolgen für Datum und Uhrzeit in .NET
 
@@ -72,7 +72,7 @@ Auch wenn Sie Überladungen der <xref:System.DateTime.Parse%2A>-Methode zur Anga
 
 [!code-csharp[Parsing.DateAndTime#3](../../../samples/snippets/csharp/how-to/conversions/StringToDateTime.cs#3)]
 [!code-vb[Parsing.DateAndTime#3](../../../samples/snippets/visualbasic/how-to/conversions/Program.vb#3)]
- 
+
 ## <a name="parseexact"></a>ParseExact
 
 Die Methode <xref:System.DateTime.ParseExact%2A?displayProperty=nameWithType> konvertiert eine Zeichenfolge in ein <xref:System.DateTime>-Objekt, wenn es einem der angegebenen Zeichenfolgenmuster entspricht. Wird eine Zeichenfolge an diese Methode übergeben, die nicht dem angegebenen Format entspricht, wird eine <xref:System.FormatException> ausgelöst. Sie können einen der Standardformatbezeichner für Datum und Uhrzeit oder eine Kombination der benutzerdefinierten Formatbezeichner angeben. Mithilfe der benutzerdefinierten Formatbezeichner können Sie eine benutzerdefinierte Erkennungszeichenfolge erstellen. Erläuterungen zu den Bezeichnern finden Sie in den Themen [Standardformatzeichenfolgen für Datum und Uhrzeit](standard-date-and-time-format-strings.md) und [Benutzerdefinierte Formatzeichenfolgen für Datum und Uhrzeit](custom-date-and-time-format-strings.md).  

@@ -8,12 +8,12 @@ ms.assetid: 51f8ffa3-c253-4201-a3d3-c4fad85ae097
 dev_langs:
 - csharp
 - cpp
-ms.openlocfilehash: 7b9fd4e89d1d3290dfc17f52de392c4ee9092d02
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 215636a9617a2723d8ab69640c1d3e69491a7d87
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73138599"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78160364"
 ---
 # <a name="type-forwarding-in-the-common-language-runtime"></a>Typweiterleitung in der Common Language Runtime
 Durch Typweiterleitung können Sie einen Typ in eine andere Assembly verschieben, ohne Anwendungen, die die ursprüngliche Assembly verwenden, neu kompilieren zu müssen.  
@@ -29,19 +29,19 @@ Durch Typweiterleitung können Sie einen Typ in eine andere Assembly verschieben
  Die Weiterleitung eines Typs erfolgt in vier Schritten:  
   
 1. Verschieben Sie den Quellcode für den Typ aus der ursprünglichen Assembly in die Zielassembly.  
-   
+
 2. Fügen Sie in der Assembly, in der sich der Typ ursprünglich befunden hat, ein <xref:System.Runtime.CompilerServices.TypeForwardedToAttribute>-Objekt für den verschobenen Typ hinzu. Der folgenden Code veranschaulicht das Attribut für einen Typ namens `Example`, der verschoben wurde.  
-   
+
    ```cpp  
     [assembly:TypeForwardedToAttribute(Example::typeid)]  
    ```
-   
+
    ```csharp  
     [assembly:TypeForwardedToAttribute(typeof(Example))]  
    ```  
-   
+
 3. Kompilieren Sie die Assembly, die jetzt den Typ enthält.  
-   
+
 4. Führen Sie für die Assembly, in der sich der Typ befand, eine Neukompilierung mit einem Verweis auf die Assembly durch, die jetzt den Typ enthält. Wenn Sie z.B. eine C#-Datei über die Befehlszeile kompilieren, geben Sie mit [-reference (C#-Compileroptionen)](../../csharp/language-reference/compiler-options/reference-compiler-option.md) die Assembly an, die den Typ enthält. In C++ verwenden Sie die [#using](/cpp/preprocessor/hash-using-directive-cpp)-Direktive in der Quelldatei, um die Assembly anzugeben, die den Typ enthält.  
   
 ## <a name="see-also"></a>Siehe auch

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - multiple attribute instances
 - attributes [.NET Framework], retrieving
 ms.assetid: 37dfe4e3-7da0-48b6-a3d9-398981524e1c
-ms.openlocfilehash: fe5bb95d5e1f90c0dafa30977d76ea1d62125c99
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 4f0f3555ae1ab7e662d5f88ac65739a7c791a964
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73130893"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78158076"
 ---
 # <a name="retrieving-information-stored-in-attributes"></a>Abrufen von Informationen aus Attributen
 Das Abrufen eines benutzerdefinierten Attributs ist ein einfacher Prozess. Zuerst deklarieren Sie eine Instanz des Attributs, das Sie abrufen möchten. Dann verwenden Sie die <xref:System.Attribute.GetCustomAttribute%2A?displayProperty=nameWithType>-Methode, um das neue Attribut auf den Wert des abzurufenden Attributs zu initialisieren. Sobald das neue Attribut initialisiert wurde, verwenden Sie einfach dessen Eigenschaften, um die Werte abzurufen.  
@@ -32,7 +32,7 @@ Das Abrufen eines benutzerdefinierten Attributs ist ein einfacher Prozess. Zuers
   
 - [Abrufen mehrerer Instanzen eines Attributs auf unterschiedliche Bereiche angewendet](#cpconretrievingmultipleinstancesofattributeappliedtodifferentscopes)  
   
-<a name="cpconretrievingsingleinstanceofattribute"></a>   
+<a name="cpconretrievingsingleinstanceofattribute"></a>
 ## <a name="retrieving-a-single-instance-of-an-attribute"></a>Abrufen einer einzelnen Instanz eines Attributs  
  Im folgenden Beispiel wird die (im vorherigen Abschnitt beschriebene) `DeveloperAttribute`-Klasse auf die `MainApp`-Klasse auf Klassenebene angewendet. Die `GetAttribute`-Methode verwendet **GetCustomAttribute**, um die in `DeveloperAttribute` gespeicherten Werte auf Klassenebene abzurufen, bevor sie in der Konsole angezeigt werden.  
   
@@ -51,12 +51,12 @@ The Reviewed Attribute is: True.
  Wenn das Attribut nicht gefunden wird, initialisiert die **GetCustomAttribute**-Methode `MyAttribute` auf einen Nullwert. In diesem Beispiel wird `MyAttribute` auf eine solche Instanz geprüft und der Benutzer benachrichtigt, wenn kein Attribut gefunden wird. Wenn das `DeveloperAttribute` nicht im Klassenbereich gefunden werden, wird die folgende Meldung in der Konsole angezeigt.  
   
 ```console  
-The attribute was not found.   
+The attribute was not found.
 ```  
   
  In diesem Beispiel wird davon ausgegangen, dass sich die Attributdefinition im aktuellen Namespace befindet. Denken Sie daran, den Namespace zu importieren, in dem sich die Attributdefinition befindet, wenn diese nicht im aktuellen Namespace ist.  
   
-<a name="cpconretrievingmultipleinstancesofattributeappliedtosamescope"></a>   
+<a name="cpconretrievingmultipleinstancesofattributeappliedtosamescope"></a>
 ## <a name="retrieving-multiple-instances-of-an-attribute-applied-to-the-same-scope"></a>Abrufen mehrerer Instanzen eines Attributs in demselben Gültigkeitsbereich angewendet  
  Im vorherigen Beispiel werden die zu prüfende Klasse und das zu suchenden spezifische Attribut an <xref:System.Attribute.GetCustomAttribute%2A> übergeben. Dieser Code funktioniert gut, wenn nur eine Instanz eines Attributs auf Klassenebene angewendet wird. Wenn jedoch mehrere Instanzen eines Attributs auf derselben Klassenebene angewendet werden, ruft die **GetCustomAttribute**-Methode nicht alle Informationen ab. In Fällen, in dem mehrere Instanzen des gleichen Attributs in demselben Gültigkeitsbereich angewendet werden, können Sie mithilfe von <xref:System.Attribute.GetCustomAttributes%2A?displayProperty=nameWithType> alle Instanzen eines Attributs in einem Array platzieren. Wenn beispielsweise zwei Instanzen von `DeveloperAttribute` auf Klassenebene derselben Klasse angewendet werden, kann die `GetAttribute`-Methode zum Anzeigen der in beiden Attributen gefundenen Informationen geändert werden. Beim Anwenden mehrerer Attribute auf derselben Ebene müssen Sie beachten, dass das Attribut mit der **AllowMultiple**-Eigenschaft definiert wird, die in der <xref:System.AttributeUsageAttribute> auf **true** gesetzt ist.  
   
@@ -68,7 +68,7 @@ The attribute was not found.
   
  Wenn keine Attribute gefunden werden, gibt dieser Code eine Warnung an den Benutzer aus. Andernfalls werden die in beiden Instanzen von `DeveloperAttribute` enthaltenen Informationen angezeigt.  
   
-<a name="cpconretrievingmultipleinstancesofattributeappliedtodifferentscopes"></a>   
+<a name="cpconretrievingmultipleinstancesofattributeappliedtodifferentscopes"></a>
 ## <a name="retrieving-multiple-instances-of-an-attribute-applied-to-different-scopes"></a>Abrufen mehrerer Instanzen eines Attributs auf unterschiedliche Bereiche angewendet  
  Die Methoden <xref:System.Attribute.GetCustomAttributes%2A> und <xref:System.Attribute.GetCustomAttribute%2A> durchsuchen nicht eine ganze Klasse, um Instanzen eines Attributs in dieser Klasse zurückzugeben. Stattdessen suchen sie nur nach einer bestimmten Methode oder einem bestimmten Element zu einem gegebenen Zeitpunkt. Angenommen, Sie haben eine Klasse, für die das gleiche Attribut auf jedes Element angewendet wurde. Um nun die Werte in den Attributen abzurufen, die auf diese Elemente angewendet wurden, müssen Sie jede Methode oder jedes Element einzeln für **GetCustomAttributes** und  **GetCustomAttribute** bereitstellen.  
   

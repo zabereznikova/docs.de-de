@@ -2,12 +2,12 @@
 title: 'Vorgehensweise: Laden und Entladen von Assemblys'
 ms.date: 08/19/2019
 ms.assetid: 6a4f490f-3576-471f-9533-003737cad4a3
-ms.openlocfilehash: 77ea97c2fc324287e9c697d630def98241432c9f
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: a520ffd41c3465737be7494d374cbcf64e3f1b85
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70972672"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78155775"
 ---
 # <a name="how-to-load-and-unload-assemblies"></a>Vorgehensweise: Laden und Entladen von Assemblys
 Die Assemblys, auf die Ihr Programm verweist, werden automatisch von der CLR (Common Language Runtime) geladen, jedoch ist es auch möglich, spezifische Assemblys dynamisch in die aktuelle Anwendungsdomäne zu laden. Weitere Informationen finden Sie unter [Vorgehensweise: Laden von Assemblys in eine Anwendungsdomäne](../../framework/app-domains/how-to-load-assemblies-into-an-application-domain.md).
@@ -16,7 +16,7 @@ Im .NET Framework gibt es keine Möglichkeit, eine einzelne Assembly zu entladen
 
 ## <a name="load-and-unload-assemblies"></a>Laden und Entladen von Assemblys
 
-Verwenden Sie eine der vielen Lademethoden, die in den Klassen <xref:System.AppDomain> und <xref:System.Reflection.Assembly> enthalten sind, um eine Assembly in eine Anwendungsdomäne zu laden. Weitere Informationen finden Sie unter [Vorgehensweise: Laden von Assemblys in eine Anwendungsdomäne](../../framework/app-domains/how-to-load-assemblies-into-an-application-domain.md). Beachten Sie, dass .NET Core nur eine einzelne Anwendungsdomäne unterstützt. 
+Verwenden Sie eine der vielen Lademethoden, die in den Klassen <xref:System.AppDomain> und <xref:System.Reflection.Assembly> enthalten sind, um eine Assembly in eine Anwendungsdomäne zu laden. Weitere Informationen finden Sie unter [Vorgehensweise: Laden von Assemblys in eine Anwendungsdomäne](../../framework/app-domains/how-to-load-assemblies-into-an-application-domain.md). Beachten Sie, dass .NET Core nur eine einzelne Anwendungsdomäne unterstützt.
 
 Zum Entladen einer Assembly im .NET Framework müssen Sie alle Anwendungsdomänen entladen, die sie enthalten. Verwenden Sie die <xref:System.AppDomain.Unload%2A?displayProperty=nameWithType>-Methode, um eine Anwendungsdomäne zu entladen. Weitere Informationen finden Sie unter [Vorgehensweise: Entladen einer Anwendungsdomäne](../../framework/app-domains/how-to-unload-an-application-domain.md).
 
@@ -27,4 +27,4 @@ Wenn Sie nur einige Assemblys in einer .NET Framework-Anwendung entladen möchte
 - [C#-Programmierhandbuch](../../csharp/programming-guide/index.md)
 - [Programmierkonzepte (Visual Basic)](../../visual-basic/programming-guide/concepts/index.md)
 - [Assemblys in .NET](index.md)
-- [Vorgehensweise: Laden von Assemblys in eine Anwendungsdomäne](../../framework/app-domains/how-to-load-assemblies-into-an-application-domain.md)
+- [How to: Laden von Assemblys in eine Anwendungsdomäne](../../framework/app-domains/how-to-load-assemblies-into-an-application-domain.md)

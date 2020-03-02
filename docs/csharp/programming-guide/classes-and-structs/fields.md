@@ -4,16 +4,16 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - fields [C#]
 ms.assetid: 3cbb2f61-75f8-4cce-b4ef-f5d1b3de0db7
-ms.openlocfilehash: 665c99302887c51c69b4d818619dd6bedd43b644
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 46d4f77a4a490b2acdb5da20b9a477f27c38d410
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714935"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77628240"
 ---
 # <a name="fields-c-programming-guide"></a>Felder (C#-Programmierhandbuch)
 
-Ein *Feld* ist eine Variable eines beliebigen Typs, die direkt in einer [class](../../language-reference/keywords/class.md) oder [struct](../../language-reference/keywords/struct.md) deklariert ist. Felder sind *Member* Ihres enthaltenden Typs.
+Ein *Feld* ist eine Variable eines beliebigen Typs, die direkt in einer [class](../../language-reference/keywords/class.md) oder [struct](../../language-reference/builtin-types/struct.md) deklariert ist. Felder sind *Member* Ihres enthaltenden Typs.
 
 Eine Klasse oder Struktur kann über Instanzfelder, statische Felder oder beides verfügen. Instanzenfelder sind für eine Instanz eines Typs spezifisch. Wenn Sie eine Klasse T mit einem Instanzenfeld F haben, können Sie zwei Objekte vom Typ T erstellen und den Wert von F in jedem Objekt ändern, ohne dabei den Wert in dem anderen Objekt zu beeinflussen. Im Gegensatz dazu gehört ein statisches Feld zur Klasse selbst und wird in allen Instanzen dieser Klasse gemeinsam verwendet. Sie können nur auf das statische Feld zugreifen, indem Sie den Klassennamen verwenden. Wenn Sie über einen Instanznamen auf das statische Feld zugreifen, erhalten Sie den Kompilierzeitfehler [CS0176](../../misc/cs0176.md).
 

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - formatting [.NET Framework], time
 - date and time strings
 ms.assetid: 98b374e3-0cc2-4c78-ab44-efb671d71984
-ms.openlocfilehash: 87436b7d9e2041afb14b146ae0c16201c8593154
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: b33366922677b26f8fe99454206cacd5bb124f32
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75348295"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159272"
 ---
 # <a name="custom-date-and-time-format-strings"></a>Benutzerdefinierte Formatzeichenfolgen für Datum und Uhrzeit
 
@@ -30,7 +30,7 @@ Eine Formatzeichenfolge für Datum und Uhrzeit definiert die Textdarstellung ein
 
 Benutzerdefinierte Formatzeichenfolgen für Datum und Uhrzeit können mit dem <xref:System.DateTime>-Wert und mit dem <xref:System.DateTimeOffset>-Wert verwendet werden.
 
-[!INCLUDE[C# interactive-note](~/includes/csharp-interactive-with-utc-partial-note.md)] 
+[!INCLUDE[C# interactive-note](~/includes/csharp-interactive-with-utc-partial-note.md)]
 
 <a name="table"></a> In Formatierungsvorgängen können benutzerdefinierte Formatzeichenfolgen für Datum und Uhrzeit entweder mit der `ToString`-Methode einer Datums- und Uhrzeitinstanz oder mit einer Methode verwendet werden, die die kombinierte Formatierung unterstützt. Das folgende Beispiel veranschaulicht beide Möglichkeiten.
 
@@ -398,7 +398,7 @@ Das folgende Beispiel schließt den benutzerdefinierten Formatbezeichner "M" in 
 [!code-csharp[Formatting.DateAndTime.Custom#11](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#11)]
 [!code-vb[Formatting.DateAndTime.Custom#11](~/samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#11)]
 
-[Zurück zur Tabelle](#table) 
+[Zurück zur Tabelle](#table)
 
 ## <a name="MM_Specifier"></a> Der benutzerdefinierte Formatbezeichner „MM“
 
@@ -697,6 +697,6 @@ Die von vielen der benutzerdefinierten Formatbezeichner für Datum und Uhrzeit e
 - <xref:System.DateTime?displayProperty=nameWithType>
 - <xref:System.IFormatProvider?displayProperty=nameWithType>
 - [Formatierung von Typen](../../../docs/standard/base-types/formatting-types.md)
-- [Standard Date and Time Format Strings](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)
+- [Standard-Formatzeichenfolgen für Datum und Uhrzeit](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)
 - [Beispiel: .NET Core-Hilfsprogramm zur Formatierung von WinForms (C#)](https://docs.microsoft.com/samples/dotnet/samples/winforms-formatting-utility-cs)
 - [Beispiel: .NET Core-Hilfsprogramm zur Formatierung von WinForms (Visual Basic)](https://docs.microsoft.com/samples/dotnet/samples/winforms-formatting-utility-vb)

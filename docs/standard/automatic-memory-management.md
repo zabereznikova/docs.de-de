@@ -12,12 +12,12 @@ helpviewer_keywords:
 - managed heap
 - runtime, automatic memory management
 ms.assetid: d4850de5-fa63-4936-a250-5678d118acba
-ms.openlocfilehash: d112bf6d145893bd7b0f99e2b233fc83e72fe227
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 1038f16dca507e58005189c9558a9ec8dae4b34f
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73140568"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159701"
 ---
 # <a name="automatic-memory-management"></a>Automatic Memory Management
 Bei der automatischen Speicherverwaltung handelt es sich um einen Dienst, der von der Common Language Runtime während der [verwalteten Ausführung](../../docs/standard/managed-execution-process.md) zur Verfügung gestellt wird. Der Garbage Collector der Common Language Runtime verwaltet die Belegung und Freigabe von Arbeitsspeicher für eine Anwendung. Das bedeutet, dass beim Entwickeln verwalteter Anwendungen kein Code für Aufgaben der Speicherverwaltung geschrieben werden muss. Mithilfe der automatischen Speicherverwaltung können häufig auftretende Probleme beseitigt werden, z. B. wenn ein Objekt versehentlich nicht freigegeben wurde und dadurch Speicherverluste entstehen oder wenn auf den Speicher für ein Objekt zugegriffen wird, das bereits freigegeben wurde. In diesem Abschnitt wird beschrieben, wie Sie den Garbage Collector zum Belegen und Freigeben von Arbeitsspeicher verwenden können.  
@@ -27,7 +27,7 @@ Bei der automatischen Speicherverwaltung handelt es sich um einen Dienst, der vo
   
  Das Belegen von Speicher im verwalteten Heap beansprucht weniger Zeit als die nicht verwaltete Speicherbelegung. Da durch die Common Language Runtime Speicher für ein Objekt durch Hinzufügen eines Werts zu einem Zeiger belegt wird, ist diese Methode fast so schnell wie das Reservieren von Speicher im Stapel. Außerdem werden neue Objekte, für die Speicher reserviert wird, ständig nacheinander im verwalteten Heap gespeichert. Dadurch kann eine Anwendung auf diese Objekte sehr schnell zugreifen.  
   
-<a name="cpconautomaticmemorymanagementreleasingmemoryanchor1"></a>   
+<a name="cpconautomaticmemorymanagementreleasingmemoryanchor1"></a>
 ## <a name="releasing-memory"></a>Freigeben von Arbeitsspeicher  
  Durch die Optimierungs-Engine des Garbage Collectors wird der beste Zeitpunkt für das Ausführen einer Garbage Collection bestimmt, die auf den erfolgten Speicherbelegungen basiert. Beim Ausführen einer Garbage Collection wird Speicher freigegeben, den von der Anwendung nicht mehr benötigte Objekte beanspruchen. Durch Überprüfen der Stammelemente der Anwendung wird ermittelt, welche Objekte nicht mehr verwendet werden. Jede Anwendung verfügt über einen Satz von Stammelementen. Jedes Stammelement bezieht sich entweder auf ein Objekt im verwalteten Heap oder ist auf NULL festgelegt. Die Stammelemente einer Anwendung beinhalten statische Felder, lokale Variablen und Parameter im Stapel des Threads sowie CPU-Register. Der Garbage Collector hat Zugriff auf eine Liste der aktiven Stammelemente, die vom [JIT-Compiler (Just-In-Time)](../../docs/standard/managed-execution-process.md) und der Common Language Runtime verwaltet wird. Mithilfe dieser Liste werden die Stammelemente einer Anwendung durchsucht, und es wird ein Diagramm erstellt, in dem alle von den Stammelementen aus erreichbaren Objekte enthalten sind.  
   

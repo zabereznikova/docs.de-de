@@ -4,12 +4,12 @@ description: Erfahren Sie, wie Sie mit dem .NET API-Analysetool veraltete APIs u
 author: oliag
 ms.date: 02/20/2020
 ms.technology: dotnet-standard
-ms.openlocfilehash: f6cf2d8109c564447972afd18c6d6d587711304b
-ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
+ms.openlocfilehash: e214c91f2beebc7f3b3324f4879deba9a5623f86
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77542623"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156133"
 ---
 # <a name="net-api-analyzer"></a>.NET API-Analysetool
 
@@ -47,7 +47,7 @@ Das API-Analysetool verwendet API-spezifische Fehlercodes, die mit DE beginnen (
    3. Wählen Sie **Vorabversion einbeziehen** aus.
    4. Suchen Sie nach **Microsoft.DotNet.Analyzers.Compatibility**.
    5. Wählen Sie das Paket in der Liste aus.
-   6. Wählen Sie die Schaltfläche **Installieren** aus. 
+   6. Wählen Sie die Schaltfläche **Installieren** aus.
    7. Wählen Sie die Schaltfläche **OK** im Dialogfeld **Vorschau der Änderungen** und dann die Schaltfläche **Ich stimme zu** im Dialogfeld **Zustimmung zur Lizenz** aus, wenn Sie den Lizenzbedingungen für die aufgelisteten Pakete zustimmen.
 
 ### <a name="use-the-api-analyzer"></a>Verwenden des API-Analysetools
@@ -56,13 +56,13 @@ Wenn eine veraltete API, z.B. <xref:System.Net.WebClient>, in einem Code verwend
 
 ![„Screenshot der WebClient-API mit grüner Wellenlinie und Glühbirne auf der linken Seite“](media/api-analyzer/green-squiggle.jpg)
 
-Das Fenster **Fehlerliste** enthält Warnungen mit einer eindeutigen ID pro veralteter API, wie in folgendem Beispiel (`DE004`) gezeigt: 
+Das Fenster **Fehlerliste** enthält Warnungen mit einer eindeutigen ID pro veralteter API, wie in folgendem Beispiel (`DE004`) gezeigt:
 
 ![„Screenshot des Fensters mit der Fehlerliste, welche die ID und Beschreibung der Warnungen zeigt“](media/api-analyzer/warnings-id-and-descriptions.jpg "Fenster mit Fehlerliste, die Warnungen enthält")
 
 Wenn Sie auf die ID klicken, gelangen Sie auf eine Webseite mit detaillierten Informationen darüber, warum die API veraltet ist, und mit Vorschlägen zu alternativen APIs, die verwendet werden können.
 
-Warnungen können unterdrückt werden, indem Sie mit der rechten Maustaste auf das markierte Element klicken und die Option **\<Diagnose-ID> unterdrücken** wählen. Es gibt zwei Möglichkeiten, Warnungen zu unterdrücken: 
+Warnungen können unterdrückt werden, indem Sie mit der rechten Maustaste auf das markierte Element klicken und die Option **\<Diagnose-ID> unterdrücken** wählen. Es gibt zwei Möglichkeiten, Warnungen zu unterdrücken:
 
 - [lokal (in der Quelle)](#suppress-warnings-locally)
 - [global (in einer Unterdrückungsdatei)](#suppress-warnings-globally) – empfohlen

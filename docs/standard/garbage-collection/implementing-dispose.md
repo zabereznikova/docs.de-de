@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Dispose method
 - garbage collection, Dispose method
 ms.assetid: eb4e1af0-3b48-4fbc-ad4e-fc2f64138bf9
-ms.openlocfilehash: 0583329ae75fa54cf000212479895ccebdbd30d8
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.openlocfilehash: a7e03a833886a1486e0dc081d6ef059791a464b5
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74142055"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156334"
 ---
 # <a name="implementing-a-dispose-method"></a>Implementieren einer Dispose-Methode
 
@@ -125,7 +125,7 @@ Im Folgenden finden Sie das allgemeine Muster für das Implementieren des Dispos
 > [!NOTE]
 > In C# überschreiben Sie <xref:System.Object.Finalize%2A?displayProperty=nameWithType> durch Definieren eines [Destruktors](../../csharp/programming-guide/classes-and-structs/destructors.md).  
   
-<a name="SafeHandles"></a>   
+<a name="SafeHandles"></a>
 ## <a name="using-safe-handles"></a>Verwenden von SafeHandles
 
 Das Schreiben von Code für den Finalizer eines Objekts ist eine komplexe Aufgabe, die Probleme verursachen kann, wenn sie nicht ordnungsgemäß gelöst wird. Daher wird empfohlen, <xref:System.Runtime.InteropServices.SafeHandle?displayProperty=nameWithType>-Objekte zu erstellen, anstatt einen Finalizer zu implementieren.  
@@ -142,7 +142,7 @@ Von der <xref:System.Runtime.InteropServices.SafeHandle?displayProperty=nameWith
   
 - Die <xref:Microsoft.Win32.SafeHandles.SafeWaitHandle>-Klasse, für Wait-Handles.  
   
-<a name="base"></a>   
+<a name="base"></a>
 ## <a name="using-a-safe-handle-to-implement-the-dispose-pattern-for-a-base-class"></a>Verwenden eines SafeHandles zum Implementieren des Dispose-Musters für eine Basisklasse
 
 Das folgende Beispiel zeigt das Dispose-Muster für eine Basisklasse, `DisposableStreamResource`, die ein SafeHandle verwendet, um nicht verwaltete Ressourcen zu kapseln. Es definiert eine `DisposableResource`-Klasse, die ein <xref:Microsoft.Win32.SafeHandles.SafeFileHandle> verwendet, um ein <xref:System.IO.Stream>-Objekt zu umschließen, das eine offene Datei darstellt. Die `DisposableResource`-Methode enthält auch eine einzelne Eigenschaft, `Size`, die die Gesamtzahl von Bytes im Dateistream zurückgibt.  
@@ -150,7 +150,7 @@ Das folgende Beispiel zeigt das Dispose-Muster für eine Basisklasse, `Disposabl
 [!code-csharp[Conceptual.Disposable#9](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.disposable/cs/base1.cs#9)]
 [!code-vb[Conceptual.Disposable#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.disposable/vb/base1.vb#9)]  
   
-<a name="derived"></a>   
+<a name="derived"></a>
 ## <a name="using-a-safe-handle-to-implement-the-dispose-pattern-for-a-derived-class"></a>Verwenden eines SafeHandles zum Implementieren des Dispose-Musters für eine abgeleitete Klasse
 
 Das folgende Beispiel zeigt das Dispose-Muster für eine abgeleitete Klasse, `DisposableStreamResource2`, die von der `DisposableStreamResource`-Klasse erbt, die im vorherigen Beispiel dargestellt wurde. Die Klasse fügt eine zusätzliche Methode, `WriteFileInfo`, hinzu und verwendet ein <xref:Microsoft.Win32.SafeHandles.SafeFileHandle>-Objekt, um das Handle der überschreibbaren Datei zu umschließen.  
@@ -166,5 +166,5 @@ Das folgende Beispiel zeigt das Dispose-Muster für eine abgeleitete Klasse, `Di
 - <xref:Microsoft.Win32.SafeHandles>
 - <xref:System.Runtime.InteropServices.SafeHandle?displayProperty=nameWithType>
 - <xref:System.Object.Finalize%2A?displayProperty=nameWithType>
-- [Vorgehensweise: Definieren und Verarbeiten von Klassen und Strukturen (C++/CLI)](/cpp/dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli)
+- [How to: Definieren und Verarbeiten von Klassen und Strukturen (C++/CLI)](/cpp/dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli)
 - [Dispose-Muster](implementing-dispose.md)

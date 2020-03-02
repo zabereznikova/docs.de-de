@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 23a763ea-8348-4244-9f8c-a4280b870b47
-ms.openlocfilehash: 3b44b981a65dee5d216f882198a74b5fb61adfad
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 7413c3fae7d7189ec8dca43b0c77f6b56158f416
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75708041"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159467"
 ---
 # <a name="how-to-convert-between-net-framework-and-windows-runtime-streams-windows-only"></a>Vorgehensweise: Konvertieren von .NET Framework- und Windows-Runtime-Streams (nur unter Windows)
 
@@ -28,7 +28,7 @@ Konvertieren Sie einen Windows-Runtime-Stream mit einer der folgenden <xref:Syst
   
 - <xref:System.IO.WindowsRuntimeStreamExtensions.AsStreamForRead%2A?displayProperty=nameWithType> konvertiert einen Eingabestream in der Windows-Runtime in einen verwalteten Stream in .NET für UWP-Apps.
 
-Für die Windows-Runtime gibt es Streamtypen, die nur das Lesen, nur das Schreiben oder Lesen und Schreiben unterstützen. Diese Funktionen bleiben erhalten, wenn Sie einen Windows-Runtime-Stream in einen .NET Framework-Stream konvertieren. Wenn Sie einen Windows-Runtime-Stream in einen .NET Framework-Stream bzw. zurück konvertieren, erhalten Sie darüber hinaus die ursprüngliche Windows-Runtime-Instanz zurück. 
+Für die Windows-Runtime gibt es Streamtypen, die nur das Lesen, nur das Schreiben oder Lesen und Schreiben unterstützen. Diese Funktionen bleiben erhalten, wenn Sie einen Windows-Runtime-Stream in einen .NET Framework-Stream konvertieren. Wenn Sie einen Windows-Runtime-Stream in einen .NET Framework-Stream bzw. zurück konvertieren, erhalten Sie darüber hinaus die ursprüngliche Windows-Runtime-Instanz zurück.
 
 Es wird empfohlen, die Konvertierungsmethode zu verwenden, die zu den Funktionen des Windows-Runtime-Streams passt, den Sie konvertieren möchten. Da jedoch <xref:Windows.Storage.Streams.IRandomAccessStream> lesbar und schreibbar ist (es werden sowohl <xref:Windows.Storage.Streams.IOutputStream> als auch <xref:Windows.Storage.Streams.IInputStream> implementiert), ist es egal, welche Konvertierungsmethode Sie verwenden. Die Funktionen des ursprünglichen Streams bleiben stets erhalten. Wenn Sie beispielsweise <xref:System.IO.WindowsRuntimeStreamExtensions.AsStreamForRead%2A?displayProperty=nameWithType> zum Konvertieren von <xref:Windows.Storage.Streams.IRandomAccessStream> verwenden, wird der konvertierte .NET Framework-Stream nicht auf den Schreibschutz eingeschränkt. Er ist dann auch schreibbar.
 
