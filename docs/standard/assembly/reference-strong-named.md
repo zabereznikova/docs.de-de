@@ -11,12 +11,12 @@ dev_langs:
 - csharp
 - vb
 - cpp
-ms.openlocfilehash: 427550e1fbeb38cefbb4afe97d80e198ac2d6cb0
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: adda4ed2ab5c59e3518b8e724044529a79840ad0
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73127634"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156477"
 ---
 # <a name="how-to-reference-a-strong-named-assembly"></a>Vorgehensweise: Verweisen auf eine Assembly mit starkem Namen
 Beim Verweisen auf Typen oder Ressourcen in einer Assembly mit starkem Namen handelt es sich in der Regel um einen transparenten Prozess. Sie können den Verweis zur Kompilierzeit (frühes Binden) oder zur Runtime vornehmen.  
@@ -30,7 +30,7 @@ Ein Verweis zur Kompilierzeit tritt auf, wenn Sie den Compiler darauf hinweisen,
 
 Geben Sie an einer Eingabeaufforderung folgenden Befehl ein:  
 
-\<*Compilerbefehl*>  **/reference:** \<*Assemblyname*>  
+\<*Compilerbefehl*> **/reference:**\<*Assemblyname*>  
 
 In diesem Befehl ist der *Compilerbefehl* der Befehl für die Sprache, die Sie verwenden, und *Assemblyname* ist der Name der Assembly mit starkem Namen, auf die verwiesen wird. Sie können auch andere Compileroptionen verwenden, z.B. die Option **/t:library** zum Erstellen einer Bibliothekassembly.  
 
@@ -44,12 +44,12 @@ csc /t:library myAssembly.cs /reference:myLibAssembly.dll
   
 Wenn Sie zur Laufzeit auf eine Assembly mit starkem Namen verweisen (z. B. mit der <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>- oder <xref:System.Reflection.Assembly.GetType%2A?displayProperty=nameWithType>-Methode), müssen Sie den Anzeigenamen der Assembly mit starkem Namen verwenden, auf die verwiesen wird. Die Syntax eines Anzeigenamens lautet wie folgt:  
 
-\<*Assemblyname*> **,** \<*Versionsnummer*> **,** \<*Kultur*> **,** \<*öffentliches Schlüsseltoken*>  
+\<*Assemblyname*>**,** \<*Versionsnummer*>**,** \<*Kultur*>**,** \<*Token des öffentlichen Schlüssels*>  
 
-Beispiel:  
+Zum Beispiel:  
 
 ```console
-myDll, Version=1.1.0.0, Culture=en, PublicKeyToken=03689116d3a4ae33   
+myDll, Version=1.1.0.0, Culture=en, PublicKeyToken=03689116d3a4ae33
 ```  
 
 In diesem Beispiel ist `PublicKeyToken` die hexadezimale Form des öffentlichen Schlüsseltokens. Wenn kein Kulturwert vorhanden ist, verwenden Sie `Culture=neutral`.  

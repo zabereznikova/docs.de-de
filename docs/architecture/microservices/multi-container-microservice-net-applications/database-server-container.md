@@ -1,13 +1,13 @@
 ---
 title: Verwenden eines als Container ausgeführten Datenbankservers
-description: Informationen zur Bedeutung der Verwendung eines als Container ausgeführten Datenbankservers, der ausschließlich für die Entwicklung, jedoch auf keinen Fall in der Produktion zum Einsatz kommen darf.
+description: Informationen zur Bedeutung der Verwendung eines als Container ausgeführten Datenbankservers, der ausschließlich für die Entwicklung, jedoch auf keinen Fall in der Produktion zum Einsatz kommen darf
 ms.date: 01/30/2020
-ms.openlocfilehash: 816ac196636f78a368a9f20e8eedcc6a22567fa7
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.openlocfilehash: 0cbc933003aac10970814378c27e88b5cb0ddbe5
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77502289"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77628526"
 ---
 # <a name="use-a-database-server-running-as-a-container"></a>Verwenden eines als Container ausgeführten Datenbankservers
 
@@ -48,10 +48,10 @@ Die Ausführung von SQL Server als Container ist nicht nur für eine Demo nützl
 ### <a name="additional-resources"></a>Zusätzliche Ressourcen
 
 - **Ausführen des Docker-Images von SQL Serverunter Linux, Mac oder Windows** \
-    <https://docs.microsoft.com/sql/linux/sql-server-linux-setup-docker>
+  <https://docs.microsoft.com/sql/linux/sql-server-linux-setup-docker>
 
 - **Verbinden und Abfragen von SQL Server unter Linux mit sqlcmd** \
-    <https://docs.microsoft.com/sql/linux/sql-server-linux-connect-and-query-sqlcmd>
+  <https://docs.microsoft.com/sql/linux/sql-server-linux-connect-and-query-sqlcmd>
 
 ## <a name="seeding-with-test-data-on-web-application-startup"></a>Seeding mit Testdaten beim Starten von Webanwendungen
 

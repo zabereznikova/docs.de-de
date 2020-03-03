@@ -9,12 +9,12 @@ helpviewer_keywords:
 - I/O [.NET], Pipelines
 author: rick-anderson
 ms.author: riande
-ms.openlocfilehash: 54b5f97aca131f52b9b5d9f54d7fa5ec00ba3d5b
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: b18b2bf31787fa58e614cd4f057fba9037fe8ad8
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73423678"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77627551"
 ---
 # <a name="systemiopipelines-in-net"></a>System.IO.Pipelines in .NET
 
@@ -67,6 +67,8 @@ Um die oben beschriebenen Probleme zu beheben, sind die folgenden Änderungen er
 [!code-csharp[](~/samples/snippets/csharp/pipelines/ProcessLinesAsync.cs?name=snippet)]
 
 Der oben gezeigte Code ist komplex und behandelt nicht alle identifizierten Probleme. Hochleistungsnetzwerke bedeuten in der Regel das Schreiben von sehr komplexem Code, um die Leistung zu maximieren. `System.IO.Pipelines` wurde entworfen, um das Schreiben dieser Art von Code zu vereinfachen.
+
+[!INCLUDE [localized code comments](../../../includes/code-comments-loc.md)]
 
 ## <a name="pipe"></a>Pipe
 
@@ -130,7 +132,7 @@ Zum Beheben des oben beschriebenen Problems hat `Pipe` zwei Einstellungen, um de
 
 <xref:System.IO.Pipelines.PipeWriter.FlushAsync%2A?displayProperty=nameWithType>:
 
-* Gibt ein unvollständiges `ValueTask<FlushResult>` zurück, wenn die Datenmenge in `Pipe` `PauseWriterThreshold` erreicht.
+* Gibt ein unvollständiges `ValueTask<FlushResult>` zurück, wenn die Datenmenge in `Pipe``PauseWriterThreshold` erreicht.
 * Schließt `ValueTask<FlushResult>` ab, wenn der Wert kleiner als `ResumeWriterThreshold` wird.
 
 Es werden zwei Werte verwendet, um einen schnellen Zyklus zu verhindern, der bei Verwendung nur eines Werts auftreten kann.
@@ -163,7 +165,7 @@ Es ist häufig effizient, das `Pipe`-Objekt wiederzuverwenden. Zum Zurücksetzen
 
 ## <a name="pipereader"></a>PipeReader
 
-<xref:System.IO.Pipelines.PipeReader> verwaltet den Arbeitsspeicher im Auftrag des Aufrufers. Rufen Sie **immer** <xref:System.IO.Pipelines.PipeReader.AdvanceTo%2A?displayProperty=nameWithType> auf, nachdem <xref:System.IO.Pipelines.PipeReader.ReadAsync%2A?displayProperty=nameWithType> aufgerufen wurde. Dadurch kann `PipeReader` erkennen, wenn der Aufrufer Vorgänge im Arbeitsspeicher abgeschlossen hat, damit sie nachverfolgt werden können. Das von `PipeReader.ReadAsync` zurückgegebene `ReadOnlySequence<byte>`-Element ist nur bis zum Aufruf von `PipeReader.AdvanceTo` gültig. Es ist unzulässig, `ReadOnlySequence<byte>` nach dem Aufruf von `PipeReader.AdvanceTo` zu verwenden.
+<xref:System.IO.Pipelines.PipeReader> verwaltet den Arbeitsspeicher im Auftrag des Aufrufers. Rufen Sie **immer**<xref:System.IO.Pipelines.PipeReader.AdvanceTo%2A?displayProperty=nameWithType> auf, nachdem <xref:System.IO.Pipelines.PipeReader.ReadAsync%2A?displayProperty=nameWithType> aufgerufen wurde. Dadurch kann `PipeReader` erkennen, wenn der Aufrufer Vorgänge im Arbeitsspeicher abgeschlossen hat, damit sie nachverfolgt werden können. Das von `PipeReader.ReadAsync` zurückgegebene `ReadOnlySequence<byte>`-Element ist nur bis zum Aufruf von `PipeReader.AdvanceTo` gültig. Es ist unzulässig, `ReadOnlySequence<byte>` nach dem Aufruf von `PipeReader.AdvanceTo` zu verwenden.
 
 `PipeReader.AdvanceTo` nimmt zwei <xref:System.SequencePosition>-Argumente an.
 
@@ -249,7 +251,7 @@ Der folgende Code liest alle Nachrichten aus einem `PipeReader` und ruft für je
 
 ❌ **Endlosschleife**
 
-Die folgende Logik kann zu einer Endlosschleife führen, wenn `Result.IsCompleted` `true` ist, im Puffer aber niemals eine vollständige Nachricht vorhanden ist.
+Die folgende Logik kann zu einer Endlosschleife führen, wenn `Result.IsCompleted``true` ist, im Puffer aber niemals eine vollständige Nachricht vorhanden ist.
 
 [!INCLUDE [pipelines-do-not-use-1](../../../includes/pipelines-do-not-use-1.md)]
 

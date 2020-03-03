@@ -6,12 +6,12 @@ helpviewer_keywords:
 - developer's guide, deploying .NET Framework
 - deployment [.NET Framework], developer's guide
 ms.assetid: 094d043e-33c4-40ba-a503-e0b20b55f4cf
-ms.openlocfilehash: 597bfd2c16f6289a2bcb931c3896918dcb6d9a4d
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: 26c168040b0fa5e975e64a7518b0d0bf250c4711
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2020
-ms.locfileid: "77094136"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77628123"
 ---
 # <a name="net-framework-deployment-guide-for-developers"></a>Handbuch für die Bereitstellung von .NET Framework für Entwickler
 Dieses Thema enthält Informationen für Entwickler, die eine beliebige Version von .NET Framework – von NET Framework 4.5 bis hin zu [!INCLUDE[net_current](../../../includes/net-current-version.md)] – mit ihren Apps installieren möchten.
@@ -134,21 +134,7 @@ InstallAware erstellt über eine einzige Quelle die Windows-App (APPX), den Wind
 
 ### <a name="installshield-deployment"></a>InstallShield-Bereitstellung
 
-So wählen Sie in Visual Studio die InstallShield-Bereitstellung aus und fügen eine Abhängigkeit von .NET Framework hinzu
-
-1. Wählen Sie auf der Visual Studio-Menüleiste **Datei**, **Neu**und **Projekt**aus.
-
-2. Wählen Sie im linken Bereich des Dialogfelds **Neues Projekt** nacheinander **Andere Projekttypen**, **Setup und Bereitstellung**und **InstallShield LE**aus.
-
-3. Geben Sie im Feld **Name** einen Namen für das Projekt ein, und klicken Sie dann auf **OK**.
-
-4. Wenn Sie zum ersten Mal ein Setup- und Bereitstellungsprojekt erstellen, wählen Sie **Zu InstallShield wechseln** oder **InstallShield Limited Edition aktivieren**, um InstallShield Limited Edition für Ihre Version von Microsoft Visual Studio herunterzuladen. Starten Sie Visual Studio neu.
-
-5. Wechseln Sie zum **Projekt-Assistenten** , und wählen Sie **Anwendungsdateien** aus, um die Projektausgabe hinzuzufügen. Sie können mit diesem Assistenten weitere Projektattribute konfigurieren.
-
-6. Wechseln Sie zu **Installationsanforderungen** , und wählen Sie die Betriebssysteme und die Version von .NET Framework aus, die Sie installieren möchten.
-
-7. Öffnen Sie das Kontextmenü für das Setup-Projekt, und wählen Sie **Erstellen**aus.
+Mit InstallShield werden Windows-App-Pakete (MSIX und APPX), Windows Installer-Pakete (MSI) sowie Installationsprogramme für nativen Code (EXE) erstellt. InstallShield bietet ebenso die Visual Studio-Integration. Weitere Informationen finden Sie auf der [InstallShield-Website](https://www.flexerasoftware.com/install/products/installshield.html).
 
 <a name="wix"></a>
 
@@ -359,7 +345,7 @@ In der folgenden Tabelle sind die Optionen aufgeführt, die Sie einschließen k�
 |Option|Beschreibung|
 |------------|-----------------|
 |**/CEIPConsent**|Überschreibt das Standardverhalten und sendet anonymes Feedback an Microsoft, um die Bereitstellungsumgebung für die Zukunft zu verbessern. Diese Option kann nur verwendet werden, wenn vom Setupprogramm die Zustimmung angefordert wird und der Benutzer die Berechtigung erteilt, anonymes Feedback an Microsoft zu senden.|
-|**/chainingpackage** `packageName`|Gibt den Namen der ausführbaren Datei an, die das Verketten ausführt. Diese Informationen werden als anonymes Feedback an Microsoft gesendet, um zu helfen, die Bereitstellungsumgebung für die Zukunft zu verbessern.<br /><br /> Wenn der Paketname Leerzeichen enthält, verwenden Sie als Trennzeichen doppelte Anführungszeichen, z.B. **/chainingpackage "Lucerne Publishing"** . Ein Beispiel für ein Verkettungspaket finden Sie unter [Abrufen von Statusinformationen aus einem Installationspaket](https://docs.microsoft.com/previous-versions/cc825975(v=vs.100)).|
+|**/chainingpackage** `packageName`|Gibt den Namen der ausführbaren Datei an, die das Verketten ausführt. Diese Informationen werden als anonymes Feedback an Microsoft gesendet, um zu helfen, die Bereitstellungsumgebung für die Zukunft zu verbessern.<br /><br /> Wenn der Paketname Leerzeichen enthält, verwenden Sie als Trennzeichen doppelte Anführungszeichen, z.B. **/chainingpackage "Lucerne Publishing"**. Ein Beispiel für ein Verkettungspaket finden Sie unter [Abrufen von Statusinformationen aus einem Installationspaket](https://docs.microsoft.com/previous-versions/cc825975(v=vs.100)).|
 |**/LCID**  `LCID`<br /><br /> wobei `LCID` einen Gebietsschemabezeichner angibt (siehe [Unterstützte Sprachen](#supported-languages))|Installiert das von `LCID` angegebene Language Pack und erzwingt die Anzeige der Benutzeroberfläche in dieser Sprache (sofern nicht der stille Modus festgelegt wird).<br /><br /> Bei Verwendung des Webinstallers wird mit dieser Option das Language Pack per Verkettung aus dem Web installiert. **Hinweis**:  Verwenden Sie diese Option nur mit dem Webinstaller.|
 |**/log** `file` &#124; `folder`|Gibt den Speicherort der Protokolldatei an. Der Standardwert ist der temporäre Ordner für den Vorgang, und der Standarddateiname basiert auf dem Paket. Wenn die Dateierweiterung TXT lautet, wird ein Textprotokoll präsentiert. Wenn Sie eine andere Erweiterung oder keine Erweiterung angeben, wird ein HTML-Protokoll erstellt.|
 |**/msioptions**|Gibt Optionen an, die für MSI- und MSP-Elemente übergeben werden sollen. Beispiel: `/msioptions "PROPERTY1='Value'"`.|

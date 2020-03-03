@@ -1,16 +1,16 @@
 ---
 title: Bereitstellen des Modells für Azure Functions
 description: Bereitstellen eines Machine Learning-Modells zur ML.NET-Standpunktanalyse für die Vorhersage über das Internet mit Azure Functions
-ms.date: 11/07/2019
+ms.date: 02/21/2020
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc, how-to
-ms.openlocfilehash: 5ef6331950845b2900e33b2c51c308644ba17fd6
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 33afd568bb12b855a3888bec31f2e9bbc3c720da
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73733351"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77628669"
 ---
 # <a name="deploy-a-model-to-azure-functions"></a>Bereitstellen des Modells für Azure Functions
 
@@ -19,7 +19,7 @@ Erfahren Sie, wie Sie ein vorab trainiertes ML.NET-Modell für maschinelles Lern
 > [!NOTE]
 > Dieses Beispiel führt eine Vorschauversion des `PredictionEnginePool`-Diensts aus.
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
+## <a name="prerequisites"></a>Voraussetzungen
 
 - [Visual Studio 2017 Version 15.6 oder höher](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) mit installierter Workload „Plattformübergreifende .NET Core-Entwicklung“ und installierter „Azure-Entwicklung“.
 - [Azure Functions-Tools](/azure/azure-functions/functions-develop-vs#check-your-tools-version)
@@ -42,7 +42,7 @@ Dieses Beispiel ist eine **Azure Functions-Anwendung mit einem C#-HTTP-Trigger**
 
     Klicken Sie im Projektmappen-Explorer mit der rechten Maustaste auf das Projekt, und wählen Sie **NuGet-Pakete verwalten** aus. Wählen Sie als Paketquelle „nuget.org“ aus. Wählen Sie anschließend die Registerkarte „Durchsuchen“ aus, suchen Sie nach **Microsoft.ML**, und wählen Sie das Paket in der Liste sowie anschließend die Schaltfläche **Installieren** aus. Wählen Sie die Schaltfläche **OK** im Dialogfeld **Vorschau der Änderungen** und dann die Schaltfläche **Ich stimme zu** im Dialogfeld **Zustimmung zur Lizenz** aus, wenn Sie den Lizenzbedingungen für die aufgelisteten Pakete zustimmen.
 
-1. Installieren Sie das **NuGet-Paket „Microsoft.Azure.Functions.Extensions“** :
+1. Installieren Sie das **NuGet-Paket „Microsoft.Azure.Functions.Extensions“**:
 
     Klicken Sie im Projektmappen-Explorer mit der rechten Maustaste auf das Projekt, und wählen Sie **NuGet-Pakete verwalten** aus. Wählen Sie als Paketquelle „nuget.org“ aus. Wählen Sie anschließend die Registerkarte „Durchsuchen“ aus, und suchen Sie nach **Microsoft.Azure.Functions.Extensions**. Wählen Sie das Paket in der Liste aus, und klicken Sie anschließend auf die Schaltfläche **Installieren**. Wählen Sie die Schaltfläche **OK** im Dialogfeld **Vorschau der Änderungen** und dann die Schaltfläche **Ich stimme zu** im Dialogfeld **Zustimmung zur Lizenz** aus, wenn Sie den Lizenzbedingungen für die aufgelisteten Pakete zustimmen.
 
@@ -50,9 +50,9 @@ Dieses Beispiel ist eine **Azure Functions-Anwendung mit einem C#-HTTP-Trigger**
 
     Klicken Sie im Projektmappen-Explorer mit der rechten Maustaste auf das Projekt, und wählen Sie **NuGet-Pakete verwalten** aus. Wählen Sie als Paketquelle „nuget.org“ aus. Wählen Sie anschließend die Registerkarte **Durchsuchen** aus, suchen Sie nach „Microsoft.Extensions.ML“, und wählen Sie das Paket in der Liste und anschließend die Schaltfläche **Installieren** aus. Wählen Sie die Schaltfläche **OK** im Dialogfeld **Vorschau der Änderungen** und dann die Schaltfläche **Ich stimme zu** im Dialogfeld **Zustimmung zur Lizenz** aus, wenn Sie den Lizenzbedingungen für die aufgelisteten Pakete zustimmen.
 
-1. Installieren Sie das **NuGet-Paket Microsoft.NET.Sdk.Functions**, Version **1.0.28 oder höher**:
+1. Installieren Sie das **NuGet-Paket Microsoft.NET.Sdk.Functions**, Version **1.0.31**:
 
-    Klicken Sie im Projektmappen-Explorer mit der rechten Maustaste auf das Projekt, und wählen Sie **NuGet-Pakete verwalten** aus. Wählen Sie „nuget.org“ als Paketquelle aus, wählen Sie die Registerkarte „Installiert“ aus, suchen Sie nach **Microsoft.NET.Sdk.Functions**, wählen Sie dieses Paket in der Liste aus, wählen Sie **1.0.28 oder höher** aus der Versionsdropdownliste aus, und wählen Sie dann die Schaltfläche **Aktualisieren** aus. Wählen Sie die Schaltfläche **OK** im Dialogfeld **Vorschau der Änderungen** und dann die Schaltfläche **Ich stimme zu** im Dialogfeld **Zustimmung zur Lizenz** aus, wenn Sie den Lizenzbedingungen für die aufgelisteten Pakete zustimmen.
+    Klicken Sie im Projektmappen-Explorer mit der rechten Maustaste auf das Projekt, und wählen Sie **NuGet-Pakete verwalten** aus. Wählen Sie „nuget.org“ als Paketquelle aus, wählen Sie die Registerkarte „Installiert“ aus, suchen Sie nach **Microsoft.NET.Sdk.Functions**, wählen Sie dieses Paket in der Liste aus, wählen Sie **1.0.31** aus der Versionsdropdownliste aus, und klicken Sie dann auf die Schaltfläche **Aktualisieren**. Wählen Sie die Schaltfläche **OK** im Dialogfeld **Vorschau der Änderungen** und dann die Schaltfläche **Ich stimme zu** im Dialogfeld **Zustimmung zur Lizenz** aus, wenn Sie den Lizenzbedingungen für die aufgelisteten Pakete zustimmen.
 
 ## <a name="add-pre-trained-model-to-project"></a>Hinzufügen des vorab trainierten Modells zum Projekt
 
