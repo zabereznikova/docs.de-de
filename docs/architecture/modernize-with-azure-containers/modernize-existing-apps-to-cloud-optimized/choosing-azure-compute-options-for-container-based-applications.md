@@ -36,7 +36,7 @@ In der folgenden Tabelle sehen Sie eine Aufschlüsselung der verschiedenen Arten
 
 **Legende**
 
-![Symbol „Empfohlen“](media/choosing-azure-compute-options-for-container-based-applications/recommended.png) \ empfohlen
+![Symbol „Empfohlen“](media/choosing-azure-compute-options-for-container-based-applications/recommended.png) empfohlen \
 ![Symbol „Möglich“](media/choosing-azure-compute-options-for-container-based-applications/possible.png) Möglich
 
 > [!div class="step-by-step"]
