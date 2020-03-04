@@ -9,12 +9,12 @@ helpviewer_keywords:
 - time zones [.NET Framework], enumerating
 - enumerating time zones [.NET Framework]
 ms.assetid: bb7a42ab-6bd9-4c5c-b734-5546d51f8669
-ms.openlocfilehash: 662e389f4fecc77244e378f1c0672935403fa456
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: aa8962c8aea208778983610041937dc3f75c1f1e
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73129124"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159441"
 ---
 # <a name="how-to-enumerate-time-zones-present-on-a-computer"></a>Gewusst wie: Auflisten der auf einem Computer vorhandenen Zeitzonen
 
@@ -55,11 +55,11 @@ Im Beispiel wird eine Windows-Anwendung gestartet, die die in einem System defin
 Die meisten Listen Steuerelemente (z. b. die <xref:System.Windows.Forms.ListBox?displayProperty=nameWithType> oder <xref:System.Web.UI.WebControls.BulletedList?displayProperty=nameWithType>-Steuerelement) ermöglichen es Ihnen, der `DataSource`-Eigenschaft eine Auflistung von Objektvariablen zuzuweisen, solange diese Auflistung die <xref:System.Collections.IEnumerable> Schnittstelle implementiert. (Die generische <xref:System.Collections.ObjectModel.ReadOnlyCollection%601>-Klasse führt dies aus.) Um ein einzelnes Objekt in der Auflistung anzuzeigen, ruft das Steuerelement die `ToString` Methode dieses Objekts auf, um die Zeichenfolge zu extrahieren, die für die Darstellung des Objekts verwendet wird. Im Fall von <xref:System.TimeZoneInfo> Objekten gibt die Methode `ToString` den anzeigen amen des <xref:System.TimeZoneInfo> Objekts zurück (den Wert der <xref:System.TimeZoneInfo.DisplayName%2A> Eigenschaft).
 
 > [!NOTE]
-> Da Listen Steuerelemente die `ToString` Methode eines Objekts aufrufen, können Sie dem Steuerelement eine Auflistung von <xref:System.TimeZoneInfo> Objekten zuweisen, festlegen, dass das Steuerelement einen aussagekräftigen Namen für jedes Objekt anzeigt, und das <xref:System.TimeZoneInfo> Objekt abrufen, das der Benutzer ausgewählt hat. Dadurch entfällt die Notwendigkeit, eine Zeichenfolge für jedes Objekt in der Auflistung zu extrahieren, die Zeichenfolge einer Auflistung zuzuweisen, die wiederum der `DataSource`-Eigenschaft des Steuer Elements zugewiesen ist, die Zeichenfolge abzurufen, die der Benutzer ausgewählt hat, und dann die Zeichenfolge zu extrahieren, um das Objekt zu extrahieren, das Es wird beschrieben. 
+> Da Listen Steuerelemente die `ToString` Methode eines Objekts aufrufen, können Sie dem Steuerelement eine Auflistung von <xref:System.TimeZoneInfo> Objekten zuweisen, festlegen, dass das Steuerelement einen aussagekräftigen Namen für jedes Objekt anzeigt, und das <xref:System.TimeZoneInfo> Objekt abrufen, das der Benutzer ausgewählt hat. Dadurch entfällt die Notwendigkeit, eine Zeichenfolge für jedes Objekt in der Auflistung zu extrahieren, die Zeichenfolge einer Auflistung zuzuweisen, die wiederum der `DataSource`-Eigenschaft des Steuer Elements zugewiesen ist, die vom Benutzer ausgewählte Zeichenfolge abzurufen und dann mithilfe dieser Zeichenfolge das Objekt zu extrahieren, das Sie beschreibt.
 
 ## <a name="compiling-the-code"></a>Kompilieren des Codes
 
-Für dieses Beispiel benötigen Sie Folgendes:
+Dieses Beispiel erfordert Folgendes:
 
 - Die folgenden Namespaces werden importiert:
 

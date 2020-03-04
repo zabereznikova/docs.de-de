@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Angeben eines alternativen Elementnamens für einen XML-Stream'
+title: 'Gewusst wie: Angeben eines alternativen Elementnamens für einen XML-Stream'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - classes, overriding
 - overriding classes
 ms.assetid: 5cc1c0b0-f94b-4525-9a41-88a582cd6668
-ms.openlocfilehash: 577b96517632ca1ae06891540f22c2c3c3886cd1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6aaff20e2955fc9f121b3e60b14c0bbcf7515660
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62018007"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159857"
 ---
-# <a name="how-to-specify-an-alternate-element-name-for-an-xml-stream"></a>Vorgehensweise: Angeben eines alternativen Elementnamens für einen XML-Stream
+# <a name="how-to-specify-an-alternate-element-name-for-an-xml-stream"></a>Gewusst wie: Angeben eines alternativen Elementnamens für einen XML-Stream
   
 Mit <xref:System.Xml.Serialization.XmlSerializer> können Sie mehr als einen XML-Stream mit der gleichen Gruppe von Klassen generieren. Dies ist beispielsweise dann sinnvoll, wenn zwei verschiedene XML-Webdienste die gleichen grundlegenden Informationen benötigen, die sich nur in wenigen Details unterscheiden. Stellen Sie sich beispielsweise vor, zwei XML-Webdienste, die Buchbestellungen verarbeiten, erfordern die Angabe von ISBN-Nummern. Ein Dienst verwendet das Tag \<ISBN>, während der zweite das Tag \<BookID> verwendet. Sie verfügen über eine Klasse mit dem Namen von `Book`, die ein Feld namens `ISBN` enthält. In der Standardeinstellung wird beim Serialisieren einer Instanz der `Book`-Klasse der Membername (ISBN) als Name des XML-Elements verwendet. Für den ersten XML-Webdienst entspricht dies dem erwarteten Verhalten. Wenn der XML-Stream jedoch an den zweiten XML-Webdienst gesendet werden soll, muss die Serialisierung überschrieben werden, damit der Elementname des Tags `BookID` lautet.  
   
@@ -73,7 +73,7 @@ public class SerializeOverride()
     myAttributes.XmlElements.Add(myElementAttribute);  
     XmlAttributeOverrides myOverrides = new XmlAttributeOverrides();  
     myOverrides.Add(typeof(Book), "ISBN", myAttributes);  
-    XmlSerializer mySerializer =   
+    XmlSerializer mySerializer =
     new XmlSerializer(typeof(Book), myOverrides)  
     Book b = new Book();  
     b.ISBN = "123456789"  

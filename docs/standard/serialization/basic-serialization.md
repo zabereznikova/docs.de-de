@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: d899d43c-335a-433e-a589-cd187192984f
 dev_langs:
 - CSharp
-ms.openlocfilehash: 9a7cdd0b9e5bd12d5730d92f39c2432bdc84a18e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a2dde9f795dfe31ff6ef821272a0d5e8d20e8b2f
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61795030"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159948"
 ---
 # <a name="basic-serialization"></a>Einfache Serialisierung
 
@@ -58,14 +58,14 @@ Console.WriteLine("n2: {0}", obj.n2);
 Console.WriteLine("str: {0}", obj.str);  
 ```  
   
-Die oben verwendete <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>-Klasse ist sehr effizient und erzeugt einen kompakten Bytestream. Alle Objekte, die mit diesem Formatierungsprogramm serialisiert wurden, können mit diesem auch deserialisiert werden. Dadurch ist es das optimale Tool zur Serialisierung von Objekten, die im .NET&amp;#160;Framework deserialisiert werden. Beachten Sie unbedingt, dass beim Deserialisieren von Objekten keine Konstruktoren aufgerufen werden. Diese Einschränkung wird der Deserialisierung auferlegt, um die Leistung zu verbessern. Dies verstößt jedoch gegen einige der üblichen Verträge, die die Runtime mit dem Objektentwickler schließt, und Entwickler müssen sich über die Auswirkungen im Klaren sein, die die Markierung eines Objekts als serialisierbar hat.  
+Die oben verwendete <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>-Klasse ist sehr effizient und erzeugt einen kompakten Bytestream. Alle Objekte, die mit diesem Formatierungsprogramm serialisiert wurden, können mit diesem auch deserialisiert werden. Dadurch ist es das optimale Tool zur Serialisierung von Objekten, die im .NET&#160;Framework deserialisiert werden. Beachten Sie unbedingt, dass beim Deserialisieren von Objekten keine Konstruktoren aufgerufen werden. Diese Einschränkung wird der Deserialisierung auferlegt, um die Leistung zu verbessern. Dies verstößt jedoch gegen einige der üblichen Verträge, die die Runtime mit dem Objektentwickler schließt, und Entwickler müssen sich über die Auswirkungen im Klaren sein, die die Markierung eines Objekts als serialisierbar hat.  
   
-Wenn Portabilität gefordert ist, verwenden Sie stattdessen die <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>-Klasse. Ersetzen Sie einfach im oben dargestellten Code die **BinaryFormatter**-Klasse durch die **SoapFormatter,**-Klasse, und rufen Sie wie zuvor**Serialisieren** und **Deserialisieren** auf. Dieses Formatierungsprogramm erzeugt die folgende Ausgabe für das oben dargestellte Beispiel.  
+Wenn Portabilität gefordert ist, verwenden Sie stattdessen die <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>-Klasse. Ersetzen Sie einfach im oben dargestellten Code die **BinaryFormatter**-Klasse durch die **SoapFormatter,** -Klasse, und rufen Sie wie zuvor**Serialisieren** und **Deserialisieren** auf. Dieses Formatierungsprogramm erzeugt die folgende Ausgabe für das oben dargestellte Beispiel.  
   
 ```xml  
 <SOAP-ENV:Envelope  
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
-  xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema"
   xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/"  
   xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"  
   SOAP-ENV:encodingStyle=  
@@ -86,7 +86,7 @@ Wenn Portabilität gefordert ist, verwenden Sie stattdessen die <xref:System.Run
 Sie müssen unbedingt beachten, dass das [Serializable](xref:System.SerializableAttribute)-Attribut nicht geerbt werden kann. Wenn Sie eine neue Klasse von `MyObject` ableiten, muss diese neue Klasse auch mit dem Attribut markiert werden, da sie sonst nicht serialisiert werden kann. Wenn Sie beispielsweise eine Instanz der nachstehenden Klasse zu serialisieren versuchen, erhalten Sie <xref:System.Runtime.Serialization.SerializationException>, die Sie darüber informiert, dass der `MyStuff`-Typ nicht als serialisierbar markiert ist.  
   
 ```csharp  
-public class MyStuff : MyObject   
+public class MyStuff : MyObject
 {  
   public int n3;  
 }  

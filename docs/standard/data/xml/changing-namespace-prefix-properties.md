@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d5c87cbe-4d69-429f-aad5-3103c2ca2770
-ms.openlocfilehash: e6b811d58ef9d98c51e9a45a46a1965c4fa12b55
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: b1df520d00d3a98b2e518092d4eff51b5d0b7741
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75711115"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78158024"
 ---
 # <a name="changing-namespace-prefix-properties"></a>Ändern der Eigenschaften von Namespacepräfixen
 Mit der **XmlNode**-Klasse können Sie das Namespacepräfix ändern, das mit einem bestimmten Knoten verknüpft ist. Im folgenden Code wird beispielsweise die Änderung des Präfixes eines Elements dargestellt.  
@@ -27,7 +27,7 @@ Console.WriteLine(doc.InnerXml)
 ```csharp  
 XmlDocument doc = new XmlDocument();  
 doc.LoadXml("<a:test xmlns:a='123' xmlns:b='456'/>");  
-XmlElement e = doc.DocumentElement;         
+XmlElement e = doc.DocumentElement;
 e.Prefix = "b";  
 Console.WriteLine(doc.InnerXml);  
 ```  
@@ -51,7 +51,7 @@ Console.WriteLine(doc.InnerXml)
 ```csharp  
 XmlDocument doc = new XmlDocument();  
 doc.LoadXml("<test xmlns='123'/>");  
-XmlElement e = doc.DocumentElement;         
+XmlElement e = doc.DocumentElement;
 e.Prefix = "a";  
 Console.WriteLine(doc.InnerXml);  
 ```  

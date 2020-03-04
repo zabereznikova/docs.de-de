@@ -1,12 +1,12 @@
 ---
 title: XML-Serialisierungsbeispiele für .net
 ms.date: 03/30/2017
-ms.openlocfilehash: 8564a3c3919d2ac8b6adecee1a2f5e12ab490a5c
-ms.sourcegitcommit: d7c298f6c2e3aab0c7498bfafc0a0a94ea1fe23e
+ms.openlocfilehash: 0cdf838afa257e59e0b8494a03c312d1b2bf6f03
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/10/2019
-ms.locfileid: "72250434"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159844"
 ---
 # <a name="xml-serialization-samples-for-net"></a>XML-Serialisierungsbeispiele für .net
 
@@ -14,7 +14,7 @@ ms.locfileid: "72250434"
  Veranschaulicht, wie eine im Speicher vorhandene Objektgrafik in einen Stream serialisiert wird.  
   
 * [Technologie Beispiel für die Serialisierung von Webdienst Generika](../../../docs/standard/serialization/web-services-generics-serialization-technology-sample.md)  
- Veranschaulicht die Verwendung und Steuerung der Genericsserialisierung in ASP.NET-Webdiensten. 
+ Veranschaulicht die Verwendung und Steuerung der Genericsserialisierung in ASP.NET-Webdiensten.
 
 * [SchemaImporterExtension-Technologie Beispiel](../../../docs/standard/serialization/schemaimporterextension-technology-sample.md)  
  Veranschaulicht eine benutzerdefinierte <xref:System.Xml.Serialization.Advanced.SchemaImporterExtension>-Klasse.  

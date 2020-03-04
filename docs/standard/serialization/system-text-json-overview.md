@@ -9,12 +9,12 @@ helpviewer_keywords:
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: acb83be9b20a155b6b6a9fb5ade38e099f54e71d
-ms.sourcegitcommit: 5d769956a04b6d68484dd717077fabc191c21da5
+ms.openlocfilehash: 660a2831aa6a807486fc47eae880bcd11347c547
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/17/2020
-ms.locfileid: "76163591"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159545"
 ---
 # <a name="json-serialization-and-deserialization-marshalling-and-unmarshalling-in-net---overview"></a>JSON-Serialisierung und-Deserialisierung (Marshalling und Unmarshalling) in .net-Overview
 
@@ -22,7 +22,7 @@ Der `System.Text.Json`-Namespace stellt Funktionen zum Serialisieren und Deseria
 
 Der Bibliotheks Entwurf hebt eine hohe Leistung und eine geringe Speicher Belegung für eine umfangreiche Featuregruppe hervor. Die integrierte UTF-8-Unterstützung optimiert den Prozess des Lesens und Schreibens von JSON-Text, der als UTF-8 codiert ist. Dies ist die häufigste Codierung für Daten im Web und Dateien auf dem Datenträger.
 
-Die Bibliothek stellt außerdem Klassen zum Arbeiten mit einem Dokument Objektmodell (DOM) im Arbeitsspeicher bereit. Diese Funktion ermöglicht den zufälligen schreibgeschützten Zugriff auf die Elemente in einer JSON-Datei oder Zeichenfolge. 
+Die Bibliothek stellt außerdem Klassen zum Arbeiten mit einem Dokument Objektmodell (DOM) im Arbeitsspeicher bereit. Diese Funktion ermöglicht den zufälligen schreibgeschützten Zugriff auf die Elemente in einer JSON-Datei oder Zeichenfolge.
 
 ## <a name="how-to-get-the-library"></a>Vorgehensweise beim erhalten der Bibliothek
 
@@ -32,7 +32,7 @@ Die Bibliothek stellt außerdem Klassen zum Arbeiten mit einem Dokument Objektmo
   * .NET Framework 4.7.2 und spätere Versionen
   * .Net Core 2,0, 2,1 und 2,2
 
-## <a name="additional-resources"></a>Weitere Ressourcen
+## <a name="additional-resources"></a>Zusätzliche Ressourcen
 
 * [Verwenden der Bibliothek](system-text-json-how-to.md)
 * [Migrieren von Newtonsoft.Json](system-text-json-migrate-from-newtonsoft-how-to.md)

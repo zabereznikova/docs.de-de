@@ -3,12 +3,12 @@ title: Ausgaben aus "XslTransform"
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 8e149d32-4b2f-493f-9e4b-d0d93475acde
-ms.openlocfilehash: 178b1e949868d3af893cbcb6df63590053341a3e
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 93cbf7807630a605e17e7f513055c052aad0d08e
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75710491"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159636"
 ---
 # <a name="outputs-from-an-xsltransform"></a>Ausgaben aus "XslTransform"
 Stylesheets bestimmen das Ausgabeformat mithilfe einer `<xsl:output>`-Anweisung mit dem `method`-Attribut. In der folgenden Tabelle wird das Ausgabeformat bei Verwendung der <xref:System.Xml.Xsl.XslTransform.Transform%2A>-Methode für das Schreiben der Ausgabe beschrieben; außerdem wird das Ausgabeformat als <xref:System.IO.Stream> oder <xref:System.IO.TextWriter> deklariert.  
@@ -33,7 +33,7 @@ Stylesheets bestimmen das Ausgabeformat mithilfe einer `<xsl:output>`-Anweisung 
   
 - omit-xml-declaration  
   
-- standalone  
+- Eigenständig  
   
 - doctype-public  
   
@@ -44,7 +44,7 @@ Stylesheets bestimmen das Ausgabeformat mithilfe einer `<xsl:output>`-Anweisung 
 - indent  
   
     > [!NOTE]
-    > \*Das encoding-Attribut wird ignoriert, wenn die <xref:System.Xml.Xsl.XslTransform.Transform%2A>-Methode die Ausgabe an <xref:System.IO.TextWriter> sendet. Stattdessen wird die encoding-Eigenschaft für den <xref:System.IO.TextWriter> verwendet. 
+    > \*Das encoding-Attribut wird ignoriert, wenn die <xref:System.Xml.Xsl.XslTransform.Transform%2A>-Methode die Ausgabe an <xref:System.IO.TextWriter> sendet. Stattdessen wird die encoding-Eigenschaft für den <xref:System.IO.TextWriter> verwendet.
   
  Wenn die Ausgabe der <xref:System.Xml.Xsl.XslTransform.Transform%2A>-Methode ein <xref:System.IO.Stream> ist, wird das folgende Attribut ignoriert:  
   

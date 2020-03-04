@@ -3,12 +3,12 @@ title: XML-Integration mit relationalen Daten und ADO.NET
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: f6ebb1a1-f2ca-49b9-92c9-0150940cf6e6
-ms.openlocfilehash: 373e28d1fffd8c47acb4acb70271db056aa3a27b
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 30b788c77a2352d0d02ee772ab3f428381facd9f
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75709932"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78155619"
 ---
 # <a name="xml-integration-with-relational-data-and-adonet"></a>XML-Integration mit relationalen Daten und ADO.NET
 Die **XmlDataDocument**-Klasse ist eine von der **XmlDocument**-Klasse abgeleitete Klasse und enthält XML-Daten. Der Vorteil der **XmlDataDocument**-Klasse liegt im Herstellen einer Brücke zwischen relationalen und hierarchischen Daten. Ein **XmlDocument** kann an ein **DataSet** gebunden werden, und Änderungen, die an den Dateien in den beiden Klassen vorgenommen wurden, können in beiden Klassen synchronisiert werden. Ein an ein **DataSet** gebundenes **XmlDocument** ermöglicht die Integration von XML in relationale Daten, und die Daten müssen nicht als XML oder in einem relationalen Format dargestellt werden. Sie können beide Möglichkeiten nutzen und sind somit nicht auf eine einzige Darstellung der Daten festgelegt.  
@@ -27,7 +27,7 @@ Die **XmlDataDocument**-Klasse ist eine von der **XmlDocument**-Klasse abgeleite
   
  Da **XmlDataDocument** aus einem **XmlDocument** geerbt wird, enthält es eine Implementierung des W3C-Dokumentobjektmodells (DOM). Durch die Tatsache, dass das **XmlDataDocument** einem **DataSet** zugeordnet ist und eine Teilmenge seiner Daten darin speichert, wird dessen Verwendung als **XmlDocument** in keiner Weise eingeschränkt oder verändert. Code, der zur Verarbeitung von **XmlDocument** geschrieben wurde, funktioniert unverändert mit **XmlDataDocument**. Das **DataSet** bietet eine relationale Ansicht derselben Daten durch die Definition von Tabellen, Spalten, Beziehungen und Einschränkungen. Es ist ein eigenständiger, in den Arbeitsspeicher geladener Benutzerdatenspeicher.  
   
- In der folgenden Abbildung werden die verschiedenen Beziehungen zwischen XML-Daten und dem **DataSet** sowie dem **XmlDataDocument** dargestellt: 
+ In der folgenden Abbildung werden die verschiedenen Beziehungen zwischen XML-Daten und dem **DataSet** sowie dem **XmlDataDocument** dargestellt:
   
  ![Abbildung zu verschiedenen Zuordnungen mit dem XML-DataSet.](./media/xml-integration-with-relational-data-and-adonet/xml-integration-relational-data-adodotnet.gif)  
   

@@ -8,16 +8,16 @@ dev_langs:
 helpviewer_keywords:
 - serializing objects
 - objects, serializing steps
-ms.openlocfilehash: 87bf863b158fe3b2c03c7a6d23462bc2aabf9966
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 4037dee36aeb619eb2757016904fd877158e57cf
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73106632"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159896"
 ---
 # <a name="how-to-determine-if-a-net-standard-object-is-serializable"></a>Ermitteln, ob ein .NET Standard Objekt serialisierbar ist
 
-Der .NET Standard ist eine Spezifikation, die die Typen und Member definiert, die für bestimmte .net-Implementierungen vorhanden sein müssen, die dieser Version des Standards entsprechen. Der .NET Standard definiert jedoch nicht, ob ein Typ serialisierbar ist. Die in der .NET Standard-Bibliothek definierten Typen sind nicht mit dem <xref:System.SerializableAttribute>-Attribut gekennzeichnet. Stattdessen können bestimmte .net-Implementierungen, wie z. b. die .NET Framework und .net Core, feststellen, ob ein bestimmter Typ serialisierbar ist. 
+Der .NET Standard ist eine Spezifikation, die die Typen und Member definiert, die für bestimmte .net-Implementierungen vorhanden sein müssen, die dieser Version des Standards entsprechen. Der .NET Standard definiert jedoch nicht, ob ein Typ serialisierbar ist. Die in der .NET Standard-Bibliothek definierten Typen sind nicht mit dem <xref:System.SerializableAttribute>-Attribut gekennzeichnet. Stattdessen können bestimmte .net-Implementierungen, wie z. b. die .NET Framework und .net Core, feststellen, ob ein bestimmter Typ serialisierbar ist.
 
 Wenn Sie eine Bibliothek entwickelt haben, die die .NET Standard als Ziel hat, kann die Bibliothek von jeder .NET-Implementierung genutzt werden, die die .NET Standard unterstützt. Dies bedeutet, dass Sie nicht im Voraus wissen können, ob ein bestimmter Typ serialisierbar ist. Sie können nur bestimmen, ob es zur Laufzeit serialisierbar ist.
 

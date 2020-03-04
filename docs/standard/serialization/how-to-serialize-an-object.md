@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Serialisieren eines Objekts'
+title: 'Gewusst wie: Serialisieren eines Objekts'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - serializing objects
 - objects, serializing steps
 ms.assetid: a1207d05-32b2-4953-8582-959607991227
-ms.openlocfilehash: a587a132446a5f5d74b2d534b1ca3b93ccca1480
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 3e24d890d47747c51086214530073fc551321079
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69928996"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159883"
 ---
-# <a name="how-to-serialize-an-object"></a>Vorgehensweise: Serialisieren eines Objekts
+# <a name="how-to-serialize-an-object"></a>Gewusst wie: Serialisieren eines Objekts
 Wenn Sie ein Objekt serialisieren möchten, erstellen Sie zuerst das zu serialisierende Objekt und legen dann dessen öffentliche Eigenschaften und Felder fest. Dazu müssen Sie das Transportformat angeben, in dem der XML-Stream gespeichert werden soll: als Stream oder als Datei. Wenn der XML-Stream beispielsweise in einer permanenten Form gespeichert werden muss, erstellen Sie ein <xref:System.IO.FileStream>-Objekt.  
   
 > [!NOTE]
@@ -42,7 +42,7 @@ Wenn Sie ein Objekt serialisieren möchten, erstellen Sie zuerst das zu serialis
     ```csharp  
     MySerializableClass myObject = new MySerializableClass();  
     // Insert code to set properties and fields of the object.  
-    XmlSerializer mySerializer = new   
+    XmlSerializer mySerializer = new
     XmlSerializer(typeof(MySerializableClass));  
     // To write to a file, create a StreamWriter object.  
     StreamWriter myWriter = new StreamWriter("myFileName.xml");  

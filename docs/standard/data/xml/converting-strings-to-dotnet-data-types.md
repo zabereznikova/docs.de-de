@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 65455ef3-9120-412c-819b-d0f59f88ac09
-ms.openlocfilehash: ac7e1b68f3f43a0c84c7330666825207e5b90004
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: e54990785cafd6061c6d53c13af6476a4b46e20e
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75711050"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78160351"
 ---
 # <a name="converting-strings-to-net-framework-data-types"></a>Konvertieren von Zeichenfolgen in .NET Framework-Datentypen
 Wenn Sie eine Zeichenfolge in einen .NET Framework-Datentyp konvertieren möchten, verwenden Sie die **XmlConvert**-Methode, die den Anwendungsanforderungen entspricht. Eine Liste sämtlicher in der **XmlConvert**-Klasse verfügbarer Konvertierungsmethoden finden Sie unter <xref:System.Xml.XmlConvert>.  
@@ -20,15 +20,15 @@ Wenn Sie eine Zeichenfolge in einen .NET Framework-Datentyp konvertieren möchte
   
  Die folgende Tabelle enthält die .NET Framework-Datentypen und die Zeichenfolgentypen, die unter Verwendung der XSD-Datentypzuordnung (XML Schema) zurückgegeben werden. Diese .NET Framework-Typen können nicht mit **System.Convert** verarbeitet werden.  
   
-|.NET Framework-Typ|Zurückgegebene Zeichenfolge|  
+|.NET Framework-Typ|Zurückgegebene Zeichenfolge|  
 |-------------------------|---------------------|  
-|Boolean|"true", "false"|  
+|Boolesch|"true", "false"|  
 |Single.PositiveInfinity|"INF"|  
 |Single.NegativeInfinity|"-INF"|  
 |Double.PositiveInfinity|"INF"|  
 |Double.NegativeInfinity|"-INF"|  
 |DateTime|Das Format ist "jjjj-mm-ddTHH:mm:sszzzzzz" und die entsprechenden Unterteilungen.|  
-|Zeitraum|Das Format lautet "PnYnMnTnHnMnS". Die bedeutet für `P2Y10M15DT10H30M20S` eine Dauer von 2 Jahren, 10 Monaten, 15 Tagen, 10 Stunden, 30 Minuten und 20 Sekunden.|  
+|Timespan|Das Format lautet "PnYnMnTnHnMnS". Die bedeutet für `P2Y10M15DT10H30M20S` eine Dauer von 2 Jahren, 10 Monaten, 15 Tagen, 10 Stunden, 30 Minuten und 20 Sekunden.|  
   
 > [!NOTE]
 > Wenn einer der in der Tabelle aufgeführten .NET Framework-Typen mit der **ToString**-Methode in eine Zeichenfolge umgewandelt wird, ist die zurückgegebene Zeichenfolge nicht der Basistyp, sondern der dem XML-Schema (XSD) entsprechende Zeichenfolgentyp.  
@@ -76,9 +76,9 @@ writer.WriteElementString("Number", XmlConvert.ToString(value));
   
 |Gültiger Eingabeparameter für die Zeichenfolge|.NET Framework-Ausgabetyp|  
 |----------------------------------|--------------------------------|  
-|„true“|Boolean.True|  
+|"true"|Boolean.True|  
 |"1"|Boolean.True|  
-|„false“|Boolean.False|  
+|"false"|Boolean.False|  
 |"0"|Boolean.False|  
   
  Betrachten Sie beispielsweise den folgenden XML-Code:  
@@ -87,7 +87,7 @@ writer.WriteElementString("Number", XmlConvert.ToString(value));
   
 ```xml  
 <Boolean>true</Boolean>  
-<Boolean>1</Boolean>   
+<Boolean>1</Boolean>
 ```  
   
  Beide können vom folgenden Code verarbeitet werden, und **bvalue** ist **System.Boolean.True**:  

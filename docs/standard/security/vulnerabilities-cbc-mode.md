@@ -3,16 +3,16 @@ title: CBC-Entschlüsselungs Anfälligkeit
 description: Erfahren Sie, wie Sie zeitliche Sicherheitsrisiken mit der symmetrischen Entschlüsselung des Cipher-Block-Chaining (CBC)-Modus mithilfe von Padding erkennen und beheben.
 ms.date: 06/12/2018
 author: blowdart
-ms.openlocfilehash: 87f8e3c53e4d06f6a4edc7670891ac83ec8d65ab
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 4616ef9015b47ff232a17f058c7a0f1449f42e81
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75705846"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159961"
 ---
 # <a name="timing-vulnerabilities-with-cbc-mode-symmetric-decryption-using-padding"></a>Verwenden der Auffüllung für die Zeitsteuerung bei Sicherheitsrisiken mit symmetrischer Entschlüsselung im CBC-Modus
 
-Microsoft ist der Meinung, dass es nicht mehr sicher ist, dass Daten entschlüsselt werden, die mit dem CBC-Modus (Cipher Block-Chaining) der symmetrischen Verschlüsselung verschlüsselt sind, wenn eine überprüfbare Auffüll Funktion angewendet wurde, ohne zuvor die Integrität des Chiffre Texts sicherzustellen, außer sehr spezifisch. Umständen. Dieses Urteil basiert auf der zurzeit bekannten kryptografieforschung. 
+Microsoft ist der Meinung, dass es nicht mehr sicher ist, dass Daten entschlüsselt werden, die mit dem CBC-Modus (Cipher Block-Chaining) der symmetrischen Verschlüsselung verschlüsselt sind, wenn eine überprüfbare Auffüll Funktion angewendet wurde, ohne zuvor die Integrität des Chiffre Texts sicherzustellen, außer sehr spezifisch. Umständen. Dieses Urteil basiert auf der zurzeit bekannten kryptografieforschung.
 
 ## <a name="introduction"></a>Einführung
 
@@ -68,7 +68,7 @@ Zunächst waren praktische Angriffe auf Dienste basiert, die je nach Gültigkeit
 
 Vorausgesetzt, dass das Verschlüsselungsschema eine Signatur verwendet und die Signatur Überprüfung mit einer festgelegten Laufzeit für eine bestimmte Daten Länge (unabhängig vom Inhalt) erfolgt, kann die Datenintegrität überprüft werden, ohne dass Informationen über einen [seitigen Kanal](https://en.wikipedia.org/wiki/Side-channel_attack)an einen Angreifer ausgegeben werden. Da bei der Integritäts Überprüfung alle manipulierten Nachrichten abgelehnt werden, wird das Auffüllen von Oracle-Bedrohungen verringert.
 
-## <a name="guidance"></a>Anleitung
+## <a name="guidance"></a>Empfehlungen
 
 Vor allem empfiehlt Microsoft, dass alle Daten, die Vertraulichkeit aufweisen, über Transport Layer Security (TLS), den Nachfolger an Secure Sockets Layer (SSL) übertragen werden.
 

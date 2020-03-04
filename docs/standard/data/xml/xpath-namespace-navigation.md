@@ -3,12 +3,12 @@ title: XPath-Namespacenavigation
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 06cc7abb-7416-415c-9dd6-67751b8cabd5
-ms.openlocfilehash: 37b9d3e04e075c7ef95420c70881ba9b34e031ce
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: f35318b1439b762bf7c87cff217ed1787e8d007c
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75709789"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156321"
 ---
 # <a name="xpath-namespace-navigation"></a>XPath-Namespacenavigation
 Zum Verwenden von XPath-Abfragen mit XML-Dokumenten müssen Sie XML-Namespaces und die darin enthaltenen Elemente korrekt adressieren. Mithilfe von Namespaces werden Zweideutigkeiten vermieden, die auftreten können, wenn Namen in mehr als einem Kontext verwendet werden. Der Name `ID` kann beispielsweise auf mehrere ID-Bezeichner verweisen, die unterschiedlichen Elementen eines XML-Dokuments zugewiesen sind. In der Namespace-Syntax werden URIs, Namen und Präfixe zur Unterscheidung der Elemente in einem XML-Dokument definiert.  
@@ -18,7 +18,7 @@ Zum Verwenden von XPath-Abfragen mit XML-Dokumenten müssen Sie XML-Namespaces u
 ## <a name="namespace-declarations"></a>Namespacedeklarationen  
  Mithilfe von Namespacedeklarationen werden die Elemente in einem XML-Dokument beim Verwenden einer Instanz des <xref:System.Xml.XPath.XPathNavigator> unterscheidbar und adressierbar gemacht. Namespacepräfixe stellen eine kurze Syntax für Adressierungsnamespaces bereit.  
   
- Präfixe werden durch folgende Form definiert: `<e:Envelope>`e`" eine Abkürzung für den formalen URI des Namespaces. Sie können das `Body`-Element mit folgender Syntax als Member des `Envelope`-Namespaces kennzeichnen: `e:Body`.  
+ Präfixe werden durch folgende Form definiert: `<e:Envelope xmlns:e=http://schemas.xmlsoap.org/soap/envelope/>.` In dieser Syntax ist das Präfix "`e`" eine Abkürzung für den formalen URI des Namespaces. Sie können das `Body`-Element mit folgender Syntax als Member des `Envelope`-Namespaces kennzeichnen: `e:Body`.  
   
  Im Navigationsbeispiel im nächsten Abschnitt wird auf das folgende XML-Dokument als `response.xml` verwiesen.  
   
@@ -27,7 +27,7 @@ Zum Verwenden von XPath-Abfragen mit XML-Dokumenten müssen Sie XML-Namespaces u
 <e:Envelope xmlns:e="http://schemas.xmlsoap.org/soap/envelope/">  
   <e:Body>  
     <s:Search xmlns:s="http://schemas.microsoft.com/v1/Search">  
-      <r:request xmlns:r="http://schemas.microsoft.com/v1/Search/metadata"   
+      <r:request xmlns:r="http://schemas.microsoft.com/v1/Search/metadata"
                  xmlns:i="http://www.w3.org/2001/XMLSchema-instance">  
       </r:request>  
     </s:Search>  
@@ -54,13 +54,13 @@ using (XmlReader reader = XmlReader.Create("response.xml"))
   
     XPathNavigator element = nav.SelectSingleNode(xpath, nsmgr);  
   
-    Console.WriteLine("Element Prefix:" + element.Prefix +   
+    Console.WriteLine("Element Prefix:" + element.Prefix +
     " Local name:" + element.LocalName);  
     Console.WriteLine("Namespace URI: " + element.NamespaceURI);  
 }  
 ```  
   
- Die Präzision vollqualifizierter Namespaces und Namen dient nicht nur der Bequemlichkeit. Wenn Sie ein wenig mit der Dokumentdefinition und dem Code in den voranstehenden Beispielen experimentieren, können Sie feststellen, dass bei der Navigation ohne vollqualifizierte Elementnamen Ausnahmen ausgelöst werden. Beispiel: Die Elementdefinition `<Search>` und die Abfragezeichenfolge `xpath = "/s:Envelope/s:Body/Search";` würde ohne den Namespacepräfix für das `Search`-Element `null` statt des `Search`-Elements zurückgeben.  
+ Die Präzision vollqualifizierter Namespaces und Namen dient nicht nur der Bequemlichkeit. Wenn Sie ein wenig mit der Dokumentdefinition und dem Code in den voranstehenden Beispielen experimentieren, können Sie feststellen, dass bei der Navigation ohne vollqualifizierte Elementnamen Ausnahmen ausgelöst werden. Beispiel: Die Elementdefinition `<Search xmlns="http://schemas.microsoft.com/v1/Search">` und die Abfragezeichenfolge `xpath = "/s:Envelope/s:Body/Search";` würde ohne den Namespacepräfix für das `Search`-Element `null` statt des `Search`-Elements zurückgeben.  
   
 ## <a name="see-also"></a>Siehe auch
 

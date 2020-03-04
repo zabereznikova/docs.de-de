@@ -2,12 +2,12 @@
 title: XML Serializer Generator-Tool (Sgen.exe)
 ms.date: 03/30/2017
 ms.assetid: cc1d1f1c-fb26-4be9-885a-3fe84c81cec6
-ms.openlocfilehash: 492337973f71b10dc061353b7083f596b402ae29
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: d67ab634279c4f8e06d609950932e2422bc43395
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71392706"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159519"
 ---
 # <a name="xml-serializer-generator-tool-sgenexe"></a>XML Serializer Generator-Tool (Sgen.exe)
 Der XML Serializer Generator erstellt eine XML-Serialisierungsassembly für die Typen in einer bestimmten Assembly, um die Startleistung von <xref:System.Xml.Serialization.XmlSerializer> beim Serialisieren oder Deserialisieren von Objekten der angegebenen Typen zu erhöhen.  
@@ -31,7 +31,7 @@ sgen [options]
 |**/n\[Ologo\]**|Unterdrückt die Anzeige des Startbanners von Microsoft.|  
 |**/o\[UT-\]:** _Pfad_|Gibt das Verzeichnis an, in das die generierte Assembly gespeichert werden soll. **Hinweis:** Der Name der generierten Assembly besteht aus dem Namen der Eingabeassembly plus „xmlSerializers.dll“.|  
 |**/p\[roxytypes\]**|Generiert Serialisierungscode nur für die Proxytypen des XML-Webdiensts.|  
-|**/r\[eference\]:** _assemblyfiles_|Gibt die Assemblys an, auf die von den Typen, die XML-Serialisierung erfordern, verwiesen wird. Akzeptiert mehrere Assemblydateien, die durch Kommas getrennt werden.|  
+|**/r\[eferen\]:** _assemblyfiles_|Gibt die Assemblys an, auf die von den Typen, die XML-Serialisierung erfordern, verwiesen wird. Akzeptiert mehrere Assemblydateien, die durch Kommas getrennt werden.|  
 |**/s\[ilent-\]**|Unterdrückt die Anzeige von Erfolgsmeldungen.|  
 |**/t\[ype\]:** _Typ_|Generiert Serialisierungscode nur für den angegebenen Typ.|  
 |**/v\[erbose\]**|Zeigt eine ausführliche Ausgabe für das Debuggen an. Listet Typen aus der Zielassembly auf, die nicht mit <xref:System.Xml.Serialization.XmlSerializer> serialisiert werden können.|  
@@ -50,7 +50,7 @@ sgen [options]
  Mit dem folgenden Befehl wird eine Assembly mit dem Namen Data.XmlSerializers.dll erstellt, um alle in der Assembly Data.dll enthaltenen Typen zu serialisieren.  
   
 ```console  
-sgen Data.dll   
+sgen Data.dll
 ```  
   
  Auf die Assembly Data.XmlSerializers.dll kann vom Code verwiesen werden, der die Typen in Data.dll serialisiert und deserialisiert.  

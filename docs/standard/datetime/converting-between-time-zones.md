@@ -12,12 +12,12 @@ helpviewer_keywords:
 - converting times
 - local time conversions
 ms.assetid: a51e1a3b-c983-4320-b31a-1f9fa3cf824a
-ms.openlocfilehash: d0b38523f054598ba6fb1f05a0183bc4ccff2120
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: fbb59dbe364763209f44a4e2241d1d5275036c40
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73132562"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156022"
 ---
 # <a name="converting-times-between-time-zones"></a>Konvertieren von Uhrzeiten zwischen Zeitzonen
 
@@ -109,7 +109,7 @@ Datums-und Uhrzeitwerte, die durch <xref:System.DateTimeOffset>-Objekte dargeste
 Wenn Datum und Uhrzeit einer Benutzeranforderung für eine Webseite bekannt sind und als Zeichenfolge im Format MM/dd/yyyy hh:mm:ss zzzz serialisiert wurden, konvertiert die folgende `ReturnTimeOnServer`-Methode diesen Datums- und Uhrzeitwert in das Datum und die Uhrzeit des Webservers.
 
 [!code-csharp[System.DateTimeOffset.Conceptual.OffsetConversions#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.OffsetConversions/cs/TimeConversions.cs#1)]
-[!code-vb[System.DateTimeOffset.Conceptual.OffsetConversions#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.OffsetConversions/vb/TimeConversions.vb#1)] 
+[!code-vb[System.DateTimeOffset.Conceptual.OffsetConversions#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.OffsetConversions/vb/TimeConversions.vb#1)]
 
 Wenn der-Methode die Zeichenfolge "9/1/2007 5:32:07 -05:00", die das Datum und die Uhrzeit in einer Zeitzone von fünf Stunden vor der UTC darstellt, an die-Methode zurückgegeben wird, gibt Sie 9/1/2007 3:32:07 am-07:00 für einen Server zurück, der sich in der US Pacific Standard Time Zone befindet.
 

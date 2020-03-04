@@ -3,17 +3,17 @@ title: Verwalten von Namespaces in einem XML-Dokument
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 682643fc-b848-4e42-8c0d-50deeaeb5f2a
-ms.openlocfilehash: 64ef9fd4ca3a9a83b9cd3eba9cb952b0f668e9f0
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 7b219788895ab2f89fa285c2e1b7de62639bfcf9
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75710699"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78160039"
 ---
 # <a name="managing-namespaces-in-an-xml-document"></a>Verwalten von Namespaces in einem XML-Dokument
 XML-Namespaces ordnen benutzerdefinierten und vordefinierten URIs in einem XML-Dokument Element- und Attributnamen zu. Um diese Zuordnungen zu erstellen, definieren Sie Präfixe für Namespace-URIs und verwenden diese zur Kennzeichnung von Element- und Attributnamen in XML-Daten. Namespaces verhindern Konflikte zwischen Element- und Attributnamen. Sie ermöglichen eine unterschiedliche Verarbeitung und Validierung von gleichnamigen Elementen und Attributen.  
   
-<a name="declare"></a>   
+<a name="declare"></a>
 ## <a name="declaring-namespaces"></a>Deklarieren von Namespaces  
  Um einen Namespace für ein Element zu deklarieren, verwenden Sie das `xmlns:`-Attribut:  
   
@@ -30,7 +30,7 @@ XML-Namespaces ordnen benutzerdefinierten und vordefinierten URIs in einem XML-D
   
  Sie können angeben, dass ein Element Teil eines bestimmten Namespaces ist, indem Sie das Namespacepräfix hinzufügen. Wenn das `Author`-Element beispielsweise ein Teil des `mybook`-Namespaces ist, wird es als `<mybook:Author>` deklariert.  
   
-<a name="scope"></a>   
+<a name="scope"></a>
 ## <a name="declaration-scope"></a>Gültigkeitsbereich der Deklaration  
  Ein Namespace gilt ab dem Punkt der Deklaration bis zum Ende desjenigen Elements, in dem er deklariert wurde. In diesem Beispiel wird der im `BOOK`-Element definierte Namespace nicht auf Elemente außerhalb des `BOOK`-Elements, z. B. das `Publisher`-Element, angewendet:  
   
@@ -65,17 +65,17 @@ XML-Namespaces ordnen benutzerdefinierten und vordefinierten URIs in einem XML-D
   
  Im Folgenden finden Sie einige der Verwaltungs- und Suchaufgaben, die Sie mit der <xref:System.Xml.XmlNamespaceManager>-Klasse ausführen können. Weitere Informationen und Beispiele finden Sie, indem Sie den Links zur Referenzseite der einzelnen Methoden oder Eigenschaften folgen.  
   
-|Zu|Mit|  
+|An|Verwendung|  
 |--------|---------|  
-|Hinzufügen eines Namespaces|<xref:System.Xml.XmlNamespaceManager.AddNamespace%2A>-Methode|  
-|Entfernen eines Namespaces|<xref:System.Xml.XmlNamespaceManager.RemoveNamespace%2A>-Methode|  
-|Suchen des URIs für den Standardnamespace|<xref:System.Xml.XmlNamespaceManager.DefaultNamespace%2A> -Eigenschaft|  
-|Suchen des URIs für ein Namespacepräfix|<xref:System.Xml.XmlNamespaceManager.LookupNamespace%2A>-Methode|  
-|Suchen des Präfixes für einen Namespace-URI|<xref:System.Xml.XmlNamespaceManager.LookupPrefix%2A>-Methode|  
-|Abrufen einer Namespaceliste im aktuellen Knoten|<xref:System.Xml.XmlNamespaceManager.GetNamespacesInScope%2A>-Methode|  
+|Hinzufügen eines Namespaces|<xref:System.Xml.XmlNamespaceManager.AddNamespace%2A> -Methode|  
+|Entfernen eines Namespaces|<xref:System.Xml.XmlNamespaceManager.RemoveNamespace%2A> -Methode|  
+|Suchen des URIs für den Standardnamespace|<xref:System.Xml.XmlNamespaceManager.DefaultNamespace%2A>-Eigenschaft|  
+|Suchen des URIs für ein Namespacepräfix|<xref:System.Xml.XmlNamespaceManager.LookupNamespace%2A> -Methode|  
+|Suchen des Präfixes für einen Namespace-URI|<xref:System.Xml.XmlNamespaceManager.LookupPrefix%2A> -Methode|  
+|Abrufen einer Namespaceliste im aktuellen Knoten|<xref:System.Xml.XmlNamespaceManager.GetNamespacesInScope%2A> -Methode|  
 |Festlegen des Gültigkeitsbereichs für einen Namespace|Die Methoden <xref:System.Xml.XmlNamespaceManager.PushScope%2A> und <xref:System.Xml.XmlNamespaceManager.PopScope%2A>|  
-|Überprüfen, ob im aktuellen Gültigkeitsbereich ein Präfix definiert ist|<xref:System.Xml.XmlNamespaceManager.HasNamespace%2A>-Methode|  
-|Abrufen der Namenstabelle, die für die Suche nach Präfixen und URIs verwendet wird|<xref:System.Xml.XmlNamespaceManager.NameTable%2A> -Eigenschaft|  
+|Überprüfen, ob im aktuellen Gültigkeitsbereich ein Präfix definiert ist|<xref:System.Xml.XmlNamespaceManager.HasNamespace%2A> -Methode|  
+|Abrufen der Namenstabelle, die für die Suche nach Präfixen und URIs verwendet wird|<xref:System.Xml.XmlNamespaceManager.NameTable%2A>-Eigenschaft|  
   
 ## <a name="see-also"></a>Siehe auch
 

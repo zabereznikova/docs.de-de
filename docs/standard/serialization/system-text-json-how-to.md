@@ -9,22 +9,22 @@ helpviewer_keywords:
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: fdca8d957bb2453e90652af1dfe5ef99b33b1b2c
-ms.sourcegitcommit: 5d769956a04b6d68484dd717077fabc191c21da5
+ms.openlocfilehash: 8025f84f2425f5b91e08b28ddb24d105d8c4d1a3
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/17/2020
-ms.locfileid: "76163201"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159584"
 ---
 # <a name="how-to-serialize-and-deserialize-marshal-and-unmarshal-json-in-net"></a>Serialisieren und Deserialisieren (Mars Hallen und Unmarshalling) von JSON in .NET
 
 In diesem Artikel wird gezeigt, wie Sie den <xref:System.Text.Json>-Namespace zum Serialisieren und Deserialisieren in und aus JavaScript Object Notation (JSON) verwenden.
 
-Die Anleitungen und der Beispielcode verwenden die Bibliothek direkt, nicht über ein Framework wie z. B. [ASP.NET Core](/aspnet/core/).
+Die Anleitungen und der Beispielcode verwenden die Bibliothek direkt und nicht über ein Framework, wie z. b. [ASP.net Core](/aspnet/core/).
 
-Der größte Teil des Serialisierungsbeispielcodes legt <xref:System.Text.Json.JsonSerializerOptions.WriteIndented?displayProperty=nameWithType> auf `true` fest, um die JSON-Datei formatiert auszugeben (mit Einzügen und Leerraum für bessere Lesbarkeit). In der produktiven Umgebung würden Sie für diese Einstellung in der Regel den Standardwert `false` beibehalten.
+Der größte Teil des serialisierungsbeispielcodes legt <xref:System.Text.Json.JsonSerializerOptions.WriteIndented?displayProperty=nameWithType> fest, um die JSON-Datei zu `true` (mit einzügkeit und Leerraum für die Lesbarkeit des Menschen). Für die Verwendung in der Produktion akzeptieren Sie in der Regel den Standardwert `false` für diese Einstellung.
 
-## <a name="namespaces"></a>-Namespaces
+## <a name="namespaces"></a>Namespaces
 
 Der <xref:System.Text.Json>-Namespace enthält alle Einstiegspunkte und die Haupttypen. Der <xref:System.Text.Json.Serialization>-Namespace enthält Attribute und APIs für erweiterte Szenarien und Anpassungen, die für die Serialisierung und Deserialisierung spezifisch sind. Die in diesem Artikel gezeigten Codebeispiele erfordern `using`-Direktiven für einen oder beide Namespaces:
 
@@ -33,11 +33,11 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 ```
 
-Attribute aus dem <xref:System.Runtime.Serialization>-Namespace werden derzeit in `System.Text.Json` nicht unterstützt.
+Attribute aus dem <xref:System.Runtime.Serialization>-Namespace werden derzeit in `System.Text.Json`nicht unterstützt.
 
 ## <a name="how-to-write-net-objects-to-json-serialize"></a>Schreiben von .NET-Objekten in JSON (Serialisieren)
 
-Um JSON in eine Zeichenfolge oder eine Datei zu schreiben, müssen Sie die <xref:System.Text.Json.JsonSerializer.Serialize%2A?displayProperty=nameWithType>-Methode aufrufen.
+Um JSON in eine Zeichenfolge oder eine Datei zu schreiben, müssen Sie die <xref:System.Text.Json.JsonSerializer.Serialize%2A?displayProperty=nameWithType>-Methode aufzurufen.
 
 Im folgenden Beispiel wird JSON als Zeichenfolge erstellt:
 
@@ -61,7 +61,7 @@ Im Folgenden finden Sie eine Beispiel-Klasse, die Auflistungen und eine geschach
 
 [!code-csharp[](~/samples/snippets/core/system-text-json/csharp/WeatherForecast.cs?name=SnippetWFWithPOCOs)]
 
-Die JSON-Ausgabe der Serialisierung einer Instanz des vorangehenden Typs sieht wie im folgenden Beispiel aus. Die JSON-Ausgabe wird standardmäßig minimiert: 
+Die JSON-Ausgabe der Serialisierung einer Instanz des vorangehenden Typs sieht wie im folgenden Beispiel aus. Die JSON-Ausgabe wird standardmäßig minimiert:
 
 ```json
 {"Date":"2019-08-01T00:00:00-07:00","TemperatureCelsius":25,"Summary":"Hot","DatesAvailable":["2019-08-01T00:00:00-07:00","2019-08-02T00:00:00-07:00"],"TemperatureRanges":{"Cold":{"High":20,"Low":-10},"Hot":{"High":60,"Low":20}},"SummaryWords":["Cool","Windy","Humid"]}
@@ -98,7 +98,7 @@ Im folgenden Beispiel wird derselbe JSON-Code dargestellt, der formatiert ist (d
 
 ### <a name="serialize-to-utf-8"></a>In UTF-8 serialisieren
 
-Um zu UTF-8 zu serialisieren, müssen Sie die <xref:System.Text.Json.JsonSerializer.SerializeToUtf8Bytes%2A?displayProperty=nameWithType>-Methode aufrufen:
+Um zu UTF-8 zu serialisieren, müssen Sie die <xref:System.Text.Json.JsonSerializer.SerializeToUtf8Bytes%2A?displayProperty=nameWithType>-Methode aufzurufen:
 
 [!code-csharp[](~/samples/snippets/core/system-text-json/csharp/RoundtripToUtf8.cs?name=SnippetSerialize)]
 
@@ -109,30 +109,30 @@ Die Serialisierung in UTF-8 ist ungefähr 5-10 % schneller als die Verwendung de
 ## <a name="serialization-behavior"></a>Serialisierungsverhalten
 
 * Standardmäßig werden alle öffentlichen Eigenschaften serialisiert. Sie können [Eigenschaften angeben, die ausgeschlossen werden sollen](#exclude-properties-from-serialization).
-* Der [Standard-Encoder](xref:System.Text.Encodings.Web.JavaScriptEncoder.Default) schützt Nicht-ASCII-Zeichen, HTML-abhängige Zeichen innerhalb des ASCII-Bereichs und Zeichen, die gemäß [der RFC 8259 JSON-Spezifikation](https://tools.ietf.org/html/rfc8259#section-7) mit Escapezeichen versehen werden müssen.
-* Standardmäßig wird JSON minimiert. Sie können [JSON formatiert ausgeben](#serialize-to-formatted-json).
-* Standardmäßig entspricht die Groß-/Kleinschreibung von JSON-Namen den .NET-Namen. Sie können die [Schreibweise der JSON-Namen anpassen](#customize-json-names-and-values).
+* Der [Standard Encoder](xref:System.Text.Encodings.Web.JavaScriptEncoder.Default) schützt nicht-ASCII-Zeichen, HTML-abhängige Zeichen innerhalb des ASCII-Bereichs und Zeichen, die gemäß [der RFC 8259 JSON-Spezifikation](https://tools.ietf.org/html/rfc8259#section-7)mit Escapezeichen versehen werden müssen.
+* Standardmäßig wird JSON minimiert. Sie können [den JSON-Code ziemlich ausdrucken](#serialize-to-formatted-json).
+* Standardmäßig entspricht die Groß-/Kleinschreibung von JSON-Namen den .NET-Namen. Sie können die [JSON-namens](#customize-json-names-and-values)Schreibweise anpassen.
 * Zirkuläre Verweise werden erkannt, und Ausnahmen werden ausgelöst.
 * Felder werden derzeit ausgeschlossen.
 
 Folgende Typen werden unterstützt:
 
 * .Net-primitive, die JavaScript-primitiven zugeordnet sind, z. b. numerische Typen, Zeichen folgen und boolesche Werte.
-* Benutzerdefinierte [Plain Old CLR Objects (POCOs)](https://stackoverflow.com/questions/250001/poco-definition)
-* Eindimensionale und verzweigte Arrays (`ArrayName[][]`)
-* `Dictionary<string,TValue>`, wo `TValue` ein `object`, `JsonElement` oder ein POCO ist
+* Benutzerdefinierte [Plain Old CLR Objects (POCOS)](https://stackoverflow.com/questions/250001/poco-definition).
+* Eindimensionales und verzweigte Arrays (`ArrayName[][]`).
+* `Dictionary<string,TValue>`, wo `TValue` `object`, `JsonElement`oder poco ist.
 * Sammlungen aus den folgenden Namespaces.
   * <xref:System.Collections>
   * <xref:System.Collections.Generic>
   * <xref:System.Collections.Immutable>
 
-Sie können [benutzerdefinierte Konverter implementieren](system-text-json-converters-how-to.md), um zusätzliche Typen zu verarbeiten oder Funktionen bereitzustellen, die von den integrierten Konvertern nicht unterstützt werden.
+Sie können [benutzerdefinierte Konverter implementieren](system-text-json-converters-how-to.md) , um zusätzliche Typen zu verarbeiten oder Funktionen bereitzustellen, die von den integrierten Konvertern nicht unterstützt werden.
 
 ## <a name="how-to-read-json-into-net-objects-deserialize"></a>Lesen von JSON in .NET-Objekte (Deserialisieren)
 
-Um eine Zeichenfolge oder eine Datei zu deserialisieren, müssen Sie die <xref:System.Text.Json.JsonSerializer.Deserialize%2A?displayProperty=nameWithType>-Methode aufrufen.
+Um eine Zeichenfolge oder eine Datei zu deserialisieren, müssen Sie die <xref:System.Text.Json.JsonSerializer.Deserialize%2A?displayProperty=nameWithType>-Methode aufzurufen.
 
-Im folgenden Beispiel wird JSON aus einer Zeichenfolge gelesen und eine Instanz der `WeatherForecast`-Klasse erstellt, die zuvor für das [Serialisierungsbeispiel](#serialization-example) gezeigt wurde:
+Im folgenden Beispiel wird JSON aus einer Zeichenfolge gelesen und eine Instanz der `WeatherForecast`-Klasse erstellt, die zuvor für das [serialisierungsbeispiel](#serialization-example)gezeigt wurde:
 
 [!code-csharp[](~/samples/snippets/core/system-text-json/csharp/RoundtripToString.cs?name=SnippetDeserialize)]
 
@@ -140,13 +140,13 @@ Wenn Sie aus einer Datei mithilfe von synchronem Code deserialisieren möchten, 
 
 [!code-csharp[](~/samples/snippets/core/system-text-json/csharp/RoundtripToFile.cs?name=SnippetDeserialize)]
 
-Um mithilfe von asynchronem Code aus einer Datei zu deserialisieren, müssen Sie die <xref:System.Text.Json.JsonSerializer.DeserializeAsync%2A>-Methode aufrufen:
+Um mithilfe von asynchronem Code aus einer Datei zu deserialisieren, müssen Sie die <xref:System.Text.Json.JsonSerializer.DeserializeAsync%2A>-Methode abrufen:
 
 [!code-csharp[](~/samples/snippets/core/system-text-json/csharp/RoundtripToFileAsync.cs?name=SnippetDeserialize)]
 
 ### <a name="deserialize-from-utf-8"></a>Aus UTF-8 deserialisieren
 
-Um aus UTF-8 zu deserialisieren, müssen Sie eine <xref:System.Text.Json.JsonSerializer.Deserialize%2A?displayProperty=nameWithType>-Überladung aufrufen, die einen `Utf8JsonReader` oder eine `ReadOnlySpan<byte>` annimmt, wie in den folgenden Beispielen gezeigt. In den Beispielen wird davon ausgegangen, dass sich JSON in einem Bytearray namens jsonUtf8Bytes befindet.
+Um von UTF-8 zu deserialisieren, müssen Sie eine <xref:System.Text.Json.JsonSerializer.Deserialize%2A?displayProperty=nameWithType> Überladung aufrufen, die eine `Utf8JsonReader` oder eine `ReadOnlySpan<byte>`annimmt, wie in den folgenden Beispielen gezeigt. In den Beispielen wird davon ausgegangen, dass sich JSON in einem Bytearray namens jsonUtf8Bytes befindet.
 
 [!code-csharp[](~/samples/snippets/core/system-text-json/csharp/RoundtripToUtf8.cs?name=SnippetDeserialize1)]
 
@@ -161,13 +161,13 @@ Um aus UTF-8 zu deserialisieren, müssen Sie eine <xref:System.Text.Json.JsonSer
 * Standardmäßig werden Enumerationen als Zahlen unterstützt. Enumerationsnamen können als Zeichen folgen [serialisiert](#enums-as-strings)werden.
 * Felder werden nicht unterstützt.
 * Standardmäßig lösen Kommentare oder nachfolgende Kommas in der JSON-Datei Ausnahmen aus. Sie können [Kommentare und nachfolgende Kommas zulassen](#allow-comments-and-trailing-commas).
-* Der Standardwert für die [maximale Tiefe](xref:System.Text.Json.JsonReaderOptions.MaxDepth) ist 64.
+* Der Standardwert für die [Maximale Tiefe](xref:System.Text.Json.JsonReaderOptions.MaxDepth) ist 64.
 
-Sie können [benutzerdefinierte Konverter implementieren](system-text-json-converters-how-to.md), um Funktionen bereitzustellen, die von den integrierten Konvertern nicht unterstützt werden.
+Sie können [benutzerdefinierte Konverter implementieren](system-text-json-converters-how-to.md) , um Funktionen bereitzustellen, die von den integrierten Konvertern nicht unterstützt werden.
 
 ## <a name="serialize-to-formatted-json"></a>Serialisieren in formatierten JSON-Code
 
-Um die JSON-Ausgabe zu formatieren, legen Sie <xref:System.Text.Json.JsonSerializerOptions.WriteIndented?displayProperty=nameWithType> auf `true` fest:
+Um die JSON-Ausgabe zu Recht drucken, legen Sie <xref:System.Text.Json.JsonSerializerOptions.WriteIndented?displayProperty=nameWithType> auf `true`fest:
 
 [!code-csharp[](~/samples/snippets/core/system-text-json/csharp/RoundtripToString.cs?name=SnippetSerializePrettyPrint)]
 
@@ -189,15 +189,15 @@ Standardmäßig sind Eigenschaftsnamen und Wörterbuchschlüssel in der JSON-Aus
 
 * [Anpassen einzelner Eigenschaftsnamen](#customize-individual-property-names)
 * [Alle Eigenschaftsnamen in Camel-Case konvertieren](#use-camel-case-for-all-json-property-names)
-* [Implementieren einer benutzerdefinierten Benennungsrichtlinie für Eigenschaften](#use-a-custom-json-property-naming-policy)
-* [Wörterbuchschlüssel in Camel-Case konvertieren](#camel-case-dictionary-keys)
-* [Enumerationen in Zeichenfolgen und Camel-Case konvertieren](#enums-as-strings) 
+* [Implementieren einer benutzerdefinierten Benennungs Richtlinie für Eigenschaften](#use-a-custom-json-property-naming-policy)
+* [Wörterbuch Schlüssel in Kamel-Schreibweise konvertieren](#camel-case-dictionary-keys)
+* [Enumerationszeichen in Zeichen folgen und Camel-Case konvertieren](#enums-as-strings)
 
-Für andere Szenarios, die eine besondere Behandlung von JSON-Eigenschaftsnamen und -Werten erfordern, können Sie [benutzerdefinierte Konverter implementieren](system-text-json-converters-how-to.md).
+Für andere Szenarien, die eine besondere Behandlung von JSON-Eigenschaftsnamen und-Werten erfordern, können Sie [benutzerdefinierte Konverter implementieren](system-text-json-converters-how-to.md).
 
 ### <a name="customize-individual-property-names"></a>Anpassen einzelner Eigenschaftsnamen
 
-Um den Namen einzelner Eigenschaften festzulegen, verwenden Sie das [[JsonPropertyName]](xref:System.Text.Json.Serialization.JsonPropertyNameAttribute)-Attribut.
+Um den Namen einzelner Eigenschaften festzulegen, verwenden Sie das [[jsonpropertyname]](xref:System.Text.Json.Serialization.JsonPropertyNameAttribute) -Attribut.
 
 Hier ist ein Beispiel für die Serialisierung und die daraus resultierende JSON-Datei:
 
@@ -219,7 +219,7 @@ Der durch dieses Attribut festgelegte Eigenschaftsname:
 
 ### <a name="use-camel-case-for-all-json-property-names"></a>Camel-Case für alle JSON-Eigenschaftsnamen verwenden
 
-Wenn Sie die Camel-Case-Schreibweise für alle JSON-Eigenschaftsnamen verwenden möchten, legen Sie <xref:System.Text.Json.JsonSerializerOptions.PropertyNamingPolicy?displayProperty=nameWithType> auf `JsonNamingPolicy.CamelCase` fest, wie im folgenden Beispiel gezeigt:
+Wenn Sie die Kamel-Schreibweise für alle JSON-Eigenschaftsnamen verwenden möchten, legen Sie <xref:System.Text.Json.JsonSerializerOptions.PropertyNamingPolicy?displayProperty=nameWithType> auf `JsonNamingPolicy.CamelCase`fest, wie im folgenden Beispiel gezeigt:
 
 [!code-csharp[](~/samples/snippets/core/system-text-json/csharp/RoundTripCamelCasePropertyNames.cs?name=Serialize)]
 
@@ -239,15 +239,15 @@ Im Folgenden finden Sie eine Beispielklasse zum Serialisieren und die JSON-Ausga
 Die Camel-Case-Benennungsrichtlinie für Eigenschaften:
 
 * Gilt für die Serialisierung und Deserialisierung.
-* Wird von `[JsonPropertyName]`-Attributen überschrieben. Aus diesem Grund ist der Name der JSON-Eigenschaft `Wind` im Beispiel nicht Camel-Case.
+* Wird von `[JsonPropertyName]` Attributen überschrieben. Aus diesem Grund ist der Name der JSON-Eigenschaft `Wind` im Beispiel nicht Camel Case.
 
 ### <a name="use-a-custom-json-property-naming-policy"></a>Verwenden einer benutzerdefinierten Benennungsrichtlinie für JSON-Eigenschaften
 
-Um eine benutzerdefinierte Benennungsrichtlinie für JSON-Eigenschaften zu verwenden, erstellen Sie eine Klasse, die von <xref:System.Text.Json.JsonNamingPolicy> abgeleitet ist, und überschreiben Sie die <xref:System.Text.Json.JsonNamingPolicy.ConvertName%2A>-Methode, wie im folgenden Beispiel gezeigt:
+Um eine benutzerdefinierte JSON-Benennungs Richtlinie zu verwenden, erstellen Sie eine Klasse, die von <xref:System.Text.Json.JsonNamingPolicy> abgeleitet ist, und überschreiben Sie die <xref:System.Text.Json.JsonNamingPolicy.ConvertName%2A>-Methode, wie im folgenden Beispiel gezeigt:
 
 [!code-csharp[](~/samples/snippets/core/system-text-json/csharp/UpperCaseNamingPolicy.cs)]
 
-Legen Sie dann die <xref:System.Text.Json.JsonSerializerOptions.PropertyNamingPolicy?displayProperty=nameWithType>-Eigenschaft auf eine Instanz Ihrer Benennungsrichtlinienklasse fest:
+Legen Sie dann die <xref:System.Text.Json.JsonSerializerOptions.PropertyNamingPolicy?displayProperty=nameWithType>-Eigenschaft auf eine Instanz Ihrer Benennungs Richtlinien Klasse fest:
 
 [!code-csharp[](~/samples/snippets/core/system-text-json/csharp/RoundtripPropertyNamingPolicy.cs?name=SnippetSerialize)]
 
@@ -267,11 +267,11 @@ Im Folgenden finden Sie eine Beispielklasse zum Serialisieren und die JSON-Ausga
 Die Benennungsrichtlinie für JSON-Eigenschaften:
 
 * Gilt für die Serialisierung und Deserialisierung.
-* Wird von `[JsonPropertyName]`-Attributen überschrieben. Aus diesem Grund ist der JSON-Eigenschaftsname `Wind` im Beispiel nicht in Großbuchstaben.
+* Wird von `[JsonPropertyName]` Attributen überschrieben. Aus diesem Grund ist der JSON-Eigenschaftsname `Wind` im Beispiel nicht Großbuchstaben.
 
 ### <a name="camel-case-dictionary-keys"></a>Camel-Case Wörterbuchschlüssel
 
-Wenn eine Eigenschaft eines zu serialisierenden Objekts vom Typ `Dictionary<string,TValue>` ist, können die `string`-Schlüssel in die Camel-Case-Schreibweise konvertiert werden. Legen Sie dazu die <xref:System.Text.Json.JsonSerializerOptions.DictionaryKeyPolicy> auf `JsonNamingPolicy.CamelCase` fest, wie im folgenden Beispiel gezeigt:
+Wenn eine Eigenschaft eines zu serialisierenden Objekts vom Typ `Dictionary<string,TValue>`ist, können die `string` Schlüssel in die Kamel-Schreibweise konvertiert werden. Legen Sie zu diesem Zweck <xref:System.Text.Json.JsonSerializerOptions.DictionaryKeyPolicy> auf `JsonNamingPolicy.CamelCase`fest, wie im folgenden Beispiel gezeigt:
 
 [!code-csharp[](~/samples/snippets/core/system-text-json/csharp/SerializeCamelCaseDictionaryKeys.cs?name=SnippetSerialize)]
 
@@ -289,17 +289,17 @@ Das Serialisieren eines Objekts mit einem Wörterbuch mit dem Namen `Temperature
 }
 ```
 
-Die Camel-Case-Benennungsrichtlinie für Wörterbuchschlüssel gilt nur für die Serialisierung. Wenn Sie ein Wörterbuch deserialisieren, entsprechen die Schlüssel denen in der JSON-Datei, auch wenn Sie `JsonNamingPolicy.CamelCase` als `DictionaryKeyPolicy` angeben.
+Die Camel-Case-Benennungsrichtlinie für Wörterbuchschlüssel gilt nur für die Serialisierung. Wenn Sie ein Wörterbuch deserialisieren, entsprechen die Schlüssel der JSON-Datei, auch wenn Sie `JsonNamingPolicy.CamelCase` für die `DictionaryKeyPolicy`angeben.
 
 ### <a name="enums-as-strings"></a>Enumerationen als Zeichenfolgen
 
-Standardmäßig werden Enumerationen als Zahlen serialisiert. Verwenden Sie den <xref:System.Text.Json.Serialization.JsonStringEnumConverter>, um Enumerationsnamen als Zeichenfolgen zu serialisieren.
+Standardmäßig werden Enumerationen als Zahlen serialisiert. Verwenden Sie die <xref:System.Text.Json.Serialization.JsonStringEnumConverter>, um Enumerationsnamen als Zeichen folgen zu serialisieren.
 
 Nehmen Sie beispielsweise an, Sie müssen die folgende Klasse serialisieren, die über eine Enumeration verfügt:
 
 [!code-csharp[](~/samples/snippets/core/system-text-json/csharp/WeatherForecast.cs?name=SnippetWFWithEnum)]
 
-Wenn die Summary-Eigenschaft `Hot` ist, hat die serialisierte JSON standardmäßig den numerischen Wert 3:
+Wenn die Zusammenfassung `Hot`ist, hat die serialisierte JSON standardmäßig den numerischen Wert 3:
 
 ```json
 {
@@ -337,7 +337,7 @@ Standardmäßig werden alle öffentlichen Eigenschaften serialisiert. Wenn Sie m
 
 ### <a name="exclude-individual-properties"></a>Einzelne Eigenschaften ausschließen
 
-Verwenden Sie das [[JsonIgnore]](xref:System.Text.Json.Serialization.JsonIgnoreAttribute)-Attribut, um einzelne Eigenschaften zu ignorieren.
+Verwenden Sie das Attribut [[jsonignore]](xref:System.Text.Json.Serialization.JsonIgnoreAttribute) , um einzelne Eigenschaften zu ignorieren.
 
 Hier ist ein Beispiel für die Serialisierung und JSON-Ausgabe:
 
@@ -352,7 +352,7 @@ Hier ist ein Beispiel für die Serialisierung und JSON-Ausgabe:
 
 ### <a name="exclude-all-read-only-properties"></a>Alle schreibgeschützten Eigenschaften ausschließen
 
-Eine Eigenschaft ist schreibgeschützt, wenn Sie einen öffentlichen Getter, aber keinen öffentlichen Setter enthält. Um alle schreibgeschützten Eigenschaften auszuschließen, legen Sie die <xref:System.Text.Json.JsonSerializerOptions.IgnoreReadOnlyProperties?displayProperty=nameWithType>-Eigenschaft auf `true` fest, wie im folgenden Beispiel gezeigt:
+Eine Eigenschaft ist schreibgeschützt, wenn Sie einen öffentlichen Getter, aber keinen öffentlichen Setter enthält. Um alle schreibgeschützten Eigenschaften auszuschließen, legen Sie den <xref:System.Text.Json.JsonSerializerOptions.IgnoreReadOnlyProperties?displayProperty=nameWithType> auf `true`fest, wie im folgenden Beispiel gezeigt:
 
 [!code-csharp[](~/samples/snippets/core/system-text-json/csharp/SerializeExcludeReadOnlyProperties.cs?name=SnippetSerialize)]
 
@@ -372,17 +372,17 @@ Diese Option gilt nur für die Serialisierung. Während der Deserialisierung wer
 
 ### <a name="exclude-all-null-value-properties"></a>Alle Eigenschaften mit NULL-Wert ausschließen
 
-Um alle Eigenschaften mit NULL-Werten auszuschließen, legen Sie die <xref:System.Text.Json.JsonSerializerOptions.IgnoreNullValues>-Eigenschaft auf `true` fest, wie im folgenden Beispiel gezeigt:
+Um alle NULL-Wert Eigenschaften auszuschließen, legen Sie die <xref:System.Text.Json.JsonSerializerOptions.IgnoreNullValues>-Eigenschaft auf `true`fest, wie im folgenden Beispiel gezeigt:
 
 [!code-csharp[](~/samples/snippets/core/system-text-json/csharp/SerializeExcludeNullValueProperties.cs?name=SnippetSerialize)]
 
 Im folgenden finden Sie ein Beispiel Objekt für die Serialisierung und JSON-Ausgabe:
 
-|Die Eigenschaften- |{2&gt;Wert&lt;2}  |
+|Eigenschaft |Wert  |
 |---------|---------|
 | Datum    | 01.08.2019 00:00:00 -07:00|
 | TemperatureCelsius| 25 |
-| Summary| NULL|
+| Zusammenfassung| null|
 
 ```json
 {
@@ -395,7 +395,7 @@ Diese Einstellung gilt für die Serialisierung und Deserialisierung. Information
 
 ## <a name="customize-character-encoding"></a>Zeichencodierung anpassen
 
-Standardmäßig schützt der Serialisierer alle Nicht-ASCII-Zeichen.  Das heißt, er ersetzt sie durch `\uxxxx`, wobei `xxxx` der Unicode-Code des Zeichens ist.  Wenn die `Summary`-Eigenschaft z. B. auf kyrillisch жарко festgelegt ist, wird das `WeatherForecast`-Objekt serialisiert, wie in diesem Beispiel gezeigt:
+Standardmäßig schützt der Serialisierer alle Nicht-ASCII-Zeichen.  Das heißt, Sie ersetzt Sie durch `\uxxxx`, wobei `xxxx` der Unicode-Code des Zeichens ist.  Wenn die `Summary`-Eigenschaft z. b. auf Cyrillic-"-Eigenschaft" festgelegt ist, wird das `WeatherForecast` Objekt wie in diesem Beispiel gezeigt serialisiert:
 
 ```json
 {
@@ -407,13 +407,13 @@ Standardmäßig schützt der Serialisierer alle Nicht-ASCII-Zeichen.  Das heißt
 
 ### <a name="serialize-language-character-sets"></a>Serialisieren von Sprachzeichensätzen
 
-Wenn Sie die Zeichensätze mindestens einer Sprache ohne Escapezeichen serialisieren möchten, geben Sie einen oder mehrere [Unicode-Bereiche](xref:System.Text.Unicode.UnicodeRanges) beim Erstellen einer <xref:System.Text.Encodings.Web.JavaScriptEncoder?displayProperty=fullName>-Instanz an, wie im folgenden Beispiel gezeigt:
+Wenn Sie die Zeichensätze mindestens einer Sprache ohne Escapezeichen serialisieren möchten, müssen Sie beim Erstellen einer Instanz von <xref:System.Text.Encodings.Web.JavaScriptEncoder?displayProperty=fullName>[Unicode-Bereiche](xref:System.Text.Unicode.UnicodeRanges) angeben, wie im folgenden Beispiel gezeigt:
 
 [!code-csharp[](~/samples/snippets/core/system-text-json/csharp/SerializeCustomEncoding.cs?name=SnippetUsings)]
 
 [!code-csharp[](~/samples/snippets/core/system-text-json/csharp/SerializeCustomEncoding.cs?name=SnippetLanguageSets)]
 
-Mit diesem Code werden kyrillische und griechische Zeichen nicht geschützt. Wenn die `Summary`-Eigenschaft auf kyrillisch жарко festgelegt ist, wird das `WeatherForecast`-Objekt wie in diesem Beispiel gezeigt serialisiert:
+Mit diesem Code werden kyrillische und griechische Zeichen nicht geschützt. Wenn die `Summary`-Eigenschaft auf Cyrillic--,-festgelegt ist, wird das `WeatherForecast`-Objekt wie in diesem Beispiel gezeigt serialisiert:
 
 ```json
 {
@@ -423,7 +423,7 @@ Mit diesem Code werden kyrillische und griechische Zeichen nicht geschützt. Wen
 }
 ```
 
-Verwenden Sie <xref:System.Text.Unicode.UnicodeRanges.All?displayProperty=nameWithType>, um alle Sprachzeichensätze ungeschützt zu serialisieren.
+Verwenden Sie <xref:System.Text.Unicode.UnicodeRanges.All?displayProperty=nameWithType>, um alle sprach Sätze ohne Escapezeichen zu serialisieren.
 
 ### <a name="serialize-specific-characters"></a>Serialisieren bestimmter Zeichen
 
@@ -445,19 +445,19 @@ Im Folgenden finden Sie ein Beispiel für die JSON-Ausgabe, die durch den vorang
 
 ### <a name="serialize-all-characters"></a>Alle Zeichen serialisieren
 
-Um das Schützen zu minimieren, können Sie <xref:System.Text.Encodings.Web.JavaScriptEncoder.UnsafeRelaxedJsonEscaping?displayProperty=nameWithType> verwenden, wie im folgenden Beispiel gezeigt:
+Um das Escapezeichen zu minimieren, können Sie <xref:System.Text.Encodings.Web.JavaScriptEncoder.UnsafeRelaxedJsonEscaping?displayProperty=nameWithType>verwenden, wie im folgenden Beispiel gezeigt:
 
 [!code-csharp[](~/samples/snippets/core/system-text-json/csharp/SerializeCustomEncoding.cs?name=SnippetUsings)]
 
 [!code-csharp[](~/samples/snippets/core/system-text-json/csharp/SerializeCustomEncoding.cs?name=SnippetUnsafeRelaxed)]
 
 > [!CAUTION]
-> Im Vergleich zum Standardencoder lässt der `UnsafeRelaxedJsonEscaping`-Encoder mehr Zeichen ohne Escapezeichen durch:
+> Im Vergleich zum Standard-Encoder ist der `UnsafeRelaxedJsonEscaping` Encoder eher für das Zulassen von Zeichen ohne Escapezeichen zulässig:
 >
-> * Es werden keine HTML-sensiblen Zeichen wie `<`, `>`, `&`und `'` mit Escapezeichen versehen.
+> * Es werden keine HTML-sensiblen Zeichen wie `<`, `>`, `&`und `'`mit Escapezeichen versehen.
 > * Er bietet keine zusätzlichen Schutzmaßnahmen vor XSS-oder Informations Offenlegungs Angriffen, wie z. b. solche, die sich aus dem Client und dem Server ergeben könnten, die auf dem *CharSet*nicht einverstanden sind.
 >
-> Verwenden Sie den unsicheren Encoder nur dann, wenn bekannt ist, dass der Client die resultierende Nutzlast als UTF-8-codiertes JSON-Format interpretiert. Sie können ihn beispielsweise verwenden, wenn der Server den Antwortheader `Content-Type: application/json; charset=utf-8` sendet. Erlauben Sie niemals, dass eine rohe `UnsafeRelaxedJsonEscaping`-Ausgabe in eine HTML-Seite oder ein `<script>`-Element ausgegeben wird.
+> Verwenden Sie den unsicheren Encoder nur dann, wenn bekannt ist, dass der Client die resultierende Nutzlast als UTF-8-codiertes JSON-Format interpretiert. Sie können Sie beispielsweise verwenden, wenn der Server den Antwortheader `Content-Type: application/json; charset=utf-8`sendet. Gestatten Sie niemals, dass die Roh`UnsafeRelaxedJsonEscaping` Ausgabe in eine HTML-Seite oder ein `<script>` Element ausgegeben wird.
 
 ## <a name="serialize-properties-of-derived-classes"></a>Serialisieren von Eigenschaften abgeleiteter Klassen
 
@@ -491,7 +491,7 @@ Verwenden Sie einen der folgenden Ansätze, um die Eigenschaften des abgeleitete
 
   [!code-csharp[](~/samples/snippets/core/system-text-json/csharp/SerializePolymorphic.cs?name=SnippetSerializeGetType)]
 
-* Deklarieren Sie das Objekt, das serialisiert werden soll, als `object`.
+* Deklarieren Sie das Objekt, das als `object`serialisiert werden soll.
 
   [!code-csharp[](~/samples/snippets/core/system-text-json/csharp/SerializePolymorphic.cs?name=SnippetSerializeObject)]
 
@@ -507,7 +507,7 @@ Im vorherigen Beispielszenario bewirken beide Ansätze, dass die `WindSpeed`-Eig
 ```
 
 > [!IMPORTANT]
-> Diese Ansätze bieten polymorphe Serialisierung nur für das Stamm Objekt, das serialisiert werden soll, und nicht für die Eigenschaften dieses Stamm Objekts. 
+> Diese Ansätze bieten polymorphe Serialisierung nur für das Stamm Objekt, das serialisiert werden soll, und nicht für die Eigenschaften dieses Stamm Objekts.
 
 Sie können die polymorphe Serialisierung für Objekte auf niedrigerer Ebene erhalten, wenn Sie Sie als Typ `object`definieren. Angenommen, die `WeatherForecast`-Klasse verfügt über eine Eigenschaft mit dem Namen `PreviousForecast`, die als Typ `WeatherForecast` oder `object`definiert werden kann:
 
@@ -566,7 +566,7 @@ Das folgende Beispiel zeigt die JSON-Datei, die sich aus dem vorangehenden Code 
 }
 ```
 
-Weitere Informationen zur polymorphen **Serialisierung**und Informationen zur **Deserialisierung**finden [Sie unter Migrieren von Newtonsoft.Json zu System.Text.Json](system-text-json-migrate-from-newtonsoft-how-to.md#polymorphic-serialization).
+Weitere Informationen zur polymorphen **Serialisierung**und Informationen zur **Deserialisierung**finden [Sie unter Migrieren von "newtonsoft. JSON" zu "System. Text. JSON](system-text-json-migrate-from-newtonsoft-how-to.md#polymorphic-serialization)".
 
 ## <a name="allow-comments-and-trailing-commas"></a>Kommentare und nachfolgende Kommas zulassen
 
@@ -587,7 +587,7 @@ Im Folgenden finden Sie ein Beispiel für JSON mit Kommentaren und einem nachfol
 
 ## <a name="case-insensitive-property-matching"></a>Groß-/Kleinschreibung bei Eigenschaftsnamen ignorieren
 
-Standardmäßig wird bei der Deserialisierung darauf geachtet, dass die Groß-/Kleinschreibung der Eigenschaftsnamen zwischen JSON und dem Zielobjekt übereinstimmt. Um dieses Verhalten zu ändern, legen Sie <xref:System.Text.Json.JsonSerializerOptions.PropertyNameCaseInsensitive?displayProperty=nameWithType> auf `true` fest:
+Standardmäßig wird bei der Deserialisierung darauf geachtet, dass die Groß-/Kleinschreibung der Eigenschaftsnamen zwischen JSON und dem Zielobjekt übereinstimmt. Um dieses Verhalten zu ändern, legen Sie <xref:System.Text.Json.JsonSerializerOptions.PropertyNameCaseInsensitive?displayProperty=nameWithType> auf `true`fest:
 
 [!code-csharp[](~/samples/snippets/core/system-text-json/csharp/DeserializeCaseInsensitive.cs?name=SnippetDeserialize)]
 
@@ -628,17 +628,17 @@ Der JSON-Code, der deserialisiert werden soll, lautet wie folgt:
 }
 ```
 
-Wenn Sie den obenstehenden JSON-Code in den angezeigten Typ deserialisieren, sind die Eigenschaften `DatesAvailable` und `SummaryWords` nicht mehr vorhanden und gehen verloren. Um zusätzliche Daten wie diese Eigenschaften zu erfassen, wenden Sie das [JsonExtensionData](xref:System.Text.Json.Serialization.JsonExtensionDataAttribute)-Attribut auf eine Eigenschaft vom Typ `Dictionary<string,object>` oder `Dictionary<string,JsonElement>` an:
+Wenn Sie den JSON-Code deserialisieren, der in den angezeigten Typ angezeigt wird, sind die Eigenschaften `DatesAvailable` und `SummaryWords` nicht mehr vorhanden und gehen verloren. Um zusätzliche Daten wie diese Eigenschaften zu erfassen, wenden Sie das [jsonextensiondata](xref:System.Text.Json.Serialization.JsonExtensionDataAttribute) -Attribut auf eine Eigenschaft vom Typ `Dictionary<string,object>` oder `Dictionary<string,JsonElement>`an:
 
 [!code-csharp[](~/samples/snippets/core/system-text-json/csharp/WeatherForecast.cs?name=SnippetWFWithExtensionData)]
 
 Wenn Sie den zuvor gezeigten JSON-Code in diesen Beispieltyp deserialisieren, werden die zusätzlichen Daten zu Schlüssel-Wert-Paaren der `ExtensionData`-Eigenschaft:
 
-|Die Eigenschaften- |{2&gt;Wert&lt;2}  |Hinweise  |
+|Eigenschaft |Wert  |Hinweise  |
 |---------|---------|---------|
 | Datum    | 01.08.2019 00:00:00 -07:00||
 | TemperatureCelsius| 0 | Unterscheidung nach Groß-/Kleinschreibung (`temperatureCelsius` im JSON-Code), sodass die-Eigenschaft nicht festgelegt ist. |
-| Summary | Hohe Auslastung ||
+| Zusammenfassung | Hohe Auslastung ||
 | ExtensionData | TemperatureCelsius: 25 |Da die Groß-/Kleinschreibung nicht entsprach, ist diese JSON-Eigenschaft ein zusätzliches und wird zu einem Schlüssel-Wert-Paar im Wörterbuch.|
 || Datesavailable:<br>  01.08.2019 00:00:00 -07:00<br>8/2/2019 12:00:00 Uhr-07:00 |Die zusätzliche Eigenschaft aus dem JSON-Code wird zu einem Schlüssel-Wert-Paar, wobei ein Array als Wertobjekt fungiert.|
 | |Summarywords:<br>Toll<br>Windy<br>Feu |Die zusätzliche Eigenschaft aus dem JSON-Code wird zu einem Schlüssel-Wert-Paar, wobei ein Array als Wertobjekt fungiert.|
@@ -685,36 +685,36 @@ Angenommen, der folgende JSON-Code wird deserialisiert:
 
 Nach der Deserialisierung ist die `Summary`-Eigenschaft des `WeatherForecastWithDefault`-Objekts NULL.
 
-Um dieses Verhalten zu ändern, legen Sie die <xref:System.Text.Json.JsonSerializerOptions.IgnoreNullValues?displayProperty=nameWithType>-Eigenschaft auf `true` fest, wie im folgenden Beispiel gezeigt:
+Um dieses Verhalten zu ändern, legen Sie <xref:System.Text.Json.JsonSerializerOptions.IgnoreNullValues?displayProperty=nameWithType> auf `true`fest, wie im folgenden Beispiel gezeigt:
 
 [!code-csharp[](~/samples/snippets/core/system-text-json/csharp/DeserializeIgnoreNull.cs?name=SnippetDeserialize)]
 
-Mit dieser Option ist die `Summary`-Eigenschaft des `WeatherForecastWithDefault`-Objekts nach der Deserialisierung der Standardwert "No summary".
+Bei dieser Option ist die `Summary`-Eigenschaft des `WeatherForecastWithDefault` Objekts der Standardwert "keine Zusammenfassung" nach der Deserialisierung.
 
 NULL-Werte in JSON werden nur ignoriert, wenn sie gültig sind. NULL-Werte für Werttypen, die keine NULL-Werte zulassen, verursachen Ausnahmen.
 
 ## <a name="utf8jsonreader-utf8jsonwriter-and-jsondocument"></a>Utf8JsonReader, Utf8JsonWriter und JsonDocument
 
-<xref:System.Text.Json.Utf8JsonReader?displayProperty=fullName> ist eine leistungsstarke, niedrige und vorwärts gerichtete Funktion für UTF-8-codierten JSON-Text, der aus einem `ReadOnlySpan<byte>` oder `ReadOnlySequence<byte>`gelesen wird. Der `Utf8JsonReader` ist ein Typ auf niedriger Ebene, der zum Erstellen von benutzerdefinierten Parsern und Deserialisierern verwendet werden kann. Die <xref:System.Text.Json.JsonSerializer.Deserialize%2A?displayProperty=nameWithType>-Methode verwendet intern einen `Utf8JsonReader`.
+<xref:System.Text.Json.Utf8JsonReader?displayProperty=fullName> ist eine leistungsstarke, niedrige und vorwärts gerichtete Funktion für UTF-8-codierten JSON-Text, der aus einem `ReadOnlySpan<byte>` oder `ReadOnlySequence<byte>`gelesen wird. Der `Utf8JsonReader` ist ein Typ auf niedriger Ebene, der zum Erstellen von benutzerdefinierten Parser und deserialisierern verwendet werden kann. Die <xref:System.Text.Json.JsonSerializer.Deserialize%2A?displayProperty=nameWithType>-Methode verwendet `Utf8JsonReader` unter dem Cover.
 
-<xref:System.Text.Json.Utf8JsonWriter?displayProperty=fullName> ist eine leistungsstarke Methode zum Schreiben von UTF-8-codiertem JSON-Text aus gängigen .NET-Typen wie `String`, `Int32` und `DateTime`. Der Writer ist ein Typ auf niedriger Ebene, der zum Erstellen von benutzerdefinierten Serialisierern verwendet werden kann. Die <xref:System.Text.Json.JsonSerializer.Serialize%2A?displayProperty=nameWithType>-Methode verwendet intern einen `Utf8JsonWriter`.
+<xref:System.Text.Json.Utf8JsonWriter?displayProperty=fullName> ist eine hochleistungsfähige Methode zum Schreiben von UTF-8-codiertem JSON-Text aus gängigen .NET-Typen wie `String`, `Int32`und `DateTime`. Der Writer ist ein Typ auf niedriger Ebene, der zum Erstellen von benutzerdefinierten Serialisierern verwendet werden kann. Die <xref:System.Text.Json.JsonSerializer.Serialize%2A?displayProperty=nameWithType>-Methode verwendet `Utf8JsonWriter` unter dem Cover.
 
-<xref:System.Text.Json.JsonDocument?displayProperty=fullName> bietet die Möglichkeit, mit `Utf8JsonReader` ein schreibgeschütztes Dokumentobjektmodell (DOM) zu erstellen. Das DOM bietet wahlfreien Zugriff auf Daten in einer JSON-Nutzlast. Auf die JSON-Elemente, aus denen sich die Nutzlast zusammensetzt, kann über den <xref:System.Text.Json.JsonElement>-Typ zugegriffen werden. Der `JsonElement`-Typ stellt Array- und Objektenumeratoren bereit zusammen mit APIs, um JSON-Text in allgemeine .NET-Typen zu konvertieren. `JsonDocument` macht eine <xref:System.Text.Json.JsonDocument.RootElement>-Eigenschaft verfügbar.
+<xref:System.Text.Json.JsonDocument?displayProperty=fullName> bietet die Möglichkeit, mit `Utf8JsonReader`ein Schreib geschütztes Dokumentobjektmodell (DOM) zu erstellen. Das DOM bietet wahlfreien Zugriff auf Daten in einer JSON-Nutzlast. Auf die JSON-Elemente, aus denen sich die Nutzlast zusammensetzt, kann über den <xref:System.Text.Json.JsonElement> Typ zugegriffen werden. Der `JsonElement`-Typ stellt Array-und Objekt Enumeratoren zusammen mit APIs bereit, um JSON-Text in allgemeine .NET-Typen zu konvertieren. `JsonDocument` macht eine <xref:System.Text.Json.JsonDocument.RootElement>-Eigenschaft verfügbar.
 
 In den folgenden Abschnitten wird gezeigt, wie diese Tools zum Lesen und Schreiben von JSON verwendet werden.
 
 ## <a name="use-jsondocument-for-access-to-data"></a>Verwenden von JsonDocument für den Zugriff auf Daten
 
-Im folgenden Beispiel wird gezeigt, wie Sie die <xref:System.Text.Json.JsonDocument>-Klasse für den wahlfreien Zugriff auf Daten in einer JSON-Zeichenfolge verwenden:
+Im folgenden Beispiel wird gezeigt, wie Sie die <xref:System.Text.Json.JsonDocument>-Klasse für den zufälligen Zugriff auf Daten in einer JSON-Zeichenfolge verwenden:
 
 [!code-csharp[](~/samples/snippets/core/system-text-json/csharp/JsonDocumentDataAccess.cs?name=SnippetAverageGrades1)]
 
 Der vorangehende Code:
 
-* Geht davon aus, dass der zu analysierende JSON-Code einer Zeichenfolge namens `jsonString` ist
-* Berechnet eine durchschnittliche Note für Objekte in einem `Students`-Array mit einer `Grade`-Eigenschaft 
+* Geht davon aus, dass der zu analysierende JSON-Code eine Zeichenfolge namens `jsonString`
+* Berechnet eine durchschnittliche Qualität für Objekte in einem `Students` Array mit einer `Grade`-Eigenschaft.
 * Weist eine Standardnote von 70 für Studenten zu, die keine Note haben
-* Zählt Schüler und Studenten durch Inkrementieren einer `count`-Variablen bei jeder Iteration. Eine Alternative besteht darin, <xref:System.Text.Json.JsonElement.GetArrayLength%2A> aufzurufen, wie im folgenden Beispiel gezeigt:
+* Zählt Schüler und Studenten durch Inkrementieren einer `count` Variablen bei jeder Iterationen. Eine Alternative besteht darin, <xref:System.Text.Json.JsonElement.GetArrayLength%2A>aufzurufen, wie im folgenden Beispiel gezeigt:
 
   [!code-csharp[](~/samples/snippets/core/system-text-json/csharp/JsonDocumentDataAccess.cs?name=SnippetAverageGrades2)]
 
@@ -730,9 +730,9 @@ Im folgenden Beispiel wird gezeigt, wie JSON aus einem <xref:System.Text.Json.Js
 
 Der vorangehende Code:
 
-* Liest eine JSON-Datei, lädt die Daten in eine `JsonDocument`-Klasse und schreibt die JSON-Daten formatiert in eine Datei.
+* Liest eine JSON-Datei, lädt die Daten in eine `JsonDocument`und schreibt formatierte (hübsch gedruckte) JSON-Daten in eine Datei.
 * Verwendet <xref:System.Text.Json.JsonDocumentOptions>, um anzugeben, dass Kommentare in der JSON-Eingabe zulässig sind, aber ignoriert werden.
-* Ruft zum Abschluss <xref:System.Text.Json.Utf8JsonWriter.Flush%2A> für den Writer auf. Eine Alternative besteht darin, den Writer automatisch flushen zu lassen, wenn er verworfen wird. 
+* Wenn Sie fertig sind, ruft <xref:System.Text.Json.Utf8JsonWriter.Flush%2A> für den Writer auf. Eine Alternative besteht darin, den Writer automatisch flushen zu lassen, wenn er verworfen wird.
 
 Im Folgenden finden Sie ein Beispiel für eine JSON-Eingabe, die durch den Beispielcode verarbeitet werden soll:
 
@@ -754,7 +754,7 @@ Im folgenden Beispiel wird gezeigt, wie die <xref:System.Text.Json.Utf8JsonReade
 
 [!code-csharp[](~/samples/snippets/core/system-text-json/csharp/Utf8ReaderFromBytes.cs?name=SnippetDeserialize)]
 
-Der vorangehende Code geht davon aus, dass es sich bei der `jsonUtf8`-Variable um ein Bytearray handelt, das gültige, als UTF-8 codierte JSON-Zeichenfolgen enthält.
+Der vorangehende Code geht davon aus, dass es sich bei der `jsonUtf8` Variable um ein Bytearray handelt, das gültige JSON-Codierung als UTF-8 enthält
 
 ### <a name="filter-data-using-utf8jsonreader"></a>Filtern von Daten mithilfe von Utf8JsonReader
 
@@ -766,10 +766,10 @@ Der vorangehende Code:
 
 * Geht davon aus, dass der JSON-Code ein Array von Objekten enthält und jedes Objekt eine "name"-Eigenschaft vom Typ "String" enthalten kann.
 * Zählt Objekte und "Name"-Eigenschaftswerte, die mit "University" enden.
-* Geht davon aus, dass die Datei UTF-16-codiert ist, und transcodiert sie in UTF-8. Eine Datei, die als UTF-8 codiert ist, kann mithilfe des folgenden Codes direkt in eine `ReadOnlySpan<byte>` gelesen werden:
+* Geht davon aus, dass die Datei UTF-16-codiert ist, und transcodiert sie in UTF-8. Eine Datei, die als UTF-8 codiert ist, kann mithilfe des folgenden Codes direkt in eine `ReadOnlySpan<byte>`gelesen werden:
 
   ```csharp
-  ReadOnlySpan<byte> jsonReadOnlySpan = File.ReadAllBytes(fileName); 
+  ReadOnlySpan<byte> jsonReadOnlySpan = File.ReadAllBytes(fileName);
   ```
 
   Wenn die Datei eine UTF-8-Byte Reihenfolge-Marke (BOM) enthält, entfernen Sie diese, bevor Sie die Bytes an den `Utf8JsonReader`übergeben, da der Reader Text erwartet. Andernfalls wird die BOM als ungültige JSON betrachtet, und der Reader löst eine Ausnahme aus.
@@ -778,7 +778,7 @@ Im Folgenden finden Sie ein JSON-Beispiel, das der vorherige Code lesen kann. Di
 
 [!code-json[](~/samples/snippets/core/system-text-json/csharp/Universities.json)]
 
-## <a name="additional-resources"></a>Weitere Ressourcen
+## <a name="additional-resources"></a>Zusätzliche Ressourcen
 
 * [Übersicht über System.Text.Json](system-text-json-overview.md)
 * [Schreiben von benutzerdefinierten Konvertern](system-text-json-converters-how-to.md)

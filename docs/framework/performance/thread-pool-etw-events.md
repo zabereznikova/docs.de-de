@@ -5,12 +5,12 @@ helpviewer_keywords:
 - thread pool events [.NET Framework]
 - ETW, thread pool events (CLR)
 ms.assetid: f2a21e3a-3b6c-4433-97f3-47ff16855ecc
-ms.openlocfilehash: e1deb17dfdfea4c8b66eb8d836a10bf888727e1a
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 249d0607ddd280bcb4e9cf3ef34b28ff8ada3b04
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75715899"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78240492"
 ---
 # <a name="thread-pool-etw-events"></a>ETW-Threadpoolereignisse
 Diese Ereignisse sammeln Informationen zu Arbeits- und E/A-Threads.  
@@ -27,13 +27,13 @@ Diese Ereignisse sammeln Informationen zu Arbeits- und E/A-Threads.
 ### <a name="threadpoolworkerthreadstart-and-threadpoolworkerthreadstop"></a>ThreadPoolWorkerThreadStart und ThreadPoolWorkerThreadStop  
  Die folgende Tabelle zeigt das Schlüsselwort und die Ebene für diese Ereignisse an. (Weitere Informationen finden Sie unter [CLR ETW Keywords and Levels](clr-etw-keywords-and-levels.md).)  
   
-|Schlüsselwort zum Auslösen des Ereignisses|Level|  
+|Schlüsselwort zum Auslösen des Ereignisses|Ebene|  
 |-----------------------------------|-----------|  
 |`ThreadingKeyword` (0x10000)|Information (4)|  
   
  Die folgende Tabelle zeigt die Ereignisinformationen an.  
   
-|Event|Ereignis-ID|Wird ausgelöst, wenn|  
+|event|Ereignis-ID|Wird ausgelöst, wenn|  
 |-|-|-|  
 |`ThreadPoolWorkerThreadStart`|50|Ein Arbeitsthread wird erstellt.|  
 |`ThreadPoolWorkerThreadStop`|51|Ein Arbeitsthread wird beendet.|  
@@ -54,13 +54,13 @@ Diese Ereignisse sammeln Informationen zu Arbeits- und E/A-Threads.
 #### <a name="threadpoolworkerthreadadjustmentsample"></a>ThreadPoolWorkerThreadAdjustmentSample  
  Die folgende Tabelle zeigt das Schlüsselwort und die Ebene an.  
   
-|Schlüsselwort zum Auslösen des Ereignisses|Level|  
+|Schlüsselwort zum Auslösen des Ereignisses|Ebene|  
 |-----------------------------------|-----------|  
 |`ThreadingKeyword` (0x10000)|Information (4)|  
   
  Die folgende Tabelle zeigt die Ereignisinformationen an.  
   
-|Event|Ereignis-ID|Beschreibung|  
+|event|Ereignis-ID|Beschreibung|  
 |-----------|--------------|-----------------|  
 |`ThreadPoolWorkerThreadAdjustmentSample`|54|Bezieht sich auf die Auflistung von Informationen für ein Beispiel, d. h. eine Messung des Durchsatzes mit einer bestimmten Parallelitätsebene zu einem bestimmten Zeitpunkt.|  
   
@@ -74,13 +74,13 @@ Diese Ereignisse sammeln Informationen zu Arbeits- und E/A-Threads.
 #### <a name="threadpoolworkerthreadadjustmentadjustment"></a>ThreadPoolWorkerThreadAdjustmentAdjustment  
  Die folgende Tabelle zeigt das Schlüsselwort und die Ebene an.  
   
-|Schlüsselwort zum Auslösen des Ereignisses|Level|  
+|Schlüsselwort zum Auslösen des Ereignisses|Ebene|  
 |-----------------------------------|-----------|  
 |`ThreadingKeyword` (0x10000)|Information (4)|  
   
  Die folgende Tabelle zeigt die Ereignisinformationen an.  
   
-|Event|Ereignis-ID|Beschreibung|  
+|event|Ereignis-ID|Beschreibung|  
 |-----------|--------------|-----------------|  
 |`ThreadPoolWorkerThreadAdjustmentAdjustment`|55|Zeichnet eine Änderung der Steuerung auf, wenn der Algorithmus zur Threadinjektion (Hill-Climbing) ermittelt, dass auf der Parallelitätsebene eine Änderung vorgenommen wird.|  
   
@@ -96,13 +96,13 @@ Diese Ereignisse sammeln Informationen zu Arbeits- und E/A-Threads.
 #### <a name="threadpoolworkerthreadadjustmentstats"></a>ThreadPoolWorkerThreadAdjustmentStats  
  Die folgende Tabelle zeigt das Schlüsselwort und die Ebene an.  
   
-|Schlüsselwort zum Auslösen des Ereignisses|Level|  
+|Schlüsselwort zum Auslösen des Ereignisses|Ebene|  
 |-----------------------------------|-----------|  
 |`ThreadingKeyword` (0x10000)|Information (4)|  
   
  Die folgende Tabelle zeigt die Ereignisinformationen an.  
   
-|Event|Ereignis-ID|Beschreibung|  
+|event|Ereignis-ID|Beschreibung|  
 |-----------|--------------|-----------------|  
 |`ThreadPoolWorkerThreadAdjustmentStats`|56|Erfasst Daten zum Threadpool.|  
   
@@ -110,14 +110,14 @@ Diese Ereignisse sammeln Informationen zu Arbeits- und E/A-Threads.
   
 |Feldname|Datentyp|Beschreibung|  
 |----------------|---------------|-----------------|  
-|Duration (Dauer)|win:Double|Zeitdauer in Sekunden, in der diese statistischen Daten erfasst wurden.|  
+|Dauer|win:Double|Zeitdauer in Sekunden, in der diese statistischen Daten erfasst wurden.|  
 |Durchsatz|win:Double|Durchschnittliche Anzahl von Abschlüssen pro Sekunde während dieses Intervalls.|  
-|ThreadWave|win:Double|Reserviert für interne Verwendung.|  
-|ThroughputWave|win:Double|Reserviert für interne Verwendung.|  
-|ThroughputErrorEstimate|win:Double|Reserviert für interne Verwendung.|  
-|AverageThroughputErrorEstimate|win:Double|Reserviert für interne Verwendung.|  
+|ThreadWave|win:Double|Für die interne Verwendung vorgesehen.|  
+|ThroughputWave|win:Double|Für die interne Verwendung vorgesehen.|  
+|ThroughputErrorEstimate|win:Double|Für die interne Verwendung vorgesehen.|  
+|AverageThroughputErrorEstimate|win:Double|Für die interne Verwendung vorgesehen.|  
 |ThroughputRatio|win:Double|Die relative Verbesserung beim Durchsatz, die durch Abweichungen bei der aktiven Arbeitsthreadanzahl während dieses Intervalls verursacht wurde.|  
-|Zuverlässigkeit|win:Double|Ein Maß für die Gültigkeit des „ThroughputRatio“-Felds.|  
+|Confidence|win:Double|Ein Maß für die Gültigkeit des „ThroughputRatio“-Felds.|  
 |NewcontrolSetting|win:Double|Die Anzahl der aktiven Arbeitsthreads, die als Grundlage für zukünftige Abweichungen bei der Anzahl aktiver Threads dienen werden.|  
 |NewThreadWaveMagnitude|Win:UInt16|Das Ausmaß zukünftiger Abweichungen bei der Anzahl aktiver Threads.|  
 |ClrInstanceID|Win:UInt16|Eindeutige ID für die Instanz von CLR oder CoreCLR.|  
@@ -128,13 +128,13 @@ Diese Ereignisse sammeln Informationen zu Arbeits- und E/A-Threads.
 ### <a name="iothreadcreate_v1"></a>IOThreadCreate_V1  
  Die folgende Tabelle zeigt das Schlüsselwort und die Ebene an.  
   
-|Schlüsselwort zum Auslösen des Ereignisses|Level|  
+|Schlüsselwort zum Auslösen des Ereignisses|Ebene|  
 |-----------------------------------|-----------|  
 |`ThreadingKeyword` (0x10000)|Information (4)|  
   
  Die folgende Tabelle zeigt die Ereignisinformationen an.  
   
-|Event|Ereignis-ID|Wird ausgelöst, wenn|  
+|event|Ereignis-ID|Wird ausgelöst, wenn|  
 |-|-|-|  
 |`IOThreadCreate_V1`|44|Ein E/A-Thread wird im Threadpool erstellt.|  
   
@@ -149,13 +149,13 @@ Diese Ereignisse sammeln Informationen zu Arbeits- und E/A-Threads.
 ### <a name="iothreadretire_v1"></a>IOThreadRetire_V1  
  Die folgende Tabelle zeigt das Schlüsselwort und die Ebene an.  
   
-|Schlüsselwort zum Auslösen des Ereignisses|Level|  
+|Schlüsselwort zum Auslösen des Ereignisses|Ebene|  
 |-----------------------------------|-----------|  
 |`ThreadingKeyword` (0x10000)|Information (4)|  
   
  Die folgende Tabelle zeigt die Ereignisinformationen an.  
   
-|Event|Ereignis-ID|Wird ausgelöst, wenn|  
+|event|Ereignis-ID|Wird ausgelöst, wenn|  
 |-----------|--------------|-----------------|  
 |`IOThreadRetire_V1`|46|Ein E/A-Thread wird zum Kandidaten für die Deaktivierung.|  
   
@@ -170,13 +170,13 @@ Diese Ereignisse sammeln Informationen zu Arbeits- und E/A-Threads.
 ### <a name="iothreadunretire_v1"></a>IOThreadUnretire_V1  
  Die folgende Tabelle zeigt das Schlüsselwort und die Ebene an.  
   
-|Schlüsselwort zum Auslösen des Ereignisses|Level|  
+|Schlüsselwort zum Auslösen des Ereignisses|Ebene|  
 |-----------------------------------|-----------|  
 |`ThreadingKeyword` (0x10000)|Information (4)|  
   
  Die folgende Tabelle zeigt die Ereignisinformationen an.  
   
-|Event|Ereignis-ID|Wird ausgelöst, wenn|  
+|event|Ereignis-ID|Wird ausgelöst, wenn|  
 |-----------|--------------|-----------------|  
 |`IOThreadUnretire_V1`|47|Ein E/A-Threads wird aufgrund von E/A-Vorgängen erneut aktiviert, die während einer Wartefrist auftreten, nachdem der Thread zum Kandidaten für die Deaktivierung geworden ist.|  
   
@@ -191,15 +191,15 @@ Diese Ereignisse sammeln Informationen zu Arbeits- und E/A-Threads.
 ### <a name="iothreadterminate"></a>IOThreadTerminate  
  Die folgende Tabelle zeigt das Schlüsselwort und die Ebene an.  
   
-|Schlüsselwort zum Auslösen des Ereignisses|Level|  
+|Schlüsselwort zum Auslösen des Ereignisses|Ebene|  
 |-----------------------------------|-----------|  
 |`ThreadingKeyword` (0x10000)|Information (4)|  
   
  Die folgende Tabelle zeigt die Ereignisinformationen an.  
   
-|Event|Ereignis-ID|Wird ausgelöst, wenn|  
+|event|Ereignis-ID|Wird ausgelöst, wenn|  
 |-----------|--------------|-----------------|  
-|`IOThreadTerminate`|45|Ein E/A-Thread wird im Threadpool erstellt.|  
+|`IOThreadTerminate`|45|Ein e/a-Thread wird im Thread Pool beendet.|  
   
  Die folgende Tabelle zeigt die Ereignisdaten an.  
   
@@ -211,4 +211,4 @@ Diese Ereignisse sammeln Informationen zu Arbeits- und E/A-Threads.
   
 ## <a name="see-also"></a>Siehe auch
 
-- [CLR-ETW-Ereignisse](clr-etw-events.md)
+- [CLR ETW Events (CLR-ETW-Ereignisse)](clr-etw-events.md)

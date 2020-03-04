@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 60e2541b-0cea-4b2e-a4fa-85f4c50f1bef
-ms.openlocfilehash: 01e11ed62b0855b9027dfd7999f8b787c075028a
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 9bf57e0f74a353fb6512a24214e9479c1d813aab
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75709672"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78160208"
 ---
 # <a name="xslt-stylesheet-scripting-using-msxslscript"></a>Skripterstellung für ein XSLT-Stylesheet mit \<msxsl:script>
 Die <xref:System.Xml.Xsl.XslTransform>-Klasse unterstützt die Erstellung eingebetteter Skripts mit dem `script`-Element.  
@@ -62,11 +62,11 @@ Die <xref:System.Xml.Xsl.XslTransform>-Klasse unterstützt die Erstellung eingeb
   
  Die bereitgestellten, durch die Skriptfunktionen definierten Argumente und Rückgabewerte müssen zu einem der XPath- oder XSLT-Typen des W3C (World Wide Web Consortium) gehören. In der folgenden Tabelle werden die jeweiligen W3C-Typen mit den entsprechenden .NET Framework-Klassen (Typen) samt der Informationen aufgeführt, ob es sich bei einem W3C-Typ um einen XPath-Typ oder einen XSLT-Typ handelt.  
   
-|Typ|Entsprechende .NET Framework-Klasse (Typ)|XPath-Typ oder XSLT-Typ|  
+|Geben Sie Folgendes ein:|Entsprechende .NET Framework-Klasse (Typ)|XPath-Typ oder XSLT-Typ|  
 |----------|----------------------------------------------|-----------------------------|  
 |Zeichenfolge|System.String|XPath|  
-|Boolean|System.Boolean|XPath|  
-|Number|System.Double|XPath|  
+|Boolesch|System.Boolean|XPath|  
+|Anzahl|System.Double|XPath|  
 |Ergebnisstrukturfragment|System.Xml.XPath.XPathNavigator|XSLT|  
 |Knotengruppe|System.Xml.XPath.XPathNodeIterator|XPath|  
   
@@ -122,14 +122,14 @@ Public Class Sample
     'Load the XML data file.  
     Dim doc As XPathDocument = New XPathDocument(filename)  
   
-    'Create an XmlTextWriter to output to the console.               
+    'Create an XmlTextWriter to output to the console.
     Dim writer As XmlTextWriter = New XmlTextWriter(Console.Out)  
     writer.Formatting = Formatting.Indented  
   
     'Transform the file.  
     xslt.Transform(doc, Nothing, writer, Nothing)  
     writer.Close()  
-  End Sub   
+  End Sub
 End Class  
 ```  
   
@@ -154,7 +154,7 @@ public class Sample
     //Load the XML data file.  
     XPathDocument doc = new XPathDocument(filename);  
   
-    //Create an XmlTextWriter to output to the console.               
+    //Create an XmlTextWriter to output to the console.
     XmlTextWriter writer = new XmlTextWriter(Console.Out);  
     writer.Formatting = Formatting.Indented;  
   
@@ -165,7 +165,7 @@ public class Sample
 }  
 ```  
   
-## <a name="input"></a>Input  
+## <a name="input"></a>Eingabe  
  number.xml  
   
 ```xml  
@@ -198,14 +198,14 @@ public class Sample
       ]]>  
    </msxsl:script>  
   
-  <xsl:template match="data">    
+  <xsl:template match="data">
   <circles>  
   
   <xsl:for-each select="circle">  
     <circle>  
     <xsl:copy-of select="node()"/>  
        <circumference>  
-          <xsl:value-of select="user:circumference(radius)"/>   
+          <xsl:value-of select="user:circumference(radius)"/>
        </circumference>  
     </circle>  
   </xsl:for-each>  
@@ -226,7 +226,7 @@ public class Sample
     <radius>37.5</radius>  
     <circumference>235.5</circumference>  
   </circle>  
-</circles>    
+</circles>
 ```  
   
 ## <a name="see-also"></a>Siehe auch

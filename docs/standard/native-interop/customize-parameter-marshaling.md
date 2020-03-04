@@ -2,12 +2,12 @@
 title: Anpassen des Marshallings für Parameter – .NET
 description: Erfahren Sie, wie Sie anpassen können, wie .NET Ihre Parameter in eine native Darstellung marshallt.
 ms.date: 01/18/2019
-ms.openlocfilehash: 36fb8c105a8836d77b862095a616de3ba641073c
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: ff646ad942cf051ce90cd75b24c8562e536182d9
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75706360"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159610"
 ---
 # <a name="customizing-parameter-marshaling"></a>Anpassen des Marshallings für Parameter
 
@@ -21,10 +21,10 @@ Wenn das standardmäßige Verhalten der .NET-Runtime beim Parametermarshalling n
 
 Jedes dieser Formate übergibt eine null-terminierte Zeichenkette an den nativen Code. Sie unterscheiden sich hinsichtlich der Codierung der nativen Zeichenfolge.
 
-| `System.Runtime.InteropServices.UnmanagedType`-Wert | Codierung von |
+| `System.Runtime.InteropServices.UnmanagedType` -Wert | Codierung |
 |------------------------------------------------------|----------|
 | LPStr | ANSI |
-| LPUTF8Str | UTF-8 | 
+| LPUTF8Str | UTF-8 |
 | LPWStr | UTF-16 |
 | LPTStr | UTF-16 |
 
@@ -62,7 +62,7 @@ Wenn Ihr Typ außerdem mit `[ComVisible(true)]` markiert ist oder Sie ein Marsha
 
 ### <a name="marshaling-to-a-variant"></a>Marshalling zu einer `VARIANT`
 
-Wenn Ihre native API eine Win32-`VARIANT` verwendet, können Sie das <xref:System.Runtime.InteropServices.UnmanagedType.Struct?displayProperty=nameWithType>-Format für Ihren `object`-Parameter verwenden, um Ihre Objekte als `VARIANT` zu marshallen. Informationen zur Zuordnung zwischen .NET-Typen und `VARIANT`-Typen finden Sie in der Dokumentation zum [Anpassen von `object`-Feldern](customize-struct-marshaling.md#marshaling-systemobjects).
+Wenn Ihre native API eine Win32-`VARIANT` verwendet, können Sie das <xref:System.Runtime.InteropServices.UnmanagedType.Struct?displayProperty=nameWithType>-Format für Ihren `object`-Parameter verwenden, um Ihre Objekte als `VARIANT` zu marshallen. Informationen zur Zuordnung zwischen .NET-Typen und [-Typen finden Sie in der Dokumentation zum `object`Anpassen von ](customize-struct-marshaling.md#marshaling-systemobjects)-Feldern`VARIANT`.
 
 ### <a name="custom-marshalers"></a>Benutzerdefinierte Marshaller
 

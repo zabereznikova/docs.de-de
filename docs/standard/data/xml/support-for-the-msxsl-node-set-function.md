@@ -3,12 +3,12 @@ title: Unterstützung der msxsl:node-set()-Funktion
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: d0cbf517-d9f6-4097-9851-4fa62903decd
-ms.openlocfilehash: b9603f6c910e8e29309618c8e01e283c28ae2bff
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 5022b298cb20796edbc54e951d8b06043697d832
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75710127"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78155593"
 ---
 # <a name="support-for-the-msxslnode-set-function"></a>Unterstützung der msxsl:node-set()-Funktion
 Mit der `msxsl:node-set`-Funktion können Sie ein Ergebnisstrukturfragment in eine Knotengruppe konvertieren. Die resultierende Knotengruppe enthält immer einen einzelnen Knoten und stellt den Stammknoten der Struktur dar.  
@@ -19,7 +19,7 @@ Mit der `msxsl:node-set`-Funktion können Sie ein Ergebnisstrukturfragment in ei
  Mit der `msxsl:node-set`-Funktion können Sie ein Ergebnisstrukturfragment in eine Knotengruppe konvertieren. Die resultierende Knotengruppe enthält immer einen einzelnen Knoten und stellt den Stammknoten der Struktur dar.  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel handelt es sich bei `$var` um eine Variable, die im Stylesheet eine Knotenstruktur darstellt. Die `node-set` for-each-Anweisung in Verbindung mit der -Funktion ermöglicht dem Benutzer, diese Knotenstruktur wie eine Knotengruppe zu durchlaufen.  
+ Im folgenden Beispiel handelt es sich bei `$var` um eine Variable, die im Stylesheet eine Knotenstruktur darstellt. Die `node-set`for-each{2}-Anweisung in Verbindung mit der {3}-Funktion ermöglicht dem Benutzer, diese Knotenstruktur wie eine Knotengruppe zu durchlaufen.  
   
 ## <a name="nodesetxsl"></a>nodeset.xsl  
   
@@ -35,7 +35,7 @@ Mit der `msxsl:node-set`-Funktion können Sie ein Ergebnisstrukturfragment in ei
   
     <xsl:template match="/">  
         <authors>  
-            <xsl:for-each select="msxsl:node-set($books)/book">   
+            <xsl:for-each select="msxsl:node-set($books)/book">
                 <author><xsl:value-of select="@author"/></author>  
             </xsl:for-each>  
         </authors>  

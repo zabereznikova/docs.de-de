@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 898e0f52-8a7c-4d1f-afcd-6ffb28b050b4
-ms.openlocfilehash: ec08b668bf54c5460e078bbb27bfbc370aff4e4a
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: e6ec30e3c7c2318b199122cd63c7f56584707a98
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75711180"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78158050"
 ---
 # <a name="accessing-strongly-typed-xml-data-using-xpathnavigator"></a>Zugreifen auf streng typisierte XML-Daten mit 'XPathNavigator'
 Als Instanz des XPath 2.0-Datenmodells kann die <xref:System.Xml.XPath.XPathNavigator>-Klasse stark typisierte Daten enthalten, die den CLR-Typen (Common Language Runtime) zugeordnet werden. Gemäß des XPath 2.0-Datenmodells können nur Elemente und Attribute stark typisierte Daten enthalten. Die <xref:System.Xml.XPath.XPathNavigator>-Klasse stellt Mechanismen zum Zugreifen auf Daten in einem <xref:System.Xml.XPath.XPathDocument>-Objekt oder einem <xref:System.Xml.XmlDocument>-Objekt als stark typisierte Daten sowie Mechanismen zum Konvertieren von einem Datentyp in einen anderen bereit.  
@@ -32,7 +32,7 @@ Als Instanz des XPath 2.0-Datenmodells kann die <xref:System.Xml.XPath.XPathNavi
 ## <a name="xpathnavigator-typed-accessors"></a>Mit "XPathNavigator" typisierte Accessoren  
  Die folgenden Tabelle enthält die verschiedenen Eigenschaften und Methoden der <xref:System.Xml.XPath.XPathNavigator>-Klasse, mit denen auf die Typinformationen eines Knotens zugegriffen werden kann.  
   
-|Die Eigenschaften-|Beschreibung|  
+|Eigenschaft|Beschreibung|  
 |--------------|-----------------|  
 |<xref:System.Xml.XPath.XPathNavigator.XmlType%2A>|Dieses Objekt enthält die XML-Schematypinformationen des Knotens, sofern dieser gültig ist.|  
 |<xref:System.Xml.XPath.XPathNavigator.SchemaInfo%2A>|Dieses Objekt enthält das Post-Schema-Validation-Infoset des Knotens, der nach der Validierung hinzugefügt wird. Darin sind die XML-Schematypinformationen sowie die Gültigkeitsinformationen eingeschlossen.|  
@@ -111,9 +111,9 @@ Console.WriteLine(navigator.SchemaInfo.SchemaElement.MinOccurs);
  In diesem Beispiel wird auch das `books.xsd`-Schema als Eingabe verwendet.  
   
 ```xml  
-<xs:schema xmlns="http://www.contoso.com/books"   
-attributeFormDefault="unqualified" elementFormDefault="qualified"   
-targetNamespace="http://www.contoso.com/books"   
+<xs:schema xmlns="http://www.contoso.com/books"
+attributeFormDefault="unqualified" elementFormDefault="qualified"
+targetNamespace="http://www.contoso.com/books"
 xmlns:xs="http://www.w3.org/2001/XMLSchema">  
     <xs:simpleType name="publishedType">  
         <xs:restriction base="xs:date">  

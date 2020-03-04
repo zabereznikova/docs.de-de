@@ -6,18 +6,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: de2f0dce-6b98-4908-bba7-ed150cc50355
-ms.openlocfilehash: 5cd733d557dabe66145fdbb848c473411d63c62b
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 34ffb9923337bbad90b2170a16d610d26c7f6f23
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75709620"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78160195"
 ---
 # <a name="xsltargumentlist-for-style-sheet-parameters-and-extension-objects"></a>"XsltArgumentList" für Stylesheetparameter und Erweiterungsobjekte
 Die <xref:System.Xml.Xsl.XsltArgumentList> enthält XSLT-Parameter (Extensible Stylesheet Transformation) und XSLT-Erweiterungsobjekte. Bei der Übergabe an die <xref:System.Xml.Xsl.XslTransform.Transform%2A>-Methode können diese Parameter und Erweiterungsobjekte von Stylesheets aus ausgerufen werden.  
   
 > [!NOTE]
-> Die Klassen <xref:System.Xml.Xsl.XslTransform> und <xref:System.Xml.Xsl.XsltArgumentList> sind in .NET Framework 2.0 veraltet. Sie können XSLT-Transformationen mit der <xref:System.Xml.Xsl.XslCompiledTransform>-Klasse durchführen. Weitere Informationen finden Sie unter [Verwenden der XslCompiledTransform-Klasse](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md) und [Migrieren von der XslTransform-Klasse](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md).  
+> Die <xref:System.Xml.Xsl.XslTransform>-Klasse und die <xref:System.Xml.Xsl.XsltArgumentList>-Klasse sind in .NET Framework, Version 2.0, veraltet. Sie können XSLT-Transformationen mit der <xref:System.Xml.Xsl.XslCompiledTransform>-Klasse durchführen. Weitere Informationen finden Sie unter [Verwenden der XslCompiledTransform-Klasse](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md) und [Migrieren von der XslTransform-Klasse](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md).  
   
  Die <xref:System.Xml.Xsl.XsltArgumentList>-Klasse enthält XSLT-Parameter und XSLT-Erweiterungsobjekte. Bei der Übergabe an die <xref:System.Xml.Xsl.XslTransform.Transform%2A>-Methode können diese Parameter und Erweiterungsobjekte von Stylesheets aus ausgerufen werden.  
   
@@ -39,12 +39,12 @@ Die <xref:System.Xml.Xsl.XsltArgumentList> enthält XSLT-Parameter (Extensible S
 |W3C-Typ|Entsprechende .NET Framework-Klasse (Typ)|XPath-Typ oder XSLT-Typ|  
 |--------------|----------------------------------------------|-----------------------------|  
 |Zeichenfolge|System.String|XPath|  
-|Boolean|System.Boolean|XPath|  
-|Number|System.Double|XPath|  
+|Boolesch|System.Boolean|XPath|  
+|Anzahl|System.Double|XPath|  
 |Ergebnisstrukturfragment|System.Xml.XPath.XPathNavigator|XSLT|  
 |Knotengruppe|System.Xml.XPath.XPathNodeIterator|XPath|  
   
- Wenn es sich bei dem Parameterobjekt um keine der obigen Klassen handelt, wird je nach Bedarf entweder ein Double oder ein String erzwungen. Für die Typen Int16, UInt16, Int32, UInt32, Int64, UInt64, Single und Decimal wird ein Double erzwungen. Für alle anderen Typen wird mit der `ToString`-Methode ein string erzwungen.  
+ Wenn es sich bei dem Parameterobjekt um keine der obigen Klassen handelt, wird je nach Bedarf entweder ein {1}Double{2} oder ein {3}String{4} erzwungen. Für die Typen {1}Int16{2}, {3}UInt16{4}, {5}Int32{6}, {7}UInt32{8}, {9}Int64{10}, {11}UInt64{12}, {13}Single{14} und {15}Decimal{16} wird ein {17}Double{18} erzwungen. Für alle anderen Typen wird mit der `ToString`-Methode ein {2}string{3} erzwungen.  
   
 #### <a name="to-use-the-xslt-parameter-the-user-needs-to-do-the-following"></a>So verwenden Sie den XSLT-Parameter:  
   
@@ -137,7 +137,7 @@ public class Sample
 }  
 ```  
   
-### <a name="input"></a>Input  
+### <a name="input"></a>Eingabe  
  order.xml  
   
 ```xml  
@@ -173,8 +173,8 @@ public class Sample
   
 ```xml  
 <order>  
-   <total>36.9</total>   
-   15% discount if paid by: 5/6/2001 5:01:15 PM   
+   <total>36.9</total>
+   15% discount if paid by: 5/6/2001 5:01:15 PM
 </order>  
 ```  
   
@@ -305,7 +305,7 @@ public class Sample
 }  
 ```  
   
-### <a name="input"></a>Input  
+### <a name="input"></a>Eingabe  
  number.xml  
   
 ```xml  
@@ -317,7 +317,7 @@ public class Sample
   <circle>  
     <radius>37.5</radius>  
   </circle>  
-</data>    
+</data>
 ```  
   
  circle.xsl  
@@ -332,7 +332,7 @@ public class Sample
     <circle>  
     <xsl:copy-of select="node()"/>  
        <circumference>  
-          <xsl:value-of select="myObj:Circumference(radius)"/>          
+          <xsl:value-of select="myObj:Circumference(radius)"/>
        </circumference>  
     </circle>  
   </xsl:for-each>  

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - serialization, guidelines
 - binary serialization, guidelines
 ms.assetid: ebbeddff-179d-443f-bf08-9c373199a73a
-ms.openlocfilehash: 603306ad4a739f168716fd7f6169a79923585b82
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 067f32a026e3354e6c4256602ed17fd7d7bde0b8
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64645050"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159792"
 ---
 # <a name="serialization-guidelines"></a>Serialisierungsrichtlinien
 In diesem Dokument werden die Richtlinien beschrieben, die beim Entwurf einer API zu berücksichtigen sind, welche für die Serialisierung vorgesehen ist.  
@@ -69,8 +69,7 @@ In diesem Dokument werden die Richtlinien beschrieben, die beim Entwurf einer AP
      [!code-csharp[SerializationGuidelines#3](../../../samples/snippets/csharp/VS_Snippets_CFX/serializationguidelines/cs/source.cs#3)]
      [!code-vb[SerializationGuidelines#3](../../../samples/snippets/visualbasic/VS_Snippets_CFX/serializationguidelines/vb/source.vb#3)]  
   
-     Das <xref:System.Runtime.Serialization.OnDeserializedAttribute>-Attribut ist das am häufigsten verwendete Rückrufattribut. Weitere Attribute in der Familie sind <xref:System.Runtime.Serialization.OnDeserializingAttribute>,    
-    <xref:System.Runtime.Serialization.OnSerializingAttribute>, und <xref:System.Runtime.Serialization.OnSerializedAttribute>. Mit ihnen können Rückrufe gekennzeichnet werden, die entsprechend vor der Deserialisierung, vor der Serialisierung oder nach der Serialisierung ausgeführt werden.  
+     Das <xref:System.Runtime.Serialization.OnDeserializedAttribute>-Attribut ist das am häufigsten verwendete Rückrufattribut. Die anderen Attribute in der Familie sind <xref:System.Runtime.Serialization.OnDeserializingAttribute>, <xref:System.Runtime.Serialization.OnSerializingAttribute>und <xref:System.Runtime.Serialization.OnSerializedAttribute>. Mit ihnen können Rückrufe gekennzeichnet werden, die entsprechend vor der Deserialisierung, vor der Serialisierung oder nach der Serialisierung ausgeführt werden.  
   
 4. Erwägen Sie die Verwendung des <xref:System.Runtime.Serialization.KnownTypeAttribute>, um konkrete Typen anzugeben, die beim Deserialisieren eines komplexen Objektdiagramms verwendet werden sollen.  
   
@@ -104,7 +103,7 @@ In diesem Dokument werden die Richtlinien beschrieben, die beim Entwurf einer AP
      [!code-csharp[SerializationGuidelines#6](../../../samples/snippets/csharp/VS_Snippets_CFX/serializationguidelines/cs/source.cs#6)]
      [!code-vb[SerializationGuidelines#6](../../../samples/snippets/visualbasic/VS_Snippets_CFX/serializationguidelines/vb/source.vb#6)]  
   
-2. Erwägen Sie eine Implementierung der <xref:System.Xml.Serialization.IXmlSerializable>-Schnittstelle, wenn Sie eine noch präzisere Kontrolle über die Form des serialisierten XML erreichen möchten, als mit den XML-Serialisierungsattributen möglich ist. Zwei Methoden der Schnittstelle <xref:System.Xml.Serialization.IXmlSerializable.ReadXml%2A> und <xref:System.Xml.Serialization.IXmlSerializable.WriteXml%2A>, können Sie den serialisierten XML-Stream vollständig zu steuern. Sie können auch das XML-Schema kontrollieren, das für den Typ generiert wird, indem Sie das <xref:System.Xml.Serialization.XmlSchemaProviderAttribute>-Attribut anwenden.  
+2. Erwägen Sie eine Implementierung der <xref:System.Xml.Serialization.IXmlSerializable>-Schnittstelle, wenn Sie eine noch präzisere Kontrolle über die Form des serialisierten XML erreichen möchten, als mit den XML-Serialisierungsattributen möglich ist. Mit zwei Methoden der-Schnittstelle, <xref:System.Xml.Serialization.IXmlSerializable.ReadXml%2A> und <xref:System.Xml.Serialization.IXmlSerializable.WriteXml%2A>, können Sie den serialisierten XML-Stream vollständig steuern. Sie können auch das XML-Schema kontrollieren, das für den Typ generiert wird, indem Sie das <xref:System.Xml.Serialization.XmlSchemaProviderAttribute>-Attribut anwenden.  
   
 #### <a name="supporting-runtime-serialization"></a>Unterstützen der Laufzeitserialisierung  
  Die *Laufzeitserialisierung* ist eine von .NET-Remotezugriff verwendete Technologie. Wenn eine Übertragung der Typen mit .NET-Remotezugriff vorgesehen ist, müssen Sie gewährleisten, dass die Typen die Laufzeitserialisierung unterstützen.  
@@ -144,6 +143,6 @@ In diesem Dokument werden die Richtlinien beschrieben, die beim Entwurf einer AP
 - [Datenvertragsserialisierer](../../../docs/framework/wcf/feature-details/data-contract-serializer.md)
 - [Vom Datenvertragsserialisierer unterstützte Typen](../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)
 - [Binäre Serialisierung](binary-serialization.md)
-- [.NET remoting](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/72x4h507(v=vs.100))
+- [.NET-Remoting](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/72x4h507(v=vs.100))
 - [XML- und SOAP-Serialisierung](xml-and-soap-serialization.md)
 - [Sicherheit und Serialisierung](../../../docs/framework/misc/security-and-serialization.md)

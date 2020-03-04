@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 76f28770-7126-428f-9ed5-7b5ae8bad5ee
-ms.openlocfilehash: 1f300bab01f94af8c70c8b67a69a73fbc5ba5bac
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: af6df3729f1bd926e9a47cc5b9d9bf460c8e1225
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75709828"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159285"
 ---
 # <a name="xmlschemacollection-schema-compilation"></a>Schemakompilierung mit "XmlSchemaCollection"
 Bei **XmlSchemaCollection** handelt es sich um einen Cache oder eine Bibliothek, worin XDR-Schemata (XML-Data Reduced) und XSD-Schemata (XML Schema Definition Language) gespeichert und validiert werden können. **XmlSchemaCollection** erhöht die Leistungsfähigkeit, indem Schemata im Arbeitsspeicher zwischengespeichert werden, anstatt über eine Datei oder eine URL auf sie zuzugreifen.  
@@ -51,7 +51,7 @@ vr.Schemas.Add(xsc)
 XmlTextReader tr = new XmlTextReader("Books.xml");  
 XmlValidatingReader vr = new XmlValidatingReader(tr);  
 XmlSchemaCollection xsc = new XmlSchemaCollection();  
-xsc.Add("urn:bookstore-schema", "Books.xsd");    
+xsc.Add("urn:bookstore-schema", "Books.xsd");
 vr.Schemas.Add(xsc);  
 ```  
   
