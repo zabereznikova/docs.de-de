@@ -1,64 +1,109 @@
 ---
 title: dotnet-counters – .NET Core
 description: Erfahren Sie, wie Sie das Befehlszeilentool dotnet-counter installieren und verwenden.
-ms.date: 10/14/2019
-ms.openlocfilehash: 399d5908e8ac52bcd4a20c1a819fc6c99f4de2f4
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.date: 02/26/2020
+ms.openlocfilehash: 88f701a60d0ee03dd0236ae54c57679943e14939
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76737710"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78157881"
 ---
-# <a name="dotnet-counters"></a><span data-ttu-id="b2b77-103">dotnet-counters</span><span class="sxs-lookup"><span data-stu-id="b2b77-103">dotnet-counters</span></span>
+# <a name="dotnet-counters"></a><span data-ttu-id="82f75-103">dotnet-counters</span><span class="sxs-lookup"><span data-stu-id="82f75-103">dotnet-counters</span></span>
 
-<span data-ttu-id="b2b77-104">**Dieser Artikel gilt für:** ✔️ .NET Core 3.0 SDK und neuere Versionen</span><span class="sxs-lookup"><span data-stu-id="b2b77-104">**This article applies to:** ✔️ .NET Core 3.0 SDK and later versions</span></span>
+<span data-ttu-id="82f75-104">**Dieser Artikel gilt für:** ✔️ .NET Core 3.0 SDK und neuere Versionen</span><span class="sxs-lookup"><span data-stu-id="82f75-104">**This article applies to:** ✔️ .NET Core 3.0 SDK and later versions</span></span>
 
-## <a name="install-dotnet-counters"></a><span data-ttu-id="b2b77-105">Installieren von dotnet-counters</span><span class="sxs-lookup"><span data-stu-id="b2b77-105">Install dotnet-counters</span></span>
+## <a name="install-dotnet-counters"></a><span data-ttu-id="82f75-105">Installieren von dotnet-counters</span><span class="sxs-lookup"><span data-stu-id="82f75-105">Install dotnet-counters</span></span>
 
-<span data-ttu-id="b2b77-106">Verwenden Sie zum Installieren der neuesten Releaseversion des [NuGet-Pakets](https://www.nuget.org/packages/dotnet-counters) `dotnet-counters` den Befehl [dotnet tool install](../tools/dotnet-tool-install.md):</span><span class="sxs-lookup"><span data-stu-id="b2b77-106">To install the latest release version of the `dotnet-counters` [NuGet package](https://www.nuget.org/packages/dotnet-counters), use the [dotnet tool install](../tools/dotnet-tool-install.md) command:</span></span>
+<span data-ttu-id="82f75-106">Verwenden Sie zum Installieren der neuesten Releaseversion des [NuGet-Pakets](https://www.nuget.org/packages/dotnet-counters) `dotnet-counters` den Befehl [dotnet tool install](../tools/dotnet-tool-install.md):</span><span class="sxs-lookup"><span data-stu-id="82f75-106">To install the latest release version of the `dotnet-counters` [NuGet package](https://www.nuget.org/packages/dotnet-counters), use the [dotnet tool install](../tools/dotnet-tool-install.md) command:</span></span>
 
 ```dotnetcli
 dotnet tool install --global dotnet-counters
 ```
 
-## <a name="synopsis"></a><span data-ttu-id="b2b77-107">Übersicht</span><span class="sxs-lookup"><span data-stu-id="b2b77-107">Synopsis</span></span>
+## <a name="synopsis"></a><span data-ttu-id="82f75-107">Übersicht</span><span class="sxs-lookup"><span data-stu-id="82f75-107">Synopsis</span></span>
 
 ```console
 dotnet-counters [-h|--help] [--version] <command>
 ```
 
-## <a name="description"></a><span data-ttu-id="b2b77-108">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="b2b77-108">Description</span></span>
+## <a name="description"></a><span data-ttu-id="82f75-108">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="82f75-108">Description</span></span>
 
-<span data-ttu-id="b2b77-109">`dotnet-counters` ist ein Leistungsüberwachungstool zur Ad-hoc-Überwachung der Integrität und zur Leistungsuntersuchung auf erster Ebene.</span><span class="sxs-lookup"><span data-stu-id="b2b77-109">`dotnet-counters` is a performance monitoring tool for ad-hoc health monitoring and first-level performance investigation.</span></span> <span data-ttu-id="b2b77-110">Es kann Leistungsindikatorwerte überwachen, die über die <xref:System.Diagnostics.Tracing.EventCounter>-API veröffentlicht werden.</span><span class="sxs-lookup"><span data-stu-id="b2b77-110">It can observe performance counter values that are published via the <xref:System.Diagnostics.Tracing.EventCounter> API.</span></span> <span data-ttu-id="b2b77-111">Beispielsweise können Sie schnell die CPU-Auslastung oder die Rate der ausgelösten Ausnahmen in Ihrer .NET Core-Anwendung überwachen, um nach verdächtigen Werten zu suchen, bevor Sie mit `PerfView` oder `dotnet-trace` eine umfassendere Leistungsuntersuchung durchführen.</span><span class="sxs-lookup"><span data-stu-id="b2b77-111">For example, you can quickly monitor things like the CPU usage or the rate of exceptions being thrown in your .NET Core application to see if there's anything suspicious before diving into more serious performance investigation using `PerfView` or `dotnet-trace`.</span></span>
+<span data-ttu-id="82f75-109">`dotnet-counters` ist ein Leistungsüberwachungstool zur Ad-hoc-Überwachung der Integrität und zur Leistungsuntersuchung auf erster Ebene.</span><span class="sxs-lookup"><span data-stu-id="82f75-109">`dotnet-counters` is a performance monitoring tool for ad-hoc health monitoring and first-level performance investigation.</span></span> <span data-ttu-id="82f75-110">Es kann Leistungsindikatorwerte überwachen, die über die <xref:System.Diagnostics.Tracing.EventCounter>-API veröffentlicht werden.</span><span class="sxs-lookup"><span data-stu-id="82f75-110">It can observe performance counter values that are published via the <xref:System.Diagnostics.Tracing.EventCounter> API.</span></span> <span data-ttu-id="82f75-111">Beispielsweise können Sie schnell die CPU-Auslastung oder die Rate der ausgelösten Ausnahmen in Ihrer .NET Core-Anwendung überwachen, um nach verdächtigen Werten zu suchen, bevor Sie mit `PerfView` oder `dotnet-trace` eine umfassendere Leistungsuntersuchung durchführen.</span><span class="sxs-lookup"><span data-stu-id="82f75-111">For example, you can quickly monitor things like the CPU usage or the rate of exceptions being thrown in your .NET Core application to see if there's anything suspicious before diving into more serious performance investigation using `PerfView` or `dotnet-trace`.</span></span>
 
-## <a name="options"></a><span data-ttu-id="b2b77-112">Optionen</span><span class="sxs-lookup"><span data-stu-id="b2b77-112">Options</span></span>
+## <a name="options"></a><span data-ttu-id="82f75-112">Optionen</span><span class="sxs-lookup"><span data-stu-id="82f75-112">Options</span></span>
 
 - **`--version`**
 
-  <span data-ttu-id="b2b77-113">Zeigt die Version des Hilfsprogramms dotnet-counters an.</span><span class="sxs-lookup"><span data-stu-id="b2b77-113">Displays the version of the dotnet-counters utility.</span></span>
+  <span data-ttu-id="82f75-113">Zeigt die Version des Hilfsprogramms dotnet-counters an.</span><span class="sxs-lookup"><span data-stu-id="82f75-113">Displays the version of the dotnet-counters utility.</span></span>
 
 - **`-h|--help`**
 
-  <span data-ttu-id="b2b77-114">Zeigt die Hilfe für die Befehlszeile an.</span><span class="sxs-lookup"><span data-stu-id="b2b77-114">Shows command-line help.</span></span>
+  <span data-ttu-id="82f75-114">Zeigt die Hilfe für die Befehlszeile an.</span><span class="sxs-lookup"><span data-stu-id="82f75-114">Shows command-line help.</span></span>
 
-## <a name="commands"></a><span data-ttu-id="b2b77-115">Befehle</span><span class="sxs-lookup"><span data-stu-id="b2b77-115">Commands</span></span>
+## <a name="commands"></a><span data-ttu-id="82f75-115">Befehle</span><span class="sxs-lookup"><span data-stu-id="82f75-115">Commands</span></span>
 
-| <span data-ttu-id="b2b77-116">Befehl</span><span class="sxs-lookup"><span data-stu-id="b2b77-116">Command</span></span>                                             |
+| <span data-ttu-id="82f75-116">Befehl</span><span class="sxs-lookup"><span data-stu-id="82f75-116">Command</span></span>                                             |
 | --------------------------------------------------- |
-| [<span data-ttu-id="b2b77-117">dotnet-counters list</span><span class="sxs-lookup"><span data-stu-id="b2b77-117">dotnet-counters list</span></span>](#dotnet-counters-list)       |
-| [<span data-ttu-id="b2b77-118">dotnet-counters monitor</span><span class="sxs-lookup"><span data-stu-id="b2b77-118">dotnet-counters monitor</span></span>](#dotnet-counters-monitor) |
+| [<span data-ttu-id="82f75-117">dotnet-counters collect</span><span class="sxs-lookup"><span data-stu-id="82f75-117">dotnet-counters collect</span></span>](#dotnet-counters-collect) |
+| [<span data-ttu-id="82f75-118">dotnet-counters list</span><span class="sxs-lookup"><span data-stu-id="82f75-118">dotnet-counters list</span></span>](#dotnet-counters-list)       |
+| [<span data-ttu-id="82f75-119">dotnet-counters monitor</span><span class="sxs-lookup"><span data-stu-id="82f75-119">dotnet-counters monitor</span></span>](#dotnet-counters-monitor) |
+| [<span data-ttu-id="82f75-120">dotnet-counters ps</span><span class="sxs-lookup"><span data-stu-id="82f75-120">dotnet-counters ps</span></span>](#dotnet-counters-ps) |
 
-## <a name="dotnet-counters-list"></a><span data-ttu-id="b2b77-119">dotnet-counters list</span><span class="sxs-lookup"><span data-stu-id="b2b77-119">dotnet-counters list</span></span>
+## <a name="dotnet-counters-collect"></a><span data-ttu-id="82f75-121">dotnet-counters collect</span><span class="sxs-lookup"><span data-stu-id="82f75-121">dotnet-counters collect</span></span>
 
-<span data-ttu-id="b2b77-120">Zeigt eine Liste von Zählernamen und -beschreibungen gruppiert nach Anbieter an.</span><span class="sxs-lookup"><span data-stu-id="b2b77-120">Displays a list of counter names and descriptions, grouped by provider.</span></span>
+<span data-ttu-id="82f75-122">Mit diesem Befehl werden regelmäßig counter-Werte gesammelt und zur Nachbearbeitung in das festgelegte Dateiformat exportiert.</span><span class="sxs-lookup"><span data-stu-id="82f75-122">Periodically collect selected counter values and export them into a specified file format for post-processing.</span></span>
 
-### <a name="synopsis"></a><span data-ttu-id="b2b77-121">Übersicht</span><span class="sxs-lookup"><span data-stu-id="b2b77-121">Synopsis</span></span>
+### <a name="synopsis"></a><span data-ttu-id="82f75-123">Übersicht</span><span class="sxs-lookup"><span data-stu-id="82f75-123">Synopsis</span></span>
+
+```console
+dotnet-counters collect [-h|--help] [-p|--process-id] [--refreshInterval] [counter_list] [--format] [-o|--output]
+```
+
+### <a name="options"></a><span data-ttu-id="82f75-124">Optionen</span><span class="sxs-lookup"><span data-stu-id="82f75-124">Options</span></span>
+
+- **`-p|--process-id <PID>`**
+
+  <span data-ttu-id="82f75-125">Die ID des zu überwachenden Prozesses.</span><span class="sxs-lookup"><span data-stu-id="82f75-125">The ID of the process to be monitored.</span></span>
+
+- **`--refresh-interval <SECONDS>`**
+
+  <span data-ttu-id="82f75-126">Die Anzahl von Sekunden, die zwischen Aktualisierungen der angezeigten Indikatoren verstreichen soll.</span><span class="sxs-lookup"><span data-stu-id="82f75-126">The number of seconds to delay between updating the displayed counters</span></span>
+
+- **`counter_list <COUNTERS>`**
+
+  <span data-ttu-id="82f75-127">Eine durch Leerzeichen getrennte Liste von Zählern.</span><span class="sxs-lookup"><span data-stu-id="82f75-127">A space separated list of counters.</span></span> <span data-ttu-id="82f75-128">Zähler können in der Form `provider_name[:counter_name]` angegeben werden.</span><span class="sxs-lookup"><span data-stu-id="82f75-128">Counters can be specified `provider_name[:counter_name]`.</span></span> <span data-ttu-id="82f75-129">Wenn `provider_name` ohne qualifizierenden `counter_name` verwendet wird, werden alle Indikatoren angezeigt.</span><span class="sxs-lookup"><span data-stu-id="82f75-129">If the `provider_name` is used without a qualifying `counter_name`, then all counters are shown.</span></span> <span data-ttu-id="82f75-130">Verwenden Sie zum Ermitteln von Anbieter- und Indikatornamen den Befehl [dotnet-counters list](#dotnet-counters-list).</span><span class="sxs-lookup"><span data-stu-id="82f75-130">To discover provider and counter names, use the [dotnet-counters list](#dotnet-counters-list) command.</span></span>
+
+- **`--format <csv|json>`**
+
+  <span data-ttu-id="82f75-131">Diese Option beschreibt das Dateiformat, in das die Werte exportiert werden.</span><span class="sxs-lookup"><span data-stu-id="82f75-131">TThe format to be exported.</span></span> <span data-ttu-id="82f75-132">Derzeit sind die folgenden Formate verfügbar: CSV und JSON.</span><span class="sxs-lookup"><span data-stu-id="82f75-132">Currently available: csv, json.</span></span>
+
+- **`-o|--output <output>`**
+
+  <span data-ttu-id="82f75-133">Der Name der Ausgabedatei.</span><span class="sxs-lookup"><span data-stu-id="82f75-133">The name of the output file.</span></span>
+
+### <a name="examples"></a><span data-ttu-id="82f75-134">Beispiele</span><span class="sxs-lookup"><span data-stu-id="82f75-134">Examples</span></span>
+
+- <span data-ttu-id="82f75-135">Im folgenden Beispiel werden alle counter-Werte mit einem Aktualisierungsintervall von 3 Sekunden erfasst und eine CSV-Ausgabedatei wird erstellt:</span><span class="sxs-lookup"><span data-stu-id="82f75-135">Collect all counters at a refresh interval of 3 seconds and generate a csv as output:</span></span>
+
+  ```console
+  > dotnet-counters collect --process-id 1902 --refresh-interval 3 --format csv
+
+  counter_list is unspecified. Monitoring all counters by default.
+  Starting a counter session. Press Q to quit.
+  ```
+
+## <a name="dotnet-counters-list"></a><span data-ttu-id="82f75-136">dotnet-counters list</span><span class="sxs-lookup"><span data-stu-id="82f75-136">dotnet-counters list</span></span>
+
+<span data-ttu-id="82f75-137">Zeigt eine Liste von Zählernamen und -beschreibungen gruppiert nach Anbieter an.</span><span class="sxs-lookup"><span data-stu-id="82f75-137">Displays a list of counter names and descriptions, grouped by provider.</span></span>
+
+### <a name="synopsis"></a><span data-ttu-id="82f75-138">Übersicht</span><span class="sxs-lookup"><span data-stu-id="82f75-138">Synopsis</span></span>
 
 ```console
 dotnet-counters list [-h|--help]
 ```
 
-### <a name="example"></a><span data-ttu-id="b2b77-122">Beispiel</span><span class="sxs-lookup"><span data-stu-id="b2b77-122">Example</span></span>
+### <a name="example"></a><span data-ttu-id="82f75-139">Beispiel</span><span class="sxs-lookup"><span data-stu-id="82f75-139">Example</span></span>
 
 ```console
 > dotnet-counters list
@@ -74,33 +119,33 @@ dotnet-counters list [-h|--help]
         exception-count              Number of Exceptions / sec
 ```
 
-## <a name="dotnet-counters-monitor"></a><span data-ttu-id="b2b77-123">dotnet-counters monitor</span><span class="sxs-lookup"><span data-stu-id="b2b77-123">dotnet-counters monitor</span></span>
+## <a name="dotnet-counters-monitor"></a><span data-ttu-id="82f75-140">dotnet-counters monitor</span><span class="sxs-lookup"><span data-stu-id="82f75-140">dotnet-counters monitor</span></span>
 
-<span data-ttu-id="b2b77-124">Zeigt regelmäßig aktualisierte Werte ausgewählter Zähler an.</span><span class="sxs-lookup"><span data-stu-id="b2b77-124">Displays periodically refreshing values of selected counters.</span></span>
+<span data-ttu-id="82f75-141">Zeigt regelmäßig aktualisierte Werte ausgewählter Zähler an.</span><span class="sxs-lookup"><span data-stu-id="82f75-141">Displays periodically refreshing values of selected counters.</span></span>
 
-### <a name="synopsis"></a><span data-ttu-id="b2b77-125">Übersicht</span><span class="sxs-lookup"><span data-stu-id="b2b77-125">Synopsis</span></span>
+### <a name="synopsis"></a><span data-ttu-id="82f75-142">Übersicht</span><span class="sxs-lookup"><span data-stu-id="82f75-142">Synopsis</span></span>
 
 ```console
 dotnet-counters monitor [-h|--help] [-p|--process-id] [--refreshInterval] [counter_list]
 ```
 
-### <a name="options"></a><span data-ttu-id="b2b77-126">Optionen</span><span class="sxs-lookup"><span data-stu-id="b2b77-126">Options</span></span>
+### <a name="options"></a><span data-ttu-id="82f75-143">Optionen</span><span class="sxs-lookup"><span data-stu-id="82f75-143">Options</span></span>
 
 - **`-p|--process-id <PID>`**
 
-  <span data-ttu-id="b2b77-127">Die ID des zu überwachenden Prozesses.</span><span class="sxs-lookup"><span data-stu-id="b2b77-127">The ID of the process to be monitored.</span></span>
+  <span data-ttu-id="82f75-144">Die ID des zu überwachenden Prozesses.</span><span class="sxs-lookup"><span data-stu-id="82f75-144">The ID of the process to be monitored.</span></span>
 
 - **`--refresh-interval <SECONDS>`**
 
-  <span data-ttu-id="b2b77-128">Die Anzahl von Sekunden, die zwischen Aktualisierungen der angezeigten Indikatoren verstreichen soll.</span><span class="sxs-lookup"><span data-stu-id="b2b77-128">The number of seconds to delay between updating the displayed counters</span></span>
+  <span data-ttu-id="82f75-145">Die Anzahl von Sekunden, die zwischen Aktualisierungen der angezeigten Indikatoren verstreichen soll.</span><span class="sxs-lookup"><span data-stu-id="82f75-145">The number of seconds to delay between updating the displayed counters</span></span>
 
 - **`counter_list <COUNTERS>`**
 
-  <span data-ttu-id="b2b77-129">Eine durch Leerzeichen getrennte Liste von Zählern.</span><span class="sxs-lookup"><span data-stu-id="b2b77-129">A space separated list of counters.</span></span> <span data-ttu-id="b2b77-130">Zähler können in der Form `provider_name[:counter_name]` angegeben werden.</span><span class="sxs-lookup"><span data-stu-id="b2b77-130">Counters can be specified `provider_name[:counter_name]`.</span></span> <span data-ttu-id="b2b77-131">Wenn `provider_name` ohne qualifizierenden `counter_name` verwendet wird, werden alle Indikatoren angezeigt.</span><span class="sxs-lookup"><span data-stu-id="b2b77-131">If the `provider_name` is used without a qualifying `counter_name`, then all counters are shown.</span></span> <span data-ttu-id="b2b77-132">Verwenden Sie zum Ermitteln von Anbieter- und Indikatornamen den Befehl [dotnet-counters list](#dotnet-counters-list).</span><span class="sxs-lookup"><span data-stu-id="b2b77-132">To discover provider and counter names, use the [dotnet-counters list](#dotnet-counters-list) command.</span></span>
+  <span data-ttu-id="82f75-146">Eine durch Leerzeichen getrennte Liste von Zählern.</span><span class="sxs-lookup"><span data-stu-id="82f75-146">A space separated list of counters.</span></span> <span data-ttu-id="82f75-147">Zähler können in der Form `provider_name[:counter_name]` angegeben werden.</span><span class="sxs-lookup"><span data-stu-id="82f75-147">Counters can be specified `provider_name[:counter_name]`.</span></span> <span data-ttu-id="82f75-148">Wenn `provider_name` ohne qualifizierenden `counter_name` verwendet wird, werden alle Indikatoren angezeigt.</span><span class="sxs-lookup"><span data-stu-id="82f75-148">If the `provider_name` is used without a qualifying `counter_name`, then all counters are shown.</span></span> <span data-ttu-id="82f75-149">Verwenden Sie zum Ermitteln von Anbieter- und Indikatornamen den Befehl [dotnet-counters list](#dotnet-counters-list).</span><span class="sxs-lookup"><span data-stu-id="82f75-149">To discover provider and counter names, use the [dotnet-counters list](#dotnet-counters-list) command.</span></span>
 
-### <a name="examples"></a><span data-ttu-id="b2b77-133">Beispiele</span><span class="sxs-lookup"><span data-stu-id="b2b77-133">Examples</span></span>
+### <a name="examples"></a><span data-ttu-id="82f75-150">Beispiele</span><span class="sxs-lookup"><span data-stu-id="82f75-150">Examples</span></span>
 
-- <span data-ttu-id="b2b77-134">Überwachen aller Zähler von `System.Runtime` in einem Aktualisierungsintervall von 3 Sekunden:</span><span class="sxs-lookup"><span data-stu-id="b2b77-134">Monitor all counters from `System.Runtime` at a refresh interval of 3 seconds:</span></span>
+- <span data-ttu-id="82f75-151">Überwachen aller Zähler von `System.Runtime` in einem Aktualisierungsintervall von 3 Sekunden:</span><span class="sxs-lookup"><span data-stu-id="82f75-151">Monitor all counters from `System.Runtime` at a refresh interval of 3 seconds:</span></span>
 
   ```console
   > dotnet-counters monitor --process-id 1902  --refresh-interval 3 System.Runtime
@@ -116,7 +161,7 @@ dotnet-counters monitor [-h|--help] [-p|--process-id] [--refreshInterval] [count
       Number of Exceptions / sec                     4
   ```
 
-- <span data-ttu-id="b2b77-135">Überwachen nur der CPU-Auslastung und der GC-Heapgröße von `System.Runtime`:</span><span class="sxs-lookup"><span data-stu-id="b2b77-135">Monitor just CPU usage and GC heap size from `System.Runtime`:</span></span>
+- <span data-ttu-id="82f75-152">Überwachen nur der CPU-Auslastung und der GC-Heapgröße von `System.Runtime`:</span><span class="sxs-lookup"><span data-stu-id="82f75-152">Monitor just CPU usage and GC heap size from `System.Runtime`:</span></span>
 
   ```console
   > dotnet-counters monitor --process-id 1902 System.Runtime[cpu-usage,gc-heap-size]
@@ -127,7 +172,7 @@ dotnet-counters monitor [-h|--help] [-p|--process-id] [--refreshInterval] [count
       GC Heap Size (MB)                            811
   ```
 
-- <span data-ttu-id="b2b77-136">Überwachen von `EventCounter`-Werten von benutzerdefinierten `EventSource`.</span><span class="sxs-lookup"><span data-stu-id="b2b77-136">Monitor `EventCounter` values from user-defined `EventSource`.</span></span> <span data-ttu-id="b2b77-137">Weitere Informationen finden Sie unter [Tutorial: Messen der Leistung für sehr häufige Ereignisse mithilfe von EventCounters](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Diagnostics.Tracing/documentation/EventCounterTutorial.md).</span><span class="sxs-lookup"><span data-stu-id="b2b77-137">For more information, see [Tutorial: How to measure performance for very frequent events using EventCounters](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Diagnostics.Tracing/documentation/EventCounterTutorial.md).</span></span>
+- <span data-ttu-id="82f75-153">Überwachen von `EventCounter`-Werten von benutzerdefinierten `EventSource`.</span><span class="sxs-lookup"><span data-stu-id="82f75-153">Monitor `EventCounter` values from user-defined `EventSource`.</span></span> <span data-ttu-id="82f75-154">Weitere Informationen finden Sie unter [Tutorial: Messen der Leistung für sehr häufige Ereignisse mithilfe von EventCounters](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Diagnostics.Tracing/documentation/EventCounterTutorial.md).</span><span class="sxs-lookup"><span data-stu-id="82f75-154">For more information, see [Tutorial: How to measure performance for very frequent events using EventCounters](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Diagnostics.Tracing/documentation/EventCounterTutorial.md).</span></span>
 
   ```console
   > dotnet-counters monitor --process-id 1902 Samples-EventCounterDemos-Minimal
@@ -135,3 +180,22 @@ dotnet-counters monitor [-h|--help] [-p|--process-id] [--refreshInterval] [count
   Press p to pause, r to resume, q to quit.
       request                                      100
   ```
+  
+## <a name="dotnet-counters-ps"></a><span data-ttu-id="82f75-155">dotnet-counters ps</span><span class="sxs-lookup"><span data-stu-id="82f75-155">dotnet-counters ps</span></span> 
+
+<span data-ttu-id="82f75-156">Mit diesem Befehl wird eine Liste der dotnet-Prozesse angezeigt, die überwacht werden können.</span><span class="sxs-lookup"><span data-stu-id="82f75-156">Display a list of dotnet processes that can be monitored.</span></span>
+
+### <a name="synopsis"></a><span data-ttu-id="82f75-157">Übersicht</span><span class="sxs-lookup"><span data-stu-id="82f75-157">Synopsis</span></span>
+
+```console
+dotnet-counters ps [-h|--help]
+```
+
+### <a name="example"></a><span data-ttu-id="82f75-158">Beispiel</span><span class="sxs-lookup"><span data-stu-id="82f75-158">Example</span></span>
+
+```console
+> dotnet-counters ps
+  
+  15683 WebApi     /home/suwhang/repos/WebApi/WebApi
+  16324 dotnet     /usr/local/share/dotnet/dotnet
+```
