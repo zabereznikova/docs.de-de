@@ -1,14 +1,14 @@
 ---
 title: C#-Arrays – Überblick über C#
 description: Arrays sind der grundlegendste Auflistungstyp in der Sprache C#.
-ms.date: 08/10/2016
+ms.date: 02/27/2020
 ms.assetid: a440704c-9e88-4c75-97dd-bfe30ca0fb97
-ms.openlocfilehash: 56a053ac8525d4c6c34592d6092f3f162cb04247
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 3e045c0933a21beab6958c7851546ba6e0b55ef9
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65634607"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159194"
 ---
 # <a name="arrays"></a>Arrays
 
@@ -25,7 +25,7 @@ Mit diesem Beispiel wird ein ***eindimensionales Array*** erstellt und verwendet
 [!code-csharp[ArrayRank](../../../samples/snippets/csharp/tour/arrays/Program.cs#L24-L26)]
 
 Das `a1`-Array enthält 10 Elemente, das `a2`-Array umfasst 50 (10 × 5) Elemente, und das `a3`-Array enthält 100 (10 × 5 × 2) Elemente.
-Ein Array kann einen beliebigen Elementtyp verwenden, einschließlich eines Arraytyps.  Ein Array mit Elementen eines Arraytyps wird auch als ***verzweigtes Array*** bezeichnet, weil die Länge der Elementarrays nicht identisch sein muss. Im folgenden Beispiel wird ein Array aus `int`-Arrays zugewiesen:
+Ein Array kann einen beliebigen Elementtyp verwenden, einschließlich eines Arraytyps. Ein Array mit Elementen eines Arraytyps wird auch als ***Jagged Array*** bezeichnet, weil die Länge der Elementarrays nicht identisch sein muss. Im folgenden Beispiel wird ein Array aus `int`-Arrays zugewiesen:
 
 [!code-csharp[ArrayAllocation](../../../samples/snippets/csharp/tour/arrays/Program.cs#L31-L34)]
 
@@ -35,14 +35,14 @@ Der new-Operator erlaubt es, die Anfangswerte der Arrayelemente unter Verwendung
 
 [!code-csharp[ArrayInitialization](../../../samples/snippets/csharp/tour/arrays/Program.cs#L39-L39)]
 
-Beachten Sie, dass die Länge des Arrays aus der Anzahl von Ausdrücken zwischen { und } abgeleitet wird. Deklarationen lokaler Variablen und Felder können weiter verkürzt werden, sodass der Arraytyp nicht erneut aufgeführt werden muss.
+Die Länge des Arrays wird von der Anzahl an Ausdrücken zwischen { und } abgeleitet. Deklarationen lokaler Variablen und Felder können weiter verkürzt werden, sodass der Arraytyp nicht erneut aufgeführt werden muss.
 
 [!code-csharp[ArrayInitialization](../../../samples/snippets/csharp/tour/arrays/Program.cs#L44-L44)]
 
-Die zwei vorherigen Beispiele entsprechen dem folgenden:
+Die zwei vorherigen Beispiele entsprechen dem folgenden Code:
 
 [!code-csharp[ArrayAssignment](../../../samples/snippets/csharp/tour/arrays/Program.cs#L49-L53)]
 
 >[!div class="step-by-step"]
->[Zurück](structs.md)
+>[Zurück](classes-and-objects.md)
 >[Weiter](interfaces.md)

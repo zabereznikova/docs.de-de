@@ -2,12 +2,12 @@
 title: 'Tutorial: Erstellen eines .NET Core-Tools'
 description: Erfahren Sie, wie Sie ein .NET Core-Tool erstellen. Ein Tool ist eine Konsolenanwendung, die mithilfe der .NET Core-CLI installiert wird.
 ms.date: 02/12/2020
-ms.openlocfilehash: 558bf9e37efc8de68a61f1384fababe342ab7d66
-ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
+ms.openlocfilehash: 88cc3be7b149834ace0c5f3ba8ac8c039199908f
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77543403"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156724"
 ---
 # <a name="tutorial-create-a-net-core-tool-using-the-net-core-cli"></a>Tutorial: Erstellen eines .NET Core-Tool mithilfe der .NET Core-CLI
 
@@ -31,24 +31,18 @@ Dies ist das erste in einer Reihe von drei Tutorials. In diesem Tutorial erstell
 
 1. Öffnen Sie eine Eingabeaufforderung, und erstellen Sie einen Ordner mit dem Namen *repository*.
 
-1. Navigieren Sie zum Ordner *repository*, und geben Sie den folgenden Befehl ein, wobei `<name>` durch einen eindeutigen Wert ersetzt wird, um den Projektnamen eindeutig zu gestalten. 
+1. Navigieren Sie zum Ordner *Repository*, und geben Sie den folgenden Befehl ein:
 
    ```dotnetcli
-   dotnet new console -n botsay-<name>
+   dotnet new console -n microsoft.botsay
    ```
 
-   Sie können beispielsweise den folgenden Befehl ausführen:
+   Der Befehl erstellt einen neuen Ordner namens *microsoft.botsay* im Ordner *Repository*.
 
-   ```dotnetcli
-   dotnet new console -n botsay-nancydavolio
-   ```
-
-   Der Befehl erstellt unter dem Ordner *repository* einen neuen Ordner namens *botsay-\<name>* .
-
-1. Navigieren Sie zum Ordner *botsay-\<name>* .
+1. Navigieren Sie zum Ordner *microsoft.botsay*.
 
    ```console
-   cd botsay-<name>
+   cd microsoft.botsay
    ```
 
 ## <a name="add-the-code"></a>Hinzufügen des Codes
@@ -151,9 +145,9 @@ Alle Argumente hinter dem Trennzeichen `--` werden an Ihre Anwendung übergeben.
 
 ## <a name="package-the-tool"></a>Packen des Tools
 
-Bevor Sie die Anwendung als Tool packen und verteilen können, müssen Sie die Projektdatei ändern. 
+Bevor Sie die Anwendung als Tool packen und verteilen können, müssen Sie die Projektdatei ändern.
 
-1. Öffnen Sie die Datei *botsay-\<name>.csproj*, und fügen Sie am Ende des Knotens `<PropertyGroup>` drei neue XML-Knoten hinzu:
+1. Öffnen Sie die Datei *microsoft.botsay.csproj*, und fügen Sie drei neue XML-Knoten zum Ende des `<PropertyGroup>`-Knotens hinzu:
 
    ```xml
    <PackAsTool>true</PackAsTool>
@@ -190,7 +184,7 @@ Bevor Sie die Anwendung als Tool packen und verteilen können, müssen Sie die P
    dotnet pack
    ```
 
-   Die Datei *botsay-\<name>.1.0.0.nupkg* wird in dem Ordner erstellt, der mit dem Wert `<PackageOutputPath>` in der Datei *botsay-\<name>.csproj* angegeben wird. In diesem Beispiel ist das der Ordner *./nupkg*.
+   Die Datei *microsoft.botsay.1.0.0.nupkg* wird in dem Ordner erstellt, der mit dem `<PackageOutputPath>`-Wert der Datei *microsoft.botsay.csproj* angegeben wird. In diesem Beispiel handelt es sich dabei um den Ordner *./nupkg*.
   
    Wenn Sie ein Tool veröffentlichen möchten, laden Sie es in `https://www.nuget.org` hoch. Sobald das Tool in NuGet verfügbar ist, können Entwickler es mit dem Befehl [dotnet tool install](dotnet-tool-install.md) installieren. Für dieses Tutorial installieren Sie das Paket direkt aus dem lokalen Ordner *nupkg*, sodass Sie das Paket nicht auf NuGet hochladen müssen.
 

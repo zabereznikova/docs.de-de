@@ -1,32 +1,34 @@
 ---
-title: Verwalten von Abhängigkeiten in .NET Core-Tools
-description: Erläutert, wie Abhängigkeiten mit den .NET Core-Tools verwaltet werden können.
-ms.date: 03/06/2017
-ms.openlocfilehash: 916daca0240c10dc63ca96048590a426bc51d450
-ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
+title: Verwalten von Abhängigkeiten in .NET Core
+description: In diesem Artikel wird erläutert, wie Projektabhängigkeiten für eine .NET Core-Anwendung verwaltet werden.
+no-loc:
+- dotnet add package
+- dotnet remove package
+- dotnet list package
+ms.date: 02/25/2020
+ms.openlocfilehash: 367be7eb04d58bffc0846de1d035a5801e8d9376
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/02/2020
-ms.locfileid: "76965619"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78157244"
 ---
-# <a name="manage-dependencies-with-net-core-sdk-10"></a>Verwalten von Abhängigkeiten mit .NET Core SDK 1.0
+# <a name="manage-dependencies-in-net-core-applications"></a>Verwalten von Abhängigkeiten in .NET Core-Anwendungen
 
-Mit dem Wechsel von .NET Core-Projekten von „project.json“ zu „csproj“ und MSBuild wurde auch ein beträchtlicher Aufwand betrieben, der zu einer Vereinheitlichung der Projektdatei und Objekte geführt hat, sodass Abhängigkeiten nachverfolgt werden können. Bei .NET Core-Projekten ist dies mit der Verwendung von „project.json“ vergleichbar. Es gibt keine separate JSON- oder XML-Datei, die NuGet-Abhängigkeiten nachverfolgt. Mit dieser Änderung haben wir auch eine andere Art von *Verweis* in die CSPROJ-Syntax eingeführt: `<PackageReference>`.
+In diesem Artikel wird erläutert, wie Abhängigkeiten durch Bearbeitung der Projektdatei oder mithilfe der CLI hinzugefügt oder entfernt werden.
 
-In diesem Dokument wird der neue Verweistyp beschrieben. Es wird außerdem gezeigt, wie mit diesem neuen Verweistyp eine Paketabhängigkeit zum Projekt hinzugefügt wird.
+## <a name="the-packagereference-element"></a>Das Element \<PackageReference>
 
-## <a name="the-new-packagereference-element"></a>Das neue \<PackageReference>-Element
-
-`<PackageReference>` weist die folgende grundlegende Struktur auf:
+Das Projektdateielement `<PackageReference>` weist die folgende Struktur auf:
 
 ```xml
 <PackageReference Include="PACKAGE_ID" Version="PACKAGE_VERSION" />
 ```
 
-Wenn Sie mit MSBuild vertraut sind, kommt es Ihnen durch bereits vorhandene Verweistypen bekannt vor. Der Schlüssel ist die `Include`-Anweisung, mit der die Paket-ID angegeben wird, die Sie dem Projekt hinzufügen möchten. Das untergeordnete `<Version>`-Element gibt die abzurufende Version an. Die Versionen werden gemäß den [NuGet-Versionsregeln](/nuget/create-packages/dependency-versions#version-ranges) angegeben.
+Das Attribut `Include` gibt die ID des Pakets an, das zum Projekt hinzugefügt werden soll. Das `Version`-Attribut gibt die abzurufende Version an. Versionen werden gemäß der [NuGet-Versionsregeln](/nuget/create-packages/dependency-versions#version-ranges) angegeben.
 
 > [!NOTE]
-> Wenn Ihnen die Projektdateisyntax noch unbekannt ist, finden Sie weitere Informationen in der Dokumentation zu [MSBuild-Projektverweisen](/visualstudio/msbuild/msbuild-project-file-schema-reference).
+> Wenn Sie nicht mit der Projektdateisyntax vertraut sind, finden Sie weitere Informationen in der [Referenz zu MSBuild-Projekten](/visualstudio/msbuild/msbuild-project-file-schema-reference).
 
 Verwenden Sie wie im folgenden Beispiel gezeigt Bedingungen, um eine Abhängigkeit hinzuzufügen, die nur in einem bestimmten Ziel verfügbar ist:
 
@@ -34,39 +36,47 @@ Verwenden Sie wie im folgenden Beispiel gezeigt Bedingungen, um eine Abhängigke
 <PackageReference Include="PACKAGE_ID" Version="PACKAGE_VERSION" Condition="'$(TargetFramework)' == 'netcoreapp2.1'" />
 ```
 
-Die Abhängigkeit ist nur dann gültig, wenn der Build für das angegebene Ziel erstellt wird. `$(TargetFramework)` in der Bedingung ist eine MSBuild-Eigenschaft, die im Projekt festgelegt wird. Bei den gängigsten .NET Core-Anwendungen ist dies nicht erforderlich.
+Die Abhängigkeit im obigen Beispiel ist nur dann gültig, wenn der Build für das angegebene Ziel erstellt wird. `$(TargetFramework)` in der Bedingung ist eine MSBuild-Eigenschaft, die im Projekt festgelegt wird. Bei den gängigsten .NET Core-Anwendungen ist dies nicht erforderlich.
 
-## <a name="add-a-dependency-to-the-project"></a>Hinzufügen einer Abhängigkeit zum Projekt
+## <a name="add-a-dependency-by-editing-the-project-file"></a>Hinzufügen einer Abhängigkeit durch Bearbeiten der Projektdatei
 
-Es ist einfach, eine Abhängigkeit zu Ihrem Projekt hinzuzufügen. Im folgenden Beispiel wird das Hinzufügen der Json.NET-Version `9.0.1` zu Ihrem Projekt veranschaulicht. Natürlich gilt dies für alle anderen NuGet-Abhängigkeiten.
-
-Ihre Projektdatei verfügt über zwei oder mehr `<ItemGroup>`-Knoten. Einer der Knoten weist bereits `<PackageReference>`-Elemente auf. Sie können Ihre neue Abhängigkeit zu diesem Knoten hinzufügen oder einen neuen Knoten erstellen. Das Ergebnis dieser beiden Optionen ist gleich.
-
-Das folgende Beispiel verwendet die Standardvorlage, die von `dotnet new console` erstellt wird. Dies ist eine einfache Konsolenanwendung. Wenn Sie das Projekt öffnen, sehen Sie die `<ItemGroup>` mit dem bereits vorhandenen `<PackageReference>`-Element. Fügen Sie Folgendes hinzu:
+Fügen Sie ein `<PackageReference>`-Element in ein `<ItemGroup>`-Element ein, um eine Abhängigkeit hinzuzufügen. Sie können zu einem vorhandenen `<ItemGroup>`-Element hinzufügen oder ein neues erstellen. Im folgenden Beispiel wird das Standard-Konsolenanwendungsprojekt verwendet, das von `dotnet new console` erstellt wird:
 
 ```xml
-<PackageReference Include="Newtonsoft.Json" Version="9.0.1" />
-```
+<Project Sdk="Microsoft.NET.Sdk.Web">
 
-Anschließend speichern Sie das Projekt und führen den Befehl `dotnet restore` aus, um die Abhängigkeit zu installieren.
-
-[!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
-
-Das vollständige Projekt sieht folgendermaßen aus:
-
-```xml
-<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <OutputType>Exe</OutputType>
-    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Newtonsoft.Json" Version="9.0.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.2" />
   </ItemGroup>
+
 </Project>
 ```
 
-## <a name="remove-a-dependency-from-the-project"></a>Entfernen einer Abhängigkeit aus dem Projekt
+## <a name="add-a-dependency-by-using-the-cli"></a>Hinzufügen einer Abhängigkeit mithilfe der CLI
 
-Das Entfernen einer Abhängigkeit aus der Projektdatei bedeutet einfach, `<PackageReference>` aus der Projektdatei zu entfernen.
+Führen Sie den Befehl [dotnet add package](dotnet-add-package.md) wie im folgenden Beispiel gezeigt aus, um eine Abhängigkeit hinzuzufügen:
+
+```dotnetcli
+dotnet add package Microsoft.EntityFrameworkCore
+```
+
+## <a name="remove-a-dependency-by-editing-the-project-file"></a>Entfernen einer Abhängigkeit durch Bearbeiten der Projektdatei
+
+Entfernen Sie das jeweilige `<PackageReference>`-Element aus der Projektdatei, um eine Abhängigkeit zu entfernen.
+
+## <a name="remove-a-dependency-by-using-the-cli"></a>Entfernen einer Abhängigkeit mithilfe der CLI
+
+Führen Sie den Befehl [dotnet remove package](dotnet-remove-package.md) wie im folgenden Beispiel gezeigt aus, um eine Abhängigkeit zu entfernen:
+
+```dotnetcli
+dotnet remove package Microsoft.EntityFrameworkCore
+```
+
+## <a name="see-also"></a>Siehe auch
+
+* [NuGet-Pakete in Projektdateien](../project-sdk/msbuild-props.md#nuget-packages)
+* [dotnet list package-Befehl](dotnet-remove-package.md)

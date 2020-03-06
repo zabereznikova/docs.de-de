@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - class keyword [C#]
 ms.assetid: b95d8815-de18-4c3f-a8cc-a0a53bdf8690
-ms.openlocfilehash: 187a49131e903e00cab54d9db43b6cd8eb359a3a
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 500160d3bc9280b866e5f5ba24c5edc623e752c1
+ms.sourcegitcommit: c2d9718996402993cf31541f11e95531bc68bad0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75713689"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77673094"
 ---
 # <a name="class-c-reference"></a>class (C#-Referenz)
 
@@ -33,9 +33,9 @@ In C# ist nur die einfache Vererbung zulässig. Eine Klasse kann also Implementi
 |Vererbung|Beispiel|
 |-----------------|-------------|
 |Keine|`class ClassA { }`|
-|Single|`class DerivedClass: BaseClass { }`|
-|Keine, Implementierung von zwei Schnittstellen|`class ImplClass: IFace1, IFace2 { }`|
-|Single, Implementierung einer Schnittstelle|`class ImplDerivedClass: BaseClass, IFace1 { }`|
+|Single|`class DerivedClass : BaseClass { }`|
+|Keine, Implementierung von zwei Schnittstellen|`class ImplClass : IFace1, IFace2 { }`|
+|Single, Implementierung einer Schnittstelle|`class ImplDerivedClass : BaseClass, IFace1 { }`|
 
 Klassen, die Sie direkt innerhalb eines Namespace und nicht in anderen Klassen geschachtelt deklarieren, können entweder [public](./public.md) oder [internal](./internal.md) sein. Klassen sind standardmäßig `internal`.
 
@@ -71,9 +71,9 @@ Eine Klasse kann Deklarationen der folgenden Member enthalten:
 
 - [Schnittstellen](../../programming-guide/interfaces/index.md)
 
-- [Strukturen](../../programming-guide/classes-and-structs/structs.md)
+- [Strukturtypen](../builtin-types/struct.md)
 
-- [Enumerationen](../builtin-types/enum.md)
+- [Enumerationstypen](../builtin-types/enum.md)
 
 ## <a name="example"></a>Beispiel
 

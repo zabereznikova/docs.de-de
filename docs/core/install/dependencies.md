@@ -5,12 +5,12 @@ author: leecow
 ms.author: leecow
 ms.date: 12/04/2019
 zone_pivot_groups: operating-systems-set-one
-ms.openlocfilehash: 4164ea5a04d80ab20109168a225b793b02ee616a
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: ca86b3c158bb38c1293cd4303dcf4c00ea9175b1
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77448892"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78157808"
 ---
 # <a name="net-core-dependencies-and-requirements"></a>.NET Core-Abhängigkeiten und -Anforderungen
 
@@ -294,6 +294,14 @@ Für .NET Core-Apps, die die Assembly *System.Drawing.Common* verwenden, benöti
 | 3.0               | High Sierra (10.13 oder höher)  | x64 | [Weitere Informationen](https://github.com/dotnet/core/blob/master/release-notes/3.0/3.0-supported-os.md) |
 | 2.2               | Sierra (10.12 oder höher)       | x64 | [Weitere Informationen](https://github.com/dotnet/core/blob/master/release-notes/2.2/2.2-supported-os.md) |
 | 2.1               | Sierra (10.12 oder höher)       | x64 | [Weitere Informationen](https://github.com/dotnet/core/blob/master/release-notes/2.1/2.1-supported-os.md) |
+
+Ab macOS Catalina (Version 10.15) muss jegliche Software notarisiert werden, die nach dem 1. Juni 2019 erstellt wurde und mit einer Entwickler-ID verteilt wird. Diese Voraussetzung gilt für die .NET Core-Runtime, das .NET Core SDK und jegliche Software, die mit .NET Core erstellt wird.
+
+Die Installationsprogramme für die Versionen 3.1, 3.0 und 2.1 von .NET Core (sowohl für die Runtime als auch das SDK) wurden seit dem 18. Februar 2020 notarisiert. Vorherige Versionen wurden nicht notarisiert. Wenn Sie eine nicht notarisierte App ausführen, wird eine Fehlermeldung ähnlich der folgenden Abbildung angezeigt:
+
+![macOS Catalina-Notarisierungswarnung](media/dependencies/macos-notarized-pkg-warning.png)
+
+Weitere Informationen dazu, wie sich die erzwungene Notarisierung auf .NET Core (und Ihre .NET Core-Apps) auswirkt, finden Sie unter [Verwenden der macOS Catalina-Notarisierung](macos-notarization-issues.md).
 
 ## <a name="libgdiplus"></a>libgdiplus
 

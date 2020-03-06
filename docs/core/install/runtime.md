@@ -6,12 +6,12 @@ ms.author: adegeo
 ms.date: 12/04/2019
 ms.custom: updateeachrelease
 zone_pivot_groups: operating-systems-set-one
-ms.openlocfilehash: ba50eb222d9eab6bffbb8ebfdf0ecf47951ce719
-ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
+ms.openlocfilehash: a41bbdf5419585f06773583dbe82ab0d84ebaa4c
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77543520"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78157635"
 ---
 # <a name="install-the-net-core-runtime"></a>Installieren der .NET Core-Runtime
 
@@ -35,6 +35,19 @@ Windows verfügt über eigenständige Installer, die zur Installation der .NET C
 macOS verfügt über eigenständige Installer, die zur Installation der .NET Core-Runtime 3.1 verwendet werden können:
 
 - [x64-CPUs (64 Bit)](https://dotnet.microsoft.com/download/dotnet-core/3.1)
+
+## <a name="download-and-manually-install"></a>Herunterladen und manuelles Installieren
+
+Alternativ zu den macOS-Installationsprogrammen für .NET Core können Sie die Runtime herunterladen und manuell installieren.
+
+[Laden Sie zunächst ein .NET Core-Binärrelease herunter](#all-net-core-downloads), um die Runtime zu installieren und die Verwendung von .NET Core-CLI-Befehle im Terminal zu ermöglichen. Öffnen Sie dann ein Terminal, und führen Sie die folgenden Befehle aus. Bei diesen Befehlen wird dabei ausgegangen, dass die Runtime in die `~/Downloads/dotnet-runtime.pkg`-Datei heruntergeladen wurde.
+
+```bash
+mkdir -p $HOME/dotnet
+sudo installer -pkg ~/Downloads/dotnet-runtime.pkg -target $HOME/dotnet
+export DOTNET_ROOT=$HOME/dotnet
+export PATH=$PATH:$HOME/dotnet
+```
 
 ::: zone-end
 
@@ -64,7 +77,7 @@ export PATH=$PATH:$HOME/dotnet
 > - **Bash-Shell**: *~/.bash_profile*, *~/.bashrc*
 > - **Korn-Shell**: *~/.kshrc* oder *.profile*
 > - **Z-Shell**: *~/.kshrc* oder *.profile*
-> 
+>
 > Bearbeiten Sie die geeignete Quelldatei für die Shell, und fügen Sie `:$HOME/dotnet` am Ende der vorhandenen `PATH`-Anweisung hinzu. Wenn keine `PATH`-Anweisung enthalten ist, fügen Sie eine neue Zeile mit `export PATH=$PATH:$HOME/dotnet` hinzu.
 >
 > Fügen Sie außerdem `export DOTNET_ROOT=$HOME/dotnet` am Ende der Datei hinzu.

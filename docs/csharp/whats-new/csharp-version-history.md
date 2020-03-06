@@ -3,12 +3,12 @@ title: 'Die Geschichte von C#: Leitfaden für C#'
 description: Wie sah die Sprache in ihren ersten Versionen aus und wie hat sie sich seitdem verändert?
 author: erikdietrich
 ms.date: 09/20/2017
-ms.openlocfilehash: 83934d9c8194d5109cea0e847d287c01c32a2955
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 9114395a5c6cfd8df5da18024921c35828947e0b
+ms.sourcegitcommit: c2d9718996402993cf31541f11e95531bc68bad0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73739108"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77673276"
 ---
 # <a name="the-history-of-c"></a>Die Geschichte von C\#
 
@@ -37,7 +37,7 @@ Im Vergleich zu heute sieht C# Version 1.0 jedoch ziemlich minimalistisch aus. M
 Die wichtigsten Features von C# 1.0 umfassten:
 
 - [Klassen](../programming-guide/classes-and-structs/classes.md)
-- [Strukturen](../programming-guide/classes-and-structs/structs.md)
+- [Strukturen](../language-reference/builtin-types/struct.md)
 - [Schnittstellen](../programming-guide/interfaces/index.md)
 - [Ereignisse](../events-overview.md)
 - [Eigenschaften](../properties.md)
@@ -48,7 +48,7 @@ Die wichtigsten Features von C# 1.0 umfassten:
 
 ## <a name="c-version-12"></a>C# Version 1.2
 
-C# Version 1.2 wird in Visual Studio. NET 2003 bereitgestellt. Sie enthielt einige kleine Verbesserungen der Sprache. Die wichtigste Änderung betrifft, ab dieser Version, den in einer `foreach`-Schleife namens <xref:System.IDisposable.Dispose%2A> generierten Code in <xref:System.Collections.IEnumerator>, wenn <xref:System.Collections.IEnumerator> <xref:System.IDisposable> implementiert hat.
+C# Version 1.2 wird in Visual Studio. NET 2003 bereitgestellt. Sie enthielt einige kleine Verbesserungen der Sprache. Die wichtigste Änderung betrifft, ab dieser Version, den in einer `foreach`-Schleife namens <xref:System.IDisposable.Dispose%2A> generierten Code in <xref:System.Collections.IEnumerator>, wenn <xref:System.Collections.IEnumerator><xref:System.IDisposable> implementiert hat.
 
 ## <a name="c-version-20"></a>C# Version 2.0
 
@@ -173,4 +173,4 @@ Alle diese Features bieten tolle neue Möglichkeiten für Entwickler und erlaube
 
 C# kommt auf einem immer breiteren Feld zum Einsatz. .NET Core zielt nun auf alle Betriebssysteme ab und konzentriert sich stark auf die Cloud und auf Portabilität.  Diese neuen Funktionen nehmen zusätzlich zum Entwickeln neuer Features sicherlich viel Arbeit und Zeit in Anspruch.
 
-_Dieser Artikel_ wurde [_ursprünglich auf dem NDepend-Blog_](https://blog.ndepend.com/c-versions-look-language-history/) _veröffentlicht, mit freundlicher Genehmigung von Erik Dietrich und Patrick Smacchia._
+_Dieser Artikel wurde_ [_ursprünglich auf dem NDepend-Blog veröffentlicht_](https://blog.ndepend.com/c-versions-look-language-history/) _und uns freundlicherweise von Erik Dietrich und Patrick Smacchia zur Verfügung gestellt._

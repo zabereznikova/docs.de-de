@@ -2,12 +2,12 @@
 title: Bezeichnernamen
 description: Lernen Sie die Regeln für gültige Bezeichnernamen in der C#-Programmiersprache kennen.
 ms.date: 08/21/2018
-ms.openlocfilehash: f8a27ddae0437ed037b59f76d60dc7e420ddc2eb
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: bef6e2ea285b5391af3350ae42a4105d140c6d1b
+ms.sourcegitcommit: c2d9718996402993cf31541f11e95531bc68bad0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69589353"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77673367"
 ---
 # <a name="identifier-names"></a>Bezeichnernamen
 
@@ -38,7 +38,7 @@ Neben diesen Regeln gibt es mehrere [Namenskonventionen](../../../standard/desig
 - [Einblicke in ein C#-Programm](./index.md)
 - [C#-Referenz](../../language-reference/index.md)
 - [Klassen](../classes-and-structs/classes.md)
-- [Strukturen](../classes-and-structs/structs.md)
+- [Strukturtypen](../../language-reference/builtin-types/struct.md)
 - [Namespaces](../namespaces/index.md)
 - [Schnittstellen](../interfaces/index.md)
 - [Delegaten](../delegates/index.md)

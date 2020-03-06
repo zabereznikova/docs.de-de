@@ -6,12 +6,12 @@ dev_langs:
 author: thraka
 ms.author: adegeo
 ms.date: 12/04/2019
-ms.openlocfilehash: 0905cbebb2d966570be4ac3aefb40f4377b97061
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 323a2390f079c17b81db01e4e3787916251943bf
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76742585"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156555"
 ---
 # <a name="whats-new-in-net-core-31"></a>Neuerungen in .NET Core 3.1
 
@@ -36,6 +36,34 @@ NET Core 3.1 ist eine LTS-Version mit Support von Microsoft für die nächsten 
 | .NET Core 2.1 | Ende des Lebenszyklus: 21. August 2021    |
 
 Weitere Informationen finden Sie in der [Supportrichtlinie für .NET Core](https://dotnet.microsoft.com/platform/support/policy/dotnet-core).
+
+## <a name="macos-apphost-and-notarization"></a>macOS-appHost und -Notarisierung
+
+*nur unter macOS*
+
+Ab dem notarisierten .NET Core SDK 3.1 für macOS, ist die appHost-Einstellung standardmäßig deaktiviert. Weitere Informationen finden Sie unter [macOS Catalina-Notarisierung und die Auswirkungen auf .NET Core-Downloads und -Projekte](../install/macos-notarization-issues.md).
+
+Wenn die appHost-Einstellung aktiviert ist, erzeugt .NET Core eine native ausführbare Mach-O-Datei, wenn Sie einen Build- oder Veröffentlichungsprozess ausführen. Ihre App wird im Kontext von appHost ausgeführt, wenn sie mit dem Befehl `dotnet run` über den Quellcode oder durch direktes Starten der ausführbaren Mach-O-Datei ausgeführt wird.
+
+Ohne die appHost-Datei können Benutzer eine [Runtime-abhängige](../deploying/index.md#publish-runtime-dependent) App nur mit dem Befehl `dotnet <filename.dll>` starten. Es wird immer eine appHost-Datei erstellt, wenn Sie Ihre App [eigenständig](../deploying/index.md#publish-self-contained) veröffentlichen.
+
+Sie können die appHost-Datei entweder auf Projektebene konfigurieren oder für einen spezifischen `dotnet`-Befehl mit dem `-p:UseAppHost`-Parameter aktivieren:
+
+- Projektdatei
+
+  ```xml
+  <PropertyGroup>
+    <UseAppHost>true</UseAppHost>
+  </PropertyGroup>
+  ```
+
+- Befehlszeilenparameter
+
+  ```dotnetcli
+  dotnet run -p:UseAppHost=true
+  ```
+
+Weitere Informationen über die `UseAppHost`-Einstellung finden Sie unter [MSBuild-Eigenschaften für Microsoft.NET.Sdk](../project-sdk/msbuild-props.md#useapphost).
 
 ## <a name="windows-forms"></a>Windows Forms
 

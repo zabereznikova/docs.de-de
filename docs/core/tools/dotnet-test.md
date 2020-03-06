@@ -1,17 +1,17 @@
 ---
 title: Befehl „dotnet test“
 description: Der Befehl „dotnet test“ wird zum Ausführen von Unittests in einem bestimmten Projekt verwendet.
-ms.date: 05/29/2018
-ms.openlocfilehash: 909815151265117395c6d8d13b4443a245c05f9e
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.date: 02/27/2020
+ms.openlocfilehash: 6e906ab396a788905c99f50e73390b765b240efc
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77451193"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78157010"
 ---
 # <a name="dotnet-test"></a>dotnet test
 
-[!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
+**Dieser Artikel gilt für:** ✔️ .NET Core 2.1 SDK und neuere Versionen
 
 ## <a name="name"></a>name
 
@@ -19,36 +19,15 @@ ms.locfileid: "77451193"
 
 ## <a name="synopsis"></a>Übersicht
 
-<!-- markdownlint-disable MD025 -->
-
-# <a name="net-core-21"></a>[.NET Core 2.1](#tab/netcore21)
-
 ```dotnetcli
-dotnet test [<PROJECT>] [-a|--test-adapter-path] [--blame] [-c|--configuration] [--collect] [-d|--diag] [-f|--framework] [--filter]
-    [-l|--logger] [--no-build] [--no-restore] [-o|--output] [-r|--results-directory] [-s|--settings] [-t|--list-tests] 
-    [-v|--verbosity] [-- <RunSettings arguments>]
+dotnet test [<PROJECT>] [-a|--test-adapter-path] [--blame]
+    [-c|--configuration] [--collect] [-d|--diag] [-f|--framework]
+    [--filter] [-l|--logger] [--no-build] [--no-restore]
+    [-o|--output] [-r|--results-directory] [-s|--settings]
+    [-t|--list-tests] [-v|--verbosity] [-- <RunSettings arguments>]
 
 dotnet test [-h|--help]
 ```
-
-# <a name="net-core-20"></a>[.NET Core 2.0](#tab/netcore20)
-
-```dotnetcli
-dotnet test [<PROJECT>] [-a|--test-adapter-path] [-c|--configuration] [--collect] [-d|--diag] [-f|--framework] [--filter]
-    [-l|--logger] [--no-build] [--no-restore] [-o|--output] [-r|--results-directory] [-s|--settings] [-t|--list-tests] [-v|--verbosity]
-
-dotnet test [-h|--help]
-```
-
-# <a name="net-core-1x"></a>[.NET Core 1.x](#tab/netcore1x)
-
-```dotnetcli
-dotnet test [<PROJECT>] [-a|--test-adapter-path] [-c|--configuration] [-d|--diag] [-f|--framework] [--filter] [-l|--logger] [--no-build] [-o|--output] [-s|--settings] [-t|--list-tests]  [-v|--verbosity]
-
-dotnet test [-h|--help]
-```
-
----
 
 ## <a name="description"></a>Beschreibung
 
@@ -60,213 +39,103 @@ In Testprojekten wird der Testlauf mittels eines normalen `<PackageReference>`-E
 
 ## <a name="arguments"></a>Argumente
 
-`PROJECT`
+- **`PROJECT`**
 
-Der Pfad zum Testprojekt. Wenn er nicht angegeben ist, wird standardmäßig das aktuelle Verzeichnis ausgewählt.
+  Der Pfad zum Testprojekt. Wenn er nicht angegeben ist, wird standardmäßig das aktuelle Verzeichnis ausgewählt.
 
 ## <a name="options"></a>Optionen
 
-# <a name="net-core-21"></a>[.NET Core 2.1](#tab/netcore21)
+- **`a|--test-adapter-path <PATH_TO_ADAPTER>`**
 
-`-a|--test-adapter-path <PATH_TO_ADAPTER>`
+  Verwenden Sie die benutzerdefinierten Testadapter aus dem angegebenen Pfad im Testlauf.
 
-Verwenden Sie die benutzerdefinierten Testadapter aus dem angegebenen Pfad im Testlauf.
+- **`-blame`**
 
-`--blame`
+  Führt die Tests im blame-Modus aus. Diese Option hilft beim Isolieren von fehlerhaften Tests, die den Absturz des Testhosts verursachen. In dem aktuellen Verzeichnis wird eine Ausgabedatei als *Sequence.xml* erstellt, die die Reihenfolge der ausgeführten Tests vor dem Absturz erfasst.
 
-Führt die Tests im blame-Modus aus. Diese Option hilft beim Isolieren der fehlerhaften Tests, die den Absturz des Testhosts verursachen. In dem aktuellen Verzeichnis wird eine Ausgabedatei als *Sequence.xml* erstellt, die die Reihenfolge der ausgeführten Tests vor dem Absturz erfasst.
+- **`c|--configuration {Debug|Release}`**
 
-`-c|--configuration {Debug|Release}`
+  Legt die Buildkonfiguration fest. Der Standardwert ist `Debug`, aber die Konfiguration des Projekts könnte diese SDK-Standardeinstellung überschreiben.
 
-Legt die Buildkonfiguration fest. Der Standardwert ist `Debug`, aber die Konfiguration des Projekts könnte diese SDK-Standardeinstellung überschreiben.
+- **`-collect <DATA_COLLECTOR_FRIENDLY_NAME>`**
 
-`--collect <DATA_COLLECTOR_FRIENDLY_NAME>`
+  Aktiviert den Datensammler für den Testlauf. Weitere Informationen finden Sie unter [Monitor and analyze test run (Überwachen und Analysieren eines Testlaufs)](https://aka.ms/vstest-collect).
 
-Aktiviert den Datensammler für den Testlauf. Weitere Informationen finden Sie unter [Monitor and analyze test run (Überwachen und Analysieren eines Testlaufs)](https://aka.ms/vstest-collect).
+- **`d|--diag <PATH_TO_DIAGNOSTICS_FILE>`**
 
-`-d|--diag <PATH_TO_DIAGNOSTICS_FILE>`
+  Aktiviert den Diagnosemodus für die Testplattform und schreibt Diagnosemeldungen in die angegebene Datei.
 
-Aktiviert den Diagnosemodus für die Testplattform und schreibt Diagnosemeldungen in die angegebene Datei.
+- **`f|--framework <FRAMEWORK>`**
 
-`-f|--framework <FRAMEWORK>`
+  Sucht nach Testbinärdateien für ein bestimmtes [Framework](../../standard/frameworks.md).
 
-Sucht nach Testbinärdateien für ein bestimmtes [Framework](../../standard/frameworks.md).
+- **`--filter <EXPRESSION>`**
 
-`--filter <EXPRESSION>`
+  Filtert Tests im aktuellen Projekt mithilfe des angegebenen Ausdrucks heraus. Weitere Informationen finden Sie im Abschnitt [Details zu Filteroptionen](#filter-option-details). Weitere Informationen und Beispiele zur Verwendung von selektiven Komponententestfiltern finden Sie unter [Ausführen von selektiven Komponententests](../testing/selective-unit-tests.md).
 
-Filtert Tests im aktuellen Projekt mithilfe des angegebenen Ausdrucks heraus. Weitere Informationen finden Sie im Abschnitt [Details zu Filteroptionen](#filter-option-details). Weitere Informationen und Beispiele zur Verwendung von selektiven Komponententestfiltern finden Sie unter [Ausführen von selektiven Komponententests](../testing/selective-unit-tests.md).
+- **`h|--help`**
 
-`-h|--help`
+  Druckt eine kurze Hilfe für den Befehl.
 
-Druckt eine kurze Hilfe für den Befehl.
+- **`l|--logger <LoggerUri/FriendlyName>`**
 
-`-l|--logger <LoggerUri/FriendlyName>`
+  Gibt eine Protokollierung für die Testergebnisse an.
 
-Gibt eine Protokollierung für die Testergebnisse an.
+- **`--no-build`**
 
-`--no-build`
+  Erstellt das Projekt nicht vor der Ausführung. Zudem wird das Flag `--no-restore` implizit festgelegt.
 
-Erstellt das Projekt nicht vor der Ausführung. Das `--no-restore`-Flag wird implizit festgelegt.
+- **`--no-restore`**
 
-`--no-restore`
+  Führt keine implizite Wiederherstellung aus, wenn der Befehl ausgeführt wird.
 
-Führt keine implizite Wiederherstellung aus, wenn der Befehl ausgeführt wird.
+- **`-o|--output <OUTPUT_DIRECTORY>`**
 
-`-o|--output <OUTPUT_DIRECTORY>`
+  Verzeichnis, in dem die auszuführenden Binärdateien zu finden sind.
 
-Verzeichnis, in dem die auszuführenden Binärdateien zu finden sind.
+- **`-r|--results-directory <PATH>`**
 
-`-r|--results-directory <PATH>`
+  Das Verzeichnis, in dem die Testergebnisse gespeichert werden. Wenn das Verzeichnis noch nicht vorhanden ist, wird es erstellt.
 
-Das Verzeichnis, in dem die Testergebnisse gespeichert werden. Wenn das Verzeichnis noch nicht vorhanden ist, wird es erstellt.
+- **`-s|--settings <SETTINGS_FILE>`**
 
-`-s|--settings <SETTINGS_FILE>`
+  Die `.runsettings`-Datei, die zum Ausführen der Tests verwendet wird. [Konfigurieren von Komponententests mithilfe einer `.runsettings`-Datei.](/visualstudio/test/configure-unit-tests-by-using-a-dot-runsettings-file)
 
-Die `.runsettings`-Datei, die zum Ausführen der Tests verwendet wird. [Konfigurieren von Komponententests mithilfe einer `.runsettings`-Datei.](/visualstudio/test/configure-unit-tests-by-using-a-dot-runsettings-file)
+- **`-t|--list-tests`**
 
-`-t|--list-tests`
+  Listen Sie alle ermittelten Tests im aktuellen Projekt auf.
 
-Listen Sie alle ermittelten Tests im aktuellen Projekt auf.
+- **`-v|--verbosity <LEVEL>`**
 
-`-v|--verbosity <LEVEL>`
+  Legt den Ausführlichkeitsgrad für den Befehl fest. Zulässige Werte sind `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` und `diag[nostic]`.
 
-Legt den Ausführlichkeitsgrad für den Befehl fest. Zulässige Werte sind `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` und `diag[nostic]`.
+- `RunSettings`-Argumente
 
-`RunSettings arguments`
+  Argumente werden als `RunSettings`-Konfigurationen für den Test übergeben. Argumente werden als `[name]=[value]`-Paaren nach „-- “ angegeben (Beachten Sie das Leerzeichen nach --). Ein Leerzeichen wird verwendet, um mehrere `[name]=[value]`-Paare voneinander zu trennen.
 
-Argumente, die als RunSettings-Konfigurationen für den Test übergeben werden. Argumente werden als `[name]=[value]`-Paaren nach „-- “ angegeben (Beachten Sie das Leerzeichen nach --). Ein Leerzeichen wird verwendet, um mehrere `[name]=[value]`-Paare voneinander zu trennen.
+  Ein Beispiel: `dotnet test -- MSTest.DeploymentEnabled=false MSTest.MapInconclusiveToFailed=True`
 
-Ein Beispiel: `dotnet test -- MSTest.DeploymentEnabled=false MSTest.MapInconclusiveToFailed=True`
-
-Weitere Informationen zu RunSettings finden Sie unter [vstest.console.exe: Passing RunSettings args](https://github.com/Microsoft/vstest-docs/blob/master/docs/RunSettingsArguments.md) (Übergeben von RunSettings-Argumenten).
-
-# <a name="net-core-20"></a>[.NET Core 2.0](#tab/netcore20)
-
-`-a|--test-adapter-path <PATH_TO_ADAPTER>`
-
-Verwenden Sie die benutzerdefinierten Testadapter aus dem angegebenen Pfad im Testlauf.
-
-`-c|--configuration {Debug|Release}`
-
-Legt die Buildkonfiguration fest. Der Standardwert ist `Debug`, aber die Konfiguration des Projekts könnte diese SDK-Standardeinstellung überschreiben.
-
-`--collect <DATA_COLLECTOR_FRIENDLY_NAME>`
-
-Aktiviert den Datensammler für den Testlauf. Weitere Informationen finden Sie unter [Monitor and analyze test run (Überwachen und Analysieren eines Testlaufs)](https://aka.ms/vstest-collect).
-
-`-d|--diag <PATH_TO_DIAGNOSTICS_FILE>`
-
-Aktiviert den Diagnosemodus für die Testplattform und schreibt Diagnosemeldungen in die angegebene Datei.
-
-`-f|--framework <FRAMEWORK>`
-
-Sucht nach Testbinärdateien für ein bestimmtes [Framework](../../standard/frameworks.md).
-
-`--filter <EXPRESSION>`
-
-Filtert Tests im aktuellen Projekt mithilfe des angegebenen Ausdrucks heraus. Weitere Informationen finden Sie im Abschnitt [Details zu Filteroptionen](#filter-option-details). Weitere Informationen und Beispiele zur Verwendung von selektiven Komponententestfiltern finden Sie unter [Ausführen von selektiven Komponententests](../testing/selective-unit-tests.md).
-
-`-h|--help`
-
-Druckt eine kurze Hilfe für den Befehl.
-
-`-l|--logger <LoggerUri/FriendlyName>`
-
-Gibt eine Protokollierung für die Testergebnisse an.
-
-`--no-build`
-
-Erstellt das Projekt nicht vor der Ausführung. Das `--no-restore`-Flag wird implizit festgelegt.
-
-`--no-restore`
-
-Führt keine implizite Wiederherstellung aus, wenn der Befehl ausgeführt wird.
-
-`-o|--output <OUTPUT_DIRECTORY>`
-
-Verzeichnis, in dem die auszuführenden Binärdateien zu finden sind.
-
-`-r|--results-directory <PATH>`
-
-Das Verzeichnis, in dem die Testergebnisse gespeichert werden. Wenn das Verzeichnis noch nicht vorhanden ist, wird es erstellt.
-
-`-s|--settings <SETTINGS_FILE>`
-
-Die `.runsettings`-Datei, die zum Ausführen der Tests verwendet wird. [Konfigurieren von Komponententests mithilfe einer `.runsettings`-Datei.](/visualstudio/test/configure-unit-tests-by-using-a-dot-runsettings-file)
-
-`-t|--list-tests`
-
-Listen Sie alle ermittelten Tests im aktuellen Projekt auf.
-
-`-v|--verbosity <LEVEL>`
-
-Legt den Ausführlichkeitsgrad für den Befehl fest. Zulässige Werte sind `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` und `diag[nostic]`.
-
-# <a name="net-core-1x"></a>[.NET Core 1.x](#tab/netcore1x)
-
-`-a|--test-adapter-path <PATH_TO_ADAPTER>`
-
-Verwenden Sie die benutzerdefinierten Testadapter aus dem angegebenen Pfad im Testlauf.
-
-`-c|--configuration {Debug|Release}`
-
-Legt die Buildkonfiguration fest. Der Standardwert ist `Debug`, aber die Konfiguration des Projekts könnte diese SDK-Standardeinstellung überschreiben.
-
-`-d|--diag <PATH_TO_DIAGNOSTICS_FILE>`
-
-Aktiviert den Diagnosemodus für die Testplattform und schreibt Diagnosemeldungen in die angegebene Datei.
-
-`-f|--framework <FRAMEWORK>`
-
-Sucht nach Testbinärdateien für ein bestimmtes [Framework](../../standard/frameworks.md).
-
-`--filter <EXPRESSION>`
-
-Filtert Tests im aktuellen Projekt mithilfe des angegebenen Ausdrucks heraus. Weitere Informationen finden Sie im Abschnitt [Details zu Filteroptionen](#filter-option-details). Weitere Informationen und Beispiele zur Verwendung von selektiven Komponententestfiltern finden Sie unter [Ausführen von selektiven Komponententests](../testing/selective-unit-tests.md).
-
-`-h|--help`
-
-Druckt eine kurze Hilfe für den Befehl.
-
-`-l|--logger <LoggerUri/FriendlyName>`
-
-Gibt eine Protokollierung für die Testergebnisse an.
-
-`--no-build`
-
-Erstellt das Projekt nicht vor der Ausführung.
-
-`-o|--output <OUTPUT_DIRECTORY>`
-
-Verzeichnis, in dem die auszuführenden Binärdateien zu finden sind.
-
-`-s|--settings <SETTINGS_FILE>`
-
-Die `.runsettings`-Datei, die zum Ausführen der Tests verwendet wird. [Konfigurieren von Komponententests mithilfe einer `.runsettings`-Datei.](/visualstudio/test/configure-unit-tests-by-using-a-dot-runsettings-file)
-
-`-t|--list-tests`
-
-Listen Sie alle ermittelten Tests im aktuellen Projekt auf.
-
-`-v|--verbosity <LEVEL>`
-
-Legt den Ausführlichkeitsgrad für den Befehl fest. Zulässige Werte sind `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` und `diag[nostic]`.
-
----
+  Weitere Informationen finden Sie unter [vstest.console.exe: Passing RunSettings args](https://github.com/Microsoft/vstest-docs/blob/master/docs/RunSettingsArguments.md) (Übergeben von RunSettings-Argumenten).
 
 ## <a name="examples"></a>Beispiele
 
-Führen Sie die Tests im Projekt im aktuellen Verzeichnis durch:
+- Führen Sie die Tests im Projekt im aktuellen Verzeichnis durch:
 
-`dotnet test`
+  ```dotnetcli
+  dotnet test
+  ```
 
-Führen Sie die Tests im Projekt `test1` durch:
+- Führen Sie die Tests im Projekt `test1` durch:
 
-`dotnet test ~/projects/test1/test1.csproj`
+  ```dotnetcli
+  dotnet test ~/projects/test1/test1.csproj
+  ```
 
-Führen Sie die Tests im aktuellen Verzeichnis aus, und generieren Sie eine Testergebnisdatei im TRX-Format:
+- Führen Sie die Tests im aktuellen Verzeichnis aus, und generieren Sie eine Testergebnisdatei im TRX-Format:
 
-`dotnet test --logger trx`
+  ```dotnetcli
+  dotnet test --logger trx
+  ```
 
 ## <a name="filter-option-details"></a>Details zu Filteroptionen
 

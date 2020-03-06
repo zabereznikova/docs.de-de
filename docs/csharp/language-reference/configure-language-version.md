@@ -1,19 +1,24 @@
 ---
 title: Verwaltung der C#-Sprachversion – Leitfaden für C#
-description: Hier erfahren Sie, wie die C#-Sprachversion basierend auf Ihrem Projekt bestimmt wird, und Sie lernen die verschiedenen Werte kennen, die Sie manuell an die Sprachversion anpassen können.
-ms.date: 07/10/2019
-ms.openlocfilehash: 3c1035d983660ea0a945e4d4b7b72c69736c90cb
-ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
+description: Erfahren Sie mehr darüber, wie und aus welchen Gründen die C#-Sprachversion basierend auf Ihrem Projekt bestimmt wird. Erfahren Sie, wie Sie den Standardwert manuell überschreiben.
+ms.date: 02/21/2020
+ms.openlocfilehash: 2be76fdac471a7175b661d896b0da2910b3609f3
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/04/2020
-ms.locfileid: "76980131"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77626763"
 ---
 # <a name="c-language-versioning"></a>Verwaltung der C#-Sprachversion
 
-Der C#-Compiler bestimmt eine Standardsprachversion, die auf den Zielframeworks Ihres Projekts basiert. Der Grund dafür ist, dass die Sprache C# Features enthalten kann, die von Typen oder Laufzeitkomponenten abhängig sind, die nicht in allen .NET-Implementierungen verfügbar sind. Damit wird sichergestellt, dass Sie die Sprachversion mit der höchsten Kompatibilität erhalten, ganz gleich, für welches Ziel Sie Ihr Projekt erstellen.
+Der C#-Compiler bestimmt eine Standardsprachversion, die auf den Zielframeworks Ihres Projekts basiert. In Visual Studio gibt es keine Benutzeroberfläche zum Ändern dieses Werts, aber Sie können ihn ändern, indem Sie die *CSPROJ*-Datei bearbeiten. Mit der Auswahl des Standardwerts wird sichergestellt, dass Sie die neueste Sprachversion nutzen, die mit Ihrem Zielframework kompatibel ist. So profitieren Sie vom Zugriff auf die neuesten Sprachfeatures, die mit dem Zielframework Ihres Projekts kompatibel sind. Mit dem Standardwert wird außerdem sichergestellt, dass Sie keine Sprache verwenden, die Typen oder Runtimeverhalten erfordert, die nicht im Zielframework verfügbar sind. Wenn Sie eine Sprachversion auswählen, die neuer als die Standardeinstellung ist, können Kompilierzeit- und Runtimefehler auftreten, die schwer zu diagnostizieren sind.
 
-Die in diesem Artikel aufgeführten Regeln gelten für den Compiler, der im Lieferumfang von Visual Studio 2019 oder dem .NET Core 3.0 SDK enthalten ist. Die C#-Compiler, die Teil der Visual Studio 2017-Installation oder von früheren .NET Core SDK-Versionen sind, sind standardmäßig auf C# 7.0 ausgerichtet. 
+C# 8.0 (und höher) wird nur in .NET Core 3.x und neueren Versionen unterstützt. Viele der neuesten Features erfordern Bibliotheks- und Runtimefeatures, die mit .NET Core 3.x eingeführt wurden:
+
+- Die Implementierung von Standardschnittstellenmembern erfordert neue Features in der .NET Core 3.0-CLR.
+- Für asynchrone Datenströme sind die neuen Typen <xref:System.IAsyncDisposable?displayProperty=nameWithType>, <xref:System.Collections.Generic.IAsyncEnumerable%601?displayProperty=nameWithType> und <xref:System.Collections.Generic.IAsyncEnumerator%601?displayProperty=nameWithType> erforderlich.
+- Indizes und Bereiche sind die neuen Typen <xref:System.Index?displayProperty=nameWithType> und <xref:System.Range?displayProperty=nameWithType> erforderlich.
+- Verweistypen, die NULL-Werte zulassen, nutzen mehrere [Attribute](../nullable-attributes.md), um bessere Warnungen bereitzustellen. Diese Attribute wurden in .NET Core 3.0 hinzugefügt. Andere Zielframeworks wurden nicht mit diesen Attributen versehen. Das bedeutet, dass Warnungen, die NULL-Werte zulassen, mögliche Probleme nicht exakt widerspiegeln.
 
 ## <a name="defaults"></a>der Arbeitszeittabelle
 
@@ -28,9 +33,7 @@ Der Compiler bestimmt basierend auf den folgenden Regeln eine Standardversion:
 |.NET-Standard|1.x|C# 7.3|
 |.NET Framework|alle|C# 7.3|
 
-## <a name="default-for-previews"></a>Standard für Vorschauversionen
-
-Wenn Ihr Projekt auf eine Vorschauframework abzielt, das eine entsprechende Vorschausprachversion besitzt, wird die Vorschausprachversion als Sprachversion verwendet. Damit wird sichergestellt, dass Sie die neuesten Features verwenden können, die garantiert mit dieser Vorschauversion in jeder Umgebung funktionieren ohne Auswirkungen auf Ihre Projekte, die auf eine freigegebene .NET Core-Version abzielen.
+Wenn Ihr Projekt auf eine Vorschauframework abzielt, das eine entsprechende Vorschausprachversion besitzt, wird die Vorschausprachversion als Sprachversion verwendet. In dieser Vorschau können Sie die neuesten Features in beliebigen Umgebungen verwenden, ohne Auswirkungen auf Projekte für eine veröffentlichte .NET Core-Version zu haben.
 
 ## <a name="override-a-default"></a>Überschreiben eines Standardwerts
 
@@ -64,11 +67,11 @@ Sie können eine **Directory.Build.props**-Datei erstellen, die das Element `<La
 </Project>
 ```
 
-Nun verwenden alle Unterverzeichnisse des Verzeichnisses, das diese Datei enthält, die C#-Vorschauversion. Weitere Informationen finden Sie im Artikel zum [Anpassen Ihres Builds](/visualstudio/msbuild/customize-your-build).
+Builds in allen Unterverzeichnissen des Verzeichnisses, das diese Datei enthält, verwenden die C#-Vorschauversion. Weitere Informationen finden Sie im Artikel zum [Anpassen Ihres Builds](/visualstudio/msbuild/customize-your-build).
 
 ## <a name="c-language-version-reference"></a>Referenz zur C#-Sprachversion
 
-In der folgenden Tabelle sind alle aktuellen C#-Sprachversionen enthalten. Wenn Ihr Compiler älter ist, versteht er möglicherweise nicht alle Werte. Sie haben Zugriff auf alle aufgeführten Elemente, wenn Sie .NET Core 3.0 installieren.
+In der folgenden Tabelle sind alle aktuellen C#-Sprachversionen enthalten. Wenn Ihr Compiler älter ist, versteht er möglicherweise nicht alle Werte. Wenn Sie .NET Core 3.0 oder höher installieren, verfügen Sie über Zugriff auf alle aufgeführten Elemente.
 
 |Wert|Bedeutung|
 |------------|-------------|

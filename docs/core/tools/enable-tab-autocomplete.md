@@ -4,20 +4,20 @@ description: In diesem Artikel erfahren Sie, wie Sie die Vervollständigung mit 
 author: thraka
 ms.author: adegeo
 ms.date: 11/03/2019
-ms.openlocfilehash: 649b723c2abfa74443a16914594284a77e0eafc0
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: 31328be14811760bc8d7fb527e0d55abfe6b1493
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76920535"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156750"
 ---
 # <a name="how-to-enable-tab-completion-for-the-net-core-cli"></a>Aktivieren der Vervollständigung mit der TAB-TASTE für die .NET Core-CLI
 
-Ab .NET Core 2.0 SDK unterstützt die .NET Core-CLI die Vervollständigung mit der TAB-TASTE. In diesem Artikel wird beschrieben, wie Sie die Vervollständigung mit der TAB-TASTE für drei Shells (PowerShell, Bash und zsh) konfigurieren. Möglicherweise unterstützen auch andere Shells die automatische Vervollständigung. Informationen zum Konfigurieren der automatischen Vervollständigung finden Sie in der jeweiligen Dokumentation. Die Schritte sollten den in diesem Artikel beschriebenen Schritten ähneln.
+**Dieser Artikel gilt für:** ✔️ .NET Core 2.1 SDK und neuere Versionen
 
-[!INCLUDE [topic-appliesto-net-core-2plus](~/includes/topic-appliesto-net-core-2plus.md)]
+In diesem Artikel wird beschrieben, wie Sie die Vervollständigung mit der TAB-TASTE für drei Shells (PowerShell, Bash und zsh) konfigurieren. Informationen zu anderen Shells und zum Konfigurieren der Vervollständigung mit der TAB-Taste finden Sie in den jeweiligen Dokumentationen.
 
-Nach dem Einrichten wird die Vervollständigung mit der TAB-TASTE für die .NET Core-CLI durch Eingeben eines `dotnet`-Befehls in der Shell und anschließendes Drücken der TAB-Taste ausgelöst. Die aktuelle Befehlszeile wird an den Befehl `dotnet complete` gesendet, und die Ergebnisse werden von der Shell verarbeitet. Sie können die Ergebnisse ohne Aktivierung der Vervollständigung mit der TAB-TASTE testen, indem Sie etwas direkt an den Befehl `dotnet complete` senden. Zum Beispiel:
+Nach der Einrichtung wird die Vervollständigung mit der TAB-TASTE für die .NET Core-CLI durch Eingeben eines `dotnet`-Befehls in der Shell und anschließendes Drücken der TAB-Taste ausgelöst. Die aktuelle Befehlszeile wird an den Befehl `dotnet complete` gesendet, und die Ergebnisse werden von der Shell verarbeitet. Sie können die Ergebnisse ohne Aktivierung der Vervollständigung mit der TAB-TASTE testen, indem Sie etwas direkt an den Befehl `dotnet complete` senden. Zum Beispiel:
 
 ```console
 > dotnet complete "dotnet a"
@@ -38,18 +38,18 @@ Eingabe                                | Vervollständigung                     
 :------------------------------------|:----------------------------------------------------------------------------|:--------------------------------
 `dotnet a⇥`                          | `dotnet add`                                                                 | `add` ist der erste Unterbefehl in alphabetischer Reihenfolge.
 `dotnet add p⇥`                      | `dotnet add --help`                                                          | Bei der Vervollständigung mit der TAB-TASTE werden Teilzeichenfolgen verglichen, und `--help` ist die erste Übereinstimmung in alphabetischer Reihenfolge.
-`dotnet add p⇥⇥`                    | `dotnet add package`                                                          | Bei erneutem Drücken der TAB-TASTE wird der nächste Vorschlag angezeigt.      
+`dotnet add p⇥⇥`                    | `dotnet add package`                                                          | Bei erneutem Drücken der TAB-TASTE wird der nächste Vorschlag angezeigt.
 `dotnet add package Microsoft⇥`      | `dotnet add package Microsoft.ApplicationInsights.Web`                      | Ergebnisse werden in alphabetischer Reihenfolge zurückgegeben.
 `dotnet remove reference ⇥`          | `dotnet remove reference ..\..\src\OmniSharp.DotNet\OmniSharp.DotNet.csproj` | Bei der Vervollständigung mit der TAB-TASTE wird die Projektdatei beachtet.
 
 ## <a name="powershell"></a>PowerShell
 
-Wenn Sie die Vervollständigung mit der TAB-TASTE zu **PowerShell** für die .NET Core-CLI hinzufügen möchten, erstellen oder bearbeiten Sie das in der Variablen `$PROFILE` gespeicherte Profil. Weitere Informationen finden Sie unter [Erstellen Ihres Profils](/powershell/module/microsoft.powershell.core/about/about_profiles#how-to-create-a-profile) und [Profile und Ausführungsrichtlinie](/powershell/module/microsoft.powershell.core/about/about_profiles#profiles-and-execution-policy). 
+Wenn Sie die Vervollständigung mit der TAB-TASTE zu **PowerShell** für die .NET Core-CLI hinzufügen möchten, erstellen oder bearbeiten Sie das in der Variablen `$PROFILE` gespeicherte Profil. Weitere Informationen finden Sie unter [Erstellen Ihres Profils](/powershell/module/microsoft.powershell.core/about/about_profiles#how-to-create-a-profile) und [Profile und Ausführungsrichtlinie](/powershell/module/microsoft.powershell.core/about/about_profiles#profiles-and-execution-policy).
 
 Fügen Sie Ihrem Profil den folgenden Code hinzu:
 
 ```powershell
-# PowerShell parameter completion shim for the dotnet CLI 
+# PowerShell parameter completion shim for the dotnet CLI
 Register-ArgumentCompleter -Native -CommandName dotnet -ScriptBlock {
      param($commandName, $wordToComplete, $cursorPosition)
          dotnet complete --position $cursorPosition "$wordToComplete" | ForEach-Object {
@@ -88,7 +88,7 @@ Wenn Sie die Vervollständigung mit der TAB-TASTE der **zsh**-Shell für die .NE
 ```zsh
 # zsh parameter completion for the dotnet CLI
 
-_dotnet_zsh_complete() 
+_dotnet_zsh_complete()
 {
   local completions=("$(dotnet complete "$words")")
 

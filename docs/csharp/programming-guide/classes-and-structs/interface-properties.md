@@ -1,24 +1,24 @@
 ---
 title: Schnittstelleneigenschaften – C#-Programmierhandbuch
-ms.date: 07/20/2015
+ms.date: 01/31/2020
 helpviewer_keywords:
 - properties [C#], on interfaces
 - interfaces [C#], properties
 ms.assetid: 6503e9ed-33d7-44ec-b4c1-cc16c084b795
-ms.openlocfilehash: ff892a35f4be6600c00bc0c72c2f789ef6eb4408
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 5798b80526f34e923e2eaab43847b98f6c64e14b
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75705534"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77626619"
 ---
 # <a name="interface-properties-c-programming-guide"></a>Schnittstelleneigenschaften (C#-Programmierhandbuch)
 
-Eigenschaften können für eine [Schnittstelle](../../language-reference/keywords/interface.md) deklariert werden. Das folgende Beispiel zeigt den Accessor einer Schnittstelleneigenschaft:
+Eigenschaften können für eine [Schnittstelle](../../language-reference/keywords/interface.md) deklariert werden. Im folgenden Beispiel wird eine Zugriffsmethode für Schnittstelleneigenschaften deklariert:
 
-[!code-csharp[csProgGuideProperties#14](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideProperties/CS/Properties.cs#14)]
+[!code-csharp[DeclareProperties](~/samples/snippets/csharp/interfaces/properties.cs#DeclareInterfaceProperties)]
 
-Der Accessor einer Schnittstelleneigenschaft enthält keinen Text. Der Zweck eines Accessors besteht darin anzugeben, ob die Eigenschaft gleichzeitig Lese- und Schreibzugriff, nur Lesezugriff oder nur Schreibzugriff besitzt.
+Schnittstelleneigenschaften verfügen in der Regel über keinen Text. Die Zugriffsmethoden geben an, ob Lese-/Schreibzugriff auf die Eigenschaft besteht oder ob sie schreib- oder lesegeschützt ist. Anders als bei Klassen und Strukturen wird beim Deklarieren von Zugriffsmethoden ohne Text keine [automatisch implementierte Eigenschaft](auto-implemented-properties.md) deklariert. Ab C# 8.0 kann eine Schnittstelle eine Standardimplementierung für Member, einschließlich Eigenschaften, definieren. Standardimplementierungen für Eigenschaften in einer Schnittstelle sind selten, weil Schnittstellen möglicherweise keine Instanzdatenfelder definieren.
 
 ## <a name="example"></a>Beispiel
 
@@ -26,19 +26,20 @@ In diesem Beispiel besitzt die Schnittstelle `IEmployee` eine Lese-/Schreibzugri
 
 Sie können den vollqualifizierten Namen der Eigenschaft verwenden, der auf die Schnittstelle verweist, in der der Member deklariert wird. Zum Beispiel:
 
-[!code-csharp[csProgGuideProperties#16](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideProperties/CS/Properties.cs#16)]
+[!code-csharp[ExplicitProperties](~/samples/snippets/csharp/interfaces/properties.cs#ExplicitImplementation)]
 
-Dies wird [Explizite Schnittstellenimplementierung](../interfaces/explicit-interface-implementation.md) genannt. Wenn z.B. die Klasse `Employee` die beiden Schnittstellen `ICitizen` und `IEmployee` implementiert und beide Schnittstellen die Eigenschaft `Name` besitzen, ist die explizite Implementierung des Schnittstellenmembers erforderlich. Das bedeutet, dass die folgende Eigenschaftendeklaration:
+Im vorangehenden Beispiel wird die [Explizite Schnittstellenimplementierung](../interfaces/explicit-interface-implementation.md) veranschaulicht. Wenn z.B. die Klasse `Employee` die beiden Schnittstellen `ICitizen` und `IEmployee` implementiert und beide Schnittstellen die Eigenschaft `Name` besitzen, ist die explizite Implementierung des Schnittstellenmembers erforderlich. Das bedeutet, dass die folgende Eigenschaftendeklaration:
 
-[!code-csharp[csProgGuideProperties#16](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideProperties/CS/Properties.cs#16)]
+[!code-csharp[ExplicitProperties](~/samples/snippets/csharp/interfaces/properties.cs#ExplicitImplementation)]
 
 die Eigenschaft `Name` für die Schnittstelle `IEmployee` implementiert. Dahingegen implementiert die folgende Deklaration:
 
-[!code-csharp[csProgGuideProperties#17](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideProperties/CS/Properties.cs#17)]
+[!code-csharp[ExplicitProperties](~/samples/snippets/csharp/interfaces/properties.cs#CitizenImplementation)]
 
 die Eigenschaft `Name` für die Schnittstelle `ICitizen`.
 
-[!code-csharp[csProgGuideProperties#15](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideProperties/CS/Properties.cs#15)]
+[!code-csharp[Example](~/samples/snippets/csharp/interfaces/properties.cs#PropertyExample)]
+[!code-csharp[Example](~/samples/snippets/csharp/interfaces/properties.cs#UseProperty)]
 
 **`210 Hazem Abolrous`**
 

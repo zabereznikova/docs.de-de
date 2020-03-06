@@ -8,16 +8,16 @@ helpviewer_keywords:
 - types [C#], value types
 - C# language, value types
 ms.assetid: 471eb994-2958-49d5-a6be-19b4313f80a3
-ms.openlocfilehash: 6b96d65f657f2af1af5c9a245e956640ee06260e
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 76f4a3ed929e3ac8e3e6cc74158e75af7a6c8cf2
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76748488"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77625946"
 ---
 # <a name="value-types-c-reference"></a>Werttypen (C#-Referenz)
 
-*Werttypen* und [Verweistypen](../keywords/reference-types.md) sind die beiden Hauptkategorien von C#-Typen. Eine Variable eines Werttyps enthält eine Instanz des Typs. Dies unterscheidet sich von einer Variablen eines Verweistyps, die einen Verweis auf eine Instanz des Typs enthält. Standardmäßig werden bei der [Zuweisung](../operators/assignment-operator.md), der Übergabe eines Arguments an eine Methode oder der Rückgabe eines Methodenergebnisses die Variablenwerte kopiert. Im Fall von Werttypvariablen werden die entsprechenden Typinstanzen kopiert. Das folgende Beispiel veranschaulicht dieses Verhalten:
+*Werttypen* und [Verweistypen](../keywords/reference-types.md) sind die beiden Hauptkategorien von C#-Typen. Eine Variable eines Werttyps enthält eine Instanz des Typs. Dies unterscheidet sich von einer Variablen eines Verweistyps, die einen Verweis auf eine Instanz des Typs enthält. Standardmäßig werden die Variablenwerte bei der [Zuweisung](../operators/assignment-operator.md) kopiert, dabei handelt es sich um die Übergabe eines Arguments an eine Methode oder die Rückgabe eines Methodenergebnisses. Im Fall von Werttypvariablen werden die entsprechenden Typinstanzen kopiert. Das folgende Beispiel veranschaulicht dieses Verhalten:
 
 [!code-csharp[copy of values](~/samples/csharp/language-reference/builtin-types/ValueTypes.cs#ValueTypeCopied)]
 
@@ -34,7 +34,7 @@ Wenn ein Werttyp einen Datenmember eines Verweistyps enthält, wird beim Kopiere
 
 Ein Werttyp kann einer der zwei folgenden Varianten sein:
 
-- ein [Strukturtyp](../keywords/struct.md), der Daten und zugehörige Funktionen einschließt
+- ein [Strukturtyp](struct.md), der Daten und zugehörige Funktionen einschließt
 - ein [Enumerationstyp](enum.md), der durch mehrere benannte Konstanten definiert wird und eine Auswahl oder Auswahlmöglichkeiten darstellt
 
 Ein [Werttyp, der NULL zulässt](nullable-value-types.md) wie `T?`, stellt alle Werte des zugrunde liegenden Werttyps `T` und einen zusätzlichen [NULL](../keywords/null.md)-Wert dar. Sie können einer Variablen eines Werttyps nicht `null` zuweisen, es sei denn, es handelt sich um einen Werttyp,der NULL zulässt.

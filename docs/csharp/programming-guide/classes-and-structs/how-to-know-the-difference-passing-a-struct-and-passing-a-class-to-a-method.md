@@ -6,15 +6,15 @@ helpviewer_keywords:
 - passing parameters [C#], structs vs. classes
 - methods [C#], passing classes vs. structs
 ms.assetid: 9c1313a6-32a8-4ea7-a59f-450f66af628b
-ms.openlocfilehash: 2f0e7a187dfd9ed4622155317cd39b352ecf6e45
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: a280a6df873d7c03c204bc5c86468e7e7298d723
+ms.sourcegitcommit: c2d9718996402993cf31541f11e95531bc68bad0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76743732"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77673432"
 ---
 # <a name="how-to-know-the-difference-between-passing-a-struct-and-passing-a-class-reference-to-a-method-c-programming-guide"></a>Gewusst wie: Unterschiede zwischen dem Übergeben einer Struktur und dem Übergeben eines Klassenverweises an eine Methode (C#-Programmierhandbuch)
-Das folgende Beispiel stellt dar, wie die Übergabe einer [Struktur](../../language-reference/keywords/struct.md) an eine Methode sich von der Übergabe einer [Klasseninstanz](../../language-reference/keywords/class.md) an eine Methode unterscheidet. Im Beispiel werden beide Argumente (Struktur und Klasseninstanz) nach Wert übergeben, und beide Methoden ändern den Wert eines Felds des Arguments. Allerdings sind die Ergebnisse der beiden Methoden nicht identisch, denn wenn Sie eine Struktur übergeben, unterscheidet sich dies von dem, wenn Sie eine Instanz einer Klasse übergeben.  
+Das folgende Beispiel stellt dar, wie die Übergabe einer [Struktur](../../language-reference/builtin-types/struct.md) an eine Methode sich von der Übergabe einer [Klasseninstanz](../../language-reference/keywords/class.md) an eine Methode unterscheidet. Im Beispiel werden beide Argumente (Struktur und Klasseninstanz) nach Wert übergeben, und beide Methoden ändern den Wert eines Felds des Arguments. Allerdings sind die Ergebnisse der beiden Methoden nicht identisch, denn wenn Sie eine Struktur übergeben, unterscheidet sich dies von dem, wenn Sie eine Instanz einer Klasse übergeben.  
   
  Da eine Struktur ein [Werttyp](../../language-reference/builtin-types/value-types.md) ist, wenn Sie [eine Struktur nach Wert](./passing-value-type-parameters.md) an eine Methode übergeben, erhält und funktioniert die Methode nur mit einer Kopie des Strukturarguments. Die Methode hat keinen Zugriff auf die ursprüngliche Struktur in der aufrufenden Methode und kann sie deshalb nicht ändern. Die Methode kann nur die Kopie ändern.  
   
@@ -29,5 +29,5 @@ Das folgende Beispiel stellt dar, wie die Übergabe einer [Struktur](../../langu
 
 - [C#-Programmierhandbuch](../index.md)
 - [Klassen](./classes.md)
-- [Strukturen](./structs.md)
+- [Strukturtypen](../../language-reference/builtin-types/struct.md)
 - [Übergeben von Parametern](./passing-parameters.md)

@@ -6,12 +6,12 @@ dev_langs:
 author: thraka
 ms.author: adegeo
 ms.date: 01/27/2020
-ms.openlocfilehash: 60794c4f8a5f9aeb7a4b3cd58c0c9f00e03fa9e7
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: 6e85c2c3e796ae59a13f944bd4913e4b7316c56a
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77450979"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156568"
 ---
 # <a name="whats-new-in-net-core-30"></a>Neuerungen in .NET Core 3.0
 
@@ -54,12 +54,40 @@ Wenn Sie Visual Studio verwenden, benötigen Sie [Visual Studio 2019](https://vi
 
 ### <a name="default-executables"></a>Standardmäßig ausführbare Dateien
 
-.NET Core erstellt die [frameworkabhängigen ausführbaren Dateien](../deploying/index.md#publish-runtime-dependent) jetzt standardmäßig. Dieses Verhalten ist neu für Anwendungen, die eine global installierte Version von .NET Core verwenden. Vorher produzierten nur [eigenständige Bereitstellungen](../deploying/index.md#publish-self-contained) eine ausführbare Datei.
+.NET Core erstellt nun standardmäßig [Runtime-abhängige ausführbare Dateien](../deploying/index.md#publish-runtime-dependent). Dieses Verhalten ist neu für Anwendungen, die eine global installierte Version von .NET Core verwenden. Vorher produzierten nur [eigenständige Bereitstellungen](../deploying/index.md#publish-self-contained) eine ausführbare Datei.
 
-Während `dotnet build` oder `dotnet publish` wird eine ausführbare Datei erstellt, die der Umgebung und Plattform des von Ihnen verwendeten SDKs entspricht. Diese ausführbaren Dateien bieten Ihnen die gleichen Möglichkeiten wie andere native ausführbare Dateien, wie z.B.:
+Während `dotnet build` oder `dotnet publish` wird eine ausführbare Datei (**appHost**) erstellt, die der Umgebung und Plattform des von Ihnen verwendeten SDKs entspricht. Diese ausführbaren Dateien bieten Ihnen die gleichen Möglichkeiten wie andere native ausführbare Dateien, wie z.B.:
 
 - Sie können die ausführbare Datei doppelklicken.
 - Sie können die Anwendung direkt aus einer Eingabeaufforderung starten, z.B. `myapp.exe` unter Windows und `./myapp` unter Linux und MacOS.
+
+### <a name="macos-apphost-and-notarization"></a>macOS-appHost und -Notarisierung
+
+*nur unter macOS*
+
+Ab dem notarisierten .NET Core SDK 3.0 für macOS ist die Einstellung zum Erstellen einer ausführbaren Standarddatei („appHost“) standardmäßig deaktiviert. Weitere Informationen finden Sie unter [macOS Catalina-Notarisierung und die Auswirkungen auf .NET Core-Downloads und -Projekte](../install/macos-notarization-issues.md).
+
+Wenn die appHost-Einstellung aktiviert ist, erzeugt .NET Core eine native ausführbare Mach-O-Datei, wenn Sie einen Build- oder Veröffentlichungsprozess ausführen. Ihre App wird im Kontext von appHost ausgeführt, wenn sie mit dem Befehl `dotnet run` über den Quellcode oder durch direktes Starten der ausführbaren Mach-O-Datei ausgeführt wird.
+
+Ohne die appHost-Datei können Benutzer eine [Runtime-abhängige](../deploying/index.md#publish-runtime-dependent) App nur mit dem Befehl `dotnet <filename.dll>` starten. Es wird immer eine appHost-Datei erstellt, wenn Sie Ihre App [eigenständig](../deploying/index.md#publish-self-contained) veröffentlichen.
+
+Sie können die appHost-Datei entweder auf Projektebene konfigurieren oder für einen spezifischen `dotnet`-Befehl mit dem `-p:UseAppHost`-Parameter aktivieren:
+
+- Projektdatei
+
+  ```xml
+  <PropertyGroup>
+    <UseAppHost>true</UseAppHost>
+  </PropertyGroup>
+  ```
+
+- Befehlszeilenparameter
+
+  ```dotnetcli
+  dotnet run -p:UseAppHost=true
+  ```
+
+Weitere Informationen über die `UseAppHost`-Einstellung finden Sie unter [MSBuild-Eigenschaften für Microsoft.NET.Sdk](../project-sdk/msbuild-props.md#useapphost).
 
 ### <a name="single-file-executables"></a>Ausführbare Einzeldateien
 

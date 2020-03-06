@@ -3,12 +3,12 @@ title: 'global.json: Übersicht'
 description: In diesem Artikel erfahren Sie, wie Sie mit der global.json-Datei die .NET Core SDK-Version beim Ausführen eines .NET Core-CLI-Befehls festgelegen.
 ms.date: 01/14/2020
 ms.custom: updateeachrelease
-ms.openlocfilehash: 8582c495be58e38ca19320f14e20f8c511a9c821
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: 70257566e1ff30f5c97212a5e0e3c308c27738b7
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76920510"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77625994"
 ---
 # <a name="globaljson-overview"></a>global.json: Übersicht
 
@@ -147,7 +147,7 @@ dotnet new globaljson --sdk-version 3.0.100
 > [!NOTE]
 > Die Abgleichsregeln werden vom Einstiegspunkt `dotnet.exe` geregelt, der für alle installierten .NET Core-Runtimes gleich ist. Die Abgleichsregeln für die neuste installierte Version der .NET Core-Runtime werden verwendet, wenn mehrere Runtimes gleichzeitig installiert sind.
 
-## <a name="net-core-3xtabnetcore3x"></a>[.NET Core 3.x](#tab/netcore3x)
+## <a name="net-core-3x"></a>[.NET Core 3.x](#tab/netcore3x)
 
 Ab .NET Core 3.0 gelten die folgenden Regeln, wenn ermittelt wird, welche SDK-Version verwendet werden soll:
 
@@ -160,7 +160,7 @@ Ab .NET Core 3.0 gelten die folgenden Regeln, wenn ermittelt wird, welche SDK-Ve
   - Wenn kein `rollFoward`-Wert festgelegt ist, wird `latestPatch` als `rollForward`-Standardrichtlinie verwendet. Überprüfen Sie andernfalls die einzelnen Werte und deren Verhalten im Abschnitt [rollForward](#rollforward).
   - Im Abschnitt [allowPrerelease](#allowprerelease) wird beschrieben, ob Vorabversionen berücksichtigt werden, und es wird das Standardverhalten festgelegt, wenn `allowPrerelease` nicht festgelegt ist.
 
-## <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
+## <a name="net-core-2x"></a>[.NET Core 2.x](#tab/netcore2x)
 
 Im .NET Core 2.x SDK gelten die folgenden Regeln, wenn ermittelt wird, welche Version des SDK verwendet werden soll:
 
@@ -182,17 +182,19 @@ Die **Patchversion** wird für SDK-Versionen ab 2.1.100 von den letzten beiden Z
 
 ---
 
-## <a name="troubleshooting-build-warnings"></a>Problembehandlung bei Buildwarnungen
+## <a name="troubleshoot-build-warnings"></a>Problembehandlung bei Buildwarnungen
 
-> [!WARNING]
-> Sie verwenden eine Vorschauversion von .NET Core SDK. Sie können die SDK-Version über eine global.json-Datei im aktuellen Projekt definieren. Weitere Informationen finden Sie unter <https://go.microsoft.com/fwlink/?linkid=869452>.
+* Die folgende Warnung weist darauf hin, dass das Projekt mit einer Vorabversion des .NET Core SDK kompiliert wurde:
 
-Diese Warnung weist darauf hin, dass das Projekt mit einer Vorabversion des .NET Core SDK kompiliert wurde. .NET Core SDK-Versionen haben einen Verlauf und weisen eine hohe Qualität auf. Wenn Sie jedoch keine Vorabversion verwenden möchten, prüfen Sie im Abschnitt [allowPrerelease](#allowprerelease) die verschiedenen Strategien, die Sie mit dem .NET Core 3.0 SDK oder einer höheren Version verwenden können. Für Computer, auf denen eine Runtime oder ein SDK für .NET Core 3.0 oder höher installiert ist, benötigen Sie eine *global.json*-Datei und müssen die genaue Version angeben, die verwendet werden soll.
+  > Sie verwenden eine Vorschauversion von .NET Core SDK. Sie können die SDK-Version über eine global.json-Datei im aktuellen Projekt definieren. Weitere Informationen finden Sie unter <https://go.microsoft.com/fwlink/?linkid=869452>.
 
-> [!WARNING]
-> Das Startprojekt „{startupProject}“ gibt Version „{targetFrameworkVersion}“ von Framework „.NETCoreApp“ als Ziel an. Diese Version der Entity Framework Core .NET-Befehlszeilentools unterstützt nur Version 2.0 oder höher. Weitere Informationen zur Verwendung älterer Toolversionen finden Sie unter <https://go.microsoft.com/fwlink/?linkid=871254>.
+  .NET Core SDK-Versionen haben einen Verlauf und weisen eine hohe Qualität auf. Wenn Sie jedoch keine Vorabversion verwenden möchten, prüfen Sie im Abschnitt [allowPrerelease](#allowprerelease) die verschiedenen Strategien, die Sie mit dem .NET Core 3.0 SDK oder einer höheren Version verwenden können. Für Computer, auf denen eine Runtime oder ein SDK für .NET Core 3.0 oder höher installiert ist, benötigen Sie eine *global.json*-Datei und müssen die genaue Version angeben, die verwendet werden soll.
 
-Ab .NET Core 2.1 SDK (Version 2.1.300) ist der Befehl `dotnet ef` im SDK enthalten. Diese Warnung weist darauf hin, dass das Projekt EF Core 1.0 oder 1.1 als Ziel angibt, das nicht mit .NET Core 2.1 SDK oder höher kompatibel ist. Um Ihr Projekt zu kompilieren, installieren Sie das .NET Core 2.0 SDK (Version 2.1.201) und früher auf Ihrem Computer, und legen Sie mithilfe der Datei *global.json* die gewünschte SDK-Version fest. Weitere Informationen zu dem Befehl `dotnet ef` finden Sie unter [EF Core .NET-Befehlszeilentools](/ef/core/miscellaneous/cli/dotnet).
+* Die folgende Warnung gibt an, dass Ihr Projekt für EF Core 1.0 oder 1.1 ausgelegt ist. Diese Versionen sind nicht mit dem .NET Core 2.1 SDK und höheren Versionen verfügbar:
+
+  > Das Startprojekt „{startupProject}“ gibt Version „{targetFrameworkVersion}“ von Framework „.NETCoreApp“ als Ziel an. Diese Version der Entity Framework Core .NET-Befehlszeilentools unterstützt nur Version 2.0 oder höher. Weitere Informationen zur Verwendung älterer Toolversionen finden Sie unter <https://go.microsoft.com/fwlink/?linkid=871254>.
+
+  Ab .NET Core 2.1 SDK (Version 2.1.300) ist der Befehl `dotnet ef` im SDK enthalten. Installieren Sie das .NET Core 2.0 SDK (Version 2.1.201) oder früher auf Ihrem Computer, und definieren Sie die gewünschte Version des SDKs mithilfe der Datei *global.json*, um Ihr Projekt zu kompilieren. Weitere Informationen zu dem Befehl `dotnet ef` finden Sie unter [EF Core .NET-Befehlszeilentools](/ef/core/miscellaneous/cli/dotnet).
 
 ## <a name="see-also"></a>Siehe auch
 

@@ -1,14 +1,14 @@
 ---
 title: Klassen und Objekte in C# – Überblick über C#
 description: Neu bei C#? Lesen Sie diese Übersicht über Klassen, Objekte und Vererbung.
-ms.date: 08/10/2016
+ms.date: 02/27/2020
 ms.assetid: 63a89bde-0f05-4bc4-b0cd-4f693854f0cd
-ms.openlocfilehash: be8e760b19b7ca5305918ecfdbf9ad797d7e76b2
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: c178e11b5667905f75538555c8a309e2fdb4a9ef
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70105630"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159181"
 ---
 # <a name="classes-and-objects"></a>Klassen und Objekte
 
@@ -16,7 +16,7 @@ ms.locfileid: "70105630"
 
 Neue Klassen werden mithilfe von Klassendeklarationen erstellt. Eine Klassendeklaration beginnt mit einem Header, der die Attribute und Modifizierer der Klasse, den Namen der Klasse, die Basisklasse (sofern vorhanden) und die von der Klasse implementierten Schnittstellen angibt. Auf den Header folgt der Klassenkörper. Dieser besteht aus einer Liste der Memberdeklarationen, die zwischen den Trennzeichen `{` und `}` eingefügt werden.
 
-Nachfolgend sehen Sie eine Deklaration einer einfachen Klasse namens `Point`:
+Im folgenden Code wird die Deklaration einer einfachen Klasse namens `Point` veranschaulicht:
 
 [!code-csharp[PointClass](~/samples/snippets/csharp/tour/classes-and-objects/Point.cs#L3-L11)]
 
@@ -30,7 +30,7 @@ Der von einem Objekt belegte Speicher wird automatisch wieder freigegeben, wenn 
 
 Die Member einer Klasse sind entweder statische Member oder Instanzmember. Statische Member gehören zu Klassen, Instanzmember gehören zu Objekten (Instanzen von Klassen).
 
-Nachfolgend finden Sie einen Überblick über die Memberarten, die eine Klasse enthalten kann.
+In der folgenden Liste finden Sie einen Überblick über die Memberarten, die eine Klasse enthalten kann.
 
 - Konstanten
   - Konstante Werte, die der Klasse zugeordnet sind
@@ -55,14 +55,14 @@ Nachfolgend finden Sie einen Überblick über die Memberarten, die eine Klasse e
 
 ## <a name="accessibility"></a>Zugriff
 
-Jeder Member einer Klasse ist mit einem Zugriff verknüpft, der die Regionen des Programmtexts steuert, die auf den Member zugreifen können. Es gibt sechs mögliche Formen des Zugriffs. Diese werden nachfolgend zusammengefasst.
+Jeder Member einer Klasse ist mit einem Zugriff verknüpft, der die Regionen des Programmtexts steuert, die auf den Member zugreifen können. Es gibt sechs mögliche Formen des Zugriffs. Die Zugriffsmodifizierer werden im Folgenden zusammengefasst.
 
 - `public`
   - Der Zugriff ist nicht eingeschränkt.
 - `protected`
-  - Der Zugriff ist auf diese Klasse oder auf von dieser Klasse abgeleitete Klassen beschränkt.
+  - Der Zugriff ist auf diese Klasse oder von dieser abgeleiteten Klassen beschränkt.
 - `internal`
-  - Der Zugriff ist auf die aktuelle Assembly beschränkt (.exe, .dll, usw.)
+  - Der Zugriff ist auf die aktuelle Assembly beschränkt („.exe“, „.dll“ usw.).
 - `protected internal`
   - Der Zugriff ist auf die enthaltende Klasse, auf Klassen, die von der enthaltenden Klasse abgeleitet sind, oder auf Klassen innerhalb der gleichen Assembly beschränkt.
 - `private`
@@ -72,7 +72,7 @@ Jeder Member einer Klasse ist mit einem Zugriff verknüpft, der die Regionen des
 
 ## <a name="type-parameters"></a>Typparameter
 
-Eine Klassendefinition kann einen Satz an Typparametern angeben, indem eine Liste der Typparameternamen in spitzen Klammern an den Klassennamen angehängt wird. Die Typparameter können dann im Körper der Klassendeklarationen zum Definieren der Klassenmember verwendet werden. Im folgenden Beispiel lauten die Typparameter von `Pair` `TFirst` und `TSecond`:
+Eine Klassendefinition kann einen Satz an Typparametern angeben, indem eine Liste der Typparameternamen in spitzen Klammern an den Klassennamen angehängt wird. Die Typparameter können dann im Körper der Klassendeklarationen zum Definieren der Klassenmember verwendet werden. Im folgenden Beispiel lauten die Typparameter von `Pair``TFirst` und `TSecond`:
 
 [!code-csharp[Pair](~/samples/snippets/csharp/tour/classes-and-objects/Pair.cs#L3-L7)]
 
@@ -91,7 +91,7 @@ Eine Klassendeklaration kann eine Basisklasse angeben, indem ein Doppelpunkt und
 
 Eine Klasse erbt die Member der zugehörigen Basisklasse. Vererbung bedeutet, dass eine Klasse implizit alle Member dieser Basisklasse enthält, mit Ausnahme der Instanzkonstruktoren und der statischen Konstruktoren sowie der Finalizer der Basisklasse. Eine abgeleitete Klasse kann den geerbten Membern neue Member hinzufügen, aber die Definition eines geerbten Members kann nicht entfernt werden. Im vorherigen Beispiel erbt `Point3D` die Felder `x` und `y` von `Point`, und jede `Point3D`-Instanz enthält drei Felder: `x`, `y` und `z`.
 
-Ein Klassentyp kann implizit in einen beliebigen zugehörigen Basisklassentyp konvertiert werden. Deshalb kann eine Variable eines Klassentyps auf eine Instanz dieser Klasse oder auf eine Instanz einer beliebigen abgeleiteten Klasse verweisen. Beispielsweise kann in den vorherigen Klassendeklarationen eine Variable vom Typ `Point` entweder auf `Point` oder auf `Point3D` verweisen:
+Ein Klassentyp kann implizit in einen beliebigen zugehörigen Basisklassentyp konvertiert werden. Eine Variable eines Klassentyps kann auf eine Instanz der Klasse oder eine Instanz einer beliebigen abgeleiteten Klasse verweisen. Beispielsweise kann in den vorherigen Klassendeklarationen eine Variable vom Typ `Point` entweder auf `Point` oder auf `Point3D` verweisen:
 
 [!code-csharp[Point3DExample](~/samples/snippets/csharp/tour/classes-and-objects/Program.cs#L22-L23)]
 
@@ -99,7 +99,7 @@ Ein Klassentyp kann implizit in einen beliebigen zugehörigen Basisklassentyp ko
 
 Ein *Feld* ist eine Variable, die einer Klasse oder einer Instanz einer Klasse zugeordnet ist.
 
-Ein Feld, das mit dem static-Modifizierer deklariert wurde, definiert ein statisches Feld. Ein statisches Feld identifiziert genau einen Speicherort. Unabhängig davon, wie viele Instanzen einer Klasse erstellt werden, gibt es nur eine Kopie eines statischen Felds.
+Ein Feld, das mit dem static-Modifizierer deklariert wurde, definiert ein statisches Feld. Ein statisches Feld identifiziert genau einen Speicherort. Unabhängig davon, wie viele Instanzen einer Klasse erstellt werden, gibt es immer nur eine Kopie eines statischen Felds.
 
 Ein Feld, das ohne den static-Modifizierer deklariert wurde, definiert ein Instanzfeld. Jede Instanz einer Klasse enthält eine separate Kopie aller Instanzfelder dieser Klasse.
 
@@ -177,7 +177,7 @@ Das folgende Beispiel zeigt die Verwendung der Entity-Klasse.
 
 [!code-csharp[EntityExample](~/samples/snippets/csharp/tour/classes-and-objects/Entity.cs#L3-L15)]
 
-Beachten Sie, dass die statischen Methoden `SetNextSerialNo` und `GetNextSerialNo` für die Klasse aufgerufen werden, während die `GetSerialNo`-Instanzmethode für Instanzen der Klasse aufgerufen wird.
+Die statischen Methoden `SetNextSerialNo` und `GetNextSerialNo` werden für die Klasse aufgerufen, während die `GetSerialNo`-Instanzmethode für Instanzen der Klasse aufgerufen wird.
 
 ### <a name="virtual-override-and-abstract-methods"></a>Virtuelle, überschriebene und abstrakte Methoden
 
@@ -189,7 +189,7 @@ Eine virtuelle Methode kann in einer abgeleiteten Klasse *überschrieben* werden
 
 Eine *abstrakte Methode* ist eine virtuelle Methode ohne Implementierung. Eine abstrakte Methode wird mit dem abstract-Modifizierer deklariert und ist nur in einer Klasse erlaubt, die auch als abstrakt deklariert wurde. Eine abstrakte Methode muss in jeder nicht abstrakten abgeleiteten Klasse überschrieben werden.
 
-Im folgenden Beispiel wird die abstrakte Klasse `Expression` deklariert, die einen Ausdrucksbaumstrukturknoten sowie drei abgeleitete Klassen repräsentiert: `Constant`, `VariableReference` und `Operation`. Diese implementieren Ausdrucksbaumstrukturknoten für Konstanten, variable Verweise und arithmetische Operationen. (Dies ähnelt den Ausdrucksbaumstrukturtypen, sollte aber mit diesen nicht verwechselt werden.)
+Im folgenden Beispiel wird die abstrakte Klasse `Expression` deklariert, die einen Ausdrucksbaumstrukturknoten sowie drei abgeleitete Klassen repräsentiert: `Constant`, `VariableReference` und `Operation`. Diese implementieren Ausdrucksbaumstrukturknoten für Konstanten, variable Verweise und arithmetische Operationen. (Dieses Beispiel ähnelt den Ausdrucksbaumstrukturtypen, sollte aber mit diesen nicht verwechselt werden.)
 
 [!code-csharp[ExpressionClass](~/samples/snippets/csharp/tour/classes-and-objects/Expressions.cs#L3-L61)]
 
@@ -207,7 +207,7 @@ Das folgende Programm verwendet die `Expression`-Klassen zum Auswerten des Ausdr
 
 ### <a name="method-overloading"></a>Methodenüberladung
 
-Das *Überladen* von Methoden macht es möglich, dass mehrere Methoden in derselben Klasse denselben Namen verwenden, solange sie eindeutige Signaturen aufweisen. Beim Kompilieren des Aufrufs einer überladenen Methode verwendet der Compiler die *Überladungsauflösung*, um die spezifische Methode zu ermitteln, die aufgerufen werden soll. Mithilfe der Überladungsauflösung wird die Methode ermittelt, die den Argumenten am besten entspricht, bzw. es wird ein Fehler ausgegeben, wenn keine passende Methode gefunden wird. Das folgende Beispiel zeigt die Verwendung der Überladungsauflösung. Der Kommentar für jeden Aufruf in der `UsageExample`-Methode zeigt, welche Methode tatsächlich aufgerufen wird.
+Das *Überladen* von Methoden macht es möglich, dass mehrere Methoden in derselben Klasse denselben Namen verwenden, solange sie eindeutige Signaturen aufweisen. Beim Kompilieren des Aufrufs einer überladenen Methode verwendet der Compiler die *Überladungsauflösung*, um die spezifische Methode zu ermitteln, die aufgerufen werden soll. Mithilfe der Überladungsauflösung wird die Methode ermittelt, die den Argumenten am besten entspricht, bzw. es wird ein Fehler ausgegeben, wenn keine passende Methode gefunden wird. Das folgende Beispiel zeigt die Verwendung der Überladungsauflösung. Der Kommentar für jeden Aufruf in der `UsageExample`-Methode zeigt, welche Methode aufgerufen wird.
 
 [!code-csharp[OverloadUsage](~/samples/snippets/csharp/tour/classes-and-objects/Overloading.cs#L3-L41)]
 
@@ -215,9 +215,9 @@ Wie im Beispiel gezeigt, kann eine bestimmte Methode immer ausgewählt werden, i
 
 ## <a name="other-function-members"></a>Andere Funktionsmember
 
-Member, die ausführbaren Code enthalten, werden als *Funktionsmember* einer Klasse bezeichnet. In den vorangegangenen Abschnitten wurden die Methoden beschrieben, die wichtigste Form der Funktionsmember. In diesem Abschnitt werden die weiteren Funktionsmember behandelt, die C# unterstützt: Konstruktoren, Eigenschaften, Indexer, Ereignisse, Operatoren und Finalizer.
+Member, die ausführbaren Code enthalten, werden als *Funktionsmember* einer Klasse bezeichnet. Im vorherigen Abschnitt wurden Methoden beschrieben, die die Haupttypen von Funktionsmembern sind. In diesem Abschnitt werden die weiteren Funktionsmember behandelt, die C# unterstützt: Konstruktoren, Eigenschaften, Indexer, Ereignisse, Operatoren und Finalizer.
 
-Das folgende Beispiel zeigt eine generische Klasse namens `MyList<T>`, die eine wachsende Liste von Objekten implementiert. Die Klasse enthält verschiedene Beispiele der gängigsten Arten von Funktionsmembern.
+Im folgenden Beispiel wird eine generische Klasse namens `MyList<T>` gezeigt, die eine wachsende Liste von Objekten implementiert. Die Klasse enthält verschiedene Beispiele der gängigsten Arten von Funktionsmembern.
 
 > [!NOTE]
 > In diesem Beispiel wird eine `MyList`-Klasse erstellt, die nicht identisch ist mit der .NET-Standardklasse <xref:System.Collections.Generic.List%601?displayProperty=nameWithType>. Sie veranschaulicht die für diesen Überblick erforderlichen Konzepte, ist aber kein Ersatz für diese Klasse.
@@ -234,11 +234,11 @@ Instanzkonstruktoren können überladen werden und optionale Parameter verwenden
 
 [!code-csharp[ListExample1](~/samples/snippets/csharp/tour/classes-and-objects/ListBasedExamples.cs#L95-L96)]
 
-Im Gegensatz zu anderen Members werden Instanzkonstruktoren nicht geerbt, und eine Klasse weist keine anderen Instanzkonstruktoren auf als diejenigen, die tatsächlich in der Klasse deklariert wurden. Wenn kein Instanzkonstruktor für eine Klasse angegeben ist, wird automatisch ein leerer Instanzkonstruktor ohne Parameter bereitgestellt.
+Im Gegensatz zu anderen Members werden Instanzkonstruktoren nicht geerbt, und eine Klasse verfügt über keine anderen Instanzkonstruktoren auf als diejenigen, die tatsächlich in der Klasse deklariert werden. Wenn kein Instanzkonstruktor für eine Klasse angegeben ist, wird automatisch ein leerer Instanzkonstruktor ohne Parameter bereitgestellt.
 
 ### <a name="properties"></a>Eigenschaften
 
-*Eigenschaften* sind eine natürliche Erweiterung der Felder. Beide sind benannte Member mit zugeordneten Typen, und für den Zugriff auf Felder und Eigenschaften wird dieselbe Syntax verwendet. Im Gegensatz zu Feldern bezeichnen Eigenschaften jedoch keine Speicherorte. Stattdessen verfügen Eigenschaften über *Accessors* zum Angeben der Anweisungen, die beim Lesen oder Schreiben ihrer Werte ausgeführt werden sollen.
+*Eigenschaften* sind eine natürliche Erweiterung der Felder. Beide sind benannte Member mit zugeordneten Typen, und für den Zugriff auf Felder und Eigenschaften wird dieselbe Syntax verwendet. Im Gegensatz zu Feldern geben Eigenschaften jedoch keine Speicherorte an. Stattdessen verfügen Eigenschaften über *Accessors* zum Angeben der Anweisungen, die beim Lesen oder Schreiben ihrer Werte ausgeführt werden sollen.
 
 Eine Eigenschaft wird wie ein Feld deklariert, abgesehen davon, dass die Deklaration nicht auf ein Semikolon, sondern auf einen get- und/oder einen set-Accessor endet, der von den Trennzeichen `{` und `}` umschlossen wird. Eine Eigenschaft, die sowohl einen get- als auch einen set-Accessor aufweist, ist eine *Eigenschaft mit Lese- und Schreibzugriff*. Eine Eigenschaft, die nur einen get-Accessor aufweist, ist *schreibgeschützt*, eine Eigenschaft, die nur einen set-Accessor aufweist, ist *lesegeschützt*.
 
@@ -246,7 +246,7 @@ Ein get-Accessor entspricht einer Methode ohne Parameter mit einem Rückgabewert
 
 Ein set-Accessor entspricht einer Methode mit einem einzigen Parameter namens „value“ ohne Rückgabetyp. Wenn auf eine Eigenschaft als Ziel einer Zuweisung der als Operand ++ oder -- verwiesen wird, erfolgt der Aufruf des set-Accessors mit einem Argument, das den neuen Wert bereitstellt.
 
-Die `MyList<T>`-Klasse deklariert die beiden Eigenschaften „`Count`“ und „`Capacity`“, von denen die eine schreibgeschützt ist und die andere Lese- und Schreibzugriff besitzt. Es folgt ein Beispiel zur Verwendung dieser Eigenschaften:
+Die `MyList<T>`-Klasse deklariert die beiden Eigenschaften „`Count`“ und „`Capacity`“, von denen die eine schreibgeschützt ist und die andere Lese- und Schreibzugriff besitzt. Im folgenden Beispielcode wird die Verwendung dieser Eigenschaften veranschaulicht:
 
 [!code-csharp[ListExample2](~/samples/snippets/csharp/tour/classes-and-objects/ListBasedExamples.cs#L101-L104)]
 
@@ -268,7 +268,7 @@ Indexer können überladen werden, d.h. eine Klasse kann mehrere Indexer deklari
 
 Ein *Ereignis* ist ein Member, der es einer Klasse oder einem Objekt ermöglicht, Benachrichtigungen bereitzustellen. Ein Ereignis wird wie ein Feld deklariert, abgesehen davon, dass es ein event-Schlüsselwort enthält und einen Delegattyp aufweisen muss.
 
-Innerhalb einer Klasse, die einen Ereignismember deklariert, verhält sich das Ereignis wie ein Feld des Delegattyps (vorausgesetzt, das Ereignis ist nicht abstrakt und deklariert keine Accessors). Das Feld speichert einen Verweis auf einen Delegaten, der die Ereignishandler repräsentiert, die dem Ereignis hinzugefügt wurden. Wenn keine Ereignishandler vorhanden sind, ist das Feld `null`.
+Innerhalb einer Klasse, die einen Ereignismember deklariert, verhält sich das Ereignis wie ein Feld des Delegattyps (vorausgesetzt, das Ereignis ist nicht abstrakt und deklariert keine Zugriffsmethoden). Das Feld speichert einen Verweis auf einen Delegaten, der die Ereignishandler repräsentiert, die dem Ereignis hinzugefügt wurden. Wenn keine Ereignishandler vorhanden sind, ist das Feld `null`.
 
 Die `MyList<T>`-Klasse deklariert einen einzigen Ereignismember namens `Changed`, der angibt, dass der Liste ein neues Element hinzugefügt wurde. Das Changed-Ereignis wird durch die virtuelle Methode `OnChanged` ausgelöst, die zunächst prüft, ob das Ereignis `null` ist (d.h. nicht über Handler verfügt). Das Auslösen eines Ereignisses entspricht exakt dem Aufrufen des Delegaten, der durch das Ereignis repräsentiert wird, es gibt deshalb keine besonderen Sprachkonstrukte zum Auslösen von Ereignissen.
 
@@ -276,7 +276,7 @@ Clients reagieren über *Ereignishandler* auf Ereignisse. Ereignishandler werden
 
 [!code-csharp[EventExample](~/samples/snippets/csharp/tour/classes-and-objects/ListBasedExamples.cs#L132-L148)]
 
-In komplexeren Szenarien, in denen die zugrunde liegende Speicherung eines Ereignisses gesteuert werden soll, können in einer Ereignisdeklaration explizit die `add`- und `remove`-Accessors bereitgestellt werden. Diese ähneln in gewisser Weise dem `set`-Accessor einer Eigenschaft.
+In fortgeschrittenen Szenarios, in denen die zugrunde liegende Speicherung eines Ereignisses gesteuert werden soll, kann eine Ereignisdeklaration explizit die Zugriffsmethoden `add` und `remove` bereitstellen, die der Zugriffsmethode `set` einer Eigenschaft ähneln.
 
 ### <a name="operators"></a>Operatoren
 
@@ -298,4 +298,4 @@ Die `using`-Anweisung bietet einen besseren Ansatz für die Objektzerstörung.
 
 > [!div class="step-by-step"]
 > [Zurück](statements.md)
-> [Weiter](structs.md)
+> [Weiter](arrays.md)

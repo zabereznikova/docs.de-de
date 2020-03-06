@@ -1,63 +1,25 @@
 ---
 title: Objektorientiertes Programmieren (C#)
-ms.date: 07/20/2015
+ms.date: 02/08/2020
 ms.assetid: 89574786-65ef-4335-88bc-fbacd094f183
-ms.openlocfilehash: 1de150f6eb4be893ca1afce6bd16afde5752c986
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 01d6f55bf0752f902f351675c4596abbb8ac85c2
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74711821"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77627889"
 ---
 # <a name="object-oriented-programming-c"></a>Objektorientiertes Programmieren (C#)
 
 C# bietet vollständige Unterstützung für objektorientierte Programmierung, einschließlich Kapselung, Vererbung und Polymorphie.
 
-*Kapselung* bedeutet, dass eine Gruppe verwandter Eigenschaften, Methoden sowie anderer Member als eine Einheit bzw. ein Objekt behandelt wird.
+- *Kapselung* bedeutet, dass eine Gruppe verwandter Eigenschaften, Methoden sowie anderer Member als eine Einheit bzw. ein Objekt behandelt wird.
+- *Vererbung* beschreibt die Fähigkeit, neue Klassen basierend auf einer vorhandenen Klasse zu erstellen.
+- *Polymorphismus* bedeutet, dass Sie mehrere Klassen untereinander austauschen können, obwohl jede Klasse dieselben Eigenschaften oder Methoden auf unterschiedliche Art und Weise implementiert.
 
-*Vererbung* beschreibt die Fähigkeit, neue Klassen basierend auf einer vorhandenen Klasse zu erstellen.
+## <a name="classes-and-objects"></a>Klassen und Objekte
 
-*Polymorphismus* bedeutet, dass Sie mehrere Klassen untereinander austauschen können, obwohl jede Klasse dieselben Eigenschaften oder Methoden auf unterschiedliche Art und Weise implementiert.
-
-In diesem Abschnitt werden die folgenden Konzepte beschrieben:
-
-- [Klassen und Objekte](#Classes)
-
-  - [Klassenmember](#Members)
-
-    - [Eigenschaften und Felder](#Properties)
-
-    - [Methoden](#Methods)
-
-    - [Konstruktoren](#Constructors)
-
-    - [Finalizer](#Finalizers)
-
-    - [Ereignisse](#Events)
-
-    - [Geschachtelte Klassen](#NestedClasses)
-
-  - [Zugriffsmodifizierer und Zugriffsebenen](#AccessModifiers)
-
-  - [Instanziieren von Klassen](#InstantiatingClasses)
-
-  - [Statische Klassen und statische Klassenmember](#Static)
-
-  - [Anonyme Typen](#AnonymousTypes)
-
-- [Vererbung](#Inheritance)
-
-  - [Überschreiben von Membern](#Overriding)
-
-- [Schnittstellen](#Interfaces)
-
-- [Generics](#Generics)
-
-- [Delegaten](#Delegates)
-
-## <a name="Classes"></a> Klassen und Objekte
-
-Die Begriffe *Klasse* und *Objekt* werden manchmal synonym verwendet; genau genommen beschreiben Klassen jedoch den *Typ* von Objekten, während Objekte verwendbare *Instanzen* von Klassen sind. Das Erstellen eines Objekts wird daher als *Instanziierung* bezeichnet. Um auf den Vergleich mit Bauplänen zurückzukommen: Eine Klasse ist ein Bauplan, und ein Objekt ist ein anhand dieses Bauplans errichtetes Gebäude.
+Die Begriffe *Klasse* und *Objekt* beschreiben jeweils den *Typ* von Objekten und die *Instanzen* von Klassen. Das Erstellen eines Objekts wird daher als *Instanziierung* bezeichnet. Um auf den Vergleich mit Bauplänen zurückzukommen: Eine Klasse ist ein Bauplan, und ein Objekt ist ein anhand dieses Bauplans errichtetes Gebäude.
 
 So definieren Sie eine Klasse
 
@@ -67,7 +29,7 @@ class SampleClass
 }
 ```
 
-Auch C# stellt vereinfachte Versionen von Klassen bereit, die als *Strukturen* bezeichnet werden. Strukturen sind hilfreich, wenn Sie ein großes Objektarray erstellen müssen und nicht zu viel Arbeitsspeicher belegen wollen.
+C# stellt auch Typen namens *Strukturen* bereit, die nützlich sind, wenn Sie keine Unterstützung für Vererbungen oder Polymorphie benötigen.
 
 So definieren Sie eine Struktur
 
@@ -77,30 +39,26 @@ struct SampleStruct
 }
 ```
 
-Weitere Informationen finden Sie unter:
+Weitere Informationen finden Sie in den Artikeln zu den Schlüsselwörtern [Klasse](../../language-reference/keywords/class.md) und [Struktur](../../language-reference/builtin-types/struct.md).
 
-- [class](../../language-reference/keywords/class.md)
-
-- [struct](../../language-reference/keywords/struct.md)
-
-### <a name="Members"></a> Klassenmember
+### <a name="class-members"></a>Klassenmember
 
 Jede Klasse kann über andere *Klassenmember* verfügen. Diese enthalten Eigenschaften, die Klassendaten beschreiben, Methoden, die Klassenverhalten definieren sowie Ereignisse, die die Kommunikation zwischen verschiedenen Klassen und Objekten bereitstellen.
 
-#### <a name="Properties"></a> Eigenschaften und Felder
+#### <a name="properties-and-fields"></a>Eigenschaften und Felder
 
-Felder und Eigenschaften stellen die in einem Objekt enthaltenen Informationen dar. Felder sind wie Variablen, sie können direkt gelesen oder festgelegt werden.
+Felder und Eigenschaften stellen die in einem Objekt enthaltenen Informationen dar. Felder sind wie Variablen, sie können direkt gelesen oder festgelegt werden und unterliegen anwendbaren Zugriffsmodifizierern.
 
-So definieren Sie ein Feld
+So definieren Sie ein Feld, auf das innerhalb von Instanzen der Klasse zugegriffen werden kann:
 
 ```csharp
-class SampleClass
+public class SampleClass
 {
-    public string sampleField;
+    string sampleField;
 }
 ```
 
-Eigenschaften verfügen über Get- und Set-Prozeduren, die eine bessere Kontrolle über das Festlegen oder Abrufen von Werten ermöglichen.
+Eigenschaften verfügen über `get`- und `set`-Zugriffsmethoden, die eine bessere Kontrolle über das Festlegen oder Abrufen von Werten ermöglichen.
 
 Mit C# können Sie ein privates Feld erstellen, um den Eigenschaftswert zu speichern, oder Sie können automatisch implementierte Eigenschaften verwenden, die dieses Feld automatisch im Hintergrund erstellen und die grundlegende Logik für die Eigenschaftenprozeduren bereitstellen.
 
@@ -122,14 +80,14 @@ class SampleClass
     public int Sample
     {
         // Return the value stored in a field.
-        get { return _sample; }
+        get => _sample;
         // Store the value in the field.
-        set { _sample = value; }
+        set =>  _sample = value;
     }
 }
 ```
 
-Die meisten Eigenschaften verfügen über Methoden oder Prozeduren zum Festlegen und Abrufen des Eigenschaftswerts. Sie können jedoch schreib- oder lesegeschützte Eigenschaften erstellen, um zu verhindern, dass die Eigenschaften gelesen oder geändert werden. In C# muss die `get`-Eigenschaftenmethode oder die `set`-Eigenschaftenmethode nicht angegeben werden. Automatisch implementierte Eigenschaften können jedoch nicht schreib- oder lesegeschützt sein.
+Die meisten Eigenschaften verfügen über Methoden oder Prozeduren zum Festlegen und Abrufen des Eigenschaftswerts. Sie können jedoch schreib- oder lesegeschützte Eigenschaften erstellen, um zu verhindern, dass die Eigenschaften gelesen oder geändert werden. In C# muss die `get`-Eigenschaftenmethode oder die `set`-Eigenschaftenmethode nicht angegeben werden. Automatisch implementierte Eigenschaften können jedoch nicht lesegeschützt sein. Schreibgeschützte automatisch implementierte Eigenschaften können in Konstruktoren der enthaltenden Klasse festgelegt werden.
 
 Weitere Informationen finden Sie unter:
 
@@ -137,7 +95,7 @@ Weitere Informationen finden Sie unter:
 
 - [set](../../language-reference/keywords/set.md)
 
-#### <a name="Methods"></a> Methoden
+#### <a name="methods"></a>Methoden
 
 Eine *Methode* ist eine Aktion, die von einem Objekt ausgeführt werden kann.
 
@@ -167,10 +125,9 @@ In den meisten Fällen deklarieren Sie eine Methode innerhalb einer Klassendefin
 Weitere Informationen finden Sie unter:
 
 - [Methoden](../classes-and-structs/methods.md)
-
 - [Erweiterungsmethoden](../classes-and-structs/extension-methods.md)
 
-#### <a name="Constructors"></a> Konstruktoren
+#### <a name="constructors"></a>Konstruktoren
 
 Konstruktoren sind Klassenmethoden, die automatisch ausgeführt werden, wenn ein Objekt eines bestimmten Typs erstellt wird. Konstruktoren initialisieren normalerweise die Datenmember des neuen Objekts. Konstruktoren können nur einmal während der Erstellung der Klasse ausgeführt werden. Weiterhin wird der Code im Konstruktor immer vor jedem anderen Code in einer Klasse ausgeführt. Sie können jedoch mehrere Konstruktorüberladungen auf die gleiche Weise wie für jede andere Methode erstellen.
 
@@ -188,13 +145,13 @@ public class SampleClass
 
 Weitere Informationen finden Sie unter [Konstruktoren](../classes-and-structs/constructors.md).
 
-#### <a name="Finalizers"></a> Finalizer
+#### <a name="finalizers"></a>Finalizer
 
 Finalizer werden zur Zerstörung von Klasseninstanzen verwendet. In .NET Framework verwaltet die Garbage Collection die Speicherbelegung automatisch und gibt Arbeitsspeicher für die verwalteten Objekte in der Anwendung frei. Möglicherweise sind jedoch noch Finalizer erforderlich, um alle nicht verwalteten Ressourcen zu bereinigen, die von der Anwendung erstellt werden. Es kann nur einen Finalizer für eine Klasse geben.
 
 Weitere Informationen zu Finalizern und der Garbage Collection in .NET Framework finden Sie unter [Garbage Collection](../../../standard/garbage-collection/index.md).
 
-#### <a name="Events"></a> Ereignisse
+#### <a name="events"></a>Ereignisse
 
 Ereignisse aktivieren eine Klasse oder ein Objekt, um Informationen über Aktionen von Interesse an andere Klassen oder Objekte zu übermitteln. Die Klasse, die das Ereignis sendet (oder auslöst), wird als *Herausgeber* bezeichnet, und die Klassen, die das Ereignis empfangen (oder verarbeiten), werden als *Abonnenten* bezeichnet. Weitere Informationen zu Ereignissen sowie zu ihrer Auslösung und Behandlung finden Sie unter [Ereignisse](../../../standard/events/index.md).
 
@@ -204,7 +161,7 @@ Ereignisse aktivieren eine Klasse oder ein Objekt, um Informationen über Aktion
 
 - Verwenden Sie den `+=`-Operator, um ein Ereignis zu abonnieren, und verwenden Sie den `-=`-Operator, um das Abonnement eines Ereignisses zu kündigen.
 
-#### <a name="NestedClasses"></a> Geschachtelte Klassen
+#### <a name="nested-classes"></a>Geschachtelte Klassen
 
 Eine Klasse, die in einer anderen Klasse definiert wird, wird als *geschachtelt* bezeichnet. Standardmäßig ist die geschachtelte Klasse privat.
 
@@ -224,7 +181,7 @@ Um eine Instanz der geschachtelten Klasse zu erstellen, verwenden Sie den Namen 
 Container.Nested nestedInstance = new Container.Nested()
 ```
 
-### <a name="AccessModifiers"></a> Zugriffsmodifizierer und Zugriffsebenen
+### <a name="access-modifiers-and-access-levels"></a>Zugriffsmodifizierer und Zugriffsebenen
 
 Alle Klassen und Klassenmember können mit *Zugriffsmodifizierern* angeben, welche Zugriffsebene sie für andere Klassen bereitstellen.
 
@@ -241,7 +198,7 @@ Die folgenden Zugriffsmodifizierer sind verfügbar:
 
 Weitere Informationen finden Sie unter [Zugriffsmodifizierer](../classes-and-structs/access-modifiers.md).
 
-### <a name="InstantiatingClasses"></a> Instanziieren von Klassen
+### <a name="instantiating-classes"></a>Instanziieren von Klassen
 
 Um ein Objekt zu erstellen, müssen Sie eine Klasse instanziieren oder eine Klasseninstanz erstellen.
 
@@ -269,10 +226,9 @@ SampleClass sampleObject = new SampleClass
 Weitere Informationen finden Sie unter:
 
 - [new-Operator](../../language-reference/operators/new-operator.md)
-
 - [Objekt- und Auflistungsinitialisierer](../classes-and-structs/object-and-collection-initializers.md)
 
-### <a name="Static"></a> Statische Klassen und Member
+### <a name="static-classes-and-members"></a>Statische Klassen und Member
 
 Ein statischer Member der Klasse ist eine Eigenschaft, eine Prozedur oder ein Feld, die von allen Instanzen einer Klasse gemeinsam verwendet werden.
 
@@ -295,7 +251,7 @@ Statische Klassen in C# haben nur statische Member und können nicht instanziier
 
 Weitere Informationen finden Sie unter [static](../../language-reference/keywords/static.md).
 
-### <a name="AnonymousTypes"></a> Anonyme Typen
+### <a name="anonymous-types"></a>Anonyme Typen
 
 Mit anonymen Typen können Objekte erstellt werden, ohne eine Klassendefinition für den Datentyp zu schreiben. Stattdessen erzeugt der Compiler eine Klasse. Die Klasse hat keinen verwendbaren Namen und enthält die von Ihnen in der Deklaration des Objekts angegebenen Eigenschaften.
 
@@ -309,7 +265,7 @@ var sampleObject =
 
 Weitere Informationen finden Sie unter: [Anonyme Typen](../classes-and-structs/anonymous-types.md).
 
-## <a name="Inheritance"></a> Vererbung
+## <a name="inheritance"></a>Vererbung
 
 Vererbung ermöglicht die Erstellung neuer Klassen, die in anderen Klassen definiertes Verhalten wieder verwenden, erweitern und ändern. Die Klasse, deren Member vererbt werden, wird *Basisklasse* genannt, und die Klasse, die diese Member erbt, wird *abgeleitete Klasse* genannt. Alle Klassen in C# erben jedoch implizit von der Klasse <xref:System.Object>, die die .NET-Klassenhierarchie unterstützt und einfache Dienste für alle Klassen bereitstellt.
 
@@ -342,7 +298,7 @@ Weitere Informationen finden Sie unter:
 
 - [abstract](../../language-reference/keywords/abstract.md)
 
-### <a name="Overriding"></a> Überschreiben von Membern
+### <a name="overriding-members"></a>Überschreiben von Membern
 
 Standardmäßig erbt eine abgeleitete Klasse alle Member von ihrer Basisklasse. Wenn Sie das Verhalten des geerbten Members ändern möchten, müssen Sie diesen überschreiben. Das heißt, Sie können eine neue Implementierung der Methode, der Eigenschaft oder des Ereignisses in der abgeleiteten Klasse definieren.
 
@@ -355,7 +311,7 @@ Mit folgenden Modifizierern steuern Sie das Überschreiben von Eigenschaften und
 |[abstract](../../language-reference/keywords/abstract.md)|Erfordert das Überschreiben eines Klassenmembers in der abgeleiteten Klasse.|
 |[new-Modifizierer](../../language-reference/keywords/new-modifier.md)|Blendet einen von einer Basisklasse geerbten Member aus.|
 
-## <a name="Interfaces"></a> Schnittstellen
+## <a name="interfaces"></a>Schnittstellen
 
 Schnittstellen definieren (wie Klassen) einen Satz von Eigenschaften, Methoden und Ereignissen. Im Gegensatz zu Klassen jedoch bieten Schnittstellen keine Implementierung. Sie werden durch Klassen implementiert und als von Klassen unabhängige Entitäten definiert. Eine Schnittstelle stellt insofern einen Vertrag dar, dass eine Klasse, die eine Schnittstelle implementiert, jeden Aspekt dieser Schnittstelle gemäß seiner Definition implementieren muss.
 
@@ -380,13 +336,9 @@ class SampleClass : ISampleInterface
 }
 ```
 
-Weitere Informationen finden Sie unter:
+Weitere Informationen finden Sie im Programmierleitfaden zu [Schnittstellen](../interfaces/index.md) und der Sprachreferenz zum Schlüsselwort [Schnittstelle](../../language-reference/keywords/interface.md).
 
-[Schnittstellen](../interfaces/index.md)
-
-[interface](../../language-reference/keywords/interface.md)
-
-## <a name="Generics"></a> Generics
+## <a name="generics"></a>Generics
 
 Klassen, Strukturen, Schnittstellen und Methoden in .NET Framework können *Typparameter* enthalten, die Objekttypen definieren, die sie speichern oder verwenden können. Das einfachste Beispiel für Generics ist eine Auflistung, in der Sie den Typ von Objekten angeben können, die in einer Auflistung gespeichert werden sollen.
 
@@ -412,7 +364,7 @@ Weitere Informationen finden Sie unter:
 
 - [Generics](../generics/index.md)
 
-## <a name="Delegates"></a> Delegaten
+## <a name="delegates"></a>Delegaten
 
 Ein *Delegat* ist ein Typ, der eine Methodensignatur definiert. Er kann einen Verweis auf jede Methode bereitstellen, die über eine kompatible Signatur verfügt. Sie können die Methode über den Delegaten aufrufen. Delegaten werden verwendet, um Methoden als Argumente an anderen Methoden zu übergeben.
 
@@ -444,11 +396,7 @@ class SampleClass
 }
 ```
 
-Weitere Informationen finden Sie unter:
-
-- [Delegaten](../delegates/index.md)
-
-- [delegate](../../language-reference/builtin-types/reference-types.md)
+Weitere Informationen finden Sie im Programmierleitfaden zu [Delegaten](../delegates/index.md) und der Sprachreferenz zum Schlüsselwort [Delegat](../../language-reference/builtin-types/reference-types.md).
 
 ## <a name="see-also"></a>Siehe auch
 

@@ -3,18 +3,18 @@ title: .NET Core SDK-Telemetrie
 description: Entdecken Sie die Telemetriefeatures des .NET Core SDK, die Nutzungsinformationen für die Analyse darüber erfassen, welche Daten gesammelt werden. Erfahren Sie außerdem, wie Sie diese Features deaktivieren können.
 author: KathleenDollard
 ms.date: 08/27/2019
-ms.openlocfilehash: 8bde344ee393e113502a0895ee55c241cbf24c57
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 9d5d7ff09ade89712f2fbbe35224851bb1c28b4c
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714102"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156685"
 ---
 # <a name="net-core-sdk-telemetry"></a>.NET Core SDK-Telemetrie
 
 Das [.NET Core SDK](index.md) umfasst ein Telemetriefeature, das Daten zur Nutzung und zu Ausnahmen erfasst, wenn die .NET Core-CLI abstürzt. Die .NET Core-CLI umfasst das .NET Core SDK und besteht aus mehreren Verben, die es Ihnen ermöglichen, Ihre .NET Core-Apps zu erstellen, zu testen und zu veröffentlichen. Es ist wichtig, dass das .NET-Team versteht, wie die Tools verwendet werden, damit diese verbessert werden können. Informationen zu Fehlern helfen dem Team, Probleme und Fehler zu beheben.
 
-Die erfassten Daten sind anonym und werden unter der [Creative Commons Attribution-Lizenz](https://creativecommons.org/licenses/by/4.0/) in aggregierter Form veröffentlicht. 
+Die erfassten Daten sind anonym und werden unter der [Creative Commons Attribution-Lizenz](https://creativecommons.org/licenses/by/4.0/) in aggregierter Form veröffentlicht.
 
 ## <a name="scope"></a>Bereich
 
@@ -30,7 +30,7 @@ Es werden *Telemetrie erfasst*, wenn einer der [.NET Core-CLI-Befehle](index.md)
 
 ## <a name="how-to-opt-out"></a>Deaktivierung der Telemetriefunktion
 
-Die Telemetriefeature des .NET Core SDK ist standardmäßig aktiviert. Sie können das Telemetriefeature deaktivieren, indem Sie die Umgebungsvariable `DOTNET_CLI_TELEMETRY_OPTOUT` auf `1` oder `true` festlegen. 
+Die Telemetriefeature des .NET Core SDK ist standardmäßig aktiviert. Sie können das Telemetriefeature deaktivieren, indem Sie die Umgebungsvariable `DOTNET_CLI_TELEMETRY_OPTOUT` auf `1` oder `true` festlegen.
 
 Ebenfalls wird ein einzelner Telemetrieeintrag auch vom .NET Core SDK-Installer gesendet, wenn eine Installation erfolgreich ist. Sie können zur Deaktivierung die Umgebungsvariable `DOTNET_CLI_TELEMETRY_OPTOUT` festlegen, bevor Sie das .NET Core SDK installieren.
 
@@ -128,11 +128,11 @@ at Microsoft.DotNet.Cli.Program.ProcessArgs(String[] args, ITelemetry telemetryC
 at Microsoft.DotNet.Cli.Program.Main(String[] args)
 ```
 
-### <a name="avoid-inadvertent-disclosure-information"></a>Vermeiden der unbeabsichtigten Offenlegung von Informationen
+### <a name="avoid-inadvertent-disclosure-of-information"></a>Vermeiden der unbeabsichtigten Offenlegung von Informationen
 
 .NET Core-Mitwirkende und jeder andere, der eine Version des .NET Core SDK ausführt, die Sie selbst erstellt haben, sollte den Pfad zu Ihrem SDK-Quellcode berücksichtigen. Wenn ein Absturz bei der Verwendung eines .NET Core SDK auftritt, bei dem es sich um einen benutzerdefinierten Debugbuild handelt oder der mit benutzerdefinierten Buildsymboldateien konfiguriert ist, wird der Pfad der SDK-Quelldatei auf dem Buildcomputer als Teil der Stapelüberwachung zwar erfasst, aber nicht gehasht.
 
-Aus diesem Grund sollten benutzerdefinierte Builds des .NET Core SDK nicht in Verzeichnissen gespeichert werden, deren Pfadnamen persönliche oder vertrauliche Informationen offenlegen. 
+Aus diesem Grund sollten benutzerdefinierte Builds des .NET Core SDK nicht in Verzeichnissen gespeichert werden, deren Pfadnamen persönliche oder vertrauliche Informationen offenlegen.
 
 ## <a name="see-also"></a>Siehe auch
 

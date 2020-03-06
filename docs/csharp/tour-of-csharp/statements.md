@@ -1,14 +1,14 @@
 ---
 title: C#-Anweisungen – Überblick über C#
 description: Sie erstellen die Aktionen eines C#-Programms mit Anweisungen.
-ms.date: 11/06/2016
+ms.date: 02/27/2020
 ms.assetid: 5409c379-5622-4fae-88b5-1654276ea8d4
-ms.openlocfilehash: 26b151bc116dde9120757f954bdcf3aee041c5f5
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: ced13b1bfd17977acb98bf33c0a477161cf08a93
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65634541"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159103"
 ---
 # <a name="statements"></a>Anweisungen
 
@@ -20,11 +20,11 @@ Ein *Block* ermöglicht, mehrere Anweisungen in Kontexten zu schreiben, in denen
 
 *Ausdrucksanweisungen* werden zum Auswerten von Ausdrücken verwendet. Ausdrücke, die als Anweisungen verwendet werden können, enthalten Methodenaufrufe, Objektzuordnungen mit dem `new`-Operator, Zuweisungen mit `=` und den Verbundzuweisungsoperatoren, Inkrementier- und Dekrementiervorgänge unter Verwendung des `++`- und `--`-Operators und `await`-Ausdrücke.
 
-*Auswahlanweisungen* werden verwendet, um eine Anzahl von möglichen Anweisungen für die Ausführung anhand des Werts eines Ausdrucks auszuwählen. Zu dieser Gruppe gehören die `if`- und `switch`-Anweisungen.
+*Auswahlanweisungen* werden verwendet, um eine Anzahl von möglichen Anweisungen für die Ausführung anhand des Werts eines Ausdrucks auszuwählen. Diese Gruppe enthält die Anweisungen `if` und `switch`.
 
-*Iterationsanweisungen* werden verwendet, um eine eingebettete Anweisung wiederholt auszuführen. Zu dieser Gruppe gehören die `while`-, `do`-, `for`- und `foreach`-Anweisungen.
+*Iterationsanweisungen* werden verwendet, um eine eingebettete Anweisung wiederholt auszuführen. Diese Gruppe enthält die Anweisungen `while`, `do`, `for` und `foreach`.
 
-*Sprunganweisungen* werden verwendet, um die Steuerung zu übertragen. Zu dieser Gruppe gehören die `break`-, `continue`-, `goto`-, `throw`-, `return`- und `yield`-Anweisungen.
+*Sprunganweisungen* werden verwendet, um die Steuerung zu übertragen. Diese Gruppe enthält die Anweisungen `break`, `continue`, `goto`, `throw`, `return` und `yield`.
 
 Mit der `try`... `catch`-Anweisung werden Ausnahmen abgefangen, die während der Ausführung eines Blocks auftreten, und mit der `try`... `finally`-Anweisung wird Finalisierungscode angegeben, der immer ausgeführt wird, unabhängig davon, ob eine Ausnahme aufgetreten ist oder nicht.
 

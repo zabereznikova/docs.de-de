@@ -6,12 +6,12 @@ ms.author: adegeo
 ms.date: 12/04/2019
 ms.custom: updateeachrelease
 zone_pivot_groups: operating-systems-set-one
-ms.openlocfilehash: 4a6c8b27812e9f60e52132169dda0464c24abcc2
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 0aa323533dd9136372c2bbc330c9c3056fdf428c
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75740569"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78157570"
 ---
 # <a name="install-the-net-core-sdk"></a>Installieren des .NET Core SDK
 
@@ -35,6 +35,19 @@ Windows verfügt über eigenständige Installer, die zur Installation des .NET C
 macOS verfügt über eigenständige Installer, die zur Installation des .NET Core 3.1 SDK verwendet werden können:
 
 - [x64-CPUs (64 Bit)](https://dotnet.microsoft.com/download/dotnet-core/3.1)
+
+## <a name="download-and-manually-install"></a>Herunterladen und manuelles Installieren
+
+Alternativ zu den macOS-Installationsprogrammen für .NET Core können Sie das SDK herunterladen und manuell installieren.
+
+[Laden Sie zunächst ein .NET Core-Binärrelease herunter](#all-net-core-downloads), um das SDK zu extrahieren und die .NET Core-CLI-Befehle im Terminal bereitzustellen. Öffnen Sie dann ein Terminal, und führen Sie die folgenden Befehle aus. Bei diesen Befehlen wird dabei ausgegangen, dass die Runtime in die `~/Downloads/dotnet-sdk.pkg`-Datei heruntergeladen wurde.
+
+```bash
+mkdir -p $HOME/dotnet
+sudo installer -pkg ~/Downloads/dotnet-sdk.pkg -target $HOME/dotnet
+export DOTNET_ROOT=$HOME/dotnet
+export PATH=$PATH:$HOME/dotnet
+```
 
 ::: zone-end
 
@@ -104,6 +117,25 @@ Wählen Sie in Abhängigkeit vom Typ der von Ihnen erstellten Anwendung beim Ins
 - **.NET-Desktopentwicklungsworkload** im Abschnitt **Desktop und mobil**
 
 [![Windows Visual Studio 2019 mit .NET Core-Workload](media/install-sdk/windows-install-visual-studio-2019.png)](media/install-sdk/windows-install-visual-studio-2019.png#lightbox)
+
+## <a name="download-and-manually-install"></a>Herunterladen und manuelles Installieren
+
+[Laden Sie zunächst ein .NET Core-Binärrelease herunter](#all-net-core-downloads), um die Runtime zu extrahieren und die .NET Core-CLI-Befehle im Terminal bereitzustellen. Erstellen Sie dann ein Installationsverzeichnis wie z. B. `%USERPROFILE%\dotnet`. Extrahieren Sie schließlich die heruntergeladene ZIP-Datei in dieses Verzeichnis.
+
+Standardmäßig verwenden .NET Core-CLI-Befehle und -Apps nicht auf diese Weise installiertes .NET Core. Sie müssen dessen Verwendung explizit auswählen. Ändern Sie hierzu die Umgebungsvariablen, mit denen eine Anwendung gestartet wird:
+
+```console
+set DOTNET_ROOT=%USERPROFILE%\dotnet
+set PATH=%USERPROFILE%\dotnet;%PATH%
+```
+
+Bei diesem Ansatz können Sie mehrere Versionen in separaten Speicherorten installieren und dann explizit auswählen, welcher Installationsspeicherort von einer Anwendung verwendet werden soll, indem die Anwendung mit Umgebungsvariablen ausgeführt wird, die auf diesen Speicherort zeigen.
+
+Selbst wenn diese Umgebungsvariablen festgelegt sind, berücksichtigt .NET Core bei der Auswahl des besten Frameworks für die Ausführung der Anwendung nach wie vor den standardmäßigen globalen Installationsspeicherort. Der Standardwert ist normalerweise `C:\Program Files\dotnet`, den die Installationsprogramme verwenden. Sie können die Runtime anweisen, nur den benutzerdefinierten Installationsspeicherort zu verwenden, indem Sie diese Umgebungsvariable festlegen:
+
+```console
+set DOTNET_MULTILEVEL_LOOKUP=0
+```
 
 ::: zone-end
 
@@ -186,6 +218,7 @@ Weitere Informationen zur Verwendung von .NET Core in einem Docker-Container fin
 
 ::: zone pivot="os-macos"
 
+- [Verwenden der macOS Catalina-Notarisierung](macos-notarization-issues.md)
 - [Tutorial: Erste Schritte unter macOS](../tutorials/using-on-mac-vs.md)
 - [Tutorial: Erstellen einer neuen App mit Visual Studio Code](../tutorials/with-visual-studio-code.md)
 - [Tutorial: Containerisieren einer .NET Core-App](../docker/build-container.md)

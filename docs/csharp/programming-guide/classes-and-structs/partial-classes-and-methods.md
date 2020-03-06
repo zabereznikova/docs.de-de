@@ -6,16 +6,16 @@ helpviewer_keywords:
 - partial classes [C#]
 - C# language, partial classes and methods
 ms.assetid: 804cecb7-62db-4f97-a99f-60975bd59fa1
-ms.openlocfilehash: e359913aad4b8cea001a894d4ba5720fab54d42b
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: 50b192d5a7416a982f41d0c3ac13e9c1bfe3397c
+ms.sourcegitcommit: c2d9718996402993cf31541f11e95531bc68bad0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77451914"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77673354"
 ---
 # <a name="partial-classes-and-methods-c-programming-guide"></a>Partielle Klassen und Methoden (C#-Programmierhandbuch)
 
-Es ist möglich, die Definition einer [Klasse](../../language-reference/keywords/class.md), einer [Struktur](../../language-reference/keywords/struct.md), einer [Schnittstelle](../../language-reference/keywords/interface.md) oder einer Methode auf zwei oder mehr Quelldateien aufzuteilen. Jede Quelldatei enthält einen Abschnitt der Typ- oder Methodendefinition. Die Teile werden bei der Kompilierung der Anwendung miteinander kombiniert.
+Es ist möglich, die Definition einer [Klasse](../../language-reference/keywords/class.md), einer [Struktur](../../language-reference/builtin-types/struct.md), einer [Schnittstelle](../../language-reference/keywords/interface.md) oder einer Methode auf zwei oder mehr Quelldateien aufzuteilen. Jede Quelldatei enthält einen Abschnitt der Typ- oder Methodendefinition. Die Teile werden bei der Kompilierung der Anwendung miteinander kombiniert.
 
 ## <a name="partial-classes"></a>Teilklassen
 
@@ -173,6 +173,6 @@ Weitere Informationen finden Sie unter [Partielle Datentypen](~/_csharplang/spec
 
 - [C#-Programmierhandbuch](../index.md)
 - [Klassen](./classes.md)
-- [Strukturen](./structs.md)
+- [Strukturtypen](../../language-reference/builtin-types/struct.md)
 - [Schnittstellen](../interfaces/index.md)
 - [partial (Typ)](../../language-reference/keywords/partial-type.md)

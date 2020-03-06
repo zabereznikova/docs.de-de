@@ -2,12 +2,12 @@
 title: Durchlaufen von Sammlungen in C#
 ms.date: 08/14/2018
 ms.assetid: c93f6dd4-e72a-4a06-be1c-a98b3255b734
-ms.openlocfilehash: d47dcf6e7748f85978b1b0bcf739b5d1280263f3
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: aceedd11466c75cedad3c67224c3a5595b4cabfa
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69594963"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77626269"
 ---
 # <a name="iterators-c"></a>Iteratoren (C#)
 
@@ -324,11 +324,11 @@ public class Stack<T> : IEnumerable<T>
 
 Ein Iterator kann als Methode oder als `get`-Zugriffsmethode vorkommen. Ein Iterator kann nicht in einem Ereignis, Instanzenkonstruktor, statischen Konstruktor oder statischen Finalizer vorkommen.
 
-Es muss eine implizite Konvertierung vom Ausdruckstyp in der `yield return`-Anweisung in das Typargument für die vom Iterator zurückgegebene Schnittstelle „IEnumerable\<T>“ vorhanden sein.
+Es muss eine implizite Konvertierung vom Typ des Ausdrucks in der `yield return`-Anweisung in das Typargument für das vom Iterator zurückgegebene `IEnumerable<T>` vorhanden sein.
 
 In C# kann eine Iteratormethode nicht die Parameter `in`, `ref` oder `out` aufweisen.
 
-In C# ist „yield“ kein reserviertes Wort, und es hat nur besondere Bedeutung, wenn es vor den Schlüsselwörtern `return` und `break` verwendet wird.
+In C# ist `yield` kein reserviertes Wort, und es hat nur besondere Bedeutung, wenn es vor den Schlüsselwörtern `return` und `break` verwendet wird.
 
 ## <a name="technical-implementation"></a>Technische Implementierung
 
@@ -336,7 +336,7 @@ Auch wenn Sie einen Iterator als Methode schreiben, führt der Compiler für die
 
 Wenn Sie sehen möchten, was der Compiler macht, können Sie das Tool Ildasm.exe verwenden, um den Intermediate Language-Code von Microsoft anzuzeigen, der für eine Iteratormethode generiert wird.
 
-Wenn Sie einen Iterator für eine [Klasse](../../language-reference/keywords/class.md) oder [Struktur](../../language-reference/keywords/struct.md) erstellen, müssen Sie die gesamte <xref:System.Collections.IEnumerator>-Schnittstelle implementieren. Wenn der Compiler einer Iterator erkennt, generiert er automatisch die Methoden `Current`, `MoveNext` und `Dispose` der <xref:System.Collections.IEnumerator>- und <xref:System.Collections.Generic.IEnumerator%601>-Schnittstelle.
+Wenn Sie einen Iterator für eine [Klasse](../../language-reference/keywords/class.md) oder [Struktur](../../language-reference/builtin-types/struct.md) erstellen, müssen Sie die gesamte <xref:System.Collections.IEnumerator>-Schnittstelle implementieren. Wenn der Compiler einer Iterator erkennt, generiert er automatisch die Methoden `Current`, `MoveNext` und `Dispose` der <xref:System.Collections.IEnumerator>- und <xref:System.Collections.Generic.IEnumerator%601>-Schnittstelle.
 
 In jeder aufeinanderfolgenden Iteration der `foreach`-Schleife (oder im direkten Aufruf von `IEnumerator.MoveNext`) setzt der nächste Iteratorcodetext den Prozess nach der letzten `yield return`-Anweisung fort. Er springt dann zur nächsten `yield return`-Anweisung weiter, bis das Ende des Iteratortexts erreicht ist, oder bis er auf eine `yield break`-Anweisung trifft.
 

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - objects [C#], about objects
 - variables [C#]
 ms.assetid: af4a5230-fbf3-4eea-95e1-8b883c2f845c
-ms.openlocfilehash: 95735d5032a8896570918b991f12b853af88fb68
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 09b290713f3bc2a7a7824bb19c98138943ad5b2c
+ms.sourcegitcommit: c2d9718996402993cf31541f11e95531bc68bad0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75705482"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77673380"
 ---
 # <a name="objects-c-programming-guide"></a>Objekte (C#-Programmierhandbuch)
 Die Definition einer Klasse oder Struktur ist mit einem Entwurf vergleichbar, der angibt, was der Typ machen kann. Ein Objekt ist im Grunde ein Speicherblock, der nach Plan zugewiesen und konfiguriert wurde. Ein Programm kann viele Objekte der selben Klasse erstellen. Objekte werden auch Instanzen genannt, und sie können entweder in einer benannten Variable, einem Array oder in einer Auflistung gespeichert werden. Der Client-Code ist der Code, der diese Variablen verwendet, um die Methoden aufzurufen und um auf die öffentlichen Eigenschaften des Objekts zuzugreifen. In einer objektorientierten Programmiersprache wie C# besteht ein typisches Programm aus mehreren Objekten, die dynamisch interagieren.  
@@ -52,8 +52,6 @@ Die Definition einer Klasse oder Struktur ist mit einem Entwurf vergleichbar, de
   
 - [Klassen](./classes.md)  
   
-- [Strukturen](./structs.md)  
-  
 - [Konstruktoren](./constructors.md)  
   
 - [Finalizer](./destructors.md)  
@@ -66,6 +64,6 @@ Die Definition einer Klasse oder Struktur ist mit einem Entwurf vergleichbar, de
 - [object](../../language-reference/builtin-types/reference-types.md)
 - [Vererbung](./inheritance.md)
 - [class](../../language-reference/keywords/class.md)
-- [struct](../../language-reference/keywords/struct.md)
+- [Strukturtypen](../../language-reference/builtin-types/struct.md)
 - [new-Operator](../../language-reference/operators/new-operator.md)
 - [Allgemeines Typsystem](../../../standard/base-types/common-type-system.md)
