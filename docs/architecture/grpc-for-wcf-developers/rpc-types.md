@@ -3,11 +3,11 @@ title: RPC-GrpC-Typen für WCF-Entwickler
 description: Eine Überprüfung der von WCF unterstützten Remote Prozedur Aufrufe und ihrer Entsprechungen in GrpC
 ms.date: 09/02/2019
 ms.openlocfilehash: 58f097bac61395e6810155e8ae9a6bbf2219ec5e
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.sourcegitcommit: 515469828d0f040e01bde01df6b8e4eb43630b06
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77503445"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78675154"
 ---
 # <a name="types-of-rpc"></a>RPC-Typen
 

@@ -5,11 +5,11 @@ author: danroth27
 ms.author: daroth
 ms.date: 09/11/2019
 ms.openlocfilehash: 2c383e86ff22f5a3460476998992b66e9417cc11
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 515469828d0f040e01bde01df6b8e4eb43630b06
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73841906"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78675004"
 ---
 # <a name="project-structure-for-blazor-apps"></a>Projektstruktur für blazor-apps
 
@@ -164,7 +164,7 @@ Zum Bootstrap von blazor muss die app folgende Aktionen ausführen:
 
 In der blazor-Server-APP wird die Hostseite der Stamm Komponente in der Datei *_Host. cshtml* definiert. Diese Datei definiert eine Razor-Seite und keine Komponente. Razor Pages verwenden Sie Razor-Syntax, um eine Server adressierbare Seite zu definieren, ähnlich wie eine *aspx* -Seite. Die `Html.RenderComponentAsync<TComponent>(RenderMode)`-Methode wird verwendet, um zu definieren, wo eine Komponente auf Stamm Ebene gerendert werden soll. Die Option `RenderMode` gibt an, wie die Komponente gerendert werden soll. In der folgenden Tabelle werden die unterstützten `RenderMode` Optionen beschrieben.
 
-|Option                        |Beschreibung       |
+|Option                        |BESCHREIBUNG       |
 |------------------------------|------------------|
 |`RenderMode.Server`           |Wird interaktiv gerendert, sobald eine Verbindung mit dem Browser hergestellt wurde|
 |`RenderMode.ServerPrerendered`|Zuerst vorab und dann interaktiv gerendert|
@@ -234,7 +234,7 @@ public class Startup
 }
 ```
 
-## <a name="build-output"></a>Buildausgabe
+## <a name="build-output"></a>Erstellen der Ausgabe
 
 Wenn ein blazor-Projekt erstellt wird, werden alle Razor-Komponenten-und Code Dateien in eine einzelne Assembly kompiliert. Im Gegensatz zu ASP.net-Web Forms Projekten unterstützt blazor keine Lauf Zeit Kompilierung der UI-Logik.
 

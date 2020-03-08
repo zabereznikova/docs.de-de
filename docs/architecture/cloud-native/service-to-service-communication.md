@@ -4,11 +4,11 @@ description: Erfahren Sie, wie Back-End-cloudnative-mikrodienste mit anderen Bac
 author: robvet
 ms.date: 09/09/2019
 ms.openlocfilehash: a5124b8b83f62ff17b1230ead63db26e0c1f2a5b
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.sourcegitcommit: 515469828d0f040e01bde01df6b8e4eb43630b06
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74087596"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78675135"
 ---
 # <a name="service-to-service-communication"></a>Kommunikation zwischen Dienst und Dienst
 
@@ -138,13 +138,13 @@ Es gibt jedoch einige wichtige Vorsichtsmaßnahmen: Service Bus Warteschlangen G
 
 In Abbildung 4-14 wird die allgemeine Architektur einer Service Bus Warteschlange beschrieben.
 
-![Service Bus Warteschlange](./media/service-bus-queue.png)
+![Service Bus-Warteschlange](./media/service-bus-queue.png)
 
-**Abbildung 4-14.** Service Bus Warteschlange
+**Abbildung 4-14.** Service Bus-Warteschlange
 
 Beachten Sie in der vorherigen Abbildung die Punkt-zu-Punkt-Beziehung. Zwei Instanzen des gleichen Anbieters stellen Nachrichten in eine Warteschlange in eine einzelne Service Bus Warteschlange. Jede Nachricht wird nur von einer von drei consumerinstanzen auf der rechten Seite verwendet. Im nächsten Schritt wird erläutert, wie Sie Messaging implementieren, bei dem verschiedene Consumer die gleiche Nachricht benötigen.
 
-## <a name="events"></a>Ereignisse
+## <a name="events"></a>Events
 
 Message queuate ist eine effektive Methode zum Implementieren der Kommunikation, bei der ein Producer einen Consumer asynchron an eine Nachricht senden kann. Was passiert jedoch, wenn *viele verschiedene* Consumer an derselben Nachricht interessiert sind? Eine dedizierte Nachrichten Warteschlange für jeden Consumer wäre nicht gut skalierbar und würde die Verwaltung erschweren.
 
@@ -220,7 +220,7 @@ Event Hub unterstützt niedrige Latenz und konfigurierbare Zeit Aufbewahrung. Im
 
 Event Hub unterstützt allgemeine Ereignis Veröffentlichungs Protokolle, einschließlich HTTPS und AMQP. Außerdem wird Kafka 1,0 unterstützt. [Vorhandene Kafka-Anwendungen können mit dem Event Hub](https://docs.microsoft.com/azure/event-hubs/event-hubs-for-kafka-ecosystem-overview) über das Kafka-Protokoll kommunizieren, das eine Alternative zur Verwaltung großer Kafka-Cluster bereitstellt. Viele Open-Source-cloudnative Systeme nehmen Kafka vor.
 
-Event Hubs implementiert das Nachrichten Streaming über ein [partitioniertes consumermodell](https://docs.microsoft.com/azure/event-hubs/event-hubs-features) , in dem jeder Consumer nur eine bestimmte Teilmenge oder Partition des nachrichtenstreams liest. Dieses Muster ermöglicht enorme horizontale Skalierung für die Ereignisverarbeitung und stellt weitere datenstromorientierte Features zur Verfügung, die in Warteschlangen und Themen nicht verfügbar sind. Eine Partition ist eine geordnete Sequenz von Ereignissen, die in einem Event Hub gespeichert wird. Wenn neuere Ereignisse eintreffen, werden Sie am Ende dieser Sequenz hinzugefügt. Abbildung 4-19 zeigt die Partitionierung in einem Event Hub.
+Event Hubs implementiert das Nachrichten Streaming über ein [partitioniertes consumermodell](https://docs.microsoft.com/azure/event-hubs/event-hubs-features) , in dem jeder Consumer nur eine bestimmte Teilmenge oder Partition des nachrichtenstreams liest. Dieses Muster ermöglicht enorme horizontale Skalierung für die Ereignisverarbeitung und stellt weitere datenstromorientierte Features zur Verfügung, die in Warteschlangen und Themen nicht verfügbar sind. Eine Partition ist eine geordnete Sequenz von Ereignissen, die in einem Event Hub besteht. Wenn neuere Ereignisse eintreffen, werden Sie am Ende dieser Sequenz hinzugefügt. Abbildung 4-19 zeigt die Partitionierung in einem Event Hub.
 
 ![Event Hub-Partitionierung](./media/event-hub-partitioning.png)
 

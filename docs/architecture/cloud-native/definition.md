@@ -4,11 +4,11 @@ description: Erfahren Sie mehr über die grundlegenden Säulen, die das Fundamen
 author: robvet
 ms.date: 08/20/2019
 ms.openlocfilehash: 27191a67b2964ac2e1636a4d7dc55d5314b78439
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 515469828d0f040e01bde01df6b8e4eb43630b06
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73841804"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78675123"
 ---
 # <a name="defining-cloud-native"></a>Definieren von Cloud Native
 
@@ -32,7 +32,7 @@ Cloud Native ist viel über *Geschwindigkeit* und *Agilität*. Geschäftssysteme
 
 Im folgenden finden Sie einige Unternehmen, die diese Techniken implementiert haben. Berücksichtigen Sie die Geschwindigkeit, Agilität und Skalierbarkeit, die Sie erreicht haben.
 
-| Unternehmens- | Erlebnis |
+| Company | Benutzererfahrung |
 | :-------- | :-------- |
 | [Stream](https://www.infoq.com/news/2013/06/netflix/) | Umfasst 600 Dienste in der Produktionsumgebung. Wird hundert Mal pro Tag bereitgestellt. |
 | [Räuber](https://eng.uber.com/micro-deploy/) | In der Produktionsumgebung werden 1000 Dienste und Dienste gespeichert. Stellt wöchentlich mehrere tausend Builds bereit. |
@@ -80,12 +80,12 @@ In der folgenden Tabelle wird die zwölfstufige Methodik hervorgehoben:
 | :-------- | :-------- | :-------- |
 | 1 | Codebasis | Eine einzelne Codebasis für jeden in einem eigenen Repository gespeicherten mikrodienst. Die Nachverfolgung mit der Versionskontrolle kann in mehreren Umgebungen (QA, Staging, Produktion) bereitgestellt werden. |
 | 2 | Abhängigkeiten | Jeder-mikrodienst isoliert und packt seine eigenen Abhängigkeiten und übernimmt Änderungen, ohne dass sich dies auf das gesamte System auswirkt. |
-| 3 | Konfigurationen  | Konfigurationsinformationen werden aus dem-Unternehmens Dienst verschoben und durch ein Konfigurations Verwaltungs Tool außerhalb des Codes extern ausgelagert. Dieselbe Bereitstellung kann über Umgebungen hinweg verteilt werden, auf die die korrekte Konfiguration angewendet wird.  |
+| 3 | Configurations  | Konfigurationsinformationen werden aus dem-Unternehmens Dienst verschoben und durch ein Konfigurations Verwaltungs Tool außerhalb des Codes extern ausgelagert. Dieselbe Bereitstellung kann über Umgebungen hinweg verteilt werden, auf die die korrekte Konfiguration angewendet wird.  |
 | 4 | Sichern von Diensten | Hilfdressourcen (Datenspeicher, Caches, Nachrichten Broker) sollten über eine adressierbare URL verfügbar gemacht werden. Dadurch wird die Ressource von der Anwendung entkoppelt, sodass Sie austauschbar ist.  |
 | 5 | Build, Release, Run | Jede Version muss eine strikte Trennung in den Build-, Release-und Lauf Phasen erzwingen. Jede sollte mit einer eindeutigen ID gekennzeichnet werden und die Möglichkeit des Rollbacks unterstützen. Moderne CI/CD-Systeme helfen dabei, dieses Prinzip zu erfüllen. |
 | 6 | Prozesse | Jeder-mikrodienst sollte in einem eigenen Prozess ausgeführt werden, isoliert von anderen ausgelaufenden Diensten. Externalisieren Sie den erforderlichen Zustand zu einem Sicherungsdienst, z. b. einem verteilten Cache oder einem Datenspeicher. |
 | 7 | Portbindung | Jeder-mikrodienst sollte eigenständig sein und seine Schnittstellen und Funktionen, die auf seinem eigenen Port verfügbar gemacht werden. Dadurch wird die Isolation von anderen-Diensten ermöglicht. |
-| 8 | Nebenläufigkeit | Dienste können über eine große Anzahl von kleinen identischen Prozessen (Kopien) horizontal hochskaliert werden, anstatt eine einzelne große Instanz auf dem leistungsstärksten verfügbaren Computer zentral hochzuskalieren. |
+| 8 | Parallelität | Dienste können über eine große Anzahl von kleinen identischen Prozessen (Kopien) horizontal hochskaliert werden, anstatt eine einzelne große Instanz auf dem leistungsstärksten verfügbaren Computer zentral hochzuskalieren. |
 | 9 | Disposability | Dienst Instanzen sollten verworfen werden können, um schnelle Startups zu verbessern, um Skalierbarkeits Chancen und ordnungsgemäße Herunterfahr Vorgänge zu verbessern, um das System in einem korrekten Zustand zu belassen Docker-Container zusammen mit einem Orchestrator erfüllen diese Anforderung von Natur aus. |
 | 10 | Dev/Prod-Parität | Sorgen Sie dafür, dass Umgebungen im gesamten Anwendungslebenszyklus so ähnlich wie möglich sind Hier kann die Übernahme von Containern durch herauf Stufen derselben Ausführungsumgebung erheblich beitragen. |
 | 11 | Protokollierung | Behandeln Sie von-Webdiensten generierte Protokolle als Ereignisdaten Ströme. Verarbeiten Sie Sie mit einem Ereignisaggregator, und übertragen Sie die Daten an Data Mining/Log-Verwaltungs Tools wie Azure Monitor oder Splunk und schließlich über eine langfristige Archivierung. |
@@ -105,7 +105,7 @@ Wir verweisen auf viele der 12 +-Faktoren in diesem Kapitel und im Buch.
 
 Neben den Anleitungen der zwölfstufigen Methodik gibt es einige wichtige Entwurfsentscheidungen, die Sie beim Erstellen verteilter Systeme treffen müssen.
 
-*Ssy*
+*Communication*
 
 Wie werden Front-End-Client Anwendungen mit gesicherten End-Kerndiensten kommunizieren? Wird die direkte Kommunikation zugelassen? Oder können Sie die Back-End-Dienste mit einer gatewayfassade abstrahieren, die Flexibilität, Kontrolle und Sicherheit bietet?
 
@@ -125,7 +125,7 @@ In der Entwurfs Umgebung kapselt jeder microservice seine eigenen Daten, wodurch
 
 Verteilte Daten werden in Kapitel 5, in der *Cloud Native Datenmuster*, ausführlich behandelt.
 
-*Identity*
+*Identität*
 
 Wie wird Ihr Dienst ermitteln, wer auf ihn zugreift und welche Berechtigungen er hat?
 
@@ -157,7 +157,7 @@ Beachten Sie, wie von den-und-Diensten das "One CodeBase, ONE Application"-Prinz
 
 > *Der Faktor \#1 gibt "eine einzelne Codebasis für jeden in einem eigenen Repository gespeicherten mikrodienst an. Mit der Versionskontrolle nachverfolgt, kann es in mehreren Umgebungen bereitgestellt werden. "*
 
-### <a name="why-microservices"></a>Gründe für das Ausführen von-Diensten
+### <a name="why-microservices"></a>Gründe für die Verwendung von Microservices
 
 Mit der-Dienst Flexibilität können Sie Agilität
 
@@ -225,11 +225,11 @@ In der folgenden Tabelle werden allgemeine Orchestrierungs Aufgaben beschrieben.
 
 |  Aufgaben | Erklärung  |
 | :-------- | :-------- |
-| Planungen | Automatisches Bereitstellen von Container Instanzen.|
+| Scheduling | Automatisches Bereitstellen von Container Instanzen.|
 | Affinität/antiaffinität | Stellen Sie Container bereit, die sich nahe beieinander befinden, und unterstützen Sie die Verfügbarkeit und Leistung. |
 | Systemüberwachung | Automatisches Erkennen und korrigieren von Fehlern.|
 | Failover | Fehler beim automatischen erneuten Bereitstellen fehlerhafter Computer.|
-| Skalieren | Fügen Sie Container Instanzen automatisch hinzu, um die Anforderung zu erfüllen.|
+| Skalierung | Fügen Sie Container Instanzen automatisch hinzu, um die Anforderung zu erfüllen.|
 | Netzwerk | Verwalten Sie eine Netzwerk Überlagerung für die Container Kommunikation.|
 | Dienstermittlung | Aktivieren Sie Container, um sich gegenseitig zu suchen.|
 | Parallele Upgrades | Inkrementelle Upgrades ohne Ausfallzeiten Bereitstellung koordinieren. Automatisches Rollback von problematischen Änderungen.|
@@ -278,7 +278,7 @@ Cloudanbieter stellen APIs bereit, mit denen Sie mit ihren proprietären Unterst
 
 Unterstützende Dienste werden in Kapitel 5, in der *Cloud Native Datenmuster*und in Kapitel 4, in der *Cloud Native Kommunikationsmuster*erläutert.
 
-## <a name="automation"></a>Automatisierung
+## <a name="automation"></a>Automation
 
 Wie Sie gesehen haben, sind in der Cloud Native Systeme zum Erreichen von Geschwindigkeit und Agilität für die Entwicklung von Funktionen, Containern und modernen System Entwürfen konzipiert. Aber das ist nur ein Teil der Story. Wie stellen Sie die cloudumgebungen bereit, auf denen diese Systeme ausgeführt werden? Wie werden App-Features und Updates schnell bereitgestellt? Wie wird das vollständige Bild abgerundet?
 
