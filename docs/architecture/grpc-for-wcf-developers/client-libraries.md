@@ -3,11 +3,11 @@ title: 'Erstellen von GrpC-Client Bibliotheken: GrpC für WCF-Entwickler'
 description: Erörterung von freigegebenen Client Bibliotheken/-Paketen für GrpC-Dienste
 ms.date: 09/02/2019
 ms.openlocfilehash: bb58cb3cda4b0cbb3a5d34129961349bcb0093e9
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.sourcegitcommit: 515469828d0f040e01bde01df6b8e4eb43630b06
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74711459"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78675170"
 ---
 # <a name="create-grpc-client-libraries"></a>Erstellen von GrpC-Client Bibliotheken
 
@@ -145,7 +145,7 @@ namespace Grpc.Core
 }
 ```
 
-## <a name="summary"></a>Summary
+## <a name="summary"></a>Zusammenfassung
 
 Die `IAsyncEnumerable`-und `IObservable` Modelle sind sowohl gut unterstützte als auch gut dokumentierte Möglichkeiten, mit asynchronen Datenströmen in .net umzugehen. GrpC-Streams sind sowohl für Paradigmen als auch für eine enge Integration mit .net Core und für reaktive und asynchrone Programmier Stile gleich.
 
