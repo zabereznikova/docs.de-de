@@ -4,18 +4,18 @@ description: Lernen Sie die Verwendung der Vererbung in C#-Bibliotheken und -Anw
 ms.date: 07/05/2018
 ms.technology: csharp-fundamentals
 ms.assetid: aeb68c74-0ea0-406f-9fbe-2ce02d47ef31
-ms.openlocfilehash: b69da841c7c7a2e518191ad34f2ff5b368899728
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: b72badb7833e018dfcbf5d2583b17f17c800c382
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73120132"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79156752"
 ---
 # <a name="inheritance-in-c-and-net"></a>Vererbung in C# und .NET
 
 Dieses Tutorial macht Sie mit der Vererbung in C# vertraut. Vererbung ist eine Funktion der objektorientierten Programmiersprachen, die Ihnen ermöglicht, eine Basisklasse zu definieren, die eine bestimmte Funktionalität bietet (Daten und Verhalten), und abgeleitete Klassen zu definieren, die diese Funktionalität entweder übernehmen oder außer Kraft setzen.
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
+## <a name="prerequisites"></a>Voraussetzungen
 
 In diesem Tutorial wird vorausgesetzt, dass Sie das .NET Core SDK installiert haben. Sie können dieses auf der Seite [.NET Core-Downloads](https://dotnet.microsoft.com/download) herunterladen. Sie benötigen auch einen Code-Editor. In diesem Tutorial wird [Visual Studio Code](https://code.visualstudio.com) verwendet, obwohl Sie einen Code-Editor Ihrer Wahl verwenden können.
 
@@ -291,7 +291,7 @@ Dann können Sie einige Klassen von `Shape` ableiten, die bestimmte Formen darst
 
 [!code-csharp[Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/shape.cs#2)]
 
-Im folgenden Beispiel werden von `Shape` abgeleitete Objekte verwendet. Es instanziiert ein Array von Objekten, die von `Shape` abgeleitet sind, und ruft die statischen Methoden der `Shape`-Klasse auf, deren Umschließungen `Shape`-Eigenschaftswerte zurückgeben. Die Laufzeit ruft Werte aus den überschriebenen Eigenschaften der abgeleiteten Typen ab. Das Beispiel wandelt auch jedes `Shape` -Objekt im Array in seinen abgeleiteten Typ um, und wenn die Umwandlung erfolgreich ist, ruft es Eigenschaften dieser bestimmten Unterklasse von `Shape` auf. 
+Im folgenden Beispiel werden von `Shape` abgeleitete Objekte verwendet. Es instanziiert ein Array von Objekten, die von `Shape` abgeleitet sind, und ruft die statischen Methoden der `Shape`-Klasse auf, deren Umschließungen `Shape`-Eigenschaftswerte zurückgeben. Die Laufzeit ruft Werte aus den überschriebenen Eigenschaften der abgeleiteten Typen ab. Das Beispiel wandelt auch jedes `Shape` -Objekt im Array in seinen abgeleiteten Typ um, und wenn die Umwandlung erfolgreich ist, ruft es Eigenschaften dieser bestimmten Unterklasse von `Shape` auf.
 
 [!code-csharp[Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/shape.cs#3)]
 

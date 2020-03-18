@@ -10,11 +10,11 @@ helpviewer_keywords:
 - '@ keyword'
 ms.assetid: e929b0f2-4b92-4d37-8060-23d323b098ad
 ms.openlocfilehash: 928917d25b5f3f97c4b8cdff85efdaa1957be41e
-ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77626684"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79397539"
 ---
 # <a name="c-keywords"></a>C#-Schlüsselwörter
 
@@ -63,6 +63,6 @@ Bei Schlüsselwörtern handelt es sich um vordefinierte reservierte Bezeichner, 
 |[when (Filterbedingung)](when.md)|[where (Einschränkung eines generischen Typs)](where-generic-type-constraint.md)|[where (Abfrageklausel)](where-clause.md)|
 |[yield](yield.md)| | |
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [C#-Referenz](../index.md)

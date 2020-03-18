@@ -10,12 +10,12 @@ helpviewer_keywords:
 - implicit keyword [C#]
 - conversion operator [C#]
 - user-defined conversion [C#]
-ms.openlocfilehash: 379deb20243a13cc608cb7fe119b341065327c1e
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: b6061492cc1a4f756196fb8a9050b68651431e38
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77450673"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78847265"
 ---
 # <a name="user-defined-conversion-operators-c-reference"></a>Benutzerdefinierte Konvertierungsoperatoren (C#-Referenz)
 
@@ -29,7 +29,7 @@ Verwenden Sie zum Definieren einer impliziten bzw. expliziten Konvertierung die 
 
 Im folgenden Beispiel wird gezeigt, wie eine implizite und eine explizite Konvertierung definiert wird:
 
-[!code-csharp[implicit an explicit conversions](~/samples/csharp/language-reference/operators/UserDefinedConversions.cs)]
+[!code-csharp[implicit an explicit conversions](snippets/UserDefinedConversions.cs)]
 
 Sie können auch das Schlüsselwort `operator` verwenden, um einen vordefinierten C#-Operator zu überladen. Weitere Informationen finden Sie unter [Operatorüberladung](operator-overloading.md).
 
@@ -42,7 +42,7 @@ Weitere Informationen finden Sie in den folgenden Abschnitten der [C#-Sprachspez
 - [Implicit conversions (Implizite Konvertierungen)](~/_csharplang/spec/conversions.md#implicit-conversions)
 - [Explicit conversions (Explizite Konvertierungen)](~/_csharplang/spec/conversions.md#explicit-conversions)
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [C#-Referenz](../index.md)
 - [C#-Operatoren](index.md)

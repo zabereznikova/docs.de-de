@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Ngen.exe
 - Ngen.exe, profilers and native images
 ms.assetid: f6976502-a000-4fbe-aaf5-a7aab9ce4ec2
-ms.openlocfilehash: b90971e072c0d075479523dc70187894cd0c8565
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 0052475697dae2c3ad891db18d300b5ec08a7e62
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75715741"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79180350"
 ---
 # <a name="mpgoexe-managed-profile-guided-optimization-tool"></a>Mpgo.exe (verwaltetes, profilgesteuertes Optimierungstool)
 
@@ -104,7 +104,7 @@ mpgo –Scenario <packageName> -AppID <appId> -Timeout <seconds>
   
 - Standardmäßig befindet sich Mpgo.exe nicht im Visual Studio-Buildpfad. Sie müssen entweder Visual Studio den Pfad hinzufügen oder auf der Mpgo-Befehlszeile den vollständigen Pfad angeben. Sie können entweder `–Scenario` oder `–Import` als Parameter im Postbuildereignis in Visual Studio angeben. Der typische Vorgang ist jedoch die einmalige Verwendung von `–Scenario` über eine Visual Studio Developer-Eingabeaufforderung. Dann wird `–Import` verwendet, um die optimierten Assemblys nach den einzelnen Builds zu aktualisieren. Beispiel: `"C:\Program Files\Microsoft Visual Studio 11.0\Team Tools\Performance Tools\mpgo.exe" -import "$(OutDir)tmp" -assemblylist "$(TargetPath)" -outdir "$(OutDir)\"`.  
   
-<a name="samples"></a>   
+<a name="samples"></a>
 ## <a name="examples"></a>Beispiele  
  Der folgende Mpgo.exe-Befehl aus einer Developer-Eingabeaufforderung für Visual Studio optimiert eine Steuer-Anwendung:  
   

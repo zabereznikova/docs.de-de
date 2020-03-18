@@ -11,12 +11,12 @@ helpviewer_keywords:
 - /d compiler option [C#]
 - d compiler option [C#]
 ms.assetid: f17d7b4d-82d0-4133-8563-68cced1cac6e
-ms.openlocfilehash: cb9de387b319ff4b81dcd1ccc37f04d8b6b3123a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 4a3622b6acc8ebe9c590b01b67074ae59396fc34
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69924800"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79173743"
 ---
 # <a name="-define-c-compiler-options"></a>-define (C#-Compileroptionen)
 Die Option **-define** definiert `name` als Symbol in allen Quellcodedateien Ihres Programms.  
@@ -31,7 +31,7 @@ Die Option **-define** definiert `name` als Symbol in allen Quellcodedateien Ihr
  `name`, `name2`  
  Der Name eines oder mehrerer Symbole, die Sie definieren möchten.  
   
-## <a name="remarks"></a>Anmerkungen  
+## <a name="remarks"></a>Hinweise  
  Die Option **-define** hat dieselbe Auswirkung wie die Verwendung einer [#define](../preprocessor-directives/preprocessor-define.md)-Präprozessoranweisung, außer dass die Compileroption für alle Dateien im Projekt gültig ist. Ein Symbol bleibt in einer Quelldatei definiert, bis eine [#undef](../preprocessor-directives/preprocessor-undef.md)-Anweisung in der Quelldatei die Definition entfernt. Wenn Sie die Option „-define“ verwenden, hat eine `#undef`-Anweisung in einer Datei keinerlei Auswirkung auf andere Quellcodedateien im Projekt.  
   
  Sie können die durch diese Option erstellten Symbole in Verbindung mit [#if](../preprocessor-directives/preprocessor-if.md), [#else](../preprocessor-directives/preprocessor-else.md), [#elif](../preprocessor-directives/preprocessor-elif.md), und [#endif](../preprocessor-directives/preprocessor-endif.md) verwenden, um Quelldateien bedingt zu kompilieren.  
@@ -65,11 +65,11 @@ Die Option **-define** definiert `name` als Symbol in allen Quellcodedateien Ihr
 // or uncomment the next line  
 // #define xx  
 using System;  
-public class Test   
+public class Test
 {  
-    public static void Main()   
+    public static void Main()
     {  
-        #if (xx)   
+        #if (xx)
             Console.WriteLine("xx defined");  
         #else  
             Console.WriteLine("xx not defined");  
@@ -78,7 +78,7 @@ public class Test
 }  
 ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [C#-Compileroptionen](./index.md)
 - [Verwalten von Projekt- und Projektmappeneigenschaften](/visualstudio/ide/managing-project-and-solution-properties)

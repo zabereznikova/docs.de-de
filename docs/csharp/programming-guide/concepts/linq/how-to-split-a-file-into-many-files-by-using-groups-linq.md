@@ -2,12 +2,12 @@
 title: 'Vorgehensweise: Aufteilen einer Datei in mehrere Dateien durch Verwenden von Gruppen (LINQ) (C#)'
 ms.date: 07/20/2015
 ms.assetid: 8179b91c-d778-4e57-884f-77fe5a8e4e40
-ms.openlocfilehash: 934b6385a8634c23a4e29098367c9aaa7355f11c
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 654b444c26f2868c4e2b0e2893a639ebc6cacabf
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75347321"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79168569"
 ---
 # <a name="how-to-split-a-file-into-many-files-by-using-groups-linq-c"></a>Vorgehensweise: Aufteilen einer Datei in mehrere Dateien durch Verwenden von Gruppen (LINQ) (C#)
 Dieses Beispiel zeigt eine Möglichkeit, den Inhalt von zwei Dateien zusammenführen und dann einen Satz von neuen Dateien zu erstellen, die die Daten auf neue Weise organisieren.  
@@ -29,7 +29,7 @@ Dieses Beispiel zeigt eine Möglichkeit, den Inhalt von zwei Dateien zusammenfü
     Garcia, Debra  
     ```  
   
-2. Kopieren Sie diese Namen in eine Textdatei namens „names2.txt“, und speichern Sie sie in Ihrem Projektordner: Beachten Sie, dass die zwei Dateien einige Namen gemeinsam haben.  
+2. Kopieren Sie diese Namen in eine Textdatei namens „names2.txt“, und speichern Sie sie in Ihrem Projektordner: Beachten Sie, dass die beiden Dateien einige Namen gemeinsam haben.  
   
     ```text  
     Liu, Jinghao  
@@ -92,7 +92,7 @@ class SplitWithGroups
         Console.ReadKey();  
     }  
 }  
-/* Output:   
+/* Output:
     A  
        Aw, Kam Foo  
     B  
@@ -128,7 +128,7 @@ class SplitWithGroups
 
 Erstellen Sie ein C#-Konsolenanwendungsprojekt mit `using`-Anweisungen für die Namespaces „System.Linq“ und „System.IO“.
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [LINQ und Zeichenfolgen (C#)](./linq-and-strings.md)
-- [LINQ und Dateiverzeichnisse (C#)](./linq-and-file-directories.md)
+- [LINQ and Strings (C#) (LINQ und Zeichenfolgen (C#))](./linq-and-strings.md)
+- [LINQ and File Directories (C#) (LINQ und Dateiverzeichnisse (C#))](./linq-and-file-directories.md)

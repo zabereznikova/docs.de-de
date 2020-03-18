@@ -2,12 +2,12 @@
 title: Übersicht über die XElement-Klasse (C#)
 ms.date: 07/20/2015
 ms.assetid: 2b9f0cd8-a1d1-4037-accf-0f38a410fa11
-ms.openlocfilehash: d77c725b3c786b8a8fa2b0eeab4bc4b30f298218
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: 6a93dd4bdaf16fddff800b08b0f3146ecb63f9b7
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75635469"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79167893"
 ---
 # <a name="xelement-class-overview-c"></a>Übersicht über die XElement-Klasse (C#)
 Die <xref:System.Xml.Linq.XElement>-Klasse ist eine der wichtigsten Klassen in [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. Sie stellt ein XML-Element dar. Diese Klasse kann zum Erstellen von Elementen, zum Ändern des Inhalts des Elements, zum Hinzufügen, Ändern oder Löschen untergeordneter Elemente, zum Hinzufügen von Attributen zu einem Element oder zum Serialisieren des Inhalts eines Elements in Textform verwendet werden. Die Klasse kann auch mit anderen Klassen in <xref:System.Xml?displayProperty=nameWithType> zusammenarbeiten, wie <xref:System.Xml.XmlReader>, <xref:System.Xml.XmlWriter> und <xref:System.Xml.Xsl.XslCompiledTransform>.  
@@ -17,7 +17,7 @@ In diesem Thema wird die von der <xref:System.Xml.Linq.XElement>-Klasse bereitge
 ## <a name="constructing-xml-trees"></a>Konstruieren von XML-Strukturen  
  Für das Konstruieren von XML-Strukturen stehen Ihnen verschiedene Möglichkeiten zur Verfügung. So können Sie z. B. Folgendes tun:  
   
-- XML-Strukturen in Code konstruieren Weitere Informationen finden Sie unter [Creating XML Trees (C#) (Erstellen von XML-Strukturen (C#))](./linq-to-xml-overview.md).  
+- XML-Strukturen in Code konstruieren Weitere Informationen finden Sie unter [Creating XML Trees (C#) (Erstellen von XML-Strukturen (C#)) ](./linq-to-xml-overview.md).  
   
 - XML aus verschiedenen Quellen, wie <xref:System.IO.TextReader>, Textdateien oder Internetadressen (URLs), analysieren Weitere Informationen finden Sie unter [Parsing XML (C#) (XML analysieren (C#))](./how-to-parse-a-string.md).  
   
@@ -31,7 +31,7 @@ In diesem Thema wird die von der <xref:System.Xml.Linq.XElement>-Klasse bereitge
 XElement contacts =  
     new XElement("Contacts",  
         new XElement("Contact",  
-            new XElement("Name", "Patrick Hines"),   
+            new XElement("Name", "Patrick Hines"),
             new XElement("Phone", "206-555-0144"),  
             new XElement("Address",  
                 new XElement("Street1", "123 Main St"),  
@@ -95,6 +95,6 @@ Console.WriteLine(xmlTree);
   
  Weitere Informationen finden Sie unter [Modifying XML Trees (LINQ to XML) (C#) (Bearbeiten von XML-Strukturen (LINQ to XML) (C#))](./in-memory-xml-tree-modification-vs-functional-construction-linq-to-xml.md).  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [LINQ to XML Programming Overview (C#) (Übersicht der LINQ to XML-Programmierung (C#))](serializing-to-files-textwriters-and-xmlwriters.md)
+- [Working with XML Namespaces (C#) (Übersicht der LINQ to XML-Programmierung (C#))](serializing-to-files-textwriters-and-xmlwriters.md)

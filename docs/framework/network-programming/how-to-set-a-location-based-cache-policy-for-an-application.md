@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Festlegen einer speicherortbasierten Cacherichtlinie für eine Anwendung'
+title: 'Gewusst wie: Festlegen einer speicherortbasierten Cacherichtlinie für eine Anwendung'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - request cache policies
 - cache [.NET Framework], location-based policies
 ms.assetid: 683bb88e-3411-4f46-9686-3411b6ba511c
-ms.openlocfilehash: 150198c2bda220e4b37981e461e19b8e4e30e483
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 6fe569e781b005461ea41e3d6b90859666f9601a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71048122"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79180782"
 ---
-# <a name="how-to-set-a-location-based-cache-policy-for-an-application"></a>Vorgehensweise: Festlegen einer speicherortbasierten Cacherichtlinie für eine Anwendung
+# <a name="how-to-set-a-location-based-cache-policy-for-an-application"></a>Gewusst wie: Festlegen einer speicherortbasierten Cacherichtlinie für eine Anwendung
 Speicherortbasierte Cacherichtlinien ermöglichen einer Anwendung, das Cacheverhalten basierend auf dem Speicherort der angeforderten Ressource explizit zu definieren. In diesem Thema wird veranschaulicht, wie Sie eine Cacherichtlinie programmgesteuert festlegen können. Weitere Informationen zum Festlegen der Richtlinie für eine Anwendung mithilfe der Konfigurationsdateien finden Sie unter [\<requestCaching>-Element (Netzwerkeinstellungen)](../configure-apps/file-schema/network/requestcaching-element-network-settings.md).  
   
 ### <a name="to-set-a-location-based-cache-policy-for-an-application"></a>Festlegen einer speicherortbasierten Cacherichtlinie für eine Anwendung  
@@ -55,7 +55,7 @@ Speicherortbasierte Cacherichtlinien ermöglichen einer Anwendung, das Cacheverh
     ```csharp  
     public static void DoNotUseCache()  
     {  
-    HttpRequestCachePolicy policy = new HttpRequestCachePolicy   
+    HttpRequestCachePolicy policy = new HttpRequestCachePolicy
             (HttpRequestCacheLevel.NoCacheNoStore);  
         HttpWebRequest.DefaultCachePolicy = policy;  
     }  
@@ -76,7 +76,7 @@ Speicherortbasierte Cacherichtlinien ermöglichen einer Anwendung, das Cacheverh
     ```csharp  
     public static void OnlyUseCache()  
     {  
-        HttpRequestCachePolicy policy = new HttpRequestCachePolicy   
+        HttpRequestCachePolicy policy = new HttpRequestCachePolicy
             (HttpRequestCacheLevel.CacheOnly);  
         HttpWebRequest.DefaultCachePolicy = policy;  
     }  
@@ -97,7 +97,7 @@ Speicherortbasierte Cacherichtlinien ermöglichen einer Anwendung, das Cacheverh
     ```csharp  
     public static void DoNotUseLocalCache()  
     {  
-     HttpRequestCachePolicy policy = new HttpRequestCachePolicy   
+     HttpRequestCachePolicy policy = new HttpRequestCachePolicy
             (HttpRequestCacheLevel.Refresh);  
         HttpWebRequest.DefaultCachePolicy = policy;  
     }  
@@ -118,7 +118,7 @@ Speicherortbasierte Cacherichtlinien ermöglichen einer Anwendung, das Cacheverh
     ```csharp  
     public static void SendToServer()  
     {  
-    HttpRequestCachePolicy policy = new HttpRequestCachePolicy   
+    HttpRequestCachePolicy policy = new HttpRequestCachePolicy
             (HttpRequestCacheLevel.Reload);  
         HttpWebRequest.DefaultCachePolicy = policy;  
     }  
@@ -153,7 +153,7 @@ Speicherortbasierte Cacherichtlinien ermöglichen einer Anwendung, das Cacheverh
     End Sub  
     ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Cacheverwaltung für Netzwerkanwendungen](cache-management-for-network-applications.md)
 - [Cacherichtlinie](cache-policy.md)

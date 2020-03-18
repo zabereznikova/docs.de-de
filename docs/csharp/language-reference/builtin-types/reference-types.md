@@ -20,26 +20,26 @@ helpviewer_keywords:
 - '@ string literal'
 - string literals [C#]
 - string keyword [C#]
-ms.openlocfilehash: 6b65d7e79e4eac30171eb0aad650f7c1e3880e30
-ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
+ms.openlocfilehash: c2c03f47babd9ccf87eb60d33b9d65d1a9c82e2e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77627269"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79398310"
 ---
 # <a name="built-in-reference-types-c-reference"></a>Integrierte Verweistypen (C#-Referenz)
 
-C# enthält eine Reihe von integrierten Verweistypen. Diese enthalten Schlüsselwörter oder Operatoren, die Synonyme für einen Typ in der .NET-Bibliothek sind. 
+C# enthält eine Reihe von integrierten Verweistypen. Diese enthalten Schlüsselwörter oder Operatoren, die Synonyme für einen Typ in der .NET-Bibliothek sind.
 
 ## <a name="the-object-type"></a>Der Objekttyp
 
-Der `object`-Typ ist ein Alias für <xref:System.Object?displayProperty=nameWithType> in .NET. Im vereinheitlichen Typsystem von C# erben alle Typen, vordefiniert und benutzerdefiniert sowie Verweis- und Werttypen, direkt oder indirekt von <xref:System.Object?displayProperty=nameWithType>. Sie können Werte eines beliebigen Typs Variablen des Typs `object` zuweisen. Diesem Standardwert kann mithilfe des Literals `null` eine beliebige `object`-Variable zugewiesen werden. Wenn eine Variable eines Werttyps in ein Objekt konvertiert wird, gilt es als *geschachtelt*. Wenn eine Variable des Typs `object` in ein Wertobjekt konvertiert wird, gilt es als *nicht geschachtelt*. Weitere Informationen finden Sie unter [Boxing und Unboxing](../../programming-guide/types/boxing-and-unboxing.md). 
+Der `object`-Typ ist ein Alias für <xref:System.Object?displayProperty=nameWithType> in .NET. Im vereinheitlichen Typsystem von C# erben alle Typen, vordefiniert und benutzerdefiniert sowie Verweis- und Werttypen, direkt oder indirekt von <xref:System.Object?displayProperty=nameWithType>. Sie können Werte eines beliebigen Typs Variablen des Typs `object` zuweisen. Diesem Standardwert kann mithilfe des Literals `object` eine beliebige `null`-Variable zugewiesen werden. Wenn eine Variable eines Werttyps in ein Objekt konvertiert wird, gilt es als *geschachtelt*. Wenn eine Variable des Typs `object` in ein Wertobjekt konvertiert wird, gilt es als *nicht geschachtelt*. Weitere Informationen finden Sie unter [Boxing und Unboxing](../../programming-guide/types/boxing-and-unboxing.md).
 
 ## <a name="the-string-type"></a>Der Zeichenfolgentyp
 
 Der Typ `string` stellt eine Sequenz von Null oder mehr Unicode-Zeichen dar. `string` ist ein Alias für <xref:System.String?displayProperty=nameWithType> in .NET.
 
-Obwohl `string` ein Verweistyp ist, werden die [Gleichheitsoperatoren`==` und `!=`](../operators/equality-operators.md#string-equality) zum Vergleichen der Werte von `string`-Objekten, nicht von Verweisen, definiert. Dadurch wird das Testen auf Zeichenfolgengleichheit intuitiver. Zum Beispiel:
+Obwohl `string` ein Verweistyp ist, werden die [Gleichheitsoperatoren`==` und `!=`](../operators/equality-operators.md#string-equality) zum Vergleichen der Werte von `string`-Objekten, nicht von Verweisen, definiert. Dadurch wird das Testen auf Zeichenfolgengleichheit intuitiver. Beispiel:
 
 ```csharp-interactive
 string a = "hello";
@@ -84,7 +84,7 @@ for (int i = 0; i < str.Length; i++)
   Console.Write(str[i] + " ");
 }
 // Output: t e s t
-``` 
+```
 
 Zeichenfolgenliterale sind Typ `string` und können in zwei Formaten geschrieben werden: in Anführungszeichen und mit `@`. Zeichenfolgenliterale in Anführungszeichen werden in doppelte Anführungszeichen (") eingeschlossen:
 
@@ -105,7 +105,7 @@ Console.WriteLine(a);
 > [!NOTE]
 > Der Escapecode `\udddd` (wobei `dddd` eine vierstellige Zahl ist) stellt das Unicode-Zeichen U+`dddd` dar. Escapecodes aus achtstelligen Unicode werden auch erkannt: `\Udddddddd`.
 
-[Wörtliche Zeichenfolgenliterale](../tokens/verbatim.md) beginnen mit `@` und sind ebenfalls in doppelte Anführungszeichen eingeschlossen. Zum Beispiel:
+[Wörtliche Zeichenfolgenliterale](../tokens/verbatim.md) beginnen mit `@` und sind ebenfalls in doppelte Anführungszeichen eingeschlossen. Beispiel:
 
 ```csharp
 @"good morning"  // a string literal
@@ -136,7 +136,7 @@ In .NET stellen die Typen `System.Action` und `System.Func` generische Definitio
 
 Ein `delegate` ist ein Verweistyp, der verwendet werden kann, um eine benannte oder anonyme Methode zu kapseln. Delegaten entsprechen den Funktionszeigern in C++, sind jedoch typsicher und geschützt. Anwendungsmöglichkeiten von Delegaten finden Sie unter [Delegaten](../../programming-guide/delegates/index.md) und [Generische Delegaten](../../programming-guide/generics/generic-delegates.md). Delegaten bilden die Grundlage für [Ereignisse](../../programming-guide/events/index.md). Ein Delegat kann instanziiert werden, entweder durch Zuordnen mit einer benannten oder einer anonymen Methode.
 
-Der Delegat muss mit einer Methode oder einem Lambda-Ausdruck instanziiert werden, der über einen kompatiblen Rückgabetypen und Eingabeparameter verfügt. Weitere Informationen zum Grad der Varianz, der in der Methodensignatur zulässig ist, finden Sie unter [Varianz bei Delegaten](../../programming-guide/concepts/covariance-contravariance/using-variance-in-delegates.md). Für die Verwendung mit anonymen Methoden werden der Delegat und der Code, der mit ihm zugeordnet werden soll, zusammen deklariert. 
+Der Delegat muss mit einer Methode oder einem Lambda-Ausdruck instanziiert werden, der über einen kompatiblen Rückgabetypen und Eingabeparameter verfügt. Weitere Informationen zum Grad der Varianz, der in der Methodensignatur zulässig ist, finden Sie unter [Varianz bei Delegaten](../../programming-guide/concepts/covariance-contravariance/using-variance-in-delegates.md). Für die Verwendung mit anonymen Methoden werden der Delegat und der Code, der mit ihm zugeordnet werden soll, zusammen deklariert.
 
 ## <a name="the-dynamic-type"></a>Der dynamische Typ
 
@@ -168,7 +168,7 @@ Das folgende Beispiel verwendet `dynamic` in einigen Deklarationen. Die `Main`-M
 
 [!code-csharp[csrefKeywordsTypes#25](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsTypes/CS/dynamic2.cs#25)]
 
-### <a name="see-also"></a>Siehe auch
+### <a name="see-also"></a>Weitere Informationen
 
 - [C#-Referenz](../index.md)
 - [C#-Schlüsselwörter](../keywords/index.md)

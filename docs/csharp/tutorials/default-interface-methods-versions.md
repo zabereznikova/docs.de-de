@@ -4,12 +4,12 @@ description: In diesem fortgeschrittenen Tutorial wird erläutert, wie Sie vorha
 ms.date: 05/06/2019
 ms.technlogy: csharp-advanced-concepts
 ms.custom: mvc
-ms.openlocfilehash: b9194b769a3ba6d2906d6177c2363d6093b85188
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 650aea78b421783b3f249b3670578aa60e800ab2
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039248"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79156778"
 ---
 # <a name="tutorial-update-interfaces-with-default-interface-methods-in-c-80"></a>Tutorial: Aktualisieren von Schnittstellen mit Standardschnittstellenmethoden in C# 8.0
 
@@ -23,7 +23,7 @@ In diesem Tutorial lernen Sie, wie die folgenden Aufgaben ausgeführt werden:
 > * Erstellen Sie parametrisierte Implementierungen, um größere Flexibilität zu bieten.
 > * Ermöglichen Sie Implementierern, eine spezifischere Implementierung in Form einer Überschreibung zu bieten.
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
+## <a name="prerequisites"></a>Voraussetzungen
 
 Sie müssen Ihren Computer zur Ausführung von .NET Core einrichten, einschließlich des C# 8.0-Compilers. Der C# 8.0-Compiler steht ab [Visual Studio 2019 Version 16.3](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) oder mit dem [.NET Core 3.0 SDK](https://dotnet.microsoft.com/download) zur Verfügung.
 
@@ -31,15 +31,15 @@ Sie müssen Ihren Computer zur Ausführung von .NET Core einrichten, einschließ
 
 Dieses Tutorial beginnt mit Version 1 einer Kundenbeziehungsbibliothek. Sie erhalten die Startanwendung von unserem [Beispielerepository auf GitHub](https://github.com/dotnet/samples/tree/master/csharp/tutorials/default-interface-members-versions/starter/customer-relationship). Das Unternehmen, das diese Bibliothek erstellt hat, beabsichtigte, dass Kunden mit vorhandenen Anwendungen seine Bibliothek verwenden. Minimale Schnittstellendefinitionen wurden bereitgestellt, die Benutzer ihrer Bibliothek implementieren sollten. So sieht die Schnittstellendefinition für einen Kunden aus:
 
-[!code-csharp[InitialCustomerInterface](~/samples/csharp/tutorials/default-interface-members-versions/starter/customer-relationship/ICustomer.cs?name=SnippetICustomerVersion1)]
+[!code-csharp[InitialCustomerInterface](~/samples/snippets/csharp/tutorials/default-interface-members-versions/starter/customer-relationship/ICustomer.cs?name=SnippetICustomerVersion1)]
 
 Eine zweite Schnittstelle wurde definiert, die eine Bestellung darstellt:
 
-[!code-csharp[InitialOrderInterface](~/samples/csharp/tutorials/default-interface-members-versions/starter/customer-relationship/IOrder.cs?name=SnippetIorderVersion1)]
+[!code-csharp[InitialOrderInterface](~/samples/snippets/csharp/tutorials/default-interface-members-versions/starter/customer-relationship/IOrder.cs?name=SnippetIorderVersion1)]
 
 Von diesen Schnittstellen aus konnte das Team eine Bibliothek für die Benutzer erstellen, um den Kunden eine bessere Benutzererfahrung zu bieten. Das Ziel bestand darin, eine intensivere Beziehung zu Bestandskunden aufzubauen und ihre Beziehungen zu neuen Kunden zu verbessern.
 
-Jetzt ist es Zeit, die Bibliothek für das nächste Release zu aktualisieren. Eines der angeforderten Features gewährt Kunden, die viele Bestellungen aufgeben, einen Treuerabatt. Dieser neue Treuerabatt wird angewendet, wenn ein Kunde eine Bestellung aufgibt. Der spezifische Rabatt ist eine Eigenschaft jedes einzelnen Kunden. Jede Implementierung von `ICustomer` kann andere Regeln für den Treuerabatt festlegen. 
+Jetzt ist es Zeit, die Bibliothek für das nächste Release zu aktualisieren. Eines der angeforderten Features gewährt Kunden, die viele Bestellungen aufgeben, einen Treuerabatt. Dieser neue Treuerabatt wird angewendet, wenn ein Kunde eine Bestellung aufgibt. Der spezifische Rabatt ist eine Eigenschaft jedes einzelnen Kunden. Jede Implementierung von `ICustomer` kann andere Regeln für den Treuerabatt festlegen.
 
 Die naheliegendste Methode zum Hinzufügen dieser Funktionalität ist die Verbesserung der `ICustomer`-Schnittstelle mit einer Methode zur Anwendung eines Treuerabatts. Diese Entwurfsempfehlung löste bei erfahrenen Entwicklern Bedenken aus: „Schnittstellen sind unveränderlich, sobald sie veröffentlicht sind! Dies ist eine einschneidende Änderung!“ C# 8.0 fügt *Standardschnittstellenimplementierungen* zum Aktualisieren von Schnittstellen hinzu. Die Autoren der Bibliothek können der Schnittstelle neue Member hinzufügen und eine Standardimplementierung für diese Member bereitstellen.
 
@@ -53,15 +53,15 @@ Das Upgrade sollte die Funktionalität zum Festlegen von zwei Eigenschaften biet
 
 Fügen Sie zunächst der Implementierung die neue Methode hinzu:
 
-[!code-csharp[InitialOrderInterface](~/samples/csharp/tutorials/default-interface-members-versions/finished/customer-relationship/ICustomer.cs?name=SnippetLoyaltyDiscountVersionOne)]
+[!code-csharp[InitialOrderInterface](~/samples/snippets/csharp/tutorials/default-interface-members-versions/finished/customer-relationship/ICustomer.cs?name=SnippetLoyaltyDiscountVersionOne)]
 
 Der Bibliotheksautor schrieb einen ersten Test zum Überprüfen der Implementierung:
 
-[!code-csharp[TestDefaultImplementation](~/samples/csharp/tutorials/default-interface-members-versions/finished/customer-relationship/Program.cs?name=SnippetTestDefaultImplementation)]
+[!code-csharp[TestDefaultImplementation](~/samples/snippets/csharp/tutorials/default-interface-members-versions/finished/customer-relationship/Program.cs?name=SnippetTestDefaultImplementation)]
 
 Beachten Sie den folgenden Teil des Tests:
 
-[!code-csharp[TestDefaultImplementation](~/samples/csharp/tutorials/default-interface-members-versions/finished/customer-relationship/Program.cs?name=SnippetHighlightCast)]
+[!code-csharp[TestDefaultImplementation](~/samples/snippets/csharp/tutorials/default-interface-members-versions/finished/customer-relationship/Program.cs?name=SnippetHighlightCast)]
 
 Diese Umwandlung von `SampleCustomer` zu `ICustomer` ist erforderlich. Die `SampleCustomer`-Klasse muss keine Implementierung für `ComputeLoyaltyDiscount` bereitstellen; dies erfolgt über die `ICustomer`-Schnittstelle. Allerdings erbt die `SampleCustomer`-Klasse keine Member von ihren Schnittstellen. Diese Regel hat sich nicht geändert. Um jede in der Schnittstelle deklarierte und implementierte Methode aufrufen zu können, muss die Variable vom Typ der Schnittstelle sein, in diesem Beispiel `ICustomer`.
 
@@ -69,25 +69,25 @@ Diese Umwandlung von `SampleCustomer` zu `ICustomer` ist erforderlich. Die `Samp
 
 Ein guter Anfang. Aber die Standardimplementierung ist zu restriktiv. Viele Nutzer dieses Systems könnten unterschiedliche Schwellenwerte für die Anzahl der Käufe, eine andere Dauer der Mitgliedschaft oder einen anderen Rabattprozentsatz auswählen. Sie können mehr Kunden eine bessere Upgradeerfahrung bieten, indem Sie eine Möglichkeit zum Festlegen dieser Parameter bereitstellen. Wird fügen nun eine statische Methode hinzu, die diese drei, die Standardimplementierung steuernden Parameter festlegt:
 
-[!code-csharp[VersionTwoImplementation](~/samples/csharp/tutorials/default-interface-members-versions/finished/customer-relationship/ICustomer.cs?name=SnippetLoyaltyDiscountVersionTwo)]
+[!code-csharp[VersionTwoImplementation](~/samples/snippets/csharp/tutorials/default-interface-members-versions/finished/customer-relationship/ICustomer.cs?name=SnippetLoyaltyDiscountVersionTwo)]
 
 Dieses kleine Codefragment zeigt viele neue Sprachfunktionen. Schnittstellen können nun statische Member einschließlich Feldern und Methoden enthalten. Verschiedene Zugriffsmodifizierer sind ebenfalls aktiviert. Die zusätzlichen Felder sind privat, die neue Methode ist öffentlich. Beliebige der Modifizierer sind auf Schnittstellenmembern erlaubt.
 
 Anwendungen, die die allgemeine Formel zum Berechnen des Treuerabatts verwenden, aber andere Parameter, müssen keine benutzerdefinierte Implementierung bereitstellen; sie können die Argumente über eine statische Methode festlegen. Der folgende Code legt z.B. eine „Kundenwertschätzung“ fest, die jeden Kunden mit mehr als einem Monat Mitgliedschaft belohnt:
 
-[!code-csharp[SetLoyaltyThresholds](~/samples/csharp/tutorials/default-interface-members-versions/finished/customer-relationship/Program.cs?name=SnippetSetLoyaltyThresholds)]
+[!code-csharp[SetLoyaltyThresholds](~/samples/snippets/csharp/tutorials/default-interface-members-versions/finished/customer-relationship/Program.cs?name=SnippetSetLoyaltyThresholds)]
 
 ## <a name="extend-the-default-implementation"></a>Erweitern der Standardimplementierung
 
-Der Code, den Sie bisher hinzugefügt haben, hat eine einfache Implementierung für diese Szenarien ermöglicht, in denen Benutzer etwas wie die Standardimplementierung wünschen, oder um eine unzusammenhängende Gruppe von Regeln bereitzustellen. Für ein finales Feature werden wir den Code ein wenig umgestalten, um Szenarien zu ermöglichen, in denen Benutzer die Standardimplementierung erstellen möchten. 
+Der Code, den Sie bisher hinzugefügt haben, hat eine einfache Implementierung für diese Szenarien ermöglicht, in denen Benutzer etwas wie die Standardimplementierung wünschen, oder um eine unzusammenhängende Gruppe von Regeln bereitzustellen. Für ein finales Feature werden wir den Code ein wenig umgestalten, um Szenarien zu ermöglichen, in denen Benutzer die Standardimplementierung erstellen möchten.
 
 Stellen Sie sich ein Startupunternehmen vor, das neue Kunden gewinnen möchte. Es bietet einen Preisnachlass von 50% für die erste Bestellung eines neuen Kunden. Andernfalls erhalten Bestandskunden den Standardrabatt. Der Bibliotheksautor muss die Standardimplementierung in eine `protected static`-Methode verschieben, sodass jede Klasse, die diese Schnittstelle implementiert, den Code in ihrer Implementierung wiederverwenden kann. Die Standardimplementierung des Schnittstellenmembers ruft diese freigegebene Methode ebenfalls auf:
 
-[!code-csharp[VersionTwoImplementation](~/samples/csharp/tutorials/default-interface-members-versions/finished/customer-relationship/ICustomer.cs?name=SnippetFinalVersion)]
+[!code-csharp[VersionTwoImplementation](~/samples/snippets/csharp/tutorials/default-interface-members-versions/finished/customer-relationship/ICustomer.cs?name=SnippetFinalVersion)]
 
 In einer Implementierung einer Klasse, die diese Schnittstelle implementiert, kann die Überschreibung die statische Hilfsmethode aufrufen und diese Logik zum Bereitstellen des „Neuer Kunde“-Rabatts erweitern:
 
-[!code-csharp[VersionTwoImplementation](~/samples/csharp/tutorials/default-interface-members-versions/finished/customer-relationship/SampleCustomer.cs?name=SnippetOverrideAndExtend)]
+[!code-csharp[VersionTwoImplementation](~/samples/snippets/csharp/tutorials/default-interface-members-versions/finished/customer-relationship/SampleCustomer.cs?name=SnippetOverrideAndExtend)]
 
 Den vollständigen Code finden Sie in unserem [Beispielrepository auf GitHub.](https://github.com/dotnet/samples/tree/master/csharp/tutorials/default-interface-members-versions/finished/customer-relationship) Sie erhalten die Startanwendung von unserem [Beispielerepository auf GitHub](https://github.com/dotnet/samples/tree/master/csharp/tutorials/default-interface-members-versions/starter/customer-relationship).
 

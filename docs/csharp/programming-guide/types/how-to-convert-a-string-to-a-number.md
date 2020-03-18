@@ -7,12 +7,12 @@ helpviewer_keywords:
 - converting strings to int [C#]
 - strings [C#], converting to int
 ms.assetid: 467b9979-86ee-4afd-b734-30299cda91e3
-ms.openlocfilehash: 21732acd65eb4522b19ce84600fd8b333fb8a705
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 54a4562a5cc493fc287bdf2f6bcf9723557f2a05
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75711869"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79157038"
 ---
 # <a name="how-to-convert-a-string-to-a-number-c-programming-guide"></a>Vorgehensweise: Konvertieren einer Zeichenfolge in eine Zahl (C#-Programmierleitfaden)
 
@@ -24,13 +24,13 @@ Sie können eine [Zeichenfolge](../../language-reference/builtin-types/reference
   
 ## <a name="calling-the-parse-and-tryparse-methods"></a>Aufrufen der Methoden „Parse“ und „TryParse“
 
-Die Methoden `Parse` und `TryParse` ignorieren Leerraum am Anfang und am Ende der Zeichenfolge. Alle anderen Zeichen müssen jedoch Zeichen sein, die den entsprechenden numerischen Typ bilden (`int`, `long`, `ulong`, `float`, `decimal` usw.).  Leerraum innerhalb der Zeichenfolge, die die Zahl bildet, führt zu einem Fehler.  Beispielsweise können Sie `decimal.TryParse` verwenden, um „10“, „10.3“ oder „  10  “ zu analysieren. Sie können diese Methode jedoch nicht verwenden, um 10 aus „10X“, „1 0“ (beachten Sie das eingebettete Leerzeichen), „10 .3“ (beachten Sie das eingebettete Leerzeichen), „10e1“ (`float.TryParse` funktioniert in diesem Fall) usw. zu analysieren. Darüber hinaus kann eine Zeichenfolge, deren Wert `null` oder <xref:System.String.Empty?displayProperty=nameWithType> lautet, nicht erfolgreich analysiert werden. Durch Aufruf der <xref:System.String.IsNullOrEmpty%2A?displayProperty=nameWithType>-Methode können Sie auf eine NULL-Zeichenfolge oder eine leere Zeichenfolge prüfen, bevor Sie den Analyseversuch starten. 
+Die Methoden `Parse` und `TryParse` ignorieren Leerraum am Anfang und am Ende der Zeichenfolge. Alle anderen Zeichen müssen jedoch Zeichen sein, die den entsprechenden numerischen Typ bilden (`int`, `long`, `ulong`, `float`, `decimal` usw.).  Leerraum innerhalb der Zeichenfolge, die die Zahl bildet, führt zu einem Fehler.  Beispielsweise können Sie `decimal.TryParse` verwenden, um „10“, „10.3“ oder „  10  “ zu analysieren. Sie können diese Methode jedoch nicht verwenden, um 10 aus „10X“, „1 0“ (beachten Sie das eingebettete Leerzeichen), „10 .3“ (beachten Sie das eingebettete Leerzeichen), „10e1“ (`float.TryParse` funktioniert in diesem Fall) usw. zu analysieren. Darüber hinaus kann eine Zeichenfolge, deren Wert `null` oder <xref:System.String.Empty?displayProperty=nameWithType> lautet, nicht erfolgreich analysiert werden. Durch Aufruf der <xref:System.String.IsNullOrEmpty%2A?displayProperty=nameWithType>-Methode können Sie auf eine NULL-Zeichenfolge oder eine leere Zeichenfolge prüfen, bevor Sie den Analyseversuch starten.
 
 Das folgende Beispiel zeigt sowohl erfolgreiche als auch nicht erfolgreiche Aufrufe von `Parse` und `TryParse`.  
   
 [!code-csharp[Parse and TryParse](~/samples/snippets/csharp/programming-guide/string-to-number/parse-tryparse/program.cs)]  
 
-Das folgende Beispiel veranschaulicht einen Ansatz zum Analysieren einer Zeichenfolge, die führende numerische Zeichen (einschließlich Hexadezimalzeichen) und nachstehende nicht numerische Zeichen enthalten soll. Vor dem Aufruf der <xref:System.Int32.TryParse%2A>-Methode werden gültige Zeichen vom Anfang einer Zeichenfolge einer neuen Zeichenfolge zugewiesen. Da die zu analysierenden Zeichenfolgen eine geringe Anzahl von Zeichen enthalten, wird im Beispiel zu diesem Zweck die <xref:System.String.Concat%2A?displayProperty=nameWithType>-Methode aufgerufen. Für eine umfangreichere Zeichenfolge kann stattdessen die <xref:System.Text.StringBuilder>-Klasse verwendet werden. 
+Das folgende Beispiel veranschaulicht einen Ansatz zum Analysieren einer Zeichenfolge, die führende numerische Zeichen (einschließlich Hexadezimalzeichen) und nachstehende nicht numerische Zeichen enthalten soll. Vor dem Aufruf der <xref:System.Int32.TryParse%2A>-Methode werden gültige Zeichen vom Anfang einer Zeichenfolge einer neuen Zeichenfolge zugewiesen. Da die zu analysierenden Zeichenfolgen eine geringe Anzahl von Zeichen enthalten, wird im Beispiel zu diesem Zweck die <xref:System.String.Concat%2A?displayProperty=nameWithType>-Methode aufgerufen. Für eine umfangreichere Zeichenfolge kann stattdessen die <xref:System.Text.StringBuilder>-Klasse verwendet werden.
   
 [!code-csharp[Removing invalid characters](~/samples/snippets/csharp/programming-guide/string-to-number/parse-tryparse2/program.cs)]  
 

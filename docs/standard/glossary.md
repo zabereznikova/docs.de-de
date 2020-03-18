@@ -4,11 +4,11 @@ description: Informationen zu den Bedeutungen der ausgewählten Begriffe, die in
 ms.date: 01/22/2019
 ms.technology: dotnet-standard
 ms.openlocfilehash: 8da1d858835210590a80a624fb8989fbfe8e0a91
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78160091"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79398748"
 ---
 # <a name="net-glossary"></a>.NET-Glossar
 
@@ -118,7 +118,7 @@ Eine Implementierung von .NET umfasst Folgendes:
 
 - Mindestens eine Runtime. Beispiele: CLR, CoreCLR, CoreRT.
 - Eine Klassenbibliothek, die eine Version des .NET Standards implementiert und ggf. zusätzliche APIs beinhaltet. Beispiele: .NET Framework-Basisklassenbibliothek, .NET Core-Basisklassenbibliothek.
-- Optional mindestens ein Anwendungsframework. Beispiele: ASP.NET, Windows Forms und WPF sind im .NET Framework enthalten.
+- Optional mindestens ein Anwendungsframework. Beispiele: ASP.NET, Windows Forms und WPF sind in .NET Framework enthalten.
 - Optional Entwicklungstools. Einige Entwicklungstools werden zwischen mehreren Implementierungen freigegeben.
 
 Beispiele für .NET-Implementierungen:
@@ -175,7 +175,7 @@ Eine Sammlung von Bibliotheken und Tools, mit der Entwickler .NET Core-Anwendung
 
 Siehe [.NET Core SDK – Übersicht](../core/sdk.md).
 
-## <a name="net-framework"></a>.NET Framework
+## <a name="net-framework"></a>.NET Framework
 
 Eine Implementierung von .NET, die nur unter Windows ausgeführt werden kann. Enthält die Common Language Runtime (CLR), die Basisklassenbibliothek und Bibliotheken für Anwendungsframeworks wie ASP.NET, Windows Forms und WPF.
 
@@ -191,7 +191,7 @@ UWP war das erste Anwendungsframework, das von .NET Native unterstützt wurde. N
 
 Siehe [Intro to .NET Native and CoreRT (Einführung in .NET Native und CoreRT)](https://github.com/dotnet/corert/blob/master/Documentation/intro-to-corert.md)
 
-## <a name="net-standard"></a>.NET-Standard
+## <a name="net-standard"></a>.NET Standard
 
 Eine formale Spezifikation der .NET-APIs, die in jeder .NET-Implementierung verfügbar sind.
 
@@ -205,7 +205,7 @@ Native Imagegenerierung
 
 Sie können sich diese Technologie als einen permanenten JIT-Compiler vorstellen. Normalerweise wird der Code auf dem Computer kompiliert, auf dem er ausgeführt wird. Die Kompilierung findet jedoch normalerweise während der Installation statt.
 
-## <a name="package"></a>package
+## <a name="package"></a>Paket
 
 Ein NuGet-Paket &mdash; oder nur ein Paket &mdash; ist eine *ZIP*-Datei mit mindestens einer Assembly, die denselben Namen trägt und zusätzlichen Metadaten, z.B. der Autorenname.
 
@@ -269,9 +269,9 @@ Siehe [Zielframeworks](frameworks.md).
 
 Universelle Windows-Plattform
 
-Eine Implementierung von .NET, mit der moderne Touchscreen-Windows-Anwendungen und Software für das Internet der Dinge (Internet of Things, IoT) erstellen werden. Sie wurde als einheitliche Plattform entwickelt, um das Programmieren für verschiedene Gerätetypen, von PCs, Tablets, Phablets über Smartphones bis hin zur Xbox, zu ermöglichen. Die UWP bietet viele Dienste, z.B. einen zentralen App Store, eine Ausführungsumgebung (AppContainer) und mehrere Windows-APIs, die anstelle von Win32 (WinRT) verwendet werden. Apps können in C++, C#, Visual Basic und JavaScript geschrieben werden. Die .NET-APIs für C# und Visual Basic werden von .NET Core bereitgestellt.
+Eine Implementierung von .NET, mit der moderne Touchscreen-Windows-Anwendungen und Software für das Internet der Dinge (Internet of Things, IoT) erstellen werden. Sie wurde als einheitliche Plattform entwickelt, um das Programmieren für ganz verschiedene Gerätetypen, von PCs, Tablets, Phablets über Smartphones bis hin zur Xbox, zu ermöglichen. Die UWP bietet viele Dienste, z.B. einen zentralen App Store, eine Ausführungsumgebung (AppContainer) und mehrere Windows-APIs, die anstelle von Win32 (WinRT) verwendet werden. Apps können in C++, C#, Visual Basic und JavaScript geschrieben werden. Die .NET-APIs für C# und Visual Basic werden von .NET Core bereitgestellt.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [.NET Guide (Leitfaden für .NET)](index.md)
 - [Leitfaden für .NET Framework](../framework/index.md)

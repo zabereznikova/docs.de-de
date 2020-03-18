@@ -1,42 +1,42 @@
 ---
-title: 'Streaming Services im Vergleich zu wiederholten Feldern: GrpC für WCF-Entwickler'
-description: Vergleichen Sie wiederholte Felder mit Streamingdiensten als Methoden zum Übergeben von Datensammlungen mithilfe von GrpC.
+title: Streaming-Dienste vs. wiederholte Felder - gRPC für WCF-Entwickler
+description: Vergleichen Sie wiederholte Felder mit Streamingdiensten als Möglichkeiten zum Übergeben von Datensammlungen mithilfe von gRPC.
 ms.date: 09/02/2019
-ms.openlocfilehash: 0e717df57ba2bb52d63a063072d8a45bf0f7e395
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.openlocfilehash: 542ebc393f9c9c1ad717d02d01fab33d85c18917
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77503372"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79147749"
 ---
-# <a name="grpc-streaming-services-vs-repeated-fields"></a>GrpC-Streamingdienste im Vergleich zu wiederholten Feldern
+# <a name="grpc-streaming-services-vs-repeated-fields"></a>gRPC-Streamingdienste im Vergleich zu wiederholten Feldern
 
-GrpC-Dienste bieten zwei Möglichkeiten, Datasets oder Listen von Objekten zurückzugeben. Die Protokollpuffer-Nachrichten Spezifikation verwendet das `repeated`-Schlüsselwort zum Deklarieren von Listen oder Arrays von Nachrichten in einer anderen Nachricht. Die GrpC-Dienst Spezifikation verwendet das `stream`-Schlüsselwort, um eine persistente Verbindung mit langer Laufzeit zu deklarieren. Über diese Verbindung werden mehrere Nachrichten gesendet und können einzeln verarbeitet werden. 
+gRPC-Dienste bieten zwei Möglichkeiten zum Zurückgeben von Datasets oder Objektlisten. Die Protokollpuffer-Nachrichtenspezifikation `repeated` verwendet das Schlüsselwort zum Deklarieren von Listen oder Arrays von Nachrichten in einer anderen Nachricht. Die gRPC-Dienstspezifikation `stream` verwendet das Schlüsselwort, um eine lang andauernde persistente Verbindung zu deklarieren. Über diese Verbindung werden mehrere Nachrichten gesendet und können einzeln verarbeitet werden.
 
-Sie können auch das `stream` Feature für temporale Daten mit langer Laufzeit verwenden, z. b. Benachrichtigungen oder Protokollmeldungen. In diesem Kapitel wird jedoch die Verwendung für die Rückgabe eines einzelnen Datasets in Erwägung gezogen.
+Sie können die `stream` Funktion auch für lang andauernde Zeitdaten wie Benachrichtigungen oder Protokollnachrichten verwenden. In diesem Kapitel wird jedoch die Verwendung für die Rückgabe eines einzelnen Datasets betrachtet.
 
-Welche Sie verwenden sollten, hängt von folgenden Faktoren ab:
+Welche Sie verwenden sollten, hängt von Faktoren wie:
 
 - Die Gesamtgröße des Datasets.
-- Die Zeit, die zum Erstellen des Datasets auf dem Client-oder dem Server Ende benötigt wird.
-- Ob der Consumer des Datasets damit beginnen kann, darauf zu reagieren, sobald das erste Element verfügbar ist, oder das komplette DataSet benötigt, um etwas Nützliches zu tun.
+- Die Zeit, die zum Erstellen des Datasets am Client- oder Serverende erforderlich war.
+- Gibt an, ob der Consumer des Datasets damit beginnen kann, darauf zu reagieren, sobald das erste Element verfügbar ist, oder ob er das vollständige Dataset benötigt, um etwas Nützliches zu tun.
 
-## <a name="when-to-use-repeated-fields"></a>Verwendung `repeated` Felder
+## <a name="when-to-use-repeated-fields"></a>Verwendung von `repeated` Feldern
 
-Für jedes Dataset, das in der Größe eingeschränkt ist und in einem kurzen Zeitraum vollständig generiert werden kann – beispielsweise unter einer Sekunde – sollten Sie ein `repeated` Feld in einer regulären protobuf-Nachricht verwenden. Beispielsweise ist in einem e-Commerce-System das Erstellen einer Liste von Elementen innerhalb einer Bestellung wahrscheinlich schnell und die Liste ist nicht sehr groß. Das Zurückgeben einer einzelnen Nachricht mit einem `repeated` Feld ist eine höhere Reihenfolge als die Verwendung `stream` und verursacht weniger Netzwerk Mehraufwand.
+Für jedes Dataset, das in der Größe eingeschränkt ist und in kurzer Zeit vollständig generiert werden `repeated` kann ( z. B. unter einer Sekunde – sollten Sie ein Feld in einer regulären Protobuf-Nachricht verwenden. In einem E-Commerce-System ist das Erstellen einer Liste von Elementen innerhalb eines Auftrags wahrscheinlich schnell und die Liste wird nicht sehr groß sein. Das Zurückgeben einer `repeated` einzelnen Nachricht mit einem Feld `stream` ist eine Größenordnung schneller als die Verwendung und verursacht weniger Netzwerkaufwand.
 
-Wenn der Client alle Daten benötigt, bevor er mit der Verarbeitung beginnt, und das DataSet klein genug ist, um im Arbeitsspeicher zu erstellen, sollten Sie die Verwendung eines `repeated` Felds in Erwägung gezogen. Dies ist auch dann der Fall, wenn die Erstellung des Datasets im Arbeitsspeicher auf dem Server langsamer ist.
+Wenn der Client alle Daten benötigt, bevor er mit der Verarbeitung beginnt, und `repeated` das Dataset klein genug ist, um es im Arbeitsspeicher zu erstellen, sollten Sie ein Feld verwenden. Betrachten Sie dies auch dann, wenn die Erstellung des Datasets im Arbeitsspeicher auf dem Server langsamer ist.
 
-## <a name="when-to-use-stream-methods"></a>Verwendungsmöglichkeiten von `stream` Methoden
+## <a name="when-to-use-stream-methods"></a>Verwendung von `stream` Methoden
 
-Wenn die Nachrichten Objekte in ihren Datasets potenziell sehr groß sind, sollten Sie Sie mit Streaminganforderungen oder Antworten übertragen. Es ist effizienter, ein großes Objekt im Speicher zu erstellen, es in das Netzwerk zu schreiben und dann die Ressourcen freizugeben. Diese Vorgehensweise verbessert die Skalierbarkeit ihres Dienstanbieter.
+Wenn die Nachrichtenobjekte in Ihren Datasets potenziell sehr groß sind, ist es am besten, wenn Sie sie mithilfe von Streaminganforderungen oder Antworten übertragen. Effizienter ist es, ein großes Objekt im Arbeitsspeicher zu erstellen, es in das Netzwerk zu schreiben und dann die Ressourcen freizugeben. Dieser Ansatz verbessert die Skalierbarkeit Ihres Dienstes.
 
-Ebenso sollten Sie Datasets mit eingeschränkter Größe über Datenströme senden, um zu vermeiden, dass beim Erstellen der Arbeitsspeicher nicht mehr genügend Arbeitsspeicher vorhanden ist.
+Ebenso sollten Sie Datasets von eingeschränkter Größe über Streams senden, um zu vermeiden, dass beim Erstellen nicht mehr Arbeitsspeicher zur Verfügung steht.
 
-Bei Datasets, in denen der Consumer die einzelnen Elemente separat verarbeiten kann, sollten Sie die Verwendung eines Streams in Erwägung gezogen, wenn dies bedeutet, dass der Fortschritt für den Benutzer angezeigt werden kann. Die Verwendung eines Streams kann die Reaktionsfähigkeit einer Anwendung verbessern, Sie sollten Sie jedoch gegen die Gesamtleistung der Anwendung ausgleichen.
+Bei Datasets, bei denen der Consumer jedes Element separat verarbeiten kann, sollten Sie die Verwendung eines Streams in Betracht ziehen, wenn der Fortschritt dem Benutzer angezeigt werden kann. Die Verwendung eines Streams kann die Reaktionsfähigkeit einer Anwendung verbessern, aber Sie sollten sie gegen die Gesamtleistung der Anwendung abwägen.
 
-Ein anderes Szenario, in dem Datenströme nützlich sein können, ist die Verarbeitung einer Nachricht über mehrere Dienste hinweg. Wenn jeder Dienst in einer Kette einen Stream zurückgibt, kann der Terminaldienst (d. h. der letzte in der Kette) Nachrichten zurückgeben. Diese Nachrichten können verarbeitet und an den ursprünglichen Anforderer zurückgegeben werden. Der Anforderer kann entweder einen Stream zurückgeben oder die Ergebnisse in einer einzelnen Antwortnachricht aggregieren. Diese Vorgehensweise eignet sich gut für Muster wie MapReduce.
+Ein weiteres Szenario, in dem Streams nützlich sein können, ist, wenn eine Nachricht über mehrere Dienste hinweg verarbeitet wird. Wenn jeder Dienst in einer Kette einen Stream zurückgibt, kann der Terminaldienst (d. h. der letzte in der Kette) mit der Rückgabe von Nachrichten beginnen. Diese Nachrichten können verarbeitet und entlang der Kette an den ursprünglichen Anforderer zurückgesendet werden. Der Anforderer kann entweder einen Stream zurückgeben oder die Ergebnisse in einer einzelnen Antwortnachricht aggregieren. Dieser Ansatz eignet sich gut für Muster wie MapReduce.
 
 >[!div class="step-by-step"]
->[Zurück](migrate-duplex-services.md)
+>[VorherigeS](migrate-duplex-services.md)
 >[Weiter](client-libraries.md)

@@ -3,11 +3,11 @@ title: Datentransformationen
 description: Untersuchen Sie die in ML.NET unterstützten herausragenden technischen Komponenten.
 ms.date: 04/02/2019
 ms.openlocfilehash: ca410b475c556db5ad4c3862fb79755b455d6830
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75739593"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79397752"
 ---
 # <a name="data-transformations"></a>Datentransformationen
 

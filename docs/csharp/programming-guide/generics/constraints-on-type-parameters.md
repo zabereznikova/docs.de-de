@@ -6,12 +6,12 @@ helpviewer_keywords:
 - type constraints [C#]
 - type parameters [C#], constraints
 - unbound type parameter [C#]
-ms.openlocfilehash: 3ce68ecc1f0740fdb43ccf22b636dcd4bc05ea0a
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 76cd00b9c84f128d2a181115293df910d8deb6cb
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75712233"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79398406"
 ---
 # <a name="constraints-on-type-parameters-c-programming-guide"></a>Einschränkungen für Typparameter (C#-Programmierhandbuch)
 
@@ -76,7 +76,7 @@ Das Verwenden von Typparametern als Einschränkungen für generische Klassen ist
 
 ## <a name="notnull-constraint"></a>NotNull-Einschränkung
 
-Ab C# 8.0 können Sie die `notnull`-Einschränkung verwenden, um anzugeben, dass das Typargument ein Nicht-Nullable-Wert- oder -Verweistyp sein muss. Die `notnull`-Einschränkung kann nur in einem `nullable enable`-Kontext verwendet werden. Der Compiler generiert eine Warnung, wenn Sie die `notnull`-Einschränkung in einem Kontext hinzufügen, in dem nicht bekannt ist, ob NULL-Werte zugelassen sind. 
+Ab C# 8.0 können Sie die `notnull`-Einschränkung verwenden, um anzugeben, dass das Typargument ein Nicht-Nullable-Wert- oder -Verweistyp sein muss. Die `notnull`-Einschränkung kann nur in einem `nullable enable`-Kontext verwendet werden. Der Compiler generiert eine Warnung, wenn Sie die `notnull`-Einschränkung in einem Kontext hinzufügen, in dem nicht bekannt ist, ob NULL-Werte zugelassen sind.
 
 Im Gegensatz zu anderen Einschränkungen generiert der Compiler eine Warnung, wenn ein Typargument die `notnull`-Einschränkung verletzt und dieser Code in einem `nullable enable`-Kontext kompiliert wird. Wenn der Code in einem Kontext kompiliert wird, in dem nicht bekannt ist, ob NULL-Werte zugelassen sind, generiert der Compiler keine Warnungen oder Fehler.
 
@@ -116,7 +116,7 @@ Sie könnten dies wie im folgenden Beispiel gezeigt verwenden, um eine Enumerati
 
 [!code-csharp[using the enum constrained method](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#20)]
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Collections.Generic>
 - [C#-Programmierhandbuch](../index.md)

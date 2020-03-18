@@ -4,12 +4,12 @@ description: Informationen zur Versionierung in C# und .NET
 ms.date: 01/08/2017
 ms.technology: csharp-advanced-concepts
 ms.assetid: aa8732d7-5cd0-46e1-994a-78017f20d861
-ms.openlocfilehash: 3fadbc1257ae758fc220685fa074a4fa68b20ba1
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 124cce51865f04a555bc121fb6ce18cc95591bdc
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039657"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79156466"
 ---
 # <a name="versioning-in-c"></a>Versionierung in C\#
 
@@ -35,7 +35,8 @@ Es besteht auch die Möglichkeit, andere Szenarios wie Vorabversionen usw. anzug
 ### <a name="backwards-compatibility"></a>Abwärtskompatibilität
 
 Die Abwärtskompatibilität mit früheren Versionen ist wahrscheinlich eine Ihrer Hauptsorgen, wenn Sie neue Versionen Ihrer Bibliothek veröffentlichen.
-Bei einer neuen Version Ihrer Bibliothek besteht Quellenkompatibilität mit einer früheren Version, wenn Code, der von früheren Versionen abhängt, durch erneutes Kompilieren mit der neuen Version funktionieren kann. Bei einer neuen Version Ihrer Bibliothek besteht binäre Kompatibilität, wenn eine Anwendung, die von der alten Versionen abhängt, ohne erneutes Kompilieren mit der neuen Version arbeiten kann.
+Bei einer neuen Version Ihrer Bibliothek besteht Quellenkompatibilität mit einer früheren Version, wenn Code, der von früheren Versionen abhängt, durch erneutes Kompilieren mit der neuen Version funktionieren kann.
+Bei einer neuen Version Ihrer Bibliothek besteht binäre Kompatibilität, wenn eine Anwendung, die von der alten Versionen abhängt, ohne erneutes Kompilieren mit der neuen Version arbeiten kann.
 
 Folgende Punkte sollten Sie beachten, wenn Sie versuchen die Abwärtskompatibilität mit älteren Versionen ihrer Bibliothek aufrechtzuerhalten:
 
@@ -82,7 +83,7 @@ Sie können den `new`-Modifizierer verwenden, um geerbte Member einer Basisklass
 
 Betrachten Sie das folgende Beispiel:
 
-[!code-csharp[Sample usage of the 'new' modifier](~/samples/csharp/versioning/new/Program.cs#sample)]
+[!code-csharp[Sample usage of the 'new' modifier](~/samples/snippets/csharp/versioning/new/Program.cs#sample)]
 
 **Ausgabe**
 
@@ -100,7 +101,7 @@ Wenn kein `new`-Modifizierer angegeben ist, blendet eine abgeleitete Klasse stan
 
 Der `override`-Modifizierer bedeutet, dass eine abgeleitete Implementierung die Implementierung eines Basisklassenmembers erweitert, anstatt sie auszublenden. Der `virtual`-Modifizierer muss auf den Basisklassenmember angewendet sein.
 
-[!code-csharp[Sample usage of the 'override' modifier](../../samples/csharp/versioning/override/Program.cs#sample)]
+[!code-csharp[Sample usage of the 'override' modifier](../../samples/snippets/csharp/versioning/override/Program.cs#sample)]
 
 **Ausgabe**
 

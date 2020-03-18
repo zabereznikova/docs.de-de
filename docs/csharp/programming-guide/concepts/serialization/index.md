@@ -1,12 +1,12 @@
 ---
 title: Serialisierung (C#)
 ms.date: 01/02/2020
-ms.openlocfilehash: 1d2bda9022b7e43744dd8a0286eff88914cf65a3
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: d914298a370b09307e84c88959542b4823cf37ce
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75635729"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79167594"
 ---
 # <a name="serialization-c"></a>Serialisierung (C#)
 
@@ -43,7 +43,7 @@ Bei der JSON-Serialisierung werden die öffentlichen Eigenschaften eines Objekts
 
 Der <xref:System.Runtime.Serialization>-Namespace enthält Klassen für die binäre Serialisierung und Deserialisierung sowie die XML-Serialisierung und -Deserialisierung.
 
-Die binäre Serialisierung verwendet zum Generieren einer kompakten Serialisierung die binäre Codierung für den Speicher oder für socketbasierte Netzwerkstreams. Bei der binären Serialisierung werden alle Member einschließlich der schreibgeschützten Member serialisiert, und die Leistung wird verbessert. 
+Die binäre Serialisierung verwendet zum Generieren einer kompakten Serialisierung die binäre Codierung für den Speicher oder für socketbasierte Netzwerkstreams. Bei der binären Serialisierung werden alle Member einschließlich der schreibgeschützten Member serialisiert, und die Leistung wird verbessert.
 
 Bei der XML-Serialisierung werden die öffentlichen Felder und Eigenschaften eines Objekts bzw. die Parameter und Rückgabewerte von Methoden in einen XML-Stream serialisiert, der einem bestimmtem XSD-Dokument (XML Schema Definition) entspricht. Die XML-Serialisierung führt zu stark typisierten Klassen mit öffentlichen Eigenschaften und Feldern, die in XML konvertiert werden. <xref:System.Xml.Serialization> enthält Klassen zum Serialisieren und Deserialisieren in XML. Sie wenden Attribute auf Klassen und Klassenmember an, um die Art der Serialisierung oder Deserialisierung einer Instanz der Klasse durch <xref:System.Xml.Serialization.XmlSerializer> zu steuern.
 
@@ -79,9 +79,10 @@ Die Designerserialisierung ist eine besondere Form der Serialisierung, die auch 
 
 Die [System.Text.Json-Übersicht](../../../../standard/serialization/system-text-json-overview.md) verdeutlicht, wie Sie die `System.Text.Json`-Bibliothek erhalten.
 
-[Serialisieren und Deserialisieren von JSON-Daten in .NET](../../../../standard/serialization/system-text-json-how-to.md): Veranschaulicht, wie Objektdaten in und aus JSON mithilfe der <xref:System.Text.Json.JsonSerializer>-Klasse gelesen und geschrieben werden.
+[Serialisieren und Deserialisieren von JSON-Daten in .NET](../../../../standard/serialization/system-text-json-how-to.md):
+Veranschaulicht, wie Objektdaten in und aus JSON mithilfe der <xref:System.Text.Json.JsonSerializer>-Klasse gelesen und geschrieben werden.
 
-[Exemplarische Vorgehensweise: Beibehalten eines Objekts in Visual Studio](walkthrough-persisting-an-object-in-visual-studio.md)  
+[Walkthrough: Persisting an Object in Visual Studio (C#)](walkthrough-persisting-an-object-in-visual-studio.md) (Exemplarische Vorgehensweise: Beibehalten eines Objekts in Visual Studio (C#))  
 Veranschaulicht, wie die Serialisierung verwendet werden kann, um die Daten eines Objekts zwischen Instanzen beizubehalten. Dadurch können Sie Werte speichern und abrufen, wenn das Objekt das nächste Mal instanziiert wird.
 
 [Lesen von Objektdaten aus einer XML-Datei (C#)](how-to-read-object-data-from-an-xml-file.md)  

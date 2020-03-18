@@ -4,11 +4,11 @@ description: Ein Glossar mit wichtigen Begriffen aus dem Machine Learning-Bereic
 ms.topic: reference
 ms.date: 07/31/2019
 ms.openlocfilehash: 32ccb6df1cb08db45ebd25a0d1c0ea4396a6c50b
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75739873"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79397764"
 ---
 # <a name="machine-learning-glossary-of-important-terms"></a>Machine Learning-Glossar mit wichtigen Begriffen
 
@@ -44,7 +44,7 @@ Wenn die Daten zur Vorhersage einer Kategorie verwendet werden, wird der [überw
 
 Bei der [Regression](#regression) gibt diese Auswertungsmetrik an, wie gut Daten in ein Modell passen. Die Werte liegen zwischen 0 und 1. Ein Wert von 0 bedeutet, dass die Daten zufällig sind oder nicht an das Modell angepasst werden können. Ein Wert von 1 bedeutet, dass das Modell exakt mit den Daten übereinstimmt. Dies wird oft als r<sup>2</sup>, R<sup>2</sup> oder R-Quadrat bezeichnet.
 
-## <a name="data"></a>Daten
+## <a name="data"></a>Data
 
 Daten sind für alle Machine Learning-Anwendungen von zentraler Bedeutung. In ML.NET werden Daten durch <xref:Microsoft.ML.IDataView>-Objekte dargestellt. Datenansichtsobjekte:
 

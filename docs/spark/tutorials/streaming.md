@@ -5,14 +5,14 @@ author: mamccrea
 ms.author: mamccrea
 ms.date: 12/04/2019
 ms.topic: tutorial
-ms.openlocfilehash: 83d44af080d95ab6f9311ddd3ca4860806757436
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.openlocfilehash: 125ef834da8e42c99c8080a3d5414a7927ce7636
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77504040"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79186510"
 ---
-# <a name="tutorial-structured-streaming-with-net-for-apache-spark"></a>Tutorial: Structured Streaming mit .NET für Apache Spark 
+# <a name="tutorial-structured-streaming-with-net-for-apache-spark"></a>Tutorial: Structured Streaming mit .NET für Apache Spark
 
 Dieses Tutorial zeigt Ihnen, wie Sie Spark Structured Streaming mit .NET for Apache Spark aufrufen können. Spark Structured Streaming ist die Unterstützung von Apache Spark für die Verarbeitung von Echtzeitdatenströmen. Datenstromverarbeitung bedeutet, dass Livedaten während ihrer Erstellung analysiert werden.
 
@@ -47,7 +47,7 @@ Wenn dies Ihre erste .NET für Apache Spark-Anwendung ist, beginnen Sie mit dem 
 
 ## <a name="establish-and-connect-to-a-data-stream"></a>Einrichten eines Datenstroms und Herstellen einer Verbindung
 
-Eine beliebte Methode zum Testen der Datenstromverarbeitung ist **netcat**. netcat (auch als *nc*bezeichnet) ermöglicht Ihnen das Lesen von Daten aus und Schreiben von Daten in Netzwerkverbindungen. Sie stellen in einem Terminalfenster eine Netzwerkverbindung mit netcat her. 
+Eine beliebte Methode zum Testen der Datenstromverarbeitung ist **netcat**. netcat (auch als *nc*bezeichnet) ermöglicht Ihnen das Lesen von Daten aus und Schreiben von Daten in Netzwerkverbindungen. Sie stellen in einem Terminalfenster eine Netzwerkverbindung mit netcat her.
 
 ### <a name="create-a-data-stream-with-netcat"></a>Erstellen eines Datenstroms mit netcat
 
@@ -108,14 +108,14 @@ DataFrame lines = spark
 
 Sie können in Spark-Anwendungen mithilfe *benutzerdefinierter Funktionen* Berechnungen und Analysen Ihrer Daten durchführen.
 
-Fügen Sie der `Main`-Methode den folgenden Code hinzu, um die benutzerdefinierte Funktion `udfArray` zu registrieren. 
+Fügen Sie der `Main`-Methode den folgenden Code hinzu, um die benutzerdefinierte Funktion `udfArray` zu registrieren.
 
 ```csharp
 Func<Column, Column> udfArray =
     Udf<string, string[]>((str) => new string[] { str, $"{str} {str.Length}" });
 ```
 
-Diese benutzerdefinierte Funktion verarbeitet jede vom netcat-Terminal empfangene Zeichenfolge, um ein Array zu erstellen. Es enthält (in *str*) die ursprüngliche Zeichenfolge gefolgt von der ursprünglichen Zeichenfolge verkettet mit der Länge der ursprünglichen Zeichenfolge. 
+Diese benutzerdefinierte Funktion verarbeitet jede vom netcat-Terminal empfangene Zeichenfolge, um ein Array zu erstellen. Es enthält (in *str*) die ursprüngliche Zeichenfolge gefolgt von der ursprünglichen Zeichenfolge verkettet mit der Länge der ursprünglichen Zeichenfolge.
 
 Wenn Sie beispielsweise im netcat-Terminal *Hello world* eingeben, wird ein Array mit den folgenden Elementen erzeugt:
 

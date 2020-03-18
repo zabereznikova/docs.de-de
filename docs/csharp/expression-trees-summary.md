@@ -4,12 +4,12 @@ description: Dieser Beitrag fasst zusammen, wie Sie Ausdrucksbaumstrukturen verw
 ms.date: 06/20/2016
 ms.technology: csharp-advanced-concepts
 ms.assetid: eb687ebd-1149-4453-9fc1-12a084495a66
-ms.openlocfilehash: 43715c94b70f1cd7f758cde91ae7c8d1b2f70f9f
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 513244a987e295c81cfb5d00d9a0cfd6912074e0
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73036754"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79145890"
 ---
 # <a name="expression-trees-summary"></a>Zusammenfassung der Ausdrucksbaumstrukturen
 
@@ -19,7 +19,7 @@ In dieser Serie haben Sie erfahren, wie Sie *Ausdrucksbaumstrukturen* verwenden 
 
 Sie können Ausdrucksbaumstrukturen untersuchen, um die Absicht eines Algorithmus zu verstehen. Sie können nicht nur diesen Code überprüfen. Sie können neue Ausdrucksbaumstrukturen erstellen, die geänderte Versionen des ursprünglichen Codes darstellen.
 
-Sie können auch mithilfe von Ausdrucksbaumstrukturen einen Algorithmus betrachten und den Algorithmus in eine andere Sprache oder Umgebung übersetzen. 
+Sie können auch mithilfe von Ausdrucksbaumstrukturen einen Algorithmus betrachten und den Algorithmus in eine andere Sprache oder Umgebung übersetzen.
 
 ## <a name="limitations"></a>Einschränkungen
 

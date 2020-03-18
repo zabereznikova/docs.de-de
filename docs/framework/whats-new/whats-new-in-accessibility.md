@@ -7,12 +7,12 @@ dev_langs:
 - vb
 helpviewer_keywords:
 - what's new [.NET Framework]
-ms.openlocfilehash: 6f17cb0fb6e5b0457af745ea0d089f3e51d4706c
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: 4dbc2024aa2e956b23030ae6eab987e65e006d12
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75938149"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79398676"
 ---
 # <a name="whats-new-in-accessibility-in-the-net-framework"></a>Neuerungen der Barrierefreiheit in .NET Framework
 
@@ -20,7 +20,7 @@ Die Anwendungen von .NET Framework sollen eine bessere Barrierefreiheit für Ihr
 
 ## <a name="accessibility-switches"></a>Barrierefreiheitsparameter
 
-Wenn Ihre App auf .NET Framework 4.7 oder niedriger ausgerichtet ist, aber auf .NET Framework 4.7.1 oder höher ausgeführt wird, können Sie sie für Barrierefreiheitsfeatures konfigurieren. Sie können auch Ihre App für Legacy-Features konfigurieren (und Barrierefreiheitsfeatures außen vor lassen), wenn diese auf .NET Framework 4.7.1 oder höher ausgerichtet ist. Jede .NET Framework-Version, die Barrierefreiheitsfeatures umfasst, verfügt über einen versionsspezifischen Barrierefreiheitsparameter, den Sie dem [`<runtime>`](../configure-apps/file-schema/runtime/index.md)-Abschnitt des [`<AppContextSwitchOverrides>`](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md)-Elements in der Konfigurationsdatei der Anwendung hinzufügen. Die folgenden Parameter werden unterstützt:
+Wenn Ihre App auf .NET Framework 4.7 oder niedriger ausgerichtet ist, aber auf .NET Framework 4.7.1 oder höher ausgeführt wird, können Sie sie für Barrierefreiheitsfeatures konfigurieren. Sie können auch Ihre App für Legacy-Features konfigurieren (und Barrierefreiheitsfeatures außen vor lassen), wenn diese auf .NET Framework 4.7.1 oder höher ausgerichtet ist. Jede .NET Framework-Version, die Barrierefreiheitsfeatures umfasst, verfügt über einen versionsspezifischen Barrierefreiheitsparameter, den Sie dem [`<AppContextSwitchOverrides>`](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md)-Abschnitt des [`<runtime>`](../configure-apps/file-schema/runtime/index.md)-Elements in der Konfigurationsdatei der Anwendung hinzufügen. Die folgenden Parameter werden unterstützt:
 
 |Version|Schalter|
 |---|---|
@@ -351,7 +351,7 @@ Ab .NET Framework 4.7.2 treten die folgenden Verbesserungen der Unterstützung d
 
 - Sie kündigt jetzt den Wert der <xref:System.Windows.Forms.ToolStripMenuItem.ShortcutKeys?displayProperty=nameWithType>-Eigenschaft an, wenn sie den Text eines <xref:System.Windows.Forms.ToolStripMenuItem> ankündigt.
 
-- Sie gibt jetzt an, wenn die <xref:System.Windows.Forms.Control.Enabled>-Eigenschaft von <xref:System.Windows.Forms.ToolStripMenuItem> auf `false` festgelegt ist.
+- Sie gibt jetzt an, wenn die <xref:System.Windows.Forms.ToolStripMenuItem>-Eigenschaft von <xref:System.Windows.Forms.Control.Enabled> auf `false` festgelegt ist.
 
 - Sie stellt jetzt Feedback zum Zustand eines Kontrollkästchens bereit, wenn die <xref:System.Windows.Forms.ListView.CheckBoxes?displayProperty=nameWithType>-Eigenschaft auf `true` festgelegt ist.
 
@@ -445,10 +445,10 @@ Folgende APIs wurden zu WPF hinzugefügt, um dynamische Bereiche zu unterstütze
 
 - Die <xref:System.Windows.Automation.AutomationLiveSetting?displayProperty=nameWithType>-Enumeration, die die folgenden möglichen **LiveSetting**-Werte definiert:
 
-  - <xref:System.Windows.Automation.AutomationLiveSetting.Off?displayProperty=nameWithType> Das Element sendet keine Benachrichtigungen, wenn der Inhalt des dynamischen Bereichs geändert wurde.
-  - <xref:System.Windows.Automation.AutomationLiveSetting.Polite?displayProperty=nameWithType> Das Element sendet nicht unterbrechende Benachrichtigungen, wenn der Inhalt des dynamischen Bereichs geändert wurde.
+  - <xref:System.Windows.Automation.AutomationLiveSetting.Off?displayProperty=nameWithType>. Das Element sendet keine Benachrichtigungen, wenn der Inhalt des dynamischen Bereichs geändert wurde.
+  - <xref:System.Windows.Automation.AutomationLiveSetting.Polite?displayProperty=nameWithType>. Das Element sendet nicht unterbrechende Benachrichtigungen, wenn der Inhalt des dynamischen Bereichs geändert wurde.
 
-  - <xref:System.Windows.Automation.AutomationLiveSetting.Assertive?displayProperty=nameWithType> Das Element sendet unterbrechende Benachrichtigungen, wenn der Inhalt des dynamischen Bereichs geändert wurde.
+  - <xref:System.Windows.Automation.AutomationLiveSetting.Assertive?displayProperty=nameWithType>. Das Element sendet unterbrechende Benachrichtigungen, wenn der Inhalt des dynamischen Bereichs geändert wurde.
 
 Sie können einen dynamischen Bereich erstellen, indem Sie die Eigenschaft **AutomationProperties.LiveSetting** wie im folgenden Beispiel dargestellt auf das relevante Element festlegen:
 
@@ -476,37 +476,37 @@ Ab .NET Framework 4.7.1 wurden Verbesserungen am Design „Hoher Kontrast“ fü
 
 - <xref:System.Windows.Controls.Expander>-Steuerelement
 
-  Das visuelle Fokuselement für das <xref:System.Windows.Controls.Expander>-Steuerelement wird nun angezeigt. Das visuelle Tastaturelement für die <xref:System.Windows.Controls.ComboBox>-, <xref:System.Windows.Controls.ListBox>- und <xref:System.Windows.Controls.RadioButton>-Steuerelemente wird ebenfalls angezeigt. Zum Beispiel:
+  Das visuelle Fokuselement für das <xref:System.Windows.Controls.Expander>-Steuerelement wird nun angezeigt. Das visuelle Tastaturelement für die <xref:System.Windows.Controls.ComboBox>-, <xref:System.Windows.Controls.ListBox>- und <xref:System.Windows.Controls.RadioButton>-Steuerelemente wird ebenfalls angezeigt. Beispiel:
 
-  Vorher: 
+  Vorher:
 
   ![Screenshot des Expander-Steuerelements mit Fokus und ohne visuelles Fokuselement.](./media/whats-new-in-accessibility/expander-control-before.png)
 
-  Nachher: 
+  Nachher:
 
   ![Screenshot des Expander-Steuerelements, bei dem der Fokus eine gepunktete Linie um den Text des Steuerelements zeigt.](./media/whats-new-in-accessibility/expander-control-after.png)
 
 - <xref:System.Windows.Controls.CheckBox>- und <xref:System.Windows.Controls.RadioButton>-Steuerelemente
 
-  Der Text in den <xref:System.Windows.Controls.CheckBox>- und <xref:System.Windows.Controls.RadioButton>-Steuerelementen ist nun leichter zu erkennen, wenn das Design mit hohem Kontrast ausgewählt ist. Zum Beispiel:
+  Der Text in den <xref:System.Windows.Controls.CheckBox>- und <xref:System.Windows.Controls.RadioButton>-Steuerelementen ist nun leichter zu erkennen, wenn das Design mit hohem Kontrast ausgewählt ist. Beispiel:
 
-  Vorher: 
+  Vorher:
 
   ![Screenshot der Optionsschaltflächen und der Kontrollkästchen mit schlechter Lesbarkeit des Texts bei Designs mit hohem Kontrast.](./media/whats-new-in-accessibility/high-contrast-radio-button-before.png)
 
-  Nachher: 
+  Nachher:
 
   ![Screenshot der Optionsschaltflächen und der Kontrollkästchen mit besserer Lesbarkeit des Texts bei Designs mit hohem Kontrast.](./media/whats-new-in-accessibility/high-contrast-radio-button-after.png)
 
 - <xref:System.Windows.Controls.ComboBox>-Steuerelement
 
-  Ab .NET Framework 4.7.1 hat der Rahmen eines deaktivierten <xref:System.Windows.Controls.ComboBox>-Steuerelements die gleiche Farbe wie der deaktivierte Text. Zum Beispiel:
+  Ab .NET Framework 4.7.1 hat der Rahmen eines deaktivierten <xref:System.Windows.Controls.ComboBox>-Steuerelements die gleiche Farbe wie der deaktivierte Text. Beispiel:
 
-  Vorher: 
+  Vorher:
 
   ![Screenshot einer deaktivierten ComboBox, bei der Rahmen und Steuerelementtext unterschiedliche Farben aufweisen.](./media/whats-new-in-accessibility/combo-disabled-before.png)
 
-  Nachher:   
+  Nachher:
 
   ![Screenshot einer deaktivierten ComboBox, bei der Rahmen und Steuerelementtext dieselbe Farbe aufweisen.](./media/whats-new-in-accessibility/combo-disabled-after.png)
 
@@ -514,43 +514,43 @@ Ab .NET Framework 4.7.1 wurden Verbesserungen am Design „Hoher Kontrast“ fü
 
   Vorher:
 
-  ![Screenshot einer schwarzen Schaltfläche mit grauem Text „Focus Me“.](./media/whats-new-in-accessibility/button-theme-colors-before.png) 
+  ![Screenshot einer schwarzen Schaltfläche mit grauem Text „Focus Me“.](./media/whats-new-in-accessibility/button-theme-colors-before.png)
 
-  Nachher: 
+  Nachher:
 
-  ![Screenshot einer blauen Schaltfläche mit schwarzem Text „Focus Me“.](./media/whats-new-in-accessibility/button-theme-colors-after.png) 
+  ![Screenshot einer blauen Schaltfläche mit schwarzem Text „Focus Me“.](./media/whats-new-in-accessibility/button-theme-colors-after.png)
 
-  In .NET Framework 4.7 und früher führte das Festlegen des Formats eines <xref:System.Windows.Controls.ComboBox>-Steuerelements auf `Toolbar.ComboBoxStyleKey` dazu, dass der Dropdownpfeil nicht angezeigt wurde. Dieses Problem wurde in .NET Framework 4.7.1 behoben. Zum Beispiel:
+  In .NET Framework 4.7 und früher führte das Festlegen des Formats eines <xref:System.Windows.Controls.ComboBox>-Steuerelements auf `Toolbar.ComboBoxStyleKey` dazu, dass der Dropdownpfeil nicht angezeigt wurde. Dieses Problem wurde in .NET Framework 4.7.1 behoben. Beispiel:
 
-  Vorher: 
+  Vorher:
 
-  ![Screenshot eines ComboBox-Steuerelements mit nicht sichtbarem Dropdownpfeil.](./media/whats-new-in-accessibility/combo-box-style-key-before.png) 
+  ![Screenshot eines ComboBox-Steuerelements mit nicht sichtbarem Dropdownpfeil.](./media/whats-new-in-accessibility/combo-box-style-key-before.png)
 
-  Nachher: 
+  Nachher:
 
-  ![Screenshot eines ComboBox-Steuerelements mit sichtbarem Dropdownpfeil.](./media/whats-new-in-accessibility/combo-box-style-key-after.png) 
+  ![Screenshot eines ComboBox-Steuerelements mit sichtbarem Dropdownpfeil.](./media/whats-new-in-accessibility/combo-box-style-key-after.png)
 
 - <xref:System.Windows.Controls.DataGrid>-Steuerelement
 
-  Ab .NET Framework 4.7.1 verwendet der Pfeil für die Sortieranzeige in den <xref:System.Windows.Controls.DataGrid>-Steuerelementen das richtige Farbdesign. Zum Beispiel:
+  Ab .NET Framework 4.7.1 verwendet der Pfeil für die Sortieranzeige in den <xref:System.Windows.Controls.DataGrid>-Steuerelementen das richtige Farbdesign. Beispiel:
 
-  Vorher: 
+  Vorher:
 
-  ![Screenshot des Pfeils für die Sortieranzeige vor der Verbesserung.](./media/whats-new-in-accessibility/sort-indicator-before.png) 
+  ![Screenshot des Pfeils für die Sortieranzeige vor der Verbesserung.](./media/whats-new-in-accessibility/sort-indicator-before.png)
 
-  Nachher:   
+  Nachher:
 
-  ![Screenshot des Pfeils für die Sortieranzeige nach der Verbesserung.](./media/whats-new-in-accessibility/sort-indicator-after.png) 
+  ![Screenshot des Pfeils für die Sortieranzeige nach der Verbesserung.](./media/whats-new-in-accessibility/sort-indicator-after.png)
 
   Darüber hinaus wurde in .NET Framework 4.7 und früher das Standarddesign für Links geändert, wodurch Links beim Bewegen der Maus über diese im Modus mit hohem Kontrast in der falschen Farbe angezeigt wurden. Dieses Problem wurde in .NET Framework 4.7.1 behoben. Auf ähnliche Weise verwenden die Spalten des Kontrollkästchens <xref:System.Windows.Controls.DataGrid> ab .NET Framework 4.7.1 die erwarteten Farben für das Feedback des Tastaturfokus.
 
-  Vorher: 
+  Vorher:
 
-  ![Screenshot eines Links mit dem Text „Click Me!“ in Rot.](./media/whats-new-in-accessibility/default-link-style-before.png) 
+  ![Screenshot eines Links mit dem Text „Click Me!“ in Rot.](./media/whats-new-in-accessibility/default-link-style-before.png)
 
-  Nachher:    
+  Nachher:
 
-  ![Screenshot eines Links mit dem Text „Click Me!“ in Gelb.](./media/whats-new-in-accessibility/default-link-style-after.png) 
+  ![Screenshot eines Links mit dem Text „Click Me!“ in Gelb.](./media/whats-new-in-accessibility/default-link-style-after.png)
 
 Weitere Informationen zu Verbesserungen der WPF-Barrierefreiheit in .NET Framework 4.7.1 finden Sie unter [Verbesserung der Barrierefreiheit in WPF](../migration-guide/retargeting/4.7-4.7.1.md#accessibility-improvements-in-wpf).
 
@@ -577,15 +577,15 @@ Folgende Änderungen wurden am Design mit hohem Kontrast vorgenommen:
 
 - Der Text in einem ausgewählten <xref:System.Windows.Forms.Button>-Kontrollkästchen bildet einen Kontrast zur Auswahlfarbe.
 
-- Deaktivierter Text ist einfacher zu lesen. Zum Beispiel:
+- Deaktivierter Text ist einfacher zu lesen. Beispiel:
 
   Vorher:
 
-  ![Screenshot einer APP, die verschiedene im Modus für hohe Kontraste ausgeführte Steuerelemente verwendet, vor den Verbesserungen für die Barrierefreiheit.](./media/whats-new-in-accessibility/high-contrast-mode-menu-items-before.png) 
+  ![Screenshot einer APP, die verschiedene im Modus für hohe Kontraste ausgeführte Steuerelemente verwendet, vor den Verbesserungen für die Barrierefreiheit.](./media/whats-new-in-accessibility/high-contrast-mode-menu-items-before.png)
 
   Nachher:
 
-  ![Screenshot einer APP, die verschiedene im Modus für hohe Kontraste ausgeführte Steuerelemente verwendet, nach den Verbesserungen für die Barrierefreiheit.](./media/whats-new-in-accessibility/high-contrast-mode-menu-items-after.png) 
+  ![Screenshot einer APP, die verschiedene im Modus für hohe Kontraste ausgeführte Steuerelemente verwendet, nach den Verbesserungen für die Barrierefreiheit.](./media/whats-new-in-accessibility/high-contrast-mode-menu-items-after.png)
 
 - Verbesserungen am Design mit hohem Kontrast im Dialogfeld der Threadausnahme.
 
@@ -707,6 +707,6 @@ Die Barrierefreiheitsänderungen im Workflow-Designer umfassen Folgendes:
 
 - Benutzer, die Designs mit hohem Kontrast verwenden, werden viele Verbesserungen in der Sichtbarkeit des Workflow-Designers und dessen Steuerelementen feststellen. Dazu zählen verbesserte Kontrastverhältnisse zwischen Elementen und leichter erkennbare Auswahlfelder für Fokuselemente.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [What's new in the .NET Framework (Neuerungen in .NET Framework)](index.md)
