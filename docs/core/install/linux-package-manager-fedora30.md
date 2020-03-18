@@ -5,67 +5,67 @@ author: thraka
 ms.author: adegeo
 ms.date: 12/04/2019
 ms.openlocfilehash: bce30c9fd3fad8b3a63ef938d7446c2516a756cc
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "76920798"
 ---
-# <a name="fedora-30-package-manager---install-net-core"></a><span data-ttu-id="b74d0-103">Fedora 30-Paket-Manager: Installieren von .NET Core</span><span class="sxs-lookup"><span data-stu-id="b74d0-103">Fedora 30 Package Manager - Install .NET Core</span></span>
+# <a name="fedora-30-package-manager---install-net-core"></a><span data-ttu-id="eb7ae-103">Fedora 30-Paket-Manager: Installieren von .NET Core</span><span class="sxs-lookup"><span data-stu-id="eb7ae-103">Fedora 30 Package Manager - Install .NET Core</span></span>
 
 [!INCLUDE [package-manager-switcher](./includes/package-manager-switcher.md)]
 
-<span data-ttu-id="b74d0-104">In diesem Artikel wird beschrieben, wie Sie mit einem Paket-Manager .NET Core auf Fedora 30 installieren.</span><span class="sxs-lookup"><span data-stu-id="b74d0-104">This article describes how to use a package manager to install .NET Core on Fedora 30.</span></span> <span data-ttu-id="b74d0-105">Wenn Sie die Runtime installieren, wird die Installation der [ASP.NET Core-Runtime](#install-the-aspnet-core-runtime) empfohlen, da diese sowohl .NET Core- als auch ASP.NET Core-Runtimes umfasst.</span><span class="sxs-lookup"><span data-stu-id="b74d0-105">If you're installing the runtime, we suggest you install the [ASP.NET Core runtime](#install-the-aspnet-core-runtime), as it includes both .NET Core and ASP.NET Core runtimes.</span></span>
+<span data-ttu-id="eb7ae-104">In diesem Artikel wird beschrieben, wie Sie mit einem Paket-Manager .NET Core auf Fedora 30 installieren.</span><span class="sxs-lookup"><span data-stu-id="eb7ae-104">This article describes how to use a package manager to install .NET Core on Fedora 30.</span></span> <span data-ttu-id="eb7ae-105">Wenn Sie die Runtime installieren, wird die Installation der [ASP.NET Core-Runtime](#install-the-aspnet-core-runtime) empfohlen, da diese sowohl .NET Core- als auch ASP.NET Core-Runtimes umfasst.</span><span class="sxs-lookup"><span data-stu-id="eb7ae-105">If you're installing the runtime, we suggest you install the [ASP.NET Core runtime](#install-the-aspnet-core-runtime), as it includes both .NET Core and ASP.NET Core runtimes.</span></span>
 
-## <a name="register-microsoft-key-and-feed"></a><span data-ttu-id="b74d0-106">Registrieren von Microsoft-Schlüsseln und -Feeds</span><span class="sxs-lookup"><span data-stu-id="b74d0-106">Register Microsoft key and feed</span></span>
+## <a name="register-microsoft-key-and-feed"></a><span data-ttu-id="eb7ae-106">Registrieren von Microsoft-Schlüsseln und -Feeds</span><span class="sxs-lookup"><span data-stu-id="eb7ae-106">Register Microsoft key and feed</span></span>
 
-<span data-ttu-id="b74d0-107">Vor der Installation von .NET müssen Sie folgende Schritte ausführen:</span><span class="sxs-lookup"><span data-stu-id="b74d0-107">Before installing .NET, you'll need to:</span></span>
+<span data-ttu-id="eb7ae-107">Vor der Installation von .NET müssen Sie folgende Schritte ausführen:</span><span class="sxs-lookup"><span data-stu-id="eb7ae-107">Before installing .NET, you'll need to:</span></span>
 
-- <span data-ttu-id="b74d0-108">Registrieren Sie den Microsoft-Schlüssel.</span><span class="sxs-lookup"><span data-stu-id="b74d0-108">Register the Microsoft key.</span></span>
-- <span data-ttu-id="b74d0-109">Registrieren Sie das Produktrepository.</span><span class="sxs-lookup"><span data-stu-id="b74d0-109">Register the product repository.</span></span>
-- <span data-ttu-id="b74d0-110">Installieren Sie erforderliche Abhängigkeiten.</span><span class="sxs-lookup"><span data-stu-id="b74d0-110">Install required dependencies.</span></span>
+- <span data-ttu-id="eb7ae-108">Registrieren Sie den Microsoft-Schlüssel.</span><span class="sxs-lookup"><span data-stu-id="eb7ae-108">Register the Microsoft key.</span></span>
+- <span data-ttu-id="eb7ae-109">Registrieren Sie das Produktrepository.</span><span class="sxs-lookup"><span data-stu-id="eb7ae-109">Register the product repository.</span></span>
+- <span data-ttu-id="eb7ae-110">Installieren Sie erforderliche Abhängigkeiten.</span><span class="sxs-lookup"><span data-stu-id="eb7ae-110">Install required dependencies.</span></span>
 
-<span data-ttu-id="b74d0-111">Dies muss nur einmal pro Computer ausgeführt werden.</span><span class="sxs-lookup"><span data-stu-id="b74d0-111">This only needs to be done once per machine.</span></span>
+<span data-ttu-id="eb7ae-111">Dies muss nur einmal pro Computer ausgeführt werden.</span><span class="sxs-lookup"><span data-stu-id="eb7ae-111">This only needs to be done once per machine.</span></span>
 
-<span data-ttu-id="b74d0-112">Öffnen Sie ein Terminal, und führen Sie die folgenden Befehle aus.</span><span class="sxs-lookup"><span data-stu-id="b74d0-112">Open a terminal and run the following commands.</span></span>
+<span data-ttu-id="eb7ae-112">Öffnen Sie ein Terminal, und führen Sie die folgenden Befehle aus.</span><span class="sxs-lookup"><span data-stu-id="eb7ae-112">Open a terminal and run the following commands.</span></span>
 
 ```bash
 sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
 sudo wget -q -O /etc/yum.repos.d/microsoft-prod.repo https://packages.microsoft.com/config/fedora/30/prod.repo
 ```
 
-## <a name="install-the-net-core-sdk"></a><span data-ttu-id="b74d0-113">Installieren des .NET Core SDK</span><span class="sxs-lookup"><span data-stu-id="b74d0-113">Install the .NET Core SDK</span></span>
+## <a name="install-the-net-core-sdk"></a><span data-ttu-id="eb7ae-113">Installieren des .NET Core SDK</span><span class="sxs-lookup"><span data-stu-id="eb7ae-113">Install the .NET Core SDK</span></span>
 
-<span data-ttu-id="b74d0-114">Aktualisieren Sie die zur Installation verfügbaren Produkte, und installieren Sie dann das .NET Core SDK.</span><span class="sxs-lookup"><span data-stu-id="b74d0-114">Update the products available for installation, then install the .NET Core SDK.</span></span> <span data-ttu-id="b74d0-115">Führen Sie in Ihrem Terminal den folgenden Befehl aus.</span><span class="sxs-lookup"><span data-stu-id="b74d0-115">In your terminal, run the following command.</span></span>
+<span data-ttu-id="eb7ae-114">Aktualisieren Sie die zur Installation verfügbaren Produkte, und installieren Sie dann das .NET Core SDK.</span><span class="sxs-lookup"><span data-stu-id="eb7ae-114">Update the products available for installation, then install the .NET Core SDK.</span></span> <span data-ttu-id="eb7ae-115">Führen Sie in Ihrem Terminal den folgenden Befehl aus.</span><span class="sxs-lookup"><span data-stu-id="eb7ae-115">In your terminal, run the following command.</span></span>
 
 ```bash
 sudo dnf install dotnet-sdk-3.1
 ```
 
-## <a name="install-the-aspnet-core-runtime"></a><span data-ttu-id="b74d0-116">Installieren der ASP.NET Core-Runtime</span><span class="sxs-lookup"><span data-stu-id="b74d0-116">Install the ASP.NET Core runtime</span></span>
+## <a name="install-the-aspnet-core-runtime"></a><span data-ttu-id="eb7ae-116">Installieren der ASP.NET Core-Runtime</span><span class="sxs-lookup"><span data-stu-id="eb7ae-116">Install the ASP.NET Core runtime</span></span>
 
-<span data-ttu-id="b74d0-117">Aktualisieren Sie die zur Installation verfügbaren Produkte, und installieren Sie dann die ASP.NET-Runtime.</span><span class="sxs-lookup"><span data-stu-id="b74d0-117">Update the products available for installation, then install the ASP.NET runtime.</span></span> <span data-ttu-id="b74d0-118">Führen Sie in Ihrem Terminal den folgenden Befehl aus.</span><span class="sxs-lookup"><span data-stu-id="b74d0-118">In your terminal, run the following command.</span></span>
+<span data-ttu-id="eb7ae-117">Aktualisieren Sie die zur Installation verfügbaren Produkte, und installieren Sie dann die ASP.NET-Runtime.</span><span class="sxs-lookup"><span data-stu-id="eb7ae-117">Update the products available for installation, then install the ASP.NET runtime.</span></span> <span data-ttu-id="eb7ae-118">Führen Sie in Ihrem Terminal den folgenden Befehl aus.</span><span class="sxs-lookup"><span data-stu-id="eb7ae-118">In your terminal, run the following command.</span></span>
 
 ```bash
 sudo dnf install aspnetcore-runtime-3.1
 ```
 
-## <a name="install-the-net-core-runtime"></a><span data-ttu-id="b74d0-119">Installieren der .NET Core-Runtime</span><span class="sxs-lookup"><span data-stu-id="b74d0-119">Install the .NET Core runtime</span></span>
+## <a name="install-the-net-core-runtime"></a><span data-ttu-id="eb7ae-119">Installieren der .NET Core-Runtime</span><span class="sxs-lookup"><span data-stu-id="eb7ae-119">Install the .NET Core runtime</span></span>
 
-<span data-ttu-id="b74d0-120">Aktualisieren Sie die zur Installation verfügbaren Produkte, und installieren Sie dann die .NET Core-Runtime.</span><span class="sxs-lookup"><span data-stu-id="b74d0-120">Update the products available for installation, then install the .NET Core runtime.</span></span> <span data-ttu-id="b74d0-121">Führen Sie in Ihrem Terminal den folgenden Befehl aus.</span><span class="sxs-lookup"><span data-stu-id="b74d0-121">In your terminal, run the following command.</span></span>
+<span data-ttu-id="eb7ae-120">Aktualisieren Sie die zur Installation verfügbaren Produkte, und installieren Sie dann die .NET Core-Runtime.</span><span class="sxs-lookup"><span data-stu-id="eb7ae-120">Update the products available for installation, then install the .NET Core runtime.</span></span> <span data-ttu-id="eb7ae-121">Führen Sie in Ihrem Terminal den folgenden Befehl aus.</span><span class="sxs-lookup"><span data-stu-id="eb7ae-121">In your terminal, run the following command.</span></span>
 
 ```bash
 sudo dnf install dotnet-runtime-3.1
 ```
 
-## <a name="how-to-install-other-versions"></a><span data-ttu-id="b74d0-122">Installieren anderer Versionen</span><span class="sxs-lookup"><span data-stu-id="b74d0-122">How to install other versions</span></span>
+## <a name="how-to-install-other-versions"></a><span data-ttu-id="eb7ae-122">Installieren anderer Versionen</span><span class="sxs-lookup"><span data-stu-id="eb7ae-122">How to install other versions</span></span>
 
 [!INCLUDE [package-manager-switcher](./includes/package-manager-heading-hack-pkgname.md)]
 
-## <a name="troubleshoot-the-package-manager"></a><span data-ttu-id="b74d0-123">Problembehandlung des Paket-Managers</span><span class="sxs-lookup"><span data-stu-id="b74d0-123">Troubleshoot the package manager</span></span>
+## <a name="troubleshoot-the-package-manager"></a><span data-ttu-id="eb7ae-123">Problembehandlung des Paket-Managers</span><span class="sxs-lookup"><span data-stu-id="eb7ae-123">Troubleshoot the package manager</span></span>
 
-<span data-ttu-id="b74d0-124">Dieser Abschnitt enthält Informationen zu häufigen Fehlern, die bei der Verwendung des Paket-Managers zur Installation von .NET Core auftreten können.</span><span class="sxs-lookup"><span data-stu-id="b74d0-124">This section provides information on common errors you may get while using the package manager to install .NET Core.</span></span>
+<span data-ttu-id="eb7ae-124">Dieser Abschnitt enthält Informationen zu häufigen Fehlern, die bei der Verwendung des Paket-Managers zur Installation von .NET Core auftreten können.</span><span class="sxs-lookup"><span data-stu-id="eb7ae-124">This section provides information on common errors you may get while using the package manager to install .NET Core.</span></span>
 
-### <a name="failed-to-fetch"></a><span data-ttu-id="b74d0-125">Fehler beim Abrufen</span><span class="sxs-lookup"><span data-stu-id="b74d0-125">Failed to fetch</span></span>
+### <a name="failed-to-fetch"></a><span data-ttu-id="eb7ae-125">Fehler beim Abrufen</span><span class="sxs-lookup"><span data-stu-id="eb7ae-125">Failed to fetch</span></span>
 
 [!INCLUDE [package-manager-failed-to-fetch-rpm](includes/package-manager-failed-to-fetch-rpm.md)]

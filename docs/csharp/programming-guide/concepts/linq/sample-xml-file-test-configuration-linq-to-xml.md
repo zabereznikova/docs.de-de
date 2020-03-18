@@ -3,16 +3,16 @@ title: 'Beispiel-XML-Datei: Testkonfiguration (LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: 45bfb509-c1d4-4b4f-9690-1cb0c9816516
 ms.openlocfilehash: 713e0b69ea896d9f4198ae68f1a3a258d74f24f4
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "66487236"
 ---
-# <a name="sample-xml-file-test-configuration-linq-to-xml"></a><span data-ttu-id="f3d09-102">Beispiel-XML-Datei: Testkonfiguration (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="f3d09-102">Sample XML File: Test Configuration (LINQ to XML)</span></span>
-<span data-ttu-id="f3d09-103">Die folgende XML-Datei wird in verschiedenen Beispielen in der [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]-Dokumentation verwendet.</span><span class="sxs-lookup"><span data-stu-id="f3d09-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="f3d09-104">Dies ist eine Testkonfigurationsdatei.</span><span class="sxs-lookup"><span data-stu-id="f3d09-104">This is a test configuration file.</span></span>  
+# <a name="sample-xml-file-test-configuration-linq-to-xml"></a><span data-ttu-id="8f8cd-102">Beispiel-XML-Datei: Testkonfiguration (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="8f8cd-102">Sample XML File: Test Configuration (LINQ to XML)</span></span>
+<span data-ttu-id="8f8cd-103">Die folgende XML-Datei wird in verschiedenen Beispielen in der [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]-Dokumentation verwendet.</span><span class="sxs-lookup"><span data-stu-id="8f8cd-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="8f8cd-104">Dies ist eine Testkonfigurationsdatei.</span><span class="sxs-lookup"><span data-stu-id="8f8cd-104">This is a test configuration file.</span></span>  
   
-## <a name="testconfigxml"></a><span data-ttu-id="f3d09-105">TestConfig.xml</span><span class="sxs-lookup"><span data-stu-id="f3d09-105">TestConfig.xml</span></span>  
+## <a name="testconfigxml"></a><span data-ttu-id="8f8cd-105">TestConfig.xml</span><span class="sxs-lookup"><span data-stu-id="8f8cd-105">TestConfig.xml</span></span>  
   
 ```xml  
 <?xml version="1.0"?>  
