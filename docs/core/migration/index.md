@@ -3,10 +3,10 @@ title: .NET Core-Migration über „project.json“
 description: Erfahren Sie, wie Sie ein älteres .NET Core-Projekt mithilfe von „project.json“ migrieren.
 ms.date: 07/19/2017
 ms.openlocfilehash: 8a9dc05c82fd5476a70ee36a294a287abbfb68c4
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/19/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "77450686"
 ---
 # <a name="migrating-net-core-projects-from-projectjson"></a>Migrieren von .NET Core-Projekten über „project.json“
@@ -51,7 +51,7 @@ Dateien, die migriert wurden (*project.json*, *global.json* und *XPROJ*-Dateien)
 > Bei Verwendung von Visual Studio Code ändert der Befehl `dotnet migrate` Visual Studio Code-spezifische Dateien wie z. B. *tasks.json* nicht. Diese Dateien müssen manuell geändert werden.
 > Dies gilt auch, wenn Sie einen anderen Editor oder eine andere Integrierte Entwicklungsumgebung (IDE) als Visual Studio verwenden.
 
-Einen Vergleich der Formate *project.json* und *csproj* finden Sie unter [Die Zuordnung zwischen project.json und csproj-Eigenschaften](../tools/project-json-to-csproj.md).
+Einen Vergleich der Formate [project.json](../tools/project-json-to-csproj.md) und *csproj* finden Sie unter *Die Zuordnung zwischen project.json und csproj-Eigenschaften*.
 
 Wenn Sie folgende Fehlermeldung erhalten:
 
@@ -86,6 +86,6 @@ Nach diesen Schritten sollte das Projekt mit dem RTM .NET Core-csproj-Format vol
 
 Beispiele für vor und nach der Migration vom alten csproj-Format zum neuen finden Sie im Artikel [Updating Visual Studio 2017 RC – .NET Core Tooling improvements (Aktualisieren von Visual Studio 2017 RC – Verbesserungen der .NET Core-Tools)](https://devblogs.microsoft.com/dotnet/updating-visual-studio-2017-rc-net-core-tooling-improvements/) im .NET-Blog.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Übertragung, Migration und Upgrade der Visual Studio-Projekte](/visualstudio/porting/port-migrate-and-upgrade-visual-studio-projects)

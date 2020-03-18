@@ -5,10 +5,10 @@ helpviewer_keywords:
 - Main method [C#], return values
 ms.assetid: c2f5a1d8-1676-4bea-bc7e-44a97e72d5bc
 ms.openlocfilehash: eaa78c33613093bb0e108870669392d07d346a95
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/20/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77504003"
 ---
 # <a name="main-return-values-c-programming-guide"></a>Main()-Rückgabewerte (C#-Programmierhandbuch)
@@ -53,7 +53,7 @@ if ($LastExitCode -eq 0) {
 Write-Host "Return value = " $LastExitCode
 ```
 
-## <a name="sample-output"></a>Beispielausgabe:
+## <a name="sample-output"></a>Beispielausgabe
 
 ```txt
 Execution succeeded
@@ -95,7 +95,7 @@ Wenn der Einstiegspunkt der Anwendung `Task` oder `Task<int>` zurückgibt, gener
 > [!NOTE]
 >Wäre im Beispiel der Modifizierer `async` auf die Methode `Main` angewendet worden, hätte der Compiler denselben Code generiert.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [C#-Programmierhandbuch](../index.md)
 - [C#-Referenz](../index.md)

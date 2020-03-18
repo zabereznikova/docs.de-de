@@ -3,10 +3,10 @@ title: Schritte im Outer-Loop-DevOps-Workflow für eine Docker-Anwendung
 description: Lernen Sie die Schritte für die „äußere Schleife“ des DevOps-Workflows
 ms.date: 02/15/2019
 ms.openlocfilehash: 735f92c00cd6279649ec3b0c35cfb00543f21a8c
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/14/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75936783"
 ---
 # <a name="steps-in-the-outer-loop-devops-workflow-for-a-docker-application"></a>Schritte im Outer-Loop-DevOps-Workflow für eine Docker-Anwendung

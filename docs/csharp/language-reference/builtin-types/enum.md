@@ -11,12 +11,12 @@ helpviewer_keywords:
 - enumeration type [C#]
 - bit flags [C#]
 ms.assetid: bbeb9a0f-e9b3-41ab-b0a6-c41b1a08974c
-ms.openlocfilehash: 4377d113a18d23c8a0f9a669e6112f1a8223cc79
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: ab5eb1679f846bf0e25d90a4d0e0a71f0bdb0096
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77450868"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78847707"
 ---
 # <a name="enumeration-types-c-reference"></a>Enumerationstypen (C#-Referenz)
 
@@ -54,7 +54,7 @@ Sie verwenden einen Enumerationstyp, um eine Auswahl aus einer Reihe von sich ge
 
 Wenn ein Enumerationstyp eine Kombination aus Auswahlmöglichkeiten darstellen soll, definieren Sie Enumerationsmember für diese Auswahlmöglichkeiten, sodass eine einzelne Auswahl ein Bitfeld ist. Das heißt, die zugeordneten Werte dieser Enumerationsmember sollten Zweierpotenzen sein. Anschließend können Sie die [bitweisen logischen Operatoren `|` oder `&`](../operators/bitwise-and-shift-operators.md#enumeration-logical-operators) verwenden, um Auswahlmöglichkeiten bzw. Schnittmengen von Auswahlmöglichkeiten zu kombinieren. Um anzugeben, dass ein Enumerationstyp Bitfelder deklariert, wenden Sie das Attribut [Flags](xref:System.FlagsAttribute) darauf an. Wie im folgenden Beispiel gezeigt, können Sie auch einige typische Kombinationen in die Definition eines Enumerationstyps einschließen.
 
-[!code-csharp[enum flags](~/samples/csharp/language-reference/builtin-types/EnumType.cs#Flags)]
+[!code-csharp[enum flags](snippets/EnumType.cs#Flags)]
 
 Weitere Informationen und Beispiele finden Sie auf der Referenzseite zur <xref:System.FlagsAttribute?displayProperty=nameWithType>-API und im Abschnitt [Nicht exklusive Member und das Flags-Attribut](/dotnet/api/system.enum#non-exclusive-members-and-the-flags-attribute) der Referenzseite zur <xref:System.Enum?displayProperty=nameWithType>-API.
 
@@ -68,7 +68,7 @@ Ab C# 7.3 können Sie `System.Enum` in einer Basisklasseneinschränkung (die als
 
 Für jeden Enumerationstyp gibt es explizite Konvertierungen zwischen dem Enumerationstyp und dem zugrunde liegenden integralen Typ. Wenn Sie einen Enumerationswert in den zugrunde liegenden Typ [umwandeln](../operators/type-testing-and-cast.md#cast-operator-), ist das Ergebnis der zugeordnete integrale Wert eines Enumerationsmembers.
 
-[!code-csharp[enum conversions](~/samples/csharp/language-reference/builtin-types/EnumType.cs#Conversions)]
+[!code-csharp[enum conversions](snippets/EnumType.cs#Conversions)]
 
 Verwenden Sie die <xref:System.Enum.IsDefined%2A?displayProperty=nameWithType>-Methode, um zu ermitteln, ob ein Enumerationstyp einen Enumerationsmember mit dem bestimmten zugeordneten Wert enthält.
 
@@ -85,7 +85,7 @@ Weitere Informationen finden Sie in den folgenden Abschnitten der [C#-Sprachspez
 - [Explizite Enumerationskonvertierungen](~/_csharplang/spec/conversions.md#explicit-enumeration-conversions)
 - [Implizite Enumerationskonvertierungen](~/_csharplang/spec/conversions.md#implicit-enumeration-conversions)
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [C#-Referenz](../index.md)
 - [Enumerationsformatzeichenfolgen](../../../standard/base-types/enumeration-format-strings.md)

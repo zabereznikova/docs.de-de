@@ -1,18 +1,18 @@
 ---
-title: Trainieren und Auswerten eines Modells
+title: Trainieren und Bewerten eines Modells
 description: Erfahren Sie, wie Sie mit ML.NET Machine Learning-Modelle erstellen, Metriken erfassen und die Leistung messen können. Ein Machine Learning-Modell identifiziert Muster innerhalb von Trainingsdaten, um anhand von neuen Daten Vorhersagen zu treffen.
 ms.date: 08/29/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc, how-to, title-hack-0625
 ms.openlocfilehash: 0e0f43225b9bf243c31b3095817bdcbdb3123012
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73976762"
 ---
-# <a name="train-and-evaluate-a-model"></a>Trainieren und Auswerten eines Modells
+# <a name="train-and-evaluate-a-model"></a>Trainieren und Bewerten eines Modells
 
 Erfahren Sie, wie Sie mit ML.NET Machine Learning-Modelle erstellen, Metriken erfassen und die Leistung messen können. Obwohl dieses Beispiel ein Regressionsmodell trainiert, sind die Konzepte für einen Großteil der anderen Algorithmen anwendbar.
 

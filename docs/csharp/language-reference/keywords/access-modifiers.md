@@ -5,10 +5,10 @@ helpviewer_keywords:
 - access modifiers [C#]
 ms.assetid: 61c3fa51-c00f-48cb-9b49-c805dedd62d7
 ms.openlocfilehash: 754949e42771de30cc2dce7e4e610f70ada6dfd4
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75713841"
 ---
 # <a name="access-modifiers-c-reference"></a>Zugriffsmodifizierer (C#-Referenz)
@@ -29,7 +29,7 @@ Zugriffsmodifizierer sind Schlüsselwörter, die verwendet werden, um die deklar
   
 - [`protected internal`](protected-internal.md): Der Zugriff ist auf die aktuelle Assembly oder auf Typen beschränkt, die von der enthaltenden Klasse abgeleitet sind.  
   
-- [`private`](private.md): Der Zugriff ist auf die enthaltende Klasse beschränkt.  
+- [`private`](private.md): Der Zugriff ist auf den enthaltenden Typ beschränkt.  
 
 - [`private protected`](private-protected.md): Der Zugriff ist auf die enthaltende Klasse oder auf Typen beschränkt, die von der enthaltenden Klasse innerhalb der aktuellen Assembly abgeleitet sind.  
   
@@ -37,11 +37,11 @@ Zugriffsmodifizierer sind Schlüsselwörter, die verwendet werden, um die deklar
   
 - [Zugriffsebenen](./accessibility-levels.md): Deklarieren von sechs Zugriffsebenen mithilfe der vier Zugriffsmodifizierer.  
   
-- [Zugriffsdomäne](./accessibility-domain.md): Gibt an, in welchen Teilen des Programms auf ein Member verwiesen werden kann.  
+- [Zugriffsdomäne](./accessibility-domain.md): Gibt an, in welche Teile des Programms ein Member verwiesen werden kann.  
   
 - [Einschränkungen bei der Verwendung von Zugriffsebenen](./restrictions-on-using-accessibility-levels.md): Ein Überblick über die Einschränkungen bei der Verwendung deklarierter Zugriffsebenen.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [C#-Referenz](../index.md)
 - [C#-Programmierhandbuch](../../programming-guide/index.md)

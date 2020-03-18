@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Durchlaufen einer binären Struktur mit parallelen Aufgaben'
+title: 'Gewusst wie: Durchlaufen einer Binärstruktur mit parallelen Aufgaben'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -9,13 +9,13 @@ helpviewer_keywords:
 - tasks, how to traverse a tree
 ms.assetid: 4265d169-6c69-4f36-b10d-b7ae7f72f4df
 ms.openlocfilehash: b79337e6ee8057506ff87c696cecd6b038eeebfc
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73141640"
 ---
-# <a name="how-to-traverse-a-binary-tree-with-parallel-tasks"></a>Vorgehensweise: Durchlaufen einer binären Struktur mit parallelen Aufgaben
+# <a name="how-to-traverse-a-binary-tree-with-parallel-tasks"></a>Gewusst wie: Durchlaufen einer Binärstruktur mit parallelen Aufgaben
 Das folgende Beispiel zeigt zwei Möglichkeiten, wie parallele Aufgaben verwendet werden können, um eine Datenstruktur zu durchlaufen. Die Erstellung der Struktur selbst dient als Übung.  
   
 ## <a name="example"></a>Beispiel  
@@ -24,6 +24,6 @@ Das folgende Beispiel zeigt zwei Möglichkeiten, wie parallele Aufgaben verwende
   
  Die beiden gezeigten Methoden sind funktional äquivalent. Wenn Sie die <xref:System.Threading.Tasks.TaskFactory.StartNew%2A>-Methode zum Erstellen und Ausführen der Aufgaben verwenden, geben die Aufgaben ein Handle zurück, das zum Warten auf die Aufgaben und Behandeln von Ausnahmen verwendet werden kann.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Task Parallel Library (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)

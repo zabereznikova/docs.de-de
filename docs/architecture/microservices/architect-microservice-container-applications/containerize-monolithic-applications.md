@@ -3,10 +3,10 @@ title: Containerisieren monolithischer Anwendungen
 description: Das Containerisieren monolithischer Anwendungen bietet zwar nicht alle Vorteile der Microservicearchitektur, dafür jedoch wichtige Vorteile beim Bereitstellen, von denen Sie direkt profitieren können.
 ms.date: 01/30/2020
 ms.openlocfilehash: 0e6f7504a91d2b1a89193471746168fc34f50956
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/20/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77503285"
 ---
 # <a name="containerizing-monolithic-applications"></a>Containerisieren monolithischer Anwendungen

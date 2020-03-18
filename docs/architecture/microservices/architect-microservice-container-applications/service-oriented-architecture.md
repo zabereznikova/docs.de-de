@@ -3,10 +3,10 @@ title: Serviceorientierte Architektur
 description: Lernen Sie die grundlegenden Unterschiede zwischen Microservices und einer serviceorientierten Architektur (SOA) kennen.
 ms.date: 09/20/2018
 ms.openlocfilehash: 84786539fbac0e8b38a81a2580232474774cd355
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "68674927"
 ---
 # <a name="service-oriented-architecture"></a>Serviceorientierte Architektur

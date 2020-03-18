@@ -9,10 +9,10 @@ helpviewer_keywords:
 - tasks, continuations
 ms.assetid: 0b45e9a2-de28-46ce-8212-1817280ed42d
 ms.openlocfilehash: 7de8c4e44e1866e3df36c666c9ecc210dc6a7d83
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78159363"
 ---
 # <a name="chaining-tasks-by-using-continuation-tasks"></a>Verketten von Aufgaben mithilfe von Fortsetzungsaufgaben
@@ -114,10 +114,10 @@ Bei der asynchronen Programmierung werden nach Abschluss eines asynchronen Vorga
  [!code-csharp[TPL_Continuations#10](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_continuations/cs/detached1.cs#10)]
  [!code-vb[TPL_Continuations#10](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_continuations/vb/detached1.vb#10)]  
   
- Der Endstatus der Vorgängeraufgabe hängt vom Endstatus aller zugehörigen untergeordneten Aufgaben ab. Der Status getrennter untergeordneter Aufgaben wirkt sich nicht auf das übergeordnete Element aus. Weitere Informationen finden Sie unter [Angefügte und getrennte untergeordnete Aufgaben](../../../docs/standard/parallel-programming/attached-and-detached-child-tasks.md).  
+ Der Endstatus der Vorgängeraufgabe hängt vom Endstatus aller zugehörigen untergeordneten Aufgaben ab. Der Status getrennter untergeordneter Aufgaben wirkt sich nicht auf das übergeordnete Element aus. Weitere Informationen finden Sie unter [Attached and Detached Child Tasks (Angefügte und getrennte untergeordnete Aufgaben)](../../../docs/standard/parallel-programming/attached-and-detached-child-tasks.md).  
   
 ## <a name="associating-state-with-continuations"></a>Zuordnen eines Zustands zu Fortsetzungen  
- Sie können einer Aufgabenfortsetzung einen die oft ausgegebene Befehlszeilen  Zustand zuordnen. Die <xref:System.Threading.Tasks.Task.ContinueWith%2A> -Methode stellt überladene Versionen bereit, von denen jede einen <xref:System.Object> -Wert annimmt, der den Zustand der Fortsetzung darstellt. Sie können später mit der <xref:System.Threading.Tasks.Task.AsyncState%2A?displayProperty=nameWithType> -Eigenschaft auf dieses Zustandsobjekt zugreifen. Das Zustandsobjekt ist `null` , wenn kein Wert angegeben wird.  
+ Sie können einer Aufgabenfortsetzung einen die oft ausgegebene Befehlszeilen  Zustand zuordnen. Die <xref:System.Threading.Tasks.Task.ContinueWith%2A> -Methode stellt überladene Versionen bereit, von denen jede einen <xref:System.Object> -Wert annimmt, der den Zustand der Fortsetzung darstellt. Sie können später mit der <xref:System.Threading.Tasks.Task.AsyncState%2A?displayProperty=nameWithType> -Eigenschaft auf dieses Zustandsobjekt zugreifen. Das Zustandsobjekt ist `null`, wenn kein Wert angegeben wird.  
   
  Der Fortsetzungszustand ist bei der Verwendung der TPL nützlich, wenn Sie vorhandenen Code konvertieren, der das [Asynchrone Programmiermodell (APM)](../../../docs/standard/asynchronous-programming-patterns/asynchronous-programming-model-apm.md) verwendet. Im APM stellen Sie in der Regel den Objektzustand in der **Begin**_Method_-Methode bereit und greifen später mithilfe der <xref:System.IAsyncResult.AsyncState%2A?displayProperty=nameWithType>-Eigenschaft auf diesen Zustand zu. Mithilfe der <xref:System.Threading.Tasks.Task.ContinueWith%2A> -Methode können Sie diesen Zustand beibehalten, wenn Sie Code konvertieren, der das APM zur Verwendung der TPL verwendet.  
   
@@ -148,8 +148,8 @@ Bei der asynchronen Programmierung werden nach Abschluss eines asynchronen Vorga
   
      Weitere Informationen finden Sie unter [Ausnahmebehandlung (Task Parallel Library)](../../../docs/standard/parallel-programming/exception-handling-task-parallel-library.md).  
   
-- Wenn die Fortsetzung eine angefügte untergeordnete Aufgabe ist, die mit der <xref:System.Threading.Tasks.TaskContinuationOptions.AttachedToParent?displayProperty=nameWithType> -Option erstellt wurde, werden die zugehörigen Ausnahmen vom übergeordneten Element an den aufrufenden Thread zurückgegeben, wie dies auch bei allen anderen angefügten untergeordneten Elementen der Fall ist. Weitere Informationen finden Sie unter [Angefügte und getrennte untergeordnete Aufgaben](../../../docs/standard/parallel-programming/attached-and-detached-child-tasks.md).  
+- Wenn die Fortsetzung eine angefügte untergeordnete Aufgabe ist, die mit der <xref:System.Threading.Tasks.TaskContinuationOptions.AttachedToParent?displayProperty=nameWithType> -Option erstellt wurde, werden die zugehörigen Ausnahmen vom übergeordneten Element an den aufrufenden Thread zurückgegeben, wie dies auch bei allen anderen angefügten untergeordneten Elementen der Fall ist. Weitere Informationen finden Sie unter [Attached and Detached Child Tasks (Angefügte und getrennte untergeordnete Aufgaben)](../../../docs/standard/parallel-programming/attached-and-detached-child-tasks.md).  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Task Parallel Library (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)

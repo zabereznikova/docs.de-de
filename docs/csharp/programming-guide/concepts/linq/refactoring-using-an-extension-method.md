@@ -3,10 +3,10 @@ title: Refactoring mit einer Erweiterungsmethode (C#)
 ms.date: 07/20/2015
 ms.assetid: c5fc123d-af10-4a2f-b8e4-db921efb2639
 ms.openlocfilehash: 8546c2cb834107cf2e099af40f9a7df4d5858b4b
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "70253101"
 ---
 # <a name="refactoring-using-an-extension-method-c"></a>Refactoring mit einer Erweiterungsmethode (C#)
@@ -246,7 +246,7 @@ StyleName:Code >Hello World<
   
 - [Refactoring mit reiner Funktion (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-a-pure-function.md)  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Tutorial: Bearbeiten von Inhalten in einem WordprocessingML-Dokument (C#)](./shape-of-wordprocessingml-documents.md)
-- [Refactoring in reine Funktionen (C#)](./refactoring-into-pure-functions.md)
+- [Tutorial: Manipulating Content in a WordprocessingML Document (C#) (Tutorial: Bearbeiten von Inhalten in einem WordprocessingML-Dokument (C#))](./shape-of-wordprocessingml-documents.md)
+- [Refactoring Into Pure Functions (Refactoring in reine Funktionen (C#))](./refactoring-into-pure-functions.md)

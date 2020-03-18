@@ -12,10 +12,10 @@ helpviewer_keywords:
 - resource compiler option [C#]
 ms.assetid: 5212666e-98ab-47e4-a497-b5545ab15c7f
 ms.openlocfilehash: e14bf59f5922a918b627af22c052c8efd9081e84
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "69602526"
 ---
 # <a name="-resource-c-compiler-options"></a>-resource (C#-Compileroptionen)
@@ -35,9 +35,9 @@ Bettet die angegebene Ressource in die Ausgabedatei ein.
  Der logische Name der Ressource. Der Name, mit dem die Ressource geladen wird. Der Standardwert ist der Name der Datei.  
   
  `accessibility-modifier` (optional)  
- Barrierefreiheit der Ressource: öffentlich oder privat. Der Standardwert ist „öffentlich“.  
+ Barrierefreiheit der Ressource: öffentlich oder privat. Der Standardwert ist public.  
   
-## <a name="remarks"></a>Anmerkungen  
+## <a name="remarks"></a>Hinweise  
  Verwenden Sie [-linkresource](./linkresource-compiler-option.md), um eine Ressource mit einer Assembly zu verknüpfen, anstatt die Ressourcendatei zur Ausgabedatei hinzuzufügen.  
   
  Ressourcen sind standardmäßig in der Assembly öffentlich, wenn sie mithilfe des C#-Compilers erstellt werden. Geben Sie `private` als Modifizierer der Barrierefreiheit an. Außer `public` und `private` sind keine anderen Zugriffsmethoden zulässig.  
@@ -67,7 +67,7 @@ Bettet die angegebene Ressource in die Ausgabedatei ein.
 csc -resource:rf.resource in.cs  
 ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [C#-Compileroptionen](./index.md)
 - [Verwalten von Projekt- und Projektmappeneigenschaften](/visualstudio/ide/managing-project-and-solution-properties)

@@ -9,10 +9,10 @@ helpviewer_keywords:
 - join keyword [C#]
 ms.assetid: 76e9df84-092c-41a6-9537-c3f1cbd7f0fb
 ms.openlocfilehash: 8e52e9db241392b67818b7316767dd97bd38432a
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75713408"
 ---
 # <a name="join-clause-c-reference"></a>join-Klausel (C#-Referenz)
@@ -73,7 +73,7 @@ Sie können Nicht-Gleichheitsverknüpfungen, Kreuzverknüpfungen und andere benu
 
 Verknüpfungsvorgänge in einem LINQ-Abfrageausdruck werden in Objektsammlungen durchgeführt. Objektauflistungen können nicht wie relationale Tabellen „verknüpft“ werden. In LINQ sind explizite `join`-Klauseln nur erforderlich, wenn zwei Quellsequenzen nicht durch eine Beziehung verbunden sind. Wenn Sie mit [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] arbeiten, werden Tabellen mit Fremdschlüsseln in einem Objektmodell als Eigenschaften der primären Tabelle repräsentiert. In der Northwind-Datenbank weist die Tabelle „Customers“ (Kunden) beispielsweise eine Fremdschlüsselbeziehung zu der Tabelle „Orders“ (Aufträge) auf. Wenn Sie die Tabellen dem Objektmodell zuordnen, hat die Klasse „Customers“ eine Eigenschaft „Orders“, die die Auflistung der Aufträge enthält, die zu diesem Kunden gehören. Tatsächlich wurde die Verknüpfung bereits für Sie vorgenommen.
 
-Weitere Informationen zu Abfragen über verknüpfte Tabellen im Kontext von [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] hinweg finden Sie unter [Vorgehensweise: Zuordnen von Datenbankbeziehungen](../../../framework/data/adonet/sql/linq/how-to-map-database-relationships.md).
+Weitere Informationen zu Abfragen über verknüpfte Quellen hinweg in Bezug auf [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] finden Sie unter [Vorgehensweise: Zuordnen von Datenbankbeziehungen](../../../framework/data/adonet/sql/linq/how-to-map-database-relationships.md).
 
 ## <a name="composite-keys"></a>Zusammengesetzte Schlüssel
 
@@ -89,7 +89,7 @@ In folgendem Beispiel werden die Ergebnisse einer inneren Verknüpfung, einer Gr
 
 Eine `join`-Klausel, auf die kein `into` folgt, wird in einen <xref:System.Linq.Enumerable.Join%2A>-Methodenaufruf übersetzt. Eine `join`-Klausel, auf die `into` folgt, wird in einen <xref:System.Linq.Enumerable.GroupJoin%2A>-Methodenaufruf übersetzt.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Abfrageschlüsselwörter (LINQ)](query-keywords.md)
 - [Language-Integrated Query (LINQ)](../../linq/index.md)

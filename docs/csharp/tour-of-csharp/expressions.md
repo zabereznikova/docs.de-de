@@ -4,10 +4,10 @@ description: Ausdrücke, Operanden und Operatoren sind Bausteine der Sprache C#.
 ms.date: 02/27/2020
 ms.assetid: 20d5eb10-7381-47b9-ad90-f1cc895aa27e
 ms.openlocfilehash: 209b5da01cd7539f2bd97023f40fd149910b6f1d
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "78159155"
 ---
 # <a name="expressions"></a>Ausdrücke

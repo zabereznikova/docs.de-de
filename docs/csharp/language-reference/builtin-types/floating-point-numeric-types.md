@@ -19,10 +19,10 @@ helpviewer_keywords:
 - double data type [C#]
 - decimal keyword [C#]
 ms.openlocfilehash: 95b7f266654bbbcdcd0f81e3aa11cfc94af9f0e5
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77215240"
 ---
 # <a name="floating-point-numeric-types-c-reference"></a>Numerische Gleitkommatypen (C#-Referenz)
@@ -107,7 +107,7 @@ Console.WriteLine(m);  // output: 1500000
 
 ## <a name="conversions"></a>Konvertierungen
 
-Es gibt nur eine implizite Konvertierung zwischen numerischen Gleitkommatypen: von `float` zu `double`. Allerdings können Sie einen Gleitkommatyp mit der [expliziten Umwandlung](../operators/type-testing-and-cast.md#cast-operator-)in beliebige andere Gleitkommatypen konvertieren. Weitere Informationen finden Sie unter [Integrierte numerische Konvertierungen (C#-Referenz)](numeric-conversions.md) (Integrierte numerische Konvertierungen).
+Es gibt nur eine implizite Konvertierung zwischen numerischen Gleitkommatypen: von `float` zu `double`. Allerdings können Sie einen Gleitkommatyp mit der [expliziten Umwandlung](../operators/type-testing-and-cast.md#cast-operator-)in beliebige andere Gleitkommatypen konvertieren. Weitere Informationen finden Sie unter [Built-in numeric conversions](numeric-conversions.md) (Integrierte numerische Konvertierungen).
 
 ## <a name="c-language-specification"></a>C#-Sprachspezifikation
 
@@ -117,11 +117,11 @@ Weitere Informationen finden Sie in den folgenden Abschnitten der [C#-Sprachspez
 - [Der Dezimaltyp](~/_csharplang/spec/types.md#the-decimal-type)
 - [Real-Literale](~/_csharplang/spec/lexical-structure.md#real-literals)
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [C#-Referenz](../index.md)
-- [Werttypen](value-types.md)
+- [Value types (Werttypen)](value-types.md)
 - [Integrale Typen](integral-numeric-types.md)
-- [Standardmäßige Zahlenformatzeichenfolgen](../../../standard/base-types/standard-numeric-format-strings.md)
+- [Standard-Zahlenformatzeichenfolgen](../../../standard/base-types/standard-numeric-format-strings.md)
 - [Numerische Ausdrücke in .NET](../../../standard/numerics.md)
 - <xref:System.Numerics.Complex?displayProperty=nameWithType>

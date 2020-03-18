@@ -3,17 +3,17 @@ title: Befehl „dotnet help“
 description: Der Befehl „dotnet help“ zeigt ausführlichere Onlinedokumentation für den angegebenen Befehl.
 ms.date: 02/14/2020
 ms.openlocfilehash: f5d9221ae18653451a3bf97dc82fae396ae4e288
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/20/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77503725"
 ---
 # <a name="dotnet-help-reference"></a>dotnet help reference
 
 **Dieser Artikel gilt für:** ✔️ .NET Core 2.0 SDK und neuere Versionen
 
-## <a name="name"></a>name
+## <a name="name"></a>Name
 
 `dotnet help`: zeigt ausführlichere Onlinedokumentation für den angegebenen Befehl.
 

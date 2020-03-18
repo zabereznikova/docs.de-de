@@ -6,10 +6,10 @@ ms.author: wiwagn
 ms.date: 12/09/2019
 ms.custom: vs-dotnet
 ms.openlocfilehash: ba996e4add1cfe44681154b00a6530b1f3e70b37
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75714001"
 ---
 # <a name="tutorial-create-your-first-net-core-console-application-in-visual-studio-2019"></a>Tutorial: Ihre erste .NET Core-Konsolenanwendung in Visual Studio 2019
@@ -28,7 +28,7 @@ In den folgenden Anleitungen wird eine einfache Hello World-Konsolenanwendung er
 
 <!-- markdownlint-disable MD025 -->
 
-# <a name="ctabcsharp"></a>[C#](#tab/csharp)
+# <a name="c"></a>[C#](#tab/csharp)
 
 1. Öffnen Sie Visual Studio 2019.
 
@@ -53,7 +53,7 @@ In den folgenden Anleitungen wird eine einfache Hello World-Konsolenanwendung er
 
    ![Visual Studio und das neue HelloWorld-Projekt](./media/with-visual-studio/visual-studio-main-window.png)
 
-# <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb)
+# <a name="visual-basic"></a>[Visual Basic](#tab/vb)
 
 1. Öffnen Sie Visual Studio 2019.
 
@@ -96,7 +96,7 @@ In den folgenden Anleitungen wird eine einfache Hello World-Konsolenanwendung er
 
 Erweitern Sie ihre Anwendung, um die Benutzer aufzufordern, Ihren Namen einzugeben und diesen mit dem Datum und der Uhrzeit anzuzeigen. Die folgenden Anleitungen ändern und führen die App erneut aus:
 
-# <a name="ctabcsharp"></a>[C#](#tab/csharp)
+# <a name="c"></a>[C#](#tab/csharp)
 
 1. Ersetzen Sie den Inhalt der `Main`-Methode, die derzeit nur aus der Zeile besteht, die `Console.WriteLine`aufruft, durch den folgenden Code:
 
@@ -114,7 +114,7 @@ Erweitern Sie ihre Anwendung, um die Benutzer aufzufordern, Ihren Namen einzugeb
 
 1. Drücken Sie eine beliebige Taste, um das Konsolenfenster zu schließen.
 
-# <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb)
+# <a name="visual-basic"></a>[Visual Basic](#tab/vb)
 
 1. Ersetzen Sie den Inhalt der `Main`-Methode, die derzeit nur aus der Zeile besteht, die `Console.WriteLine`aufruft, durch den folgenden Code:
 

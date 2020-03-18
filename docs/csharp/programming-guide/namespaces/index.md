@@ -6,10 +6,10 @@ helpviewer_keywords:
 - namespaces [C#]
 ms.assetid: b1c4ab46-3fad-4ffa-9deb-dd50a2d8c65a
 ms.openlocfilehash: 21452e259596c9ab10b3d653ec1d8fb90fad131d
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/14/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75937612"
 ---
 # <a name="namespaces-c-programming-guide"></a>Namespaces (C#-Programmierhandbuch)
@@ -45,11 +45,11 @@ Namespaces verfügen über die folgenden Eigenschaften:
 
 Weitere Informationen finden Sie im Abschnitt [Namespaces](~/_csharplang/spec/namespaces.md) der [C#-Sprachspezifikation](~/_csharplang/spec/introduction.md).
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [C#-Programmierhandbuch](../index.md)
 - [Using-Namespaces](using-namespaces.md)
 - [Verwenden des My-Namespaces](how-to-use-the-my-namespace.md)
 - [Bezeichnernamen](../inside-a-program/identifier-names.md)
 - [using-Direktive](../../language-reference/keywords/using-directive.md)
-- [:: Operator](../../language-reference/operators/namespace-alias-qualifier.md)
+- [::-Operator](../../language-reference/operators/namespace-alias-qualifier.md)

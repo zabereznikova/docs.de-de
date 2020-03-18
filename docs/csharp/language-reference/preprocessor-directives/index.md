@@ -8,10 +8,10 @@ helpviewer_keywords:
 - keywords [C#], preprocessor directives
 ms.assetid: f2406090-b244-4f7e-ab72-3698fefed724
 ms.openlocfilehash: f63ba3e0bd89a88ad04b14c2f359a8cde65e8f12
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "69608602"
 ---
 # <a name="c-preprocessor-directives"></a>C#-Präprozessoranweisungen
@@ -38,7 +38,7 @@ Obwohl der Compiler keinen separaten Präprozessor hat, werden die in diesem Abs
 
 Eine Präprozessordirektive muss die einzige Anweisung in einer Zeile sein.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [C#-Referenz](../index.md)
 - [C#-Programmierhandbuch](../../programming-guide/index.md)

@@ -10,10 +10,10 @@ helpviewer_keywords:
 - .NET Framework application deployment
 ms.assetid: 238d8284-6042-4a38-a7f6-1ee8efd719da
 ms.openlocfilehash: b1ba9810b4b0d5a1688318db1093a9ce9bdf8fda
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75716462"
 ---
 # <a name="deploying-the-net-framework-and-applications"></a>Bereitstellen von .NET Framework und Anwendungen
@@ -30,7 +30,7 @@ Verwenden Sie die folgenden Links zu anderen MSDN-Themen, um genaue Informatione
 
   - Installeroptionen:
 
-    - [Webinstaller](../install/guide-for-developers.md#to-install-or-download-the-net-framework-redistributable)
+    - [Web installer](../install/guide-for-developers.md#to-install-or-download-the-net-framework-redistributable)
 
     - [Offline-Installer](../install/guide-for-developers.md#to-install-or-download-the-net-framework-redistributable)
 
@@ -169,8 +169,8 @@ Sicherheitsüberlegungen können bei der Bereitstellung einer Anwendung ebenfall
 |[Veröffentlichen von ClickOnce-Anwendungen](/visualstudio/deployment/publishing-clickonce-applications)|Beschreibt, wie eine Windows Forms-Anwendung verpackt und mit ClickOnce auf Clientcomputern in einem Netzwerk bereitgestellt wird.|
 |[Verpacken und Bereitstellen von Ressourcen](../resources/packaging-and-deploying-resources-in-desktop-apps.md)|Beschreibt das sternenförmige Modell von .NET Framework zum Verpacken und Bereitstellen von Ressourcen und enthält Informationen zu Namenskonventionen für Ressourcen, Fallbackprozessen und Verpackungsalternativen.|
 |[Bereitstellen einer Interop-Anwendung](../interop/deploying-an-interop-application.md)|Erläutert, wie Interop-Anwendungen verteilt und installiert werden, die üblicherweise eine .NET Framework-Clientassembly enthalten. Außerdem wird beschrieben, wie Interopassemblys, die unterschiedliche COM-Typbibliotheken darstellen, sowie registrierte COM-Komponenten verteilt und installiert werden.|
-|[Vorgehensweise: Abrufen des Status vom Installationsprogramm für .NET Framework 4.5](how-to-get-progress-from-the-dotnet-installer.md)|Beschreibt, wie der .NET Framework-Setupvorgang automatisch gestartet und nachverfolgt und dabei eine eigene Ansicht des Setupstatus angezeigt werden kann.|
+|[How to: Get Progress from the .NET Framework 4.5 Installer](how-to-get-progress-from-the-dotnet-installer.md)|Beschreibt, wie der .NET Framework-Setupvorgang automatisch gestartet und nachverfolgt und dabei eine eigene Ansicht des Setupstatus angezeigt werden kann.|
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Entwicklungshandbuch](../development-guide.md)

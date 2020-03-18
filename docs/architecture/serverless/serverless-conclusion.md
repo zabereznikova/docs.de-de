@@ -5,10 +5,10 @@ author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
 ms.openlocfilehash: ae9fc47bf07a7e28688942b856b4743ae7aadc36
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "69577243"
 ---
 # <a name="conclusion"></a>Zusammenfassung
@@ -30,4 +30,4 @@ In diesem Artikel werden die wichtigsten Erkenntnisse dieses Leitfadens zusammen
 **Serverlose Lösung als Tool, nicht als Toolbox.** Eine serverlose Architektur ist keine exklusive Lösung für die Anwendungsarchitektur. Es handelt sich um ein Tool, das als Teil einer Hybridanwendung genutzt werden kann, die herkömmliche Schichten, monolithische Back-Ends und Container enthalten kann. Eine serverlose Lösung kann verwendet werden, um vorhandene Lösungen zu verbessern, und stellt keinen Ansatz des Typs „Alles oder nichts“ für die Anwendungsentwicklung dar.
 
 >[!div class="step-by-step"]
->[Vorherige](serverless-business-scenarios.md)
+>[Zurück](serverless-business-scenarios.md)

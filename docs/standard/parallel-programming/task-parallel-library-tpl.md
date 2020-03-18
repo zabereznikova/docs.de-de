@@ -8,10 +8,10 @@ helpviewer_keywords:
 - Parallel Programming
 ms.assetid: b8f99f43-9104-45fd-9bff-385a20488a23
 ms.openlocfilehash: 487fe48462803ac19318f450f2576989f196a9be
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73139960"
 ---
 # <a name="task-parallel-library-tpl"></a>Task Parallel Library (TPL)
@@ -21,7 +21,7 @@ Die Task Parallel Library (TPL) ist ein Satz von öffentlichen Typen und APIs im
   
 ## <a name="related-topics"></a>Verwandte Themen  
   
-|Titel|BESCHREIBUNG|  
+|Titel|Beschreibung|  
 |-|-|  
 |[Datenparallelität](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md)|Beschreibt die Erstellung paralleler `for`- und `foreach`-Schleifen (`For` und `For Each` in Visual Basic).|  
 |[Aufgabenbasierte asynchrone Programmierung](../../../docs/standard/parallel-programming/task-based-asynchronous-programming.md)|Beschreibt, wie Sie Aufgaben implizit mit <xref:System.Threading.Tasks.Parallel.Invoke%2A?displayProperty=nameWithType> oder explizit mit <xref:System.Threading.Tasks.Task>-Objekten erstellen und ausführen.|  
@@ -31,6 +31,6 @@ Die Task Parallel Library (TPL) ist ein Satz von öffentlichen Typen und APIs im
 |[Parallel LINQ (PLINQ) (Paralleles LINQ (PLINQ))](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)|Beschreibt das Herstellen von Datenparallelität mit LINQ-Abfragen.|  
 |[Parallele Programmierung](../../../docs/standard/parallel-programming/index.md)|Der Knoten auf oberster Ebene für die parallele .NET-Programmierung.|  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Beispiele für die parallele Programmierung mit .NET Framework](https://code.msdn.microsoft.com/Samples-for-Parallel-b4b76364)

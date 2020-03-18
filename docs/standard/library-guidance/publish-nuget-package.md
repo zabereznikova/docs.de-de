@@ -3,10 +3,10 @@ title: Veröffentlichen eines NuGet-Pakets
 description: Best Practices für die Veröffentlichung von .NET-Bibliotheken in NuGet.
 ms.date: 10/02/2018
 ms.openlocfilehash: 089c660bc51252c6295858b1462ae59bde968564
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/24/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "76744557"
 ---
 # <a name="publishing-a-nuget-package"></a>Veröffentlichen eines NuGet-Pakets

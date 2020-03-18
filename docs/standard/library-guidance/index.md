@@ -3,10 +3,10 @@ title: Leitfaden zur Open Source-Bibliothek für .NET
 description: Empfehlungen für bewährte Methoden für Entwickler zum Erstellen von qualitativ hochwertigen .NET-Bibliotheken
 ms.date: 10/17/2018
 ms.openlocfilehash: 4c76dfae6ffc39df7f15381be64e33657067d79d
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/24/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "76731428"
 ---
 # <a name="open-source-library-guidance"></a>Leitfaden für die Open Source-Bibliothek
@@ -28,9 +28,9 @@ Aspekte hochqualitativer Open Source-Bibliotheken für .NET:
 
 ## <a name="types-of-recommendations"></a>Empfehlungstypen
 
-Jeder Artikel enthält vier Empfehlungstypen: **Do**, **Erwägen**, **Vermeiden** und **Don‘t**. Der Empfehlungstyp kennzeichnet, wie streng die Empfehlung befolgt werden sollte.
+Jeder Artikel enthält vier Empfehlungstypen: **Do**, **Erwägen**, **Vermeiden** und **Do not**. Der Empfehlungstyp kennzeichnet, wie streng die Empfehlung befolgt werden sollte.
 
-Eine **Do**-Empfehlung sollten Sie fast immer befolgen. Zum Beispiel:
+Eine **Do**-Empfehlung sollten Sie fast immer befolgen. Beispiel:
 
 ✔️ DO Verteilen Sie Ihre Bibliothek mithilfe eines NuGet-Pakets.
 

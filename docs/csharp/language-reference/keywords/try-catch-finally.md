@@ -9,10 +9,10 @@ helpviewer_keywords:
 - try-catch statement [C#]
 ms.assetid: a1b443b0-ff7a-43ab-b835-0cc9bfbd15ca
 ms.openlocfilehash: 5d98f6967595c7c32b23ba5422a8d9ca79f7f54c
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75713039"
 ---
 # <a name="try-catch-finally-c-reference"></a>try-catch-finally (C#-Referenz)
@@ -29,12 +29,12 @@ Häufige Verwendungen von `catch` und `finally` sind das Abrufen und Verwenden v
 
 Weitere Informationen finden Sie im Abschnitt [Die Try-Anweisung](~/_csharplang/spec/statements.md#the-try-statement) der [C#-Sprachspezifikation](~/_csharplang/spec/introduction.md).
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [C#-Referenz](../index.md)
 - [C#-Programmierhandbuch](../../programming-guide/index.md)
 - [C#-Schlüsselwörter](index.md)
-- [try-, throw- und catch-Anweisungen (C++)](/cpp/cpp/try-throw-and-catch-statements-cpp)
+- [try, throw, and catch Statements (C++) (try-, throw- und catch-Anweisungen (C++))](/cpp/cpp/try-throw-and-catch-statements-cpp)
 - [throw](throw.md)
 - [Vorgehensweise: Explizites Auslösen von Ausnahmen](../../../standard/exceptions/how-to-explicitly-throw-exceptions.md)
 - [Using-Anweisung](using-statement.md)

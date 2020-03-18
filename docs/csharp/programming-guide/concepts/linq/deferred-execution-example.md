@@ -3,10 +3,10 @@ title: Beispiel für eine verzögerte Ausführung (C#)
 ms.date: 07/20/2015
 ms.assetid: 50f4fbac-81fe-4f26-aedf-506e21419b19
 ms.openlocfilehash: 0816594ad016f19af4c97198160b4bafb9b4b8b4
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/31/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "70204136"
 ---
 # <a name="deferred-execution-example-c"></a>Beispiel für eine verzögerte Ausführung (C#)
@@ -63,6 +63,6 @@ Main: str GHI
   
 - [Beispiel für das Verketten von Abfragen (C#)](./chaining-queries-example.md)  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Tutorial: Verketten von Abfragen (C#)](./deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)
+- [Tutorial: Chaining Queries Together (C#) (Tutorial: Verketten von Abfragen (C#))](./deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)

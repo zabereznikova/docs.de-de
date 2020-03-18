@@ -5,10 +5,10 @@ ms.date: 10/15/2019
 ms.topic: conceptual
 ms.custom: mvc
 ms.openlocfilehash: 653f355d09a045feabb3dee0f5737cb691cf2dc4
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73458178"
 ---
 # <a name="what-is-apache-spark"></a>Was ist Apache Spark?
@@ -23,7 +23,7 @@ Sie sollten eine Big Data-Architektur in Erwägung ziehen, wenn Sie große Daten
 
 Beim [Extrahieren, Transformieren und Laden (ETL)](/azure/architecture/data-guide/relational-data/etl) handelt es sich um den Prozess des Erfassens von Daten aus einer oder mehreren Quellen, das Ändern der Daten und das Verschieben der Daten in einen neuen Datenspeicher. Es gibt mehrere Möglichkeiten zum Transformieren von Daten, darunter:
 
-* Filtern
+* Filterung
 * Sortieren
 * Aggregieren
 * Verknüpfen
@@ -73,7 +73,7 @@ Der Cluster-Manager kommuniziert sowohl mit dem Treiber als den Executors, um fo
 * Verwalten der Programmaufteilung
 * Verwalten der Programmausführung
 
-## <a name="language-support"></a>Sprachenunterstützung
+## <a name="language-support"></a>Sprachunterstützung
 
 Die folgenden Programmiersprachen werden von Apache Spark unterstützt:
 

@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: c5e4b5619394f99a419fe48aee190ad741ea8c0d
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "73041658"
 ---
 ### <a name="identity-ui-uses-static-web-assets-feature"></a>Identität: Benutzeroberfläche verwendet Funktion für statische Webressourcen.
@@ -33,7 +33,7 @@ Das Standardframework für die Identitäts-Benutzeroberfläche ist nun **Bootstr
 
 Durch die Einführung der Funktion für statische Webressourcen musste die Konfiguration des Benutzeroberflächen-Frameworks auf MSBuild umgestellt werden. Die Entscheidung über das einzubettende Framework wird zur Buildzeit und nicht zur Laufzeit getroffen.
 
-#### <a name="recommended-action"></a>Empfohlene Maßnahme
+#### <a name="recommended-action"></a>Empfohlene Aktion
 
 Überprüfen Sie die Website-Benutzeroberfläche, um sicherzustellen, dass die neuen Bootstrap 4-Komponenten kompatibel sind. Verwenden Sie ggf. die MSBuild-Eigenschaft `IdentityUIFrameworkVersion`, um zu Bootstrap 3 zurückzukehren. Fügen Sie die-Eigenschaft einem `<PropertyGroup>`-Element in Ihrer Projektdatei hinzu:
 

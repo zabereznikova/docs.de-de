@@ -3,10 +3,10 @@ title: Problembehandlung der Meldung „Diese Anwendung konnte nicht gestartet w
 description: Erfahren Sie, wie vorzugehen ist, wenn das Dialogfeld „Diese Anwendung konnte nicht gestartet werden“ angezeigt wird.
 ms.date: 09/05/2019
 ms.openlocfilehash: 864c6ea23e9a048f060eee39d904bd4377be5084
-ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/02/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "76965905"
 ---
 # <a name="troubleshooting-a-this-application-could-not-be-started-error-message"></a>Problembehandlung der Fehlermeldung „Diese Anwendung konnte nicht gestartet werden“
@@ -59,7 +59,7 @@ Gehen Sie folgendermaßen vor, um dieses Problem zu beheben, damit Sie die Anwen
 
    ![Das Problem kann nicht gelöst werden](media/application-not-started/install-3-5.png)
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Systemanforderungen für .NET Framework](../get-started/system-requirements.md)
 - [Leitfaden für die Installation von .NET Framework](index.md)

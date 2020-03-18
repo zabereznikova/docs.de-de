@@ -13,10 +13,10 @@ helpviewer_keywords:
 - <seealso> C# XML tag
 ms.assetid: 8e157f3f-f220-4fcf-9010-88905b080b18
 ms.openlocfilehash: e24d5910ab21f01aebb5a32ce7646cf56886a81a
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77093460"
 ---
 # <a name="seealso-c-programming-guide"></a>\<seealso> (C#-Programmierhandbuch)
@@ -43,9 +43,9 @@ Kompilieren Sie mit [-doc](../../language-reference/compiler-options/doc-compile
 
 ## <a name="example"></a>Beispiel
 
-Ein Beispiel für die Verwendung von \<seealso> finden Sie unter [\<summary>](./summary.md).
+Ein Beispiel für die Verwendung von [seealso> finden Sie unter \<](./summary.md)summary>\<.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [C#-Programmierhandbuch](../index.md)
 - [Empfohlene Tags für Dokumentationskommentare](./recommended-tags-for-documentation-comments.md)

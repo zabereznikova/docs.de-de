@@ -10,10 +10,10 @@ helpviewer_keywords:
 - .NET Framework, asynchronous design patterns
 ms.assetid: 033cf871-ae24-433d-8939-7a3793e547bf
 ms.openlocfilehash: f80e6ae520ab03c0f5f4edc30c0b7102193ee6c5
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73139815"
 ---
 # <a name="consuming-the-task-based-asynchronous-pattern"></a>Verwenden des aufgabenbasierten asynchronen Musters
@@ -199,7 +199,7 @@ catch(Exception exc)
 }
 ```
 
- Wenn in diesem Fall ein Fehler bei asynchronen Vorgängen auftritt, werden sämtliche Ausnahmen in einer <xref:System.AggregateException>-Ausnahme konsolidiert, die in der von der <xref:System.Threading.Tasks.Task.WhenAll%2A>-Methode zurückgegebenen <xref:System.Threading.Tasks.Task>-Klasse gespeichert wird.  Über das `await`-Schlüsselwort wird jedoch nur eine dieser Ausnahmen weitergegeben.  Wenn Sie alle Ausnahmen auswerten möchten, können Sie den vorherigen Code wie folgt neu schreiben:
+ Wenn in diesem Fall ein Fehler bei asynchronen Vorgängen auftritt, werden sämtliche Ausnahmen in einer <xref:System.AggregateException>-Ausnahme konsolidiert, die in der von der <xref:System.Threading.Tasks.Task>-Methode zurückgegebenen <xref:System.Threading.Tasks.Task.WhenAll%2A>-Klasse gespeichert wird.  Über das `await`-Schlüsselwort wird jedoch nur eine dieser Ausnahmen weitergegeben.  Wenn Sie alle Ausnahmen auswerten möchten, können Sie den vorherigen Code wie folgt neu schreiben:
 
 ```csharp
 Task [] asyncOps = (from addr in addrs select SendMailAsync(addr)).ToArray();
@@ -245,13 +245,13 @@ catch(Exception exc)
 ### <a name="taskwhenany"></a>Task.WhenAny
  Die <xref:System.Threading.Tasks.Task.WhenAny%2A>-Methode können Sie verwenden, um asynchron auf nur einen von mehreren asynchrone Vorgängen zu warten, die als abzuschließende Tasks dargestellt werden.  Diese Methode ist für vier Hauptanwendungsfälle vorgesehen:
 
-- Redundanz:  Mehrmaliges Ausführen eines Vorgangs und Auswählen desjenigen, der zuerst abgeschlossen wurde (beispielsweise Auswerten mehrerer Aktienkurswebdienste, die ein einzelnes Ergebnis liefern, und Auswählen des Diensts, der am schnellsten abgeschlossen ist).
+- Redundanz: Mehrmaliges Ausführen eines Vorgangs und Auswählen desjenigen, der zuerst abgeschlossen wurde (beispielsweise Auswerten mehrerer Aktienkurswebdienste, die ein einzelnes Ergebnis liefern, und Auswählen des Diensts, der am schnellsten abgeschlossen ist).
 
-- Überlappung:  Starten von mehreren Vorgängen und Warten, bis alle abgeschlossen sind, aber Verarbeiten der Vorgänge, sobald sie abgeschlossen sind.
+- Überlappung: Starten von mehreren Vorgängen und Warten, bis alle abgeschlossen sind, aber Verarbeiten der Vorgänge, sobald sie abgeschlossen sind.
 
-- Einschränkung:  Zulassen, dass weitere Vorgänge gestartet werden, während andere abgeschlossen werden.  Dies ist eine Erweiterung des Szenarios mit Überlappung.
+- Einschränkung: Zulassen, dass weitere Vorgänge gestartet werden, während andere abgeschlossen werden.  Dies ist eine Erweiterung des Szenarios mit Überlappung.
 
-- Vorzeitiger Hashabbruch:  Ein von Task t1 dargestellter Vorgang kann in einem <xref:System.Threading.Tasks.Task.WhenAny%2A>-Task mit einem anderen Task t2 gruppiert werden, und Sie können auf den Task <xref:System.Threading.Tasks.Task.WhenAny%2A> warten. Task t2 könnte ein Timeout, einen Abbruch oder ein anderes Signal darstellen, das bewirkt, dass der <xref:System.Threading.Tasks.Task.WhenAny%2A>-Task abgeschlossen wird, bevor t1 abgeschlossen ist.
+- Vorzeitiger Hashabbruch: Ein von Task t1 dargestellter Vorgang kann in einem <xref:System.Threading.Tasks.Task.WhenAny%2A>-Task mit einem anderen Task t2 gruppiert werden, und Sie können auf den Task <xref:System.Threading.Tasks.Task.WhenAny%2A> warten. Task t2 könnte ein Timeout, einen Abbruch oder ein anderes Signal darstellen, das bewirkt, dass der <xref:System.Threading.Tasks.Task.WhenAny%2A>-Task abgeschlossen wird, bevor t1 abgeschlossen ist.
 
 #### <a name="redundancy"></a>Redundanz
  Nehmen Sie einen Fall an, in dem Sie entscheiden möchten, ob Sie eine Aktie kaufen.  Ihnen stehen mehrere für Sie vertrauenswürdige Webdienste für Aktienempfehlungen zur Verfügung, jedoch kann jeder dieser Dienste abhängig von der täglichen Last je nach Zeitpunkt recht langsam sein.  Sie können die <xref:System.Threading.Tasks.Task.WhenAny%2A>-Methode verwenden, um eine Benachrichtigung zu erhalten, wenn ein Vorgang abgeschlossen ist:
@@ -288,7 +288,7 @@ while(recommendations.Count > 0)
 }
 ```
 
- Auch wenn eine erste Aufgabe erfolgreich abgeschlossen wurde, können in nachfolgenden Aufgaben Fehler auftreten.  An diesem Punkt können Sie zwischen mehreren Optionen zur Behandlung von Ausnahmen wählen:  Sie können warten, bis alle gestarteten Tasks abgeschlossen sind, und in diesem Fall können Sie die <xref:System.Threading.Tasks.Task.WhenAll%2A>-Methode verwenden, oder Sie können entscheiden, dass alle Ausnahmen wichtig sind und protokolliert werden müssen.  Zu diesem Zweck können Sie Fortsetzungen verwenden, um eine Benachrichtigung zu empfangen, wenn Aufgaben asynchron abgeschlossen wurden:
+ Auch wenn eine erste Aufgabe erfolgreich abgeschlossen wurde, können in nachfolgenden Aufgaben Fehler auftreten.  An diesem Punkt haben Sie mehrere Möglichkeiten zur Handhabung von Ausnahmen: Sie können warten, bis alle gestarteten Tasks abgeschlossen sind, und in diesem Fall können Sie die <xref:System.Threading.Tasks.Task.WhenAll%2A>-Methode verwenden, oder Sie können entscheiden, dass alle Ausnahmen wichtig sind und protokolliert werden müssen.  Zu diesem Zweck können Sie Fortsetzungen verwenden, um eine Benachrichtigung zu empfangen, wenn Aufgaben asynchron abgeschlossen wurden:
 
 ```csharp
 foreach(Task recommendation in recommendations)
@@ -833,8 +833,8 @@ private static void Produce(int data)
 > [!NOTE]
 > Der Namespace <xref:System.Threading.Tasks.Dataflow> ist in .NET Framework 4.5 über **NuGet** verfügbar. Zum Installieren der Assembly, die den <xref:System.Threading.Tasks.Dataflow>-Namespace enthält, öffnen Sie Ihr Projekt in Visual Studio, wählen **NuGet-Pakete verwalten** aus dem Menü „Projekt“ und suchen anschließend online nach dem Microsoft.Tpl.Dataflow-Paket.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Task-based Asynchronous Pattern (TAP)](../../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md) (Aufgabenbasiertes asynchrones Muster)
+- [Aufgabenbasiertes asynchrones Muster (TAP, Task-based Asynchronous Pattern)](../../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md)
 - [Implementieren des aufgabenbasierten asynchronen Entwurfsmusters](../../../docs/standard/asynchronous-programming-patterns/implementing-the-task-based-asynchronous-pattern.md)
 - [Interoperabilität mit anderen asynchronen Mustern und Typen](../../../docs/standard/asynchronous-programming-patterns/interop-with-other-asynchronous-patterns-and-types.md)

@@ -3,10 +3,10 @@ title: Verwalten von Docker-Produktionsumgebungen
 description: Lernen Sie die wichtigsten Aspekte beim Verwalten einer containerbasierten Produktionsumgebung kennen.
 ms.date: 02/15/2019
 ms.openlocfilehash: 26e7a3319afe593d75e2384d023c901a389245dc
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/03/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "71834509"
 ---
 # <a name="manage-production-docker-environments"></a>Verwalten von Docker-Produktionsumgebungen
@@ -23,7 +23,7 @@ Tabelle 6–1 listet gängige Verwaltungstools und ihre Beziehung zu Orchestrato
 
 **Tabelle 6–1**. Docker-Verwaltungstools
 
-| Verwaltungstools | BESCHREIBUNG | Verwandte Orchestratoren |
+| Verwaltungstools | Beschreibung | Verwandte Orchestratoren |
 |------------------|-------------|-----------------------|
 | [Azure Monitor für Container](https://docs.microsoft.com/azure/monitoring/monitoring-container-insights-overview) | Dediziertes Kubernetes-Verwaltungstool von Azure | Azure Kubernetes Services (AKS) |
 | [Kubernetes Web UI (Dashboard)](https://kubernetes.io/docs/tasks/access-application-cluster/web-ui-dashboard/) | Kubernetes-Verwaltungstool, kann lokale Kubernetes-Cluster überwachen und verwalten | Azure Kubernetes Service (AKS)<br/>Lokales Kubernetes |

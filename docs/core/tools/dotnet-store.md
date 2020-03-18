@@ -3,17 +3,17 @@ title: dotnet store-befehl
 description: Der „dotnet store“-Befehl speichert die angegebenen Assemblys im Laufzeitpaketspeicher.
 ms.date: 02/14/2020
 ms.openlocfilehash: da1d132b2b873ff55ec104b5bb092d0194889bdc
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/20/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77503578"
 ---
 # <a name="dotnet-store"></a>dotnet store
 
 **Dieser Artikel gilt für:** ✔️ .NET Core 2.x SDK und neuere Versionen
 
-## <a name="name"></a>name
+## <a name="name"></a>Name
 
 `dotnet store`: speichert die angegebenen Assemblys im [Laufzeitpaketspeicher](../deploying/runtime-store.md).
 
@@ -85,6 +85,6 @@ dotnet store -m|--manifest -f|--framework -r|--runtime  [--framework-version] [-
   dotnet store --manifest packages.csproj --skip-optimization
   ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Laufzeitpaketspeicher](../deploying/runtime-store.md)

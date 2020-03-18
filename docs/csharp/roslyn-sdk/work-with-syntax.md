@@ -4,10 +4,10 @@ description: Diese Übersicht bietet einen Überblick über die Typen, die Sie z
 ms.date: 10/15/2017
 ms.custom: mvc
 ms.openlocfilehash: fc1b1f5ae5ec985425c8d6aec49ef7f830ea9162
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75740476"
 ---
 # <a name="work-with-syntax"></a>Arbeiten mit der Syntax
@@ -71,7 +71,7 @@ Die Eigenschaft <xref:Microsoft.CodeAnalysis.SyntaxNode.Span%2A> bezeichnet die 
 
 Die Eigenschaft <xref:Microsoft.CodeAnalysis.SyntaxNode.FullSpan%2A> bezeichnet die Textspanne, die die normale Spanne des Knotens und die Spannen jeglicher führenden oder nachgestellten Trivia, enthält.
 
-Zum Beispiel:
+Beispiel:
 
 ``` csharp
       if (x > 3)

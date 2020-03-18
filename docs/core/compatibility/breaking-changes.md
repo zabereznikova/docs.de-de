@@ -3,10 +3,10 @@ title: Breaking Changes
 description: Hier erhalten Sie Informationen zu den Breaking Changes in den verschiedenen .NET Core-Versionen.
 ms.date: 11/27/2019
 ms.openlocfilehash: 664d83f5bfa455764de8823c4bbdb4a2018e1875
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77093070"
 ---
 # <a name="breaking-change-selectors"></a>Breaking Change-Selektoren
@@ -33,6 +33,6 @@ Sie können auch einzelne Issues anzeigen, in denen die mit .NET Core eingeführ
 - Für ASP.NET Core im [aspnet/Announcements](https://github.com/aspnet/Announcements/issues?q=is%3Aissue+is%3Aopen+label%3A%22Breaking+change%22+label%3A3.0.0)-Repository.
 - Für Entity Framework Core das Repository [dotnet/efcore](https://github.com/dotnet/efcore/issues?q=is%3Aopen+is%3Aissue+label%3Abreaking-change).
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Migrieren von .NET Framework zu .NET Core](../porting/index.md)

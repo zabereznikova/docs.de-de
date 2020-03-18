@@ -7,10 +7,10 @@ helpviewer_keywords:
 - managed threading
 ms.assetid: 7b46a7d9-c6f1-46d1-a947-ae97471bba87
 ms.openlocfilehash: d6b8a0a4e16aa3169888958fa1376bfa61526dbd
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73137927"
 ---
 # <a name="managed-threading"></a>Verwaltetes Threading
@@ -32,7 +32,7 @@ Unabhängig davon, ob eine Anwendung für einen Computer mit einem oder mehreren
  [Threading Objects and Features (Threadingobjekte und -funktionen)](../../../docs/standard/threading/threading-objects-and-features.md)  
  Beschreibt die verwalteten Klassen, mit denen Sie Threadingaktivitäten sowie die Daten von Objekten, auf die in verschiedenen Threads zugegriffen wird, synchronisieren können, und bietet eine Übersicht über Threadpoolthreads.  
   
-## <a name="reference"></a>Referenz  
+## <a name="reference"></a>Verweis  
  <xref:System.Threading>  
  Enthält Klassen zum Verwenden und Synchronisieren von verwalteten Threads.  
   
@@ -49,7 +49,7 @@ Unabhängig davon, ob eine Anwendung für einen Computer mit einem oder mehreren
  [Asynchronous File I/O](../../../docs/standard/io/asynchronous-file-i-o.md)  
  Beschreibt die Leistungsvorteile und den grundlegenden Ablauf der asynchronen E/A.  
   
- [Task-based Asynchronous Pattern (TAP)](../../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md) (Aufgabenbasiertes asynchrones Muster)  
+ [Aufgabenbasiertes asynchrones Muster (TAP, Task-based Asynchronous Pattern)](../../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md)  
  Bietet eine Übersicht über das empfohlene Muster für asynchrone Programmierung in .NET.  
   
  [Asynchrones Aufrufen von synchronen Methoden](../../../docs/standard/asynchronous-programming-patterns/calling-synchronous-methods-asynchronously.md)  

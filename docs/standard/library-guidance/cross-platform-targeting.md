@@ -3,21 +3,21 @@ title: Plattformübergreifende Ziele für .NET-Bibliotheken
 description: Empfehlungen für bewährte Methoden zum Erstellen von plattformübergreifenden .NET Bibliotheken.
 ms.date: 08/12/2019
 ms.openlocfilehash: 61adff3759984554bb83531b4f9d8a49e29c929c
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/24/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "76731457"
 ---
 # <a name="cross-platform-targeting"></a>Plattformübergreifende Ziele
 
 Modernes .NET unterstützt mehrere Betriebssysteme und Geräte. Es ist wichtig, dass .NET-Open-Source-Bibliotheken so viele Entwickler wie möglich unterstützen, unabhängig davon, ob sie eine in Azure gehostete ASP.NET-Website oder ein .NET-Spiel in Unity erstellen.
 
-## <a name="net-standard"></a>.NET-Standard
+## <a name="net-standard"></a>.NET Standard
 
 .NET Standard ist die beste Möglichkeit, plattformübergreifenden Support zu einer .NET-Bibliothek hinzuzufügen. [.NET Standard](../net-standard.md) ist eine Spezifikation von .NET-APIs, die für alle .NET-Implementierungen verfügbar sind. Mit dem Targeting von .NET Standard können Sie Bibliotheken erstellen, die nur APIs verwenden dürfen, die sich in einer bestimmten Version von .NET Standard befinden. Das bedeutet, dass es von allen Plattformen verwendet werden kann, die diese Version von .NET Standard implementieren.
 
-![.NET-Standard](./media/cross-platform-targeting/platforms-netstandard.png ".NET-Standard")
+![.NET-Standard](./media/cross-platform-targeting/platforms-netstandard.png ".NET Standard")
 
 Das Targeting von .NET Standard und die erfolgreiche Kompilierung Ihres Projekts garantieren nicht, dass die Bibliothek auf allen Plattformen erfolgreich läuft:
 
@@ -96,7 +96,7 @@ public static class GpsLocation
 
 > Bei der Verwendung von .NET Standard 2.0 aus .NET Framework gibt es einige Probleme, die in .NET Framework 4.7.2 behoben wurden. Sie können das Erlebnis für Entwickler, die noch mit .NET Framework 4.6.1 bis 4.7.1 arbeiten, verbessern, indem Sie ihnen eine Binärdatei anbieten, die für .NET Framework 4.6.1 erstellt wurde.
 
-✔️ Verteilen Sie Ihre Bibliothek mithilfe eines NuGet-Pakets.
+✔️ DO Verteilen Sie Ihre Bibliothek mithilfe eines NuGet-Pakets.
 
 > NuGet wählt das beste Ziel für den Entwickler aus und schützt ihn davor, die passende Implementierung auswählen zu müssen.
 
@@ -117,7 +117,7 @@ public static class GpsLocation
 
 .NET unterstützt die Festlegung von Versionen des .NET Frameworks, die seit langem nicht mehr unterstützt werden, sowie Plattformen, die selten verwendet werden. Es ist zwar sinnvoll, Ihre Bibliothek mit so vielen Zielen wie möglich arbeiten zu lassen, aber die Notwendigkeit, fehlende APIs zu umgehen, kann zu einem erheblichen Aufwand führen. Wir glauben, dass bestimmte Frameworks angesichts ihrer Reichweite und Grenzen nicht mehr als Ziel genutzt werden sollten.
 
-❌ Schließen Sie keine portable Klassenbibliothek (PCL) als Ziel ein. Beispielsweise `portable-net45+win8+wpa81+wp8`.
+❌ Schließen Sie keine portable Klassenbibliothek (PCL) als Ziel ein. Beispiel: `portable-net45+win8+wpa81+wp8`.
 
 > .NET Standard ist die moderne Möglichkeit, um plattformübergreifende .NET-Bibliotheken zu unterstützen und ist der Ersatz für PCLs.
 

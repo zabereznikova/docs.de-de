@@ -3,10 +3,10 @@ title: Anwendbarkeit der funktionalen Transformation (C#)
 ms.date: 07/20/2015
 ms.assetid: c78107bd-b006-4574-a3d4-bbf808388ff3
 ms.openlocfilehash: bc2678354bb45f1ed0a4076f278f52d0ee7d350e
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "69594871"
 ---
 # <a name="applicability-of-functional-transformation-c"></a>Anwendbarkeit der funktionalen Transformation (C#)
@@ -32,8 +32,8 @@ Reine funktionale Transformationen können in vielen Situationen angewendet werd
   
  Vergessen Sie bei allem nicht: C# unterstützt sowohl den imperativen als auch den funktionalen Ansatz. Der beste Entwurf für Ihre Anwendung ist daher möglicherweise ein Entwurf, der beide Elemente beinhaltet.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Introduction to Pure Functional Transformations (C#) (Einführung in reine funktionale Transformationen (c#))](./introduction-to-pure-functional-transformations.md)
 - [Funktionale Transformation von XML (C#)](./functional-transformation-of-xml.md)
-- [Refactoring in reine Funktionen (C#)](./refactoring-into-pure-functions.md)
+- [Refactoring Into Pure Functions (Refactoring in reine Funktionen (C#))](./refactoring-into-pure-functions.md)

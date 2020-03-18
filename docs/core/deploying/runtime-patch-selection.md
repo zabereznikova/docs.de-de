@@ -4,10 +4,10 @@ description: Erfahren Sie mehr über die Änderungen an „dotnet publish“ fü
 author: KathleenDollard
 ms.date: 05/31/2018
 ms.openlocfilehash: 22385c7b5d2bf87755fd51cd6268d21fe3431c74
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75740787"
 ---
 # <a name="self-contained-deployment-runtime-roll-forward"></a>Rollforward der eigenständigen Runtimebereitstellung
@@ -28,14 +28,14 @@ ms.locfileid: "75740787"
 Das Ausführen von `restore` als Teil des `publish`-Vorgangs kann für Ihr Szenario unangebracht sein. Führen Sie die folgenden Schritte aus, um `restore` während `publish` beim Erstellen eigenständiger Anwendungen zu vermeiden:
 
 - Legen Sie die Eigenschaft `RuntimeIdentifiers` auf eine durch Semikolons getrennte Liste aller zu veröffentlichenden [RIDs](../rid-catalog.md) fest.
-- Legen Sie die `TargetLatestRuntimePatch` -Eigenschaft auf `true`fest.
+- Legen Sie die `TargetLatestRuntimePatch`-Eigenschaft auf `true` fest.
 
 ## <a name="no-restore-argument-with-dotnet-publish-options"></a>No-restore-Argument mit dotnet publish-Optionen
 
 Wenn Sie sowohl eigenständige Anwendungen und [Framework-abhängige Anwendungen](index.md) mit derselben Projektdatei erstellen und das Argument `--no-restore` mit `dotnet publish` verwenden möchten, wählen Sie eine der folgenden Optionen aus:
 
-1. Framework-abhängiges Verhalten bevorzugen. Wenn die Anwendung Framework-abhängig ist, ist dies das Standardverhalten. Wenn die Anwendung eigenständig ist und eine nicht gepatchte lokale Runtime (2.1.0) verwenden kann, legen Sie `false` für `TargetLatestRuntimePatch` in der Projektdatei fest.
+1. Framework-abhängiges Verhalten bevorzugen. Wenn die Anwendung Framework-abhängig ist, ist dies das Standardverhalten. Wenn die Anwendung eigenständig ist und eine nicht gepatchte lokale Runtime (2.1.0) verwenden kann, legen Sie `TargetLatestRuntimePatch` für `false` in der Projektdatei fest.
 
-2. Eigenständiges Verhalten bevorzugen. Wenn die Anwendung eigenständig ist, ist dies das Standardverhalten. Wenn die Anwendung Framework-abhängig ist und den neuesten Patch erfordert, legen Sie `true` für `TargetLatestRuntimePatch` in der Projektdatei fest.
+2. Eigenständiges Verhalten bevorzugen. Wenn die Anwendung eigenständig ist, ist dies das Standardverhalten. Wenn die Anwendung Framework-abhängig ist und den neuesten Patch erfordert, legen Sie `TargetLatestRuntimePatch` für `true` in der Projektdatei fest.
 
 3. Übernehmen Sie die explizite Kontrolle über die Runtime-Framework-Version, indem Sie für `RuntimeFrameworkVersion` die spezifische Patchversion in der Projektdatei festlegen.

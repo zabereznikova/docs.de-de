@@ -9,10 +9,10 @@ helpviewer_keywords:
 - lock keyword [C#]
 ms.assetid: 656da1a4-707e-4ef6-9c6e-6d13b646af42
 ms.openlocfilehash: 467881dd36c97b6b18b7f31d4e4af25152b0d012
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75713385"
 ---
 # <a name="lock-statement-c-reference"></a>lock-Anweisung (C#-Referenz)
@@ -66,7 +66,7 @@ Im folgenden Beispiel wird eine `Account`-Klasse definiert, die den Zugriff auf 
 
 Weitere Informationen finden Sie im Abschnitt [Die lock-Anweisung](~/_csharplang/spec/statements.md#the-lock-statement) der [C#-Sprachspezifikation](~/_csharplang/spec/introduction.md).
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Threading.Monitor?displayProperty=nameWithType>
 - <xref:System.Threading.SpinLock?displayProperty=nameWithType>

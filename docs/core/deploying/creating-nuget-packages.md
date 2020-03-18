@@ -5,10 +5,10 @@ author: cartermp
 ms.date: 06/20/2016
 ms.technology: dotnet-cli
 ms.openlocfilehash: 3f8e75a501cfc48e1c416f71e91290cab1a4ffae
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "76920921"
 ---
 # <a name="how-to-create-a-nuget-package-with-the-net-core-cli"></a>Erstellen eines NuGet-Pakets mit der .NET Core-CLI
@@ -66,6 +66,6 @@ Jetzt haben Sie die erforderlichen Dateien zum Veröffentlichen eines NuGet-Pake
 
 Es ist wichtig zu beachten, dass zu keinem Zeitpunkt der Befehl `dotnet publish` beteiligt ist. Der Befehl `dotnet publish` dient der Bereitstellung von Clientanwendungen mit allen Abhängigkeiten im gleichen Paket – nicht für das Generieren eines NuGet-Pakets, das über NuGet verteilt und genutzt wird.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Schnellstart: Erstellen und Veröffentlichen eines Pakets](/nuget/quickstart/create-and-publish-a-package-using-the-dotnet-cli)

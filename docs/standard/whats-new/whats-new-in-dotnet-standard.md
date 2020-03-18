@@ -5,10 +5,10 @@ ms.custom: updateeachrelease
 ms.date: 04/12/2018
 ms.technology: dotnet-standard
 ms.openlocfilehash: a90df0360211c3b02f4f2d8697890180099c5807
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "76921058"
 ---
 # <a name="whats-new-in-the-net-standard"></a>Neuerungen im .NET Standard
@@ -69,7 +69,7 @@ Wenn Sie Visual Studio mit der Workload für die **plattformübergreifende .NET 
 
 <!-- markdownlint-disable MD025 -->
 
-# <a name="ctabcsharp"></a>[C#](#tab/csharp)
+# <a name="c"></a>[C#](#tab/csharp)
 
 ![Hinzufügen eines .NET Standard-Bibliotheksprojekts](./media/std-project-cs.png)
 
@@ -79,7 +79,7 @@ Wenn Sie die .NET Core-CLI verwenden, erstellt der folgende [dotnet new](../../c
 dotnet new classlib
 ```
 
-# <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb)
+# <a name="visual-basic"></a>[Visual Basic](#tab/vb)
 
 ![Hinzufügen eines .NET Standard-Bibliotheksprojekts](./media/std-project-vb.png)
 
@@ -91,7 +91,7 @@ dotnet new classlib -lang vb
 
 ---
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [.NET-Standard](../net-standard.md)
 - [Introducing .NET Standard (Einführung in .NET Standard)](https://devblogs.microsoft.com/dotnet/introducing-net-standard/)

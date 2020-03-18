@@ -3,10 +3,10 @@ title: Übersicht
 ms.date: 12/13/2019
 description: Eine Übersicht über Microsoft.Data.Sqlite
 ms.openlocfilehash: e84c68f0615f187e8dea7ab87ac917c0ad796a1c
-ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/21/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "77543598"
 ---
 # <a name="microsoftdatasqlite-overview"></a>Übersicht über Microsoft.Data.Sqlite
@@ -37,7 +37,7 @@ Diese Bibliothek implementiert die allgemeinen ADO.NET-Abstraktionen für Verbin
 
 [!code-csharp[](../../../../samples/snippets/standard/data/sqlite/HelloWorldSample/Program.cs?name=snippet_HelloWorld)]
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 * [Verbindungszeichenfolgen](connection-strings.md)
 * [API-Referenz](/dotnet/api/?view=msdata-sqlite-3.0)

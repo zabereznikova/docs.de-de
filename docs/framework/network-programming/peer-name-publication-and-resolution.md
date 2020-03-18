@@ -3,10 +3,10 @@ title: Peernamenveröffentlichung und -auflösung
 ms.date: 03/30/2017
 ms.assetid: f0370e08-9fa6-4ee5-ab78-9a58a20a7da2
 ms.openlocfilehash: 4a0787972a61f5700d1e8728be96db8ef9ee749e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "64623199"
 ---
 # <a name="peer-name-publication-and-resolution"></a>Peernamenveröffentlichung und -auflösung
@@ -47,6 +47,6 @@ Der anfordernde Peer wiederholt diesen Vorgang mit aufeinanderfolgenden Iteratio
   
  Innerhalb des <xref:System.Net.PeerToPeer>-Namespaces besteht eine m:n-Beziehung zwischen den <xref:System.Net.PeerToPeer.PeerName>- Datensätzen, die Endpunkte enthalten, und den PNRP-Clouds oder -Meshs, in denen sie kommunizieren. Bei doppelten oder veralteten Einträgen sowie bei mehreren Knoten mit demselben Peernamen können PNRP-Knoten aktuelle Informationen mithilfe der <xref:System.Net.PeerToPeer.PeerNameResolver>-Klasse abrufen. Die <xref:System.Net.PeerToPeer.PeerNameResolver>-Methoden verwenden einen einzelnen Peernamen, um die Perspektive für die Peernamendatensätze und Clouds auf eine 1:n-Beziehung zu vereinfachen. Diese Methode ähnelt einer Abfrage, die mit einer relationalen Tabellenverknüpfung ausgeführt wird. Nach erfolgreichem Abschluss gibt das Resolverobjekt eine <xref:System.Net.PeerToPeer.PeerNameRecordCollection> für den angegebenen Peernamen zurück.  Ein Peername kommt z.B. in allen Peernamendatensätzen der Sammlung nach Cloud geordnet vor. Dies sind die Instanzen des Peernamens, dessen Daten von einer PNRP-basierten Anwendung angefordert werden können.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Net.PeerToPeer>

@@ -12,10 +12,10 @@ helpviewer_keywords:
 - common language runtime, exceptions
 ms.assetid: f99a1d29-a2a8-47af-9707-9909f9010735
 ms.openlocfilehash: 8e78b2a8d7a815637e143eeb88bcfb51ded33771
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75741358"
 ---
 # <a name="handling-and-throwing-exceptions-in-net"></a>Behandeln und Auslösen von Ausnahmen in .NET
@@ -56,15 +56,15 @@ In der folgenden Tabelle sind einige allgemeine Ausnahmen sowie Beispiele aufgef
 | <xref:System.ArgumentNullException> | Wird von Methoden ausgelöst, bei denen ein Argument nicht gleich NULL sein darf. | `String s = null;` <br /> `"Calculate".IndexOf(s);`|
 | <xref:System.ArgumentOutOfRangeException> | Wird von Methoden ausgelöst, die überprüfen, ob Argumente in einem angegebenen Bereich liegen. | `String s = "string";` <br /> `s.Substring(s.Length+1);` |
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Exception-Klasse und Exception-Eigenschaften](exception-class-and-properties.md)
-- [Vorgehensweise: Verwenden des Try-Catch-Blocks zum Abfangen von Ausnahmen](how-to-use-the-try-catch-block-to-catch-exceptions.md)
-- [Vorgehensweise: Verwenden spezifischer Ausnahmen in einem Catch-Block](how-to-use-specific-exceptions-in-a-catch-block.md)
+- [Gewusst wie: Verwenden des Try-Catch-Blocks zum Abfangen von Ausnahmen](how-to-use-the-try-catch-block-to-catch-exceptions.md)
+- [Gewusst wie: Verwenden spezifischer Ausnahmen in einem Catch-Block](how-to-use-specific-exceptions-in-a-catch-block.md)
 - [Vorgehensweise: Explizites Auslösen von Ausnahmen](how-to-explicitly-throw-exceptions.md)
-- [Vorgehensweise: Erstellen benutzerdefinierter Ausnahmen](how-to-create-user-defined-exceptions.md)
+- [Gewusst wie: Erstellen benutzerdefinierter Ausnahmen](how-to-create-user-defined-exceptions.md)
 - [Verwenden benutzergefilterter Ausnahmehandler](using-user-filtered-exception-handlers.md)
-- [Vorgehensweise: Verwenden von Finally-Blöcken](how-to-use-finally-blocks.md)
+- [Gewusst wie: Verwenden von Finally-Blöcken](how-to-use-finally-blocks.md)
 - [Behandeln von COM-Interop-Ausnahmen](handling-com-interop-exceptions.md)
 - [Bewährte Methoden für Ausnahmen](best-practices-for-exceptions.md)
 - [What Every Dev needs to Know About Exceptions in the Runtime (Was jeder Entwickler über Ausnahmen in der Runtime wissen sollte)](https://github.com/dotnet/runtime/blob/master/docs/design/coreclr/botr/exceptions.md)

@@ -4,12 +4,12 @@ description: Erfahren Sie mehr über die Konzepte von Komponententests in C# und
 author: ncarandini
 ms.author: wiwagn
 ms.date: 09/08/2017
-ms.openlocfilehash: 1b21e961ffceb3fce2697ad3254e79ed258aaa1a
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: bd7891243d84277a7578089f8b4629ff5bada577
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78157336"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78240908"
 ---
 # <a name="unit-testing-c-with-mstest-and-net-core"></a>Komponententests für C# mit MSTest und .NET Core
 
@@ -59,7 +59,7 @@ Erstellen Sie als Nächstes das Verzeichnis *PrimeService.Tests*. Die folgende G
     /PrimeService.Tests
 ```
 
-Machen Sie das *PrimeService.Tests*-Verzeichnis zum aktuellen Verzeichnis, und erstellen Sie ein neues Projekt mit [`dotnet new mstest`](../tools/dotnet-new.md). Der neue dotnet-Befehl erstellt ein Testprojekt, das MSTest als Testbibliothek verwendet. Die generierte Vorlage konfiguriert das Testprogramm in der Datei *PrimeServiceTests.csproj*:
+Stellen Sie das *PrimeService.Tests*-Verzeichnis als aktuelles Verzeichnis ein, und erstellen Sie ein neues Projekt mit [`dotnet new mstest`](../tools/dotnet-new.md). Der neue dotnet-Befehl erstellt ein Testprojekt, das MSTest als Testbibliothek verwendet. Die generierte Vorlage konfiguriert das Testprogramm in der Datei *PrimeServiceTests.csproj*:
 
 ```xml
 <ItemGroup>
@@ -69,7 +69,7 @@ Machen Sie das *PrimeService.Tests*-Verzeichnis zum aktuellen Verzeichnis, und e
 </ItemGroup>
 ```
 
-Für das Testprojekt sind weitere Pakete zum Erstellen und Ausführen von Unittests erforderlich. `dotnet new` hat im vorherigen Schritt MSTest-SDK, MSTest-Testframework und MSTest-Runner hinzugefügt. Fügen Sie jetzt die `PrimeService`-Klassenbibliothek als weitere Abhängigkeit zum Projekt hinzu. Verwenden Sie den Befehl [`dotnet add reference`](../tools/dotnet-add-reference.md):
+Für das Testprojekt sind weitere Pakete zum Erstellen und Ausführen von Unittests erforderlich. `dotnet new` hat im vorherigen Schritt MSTest-SDK, MSTest-Testframework und MSTest-Runner hinzugefügt. Fügen Sie jetzt die `PrimeService`-Klassenbibliothek als eine andere Abhängigkeit zum Projekt hinzu. Verwenden Sie den Befehl [`dotnet add reference`](../tools/dotnet-add-reference.md):
 
 ```dotnetcli
 dotnet add reference ../PrimeService/PrimeService.csproj
@@ -148,7 +148,7 @@ Nachdem Sie dafür gesorgt haben, dass ein Test erfolgreich verläuft, schreiben
 
 Statt neue Tests zu erstellen, wenden Sie diese beiden Attribute zum Erstellen eines einzelnen datengesteuerten Tests an. Bei dem datengesteuerten Test handelt es sich um eine Methode, die mehrere Werte unter zwei als niedrigste Primzahl testet:
 
-[!code-csharp[Sample_TestCode](../../../samples/core/getting-started/unit-testing-using-mstest/PrimeService.Tests/PrimeService_IsPrimeShould.cs?name=Sample_TestCode)]
+[!code-csharp[Sample_TestCode](../../../samples/snippets/core/testing/unit-testing-using-mstest/csharp/PrimeService.Tests/PrimeService_IsPrimeShould.cs?name=Sample_TestCode)]
 
 Führen Sie `dotnet test` aus und zwei dieser Tests schlagen fehl. Sie müssen die `if`-Klausel am Anfang der Methode ändern, damit alle Tests erfolgreich sind:
 
@@ -160,7 +160,7 @@ Wiederholen Sie den Vorgang, indem Sie weitere Tests, Theorien und Code in der H
 
 Sie haben eine kleine Bibliothek und eine Reihe von Unittests für diese Bibliothek erstellt. Sie haben die Projektmappe so strukturiert, dass das Hinzufügen neuer Pakete und Tests Teil des normalen Workflows ist. Sie haben den Großteil Ihrer Zeit und Ihres Aufwands mit der Erreichung der Anwendungsziele verbracht.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:Microsoft.VisualStudio.TestTools.UnitTesting>
 - [Verwenden des MSTest-Frameworks in Komponententests](/visualstudio/test/using-microsoft-visualstudio-testtools-unittesting-members-in-unit-tests)

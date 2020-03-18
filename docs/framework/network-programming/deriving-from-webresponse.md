@@ -5,10 +5,10 @@ helpviewer_keywords:
 - Deriving from WebResponse
 ms.assetid: f11d4866-a199-4087-9306-a5a4c18b13db
 ms.openlocfilehash: bd06928b08eb085ef13371687fb1e5b92c6c1d86
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "71048580"
 ---
 # <a name="deriving-from-webresponse"></a>Ableiten von WebResponse
@@ -38,10 +38,10 @@ Die <xref:System.Net.WebResponse>-Klasse ist eine abstrakte Basisklasse, die die
   
  Die von der **GetResponseStream**-Methode zurückgegebene Streaminstanz ist im Besitz der Anwendung und kann geschlossen werden, ohne **WebResponse** zu schließen. Konventionsgemäß wird durch Aufrufen der **WebResponse.Close**-Methode auch der von **GetResponse** zurückgegebene Datenstrom geschlossen.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Net.WebResponse>
 - <xref:System.Net.HttpWebResponse>
 - <xref:System.Net.FileWebResponse>
-- [Programmieren austauschbarer Protokolle](programming-pluggable-protocols.md)
+- [Programming Pluggable Protocols (Programmieren austauschbarer Protokolle)](programming-pluggable-protocols.md)
 - [Deriving from WebRequest (Ableiten von WebRequest)](deriving-from-webrequest.md)

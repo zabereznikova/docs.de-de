@@ -7,10 +7,10 @@ dev_langs:
 - vb
 ms.custom: vs-dotnet
 ms.openlocfilehash: 4eb75f23359334ea483cba1498f1804c4b24c80c
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "76920458"
 ---
 # <a name="consume-a-net-standard-library-in-visual-studio"></a>Verwenden einer .NET Standard-Bibliothek in Visual Studio
@@ -44,11 +44,11 @@ Ebenso wie Sie unter [Testen einer .NET Standard-Bibliothek in Visual Studio](te
 
    ![Visual Studio-Projektkontextmenü zum Festlegen des Startprojekts](./media/consuming-library-with-visual-studio/set-startup-project-context-menu.png)
 
-1. Zunächst hat Ihr Projekt keinen Zugriff auf unsere Klassenbibliothek. Damit es Methoden in Ihrer Klassenbibliothek aufrufen kann, erstellen Sie einen Verweis auf die Klassenbibliothek. Klicken Sie im **Projektmappen-Explorer** mit der rechten Maustaste auf den Knoten **Abhängigkeiten** des `ShowCase`-Projekts, und wählen Sie **Verweis hinzufügen** aus.
+1. Zunächst hat Ihr Projekt keinen Zugriff auf unsere Klassenbibliothek. Damit es Methoden in Ihrer Klassenbibliothek aufrufen kann, erstellen Sie einen Verweis auf die Klassenbibliothek. Klicken Sie im **Projektmappen-Explorer** mit der rechten Maustaste auf den Knoten `ShowCase`Abhängigkeiten**des**-Projekts, und wählen Sie **Verweis hinzufügen** aus.
 
    ![Kontextmenü „Verweis hinzufügen“ in Visual Studio](./media/consuming-library-with-visual-studio/add-reference-context-menu.png)
 
-1. Wählen Sie im Dialogfeld **Verweis-Manager****StringLibrary**, Ihr Klassenbibliotheksprojekt, aus, und klicken Sie auf die Schaltfläche **OK**.
+1. Wählen Sie im Dialogfeld **Verweis-Manager** **StringLibrary**, Ihr Klassenbibliotheksprojekt, aus, und klicken Sie auf die Schaltfläche **OK**.
 
    ![Dialogfeld „Verweis-Manager“ mit ausgewählter StringLibrary](./media/consuming-library-with-visual-studio/manage-project-references.png)
 

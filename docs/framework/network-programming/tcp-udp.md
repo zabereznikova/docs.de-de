@@ -17,10 +17,10 @@ helpviewer_keywords:
 - Internet, TCP/UDP
 ms.assetid: df29b4b0-49e8-4923-82b9-13150dfc40f5
 ms.openlocfilehash: d35278ab7feb42453b5a0adbc86c47b7ac3ff5ca
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "71047113"
 ---
 # <a name="tcp-udp"></a>TCP-UDP
@@ -32,11 +32,11 @@ Anwendungen können die Dienste Transmission Control Protocol (TCP) und User Dat
   
  Die **UdpClient**-Klasse verwendet ein Array von Bytes zum Speichern des UDP-Datagramms. Verwenden Sie die <xref:System.Net.Sockets.UdpClient.Send%2A>-Methode, um die Daten an das Netzwerk zu senden, und die <xref:System.Net.Sockets.UdpClient.Receive%2A>-Methode, um ein eingehendes Datagramm zu empfangen.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Verwenden von TCP-Diensten](using-tcp-services.md)
 - [Verwenden von UDP-Diensten](using-udp-services.md)
 - [Verwenden von Datenströmen im Netzwerk](using-streams-on-the-network.md)
 - [Verwenden eines asynchronen Serversockets](using-an-asynchronous-server-socket.md)
 - [Verwenden von asynchronen Clientsockets](using-an-asynchronous-client-socket.md)
-- [Verwenden von Anwendungsprotokollen](using-application-protocols.md)
+- [Using Application Protocols (Verwenden von Anwendungsprotokollen)](using-application-protocols.md)

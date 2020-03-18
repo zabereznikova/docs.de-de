@@ -3,10 +3,10 @@ title: Wann sollte .NET Framework für Docker-Container verwendet werden?
 description: .NET Microservicesarchitektur für .NET-Containeranwendungen | Wann sollte .NET Framework für Docker-Container verwendet werden?
 ms.date: 01/30/2020
 ms.openlocfilehash: dfb1e8883fc9c3d9235672bc2885858bfb64afa5
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/20/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77501965"
 ---
 # <a name="when-to-choose-net-framework-for-docker-containers"></a>Wann sollte .NET Framework für Docker-Container verwendet werden?

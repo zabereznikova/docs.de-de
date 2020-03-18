@@ -3,10 +3,10 @@ title: Wichtige Erkenntnisse
 description: Arbeiten Sie die wichtigen Erkenntnisse für den Leitfaden durch.
 ms.date: 02/15/2019
 ms.openlocfilehash: d28739a87e5c7c7e6c9304c36e1ec2a73cf0d0db
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "70295036"
 ---
 # <a name="key-takeaways"></a>Wichtige Erkenntnisse
@@ -24,4 +24,4 @@ ms.locfileid: "70295036"
 - Azure DevOps Services vereinfacht Ihre DevOps-Umgebung erheblich, indem die Bereitstellung aus Ihren CI/CD-Pipelines in Docker-Umgebungen erfolgt. Diese Aussage gilt für einfache Docker-Umgebungen ebenso wie für erweiterte Microservice- und Containerorchestratoren, die auf Azure basieren.
 
 >[!div class="step-by-step"]
->[Vorherige](../run-manage-monitor-docker-environments/monitor-containerized-application-services.md)
+>[Zurück](../run-manage-monitor-docker-environments/monitor-containerized-application-services.md)

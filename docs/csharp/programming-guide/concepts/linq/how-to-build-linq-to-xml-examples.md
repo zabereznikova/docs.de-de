@@ -3,10 +3,10 @@ title: 'Vorgehensweise: Erstellen von LINQ to XML-Beispielen (C#)'
 ms.date: 07/20/2015
 ms.assetid: e5d18fa1-2704-48fe-a44b-1564f97c9e9c
 ms.openlocfilehash: 289a13daed7e3c871156bf50c6fa04c113c0cd13
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/16/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "74141458"
 ---
 # <a name="how-to-build-linq-to-xml-examples-c"></a>Vorgehensweise: Erstellen von LINQ to XML-Beispielen (C#)
@@ -34,6 +34,6 @@ using System.Reflection;
 using System.IO.Packaging;  
 ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [LINQ to XML Programming Overview (C#) (Übersicht der LINQ to XML-Programmierung (C#))](./linq-to-xml-overview.md)
+- [Working with XML Namespaces (C#) (Übersicht der LINQ to XML-Programmierung (C#))](./linq-to-xml-overview.md)

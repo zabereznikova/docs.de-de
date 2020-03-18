@@ -3,10 +3,10 @@ title: Verzögerte Ausführung und Auswertung in LINQ to XML (C#)
 ms.date: 07/20/2015
 ms.assetid: 8683d1b4-b7ec-407b-be12-906ebe958a09
 ms.openlocfilehash: 9cf28afb5b7b8b3047c8b1b21915ffe7409eb25e
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "69594570"
 ---
 # <a name="deferred-execution-and-lazy-evaluation-in-linq-to-xml-c"></a>Verzögerte Ausführung und Auswertung in LINQ to XML (C#)
@@ -33,9 +33,9 @@ Abfrage- und Achsenoperationen werden oft so implementiert, dass sie die verzög
   
 - [Beispiel für eine verzögerte Ausführung (C#)](./deferred-execution-example.md)  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Tutorial: Verketten von Abfragen (C#)](./deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)
+- [Tutorial: Chaining Queries Together (C#) (Tutorial: Verketten von Abfragen (C#))](./deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)
 - [Konzepte und Terminologie (funktionale Transformation) (C#)](./concepts-and-terminology-functional-transformation.md)
 - [Aggregation Operations (C#) (Aggregationsvorgänge (C#))](./aggregation-operations.md)
 - [yield](../../../language-reference/keywords/yield.md)

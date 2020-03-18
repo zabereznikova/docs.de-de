@@ -5,10 +5,10 @@ author: ardalis
 ms.author: wiwagn
 ms.date: 06/06/2019
 ms.openlocfilehash: 5587b8b20da8a6801d77b722e9c3326f6e695574
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "73416716"
 ---
 # <a name="azure-hosting-recommendations-for-aspnet-core-web-apps"></a>Empfehlungen für das Hosting mit Azure für ASP.NET Core-Web-Apps
@@ -87,7 +87,7 @@ AKS verringert die Komplexität und den operativen Mehraufwand der Verwaltung ei
 - Selbstheilende gehostete Steuerungsebene (Master)
 - Kosteneinsparungen: Zahlen Sie nur für ausgeführte Agentpoolknoten
 
-Da Azure die Knoten im AKS-Cluster verwaltet, müssen Sie keine Aufgaben wie Clusterupgrades mehr manuell ausführen. Da Azure diese wichtigen Wartungsaufgaben übernimmt, stellt AKS keinen direkten Zugriff (z.B. mit SSH) auf den Cluster bereit.
+Da die Verwaltung der Knoten im AKS-Cluster durch Azure erfolgt, müssen Sie viele Aufgaben, z.B. Clusterupgrades, nicht mehr manuell ausführen. Da Azure diese wichtigen Wartungsaufgaben übernimmt, stellt AKS keinen direkten Zugriff (z.B. mit SSH) auf den Cluster bereit.
 
 Teams, die AKS nutzen, können auch von Azure Dev Spaces profitieren. Azure Dev Spaces ermöglicht es Teams, direkt mit der gesamten in AKS ausgeführten Microservicearchitektur oder Anwendung zu arbeiten – so können sich die Teams ganz auf die Entwicklung und schnelle Iteration ihrer Microserviceanwendung konzentrieren. Azure Dev Spaces bietet auch die Möglichkeit, Teile einer Microservicearchitektur unabhängig und isoliert zu aktualisieren, ohne dass dies sich auf den Rest des AKS-Clusters oder andere Entwickler auswirkt.
 
@@ -110,7 +110,7 @@ Wenn Sie über eine Anwendung verfügen, deren Ausführung in App Service umfass
 
 Individuelle logische Prozesse, die von der übrigen Anwendung entkoppelt werden können, lassen sich „serverlos“ in Azure Functions bereitstellen. Azure Functions ermöglicht Ihnen, Code für ein bestimmtes Problem zu schreiben, und zwar unabhängig von der Anwendung oder Infrastruktur zum Ausführen dieses Codes. Sie können aus einer Vielzahl von Programmiersprachen wie C\#, F\#, Node.js, Python und PHP die produktivste für die jeweilige Aufgabe auswählen. Wie bei den meisten cloudbasierten Lösungen zahlen Sie nur für den Zeitraum, in dem Sie das Angebot nutzen, und Sie können darauf vertrauen, dass Azure Functions je nach Bedarf eine zentrale Hochskalierung vornimmt.
 
-## <a name="data"></a>Daten
+## <a name="data"></a>Data
 
 Azure bietet ein Vielzahl von Optionen für das Speichern von Daten, sodass Ihre Anwendung den entsprechenden Datenanbieter für die jeweiligen Daten verwenden kann.
 
@@ -154,4 +154,4 @@ Abbildung 11-1 zeigt ein Beispiel einer Referenzarchitektur. Dieses Diagramm bes
   <https://docs.microsoft.com/azure/aks/intro-kubernetes>
 
 >[!div class="step-by-step"]
->[Vorherige](development-process-for-azure.md)
+>[Zurück](development-process-for-azure.md)

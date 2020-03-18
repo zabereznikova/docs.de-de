@@ -9,10 +9,10 @@ helpviewer_keywords:
 - threading [.NET Framework], cross-process synchronization
 ms.assetid: 9dd06e25-12c0-4a9e-855a-452dc83803e2
 ms.openlocfilehash: 874f879697db0b47c73626350eeb05a01b38e1bc
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73127553"
 ---
 # <a name="mutexes"></a>Mutexe
@@ -47,7 +47,7 @@ Sie können ein <xref:System.Threading.Mutex>-Objekt verwenden, um exklusiven Zu
   
  Informationen zur sicheren Zugriffssteuerung für Mutexe finden Sie in den Artikeln zu <xref:System.Security.AccessControl.MutexSecurity>- und <xref:System.Security.AccessControl.MutexAccessRule>-Klasse, der <xref:System.Security.AccessControl.MutexRights>-Enumeration, der <xref:System.Threading.Mutex.GetAccessControl%2A>-, <xref:System.Threading.Mutex.SetAccessControl%2A>- und <xref:System.Threading.Mutex.OpenExisting%2A>-Methode der <xref:System.Threading.Mutex>-Klasse und dem <xref:System.Threading.Mutex.%23ctor%28System.Boolean%2CSystem.String%2CSystem.Boolean%40%2CSystem.Security.AccessControl.MutexSecurity%29>-Konstruktor.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Threading.Mutex?displayProperty=nameWithType>
 - <xref:System.Threading.Mutex.%23ctor%2A?displayProperty=nameWithType>

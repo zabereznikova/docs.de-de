@@ -16,10 +16,10 @@ helpviewer_keywords:
 - culture parameter
 ms.assetid: 822d551c-c69a-4191-82f4-183d82c9179c
 ms.openlocfilehash: 7b2dee03619e24c5a2845699a06e88abab0c594b
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78160130"
 ---
 # <a name="performing-culture-insensitive-case-changes"></a>Durchführen kulturunabhängiger Schreibungsänderungen
@@ -65,7 +65,7 @@ static object LookupKey(string key)
 ## <a name="using-the-chartoupper-and-chartolower-methods"></a>Verwenden der Char.ToUpper-Methode und der Char.ToLower-Methode  
  Obwohl die `Char.ToUpper`-Methode und die `Char.ToLower`-Methode über die gleichen Eigenschaften wie die `String.ToUpper`-Methode und die `String.ToLower`-Methode verfügen, sind nur die Kulturen Türkisch (Türkei) und Aserbaidschanisch (lateinisch, Aserbaidschan) betroffen. Hierbei handelt es sich um die beiden einzigen Kulturen mit Unterschieden in der Groß-/Kleinschreibung für ein einzelnes Zeichen. Weitere Informationen über diese Besonderheit bei der Groß-/Kleinschreibung finden Sie im Abschnitt "Groß-/Kleinschreibung" im Thema zur <xref:System.String>-Klasse. Aus Gründen der Übersichtlichkeit des Codes empfiehlt es sich, immer die Überladungen dieser Methoden zu verwenden, bei denen ein `culture`-Parameter explizit festgelegt werden kann.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.String.ToUpper%2A?displayProperty=nameWithType>
 - <xref:System.String.ToLower%2A?displayProperty=nameWithType>

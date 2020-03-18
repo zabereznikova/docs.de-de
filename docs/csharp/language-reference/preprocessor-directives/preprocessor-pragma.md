@@ -7,10 +7,10 @@ helpviewer_keywords:
 - '#pragma directive [C#]'
 ms.assetid: 5b7944cd-d402-46a1-ad8f-feffb2d83673
 ms.openlocfilehash: 3bd62364aeae0f21715711324655ef7d00d88afc
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75712454"
 ---
 # <a name="pragma-c-reference"></a>#pragma (C#-Referenz)
@@ -33,7 +33,7 @@ ms.locfileid: "75712454"
  `pragma-arguments`  
  Pragma-spezifische Argumente.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [C#-Referenz](../index.md)
 - [C#-Programmierhandbuch](../../programming-guide/index.md)

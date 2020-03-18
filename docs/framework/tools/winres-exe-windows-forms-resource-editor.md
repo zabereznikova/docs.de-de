@@ -12,10 +12,10 @@ helpviewer_keywords:
 - .resx files
 ms.assetid: cb8bc835-9221-4888-af53-1a4f5fad6c48
 ms.openlocfilehash: 2cfb2d9874b34eef78fe462e0270fd70307a9f61
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75715708"
 ---
 # <a name="winresexe-windows-resource-localization-editor"></a>„Winres.exe“ (Windows-Ressourcenlokalisierungs-Editor)
@@ -88,11 +88,11 @@ Mithilfe der endgültigen Versionen der Kulturressourcendateien können lokalisi
 
 Sie sollten die Version von „Winres.exe“ verwenden, die mit der von Ihnen verwendeten Version von .NET Framework veröffentlicht wurde. In der folgenden Tabelle werden die kompatiblen Versionen aufgeführt:
 
-|Visual Studio|.NET Framework|Winres.exe|
+|Visual Studio|.NET Framework|Winres.exe|
 |-------------------|--------------------|----------------|
-|Visual Studio .NET 2002|1.0|1.0|
-|Visual Studio .NET 2003|1.1|1.1|
-|Visual Studio 2005|2.0|2.0|
+|Visual Studio .NET 2002|1,0|1,0|
+|Visual Studio .NET 2003|1,1|1,1|
+|Visual Studio 2005|2,0|2,0|
 |Visual Studio 2008|3.0 und 3.5|3.0 und 3.5|
 |Visual Studio 2010|4.0|4.0|
 |Visual Studio 2017|4.6|4.6|
@@ -108,7 +108,7 @@ Sie sollten die Version von „Winres.exe“ verwenden, die mit der von Ihnen ve
 
 2. Um die Standardressourcen für ein zu lokalisierendes Formular zu öffnen, klicken Sie im Menü **Datei** auf den Befehl **Öffnen**, und navigieren Sie zu der zu öffnenden Datei.
 
-     - oder -
+     \- oder -
 
      Geben Sie die zu öffnende Datei beim Starten von "Winres.exe" in der Befehlszeile an.
 
@@ -135,7 +135,7 @@ Sie sollten die Version von „Winres.exe“ verwenden, die mit der von Ihnen ve
 
    Die Datei wird gespeichert, wobei die Benennungskonvention verwendet wird, die die Laufzeit für lokalisierte Ressourcendateien erwartet. Wenn Sie beispielsweise `TestApp.resources` für Deutsch (Deutschland) lokalisieren, speichert das Tool die Datei als `TestApp.de-DE.resources`. Wenn Sie `TestApp.resx` für Deutsch (Deutschland) lokalisieren, speichert das Tool die Datei als `TestApp.de-DE.resx`. Weitere Informationen zu Benennungskonventionen für Ressourcen finden Sie unter [Verpacken und Bereitstellen von Ressourcen](../resources/packaging-and-deploying-resources-in-desktop-apps.md). Eine Liste der von der Runtime verwendeten vordefinierten Kulturnamen finden Sie unter der Klasse <xref:System.Globalization.CultureInfo>.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.ComponentModel.LocalizableAttribute>
 - <xref:System.Globalization.CultureInfo>

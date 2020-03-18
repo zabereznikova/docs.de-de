@@ -3,10 +3,10 @@ title: .NET Core Runtime-ID-Katalog (RID)
 description: Erfahren Sie mehr über die Runtime-ID (RID) und wie RIDs in .NET Core verwendet werden.
 ms.date: 02/22/2019
 ms.openlocfilehash: feb19632f16a047ecfb2dcb697a9b837824a1929
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/19/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77451732"
 ---
 # <a name="net-core-rid-catalog"></a>.NET Core-RID-Katalog
@@ -27,9 +27,9 @@ Eine einzelne RID kann im `<RuntimeIdentifier>`-Element Ihrer Projektdatei festg
 
 RIDs, die konkrete Betriebssysteme darstellen, weisen in der Regel folgendes Muster auf: `[os].[version]-[architecture]-[additional qualifiers]`, wobei:
 
-- `[os]` ist der Moniker des Betriebs-/Plattformsystems. Beispielsweise `ubuntu`.
+- `[os]` ist der Moniker des Betriebs-/Plattformsystems. Beispiel: `ubuntu`.
 
-- `[version]` ist die Version des Betriebssystems in Form einer durch Punkte getrennten (`.`) Versionsnummer. Beispielsweise `15.10`.
+- `[version]` ist die Version des Betriebssystems in Form einer durch Punkte getrennten (`.`) Versionsnummer. Beispiel: `15.10`.
 
   - Die Version sollte **keine** Marketingversion sein, da diese häufig mehrere separate Versionen des Betriebssystems mit unterschiedlichen Plattform-API-Oberflächen darstellt.
 
@@ -147,6 +147,6 @@ Relative IDs für macOS verwenden das ältere Branding „OSX“. Nur allgemeine
 
 Weitere Informationen finden Sie unter [.NET Core-Abhängigkeiten und -Anforderungen](install/dependencies.md?pivots=os-macos).
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Runtime-IDs](https://github.com/dotnet/runtime/blob/master/src/libraries/pkg/Microsoft.NETCore.Platforms/readme.md)

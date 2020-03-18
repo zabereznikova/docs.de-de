@@ -5,10 +5,10 @@ helpviewer_keywords:
 - new constraint keyword [C#]
 ms.assetid: 58850b64-cb97-4136-be50-1f3bc7fc1da9
 ms.openlocfilehash: cd67aeb82d736b8941b0637494089723e7815505
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75713353"
 ---
 # <a name="new-constraint-c-reference"></a>new-Einschränkung (C#-Referenz)
@@ -31,7 +31,7 @@ Sie können das Schlüsselwort `new` auch verwenden, um [eine Instanz eines Typs
 
 Weitere Informationen finden Sie im Abschnitt [Einschränkungen für Typparameter](~/_csharplang/spec/classes.md#type-parameter-constraints) der [C#-Sprachspezifikation](~/_csharplang/spec/introduction.md).
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [C#-Referenz](../../language-reference/index.md)
 - [C#-Programmierhandbuch](../../programming-guide/index.md)

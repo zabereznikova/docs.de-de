@@ -4,10 +4,10 @@ description: Erfahren Sie, wie Sie eine in C# oder Visual Basic geschriebene .NE
 ms.date: 12/09/2019
 ms.custom: vs-dotnet
 ms.openlocfilehash: 748a1499e0c3a4a41613a69b715dbcfbd585bfe3
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75714021"
 ---
 # <a name="build-a-net-standard-library-in-visual-studio"></a>Erstellen einer .NET Standard-Bibliothek in Visual Studio
@@ -42,7 +42,7 @@ So erstellen Sie eine leere Projektmappe:
 
 <!-- markdownlint-disable MD025 -->
 
-# <a name="ctabcsharp"></a>[C#](#tab/csharp)
+# <a name="c"></a>[C#](#tab/csharp)
 
 1. Fügen Sie der Projektmappe ein neues C# .NET Standard-Klassenbibliotheksprojekt mit dem Namen „StringLibrary“ hinzu.
 
@@ -64,7 +64,7 @@ So erstellen Sie eine leere Projektmappe:
 
 1. Wählen Sie auf der Menüleiste **Erstellen** > **Projektmappe erstellen** aus.
 
-# <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb)
+# <a name="visual-basic"></a>[Visual Basic](#tab/vb)
 
 1. Fügen Sie der Projektmappe ein neues Visual Basic .NET Standard-Klassenbibliotheksprojekt mit dem Namen „StringLibrary“ hinzu.
 

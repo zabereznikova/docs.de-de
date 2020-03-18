@@ -8,10 +8,10 @@ helpviewer_keywords:
 - running .NET Framework tools
 ms.assetid: a2ca532d-91f7-426a-9303-417c2ee1247c
 ms.openlocfilehash: 4503e2cff18f4aa901d20c76cfe4076a7fed3600
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75715764"
 ---
 # <a name="net-framework-tools"></a>.NET Framework-Tools

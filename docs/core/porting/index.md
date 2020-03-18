@@ -4,10 +4,10 @@ description: Verstehen Sie den Portiervorgang und entdecken Sie Tools, die Ihnen
 author: cartermp
 ms.date: 10/22/2019
 ms.openlocfilehash: e483bb6e48dad6c3bf71bfa81e704a137fc02094
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/14/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75937316"
 ---
 # <a name="overview-of-porting-from-net-framework-to-net-core"></a>Übersicht über das Portieren von .NET Framework zu .NET Core
@@ -33,7 +33,7 @@ Die folgende Vorgehensweise wird empfohlen, um Ihr Projekt zu .NET Core zu porti
 
    Dieses Tool ähnelt Portability Analyzer, analysiert jedoch nicht, ob Code in .NET Core kompiliert werden kann, sondern ob Sie eine API auf eine Weise verwenden, die zur Laufzeit eine <xref:System.PlatformNotSupportedException> auslöst. Wenn Sie von .NET Framework 4.7.2 oder höher wechseln, ist dies zwar nicht häufig der Fall, aber eine Überprüfung ist dennoch eine gute Idee. Weitere Informationen zu APIs, die Ausnahmen in .NET Core auslösen, finden Sie unter [APIs, die grundsätzlich Ausnahmen in .NET Core auslösen](../compatibility/unsupported-apis.md).
 
-4. Konvertieren Sie alle `packages.config`-Abhängigkeiten mit dem [Konvertierungstool in Visual Studio](/nuget/consume-packages/migrate-packages-config-to-package-reference) in das [PackageReference](/nuget/consume-packages/package-references-in-project-files)-Format.
+4. Konvertieren Sie alle `packages.config`-Abhängigkeiten mit dem [Konvertierungstool in Visual Studio](/nuget/consume-packages/package-references-in-project-files) in das [PackageReference](/nuget/consume-packages/migrate-packages-config-to-package-reference)-Format.
 
    Zu diesem Schritt gehört auch die Konvertierung von Abhängigkeiten aus dem `packages.config`-Legacyformat. `packages.config` funktioniert in .NET Core nicht, daher ist diese Konvertierung notwendig, wenn Paketabhängigkeiten vorhanden sind.
 

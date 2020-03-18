@@ -6,10 +6,10 @@ helpviewer_keywords:
 - constants [C#]
 ms.assetid: 1fb39621-1738-49b1-a1b3-8587f109123f
 ms.openlocfilehash: 85f6684617b893bdd85eb5b530aa2481941fbc5d
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77093551"
 ---
 # <a name="constants-c-programming-guide"></a>Konstanten (C#-Programmierhandbuch)
@@ -19,7 +19,7 @@ Konstanten sind unveränderliche Werte, die zur Kompilierzeit bekannt sind und s
   
  Der Enumerationstyp ermöglicht Ihnen das Definieren benannter Konstanten für ganzzahlige integrierte Typen (z.B. `int`, `uint`, `long` usw.). Weitere Informationen finden Sie unter [enum](../../language-reference/builtin-types/enum.md).  
   
- Konstanten müssen initialisiert werden, wenn sie deklariert werden. Zum Beispiel:  
+ Konstanten müssen initialisiert werden, wenn sie deklariert werden. Beispiel:  
   
  [!code-csharp[csProgGuideObjects#64](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#64)]  
   
@@ -32,24 +32,24 @@ Konstanten sind unveränderliche Werte, die zur Kompilierzeit bekannt sind und s
   
  [!code-csharp[csProgGuideObjects#65](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#65)]  
   
- Der Ausdruck, mit dem eine Konstante initialisiert wird, kann auf eine andere Konstante verweisen, wenn dadurch kein Zirkelverweis entsteht. Zum Beispiel:  
+ Der Ausdruck, mit dem eine Konstante initialisiert wird, kann auf eine andere Konstante verweisen, wenn dadurch kein Zirkelverweis entsteht. Beispiel:  
   
  [!code-csharp[csProgGuideObjects#66](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#66)]  
   
  Konstanten können als [public](../../language-reference/keywords/public.md), [private](../../language-reference/keywords/private.md), [protected](../../language-reference/keywords/protected.md), [internal](../../language-reference/keywords/internal.md), [protected internal](../../language-reference/keywords/protected-internal.md) oder [private protected](../../language-reference/keywords/private-protected.md) markiert werden. Diese Zugriffsmodifizierer definieren, wie Benutzer der Klasse auf die Konstante zugreifen können. Weitere Informationen finden Sie unter [Zugriffsmodifizierer](./access-modifiers.md).  
   
- Auf Konstanten wird zugegriffen, als wären sie [statische](../../language-reference/keywords/static.md) Felder, da der Wert der Konstante für alle Instanzen des Typs identisch ist. Sie verwenden nicht das `static`-Schlüsselwort, um sie zu deklarieren. Ausdrücke, die nicht in der Klasse enthalten sind, die die Konstante definiert, müssen den Klassennamen, einen Punkt und den Namen der Konstante verwenden, um auf die Konstante zuzugreifen. Zum Beispiel:  
+ Auf Konstanten wird zugegriffen, als wären sie [statische](../../language-reference/keywords/static.md) Felder, da der Wert der Konstante für alle Instanzen des Typs identisch ist. Sie verwenden nicht das `static`-Schlüsselwort, um sie zu deklarieren. Ausdrücke, die nicht in der Klasse enthalten sind, die die Konstante definiert, müssen den Klassennamen, einen Punkt und den Namen der Konstante verwenden, um auf die Konstante zuzugreifen. Beispiel:  
   
  [!code-csharp[csProgGuideObjects#67](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#67)]  
   
 ## <a name="c-language-specification"></a>C#-Programmiersprachenspezifikation  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [C#-Programmierhandbuch](../index.md)
 - [Klassen und Strukturen](./index.md)
 - [Eigenschaften](./properties.md)
 - [Typen](../types/index.md)
 - [readonly](../../language-reference/keywords/readonly.md)
-- [Unveränderlichkeit in C#, Teil 1: Arten von Unveränderlichkeit](https://docs.microsoft.com/archive/blogs/ericlippert/immutability-in-c-part-one-kinds-of-immutability)
+- [Immutability in C# Part One: Kinds of Immutability (Unveränderlichkeit in C# Teil eins: Arten von Unveränderlichkeit)](https://docs.microsoft.com/archive/blogs/ericlippert/immutability-in-c-part-one-kinds-of-immutability)

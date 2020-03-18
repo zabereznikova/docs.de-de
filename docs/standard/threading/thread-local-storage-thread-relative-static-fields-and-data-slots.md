@@ -1,5 +1,5 @@
 ---
-title: 'Threadlokaler Speicher: Threadbezogene statische Felder und Datenslots'
+title: 'Lokaler Threadspeicher: Threadbezogene statische Felder und Datenslots'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -9,13 +9,13 @@ helpviewer_keywords:
 - TLS
 ms.assetid: c633a4dc-a790-4ed1-96b5-f72bd968b284
 ms.openlocfilehash: b5a7c4b78f8599f64aa11f1c98c033866e582933
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73127521"
 ---
-# <a name="thread-local-storage-thread-relative-static-fields-and-data-slots"></a>Threadlokaler Speicher: Threadbezogene statische Felder und Datenslots
+# <a name="thread-local-storage-thread-relative-static-fields-and-data-slots"></a>Lokaler Threadspeicher: Threadbezogene statische Felder und Datenslots
 Sie können verwalteten lokalen Threadspeicher (TLS, Thread Local Storage) zum Speichern von Daten verwenden, die für einen Thread und die Anwendungsdomäne eindeutig sind. .NET Framework bietet zwei Möglichkeiten zur Verwendung von verwaltetem TLS: threadbezogene statische Felder und Datenslots.  
   
 - Verwenden Sie threadbezogene statische Felder (threadbezogene `Shared`-Felder in Visual Basic), wenn Sie Ihre Anforderungen zum Zeitpunkt der Kompilierung exakt bestimmen können. Threadbezogene statische Felder bieten die beste Leistung. Außerdem bieten sie Ihnen die Vorteile der Typüberprüfung zur Kompilierzeit.  
@@ -55,7 +55,7 @@ Sie können verwalteten lokalen Threadspeicher (TLS, Thread Local Storage) zum S
   
  Benannte Slots sind praktisch, da Sie den Slot bei Bedarf abrufen können, indem Sie seinen Namen der <xref:System.Threading.Thread.GetNamedDataSlot%2A>-Methode übergeben, statt einen Verweis auf einen unbenannten Slot beizubehalten. Wenn allerdings eine andere Komponente denselben Namen für ihren threadbezogenen Speicher verwendet, und ein Thread sowohl Code aus Ihrer Komponente als auch der anderen ausführt, könnten die zwei Komponenten sich gegenseitig ihre Daten beschädigen. (Dieses Szenario setzt voraus, dass beide Komponenten in derselben Anwendungsdomäne ausgeführt werden und nicht zur gemeinsamen Nutzung derselben Daten konzipiert sind.)  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.ContextStaticAttribute>
 - <xref:System.Threading.Thread.GetNamedDataSlot%2A?displayProperty=nameWithType>

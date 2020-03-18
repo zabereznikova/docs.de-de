@@ -7,10 +7,10 @@ helpviewer_keywords:
 - Visual C#, compiler options listed by category
 ms.assetid: 96437ecc-6502-4cd3-b070-e9386a298e83
 ms.openlocfilehash: 5cd5607c25dabd8f56ebb58366116666e8e649ea
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "73972707"
 ---
 # <a name="c-compiler-options-listed-by-category"></a>C#-Compileroptionen nach Kategorien sortiert
@@ -96,7 +96,7 @@ Die folgenden Compileroptionen sind nach Kategorien sortiert. Eine alphabetische
 |[-codepage](codepage-compiler-option.md)|Gibt die für alle Quellcodedateien in der Kompilierung die zu verwendende Codepage an.|
 |[-help](help-compiler-option.md)|Listet Compileroptionen in „stdout“ auf.|
 |[-highentropyva](highentropyva-compiler-option.md)|Gibt an, dass die ausführbare Datei Address Space Layout Randomization (ASLR) unterstützt.|
-|[-langversion](langversion-compiler-option.md)|Sprachversion angeben: Default, ISO-1, ISO-2, 3, 4, 5, 6, 7, 7.1, 7.2, 7.3 oder Latest |
+|[-langversion](langversion-compiler-option.md)|Gibt die Sprachversion an: Default, ISO-1, ISO-2, 3, 4, 5, 6, 7, 7.1, 7.2, 7.3 oder die aktuelle. |
 |[-main](main-compiler-option.md)|Gibt den Speicherort der **Main**-Methode an.|
 |[-noconfig](noconfig-compiler-option.md)|Weist den Compiler an, nicht mit „csc.rsp“ zu kompilieren.|
 |[-nologo](nologo-compiler-option.md)|Unterdrückt Compilerbannerinformationen.|
@@ -105,7 +105,7 @@ Die folgenden Compileroptionen sind nach Kategorien sortiert. Eine alphabetische
 |[/unsafe](unsafe-compiler-option.md)|Aktiviert die Kompilierung von Code, der das Schlüsselwort [unsafe](../keywords/unsafe.md) verwendet.|
 |[-utf8output](utf8output-compiler-option.md)|Zeigt die Compilerausgabe mit UTF-8-Codierung an.|
 |-parallel[+&#124;-]|Gibt an, ob parallele Builds (+) verwendet werden sollen.|
-|-checksumalgorithm:\<alg>|Gibt den Algorithmus zur Berechnung der Quelldateiprüfsumme an, der in der PDB-Datei gespeichert ist.  Unterstützte Werte: SHA-1 (Standard) oder SHA-256.<br>Microsoft empfiehlt aufgrund der Konflikte mit SHA1 SHA256.|
+|-checksumalgorithm:\<alg>|Gibt den Algorithmus zur Berechnung der Quelldateiprüfsumme an, der in der PDB-Datei gespeichert ist.  Unterstützte Werte sind: SHA1 (Standard) oder SHA256.<br>Microsoft empfiehlt aufgrund der Konflikte mit SHA1 SHA256.|
 
 ## <a name="obsolete-options"></a>Veraltete Optionen
 
@@ -113,7 +113,7 @@ Die folgenden Compileroptionen sind nach Kategorien sortiert. Eine alphabetische
 |---|---|
 |-incremental|Aktiviert die inkrementelle Kompilierung.|
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [C#-Compileroptionen](index.md)
 - [C#-Compileroptionen alphabetisch sortiert](listed-alphabetically.md)

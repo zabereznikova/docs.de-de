@@ -13,10 +13,10 @@ dev_langs:
 - vb
 - cpp
 ms.openlocfilehash: 113df1ad3fc3ac1e27ebfef572494c1f15a3dbb5
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73733166"
 ---
 # <a name="delay-sign-an-assembly"></a>Verzögertes Signieren einer Assembly
@@ -35,7 +35,7 @@ So verzögern Sie das Signieren einer Assembly:
 
    - <xref:System.Reflection.AssemblyDelaySignAttribute>, das angibt, dass beim verzögerten Signieren **TRUE** als Parameter an den Konstruktor übergeben wird
 
-   Beispiel:
+   Zum Beispiel:
 
    ```cpp
    [assembly:AssemblyKeyFileAttribute("myKey.snk")];
@@ -87,5 +87,5 @@ So verzögern Sie das Signieren einer Assembly:
 ## <a name="see-also"></a>Siehe auch
 
 - [Erstellen von Assemblys](create.md)
-- [Vorgehensweise: Erstellen eines öffentlichen/privaten Schlüsselpaars](create-public-private-key-pair.md)
+- [How to: Erstellen eines öffentlichen/privaten Schlüsselpaars](create-public-private-key-pair.md)
 - [Sn.exe (Strong Name-Tool)](../../framework/tools/sn-exe-strong-name-tool.md)

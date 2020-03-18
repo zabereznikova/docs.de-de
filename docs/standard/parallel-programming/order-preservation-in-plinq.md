@@ -9,10 +9,10 @@ helpviewer_keywords:
 - PLINQ queries, order preservation
 ms.assetid: 10d202bc-19e1-4b5c-bbf1-9a977322a9ca
 ms.openlocfilehash: 5b067fa277816e6105d37047c6c4996a4cbb9b5a
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73138218"
 ---
 # <a name="order-preservation-in-plinq"></a>Beibehaltung der Reihenfolge in PLINQ
@@ -120,7 +120,7 @@ Das Ziel in PLINQ ist, die Leistung zu maximieren und gleichzeitig die korrekte 
   
  Ungeordnete Ergebnisse werden nicht aktiv gemischt. Auf sie wird lediglich keine bestimmte Sortierlogik angewendet. In einigen Fällen wird in einer ungeordneten Abfrage möglicherweise die Reihenfolge der Quellsequenz beibehalten. Für Abfragen mit dem indizierten Select-Operator stellt PLINQ sicher, dass Elemente in aufsteigender Indexreihenfolge ausgegeben werden, jedoch wird nicht festgelegt, welcher Index welchem Element zugewiesen wird.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Parallel LINQ (PLINQ) (Paralleles LINQ (PLINQ))](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)
 - [Parallele Programmierung](../../../docs/standard/parallel-programming/index.md)

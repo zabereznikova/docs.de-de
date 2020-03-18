@@ -3,10 +3,10 @@ title: Gültiger Inhalt von XElement- und XDocument-Objekten
 ms.date: 07/20/2015
 ms.assetid: 0d253586-2b97-459f-b1a7-f30f38f3ed9f
 ms.openlocfilehash: 1ad5b18e3bbc2143a56f9c8e7b34354761b4e42f
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "69590931"
 ---
 # <a name="valid-content-of-xelement-and-xdocument-objects"></a>Gültiger Inhalt von XElement- und XDocument-Objekten
@@ -45,7 +45,7 @@ In diesem Thema werden die gültigen Argumente beschrieben, die an die Konstrukt
   
 - <xref:System.Xml.Linq.XAttribute>  
   
-- alle Typen, die eine <xref:System.Collections.Generic.IEnumerable%601> implementieren  
+- Jeder Typ, der <xref:System.Collections.Generic.IEnumerable%601> implementiert  
   
  Wenn ein Objekt eine <xref:System.Collections.Generic.IEnumerable%601> implementiert, wird die Auflistung im Objekt aufgezählt, und alle Elemente in der Auflistung werden hinzugefügt. Wenn die Auflistung <xref:System.Xml.Linq.XNode>-Objekte oder <xref:System.Xml.Linq.XAttribute>-Objekte enthält, wird jedes Element in der Auflistung getrennt hinzugefügt. Wenn die Auflistung Text (oder Objekte, die in Text umgewandelt wurden) enthält, wird der Text in der Auflistung verkettet und als einzelner Textknoten hinzugefügt.  
   
@@ -75,7 +75,7 @@ In diesem Thema werden die gültigen Argumente beschrieben, die an die Konstrukt
 ## <a name="constructors-and-functions-that-allow-adding-content"></a>Konstruktoren und Funktionen, die das Hinzufügen von Inhalt erlauben  
  Die folgenden Methoden ermöglichen es Ihnen, einem <xref:System.Xml.Linq.XElement>-Objekt oder <xref:System.Xml.Linq.XDocument>-Objekt untergeordneten Inhalt hinzuzufügen:  
   
-|Methode|BESCHREIBUNG|  
+|Methode|Beschreibung|  
 |------------|-----------------|  
 |<xref:System.Xml.Linq.XElement.%23ctor%2A>|Konstruiert ein <xref:System.Xml.Linq.XElement>.|  
 |<xref:System.Xml.Linq.XDocument.%23ctor%2A>|Erstellt ein Objekt vom Typ <xref:System.Xml.Linq.XDocument>.|  
@@ -88,6 +88,6 @@ In diesem Thema werden die gültigen Argumente beschrieben, die an die Konstrukt
 |<xref:System.Xml.Linq.XContainer.ReplaceNodes%2A>|Ersetzt die untergeordneten Knoten durch neuen Inhalt.|  
 |<xref:System.Xml.Linq.XNode.ReplaceWith%2A>|Ersetzt einen Knoten durch neuen Inhalt.|  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Creating XML Trees (C#) (Erstellen von XML-Strukturen (C#))](./linq-to-xml-overview.md)

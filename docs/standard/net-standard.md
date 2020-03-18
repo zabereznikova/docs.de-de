@@ -1,18 +1,18 @@
 ---
-title: .NET-Standard
+title: .NET Standard
 description: Erfahren Sie mehr über .NET Standard, dessen Versionen und die .NET-Implementierungen, von denen es unterstützt wird.
 ms.date: 02/13/2020
 ms.technology: dotnet-standard
 ms.custom: updateeachrelease
 ms.assetid: c044882c-af15-45f2-96d1-534557a5ee9b
 ms.openlocfilehash: 00b40b771a8608bad7e3f992e3c99367ff6bb131
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/19/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "77452590"
 ---
-# <a name="net-standard"></a>.NET-Standard
+# <a name="net-standard"></a>.NET Standard
 
 [.NET Standard](https://github.com/dotnet/standard) ist eine formale Spezifikation von .NET-APIs, die für alle .NET-Implementierungen verfügbar sein sollen. Die Motivation hinter .NET Standard ist das Schaffen von mehr Einheitlichkeit im .NET-Ökosystem. [ECMA 335](https://github.com/dotnet/runtime/blob/master/docs/project/dotnet-standards.md) setzt die Vereinheitlichung des .NET-Implementierungsverhaltens fort. Während ECMA 335 eine kleine Gruppe von Standardbibliotheken spezifiziert, umfasst die .NET-Standardspezifikation eine breitere Palette von .NET-APIs.
 
@@ -84,7 +84,7 @@ Das primäre Verteilungsinstrument für .NET Standard sind [NuGet-Pakete](../cor
 
 NuGet-Pakete sind auf mindestens ein [Framework](frameworks.md) ausgerichtet. Die Pakete von .NET Standard sind für das Framework „.NET Standard“ ausgelegt. Sie können über den `netstandard` [komprimierten TFM](frameworks.md) (z. B. `netstandard1.4`) das .NET Standard-Framework als Ziel angeben. Bibliotheken, die auf mehreren Laufzeiten ausgeführt werden sollen, sollten dieses Framework als Ziel haben. Ein Großteil der APIs sollte auf `netstandard2.0` ausgerichtet sein, da sich die Anzahl an verfügbaren APIs im Laufe der Versionen .NET Standard 1.6 und 2.0 mehr als verdoppelt hat.
 
-Das Metapaket [`NETStandard.Library`](https://www.nuget.org/packages/NETStandard.Library/) verweist auf den vollständigen Satz von NuGet-Paketen, die .NET Standard definieren.  Die gängigste Methode, `netstandard` als Ziel auszuwählen, ist das Verweisen auf dieses Metapaket. Es beschreibt und bietet Zugriff auf etwa 40 .NET-Bibliotheken und zugehörige APIs, die .NET Standard definieren. Sie können auf zusätzliche Pakete verweisen, die `netstandard` als Ziel verwenden, um Zugriff auf weitere APIs zu erhalten.
+Das Metapaket [`NETStandard.Library`](https://www.nuget.org/packages/NETStandard.Library/) verweist auf den vollständigen Satz von NuGet-Paketen, die .NET Standard definieren.  Die gängigste Methode, `netstandard` als Ziel auszuwählen, ist das Verweisen auf dieses Metapaket. Es beschreibt und bietet Zugriff auf etwa 40 .NET-Bibliotheken und zugehörige APIs, die .NET Standard definieren. Sie können auf zusätzliche Pakete verweisen, die `netstandard` als Ziel haben, um Zugriff auf zusätzliche APIs zu erhalten.
 
 ### <a name="versioning"></a>Versionskontrolle
 
@@ -102,7 +102,7 @@ Die Versionskontrolle von .NET Standard ist wichtig für die Nutzung. Mit einer 
 
 ## <a name="targeting-net-standard"></a>Festlegen von .NET Standard als Ziel
 
-Sie können .NET-Standardbibliotheken anhand einer Kombination aus dem `netstandard`-Framework und dem NETStandard.Library-Metapaket [erstellen](../core/tutorials/libraries.md). Sehen Sie sich Beispiele dafür an, wie [.NET Standard mithilfe von .NET Core-Tools als Ziel festgelegt wird](../core/packages.md).
+Sie können .NET-Standardbibliotheken anhand einer Kombination aus dem [-Framework und dem NETStandard.Library-Metapaket ](../core/tutorials/libraries.md)erstellen`netstandard`. Sehen Sie sich Beispiele dafür an, wie [.NET Standard mithilfe von .NET Core-Tools als Ziel festgelegt wird](../core/packages.md).
 
 ## <a name="net-framework-compatibility-mode"></a>Der .NET Framework-Kompatibilitätsmodus
 
@@ -145,21 +145,21 @@ Profilbasierte PCLs, die als `netstandard` paketiert wurden, sind einfacher zu v
 
 Sehen Sie sich den Satz von PCL-Profilen an, die mit dem .NET-Standard kompatibel sind:
 
-| PCL-Profil | .NET-Standard | PCL-Plattformen
+| PCL-Profil | .NET Standard | PCL-Plattformen
 |:-----------:|:-------------:|------------------------------------------------------------------------------
-| Profile7    | 1.1           | .NET Framework 4.5, Windows 8
-| Profile31   | 1.0           | Windows 8.1, Windows Phone Silverlight 8.1
+| Profile7    | 1,1           | .NET Framework 4.5, Windows 8
+| Profile31   | 1,0           | Windows 8.1, Windows Phone Silverlight 8.1
 | Profile32   | 1.2           | Windows 8.1, Windows Phone 8.1
 | Profile44   | 1.2           | .NET Framework 4.5.1, Windows 8.1
-| Profile49   | 1.0           | .NET Framework 4.5, Windows Phone Silverlight 8
-| Profile78   | 1.0           | .NET Framework 4.5, Windows 8, Windows Phone Silverlight 8
-| Profile84   | 1.0           | Windows Phone 8.1, Windows Phone Silverlight 8.1
-| Profile111  | 1.1           | .NET Framework 4.5, Windows 8, Windows Phone 8.1
+| Profile49   | 1,0           | .NET Framework 4.5, Windows Phone Silverlight 8
+| Profile78   | 1,0           | .NET Framework 4.5, Windows 8, Windows Phone Silverlight 8
+| Profile84   | 1,0           | Windows Phone 8.1, Windows Phone Silverlight 8.1
+| Profile111  | 1,1           | .NET Framework 4.5, Windows 8, Windows Phone 8.1
 | Profile151  | 1.2           | .NET Framework 4.5.1, Windows 8.1, Windows Phone 8.1
-| Profile157  | 1.0           | Windows 8.1, Windows Phone 8.1, Windows Phone Silverlight 8.1
-| Profile259  | 1.0           | .NET Framework 4.5, Windows 8, Windows Phone 8.1, Windows Phone Silverlight 8
+| Profile157  | 1,0           | Windows 8.1, Windows Phone 8.1, Windows Phone Silverlight 8.1
+| Profile259  | 1,0           | .NET Framework 4.5, Windows 8, Windows Phone 8.1, Windows Phone Silverlight 8
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [.NET Standard-Versionen](https://github.com/dotnet/standard/blob/master/docs/versions.md)
 - [Erstellen einer .NET Standard-Bibliothek](../core/tutorials/library-with-visual-studio.md)

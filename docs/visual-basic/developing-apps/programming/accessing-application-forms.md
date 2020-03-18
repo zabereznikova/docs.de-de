@@ -9,10 +9,10 @@ helpviewer_keywords:
 - forms [Visual Basic], accessing all open
 ms.assetid: 9aaf5aaf-2012-4f97-89c7-6e62b9d17863
 ms.openlocfilehash: 332b6a7563160528b6c17210170af0db6e9bc0e7
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74349241"
 ---
 # <a name="accessing-application-forms-visual-basic"></a>Zugreifen auf Anwendungsformulare (Visual Basic)
@@ -23,13 +23,13 @@ Mit dem `My.Forms`-Objekt können Sie ganz einfach auf eine Instanz von jedem Wi
 
  Die folgende Tabelle enthält Beispiele zum Zugriff auf Anwendungsformate.  
   
-|Beschreibung|Siehe|  
+|An|Weitere Informationen finden Sie unter|  
 |---|---|  
 |Zugreifen auf ein Formular von einem anderen Formular in der Anwendung|[My.Forms-Objekt](../../../visual-basic/language-reference/objects/my-forms-object.md)|  
 |Zeigen Sie die Titel der offenen Formulare aller Anwendungen an.|<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OpenForms%2A>|  
 |Aktualisieren Sie den Begrüßungsbildschirm mit Statusinformationen, während die Anwendung startet.|<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.SplashScreen%2A>|  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OpenForms%2A>
 - <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.SplashScreen%2A>

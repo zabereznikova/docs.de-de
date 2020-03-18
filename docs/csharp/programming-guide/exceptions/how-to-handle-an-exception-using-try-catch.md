@@ -7,10 +7,10 @@ helpviewer_keywords:
 - try/catch blocks [C#]
 ms.assetid: ca8e3773-980e-4767-8633-7408540e9818
 ms.openlocfilehash: adfc53cbe4fd603ac3a6de6b9a0162320d5a2e19
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75712285"
 ---
 # <a name="how-to-handle-an-exception-using-trycatch-c-programming-guide"></a>Vorgehensweise: Behandeln einer Ausnahme mit „try/catch“ (C#-Programmierleitfaden)
@@ -24,7 +24,7 @@ Ein [try/catch](../../language-reference/keywords/try-catch.md)-Block soll von A
 ## <a name="comments"></a>Kommentare  
  Der Code, der eine Ausnahme auslöst, ist im `try`-Block eingeschlossen. Eine `catch`-Anweisung wird direkt danach hinzugefügt, um `IndexOutOfRangeException` zu verarbeiten, falls dies auftritt. Der `catch`-Block verarbeitet `IndexOutOfRangeException` und löst stattdessen die passendere Ausnahme `ArgumentOutOfRangeException` aus. Um dem Aufrufer so viele Informationen wie möglich bereitzustellen, können Sie die ursprüngliche Ausnahme auf <xref:System.Exception.InnerException%2A> der neuen Ausnahme festlegen. Da die Eigenschaft <xref:System.Exception.InnerException%2A>[schreibgeschützt](../../language-reference/keywords/readonly.md) ist, müssen Sie sie im Konstruktor der neuen Ausnahme zuweisen.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [C#-Programmierhandbuch](../index.md)
 - [Ausnahmen und Ausnahmebehandlung](./index.md)

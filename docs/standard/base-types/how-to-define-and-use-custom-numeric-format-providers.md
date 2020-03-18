@@ -16,10 +16,10 @@ helpviewer_keywords:
 - custom format strings
 ms.assetid: a281bfbf-6596-45ed-a2d6-3782d535ada2
 ms.openlocfilehash: 151bf40cf042517b7441b89688122373259dc7dc
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73140067"
 ---
 # <a name="how-to-define-and-use-custom-numeric-format-providers"></a>Vorgehensweise: Definieren und Verwenden von benutzerdefinierten numerischen Formatanbietern
@@ -43,7 +43,7 @@ ms.locfileid: "73140067"
   
     2. Wenn der Parameter die <xref:System.ICustomFormatter>-Schnittstelle tatsächlich darstellt, gibt <xref:System.IFormatProvider.GetFormat%2A> ein Objekt zurück, das die für die benutzerdefinierte Formatierung zuständige <xref:System.ICustomFormatter>-Schnittstelle implementiert. Üblicherweise gibt das benutzerdefinierte Formatierungsobjekt sich selbst zurück.  
   
-    3. Wenn der Parameter die <xref:System.ICustomFormatter>-Schnittstelle nicht darstellt, gibt <xref:System.IFormatProvider.GetFormat%2A> `null` zurück.  
+    3. Wenn der Parameter die <xref:System.ICustomFormatter>-Schnittstelle nicht darstellt, gibt <xref:System.IFormatProvider.GetFormat%2A>`null` zurück.  
   
 3. Implementieren Sie die <xref:System.ICustomFormatter.Format%2A>-Methode. Diese Methode wird von der <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType>-Methode aufgerufen und ist für die Rückgabe der Zeichenfolgendarstellung einer Zahl zuständig. Die Implementierung der Methode umfasst üblicherweise Folgendes:  
   

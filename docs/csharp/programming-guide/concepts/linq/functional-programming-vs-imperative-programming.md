@@ -3,10 +3,10 @@ title: Funktionale Programmierung und Imperative Programmierung (C#)
 ms.date: 07/20/2015
 ms.assetid: 5e35c5a0-c949-422a-873b-fca6b2254f57
 ms.openlocfilehash: a163a62912ed2a44d6ea8cad5bc536f03343f15c
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "69594316"
 ---
 # <a name="functional-programming-vs-imperative-programming-c"></a>Funktionale Programmierung und Imperative Programmierung (C#)

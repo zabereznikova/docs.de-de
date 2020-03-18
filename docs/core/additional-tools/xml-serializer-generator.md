@@ -6,10 +6,10 @@ ms.date: 01/19/2017
 ms.topic: tutorial
 ms.custom: mvc
 ms.openlocfilehash: 094dd1227033e167050ad73121b3005a592a0ae4
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75714523"
 ---
 # <a name="using-microsoft-xml-serializer-generator-on-net-core"></a>Verwenden des Microsoft XML Serializer Generators auf .NET Core
@@ -24,7 +24,7 @@ In diesem Tutorial erfahren Sie, wie Sie den Microsoft XML Serializer Generator 
 > - Hinzufügen von „XmlSerializer“ und einer Klasse
 > - Erstellen und Ausführen der Anwendung
 
-Das [NuGet-Paket „Microsoft.XmlSerializer.Generator“](https://www.nuget.org/packages/Microsoft.XmlSerializer.Generator) gilt (wie der [XML Serializer Generator (sgen.exe)](../../standard/serialization/xml-serializer-generator-tool-sgen-exe.md) für .NET Framework) für .NET Core- und .NET Standard-Projekte. Es erstellt eine XML-Serialisierungsassembly für Typen, die in einer Assembly vorhanden sind, um die Startleistung der XML-Serialisierung zu verbessern, wenn Objekte dieser Typen mithilfe von <xref:System.Xml.Serialization.XmlSerializer> serialisiert oder deserialisiert werden.
+Das [NuGet-Paket „Microsoft.XmlSerializer.Generator“](../../standard/serialization/xml-serializer-generator-tool-sgen-exe.md) gilt (wie der [XML Serializer Generator (sgen.exe)](https://www.nuget.org/packages/Microsoft.XmlSerializer.Generator) für .NET Framework) für .NET Core- und .NET Standard-Projekte. Es erstellt eine XML-Serialisierungsassembly für Typen, die in einer Assembly vorhanden sind, um die Startleistung der XML-Serialisierung zu verbessern, wenn Objekte dieser Typen mithilfe von <xref:System.Xml.Serialization.XmlSerializer> serialisiert oder deserialisiert werden.
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
@@ -101,7 +101,7 @@ Fügen Sie die folgende Zeile unter *Main* hinzu, um einen `XmlSerializer` für 
 var serializer = new System.Xml.Serialization.XmlSerializer(typeof(MyClass));
 ```
 
-### <a name="build-and-run-the-application"></a>Erstellen eines Builds und Ausführen der Anwendung
+### <a name="build-and-run-the-application"></a>Erstellen und Ausführen der Anwendung
 
 Führen Sie (immer noch im Ordner *MyApp*) die Anwendung über [`dotnet run`](../tools/dotnet-run.md) aus. Dann werden die zuvor generierten Serializer zur Runtime automatisch geladen und verwendet.
 
@@ -132,4 +132,4 @@ Herzlichen Glückwunsch! Sie haben gerade:
 
 - [Einführung in die XML-Serialisierung](../../standard/serialization/introducing-xml-serialization.md)
 - [Vorgehensweise: Serialisieren mit XmlSerializer (C#)](../../csharp/programming-guide/concepts/linq/how-to-serialize-using-xmlserializer.md)
-- [Vorgehensweise: Serialisieren mit XmlSerializer (Visual Basic)](../../visual-basic/programming-guide/concepts/linq/how-to-serialize-using-xmlserializer.md)
+- [How to: Serialize Using XmlSerializer (Visual Basic) (Vorgehensweise: Serialisieren mit „XmlSerializer“ (Visual Basic))](../../visual-basic/programming-guide/concepts/linq/how-to-serialize-using-xmlserializer.md)

@@ -4,10 +4,10 @@ description: Hier lernen Sie späte Bindungen mit C#-Delegaten kennen.
 ms.date: 02/27/2020
 ms.assetid: 3cc27357-3ac2-43a1-aad0-86a77b88f884
 ms.openlocfilehash: b1740ddc65dcb0ee8775f4cbaa8356293ea55fae
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "78159168"
 ---
 # <a name="delegates"></a>Delegaten

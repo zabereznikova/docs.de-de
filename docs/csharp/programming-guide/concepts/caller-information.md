@@ -3,10 +3,10 @@ title: Aufruferinformationen (C#)
 ms.date: 07/20/2015
 ms.assetid: ffad3d24-2fb7-4641-9124-53b5bc91d339
 ms.openlocfilehash: 4b2c34945b47db01b0e655f68f92e4dae7445c2c
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "69595342"
 ---
 # <a name="caller-information-c"></a>Aufruferinformationen (C#)
@@ -15,7 +15,7 @@ Mithilfe der Aufrufer-Informationsattribute können Sie Informationen zum Aufruf
 
 Um diese Informationen zu erhalten, verwenden Sie die Attribute, die auf optionale Parameter angewendet werden, von denen jeder einen Standardwert besitzt. In der folgenden Tabelle sind die Aufrufer-Informationsattribute angegeben, die im <xref:System.Runtime.CompilerServices?displayProperty=nameWithType>-Namespace definiert sind:
 
-|Attribut|BESCHREIBUNG|Typ|
+|Attribut|Beschreibung|Geben Sie Folgendes ein:|
 |---|---|---|
 |<xref:System.Runtime.CompilerServices.CallerFilePathAttribute>|Vollständiger Pfad der Quelldatei, die den Aufrufer enthält. Dies ist der Dateipfad zum Zeitpunkt der Kompilierung.|`String`|
 |<xref:System.Runtime.CompilerServices.CallerLineNumberAttribute>|Zeilennummer in der Quelldatei, in der die Methode aufgerufen wird.|`Integer`|
@@ -49,7 +49,7 @@ public void TraceMessage(string message,
 //  source line number: 31
 ```
 
-## <a name="remarks"></a>Anmerkungen
+## <a name="remarks"></a>Hinweise
 
 Sie müssen einen expliziten Standardwert für jeden optionalen Parameter angeben. Sie können Aufrufer-Informationsattribute nicht auf Parameter anwenden, die nicht als optional festgelegt wurden.
 
@@ -79,9 +79,9 @@ Im folgenden Diagramm sind die Membernamen aufgeführt, die beim Verwenden des `
 |Attributkonstruktor|Der Name der Methode oder Eigenschaft, auf die das Attribut angewendet wird. Wenn das Attribut ein beliebiges Element in einem Member ist (z. B. ein Parameter, ein Rückgabewert oder ein generischer Typparameter), wird als Ergebnis der Name des Members ausgegeben, der diesem Element zugeordnet ist.|
 |Kein enthaltender Member (z. B. auf Assemblyebene oder Attribute, die auf Typen angewendet werden)|Der Standardwert des optionalen Parameters.|
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Attribute (C#)](./attributes/index.md)
 - [Allgemeine Attribute (C#)](./attributes/common-attributes.md)
 - [Benannte und optionale Argumente](../classes-and-structs/named-and-optional-arguments.md)
-- [Programmierkonzepte (C#)](./index.md)
+- [Programming Concepts (C#) (Programmierkonzepte (C#))](./index.md)

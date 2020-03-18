@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: add3ff8faed2e7fab245e5b6f1b9158b7bdd06f5
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "74567367"
 ---
 ### <a name="cellformatting-event-not-raised-if-tooltip-is-shown"></a>CellFormatting-Ereignis wird nicht ausgelöst, wenn QuickInfo angezeigt wird
@@ -20,7 +20,7 @@ Um die Barrierefreiheitsstandards zu erfüllen, werden ab .NET Core 3.1 bei eine
 
 3.1
 
-#### <a name="recommended-action"></a>Empfohlene Maßnahme
+#### <a name="recommended-action"></a>Empfohlene Aktion
 
 Schreiben Sie Code um, der das <xref:System.Windows.Forms.DataGridView.CellFormatting>-Ereignis benötigt, während sich die <xref:System.Windows.Forms.DataGridView> im Bearbeitungsmodus befindet.
 

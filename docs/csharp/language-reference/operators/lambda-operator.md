@@ -7,12 +7,12 @@ helpviewer_keywords:
 - lambda operator [C#]
 - => operator [C#]
 - lambda expressions [C#], => operator
-ms.openlocfilehash: 61cc3c3ab4f0b22c4040a9b8a025c81071f4d942
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 15c02e11610866f359e3e3a7e2751ded918154b7
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75712701"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78846251"
 ---
 # <a name="-operator-c-reference"></a>Operator „=>-“ (C#-Referenz)
 
@@ -24,15 +24,15 @@ In [Lambdaausdrücken](../../programming-guide/statements-expressions-operators/
 
 Im folgenden Beispiel wird das [LINQ](../../programming-guide/concepts/linq/index.md)-Feature mit der Methodensyntax verwendet, um die Verwendung von Lambdaausdrücken zu veranschaulichen:
 
-[!code-csharp-interactive[infer types of input variables](~/samples/csharp/language-reference/operators/LambdaOperator.cs#InferredTypes)]
+[!code-csharp-interactive[infer types of input variables](snippets/LambdaOperator.cs#InferredTypes)]
 
 Eingabeparameter eines Lambdaausdrucks sind zur Kompilierzeit stark typisiert. Wenn der Compiler die Typen von Eingabeparametern wie im obigen Beispiel ableiten kann, können Sie die Typdeklarationen weglassen. Wenn Sie den Typ von Eingabeparametern festlegen müssen, müssen Sie ihn wie im folgenden Beispiel gezeigt für jeden Parameter festlegen:
 
-[!code-csharp-interactive[specify types of input variables](~/samples/csharp/language-reference/operators/LambdaOperator.cs#ExplicitTypes)]
+[!code-csharp-interactive[specify types of input variables](snippets/LambdaOperator.cs#ExplicitTypes)]
 
 Im folgenden Beispiel wird gezeigt, wie ein Lambdaausdruck ohne Eingabeparameter definiert wird:
 
-[!code-csharp-interactive[without input variables](~/samples/csharp/language-reference/operators/LambdaOperator.cs#WithoutInput)]
+[!code-csharp-interactive[without input variables](snippets/LambdaOperator.cs#WithoutInput)]
 
 Weitere Informationen finden Sie unter [Lambdaausdrücke](../../programming-guide/statements-expressions-operators/lambda-expressions.md).
 
@@ -67,13 +67,13 @@ Weitere Informationen finden Sie unter [Ausdruckskörpermember](../../programmin
 
 ## <a name="operator-overloadability"></a>Operatorüberladbarkeit
 
-Operator `=>` kann nicht überladen werden.
+Der Operator `=>` kann nicht überladen werden.
 
 ## <a name="c-language-specification"></a>C#-Sprachspezifikation
 
 Weitere Informationen zum Lambdaoperator finden Sie im Abschnitt [Anonyme Funktionsausdrücke](~/_csharplang/spec/expressions.md#anonymous-function-expressions) der [C#-Sprachspezifikation](~/_csharplang/spec/introduction.md).
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [C#-Referenz](../index.md)
 - [C#-Operatoren](index.md)

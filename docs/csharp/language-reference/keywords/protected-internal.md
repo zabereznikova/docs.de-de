@@ -3,10 +3,10 @@ title: protected internal – C#-Referenz
 ms.date: 11/15/2017
 author: sputier
 ms.openlocfilehash: 877df74b51fb859043171619f5687ecddb8409d1
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75713195"
 ---
 # <a name="protected-internal-c-reference"></a>protected internal (C#-Referenz)
@@ -57,7 +57,7 @@ class DerivedClass : BaseClass
 
 Dieses Beispiel enthält zwei Dateien, `Assembly1.cs` und `Assembly2.cs`.
 Die erste Datei enthält eine öffentliche Basisklasse, `BaseClass`, und eine weitere Klasse, `TestAccess`. `BaseClass` besitzt einen Member vom Typ „protected internal“, `myValue`, auf den über den Typ `TestAccess` zugegriffen wird.
-In der zweiten Datei verursacht ein Versuch, über eine `BaseClass`-Instanz auf `myValue` zuzugreifen, einen Fehler, während ein Zugriff auf diesen Member über eine Instanz einer abgeleiteten Klasse `DerivedClass` gelingt.
+In der zweiten Datei verursacht ein Versuch, über eine `myValue`-Instanz auf `BaseClass` zuzugreifen, einen Fehler, während ein Zugriff auf diesen Member über eine Instanz einer abgeleiteten Klasse `DerivedClass` gelingt.
 
 Strukturmember können nicht vom Typ `protected internal` sein, da die Struktur nicht vererbt werden kann.
 
@@ -65,7 +65,7 @@ Strukturmember können nicht vom Typ `protected internal` sein, da die Struktur 
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [C#-Referenz](../index.md)
 - [C#-Programmierhandbuch](../../programming-guide/index.md)

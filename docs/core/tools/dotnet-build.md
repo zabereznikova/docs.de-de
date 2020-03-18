@@ -3,17 +3,17 @@ title: Befehl „dotnet build“
 description: Der dotnet build-Befehl erstellt ein Projekt und alle seine Abhängigkeiten.
 ms.date: 02/14/2020
 ms.openlocfilehash: 9f9a78ec0a6a25c54c8a727c05081ce6835514ee
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/20/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77503764"
 ---
 # <a name="dotnet-build"></a>dotnet build
 
 **Dieser Artikel gilt für:** ✔️ .NET Core 2.x SDK und neuere Versionen
 
-## <a name="name"></a>name
+## <a name="name"></a>Name
 
 `dotnet build`: Erstellt ein Projekt und alle seine Abhängigkeiten
 
@@ -113,7 +113,7 @@ Die zu erstellende Projekt- oder Projektmappendatei. Wenn Sie keine Projekt- ode
 
 - **`-r|--runtime <RUNTIME_IDENTIFIER>`**
 
-  Legt die Ziellaufzeit fest. Eine Liste der Runtime-IDs (RIDs) finden Sie unter [RID-Katalog](../rid-catalog.md).
+  Legt die Ziellaufzeit fest. Eine Liste der Runtime-IDs (RIDs) finden Sie im [RID-Katalog](../rid-catalog.md).
 
 - **`-v|--verbosity <LEVEL>`**
 

@@ -8,10 +8,10 @@ helpviewer_keywords:
 - network
 ms.assetid: 8fd6c675-9ea6-4fad-a412-e2c2c1f233d8
 ms.openlocfilehash: 5f8f1a3ca9aaf4bea56f342857d2df0bb18a9ba8
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "71047629"
 ---
 # <a name="network-programming-how-to-topics"></a>Gewusst-wie-Themen zur Netzwerkprogrammierung
@@ -25,13 +25,13 @@ Die folgende Liste enthält Links zu den Themen zur Vorgehensweise in der Begrif
   
 - [Vorgehensweise: Senden von Daten mithilfe der WebRequest-Klasse](how-to-send-data-using-the-webrequest-class.md)  
   
-- [Vorgehensweise: Abrufen einer protokollspezifischen WebResponse-Klasse, die einer WebRequest-Klasse entspricht](how-to-retrieve-a-protocol-specific-webresponse-that-matches-a-webrequest.md)  
+- [Vorgehensweise: Abrufen eines protokollspezifischen WebResponse, das einem WebRequest entspricht](how-to-retrieve-a-protocol-specific-webresponse-that-matches-a-webrequest.md)  
   
  **Austauschbare Protokolle und Anwendungsprotokolle:**  
   
 - [Vorgehensweise: Registrieren eines benutzerdefinierten Protokolls mit WebRequest](how-to-register-a-custom-protocol-using-webrequest.md)  
   
-- [Vorgehensweise: Typumwandlung einer WebRequest-Klasse in protokollspezifische Zugriffseigenschaften](how-to-typecast-a-webrequest-to-access-protocol-specific-properties.md)  
+- [Vorgehensweise: Typumwandlung für ein WebRequest in zugriffsprotokollspezifische Eigenschaften](how-to-typecast-a-webrequest-to-access-protocol-specific-properties.md)  
   
 - [Vorgehensweise: Zugreifen auf HTTP-spezifische Eigenschaften](how-to-access-http-specific-properties.md)  
   
@@ -57,7 +57,7 @@ Die folgende Liste enthält Links zu den Themen zur Vorgehensweise in der Begrif
   
 - [Vorgehensweise: Festlegen einer speicherortbasierten Cacherichtlinie für eine Anwendung](how-to-set-a-location-based-cache-policy-for-an-application.md)  
   
-- [Vorgehensweise: Festlegen der zeitbasierten Standardcacherichtlinie für eine Anwendung](how-to-set-the-default-time-based-cache-policy-for-an-application.md)  
+- [Vorgehensweise: Festlegen der standardmäßigen zeitbasierten Cacherichtlinie für eine Anwendung](how-to-set-the-default-time-based-cache-policy-for-an-application.md)  
   
 - [Vorgehensweise: Anpassen einer zeitbasierten Cacherichtlinie](how-to-customize-a-time-based-cache-policy.md)  
   
@@ -65,7 +65,7 @@ Die folgende Liste enthält Links zu den Themen zur Vorgehensweise in der Begrif
   
  **Verwenden von Proxys:**  
   
-- [Vorgehensweise: Aktivieren einer WebRequest-Klasse zur Verwendung eines Proxys für die Internetkommunikation](how-to-enable-a-webrequest-to-use-a-proxy-to-communicate-with-the-internet.md)  
+- [Vorgehensweise: Aktivieren von WebRequest zur Verwendung eines Proxys für die Internetkommunikation](how-to-enable-a-webrequest-to-use-a-proxy-to-communicate-with-the-internet.md)  
   
 - [Vorgehensweise: Überschreiben einer globalen Proxyauswahl](how-to-override-a-global-proxy-selection.md)  
   
@@ -77,8 +77,8 @@ Die folgende Liste enthält Links zu den Themen zur Vorgehensweise in der Begrif
   
 - [Vorgehensweise: Pingen eines Hosts](how-to-ping-a-host.md)  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Netzwerkprogrammierung in .NET Framework](index.md)
-- [Beispiele zur Netzwerkprogrammierung](network-programming-samples.md)
+- [Network Programming Samples (Beispiele zur Netzwerkprogrammierung)](network-programming-samples.md)
 - [Netzwerkbeispiele für .NET in der MSDN Code Gallery](https://code.msdn.microsoft.com/Wiki/View.aspx?ProjectName=nclsamples)

@@ -5,10 +5,10 @@ helpviewer_keywords:
 - pointers [C#], conversions
 ms.assetid: f0e87502-477a-4ede-a31f-7a3e262e46fb
 ms.openlocfilehash: 517166331d2bcf73132269ce2adcf68d5f60b4fe
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/24/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "76745363"
 ---
 # <a name="pointer-conversions-c-programming-guide"></a>Zeigerkonvertierungen (C#-Programmierhandbuch)
@@ -16,16 +16,16 @@ Die folgende Tabelle zeigt vordefinierte implizite Zeigerkonvertierungen. Impliz
   
 ## <a name="implicit-pointer-conversions"></a>Implizite Zeigerkonvertierungen  
   
-|Von|Beschreibung|  
+|Von|An|  
 |----------|--------|  
 |Beliebiger Zeigertyp|void*|  
-|NULL|Beliebiger Zeigertyp|  
+|null|Beliebiger Zeigertyp|  
   
  Die explizite Zeigerkonvertierung wird verwendet, um Konvertierungen, für die keine implizite Konvertierung vorliegt, mithilfe eines CAST-Ausdrucks durchzuführen. Die folgende Tabelle zeigt diese Konvertierungen.  
   
 ## <a name="explicit-pointer-conversions"></a>Explizite Zeigerkonvertierungen  
   
-|Von|Beschreibung|  
+|Von|An|  
 |----------|--------|  
 |Beliebiger Zeigertyp|Ein beliebiger anderer Zeigertyp|  
 |sbyte, byte, short, ushort, int, uint, long oder ulong|Beliebiger Zeigertyp|  
@@ -38,12 +38,12 @@ Die folgende Tabelle zeigt vordefinierte implizite Zeigerkonvertierungen. Impliz
   
  [!code-csharp[csProgGuidePointers#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuidePointers/CS/Pointers.cs#4)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [C#-Programmierhandbuch](../index.md)
 - [Zeigertypen](pointer-types.md)
-- [Verweistypen](../../language-reference/keywords/reference-types.md)
-- [Werttypen](../../language-reference/builtin-types/value-types.md)
+- [Reference types (Verweistypen)](../../language-reference/keywords/reference-types.md)
+- [Value types (Werttypen)](../../language-reference/builtin-types/value-types.md)
 - [unsafe](../../language-reference/keywords/unsafe.md)
 - [fixed-Anweisung](../../language-reference/keywords/fixed-statement.md)
 - [stackalloc](../../language-reference/operators/stackalloc.md)

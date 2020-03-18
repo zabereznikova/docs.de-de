@@ -9,10 +9,10 @@ helpviewer_keywords:
 - retargeting changes
 ms.assetid: 8d575722-4fb6-49a2-8a06-f72d62dc3766
 ms.openlocfilehash: 021d22e90ba39a4d01cf7d64588fab2d724b6640
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73457731"
 ---
 # <a name="mitigation-ziparchiveentryfullname-path-separator"></a>Entschärfung: Pfadtrennzeichen für ZipArchiveEntry.FullName
@@ -42,7 +42,7 @@ Beginnend mit Apps, die gezielt .NET Framework 4.6.1 verwenden, ändert sich d
 </runtime>  
 ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Neuausrichtungsänderungen](retargeting-changes-in-the-net-framework-4-6-1.md)
 - [Anwendungskompatibilität](application-compatibility.md)

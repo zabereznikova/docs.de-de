@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 8979b7ffc09726c6588fe3ba60b916202697648f
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/17/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "72522684"
 ---
 ### <a name="signalr-hubconnectioncontext-constructors-changed"></a>SignalR: HubConnectionContext-Konstruktoren wurden geändert.
@@ -35,7 +35,7 @@ public HubConnectionContext(ConnectionContext connectionContext, HubConnectionCo
 
 Der neue Konstruktor verwendet ein neues Optionsobjekt. Aus diesem Grund können die Features von `HubConnectionContext` in Zukunft erweitert werden, ohne dass weitere Konstruktoren erforderlich werden oder Breaking Changes vorgenommen werden müssen.
 
-#### <a name="recommended-action"></a>Empfohlene Maßnahme
+#### <a name="recommended-action"></a>Empfohlene Aktion
 
 Verwenden Sie anstelle der folgenden Konstruktoren:
 

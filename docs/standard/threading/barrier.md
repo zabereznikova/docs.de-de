@@ -9,10 +9,10 @@ helpviewer_keywords:
 - synchronization primitives, Barrier
 ms.assetid: 613a8bc7-6a28-4795-bd6c-1abd9050478f
 ms.openlocfilehash: 5aa34f7f39f4b9b626bea29372cf984f3cefb361
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73138150"
 ---
 # <a name="barrier"></a>Barriere
@@ -52,7 +52,7 @@ Eine <xref:System.Threading.Barrier?displayProperty=nameWithType> ist eine Synch
   
  Weitere Informationen finden Sie unter [Verketten von Aufgaben mithilfe von Fortsetzungsaufgaben](../parallel-programming/chaining-tasks-by-using-continuation-tasks.md).  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Threadingobjekte und -funktionen](threading-objects-and-features.md)
 - [Gewusst wie: Synchronisieren gleichzeitiger Vorgänge mit einer Barriere](how-to-synchronize-concurrent-operations-with-a-barrier.md)

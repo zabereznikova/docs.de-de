@@ -9,10 +9,10 @@ helpviewer_keywords:
 - expression trees
 - debugview
 ms.openlocfilehash: ba695fc808108c49a4eee3c70a305b24c91769d8
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/09/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "67661714"
 ---
 # <a name="debugview-syntax"></a>`DebugView`-Syntax
@@ -47,7 +47,7 @@ Für <xref:System.Linq.Expressions.ConstantExpression?displayProperty=nameWithTy
 
 Für numerische Typen, die über Standardsuffixe als C#-Literale verfügen, wird das Suffix zum Wert hinzugefügt. Die folgende Tabelle zeigt die verschiedenen numerischen Typen und ihre zugeordneten Suffixe.
 
-| Typ | Stichwort | Suffix |
+| Geben Sie Folgendes ein: | Schlüsselwort | Suffix |
 |--|--|--|
 | <xref:System.UInt32?displayProperty=nameWithType> | [uint](../../../language-reference/builtin-types/integral-numeric-types.md) | U |
 | <xref:System.Int64?displayProperty=nameWithType> | [long](../../../language-reference/builtin-types/integral-numeric-types.md) | L |

@@ -3,17 +3,17 @@ title: Befehl „dotnet list reference“
 description: Der Verweisbefehl „dotnet-list“ bietet eine praktische Option zum Listen von Verweisen zwischen Projekten.
 ms.date: 02/14/2020
 ms.openlocfilehash: 43c4dbc94b33e717c6ba0a1c1c5317ac006f5bba
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/20/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77503717"
 ---
 # <a name="dotnet-list-reference"></a>dotnet list reference
 
 **Dieser Artikel gilt für:** ✔️ .NET Core 2.x SDK und neuere Versionen
 
-## <a name="name"></a>name
+## <a name="name"></a>Name
 
 `dotnet list reference`: Listet Projekt-zu-Projekt-Verweise auf.
 

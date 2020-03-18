@@ -1,18 +1,18 @@
 ---
-title: 'Vorgehensweise: Analysieren von Dateipfaden'
+title: 'Gewusst wie: Analysieren von Dateipfaden'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - file names [Visual Basic], parsing [Visual Basic]
 - parsing, file paths [Visual Basic]
 ms.assetid: c1bd99c9-8160-456a-b5ab-60a49139b923
 ms.openlocfilehash: 6a959994be3a57795dc9f7e3447fa54bf075d3ec
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74335347"
 ---
-# <a name="how-to-parse-file-paths-in-visual-basic"></a>Vorgehensweise: Analysieren von Dateipfaden in Visual Basic
+# <a name="how-to-parse-file-paths-in-visual-basic"></a>Gewusst wie: Analysieren von Dateipfaden in Visual Basic
 
 Das <xref:Microsoft.VisualBasic.FileIO.FileSystem> -Objekt bietet eine Reihe nützlicher Methoden für die Analyse von Dateipfaden.  
   
@@ -36,10 +36,10 @@ Das <xref:Microsoft.VisualBasic.FileIO.FileSystem> -Objekt bietet eine Reihe nü
   
      [!code-vb[VbVbcnMyFileSystem#55](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#55)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem>
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.CombinePath%2A>
 - <xref:System.IO.FileInfo>
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetFileInfo%2A>
-- [Vorgehensweise: Abrufen einer Auflistung der Dateien in einem Verzeichnis](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-get-the-collection-of-files-in-a-directory.md)
+- [Gewusst wie: Abrufen einer Sammlung von Dateien in einem Verzeichnis](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-get-the-collection-of-files-in-a-directory.md)

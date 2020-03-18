@@ -3,10 +3,10 @@ title: Using Async for File Access (C#) (Verwenden von Async für Dateizugriff (
 ms.date: 07/20/2015
 ms.assetid: bb018fea-5313-4c80-ab3f-7c24b2145bd9
 ms.openlocfilehash: e6b0370049d9b9315de6a72d0e84c080aac12481
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "69595534"
 ---
 # <a name="using-async-for-file-access-c"></a>Using Async for File Access (C#) (Verwenden von Async für Dateizugriff (C#))
@@ -174,8 +174,8 @@ public async Task ProcessWriteMultAsync()
   
  Bei Verwendung der Methoden <xref:System.IO.Stream.WriteAsync%2A> und <xref:System.IO.Stream.ReadAsync%2A> können Sie einen <xref:System.Threading.CancellationToken> angeben, mit dem Sie den Vorgang in der Mitte des Streams beenden können. Weitere Informationen finden Sie unter [Fine-Tuning Your Async Application (C#) (Abstimmen der asynchronen Anwendung (C#))](./fine-tuning-your-async-application.md) und [Abbruch in verwalteten Threads](../../../../standard/threading/cancellation-in-managed-threads.md).  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Asynchrone Programmierung mit „async“ und „await“ (C#)](./index.md)
 - [Asynchrone Rückgabetypen (C#)](./async-return-types.md)
-- [Ablaufsteuerung in asynchronen Programmen (C#)](./control-flow-in-async-programs.md)
+- [Ablaufsteuerung in asynchronen Programmen](./control-flow-in-async-programs.md)

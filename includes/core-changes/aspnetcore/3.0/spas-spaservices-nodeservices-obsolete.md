@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: ac5a3c4f3aefbb59418ad92b2d795f36916f877f
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/16/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "72394208"
 ---
 ### <a name="spas-spaservices-and-nodeservices-marked-obsolete"></a>SPAs: SpaServices und NodeServices wurden als veraltet markiert.
@@ -46,7 +46,7 @@ Um deutlich zu machen, dass die älteren ASP.NET Core-spezifischen Komponenten i
 - Der Integrationsmechanismus vor Version 2.1 wurde als veraltet markiert.
 - Die unterstützenden npm-Pakete wurden als veraltet markiert.
 
-#### <a name="recommended-action"></a>Empfohlene Maßnahme
+#### <a name="recommended-action"></a>Empfohlene Aktion
 
 Wenn Sie diese Pakete verwenden, aktualisieren Sie Ihre Apps, um diese Funktionalität zu nutzen:
 

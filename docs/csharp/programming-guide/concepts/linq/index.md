@@ -3,15 +3,15 @@ title: Language-Integrated Query (LINQ) (C#)
 ms.date: 02/02/2017
 ms.assetid: 19dd1782-905b-4a9d-a3e9-618453037fa2
 ms.openlocfilehash: 07a9d68c042d524ee9faba8122b406a81e816378
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73418239"
 ---
 # <a name="language-integrated-query-linq"></a>Sprachintegrierte Abfrage (Language-Integrated Query, LINQ)
 
-Language Integrated Query (LINQ) bezeichnet einen Satz Technologien, die auf der direkten Integration der Abfragefunktionen in die Sprache C# basieren. Abfragen von Daten werden gewöhnlich als einfache Zeichenfolgen ohne Typüberprüfung zur Kompilierzeit und ohne IntelliSense-Unterstützung ausgedrückt. Außerdem müssen Sie für jeden Datenquellentyp eine andere Abfragesprache lernen: SQL-Datenbanken, XML-Dokumente, verschiedene Webdienste usw. Bei LINQ ist eine Abfrage ein erstklassiges Sprachkonstrukt, genauso wie Klassen, Methoden oder Ereignisse. Sie schreiben Abfragen für stark typisierte Auflistungen von Objekten mithilfe von Sprachschlüsselwörtern und bekannten Operatoren. Die LINQ-Technologiefamilie bietet ein konsistentes Abfrageerlebnis für Objekte (LINQ to Objects), relationale Datenbanken (LINQ to SQL) und XML (LINQ to XML).
+Language Integrated Query (LINQ) bezeichnet einen Satz Technologien, die auf der direkten Integration der Abfragefunktionen in die Sprache C# basieren. Abfragen von Daten werden gewöhnlich als einfache Zeichenfolgen ohne Typüberprüfung zur Kompilierzeit und ohne IntelliSense-Unterstützung ausgedrückt. Darüber hinaus müssen Sie für jede Art von Datenquelle eine andere Abfragesprache erlernen: SQL-Datenbanken, XML-Dokumente, verschiedene Webdienste usw. Bei LINQ ist eine Abfrage ein erstklassiges Sprachkonstrukt, genauso wie Klassen, Methoden oder Ereignisse. Sie schreiben Abfragen für stark typisierte Auflistungen von Objekten mithilfe von Sprachschlüsselwörtern und bekannten Operatoren. Die LINQ-Technologiefamilie bietet ein konsistentes Abfrageerlebnis für Objekte (LINQ to Objects), relationale Datenbanken (LINQ to SQL) und XML (LINQ to XML).
 
 Für einen Entwickler, der Abfragen schreibt, ist der sichtbarste „sprachintegrierte“ Teil von LINQ der Abfrageausdruck. Abfrageausdrücke werden in einer deklarativen *Abfragesyntax* geschrieben. Mit der Abfragesyntax können Sie mit minimalem Codeeinsatz Filter-, Sortier- und Gruppiervorgänge in Datenquellen ausführen. Sie verwenden die gleichen grundlegenden Abfrageausdrucksmuster, um Daten in SQL-Datenbanken, ADO. NET-Datasets, XML-Dokumenten und -Streams sowie .NET-Auflistungen abzufragen und zu transformieren.
 
@@ -42,7 +42,7 @@ Um mehr zu LINQ zu erfahren, machen Sie sich zunächst unter [Grundlagen zu Abfr
 
 - XML-Dokumente: [LINQ to XML](linq-to-xml-overview.md)  
 - ADO.NET Entity Framework: [LINQ to Entities](../../../../framework/data/adonet/ef/language-reference/linq-to-entities.md)
-- .NET-Collections, -Dateien, -Zeichenfolgen usw.: [LINQ to Objects](linq-to-objects.md)
+- .NET-Auflistungen, -Dateien, -Zeichenfolgen usw.: [LINQ to Objects](linq-to-objects.md)
 
 Tiefer greifende Einblicke in LINQ im Allgemeinen erhalten Sie unter [LINQ in C#](../../../linq/linq-in-csharp.md).
 

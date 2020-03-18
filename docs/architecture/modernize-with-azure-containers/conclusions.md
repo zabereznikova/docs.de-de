@@ -3,10 +3,10 @@ title: Zusammenfassung
 description: Modernisieren vorhandener .NET-Anwendungen mit Azure Cloud und Windows-Containern | Zusammenfassung
 ms.date: 10/26/2017
 ms.openlocfilehash: c7c4042b224577238ae74bd786d4803e487998e7
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "69578483"
 ---
 # <a name="conclusions"></a>Zusammenfassung
@@ -28,4 +28,4 @@ ms.locfileid: "69578483"
 - Microsoft Azure bietet die umfassendste und vollständigste Umgebung, mit der Sie Ihre vorhandenen .NET Framework-Anwendungen mit Windows-Containern, Cloudinfrastruktur und PaaS-Diensten modernisieren können.
 
 >[!div class="step-by-step"]
->[Vorherige](walkthroughs-technical-get-started-overview.md)
+>[Zurück](walkthroughs-technical-get-started-overview.md)

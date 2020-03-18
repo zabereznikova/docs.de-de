@@ -3,10 +3,10 @@ title: Zustand und Daten in Docker-Anwendungen
 description: Zustands- und Datenverwaltung in Docker-Anwendungen. Microservice-Instanzen sind erweiterbar, DATEN jedoch NICHT. Wie lässt sich dieser Tatsache mithilfe von Microservices Rechnung tragen?
 ms.date: 09/20/2018
 ms.openlocfilehash: 1157ea3c4ca8fc389769308cc0a1141b5f92bb88
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "72771438"
 ---
 # <a name="state-and-data-in-docker-applications"></a>Zustand und Daten in Docker-Anwendungen

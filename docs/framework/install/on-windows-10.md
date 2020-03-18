@@ -4,10 +4,10 @@ description: Erfahren Sie, wie Sie .NET Framework unter Windows 10 oder Windows 
 ms.date: 04/18/2019
 ms.custom: updateeachrelease
 ms.openlocfilehash: eed15b9088d6ba46d8f5bc6d16ba779dd6115b0d
-ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/02/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "76965970"
 ---
 # <a name="install-the-net-framework-on-windows-10-and-windows-server-2016-and-later"></a>Installieren von .NET Framework unter Windows 10 und Windows Server 2016 und höher
@@ -76,8 +76,8 @@ Eine Liste aller .NET Framework-Versionen, die zum Download zur Verfügung stehe
 
 Wenn Sie die richtige Version von .NET Framework nicht installieren können, [wenden Sie sich an Microsoft, um Hilfe zu erhalten](mailto:dotnet-install-help@service.microsoft.com?subject=Install-Help).
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [.NET-Downloads](https://dotnet.microsoft.com/download)
 - [Problembehandlung bei blockierten Installationen und Deinstallationen von .NET Framework](troubleshoot-blocked-installations-and-uninstallations.md)
-- [Installieren von .NET Framework für Entwickler](guide-for-developers.md)
+- [Installieren von.NET Framework für Entwickler](guide-for-developers.md)

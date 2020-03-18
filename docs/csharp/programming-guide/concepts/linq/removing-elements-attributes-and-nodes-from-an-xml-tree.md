@@ -3,10 +3,10 @@ title: Entfernen von Elementen, Attributen und Knoten aus einem XML-Baum (C#)
 ms.date: 07/20/2015
 ms.assetid: 07dd06d6-1117-4077-bf98-9120cf51176e
 ms.openlocfilehash: badaa6bab35367d62a73f56c5221cb7d6d4a45f7
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "69591263"
 ---
 # <a name="removing-elements-attributes-and-nodes-from-an-xml-tree-c"></a>Entfernen von Elementen, Attributen und Knoten aus einem XML-Baum (C#)
@@ -19,7 +19,7 @@ Der Hauptgrund für diese Vorgehensweise besteht darin, dass die meisten Auflist
 
 Die folgenden Methoden entfernen Knoten und Attribute aus einer XML-Struktur.
 
-|Methode|BESCHREIBUNG|
+|Methode|Beschreibung|
 |------------|-----------------|
 |<xref:System.Xml.Linq.XAttribute.Remove%2A?displayProperty=nameWithType>|Entfernt einen <xref:System.Xml.Linq.XAttribute> aus seinem übergeordneten Knoten.|
 |<xref:System.Xml.Linq.XContainer.RemoveNodes%2A?displayProperty=nameWithType>|Entfernt die untergeordneten Knoten aus einem <xref:System.Xml.Linq.XContainer>.|
@@ -32,7 +32,7 @@ Die folgenden Methoden entfernen Knoten und Attribute aus einer XML-Struktur.
 
 ## <a name="example"></a>Beispiel
 
-### <a name="description"></a>BESCHREIBUNG
+### <a name="description"></a>Beschreibung
 
 In diesem Beispiel werden drei Ansätze zum Entfernen von Elementen gezeigt. Zuerst entfernt das Beispiel ein einzelnes Element. Als Zweites ruft das Beispiel eine Auflistung von Elementen ab, materialisiert sie mit dem <xref:System.Linq.Enumerable.ToList%2A?displayProperty=nameWithType>-Operator und entfernt die Auflistung. Zum Schluss ruft das Beispiel eine Auflistung von Elementen ab und entfernt diese mit der <xref:System.Xml.Linq.Extensions.Remove%2A>-Erweiterungsmethode.
 

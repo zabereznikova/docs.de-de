@@ -3,10 +3,10 @@ title: Entwerfen eines Domänenmodells für Microservices
 description: .NET-Microservicearchitektur für .NET-Containeranwendungen | Übersicht über die Grundkonzepte beim Entwerfen eines DDD-orientierten Domänenmodells
 ms.date: 01/30/2020
 ms.openlocfilehash: 628fb5c76362ec8f48367b3d69d16ea6ebd24f09
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/20/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77502323"
 ---
 # <a name="design-a-microservice-domain-model"></a>Entwerfen eines Microservicedomänenmodells

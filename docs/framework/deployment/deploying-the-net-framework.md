@@ -6,10 +6,10 @@ helpviewer_keywords:
 - deployment [.NET Framework]
 ms.assetid: 19df26c5-4008-461d-a7d7-18f4506312d2
 ms.openlocfilehash: cc4f9c38138a37b6068d33ffa4229a955db08c07
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75716546"
 ---
 # <a name="deploying-the-net-framework"></a>Bereitstellen von .NET Framework
@@ -25,15 +25,15 @@ In diesem Abschnitt der .NET Framework-Dokumentation werden Informationen für E
  [Reduzieren von Systemneustarts bei .NET Framework 4.5-Installationen](reducing-system-restarts.md)  
  Beschreibt den Neustart-Manager, der Neustarts nach Möglichkeit verhindert, und erläutert, wie Anwendungen, mit denen .NET Framework installiert wird, den Neustart-Manager nutzen können.  
   
- [Vorgehensweise: Abrufen des Status vom Installationsprogramm für .NET Framework 4.5](how-to-get-progress-from-the-dotnet-installer.md)  
+ [How to: Get Progress from the .NET Framework 4.5 Installer](how-to-get-progress-from-the-dotnet-installer.md)  
  Beschreibt, wie der .NET Framework-Setupvorgang automatisch gestartet und nachverfolgt und dabei eine eigene Ansicht des Setupstatus angezeigt werden kann.  
   
- [Fehler beim Initialisieren von .NET Framework: Verwalten der Benutzerfreundlichkeit](initialization-errors-managing-the-user-experience.md)  
+ [.NET Framework-Initialisierungsfehler: Verwalten der Benutzerfreundlichkeit](initialization-errors-managing-the-user-experience.md)  
  In diesem Artikel wird erläutert, was geschieht, wenn eine .NET Framework-Anwendung eine ungültige oder auf dem Benutzercomputer nicht installierte CLR-Version erfordert, wie diese Fehler behoben werden, und wie die Fehlermeldung, die dem Benutzer angezeigt wird, gesteuert wird.  
   
  [Vorgehensweise: Debuggen von CLR-Aktivierungsproblemen](how-to-debug-clr-activation-issues.md)  
  Hierin wird besprochen, wie Sie CLR-Aktivierungsprotokolle anzeigen und debuggen, um Probleme zu beheben, die bei der Einrichtung Ihrer Anwendung mit der richtigen CLR-Version auftreten können.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Entwicklungshandbuch](../development-guide.md)

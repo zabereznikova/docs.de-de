@@ -6,10 +6,10 @@ ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: a67484c3-fe92-44d8-8fa3-36fa2071d880
 ms.openlocfilehash: b7934e5def202760ab05d363ee5fcda5d012ca72
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "77124584"
 ---
 # <a name="net-class-libraries"></a>.NET-Klassenbibliotheken
@@ -49,7 +49,7 @@ Der .NET Standard macht nicht die gesamte Funktionalität von .NET Framework ver
 Die folgenden Plattformen unterstützen .NET Standard-Bibliotheken:
 
 * .NET Core
-* .NET Framework
+* .NET Framework
 * Mono
 * Xamarin.iOS, Xamarin.Mac, Xamarin.Android
 * Universelle Windows-Plattform (UWP)

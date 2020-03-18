@@ -13,10 +13,10 @@ helpviewer_keywords:
 - /doc compiler option [C#]
 ms.assetid: 849eea59-c936-4311-bad8-d07404480f2a
 ms.openlocfilehash: 01ea71f3de9e30abe25184e38a59f3707b54bd5a
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "73422972"
 ---
 # <a name="-doc-c-compiler-options"></a>-doc (C#-Compileroptionen)
@@ -32,7 +32,7 @@ Mit der Option **-doc** können Sie Dokumentationskommentare in eine XML-Datei e
  `file`  
  Die Ausgabedatei für XML, die mit den Kommentaren in den Quellcodedateien der Kompilierung aufgefüllt wird.  
   
-## <a name="remarks"></a>Anmerkungen  
+## <a name="remarks"></a>Hinweise  
  In Quellcodedateien können Dokumentationskommentare, die Folgendem vorausgehen, verarbeitet und der XML-Datei hinzugefügt werden:  
   
 - Benutzerdefinierte Typen wie eine [Klasse](../keywords/class.md), ein [Delegat](../builtin-types/reference-types.md#the-delegate-type), oder eine [Schnittstelle](../keywords/interface.md)  
@@ -52,7 +52,7 @@ Mit der Option **-doc** können Sie Dokumentationskommentare in eine XML-Datei e
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Compileroption in der Visual Studio-Entwicklungsumgebung fest  
   
-1. Öffnen Sie die **Eigenschaften**-Seite des Projekts.  
+1. Öffnen Sie die Seite **Eigenschaften** des Projekts.  
   
 2. Klicken Sie auf die Registerkarte **Erstellen**.  
   
@@ -60,7 +60,7 @@ Mit der Option **-doc** können Sie Dokumentationskommentare in eine XML-Datei e
   
  Informationen zum programmgesteuerten Festlegen dieser Compileroption finden Sie unter <xref:VSLangProj80.CSharpProjectConfigurationProperties3.DocumentationFile%2A>.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [C#-Compileroptionen](./index.md)
 - [Verwalten von Projekt- und Projektmappeneigenschaften](/visualstudio/ide/managing-project-and-solution-properties)

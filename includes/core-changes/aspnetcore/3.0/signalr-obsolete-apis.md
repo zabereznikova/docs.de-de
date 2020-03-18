@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 2a65caedea2af65796267aa145e275ebff814bf8
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/16/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "72394464"
 ---
 ### <a name="signalr-usesignalr-and-useconnections-methods-marked-obsolete"></a>SignalR: Methoden UseSignalR und UseConnections wurden als veraltet markiert.
@@ -26,7 +26,7 @@ Das alte Verfahren zum Konfigurieren des Routings wurde als veraltet markiert un
 
 Die Middleware wurden auf das neue System mit Endpunktrouting umgestellt. Das alte Verfahren zum Hinzufügen von Middleware ist veraltet.
 
-#### <a name="recommended-action"></a>Empfohlene Maßnahme
+#### <a name="recommended-action"></a>Empfohlene Aktion
 
 Ersetzen Sie `UseSignalR` durch `UseEndpoints`:
 

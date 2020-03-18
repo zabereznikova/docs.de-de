@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 959f3959c28c7d0159be7a213986345e2865b9a2
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/16/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "72394437"
 ---
 ### <a name="shared-framework-removed-microsoftaspnetcoreall"></a>Freigegebenes Framework: Microsoft.AspNetCore.All wurde entfernt
@@ -26,7 +26,7 @@ Apps konnten das Metapaket `Microsoft.AspNetCore.All` verwenden, um das freigege
 
 Das Metapaket `Microsoft.AspNetCore.All` enthielt eine große Anzahl externer Abhängigkeiten.
 
-#### <a name="recommended-action"></a>Empfohlene Maßnahme
+#### <a name="recommended-action"></a>Empfohlene Aktion
 
 Stellen Sie Ihr Projekt auf die Verwendung des Frameworks `Microsoft.AspNetCore.App` um. Komponenten, die zuvor in `Microsoft.AspNetCore.All` verfügbar waren, sind weiterhin in NuGet verfügbar. Diese Komponenten werden nun mit Ihrer App bereitgestellt, anstatt in das freigegebene Framework eingefügt zu werden.
 

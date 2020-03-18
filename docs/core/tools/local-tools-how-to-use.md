@@ -3,10 +3,10 @@ title: 'Tutorial: Installieren und Verwenden lokaler .NET Core-Tools'
 description: Erfahren Sie, wie Sie ein .NET-Tool als lokales Tool installieren und verwenden.
 ms.date: 02/12/2020
 ms.openlocfilehash: a4355886513040e2436bdbd87905e5baee2dd7a5
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "78156698"
 ---
 # <a name="tutorial-install-and-use-a-net-core-local-tool-using-the-net-core-cli"></a>Tutorial: Erstellen und Verwenden eines lokalen .NET Core-Tools mithilfe der .NET Core-CLI

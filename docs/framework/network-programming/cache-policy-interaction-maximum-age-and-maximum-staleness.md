@@ -10,10 +10,10 @@ helpviewer_keywords:
 - age of cached resources
 ms.assetid: 7f775925-89a1-4956-ba90-c869c1749a94
 ms.openlocfilehash: e21cfc28407ba67afdce8d72e5e52c12ab359059
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "71048842"
 ---
 # <a name="cache-policy-interactionmaximum-age-and-maximum-staleness"></a>Cacherichtlinieninteraktion – maximales Alter und maximale Überalterung
@@ -35,7 +35,7 @@ Um sicherzustellen, dass die aktuellsten Inhalte an die Clientanwendung zurückg
   
 - Wenn die Cacherichtlinie `maxAge` = 1 Tage und `maxStale` = 1 Tag festlegt, wird der Inhalt am 2. Januar erneut überprüft.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Cacheverwaltung für Netzwerkanwendungen](cache-management-for-network-applications.md)
 - [Cacherichtlinie](cache-policy.md)

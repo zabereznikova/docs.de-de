@@ -8,10 +8,10 @@ helpviewer_keywords:
 - writing LINQ queries
 ms.assetid: 2962a610-419a-4276-9ec8-4b7f2af0c081
 ms.openlocfilehash: f2135c6c3649ba2fc87e3b49770439688a58269b
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "73418057"
 ---
 # <a name="walkthrough-writing-queries-in-c-linq"></a>Exemplarische Vorgehensweise: Schreiben von Abfragen in C# (LINQ)
@@ -24,9 +24,9 @@ Diese exemplarische Vorgehensweise veranschaulicht die C#-Sprachfunktionen, die 
   
 #### <a name="to-create-a-project-in-visual-studio"></a>So erstellen Sie ein Projekt in Visual Studio  
   
-1. Starten Sie Visual Studio.  
+1. Starten Sie Visual Studio.  
   
-2. Wählen Sie in der Menüleiste **Datei**, **Neu**, **Projekt**aus.  
+2. Wählen Sie in der Menüleiste **Datei** > **Neu** > **Projekt** aus.  
   
      Das Dialogfeld **Neues Projekt** wird angezeigt.  
   
@@ -141,7 +141,7 @@ Diese exemplarische Vorgehensweise veranschaulicht die C#-Sprachfunktionen, die 
   
 #### <a name="to-order-the-groups-by-their-key-value"></a>So sortieren Sie die Gruppen nach ihren Schlüsselwerten  
   
-1. Wenn Sie die vorherige Abfrage ausführen, werden Sie feststellen, dass die Gruppen nicht alphabetischer angeordnet sind. Um dies zu ändern, müssen Sie eine `orderby`-Klausel nach der `group`-Klausel angeben. Sie benötigen aber zuerst einen Bezeichner, der als Verweis auf die durch die `group`-Klausel erstellte Gruppe dient, bevor Sie eine `orderby`-Klausel verwenden können. Geben Sie den Bezeichner mithilfe des Schlüsselworts `into` wie folgt an:  
+1. Wenn Sie die vorherige Abfrage ausführen, werden Sie feststellen, dass die Gruppen nicht alphabetischer angeordnet sind. Um dies zu ändern, müssen Sie eine `orderby`-Klausel nach der `group`-Klausel angeben. Sie benötigen aber zuerst einen Bezeichner, der als Verweis auf die durch die `orderby`-Klausel erstellte Gruppe dient, bevor Sie eine `group`-Klausel verwenden können. Geben Sie den Bezeichner mithilfe des Schlüsselworts `into` wie folgt an:  
   
      [!code-csharp[csLINQGettingStarted#17](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#17)]  
   
@@ -182,7 +182,7 @@ Diese exemplarische Vorgehensweise veranschaulicht die C#-Sprachfunktionen, die 
   
  [LINQ to Objects (C#)](./linq-to-objects.md)  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Language Integrated Query (LINQ) (C#)](./index.md)
+- [Language-Integrated Query (LINQ) (C#)](./index.md)
 - [LINQ-Abfrageausdrücke](../../../linq/index.md)

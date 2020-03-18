@@ -3,10 +3,10 @@ title: Wichtige Erkenntnisse
 description: Entnehmen Sie wichtige Erkenntnisse dem Handbuch/E-Buch „.NET Microservices Architecture for Containerized .NET Applications“ (.NET Microservices-Architektur für .NET-Containeranwendungen), um einen schnellen Einblick in die allgemeinen Fragen bei der Verwendung einer Microservices-Architektur zu bekommen wie Vor- und Nachteile, DDD-Muster für Entwurf und Entwicklung sowie Stabilität, Sicherheit und die Verwendung von Orchestratoren.
 ms.date: 10/19/2018
 ms.openlocfilehash: 3b8b7be9b3903c64221cba7c6abdb1e38f5d944f
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "68674457"
 ---
 # <a name="key-takeaways"></a>Wichtige Erkenntnisse
@@ -36,4 +36,4 @@ In diesem Artikel werden die wichtigsten Erkenntnisse dieses Leitfadens zusammen
 **Orchestratoren.** Containerbasierte Orchestratoren wie Azure Kubernetes Service und Azure Service Fabric sind wichtiger Bestandteil jeder signifikanten Anwendung auf Microservice- und Containerbasis. Diese Anwendungen bringen hohe Komplexität sowie Anforderungen an die Skalierbarkeit mit sich und durchlaufen eine konstante Weiterentwicklung. In diesem Leitfaden wurden Orchestratoren und deren Rolle in Ansätzen eingeführt, die auf Microservices und Containern basieren. Wenn Sie sich aufgrund der Anforderungen Ihrer Anwendung auf komplexere Containeranwendungen zu bewegen, kann das Suchen zusätzlicher Ressourcen für weitere Informationen über Orchestratoren sich als nützlich erweisen.
 
 >[!div class="step-by-step"]
->[Vorherige](secure-net-microservices-web-applications/azure-key-vault-protects-secrets.md)
+>[Zurück](secure-net-microservices-web-applications/azure-key-vault-protects-secrets.md)

@@ -9,10 +9,10 @@ helpviewer_keywords:
 - from keyword [C#]
 ms.assetid: 1aefd18c-1314-47f8-99ec-9bcefb09e699
 ms.openlocfilehash: 388b9c0245b112d619fc173f6019b3f7dbf59940
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75715290"
 ---
 # <a name="from-clause-c-reference"></a>from-Klausel (C#-Referenz)
@@ -39,7 +39,7 @@ Die Bereichsvariable entspricht einer Iterationsvariablen in einer [foreach](for
 
 ## <a name="compound-from-clauses"></a>Zusammengesetzte from-Klauseln
 
-In einigen Fällen kann jedes Element in der Quellsequenz selbst eine Sequenz sein oder eine Sequenz enthalten. Ihre Datenquelle kann beispielsweise ein `IEnumerable<Student>` sein, wobei jedes Student-Objekt in der Sequenz eine Liste der Testergebnisse enthält. Sie können zusammengesetzte `from`-Klauseln verwenden, um auf die innere Liste jedes `Student`-Objekts zuzugreifen. Die Technik entspricht dem Verwenden von geschachtelten [foreach](foreach-in.md)-Anweisungen. Sie können die [where](partial-method.md)-Klausel oder die [orderby](orderby-clause.md)-Klausel zu einer der `from`-Klauseln hinzufügen, um die Ergebnisse zu filtern. Das folgende Beispiel enthält eine Sequenz von `Student`-Objekten, von denen jedes eine innere `List` mit Ganzzahlen enthält, die die Testergebnisse darstellen. Um auf die innere Liste zuzugreifen, verwenden Sie eine zusammengesetzte `from`-Klausel. Bei Bedarf können Sie Klauseln zwischen den beiden `from`-Klauseln einfügen.
+In einigen Fällen kann jedes Element in der Quellsequenz selbst eine Sequenz sein oder eine Sequenz enthalten. Ihre Datenquelle kann beispielsweise ein `IEnumerable<Student>` sein, wobei jedes Student-Objekt in der Sequenz eine Liste der Testergebnisse enthält. Sie können zusammengesetzte `Student`-Klauseln verwenden, um auf die innere Liste jedes `from`-Objekts zuzugreifen. Die Technik entspricht dem Verwenden von geschachtelten [foreach](foreach-in.md)-Anweisungen. Sie können die [where](partial-method.md)-Klausel oder die [orderby](orderby-clause.md)-Klausel zu einer der `from`-Klauseln hinzufügen, um die Ergebnisse zu filtern. Das folgende Beispiel enthält eine Sequenz von `Student`-Objekten, von denen jedes eine innere `List` mit Ganzzahlen enthält, die die Testergebnisse darstellen. Um auf die innere Liste zuzugreifen, verwenden Sie eine zusammengesetzte `from`-Klausel. Bei Bedarf können Sie Klauseln zwischen den beiden `from`-Klauseln einfügen.
 
 [!code-csharp[cscsrefQueryKeywords#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsCsrefQueryKeywords/CS/From.cs#2)]
 
@@ -53,7 +53,7 @@ Das folgende Beispiel veranschaulicht, wie zwei `from`-Klauseln verwendet werden
 
 Weitere Informationen zu Verknüpfungsvorgängen mit mehreren `from`-Klauseln finden Sie unter [Ausführen von Left Outer Joins](../../linq/perform-left-outer-joins.md).
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Abfrageschlüsselwörter (LINQ)](query-keywords.md)
 - [Language-Integrated Query (LINQ)](../../linq/index.md)

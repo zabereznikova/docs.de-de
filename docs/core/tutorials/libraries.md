@@ -4,10 +4,10 @@ description: Erfahren Sie, wie Sie die .NET Core-CLI verwenden, um .NET-Biblioth
 author: cartermp
 ms.date: 05/01/2017
 ms.openlocfilehash: c23c1f027b4d6d09c50eb2257d34f72ec56302f4
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/20/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77503508"
 ---
 # <a name="develop-libraries-with-the-net-core-cli"></a>Entwickeln von Bibliotheken mit der .NET Core-CLI
@@ -96,7 +96,7 @@ Sie fügen anschließend TFM in den `TargetFramework`-Abschnitt Ihrer Projektdat
 </Project>
 ```
 
-Und das ist schon alles! Obwohl dieses Beispiel nur für .NET Framework 4 kompiliert wurde, können Sie die Bibliothek für neueren Versionen von .NET Framework verwenden.
+Das ist schon alles! Obwohl dieses Beispiel nur für .NET Framework 4 kompiliert wurde, können Sie die Bibliothek für neueren Versionen von .NET Framework verwenden.
 
 ## <a name="how-to-multitarget"></a>Vorgehensweise: Festlegen mehrerer Ziele
 
@@ -257,7 +257,7 @@ Es ist wichtig, über Plattformen hinweg testen zu können. Sie können entweder
 
 1. Überprüfen Sie, ob xUnit durch Ausführung des `dotnet test`-Befehls ausgeführt wird. Wenn Sie MSTests verwenden möchten, dann muss stattdessen das MSTest-Konsolenausführungsprogramm ausgeführt werden.
 
-Und das ist schon alles! Jetzt können Sie Ihre Bibliothek mithilfe der Befehlszeilentools plattformübergreifend testen. Nachdem jetzt alles eingerichtet ist, ist das weitere Testen Ihrer Bibliothek sehr einfach:
+Das ist schon alles! Jetzt können Sie Ihre Bibliothek mithilfe der Befehlszeilentools plattformübergreifend testen. Nachdem jetzt alles eingerichtet ist, ist das weitere Testen Ihrer Bibliothek sehr einfach:
 
 1. Nehmen Sie Änderungen an Ihrer Bibliothek vor.
 1. Führen Sie mit dem Befehl `dotnet test` in Ihrem Testverzeichnis Tests über die Befehlszeile aus.

@@ -3,10 +3,10 @@ title: Laufzeitpaketspeicher
 description: Erfahren Sie, wie Sie den Laufzeitpaketspeicher für Manifeste nutzen, die von .NET Core verwendet werden.
 ms.date: 08/12/2017
 ms.openlocfilehash: 7a833ed95147608c6fb403f8f0dec179d2a73833
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/19/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77448957"
 ---
 # <a name="runtime-package-store"></a>Laufzeitpaketspeicher
@@ -143,7 +143,7 @@ Die Version der Abhängigkeit, die im Manifest angegeben ist, muss mit der Versi
 
 Wenn die Bereitstellung bei der Veröffentlichung *gekürzt* ist, werden nur die spezifischen Versionen der Manifestpakete, die Sie angeben, aus der veröffentlichten Ausgabe zurückbehalten. Die Pakete der angegebenen Versionen müssen auf dem Host vorhanden sein, damit die App starten kann.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [dotnet-publish](../tools/dotnet-publish.md)
 - [dotnet-store](../tools/dotnet-store.md)

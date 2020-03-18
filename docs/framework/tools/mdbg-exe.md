@@ -6,10 +6,10 @@ helpviewer_keywords:
 - MDbg.exe
 ms.assetid: 28a3f509-07e2-4dbe-81df-874c5e969cc4
 ms.openlocfilehash: 58502626fed6c9cee52acb673ae34f6024f78b9b
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75715752"
 ---
 # <a name="mdbgexe-net-framework-command-line-debugger"></a>MDbg.exe (.NET Framework-Befehlszeilendebugger)
@@ -50,7 +50,7 @@ MDbg [ProgramName[arguments]] [options]
 |**fo**[**reach**] [*andererBefehl*]|Führt einen Befehl für alle Threads aus. *OtherCommand* ist ein gültiger Befehl, der für einen Thread ausgeführt wird. **foreach** *OtherCommand* führt denselben Befehl für alle Threads aus.|  
 |**f**[**unceval**] [`-ad` *Nr*] *Funktionsname* [*Argumente...* ]|Führt eine Funktionsauswertung für den derzeit aktiven Thread aus, wobei *Funktionsname* die auszuwertende Funktion ist. Der Funktionsname muss vollqualifiziert sein, einschließlich Namespaces.<br /><br /> Die `-ad`-Option gibt die Anwendungsdomäne an, die zum Auflösen der Funktion verwendet werden soll. Wird die `-ad`-Option nicht angegeben, ist die Standardeinstellung der Anwendungsdomäne für die Auflösung die Anwendungsdomäne, in der sich der für die Funktionsauswertung verwendete Thread befindet.<br /><br /> Wenn die ausgewertete Funktion nicht statisch ist, sollte der erste übergebene Parameter ein `this`-Zeiger sein. Alle Anwendungsdomänen werden nach Argumenten für die Funktionsauswertung durchsucht.<br /><br /> Um einen Wert aus einer Anwendungsdomäne anzufordern, stellen Sie der Variablen den Modul- und Anwendungsdomänennamen als Präfix voran, z. B. `funceval -ad 0 System.Object.ToString hello.exe#0!MyClass.g_rootRef`. Mit diesem Befehl wird die Funktion `System.Object.ToString` in der Anwendungsdomäne `0` ausgewertet. Da die `ToString`-Methode eine Instanzfunktion ist, muss der erste Parameter ein `this`-Zeiger sein.|  
 |**g**[**o**]|Bewirkt, dass das Programm fortgesetzt wird, bis ein Haltepunkt erreicht wird, das Programm beendet wird oder ein Ereignis das Beenden des Programms verursacht (z. B. ein Ausnahmefehler).|  
-|**h**[**elp**] [*befehl*]<br /><br /> - oder -<br /><br /> **?** [*Befehl*]|Zeigt eine Beschreibung aller Befehle oder eine ausführliche Beschreibung eines angegebenen Befehls an.|  
+|**h**[**elp**] [*befehl*]<br /><br /> \- oder -<br /><br /> **?** [*Befehl*]|Zeigt eine Beschreibung aller Befehle oder eine ausführliche Beschreibung eines angegebenen Befehls an.|  
 |**ig**[**nore**] [*ereignis*]|Bewirkt, dass der Debugger nur bei Ausnahmefehlern anhält.|  
 |**int**[**ercept**] *framezahl*|Führt einen Rollback für den Debugger zu einer angegebenen Framenummer aus.<br /><br /> Wenn der Debugger auf eine Ausnahme trifft, verwenden Sie diesen Befehl, um für den Debugger einen Rollback zur angegebenen Framenummer auszuführen. Sie können den Programmzustand mit dem **set**-Befehl ändern und mit dem **go**-Befehl fortfahren.|  
 |**k**[**ill**]|Hält den aktiven Prozess an.|  
@@ -102,7 +102,7 @@ mdbg>
   
  Sobald Sie im Debugger sind, verwenden Sie die im vorherigen Abschnitt beschriebenen Befehle und Argumente.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Extras](index.md)
 - [Eingabeaufforderungen](developer-command-prompt-for-vs.md)

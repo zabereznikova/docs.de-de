@@ -4,10 +4,10 @@ description: Informationen zur Zuordnung zwischen project.json und csproj-Elemen
 author: natemcmaster
 ms.date: 03/13/2017
 ms.openlocfilehash: abe515007b47b415ac33e3350a29edced1784d68
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/19/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77451104"
 ---
 # <a name="a-mapping-between-projectjson-and-csproj-properties"></a>Die Zuordnung zwischen project.json und csproj-Eigenschaften
@@ -38,7 +38,7 @@ Das neue Format \*.csproj, ist ein XML-basiertes Format. Im folgenden Beispiel w
 }
 ```
 
-Wird nicht mehr unterstützt. In csproj wird dies durch den Dateinamen des Projekts festgelegt, der in der Regel mit dem Namen des Verzeichnisses übereinstimmt. Beispielsweise `MyProjectName.csproj`.
+Wird nicht mehr unterstützt. In csproj wird dies durch den Dateinamen des Projekts festgelegt, der in der Regel mit dem Namen des Verzeichnisses übereinstimmt. Beispiel: `MyProjectName.csproj`.
 
 Standardmäßig gibt der Dateiname des Projekts auch den Wert der `<AssemblyName>`- und `<PackageId>`- Eigenschaften an.
 
@@ -673,6 +673,6 @@ Weitere Informationen finden Sie unter [Inhalt in ein Paket einschließen](/nuge
 </ItemGroup>
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Allgemeine Übersicht über Änderungen in CLI](../tools/cli-msbuild-architecture.md)

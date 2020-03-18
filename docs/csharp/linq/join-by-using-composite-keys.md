@@ -4,11 +4,11 @@ description: In diesem Artikel erfahren Sie, wie Sie Verknüpfungen mithilfe zus
 ms.date: 12/01/2016
 ms.assetid: da70b54d-3213-45eb-8437-fbe75cbcf935
 ms.openlocfilehash: 460a52da7e0c0a47b77d4c64e76641bae9da7cd6
-ms.sourcegitcommit: 5dcfeb59179e81071f54840d4902cbe00b184294
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54857514"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "61659877"
 ---
 # <a name="join-by-using-composite-keys"></a>Verknüpfen mithilfe eines zusammengesetzten Schlüssels
 
@@ -36,7 +36,7 @@ join...on new {Name = o.CustomerName, ID = o.CustID} equals
 
 Zusammengesetzte Schlüssel können auch in einer `group`-Klausel verwendet werden.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Language-Integrated Query (LINQ)](index.md)
 - [join-Klausel](../language-reference/keywords/join-clause.md)
