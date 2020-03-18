@@ -7,26 +7,26 @@ helpviewer_keywords:
 - value keyword [C#]
 ms.assetid: c99d6468-687f-4a46-89b4-a95e1b00bf6d
 ms.openlocfilehash: 84d0c51ddafb59144f4ba8c6e73412642fa8fa28
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75712896"
 ---
-# <a name="value-c-reference"></a><span data-ttu-id="f1531-102">value (C#-Referenz)</span><span class="sxs-lookup"><span data-stu-id="f1531-102">value (C# Reference)</span></span>
+# <a name="value-c-reference"></a><span data-ttu-id="7fe7e-102">value (C#-Referenz)</span><span class="sxs-lookup"><span data-stu-id="7fe7e-102">value (C# Reference)</span></span>
 
-<span data-ttu-id="f1531-103">Das kontextabhängige Schlüsselwort `value` wird im `set`-Accessor in den Deklarationen [property](../../programming-guide/classes-and-structs/properties.md) und [indexer](../../programming-guide/indexers/index.md) verwendet.</span><span class="sxs-lookup"><span data-stu-id="f1531-103">The contextual keyword `value` is used in the `set` accessor in [property](../../programming-guide/classes-and-structs/properties.md) and [indexer](../../programming-guide/indexers/index.md) declarations.</span></span> <span data-ttu-id="f1531-104">Es ähnelt einem Eingabeparameter einer Methode.</span><span class="sxs-lookup"><span data-stu-id="f1531-104">It is similar to an input parameter of a method.</span></span> <span data-ttu-id="f1531-105">Das Wort `value` verweist auf den Wert, den Clientcode der Eigenschaft oder dem Indexer zuweisen möchte.</span><span class="sxs-lookup"><span data-stu-id="f1531-105">The word `value` references the value that client code is attempting to assign to the property or indexer.</span></span> <span data-ttu-id="f1531-106">Im folgenden Beispiel verfügt `MyDerivedClass` über eine Eigenschaft mit dem Namen `Name`, die den Parameter `value` verwendet, um dem Unterstützungsfeld `name` eine neue Zeichenfolge zuzuweisen.</span><span class="sxs-lookup"><span data-stu-id="f1531-106">In the following example, `MyDerivedClass` has a property called `Name` that uses the `value` parameter to assign a new string to the backing field `name`.</span></span> <span data-ttu-id="f1531-107">Aus Sicht des Clientcodes ist der Vorgang als einfache Zuweisung geschrieben.</span><span class="sxs-lookup"><span data-stu-id="f1531-107">From the point of view of client code, the operation is written as a simple assignment.</span></span>
+<span data-ttu-id="7fe7e-103">Das kontextabhängige Schlüsselwort `value` wird im `set`-Accessor in den Deklarationen [property](../../programming-guide/classes-and-structs/properties.md) und [indexer](../../programming-guide/indexers/index.md) verwendet.</span><span class="sxs-lookup"><span data-stu-id="7fe7e-103">The contextual keyword `value` is used in the `set` accessor in [property](../../programming-guide/classes-and-structs/properties.md) and [indexer](../../programming-guide/indexers/index.md) declarations.</span></span> <span data-ttu-id="7fe7e-104">Es ähnelt einem Eingabeparameter einer Methode.</span><span class="sxs-lookup"><span data-stu-id="7fe7e-104">It is similar to an input parameter of a method.</span></span> <span data-ttu-id="7fe7e-105">Das Wort `value` verweist auf den Wert, den Clientcode der Eigenschaft oder dem Indexer zuweisen möchte.</span><span class="sxs-lookup"><span data-stu-id="7fe7e-105">The word `value` references the value that client code is attempting to assign to the property or indexer.</span></span> <span data-ttu-id="7fe7e-106">Im folgenden Beispiel verfügt `MyDerivedClass` über eine Eigenschaft mit dem Namen `Name`, die den Parameter `value` verwendet, um dem Unterstützungsfeld `name` eine neue Zeichenfolge zuzuweisen.</span><span class="sxs-lookup"><span data-stu-id="7fe7e-106">In the following example, `MyDerivedClass` has a property called `Name` that uses the `value` parameter to assign a new string to the backing field `name`.</span></span> <span data-ttu-id="7fe7e-107">Aus Sicht des Clientcodes ist der Vorgang als einfache Zuweisung geschrieben.</span><span class="sxs-lookup"><span data-stu-id="7fe7e-107">From the point of view of client code, the operation is written as a simple assignment.</span></span>
 
 [!code-csharp[csrefKeywordsModifiers#26](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsModifiers/CS/csrefKeywordsModifiers.cs#26)]
 
-<span data-ttu-id="f1531-108">Weitere Informationen finden Sie in den Artikeln zu [Eigenschaften](../../programming-guide/classes-and-structs/properties.md) und [Indexern](../../programming-guide/indexers/index.md).</span><span class="sxs-lookup"><span data-stu-id="f1531-108">For more information, see the [Properties](../../programming-guide/classes-and-structs/properties.md) and [Indexeres](../../programming-guide/indexers/index.md) articles.</span></span>
+<span data-ttu-id="7fe7e-108">Weitere Informationen finden Sie in den Artikeln zu [Eigenschaften](../../programming-guide/classes-and-structs/properties.md) und [Indexern](../../programming-guide/indexers/index.md).</span><span class="sxs-lookup"><span data-stu-id="7fe7e-108">For more information, see the [Properties](../../programming-guide/classes-and-structs/properties.md) and [Indexeres](../../programming-guide/indexers/index.md) articles.</span></span>
 
-## <a name="c-language-specification"></a><span data-ttu-id="f1531-109">C#-Sprachspezifikation</span><span class="sxs-lookup"><span data-stu-id="f1531-109">C# language specification</span></span>
+## <a name="c-language-specification"></a><span data-ttu-id="7fe7e-109">C#-Sprachspezifikation</span><span class="sxs-lookup"><span data-stu-id="7fe7e-109">C# language specification</span></span>
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a><span data-ttu-id="f1531-110">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="f1531-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="7fe7e-110">Weitere Informationen</span><span class="sxs-lookup"><span data-stu-id="7fe7e-110">See also</span></span>
 
-- [<span data-ttu-id="f1531-111">C#-Referenz</span><span class="sxs-lookup"><span data-stu-id="f1531-111">C# Reference</span></span>](../index.md)
-- [<span data-ttu-id="f1531-112">C#-Programmierhandbuch</span><span class="sxs-lookup"><span data-stu-id="f1531-112">C# Programming Guide</span></span>](../../programming-guide/index.md)
-- [<span data-ttu-id="f1531-113">C#-Schlüsselwörter</span><span class="sxs-lookup"><span data-stu-id="f1531-113">C# Keywords</span></span>](index.md)
+- [<span data-ttu-id="7fe7e-111">C#-Referenz</span><span class="sxs-lookup"><span data-stu-id="7fe7e-111">C# Reference</span></span>](../index.md)
+- [<span data-ttu-id="7fe7e-112">C#-Programmierhandbuch</span><span class="sxs-lookup"><span data-stu-id="7fe7e-112">C# Programming Guide</span></span>](../../programming-guide/index.md)
+- [<span data-ttu-id="7fe7e-113">C#-Schlüsselwörter</span><span class="sxs-lookup"><span data-stu-id="7fe7e-113">C# Keywords</span></span>](index.md)

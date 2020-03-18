@@ -12,10 +12,10 @@ metadata:
   interactive: csharp
   ms.custom: mvc
   ms.openlocfilehash: 365cf0b2ef36dd0be624d022e3dea5e16a9eb58c
-  ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+  ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
   ms.translationtype: HT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 11/12/2019
+  ms.lasthandoff: 03/14/2020
   ms.locfileid: "73969409"
 items:
 - durationInMinutes: 1
@@ -167,7 +167,7 @@ items:
 - title: Weitere Möglichkeiten zur Verwendung von Zeichenfolgen
   durationInMinutes: 5
   content: >
-    Sie haben mithilfe der **Methode** <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> Meldungen ausgegeben. Eine **Methode** ist ein Codeblock, der eine bestimmte Aktion implementiert. Diesem ist ein Name zugewiesen, damit Sie auf diesen zugreifen können.
+    Sie haben mithilfe der **Methode**<xref:System.Console.WriteLine%2A?displayProperty=nameWithType> Meldungen ausgegeben. Eine **Methode** ist ein Codeblock, der eine bestimmte Aktion implementiert. Diesem ist ein Name zugewiesen, damit Sie auf diesen zugreifen können.
 
 
     Nehmen wir an, Ihre Zeichenfolgen weisen führende oder schließende Leerzeichen auf, die Sie nicht anzeigen möchten. Sie möchten die Zeichenfolgen um die Leerzeichen **kürzen**.
@@ -270,7 +270,7 @@ items:
     > [!NOTE]
 
     > Dieses Onlinecodierungstutorial befindet sich im Vorschaumodus. Wenn Probleme auftreten, melden Sie diese [im dotnet/try-Repository](https://github.com/dotnet/try/issues).
-- title: Übung abgeschlossen
+- title: Herausforderung erfüllen
   durationInMinutes: 3
   content: >
     Sieht ihr Code ungefähr wie der Folgende aus?
