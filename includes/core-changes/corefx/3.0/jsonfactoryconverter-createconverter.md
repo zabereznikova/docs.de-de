@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 9052f509ec6df4e4b911e2f33b5c8197adb9a2c3
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: 3bce796191e0ebe6dbe4650457abe5a20c383f02
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74568251"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79147561"
 ---
 ### <a name="jsonfactoryconvertercreateconverter-signature-changed"></a>Änderung der JsonFactoryConverter.CreateConverter-Signatur
 
@@ -42,13 +42,13 @@ Vor dieser Änderung war es schwierig, versiegelte Factory-Konverter zu verfasse
 
 3.0 Preview 8
 
-#### <a name="recommended-action"></a>Empfohlene Maßnahme
+#### <a name="recommended-action"></a>Empfohlene Aktion
 
 Abgeleitete Klassen müssen aktualisiert und neu kompiliert werden.
 
 #### <a name="affected-apis"></a>Betroffene APIs
 
-<xref:System.Text.Json.Serialization.JsonConverterFactory.CreateConverter(System.Type,System.Text.Json.JsonSerializerOptions)?displayProperty=nameWithType>.
+- <xref:System.Text.Json.Serialization.JsonConverterFactory.CreateConverter(System.Type,System.Text.Json.JsonSerializerOptions)?displayProperty=nameWithType>
 
 <!-- For tool use only
 

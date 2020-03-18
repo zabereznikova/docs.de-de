@@ -10,10 +10,10 @@ helpviewer_keywords:
 - text files, reading
 ms.assetid: 92246c5b-e819-4eea-9370-1a9460e12de3
 ms.openlocfilehash: d401a1d1bb2c6fccb203c440f367bd14c80e70e3
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75705014"
 ---
 # <a name="how-to-read-from-a-text-file-c-programming-guide"></a>Vorgehensweise: Lesen aus einer Textdatei (C#-Programmierleitfaden)
@@ -40,7 +40,7 @@ Wenn Sie nicht die Textdateien aus [Vorgehensweise: Schreiben in eine Textdatei]
 ## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
  Schließen Sie nicht vom Namen einer Datei auf deren Inhalt. Bei der Datei `myFile.cs` handelt es sich zum Beispiel nicht unbedingt um eine C#-Quelldatei.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.IO?displayProperty=nameWithType>
 - [C#-Programmierhandbuch](../index.md)

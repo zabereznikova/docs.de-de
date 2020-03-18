@@ -4,12 +4,12 @@ description: In diesem Artikel erfahren Sie, wie Sie Probleme mit der Notarisier
 author: thraka
 ms.author: adegeo
 ms.date: 02/14/2020
-ms.openlocfilehash: b16ef4074f829246df0aedebf7ffe4df75faed51
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: be39c1ea56699f84736a2b37bc958507b16e826b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78165350"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79146748"
 ---
 # <a name="macos-catalina-notarization-and-the-impact-on-net-core-downloads-and-projects"></a>macOS Catalina-Notarisierung und die Auswirkungen auf .NET Core-Downloads und -Projekte
 
@@ -78,7 +78,7 @@ Weitere Informationen zur Behandlung von ASP.NET Core-Zertifikatproblemen finden
 ## <a name="default-entitlements"></a>Standardberechtigungen
 
 Der Standardhost von .NET Core (`dotnet`-Befehl) verfügt über einige Standardberechtigungen. Diese Berechtigungen sind für den ordnungsgemäßen Betrieb von .NET Core erforderlich. Manchmal erfordert Ihre Anwendung zusätzliche Berechtigungen. In diesem Fall müssen Sie eine [appHost-Datei](#apphost-is-disabled-by-default) generieren und verwenden und anschließend die erforderlichen Berechtigungen lokal hinzufügen.
- 
+
 Standardberechtigungen für .NET Core:
 
 - `com.apple.security.cs.allow-jit`

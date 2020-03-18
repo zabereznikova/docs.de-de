@@ -2,26 +2,26 @@
 title: .NET Core und Open-Source
 ms.date: 03/30/2017
 ms.assetid: e6bd4655-ce37-4003-8462-468a6fe2c40f
-ms.openlocfilehash: 4032ba771d917d25473c8de350cc752bd052f94d
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: b5aa42d0460d743bffe8f17a2603773c03c09ce0
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75752547"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79181610"
 ---
 # <a name="net-core-and-open-source"></a>.NET Core und Open-Source
 
 Dieser Artikel enthält einen kurzen Überblick über .NET Core und zeigt, wie Sie weitere Informationen erhalten können. Die vollständige Liste der Dokumentation zu .NET Core finden Sie im [Leitfaden für .NET Core](../../core/index.md).
-  
-<a name="BKMK_WhatisNETCore"></a>   
+
 ## <a name="what-is-net-core"></a>Was ist .NET Core?  
- .NET Core ist eine allgemeine, modulare, plattformübergreifende Open Source-Implementierung der .NET-Standards. Sie enthält viele derselben APIs wie das .NET Framework (aber .NET Core umfasst eine kleinere Gruppe) und umfasst Runtime-, Framework-, Compiler- und Toolkomponenten, die eine Vielzahl von Betriebssystemen und Prozessorzielen unterstützt. Die .NET Core-Implementierung wurde in erster Linie durch die ASP.NET Core-Arbeitsauslastungen gesteuert, aber auch durch die Notwendigkeit und den Wunsch nach einer moderneren Implementierung. Sie kann in Geräte-, Cloud- und eingebetteten/IoT-Szenarien verwendet werden.  
+
+.NET Core ist eine allgemeine, modulare, plattformübergreifende Open Source-Implementierung der .NET-Standards. Sie enthält viele derselben APIs wie das .NET Framework (aber .NET Core umfasst eine kleinere Gruppe) und umfasst Runtime-, Framework-, Compiler- und Toolkomponenten, die eine Vielzahl von Betriebssystemen und Prozessorzielen unterstützt. Die .NET Core-Implementierung wurde in erster Linie durch die ASP.NET Core-Arbeitsauslastungen gesteuert, aber auch durch die Notwendigkeit und den Wunsch nach einer moderneren Implementierung. Sie kann in Geräte-, Cloud- und eingebetteten/IoT-Szenarien verwendet werden.  
   
- Informationen zu den ersten Schritten mit .NET Core finden Sie im .NET-Tutorial [Hallo Welt in zehn Minuten](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro).  
+Informationen zu den ersten Schritten mit .NET Core finden Sie im .NET-Tutorial [Hallo Welt in zehn Minuten](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro).  
   
 .NET Core weist die folgenden wesentlichen Merkmale auf:
   
-- **Plattformübergreifend:** .NET Core stellt Hauptfunktionen zur Implementierung der erforderlichen App-Funktionen bereit sowie zur Wiederverwendung dieses Codes unabhängig von Ihrer Zielplattform. Derzeit werden die drei Hauptbetriebssysteme unterstützt: Windows, Linux und macOS. Sie können Apps und Bibliotheken schreiben, die über unterstützte Betriebssysteme hinweg unverändert ausgeführt werden. Die Liste der unterstützten Betriebssysteme finden Sie unter [.NET Core Roadmap](https://github.com/dotnet/core/blob/master/roadmap.md).
+- **Plattformübergreifend:** .NET Core stellt Hauptfunktionen zur Implementierung der erforderlichen App-Funktionen bereit sowie zur Wiederverwendung dieses Codes unabhängig von Ihrer Zielplattform. Es unterstützt derzeit die drei Hauptbetriebssysteme: Windows, Linux und Mac OS. Sie können Apps und Bibliotheken schreiben, die über unterstützte Betriebssysteme hinweg unverändert ausgeführt werden. Die Liste der unterstützten Betriebssysteme finden Sie unter [.NET Core Roadmap](https://github.com/dotnet/core/blob/master/roadmap.md).
   
 - **Open Source:** .NET Core ist eines der vielen Projekten unter der Leitung der [.NET Foundation](https://www.dotnetfoundation.org/) und ist auf [GitHub](https://github.com/) verfügbar.  Die Entwicklung von .NET Core als Open Source-Projekt fördert einen transparenteren Entwicklungsprozess sowie eine aktive und engagierte Community.  
   
@@ -43,7 +43,7 @@ Die .NET Core-Plattform besteht aus mehreren Komponenten, die den verwalteten Co
   
 - [ASP.NET Core](https://github.com/dotnet/aspnetcore)  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [.NET-Tutorial: Hallo Welt in zehn Minuten](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro)
 - [Leitfaden für .NET Core](../../core/index.md)

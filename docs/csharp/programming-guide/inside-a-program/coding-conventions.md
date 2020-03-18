@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C# language, coding conventions
 ms.assetid: f4f60de9-d49b-4fb6-bab1-20e19ea24710
 ms.openlocfilehash: 77b173a420f26834855e0bdca3c8d04406ac65d4
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77452005"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79398376"
 ---
 # <a name="c-coding-conventions-c-programming-guide"></a>Codekonventionen für C# (C#-Programmierhandbuch)
 
@@ -110,7 +110,7 @@ In den folgenden Abschnitten werden die Vorgehensweisen beschrieben, denen das C
      [!code-csharp[csProgGuideCodingConventions#12](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#12)]
 
      > [!NOTE]
-     > Achten Sie darauf, nicht versehentlich den Typ eines Elements in der Iterable-Sammlung zu ändern. Beispielsweise ist es einfach, in einer `foreach`-Anweisung von <xref:System.Linq.IQueryable?displayProperty=nameWithType> zu <xref:System.Collections.IEnumerable?displayProperty=nameWithType> zu wechseln, was die Ausführung einer Abfrage ändert.
+     > Achten Sie darauf, nicht versehentlich den Typ eines Elements in der Iterable-Sammlung zu ändern. Beispielsweise ist es einfach, in einer <xref:System.Linq.IQueryable?displayProperty=nameWithType>-Anweisung von <xref:System.Collections.IEnumerable?displayProperty=nameWithType> zu `foreach` zu wechseln, was die Ausführung einer Abfrage ändert.
 
 ### <a name="unsigned-data-type"></a>Datentyp ohne Vorzeichen  
   
@@ -170,7 +170,7 @@ Wenn Sie einen Ereignishandler definieren, den Sie später nicht entfernen müss
   
 ### <a name="static-members"></a>Statische Member  
   
-Rufen Sie [statische](../../language-reference/keywords/static.md) Member über diesen Klassennamen auf: *ClassName.StaticMember*. Durch diese Empfehlung ist der Code besser lesbar, da der statische Zugriff eindeutig ist.  Qualifizieren Sie keinen statischen Member, der in einer Basisklasse mit dem Namen einer abgeleiteten Klasse definiert ist.  Während dieser Code kompiliert wird, ist die Lesbarkeit des Codes irreführend, und der Code kann später beschädigt werden, wenn Sie der abgeleiteten Klasse einen statischen Member mit dem gleichen Namen hinzufügen.  
+Rufen Sie [statische](../../language-reference/keywords/static.md) Member über den Klassennamen *ClassName.StaticMember* auf. Durch diese Empfehlung ist der Code besser lesbar, da der statische Zugriff eindeutig ist.  Qualifizieren Sie keinen statischen Member, der in einer Basisklasse mit dem Namen einer abgeleiteten Klasse definiert ist.  Während dieser Code kompiliert wird, ist die Lesbarkeit des Codes irreführend, und der Code kann später beschädigt werden, wenn Sie der abgeleiteten Klasse einen statischen Member mit dem gleichen Namen hinzufügen.  
   
 ### <a name="linq-queries"></a>LINQ-Abfragen  
   
@@ -204,7 +204,7 @@ Rufen Sie [statische](../../language-reference/keywords/static.md) Member über 
 
 Befolgen Sie die Richtlinien in [Richtlinien für das Schreiben von sicherem Code](../../../standard/security/secure-coding-guidelines.md).  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Visual Basic-Codierungskonventionen](../../../visual-basic/programming-guide/program-structure/coding-conventions.md)
 - [Richtlinien für das Schreiben von sicherem Code](../../../standard/security/secure-coding-guidelines.md)

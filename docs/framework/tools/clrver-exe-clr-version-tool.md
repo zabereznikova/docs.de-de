@@ -6,10 +6,10 @@ helpviewer_keywords:
 - CLR Version tool
 ms.assetid: cbc2ee86-bdc8-4a65-a8f1-ba23bce3a699
 ms.openlocfilehash: bfc612ef5455e1b4a03d15fd99a8a1873d2c7c08
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75715799"
 ---
 # <a name="clrverexe-clr-version-tool"></a>Clrver.exe (CLR-Versionstool)
@@ -54,7 +54,7 @@ clrver [option]
   
  `Clrver -all`  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Extras](index.md)
 - [Eingabeaufforderungen](developer-command-prompt-for-vs.md)

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - -linkresource compiler option [C#]
 - linkresource compiler option [C#]
 ms.assetid: 440c26c2-77c1-4811-a0a3-57cce3f5fc96
-ms.openlocfilehash: 454915454f3faf15933257f3e3e221afec51d0ee
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 41af8e0ba8ffebd07d3cb1d2bc5fbc04b8cd595d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69606753"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79173730"
 ---
 # <a name="-linkresource-c-compiler-options"></a>-linkresource (C#-Compileroptionen)
 Erstellt einen Link zur .NET Framework-Ressource in der Ausgabedatei Die Ressourcendateien wird nicht in die Ausgabedatei eingefügt. Dies ist ein Unterschied zur Option [-resource](./resource-compiler-option.md), die eine Ressourcendatei in die Ausgabedatei einbettet.  
@@ -35,9 +35,9 @@ Erstellt einen Link zur .NET Framework-Ressource in der Ausgabedatei Die Ressour
  Der logische Name der Ressource. Der Name, mit dem die Ressource geladen wird. Der Standardwert ist der Name der Datei.  
   
  `accessibility-modifier` (optional)  
- Barrierefreiheit der Ressource: öffentlich oder privat. Der Standardwert ist „öffentlich“.  
+ Barrierefreiheit der Ressource: öffentlich oder privat. Der Standardwert ist public.  
   
-## <a name="remarks"></a>Anmerkungen  
+## <a name="remarks"></a>Hinweise  
  Verknüpfte Ressourcen sind standardmäßig in der Assembly öffentlich, wenn sie mit den C#-Compiler erstellt werden. Geben Sie `private` als Modifizierer der Barrierefreiheit an. Außer `public` und `private` sind keine anderen Modifizierer zulässig.  
   
  **-linkresource** erfordert eine andere [-target](./target-compiler-option.md)-Option als **-target:module**.  
@@ -70,11 +70,11 @@ gacutil -i A.dll
   
 ```console  
 csc -t:module A.cs  
-al -out:A.dll A.netmodule -link:N.dll   
+al -out:A.dll A.netmodule -link:N.dll
 gacutil -i A.dll  
 ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [C#-Compileroptionen](./index.md)
 - [Al.exe (Assembly Linker-Tool)](../../../framework/tools/al-exe-assembly-linker.md)

@@ -19,10 +19,10 @@ helpviewer_keywords:
 - strings [.NET Framework],comparing
 ms.assetid: b9f0bf53-e2de-4116-8ce9-d4f91a1df4f7
 ms.openlocfilehash: c88776ea9d8ba17d86767b704e8b0eaff5b6cb89
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75711479"
 ---
 # <a name="best-practices-for-using-strings-in-net"></a>Empfohlene Vorgehensweisen für die Verwendung von Zeichenfolgen in .NET
@@ -199,7 +199,7 @@ Insgesamt verfügt die invariante Kultur nur über sehr wenige Eigenschaften, di
 
 In der folgenden Tabelle wird die Zuordnung von semantischem Zeichenfolgenkontext zu einem <xref:System.StringComparison>-Enumerationsmember beschrieben:
 
-|Daten|Verhalten|System.StringComparison-Entsprechung<br /><br /> Wert|
+|Daten|Verhalten|System.StringComparison-Entsprechung<br /><br /> value|
 |----------|--------------|-----------------------------------------------------|
 |Interne Bezeichner, die die Groß- und Kleinschreibung beachten.<br /><br /> Bezeichner in Standards wie XML und HTTP, die die Groß- und Kleinschreibung beachten.<br /><br /> Sicherheitsbezogene Einstellungen, die die Groß- und Kleinschreibung beachten.|Ein nicht linguistischer Bezeichner mit exakt übereinstimmenden Bytes.|<xref:System.StringComparison.Ordinal>|
 |Interne Bezeichner, die die Groß- und Kleinschreibung nicht beachten.<br /><br /> Bezeichner in Standards wie XML und HTTP, die die Groß- und Kleinschreibung nicht beachten.<br /><br /> Dateipfade.<br /><br /> Registrierungsschlüssel und -werte.<br /><br /> Umgebungsvariablen.<br /><br /> Ressourcenbezeichner (z. B. Handlenamen).<br /><br /> Sicherheitsbezogene Einstellungen, die die Groß- und Kleinschreibung nicht beachten.|Ein nicht linguistischer Bezeichner, bei dem die Groß- und Kleinschreibung keine Rolle spielt; insbesondere für Daten, die in den meisten Systemdiensten von Windows gespeichert werden.|<xref:System.StringComparison.OrdinalIgnoreCase>|

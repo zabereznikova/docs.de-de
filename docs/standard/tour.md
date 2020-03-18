@@ -6,12 +6,12 @@ ms.author: wiwagn
 ms.date: 05/22/2017
 ms.technology: dotnet-standard
 ms.assetid: bbfe6465-329d-4982-869d-472e7ef85d93
-ms.openlocfilehash: f4cd2e47da236d276a42b972265ffd1a2fe27310
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: 61d4792b1f1b92dd59442ee38810da96c6cf63bd
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78160338"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "78241142"
 ---
 # <a name="tour-of-net"></a>Einführung in .NET
 
@@ -41,7 +41,7 @@ Microsoft entwickelt und unterstützt aktiv drei .NET-Sprachen: C#, F# und Visua
 
 Die beiden folgenden Zeilen weisen Speicher zu:
 
-[!code-csharp[MemoryManagement](../../samples/csharp/snippets/tour/MemoryManagement.csx#L1-L2)]
+[!code-csharp[MemoryManagement](../../samples/snippets/csharp/snippets/tour/MemoryManagement.csx#L1-L2)]
 
 Es gibt kein entsprechendes Schlüsselwort zum Aufheben der Speicherzuweisung, da diese automatisch erfolgt, wenn der Garbage Collector während seiner geplanten Ausführung Arbeitsspeicher freigibt.
 
@@ -49,7 +49,7 @@ Der Garbage Collector ist nur einer der Dienste, die bei der Sicherstellung der 
 
 Im folgenden Beispiel löst die Runtime eine <xref:System.IndexOutOfRangeException>-Ausnahme aus, um Speichersicherheit zu erzwingen:
 
-[!code-csharp[MemoryManagement](../../samples/csharp/snippets/tour/MemoryManagement.csx#L4-L5)]
+[!code-csharp[MemoryManagement](../../samples/snippets/csharp/snippets/tour/MemoryManagement.csx#L4-L5)]
 
 ## <a name="working-with-unmanaged-resources"></a>Arbeiten mit nicht verwalteten Ressourcen
 
@@ -57,7 +57,7 @@ Einige Objekte verweisen auf *nicht verwaltete Ressourcen*. Nicht verwaltete Res
 
 In .NET implementieren Objekte, die auf nicht verwaltete Ressourcen verweisen, die <xref:System.IDisposable>-Schnittstelle. Wenn Sie mit dem Objekt fertig sind, können Sie die <xref:System.IDisposable.Dispose>-Methode des Objekts aufrufen, die für die Freigabe nicht verwalteter Ressourcen zuständig ist. .NET-Sprachen stellen wie im folgenden Beispiel gezeigt eine praktische [`using`-Anweisung](../csharp/language-reference/keywords/using.md) für solche Objekte bereit:
 
-[!code-csharp[UnmanagedResources](../../samples/csharp/snippets/tour/UnmanagedResources.csx#L1-L6)]
+[!code-csharp[UnmanagedResources](../../samples/snippets/csharp/snippets/tour/UnmanagedResources.csx#L1-L6)]
 
 Sobald der `using`-Block abgeschlossen ist, ruft die .NET-Runtime automatisch die <xref:System.IDisposable.Dispose>-Methode des `stream`-Objekts auf, die das Dateihandle freigibt. Die Runtime tut dies ebenfalls, wenn eine Ausnahme das Steuerelement dazu veranlasst, den Block zu verlassen.
 
@@ -73,15 +73,15 @@ Ein Objekt ist eine Instanz eines bestimmten Typs. Die einzigen Vorgänge, die f
 
 .NET-Sprachen sind objektorientiert und arbeiten mit Hierarchien aus Basisklassen und abgeleiteten Klassen. Die .NET-Runtime lässt nur Objektumwandlungen und -aufrufe zu, die der Objekthierarchie entsprechen. Denken Sie daran, dass jeder in einer .NET-Sprache definierte Typ vom <xref:System.Object>-Basistyp abgeleitet ist.
 
-[!code-csharp[TypeSafety](../../samples/csharp/snippets/tour/TypeSafety.csx#L19-L23)]
+[!code-csharp[TypeSafety](../../samples/snippets/csharp/snippets/tour/TypeSafety.csx#L19-L23)]
 
 Mithilfe der Typsicherheit lässt sich auch eine Kapselung erzwingen, indem die Genauigkeit der Accessorschlüsselwörter garantiert wird. Accessorschlüsselwörter sind Artefakte, die den Zugriff auf Member eines bestimmten Typs durch anderen Code steuern. Diese werden üblicherweise für verschiedene Arten von Daten innerhalb eines Typs verwendet, mit denen das Verhalten des Typs verwaltet wird.
 
-[!code-csharp[TypeSafety](../../samples/csharp/snippets/tour/TypeSafety.csx#L3-L3)]
+[!code-csharp[TypeSafety](../../samples/snippets/csharp/snippets/tour/TypeSafety.csx#L3-L3)]
 
 C#, Visual Basic und F# unterstützen einen lokalen *Typrückschluss*. Ein Typrückschluss bedeutet, dass der Compiler den Typ eines Ausdrucks auf der linken Seite aus dem Ausdruck auf der rechten Seite ableitet. Dies bedeutet nicht, dass die Typsicherheit verletzt oder außer Kraft gesetzt wird. Der resultierende Typ besitzt einen starken Typ mit allem, was dies impliziert. `dog` aus dem vorherigen Beispiel wird umgeschrieben, um einen Typrückschluss einzufügen. Der Rest des Beispiels bleibt unverändert:
 
-[!code-csharp[TypeSafety](../../samples/csharp/snippets/tour/TypeSafety.csx#L28-L34)]
+[!code-csharp[TypeSafety](../../samples/snippets/csharp/snippets/tour/TypeSafety.csx#L28-L34)]
 
 F# weist sogar noch weitergehende Funktionen für den Typrückschluss auf als der Typrückschluss innerhalb einer Methode wie in C# und Visual Basic. Weitere Informationen finden Sie unter [Typrückschluss](../fsharp/language-reference/type-inference.md).
 
@@ -101,7 +101,7 @@ Generics wurden hinzugefügt, um Programmierer beim Implementieren generischer D
 
 Das folgende Beispiel zeigt ein einfaches Programm, das unter Verwendung einer Instanz von <xref:System.Collections.Generic.List%601>-Typen ausgeführt wird:
 
-[!code-csharp[GenericsShort](../../samples/csharp/snippets/tour/GenericsShort.csx)]
+[!code-csharp[GenericsShort](../../samples/snippets/csharp/snippets/tour/GenericsShort.csx)]
 
 Weitere Informationen finden Sie im Thema [Generische Typen (Generics) – Übersicht](generics.md).
 
@@ -133,7 +133,7 @@ Je nach Sprachunterstützung können Sie mit der CLR auf nativen Speicher zugrei
 
 Das folgende Beispiel zeigt die geänderte Version der `ToString()`-Methode aus der `StringBuilder`-Klasse. Es veranschaulicht, wie sich durch Verwendung von `unsafe`-Code effizient ein Algorithmus implementieren lässt, indem Arbeitsspeicherblöcke direkt verschoben werden:
 
-[!code-csharp[Unsafe](../../samples/csharp/snippets/tour/Unsafe.csx)]
+[!code-csharp[Unsafe](../../samples/snippets/csharp/snippets/tour/Unsafe.csx)]
 
 ## <a name="next-steps"></a>Nächste Schritte
 

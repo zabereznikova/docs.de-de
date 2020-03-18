@@ -6,10 +6,10 @@ dev_langs:
 - csharp
 - vb
 ms.openlocfilehash: a74d4b74ead8492028a092e090f9281231802a87
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74348169"
 ---
 # <a name="friend-assemblies"></a>Friend-Assemblys
@@ -20,7 +20,7 @@ Eine *Friend-Assembly* ist eine Assembly, die auf die [Friend-](../../visual-bas
 
 - Wenn beim Entwickeln einer Klassenbibliothek die Ergänzungen der Bibliothek in separaten Assemblys enthalten sind, aber Zugriff auf Member in vorhandenen Assemblys erfordern, die als `internal` in C# oder `Friend` in Visual Basic markiert sind.
 
-## <a name="remarks"></a>Anmerkungen
+## <a name="remarks"></a>Hinweise
 
 Sie können das Attribut <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> verwenden, um eine oder mehrere Friend-Assemblys für eine angegebene Assembly zu identifizieren. Im folgenden Beispiel wird das Attribut <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> in *Assembly A* verwendet, und *Assembly B* wird als Friend-Assembly angegeben. Dadurch erhält *Assembly B* Zugriff auf alle Typen und Member in *Assembly A*, die als `internal` (C#) oder `Friend` (Visual Basic) markiert sind.
 
@@ -98,8 +98,8 @@ Informationen darüber, wie Sie über eine Moduldatei (eine Datei mit der Dateie
 
 - <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>
 - <xref:System.Security.Permissions.StrongNameIdentityPermission>
-- [Vorgehensweise: Erstellen von unsignierten Friend-Assemblys](create-unsigned-friend.md)
-- [Vorgehensweise: Erstellen von signierten Friend-Assemblys](create-signed-friend.md)
+- [How to: Erstellen von unsignierten Friend-Assemblys](create-unsigned-friend.md)
+- [How to: Erstellen von signierten Friend-Assemblys](create-signed-friend.md)
 - [Assemblys in .NET](index.md)
 - [C#-Programmierhandbuch](../../csharp/programming-guide/index.md)
 - [Programmierkonzepte (Visual Basic)](../../visual-basic/programming-guide/concepts/index.md)

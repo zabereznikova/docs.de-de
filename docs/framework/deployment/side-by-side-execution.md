@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - side-by-side execution
 ms.assetid: 649f1342-766b-49e6-a90d-5b019a751e11
-ms.openlocfilehash: 5202e4c26220bc9ea08d6d941ee5a7821cbbdefd
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: e965702943149d3ed34be39bb2923ad52dcf90ca
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73122235"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79181647"
 ---
 # <a name="side-by-side-execution-in-the-net-framework"></a>Parallele Ausführung in .NET Framework
 
@@ -28,7 +28,7 @@ Die folgende Abbildung zeigt verschiedene Anwendungen, die auf demselben Compute
 Durch die parallele Ausführung können Sie besser steuern, an welche Version einer Komponente eine Anwendung gebunden wird und welche Version der Common Language Runtime eine Anwendung verwendet.  
   
 ## <a name="benefits-of-side-by-side-execution"></a>Vorteile der parallelen Ausführung  
- 
+
 Vor der Entwicklung von Windows XP und .NET Framework traten DLL-Konflikte auf, da Anwendungen nicht zwischen inkompatiblen Versionen des gleichen Codes unterscheiden konnten. In einer DLL enthaltene Typinformationen waren lediglich an einen Dateinamen gebunden. Einer Anwendung war nicht bekannt, ob die in einer DLL enthaltenen Typen dieselben Typen waren, mit denen die Anwendung erstellt wurde. Dadurch konnten neue Versionen einer Komponente ältere Versionen überschreiben und ein ordnungsgemäßes Funktionieren von Anwendungen verhindern.  
   
 Die parallele Ausführung und .NET Framework bieten die folgenden Features zur Vermeidung von DLL-Konflikten:  
@@ -102,13 +102,13 @@ Um teilweise gekennzeichnete Assemblyverweise in Code zu verringern, können Sie
  Im folgenden Beispiel wird der Eintrag in der Anwendungskonfigurationsdatei dargestellt, mit dem die Assembly `myAssembly` vollständig qualifiziert wird.  
   
 ```xml  
-<assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">   
-<qualifyAssembly partialName="myAssembly"   
+<assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
+<qualifyAssembly partialName="myAssembly"
 fullName="myAssembly,  
-      version=1.0.0.0,   
-publicKeyToken=...,   
-      culture=neutral"/>   
-</assemblyBinding>   
+      version=1.0.0.0,
+publicKeyToken=...,
+      culture=neutral"/>
+</assemblyBinding>
 ```  
   
  Wenn eine Assemblyladeanweisung auf `myAssembly` verweist, bewirken diese Einstellungen in der Konfigurationsdatei, dass die Common Language Runtime den teilweise qualifizierten Verweis auf `myAssembly` automatisch in einen vollqualifizierten Verweis übersetzt. So wird Assembly.Load("myAssembly") beispielsweise zu Assembly.Load("myAssembly, version=1.0.0.0, publicKeyToken=..., culture=neutral").  
@@ -118,14 +118,14 @@ publicKeyToken=...,
   
 ## <a name="related-topics"></a>Verwandte Themen  
   
-|Titel|BESCHREIBUNG|  
+|Titel|Beschreibung|  
 |-----------|-----------------|  
-|[Vorgehensweise: Aktivieren und Deaktivieren der Bindungsumleitung](../configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)|Beschreibt, wie eine Anwendung an eine bestimmte Version einer Assembly gebunden wird.|  
+|[Gewusst wie: Aktivieren und Deaktivieren der Bindungsumleitung](../configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)|Beschreibt, wie eine Anwendung an eine bestimmte Version einer Assembly gebunden wird.|  
 |[Konfigurieren der Umleitung der Assemblybindung](configuring-assembly-binding-redirection.md)|Erläutert, wie Assemblybindungsverweise zur einer bestimmten Version der .NET Framework-Assemblys umgeleitet werden.|  
 |[Prozessinterne parallele Ausführung](in-process-side-by-side-execution.md)|Erläutert, wie mehrere CLR-Versionen mithilfe der prozessinternen parallelen Laufzeithostaktivierung in einem Prozess ausgeführt werden können.|  
 |[Assemblys in .NET](../../standard/assembly/index.md)|Bietet eine konzeptionelle Übersicht über Assemblys.|  
 |[Anwendungsdomänen](../app-domains/application-domains.md)|Bietet eine konzeptionelle Übersicht über Anwendungsdomänen.|  
   
-## <a name="reference"></a>Referenz  
+## <a name="reference"></a>Verweis  
 
 [\<supportedRuntime> Element](../configure-apps/file-schema/startup/supportedruntime-element.md)

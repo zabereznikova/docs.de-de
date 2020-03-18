@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Suchen von vorhandenen Dateien und Verzeichnissen im isolierten Speicher'
+title: 'Gewusst wie: Suchen von vorhandenen Dateien und Verzeichnissen im isolierten Speicher'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -18,13 +18,13 @@ helpviewer_keywords:
 - storing data using isolated storage, finding files and directories
 ms.assetid: eb28458a-6161-4e7a-9ada-30ef93761b5c
 ms.openlocfilehash: dfebcc9acf0b699f898c106921d15ce0294bc5d2
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75707132"
 ---
-# <a name="how-to-find-existing-files-and-directories-in-isolated-storage"></a>Vorgehensweise: Suchen von vorhandenen Dateien und Verzeichnissen im isolierten Speicher
+# <a name="how-to-find-existing-files-and-directories-in-isolated-storage"></a>Gewusst wie: Suchen von vorhandenen Dateien und Verzeichnissen im isolierten Speicher
 
 Um ein Verzeichnis im isolierten Speicher zu suchen, verwenden Sie die <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetDirectoryNames%2A?displayProperty=nameWithType>-Methode. Diese Methode akzeptiert eine Zeichenfolge, die ein Suchmuster darstellt. Sie können Platzhalterzeichen für einzelne Zeichen (?) und mehrere Zeichen (\*) im Suchmuster verwenden, aber die Platzhalterzeichen müssen im letzten Teil des Namens angezeigt werden. Beispielsweise ist `directory1/*ect*` eine gültige Suchzeichenfolge, `*ect*/directory2` aber nicht.  
   
@@ -39,7 +39,7 @@ Um ein Verzeichnis im isolierten Speicher zu suchen, verwenden Sie die <xref:Sys
  [!code-csharp[Conceptual.IsolatedStorage#9](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.isolatedstorage/cs/source8.cs#9)]
  [!code-vb[Conceptual.IsolatedStorage#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.isolatedstorage/vb/source8.vb#9)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.IO.IsolatedStorage.IsolatedStorageFile>
 - [Isolierter Speicher](../../../docs/standard/io/isolated-storage.md)

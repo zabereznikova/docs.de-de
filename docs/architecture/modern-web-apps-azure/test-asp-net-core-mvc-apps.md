@@ -4,12 +4,12 @@ description: Entwerfen moderner Webanwendungen mit ASP.NET Core und Azure | Test
 author: ardalis
 ms.author: wiwagn
 ms.date: 12/04/2019
-ms.openlocfilehash: 164e820ffa6030b3dcb9180d56e57ce39bb03143
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.openlocfilehash: 2b347442c4a9b7b6cf912ec461248f901dc45417
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77503934"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79147490"
 ---
 # <a name="test-aspnet-core-mvc-apps"></a>Testen von ASP.NET Core MVC-Apps
 
@@ -202,7 +202,7 @@ namespace Microsoft.eShopWeb.FunctionalTests.Web
                     .AddEntityFrameworkInMemoryDatabase()
                     .BuildServiceProvider();
 
-                // Add a database context (ApplicationDbContext) using an in-memory 
+                // Add a database context (ApplicationDbContext) using an in-memory
                 // database for testing.
                 services.AddDbContext<CatalogContext>(options =>
                 {

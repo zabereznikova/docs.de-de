@@ -2,12 +2,12 @@
 title: Projektionsvorgänge (C#)
 ms.date: 07/20/2015
 ms.assetid: 98df573a-aad9-4b8c-9a71-844be2c4fb41
-ms.openlocfilehash: a2a2ae762d63d5ff26c7018caef1a83558042fb5
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: f76eeeb779ab08a575e758a9d974573b700ae652
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75346527"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79168335"
 ---
 # <a name="projection-operations-c"></a>Projektionsvorgänge (C#)
 Projektion bezieht sich auf einen Vorgang, bei dem ein Objekt in eine neue Form transformiert wird, die häufig nur aus den Eigenschaften besteht, die anschließend verwendet werden. Mithilfe der Projektion können Sie einen neuen Typ erstellen, der aus den einzelnen Objekten erstellt wird. Sie können eine Eigenschaft projizieren und eine mathematische Funktion für sie ausführen. Sie können auch das ursprüngliche Objekt projizieren, ohne es zu ändern.  
@@ -101,7 +101,7 @@ static void SelectVsSelectMany()
         new Bouquet{ Flowers = new List<string> { "larkspur", "lilac", "iris", "dahlia" }}  
     };  
   
-    // *********** Select ***********              
+    // *********** Select ***********
     IEnumerable<List<string>> query1 = bouquets.Select(bq => bq.Flowers);  
   
     // ********* SelectMany *********  
@@ -159,10 +159,10 @@ static void SelectVsSelectMany()
 }  
 ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Linq>
-- [Standard Query Operators Overview (C#) (Übersicht über Standardabfrageoperatoren (C#))](./standard-query-operators-overview.md)
+- [Standard Query Operators Overview (C#) (Übersicht der Standardabfrageoperatoren (C#))](./standard-query-operators-overview.md)
 - [select-Klausel](../../../language-reference/keywords/select-clause.md)
 - [Vorgehensweise: Auffüllen von Objektsammlungen mit Daten aus mehreren Quellen (LINQ) (C#)](./how-to-populate-object-collections-from-multiple-sources-linq.md)
 - [Vorgehensweise: Aufteilen einer Datei in mehrere Dateien durch das Verwenden von Gruppen (LINQ) (C#)](./how-to-split-a-file-into-many-files-by-using-groups-linq.md)

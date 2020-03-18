@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - operator keyword [C#]
 - operator overloading [C#]
-ms.openlocfilehash: 1475852d312fa16980f25347fc9a864cb1659221
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: cdb35b212d5bfc4cc685fbfd6c294066983709df
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77451927"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78847299"
 ---
 # <a name="operator-overloading-c-reference"></a>Operatorüberladung (C#-Referenz)
 
@@ -25,7 +25,7 @@ Verwenden Sie das Schlüsselwort `operator`, um einen Operator zu deklarieren. J
 
 Das folgende Beispiel definiert eine vereinfachte Struktur für die Darstellung einer rationalen Zahl. Die Struktur überlädt einige der [arithmetischen Operatoren](arithmetic-operators.md):
 
-[!code-csharp[fraction example](~/samples/csharp/language-reference/operators/OperatorOverloading.cs)]
+[!code-csharp[fraction example](snippets/OperatorOverloading.cs)]
 
 Sie könnten das vorherige Beispiel erweitern, indem Sie eine [implizite Konvertierung](user-defined-conversion-operators.md) von `int` nach `Fraction` definieren. Dann würden überladene Operatoren Argumente dieser beiden Typen unterstützen. Das bedeutet, dass es dann möglich wäre, eine ganze Zahl und einen Bruch zu addieren und als Ergebnis einen Bruch zu erhalten.
 
@@ -59,7 +59,7 @@ Weitere Informationen finden Sie in den folgenden Abschnitten der [C#-Sprachspez
 - [Operatorüberladung](~/_csharplang/spec/expressions.md#operator-overloading)
 - [Operatoren](~/_csharplang/spec/classes.md#operators)
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [C#-Referenz](../index.md)
 - [C#-Operatoren](index.md)

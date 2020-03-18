@@ -4,12 +4,12 @@ ms.date: 03/26/2019
 helpviewer_keywords:
 - parameters [C#], in
 - in parameters [C#]
-ms.openlocfilehash: 10e7b91f9a6bf280c5f0654b243492bac8cde1e0
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: cbde7a571fb71ed7577077c77a5c61db553ec859
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75715254"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79173613"
 ---
 # <a name="in-parameter-modifier-c-reference"></a>Modifizierer für in-Parameter (C#-Verweis)
 
@@ -19,7 +19,7 @@ Das Schlüsselwort `in` bewirkt, dass Argumente per Verweis übergeben werden. E
 
 Das vorausgehende Beispiel veranschaulicht, dass der `in`-Modifizierer an der Aufrufstelle normalerweise nicht benötigt wird. Er ist nur in der Methodendeklaration erforderlich.
 
-> [!NOTE] 
+> [!NOTE]
 > Das `in`-Schlüsselwort kann ebenfalls mit einem generischen Typparameter verwendet werden, um als der Bestandteil einer `foreach`-Anweisung oder einer `join`-Klausel in einer LINQ-Abfrage anzugeben, dass der Typparameter kontravariant ist. Weitere Informationen zur Verwendung des `in`-Schlüsselworts in diesen Kontexten und entsprechende Links finden Sie unter [in](in.md).
   
 Variablen, die als `in`-Argumente übergeben wurden, müssen initialisiert werden, bevor sie in einen Methodenaufruf übergeben werden. Es kann jedoch sein, dass die aufgerufene Methode keinen Wert zuweist oder das Argument ändert.  
@@ -31,7 +31,7 @@ Die Schlüsselwörter `in`, `ref` und `out` werden nicht als Teil der Methodensi
 ```csharp
 class CS0663_Example
 {
-    // Compiler error CS0663: "Cannot define overloaded 
+    // Compiler error CS0663: "Cannot define overloaded
     // methods that differ only on in, ref and out".
     public void SampleMethod(in int i) { }
     public void SampleMethod(ref int i) { }
@@ -50,13 +50,13 @@ class InOverloads
 
 ## <a name="overload-resolution-rules"></a>Regeln zur Überladungsauflösung
 
-Die Regeln zur Auflösung von Methodenüberladungen bei der Übergabe von Argumenten als Wert und durch `in` lassen sich nachvollziehen, wenn die Motivation für `in`-Argumente bekannt ist. Wenn Methoden mit `in`-Parametern definiert werden, kann unter Umständen eine Leistungsoptimierung erzielt werden. Einige `struct`-Typargumente beanspruchen viel Speicherplatz. Wenn dann in Schleifen mit vielen Durchläufen oder kritischen Codepfaden Methoden aufgerufen werden, ist der Aufwand zum Kopieren dieser Strukturen enorm. Durch die Deklaration von `in`-Parametern in Methoden wird festgelegt, dass Argumente sicher als Verweis übergeben werden, da die aufgerufene Methode nicht den Zustand des Arguments ändert. Durch die Übergabe dieser Argumente als Verweis wird ein möglicherweise aufwendiges Kopieren vermieden. 
+Die Regeln zur Auflösung von Methodenüberladungen bei der Übergabe von Argumenten als Wert und durch `in` lassen sich nachvollziehen, wenn die Motivation für `in`-Argumente bekannt ist. Wenn Methoden mit `in`-Parametern definiert werden, kann unter Umständen eine Leistungsoptimierung erzielt werden. Einige `struct`-Typargumente beanspruchen viel Speicherplatz. Wenn dann in Schleifen mit vielen Durchläufen oder kritischen Codepfaden Methoden aufgerufen werden, ist der Aufwand zum Kopieren dieser Strukturen enorm. Durch die Deklaration von `in`-Parametern in Methoden wird festgelegt, dass Argumente sicher als Verweis übergeben werden, da die aufgerufene Methode nicht den Zustand des Arguments ändert. Durch die Übergabe dieser Argumente als Verweis wird ein möglicherweise aufwendiges Kopieren vermieden.
 
 Die Angabe von `in` für Argumente an der Aufrufstelle ist üblicherweise optional. Zwischen der Übergabe eines Arguments als Wert und der Übergabe als Verweis mithilfe des `in`-Modifizierers besteht kein semantischer Unterschied. Der `in`-Modifizierer an der Aufrufstelle ist optional, da nicht kenntlich gemacht werden muss, dass sich der Wert des Arguments ändern kann. Explizit geben Sie den `in`-Modifizierer an der Aufrufstelle an, wenn Sie sicherstellen möchten, dass das Argument als Verweis und nicht als Wert übergeben wird. Die explizite Verwendung von `in` hat die folgenden beiden Auswirkungen:
 
 Erstens wird der Compiler durch die Angabe von `in` an der Aufrufstelle dazu gezwungen, die Methode mit dem übereinstimmenden `in`-Parameter auszuwählen. Wenn dies nicht der Fall ist und sich zwei Methoden nur durch die Angabe von `in` unterscheiden, wird die Methode überladen, für die Argumente als Wert übergeben werden.
 
-Zweitens wird durch `in` festgelegt, dass ein Argument als Verweis übergeben wird. Das mit `in` verwendete Argument muss einen Speicherort darstellen, auf den direkt verwiesen werden kann. Es gelten die gleichen allgemeinen Regeln für `out`- und `ref`-Argumente: Sie können keine Konstanten, normale Eigenschaften oder andere Ausdrücke, die Werte erzeugen, verwenden. Wird `in` an der Aufrufstelle weggelassen, wird der Compiler darüber informiert, dass die Erstellung einer temporären Variable und deren Übergabe als schreibgeschützter Verweis an die Methode zulässig ist. Der Compiler erstellt in diesem Fall eine temporäre Variable, um mehrere Einschränkungen im Zusammenhang mit `in`-Argumenten zu umgehen:
+Zweitens wird durch `in` festgelegt, dass ein Argument als Verweis übergeben wird. Das mit `in` verwendete Argument muss einen Speicherort darstellen, auf den direkt verwiesen werden kann. Es gelten dieselben Regeln wie für `out`- und `ref`-Argumente: Sie können keine Konstanten, normale Eigenschaften oder andere Ausdrücke, die Werte erzeugen, verwenden. Wird `in` an der Aufrufstelle weggelassen, wird der Compiler darüber informiert, dass die Erstellung einer temporären Variable und deren Übergabe als schreibgeschützter Verweis an die Methode zulässig ist. Der Compiler erstellt in diesem Fall eine temporäre Variable, um mehrere Einschränkungen im Zusammenhang mit `in`-Argumenten zu umgehen:
 
 - Eine temporäre Variable ermöglicht als Konstanten zur Kompilierzeit `in`-Parameter.
 - Eine temporäre Variable ermöglicht Eigenschaften oder andere Ausdrücke für `in`-Parameter.
@@ -108,7 +108,7 @@ Method(in i); // passed by readonly reference, explicitly using `in`
 Nur beim letzten Methodenaufruf wird das Argument als Verweis übergeben.
 
 > [!NOTE]
-> Im obigen Code wird aus Gründen der Einfachheit `int` als Argumenttyp verwendet. Da auf den meisten modernen Computern `int` nicht größer ist als ein Verweis, ergibt sich kein Vorteil daraus, einen einzelnen `int`-Wert als schreibgeschützten Verweis zu übergeben. 
+> Im obigen Code wird aus Gründen der Einfachheit `int` als Argumenttyp verwendet. Da auf den meisten modernen Computern `int` nicht größer ist als ein Verweis, ergibt sich kein Vorteil daraus, einen einzelnen `int`-Wert als schreibgeschützten Verweis zu übergeben.
 
 ## <a name="limitations-on-in-parameters"></a>Einschränkungen für `in`-Parameter
 
@@ -120,7 +120,7 @@ Sie können keines der Schlüsselwörter `in`, `ref` und `out` für die folgende
 ## <a name="c-language-specification"></a>C#-Programmiersprachenspezifikation  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [C#-Referenz](../index.md)
 - [C#-Programmierhandbuch](../../programming-guide/index.md)

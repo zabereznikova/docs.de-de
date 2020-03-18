@@ -6,10 +6,10 @@ helpviewer_keywords:
 - exceptions [C#], handling
 ms.assetid: b4e4ecf2-b907-4e58-891f-2563762258e9
 ms.openlocfilehash: ee1e5bd15183dad9ffe97824f9b194668e9d3b17
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75705300"
 ---
 # <a name="exception-handling-c-programming-guide"></a>Ausnahmebehandlung (C#-Programmierhandbuch)
@@ -47,7 +47,7 @@ Ein [try](../../language-reference/keywords/try-catch.md)-Block wird von C#-Prog
   
  Der `finally`-Block kann zum Freigeben von Ressourcen verwendet werden, wie z.B. Dateistreams, Datenbankverbindungen und Grafikhandles, ohne Warten auf den Garbage Collector in der Laufzeit, um die Objekte zu beenden. Weitere Informationen finden Sie unter [using-Anweisung](../../language-reference/keywords/using-statement.md).  
   
- Im folgenden Beispiel wird der `finally`-Block verwendet, um eine Datei, die im `try`-Block geöffnet ist, zu schließen. Beachten Sie, dass der Status des Dateihandles überprüft wird, bevor die Datei geschlossen wird. Wenn der `try`-Block die Datei nicht öffnen kann, verfügt das Dateihandle immer noch über den Wert `null`, und der `finally`-Block versucht nicht, es zu schließen. Alternativ schließt der `finally`-Block die geöffnete Datei, wenn die Datei im `try`-Block erfolgreich geöffnet wird.  
+ Im folgenden Beispiel wird der `finally`-Block verwendet, um eine Datei, die im `try`-Block geöffnet ist, zu schließen. Beachten Sie, dass der Status des Dateihandles überprüft wird, bevor die Datei geschlossen wird. Wenn der `try`-Block die Datei nicht öffnen kann, verfügt das Dateihandle immer noch über den Wert `null`, und der `finally`-Block versucht nicht, es zu schließen. Alternativ schließt der `try`-Block die geöffnete Datei, wenn die Datei im `finally`-Block erfolgreich geöffnet wird.  
   
  [!code-csharp[csProgGuideExceptions#11](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideExceptions/CS/Exceptions.cs#11)]  
   
@@ -55,7 +55,7 @@ Ein [try](../../language-reference/keywords/try-catch.md)-Block wird von C#-Prog
 
 Weitere Informationen finden Sie unter [Ausnahmen](~/_csharplang/spec/exceptions.md) und [Die try-Anweisung](~/_csharplang/spec/statements.md#the-try-statement) in der [C#-Sprachspezifikation](/dotnet/csharp/language-reference/language-specification/introduction). Die Sprachspezifikation ist die verbindliche Quelle für die Syntax und Verwendung von C#.
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [C#-Referenz](../../language-reference/index.md)
 - [C#-Programmierhandbuch](../index.md)

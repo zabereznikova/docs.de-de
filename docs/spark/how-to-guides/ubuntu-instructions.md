@@ -4,12 +4,12 @@ description: Erfahren Sie, wie Sie eine .NET für Apache Spark-Anwendung unter U
 ms.date: 01/29/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: a12c861d0f231910f715a13fd41d1f3f0d6748a7
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: 6dd6f60bb89a51c47fe17182fc47de818cd00b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76928067"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79187573"
 ---
 # <a name="learn-how-to-build-your-net-for-apache-spark-application-on-ubuntu"></a>Erfahren Sie, wie Sie eine .NET für Apache Spark-Anwendung unter Ubuntu erstellen.
 
@@ -21,7 +21,7 @@ Wenn bereits alle folgenden Voraussetzungen erfüllt sind, fahren Sie mit den Sc
 
 1. Laden Sie das **[.NET Core 2.1 SDK](https://dotnet.microsoft.com/download/dotnet-core/2.1)** oder das **[.NET Core 3.1 SDK](https://dotnet.microsoft.com/download/dotnet-core/3.1)** herunter, und installieren Sie es. Durch die Installation des SDK wird die Toolkette `dotnet` zum Pfad hinzugefügt.  Die .NET Core-Versionen 2.1, 2.2 und 3.1 werden unterstützt.
 
-2. Installieren Sie **[OpenJDK 8](https://openjdk.java.net/install/)** . 
+2. Installieren Sie **[OpenJDK 8](https://openjdk.java.net/install/)** .
 
    - Sie können den folgenden Befehl verwenden:
 
@@ -29,10 +29,10 @@ Wenn bereits alle folgenden Voraussetzungen erfüllt sind, fahren Sie mit den Sc
    sudo apt install openjdk-8-jdk
    ```
 
-   * Überprüfen Sie, ob Sie `java` über die Befehlszeile ausführen können.       
+   * Überprüfen Sie, ob Sie `java` über die Befehlszeile ausführen können.
 
       Beispielausgabe für die Java-Version:
-          
+
       ```bash
       openjdk version "1.8.0_191"
       OpenJDK Runtime Environment (build 1.8.0_191-8u191-b12-2ubuntu0.18.04.1-b12)
@@ -59,13 +59,13 @@ Wenn bereits alle folgenden Voraussetzungen erfüllt sind, fahren Sie mit den Sc
       export PATH=${M2_HOME}/bin:${PATH}
       source ~/.bashrc
       ```
-       
+
        Beachten Sie, dass diese Umgebungsvariablen beim Schließen des Terminals nicht gespeichert werden. Wenn Sie die Änderungen dauerhaft speichern möchten, fügen Sie `export`-Zeilen zu Ihrer `~/.bashrc`-Datei hinzu.
 
-   * Überprüfen Sie, ob Sie `mvn` über die Befehlszeile ausführen können.       
+   * Überprüfen Sie, ob Sie `mvn` über die Befehlszeile ausführen können.
 
        Beispielausgabe für die MVN-Version:
-       
+
        ```
        Apache Maven 3.6.0 (97c98ec64a1fdfee7767ce5ffb20918da4f719f3; 2018-10-24T18:41:47Z)
        Maven home: ~/bin/apache-maven-3.6.0
@@ -88,13 +88,13 @@ Laden Sie [Apache Spark 2.3 oder höher](https://spark.apache.org/downloads.htm
       export PATH="$SPARK_HOME/bin:$PATH"
       source ~/.bashrc
       ```
-       
+
       Beachten Sie, dass diese Umgebungsvariablen beim Schließen des Terminals nicht gespeichert werden. Wenn Sie die Änderungen dauerhaft speichern möchten, fügen Sie `export`-Zeilen zu Ihrer `~/.bashrc`-Datei hinzu.
 
    * Überprüfen Sie, ob Sie `spark-shell` über die Befehlszeile ausführen können.
 
       Beispiel für Konsolenausgabe:
-      
+
       ```
       Welcome to
             ____              __
@@ -109,7 +109,7 @@ Laden Sie [Apache Spark 2.3 oder höher](https://spark.apache.org/downloads.htm
 
       scala> sc
       res0: org.apache.spark.SparkContext = org.apache.spark.SparkContext@6eaa6b0c
-      ```                      
+      ```
 
 Stellen Sie sicher, dass Sie `dotnet`, `java`, `mvn` und `spark-shell` über die Befehlszeile ausführen können, bevor Sie mit dem nächsten Abschnitt fortfahren. Sind Sie der Meinung, dass es eine bessere Möglichkeit gibt? Dann eröffnen Sie ein [Issue](https://github.com/dotnet/spark/issues), und teilen Sie uns diese mit.
 
@@ -129,7 +129,7 @@ Der nächste Schritt besteht darin, die Erweiterungsebene für .NET für Apache 
 
 ```bash
 cd src/scala
-mvn clean package 
+mvn clean package
 ```
 
 Sie werden feststellen, dass JAR-Dateien für die unterstützten Spark-Versionen erstellt werden:
@@ -147,14 +147,14 @@ In diesem Abschnitt wird erläutert, wie Sie die [Beispielanwendungen](https://g
    cd ~/dotnet.spark/src/csharp/Microsoft.Spark.Worker/
    dotnet publish -f netcoreapp2.1 -r ubuntu.18.04-x64
    ```
-      
+
    Beispiel für Konsolenausgabe:
 
    ```bash
    user@machine:/home/user/dotnet.spark/src/csharp/Microsoft.Spark.Worker$ dotnet publish -f netcoreapp2.1 -r ubuntu.18.04-x64
    Microsoft (R) Build Engine version 16.0.462+g62fb89029d for .NET Core
    Copyright (C) Microsoft Corporation. All rights reserved.
-      
+
       Restore completed in 36.03 ms for /home/user/dotnet.spark/src/csharp/Microsoft.Spark.Worker/Microsoft.Spark.Worker.csproj.
       Restore completed in 35.94 ms for /home/user/dotnet.spark/src/csharp/Microsoft.Spark/Microsoft.Spark.csproj.
       Microsoft.Spark -> /home/user/dotnet.spark/artifacts/bin/Microsoft.Spark/Debug/netstandard2.0/Microsoft.Spark.dll
@@ -168,7 +168,7 @@ In diesem Abschnitt wird erläutert, wie Sie die [Beispielanwendungen](https://g
    cd ~/dotnet.spark/examples/Microsoft.Spark.CSharp.Examples/
    dotnet publish -f netcoreapp2.1 -r ubuntu.18.04-x64
    ```
-      
+
    Beispiel für Konsolenausgabe:
 
    ```bash

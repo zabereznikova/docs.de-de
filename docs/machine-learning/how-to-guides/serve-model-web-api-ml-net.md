@@ -6,17 +6,17 @@ author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc,how-to
 ms.openlocfilehash: b6801b7de5a17257be706f77a7a67aa87df96524
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73733310"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79397758"
 ---
 # <a name="deploy-a-model-in-an-aspnet-core-web-api"></a>Bereitstellen eines Modells in einer ASP.NET Core-Web-API
 
 Hier erfahren Sie, wie Sie ein vorab trainiertes ML.NET-Machine Learning-Modell mithilfe einer ASP.NET Core-Web-API im Internet bereitstellen. Das Bereitstellen eines Modells über eine Web-API ermöglicht Vorhersagen über HTTP-Standardmethoden.
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
+## <a name="prerequisites"></a>Voraussetzungen
 
 - [Visual Studio 2017 Version 15.6 oder höher](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) mit installierter Workload „Plattformübergreifende .NET Core-Entwicklung“.
 - PowerShell.
@@ -186,7 +186,7 @@ Um die eingehenden HTTP-Anforderungen zu verarbeiten, erstellen Sie einen Contro
     }
     ```
 
-Mit diesem Code wird die `PredictionEnginePool` durch Übergabe an den Konstruktor des Controllers zugewiesen, den Sie über die Abhängigkeitsinjektion erhalten. Dann verwendet die `Post`-Methode des `Predict`-Controllers den `PredictionEnginePool`, um mithilfe des in der `Startup`-Klasse registrierten `SentimentAnalysisModel` Vorhersagen zu treffen und bei Erfolg die Ergebnisse an den Benutzer zurückzugeben.
+Mit diesem Code wird die `PredictionEnginePool` durch Übergabe an den Konstruktor des Controllers zugewiesen, den Sie über die Abhängigkeitsinjektion erhalten. Dann verwendet die `Predict`-Methode des `Post`-Controllers den `PredictionEnginePool`, um mithilfe des in der `SentimentAnalysisModel`-Klasse registrierten `Startup` Vorhersagen zu treffen und bei Erfolg die Ergebnisse an den Benutzer zurückzugeben.
 
 ## <a name="test-web-api-locally"></a>Lokales Testen der Web-API
 

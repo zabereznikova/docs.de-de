@@ -5,12 +5,12 @@ ms.topic: reference
 ms.date: 02/27/2020
 ms.author: luquinta
 author: luisquintanilla
-ms.openlocfilehash: 866fd5a90d13f85f2f8a1aa45ff0e1efb0096642
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: a19e13955d0eaea344109eb817f3a3959c3dd883
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78159298"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79185825"
 ---
 # <a name="model-builder-azure-training-resources"></a>Azure-Trainingsressourcen für den Modellgenerator
 
@@ -28,7 +28,7 @@ Ein Arbeitsbereich ist eine Azure Machine Learning-Ressource, die einen zentrale
 
 Folgendes ist erforderlich, um einen Azure Machine Learning-Arbeitsbereich zu erstellen:
 
-- Name: Ein Name für Ihren Arbeitsbereich. Dieser darf zwischen 3 und 33 Zeichen lang sein. Namen dürfen nur alphanumerische Zeichen und Bindestriche enthalten. 
+- Name: Ein Name für Ihren Arbeitsbereich. Dieser darf zwischen 3 und 33 Zeichen lang sein. Namen dürfen nur alphanumerische Zeichen und Bindestriche enthalten.
 - Region: Der geografische Standort des Rechenzentrums, in dem Ihr Arbeitsbereich und Ihre Ressourcen bereitgestellt werden. Es wird empfohlen, einen Standort in Ihrer Nähe und nahe bei Ihren Kunden zu wählen.
 - Ressourcengruppe: Ein Container, der verwandte Ressourcen für eine Azure-Lösung enthält
 

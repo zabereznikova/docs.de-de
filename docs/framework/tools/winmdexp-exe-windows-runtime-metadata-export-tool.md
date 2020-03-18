@@ -6,10 +6,10 @@ helpviewer_keywords:
 - Winmdexp.exe
 ms.assetid: d2ce0683-343d-403e-bb8d-209186f7a19d
 ms.openlocfilehash: 52820b78f6ed7b02e80df66f90a01143b31d9b29
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74447275"
 ---
 # <a name="winmdexpexe-windows-runtime-metadata-export-tool"></a>Winmdexp.exe (Windows-Runtime-Metadaten-Exporttool)
@@ -29,7 +29,7 @@ winmdexp [options] winmdmodule
   
 ## <a name="parameters"></a>Parameter  
   
-|Argument oder Option|BESCHREIBUNG|  
+|Argument oder Option|Beschreibung|  
 |------------------------|-----------------|  
 |`winmdmodule`|Gibt das zu exportierende Modul (.winmdobj) an. Nur ein Modul ist erlaubt. Um dieses Modul zu erstellen, verwenden Sie die `/target`-Compileroption mit dem `winmdobj`-Ziel. Weitere Informationen finden Sie unter [-target:winmdobj (C#-Compileroptionen)](../../csharp/language-reference/compiler-options/target-winmdobj-compiler-option.md) oder [-target (Visual Basic)](../../visual-basic/reference/command-line-compiler/target.md).|  
 |`/docfile:` `docfile`<br /><br /> `/d:` `docfile`|Gibt die XML-Dokumentations-Ausgabedatei an, die "Winmdexp.exe" erzeugt. In .NET Framework 4.5 entspricht die Ausgabedatei im Wesentlichen der XML-Dokumentationseingabedatei.|  
@@ -43,12 +43,12 @@ winmdexp [options] winmdmodule
 |`/warnaserror+`|Gibt an, dass alle Warnungen als Fehler behandelt werden sollen.|  
 |**@** `responsefile`|Gibt eine Antwortdatei (.rsp) an, die Optionen enthält (und optional `winmdmodule`). Jede Zeile in `responsefile` sollte ein einzelnes Argument oder eine einzelne Option enthalten.|  
   
-## <a name="remarks"></a>Anmerkungen  
+## <a name="remarks"></a>Hinweise  
  "Winmdexp.exe" kann nicht verwendet werden, um eine beliebige .NET Framework-Assembly in eine WINMD-Datei zu konvertieren. Ein Modul ist erforderlich, das mit der `/target:winmdobj`-Option kompiliert wird, und es gelten zusätzliche Einschränkungen. Die wichtigste dieser Einschränkungen besteht darin, dass alle Typen, die in der API-Schnittstelle der Assembly verfügbar gemacht werden, Windows-Runtime-Typen sein müssen. Weitere Informationen finden Sie im Abschnitt „Deklarieren von Typen in Windows-Runtime-Komponenten“ des Artikels [Erstellen von Windows-Runtime-Komponenten in C# und Visual Basic](https://docs.microsoft.com/previous-versions/br230301(v=vs.110)).
   
  Wenn Sie eine Windows 8.x Store-App oder eine Komponente für Windows-Runtime mit C# oder Visual Basic schreiben, bietet .NET Framework Unterstützung für das einfachere Programmieren mit der Windows-Runtime. Dies wird im Artikel [.NET Framework-Unterstützung für Windows Store-Apps und Windows-Runtime](../../standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md) behandelt. Während dieses Vorgangs werden einige häufig verwendete Windows-Runtime-Typen .NET Framework-Typen zugeordnet. „Winmdexp.ex“e kehrt diesen Prozess um und erzeugt eine API-Schnittstelle, die die entsprechenden Windows-Runtime-Typen verwendet. So werden beispielsweise Typen, die aus der <xref:System.Collections.Generic.IList%601>-Schnittstelle erstellt werden, Typen zugeordnet, die über die <xref:Windows.Foundation.Collections.IVector%601>-Schnittstelle von Windows-Runtime erstellt werden.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [.NET Framework-Unterstützung für Windows Store-Apps und Windows-Runtime](../../standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)
 - [Erstellen von Windows-Runtime-Komponenten in C# und Visual Basic](https://docs.microsoft.com/previous-versions/br230301(v=vs.110))

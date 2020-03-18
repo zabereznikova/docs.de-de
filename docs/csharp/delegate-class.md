@@ -4,22 +4,22 @@ description: Informationen zu den Klassen in .NET, die Delegaten unterstützen, 
 ms.date: 06/20/2016
 ms.technology: csharp-fundamentals
 ms.assetid: f3742fda-13c2-4283-8966-9e21c2674393
-ms.openlocfilehash: 3cfc9925be0f191dc3fc93c02f4a8f9a40b71895
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: 87fdf19c4ea810c5ac4409fe16c3cba9d5fc6574
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77450920"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79146280"
 ---
 # <a name="systemdelegate-and-the-delegate-keyword"></a>System.Delegate und das `delegate`-Schlüsselwort
 
-[Vorherige](delegates-overview.md)
+[Zurück](delegates-overview.md)
 
 Dieser Artikel enthält Informationen zu den Klassen in .NET, die Delegaten unterstützen, und wie diese dem Schlüsselwort `delegate` zugeordnet werden.
 
 ## <a name="define-delegate-types"></a>Definieren von Delegattypen
 
-Wir beginnen mit dem Schlüsselwort „delegate“, da Sie dieses beim Arbeiten mit Delegaten hauptsächlich verwenden werden. Der Code, der vom Compiler bei Verwendung des `delegate`-Schlüsselworts generiert wird, verweist auf Methodenaufrufe, die Member der Klassen <xref:System.Delegate> und <xref:System.MulticastDelegate> aufrufen. 
+Wir beginnen mit dem Schlüsselwort „delegate“, da Sie dieses beim Arbeiten mit Delegaten hauptsächlich verwenden werden. Der Code, der vom Compiler bei Verwendung des `delegate`-Schlüsselworts generiert wird, verweist auf Methodenaufrufe, die Member der Klassen <xref:System.Delegate> und <xref:System.MulticastDelegate> aufrufen.
 
 Sie definieren einen Delegattyp, der Syntax verwendet, die dem Definieren einer Methodensignatur ähnlich ist. Sie fügen das `delegate`-Schlüsselwort einfach der Definition hinzu.
 
@@ -37,9 +37,9 @@ Der Compiler generiert eine von `System.Delegate` abgeleitete Klasse, die der ve
 Beachten Sie, dass es so scheinen kann, als ob die Syntax eine Variable deklariert, aber tatsächlich deklariert sie einen *Typ*. Sie können Delegattypen innerhalb von Klassen, direkt in Namespaces oder sogar im globalen Namespace definieren.
 
 > [!NOTE]
-> Es wird nicht empfohlen, Delegattypen (oder andere Typen) direkt im globalen Namespace zu deklarieren. 
+> Es wird nicht empfohlen, Delegattypen (oder andere Typen) direkt im globalen Namespace zu deklarieren.
 
-Der Compiler generiert auch Handler zum Hinzufügen und Entfernen für diesen neuen Typ, damit Clients dieser Klasse Methoden der Aufrufliste einer Instanz hinzufügen und entfernen können. Der Compiler erzwingt, dass die Signatur der Methode, die hinzugefügt oder entfernt wird, der Signatur bei der Deklaration der Methode entspricht. 
+Der Compiler generiert auch Handler zum Hinzufügen und Entfernen für diesen neuen Typ, damit Clients dieser Klasse Methoden der Aufrufliste einer Instanz hinzufügen und entfernen können. Der Compiler erzwingt, dass die Signatur der Methode, die hinzugefügt oder entfernt wird, der Signatur bei der Deklaration der Methode entspricht.
 
 ## <a name="declare-instances-of-delegates"></a>Deklarieren von Instanzen von Delegaten
 
@@ -54,7 +54,7 @@ public Comparison<T> comparator;
 ```
 
 Der Typ der Variable ist `Comparison<T>`, der zuvor definierte Delegattyp. Der Name der Variablen ist `comparator`.
- 
+
  Dieser obenstehende Codeausschnitt hat eine Membervariable innerhalb einer Klasse deklariert. Sie können auch Delegatvariablen deklarieren, die lokale Variablen oder Argumente von Methoden sind.
 
 ## <a name="invoke-delegates"></a>Aufrufen von Delegaten
@@ -115,10 +115,10 @@ Das Sort()-Beispiel fügt dem Delegaten typischerweise eine einzelne Zielmethode
 
 Die oben beschriebene Sprachunterstützung bietet die Funktionen und Unterstützung, die Sie in der Regel bei der Arbeit mit Delegaten benötigen. Diese Features beruhen auf zwei Klassen im .NET Core Framework: <xref:System.Delegate> und <xref:System.MulticastDelegate>.
 
-Die `System.Delegate`-Klasse und ihre einzige direkte untergeordnete Klasse `System.MulticastDelegate` bieten die Framework-Unterstützung für das Erstellen von Delegaten, das Registrieren von Methoden als Delegatziele und das Aufrufen aller Methoden, die als Delegatziel registriert sind. 
+Die `System.Delegate`-Klasse und ihre einzige direkte untergeordnete Klasse `System.MulticastDelegate` bieten die Framework-Unterstützung für das Erstellen von Delegaten, das Registrieren von Methoden als Delegatziele und das Aufrufen aller Methoden, die als Delegatziel registriert sind.
 
 Interessanterweise sind die Klassen `System.Delegate` und `System.MulticastDelegate` selbst keine Delegattypen. Sie bieten die Grundlage für alle spezifischen Delegattypen. Derselbe Sprachentwurfsprozess verlangte, dass keine Klasse deklariert werden kann, die von `Delegate` oder `MulticastDelegate` abgeleitet wird. Die C#-Sprachregeln verbieten dies.
- 
+
 Stattdessen erstellt der C#-Compiler Instanzen einer von `MulticastDelegate` abgeleiteten Klasse, wenn Sie das C#-Schlüsselwort verwenden, um Delegattypen zu deklarieren.
 
 Dieser Entwurf hat seinen Ursprung in der ersten Version von C# und .NET. Ein Ziel des Entwurfsteams war sicherzustellen, dass die Sprache bei der Verwendung von Delegaten Typsicherheit erzwingt. Dies bedeutete sicherzustellen, dass Delegaten mit dem richtigen Typ und der richtigen Anzahl von Argumenten aufgerufen werden. Zudem sollte jeder Rückgabetyp zur Kompilierzeit richtig angegeben werden. Delegaten waren Teil von .NET Version 1.0, die es vor Generics gab.

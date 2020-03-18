@@ -1,19 +1,19 @@
 ---
-title: 'Entschärfung: Der neue 64-Bit-JIT-Compiler'
+title: 'Entschärfung: Neuer 64-Bit-JIT-Compiler'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - JIT compiler, 64-bit
 - JIT compilation, 64-bit
 - RyuJIT compiler
 ms.assetid: 0332dabc-72c5-4bdc-8975-20d717802b17
-ms.openlocfilehash: dd8c2c6b3cfa919970f68f2faae2044568f6c9ac
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 883aaf032bde632b08f965d3450cfbea4feb8e65
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73457911"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79181256"
 ---
-# <a name="mitigation-new-64-bit-jit-compiler"></a>Entschärfung: Der neue 64-Bit-JIT-Compiler
+# <a name="mitigation-new-64-bit-jit-compiler"></a>Entschärfung: Neuer 64-Bit-JIT-Compiler
 Ab .NET Framework 4.6 enthält die Runtime einen neuen 64-Bit-JIT-Compiler für die Just-in-Time-Kompilierung. Diese Änderung wirkt sich nicht auf die Kompilierung mit dem 32-Bit-JIT-Compiler aus.  
   
 ## <a name="unexpected-behavior-or-exceptions"></a>Unerwartetes Verhalten oder Ausnahmen  
@@ -36,7 +36,7 @@ Ab .NET Framework 4.6 enthält die Runtime einen neuen 64-Bit-JIT-Compiler für 
   
 - Wenn unter bestimmten Umständen eine `if`-Anweisung für die Prüfung auf eine Bedingung vor dem Eintritt in einen `try`-Block oder beim Verlassen eines `try`-Blocks erfolgt und die gleiche Bedingung im `catch`- oder `finally`-Block ausgewertet wird, entfernt der neue 64-Bit-JIT-Compiler beim Optimieren von Code die `if`-Bedingung aus dem `catch`- oder `finally`-Block. Daher wird Code innerhalb der `if`-Anweisung im `catch`- oder `finally`-Block ohne Bedingung ausgeführt.  
   
-<a name="General"></a>   
+<a name="General"></a>
 ## <a name="mitigation-of-known-issues"></a>Entschärfung bekannter Probleme  
  Wenn bei Ihnen die oben aufgeführten Probleme auftreten, können Sie darauf mit einer der folgenden Maßnahmen reagieren:  
   
@@ -46,7 +46,7 @@ Ab .NET Framework 4.6 enthält die Runtime einen neuen 64-Bit-JIT-Compiler für 
   
 - Kompilieren Sie mit dem älteren 64-Bit-JIT-Compiler. Informationen zum Vorgehen dazu finden Sie unter [Entschärfung anderer Probleme](#Other).  
   
-<a name="Other"></a>   
+<a name="Other"></a>
 ## <a name="mitigation-of-other-issues"></a>Entschärfung anderer Probleme  
  Wenn Sie andere Unterschiede im Verhalten zwischen Code, der mit dem älteren 64-Bit-Compiler kompiliert wurde, gegenüber mit dem neuen 64-Bit-JIT-Compiler kompiliertem Code oder zwischen den Debug- und Releaseversionen Ihrer App feststellen, die beide mit dem neuen 64-Bit-JIT-Compiler kompiliert wurden, können Sie folgendermaßen vorgehen, um Ihre App mit dem älteren 64-Bit-JIT-Compiler zu kompilieren:  
   
@@ -61,13 +61,13 @@ Ab .NET Framework 4.6 enthält die Runtime einen neuen 64-Bit-JIT-Compiler für 
     </configuration>  
     ```  
   
-- Auf Benutzerbasis können Sie dem `HKEY_CURRENT_USER\SOFTWARE\Microsoft\.NETFramework`-Wert der Registrierung einen `REG_DWORD`-Wert mit dem Namen `useLegacyJit` hinzufügen. Der Wert 1 aktiviert den 64-Bit-Legacy-JIT-Compiler, der Wert 0 deaktiviert ihn und aktiviert stattdessen den neuen 64-Bit-JIT-Compiler.  
+- Auf Benutzerbasis können Sie dem `REG_DWORD`-Wert der Registrierung einen `useLegacyJit`-Wert mit dem Namen `HKEY_CURRENT_USER\SOFTWARE\Microsoft\.NETFramework` hinzufügen. Der Wert 1 aktiviert den 64-Bit-Legacy-JIT-Compiler, der Wert 0 deaktiviert ihn und aktiviert stattdessen den neuen 64-Bit-JIT-Compiler.  
   
-- Auf Computerbasis können Sie dem `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework`-Schlüssel der Registrierung einen `REG_DWORD`-Wert mit dem Namen `useLegacyJit` hinzufügen. Der Wert 1 aktiviert den 64-Bit-Legacy-JIT-Compiler, der Wert 0 deaktiviert ihn und aktiviert stattdessen den neuen 64-Bit-JIT-Compiler.  
+- Auf Computerbasis können Sie dem `REG_DWORD`-Schlüssel der Registrierung einen `useLegacyJit`-Wert mit dem Namen `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework` hinzufügen. Der Wert 1 aktiviert den 64-Bit-Legacy-JIT-Compiler, der Wert 0 deaktiviert ihn und aktiviert stattdessen den neuen 64-Bit-JIT-Compiler.  
   
  Ferner können Sie uns über das Problem informieren, indem Sie einen Bug auf [Microsoft Connect](https://connect.microsoft.com/VisualStudio) melden.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Anwendungskompatibilität](application-compatibility.md)
 - [\<useLegacyJit> Element](../configure-apps/file-schema/runtime/uselegacyjit-element.md)

@@ -2,12 +2,12 @@
 title: Befehl „dotnet publish“
 description: Der Befehl „dotnet publish“ dient zum Veröffentlichen eines .NET Core-Projekts oder einer .NET Core-Projektmappe in einem Verzeichnis.
 ms.date: 02/24/2020
-ms.openlocfilehash: cf41ee09244faad03feb8ccda19135b8c7780106
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: c34618409c9a539043c84c7e03daa8aa249d64f6
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78156997"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79146554"
 ---
 # <a name="dotnet-publish"></a>dotnet publish
 
@@ -20,7 +20,7 @@ ms.locfileid: "78156997"
 ## <a name="synopsis"></a>Übersicht
 
 ```dotnetcli
-dotnet publish [<PROJECT>|<SOLUTION>] [-c|--configuration] 
+dotnet publish [<PROJECT>|<SOLUTION>] [-c|--configuration]
     [-f|--framework] [--force] [--interactive] [--manifest]
     [--no-build] [--no-dependencies] [--no-restore] [--nologo]
     [-o|--output] [-r|--runtime] [--self-contained]
@@ -48,7 +48,7 @@ Die Ausgabe des Befehls `dotnet publish` steht für die Bereitstellung zur Ausf�
   
   * `PROJECT` ist der Pfad und Dateiname einer [C#](csproj.md)-, F#- oder Visual Basic-Projektdatei, oder der Pfad zu einem Verzeichnis, das eine C#-, F#- oder Visual Basic-Projektdatei enthält. Wenn das Verzeichnis nicht angegeben wird, wird standardmäßig das aktuelle Verzeichnis verwendet.
 
-  * `SOLUTION` ist der Pfad und Dateiname einer Projektmappendatei (mit der Erweiterung *.sln*), oder der Pfad zu einem Verzeichnis, das eine Projektmappendatei enthält. Wenn das Verzeichnis nicht angegeben wird, wird standardmäßig das aktuelle Verzeichnis verwendet. **Verfügbar ab .NET Core 3.0 SDK** 
+  * `SOLUTION` ist der Pfad und Dateiname einer Projektmappendatei (mit der Erweiterung *.sln*), oder der Pfad zu einem Verzeichnis, das eine Projektmappendatei enthält. Wenn das Verzeichnis nicht angegeben wird, wird standardmäßig das aktuelle Verzeichnis verwendet. Verfügbar seit .NET Core 3.0 SDK.
 
 ## <a name="options"></a>Optionen
 
@@ -68,9 +68,9 @@ Die Ausgabe des Befehls `dotnet publish` steht für die Bereitstellung zur Ausf�
 
   Druckt eine kurze Hilfe für den Befehl.
 
-- **`--interactive`** **Verfügbar ab .NET Core 3.0 SDK**
+- **`--interactive`**
 
-  Ermöglicht dem Befehl, anzuhalten und auf Benutzereingaben oder Aktionen zu warten. Beispielsweise, um die Authentifizierung abzuschließen. 
+  Ermöglicht dem Befehl, anzuhalten und auf Benutzereingaben oder Aktionen zu warten. Beispielsweise, um die Authentifizierung abzuschließen. Verfügbar seit .NET Core 3.0 SDK.
 
 - **`--manifest <PATH_TO_MANIFEST_FILE>`**
 
@@ -84,9 +84,9 @@ Die Ausgabe des Befehls `dotnet publish` steht für die Bereitstellung zur Ausf�
 
   Ignoriert Verweise zwischen Projekten und stellt nur das zum Erstellen angegebene Stammprojekt wieder her.
 
-- **`--nologo`** **Verfügbar ab .NET Core 3.0 SDK**
+- **`--nologo`**
 
-  Unterdrückt die Anzeige von Startbanner und Copyrightmeldung. 
+  Unterdrückt die Anzeige von Startbanner und Copyrightmeldung. Verfügbar seit .NET Core 3.0 SDK.
 
 - **`--no-restore`**
 
@@ -102,9 +102,9 @@ Die Ausgabe des Befehls `dotnet publish` steht für die Bereitstellung zur Ausf�
 
   Veröffentlicht die .NET Core-Runtime mit Ihrer Anwendung, sodass die Runtime nicht auf dem Zielcomputer installiert werden muss. Wenn ein Runtimebezeichner angegeben ist, ist der Standardwert `true`. Weitere Informationen finden Sie unter [Veröffentlichen von .NET Core-Anwendungen](../deploying/index.md) und [Veröffentlichen von .NET Core-Apps mit der .NET Core-CLI](../deploying/deploy-with-cli.md).
 
-- **`--no-self-contained`** **Verfügbar ab .NET Core 3.0 SDK**
+- **`--no-self-contained`**
 
-  Entspricht `--self-contained false`.
+  Entspricht `--self-contained false`. Verfügbar seit .NET Core 3.0 SDK.
 
 - **`-r|--runtime <RUNTIME_IDENTIFIER>`**
 
@@ -112,7 +112,7 @@ Die Ausgabe des Befehls `dotnet publish` steht für die Bereitstellung zur Ausf�
 
 - **`-v|--verbosity <LEVEL>`**
 
-  Legt den Ausführlichkeitsgrad für den Befehl fest. Zulässige Werte sind `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` und `diag[nostic]`.
+  Legt den Ausführlichkeitsgrad für den Befehl fest. Zulässige Werte sind `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` und `diag[nostic]`. Der Standardwert ist `minimal`sein.
 
 - **`--version-suffix <VERSION_SUFFIX>`**
 

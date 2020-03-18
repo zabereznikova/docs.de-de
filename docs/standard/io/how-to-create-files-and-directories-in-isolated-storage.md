@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Erstellen von Dateien und Verzeichnissen in isoliertem Speicher'
+title: 'Gewusst wie: Erstellen von Dateien und Verzeichnissen in isoliertem Speicher'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -15,13 +15,13 @@ helpviewer_keywords:
 - storing data using isolated storage, creating files and directories
 ms.assetid: 2ca4d2a4-809b-4f00-bc08-bf4a64d3a5c3
 ms.openlocfilehash: 83e8c800dc74d9689f1bfdb506a6b454e87b36ca
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75707869"
 ---
-# <a name="how-to-create-files-and-directories-in-isolated-storage"></a>Vorgehensweise: Erstellen von Dateien und Verzeichnissen in isoliertem Speicher
+# <a name="how-to-create-files-and-directories-in-isolated-storage"></a>Gewusst wie: Erstellen von Dateien und Verzeichnissen in isoliertem Speicher
 Nachdem Sie einen isolierten Speicher abgerufen haben, können Sie Verzeichnisse und Dateien zum Speichern von Daten erstellen. In einem Speicher sind Datei- und Verzeichnisnamen relativ zum Stamm des virtuellen Dateisystems angegeben.  
   
  Um ein Verzeichnis zu erstellen, verwenden Sie die <xref:System.IO.IsolatedStorage.IsolatedStorageFile.CreateDirectory%2A?displayProperty=nameWithType>-Instanzmethode. Wenn Sie ein Unterverzeichnis eines nicht vorhandenen Verzeichnisses angeben, werden beide Verzeichnisse erstellt. Wenn Sie ein bereits vorhandenes Verzeichnis angeben, erfolgt die Rückgabe durch die Methode, ohne dass ein Verzeichnis erstellt wird, und es wird keine Ausnahme ausgelöst. Wenn Sie jedoch einen Verzeichnisnamen angeben, der ungültige Zeichen enthält, wird eine <xref:System.IO.IsolatedStorage.IsolatedStorageException>-Ausnahme ausgelöst.  
@@ -36,7 +36,7 @@ Nachdem Sie einen isolierten Speicher abgerufen haben, können Sie Verzeichnisse
  [!code-csharp[Conceptual.IsolatedStorage#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.isolatedstorage/cs/source.cs#1)]
  [!code-vb[Conceptual.IsolatedStorage#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.isolatedstorage/vb/source.vb#1)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.IO.IsolatedStorage.IsolatedStorageFile>
 - <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream>

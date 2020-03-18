@@ -4,12 +4,12 @@ description: Dieses fortgeschrittene Tutorial veranschaulicht die Verwendung von
 ms.date: 03/13/2019
 ms-technology: csharp-whats-new
 ms.custom: mvc
-ms.openlocfilehash: ca7ae63a038fce0b2569e7a4bd1805765bc23d44
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: df1054d8e0ec2b2539e6a1d00bf353d8ca927397
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039197"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79156531"
 ---
 # <a name="tutorial-using-pattern-matching-features-to-extend-data-types"></a>Tutorial: Verwenden von Features für den Musterabgleich, um Datentypen zu erweitern
 
@@ -23,7 +23,7 @@ In diesem Tutorial lernen Sie, wie die folgenden Aufgaben ausgeführt werden:
 > - Verwenden von Musterabgleichausdrücken, um Verhalten auf Grundlage von Typen und Eigenschaftswerten zu implementieren.
 > - Kombinieren des Musterabgleichs mit anderen Verfahren, um vollständige Algorithmen zu erstellen.
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
+## <a name="prerequisites"></a>Voraussetzungen
 
 Sie müssen Ihren Computer zur Ausführung von .NET Core einrichten, einschließlich des C# 8.0-Compilers. Der C# 8-Compiler steht ab [Visual Studio 2019 Version 16.3](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) oder mit dem [.NET Core 3.0 SDK](https://dotnet.microsoft.com/download) zur Verfügung.
 
@@ -41,7 +41,7 @@ Stellen Sie sich eine bedeutende Metropolenregion vor, die für die Verwaltung d
 
 Vielleicht haben Sie aufgrund dieser kurzen Beschreibung schnell eine Objekthierarchie skizziert, mit der Sie ein Modell dieses System erstellen würden. Allerdings kommen Ihre Daten aus mehreren Quellen, z.B. anderen Verwaltungssystemen zur Fahrzeugregistrierung. Diese Systeme bieten verschiedene Klassen zum Erstellen eines Modells aus diesen Daten, und Sie haben kein einzelnes Objektmodell, das Sie verwenden können. In diesem Tutorial werden Sie mit diesen vereinfachten Klassen ein Modell für die Fahrzeugdaten aus diesen externen Systemen erstellen, wie im folgenden Code gezeigt:
 
-[!code-csharp[ExternalSystems](~/samples/csharp/tutorials/patterns/start/toll-calculator/ExternalSystems.cs)]
+[!code-csharp[ExternalSystems](~/samples/snippets/csharp/tutorials/patterns/start/toll-calculator/ExternalSystems.cs)]
 
 Sie können den Startercode aus dem Repository [dotnet/samples](https://github.com/dotnet/samples/tree/master/csharp/tutorials/patterns/start) auf GitHub herunterladen. Sie sehen, dass die Fahrzeugklassen aus verschiedenen Systemen stammen und sich in verschiedenen Namespaces befinden. Keine gemeinsame Basisklasse außer `System.Object` kann genutzt werden.
 
@@ -241,7 +241,7 @@ vehicle switch
     DeliveryTruck t when (t.GrossWeightClass > 5000) => 10.00m + 5.00m,
     DeliveryTruck t when (t.GrossWeightClass < 3000) => 10.00m - 2.00m,
     DeliveryTruck t => 10.00m,
-    
+
     { }     => throw new ArgumentException(message: "Not a known vehicle type", paramName: nameof(vehicle)),
     null    => throw new ArgumentNullException(nameof(vehicle))
 };
@@ -337,17 +337,17 @@ private static bool IsWeekDay(DateTime timeOfToll) =>
 
 Diese Methode funktioniert, aber sie enthält Wiederholungen. Sie können sie vereinfachen, wie im folgenden Code gezeigt:
 
-[!code-csharp[IsWeekDay](~/samples/csharp/tutorials/patterns/finished/toll-calculator/TollCalculator.cs#IsWeekDay)]
+[!code-csharp[IsWeekDay](~/samples/snippets/csharp/tutorials/patterns/finished/toll-calculator/TollCalculator.cs#IsWeekDay)]
 
 Fügen Sie als Nächstes eine ähnliche Funktion hinzu, um die Zeit in den Blöcken zu kategorisieren:
 
-[!code-csharp[GetTimeBand](~/samples/csharp/tutorials/patterns/finished/toll-calculator/TollCalculator.cs#GetTimeBand)]
+[!code-csharp[GetTimeBand](~/samples/snippets/csharp/tutorials/patterns/finished/toll-calculator/TollCalculator.cs#GetTimeBand)]
 
 Die vorherige Methode verwendet den Musterabgleich nicht. Es ist klarer, eine vertraute Kaskade von `if`-Anweisungen zu verwenden. Sie fügen eine private `enum`-Variable hinzu, um jeden Zeitbereich in einen diskreten Wert zu konvertieren.
 
 Nachdem Sie diese Methoden erstellt haben, können Sie einen anderen `switch`-Ausdruck mit dem **Tupelmuster** zum Berechnen des Aufschlags bzw. Rabatts auf den Preis verwenden. Sie könnten einen `switch`-Ausdruck mit allen 16 Armen erstellen:
 
-[!code-csharp[FullTuplePattern](~/samples/csharp/tutorials/patterns/finished/toll-calculator/TollCalculator.cs#TuplePatternOne)]
+[!code-csharp[FullTuplePattern](~/samples/snippets/csharp/tutorials/patterns/finished/toll-calculator/TollCalculator.cs#TuplePatternOne)]
 
 Der obige Code funktioniert, aber er kann vereinfacht werden. Alle acht Kombinationen für das Wochenende haben die gleiche Maut. Sie können alle acht mit der folgenden Zeile ersetzen:
 
@@ -380,7 +380,7 @@ public decimal PeakTimePremium(DateTime timeOfToll, bool inbound) =>
 
 Schließlich können Sie die zwei Hauptverkehrszeiten entfernen, zu denen der reguläre Preis gezahlt wird. Wenn Sie diese Arme entfernen, können Sie im letzten Switch-Arm `false` mit einem Verwerfen (`_`) ersetzen. So sieht die abgeschlossene Methode aus:
 
-[!code-csharp[SimplifiedTuplePattern](../../../samples/csharp/tutorials/patterns/finished/toll-calculator/TollCalculator.cs#FinalTuplePattern)]
+[!code-csharp[SimplifiedTuplePattern](../../../samples/snippets/csharp/tutorials/patterns/finished/toll-calculator/TollCalculator.cs#FinalTuplePattern)]
 
 Dieses Beispiel verdeutlicht einen der Vorteile von Musterabgleich: Die Musterverzweigungen werden der Reihe nach ausgewertet. Wenn Sie sie neu anordnen, sodass eine frühere Verzweigung einen Ihrer späteren Fälle verarbeitet, gibt der Compiler einen Warnhinweis zum unerreichbaren Code aus. Diese Sprachregeln haben die Durchführung der vorherigen Vereinfachungen erleichtert mit der Zuversicht, dass der Code sich nicht geändert hat.
 

@@ -4,11 +4,11 @@ description: Wie sah die Sprache in ihren ersten Versionen aus und wie hat sie s
 author: erikdietrich
 ms.date: 09/20/2017
 ms.openlocfilehash: 9114395a5c6cfd8df5da18024921c35828947e0b
-ms.sourcegitcommit: c2d9718996402993cf31541f11e95531bc68bad0
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/27/2020
-ms.locfileid: "77673276"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79398334"
 ---
 # <a name="the-history-of-c"></a>Die Geschichte von C\#
 

@@ -12,10 +12,10 @@ helpviewer_keywords:
 - text files [Visual Basic], reading
 ms.assetid: 8d185eb2-79ca-42cd-95a7-d3ff44a5a0f8
 ms.openlocfilehash: b36c781d5f8333749d346bb8f19540f0d1bd1692
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74334569"
 ---
 # <a name="how-to-read-from-fext-files-with-multiple-formats-in-visual-basic"></a>Vorgehensweise: Lesen aus Textdateien mit mehreren Formaten in Visual Basic
@@ -75,6 +75,6 @@ Die folgenden Bedingungen können einen Ausnahmefehler verursachen:
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A>
 - <xref:Microsoft.VisualBasic.FileIO.TextFieldParser.EndOfData%2A>
 - <xref:Microsoft.VisualBasic.FileIO.TextFieldParser.TextFieldType%2A>
-- [Vorgehensweise: Lesen aus durch Trennzeichen getrennten Textdateien](how-to-read-from-comma-delimited-text-files.md)
-- [Vorgehensweise: Lesen aus einer Textdatei mit fester Breite](how-to-read-from-fixed-width-text-files.md)
+- [How to: Lesen aus durch Trennzeichen getrennten Textdateien](how-to-read-from-comma-delimited-text-files.md)
+- [How to: Lesen aus einer Textdatei mit fester Breite](how-to-read-from-fixed-width-text-files.md)
 - [Analysieren von Textdateien mit dem TextFieldParser-Objekt](parsing-text-files-with-the-textfieldparser-object.md)

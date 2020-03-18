@@ -2,12 +2,12 @@
 title: Abrufen der Absätze und ihrer Stile (C#)
 ms.date: 07/20/2015
 ms.assetid: c2f767f8-57b1-4b4b-af04-89ffb1f7067d
-ms.openlocfilehash: ec59ef0ac36f8691ca93a4c21c5379118ee0491f
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 47127b6f1d6bfaa0d8d93333882a0d0b59f1bae6
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70253074"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79168296"
 ---
 # <a name="retrieving-the-paragraphs-and-their-styles-c"></a>Abrufen der Absätze und ihrer Stile (C#)
 In diesem Beispiel schreiben wir eine Abfrage, die die Absatzknoten aus einem WordprocessingML-Dokument abruft. Außerdem ermittelt es für jeden Absatz die verwendete Formatvorlage.  
@@ -78,7 +78,7 @@ using (Package wdPackage = Package.Open(fileName, FileMode.Open, FileAccess.Read
     }  
 }  
   
-string defaultStyle =   
+string defaultStyle =
     (string)(  
         from style in styleDoc.Root.Elements(w + "style")  
         where (string)style.Attribute(w + "type") == "paragraph"&&  
@@ -109,7 +109,7 @@ foreach (var p in paragraphs)
     Console.WriteLine("StyleName:{0}", p.StyleName);  
 ```  
   
- Dieses Beispiel produziert bei Anwendung auf das in [Creating the Source Office Open XML Document (C#) (Erstellen eines Office Open-Quell-XML-Dokuments (C#))](./creating-the-source-office-open-xml-document.md) beschriebene Dokument die folgende Ausgabe.  
+ Dieses Beispiel generiert bei Anwendung auf das in [Erstellen eines Office Open-Quell-XML-Dokuments (C#)](./creating-the-source-office-open-xml-document.md) beschriebene Dokument die folgende Ausgabe.  
   
 ```output  
 StyleName:Heading1  
@@ -132,6 +132,6 @@ StyleName:Code
 ## <a name="next-steps"></a>Nächste Schritte  
  Im nächsten Thema, [Abrufen des Texts der Absätze (C#)](./retrieving-the-text-of-the-paragraphs.md), erstellen Sie eine Abfrage zum Abrufen des Texts der Absätze.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Tutorial: Bearbeiten von Inhalten in einem WordprocessingML-Dokument (C#)](./shape-of-wordprocessingml-documents.md)
+- [Tutorial: Manipulating Content in a WordprocessingML Document (C#) (Tutorial: Bearbeiten von Inhalten in einem WordprocessingML-Dokument (C#))](./shape-of-wordprocessingml-documents.md)

@@ -6,10 +6,10 @@ helpviewer_keywords:
 - assemblies [.NET Framework], strong-named
 ms.assetid: d4a80263-f3e0-4d81-9b61-f0cbeae3797b
 ms.openlocfilehash: 12b8df3195b2708e4556d4f8065227054db9eb14
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75711570"
 ---
 # <a name="strong-named-assemblies"></a>Assemblys mit starkem Namen
@@ -46,6 +46,6 @@ Wenn Sie Open-Source-Entwickler sind und den Nutzen von Assemblys mit starkem Na
 ## <a name="see-also"></a>Siehe auch
 
 - [Globaler Assemblycache](../../framework/app-domains/gac.md)
-- [Vorgehensweise: Signieren einer Assembly mit einem starken Namen](sign-strong-name.md)
+- [How to: Signieren einer Assembly mit einem starken Namen](sign-strong-name.md)
 - [Sn.exe (Strong Name-Tool)](../../framework/tools/sn-exe-strong-name-tool.md)
 - [Erstellen und Verwenden von Assemblys mit starkem Namen](create-use-strong-named.md)

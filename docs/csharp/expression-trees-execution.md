@@ -4,12 +4,12 @@ description: Informationen zum Ausführen von Ausdrucksbaumstrukturen, indem sie
 ms.date: 06/20/2016
 ms.technology: csharp-advanced-concepts
 ms.assetid: 109e0ac5-2a9c-48b4-ac68-9b6219cdbccf
-ms.openlocfilehash: 9af4b346962cb743daddf774e8b3c1f8fa722ae4
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 802a83f52f9c05a99c3f49f8f6511eff81ef3eaa
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73037113"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79146020"
 ---
 # <a name="executing-expression-trees"></a>Ausführen von Ausdrucksbaumstrukturen
 
@@ -21,7 +21,7 @@ Es ist ein nicht kompilierter und ausführbarer Code. Wenn Sie den .NET-Code aus
 ## <a name="lambda-expressions-to-functions"></a>Lambdaausdrücke zu Funktionen
 
 Sie können jede LambdaExpression oder jeden Typ, der von LambdaExpression in eine ausführbare IL abgeleitet wurde, konvertieren. Andere Ausdruckstypen können nicht direkt in Code konvertiert werden. Diese Einschränkung wirkt sich kaum auf die Praxis aus. Lambdaausdrücke sind die einzigen Typen von Ausdrücken, die Sie ausführen möchten, indem Sie sie in eine ausführbare Zwischensprache (Intermediate Language, IL) konvertieren. (Denken Sie darüber nach, was es bedeuten würde, eine `ConstantExpression` direkt auszuführen. Würde es etwas Nützliches bedeuten?) Jede beliebige Ausdrucksbaumstruktur, die eine `LambdaExpression` ist, oder ein abgeleiteter Typ von `LambdaExpression`, kann in eine IL konvertiert werden.
-Der Ausdruckstyp `Expression<TDelegate>` ist das einzige konkrete Beispiel in den .NET Core-Bibliotheken. Hiermit wird ein Ausdruck dargestellt, der jedem Delegattyp zugeordnet ist. Da dieser Typ einem Delegattyp zugeordnet ist, kann .NET den Ausdruck untersuchen, und die IL für einen entsprechenden Delegaten generieren, der der Signatur des Lambdaausdrucks entspricht. 
+Der Ausdruckstyp `Expression<TDelegate>` ist das einzige konkrete Beispiel in den .NET Core-Bibliotheken. Hiermit wird ein Ausdruck dargestellt, der jedem Delegattyp zugeordnet ist. Da dieser Typ einem Delegattyp zugeordnet ist, kann .NET den Ausdruck untersuchen, und die IL für einen entsprechenden Delegaten generieren, der der Signatur des Lambdaausdrucks entspricht.
 
 In den meisten Fällen erstellt dies eine einfache Zuordnung zwischen einem Ausdruck und seinem entsprechenden Delegaten. Angenommen, eine Ausdrucksbaumstruktur, die durch `Expression<Func<int>>` dargestellt wird, wird in einen Delegaten des Typs `Func<int>` konvertiert. Für einen Lambdaausdruck mit beliebigem Rückgabetyp und Argumentliste besteht ein Delegattyp, der der Zieltyp für den ausführbaren Code ist, der von diesem Lambdaausdruck dargestellt wird.
 
@@ -50,7 +50,7 @@ Ich rate Ihnen davon ab, zu versuchen, mehr anspruchsvollere Zwischenspeicherung
 
 ## <a name="caveats"></a>Hinweise
 
-Das Kompilieren eines Lambdaausdrucks in einen Delegaten und das Aufrufen dieses Delegaten, ist einer der einfachsten Vorgänge, die Sie mit einer Ausdrucksbaumstruktur ausführen können. Trotz dieses einfachen Vorgangs gibt es jedoch Hinweise, die Sie beachten müssen. 
+Das Kompilieren eines Lambdaausdrucks in einen Delegaten und das Aufrufen dieses Delegaten, ist einer der einfachsten Vorgänge, die Sie mit einer Ausdrucksbaumstruktur ausführen können. Trotz dieses einfachen Vorgangs gibt es jedoch Hinweise, die Sie beachten müssen.
 
 Lambdaausdrücke erstellen Closures über lokale Variablen, auf die im Ausdruck verwiesen wird. Sie müssen sicherstellen, dass alle Variablen, die Teil des Delegaten wären, am Speicherort verwendet werden können, wo Sie `Compile` aufrufen sowie beim Ausführen des resultierenden Delegats.
 
@@ -108,7 +108,7 @@ private static Func<int, int> CreateBoundResource()
 }
 ```
 
-Der Delegat, der von dieser Methode zurückgegeben wurde, wurde über das `constant`-Objekt geschlossen, das verworfen wurde. (Es wurde verworfen, da es in einer `using`-Anweisung deklariert wurde.) 
+Der Delegat, der von dieser Methode zurückgegeben wurde, wurde über das `constant`-Objekt geschlossen, das verworfen wurde. (Es wurde verworfen, da es in einer `using`-Anweisung deklariert wurde.)
 
 Nun, wenn Sie den von dieser Methode zurückgegebenen Delegaten ausführen, müssen Sie eine `ObjectDisposedException` haben, die zum Zeitpunkt der Ausführung ausgelöst wird.
 

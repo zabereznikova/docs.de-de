@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Schreiben von Ereignisinformationen in eine Textdatei'
+title: 'Gewusst wie: Schreiben von Ereignisinformationen in eine Textdatei'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - event logs [Visual Studio], writing event information
@@ -7,13 +7,13 @@ helpviewer_keywords:
 - events [Visual Basic], writing event information to a text file
 ms.assetid: 9ca7cc03-bf99-4933-9e5e-61ee28e9a6b4
 ms.openlocfilehash: c3c81e331eb3d8ee450ba0cac38e57976846ee63
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74352071"
 ---
-# <a name="how-to-write-event-information-to-a-text-file-visual-basic"></a>Vorgehensweise: Schreiben von Ereignisinformationen in eine Textdatei (Visual Basic)
+# <a name="how-to-write-event-information-to-a-text-file-visual-basic"></a>Gewusst wie: Schreiben von Ereignisinformationen in eine Textdatei (Visual Basic)
 
 Sie können die Objekte `My.Application.Log` und `My.Log` verwenden, um Informationen über Ereignisse zu protokollieren, die in Ihrer Anwendung auftreten. Dieses Beispiel zeigt die Verwendung der `My.Application.Log.WriteEntry`-Methode zum Protokollieren von Nachverfolgungsinformationen, um eine Datei zu protokollieren.
 
@@ -21,7 +21,7 @@ Sie können die Objekte `My.Application.Log` und `My.Log` verwenden, um Informat
 
 1. Klicken Sie im **Projektmappen-Explorer** auf "app.config", und wählen Sie **Öffnen**aus.
 
-     \- oder –
+     \- oder -
 
      Wenn keine app.config-Datei vorhanden ist:
 
@@ -62,14 +62,14 @@ Sie können die Objekte `My.Application.Log` und `My.Log` verwenden, um Informat
 
 ### <a name="to-write-event-information-to-the-file-log"></a>Schreiben von Ereignisinformationen in das Dateiprotokoll
 
-Verwenden Sie die `My.Application.Log.WriteEntry`- oder `My.Application.Log.WriteException`-Methode, um Informationen in das Dateiprotokoll zu schreiben. Weitere Informationen finden Sie unter [Vorgehensweise: Schreiben von Protokollmeldungen (Visual Basic)](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md) und [Vorgehensweise: Protokollieren von Ausnahmen](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md).
+Verwenden Sie die `My.Application.Log.WriteEntry`- oder `My.Application.Log.WriteException`-Methode, um Informationen in das Dateiprotokoll zu schreiben. Weitere Informationen finden Sie unter [Vorgehensweise: Schreiben von Protokollmeldungen](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md) und [Vorgehensweise: Protokollieren von Ausnahmen](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md).
 
 Nachdem Sie den Dateiprotokolllistener für eine Assembly konfiguriert haben, empfängt er alle Meldungen, die `My.Application.Log` von der betreffenden Assembly schreibt.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=nameWithType>
 - <xref:Microsoft.VisualBasic.Logging.Log.WriteEntry%2A>
 - <xref:Microsoft.VisualBasic.Logging.Log.WriteException%2A>
 - [Arbeiten mit Anwendungsprotokollen](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md)
-- [Vorgehensweise: Protokollieren von Ausnahmen](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md)
+- [Gewusst wie: Protokollieren von Ausnahmen](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md)

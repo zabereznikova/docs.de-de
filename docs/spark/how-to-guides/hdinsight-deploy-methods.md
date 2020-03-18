@@ -4,12 +4,12 @@ description: Hier erfahren Sie, wie Sie einen .NET für Apache Spark-Auftrag mit
 ms.date: 11/19/2019
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: d558234a53cc22d65540a380ac7f5b3ac03ba0ae
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 83359f7f613b500a4ce121ce1612cda0ad1191ab
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76868017"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79185796"
 ---
 # <a name="submit-a-net-for-apache-spark-job-to-azure-hdinsight"></a>Senden eines .NET für Apache Spark-Auftrags an Azure HDInsight
 
@@ -18,7 +18,7 @@ Es gibt zwei Möglichkeiten, einen .NET für Apache Spark-Auftrag für HDInsight
 ## <a name="deploy-using-spark-submit"></a>Bereitstellen mit spark-submit
 
 Mit dem Befehl [spark-submit](https://spark.apache.org/docs/latest/submitting-applications.html) können Sie .NET für Apache Spark-Aufträge an Azure HDInsight übermitteln.
- 
+
 1. Navigieren Sie im Azure-Portal zu Ihrem HDInsight Spark-Cluster, und wählen Sie dann **SSH und Clusteranmeldung**aus.
 
 2. Kopieren Sie die SSH-Anmeldeinformationen, und fügen Sie diese in ein Terminal ein. Melden Sie sich mit dem Kennwort, das Sie während der Clustererstellung festgelegt haben, bei Ihrem Cluster an. Es sollten Meldungen angezeigt werden, die Sie bei Ubuntu und Spark Willkommen heißen.

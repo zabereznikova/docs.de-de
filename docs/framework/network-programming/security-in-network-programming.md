@@ -12,12 +12,12 @@ helpviewer_keywords:
 - security [.NET Framework], Internet
 - permissions [.NET Framework], Internet
 ms.assetid: afb07899-2707-49ab-a57f-e0caf20d0171
-ms.openlocfilehash: ae8451089dc645c925848489a61c5fb55c468032
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 29c649abb7ff5db74cadfdbe5b7c11f9322f75f8
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71047307"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79180682"
 ---
 # <a name="security-in-network-programming"></a>Sicherheit in der Netzwerkprogrammierung
 
@@ -27,7 +27,7 @@ Die Klassen des .NET Framework Namespace <xref:System.Net> stellen integrierte U
 
 [Bewährte Methoden für Transport Layer Security (TLS) mit .NET Framework](tls.md)  
 Beschreibt bewährte TLS-Methoden mit .NET Framework.
- 
+
 [Using Secure Sockets Layer (Verwenden von Secure Sockets Layer)](using-secure-sockets-layer.md)  
 Hier erfahren Sie, wie Sie SSL-Verbindungen (Secure Sockets Layer) verwenden.  
   

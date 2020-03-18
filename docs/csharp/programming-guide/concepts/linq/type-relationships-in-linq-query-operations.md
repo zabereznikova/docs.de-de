@@ -13,10 +13,10 @@ helpviewer_keywords:
 - LINQ [C#], type relationships
 ms.assetid: 99118938-d47c-4d7e-bb22-2657a9f95268
 ms.openlocfilehash: 41853e6858fae9e8d449aeed95a6a84f343d5874
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/03/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75635612"
 ---
 # <a name="type-relationships-in-linq-query-operations-c"></a>Typbeziehungen in LINQ-Abfragevorgängen (C#)
@@ -44,7 +44,7 @@ Um Abfragen effektiv erstellen zu können, ist es wichtig, dass Sie verstehen, w
   
 1. Das Typargument der Datenquelle bestimmt den Typ der Bereichsvariablen.  
   
-2. Die `select`-Anweisung gibt die `Name`-Eigenschaft statt des vollständigen `Customer`-Objekts zurück. Da `Name` eine Zeichenfolge ist, lautet das Typargument von `custNameQuery` nicht `Customer`, sondern `string`.  
+2. Die `select`-Anweisung gibt die `Name`-Eigenschaft statt des vollständigen `Customer`-Objekts zurück. Da `Name` eine Zeichenfolge ist, lautet das Typargument von `custNameQuery` nicht `string`, sondern `Customer`.  
   
 3. Da `custNameQuery` eine Sequenz von Zeichenfolgen ist, muss die Iterationsvariable der `foreach`-Schleife auch ein `string` sein.  
   

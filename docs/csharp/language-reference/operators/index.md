@@ -10,10 +10,10 @@ helpviewer_keywords:
 - expressions [C#]
 ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
 ms.openlocfilehash: 11c544e7fc923b0820141fb2e096ef7707f0a95f
-ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74552475"
 ---
 # <a name="c-operators-c-reference"></a>C#-Operatoren (C#-Referenz)
@@ -91,7 +91,7 @@ In der Regel werden alle Operanden eines Operators ausgewertet. Einige Operatore
 
 Weitere Informationen finden Sie im Abschnitt [Operatoren](~/_csharplang/spec/expressions.md#operators) der [C#-Sprachspezifikation](~/_csharplang/spec/introduction.md).
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [C#-Referenz](../index.md)
 - [Ausdrücke](../../programming-guide/statements-expressions-operators/expressions.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - catch keyword [C#]
 - try-catch statement [C#]
 ms.assetid: cb5503c7-bfa1-4610-8fc2-ddcd2e84c438
-ms.openlocfilehash: 5289dbe3aff0a9e1f1024a293ff469df44d34a3b
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 3d4315a09869b77b4ae8cbb43646f9a96280b678
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75713026"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79173470"
 ---
 # <a name="try-catch-c-reference"></a>try-catch (C#-Referenz)
 
@@ -53,7 +53,7 @@ catch (ArgumentException e) when (e.ParamName == "…")
 
 Ausnahmefilter sind dem Abfangen und erneuten Auslösen vorzuziehen (siehe nachfolgende Erläuterung), da der Filter den Stapel nicht beschädigt.  Wenn ein späterer Handler den Stapel löscht, können Sie feststellen, wo die Ausnahme ursprünglich herkam, und nicht nur die letzte Stelle, an der sie erneut ausgelöst wurde.  Filterausdrücke für Ausnahmen werden häufig zu Protokollierungszwecken eingesetzt.  Sie können einen Filter erstellen, der immer FALSE zurückgibt und außerdem Ausgaben in ein Protokoll schreibt, und Sie können Ausnahmen protokollieren, wenn sie auftreten, ohne sie zu behandeln und erneut auszulösen.
 
-Eine [throw`catch`-Anweisung kann in einem ](throw.md)-Block verwendet werden, um die von der `catch`-Anweisung abgefangene Ausnahme erneut auszulösen. Im folgenden Beispiel werden Quellinformationen aus einer <xref:System.IO.IOException>-Ausnahme extrahiert, anschließend wird die Ausnahme in der übergeordneten Methode ausgelöst.
+Eine [throw](throw.md)-Anweisung kann in einem `catch`-Block verwendet werden, um die von der `catch`-Anweisung abgefangene Ausnahme erneut auszulösen. Im folgenden Beispiel werden Quellinformationen aus einer <xref:System.IO.IOException>-Ausnahme extrahiert, anschließend wird die Ausnahme in der übergeordneten Methode ausgelöst.
 
 ```csharp
 catch (FileNotFoundException e)
@@ -62,7 +62,7 @@ catch (FileNotFoundException e)
 }
 catch (IOException e)
 {
-    // Extract some information from this exception, and then 
+    // Extract some information from this exception, and then
     // throw it to the parent method.
     if (e.Source != null)
         Console.WriteLine("IOException source: {0}", e.Source);
@@ -73,7 +73,7 @@ catch (IOException e)
 Sie können eine Ausnahme abfangen und eine andere Ausnahme auslösen. Wenn Sie dies tun, geben Sie die abgefangene Ausnahme als innere Ausnahme an, wie im folgenden Beispiel gezeigt.
 
 ```csharp
-catch (InvalidCastException e) 
+catch (InvalidCastException e)
 {
     // Perform some action here, and then throw a new exception.
     throw new YourCustomException("Put your error message here.", e);
@@ -98,21 +98,21 @@ catch (InvalidCastException e)
 
 > [!NOTE]
 > Es ist auch möglich, einen Ausnahmefilter zu verwenden, um ein ähnliches Ergebnis auf eine meist übersichtlichere Weise zu erhalten (sowie ohne den Stapel zu bearbeiten, wie weiter oben in diesem Artikel erläutert wurde). Das folgende Beispiel verfügt über das gleiche Verhalten für Aufrufer wie das vorherige Beispiel. Die Funktion gibt `InvalidCastException` an den Aufrufer zurück, wenn `e.Data``null` ist.
-> 
+>
 > ```csharp
-> catch (InvalidCastException e) when (e.Data != null) 
+> catch (InvalidCastException e) when (e.Data != null)
 > {
 >     // Take some action.
 > }
-> ``` 
+> ```
 
 Initialisieren Sie innerhalb eines `try`-Blocks nur Variablen, die auch in diesem deklariert sind. Andernfalls kann eine Ausnahme auftreten, bevor die Ausführung des Blocks abgeschlossen ist. Beispiel: Im folgenden Codebeispiel wird die `n`-Variable innerhalb des `try`-Blocks initialisiert. Beim Versuch, diese Variable außerhalb des `try`-Blocks in der `Write(n)`-Anweisung zu verwenden, wird ein Compilerfehler generiert.
 
 ```csharp
-static void Main() 
+static void Main()
 {
     int n;
-    try 
+    try
     {
         // Do not initialize this variable here.
         n = 123;
@@ -177,12 +177,12 @@ Jede der drei Aufgaben löst eine Ausnahme aus. Der `catch`-Block iteriert durch
 
 Weitere Informationen finden Sie im Abschnitt [Die Try-Anweisung](~/_csharplang/spec/statements.md#the-try-statement) der [C#-Sprachspezifikation](~/_csharplang/spec/introduction.md).
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [C#-Referenz](../index.md)
 - [C#-Programmierhandbuch](../../programming-guide/index.md)
 - [C#-Schlüsselwörter](index.md)
-- [try-, throw- und catch-Anweisungen (C++)](/cpp/cpp/try-throw-and-catch-statements-cpp)
+- [try, throw, and catch Statements (C++) (try-, throw- und catch-Anweisungen (C++))](/cpp/cpp/try-throw-and-catch-statements-cpp)
 - [throw](throw.md)
 - [try-finally](try-finally.md)
 - [Vorgehensweise: Explizites Auslösen von Ausnahmen](../../../standard/exceptions/how-to-explicitly-throw-exceptions.md)

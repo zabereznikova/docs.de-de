@@ -5,12 +5,12 @@ helpviewer_keywords:
 - in-process side-by-side execution
 - side-by-side execution, in-process
 ms.assetid: 18019342-a810-4986-8ec2-b933a17c2267
-ms.openlocfilehash: 0c699f90143a87b7e7bee24c892efe2936a9399e
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 5ca2f03576946a23b3133bbe7532d46c4ad758ab
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75716482"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79181665"
 ---
 # <a name="in-process-side-by-side-execution"></a>Prozessinterne parallele Ausführung
 Ab .NET Framework 4 können Sie mit prozessinternem parallelem Hosting mehrere Versionen der Common Language Runtime (CLR) in einem einzigen Prozess ausführen. Standardmäßig werden verwaltete COM-Komponenten mit der .NET Framework-Version ausgeführt, mit der sie erstellt wurden, unabhängig von der .NET Framework-Version, die für den Prozess geladen wird.  
@@ -45,7 +45,7 @@ Ab .NET Framework 4 können Sie mit prozessinternem parallelem Hosting mehrere V
 > [!NOTE]
 > .NET Framework-Versionen 3.0 und 3.5 werden inkrementell auf Version 2.0 erstellt und müssen nicht parallel ausgeführt werden. Sie sind an und für sich dieselbe Version.  
   
-<a name="scenarios"></a>   
+<a name="scenarios"></a>
 ## <a name="common-side-by-side-hosting-scenarios"></a>Häufige Szenarios des parallelen Hostings  
   
 - **Szenario 1:** Eine Native Anwendung, die COM-Komponenten verwendet, die mit früheren Versionen von .NET Framework erstellt wurden.  
@@ -151,7 +151,7 @@ int _tmain(int argc, _TCHAR* argv[])
     IDispatch* pPrintInfo;  
     pUnk->QueryInterface(IID_IDispatch, (void**)&pPrintInfo);  
     OLECHAR FAR* szMethod[1];  
-    szMethod[0]=OLESTR("PrintInfo");   
+    szMethod[0]=OLESTR("PrintInfo");
     hr = pPrintInfo->GetIDsOfNames(IID_NULL,szMethod, 1, LOCALE_SYSTEM_DEFAULT, &dispid);  
     DISPPARAMS dispparams;  
     dispparams.cNamedArgs = 0;  

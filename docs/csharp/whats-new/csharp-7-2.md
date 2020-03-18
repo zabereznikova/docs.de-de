@@ -3,10 +3,10 @@ title: Neues in C# 7.2
 description: Eine Übersicht der neuen Funktionen in C# 7.2
 ms.date: 08/16/2017
 ms.openlocfilehash: 7febefb81bbea6f24690adb05488ad6a18bbf552
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75694594"
 ---
 # <a name="whats-new-in-c-72"></a>Neues in C# 7.2
@@ -36,7 +36,7 @@ Dieser Artikel enthält im Folgenden eine Übersicht über die einzelnen Funktio
 1. Installieren Sie das globale [dotnet-try](https://github.com/dotnet/try/blob/master/README.md#setup)-Tool.
 1. Klonen Sie das [dotnet/try-samples](https://github.com/dotnet/try-samples)-Repository.
 1. Legen Sie das aktuelle Verzeichnis auf das Unterverzeichnis *csharp7* für das *try-samples*-Repository fest.
-1. Führen Sie aus `dotnet try`.
+1. Führen Sie `dotnet try` aus.
 
 ## <a name="safe-efficient-code-enhancements"></a>Erweiterungen von sicherem, effizientem Code
 
@@ -57,7 +57,7 @@ Methodenaufrufe dürfen jetzt benannte Argumente verwenden, die positionellen Ar
 
 Die Implementierung der Unterstützung für Stellentrennzeichen in C# 7.0 ließ den Unterstrich `_` nicht als erstes Zeichen von Literalwerten zu. Hexadezimale und binäre numerische Literale dürfen jetzt mit einem `_` beginnen.
 
-Zum Beispiel:
+Beispiel:
 
 ```csharp
 int binaryValue = 0b_0101_0101;

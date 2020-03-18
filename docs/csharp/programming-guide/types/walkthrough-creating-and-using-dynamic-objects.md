@@ -9,12 +9,12 @@ helpviewer_keywords:
 - dynamic objects
 - dynamic objects [C#]
 ms.assetid: 568f1645-1305-4906-8625-5d77af81e04f
-ms.openlocfilehash: aa902ffaf93c8e1f273ed476dc7d413bcfce914c
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 3b5a92948a3e692a734f3ddee3c7238d5d27588f
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73417573"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79157051"
 ---
 # <a name="walkthrough-creating-and-using-dynamic-objects-c-and-visual-basic"></a>Exemplarische Vorgehensweise: Erstellen und Verwenden von dynamischen Objekten (C# und Visual Basic)
 
@@ -32,7 +32,7 @@ Dynamische Objekte machen Member wie etwa Eigenschaften und Methoden zur Laufzei
   
 - Erstellen Sie ein Objekt, das die `IronPython`-Bibliothek verwendet.  
   
-## <a name="prerequisites"></a>Erforderliche Komponenten  
+## <a name="prerequisites"></a>Voraussetzungen  
 
 Sie benötigen [IronPython](https://ironpython.net/) für .NET für diese exemplarische Vorgehensweise. Wechseln Sie zur [Downloadseite](https://ironpython.net/download/), um die neueste Version zu erhalten.
   
@@ -104,10 +104,10 @@ Das erste Projekt, das Sie in dieser exemplarischen Vorgehensweise erstellen def
     Customer: Preston, Chris  
     Customer: Hines, Patrick  
     Customer: Cameron, Maria  
-    Supplier: Graphic Design Institute (https://www.graphicdesigninstitute.com/)   
-    Supplier: Fabrikam, Inc. (https://www.fabrikam.com/)   
+    Supplier: Graphic Design Institute (https://www.graphicdesigninstitute.com/)
+    Supplier: Fabrikam, Inc. (https://www.fabrikam.com/)
     Customer: Seubert, Roxanne  
-    Supplier: Proseware, Inc. (http://www.proseware.com/)   
+    Supplier: Proseware, Inc. (http://www.proseware.com/)
     Customer: Adolphi, Stephan  
     Customer: Koch, Paul  
     ```  

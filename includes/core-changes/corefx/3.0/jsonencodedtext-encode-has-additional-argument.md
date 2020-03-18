@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 375a6f57a867c2a11fe95753c1085d6d708db2bd
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: f5ae4669c85ae4f5d57d88ab55f6e1c758a625a6
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74568084"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79147587"
 ---
 ### <a name="jsonencodedtextencode-methods-have-an-additional-javascriptencoder-argument"></a>JsonEncodedText.Encode-Methoden weisen ein zusätzliches JavaScriptEncoder-Argument auf
 
@@ -46,7 +46,7 @@ namespace System.Text.Json
 
 .NET Core 3.0 Preview 8
 
-#### <a name="recommended-action"></a>Empfohlene Maßnahme
+#### <a name="recommended-action"></a>Empfohlene Aktion
 
 Dies ist nur ein binärer Breaking Change. Bei einer erneuten Kompilierung für .NET Core 3.0 Vorschau 8 oder eine höhere Version werden alle Laufzeitprobleme behoben.
 
@@ -56,9 +56,9 @@ CoreFx
 
 #### <a name="affected-apis"></a>Betroffene APIs
 
-<xref:System.Text.Json.JsonEncodedText.Encode(System.ReadOnlySpan%7BSystem.Byte%7D,System.Text.Encodings.Web.JavaScriptEncoder)?displayProperty=nameWithType>
-<xref:System.Text.Json.JsonEncodedText.Encode(System.ReadOnlySpan%7BSystem.Char%7D,System.Text.Encodings.Web.JavaScriptEncoder)?displayProperty=nameWithType>
-<xref:System.Text.Json.JsonEncodedText.Encode(System.String,System.Text.Encodings.Web.JavaScriptEncoder)?displayProperty=nameWithType>
+- <xref:System.Text.Json.JsonEncodedText.Encode(System.ReadOnlySpan%7BSystem.Byte%7D,System.Text.Encodings.Web.JavaScriptEncoder)?displayProperty=nameWithType>
+- <xref:System.Text.Json.JsonEncodedText.Encode(System.ReadOnlySpan%7BSystem.Char%7D,System.Text.Encodings.Web.JavaScriptEncoder)?displayProperty=nameWithType>
+- <xref:System.Text.Json.JsonEncodedText.Encode(System.String,System.Text.Encodings.Web.JavaScriptEncoder)?displayProperty=nameWithType>
 
 <!--
 

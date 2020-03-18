@@ -17,12 +17,12 @@ helpviewer_keywords:
 - protocols, sockets
 - Internet, sockets
 ms.assetid: 813489a9-3efd-41b6-a33f-371d55397676
-ms.openlocfilehash: 11ed53a4e51ba6993fd4e240116b0e1de910a01e
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 467804e685d800643c421ed1aad040a842b42886
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71047050"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79180631"
 ---
 # <a name="using-an-asynchronous-server-socket"></a>Verwenden eines asynchronen Serversockets
 Asynchrone Serversockets verwenden das asynchrone Programmiermodell von .NET Framework, um Dienstanforderungen über das Netzwerk zu verarbeiten. Die <xref:System.Net.Sockets.Socket>-Klasse folgt dem asynchronen Standardbenennungsmuster von .NET Framework, z.B. entspricht die synchrone <xref:System.Net.Sockets.Socket.Accept%2A>-Methode den asynchronen <xref:System.Net.Sockets.Socket.BeginAccept%2A>- und <xref:System.Net.Sockets.Socket.EndAccept%2A>-Methoden.  
@@ -101,7 +101,7 @@ public void StartListening()
   
     Socket listener = new Socket(localEP.Address.AddressFamily, SocketType.Stream, ProtocolType.Tcp);  
   
-    try 
+    try
     {  
         listener.Bind(localEP);  
         listener.Listen(10);  
@@ -125,7 +125,7 @@ public void StartListening()
 }  
 ```  
   
- Die Accept-Rückrufmethode (`AcceptCallback` im vorherigen Beispiel) ist verantwortlich dafür, dass dem Thread der Hauptanwendung signalisiert wird, den Vorgang fortzusetzen, die Verbindung mit dem Client herzustellen, und das asynchrone Lesen der Datenmengen vom Client zu beginnen. Das folgende Beispiel ist der erste Teil einer Implementierung der `AcceptCallback`-Methode. Dieser Abschnitt der Methode signalisiert dem Hauptanwendungsthread, dass die Verarbeitung fortgesetzt wird, und stellt die Verbindung mit dem Client her. Es wird ein globales **ManualResetEvent** mit dem Namen `allDone` vorausgesetzt.  
+ Die Accept-Rückrufmethode (`AcceptCallback` im vorherigen Beispiel) ist verantwortlich dafür, dass dem Thread der Hauptanwendung signalisiert wird, den Vorgang fortzusetzen, die Verbindung mit dem Client herzustellen, und das asynchrone Lesen der Datenmengen vom Client zu beginnen. Das folgende Beispiel ist der erste Teil einer Implementierung der `AcceptCallback`-Methode. Dieser Abschnitt der Methode signalisiert dem Hauptanwendungsthread, dass die Verarbeitung fortgesetzt wird, und stellt die Verbindung mit dem Client her. Ein globales **ManualResetEvent** mit dem Namen `allDone` wird vorausgesetzt.  
   
 ```vb  
 Public Sub AcceptCallback(ar As IAsyncResult)  
@@ -139,14 +139,14 @@ End Sub 'AcceptCallback
 ```  
   
 ```csharp  
-public void AcceptCallback(IAsyncResult ar) 
+public void AcceptCallback(IAsyncResult ar)
 {  
     allDone.Set();  
   
     Socket listener = (Socket) ar.AsyncState;  
     Socket handler = listener.EndAccept(ar);  
   
-    // Additional code to read data goes here.    
+    // Additional code to read data goes here.
 }  
 ```  
   
@@ -162,7 +162,7 @@ End Class 'StateObject
 ```  
   
 ```csharp  
-public class StateObject 
+public class StateObject
 {  
     public Socket workSocket = null;  
     public const int BufferSize = 1024;  
@@ -219,7 +219,7 @@ Public Shared Sub ReadCallback(ar As IAsyncResult)
     Dim state As StateObject = CType(ar.AsyncState, StateObject)  
     Dim handler As Socket = state.workSocket  
   
-    ' Read data from the client socket.   
+    ' Read data from the client socket.
     Dim read As Integer = handler.EndReceive(ar)  
   
     ' Data was read from the client socket.  
@@ -253,10 +253,10 @@ public static void ReadCallback(IAsyncResult ar)
         state.sb.Append(Encoding.ASCII.GetString(state.buffer,0,read));  
         handler.BeginReceive(state.buffer, 0, StateObject.BufferSize, 0,  
             new AsyncCallback(ReadCallback), state);  
-    } 
-    else 
+    }
+    else
     {  
-        if (state.sb.Length > 1) 
+        if (state.sb.Length > 1)
         {  
             // All the data has been read from the client;  
             // display it on the console.  
@@ -268,9 +268,9 @@ public static void ReadCallback(IAsyncResult ar)
 }  
 ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Verwenden eines synchronen Serversockets](using-a-synchronous-server-socket.md)
 - [Asynchroner Serversocket, Beispiel](asynchronous-server-socket-example.md)
 - [Threading](../../standard/threading/index.md)
-- [Überwachen mit Sockets](listening-with-sockets.md)
+- [Listening with Sockets (Überwachen mit Sockets)](listening-with-sockets.md)

@@ -2,12 +2,12 @@
 title: 'Vorgehensweise: Abfragen des Inhalts von Textdateien in einem Ordner (LINQ) (C#)'
 ms.date: 07/20/2015
 ms.assetid: f5b4dce7-1a34-4eb4-9bf1-60d5bdda264c
-ms.openlocfilehash: 9487e00ac4cb69180ad3744183a3ef8467cbac28
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 998fddd3f59ee64df9adcee1acc720d82861c3d9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75347683"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79168738"
 ---
 # <a name="how-to-query-the-contents-of-text-files-in-a-folder-linq-c"></a>Vorgehensweise: Abfragen des Inhalts von Textdateien in einem Ordner (LINQ) (C#)
 Dieses Beispiel zeigt, wie Sie die Abfrage über alle Dateien in einer angegebenen Verzeichnisstruktur durchführen, jede Datei öffnen, und ihre Inhalte überprüfen. Diese Technik kann zum Erstellen von Indizes oder umgekehrten Indizes des Inhalts einer Verzeichnisstruktur verwendet werden. In diesem Beispiel wird eine einfache Zeichenfolgensuche ausgeführt. Komplexere Formen des Mustervergleichs können jedoch mit einem regulären Ausdruck ausgeführt werden. Weitere Informationen finden Sie unter [Vorgehensweise: Verbinden von LINQ-Abfragen mit regulären Ausdrücken (C#)](./how-to-combine-linq-queries-with-regular-expressions.md).  
@@ -59,7 +59,7 @@ class QueryContents
     {  
         string fileContents = String.Empty;  
   
-        // If the file has been deleted since we took   
+        // If the file has been deleted since we took
         // the snapshot, ignore it and return the empty string.  
         if (System.IO.File.Exists(name))  
         {  
@@ -73,7 +73,7 @@ class QueryContents
 ## <a name="compiling-the-code"></a>Kompilieren des Codes  
 Erstellen Sie ein C#-Konsolenanwendungsprojekt mit `using`-Anweisungen für die Namespaces „System.Linq“ und „System.IO“.
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [LINQ und Dateiverzeichnisse (C#)](./linq-and-file-directories.md)
+- [LINQ and File Directories (C#) (LINQ und Dateiverzeichnisse (C#))](./linq-and-file-directories.md)
 - [LINQ to Objects (C#)](./linq-to-objects.md)

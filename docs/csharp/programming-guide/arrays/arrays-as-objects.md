@@ -5,10 +5,10 @@ helpviewer_keywords:
 - arrays [C#], as objects
 ms.assetid: f76d4403-bd0a-42a0-9bc8-694c55b2c926
 ms.openlocfilehash: d8b929eccf9be259874d03dd93f49a49798bb349
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75715094"
 ---
 # <a name="arrays-as-objects-c-programming-guide"></a>Arrays als Objekte (C#-Programmierhandbuch)
@@ -25,7 +25,7 @@ In diesem Beispiel wird die <xref:System.Array.Rank%2A>-Eigenschaft verwendet, u
 
 [!code-csharp[csProgGuideArrays#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#2)]
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [C#-Programmierhandbuch](../index.md)
 - [Arrays](./index.md)

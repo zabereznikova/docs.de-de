@@ -3,10 +3,10 @@ title: private protected – C#-Referenz
 ms.date: 11/15/2017
 author: sputier
 ms.openlocfilehash: a73d61712075cf24d2b94c505104df1fade629e9
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75713208"
 ---
 # <a name="private-protected-c-reference"></a>private protected (C#-Referenz)
@@ -59,7 +59,7 @@ class DerivedClass2 : BaseClass
 ```
 
 Dieses Beispiel enthält zwei Dateien, `Assembly1.cs` und `Assembly2.cs`.
-Die erste Datei enthält eine öffentliche Basisklasse, `BaseClass`, und einen davon abgeleiteten Typ, `DerivedClass1`. `BaseClass` besitzt einen Member vom Typ „private protected“, `myValue`, auf den `DerivedClass1` auf zwei Arten zuzugreifen versucht. Der erste Versuch, über eine Instanz von `BaseClass` auf `myValue` zuzugreifen, führt zu einem Fehler. Der Versuch, es als geerbten Member in `DerivedClass1` zu verwenden, gelingt jedoch.
+Die erste Datei enthält eine öffentliche Basisklasse, `BaseClass`, und einen davon abgeleiteten Typ, `DerivedClass1`. `BaseClass` besitzt einen Member vom Typ „private protected“, `myValue`, auf den `DerivedClass1` auf zwei Arten zuzugreifen versucht. Der erste Versuch, über eine Instanz von `myValue` auf `BaseClass` zuzugreifen, führt zu einem Fehler. Der Versuch, es als geerbten Member in `DerivedClass1` zu verwenden, gelingt jedoch.
 In der zweiten Datei wird ein Versuch, auf `myValue` als geerbtes Mitglied von `DerivedClass2` zuzugreifen, einen Fehler erzeugen, da nur von abgeleiteten Typen in Assembly1 darauf zugegriffen werden kann.
 
 Strukturmember können nicht vom Typ `private protected` sein, da die Struktur nicht vererbt werden kann.  
@@ -68,7 +68,7 @@ Strukturmember können nicht vom Typ `private protected` sein, da die Struktur n
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [C#-Referenz](../index.md)
 - [C#-Programmierhandbuch](../../programming-guide/index.md)

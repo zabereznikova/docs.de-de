@@ -9,10 +9,10 @@ helpviewer_keywords:
 - text, writing to files [C#]
 ms.assetid: 2e99f184-d88b-4719-a7f1-d9ec482aa809
 ms.openlocfilehash: ac16fb971eae5654a55e2f1753d78a6458f03315
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75712246"
 ---
 # <a name="how-to-write-to-a-text-file-c-programming-guide"></a>Vorgehensweise: Schreiben in eine Textdatei (C#-Programmierleitfaden)
@@ -32,7 +32,7 @@ In diesen Beispielen werden verschiedene Möglichkeiten veranschaulicht, Text in
   
 - Der Datenträger ist möglicherweise voll.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [C#-Programmierhandbuch](../index.md)
 - [Das Dateisystem und die Registrierung (C#-Programmierhandbuch)](./index.md)

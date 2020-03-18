@@ -4,12 +4,12 @@ description: ML.NET ermöglicht es Ihnen, .NET-Anwendungen in Online- oder Offli
 ms.date: 11/5/2019
 ms.topic: overview
 ms.custom: mvc
-ms.openlocfilehash: bc157b22201c66bceecf78aaa36b9c653fe6a131
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 169250adf81992ad0025e78eb9c8f151107bcf40
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76794575"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79185855"
 ---
 # <a name="what-is-mlnet-and-how-does-it-work"></a>Was ist ML.NET, und wie funktioniert es?
 
@@ -28,13 +28,13 @@ Beispiele für den Typ von Vorhersagen, die Sie mit ML.NET treffen können:
 |Klassifizierung/Kategorisierung|Automatisches Unterteilen von Kundenfeedback in positive und negative Kategorien|
 |Regression/Vorhersagen kontinuierlicher Werte|Vorhersagen des Hauspreises basierend auf Größe und Standort|
 |Anomalieerkennung|Erkennen von betrügerischen Banktransaktionen |
-|Empfehlungen|Empfehlen von Produkten, die Onlinekäufern basierend auf ihren vorherigen Käufen wahrscheinlich gerne erwerben würden|
+|Empfehlungen|Empfehlung von Produkten anhand bisheriger Anschaffungen, die Onlinekunden gefallen könnten|
 |Zeitreihen/sequenzielle Daten|Wettervorhersagen/Produktumsatz-Vorhersagen|
 |Bildklassifizierung|Kategorisieren von Pathologien in medizinischen Bildern|
 
 ## <a name="hello-mlnet-world"></a>Hallo ML.NET-Welt
 
-Der Code im folgenden Codeausschnitt veranschaulicht die einfachste ML.NET-Anwendung. In diesem Beispiel erstellt ein Modell der linearen Regression Hauspreisvorhersagen auf der Basis von Größe- und Preisdaten. 
+Der Code im folgenden Codeausschnitt veranschaulicht die einfachste ML.NET-Anwendung. In diesem Beispiel erstellt ein Modell der linearen Regression Hauspreisvorhersagen auf der Basis von Größe- und Preisdaten.
 
  ```csharp
     using System;

@@ -3,11 +3,11 @@ title: Neues in C# 6 – C#-Leitfaden
 description: Neues zu den neuen Features in Version 6 von C#
 ms.date: 12/12/2018
 ms.openlocfilehash: da40b4c9d4af0094fdd907c542e971ba55086e0f
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68971384"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79398154"
 ---
 # <a name="whats-new-in-c-6"></a>Neues in C# 6
 
@@ -91,7 +91,7 @@ Der *NULL-bedingte Operator* erleichtert und optimiert NULL-Überprüfungen. Ers
 
 [!code-csharp[NullConditional](../../../samples/snippets/csharp/new-in-6/program.cs#NullConditional)]
 
-Im vorangegangenen Beispiel, ist die Variable `first` `null` zugewiesen, wenn das Person-Objekt `null` ist. Andernfalls wird ihr der Wert der `FirstName`-Eigenschaft zugewiesen. Beachten Sie vor allem, dass `?.` bedeutet, dass diese Codezeile keine `NullReferenceException` generiert, wenn die `person`-Variable `null` ist. Stattdessen wird sie vorzeitig abgebrochen (Kurzschlussauswertung) und gibt `null` zurück. Sie können auch einen bedingten NULL-Operator für den Zugriff von Array oder Indexern verwenden. Ersetzen Sie `[]` durch `?[]` im Indexausdruck.
+Im vorangegangenen Beispiel, ist die Variable `first``null` zugewiesen, wenn das Person-Objekt `null` ist. Andernfalls wird ihr der Wert der `FirstName`-Eigenschaft zugewiesen. Beachten Sie vor allem, dass `?.` bedeutet, dass diese Codezeile keine `NullReferenceException` generiert, wenn die `person`-Variable `null` ist. Stattdessen wird sie vorzeitig abgebrochen (Kurzschlussauswertung) und gibt `null` zurück. Sie können auch einen bedingten NULL-Operator für den Zugriff von Array oder Indexern verwenden. Ersetzen Sie `[]` durch `?[]` im Indexausdruck.
 
 Dieser Ausdruck gibt einen `string`-Wert zurück, unabhängig vom Wert von `person`. Häufig können Sie dieses Konstrukt mit dem *NULL-Sammeloperator* verwenden, um die Standardwerte zuzuweisen, wenn eine der Eigenschaften `null` ist. Im Falle einer Verkürzung im Ausdruck wird der zurückgegebene `null`-Wert aufgelistet, damit er mit dem vollständigen Ausdruck übereinstimmt.
 

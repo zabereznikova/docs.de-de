@@ -9,10 +9,10 @@ helpviewer_keywords:
 - Hello World example [C#]
 ms.assetid: 6493182a-b0b6-4539-a719-518a168cb730
 ms.openlocfilehash: 910fa4af1b4e45ce627b589a06910dc168490047
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75712142"
 ---
 # <a name="hello-world----your-first-program"></a>Ihr erstes Programm: Hallo Welt
@@ -25,9 +25,9 @@ In diesem Artikel verwenden Sie Visual Studio zum Erstellen eines traditionellen
 
 <!-- markdownlint-disable MD025 -->
 
-# <a name="windowstabwindows"></a>[Windows](#tab/windows)
+# <a name="windows"></a>[Windows](#tab/windows)
 
-Starten Sie Visual Studio. Unter Windows wird Folgendes angezeigt:
+Starten Sie Visual Studio. Unter Windows wird Folgendes angezeigt:
 
 ![Visual Studio-Willkommensbildschirm unter Windows](./media/hello-world-your-first-program/visual-studio-windows-start-screen.png)
 
@@ -51,7 +51,7 @@ Press any key to close this window . . .
 
 Drücken Sie eine beliebige Taste, um das Fenster zu schließen.
 
-# <a name="macostabmacos"></a>[macOS](#tab/macos)
+# <a name="macos"></a>[macOS](#tab/macos)
 
 Starten Sie Visual Studio für Mac. Unter Mac wird Folgendes angezeigt:
 
@@ -104,7 +104,7 @@ Bei der `Main`-Methode handelt es sich um eine [statische](../../language-refere
 
 [!code-csharp[csProgGuideMain#19](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class3.cs#19)]
 
-- oder -
+\- oder -
 
 [!code-csharp[csProgGuideMain#18](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class3.cs#18)]
 
@@ -122,7 +122,7 @@ C#-Programme verwenden im Allgemeinen die Eingabe-/Ausgabedienste der Laufzeitbi
 
 Weitere Informationen zu Eingabe-/Ausgabemethoden finden Sie unter <xref:System.IO>.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [C#-Programmierhandbuch](../index.md)
 - [Beispiele und Tutorials](../../../samples-and-tutorials/index.md)

@@ -10,10 +10,10 @@ helpviewer_keywords:
 - .NET Framework Client Profile
 ms.assetid: f0219919-1f02-4588-8704-327a62fd91f1
 ms.openlocfilehash: 32fc29500a8a2e95b52ba16847020cdb390caceb
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75716574"
 ---
 # <a name="net-framework-client-profile"></a>.NET Framework Client Profile
@@ -25,9 +25,9 @@ Das .NET Client Profile stellt eine Teilmenge von .NET Framework dar, die mit 
   
  Wenn Sie .NET Framework 4.5 installieren, wird .NET Framework 4.5 Client Profile auf die Vollversion von .NET Framework aktualisiert. Informationen zum Installieren von .NET Framework 4.5 finden Sie unter [Install the .NET Framework for developers](../install/guide-for-developers.md) (Installieren von .NET Framework für Entwickler).  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Clientprofil für .NET Framework (.NET Framework 4)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc656912%28v=vs.100%29)
 - [Übersicht über die Ausrichtung auf mehrere Zielversionen in Visual Studio](/visualstudio/ide/visual-studio-multi-targeting-overview)
 - [Problembehandlung bei .NET Framework-Zielversionsfehlern](/visualstudio/msbuild/troubleshooting-dotnet-framework-targeting-errors)
-- [Vorgehensweise: Erstellen von Projekten für eine bestimmte .NET Framework-Version](/visualstudio/ide/visual-studio-multi-targeting-overview)
+- [Gewusst wie: .NET Framework-Version als Ziel](/visualstudio/ide/visual-studio-multi-targeting-overview)

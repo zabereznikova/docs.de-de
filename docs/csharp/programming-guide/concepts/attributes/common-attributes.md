@@ -3,11 +3,11 @@ title: Allgemeine Attribute (C#)
 ms.date: 07/20/2015
 ms.assetid: 785a0526-6c0e-4599-8c61-ccdc88dd9965
 ms.openlocfilehash: 7988dad410c6e51869ec9d7e40d94e874443a5f8
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69595460"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79398382"
 ---
 # <a name="common-attributes-c"></a>Allgemeine Attribute (C#)
 Dieses Thema beschreibt die Attribute, die am häufigsten in C#-Programmen verwendet werden.  
@@ -221,7 +221,7 @@ class SampleClass
   
  Um diese Memberaufruferinformationen zu erhalten, verwenden Sie die Attribute, die auf optionale Parameter angewendet werden. Jeder optionale Parameter gibt einen Standardwert an. In der folgenden Tabelle sind die Aufrufer-Informationsattribute angegeben, die im <xref:System.Runtime.CompilerServices?displayProperty=nameWithType>-Namespace definiert sind:  
   
-|Attribut|BESCHREIBUNG|Typ|  
+|Attribut|Beschreibung|Geben Sie Folgendes ein:|  
 |---|---|---|  
 |<xref:System.Runtime.CompilerServices.CallerFilePathAttribute>|Vollständiger Pfad der Quelldatei, die den Aufrufer enthält. Dies ist der Pfad zum Zeitpunkt der Kompilierung.|`String`|  
 |<xref:System.Runtime.CompilerServices.CallerLineNumberAttribute>|Zeilennummer in der Quelldatei, in der die Methode aufgerufen wird|`Integer`|  
@@ -229,11 +229,11 @@ class SampleClass
   
  Weitere Informationen zu den Aufruferinformationsattributen finden Sie unter [Caller Information (C#) (Aufruferinformationen (C#))](../caller-information.md).  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Reflection>
 - <xref:System.Attribute>
 - [C#-Programmierhandbuch](../../index.md)
 - [Attribute](../../../../standard/attributes/index.md)
 - [Reflektion (C#)](../reflection.md)
-- [Accessing Attributes by Using Reflection (C#) (Zugriff auf Attribute mit Reflektion (C#))](./accessing-attributes-by-using-reflection.md)
+- [Zugriff auf Attribute mit Reflektion (C#)](./accessing-attributes-by-using-reflection.md)

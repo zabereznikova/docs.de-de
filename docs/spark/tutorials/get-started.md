@@ -4,12 +4,12 @@ description: Informieren Sie sich, wie Sie mit .NET Core unter Windows, macOS un
 ms.date: 01/31/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 018c21804bf942233e07039281d7ec22a6bef763
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: 7375c385245a05d7dc29d5df89d875bf6cb4141a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2020
-ms.locfileid: "77092316"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79187542"
 ---
 # <a name="tutorial-get-started-with-net-for-apache-spark"></a>Tutorial: Erste Schritte mit .NET für Apache Spark
 
@@ -121,7 +121,7 @@ Führen Sie einen der folgenden Befehle aus, um die Umgebungsvariable `DOTNET_WO
 
 Erstellen Sie unter **Windows** die [neue Umgebungsvariable](https://www.java.com/en/download/help/path.xml) `DOTNET_WORKER_DIR`, und legen Sie diese auf das Verzeichnis fest, in dem sich die heruntergeladene und extrahierte Microsoft.Spark.Worker-Datei befindet (z. B. `C:\bin\Microsoft.Spark.Worker\`).
 
-Erstellen Sie unter **macOS** mithilfe von `export DOTNET_WORKER_DIR <your_path>` eine neue Umgebungsvariable, und legen Sie diese auf das Verzeichnis fest, in dem sich die heruntergeladene und extrahierte Microsoft.Spark.Worker-Datei befindet (z. B. *~/bin/Microsoft.Spark.Worker/* ). 
+Erstellen Sie unter **macOS** mithilfe von `export DOTNET_WORKER_DIR <your_path>` eine neue Umgebungsvariable, und legen Sie diese auf das Verzeichnis fest, in dem sich die heruntergeladene und extrahierte Microsoft.Spark.Worker-Datei befindet (z. B. *~/bin/Microsoft.Spark.Worker/* ).
 
 Erstellen Sie unter **Ubuntu** die [neue Umgebungsvariable](https://help.ubuntu.com/community/EnvironmentVariables) `DOTNET_WORKER_DIR`, und legen Sie diese auf das Verzeichnis fest, in dem sich die heruntergeladene und extrahierte Microsoft.Spark.Worker-Datei befindet (z. B. *~/bin/Microsoft.Spark.Worker*).
 

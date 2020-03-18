@@ -14,12 +14,12 @@ dev_langs:
 - csharp
 - vb
 - cpp
-ms.openlocfilehash: 72b02209d74b6b183af6c11d9bd037889ea08543
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 179b240bb06a319ff71009e14323d5c8f2740e5c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74347060"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79187389"
 ---
 # <a name="how-to-view-assembly-contents"></a>Vorgehensweise: Anzeigen des Assemblyinhalts
 
@@ -104,7 +104,7 @@ Führen Sie den Befehl *ildasm.exe* noch mal in der *Hello.exe*-Assembly aus, un
 
 In der folgenden Tabelle wird jede Anweisung im Assemblymanifest der Assembly *Hello.exe* beschrieben, die im Beispiel verwendet wird:
 
-|Anweisung|BESCHREIBUNG|
+|Anweisung|Beschreibung|
 |---------------|-----------------|
 |**.assembly extern \<assemblyname>**|Gibt eine andere Assembly an, die Elemente enthält, auf die vom aktuellen Modul verwiesen wird (in diesem Beispiel `mscorlib`).|
 |**.publickeytoken \<token>**|Gibt den Token des tatsächlichen Schlüssels der verwiesenen Assembly an.|
@@ -118,7 +118,7 @@ In der folgenden Tabelle wird jede Anweisung im Assemblymanifest der Assembly *H
 
 Ein Assemblymanifest kann eine Reihe unterschiedlicher Direktiven enthalten, je nach den Inhalten der Assembly. Eine ausführliche Liste mit den Anweisungen im Assemblymanifest finden Sie in der ECMA-Dokumentation, insbesondere unter „Partition II: Metadatendefinition und Semantik) und „Partition III: CIL Instruction Set“ (CIL-Anweisungen):
 
-- [Standards von ECMA C# und der Common Language Infrastructure](/dotnet/standard/components#applicable-standards)
+- [Standards von ECMA C# und der Common Language Infrastructure](../components.md#applicable-standards)
 - [ECMA-335-Standard: Common Language Infrastructure-Standard (CLI)](http://www.ecma-international.org/publications/standards/Ecma-335.htm)
 
 ## <a name="see-also"></a>Siehe auch

@@ -4,12 +4,12 @@ description: Erfahren Sie in diesem Überblick etwas über die Grundlagen und di
 ms.date: 06/20/2016
 ms.technology: csharp-fundamentals
 ms.assetid: 59b61d77-84e5-457b-8da5-fb5f24ca6ed6
-ms.openlocfilehash: deff297ccce6cd14a7cd21c49638a9c6030a9996
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: fd594f77c034533a1d5aee1d8279e9b727284311
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73037406"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79146228"
 ---
 # <a name="introduction-to-delegates"></a>Einführung in Delegaten
 
@@ -31,9 +31,10 @@ Die Sprachentwickler haben mehrere Ziele für die Funktion aufgezählt, die schl
 
 Das Team wollte ein allgemeines Sprachkonstrukt entwerfen, das für alle Algorithmen mit später Bindung verwendet werden kann. Dadurch können Softwareentwickler ein Konzept erlernen und dasselbe Konzept bei vielen verschiedenen Softwareproblemen anwenden.
 
-Außerdem sollten sowohl einzelne als auch Multicast-Methodenaufrufe unterstützt werden. (Multicastdelegaten sind Delegaten, mit denen mehrere Methodenaufrufe verkettet werden. Beispiele hierfür finden Sie in [einem der folgenden Artikel dieser Reihe](delegate-class.md).) 
+Außerdem sollten sowohl einzelne als auch Multicast-Methodenaufrufe unterstützt werden. (Multicastdelegaten sind Delegaten, mit denen mehrere Methodenaufrufe verkettet werden.
+Beispiele hierfür finden Sie in [einem der folgenden Artikel dieser Reihe](delegate-class.md).)
 
-Delegaten sollten dieselbe Typsicherheit unterstützen, die Entwickler von allen C#-Konstrukten erwarten. 
+Delegaten sollten dieselbe Typsicherheit unterstützen, die Entwickler von allen C#-Konstrukten erwarten.
 
 Die Sprachentwickler haben schließlich erkannt, dass ein Ereignismuster ein bestimmtes Muster ist, für das Delegaten – bzw. jeder beliebige Algorithmus mit später Bindung – sehr nützlich sind. Daher sollte sichergestellt werden, dass der Code für den Delegaten die Basis für das .NET-Ereignismuster bereitstellen konnte.
 

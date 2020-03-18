@@ -4,12 +4,12 @@ description: Weitere Informationen zum Schreiben von Code, um die Struktur einer
 ms.date: 06/20/2016
 ms.technology: csharp-advanced-concepts
 ms.assetid: adf73dde-1e52-4df3-9929-2e0670e28e16
-ms.openlocfilehash: 34434a633d866b82da3da713aaecc218c7d35124
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 1283d7d957c72558652b96cb428efd0f071f0184
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73036896"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79146007"
 ---
 # <a name="interpreting-expressions"></a>Interpretieren von Ausdrücken
 
@@ -260,9 +260,9 @@ Expression<Func<int>> sum5 = () => (1 + (2 + 3)) + 4;
 ```
 
 Sie sehen die Aufteilung in zwei mögliche Antworten, um die vielversprechendste zu markieren. Die erste stellt *rechtsassoziative* Ausdrücke dar. Die zweite stellt *linksassoziative* Ausdrücke dar.
-Der Vorteil dieser beiden Formate ist, dass das Format auf jede beliebige Anzahl von Additionsausdrücken skaliert. 
+Der Vorteil dieser beiden Formate ist, dass das Format auf jede beliebige Anzahl von Additionsausdrücken skaliert.
 
-Wenn Sie diesen Ausdruck über die Besucher ausführen, sehen Sie diese Ausgabe, die überprüft, ob der einfache Additionsausdruck *linksassoziativ* ist. 
+Wenn Sie diesen Ausdruck über die Besucher ausführen, sehen Sie diese Ausgabe, die überprüft, ob der einfache Additionsausdruck *linksassoziativ* ist.
 
 Um dieses Beispiel auszuführen und die vollständige Ausdrucksbaumstruktur anzuzeigen, musste ich eine Änderung an der Quelle der Ausdrucksbaumstruktur vornehmen. Wenn die Ausdrucksbaumstruktur alle Konstanten enthält, enthält die resultierende Struktur einfach den konstanten Wert von `10`. Der Compiler führt alle Additionen aus und reduziert den Ausdruck auf seine einfachste Form. Das Hinzufügen einer Variablen im Ausdruck ist ausreichend, um die ursprüngliche Struktur anzuzeigen:
 
@@ -349,8 +349,8 @@ Das Beispiel behandelt nur die elementarsten Ausdrucksbaumstrukturen. Der Code, 
 
 ```csharp
 Expression<Func<int, int>> factorial = (n) =>
-    n == 0 ? 
-    1 : 
+    n == 0 ?
+    1 :
     Enumerable.Range(1, n).Aggregate((product, factor) => product * factor);
 ```
 
@@ -509,7 +509,7 @@ The expression body is:
 
 ## <a name="extending-the-sample-library"></a>Erweitern Sie die Beispielbibliothek
 
-Die Beispiele in diesem Abschnitt zeigen die Kerntechniken, um Knoten in einer Ausdrucksbaumstruktur zu besuchen und zu untersuchen. Ich habe viele Aktionen ausgelassen, die Sie möglicherweise benötigen, um sich auf die wichtigsten Aufgaben beim Zugriff auf die Knoten in einer Ausdrucksbaumstruktur zu konzentrieren. 
+Die Beispiele in diesem Abschnitt zeigen die Kerntechniken, um Knoten in einer Ausdrucksbaumstruktur zu besuchen und zu untersuchen. Ich habe viele Aktionen ausgelassen, die Sie möglicherweise benötigen, um sich auf die wichtigsten Aufgaben beim Zugriff auf die Knoten in einer Ausdrucksbaumstruktur zu konzentrieren.
 
 Erstens behandelt der Besucher nur Konstanten, die ganze Zahlen sind. Konstante Werte können jeder andere numerische Typ sein, und die C#-Sprache unterstützt Konvertierungen und Werbeaktionen zwischen diesen Typen. Eine robustere Version dieses Codes würde alle diese Funktionen widerspiegeln.
 

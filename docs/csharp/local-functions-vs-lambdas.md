@@ -4,12 +4,12 @@ description: Erfahren Sie, warum lokale Funktionen unter Umständen besser geeig
 ms.date: 06/27/2016
 ms.technology: csharp-advanced-concepts
 ms.assetid: 368d1752-3659-489a-97b4-f15d87e49ae3
-ms.openlocfilehash: a644b6868a37b3d6231a514dc37030cae062785a
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 13cc3fe47bbcd6a465347a6c991b2006586c78fa
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73038798"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79173340"
 ---
 # <a name="local-functions-compared-to-lambda-expressions"></a>Lokale Funktionen im Vergleich zu Lambdaausdrücken
 
@@ -43,10 +43,10 @@ int M()
 }
 ```
 
-Der Compiler kann festlegen, dass `LocalFunction` `y` bei Aufruf definitiv zuweist. Da `LocalFunction` vor der `return`-Anweisung aufgerufen wird, wird `y` definitiv bei der `return`-Anweisung zugewiesen.
+Der Compiler kann festlegen, dass `LocalFunction``y` bei Aufruf definitiv zuweist. Da `LocalFunction` vor der `return`-Anweisung aufgerufen wird, wird `y` definitiv bei der `return`-Anweisung zugewiesen.
 
 Die Analyse, die diese Beispielanalyse ermöglicht, ist der vierte Unterschied.
-Je nach Verwendung können lokale Funktionen Heapzuweisungen vermeiden, die immer für Lambdaausdrücke erforderlich sind. Wenn eine lokale Funktion nie in einen Delegaten konvertiert wird und keine der von der lokalen Funktion erfassten Variablen von anderen Lambdaausdrücken oder lokalen Funktionen erfasst wird, die in Delegate konvertiert werden, kann der Compiler Heapzuweisungen vermeiden. 
+Je nach Verwendung können lokale Funktionen Heapzuweisungen vermeiden, die immer für Lambdaausdrücke erforderlich sind. Wenn eine lokale Funktion nie in einen Delegaten konvertiert wird und keine der von der lokalen Funktion erfassten Variablen von anderen Lambdaausdrücken oder lokalen Funktionen erfasst wird, die in Delegate konvertiert werden, kann der Compiler Heapzuweisungen vermeiden.
 
 Betrachten Sie das folgende asynchrone Beispiel:
 

@@ -3,12 +3,12 @@ title: Arbeiten mit dem Semantikmodell für .NET Compiler Platform SDK
 description: In dieser Übersicht werden die Typen vorgestellt, die Sie zum Verstehen und Bearbeiten von Semantikmodellen Ihres Codes verwenden.
 ms.date: 10/15/2017
 ms.custom: mvc
-ms.openlocfilehash: c594447bb553f488d60fe83900e2f141608b570f
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 8575988cd98a4c0ba3f24107788f065f7472f55d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70105667"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79156934"
 ---
 # <a name="work-with-semantics"></a>Arbeiten mit der Semantik
 
@@ -19,7 +19,7 @@ ms.locfileid: "70105667"
 - eine Methode
 - eine lokale Variable
 
-Zwar sind diese Elemente alle eindeutig, jedoch sind häufig tiefgreifende Kenntnisse über die Sprachregeln erforderlich, um zu bestimmen, auf welches Element ein Bezeichner verweist. 
+Zwar sind diese Elemente alle eindeutig, jedoch sind häufig tiefgreifende Kenntnisse über die Sprachregeln erforderlich, um zu bestimmen, auf welches Element ein Bezeichner verweist.
 
 Im Quellcode werden Programmelemente dargestellt. Außerdem können Programme auf zuvor erstellte Bibliotheken verweisen, die in Assemblydateien gepackt wurden. Zwar ist kein Quellcode für Assemblys verfügbar, und daher auch keine Syntaxknoten oder -strukturen, jedoch können Programme auf Elemente innerhalb der Assemblys verweisen.
 
@@ -29,7 +29,7 @@ Neben einem syntaktischen Modell des Quellcodes kapselt ein Semantikmodell die S
 
 ## <a name="compilation"></a>Kompilierung
 
-Bei einer Kompilierung handelt es sich um eine Darstellung sämtlicher Elemente, die zum Kompilieren eines C#- oder Visual Basic-Programms benötigt werden. Dies umfasst alle Assemblyverweise, Compileroptionen und Quelldateien. 
+Bei einer Kompilierung handelt es sich um eine Darstellung sämtlicher Elemente, die zum Kompilieren eines C#- oder Visual Basic-Programms benötigt werden. Dies umfasst alle Assemblyverweise, Compileroptionen und Quelldateien.
 
 Da all diese Informationen an demselben Ort gespeichert sind, können die Elemente, die im Quellcode enthalten sind, detaillierter beschrieben werden. Die Kompilierung stellt sämtliche deklarierten Typen, Member oder Variablen als verschiedene Symbole dar. Sie enthält verschiedene Methoden, die Sie dabei unterstützen, Symbole, die entweder im Quellcode deklariert sind oder als Metadaten aus einer Assembly importiert wurden, zu finden und Beziehungen dazu herzustellen.
 
@@ -37,7 +37,7 @@ Da all diese Informationen an demselben Ort gespeichert sind, können die Elemen
 
 ## <a name="symbols"></a>Symbole
 
-Ein Symbol stellt ein eindeutiges Element dar, das vom Quellcode deklariert wird oder aus einer Assembly als Metadatenelement importiert wird. Jeder einzelne Namespace, Typ, Parameter, jede einzelne Methode, Eigenschaft, lokale Variable und jedes einzelne Feld oder Ereignis wird von einem eigenen Symbol dargestellt. 
+Ein Symbol stellt ein eindeutiges Element dar, das vom Quellcode deklariert wird oder aus einer Assembly als Metadatenelement importiert wird. Jeder einzelne Namespace, Typ, Parameter, jede einzelne Methode, Eigenschaft, lokale Variable und jedes einzelne Feld oder Ereignis wird von einem eigenen Symbol dargestellt.
 
 Mithilfe verschiedener Methoden und Eigenschaften des <xref:Microsoft.CodeAnalysis.Compilation>-Typs können Sie Symbole finden. Beispielsweise können Sie ein Symbol für einen deklarierten Typ über einen allgemeinen Metadatennamen finden. Außerdem können Sie auf die gesamte Symboltabelle als Symbolstruktur zugreifen, deren Stamm der globale Namespace ist.
 
@@ -49,7 +49,7 @@ Symbole haben ein ähnliches Konzept wie CLR-Typsysteme, die von der <xref:Syste
 
 ## <a name="semantic-model"></a>Semantikmodell
 
-In einem Semantikmodell werden alle semantischen Informationen einer einzelnen Quelldatei dargestellt. Sie können es verwenden, um Folgendes zu ermitteln: 
+In einem Semantikmodell werden alle semantischen Informationen einer einzelnen Quelldatei dargestellt. Sie können es verwenden, um Folgendes zu ermitteln:
 
 - Die Symbole, auf die an einer bestimmten Stelle in der Quelle verwiesen wird.
 - Der resultierende Typ eines beliebigen Ausdrucks.

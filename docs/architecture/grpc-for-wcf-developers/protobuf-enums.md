@@ -1,21 +1,21 @@
 ---
-title: Protobuf-Enumerationen-GrpC für WCF-Entwickler
-description: Erfahren Sie, wie Sie Enumerationen in protobuf deklarieren und verwenden.
+title: Protobuf-Enumerationen - gRPC für WCF-Entwickler
+description: Erfahren Sie, wie Sie Enumerationen in Protobuf deklarieren und verwenden.
 ms.date: 09/09/2019
-ms.openlocfilehash: 01cf4a4e5e0eda1e7ddff2a6780119fcb3120dad
-ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
+ms.openlocfilehash: 2177f568a671fa0e651625c6e025ac70c243feb5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77543143"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79148074"
 ---
 # <a name="protobuf-enumerations"></a>Protobuf-Enumerationen
 
-Protobuf unterstützt Enumerationstypen. Diese Unterstützung wurde im vorherigen Abschnitt erläutert, in dem eine-Auflistung verwendet wurde, um den Typ eines `Oneof` Felds zu bestimmen. Sie können eigene Enumerationstypen definieren, und protobuf kompiliert Sie in C# Enumerationstypen. 
+Protobuf unterstützt Enumerationstypen. Diese Unterstützung wurde im vorherigen Abschnitt angezeigt, in dem eine `Oneof` Enumerat verwendet wurde, um den Typ eines Felds zu bestimmen. Sie können eigene Enumerationstypen definieren, und Protobuf kompiliert sie in C-Enum-Typen.
 
-Da Sie protobuf mit verschiedenen Sprachen verwenden können, unterscheiden sich die Benennungs Konventionen für Enumerationen C# von den Konventionen. Der Code-Generator konvertiert die Namen jedoch in den herkömmlichen C# Fall. Wenn die Pascal-Case-Entsprechung des Feldnamens mit dem Enumerationsnamen beginnt, wird Sie entfernt.
+Da Sie Protobuf in verschiedenen Sprachen verwenden können, unterscheiden sich die Namenskonventionen für Enumerationen von den C-Konventionen. Der Codegenerator konvertiert jedoch die Namen in den traditionellen C-Fall. Wenn das Pascal-Case-Äquivalent des Feldnamens mit dem Enumerationsnamen beginnt, wird es entfernt.
 
-In der folgenden protobuf-Enumeration werden den Feldern z. b. `ACCOUNT_STATUS`vorangestellt. Dieses Präfix entspricht dem Namen der "Pascal-Case-Enumeration", "`AccountStatus`".
+In der folgenden Protobuf-Enumeration werden den Feldern `ACCOUNT_STATUS`beispielsweise vorangestellt. Dieses Präfix entspricht dem Pascal-case-Enumnamen . `AccountStatus`
 
 ```protobuf
 enum AccountStatus {
@@ -27,7 +27,7 @@ enum AccountStatus {
 }
 ```
 
-Der Generator erstellt eine C# Aufzählung, die dem folgenden Code entspricht:
+Der Generator erstellt eine C-Enumere, die dem folgenden Code entspricht:
 
 ```csharp
 public enum AccountStatus
@@ -40,7 +40,7 @@ public enum AccountStatus
 }
 ```
 
-Protobuf-Enumerationsdefinitionen *müssen* als erstes Feld eine Konstante von 0 (null) aufweisen. Wie in C#können Sie mehrere Felder mit dem gleichen Wert deklarieren. Sie müssen diese Option jedoch explizit aktivieren, indem Sie die Option `allow_alias` in der-Aufzählung verwenden:
+Protobuf-Enumerationsdefinitionen *müssen* als erstes Feld eine Nullkonstante haben. Wie in C- können Sie mehrere Felder mit demselben Wert deklarieren. Sie müssen diese Option jedoch `allow_alias` explizit aktivieren, indem Sie die Option in der Enumerat verwenden:
 
 ```protobuf
 enum AccountStatus {
@@ -54,9 +54,9 @@ enum AccountStatus {
 }
 ```
 
-Sie können Enumerationen auf der obersten Ebene in einer `.proto` Datei deklarieren oder innerhalb einer Nachrichten Definition geschachtelt. Geschachtelte Enumerationen – wie geschachtelte Nachrichten – werden innerhalb der statischen Klasse `.Types` in der generierten Message-Klasse deklariert.
+Sie können Enumerationen auf der `.proto` obersten Ebene in einer Datei oder in einer Nachrichtendefinition verschachtelt deklarieren. Verschachtelte Enumerationen werden – wie geschachtelte Nachrichten – innerhalb der `.Types` statischen Klasse in der generierten Nachrichtenklasse deklariert.
 
-Es gibt keine Möglichkeit, das [[Flags]](xref:System.FlagsAttribute) -Attribut auf eine protobuf-generierte Enumeration anzuwenden, und protobuf versteht keine bitweisen Enumeration-Kombinationen. Sehen Sie sich das folgende Beispiel an:
+Es gibt keine Möglichkeit, das [[Flags]-Attribut](xref:System.FlagsAttribute) auf eine protobuf-generierte Enumerat anzuwenden, und Protobuf versteht bitweise Enumeronkombinationen nicht. Sehen Sie sich das folgende Beispiel an:
 
 ```protobuf
 enum Region {
@@ -72,10 +72,10 @@ message Product {
 }
 ```
 
-Wenn Sie `product.AvailableIn` auf `Region.NorthAmerica | Region.SouthAmerica`festlegen, wird es als ganzzahliger Wert `3`serialisiert. Wenn ein Client oder Server versucht, den Wert zu deserialisieren, findet keine Entsprechung in der Enumerationsdefinition für `3`. Das Ergebnis wird `Region.None`.
+Wenn Sie `product.AvailableIn` `Region.NorthAmerica | Region.SouthAmerica`auf festlegen, wird er als Ganzzahlwert `3`serialisiert. Wenn ein Client oder Server versucht, den Wert zu deserialisieren, findet `3`er keine Übereinstimmung in der Enumeratdefinition für . Das Ergebnis `Region.None`ist .
 
-Die beste Möglichkeit zum Arbeiten mit mehreren Enumerationswerten in protobuf ist die Verwendung eines `repeated` Felds des Enumerationstyps.
+Die beste Möglichkeit, mit mehreren Enumerumwerten in `repeated` Protobuf zu arbeiten, besteht darin, ein Feld des Enumerumtyps zu verwenden.
 
 >[!div class="step-by-step"]
->[Zurück](protobuf-any-oneof.md)
+>[VorherigeS](protobuf-any-oneof.md)
 >[Weiter](protobuf-maps.md)

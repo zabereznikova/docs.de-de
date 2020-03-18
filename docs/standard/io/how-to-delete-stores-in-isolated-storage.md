@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Löschen von Speichern im isolierten Speicher'
+title: 'Gewusst wie: Löschen von Speichern im isolierten Speicher'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -16,13 +16,13 @@ helpviewer_keywords:
 - data storage using isolated storage, deleting stores
 ms.assetid: 3947e333-5af6-4601-b2f1-24d4d6129cf3
 ms.openlocfilehash: 6b1e8e651fd8e18c79dd629c154fb6c4d74243e3
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75707826"
 ---
-# <a name="how-to-delete-stores-in-isolated-storage"></a>Vorgehensweise: Löschen von Speichern im isolierten Speicher
+# <a name="how-to-delete-stores-in-isolated-storage"></a>Gewusst wie: Löschen von Speichern im isolierten Speicher
 Die <xref:System.IO.IsolatedStorage.IsolatedStorageFile> -Klasse stellt zwei Methoden zum Löschen von isolierten Speicherdateien zur Verfügung:  
   
 - Die Instanzmethode <xref:System.IO.IsolatedStorage.IsolatedStorageFile.Remove> akzeptiert keine Argumente und löscht den Speicher, von dem sie aufgerufen wird. Für diesen Vorgang sind keine Berechtigungen erforderlich. Jeder Code, der auf den Speicher zugreifen kann, kann beliebige oder sogar alle Daten darin löschen.  
@@ -36,7 +36,7 @@ Die <xref:System.IO.IsolatedStorage.IsolatedStorageFile> -Klasse stellt zwei Met
  [!code-csharp[Conceptual.IsolatedStorage#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.isolatedstorage/cs/source3.cs#3)]
  [!code-vb[Conceptual.IsolatedStorage#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.isolatedstorage/vb/source3.vb#3)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.IO.IsolatedStorage.IsolatedStorageFile>
 - [Isolierter Speicher](../../../docs/standard/io/isolated-storage.md)

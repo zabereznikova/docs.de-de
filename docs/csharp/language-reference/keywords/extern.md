@@ -9,10 +9,10 @@ helpviewer_keywords:
 - extern keyword [C#]
 ms.assetid: 9c3f02c4-51b8-4d80-9cb2-f2b6e1ae15c7
 ms.openlocfilehash: c121d810e64b5fa27f105f814253c0752e028a95
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75713537"
 ---
 # <a name="extern-c-reference"></a>extern (C#-Referenz)
@@ -30,13 +30,13 @@ Es ist ein Fehler, den [abstract](abstract.md)-Modifizierer und den `extern`-Mod
 
 Die Verwendung des extern-Schlüsselworts ist in C# eingeschränkter als in C++. Informationen zum Vergleichen des C#-Schlüsselworts mit dem C++-Schlüsselwort finden Sie unter "Using extern to Specify Linkage" in der C++-Sprachreferenz.
 
-## <a name="example-1"></a>Beispiel 1
+## <a name="example-1"></a>Beispiel 1
 
 In diesem Beispiel empfängt das Programm eine Zeichenfolge vom Benutzer und zeigt sie in einem Meldungsfeld an. Das Programm verwendet die `MessageBox`-Methode, die von der User32.dll-Bibliothek importiert wurde.
 
 [!code-csharp[csrefKeywordsModifiers#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsModifiers/CS/csrefKeywordsModifiers.cs#8)]
 
-## <a name="example-2"></a>Beispiel 2
+## <a name="example-2"></a>Beispiel 2
 
 Dieses Beispiel veranschaulicht ein C#-Programm, das eine C-Bibliothek aufruft (eine native DLL).
 
@@ -77,7 +77,7 @@ Dieses Beispiel veranschaulicht ein C#-Programm, das eine C-Bibliothek aufruft (
 
     Dadurch wird die ausführbare Datei `cm.exe` erstellt.
 
-5. Führen Sie aus `cm.exe`. Die `SampleMethod`-Methode übergibt den Wert 5 an die DLL-Datei, die den mit 10 multiplizierten Wert zurückgibt.  Das Programm erzeugt die folgende Ausgabe:
+5. Führen Sie `cm.exe` aus. Die `SampleMethod`-Methode übergibt den Wert 5 an die DLL-Datei, die den mit 10 multiplizierten Wert zurückgibt.  Das Programm erzeugt die folgende Ausgabe:
 
     ```output
     SampleMethod() returns 50.
@@ -87,7 +87,7 @@ Dieses Beispiel veranschaulicht ein C#-Programm, das eine C-Bibliothek aufruft (
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Runtime.InteropServices.DllImportAttribute?displayProperty=nameWithType>
 - [C#-Referenz](../index.md)

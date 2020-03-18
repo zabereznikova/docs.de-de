@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Verwenden von ForEach zum Entfernen von Elementen aus der BlockingCollection-Klasse'
+title: 'Gewusst wie: Entfernen von Elementen in einer BlockingCollection mit ForEach'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -9,13 +9,13 @@ helpviewer_keywords:
 - thread-safe collections, how to enumerate blocking collection
 ms.assetid: 2096103c-22f7-420d-b631-f102bc33a6dd
 ms.openlocfilehash: f9a858dea74be63634f887c4204aefa8ac338ad0
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75711232"
 ---
-# <a name="how-to-use-foreach-to-remove-items-in-a-blockingcollection"></a>Vorgehensweise: Verwenden von ForEach zum Entfernen von Elementen aus der BlockingCollection-Klasse
+# <a name="how-to-use-foreach-to-remove-items-in-a-blockingcollection"></a>Gewusst wie: Entfernen von Elementen in einer BlockingCollection mit ForEach
 
 Zusätzlich zum Entnehmen von Elementen aus einer <xref:System.Collections.Concurrent.BlockingCollection%601> mithilfe der Methoden <xref:System.Collections.Concurrent.BlockingCollection%601.Take%2A> und <xref:System.Collections.Concurrent.BlockingCollection%601.TryTake%2A> können Sie auch eine [foreach](../../../csharp/language-reference/keywords/foreach-in.md) ([For Each](../../../visual-basic/language-reference/statements/for-each-next-statement.md) in Visual Basic) verwenden, um Elemente zu entfernen, bis der Hinzufügevorgang abgeschlossen und die Auflistung leer ist. Dies wird als *mutierende Enumeration* oder *verbrauchende Enumeration* bezeichnet, da dieser Enumerator, im Gegensatz zu einer typischen `foreach`- (`For Each`-)Schleife, die Quellsammlung durch Entfernen von Elementen verändert.
 
@@ -32,7 +32,7 @@ Es gibt keine Garantie dafür, dass die Elemente in der gleichen Reihenfolge auf
 
 Um die Auflistung aufzuzählen, ohne sie zu verändern, verwenden Sie einfach `foreach` (`For Each`) ohne die <xref:System.Collections.Concurrent.BlockingCollection%601.GetConsumingEnumerable%2A>-Methode. Es ist jedoch wichtig zu wissen, dass diese Art der Enumeration eine Momentaufnahme der Auflistung zu einem genauen Zeitpunkt darstellt. Wenn weitere Threads gleichzeitig Elemente hinzufügen oder entfernen, während die Schleife ausgeführt wird, stellt die Schleife möglicherweise nicht den tatsächlichen Zustand der Auflistung dar.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Collections.Concurrent?displayProperty=nameWithType>
 - [Parallele Programmierung](../../../../docs/standard/parallel-programming/index.md)

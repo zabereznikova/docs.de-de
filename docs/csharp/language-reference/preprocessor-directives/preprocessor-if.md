@@ -7,15 +7,15 @@ helpviewer_keywords:
 - '#if directive [C#]'
 ms.assetid: 48cabbff-ca82-491f-a56a-eeccd528c7c2
 ms.openlocfilehash: d047b88f202341a795834809d0b601706c30fcb4
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/11/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75899858"
 ---
 # <a name="if-c-reference"></a>#if (C#-Referenz)
 
-Wenn der C#-Compiler eine `#if`-Anweisung vorfindet, auf die möglicherweise eine [#endif](preprocessor-endif.md)-Anweisung folgt, wird der Code zwischen den Anweisungen nur dann kompiliert, wenn das angegebene Symbol definiert wurde. Im Gegensatz zu C und C++ können Sie einem Symbol keinen numerischen Wert zuweisen. Die `#if`-Anweisung in C# ist ein boolescher Wert und überprüft nur, ob das Symbol definiert wurde. Zum Beispiel:
+Wenn der C#-Compiler eine `#if`-Anweisung vorfindet, auf die möglicherweise eine [#endif](preprocessor-endif.md)-Anweisung folgt, wird der Code zwischen den Anweisungen nur dann kompiliert, wenn das angegebene Symbol definiert wurde. Im Gegensatz zu C und C++ können Sie einem Symbol keinen numerischen Wert zuweisen. Die `#if`-Anweisung in C# ist ein boolescher Wert und überprüft nur, ob das Symbol definiert wurde. Beispiel:
 
 ```csharp
 #if DEBUG
@@ -89,7 +89,7 @@ public class MyClass
 }
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [C#-Referenz](../index.md)
 - [C#-Programmierhandbuch](../../programming-guide/index.md)
