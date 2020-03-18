@@ -3,10 +3,10 @@ title: 'Vorgehensweise: Lesen und Schreiben eines codierten Dokuments (C#)'
 ms.date: 07/20/2015
 ms.assetid: 84f64e71-39a6-42c6-ad68-f052bb158a03
 ms.openlocfilehash: fa28c26845a0c6019943e0532ea0692a6dffd5a9
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/25/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75347664"
 ---
 # <a name="how-to-read-and-write-an-encoded-document-c"></a>Vorgehensweise: Lesen und Schreiben eines codierten Dokuments (C#)
@@ -76,6 +76,6 @@ Encoded document:
 Encoding of loaded document is:utf-16  
 ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Xml.Linq.XDeclaration.Encoding%2A?displayProperty=nameWithType>

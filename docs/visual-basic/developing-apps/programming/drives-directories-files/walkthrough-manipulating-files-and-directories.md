@@ -16,13 +16,13 @@ helpviewer_keywords:
 - I/O [Visual Basic], reading text from files
 ms.assetid: cae77565-9f78-4e46-8e42-eb2f9f8e1ffd
 ms.openlocfilehash: 83dc6ce0d29c1c368c36b51fc84ecad34d72e01f
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74333809"
 ---
-# <a name="walkthrough-manipulating-files-and-directories-in-visual-basic"></a>Exemplarische Vorgehensweise: Bearbeiten von Dateien und Verzeichnissen in Visual Basic
+# <a name="walkthrough-manipulating-files-and-directories-in-visual-basic"></a>Exemplarische Vorgehensweise: Bearbeiten von Dateien und Verzeichnissen in Visual Basic
 
 Diese exemplarische Vorgehensweise enthält eine Einführung in die Grundlagen der Datei-E/A in Visual Basic. Es wird beschrieben, wie Sie eine kleine Anwendung erstellen können, in der Textdateien in einem Verzeichnis aufgelistet und überprüft werden. Die Anwendung stellt Dateiattribute und die erste Zeile des Inhalts jeder ausgewählten Textdatei zur Verfügung. Es besteht die Möglichkeit, Informationen in eine Protokolldatei zu schreiben.  
   
@@ -38,7 +38,7 @@ Diese exemplarische Vorgehensweise enthält eine Einführung in die Grundlagen d
   
 2. Erweitern Sie im Bereich **Installierte Vorlagen** **Visual Basic**, und klicken Sie dann auf **Windows**. Klicken Sie im Bereich **Vorlagen** auf **Windows Forms-Anwendung**.  
   
-3. Geben Sie im Feld **Name** `FileExplorer` ein, um den Projektnamen festzulegen, und klicken Sie anschließend auf **OK**.  
+3. Geben Sie im Feld **Name**`FileExplorer` ein, um den Projektnamen festzulegen, und klicken Sie anschließend auf **OK**.  
   
      Visual Studio fügt das Projekt in den **Projektmappen-Explorer** ein. Der Windows Forms-Designer wird geöffnet.  
   
@@ -142,11 +142,11 @@ Diese exemplarische Vorgehensweise enthält eine Einführung in die Grundlagen d
   
 2. Erstellen Sie einen `SelectedIndexChanged`-Ereignishandler für `filesListBox`, indem Sie auf das Steuerelement `ListBox` im Formular doppelklicken.  
   
-3. Fügen Sie im Ereignishandler `filesListBox_SelectedIndexChanged` einen Aufruf von `SetEnabled` hinzu.  
+3. Fügen Sie im Ereignishandler `SetEnabled` einen Aufruf von `filesListBox_SelectedIndexChanged` hinzu.  
   
-4. Fügen Sie am Ende des Ereignishandlers `browseButton_Click` einen Aufruf von `SetEnabled` hinzu.  
+4. Fügen Sie am Ende des Ereignishandlers `SetEnabled` einen Aufruf von `browseButton_Click` hinzu.  
   
-5. Fügen Sie am Ende des Ereignishandlers `Form1_Load` einen Aufruf von `SetEnabled` hinzu.  
+5. Fügen Sie am Ende des Ereignishandlers `SetEnabled` einen Aufruf von `Form1_Load` hinzu.  
   
 6. Führen Sie die Anwendung aus. Das Kontrollkästchen **Save Results** (Ergebnisse speichern) und die Schaltfläche **Examine** (Untersuchen) sind deaktiviert, wenn ein Element nicht in `ListBox` ausgewählt ist.  
   
@@ -162,9 +162,9 @@ Diese exemplarische Vorgehensweise enthält eine Einführung in die Grundlagen d
   
  [!code-vb[VbVbcnMyFileSystem#111](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/class3.vb#111)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.IO>
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem>
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.CurrentDirectory%2A>
-- [Exemplarische Vorgehensweise: Bearbeiten von Dateien mit .NET Framework-Methoden (Visual Basic)](../../../../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-by-using-net-framework-methods.md)
+- [Exemplarische Vorgehensweise: Bearbeiten von Dateien mit .NET Framework-Methoden](../../../../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-by-using-net-framework-methods.md)

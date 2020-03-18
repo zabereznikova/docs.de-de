@@ -8,10 +8,10 @@ helpviewer_keywords:
 - file encoding
 ms.assetid: ea2c5f5f-bbb1-4150-9928-b9951fa6bc57
 ms.openlocfilehash: 52770187568d0ba0f54ec36ee2c3d754a9b4d9a8
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74348891"
 ---
 # <a name="file-encodings-visual-basic"></a>Dateicodierungen (Visual Basic)
@@ -30,7 +30,7 @@ Frühere Standardzeichencodierungen bestanden aus traditionellen Zeichensätzen,
 
 Die Klasse <xref:System.Text.Encoding> stellt eine Zeichencodierung dar. Diese Tabelle führt den verfügbaren Typ der Codierungen auf und beschreibt diesen.
 
-|name|BESCHREIBUNG|
+|Name|Beschreibung|
 |---|---|
 |<xref:System.Text.ASCIIEncoding>|Stellt eine ASCII-Zeichencodierung von Unicode-Zeichen dar.|
 |<xref:System.Text.UnicodeEncoding>|Stellt eine UTF-16-Codierung von Unicode-Zeichen dar.|
@@ -38,7 +38,7 @@ Die Klasse <xref:System.Text.Encoding> stellt eine Zeichencodierung dar. Diese T
 |<xref:System.Text.UTF7Encoding>|Stellt eine UTF-7-Codierung von Unicode-Zeichen dar.|
 |<xref:System.Text.UTF8Encoding>|Stellt eine UTF-8-Codierung von Unicode-Zeichen dar.|
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Lesen aus Dateien](../../../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md)
 - [Schreiben in Dateien](../../../../visual-basic/developing-apps/programming/drives-directories-files/writing-to-files.md)

@@ -7,10 +7,10 @@ dev_langs:
 - vb
 ms.date: 09/13/2019
 ms.openlocfilehash: 5a02c71b16e2c8e5ade5128866af7dc46a03ba4a
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78160182"
 ---
 # <a name="how-to-create-user-defined-exceptions-with-localized-exception-messages"></a>Vorgehensweise: Erstellen benutzerdefinierter Ausnahmen mit lokalisierten Ausnahmemeldungen
@@ -165,7 +165,7 @@ So erstellen Sie lokalisierte Ausnahmemeldungen:
     > [!NOTE]
     > Wenn der Projektname `TestProject` lautet und die Ressourcendatei *ExceptionMessages.resx* im Ordner *Resources* des Projekts gespeichert ist, lautet der vollqualifizierte Name der Ressourcendatei `TestProject.Resources.ExceptionMessages`.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Erstellen benutzerdefinierter Ausnahmen](how-to-create-user-defined-exceptions.md)
 - [Erstellen von Satellitenassemblys für Desktop-Apps](../../framework/resources/creating-satellite-assemblies-for-desktop-apps.md)

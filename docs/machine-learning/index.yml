@@ -11,10 +11,10 @@ metadata:
   ms.author: nakersha
   ms.date: 10/30/2019
   ms.openlocfilehash: 05d357af2088321524841bfc05f94f816f1bc306
-  ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+  ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
   ms.translationtype: HT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 11/01/2019
+  ms.lasthandoff: 03/15/2020
   ms.locfileid: "73423943"
 landingContent:
 - title: Grundlagen zu ML.NET
@@ -43,7 +43,7 @@ landingContent:
       url: https://dotnet.microsoft.com/learn/ml-dotnet/get-started-tutorial/intro
     - text: Installieren der CLI unter Mac OS, Windows oder Linux
       url: how-to-guides/install-ml-net-cli.md
-- title: Tutorials
+- title: Lernprogramme
   linkLists:
   - linkListType: tutorial
     links:
@@ -83,11 +83,11 @@ landingContent:
       url: how-to-guides/save-load-machine-learning-models-ml-net.md
     - text: Erneutes Trainieren eines Modells
       url: how-to-guides/retrain-model-ml-net.md
-- title: Referenz
+- title: Verweis
   linkLists:
   - linkListType: reference
     links:
     - text: ML.NET-API-Referenz
       url: https://docs.microsoft.com/dotnet/api/?view=ml-dotnet
-    - text: ML.NET-Beispiele
+    - text: '{1}ML.NET-Beispiele'
       url: https://github.com/dotnet/machinelearning-samples

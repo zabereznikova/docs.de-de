@@ -2,13 +2,13 @@
 title: Was ist der Modell-Generator und wie funktioniert er?
 description: Erfahren Sie mehr über die Verwendung des ML.NET-Modell-Generators zum automatischen Trainieren eines Machine Learning-Modells.
 ms.date: 01/07/2020
-ms.custom: overview
-ms.openlocfilehash: ac704b7961a8442a9174cdef5a4cd2a619236a4e
-ms.sourcegitcommit: cbdc0f4fd39172b5191a35200c33d5030774463c
+ms.custom: overview, mlnet-tooling
+ms.openlocfilehash: cff4601843ec9ca7201ea7dbdbfbcfa18f50e46e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2020
-ms.locfileid: "75777393"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79397806"
 ---
 # <a name="what-is-model-builder-and-how-does-it-work"></a>Was ist der Modell-Generator und wie funktioniert er?
 
@@ -159,7 +159,7 @@ Diese Zahlen sind nur eine Richtlinie. Die genaue Trainingsdauer ist abhängig v
 
 Auswertung ist der Prozess, bei dem gemessen wird, wie gut das Modell ist. Der Modell-Generator verwendet das trainierte Modell, um Vorhersagen mit neuen Testdaten zu treffen und anschließend zu messen, wie gut die Vorhersagen sind.
 
-Der Modell-Generator unterteilt die Trainingsdaten in einen Trainingssatz und einen Testsatz. Die Trainingsdaten (80 %) werden zum Trainieren Ihres Modells verwendet, und die Testdaten (20 %) zur Evaluierung Ihres Modells zurückgehalten. 
+Der Modell-Generator unterteilt die Trainingsdaten in einen Trainingssatz und einen Testsatz. Die Trainingsdaten (80 %) werden zum Trainieren Ihres Modells verwendet, und die Testdaten (20 %) zur Evaluierung Ihres Modells zurückgehalten.
 
 ### <a name="how-do-i-understand-my-model-performance"></a>Wie gewinne ich ein Verständnis für die Modellleistung?
 

@@ -3,10 +3,10 @@ title: Peer-to-Peer-Netzwerkszenarien
 ms.date: 03/30/2017
 ms.assetid: d23b1a64-2e08-4014-882a-c1dd766bdcc2
 ms.openlocfilehash: 9b5d4d35085585fe04f2f0c0a105e6dff4b1fcc0
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "64623083"
 ---
 # <a name="peer-to-peer-networking-scenarios"></a>Peer-to-Peer-Netzwerkszenarien
@@ -61,6 +61,6 @@ Peer-to-Peer-Netzwerke ermöglichen oder erweitern die folgenden Szenarios:
 
   Peer-to-Peer-Netzwerke können für die verteilte Verarbeitung auch verwendet werden, um Programme bei jedem Peer zu Leerlaufzeiten auszuführen. Diese Programme sind Teil einer größeren Computingaufgabe, die von einem zentralen Server koordiniert wird. Durch die Aggregation der Prozessoren von mehreren Computern kann ein Peer-to-Peer-Netzwerk eine Gruppe von Peercomputern in einen großen parallelen Prozessor für umfangreiche Aufgaben umwandeln.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Net.PeerToPeer.Collaboration>

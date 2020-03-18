@@ -3,10 +3,10 @@ title: Erstellen einer Union in C/C++ mithilfe von Attributen (C#)
 ms.date: 07/20/2015
 ms.assetid: 85f35e56-26e0-4d31-9f3a-89bd4005e71a
 ms.openlocfilehash: ff8ce560444581a28b257820573224f89a274cd9
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/16/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "74141577"
 ---
 # <a name="how-to-create-a-cc-union-by-using-attributes-c"></a>Erstellen einer Union in C/C++ mithilfe von Attributen (C#)
@@ -69,7 +69,7 @@ struct TestExplicit
 
 Die zwei Ganzzahlfelder `i1` und `i2` teilen die gleichen Speicheradressen wie `lg`. Diese Art der Kontrolle über das Strukturlayout ist nützlich, wenn Sie Plattformaufrufe nutzen.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Reflection>
 - <xref:System.Attribute>
@@ -78,4 +78,4 @@ Die zwei Ganzzahlfelder `i1` und `i2` teilen die gleichen Speicheradressen wie `
 - [Reflektion (C#)](../reflection.md)
 - [Attribute (C#)](index.md)
 - [Erstellen benutzerdefinierter Attribute (C#)](creating-custom-attributes.md)
-- [Accessing Attributes by Using Reflection (C#) (Zugriff auf Attribute mit Reflektion (C#))](accessing-attributes-by-using-reflection.md)
+- [Zugriff auf Attribute mit Reflektion (C#)](accessing-attributes-by-using-reflection.md)

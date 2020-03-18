@@ -3,10 +3,10 @@ title: Abhängigkeiten und .NET-Bibliotheken
 description: Hier finden Sie Empfehlungen zu Best Practices für die Verwaltung von NuGet-Abhängigkeiten in .NET-Bibliotheken.
 ms.date: 10/02/2018
 ms.openlocfilehash: 6a260b54c45a0cd231059ab3bc6f2707ef7fb20e
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/24/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "76731481"
 ---
 # <a name="dependencies"></a>Abhängigkeiten
@@ -58,7 +58,7 @@ Obergrenzen für Versionen verursachen einen Fehler in NuGet, wenn ein Konflikt 
 
 ❌ Verwenden Sie keine NuGet-Paketverweise ohne Mindestversion.
 
-❌ Vermeiden Sie NuGet-Paketverweise, die eine exakte Version erfordern.
+❌ VERMEIDEN Sie NuGet-Paketverweise, die eine exakte Version erfordern.
 
 ❌ Vermeiden Sie NuGet-Paketverweise mit Angabe einer Höchstversion.
 

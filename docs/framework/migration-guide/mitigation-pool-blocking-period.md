@@ -3,10 +3,10 @@ title: 'Entschärfung: Poolsperrfrist'
 ms.date: 03/30/2017
 ms.assetid: 92d2de20-79be-4df1-b182-144143a8866a
 ms.openlocfilehash: 98396d4254975d1806a8477cbcd2380cb52ceaf3
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73457845"
 ---
 # <a name="mitigation-pool-blocking-period"></a>Entschärfung: Poolsperrfrist
@@ -31,6 +31,6 @@ Die Sperrfrist für den Verbindungspool wurde für Verbindungen mit Azure SQL-Da
   
  Das vorherige Verhalten kann wiederhergestellt werden, indem Sie die <xref:System.Data.SqlClient.SqlConnectionStringBuilder.PoolBlockingPeriod%2A>-Eigenschaft auf <xref:System.Data.SqlClient.PoolBlockingPeriod.AlwaysBlock?displayProperty=nameWithType> festlegen.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Anwendungskompatibilität](application-compatibility.md)

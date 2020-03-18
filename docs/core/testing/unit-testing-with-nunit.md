@@ -3,12 +3,12 @@ title: Unittests für C# mit NUnit und .NET Core
 description: Erfahren Sie mehr über die Konzepte von Unittests in C# und .NET Core, indem Sie im Rahmen eines interaktiven Tutorials Schritt für Schritt eine Beispielprojektmappe mithilfe von „dotnet test“ und NUnit erstellen.
 author: rprouse
 ms.date: 08/31/2018
-ms.openlocfilehash: 8c099695b48e96ac47e41794082cd8dccaa0457a
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: 283aa5a28ed213d4290eb3c73a98af56ec074ad0
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78157270"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78240882"
 ---
 # <a name="unit-testing-c-with-nunit-and-net-core"></a>Unittests für C# mit NUnit und .NET Core
 
@@ -43,7 +43,7 @@ Machen Sie *PrimeService* zum aktuellen Verzeichnis, und führen Sie den folgend
 dotnet new classlib
 ```
 
-Benennen Sie *Class1.cs* in *PrimeService.cs* um. Erstellen Sie eine fehlerhafte Implementierung der `PrimeService`-Klasse:
+Benennen Sie *Class1.cs* in *PrimeService.cs* um. Sie erstellen eine fehlerhafte Implementierung der `PrimeService`-Klasse:
 
 ```csharp
 using System;
@@ -87,9 +87,9 @@ dotnet new nunit
 
 Mit dem Befehl [dotnet new](../tools/dotnet-new.md) wird ein Testprojekt erstellt, in dem NUnit als Testbibliothek verwendet wird. Die generierte Vorlage konfiguriert das Testprogramm in der Datei *PrimeServiceTests.csproj*:
 
-[!code-xml[Packages](~/samples/core/getting-started/unit-testing-using-nunit/PrimeService.Tests/PrimeService.Tests.csproj#Packages)]
+[!code-xml[Packages](~/samples/snippets/core/testing/unit-testing-using-nunit/csharp/PrimeService.Tests/PrimeService.Tests.csproj#Packages)]
 
-Für das Testprojekt sind weitere Pakete zum Erstellen und Ausführen von Unittests erforderlich. Mithilfe von `dotnet new` im vorherigen Schritt wurden das Microsoft-Test-SDK, das NUnit-Testframework und der NUnit-Testadapter hinzugefügt. Fügen Sie jetzt die `PrimeService`-Klassenbibliothek als weitere Abhängigkeit zum Projekt hinzu. Verwenden Sie den Befehl [`dotnet add reference`](../tools/dotnet-add-reference.md):
+Für das Testprojekt sind weitere Pakete zum Erstellen und Ausführen von Unittests erforderlich. Mithilfe von `dotnet new` im vorherigen Schritt wurden das Microsoft-Test-SDK, das NUnit-Testframework und der NUnit-Testadapter hinzugefügt. Fügen Sie jetzt die `PrimeService`-Klassenbibliothek als eine andere Abhängigkeit zum Projekt hinzu. Verwenden Sie den Befehl [`dotnet add reference`](../tools/dotnet-add-reference.md):
 
 ```dotnetcli
 dotnet add reference ../PrimeService/PrimeService.csproj
@@ -120,35 +120,7 @@ dotnet sln add ./PrimeService.Tests/PrimeService.Tests.csproj
 
 Sie schreiben einen fehlerhaften Test, lassen ihn bestehen und wiederholen dann den Prozess. Benennen Sie im Verzeichnis *PrimeService.Tests* die Datei *UnitTest1.cs* in *PrimeService_IsPrimeShould.cs* um, und ersetzen Sie die zugehörigen Inhalte durch Inhalte mit dem folgenden Code:
 
-```csharp
-using NUnit.Framework;
-using Prime.Services;
-
-namespace Prime.UnitTests.Services
-{
-    [TestFixture]
-    public class PrimeService_IsPrimeShould
-    {
-        [Test]
-        public void IsPrime_InputIs1_ReturnFalse()
-        {
-            PrimeService primeService = CreatePrimeService();
-            var result = primeService.IsPrime(1);
-
-            Assert.IsFalse(result, "1 should not be prime");
-        }
-
-        /*
-        More tests
-        */
-
-        private PrimeService CreatePrimeService()
-        {
-             return new PrimeService();
-        }
-    }
-}
-```
+[!code-csharp[Sample_FirstTest](~/samples/snippets/core/testing/unit-testing-using-nunit/csharp/PrimeService.Tests/PrimeService_IsPrimeShould.cs?name=Sample_FirstTest)]
 
 Das `[TestFixture]`-Attribut gibt eine Klasse an, die Unittests enthält. Das `[Test]`-Attribut gibt an, dass es sich bei einer Methode um eine Testmethode handelt.
 
@@ -175,9 +147,9 @@ Nachdem Sie dafür gesorgt haben, dass ein Test erfolgreich verläuft, schreiben
 
 Statt neue Tests zu erstellen, wenden Sie dieses Attribut zum Erstellen eines einzelnen datengesteuerten Tests an. Bei dem datengesteuerten Test handelt es sich um eine Methode, die mehrere Werte unter zwei als niedrigste Primzahl testet:
 
-[!code-csharp[Sample_TestCode](../../../samples/core/getting-started/unit-testing-using-nunit/PrimeService.Tests/PrimeService_IsPrimeShould.cs?name=Sample_TestCode)]
+[!code-csharp[Sample_TestCode](~/samples/snippets/core/testing/unit-testing-using-nunit/csharp/PrimeService.Tests/PrimeService_IsPrimeShould.cs?name=Sample_TestCode)]
 
-Führen Sie `dotnet test` aus und zwei dieser Tests schlagen fehl. Damit alle Tests erfolgreich sind, müssen Sie in der Datei *PrimeService.cs* am Anfang der Methode `Main` die `if`-Klausel ändern:
+Führen Sie `dotnet test` aus und zwei dieser Tests schlagen fehl. Damit alle Tests erfolgreich sind, müssen Sie in der Datei `if`PrimeService.cs`Main` am Anfang der Methode *die*-Klausel ändern:
 
 ```csharp
 if (candidate < 2)

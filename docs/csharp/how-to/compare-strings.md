@@ -6,15 +6,15 @@ helpviewer_keywords:
 - strings [C#], comparison
 - comparing strings [C#]
 ms.openlocfilehash: dda3ec8cb6a0131867e6ea3bb0cf7199d86058ff
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "73973318"
 ---
 # <a name="how-to-compare-strings-in-c"></a>Vergleichen von Zeichenfolgen in C\#
 
-Durch den Vergleich zweier Zeichenfolgen können Sie entweder feststellen, ob diese gleich sind, oder in welche Reihenfolge sie beim Sortieren gebracht werden sollen.
+Durch den Vergleich zweier Zeichenfolgen können Sie entweder feststellen, ob diese gleich sind oder in welche Reihenfolge sie beim Sortieren gebracht werden sollen.
 
 Beide Vorgänge werden durch folgende Faktoren erschwert:
 
@@ -33,7 +33,7 @@ Standardmäßig gilt für die gängigsten Vorgänge Folgendes:
 
 - <xref:System.String.CompareTo%2A?displayProperty=nameWithType>
 - <xref:System.String.Equals%2A?displayProperty=nameWithType>
-- <xref:System.String.op_Equality%2A?displayProperty=nameWithType> und <xref:System.String.op_Inequality%2A?displayProperty=nameWithType> (d.h. [equality-Operatoren `==` bzw. `!=` ](../language-reference/operators/equality-operators.md#string-equality))
+- <xref:System.String.op_Equality%2A?displayProperty=nameWithType> und <xref:System.String.op_Inequality%2A?displayProperty=nameWithType> (d.h. [equality-Operatoren `==` bzw. `!=`](../language-reference/operators/equality-operators.md#string-equality))
 
 führen einen Ordinalvergleich unter Berücksichtigung der Groß/-Kleinschreibung aus und verwenden die aktuelle Kultur, wenn erforderlich. Dies wird im folgenden Beispiel veranschaulicht:
 
@@ -122,7 +122,7 @@ Auflistungsklassen wie <xref:System.Collections.Hashtable?displayProperty=nameWi
 
 ## <a name="reference-equality-and-string-interning"></a>Verweisgleichheit und Internalisieren von Zeichenfolgen
 
-Bisher wurde für kein Beispiel <xref:System.Object.ReferenceEquals%2A> verwendet. Diese Methode erkennt, ob zwei Zeichenfolgen demselben Objekt entsprechen. Dies kann zu inkonsistenten Ergebnissen in Zeichenfolgenvergleichen führen. Im folgenden Beispiel wird das C#-Feature *Zeichenfolgeninternalisierung* demonstriert. Wenn ein Programm zwei oder mehr identische Zeichenfolgenvariablen deklariert, speichert der Compiler alle am selben Speicherort. Durch Aufrufen der <xref:System.Object.ReferenceEquals%2A>-Methode können Sie sehen, dass die beiden Zeichenfolgen tatsächlich auf das gleiche Objekt im Arbeitsspeicher verweisen. Mit der <xref:System.String.Copy%2A?displayProperty=nameWithType>-Methode können Sie eine Internalisierung verhindern. Nach der Erstellung der Kopie verfügen beide Zeichenfolgen über unterschiedliche Speicherorte, obwohl sie denselben Wert besitzen. Wenn Sie das folgende Beispiel ausführen, werden die Zeichenfolgen `a` und `b` *internalisiert* – für beide wird also derselbe Speicherort verwendet. Für die Zeichenfolgen `a` und `c` ist dies hingegen nicht der Fall.
+Bisher wurde für kein Beispiel <xref:System.Object.ReferenceEquals%2A> verwendet. Diese Methode erkennt, ob zwei Zeichenfolgen demselben Objekt entsprechen. Dies kann zu inkonsistenten Ergebnissen in Zeichenfolgenvergleichen führen. Im folgenden Beispiel wird das C#-Feature *Zeichenfolgeninternalisierung* demonstriert. Wenn ein Programm zwei oder mehr identische Zeichenfolgenvariablen deklariert, speichert der Compiler alle am selben Speicherort. Durch Aufrufen der <xref:System.Object.ReferenceEquals%2A>-Methode können Sie sehen, dass die beiden Zeichenfolgen tatsächlich auf das gleiche Objekt im Arbeitsspeicher verweisen. Mit der <xref:System.String.Copy%2A?displayProperty=nameWithType>-Methode können Sie eine Internalisierung verhindern. Nach der Erstellung der Kopie verfügen beide Zeichenfolgen über unterschiedliche Speicherorte, obwohl sie denselben Wert besitzen. Wenn Sie das folgende Beispiel ausführen, werden die Zeichenfolgen `a` und `b`*internalisiert* – für beide wird also derselbe Speicherort verwendet. Für die Zeichenfolgen `a` und `c` ist dies hingegen nicht der Fall.
 
 [!code-csharp-interactive[Demonstrating string interning](../../../samples/snippets/csharp/how-to/strings/CompareStrings.cs#9)]
 
@@ -131,7 +131,7 @@ Bisher wurde für kein Beispiel <xref:System.Object.ReferenceEquals%2A> verwende
 
 Sie können eine Zeichenfolge in den Internpool schreiben oder auf eine im Internpool vorhandene Zeichenfolge verweisen, indem Sie die <xref:System.String.Intern%2A?displayProperty=nameWithType>-Methode aufrufen. Um zu bestimmen, ob eine Zeichenfolge im Internpool vorhanden ist, rufen Sie die <xref:System.String.IsInterned%2A?displayProperty=nameWithType>-Methode auf.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Globalization.CultureInfo?displayProperty=nameWithType>
 - <xref:System.StringComparer?displayProperty=nameWithType>

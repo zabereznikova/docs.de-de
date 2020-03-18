@@ -3,10 +3,10 @@ title: Änderungen an der NTLM-Authentifizierung für „HttpWebRequest“ in Ve
 ms.date: 03/30/2017
 ms.assetid: 8bf0b428-5a21-4299-8d6e-bf8251fd978a
 ms.openlocfilehash: 388e6dc648e1fd68e24a852cb08de107f09f9c9f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "64754877"
 ---
 # <a name="changes-to-ntlm-authentication-for-httpwebrequest-in-version-35-sp1"></a>Änderungen an der NTLM-Authentifizierung für „HttpWebRequest“ in Version 3.5 SP1
@@ -53,7 +53,7 @@ Um die Hostnamen anzugeben, die der Loopbackadresse zugeordnet sind, und die mit
 
 Eine unsicherere Lösung ist die Deaktivierung der Loopbacküberprüfung, die in <https://support.microsoft.com/kb/896861> beschrieben ist. Der Schutz vor Reflektionsangriffen wird somit deaktiviert. Daher ist es besser, den Satz von alternativen Namen auf jene einzuschränken, von denen Sie erwarten, dass sie tatsächlich vom Computer verwendet werden.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Net.AuthenticationManager.CustomTargetNameDictionary%2A?displayProperty=nameWithType>
 - <xref:System.Net.HttpRequestHeader?displayProperty=nameWithType>

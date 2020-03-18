@@ -36,14 +36,14 @@ helpviewer_keywords:
 - GroupCollection class
 ms.assetid: 49a21470-64ca-4b5a-a889-8e24e3c0af7e
 ms.openlocfilehash: 8956be3cf8f96a8dd255f378d4927404c172c908
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78160000"
 ---
 # <a name="the-regular-expression-object-model"></a>Das Objektmodell für reguläre Ausdrücke
-<a name="introduction"></a> In diesem Thema wird das Objektmodell beschrieben, das beim Arbeiten mit regulären .NET-Ausdrücken verwendet wird. Es enthält die folgenden Abschnitte:  
+<a name="introduction"></a> In diesem Thema wird das Objektmodell beschrieben, das beim Arbeiten mit regulären .NET-Ausdrücken verwendet wird. Sie enthält die folgenden Abschnitte:  
   
 - [The Regular Expression Engine (Die Engine für reguläre Ausdrücke)](#Engine)  
   
@@ -82,7 +82,7 @@ ms.locfileid: "78160000"
  Diese Vorgänge werden in den folgenden Abschnitten beschrieben.  
   
 ### <a name="matching-a-regular-expression-pattern"></a>Vergleich eines Muster eines regulären Ausdrucks  
- Von der <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType>-Methode wird `true` zurückgegeben, falls die Zeichenfolge mit dem Muster übereinstimmt, bzw. `false`, wenn dies nicht der Fall ist. Die <xref:System.Text.RegularExpressions.Regex.IsMatch%2A>-Methode wird häufig dazu verwendet, um Zeichenfolgeneingaben zu überprüfen. Durch den folgende Code wird z. B. sichergestellt, dass eine Zeichenfolge mit einer gültigen Sozialunterstützungsnummer in den USA übereinstimmt.  
+ Von der <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType>-Methode wird `true` zurückgegeben, falls die Zeichenfolge mit dem Muster übereinstimmt, bzw. `false`, wenn dies nicht der Fall ist. Die <xref:System.Text.RegularExpressions.Regex.IsMatch%2A>-Methode wird häufig dazu verwendet, um Zeichenfolgeneingaben zu überprüfen. Durch den folgenden Code wird z. B. sichergestellt, dass eine Zeichenfolge mit einer gültigen Sozialversicherungsnummer in den USA übereinstimmt.  
   
  [!code-csharp[Conceptual.RegularExpressions.ObjectModel#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/cs/validate1.cs#1)]
  [!code-vb[Conceptual.RegularExpressions.ObjectModel#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/vb/validate1.vb#1)]  
@@ -226,7 +226,7 @@ ms.locfileid: "78160000"
   
  Der Ersatzmuster-`$$ $&` gibt an, dass die übereinstimmende Teilzeichenfolge durch ein Dollarzeichensymbol ($) (das `$$`-Muster), ein Leerzeichen und den Wert der Übereinstimmung (das `$&`-Muster) ersetzt werden soll.  
   
- [Zurück nach oben](#introduction)  
+ [Zurück zum Anfang](#introduction)  
   
 <a name="GroupCollection"></a>
 ## <a name="the-group-collection"></a>Die Gruppenauflistung  
@@ -257,7 +257,7 @@ ms.locfileid: "78160000"
 |`(\d{4})`|Entsprechung für vier Dezimalstellen finden. Dies ist die dritte Erfassungsgruppe.|  
 |`\b`|Beendet den Vergleich an einer Wortgrenze.|  
   
- [Zurück nach oben](#introduction)  
+ [Zurück zum Anfang](#introduction)  
   
 <a name="the_captured_group"></a>
 ## <a name="the-captured-group"></a>Die erfasste Gruppe  
@@ -304,7 +304,7 @@ ms.locfileid: "78160000"
      [!code-csharp[Conceptual.RegularExpressions.ObjectModel#12](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/cs/lastcapture1.cs#12)]
      [!code-vb[Conceptual.RegularExpressions.ObjectModel#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/vb/lastcapture1.vb#12)]  
   
- [Zurück nach oben](#introduction)  
+ [Zurück zum Anfang](#introduction)  
   
 <a name="CaptureCollection"></a>
 ## <a name="the-capture-collection"></a>Die Erfassungsauflistung  
@@ -326,7 +326,7 @@ ms.locfileid: "78160000"
  [!code-csharp[RegularExpressions.Classes#5](../../../samples/snippets/csharp/VS_Snippets_CLR/RegularExpressions.Classes/cs/Example.cs#5)]
  [!code-vb[RegularExpressions.Classes#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/RegularExpressions.Classes/vb/Example.vb#5)]  
   
- [Zurück nach oben](#introduction)  
+ [Zurück zum Anfang](#introduction)  
   
 <a name="the_individual_capture"></a>
 ## <a name="the-individual-capture"></a>Die einzelne Erfassung  
@@ -349,7 +349,7 @@ ms.locfileid: "78160000"
 |`;`|Entsprechung für ein Semikolon finden.|  
 |`((\w+(\s\w+)*),(\d+);)+`|Entsprechung für das Muster eines Worts finden, auf das alle weiteren Wörter folgen, auf die ein Komma, mindestens eine Ziffer und ein Semikolon folgen (mindestens einmal). Dies ist die erste Erfassungsgruppe.|  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Text.RegularExpressions>
 - [Reguläre Ausdrücke von .NET](../../../docs/standard/base-types/regular-expressions.md)

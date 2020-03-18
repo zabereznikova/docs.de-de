@@ -19,10 +19,10 @@ helpviewer_keywords:
 - user authentication, isolated storage
 ms.assetid: 14812988-473f-44ae-b75f-fd5c2f21fb7b
 ms.openlocfilehash: 99e1f3f96465d05c100a0dbb2bc5218810c33754
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78159428"
 ---
 # <a name="types-of-isolation"></a>Isolationstypen
@@ -103,7 +103,7 @@ Der Zugriff auf isolierten Speicher ist immer auf den Benutzer eingeschränkt, d
  [!code-csharp[Conceptual.IsolatedStorage#12](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.isolatedstorage/cs/source9.cs#12)]
  [!code-vb[Conceptual.IsolatedStorage#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.isolatedstorage/vb/source9.vb#12)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.IO.IsolatedStorage.IsolatedStorageScope>
 - [Isolierter Speicher](../../../docs/standard/io/isolated-storage.md)

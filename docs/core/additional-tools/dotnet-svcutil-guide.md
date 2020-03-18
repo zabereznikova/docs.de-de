@@ -4,10 +4,10 @@ description: Übersicht zum Microsoft-WCF-Tool „dotnet-svcutil“, über das F
 author: mlacouture
 ms.date: 02/22/2019
 ms.openlocfilehash: 0607c73935f319f2cc0d8d9f92d96a4c71c54edf
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "76920948"
 ---
 # <a name="wcf-dotnet-svcutil-tool-for-net-core"></a>WCF-Tool „dotnet-svcutil“ für .NET Core
@@ -25,12 +25,12 @@ Das Tool **dotnet-svcutil** ist eine alternative Option zum mit Visual Studio ve
 
 <!-- markdownlint-disable MD025 -->
 
-# <a name="dotnet-svcutil-2xtabdotnetsvcutil2x"></a>[dotnet-svcutil 2.x](#tab/dotnetsvcutil2x)
+# <a name="dotnet-svcutil-2x"></a>[dotnet-svcutil 2.x](#tab/dotnetsvcutil2x)
 
 - [.NET Core 2.1 SDK](https://dotnet.microsoft.com/download) oder höhere Versionen
 - Ihr bevorzugter Code-Editor
 
-# <a name="dotnet-svcutil-1xtabdotnetsvcutil1x"></a>[dotnet-svcutil 1.x](#tab/dotnetsvcutil1x)
+# <a name="dotnet-svcutil-1x"></a>[dotnet-svcutil 1.x](#tab/dotnetsvcutil1x)
 
 - [.NET Core 1.0.4 SDK](https://dotnet.microsoft.com/download) oder höhere Versionen
 - Ihr bevorzugter Code-Editor
@@ -68,13 +68,13 @@ Führen Sie in einem Windows-, macOS- oder Linux-Befehlsfenster die folgenden Sc
     ```
 
 3. Installieren Sie das [`dotnet-svcutil` NuGet-Paket](https://nuget.org/packages/dotnet-svcutil) als CLI-Tool:  <!-- markdownlint-disable MD023 -->
-    # <a name="dotnet-svcutil-2xtabdotnetsvcutil2x"></a>[dotnet-svcutil 2.x](#tab/dotnetsvcutil2x)
+    # <a name="dotnet-svcutil-2x"></a>[dotnet-svcutil 2.x](#tab/dotnetsvcutil2x)
 
     ```dotnetcli
     dotnet tool install --global dotnet-svcutil
     ```
 
-    # <a name="dotnet-svcutil-1xtabdotnetsvcutil1x"></a>[dotnet-svcutil 1.x](#tab/dotnetsvcutil1x)
+    # <a name="dotnet-svcutil-1x"></a>[dotnet-svcutil 1.x](#tab/dotnetsvcutil1x)
     Öffnen Sie die `HelloSvcutil.csproj`-Projektdatei im Editor, bearbeiten Sie das `Project`-Element, und fügen Sie mithilfe des folgenden Codes das [`dotnet-svcutil`NuGet-Paket](https://nuget.org/packages/dotnet-svcutil) als CLI-Toolverweis hinzu:
 
     ```xml
@@ -93,13 +93,13 @@ Führen Sie in einem Windows-, macOS- oder Linux-Befehlsfenster die folgenden Sc
 
 4. Führen Sie den Befehl _dotnet-svcutil_ aus, um die Webdienstverweisdatei zu generieren:
 
-    # <a name="dotnet-svcutil-2xtabdotnetsvcutil2x"></a>[dotnet-svcutil 2.x](#tab/dotnetsvcutil2x)
+    # <a name="dotnet-svcutil-2x"></a>[dotnet-svcutil 2.x](#tab/dotnetsvcutil2x)
 
     ```dotnetcli
     dotnet-svcutil http://contoso.com/SayHello.svc
     ```
 
-    # <a name="dotnet-svcutil-1xtabdotnetsvcutil1x"></a>[dotnet-svcutil 1.x](#tab/dotnetsvcutil1x)
+    # <a name="dotnet-svcutil-1x"></a>[dotnet-svcutil 1.x](#tab/dotnetsvcutil1x)
 
     ```dotnetcli
     dotnet svcutil http://contoso.com/SayHello.svc
@@ -153,16 +153,16 @@ Die generierte Datei wird als _HelloSvcutil/ServiceReference/Reference.cs_ gespe
 
 6. Navigieren Sie in Ihrem Webbrowser zu der URL, die in der Konsole aufgelistet ist, (z.B. `http://localhost:5000`).
 
-Die folgende Ausgabe wird angezeigt: „Hello dotnet-svcutil!“
+Sie sollten die folgende Ausgabe erhalten: „Hello dotnet-svcutil!“
 
 Um eine ausführliche Beschreibung der Parameter des `dotnet-svcutil`-Tools zu erhalten, rufen Sie das Tool wie folgt mit Übergabe des Hilfeparameters auf:
-# <a name="dotnet-svcutil-2xtabdotnetsvcutil2x"></a>[dotnet-svcutil 2.x](#tab/dotnetsvcutil2x)
+# <a name="dotnet-svcutil-2x"></a>[dotnet-svcutil 2.x](#tab/dotnetsvcutil2x)
 
 ```dotnetcli
 dotnet-svcutil --help
 ```
 
-# <a name="dotnet-svcutil-1xtabdotnetsvcutil1x"></a>[dotnet-svcutil 1.x](#tab/dotnetsvcutil1x)
+# <a name="dotnet-svcutil-1x"></a>[dotnet-svcutil 1.x](#tab/dotnetsvcutil1x)
 
 ```dotnetcli
 dotnet svcutil --help

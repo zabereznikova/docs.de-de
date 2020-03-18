@@ -8,24 +8,24 @@ helpviewer_keywords:
 - types [C#], value types
 - C# language, value types
 ms.assetid: 471eb994-2958-49d5-a6be-19b4313f80a3
-ms.openlocfilehash: 76f4a3ed929e3ac8e3e6cc74158e75af7a6c8cf2
-ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
+ms.openlocfilehash: 406e5b8bbe0802146a65bb4b9a053e753a7827ee
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77625946"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79398268"
 ---
 # <a name="value-types-c-reference"></a>Werttypen (C#-Referenz)
 
 *Werttypen* und [Verweistypen](../keywords/reference-types.md) sind die beiden Hauptkategorien von C#-Typen. Eine Variable eines Werttyps enthält eine Instanz des Typs. Dies unterscheidet sich von einer Variablen eines Verweistyps, die einen Verweis auf eine Instanz des Typs enthält. Standardmäßig werden die Variablenwerte bei der [Zuweisung](../operators/assignment-operator.md) kopiert, dabei handelt es sich um die Übergabe eines Arguments an eine Methode oder die Rückgabe eines Methodenergebnisses. Im Fall von Werttypvariablen werden die entsprechenden Typinstanzen kopiert. Das folgende Beispiel veranschaulicht dieses Verhalten:
 
-[!code-csharp[copy of values](~/samples/csharp/language-reference/builtin-types/ValueTypes.cs#ValueTypeCopied)]
+[!code-csharp[copy of values](snippets/ValueTypes.cs#ValueTypeCopied)]
 
 Wie das vorhergehende Beispiel zeigt, wirken sich Vorgänge auf eine Werttypvariable nur auf die in der Variable gespeicherte Instanz des Werttyps aus.
 
 Wenn ein Werttyp einen Datenmember eines Verweistyps enthält, wird beim Kopieren einer Werttypinstanz nur der Verweis auf die Instanz des Verweistyps kopiert. Sowohl die kopierte als auch die ursprüngliche Werttypinstanz haben Zugriff auf dieselbe Verweistypinstanz. Das folgende Beispiel veranschaulicht dieses Verhalten:
 
-[!code-csharp[shallow copy](~/samples/csharp/language-reference/builtin-types/ValueTypes.cs#ShallowCopy)]
+[!code-csharp[shallow copy](snippets/ValueTypes.cs#ShallowCopy)]
 
 > [!NOTE]
 > Definieren und verwenden Sie unveränderliche Werttypen, um Ihren Code weniger fehleranfällig und stabiler zu machen. In diesem Artikel werden veränderbare Werttypen nur zur Veranschaulichung verwendet.

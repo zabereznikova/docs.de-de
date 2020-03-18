@@ -7,10 +7,10 @@ helpviewer_keywords:
 - managed threading
 ms.assetid: 9b5ec2cd-121b-4d49-b075-222cf26f2344
 ms.openlocfilehash: 1d487edff2cdc2e63f81963bfaa1f68a06e5b36e
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/14/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75936845"
 ---
 # <a name="using-threads-and-threading"></a>Verwenden von Threads und Threading
@@ -52,7 +52,7 @@ In der folgenden Tabelle werden einige <xref:System.Threading.Thread>-Eigenschaf
 |<xref:System.Threading.Thread.Priority%2A>|Es wird ein <xref:System.Threading.ThreadPriority>-Wert abgerufen oder festgelegt, der vom Betriebssystem zum Priorisieren der Threadplanung verwendet wird. Weitere Informationen finden Sie unter [Scheduling Threads (Planen von Threads)](scheduling-threads.md) und in der <xref:System.Threading.ThreadPriority>-Referenz.|  
 |<xref:System.Threading.Thread.ThreadState%2A>|Ruft einen <xref:System.Threading.ThreadState>-Wert ab, der die aktuellen Zustände des Threads enthält.|  
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Threading.Thread?displayProperty=nameWithType>
 - [Threads and Threading (Threads und Threading)](threads-and-threading.md)

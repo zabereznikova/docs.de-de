@@ -3,10 +3,10 @@ title: Schritte im Outer-Loop-DevOps-Workflow für eine Docker-Anwendung
 description: Lebenszyklus von Docker-Containeranwendungen mit der Microsoft-Plattform und Tools
 ms.date: 02/15/2019
 ms.openlocfilehash: 9fdc5acfd375e4f2266859f061ef1c854286b914
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "68673777"
 ---
 # <a name="creating-cicd-pipelines-in-azure-devops-services-for-a-net-core-20-application-on-containers-and-deploying-to-a-kubernetes-cluster"></a>Erstellen von CI/CD-Pipelines in Azure DevOps Services für eine .NET Core 2.0-Anwendung auf Containern und anschließendes Bereitstellen für ein Kubernetes-Cluster

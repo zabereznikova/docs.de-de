@@ -13,10 +13,10 @@ helpviewer_keywords:
 - runtime, automatic memory management
 ms.assetid: d4850de5-fa63-4936-a250-5678d118acba
 ms.openlocfilehash: 1038f16dca507e58005189c9558a9ec8dae4b34f
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78159701"
 ---
 # <a name="automatic-memory-management"></a>Automatic Memory Management
@@ -49,7 +49,7 @@ Bei der automatischen Speicherverwaltung handelt es sich um einen Dienst, der vo
 ## <a name="releasing-memory-for-unmanaged-resources"></a>Freigeben von Speicher für nicht verwaltete Ressourcen  
  Für die meisten von einer Anwendung erzeugten Objekte führt der Garbage Collector alle Aufgaben der Speicherverwaltung automatisch aus. Allerdings ist bei nicht verwalteten Ressourcen explizites Bereinigen erforderlich. Die häufigsten nicht verwalteten Ressourcen sind Objekte, die eine Betriebssystemressource umschließen, z. B. ein Dateihandle, ein Fensterhandle oder eine Netzwerkverbindung. Obwohl der Garbage Collector die Lebensdauer eines verwalteten Objekts, das eine nicht verwaltete Ressource kapselt, verfolgen kann, stehen ihm keine genauen Informationen zum Bereinigen dieser Ressource zur Verfügung. Wenn Sie ein Objekt erstellen möchten, das eine nicht verwaltete Ressource kapselt, ist es ratsam, Code zum Bereinigen der nicht verwalteten Ressource in einer öffentlichen **Dispose**-Methode bereitzustellen. Durch Bereitstellen der **Dispose**-Methode wird Benutzern des Objekts die Möglichkeit gegeben, nicht mehr benötigten Speicherplatz explizit freizugeben, sobald das Objekt nicht mehr verwendet wird. Wenn Sie ein Objekt verwenden, das eine nicht verwaltete Ressource kapselt, sollten Sie die **Dispose**-Methode beachten und bei Bedarf aufrufen. Weitere Informationen zum Bereinigen nicht verwalteter Ressourcen und ein Beispiel für ein Entwurfsmuster zum Implementieren von **Dispose** finden Sie unter [Garbage Collection](../../docs/standard/garbage-collection/index.md)  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.GC>
 - [Garbage Collection](../../docs/standard/garbage-collection/index.md)

@@ -4,12 +4,12 @@ description: Erfahren Sie mehr über die Konzepte von Komponententests in C# und
 author: ardalis
 ms.author: wiwagn
 ms.date: 12/04/2019
-ms.openlocfilehash: 226db54047747fbd065c64f5e4812094921c7f62
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: c9e3d63a2cf4f560591459833340b729ffec1b95
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714238"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78240895"
 ---
 # <a name="unit-testing-c-in-net-core-using-dotnet-test-and-xunit"></a>Komponententests für C# in .NET Core mit „dotnet test“ und xUnit
 
@@ -160,7 +160,7 @@ namespace Prime.UnitTests.Services
 }
 ```
 
-Das `[Fact]`-Attribut deklariert eine Testmethode, die vom Test Runner ausgeführt wird. Führen Sie `dotnet test` im Ordner *PrimeService.Tests* aus. Der Befehl [dotnet test](../tools/dotnet-test.md) erstellt beide Projekte und führt die Tests aus. Der Test Runner für xUnit enthält den Programmeinstiegspunkt zum Ausführen der Tests. `dotnet test` startet den Test Runner mithilfe des Komponententestprojekts.
+Das `[Fact]`-Attribut deklariert eine Testmethode, die vom Test Runner ausgeführt wird. Führen Sie *im Ordner*PrimeService.Tests`dotnet test` aus. Der Befehl [dotnet test](../tools/dotnet-test.md) erstellt beide Projekte und führt die Tests aus. Der Test Runner für xUnit enthält den Programmeinstiegspunkt zum Ausführen der Tests. `dotnet test` startet den Test Runner mithilfe des Komponententestprojekts.
 
 Der Test schlägt fehl, da `IsPrime` nicht implementiert wurde. Schreiben Sie bei Befolgen des Ansatzes zur testgesteuerten Entwicklung nur so viel Code, dass dieser Test bestanden wird. Aktualisieren Sie `IsPrime` mit folgendem Code:
 
@@ -175,7 +175,7 @@ public bool IsPrime(int candidate)
 }
 ```
 
-Führen Sie aus `dotnet test`. Der Test wurde erfolgreich ausgeführt.
+Führen Sie `dotnet test` aus. Der Test wurde erfolgreich ausgeführt.
 
 ### <a name="add-more-tests"></a>Hinzufügen weiterer Tests
 
@@ -207,7 +207,7 @@ public void IsPrime_InputIs1_ReturnFalse()
 
 durch den folgenden Code:
 
-[!code-csharp[Sample_TestCode](../../../samples/core/getting-started/unit-testing-using-dotnet-test/PrimeService.Tests/PrimeService_IsPrimeShould.cs?name=Sample_TestCode)]
+[!code-csharp[Sample_TestCode](../../../samples/snippets/core/testing/unit-testing-using-dotnet-test/csharp/PrimeService.Tests/PrimeService_IsPrimeShould.cs?name=Sample_TestCode)]
 
 Im vorangehenden Code ermöglichen `[Theory]` und `[InlineData]` das Testen mehrerer Werte, die kleiner als 2 sind. 2 ist die kleinste Primzahl.
 

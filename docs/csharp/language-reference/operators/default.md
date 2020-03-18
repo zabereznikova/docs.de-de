@@ -4,12 +4,12 @@ description: Verwendung des Default-Operators zum Erzeigen des Standardwerts ein
 ms.date: 08/01/2019
 helpviewer_keywords:
 - default keyword [C#]
-ms.openlocfilehash: 651c4698514aee8cf4dab75ea32c98493e19a30b
-ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
+ms.openlocfilehash: 0d37fe952e71e74f014872231a2e58663dea9d18
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75964620"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79398184"
 ---
 # <a name="default-operator-c-reference"></a>default-Operator (C#-Referenz)
 
@@ -17,7 +17,7 @@ Der `default`-Operator dient zum Erzeugen des [Standardwerts](../builtin-types/d
 
 Im folgenden Beispiel wird die Verwendung des `default`-Operators veranschaulicht:
 
-[!code-csharp-interactive[default of T](~/samples/csharp/language-reference/operators/DefaultOperator.cs#WithOperand)]
+[!code-csharp-interactive[default of T](snippets/DefaultOperator.cs#WithOperand)]
 
 Außerdem verwenden Sie das Schlüsselwort `default` in einer [`switch`-Anweisung](../keywords/switch.md) als case-Standardbezeichnung.
 
@@ -32,7 +32,7 @@ Ab C# 7.1 können Sie das `default`-Literal verwenden, um den Standardwert eines
 
 Im folgenden Beispiel wird die Verwendung des `default`-Literals veranschaulicht:
 
-[!code-csharp-interactive[default literal](~/samples/csharp/language-reference/operators/DefaultOperator.cs#DefaultLiteral)]
+[!code-csharp-interactive[default literal](snippets/DefaultOperator.cs#DefaultLiteral)]
 
 ## <a name="c-language-specification"></a>C#-Sprachspezifikation
 
@@ -40,7 +40,7 @@ Weitere Informationen finden Sie im Abschnitt [Ausdrücke mit Standardwert](~/_c
 
 Weitere Informationen zum `default`-Literal finden Sie unter [Hinweis zum Featurevorschlag](~/_csharplang/proposals/csharp-7.1/target-typed-default.md).
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [C#-Referenz](../index.md)
 - [C#-Operatoren](index.md)

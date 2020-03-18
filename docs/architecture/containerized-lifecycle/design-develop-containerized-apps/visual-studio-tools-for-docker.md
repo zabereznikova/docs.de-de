@@ -4,10 +4,10 @@ description: Lernen Sie die in Visual Studio 2017, Version 15.7 und höher, verf
 ms.date: 02/15/2019
 ms.custom: vs-dotnet
 ms.openlocfilehash: 2b6fdc33f9cf850cf9e52fca4a1a9754cd412567
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "68673877"
 ---
 # <a name="use-docker-tools-in-visual-studio-2017-on-windows"></a>Verwenden von Docker-Tools in Visual Studio 2017 unter Windows
@@ -31,7 +31,7 @@ Die Befehle **Hinzufügen > Docker-Unterstützung** und **Hinzufügen > Unterst�
 
 **Abbildung 4-31**. Hinzufügen von Docker-Unterstützung zu einem Visual Studio 2017-Projekt
 
-### <a name="add-docker-support"></a>Hinzufügen der Docker-Unterstützung
+### <a name="add-docker-support"></a>Hinzufügen von Docker-Unterstützung
 
 Sie können die Docker-Unterstützung einem vorhandenen ASP.NET Core-Projekt hinzufügen, indem Sie im **Projektmappen-Explorer** die Option **Hinzufügen** > **Docker-Unterstützung** auswählen. Ferner können Sie die Docker-Unterstützung während der Projekterstellung aktivieren, indem Sie im Dialogfeld **Neue ASP.NET Core-Webanwendung**, das geöffnet wird, nachdem Sie im Dialogfeld **Neues Projekt** auf **OK** klicken, **Docker-Unterstützung aktivieren** auswählen, wie in Abbildung 4–32 gezeigt.
 
@@ -72,7 +72,7 @@ Wählen Sie im Hauptmenü **Extras > Optionen** aus, und klappen Sie **Container
 
 Die folgende Tabelle hilft Ihnen möglicherweise beim Festlegen dieser Optionen.
 
-| name | Standardeinstellung | Gilt für | BESCHREIBUNG |
+| name | Standardeinstellung | Gilt für | Beschreibung |
 | -----|:---------------:|:----------:| ----------- |
 | Erforderliche Docker-Images beim Laden des Projekts automatisch abrufen | Ein | Docker Compose | Zum Steigern der Leistung beim Laden von Projekten beginnt Visual Studio einen Docker-Pull-Vorgang im Hintergrund, sodass das Image bereits heruntergeladen ist oder heruntergeladen wird, wenn Sie zur Ausführung Ihres Codes bereit sind. Wenn Sie lediglich Projekte laden und Code durchsuchen, können Sie dies ausschalten, um das Herunterladen von Containerimages zu vermeiden, die Sie nicht benötigen. |
 | Container im Hintergrund automatisch starten | Ein | Docker Compose | Ebenfalls zum Steigern der Leistung erstellt Visual Studio einen Container mit Volumeeinbindungen, die bereit stehen, wenn Sie Ihren Container erstellen und ausführen. Wenn Sie steuern möchten, wann Ihr Container erstellt wird, deaktivieren Sie diese Option. |

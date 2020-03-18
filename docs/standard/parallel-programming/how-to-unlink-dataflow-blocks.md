@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Aufheben der Verknüpfungen von Datenflussblöcken'
+title: 'Gewusst wie: Verknüpfungen für Datenflussblöcke aufheben'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -11,13 +11,13 @@ helpviewer_keywords:
 - TPL dataflow library, unlinking dataflow blocks
 ms.assetid: 40f0208d-4618-47f7-85cf-4913d07d2d7d
 ms.openlocfilehash: b49cfc9730ba154202baf15093a54ba3ce0e2a8a
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73139296"
 ---
-# <a name="how-to-unlink-dataflow-blocks"></a>Vorgehensweise: Aufheben der Verknüpfungen von Datenflussblöcken
+# <a name="how-to-unlink-dataflow-blocks"></a>Gewusst wie: Verknüpfungen für Datenflussblöcke aufheben
 In diesem Dokument erfahren Sie, wie Sie eine Verknüpfung zwischen einen Zieldatenflussblock und der zugehörigen Quelle auflösen.
 
 [!INCLUDE [tpl-install-instructions](../../../includes/tpl-install-instructions.md)]
@@ -32,6 +32,6 @@ In diesem Dokument erfahren Sie, wie Sie eine Verknüpfung zwischen einen Zielda
   
  Damit die verbleibenden Aufrufe von `TrySolution` beendet werden, sobald einer einen Wert zurückgegeben hat, übernimmt die `TrySolution`-Methode ein <xref:System.Threading.CancellationToken>-Objekt, das abgebrochen wird, nachdem der Aufruf von `ReceiveFromAny(T)` zurückgegeben wurde. Die <xref:System.Threading.SpinWait.SpinUntil%2A>-Methode gibt zurück, wann dieses <xref:System.Threading.CancellationToken>-Objekt abgebrochen wird.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Dataflow (Datenfluss)](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)

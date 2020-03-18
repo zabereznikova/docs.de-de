@@ -3,10 +3,10 @@ title: Starke Namen und .NET-Bibliotheken
 description: Empfehlungen für bewährte Methoden für starke Namen für .NET-Bibliotheken.
 ms.date: 10/16/2018
 ms.openlocfilehash: db268093b07a2ece7cdb8329fd789b52da9c5c32
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/24/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "76744531"
 ---
 # <a name="strong-naming"></a>Starke Namen

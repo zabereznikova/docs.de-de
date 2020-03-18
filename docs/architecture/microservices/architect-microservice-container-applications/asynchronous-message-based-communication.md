@@ -3,10 +3,10 @@ title: Asynchrone nachrichtenbasierte Kommunikation
 description: '.NET-Microservicearchitektur für .NET-Containeranwendungen | Die asynchrone nachrichtenbasierte Kommunikation ist ein wesentliches Konzept der Microservicearchitektur: Sie ist die ideale Option, damit Microservices unabhängig voneinander bleiben und zugleich synchronisiert werden.'
 ms.date: 09/20/2018
 ms.openlocfilehash: 84eaf70178cce91a86dae8a55badb0b4ddd6a7c1
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "73454236"
 ---
 # <a name="asynchronous-message-based-communication"></a>Asynchrone nachrichtenbasierte Kommunikation

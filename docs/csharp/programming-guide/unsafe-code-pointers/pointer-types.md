@@ -5,10 +5,10 @@ helpviewer_keywords:
 - unsafe code [C#], pointers
 - pointers [C#]
 ms.openlocfilehash: dc03744559a87a2548c5bee9452c22cd20f337b8
-ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/26/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77627709"
 ---
 # <a name="pointer-types-c-programming-guide"></a>Zeigertypen (C#-Programmierhandbuch)
@@ -22,9 +22,9 @@ void* identifier; //allowed but not recommended
 
 Der Typ, der vor `*` in einem Zeigertyp angegeben wird, wird als **Verweistyp** bezeichnet. Nur ein [nicht verwalteter Typ](../../language-reference/builtin-types/unmanaged-types.md) kann ein Verweistyp sein.
 
-Zeigertypen erben nicht von [object`object`, und es ist keine Konvertierung zwischen Zeigertypen und ](../../language-reference/builtin-types/reference-types.md) möglich. Weiterhin unterstützen Boxing und Unboxing keine Zeiger. Es ist jedoch möglich, Konvertierungen zwischen verschiedenen Zeigertypen sowie zwischen Zeigertypen und ganzzahligen Typen durchzuführen.
+Zeigertypen erben nicht von [object](../../language-reference/builtin-types/reference-types.md), und es ist keine Konvertierung zwischen Zeigertypen und `object` möglich. Weiterhin unterstützen Boxing und Unboxing keine Zeiger. Es ist jedoch möglich, Konvertierungen zwischen verschiedenen Zeigertypen sowie zwischen Zeigertypen und ganzzahligen Typen durchzuführen.
 
-Wenn Sie mehrere Zeiger innerhalb ein- und derselben Deklaration deklarieren, wird das Sternchen (*) nur einmal mit dem zugrunde liegenden Typ notiert und nicht als Präfix für jeden Zeigernamen verwendet. Zum Beispiel:
+Wenn Sie mehrere Zeiger innerhalb ein- und derselben Deklaration deklarieren, wird das Sternchen (*) nur einmal mit dem zugrunde liegenden Typ notiert und nicht als Präfix für jeden Zeigernamen verwendet. Beispiel:
 
 ```csharp
 int* p1, p2, p3;   // Ok
@@ -63,7 +63,7 @@ Die Übergabe von Zeigern zwischen Methoden kann zu nicht definiertem Verhalten 
 
 In der folgenden Tabelle werden die Operatoren und Anweisungen aufgelistet, die in einem unsicheren Kontext auf Zeiger angewendet werden können.
 
-|Operator/Anweisung|Verwendung|
+|Operator/Anweisung|Zweck|
 |-------------------------|---------|
 |`*`|Führt eine Zeigerdereferenzierung aus.|
 |`->`|Greift über einen Zeiger auf einen Member einer Struktur zu.|
@@ -81,11 +81,11 @@ Weitere Informationen zu Zeigeroperatoren finden Sie unter [Operatoren im Zusamm
 
 Weitere Informationen finden Sie im Abschnitt [Zeigertypen](~/_csharplang/spec/unsafe-code.md#pointer-types) der [Spezifikation für die Sprache C#](~/_csharplang/spec/introduction.md).
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [C#-Programmierhandbuch](../index.md)
 - [Unsicherer Code und Zeiger](index.md)
 - [Zeigerkonvertierungen](pointer-conversions.md)
-- [Verweistypen](../../language-reference/keywords/reference-types.md)
-- [Werttypen](../../language-reference/builtin-types/value-types.md)
+- [Reference types (Verweistypen)](../../language-reference/keywords/reference-types.md)
+- [Value types (Werttypen)](../../language-reference/builtin-types/value-types.md)
 - [unsafe](../../language-reference/keywords/unsafe.md)

@@ -4,16 +4,16 @@ description: Erfahren Sie, wie das .NET Compiler Platform-SDK (auch als „Rosly
 ms.date: 10/10/2017
 ms.custom: mvc
 ms.openlocfilehash: a1ceb1d11cf846e67be2c6558978e01133e591da
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/24/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "76742738"
 ---
 # <a name="the-net-compiler-platform-sdk"></a>.NET Compiler Platform-SDK
 
 Compiler erstellen bei der Validierung der Syntax und Semantik eines Anwendungscodes ein detailliertes Modell davon. Basierend auf diesem Modell wird die ausführbare Ausgabe aus dem Quellcode erstellt. Zugriff auf dieses Modell wird durch das .NET Compiler Platform-SDK ermöglicht. Um die Produktivität zu steigern, greifen wir vermehrt auf Funktionen der integrierten Entwicklungsumgebung (IDE) zurück, wie IntelliSense, Refactoring, intelligentes Umbenennen, „Alle Verweise suchen“ und „Gehe zu Definition“. Zur Verbesserung unserer Codequalität nehmen wir Codeanalysetools und zur Unterstützung der Anwendungsentwicklung Codegeneratoren zu Hilfe. Je intelligenter diese Tools werden, desto umfangreicher wird auch der erforderliche Zugriff auf das Modell, das nur von Compilern bei der Verarbeitung des Anwendungscodes erstellt wird. Genau darin besteht das Hauptziel der Roslyn-APIs: Das Geheimnis um die Blackboxes zu lüften und Tools wie auch Endbenutzern die Nutzung der umfassenden Informationen zu ermöglichen, die bezüglich unseres Codes in den Compilern enthalten sind.
-Anstatt eine nicht transparente Übersetzung von Quellcode in Objektcode bereitzustellen, werden Compiler durch Roslyn zu Plattformen: APIs, die Sie für codebezogene Aufgaben in Ihren Tools und Anwendungen einsetzen können.
+Statt Übersetzungen von nicht transparenten Quellcodes in Objektcodes fungieren Compiler mithilfe von Roslyn als Plattformen. Diese APIs können für Aufgaben im Zusammenhang mit dem Code in Ihren Tools und Anwendungen verwendet werden.
 
 ## <a name="net-compiler-platform-sdk-concepts"></a>.NET Compiler Platform-SDK – Begriffe
 

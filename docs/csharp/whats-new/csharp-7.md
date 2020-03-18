@@ -4,11 +4,11 @@ description: Erhalten Sie einen Überblick über die neuen Funktionen in Version
 ms.date: 02/20/2019
 ms.assetid: fd41596d-d0c2-4816-b94d-c4d00a5d0243
 ms.openlocfilehash: a6ac5c00ceb2ce8e5e56e2a86a8cde937d5108e2
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77448633"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79398340"
 ---
 # <a name="whats-new-in-c-70"></a>Neues in C# 7.0
 
@@ -40,7 +40,7 @@ Dieser Artikel enthält im Folgenden eine Übersicht über die einzelnen Funktio
 1. Installieren Sie das globale [dotnet-try](https://github.com/dotnet/try/blob/master/README.md#setup)-Tool.
 1. Klonen Sie das [dotnet/try-samples](https://github.com/dotnet/try-samples)-Repository.
 1. Legen Sie das aktuelle Verzeichnis auf das Unterverzeichnis *csharp7* für das *try-samples*-Repository fest.
-1. Führen Sie aus `dotnet try`.
+1. Führen Sie `dotnet try` aus.
 
 ## <a name="out-variables"></a>`out`-Variablen
 
@@ -181,7 +181,7 @@ Sie können den Rückgabewert als `ref` deklarieren und diesen Wert wie im folge
 
 Die C#-Sprache verfügt über mehrere Regeln, die Sie vor einer falschen Verwendung der lokalen `ref`-Variablen und Rückgabetypen schützen:
 
-- Sie müssen der Methodensignatur und allen `return`-Anweisungen einer Methode das `ref`-Schlüsselwort hinzufügen.
+- Sie müssen der Methodensignatur und allen `ref`-Anweisungen einer Methode das `return`-Schlüsselwort hinzufügen.
   - Dadurch wird deutlich, dass Rückgaben in der gesamten Methode als Verweis erfolgen.
 - Eine `ref return`-Rückgabe kann einer Wert- oder einer `ref`-Variablen zugewiesen werden.
   - Der Aufrufer steuert, ob der Rückgabewert kopiert werden soll. Durch Auslassen des `ref`-Modifizierers beim Zuweisen des Rückgabewerts gibt der Aufrufer an, dass der Wert kopiert werden und nicht etwa ein Verweis auf den Speicher erfolgen soll.
@@ -222,7 +222,7 @@ In C# 6 wurden [Ausdruckskörpermember](csharp-6.md#expression-bodied-function-m
 > [!NOTE]
 > In diesem Beispiel ist kein Finalizer erforderlich, aber damit soll die Syntax dargestellt werden. Sie sollten in Ihrer Klasse nur einen Finalizer implementieren, wenn es notwendig ist, nicht verwaltete Ressourcen freizugeben. Sie sollten auch die Verwendung der <xref:System.Runtime.InteropServices.SafeHandle>-Klasse in Betracht ziehen, anstatt nicht verwaltete Ressourcen direkt zu verwalten.
 
-Diese neuen Speicherorte für Member mit Ausdruckskörper sind ein wichtiger Meilenstein für die Sprache C#: Diese Features wurden von Community-Mitgliedern implementiert, die am Open Source-Projekt [Roslyn](https://github.com/dotnet/Roslyn) arbeiten.
+Diese neuen Speicherorte für Ausdruckskörpermember sind ein wichtiger Meilenstein für C#: Diese Funktionen wurden von Community-Mitgliedern implementiert, die am Open-Source-Projekt [Roslyn](https://github.com/dotnet/Roslyn) arbeiten.
 
 Das Ändern einer Methode in ein Ausdruckskörpermember ist eine [binärkompatible](version-update-considerations.md#binary-compatible-changes) Änderung.
 

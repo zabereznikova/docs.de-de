@@ -3,16 +3,16 @@ title: 'Beispiel-XML-Datei: Kunden und Bestellungen (LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: d6d1c9ea-be74-4e6d-bfdd-d4bcc2d301cf
 ms.openlocfilehash: 01c1719bd67bbaf0d46dc6e3c23b5031afd271f8
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/25/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75346499"
 ---
 # <a name="sample-xml-file-customers-and-orders-linq-to-xml"></a>Beispiel-XML-Datei: Kunden und Bestellungen (LINQ to XML)
 Die folgende XML-Datei wird in verschiedenen Beispielen in der [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]-Dokumentation verwendet. Sie enthält Kunden (<legacyBold>Customers</legacyBold>) und Aufträge (<legacyBold>Orders</legacyBold>).  
   
- Unter [Beispiel-XSD-Datei: Kunden und Bestellungen](./sample-xsd-file-customers-and-orders1.md) finden Sie ein XML-Schema, das zum Validieren dieses Dokuments verwendet werden kann. Mit den Funktionen `xs:key` und `xs:keyref` des XSD-Schemas wird geprüft, ob das `CustomerID`-Attribut des `Customer`-Elements ein Schlüssel ist. Außerdem wird damit eine Beziehung zwischen dem `CustomerID`-Element in jedem `Order`-Element und dem `CustomerID`-Attribut in jedem `Customer`-Element hergestellt.  
+ Das Thema [Beispiel-XSD-Datei: Kunden und Bestellungen](./sample-xsd-file-customers-and-orders1.md) enthält ein XSD-Schema, das zum Validieren dieses Dokuments verwendet werden kann. Mit den Funktionen `xs:key` und `xs:keyref` des XSD-Schemas wird geprüft, ob das `CustomerID`-Attribut des `Customer`-Elements ein Schlüssel ist. Außerdem wird damit eine Beziehung zwischen dem `CustomerID`-Element in jedem `Order`-Element und dem `CustomerID`-Attribut in jedem `Customer`-Element hergestellt.  
   
  Ein Beispiel für das Schreiben von LINQ-Abfragen mit der `Join`-Klausel, die von dieser Beziehung profitieren, finden Sie unter [Vorgehensweise: Verknüpfen von zwei Auflistungen (LINQ to XML) (C#)](./how-to-join-two-collections-linq-to-xml.md).  
   

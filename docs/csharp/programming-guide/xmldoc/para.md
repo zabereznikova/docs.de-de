@@ -9,10 +9,10 @@ helpviewer_keywords:
 - para C# XML tag
 ms.assetid: c74b8705-29df-40b1-bff5-237492b0e978
 ms.openlocfilehash: b2740370106ce5b2812acbea212354ebea1f0e34
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/28/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "76793412"
 ---
 # <a name="para-c-programming-guide"></a>\<para> (C#-Programmierhandbuch)
@@ -39,7 +39,7 @@ Kompilieren Sie mit [-doc](../../language-reference/compiler-options/doc-compile
 
 Unter [\<summary>](./summary.md) finden Sie ein Beispiel für die Verwendung von \<para>.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [C#-Programmierhandbuch](../index.md)
 - [Empfohlene Tags für Dokumentationskommentare](./recommended-tags-for-documentation-comments.md)

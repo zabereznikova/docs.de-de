@@ -5,10 +5,10 @@ helpviewer_keywords:
 - indexers [C#], about indexers
 ms.assetid: df70e1a2-3ce3-4aba-ad80-4b2f3538699f
 ms.openlocfilehash: 17162a0dc959a85c03a5cb5757e2b91fe10b0ab3
-ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/26/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77628162"
 ---
 # <a name="using-indexers-c-programming-guide"></a>Verwenden von Indexern (C#-Programmierhandbuch)
@@ -46,7 +46,7 @@ public int this[int index]   // Indexer declaration
 
 Dieser Indexer hat den Namen `TheItem`. Wird kein Namensattribut bereitgestellt, wird `Item` zum Standardnamen.  
   
-## <a name="example-1"></a>Beispiel 1  
+## <a name="example-1"></a>Beispiel 1  
   
 Im folgenden Beispiel wird die Deklaration eines öffentlichen Arrayfelds, `temps`, und eines Indexers dargestellt. Der Indexer ermöglicht den direkten Zugriff auf die Instanz `tempRecord[i]`. Als Alternative zur Verwendung des Indexers, kann das Array als [öffentliches](../../language-reference/keywords/public.md) Mitglied deklariert und direkt auf dessen Mitglieder, `tempRecord.temps[i]`, zugegriffen werden.  
   
@@ -58,7 +58,7 @@ Im folgenden Beispiel wird die Deklaration eines öffentlichen Arrayfelds, `temp
 
 C# beschränkt den Indexer-Parametertyp nicht auf Integer. Beispielsweise kann es sinnvoll sein, eine Zeichenfolge mit einem Indexer zu verwenden. Ein solcher Indexer kann implementiert werden, indem die Zeichenfolge in der Auflistung gesucht und der richtige Wert zurückgegeben wird. Da Accessoren überladen werden können, können die Zeichenfolge- und die Integer-Version zusammen verwendet werden.  
   
-## <a name="example-2"></a>Beispiel 2  
+## <a name="example-2"></a>Beispiel 2  
   
 Das folgende Beispiel deklariert eine Klasse, die die Wochentage speichert. Ein `get`-Accessor akzeptiert eine Zeichenfolge – den Namen eines Tages – und gibt den entsprechenden Integer-Wert zurück. „Sunday“ gibt beispielsweise 0 zurück, „Monday“ 1 usw.  
   
@@ -72,7 +72,7 @@ Das folgende Beispiel deklariert eine Klasse, die die Wochentage speichert. Ein 
   
 - Schränken Sie den Zugriff auf die [get](../../language-reference/keywords/get.md)- und [set](../../language-reference/keywords/set.md)-Accessors so weit wie möglich ein. Dies ist insbesondere wichtig für den `set`-Accessor. Weitere Informationen finden Sie unter [Einschränken des Accessorzugriffs](../classes-and-structs/restricting-accessor-accessibility.md).  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [C#-Programmierhandbuch](../index.md)
 - [Indexer](./index.md)

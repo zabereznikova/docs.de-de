@@ -3,10 +3,10 @@ title: Breaking Changes in MSBuild
 description: Listet die Breaking Changes in MSBuild für .NET Core auf.
 ms.date: 02/10/2020
 ms.openlocfilehash: 42588fc885c38a3d543fa94b11765e77633e209c
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/19/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77453763"
 ---
 # <a name="msbuild-breaking-changes"></a>Breaking Changes in MSBuild

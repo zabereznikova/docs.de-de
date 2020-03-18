@@ -3,10 +3,10 @@ title: 'Vorgehensweise: Suchen aller Knoten in einem Namespace (C#)'
 ms.date: 07/20/2015
 ms.assetid: 3a38b913-a53e-4d0e-a19d-8782bffd3364
 ms.openlocfilehash: 408f4207798720428d0dd3821d33fd3edf2f897e
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/16/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "74141183"
 ---
 # <a name="how-to-find-all-nodes-in-a-namespace-c"></a>Vorgehensweise: Suchen aller Knoten in einem Namespace (C#)
@@ -46,7 +46,7 @@ Nodes in the http://www.adventure-works.com namespace
 ## <a name="example"></a>Beispiel  
  Die XML-Datei, auf die die folgende Abfrage zugreift, enthält Aufträge in zwei verschiedenen Namespaces. Die Abfrage erstellt eine neue Struktur, die nur die Elemente in einem der Namespaces enthält.  
   
- In diesem Beispiel wird das folgende XML-Dokument verwendet: [Beispiel-XML-Datei: Konsolidierte Bestellungen](./sample-xml-file-consolidated-purchase-orders.md).  
+ Dieses Beispiel verwendet das folgende XML-Dokument: [Beispiel-XML-Datei: Konsolidierte Bestellungen](./sample-xml-file-consolidated-purchase-orders.md).  
   
 ```csharp  
 XDocument cpo = XDocument.Load("ConsolidatedPurchaseOrders.xml");  

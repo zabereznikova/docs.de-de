@@ -1,17 +1,17 @@
 ---
-title: 'Vorgehensweise: Abrufen des Inhalts des Verzeichnisses „Eigene Dokumente“'
+title: 'Gewusst wie: Abrufen des Inhalts des Verzeichnisses "Eigene Dateien"'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - My Documents directory
 ms.assetid: 26560d01-7dda-4457-8e95-21db23d71aea
 ms.openlocfilehash: cf4470020507c581999b9d72602ddb6e3e76ed74
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74334532"
 ---
-# <a name="how-to-retrieve-the-contents-of-the-my-documents-directory-in-visual-basic"></a>Vorgehensweise: Abrufen des Inhalts des Verzeichnisses „Eigene Dateien“ in Visual Basic
+# <a name="how-to-retrieve-the-contents-of-the-my-documents-directory-in-visual-basic"></a>Gewusst wie: Abrufen des Inhalts des Verzeichnisses "Eigene Dateien" in Visual Basic
 
 Das <xref:Microsoft.VisualBasic.FileIO.SpecialDirectories>-Objekt kann verwendet werden, um aus vielen **All Users**-Verzeichnissen zu lesen, z.B. **Dokumente** oder **Desktop**.  
   
@@ -21,7 +21,7 @@ Das <xref:Microsoft.VisualBasic.FileIO.SpecialDirectories>-Objekt kann verwendet
   
      [!code-vb[VbVbcnMyFileSystem#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#15)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:Microsoft.VisualBasic.FileIO.SpecialDirectories>
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.ReadAllText%2A>

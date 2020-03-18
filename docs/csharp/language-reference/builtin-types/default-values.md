@@ -6,17 +6,17 @@ helpviewer_keywords:
 - default [C#]
 - parameterless constructor [C#]
 ms.openlocfilehash: 93b6079b9a3bbf6d537094cab9dfb305ace7f6bf
-ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/26/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77625864"
 ---
 # <a name="default-values-of-c-types-c-reference"></a>Standardwerte der C#-Typen (C#-Referenz)
 
 In der folgenden Tabelle werden die Standardwerte von C#-Typen gezeigt:
 
-|Typ|Standardwert|
+|Geben Sie Folgendes ein:|Standardwert|
 |---------|------------------|
 |Verweistyp|`null`|
 |Beliebiger [integrierter integraler numerischer Typ](integral-numeric-types.md)|0 (null)|
@@ -52,10 +52,10 @@ Wenn die <xref:System.Type?displayProperty=nameWithType>-Instanz zur Laufzeit ei
 
 Weitere Informationen finden Sie in den folgenden Abschnitten der [C#-Sprachspezifikation](~/_csharplang/spec/introduction.md):
 
-- [Standardwerte](~/_csharplang/spec/variables.md#default-values)
+- [Default values (Standardwerte)](~/_csharplang/spec/variables.md#default-values)
 - [Standardkonstruktoren](~/_csharplang/spec/types.md#default-constructors)
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [C#-Referenz](../index.md)
 - [Konstruktoren](../../programming-guide/classes-and-structs/constructors.md)

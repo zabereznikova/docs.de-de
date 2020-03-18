@@ -3,10 +3,10 @@ title: Erstellen benutzerdefinierter Attribute (C#)
 ms.date: 07/20/2015
 ms.assetid: 500e1977-c6de-462d-abce-78a0eb1eda22
 ms.openlocfilehash: c0f25adf0d562b659edaa8f36e72332fd0c1ee7e
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "69595409"
 ---
 # <a name="creating-custom-attributes-c"></a>Erstellen benutzerdefinierter Attribute (C#)
@@ -63,12 +63,12 @@ class SampleClass
 }  
 ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Reflection>
 - [C#-Programmierhandbuch](../../index.md)
 - [Verfassen von benutzerdefinierten Attributen](../../../../standard/attributes/writing-custom-attributes.md)
 - [Reflektion (C#)](../reflection.md)
 - [Attribute (C#)](./index.md)
-- [Accessing Attributes by Using Reflection (C#) (Zugriff auf Attribute mit Reflektion (C#))](./accessing-attributes-by-using-reflection.md)
+- [Zugriff auf Attribute mit Reflektion (C#)](./accessing-attributes-by-using-reflection.md)
 - [AttributeUsage (C#)](./attributeusage.md)

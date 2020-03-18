@@ -3,10 +3,10 @@ title: Projektieren von XML in eine andere Form (C#)
 ms.date: 07/20/2015
 ms.assetid: 4cb6b14a-32dc-4a2a-813e-bf9368fa8d86
 ms.openlocfilehash: 1377df1ce7f54bc9a0f58836d7df5e5b7b54a69a
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "69591534"
 ---
 # <a name="projecting-xml-in-a-different-shape-c"></a>Projektieren von XML in eine andere Form (C#)
@@ -233,5 +233,5 @@ class Program
 ## <a name="next-steps"></a>Nächste Schritte  
  Im nächsten Beispiel werden Sie eine Abfrage erstellen, die sämtlichen Text in einem Word-Dokument ermittelt:  
   
-- [Finding Text in Word Documents (C#) (Suchen von Text in Word-Dokumenten (C#))](./finding-text-in-word-documents.md)  
+- [Suchen von Text in Word-Dokumenten (C#)](./finding-text-in-word-documents.md)  
   

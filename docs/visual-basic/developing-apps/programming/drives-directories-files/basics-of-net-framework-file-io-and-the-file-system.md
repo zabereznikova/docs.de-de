@@ -10,10 +10,10 @@ helpviewer_keywords:
 - streams, definition
 ms.assetid: 49d837c0-cf28-416f-8606-4d83d7b479ef
 ms.openlocfilehash: 5d60d0089d042c0be343c741c26de0b4b7778d6d
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74348934"
 ---
 # <a name="basics-of-net-framework-file-io-and-the-file-system-visual-basic"></a>Grundlagen zu Datei-E/A-Vorgängen und dem Dateisystem in .NET Framework (Visual Basic)
@@ -59,13 +59,13 @@ Es existieren viele Arten von Streams, doch für die Arbeit mit Dateieingabe und
 
 In der nachstehenden Tabelle werden Aufgaben aufgeführt, die häufig mit einem Stream durchgeführt werden:
 
-|Beschreibung|Informationen|
+|An|Weitere Informationen finden Sie unter|
 |---|---|
-|Lesen und Schreiben in einer Datendatei|[Vorgehensweise: Vorgehensweise: Lesen von bzw. Schreiben in eine neu erstellte Datendatei](../../../../standard/io/how-to-read-and-write-to-a-newly-created-data-file.md)|
-|Lesen von Text aus einer Datei|[Vorgehensweise: Lesen von Text aus einer Datei](../../../../standard/io/how-to-read-text-from-a-file.md)|
-|Schreiben von Text in eine Datei|[Vorgehensweise: Schreiben von Text in eine Datei](../../../../standard/io/how-to-write-text-to-a-file.md)|
-|Lesen von Zeichen aus einer Zeichenfolge|[Vorgehensweise: Lesen von Zeichen aus einer Zeichenfolge](../../../../standard/io/how-to-read-characters-from-a-string.md)|
-|Schreiben von Zeichen in eine Zeichenfolge|[Vorgehensweise: Schreiben von Zeichen in eine Zeichenfolge](../../../../standard/io/how-to-write-characters-to-a-string.md)|
+|Lesen und Schreiben in einer Datendatei|[Gewusst wie: Lesen und Schreiben einer neu erstellten Datendatei](../../../../standard/io/how-to-read-and-write-to-a-newly-created-data-file.md)|
+|Lesen von Text aus einer Datei|[Gewusst wie: Lesen von Text aus einer Datei](../../../../standard/io/how-to-read-text-from-a-file.md)|
+|Schreiben von Text in eine Datei|[Gewusst wie: Schreiben von Text in eine Datei](../../../../standard/io/how-to-write-text-to-a-file.md)|
+|Lesen von Zeichen aus einer Zeichenfolge|[Gewusst wie: Lesen von Zeichen aus einer Zeichenfolge](../../../../standard/io/how-to-read-characters-from-a-string.md)|
+|Schreiben von Zeichen in eine Zeichenfolge|[Gewusst wie: Schreiben von Zeichen in eine Zeichenfolge](../../../../standard/io/how-to-write-characters-to-a-string.md)|
 |Verschlüsseln von Daten|[Verschlüsseln von Daten](../../../../standard/security/encrypting-data.md)|
 |Entschlüsseln von Daten|[Entschlüsseln von Daten](../../../../standard/security/decrypting-data.md)|
 
@@ -77,9 +77,9 @@ Die <xref:System.IO.FileAttributes>-Enumeration ermöglicht das Sammeln von date
 
 In der folgenden Tabelle sind die Tasks bezüglich Dateizugriff und Dateiattributen aufgelistet.
 
-|Beschreibung|Siehe|
+|An|Weitere Informationen finden Sie unter|
 |---|---|
-|Öffnen und Anfügen an eine Protokolldatei|[Vorgehensweise: Öffnen und Anfügen an eine Protokolldatei](../../../../standard/io/how-to-open-and-append-to-a-log-file.md)|
+|Öffnen und Anfügen an eine Protokolldatei|[Gewusst wie: Öffnen und Anfügen an eine Protokolldatei](../../../../standard/io/how-to-open-and-append-to-a-log-file.md)|
 |Festlegen der Attribute einer Datei|<xref:System.IO.FileAttributes>|
 
 ## <a name="file-permissions"></a>Dateiberechtigungen
@@ -92,23 +92,23 @@ Die isolierte Speicherung versucht die Probleme zu lösen, die bei der Arbeit mi
 
 In der nachstehenden Tabelle werden die Aufgaben aufgelistet, die häufig dem isolierten Datenspeicher zugeordnet sind.
 
-|Beschreibung|Siehe|
+|An|Weitere Informationen finden Sie unter|
 |---|---|
-|Erstellen eines isolierten Speichers|[Vorgehensweise: Erhalten von Speichern für isolierten Speicher](../../../../standard/io/how-to-obtain-stores-for-isolated-storage.md)|
-|Auflisten von isolierten Speichern|[Vorgehensweise: Auflisten von Speichern für isolierten Speicher](../../../../standard/io/how-to-enumerate-stores-for-isolated-storage.md)|
-|Löschen eines isolierten Speichers|[Vorgehensweise: Löschen von Speichern im isolierten Speicher](../../../../standard/io/how-to-delete-stores-in-isolated-storage.md)|
-|Erstellen einer Datei oder eines Verzeichnisses im isolierten Speicher|[Vorgehensweise: Erstellen von Dateien und Verzeichnissen in isoliertem Speicher](../../../../standard/io/how-to-create-files-and-directories-in-isolated-storage.md)|
-|Suchen einer Datei im isolierten Speicher|[Vorgehensweise: Suchen von vorhandenen Dateien und Verzeichnissen im isolierten Speicher](../../../../standard/io/how-to-find-existing-files-and-directories-in-isolated-storage.md)|
-|Lesen aus oder Schreiben in einer Datei im isolierten Speicher|[Vorgehensweise: Lesen von bzw. Schreiben in Dateien im isolierten Speicher](../../../../standard/io/how-to-read-and-write-to-files-in-isolated-storage.md)|
-|Löschen einer Datei oder eines Verzeichnisses im isolierten Speicher|[Vorgehensweise: Löschen von Dateien und Verzeichnissen in isoliertem Speicher](../../../../standard/io/how-to-delete-files-and-directories-in-isolated-storage.md)|
+|Erstellen eines isolierten Speichers|[Gewusst wie: Erhalten von Speichern für isolierten Speicher](../../../../standard/io/how-to-obtain-stores-for-isolated-storage.md)|
+|Auflisten von isolierten Speichern|[Gewusst wie: Auflisten von Speichern für isolierten Speicher](../../../../standard/io/how-to-enumerate-stores-for-isolated-storage.md)|
+|Löschen eines isolierten Speichers|[Gewusst wie: Löschen von Speichern im isolierten Speicher](../../../../standard/io/how-to-delete-stores-in-isolated-storage.md)|
+|Erstellen einer Datei oder eines Verzeichnisses im isolierten Speicher|[Gewusst wie: Erstellen von Dateien und Verzeichnissen in isoliertem Speicher](../../../../standard/io/how-to-create-files-and-directories-in-isolated-storage.md)|
+|Suchen einer Datei im isolierten Speicher|[Gewusst wie: Suchen von vorhandenen Dateien und Verzeichnissen im isolierten Speicher](../../../../standard/io/how-to-find-existing-files-and-directories-in-isolated-storage.md)|
+|Lesen aus oder Schreiben in einer Datei im isolierten Speicher|[Gewusst wie: Lesen bzw. Schreiben von Dateien im isolierten Speicher](../../../../standard/io/how-to-read-and-write-to-files-in-isolated-storage.md)|
+|Löschen einer Datei oder eines Verzeichnisses im isolierten Speicher|[Gewusst wie: Löschen von Dateien und Verzeichnissen in isoliertem Speicher](../../../../standard/io/how-to-delete-files-and-directories-in-isolated-storage.md)|
 
 ## <a name="file-events"></a>Dateiereignisse
 
 Mit der Komponente von <xref:System.IO.FileSystemWatcher> können Sie Änderungen in Dateien und Verzeichnissen in Ihrem System oder auf jedem beliebigen Computer, auf dem Sie über Netzwerkzugriff verfügen, überwachen. Wenn z.B. eine Datei verändert wird, möchten Sie möglicherweise eine Warnung an einen Benutzer versenden, dass die Änderung durchgeführt wurde. Wenn Änderungen auftreten, werden ein Ereignis oder mehrere Ereignisse ausgelöst, in einem Puffer gespeichert und an die <xref:System.IO.FileSystemWatcher>-Komponente für die Verarbeitung übermittelt.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Erstellen von Streams](../../../../standard/io/composing-streams.md)
 - [Datei- und Stream-E/A](../../../../standard/io/index.md)
-- [Asynchrone Datei-E/A](../../../../standard/io/asynchronous-file-i-o.md)
+- [Asynchronous File I/O](../../../../standard/io/asynchronous-file-i-o.md)
 - [Für Datei-E/A-Vorgänge und die Arbeit mit dem Dateisystem in .NET Framework verwendete Klassen (Visual Basic)](../../../../visual-basic/developing-apps/programming/drives-directories-files/classes-used-in-net-framework-file-io-and-the-file-system.md)

@@ -6,10 +6,10 @@ helpviewer_keywords:
 - My.Application.Log object, custom log listeners
 ms.assetid: 0e019115-4b25-4820-afb1-af8c6e391698
 ms.openlocfilehash: 7b611e93119dc66a9404cf271ea201676d7b5318
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74353616"
 ---
 # <a name="walkthrough-creating-custom-log-listeners-visual-basic"></a>Exemplarische Vorgehensweise: Erstellen von benutzerdefinierten Protokolllistenern (Visual Basic)
@@ -45,7 +45,7 @@ Im nächste Verfahren finden Sie einige einfache Schritte zum Erstellen einer As
 
 3. Wählen Sie das Feld **Sign the assembly** (Assembly signieren) aus.
 
-4. Wählen Sie in der Dropdownliste **Schlüsseldatei mit starkem Namen auswählen** **\<Neu>** aus.
+4. Wählen Sie in der Dropdownliste **Schlüsseldatei mit starkem Namen auswählen\<** **Neu>** aus.
 
      Das Dialogfeld **Schlüssel für einen starken Namen erstellen** wird geöffnet.
 
@@ -79,7 +79,7 @@ Sie können mit dem starken Namen den Listener zur `My.Application.Log`-Auflistu
 
 1. Klicken Sie im **Projektmappen-Explorer** mit der rechten Maustaste auf „app.config“, und wählen Sie **Öffnen** aus.
 
-     Oder
+     \- oder -
 
      Wenn eine app.config-Datei vorhanden ist:
 
@@ -107,10 +107,10 @@ Sie können mit dem starken Namen den Listener zur `My.Application.Log`-Auflistu
 
      Ändern Sie den Wert von `SimpleLogStrongName` in den starken Namen des Listeners.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=nameWithType>
 - [Arbeiten mit Anwendungsprotokollen](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md)
-- [Vorgehensweise: Protokollieren von Ausnahmen](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md)
-- [Vorgehensweise: Schreiben von Protokollmeldungen](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)
+- [Gewusst wie: Protokollieren von Ausnahmen](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md)
+- [Gewusst wie: Schreiben von Protokollmeldungen](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)
 - [Exemplarische Vorgehensweise: Ändern des Orts, in den „My.Application.Log“ Informationen schreibt](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)

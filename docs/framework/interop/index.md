@@ -11,10 +11,10 @@ helpviewer_keywords:
 - components [.NET Framework], interoperation with unmanaged code
 ms.assetid: ccb68ce7-b0e9-4ffb-839d-03b1cd2c1258
 ms.openlocfilehash: 12183f390a5178f038c6dd2122a72a33e31ae0ee
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73457964"
 ---
 # <a name="interoperating-with-unmanaged-code"></a>Interoperabilität mit nicht verwaltetem Code
@@ -32,27 +32,27 @@ Beschreibt, wie COM-Komponenten aus .NET Framework-Anwendungen verwendet werden
 Beschreibt, wie .NET Framework-Komponenten aus COM-Anwendungen verwendet werden
 
 [Verwenden nicht verwalteter DLL-Funktionen](consuming-unmanaged-dll-functions.md)  
-Beschreibt das Aufrufen von nicht verwalteten DLL-Funktionen mithilfe von Plattformaufruf
+Beschreibt das Aufrufen von nicht verwalteten DLL-Funktionen mithilfe von Plattformaufruf.
 
 [Interop Marshaling (Interop-Marshalling)](interop-marshaling.md)  
 Beschreibt das Marshalling für COM-Interop sowie Plattformaufruf
 
-[Vorgehensweise: Zuordnen von HRESULT-Werten und Ausnahmen](how-to-map-hresults-and-exceptions.md)  
+[Gewusst wie: Zuordnen von HRESULTs und Ausnahmen](how-to-map-hresults-and-exceptions.md)  
 Beschreibt die Zuordnung zwischen Ausnahmen und HRESULTs
 
 [Typäquivalenz und eingebettete Interop-Typen](type-equivalence-and-embedded-interop-types.md)  
 Beschreibt, wie die Typinformation für COM-Typen in Assemblys eingebettet wird und wie die Common Language Runtime die Äquivalenz von eingebetteten COM-Typen bestimmt
 
-[Vorgehensweise: Generieren primärer Interopassemblys mit „Tlbimp.exe“](how-to-generate-primary-interop-assemblies-using-tlbimp-exe.md)  
+[Gewusst wie: Generieren primärer Interop-Assemblys mit "Tlbimp.exe"](how-to-generate-primary-interop-assemblies-using-tlbimp-exe.md)  
 Beschreibt, wie primäre Interop-Assemblys mit *Tlbimp.exe* (Type Library Importer-Tool) erstellt werden
 
-[Vorgehensweise: Registrieren primärer Interopassemblys](how-to-register-primary-interop-assemblies.md)  
+[Vorgehensweise: Registrieren primärer Interop-Assemblys](how-to-register-primary-interop-assemblies.md)  
 Beschreibt, wie die primären Interop-Assemblys registriert werden, bevor Sie in Ihren Projekten auf diese verweisen können
 
 [COM-Interop ohne Registrierung](registration-free-com-interop.md)  
 Beschreibt, wie COM-Interop Komponenten aktivieren kann, ohne die Windows-Registrierung zu verwenden
 
-[Vorgehensweise: Konfigurieren von .NET Framework-basierten COM-Komponenten für die Aktivierung ohne Registrierung](configure-net-framework-based-com-components-for-reg.md)  
+[How to: Configure .NET Framework-Based COM Components for Registration-Free Activation (Vorgehensweise: Konfigurieren von .NET Framework-basierten COM-Komponenten für die registrierungsfreie Aktivierung)](configure-net-framework-based-com-components-for-reg.md)  
 Beschreibt, wie ein Anwendungsmanifest erstellt wird und wie ein Komponentenmanifest erstellt und eingebettet wird
 
 ## <a name="related-sections"></a>Verwandte Abschnitte

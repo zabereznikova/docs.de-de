@@ -16,10 +16,10 @@ helpviewer_keywords:
 - integrity with assemblies
 ms.assetid: 1b5439c1-f3d5-4529-bd69-01814703d067
 ms.openlocfilehash: 77c9f9131b556e0b8fa639cd723bf1ca8cd6602e
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73972308"
 ---
 # <a name="assembly-security-considerations"></a>Überlegungen zur Assemblysicherheit
@@ -60,7 +60,7 @@ Beim Erstellen einer Assembly können Sie eine Reihe von Berechtigungen angeben,
   
  Da starke Namen und das Signieren mit [SignTool.exe (Signaturtool)](../../framework/tools/signtool-exe.md) die Integrität garantieren, können Sie der Sicherheitsrichtlinie für den Codezugriff diese beiden Formen von Assemblybeweisen zugrunde legen. Starke Namen und das Signieren mit [SignTool.exe (Signaturtool)](../../framework/tools/signtool-exe.md) garantieren die Integrität durch digitale Signaturen und Zertifikate. Alle genannten Technologien (Hashüberprüfung, starke Namen und das Signieren mit [SignTool.exe (Signaturtool)](../../framework/tools/signtool-exe.md)) gewährleisten gemeinsam, dass die Assembly in keiner Weise geändert werden kann.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Assemblys mit starken Namen](strong-named.md)
 - [Assemblys in .NET](index.md)

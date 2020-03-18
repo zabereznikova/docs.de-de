@@ -6,10 +6,10 @@ author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc, how-to
 ms.openlocfilehash: 182350cc5143155133385c6fd77986b271f6db91
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73977043"
 ---
 # <a name="make-predictions-with-a-trained-model"></a>Treffen von Vorhersagen mit einem trainierten Modell
@@ -65,7 +65,7 @@ ITransformer predictionPipeline = mlContext.Model.Load("model.zip", out predicti
 
 ## <a name="single-prediction"></a>Einzelne Vorhersage
 
-Um eine einzelne Vorhersage zu machen, erstellen Sie eine [ `PredictionEngine` ](xref:Microsoft.ML.PredictionEngine%602) mithilfe der geladenen Vorhersagepipeline.
+Um eine einzelne Vorhersage zu machen, erstellen Sie eine [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) mithilfe der geladenen Vorhersagepipeline.
 
 ```csharp
 // Create PredictionEngines
@@ -90,7 +90,7 @@ Wenn Sie auf die `Score`-Eigenschaft des `prediction`-Objekts zugreifen, sollten
 
 ## <a name="multiple-predictions"></a>Mehrere Vorhersagen
 
-Laden Sie die folgenden Daten in eine [`IDataView`](xref:Microsoft.ML.IDataView). In diesem Fall ist `inputData` der Name von [`IDataView`](xref:Microsoft.ML.IDataView). Da `CurrentPrice` das Ziel oder Label ist, das Sie mit den neuen Daten vorhersagen möchten, wird vorausgesetzt, dass zurzeit kein Wert dafür vorhanden ist.
+Laden Sie die folgenden Daten in eine [`IDataView`](xref:Microsoft.ML.IDataView). In diesem Fall ist [ der Name von `IDataView`](xref:Microsoft.ML.IDataView)`inputData`. Da `CurrentPrice` das Ziel oder Label ist, das Sie mit den neuen Daten vorhersagen möchten, wird vorausgesetzt, dass zurzeit kein Wert dafür vorhanden ist.
 
 ```csharp
 // Actual data

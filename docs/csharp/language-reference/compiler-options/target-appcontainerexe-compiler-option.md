@@ -3,10 +3,10 @@ title: -target:appcontainerexe (C#-Compileroptionen)
 ms.date: 07/20/2015
 ms.assetid: e7e62229-23ea-4e53-bef5-380d951bf95f
 ms.openlocfilehash: 64661e72f9efe190606cadd93558678cb849e8cc
-ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "74204526"
 ---
 # <a name="-targetappcontainerexe-c-compiler-options"></a>-target:appcontainerexe (C#-Compileroptionen)
@@ -18,7 +18,7 @@ Wenn Sie die Compileroption **-target:appcontainerexe** verwenden, erstellt der 
 -target:appcontainerexe  
 ```  
   
-## <a name="remarks"></a>Anmerkungen  
+## <a name="remarks"></a>Hinweise  
  Diese Option legt ein Bit in der [portierbaren ausführbaren](/windows/desktop/Debug/pe-format) Datei (Portable Executable, PE) fest, damit die App in einem App-Container ausgeführt werden muss. Wenn dieses Bit festgelegt ist, tritt ein Fehler auf, wenn die CreateProcess-Methode versucht, die ausführbare Datei außerhalb eines App-Containers zu starten.  
   
  Sofern Sie nicht die Option [-out](./out-compiler-option.md) verwenden, erhält der Name der Ausgabedatei den Namen der Eingabedatei, die die [Main](../../programming-guide/main-and-command-args/index.md)-Methode enthält.  
@@ -42,7 +42,7 @@ Wenn Sie die Compileroption **-target:appcontainerexe** verwenden, erstellt der 
 csc -target:appcontainerexe filename.cs  
 ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [-target (C#-Compileroptionen)](./target-compiler-option.md)
 - [-target:winexe (C#-Compileroptionen)](./target-winexe-compiler-option.md)

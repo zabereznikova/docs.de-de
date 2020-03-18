@@ -3,11 +3,11 @@ title: Breaking Changes und .NET-Bibliotheken
 description: Empfehlungen für bewährte Methoden zum Umgang mit Breaking Changes beim Erstellen von .NET-Bibliotheken.
 ms.date: 10/02/2018
 ms.openlocfilehash: 2cbd9e0a818b52aede6c9b1f60fdf52dcbd7b96f
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76731464"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79398508"
 ---
 # <a name="breaking-changes"></a>Breaking Changes
 
@@ -96,11 +96,11 @@ public class Document
 
 > Das Entfernen von APIs ist eine binärer Breaking Change. Erwägen Sie, veraltete Typen und Methoden beizubehalten, falls ihre Verwaltung keinen kostspieligen und großen technischen Aufwand für die Bibliothek bedeutet. Wenn Sie Typen und Methoden nicht entfernen, können Sie so die obigen Worst-Case-Szenarios vermeiden.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Versions- und Updateüberlegungen für C#-Entwickler](../../csharp/whats-new/version-update-considerations.md)
 - [Umfassendes Handbuch für API-Breaking Changes in .NET](https://stackoverflow.com/questions/1456785/a-definitive-guide-to-api-breaking-changes-in-net)
 - [Regeln von Breaking Changes in .NET](https://github.com/dotnet/runtime/blob/master/docs/coding-guidelines/breaking-change-rules.md)
 
 >[!div class="step-by-step"]
->[Vorherige](versioning.md)
+>[Zurück](versioning.md)

@@ -4,10 +4,10 @@ description: Finden Sie heraus, wie Sie die probabilistische Programmierung mit 
 ms.date: 01/30/2020
 ms.custom: mvc,how-to
 ms.openlocfilehash: 8e489d61c5e6cca53ba12b13fddd0b73c7f85ef9
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "77092602"
 ---
 # <a name="create-a-game-match-up-list-app-with-infernet-and-probabilistic-programming"></a>Erstellen einer App für eine Spielerrangliste anhand der Auswertung von Spielpartien mit Infer.NET und probabilistischer Programmierung

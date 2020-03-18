@@ -3,10 +3,10 @@ title: Beibehalten von Leerzeichen beim Laden oder Parsen von XML
 ms.date: 07/20/2015
 ms.assetid: f3ff58c4-55aa-4fcd-b933-e3a2ee6e706c
 ms.openlocfilehash: d015c21813df2224356bb49212fe282fa5372d03
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "69591553"
 ---
 # <a name="preserving-white-space-while-loading-or-parsing-xml"></a>Beibehalten von Leerzeichen beim Laden oder Parsen von XML
@@ -31,7 +31,7 @@ In diesem Thema wird beschrieben, wie das Leerraumverhalten von [!INCLUDE[sqltec
   
  Wenn die Methode nicht <xref:System.Xml.Linq.LoadOptions> als Argument akzeptiert, bleibt nicht signifikanter Leerraum nicht erhalten.  
   
- In den meisten Fällen können Sie nicht signifikanten Leerraum optional als Textknoten in der XML-Struktur erhalten, sofern die Methode <xref:System.Xml.Linq.LoadOptions> als Argument akzeptiert. Wenn die Methode den XML-Code aber aus einem <xref:System.Xml.XmlReader> lädt, bestimmt dieser <xref:System.Xml.XmlReader> ob Leerraum beibehalten wird. Die Einrichtung von <xref:System.Xml.Linq.LoadOptions.PreserveWhitespace> hat keine Auswirkungen.  
+ In den meisten Fällen können Sie nicht signifikanten Leerraum optional als Textknoten in der XML-Struktur erhalten, sofern die Methode <xref:System.Xml.Linq.LoadOptions> als Argument akzeptiert. Wenn die Methode den XML-Code aber aus einem <xref:System.Xml.XmlReader> lädt, bestimmt dieser, <xref:System.Xml.XmlReader> ob Leerraum beibehalten wird. Die Einrichtung von <xref:System.Xml.Linq.LoadOptions.PreserveWhitespace> hat keine Auswirkungen.  
   
  Bei diesen Methoden wird nicht signifikanter Leerraum als <xref:System.Xml.Linq.XText>-Knoten in die XML-Struktur eingefügt, sofern Leerraum beibehalten wird. Wenn Leerraum nicht beibehalten wird, erfolgt keine Einfügung von Textknoten.  
   

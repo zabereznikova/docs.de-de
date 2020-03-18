@@ -9,10 +9,10 @@ helpviewer_keywords:
 - reading files [Visual Basic]
 ms.assetid: ad831a1b-7d01-4f07-a47b-799f3037df19
 ms.openlocfilehash: afba0df89aabad7ddf8b641fbab421800718deb3
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74333822"
 ---
 # <a name="reading-from-files-in-visual-basic"></a>Lesen aus Dateien in Visual Basic
@@ -24,22 +24,22 @@ In diesem Abschnitt wird erläutert, wie man Aufgaben ausführt, die mit dem Les
  [Vorgehensweise: Lesen aus Textdateien](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-text-files.md)  
  Veranschaulicht das Lesen aus einer Textdatei  
   
- [Vorgehensweise: Lesen aus durch Trennzeichen getrennten Textdateien](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-comma-delimited-text-files.md)  
+ [Gewusst wie: Lesen aus Textdateien mit Kommatrennung](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-comma-delimited-text-files.md)  
  Veranschaulicht das Lesen aus einer Textdatei mit Kommatrennung  
   
- [Vorgehensweise: Lesen aus einer Textdatei mit fester Breite](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-fixed-width-text-files.md)  
+ [Gewusst wie: Lesen aus einer Textdatei mit fester Breite](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-fixed-width-text-files.md)  
  Veranschaulicht das Lesen aus einer Textdatei mit fester Breite  
   
- [Vorgehensweise: Lesen aus Textdateien mit mehreren Formaten](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-text-files-with-multiple-formats.md)  
+ [Gewusst wie: Lesen aus Textdateien mit mehreren Formaten](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-text-files-with-multiple-formats.md)  
  Veranschaulicht das Lesen aus Textdateien mit mehreren Formaten  
   
- [Vorgehensweise: Lesen aus Binärdateien](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-binary-files.md)  
+ [Gewusst wie: Lesen aus Binärdateien](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-binary-files.md)  
  Veranschaulicht das Lesen aus einer Binärdatei  
   
- [Vorgehensweise: Lesen von Text aus Dateien mit StreamReader](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-text-from-files-with-a-streamreader.md)  
+ [Gewusst wie: Lesen von Text aus Dateien mit einem StreamReader](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-text-from-files-with-a-streamreader.md)  
  Veranschaulicht die Verwendung von <xref:System.IO.StreamReader> zum Lesen aus einer Datei.  
   
-## <a name="reference"></a>Referenz  
+## <a name="reference"></a>Verweis  
 
  <xref:Microsoft.VisualBasic.FileIO.FileSystem>  
  Beschreibt das `My.Computer.FileSystem`-Objekt und dessen Member  
@@ -67,5 +67,5 @@ In diesem Abschnitt wird erläutert, wie man Aufgaben ausführt, die mit dem Les
  [Exemplarische Vorgehensweise: Bearbeiten von Dateien und Verzeichnissen in Visual Basic](../../../../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-and-directories.md)  
  Veranschaulicht die Verwendung des Features `My` mit Dateien und Verzeichnissen  
   
- [Exemplarische Vorgehensweise: Bearbeiten von Dateien mit .NET Framework-Methoden (Visual Basic)](../../../../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-by-using-net-framework-methods.md)  
+ [Exemplarische Vorgehensweise: Bearbeiten von Dateien mit .NET Framework-Methoden](../../../../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-by-using-net-framework-methods.md)  
  Veranschaulicht die Verwendung der .NET Framework-Methoden mit Dateien und Verzeichnissen

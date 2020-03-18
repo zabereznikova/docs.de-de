@@ -3,10 +3,10 @@ title: Einführung in Container und Docker
 description: Verschaffen Sie sich einen allgemeinen Überblick der Hauptvorteile beim Einsatz von Docker.
 ms.date: 02/15/2019
 ms.openlocfilehash: 9ac08a64cd2465b4b88a266c1ec0925f37680bf9
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73738173"
 ---
 # <a name="introduction-to-containers-and-docker"></a>Einführung in Container und Docker
@@ -21,7 +21,7 @@ Jeder Container kann wie in Abbildung 1-1 gezeigt eine gesamte Webanwendung oder
 
 ![Diagramm, das vier Container zeigt, die auf einem virtuellen Computer oder einem Server ausgeführt werden.](./media/index/multiple-containers-single-host.png)
 
-**(Abbildung 1-1)**. Mehrere Container, die auf einem Containerhost ausgeführt werden
+**(Abbildung 1-1)** . Mehrere Container, die auf einem Containerhost ausgeführt werden
 
 Ein weiterer Vorteil, den Containerisierung mit sich bringt, ist die Skalierbarkeit. Ein schnelles Skalieren ist möglich, indem Sie neue Container für kurzfristige Aufgaben erstellen. Aus der Sicht einer Anwendung ähnelt das Instanziieren eines Images (Erstellen eines Containers) dem Instanziieren eines Prozesses wie ein Dienst oder eine Web-App. Für die Zuverlässigkeit beim Ausführen von mehreren Instanzen desselben Images auf mehreren Hostservern sollte jedoch jeder Container (Instanz des Images) auf einem anderen Hostserver oder virtuellen Computer in verschiedenen Fehlerdomänen ausgeführt werden.
 

@@ -4,13 +4,13 @@ description: In diesem Tutorial über Verzweigungen und Schleifen schreiben Sie 
 ms.date: 10/31/2017
 ms.custom: mvc
 ms.openlocfilehash: 44b634e3c2120116ee7fd66770398a6b66c8ed8c
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "73739126"
 ---
-# <a name="learn-conditional-logic-with-branch-and-loop-statements"></a>Bedingungen für Verzweigungs- und Schleifenanweisungen
+# <a name="learn-conditional-logic-with-branch-and-loop-statements"></a>Erfahren Sie mehr über die bedingte Logik mit Verzweigungs- und Schleifenanweisungen.
 
 In diesem Tutorial erfahren Sie, wie Sie Code schreiben, der Variablen untersucht und basierend auf diesen Variablen den Ausführungspfad ändert. Sie schreiben einen C#-Code und sehen dort die Ergebnisse der Kompilierung und Ausführung Ihres Codes. Dieses Tutorial enthält eine Reihe von Lektionen, in denen Verzweigungs- und Schleifenkonstrukte in C# erkundet werden. In diesen Lektionen lernen Sie die Grundlagen der Programmiersprache C# kennen.
 

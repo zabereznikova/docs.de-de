@@ -10,11 +10,11 @@ helpviewer_keywords:
 - throw keyword [C#]
 ms.assetid: 5ac4feef-4b1a-4c61-aeb4-61d549e5dd42
 ms.openlocfilehash: 04d3138e3390627355b4b2d4e25c6b00248cec1a
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75713052"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79398112"
 ---
 # <a name="throw-c-reference"></a>throw (C#-Referenz)
 
@@ -65,7 +65,7 @@ Ab C# 7.0 kann `throw` sowohl als Ausdruck als auch als Anweisung verwendet werd
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [C#-Referenz](../index.md)
 - [C#-Programmierhandbuch](../../programming-guide/index.md)

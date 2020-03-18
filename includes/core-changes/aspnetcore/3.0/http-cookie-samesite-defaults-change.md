@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 15ba678431b97e7c961c119d83546569bdf9bad2
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "74282522"
 ---
 ### <a name="http-some-cookie-samesite-defaults-changed-to-none"></a>HTTP: Einige Standardeinstellungen für Cookie-SameSite wurden in None geändert.
@@ -26,7 +26,7 @@ Alle betroffenen APIs verwenden standardmäßig `SameSiteMode.None`.
 
 Der Standardwert wurde geändert, um `SameSite` zu einem Feature zu machen, das aktiviert werden muss.
 
-#### <a name="recommended-action"></a>Empfohlene Maßnahme
+#### <a name="recommended-action"></a>Empfohlene Aktion
 
 Für jede Komponente, die Cookies ausgibt, muss entschieden werden, ob `SameSite` für die zugehörigen Szenarios geeignet ist. Überprüfen Sie die Nutzung der betroffenen APIs, und konfigurieren Sie `SameSite` nach Bedarf neu.
 

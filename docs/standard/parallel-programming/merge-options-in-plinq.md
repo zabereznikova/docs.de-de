@@ -9,10 +9,10 @@ helpviewer_keywords:
 - PLINQ queries, merge options
 ms.assetid: e8f7be3b-88de-4f33-ab14-dc008e76c1ba
 ms.openlocfilehash: 18f233ac4c5afa63ec31e83d5fff8f0a57f9146f
-ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74203997"
 ---
 # <a name="merge-options-in-plinq"></a>Mergeoptionen in PLINQ
@@ -23,7 +23,7 @@ Wenn eine Abfrage als parallel ausgeführt wird, partitioniert PLINQ die Quellse
  [!code-csharp[PLINQ#26](../../../samples/snippets/csharp/VS_Snippets_Misc/plinq/cs/plinqsamples.cs#26)]
  [!code-vb[PLINQ#26](../../../samples/snippets/visualbasic/VS_Snippets_Misc/plinq/vb/plinq2_vb.vb#26)]  
   
- Das vollständige Beispiel finden Sie unter [Vorgehensweise: Angeben von Mergeoptionen in PLINQ](../../../docs/standard/parallel-programming/how-to-specify-merge-options-in-plinq.md).  
+ Das vollständige Beispiel finden Sie unter [Gewusst wie: Angeben von Mergeoptionen in PLINQ](../../../docs/standard/parallel-programming/how-to-specify-merge-options-in-plinq.md).  
   
  Wenn die betreffende Abfrage die angeforderte Option nicht unterstützen kann, wird die Option einfach ignoriert. In den meisten Fällen müssen Sie keine Mergeoption für eine PLINQ-Abfrage angeben. In einigen Fällen stellen Sie jedoch möglicherweise durch Testen und Messen fest, dass eine Abfrage am besten in einem nicht standardmäßigen Modus ausgeführt wird. Eine übliche Verwendung dieser Option ist, zu erzwingen, dass ein Blockzusammenführungs-Operator seine Ergebnisse streamt, um eine reaktionsfreudigere Benutzeroberfläche bereitzustellen.  
   
@@ -47,23 +47,23 @@ Wenn eine Abfrage als parallel ausgeführt wird, partitioniert PLINQ die Quellse
   
 |Operator|Beschränkungen|  
 |--------------|------------------|  
-|<xref:System.Linq.ParallelEnumerable.AsEnumerable%2A>|Keine|  
-|<xref:System.Linq.ParallelEnumerable.Cast%2A>|Keine|  
+|<xref:System.Linq.ParallelEnumerable.AsEnumerable%2A>|Keiner|  
+|<xref:System.Linq.ParallelEnumerable.Cast%2A>|Keiner|  
 |<xref:System.Linq.ParallelEnumerable.Concat%2A>|Nicht geordnete Abfragen, die nur über eine Array- oder Listenquelle verfügen.|  
-|<xref:System.Linq.ParallelEnumerable.DefaultIfEmpty%2A>|Keine|  
-|<xref:System.Linq.ParallelEnumerable.OfType%2A>|Keine|  
+|<xref:System.Linq.ParallelEnumerable.DefaultIfEmpty%2A>|Keiner|  
+|<xref:System.Linq.ParallelEnumerable.OfType%2A>|Keiner|  
 |<xref:System.Linq.ParallelEnumerable.Reverse%2A>|Nicht geordnete Abfragen, die nur über eine Array- oder Listenquelle verfügen.|  
-|<xref:System.Linq.ParallelEnumerable.Select%2A>|Keine|  
+|<xref:System.Linq.ParallelEnumerable.Select%2A>|Keiner|  
 |<xref:System.Linq.ParallelEnumerable.SelectMany%2A>|Keiner|  
 |<xref:System.Linq.ParallelEnumerable.Skip%2A>|Keiner|  
 |<xref:System.Linq.ParallelEnumerable.Take%2A>|Keiner|  
-|<xref:System.Linq.ParallelEnumerable.Where%2A>|Keine|  
+|<xref:System.Linq.ParallelEnumerable.Where%2A>|Keiner|  
   
  Alle anderen PLINQ-Abfrageoperatoren werden möglicherweise von durch den Benutzer bereitgestellten Mergeoptionen ignoriert. Einige Abfrageoperatoren, z.B. <xref:System.Linq.ParallelEnumerable.Reverse%2A> und <xref:System.Linq.ParallelEnumerable.OrderBy%2A>, können erst dann Elemente bereitstellen, wenn alle erzeugt und neu angeordnet wurden. Wenn <xref:System.Linq.ParallelMergeOptions> in einer Abfrage verwendet wird, die auch einen Operator wie z.B. <xref:System.Linq.ParallelEnumerable.Reverse%2A> enthält, wird darum das Zusammenführungsverhalten erst dann in der Abfrage angewendet, nachdem dieser Operator seine Ergebnisse erzeugt hat.  
   
  Die Fähigkeit einiger Operatoren, Mergeoptionen zu behandeln, hängt vom Typ der Quellsequenz ab, und ob der <xref:System.Linq.ParallelEnumerable.AsOrdered%2A>-Operator früher in der Abfrage verwendet wurde. <xref:System.Linq.ParallelEnumerable.ForAll%2A> ist immer <xref:System.Linq.ParallelMergeOptions.NotBuffered>; er stellt seine Elemente sofort bereit. <xref:System.Linq.ParallelEnumerable.OrderBy%2A> ist immer <xref:System.Linq.ParallelMergeOptions.FullyBuffered>; er muss die gesamte Liste vor der Bereitstellung sortieren.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Parallel LINQ (PLINQ) (Paralleles LINQ (PLINQ))](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)
-- [Vorgehensweise: Angeben von Mergeoptionen in PLINQ](../../../docs/standard/parallel-programming/how-to-specify-merge-options-in-plinq.md)
+- [Gewusst wie: Angeben von Mergeoptionen in PLINQ](../../../docs/standard/parallel-programming/how-to-specify-merge-options-in-plinq.md)

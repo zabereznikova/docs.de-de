@@ -1,5 +1,5 @@
 ---
-title: Durchführen kulturunabhängiger Zeichenfolgenoperationen in Sammlungen
+title: Durchführen kulturunabhängiger Zeichenfolgenoperationen in Auflistungen
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -16,13 +16,13 @@ helpviewer_keywords:
 - culture parameter
 ms.assetid: 5cdc9396-a64b-4615-a1cd-b605db4c5983
 ms.openlocfilehash: 13a9f4896a37be4297f2a1a11435b85ade381c66
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74353674"
 ---
-# <a name="performing-culture-insensitive-string-operations-in-collections"></a>Durchführen kulturunabhängiger Zeichenfolgenoperationen in Sammlungen
+# <a name="performing-culture-insensitive-string-operations-in-collections"></a>Durchführen kulturunabhängiger Zeichenfolgenoperationen in Auflistungen
 
 Der <xref:System.Collections>-Namespace enthält Klassen und Member, die standardmäßig kulturabhängiges Verhalten bereitstellen. Die parameterlosen Konstruktoren für die <xref:System.Collections.CaseInsensitiveComparer>- und <xref:System.Collections.CaseInsensitiveHashCodeProvider>-Klasse initialisieren eine neue Instanz mit der <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType>-Eigenschaft. Alle Überladungen der <xref:System.Collections.Specialized.CollectionsUtil.CreateCaseInsensitiveHashtable%2A?displayProperty=nameWithType>-Methode erstellen eine neue Instanz der <xref:System.Collections.Hashtable>-Klasse standardmäßig mit der `Thread.CurrentCulture`-Eigenschaft. Überladungen der <xref:System.Collections.ArrayList.Sort%2A?displayProperty=nameWithType>-Methode führen kulturabhängige Sortierungen standardmäßig mit der `Thread.CurrentCulture`-Eigenschaft aus. Wenn Zeichenfolgen als Schlüssel verwendet werden, kann sich <xref:System.Collections.SortedList> auf das Sortieren und Nachschlagen in einer `Thread.CurrentCulture`-Instanz auswirken. Befolgen Sie die Verwendungsempfehlungen in diesem Abschnitt, um aus diesen Klassen und Methoden im `Collections`-Namespace kulturunabhängige Ergebnisse abzurufen.
 
@@ -137,7 +137,7 @@ Wenn Sie eine `SortedList`-Instanz für Zeichenfolgen verwenden, ohne eine benut
 
 Überladungen der `ArrayList.Sort`-Methode führen kulturabhängige Sortierungen standardmäßig mit der `Thread.CurrentCulture`-Eigenschaft aus. Die Ergebnisse können je nach Kultur aufgrund der unterschiedlichen Sortierreihenfolgen variieren. Um kulturabhängiges Verhalten zu vermeiden, verwenden Sie die Überladung dieser Methode, die eine `IComparer`-Implementierung akzeptieren. Geben Sie für den `comparer`-Parameter eine benutzerdefinierte invariante Comparer-Klasse an, in der `CultureInfo.InvariantCulture` verwendet wird. Ein Beispiel für eine benutzerdefinierte invariante Comparer-Klasse finden Sie im Thema [Verwenden der SortedList-Klasse](#cpconperformingculture-insensitivestringoperationsincollectionsanchor1).
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Collections.CaseInsensitiveComparer>
 - <xref:System.Collections.CaseInsensitiveHashCodeProvider>

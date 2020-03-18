@@ -4,11 +4,11 @@ description: Lernen Sie die Terminologie für Pakete, Metapakete und Frameworks.
 author: richlander
 ms.date: 06/20/2016
 ms.openlocfilehash: 657519edf1c0860ee3222c71ce85723e19029a9d
-ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/02/2020
-ms.locfileid: "76965892"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79397932"
 ---
 # <a name="packages-metapackages-and-frameworks"></a>Pakete, Metapakete und Frameworks
 
@@ -106,7 +106,7 @@ Die beiden primären paketbasierten Frameworks, die innerhalb .NET Core verwende
 - `netstandard`
 - `netcoreapp`
 
-### <a name="net-standard"></a>.NET-Standard
+### <a name="net-standard"></a>.NET Standard
 
 Das .NET Standard-Framework ([Zielframeworkmoniker (TFM)](../standard/frameworks.md): `netstandard`) repräsentiert die APIs, die von [.NET Standard](../standard/net-standard.md) definiert werden und darauf basieren. Bibliotheken, die auf mehreren Laufzeiten ausgeführt werden sollen, sollten dieses Framework als Ziel haben. Sie werden auf jeder mit .NET Standard kompatiblen Laufzeit, z. B. .NET Core, .NET Framework und Mono/Xamarin unterstützt. Jede dieser Laufzeiten unterstützt eine Reihe von .NET Standardversionen, je nachdem, welche APIs sie implementieren.
 

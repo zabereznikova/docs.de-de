@@ -11,10 +11,10 @@ helpviewer_keywords:
 - managed threading
 ms.assetid: e51988e7-7f4b-4646-a06d-1416cee8d557
 ms.openlocfilehash: a76cc40f308ac2f636a650cd4a17da0e94e23a34
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78160260"
 ---
 # <a name="managed-threading-best-practices"></a>Best Practices für verwaltetes Threading
@@ -172,7 +172,7 @@ Verwenden Sie die Eigenschaft <xref:System.Environment.ProcessorCount?displayPro
   
 - Vermeiden Sie die Bereitstellung von statischen Methoden, die den statischen Zustand ändern. Bei den üblichen Serverszenarios wird der statische Zustand in mehreren Anforderungen gemeinsam genutzt, d. h., mehrere Threads können den Code gleichzeitig ausführen. Dadurch werden Threadingfehler möglich. Verwenden Sie u. U. ein Entwurfsmuster, bei dem Daten in Instanzen gekapselt werden, die nicht in mehreren Anforderungen gemeinsam genutzt werden. Darüber hinaus können bei der Synchronisierung statischer Daten Aufrufe zwischen statischen Methoden, die den Zustand ändern, zu Deadlocks oder redundanter Synchronisierung führen und die Leistung beeinträchtigen.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Threading](../../../docs/standard/threading/index.md)
 - [Threads and Threading (Threads und Threading)](../../../docs/standard/threading/threads-and-threading.md)

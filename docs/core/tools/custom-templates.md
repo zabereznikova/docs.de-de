@@ -4,10 +4,10 @@ description: Erfahren Sie mehr zu benutzerdefinierten Vorlagen für alle Arten v
 author: thraka
 ms.date: 06/14/2019
 ms.openlocfilehash: 8e1ac4ca21a8a90ad0f7c9bd3dd11281eb4a6e02
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "73420882"
 ---
 # <a name="custom-templates-for-dotnet-new"></a>Benutzerdefinierte Vorlagen für dotnet new
@@ -35,7 +35,7 @@ Eine Vorlage besteht aus den folgenden Teilen:
 - Quelldateien und -ordner
 - Konfigurationsdatei (*template.json*)
 
-### <a name="source-files-and-folders"></a>Quelldateien und -ordner
+### <a name="source-files-and-folders"></a>Quelldateien und -ordnern
 
 Die Quelldateien und -ordner enthalten die Dateien und Ordner, von denen Sie möchten, dass sie vom Vorlagenmodul verwendet werden, wenn der `dotnet new <TEMPLATE>`-Befehl ausgeführt wird. Die Vorlagen-Engine wurde so entwickelt, dass sie *ausführbare Projekte* als Quellcode verwendet, um Projekte zu erzeugen. Dies hat mehrere Vorteile:
 
@@ -52,7 +52,7 @@ Dateien, die anhand der Vorlage generiert werden, können basierend auf der Logi
 
 Die Datei *template.json* wird in den Ordner *template.config* im Stammverzeichnis der Vorlage platziert. Die Datei bietet der Vorlagen-Engine Konfigurationsinformationen. Die Mindestkonfiguration erfordert die in der folgenden Tabelle aufgelisteten Member, was zum Erstellen einer funktionsfähigen Vorlage ausreicht.
 
-| Member            | Typ          | BESCHREIBUNG |
+| Member            | Geben Sie Folgendes ein:          | Beschreibung |
 | ----------------- | ------------- | ----------- |
 | `$schema`         | URI           | Das JSON-Schema für die Datei *template.json*. Editor, die JSON-Schemas unterstützen, ermöglichen Features zum Bearbeiten von JSON-Dateien, wenn das Schema angegeben ist. [Visual Studio-Code](https://code.visualstudio.com/) erfordert z.B., dass dieser Member IntelliSense aktiviert. Verwenden Sie den Wert `http://json.schemastore.org/template`. |
 | `author`          | string        | Der Autor der Vorlage. |
@@ -111,7 +111,7 @@ Ein Vorlagenpaket in Form eines NuGet-Paket des Typs *.nupkg*. erfordert, dass a
 
 Eine einfache Möglichkeit, alle Codedateien von der Kompilierung durch Ihr Vorlagenprojekt auszuschließen, besteht darin, das Element `<Compile Remove="**\*" />` in Ihrer Projektdatei innerhalb eines Elements des Typs `<ItemGroup>` zu verwenden.
 
-Eine einfache Möglichkeit, Ihr Vorlagenpaket zu strukturieren, besteht darin, alle Vorlagen in einzelnen Ordnern und dann jeden Vorlagenordner innerhalb eines Ordners des Typs *templates* abzulegen, der sich im gleichen Verzeichnis wie Ihre *CSPROJ*-Datei befindet. Auf diese Weise können Sie ein einzelnes Projektelement verwenden, um alle Dateien und Ordner als **Inhalt** in die *Vorlagen* aufzunehmen. Erstellen Sie innerhalb eines `<ItemGroup>`-Elements ein `<Content Include="templates\**\*" Exclude="templates\**\bin\**;templates\**\obj\**" />`-Element.
+Eine einfache Möglichkeit, Ihr Vorlagenpaket zu strukturieren, besteht darin, alle Vorlagen in einzelnen Ordnern und dann jeden Vorlagenordner innerhalb eines Ordners des Typs *templates* abzulegen, der sich im gleichen Verzeichnis wie Ihre *CSPROJ*-Datei befindet. Auf diese Weise können Sie ein einzelnes Projektelement verwenden, um alle Dateien und Ordner als *Inhalt* in die **Vorlagen** aufzunehmen. Erstellen Sie innerhalb eines `<ItemGroup>`-Elements ein `<Content Include="templates\**\*" Exclude="templates\**\bin\**;templates\**\obj\**" />`-Element.
 
 Hier ein Beispiel einer *CSPROJ*-Datei, die alle obigen Vorgaben erfüllt. Der untergeordnete Ordner *templates* wird im Paketordner *content* gepackt, wobei alle Codedateien von der Kompilierung ausgeschlossen werden.
 
@@ -248,7 +248,7 @@ Nachdem eine Vorlage installiert wurde, verwenden Sie die Vorlage, indem Sie den
 dotnet new <TEMPLATE>
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Create a custom template for dotnet new (tutorial) (Erstellen einer benutzerdefinierten Vorlage für dotnet new (Tutorial))](../tutorials/cli-templates-create-item-template.md)
 - [dotnet/templating GitHub repo Wiki (GitHub-Repositorywiki dotnet/templating)](https://github.com/dotnet/templating/wiki)

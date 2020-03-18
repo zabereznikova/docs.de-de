@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Überprüfen des Verbindungsstatus'
+title: 'Gewusst wie: Überprüfen des Verbindungsstatus'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Web connections [Visual Basic]
@@ -8,13 +8,13 @@ helpviewer_keywords:
 - connection status [Visual Basic]
 ms.assetid: 4d9ee8ab-9a6f-4279-ace4-b75afc976a74
 ms.openlocfilehash: 89ef431759dac25bd213fd954db0712ad95434b0
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74345881"
 ---
-# <a name="how-to-check-connection-status-in-visual-basic"></a>Vorgehensweise: Überprüfen des Verbindungsstatus in Visual Basic
+# <a name="how-to-check-connection-status-in-visual-basic"></a>Gewusst wie: Überprüfen des Verbindungsstatus in Visual Basic
 
 Die <xref:Microsoft.VisualBasic.Devices.Network.IsAvailable>-Eigenschaft kann verwendet werden, um zu ermitteln, ob der Computer über eine funktionierende Netzwerk- oder Internetverbindung verfügt.  
   
@@ -28,7 +28,7 @@ Die <xref:Microsoft.VisualBasic.Devices.Network.IsAvailable>-Eigenschaft kann ve
   
      Dieses Codebeispiel ist auch als IntelliSense-Codeausschnitt verfügbar. In der Codeausschnittauswahl ist er unter **Konnektivität und Netzwerk** zu finden. Weitere Informationen finden Sie unter [Codeausschnitte](/visualstudio/ide/code-snippets).  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:Microsoft.VisualBasic.Devices.Network?displayProperty=nameWithType>
 - <xref:Microsoft.VisualBasic.Devices.Network.IsAvailable>

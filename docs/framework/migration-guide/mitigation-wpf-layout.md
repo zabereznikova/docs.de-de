@@ -3,10 +3,10 @@ title: 'Entschärfung: WPF-Layout'
 ms.date: 03/30/2017
 ms.assetid: 805ffd7f-8d1e-427e-a648-601ca8ec37a5
 ms.openlocfilehash: 7a074698fd203d0c5f9b799bfee8a6a9cb40800e
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73457782"
 ---
 # <a name="mitigation-wpf-layout"></a>Entschärfung: WPF-Layout
@@ -36,6 +36,6 @@ Das Layout der WPF-Steuerelemente kann sich leicht ändern.
 <AppContextSwitchOverrides value="Switch.MS.Internal.DoNotApplyLayoutRoundingToMarginsAndBorderThickness=true" />  
 ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Anwendungskompatibilität](application-compatibility.md)

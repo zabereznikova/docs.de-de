@@ -4,10 +4,10 @@ description: Erste Schritte mit der .NET-Technologiefamilie.
 ms.date: 12/03/2019
 ms.custom: updateeachrelease
 ms.openlocfilehash: 20332f4dcc0664287873a27e0064a4765b1ecde7
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "77124220"
 ---
 # <a name="welcome-to-net"></a>Willkommen bei .NET
@@ -20,7 +20,7 @@ Erstellen Sie viele Arten von Apps mit .NET, z.B. Cloud, IoT und Spiele, anhand 
 
 Informationen zu .NET finden Sie auf den folgenden Blogs:
 
-- [.NET-Blog](https://devblogs.microsoft.com/dotnet/)
+- [.NET Blog](https://devblogs.microsoft.com/dotnet/)
 - [ASP.NET-Blog](https://devblogs.microsoft.com/aspnet/)
 - [Der Visual Studio-Blog](https://devblogs.microsoft.com/visualstudio/)
 - [Das Visual Basic-Team](https://devblogs.microsoft.com/vbteam/)
@@ -46,7 +46,7 @@ Diese Dokumentation umfasst die Bandbreite von .NET über Plattformen und Sprach
 - [Leitfaden für .NET Core](core/index.md)
 - [Leitfaden für .NET Framework](framework/index.md)
 - [Leitfaden für C#](csharp/index.yml)
-- [Leitfaden für F#](fsharp/index.yml)
+- [F# Guide](fsharp/index.yml)
 - [Leitfaden für Visual Basic](visual-basic/index.yml)
 - [Leitfaden für ML.NET](machine-learning/index.yml)
 - [.NET für Apache Spark](spark/index.yml)

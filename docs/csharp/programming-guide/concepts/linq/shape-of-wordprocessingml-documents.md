@@ -3,10 +3,10 @@ title: Form von WordprocessingML-Dokumenten (C#)
 ms.date: 07/20/2015
 ms.assetid: 3791b5e0-c502-469b-bb75-a7bf6fdd0a94
 ms.openlocfilehash: 58c028fed465f45fdcf8f63f2119eb8e8b201e32
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/24/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "76732677"
 ---
 # <a name="shape-of-wordprocessingml-documents-c"></a>Form von WordprocessingML-Dokumenten (C#)
@@ -94,6 +94,6 @@ using (Package wdPackage = Package.Open("SampleDoc.docx", FileMode.Open, FileAcc
 - [Anatomy of a WordProcessingML File (Aufbau einer WordprocessingML-Datei)](http://officeopenxml.com/anatomyofOOXML.php)
 - [Introduction to WordprocessingML (Einführung in WordprocessingML)](https://ericwhite.com/blog/introduction-to-wordprocessingml-series/)
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Tutorial: Bearbeiten von Inhalten in einem WordprocessingML-Dokument (C#)](./shape-of-wordprocessingml-documents.md)
+- [Tutorial: Manipulating Content in a WordprocessingML Document (C#) (Tutorial: Bearbeiten von Inhalten in einem WordprocessingML-Dokument (C#))](./shape-of-wordprocessingml-documents.md)

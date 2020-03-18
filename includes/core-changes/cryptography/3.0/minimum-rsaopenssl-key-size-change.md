@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 2fb980c8b75e25ba347c56ccc1c90f2959e83e21
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "74567972"
 ---
 ### <a name="minimum-size-for-rsaopenssl-key-generation-has-increased"></a>Die Mindestgröße für die Generierung von RSAOpenSsl-Schlüsseln wurde heraufgesetzt
@@ -22,7 +22,7 @@ Diese Änderung wurde vorgenommen, weil für OpenSSL (Software zum Durchführen 
 
 3.0
 
-#### <a name="recommended-action"></a>Empfohlene Maßnahme
+#### <a name="recommended-action"></a>Empfohlene Aktion
 
 Wenn Sie eine der betroffenen APIs aufzurufen, stellen Sie sicher, dass die Größe der generierten Schlüssel nicht kleiner ist als der Anbietermindestwert.
 

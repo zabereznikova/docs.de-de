@@ -3,10 +3,10 @@ title: Einführung in reine funktionale Transformationen (C#)
 ms.date: 07/20/2015
 ms.assetid: 8495c9d9-2d02-4aa0-8a10-9e8794b985fe
 ms.openlocfilehash: 34e2fdfae7c0243ca6f59354c453396648c3fa85
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "69592102"
 ---
 # <a name="introduction-to-pure-functional-transformations-c"></a>Einführung in reine funktionale Transformationen (C#)
@@ -18,7 +18,7 @@ Dieser Abschnitt führt Sie in das Thema "funktionale Transformationen" ein und 
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
-|Thema|BESCHREIBUNG|  
+|Thema|Beschreibung|  
 |-----------|-----------------|  
 |[Konzepte und Terminologie (funktionale Transformation) (C#)](./concepts-and-terminology-functional-transformation.md)|Enthält eine Einführung in die Konzepte und Begriffe der Transformationen mit reinen Funktionen.|  
 |[Funktionale Programmierung und Imperative Programmierung (C#)](./functional-programming-vs-imperative-programming.md)|Benennt die Gemeinsamkeiten und Unterschiede der funktionalen Programmierung und der herkömmlichen imperativen (prozeduralen) Programmierung.|  

@@ -4,11 +4,11 @@ description: In diesem Artikel erfahren Sie, wie Sie innere Joins mit LINQ in C#
 ms.date: 12/01/2016
 ms.assetid: 45bceed6-f549-4114-a9b1-b44feb497742
 ms.openlocfilehash: a3e8e9bd97ec630797bc48a3302b27ed45d9103e
-ms.sourcegitcommit: 5dcfeb59179e81071f54840d4902cbe00b184294
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54857956"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "61659838"
 ---
 # <a name="perform-inner-joins"></a>Ausführen von inneren Verknüpfungen
 
@@ -56,7 +56,7 @@ Die zweite `join`-Klausel in C# verknüpft die von der ersten Verknüpfung zurü
 
 In den folgenden Beispielen wird Ihnen gezeigt, wie eine innere Verknüpfung mithilfe einer Gruppenverknüpfung implementiert wird.
 
-Die Liste von `Person`-Objekten in `query1` ist über eine Gruppenverknüpfung mit der Liste von `Pet`-Objekten verknüpft, basierend auf der `Person`, die mit der Eigenschaft `Pet.Owner` übereinstimmt. Die Gruppeverknüpfung erstellt eine Auflistung von Zwischengruppen, bei der jede Gruppe aus einem `Person`-Objekt und einer Sequenz von übereinstimmenden `Pet`-Objekten besteht.
+Die Liste von `query1`-Objekten in `Person` ist über eine Gruppenverknüpfung mit der Liste von `Pet`-Objekten verknüpft, basierend auf der `Person`, die mit der Eigenschaft `Pet.Owner` übereinstimmt. Die Gruppeverknüpfung erstellt eine Auflistung von Zwischengruppen, bei der jede Gruppe aus einem `Person`-Objekt und einer Sequenz von übereinstimmenden `Pet`-Objekten besteht.
 
 Durch das Hinzufügen einer zweiten `from`-Klausel zur Abfrage, wird diese Sequenz von Sequenzen in eine längere Sequenz vereint (oder vereinfacht). Der Typ der Elemente der endgültigen Sequenz wird von der `select`-Klausel festgelegt. In diesem Beispiel ist dieser Typ ein anonymer Typ, der aus der Eigenschaft `Person.FirstName` und `Pet.Name` für jedes übereinstimmende Paar besteht.
 
@@ -64,7 +64,7 @@ Das Ergebnis von `query1` entspricht dem Ergebnissatz, der mithilfe der `join`-K
 
 [!code-csharp[CsLINQProgJoining#4](~/samples/snippets/csharp/concepts/linq/how-to-perform-inner-joins_4.cs)]
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Linq.Enumerable.Join%2A>
 - <xref:System.Linq.Enumerable.GroupJoin%2A>

@@ -9,10 +9,10 @@ helpviewer_keywords:
 - tasks, with other asynchronous models
 ms.assetid: e7b31170-a156-433f-9f26-b1fc7cd1776f
 ms.openlocfilehash: 27766c10d0624b5eda8256a3211662036a1b16b3
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73139953"
 ---
 # <a name="tpl-and-traditional-net-framework-asynchronous-programming"></a>TPL und herkömmliche asynchrone .NET Framework-Programmierung
@@ -102,7 +102,7 @@ ms.locfileid: "73139953"
  [!code-csharp[FromAsync#10](../../../samples/snippets/csharp/VS_Snippets_Misc/fromasync/cs/snippet10.cs#10)]
  [!code-vb[FromAsync#10](../../../samples/snippets/visualbasic/VS_Snippets_Misc/fromasync/vb/snippet10.vb#10)]  
   
- Ein umfassenderes Beispiel, in dem auch die Ausnahmebehandlung und das Aufrufen der Methode im Clientcode beschrieben wird, finden Sie unter [Vorgehensweise: Umschließen von EAP-Mustern in einer Aufgabe](../../../docs/standard/parallel-programming/how-to-wrap-eap-patterns-in-a-task.md).  
+ Ein umfassenderes Beispiel, in dem auch die Ausnahmebehandlung und das Aufrufen der Methode im Clientcode beschrieben werden, finden Sie unter [Gewusst wie: Umschließen von ereignisbasierten APM-Mustern in einer Aufgabe](../../../docs/standard/parallel-programming/how-to-wrap-eap-patterns-in-a-task.md).  
   
  Beachten Sie, dass alle durch <xref:System.Threading.Tasks.TaskCompletionSource%601> erstellten Aufgaben von dieser TaskCompletionSource gestartet werden. Der Benutzercode sollte daher für diese Aufgaben nicht die Start-Methode aufrufen.  
   
@@ -117,6 +117,6 @@ ms.locfileid: "73139953"
 ## <a name="using-the-streamextensions-sample-code"></a>Verwenden des StreamExtensions-Beispielcodes  
  Die Datei „Streamextensions.cs“ unter [Beispiele für die parallele Programmierung mit .NET Framework 4](https://code.msdn.microsoft.com/ParExtSamples) enthält mehrere Referenzimplementierungen, in denen Aufgabenobjekte für asynchrone Datei- und Netzwerk-E/A verwendet werden.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Task Parallel Library (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)

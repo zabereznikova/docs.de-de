@@ -3,10 +3,10 @@ title: Überwachen von Containeranwendungsdiensten
 description: Lernen Sie einige wichtige Aspekte des Überwachens von Containerarchitekturen kennen.
 ms.date: 02/15/2019
 ms.openlocfilehash: e14553d510751d8a75020a1b6beb9fd7bc29596e
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "68673457"
 ---
 # <a name="monitor-containerized-application-services"></a>Überwachen von Containeranwendungsdiensten

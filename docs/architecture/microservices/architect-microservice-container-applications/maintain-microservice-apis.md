@@ -3,10 +3,10 @@ title: Erstellen, Weiterentwickeln und Verwalten von Versionen von Microservice-
 description: Erstellen Sie Microservice-APIs und Verträge unter Berücksichtigung von Weiterentwicklung und Versionsverwaltung angesichts der Tatsache, dass Anforderungen sich ändern.
 ms.date: 09/20/2018
 ms.openlocfilehash: 1972d02d8bf7935c71bfd383707ae19ea2baded9
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "68672897"
 ---
 # <a name="creating-evolving-and-versioning-microservice-apis-and-contracts"></a>Erstellen, Weiterentwickeln und Verwalten von Versionen von Microservice-APIs und -verträgen

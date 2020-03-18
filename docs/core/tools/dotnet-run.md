@@ -3,17 +3,17 @@ title: Befehl „dotnet run“
 description: Der dotnet run-Befehl bietet eine praktische Option zum Ausführen der Anwendung aus dem Quellcode.
 ms.date: 02/19/2020
 ms.openlocfilehash: e442ed56d676ffd189ef6d394d840cea671c2dc6
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "78157075"
 ---
 # <a name="dotnet-run"></a>dotnet run
 
 **Dieser Artikel gilt für:** ✔️ .NET Core 2.x SDK und neuere Versionen
 
-## <a name="name"></a>name
+## <a name="name"></a>Name
 
 `dotnet run`: Führt Quellcode ohne explizite Kompilierungs- oder Startbefehle aus.
 
@@ -98,7 +98,7 @@ Der Befehl `dotnet run` löst die Abhängigkeiten der Anwendungen außerhalb der
 
 - **`-r|--runtime <RUNTIME_IDENTIFIER>`**
 
-  Gibt die Ziellaufzeit an, für die Pakete wiederhergestellt werden sollen Eine Liste der Runtime-IDs (RIDs) finden Sie unter [RID-Katalog](../rid-catalog.md). Die Kurzoption `-r` ist ab .NET Core 3.0 SDK verfügbar.
+  Gibt die Ziellaufzeit an, für die Pakete wiederhergestellt werden sollen Eine Liste der Runtime-IDs (RIDs) finden Sie im [RID-Katalog](../rid-catalog.md). Die Kurzoption `-r` ist ab .NET Core 3.0 SDK verfügbar.
 
 - **`-v|--verbosity <LEVEL>`**
 

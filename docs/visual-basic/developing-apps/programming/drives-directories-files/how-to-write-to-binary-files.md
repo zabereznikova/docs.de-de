@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Schreiben in Binärdateien'
+title: 'Gewusst wie: Schreiben in Binärdateien'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - files [Visual Basic], binary access
@@ -7,13 +7,13 @@ helpviewer_keywords:
 - binary files [Visual Basic], writing in Visual Basic
 ms.assetid: 59fae125-de5b-4c96-883c-209f4a55112c
 ms.openlocfilehash: 72d019f5f49868bd84d0507535e8ebc547b50e25
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74334429"
 ---
-# <a name="how-to-write-to-binary-files-in-visual-basic"></a>Vorgehensweise: Schreiben in Binärdateien in Visual Basic
+# <a name="how-to-write-to-binary-files-in-visual-basic"></a>Gewusst wie: Schreiben in Binärdateien in Visual Basic
 
 Die <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllBytes%2A>-Methode schreibt Daten in eine Binärdatei. Wenn der `append`-Parameter `True` ist, fügt er die Daten an die Datei an. Andernfalls werden die Daten in der Datei überschrieben.
 
@@ -43,7 +43,7 @@ Die folgenden Bedingungen können einen Ausnahmefehler verursachen:
 
 - Dem Benutzer fehlen die erforderlichen Berechtigungen zum Anzeigen des Pfades (<xref:System.Security.SecurityException>).
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllBytes%2A>
-- [Vorgehensweise: Schreiben von Text in Dateien](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-write-text-to-files.md)
+- [Gewusst wie: Schreiben von Text in Dateien](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-write-text-to-files.md)

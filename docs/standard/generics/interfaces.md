@@ -9,10 +9,10 @@ helpviewer_keywords:
 - ordering comparisons [.NET Framework]
 ms.assetid: 88bf5b04-d371-4edb-ba38-01ec7cabaacf
 ms.openlocfilehash: 704ada32d428c468d5b71a3f1390568ca586079e
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75708323"
 ---
 # <a name="generic-interfaces"></a>Generische Schnittstellen
@@ -40,7 +40,7 @@ Dieses Thema bietet einen Überblick über generische Schnittstellen, die allgem
   
  Die generische <xref:System.Collections.Generic.IEnumerable%601>-Schnittstelle stellt eine generische Enumeratorstruktur bereit. Die generische <xref:System.Collections.Generic.IEnumerator%601>-Schnittstelle, die von generischen Enumeratoren implementiert wird, erbt die nicht generische <xref:System.Collections.IEnumerator>-Schnittstelle. Die Member <xref:System.Collections.IEnumerator.MoveNext%2A> und <xref:System.Collections.IEnumerator.Reset%2A>, die nicht vom `T`-Typparameter abhängig sind, sind nur für die nicht generische Schnittstelle vorhanden. Dies bedeutet, dass jeder Consumer der nicht generischen Schnittstelle auch die generische Schnittstelle verwenden kann.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Collections.Generic?displayProperty=nameWithType>
 - <xref:System.Collections.ObjectModel?displayProperty=nameWithType>

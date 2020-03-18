@@ -6,10 +6,10 @@ helpviewer_keywords:
 - programming
 ms.assetid: bc45a3de-ea36-46e6-a106-309a413d7804
 ms.openlocfilehash: 048bc70c2b5416d4377c5abcfdaf18a9312068db
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74352108"
 ---
 # <a name="programming-in-visual-basic"></a>Programmieren in Visual Basic
@@ -39,7 +39,7 @@ Dieser Abschnitt beschreibt Programmieraufgaben, über die Sie möglicherweise w
  [Verarbeiten von Laufwerken, Verzeichnissen und Dateien](drives-directories-files/index.md)  
  Enthält die Dokumentation für den Zugriff auf das Dateisystem mit dem `My.Computer.FileSystem`-Objekt.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Funktionen von Visual Basic](../../../visual-basic/programming-guide/language-features/index.md)
 - [Programmierkonzepte](../../../visual-basic/programming-guide/concepts/index.md)

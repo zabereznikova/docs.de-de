@@ -6,10 +6,10 @@ dev_langs:
 - csharp
 - vb
 ms.openlocfilehash: f8fec064507553b8208083578165965de2303a33
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74352437"
 ---
 # <a name="how-to-create-unsigned-friend-assemblies"></a>Vorgehensweise: Erstellen von unsignierten Friend-Assemblys
@@ -150,6 +150,6 @@ Es gibt Ähnlichkeiten zwischen dem Attribut <xref:System.Runtime.CompilerServic
 - <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>
 - [Assemblys in .NET](index.md)
 - [Friend-Assemblys](friend.md)
-- [Vorgehensweise: Erstellen von signierten Friend-Assemblys](create-signed-friend.md)
+- [How to: Erstellen von signierten Friend-Assemblys](create-signed-friend.md)
 - [C#-Programmierhandbuch](../../csharp/programming-guide/index.md)
 - [Programmierkonzepte (Visual Basic)](../../visual-basic/programming-guide/concepts/index.md)

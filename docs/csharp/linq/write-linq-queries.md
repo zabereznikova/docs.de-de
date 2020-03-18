@@ -4,10 +4,10 @@ description: Erfahren Sie, wie LINQ-Abfragen in C# geschrieben werden.
 ms.date: 12/01/2016
 ms.assetid: 30703f79-cf3a-4d02-b892-c95d58a1d9ed
 ms.openlocfilehash: ed32543b0422e0664a8577f2c27f7c7c00a719a1
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "65632872"
 ---
 # <a name="write-linq-queries-in-c"></a>Schreiben von LINQ-Abfragen in C\#
@@ -79,8 +79,8 @@ Sie kann mithilfe der implizierten Typisierung wie folgt geschrieben werden:
 int numCount = numbers.Where(n => n < 3 || n > 7).Count();
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Exemplarische Vorgehensweise: Schreiben von Abfragen in C#](../programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)
+- [Walkthrough: Writing Queries in C# (Exemplarische Vorgehensweise: Schreiben von Abfragen in C#)](../programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)
 - [Language-Integrated Query (LINQ)](index.md)
 - [where-Klausel](../language-reference/keywords/where-clause.md)

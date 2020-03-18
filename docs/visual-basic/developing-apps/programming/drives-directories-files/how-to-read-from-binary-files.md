@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Lesen aus Binärdateien'
+title: 'Gewusst wie: Lesen von Binärdateien'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - binary files [Visual Basic], reading from
@@ -8,13 +8,13 @@ helpviewer_keywords:
 - My.Computer.FileSystem object, reading from binary files
 ms.assetid: d2b1269e-24b6-42e0-9414-ae708db282d8
 ms.openlocfilehash: c33bc72a5c79901e3715ed6a587ffdb8e3565e48
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74335292"
 ---
-# <a name="how-to-read-from-binary-files-in-visual-basic"></a>Vorgehensweise: Lesen von Binärdateien in Visual Basic
+# <a name="how-to-read-from-binary-files-in-visual-basic"></a>Gewusst wie: Lesen von Binärdateien in Visual Basic
 
 Das `My.Computer.FileSystem`-Objekt bietet die `ReadAllBytes`-Methode zum Lesen von Binärdateien.  
   
@@ -30,7 +30,7 @@ Das `My.Computer.FileSystem`-Objekt bietet die `ReadAllBytes`-Methode zum Lesen 
   
 ## <a name="robust-programming"></a>Stabile Programmierung  
 
- Die folgenden Bedingungen können eine Ausnahme auslösen:  
+ Die folgenden Bedingungen können einen Ausnahmefehler auslösen:  
   
 - Der Pfad ist aus einem der folgenden Gründe ungültig: Es handelt sich um eine Zeichenfolge der Länge 0, der Pfad enthält nur Leerzeichen, er enthält ungültige Zeichen, oder es handelt sich um einen Gerätepfad (<xref:System.ArgumentException>).  
   
@@ -52,10 +52,10 @@ Das `My.Computer.FileSystem`-Objekt bietet die `ReadAllBytes`-Methode zum Lesen 
   
  Überprüfen Sie alle Eingaben, bevor Sie die Daten in der Anwendung verwenden. Die Datei kann andere Inhalte als erwartet enthalten. Die Methoden zum Lesen aus der Datei können fehlschlagen.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.ReadAllBytes%2A>
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllBytes%2A>
 - [Lesen aus Dateien](../../../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md)
-- [Vorgehensweise: Lesen aus Textdateien mit mehreren Formaten](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-text-files-with-multiple-formats.md)
+- [Gewusst wie: Lesen aus Textdateien mit mehreren Formaten](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-text-files-with-multiple-formats.md)
 - [Speichern von Daten in der Zwischenablage und Lesen von Daten aus der Zwischenablage](../../../../visual-basic/developing-apps/programming/computer-resources/storing-data-to-and-reading-from-the-clipboard.md)

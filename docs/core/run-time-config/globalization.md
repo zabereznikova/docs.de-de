@@ -4,10 +4,10 @@ description: Erfahren Sie mehr über Laufzeiteinstellungen, die Globalisierungsa
 ms.date: 11/27/2019
 ms.topic: reference
 ms.openlocfilehash: 3764d0eb714c094b44ae843a1e626073ff8d82e4
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/24/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "76733452"
 ---
 # <a name="run-time-configuration-options-for-globalization"></a>Laufzeitkonfigurationsoptionen für die Globalisierung

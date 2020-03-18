@@ -6,10 +6,10 @@ author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc,how-to
 ms.openlocfilehash: c1163a41cd2feb0e8785ae9d4c6a71dfbedf3f12
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "77092615"
 ---
 # <a name="interpret-model-predictions-using-permutation-feature-importance"></a>Interpretieren von Modellvorhersagen mit Permutation Feature Importance

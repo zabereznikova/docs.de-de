@@ -9,10 +9,10 @@ helpviewer_keywords:
 - bugreport compiler option [C#]
 ms.assetid: f39665e3-4f6f-4357-88a2-3274c7bec0c1
 ms.openlocfilehash: 0989678be070910c410d71717fe66679e1b70557
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "69603080"
 ---
 # <a name="-bugreport-c-compiler-options"></a>-bugreport (C#-Compileroptionen)
@@ -28,7 +28,7 @@ Gibt an, dass Debuginformationen zum Zweck einer späteren Analyse in eine Datei
  `file`  
  Der Name der Datei, die den Problembericht enthalten soll.  
   
-## <a name="remarks"></a>Anmerkungen  
+## <a name="remarks"></a>Hinweise  
  Die Option **-bugreport** gibt an, dass die folgende Informationen in `file` eingefügt werden soll:  
   
 - Eine Kopie aller Quellcodedateien in der Kompilierung.  
@@ -53,7 +53,7 @@ Gibt an, dass Debuginformationen zum Zweck einer späteren Analyse in eine Datei
   
  Beachten Sie, dass im Inhalt der generierten Datei Quellcode offen gelegt wird, was zu einer unbeabsichtigten Veröffentlichung von Informationen führen konnte.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [C#-Compileroptionen](./index.md)
 - [-errorreport (C#-Compileroptionen)](./errorreport-compiler-option.md)

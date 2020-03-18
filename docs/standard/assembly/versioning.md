@@ -9,10 +9,10 @@ helpviewer_keywords:
 - versioning, assemblies
 ms.assetid: 775ad4fb-914f-453c-98ef-ce1089b6f903
 ms.openlocfilehash: bbb3dae2ce66c93d05a2a1c0f7e426901fa7b2e0
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73140182"
 ---
 # <a name="assembly-versioning"></a>Versionsverwaltung für Assemblys
@@ -71,7 +71,7 @@ Die Informationsversion ist eine Zeichenfolge, die zusätzliche Versionsinformat
   
 Die Informationsversion wird mit dem benutzerdefinierten Attribut <xref:System.Reflection.AssemblyInformationalVersionAttribute?displayProperty=nameWithType> dargestellt. Weitere Informationen über das Informationsversionsattribut finden Sie unter [Festlegen von Assemblyattributen](set-attributes.md).  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [So sucht Common Language Runtime nach Assemblys](../../framework/deployment/how-the-runtime-locates-assemblies.md)
 - [Konfigurieren von Apps](../../framework/configure-apps/index.md)

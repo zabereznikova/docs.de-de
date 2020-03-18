@@ -15,10 +15,10 @@ helpviewer_keywords:
 - events [.NET Framework]
 ms.assetid: b6f65241-e0ad-4590-a99f-200ce741bb1f
 ms.openlocfilehash: b8ed028bc1edabf14d7b2dd67d94b28d574d2eb4
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78159623"
 ---
 # <a name="handling-and-raising-events"></a>Behandeln und Auslösen von Ereignissen
@@ -90,12 +90,12 @@ Mit .NET können sich Abonnenten entweder statisch oder dynamisch für Ereignisb
   
 |Titel|Beschreibung|  
 |-----------|-----------------|  
-|[How to: Auslösen und Behandeln von Ereignissen](how-to-raise-and-consume-events.md)|In diesem Abschnitt sind Beispiele zum Auslösen und Verarbeiten von Ereignissen enthalten.|  
-|[How to: Behandeln mehrerer Ereignisse mit Ereigniseigenschaften](how-to-handle-multiple-events-using-event-properties.md)|In diesem Abschnitt wird die Verwendung von Ereigniseigenschaften zum Behandeln mehrerer Ereignisse veranschaulicht.|  
+|[Vorgehensweise: Auslösen und Behandeln von Ereignissen](how-to-raise-and-consume-events.md)|In diesem Abschnitt sind Beispiele zum Auslösen und Verarbeiten von Ereignissen enthalten.|  
+|[Vorgehensweise: Behandeln mehrerer Ereignisse mit Ereigniseigenschaften](how-to-handle-multiple-events-using-event-properties.md)|In diesem Abschnitt wird die Verwendung von Ereigniseigenschaften zum Behandeln mehrerer Ereignisse veranschaulicht.|  
 |[Beobachterentwurfsmuster](observer-design-pattern.md)|Das Entwurfsmuster, mit dem sich ein Abonnent bei einem Anbieter registrieren und Benachrichtigungen von diesem empfangen kann, wird beschrieben.|  
-|[How to: Verarbeiten von Ereignissen in einer Web Forms-Anwendung](how-to-consume-events-in-a-web-forms-application.md)|In diesem Abschnitt wird das Behandeln eines Ereignisses, das von einem Web Forms-Steuerelement ausgelöst wird, veranschaulicht.|  
+|[Vorgehensweise: Verarbeiten von Ereignissen in einer Web Forms-Anwendung](how-to-consume-events-in-a-web-forms-application.md)|In diesem Abschnitt wird das Behandeln eines Ereignisses, das von einem Web Forms-Steuerelement ausgelöst wird, veranschaulicht.|  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.EventHandler>
 - <xref:System.EventHandler%601>

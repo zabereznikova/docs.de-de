@@ -9,10 +9,10 @@ helpviewer_keywords:
 - param C# XML tag
 ms.assetid: 46d329b1-5b84-4537-9e17-73ca97313e4e
 ms.openlocfilehash: d16070a82531519dd276b2ea999623017769d716
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/28/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "76789758"
 ---
 # <a name="param-c-programming-guide"></a>\<param> (C#-Programmierhandbuch)
@@ -45,7 +45,7 @@ Kompilieren Sie mit [-doc](../../language-reference/compiler-options/doc-compile
 
 [!code-csharp[csProgGuideDocComments#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDocComments/CS/DocComments.cs#1)]
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [C#-Programmierhandbuch](../index.md)
 - [Empfohlene Tags für Dokumentationskommentare](./recommended-tags-for-documentation-comments.md)

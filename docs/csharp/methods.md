@@ -5,11 +5,11 @@ ms.technology: csharp-fundamentals
 ms.date: 05/21/2018
 ms.assetid: 577a8527-1081-4b36-9b9e-0685b6553c6e
 ms.openlocfilehash: f44c83408e884d76eef5e2b5abbca511fbae2a1f
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73101486"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79398712"
 ---
 # <a name="methods"></a>Methoden
 
@@ -165,7 +165,7 @@ Die Verwendung von zwei optionalen Parametern wirkt sich auf die *Überladungsau
 
 <a name="return"></a>
 
-## <a name="return-values"></a>Rückgabewert
+## <a name="return-values"></a>Rückgabewerte
 
 Methoden können einen Wert an die aufrufende Funktion (den Aufrufer) zurückgeben. Wenn der Rückgabetyp (der vor dem Methodennamen aufgeführte Typ) nicht `void` ist, kann die Methode den Wert mithilfe des `return`-Schlüsselworts zurückgeben. Eine Anweisung mit dem Schlüsselwort `return`, gefolgt von einem Wert, der dem Rückgabetyp entspricht, gibt diesen Wert an den Methodenaufrufer zurück. Methoden mit einem anderen Rückgabetyp als „void“ müssen das `return` -Schlüsselwort verwenden, um einen Wert zurückzugeben. Das `return` -Schlüsselwort beendet außerdem die Ausführung der Methode.
 
@@ -240,7 +240,7 @@ Weitere Informationen finden Sie unter [Erweiterungsmethoden](programming-guide/
 
 Mithilfe der Async-Funktion können Sie asynchrone Methoden aufrufen, ohne explizite Rückrufe verwenden oder den Code manuell über mehrere Methoden oder Lambda-Ausdrücke teilen zu müssen.
 
-Wenn Sie eine Methode mit dem Modifizierer [async](language-reference/keywords/async.md) kennzeichnen, können Sie den Operator [await](language-reference/operators/await.md) in der Methode verwenden. Wenn ein `await`-Ausdruck in der asynchronen Methode erreicht wird, wird die Steuerung an den Aufrufer zurückgegeben, wenn die erwartete Aufgabe nicht fertig ist, und die Ausführung der Methode mit dem Schlüsselwort `await` wird angehalten, bis die erwartete Aufgabe abgeschlossen ist. Wenn die Aufgabe abgeschlossen ist, kann die Ausführung in der Methode fortgesetzt werden.
+Wenn Sie eine Methode mit dem [async](language-reference/keywords/async.md) -Modifizierer kennzeichnen, können Sie den [await](language-reference/operators/await.md) Operator in der Methode verwenden. Wenn ein `await`-Ausdruck in der asynchronen Methode erreicht wird, wird die Steuerung an den Aufrufer zurückgegeben, wenn die erwartete Aufgabe nicht fertig ist, und die Ausführung der Methode mit dem Schlüsselwort `await` wird angehalten, bis die erwartete Aufgabe abgeschlossen ist. Wenn die Aufgabe abgeschlossen ist, kann die Ausführung in der Methode fortgesetzt werden.
 
 > [!NOTE]
 > Eine asynchrone Methode wird an den Aufrufer zurückgegeben, wenn sie entweder auf das erste erwartete Objekt trifft, das noch nicht abgeschlossen wurde, oder das Ende der asynchronen Methode erreicht.
@@ -278,11 +278,11 @@ Wenn die Methode `void` zurückgibt oder es sich um eine asynchrone Methode hand
 
 Ein Iterator führt eine benutzerdefinierte Iteration durch eine Auflistung durch, z. B. eine Liste oder ein Array. Ein Iterator verwendet die Anweisung [yield return](language-reference/keywords/yield.md), um jedes Element einzeln nacheinander zurückzugeben. Wenn eine `yield return`-Anweisung erreicht wird, wird die aktuelle Position gespeichert, sodass der Aufrufer das nächste Element in der Sequenz anfordern kann.
 
-Der Rückgabetyp eines Iterators kann <xref:System.Collections.IEnumerable>, <xref:System.Collections.Generic.IEnumerable%601>, <xref:System.Collections.IEnumerator>oder <xref:System.Collections.Generic.IEnumerator%601>sein.
+Der Rückgabetyp eines Iterators kann <xref:System.Collections.IEnumerable>, <xref:System.Collections.Generic.IEnumerable%601>, <xref:System.Collections.IEnumerator> oder <xref:System.Collections.Generic.IEnumerator%601> sein.
 
 Weitere Informationen finden Sie unter [Iteratoren](programming-guide/concepts/iterators.md).
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Zugriffsmodifizierer](language-reference/keywords/access-modifiers.md)
 - [Statische Klassen und statische Klassenmember](programming-guide/classes-and-structs/static-classes-and-static-class-members.md)

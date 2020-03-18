@@ -6,10 +6,10 @@ author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc, how-to, title-hack-0625
 ms.openlocfilehash: 11df1d5caaa7b7974360d863f85afbff18985e47
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73977089"
 ---
 # <a name="inspect-intermediate-data-during-processing"></a>Untersuchen von Zwischendaten bei der Verarbeitung
@@ -104,7 +104,7 @@ float averageCurrentPrice = (firstRow.CurrentPrice + secondRow.CurrentPrice + th
 
 ## <a name="inspect-values-in-a-single-column"></a>Überprüfen von Werten in einer einzelnen Spalte
 
-Mit der [`GetColumn`](xref:Microsoft.ML.Data.ColumnCursorExtensions.GetColumn*)-Methode kann zu jedem beliebigen Zeitpunkt im Modellerstellungsprozess auf Werte in einer einzelnen Spalte einer [`IDataView`](xref:Microsoft.ML.IDataView) zugegriffen werden. Die [`GetColumn`](xref:Microsoft.ML.Data.ColumnCursorExtensions.GetColumn*)-Methode gibt alle Werte in einer einzelne Spalte als [`IEnumerable`](xref:System.Collections.Generic.IEnumerable%601) wieder.
+Mit der [`IDataView`](xref:Microsoft.ML.IDataView)-Methode kann zu jedem beliebigen Zeitpunkt im Modellerstellungsprozess auf Werte in einer einzelnen Spalte einer [`GetColumn`](xref:Microsoft.ML.Data.ColumnCursorExtensions.GetColumn*) zugegriffen werden. Die [`GetColumn`](xref:Microsoft.ML.Data.ColumnCursorExtensions.GetColumn*)-Methode gibt alle Werte in einer einzelne Spalte als [`IEnumerable`](xref:System.Collections.Generic.IEnumerable%601) wieder.
 
 ```csharp
 IEnumerable<float> sizeColumn = data.GetColumn<float>("Size").ToList();

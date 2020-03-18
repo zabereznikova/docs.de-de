@@ -7,10 +7,10 @@ helpviewer_keywords:
 - garbage collection, latency modes
 ms.assetid: 96278bb7-6eab-4612-8594-ceebfc887d81
 ms.openlocfilehash: a8eaf0c80aa32978eead80c51a905cbcd66a537b
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74283596"
 ---
 # <a name="latency-modes"></a>Latenzmodi
@@ -62,7 +62,7 @@ Beachten Sie beim Verwenden des [GCLatencyMode.LowLatency](xref:System.Runtime.G
 
 - Sie können Garbage Collections der Generation 2 in Zeiten mit geringer Latenz erzwingen, indem Sie die <xref:System.GC.Collect%28System.Int32%2CSystem.GCCollectionMode%29?displayProperty=nameWithType>-Methode aufrufen.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.GC?displayProperty=nameWithType>
 - [Induzierte Sammlungen](../../../docs/standard/garbage-collection/induced.md)

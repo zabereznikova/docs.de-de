@@ -13,10 +13,10 @@ helpviewer_keywords:
 - formatting strings [.NET Framework], round-trip values
 ms.assetid: b609b277-edc6-4c74-b03e-ea73324ecbdb
 ms.openlocfilehash: 2e3a58ffe8332e0afec62461f6897d673e1da09f
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73132006"
 ---
 # <a name="how-to-round-trip-date-and-time-values"></a>Vorgehensweise: Roundtrip-Datums- und -Uhrzeitwerte
@@ -87,13 +87,13 @@ Diese Beispiele erfordern Folgendes:
 
   - <xref:System> (nur C#)
 
-  - <xref:System.Globalization?displayProperty=nameWithType>.
+  - <xref:System.Globalization?displayProperty=nameWithType>
 
   - <xref:System.IO?displayProperty=nameWithType>
 
   - <xref:System.Runtime.Serialization?displayProperty=nameWithType>
 
-  - <xref:System.Runtime.Serialization.Formatters.Binary?displayProperty=nameWithType>.
+  - <xref:System.Runtime.Serialization.Formatters.Binary?displayProperty=nameWithType>
 
 - Jedes Codebeispiel, ausgenommen der `DateInTimeZone`-Klasse, sollte in eine Klasse oder ein Visual Basic-Modul eingefügt, in Methoden umschlossen und über die `Main`-Methode aufgerufen werden.
 
@@ -101,4 +101,4 @@ Diese Beispiele erfordern Folgendes:
 
 - [Durchführen von Formatierungsvorgängen](../../../docs/standard/base-types/performing-formatting-operations.md)
 - [Auswählen zwischen „DateTime“, „DateTimeOffset“, „TimeSpan“ und „TimeZoneInfo“](../../../docs/standard/datetime/choosing-between-datetime.md)
-- [Standard Date and Time Format Strings](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)
+- [Standard-Formatzeichenfolgen für Datum und Uhrzeit](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)

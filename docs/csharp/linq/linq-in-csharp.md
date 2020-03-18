@@ -4,10 +4,10 @@ description: Dieser Artikel enthält Links zu Themen, in denen ausführlichere I
 ms.date: 11/30/2016
 ms.assetid: 8eb3284f-0ab9-4cad-9216-2da58d9761a5
 ms.openlocfilehash: 0b9301074996528cd1fbcfebde3a0a57b15e2f15
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "73421765"
 ---
 # <a name="linq-in-c"></a>LINQ in C\#
@@ -26,7 +26,7 @@ Bietet eine kurze Einführung in generischen Typen, wie sie in LINQ verwendet we
 Beschreibt die verschiedenen Methoden, mit der Sie aus Abfragen abgerufene Daten transformieren können
 
 [Type relationships in LINQ query operations (Typbeziehungen in LINQ-Abfragevorgängen)](../programming-guide/concepts/linq/type-relationships-in-linq-query-operations.md)  
-Beschreibt, wie Datentypen beibehalten bzw. in drei Teile eines LINQ-Abfragevorgangs transformiert werden
+Beschreibt, wie Datentypen beibehalten und/oder in den drei Bestandteilen eines LINQ-Abfragevorgangs transformiert werden
 
 [Query syntax and method syntax in LINQ (Abfragesyntax und Methodensyntax in LINQ)](../programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md)  
 Vergleicht Methodensyntax und Abfragesyntax als zwei Möglichkeiten, um eine LINQ-Abfrage auszudrücken
@@ -40,4 +40,4 @@ Beschreibt die Konstrukte in C#, die LINQ unterstützen
 Enthält eine Übersicht der Abfragen in LINQ und stellt Links zu weiteren Ressourcen bereit
 
 [Standard query operators overview (Übersicht über Standardabfrageoperatoren)](../programming-guide/concepts/linq/standard-query-operators-overview.md)  
-Führt die Standardmethoden ein, die in LINQ verwendet werden
+Einführung in die Standardmethoden, die in LINQ verwendet werden

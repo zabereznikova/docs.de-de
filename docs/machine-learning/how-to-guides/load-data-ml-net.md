@@ -6,10 +6,10 @@ author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc,how-to, title-hack-0625
 ms.openlocfilehash: 83aaae2d2e75b3076841750bf5d505390a538bc0
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74344755"
 ---
 # <a name="load-data-from-files-and-other-sources"></a>Laden von Daten aus Dateien und anderen Quellen
@@ -200,7 +200,7 @@ HousingData[] inMemoryCollection = new HousingData[]
 };
 ```
 
-Laden Sie die in-Memory-Sammlung mit der [`LoadFromEnumerable`](xref:Microsoft.ML.DataOperationsCatalog.LoadFromEnumerable*)-Methode in eine [`IDataView`](xref:Microsoft.ML.IDataView):
+Laden Sie die in-Memory-Sammlung mit der [`IDataView`](xref:Microsoft.ML.IDataView)-Methode in eine [`LoadFromEnumerable`](xref:Microsoft.ML.DataOperationsCatalog.LoadFromEnumerable*):
 
 > [!IMPORTANT]
 > [`LoadFromEnumerable`](xref:Microsoft.ML.DataOperationsCatalog.LoadFromEnumerable*) geht davon aus, dass das [`IEnumerable`](xref:System.Collections.IEnumerable)-Element, aus dem es geladen wird, threadsicher ist.

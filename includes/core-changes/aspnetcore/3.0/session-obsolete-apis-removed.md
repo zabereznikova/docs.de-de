@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 4dcb357570cb6597fde86c9e8f2acb74364cfaa3
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "73198443"
 ---
 ### <a name="session-state-obsolete-apis-removed"></a>Sitzungszustand: Veraltete APIs wurden entfernt.
@@ -18,7 +18,7 @@ Veraltete APIs zum Konfigurieren von Sitzungscookies wurden entfernt. Weitere In
 
 Diese Änderung erzwingt Konsistenz zwischen APIs zum Konfigurieren von Funktionen, die Cookies verwenden.
 
-#### <a name="recommended-action"></a>Empfohlene Maßnahme
+#### <a name="recommended-action"></a>Empfohlene Aktion
 
 Migrieren Sie alle Verwendungen der entfernten APIs zu ihren neueren Ersetzungen. Betrachten Sie das folgende Beispiel in `Startup.ConfigureServices`:
 

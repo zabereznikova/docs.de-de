@@ -3,10 +3,10 @@ title: Entwerfen einer an Microservice orientierten Anwendung
 description: .NET-Microservicearchitekturfür .NET-Containeranwendungen | Übersicht über die Vor- und Nachteile von microserviceorientierten Anwendungen zum Treffen fundierter Entscheidungen
 ms.date: 10/02/2018
 ms.openlocfilehash: 619440c02c1a82e05adb2cec9ddba933cd3e0a65
-ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/02/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "76965762"
 ---
 # <a name="design-a-microservice-oriented-application"></a>Entwerfen einer an Microservice orientierten Anwendung

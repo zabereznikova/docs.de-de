@@ -3,10 +3,10 @@ title: Continuous Integration (CI) mit dem .NET Core SDK und Tools
 description: Erfahren Sie, wie Sie das .NET Core SDK und die zugehörigen Tools auf dem Buildserver mit Continuous Integration verwenden.
 ms.date: 05/18/2017
 ms.openlocfilehash: 6e23a21dd36422a095e56519c9aa28ce2549f7b2
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/19/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77451037"
 ---
 # <a name="using-net-core-sdk-and-tools-in-continuous-integration-ci"></a>Verwenden des .NET Core SDK und der zugehörigen Tools in Continuous Integration (CI)
@@ -173,6 +173,6 @@ In diesem Dokument wird hauptsächlich beschrieben, wie Sie die .NET Core-Tools 
 
 Bei der Strukturierung des Buildprozesses für .NET Core-Code unter Verwendung der .NET Core-Tools können zwei allgemeine Ansätze verfolgt werden: die direkte Verwendung von MSBuild oder die Verwendung von .NET Core-Befehlszeilenbefehlen. Sie sollten den verwendeten Ansatz danach auswählen, wie vertraut Sie mit dem jeweiligen Ansatz sind und welche Kompromisse Sie in Bezug auf die Komplexität eingehen möchten. Mit MSBuild können Sie Ihren Buildprozess in Form von Tasks und Zielen beschrieben, Sie müssen jedoch die MSBuild-Projektdateisyntax beherrschen. Die Verwendung von .NET Core-Befehlszeilentools ist möglicherweise einfacher, erfordert aber, dass Sie Orchestrierungslogik in einer Skriptsprache wie `bash` oder PowerShell schreiben.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [.NET-Downloads – Linux](https://dotnet.microsoft.com/download?initial-os=linux)

@@ -3,10 +3,10 @@ title: 'Exemplarische Vorgehensweise: Zugreifen auf das Web mit „async“ und 
 ms.date: 07/20/2015
 ms.assetid: c95d8d71-5a98-4bf0-aaf4-45fed2ebbacd
 ms.openlocfilehash: 42b09dab26fd514e184163eaf41aff117d3a463f
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "74281785"
 ---
 # <a name="walkthrough-accessing-the-web-by-using-async-and-await-c"></a>Exemplarische Vorgehensweise: Zugreifen auf das Web mit „async“ und „await“ (C#)
@@ -32,7 +32,7 @@ Wenn Sie die Anwendungen nicht selbst erstellen möchten, können Sie [Asynchron
 
 3. Wählen Sie im Bereich **Installierte Vorlagen** den Eintrag Visual C# aus, und wählen Sie dann in der Liste der Projekttypen **WPF-Anwendung** aus.
 
-4. Geben Sie im Textfeld **Name** `AsyncExampleWPF` ein, und wählen Sie dann die Schaltfläche **OK** aus.
+4. Geben Sie im Textfeld **Name**`AsyncExampleWPF` ein, und wählen Sie dann die Schaltfläche **OK** aus.
 
      Das neue Projekt wird im **Projektmappen-Explorer** angezeigt.
 

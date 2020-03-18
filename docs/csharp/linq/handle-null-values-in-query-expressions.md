@@ -4,10 +4,10 @@ description: In diesem Artikel erfahren Sie, wie Sie NULL-Werte in Abfrageausdr�
 ms.date: 12/01/2016
 ms.assetid: ac63ae8b-724d-4251-9334-528f4e884ae7
 ms.openlocfilehash: c9a3aaec05fa029a8db66826bdcb4a1d106176e3
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "73736854"
 ---
 # <a name="handle-null-values-in-query-expressions"></a>Behandeln von NULL-Werten in Abfrageausdrücken
@@ -28,7 +28,7 @@ Wenn in einer join-Klausel nur einer der Vergleichsschlüssel ein Nullable-Wertt
 
 [!code-csharp[csProgGuideLINQ#83](~/samples/snippets/csharp/concepts/linq/how-to-handle-null-values-in-query-expressions_2.cs)]
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Nullable%601>
 - [Language-Integrated Query (LINQ)](index.md)

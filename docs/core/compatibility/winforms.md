@@ -3,11 +3,11 @@ title: Breaking Changes bei Windows Forms
 description: Listet die Breaking Changes bei Windows Forms für .NET Core auf.
 ms.date: 01/08/2020
 ms.openlocfilehash: 7fba78382d011bc9d489924fa185a44e598c5a76
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2020
-ms.locfileid: "77093018"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79398010"
 ---
 # <a name="breaking-changes-in-windows-forms"></a>Breaking Changes bei Windows Forms
 
@@ -95,6 +95,6 @@ Auf dieser Seite sind die folgenden Breaking Changes dokumentiert:
 
 ***
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Portieren einer Windows Forms-App zu .NET Core](../porting/winforms.md)

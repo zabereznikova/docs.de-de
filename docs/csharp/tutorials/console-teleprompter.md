@@ -5,15 +5,15 @@ ms.date: 03/06/2017
 ms.technology: csharp-fundamentals
 ms.assetid: 883cd93d-50ce-4144-b7c9-2df28d9c11a0
 ms.openlocfilehash: 09ce36e7a61f576dc4449976ce676701dc57c9cd
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "76921121"
 ---
 # <a name="console-app"></a>Konsolen-App
 
-In diesem Tutorial lernen Sie verschiedene Features in .NET Core und der Sprache C# kennen. Es werden die folgenden Themen abgedeckt:
+In diesem Tutorial lernen Sie verschiedene Features in .NET Core und der Sprache C# kennen. Sie lernen Folgendes:
 
 - Die Grundlagen zur .NET Core-CLI
 - Die Struktur einer C#-Konsolenanwendung
@@ -303,13 +303,13 @@ private static async Task GetInput(TelePrompterConfig config)
 }
 ```
 
-Diese neue Version von `ShowTeleprompter` ruft eine neue Methode in der `TeleprompterConfig`-Klasse auf. Jetzt müssen Sie `Main` aktualisieren, um anstelle von `ShowTeleprompter``RunTeleprompter` aufzurufen:
+Diese neue Version von `ShowTeleprompter` ruft eine neue Methode in der `TeleprompterConfig`-Klasse auf. Jetzt müssen Sie `Main` aktualisieren, um anstelle von `RunTeleprompter``ShowTeleprompter` aufzurufen:
 
 ```csharp
 RunTeleprompter().Wait();
 ```
 
-## <a name="conclusion"></a>Schlussbemerkung
+## <a name="conclusion"></a>Zusammenfassung
 
 In diesem Tutorial wurden verschiedene Features von C# und den .NET Core-Bibliotheken vorgestellt, die bei der Arbeit in Konsolenanwendungen benötigt werden. Sie können auf diesem Wissen aufbauen, um C# und die hier beschriebenen Klassen weiter zu erkunden. Sie haben die Grundlagen der Datei- und Konsolen-E/A kennengelernt, und es wurden die blockierende und die nicht blockierende Verwendung der taskbasierten asynchronen Programmierung vorgestellt. Außerdem haben Sie einen Überblick über die Sprache C# und die Struktur von C#-Programmen erhalten, und Sie haben die .NET Core-CLI kennengelernt.
 

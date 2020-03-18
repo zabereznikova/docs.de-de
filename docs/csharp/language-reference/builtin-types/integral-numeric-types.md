@@ -33,10 +33,10 @@ helpviewer_keywords:
 - long keyword [C#]
 - ulong keyword [C#]
 ms.openlocfilehash: 394a809a9a2f45f4aee652d0eca892f62f0f2e54
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77093200"
 ---
 # <a name="integral-numeric-types--c-reference"></a>Integrale numerische Typen (C#-Referenz)
@@ -127,10 +127,10 @@ Weitere Informationen finden Sie in den folgenden Abschnitten der [C#-Sprachspez
 - [Integrale Typen](~/_csharplang/spec/types.md#integral-types)
 - [Ganzzahlenliterale](~/_csharplang/spec/lexical-structure.md#integer-literals)
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [C#-Referenz](../index.md)
-- [Werttypen](value-types.md)
+- [Value types (Werttypen)](value-types.md)
 - [Gleitkommatypen](floating-point-numeric-types.md)
-- [Standardmäßige Zahlenformatzeichenfolgen](../../../standard/base-types/standard-numeric-format-strings.md)
+- [Standard-Zahlenformatzeichenfolgen](../../../standard/base-types/standard-numeric-format-strings.md)
 - [Numerische Ausdrücke in .NET](../../../standard/numerics.md)

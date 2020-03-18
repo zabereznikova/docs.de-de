@@ -1,5 +1,5 @@
 ### YamlMime:Tutorial
-title: Verwenden formatierter Zeichenfolgen mit der Zeichenfolgeninterpolation
+title: Erstellen formatierter Zeichenfolgen mit der Zeichenfolgeninterpolation
 metadata:
   title: Zeichenfolgeninterpolation – Interaktives C#-Tutorial
   description: In diesem Tutorial verwenden Sie Ihren Browser, um das Zeichenfolgeninterpolationsfeature in C# interaktiv kennenzulernen. Sie schreiben direkt im Browser einen C#-Code und sehen dort die Ergebnisse der Kompilierung und Ausführung Ihres Codes.
@@ -10,10 +10,10 @@ metadata:
   displayType: two-column
   interactive: csharp
   ms.openlocfilehash: 1b54ea8b3bbb63bdadb8386b0f6311f1f5458b42
-  ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+  ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
   ms.translationtype: HT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 01/24/2020
+  ms.lasthandoff: 03/14/2020
   ms.locfileid: "76737537"
 items:
 - durationInMinutes: 2
@@ -103,7 +103,7 @@ items:
     Sie können eine Formatzeichenfolge angeben, indem Sie dem Interpolationsausdruck einen Doppelpunkt („:“) und die Formatzeichenfolge anfügen. Bei „d“ handelt es sich um eine [Zeichenfolge für das Standardformat für Datum und Uhrzeit](../../../standard/base-types/standard-date-and-time-format-strings.md#the-short-date-d-format-specifier), die das kurze Datumsformat darstellt. Bei „C2“ handelt es sich um eine [Zeichenfolge für das numerische Standardformat](../../../standard/base-types/standard-numeric-format-strings.md#the-currency-c-format-specifier), die eine Zahl als Währungswert mit zwei Ziffern nach dem Dezimaltrennzeichen darstellt.
 
 
-    Einige Typen in den .NET-Bibliotheken unterstützen einen vordefinierten Satz von Formatzeichenfolgen. Darin sind alle numerischen Typen sowie alle Datums- und Uhrzeittypen enthalten. Eine vollständige Liste der Typen, die Formatzeichenfolgen unterstützen, finden Sie im Artikel [Formatieren von Typen in .NET](../../../standard/base-types/formatting-types.md) unter [Format Strings and .NET Class Library Types (Formatzeichenfolgen und .NET-Klassenbibliothekstypen)](../../../standard/base-types/formatting-types.md#format-strings-and-net-types).
+    Einige Typen in den .NET-Bibliotheken unterstützen einen vordefinierten Satz von Formatzeichenfolgen. Darin sind alle numerischen Typen sowie alle Datums- und Uhrzeittypen enthalten. Eine vollständige Liste der Typen, die Formatzeichenfolgen unterstützen, finden Sie im Artikel [Formatieren von Typen in .NET](../../../standard/base-types/formatting-types.md#format-strings-and-net-types) unter [Format Strings and .NET Class Library Types (Formatzeichenfolgen und .NET-Klassenbibliothekstypen)](../../../standard/base-types/formatting-types.md).
 
 
     Versuchen Sie, die Formatzeichenfolgen im Beispiel zu verändern, um zu sehen, welche Auswirkungen sie auf die Formatierung des Datums, der Zeit und des numerischen Werts haben. Ändern Sie „d“ in `{date:d}` in „t“ (um das kurze Uhrzeitformat anzuzeigen) sowie in „y“ (um das Jahr und den Monat anzuzeigen) und in „yyyy“ (um das Jahr als vierstellige Zahl anzuzeigen). Ändern Sie „C2“ in `{price:C2}` in „e“ (für die Exponentialschreibweise) und in „F3“ (für einen numerischen Wert mit drei Ziffern nach dem Dezimaltrennzeichen).

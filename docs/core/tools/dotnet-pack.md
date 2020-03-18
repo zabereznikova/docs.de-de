@@ -3,17 +3,17 @@ title: Befehl „dotnet pack“
 description: Der dotnet pack-Befehl erstellt NuGet-Pakete für ein .NET Core-Projekt.
 ms.date: 02/14/2020
 ms.openlocfilehash: 865262f1eb314f9b7e8ee713c573a965e89ded93
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/20/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77503647"
 ---
 # <a name="dotnet-pack"></a>dotnet pack
 
 **Dieser Artikel gilt für:** ✔️ .NET Core 2.x SDK und neuere Versionen
 
-## <a name="name"></a>name
+## <a name="name"></a>Name
 
 `dotnet pack`: Packt den Code in ein NuGet-Paket
 
@@ -105,7 +105,7 @@ Webprojekte können standardmäßig nicht verpackt werden. Um das Standardverhal
 
 - **`--runtime <RUNTIME_IDENTIFIER>`**
 
-  Gibt die Ziellaufzeit an, für die Pakete wiederhergestellt werden sollen Eine Liste der Runtime-IDs (RIDs) finden Sie unter [RID-Katalog](../rid-catalog.md).
+  Gibt die Ziellaufzeit an, für die Pakete wiederhergestellt werden sollen Eine Liste der Runtime-IDs (RIDs) finden Sie im [RID-Katalog](../rid-catalog.md).
 
 - **`-s|--serviceable`**
 

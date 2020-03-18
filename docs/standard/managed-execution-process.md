@@ -11,10 +11,10 @@ helpviewer_keywords:
 - common language runtime, managed execution process
 ms.assetid: 476b03dc-2b12-49a7-b067-41caeaa2f533
 ms.openlocfilehash: 46a266849f137076170287aeb10becedf83ccf78
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78160221"
 ---
 # <a name="managed-execution-process"></a>Verwalteter Ausführungsprozess
@@ -42,7 +42,7 @@ ms.locfileid: "78160221"
   
  Da es sich um eine mehrsprachige Ausführungsumgebung handelt, unterstützt die Laufzeit eine große Zahl von Datentypen und Sprachfeatures. Die verfügbaren Laufzeitfunktionen hängen vom verwendeten Sprachcompiler ab. Mithilfe dieser Funktionen entwerfen Sie den Code. Die vom Code zu verwendende Syntax wird durch den Compiler, nicht durch die Laufzeit festgelegt. Wenn eine Komponente für in anderen Sprachen geschriebene Komponenten vollständig verwendbar sein soll, dürfen die exportierten Typen der Komponente ausschließlich Sprachfunktionen verfügbar machen, die unter [Sprachenunabhängigkeit und sprachunabhängige Komponenten](../../docs/standard/language-independence-and-language-independent-components.md) (CLS) enthalten sind. Sie können das <xref:System.CLSCompliantAttribute> -Attribut verwenden, um sicherzustellen, dass der Code CLS-kompatibel ist. Weitere Informationen finden Sie unter [Sprachenunabhängigkeit und sprachunabhängige Komponenten](../../docs/standard/language-independence-and-language-independent-components.md).  
   
- [Zurück nach oben](#introduction)  
+ [Zurück zum Anfang](#introduction)  
   
 <a name="compiling_to_msil"></a>
 ## <a name="compiling-to-msil"></a>Kompilieren in MSIL  
@@ -50,7 +50,7 @@ ms.locfileid: "78160221"
   
  Wenn ein Compiler MSIL erstellt, erstellt er auch Metadaten. Metadaten beschreiben im Code vorhandene Typen und enthalten die Definition jedes Typs, die Signaturen der Member jedes Typs, die Member, auf die der Code verweist, sowie weitere Daten, die von der Laufzeit zur Ausführungszeit verwendet werden. MSIL und Metadaten befinden sich in einer PE (Portable Executable)-Datei, die auf dem traditionell für ausführbare Inhalte verwendeten, veröffentlichten PE-Dateiformat und COFF (Common Object File Format) von Microsoft beruht und dieses erweitert. Mit diesem für MSIL oder systemeigenen Code sowie für Metadaten ausgelegten Dateiformat kann das Betriebssystem Common Language Runtime-Abbilder erkennen. Da in der Datei Metadaten und MSIL gleichzeitig vorhanden sind, kann sich der Code selbst beschreiben. Dies bedeutet, dass Typbibliotheken oder eine IDL (Interface Definition Language, Schnittstellendefinitionssprache) nicht erforderlich sind. Die Laufzeit sucht und extrahiert die Metadateien aus der Datei je nach Bedarf während der Ausführung.  
   
- [Zurück nach oben](#introduction)  
+ [Zurück zum Anfang](#introduction)  
   
 <a name="compiling_msil_to_native_code"></a>
 ## <a name="compiling-msil-to-native-code"></a>Kompilieren von MSIL in systemeigenen Code  
@@ -87,7 +87,7 @@ ms.locfileid: "78160221"
   
  Während der Überprüfung von MSIL-Code wird versucht sicherzustellen, dass dieser nur über ordnungsgemäß definierte Typen auf Speicherorte zugreifen und Methoden aufrufen kann. Code muss z. B. die Überlastung von Speicherorten beim Zugriff auf Felder eines Objekts verhindern. Code wird außerdem daraufhin überprüft, ob die MSIL fehlerfrei generiert wurde, da fehlerhafte MSIL zu einer Verletzung der Regeln für die Typsicherheit führen kann. Bei der Überprüfung wird ein genau definierter Abschnitt typsicheren Codes übergeben, und es wird ausschließlich Code übergeben, der typsicher ist. Aufgrund einiger Einschränkungen während der Überprüfung ist es jedoch möglich, dass ein Teil des typsicheren Codes die Überprüfung nicht besteht. Zudem kann in einigen Sprachen kein überprüfbar typsicherer Code erstellt werden. Wenn die Sicherheitsrichtlinien typsicheren Code erfordern, aber der Code die Überprüfung nicht besteht, wird bei der Ausführung des Codes eine Ausnahme ausgelöst.  
   
- [Zurück nach oben](#introduction)  
+ [Zurück zum Anfang](#introduction)  
   
 <a name="running_code"></a>
 ## <a name="running-code"></a>Ausführen von Code  
@@ -103,9 +103,9 @@ ms.locfileid: "78160221"
   
  Bei 64-Bit-Versionen von Windows ändert `_CorValidateImage` das Image im Arbeitsspeicher vom Format PE32 in das Format PE32+.  
   
- [Zurück nach oben](#introduction)  
+ [Zurück zum Anfang](#introduction)  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Übersicht](../../docs/framework/get-started/overview.md)
 - [Sprachunabhängigkeit und sprachunabhängige Komponenten](../../docs/standard/language-independence-and-language-independent-components.md)

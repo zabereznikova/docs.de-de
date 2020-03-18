@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Hochladen einer Datei'
+title: 'Gewusst wie: Hochladen einer Datei'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - networks, uploading files
@@ -9,13 +9,13 @@ helpviewer_keywords:
 - My.Computer.Network.UploadFile method
 ms.assetid: a8b37924-c523-4fd3-b5ca-cb0074df29cd
 ms.openlocfilehash: 52b731606c74ab7ff06a42dfdbe078616ba33d88
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74345562"
 ---
-# <a name="how-to-upload-a-file-in-visual-basic"></a>Vorgehensweise: Hochladen einer Datei in Visual Basic
+# <a name="how-to-upload-a-file-in-visual-basic"></a>Gewusst wie: Hochladen einer Datei in Visual Basic
 
 Die <xref:Microsoft.VisualBasic.Devices.Network.UploadFile%2A>-Methode kann zum Hochladen einer Datei und zum Speichern derselben an einem Remotespeicherort verwendet werden. Wenn der `ShowUI`-Parameter auf `True` festgelegt wird, wir ein Dialogfeld angezeigt, das den Fortschritt des Hochladens anzeigt und Benutzern erlaubt, den Vorgang abzubrechen.  
   
@@ -47,9 +47,9 @@ Die <xref:Microsoft.VisualBasic.Devices.Network.UploadFile%2A>-Methode kann zum 
   
 - Verbindungstimeout (<xref:System.TimeoutException>)  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:Microsoft.VisualBasic.Devices.Network?displayProperty=nameWithType>
 - <xref:Microsoft.VisualBasic.Devices.Network.UploadFile%2A>
-- [Vorgehensweise: Herunterladen einer Datei](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-download-a-file.md)
-- [Vorgehensweise: Analysieren von Dateipfaden](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-parse-file-paths.md)
+- [Gewusst wie: Herunterladen einer Datei](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-download-a-file.md)
+- [Gewusst wie: Analysieren von Dateipfaden](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-parse-file-paths.md)

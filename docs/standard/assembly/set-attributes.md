@@ -11,10 +11,10 @@ dev_langs:
 - vb
 - cpp
 ms.openlocfilehash: 0e4e2e595ed4f95511bd23ab0ed00139f71b2c8b
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73740472"
 ---
 # <a name="set-assembly-attributes"></a>Festlegen von Assemblyattributen
@@ -35,11 +35,11 @@ Drei Attribute bestimmen zusammen mit einem starken Namen (falls zutreffend) die
 
 In der folgenden Tabelle werden das version- und das culture-Attribut beschrieben.
 
-|Attribut für Assemblyidentität|BESCHREIBUNG|
+|Attribut für Assemblyidentität|Beschreibung|
 |---------------------------------|-----------------|
-|<xref:System.Reflection.AssemblyCultureAttribute>|Ein aufgelistetes Feld, das die von der Assembly unterstützte Kultur angibt. Eine Assembly kann auch eine Kulturunabhängigkeit angeben. In diesem Fall enthält sie die Ressourcen für die Standardkultur. **Hinweis**:  Die Runtime behandelt jede Assembly, für die das culture-Attribut nicht auf NULL festgelegt ist, als Satellitenassembly. Solche Assemblys unterliegen den Bindungsregeln für Satellitenassemblys. Weitere Informationen finden Sie unter [So sucht Common Language Runtime nach Assemblys](../../framework/deployment/how-the-runtime-locates-assemblies.md).|
+|<xref:System.Reflection.AssemblyCultureAttribute>|Ein aufgelistetes Feld, das die von der Assembly unterstützte Kultur angibt. Eine Assembly kann auch eine Kulturunabhängigkeit angeben. In diesem Fall enthält sie die Ressourcen für die Standardkultur. **Hinweis**: Die Runtime behandelt jede Assembly, für die das culture-Attribut nicht auf NULL festgelegt ist, als Satellitenassembly. Solche Assemblys unterliegen den Bindungsregeln für Satellitenassemblys. Weitere Informationen finden Sie unter [So sucht Common Language Runtime nach Assemblys](../../framework/deployment/how-the-runtime-locates-assemblies.md).|
 |<xref:System.Reflection.AssemblyFlagsAttribute>|Ein Wert, der Assemblyattribute festlegt, etwa ob die Assembly parallel ausgeführt werden kann.|
-|<xref:System.Reflection.AssemblyVersionAttribute>|Ein numerischer Wert mit dem Format *Haupt*.*Neben*.*Build*.*Revision* (z. B. 2.4.0.0). Common Language Runtime verwendet diesen Wert zum Durchführen von Bindungsvorgängen in Assemblys mit der Eigenschaft "Starker Name". **Hinweis**:  Wenn das <xref:System.Reflection.AssemblyInformationalVersionAttribute>-Attribut nicht auf eine Assembly angewendet wird, wird die Versionsnummer, die vom <xref:System.Reflection.AssemblyVersionAttribute>-Attribut angegeben wird, von den Eigenschaften <xref:System.Windows.Forms.Application.ProductVersion%2A?displayProperty=nameWithType>, <xref:System.Windows.Forms.Application.UserAppDataPath%2A?displayProperty=nameWithType> und <xref:System.Windows.Forms.Application.UserAppDataRegistry%2A?displayProperty=nameWithType> verwendet.|
+|<xref:System.Reflection.AssemblyVersionAttribute>|Ein numerischer Wert mit dem Format *Haupt*.*Neben*.*Build*.*Revision* (z. B. 2.4.0.0). Common Language Runtime verwendet diesen Wert zum Durchführen von Bindungsvorgängen in Assemblys mit der Eigenschaft "Starker Name". **Hinweis**: Wenn das <xref:System.Reflection.AssemblyInformationalVersionAttribute>-Attribut nicht auf eine Assembly angewendet wird, wird die Versionsnummer, die vom <xref:System.Reflection.AssemblyVersionAttribute>-Attribut angegeben wird, von den Eigenschaften <xref:System.Windows.Forms.Application.ProductVersion%2A?displayProperty=nameWithType>, <xref:System.Windows.Forms.Application.UserAppDataPath%2A?displayProperty=nameWithType> und <xref:System.Windows.Forms.Application.UserAppDataRegistry%2A?displayProperty=nameWithType> verwendet.|
 
 Im folgenden Codebeispiel wird veranschaulicht, wie das version- und das culture-Attribut auf eine Assembly angewendet werden.
 
@@ -68,12 +68,12 @@ Im folgenden Codebeispiel wird veranschaulicht, wie das version- und das culture
 
 Mit Informationsattributen können Sie zusätzliche Firmen- oder Produktinformationen für eine Assembly bereitstellen. Die folgende Tabelle beschreibt die verschiedenen Informationsattribute, die auf eine Assembly angewendet werden können.
 
-|Informationsattribut|BESCHREIBUNG|
+|Informationsattribut|Beschreibung|
 |-----------------------------|-----------------|
 |<xref:System.Reflection.AssemblyCompanyAttribute>|Ein Zeichenfolgenwert, der einen Firmennamen angibt.|
 |<xref:System.Reflection.AssemblyCopyrightAttribute>|Ein Zeichenfolgenwert, der Copyright-Informationen angibt.|
 |<xref:System.Reflection.AssemblyFileVersionAttribute>|Ein Zeichenfolgenwert, der die Win32-Dateiversionsnummer angibt. Dies ist normalerweise standardmäßig die Assemblyversion.|
-|<xref:System.Reflection.AssemblyInformationalVersionAttribute>|Ein Zeichenfolgenwert, der Versionsinformationen angibt, die zur Laufzeit nicht verwendet werden (zum Beispiel die vollständige Produktversionsnummer). **Hinweis**:  Wenn dieses Attribut auf eine Assembly angewendet wird, kann die davon angegebene Zeichenfolge zur Laufzeit mithilfe der <xref:System.Windows.Forms.Application.ProductVersion%2A?displayProperty=nameWithType>-Eigenschaft abgerufen werden. Diese Zeichenfolge wird auch im von den Eigenschaften <xref:System.Windows.Forms.Application.UserAppDataPath%2A?displayProperty=nameWithType> und <xref:System.Windows.Forms.Application.UserAppDataRegistry%2A?displayProperty=nameWithType> bereitgestellten Pfad und Registrierungsschlüssel verwendet.|
+|<xref:System.Reflection.AssemblyInformationalVersionAttribute>|Ein Zeichenfolgenwert, der Versionsinformationen angibt, die zur Laufzeit nicht verwendet werden (zum Beispiel die vollständige Produktversionsnummer). **Hinweis**: Wenn dieses Attribut auf eine Assembly angewendet wird, kann die davon angegebene Zeichenfolge zur Runtime mithilfe der <xref:System.Windows.Forms.Application.ProductVersion%2A?displayProperty=nameWithType>-Eigenschaft abgerufen werden. Diese Zeichenfolge wird auch im von den Eigenschaften <xref:System.Windows.Forms.Application.UserAppDataPath%2A?displayProperty=nameWithType> und <xref:System.Windows.Forms.Application.UserAppDataRegistry%2A?displayProperty=nameWithType> bereitgestellten Pfad und Registrierungsschlüssel verwendet.|
 |<xref:System.Reflection.AssemblyProductAttribute>|Ein Zeichenfolgenwert, der Produktinformationen angibt.|
 |<xref:System.Reflection.AssemblyTrademarkAttribute>|Ein Zeichenfolgenwert, der Markeninformationen angibt.|
 
@@ -83,7 +83,7 @@ Diese Attribute können auf der Windows-Eigenschaftenseite der Assembly angezeig
 
 Mit Attributen für Assemblymanifeste können Informationen im Assemblymanifest angegeben werden, einschließlich Titel, Beschreibung, Standardalias und Konfiguration. In der folgenden Tabelle werden die Attribute für Assemblymanifeste beschrieben.
 
-|Attribut für Assemblymanifeste|BESCHREIBUNG|
+|Attribut für Assemblymanifeste|Beschreibung|
 |---------------------------------|-----------------|
 |<xref:System.Reflection.AssemblyConfigurationAttribute>|Ein Zeichenfolgenwert, der die Assemblykonfiguration angibt, beispielsweise "Einzelhandel" oder "Debuggen". Dieser Wert wird zur Laufzeit nicht verwendet.|
 |<xref:System.Reflection.AssemblyDefaultAliasAttribute>|Ein Zeichenfolgenwert, der einen Standardalias angibt, der von Assemblys mit einem Verweis verwendet werden soll. Dieser Wert stellt einen Anzeigenamen zur Verfügung, wenn der eigentliche Name der Assembly nicht angezeigt wird (zum Beispiel ein GUID-Wert). Dieser Wert kann auch als Kurzform des vollen Assemblynamens verwendet werden.|
@@ -94,7 +94,7 @@ Mit Attributen für Assemblymanifeste können Informationen im Assemblymanifest 
 
 Sie können Attribute für starke Namen verwenden, um einen starken Namen für eine Assembly festzulegen. In der folgenden Tabelle werden die Attribute für starke Namen beschrieben.
 
-|Attribut für starke Namen|BESCHREIBUNG|
+|Attribut für starke Namen|Beschreibung|
 |----------------------------|-----------------|
 |<xref:System.Reflection.AssemblyDelaySignAttribute>|Ein boolescher Wert, der angibt, dass die verzögerte Signierung verwendet wird|
 |<xref:System.Reflection.AssemblyKeyFileAttribute>|Ein Zeichenfolgenwert, der den Namen der Datei angibt, die entweder den öffentlichen Schlüssel (bei verzögerter Signierung) oder öffentliche und private Schlüssel enthält, die an den Konstruktor dieses Attributs als Parameter übergeben werden. Beachten Sie, dass der Dateiname relativ zum Pfad der Ausgabedatei ist (die *EXE*- oder *DLL*-Datei) und nicht zum Pfad der Quelldatei.|
@@ -117,6 +117,6 @@ Das folgende Codebeispiel zeigt die Attribute, die angewendet werden, wenn mithi
 <Assembly:AssemblyDelaySignAttribute(True)>
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Erstellen von Assemblys](create.md)

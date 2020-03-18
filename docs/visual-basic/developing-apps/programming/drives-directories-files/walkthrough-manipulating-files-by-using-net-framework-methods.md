@@ -16,13 +16,13 @@ helpviewer_keywords:
 - I/O [Visual Basic], reading text from files
 ms.assetid: 7d2109eb-f98a-4389-b43d-30f384aaa7d5
 ms.openlocfilehash: 02cdbcc59e8817ff4ec06c2f78f835cad77b10f2
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74333782"
 ---
-# <a name="walkthrough-manipulating-files-by-using-net-framework-methods-visual-basic"></a>Exemplarische Vorgehensweise: Bearbeiten von Dateien mit .NET Framework-Methoden (Visual Basic)
+# <a name="walkthrough-manipulating-files-by-using-net-framework-methods-visual-basic"></a>Exemplarische Vorgehensweise: Bearbeiten von Dateien mit .NET Framework-Methoden (Visual Basic)
 
 In dieser exemplarischen Vorgehensweise wird gezeigt, wie man eine Datei mithilfe der Klasse <xref:System.IO.StreamReader> öffnet und liest, wie man überprüft, ob auf eine Datei zugegriffen wird, wie man innerhalb einer Datei, die mit einer Instanz der Klasse <xref:System.IO.StreamReader> gelesen wird, nach einer Zeichenfolge sucht und wie man mithilfe der Klasse <xref:System.IO.StreamWriter> in eine Datei schreibt.
 
@@ -83,13 +83,13 @@ Verwenden Sie die Klasse <xref:System.IO.StreamWriter>, um die Möglichkeit hinz
 
      [!code-vb[VbVbcnMyFileSystem#39](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#39)]
 
-4. Fügen Sie anschließend Code zum Leeren von <xref:System.Windows.Forms.TextBox> an. Fügen Sie dem <xref:System.Windows.Forms.Control.Click>-Ereignis der Schaltfläche `Clear` folgenden Code hinzu:
+4. Fügen Sie anschließend Code zum Leeren von <xref:System.Windows.Forms.TextBox> an. Fügen Sie dem `Clear`-Ereignis der Schaltfläche <xref:System.Windows.Forms.Control.Click> folgenden Code hinzu:
 
      [!code-vb[VbVbcnMyFileSystem#40](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#40)]
 
 ## <a name="adding-display-features-to-the-diary"></a>Hinzufügen von Anzeigefunktionen zum Kalender
 
-In diesem Abschnitt fügen Sie eine Funktion hinzu, mit der der letzte Eintrag in <xref:System.Windows.Forms.TextBox> `DisplayEntry` angezeigt wird. Sie können auch ein <xref:System.Windows.Forms.ComboBox>-Objekt hinzufügen, das verschiedene Einträge anzeigt und dem Benutzer die Auswahl eines Eintrags zur Anzeige in <xref:System.Windows.Forms.TextBox> `DisplayEntry` ermöglicht. Eine Instanz der Klasse <xref:System.IO.StreamReader> liest aus `MyDiary.txt`. Wie die Klasse <xref:System.IO.StreamWriter> ist <xref:System.IO.StreamReader> für die Verwendung mit Textdateien vorgesehen.
+In diesem Abschnitt fügen Sie eine Funktion hinzu, mit der der letzte Eintrag in `DisplayEntry`<xref:System.Windows.Forms.TextBox> angezeigt wird. Sie können auch ein <xref:System.Windows.Forms.ComboBox>-Objekt hinzufügen, das verschiedene Einträge anzeigt und dem Benutzer die Auswahl eines Eintrags zur Anzeige in `DisplayEntry`<xref:System.Windows.Forms.TextBox> ermöglicht. Eine Instanz der Klasse <xref:System.IO.StreamReader> liest aus `MyDiary.txt`. Wie die Klasse <xref:System.IO.StreamWriter> ist <xref:System.IO.StreamReader> für die Verwendung mit Textdateien vorgesehen.
 
 Fügen Sie in diesem Abschnitt der exemplarischen Vorgehensweise die Steuerelemente aus der folgenden Tabelle zum Formular hinzu, und legen Sie die entsprechenden Werte für die Eigenschaften fest.
 
@@ -97,12 +97,12 @@ Fügen Sie in diesem Abschnitt der exemplarischen Vorgehensweise die Steuereleme
 |-------------|----------------|------------|
 |<xref:System.Windows.Forms.TextBox>|**Name**<br /><br /> **Visible**<br /><br /> **Size**<br /><br /> **Multiline**|`DisplayEntry`<br /><br /> `False`<br /><br /> `120,60`<br /><br /> `True`|
 |<xref:System.Windows.Forms.Button>|**Name**<br /><br /> **Text**|`Display`<br /><br /> **Anzeigen**|
-|<xref:System.Windows.Forms.Button>|**Name**<br /><br /> **Text**|`GetEntries`<br /><br /> **Einträge abrufen**|
+|<xref:System.Windows.Forms.Button>|**Name**<br /><br /> **Text**|`GetEntries`<br /><br /> **Get Entries** (Einträge abrufen)|
 |<xref:System.Windows.Forms.ComboBox>|**Name**<br /><br /> **Text**<br /><br /> **Aktiviert**|`PickEntries`<br /><br /> **Eintrag auswählen**<br /><br /> `False`|
 
 ### <a name="to-populate-the-combo-box"></a>Auffüllen des Kombinationsfelds
 
-1. Das <xref:System.Windows.Forms.ComboBox>-Objekt `PickEntries` wird zum Anzeigen von Datumsangaben verwendet, an denen ein Benutzer die einzelnen Einträge übermittelt hat. Dadurch kann der Benutzer einen Eintrag von einem bestimmten Datum auswählen. Erstellen Sie einen <xref:System.Windows.Forms.Control.Click>-Ereignishandler für die Schaltfläche `GetEntries`, und fügen Sie ihm den folgenden Code hinzu:
+1. Das `PickEntries`-Objekt <xref:System.Windows.Forms.ComboBox> wird zum Anzeigen von Datumsangaben verwendet, an denen ein Benutzer die einzelnen Einträge übermittelt hat. Dadurch kann der Benutzer einen Eintrag von einem bestimmten Datum auswählen. Erstellen Sie einen <xref:System.Windows.Forms.Control.Click>-Ereignishandler für die Schaltfläche `GetEntries`, und fügen Sie ihm den folgenden Code hinzu:
 
      [!code-vb[VbVbcnMyFileSystem#41](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#41)]
 
@@ -114,7 +114,7 @@ Fügen Sie in diesem Abschnitt der exemplarischen Vorgehensweise die Steuereleme
 
      [!code-vb[VbVbcnMyFileSystem#42](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#42)]
 
-2. Drücken Sie zum Testen des Codes F5, um die Anwendung zu kompilieren, und machen Sie dann einen Eintrag. Klicken Sie auf **Einträge abrufen**, wählen Sie einen Eintrag aus <xref:System.Windows.Forms.ComboBox> aus, und klicken Sie anschließend auf **Anzeigen**. Der Inhalt des ausgewählten Eintrags wird im <xref:System.Windows.Forms.TextBox> `DisplayEntry` angezeigt.
+2. Drücken Sie zum Testen des Codes F5, um die Anwendung zu kompilieren, und machen Sie dann einen Eintrag. Klicken Sie auf **Einträge abrufen**, wählen Sie einen Eintrag aus <xref:System.Windows.Forms.ComboBox> aus, und klicken Sie anschließend auf **Anzeigen**. Der Inhalt des ausgewählten Eintrags wird im `DisplayEntry`<xref:System.Windows.Forms.TextBox> angezeigt.
 
 ## <a name="enabling-users-to-delete-or-modify-entries"></a>Benutzern das Löschen oder Ändern von Einträgen erlauben
 
@@ -130,7 +130,7 @@ Fügen Sie die Steuerelemente aus der folgenden Tabelle zum Formular hinzu, und 
 
 ### <a name="to-enable-deletion-and-modification-of-entries"></a>Löschen und Ändern von Eintragen aktivieren
 
-1. Fügen Sie dem <xref:System.Windows.Forms.Control.Click>-Ereignis der Schaltfläche `Display` nach `DisplayEntry.Text = ReadString` folgenden Code hinzu:
+1. Fügen Sie dem `Display`-Ereignis der Schaltfläche <xref:System.Windows.Forms.Control.Click> nach `DisplayEntry.Text = ReadString` folgenden Code hinzu:
 
      [!code-vb[VbVbcnMyFileSystem#43](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#43)]
 
@@ -150,9 +150,9 @@ Fügen Sie die Steuerelemente aus der folgenden Tabelle zum Formular hinzu, und 
 
      [!code-vb[VbVbcnMyFileSystem#47](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#47)]
 
-Drücken Sie zum Testen des Codes F5, um die Anwendung zu kompilieren. Klicken Sie auf **Einträge abrufen**, wählen Sie einen Eintrag aus, und klicken Sie anschließend auf **Anzeigen**. Der Eintrag wird in <xref:System.Windows.Forms.TextBox> `DisplayEntry` angezeigt. Klicken Sie auf **Edit Entry** (Eintrag bearbeiten). Der Eintrag wird in <xref:System.Windows.Forms.TextBox> `Entry` angezeigt. Bearbeiten Sie den Eintrag in <xref:System.Windows.Forms.TextBox> `Entry`, und klicken Sie auf **Bearbeitung senden**. Öffnen Sie die `MyDiary.txt`-Datei, um Ihre Korrekturen zu bestätigen. Wählen Sie jetzt einen Eintrag aus, und klicken Sie auf **Eintrag löschen**. Wenn Sie in <xref:System.Windows.Forms.MessageBox> zur Bestätigung aufgefordert werden, klicken Sie auf **OK**. Schließen Sie die Anwendung und öffnen Sie `MyDiary.txt`, um den Löschvorgang zu bestätigen.
+Drücken Sie zum Testen des Codes F5, um die Anwendung zu kompilieren. Klicken Sie auf **Einträge abrufen**, wählen Sie einen Eintrag aus, und klicken Sie anschließend auf **Anzeigen**. Der Eintrag wird in `DisplayEntry`<xref:System.Windows.Forms.TextBox> angezeigt. Klicken Sie auf **Edit Entry** (Eintrag bearbeiten). Der Eintrag wird in `Entry`<xref:System.Windows.Forms.TextBox> angezeigt. Bearbeiten Sie den Eintrag in `Entry`<xref:System.Windows.Forms.TextBox>, und klicken Sie auf **Bearbeitung senden**. Öffnen Sie die `MyDiary.txt`-Datei, um Ihre Korrekturen zu bestätigen. Wählen Sie jetzt einen Eintrag aus, und klicken Sie auf **Eintrag löschen**. Wenn Sie in <xref:System.Windows.Forms.MessageBox> zur Bestätigung aufgefordert werden, klicken Sie auf **OK**. Schließen Sie die Anwendung und öffnen Sie `MyDiary.txt`, um den Löschvorgang zu bestätigen.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.IO.StreamReader>
 - <xref:System.IO.StreamWriter>

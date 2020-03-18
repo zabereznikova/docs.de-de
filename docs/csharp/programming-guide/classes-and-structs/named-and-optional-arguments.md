@@ -13,12 +13,12 @@ helpviewer_keywords:
 - parameters [C#], optional
 - named and optional arguments [C#]
 ms.assetid: 839c960c-c2dc-4d05-af4d-ca5428e54008
-ms.openlocfilehash: 3685482caebd892c460a3cc2ecf3a22acbe3c9ec
-ms.sourcegitcommit: c2d9718996402993cf31541f11e95531bc68bad0
+ms.openlocfilehash: 15b685248730c1f742035612a201d97d180bbc41
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/27/2020
-ms.locfileid: "77673406"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79398418"
 ---
 # <a name="named-and-optional-arguments-c-programming-guide"></a>Benannte und optionale Argumente (C#-Programmierhandbuch)
 C# 4 führt benannte und optionale Argumente ein. *Benannte Argumente* ermöglichen es Ihnen, ein Argument für einen bestimmten Parameter anzugeben, indem Sie das Argument dem Parameternamen anstatt der Position des Parameters in der Parameterliste zuordnen. *Optionale Argumente* ermöglichen es Ihnen, Argumente für einige Parameter auszulassen. Beide Techniken können mit Methoden, Indexern, Konstruktoren und Delegaten verwendet werden.  
@@ -40,7 +40,7 @@ C# 4 führt benannte und optionale Argumente ein. *Benannte Argumente* ermöglic
   
  Benannte Argumente verbessern auch die Lesbarkeit des Codes, indem sie identifizieren, was jedes Argument darstellt. In der folgenden Beispielmethode darf `sellerName` nicht NULL sein oder Leerraum enthalten. Da es sich bei `sellerName` und `productName` um Zeichenfolgentypen handelt, sollten Sie benannte Argumente verwenden, anstatt Argumente nach Position zu senden, um die beiden Parameter zu unterscheiden und die Leser des Codes nicht zu verwirren.
   
- Benannte Argumente sind länger gültig, wenn sie mit positionellen Argumenten verwendet werden, da 
+ Benannte Argumente sind länger gültig, wenn sie mit positionellen Argumenten verwendet werden, da
 
 - ihnen keine positionellen Argumente folgen, bzw. da
 
@@ -126,9 +126,9 @@ C# 4 führt benannte und optionale Argumente ein. *Benannte Argumente* ermöglic
 ## <a name="c-language-specification"></a>C#-Programmiersprachenspezifikation  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Vorgehensweise: Verwenden von benannten und optionalen Argumenten in der Office-Programmierung](./how-to-use-named-and-optional-arguments-in-office-programming.md)
+- [Verwenden von benannten und optionalen Argumenten in der Office-Programmierung](./how-to-use-named-and-optional-arguments-in-office-programming.md)
 - [Verwenden von dynamischen Typen](../types/using-type-dynamic.md)
 - [Verwenden von Konstruktoren](./using-constructors.md)
 - [Verwenden von Indexern](../indexers/using-indexers.md)

@@ -9,10 +9,10 @@ helpviewer_keywords:
 - /target compiler options [C#], /target:module
 ms.assetid: 9af1e4fa-c749-44e7-ae58-90a3d05d4e72
 ms.openlocfilehash: 25421df2e9306071ce3506aaf7affd1b259d1c32
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "69602440"
 ---
 # <a name="-targetmodule-c-compiler-options"></a>-target:module (C#-Compileroptionen)
@@ -24,7 +24,7 @@ Diese Option bewirkt, dass der Compiler kein Assemblymanifest generiert.
 -target:module  
 ```  
   
-## <a name="remarks"></a>Anmerkungen  
+## <a name="remarks"></a>Hinweise  
  Standardmäßig weist die Ausgabedatei, die durch Kompilieren mit dieser Option erstellt wird, eine Dateierweiterung .NETMODULE auf.  
   
  Eine Datei, die nicht über ein Assemblymanifest verfügt, kann nicht von der Common Language Runtime von .NET Framework geladen werden. Allerdings kann eine solche Datei mithilfe von [-addmodule](./addmodule-compiler-option.md) in das Assemblymanifest integriert werden.  
@@ -42,7 +42,7 @@ Diese Option bewirkt, dass der Compiler kein Assemblymanifest generiert.
 csc -target:module in.cs  
 ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [-target (C#-Compileroptionen)](./target-compiler-option.md)
 - [C#-Compileroptionen](./index.md)

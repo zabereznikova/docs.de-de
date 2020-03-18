@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: b91cdc7a0d2e4258662155a840500ce21ab35760
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "74100997"
 ---
 ### <a name="authorization-addauthorization-overload-moved-to-different-assembly"></a>Autorisierung: AddAuthorization-Überladung in andere Assembly verschoben
@@ -25,7 +25,7 @@ Die `AddAuthorization`-Methoden sind jetzt in `Microsoft.AspNetCore.Authorizatio
 
 `AddAuthorization` ist ein besserer Methodenname für das Hinzufügen aller allgemeinen Dienste, die für die Autorisierung benötigt werden.
 
-#### <a name="recommended-action"></a>Empfohlene Maßnahme
+#### <a name="recommended-action"></a>Empfohlene Aktion
 
 Fügen Sie entweder einen Verweis auf `Microsoft.AspNetCore.Authorization.Policy` hinzu, oder verwenden Sie stattdessen `AddAuthorizationCore`.
 

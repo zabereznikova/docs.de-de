@@ -9,10 +9,10 @@ helpviewer_keywords:
 - parallelism, task
 ms.assetid: 458b5e69-5210-45e5-bc44-3888f86abd6f
 ms.openlocfilehash: 51292d977f2be87cec7c3481f5004fe5fe756224
-ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74204545"
 ---
 # <a name="task-based-asynchronous-programming"></a>Aufgabenbasiertes asynchrones Programmieren
@@ -42,7 +42,7 @@ Die <xref:System.Threading.Tasks.Parallel.Invoke%2A?displayProperty=nameWithType
 > [!NOTE]
 > Die Anzahl von <xref:System.Threading.Tasks.Task>-Instanzen, die im Hintergrund von <xref:System.Threading.Tasks.Parallel.Invoke%2A> erstellt werden, ist nicht notwendigerweise mit der Anzahl der bereitgestellten Delegaten identisch. Die TPL kann verschiedene Optimierungen einsetzen, besonders bei einer großen Anzahl von Delegaten.
 
-Weitere Informationen finden Sie unter [Vorgehensweise: Ausführen von parallelen Vorgängen mithilfe von „Parallel.Invoke“](../../../docs/standard/parallel-programming/how-to-use-parallel-invoke-to-execute-parallel-operations.md).
+Weitere Informationen finden Sie unter [Gewusst wie: Ausführen von parallelen Aufgaben mithilfe von Parallel.Invoke](../../../docs/standard/parallel-programming/how-to-use-parallel-invoke-to-execute-parallel-operations.md).
 
 Wenn Sie die Aufgabenausführung präziser steuern oder einen Wert aus der Aufgabe zurückgeben möchten, müssen Sie expliziter mit <xref:System.Threading.Tasks.Task>-Objekten arbeiten.
 
@@ -70,7 +70,7 @@ Sie können auch die <xref:System.Threading.Tasks.TaskFactory.StartNew%2A?displa
 [!code-csharp[TPL_TaskIntro#4](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_taskintro/cs/result1.cs#4)]
 [!code-vb[TPL_TaskIntro#4](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_taskintro/vb/result1.vb#4)]
 
-Weitere Informationen finden Sie unter [Vorgehensweise: Zurückgeben eines Werts aus einer Aufgabe](../../../docs/standard/parallel-programming/how-to-return-a-value-from-a-task.md).
+Weitere Informationen finden Sie unter [Gewusst wie: Zurückgeben eines Werts aus einer Aufgabe](../../../docs/standard/parallel-programming/how-to-return-a-value-from-a-task.md).
 
 Wenn Sie einen Lambdaausdruck verwenden, um einen Delegaten zu erstellen, haben Sie Zugriff auf alle Variablen, die an dieser Stelle im Quellcode sichtbar sind. In einigen Fällen jedoch, insbesondere in Schleifen, wird die Variable nicht wie erwartet vom Lambda-Ausdruck erfasst. Es wird nur der endgültige Wert erfasst, und nicht der nach jeder Iteration geänderte Wert. Das Problem wird anhand des folgenden Beispiels veranschaulicht. Es wird ein Schleifenzähler an den Lambda-Ausdruck übergeben, wodurch ein `CustomData`-Objekt instanziiert wird und der Schleifenzähler als Objektbezeichner verwendet. Die Ausgabe im Beispiel zeigt, dass jedes `CustomData`-Objekt einen identischen Bezeichner hat.
 
@@ -95,12 +95,12 @@ Jeder Aufgabe wird eine ganzzahlige ID zugeordnet, durch die diese in einer Anwe
 
 Die meisten APIs, die Aufgaben erstellen, stellen Überladungen bereit, die einen <xref:System.Threading.Tasks.TaskCreationOptions>-Parameter akzeptieren. Durch Angabe einer dieser Optionen teilen Sie dem Aufgabenplaner mit, wie die Aufgabe im Threadpool geplant werden soll. In der folgenden Tabelle sind die verschiedenen Aufgabenerstellungsoptionen aufgeführt.
 
-|<xref:System.Threading.Tasks.TaskCreationOptions>-Parameterwert|BESCHREIBUNG|
+|<xref:System.Threading.Tasks.TaskCreationOptions>-Parameterwert|Beschreibung|
 |-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------|
 |<xref:System.Threading.Tasks.TaskCreationOptions.None>|Dies ist die Standardoption, wenn keine Option angegeben wurde. Der Planer verwendet zum Planen der Aufgabe seine Standardheuristik.|
 |<xref:System.Threading.Tasks.TaskCreationOptions.PreferFairness>|Gibt an, dass die Aufgabe so geplant werden soll, dass früher erstellte Aufgaben mit großer Wahrscheinlichkeit auch früher ausgeführt werden als Aufgaben, die später erstellt wurden.|
 |<xref:System.Threading.Tasks.TaskCreationOptions.LongRunning>|Gibt an, dass die Aufgabe einen Vorgang mit langer Laufzeit darstellt.|
-|<xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent>|Gibt an, dass eine Aufgabe als angefügtes untergeordnetes Element der aktuellen Aufgabe erstellt werden soll (sofern vorhanden). Weitere Informationen finden Sie unter [Angefügte und getrennte untergeordnete Aufgaben](../../../docs/standard/parallel-programming/attached-and-detached-child-tasks.md).|
+|<xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent>|Gibt an, dass eine Aufgabe als angefügtes untergeordnetes Element der aktuellen Aufgabe erstellt werden soll (sofern vorhanden). Weitere Informationen finden Sie unter [Attached and Detached Child Tasks (Angefügte und getrennte untergeordnete Aufgaben)](../../../docs/standard/parallel-programming/attached-and-detached-child-tasks.md).|
 |<xref:System.Threading.Tasks.TaskCreationOptions.DenyChildAttach>|Gibt an, dass beim Angeben der `AttachedToParent`-Option durch eine innere Aufgabe diese Aufgabe nicht zu einer angefügten untergeordneten Aufgabe wird.|
 |<xref:System.Threading.Tasks.TaskCreationOptions.HideScheduler>|Gibt an, dass der Taskplaner für Aufgaben, die über das Aufrufen von Methoden wie <xref:System.Threading.Tasks.TaskFactory.StartNew%2A?displayProperty=nameWithType> oder <xref:System.Threading.Tasks.Task%601.ContinueWith%2A?displayProperty=nameWithType> aus einer bestimmten Aufgabe erstellt werden, der Standardplaner ist und nicht der Planer, mit dem diese Aufgabe ausgeführt wird.|
 
@@ -163,7 +163,7 @@ Wenn durch Benutzercode, der in einer Aufgabe ausgeführt wird, eine Aufgabe mit
 [!code-csharp[TPL_TaskIntro#8](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_taskintro/cs/child1.cs#8)]
 [!code-vb[TPL_TaskIntro#8](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_taskintro/vb/child1.vb#8)]
 
-Durch das Angeben der <xref:System.Threading.Tasks.TaskCreationOptions.DenyChildAttach?displayProperty=nameWithType>-Option für eine übergeordnete Aufgabe kann das Anfügen anderer Aufgaben an die übergeordnete Aufgabe verhindert werden. Weitere Informationen finden Sie unter [Angefügte und getrennte untergeordnete Aufgaben](../../../docs/standard/parallel-programming/attached-and-detached-child-tasks.md).
+Durch das Angeben der <xref:System.Threading.Tasks.TaskCreationOptions.DenyChildAttach?displayProperty=nameWithType>-Option für eine übergeordnete Aufgabe kann das Anfügen anderer Aufgaben an die übergeordnete Aufgabe verhindert werden. Weitere Informationen finden Sie unter [Attached and Detached Child Tasks (Angefügte und getrennte untergeordnete Aufgaben)](../../../docs/standard/parallel-programming/attached-and-detached-child-tasks.md).
 
 ## <a name="waiting-for-tasks-to-finish"></a>Warten auf die Beendigung von Aufgaben
 
@@ -214,7 +214,7 @@ Die <xref:System.Threading.Tasks.Task.Delay%2A?displayProperty=nameWithType>-Met
 
 ### <a name="tasktfromresult"></a>Task(T).FromResult
 
-Mit der <xref:System.Threading.Tasks.Task.FromResult%2A?displayProperty=nameWithType>-Methode, können Sie ein <xref:System.Threading.Tasks.Task%601>-Objekt erstellen, das ein vorberechnetes Ergebnis enthält. Diese Methode ist nützlich, wenn Sie einen asynchronen Vorgang ausführen, der ein <xref:System.Threading.Tasks.Task%601>-Objekt zurückgibt, und das Ergebnis dieses <xref:System.Threading.Tasks.Task%601>-Objekts bereits berechnet wurde. Ein Beispiel, das <xref:System.Threading.Tasks.Task.FromResult%2A> verwendet, um die Ergebnisse asynchroner Downloadvorgänge aus einem Cache abzurufen, finden Sie unter [Vorgehensweise: Erstellen von vorberechneten Aufgaben](../../../docs/standard/parallel-programming/how-to-create-pre-computed-tasks.md).
+Mit der <xref:System.Threading.Tasks.Task.FromResult%2A?displayProperty=nameWithType>-Methode, können Sie ein <xref:System.Threading.Tasks.Task%601>-Objekt erstellen, das ein vorberechnetes Ergebnis enthält. Diese Methode ist nützlich, wenn Sie einen asynchronen Vorgang ausführen, der ein <xref:System.Threading.Tasks.Task%601>-Objekt zurückgibt, und das Ergebnis dieses <xref:System.Threading.Tasks.Task%601>-Objekts bereits berechnet wurde. Ein Beispiel, in dem <xref:System.Threading.Tasks.Task.FromResult%2A> verwendet wird, um die Ergebnisse asynchroner Downloadvorgänge abzurufen, die in einem Cache gespeichert sind, finden Sie unter [Gewusst wie: Erstellen von vorberechneten Aufgaben](../../../docs/standard/parallel-programming/how-to-create-pre-computed-tasks.md).
 
 ## <a name="handling-exceptions-in-tasks"></a>Behandeln von Ausnahmen in Aufgaben
 
@@ -238,7 +238,7 @@ Die <xref:System.Threading.Tasks.Task>-Klasse unterstützt einen kooperativen Ab
 
 Mit der <xref:System.Threading.CancellationTokenSource>-Klasse können Sie das Token erstellen und die Abbruchanforderung zu einem späteren Zeitpunkt ausgeben. Übergeben Sie das Token als Argument an <xref:System.Threading.Tasks.Task>, und verweisen Sie in dem Benutzerdelegaten, der auf eine Abbruchanforderung reagiert, auf das gleiche Token.
 
-Weitere Informationen finden Sie unter [Aufgabenabbruch](../../../docs/standard/parallel-programming/task-cancellation.md) und [Vorgehensweise: Abbrechen einer Aufgabe und ihrer untergeordneten Elemente](../../../docs/standard/parallel-programming/how-to-cancel-a-task-and-its-children.md).
+Weitere Informationen finden Sie unter [Aufgabenabbruch](../../../docs/standard/parallel-programming/task-cancellation.md) und [Gewusst wie: Abbrechen eine Aufgabe und der zugehörigen untergeordneten Aufgaben](../../../docs/standard/parallel-programming/how-to-cancel-a-task-and-its-children.md).
 
 ## <a name="the-taskfactory-class"></a>Die TaskFactory-Klasse
 
@@ -272,22 +272,22 @@ Wenn Sie von <xref:System.Threading.Tasks.Task> oder <xref:System.Threading.Task
 
 ## <a name="related-topics"></a>Verwandte Themen
 
-|Titel|BESCHREIBUNG|
+|Titel|Beschreibung|
 |-|-|
 |[Verketten von Aufgaben mithilfe von Fortsetzungsaufgaben](../../../docs/standard/parallel-programming/chaining-tasks-by-using-continuation-tasks.md)|Beschreibt die Funktionsweise von Fortsetzungen.|
 |[Angefügte und getrennte untergeordnete Aufgaben](../../../docs/standard/parallel-programming/attached-and-detached-child-tasks.md)|Beschreibt den Unterschied zwischen angefügten und getrennten untergeordneten Aufgaben.|
 |[Aufgabenabbruch](../../../docs/standard/parallel-programming/task-cancellation.md)|Beschreibt die integrierte Abbruchunterstützung des <xref:System.Threading.Tasks.Task>-Objekts.|
 |[Ausnahmebehandlung](../../../docs/standard/parallel-programming/exception-handling-task-parallel-library.md)|Beschreibt die Behandlung von Ausnahmen in gleichzeitigen Threads.|
-|[Vorgehensweise: Ausführen von parallelen Vorgängen mithilfe von „Parallel.Invoke“](../../../docs/standard/parallel-programming/how-to-use-parallel-invoke-to-execute-parallel-operations.md)|Beschreibt die Verwendung von <xref:System.Threading.Tasks.Parallel.Invoke%2A>.|
-|[Vorgehensweise: Zurückgeben eines Werts aus einer Aufgabe](../../../docs/standard/parallel-programming/how-to-return-a-value-from-a-task.md)|Beschreibt, wie in Aufgaben Werte zurückgegeben werden.|
-|[Vorgehensweise: Abbrechen einer Aufgabe und ihrer untergeordneten Elemente](../../../docs/standard/parallel-programming/how-to-cancel-a-task-and-its-children.md)|Beschreibt, wie Aufgaben abgebrochen werden.|
-|[Vorgehensweise: Erstellen von vorberechneten Aufgaben](../../../docs/standard/parallel-programming/how-to-create-pre-computed-tasks.md)|Beschreibt, wie mithilfe der <xref:System.Threading.Tasks.Task.FromResult%2A?displayProperty=nameWithType>-Methode die Ergebnisse asynchroner Downloadvorgänge aus einem Cache abgerufen werden können.|
-|[Vorgehensweise: Durchlaufen einer binären Struktur mit parallelen Aufgaben](../../../docs/standard/parallel-programming/how-to-traverse-a-binary-tree-with-parallel-tasks.md)|Beschreibt, wie Aufgaben zum Traversieren einer binären Struktur verwendet werden.|
-|[Vorgehensweise: Entpacken einer geschachtelten Aufgabe](../../../docs/standard/parallel-programming/how-to-unwrap-a-nested-task.md)|Veranschaulicht die Verwendung der <xref:System.Threading.Tasks.TaskExtensions.Unwrap%2A>-Erweiterungsmethode.|
+|[Vorgehensweise: Ausführen von parallelen Vorgängen mithilfe von Parallel.Invoke](../../../docs/standard/parallel-programming/how-to-use-parallel-invoke-to-execute-parallel-operations.md)|Beschreibt die Verwendung von <xref:System.Threading.Tasks.Parallel.Invoke%2A>.|
+|[Gewusst wie: Zurückgeben eines Werts aus einer Aufgabe](../../../docs/standard/parallel-programming/how-to-return-a-value-from-a-task.md)|Beschreibt, wie in Aufgaben Werte zurückgegeben werden.|
+|[Gewusst wie: Abbrechen einer Aufgabe und ihrer untergeordneten Elemente](../../../docs/standard/parallel-programming/how-to-cancel-a-task-and-its-children.md)|Beschreibt, wie Aufgaben abgebrochen werden.|
+|[Gewusst wie: Erstellen von vorberechneten Aufgaben](../../../docs/standard/parallel-programming/how-to-create-pre-computed-tasks.md)|Beschreibt, wie mithilfe der <xref:System.Threading.Tasks.Task.FromResult%2A?displayProperty=nameWithType>-Methode die Ergebnisse asynchroner Downloadvorgänge aus einem Cache abgerufen werden können.|
+|[Gewusst wie: Durchlaufen einer Binärstruktur mit parallelen Aufgaben](../../../docs/standard/parallel-programming/how-to-traverse-a-binary-tree-with-parallel-tasks.md)|Beschreibt, wie Aufgaben zum Traversieren einer binären Struktur verwendet werden.|
+|[Gewusst wie: Entpacken einer geschachtelten Aufgabe](../../../docs/standard/parallel-programming/how-to-unwrap-a-nested-task.md)|Veranschaulicht die Verwendung der <xref:System.Threading.Tasks.TaskExtensions.Unwrap%2A>-Erweiterungsmethode.|
 |[Datenparallelität](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md)|Beschreibt, wie Sie mithilfe von <xref:System.Threading.Tasks.Parallel.For%2A> und <xref:System.Threading.Tasks.Parallel.ForEach%2A> parallele Schleifen für Daten erstellen.|
 |[Parallele Programmierung](../../../docs/standard/parallel-programming/index.md)|Der Knoten auf oberster Ebene für die parallele .NET Framework-Programmierung.|
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Parallele Programmierung](../../../docs/standard/parallel-programming/index.md)
 - [Beispiele für die parallele Programmierung mit .NET Framework](https://code.msdn.microsoft.com/Samples-for-Parallel-b4b76364)

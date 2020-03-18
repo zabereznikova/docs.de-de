@@ -3,10 +3,10 @@ title: Implementieren von Hintergrundtasks in Microservices mit IHostedService u
 description: .NET-Microservicearchitektur für .NET-Containeranwendungen | Übersicht über neue Optionen zum Implementieren von Hintergrundtasks in Microservices in .NET Core mit IHostedService und BackgroundService
 ms.date: 01/30/2020
 ms.openlocfilehash: fab67c816e90c69a4d593422b4974cb9b8819807
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/20/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77502309"
 ---
 # <a name="implement-background-tasks-in-microservices-with-ihostedservice-and-the-backgroundservice-class"></a>Implementieren von Hintergrundtasks in Microservices mit IHostedService und der BackgroundService-Klasse
@@ -45,7 +45,7 @@ SignalR ist ein Beispiel für ein Artefakt, das gehostete Dienste verwendet. Sie
 
 Sie können im Grunde jede dieser Aktionen in eine Hintergrundaufgabe auslagern, die `IHostedService` implementiert.
 
-Sie können einem `WebHost` oder `Host` ein oder mehrere `IHostedServices` hinzufügen, indem Sie sie über die <xref:Microsoft.Extensions.DependencyInjection.ServiceCollectionHostedServiceExtensions.AddHostedService%2A> -Erweiterungsmethode in einem ASP.NET Core-`WebHost` (oder in einem `Host` in .NET Core 2.1 oder höher) registrieren. Dabei müssen Sie die gehosteten Dienste in der bekannten `ConfigureServices()`-Methode der `Startup`-Klasse registrieren, was im folgenden Codeausschnitt einer typischen ASP.NET-WebHost-Klasse demonstriert wird.
+Sie können einem `IHostedServices` oder `WebHost` ein oder mehrere `Host` hinzufügen, indem Sie sie über die <xref:Microsoft.Extensions.DependencyInjection.ServiceCollectionHostedServiceExtensions.AddHostedService%2A> -Erweiterungsmethode in einem ASP.NET Core-`WebHost` (oder in einem `Host` in .NET Core 2.1 oder höher) registrieren. Dabei müssen Sie die gehosteten Dienste in der bekannten `ConfigureServices()`-Methode der `Startup`-Klasse registrieren, was im folgenden Codeausschnitt einer typischen ASP.NET-WebHost-Klasse demonstriert wird.
 
 ```csharp
 public IServiceProvider ConfigureServices(IServiceCollection services)

@@ -5,10 +5,10 @@ ms.date: 05/17/2019
 ms.topic: tutorial
 ms.custom: mvc
 ms.openlocfilehash: a1ff1ba4d5e855e0ac36b99b0c9d63adfaaaac1e
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73454938"
 ---
 # <a name="deploy-a-net-for-apache-spark-application-to-amazon-emr-spark"></a>Bereitstellen einer .NET für Apache Spark-Anwendung in Amazon EMR Spark
@@ -24,7 +24,7 @@ In diesem Tutorial lernen Sie, wie die folgenden Aufgaben ausgeführt werden:
 > * Bereitstellen einer App in Amazon EMR Spark
 > * Ausführen der App
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
+## <a name="prerequisites"></a>Voraussetzungen
 
 Führen Sie zunächst folgende Schritte aus:
 
@@ -78,7 +78,7 @@ Führen Sie zunächst folgende Schritte aus:
 
 Dieser Schritt ist nur bei der Erstellung des Clusters erforderlich.
 
-Führen Sie mithilfe der [Bootstrapaktionen](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-plan-bootstrap.html) `install-worker.sh` bei der Erstellung des Clusters aus.
+Führen Sie mithilfe der [Bootstrapaktionen](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-plan-bootstrap.html)`install-worker.sh` bei der Erstellung des Clusters aus.
 
 Führen Sie unter Linux den folgenden Befehl mit der AWS CLI aus:
 

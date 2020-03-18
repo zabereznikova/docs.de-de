@@ -12,11 +12,11 @@ helpviewer_keywords:
 - garbage collection, managed heap
 ms.assetid: 67c5a20d-1be1-4ea7-8a9a-92b0b08658d2
 ms.openlocfilehash: ea8aef03d2f5837f35ecb31209e57853c0c8257b
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74330419"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79398544"
 ---
 # <a name="fundamentals-of-garbage-collection"></a>Grundlagen der Garbage Collection
 
@@ -122,7 +122,7 @@ Kurzlebige Generationen müssen das Speichersegment belegen, das als kurzlebiges
 
 Die Größe des kurzlebigen Segments variiert abhängig davon, ob ein System ein 32-Bit- oder ein 64-Bit-System ist, und welchen Typ der Garbage Collector hat, der ausgeführt wird. Die Standardwerte sind in der folgenden Tabelle aufgeführt.
 
-||32-Bit|64-Bit|
+||32-Bit|64 Bit|
 |-|-------------|-------------|
 |Arbeitsstation-GC|16 MB|256 MB|
 |Server-GC|64 MB|4 GB|
@@ -180,7 +180,7 @@ Der Garbage Collector optimiert sich selbst und kann in einer Vielzahl von Szena
 
 - Die Garbage Collection (GC) für die Arbeitsstation ist für Client-Apps konzipiert. Dies ist die GC-Standardkonfiguration für eigenständige Apps. Für gehostete Apps, z. B. die von ASP.NET gehosteten Apps, bestimmt der Host die GC-Standardkonfiguration.
 
-  Die Garbage Collection für die Arbeitsstation kann gleichzeitig oder nicht gleichzeitig erfolgen. Die gleichzeitige Garbage Collection ermöglicht, dass verwaltete Threads während einer Garbage Collection Vorgänge fortgesetzt werden können. Ab .NET Framework 4 wird die [gleichzeitige Garbage Collection](#concurrent-garbage-collection) durch die [Garbage Collection im Hintergrund](#background-workstation-garbage-collection) ersetzt.
+  Die Garbage Collection für die Arbeitsstation kann gleichzeitig oder nicht gleichzeitig erfolgen. Die gleichzeitige Garbage Collection ermöglicht, dass verwaltete Threads während einer Garbage Collection Vorgänge fortgesetzt werden können. Ab .NET Framework 4 wird die [gleichzeitige Garbage Collection](#background-workstation-garbage-collection) durch die [Garbage Collection im Hintergrund](#concurrent-garbage-collection) ersetzt.
 
 - Garbage Collection für Server, die für Serveranwendungen vorgesehen ist, die einen hohen Durchsatz und eine hohe Skalierbarkeit erfordern.
 
@@ -267,7 +267,7 @@ Die folgende Abbildung zeigt eine parallele Garbage Collection für einen separa
 
 ![Threads für parallele Garbage Collection](./media/gc-concurrent.png)
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Konfigurationsoptionen für die Garbage Collection](../../core/run-time-config/garbage-collector.md)
 - [Garbage Collection](index.md)

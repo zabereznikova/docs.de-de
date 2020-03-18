@@ -3,12 +3,12 @@ title: Erste Schritte mit der Syntaxanalyse (Roslyn-APIs)
 description: Eine Einführung in das Durchlaufen, Abfragen und schrittweise Durchlaufen von Syntaxstrukturen.
 ms.date: 02/05/2018
 ms.custom: mvc
-ms.openlocfilehash: d4163e8aadf577a5a5cbed225b26a0ec8390277e
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 22d1303c9daa2ae35cf130b0c857cd7a5efdbe76
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75347003"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78240517"
 ---
 # <a name="get-started-with-syntax-analysis"></a>Erste Schritte mit der Syntaxanalyse
 
@@ -58,7 +58,7 @@ Syntaxstrukturen bestehen aus den folgenden vier primären Bausteinen:
 
 Trivia, Token und Knoten werden hierarchisch zusammengestellt und bilden eine Struktur, die alle Elemente in einem Visual Basic- oder C#-Codefragment vollständig repräsentiert. Sie können diese Struktur im Fenster **Syntaxschnellansicht** anzeigen. Wählen Sie in Visual Studio **Ansicht** > **Weitere Fenster** > **Syntaxschnellansicht** aus. Die oben gezeigte C#-Quelldatei sieht in der **Syntaxschnellansicht** ungefähr wie folgt aus:
 
-**SyntaxNode-** : Blau | **SyntaxToken**: Grün | **SyntaxTrivia**: Rot ![C#-Codedatei](media/walkthrough-csharp-syntax-figure1.png)
+**SyntaxNode**: Blau | **SyntaxToken**: Grün | **SyntaxTrivia**: Rot ![C#-Codedatei](media/walkthrough-csharp-syntax-figure1.png)
 
 Durch Navigieren in dieser Struktur lässt sich jede Anweisung, jeder Ausdruck, jedes Token und jeder Leerraum in einer Codedatei auffinden.
 
@@ -84,35 +84,35 @@ Erstellen Sie ein neues **Stand-Alone Code Analysis Tool**-Projekt für C#:
 Sie werden das einfache Hello World!- Programm analysieren, das weiter oben in diesem Artikel gezeigt wurde.
 Fügen Sie den Text für das Hello World-Programm als Konstante in Ihre `Program`-Klasse ein:
 
-[!code-csharp[Declare the program text](../../../../samples/csharp/roslyn-sdk/SyntaxQuickStart/HelloSyntaxTree/Program.cs#1 "Declare a constant string for the program text to analyze")]
+[!code-csharp[Declare the program text](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxQuickStart/HelloSyntaxTree/Program.cs#1 "Declare a constant string for the program text to analyze")]
 
 Anschließend fügen Sie den folgenden Code hinzu, um die **Syntaxstruktur** für den Codetext in der `programText`-Konstante zu erstellen.  Fügen Sie Ihrer `Main`-Methode die folgende Zeile hinzu:
 
-[!code-csharp[Create the tree](../../../../samples/csharp/roslyn-sdk/SyntaxQuickStart/HelloSyntaxTree/Program.cs#2 "Create the syntax tree")]
+[!code-csharp[Create the tree](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxQuickStart/HelloSyntaxTree/Program.cs#2 "Create the syntax tree")]
 
 Diese beiden Zeilen erstellen die Struktur und rufen den Stammknoten dieser Struktur ab. Jetzt können Sie die Knoten in der Struktur untersuchen. Fügen Sie diese Zeilen zu Ihrer `Main`-Methode hinzu, um einige der Eigenschaften des Stammknotens in der Struktur anzuzeigen:
 
-[!code-csharp[Examine the root node](../../../../samples/csharp/roslyn-sdk/SyntaxQuickStart/HelloSyntaxTree/Program.cs#3 "Examine the root node")]
+[!code-csharp[Examine the root node](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxQuickStart/HelloSyntaxTree/Program.cs#3 "Examine the root node")]
 
 Führen Sie die Anwendung aus, um festzustellen, was Ihr Code in Zusammenhang mit dem Stammknoten in dieser Struktur erkannt hat.
 
 In der Regel würden Sie die Struktur durchlaufen, um mehr über den Code zu erfahren. In diesem Beispiel analysieren Sie bekannten Code, um die APIs zu erkunden. Fügen Sie folgenden Code hinzu, um den ersten Member des `root`-Knotens zu untersuchen:
 
-[!code-csharp[Find the first member](../../../../samples/csharp/roslyn-sdk/SyntaxQuickStart/HelloSyntaxTree/Program.cs#4 "Find the first member")]
+[!code-csharp[Find the first member](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxQuickStart/HelloSyntaxTree/Program.cs#4 "Find the first member")]
 
 Dieser Member ist eine <xref:Microsoft.CodeAnalysis.CSharp.Syntax.NamespaceDeclarationSyntax?displayProperty=nameWithType>. Er repräsentiert alle Elemente im Bereich der `namespace HelloWorld`-Deklaration. Fügen Sie folgenden Code hinzu, um zu ermitteln, welche Knoten im `HelloWorld`-Namespace deklariert sind:
 
-[!code-csharp[Find the class declaration](../../../../samples/csharp/roslyn-sdk/SyntaxQuickStart/HelloSyntaxTree/Program.cs#5 "Find the class declaration")]
+[!code-csharp[Find the class declaration](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxQuickStart/HelloSyntaxTree/Program.cs#5 "Find the class declaration")]
 
 Führen Sie das Programm aus, um das Ergebnis anzuzeigen.
 
 Da Sie jetzt wissen, dass die Deklaration eine <xref:Microsoft.CodeAnalysis.CSharp.Syntax.ClassDeclarationSyntax?displayProperty=nameWithType> ist, deklarieren Sie eine neue Variable dieses Typs, um die Klassendeklaration zu untersuchen. Diese Klasse enthält nur einen Member: die `Main`-Methode. Fügen Sie folgenden Code hinzu, um die `Main`-Methode zu suchen und in eine <xref:Microsoft.CodeAnalysis.CSharp.Syntax.MethodDeclarationSyntax?displayProperty=nameWithType> umzuwandeln.
 
-[!code-csharp[Find the main declaration](../../../../samples/csharp/roslyn-sdk/SyntaxQuickStart/HelloSyntaxTree/Program.cs#6 "Find the main declaration")]
+[!code-csharp[Find the main declaration](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxQuickStart/HelloSyntaxTree/Program.cs#6 "Find the main declaration")]
 
 Der Knoten mit der Methodendeklaration enthält alle syntaktischen Informationen zu der Methode. Jetzt zeigen wir den Rückgabetyp der `Main`-Methode, die Anzahl und Typen der Argumente und den Textkörper der Methode an. Fügen Sie den folgenden Code hinzu:
 
-[!code-csharp[Examine the syntax of the main method](../../../../samples/csharp/roslyn-sdk/SyntaxQuickStart/HelloSyntaxTree/Program.cs#7 "Display information about the main method")]
+[!code-csharp[Examine the syntax of the main method](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxQuickStart/HelloSyntaxTree/Program.cs#7 "Display information about the main method")]
 
 Führen Sie das Programm aus, um alle Informationen anzuzeigen, die Sie zu diesem Programm ermittelt haben:
 
@@ -144,7 +144,7 @@ Zusätzlich zum Durchlaufen von Strukturen können Sie die Syntaxstruktur auch m
 
 Sie können diese Abfragemethoden verwenden, um anstelle des Navigierens in der Struktur das Argument für die `Main`-Methode zu suchen. Fügen Sie am Ende Ihrer `Main`-Methode folgenden Code hinzu:
 
-[!code-csharp[Query the tree for the arguments to Main](../../../../samples/csharp/roslyn-sdk/SyntaxQuickStart/HelloSyntaxTree/Program.cs#8 "Query the tree for the arguments to Main")]
+[!code-csharp[Query the tree for the arguments to Main](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxQuickStart/HelloSyntaxTree/Program.cs#8 "Query the tree for the arguments to Main")]
 
 Die erste Anweisung verwendet einen LINQ-Ausdruck und die <xref:Microsoft.CodeAnalysis.SyntaxNode.DescendantNodes%2A>-Methode, um denselben Parameter zu suchen wie im vorherigen Beispiel.
 
@@ -164,33 +164,33 @@ Den fertig gestellten Code für dieses Beispiel finden Sie in [unserem GitHub-Re
 
 Wie im vorherigen Beispiel können Sie eine Zeichenfolgenkonstante definieren, die den Text des Programms enthält, das Sie analysieren möchten:
 
-[!code-csharp[Define the code text to analyzer](../../../../samples/csharp/roslyn-sdk/SyntaxQuickStart/SyntaxWalker/Program.cs#1 "Define the program text to analyze")]
+[!code-csharp[Define the code text to analyzer](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxQuickStart/SyntaxWalker/Program.cs#1 "Define the program text to analyze")]
 
 Dieser Quelltext enthält `using`-Direktiven, die an vier Stellen verteilt sind: auf Dateiebene, im Namespace der obersten Ebene und in den beiden geschachtelten Namespaces. Dieses Beispiel zeigt ein grundlegendes Szenario für die Verwendung der <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxWalker>-Klasse zum Abfragen von Code. Es wäre sehr umständlich, jeden Knoten in der Stammsyntaxstruktur besuchen zu müssen, um using-Deklarationen zu finden. Stattdessen erstellen Sie eine abgeleitete Klasse und überschreiben die Methoden, die nur aufgerufen werden, denn der aktuelle Knoten in der Struktur eine using-Direktive ist. Ihr Besucher führt keine Aktionen für einen andern Knotentyp aus. Diese Einzelmethode untersucht jede der `using`-Anweisungen und erstellt eine Sammlung der Namespaces, die sich nicht im `System`-Namespace befinden. Sie erstellen einen <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxWalker>, der alle `using`-Anweisungen untersucht, und zwar nur die `using`-Anweisungen.
 
 Nachdem Sie den Programmtext definieren haben, müssen Sie eine `SyntaxTree` erstellen und das Stammelement dieser Struktur abrufen:
 
-[!code-csharp[Create the Syntax tree and access the root](../../../../samples/csharp/roslyn-sdk/SyntaxQuickStart/SyntaxWalker/Program.cs#2 "Create the Syntax tree and access the root node.")]
+[!code-csharp[Create the Syntax tree and access the root](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxQuickStart/SyntaxWalker/Program.cs#2 "Create the Syntax tree and access the root node.")]
 
 Erstellen Sie als Nächstes eine neue Klasse. Wählen Sie in Visual Studio **Projekt** > **Neues Element hinzufügen** aus. Geben Sie im Dialogfeld **Neues Element hinzufügen** den Namen *UsingCollector.cs* als Dateinamen ein.
 
 Sie implementieren die `using`-Besucherfunktionalität in der `UsingCollector`-Klasse. Beginnen Sie, indem Sie die `UsingCollector`-Klasse aus <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxWalker> ableiten.
 
-[!code-csharp[Declare the base class for the using collector](../../../../samples/csharp/roslyn-sdk/SyntaxQuickStart/SyntaxWalker/UsingCollector.cs#3 "Declare the base class for the UsingCollector")]
+[!code-csharp[Declare the base class for the using collector](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxQuickStart/SyntaxWalker/UsingCollector.cs#3 "Declare the base class for the UsingCollector")]
 
 Sie benötigen Speicherplatz, um die gesammelten Namespaceknoten zu speichern.  Deklarieren Sie eine öffentliche schreibgeschützte Eigenschaft in der `UsingCollector`-Klasse, und verwenden Sie diese Variable, um die gefundenen <xref:Microsoft.CodeAnalysis.CSharp.Syntax.UsingDirectiveSyntax>-Knoten zu speichern:
 
-[!code-csharp[Declare storage for the using syntax nodes](../../../../samples/csharp/roslyn-sdk/SyntaxQuickStart/SyntaxWalker/UsingCollector.cs#4 "Declare storage for the using syntax nodes")]
+[!code-csharp[Declare storage for the using syntax nodes](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxQuickStart/SyntaxWalker/UsingCollector.cs#4 "Declare storage for the using syntax nodes")]
 
 Die Basisklasse <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxWalker> implementiert die Logik, gemäß der jeder Knoten in der Syntaxstruktur besucht wird. Die abgeleitete Klasse überschreibt die Methoden, die für die Knoten aufgerufen werden, für die Sie sich interessieren. In diesem Fall gilt Ihr Interesse allen `using`-Direktiven. Das bedeutet, dass Sie die <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor.VisitUsingDirective(Microsoft.CodeAnalysis.CSharp.Syntax.UsingDirectiveSyntax)>-Methode überschreiben müssen. Das einzige Argument in dieser Methode ist ein <xref:Microsoft.CodeAnalysis.CSharp.Syntax.UsingDirectiveSyntax?displayProperty=nameWithType>-Objekt. Das ist ein wichtiger Vorteil gegenüber der Verwendung der Besucher: Diese rufen die überschriebenen Methoden mit Argumenten auf, die bereits in den bestimmten Knotentyp umgewandelt wurden. Die <xref:Microsoft.CodeAnalysis.CSharp.Syntax.UsingDirectiveSyntax?displayProperty=nameWithType>-Klasse weist eine <xref:Microsoft.CodeAnalysis.CSharp.Syntax.UsingDirectiveSyntax.Name>-Eigenschaft auf, die den Namen des zu importierenden Namespace speichert. Es handelt sich um eine <xref:Microsoft.CodeAnalysis.CSharp.Syntax.NameSyntax?displayProperty=nameWithType>. Fügen Sie folgenden Code in die <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor.VisitUsingDirective(Microsoft.CodeAnalysis.CSharp.Syntax.UsingDirectiveSyntax)>-Überschreibung ein:
 
-[!code-csharp[Examine using nodes for the System namespace](../../../../samples/csharp/roslyn-sdk/SyntaxQuickStart/SyntaxWalker/UsingCollector.cs#5 "Examine all using nodes for the System namespace.")]
+[!code-csharp[Examine using nodes for the System namespace](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxQuickStart/SyntaxWalker/UsingCollector.cs#5 "Examine all using nodes for the System namespace.")]
 
 Wie beim oben aufgeführten Beispiel haben Sie eine Vielzahl von `WriteLine`-Anweisungen hinzugefügt, die dabei helfen, diese Methode zu verstehen. Sie sehen, wann die Methode aufgerufen wird und welche Argumente bei jedem Aufruf an die Methode übergeben werden.
 
 Zum Schluss müssen Sie zwei Codezeilen hinzufügen, um den `UsingCollector` zu erstellen und dafür zu sorgen, dass dieser den Stammknoten besucht und alle `using`-Anweisungen sammelt. Fügen Sie dann eine `foreach`-Schleife ein, um alle `using`-Anweisungen anzuzeigen, die der Collector gefunden hat:
 
-[!code-csharp[Create the UsingCollector and visit the root node.](../../../../samples/csharp/roslyn-sdk/SyntaxQuickStart/SyntaxWalker/Program.cs#6 "Create the UsingCollector and visit the root node.")]
+[!code-csharp[Create the UsingCollector and visit the root node.](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxQuickStart/SyntaxWalker/Program.cs#6 "Create the UsingCollector and visit the root node.")]
 
 Kompilieren Sie das Projekt, und führen Sie es aus. Die folgende Ausgabe wird angezeigt:
 

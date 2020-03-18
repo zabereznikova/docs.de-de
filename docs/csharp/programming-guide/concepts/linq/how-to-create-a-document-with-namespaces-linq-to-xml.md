@@ -3,10 +3,10 @@ title: 'Vorgehensweise: Erstellen eines Dokuments mit Namespaces (C#) (LINQ to X
 ms.date: 07/20/2015
 ms.assetid: 37e63c57-f86d-47ac-88a7-2c2d107def30
 ms.openlocfilehash: 429b0b0b41f2201b983f931e469b25ff406b91ac
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/16/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "74141334"
 ---
 # <a name="how-to-create-a-document-with-namespaces-c-linq-to-xml"></a>Vorgehensweise: Erstellen eines Dokuments mit Namespaces (C#) (LINQ to XML)
@@ -142,6 +142,6 @@ Console.WriteLine(root);
 </aw:Root>  
 ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Namespaces: Übersicht (LINQ to XML) (C#)](namespaces-overview-linq-to-xml.md)

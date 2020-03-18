@@ -1,5 +1,5 @@
 ---
-title: 'Exemplarische Vorgehensweise: Verwenden von Dataflow in einer Windows Forms-Anwendung'
+title: 'Exemplarische Vorgehensweise: Datenfluss in einer Windows Forms-Anwendung verwenden'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -8,13 +8,13 @@ helpviewer_keywords:
 - Windows Forms, and TPL
 ms.assetid: 9c65cdf7-660c-409f-89ea-59d7ec8e127c
 ms.openlocfilehash: 794253514edf63f02276e1ece21c60a85c534390
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78159766"
 ---
-# <a name="walkthrough-using-dataflow-in-a-windows-forms-application"></a>Exemplarische Vorgehensweise: Verwenden von Dataflow in einer Windows Forms-Anwendung
+# <a name="walkthrough-using-dataflow-in-a-windows-forms-application"></a>Exemplarische Vorgehensweise: Datenfluss in einer Windows Forms-Anwendung verwenden
 Dieses Dokument veranschaulicht, wie ein Netzwerk von Datenflussblöcken erstellt wird, die eine Bildverarbeitung in einer Windows Forms-Anwendung durchführen.  
   
  In diesem Beispiel werden Bilddateien aus dem angegebenen Ordner geladen, es wird ein zusammengesetztes Bild erstellt und das Ergebnis wird angezeigt. Im Beispiel wird das Datenflussmodell verwendet, um Bilder durch das Netzwerk zu leiten. Im Datenflussmodell kommunizieren unabhängige Komponenten eines Programms durch Senden von Nachrichten miteinander. Wenn eine Komponente eine Nachricht empfängt, führt sie eine Aktion aus und übergibt dann das Ergebnis an eine andere Komponente. Dies ist vergleichbar mit dem Ablaufsteuerungsmodell, in dem eine Anwendung Steuerungsstrukturen wie bedingte Anweisungen, Schleifen usw.verwendet, um die Reihenfolge der Vorgänge in einem Programm zu steuern.  
@@ -45,11 +45,11 @@ Dieses Dokument veranschaulicht, wie ein Netzwerk von Datenflussblöcken erstell
   
 2. Fügen Sie im Formulardesigner für das Hauptformular „Form1.cs“ („Form1.vb“ in Visual Basic) ein <xref:System.Windows.Forms.ToolStrip>-Steuerelement hinzu.  
   
-3. Fügen Sie dem <xref:System.Windows.Forms.ToolStrip>-Steuerelement ein <xref:System.Windows.Forms.ToolStripButton>-Steuerelement hinzu. Legen Sie die <xref:System.Windows.Forms.ToolStripItem.DisplayStyle%2A>-Eigenschaft auf <xref:System.Windows.Forms.ToolStripItemDisplayStyle.Text> und die <xref:System.Windows.Forms.ToolStripItem.Text%2A>-Eigenschaft auf **Ordner auswählen** fest.  
+3. Fügen Sie dem <xref:System.Windows.Forms.ToolStripButton>-Steuerelement ein <xref:System.Windows.Forms.ToolStrip>-Steuerelement hinzu. Legen Sie die <xref:System.Windows.Forms.ToolStripItem.DisplayStyle%2A>-Eigenschaft auf <xref:System.Windows.Forms.ToolStripItemDisplayStyle.Text> und die <xref:System.Windows.Forms.ToolStripItem.Text%2A>-Eigenschaft auf **Ordner auswählen** fest.  
   
-4. Fügen Sie dem <xref:System.Windows.Forms.ToolStrip>-Steuerelement ein zweites <xref:System.Windows.Forms.ToolStripButton>-Steuerelement hinzu. Legen Sie die <xref:System.Windows.Forms.ToolStripItem.DisplayStyle%2A>-Eigenschaft auf <xref:System.Windows.Forms.ToolStripItemDisplayStyle.Text>, die <xref:System.Windows.Forms.ToolStripItem.Text%2A>-Eigenschaft auf **Abbrechen** und die <xref:System.Windows.Forms.ToolStripItem.Enabled%2A>-Eigenschaft auf `False` fest.  
+4. Fügen Sie dem <xref:System.Windows.Forms.ToolStripButton>-Steuerelement ein zweites <xref:System.Windows.Forms.ToolStrip>-Steuerelement hinzu. Legen Sie die <xref:System.Windows.Forms.ToolStripItem.DisplayStyle%2A>-Eigenschaft auf <xref:System.Windows.Forms.ToolStripItemDisplayStyle.Text>, die <xref:System.Windows.Forms.ToolStripItem.Text%2A>-Eigenschaft auf **Abbrechen** und die <xref:System.Windows.Forms.ToolStripItem.Enabled%2A>-Eigenschaft auf `False` fest.  
   
-5. Fügen Sie dem Hauptformular ein <xref:System.Windows.Forms.PictureBox>-Objekt hinzu. Legen Sie die <xref:System.Windows.Forms.Control.Dock%2A> -Eigenschaft auf <xref:System.Windows.Forms.DockStyle.Fill>fest.  
+5. Fügen Sie dem Hauptformular ein <xref:System.Windows.Forms.PictureBox>-Objekt hinzu. Legen Sie die <xref:System.Windows.Forms.Control.Dock%2A>-Eigenschaft auf <xref:System.Windows.Forms.DockStyle.Fill> fest.  
   
 <a name="network"></a>
 ## <a name="creating-the-dataflow-network"></a>Erstellen des Datenflussnetzwerks  
@@ -67,7 +67,7 @@ Dieses Dokument veranschaulicht, wie ein Netzwerk von Datenflussblöcken erstell
   
      [!code-csharp[TPLDataflow_CompositeImages#2](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_compositeimages/cs/compositeimages/form1.cs#2)]  
   
-4. Fügen Sie der `Form1`-Klasse die folgende `CreateImageProcessingNetwork`-Methode hinzu: Diese Methode erstellt das Bildverarbeitungsnetzwerk.  
+4. Fügen Sie der `CreateImageProcessingNetwork`-Klasse die folgende `Form1`-Methode hinzu: Diese Methode erstellt das Bildverarbeitungsnetzwerk.  
   
      [!code-csharp[TPLDataflow_CompositeImages#3](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_compositeimages/cs/compositeimages/form1.cs#3)]  
   
@@ -84,7 +84,7 @@ Dieses Dokument veranschaulicht, wie ein Netzwerk von Datenflussblöcken erstell
   
  In der folgenden Tabelle werden die Member des Netzwerks beschrieben.  
   
-|Member|Typ|Beschreibung|  
+|Member|Geben Sie Folgendes ein:|Beschreibung|  
 |------------|----------|-----------------|  
 |`loadBitmaps`|<xref:System.Threading.Tasks.Dataflow.TransformBlock%602>|Akzeptiert einen Ordnerpfad als Eingabe und erzeugt eine Auflistung von <xref:System.Drawing.Bitmap>-Objekten als Ausgabe.|  
 |`createCompositeBitmap`|<xref:System.Threading.Tasks.Dataflow.TransformBlock%602>|Akzeptiert eine Auflistung von <xref:System.Drawing.Bitmap>-Objekten als Eingabe und erzeugt eine zusammengesetzte Bitmap als Ausgabe.|  
@@ -97,9 +97,9 @@ Dieses Dokument veranschaulicht, wie ein Netzwerk von Datenflussblöcken erstell
   
  ![Abbildung des Bildverarbeitungsnetzwerks](./media/walkthrough-using-dataflow-in-a-windows-forms-application/dataflow-winforms-image-processing.png)  
   
- Da sich die `displayCompositeBitmap`- und `operationCancelled`-Datenflussblöcke auf die Benutzeroberfläche auswirken, ist es wichtig, dass diese Aktionen im Benutzeroberflächenthread erfolgen. Um dies zu erreichen, stellen diese Objekte während der Erstellung ein <xref:System.Threading.Tasks.Dataflow.ExecutionDataflowBlockOptions>-Objekt bereit, für das die <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.TaskScheduler%2A>-Eigenschaft auf <xref:System.Threading.Tasks.TaskScheduler.FromCurrentSynchronizationContext%2A?displayProperty=nameWithType> festgelegt ist. Die <xref:System.Threading.Tasks.TaskScheduler.FromCurrentSynchronizationContext%2A?displayProperty=nameWithType>-Methode erstellt ein <xref:System.Threading.Tasks.TaskScheduler>-Objekt, das Arbeiten im aktuellen Synchronisierungskontext durchführt. Da die `CreateImageProcessingNetwork`-Methode vom Handler der Schaltfläche **Ordner auswählen** aufgerufen wird, die im Benutzeroberflächenthread ausgeführt wird, werden die Aktionen für den `displayCompositeBitmap`- und den `operationCancelled`-Datenflussblock ebenfalls im Benutzeroberflächenthread ausgeführt.  
+ Da die `displayCompositeBitmap`- und `operationCancelled`-Datenflussblöcke als Benutzeroberfläche agiert, ist es wichtig, dass diese Aktionen im Benutzeroberflächenthread erfolgen. Um dies zu erreichen, stellen diese Objekte während der Erstellung ein <xref:System.Threading.Tasks.Dataflow.ExecutionDataflowBlockOptions>-Objekt bereit, für das die <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.TaskScheduler%2A>-Eigenschaft auf <xref:System.Threading.Tasks.TaskScheduler.FromCurrentSynchronizationContext%2A?displayProperty=nameWithType> festgelegt ist. Die <xref:System.Threading.Tasks.TaskScheduler.FromCurrentSynchronizationContext%2A?displayProperty=nameWithType>-Methode erstellt ein <xref:System.Threading.Tasks.TaskScheduler>-Objekt, das Arbeiten im aktuellen Synchronisierungskontext durchführt. Da die `CreateImageProcessingNetwork`-Methode vom Handler der Schaltfläche **Ordner auswählen** aufgerufen wird, die im Benutzeroberflächenthread ausgeführt wird, werden die Aktionen für den `displayCompositeBitmap`- und den `operationCancelled`-Datenflussblock ebenfalls im Benutzeroberflächenthread ausgeführt.  
   
- In diesem Beispiel wird ein gemeinsames Abbruchtoken verwendet, anstatt die <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.CancellationToken%2A>-Eigenschaft festzulegen, da die <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.CancellationToken%2A>-Eigenschaft die Ausführung des Datenflussblocks endgültig abbricht. Dank eines Abbruchtokens kann dieses Beispiel das gleiche Datenflussnetzwerk mehrmals wiederverwenden, und zwar selbst dann, wenn der Benutzer einen oder mehrere Vorgänge abbricht. Ein Beispiel für die Verwendung von <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.CancellationToken%2A> für den endgültigen Abbruch der Ausführung eines Datenflussblocks finden Sie unter [Vorgehensweise: Abbrechen eines Datenflussblocks](../../../docs/standard/parallel-programming/how-to-cancel-a-dataflow-block.md).  
+ In diesem Beispiel wird ein gemeinsames Abbruchtoken verwendet, anstatt die <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.CancellationToken%2A>-Eigenschaft festzulegen, da die <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.CancellationToken%2A>-Eigenschaft die Ausführung des Datenflussblocks endgültig abbricht. Dank eines Abbruchtokens kann dieses Beispiel das gleiche Datenflussnetzwerk mehrmals wiederverwenden, und zwar selbst dann, wenn der Benutzer einen oder mehrere Vorgänge abbricht. Ein Beispiel für die Verwendung von <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.CancellationToken%2A> für den endgültigen Abbruch der Ausführung des Datenflussblocks finden Sie unter [Gewusst wie: Abbrechen eines Datenflussblocks](../../../docs/standard/parallel-programming/how-to-cancel-a-dataflow-block.md).  
   
 <a name="ui"></a>
 ## <a name="connecting-the-dataflow-network-to-the-user-interface"></a>Verbinden des Datenflussnetzwerks mit der Benutzeroberfläche  
@@ -129,6 +129,6 @@ Dieses Dokument veranschaulicht, wie ein Netzwerk von Datenflussblöcken erstell
   
  ![Die Windows Forms-Anwendung](../../../docs/standard/parallel-programming/media/tpldataflow-compositeimages.gif "TPLDataflow_CompositeImages")  
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Dataflow (Datenfluss)](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)
