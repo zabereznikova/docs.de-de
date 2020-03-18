@@ -1,19 +1,19 @@
 ---
-title: 'Reservierte Felder für protobuf: GrpC für WCF-Entwickler'
-description: Erfahren Sie mehr über reservierte Felder für die Versions übergreifende Kompatibilität.
+title: Protobuf reservierte Felder - gRPC für WCF-Entwickler
+description: Erfahren Sie mehr über reservierte Felder für die versionsübergreifende Kompatibilität.
 ms.date: 09/09/2019
-ms.openlocfilehash: 50082a1aab2e7707a1839b9d56455124a9e4a6a1
-ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
+ms.openlocfilehash: bde658c671e970b7ec841d71d5b4284eb91195f0
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77542975"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79147944"
 ---
-# <a name="protobuf-reserved-fields"></a><span data-ttu-id="b1c76-103">Reservierte Protobuf-Felder</span><span class="sxs-lookup"><span data-stu-id="b1c76-103">Protobuf reserved fields</span></span>
+# <a name="protobuf-reserved-fields"></a><span data-ttu-id="33d95-103">Reservierte Protobuf-Felder</span><span class="sxs-lookup"><span data-stu-id="33d95-103">Protobuf reserved fields</span></span>
 
-<span data-ttu-id="b1c76-104">Die Abwärtskompatibilität garantiert in Protokollpuffer (protobuf) basiert auf Feldnummern, die immer das gleiche Datenelement darstellen.</span><span class="sxs-lookup"><span data-stu-id="b1c76-104">The backward-compatibility guarantees in Protocol Buffer (Protobuf) rely on field numbers always representing the same data item.</span></span> <span data-ttu-id="b1c76-105">Wenn ein Feld aus einer Nachricht in einer neuen Dienst Version entfernt wird, sollte diese Feldzahl nie wieder verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="b1c76-105">If a field is removed from a message in a new version of the service, that field number should never be reused.</span></span> <span data-ttu-id="b1c76-106">Hierfür können Sie das `reserved`-Schlüsselwort verwenden.</span><span class="sxs-lookup"><span data-stu-id="b1c76-106">You can enfore this by using the `reserved` keyword.</span></span> 
+<span data-ttu-id="33d95-104">Die Abwärtskompatibilitätsgarantien in Protocol Buffer (Protobuf) basieren auf Feldnummern, die immer dasselbe Datenelement darstellen.</span><span class="sxs-lookup"><span data-stu-id="33d95-104">The backward-compatibility guarantees in Protocol Buffer (Protobuf) rely on field numbers always representing the same data item.</span></span> <span data-ttu-id="33d95-105">Wenn ein Feld aus einer Nachricht in einer neuen Version des Dienstes entfernt wird, sollte diese Feldnummer niemals wiederverwendet werden.</span><span class="sxs-lookup"><span data-stu-id="33d95-105">If a field is removed from a message in a new version of the service, that field number should never be reused.</span></span> <span data-ttu-id="33d95-106">Sie können dies mit `reserved` dem Schlüsselwort verwenden.</span><span class="sxs-lookup"><span data-stu-id="33d95-106">You can enfore this by using the `reserved` keyword.</span></span>
 
-<span data-ttu-id="b1c76-107">Wenn die Felder `displayName` und `marketId` aus der zuvor definierten `Stock` Meldung entfernt wurden, sollten die entsprechenden Feldnummern wie im folgenden Beispiel reserviert werden.</span><span class="sxs-lookup"><span data-stu-id="b1c76-107">If the `displayName` and `marketId` fields were removed from the `Stock` message defined earlier, their field numbers should be reserved as in the following example.</span></span>
+<span data-ttu-id="33d95-107">Wenn `displayName` die `marketId` felder aus `Stock` der zuvor definierten Nachricht entfernt wurden, sollten ihre Feldnummern wie im folgenden Beispiel reserviert werden.</span><span class="sxs-lookup"><span data-stu-id="33d95-107">If the `displayName` and `marketId` fields were removed from the `Stock` message defined earlier, their field numbers should be reserved as in the following example.</span></span>
 
 ```protobuf
 syntax "proto3";
@@ -27,7 +27,7 @@ message Stock {
 }
 ```
 
-<span data-ttu-id="b1c76-108">Sie können auch das `reserved`-Schlüsselwort als Platzhalter für Felder verwenden, die möglicherweise in der Zukunft hinzugefügt werden.</span><span class="sxs-lookup"><span data-stu-id="b1c76-108">You can also use the `reserved` keyword as a placeholder for fields that might be added in the future.</span></span> <span data-ttu-id="b1c76-109">Sie können zusammenhängende Feld Zahlen als Bereich mit dem `to`-Schlüsselwort Ausdrücken.</span><span class="sxs-lookup"><span data-stu-id="b1c76-109">You can express contiguous field numbers as a range by using the `to` keyword.</span></span>
+<span data-ttu-id="33d95-108">Sie können das `reserved` Schlüsselwort auch als Platzhalter für Felder verwenden, die in Zukunft hinzugefügt werden könnten.</span><span class="sxs-lookup"><span data-stu-id="33d95-108">You can also use the `reserved` keyword as a placeholder for fields that might be added in the future.</span></span> <span data-ttu-id="33d95-109">Sie können zusammenhängende Feldnummern als Bereich `to` ausdrücken, indem Sie das Schlüsselwort verwenden.</span><span class="sxs-lookup"><span data-stu-id="33d95-109">You can express contiguous field numbers as a range by using the `to` keyword.</span></span>
 
 ```protobuf
 syntax "proto3";
@@ -40,6 +40,6 @@ message Info {
 ```
 
 >[!div class="step-by-step"]
-><span data-ttu-id="b1c76-110">[Zurück](protobuf-repeated.md)
->[Weiter](protobuf-any-oneof.md)</span><span class="sxs-lookup"><span data-stu-id="b1c76-110">[Previous](protobuf-repeated.md)
+><span data-ttu-id="33d95-110">[VorherigeS](protobuf-repeated.md)
+>[Weiter](protobuf-any-oneof.md)</span><span class="sxs-lookup"><span data-stu-id="33d95-110">[Previous](protobuf-repeated.md)
 [Next](protobuf-any-oneof.md)</span></span>

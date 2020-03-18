@@ -4,24 +4,24 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - cref [C#]
 ms.assetid: 66a6b0e5-b961-4504-a461-3a4cf481fc8b
-ms.openlocfilehash: 2a9b9966a28b62c41ac6091268ae172bae3a40d7
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: b06d0c9d447124dec7d8cf3c0cbbfd0daca78fe3
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76793446"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79157012"
 ---
-# <a name="cref-attribute-c-programming-guide"></a><span data-ttu-id="bbb48-102">cref-Attribut (C#-Programmierhandbuch)</span><span class="sxs-lookup"><span data-stu-id="bbb48-102">cref attribute (C# programming guide)</span></span>
+# <a name="cref-attribute-c-programming-guide"></a><span data-ttu-id="5e0dc-102">cref-Attribut (C#-Programmierhandbuch)</span><span class="sxs-lookup"><span data-stu-id="5e0dc-102">cref attribute (C# programming guide)</span></span>
 
-<span data-ttu-id="bbb48-103">Das Attribut `cref` in einem XML-Dokumentationstag bedeutet „Codeverweis“.</span><span class="sxs-lookup"><span data-stu-id="bbb48-103">The `cref` attribute in an XML documentation tag means "code reference."</span></span> <span data-ttu-id="bbb48-104">Es gibt an, dass der innere Text des Tags ein Codeelement ist, wie z.B. ein Typ, eine Methode oder Eigenschaft.</span><span class="sxs-lookup"><span data-stu-id="bbb48-104">It specifies that the inner text of the tag is a code element, such as a type, method, or property.</span></span> <span data-ttu-id="bbb48-105">Dokumentationstools wie [DocFX](https://dotnet.github.io/docfx/) und [Sandcastle](https://github.com/EWSoftware/SHFB) verwenden die `cref`-Attribute zum automatischen Generieren von Hyperlinks auf der Seite, auf der der Typ oder Member dokumentiert wird.</span><span class="sxs-lookup"><span data-stu-id="bbb48-105">Documentation tools like [DocFX](https://dotnet.github.io/docfx/) and [Sandcastle](https://github.com/EWSoftware/SHFB) use the `cref` attributes to automatically generate hyperlinks to the page where the type or member is documented.</span></span>
+<span data-ttu-id="5e0dc-103">Das Attribut `cref` in einem XML-Dokumentationstag bedeutet „Codeverweis“.</span><span class="sxs-lookup"><span data-stu-id="5e0dc-103">The `cref` attribute in an XML documentation tag means "code reference."</span></span> <span data-ttu-id="5e0dc-104">Es gibt an, dass der innere Text des Tags ein Codeelement ist, wie z.B. ein Typ, eine Methode oder Eigenschaft.</span><span class="sxs-lookup"><span data-stu-id="5e0dc-104">It specifies that the inner text of the tag is a code element, such as a type, method, or property.</span></span> <span data-ttu-id="5e0dc-105">Dokumentationstools wie [DocFX](https://dotnet.github.io/docfx/) und [Sandcastle](https://github.com/EWSoftware/SHFB) verwenden die `cref`-Attribute zum automatischen Generieren von Hyperlinks auf der Seite, auf der der Typ oder Member dokumentiert wird.</span><span class="sxs-lookup"><span data-stu-id="5e0dc-105">Documentation tools like [DocFX](https://dotnet.github.io/docfx/) and [Sandcastle](https://github.com/EWSoftware/SHFB) use the `cref` attributes to automatically generate hyperlinks to the page where the type or member is documented.</span></span>
 
-## <a name="example"></a><span data-ttu-id="bbb48-106">Beispiel</span><span class="sxs-lookup"><span data-stu-id="bbb48-106">Example</span></span>
+## <a name="example"></a><span data-ttu-id="5e0dc-106">Beispiel</span><span class="sxs-lookup"><span data-stu-id="5e0dc-106">Example</span></span>
 
-<span data-ttu-id="bbb48-107">Das folgende Beispiel zeigt die Attribute `cref`, die in [\<see>](./see.md)-Tags verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="bbb48-107">The following example shows `cref` attributes used in [\<see>](./see.md) tags.</span></span>
+<span data-ttu-id="5e0dc-107">Das folgende Beispiel zeigt die Attribute `cref`, die in [\<see>](./see.md)-Tags verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="5e0dc-107">The following example shows `cref` attributes used in [\<see>](./see.md) tags.</span></span>
 
 [!code-csharp[csProgGuideDocComments#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDocComments/CS/DocComments.cs#3)]
 
-<span data-ttu-id="bbb48-108">Beim Kompilieren erzeugt das Programm die folgende XML-Datei.</span><span class="sxs-lookup"><span data-stu-id="bbb48-108">When compiled, the program produces the following XML file.</span></span> <span data-ttu-id="bbb48-109">Beachten Sie, dass z.B. das Attribut `cref` für die `GetZero`-Methode vom Compiler in `"M:TestNamespace.TestClass.GetZero"` umgewandelt wurde.</span><span class="sxs-lookup"><span data-stu-id="bbb48-109">Notice that the `cref` attribute for the `GetZero` method, for example, has been transformed by the compiler to `"M:TestNamespace.TestClass.GetZero"`.</span></span> <span data-ttu-id="bbb48-110">Das Präfix „M:“ steht für „Methode“ und ist eine Konvention, die von Dokumentationstools wie DocFX und Sandcastle erkannt wird.</span><span class="sxs-lookup"><span data-stu-id="bbb48-110">The "M:" prefix means "method" and is a convention that is recognized by documentation tools such as DocFX and Sandcastle.</span></span> <span data-ttu-id="bbb48-111">Eine vollständige Liste der Präfixe finden Sie unter [Verarbeiten der XML-Datei](./processing-the-xml-file.md).</span><span class="sxs-lookup"><span data-stu-id="bbb48-111">For a complete list of prefixes, see [Processing the XML File](./processing-the-xml-file.md).</span></span>
+<span data-ttu-id="5e0dc-108">Beim Kompilieren erzeugt das Programm die folgende XML-Datei.</span><span class="sxs-lookup"><span data-stu-id="5e0dc-108">When compiled, the program produces the following XML file.</span></span> <span data-ttu-id="5e0dc-109">Beachten Sie, dass z.B. das Attribut `cref` für die `GetZero`-Methode vom Compiler in `"M:TestNamespace.TestClass.GetZero"` umgewandelt wurde.</span><span class="sxs-lookup"><span data-stu-id="5e0dc-109">Notice that the `cref` attribute for the `GetZero` method, for example, has been transformed by the compiler to `"M:TestNamespace.TestClass.GetZero"`.</span></span> <span data-ttu-id="5e0dc-110">Das Präfix „M:“ steht für „Methode“ und ist eine Konvention, die von Dokumentationstools wie DocFX und Sandcastle erkannt wird.</span><span class="sxs-lookup"><span data-stu-id="5e0dc-110">The "M:" prefix means "method" and is a convention that is recognized by documentation tools such as DocFX and Sandcastle.</span></span> <span data-ttu-id="5e0dc-111">Eine vollständige Liste der Präfixe finden Sie unter [Verarbeiten der XML-Datei](./processing-the-xml-file.md).</span><span class="sxs-lookup"><span data-stu-id="5e0dc-111">For a complete list of prefixes, see [Processing the XML File](./processing-the-xml-file.md).</span></span>
 
 ```xml  
 <?xml version="1.0"?>
@@ -49,12 +49,12 @@ ms.locfileid: "76793446"
             <summary>
             The GetZero method.
             </summary>
-            <example> 
+            <example>
             This sample shows how to call the <see cref="M:TestNamespace.TestClass.GetZero"/> method.
             <code>
-            class TestClass 
+            class TestClass
             {
-                static int Main() 
+                static int Main()
                 {
                     return GetZero();
                 }
@@ -66,7 +66,7 @@ ms.locfileid: "76793446"
             <summary>
             The GetGenericValue method.
             </summary>
-            <remarks> 
+            <remarks>
             This sample shows how to specify the <see cref="M:TestNamespace.TestClass.GetGenericValue``1(``0)"/> method as a cref attribute.
             </remarks>
         </member>
@@ -74,7 +74,7 @@ ms.locfileid: "76793446"
             <summary>
             GenericClass.
             </summary>
-            <remarks> 
+            <remarks>
             This example shows how to specify the <see cref="T:TestNamespace.GenericClass`1"/> type as a cref attribute.
             </remarks>
         </member>
@@ -82,7 +82,7 @@ ms.locfileid: "76793446"
 </doc>
 ```
 
-## <a name="see-also"></a><span data-ttu-id="bbb48-112">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="bbb48-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="5e0dc-112">Weitere Informationen</span><span class="sxs-lookup"><span data-stu-id="5e0dc-112">See also</span></span>
 
-- [<span data-ttu-id="bbb48-113">XML-Dokumentationskommentare</span><span class="sxs-lookup"><span data-stu-id="bbb48-113">XML documentation comments</span></span>](./index.md)
-- [<span data-ttu-id="bbb48-114">Empfohlene Tags für Dokumentationskommentare</span><span class="sxs-lookup"><span data-stu-id="bbb48-114">Recommended tags for documentation comments</span></span>](./recommended-tags-for-documentation-comments.md)
+- [<span data-ttu-id="5e0dc-113">XML-Dokumentationskommentare</span><span class="sxs-lookup"><span data-stu-id="5e0dc-113">XML documentation comments</span></span>](./index.md)
+- [<span data-ttu-id="5e0dc-114">Empfohlene Tags für Dokumentationskommentare</span><span class="sxs-lookup"><span data-stu-id="5e0dc-114">Recommended tags for documentation comments</span></span>](./recommended-tags-for-documentation-comments.md)
