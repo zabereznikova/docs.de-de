@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 276268d31670b5e7dcd0ae9c0b7a61c3c38ca663
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: 16ee73bfc0ab33b04ea3e2fa6d0eec521a9b8634
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77451886"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78968110"
 ---
 ### <a name="resource-manifest-file-names"></a>Manifestdateinamen von Ressourcen
 
@@ -63,7 +63,7 @@ Ab .NET Core 3.0 wird, wenn eine *RESX*-Datei mit einer gleichnamigen Quelldate
   Die Dateien *MyTypes.cs* und *MyTypes.resx* oder *MyTypes.fr-FR.resx* befinden sich im gleichen Ordner.
   
   **Generierter Manifestdateiname der Ressource**: *Namespace.Classname.resources* oder *Namespace.Classname.fr-FR.resources* (wobei `Namespace.Classname` der Name der ersten Klasse in *MyTypes.cs* ist).
-    
+
 - Wenn keine der vorherigen Regeln zutrifft, lautet der Name der generierten Manifestdatei der Ressource *RootNamespace.RelativePathWithDotsForSlashes.\[Culture.]resources*. Der relative Pfad ist der Wert des `Link`-Attributs des `EmbeddedResource`-Elements, falls festgelegt. Andernfalls ist der relative Pfad der Wert des `Identity`-Attributs des `EmbeddedResource`-Elements. In Visual Studio ist dies der Pfad vom Projektstamm zur Datei im Projektmappen-Explorer.
 
 #### <a name="recommended-action"></a>Empfohlene Aktion

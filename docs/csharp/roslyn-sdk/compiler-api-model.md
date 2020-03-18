@@ -3,16 +3,16 @@ title: '.NET Compiler Platform SDK: Konzepte und Objektmodell'
 description: In dieser Übersicht erhalten Sie die nötigen Hintergrundinformationen, damit Sie effektiv mit dem .NET Compiler SDK arbeiten können. Erfahren Sie mehr über API-Ebenen, die wichtigsten beteiligten Typen und das gesamte Objektmodell.
 ms.date: 10/10/2017
 ms.custom: mvc
-ms.openlocfilehash: ee8f902bf1df8b63e229fd518e7a0c592fcd47ca
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: e563260e21fb8807017db90ff63e30fec0415a48
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57675705"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79156960"
 ---
 # <a name="understand-the-net-compiler-platform-sdk-model"></a>Verstehen des .NET Compiler Platform SDK-Modells
 
-Compiler verarbeiten den von Ihnen geschriebenen Code, indem sie sich an strenge Regeln halten, die sich häufig von der Weise unterscheiden, wie Menschen Code lesen und verstehen. Es ist wichtig, dass Sie über grundlegende Kenntnisse zur Funktionsweise des vom Compiler verwendeten Modells verfügen, damit Sie ein Verständnis über die APIs erlangen, die Sie zum Erstellen von Roslyn-basierten Tools verwenden. 
+Compiler verarbeiten den von Ihnen geschriebenen Code, indem sie sich an strenge Regeln halten, die sich häufig von der Weise unterscheiden, wie Menschen Code lesen und verstehen. Es ist wichtig, dass Sie über grundlegende Kenntnisse zur Funktionsweise des vom Compiler verwendeten Modells verfügen, damit Sie ein Verständnis über die APIs erlangen, die Sie zum Erstellen von Roslyn-basierten Tools verwenden.
 
 ## <a name="compiler-pipeline-functional-areas"></a>Funktionsbereiche der Compilerpipeline
 
@@ -30,7 +30,7 @@ Für jede dieser Phasen stellt das .NET Compiler Platform SDK ein Objektmodell z
 
 Jeder Compiler vereint diese Komponenten zu einem End-to-End-Objekt.
 
-Bei diesen APIs handelt es sich um dieselben, die von Visual Studio verwendet werden. Beispielsweise verwenden die Komponenten, die den Code gliedern und formatieren, die Syntaxstrukturen. Der Objektkatalog und die Navigationskomponenten verwenden die Symboltabelle, beim Refactoring und bei Gehe zu Definitionen werden Semantikmodelle verwendet und „Bearbeiten und Fortfahren“ verwendet all diese Elemente, einschließlich der Ausgabe-API. 
+Bei diesen APIs handelt es sich um dieselben, die von Visual Studio verwendet werden. Beispielsweise verwenden die Komponenten, die den Code gliedern und formatieren, die Syntaxstrukturen. Der Objektkatalog und die Navigationskomponenten verwenden die Symboltabelle, beim Refactoring und bei Gehe zu Definitionen werden Semantikmodelle verwendet und „Bearbeiten und Fortfahren“ verwendet all diese Elemente, einschließlich der Ausgabe-API.
 
 ## <a name="api-layers"></a>API-Ebenen
 

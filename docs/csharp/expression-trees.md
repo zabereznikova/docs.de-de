@@ -4,18 +4,18 @@ description: Weitere Informationen zu Ausdrucksbaumstrukturen in .NET Core und w
 ms.date: 06/20/2016
 ms.technology: csharp-advanced-concepts
 ms.assetid: aceb4719-0d5a-4b19-b01f-b51063bcc54f
-ms.openlocfilehash: b7d039ea4585953473dc88cebcc516ea240cdc3a
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: e1026ef70860da519b688a9d67181b88d03f6f0b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73036323"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79145838"
 ---
 # <a name="expression-trees"></a>Ausdrucksbaumstrukturen
 
 Wenn Sie LINQ verwendet haben, verfügen Sie über Erfahrung mit einer umfangreichen Bibliothek, in der die `Func`-Typen Teil des API-Satzes sind. (Wenn Sie nicht mit LINQ vertraut sind, möchten Sie möglicherweise vorher [das LINQ-Tutorial](linq/index.md) und den Artikel zu [lambda expressions (Lambdaausdrücke)](./programming-guide/statements-expressions-operators/lambda-expressions.md) lesen.) *Ausdrucksbaumstrukturen* bieten eine umfangreichere Interaktion mit den Argumenten, die Funktionen sind.
 
-Sie schreiben die Argumente der Funktion in der Regel mithilfe von Lambdaausdrücken, wenn Sie LINQ-Abfragen erstellen. In einer normalen LINQ-Abfrage werden die Funktionsargumente in einen Delegaten transformiert, den der Compiler erstellt. 
+Sie schreiben die Argumente der Funktion in der Regel mithilfe von Lambdaausdrücken, wenn Sie LINQ-Abfragen erstellen. In einer normalen LINQ-Abfrage werden die Funktionsargumente in einen Delegaten transformiert, den der Compiler erstellt.
 
 Wenn Sie eine umfangreichere Interaktion haben möchten, müssen Sie *Ausdrucksbaumstrukturen* verwenden.
 Ausdrucksbaumstrukturen stellen Code wie eine Struktur dar, die Sie untersuchen, ändern oder ausführen können. Diese Tools bieten Ihnen die Möglichkeit, Code während der Laufzeit zu ändern. Sie können Code schreiben, der ausgeführte Algorithmen untersucht oder neue Funktionen einfügt. In erweiterten Szenarios können Sie ausgeführte Algorithmen ändern und sogar C#-Ausdrücke für die Ausführung in einer anderen Umgebung in eine andere Form übersetzen.
@@ -28,11 +28,11 @@ In den verbleibenden Abschnitten dieses Tutorials wird untersucht, was Ausdrucks
 1. [Ausdrucksbaumstrukturen mit Erläuterung](expression-trees-explained.md)
 
     Verstehen der Struktur und der Konzepte hinter *Ausdrucksbaumstrukturen*.
-    
+
 2. [Framework-Typen, die Ausdrucksbaumstrukturen unterstützen](expression-classes.md)
-    
+
     Erfahren Sie mehr über die Strukturen und Klassen, die Ausdrucksbaumstrukturen definieren und bearbeiten.
-    
+
 3. [Ausführen von Ausdrücken](expression-trees-execution.md)
 
     Erfahren Sie, wie Sie eine Ausdrucksbaumstruktur, die als Lambdaausdruck dargestellt wird, in einen Delegaten konvertieren, und wie Sie den resultierenden Delegaten ausführen.

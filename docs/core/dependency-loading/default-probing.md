@@ -5,11 +5,11 @@ ms.date: 08/09/2019
 author: sdmaclea
 ms.author: stmaclea
 ms.openlocfilehash: 500ee6ee863b1f311970a9e718936f57f7d4efd6
-ms.sourcegitcommit: 10db6551ea3c971470cf5d2cc21ba1cbcefe5c55
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/08/2019
-ms.locfileid: "72303683"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79398004"
 ---
 # <a name="default-probing"></a>Standardüberprüfung
 
@@ -21,7 +21,7 @@ Wenn die Runtime gestartet wird, stellt der Laufzeithost eine Reihe von benannte
 
 Jede der Überprüfungseigenschaften ist optional. Ist eine Eigenschaft vorhanden, ist sie ein Zeichenfolgenwert, der eine durch Trennzeichen getrennte Liste absoluter Pfade enthält. Das Trennzeichen ist unter Windows „;“ und auf allen anderen Plattformen „:“.
 
-|Eigenschaftenname                 |BESCHREIBUNG  |
+|Eigenschaftenname                 |Beschreibung  |
 |------------------------------|---------|
 |`TRUSTED_PLATFORM_ASSEMBLIES`   | Liste der Plattform- und Anwendungsassembly-Dateipfade |
 |`PLATFORM_RESOURCE_ROOTS`       | Liste der Verzeichnispfade für die Suche nach Satellitenressourcenassemblys |
@@ -48,7 +48,7 @@ Jede Eigenschaft ist über einen Aufruf der <xref:System.AppContext.GetData(Syst
 
 Der .NET Core-Laufzeithost gibt nützliche Ablaufverfolgungsmeldungen aus, wenn bestimmte Umgebungsvariablen aktiviert sind:
 
-|Umgebungsvariable        |BESCHREIBUNG  |
+|Umgebungsvariable        |Beschreibung  |
 |----------------------------|---------|
 |`COREHOST_TRACE=1`          |Aktiviert die Ablaufverfolgung|
 |`COREHOST_TRACEFILE=<path>` |Gibt die Ablaufverfolgung in einem Dateipfad anstelle der Standardausgabe an `stderr` aus|

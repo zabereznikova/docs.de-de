@@ -5,18 +5,18 @@ author: mamccrea
 ms.author: mamccrea
 ms.date: 12/13/2019
 ms.topic: tutorial
-ms.openlocfilehash: bd91fb401b9beb6ae74c4599b25e43284473f8b0
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 460c37e66c2c0a8a9b197a9abaff9eead842bdeb
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75466424"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79187550"
 ---
 # <a name="tutorial-do-batch-processing-with-net-for-apache-spark"></a>Tutorial: Ausführen von Batchverarbeitung mit .NET für Apache Spark
 
-In diesem Tutorial erfahren Sie, wie Sie Batchverarbeitung mithilfe von .NET für Apache Spark ausführen. Batchverarbeitung ist die Transformation von ruhenden Daten, was bedeutet, dass die Quelldaten bereits in den Datenspeicher geladen wurden. 
+In diesem Tutorial erfahren Sie, wie Sie Batchverarbeitung mithilfe von .NET für Apache Spark ausführen. Batchverarbeitung ist die Transformation von ruhenden Daten, was bedeutet, dass die Quelldaten bereits in den Datenspeicher geladen wurden.
 
-Batchverarbeitung erfolgt in der Regel über große, flache Datasets, die für eine weitere Analyse vorbereitet werden müssen. Protokollverarbeitung und Data Warehousing sind gängige Batchverarbeitungsszenarien. In diesem Szenario analysieren Sie Informationen zu GitHub-Projekten, z. B. wie häufig verschiedene Projekte geforkt oder wann Projekte zuletzt aktualisiert wurden. 
+Batchverarbeitung erfolgt in der Regel über große, flache Datasets, die für eine weitere Analyse vorbereitet werden müssen. Protokollverarbeitung und Data Warehousing sind gängige Batchverarbeitungsszenarien. In diesem Szenario analysieren Sie Informationen zu GitHub-Projekten, z. B. wie häufig verschiedene Projekte geforkt oder wann Projekte zuletzt aktualisiert wurden.
 
 In diesem Tutorial lernen Sie, wie die folgenden Aufgaben ausgeführt werden:
 
@@ -26,7 +26,7 @@ In diesem Tutorial lernen Sie, wie die folgenden Aufgaben ausgeführt werden:
 > * Lesen von Daten in einen DataFrame und Aufbereiten der Daten für die Analyse
 > * Verarbeiten der Daten mithilfe von Spark SQL
 
-## <a name="prerequisites"></a>Voraussetzungen 
+## <a name="prerequisites"></a>Voraussetzungen
 
 Wenn Sie zum ersten Mal mit .NET für Apache Spark arbeiten, lesen Sie das Tutorial [Erste Schritte mit .NET for Apache Spark](../tutorials/get-started.md), um zu erfahren, wie Sie Ihre Umgebung vorbereiten und Ihre erste .NET für Apache Spark-Anwendung ausführen können.
 
@@ -128,7 +128,7 @@ Das Ziel dieser App besteht darin, Einblicke in die GitHub-Projektdaten zu erhal
 
    ```csharp
    // Sort by most forked languages first
-   groupedDF.OrderBy(Desc("avg(forked_from)")).Show(); 
+   groupedDF.OrderBy(Desc("avg(forked_from)")).Show();
    ```
 
 1. Der nächste Codeblock zeigt Ihnen, wann Projekte zuletzt aktualisiert wurden. Sie registrieren eine neue benutzerdefinierte Funktion namens *MyUDF* und vergleichen sie mit einem Datum (*s_referenceDate*), das am Anfang des Tutorials deklariert wurde. Das Datum für jedes Projekt wird mit dem Verweisdatum verglichen. Anschließend wird Spark SQL verwendet, um die benutzerdefinierte Funktion für jede Zeile der Daten aufzurufen, um jedes Projekt im Dataset zu analysieren.
@@ -137,8 +137,8 @@ Das Ziel dieser App besteht darin, Einblicke in die GitHub-Projektdaten zu erhal
    spark.Udf().Register<string, bool>(
        "MyUDF",
        (date) => DateTime.TryParse(date, out DateTime convertedDate) &&
-           (convertedDate > s_referenceDate);   
-   cleanedProjects.CreateOrReplaceTempView("dateView"); 
+           (convertedDate > s_referenceDate);
+   cleanedProjects.CreateOrReplaceTempView("dateView");
 
    DataFrame dateDf = spark.Sql(
        "SELECT *, MyUDF(dateView.updated_at) AS datebefore FROM dateView");

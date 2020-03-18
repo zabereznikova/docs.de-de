@@ -4,10 +4,10 @@ description: Erfahren Sie, wie Sie einen ML.NET-Algorithmus für Ihr Machine Lea
 ms.topic: overview
 ms.date: 06/05/2019
 ms.openlocfilehash: 0fed33203c02303e37e47f548e08ec131eeb1c77
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75739996"
 ---
 # <a name="how-to-choose-an-mlnet-algorithm"></a>Gewusst wie: Auswählen eines ML.NET-Algorithmus
@@ -95,7 +95,7 @@ Diese Trainer erstellen einen Multiklassentrainer aus einem binären Trainer. Ve
 |----------|--------|
 |Verwenden zur Anomalieerkennung|<xref:Microsoft.ML.Trainers.RandomizedPcaTrainer>|
 
-## <a name="naive-bayes"></a>Naive Bayes-Verfahren
+## <a name="naive-bayes"></a>Naive Bayes
 
 |Eigenschaften|Trainer|
 |----------|--------|

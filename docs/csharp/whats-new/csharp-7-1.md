@@ -3,11 +3,11 @@ title: Neues in C# 7.1
 description: Eine Übersicht der neuen Features in C# 7.1
 ms.date: 04/09/2019
 ms.openlocfilehash: 5d2d6f51b6422f5b4db5c6bd275b5ffce1f695f8
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714584"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79398352"
 ---
 # <a name="whats-new-in-c-71"></a>Neues in C# 7.1
 
@@ -35,7 +35,7 @@ Dieser Artikel enthält im Folgenden eine Übersicht über die einzelnen Funktio
 1. Installieren Sie das globale [dotnet-try](https://github.com/dotnet/try/blob/master/README.md#setup)-Tool.
 1. Klonen Sie das [dotnet/try-samples](https://github.com/dotnet/try-samples)-Repository.
 1. Legen Sie das aktuelle Verzeichnis auf das Unterverzeichnis *csharp7* für das *try-samples*-Repository fest.
-1. Führen Sie aus `dotnet try`.
+1. Führen Sie `dotnet try` aus.
 
 ## <a name="async-main"></a>Async Main
 

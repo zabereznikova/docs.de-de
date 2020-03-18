@@ -7,12 +7,12 @@ helpviewer_keywords:
 - where keyword [C#]
 - where clause [C#]
 ms.assetid: 7f9bf952-7744-4f91-b676-cddb55d107c3
-ms.openlocfilehash: 42932809d58c739afc165676c0b90c5a23f568de
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 33616e4eacb484b9c6eda3862cd86fdd1e6df165
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75712818"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79173483"
 ---
 # <a name="where-clause-c-reference"></a>where-Klausel (C#-Referenz)
 
@@ -44,11 +44,11 @@ Wenn ein angegebenes Prädikat nicht für die Elemente in der Datenquelle gülti
 
 Zur Kompilierzeit wird das Schlüsselwort `where` in einen Aufruf der Standardabfrageoperator-Methode <xref:System.Linq.Enumerable.Where%2A> konvertiert.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Abfrageschlüsselwörter (LINQ)](query-keywords.md)
 - [from-Klausel](from-clause.md)
 - [select-Klausel](select-clause.md)
 - [Filtern von Daten](../../programming-guide/concepts/linq/filtering-data.md)
 - [LINQ in C#](../../linq/index.md)
-- [Erste Schritte mit LINQ in C#](/dotnet/csharp/programming-guide/concepts/linq/)
+- [Language-Integrated Query (LINQ)](../../programming-guide/concepts/linq/index.md)

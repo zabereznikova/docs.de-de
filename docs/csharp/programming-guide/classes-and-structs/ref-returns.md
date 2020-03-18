@@ -2,12 +2,12 @@
 title: Ref-Rückgabewerte und lokale ref-Variablen (Leitfaden für C#)
 description: Erfahren Sie, wie Sie ref-Rückgaben und lokale ref-Werte definieren und verwenden können.
 ms.date: 04/04/2018
-ms.openlocfilehash: 7ade422b5b3805ef2e1f487252a98fb85cdfe70c
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 87a9538db60d69062f0fb48ed9683a9d4f972b91
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73736822"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79170072"
 ---
 # <a name="ref-returns-and-ref-locals"></a>Ref-Rückgaben und lokale ref-Variablen
 
@@ -82,7 +82,7 @@ ref Person p = ref contacts.GetContactInformation("Brandie", "Best");
 
 Die nachfolgende Verwendung von `p` ist mit der Verwendung der von `GetContactInformation` zurückgegebenen Variable identisch, da `p` ein Alias für diese Variable darstellt. Durch Änderungen an `p` wird auch die von `GetContactInformation` zurückgegebene Variable geändert.
 
-Das Schlüsselwort `ref` wird sowohl vor der Deklaration lokaler Variablen *als auch* vor dem Methodenaufruf verwendet. 
+Das Schlüsselwort `ref` wird sowohl vor der Deklaration lokaler Variablen *als auch* vor dem Methodenaufruf verwendet.
 
 Auch auf Werte können Sie per Verweis zugreifen. In einigen Fällen erhöht dies die Leistung, da ein möglicherweise aufwendiger Kopiervorgang vermieden wird. In der folgenden Anweisung wird z.B. gezeigt, wie ein lokaler Verweiswert definiert wird, mit dem auf einen Wert verwiesen wird.
 
@@ -90,7 +90,7 @@ Auch auf Werte können Sie per Verweis zugreifen. In einigen Fällen erhöht die
 ref VeryLargeStruct reflocal = ref veryLargeStruct;
 ```
 
-Das Schlüsselwort `ref` wird sowohl vor der Deklaration lokaler Variablen *als auch* vor dem Wert im zweiten Beispiel verwendet. Wenn nicht in beiden Beispielen beide `ref`-Schlüsselwörter in den Ergebnissen der Variablendeklaration und der Zuweisung enthalten sind, tritt der Compilerfehler CS8172 "Cannot initialize a by-reference variable with a value." (Eine by-reference-Variable kann nicht mit einem Wert initialisiert werden) auf. 
+Das Schlüsselwort `ref` wird sowohl vor der Deklaration lokaler Variablen *als auch* vor dem Wert im zweiten Beispiel verwendet. Wenn nicht in beiden Beispielen beide `ref`-Schlüsselwörter in den Ergebnissen der Variablendeklaration und der Zuweisung enthalten sind, tritt der Compilerfehler CS8172 "Cannot initialize a by-reference variable with a value." (Eine by-reference-Variable kann nicht mit einem Wert initialisiert werden) auf.
 
 Vor C# 7.3 konnten lokalen ref-Variablen nach der Initialisierung nicht neu zugewiesen werden, um auf einen anderen Speicher zu verweisen. Diese Einschränkung wurde entfernt. Im folgenden Beispiel wird eine Neuzuweisung veranschaulicht:
 
@@ -103,7 +103,7 @@ refLocal = ref anotherVeryLargeStruct; // reassigned, refLocal refers to differe
 
 ## <a name="ref-returns-and-ref-locals-an-example"></a>Ref-Rückgaben und lokale ref-Variablen: ein Beispiel
 
-Das folgende Beispiel definiert eine `NumberStore`-Klasse, die ein Array von Integer-Werten speichert. Die `FindNumber`-Methode gibt die erste Anzahl, die größer als oder gleich der Anzahl ist, die als Argument übergeben wurde, als Verweis zurück. Wenn keine Anzahl größer als oder gleich dem Argument ist, gibt die Methode die Anzahl im Index 0 zurück. 
+Das folgende Beispiel definiert eine `NumberStore`-Klasse, die ein Array von Integer-Werten speichert. Die `FindNumber`-Methode gibt die erste Anzahl, die größer als oder gleich der Anzahl ist, die als Argument übergeben wurde, als Verweis zurück. Wenn keine Anzahl größer als oder gleich dem Argument ist, gibt die Methode die Anzahl im Index 0 zurück.
 
 [!code-csharp[ref-returns](../../../../samples/snippets/csharp/programming-guide/ref-returns/NumberStore.cs#1)]
 
@@ -119,7 +119,7 @@ Im folgenden Beispiel wird gezeigt, wie die `FindNumber`-Methode nach C# 7.3 neu
 
 Diese zweite Version ist durch längere Sequenzen in Szenarios, in denen die gesuchte Zahl am Ende des Arrays liegt, effizienter.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [ref (C#-Referenz)](../../language-reference/keywords/ref.md)
 - [Schreiben von sicherem und effizientem Code](../../write-safe-efficient-code.md)

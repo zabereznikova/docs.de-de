@@ -5,10 +5,10 @@ helpviewer_keywords:
 - LINQ [C#], features supporting LINQ
 ms.assetid: 524b0078-ebfd-45a7-b390-f2ceb9d84797
 ms.openlocfilehash: 9fc8adaa49d02f8b69c2db6e94a28b9fab36b3b0
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/03/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75635794"
 ---
 # <a name="c-features-that-support-linq"></a>C#-Funktionen mit LINQ-Unterstützung
@@ -80,7 +80,7 @@ Ein anonymer Typ wird vom Compiler erstellt, und der Typname ist nur für den Co
 select new {name = cust.Name, phone = cust.Phone};
 ```
 
-Weitere Informationen finden Sie unter [Anonyme Typen](../../classes-and-structs/anonymous-types.md).
+Weitere Informationen finden Sie unter [Anonyme Klassentypen](../../classes-and-structs/anonymous-types.md).
 
 ## <a name="extension-methods"></a>Erweiterungsmethoden
 
@@ -100,6 +100,6 @@ Weitere Informationen finden Sie unter:
 
 - [Ausdrucksbaumstrukturen (C#)](../expression-trees/index.md)
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Language Integrated Query (LINQ) (C#)](./index.md)
+- [Language-Integrated Query (LINQ) (C#)](./index.md)

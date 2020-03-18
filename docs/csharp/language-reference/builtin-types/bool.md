@@ -8,12 +8,12 @@ helpviewer_keywords:
 - bool data type [C#]
 - Boolean [C#]
 ms.assetid: 551cfe35-2632-4343-af49-33ad12da08e2
-ms.openlocfilehash: 720ece2f7f47961e0ab6ebf03c8afeb5fa3a6271
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: 2ba2e54a6b0f24402fc3728dfe19b548a2368830
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2020
-ms.locfileid: "77093265"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78846444"
 ---
 # <a name="bool-c-reference"></a>bool (C#-Referenz)
 
@@ -27,7 +27,7 @@ Der Standardwert des Typs `bool` ist `false`.
 
 Sie können die Literale `true` und `false` verwenden, um eine `bool`-Variable zu initialisieren oder einen `bool`-Wert zu übergeben:
 
-[!code-csharp-interactive[bool literals](~/samples/csharp/language-reference/builtin-types/BoolType.cs#Literals)]
+[!code-csharp-interactive[bool literals](snippets/BoolType.cs#Literals)]
 
 ## <a name="three-valued-boolean-logic"></a>Dreiwertige boolesche Logik
 
@@ -43,8 +43,8 @@ C# bietet nur zwei Konvertierungen, die den Typ `bool` beinhalten. Dabei handelt
 
 Weitere Informationen finden Sie im Abschnitt [Der Typ „bool“](~/_csharplang/spec/types.md#the-bool-type) in der [C#-Sprachspezifikation](~/_csharplang/spec/introduction.md).
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [C#-Referenz](../index.md)
-- [Werttypen](value-types.md)
+- [Value types (Werttypen)](value-types.md)
 - [Operatoren „true“ und „false“](../operators/true-false-operators.md)

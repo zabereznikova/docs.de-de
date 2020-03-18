@@ -4,12 +4,12 @@ description: Erfahren Sie mehr über C#-Indexer und wie sie indizierte Eigenscha
 ms.date: 06/20/2016
 ms.technology: csharp-fundamentals
 ms.assetid: 0e9496da-e766-45a9-b92b-91820d4a350e
-ms.openlocfilehash: 966483e80d8dd0421dce1b7fabdb0d443d73a0fc
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: 8e583b8a7cedab61ea6fdd56587608907610b6b4
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77450881"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79145683"
 ---
 # <a name="indexers"></a>Indexer
 
@@ -39,7 +39,7 @@ Außerdem können Sie schreibgeschützte Indexer (indem Sie die set-Zugriffsmeth
 
 Fast alles, was Sie von der Arbeit mit Eigenschaften kennen, können sie auch für Indexer anwenden. Die einzige Ausnahme von dieser Regel sind *automatisch implementierte Eigenschaften*. Der Compiler kann nicht immer angemessenen Speicher für einen Indexer generieren.
 
-Indexer unterscheiden sich durch das Vorhandensein von Argumenten, die auf ein Element in einem Satz von Elementen verweisen, von Eigenschaften. Sie können mehrere Indexer in einem Typ definieren, solange die Argumentauflistung für jeden Indexer eindeutig ist. In den folgenden Szenarios erfahren Sie mehr über das Verwenden von einem oder mehreren Indexern in einer Klassendefinition. 
+Indexer unterscheiden sich durch das Vorhandensein von Argumenten, die auf ein Element in einem Satz von Elementen verweisen, von Eigenschaften. Sie können mehrere Indexer in einem Typ definieren, solange die Argumentauflistung für jeden Indexer eindeutig ist. In den folgenden Szenarios erfahren Sie mehr über das Verwenden von einem oder mehreren Indexern in einer Klassendefinition.
 
 ## <a name="scenarios"></a>Szenarien
 
@@ -50,7 +50,7 @@ Die häufigsten Szenarios für das Verwenden von *Indexern*. Sie können auf den
 
 ### <a name="arrays-and-vectors"></a>Arrays und Vektoren
 
-Eines der häufigsten Szenarios beim Erstellen von Indexern ist, wenn Ihr Typ ein Array oder einen Vektor modelliert. Sie können einen Indexer erstellen, um eine geordnete Datenliste zu modellieren. 
+Eines der häufigsten Szenarios beim Erstellen von Indexern ist, wenn Ihr Typ ein Array oder einen Vektor modelliert. Sie können einen Indexer erstellen, um eine geordnete Datenliste zu modellieren.
 
 Der Vorteil beim Erstellen eines eigenen Indexers ist die Tatsache, dass Sie den Speicher für diese Auflistung an Ihre Bedürfnisse anpassen können. Stellen Sie sich ein Szenario vor, in dem Ihr Typ historische Daten modelliert, die zu groß sind, um sie auf einmal in den Speicher zu laden. Sie müssen Abschnitte der Auflistung nach Verbrauch laden und entladen. Das folgende Beispiel veranschaulicht dieses Verhalten. Es meldet, wie viele Datenpunkte vorhanden sind. Es erstellt Seiten, die auf Abruf Abschnitte der Daten anzeigen. Es entfernt Seiten aus dem Speicher, um Platz für Seiten zu schaffen, die für eine aktuelle Abfrage benötigt werden.
 
@@ -224,9 +224,10 @@ In diesem Beispiel ordnet die `ArgsAction`-Auflistung nah an der zugrundeliegend
 
 ### <a name="multi-dimensional-maps"></a>Mehrdimensionale Zuordnungen
 
-Sie können Indexer erstellen, die mehrere Argumente verwenden. Zusätzlich sind müssen diese Argumente nicht denselben Typen aufweisen. Nachfolgend sehen Sie zwei Beispiele.   
+Sie können Indexer erstellen, die mehrere Argumente verwenden. Zusätzlich sind müssen diese Argumente nicht denselben Typen aufweisen. Nachfolgend sehen Sie zwei Beispiele.
 
-Das erste Beispiel zeigt eine Klasse, die Werte einer Mandelbrot-Menge generiert. Weitere Informationen zur Mathematik der Menge finden Sie in [diesem Artikel](https://en.wikipedia.org/wiki/Mandelbrot_set). Der Indexer verwendet zwei double-Werte, um einen Punkt auf der X-Y-Ebene zu definieren.
+Das erste Beispiel zeigt eine Klasse, die Werte einer Mandelbrot-Menge generiert. Weitere Informationen zur Mathematik der Menge finden Sie in [diesem Artikel](https://en.wikipedia.org/wiki/Mandelbrot_set).
+Der Indexer verwendet zwei double-Werte, um einen Punkt auf der X-Y-Ebene zu definieren.
 Die get-Zugriffsmethode berechnet die Anzahl der Iterationen, bis ein Punkt festgelegt wird, der außerhalb der Menge liegt. Wenn die maximale Zahl an Iterationen erreicht ist, befindet sich der Punkt in der Menge, und der Wert „maxIterations“ der Klasse wird zurückgegeben. (Die vom Computer generierten Bilder, die durch die Mandelbrot-Menge bekannt wurden, definieren Farben für die Anzahl von Iterationen, die benötigt werden, um festzustellen, das sich ein Punkt außerhalb der Menge befindet.)
 
 ```csharp
@@ -267,9 +268,9 @@ Dadurch wird ein Wörterbuch definiert, das eine unendliche Anzahl von Werten en
 Hier ist ein letztes Beispiel für den Gebrauch von Indexern, in dem der Indexer mehrere Argumente mit unterschiedlichen Typen akzeptiert. Stellen Sie sich ein Programm vor, dass Daten zu historischen Temperaturen verwaltet. Dieser Indexer verwendet eine Stadt und ein Datum, um die höchste und niedrigste Temperatur für diesen Ort festzulegen oder abzurufen:
 
 ```csharp
-using DateMeasurements = 
+using DateMeasurements =
     System.Collections.Generic.Dictionary<System.DateTime, IndexersSamples.Common.Measurements>;
-using CityDataMeasurements = 
+using CityDataMeasurements =
     System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<System.DateTime, IndexersSamples.Common.Measurements>>;
 
 public class HistoricalWeatherData
@@ -319,7 +320,8 @@ using DateMeasurements = System.Collections.Generic.Dictionary<System.DateTime, 
 using CityDataMeasurements = System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<System.DateTime, IndexersSamples.Common.Measurements>>;
 ```
 
-erstellen einen *Alias* für einen konstruierter generischen Typen. Durch diese Anweisungen kann ein Code später die deskriptiveren Namen `DateMeasurements` und `CityDateMeasurements` statt der generischen Konstruktion von `Dictionary<DateTime, Measurements>` und `Dictionary<string, Dictionary<DateTime, Measurements> >` verwenden. Diese Konstruktion erfordert den Gebrauch des vollqualifizierten Typnamens auf der rechten Seite des `=`-Zeichens.
+erstellen einen *Alias* für einen konstruierter generischen Typen. Durch diese Anweisungen kann ein Code später die deskriptiveren Namen `DateMeasurements` und `CityDateMeasurements` statt der generischen Konstruktion von `Dictionary<DateTime, Measurements>` und `Dictionary<string, Dictionary<DateTime, Measurements> >` verwenden.
+Diese Konstruktion erfordert den Gebrauch des vollqualifizierten Typnamens auf der rechten Seite des `=`-Zeichens.
 
 In der zweiten Vorgehensweise entfernen Sie die Uhrzeitteile jedes `DateTime`-Objekts, das verwendet wird, um in die Auflistungen zu indizieren. .NET bietet keinen reinen Datumstyp.
 Entwickler verwenden den `DateTime`-Typ, aber die `Date`-Eigenschaft, um sicherzustellen, das jedes `DateTime`-Objekt dieses Tages gleich ist.

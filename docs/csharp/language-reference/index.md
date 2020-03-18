@@ -9,10 +9,10 @@ helpviewer_keywords:
 - reference, C# language
 ms.assetid: 06de3167-c16c-4e1a-b3c5-c27841d4569a
 ms.openlocfilehash: 4875e53327e24c4b5983a4a3b79b5beced368725
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74428605"
 ---
 # <a name="c-reference"></a>C#-Referenz
@@ -27,7 +27,7 @@ Dieser Abschnitt enthält Referenzmaterial zu Schlüsselwörtern, Operatoren, So
  [C#-Operatoren](./operators/index.md)  
  Enthält Links zu Informationen über C#-Operatoren und zur Syntax.  
 
- [C#-Sonderzeichen](./tokens/index.md)  
+ [C# Special Characters (C#-Sonderzeichen)](./tokens/index.md)  
  Enthält Links zu Informationen über kontextbezogene Sonderzeichen in C# und deren Verwendung.  
 
  [C#-Präprozessoranweisungen](./preprocessor-directives/index.md)  

@@ -1,15 +1,15 @@
 ---
-title: 'Entschärfung: Überprüfen von Pfaden auf Doppelpunkte'
+title: 'Entschärfung: Überprüfung von Pfaden auf Doppelpunkte'
 ms.date: 03/30/2017
 ms.assetid: a0bb52de-d279-419d-8f23-4b12d1a3f36e
-ms.openlocfilehash: e88643fea3bd507289436f41880a2de34117884f
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: c6e1106b6f5d8457417992941b9f28712d484442
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73457896"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79181246"
 ---
-# <a name="mitigation-path-colon-checks"></a>Entschärfung: Überprüfen von Pfaden auf Doppelpunkte
+# <a name="mitigation-path-colon-checks"></a>Entschärfung: Überprüfung von Pfaden auf Doppelpunkte
 Für Apps, die gezielt .NET Framework 4.6.2 und höhere Versionen verwenden, wurde eine Reihe von Änderungen vorgenommen, um zuvor nicht unterstützte Pfade zu unterstützen (im Hinblick auf Länge und Format). Insbesondere wurden Prüfungen auf ordnungsgemäße Syntax von Laufwerkstrennzeichen (den Doppelpunkt) strenger definiert.  
   
 ## <a name="impact"></a>Auswirkungen  
@@ -26,10 +26,10 @@ Für Apps, die gezielt .NET Framework 4.6.2 und höhere Versionen verwenden, w
   
     ```xml  
     <runtime>  
-        <AppContextSwitchOverrides value="Switch.System.IO.UseLegacyPathHandling=true" />    
+        <AppContextSwitchOverrides value="Switch.System.IO.UseLegacyPathHandling=true" />
     </runtime>  
     ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Anwendungskompatibilität](application-compatibility.md)

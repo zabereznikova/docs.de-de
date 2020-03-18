@@ -2,12 +2,12 @@
 title: Weitere Informationen zu .NET Core
 description: Erfahren Sie mehr zu .NET Core.
 ms.date: 09/17/2019
-ms.openlocfilehash: 7908cf70e91dcd68668008c2c3082dc293330ec1
-ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
+ms.openlocfilehash: 89740b67b294650f78cf36361548c2fe24ac80cb
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/02/2020
-ms.locfileid: "76965840"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79147359"
 ---
 # <a name="about-net-core"></a>Weitere Informationen zu .NET Core
 
@@ -26,7 +26,7 @@ ms.locfileid: "76965840"
 C#, Visual Basic und F# können verwendet werden, um Anwendungen und Bibliotheken für .NET Core zu schreiben. Diese Sprachen können Sie in Ihren bevorzugten Text-Editoren oder integrierten Entwicklungsumgebungen (IDE, Integrated Development Environment) wie den folgenden verwenden:
 
 - [Visual Studio](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link)
-- [Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp)
+- [Visual Studio Code](https://code.visualstudio.com/download)
 - Sublime Text
 - Vim
 

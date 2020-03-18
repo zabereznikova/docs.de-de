@@ -5,11 +5,11 @@ author: thraka
 ms.author: adegeo
 ms.date: 06/26/2019
 ms.openlocfilehash: 55f04ce81f63753831fca8fa2e44811c44049733
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77450998"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79397836"
 ---
 # <a name="select-the-net-core-version-to-use"></a>Auswählen der zu verwendenden .NET Core-Version
 
@@ -56,7 +56,7 @@ Die Auswahl einer SDK-Version verläuft folgendermaßen:
 1. `dotnet` verwendet das in der ersten gefundenen *global.json*-Datei angegebene SDK.
 1. `dotnet` verwendet das zuletzt installierte SDK, wenn keine *global.json*-Datei gefunden wird.
 
-Weitere Informationen zur Auswahl einer SDK-Version finden Sie im Artikel zu *global.json* im Abschnitt [Abgleichsregeln](../tools/global-json.md#matching-rules).
+Weitere Informationen zur Auswahl einer SDK-Version finden Sie im Artikel zu [global.json](../tools/global-json.md#matching-rules) im Abschnitt *Abgleichsregeln*.
 
 ## <a name="target-framework-monikers-define-build-time-apis"></a>Zielframeworkmoniker definieren Erstellungszeit-APIs
 

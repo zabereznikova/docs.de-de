@@ -3,10 +3,10 @@ title: LINQ und Zeichenfolgen (C#)
 ms.date: 07/20/2015
 ms.assetid: dbe2d657-b3f3-487e-b645-21fb2d71cd7b
 ms.openlocfilehash: b805bc7318b8c5fe70ab1c060d1058a6bbc4f177
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/03/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75635534"
 ---
 # <a name="linq-and-strings-c"></a>LINQ und Zeichenfolgen (C#)
@@ -64,7 +64,7 @@ Viele verschiedene Typen von Textdateien bestehen aus einer Reihe von Zeilen, di
   
   Zeigt, wie Zeichenfolgen in zwei Listen mit einem übereinstimmenden Schlüssel in einer einzigen Zeichenfolge vereint werden
 
-- [Vorgehensweise: Teilen einer Datei in mehrere Dateien durch das Verwenden von Gruppen (LINQ) (C#)](how-to-split-a-file-into-many-files-by-using-groups-linq.md)
+- [Vorgehensweise: Aufteilen einer Datei in mehrere Dateien durch das Verwenden von Gruppen (LINQ) (C#)](how-to-split-a-file-into-many-files-by-using-groups-linq.md)
   
   Veranschaulicht, wie neue Dateien mithilfe einer einzelnen Datei als Datenquelle erstellt werden
 
@@ -72,7 +72,7 @@ Viele verschiedene Typen von Textdateien bestehen aus einer Reihe von Zeilen, di
   
   Zeigt, wie mathematische Berechnungen bei Textdaten in CSV-Dateien ausgeführt werden
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Language Integrated Query (LINQ) (C#)](index.md)
+- [Language-Integrated Query (LINQ) (C#)](index.md)
 - [Generieren von XML aus CSV-Dateien](how-to-generate-xml-from-csv-files.md)

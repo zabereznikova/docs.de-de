@@ -4,12 +4,12 @@ description: Erfahren Sie, wie Sie eine .NET für Apache Spark-Anwendung unter W
 ms.date: 01/29/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: 25f5291c47dc1cdf2668cb077fae7439e330cc1c
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: dac6aed1f7faba7f07b722a6dac0da930ab9ec66
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76919925"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79185807"
 ---
 # <a name="debug-a-net-for-apache-spark-application"></a>Debuggen einer .NET für Apache Spark-Anwendung
 
@@ -63,7 +63,7 @@ Navigieren Sie zu der *.cs*-Datei mit der benutzerdefinierten Funktion, die Sie 
 
 Drücken Sie `F5`, um die Anwendung fortzusetzen. Der Breakpoint wird schließlich erreicht.
 
-> [!NOTE] 
+> [!NOTE]
 > Das Fenster zur Auswahl eines Just-In-Time-Debuggers wird für jeden Task angezeigt. Um eine übermäßige Anzeige von Popupfenstern zu vermeiden, legen Sie eine niedrige Anzahl von Executors fest. Sie können beispielsweise die Option **--master local[1]** für „spark-submit“ verwenden, um die Anzahl von Tasks auf 1 festzulegen. Damit wird eine einzelne Debuggerinstanz gestartet.
 
 ## <a name="debug-scala-code"></a>Debuggen von Scala-Code

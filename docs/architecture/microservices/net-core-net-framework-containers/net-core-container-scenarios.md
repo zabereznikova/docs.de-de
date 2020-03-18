@@ -2,12 +2,12 @@
 title: Wann sollte .NET Core für Docker-Container verwendet werden?
 description: .NET-Microservicesarchitektur für .NET-Containeranwendungen | Wann sollte .NET Core für Docker-Container verwendet werden?
 ms.date: 01/30/2020
-ms.openlocfilehash: b3cb1eefe739b4ffdbbdd0bdcb3c74b51862704b
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.openlocfilehash: f784512af3f520f96d499ab002eda58071b3c284
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77501850"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79147374"
 ---
 # <a name="when-to-choose-net-core-for-docker-containers"></a>Wann sollte .NET Core für Docker-Container verwendet werden?
 
@@ -37,7 +37,7 @@ Container werden meist in Verbindung mit einer Microservicearchitektur eingesetz
 
 ## <a name="create-and-deploy-microservices-on-containers"></a>Erstellen und Bereitstellen von Microservices in Containern
 
-Auf Microservices basierende Anwendungen (ohne Container) lassen sich mithilfe des traditionellen .NET Framework erstellen, indem Sie einfache Prozesse verwenden. Da .NET Framework bereits installiert und von allen Prozesse genutzt wird, sind die Prozesse schnell und einfach zu starten. Wenn Sie jedoch Container verwenden, basiert auch das Image für das traditionelle .NET Framework auf Windows Server Core. Aus diesem Grund ist es zu groß für die Bereitstellung von Microservices in Containern. Teams haben jedoch auch nach Möglichkeiten gesucht, um die Erfahrung für .NET Framework-Benutzer zu verbessern. Kürzlich wurde die Größe der [Windows Server Core-Containerimages um mehr als 40 % verkleinert](https://devblogs.microsoft.com/dotnet/we-made-windows-server-core-container-images-40-smaller). 
+Auf Microservices basierende Anwendungen (ohne Container) lassen sich mithilfe des traditionellen .NET Framework erstellen, indem Sie einfache Prozesse verwenden. Da .NET Framework bereits installiert und von allen Prozesse genutzt wird, sind die Prozesse schnell und einfach zu starten. Wenn Sie jedoch Container verwenden, basiert auch das Image für das traditionelle .NET Framework auf Windows Server Core. Aus diesem Grund ist es zu groß für die Bereitstellung von Microservices in Containern. Teams haben jedoch auch nach Möglichkeiten gesucht, um die Erfahrung für .NET Framework-Benutzer zu verbessern. Kürzlich wurde die Größe der [Windows Server Core-Containerimages um mehr als 40 % verkleinert](https://devblogs.microsoft.com/dotnet/we-made-windows-server-core-container-images-40-smaller).
 
 .NET Core ist hingegen die beste Wahl, wenn Sie ein an Microservices orientiertes System erstellen, das auf Containern basiert, weil .NET Core schlank ist. Außerdem sind die dazugehörigen Containerimages für entweder Linux oder Windows Nano Server schlank und klein, sodass sich Container leicht und schnell starten lassen.
 

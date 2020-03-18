@@ -3,11 +3,11 @@ title: Anwendungsveröffentlichung
 description: Erfahren Sie mehr über die Möglichkeiten zum Veröffentlichen einer .NET Core-Anwendung. Mit .NET Core können plattformspezifische oder plattformübergreifende Apps veröffentlicht werden. Sie können eine App als eigenständige oder als Runtime-abhängige App veröffentlichen. Der Modus wirkt sich darauf aus, wie ein Benutzer Ihre App ausführt.
 ms.date: 01/31/2020
 ms.openlocfilehash: 3b9c3b7f29af12477874b7a31ef0de4750719de0
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78157934"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79397587"
 ---
 # <a name="net-core-application-publishing-overview"></a>Übersicht über die .NET Core-Anwendungsveröffentlichung
 
@@ -23,7 +23,7 @@ Wenn eine ausführbare Datei erstellt wird, können Sie die Zielplattform mit ei
 
 Die folgende Tabelle gibt einen Überblick über die Befehle, die zum Veröffentlichen einer App als Runtime-abhängige oder eigenständige App verwendet werden, gruppiert nach SDK-Version:
 
-| Typ                                                                                 | SDK 2.1 | SDK 3.x | Befehl |
+| Geben Sie Folgendes ein:                                                                                 | SDK 2.1 | SDK 3.x | Befehl |
 | -----------------------------------------------------------------------------------  | ------- | ------- | ------- |
 | [Runtime-abhängige ausführbare Datei](#publish-runtime-dependent) für die aktuelle Plattform |         | ✔️      | [`dotnet publish`](../tools/dotnet-publish.md) |
 | [Runtime-abhängige ausführbare Datei](#publish-runtime-dependent) für eine spezifische Plattform  |         | ✔️      | [`dotnet publish -r <RID> --self-contained false`](../tools/dotnet-publish.md) |
@@ -38,7 +38,7 @@ Ausführbare Dateien sind nicht plattformübergreifend. Sie sind spezifisch für
 
 Mit den folgenden Befehlen wird eine ausführbare Datei erstellt:
 
-| Typ                                                                                 | SDK 2.1 | SDK 3.x | Befehl |
+| Geben Sie Folgendes ein:                                                                                 | SDK 2.1 | SDK 3.x | Befehl |
 | ------------------------------------------------------------------------------------ | ------- | ------- | ------- |
 | [Runtime-abhängige ausführbare Datei](#publish-runtime-dependent) für die aktuelle Plattform |         | ✔️      | [`dotnet publish`](../tools/dotnet-publish.md) |
 | [Runtime-abhängige ausführbare Datei](#publish-runtime-dependent) für eine spezifische Plattform  |         | ✔️      | [`dotnet publish -r <RID> --self-contained false`](../tools/dotnet-publish.md) |
@@ -52,7 +52,7 @@ Plattformübergreifende Binärdateien können auf beliebigen Betriebssystemen au
 
 Über die folgenden Befehle wird eine plattformübergreifende Binärdatei erzeugt:
 
-| Typ                                                                                 | SDK 2.1 | SDK 3.x | Befehl |
+| Geben Sie Folgendes ein:                                                                                 | SDK 2.1 | SDK 3.x | Befehl |
 | -----------------------------------------------------------------------------------  | ------- | ------- | ------- |
 | [Runtime-abhängige, plattformübergreifende Binärdatei](#publish-runtime-dependent)               | ✔️      | ✔️      | [`dotnet publish`](../tools/dotnet-publish.md) |
 
@@ -148,7 +148,7 @@ Veröffentlichung einer eigenständigen App. Es wird eine ausführbare 64-Bit-Da
 dotnet publish -r win-x64
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Bereitstellen von .NET Core-Apps mit der .NET Core-CLI](deploy-with-cli.md)
 - [Bereitstellen von .NET Core-Apps mit Visual Studio](deploy-with-vs.md)

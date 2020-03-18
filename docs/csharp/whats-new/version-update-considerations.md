@@ -3,11 +3,11 @@ title: Versions- und Updateüberlegungen für C#-Entwickler
 description: Die Einführung neuer Sprachfeatures in Ihrer Bibliothek kann sich auf den Code auswirken, der sie verwendet.
 ms.date: 09/19/2018
 ms.openlocfilehash: 3ffe2f6fd64a391fddf28233dccb022c95851884
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65634493"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79398148"
 ---
 # <a name="version-and-update-considerations-for-c-developers"></a>Versions- und Updateüberlegungen für C#-Entwickler
 

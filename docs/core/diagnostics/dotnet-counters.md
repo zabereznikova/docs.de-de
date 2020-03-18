@@ -2,12 +2,12 @@
 title: dotnet-counters – .NET Core
 description: Erfahren Sie, wie Sie das Befehlszeilentool dotnet-counter installieren und verwenden.
 ms.date: 02/26/2020
-ms.openlocfilehash: 88f701a60d0ee03dd0236ae54c57679943e14939
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: dc95297478784ca06fe442a939f8489a40b29da7
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78157881"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79147177"
 ---
 # <a name="dotnet-counters"></a>dotnet-counters
 
@@ -181,7 +181,7 @@ dotnet-counters monitor [-h|--help] [-p|--process-id] [--refreshInterval] [count
       request                                      100
   ```
   
-## <a name="dotnet-counters-ps"></a>dotnet-counters ps 
+## <a name="dotnet-counters-ps"></a>dotnet-counters ps
 
 Mit diesem Befehl wird eine Liste der dotnet-Prozesse angezeigt, die überwacht werden können.
 

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - query keywords [C#]
 - LINQ [C#], query keywords
 ms.assetid: 6c9bec16-dbd7-4a7c-a060-fe4600b2021f
-ms.openlocfilehash: 3c08c2b6ecdaa4b875f118531e7e77f7164dd784
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 01134eda540c5141afbd11b2c89ff779da495a9a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75713156"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79173522"
 ---
 # <a name="query-keywords-c-reference"></a>Abfrageschlüsselwörter (C#-Referenz)
 
@@ -35,9 +35,8 @@ Dieser Abschnitt enthält die kontextabhängigen Schlüsselwörter, die in Abfra
 |[ascending](ascending.md)|Kontextabhängiges Schlüsselwort in einer [orderby](orderby-clause.md)-Klausel|
 |[descending](descending.md)|Kontextabhängiges Schlüsselwort in einer [orderby](orderby-clause.md)-Klausel|
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [C#-Schlüsselwörter](index.md)
 - [LINQ (Language Integrated Query)](../../programming-guide/concepts/linq/index.md)
 - [LINQ in C#](../../linq/index.md)
-- [Erste Schritte mit LINQ in C#](/dotnet/csharp/programming-guide/concepts/linq/)

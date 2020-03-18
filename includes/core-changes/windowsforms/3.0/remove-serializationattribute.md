@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: d48ced9d0201a33f9149aba155ddd3d8bc04c93f
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "74643850"
 ---
 ### <a name="serializableattribute-removed-from-some-windows-forms-types"></a>SerializableAttribute aus einigen Windows Forms-Typen entfernt
@@ -34,7 +34,7 @@ Weitere Informationen finden Sie unter [Binäre Serialisierung](~/docs/standard/
 
 3.0 Vorschau 9
 
-#### <a name="recommended-action"></a>Empfohlene Maßnahme
+#### <a name="recommended-action"></a>Empfohlene Aktion
 
 Aktualisieren Sie jeden Code, der von diesen als serialisierbar markierten Typen abhängig ist.
 
@@ -44,7 +44,7 @@ Windows Forms
 
 #### <a name="affected-apis"></a>Betroffene APIs
 
-- Keine
+- Keiner
 
 <!--
 

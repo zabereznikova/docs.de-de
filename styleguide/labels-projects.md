@@ -1,14 +1,14 @@
 ---
-ms.openlocfilehash: 394ed636cece766d61b1a10403b98c73f1d3cb93
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 99153bb9cf3287951a1e52e716c799ee64eb82ad
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73041260"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78950989"
 ---
 # <a name="labels-and-projects-roadmap"></a>Roadmap für Bezeichnungen und Projekte
 
-Das Team für .NET-Dokumentationen nutzt häufig [GitHub-Bezeichnungen](https://github.com/dotnet/docs/labels) zum Organisieren der Arbeit. Durch das Filtern nach Bezeichnungen können wir uns auf der Website für [.NET-Dokumentationen](https://docs.microsoft.com/dotnet) schnell auf interessante Bereiche konzentrieren. 
+Das Team für .NET-Dokumentationen nutzt häufig [GitHub-Bezeichnungen](https://github.com/dotnet/docs/labels) zum Organisieren der Arbeit. Durch das Filtern nach Bezeichnungen können wir uns auf der Website für [.NET-Dokumentationen](https://docs.microsoft.com/dotnet) schnell auf interessante Bereiche konzentrieren.
 
 Außerdem verwenden wir auch [GitHub-Projekte](https://github.com/dotnet/docs/projects), um Sprints und andere zielorientierte Epics zu organisieren.
 
@@ -28,7 +28,7 @@ Sie können eine Bezeichnung aus jedem Bereich kombinieren (guide, release, prio
 
 ### <a name="find-a-single-net-guide"></a>Suchen nach einzelnem .NET-Leitfaden
 
-Wir verwenden Bezeichnungen für die einzelnen Architektur-E-Books und für jeden .NET-Leitfaden. 
+Wir verwenden Bezeichnungen für die einzelnen Architektur-E-Books und für jeden .NET-Leitfaden.
 
 ![:book: Leitfaden auf hellgrünem Hintergrund](./images/guide.png "Präfix für Architekturleitfadenbezeichnungen")
 
@@ -97,7 +97,7 @@ Die .NET-Leitfäden sind groß, sodass diese Bezeichnungen den Bereich durch ein
 
 ![:checkered_flag: Release: auf dunkelgelbem Hintergrund](./images/release.png "Präfix für Releasebezeichnungen")
 
-Issues, die für ein bestimmtes Release gekennzeichnet sind, werden mit dem Präfix `:checkered_flag: Release:` versehen und weisen einen dunkelgelben Hintergrund auf. 
+Issues, die für ein bestimmtes Release gekennzeichnet sind, werden mit dem Präfix `:checkered_flag: Release:` versehen und weisen einen dunkelgelben Hintergrund auf.
 
 - .NET Core 2.2
 - .NET Core 3.0
@@ -116,7 +116,7 @@ Es gibt viele andere Bezeichnungen, die von den Inhaltsteams verwendet werden, u
 
 ## <a name="projects"></a>Projekte
 
-Mitwirkende sollten die [Projekte für .NET-Communitymitarbeiter](https://github.com/dotnet/docs/projects/35) überprüfen. Wir haben verschiedene Spalten für die Wartung, das Aktualisieren von Dokumenten und neue Inhaltsaufgaben erstellt. Auf diese Weise kann nach relevanten Aufgaben gesucht werden. (Beachten Sie, dass die Projektansicht mithilfe der oben beschriebenen Bezeichnungen gefiltert werden kann.) 
+Mitwirkende sollten die [Projekte für .NET-Communitymitarbeiter](https://github.com/dotnet/docs/projects/35) überprüfen. Wir haben verschiedene Spalten für die Wartung, das Aktualisieren von Dokumenten und neue Inhaltsaufgaben erstellt. Auf diese Weise kann nach relevanten Aufgaben gesucht werden. (Beachten Sie, dass die Projektansicht mithilfe der oben beschriebenen Bezeichnungen gefiltert werden kann.)
 
 Projekte werden auch auf zwei verschiedene Arten verwendet:
 

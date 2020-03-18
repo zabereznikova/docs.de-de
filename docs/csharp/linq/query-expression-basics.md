@@ -3,12 +3,12 @@ title: Grundlagen zu Abfrageausdrücken (LINQ in C#)
 description: Führt Konzepte im Zusammenhang mit Abfrageausdrücken ein
 ms.date: 11/30/2016
 ms.assetid: 027db1f8-346f-44d2-a16e-043fcea3a4e0
-ms.openlocfilehash: 5ebe2163df47c60c677d7ac911ce0f65529835eb
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: 83beaa82d4b4b42ff9da5230edddd391b33a0717
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75635859"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79173353"
 ---
 # <a name="query-expression-basics"></a>Grundlagen zu Abfrageausdrücken
 
@@ -156,7 +156,7 @@ Verwenden Sie die `join`-Klausel zum Zuordnen und/oder Kombinieren von Elementen
 
 Sie können auch eine Gruppenverknüpfung durchführen, indem Sie die Ergebnisse des `join`-Vorgangs mithilfe des Schlüsselworts [into](../language-reference/keywords/into.md) in eine temporäre Variable speichern. Weitere Informationen finden Sie unter [join-Klausel](../language-reference/keywords/join-clause.md).
 
-#### <a name="let-clause"></a>let-Klausel 
+#### <a name="let-clause"></a>let-Klausel
 
 Verwenden Sie die `let`-Klausel zum Speichern der Ergebnisse eines Ausdrucks, z.B. eines Methodenaufrufs, in einer neuen Bereichsvariable. Im folgenden Beispiel speichert die Bereichsvariable `firstName` das erste Elemente eines Arrays von Zeichenfolgen, das von `Split` zurückgegeben wird.
 

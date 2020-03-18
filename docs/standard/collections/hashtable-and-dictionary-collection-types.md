@@ -1,5 +1,5 @@
 ---
-title: Hashtable-Auflistungstyp und Dictionary-Auflistungstyp
+title: Hashtable-Sammlungstyp und Dictionary-Sammlungstyp
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -11,13 +11,13 @@ helpviewer_keywords:
 - collections [.NET Framework], Hashtable collection type
 ms.assetid: bfc20837-3d02-4fc7-8a8f-c5215b6b7913
 ms.openlocfilehash: a6f234b6205fd30507b9342d9839db6adcddfc2e
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75711375"
 ---
-# <a name="hashtable-and-dictionary-collection-types"></a>Hashtable-Auflistungstyp und Dictionary-Auflistungstyp
+# <a name="hashtable-and-dictionary-collection-types"></a>Hashtable-Sammlungstyp und Dictionary-Sammlungstyp
 Die Klasse <xref:System.Collections.Hashtable?displayProperty=nameWithType> und die generischen Klassen <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType> und <xref:System.Collections.Concurrent.ConcurrentDictionary%602?displayProperty=nameWithType> implementieren die <xref:System.Collections.IDictionary?displayProperty=nameWithType>-Schnittstelle. Die generische Klasse <xref:System.Collections.Generic.Dictionary%602> implementiert außerdem die generische <xref:System.Collections.Generic.IDictionary%602>-Schnittstelle. Daher ist jedes Element in diesen Auflistungen ein Schlüssel-Wert-Paar.  
   
  Ein <xref:System.Collections.Hashtable>-Objekt besteht aus Buckets, die die Elemente der Auflistung enthalten. Ein Buckets ist eine virtuelle Untergruppe von Elementen innerhalb der <xref:System.Collections.Hashtable>, der das Suchen und Abrufen schneller und einfacher als in den meisten Auflistungen ermöglicht. Jedem Bucket ist ein Hashcode zugeordnet, der mithilfe einer Hashfunktion generiert wird und auf dem Schlüssel des Elements basiert.  
@@ -34,7 +34,7 @@ Die Klasse <xref:System.Collections.Hashtable?displayProperty=nameWithType> und 
   
  Die Klassen <xref:System.Collections.Generic.Dictionary%602> und <xref:System.Collections.Concurrent.ConcurrentDictionary%602> weisen die gleiche Funktionalität wie die Klasse <xref:System.Collections.Hashtable> auf. Ein <xref:System.Collections.Generic.Dictionary%602> eines bestimmten Typs (außer <xref:System.Object>) bietet eine bessere Leistung als eine <xref:System.Collections.Hashtable> für Werttypen. Der Grund hierfür ist, dass die Elemente von <xref:System.Collections.Hashtable> vom Typ <xref:System.Object> sind. Daher treten das Boxing und das Unboxing in der Regel beim Speichern oder Abrufen eines Werttyps auf. Die Klasse <xref:System.Collections.Concurrent.ConcurrentDictionary%602> sollte verwendet werden, wenn mehrere Threads möglicherweise gleichzeitig auf die Auflistung zugreifen.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Collections.Hashtable>
 - <xref:System.Collections.IDictionary>

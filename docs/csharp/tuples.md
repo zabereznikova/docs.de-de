@@ -4,12 +4,12 @@ description: Erfahren Sie mehr über unbenannte und benannte Tupeltypen in C#
 ms.date: 05/15/2018
 ms.technology: csharp-fundamentals
 ms.assetid: ee8bf7c3-aa3e-4c9e-a5c6-e05cc6138baa
-ms.openlocfilehash: f551a1df4a31c3311119a0327e02fbc6096ce0a0
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 9ce9e1d4395d1a75f36004384ec215c615cd9802
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039725"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79156908"
 ---
 # <a name="c-tuple-types"></a>C#-Tupeltypen
 
@@ -19,7 +19,7 @@ In diesem Artikel erhalten Sie Informationen zu Sprachregeln, die Tupel in C# 7.
 
 > [!NOTE]
 > Die neuen Tupeleigenschaften benötigen die <xref:System.ValueTuple>-Typen.
-> Sie müssen das NuGet-Paket [ `System.ValueTuple` ](https://www.nuget.org/packages/System.ValueTuple/) hinzufügen, um es auf Plattformen zu verwenden, die keine Typen enthalten.
+> Sie müssen das NuGet-Paket [`System.ValueTuple`](https://www.nuget.org/packages/System.ValueTuple/) hinzufügen, um es auf Plattformen zu verwenden, die keine Typen enthalten.
 >
 > Dies ist ähnlich wie bei anderen Sprachfunktionen, die auf im Framework übermittelten Typen basieren. Beispiele hierfür sind `async` und `await`, die auf der `INotifyCompletion`-Schnittstelle basieren, und LINQ, das auf `IEnumerable<T>` basiert. Allerdings ändert sich der Übermittlungsmechanismus, da .NET plattformunabhängiger wird. .NET Framework wird möglicherweise nicht immer im gleichen Rhythmus wie der Sprachcompiler ausgeliefert. Wenn neue Sprachfunktionen auf neuen Typen basieren, sind diese Typen als NuGet-Pakete bei der Auslieferung der Sprachfunktionen verfügbar. Da diese neuen Typen dem standardmäßigen .NET API hinzugefügt und als Teil des Frameworks bereitgestellt werden, wird die Anforderung des NuGet-Pakets entfernt.
 
@@ -149,7 +149,7 @@ Einer der häufigsten Verwendungszwecke für Tupel ist als Methodenrückgabewert
 > In diesem Beispiel wird die unkorrigierte Beispielstandardabweichung berechnet.
 > Die korrigierte Formel der Beispielstandardabweichung würde die Summe der Differenzen im Quadrat vom Mittelwert mithilfe von (N-1) anstatt N teilen, wie es die Erweiterungsmethode `Average` macht. Weitere Informationen zu den Unterschieden zwischen diesen Formeln für die Standardabweichung finden Sie in einem Statistiktext.
 
-Der vorangehende Code entspricht der idealen Formel für die Standardabweichung. Die richtige Antwort wird generiert, aber es ist eine ineffiziente Implementierung. Diese Methode listet die Sequenz zweimal auf: Einmal, um den Durchschnitt zu erzeugen, und einmal, um den Durchschnitt des Quadrats der Differenz des Durchschnitts zu erzeugen.
+Der vorangehende Code entspricht der idealen Formel für die Standardabweichung. Die richtige Antwort wird generiert, aber es ist eine ineffiziente Implementierung. Diese Methode listet die Sequenz zweimal auf: Einmal, um den Mittelwert zu erzeugen und einmal, um den Durchschnitt des Quadrats vom Unterschied des Durchschnitts zu erzeugen.
 (Beachten Sie, dass LINQ-Abfragen verzögert ausgewertet werden. Daher kann die Berechnung der Unterschiede vom Mittelwert und des Durchschnitts dieser Unterschiede nur eine Enumeration erzeugen.)
 
 Es gibt eine alternative Formel, die eine Standardabweichung anhand einer Enumeration der Sequenz berechnet.  Diese Berechnung erzeugt zwei Werte, da sie die Sequenz auflistet: Die Summe aller Elemente in der Sequenz und die Summe jedes Werts im Quadrat:
@@ -165,7 +165,7 @@ Wir aktualisieren diese Methoden, sodass die drei Werte, die während der Enumer
 Die Unterstützung von Refactoring in Visual Studio vereinfacht es, die Funktionen für die Kernstatistik in eine private Methode zu extrahieren. Das gibt Ihnen eine `private static`-Methode, die den Tupeltyp mit den drei Werten von `Sum`, `SumOfSquares` und `Count` zurückgibt:
 
 [!code-csharp[TupleMethodVersion](../../samples/snippets/csharp/tuples/statistics.cs#08_TupleMethodVersion "After extracting utility method")]
- 
+
 Die Sprache aktiviert einige weitere Optionen, die Sie verwenden können, wenn Sie ein Paar schnelle manuelle Bearbeitungen vornehmen möchten. Sie können zuerst die Deklaration `var` verwenden, um das Tupelergebnis vom Methodenaufruf `ComputeSumAndSumOfSquares` zu initialisieren. Sie können auch drei diskrete Variablen in der Methode `ComputeSumAndSumOfSquares` erstellen. Die finale Version wird im folgenden Beispielcode dargestellt:
 
 [!code-csharp[CleanedTupleVersion](../../samples/snippets/csharp/tuples/statistics.cs#09_CleanedTupleVersion "After final cleanup")]
@@ -225,7 +225,7 @@ Sie können auch typisierte Variablen für jedes Feld in ein Tupel deklarieren, 
 
 [!code-csharp[DeconstructToVar](../../samples/snippets/csharp/tuples/statistics.cs#11_DeconstructToVar "Deconstruct to Var")]
 
-Das Verwenden des Schlüsselworts `var` mit beliebigen oder allen Variablendeklarationen in den Klammern ist auch zulässig. 
+Das Verwenden des Schlüsselworts `var` mit beliebigen oder allen Variablendeklarationen in den Klammern ist auch zulässig.
 
 ```csharp
 (double sum, var sumOfSquares, var count) = ComputeSumAndSumOfSquares(sequence);
@@ -298,6 +298,6 @@ dict.TryGetValue(2, out (int, string) pair);
 Console.WriteLine($"{pair.Item1}: {pair.Item2}");
 ```
 
-## <a name="conclusion"></a>Schlussbemerkung 
+## <a name="conclusion"></a>Zusammenfassung
 
 Die neue Sprach- und Bibliotheksunterstützung für benannte Tupel vereinfacht es, mit Entwürfen zu arbeiten, die Datenstrukturen verwenden, die mehrere Elemente definieren, aber keine Verhalten definieren, wie es Klassen und Strukturen tun. Die Verwendung von Tupeln ist für diese Typen einfach und präzise. Sie erhalten alle Vorteile der Überprüfung von statischen Typen, ohne Typen mithilfe der ausführlicheren `class`- oder `struct`-Syntax schreiben zu müssen. Dennoch sind sie für Hilfsmethoden, die `private` oder `internal` sind, am nützlichsten. Erstellen Sie benutzerdefinierte Typen, entweder `class` oder `struct`, wenn Ihre öffentlichen Methoden einen Wert mit mehreren Elementen zurückgeben.

@@ -5,10 +5,10 @@ author: dasetser
 ms.date: 10/29/2019
 ms.custom: mvc
 ms.openlocfilehash: cdd6b457d289dd7b752c97c5645f0797f24b72aa
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75715682"
 ---
 # <a name="use-the-wcf-web-service-reference-provider-tool"></a>Verwenden des Provider-Tools für den WCF-Webdienstverweis
@@ -76,7 +76,7 @@ Das Tool führt folgende Schritte aus, während es den Fortschritt anzeigt:
 
 Nachdem die Prozesse abgeschlossen sind, können Sie eine Instanz des generierten WCF-Clienttyps generieren und die Dienstvorgänge ausrufen.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Erste Schritte mit Windows Communication Foundation-Anwendungen](../../framework/wcf/getting-started-tutorial.md)
 - [Windows Communication Foundation-Dienste und WCF Data Services in Visual Studio](/visualstudio/data-tools/windows-communication-foundation-services-and-wcf-data-services-in-visual-studio)
@@ -84,7 +84,7 @@ Nachdem die Prozesse abgeschlossen sind, können Sie eine Instanz des generierte
 
 ## <a name="feedback--questions"></a>Feedback und Fragen
 
-Wenn Sie Fragen haben oder uns Feedback geben möchten, können Sie dies über die [Entwicklercommunity](/visualstudio/ide/how-to-report-a-problem-with-visual-studio) mithilfe des Tools [Problem melden](https://developercommunity.visualstudio.com/) tun.
+Wenn Sie Fragen haben oder uns Feedback geben möchten, können Sie dies über die [Entwicklercommunity](https://developercommunity.visualstudio.com/) mithilfe des Tools [Problem melden](/visualstudio/ide/how-to-report-a-problem-with-visual-studio) tun.
 
 ## <a name="release-notes"></a>Anmerkungen zu diesem Release
 

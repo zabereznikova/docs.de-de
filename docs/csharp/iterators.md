@@ -5,11 +5,11 @@ ms.date: 06/20/2016
 ms.technology: csharp-advanced-concepts
 ms.assetid: 5cf36f45-f91a-4fca-a0b7-87f233e108e9
 ms.openlocfilehash: 1933ecf83e9fa234f9b88c815d8ab527997c97f2
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73036419"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79398724"
 ---
 # <a name="iterators"></a>Iterators
 
@@ -28,7 +28,7 @@ Dieses Tutorial besteht aus vielen Schritten. Sie können die Anwendung nach jed
 
 ## <a name="iterating-with-foreach"></a>Durchlaufen mit foreach
 
-Das Enumerieren einer Auflistung ist einfach: Das `foreach`-Schlüsselwort enumeriert eine Auflistung und führt die eingebettete Anweisung einmal für jedes Element in der Auflistung aus:
+Enumerieren einer Auflistung ist einfach: Das `foreach`-Schlüsselwort enumeriert eine Auflistung und führt die eingebettete Anweisung einmal für jedes Element in der Auflistung aus:
 
 ```csharp
 foreach (var item in collection)

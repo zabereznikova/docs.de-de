@@ -1,5 +1,5 @@
 ---
-title: <inheritdoc> – C#-Programmierhandbuch
+title: <inheritdoc> - C#-Programmierhandbuch
 ms.date: 01/21/2020
 f1_keywords:
 - inheritdoc
@@ -8,24 +8,24 @@ helpviewer_keywords:
 - <inheritdoc> C# XML tag
 - inheritdoc C# XML tag
 ms.assetid: 46d329b1-5b84-4537-9e17-73ca97313e4e
-ms.openlocfilehash: d660cb1739733c4e98ae0b7939476fe74e6cf200
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 6f42462f21d045428577cd2123e2180d866f1e1e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76794834"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79156947"
 ---
 # <a name="inheritdoc-c-programming-guide"></a>\<inheritdoc> (C#-Programmierhandbuch)
 
 ## <a name="syntax"></a>Syntax  
   
 ```xml  
-<inheritdoc/> 
+<inheritdoc/>
 ```  
 
 ## <a name="inheritdoc"></a>InheritDoc
 
-XML-Kommentare werden aus Basisklassen, Schnittstellen und ähnlichen Methoden geerbt. So wird das unerwünschte Kopieren und Einfügen doppelter XML-Kommentare vermieden, und XML-Kommentare werden automatisch synchronisiert. 
+XML-Kommentare werden aus Basisklassen, Schnittstellen und ähnlichen Methoden geerbt. So wird das unerwünschte Kopieren und Einfügen doppelter XML-Kommentare vermieden, und XML-Kommentare werden automatisch synchronisiert.
   
 ## <a name="remarks"></a>Hinweise  
 Fügen Sie Basisklassen oder Schnittstellen Ihre XML-Kommentare hinzu, und lassen Sie die Kommentare von InheritDoc in die implementierenden Klassen kopieren.
@@ -39,7 +39,7 @@ Wenn Sie die Kommentare aus einem bestimmten Member kopieren möchten, können S
 
 [!code-csharp[csProgGuideDocComments#14](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDocComments/CS/DocComments.cs#17)]  
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [C#-Programmierhandbuch](../index.md)
 - [Empfohlene Tags für Dokumentationskommentare](./recommended-tags-for-documentation-comments.md)

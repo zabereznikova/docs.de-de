@@ -3,12 +3,12 @@ title: C#-Programmstruktur – Überblick über C#
 description: Lernen Sie die grundlegenden Bausteine eines C#-Programms kennen.
 ms.date: 02/25/2020
 ms.assetid: 984f0314-507f-47a0-af56-9011243f5e65
-ms.openlocfilehash: 828146ba509daf9427e6dd1a4ebf3ad747ac7c39
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: c09c11a4dd957b29b2adb7aaa8d68a50f30620b6
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78159116"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79156830"
 ---
 # <a name="program-structure"></a>Programmstruktur
 
@@ -27,7 +27,7 @@ In diesem Projekt wird eine Klasse namens `Stack` in einem Namespace namens `Acm
 Der vollqualifizierte Name dieser Klasse ist `Acme.Collections.Stack`. Die Klasse enthält mehrere Member: ein Feld mit dem Namen `top`, zwei Methoden mit dem Namen `Push` und `Pop` sowie eine geschachtelte Klasse mit dem Namen `Entry`. Die `Entry`-Klasse enthält weitere drei Member: ein Feld mit dem Namen `next`, ein Feld mit dem Namen `data` und einen Konstruktor. Der folgende Befehl kompiliert
 
 ```console
-dotnet build 
+dotnet build
 ```
 
 das Beispiel als Bibliothek (Code ohne `Main`-Einstiegspunkt) und erstellt eine Assembly mit dem Namen `acme.dll`.

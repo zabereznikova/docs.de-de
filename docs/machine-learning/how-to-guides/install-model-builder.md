@@ -4,13 +4,13 @@ description: Erfahren Sie, wie Sie das ML.NET-Modell-Generator-Tool installieren
 author: luisquintanilla
 ms.author: luquinta
 ms.date: 11/21/2019
-ms.custom: mvc, how-to
-ms.openlocfilehash: b87f712ad7a8b2229c1d42db4bad1fe511475ac7
-ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
+ms.custom: mvc, how-to, mlnet-tooling
+ms.openlocfilehash: b944d7f6044553251132824e7e4213119e34500e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74552938"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "78848651"
 ---
 # <a name="how-to-install-mlnet-model-builder"></a>Installieren des ML.NET-Modell-Generators
 
@@ -19,7 +19,7 @@ Erfahren Sie, wie Sie den ML.NET-Modell-Generator installieren, um Ihre .NET-Anw
 > [!NOTE]
 > Der Modell-Generator befindet sich derzeit in der Vorschauphase.
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
+## <a name="prerequisites"></a>Voraussetzungen
 
 - Visual Studio 2017 Version 15.9.12 oder höher/Visual Studio 2019
 - .NET Core 2.1 SDK oder höher.

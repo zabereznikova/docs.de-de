@@ -1,31 +1,31 @@
 ---
-title: 'Channel-Anmelde Informationen: GrpC für WCF-Entwickler'
-description: Vorgehensweise beim Implementieren und Verwenden von GrpC-channelanmelde Informationen in ASP.net Core 3,0.
+title: Channel-Anmeldeinformationen - gRPC für WCF-Entwickler
+description: Implementieren und verwenden sie gRPC-Kanalanmeldeinformationen in ASP.NET Core 3.0.
 ms.date: 09/02/2019
-ms.openlocfilehash: 133de2c732e72844f249f11bfe22b5980b828b89
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 9ebe0aecb517e4cc2fe280632c4ecb593da9871c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74711490"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79148204"
 ---
 # <a name="channel-credentials"></a>Anmeldeinformationen für den Kanal
 
-Wie der Name schon sagt, werden Channel-Anmelde Informationen an den zugrunde liegenden GrpC-Kanal angefügt. Die Standardform der channelanmelde Informationen verwendet die Client Zertifikat Authentifizierung. Bei diesem Vorgang stellt der Client ein TLS-Zertifikat bereit, wenn die Verbindung hergestellt wird, und der Server überprüft dies, bevor Aufrufe zugelassen werden.
+Wie der Name schon sagt, werden Kanalanmeldeinformationen an den zugrunde liegenden gRPC-Kanal angefügt. Die Standardform der Kanalanmeldeinformationen verwendet die Clientzertifikatauthentifizierung. In diesem Prozess stellt der Client ein TLS-Zertifikat bereit, wenn er die Verbindung herstellt, und dann überprüft der Server dies, bevor alle Aufrufe zugelassen werden.
 
-Sie können channelanmelde Informationen mit Anmelde Informationen kombinieren, um eine umfassende Sicherheit für einen GrpC-Dienst bereitzustellen. Die channelanmeldungs-Anmelde Informationen belegen, dass die Client Anwendung auf den Dienst zugreifen darf, und die Anmelde Informationen enthalten Informationen über die Person, die die Client Anwendung verwendet.
+Sie können Kanalanmeldeinformationen mit Anrufanmeldeinformationen kombinieren, um umfassende Sicherheit für einen gRPC-Dienst zu bieten. Die Kanalanmeldeinformationen beweisen, dass die Clientanwendung auf den Dienst zugreifen darf, und die Anrufanmeldeinformationen enthalten Informationen über die Person, die die Clientanwendung verwendet.
 
-Die Client Zertifikat Authentifizierung funktioniert für GrpC auf die gleiche Weise wie für ASP.net Core. Weitere Informationen finden Sie unter [Konfigurieren der Zertifikat Authentifizierung in ASP.net Core](/aspnet/core/security/authentication/certauth).
+Die Clientzertifikatauthentifizierung funktioniert für gRPC genauso wie für ASP.NET Core. Weitere Informationen finden Sie unter Konfigurieren der [Zertifikatauthentifizierung in ASP.NET Core](/aspnet/core/security/authentication/certauth).
 
-Für Entwicklungszwecke können Sie ein selbst signiertes Zertifikat verwenden, aber für die Produktion sollten Sie ein ordnungsgemäßes HTTPS-Zertifikat verwenden, das von einer vertrauenswürdigen Zertifizierungsstelle signiert wurde.
+Für Entwicklungszwecke können Sie ein selbstsigniertes Zertifikat verwenden, aber für die Produktion sollten Sie ein ordnungsgemäßes HTTPS-Zertifikat verwenden, das von einer vertrauenswürdigen Autorität signiert wurde.
 
-## <a name="add-certificate-authentication-to-the-server"></a>Hinzufügen der Zertifikat Authentifizierung zum Server
+## <a name="add-certificate-authentication-to-the-server"></a>Hinzufügen der Zertifikatauthentifizierung zum Server
 
-Konfigurieren Sie die Zertifikat Authentifizierung auf Hostebene (z. b. auf dem Kestrel-Server) und in der ASP.net Core Pipeline.
+Konfigurieren Sie die Zertifikatauthentifizierung sowohl auf Hostebene (z. B. auf dem Kestrel-Server) als auch in der ASP.NET Core-Pipeline.
 
-### <a name="configure-certificate-validation-on-kestrel"></a>Konfigurieren der Zertifikat Überprüfung für Kestrel
+### <a name="configure-certificate-validation-on-kestrel"></a>Konfigurieren der Zertifikatvalidierung auf Kestrel
 
-Sie können Kestrel (den ASP.net Core http-Server) so konfigurieren, dass ein Client Zertifikat erforderlich ist. Optional können Sie eine Überprüfung des angegebenen Zertifikats ausführen, bevor Sie eingehende Verbindungen akzeptieren. Dies wird in der `CreateWebHostBuilder`-Methode der `Program`-Klasse und nicht in `Startup`durchführen.
+Sie können Kestrel (den ASP.NET Core-HTTP-Server) so konfigurieren, dass ein Clientzertifikat erforderlich ist, und optional eine Überprüfung des bereitgestellten Zertifikats durchführen, bevor Sie eingehende Verbindungen akzeptieren. Sie tun dies in der `CreateWebHostBuilder` Methode der `Program` Klasse und nicht in `Startup`.
 
 ```csharp
 public static IHostBuilder CreateHostBuilder(string[] args) =>
@@ -48,13 +48,13 @@ public static IHostBuilder CreateHostBuilder(string[] args) =>
 
 ```
 
-Die Einstellung `ClientCertificateMode.RequireCertificate` bewirkt, dass Kestrel jede Verbindungsanforderung, die kein Client Zertifikat bereitstellt, sofort ablehnt, aber diese Einstellung allein überprüft kein Zertifikat, das bereitgestellt wird. Fügen Sie den `ClientCertificateValidation` Rückruf hinzu, damit Kestrel das Client Zertifikat an dem Punkt, an dem die Verbindung hergestellt wird, überprüfen kann, bevor die ASP.net Core Pipeline beteiligt ist. (In diesem Fall stellt der Rückruf sicher, dass er von derselben *Zertifizierungs* Stelle wie das Serverzertifikat ausgestellt wurde.) 
+Die `ClientCertificateMode.RequireCertificate` Einstellung bewirkt, dass Kestrel jede Verbindungsanforderung, die kein Clientzertifikat bietet, sofort ablehnt, aber diese Einstellung selbst überprüft kein bereitgestelltes Zertifikat. Fügen `ClientCertificateValidation` Sie den Rückruf hinzu, damit Kestrel das Clientzertifikat an dem Punkt überprüfen kann, an dem die Verbindung hergestellt wird, bevor die ASP.NET Core-Pipeline aktiviert wird. (In diesem Fall stellt der Rückruf sicher, dass er von derselben *Zertifizierungsstelle* wie das Serverzertifikat ausgestellt wurde.)
 
-### <a name="add-aspnet-core-certificate-authentication"></a>Hinzufügen ASP.net Core Zertifikat Authentifizierung
+### <a name="add-aspnet-core-certificate-authentication"></a>Hinzufügen ASP.NET Core-Zertifikatauthentifizierung
 
-Das nuget-Paket [Microsoft. aspnetcore. Authentication. Certificate](https://www.nuget.org/packages/Microsoft.AspNetCore.Authentication.Certificate) bietet Zertifikat Authentifizierung.
+Das NuGet-Paket [Microsoft.AspNetCore.Authentication.Certificate](https://www.nuget.org/packages/Microsoft.AspNetCore.Authentication.Certificate) bietet zertifikatsauthentifizierung.
 
-Fügen Sie den Zertifikat Authentifizierungsdienst in der `ConfigureServices`-Methode hinzu, und fügen Sie der ASP.net Core Pipeline in der `Configure`-Methode Authentifizierung und Autorisierung hinzu.
+Fügen Sie den Zertifikatauthentifizierungsdienst in der `ConfigureServices` Methode hinzu, `Configure` und fügen Sie der ASP.NET Core-Pipeline in der Methode Authentifizierung und Autorisierung hinzu.
 
 ```csharp
 public class Startup
@@ -93,9 +93,9 @@ public class Startup
 }
 ```
 
-## <a name="provide-channel-credentials-in-the-client-application"></a>Angeben von Kanal Anmelde Informationen in der Client Anwendung
+## <a name="provide-channel-credentials-in-the-client-application"></a>Bereitstellen von Kanalanmeldeinformationen in der Clientanwendung
 
-Mit dem `Grpc.Net.Client`-Paket konfigurieren Sie Zertifikate auf einer <xref:System.Net.Http.HttpClient>-Instanz, die für den `GrpcChannel` bereitgestellt wird, der für die Verbindung verwendet wird.
+Mit `Grpc.Net.Client` dem Paket konfigurieren Sie <xref:System.Net.Http.HttpClient> Zertifikate auf einer `GrpcChannel` Instanz, die für die für die Verbindung verwendete Instanz bereitgestellt wird.
 
 ```csharp
 class Program
@@ -122,11 +122,11 @@ class Program
 }
 ```
 
-## <a name="combine-channelcredentials-and-callcredentials"></a>Kombinieren von channelanmelde Informationen und callanmelde Informationen
+## <a name="combine-channelcredentials-and-callcredentials"></a>Kombinieren von ChannelCredentials und CallCredentials
 
-Sie können den Server für die Verwendung der Zertifikat-und Tokenauthentifizierung konfigurieren. Hierzu wenden Sie die Zertifikat Änderungen auf den Kestrel-Server an und verwenden die JWT-bearermiddleware in ASP.net Core.
+Sie können den Server so konfigurieren, dass er sowohl die Zertifikats- als auch die Tokenauthentifizierung verwendet. Wenden Sie die Zertifikatsänderungen auf den Kestrel-Server an, und verwenden Sie die JWT-Träger-Middleware in ASP.NET Core.
 
-Um `ChannelCredentials` und `CallCredentials` auf dem Client bereitzustellen, verwenden Sie die `ChannelCredentials.Create`-Methode, um die Anmelde Informationen für den-Befehl anzuwenden. Sie müssen die Zertifikat Authentifizierung weiterhin mithilfe der <xref:System.Net.Http.HttpClient> Instanz anwenden. Wenn Sie Argumente an den `SslCredentials`-Konstruktor übergeben, löst der interne Client Code eine Ausnahme aus. Der `SslCredentials`-Parameter ist nur in der `Create`-Methode des `Grpc.Net.Client` Pakets enthalten, um die Kompatibilität mit dem `Grpc.Core` Paket aufrechtzuerhalten.
+Um sowohl `ChannelCredentials` `CallCredentials` auf dem Client `ChannelCredentials.Create` als auch auf dem Client bereitzustellen, verwenden Sie die Methode, um die Aufrufanmeldeinformationen anzuwenden. Sie müssen weiterhin die Zertifikatauthentifizierung mithilfe der <xref:System.Net.Http.HttpClient> Instanz anwenden. Wenn Sie Argumente an `SslCredentials` den Konstruktor übergeben, löst der interne Clientcode eine Ausnahme aus. Der `SslCredentials` Parameter ist nur `Grpc.Net.Client` in `Create` der Methode des Pakets `Grpc.Core` enthalten, um die Kompatibilität mit dem Paket aufrechtzuerhalten.
 
 ```csharp
 var handler = new HttpClientHandler();
@@ -151,10 +151,10 @@ var grpc = new Portfolios.PortfoliosClient(channel);
 ```
 
 > [!TIP]
-> Sie können die `ChannelCredentials.Create`-Methode für einen Client ohne Zertifikat Authentifizierung verwenden. Dies ist eine nützliche Methode, um tokenanmelde Informationen mit jedem auf dem Kanal erfolgten Rückruf zu übergeben.
+> Sie können `ChannelCredentials.Create` die Methode für einen Client ohne Zertifikatauthentifizierung verwenden. Dies ist eine nützliche Möglichkeit, Tokenanmeldeinformationen mit jedem Aufruf auf dem Kanal zu übergeben.
 
-Eine Version der [fullstockticker-Beispiel-GrpC-Anwendung mit hinzugefügter Zertifikat Authentifizierung](https://github.com/dotnet-architecture/grpc-for-wcf-developers/tree/master/FullStockTickerSample/grpc/FullStockTickerAuth/FullStockTicker) finden Sie auf GitHub.
+Eine Version der [FullStockTicker-Beispiel-gRPC-Anwendung mit hinzugefügter Zertifikatauthentifizierung](https://github.com/dotnet-architecture/grpc-for-wcf-developers/tree/master/FullStockTickerSample/grpc/FullStockTickerAuth/FullStockTicker) befindet sich auf GitHub.
 
 >[!div class="step-by-step"]
->[Zurück](call-credentials.md)
+>[VorherigeS](call-credentials.md)
 >[Weiter](encryption.md)

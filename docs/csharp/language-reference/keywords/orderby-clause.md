@@ -8,12 +8,12 @@ helpviewer_keywords:
 - orderby clause [C#]
 - orderby keyword [C#]
 ms.assetid: 21f87f48-d69d-4e95-9a52-6fec47b37e1f
-ms.openlocfilehash: d88b2b40f63f0616cfd54e8abb62f1bc2183f776
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: cd76b2c33fe1a1a986bc05e3c3ed5f22809686ed
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75713296"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79173574"
 ---
 # <a name="orderby-clause-c-reference"></a>orderby-Klausel (C#-Referenz)
 
@@ -35,10 +35,10 @@ Im folgenden Beispiel wird eine primäre Sortierung der Nachnamen von Studenten 
 
 Zur Kompilierzeit wird die `orderby`-Klausel in einen Aufruf der <xref:System.Linq.Enumerable.OrderBy%2A>-Methode übersetzt. Mehrere Schlüssel in der `orderby`-Klausel werden in <xref:System.Linq.Enumerable.ThenBy%2A>-Methodenaufrufe übersetzt.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [C#-Referenz](../index.md)
 - [Abfrageschlüsselwörter (LINQ)](query-keywords.md)
-- [Language-Integrated Query (LINQ)](../../linq/index.md)
+- [LINQ in C#](../../linq/index.md)
 - [group-Klausel](group-clause.md)
-- [Erste Schritte mit LINQ in C#](/dotnet/csharp/programming-guide/concepts/linq/)
+- [Language-Integrated Query (LINQ)](../../programming-guide/concepts/linq/index.md)

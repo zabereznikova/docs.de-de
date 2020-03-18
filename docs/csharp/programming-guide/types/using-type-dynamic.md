@@ -6,10 +6,10 @@ helpviewer_keywords:
 - dynamic type [C#]
 ms.assetid: 3828989d-c967-4a51-b948-857ebc8fdf26
 ms.openlocfilehash: c5ac5b3692266010f0be8672ef744baaa32e6a03
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75711856"
 ---
 # <a name="using-type-dynamic-c-programming-guide"></a>Verwenden des Typs „dynamic“ (C#-Programmierhandbuch)
@@ -53,7 +53,7 @@ Umgekehrt kann eine implizite Konvertierung dynamisch auf einen Ausdruck vom Typ
 
 ## <a name="overload-resolution-with-arguments-of-type-dynamic"></a>Überladungsauflösung mit Argumenten vom Typ „dynamic“
 
-Überladungsauflösung erfolgt zur Laufzeit anstatt zur Kompilierzeit, wenn eines oder mehrere der Argumente in einem Methodenaufruf vom Typ `dynamic` sind, oder wenn der Empfänger des Methodenaufrufs vom Typ `dynamic` ist. Im folgenden Beispiel wird durch das Senden von `d1` als Argument kein Compilerfehler ausgelöst, wenn die einzige zugängliche `exampleMethod2`-Methode so definiert wird, dass sie ein Zeichenfolgenargument akzeptiert. Allerdings wird eine Laufzeitausnahme ausgelöst. Die Überladungsauflösung schlägt zur Laufzeit fehl, da der Laufzeittyp von `d1``int` ist und `exampleMethod2` eine Zeichenfolge benötigt.
+Überladungsauflösung erfolgt zur Laufzeit anstatt zur Kompilierzeit, wenn eines oder mehrere der Argumente in einem Methodenaufruf vom Typ `dynamic` sind, oder wenn der Empfänger des Methodenaufrufs vom Typ `dynamic` ist. Im folgenden Beispiel wird durch das Senden von `exampleMethod2` als Argument kein Compilerfehler ausgelöst, wenn die einzige zugängliche `d1`-Methode so definiert wird, dass sie ein Zeichenfolgenargument akzeptiert. Allerdings wird eine Laufzeitausnahme ausgelöst. Die Überladungsauflösung schlägt zur Laufzeit fehl, da der Laufzeittyp von `d1``int` ist und `exampleMethod2` eine Zeichenfolge benötigt.
 
 [!code-csharp[CsProgGuideTypes#55](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/usingdynamic.cs#55)]
 

@@ -4,12 +4,12 @@ description: Erfahren Sie, wie Sie den .NET für Apache Spark-Worker und benutze
 ms.date: 01/21/2019
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: f9197ca3cf8066f0849ebbe70d7757c9035d02f6
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: f373ccee398149adcadeac91f02d9896214706b0
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76748542"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79187598"
 ---
 # <a name="deploy-net-for-apache-spark-worker-and-user-defined-function-binaries"></a>Bereitstellen des .NET für Apache Spark-Workers und für benutzerdefinierte Funktionsbinärdateien
 
@@ -19,19 +19,19 @@ Diese Anleitung enthält allgemeine Anweisungen für die Bereitstellung des .NET
 Die Konfigurationen zeigen die allgemeinen Umgebungsvariablen und Parametereinstellungen, um den .NET für Apache Spark-Worker und benutzerdefinierte Funktionsbinärdateien bereitzustellen.
 
 ### <a name="environment-variables"></a>Umgebungsvariablen
-Bei der Bereitstellung von Workern und dem Schreiben von UDFs gibt es einige häufig verwendete Umgebungsvariablen, die Sie möglicherweise festlegen müssen: 
+Bei der Bereitstellung von Workern und dem Schreiben von UDFs gibt es einige häufig verwendete Umgebungsvariablen, die Sie möglicherweise festlegen müssen:
 
 | Umgebungsvariable         | Beschreibung
-| :--------------------------- | :---------- 
+| :--------------------------- | :----------
 | DOTNET_WORKER_DIR            | Hierbei handelt es sich um den Pfad, in dem die <code>Microsoft.Spark.Worker</code>-Binärdatei generiert wurde.</br>Dieser wird vom Spark-Treiber verwendet und wird an die Spark-Executors weitergeleitet. Wenn diese Variable nicht eingerichtet ist, suchen die Spark-Executors den in der <code>PATH</code>-Umgebungsvariablen angegebenen Pfad.</br>_z. B. "C:\bin\Microsoft.Spark.Worker"_
 | DOTNET_ASSEMBLY_SEARCH_PATHS | Hierbei handelt es sich um durch Trennzeichen getrennte Pfade, in denen <code>Microsoft.Spark.Worker</code> Assemblys lädt.</br>Beachten Sie, dass, wenn ein Pfad mit "." beginnt, das Arbeitsverzeichnis vorangestellt wird. Im **YARN-Modus** würde "." das Arbeitsverzeichnis des Containers darstellen.</br>_z. B. "C:\Users\\&lt;Benutzername&gt;\\&lt;mysparkapp&gt;\bin\Debug\\&lt;dotnet-Version&gt;"_
 | DOTNET_WORKER_DEBUG          | Wenn Sie <a href="https://github.com/dotnet/spark/blob/master/docs/developer-guide.md#debugging-user-defined-function-udf">ein UDF debuggen</a> wollen, legen Sie diese Umgebungsvariable auf <code>1</code> fest, bevor Sie <code>spark-submit</code> ausführen.
 
 ### <a name="parameter-options"></a>Parameteroptionen
-Sobald die Spark-Anwendung [gebündelt](https://spark.apache.org/docs/latest/submitting-applications.html#bundling-your-applications-dependencies) ist, können Sie diese mit `spark-submit` starten. In der folgenden Tabelle werden einige der häufig verwendeten Optionen aufgeführt: 
+Sobald die Spark-Anwendung [gebündelt](https://spark.apache.org/docs/latest/submitting-applications.html#bundling-your-applications-dependencies) ist, können Sie diese mit `spark-submit` starten. In der folgenden Tabelle werden einige der häufig verwendeten Optionen aufgeführt:
 
 | Parametername        | Beschreibung
-| :---------------------| :---------- 
+| :---------------------| :----------
 | --class               | Dies ist der Einstiegspunkt für Ihre Anwendung.</br>_z. B. org.apache.spark.deploy.dotnet.DotnetRunner_
 | --master              | Dies ist die <a href="https://spark.apache.org/docs/latest/submitting-applications.html#master-urls">master-URL</a> für den Cluster.</br>_z. B. YARN_
 | --deploy-mode         | Dieser Parameter gibt an, ob Ihr Treiber auf den Workerknoten (<code>cluster</code>) oder lokal als externer Client (<code>client</code>) bereitgestellt werden soll.</br>Standardwert: <code>client</code>

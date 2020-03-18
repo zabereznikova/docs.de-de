@@ -2,19 +2,19 @@
 title: Verwenden von Varianz bei Delegaten (C#)
 ms.date: 07/20/2015
 ms.assetid: 1638c95d-dc8b-40c1-972c-c2dcf84be55e
-ms.openlocfilehash: 980caf8d5e4699115d203a89fab7994d18cc1707
-ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
+ms.openlocfilehash: 83e86e760edb17f6d9ae61864c154062d41416e4
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70168363"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79169765"
 ---
 # <a name="using-variance-in-delegates-c"></a>Verwenden von Varianz bei Delegaten (C#)
 Wenn Sie einem Delegat eine Methode zuweisen, bieten *Kovarianz* und *Kontravarianz* Flexibilität für das Abgleichen eines Delegattyps mit einer Methodensignatur. Kovarianz lässt die Verfügung einer Methode über einen Rückgabetyp zu, der stärker abgeleitet ist als der im Delegat definierte Typ. Kontravarianz lässt eine Methode zu, die über Typen verfügt, die weniger abgeleitet sind als die im Delegattyp.  
   
 ## <a name="example-1-covariance"></a>Beispiel 1: Kovarianz  
   
-### <a name="description"></a>BESCHREIBUNG  
+### <a name="description"></a>Beschreibung  
  In diesem Beispiel wird veranschaulicht, wie Delegaten mit Methoden verwendet werden können, die über Rückgabetypen verfügen, die von den Rückgabetypen in der Delegatsignatur abgeleitet sind. Der von `DogsHandler` zurückgegebene Datentyp ist vom Typ `Dogs`, der vom im Delegat definierten Typ `Mammals` abhängt.  
   
 ### <a name="code"></a>Code  
@@ -50,7 +50,7 @@ class Program
   
 ## <a name="example-2-contravariance"></a>Beispiel 2: Kontravarianz  
   
-### <a name="description"></a>BESCHREIBUNG
+### <a name="description"></a>Beschreibung
 
 In diesem Beispiel wird veranschaulicht, wie Delegaten mit Methoden verwendet werden können, die über Parameter eines Typs verfügen, die Basistypen von den Parametertypen der Delegatsignatur sind. Mithilfe von Kontravarianz können Sie einen Ereignishandler anstelle getrennter Handler verwenden. Im folgenden Beispiel werden zwei Delegaten verwendet:
 
@@ -66,7 +66,7 @@ In diesem Beispiel wird veranschaulicht, wie Delegaten mit Methoden verwendet we
    public delegate void MouseEventHandler(object sender, MouseEventArgs e)
    ```
 
-Das Beispiel definiert einen Ereignishandler mit einem <xref:System.EventArgs>-Parameter und verwendet diesen, um die Ereignisse `Button.KeyDown` und `Button.MouseClick` zu bearbeiten. Dies ist möglich, weil <xref:System.EventArgs> der Basistyp sowohl von <xref:System.Windows.Forms.KeyEventArgs> als auch von <xref:System.Windows.Forms.MouseEventArgs> ist. 
+Das Beispiel definiert einen Ereignishandler mit einem <xref:System.EventArgs>-Parameter und verwendet diesen, um die Ereignisse `Button.KeyDown` und `Button.MouseClick` zu bearbeiten. Dies ist möglich, weil <xref:System.EventArgs> der Basistyp sowohl von <xref:System.Windows.Forms.KeyEventArgs> als auch von <xref:System.Windows.Forms.MouseEventArgs> ist.
   
 ### <a name="code"></a>Code  
   
@@ -85,14 +85,14 @@ public Form1()
     // although the event expects the KeyEventArgs parameter.  
     this.button1.KeyDown += this.MultiHandler;  
   
-    // You can use the same method   
+    // You can use the same method
     // for an event that expects the MouseEventArgs parameter.  
     this.button1.MouseClick += this.MultiHandler;  
   
 }  
 ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Variance in Delegates (C#) (Varianz bei Delegaten (C#))](./variance-in-delegates.md)
-- [Verwenden von Varianz für die generischen Delegaten Func und Action (C#)](./using-variance-for-func-and-action-generic-delegates.md)
+- [Using Variance for Func and Action Generic Delegates C# (Verwenden von Varianz für die generischen Delegaten Func und Action (C#))](./using-variance-for-func-and-action-generic-delegates.md)

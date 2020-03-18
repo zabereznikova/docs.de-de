@@ -6,12 +6,12 @@ helpviewer_keywords:
 - new keyword [C#]
 - polymorphism [C#], using override and new [C#]
 ms.assetid: 323db184-b136-46fc-8839-007886e7e8b0
-ms.openlocfilehash: 0a209b9522202649765654013fdc3a468913c6b1
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 493c6c5f5bf47c6b2cd140ac0f6922f91ca4252b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714777"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79170259"
 ---
 # <a name="knowing-when-to-use-override-and-new-keywords-c-programming-guide"></a>Wann müssen die Schlüsselwörter "override" und "new" verwendet werden? (C#-Programmierhandbuch)
 
@@ -116,7 +116,7 @@ public new void Method2()
   
  Führen Sie das Programm erneut aus, um sicherzustellen, dass die Ausgabe gleich geblieben ist. Überprüfen Sie außerdem, ob die Warnung weiterhin angezeigt wird. Wenn Sie `new` verwenden, bestätigen Sie, dass Ihnen bewusst ist, dass der davon modifizierte Member einen Member verbirgt, der von der Basisklasse vererbt wird. Weitere Informationen zum Verbergen von Namen durch die Vererbung finden Sie unter [new-Modifizierer](../../language-reference/keywords/new-modifier.md).  
   
- Fügen Sie die folgende Methode in `DerivedClass` ein, um dieses Verhalten den Auswirkungen durch das Verwenden von `override` gegenüberzustellen. Der `override`-Modifizierer kann vor oder hinter `public` eingefügt werden.  
+ Fügen Sie die folgende Methode in `override` ein, um dieses Verhalten den Auswirkungen durch das Verwenden von `DerivedClass` gegenüberzustellen. Der `override`-Modifizierer kann vor oder hinter `public` eingefügt werden.  
   
 ```csharp  
 public override void Method1()  
@@ -125,7 +125,7 @@ public override void Method1()
 }  
 ```  
   
- Fügen Sie der Definition von `Method1` in `BaseClass` den `virtual`-Modifizierer hinzu. Der `virtual`-Modifizierer kann vor oder hinter `public` eingefügt werden.  
+ Fügen Sie der Definition von `virtual` in `Method1` den `BaseClass`-Modifizierer hinzu. Der `virtual`-Modifizierer kann vor oder hinter `public` eingefügt werden.  
   
 ```csharp  
 public virtual void Method1()  
@@ -146,7 +146,7 @@ public virtual void Method1()
 // Base - Method2  
 ```  
   
- Durch den `override`-Modifizierer kann `bcdc` auf die in `DerivedClass` definierte `Method1`-Methode zugreifen. Normalerweise ist dies das gewünschte Verhalten in Vererbungshierarchien. Objekte sollten Werte aufweisen, die aus der abgeleiteten Klasse erzeugt werden, um die Methoden, die in der abgeleiteten Klasse definiert sind, verwenden zu können. Dieses Verhalten erzielen Sie, indem Sie `override` verwenden, um die Methode der Basisklasse zu erweitern.  
+ Durch den `override`-Modifizierer kann `bcdc` auf die in `Method1` definierte `DerivedClass`-Methode zugreifen. Normalerweise ist dies das gewünschte Verhalten in Vererbungshierarchien. Objekte sollten Werte aufweisen, die aus der abgeleiteten Klasse erzeugt werden, um die Methoden, die in der abgeleiteten Klasse definiert sind, verwenden zu können. Dieses Verhalten erzielen Sie, indem Sie `override` verwenden, um die Methode der Basisklasse zu erweitern.  
   
  Der folgende Code umfasst das vollständige Beispiel.  
   
@@ -180,7 +180,7 @@ namespace OverrideAndNew
             // Derived - Method1  
             // Derived - Method2  
   
-            // The following two calls produce different results, depending   
+            // The following two calls produce different results, depending
             // on whether override (Method1) or new (Method2) is used.  
             bcdc.Method1();  
             bcdc.Method2();  
@@ -276,7 +276,7 @@ public static void TestCars1()
   
     // Notice the output from this test case. The new modifier is  
     // used in the definition of ShowDetails in the ConvertibleCar  
-    // class.    
+    // class.
   
     ConvertibleCar car2 = new ConvertibleCar();  
     car2.DescribeCar();  
@@ -312,7 +312,7 @@ public static void TestCars2()
     System.Console.WriteLine("\nTestCars2");  
     System.Console.WriteLine("----------");  
   
-    var cars = new List<Car> { new Car(), new ConvertibleCar(),   
+    var cars = new List<Car> { new Car(), new ConvertibleCar(),
         new Minivan() };  
   
     foreach (var car in cars)  
@@ -419,7 +419,7 @@ namespace OverrideAndNew2
   
             // Notice the output from this test case. The new modifier is  
             // used in the definition of ShowDetails in the ConvertibleCar  
-            // class.    
+            // class.
             ConvertibleCar car2 = new ConvertibleCar();  
             car2.DescribeCar();  
             System.Console.WriteLine("----------");  
@@ -446,7 +446,7 @@ namespace OverrideAndNew2
             System.Console.WriteLine("\nTestCars2");  
             System.Console.WriteLine("----------");  
   
-            var cars = new List<Car> { new Car(), new ConvertibleCar(),   
+            var cars = new List<Car> { new Car(), new ConvertibleCar(),
                 new Minivan() };  
   
             foreach (var car in cars)  
@@ -542,7 +542,7 @@ namespace OverrideAndNew2
 }  
 ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [C#-Programmierhandbuch](../index.md)
 - [Klassen und Strukturen](./index.md)
