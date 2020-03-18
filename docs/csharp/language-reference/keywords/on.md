@@ -8,23 +8,23 @@ helpviewer_keywords:
 - on keyword [C#]
 ms.assetid: 06abc536-e07c-4e34-88c1-425208bdcb21
 ms.openlocfilehash: 0c443b395ff41ac4584da706722186cf9247ad24
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75713312"
 ---
-# <a name="on-c-reference"></a><span data-ttu-id="c5677-102">on (C#-Referenz)</span><span class="sxs-lookup"><span data-stu-id="c5677-102">on (C# Reference)</span></span>
+# <a name="on-c-reference"></a><span data-ttu-id="cce6f-102">on (C#-Referenz)</span><span class="sxs-lookup"><span data-stu-id="cce6f-102">on (C# Reference)</span></span>
 
-<span data-ttu-id="c5677-103">Das kontextabhängiges Schlüsselwort `on` wird in der [join-Klausel](join-clause.md) eines Abfrageausdrucks, um die Verknüpfungsbedingung anzugeben.</span><span class="sxs-lookup"><span data-stu-id="c5677-103">The `on` contextual keyword is used in the [join clause](join-clause.md) of a query expression to specify the join condition.</span></span>
+<span data-ttu-id="cce6f-103">Das kontextabhängiges Schlüsselwort `on` wird in der [join-Klausel](join-clause.md) eines Abfrageausdrucks, um die Verknüpfungsbedingung anzugeben.</span><span class="sxs-lookup"><span data-stu-id="cce6f-103">The `on` contextual keyword is used in the [join clause](join-clause.md) of a query expression to specify the join condition.</span></span>
 
-## <a name="example"></a><span data-ttu-id="c5677-104">Beispiel</span><span class="sxs-lookup"><span data-stu-id="c5677-104">Example</span></span>
+## <a name="example"></a><span data-ttu-id="cce6f-104">Beispiel</span><span class="sxs-lookup"><span data-stu-id="cce6f-104">Example</span></span>
 
-<span data-ttu-id="c5677-105">Im folgenden Beispiel wird die Verwendung von `on` in einer `join`-Klausel gezeigt.</span><span class="sxs-lookup"><span data-stu-id="c5677-105">The following example shows the use of `on` in a `join` clause.</span></span>
+<span data-ttu-id="cce6f-105">Im folgenden Beispiel wird die Verwendung von `on` in einer `join`-Klausel gezeigt.</span><span class="sxs-lookup"><span data-stu-id="cce6f-105">The following example shows the use of `on` in a `join` clause.</span></span>
 
 [!code-csharp[csrefKeywordsContextual#12](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsContextual/CS/csrefKeywordsContextual.cs#12)]
 
-## <a name="see-also"></a><span data-ttu-id="c5677-106">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="c5677-106">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="cce6f-106">Weitere Informationen</span><span class="sxs-lookup"><span data-stu-id="cce6f-106">See also</span></span>
 
-- [<span data-ttu-id="c5677-107">C#-Referenz</span><span class="sxs-lookup"><span data-stu-id="c5677-107">C# Reference</span></span>](../index.md)
-- [<span data-ttu-id="c5677-108">Language-Integrated Query (LINQ)</span><span class="sxs-lookup"><span data-stu-id="c5677-108">Language Integrated Query (LINQ)</span></span>](../../linq/index.md)
+- [<span data-ttu-id="cce6f-107">C#-Referenz</span><span class="sxs-lookup"><span data-stu-id="cce6f-107">C# Reference</span></span>](../index.md)
+- [<span data-ttu-id="cce6f-108">Language-Integrated Query (LINQ)</span><span class="sxs-lookup"><span data-stu-id="cce6f-108">Language Integrated Query (LINQ)</span></span>](../../linq/index.md)

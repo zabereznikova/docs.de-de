@@ -3,19 +3,19 @@ title: 'Vorgehensweise: Generieren von XML aus CSV-Dateien (C#)'
 ms.date: 07/20/2015
 ms.assetid: 57b9ccde-f983-4a21-ae61-70ecede30307
 ms.openlocfilehash: 643c05cb440165c4461c3e9c80e69701241ab8d1
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/03/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75635807"
 ---
-# <a name="how-to-generate-xml-from-csv-files-c"></a><span data-ttu-id="c6698-102">Vorgehensweise: Generieren von XML aus CSV-Dateien (C#)</span><span class="sxs-lookup"><span data-stu-id="c6698-102">How to generate XML from CSV files (C#)</span></span>
-<span data-ttu-id="c6698-103">In diesem Beispiel wird gezeigt, wie Sie mit LINQ (Language Integrated Query) und [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] aus einer CSV-Datei eine XML-Datei generieren können.</span><span class="sxs-lookup"><span data-stu-id="c6698-103">This example shows how to use Language-Integrated Query (LINQ) and [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] to generate an XML file from a comma-separated value (CSV) file.</span></span>  
+# <a name="how-to-generate-xml-from-csv-files-c"></a><span data-ttu-id="42f89-102">Vorgehensweise: Generieren von XML aus CSV-Dateien (C#)</span><span class="sxs-lookup"><span data-stu-id="42f89-102">How to generate XML from CSV files (C#)</span></span>
+<span data-ttu-id="42f89-103">In diesem Beispiel wird gezeigt, wie Sie mit LINQ (Language Integrated Query) und [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] aus einer CSV-Datei eine XML-Datei generieren können.</span><span class="sxs-lookup"><span data-stu-id="42f89-103">This example shows how to use Language-Integrated Query (LINQ) and [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] to generate an XML file from a comma-separated value (CSV) file.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="c6698-104">Beispiel</span><span class="sxs-lookup"><span data-stu-id="c6698-104">Example</span></span>  
- <span data-ttu-id="c6698-105">Der folgende Code führt eine LINQ-Abfrage für ein Zeichenfolgenarray aus.</span><span class="sxs-lookup"><span data-stu-id="c6698-105">The following code performs a LINQ query on an array of strings.</span></span>  
+## <a name="example"></a><span data-ttu-id="42f89-104">Beispiel</span><span class="sxs-lookup"><span data-stu-id="42f89-104">Example</span></span>  
+ <span data-ttu-id="42f89-105">Der folgende Code führt eine LINQ-Abfrage für ein Zeichenfolgenarray aus.</span><span class="sxs-lookup"><span data-stu-id="42f89-105">The following code performs a LINQ query on an array of strings.</span></span>  
   
- <span data-ttu-id="c6698-106">Die Abfrage verwendet die `let`-Klausel, um die einzelnen Zeichenfolgen in ein Array von Feldern aufzuteilen.</span><span class="sxs-lookup"><span data-stu-id="c6698-106">The query uses the `let` clause to split each string into an array of fields.</span></span>  
+ <span data-ttu-id="42f89-106">Die Abfrage verwendet die `let`-Klausel, um die einzelnen Zeichenfolgen in ein Array von Feldern aufzuteilen.</span><span class="sxs-lookup"><span data-stu-id="42f89-106">The query uses the `let` clause to split each string into an array of fields.</span></span>  
   
 ```csharp  
 // Create the text file.  
@@ -48,7 +48,7 @@ XElement cust = new XElement("Root",
 Console.WriteLine(cust);  
 ```  
   
- <span data-ttu-id="c6698-107">Dieser Code erzeugt die folgende Ausgabe:</span><span class="sxs-lookup"><span data-stu-id="c6698-107">This code produces the following output:</span></span>  
+ <span data-ttu-id="42f89-107">Dieser Code erzeugt die folgende Ausgabe:</span><span class="sxs-lookup"><span data-stu-id="42f89-107">This code produces the following output:</span></span>  
   
 ```xml  
 <Root>  
