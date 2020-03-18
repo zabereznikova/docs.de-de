@@ -9,10 +9,10 @@ helpviewer_keywords:
 - platform invoke
 ms.assetid: c025b2e0-2357-4c27-8461-118f0090aeff
 ms.openlocfilehash: 2c9eb2a8e6c2db8dc06ebe48ca6eb37d5cf638e7
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75700730"
 ---
 # <a name="interoperability-overview-c-programming-guide"></a>Überblick über die Interoperabilität (C#-Programmierhandbuch)
@@ -57,7 +57,7 @@ Weitere Informationen finden Sie unter [Nutzen nicht verwalteter DLL-Funktionen]
   
  Weitere Informationen finden Sie unter [Verfügbarmachen von .NET Framework-Komponenten in COM](../../../framework/interop/exposing-dotnet-components-to-com.md) und [COM-Beispielklasse](./example-com-class.md).  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Improving Interop Performance (Optimieren der Interopleistung)](https://docs.microsoft.com/previous-versions/msp-n-p/ff647812%28v=pandp.10%29)
 - [Einführung in die Interoperabilität zwischen COM und .NET](/office/client-developer/outlook/pia/introduction-to-interoperability-between-com-and-net)

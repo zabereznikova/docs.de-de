@@ -9,12 +9,12 @@ helpviewer_keywords:
 - locating assemblies
 - assemblies [.NET Framework], location
 ms.assetid: 772ac6f4-64d2-4cfb-92fd-58096dcd6c34
-ms.openlocfilehash: c462a6df2d5221907a6b574c33bb8fa1c52abac5
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 13e2661b67ba3b717b8917e80118175acb09e756
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75741334"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79181676"
 ---
 # <a name="how-the-runtime-locates-assemblies"></a>So sucht Common Language Runtime nach Assemblys
 
@@ -141,7 +141,7 @@ Der abgesicherte Modus kann auf die gesamte Anwendung oder ausgewählte Assembly
 ### <a name="machine-configuration-file"></a>Computerkonfigurationsdatei
 Im dritten Schritt überprüft die Common Language Runtime die Computerkonfigurationsdatei. Diese Datei mit dem Namen "Machine.config" befindet sich auf dem lokalen Computer im Unterverzeichnis "Config" des Stammverzeichnisses, in dem die Common Language Runtime installiert ist. Diese Datei kann von Administratoren verwendet werden, um lokale Assemblybindungsbeschränkungen für diesen Computer festzulegen. Die Einstellungen in der Computerkonfigurationsdatei haben Vorrang vor allen anderen Konfigurationseinstellungen. Dies bedeutet allerdings nicht, dass sich alle Konfigurationseinstellungen in dieser Datei befinden sollten. Die Version, die in der Administratorrichtliniendatei festgelegt ist, ist endgültig und kann nicht überschrieben werden. Überschreibungen, die in der Datei "Machine.config" festgelegt sind, haben Auswirkungen auf alle Anwendungen. Weitere Informationen zu Konfigurationsdateien finden Sie unter [Konfigurieren von Apps mithilfe von Konfigurationsdateien](../configure-apps/index.md).
 
-<a name="step2"></a> 
+<a name="step2"></a>
 
 ## <a name="step-2-checking-for-previously-referenced-assemblies"></a>Schritt 2: Suchen nach Assemblys, auf die zuvor verwiesen wurde
 

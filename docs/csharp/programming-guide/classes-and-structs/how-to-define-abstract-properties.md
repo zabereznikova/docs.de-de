@@ -6,10 +6,10 @@ helpviewer_keywords:
 - abstract properties [C#]
 ms.assetid: 672a90eb-47b9-4ae0-9914-af53852fddcb
 ms.openlocfilehash: c46f36133b68a550a17cf882844fd2481eee8851
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75705612"
 ---
 # <a name="how-to-define-abstract-properties-c-programming-guide"></a>Gewusst wie: Definieren von abstrakten Eigenschaften (C#-Programmierhandbuch)
@@ -21,7 +21,7 @@ Das folgende Beispiel veranschaulicht, wie Sie [abstrakte](../../language-refere
   
 - shapes.cs: die Unterklassen der `Shape`-Klasse.  
   
-- shapetest.cs: ein Testprogramm zum Anzeigen der Bereiche einiger von `Shape` abgeleiteter Objekte.  
+- shapetest.cs: ein Testprogramm zum Anzeigen der Bereiche einiger abgeleiteten `Shape`-Objekte.  
   
  Verwenden Sie den folgenden Befehl, um das Beispiel zu kompilieren:  
   
@@ -34,7 +34,7 @@ Das folgende Beispiel veranschaulicht, wie Sie [abstrakte](../../language-refere
   
  [!code-csharp[csProgGuideInheritance#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#1)]  
   
-- Modifizierer der Eigenschaft sind in der Deklaration der Eigenschaft selbst platziert. Zum Beispiel:  
+- Modifizierer der Eigenschaft sind in der Deklaration der Eigenschaft selbst platziert. Beispiel:  
   
     ```csharp  
     public abstract double Area  
@@ -52,7 +52,7 @@ Das folgende Beispiel veranschaulicht, wie Sie [abstrakte](../../language-refere
   
  [!code-csharp[csProgGuideInheritance#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#3)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [C#-Programmierhandbuch](../index.md)
 - [Klassen und Strukturen](./index.md)

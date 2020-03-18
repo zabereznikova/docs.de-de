@@ -7,16 +7,16 @@ helpviewer_keywords:
 - 64-bit programming [C++]
 ms.assetid: fd4026bc-2c3d-4b27-86dc-ec5e96018181
 ms.openlocfilehash: 90e022d5643dc49ccc5b78d071b3b473c92f0670
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "74429667"
 ---
 # <a name="64-bit-applications"></a>64-Bit-Anwendungen
 Wenn Sie eine Anwendung kompilieren, können Sie festlegen, dass sie auf einem Windows-Betriebssystem mit 64 Bit entweder als systemeigene Anwendung oder unter WOW64 (Windows-32-Bit-On-Windows-64-Bit) ausgeführt werden soll. WOW64 ist eine Kompatibilitätsumgebung, die die Ausführung einer 32-Bit-Anwendung auf einem 64-Bit-System ermöglicht. WOW64 ist allen in 64-Bit-Versionen des Windows-Betriebssystems enthalten.  
   
-## <a name="running-32-bit-vs-64-bit-applications-on-windows"></a>Ausführen von 32-Bit-Anwendungen im Vergleich zu 64-Bit-Anwendungen unter Windows  
+## <a name="running-32-bit-vs-64-bit-applications-on-windows"></a>Ausführen von 32-Bit und 64-Bit-Anwendungen auf Windows  
  Alle mit den Versionen 1.0 oder 1.1 von .NET Framework erstellten Anwendungen werden auf einem 64-Bit-Betriebssystem als 32-Bit-Anwendungen behandelt und immer unter WOW64 und der 32-Bit-Common Language Runtime (CLR) ausgeführt. 32-Bit-Anwendungen, die auf .NET Framework 4 oder höheren Versionen erstellt werden, können auch unter WOW64 auf 64-Bit-Systemen ausgeführt werden.  
   
  Visual Studio installiert die 32-Bit-Version der CLR auf einem x86-Computer und sowohl die 32-Bit-Version als auch die entsprechende 64-Bit-Version der CLR auf einem 64-Bit-Windows-Computer. (Da Visual Studio eine 32-Bit-Anwendung ist, wenn sie in einem 64-Bit-System installiert ist, wird sie unter WOW64 ausgeführt.)  
@@ -51,7 +51,7 @@ Wenn Sie eine Anwendung kompilieren, können Sie festlegen, dass sie auf einem W
 |Compiler|Compileroption|  
 |--------------|---------------------|  
 |Visual Basic|[-Plattform (Visual Basic)](../visual-basic/reference/command-line-compiler/platform.md)|  
-|Visual C#|[-platform (C#-Compileroptionen)](../csharp/language-reference/compiler-options/platform-compiler-option.md)|  
+|Visual C#|[-platform (C#-Compileroptionen)](../csharp/language-reference/compiler-options/platform-compiler-option.md)|  
 |Visual C++|Sie können plattformagnostische Microsoft Intermediate Language (MSIL)-Anwendungen erstellen, indem Sie **/clr:safe** verwenden. Weitere Informationen finden Sie unter [-clr (Common Language Runtime-Kompilierung)](/cpp/build/reference/clr-common-language-runtime-compilation).<br /><br /> Visual C++ enthält einen gesonderten Compiler für jedes 64-Bit-Betriebssystem. Weitere Informationen zur Verwendung von Visual C++ für die Erstellung von nativen Anwendungen, die auf einem 64-Bit-Windows-Betriebssystem ausgeführt werden, finden Sie unter [64-Bit-Programmierung](/cpp/build/configuring-programs-for-64-bit-visual-cpp).|  
   
 ## <a name="determining-the-status-of-an-exe-file-or-dll-file"></a>Bestimmen des Status einer EXE- oder DLL-Datei  

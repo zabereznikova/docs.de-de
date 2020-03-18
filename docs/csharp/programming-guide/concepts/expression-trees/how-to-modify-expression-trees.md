@@ -3,10 +3,10 @@ title: Ändern von Ausdrucksbaumstrukturen (C#)
 ms.date: 07/20/2015
 ms.assetid: 9b0cd8c2-457e-4833-9e36-31e79545f442
 ms.openlocfilehash: e921c594497d02f5eb16cc60294e947e83636d7a
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "73969900"
 ---
 # <a name="how-to-modify-expression-trees-c"></a>Ändern von Ausdrucksbaumstrukturen (C#)
@@ -70,7 +70,7 @@ In diesem Thema erfahren Sie, wie Sie eine Ausdrucksbaumstruktur ändern können
   
 6. Kompilieren Sie die Anwendung, und führen Sie sie aus.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Ausführen von Ausdrucksbaumstrukturen (C#)](./how-to-execute-expression-trees.md)
 - [Ausdrucksbaumstrukturen (C#)](./index.md)

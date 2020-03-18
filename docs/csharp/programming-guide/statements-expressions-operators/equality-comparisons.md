@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - object equality [C#]
 ms.assetid: 10b865ea-4e7b-4127-9242-c9b8f57d9f04
-ms.openlocfilehash: d366fb6f79593866cb8cb2ae761ba656fe33c598
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: f09d9891f79eda44c428d5509e341a54ad3a3eee
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76867372"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79157103"
 ---
 # <a name="equality-comparisons-c-programming-guide"></a>Übereinstimmungsvergleiche (C#-Programmierhandbuch)
 
@@ -33,7 +33,7 @@ Das Konzept der Verweisgleichheit gilt nur für Verweistypen. Bei Werttypobjekte
 int a = GetOriginalValue();  
 int b = GetCurrentValue();  
   
-// Test for value equality.   
+// Test for value equality.
 if (b == a)
 {  
     // The two integers are equal.  
@@ -57,6 +57,6 @@ Die Äquivalenz muss jedoch nicht unbedingt auf allen Feldern in einem Typ basie
 |[C#-Programmierhandbuch](../index.md)|Links zu ausführlichen Informationen zu wichtigen Funktionen der C#-Sprache sowie zu Funktionen, die über .NET Framework für C# verfügbar sind.|  
 |[Typen](../types/index.md)|Informationen zum C#-Typsystem und Links zu weiteren Informationen.|  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [C#-Programmierhandbuch](../index.md)

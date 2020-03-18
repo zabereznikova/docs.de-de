@@ -3,10 +3,10 @@ title: 'Vorgehensweise: Erstellen einer Hierarchie mittels Gruppierung (C#)'
 ms.date: 07/20/2015
 ms.assetid: 0213d59e-5f76-438c-9cab-4bf11f7b971d
 ms.openlocfilehash: c5a96b02595446b2efa01868cc88377c3a5151c9
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/16/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "74141304"
 ---
 # <a name="how-to-create-hierarchy-using-grouping-c"></a>Vorgehensweise: Erstellen einer Hierarchie mittels Gruppierung (C#)

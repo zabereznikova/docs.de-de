@@ -4,12 +4,12 @@ description: Durch Verbesserungen, die kürzlich an C# vorgenommen wurden, könn
 ms.date: 10/23/2018
 ms.technology: csharp-advanced-concepts
 ms.custom: mvc
-ms.openlocfilehash: f590a338d35966e2cd3a507164057a49b8a5f6f8
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: d4a7916b80e15c7f00fa0a7da213ed0593e0959d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75346704"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78239975"
 ---
 # <a name="write-safe-and-efficient-c-code"></a>Schreiben von sicherem und effizientem C#-Code
 
@@ -154,7 +154,7 @@ Durch die Rückgabe von `ref readonly` vermeiden Sie, dass größere Strukturen 
 
 An der Aufrufstelle können die aufrufenden Funktionen die `Origin`-Eigenschaft entweder als `ref readonly` oder als Wert verwenden:
 
-[!code-csharp[AssignRefReadonly](../../samples/csharp/safe-efficient-code/ref-readonly-struct/Program.cs#AssignRefReadonly "Assigning a ref readonly")]
+[!code-csharp[AssignRefReadonly](../../samples/snippets/csharp/safe-efficient-code/ref-readonly-struct/Program.cs#AssignRefReadonly "Assigning a ref readonly")]
 
 Die erste Zuweisung im vorhergehenden Code erstellt eine Kopie der Konstanten `Origin` und weist diese Kopie zu. Die zweite weist einen Verweis zu. Beachten Sie, dass der Modifizierer `readonly` Teil der Variablendeklaration sein muss. Der referenzierte Verweis kann nicht geändert werden. Derartige Versuche führen zu einem Kompilierzeitfehler.
 
@@ -180,7 +180,7 @@ Diese Vorgehensweise führt oft zu Leistungsverbesserungen für schreibgeschütz
 
 Der folgende Code zeigt als Beispiel eine Methode, die den Abstand zwischen Punkten in einem 3D-Raum berechnet.
 
-[!code-csharp[InArgument](../../samples/csharp/safe-efficient-code/ref-readonly-struct/Program.cs#InArgument "Specifying an in argument")]
+[!code-csharp[InArgument](../../samples/snippets/csharp/safe-efficient-code/ref-readonly-struct/Program.cs#InArgument "Specifying an in argument")]
 
 Die Argumente sind zwei Strukturen, die jeweils drei double-Werte enthalten. Ein double-Wert ist 8 Byte groß, also umfasst jedes Argument 24 Byte. Durch Angabe des Modifizierers `in` übergeben Sie abhängig von der Architektur des Computers einen 4-Byte- oder 8-Byte-Verweis an diese Argumente. Der Größenunterschied ist zwar gering, doch er summiert sich, wenn Ihre Anwendung diese Methode in einer kurzen Schleife mit vielen unterschiedlichen Werten aufruft.
 
@@ -190,7 +190,7 @@ Der Modifizierer `in` kann auf einen beliebigen Member angewendet werden, der Pa
 
 Von `in`-Parametern wird ein weiteres Feature bereitgestellt, durch das Sie Literalwerte oder Konstanten als Argument für einen `in`-Parameter verwenden können. Außerdem müssen Sie im Gegensatz zu einem `ref`- oder `out`-Parameter den Modifizierer `in` nicht an der Aufrufsite anwenden. Der folgende Code zeigt zwei Beispiele zum Aufruf der `CalculateDistance`-Methode. Im ersten Beispiel werden zwei lokale Variablen als Verweis übergeben. Im zweiten Beispiel wird als Teil des Methodenaufrufs eine temporäre Variable erstellt.
 
-[!code-csharp[UseInArgument](../../samples/csharp/safe-efficient-code/ref-readonly-struct/Program.cs#UseInArgument "Specifying an In argument")]
+[!code-csharp[UseInArgument](../../samples/snippets/csharp/safe-efficient-code/ref-readonly-struct/Program.cs#UseInArgument "Specifying an In argument")]
 
 Der Compiler kann auf verschiedene Weise den Schreibschutz eines `in`-Arguments erzwingen.  Zunächst kann die aufgerufene Methode nicht direkt einem `in`-Parameter zugewiesen werden. Eine direkte Zuweisung zu einem Feld eines `in`-Parameters ist nicht möglich, wenn dieser Wert vom Typ `struct` ist. Außerdem können Sie keinen `in`-Parameter an eine Methode übergeben, die den Modifizierer `ref` oder `out` verwendet.
 Diese Regeln gelten für jedes Feld eines `in`-Parameters, falls das Feld vom Typ `struct` und auch der Parameter vom Typ `struct` ist. Tatsächlich gelten diese Regeln für mehrere Memberzugriffsebenen, falls die Typen auf allen Ebenen `structs` sind.
@@ -204,11 +204,11 @@ Durch die Verwendung von `in`-Parametern können potenzielle Leistungseinbußen 
 
 Diese Regeln sind nützlich, wenn Sie vorhandenen Code anpassen und schreibgeschützte Verweisargumente verwenden. In der aufgerufenen Methode können Sie alle Instanzmethoden aufrufen, die als Wert übergebene Parameter verwendet. In diesen Instanzen wird eine Kopie des `in`-Parameters erstellt. Da der Compiler eine temporäre Variable für jeden `in`-Parameter erstellen kann, können Sie auch Standardwerte für jeden `in`-Parameter angeben. Im folgenden Codebeispiel wird der Ursprung (Punkt 0,0) als Standardwert für den zweiten Punkt verwendet:
 
-[!code-csharp[InArgumentDefault](../../samples/csharp/safe-efficient-code/ref-readonly-struct/Program.cs#InArgumentDefault "Specifying defaults for an in parameter")]
+[!code-csharp[InArgumentDefault](../../samples/snippets/csharp/safe-efficient-code/ref-readonly-struct/Program.cs#InArgumentDefault "Specifying defaults for an in parameter")]
 
 Wenn der Compiler dazu gezwungen werden soll, schreibgeschützte Argumente als Verweis zu übergeben, müssen Sie wie im folgenden Beispiel gezeigt den `in`-Modifizierer für Argumente an der Aufrufstelle angeben:
 
-[!code-csharp[UseInArgument](../../samples/csharp/safe-efficient-code/ref-readonly-struct/Program.cs#ExplicitInArgument "Specifying an In argument")]
+[!code-csharp[UseInArgument](../../samples/snippets/csharp/safe-efficient-code/ref-readonly-struct/Program.cs#ExplicitInArgument "Specifying an In argument")]
 
 Durch dieses Verhalten können `in`-Parameter leichter über einen gewissen Zeitraum in große Codebasen, in denen Leistungssteigerungen möglich sind, eingeführt werden. Zuerst fügen Sie den `in`-Modifizierer den Methodensignaturen hinzu. Anschließend ergänzen Sie die Aufrufstellen um den `in`-Modifizierer und erstellen `readonly struct`-Typen, damit der Compiler keine defensive Kopien von `in`-Parametern an mehreren Speicherorten erstellt.
 
@@ -218,13 +218,13 @@ Der Parameter `in` kann auch mit Verweistypen oder numerischen Werten verwendet 
 
 In den bisher beschriebenen Strategien wurde erläutert, wie sich Kopien durch die Rückgabe von Verweisen und die Übergabe von Werten als Verweis vermeiden lassen. Diese Vorgehensweisen sind ideal für Argumenttypen, die mit `readonly struct` deklariert werden. Wenn dies nicht der Fall ist, muss der Compiler in vielen Situationen **defensive Kopien** erstellen, um den Schreibschutz von Argumenten zu erzwingen. Betrachten Sie das folgende Beispiel, in dem im dreidimensionalen Raum der Abstand eines Punkts vom Ursprung berechnet wird:
 
-[!code-csharp[InArgument](../../samples/csharp/safe-efficient-code/ref-readonly-struct/Program.cs#InArgument "Specifying an in argument")]
+[!code-csharp[InArgument](../../samples/snippets/csharp/safe-efficient-code/ref-readonly-struct/Program.cs#InArgument "Specifying an in argument")]
 
 Die `Point3D`-Struktur ist *keine* schreibgeschützte Struktur. Im Methodenkörper werden sechs Aufrufe zum Zugriff auf die Eigenschaften ausgeführt. Diese Zugriffe erscheinen möglicherweise auf den ersten Blick sicher. Die `get`-Zugriffsmethode sollte schließlich nicht den Zustand eines Objekts ändern. Dies wird jedoch von keiner Programmiersprachregel erzwungen. Es handelt sich nur um eine Konvention. Jeder Typ könnte eine `get`-Zugriffsmethode implementieren, die den internen Zustand ändert. Ohne eine Garantie der Programmiersprache muss der Compiler eine temporäre Kopie des Arguments erstellen, bevor er einen Member aufruft. Der temporäre Speicher wird auf dem Stapel erstellt, die Werte des Arguments werden in den temporären Speicher kopiert, und der Wert wird bei jedem Memberzugriff als `this`-Argument in den Stapel kopiert. In vielen Situationen beeinträchtigen die Kopien die Leistung so, dass die Übergabe als Wert schneller als die Übergabe als schreibgeschützter Verweis ist, wenn der Argumenttyp nicht `readonly struct` ist.
 
 Wenn stattdessen zur Abstandsberechnung die unveränderliche Struktur `ReadonlyPoint3D` verwendet wird, werden temporäre Objekte nicht benötigt:
 
-[!code-csharp[readonlyInArgument](../../samples/csharp/safe-efficient-code/ref-readonly-struct/Program.cs#ReadOnlyInArgument "Specifying a readonly in argument")]
+[!code-csharp[readonlyInArgument](../../samples/snippets/csharp/safe-efficient-code/ref-readonly-struct/Program.cs#ReadOnlyInArgument "Specifying a readonly in argument")]
 
 Der Compiler generiert effizienteren Code, wenn Member vom Typ `readonly struct` aufgerufen werden: Im Gegensatz zur Kopie des Empfängers ist der `this`-Verweis immer ein `in`-Parameter, der als Verweis der Membermethode übergeben wird. Durch diese Optimierung werden Kopien vermieden, wenn Sie `readonly struct` als `in`-Argument verwenden.
 

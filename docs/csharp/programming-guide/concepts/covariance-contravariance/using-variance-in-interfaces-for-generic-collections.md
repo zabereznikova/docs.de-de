@@ -2,12 +2,12 @@
 title: Verwenden von Varianz in Schnittstellen für generische Auflistungen (C#)
 ms.date: 07/20/2015
 ms.assetid: a44f0708-10fa-4c76-82cd-daa6e6b31e8e
-ms.openlocfilehash: 53aaf49ee0802c0d207e0b0a29661cee7c628b4d
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: b891ccde93e18baf5d5e814911666e9c6268e009
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69595219"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79169739"
 ---
 # <a name="using-variance-in-interfaces-for-generic-collections-c"></a>Verwenden von Varianz in Schnittstellen für generische Auflistungen (C#)
 Eine kovariante Schnittstelle ermöglicht den zugehörigen Methoden, mehr abgeleitete Typen zurückzugeben, als in der Schnittstelle angegeben sind. Eine kontravariante Schnittstelle ermöglicht den zugehörigen Methoden, Parameter von weniger abgeleiteten Typen anzunehmen, als in der Schnittstelle angegeben sind.  
@@ -17,7 +17,7 @@ Eine kovariante Schnittstelle ermöglicht den zugehörigen Methoden, mehr abgele
  Eine Liste von varianten Schnittstellen in .NET Framework finden Sie unter [Varianz in generischen Schnittstellen (C#)](./variance-in-generic-interfaces.md).  
   
 ## <a name="converting-generic-collections"></a>Konvertieren von generischen Auflistungen  
- Das folgende Beispiel veranschaulicht die Vorteile der Unterstützung von Kovarianz in der <xref:System.Collections.Generic.IEnumerable%601>-Schnittstelle. Die `PrintFullName`-Methode akzeptiert eine Auflistung vom Typ `IEnumerable<Person>` als Parameter. Sie können dies jedoch für eine Auflistung des Typs `IEnumerable<Employee>` wiederverwenden, da `Employee` `Person` erbt.  
+ Das folgende Beispiel veranschaulicht die Vorteile der Unterstützung von Kovarianz in der <xref:System.Collections.Generic.IEnumerable%601>-Schnittstelle. Die `PrintFullName`-Methode akzeptiert eine Auflistung vom Typ `IEnumerable<Person>` als Parameter. Sie können dies jedoch für eine Auflistung des Typs `IEnumerable<Employee>` wiederverwenden, da `Employee``Person` erbt.  
   
 ```csharp  
 // Simple hierarchy of classes.  
@@ -45,7 +45,7 @@ class Program
     {  
         IEnumerable<Employee> employees = new List<Employee>();  
   
-        // You can pass IEnumerable<Employee>,   
+        // You can pass IEnumerable<Employee>,
         // although the method expects IEnumerable<Person>.  
   
         PrintFullName(employees);  
@@ -55,7 +55,7 @@ class Program
 ```  
   
 ## <a name="comparing-generic-collections"></a>Vergleichen von generischen Auflistungen  
- Das folgende Beispiel veranschaulicht die Vorteile der Unterstützung von Kontravarianz in der <xref:System.Collections.Generic.IComparer%601>-Schnittstelle. Die `PersonComparer`-Klasse implementiert die `IComparer<Person>`-Schnittstelle. Sie können diese Klasse jedoch zum Vergleich einer Sequenz von Objekten des Typs `Employee` wiederverwenden, da `Employee` `Person` erbt.  
+ Das folgende Beispiel veranschaulicht die Vorteile der Unterstützung von Kontravarianz in der <xref:System.Collections.Generic.IComparer%601>-Schnittstelle. Die `PersonComparer`-Klasse implementiert die `IComparer<Person>`-Schnittstelle. Sie können diese Klasse jedoch zum Vergleich einer Sequenz von Objekten des Typs `Employee` wiederverwenden, da `Employee``Person` erbt.  
   
 ```csharp  
 // Simple hierarchy of classes.  
@@ -73,11 +73,11 @@ public class Employee : Person { }
 class PersonComparer : IEqualityComparer<Person>  
 {  
     public bool Equals(Person x, Person y)  
-    {              
+    {
         if (Object.ReferenceEquals(x, y)) return true;  
         if (Object.ReferenceEquals(x, null) ||  
             Object.ReferenceEquals(y, null))  
-            return false;              
+            return false;
         return x.FirstName == y.FirstName && x.LastName == y.LastName;  
     }  
     public int GetHashCode(Person person)  
@@ -100,7 +100,7 @@ class Program
                new Employee() {FirstName = "Jeff", LastName = "Price"}  
             };  
   
-        // You can pass PersonComparer,   
+        // You can pass PersonComparer,
         // which implements IEqualityComparer<Person>,  
         // although the method expects IEqualityComparer<Employee>.  
   
@@ -113,6 +113,6 @@ class Program
 }  
 ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Varianz in generischen Schnittstellen](./variance-in-generic-interfaces.md)

@@ -7,10 +7,10 @@ helpviewer_keywords:
 - applications [Visual Basic], Web services
 ms.assetid: 8ad5405b-e771-42b1-82d3-ce97af2cea9e
 ms.openlocfilehash: ad616bd46f92261ec5ad6ae81d0db48138631ed1
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74349227"
 ---
 # <a name="accessing-application-web-services-visual-basic"></a>Zugreifen auf Anwendungswebdienste (Visual Basic)
@@ -21,11 +21,11 @@ Das `My.WebServices`-Objekt bietet eine Instanz jedes Webdienstes, auf den vom a
 
 In der folgenden Tabelle werden Möglichkeiten zum Zugriff auf Webdienste aufgelistet, auf die eine Anwendung verweist.
 
-|Beschreibung|Siehe|
+|An|Weitere Informationen finden Sie unter|
 |---|---|
 |Aufrufen eines Webdienstes|[My.WebServices-Objekt](../../../visual-basic/language-reference/objects/my-webservices-object.md)|
-|Asynchrones Aufrufen eines Webdienstes und Behandeln eines Ereignisses beim Abschluss|[Vorgehensweise: Asynchrones Aufrufen eines Webdiensts](../../../visual-basic/developing-apps/programming/how-to-call-a-web-service-asynchronously.md)|
+|Asynchrones Aufrufen eines Webdienstes und Behandeln eines Ereignisses beim Abschluss|[Gewusst wie: Asynchrones Aufrufen eines Webdiensts](../../../visual-basic/developing-apps/programming/how-to-call-a-web-service-asynchronously.md)|
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [My.WebServices-Objekt](../../../visual-basic/language-reference/objects/my-webservices-object.md)

@@ -4,10 +4,10 @@ titleSuffix: ''
 description: Listet die Breaking Changes von .NET Framework zu .NET Core auf.
 ms.date: 12/18/2019
 ms.openlocfilehash: f712be14d7debc4b3008f8459e6ee925754b25f0
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/19/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77449397"
 ---
 # <a name="breaking-changes-for-migration-from-net-framework-to-net-core"></a>Breaking Changes für die Migration von .NET Framework zu .NET Core
@@ -128,7 +128,7 @@ Windows Forms-Unterstützung wurde zu .NET Core in Version 3.0 hinzugefügt. Wen
 
 ***
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [APIs, die in .NET Core immer Ausnahmen auslösen](unsupported-apis.md)
 - [.NET Framework-Technologien, die für .NET Core nicht verfügbar sind](../porting/net-framework-tech-unavailable.md)

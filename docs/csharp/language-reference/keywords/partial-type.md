@@ -8,10 +8,10 @@ helpviewer_keywords:
 - partial types [C#]
 ms.assetid: 27320743-a22e-4c7b-b0b3-53afe3607334
 ms.openlocfilehash: 551145b9cdf5fa24f3ae365665e8ff06cf5e9307
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75715210"
 ---
 # <a name="partial-type-c-reference"></a>Partieller Typ (C#-Referenz)
@@ -34,7 +34,7 @@ Das Aufteilen eines Klassen-, Struktur- oder Schnittstellentyps auf mehrere Date
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [C#-Referenz](../index.md)
 - [C#-Programmierhandbuch](../../programming-guide/index.md)

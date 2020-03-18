@@ -5,10 +5,10 @@ helpviewer_keywords:
 - Network
 ms.assetid: 31b44dd3-b903-4a48-8419-40419a3e4038
 ms.openlocfilehash: bc0604fd33d06521727c9aa0302ed313d8a2305f
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74428229"
 ---
 # <a name="networkinformation"></a>NetworkInformation
@@ -23,9 +23,9 @@ Mit dem Namespace <xref:System.Net.NetworkInformation> können Sie Informationen
 ## <a name="determine-if-a-remote-host-is-reachable"></a>Bestimmen, ob ein Remotehost erreichbar ist  
  Sie können die <xref:System.Net.NetworkInformation.Ping>-Klasse verwenden, um zu bestimmen, ob ein Remotehost verfügbar, auf dem Netzwerk oder erreichbar ist. Weitere Informationen finden Sie unter [Vorgehensweise: Pingen eines Hosts](how-to-ping-a-host.md).  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Beispiele zur Netzwerkprogrammierung](network-programming-samples.md)
+- [Network Programming Samples (Beispiele zur Netzwerkprogrammierung)](network-programming-samples.md)
 
 <!-- to-do: review sample links
 - [Network Information Technology Sample](https://archive.msdn.microsoft.com/nclsamples/Wiki/View.aspx?title=Network%20Information)

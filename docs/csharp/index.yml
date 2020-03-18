@@ -7,10 +7,10 @@ metadata:
   ms.topic: landing-page
   ms.date: 11/19/2019
   ms.openlocfilehash: 2bec49d0832a7d00d0fea247166a9ec073f37e11
-  ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+  ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
   ms.translationtype: HT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 12/25/2019
+  ms.lasthandoff: 03/15/2020
   ms.locfileid: "75339159"
 landingContent:
 - title: Erlernen des Programmierens in C#
@@ -33,7 +33,7 @@ landingContent:
       url: https://aka.ms/dotnet3-csharp
   - linkListType: download
     links:
-    - text: Herunterladen des .NET Core SDK
+    - text: .NET Core SDK herunterladen
       url: https://dotnet.microsoft.com/download
 - title: C#-Grundlagen
   linkLists:

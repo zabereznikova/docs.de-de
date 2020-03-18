@@ -5,10 +5,10 @@ helpviewer_keywords:
 - contravariance, in keyword [C#]
 - in keyword [C#]
 ms.openlocfilehash: 57da13f6dc6719166b9051afeb2532ba5fbeff3a
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75713488"
 ---
 # <a name="in-generic-modifier-c-reference"></a>in (generischer Modifizierer) (C#-Referenz)
@@ -41,7 +41,7 @@ Das folgende Beispiel zeigt, wie Sie einen kontravarianten generischen Delegaten
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [out](out-generic-modifier.md)
 - [Kovarianz und Kontravarianz](../../programming-guide/concepts/covariance-contravariance/index.md)

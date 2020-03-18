@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Hinzufügen und Entfernen von Elementen aus einer ConcurrentDictionary-Klasse'
+title: 'Gewusst wie: Hinzufügen und Entfernen von Elementen aus einem ConcurrentDictionary'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -9,13 +9,13 @@ helpviewer_keywords:
 - thread-safe collections, concurrent dictionary
 ms.assetid: 81b64b95-13f7-4532-9249-ab532f629598
 ms.openlocfilehash: dc4d13e09a91633fac1fcf5bd8ab5b043473bd7d
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75711310"
 ---
-# <a name="how-to-add-and-remove-items-from-a-concurrentdictionary"></a>Vorgehensweise: Hinzufügen und Entfernen von Elementen aus einer ConcurrentDictionary-Klasse
+# <a name="how-to-add-and-remove-items-from-a-concurrentdictionary"></a>Gewusst wie: Hinzufügen und Entfernen von Elementen aus einem ConcurrentDictionary
 Dieses Beispiel zeigt, wie Elemente hinzugefügt, abgerufen, aktualisiert und von einer <xref:System.Collections.Concurrent.ConcurrentDictionary%602?displayProperty=nameWithType> entfernt werden. Diese Auflistungsklasse ist eine threadsichere Implementierung. Es empfiehlt sich, diese Klasse immer dann zu verwenden, wenn möglicherweise mehrere Threads gleichzeitig versuchen, auf Elemente zuzugreifen.  
   
  <xref:System.Collections.Concurrent.ConcurrentDictionary%602> bietet verschiedene praktische Methoden, mit denen der Code nicht mehr zuerst prüfen muss, ob ein Schlüssel vorhanden ist, bevor versucht wird, Daten hinzuzufügen oder zu entfernen. Die folgende Tabelle führt diese praktischen Methoden auf und beschreibt ihre Verwendung.  
@@ -46,7 +46,7 @@ Dieses Beispiel zeigt, wie Elemente hinzugefügt, abgerufen, aktualisiert und vo
   
  Daher ist nicht garantiert, dass die von <xref:System.Collections.Concurrent.ConcurrentDictionary%602.GetOrAdd%2A> zurückgegebenen Daten die gleichen Daten sind, die von der valueFactory des Threads erstellt wurden. Eine ähnliche Abfolge von Ereignissen kann eintreten, wenn <xref:System.Collections.Concurrent.ConcurrentDictionary%602.AddOrUpdate%2A> aufgerufen wird.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Collections.Concurrent?displayProperty=nameWithType>
 - [Threadsichere Sammlungen](../../../../docs/standard/collections/thread-safe/index.md)

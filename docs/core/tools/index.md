@@ -3,12 +3,12 @@ title: .NET Core-CLI
 titleSuffix: ''
 description: Eine Übersicht über die .NET Core-CLI und ihre Features.
 ms.date: 02/13/2020
-ms.openlocfilehash: d84f96889cabc3fb4521e39db25050aacdd11546
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: 45a40063f70a621e807abf5e01ceecb125aecd7c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78156711"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79397599"
 ---
 # <a name="net-core-cli-overview"></a>Übersicht über die .NET Core-CLI
 
@@ -24,44 +24,44 @@ Die folgenden Befehle werden standardmäßig erstellt:
 
 ### <a name="basic-commands"></a>Grundlegende Befehle
 
-- [new](dotnet-new.md)
-- [restore](dotnet-restore.md)
-- [build](dotnet-build.md)
-- [publish](dotnet-publish.md)
-- [run](dotnet-run.md)
-- [test](dotnet-test.md)
-- [vstest](dotnet-vstest.md)
-- [pack](dotnet-pack.md)
-- [migrate](dotnet-migrate.md)
-- [clean](dotnet-clean.md)
-- [sln](dotnet-sln.md)
-- [help](dotnet-help.md)
-- [store](dotnet-store.md)
+- [`new`](dotnet-new.md)
+- [`restore`](dotnet-restore.md)
+- [`build`](dotnet-build.md)
+- [`publish`](dotnet-publish.md)
+- [`run`](dotnet-run.md)
+- [`test`](dotnet-test.md)
+- [`vstest`](dotnet-vstest.md)
+- [`pack`](dotnet-pack.md)
+- [`migrate`](dotnet-migrate.md)
+- [`clean`](dotnet-clean.md)
+- [`sln`](dotnet-sln.md)
+- [`help`](dotnet-help.md)
+- [`store`](dotnet-store.md)
 
 ### <a name="project-modification-commands"></a>Befehle zur Projektänderung
 
-- [add package](dotnet-add-package.md)
-- [add reference](dotnet-add-reference.md)
-- [remove package](dotnet-remove-package.md)
-- [remove reference](dotnet-remove-reference.md)
-- [list reference](dotnet-list-reference.md)
+- [`add package`](dotnet-add-package.md)
+- [`add reference`](dotnet-add-reference.md)
+- [`remove package`](dotnet-remove-package.md)
+- [`remove reference`](dotnet-remove-reference.md)
+- [`list reference`](dotnet-list-reference.md)
 
 ### <a name="advanced-commands"></a>Erweiterte Befehle
 
-- [nuget delete](dotnet-nuget-delete.md)
-- [nuget locals](dotnet-nuget-locals.md)
-- [nuget push](dotnet-nuget-push.md)
-- [msbuild](dotnet-msbuild.md)
-- [dotnet install script](dotnet-install-script.md)
+- [`nuget delete`](dotnet-nuget-delete.md)
+- [`nuget locals`](dotnet-nuget-locals.md)
+- [`nuget push`](dotnet-nuget-push.md)
+- [`msbuild`](dotnet-msbuild.md)
+- [`dotnet install script`](dotnet-install-script.md)
 
 ### <a name="tool-management-commands"></a>Befehle für die Toolverwaltung
 
-- [tool install](dotnet-tool-install.md)
-- [tool list](dotnet-tool-list.md)
-- [tool update](dotnet-tool-update.md)
-- [tool restore](global-tools.md#install-a-local-tool) **Verfügbar ab .NET Core SDK 3.0**
-- [tool run](global-tools.md#invoke-a-local-tool) **Verfügbar ab .NET Core SDK 3.0**
-- [tool uninstall](dotnet-tool-uninstall.md)
+- [`tool install`](dotnet-tool-install.md)
+- [`tool list`](dotnet-tool-list.md)
+- [`tool update`](dotnet-tool-update.md)
+- [`tool restore`](global-tools.md#install-a-local-tool) Verfügbar ab .NET Core SDK  3.0.
+- [`tool run`](global-tools.md#invoke-a-local-tool) Verfügbar ab .NET Core SDK  3.0.
+- [`tool uninstall`](dotnet-tool-uninstall.md)
 
 Tools sind Konsolenanwendungen, die über NuGet-Pakete installiert und über die Eingabeaufforderung aufgerufen werden. Sie können Tools selbst schreiben oder Drittanbietertools installieren. Tools werden auch als globale Tools, Toolpfadtools und lokale Tools bezeichnet. Weitere Informationen finden Sie unter [Übersicht über .NET Core-Tools](global-tools.md).
 

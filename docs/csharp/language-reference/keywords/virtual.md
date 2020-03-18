@@ -7,19 +7,19 @@ f1_keywords:
 helpviewer_keywords:
 - virtual keyword [C#]
 ms.assetid: 5da9abae-bc1e-434f-8bea-3601b8dcb3b2
-ms.openlocfilehash: 47b77792fd3a2b2700ec0734851fdec534361596
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 883e0a7f833c15d2c1cce6b3d52d16aad01a5cd0
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75712870"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79173457"
 ---
 # <a name="virtual-c-reference"></a>virtual (C#-Referenz)
 
 Das Schlüsselwort `virtual` wird zum Ändern einer Methoden-, Eigenschaften-, Indexer- oder Ereignisdeklaration verwendet, und lässt zu, dass sie in einer abgeleiteten Klasse außer Kraft gesetzt werden. Diese Methode kann z.B. von jeder Klasse, die sie erbt, überschrieben werden:
 
 ```csharp
-public virtual double Area() 
+public virtual double Area()
 {
     return x * y;
 }
@@ -61,7 +61,7 @@ Das folgende Programm berechnet und zeigt den entsprechenden Bereich für jede A
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Polymorphismus](../../programming-guide/classes-and-structs/polymorphism.md)
 - [abstract](abstract.md)

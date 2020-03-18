@@ -3,11 +3,11 @@ title: Versionsverwaltung und .NET-Bibliotheken
 description: Empfehlungen für bewährte Methoden für die Versionsverwaltung für .NET-Bibliotheken.
 ms.date: 12/10/2018
 ms.openlocfilehash: a274410714791e2790da0e3deb2a595390ee9389
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76745030"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79398496"
 ---
 # <a name="versioning"></a>Versionskontrolle
 
@@ -33,7 +33,7 @@ Der NuGet-Paketbezeichner wird in Kombination mit der NuGet-Paket-Version verwen
 
 Da die NuGet-Paketversion für Entwickler die sichtbarste Version ist, ist es eine gute Idee, sie mit der [semantischen Versionierung (SemVer)](https://semver.org/) zu aktualisieren. SemVer zeigt die Bedeutung von Änderungen zwischen den Versionen an und hilft Entwicklern, eine fundierte Entscheidung bei der Auswahl der zu verwendenden Version zu treffen. Wenn Sie beispielsweise von `1.0` auf `2.0` wechseln, zeigt dies an, dass es möglicherweise Änderungen gibt, die den Prozess unterbrechen.
 
-✔️ Erwägen Sie, [SemVer 2.0.0](https://semver.org/) für die Versionskontrolle Ihres NuGet-Pakets zu verwenden.
+✔️ ERWÄGEN Sie, [SemVer 2.0.0](https://semver.org/) für die Versionskontrolle Ihres NuGet-Pakets zu verwenden.
 
 ✔️ Verwenden Sie die NuGet-Paketversion in der öffentlichen Dokumentation, da den Benutzern häufig die Versionsnummer angezeigt wird.
 

@@ -2,12 +2,12 @@
 title: 'Vorgehensweise: Ermitteln der Unterschiedsmenge zwischen zwei Listen (LINQ) (C#)'
 ms.date: 07/20/2015
 ms.assetid: 8e8945f0-4aba-439d-8d5d-c8d1eeef4e71
-ms.openlocfilehash: 227405428a1b418cbe6ceb3d0e3274595307e5ef
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 03fae5451ee395487e73ed7c38d465c3f891e0f7
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75345943"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79169180"
 ---
 # <a name="how-to-find-the-set-difference-between-two-lists-linq-c"></a>Vorgehensweise: Ermitteln der Unterschiedsmenge zwischen zwei Listen (LINQ) (C#)
 In diesem Beispiel wird veranschaulicht, wie Sie mit LINQ zwei Listen mit Zeichenfolgen vergleichen und die Zeilen ausgeben, die in names1.txt, aber nicht in names2.txt enthalten sind.  
@@ -20,7 +20,7 @@ In diesem Beispiel wird veranschaulicht, wie Sie mit LINQ zwei Listen mit Zeiche
   
 ```csharp  
 class CompareLists  
-{          
+{
     static void Main()  
     {  
         // Create the IEnumerable data sources.  
@@ -57,6 +57,6 @@ class CompareLists
 ## <a name="compiling-the-code"></a>Kompilieren des Codes  
  Erstellen Sie ein C#-Konsolenanwendungsprojekt mit `using`-Anweisungen für die Namespaces „System.Linq“ und „System.IO“.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [LINQ und Zeichenfolgen (C#)](./linq-and-strings.md)
+- [LINQ and Strings (C#) (LINQ und Zeichenfolgen (C#))](./linq-and-strings.md)

@@ -4,18 +4,18 @@ description: Informationen zum Unterschied zwischen Delegaten und Ereignissen un
 ms.date: 06/20/2016
 ms.technology: csharp-fundamentals
 ms.assetid: 0fdc8629-2fdb-4a7c-a433-5b9d04eaf911
-ms.openlocfilehash: ff90af1d2b1a92f06eed58228f8e8ca5ff6b93ca
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 04738ac2dd82da9c577e88598d0bb737a93333c1
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73037318"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79146177"
 ---
 # <a name="distinguishing-delegates-and-events"></a>Unterscheidung zwischen Delegaten und Ereignissen
 
-[Vorherige](modern-events.md)
+[Zurück](modern-events.md)
 
-Entwickler, die die .NET Core-Plattform noch nicht kennen, haben oft mit der Entscheidung zwischen einem Entwurf auf der Grundlage von `delegates` und einem Entwurf auf der Grundlage von `events` zu kämpfen. Dies ist ein schwieriges Konzept, da die zwei Sprachfunktionen sehr ähnlich sind. Ereignisse werden sogar mithilfe der Sprachunterstützung für Delegaten erstellt. 
+Entwickler, die die .NET Core-Plattform noch nicht kennen, haben oft mit der Entscheidung zwischen einem Entwurf auf der Grundlage von `delegates` und einem Entwurf auf der Grundlage von `events` zu kämpfen. Dies ist ein schwieriges Konzept, da die zwei Sprachfunktionen sehr ähnlich sind. Ereignisse werden sogar mithilfe der Sprachunterstützung für Delegaten erstellt.
 
 Beide bieten ein Szenario mit später Bindung: Sie ermöglichen Szenarios, in denen eine Komponente durch Aufrufen einer Methode, die nur zur Laufzeit bekannt ist, kommuniziert. Beide Versionen unterstützen einzelne und mehrerer Methoden des Abonnenten. Möglicherweise finden Sie dies unter der Bezeichnung Singlecast- und Multicast-Unterstützung. Beide unterstützen eine ähnliche Syntax zum Hinzufügen und Entfernen von Handlern. Schließlich verwenden das Auslösen eines Ereignisses und das Aufrufen eines Delegaten genau die gleiche Methodensyntax zu Aufrufen. Auch unterstützen beide die gleiche `Invoke()`-Methodensyntax für die Verwendung mit dem `?.`-Operator.
 
@@ -23,7 +23,7 @@ Mit all diesen Ähnlichkeiten ist es einfach nur schwer zu bestimmen, wann welch
 
 ## <a name="listening-to-events-is-optional"></a>Das Überwachen von Ereignissen ist optional
 
-Der wichtigste Aspekt bei der Bestimmung, welche Sprachfunktion verwendet werden soll, ist die Frage, ob ein angefügter Abonnent vorhanden sein muss. Wenn der Code den Code vom Abonnenten aufrufen muss, sollten Sie einen Entwurf basierend auf den Delegaten verwenden. Wenn Ihr Code all seine Arbeit ohne Aufruf von Abonnenten abschließen kann, sollten Sie einen Entwurf auf Grundlage von Ereignissen verwenden. 
+Der wichtigste Aspekt bei der Bestimmung, welche Sprachfunktion verwendet werden soll, ist die Frage, ob ein angefügter Abonnent vorhanden sein muss. Wenn der Code den Code vom Abonnenten aufrufen muss, sollten Sie einen Entwurf basierend auf den Delegaten verwenden. Wenn Ihr Code all seine Arbeit ohne Aufruf von Abonnenten abschließen kann, sollten Sie einen Entwurf auf Grundlage von Ereignissen verwenden.
 
 Betrachten Sie die Beispiele, die während dieses Abschnitts erstellt wurden. Dem Code, den Sie mithilfe von `List.Sort()` erstellt haben, muss eine Vergleichsfunktion gegeben werden, um die Elemente ordnungsgemäß zu sortieren. LINQ-Abfragen müssen mit Delegaten bereitgestellt werden, um zu bestimmen, welche Elemente zurückgeben werden sollen. Beide verwenden einen mit Delegaten erstellten Entwurf.
 
@@ -36,9 +36,9 @@ UX-Steuerelemente funktionieren weiterhin ordnungsgemäß, auch wenn keine Abonn
 
 Ein weiterer Aspekt ist der Methodenprototyp, den Sie für die Delegatmethode haben sollten. Wie Sie gesehen haben, verfügen die für Ereignisse verwendete Delegaten alle über einen void-Rückgabetyp. Sie haben auch gesehen, dass Ausdrücke vorhanden sind, um Ereignishandler zu erstellen, die Informationen durch Ändern der Eigenschaften des Ereignisargumentobjekts zurück an die Ereignisquellen geben. Während diese Ausdrücke funktionieren, sind sie nicht so natürlich wie die Rückgabe eines Werts aus einer Methode.
 
-Beachten Sie, dass häufig diese beiden Heuristiken vorhanden sein können: Wenn die Delegatmethode einen Wert zurückgibt, wirkt sich dies wahrscheinlich auf irgendeine Weise auf den Algorithmus aus.
+Beachten Sie, dass diese zwei Heuristiken häufig beide vorhanden sein können: Wenn Ihre Delegatmethode einen Wert zurückgibt, wird es sich wahrscheinlich in irgendeiner Form auf den Algorithmus auswirken.
 
-## <a name="event-listeners-often-have-longer-lifetimes"></a>Ereignislistener haben häufig eine längere Lebensdauer 
+## <a name="event-listeners-often-have-longer-lifetimes"></a>Ereignislistener haben häufig eine längere Lebensdauer
 
 Dies ist eine etwas schwächere Begründung. Jedoch können Sie feststellen, dass ereignisbasierte Entwürfe natürlicher sind, wenn die Ereignisquelle über einen langen Zeitraum Ereignisse auslösen wird. Sie können Beispiele dafür für UX-Steuerelemente auf vielen Systemen finden. Sobald Sie ein Ereignis abonnieren, kann die Ereignisquelle Ereignisse während der gesamten Lebensdauer des Programms auslösen.
 (Sie können das Abonnement von Ereignissen kündigen, wenn Sie sie nicht mehr benötigen.)

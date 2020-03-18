@@ -9,10 +9,10 @@ helpviewer_keywords:
 - Visual Basic, writing to files
 ms.assetid: ac6fb453-0d6c-4ce4-93b4-1bbcd06de83e
 ms.openlocfilehash: 8511a96c7abcc28997c293a09ef10bad543dc261
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74352140"
 ---
 # <a name="writing-to-files-in-visual-basic"></a>Schreiben in Dateien in Visual Basic
@@ -21,22 +21,22 @@ In diesem Abschnitt wird beschrieben, wie Sie Aufgaben ausführen können, in de
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
 
- [Vorgehensweise: Schreiben von Text in Dateien](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-write-text-to-files.md)  
+ [Gewusst wie: Schreiben von Text in Dateien](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-write-text-to-files.md)  
  Veranschaulicht, wie Sie in Textdateien schreiben können  
   
- [Vorgehensweise: Anfügen an Textdateien](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-append-to-text-files.md)  
+ [Gewusst wie: Anfügen an Textdateien](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-append-to-text-files.md)  
  Veranschaulicht, wie Sie Text an Textdateien anhängen können  
   
- [Vorgehensweise: Schreiben in Binärdateien](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-write-to-binary-files.md)  
+ [Gewusst wie: Schreiben in Binärdateien](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-write-to-binary-files.md)  
  Veranschaulicht, wie Sie in eine Binärdatei schreiben können  
   
- [Vorgehensweise: Schreiben von Text in Dateien im Verzeichnis „Eigene Dokumente“](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-write-text-to-files-in-the-my-documents-directory.md)  
+ [Gewusst wie: Schreiben von Text in Dateien im Verzeichnis „Eigene Dokumente“](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-write-text-to-files-in-the-my-documents-directory.md)  
  Veranschaulicht, wie Sie eine neue Textdatei im Verzeichnis **Eigene Dateien** erstellen und in diese schreiben können  
   
- [Vorgehensweise: Schreiben von Text in Dateien mit StreamWriter](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-write-text-to-files-with-a-streamwriter.md)  
+ [Gewusst wie: Schreiben von Text in Dateien mit einem StreamWriter](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-write-text-to-files-with-a-streamwriter.md)  
  Veranschaulicht, wie Sie mit einem <xref:System.IO.StreamWriter?displayProperty=nameWithType>-Objekt in eine Datei schreiben können  
   
-## <a name="reference"></a>Referenz  
+## <a name="reference"></a>Verweis  
 
  <xref:Microsoft.VisualBasic.FileIO.FileSystem>  
  Beschreibt das `My.Computer.FileSystem`-Objekt und dessen Methoden und Eigenschaften  

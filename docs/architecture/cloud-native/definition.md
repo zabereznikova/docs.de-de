@@ -1,344 +1,344 @@
 ---
 title: Definition von cloudbasiert
-description: Erfahren Sie mehr über die grundlegenden Säulen, die das Fundament für Native cloudsysteme bereitstellen.
+description: Erfahren Sie mehr über die Grundpfeiler, die das Fundament für Cloud-native Systeme bilden
 author: robvet
 ms.date: 08/20/2019
 ms.openlocfilehash: 27191a67b2964ac2e1636a4d7dc55d5314b78439
-ms.sourcegitcommit: 515469828d0f040e01bde01df6b8e4eb43630b06
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78675123"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79401736"
 ---
-# <a name="defining-cloud-native"></a>Definieren von Cloud Native
+# <a name="defining-cloud-native"></a>Definieren der Cloud nativ
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
-Nehmen Sie an, was Sie tun und Text 10 ihrer Kollegen. Bitten Sie ihn, den Begriff "Cloud Native" zu definieren. Gute Wahrscheinlichkeit, dass Sie acht verschiedene Antworten erhalten. Interessanterweise verbessern sich sechs Monate ab jetzt, da sich die cloudbasierten Technologien und Vorgehensweisen auf ihre Definition erst weiterentwickeln.
+Stoppen Sie, was Sie tun, und schreiben Sie 10 Ihrer Kollegen. Bitten Sie sie, den Begriff "Cloud Native" zu definieren. Gute Chance, dass Sie acht verschiedene Antworten erhalten. Interessanterweise werden in sechs Monaten, wenn sich Cloud-native Technologien und -Praktiken weiterentwickeln, auch ihre Definition.
 
-Bei der nativen Cloud geht es um das Ändern der Art und Weise, wie wir wichtige Geschäftssysteme erstellen.
+Bei Cloud Native geht es darum, die Art und Weise zu ändern, wie wir über die Entwicklung kritischer Geschäftssysteme nachdenken.
 
-Cloud-Native Systeme sind für schnelle Änderungen, große Skalierbarkeit und Resilienz konzipiert.
+Cloud-native Systeme wurden entwickelt, um schnelle Veränderungen, große Mengen und Widerstandsfähigkeit zu nutzen.
 
-Die Cloud Native Computing Foundation bietet eine [offizielle Definition](https://github.com/cncf/foundation/blob/master/charter.md):
+Die Cloud Native Computing Foundation bietet eine [offizielle Definition:](https://github.com/cncf/foundation/blob/master/charter.md)
 
-> *Cloudnative Technologien ermöglichen Organisationen das Erstellen und ausführen skalierbarer Anwendungen in modernen, dynamischen Umgebungen wie öffentlichen, privaten und Hybriden Clouds. Diese Vorgehensweise wird durch Container, Service Meshes, microservices, eine unveränderliche Infrastruktur und deklarative APIs veranschaulicht.*
+> *Cloud-native Technologien ermöglichen es Unternehmen, skalierbare Anwendungen in modernen, dynamischen Umgebungen wie öffentlichen, privaten und hybriden Clouds zu erstellen und auszuführen. Container, Dienstnetze, Microservices, unveränderliche Infrastruktur und deklarative APIs veranschaulichen diesen Ansatz.*
 
-> *Diese Techniken ermöglichen lose gekoppelte Systeme, die robust, verwaltbar und observabel sind. In Kombination mit robuster Automatisierung ermöglichen Sie Entwicklern das häufige und vorhersagbare ändern von Änderungen mit minimaler Beeinträchtigung.*
+> *Diese Techniken ermöglichen lose gekoppelte Systeme, die belastbar, überschaubar und beobachtbar sind. In Kombination mit robuster Automatisierung ermöglichen sie es Ingenieuren, häufig und vorhersehbar mit minimaler Arbeit stark wirkende Änderungen vorzunehmen.*
 
-Anwendungen sind immer komplexer geworden, und Benutzer fordern mehr und mehr an. Benutzer erwarten schnelle Reaktionsfähigkeit, innovative Features und keine Ausfallzeiten. Leistungsprobleme, wiederkehrende Fehler und die Unfähigkeit, schnell zu verschieben, sind nicht mehr akzeptabel. Sie können problemlos zu ihrem Mitbewerber wechseln.
+Anwendungen werden immer komplexer, und die Benutzer fordern immer mehr. Benutzer erwarten schnelle Reaktionsfähigkeit, innovative Funktionen und keine Ausfallzeiten. Leistungsprobleme, wiederkehrende Fehler und die Unfähigkeit, sich schnell zu bewegen, sind nicht länger akzeptabel. Sie werden leicht zu Ihrem Konkurrenten bewegen.
 
-Cloud Native ist viel über *Geschwindigkeit* und *Agilität*. Geschäftssysteme werden von der Unterstützung von Geschäftsfunktionen bis hin zu einer strategischen Transformation entwickelt und beschleunigen die Geschäfts Geschwindigkeit und das Wachstum. Es ist zwingend erforderlich, dass Sie sofort Ideen in den Markt bringen.
+Cloud native ist viel über *Geschwindigkeit* und *Agilität*. Geschäftssysteme entwickeln sich von der Ermöglichung von Geschäftsfähigkeiten zu Waffen strategischer Transformation, die geschäftsgeschwindigkeit und Wachstum beschleunigen. Es ist unerlässlich, Ideen sofort auf den Markt zu bringen.
 
-Im folgenden finden Sie einige Unternehmen, die diese Techniken implementiert haben. Berücksichtigen Sie die Geschwindigkeit, Agilität und Skalierbarkeit, die Sie erreicht haben.
+Hier sind einige Unternehmen, die diese Techniken implementiert haben. Denken Sie an die Geschwindigkeit, Agilität und Skalierbarkeit, die sie erreicht haben.
 
 | Company | Benutzererfahrung |
 | :-------- | :-------- |
-| [Stream](https://www.infoq.com/news/2013/06/netflix/) | Umfasst 600 Dienste in der Produktionsumgebung. Wird hundert Mal pro Tag bereitgestellt. |
-| [Räuber](https://eng.uber.com/micro-deploy/) | In der Produktionsumgebung werden 1000 Dienste und Dienste gespeichert. Stellt wöchentlich mehrere tausend Builds bereit. |
-| [WeChat](https://www.cs.columbia.edu/~ruigu/papers/socc18-final100.pdf) | In der Produktionsumgebung sind 300 Dienste und höher. Führt fast 1.000 Änderungen pro Tag aus. |
+| [Netflix](https://www.infoq.com/news/2013/06/netflix/) | Hat mehr als 600 Dienstleistungen in der Produktion. Stellt hundertmal pro Tag bereit. |
+| [Uber](https://eng.uber.com/micro-deploy/) | Hat mehr als 1.000 Dienstleistungen in der Produktion gespeichert. Stellt mehrere tausend Builds pro Woche bereit. |
+| [WeChat](https://www.cs.columbia.edu/~ruigu/papers/socc18-final100.pdf) | Hat mehr als 300 Dienstleistungen in der Produktion. Macht fast 1.000 Änderungen pro Tag. |
 
-Wie Sie sehen, machen Netflix, uber und WeChat Systeme verfügbar, die aus Hunderten von unabhängigen mikrodiensten bestehen. Dieser Architekturstil ermöglicht es Ihnen, schnell auf Marktbedingungen zu reagieren. Sie können kleine Bereiche einer aktiven, komplexen Anwendung sofort aktualisieren und diese Bereiche bei Bedarf einzeln skalieren.
+Wie Sie sehen können, zeigen Netflix, Uber und WeChat Systeme, die aus Hunderten von unabhängigen Microservices bestehen. Dieser architektonische Stil ermöglicht es ihnen, schnell auf die Marktbedingungen zu reagieren. Sie können kleine Bereiche einer live, komplexen Anwendung sofort aktualisieren und diese Bereiche nach Bedarf individuell skalieren.
 
-Die Geschwindigkeit und Agilität von Cloud Native ist von einer Reihe von Faktoren abhängig. Vor allem ist die cloudinfrastruktur Fünf weitere grundlegende Säulen, die in Abbildung 1-3 dargestellt werden, stellen auch das Fundament für Native cloudsysteme dar.
+Die Geschwindigkeit und Agilität von Cloud Native ist auf eine Reihe von Faktoren zurückzuführen. An erster Stelle steht die Cloud-Infrastruktur. Fünf weitere Grundpfeiler, die in Abbildung 1-3 dargestellt sind, bilden auch das Fundament für Cloud-native Systeme.
 
-![In der Cloud Native grundlegende Säulen](./media/cloud-native-foundational-pillars.png)
+![Cloud-native Grundsäulen](./media/cloud-native-foundational-pillars.png)
 
-**Abbildung 1–3**. In der Cloud Native grundlegende Säulen
+**Abbildung 1-3**. Cloud-native Grundsäulen
 
-Nehmen wir etwas Zeit, um die Bedeutung der einzelnen Säulen besser zu verstehen.
+Nehmen wir uns etwas Zeit, um die Bedeutung der einzelnen Pfeiler besser zu verstehen.
 
-## <a name="the-cloud"></a>Die Cloud...
+## <a name="the-cloud"></a>Die Wolke...
 
-Cloud-Native Systeme nutzen das clouddienstmodell vollständig.
+Cloud-native Systeme nutzen das Cloud-Service-Modell voll aus.
 
-Diese Systeme sind so konzipiert, dass Sie in einer dynamischen, virtualisierten cloudumgebung eingesetzt werden, indem Sie die Compute-Infrastruktur von [Platform-as-a-Service (PAS)](https://azure.microsoft.com/overview/what-is-paas/) und verwaltete Dienste umfassend nutzen Die zugrunde liegende Infrastruktur wird in wenigen *Minuten als in* wenigen Minuten bereitgestellt und in der Größe geändert, skaliert, verschoben oder zerstört – über Automation.
+Diese Systeme wurden entwickelt, um in einer dynamischen, virtualisierten Cloud-Umgebung zu gedeihen, und nutzen [die Platform as a Service (PaaS)-Computeinfrastruktur](https://azure.microsoft.com/overview/what-is-paas/) und Managed Services umfassend. Sie behandeln die zugrunde liegende Infrastruktur als *Einweg* - in Wenigen Minuten bereitgestellt und in der Größe angepasst, skaliert, bewegt oder bei Bedarf zerstört - über Automatisierung.
 
-Sehen Sie sich das weithin akzeptierte devops-Konzept von [Haustieren und Rindern](https://medium.com/@Joachim8675309/devops-concepts-pets-vs-cattle-2380b5aab313)an. In einem herkömmlichen Rechenzentrum werden Server als *Haustiere*behandelt: ein physischer Computer, bei dem ein sinnvoller Name angegeben ist und der behandelt wird. Skalieren Sie durch Hinzufügen von weiteren Ressourcen zum gleichen Computer (zentrales hochskalieren). Wenn der Server krank wird, können Sie ihn wieder in die Integrität unter Rücken. Wenn der Server nicht mehr verfügbar ist, wird jeder bemerkt.
+Betrachten Sie das weithin akzeptierte DevOps-Konzept von [Pets vs. Cattle](https://medium.com/@Joachim8675309/devops-concepts-pets-vs-cattle-2380b5aab313). In einem herkömmlichen Rechenzentrum werden Server wie *Haustiere*behandelt: eine physische Maschine, die einen aussagekräftigen Namen erhält und gepflegt wird. Sie skalieren, indem Sie dem gleichen Computer weitere Ressourcen hinzufügen (skalieren). Wenn der Server krank wird, pflegen Sie ihn wieder gesund. Sollte der Server nicht mehr verfügbar sein, merkt es jeder.
 
-Das *Rinder* Dienstmodell unterscheidet sich. Sie stellen jede Instanz als einen virtuellen Computer oder Container bereit. Sie sind identisch und haben einen System Bezeichner wie Service-01, Service-02 usw. zugewiesen. Skalieren Sie, indem Sie mehr von Ihnen erstellen (horizontal hochskalieren). Wenn eine solche nicht verfügbar ist, wird niemand bemerkt.
+Das *Rinderservicemodell* ist anders. Sie stellen jede Instanz als virtuelle Maschine oder Container zur Verfügung. Sie sind identisch und haben eine Systemkennung wie Service-01, Service-02 usw. zugewiesen. Sie skalieren, indem Sie mehr davon erstellen (horizontal ausskalieren). Wenn man nicht mehr verfügbar ist, merkt es niemand.
 
-Das Rinder Modell umfasst eine *unveränderliche Infrastruktur*. Server werden nicht repariert oder geändert. Wenn ein Fehler auftritt oder aktualisiert werden muss, wird er zerstört und eine neue bereitgestellt – alles über Automation.
+Das Rindermodell umfasst *eine unveränderliche Infrastruktur.* Server werden nicht repariert oder geändert. Wenn einer ausfällt oder aktualisiert werden muss, wird es zerstört und ein neues bereitgestellt – alles über Automatisierung.
 
-Cloud-Native Systeme nehmen das Vieh Dienstmodell in Betrieb. Sie werden weiterhin ausgeführt, wenn die Infrastruktur in Bezug auf die Computer, auf denen Sie ausgeführt werden, horizontal hoch-oder herunterskaliert wird.
+Cloud-native Systeme umfassen das Cattle-Servicemodell. Sie laufen weiterhin, wenn die Infrastruktur ohne Rücksicht auf die Maschinen, auf denen sie ausgeführt werden, skaliert wird.
 
-Die Azure-cloudplattform unterstützt diese Art von hochelastischer Infrastruktur mit automatischer Skalierung, Selbstreparatur und Überwachungsfunktionen.
+Die Azure Cloud-Plattform unterstützt diese Art hochelastischer Infrastruktur mit automatischen Skalierungs-, Selbstheilungs- und Überwachungsfunktionen.
 
 ## <a name="modern-design"></a>Modernes Design
 
-Wie würden Sie eine Cloud-Native App entwerfen? Wie sieht Ihre Architektur aus? Welchen Prinzipien, Mustern und bewährten Methoden entsprechen Sie? Welche Infrastruktur und welche betrieblichen Probleme sind wichtig?
+Wie würden Sie eine Cloud-native App entwerfen? Wie würde Ihre Architektur aussehen? An welche Grundsätze, Muster und Best Practices würden Sie sich halten? Welche Infrastruktur- und Betriebsbedenken wären wichtig?
 
-### <a name="the-twelve-factor-application"></a>Die zwölfstufige Anwendung
+### <a name="the-twelve-factor-application"></a>Die Zwölf-Faktor-Anwendung
 
-Eine weit verbreitete Methode zum Erstellen von cloudbasierten Anwendungen ist die [zwölfstufige Anwendung](https://12factor.net/). Es beschreibt eine Reihe von Prinzipien und Vorgehensweisen, die Entwickler befolgen, um Anwendungen zu erstellen, die für moderne cloudumgebungen optimiert sind. Besondere Aufmerksamkeit ist für die Portabilität in Umgebungen und deklarative Automatisierung.
+Eine weithin akzeptierte Methode zum Erstellen cloudbasierter Anwendungen ist die [Zwölf-Faktor-Anwendung](https://12factor.net/). Es beschreibt eine Reihe von Prinzipien und Vorgehensweisen, die Entwickler befolgen, um Anwendungen zu erstellen, die für moderne Cloud-Umgebungen optimiert sind. Besonderes Augenmerk wird auf die Portabilität über Umgebungen und deklarative Automatisierung.
 
-Wenngleich auf webbasierte Anwendungen anwendbar ist, werden Sie von vielen Praktikern als eine solide Grundlage für die Entwicklung von cloudbasierten apps betrachtet. Systeme, die auf diesen Prinzipien basieren, können schnell bereitstellen und skalieren und Features hinzufügen, um schnell auf Markt Änderungen zu reagieren.
+Obwohl sie für jede webbasierte Anwendung anwendbar ist, betrachten viele Praktiker sie als solide Grundlage für die Erstellung cloud-nativer Apps. Systeme, die auf diesen Prinzipien aufbauen, können schnell bereitgestellt und skaliert werden und Funktionen hinzufügen, um schnell auf Marktänderungen reagieren zu können.
 
-In der folgenden Tabelle wird die zwölfstufige Methodik hervorgehoben:
+Die folgende Tabelle hebt die Zwölf-Faktor-Methodik hervor:
 
 |    |  Faktor | Erklärung  |
 | :-------- | :-------- | :-------- |
-| 1 | Codebasis | Eine einzelne Codebasis für jeden in einem eigenen Repository gespeicherten mikrodienst. Die Nachverfolgung mit der Versionskontrolle kann in mehreren Umgebungen (QA, Staging, Produktion) bereitgestellt werden. |
-| 2 | Abhängigkeiten | Jeder-mikrodienst isoliert und packt seine eigenen Abhängigkeiten und übernimmt Änderungen, ohne dass sich dies auf das gesamte System auswirkt. |
-| 3 | Configurations  | Konfigurationsinformationen werden aus dem-Unternehmens Dienst verschoben und durch ein Konfigurations Verwaltungs Tool außerhalb des Codes extern ausgelagert. Dieselbe Bereitstellung kann über Umgebungen hinweg verteilt werden, auf die die korrekte Konfiguration angewendet wird.  |
-| 4 | Sichern von Diensten | Hilfdressourcen (Datenspeicher, Caches, Nachrichten Broker) sollten über eine adressierbare URL verfügbar gemacht werden. Dadurch wird die Ressource von der Anwendung entkoppelt, sodass Sie austauschbar ist.  |
-| 5 | Build, Release, Run | Jede Version muss eine strikte Trennung in den Build-, Release-und Lauf Phasen erzwingen. Jede sollte mit einer eindeutigen ID gekennzeichnet werden und die Möglichkeit des Rollbacks unterstützen. Moderne CI/CD-Systeme helfen dabei, dieses Prinzip zu erfüllen. |
-| 6 | Prozesse | Jeder-mikrodienst sollte in einem eigenen Prozess ausgeführt werden, isoliert von anderen ausgelaufenden Diensten. Externalisieren Sie den erforderlichen Zustand zu einem Sicherungsdienst, z. b. einem verteilten Cache oder einem Datenspeicher. |
-| 7 | Portbindung | Jeder-mikrodienst sollte eigenständig sein und seine Schnittstellen und Funktionen, die auf seinem eigenen Port verfügbar gemacht werden. Dadurch wird die Isolation von anderen-Diensten ermöglicht. |
-| 8 | Parallelität | Dienste können über eine große Anzahl von kleinen identischen Prozessen (Kopien) horizontal hochskaliert werden, anstatt eine einzelne große Instanz auf dem leistungsstärksten verfügbaren Computer zentral hochzuskalieren. |
-| 9 | Disposability | Dienst Instanzen sollten verworfen werden können, um schnelle Startups zu verbessern, um Skalierbarkeits Chancen und ordnungsgemäße Herunterfahr Vorgänge zu verbessern, um das System in einem korrekten Zustand zu belassen Docker-Container zusammen mit einem Orchestrator erfüllen diese Anforderung von Natur aus. |
-| 10 | Dev/Prod-Parität | Sorgen Sie dafür, dass Umgebungen im gesamten Anwendungslebenszyklus so ähnlich wie möglich sind Hier kann die Übernahme von Containern durch herauf Stufen derselben Ausführungsumgebung erheblich beitragen. |
-| 11 | Protokollierung | Behandeln Sie von-Webdiensten generierte Protokolle als Ereignisdaten Ströme. Verarbeiten Sie Sie mit einem Ereignisaggregator, und übertragen Sie die Daten an Data Mining/Log-Verwaltungs Tools wie Azure Monitor oder Splunk und schließlich über eine langfristige Archivierung. |
-| 12 | Verwaltungsprozesse | Ausführen von Verwaltungs-und Verwaltungsaufgaben als einmalige Prozesse. Tasks können Datencleanup und Pull Analytics für einen Bericht einschließen. Tools, die diese Aufgaben ausführen, sollten aus der Produktionsumgebung, aber getrennt von der Anwendung aufgerufen werden. |
+| 1 | Codebasis | Eine einzige Codebasis für jeden Microservice, die in einem eigenen Repository gespeichert ist. Nachverfolgt mit Versionskontrolle kann es in mehreren Umgebungen (QA, Staging, Production) bereitgestellt werden. |
+| 2 | Abhängigkeiten | Jeder Microservice isoliert und verpackt seine eigenen Abhängigkeiten, wobei Änderungen berücksichtigt werden, ohne das gesamte System zu beeinträchtigen. |
+| 3 | Configurations  | Konfigurationsinformationen werden aus dem Microservice verschoben und über ein Konfigurationsverwaltungstool außerhalb des Codes externisiert. Dieselbe Bereitstellung kann sich über Umgebungen hinweg ausbreiten, wobei die richtige Konfiguration angewendet wird.  |
+| 4 | Backing Services | Zusätzliche Ressourcen (Datenspeicher, Caches, Nachrichtenbroker) sollten über eine adressierbare URL verfügbar gemacht werden. Dadurch wird die Ressource von der Anwendung entkoppelt, sodass sie austauschbar ist.  |
+| 5 | Erstellen, Freigeben, Ausführen | Jede Version muss eine strikte Trennung über die Build-, Release- und Ausführungsphasen erzwingen. Jeder sollte mit einer eindeutigen ID markiert werden und die Möglichkeit zum Rollback unterstützen. Moderne CI/CD-Systeme helfen dabei, dieses Prinzip zu erfüllen. |
+| 6 | Prozesse | Jeder Microservice sollte in seinem eigenen Prozess ausgeführt werden, isoliert von anderen ausgeführten Diensten. Externalisieren Des erforderlichen Status für einen Sicherungsdienst, z. B. einen verteilten Cache oder Datenspeicher. |
+| 7 | Portbindung | Jeder Microservice sollte mit seinen Schnittstellen und Funktionen, die auf einem eigenen Port verfügbar gemacht werden, in sich geschlossen sein. Dies ermöglicht die Isolierung von anderen Microservices. |
+| 8 | Parallelität | Die Dienste werden über eine große Anzahl kleiner identischer Prozesse (Kopien) skaliert, anstatt eine einzelne große Instanz auf dem leistungsstärksten verfügbaren Computer zu skalieren. |
+| 9 | Verfügbarkeit | Dienstinstanzen sollten verfügbar sein, schnelle Startmöglichkeiten bevorzugen, um Skalierbarkeitsmöglichkeiten zu erhöhen, und ordnungsgemäße Herunterfahren, um das System in einem korrekten Zustand zu belassen. Docker-Container zusammen mit einem Orchestrator erfüllen diese Anforderung inhärent. |
+| 10 | Dev/Prod Parität | Halten Sie Umgebungen über den gesamten Anwendungslebenszyklus hinweg so ähnlich wie möglich, um kostspielige Verknüpfungen zu vermeiden. Hier kann die Einführung von Containern durch die Förderung der gleichen Ausführungsumgebung einen großen Beitrag leisten. |
+| 11 | Protokollierung | Behandeln Sie Protokolle, die von Microservices generiert werden, als Ereignisstreams. Verarbeiten Sie sie mit einem Ereignisaggregator, und übertragen Sie die Daten an Data-Mining-/Log-Verwaltungstools wie Azure Monitor oder Splunk und schließlich an langfristige Archivierung. |
+| 12 | Admin-Prozesse | Führen Sie Verwaltungs-/Verwaltungsaufgaben als einmalige Prozesse aus. Zu den Aufgaben können die Datenbereinigung und das Abrufen von Analysen für einen Bericht gehören. Tools, die diese Aufgaben ausführen, sollten aus der Produktionsumgebung aufgerufen werden, jedoch getrennt von der Anwendung. |
 
-Im Buch [über die zwölfstufige App hinaus](https://content.pivotal.io/blog/beyond-the-twelve-factor-app)erläutert Autor Kevin Hoffman jeden der ursprünglichen 12 Faktoren (geschrieben in 2011). Außerdem bietet das Buch drei weitere Faktoren, die den heutigen modernen cloudanwendungsentwurf widerspiegeln.
+In dem Buch [Beyond the Twelve-Factor App](https://content.pivotal.io/blog/beyond-the-twelve-factor-app)beschreibt Autor Kevin Hoffman jeden der ursprünglichen 12 Faktoren (geschrieben 2011). Darüber hinaus bietet das Buch drei weitere Faktoren, die das moderne Cloud-Anwendungsdesign von heute widerspiegeln.
 
 |    |  Neuer Faktor | Erklärung  |
 | :-------- | :-------- | :-------- |
-| 13 | Erste API | Machen Sie alles als Dienst. Nehmen Sie an, dass Ihr Code von einem Front-End-Client,-Gateway oder einem anderen Dienst verwendet wird. |
-| 14 | Telemetrie | Auf einer Arbeitsstation haben Sie umfassende Einblicke in Ihre Anwendung und ihr Verhalten. In der Cloud ist das nicht der einzige. Stellen Sie sicher, dass Ihr Entwurf die Erfassung von Überwachungs-, domänenspezifischen und Integritäts-/Systemdaten umfasst. |
-| 15 | Authentifizierung/Autorisierung  | Implementieren Sie die Identität von Anfang an. Beachten Sie die [RBAC-Features (rollenbasierte Zugriffs Steuerung)](https://docs.microsoft.com/azure/role-based-access-control/overview) , die in öffentlichen Clouds verfügbar sind.  |
+| 13 | API First | Machen Sie alles zu einem Service. Angenommen, Ihr Code wird von einem Front-End-Client, Gateway oder einem anderen Dienst verwendet. |
+| 14 | Telemetrie | Auf einer Arbeitsstation haben Sie einen tiefen Einblick in Ihre Anwendung und ihr Verhalten. In der Cloud nicht. Stellen Sie sicher, dass Ihr Entwurf die Sammlung von Überwachungs-, domänenspezifischen und Integritäts-/Systemdaten umfasst. |
+| 15 | Authentifizierung/Autorisierung  | Implementieren Sie die Identität von Anfang an. Betrachten Sie [RBAC-Funktionen (role-based Access Control),](https://docs.microsoft.com/azure/role-based-access-control/overview) die in öffentlichen Clouds verfügbar sind.  |
 
-Wir verweisen auf viele der 12 +-Faktoren in diesem Kapitel und im Buch.
+Wir werden auf viele der 12+ Faktoren in diesem Kapitel und im gesamten Buch verweisen.
 
-### <a name="critical-design-considerations"></a>Wichtige Überlegungen zum Entwurf
+### <a name="critical-design-considerations"></a>Kritische Entwurfsüberlegungen
 
-Neben den Anleitungen der zwölfstufigen Methodik gibt es einige wichtige Entwurfsentscheidungen, die Sie beim Erstellen verteilter Systeme treffen müssen.
+Abgesehen von den Anleitungen aus der Zwölf-Faktor-Methodik gibt es mehrere wichtige Entwurfsentscheidungen, die Sie beim Erstellen verteilter Systeme treffen müssen.
 
-*Communication*
+*Kommunikation*
 
-Wie werden Front-End-Client Anwendungen mit gesicherten End-Kerndiensten kommunizieren? Wird die direkte Kommunikation zugelassen? Oder können Sie die Back-End-Dienste mit einer gatewayfassade abstrahieren, die Flexibilität, Kontrolle und Sicherheit bietet?
+Wie kommunizieren Front-End-Clientanwendungen mit Unterstützten Kerndiensten? Werden Sie eine direkte Kommunikation zulassen? Oder können Sie die Back-End-Dienste mit einer Gateway-Fassade abstrahieren, die Flexibilität, Kontrolle und Sicherheit bietet?
 
-Wie werden Back-End-Kerndienste miteinander kommunizieren? Können Sie direkte http-Aufrufe zulassen, die zu einer Kopplung führen und die Leistung und Agilität beeinträchtigen? Oder sollten Sie entkoppelte Messaging mit Warteschlangen-und Themen Technologien in Erwägung gezogen haben?
+Wie kommunizieren Back-End-Kerndienste miteinander? Werden Sie direkte HTTP-Aufrufe zulassen, die zu Kopplung und Auswirkungen auf Leistung und Agilität führen? Oder sollten Sie die Entkoppere von Messaging mit Warteschlangen- und Thementechnologien in Betracht ziehen?
 
-Die Kommunikation wird im Detail Kapitel 4, in der *Cloud Native Kommunikationsmuster*behandelt.
+Die Kommunikation wird ausführlich behandelt Kapitel 4, *Cloud-Native Communication Patterns*.
 
-*Resilienz*
+*Ausfallsicherheit*
 
-Eine microservices-Architektur verlagert das System von der Prozess internen in die Netzwerkkommunikation. Was tun Sie in einer verteilten Umgebung, wenn Dienst B nicht auf einen Dienst von Dienst a antwortet? Was geschieht, wenn der Dienst C vorübergehend nicht verfügbar ist und andere Dienste ihn aufrufen und die Systemleistung beeinträchtigen?
+Eine Microservices-Architektur verschiebt Ihr System von der in-Process- zur Netzwerkkommunikation. Was tun Sie in einer verteilten Umgebung, wenn Dienst B nicht auf einen Anruf von Dienst A reagiert? Was geschieht, wenn Dienst C vorübergehend nicht mehr verfügbar ist und andere Dienste, die ihn aufrufen, stacken und die Systemleistung beeinträchtigen?
 
-Die Resilienz wird im Detail Kapitel 6, *Cloud-Native Resilienz*behandelt.
+Die Resilienz wird im Detail behandelt Kapitel 6, *Cloud-Native Resiliency*.
 
 *Verteilte Daten*
 
-In der Entwurfs Umgebung kapselt jeder microservice seine eigenen Daten, wodurch Vorgänge über seine öffentliche Schnittstelle verfügbar gemacht werden. Wenn dies der Fall ist, wie können Sie Daten Abfragen oder eine Transaktion über mehrere Dienste hinweg implementieren?
+Jeder Microservice kapselt seine eigenen Daten und stellt Vorgänge über seine öffentliche Schnittstelle frei. Wenn ja, wie können Sie Daten abfragen oder eine Transaktion über mehrere Dienste hinweg implementieren?
 
-Verteilte Daten werden in Kapitel 5, in der *Cloud Native Datenmuster*, ausführlich behandelt.
+Verteilte Daten werden im Detail behandelt Kapitel 5, *Cloud-Native Data Patterns*.
 
 *Identität*
 
-Wie wird Ihr Dienst ermitteln, wer auf ihn zugreift und welche Berechtigungen er hat?
+Wie wird Ihr Dienst ermitteln, wer darauf zugreift und über welche Berechtigungen er verfügt?
 
-Die Identität wird im Detail Kapitel 8, *Identity*, behandelt.
+Die Identität wird im Detail behandelt Kapitel 8, *Identität*.
 
 ## <a name="microservices"></a>Microservices
 
-In der Cloud Native Systeme sind für die Erstellung moderner Anwendungen ein beliebter Architekturstil zum Erstellen moderner Anwendungen.
+Cloud-native Systeme umfassen Microservices, einen beliebten Architekturstil für die Erstellung moderner Anwendungen.
 
-Bei der Erstellung eines verteilten Satzes von kleinen, unabhängigen Diensten, die über ein gemeinsam genutztes Fabric interagieren, verfügen die folgenden Eigenschaften über die folgenden Eigenschaften:
+Microservices wurden als verteilter Satz kleiner, unabhängiger Dienste entwickelt, die über eine gemeinsam genutzte Fabric interagieren, und haben die folgenden Merkmale:
 
-- Jede implementiert eine bestimmte Geschäftsfunktion innerhalb eines größeren Domänen Kontexts.
+- Jeder implementiert eine bestimmte Geschäftsfunktion in einem größeren Domänenkontext.
 
-- Jede wird autonom entwickelt und kann unabhängig bereitgestellt werden.
+- Jeder wird autonom entwickelt und kann unabhängig voneinander eingesetzt werden.
 
-- Jede ist eigenständig und umfasst eine eigene Daten Speicherungs Technologie (SQL, nosql) und eine Programmierplattform.
+- Jedes ist in sich geschlossen und kapselt seine eigene Datenspeichertechnologie (SQL, NoSQL) und Programmierplattform.
 
-- Jede wird in einem eigenen Prozess ausgeführt und kommuniziert über Standard Kommunikationsprotokolle wie http/https, websockets oder [AMQP](https://en.wikipedia.org/wiki/Advanced_Message_Queuing_Protocol)mit anderen.
+- Jeder wird in einem eigenen Prozess ausgeführt und kommuniziert mit anderen über Standardkommunikationsprotokolle wie HTTP/HTTPS, WebSockets oder [AMQP](https://en.wikipedia.org/wiki/Advanced_Message_Queuing_Protocol).
 
-- Sie werden zusammengeführt, um eine Anwendung zu bilden.
+- Sie komponieren zusammen, um eine Anwendung zu bilden.
 
-In Abbildung 1-4 wird der Ansatz einer monolithischen Anwendung mit einem microservices-Ansatz gegen überstehen. Beachten Sie, dass die monolithische Struktur aus einer geschichteten Architektur besteht, die in einem einzelnen Prozess ausgeführt wird. Normalerweise wird eine relationale Datenbank verwendet. Der microservice-Ansatz trennt jedoch die Funktionalität in unabhängige Dienste, die Logik und Daten enthalten. Jeder-mikrodienst hostet seinen eigenen Datenspeicher.
+Abbildung 1-4 kontrastiert einen monolithischen Anwendungsansatz mit einem Microservices-Ansatz. Beachten Sie, wie der Monolith aus einer mehrschichtigen Architektur besteht, die in einem einzigen Prozess ausgeführt wird. In der Regel wird eine relationale Datenbank verwendet. Der Microservice-Ansatz unterteilt jedoch Die Funktionalität in unabhängige Dienste, die Logik und Daten enthalten. Jeder Microservice hostet einen eigenen Datenspeicher.
 
-![Monolithische Bereitstellung im Vergleich zu mikroservices](./media/monolithic-vs-microservices.png)
+![Monolithische Bereitstellung im Vergleich zu Microservices](./media/monolithic-vs-microservices.png)
 
-**Abbildung 1-4.** Monolithische Bereitstellung im Vergleich zu mikroservices
+**Abbildung 1-4.** Monolithische Bereitstellung im Vergleich zu Microservices
 
-Beachten Sie, wie von den-und-Diensten das "One CodeBase, ONE Application"-Prinzip aus der [zwölfstufigen Anwendung](https://12factor.net/)herauf gestuft wird, das weiter oben im Kapitel erläutert wurde.
+Beachten Sie, wie Microservices das Prinzip "One Codebase, One Application" aus der [Zwölf-Faktor-Anwendung](https://12factor.net/)fördern, die weiter oben im Kapitel besprochen wurde.
 
-> *Der Faktor \#1 gibt "eine einzelne Codebasis für jeden in einem eigenen Repository gespeicherten mikrodienst an. Mit der Versionskontrolle nachverfolgt, kann es in mehreren Umgebungen bereitgestellt werden. "*
+> *Faktor \#1 gibt "Eine einzelne Codebasis für jeden Microservice an, der in einem eigenen Repository gespeichert ist. Mit Versionskontrolle verfolgt, kann es in mehreren Umgebungen bereitgestellt werden."*
 
 ### <a name="why-microservices"></a>Gründe für die Verwendung von Microservices
 
-Mit der-Dienst Flexibilität können Sie Agilität
+Microservices bieten Agilität.
 
-An früherer Stelle in diesem Kapitel haben wir eine eCommerce-Anwendung, die als monolithische Anwendung erstellt wurde, mit den-Diensten verglichen. In diesem Beispiel haben wir einige deutliche Vorteile gesehen:
+Früher im Kapitel haben wir eine eCommerce-Anwendung, die als Monolith erstellt wurde, mit Microservices verglichen. Im Beispiel haben wir einige klare Vorteile gesehen:
 
-- Jeder-Dienst verfügt über einen autonomen Lebenszyklus und kann unabhängig voneinander entwickelt und häufig bereitgestellt werden. Sie müssen nicht auf eine vierteljährliche Version warten, um neue Features oder Updates bereitzustellen. Sie können einen kleinen Bereich einer komplexen Anwendung aktualisieren, wobei das Risiko verringert wird, das gesamte System zu stören.
+- Jeder Microservice verfügt über einen autonomen Lebenszyklus und kann sich unabhängig entwickeln und häufig bereitstellen. Sie müssen nicht auf eine vierteljährliche Version warten, um neue Features oder Updates bereitzustellen. Sie können einen kleinen Bereich einer komplexen Anwendung aktualisieren, ohne das Risiko, das gesamte System zu stören.
 
-- Jeder-mikrodienst kann unabhängig voneinander skaliert werden. Anstatt die gesamte Anwendung als einzelne Einheit zu skalieren, Skalieren Sie nur die Dienste hoch, die eine höhere Verarbeitungsleistung oder Netzwerkbandbreite erfordern. Diese differenzierte Skalierungs Methode bietet eine bessere Kontrolle über Ihr System und hilft, die Gesamtkosten zu reduzieren, wenn Sie Teile Ihres Systems skalieren und nicht alles.
+- Jeder Microservice kann unabhängig skaliert werden. Anstatt die gesamte Anwendung als eine Einheit zu skalieren, skalieren Sie nur die Dienste, die mehr Rechenleistung oder Netzwerkbandbreite benötigen. Dieser feinkörnige Skalierungsansatz ermöglicht eine bessere Kontrolle Ihres Systems und trägt dazu bei, die Gesamtkosten zu senken, wenn Sie Teile Ihres Systems skalieren, nicht alles.
 
-Eine hervorragende Referenzanleitung zum Verständnis von microservices sind [.net-microservices: Architektur für .NET-Container Anwendungen](https://docs.microsoft.com/dotnet/standard/microservices-architecture/). Das Buch geht tief in microservices Design und Architektur über. Es ist eine Ergänzung für eine [vollständige microservice-Referenzarchitektur](https://github.com/dotnet-architecture/eShopOnContainers) , die als kostenloser Download von Microsoft zur Verfügung steht.
+Ein ausgezeichneter Referenzleitfaden für das Verständnis von Microservices ist [.NET Microservices: Architecture for Containerized .NET Applications](https://docs.microsoft.com/dotnet/standard/microservices-architecture/). Das Buch taucht tief in Microservices Design und Architektur ein. Es ist ein Begleiter für eine [Full-Stack-Microservice-Referenzarchitektur,](https://github.com/dotnet-architecture/eShopOnContainers) die als kostenloser Download von Microsoft zur Verfügung steht.
 
-### <a name="developing-microservices"></a>Entwickeln von mikroservices
+### <a name="developing-microservices"></a>Entwicklung von Microservices
 
-Sie können mit jeder modernen Entwicklungsplattform erstellt werden.
+Microservices können mit jeder modernen Entwicklungsplattform erstellt werden.
 
-Die Microsoft .net Core-Plattform ist eine hervorragende Wahl. Kostenlos und Open Source verfügt über viele integrierte Features zur Vereinfachung der Entwicklung von Webdiensten. .Net Core ist plattformübergreifend. Anwendungen können unter Windows, macOS und den meisten Linux-Versionen erstellt und ausgeführt werden.
+Die Microsoft .NET Core-Plattform ist eine ausgezeichnete Wahl. Frei und Open Source, hat es viele integrierte Funktionen, um die Entwicklung von Microservice zu vereinfachen. .NET Core ist plattformübergreifend. Anwendungen können unter Windows, macOS und den meisten Linux-Varianten erstellt und ausgeführt werden.
 
-.Net Core ist äußerst leistungsfähig und wurde im Vergleich zu Node. js und anderen konkurrierenden Plattformen gut bewertet. Interessanterweise hat [techperformance](https://www.techempower.com/) einen umfangreichen Satz von [Leistungs Benchmarks](https://www.techempower.com/benchmarks/#section=data-r17&hw=ph&test=plaintext) für viele Webanwendungs Plattformen und-Frameworks durchgeführt. .Net Core wurde in den ersten 10 über Node. js und anderen konkurrierenden Plattformen bewertet.
+.NET Core ist sehr leistungsstark und hat im Vergleich zu Node.js und anderen konkurrierenden Plattformen gut abgeschnitten. Interessanterweise führte [TechEmpower](https://www.techempower.com/) eine umfangreiche Reihe von [Performance-Benchmarks](https://www.techempower.com/benchmarks/#section=data-r17&hw=ph&test=plaintext) auf vielen Webanwendungsplattformen und Frameworks durch. .NET Core punktete in den Top 10 - deutlich über Node.js und anderen konkurrierenden Plattformen.
 
-.Net Core wird von Microsoft und der .net-Community auf GitHub verwaltet.
+.NET Core wird von Microsoft und der .NET-Community auf GitHub verwaltet.
 
 ## <a name="containers"></a>Container
 
-Heutzutage ist es natürlich, dass der Begriff *Container* zu hören ist, der in einer beliebigen Konversation in Bezug auf die *Cloud Native* Im Buch " [Cloud Native Patterns](https://www.manning.com/books/cloud-native-patterns)" wird der Autor Cornelia Davis feststellen, dass "Container eine gute Lösung für cloudnative Software" sind. Die Cloud Native Computing Foundation stellt die microservice-Containerisierung als ersten Schritt in Ihre [cloudnative Pfad](https://raw.githubusercontent.com/cncf/trailmap/master/CNCF_TrailMap_latest.png) Zuordnung dar und Unternehmen, die mit ihrer cloudbasierten Migration beginnen.
+Heutzutage ist es natürlich, den Begriff *Container* in jedem Gespräch über *Cloud native*erwähnt zu hören. In dem Buch [Cloud Native Patterns](https://www.manning.com/books/cloud-native-patterns)bemerkt Autorin Cornelia Davis: "Container sind ein großartiger Ermöglicher cloudnativer Software." Die Cloud Native Computing Foundation stellt die Microservice-Containerisierung als ersten Schritt in ihrer [Cloud-Native Trail Map](https://raw.githubusercontent.com/cncf/trailmap/master/CNCF_TrailMap_latest.png) - Anleitung für Unternehmen, die ihre Cloud-native Reise beginnen.
 
-Das containerialisieren eines microservice ist einfach und unkompliziert. Der Code, seine Abhängigkeiten und die Laufzeit werden in eine Binärdatei gepackt, die als [Container Image](https://docs.docker.com/glossary/?term=image)bezeichnet wird. Bilder werden in einer [Container Registrierung](https://caylent.com/container-registries/)gespeichert, die als Repository oder Bibliothek für Images fungiert. Eine Registrierung kann sich auf dem Entwicklungs Computer, in Ihrem Rechenzentrum oder in einer Public Cloud befinden. Docker selbst verwaltet eine öffentliche Registrierung über [docker Hub](https://hub.docker.com/). Die Azure-Cloud verfügt über eine [Container Registrierung](https://azure.microsoft.com/services/container-registry/) zum Speichern von Container Images in der Nähe der cloudanwendungen, von denen Sie ausgeführt werden.
+Die Containerisierung eines Microservices ist einfach und unkompliziert. Der Code, seine Abhängigkeiten und die Laufzeit werden in eine Binärdatei mit dem Namen [Containerabbild](https://docs.docker.com/glossary/?term=image)gepackt. Bilder werden in einer [Containerregistrierung](https://caylent.com/container-registries/)gespeichert, die als Repository oder Bibliothek für Bilder fungiert. Eine Registrierung kann sich auf Ihrem Entwicklungscomputer, in Ihrem Rechenzentrum oder in einer öffentlichen Cloud befinden. Docker selbst unterhält eine öffentliche Registrierung über [Docker Hub](https://hub.docker.com/). Die Azure-Cloud verfügt über eine [Containerregistrierung](https://azure.microsoft.com/services/container-registry/) zum Speichern von Containerabbildern in der Nähe der Cloudanwendungen, die sie ausführen.
 
-Bei Bedarf wandeln Sie das Bild in eine Container Instanz um, die ausgeführt wird. Die-Instanz wird auf allen Computern ausgeführt, auf denen ein [Container-Lauf](https://kubernetes.io/docs/setup/production-environment/container-runtimes/) Zeit Modul installiert ist. Sie können beliebig viele Instanzen des containerisierten Dienstanbieter haben.
+Bei Bedarf transformieren Sie das Bild in eine laufende Containerinstanz. Die Instanz wird auf jedem Computer ausgeführt, auf dem ein [Container-Laufzeitmodul](https://kubernetes.io/docs/setup/production-environment/container-runtimes/) installiert ist. Sie können beaufststehend über den Containerdienst verfügen, wie erforderlich.
 
-In Abbildung 1-5 werden drei verschiedene mikrodienste angezeigt, die sich jeweils in einem eigenen Container befinden und auf einem einzelnen Host ausgeführt werden.
+Abbildung 1-5 zeigt drei verschiedene Microservices, die jeweils in einem eigenen Container ausgeführt werden und auf einem einzelnen Host ausgeführt werden.
 
 ![Mehrere Container, die auf einem Containerhost ausgeführt werden](./media/hosting-mulitple-containers.png)
 
 **Abbildung 1-5**. Mehrere Container, die auf einem Containerhost ausgeführt werden
 
-Beachten Sie, wie jeder Container seinen eigenen Satz an Abhängigkeiten und Laufzeit beibehält. Dies kann unterschiedlich sein. Hier sehen wir verschiedene Versionen des produkterebugdiensts, die auf demselben Host ausgeführt werden. Jeder Container teilt sich einen Slice des zugrunde liegenden Host Betriebssystems, Arbeitsspeichers und Prozessors, ist aber voneinander isoliert.
+Beachten Sie, dass jeder Container einen eigenen Satz von Abhängigkeiten und Laufzeiten verwaltet, die unterschiedlich sein können. Hier sehen wir verschiedene Versionen des Product Microservice, die auf demselben Host ausgeführt werden. Jeder Container teilt ein Segment des zugrunde liegenden Hostbetriebssystems, Arbeitsspeichers und Prozessors, ist jedoch voneinander isoliert.
 
-Beachten Sie, wie gut das Container Modell das "Abhängigkeiten"-Prinzip von der [zwölfstufigen Anwendung](https://12factor.net/)einnimmt.
+Beachten Sie, wie gut das Containermodell das Prinzip "Abhängigkeiten" aus der [Zwölf-Faktor-Anwendung](https://12factor.net/)umfasst.
 
-> *Der Faktor \#2 gibt an, dass "jeder-mikrodienst seine eigenen Abhängigkeiten isoliert und packt, ohne dass das gesamte System beeinträchtigt wird."*
+> *Faktor \#2 gibt an, dass "jeder Microservice seine eigenen Abhängigkeiten isoliert und verpackt, wobei Änderungen berücksichtigt werden, ohne das gesamte System zu beeinträchtigen."*
 
-Container unterstützen sowohl Linux-als auch Windows-Workloads. Die Azure-Cloud nimmt beides offen. Interessanterweise ist es Linux, nicht Windows Server, das am beliebtesten Betriebssystem in Azure geworden ist.
+Container unterstützen sowohl Linux- als auch Windows-Workloads. Die Azure-Cloud umfasst offen beides. Interessanterweise ist es Linux, nicht Windows Server, das zum beliebtesten Betriebssystem in Azure geworden ist.
 
-Obwohl mehrere containerhersteller vorhanden sind, hat docker den Marktanteil des Landes erfasst. Das Unternehmen hat die Software Container Bewegung vorangetrieben. Es ist der de-facto-Standard für das Verpacken, bereitstellen und Ausführen von cloudbasierten Anwendungen.
+Während es mehrere Container-Anbieter gibt, hat Docker den Löwenanteil des Marktes erobert. Das Unternehmen hat die Software-Container-Bewegung vorangetrieben. Es ist zum De-facto-Standard für das Verpacken, Bereitstellen und Ausführen von Cloud-nativen Anwendungen geworden.
 
 ### <a name="why-containers"></a>Warum Container?
 
-Container bieten Portabilität und gewährleisten die Konsistenz zwischen Umgebungen. Indem Sie alles in ein einzelnes Paket Kapseln, *isolieren* Sie den microservice und seine Abhängigkeiten von der zugrunde liegenden Infrastruktur.
+Container bieten Portabilität und garantieren Konsistenz über Umgebungen hinweg. Indem Sie alles in einem einzigen Paket kapseln, *isolieren* Sie den Microservice und seine Abhängigkeiten von der zugrunde liegenden Infrastruktur.
 
-Sie können denselben Container in jeder Umgebung bereitstellen, die über das docker-Lauf Zeit Modul verfügt. Durch containerisierte Workloads entfällt auch der Aufwand für die Vorkonfigurierung der einzelnen Umgebungen mit Frameworks, Software Bibliotheken und Lauf Zeit Modulen.
+Sie können denselben Container in jeder Umgebung bereitstellen, die über das Docker-Laufzeitmodul verfügt. Containerisierte Workloads eliminieren auch die Kosten für die Vorkonfiguration jeder Umgebung mit Frameworks, Softwarebibliotheken und Laufzeitmodulen.
 
-Durch die gemeinsame Nutzung des zugrunde liegenden Betriebssystems und der Host Ressourcen haben Container viel geringeren Speicherbedarf als ein vollständiger virtueller Computer. Die geringere Größe erhöht die *Dichte*bzw. die Anzahl von mikrodiensten, die ein bestimmter Host gleichzeitig ausführen kann.
+Durch die gemeinsame Nutzung des zugrunde liegenden Betriebssystems und der Hostressourcen haben Container einen viel geringeren Platzbedarf als eine vollständige virtuelle Maschine. Die kleinere Größe erhöht die *Dichte*oder Anzahl der Microservices, die ein bestimmter Host gleichzeitig ausführen kann.
 
-### <a name="container-orchestration"></a>Container Orchestrierung
+### <a name="container-orchestration"></a>Containerorchestrierung
 
-Während Tools wie docker Images erstellen und Container ausführen, benötigen Sie auch Tools, um Sie zu verwalten. Die Container Verwaltung erfolgt mit einem speziellen Softwareprogramm, das als containerorchestrator bezeichnet wird. Bei einem skalierbaren Betrieb ist die Container Orchestrierung unverzichtbar.
+Während Tools wie Docker Images erstellen und Container ausführen, benötigen Sie auch Tools, um sie zu verwalten. Die Containerverwaltung erfolgt mit einem speziellen Softwareprogramm namens Containerorchestrator. Bei einem Skalenbetrieb ist die Containerorchestrierung unerlässlich.
 
-Abbildung 1-6 zeigt Verwaltungsaufgaben, die von containerorchestratoren bereitgestellt werden.
+Abbildung 1-6 zeigt Verwaltungsaufgaben, die Container-Orchestratoren bereitstellen.
 
-![Was containerorchestratoren tun](./media/what-container-orchestrators-do.png)
+![Was Container-Orchestratoren tun](./media/what-container-orchestrators-do.png)
 
-**Abbildung 1-6**. Was containerorchestratoren tun
+**Abbildung 1-6**. Was Container-Orchestratoren tun
 
-In der folgenden Tabelle werden allgemeine Orchestrierungs Aufgaben beschrieben.
+In der folgenden Tabelle werden allgemeine Orchestrierungsaufgaben beschrieben.
 
 |  Aufgaben | Erklärung  |
 | :-------- | :-------- |
-| Scheduling | Automatisches Bereitstellen von Container Instanzen.|
-| Affinität/antiaffinität | Stellen Sie Container bereit, die sich nahe beieinander befinden, und unterstützen Sie die Verfügbarkeit und Leistung. |
-| Systemüberwachung | Automatisches Erkennen und korrigieren von Fehlern.|
-| Failover | Fehler beim automatischen erneuten Bereitstellen fehlerhafter Computer.|
-| Skalierung | Fügen Sie Container Instanzen automatisch hinzu, um die Anforderung zu erfüllen.|
-| Netzwerk | Verwalten Sie eine Netzwerk Überlagerung für die Container Kommunikation.|
-| Dienstermittlung | Aktivieren Sie Container, um sich gegenseitig zu suchen.|
-| Parallele Upgrades | Inkrementelle Upgrades ohne Ausfallzeiten Bereitstellung koordinieren. Automatisches Rollback von problematischen Änderungen.|
+| Scheduling | Automatische Bereitstellung von Containerinstanzen.|
+| Affinität/Anti-Affinität | Bereitstellung von Containern in der Nähe oder weit voneinander entfernt, um Verfügbarkeit und Leistung zu unterstützen. |
+| Systemüberwachung | AutomatischeErkennung und Korrektur von Fehlern.|
+| Failover | Automatische erneute Bereitstellung fehlgeschlagener Instanz enden auf fehlerfreien Computern.|
+| Skalierung | Automatisches Hinzufügen oder Entfernen der Containerinstanz, um den Bedarf zu decken.|
+| Netzwerk | Verwalten Sie ein Netzwerk-Overlay für die Containerkommunikation.|
+| Dienstsuche | Aktivieren Sie Container, um sich gegenseitig zu lokalisieren.|
+| Parallele Upgrades | Koordinieren Sie inkrementelle Upgrades mit einer Bereitstellung ohne Ausfallzeiten. Automatisches Rollback problematischer Änderungen.|
 
-Beachten Sie, wie orchestratoren die disposability-und Parallelitäts Prinzipien der [12-stufigen Anwendung](https://12factor.net/)akzeptieren, die weiter oben in diesem Kapitel erläutert wurden.
+Beachten Sie, wie Die Orchestratoren die Grundsätze der Disponierbarkeit und Parallelität aus der [Zwölf-Faktor-Anwendung](https://12factor.net/)übernehmen, die weiter oben im Kapitel behandelt wurde.
 
-> *Der Faktor \#9 gibt an, dass Dienst Instanzen verworfen werden sollten, sodass schnelle Startups die Skalierbarkeits Chancen und ordnungsgemäße Herunterfahr Vorgänge verbessern können, um das System in einem ordnungsgemäßen Zustand zu belassen. Docker-Container zusammen mit einem Orchestrator erfüllen diese Anforderung von Natur aus. "*
+> *Faktor \#9 gibt an, dass "Dienstinstanzen verfügbar sein sollten, und schnelle Startmöglichkeiten bevorzugen, um Skalierbarkeitsmöglichkeiten zu erhöhen, und ordnungsgemäße Herunterschaltungen, um das System in einem korrekten Zustand zu belassen. Docker-Container zusammen mit einem Orchestrator erfüllen diese Anforderung von Natur aus."*
 
-> *Der Faktor \#8 gibt an, dass "Dienste für eine große Anzahl von kleinen identischen Prozessen (Kopien) horizontal hochskaliert werden, anstatt eine einzelne große Instanz auf dem leistungsstärksten verfügbaren Computer zentral hochzuskalieren."*
+> *Faktor \#8 gibt an, dass "Dienste über eine große Anzahl kleiner identischer Prozesse (Kopien) skaliert werden, anstatt eine einzelne große Instanz auf dem leistungsstärksten verfügbaren Computer zu skalieren."*
 
-Obwohl mehrere containerorchestratoren vorhanden sind, ist [Kubernetes](https://kubernetes.io/docs/concepts/overview/what-is-kubernetes/) der de-facto-Standard für die Cloud-Native Welt. Es ist eine Portable, erweiterbare Open-Source-Plattform für die Verwaltung von Workloads in Containern.
+Während es mehrere Container-Orchestratoren gibt, ist [Kubernetes](https://kubernetes.io/docs/concepts/overview/what-is-kubernetes/) zum De-facto-Standard für die Cloud-native Welt geworden. Es handelt sich um eine portable, erweiterbare Open-Source-Plattform für die Verwaltung containerisierter Workloads.
 
-Sie könnten eine eigene Instanz von Kubernetes hosten, aber dann sind Sie für die Bereitstellung und Verwaltung der Ressourcen zuständig, die komplex sein können. Die Azure-Cloud-Features Kubernetes als verwalteter Dienst, [Azure Kubernetes Service (AKS)](https://azure.microsoft.com/services/kubernetes-service/). Ein verwalteter Dienst ermöglicht es Ihnen, seine Features vollständig zu nutzen, ohne dass er installiert und gewartet werden muss.
+Sie könnten Ihre eigene Instanz von Kubernetes hosten, aber dann wären Sie für die Bereitstellung und Verwaltung seiner Ressourcen verantwortlich - was komplex sein kann. Die Azure-Cloud verfügt über Kubernetes als verwalteten Dienst, [Azure Kubernetes Service (AKS)](https://azure.microsoft.com/services/kubernetes-service/). Ein verwalteter Dienst ermöglicht es Ihnen, seine Funktionen vollständig zu nutzen, ohne sie installieren und warten zu müssen.
 
-Azure Kubernetes Services finden Sie im Detail Kapitel 2: *Skalieren von cloudbasierten Anwendungen*.
+Azure Kubernetes Services wird ausführlich behandelt Kapitel 2, *Scaling Cloud-Native Applications*.
 
-## <a name="backing-services"></a>Sichern von Diensten
+## <a name="backing-services"></a>Backing Services
 
-Cloud-Native Systeme sind von vielen unterschiedlichen Ressourcen abhängig, z. b. Daten speichern, Nachrichten Brokern, Überwachung und Identitäts Diensten. Diese Dienste werden als [Sicherungsdienste](https://12factor.net/backing-services)bezeichnet.
+Cloud-native Systeme hängen von vielen verschiedenen Nebenressourcen ab, z. B. Datenspeichern, Nachrichtenbrokern, Überwachungs- und Identitätsdiensten. Diese Dienste werden als [Sicherungsdienste](https://12factor.net/backing-services)bezeichnet.
 
- In Abbildung 1-7 werden viele gängige Unterstützungsdienste gezeigt, die von cloudbasierten Systemen genutzt werden.
+ Abbildung 1-7 zeigt viele gängige Unterstützungsdienste, die Cloud-native Systeme nutzen.
 
-![Allgemeine Unterstützungsdienste](./media/common-backing-services.png)
+![Gemeinsame Unterstützungsdienste](./media/common-backing-services.png)
 
-**Abbildung 1-7**. Allgemeine Unterstützungsdienste
+**Abbildung 1-7**. Gemeinsame Unterstützungsdienste
 
-Unterstützungsdienste Stufen das Prinzip der "Status Freiheit" der [zwölfstufigen Anwendung](https://12factor.net/)herauf, das weiter oben in diesem Kapitel erläutert wurde.
+Unterstützungsdienste fördern das Prinzip der "Staatenlosigkeit" aus der [Zwölf-Faktor-Anwendung](https://12factor.net/), die weiter oben im Kapitel erörtert wurde.
 
->Der *Faktor \#6* gibt an, dass "jeder mikrodienst in einem eigenen Prozess ausgeführt werden soll, isoliert von anderen ausgelaufenden Diensten. Externalisieren Sie den erforderlichen Zustand zu einem Sicherungsdienst, z. b. einem verteilten Cache oder einem Datenspeicher.
+>*Faktor \#6* gibt an: "Jeder Microservice sollte in seinem eigenen Prozess ausgeführt werden, isoliert von anderen ausgeführten Diensten. Externalisieren des erforderlichen Status für einen Sicherungsdienst, z. B. einen verteilten Cache oder Datenspeicher."
 
 Sie können Ihre eigenen Sicherungsdienste hosten, aber dann sind Sie für die Lizenzierung, Bereitstellung und Verwaltung dieser Ressourcen verantwortlich.
 
-Cloudanbieter bieten eine umfangreiche Palette *verwalteter Sicherungsdienste.* Anstatt den Dienst zu besitzen, verwenden Sie ihn einfach. Der Anbieter betreibt die Ressource in der Skala und übernimmt die Verantwortung für Leistung, Sicherheit und Wartung. Überwachung, Redundanz und Verfügbarkeit sind in den Dienst integriert. Anbieter unterstützen Ihre verwalteten Dienste vollständig. Öffnen Sie ein Ticket, und beheben Sie das Problem.
+Cloud-Anbieter bieten eine reiche Auswahl an *Managed Backing Services.* Anstatt den Dienst zu besitzen, konsumieren Sie ihn einfach. Der Anbieter betreibt die Ressource in großem Maßstab und trägt die Verantwortung für Leistung, Sicherheit und Wartung. Überwachung, Redundanz und Verfügbarkeit sind in den Dienst integriert. Anbieter unterstützen ihre Managed Services voll um, öffnen Sie ein Ticket und beheben Sie Ihr Problem.
 
-Native cloudsysteme bevorzugen verwaltete Unterstützungsdienste von cloudanbietern. Die Einsparungen in Zeit und Arbeit sind hervorragend. Das Betriebsrisiko des Hostings ihrer eigenen und Probleme kann teuer werden.
+Cloud-native Systeme bevorzugen managed backing services von Cloud-Anbietern. Die Zeit- und Arbeitsersparnis ist groß. Das operationelle Risiko, eigene Hosting und Probleme zu haben, kann schnell teuer werden.
 
-Eine bewährte Vorgehensweise besteht darin, einen Sicherungsdienst als *angefügte Ressource*zu behandeln, die dynamisch an einen-Dienst mit Informationen (URL und Anmelde Informationen) gebunden ist, die in einer externen Konfiguration gespeichert sind. Dieser Leitfaden ist in der [zwölfstufigen Anwendung](https://12factor.net/)beschrieben, die weiter oben in diesem Kapitel erläutert wurde.
+Es wird eine bewährte Methode darin besteht, einen Sicherungsdienst als *angefügte Ressource*zu behandeln, die dynamisch an einen Microservice mit Informationen (einer URL und Anmeldeinformationen) gebunden ist, die in einer externen Konfiguration gespeichert sind. Diese Anleitung ist in der [Zwölf-Faktor-Anwendung](https://12factor.net/)dargelegt, die weiter oben im Kapitel erörtert wurde.
 
->Der *Faktor \#4* gibt an, dass Unterstützungsdienste über eine adressierbare URL verfügbar gemacht werden sollen. Dadurch wird die Ressource von der Anwendung entkoppelt, sodass Sie austauschbar sein kann. "
+>*Faktor \#4* gibt an, dass Sicherungsdienste "über eine adressierbare URL verfügbar gemacht werden sollten. Dadurch wird die Ressource von der Anwendung entkoppelt, sodass sie austauschbar ist."
 
->Der *Faktor \#3* gibt an, dass "Konfigurationsinformationen aus dem-Unternehmens Dienst verschoben und durch ein Konfigurations Verwaltungs Tool außerhalb des Codes extern ausgelagert werden."
+>*Faktor \#3* gibt an, dass "Konfigurationsinformationen aus dem Microservice verschoben und über ein Konfigurationsverwaltungstool außerhalb des Codes externisiert werden."
 
-Bei diesem Muster kann ein Unterstützungsdienst ohne Codeänderungen angefügt und getrennt werden. Sie können einen-mikrodienst von QA in eine Stagingumgebung herauf Stufen. Sie aktualisieren die Konfiguration des-Webdiensts so, dass Sie auf die Unterstützungsdienste in der Stagingumgebung verweist, und fügen die Einstellungen über eine Umgebungsvariable in ihren Container
+Bei diesem Muster kann ein Sicherungsdienst ohne Codeänderungen angefügt und getrennt werden. Sie können einen Microservice von der Qualitätssicherung in eine Stagingumgebung heraufstufen. Sie aktualisieren die Microservice-Konfiguration, um auf die Sicherungsdienste in der Staging-Station zu verweisen, und fügen die Einstellungen über eine Umgebungsvariable in den Container ein.
 
-Cloudanbieter stellen APIs bereit, mit denen Sie mit ihren proprietären Unterstützungsdiensten kommunizieren können. Diese Bibliotheken Kapseln die Grundlagen und die Komplexität. Wenn Sie direkt mit diesen APIs kommunizieren, werden Sie Ihren Code eng mit dem Unterstützungsdienst verknüpfen. Es empfiehlt sich, die Implementierungsdetails der Anbieter-API zu isolieren. Stellen Sie eine Vermittlungs Schicht oder eine zwischen-API bereit, die generische Vorgänge für Ihren Dienst Code verfügbar macht. Diese lose Kopplung ermöglicht das Austauschen eines Sicherungs Dienstanbieter für einen anderen oder das Verschieben des Codes in einen anderen Public Cloud, ohne Änderungen am Haupt-Dienst Code vornehmen zu müssen.
+Cloud-Anbieter stellen APIs für die Kommunikation mit ihren proprietären Backing-Services bereit. Diese Bibliotheken kapseln die Installation und Komplexität. Wenn Sie direkt mit diesen APIs kommunizieren, wird Ihr Code eng mit dem Sicherungsdienst verzahnt. Es ist eine bessere Methode, die Implementierungsdetails der Hersteller-API zu isolieren. Führen Sie eine Intermediationsschicht oder Zwischen-API ein, um generische Vorgänge für Ihren Dienstcode zu verwenden. Mit dieser lose Kopplung können Sie einen Sicherungsdienst gegen einen anderen austauschen oder Den Code in eine andere öffentliche Cloud verschieben, ohne Änderungen am Hauptdienstcode vornehmen zu müssen.
 
-Unterstützende Dienste werden in Kapitel 5, in der *Cloud Native Datenmuster*und in Kapitel 4, in der *Cloud Native Kommunikationsmuster*erläutert.
+Sicherungsdienste werden ausführlich behandelt Kapitel 5, *Cloud-Native Data Patterns*und Kapitel 4, *Cloud-Native Communication Patterns*.
 
 ## <a name="automation"></a>Automation
 
-Wie Sie gesehen haben, sind in der Cloud Native Systeme zum Erreichen von Geschwindigkeit und Agilität für die Entwicklung von Funktionen, Containern und modernen System Entwürfen konzipiert. Aber das ist nur ein Teil der Story. Wie stellen Sie die cloudumgebungen bereit, auf denen diese Systeme ausgeführt werden? Wie werden App-Features und Updates schnell bereitgestellt? Wie wird das vollständige Bild abgerundet?
+Wie Sie gesehen haben, umfassen Cloud-native Systeme Microservices, Container und modernes Systemdesign, um Geschwindigkeit und Agilität zu erreichen. Aber das ist nur ein Teil der Geschichte. Wie stellen Sie die Cloud-Umgebungen bereit, in denen diese Systeme ausgeführt werden? Wie können Sie App-Funktionen und -Updates schnell bereitstellen? Wie runden Sie das Gesamtbild ab?
 
-Geben Sie die allgemein akzeptierte [Infrastruktur als Code](https://docs.microsoft.com/azure/devops/learn/what-is-infrastructure-as-code)oder IAC ein.
+Geben Sie die weithin akzeptierte Praxis [infrastruktur als Code](https://docs.microsoft.com/azure/devops/learn/what-is-infrastructure-as-code)oder IaC ein.
 
-Mit IAC automatisieren Sie die Platt Form Bereitstellung und die Anwendungs Bereitstellung. Sie wenden im Wesentlichen Software Entwicklungsverfahren wie Tests und Versionsverwaltung auf Ihre devops-Verfahren an. Ihre Infrastruktur und bereit Stellungen sind automatisiert, konsistent und wiederholbar.
+Mit IaC automatisieren Sie die Bereitstellung von Plattformen und die Anwendungsbereitstellung. Sie wenden im Wesentlichen Software-Engineering-Praktiken wie Testen und Versionieren auf Ihre DevOps-Praktiken an. Ihre Infrastruktur und Ihre Bereitstellungen sind automatisiert, konsistent und wiederholbar.
 
-### <a name="automating-infrastructure"></a>Automatisieren der Infrastruktur
+### <a name="automating-infrastructure"></a>Automatisierung der Infrastruktur
 
-Tools wie [Azure Resource Manager](https://azure.microsoft.com/documentation/articles/resource-group-overview/), TERRAFORM und die [Azure CLI](https://docs.microsoft.com/cli/azure/)ermöglichen es Ihnen, deklarativ Skripts für die erforderliche cloudinfrastruktur zu erstellen. Ressourcennamen, Speicherorte, Kapazitäten und Geheimnisse sind parametrisiert und dynamisch. Das Skript wird mit Versions Angabe versehen und als Element des Projekts in die Quell Code Verwaltung eingecheckt. Sie rufen das Skript auf, um eine konsistente und wiederholbare Infrastruktur in Systemumgebungen bereitzustellen, wie z. b. QA, Staging und Produktion.
+Tools wie [Azure Resource Manager](https://azure.microsoft.com/documentation/articles/resource-group-overview/), Terraform und die Azure [CLI](https://docs.microsoft.com/cli/azure/)ermöglichen es Ihnen, deklarativ skripten die Cloudinfrastruktur, die Sie benötigen. Ressourcennamen, Standorte, Kapazitäten und Geheimnisse sind parametrisiert und dynamisch. Das Skript wird als Artefakt Ihres Projekts versioniert und in die Quellcodeverwaltung eingecheckt. Sie rufen das Skript auf, um eine konsistente und wiederholbare Infrastruktur für alle Systemumgebungen bereitzustellen, z. B. QS, Staging und Produktion.
 
-Im Hintergrund ist IAC idempotent, d. h., Sie können das gleiche Skript immer wieder ausführen, ohne Nebeneffekte zu haben. Wenn das Team eine Änderung vornehmen muss, wird das Skript bearbeitet und erneut ausgeführt. Nur die aktualisierten Ressourcen sind betroffen.
+Unter der Haube ist IaC idempotent, was bedeutet, dass Sie das gleiche Skript immer und immer wieder ohne Nebenwirkungen ausführen können. Wenn das Team eine Änderung vornehmen muss, bearbeitet und führt es das Skript erneut aus. Nur die aktualisierten Ressourcen sind betroffen.
 
-Im Artikel [Was ist Infrastructure as Code, wird](https://docs.microsoft.com/azure/devops/learn/what-is-infrastructure-as-code)der Autor Sam Guckenheimer beschrieben, wie "Teams, die IAC implementieren, schnelle und skalierbare Umgebungen bereitstellt. Teams vermeiden die manuelle Konfiguration von Umgebungen und erzwingen Konsistenz, indem Sie den gewünschten Zustand ihrer Umgebungen über Code darstellen. Infrastruktur Bereitstellungen mit IAC sind wiederholbar und verhindern Lauf Zeit Probleme, die durch Konfigurations Abweichung oder fehlende Abhängigkeiten verursacht werden. Devops-Teams können mit einem einheitlichen Satz von Methoden und Tools zusammenarbeiten, um Anwendungen und deren unterstützende Infrastruktur schnell, zuverlässig und skalierbar bereitzustellen. "
+In dem Artikel [What is Infrastructure as Code](https://docs.microsoft.com/azure/devops/learn/what-is-infrastructure-as-code)beschreibt Autor Sam Guckenheimer, wie "Teams, die IaC implementieren, stabile Umgebungen schnell und in großem Maßstab bereitstellen können. Teams vermeiden die manuelle Konfiguration von Umgebungen und erzwingen Konsistenz, indem sie den gewünschten Zustand ihrer Umgebungen über Code darstellen. Infrastrukturbereitstellungen mit IaC sind wiederholbar und verhindern Laufzeitprobleme, die durch Konfigurationsdrift oder fehlende Abhängigkeiten verursacht werden. DevOps-Teams können mit einer einheitlichen Reihe von Verfahren und Tools zusammenarbeiten, um Anwendungen und ihre unterstützende Infrastruktur schnell, zuverlässig und in großem Maßstab bereitzustellen."
 
-### <a name="automating-deployments"></a>Automatisieren von bereit Stellungen
+### <a name="automating-deployments"></a>Automatisieren von Bereitstellungen
 
-Die zuvor beschriebene [12-stufige Anwendung](https://12factor.net/)erfordert separate Schritte, wenn Sie abgeschlossenen Code in eine laufende Anwendung umwandeln.
+Die [zwölfstufige Anwendung](https://12factor.net/), die zuvor erörtert wurde, erfordert separate Schritte beim Transformieren von abgeschlossenem Code in eine ausgeführte Anwendung.
 
-> Der *Faktor \#5* gibt an, dass "jedes Release eine strikte Trennung in den Build-, Release-und Lauf Phasen erzwingen muss. Jede sollte mit einer eindeutigen ID gekennzeichnet werden und die Möglichkeit des Rollbacks unterstützen. "
+> *Faktor \#5* gibt an, dass "jede Version eine strikte Trennung über die Build-, Release- und Ausführungsphasen erzwingen muss. Jeder sollte mit einer eindeutigen ID versehen werden und die Möglichkeit unterstützen, einen Rollback zurückzufahren."
 
-Moderne CI/CD-Systeme helfen dabei, dieses Prinzip zu erfüllen. Sie bieten separate Bereitstellungs Schritte und sorgen für konsistenten und qualitativ hochwertigen Code, der Benutzern problemlos zur Verfügung steht.
+Moderne CI/CD-Systeme helfen dabei, dieses Prinzip zu erfüllen. Sie bieten separate Bereitstellungsschritte und helfen dabei, konsistenten und qualitativ hochwertigen Code sicherzustellen, der Benutzern problemlos zur Verfügung steht.
 
-In Abbildung 1-8 wird die Trennung für den gesamten Bereitstellungs Prozess veranschaulicht.
+Abbildung 1-8 zeigt die Trennung über den Bereitstellungsprozess hinweg.
 
-![Schritte zur Bereitstellung in der CI/CD-Pipeline](./media/build-release-run-pipeline.png)
+![Bereitstellungsschritte in DER CI/CD-Pipeline](./media/build-release-run-pipeline.png)
 
-**Abbildung 1-8**. Bereitstellungs Schritte in einer CI/CD-Pipeline
+**Abbildung 1-8**. Bereitstellungsschritte in einer CI/CD-Pipeline
 
-Achten Sie in der vorherigen Abbildung besonders auf die Trennung von Aufgaben.
+Achten Sie in der vorherigen Abbildung besonders auf die Aufgabentrennung.
 
-Der Entwickler erstellt ein Feature in der Entwicklungsumgebung und durchläuft dabei den sogenannten "inneren Schleifen Code", "ausführen" und "Debuggen". *Nach Abschluss* des Vorgangs wird dieser Code in ein Coderepository, wie z. b. GitHub, Azure devops oder Bitbucket, übermittelt.
+Der Entwickler erstellt ein Feature in seiner Entwicklungsumgebung und durchläuft die so genannte "innere Schleife" von Code, Ausführung und Debuggen. Nach Abschluss wird dieser Code in ein Code-Repository wie GitHub, Azure DevOps oder BitBucket *übertragen.*
 
-Der Push löst eine Buildphase aus, die den Code in ein binäres artefaktelement umwandelt. Die Arbeit wird mit einer CI-Pipeline [(Continuous Integration)](https://martinfowler.com/articles/continuousIntegration.html) implementiert. Die Anwendung wird automatisch erstellt, getestet und verpackt.
+Der Push löst eine Buildphase aus, die den Code in ein binäres Artefakt umwandelt. Die Arbeit wird mit einer [Continuous Integration (CI)-Pipeline](https://martinfowler.com/articles/continuousIntegration.html) durchgeführt. Es erstellt, testet und verpackt die Anwendung automatisch.
 
-Die Releasephase übernimmt das binäre artefaktelement, wendet externe Anwendungs-und Umgebungs Konfigurationsinformationen an und erzeugt eine unveränderliche Version. Das Release wird in einer bestimmten Umgebung bereitgestellt. Die Arbeit wird mit einer CD-Pipeline [(Continuous Delivery)](https://martinfowler.com/bliki/ContinuousDelivery.html) implementiert. Jedes Release sollte identifizierbar sein. Sie können Folgendes sagen: "diese Bereitstellung führt Release 2.1.1 der Anwendung aus."
+Die Release-Phase nimmt das binäre Artefakt auf, wendet externe Anwendungs- und Umgebungskonfigurationsinformationen an und erzeugt eine unveränderliche Version. Die Version wird in einer angegebenen Umgebung bereitgestellt. Die Arbeit wird mit einer [Continuous Delivery(CD)-Pipeline](https://martinfowler.com/bliki/ContinuousDelivery.html) implementiert. Jede Version sollte identifizierbar sein. Sie können sagen: "Diese Bereitstellung führt Release 2.1.1 der Anwendung aus."
 
-Schließlich wird die freigegebene Funktion in der Ziel Ausführungsumgebung ausgeführt. Releases sind unveränderlich, was bedeutet, dass jede Änderung eine neue Version erstellen muss.
+Schließlich wird die freigegebene Funktion in der Zielausführungsumgebung ausgeführt. Releases sind unveränderlich, was bedeutet, dass jede Änderung eine neue Version erstellen muss.
 
-Wenn Sie diese Vorgehensweisen anwenden, haben Organisationen die Art und Weise entwickelt, wie Sie Software liefern Viele wurden von vierteljährlichen Releases zu bedarfsgesteuerten Updates verschoben. Das Ziel besteht darin, Probleme früh im Entwicklungszeitraum abzufangen, wenn diese kostengünstiger behoben werden. Wenn die Dauer zwischen Integrationen länger ist, werden die Kosten kostspieliger.  Aufgrund der Konsistenz im Integrationsprozess können Teams Codeänderungen häufiger durchführen, was zu einer besseren Zusammenarbeit und Software Qualität führt.
+Mit diesen Praktiken haben Organisationen die Art und Weise, wie sie Software versenden, radikal weiterentwickelt. Viele haben sich von vierteljährlichen Versionen zu On-Demand-Updates bewegt. Das Ziel ist es, Probleme früh im Entwicklungszyklus zu fangen, wenn sie weniger teuer zu beheben sind. Je länger die Dauer zwischen den Integrationen, desto teurer werden Probleme zu lösen.  Mit der Konsistenz im Integrationsprozess können Teams Codeänderungen häufiger übertragen, was zu einer besseren Zusammenarbeit und Softwarequalität führt.
 
 ### <a name="azure-pipelines"></a>Azure Pipelines
 
-Die Azure-Cloud enthält einen neuen CI/CD-Dienst mit dem Titel [Azure Pipelines](https://azure.microsoft.com/services/devops/pipelines/), der Teil des [Azure devops](https://azure.microsoft.com/services/devops/) -Angebots in Abbildung 1-9 ist.
+Die Azure-Cloud enthält einen neuen CI/CD-Dienst mit dem Titel [Azure Pipelines](https://azure.microsoft.com/services/devops/pipelines/), der Teil des [Azure DevOps-Angebots](https://azure.microsoft.com/services/devops/) in Abbildung 1-9 ist.
 
-![Azure Pipelines in devops](./media/devops-components.png)
+![Azure-Pipelines in DevOps](./media/devops-components.png)
 
-**Abbildung 1-9**. Azure devops-Angebote
+**Abbildung 1-9**. Azure DevOps-Angebote
 
-Azure Pipelines ist ein clouddienst, der Continuous Integration (CI) und Continuous Delivery (CD) kombiniert. Sie können Ihren Code automatisch testen, erstellen und an ein beliebiges Ziel senden.
+Azure Pipelines ist ein Clouddienst, der kontinuierliche Integration (Continuous Integration, CI) und Continuous Delivery (CD) kombiniert. Sie können Ihren Code automatisch testen, erstellen und an jedes beliebige Ziel senden.
 
-Sie definieren die Pipeline im Code in einer YAML-Datei neben dem Rest des Codes für Ihre APP.
+Sie definieren Ihre Pipeline in Code in einer YAML-Datei zusammen mit dem Rest des Codes für Ihre App.
 
-- Die Pipeline wird mit dem Code versioniert und folgt derselben Verzweigungs Struktur.
-- Sie erhalten die Überprüfung Ihrer Änderungen durch Code Überprüfungen in Pull Requests und Verzweigungs Erstellungs Richtlinien.
-- Jede Verzweigung, die Sie verwenden, kann die Buildrichtlinie durch Ändern der Datei Azure-Pipelines. yml anpassen.
-- Die Pipeline Datei wird in die Versionskontrolle eingecheckt und kann bei einem Problem untersucht werden.
+- Die Pipeline wird mit Ihrem Code versioniert und folgt derselben Verzweigungsstruktur.
+- Sie erhalten eine Validierung Ihrer Änderungen durch Codeüberprüfungen in Pull-Anforderungen und Zweigstellenbuildrichtlinien.
+- Jeder Zweig, den Sie verwenden, kann die Buildrichtlinie anpassen, indem die Datei azure-pipelines.yml geändert wird.
+- Die Pipelinedatei wird in die Versionskontrolle eingecheckt und kann bei einem Problem untersucht werden.
 
-Der Azure Pipelines-Dienst unterstützt die meisten git-Anbieter und kann Bereitstellungs Pipelines für Anwendungen generieren, die auf den Plattformen Linux, macOS oder Windows geschrieben sind. Sie enthält Unterstützung für Java, .net, JavaScript, Python, PHP, go, Xcode und C++.
+Der Azure-Pipelinesdienst unterstützt die meisten Git-Anbieter und kann Bereitstellungspipelines für Anwendungen generieren, die auf Linux-, macOS- oder Windows-Plattformen geschrieben wurden. Es enthält Unterstützung für Java, .NET, JavaScript, Python, PHP, Go, XCode und C++.
 
 >[!div class="step-by-step"]
->[Zurück](introduction.md)
+>[VorherigeS](introduction.md)
 >[Weiter](candidate-apps.md)

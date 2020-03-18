@@ -3,10 +3,10 @@ title: 'Tutorial: Installieren und Verwenden eines globalen .NET Core-Tools'
 description: Erfahren Sie, wie Sie ein .NET-Tool als globales Tool installieren und verwenden.
 ms.date: 02/12/2020
 ms.openlocfilehash: 9f8378e50fd2544eedbbaaeffb89d67800ec6880
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "78156737"
 ---
 # <a name="tutorial-install-and-use-a-net-core-global-tool-using-the-net-core-cli"></a>Tutorial: Erstellen und Verwenden eines globalen .NET Core-Tools mithilfe der .NET Core-CLI

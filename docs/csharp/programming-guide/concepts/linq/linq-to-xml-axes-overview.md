@@ -3,10 +3,10 @@ title: Übersicht über LINQ to XML-Achsen (C#)
 ms.date: 07/20/2015
 ms.assetid: 516792fb-461d-40a8-8a50-9993a51258fc
 ms.openlocfilehash: c8b64731925f37d54bded62fae4ccae9933ffbe9
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/03/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75635521"
 ---
 # <a name="linq-to-xml-axes-overview-c"></a>Übersicht über LINQ to XML-Achsen (C#)
@@ -54,6 +54,6 @@ Nachdem Sie eine XML-Struktur erstellt oder ein XML-Dokument in eine XML-Struktu
 |------------|-----------------|  
 |<xref:System.Xml.Linq.XElement.Attribute%2A?displayProperty=nameWithType>|Gibt das <xref:System.Xml.Linq.XAttribute> zurück, das den angegebenen <xref:System.Xml.Linq.XName> hat.|  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [LINQ to XML Axes (C#) (LINQ to XML-Achsen (C#))](linq-to-xml-axes-overview.md)

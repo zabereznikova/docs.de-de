@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: b0c4e9617677cf95e3a059b57f3d50ddfb072f4a
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/14/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75937016"
 ---
 ### <a name="default-control-font-changed-to-segoe-ui-9-pt"></a>Standardschriftart für Steuerelemente in Segoe UI 9 pt geändert
@@ -14,7 +14,7 @@ Im .NET Framework wurde die Eigenschaft <xref:System.Windows.Forms.Control.Defau
 
 ![Standardschriftart für Steuerelemente im .NET Framework](~/docs/images/core-changes/windowsforms/control-defaultfont-changed/defaultfont-framework.png)
 
-Ab .NET Core 3.0 ist die Standardschriftart auf `Segoe UI 9 pt` festgelegt (dieselbe Schriftart wie <xref:System.Drawing.SystemFonts.MessageBoxFont?displayProperty=nameWithType>). Infolge dieser Änderung werden Formulare und Steuerelemente etwa 27 % größer dimensioniert, um der größeren neuen Standardschriftart gerecht zu werden. Zum Beispiel:
+Ab .NET Core 3.0 ist die Standardschriftart auf `Segoe UI 9 pt` festgelegt (dieselbe Schriftart wie <xref:System.Drawing.SystemFonts.MessageBoxFont?displayProperty=nameWithType>). Infolge dieser Änderung werden Formulare und Steuerelemente etwa 27 % größer dimensioniert, um der größeren neuen Standardschriftart gerecht zu werden. Beispiel:
 
 ![Standardschriftart für Steuerelemente in .NET Core](~/docs/images/core-changes/windowsforms/control-defaultfont-changed/defaultfont-core.png)
 
@@ -28,7 +28,7 @@ Diese Änderung wurde entsprechend den [Leitfäden für Benutzeroberflächen unt
 
 Aufgrund der Änderung der Größe von Formularen und Steuerelementen sollten Sie sicherstellen, dass Ihre Anwendung richtig gerendert wird.
 
-Wenn Sie die ursprüngliche Schriftart beibehalten möchten, legen Sie die Standardschriftart des Formulars auf `Microsoft Sans Serif 8 pt` fest. Zum Beispiel:
+Wenn Sie die ursprüngliche Schriftart beibehalten möchten, legen Sie die Standardschriftart des Formulars auf `Microsoft Sans Serif 8 pt` fest. Beispiel:
 
 ```csharp
 public MyForm()
@@ -44,7 +44,7 @@ public MyForm()
 
 #### <a name="affected-apis"></a>Betroffene APIs
 
-Keine
+Keine.
 
 <!--
 

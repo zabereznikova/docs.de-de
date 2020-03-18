@@ -11,10 +11,10 @@ helpviewer_keywords:
 - generics [.NET Framework], delegates
 ms.assetid: 416be383-cc61-4102-9b1b-88b51adb963e
 ms.openlocfilehash: baf8497289ee71c2dbdc544607212de90928289c
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75708383"
 ---
 # <a name="generic-delegates-for-manipulating-arrays-and-lists"></a>Generische Delegaten zum Bearbeiten von Arrays und Listen
@@ -39,7 +39,7 @@ Dieses Thema bietet eine Übersicht über generische Delegate für Konvertierung
 ### <a name="chaining-delegates"></a>Verketten von Delegaten  
  Viele der Methoden, die diese Delegaten verwenden, geben ein Array oder eine Liste zurück, das oder die an eine andere Methode übergeben werden kann. Wenn Sie beispielsweise bestimmte Elemente eines Arrays auswählen, diese Elemente in einen neuen Typ konvertieren und sie in einem neuen Array speichern möchten, können Sie das Array, das von der generischen <xref:System.Array.FindAll%2A>-Methode zurückgegeben wird, an die generische <xref:System.Array.ConvertAll%2A>-Methode übergeben. Wenn der neue Elementtyp keine natürliche Sortierreihenfolge hat, können Sie das von der generischen der <xref:System.Array.ConvertAll%2A>-Methode zurückgegebene Array an die generische <xref:System.Array.Sort%60%601%28%60%600%5B%5D%2CSystem.Comparison%7B%60%600%7D%29>-Methode übergeben.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Collections.Generic?displayProperty=nameWithType>
 - <xref:System.Collections.ObjectModel?displayProperty=nameWithType>

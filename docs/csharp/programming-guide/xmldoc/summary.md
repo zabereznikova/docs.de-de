@@ -9,10 +9,10 @@ helpviewer_keywords:
 - summary C# XML tag
 ms.assetid: b4c43d92-2067-4eac-a59a-d32f5248c08b
 ms.openlocfilehash: 1ae3c17bef69a52b4d5852e09284929dc328bf8a
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/28/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "76789676"
 ---
 # <a name="summary-c-programming-guide"></a>\<summary> (C#-Programmierhandbuch)
@@ -98,7 +98,7 @@ Das vorherige Beispiel erzeugt folgende XML-Datei.
 </doc>
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [C#-Programmierhandbuch](../index.md)
 - [Empfohlene Tags für Dokumentationskommentare](./recommended-tags-for-documentation-comments.md)

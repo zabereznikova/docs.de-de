@@ -1,14 +1,14 @@
 ---
-title: Weitere Tools
+title: Zusätzliche Tools
 description: Eine Übersicht über zusätzliche Tools, die Sie zum Unterstützen und Erweitern der .NET Core-Funktionalität installieren können.
 author: mlacouture
 ms.date: 02/13/2020
 ms.custom: mvc
 ms.openlocfilehash: c0224a1cc6cbb9ae6fa88e5f869c47a1e84289e0
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/19/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "77451524"
 ---
 # <a name="net-core-additional-tools-overview"></a>Zusätzliche .NET Core-Tools – Übersicht
@@ -43,4 +43,4 @@ Im .NET Framework können sie mit dem svcutil-Tool vorab eine Serialisierungsass
 
 ## <a name="xml-serializer-generator"></a>XML Serializer Generator
 
-Das NuGet-Paket [Microsoft.XmlSerializer.Generator](https://www.nuget.org/packages/Microsoft.XmlSerializer.Generator) gilt (wie der [XML Serializer Generator (sgen.exe)](../../standard/serialization/xml-serializer-generator-tool-sgen-exe.md) für .NET Framework) für .NET Core- und .NET Standard-Bibliotheken. Es erstellt eine XML-Serialisierungsassembly für Typen, die in einer Assembly vorhanden sind, um die Startleistung der XML-Serialisierung zu verbessern, wenn Objekte dieser Typen mithilfe von <xref:System.Xml.Serialization.XmlSerializer> serialisiert oder deserialisiert werden.
+Das NuGet-Paket [Microsoft.XmlSerializer.Generator](../../standard/serialization/xml-serializer-generator-tool-sgen-exe.md) gilt (wie der [XML Serializer Generator (sgen.exe)](https://www.nuget.org/packages/Microsoft.XmlSerializer.Generator) für .NET Framework) für .NET Core- und .NET Standard-Bibliotheken. Es erstellt eine XML-Serialisierungsassembly für Typen, die in einer Assembly vorhanden sind, um die Startleistung der XML-Serialisierung zu verbessern, wenn Objekte dieser Typen mithilfe von <xref:System.Xml.Serialization.XmlSerializer> serialisiert oder deserialisiert werden.

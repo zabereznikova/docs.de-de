@@ -3,10 +3,10 @@ title: Netzwerkisolation für Windows Store-Apps
 ms.date: 03/30/2017
 ms.assetid: b064497c-d956-46b8-838d-7a0223c7e200
 ms.openlocfilehash: 390a0281f03b08322cc1bee469b601fd5a1547c4
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/04/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74802166"
 ---
 # <a name="network-isolation-for-windows-store-apps"></a>Netzwerkisolation für Windows Store-Apps
@@ -27,11 +27,11 @@ Verwenden Sie diese Prüfliste, um sicherzustellen, dass die Netzwerkisolation f
   
 Weitere ausführliche Informationen zum Konfigurieren der Netzwerkfunktionen und der Isolationstools zur Problembehandlung im Rahmen der Netzwerkisolation finden Sie unter [So wird’s gemacht: Konfigurieren von Netzwerkisolationsfunktionen](https://docs.microsoft.com/previous-versions/windows/apps/hh770532(v=win.10)) in der Windows 8.x Store-Entwicklerdokumentation.
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Connecting to a web service (Herstellen einer Verbindung mit einem Webdienst)](https://docs.microsoft.com/previous-versions/windows/apps/hh761504(v=win.10))
 - [Guidelines and checklist for network isolation (Richtlinien und Checkliste für die Netzwerkisolation)](https://docs.microsoft.com/previous-versions/windows/apps/hh770532(v=win.10))
-- [Schnellstart: Herstellen einer Verbindung mithilfe der HttpClient-Klasse](https://docs.microsoft.com/previous-versions/windows/apps/hh781239(v=win.10))
+- [Quickstart: Connecting using HttpClient (Schnellstart: Verbindungsherstellung mithilfe von „HttpClient“)](https://docs.microsoft.com/previous-versions/windows/apps/hh781239(v=win.10))
 - [How to use HttpClient handlers (Verwenden des Handlers für „HttpClient“)](https://docs.microsoft.com/previous-versions/windows/apps/hh781241(v=win.10))
 - [How to secure HttpClient connections (Sichern von „HttpClient“-Verbindungen)](https://docs.microsoft.com/previous-versions/windows/apps/hh781240(v=win.10))
 - [HttpClient Sample (HttpClient-Beispiel)](https://code.msdn.microsoft.com/windowsapps/HttpClient-sample-55700664)

@@ -7,10 +7,10 @@ helpviewer_keywords:
 - .NET Framework, initialization errors
 ms.assetid: 680a7382-957f-4f6e-b178-4e866004a07e
 ms.openlocfilehash: 73a0ffd4a39b144a61bf559ac424414728fb9a3f
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75716455"
 ---
 # <a name="net-framework-initialization-errors-managing-the-user-experience"></a>Fehler beim Initialisieren von .NET Framework: Verwalten der Benutzerfreundlichkeit
@@ -92,6 +92,6 @@ Ab .NET Framework 4.5 wurde die CLR-Aktivierungsprotokollierung verbessert. Si
 ## <a name="see-also"></a>Siehe auch
 
 - [Bereitstellungshandbuch für Entwickler](deployment-guide-for-developers.md)
-- [Vorgehensweise: Konfigurieren einer App zur Unterstützung von .NET Framework 4 oder höher](../migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)
-- [Vorgehensweise: Debuggen von CLR-Aktivierungsproblemen](how-to-debug-clr-activation-issues.md)
+- [How to: Konfigurieren einer App zur Unterstützung von .NET Framework 4 oder höher](../migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)
+- [How to: Debuggen von CLR-Aktivierungsproblemen](how-to-debug-clr-activation-issues.md)
 - [Installieren von .NET Framework 3.5 auf Windows 10, Windows 8.1 und Windows 8](../install/dotnet-35-windows-10.md)

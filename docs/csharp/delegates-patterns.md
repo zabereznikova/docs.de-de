@@ -3,16 +3,16 @@ title: Gängige Muster für Delegate
 description: Erfahren Sie etwas über allgemeine Muster für die Verwendung von Delegaten in Ihrem Code, um starke Kopplung zwischen Komponenten zu vermeiden.
 ms.date: 06/20/2016
 ms.assetid: 0ff8fdfd-6a11-4327-b061-0f2526f35b43
-ms.openlocfilehash: 174ae4129464c9d2e787048793cec764121ca4aa
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 22ab88e5b139381e3a8921baa20df035f1405146
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73454081"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79398736"
 ---
 # <a name="common-patterns-for-delegates"></a>Gängige Muster für Delegate
 
-[Vorherige](delegates-strongly-typed.md)
+[Zurück](delegates-strongly-typed.md)
 
 Delegaten bieten einen Mechanismus, der Software-Entwürfe ermöglicht, die minimale Kopplung zwischen Komponenten umfassen.
 
@@ -54,15 +54,15 @@ Durch dieses Design kann die primäre Protokollkomponente eine nicht virtuelle, 
 
 Fangen wir klein an: Die anfängliche Implementierung akzeptiert neue Meldungen, und schreibt mithilfe von angefügten Delegaten. Sie können mit einem Delegaten beginnen, der Meldungen in die Konsole schreibt.
 
-[!code-csharp[LoggerImplementation](../../samples/csharp/delegates-and-events/Logger.cs#FirstImplementation "A first Logger implementation.")]
+[!code-csharp[LoggerImplementation](../../samples/snippets/csharp/delegates-and-events/Logger.cs#FirstImplementation "A first Logger implementation.")]
 
-Die statische Klasse oben ist die einfachste Sache, die funktionieren kann. Wir müssen die einzelne Implementierung für die Methode schreiben, die Meldungen in die Konsole schreibt: 
+Die statische Klasse oben ist die einfachste Sache, die funktionieren kann. Wir müssen die einzelne Implementierung für die Methode schreiben, die Meldungen in die Konsole schreibt:
 
-[!code-csharp[LogToConsole](../../samples/csharp/delegates-and-events/LoggingMethods.cs#LogToConsole "A Console logger.")]
+[!code-csharp[LogToConsole](../../samples/snippets/csharp/delegates-and-events/LoggingMethods.cs#LogToConsole "A Console logger.")]
 
 Abschließend müssen Sie den Delegaten verknüpfen, indem Sie ihn an den WriteMessage-Delegaten anfügen, der in der Protokollierung deklariert wurde:
 
-[!code-csharp[ConnectDelegate](../../samples/csharp/delegates-and-events/Program.cs#ConnectDelegate "Connect to the delegate")]
+[!code-csharp[ConnectDelegate](../../samples/snippets/csharp/delegates-and-events/Program.cs#ConnectDelegate "Connect to the delegate")]
 
 ## <a name="practices"></a>Methoden
 
@@ -78,12 +78,12 @@ Lassen Sie uns die erste Version etwas stabiler machen und anschließend andere 
 
 Als Nächstes fügen wir einige Argumente in die `LogMessage()`-Methode ein, damit Ihre Protokollklasse mehr strukturierte Meldungen erstellt:
 
-[!code-csharp[Severity](../../samples/csharp/delegates-and-events/Logger.cs#Severity "Define severities")]
-[!code-csharp[NextLogger](../../samples/csharp/delegates-and-events/Logger.cs#LoggerTwo "Refine the Logger")]
+[!code-csharp[Severity](../../samples/snippets/csharp/delegates-and-events/Logger.cs#Severity "Define severities")]
+[!code-csharp[NextLogger](../../samples/snippets/csharp/delegates-and-events/Logger.cs#LoggerTwo "Refine the Logger")]
 
-Als Nächstes verwenden wir dieses `Severity`-Argument, um die Meldungen zu filtern, die in das Ausgabeprotokoll gesendet werden. 
+Als Nächstes verwenden wir dieses `Severity`-Argument, um die Meldungen zu filtern, die in das Ausgabeprotokoll gesendet werden.
 
-[!code-csharp[FinalLogger](../../samples/csharp/delegates-and-events/Logger.cs#LoggerFinal "Finish the Logger")]
+[!code-csharp[FinalLogger](../../samples/snippets/csharp/delegates-and-events/Logger.cs#LoggerFinal "Finish the Logger")]
 
 ## <a name="practices"></a>Methoden
 
@@ -97,11 +97,11 @@ Die Protokollierungskomponente kommt gut voran. Fügen wir eine weitere Ausgabe-
 
 Hier ist diese dateibasierte-Protokollierung:
 
-[!code-csharp[FileLogger](../../samples/csharp/delegates-and-events/FileLogger.cs#FileLogger "Log to files")]
+[!code-csharp[FileLogger](../../samples/snippets/csharp/delegates-and-events/FileLogger.cs#FileLogger "Log to files")]
 
 Wenn Sie diese Klasse erstellt haben, können Sie sie instanziieren und sie fügt ihre LogMessage-Methode in die Protokollierungskomponente an:
 
-[!code-csharp[FileLogger](../../samples/csharp/delegates-and-events/Program.cs#FileLogger "Log to files")]
+[!code-csharp[FileLogger](../../samples/snippets/csharp/delegates-and-events/Program.cs#FileLogger "Log to files")]
 
 Diese beiden schließen einander nicht aus. Sie können beide Protokollmethoden anfügen, und Meldungen in die Konsole und eine Datei generieren:
 

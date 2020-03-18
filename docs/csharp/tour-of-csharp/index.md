@@ -2,12 +2,12 @@
 title: Einführung in C# - Leitfaden für C#
 description: Neu bei C#? Lernen Sie die Grundlagen der Sprache kennen.
 ms.date: 02/26/2020
-ms.openlocfilehash: 69651d6233bfaf217366be3850f6b3d9c550d8e2
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: bf5a200f2ee777698ae8564f348ffc117d9abab0
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78159142"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79156843"
 ---
 # <a name="a-tour-of-the-c-language"></a>Überblick über C#
 
@@ -33,12 +33,12 @@ Das Programm „Hello, World“ wird für gewöhnlich zur Einführung einer Prog
 
 C#-Quelldateien weisen in der Regel die Dateierweiterung `.cs` auf. Laden Sie zunächst das [.NET Core SDK](https://dotnet.microsoft.com/download) herunter, und installieren Sie es, um dieses Programm zu erstellen. Führen Sie dann den Befehl `dotnet new console -o hello` aus, um ein neues Programm und ein Buildskript zu erstellen. Das Programm und das Buildskript befinden sich in den Dateien `Program.cs` bzw. `hello.csproj`. Sie können die Anwendung mit den `run`-Befehlen erstellen und ausführen:
 
-```console
+```dotnetcli
 cd hello
 dotnet run
 ```
 
-Das Programm erzeugt die folgende Ausgabe: 
+Das Programm erzeugt die folgende Ausgabe:
 
 ```console
 Hello, World!

@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 58d1c8cd3aff52703522391c14348bd81c108587
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "74568161"
 ---
 ### <a name="custom-encoderfallbackbuffer-instances-cannot-fall-back-recursively"></a>Benutzerdefinierte EncoderFallbackBuffer-Instanzen können kein rekursives Fallback ausführen
@@ -30,7 +30,7 @@ Dieses Verhalten gilt nur, wenn alle drei der folgenden Bedingungen erfüllt sin
 
 3.0
 
-#### <a name="recommended-action"></a>Empfohlene Maßnahme
+#### <a name="recommended-action"></a>Empfohlene Aktion
 
 Die meisten Entwickler müssen keine Maßnahmen ergreifen.
 

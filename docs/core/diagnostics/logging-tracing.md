@@ -3,10 +3,10 @@ title: Protokollierung und Ablaufverfolgung – .NET Core
 description: Eine Einführung in die Protokollierung und Ablaufverfolgung mit .NET Core.
 ms.date: 08/05/2019
 ms.openlocfilehash: 392b88c9ea3c31c919a605ac0a5c886f7d63f79a
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75714422"
 ---
 # <a name="net-core-logging-and-tracing"></a>Protokollierung und Ablaufverfolgung mit .NET Core

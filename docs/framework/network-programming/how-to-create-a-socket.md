@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Erstellen eines Sockets'
+title: 'Gewusst wie: Erstellen eines Sockets'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -17,21 +17,21 @@ helpviewer_keywords:
 - Internet, sockets
 - sockets, creating
 ms.assetid: c64a049c-5981-43bc-a2dc-1851473589c7
-ms.openlocfilehash: 54706293784d77e535cac582c99b1dd21a12e380
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: e71e7e235048361580c65bdb551919fe3038130b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71048389"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79180824"
 ---
-# <a name="how-to-create-a-socket"></a>Vorgehensweise: Erstellen eines Sockets
+# <a name="how-to-create-a-socket"></a>Gewusst wie: Erstellen eines Sockets
 Bevor Sie einen Socket verwenden können, um mit einem Remotegerät zu kommunizieren, muss der Socket mit Informationen zu Protokoll und Netzwerkadresse initialisiert werden. Der Konstruktor für die Klasse <xref:System.Net.Sockets.Socket> besitzt Parameter, die die Adressfamilie, den Sockettyp und den Protokolltyp, den der Socket zum Aufbauen von Verbindungen verwendet, angeben.  
   
 ## <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird ein Socket erstellt, der verwendet werden kann, um mit einem TCP/IP-basierten Netzwerk (z.B. das Internet) zu kommunizieren.  
   
 ```csharp  
-Socket s = new Socket(AddressFamily.InterNetwork,   
+Socket s = new Socket(AddressFamily.InterNetwork,
    SocketType.Stream, ProtocolType.Tcp);  
 ```  
   
@@ -43,7 +43,7 @@ Dim s as New Socket(AddressFamily.InterNetwork, _
  Ändern Sie den Protokolltyp wie im folgenden Beispiel, um UDP statt TCP zu verwenden:  
   
 ```csharp  
-Socket s = new Socket(AddressFamily.InterNetwork,   
+Socket s = new Socket(AddressFamily.InterNetwork,
    SocketType.Dgram, ProtocolType.Udp);  
 ```  
   
@@ -60,7 +60,7 @@ Dim s as New Socket(AddressFamily.InterNetwork, _
   
  Nachdem ein **Socket** erstellt wurde, kann dieser entweder eine Verbindung zu einem Remoteendpunkt initiieren oder Verbindungen von Remotegeräten empfangen.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Verwenden von Clientsockets](using-client-sockets.md)
-- [Überwachen mit Sockets](listening-with-sockets.md)
+- [Listening with Sockets (Überwachen mit Sockets)](listening-with-sockets.md)

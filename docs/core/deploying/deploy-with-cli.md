@@ -8,11 +8,11 @@ dev_langs:
 - csharp
 - vb
 ms.openlocfilehash: f4c2a4ccf551c53e4aa4e125cb5720d6f1cc9601
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76920908"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79397992"
 ---
 # <a name="publish-net-core-apps-with-the-net-core-cli"></a>Veröffentlichen von .NET Core-Apps mit der .NET Core-CLI
 
@@ -40,7 +40,7 @@ Die `<TargetFramework>`-Einstellung der Projektdatei gibt das Standardzielframew
 
 Sie können mehrere durch Semikolons getrennte TFM-Werte in der `<TargetFrameworks>`-Einstellung festlegen, wenn Sie mehr als ein Zielframework benötigen. Mit dem `dotnet publish -f <TFM>`-Befehl können Sie eines der Frameworks veröffentlichen. Wenn Sie beispielsweise über `<TargetFrameworks>netcoreapp2.1;netcoreapp2.2</TargetFrameworks>` verfügen und `dotnet publish -f netcoreapp2.1` ausführen, wird eine Binärdatei für .NET Core 2.1 erstellt.
 
-Sofern es nicht anders festgelegt ist, ist `./bin/<BUILD-CONFIGURATION>/<TFM>/publish/` das Ausgabeverzeichnis des [`dotnet publish`](../tools/dotnet-publish.md)-Befehls. Der **BUILD-CONFIGURATION**-Standardmodus ist **Debug**, sofern er nicht mithilfe des `-c`-Parameters geändert wurde. Zum Beispiel wird mit `dotnet publish -c Release -f netcoreapp2.1` in `myfolder/bin/Release/netcoreapp2.1/publish/` veröffentlicht.
+Sofern es nicht anders festgelegt ist, ist [ das Ausgabeverzeichnis des `dotnet publish`](../tools/dotnet-publish.md)`./bin/<BUILD-CONFIGURATION>/<TFM>/publish/`-Befehls. Der **BUILD-CONFIGURATION**-Standardmodus ist **Debug**, sofern er nicht mithilfe des `-c`-Parameters geändert wurde. Zum Beispiel wird mit `dotnet publish -c Release -f netcoreapp2.1` in `myfolder/bin/Release/netcoreapp2.1/publish/` veröffentlicht.
 
 Wenn Sie das .NET Core SDK 3.0 oder höher verwenden, ist die frameworkabhängige ausführbare Datei der Standardveröffentlichungsmodus für Apps für die .NET Core-Versionen 2.1, 2.2, 3.0 oder höher.
 
@@ -131,7 +131,7 @@ Für :NET Core 2.2 oder früher müssen Sie die folgenden Parameter mit dem `do
 
 Wenn Sie den `-r`-Switch verwenden, wird der Pfad des Ausgabeordner in folgenden geändert: `./bin/<BUILD-CONFIGURATION>/<TFM>/<RID>/publish/`
 
-Führen Sie `dotnet publish -f netcoreapp2.2 -r win10-x64 --self-contained false` aus, wenn Sie die [Beispiel-App](#sample-app) verwenden. Mit diesem Befehl wird die folgende ausführbare Datei erstellt: `./bin/Debug/netcoreapp2.2/win10-x64/publish/apptest1.exe`
+Führen Sie [ aus, wenn Sie die ](#sample-app)Beispiel-App`dotnet publish -f netcoreapp2.2 -r win10-x64 --self-contained false` verwenden. Mit diesem Befehl wird die folgende ausführbare Datei erstellt: `./bin/Debug/netcoreapp2.2/win10-x64/publish/apptest1.exe`
 
 > [!NOTE]
 > Sie können die Gesamtgröße Ihrer Bereitstellung reduzieren, indem Sie den **invarianten Globalisierungsmodus** aktivieren. Dieser Modus eignet sich für Anwendungen, die nicht für den globalen Einsatz ausgelegt sind, und Formatierungskonventionen, Groß-/Kleinschreibungskonventionen, Zeichenfolgenvergleiche und Sortierreihenfolgen der [invarianten Kultur](xref:System.Globalization.CultureInfo.InvariantCulture) verwenden können. Weitere Informationen zum **invarianten Globalisierungsmodus** und seiner Aktivierung finden Sie unter [.NET Core Globalization Invariant Mode](https://github.com/dotnet/runtime/blob/master/docs/design/features/globalization-invariant-mode.md) (Invarianter Globalisierungsmodus von .NET Core).
@@ -151,7 +151,7 @@ Sie müssen die folgenden Parameter mit dem `dotnet publish`-Befehl verwenden, u
 > [!NOTE]
 > Sie können die Gesamtgröße Ihrer Bereitstellung reduzieren, indem Sie den **invarianten Globalisierungsmodus** aktivieren. Dieser Modus eignet sich für Anwendungen, die nicht für den globalen Einsatz ausgelegt sind, und Formatierungskonventionen, Groß-/Kleinschreibungskonventionen, Zeichenfolgenvergleiche und Sortierreihenfolgen der [invarianten Kultur](xref:System.Globalization.CultureInfo.InvariantCulture) verwenden können. Weitere Informationen zum **invarianten Globalisierungsmodus** und seiner Aktivierung finden Sie unter [.NET Core Globalization Invariant Mode](https://github.com/dotnet/runtime/blob/master/docs/design/features/globalization-invariant-mode.md) (Invarianter Globalisierungsmodus von .NET Core).
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [.NET Core Application Deployment Overview (Übersicht über die .NET Core-Anwendungsbereitstellung)](index.md)
 - [.NET Core Runtime-ID (RID)-Katalog](../rid-catalog.md)

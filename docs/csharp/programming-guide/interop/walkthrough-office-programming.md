@@ -10,10 +10,10 @@ helpviewer_keywords:
 - Office programming [Visual Basic]
 ms.assetid: 519cff31-f80b-4f0e-a56b-26358d0f8c51
 ms.openlocfilehash: 6c27442cb5c0c4172f503c945849e47560c2b33d
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/03/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75635352"
 ---
 # <a name="walkthrough-office-programming-c-and-visual-basic"></a>Exemplarische Vorgehensweise: Office-Programmierung (C# und Visual Basic)
@@ -32,7 +32,7 @@ Auf Ihrem Computer müssen Microsoft Office Excel und Microsoft Office Word oder
 
 ### <a name="to-set-up-an-excel-add-in-application"></a>So richten Sie eine Excel-Add-In-Anwendung ein
 
-1. Starten Sie Visual Studio.
+1. Starten Sie Visual Studio.
 
 2. Zeigen Sie im Menü **Datei** auf **Neu**, und klicken Sie dann auf **Projekt**.
 
@@ -76,7 +76,7 @@ Auf Ihrem Computer müssen Microsoft Office Excel und Microsoft Office Word oder
 
      [!code-vb[csOfficeWalkthrough#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/csofficewalkthrough/vb/account.vb#2)]
 
-3. Fügen Sie den folgenden Code in die `ThisAddIn_Startup`-Methode in *ThisAddIn.vb* oder *ThisAddIn.cs* ein, um eine `bankAccounts`-Liste mit zwei Konten zu erstellen. Die Listendeklarationen verwenden *Auflistungsinitialisierer*. Weitere Informationen finden Sie unter [Auflistungsinitialisierer](../../../visual-basic/programming-guide/language-features/collection-initializers/index.md).
+3. Fügen Sie den folgenden Code in die `bankAccounts`-Methode in `ThisAddIn_Startup`ThisAddIn.vb*oder*ThisAddIn.cs*ein, um eine*-Liste mit zwei Konten zu erstellen. Die Listendeklarationen verwenden *Auflistungsinitialisierer*. Weitere Informationen finden Sie unter [Auflistungsinitialisierer](../../../visual-basic/programming-guide/language-features/collection-initializers/index.md).
 
      [!code-csharp[csOfficeWalkthrough#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csofficewalkthrough/cs/thisaddin.cs#3)]
 
@@ -124,7 +124,7 @@ Auf Ihrem Computer müssen Microsoft Office Excel und Microsoft Office Word oder
 
 ### <a name="to-invoke-displayinexcel"></a>So rufen Sie DisplayInExcel auf
 
-1. Fügen Sie den folgenden Code am Ende der `ThisAddIn_StartUp`-Methode hinzu. Der Aufruf von `DisplayInExcel` enthält zwei Argumente. Das erste Argument ist der Name der Liste mit Konten, die verarbeitet werden sollen. Das zweite Argument ist ein mehrzeiliger Lambda-Ausdruck, der definiert, wie die Daten verarbeitet werden. Die `ID`- und `balance`-Werte für jedes Konto werden in angrenzenden Zellen angezeigt, und die Zeile wird rot dargestellt, wenn der Saldo kleiner als Null ist. Weitere Informationen finden Sie unter [Lambdaausdrücke](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md).
+1. Fügen Sie den folgenden Code am Ende der `ThisAddIn_StartUp` -Methode hinzu. Der Aufruf von `DisplayInExcel` enthält zwei Argumente. Das erste Argument ist der Name der Liste mit Konten, die verarbeitet werden sollen. Das zweite Argument ist ein mehrzeiliger Lambda-Ausdruck, der definiert, wie die Daten verarbeitet werden. Die `ID`- und `balance`-Werte für jedes Konto werden in angrenzenden Zellen angezeigt, und die Zeile wird rot dargestellt, wenn der Saldo kleiner als Null ist. Weitere Informationen finden Sie unter [Lambda Expressions (Lambdaausdrücke)](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md).
 
      [!code-csharp[csOfficeWalkthrough#9](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csofficewalkthrough/cs/thisaddin.cs#9)]
 
@@ -144,7 +144,7 @@ Auf Ihrem Computer müssen Microsoft Office Excel und Microsoft Office Word oder
 
 ### <a name="to-run-the-application"></a>So führen Sie die Anwendung aus
 
-1. Drücken Sie F5, um die Anwendung auszuführen. Excel wird gestartet und zeigt eine Tabelle mit den Informationen der beiden Konten in `bankAccounts` an. Anschließend wird ein Word-Dokument angezeigt, das einen Link zur Excel-Tabelle enthält.
+1. Drücken Sie die Taste F5, um die Anwendung auszuführen. Excel wird gestartet und zeigt eine Tabelle mit den Informationen der beiden Konten in `bankAccounts` an. Anschließend wird ein Word-Dokument angezeigt, das einen Link zur Excel-Tabelle enthält.
 
 ### <a name="to-clean-up-the-completed-project"></a>So bereinigen Sie das abgeschlossene Projekt
 
@@ -160,7 +160,7 @@ Auf Ihrem Computer müssen Microsoft Office Excel und Microsoft Office Word oder
 
 4. Klicken Sie im IL DASM-Fenster im Menü **Datei** auf **Datei** > **Öffnen**. Doppelklicken Sie auf **Visual Studio \<version>** und dann noch einmal auf **Projekte**. Öffnen Sie den Ordner für das Projekt, und suchen Sie im Ordner „bin/Debug“ nach der Datei *Projektname*.dll. Doppelklicken Sie auf *Projektname*.dll. In einem neuen Fenster werden die Attribute Ihres Projekts sowie Verweise auf andere Module und Assemblys angezeigt. Beachten Sie, dass die Namespaces `Microsoft.Office.Interop.Excel` und `Microsoft.Office.Interop.Word` in der Assembly enthalten sind. Standardmäßig importiert der Compiler in Visual Studio die benötigten Typen aus einer referenzierten PIA in Ihre Assembly.
 
-     Weitere Informationen finden Sie unter [Vorgehensweise: View Assembly Contents (Vorgehensweise: Anzeigen von Assemblyinhalt)](../../../standard/assembly/view-contents.md).
+     Weitere Informationen finden Sie unter [Vorgehensweise: Ansichtsassemblyinhalt](../../../standard/assembly/view-contents.md).
 
 5. Doppelklicken Sie auf das Symbol **MANIFEST**. Es wird ein Fenster angezeigt, das eine Liste von Assemblys enthält, die vom Projekt referenzierte Elemente enthalten. `Microsoft.Office.Interop.Excel` und `Microsoft.Office.Interop.Word` sind nicht in der Liste enthalten. Da die Typen, die das Projekt benötigt, in die Assembly importiert wurden, sind keine Verweise auf eine PIA erforderlich. Dadurch wird die Bereitstellung vereinfacht. Die PIAs müssen nicht auf dem Computer des Benutzers vorhanden sein, und da für eine Anwendung keine bestimmte PIA-Version bereitgestellt werden muss, können die Anwendungen so konzipiert sein, dass sie mit mehreren Versionen von Office funktionieren, sofern die erforderlichen APIs in allen Versionen vorhanden sind.
 
@@ -189,7 +189,7 @@ Auf Ihrem Computer müssen Microsoft Office Excel und Microsoft Office Word oder
 
 8. Klicken Sie in Visual Studio im Menü **Erstellen** auf **Projektmappe bereinigen**, um das abgeschlossene Projekt zu bereinigen.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Automatisch implementierte Eigenschaften (Visual Basic)](../../../visual-basic/programming-guide/language-features/procedures/auto-implemented-properties.md)
 - [Automatisch implementierte Eigenschaften (C#)](../classes-and-structs/auto-implemented-properties.md)
@@ -205,7 +205,7 @@ Auf Ihrem Computer müssen Microsoft Office Excel und Microsoft Office Word oder
 - [Lambdaausdrücke (C#)](../statements-expressions-operators/lambda-expressions.md)
 - [Indizierte Eigenschaften bei der COM-Interop-Programmierung](./how-to-use-indexed-properties-in-com-interop-rogramming.md)
 - [Exemplarische Vorgehensweise: Einbetten von Typinformationen aus Microsoft Office-Assemblys in Visual Studio](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ee317478(v%3dvs.120))
-- [Exemplarische Vorgehensweise: Einbetten von Typen aus verwalteten Assemblys in Visual Studio](../../../standard/assembly/embed-types-visual-studio.md)
-- [Exemplarische Vorgehensweise: Creating Your First VSTO Add-in for Excel (Exemplarische Vorgehensweise: Erstellen Ihres ersten VSTO-Add-Ins für Excel)](/visualstudio/vsto/walkthrough-creating-your-first-vsto-add-in-for-excel)
+- [Exemplarische Vorgehensweise: Einbetten von Typen aus verwalteten Assemblys](../../../standard/assembly/embed-types-visual-studio.md)
+- [Exemplarische Vorgehensweise: Erstellen des ersten VSTO-Add-Ins für Excel](/visualstudio/vsto/walkthrough-creating-your-first-vsto-add-in-for-excel)
 - [COM-Interop](../../../visual-basic/programming-guide/com-interop/index.md)
 - [Interoperabilität](./index.md)

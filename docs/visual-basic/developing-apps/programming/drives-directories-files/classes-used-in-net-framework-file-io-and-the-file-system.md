@@ -5,10 +5,10 @@ helpviewer_keywords:
 - file I/O classes
 ms.assetid: 4a5ca924-eea8-4a95-a5f0-6ac10de276a3
 ms.openlocfilehash: fe70f8fb655579049bb36fc324d04530259d25f2
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74348929"
 ---
 # <a name="classes-used-in-net-framework-file-io-and-the-file-system-visual-basic"></a>Für Datei-E/A-Vorgänge und die Arbeit mit dem Dateisystem in .NET Framework verwendete Klassen (Visual Basic)
@@ -21,7 +21,7 @@ Eine umfassendere Auflistung finden Sie unter [Übersicht über die Klassenbibli
 
  In der folgenden Tabelle werden die wichtigsten Klassen aufgeführt und beschrieben, die für Datei-E/A verwendet werden.  
   
-|Klasse|BESCHREIBUNG|  
+|Klasse|Beschreibung|  
 |-----------|-----------------|  
 |<xref:System.IO.Directory?displayProperty=nameWithType>|Stellt statische Methoden zum Erstellen, Verschieben und Auflisten über Verzeichnisse und Unterverzeichnisse hinweg zur Verfügung.|  
 |<xref:System.IO.DirectoryInfo?displayProperty=nameWithType>|Stellt Instanzmethoden zum Erstellen, Verschieben und Auflisten über Verzeichnisse und Unterverzeichnisse hinweg zur Verfügung.|  
@@ -39,7 +39,7 @@ Eine umfassendere Auflistung finden Sie unter [Übersicht über die Klassenbibli
 
  In der folgenden Tabelle werden die wichtigsten Klassen aufgeführt und beschrieben, die zum Erstellen von Streams verwendet werden.  
   
-|Klasse|BESCHREIBUNG|  
+|Klasse|Beschreibung|  
 |-----------|-----------------|  
 |<xref:System.IO.BufferedStream?displayProperty=nameWithType>|Fügt eine Pufferebene zu Lese- und Schreibvorgängen auf einem anderen Stream hinzu.|  
 |<xref:System.IO.FileStream?displayProperty=nameWithType>|Unterstützt den zufälligen Zugriff auf Dateien über die <xref:System.IO.FileStream.Seek%2A>-Methode. <xref:System.IO.FileStream> öffnet Dateien standardmäßig synchron, unterstützt aber auch den asynchronen Vorgang.|  
@@ -60,7 +60,7 @@ Eine umfassendere Auflistung finden Sie unter [Übersicht über die Klassenbibli
 |<xref:System.IO.StringReader?displayProperty=nameWithType>|Liest Zeichen aus einem `String`. Die Ausgabe kann entweder ein Stream in einer beliebigen Codierung oder ein `String` sein.|  
 |<xref:System.IO.StringWriter?displayProperty=nameWithType>|Schreibt Zeichen an einen `String`. Die Ausgabe kann entweder ein Stream in einer beliebigen Codierung oder ein `String` sein.|  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Erstellen von Streams](../../../../standard/io/composing-streams.md)
 - [Datei- und Stream-E/A](../../../../standard/io/index.md)

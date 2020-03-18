@@ -3,12 +3,12 @@ title: Untersuchen von Code mit der Roslyn-Syntaxschnellansicht in Visual Studio
 description: Die Syntaxschnellansicht bietet ein visuelles Tool, um die Modelle zu untersuchen, die das .NET Compiler Platform SDK für Code generiert.
 ms.date: 03/07/2018
 ms.custom: mvc, vs-dotnet
-ms.openlocfilehash: c4b4414dabcb6c9749a23d726e4a69334376d988
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 27e5a1f0b31dd2af2ac779223538b03cdb4db0c5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75346963"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79156986"
 ---
 # <a name="explore-code-with-the-roslyn-syntax-visualizer-in-visual-studio"></a>Untersuchen von Code mit der Roslyn-Syntaxschnellansicht in Visual Studio Code
 
@@ -22,7 +22,7 @@ Lesen Sie den Artikel zur [Übersicht](compiler-api-model.md), und machen Sie si
 
 Die **Syntaxschnellansicht** ermöglicht die Untersuchung der Syntaxstruktur für die C#- oder Visual Basic-Codedatei im aktuellen aktiven Editor-Fenster in der integrierten Entwicklungsumgebung (IDE) von Visual Studio. Die Schnellansicht kann gestartet werden, indem Sie auf **Ansicht** > **Andere Fenster** > **Syntaxschnellansicht** klicken.  Sie können auch die **Schnellstart**-Symbolleiste in der oberen rechten Ecke verwenden. Geben Sie „syntax“ ein, und der Befehl zum Öffnen der **Syntaxschnellansicht** sollte erscheinen.
 
-Dieser Befehl öffnet die Syntaxschnellansicht als unverankertes Toolfenster. Wenn Sie kein Code-Editor-Fenster geöffnet haben, ist die Anzeige leer, wie in der folgenden Abbildung dargestellt. 
+Dieser Befehl öffnet die Syntaxschnellansicht als unverankertes Toolfenster. Wenn Sie kein Code-Editor-Fenster geöffnet haben, ist die Anzeige leer, wie in der folgenden Abbildung dargestellt.
 
 ![Das Toolfenster der Syntaxschnellansicht](media/syntax-visualizer/syntax-visualizer.png)
 
@@ -32,10 +32,10 @@ Erstellen Sie ein neues Projekt mit dem Befehl **Datei** > **Neues Projekt**. Si
 
 <!-- markdownlint-disable MD025 -->
 
-# <a name="ctabcsharp"></a>[C#](#tab/csharp)
+# <a name="c"></a>[C#](#tab/csharp)
 ![Visualisieren einer C#-Syntaxstruktur](media/syntax-visualizer/visualize-csharp.png)
 
-# <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb)
+# <a name="visual-basic"></a>[Visual Basic](#tab/vb)
 ![Visualisieren einer Visual Basic-Syntaxstruktur](media/syntax-visualizer/visualize-visual-basic.png)
 
 ---
@@ -49,25 +49,25 @@ Jedes Element in der Struktur zeigt außerdem seinen eigenen **Bereich** an. Der
 Es gibt zwei Möglichkeiten, in der Struktur zu navigieren:
 
 * Erweitern oder klicken Sie auf Elemente in der Struktur. Die Schnellansicht wählt automatisch den entsprechenden Text aus, der zum Bereich des Elements im Code-Editor gehört.
-* Klicken Sie auf oder wählen Sie Text im Code-Editor. Wenn Sie im vorangegangenen Visual Basic-Beispiel die Zeile mit „Module Module1“ im Code-Editor auswählen, navigiert die Schnellansicht automatisch zum entsprechenden ModuleStatement-Knoten in der Struktur. 
+* Klicken Sie auf oder wählen Sie Text im Code-Editor. Wenn Sie im vorangegangenen Visual Basic-Beispiel die Zeile mit „Module Module1“ im Code-Editor auswählen, navigiert die Schnellansicht automatisch zum entsprechenden ModuleStatement-Knoten in der Struktur.
 
 Die Schnellansicht markiert das Element in der Struktur, dessen Bereich am besten zum Bereich des im Editor ausgewählten Texts passt.
 
 Die Schnellansicht aktualisiert die Struktur, um Änderungen in der aktiven Codedatei abzubilden. Fügen Sie einen Aufruf von `Console.WriteLine()` innerhalb von `Main()` hinzu. Während der Eingabe aktualisiert die Schnellansicht die Struktur.
 
 Unterbrechen Sie die Eingabe, nachdem Sie `Console.` eingegeben haben. Die Struktur besitzt einige rosa gefärbte Elemente. Zu diesem Zeitpunkt bestehen Fehler (auch als „Diagnose“ bezeichnet) in dem eingegebenen Code. Diese Fehler hängen mit Knoten, Tokens und Trivia in der Syntaxstruktur zusammen. Die Schnellansicht zeigt Ihnen, welche Elemente fehlerbehaftet sind, indem sie den Hintergrund rosa markiert. Sie können die Fehler an jedem rosa gefärbten Element überprüfen, indem Sie mit dem Mauszeiger auf das Element zeigen. Die Schnellansicht zeigt nur syntaktische Fehler an (das sind Fehler im Zusammenhang mit der Syntax des eingegebenen Codes); sie zeigt keine semantischen Fehler an.
- 
+
 ## <a name="syntax-graphs"></a>Syntaxdiagramme
 
-Klicken Sie mit der rechten Maustaste auf ein beliebiges Element in der Struktur, und klicken Sie auf **Gerichtetes Syntax-Diagramm anzeigen**. 
+Klicken Sie mit der rechten Maustaste auf ein beliebiges Element in der Struktur, und klicken Sie auf **Gerichtetes Syntax-Diagramm anzeigen**.
 
-# <a name="ctabcsharp"></a>[C#](#tab/csharp)
+# <a name="c"></a>[C#](#tab/csharp)
 
 Die Schnellansicht zeigt eine grafische Darstellung des Teilbaums, der von dem ausgewählten Element abstammt. Versuchen Sie diese Schritte für den **MethodDeclaration**-Knoten, der der `Main()`-Methode im C#-Beispiel entspricht. Die Schnellansicht zeigt ein Syntaxdiagramm an, das wie folgt aussieht:
 
 ![C#-Syntaxdiagramm](media/syntax-visualizer/csharp-syntax-graph.png)
 
-# <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb)
+# <a name="visual-basic"></a>[Visual Basic](#tab/vb)
 
 Versuchen Sie das Gleiche für den **SubBlock**-Knoten, der der `Main()`-Methode im vorangehenden Visual Basic-Beispiel entspricht. Die Schnellansicht zeigt ein Syntaxdiagramm an, das wie folgt aussieht:
 
@@ -87,9 +87,9 @@ Bei einem Setup mit zwei Monitoren kann das Syntaxdiagramm auch auf einen zweite
 
 ## <a name="inspecting-semantics"></a>Überprüfen der Semantik
 
-Die Syntaxschnellansicht ermöglicht die rudimentäre Überprüfung von Symbolen und semantischen Informationen. Geben Sie `double x = 1 + 1;` innerhalb von Main() im C#-Beispiel ein. Wählen Sie dann den Ausdruck `1 + 1` im Code-Editor-Fenster. Die Schnellansicht hebt den **AddExpression**-Knoten in der Schnellansicht hervor. Klicken Sie mit der rechten Maustaste auf **AddExpression**, und klicken Sie dann auf **View Symbol (if any)** (Symbol anzeigen (sofern vorhanden)). Beachten Sie, dass die meisten Menüelemente über den Qualifizierer „if any“ (sofern vorhanden) verfügen. Die Syntaxschnellansicht untersucht Eigenschaften eines Knotens, einschließlich Eigenschaften, die möglicherweise nicht bei allen Knoten vorhanden sind. 
+Die Syntaxschnellansicht ermöglicht die rudimentäre Überprüfung von Symbolen und semantischen Informationen. Geben Sie `double x = 1 + 1;` innerhalb von Main() im C#-Beispiel ein. Wählen Sie dann den Ausdruck `1 + 1` im Code-Editor-Fenster. Die Schnellansicht hebt den **AddExpression**-Knoten in der Schnellansicht hervor. Klicken Sie mit der rechten Maustaste auf **AddExpression**, und klicken Sie dann auf **View Symbol (if any)** (Symbol anzeigen (sofern vorhanden)). Beachten Sie, dass die meisten Menüelemente über den Qualifizierer „if any“ (sofern vorhanden) verfügen. Die Syntaxschnellansicht untersucht Eigenschaften eines Knotens, einschließlich Eigenschaften, die möglicherweise nicht bei allen Knoten vorhanden sind.
 
-Das Eigenschaftenraster in der Schnellansicht wird wie in der folgenden Abbildung gezeigt aktualisiert: Das Symbol für den Ausdruck ist ein **SynthesizedIntrinsicOperatorSymbol** mit **Kind = Method**.
+Das Eigenschaftenraster in der Schnellansicht wird wie in der folgenden Abbildung aktualisiert: Das Symbol für den Ausdruck ist ein **SynthesizedIntrinsicOperatorSymbol** mit **Art = Methode**.
 
 ![Symboleigenschaften](media/syntax-visualizer/symbol-properties.png)
 
@@ -139,4 +139,4 @@ Sie können mehr über APIs für die semantische Analyse im Übersichtsdokument 
 
 ## <a name="closing-the-syntax-visualizer"></a>Schließen der Syntaxschnellansicht
 
-Sie können das Schnellansichtsfenster schließen, wenn Sie es nicht zum Untersuchen von Quellcode verwenden. Die Syntaxschnellansicht aktualisiert ihre Darstellung, während Sie durch Code navigieren und ihn bearbeiten oder verändern. Das kann störend sein, wenn die Schnellansicht nicht verwendet wird. 
+Sie können das Schnellansichtsfenster schließen, wenn Sie es nicht zum Untersuchen von Quellcode verwenden. Die Syntaxschnellansicht aktualisiert ihre Darstellung, während Sie durch Code navigieren und ihn bearbeiten oder verändern. Das kann störend sein, wenn die Schnellansicht nicht verwendet wird.

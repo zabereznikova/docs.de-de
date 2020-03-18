@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - what's new [.NET Framework]
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
-ms.openlocfilehash: 00026fee12e447b7fba56b42cd86699aba38cc52
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: fa7138127379b069b646c4b2488d1973a3ddd628
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2020
-ms.locfileid: "77094682"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79143316"
 ---
 # <a name="whats-new-in-net-framework"></a>Neuerungen in .NET Framework
 
@@ -472,7 +472,7 @@ Die Anwendungskonfigurationsdatei gibt dann eine konkrete Implementierung der ab
 ```xml
 <configuration>
   <configSections>
-    <section name="SqlColumnEncryptionEnclaveProviders" type="System.Data.SqlClient.SqlColumnEncryptionEnclaveProviderConfigurationSection,System.Data,Version=4.0.0.0,Culture=neutral,PublicKeyToken=b77a5c561934e089"/> 
+    <section name="SqlColumnEncryptionEnclaveProviders" type="System.Data.SqlClient.SqlColumnEncryptionEnclaveProviderConfigurationSection,System.Data,Version=4.0.0.0,Culture=neutral,PublicKeyToken=b77a5c561934e089"/>
   </configSections>
   <SqlColumnEncryptionEnclaveProviders>
     <providers>

@@ -10,10 +10,10 @@ helpviewer_keywords:
 - exceptions, best practices
 ms.assetid: f06da765-235b-427a-bfb6-47cd219af539
 ms.openlocfilehash: 1de231b01e3fa97e78a87ae6b0595a9b5536374e
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78160169"
 ---
 # <a name="best-practices-for-exceptions"></a>Best Practices für Ausnahmen
@@ -64,7 +64,7 @@ Ausnahmen sorgen dafür, dass Fehler nicht unbemerkt bleiben, nur weil der aufru
 
 ## <a name="use-the-predefined-net-exception-types"></a>Verwenden der vordefinierten .NET-Ausnahmetypen
 
-Verwenden Sie eine neue Ausnahmeklasse nur dann, wenn sich keine vordefinierte Klasse anbietet. Zum Beispiel:
+Verwenden Sie eine neue Ausnahmeklasse nur dann, wenn sich keine vordefinierte Klasse anbietet. Beispiel:
 
 - Lösen Sie eine <xref:System.InvalidOperationException> immer dann aus, wenn aufgrund des aktuellen Status des Objekts weder ein Eigenschaftensatz noch ein Methodenaufruf geeignet sind.
 
@@ -88,7 +88,7 @@ Verwenden Sie beim Erstellen eigener Ausnahmeklassen mindestens die drei gängig
 
 - <xref:System.Exception.%23ctor%28System.String%2CSystem.Exception%29>, der eine Zeichenfolgenmeldung und eine interne Ausnahme entgegennimmt.
 
-Ein Beispiel finden Sie unter [Gewusst wie: Erstellen benutzerdefinierter Ausnahmen](how-to-create-user-defined-exceptions.md).
+Ein Beispiel finden Sie unter [Erstellen benutzerdefinierter Ausnahmen](how-to-create-user-defined-exceptions.md).
 
 ## <a name="ensure-that-exception-data-is-available-when-code-executes-remotely"></a>Sicherstellen, dass Ausnahmedaten bei der Remoteausführung von Code verfügbar sind
 
@@ -126,7 +126,7 @@ Die Stapelüberwachung beginnt bei der Anweisung, bei der die Ausnahme ausgelös
 
 ## <a name="use-exception-builder-methods"></a>Verwenden von Methoden zum Generieren von Ausnahmen
 
-Häufig löst eine Klasse die jeweils gleiche Ausnahme an unterschiedlichen Stellen in der Implementierung aus. Verwenden Sie Hilfsmethoden, die eine Ausnahme erstellen und zurückgeben, um ausufernden Code zu vermeiden. Zum Beispiel:
+Häufig löst eine Klasse die jeweils gleiche Ausnahme an unterschiedlichen Stellen in der Implementierung aus. Verwenden Sie Hilfsmethoden, die eine Ausnahme erstellen und zurückgeben, um ausufernden Code zu vermeiden. Beispiel:
 
 [!code-cpp[Conceptual.Exception.Handling#6](~/samples/snippets/cpp/VS_Snippets_CLR/conceptual.exception.handling/cpp/source.cpp#6)]
 [!code-csharp[Conceptual.Exception.Handling#6](~/samples/snippets/csharp/VS_Snippets_CLR/conceptual.exception.handling/cs/source.cs#6)]
@@ -214,6 +214,6 @@ Catch ex As Exception
 End Try
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Ausnahmen](index.md)

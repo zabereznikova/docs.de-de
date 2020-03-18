@@ -3,10 +3,10 @@ title: Entwicklungsprozess bei Docker-basierten Anwendungen
 description: In diesem Artikel erhalten Sie einen Überblick über die verschiedenen Optionen bei der Entwicklung Docker-basierter Anwendungen. Sie haben die Wahl zwischen Visual Studio für Windows, Visual Studio für Mac oder Visual Studio Code für die Unterstützung mehrerer Plattformen (Windows, macOS und Linux).
 ms.date: 01/30/2020
 ms.openlocfilehash: 799aa6fc742a8fb763ec5a7ae3cf3f70f89bed6d
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/20/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "77502717"
 ---
 # <a name="development-process-for-docker-based-applications"></a>Entwicklungsprozess bei Docker-basierten Anwendungen

@@ -3,11 +3,11 @@ title: Runtimekonfigurationsoptionen
 description: Hier erfahren Sie, wie Sie .NET Core-Anwendungen mithilfe von Runtimekonfigurationseinstellungen konfigurieren.
 ms.date: 01/21/2020
 ms.openlocfilehash: ddf68c30e620a06856f65e71bd050e1b77618f20
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76733441"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79397611"
 ---
 # <a name="net-core-run-time-configuration-settings"></a>Konfigurationseinstellungen für die .NET Core-Runtime
 
@@ -110,7 +110,7 @@ Die MSBuild-Eigenschaften zum Konfigurieren des Runtimeverhaltens finden Sie in 
 
 ## <a name="environment-variables"></a>Umgebungsvariablen
 
-Umgebungsvariablen können verwendet werden, um einige Informationen zur Runtimekonfiguration bereitzustellen. Konfigurationseinstellungen, die als Umgebungsvariablen angegeben werden, verfügen generell über das Präfix **COMPlus_**.
+Umgebungsvariablen können verwendet werden, um einige Informationen zur Runtimekonfiguration bereitzustellen. Konfigurationseinstellungen, die als Umgebungsvariablen angegeben werden, verfügen generell über das Präfix **COMPlus_** .
 
 Sie können Umgebungsvariablen über die Windows-Systemsteuerung, die Befehlszeile oder programmgesteuert durch Aufruf der <xref:System.Environment.SetEnvironmentVariable(System.String,System.String)?displayProperty=nameWithType>-Methode jeweils auf den Windows- und Linux-basierten Systemen definieren.
 

@@ -2,12 +2,12 @@
 title: Verwenden von Varianz für die generischen Delegaten Func und Action (C#)
 ms.date: 07/20/2015
 ms.assetid: 1826774f-2b7a-470f-b110-17cfdd6abdae
-ms.openlocfilehash: bbfc41fb8ab3e7d800f1eb03098e02056e694872
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 17f55d594ad4364fd29c8f6e41bd6ad2445b0986
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69659906"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79169791"
 ---
 # <a name="using-variance-for-func-and-action-generic-delegates-c"></a>Verwenden von Varianz für die generischen Delegaten Func und Action (C#)
 Diese Beispiele veranschaulichen, wie Sie Kovarianz und Kontravarianz in den generischen Delegaten `Func` und `Action` verwenden, um die Wiederverwendung von Methoden zu ermöglichen und mehr Flexibilität in Ihrem Code zu bieten.  
@@ -15,7 +15,7 @@ Diese Beispiele veranschaulichen, wie Sie Kovarianz und Kontravarianz in den gen
  Weitere Informationen zu Ko- und Kontravarianz finden Sie unter [Varianz bei Delegaten (C#)](./variance-in-delegates.md).  
   
 ## <a name="using-delegates-with-covariant-type-parameters"></a>Verwendung von Delegaten mit kovarianten Typparametern  
- Das folgende Beispiel veranschaulicht die Vorteile der Unterstützung von Kovarianz in generischen `Func`-Delegaten. Die Methode `FindByTitle` nimmt einen Parameter vom Typ `String` entgegen und gibt ein Objekt vom Typ `Employee` zurück. Allerdings können Sie diese Methode dem Delegaten `Func<String, Person>` zuweisen, da `Employee` `Person` erbt.  
+ Das folgende Beispiel veranschaulicht die Vorteile der Unterstützung von Kovarianz in generischen `Func`-Delegaten. Die Methode `FindByTitle` nimmt einen Parameter vom Typ `String` entgegen und gibt ein Objekt vom Typ `Employee` zurück. Allerdings können Sie diese Methode dem Delegaten `Func<String, Person>` zuweisen, da `Employee``Person` erbt.  
   
 ```csharp  
 // Simple hierarchy of classes.  
@@ -39,8 +39,8 @@ class Program
         // but you can assign it a method that returns Employee.  
         Func<String, Person> findPerson = FindByTitle;  
   
-        // You can also assign a delegate   
-        // that returns a more derived type   
+        // You can also assign a delegate
+        // that returns a more derived type
         // to a delegate that returns a less derived type.  
         findPerson = findEmployee;  
   
@@ -49,7 +49,7 @@ class Program
 ```  
   
 ## <a name="using-delegates-with-contravariant-type-parameters"></a>Verwendung von Delegaten mit kontravarianten Typparametern  
- Im folgenden Beispiel werden die Vorteile der Unterstützung von Kontravarianz in generischen `Action`-Delegaten veranschaulicht. Die `AddToContacts`-Methode nimmt einen Parameter vom Typ `Person` entgegen. Allerdings können Sie diese Methode dem Delegaten `Action<Employee>` zuweisen, da `Employee` `Person` erbt.  
+ Im folgenden Beispiel werden die Vorteile der Unterstützung von Kontravarianz in generischen `Action`-Delegaten veranschaulicht. Die `AddToContacts`-Methode nimmt einen Parameter vom Typ `Person` entgegen. Allerdings können Sie diese Methode dem Delegaten `Action<Employee>` zuweisen, da `Employee``Person` erbt.  
   
 ```csharp  
 public class Person { }  
@@ -67,21 +67,21 @@ class Program
         // Create an instance of the delegate without using variance.  
         Action<Person> addPersonToContacts = AddToContacts;  
   
-        // The Action delegate expects   
+        // The Action delegate expects
         // a method that has an Employee parameter,  
         // but you can assign it a method that has a Person parameter  
         // because Employee derives from Person.  
         Action<Employee> addEmployeeToContacts = AddToContacts;  
   
-        // You can also assign a delegate   
-        // that accepts a less derived parameter to a delegate   
+        // You can also assign a delegate
+        // that accepts a less derived parameter to a delegate
         // that accepts a more derived parameter.  
         addEmployeeToContacts = addPersonToContacts;  
     }  
 }  
 ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Kovarianz und Kontravarianz (C#)](./index.md)
 - [Generics](../../../../standard/generics/index.md)

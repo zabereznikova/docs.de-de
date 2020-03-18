@@ -11,10 +11,10 @@ helpviewer_keywords:
 - grouping data in collections, selecting collection class
 ms.assetid: ba049f9a-ce87-4cc4-b319-3f75c8ddac8a
 ms.openlocfilehash: fb03200c810290c970f7aa56a0e15d385aca7ca8
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75711349"
 ---
 # <a name="selecting-a-collection-class"></a>Auswählen einer Auflistungsklasse
@@ -50,13 +50,13 @@ Achten Sie darauf, dass Sie Ihre Auflistungsklasse sorgfältig auswählen. Ein f
   
 - Enthält jedes Element einen Wert, eine Kombination aus einem Schlüssel und einem Wert oder eine Kombination aus einem Schlüssel und mehreren Werten?  
   
-  - Ein Wert: Verwenden Sie eine beliebige auf der <xref:System.Collections.IList>-Schnittstelle oder der generischen Schnittstelle <xref:System.Collections.Generic.IList%601> basierende Collection.  
+  - Ein Wert: Verwenden Sie eine beliebige auf der <xref:System.Collections.IList>-Schnittstelle oder der generischen Schnittstelle <xref:System.Collections.Generic.IList%601> basierende Auflistung.  
   
-  - Ein Schlüssel und ein Wert: Verwenden Sie eine beliebige auf der <xref:System.Collections.IDictionary>-Schnittstelle oder der generischen Schnittstelle <xref:System.Collections.Generic.IDictionary%602> basierende Collection.  
+  - Ein Schlüssel und ein Wert: Verwenden Sie eine beliebige auf der <xref:System.Collections.IDictionary>-Schnittstelle oder der generischen Schnittstelle <xref:System.Collections.Generic.IDictionary%602> basierende Auflistung.  
   
-  - Ein Wert mit eingebettetem Schlüssel: Verwenden Sie die generische <xref:System.Collections.ObjectModel.KeyedCollection%602>-Klasse.  
+  - Ein Wert mit eingebettetem Schlüssel: Verwenden Sie die generische Klasse <xref:System.Collections.ObjectModel.KeyedCollection%602>.  
   
-  - Ein Schlüssel und mehrere Werte: Verwenden Sie die <xref:System.Collections.Specialized.NameValueCollection>-Klasse.  
+  - Ein Schlüssel und mehrere Werte: Verwenden Sie die Klasse <xref:System.Collections.Specialized.NameValueCollection>.  
   
 - Müssen Sie die Elemente abweichend von ihrer Eingabereihenfolge sortieren?  
   
@@ -79,9 +79,9 @@ Achten Sie darauf, dass Sie Ihre Auflistungsklasse sorgfältig auswählen. Ein f
 ## <a name="linq-to-objects-and-plinq"></a>LINQ to Objects und PLINQ  
  Mit der LINQ to Objects-Funktion können Entwickler LINQ-Abfragen für den Zugriff auf Objekte im Arbeitsspeicher verwenden, wenn der Objekttyp <xref:System.Collections.IEnumerable> oder <xref:System.Collections.Generic.IEnumerable%601> implementiert. LINQ-Abfragen bieten ein allgemeines Muster für den Datenzugriff, sind normalerweise präziser und besser lesbar als standardmäßige `foreach`-Schleifen und stellen Filter-, Sortier- und Gruppierungsfunktionen bereit. Weitere Informationen finden Sie unter [LINQ to Objects (C#)](../../csharp/programming-guide/concepts/linq/linq-to-objects.md) und [LINQ to Objects (Visual Basic)](../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md).  
   
- PLINQ stellt eine parallele Implementierung von LINQ to Objects bereit, die in vielen Szenarien eine schnellere Abfrageausführung durch eine effizientere Verwendung von Computern mit mehreren Kernen bietet. Weitere Informationen finden Sie unter [Parallel LINQ (PLINQ) (Paralleles LINQ (PLINQ))](../../../docs/standard/parallel-programming/parallel-linq-plinq.md).  
+ PLINQ stellt eine parallele Implementierung von LINQ to Objects bereit, die in vielen Szenarien eine schnellere Abfrageausführung durch eine effizientere Verwendung von Computern mit mehreren Kernen bietet. Weitere Informationen finden Sie unter [Parallel LINQ (PLINQ) Paralleles LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md).  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Collections>
 - <xref:System.Collections.Specialized>

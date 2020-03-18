@@ -2,12 +2,12 @@
 title: 'Vorgehensweise: Verbinden und Vergleichen von Zeichenfolgenauflistungen (LINQ) (C#)'
 ms.date: 07/20/2015
 ms.assetid: 25926e5b-fde2-4dc1-86a0-16ead7aa13d2
-ms.openlocfilehash: 23089835e710a7905693f8e3e3b57173085d0694
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.openlocfilehash: f73a31e109933a4b6dd0078934d89d3bb770de5c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74141417"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79169453"
 ---
 # <a name="how-to-combine-and-compare-string-collections-linq-c"></a>Vorgehensweise: Verbinden und Vergleichen von Zeichenfolgenauflistungen (LINQ) (C#)
 In diesem Beispiel wird veranschaulicht, wie Sie Dateien mit Textzeilen zusammenführen und die Ergebnisse anschließend sortieren. Insbesondere wird gezeigt, wie eine einfache Verkettung, eine Vereinigung und eine Schnittmenge von zwei Gruppen von Textzeilen ausgeführt wird.  
@@ -74,7 +74,7 @@ class MergeStrings
                 fileA.Intersect(fileB);  
             OutputQueryResults(commonNamesQuery, "Merge based on intersect:");  
   
-            // Find the matching fields in each list. Merge the two   
+            // Find the matching fields in each list. Merge the two
             // results by using Concat, and then  
             // sort using the default string comparer.  
             string nameMatch = "Garcia";  
@@ -171,7 +171,7 @@ class MergeStrings
 ## <a name="compiling-the-code"></a>Kompilieren des Codes  
  Erstellen Sie ein C#-Konsolenanwendungsprojekt mit `using`-Anweisungen für die Namespaces „System.Linq“ und „System.IO“.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [LINQ und Zeichenfolgen (C#)](./linq-and-strings.md)
-- [LINQ und Dateiverzeichnisse (C#)](./linq-and-file-directories.md)
+- [LINQ and Strings (C#) (LINQ und Zeichenfolgen (C#))](./linq-and-strings.md)
+- [LINQ and File Directories (C#) (LINQ und Dateiverzeichnisse (C#))](./linq-and-file-directories.md)

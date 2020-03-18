@@ -5,10 +5,10 @@ description: Erfahren Sie mehr über .NET Framework-Technologien, die in .NET Co
 author: cartermp
 ms.date: 04/30/2019
 ms.openlocfilehash: bd2488de653ecdfed261100b4c9019bea58fcab3
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77092940"
 ---
 # <a name="net-framework-technologies-unavailable-on-net-core"></a>.NET Framework-Technologien, die auf .NET Core nicht verfügbar sind
@@ -47,6 +47,6 @@ Verwenden Sie vom Betriebssystem bereitgestellte Sicherheitsgrenzen, wie Virtual
 
 System.EnterpriseServices (COM+) wird von .NET Core nicht unterstützt.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Übersicht über das Portieren von .NET Framework zu .NET Core](../porting/index.md)

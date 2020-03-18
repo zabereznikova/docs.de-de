@@ -3,17 +3,17 @@ title: Befehl „dotnet new“
 description: Der dotnet new Befehl erstellt neue .NET Core-Projekte basierend auf der angegebenen Vorlage
 ms.date: 02/13/2020
 ms.openlocfilehash: d3c609419596b123f5bfb3ca85cf292a61154a70
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78157218"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79398028"
 ---
 # <a name="dotnet-new"></a>dotnet new
 
 **Dieser Artikel gilt für:** ✔️ .NET Core 2.0 SDK und neuere Versionen
 
-## <a name="name"></a>name
+## <a name="name"></a>Name
 
 `dotnet new`: Erstellt ein neues Projekt, eine Konfigurationsdatei oder eine Lösung auf Grundlage der angegebenen Vorlage.
 
@@ -49,8 +49,8 @@ Der Befehl ruft die [Vorlagen-Engine](https://github.com/dotnet/templating) zum 
 
 | Vorlagen                                    | Kurzname                      | Sprache     | Tags                                  | Eingeführt |
 |----------------------------------------------|---------------------------------|--------------|---------------------------------------|------------|
-| Konsolenanwendung                          | [console](#console)             | [C#], F#, VB | Common/Console                        | 1.0        |
-| Klassenbibliothek                                | [classlib](#classlib)           | [C#], F#, VB | Common/Library                        | 1.0        |
+| Konsolenanwendung                          | [console](#console)             | [C#], F#, VB | Common/Console                        | 1,0        |
+| Klassenbibliothek                                | [classlib](#classlib)           | [C#], F#, VB | Common/Library                        | 1,0        |
 | WPF-Anwendung                              | [wpf](#wpf)                     | [C#]         | Common/WPF                            | 3.0        |
 | WPF-Klassenbibliothek                            | [wpflib](#wpf)                  | [C#]         | Common/WPF                            | 3.0        |
 | WPF-Benutzerdefinierte Steuerelementbibliothek                   | [wpfcustomcontrollib](#wpf)     | [C#]         | Common/WPF                            | 3.0        |
@@ -58,31 +58,31 @@ Der Befehl ruft die [Vorlagen-Engine](https://github.com/dotnet/templating) zum 
 | Windows Forms-Anwendung (WinForms)         | [winforms](#winforms)           | [C#]         | Common/WinForms                       | 3.0        |
 | Windows Forms-Klassenbibliothek (WinForms)       | [winforms](#winforms)        | [C#]         | Common/WinForms                       | 3.0        |
 | Workerdienst                               | [worker](#web-others)           | [C#]         | Common/Worker/Web                     | 3.0        |
-| Komponententestprojekt                            | [mstest](#test)                 | [C#], F#, VB | Test/MSTest                           | 1.0        |
+| Komponententestprojekt                            | [mstest](#test)                 | [C#], F#, VB | Test/MSTest                           | 1,0        |
 | NUnit 3-Testprojekt                         | [nunit](#nunit)                  | [C#], F#, VB | Test/NUnit                            | 2.1.400    |
 | NUnit 3-Testelement                            | `nunit-test`                    | [C#], F#, VB | Test/NUnit                            | 2.2        |
-| xUnit-Testprojekt                           | [xunit](#test)                  | [C#], F#, VB | Test/xUnit                            | 1.0        |
+| xUnit-Testprojekt                           | [xunit](#test)                  | [C#], F#, VB | Test/xUnit                            | 1,0        |
 | Razor-Komponente                              | `razorcomponent`                | [C#]         | Web/ASP.NET                           | 3.0        |
-| Seite „Razor“                                   | [page](#page)                   | [C#]         | Web/ASP.NET                           | 2.0        |
-| MVC ViewImports                              | [viewimports](#namespace)       | [C#]         | Web/ASP.NET                           | 2.0        |
-| MVC ViewStart                                | `viewstart`                     | [C#]         | Web/ASP.NET                           | 2.0        |
+| Seite „Razor“                                   | [page](#page)                   | [C#]         | Web/ASP.NET                           | 2,0        |
+| MVC ViewImports                              | [viewimports](#namespace)       | [C#]         | Web/ASP.NET                           | 2,0        |
+| MVC ViewStart                                | `viewstart`                     | [C#]         | Web/ASP.NET                           | 2,0        |
 | Blazor-Server-App                            | [blazorserver](#blazorserver)   | [C#]         | Web/Blazor                            | 3.0        |
-| ASP.NET Core leer                           | [web](#web)                     | [C#], F#     | Web/Empty                             | 1.0        |
-| ASP.NET Core-Web-App (Model-View-Controller) | [mvc](#web-options)             | [C#], F#     | Web/MVC                               | 1.0        |
+| ASP.NET Core leer                           | [web](#web)                     | [C#], F#     | Web/Empty                             | 1,0        |
+| ASP.NET Core-Web-App (Model-View-Controller) | [mvc](#web-options)             | [C#], F#     | Web/MVC                               | 1,0        |
 | ASP.NET Core-Web-App                         | [webapp, razor](#web-options)   | [C#]         | Web/MVC/Razor Pages                   | 2.2, 2.0   |
-| ASP.NET Core mit Angular                    | [angular](#spa)                 | [C#]         | Web/MVC/SPA                           | 2.0        |
-| ASP.NET Core mit React.js                   | [react](#spa)                   | [C#]         | Web/MVC/SPA                           | 2.0        |
-| ASP.NET Core mit React.js und Redux         | [reactredux](#reactredux)       | [C#]         | Web/MVC/SPA                           | 2.0        |
+| ASP.NET Core mit Angular                    | [angular](#spa)                 | [C#]         | Web/MVC/SPA                           | 2,0        |
+| ASP.NET Core mit React.js                   | [react](#spa)                   | [C#]         | Web/MVC/SPA                           | 2,0        |
+| ASP.NET Core mit React.js und Redux         | [reactredux](#reactredux)       | [C#]         | Web/MVC/SPA                           | 2,0        |
 | Razor-Klassenbibliothek                          | [razorclasslib](#razorclasslib) | [C#]         | Web/Razor/Library/Razor Class Library | 2.1        |
-| ASP.NET Core-Web-API                         | [webapi](#webapi)               | [C#], F#     | Web/WebAPI                            | 1.0        |
+| ASP.NET Core-Web-API                         | [webapi](#webapi)               | [C#], F#     | Web/WebAPI                            | 1,0        |
 | ASP.NET Core: gRPC-Dienst                    | [grpc](#web-others)             | [C#]         | Web/gRPC                              | 3.0        |
 | Protokollpufferdatei                         | [proto](#namespace)             |              | Web/gRPC                              | 3.0        |
 | dotnet: GITIGNORE-Datei                        | `gitignore`                     |              | Konfigurationen                                | 3.0        |
-| global.json-Datei                             | [globaljson](#globaljson)       |              | Konfigurationen                                | 2.0        |
-| NuGet-Konfiguration                                 | `nugetconfig`                   |              | Konfigurationen                                | 1.0        |
+| global.json-Datei                             | [globaljson](#globaljson)       |              | Konfigurationen                                | 2,0        |
+| NuGet-Konfiguration                                 | `nugetconfig`                   |              | Konfigurationen                                | 1,0        |
 | dotnet: Manifestdatei des lokalen Tools              | `tool-manifest`                 |              | Konfigurationen                                | 3.0        |
-| Web Config                                   | `webconfig`                     |              | Konfigurationen                                | 1.0        |
-| Projektmappendatei                                | `sln`                           |              | Lösung                              | 1.0        |
+| Web Config                                   | `webconfig`                     |              | Konfigurationen                                | 1,0        |
+| Projektmappendatei                                | `sln`                           |              | Lösung                              | 1,0        |
 
 ## <a name="options"></a>Optionen
 
@@ -96,7 +96,7 @@ Der Befehl ruft die [Vorlagen-Engine](https://github.com/dotnet/templating) zum 
 
 - **`-h|--help`**
 
-  Druckt Hilfe für den Befehl. Kann für den `dotnet new`-Befehl selbst oder für jede Vorlage aufgerufen werden. Beispielsweise `dotnet new mvc --help`.
+  Druckt Hilfe für den Befehl. Kann für den `dotnet new`-Befehl selbst oder für jede Vorlage aufgerufen werden. Beispiel: `dotnet new mvc --help`.
 
 - **`-i|--install <PATH|NUGET_ID>`**
 
@@ -115,7 +115,7 @@ Der Befehl ruft die [Vorlagen-Engine](https://github.com/dotnet/templating) zum 
   Gibt die Sprache der zu erstellenden Vorlage an. Die akzeptierte Sprache variiert je nach Vorlage (siehe Standardwerte im Abschnitt [Argumente](#arguments)). Für einige Vorlagen nicht gültig.
 
   > [!NOTE]
-  > Einige Shells interpretieren `#` als Sonderzeichen. In diesen Fällen müssen Sie den Sprachparameterwert in Klammern setzen. Beispielsweise `dotnet new console -lang "F#"`.
+  > Einige Shells interpretieren `#` als Sonderzeichen. In diesen Fällen müssen Sie den Sprachparameterwert in Klammern setzen. Beispiel: `dotnet new console -lang "F#"`.
 
 - **`-n|--name <OUTPUT_NAME>`**
 
@@ -365,7 +365,7 @@ Für jede Projektvorlage kann es zusätzliche Optionen geben. Die Core-Vorlagen 
 
 - **`-r|--org-read-access`**
 
-  Erteilt der Anwendung Lesezugriff auf das Verzeichnis. Gilt nur für die `SingleOrg`- oder `MultiOrg`-Authentifizierung.
+  Erteilt der Anwendung Lesezugriff auf das Verzeichnis. Gilt nur für die `SingleOrg`- oder `MultiOrg`-Authentifizierung
 
 - **`--exclude-launch-settings`**
 
@@ -377,7 +377,7 @@ Für jede Projektvorlage kann es zusätzliche Optionen geben. Die Core-Vorlagen 
 
 - **`-uld|--use-local-db`**
 
-  Gibt an, dass LocalDB statt SQLite verwendet werden soll. Gilt nur für die `Individual`- oder `IndividualB2C`-Authentifizierung.
+  Gibt an, dass LocalDB statt SQLite verwendet werden soll. Gilt nur für die `Individual`- oder `IndividualB2C`-Authentifizierung
 
 - **`--no-restore`**
 
@@ -464,7 +464,7 @@ Für jede Projektvorlage kann es zusätzliche Optionen geben. Die Core-Vorlagen 
 
 - **`-r|--org-read-access`**
 
-  Erteilt der Anwendung Lesezugriff auf das Verzeichnis. Gilt nur für die `SingleOrg`- oder `MultiOrg`-Authentifizierung.
+  Erteilt der Anwendung Lesezugriff auf das Verzeichnis. Gilt nur für die `SingleOrg`- oder `MultiOrg`-Authentifizierung
 
 - **`--exclude-launch-settings`**
 
@@ -476,7 +476,7 @@ Für jede Projektvorlage kann es zusätzliche Optionen geben. Die Core-Vorlagen 
 
 - **`-uld|--use-local-db`**
 
-  Gibt an, dass LocalDB statt SQLite verwendet werden soll. Gilt nur für die `Individual`- oder `IndividualB2C`-Authentifizierung.
+  Gibt an, dass LocalDB statt SQLite verwendet werden soll. Gilt nur für die `Individual`- oder `IndividualB2C`-Authentifizierung
 
 - **`-f|--framework <FRAMEWORK>`**
 
@@ -524,7 +524,7 @@ Für jede Projektvorlage kann es zusätzliche Optionen geben. Die Core-Vorlagen 
 
 - **`-uld|--use-local-db`**
 
-  Gibt an, dass LocalDB statt SQLite verwendet werden soll. Gilt nur für die `Individual`- oder `IndividualB2C`-Authentifizierung. Verfügbar seit .NET Core 3.0 SDK.
+  Gibt an, dass LocalDB statt SQLite verwendet werden soll. Gilt nur für die `Individual`- oder `IndividualB2C`-Authentifizierung Verfügbar seit .NET Core 3.0 SDK.
 
 - **`-f|--framework <FRAMEWORK>`**
 
@@ -725,9 +725,9 @@ Für jede Projektvorlage kann es zusätzliche Optionen geben. Die Core-Vorlagen 
   dotnet new globaljson --sdk-version 3.1.101
   ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Custom templates for dotnet new (Benutzerdefinierte Vorlagen für dotnet new)](custom-templates.md)
-- [Erstellen eines benutzerdefinierten Vorlagen-Assistenten](../tutorials/cli-templates-create-item-template.md)
+- [Erstellen eines benutzerdefinierten Vorlagen-Assistenten für „dotnet new“](../tutorials/cli-templates-create-item-template.md)
 - [dotnet/dotnet-template-samples-GitHub-Repository](https://github.com/dotnet/dotnet-template-samples)
 - [Verfügbare Vorlagen für dotnet new](https://github.com/dotnet/templating/wiki/Available-templates-for-dotnet-new)

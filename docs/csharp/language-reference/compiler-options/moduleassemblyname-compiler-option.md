@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /moduleassemblyname compiler option [C#]
 - .moduleassemblyname compiler option [C#]
 ms.assetid: d464d9b9-f18d-423b-95e9-66c7878fd53a
-ms.openlocfilehash: 7562c0609d61b2388f5063bc480a4dfc715155db
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 1477eeb0f2e16e18cb86009739bc8e7d9dee2ac0
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70970074"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79173717"
 ---
 # <a name="-moduleassemblyname-c-compiler-option"></a>-moduleassemblyname (C#-Compileroption)
 Gibt eine Assembly an, auf deren nicht öffentliche Typen ein .NET-Modul zugreifen kann.  
@@ -28,7 +28,7 @@ Gibt eine Assembly an, auf deren nicht öffentliche Typen ein .NET-Modul zugreif
  `assembly_name`  
  Der Name einer Assembly, auf deren nicht öffentliche Typen die NETMODULE-Datei zugreifen kann  
   
-## <a name="remarks"></a>Anmerkungen  
+## <a name="remarks"></a>Hinweise  
  **-moduleassemblyname** sollte beim Erstellen einer NETMODULE-Datei und wenn die folgenden Bedingungen erfüllt sind verwendet werden:  
   
 - Die NETMODULE-Datei benötigt Zugriff auf nicht öffentliche Typen in einer vorhandenen Assembly.  
@@ -56,11 +56,11 @@ using System.Runtime.CompilerServices;
   
 [assembly:InternalsVisibleTo ("csman_an_assembly")]  
   
-class An_Internal_Class   
+class An_Internal_Class
 {  
-    public void Test()   
-    {   
-        Console.WriteLine("An_Internal_Class.Test called");   
+    public void Test()
+    {
+        Console.WriteLine("An_Internal_Class.Test called");
     }  
 }  
 ```  
@@ -95,7 +95,7 @@ class A {
   
 **An_Internal_Class.Test** aufgerufen
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [C#-Compileroptionen](./index.md)
 - [Verwalten von Projekt- und Projektmappeneigenschaften](/visualstudio/ide/managing-project-and-solution-properties)

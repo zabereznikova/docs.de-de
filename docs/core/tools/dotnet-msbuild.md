@@ -3,17 +3,17 @@ title: Befehl „dotnet msbuild“
 description: Der Befehl dotnet msbuild ermöglicht den Zugriff auf die MSBuild-Befehlszeile.
 ms.date: 02/14/2020
 ms.openlocfilehash: 28a32a460d644d3e22f16b5dd9416222ae466e2e
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/20/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77503680"
 ---
 # <a name="dotnet-msbuild"></a>dotnet msbuild
 
 **Dieser Artikel gilt für:** ✔️ .NET Core 2.x SDK und neuere Versionen
 
-## <a name="name"></a>name
+## <a name="name"></a>Name
 
 `dotnet msbuild`: Erstellt ein Projekt und alle seine Abhängigkeiten
 

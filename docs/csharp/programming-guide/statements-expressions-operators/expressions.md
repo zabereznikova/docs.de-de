@@ -6,10 +6,10 @@ helpviewer_keywords:
 - C# language, expressions
 ms.assetid: c7d8feb0-0e58-4f94-8bf6-4d070550a832
 ms.openlocfilehash: 4bbee8f15c2591e8b172df9a6759449d48697804
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75699092"
 ---
 # <a name="expressions-c-programming-guide"></a>Ausdrücke (C#-Programmierhandbuch)
@@ -60,7 +60,7 @@ System.Convert.ToInt32("35");
 DoWork();  
 ```  
   
- Ein Methodenaufruf erfordert den Namen der Methode entweder als Name wie im vorherigen Beispiel oder als Ergebnis eines anderen Ausdrucks, gefolgt von einer Klammer und beliebigen Methodenparametern. Weitere Informationen finden Sie unter [Methoden](../classes-and-structs/methods.md). Ein Delegataufruf verwendet den Namen eines Delegaten sowie Methodenparameter in Klammern. Weitere Informationen finden Sie unter [Delegaten](../delegates/index.md). Methodenaufrufe und Delegataufrufe ergeben den Rückgabewert der Methode, wenn die Methode einen Wert zurückgibt. Methoden, die „void“ zurückgeben, können nicht anstatt eines Werts in einem Ausdruck verwendet werden.  
+ Ein Methodenaufruf erfordert den Namen der Methode entweder als Name wie im vorherigen Beispiel oder als Ergebnis eines anderen Ausdrucks, gefolgt von einer Klammer und beliebigen Methodenparametern. Weitere Informationen finden Sie unter [Methoden](../classes-and-structs/methods.md). Ein Delegataufruf verwendet den Namen eines Delegaten sowie Methodenparameter in Klammern. Weitere Informationen finden Sie unter [Delegaten](../delegates/index.md)definiert sind. Methodenaufrufe und Delegataufrufe ergeben den Rückgabewert der Methode, wenn die Methode einen Wert zurückgibt. Methoden, die „void“ zurückgeben, können nicht anstatt eines Werts in einem Ausdruck verwendet werden.  
 
 ## <a name="query-expressions"></a>Abfrageausdrücke
 
@@ -68,7 +68,7 @@ DoWork();
   
 ## <a name="lambda-expressions"></a>Lambdaausdrücke
 
- Lambdaausdrücke stellen „Inlinemethoden“ dar, die keinen Namen haben, jedoch über Eingabeparameter und mehrere Anweisungen verfügen können. Sie werden häufig in LINQ verwendet, um Argumente Methoden zu übergeben. Lambdaausdrücke werden entweder zu Delegaten oder Ausdrucksbaumstrukturen kompiliert. Dies hängt vom Kontext ab, in dem sie verwendet werden. Weitere Informationen finden Sie unter [Lambdaausdrücke](lambda-expressions.md).  
+ Lambdaausdrücke stellen „Inlinemethoden“ dar, die keinen Namen haben, jedoch über Eingabeparameter und mehrere Anweisungen verfügen können. Sie werden häufig in LINQ verwendet, um Argumente Methoden zu übergeben. Lambdaausdrücke werden entweder zu Delegaten oder Ausdrucksbaumstrukturen kompiliert. Dies hängt vom Kontext ab, in dem sie verwendet werden. Weitere Informationen finden Sie unter [Lambda Expressions (Lambdaausdrücke)](lambda-expressions.md).  
   
 ## <a name="expression-trees"></a>Ausdrucksbaumstrukturen
 
@@ -86,7 +86,7 @@ C# unterstützt *Ausdruckskörpermember*, mit denen Sie eine präzise Ausdrücks
 
 Weitere Informationen finden Sie im Abschnitt [Ausdrücke](~/_csharplang/spec/expressions.md) der [C#-Sprachspezifikation](~/_csharplang/spec/introduction.md).
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [C#-Programmierhandbuch](../index.md)
 - [Operatoren](../../language-reference/operators/index.md)

@@ -4,12 +4,12 @@ description: Erfahren Sie mehr zu Frameworktypen, die Ausdrucksbaumstrukturen un
 ms.date: 06/20/2016
 ms.technology: csharp-advanced-concepts
 ms.assetid: e9c85021-0d36-48af-91b7-aaaa66f22654
-ms.openlocfilehash: 157e97594f27345ac96fe91f7dd6f29907c2c7ac
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 8483c46dde3ea97138e55ab84a5924a3d2578730
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73037620"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79146085"
 ---
 # <a name="framework-types-supporting-expression-trees"></a>Framework-Typen, die Ausdrucksbaumstrukturen unterstützen
 
@@ -65,5 +65,5 @@ Es gibt Ausdrucksknotentypen, die fast alle Elemente der Syntax der C#-Sprache z
 3. Sehen Sie sich die `ExpressionVisitor`-Klasse an, um eine geänderte Ausdrucksbaumstruktur zu erstellen.
 
 Sie werden mehr finden, wenn Sie sich jeden dieser drei Bereiche ansehen. Unweigerlich, werden Sie feststellen, was Sie benötigen, wenn Sie mit einem dieser drei Schritte starten.
- 
+
  [Weiter -- Ausführen von Ausdrucksbaumstrukturen](expression-trees-execution.md)

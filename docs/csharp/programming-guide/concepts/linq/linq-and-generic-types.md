@@ -7,10 +7,10 @@ helpviewer_keywords:
 - generics [LINQ]
 ms.assetid: 660e3799-25ca-462c-8c4a-8bce04fbb031
 ms.openlocfilehash: 9a2d1ac72f70e7cd314d349e81ab2bc815a5bf13
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/03/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75635573"
 ---
 # <a name="linq-and-generic-types-c"></a>LINQ und generische Typen (C#)
@@ -34,8 +34,8 @@ LINQ-Abfragen basieren auf generischen Typen, die mit Version 2.0 von .NET Fram
   
  [!code-csharp[csLINQGettingStarted#35](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#35)]  
   
- Das Schlüsselwort `var` ist nützlich, wenn der Typ der Variablen offensichtlich ist, oder wenn es nicht so wichtig ist, die geschachtelten generischen Typen explizit festzulegen, wie z.B. diejenigen, die in Gruppenabfragen erstellt werden. Allgemein wird darauf hingewiesen, dass das Verwenden von `var` das Lesen Ihres Codes durch andere erschwert. Weitere Informationen zu finden Sie unter [Implizit typisierte lokale Variablen](../../classes-and-structs/implicitly-typed-local-variables.md).  
+ Das Schlüsselwort `var` ist nützlich, wenn der Typ der Variablen offensichtlich ist, oder wenn es nicht so wichtig ist, die geschachtelten generischen Typen explizit festzulegen, wie z.B. diejenigen, die in Gruppenabfragen erstellt werden. Allgemein wird darauf hingewiesen, dass das Verwenden von `var` das Lesen Ihres Codes durch andere erschwert. Weitere Informationen finden Sie unter [Implizit typisierte lokale Variablen](../../classes-and-structs/implicitly-typed-local-variables.md).  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Generics](../../generics/index.md)

@@ -1,47 +1,47 @@
 ---
-title: Docker-GrpC für WCF-Entwickler
-description: Erstellen von Docker-Images für ASP.net Core GrpC-Anwendungen
+title: Docker - gRPC für WCF-Entwickler
+description: Erstellen von Docker-Images für ASP.NET Core-gRPC-Anwendungen
 ms.date: 09/02/2019
-ms.openlocfilehash: d23dc46526183b459c36f11bae4def8b1c9b9410
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: e67c43f9486fbfe9a5d3e84e3b74770eb621f604
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74711298"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79148113"
 ---
 # <a name="create-docker-images"></a>Erstellen von Docker-Images
 
-In diesem Abschnitt wird die Erstellung von Docker-Images für ASP.net Core GrpC-Anwendungen behandelt, die in Docker, Kubernetes oder anderen Container Umgebungen ausgeführt werden können. Die Beispielanwendung, die mit einer ASP.net Core MVC-Web-App und einem GrpC-Dienst verwendet wird, ist im Repository [dotnet-Architecture/GrpC-for-WCF-Developers](https://github.com/dotnet-architecture/grpc-for-wcf-developers/tree/master/KubernetesSample) auf GitHub verfügbar.
+In diesem Abschnitt werden die Erstellung von Docker-Images für ASP.NET Core-gRPC-Anwendungen behandelt, die in Docker-, Kubernetes- oder anderen Containerumgebungen ausgeführt werden können. Die verwendete Beispielanwendung mit einer ASP.NET Core MVC-Web-App und einem gRPC-Dienst ist im [Repository dotnet-architecture/grpc-for-wcf-developers](https://github.com/dotnet-architecture/grpc-for-wcf-developers/tree/master/KubernetesSample) auf GitHub verfügbar.
 
-## <a name="microsoft-base-images-for-aspnet-core-applications"></a>Microsoft-Basis Images für ASP.net Core Anwendungen
+## <a name="microsoft-base-images-for-aspnet-core-applications"></a>Microsoft-Basisbilder für ASP.NET-Kernanwendungen
 
-Microsoft bietet eine Reihe von Basis Images zum entwickeln und Ausführen von .net Core-Anwendungen. Zum Erstellen eines ASP.net Core 3,0-Abbilds verwenden Sie zwei Basis Images: 
+Microsoft bietet eine Reihe von Basisabbildern zum Erstellen und Ausführen von .NET Core-Anwendungen. Um ein ASP.NET Core 3.0-Bild zu erstellen, verwenden Sie zwei Basisbilder:
 
 - Ein SDK-Image zum Erstellen und Veröffentlichen der Anwendung.
-- Ein Lauf Zeit Image für die Bereitstellung.
+- Ein Laufzeitabbild für die Bereitstellung.
 
-| Bild | Beschreibung |
+| Image | Beschreibung |
 | ----- | ----------- |
-| [mcr.microsoft.com/dotnet/core/sdk](https://hub.docker.com/_/microsoft-dotnet-core-sdk/) | Zum Entwickeln von Anwendungen mit `docker build`. Nicht zur Verwendung in der Produktion. |
-| [mcr.microsoft.com/dotnet/core/aspnet](https://hub.docker.com/_/microsoft-dotnet-core-aspnet/) | Enthält die Lauf Zeit-und ASP.net Core Abhängigkeiten. Für die Produktion. |
+| [mcr.microsoft.com/dotnet/core/sdk](https://hub.docker.com/_/microsoft-dotnet-core-sdk/) | Für Gebäudeanwendungen `docker build`mit . Nicht in der Produktion verwendet werden. |
+| [mcr.microsoft.com/dotnet/core/aspnet](https://hub.docker.com/_/microsoft-dotnet-core-aspnet/) | Enthält die Laufzeit- und ASP.NET Core-Abhängigkeiten. Für die Produktion. |
 
-Für jedes Image gibt es vier Varianten, die auf verschiedenen Linux-Distributionen basieren und durch Tags unterschieden werden.
+Für jedes Image gibt es vier Varianten, die auf verschiedenen Linux-Distributionen basieren, die sich durch Tags unterscheiden.
 
-| Imagetag (e) | Linux | Hinweise |
+| Bild-Tag(e) | Linux | Notizen |
 | --------- | ----- | ----- |
-| 3,0-Buster, 3,0 | Debian 10 | Das Standardbild, wenn keine Betriebssystem Variante angegeben ist. |
-| 3,0-Alpine | Alpine 3,9 | Alpine Base-Images sind wesentlich kleiner als Debian oder Ubuntu. |
-| 3,0-Disco | Ubuntu 19.04 | |
-| 3,0-Bionic | Ubuntu 18.04 | |
+| 3,0-Buster, 3,0 | Debian 10 | Das Standardabbild, wenn keine Betriebssystemvariante angegeben ist. |
+| 3.0-alpin | Alpine 3,9 | Alpine Basis-Images sind viel kleiner als Debian- oder Ubuntu-Images. |
+| 3.0-Disco | Ubuntu 19.04 | |
+| 3.0-bionic | Ubuntu 18.04 | |
 
-Das Alpine Base-Image ist um 100 MB im Vergleich zu 200 MB für die Debian-und Ubuntu-Images. Einige Softwarepakete oder-Bibliotheken sind in der Alpine-Paketverwaltung möglicherweise nicht verfügbar. Wenn Sie nicht sicher sind, welches Image verwendet werden soll, sollten Sie wahrscheinlich das standardmäßige Debian auswählen.
+Das Alpine-Basis-Image beträgt etwa 100 MB, verglichen mit 200 MB für die Debian- und Ubuntu-Images. Einige Softwarepakete oder Bibliotheken sind möglicherweise nicht in der Paketverwaltung von Alpine verfügbar. Wenn Sie nicht sicher sind, welches Image Sie verwenden sollen, sollten Sie wahrscheinlich das Standard-Debian wählen.
 
 > [!IMPORTANT]
-> Stellen Sie sicher, dass Sie für den Build und die Laufzeit dieselbe Variante von Linux verwenden. Anwendungen, die auf einem Variant erstellt und veröffentlicht werden, funktionieren möglicherweise nicht auf einem anderen.
+> Stellen Sie sicher, dass Sie die gleiche Linux-Variante für den Build und die Laufzeit verwenden. Anwendungen, die für eine Variante erstellt und veröffentlicht wurden, funktionieren möglicherweise nicht auf einer anderen.
 
-## <a name="create-a-docker-image"></a>Erstellen eines docker-Images
+## <a name="create-a-docker-image"></a>Erstellen eines Docker-Image
 
-Ein docker-Image wird durch eine *dockerfile-Datei*definiert. Dabei handelt es sich um eine Textdatei, die alle Befehle enthält, die zum Erstellen der Anwendung und zum Installieren von Abhängigkeiten erforderlich sind, die zum Erstellen oder Ausführen der Anwendung erforderlich sind. Das folgende Beispiel zeigt die einfachste dockerfile-Datei für eine ASP.net Core 3,0-Anwendung:
+Ein Docker-Image wird durch eine *Dockerfile*definiert. Dies ist eine Textdatei, die alle Befehle enthält, die zum Erstellen der Anwendung und zum Installieren aller Abhängigkeiten erforderlich sind, die zum Erstellen oder Ausführen der Anwendung erforderlich sind. Das folgende Beispiel zeigt die einfachste Dockerfile-Datei für eine ASP.NET Core 3.0-Anwendung:
 
 ```dockerfile
 # Application build steps
@@ -68,30 +68,30 @@ COPY --from=builder /published .
 ENTRYPOINT [ "dotnet", "StockData.dll" ]
 ```
 
-Die dockerfile-Datei besteht aus zwei Teilen: der erste verwendet das `sdk` Basis Image, um die Anwendung zu erstellen und zu veröffentlichen. die zweite erstellt ein Lauf Zeit Bild aus der `aspnet` Basis. Dies liegt daran, dass das `sdk` Abbild ungefähr 900 MB beträgt, im Vergleich zu etwa 200 MB für das Lauf Zeit Image, und der meiste Inhalt ist zur Laufzeit unnötig.
+Die Dockerfile besteht aus zwei `sdk` Teilen: Der erste verwendet das Basisabbild, um die Anwendung zu erstellen und zu veröffentlichen. die zweite erstellt ein Laufzeitbild von der `aspnet` Basis aus. Dies liegt `sdk` daran, dass das Abbild etwa 900 MB groß ist, verglichen mit etwa 200 MB für das Laufzeitabbild, und der größte Teil seines Inhalts zur Laufzeit nicht erforderlich ist.
 
 ### <a name="the-build-steps"></a>Die Buildschritte
 
 | Schritt | Beschreibung |
 | ---- | ----------- |
-| `FROM ...` | Deklariert das Basis Image und weist den `builder` Alias zu. |
-| `WORKDIR /src` | Erstellt das `/src` Verzeichnis und legt es als Aktuelles Arbeitsverzeichnis fest. |
-| `COPY . .` | Kopiert alles unterhalb des aktuellen Verzeichnisses auf dem Host in das aktuelle Verzeichnis auf dem Bild. |
-| `RUN dotnet restore` | Stellt alle externen Pakete wieder her (ASP.net Core 3,0-Framework ist mit dem SDK vorinstalliert). |
-| `RUN dotnet publish ...` | Erstellt und veröffentlicht einen Releasebuild. Beachten Sie, dass das `--runtime`-Flag nicht erforderlich ist. |
+| `FROM ...` | Deklariert das Basisbild und `builder` weist den Alias zu. |
+| `WORKDIR /src` | Erstellt `/src` das Verzeichnis und legt es als aktuelles Arbeitsverzeichnis fest. |
+| `COPY . .` | Kopiert alles unterhalb des aktuellen Verzeichnisses auf dem Host in das aktuelle Verzeichnis auf dem Image. |
+| `RUN dotnet restore` | Stellt alle externen Pakete wieder her (ASP.NET Core 3.0-Framework ist mit dem SDK vorinstalliert). |
+| `RUN dotnet publish ...` | Erstellt und veröffentlicht einen Release-Build. Beachten Sie, dass das `--runtime` Flag nicht erforderlich ist. |
 
-### <a name="the-runtime-image-steps"></a>Die Schritte zum Lauf Zeit Image
+### <a name="the-runtime-image-steps"></a>Die Laufzeitbildschritte
 
 | Schritt | Beschreibung |
 | ---- | ----------- |
-| `FROM ...` | Deklariert ein neues Basis Image. |
-| `WORKDIR /app` | Erstellt das `/app` Verzeichnis und legt es als Aktuelles Arbeitsverzeichnis fest. |
-| `COPY --from=builder ...` | Kopiert die veröffentlichte Anwendung aus dem vorherigen Bild, indem der `builder` Alias aus der ersten `FROM` Zeile verwendet wird. |
-| `ENTRYPOINT [ ... ]` | Legt den Befehl fest, der beim Starten des Containers ausgeführt wird. Der Befehl `dotnet` im Lauf Zeit Image kann nur DLL-Dateien ausführen. |
+| `FROM ...` | Deklariert ein neues Basisbild. |
+| `WORKDIR /app` | Erstellt `/app` das Verzeichnis und legt es als aktuelles Arbeitsverzeichnis fest. |
+| `COPY --from=builder ...` | Kopiert die veröffentlichte Anwendung aus dem `builder` vorherigen Bild, `FROM` indem der Alias aus der ersten Zeile verwendet wird. |
+| `ENTRYPOINT [ ... ]` | Legt fest, dass der Befehl ausgeführt wird, wenn der Container gestartet wird. Der `dotnet` Befehl im Laufzeitabbild kann nur DLL-Dateien ausführen. |
 
-### <a name="https-in-docker"></a>HTTPS in docker
+### <a name="https-in-docker"></a>HTTPS in Docker
 
-Die `ASPNETCORE_URLS`-Umgebungsvariable wird von Microsoft-Basis Images für docker auf `http://+:80`festgelegt, was bedeutet, dass Kestrel ohne HTTPS an diesem Port ausgeführt wird. Wenn Sie HTTPS mit einem benutzerdefinierten Zertifikat verwenden (wie in [selbstgeh osteten GrpC-Anwendungen](self-hosted.md)beschrieben), sollten Sie dies außer Kraft setzen. Legen Sie die Umgebungsvariable im Rahmen der Lauf Zeit Image Erstellung der dockerfile-Datei fest.
+Microsoft-Basisabbilder für `ASPNETCORE_URLS` Docker `http://+:80`legen die Umgebungsvariable auf fest, d. h., Kestrel wird ohne HTTPS auf diesem Port ausgeführt. Wenn Sie HTTPS mit einem benutzerdefinierten Zertifikat verwenden (wie in [selbstgehosteten gRPC-Anwendungen](self-hosted.md)beschrieben), sollten Sie dies überschreiben. Legen Sie die Umgebungsvariable im Laufzeitbilderstellungsteil Ihrer Dockerfile fest.
 
 ```dockerfile
 # Runtime image creation
@@ -100,26 +100,26 @@ FROM mcr.microsoft.com/dotnet/core/aspnet:3.0
 ENV ASPNETCORE_URLS=https://+:443
 ```
 
-### <a name="the-dockerignore-file"></a>Die. dockerignore-Datei
+### <a name="the-dockerignore-file"></a>Die .dockerignore-Datei
 
-Ähnlich wie `.gitignore` Dateien, die bestimmte Dateien und Verzeichnisse aus der Quell Code Verwaltung ausschließen, kann die `.dockerignore` Datei verwendet werden, um zu verhindern, dass Dateien und Verzeichnisse während des Buildvorgangs in das Image kopiert werden. Dadurch wird nicht nur Zeit gespart, sondern es können auch einige Fehler vermieden werden, die durch das Kopieren des `obj` Verzeichnisses vom PC in das Image entstehen. Sie sollten der `.dockerignore` Datei mindestens Einträge für `bin` und `obj` hinzufügen.
+Ähnlich `.gitignore` wie Dateien, die bestimmte Dateien und `.dockerignore` Verzeichnisse aus der Quellcodeverwaltung ausschließen, kann die Datei verwendet werden, um dateien- und Verzeichnisse davon auszuschließen, während des Builds in das Bild kopiert zu werden. Dies spart nicht nur Zeit beim Kopieren, sondern `obj` kann auch einige Fehler vermeiden, die entstehen, wenn das Verzeichnis von Ihrem PC in das Bild kopiert wird. Sie sollten mindestens Einträge für `bin` `obj` und `.dockerignore` zu Ihrer Datei hinzufügen.
 
 ```console
 bin/
 obj/
 ```
 
-## <a name="build-the-image"></a>Erstellen des Images
+## <a name="build-the-image"></a>Erstellen des Image
 
-Für eine Lösung mit einer einzelnen Anwendung und somit einer einzelnen dockerfile-Datei ist es am einfachsten, die dockerfile-Datei im Basisverzeichnis zu platzieren. Anders ausgedrückt: Fügen Sie Sie in dasselbe Verzeichnis wie die `.sln` Datei ein. Verwenden Sie in diesem Fall den folgenden `docker build` Befehl aus dem Verzeichnis mit der dockerfile-Datei, um das Image zu erstellen.
+Für eine Lösung mit einer einzelnen Anwendung und damit einer einzelnen Dockerfile ist es am einfachsten, die Dockerfile im Basisverzeichnis zu speichern. Mit anderen Worten, legen Sie es `.sln` in das gleiche Verzeichnis wie die Datei. Verwenden Sie in diesem Fall zum `docker build` Erstellen des Images den folgenden Befehl aus dem Verzeichnis, das die Dockerfile enthält.
 
 ```console
 docker build --tag stockdata .
 ```
 
-Das verwirrende `--tag`-Flag (das auf `-t`verkürzt werden kann) gibt den gesamten Namen des Bilds an, einschließlich des tatsächlichen Tags, wenn angegeben. Der `.` am Ende gibt den Kontext an, in dem der Build ausgeführt wird. das aktuelle Arbeitsverzeichnis für die `COPY`-Befehle in der dockerfile-Datei.
+Das verwirrend `--tag` benannte Flag (das `-t`auf gekürzt werden kann) gibt den gesamten Namen des Bildes an, einschließlich des tatsächlichen Tags, falls angegeben. Der `.` am Ende gibt den Kontext an, in dem der Build ausgeführt wird. das aktuelle Arbeitsverzeichnis `COPY` für die Befehle in der Dockerfile.
 
-Wenn Sie mehrere Anwendungen in einer einzelnen Projekt Mappe haben, können Sie die dockerfile-Datei für jede Anwendung in einem eigenen Ordner neben der `.csproj` Datei aufbewahren. Sie sollten weiterhin den `docker build` Befehl aus dem Basisverzeichnis ausführen, um sicherzustellen, dass die Projekt Mappe und alle Projekte in das Image kopiert werden. Sie können eine dockerfile-Datei unterhalb des aktuellen Verzeichnisses angeben, indem Sie das Flag `--file` (oder `-f`) verwenden.
+Wenn Sie mehrere Anwendungen in einer einzigen Lösung haben, können Sie die Dockerfile für jede Anwendung in einem eigenen Ordner neben der `.csproj` Datei aufbewahren. Sie sollten den `docker build` Befehl weiterhin aus dem Basisverzeichnis ausführen, um sicherzustellen, dass die Projektmappe und alle Projekte in das Abbild kopiert werden. Sie können eine Dockerfile unterhalb des `--file` aktuellen `-f`Verzeichnisses angeben, indem Sie das Flag (oder ) verwenden.
 
 ```console
 docker build --tag stockdata --file src/StockData/Dockerfile .
@@ -127,34 +127,34 @@ docker build --tag stockdata --file src/StockData/Dockerfile .
 
 ## <a name="run-the-image-in-a-container-on-your-machine"></a>Ausführen des Images in einem Container auf Ihrem Computer
 
-Verwenden Sie den Befehl `docker run`, um das Image in der lokalen docker-Instanz auszuführen.
+Verwenden Sie den `docker run` Befehl, um das Image in Ihrer lokalen Docker-Instanz auszuführen.
 
 ```console
 docker run -ti -p 5000:80 stockdata
 ```
 
-Das `-ti`-Flag verbindet Ihr aktuelles Terminal mit dem Terminal des Containers und wird im interaktiven Modus ausgeführt. Der `-p 5000:80` veröffentlicht (verknüpft) Port 80 im Container an Port 80 auf der localhost-Netzwerkschnittstelle.
+Das `-ti` Flag verbindet Ihr aktuelles Terminal mit dem Terminal des Containers und wird im interaktiven Modus ausgeführt. Der `-p 5000:80` veröffentlicht (verknüpft) Port 80 auf dem Container zu Port 5000 auf der lokalen Host-Netzwerkschnittstelle.
 
-## <a name="push-the-image-to-a-registry"></a>Übertragung des Images per Push in eine Registrierung
+## <a name="push-the-image-to-a-registry"></a>Pushen des Images in eine Registrierung
 
-Nachdem Sie überprüft haben, ob das Image funktioniert, überführen Sie es per Push an eine docker-Registrierung, um es auf anderen Systemen verfügbar zu machen. Interne Netzwerke müssen eine docker-Registrierung bereitstellen. Dies kann so einfach sein wie das Ausführen der [eigenen docker-`registry` Images](https://docs.docker.com/registry/deploying/) (die Docker-Registrierung wird in einem docker-Container ausgeführt), es sind jedoch verschiedene umfassendere Lösungen verfügbar. Für die externe Freigabe und die cloudnutzung stehen verschiedene verwaltete Registrierungen zur Verfügung, z. b. [Azure Container Registry](https://docs.microsoft.com/azure/container-registry/) oder [docker Hub](https://docs.docker.com/docker-hub/repos/).
+Nachdem Sie überprüft haben, ob das Image funktioniert, übertragen Sie es an eine Docker-Registrierung, um es auf anderen Systemen verfügbar zu machen. Interne Netzwerke müssen eine Docker-Registrierung bereitstellen. Dies kann so einfach sein wie das [Ausführen des eigenen `registry` Images](https://docs.docker.com/registry/deploying/) von Docker (die Docker-Registrierung wird in einem Docker-Container ausgeführt), aber es stehen verschiedene umfassendere Lösungen zur Verfügung. Für die externe Freigabe und Cloudnutzung stehen verschiedene verwaltete Registrierungsstellen zur Verfügung, z. B. [Azure Container Registry](https://docs.microsoft.com/azure/container-registry/) oder Docker [Hub](https://docs.docker.com/docker-hub/repos/).
 
-Um per Push an docker Hub zu übernehmen, stellen Sie dem Image Namen den Namen Ihres Benutzers oder Ihrer Organisation voran.
+Um einen Push-Code an Docker Hub zu übertragen, setzen Sie dem Imagenamen den Namen Ihres Benutzers oder Ihrer Organisation voran.
 
 ```console
 docker tag stockdata myorg/stockdata
 docker push myorg/stockdata
 ```
 
-Um per Push in eine private Registrierung zu übernehmen, stellen Sie dem Image Namen den Namen des Registrierungs Hosts und den Organisationsnamen voran.
+Um einen Push zu einer privaten Registrierung zu erstellen, setzen Sie dem Imagenamen den Namen des Registrierungshosts und den Organisationsnamen voran.
 
 ```console
 docker tag stockdata internal-registry:5000/myorg/stockdata
 docker push internal-registry:5000/myorg/stockdata
 ```
 
-Nachdem sich das Image in einer Registrierung befindet, können Sie es auf einzelnen docker-Hosts oder in einer Container Orchestrierungs-Engine wie Kubernetes bereitstellen.
+Nachdem sich das Image in einer Registrierung befindet, können Sie es auf einzelnen Docker-Hosts oder in einem Containerorchestrierungsmodul wie Kubernetes bereitstellen.
 
 >[!div class="step-by-step"]
->[Zurück](self-hosted.md)
+>[VorherigeS](self-hosted.md)
 >[Weiter](kubernetes.md)

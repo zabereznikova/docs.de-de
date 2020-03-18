@@ -2,12 +2,12 @@
 title: 'Vorgehensweise: Gruppieren von Dateien nach Erweiterung (LINQ) (C#)'
 ms.date: 07/20/2015
 ms.assetid: 21a98320-a5a1-4981-82d8-6a637e7d9018
-ms.openlocfilehash: d12b40c7dba7bd3e10f30ddfd394b25c36794428
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 2ee1fa1291f5845c818395dfe038ec5894adc863
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75345898"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79169154"
 ---
 # <a name="how-to-group-files-by-extension-linq-c"></a>Vorgehensweise: Gruppieren von Dateien nach Erweiterung (LINQ) (C#)
 In dieses Beispiel wird veranschaulicht, wie Sie mithilfe von LINQ erweiterte Gruppierungs- und Sortiervorgänge mit Datei- oder Ordnerlisten ausführen können. Es zeigt auch, wie der Bildlauf für die Ausgabe im Konsolenfenster mithilfe der Methoden <xref:System.Linq.Enumerable.Skip%2A> und <xref:System.Linq.Enumerable.Take%2A> durchgeführt wird.  
@@ -42,7 +42,7 @@ class GroupByExtension
             orderby fileGroup.Key  
             select fileGroup;  
   
-        // Display one group at a time. If the number of   
+        // Display one group at a time. If the number of
         // entries is greater than the number of lines  
         // in the console window, then page the output.  
         PageOutput(trimLength, queryGroupByExt);  
@@ -107,7 +107,7 @@ class GroupByExtension
 ## <a name="compiling-the-code"></a>Kompilieren des Codes  
  Erstellen Sie ein C#-Konsolenanwendungsprojekt mit `using`-Anweisungen für die Namespaces „System.Linq“ und „System.IO“.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [LINQ to Objects (C#)](./linq-to-objects.md)
-- [LINQ und Dateiverzeichnisse (C#)](./linq-and-file-directories.md)
+- [LINQ and File Directories (C#) (LINQ und Dateiverzeichnisse (C#))](./linq-and-file-directories.md)

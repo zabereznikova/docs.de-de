@@ -8,10 +8,10 @@ helpviewer_keywords:
 - .NET Framework versions, compatibility
 ms.assetid: 2f25e522-456a-48c3-8a53-e5f39275649f
 ms.openlocfilehash: e0de18b5a40875d1fec2633c16688111d8f4b9ee
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73974952"
 ---
 # <a name="version-compatibility-in-the-net-framework"></a>Kompatibilität von .NET Framework-Versionen
@@ -33,7 +33,7 @@ Fügen Sie der Konfigurationsdatei der App ein oder mehrere [\<supportedRuntime>
 </configuration>
 ```
 
-Weitere Informationen finden Sie unter [Vorgehensweise: Konfigurieren einer App zur Unterstützung von .NET Framework 4 oder 4.x](../migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md).
+Weitere Informationen finden Sie unter [Gewusst wie: Konfigurieren einer App für die Unterstützung von .NET Framework 4 oder 4.x](../migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md).
 
 ## <a name="version-compatibility-for-components"></a>Versionskompatibilität für Komponenten
 
@@ -67,7 +67,7 @@ Wenn Ihre App oder Komponente nicht wie erwartet in .NET Framework 4.5 (einschli
 
 Wenn Sie keine geeignete Problemumgehung für das Problem finden können, beachten Sie, dass .NET Framework 4.5 (oder eine seiner zugehörigen Releases) parallel mit den Versionen 1.1, 2.0 und 3.5 ausgeführt werden kann, und ein direktes Update ist, das Version 4 ersetzt. Sie können für Apps, die auf die Versionen 1.1, 2.0 und 3.5 ausgerichtet sind, die entsprechende Version von .NET Framework auf dem Zielcomputer installieren, um die App in der optimalen Umgebung auszuführen. Weitere Informationen über die parallele Ausführung finden Sie unter [Parallele Ausführung](../deployment/side-by-side-execution.md).
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Neuigkeiten](../whats-new/index.md)
 - [Veraltete Elemente in der Klassenbibliothek](../whats-new/whats-obsolete.md)

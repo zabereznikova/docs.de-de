@@ -3,10 +3,10 @@ title: Erstellen robuster Clouddienste. Beheben vorübergehender Fehler in der C
 description: Modernisieren vorhandener .NET-Anwendungen mit Azure Cloud und Windows-Containern | Erstellen robuster Clouddienste. Beheben vorübergehender Fehler in der Cloud
 ms.date: 04/30/2018
 ms.openlocfilehash: e516dc675ceb8def25c6d676bced0ea7f253b2d5
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "74711248"
 ---
 # <a name="build-resilient-services-ready-for-the-cloud-embrace-transient-failures-in-the-cloud"></a>Erstellen robuster Clouddienste: Beheben vorübergehender Fehler in der Cloud

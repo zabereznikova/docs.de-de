@@ -5,10 +5,10 @@ helpviewer_keywords:
 - lambda expressions [C#], in LINQ
 ms.assetid: 3cac4d25-d11f-4abd-9e7c-0f02e97ae06d
 ms.openlocfilehash: 92bdbf842c5c30b2f32e06f622f3e08f3c7a878f
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75711960"
 ---
 # <a name="how-to-use-lambda-expressions-in-a-query-c-programming-guide"></a>Vorgehensweise: Verwenden von Lambdaausdrücken in einer Abfrage (C#-Programmierleitfaden)
@@ -29,7 +29,7 @@ Sie können Lambdaausdrücke nicht direkt in der Abfragesyntax verwenden, sonder
 ## <a name="compiling-the-code"></a>Kompilieren des Codes  
  Um diesen Code auszuführen, kopieren Sie die Methode, und fügen Sie sie in die `StudentClass` ein, die in [Abfragen einer Sammlung von Objekten](../../linq/query-a-collection-of-objects.md) bereitgestellt wird. Rufen Sie diese Methode dann in der `Main`-Methode auf.
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Lambda-Ausdrücke](./lambda-expressions.md)
 - [Ausdrucksbaumstrukturen (C#)](../concepts/expression-trees/index.md)

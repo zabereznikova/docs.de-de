@@ -18,10 +18,10 @@ helpviewer_keywords:
 - data streams, synchronous streams
 ms.assetid: dbdd55e7-d6b9-4f9e-8abb-ab0edd4457f7
 ms.openlocfilehash: 66e7d01f37a1119b9d2076a9131aa40f26d15625
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75708190"
 ---
 # <a name="asynchronous-file-io"></a>Asynchrone Datei-E/A
@@ -57,7 +57,7 @@ Das folgende Beispiel zeigt die CodeBehind-Datei und die XAML-Datei, die verwend
 
 [!code-xaml[System.IO.WindowsRuntimeStorageExtensions#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.io.windowsruntimestorageextensions/cs/blankpage.xaml#1)]
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.IO.Stream>
 - [Datei- und Stream-E/A](index.md)

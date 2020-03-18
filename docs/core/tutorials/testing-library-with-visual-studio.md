@@ -7,10 +7,10 @@ dev_langs:
 - vb
 ms.custom: vs-dotnet, seodoc18
 ms.openlocfilehash: 307261088f5c7c69c0e69fbd6b99940c04842eec
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "78156620"
 ---
 # <a name="test-a-net-standard-library-with-net-core-in-visual-studio"></a>Testen einer .NET Standard-Bibliothek mit .NET Core in Visual Studio
@@ -154,7 +154,7 @@ In Ihrem Testlauf sind keine Fehler aufgetreten, darum verändern Sie ihn leicht
    > [!div class="mx-imgBorder"]
    > ![Test Explorer-Fenster mit fehlschlagenden Tests](./media/testing-library-with-visual-studio/failed-test-window.png)
 
-1. Wählen Sie den fehlgeschlagenen Test (`TestDoesNotStartWith`) aus. Im Fenster **Test-Explorer** wird die Assert-Meldung angezeigt: „Fehler bei Assert.IsFalse. Für 'Error' erwartet: False; tatsächlich: True“. Wegen des Fehlers wurden alle auf „Error“ folgenden Zeichenfolgen im Array nicht getestet.
+1. Wählen Sie den fehlgeschlagenen Test (`TestDoesNotStartWith`) aus. Im Fenster **Test-Explorer** wird die Assert-Meldung angezeigt: „Fehler bei Assert.IsFalse. Für 'Error' erwartet False; tatsächlich: True“. Wegen des Fehlers wurden alle auf „Error“ folgenden Zeichenfolgen im Array nicht getestet.
 
    > [!div class="mx-imgBorder"]
    > ![Fenster „Test-Explorer“, das den Assertionsfehler isFalse zeigt](./media/testing-library-with-visual-studio/failed-test-detail.png)
@@ -181,6 +181,6 @@ So testen Sie die endgültige Produktversion:
 
 Das Testen Ihrer Bibliothek ist jetzt abgeschlossen, und im nächsten Schritt machen Sie sie für die Aufrufer verfügbar. Sie können sie mit einer oder mehreren Anwendungen bündeln oder sie als NuGet-Paket verteilen. Informationen hierzu finden Sie unter [Consuming a .NET Standard Class Library (Nutzen einer .NET-Standardklassenbibliothek)](consuming-library-with-visual-studio.md).
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Grundlagen zu Komponententests: Visual Studio](/visualstudio/test/unit-test-basics)
