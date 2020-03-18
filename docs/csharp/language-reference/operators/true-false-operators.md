@@ -5,16 +5,16 @@ helpviewer_keywords:
 - false operator [C#]
 - true operator [C#]
 ms.assetid: 81a888fd-011e-4589-b242-6c261fea505e
-ms.openlocfilehash: 498f8698401e91845b14ee1dbcda84ba7166bd14
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 5ccd08a348478902bbbac36e99acf7ffc1fc814b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75712597"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78846217"
 ---
 # <a name="true-and-false-operators-c-reference"></a>Operatoren „true“ und „false“ (C#-Referenz)
 
-Der `true`-Operator gibt den [bool](../builtin-types/bool.md)-Wert `true` zurück, um anzugeben, dass der Operand definitiv den Wert „true“ hat. Der `false`-Operator gibt den `bool`-Wert `true` zurück, um anzugeben, dass der Operand definitiv den Wert „false“ hat. Es kann nicht garantiert werden, dass sich die Operatoren `true` und `false` gegenseitig ergänzen. Dies bedeutet, dass sowohl der Operator `true` als auch der Operator `false` möglicherweise den `bool`-Wert `false` für den gleichen Operanden zurückgeben. Wenn ein Typ einen der beiden Operatoren definiert, muss er auch den anderen Operator definieren.
+Der `true`-Operator gibt den [bool](../builtin-types/bool.md)-Wert `true` zurück, um anzugeben, dass der Operand definitiv den Wert „true“ hat. Der `false`-Operator gibt den `bool`-Wert `true` zurück, um anzugeben, dass der Operand definitiv den Wert „false“ hat. Es kann nicht garantiert werden, dass sich die `true`- und `false`-Operatoren gegenseitig ergänzen. Dies bedeutet, dass sowohl der Operator `true` als auch der Operator `false` möglicherweise den `bool`-Wert `false` für den gleichen Operanden zurückgeben. Wenn ein Typ einen der beiden Operatoren definiert, muss er auch den anderen Operator definieren.
 
 > [!TIP]
 > Verwenden Sie den Typ `bool?`, wenn Sie die dreiwertige Logik unterstützen müssen (z. B. wenn Sie mit Datenbanken arbeiten, die einen dreiwertigen booleschen Typ unterstützen). C# stellt die `&`- und `|`-Operatoren zur Verfügung, die die dreiwertige Logik mit den `bool?`-Operanden unterstützen. Weitere Informationen finden Sie im Abschnitt [Boolesche logische Operatoren, die NULL-Werte zulassen](boolean-logical-operators.md#nullable-boolean-logical-operators) im Artikel [Boolesche logische Operatoren](boolean-logical-operators.md).
@@ -25,22 +25,22 @@ Ein Typ mit dem definierten `true`-Operator kann der Typ des Ergebnisses eines s
 
 ## <a name="user-defined-conditional-logical-operators"></a>Benutzerdefinierte bedingte logische Operatoren
 
-Wenn ein Typ mit den definierten Operatoren `true` und `false` den [logischen OR-Operator](boolean-logical-operators.md#logical-or-operator-) `|` oder den [logischen AND-Operator](boolean-logical-operators.md#logical-and-operator-) `&` in einer bestimmten Weise [überlädt](operator-overloading.md), kann der [bedingte logische OR-Operator](boolean-logical-operators.md#conditional-logical-or-operator-) `||` bzw. der [bedingte logische AND-Operator](boolean-logical-operators.md#conditional-logical-and-operator-) `&&` für Operanden dieses Typs ausgewertet werden. Weitere Informationen finden Sie im Abschnitt [Benutzerdefinierte bedingte logische Operatoren](~/_csharplang/spec/expressions.md#user-defined-conditional-logical-operators) der [C#-Sprachspezifikation](~/_csharplang/spec/introduction.md).
+Wenn ein Typ mit den definierten Operatoren `true` und `false` den [logischen OR-Operator](operator-overloading.md) [ oder den ](boolean-logical-operators.md#logical-or-operator-)logischen AND-Operator`|` [ in einer bestimmten Weise ](boolean-logical-operators.md#logical-and-operator-)überlädt`&`, kann der [bedingte logische OR-Operator](boolean-logical-operators.md#conditional-logical-or-operator-) `||` bzw. der [bedingte logische AND-Operator](boolean-logical-operators.md#conditional-logical-and-operator-) `&&` für Operanden dieses Typs ausgewertet werden. Weitere Informationen finden Sie im Abschnitt [Benutzerdefinierte bedingte logische Operatoren](~/_csharplang/spec/expressions.md#user-defined-conditional-logical-operators) der [C#-Sprachspezifikation](~/_csharplang/spec/introduction.md).
 
 ## <a name="example"></a>Beispiel
 
-Das folgende Beispiel zeigt den Typ, der sowohl `true`- als auch `false`-Operatoren definiert. Außerdem überlädt der Typ den logischen AND-Operator `&` so, dass der Operator `&&` auch für die Operanden dieses Typs ausgewertet werden kann.
+Das folgende Beispiel zeigt den Typen, der sowohl `true`- als auch `false`-Operatoren definiert. Außerdem überlädt der Typ den logischen AND-Operator `&` so, dass der Operator `&&` auch für die Operanden dieses Typs ausgewertet werden kann.
 
-[!code-csharp[true and false operators example](~/samples/csharp/language-reference/operators/TrueFalseOperators.cs)]
+[!code-csharp[true and false operators example](snippets/TrueFalseOperators.cs)]
 
-Beachten Sie das kurzschließende Verhalten des `&&`-Operators. Wenn die `GetFuelLaunchStatus`-Methode `LaunchStatus.Red` zurückgibt, wird der rechte Operand des `&&`-Operators nicht ausgewertet. Der Grund dafür ist, dass `LaunchStatus.Red` definitiv „false“ ist. Dann hängt das Ergebnis des logischen AND-Operators nicht vom Wert des rechten Operanden ab. Die Ausgabe des Beispiels sieht folgendermaßen aus:
+Beachten Sie das kurzschließende Verhalten des `&&`-Operators. Wenn die `GetFuelLaunchStatus`-Methode `LaunchStatus.Red` zurückgibt, wird der rechte Operand des `&&`-Operators nicht ausgewertet. Der Grund dafür ist, dass `LaunchStatus.Red` definitiv „false“ ist. Dann hängt das Ergebnis des logischen AND-Operators nicht vom Wert des rechten Operanden ab. Im Beispiel wird Folgendes ausgegeben:
 
 ```console
 Getting fuel launch status...
 Wait!
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [C#-Referenz](../index.md)
 - [C#-Operatoren](index.md)

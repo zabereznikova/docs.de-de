@@ -3,10 +3,10 @@ title: Befehl „dotnet vstest“
 description: Der dotnet vstest-Befehl erstellt ein Projekt und alle seine Abhängigkeiten.
 ms.date: 02/27/2020
 ms.openlocfilehash: 88e5b6a8966d78d0746f9ea5ccbccab142a2e0f6
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "78156932"
 ---
 # <a name="dotnet-vstest"></a>dotnet vstest

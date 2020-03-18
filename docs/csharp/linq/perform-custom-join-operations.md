@@ -4,11 +4,11 @@ description: In diesem Artikel erfahren Sie, wie Sie benutzerdefinierte LINQ-JOI
 ms.date: 12/01/2016
 ms.assetid: 56a2a4a5-7299-497d-b3c3-23c848678911
 ms.openlocfilehash: 7051007c67bd64cd11ede2f4d5352ce3d497255f
-ms.sourcegitcommit: 5dcfeb59179e81071f54840d4902cbe00b184294
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54857865"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "61659851"
 ---
 # <a name="perform-custom-join-operations"></a>Ausführen von benutzerdefinierten Verknüpfungsoperationen
 
@@ -41,7 +41,7 @@ Im folgenden Beispiel muss die Abfrage zwei Sequenzen anhand übereinstimmender 
 
 [!code-csharp[csProgGuideLINQ#13](~/samples/snippets/csharp/concepts/linq/how-to-perform-custom-join-operations_2.cs)]
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Language-Integrated Query (LINQ)](index.md)
 - [join-Klausel](../language-reference/keywords/join-clause.md)

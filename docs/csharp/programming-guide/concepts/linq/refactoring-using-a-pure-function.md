@@ -3,10 +3,10 @@ title: Refactoring mithilfe einer reinen Funktion (C#)
 ms.date: 07/20/2015
 ms.assetid: a3416a45-9e12-4e4a-9747-897f06eef510
 ms.openlocfilehash: f264a0028ed265a5a4fbe1dc32f430c648724c20
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "70253076"
 ---
 # <a name="refactoring-using-a-pure-function-c"></a>Refactoring mithilfe einer reinen Funktion (C#)
@@ -154,7 +154,7 @@ class Program
 }  
 ```  
   
- Dieses Beispiel erzeugt dieselbe Ausgabe wie vor der Umgestaltung:  
+ Dieses Beispiel erzeugt dieselbe Ausgabe wie vor dem Refactoring:  
   
 ```output  
 StyleName:Heading1 >Parsing WordprocessingML with LINQ to XML<  
@@ -179,8 +179,8 @@ StyleName:Code >Hello World<
   
 - [Projecting XML in a Different Shape (C#) (Projektieren von XML in eine andere Form (C#))](./projecting-xml-in-a-different-shape.md)  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Tutorial: Bearbeiten von Inhalten in einem WordprocessingML-Dokument (C#)](./shape-of-wordprocessingml-documents.md)
+- [Tutorial: Manipulating Content in a WordprocessingML Document (C#) (Tutorial: Bearbeiten von Inhalten in einem WordprocessingML-Dokument (C#))](./shape-of-wordprocessingml-documents.md)
 - [Refactoring mit einer Erweiterungsmethode (C#)](./refactoring-using-an-extension-method.md)
-- [Refactoring in reine Funktionen (C#)](./refactoring-into-pure-functions.md)
+- [Refactoring Into Pure Functions (Refactoring in reine Funktionen (C#))](./refactoring-into-pure-functions.md)

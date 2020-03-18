@@ -4,12 +4,12 @@ description: In diesem Tutorial erfahren Sie, wie Sie Sequenzen mit LINQ generie
 ms.date: 10/29/2018
 ms.technology: csharp-linq
 ms.assetid: 0db12548-82cb-4903-ac88-13103d70aa77
-ms.openlocfilehash: 8984fdf0ff26726b6d05e8bee8a9e8ae1c350ea7
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: ece001e82c0aa44a91999bea78d2fd695ff9362b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75345613"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78240014"
 ---
 # <a name="work-with-language-integrated-query-linq"></a>Arbeiten mit LINQ (Language-Integrated Query)
 
@@ -179,7 +179,7 @@ Die <xref:System.Collections.Generic.IEnumerable%601>-Schnittstelle weist eine e
 
 Hier sehen Sie die Implementierung dieser Methode:
 
-[!CODE-csharp[InterleaveSequenceWith](../../../samples/csharp/getting-started/console-linq/extensions.cs?name=snippet1)]
+[!CODE-csharp[InterleaveSequenceWith](../../../samples/snippets/csharp/getting-started/console-linq/extensions.cs?name=snippet1)]
 
 Nachdem Sie diese Methode geschrieben haben, kehren Sie jetzt zur `Main`-Methode zurück und mischen den Kartenstapel ein Mal:
 
@@ -213,7 +213,7 @@ Wie viele Mischvorgänge sind nötig, damit der Kartenstapel wieder in seiner ur
 
 Das Schreiben einer Methode, mit der ermittelt wird, ob die beiden Sequenzen gleich sind, sollte kein Problem sein. Die Methode hat die gleiche Struktur wie die Methode, die Sie zum Mischen des Kartenstapels geschrieben haben. Der Unterschied ist, dass dieses Mal nicht für jedes Element ein `yield return` ausgeführt wird, sondern dass Sie die übereinstimmenden Elemente jeder Sequenz vergleichen. Wenn die gesamte Sequenz aufgezählt wurde und alle Elemente übereinstimmen, sind die Sequenzen gleich:
 
-[!CODE-csharp[SequenceEquals](../../../samples/csharp/getting-started/console-linq/extensions.cs?name=snippet2)]
+[!CODE-csharp[SequenceEquals](../../../samples/snippets/csharp/getting-started/console-linq/extensions.cs?name=snippet2)]
 
 Dies zeigt ein zweites LINQ-Idiom: Terminalmethoden. Diese Methoden akzeptieren eine Sequenz als Eingabe (bzw. in diesem Fall zwei Sequenzen) und geben einen einzelnen Skalarwert zurück. Terminalmethoden sind immer die endgültige Methode in einer Kette von Methoden für eine LINQ-Abfrage, daher der Namen „Terminalmethode“.
 
@@ -267,7 +267,7 @@ Denken Sie daran, dass wir den ursprünglichen Stapel mithilfe einer LINQ-Abfrag
 
 Geben Sie die folgende Methode in Ihre `Extensions.cs`-Datei ein, bzw. kopieren Sie sie hinein. Diese Erweiterungsmethode erstellt eine neue Datei namens `debug.log` in Ihrem Projektverzeichnis, und zeichnet in der Protokolldatei auf, welche Abfrage derzeit ausgeführt wird. Diese Erweiterungsmethode kann jeder Abfrage angefügt werden, um diese Abfrage als „ausgeführt“ zu kennzeichnen.
 
-[!CODE-csharp[LogQuery](../../../samples/csharp/getting-started/console-linq/extensions.cs?name=snippet3)]
+[!CODE-csharp[LogQuery](../../../samples/snippets/csharp/getting-started/console-linq/extensions.cs?name=snippet3)]
 
 Dann werden unter `File` rote Wellenlinien angezeigt. Das bedeutet, dass dieses Element nicht vorhanden ist. Es erfolgt keine Kompilierung, da der Compiler nicht weiß, worum es sich bei `File` handelt. Sie können dieses Problem lösen, indem Sie die folgende Codezeile unter die erste Zeile der Datei `Extensions.cs` einfügen:
 
@@ -329,7 +329,7 @@ Beachten Sie, dass beim Zugreifen auf eine Abfrage kein Protokolleintrag erstell
 
 Sie können hier die Leistung des Codes verbessern, um die Anzahl der Ausführungen zu reduzieren, die Sie vornehmen. Eine einfache Lösung ist das *Zwischenspeichern* der Ergebnisse der ursprünglichen LINQ-Abfrage, die den Kartenstapel erstellt. Derzeit führen Sie die Abfragen jedes Mal erneut aus, wenn die Do-while-Schleife eine Iteration durchläuft, wobei Sie jedes Mal den Kartenstapel neu erstellen und mischen. Zum Zwischenspeichern des Kartenstapels können Sie die LINQ-Methoden <xref:System.Linq.Enumerable.ToArray%2A> und <xref:System.Linq.Enumerable.ToList%2A> nutzen; wenn Sie sie an die Abfragen anfügen, führen sie die gleichen Aktionen aus, für die Sie sie programmiert haben, aber jetzt speichern sie die Ergebnisse in einem Array oder einer Liste, je nachdem, welche Methode Sie auswählen. Fügen Sie die LINQ-Methode <xref:System.Linq.Enumerable.ToArray%2A> an beide Abfragen an, und führen Sie das Programm erneut aus:
 
-[!CODE-csharp[Main](../../../samples/csharp/getting-started/console-linq/Program.cs?name=snippet1)]
+[!CODE-csharp[Main](../../../samples/snippets/csharp/getting-started/console-linq/Program.cs?name=snippet1)]
 
 Jetzt ist der Mischvorgang nach außen auf 30 Abfragen reduziert. Auch beim Mischen nach innen werden Sie ähnliche Verbesserungen feststellen: Jetzt werden 162 Abfragen ausgeführt.
 
@@ -337,7 +337,7 @@ Bitte beachten Sie: Dieses Beispiel sollte **nur** Anwendungsfälle veranschauli
 
 In der Praxis werden manche Algorithmen gut mit der strikten Auswertung ausgeführt, für andere eignet sich die verzögerte Auswertung besser. Für die routinemäßige Nutzung eignet sich die verzögerte Auswertung in der Regel besser, wenn es sich bei der Datenquelle um einen separaten Prozess handelt, beispielsweise um eine Datenbank-Engine. Bei Datenbanken ermöglicht die verzögerte Auswertung komplexere Abfragen, um nur einen Roundtrip zum Datenbankprozess und zurück zu Ihrem übrigen Code auszuführen. LINQ ist flexibel, unabhängig davon, ob Sie die verzögerte oder strikte Auswertung verwenden, also wägen Sie Ihre Prozesse ab, und wählen Sie die Art der Auswertung aus, die Ihnen die beste Leistung bietet.
 
-## <a name="conclusion"></a>Schlussbemerkung
+## <a name="conclusion"></a>Zusammenfassung
 
 In diesem Projekt wurde Folgendes behandelt:
 

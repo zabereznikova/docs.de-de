@@ -9,10 +9,10 @@ helpviewer_keywords:
 - /debug compiler option [C#]
 ms.assetid: e2b48c07-01bc-45cc-a52c-92e9085eb969
 ms.openlocfilehash: 8bb2b411dc867b6a43e52058dccf2ac980cf0b1e
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "69922513"
 ---
 # <a name="-debug-c-compiler-options"></a>-debug (C#-Compileroptionen)
@@ -32,13 +32,13 @@ Die Option **-debug** führt dazu, dass der Compiler Debuginformationen generier
  `full` &#124; `pdbonly`  
  Gibt den Typ der Debuginformationen an, die vom Compiler generiert werden. Das vollständige Argument, das aktiv ist, wenn Sie **-debug:pdbonly** nicht angeben, ermöglicht das Anfügen eines Debuggers an das ausgeführte Programm. Durch die Angabe von pdbonly wird das Debuggen von Quellcode möglich, wenn das Programm im Debugger gestartet wird. Der Assembler wird jedoch nur angezeigt, wenn das aktive Programm an den Debugger angefügt ist.  
   
-## <a name="remarks"></a>Anmerkungen  
+## <a name="remarks"></a>Hinweise  
  Verwenden Sie diese Option, um Debugbuilds zu erstellen. Wenn **-debug**, **-debug+** oder **-debug:full** nicht angegeben ist, können Sie die Ausgabedatei Ihres Programms nicht debuggen.  
   
  Wenn Sie **-debug:full** verwenden, beachten Sie, dass dies Einfluss auf die Geschwindigkeit und Größe von optimiertem JIT-Code hat und die Codequalität mit **-debug:full** beeinträchtigt sein kann. Zum Generieren von Releasecode wird empfohlen, **-debug:pdbonly** oder keine PDB-Datei zu verwenden.  
   
 > [!NOTE]
-> Ein Unterschied zwischen **-debug:pdbonly** und **-debug:full** besteht darin, dass der Compiler mit **-debug:full** ein <xref:System.Diagnostics.DebuggableAttribute>-Objekt ausgibt, das dem JIT-Compiler mitteilt, dass die Debuginformation verfügbar ist. Deshalb wird ein Fehler ausgegeben, wenn bei der Verwendung von **-debug:full** <xref:System.Diagnostics.DebuggableAttribute> in Ihrem Code auf FALSE festgelegt ist.  
+> Ein Unterschied zwischen **-debug:pdbonly** und **-debug:full** besteht darin, dass der Compiler mit **-debug:full** ein <xref:System.Diagnostics.DebuggableAttribute>-Objekt ausgibt, das dem JIT-Compiler mitteilt, dass die Debuginformation verfügbar ist. Deshalb wird ein Fehler ausgegeben, wenn bei der Verwendung von **-debug:full**<xref:System.Diagnostics.DebuggableAttribute> in Ihrem Code auf FALSE festgelegt ist.  
   
  Weitere Informationen zur Konfiguration der Leistung einer Anwendung beim Debuggen finden Sie unter [Erleichtern des Debuggens für ein Image](../../../framework/debug-trace-profile/making-an-image-easier-to-debug.md).  
   

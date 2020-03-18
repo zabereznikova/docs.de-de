@@ -1,12 +1,12 @@
 ---
 ms.openlocfilehash: 771238c53dc97f4cf4068968f3c68500ba9f87da
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "73198446"
 ---
-### <a name="caching-microsoftextensionscachingsqlserver-uses-new-sqlclient-package"></a>Caching: Microsoft.Extensions.Caching.SqlServer verwendet neues Paket SqlClient.
+### <a name="caching-microsoftextensionscachingsqlserver-uses-new-sqlclient-package"></a>Zwischenspeicherung: Microsoft.Extensions.Caching.SqlServer verwendet neues Paket SqlClient.
 
 Das Paket `Microsoft.Extensions.Caching.SqlServer` verwendet anstelle des Pakets `System.Data.SqlClient` das neue Paket `Microsoft.Data.SqlClient`. Diese Änderung kann zu geringfügigen Breaking Changes beim Verhalten führen. Weitere Informationen finden Sie unter [Introducing the new Microsoft.Data.SqlClient](https://devblogs.microsoft.com/dotnet/introducing-the-new-microsoftdatasqlclient/) (Vorstellung des neuen Microsoft.Data.SqlClient).
 
@@ -26,7 +26,7 @@ Das Paket `Microsoft.Extensions.Caching.SqlServer` hat das Paket `System.Data.Sq
 
 `Microsoft.Data.SqlClient` ist ein neues Paket, das aus `System.Data.SqlClient` erstellt wurde. Es enthält ab sofort alle neuen Funktionen.
 
-#### <a name="recommended-action"></a>Empfohlene Maßnahme
+#### <a name="recommended-action"></a>Empfohlene Aktion
 
 Kunden müssen sich um diesen Breaking Change nur kümmern, wenn sie die vom Paket `Microsoft.Extensions.Caching.SqlServer` zurückgegebenen Typen verwendet und in `System.Data.SqlClient`-Typen umgewandelt haben. Wenn z. B. eine `DbConnection` in den [alten SqlConnection-Typ](xref:System.Data.SqlClient.SqlConnection) umgewandelt wurde, muss die Umwandlung in den neuen `Microsoft.Data.SqlClient.SqlConnection`-Typ geändert werden.
 

@@ -9,10 +9,10 @@ helpviewer_keywords:
 - tasks, child tasks
 ms.assetid: c95788bf-90a6-4e96-b7bc-58e36a228cc5
 ms.openlocfilehash: 8f15ee4f136e3e2df1a4e1c7683467f2a4bc9bc0
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73123183"
 ---
 # <a name="attached-and-detached-child-tasks"></a>Angefügte und getrennte untergeordnete Aufgaben
@@ -56,7 +56,7 @@ Eine *untergeordnete Aufgabe* (oder *geschachtelte Aufgabe*) ist eine <xref:Syst
  Wenn eine getrennte untergeordnete Aufgabe eine Ausnahme auslöst, muss diese direkt in der übergeordneten Aufgabe beachtet oder behandelt werden, ebenso wie dies bei nicht geschachtelten Aufgaben der Fall ist. Wenn eine angefügte untergeordnete Aufgabe eine Ausnahme auslöst, wird die Ausnahme automatisch an die übergeordnete Aufgabe weitergeleitet und an den Thread zurückgesendet, der wartet oder auf die <xref:System.Threading.Tasks.Task%601.Result%2A?displayProperty=nameWithType>-Eigenschaft der Aufgabe zugreifen möchte. Daher können durch Verwendung angefügter untergeordneter Aufgaben alle Ausnahmen an nur einem Punkt, beim Aufruf von <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> im aufrufenden Thread, verarbeitet werden. Weitere Informationen finden Sie unter [Ausnahmebehandlung (Task Parallel Library)](../../../docs/standard/parallel-programming/exception-handling-task-parallel-library.md).  
   
 ## <a name="cancellation-and-child-tasks"></a>Abbruch und untergeordnete Aufgaben  
- Das Abbrechen einer Aufgabe ist kooperativ. Um "abbrechbar" zu sein, muss jede angefügte oder getrennte untergeordnete Aufgabe den Status des Abbruchtokens überwachen. Wenn Sie mit einer Abbruchanforderung ein übergeordnetes Element und alle untergeordneten Elemente abbrechen möchten, übergeben Sie das gleiche Token als Argument an alle Aufgaben und stellen in jeder Aufgabe die Logik zum Reagieren auf die Anforderung in bereit. Weitere Informationen finden Sie unter [Aufgabenabbruch](../../../docs/standard/parallel-programming/task-cancellation.md) und [Vorgehensweise: Abbrechen einer Aufgabe und ihrer untergeordneten Elemente](../../../docs/standard/parallel-programming/how-to-cancel-a-task-and-its-children.md).  
+ Das Abbrechen einer Aufgabe ist kooperativ. Um "abbrechbar" zu sein, muss jede angefügte oder getrennte untergeordnete Aufgabe den Status des Abbruchtokens überwachen. Wenn Sie mit einer Abbruchanforderung ein übergeordnetes Element und alle untergeordneten Elemente abbrechen möchten, übergeben Sie das gleiche Token als Argument an alle Aufgaben und stellen in jeder Aufgabe die Logik zum Reagieren auf die Anforderung in bereit. Weitere Informationen finden Sie unter [Aufgabenabbruch](../../../docs/standard/parallel-programming/task-cancellation.md) und [Gewusst wie: Abbrechen eine Aufgabe und der zugehörigen untergeordneten Aufgaben](../../../docs/standard/parallel-programming/how-to-cancel-a-task-and-its-children.md).  
   
 ### <a name="when-the-parent-cancels"></a>Abbruch eines übergeordneten Elements  
  Wenn eine übergeordnete Aufgabe abgebrochen wird, bevor eine untergeordnete Aufgabe gestartet wurde, wird die untergeordnete Aufgabe nie gestartet. Wenn ein übergeordnetes Element nach dem Start einer untergeordneten Aufgabe abgebrochen wird, wird die untergeordnete bis zum Abschluss ausgeführt, sofern keine eigene Abbruchlogik vorhanden ist. Weitere Informationen finden Sie unter [Aufgabenabbruch](../../../docs/standard/parallel-programming/task-cancellation.md).  
@@ -74,9 +74,9 @@ Eine *untergeordnete Aufgabe* (oder *geschachtelte Aufgabe*) ist eine <xref:Syst
   
  Wenn eine untergeordnete Aufgabe nicht an die übergeordnete Aufgabe angefügt werden soll, geben Sie die <xref:System.Threading.Tasks.TaskCreationOptions.DenyChildAttach?displayProperty=nameWithType>-Option an, wenn Sie das übergeordnete <xref:System.Threading.Tasks.Task> oder das <xref:System.Threading.Tasks.Task%601>-Objekt erstellen. Wenn eine Aufgabe versucht, sich an ihre übergeordnete Aufgabe anzufügen und für die übergeordnete Aufgabe die <xref:System.Threading.Tasks.TaskCreationOptions.DenyChildAttach?displayProperty=nameWithType>-Option festgelegt wurde, kann die untergeordnete Aufgabe nicht an die übergeordnete Aufgabe angefügt werden und wird so ausgeführt, als sei die <xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent?displayProperty=nameWithType>-Option nicht festgelegt worden.  
   
- Sie können auch verhindern, dass sich eine untergeordnete Aufgabe an das übergeordnete Element anfügt, wenn die untergeordnete Aufgabe nicht rechtzeitig beendet wird. Da eine übergeordnete Aufgabe nicht beendet wird, ehe alle untergeordneten Aufgaben abgeschlossen sind, kann eine untergeordnete Aufgabe mit langer Laufzeit zu einer Verschlechterung der Leistung der gesamten App führen. Ein Beispiel zur Verbesserung der App-Leistung durch Verhindern des Anfügens einer Aufgabe an das übergeordnete Element finden Sie unter [Vorgehensweise: Verhindern des Anfügens einer untergeordneten Aufgabe an die übergeordnete Aufgabe](../../../docs/standard/parallel-programming/how-to-prevent-a-child-task-from-attaching-to-its-parent.md).  
+ Sie können auch verhindern, dass sich eine untergeordnete Aufgabe an das übergeordnete Element anfügt, wenn die untergeordnete Aufgabe nicht rechtzeitig beendet wird. Da eine übergeordnete Aufgabe nicht beendet wird, ehe alle untergeordneten Aufgaben abgeschlossen sind, kann eine untergeordnete Aufgabe mit langer Laufzeit zu einer Verschlechterung der Leistung der gesamten App führen. Ein Beispiel zur Verbesserung der App-Leistung durch Verhindern des Anfügens einer Aufgabe an das übergeordnete Element finden Sie unter [Gewusst wie: Verhindern des Anfügens einer untergeordneten Aufgabe an die übergeordnete Aufgabe](../../../docs/standard/parallel-programming/how-to-prevent-a-child-task-from-attaching-to-its-parent.md).  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Parallele Programmierung](../../../docs/standard/parallel-programming/index.md)
 - [Datenparallelität](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md)

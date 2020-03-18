@@ -14,10 +14,10 @@ helpviewer_keywords:
 - Insert method
 ms.assetid: 06fdf123-2fac-4459-8904-eb48ab908a30
 ms.openlocfilehash: ef65c50111d6ba91ab70d0b9c8cb90c606f9366c
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73103820"
 ---
 # <a name="creating-new-strings-in-net"></a>Erstellen neuer Zeichenfolgen in .NET
@@ -32,7 +32,7 @@ ms.locfileid: "73103820"
 ## <a name="methods-that-return-strings"></a>Methoden, die Zeichenfolgen zurückgeben  
  Die folgende Tabelle führt verschiedene nützliche Methoden auf, die neue Zeichenfolgenobjekte zurückgeben.  
   
-|Methodenname|Verwendung|  
+|Methodenname|Zweck|  
 |-----------------|---------|  
 |<xref:System.String.Format%2A?displayProperty=nameWithType>|Erstellt eine formatierte Zeichenfolge aus einem Satz von Eingabeobjekten.|  
 |<xref:System.String.Concat%2A?displayProperty=nameWithType>|Erstellt Zeichenfolgen aus mindestens zwei Zeichenfolgen.|  
@@ -78,7 +78,7 @@ ms.locfileid: "73103820"
  [!code-csharp[Strings.Creating#5](../../../samples/snippets/csharp/VS_Snippets_CLR/Strings.Creating/cs/Example.cs#5)]
  [!code-vb[Strings.Creating#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Strings.Creating/vb/Example.vb#5)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Grundlegende Zeichenfolgenoperationen](../../../docs/standard/base-types/basic-string-operations.md)
 - [Kombinierte Formatierung](../../../docs/standard/base-types/composite-formatting.md)

@@ -10,10 +10,10 @@ helpviewer_keywords:
 - includehex
 ms.assetid: ad22b4b8-00af-4778-9cca-cb609ce1f8ff
 ms.openlocfilehash: fd617e152b1e86cc71dd8e3cc8a01f1d2f52c30a
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "71047901"
 ---
 # <a name="interpreting-network-tracing"></a>Interpretieren von Netzwerkablaufverfolgung
@@ -47,5 +47,5 @@ Wenn die Netzwerkablaufverfolgung aktiviert ist, können Sie die Ablaufverfolgun
 ## <a name="see-also"></a>Siehe auch
 
 - [Aktivieren der Netzwerkablaufverfolgung](enabling-network-tracing.md)
-- [Vorgehensweise: Konfigurieren der Netzwerkablaufverfolgung](how-to-configure-network-tracing.md)
+- [How to: Konfigurieren der Netzwerkablaufverfolgung](how-to-configure-network-tracing.md)
 - [Netzwerkablaufverfolgung in .NET Framework](network-tracing.md)

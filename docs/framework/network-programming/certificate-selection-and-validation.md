@@ -3,10 +3,10 @@ title: Zertifikatauswahl und -überprüfung
 ms.date: 03/30/2017
 ms.assetid: c933aca2-4cd0-4ff1-9df9-267143f25a6f
 ms.openlocfilehash: aea47360ab1bb9dad446a5a7b19a91ea688953c4
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "71048746"
 ---
 # <a name="certificate-selection-and-validation"></a>Zertifikatauswahl und -überprüfung
@@ -52,7 +52,7 @@ Das *HttpCfg.exe*-Tool kann verwendet werden, um Serverzertifikate für die <xre
   
  Zusätzlich zu diesen Tools stellen die <xref:System.Security.Cryptography.X509Certificates.X509Certificate>- und <xref:System.Security.Cryptography.X509Certificates.X509Certificate2>-Klassen Methoden zum Laden eines Zertifikats aus dem Dateisystem bereit.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Security in Network Programming (Sicherheit in der Netzwerkprogrammierung)](security-in-network-programming.md)
 - [Netzwerkprogrammierung in .NET Framework](index.md)

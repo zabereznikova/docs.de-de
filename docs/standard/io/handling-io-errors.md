@@ -12,10 +12,10 @@ ms.workload:
 - dotnet
 - dotnetcore
 ms.openlocfilehash: 51eb0e758f1ae8fb41c842ef9b32a9f8928af9ac
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73120741"
 ---
 # <a name="handling-io-errors-in-net"></a>Behandeln von E/A-Fehlern in .NET
@@ -24,10 +24,10 @@ ms.locfileid: "73120741"
 
 - <xref:System.IO.IOException?displayProperty=nameWithType>, die Basisklasse aller <xref:System.IO>-Ausnahmetypen. Sie wird für Fehler ausgelöst, deren Rückgabecodes aus dem Betriebssystem sich nicht direkt anderen Ausnahmetypen zuordnen lassen.
 - <xref:System.IO.FileNotFoundException?displayProperty=nameWithType>.
-- <xref:System.IO.DirectoryNotFoundException?displayProperty=nameWithType>
-- <xref:System.IO.DriveNotFoundException??displayProperty=nameWithType>
-- <xref:System.IO.PathTooLongException?displayProperty=nameWithType>
-- <xref:System.OperationCanceledException?displayProperty=nameWithType>
+- <xref:System.IO.DirectoryNotFoundException?displayProperty=nameWithType>.
+- <xref:System.IO.DriveNotFoundException??displayProperty=nameWithType>.
+- <xref:System.IO.PathTooLongException?displayProperty=nameWithType>.
+- <xref:System.OperationCanceledException?displayProperty=nameWithType>.
 - <xref:System.UnauthorizedAccessException?displayProperty=nameWithType>.
 - <xref:System.ArgumentException?displayProperty=nameWithType>, die für ungültige Zeichen in Pfaden für .NET Framework und .NET Core 2.0 sowie frühere Versionen ausgelöst wird.
 - <xref:System.NotSupportedException?displayProperty=nameWithType>, die für ungültige Doppelpunkte in .NET Framework ausgelöst wird.
@@ -45,7 +45,7 @@ Die genauen Umstände, unter denen das Betriebssystem bestimmte Fehlercodes zur�
 
 Aufgrund dieses Rückgriffs auf das Betriebssystem können identische Ausnahmebedingungen (wie etwa der Fehler des nicht gefundenen Verzeichnisses in unserem Beispiel) dazu führen, dass eine E/A-Methode irgendeine aus der gesamten Klasse der E/A-Ausnahmen auslöst. Das bedeutet, dass beim Aufrufen von E/A-APIs Ihr Code in der Lage sein sollte, die meisten oder alle diese Ausnahmen zu behandeln, wie in der folgenden Tabelle dargestellt:
 
-| Ausnahmetyp | .NET Core | .NET Framework |
+| Ausnahmetyp | .NET Core | .NET Framework |
 |---|---|---|
 | <xref:System.IO.IOException> | Ja | Ja |
 | <xref:System.IO.FileNotFoundException> | Ja | Ja |
@@ -83,7 +83,7 @@ Sie können diese mithilfe einer `When`-Klausel in einer catch-Anweisung behande
 [!code-csharp[io-exception-handling](~/samples/snippets/standard/io/io-exceptions/cs/io-exceptions.cs)]
 [!code-vb[io-exception-handling](~/samples/snippets/standard/io/io-exceptions/vb/io-exceptions.vb)]
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Behandeln und Auslösen von Ausnahmen in .NET](../exceptions/index.md)
 - [Ausnahmebehandlung (Task Parallel Library)](../parallel-programming/exception-handling-task-parallel-library.md)

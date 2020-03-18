@@ -3,10 +3,10 @@ title: Versionsverwaltung für .NET Core-Runtime und SDK
 description: In diesem Artikel erfahren Sie, wie das .NET Core SDK und die Runtime versioniert werden (ähnlich der semantischen Versionierung).
 ms.date: 07/26/2018
 ms.openlocfilehash: c85a2112b439768068663688947960ac814de824
-ms.sourcegitcommit: cbdc0f4fd39172b5191a35200c33d5030774463c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75777316"
 ---
 # <a name="overview-of-how-net-core-is-versioned"></a>Übersicht über die .NET Core-Versionsverwaltung
@@ -80,11 +80,11 @@ Die für .NET Core heruntergeladenen Dateien tragen die Versionsnummer, zum Beis
 
 ### <a name="preview-versions"></a>Vorschauversionen
 
-Der Version von Vorschauversionen ist ein `-preview[number]-([build]|"final")` angehängt. Beispielsweise `2.0.0-preview1-final`.
+Der Version von Vorschauversionen ist ein `-preview[number]-([build]|"final")` angehängt. Beispiel: `2.0.0-preview1-final`.
 
 ### <a name="servicing-versions"></a>Wartung von Versionen
 
-Nach Erscheinen eines Release produzieren die Releaseabteilungen im Allgemeinen keine täglichen Builds mehr und beginnen stattdessen mit der Produktion von Wartungsbuilds. Der Versionsangabe von Wartungsversionen ist ein `-servicing-[number]` angehängt. Beispielsweise `2.0.1-servicing-006924`.
+Nach Erscheinen eines Release produzieren die Releaseabteilungen im Allgemeinen keine täglichen Builds mehr und beginnen stattdessen mit der Produktion von Wartungsbuilds. Der Versionsangabe von Wartungsversionen ist ein `-servicing-[number]` angehängt. Beispiel: `2.0.1-servicing-006924`.
 
 ## <a name="relationship-to-net-standard-versions"></a>Beziehung zu .NET Standard-Versionen
 
@@ -96,15 +96,15 @@ Die Implementierungen auf jeder Plattform können aktualisiert werden (in der Re
 
 Jede Version von .NET Core implementiert eine Version von .NET Standard. Das Implementieren einer Version von .NET Standard bedeutet Unterstützung für frühere Versionen von .NET Standard. .NET Standard -und .NET Core-Version unabhängig voneinander. Es ist Zufall, dass .NET Core 2.0 .NET Standard 2.0 implementiert. .NET Core 2.1 implementiert auch .NET Standard 2.0. .NET Core unterstützt zukünftige Versionen von .NET Standard, sobald diese verfügbar werden.
 
-| .NET Core | .NET-Standard |
+| .NET Core | .NET Standard |
 |-----------|---------------|
-| 1.0       | bis zu 1.6     |
-| 2.0       | bis zu 2.0     |
+| 1,0       | bis zu 1.6     |
+| 2,0       | bis zu 2.0     |
 | 2.1       | bis zu 2.0     |
 | 2.2       | bis zu 2.0     |
 | 3.0       | bis zu 2.1     |
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Zielframeworks](../../standard/frameworks.md)
 - [.NET Core distribution packaging (Verpacken der Verteilung in .NET Core)](../build/distribution-packaging.md)

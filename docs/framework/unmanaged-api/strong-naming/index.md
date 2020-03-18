@@ -7,10 +7,10 @@ helpviewer_keywords:
 - unmanaged API reference [.NET Framework], strong naming
 ms.assetid: 428c68b6-a7b4-44be-b280-75905f46612c
 ms.openlocfilehash: 7d18513450111d58b5d26fd834addd465cfc4267
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73140630"
 ---
 # <a name="strong-naming-unmanaged-api-reference"></a>Verwenden von starken Namen (Referenz zur nicht verwalteten API)
@@ -104,7 +104,7 @@ Die API für starke Namen ermöglicht es einem Client, die starke Namenssignieru
  [PublicKeyBlob-Struktur](publickeyblob-structure.md)  
  Stellt den öffentlichen Schlüssel eines öffentlichen/privaten Schlüsselpaars im binären Format dar.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [ICLRStrongName-Schnittstelle](../hosting/iclrstrongname-interface.md)
 - [Referenz zur nicht verwalteten API](../index.md)

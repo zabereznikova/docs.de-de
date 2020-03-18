@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Ausführen einer Aktion, wenn ein Datenflussblock Daten empfängt'
+title: 'Gewusst wie: Eine Aktion ausführen, wenn ein Datenflussblock Daten empfängt'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -10,13 +10,13 @@ helpviewer_keywords:
 - TPL dataflow library, receiving data
 ms.assetid: fc2585dc-965e-4632-ace7-73dd02684ed3
 ms.openlocfilehash: 89ab2bb18e5fe00a4d1b79d911bb0f7524b83104
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73124212"
 ---
-# <a name="how-to-perform-action-when-a-dataflow-block-receives-data"></a>Vorgehensweise: Ausführen einer Aktion, wenn ein Datenflussblock Daten empfängt
+# <a name="how-to-perform-action-when-a-dataflow-block-receives-data"></a>Gewusst wie: Eine Aktion ausführen, wenn ein Datenflussblock Daten empfängt
 *Ausführungsdatenflussblock*-Typen rufen einen vom Benutzer bereitgestellten Delegaten auf, wenn sie Daten empfangen. Die Klassen <xref:System.Threading.Tasks.Dataflow.ActionBlock%601?displayProperty=nameWithType>, <xref:System.Threading.Tasks.Dataflow.TransformBlock%602?displayProperty=nameWithType> und <xref:System.Threading.Tasks.Dataflow.TransformManyBlock%602?displayProperty=nameWithType> sind Typen von Ausführungsdatenflussblöcken. Sie können das Schlüsselwort `delegate` (`Sub` in Visual Basic), <xref:System.Action%601>, <xref:System.Func%602> oder einen Lambdaausdruck verwenden, wenn Sie eine Arbeitsfunktion für einen Ausführungsdatenflussblock bereitstellen. In diesem Dokument wird beschrieben, wie <xref:System.Func%602> und Lambdaausdrücke verwendet werden, um Aktionen in Ausführungsblöcken auszuführen.  
 
 [!INCLUDE [tpl-install-instructions](../../../includes/tpl-install-instructions.md)]
@@ -42,6 +42,6 @@ ms.locfileid: "73124212"
  [!code-csharp[TPLDataflow_ExecutionBlocks#3](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_executionblocks/cs/dataflowexecutionblocks.cs#3)]
  [!code-vb[TPLDataflow_ExecutionBlocks#3](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_executionblocks/vb/dataflowexecutionblocks.vb#3)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Dataflow (Datenfluss)](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)

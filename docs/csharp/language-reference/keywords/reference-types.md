@@ -9,10 +9,10 @@ helpviewer_keywords:
 - types [C#], reference types
 ms.assetid: 801cf030-6e2d-4a0d-9daf-1431b0c31f47
 ms.openlocfilehash: b2d6cc94c11ca6305a75e9ee489af53ad957201e
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/24/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "76744520"
 ---
 # <a name="reference-types-c-reference"></a>Verweistypen (C#-Referenz)
@@ -35,9 +35,9 @@ Es gibt zwei Arten von Typen in C#: Verweistypen und Werttypen. Variablen von Ve
 
 - [string](../builtin-types/reference-types.md)
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [C#-Referenz](../index.md)
 - [C#-Schlüsselwörter](index.md)
 - [Zeigertypen](../../programming-guide/unsafe-code-pointers/pointer-types.md)
-- [Werttypen](../builtin-types/value-types.md)
+- [Value types (Werttypen)](../builtin-types/value-types.md)

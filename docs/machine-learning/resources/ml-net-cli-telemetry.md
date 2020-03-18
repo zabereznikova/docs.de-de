@@ -3,13 +3,13 @@ title: Erfassen von Telemetriedaten durch die ML.NET-CLI
 description: Erfahren Sie mehr über die die Telemetriefeatures der ML.NET-CLI, die Nutzungsinformationen für die Analyse darüber erfassen, welche Daten gesammelt werden. Erfahren Sie auch, wie Sie diese Features deaktivieren können. Außerdem finden Sie hier Links zur .NET-Lizenzvereinbarung und Informationen zur Einhaltung der DSGVO durch Microsoft.
 ms.topic: conceptual
 ms.date: 09/03/2019
-ms.custom: ''
-ms.openlocfilehash: edd74b6f3d3c50d5eff012629f0b1db6b62d9021
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.custom: mlnet-tooling
+ms.openlocfilehash: 99e11acba343cc689c3219ca9316144fc62cd618
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73977266"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "78849743"
 ---
 # <a name="telemetry-collection-by-the-mlnet-cli"></a>Erfassen von Telemetriedaten durch die ML.NET-CLI
 
@@ -25,7 +25,7 @@ Das Produktteam schätzt diese Erkenntnis, aber wir wissen auch, dass nicht jede
 
 Der Befehl `mlnet` startet die ML.NET-CLI, aber die Befehl selbst sammelt noch keine Telemetriedaten.
 
-Die Telemetrie wird durch die Ausführung des Befehls `mlnet` *nicht aktiviert*, wenn kein Befehl angefügt ist. Beispiel:
+Die Telemetrie wird durch die Ausführung des Befehls `mlnet`*nicht aktiviert*, wenn kein Befehl angefügt ist. Zum Beispiel:
 
 - `mlnet`
 - `mlnet --help`

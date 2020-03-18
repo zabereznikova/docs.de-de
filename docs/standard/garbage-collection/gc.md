@@ -5,11 +5,11 @@ ms.date: 07/22/2016
 ms.technology: dotnet-standard
 ms.assetid: d095b0b6-2454-4e23-80b4-c9e8a447116c
 ms.openlocfilehash: 8046cb744dccaf512208d517c243640820efce8e
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45685763"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "61945365"
 ---
 # <a name="automatic-memory-management-and-garbage-collection"></a>Automatische Speicherverwaltung und Garbage Collection
 
@@ -45,7 +45,7 @@ Nachdem der Garbage Collector die erste Garbage Collection der Generation 0 ausg
 
 Für die meisten von einer Anwendung erzeugten Objekte führt der Garbage Collector alle Aufgaben der Speicherverwaltung automatisch aus. Allerdings ist bei nicht verwalteten Ressourcen explizites Bereinigen erforderlich. Die häufigsten nicht verwalteten Ressourcen sind Objekte, die eine Betriebssystemressource umschließen, z. B. ein Dateihandle, ein Fensterhandle oder eine Netzwerkverbindung. Obwohl der Garbage Collector die Lebensdauer eines verwalteten Objekts, das eine nicht verwaltete Ressource kapselt, verfolgen kann, stehen ihm keine genauen Informationen zum Bereinigen dieser Ressource zur Verfügung. Wenn Sie ein Objekt erstellen möchten, das eine nicht verwaltete Ressource kapselt, ist es ratsam, Code zum Bereinigen der nicht verwalteten Ressource in einer öffentlichen `Dispose`-Methode bereitzustellen. Durch Bereitstellen der `Dispose`-Methode wird Benutzern des Objekts die Möglichkeit gegeben, nicht mehr benötigten Speicherplatz explizit freizugeben, sobald das Objekt nicht mehr verwendet wird. Wenn Sie ein Objekt verwenden, das eine nicht verwaltete Ressource kapselt, sollten Sie die `Dispose`-Methode beachten und bei Bedarf aufrufen. Weitere Informationen zum Bereinigen nicht verwalteter Ressourcen und ein Beispiel für ein Entwurfsmuster zum Implementieren von `Dispose` finden Sie unter [Garbage Collection](index.md).
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [System.GC](xref:System.GC)
 - [Garbage Collection in .NET](index.md)

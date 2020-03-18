@@ -9,10 +9,10 @@ helpviewer_keywords:
 - international applications [.NET Framework], best practices
 ms.assetid: f08169c7-aad8-4ec3-9a21-9ebd3b89986c
 ms.openlocfilehash: a2cd1039f95a763002922fc2fa24eff77838de80
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73141299"
 ---
 # <a name="best-practices-for-developing-world-ready-applications"></a>Empfehlungen für die Entwicklung weltweit einsatzfähiger Anwendungen
@@ -99,7 +99,7 @@ In diesem Abschnitt wird die empfohlene Vorgehensweise zum Entwickeln von weltwe
 
 5. Der uiCulture-Wert kann auf die vom Browser akzeptierte Sprache festgelegt werden.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Globalisierung und Lokalisierung](../../../docs/standard/globalization-localization/index.md)
 - [Ressourcen in Desktop-Apps](../../../docs/framework/resources/index.md)

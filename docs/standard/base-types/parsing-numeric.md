@@ -12,17 +12,17 @@ helpviewer_keywords:
 - base types, parsing strings
 ms.assetid: e39324ee-72e5-42d4-a80d-bf3ee7fc6c59
 ms.openlocfilehash: ac44282a06b2b3710d3a9e5390c7a514c1632c3a
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73127601"
 ---
 # <a name="parsing-numeric-strings-in-net"></a>Analysieren numerischer Zeichenfolgen in .NET
 Alle numerischen Typen weisen zwei statische Analysemethoden auf, `Parse` und `TryParse`, mit denen Sie die Zeichenfolgendarstellung einer Zahl in einen numerischen Typ konvertieren können. Mit diesen Methoden können Sie Zeichenfolgen analysieren, die mithilfe der Formatzeichenfolgen erstellt wurden, die unter [Standardformatzeichenfolgen für Zahlen](../../../docs/standard/base-types/standard-numeric-format-strings.md) und [Benutzerdefinierte Zahlenformatzeichenfolgen](../../../docs/standard/base-types/custom-numeric-format-strings.md) dokumentiert sind. In der Standardeinstellung können die Methoden `Parse` und `TryParse` Zeichenfolgen, die nur Vorkommastellen enthalten, erfolgreich in ganzzahlige Werte konvertieren. Sie können Zeichenfolgen, die Vor- und Nachkommastellen, Gruppentrennzeichen und ein Dezimaltrennzeichen enthalten, erfolgreich in Gleitkommawerte konvertieren. Die `Parse`-Methode löst eine Ausnahme aus, wenn der Vorgang einen Fehler verursacht, wohingegen die `TryParse`-Methode `false` zurückgibt.  
   
 ## <a name="parsing-and-format-providers"></a>Analyse und Formatanbieter  
- In der Regel unterscheiden sich die Zeichenfolgendarstellungen numerischer Werte je nach Kultur. Elemente numerischer Zeichenfolgen wie Währungssymbole, Gruppentrennzeichen (oder Tausendertrennzeichen) und Dezimaltrennzeichen variieren alle je nach Kultur. Analysemethoden verwenden entweder implizit oder explizit einen Formatanbieter, der diese kulturspezifischen Variationen erkennt. Wird in einem Aufruf der `Parse`- oder der `TryParse`-Methode kein Formatanbieter angegeben, so wird der der aktuellen Threadkultur zugeordnete Formatanbieter verwendet (das von der <xref:System.Globalization.NumberFormatInfo.CurrentInfo%2A?displayProperty=nameWithType>-Eigenschaft zurückgegebene <xref:System.Globalization.NumberFormatInfo>-Objekt).  
+ In der Regel unterscheiden sich die Zeichenfolgendarstellungen numerischer Werte je nach Kultur. Elemente numerischer Zeichenfolgen wie Währungssymbole, Gruppentrennzeichen (oder Tausendertrennzeichen) und Dezimaltrennzeichen variieren alle je nach Kultur. Analysemethoden verwenden entweder implizit oder explizit einen Formatanbieter, der diese kulturspezifischen Variationen erkennt. Wird in einem Aufruf der `Parse`- oder der `TryParse`-Methode kein Formatanbieter angegeben, so wird der der aktuellen Threadkultur zugeordnete Formatanbieter verwendet (das von der <xref:System.Globalization.NumberFormatInfo>-Eigenschaft zurückgegebene <xref:System.Globalization.NumberFormatInfo.CurrentInfo%2A?displayProperty=nameWithType>-Objekt).  
   
  Ein Formatanbieter wird durch eine <xref:System.IFormatProvider>-Implementierung dargestellt. Diese Schnittstelle verfügt über einen einzelnen Member, die <xref:System.IFormatProvider.GetFormat%2A>-Methode, deren einziger Parameter ein <xref:System.Type>-Objekt für den zu formatierenden Typ ist. Diese Methode gibt das Objekt mit den Formatierungsinformationen zurück. .NET unterstützt die folgenden beiden <xref:System.IFormatProvider>-Implementierungen zur Analyse numerischer Zeichenfolgen:  
   
@@ -38,7 +38,7 @@ Alle numerischen Typen weisen zwei statische Analysemethoden auf, `Parse` und `T
 ## <a name="parsing-and-numberstyles-values"></a>Analyse und NumberStyles-Werte  
  Die Stilelemente (z.B. Leerzeichen, Gruppentrennzeichen und Dezimaltrennzeichen), die der Analysevorgang verarbeiten kann, werden durch einen <xref:System.Globalization.NumberStyles>-Enumerationswert definiert. Standardmäßig werden Zeichenfolgen, die ganzzahlige Werte darstellen, über den <xref:System.Globalization.NumberStyles.Integer?displayProperty=nameWithType>-Wert analysiert, der nur Ziffern, vorangestellte und nachfolgende Leerzeichen sowie ein Vorzeichen zulässt. Zeichenfolgen, die Gleitkommawerte darstellen, werden mithilfe einer Kombination der Werte <xref:System.Globalization.NumberStyles.Float?displayProperty=nameWithType> und <xref:System.Globalization.NumberStyles.AllowThousands?displayProperty=nameWithType> analysiert. Dieser zusammengesetzte Stil lässt Dezimalstellen sowie vorangestellte und nachfolgende Leerzeichen, ein Vorzeichen, ein Dezimaltrennzeichen, ein Gruppentrennzeichen und einen Exponenten zu. Durch den Aufruf einer Überladung der `Parse`- oder der `TryParse`-Methode mit einem Parameter vom Typ <xref:System.Globalization.NumberStyles> und durch Festlegen von <xref:System.Globalization.NumberStyles>-Flags können Sie die Stilelemente steuern, die in der Zeichenfolge vorhanden sein dürfen, damit der Analysevorgang erfolgreich durchgeführt werden kann.  
   
- Beispielsweise kann eine Zeichenfolge, die ein Gruppentrennzeichen enthält, nicht mithilfe der <xref:System.Int32.Parse%28System.String%29?displayProperty=nameWithType>-Methode in einen <xref:System.Int32>-Wert konvertiert werden. Die Konvertierung ist jedoch erfolgreich, wenn Sie das <xref:System.Globalization.NumberStyles.AllowThousands?displayProperty=nameWithType>-Flag verwenden, wie im folgenden Beispiel veranschaulicht.  
+ Beispielsweise kann eine Zeichenfolge, die ein Gruppentrennzeichen enthält, nicht mithilfe der <xref:System.Int32>-Methode in einen <xref:System.Int32.Parse%28System.String%29?displayProperty=nameWithType>-Wert konvertiert werden. Die Konvertierung ist jedoch erfolgreich, wenn Sie das <xref:System.Globalization.NumberStyles.AllowThousands?displayProperty=nameWithType>-Flag verwenden, wie im folgenden Beispiel veranschaulicht.  
   
  [!code-csharp[Parsing.Numbers#2](../../../samples/snippets/csharp/VS_Snippets_CLR/parsing.numbers/cs/styles1.cs#2)]
  [!code-vb[Parsing.Numbers#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/parsing.numbers/vb/styles1.vb#2)]  
@@ -81,8 +81,8 @@ Alle numerischen Typen weisen zwei statische Analysemethoden auf, `Parse` und `T
  [!code-csharp[Parsing.Numbers#3](../../../samples/snippets/csharp/VS_Snippets_CLR/parsing.numbers/cs/unicode1.cs#3)]
  [!code-vb[Parsing.Numbers#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/parsing.numbers/vb/unicode1.vb#3)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Globalization.NumberStyles>
-- [Parsing Strings](../../../docs/standard/base-types/parsing-strings.md)
+- [Analysieren von Zeichenfolgen](../../../docs/standard/base-types/parsing-strings.md)
 - [Formatierung von Typen](../../../docs/standard/base-types/formatting-types.md)

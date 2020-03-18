@@ -4,10 +4,10 @@ description: Beschreibt die Unterstützung von C# für Ausschüsse, bei denen es
 ms.technology: csharp-fundamentals
 ms.date: 07/21/2017
 ms.openlocfilehash: a76e7fc13f92ec0de87153bb35eb3924bb317616
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "73100636"
 ---
 # <a name="discards---c-guide"></a>Ausschüsse: Leitfaden für C#
@@ -67,11 +67,11 @@ Sie können einen eigenständigen Ausschuss verwenden, um eine beliebige Variabl
 
 Beachten Sie, dass `_` auch ein gültiger Bezeichner ist. Bei der Verwendung außerhalb eines unterstützten Kontexts wird `_` nicht als Ausschuss, sondern als gültige Variable behandelt. Wenn bereits ein Bezeichner mit dem Namen `_` im Bereich vorhanden ist, kann die Verwendung von `_` als eigenständiger Ausschuss zu Folgendem führen:
 
-- Versehentliche Änderung des Werts der im Bereich befindlichen Variable `_`, indem dieser der Wert eines beabsichtigten Ausschusses zugewiesen wird. Zum Beispiel:
+- Versehentliche Änderung des Werts der im Bereich befindlichen Variable `_`, indem dieser der Wert eines beabsichtigten Ausschusses zugewiesen wird. Beispiel:
 
    [!code-csharp[standalone-discard](../../samples/snippets/csharp/programming-guide/discards/standalone-discard2.cs#1)]
 
-- Ein Compilerfehler wegen Verletzung der Typsicherheit. Zum Beispiel:
+- Ein Compilerfehler wegen Verletzung der Typsicherheit. Beispiel:
 
    [!code-csharp[standalone-discard](../../samples/snippets/csharp/programming-guide/discards/standalone-discard2.cs#2)]
 
@@ -79,7 +79,7 @@ Beachten Sie, dass `_` auch ein gültiger Bezeichner ist. Bei der Verwendung au�
 
    [!code-csharp[standalone-discard](../../samples/snippets/csharp/programming-guide/discards/standalone-discard2.cs#3)]
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Dekonstruieren von Tupeln und anderen Typen](deconstruct.md)
 - [`is`Schlüsselwort](language-reference/keywords/is.md)

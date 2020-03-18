@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Schreiben einer Parallel.For-Schleife mit threadlokalen Variablen'
+title: 'Gewusst wie: Schreiben einer Parallel.For-Schleife mit thread-lokalen Variablen'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -9,13 +9,13 @@ helpviewer_keywords:
 - parallel for loops, how to use local state
 ms.assetid: 68384064-7ee7-41e2-90e3-71f00bde01bb
 ms.openlocfilehash: 14f4f1402f564d38bb508e893521a3951c1509f4
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73139709"
 ---
-# <a name="how-to-write-a-parallelfor-loop-with-thread-local-variables"></a>Vorgehensweise: Schreiben einer Parallel.For-Schleife mit threadlokalen Variablen
+# <a name="how-to-write-a-parallelfor-loop-with-thread-local-variables"></a>Gewusst wie: Schreiben einer Parallel.For-Schleife mit thread-lokalen Variablen
 Dieses Beispiel zeigt, wie Sie threadlokale Variablen verwenden, um den Status in jeder separaten Aufgabe zu speichern und abzurufen, die von einer <xref:System.Threading.Tasks.Parallel.For%2A>-Schleife erstellt wird. Durch die Verwendung von threadlokalen Daten können Sie den mit der Synchronisierung einer großen Anzahl von Zugriffen auf einen Freigabezustand verbundenen Mehraufwand vermeiden. Statt an eine freigegebene Ressourcen in jeder Iteration zu schreiben, berechnen und speichern Sie den Wert, bis alle Iterationen für die Aufgabe abgeschlossen sind. Sie können dann das endgültige Ergebnis einmal an die freigegebene Ressource schreiben oder sie an eine andere Methoden übergeben.  
   
 ## <a name="example"></a>Beispiel  
@@ -42,7 +42,7 @@ Function() new MyClass()
   
  Weitere Informationen zur Verwendung von Lambdaausdrücken finden Sie unter [Lambdaausdrücke in PLINQ und TPL](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md).  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Datenparallelität](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md)
 - [Parallele Programmierung](../../../docs/standard/parallel-programming/index.md)

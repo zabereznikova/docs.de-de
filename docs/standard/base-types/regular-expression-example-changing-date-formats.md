@@ -1,5 +1,5 @@
 ---
-title: 'Beispiel für regulären Ausdruck: Ändern von Datumsformaten'
+title: 'Beispiel für reguläre Ausdrücke: Ändern von Datumsformaten'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -14,13 +14,13 @@ helpviewer_keywords:
 - pattern-matching with regular expressions, examples
 ms.assetid: 5fcc75a5-09d7-45ae-a4c0-9ad6085ac83d
 ms.openlocfilehash: 358e26957747073fec9dfe9eb0d404cb438afaf9
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73084179"
 ---
-# <a name="regular-expression-example-changing-date-formats"></a>Beispiel für regulären Ausdruck: Ändern von Datumsformaten
+# <a name="regular-expression-example-changing-date-formats"></a>Beispiel für reguläre Ausdrücke: Ändern von Datumsformaten
 Im folgenden Codebeispiel wird die <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType>-Methode verwendet, um Datumsangaben im Format *mm*/*tt*/*jj* durch Datumsangaben im Format *tt*-*mm*-*jj* zu ersetzen.  
   
 ## <a name="example"></a>Beispiel  
@@ -35,7 +35,7 @@ Im folgenden Codebeispiel wird die <xref:System.Text.RegularExpressions.Regex.Re
 ## <a name="comments"></a>Kommentare  
  Das Muster für reguläre Ausdrücke `\b(?<month>\d{1,2})/(?<day>\d{1,2})/(?<year>\d{2,4})\b` wird entsprechend der folgenden Tabelle interpretiert.  
   
-|Muster|BESCHREIBUNG|  
+|Muster|Beschreibung|  
 |-------------|-----------------|  
 |`\b`|Der Vergleich beginnt an einer Wortgrenze.|  
 |`(?<month>\d{1,2})`|Entsprechung für eine oder zwei Dezimalstellen finden. Dies ist die erfasste Gruppe `month`.|  
@@ -47,7 +47,7 @@ Im folgenden Codebeispiel wird die <xref:System.Text.RegularExpressions.Regex.Re
   
  Das Muster `${day}-${month}-${year}` definiert die Ersetzungszeichenfolge wie in der folgenden Tabelle gezeigt.  
   
-|Muster|BESCHREIBUNG|  
+|Muster|Beschreibung|  
 |-------------|-----------------|  
 |`$(day)`|Zeichenfolge hinzufügen, die von der Erfassungsgruppe `day` erfasst wurde.|  
 |`-`|Bindestrich hinzufügen.|  
@@ -55,6 +55,6 @@ Im folgenden Codebeispiel wird die <xref:System.Text.RegularExpressions.Regex.Re
 |`-`|Bindestrich hinzufügen.|  
 |`$(year)`|Zeichenfolge hinzufügen, die von der Erfassungsgruppe `year` erfasst wurde.|  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Reguläre Ausdrücke von .NET](../../../docs/standard/base-types/regular-expressions.md)

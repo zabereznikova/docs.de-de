@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: b0e1d6d720a1c9b827fb4585606e64b545d395d7
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/16/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "72394006"
 ---
 ### <a name="kestrel-request-trailer-headers-moved-to-new-collection"></a>Kestrel: Anforderungstrailer-Header wurden in neue Sammlung verschoben.
@@ -39,7 +39,7 @@ Anforderungstrailer-Header sind **nicht** in der Sammlung `HttpRequest.Headers` 
 
 Trailer stellen ein wichtiges Feature in Szenarien wie gRPC dar. Das Zusammenführen der Trailer mit den Anforderungsheadern war für Benutzer verwirrend.
 
-#### <a name="recommended-action"></a>Empfohlene Maßnahme
+#### <a name="recommended-action"></a>Empfohlene Aktion
 
 Verwenden Sie die trailerbezogenen Erweiterungsmethoden in `HttpRequest`, um auf Trailer zuzugreifen.
 

@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 75945e7ff26c1c6db891d12cef4c16ed210da6af
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/16/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "72393903"
 ---
 ### <a name="mvc-web-api-compatibility-shim-removed"></a>MVC: Web-API-Kompatibilitätsshim wurde entfernt.
@@ -22,7 +22,7 @@ Das Paket `Microsoft.AspNetCore.Mvc.WebApiCompatShim` (WebApiCompatShim) bietet 
 
 Das Web-API-Kompatibilitätsshim war ein Migrationstool. Es beschränkt den Benutzerzugriff auf neue Funktionen, die in ASP.NET Core hinzugefügt wurden.
 
-#### <a name="recommended-action"></a>Empfohlene Maßnahme
+#### <a name="recommended-action"></a>Empfohlene Aktion
 
 Entfernen Sie alle Verwendungen dieses Shims, und migrieren Sie direkt zu der entsprechenden Funktionalität in ASP.NET Core.
 

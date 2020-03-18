@@ -6,12 +6,12 @@ ms.author: adegeo
 ms.date: 12/05/2019
 ms.technology: dotnet-cli
 ms.custom: updateeachrelease
-ms.openlocfilehash: 1a691ad0c1f8dbfadd642360d7f9629a136ff3ab
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: fe69521a6ac88055e3e8c8502a7e19a72667dbef
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78156659"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78240856"
 ---
 # <a name="get-started-with-net-core-using-the-net-core-cli"></a>Erste Schritte mit .NET Core unter Verwendung der .NET Core-CLI
 
@@ -43,7 +43,7 @@ Hier eine kurze Beschreibung der Schritte:
 
     *Hello.csproj*:
 
-    [!code-xml[Hello.csproj](~/samples/core/console-apps/HelloMsBuild/Hello.csproj)]
+    [!code-xml[Hello.csproj](~/samples/snippets/core/tutorials/cli-create-console-app/HelloMsBuild/csharp/Hello.csproj)]
 
     Die Projektdatei gibt alle Elemente an, die zum Wiederherstellen von Abhängigkeiten und erstellen des Programms erforderlich sind.
 
@@ -52,11 +52,11 @@ Hier eine kurze Beschreibung der Schritte:
 
     *Program.cs*:
 
-    [!code-csharp[Program.cs](~/samples/core/console-apps/HelloMsBuild/Program.cs)]
+    [!code-csharp[Program.cs](~/samples/snippets/core/tutorials/cli-create-console-app/HelloMsBuild/csharp/Program.cs)]
 
     Das Programm startet mithilfe von `using System`, was bedeutet, dass alles im Namespace `System` in den Geltungsbereich für diese Datei gebracht wird. Der `System`-Namespace enthält die `Console`-Klasse.
 
-    Wir definieren dann einen Namespace namens `Hello`. Sie können diesen Namen nach Wunsch ändern. Eine Klasse namens `Program` wird in diesem Namespace mit einer `Main`-Methode definiert, welche ein Array von Zeichenfolgen namens `args` verwendet. Dieses Array enthält die Liste mit Argumenten, die übergeben werden, wenn das Programm ausgeführt wird. Allerdings wird dieses Array nicht verwendet, und das Programm gibt lediglich den Text „Hello World!“ auf der Konsole aus. Später werden wir Änderungen am Code vornehmen, die dieses Argument verwenden.
+    Wir definieren dann einen Namespace namens `Hello`. Sie können diesen Namen nach Wunsch ändern. Eine Klasse namens `Program` wird in diesem Namespace mit einer `Main`-Methode definiert, welche ein Array von Zeichenfolgen namens `args` verwendet. Dieses Array enthält die Liste mit Argumenten, die übergeben werden, wenn das Programm ausgeführt wird. Allerdings wird dieses Array nicht verwendet, und das Programm gibt lediglich den Text „Hello World!“ auf der Konsole ausgibt. Später werden wir Änderungen am Code vornehmen, die dieses Argument verwenden.
 
     `dotnet new` ruft [dotnet restore](../tools/dotnet-restore.md) implizit auf. `dotnet restore` führt einen Aufruf in [NuGet](https://www.nuget.org/) (dem Paket-Manager von .NET) aus, um die Struktur der Abhängigkeiten wiederherzustellen. NuGet analysiert die *Hello.csproj*-Datei, lädt die in der Datei definierten Abhängigkeiten herunter (oder ruft diese aus einem Cache auf Ihrem Computer ab) und schreibt die *obj/project.assets.json*-Datei, die zum Kompilieren und Ausführen des Beispiels erforderlich ist.
 
@@ -100,7 +100,7 @@ Hier eine kurze Beschreibung der Schritte:
 
 01. Ersetzen Sie den Inhalt der *Program.cs*-Datei durch den folgenden Code:
 
-    [!code-csharp[Fibonacci](~/samples/core/console-apps/fibonacci-msbuild/Program.cs)]
+    [!code-csharp[Fibonacci](~/samples/snippets/core/tutorials/cli-create-console-app/fibonacci-msbuild/csharp/Program.cs)]
 
 02. Führen Sie [dotnet build](../tools/dotnet-build.md) aus, um diese Änderungen zu kompilieren.
 
@@ -132,7 +132,7 @@ Hier eine kurze Beschreibung der Schritte:
     15: 377
     ```
 
-Und das ist schon alles! Sie können *Program.cs* beliebig ändern.
+Das ist schon alles! Sie können *Program.cs* beliebig ändern.
 
 ## <a name="working-with-multiple-files"></a>Arbeiten mit mehreren Dateien
 
@@ -140,11 +140,11 @@ Einzelne Dateien eignen sich gut für einfache einmalige Programme, aber wenn Si
 
 01. Fügen Sie eine neue Datei im *Hello*-Verzeichnis mit dem Namen *FibonacciGenerator.cs* durch den folgenden Code hinzu:
 
-    [!code-csharp[Fibonacci Generator](~/samples/core/console-apps/FibonacciBetterMsBuild/FibonacciGenerator.cs)]
+    [!code-csharp[Fibonacci Generator](~/samples/snippets/core/tutorials/cli-create-console-app/FibonacciBetterMsBuild/csharp/FibonacciGenerator.cs)]
 
 02. Ändern Sie die `Main`-Methode in Ihrer *Program.cs*-Datei, um die neue Klasse zu instanziieren und rufen Sie die Methode wie im folgenden Beispiel auf:
 
-    [!code-csharp[New Program.cs](~/samples/core/console-apps/FibonacciBetterMsBuild/Program.cs)]
+    [!code-csharp[New Program.cs](~/samples/snippets/core/tutorials/cli-create-console-app/FibonacciBetterMsBuild/csharp/Program.cs)]
 
 03. Führen Sie [dotnet build](../tools/dotnet-build.md) aus, um diese Änderungen zu kompilieren.
 
@@ -215,11 +215,11 @@ Wie am Anfang dieses Artikels erwähnt, wurde beim Kompilieren der App neben `He
 Hello World!
 ```
 
-## <a name="conclusion"></a>Schlussbemerkung
+## <a name="conclusion"></a>Zusammenfassung
 
-Und das ist schon alles! Nun können Sie beginnen, die grundlegenden Konzepte zur Erstellung Ihrer eigene Programme zu nutzen.
+Das ist schon alles! Nun können Sie beginnen, die grundlegenden Konzepte zur Erstellung Ihrer eigene Programme zu nutzen.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Organisieren und Testen von Projekten mit der .NET Core-CLI](testing-with-cli.md)
 - [Veröffentlichen von .NET Core-Apps mit der .NET Core-CLI](../deploying/deploy-with-cli.md)

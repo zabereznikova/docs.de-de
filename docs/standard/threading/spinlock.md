@@ -6,10 +6,10 @@ helpviewer_keywords:
 - synchronization primitives, SpinLock
 ms.assetid: f9af93bb-7a0d-4ba5-afe8-74f48b6b6958
 ms.openlocfilehash: eac9a1be38ea81e8ccee1d05d9061ceeb597627f
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73106170"
 ---
 # <a name="spinlock"></a>SpinLock
@@ -21,8 +21,8 @@ Die <xref:System.Threading.SpinLock>-Struktur ist eine Synchronisierungsprimitiv
   
  Weitere Informationen zum Verwenden dieses Typs finden Sie unter <xref:System.Threading.SpinLock?displayProperty=nameWithType>. Ein Beispiel finden Sie unter [Gewusst wie: Synchronisierung auf niedriger Ebene mit SpinLock](../../../docs/standard/threading/how-to-use-spinlock-for-low-level-synchronization.md).  
   
- <xref:System.Threading.SpinLock> unterstützt einen *Thread*-*Nachverfolgungsmodus*, mit dem Sie während der Entwicklungsphase den Thread nachverfolgen können, der die Sperre zu einem bestimmten Zeitpunkt aufrechterhält. Der Thread-Nachverfolgungsmodus ist sehr nützlich für das Debuggen, aber Sie sollten ihn in der endgültigen Produktversion des Programms deaktivieren, da er die Leistung beeinträchtigen könnte. Weitere Informationen finden Sie unter [Vorgehensweise: Aktivieren des Modus zum Nachverfolgen von Threads in SpinLock](../../../docs/standard/threading/how-to-enable-thread-tracking-mode-in-spinlock.md).  
+ <xref:System.Threading.SpinLock> unterstützt einen *Thread*-*Nachverfolgungsmodus*, mit dem Sie während der Entwicklungsphase den Thread nachverfolgen können, der die Sperre zu einem bestimmten Zeitpunkt aufrechterhält. Der Thread-Nachverfolgungsmodus ist sehr nützlich für das Debuggen, aber Sie sollten ihn in der endgültigen Produktversion des Programms deaktivieren, da er die Leistung beeinträchtigen könnte. Weitere Informationen finden Sie unter [Gewusst wie: Aktivieren des Modus zum Nachverfolgen von Threads in SpinLock](../../../docs/standard/threading/how-to-enable-thread-tracking-mode-in-spinlock.md).  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Threading Objects and Features (Threadingobjekte und -funktionen)](../../../docs/standard/threading/threading-objects-and-features.md)

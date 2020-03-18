@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: f95c3916f4da8164cf927344f60f2845f04ddc5c
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/16/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "72394106"
 ---
 ### <a name="kestrel-transport-abstractions-removed-and-made-public"></a>Kestrel: Datentransportabstraktionen wurden entfernt und öffentlich gemacht.
@@ -29,7 +29,7 @@ Im Rahmen der Umstellung von „pubternal“-APIs werden die Kestrel-APIs auf de
 
 In ASP.NET Core 3.0 werden keine „pubternal“-APIs mehr verwendet.
 
-#### <a name="recommended-action"></a>Empfohlene Maßnahme
+#### <a name="recommended-action"></a>Empfohlene Aktion
 
 #### <a name="category"></a>Kategorie
 

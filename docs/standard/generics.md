@@ -5,11 +5,11 @@ author: kuhlenh
 ms.author: wiwagn
 ms.date: 10/09/2018
 ms.openlocfilehash: 3c1181f5be717f328ae906c6009fc8a34b904c89
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58465424"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "61923850"
 ---
 # <a name="generic-types-overview"></a>Generische Typen – Übersicht
 
@@ -66,6 +66,6 @@ Als Erstes können Sie feststellen, dass das Sortieren der generischen Liste erh
 
 Ein weiterer Vorteil: Wenn die Runtime den Typ der Generika kennt, wird das Debuggen vereinfacht. Wenn Sie Generika in C# debuggen, wissen Sie, welchen Typ jedes Element in Ihrer Datenstruktur aufweist. Ohne Generics wüssten Sie dies nicht.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [C#-Programmierhandbuch – Generics](../../docs/csharp/programming-guide/generics/index.md)

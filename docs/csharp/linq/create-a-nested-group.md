@@ -4,11 +4,11 @@ description: In diesem Artikel erfahren Sie, wie Sie eine geschachtelten Gruppe 
 ms.date: 12/01/2016
 ms.assetid: e9f00708-362e-4d13-98c5-d77549347ba0
 ms.openlocfilehash: 7d056c9e215ccc7ca24d621b64e2328bed79f22e
-ms.sourcegitcommit: 5dcfeb59179e81071f54840d4902cbe00b184294
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54857670"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "61688617"
 ---
 # <a name="create-a-nested-group"></a>Erstellen einer geschachtelten Gruppe
 
@@ -23,6 +23,6 @@ Im folgenden Beispiel wird veranschaulicht, wie geschachtelte Gruppen in einem L
 
 Beachten Sie, das drei geschachtelte `foreach`-Schleifen für die Iteration über die inneren Elemente einer geschachtelten Gruppe erforderlich sind.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Language-Integrated Query (LINQ)](index.md)

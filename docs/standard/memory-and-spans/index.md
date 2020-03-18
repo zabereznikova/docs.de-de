@@ -8,10 +8,10 @@ helpviewer_keywords:
 - buffers"
 - pipeline processing
 ms.openlocfilehash: b61b1dbbedf4658fe113986fbb4a792a2f574534
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73121990"
 ---
 # <a name="memory--and-span-related-types"></a>Memory- und Span-bezogene Typen
@@ -45,7 +45,7 @@ Weitere Informationen finden Sie unter den Ausführungen zum <xref:System.Buffer
 
 Die Memory- und Span-bezogenen Typen werden typischerweise zum Speichern von Daten in einer Verarbeitungspipeline verwendet, deshalb ist es wichtig, dass Entwickler bei der Verwendung von <xref:System.Span%601>, <xref:System.Memory%601> und zugehörigen Typen bestimmte Best Practices einhalten. Diese Best Practices werden im [Leitfaden zur Verwendung von Memory\<T> und Span\<T>](memory-t-usage-guidelines.md) dokumentiert.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Memory%601?displayProperty=nameWithType>
 - <xref:System.ReadOnlyMemory%601?displayProperty=nameWithType>

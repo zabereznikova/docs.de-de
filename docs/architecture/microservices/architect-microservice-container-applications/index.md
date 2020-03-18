@@ -3,10 +3,10 @@ title: Architekturentwurf von Container- und auf Microservice basierende Anwendu
 description: Der Architekturentwurf von Container- und Microservice-basierten Anwendungen ist keine Kleinigkeit und sollte nicht auf die leichte Schulter genommen werden. Machen Sie sich in diesem Kapitel mit den Kernkonzepten vertraut.
 ms.date: 09/20/2018
 ms.openlocfilehash: aff30c907f1140b94dbcae330ed7cb633b0a744b
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "70295018"
 ---
 # <a name="architecting-container-and-microservice-based-applications"></a>Architekturentwurf von Container- und auf Microservice basierende Anwendungen

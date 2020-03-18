@@ -12,10 +12,10 @@ helpviewer_keywords:
 - sockets, trace output
 ms.assetid: 5ef9fe4b-8d3d-490e-9259-1d014b2181af
 ms.openlocfilehash: 06132509860b16d1e22cfdf7e3226c968d16b7cf
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73040644"
 ---
 # <a name="how-to-configure-network-tracing"></a>Vorgehensweise: Konfigurieren der Netzwerkablaufverfolgung
@@ -103,7 +103,7 @@ Die in der folgenden Tabelle aufgeführten Attribute konfigurieren die Ablaufver
 |--------------------|---------------------|
 |`value`|Erforderliches <xref:System.String>-Attribut. Legt den Ausführlichkeitsgrad der Ausgabe fest. Zulässige Werte sind `Critical`, `Error`, `Verbose`, `Warning` und `Information`.<br /><br />Dieses Attribut muss für das Element **Hinzufügen** des Elements **switches** festgelegt werden. Eine Ausnahme wird ausgelöst, wenn das Attribut für das Element **source** festgelegt wird.<br/><br/>Ein Beispiel: `<add name="System.Net" value="Verbose"/>`|
 |`maxdatasize`|Optionales <xref:System.Int32>-Attribut. Legt die maximale Anzahl von Netzwerkdatenbytes für jede Ablaufverfolgungszeile fest. Der Standardwert ist 1024.<br /><br />Dieses Attribut muss für das Element **Quelle** wie im Beispiel festgelegt werden. Eine Ausnahme wird ausgelöst, wenn dieses Attribut für ein Element unter dem Element **switches** festgelegt wird.<br/><br/>Ein Beispiel: `<source name="System.Net" tracemode="includehex" maxdatasize="1024">`|
-|`tracemode`|Optionales <xref:System.String>-Attribut. Mit dem Wert `includehex` werden Protokollablaufverfolgungen im Hexadezimalformat und im Textformat angezeigt. Mit dem Wert `protocolonly` wird nur Text angezeigt. Der Standardwert ist `includehex`sein.<br /><br />Dieses Attribut muss für das Element **Quelle** wie im Beispiel festgelegt werden. Eine Ausnahme wird ausgelöst, wenn dieses Attribut für ein Element unter dem Element **switches** festgelegt wird.<br/><br/>Ein Beispiel: `<source name="System.Net" tracemode="includehex" maxdatasize="1024">`|
+|`tracemode`|Optionales <xref:System.String>-Attribut. Mit dem Wert `includehex` werden Protokollablaufverfolgungen im Hexadezimalformat und im Textformat angezeigt. Mit dem Wert `protocolonly` wird nur Text angezeigt. Der Standardwert ist `includehex`.<br /><br />Dieses Attribut muss für das Element **Quelle** wie im Beispiel festgelegt werden. Eine Ausnahme wird ausgelöst, wenn dieses Attribut für ein Element unter dem Element **switches** festgelegt wird.<br/><br/>Ein Beispiel: `<source name="System.Net" tracemode="includehex" maxdatasize="1024">`|
 
 ## <a name="see-also"></a>Siehe auch
 

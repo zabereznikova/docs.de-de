@@ -11,10 +11,10 @@ helpviewer_keywords:
 - threading [.NET Framework], Semaphore class
 ms.assetid: 7722a333-b974-47a2-a7c0-f09097fb644e
 ms.openlocfilehash: b9f7c122ac8acf34f740aca5f0fafc162edcea82
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73127587"
 ---
 # <a name="semaphore-and-semaphoreslim"></a>Semaphore und SemaphoreSlim
@@ -44,7 +44,7 @@ Die <xref:System.Threading.Semaphore?displayProperty=nameWithType>-Klasse stellt
   
  Verwenden Sie die Zugriffssteuerungssicherheit zum Schutz eines <xref:System.Threading.Semaphore>-Objekts, das ein benanntes Semaphor darstellt, vorzugsweise unter Verwendung eines Konstruktors, der <xref:System.Security.AccessControl.SemaphoreSecurity?displayProperty=nameWithType>-Objekt angibt. Sie können die Zugriffssteuerungssicherheit auch mithilfe der <xref:System.Threading.Semaphore.SetAccessControl%2A?displayProperty=nameWithType>-Methode anwenden, allerdings bleibt so ein Verwundbarkeitszeitfenster zwischen der Erstellung und dem Schutz des Semaphors. Der Schutz von Semaphoren mit Zugriffssteuerungssicherheit hilft beim Verhindern böswilliger Angriffe, das Problem unbeabsichtigter Namenskonflikte wird dadurch aber nicht gelöst.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Threading.Semaphore>
 - <xref:System.Threading.SemaphoreSlim>

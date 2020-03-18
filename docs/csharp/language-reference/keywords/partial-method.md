@@ -7,10 +7,10 @@ helpviewer_keywords:
 - partial methods [C#]
 ms.assetid: 43f40242-17e0-4452-8573-090503ad3137
 ms.openlocfilehash: 62efd8b47fb565316b417a65e1b0fe37e40786c8
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75713221"
 ---
 # <a name="partial-method-c-reference"></a>partial-Methode (C#-Referenz)
@@ -29,7 +29,7 @@ Im folgenden Beispiel wird eine partielle Methode veranschaulicht, die in zwei T
 
 Weitere Informationen finden Sie unter [Partielle Klassen und Methoden](../../programming-guide/classes-and-structs/partial-classes-and-methods.md).
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [C#-Referenz](../index.md)
 - [partial-Typ](partial-type.md)

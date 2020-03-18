@@ -3,10 +3,10 @@ title: WMI und Leistungsindikatoren (Referenz zur nicht verwalteten API)
 description: Fasst die nicht verwaltete .NET Framework-API für WMI und Informationen zu Leistungsindikatoren zusammen.
 ms.date: 11/06/2017
 ms.openlocfilehash: f28cd25ee6c3511dc5ac8a6dd4076c81f43fe74a
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73127422"
 ---
 # <a name="windows-management-instrumentation-wmi-and-performance-counters-unmanaged-api-reference"></a>Windows-Verwaltungsinstrumentation (WMI) und Leistungsindikatoren (Referenz zur nicht verwalteten API)
@@ -17,7 +17,7 @@ Die .NET Framework-WMI und Leistungsindikatoren für die nicht verwaltete API be
 
 Die API umfasst die folgenden Funktionen:
 
-| Funktion | BESCHREIBUNG |
+| Funktion | Beschreibung |
 |---------|---------|
 | [BeginEnumeration-Funktion](beginenumeration.md) | Setzt den Enumerator auf den Anfang einer Enumeration von WMI-Objekteigenschaften zurück. |
 | [BeginMethodEnumeration-Funktion](beginmethodenumeration.md) |  Startet eine Enumeration der verfügbaren Methoden für ein Objekt. |
@@ -71,6 +71,6 @@ Die API umfasst die folgenden Funktionen:
 | [VerifyClient-Funktion](verifyclientkey.md) | Stellt sicher, dass der Clientschlüssel die richtige Sicherheit aufweist. |
 | [WritePropertyValue-Funktion](writepropertyvalue.md) | Schreibt eine angegebene Anzahl von Bytes in eine Eigenschaft, die durch ein Eigenschaftenhandle identifiziert wird. |
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Referenz zur nicht verwalteten API](../index.md)

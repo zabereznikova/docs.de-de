@@ -8,11 +8,11 @@ helpviewer_keywords:
 - publicsign compiler option [C#]
 - /publicsign compiler option [C#]
 ms.openlocfilehash: de7d9c98b0f279b52bc93711c5b986a2b2e57215
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54738065"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "61662529"
 ---
 # <a name="-publicsign-c-compiler-options"></a>-publicsign (C#-Compileroptionen)
 
@@ -26,7 +26,7 @@ Diese Option bewirkt, dass der Compiler einen öffentlichen Schlüssel anwendet,
 
 ## <a name="arguments"></a>Argumente
 
-Keine
+Keine.
 
 ## <a name="remarks"></a>Hinweise
 
@@ -41,7 +41,7 @@ Bei der öffentlichen Signierung, die manchmal auch als „Fake-Signierung“ od
 1. Öffnen Sie die Seite **Eigenschaften** für das Projekt.
 1. Bearbeiten Sie die Eigenschaft **Nur verzögerte Signierung**.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [C#-Compileroption „-delaysign“](delaysign-compiler-option.md)
 - [C#-Compileroption „-keyfile“](keyfile-compiler-option.md)

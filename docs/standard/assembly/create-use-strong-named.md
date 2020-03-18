@@ -13,10 +13,10 @@ helpviewer_keywords:
 - assembly binding, strong-named
 ms.assetid: ffbf6d9e-4a88-4a8a-9645-4ce0ee1ee5f9
 ms.openlocfilehash: 18a0b7d657290835a34c705513d0d7a4ccbfc61c
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75738681"
 ---
 # <a name="create-and-use-strong-named-assemblies"></a>Erstellen und Verwenden von Assemblys mit starkem Namen
@@ -70,11 +70,11 @@ Diese Funktion kann für einzelne Anwendungen oder einen Computer deaktiviert we
 
 |Titel|Beschreibung|
 |-----------|-----------------|
-|[Vorgehensweise: Erstellen eines öffentlichen/privaten Schlüsselpaars](create-public-private-key-pair.md)|Beschreibt das Erstellen eines kryptografischen Schlüsselpaars zum Signieren einer Assembly.|
-|[Vorgehensweise: Signieren einer Assembly mit einem starken Namen](sign-strong-name.md)|Beschreibt das Erstellen einer Assembly mit starkem Namen.|
+|[How to: Erstellen eines öffentlichen/privaten Schlüsselpaars](create-public-private-key-pair.md)|Beschreibt das Erstellen eines kryptografischen Schlüsselpaars zum Signieren einer Assembly.|
+|[How to: Signieren einer Assembly mit einem starken Namen](sign-strong-name.md)|Beschreibt das Erstellen einer Assembly mit starkem Namen.|
 |[Verbesserte starke Namen](enhanced-strong-naming.md)|Beschreibt Erweiterungen der starken Namen in .NET Framework 4.5.|
-|[Vorgehensweise: Verweisen auf eine Assembly mit starkem Namen](reference-strong-named.md)|Beschreibt, wie auf Typen oder Ressourcen in einer Assembly mit starkem Namen zur Kompilier- oder Laufzeit verwiesen wird.|
-|[Vorgehensweise: Deaktivieren des Features zur Umgehung von starken Namen](disable-strong-name-bypass-feature.md)|Beschreibt, wie die Funktion, die die Validierung von Signaturen mit starkem Namen umgeht, deaktiviert wird. Diese Funktion kann für alle oder bestimmte Anwendungen deaktiviert werden.|
+|[How to: Verweisen auf eine Assembly mit starkem Namen](reference-strong-named.md)|Beschreibt, wie auf Typen oder Ressourcen in einer Assembly mit starkem Namen zur Kompilier- oder Laufzeit verwiesen wird.|
+|[How to: Deaktivieren des Features zur Umgehung von starken Namen](disable-strong-name-bypass-feature.md)|Beschreibt, wie die Funktion, die die Validierung von Signaturen mit starkem Namen umgeht, deaktiviert wird. Diese Funktion kann für alle oder bestimmte Anwendungen deaktiviert werden.|
 |[Erstellen von Assemblys](create.md)|Bietet eine Übersicht über Einfach- und Mehrfachdateiassemblys.|
 |[Verzögern der Signierung einer Assembly in Visual Studio](/visualstudio/ide/managing-assembly-and-manifest-signing#how-to-sign-an-assembly-in-visual-studio)|Erläutert das Signieren einer Assembly mit einem starken Namen nach dem Erstellen der Assembly.|
 |[Sn.exe (Strong Name-Tool)](../../framework/tools/sn-exe-strong-name-tool.md)|Beschreibt das Tool, das in .NET Framework enthalten ist, mit dem Assemblys mit starken Namen erstellt werden können. Dieses Tool stellt Optionen zum Verwalten von Schlüsseln, Erzeugen und Überprüfen von Signaturen bereit.|

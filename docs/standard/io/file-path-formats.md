@@ -10,10 +10,10 @@ helpviewer_keywords:
 - long paths
 - path formats, Windows
 ms.openlocfilehash: b3510be5d417b555d2db163636eac5ce0c0779e4
-ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/26/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "77628045"
 ---
 # <a name="file-path-formats-on-windows-systems"></a>Formate von Dateipfaden unter Windows-Systemen
@@ -30,7 +30,7 @@ Ein standardmäßiger DOS-Pfad kann aus drei Komponenten bestehen:
 
 Wenn alle drei Komponenten vorhanden sind, ist der Pfad absolut. Wenn kein Volume oder Laufwerkbuchstabe angegeben ist und der Name des Verzeichnisses mit dem [Verzeichnistrennzeichen](<xref:System.IO.Path.DirectorySeparatorChar>) beginnt, ist der Pfad relativ zum Stamm des aktuellen Laufwerks. Andernfalls ist der Pfad relativ zum aktuellen Verzeichnis. In der folgenden Tabelle werden mögliche Verzeichnis- und Dateipfade veranschaulicht.
 
-|Pfad  |Beschreibung  |
+|`Path`  |Beschreibung  |
 | -- | -- |
 | `C:\Documents\Newsletters\Summer2018.pdf` | Ein absoluter Dateipfad aus dem Stamm vom Laufwerk „C:“ |
 | `\Program Files\Custom Utilities\StringFinder.exe` | Ein absoluter Pfad aus dem Stamm des aktuellen Laufwerks |
@@ -62,7 +62,7 @@ UNC-Pfade (Universal Naming Convention), die für den Zugriff auf Netzwerkressou
 
 Im Folgenden werden einige Beispiele für UNC-Pfade aufgeführt:
 
-|Pfad  |Beschreibung  |
+|`Path`  |Beschreibung  |
 | -- | -- |
 | `\\system07\C$\` | Das Stammverzeichnis des Laufwerks „C:“ auf `system07`. |
 | `\\Server2\Share\Test\Foo.txt` | Die Datei „Foo.txt“ im Testverzeichnis des Volume „\\\\Server2\\Share“.|
@@ -95,7 +95,7 @@ Der DOS-Gerätepfad besteht aus den folgenden Komponenten:
 
    Das erste Segment des DOS-Gerätepfads, nachdem der Gerätepfadbezeichner das Volume oder Laufwerk identifiziert. (Zum Beispiel `\\?\C:\` und `\\.\BootPartition\`.)
 
-   Es gibt eine spezifische Verknüpfung für UNC-Pfade mit dem unverwechselbaren Namen `UNC`. Zum Beispiel:
+   Es gibt eine spezifische Verknüpfung für UNC-Pfade mit dem unverwechselbaren Namen `UNC`. Beispiel:
 
   `\\.\UNC\Server\Share\Test\Foo.txt`
   `\\?\UNC\Server\Share\Test\Foo.txt`

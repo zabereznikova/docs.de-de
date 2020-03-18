@@ -3,10 +3,10 @@ title: Datensouveränität pro Microservice
 description: Datensouveränität pro Microservice gehört zu den Eckpfeilern von Microservices. Jeder Microservice muss der alleinige Besitzer seiner Datenbank sein – sie darf nicht freigegeben werden. Alle Instanzen eines Microservices verbinden sich mit der gleichen hochverfügbaren Datenbank.
 ms.date: 09/20/2018
 ms.openlocfilehash: f606d6314f38bf3e2c163871af432806dddc7446
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "73191917"
 ---
 # <a name="data-sovereignty-per-microservice"></a>Datensouveränität pro Microservice

@@ -3,10 +3,10 @@ title: IPv6-Routing
 ms.date: 03/30/2017
 ms.assetid: c98731b4-b542-46a2-9947-1cea63c186b2
 ms.openlocfilehash: 93300107710164d755d578633b7fa6651f984987
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "71047788"
 ---
 # <a name="ipv6-routing"></a>IPv6-Routing
@@ -33,7 +33,7 @@ Der flexible Routingmechanismus ist ein Vorteil von IPv6. Aufgrund der Art, auf 
   
 - Umleiten. Wird von Routern gesendet, um eine bessere Adresse für den nächsten Hop für ein bestimmtes Ziel eines Sendeknotens anzugeben.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Internetprotokoll Version 6](internet-protocol-version-6.md)
 - [Sockets](sockets.md)

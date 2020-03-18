@@ -9,10 +9,10 @@ helpviewer_keywords:
 - -out compiler option [C#]
 ms.assetid: 70d91d01-7bd2-4aea-ba8b-4e9807e9caa5
 ms.openlocfilehash: 6c8408c0c613e361dae0c1db19f854e9421ca467
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/13/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "70970378"
 ---
 # <a name="-out-c-compiler-options"></a>-out (C#-Compileroptionen)
@@ -28,7 +28,7 @@ Die Option **-out** gibt den Namen der Ausgabedatei an.
  `filename`  
  Der Name der Ausgabedatei, die vom Compiler erstellt wurde  
   
-## <a name="remarks"></a>Anmerkungen  
+## <a name="remarks"></a>Hinweise  
  In der Befehlszeile ist es möglich, mehrere Ausgabedateien für die Kompilierung anzugeben. Der Compiler geht davon aus, mindestens eine Quellcodedatei nach der Option **-out** zu finden. Anschließend werden alle Quellcodedateien in der von der Option **-out** angegebenen Ausgabedatei kompiliert.  
   
  Geben Sie den vollständigen Namen und die Erweiterung der Datei an, die Sie erstellen möchten.  
@@ -64,7 +64,7 @@ Die Option **-out** gibt den Namen der Ausgabedatei an.
 csc t.cs -out:mymodule.netmodule -target:module t2.cs  
 ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [C#-Compileroptionen](./index.md)
 - [Friend-Assemblys](../../../standard/assembly/friend.md)

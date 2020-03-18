@@ -4,11 +4,11 @@ description: In diesem Artikel erfahren Sie, wie Sie gruppierte Joins mit LINQ i
 ms.date: 12/01/2016
 ms.assetid: 9667daf9-a5fd-4b43-a5c4-a9c2b744000e
 ms.openlocfilehash: dfb75b55336d8ca486d5f10b187e955d20cd06fd
-ms.sourcegitcommit: 5dcfeb59179e81071f54840d4902cbe00b184294
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54857553"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "61689137"
 ---
 # <a name="perform-grouped-joins"></a>Ausführen von Gruppenverknüpfungen
 
@@ -33,7 +33,7 @@ Gruppenverknüpfungen lassen sich ideal für das Erstellen von XML mithilfe von 
 
 [!code-csharp[CsLINQProgJoining#6](~/samples/snippets/csharp/concepts/linq/how-to-perform-grouped-joins_2.cs)]
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Linq.Enumerable.Join%2A>
 - <xref:System.Linq.Enumerable.GroupJoin%2A>

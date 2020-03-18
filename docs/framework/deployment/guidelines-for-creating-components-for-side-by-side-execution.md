@@ -6,10 +6,10 @@ helpviewer_keywords:
 - side-by-side execution, multiple component versions
 ms.assetid: 5c540161-6e40-42e9-be92-6175aee2c46a
 ms.openlocfilehash: 42d0e2d85517d4a8fb443db9b63e6b893267caca
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73121584"
 ---
 # <a name="guidelines-for-creating-components-for-side-by-side-execution"></a>Richtlinien für die Erstellung von Komponenten für die parallele Ausführung
@@ -60,7 +60,7 @@ Befolgen Sie die nachstehenden allgemeinen Richtlinien zum Erstellen von verwalt
   
  Mit dem [Tool für den globalen Assemblycache (Gacutil.exe)](../tools/gacutil-exe-gac-tool.md) können Sie eine Assembly ersetzen, wenn lediglich die Dateiversionsnummer höher ist. Der Installer führt in in der Regel nur dann eine Installation über eine Assembly durch, wenn die Assemblyversionsnummer höher ist.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Parallele Ausführung](side-by-side-execution.md)
-- [Vorgehensweise: Aktivieren und Deaktivieren der Bindungsumleitung](../configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)
+- [Gewusst wie: Aktivieren und Deaktivieren der Bindungsumleitung](../configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)

@@ -3,11 +3,11 @@ title: NAT-Durchlauf mit IPv6 und Teredo
 ms.date: 03/30/2017
 ms.assetid: 568cd245-3300-49ef-a995-d81bf845d961
 ms.openlocfilehash: f617dc8912091576727b90da1e9efb9ebd5f9bda
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59768175"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "61642170"
 ---
 # <a name="nat-traversal-using-ipv6-and-teredo"></a>NAT-Durchlauf mit IPv6 und Teredo
 Es wurden Verbesserungen vorgenommen, sodass nun der NAT-Durchlauf (Netzwerkadressenübersetzung) unterstützt wird. Diese Änderungen wurden für den Gebrauch mit IPv6 und Teredo entwickelt, sie können aber auch auf andere Technologien zum IP-Tunneln angewendet werden. Diese Verbesserungen betreffen Klassen im <xref:System.Net> und verknüpften Namespaces.  
@@ -44,7 +44,7 @@ Es wurden Verbesserungen vorgenommen, sodass nun der NAT-Durchlauf (Netzwerkadre
   
  Bei Anwendungen, die <xref:System.Net.Sockets.Socket?displayProperty=nameWithType> und zugehörige Klassen verwenden, können die <xref:System.Net.Sockets.Socket.GetSocketOption%2A>- und <xref:System.Net.Sockets.Socket.SetSocketOption%2A>-Methoden mit der Socketoption <xref:System.Net.Sockets.SocketOptionName.IPProtectionLevel?displayProperty=nameWithType> verwendet werden, um den NAT-Durchlauf abzufragen, zu aktivieren oder zu deaktivieren.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Net.IPAddress.IsIPv6Teredo%2A?displayProperty=nameWithType>
 - <xref:System.Net.NetworkInformation.IPGlobalProperties.BeginGetUnicastAddresses%2A?displayProperty=nameWithType>

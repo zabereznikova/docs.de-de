@@ -16,10 +16,10 @@ helpviewer_keywords:
 - Refresh policy
 ms.assetid: e41d7f1a-0a6a-4dee-97d1-c6a8b6a07fc2
 ms.openlocfilehash: e6896452fce89f69b40f1d03332355df72d93211
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "71047670"
 ---
 # <a name="location-based-cache-policies"></a>Speicherortbasierte Cacherichtlinien
@@ -46,7 +46,7 @@ Eine speicherortbasierte Cacherichtlinie definiert die Aktualität gültiger zwi
 ## <a name="revalidate-policy"></a>Richtlinie zum erneuten Überprüfen  
  Vergleicht die Kopie der Ressource im Cache mit der Kopie auf dem Server. Wenn die Kopie auf dem Server neuer ist, wird sie zum Erfüllen der Anforderung verwendet und ersetzt die Kopie im Cache. Wenn die Kopie im Cache mit der Serverkopie übereinstimmt, wird die zwischengespeicherte Kopie verwendet. Im HTTP-Cacheprotokoll wird dies erreicht, indem eine bedingte Anforderung verwendet wird.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Cacheverwaltung für Netzwerkanwendungen](cache-management-for-network-applications.md)
 - [Cacherichtlinie](cache-policy.md)

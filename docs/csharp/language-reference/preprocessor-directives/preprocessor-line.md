@@ -7,10 +7,10 @@ helpviewer_keywords:
 - '#line directive [C#]'
 ms.assetid: 6439e525-5dd5-4acb-b8ea-efabb32ff95b
 ms.openlocfilehash: 79033fa652af62c76d54737fbf0a0b47cf3aae99
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75712493"
 ---
 # <a name="line-c-reference"></a>#line (C#-Referenz)
@@ -60,7 +60,7 @@ Die `#line filename`-Anweisung gibt den Dateinamen an, von dem Sie möchten, das
 
 Eine Quellcodedatei kann über eine beliebige Anzahl von `#line`-Anweisungen verfügen.
 
-## <a name="example-1"></a>Beispiel 1
+## <a name="example-1"></a>Beispiel 1
 
 Das folgende Beispiel zeigt, wie der Debugger die ausgeblendeten Zeilen im Code ignoriert. Wenn Sie das Beispiel ausführen, werden drei Textzeilen angezeigt. Wenn Sie jedoch wie im Beispiel gezeigt einen Haltepunkt setzen und F10 drücken, um den Code zu durchlaufen, werden Sie feststellen, dass der Debugger die ausgeblendete Zeile ignoriert. Beachten Sie zudem, dass die ausgeblendete Zeile selbst dann vom Debugger ignoriert wird, wenn Sie einen Haltepunkt an dieser Zeile setzen.
 
@@ -80,7 +80,7 @@ class MainClass
 }
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [C#-Referenz](../index.md)
 - [C#-Programmierhandbuch](../../programming-guide/index.md)

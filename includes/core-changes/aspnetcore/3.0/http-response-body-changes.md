@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: cd66317bc93343e03a73dec74dff534776ca42e4
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "73198442"
 ---
 ### <a name="http-response-body-infrastructure-changes"></a>HTTP: Änderungen an der Infrastruktur von Antworttexten
@@ -30,7 +30,7 @@ Wenn Sie `HttpResponse.Body` ersetzen, wird das gesamte `IHttpResponseBodyFeatur
 
 Die Antworttext-APIs sollen in einer einzigen neuen Funktionsschnittstelle zusammengefasst werden.
 
-#### <a name="recommended-action"></a>Empfohlene Maßnahme
+#### <a name="recommended-action"></a>Empfohlene Aktion
 
 Verwenden Sie `IHttpResponseBodyFeature` an den Stellen, an denen Sie zuvor `IHttpResponseFeature.Body`, `IHttpSendFileFeature` oder `IHttpBufferingFeature` verwendet haben.
 

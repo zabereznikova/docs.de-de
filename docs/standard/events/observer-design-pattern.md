@@ -13,10 +13,10 @@ helpviewer_keywords:
 - observer design pattern [.NET Framework]
 ms.assetid: 3680171f-f522-453c-aa4a-54f755a78f88
 ms.openlocfilehash: 817337cec604a431f9f7d4eacb04378ee0d3c227
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73131579"
 ---
 # <a name="observer-design-pattern"></a>Beobachterentwurfsmuster
@@ -66,7 +66,7 @@ Beide Auflistungen werden von generischen <xref:System.Collections.Generic.List%
 [!code-csharp[Conceptual.ObserverDesignPattern#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.observerdesignpattern/cs/provider.cs#2)]
 [!code-vb[Conceptual.ObserverDesignPattern#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.observerdesignpattern/vb/provider.vb#2)]
 
-Clients, die aktualisierte Informationen erhalten möchten, rufen die `BaggageHandler.Subscribe`-Methode auf. Wenn sich der Client zuvor noch nicht für Benachrichtigungen registriert hat, wird der `observers`-Auflistung ein Verweis auf die <xref:System.IObserver%601>-Implementierung des Clients hinzugefügt.
+Clients, die aktualisierte Informationen erhalten möchten, rufen die `BaggageHandler.Subscribe`-Methode auf. Wenn sich der Client zuvor noch nicht für Benachrichtigungen registriert hat, wird der <xref:System.IObserver%601>-Auflistung ein Verweis auf die `observers`-Implementierung des Clients hinzugefügt.
 
 Die überladene `BaggageHandler.BaggageStatus`-Methode kann aufgerufen werden, um anzugeben, dass Gepäck aus einem Flug entweder entladen oder nicht mehr entladen wird. Im ersten Fall wird der Methode eine Flugnummer, der Flughafen, von dem der Flug gestartet ist, und das Laufband übergeben, auf dem das Gepäck entladen wird. Im zweiten Fall wird der Methode nur eine Flugnummer übergeben. Für Gepäck, das entladen wird, überprüft die Methode, ob die `BaggageInfo`-Informationen, die an die Methode übergeben wurden, in der `flights`-Auflistung vorhanden sind. Ist dies nicht der Fall, fügt die Methode die Informationen hinzu und ruft die `OnNext`-Methode aller Beobachter auf. Für Flüge, deren Gepäck nicht mehr entladen wird, überprüft die Methode, ob Informationen zu diesem Flug in der `flights`-Auflistung gespeichert sind. Wenn dies der Fall ist, ruft die Methode die `OnNext`-Methode jedes Beobachters auf und entfernt das `BaggageInfo`-Objekt aus der `flights`-Auflistung.
 
@@ -91,8 +91,8 @@ Das folgende Beispiel enthält den Einstiegspunkt der Anwendung, die die `Baggag
 
 ## <a name="related-topics"></a>Verwandte Themen
 
-|Titel|BESCHREIBUNG|
+|Titel|Beschreibung|
 |-----------|-----------------|
 |[Empfohlene Vorgehensweisen für Beobachterentwurfsmuster](../../../docs/standard/events/observer-design-pattern-best-practices.md)|Beschreibt bewährte Methoden für die Entwicklung von Anwendungen, die das Entwurfsmuster "Beobachter" implementieren.|
-|[Vorgehensweise: Implementieren eines Anbieters](../../../docs/standard/events/how-to-implement-a-provider.md)|Enthält die schrittweise Implementierung eines Anbieters für eine Anwendung zur Temperaturüberwachung.|
-|[Vorgehensweise: Implementieren eines Observers](../../../docs/standard/events/how-to-implement-an-observer.md)|Enthält die schrittweise Implementierung eines Beobachters für eine Anwendung zur Temperaturüberwachung.|
+|[Gewusst wie: Implementieren eines Anbieters](../../../docs/standard/events/how-to-implement-a-provider.md)|Enthält die schrittweise Implementierung eines Anbieters für eine Anwendung zur Temperaturüberwachung.|
+|[Gewusst wie: Implementieren eines Observers](../../../docs/standard/events/how-to-implement-an-observer.md)|Enthält die schrittweise Implementierung eines Beobachters für eine Anwendung zur Temperaturüberwachung.|

@@ -11,16 +11,16 @@ helpviewer_keywords:
 - protocols, pluggable
 ms.assetid: 9810c177-973e-43d7-823c-14960bd625ea
 ms.openlocfilehash: 6bee864f8d24076d16f226c29d61801e856739d9
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "71048601"
 ---
 # <a name="deriving-from-webrequest"></a>Ableiten von WebRequest
 Die <xref:System.Net.WebRequest>-Klasse ist eine abstrakte Basisklasse, die die grundlegende Methoden und Eigenschaften bereitstellt, mit denen ein protokollspezifischer Anforderungshandler erstellt wird, der in das austauschbare Protokollmodell von .NET Framework passt. Anwendungen, die die **WebRequest**-Klasse verwenden, können Daten mit einem beliebigen unterstützten Protokoll anfordern, ohne das verwendete Protokoll anzugeben.  
   
- Eine protokollspezifische Klasse muss die folgenden zwei Anforderungen erfüllen, damit Sie diese als austauschbares Protokoll verwenden können: Die Klasse muss die <xref:System.Net.IWebRequestCreate>-Schnittstelle implementieren und sich bei der <xref:System.Net.WebRequest.RegisterPrefix%2A?displayProperty=nameWithType>-Methode registrieren. Die Klasse muss alle abstrakten Methoden und Eigenschaften von **WebRequest** überschreiben, um die austauschbare Schnittstelle bereitzustellen.  
+ Zwei Kriterien müssen erfüllt sein, damit eine protokollspezifische Klasse als ein austauschbares Protokoll verwendet werden kann: Die Klasse muss die <xref:System.Net.IWebRequestCreate>-Schnittstelle implementieren und sie mit der <xref:System.Net.WebRequest.RegisterPrefix%2A?displayProperty=nameWithType>-Methode registrieren. Die Klasse muss alle abstrakten Methoden und Eigenschaften von **WebRequest** überschreiben, um die austauschbare Schnittstelle bereitzustellen.  
   
  **WebRequest**-Instanzen sind für die einmalige Verwendung vorgesehen. Wenn Sie eine andere Anforderung vornehmen möchten, erstellen Sie eine neue **WebRequest**. **WebRequest** unterstützt die <xref:System.Runtime.Serialization.ISerializable>-Schnittstelle, um Entwicklern zu ermöglichen, eine **WebRequest**-Vorlage zu serialisieren und die Vorlage für zusätzliche Anforderungen zu rekonstruieren.  
   
@@ -42,9 +42,9 @@ Die <xref:System.Net.WebRequest>-Klasse ist eine abstrakte Basisklasse, die die 
  Die <xref:System.Net.WebRequest.Credentials%2A>-Eigenschaft enthält Informationen, die zum Authentifizieren der Anforderung mit dem Server erforderlich sind. Sie müssen die Details des Authentifizierungsprozesses für Ihr Protokoll implementieren. Die <xref:System.Net.AuthenticationManager>-Klasse ist verantwortlich für das Authentifizieren von Anforderungen und die Bereitstellung eines Authentifizierungstokens. Die Klasse, die die von Ihrem Protokoll benötigten Anmeldeinformationen bereitstellt, muss die <xref:System.Net.ICredentials>-Schnittstelle implementieren.  
   
 ## <a name="headers-property"></a>Header-Eigenschaft  
- Die <xref:System.Net.WebRequest.Headers%2A>-Eigenschaft enthält eine beliebige Auflistung von Name/Wert-Paaren der Metadaten, die der Anforderung zugeordnet sind. Alle für das Protokoll erforderlichen Metadaten, die als Name/Wert-Paar ausgedrückt werden, können in die **Header**-Eigenschaft aufgenommen werden. In der Regel müssen diese Informationen festgelegt werden, bevor die <xref:System.Net.WebRequest.GetRequestStream%2A>- oder <xref:System.Net.WebRequest.GetResponse%2A>-Methoden aufgerufen werden. Sobald die Anforderung gestellt wurde, gelten die Metadaten als schreibgeschützt.  
+ Die <xref:System.Net.WebRequest.Headers%2A>-Eigenschaft enthält eine beliebige Auflistung von Name/Wert-Paaren der Metadaten, die der Anforderung zugeordnet sind. Alle für das Protokoll erforderlichen Metadaten, die als Name-Wert-Paar ausgedrückt werden, können in die **Header**-Eigenschaft aufgenommen werden. In der Regel müssen diese Informationen festgelegt werden, bevor die <xref:System.Net.WebRequest.GetRequestStream%2A>- oder <xref:System.Net.WebRequest.GetResponse%2A>-Methoden aufgerufen werden. Sobald die Anforderung gestellt wurde, gelten die Metadaten als schreibgeschützt.  
   
- Sie müssen die **Header**-Eigenschaft nicht verwenden, um die Header-Metadaten zu nutzen. Protokollspezifische Metadaten können als Eigenschaften verfügbar gemacht werden. So macht die <xref:System.Net.HttpWebRequest.UserAgent%2A?displayProperty=nameWithType>-Eigenschaft z.B. den HTTP-Header **User-Agent** verfügbar. Wenn Sie die Header-Metadaten als Eigenschaft verfügbar machen, sollten Sie vermeiden, dass die gleiche Eigenschaft die **Header**-Eigenschaft verwendet.  
+ Sie müssen die **Header**-Eigenschaft nicht verwenden, um die Header-Metadaten zu nutzen. Protokollspezifische Metadaten können als Eigenschaften verfügbar gemacht werden. So macht die <xref:System.Net.HttpWebRequest.UserAgent%2A?displayProperty=nameWithType>-Eigenschaft z.B. den HTTP-Header **User-Agent** verfügbar. Wenn Sie die Header-Metadaten als Eigenschaft verfügbar machen, sollten Sie nicht zulassen, dass die gleiche Eigenschaft die **Header**-Eigenschaft verwendet.  
   
 ## <a name="method-property"></a>Methode-Eigenschaft  
  Die <xref:System.Net.WebRequest.Method%2A>-Eigenschaft enthält das Verb oder die Aktion, die der Server auf Anfrage ausführen soll. Die Standardeinstellung für die **Method**-Eigenschaft muss eine Standardanforderung/-antwort aktivieren, ohne protokollspezifische Eigenschaften festzulegen. Die <xref:System.Net.HttpWebResponse.Method%2A>-Methode wird z.B. standardmäßig auf „GET“ festgelegt, womit eine Ressource von einem Webserver angefordert und die Antwort zurückgegeben wird.  
@@ -88,10 +88,10 @@ Die <xref:System.Net.WebRequest>-Klasse ist eine abstrakte Basisklasse, die die 
   
  Die **GetResponse**-Methode ist verantwortlich für das Erstellen eines entsprechenden **WebResponse**-Nachfolgers, der die eingehende Antwort enthält.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Net.WebRequest>
 - <xref:System.Net.HttpWebRequest>
 - <xref:System.Net.FileWebRequest>
-- [Programmieren austauschbarer Protokolle](programming-pluggable-protocols.md)
+- [Programming Pluggable Protocols (Programmieren austauschbarer Protokolle)](programming-pluggable-protocols.md)
 - [Ableiten von WebResponse](deriving-from-webresponse.md)

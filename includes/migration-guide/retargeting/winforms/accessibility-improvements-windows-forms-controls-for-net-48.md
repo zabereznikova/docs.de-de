@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 5e8674d0a9bb6e12784d9898fb01a26aa6de8c8f
-ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "72887770"
 ---
 ### <a name="accessibility-improvements-in-windows-forms-controls-for-net-48"></a>Verbesserung der Barrierefreiheit von Windows Forms-Steuerelementen für .NET 4.8

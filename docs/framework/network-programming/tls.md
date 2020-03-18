@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Internet, security
 - security [.NET Framework], Internet
 - permissions [.NET Framework], Internet
-ms.openlocfilehash: bae6bf6a1a5d87241b619bf024c099c48af6af43
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: 49beb8aa7d488bb6f0649cfb66ce7e78695840b4
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77452681"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "78848209"
 ---
 # <a name="transport-layer-security-tls-best-practices-with-the-net-framework"></a>Bewährte Methoden für Transport Layer Security (TLS) mit .NET Framework
 
@@ -29,7 +29,6 @@ Dieses Dokument richtet sich an Entwickler, für die Folgendes zutrifft:
 
 - Sie verwenden direkt die <xref:System.Net>-APIs (z.B. <xref:System.Net.Http.HttpClient?displayProperty=nameWithType> und <xref:System.Net.Security.SslStream?displayProperty=nameWithType>).
 - Sie verwenden direkt WCF-Clients und -Dienste über den Namespace <xref:System.ServiceModel?displayProperty=nameWithType>.
-- Sie verwenden Web- und Workerrollen von [Azure Cloud Services](https://azure.microsoft.com/services/cloud-services/) zum Hosten und Ausführen Ihrer Anwendung. Siehe Abschnitt [Azure Cloud Services](#azure-cloud-services).
 
 Folgendes wird empfohlen:
 
@@ -56,7 +55,7 @@ Fragen zu diesem Dokument können Sie im GitHub-Thema [Transport Layer Security 
 
 Für ASP.NET-Anwendungen überprüfen Sie das Element `<system.web><httpRuntime targetFramework>` von _web.config_, um sicherzustellen, dass Sie die beabsichtigte Version von .NET Framework verwenden.
 
-Für Windows Forms und andere Anwendungen lesen Sie [Vorgehensweise: Erstellen von Projekten für eine bestimmte .NET Framework-Version](/visualstudio/ide/visual-studio-multi-targeting-overview).
+Informationen zu Windows Forms und anderen Anwendungen finden Sie unter [Gewusst wie: Erstellen von Projekten für eine bestimmte .NET Framework-Version](/visualstudio/ide/visual-studio-multi-targeting-overview).
 
 Verwenden Sie die folgenden Abschnitte, um sicherzustellen, dass Sie keine bestimmte TLS- oder SSL-Version verwenden.
 
@@ -97,7 +96,7 @@ Wenn Sie auf 4.7.1 abzielen, ist WCF so konfiguriert, dass das Betriebssystem st
 
 Bei Verwendung einer benutzerdefinierten Bindung:
 
-- Konfigurieren Sie WCF, damit das Betriebssystem das beste Sicherheitsprotokoll auswählen kann, indem Sie für <xref:System.Security.Authentication.SslProtocols.None?displayProperty=nameWithType> die Verwendung von <xref:System.ServiceModel.Channels.SslStreamSecurityBindingElement.SslProtocols> festlegen.
+- Konfigurieren Sie WCF, damit das Betriebssystem das beste Sicherheitsprotokoll auswählen kann, indem Sie für <xref:System.ServiceModel.Channels.SslStreamSecurityBindingElement.SslProtocols> die Verwendung von <xref:System.Security.Authentication.SslProtocols.None?displayProperty=nameWithType> festlegen.
 - **Oder** konfigurieren Sie das Protokoll, das mit dem Konfigurationspfad `system.serviceModel/bindings/customBinding/binding/sslStreamSecurity:sslProtocols` verwendet wird.
 
 Wenn Sie **keine** benutzerdefinierte Bindung verwenden **und** Ihre WCF-Bindung über die Konfiguration einstellen, legen Sie das verwendete Protokoll mit dem Konfigurationspfad `system.serviceModel/bindings/netTcpBinding/binding/security/transport:sslProtocols` fest.
@@ -176,7 +175,7 @@ Der Wert `false` für `Switch.System.ServiceModel.DontEnableSystemDefaultTlsVers
 
 Für Anwendungen, die auf .NET Framework 4.7.1 und höhere Versionen abzielen, wird dieser Wert standardmäßig auf `false` festgelegt. Für Anwendungen, die auf .NET Framework 4.7 und frühere Versionen abzielen, wird dieser Wert standardmäßig auf `true` festgelegt.
 
-Weitere Informationen über TLS-Protokolle finden Sie unter [Entschärfung: TLS-Protokolle](../migration-guide/mitigation-tls-protocols.md). Weitere Informationen über `AppContext`-Switches finden Sie unter [`<AppContextSwitchOverrides> Element`](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md).
+Weitere Informationen über TLS-Protokolle finden Sie unter [Migration: TLS-Protokolle](../migration-guide/mitigation-tls-protocols.md). Weitere Informationen über `AppContext`-Switches finden Sie unter [`<AppContextSwitchOverrides> Element`](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md).
 
 ## <a name="configuring-security-via-the-windows-registry"></a>Konfigurieren der Sicherheit über die Windows-Registrierung
 
@@ -260,7 +259,7 @@ Um .NET Framework zu aktualisieren, damit das Betriebssystem die beste Version v
 Siehe auch:
 
 - [.NET Framework-Versionen und -Abhängigkeiten](../migration-guide/versions-and-dependencies.md)
-- [How to: Bestimmen der installierten .NET Framework-Versionen](../migration-guide/how-to-determine-which-versions-are-installed.md).
+- [Gewusst wie: Bestimmen der installierten .NET Framework-Versionen](../migration-guide/how-to-determine-which-versions-are-installed.md)
 
 ## <a name="support-for-tls-12"></a>Unterstützung für TLS 1.2
 
@@ -276,7 +275,7 @@ Um TLS 1.2 und/oder TLS 1.1 auf einem System, das sie unterstützt, zu aktiviere
 | Windows 8.1<br>Windows Server 2012 R2 | Unterstützt und standardmäßig aktiviert. |
 | Windows 8.0<br>Windows Server 2012 | Unterstützt und standardmäßig aktiviert. |
 | Windows 7 SP1<br>Windows Server 2008 R2 SP1 | Unterstützt und nicht standardmäßig aktiviert. Weitere Informationen zum Aktivieren von TLS 1.2 finden Sie auf der Webseite [Transport Layer Security (TLS)-Registrierungseinstellungen](/windows-server/security/tls/tls-registry-settings). |
-| Windows Server 2008 | Für Unterstützung für TLS 1.2 und TLS 1.1 ist ein Update erforderlich. Siehe [Update zum Hinzufügen der Unterstützung von TLS 1.1 und TLS 1.2 in Windows Server 2008 SP2](https://support.microsoft.com/help/4019276/update-to-add-support-for-tls-1-1-and-tls-1-2-in-windows-server-2008-s). |
+| Windows Server 2008 | Für Unterstützung für TLS 1.2 und TLS 1.1 ist ein Update erforderlich. Siehe [Update zum Hinzufügen der Unterstützung von TLS 1.1 und TLS 1.2 in Windows Server 2008 SP2](https://support.microsoft.com/help/4019276/update-to-add-support-for-tls-1-1-and-tls-1-2-in-windows-server-2008-s). |
 | Windows Vista | Wird nicht unterstützt. |
 
 Informationen darüber, welche TLS/SSL-Protokolle auf den einzelnen Windows-Version standardmäßig aktiviert sind, finden Sie unter [Protokolle in TLS/SSL (Schannel SSP)](/windows/desktop/SecAuthN/protocols-in-tls-ssl--schannel-ssp-).
@@ -291,21 +290,5 @@ Diese Tabelle zeigt das Betriebssystemupdate, das Sie benötigen, um TLS 1.2 mit
 | Windows 8.1<br>Windows Server 2012 R2 | [Unterstützung für Standardversionen des TLS-Systems im .NET Framework 3.5 unter Windows 8.1 und Windows Server 2012 R2](https://support.microsoft.com/help/3154520/support-for-tls-system-default-versions-included-in-the--net-framework) |
 | Windows 8.0<br>Windows Server 2012 | [Unterstützung für Standardversionen des TLS-Systems im .NET Framework 3.5 unter Windows Server 2012](https://support.microsoft.com/help/3154519/support-for-tls-system-default-versions-included-in-the--net-framework) |
 | Windows 7 SP1<br>Windows Server 2008 R2 SP1 | [Unterstützung für Standardversionen des TLS-Systems im .NET Framework 3.5.1 unter Windows 7 SP1 und Windows Server 2008 R2 SP1](https://support.microsoft.com/help/3154518/support-for-tls-system-default-versions-included-in-the--net-framework) |
-| Windows Server 2008 | [Unterstützung für Standardversionen des TLS-Systems im .NET Framework 2.0 SP2 unter Windows Vista SP2 und Windows Server 2008 SP2](https://support.microsoft.com/help/3154517/support-for-tls-system-default-versions-included-in-the--net-framework) |
+| Windows Server 2008 | [Unterstützung für Standardversionen des TLS-Systems im .NET Framework 2.0 SP2 unter Windows Vista SP2 und Windows Server 2008 SP2](https://support.microsoft.com/help/3154517/support-for-tls-system-default-versions-included-in-the--net-framework) |
 | Windows Vista | Nicht unterstützt |
-
-## <a name="azure-cloud-services"></a>Azure Cloud Services
-
-Wenn Sie Web- und Workerrollen von [Azure Cloud Services](https://azure.microsoft.com/services/cloud-services/) zum Hosten und Ausführen Ihrer Anwendung verwenden, gibt es einige Aspekte, die Sie für die Unterstützung von TLS 1.2 berücksichtigen müssen.
-
-### <a name="net-framework-47-is-not-installed-on-azure-guest-os-by-default"></a>.NET Framework 4.7 ist nicht standardmäßig auf dem Azure-Gastbetriebssystem installiert
-
-In der aktuellen Version der Azure-Gastbetriebssystemfamilie 5 (Windows Server 2016) ist die neueste Version 4.6.2 installiert. Um zu sehen, welche Versionen von .NET Framework auf jedem Azure-Gastbetriebssystem installiert sind, lesen Sie die [Azure-Gastbetriebssystemversionen und SDK-Kompatibilitätsmatrix](https://docs.microsoft.com/azure/cloud-services/cloud-services-guestos-update-matrix).
-
-Wenn Ihre App auf eine .NET Framework-Version abzielt, die in der Azure-Gastbetriebssystemversion nicht verfügbar ist, dann müssen Sie diese selbst installieren. Siehe [Installieren von .NET in Rollen in Azure Cloud Services](https://docs.microsoft.com/azure/cloud-services/cloud-services-dotnet-install-dotnet). Wenn die Framework-Installation einen Neustart erfordert, können auch die Dienstrollen neu gestartet werden, bevor sie in den Bereit-Zustand versetzt werden.
-
-### <a name="azure-guest-os-registry-settings"></a>Registrierungseinstellungen für das Azure-Gastbetriebssystem
-
-Das Image der Azure-Gastbetriebssystem-Familie 5 für [Azure Cloud Services](https://azure.microsoft.com/services/cloud-services/) hat bereits den Registrierungsschlüssel `SchUseStrongCrypto` auf den Wert „1“ festgelegt. Weitere Informationen finden Sie unter [SchUseStrongCrypto](#schusestrongcrypto).
-
-Legen Sie den Registrierungsschlüssel [SystemDefaultTlsVersions](#systemdefaulttlsversions) auf 1 fest. Siehe [Konfigurieren der Sicherheit über die Windows-Registrierung](#configuring-security-via-the-windows-registry).

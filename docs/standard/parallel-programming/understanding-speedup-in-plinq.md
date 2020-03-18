@@ -9,10 +9,10 @@ helpviewer_keywords:
 - PLINQ queries, performance tuning
 ms.assetid: 53706c7e-397d-467a-98cd-c0d1fd63ba5e
 ms.openlocfilehash: 07b5027d560a4caccc6c0a516c3f70c11df6be83
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73139906"
 ---
 # <a name="understanding-speedup-in-plinq"></a>Grundlagen zur Beschleunigung in PLINQ
@@ -68,7 +68,7 @@ Der primäre Zweck von PLINQ ist die Beschleunigung der Ausführung von LINQ to 
 ## <a name="when-plinq-chooses-sequential-mode"></a>Wenn PLINQ den sequenziellen Modus auswählt  
  PLINQ versucht immer, eine Abfrage mindestens so schnell auszuführen, als würde die Abfrage sequenziell ausgeführt. PLINQ beachtet zwar weder den Rechenaufwand der Benutzerdelegaten noch die Größe der Eingabequelle, sucht jedoch nach bestimmten „Abfrageformen“. Insbesondere wird nach Abfrageoperatoren oder Kombinationen aus Operatoren gesucht, die in der Regel die Ausführung einer Abfrage im parallelen Modus verlangsamen. Wenn solche Formen gefunden werden, fällt PLINQ standardmäßig auf den sequenziellen Modus zurück.  
   
- Vielleicht stellen Sie jedoch nach dem Messen der Leistung für eine bestimmte Abfrage fest, dass sie im parallelen Modus tatsächlich schneller ausgeführt wird. In solchen Fällen können Sie das <xref:System.Linq.ParallelExecutionMode.ForceParallelism?displayProperty=nameWithType>-Flag mithilfe der <xref:System.Linq.ParallelEnumerable.WithExecutionMode%2A>-Methode verwenden, um PLINQ anzuweisen, die Abfrage zu parallelisieren. Weitere Informationen finden Sie unter [Vorgehensweise: Angeben des Ausführungsmodus in PLINQ](../../../docs/standard/parallel-programming/how-to-specify-the-execution-mode-in-plinq.md).  
+ Vielleicht stellen Sie jedoch nach dem Messen der Leistung für eine bestimmte Abfrage fest, dass sie im parallelen Modus tatsächlich schneller ausgeführt wird. In solchen Fällen können Sie das <xref:System.Linq.ParallelExecutionMode.ForceParallelism?displayProperty=nameWithType>-Flag mithilfe der <xref:System.Linq.ParallelEnumerable.WithExecutionMode%2A>-Methode verwenden, um PLINQ anzuweisen, die Abfrage zu parallelisieren. Weitere Informationen finden Sie unter [How to: Specify the Execution Mode in PLINQ (Vorgehensweise: Angeben des Ausführungsmodus in PLINQ)](../../../docs/standard/parallel-programming/how-to-specify-the-execution-mode-in-plinq.md).  
   
  Die folgende Liste beschreibt die Abfrageformen, die PLINQ standardmäßig im sequenziellen Modus ausführt:  
   
@@ -82,6 +82,6 @@ Der primäre Zweck von PLINQ ist die Beschleunigung der Ausführung von LINQ to 
   
 - Abfragen, die Reverse enthalten, sofern nicht auf eine indizierbare Datenquelle angewendet.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Parallel LINQ (PLINQ) (Paralleles LINQ (PLINQ))](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)

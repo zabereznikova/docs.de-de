@@ -4,11 +4,11 @@ description: In diesem Artikel erfahren Sie, wie Prädikatfilter zur Laufzeit mi
 ms.date: 12/01/2016
 ms.assetid: 90238470-0767-497c-916c-52d0d16845e0
 ms.openlocfilehash: 314be8f98b9ff014f14bef11a1f3581eff8574b4
-ms.sourcegitcommit: 5dcfeb59179e81071f54840d4902cbe00b184294
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54857735"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "61659942"
 ---
 # <a name="dynamically-specify-predicate-filters-at-runtime"></a>Dynamisches Festlegen von Prädikatfiltern zur Laufzeit
 
@@ -68,7 +68,7 @@ In einigen Fällen wissen Sie bis zur Laufzeit nicht, wie viele Prädikate Sie f
 
 4. Führen Sie das Projekt mit einem Befehlszeilenargument für einen ganzzahligen Wert zwischen 1 und 4 aus.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Language-Integrated Query (LINQ)](index.md)
 - [where-Klausel](../language-reference/keywords/where-clause.md)

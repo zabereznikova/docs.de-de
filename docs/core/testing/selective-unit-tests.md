@@ -4,10 +4,10 @@ description: Es wird erläutert, wie Sie einen Filterausdruck zum Ausführen sel
 author: smadala
 ms.date: 03/22/2017
 ms.openlocfilehash: b9156300587215e68c01c609e298dbc1a2c53d11
-ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/21/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77543507"
 ---
 # <a name="running-selective-unit-tests"></a>Ausführen von selektiven Komponententests
@@ -48,7 +48,7 @@ namespace MSTestNamespace
 | ---------- | ------ |
 | `dotnet test --filter Method` | Führt Tests aus, dessen `FullyQualifiedName``Method` enthält. Verfügbar in `vstest 15.1+`. |
 | `dotnet test --filter Name~TestMethod1` | Führt Tests aus, dessen Name `TestMethod1` enthält. |
-| `dotnet test --filter ClassName=MSTestNamespace.UnitTest1` | Führt Tests aus, die sich in der Klasse `MSTestNamespace.UnitTest1` befinden.<br>**Hinweis**: Der Wert `ClassName` muss einen Namespace besitzen, damit `ClassName=UnitTest1` nicht funktioniert. |
+| `dotnet test --filter ClassName=MSTestNamespace.UnitTest1` | Führt Tests aus, die sich in der Klasse `MSTestNamespace.UnitTest1` befinden.<br>**Hinweis:** Der Wert `ClassName` muss einen Namespace besitzen, damit `ClassName=UnitTest1` nicht funktioniert. |
 | `dotnet test --filter FullyQualifiedName!=MSTestNamespace.UnitTest1.TestMethod1` | Führt alle Tests außer `MSTestNamespace.UnitTest1.TestMethod1` aus. |
 | `dotnet test --filter TestCategory=CategoryA` | Führt Tests aus, die mit `[TestCategory("CategoryA")]` kommentiert sind. |
 | `dotnet test --filter Priority=2` | Führt Tests aus, die mit `[Priority(2)]` kommentiert sind.<br>
@@ -105,7 +105,7 @@ Im Codebeispiel können die definierten Merkmale mit den Schlüsseln `Category` 
 | ---------- | ------ |
 | <code>dotnet test --filter "FullyQualifiedName~TestClass1&#124;Category=CategoryA"</code> | Führt Tests aus, die `TestClass1` in `FullyQualifiedName` aufweisen, **oder** `Category` ist `CategoryA`. |
 | `dotnet test --filter "FullyQualifiedName~TestClass1&Category=CategoryA"` | Führt Tests aus, die `TestClass1` in `FullyQualifiedName` aufweisen, **und** `Category` ist `CategoryA`. |
-| <code>dotnet test --filter "(FullyQualifiedName~TestClass1&Category=CategoryA)&#124;Priority=1"</code> | Führt Tests aus, in denen `FullyQualifiedName` entweder `TestClass1` aufweist, **und** `Category` ist `CategoryA`, **oder** `Priority` ist 1. |
+| <code>dotnet test --filter "(FullyQualifiedName~TestClass1&Category=CategoryA)&#124;Priority=1"</code> | Führt Tests aus, in denen `FullyQualifiedName` entweder `TestClass1` enthält, **und** `Category` ist `CategoryA`, **oder** `Priority` ist 1. |
 
 ## <a name="nunit"></a>NUnit
 

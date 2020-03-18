@@ -8,10 +8,10 @@ helpviewer_keywords:
 - type system, base types
 ms.assetid: 028d0ce8-ebc2-4a88-a16f-17508f6d0bd6
 ms.openlocfilehash: 8fa22ce749dc7d117a4a37de5d09abd9892eeab7
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73103548"
 ---
 # <a name="working-with-base-types-in-net"></a>Arbeiten mit Basistypen in .NET
@@ -27,7 +27,7 @@ Dieser Abschnitt beschreibt Vorgänge mit .NET-Basistypen, wie z.B. Formatierung
  [Bearbeiten von Zeichenfolgen](../../../docs/standard/base-types/manipulating-strings.md)  
  Beschreibt, wie Zeichenfolgen bearbeitet und formatiert werden.  
   
- [Parsing Strings](../../../docs/standard/base-types/parsing-strings.md)  
+ [Analysieren von Zeichenfolgen](../../../docs/standard/base-types/parsing-strings.md)  
  Beschreibt das Konvertieren von Zeichenfolgen in Typen.  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  

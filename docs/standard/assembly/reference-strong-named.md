@@ -12,10 +12,10 @@ dev_langs:
 - vb
 - cpp
 ms.openlocfilehash: adda4ed2ab5c59e3518b8e724044529a79840ad0
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78156477"
 ---
 # <a name="how-to-reference-a-strong-named-assembly"></a>Vorgehensweise: Verweisen auf eine Assembly mit starkem Namen
@@ -30,7 +30,7 @@ Ein Verweis zur Kompilierzeit tritt auf, wenn Sie den Compiler darauf hinweisen,
 
 Geben Sie an einer Eingabeaufforderung folgenden Befehl ein:  
 
-\<*Compilerbefehl*> **/reference:**\<*Assemblyname*>  
+\<*Compilerbefehl*>  **/reference:** \<*Assemblyname*>  
 
 In diesem Befehl ist der *Compilerbefehl* der Befehl für die Sprache, die Sie verwenden, und *Assemblyname* ist der Name der Assembly mit starkem Namen, auf die verwiesen wird. Sie können auch andere Compileroptionen verwenden, z.B. die Option **/t:library** zum Erstellen einer Bibliothekassembly.  
 
@@ -44,7 +44,7 @@ csc /t:library myAssembly.cs /reference:myLibAssembly.dll
   
 Wenn Sie zur Laufzeit auf eine Assembly mit starkem Namen verweisen (z. B. mit der <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>- oder <xref:System.Reflection.Assembly.GetType%2A?displayProperty=nameWithType>-Methode), müssen Sie den Anzeigenamen der Assembly mit starkem Namen verwenden, auf die verwiesen wird. Die Syntax eines Anzeigenamens lautet wie folgt:  
 
-\<*Assemblyname*>**,** \<*Versionsnummer*>**,** \<*Kultur*>**,** \<*Token des öffentlichen Schlüssels*>  
+\<*Assemblyname*> **,** \<*Versionsnummer*> **,** \<*Kultur*> **,** \<*Token des öffentlichen Schlüssels*>  
 
 Zum Beispiel:  
 

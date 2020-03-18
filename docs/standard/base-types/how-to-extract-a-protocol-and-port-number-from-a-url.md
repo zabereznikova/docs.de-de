@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Extrahieren eines Protokolls und einer Portnummer aus einer URL'
+title: 'Gewusst wie: Extrahieren eines Protokolls und einer Portnummer aus einer URL'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -14,13 +14,13 @@ helpviewer_keywords:
 - pattern-matching with regular expressions, examples
 ms.assetid: ab7f62b3-6d2c-4efb-8ac6-28600df5fd5c
 ms.openlocfilehash: f2704e3fb5ceb68609a475d52e11030177ad760b
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73138723"
 ---
-# <a name="how-to-extract-a-protocol-and-port-number-from-a-url"></a>Vorgehensweise: Extrahieren eines Protokolls und einer Portnummer aus einer URL
+# <a name="how-to-extract-a-protocol-and-port-number-from-a-url"></a>Gewusst wie: Extrahieren eines Protokolls und einer Portnummer aus einer URL
 Das folgende Beispiel extrahiert ein Protokoll und eine Portnummer aus einer URL.  
   
 ## <a name="example"></a>Beispiel  
@@ -47,6 +47,6 @@ Das folgende Beispiel extrahiert ein Protokoll und eine Portnummer aus einer URL
  [!code-csharp[RegularExpressions.Examples.Protocol#2](../../../samples/snippets/csharp/VS_Snippets_CLR/RegularExpressions.Examples.Protocol/cs/example2.cs#2)]
  [!code-vb[RegularExpressions.Examples.Protocol#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/RegularExpressions.Examples.Protocol/vb/example2.vb#2)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Reguläre Ausdrücke von .NET](../../../docs/standard/base-types/regular-expressions.md)

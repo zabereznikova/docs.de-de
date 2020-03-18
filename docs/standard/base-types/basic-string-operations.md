@@ -9,10 +9,10 @@ helpviewer_keywords:
 ms.assetid: 8133d357-90b5-4b62-9927-43323d99b6b6
 ms.custom: seadec18
 ms.openlocfilehash: 05cdf399e104fc9e528c954adb19634a5c136664
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73132911"
 ---
 # <a name="basic-string-operations-in-net"></a>Grundlegende Zeichenfolgenvorgänge in .NET
@@ -37,7 +37,7 @@ Anwendungen antworten Benutzern oft durch Erstellen von Nachrichten auf Grundlag
  [Verwenden der StringBuilder-Klasse](../../../docs/standard/base-types/stringbuilder.md)  
  Beschreibt das Erstellen und Ändern dynamischer Zeichenfolgenobjekte mithilfe der <xref:System.Text.StringBuilder>-Klasse.  
   
- [Vorgehensweise: Durchführen grundlegender Zeichenfolgenbearbeitungen](../../../docs/standard/base-types/basic-manipulations.md)  
+ [Ausführen von grundlegenden Zeichenfolgenbearbeitungen](../../../docs/standard/base-types/basic-manipulations.md)  
  Veranschaulicht die Verwendung von grundlegenden Zeichenfolgenvorgängen.  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  

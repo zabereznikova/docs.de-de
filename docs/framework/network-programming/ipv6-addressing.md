@@ -27,10 +27,10 @@ helpviewer_keywords:
 - IPv6, disabling
 ms.assetid: 20a104ae-1649-4649-a005-531a5cf74c93
 ms.openlocfilehash: 1bad43b96fc6f66724e5e40cdf0ae6d76b46d867
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "71047855"
 ---
 # <a name="ipv6-addressing"></a>IPv6-Adressierung
@@ -63,11 +63,11 @@ IPv6 definiert die folgenden Adresstypen:
 
 - **Unicast address (Unicastadressen)** . Ein Bezeichner für eine einzelne Schnittstelle. Ein Paket, das an diese Adresse gesendet wird, wird an die angegebene Schnittstelle übermittelt. Die Unicastadressen werden von den Multicastadressen durch den Wert des oberen Oktetts unterschieden. Das obere Oktett der Multicastadressen hat den Hexadezimalwert von FF. Jeder andere Wert für dieses Oktett bezeichnet eine Unicastadresse. Es gibt folgende verschiedene Typen von Unicastadressen:
 
-  - **Link-local addresses (Verbindungslokale Adressen)** . Diese Adressen werden in einem einzigen Link verwendet und weisen folgendes Format auf: FE80::*InterfaceID*. Verbindungslokale Adressen werden zwischen Knoten auf einem Link zur automatischen Adresskonfiguration und Nachbarsuche verwendet oder wenn keine Router vorhanden sind. Eine verbindungslokale Adresse wird in erster Linie beim Start verwendet und wenn das System noch keine größeren Adressen abgerufen hat.
+  - **Link-local addresses (Verbindungslokale Adressen)** . Diese Adressen werden dann in einem einzigen Link verwendet und weisen folgendes Format auf: FE80::*InterfaceID*. Verbindungslokale Adressen werden zwischen Knoten auf einem Link zur automatischen Adresskonfiguration und Nachbarsuche verwendet oder wenn keine Router vorhanden sind. Eine verbindungslokale Adresse wird in erster Linie beim Start verwendet und wenn das System noch keine größeren Adressen abgerufen hat.
 
-  - **Site-local addresses (Standortlokale Adressen)** . Diese Adressen werden in einem einzigen Standort verwendet und weisen folgendes Format auf: FEC0::*SubnetID*:*InterfaceID*. Die standortlokalen Adressen werden für die Adressierung innerhalb eines Standorts verwendet, wenn kein globales Präfix benötigt wird.
+  - **Site-local addresses (Standortlokale Adressen)** . Diese Adressen werden dann in einem einzigen Standort verwendet und weisen folgendes Format auf: FEC0::*SubnetID*:*InterfaceID*. Die standortlokalen Adressen werden für die Adressierung innerhalb eines Standorts verwendet, wenn kein globales Präfix benötigt wird.
 
-  - **Global IPv6 unicast addresses (Globale IPv6-Unicastadressen)** . Diese Adressen können über das Internet verwendet werden und weisen folgendes Format auf: 010(FP, 3 Bit) TLA ID (13 Bit) Reserved (8 Bit) NLA ID (24 Bit) SLA ID (16 Bit) *InterfaceID* (64 Bit).
+  - **Global IPv6 unicast addresses (Globale IPv6-Unicastadressen)** . Diese Adressen können über das Internet verwendet werden und weisen folgendes Format auf: 010(FP, 3 Bits) TLA ID (13 Bits) Reserved (8 Bits) NLA ID (24 Bits) SLA ID (16 Bits) *InterfaceID* (64 Bits).
 
 - **Multicast address (Multicastadressen)** . Ein Bezeichner für eine Reihe von Schnittstellen, die normalerweise zu den unterschiedlichen Knoten gehören. Ein Paket, das an diese Adresse gesendet wird, wird an alle von der Adresse angegebenen Schnittstellen gesendet. Die Multicastadresstypen ersetzen die IPv4-Broadcastadressen.
 
@@ -75,7 +75,7 @@ IPv6 definiert die folgenden Adresstypen:
 
 Im Allgemeinen verfügt der Knoten immer über eine verbindungslokale Adresse. Er kann auch über eine standortlokale Adresse und eine oder mehrere globale Adressen verfügen.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Internetprotokoll Version 6](internet-protocol-version-6.md)
 - [Sockets](sockets.md)

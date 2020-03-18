@@ -7,10 +7,10 @@ helpviewer_keywords:
 - manipulating strings
 ms.assetid: d4568ff3-9f83-4549-acd8-47aec2194ac0
 ms.openlocfilehash: 5188c4f1099aad486e921dfba0c6c4216613ba4e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73135229"
 ---
 # <a name="manipulating-strings-in-net"></a>Bearbeiten von Zeichenfolgen in .NET
@@ -33,5 +33,5 @@ ms.locfileid: "73135229"
  [Formatierung von Typen](../../../docs/standard/base-types/formatting-types.md)  
  Bietet Informationen darüber, wie mittels der Basisklassenbibliothek Formatierungen implementiert, numerische Typen formatiert, Zeichenfolgentypen formatiert und Formatierungen für eine bestimmte Kultur vorgenommen werden.  
   
- [Parsing Strings](../../../docs/standard/base-types/parsing-strings.md)  
+ [Analysieren von Zeichenfolgen](../../../docs/standard/base-types/parsing-strings.md)  
  Beschreibt, wie Objekte mit den Werten initialisiert werden, die durch Zeichenfolgenentsprechungen dieser Objekte beschrieben werden. Das Verarbeiten ist die Umkehroperation zum Formatieren.

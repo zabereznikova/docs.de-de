@@ -9,10 +9,10 @@ helpviewer_keywords:
 - aliases, extern keyword
 ms.assetid: f487bf4f-c943-4fca-851b-e540c83d9027
 ms.openlocfilehash: 86202333484933d7449b0c4d8c5a3f1a63cd7775
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75713547"
 ---
 # <a name="extern-alias-c-reference"></a>extern-Alias (C#-Referenz)
@@ -27,7 +27,7 @@ Sie müssen möglicherweise auf zwei Versionen von Assemblys verweisen, die dens
   
  `/r:GridV2=grid20.dll`  
   
- Dies erstellt die externen Aliase `GridV1` und `GridV2`. Um diese Aliase aus einem Programm heraus zu verwenden, verweisen Sie mithilfe des `extern`-Schlüsselworts auf sie. Zum Beispiel:  
+ Dies erstellt die externen Aliase `GridV1` und `GridV2`. Um diese Aliase aus einem Programm heraus zu verwenden, verweisen Sie mithilfe des `extern`-Schlüsselworts auf sie. Beispiel:  
   
  `extern alias GridV1;`  
   
@@ -40,10 +40,10 @@ Sie müssen möglicherweise auf zwei Versionen von Assemblys verweisen, die dens
 ## <a name="c-language-specification"></a>C#-Programmiersprachenspezifikation  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [C#-Referenz](../index.md)
 - [C#-Programmierhandbuch](../../programming-guide/index.md)
 - [C#-Schlüsselwörter](./index.md)
-- [:: Operator](../operators/namespace-alias-qualifier.md)
+- [::-Operator](../operators/namespace-alias-qualifier.md)
 - [-reference (C#-Compileroptionen)](../compiler-options/reference-compiler-option.md)

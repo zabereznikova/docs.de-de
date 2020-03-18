@@ -7,10 +7,10 @@ helpviewer_keywords:
 - managed threading
 ms.assetid: 239b2e8d-581b-4ca3-992b-0e8525b9321c
 ms.openlocfilehash: dd9b7b8cb194353d0a1c285af10d54dc7366896e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73128962"
 ---
 # <a name="threading-objects-and-features"></a>Threadingobjekte und -funktionen
@@ -25,12 +25,12 @@ Zusammen mit der <xref:System.Threading.Thread?displayProperty=nameWithType>-Kla
 |[EventWaitHandle](eventwaithandle.md)|Beschreibt die <xref:System.Threading.EventWaitHandle?displayProperty=nameWithType>-Klasse, die ein Threadsynchronisierungsereignis darstellt.|
 |[CountdownEvent](countdownevent.md)|Beschreibt die <xref:System.Threading.CountdownEvent?displayProperty=nameWithType>-Klasse, die ein Threadsynchronisierungsereignis darstellt, das eingestellt wird, wenn sein Zähler gleich Null ist.|
 |[Mutexe](mutexes.md)|Beschreibt die <xref:System.Threading.Mutex?displayProperty=nameWithType>-Klasse, die exklusiven Zugriff auf eine freigegebene Ressource gewährt.|
-|[Semaphore and SemaphoreSlim (Semaphore und SemaphoreSlim)](semaphore-and-semaphoreslim.md)|Beschreibt die <xref:System.Threading.Semaphore?displayProperty=nameWithType>-Klasse, die die Anzahl von Threads einschränkt, die gleichzeitig auf eine freigegebene Ressource oder einen Pool von Ressourcen zugreifen können.|
+|[Semaphore und SemaphoreSlim](semaphore-and-semaphoreslim.md)|Beschreibt die <xref:System.Threading.Semaphore?displayProperty=nameWithType>-Klasse, die die Anzahl von Threads einschränkt, die gleichzeitig auf eine freigegebene Ressource oder einen Pool von Ressourcen zugreifen können.|
 |[Barrier](barrier.md)|Beschreibt die <xref:System.Threading.Barrier?displayProperty=nameWithType>-Klasse, die das Barrieremuster für die Koordination von Threads in stufenweise durchgeführten Vorgängen implementiert.|
 |[SpinLock](spinlock.md)|Beschreibt die <xref:System.Threading.SpinLock?displayProperty=nameWithType>-Struktur, die für bestimmte Low-Level-Sperrszenarios eine einfache Alternative zur <xref:System.Threading.Monitor?displayProperty=nameWithType>-Klasse darstellt.|
 |[SpinWait](spinwait.md)|Beschreibt die <xref:System.Threading.SpinWait?displayProperty=nameWithType>-Struktur, die Unterstützung für Spin-basierte Wartevorgänge bereitstellt.|
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Threading.Monitor?displayProperty=nameWithType>
 - <xref:System.Threading.WaitHandle?displayProperty=nameWithType>

@@ -4,17 +4,17 @@ description: In diesem Artikel erfahren Sie, wie Sie mit LINQ in C# Ergebnisse n
 ms.date: 08/14/2018
 ms.assetid: cbda9c08-151b-4c9e-82f7-c3d7f3dac66b
 ms.openlocfilehash: b5753c85bb07be4fc84b78a299eece961969ff9d
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47193004"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "61659903"
 ---
 # <a name="group-results-by-contiguous-keys"></a>Gruppieren von Ergebnissen nach zusammenhängenden Schlüsseln
 
 Im folgende Beispiel wird veranschaulicht, wie Elemente in Segmenten gruppiert werden, die Untersequenzen von zusammenhängenden Schlüsseln darstellen. Gehen wir beispielsweise von der folgenden Sequenz von Schlüssel-Wert-Paaren aus:
 
-|Key|Wert|
+|Taste|Wert|
 |---------|-----------|
 |A|Wir|
 |A|finden|
@@ -49,6 +49,6 @@ Im folgenden Beispiel werden die Erweiterungsmethode und der Clientcode gezeigt,
 
 Um die Erweiterungsmethode in Ihrem Projekt zu verwenden, kopieren Sie die statische `MyExtensions`-Klasse in eine neue oder eine vorhandene Datenquelldatei, und fügen Sie, falls erforderlich, am Speicherort eine `using`-Direktive für den Namespace hinzu.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Language-Integrated Query (LINQ)](index.md)

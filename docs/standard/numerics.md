@@ -12,10 +12,10 @@ helpviewer_keywords:
 - BigInteger
 ms.assetid: dfebc18e-acde-4510-9fa7-9a0f4aa3bd11
 ms.openlocfilehash: e5815058898cac165e7a47d761ee86bb9c4cb940
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73091587"
 ---
 # <a name="numerics-in-net"></a>Numerische Ausdrücke in .NET
@@ -26,7 +26,7 @@ ms.locfileid: "73091587"
 
 .NET unterstützt 8-, 16-, 32- und 64-Bit-Ganzzahltypen mit und ohne Vorzeichen, die in der folgenden Tabelle aufgeführt sind:
   
-|Typ|Mit/ohne Vorzeichen|Größe (in Bytes)|Minimalwert|Maximalwert|  
+|Geben Sie Folgendes ein:|Mit/ohne Vorzeichen|Größe (in Bytes)|Minimalwert|Maximalwert|  
 |----------|----------------------|--------------------|-------------------|-------------------|  
 |<xref:System.Byte?displayProperty=nameWithType>|Ohne Vorzeichen|1|0|255|  
 |<xref:System.Int16?displayProperty=nameWithType>|Signiert|2|-32,768|32,767|  
@@ -52,7 +52,7 @@ Die <xref:System.Numerics.BigInteger?displayProperty=nameWithType>-Struktur ist 
 
 .NET enthält drei grundlegende Gleitkommatypen, die in der folgenden Tabelle aufgeführt sind:
   
-|Typ|Größe (in Bytes)|Ungefährer Bereich|Genauigkeit|  
+|Geben Sie Folgendes ein:|Größe (in Bytes)|Ungefährer Bereich|Genauigkeit|  
 |----------|--------|---------------------|--------------------|  
 |<xref:System.Single?displayProperty=nameWithType>|4|±1.5 × 10<sup>−45</sup> zu ±3.4 × 10<sup>38</sup>|~6–9 Stellen|  
 |<xref:System.Double?displayProperty=nameWithType>|8|±5,0 × 10<sup>−324</sup> bis ±1,7 × 10<sup>308</sup>|~15–17 Stellen|  
@@ -93,7 +93,7 @@ Die SIMD-fähigen .NET-Typen umfassen Folgendes:
   
 Die SIMD-fähigen Typen sind so implementiert, dass sie mit nicht-SIMD-fähiger Hardware oder JIT-Compilern verwendet werden können. Um die Vorteile von SIMD-Anweisungen zu nutzen, müssen Ihre 64-Bit-Apps von der Runtime ausgeführt werden, die den RyuJIT-Compiler verwendet, der in .NET Core und in .NET Framework 4.6 und höher enthalten ist. Sie fügt SIMD-Unterstützung hinzu, wenn 64-Bit-Prozessoren verwendet werden.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Grundlagen der Anwendung](application-essentials.md)
 - [Standardmäßige Zahlenformatzeichenfolgen](base-types/standard-numeric-format-strings.md)

@@ -3,10 +3,10 @@ title: Herausforderungen und Lösungen für die verteilte Datenverwaltung
 description: Erfahren Sie, welche Herausforderungen und Lösungen für die verteilte Datenverwaltung in Microservices bestehen.
 ms.date: 09/20/2018
 ms.openlocfilehash: c30de24591d5a73fd34087f34a69e9c7ed54cd35
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/03/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "71834455"
 ---
 # <a name="challenges-and-solutions-for-distributed-data-management"></a>Herausforderungen und Lösungen für die verteilte Datenverwaltung

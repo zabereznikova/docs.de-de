@@ -3,14 +3,14 @@ title: Verketten von Standardabfrageoperatoren (C#)
 ms.date: 07/20/2015
 ms.assetid: 66f2b0a9-2c23-4735-988e-bbc9dfb55c7b
 ms.openlocfilehash: 37df654b2bfdcc135460e5ded2ceec1eca33b35a
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/31/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "70204205"
 ---
 # <a name="chaining-standard-query-operators-together-c"></a>Verketten von Standardabfrageoperatoren (C#)
-Das ist das letzte Thema im [Tutorial: Verketten von Abfragen (C#)](./deferred-execution-and-lazy-evaluation-in-linq-to-xml.md).  
+Dies ist das letzte Thema von [Tutorial: Verketten von Abfragen (C#)](./deferred-execution-and-lazy-evaluation-in-linq-to-xml.md).  
   
  Die Standardabfrageoperatoren können ebenfalls verkettet werden. So können Sie z. B. den <xref:System.Linq.Enumerable.Where%2A?displayProperty=nameWithType>-Operator verwenden; dieser funktioniert ebenfalls verzögert. Er materialisiert keinerlei Zwischenergebnisse.  
   
@@ -19,7 +19,7 @@ Das ist das letzte Thema im [Tutorial: Verketten von Abfragen (C#)](./deferred-e
   
  Ein Unterschied besteht darin, dass die <xref:System.Linq.Enumerable.Where%2A>-Methode in diesem Fall ihre Quellauflistung durchläuft, dabei feststellt, dass das erste Element kein Prädikat übergibt, und dann zum nächsten Element geht, das ein Prädikat übergibt. Anschließend gibt die Methode das zweite Element zurück.  
   
- Die Grundidee bleibt jedoch dieselbe: Zwischenauflistungen werden nur dann materialisiert, wenn dies erforderlich ist.  
+ Die Grundidee ist aber dieselbe: Zwischenauflistungen werden nur dann materialisiert, wenn dies erforderlich ist.  
   
  Bei Verwendung von Abfrageausdrücken werden diese in Aufrufe für die Standardabfrageoperatoren umgewandelt, und es werden dieselben Prinzipien angewendet.  
   

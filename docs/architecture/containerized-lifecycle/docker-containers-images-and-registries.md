@@ -3,10 +3,10 @@ title: Docker-Container, -Images und -Registrierungen
 description: Lernen Sie die Schlüsselrolle kennen, die Registrierungen überall in der Docker-Methode zum Bereitstellen von Anwendungen spielen.
 ms.date: 02/15/2019
 ms.openlocfilehash: bfef21cab7be89abaf33b89366d7cff2115a7cc6
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "72770931"
 ---
 # <a name="docker-containers-images-and-registries"></a>Docker-Container, -Images und -Registrierungen

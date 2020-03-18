@@ -9,10 +9,10 @@ helpviewer_keywords:
 - tasks, partitioners
 ms.assetid: 96153688-9a01-47c4-8430-909cee9a2887
 ms.openlocfilehash: 8caea6d8a97b8c0daf7c59718479ea2e12a52d78
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73141571"
 ---
 # <a name="custom-partitioners-for-plinq-and-tpl"></a>Benutzerdefinierte Partitionierer für PLINQ und TPL
@@ -23,7 +23,7 @@ Einer der wesentlichen Schritte, um einen Vorgang für eine Datenquelle zu paral
 
 Es gibt viele Möglichkeiten, eine Datenquelle zu partitionieren. Bei den effizientesten Ansätzen wird die Quelle nicht physisch in mehrere Untersequenzen unterteilt, sondern mehrere Threads kooperieren beim Verarbeiten der ursprünglichen Quellsequenz. Für Arrays und andere indizierte Quellen wie <xref:System.Collections.IList>-Sammlungen, bei denen die Länge im Voraus bekannt ist, ist die *Bereichspartitionierung* die einfachste Art der Partitionierung. Jeder Thread empfängt eindeutige Indizes für Anfang und Ende, sodass er seinen Bereich der Quelle verarbeiten kann, ohne einen anderen Thread zu überschreiben oder selbst überschrieben zu werden. Der einzige Mehraufwand bei der Bereichspartitionierung ist die ursprüngliche Erstellung von Bereichen; danach ist keine zusätzliche Synchronisierung erforderlich. Aus diesem Grund liefert sie gute Leistung, solange die Arbeitsauslastung gleichmäßig verteilt wird. Ein Nachteil der Bereichspartitionierung ist, dass ein Thread, der seine Arbeit frühzeitig beendet, den anderen Threads keine Arbeit abnehmen kann.
 
-Für verknüpfte Listen oder andere Sammlungen, deren Länge nicht bekannt ist, können Sie die *Blockpartitionierung* verwenden. Bei der Blockpartitionierung nutzt jeder Thread oder jede Aufgabe in einer parallelen Schleife oder Abfrage eine Anzahl von Quellelementen in einem Block, verarbeitet sie und kehrt dann zurück, um zusätzliche Elemente abzurufen. Mit dem Partitionierer wird sichergestellt, dass alle Elemente verteilt werden und keine Duplikate vorhanden sind. Ein Block kann eine beliebige Größe haben. Der Partitionierer, beispielsweise, der unter [Vorgehensweise: Implementieren von dynamischen Partitionen](../../../docs/standard/parallel-programming/how-to-implement-dynamic-partitions.md) gezeigt wird, erstellt Blöcke, die nur ein Element enthalten. Solange die Blöcke nicht zu groß sind, bewirkt diese Art der Partitionierung auch grundsätzlich einen Lastenausgleich, da die Zuweisung von Elementen zu Threads nicht vorgegeben ist. Allerdings macht sich der Synchronisierungsmehraufwand für den Partitionierer immer dann bemerkbar, wenn der Thread einen anderen Block abrufen muss. Das Ausmaß der Synchronisierung ist in diesen Fällen umgekehrt proportional zur Größe der Blöcke.
+Für verknüpfte Listen oder andere Sammlungen, deren Länge nicht bekannt ist, können Sie die *Blockpartitionierung* verwenden. Bei der Blockpartitionierung nutzt jeder Thread oder jede Aufgabe in einer parallelen Schleife oder Abfrage eine Anzahl von Quellelementen in einem Block, verarbeitet sie und kehrt dann zurück, um zusätzliche Elemente abzurufen. Mit dem Partitionierer wird sichergestellt, dass alle Elemente verteilt werden und keine Duplikate vorhanden sind. Ein Block kann eine beliebige Größe haben. Der in [Gewusst wie: Implementieren von dynamischen Partitionen](../../../docs/standard/parallel-programming/how-to-implement-dynamic-partitions.md) gezeigte Partitionierer erstellt z.B. Blöcke, die nur ein Element enthalten. Solange die Blöcke nicht zu groß sind, bewirkt diese Art der Partitionierung auch grundsätzlich einen Lastenausgleich, da die Zuweisung von Elementen zu Threads nicht vorgegeben ist. Allerdings macht sich der Synchronisierungsmehraufwand für den Partitionierer immer dann bemerkbar, wenn der Thread einen anderen Block abrufen muss. Das Ausmaß der Synchronisierung ist in diesen Fällen umgekehrt proportional zur Größe der Blöcke.
 
 Im Allgemeinen ist die Bereichspartitionierung nur schneller, wenn die Ausführungszeit des Delegaten kurz bis mäßig ist, die Quelle über eine große Anzahl von Elementen verfügt und die gesamte Arbeit in jeder Partition ungefähr gleich ist. Die Blockpartitionierung ist daher im Allgemeinen in den meisten Fällen schneller. Bei Datenquellen mit einer kleinen Anzahl von Elementen oder längeren Ausführungszeiten für den Delegaten sind Leistung des Blocks und Bereichspartitionierung ungefähr gleich.
 
@@ -73,7 +73,7 @@ Leiten Sie zum Erstellen eines einfachen benutzerdefinierten Partitionierers ein
 |-|-|
 |<xref:System.Collections.Concurrent.Partitioner%601.GetPartitions%2A>|Diese Methode wird einmal vom Hauptthread aufgerufen und gibt eine IList(IEnumerator(TSource)) zurück. Jeder Arbeitsthread in der Schleife oder Abfrage kann `GetEnumerator` in der Liste zum Abrufen eines <xref:System.Collections.Generic.IEnumerator%601> über eine unterschiedliche Partition aufrufen.|
 |<xref:System.Collections.Concurrent.Partitioner%601.SupportsDynamicPartitions%2A>|Geben Sie `true` zurück, wenn Sie <xref:System.Collections.Concurrent.Partitioner%601.GetDynamicPartitions%2A> implementieren, andernfalls `false`.|
-|<xref:System.Collections.Concurrent.Partitioner%601.GetDynamicPartitions%2A>|Wenn <xref:System.Collections.Concurrent.Partitioner%601.SupportsDynamicPartitions%2A> `true` ist, kann diese Methode optional anstelle von <xref:System.Collections.Concurrent.Partitioner%601.GetPartitions%2A> aufgerufen werden.|
+|<xref:System.Collections.Concurrent.Partitioner%601.GetDynamicPartitions%2A>|Wenn <xref:System.Collections.Concurrent.Partitioner%601.SupportsDynamicPartitions%2A>`true` ist, kann diese Methode optional anstelle von <xref:System.Collections.Concurrent.Partitioner%601.GetPartitions%2A> aufgerufen werden.|
 
 Wenn die Ergebnisse sortierbar sein müssen, oder Sie indizierten Zugriff auf die Elemente benötigen, leiten Sie von <xref:System.Collections.Concurrent.OrderablePartitioner%601?displayProperty=nameWithType> ab, und überschreiben Sie dessen virtuelle Methoden wie in der folgenden Tabelle beschrieben.
 
@@ -82,7 +82,7 @@ Wenn die Ergebnisse sortierbar sein müssen, oder Sie indizierten Zugriff auf di
 |<xref:System.Collections.Concurrent.OrderablePartitioner%601.GetPartitions%2A>|Diese Methode wird einmal vom Hauptthread aufgerufen und gibt eine `IList(IEnumerator(TSource))` zurück. Jeder Arbeitsthread in der Schleife oder Abfrage kann `GetEnumerator` in der Liste zum Abrufen eines <xref:System.Collections.Generic.IEnumerator%601> über eine unterschiedliche Partition aufrufen.|
 |<xref:System.Collections.Concurrent.Partitioner%601.SupportsDynamicPartitions%2A>|Geben Sie `true` zurück, wenn Sie <xref:System.Collections.Concurrent.OrderablePartitioner%601.GetDynamicPartitions%2A> implementieren; andernfalls „false“.|
 |<xref:System.Collections.Concurrent.OrderablePartitioner%601.GetDynamicPartitions%2A>|In der Regel wird hiermit <xref:System.Collections.Concurrent.OrderablePartitioner%601.GetOrderableDynamicPartitions%2A> aufgerufen.|
-|<xref:System.Collections.Concurrent.OrderablePartitioner%601.GetOrderableDynamicPartitions%2A>|Wenn <xref:System.Collections.Concurrent.Partitioner%601.SupportsDynamicPartitions%2A> `true` ist, kann diese Methode optional anstelle von <xref:System.Collections.Concurrent.Partitioner%601.GetPartitions%2A> aufgerufen werden.|
+|<xref:System.Collections.Concurrent.OrderablePartitioner%601.GetOrderableDynamicPartitions%2A>|Wenn <xref:System.Collections.Concurrent.Partitioner%601.SupportsDynamicPartitions%2A>`true` ist, kann diese Methode optional anstelle von <xref:System.Collections.Concurrent.Partitioner%601.GetPartitions%2A> aufgerufen werden.|
 
 Die folgende Tabelle enthält weitere Details zur Implementierung der <xref:System.Collections.Concurrent.OrderablePartitioner%601>-Klasse durch die drei Arten von Lastenausgleichspartitionierern.
 
@@ -99,7 +99,7 @@ Die folgende Tabelle enthält weitere Details zur Implementierung der <xref:Syst
 
 Wenn Sie beabsichtigen, den Partitionierer in einer <xref:System.Threading.Tasks.Parallel.ForEach%2A>-Methode zu verwenden, müssen Sie eine dynamische Anzahl von Partitionen zurückgeben können. Dies bedeutet, dass der Partitionierer bei Bedarf jederzeit während der Schleifenausführung einen Enumerator für eine neue Partition bereitstellen kann. Im Wesentlichen wird immer dann, wenn die Schleife eine neue parallele Aufgabe hinzufügt, eine neue Partition für diese Aufgabe angefordert. Wenn die Daten sortierbar sein müssen, leiten Sie von <xref:System.Collections.Concurrent.OrderablePartitioner%601?displayProperty=nameWithType> ab, sodass jedem Element in jeder Partition ein eindeutiger Index zugewiesen wird.
 
-Weitere Informationen und ein Beispiel finden Sie unter [Vorgehensweise: Implementieren von dynamischen Partitionen](../../../docs/standard/parallel-programming/how-to-implement-dynamic-partitions.md).
+Weitere Informationen und ein Beispiel finden Sie unter [Gewusst wie: Implementieren von dynamischen Partitionen](../../../docs/standard/parallel-programming/how-to-implement-dynamic-partitions.md).
 
 ### <a name="contract-for-partitioners"></a>Vertrag für Partitionierer
 
@@ -125,8 +125,8 @@ Wenn Sie einen benutzerdefinierten Partitionierer implementieren, befolgen Sie d
 
 - Alle Indizes dürfen nicht negativ sein. Wenn diese Regel nicht befolgt wird, kann PLINQ/TPL Ausnahmen auslösen.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Parallele Programmierung](../../../docs/standard/parallel-programming/index.md)
-- [Vorgehensweise: Implementieren von dynamischen Partitionen](../../../docs/standard/parallel-programming/how-to-implement-dynamic-partitions.md)
-- [Vorgehensweise: Implementieren eines Partitionierers für statisches Partitionieren](../../../docs/standard/parallel-programming/how-to-implement-a-partitioner-for-static-partitioning.md)
+- [Gewusst wie: Implementieren von dynamischen Partitionen](../../../docs/standard/parallel-programming/how-to-implement-dynamic-partitions.md)
+- [Gewusst wie: Implementieren eines Partitionierers für statisches Partitionieren](../../../docs/standard/parallel-programming/how-to-implement-a-partitioner-for-static-partitioning.md)

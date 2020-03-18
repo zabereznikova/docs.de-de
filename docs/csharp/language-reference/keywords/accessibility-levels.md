@@ -6,10 +6,10 @@ helpviewer_keywords:
 - accessibility levels
 ms.assetid: dc083921-0073-413e-8936-a613e8bb7df4
 ms.openlocfilehash: 26fbc2a6d86aead537465c304146630f8bcd3ad4
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75713815"
 ---
 # <a name="accessibility-levels-c-reference"></a>Zugriffsebenen (C#-Referenz)
@@ -37,9 +37,9 @@ Verwenden Sie die Zugriffsmodifizierer `public`, `protected`, `internal` oder `p
   
 |Member von|Standard-Memberzugriff|Zulässiger deklarierter Zugriffstyp des Members|  
 |----------------|----------------------------------|--------------------------------------------------|  
-|`enum`|`public`|Keine|  
+|`enum`|`public`|Keiner|  
 |`class`|`private`|`public`<br /><br /> `protected`<br /><br /> `internal`<br /><br /> `private`<br /><br /> `protected internal` <br /><br />`private protected`|  
-|`interface`|`public`|Keine|  
+|`interface`|`public`|Keiner|  
 |`struct`|`private`|`public`<br /><br /> `internal`<br /><br /> `private`|  
   
  Der Zugriff auf einen geschachtelten Typ hängt von seiner [Zugriffsdomäne](./accessibility-domain.md) ab, die sowohl durch den deklarierten Zugriffstyp des Members als auch durch die Zugriffsdomäne des direkt enthaltenden Typs bestimmt wird. Die Zugriffsdomäne eines geschachtelten Typs kann jedoch nicht über die des enthaltenden Typs hinausgehen.  
@@ -47,7 +47,7 @@ Verwenden Sie die Zugriffsmodifizierer `public`, `protected`, `internal` oder `p
 ## <a name="c-language-specification"></a>C#-Programmiersprachenspezifikation  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [C#-Referenz](../index.md)
 - [C#-Programmierhandbuch](../../programming-guide/index.md)

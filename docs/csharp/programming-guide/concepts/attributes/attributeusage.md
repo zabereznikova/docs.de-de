@@ -2,11 +2,11 @@
 title: AttributeUsage (C#)
 ms.date: 04/25/2018
 ms.openlocfilehash: a3a82e33d7259ec56ec3e907bc3d4d9f8a01167d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54589310"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "61668717"
 ---
 # <a name="attributeusage-c"></a>AttributeUsage (C#)
 
@@ -15,11 +15,11 @@ Bestimmt, wie eine benutzerdefinierte Attributklasse verwendet werden kann. Bei 
 - Auf welche Programmelemente das Attribut angewendet werden kann. Wenn Sie dessen Verwendung nicht einschränken, kann ein Attribut auf jedes der folgenden Programmelemente angewendet werden:
   - Assembly
   - module
-  - Feld
+  - -Feld
   - event
   - Methode
   - Parameter
-  - property
+  - Eigenschaft
   - return
   - Typ
 - Ob ein Attribut mehrfach auf ein einzelnes Programmelement angewendet werden kann.
@@ -79,7 +79,7 @@ ThirdAttribute
 SecondAttribute
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Attribute>
 - <xref:System.Reflection>
@@ -88,4 +88,4 @@ SecondAttribute
 - [Reflektion (C#)](../reflection.md)
 - [Attribute](index.md)
 - [Erstellen benutzerdefinierter Attribute (C#)](creating-custom-attributes.md)
-- [Accessing Attributes by Using Reflection (C#) (Zugriff auf Attribute mit Reflektion (C#))](accessing-attributes-by-using-reflection.md)
+- [Zugriff auf Attribute mit Reflektion (C#)](accessing-attributes-by-using-reflection.md)

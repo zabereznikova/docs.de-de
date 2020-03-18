@@ -9,10 +9,10 @@ helpviewer_keywords:
 - assemblies [.NET Framework], metadata
 ms.assetid: 8e40fab9-549d-4731-aec2-ffa47a382de0
 ms.openlocfilehash: f1913f8c41ba4a7b54f7abcdfb97400503da8ac5
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73107150"
 ---
 # <a name="assembly-manifest"></a>Assemblymanifest
@@ -39,7 +39,7 @@ Jede Assembly, ob statisch oder dynamisch, enthält eine Auflistung von Daten, i
 ## <a name="assembly-manifest-contents"></a>Inhalt des Assemblymanifests  
  Die folgende Tabelle enthält die im Assemblymanifest enthaltenen Informationen. Die Identität einer Assembly setzt sich aus den ersten vier Elementen zusammen. Dabei handelt es sich um den Assemblynamen, die Versionsnummer, die Kultur und den starken Namen.  
   
-|Information|BESCHREIBUNG|  
+|Information|Beschreibung|  
 |-----------------|-----------------|  
 |Assemblyname|Eine Zeichenfolge, die den Namen der Assembly angibt.|  
 |Versionsnummer|Eine Haupt- und Nebenversionsnummer und eine Revisions- und Buildnummer. Die Common Language Runtime verwendet diese Nummern, um die Versionsrichtlinien zu erzwingen.|  
@@ -51,9 +51,9 @@ Jede Assembly, ob statisch oder dynamisch, enthält eine Auflistung von Daten, i
   
  Im Assemblymanifest können Sie Informationen hinzufügen oder ändern. Dazu müssen Sie Assemblyattribute im Code verwenden. Sie können Versionsinformationen und Informationsattribute ändern, einschließlich Marke, Urheberrecht, Produkt, Firma und Informationsversion. Eine vollständige Liste von Assemblyattributen finden Sie unter [Festlegen von Assemblyattributen](set-attributes.md).  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Assemblyinhalte](contents.md)
-- [Versionsverwaltung für Assemblys](versioning.md)
+- [Assemblyversionsverwaltung](versioning.md)
 - [Erstellen von Satellitenassemblys](../../framework/resources/creating-satellite-assemblies-for-desktop-apps.md)
 - [Assemblys mit starken Namen](strong-named.md)

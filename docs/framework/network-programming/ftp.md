@@ -5,11 +5,11 @@ helpviewer_keywords:
 - FTP
 ms.assetid: 9b43f8b4-89d7-46a7-89fc-71aca916dd32
 ms.openlocfilehash: d945f03077a863d9e1baa6b59fe8a908566aba5a
-ms.sourcegitcommit: 90775b20343b6ad831af6f5380f8ab7553abb16b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54186149"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "61642879"
 ---
 # <a name="ftp"></a>FTP
 
@@ -17,14 +17,14 @@ ms.locfileid: "54186149"
 
 ## <a name="examples"></a>Beispiele
 
-Weitere Informationen finden Sie unter den folgenden Themen: [Vorgehensweise: Herunterladen von Dateien über FTP](how-to-download-files-with-ftp.md), [Vorgehensweise: Hochladen von Dateien über FTP](how-to-upload-files-with-ftp.md) und [Vorgehensweise: Auflisten von Verzeichnisinhalt mit FTP](how-to-list-directory-contents-with-ftp.md).
+Weitere Informationen finden Sie in den folgenden Themen: [How to: Download Files with FTP (Vorgehensweise: Herunterladen von Dateien mit FTP)](how-to-download-files-with-ftp.md), [How to: Upload Files with FTP (Vorgehensweise: Hochladen von Dateien mit FTP)](how-to-upload-files-with-ftp.md) und [How to: List Directory Contents with FTP (Vorgehensweise: Auflisten von Verzeichnisinhalten mit FTP)](how-to-list-directory-contents-with-ftp.md).
 
 ## <a name="ftp-and-proxies"></a>FTP und Proxys
 
 Wenn es sich bei einem Proxy (angegeben durch die <xref:System.Net.FtpWebRequest.Proxy%2A>-Eigenschaft) um einen HTTP-Proxy handelt, werden nur die <xref:System.Net.WebRequestMethods.Ftp.DownloadFile>-, <xref:System.Net.WebRequestMethods.Ftp.ListDirectory>- und <xref:System.Net.WebRequestMethods.Ftp.ListDirectoryDetails>-Befehle unterstützt.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Zugreifen auf das Internet über einen Proxy](accessing-the-internet-through-a-proxy.md)
-- [Beispiele zur Netzwerkprogrammierung](network-programming-samples.md)
-- [Verwenden von Anwendungsprotokollen](using-application-protocols.md)
+- [Accessing the Internet Through a Proxy (Zugreifen auf das Internet über einen Proxy)](accessing-the-internet-through-a-proxy.md)
+- [Network Programming Samples (Beispiele zur Netzwerkprogrammierung)](network-programming-samples.md)
+- [Using Application Protocols (Verwenden von Anwendungsprotokollen)](using-application-protocols.md)

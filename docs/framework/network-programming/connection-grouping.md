@@ -9,10 +9,10 @@ helpviewer_keywords:
 - connection pooling
 ms.assetid: 2ec502e8-4ba0-4c22-9410-f28eaf4eee63
 ms.openlocfilehash: 007366764a7b8e1208e22ef5895e6a9093b090e4
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "71048647"
 ---
 # <a name="connection-grouping"></a>Verbindungsgruppierung
@@ -20,7 +20,7 @@ Die Verbindungsgruppierung ordnet bestimmte Anforderungen innerhalb einer einzel
   
  Sie müssen der <xref:System.Net.WebRequest.ConnectionGroupName%2A>-Eigenschaft Ihrer <xref:System.Net.WebRequest> vor der Anforderung einen Namen zuweisen, um eine Anforderung einer bestimmten Verbindungsgruppe zuzuweisen.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Verwalten von Verbindungen](managing-connections.md)
-- [Vorgehensweise: Zuweisen von Benutzerinformationen an Gruppenverbindungen](how-to-assign-user-information-to-group-connections.md)
+- [Vorgehensweise: Zuweisen von Benutzerinformationen zu Gruppenverbindungen](how-to-assign-user-information-to-group-connections.md)

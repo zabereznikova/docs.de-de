@@ -9,10 +9,10 @@ helpviewer_keywords:
 - managed threading
 ms.assetid: 11294769-2e89-43cb-890e-ad4ad79cfbee
 ms.openlocfilehash: 6c14c60b30f8f70aa5e888ed45d6f867154e18d8
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78159649"
 ---
 # <a name="exceptions-in-managed-threads"></a>Ausnahmen in verwalteten Threads
@@ -76,6 +76,6 @@ Ab .NET Framework, Version 2.0, erlaubt die Common Language Runtime bei den meis
 ## <a name="host-override"></a>Hostüberschreibung  
  In .NET Framework, Version 2.0, kann ein nicht verwalteter Host über die [ICLRPolicyManager](../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-interface.md)-Schnittstelle in der Hosting-API die Standardrichtlinie für unbehandelte Ausnahmen der Common Language Runtime überschreiben. Die [ICLRPolicyManager::SetUnhandledExceptionPolicy](../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-setunhandledexceptionpolicy-method.md)-Funktion wird zum Festlegen der Richtlinie für unbehandelte Ausnahmen verwendet.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Grundlagen des verwalteten Threadings](../../../docs/standard/threading/managed-threading-basics.md)

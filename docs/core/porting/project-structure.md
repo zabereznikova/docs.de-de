@@ -4,10 +4,10 @@ description: Dieser Artikel soll Projektbesitzern dabei helfen, Ihre eigene Lös
 author: conniey
 ms.date: 12/07/2018
 ms.openlocfilehash: d71cc3102846c08f4e35831921b8cc4ca82f9e1b
-ms.sourcegitcommit: cbdc0f4fd39172b5191a35200c33d5030774463c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75777335"
 ---
 # <a name="organize-your-project-to-support-both-net-framework-and-net-core"></a>Organisieren Ihres Projekts zur Unterstützung von sowohl .NET Framework als auch .NET Core
@@ -63,6 +63,6 @@ Wenn es vorhandene Projekte gibt, die ältere Frameworks als Ziel haben, empfieh
 
 .NET Core-Projekte und vorhandene Projekte werden in separaten Ordnern gespeichert. Durch das Speichern der Projekte in separaten Ordnern ist es nicht mehr notwendig, Visual Studio 2017 oder eine spätere Version zu besitzen. Sie können eine separate Lösung erstellen, die nur die alten Projekte öffnet.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Dokumentation zur .NET Core-Portierung](index.md)

@@ -3,10 +3,10 @@ title: Installieren der lokalisierten IntelliSense-Dateien
 description: Erfahren Sie, wie Sie Ihren Entwicklungscomputer für die Verwendung lokalisierter IntelliSense-Dateien für .NET Core-Projekte in Visual Studio einrichten.
 ms.date: 01/23/2020
 ms.openlocfilehash: e45e225e58865ca2b529000ada0984fbeca850f3
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "78157712"
 ---
 # <a name="how-to-install-localized-intellisense-files-for-net-core"></a>Installieren der lokalisierten IntelliSense-Dateien für .NET Core
@@ -37,11 +37,11 @@ ms.locfileid: "78157712"
    1. Navigieren Sie zum .NET Core IntelliSense-Installationsordner. Standardmäßig befindet sich dieser unter *%ProgramFiles%\dotnet\packs*.
    1. Wählen Sie aus, für welches SDK Sie IntelliSense installieren möchten, und navigieren Sie zum zugehörigen Pfad. Sie haben die folgenden Optionen:
 
-      | SDK-Typ        | Pfad                               |
+      | SDK-Typ        | `Path`                               |
       | --------------- | ---------------------------------- |
       | .NET Core       | *Microsoft.NETCore.App.Ref*        |
       | Windows-Desktop | *Microsoft.WindowsDesktop.App.Ref* |
-      | .NET-Standard   | *NETStandard.Library.Ref*          |
+      | .NET Standard   | *NETStandard.Library.Ref*          |
 
    1. Navigieren Sie zur Version, für die Sie die lokalisierte IntelliSense-Datei installieren möchten. Zum Beispiel *3.1.0*.
    1. Öffnen Sie den *ref*-Ordner.
@@ -124,6 +124,6 @@ Nachdem Sie die gewünschten Sprachpakete installiert haben, ändern Sie Ihre Vi
 
 Danach sollte IntelliSense wie erwartet funktionieren, wenn Sie ein .NET Core-Projekt öffnen, das auf die Version der soeben installierten IntelliSense-Dateien abzielt.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [IntelliSense in Visual Studio](/visualstudio/ide/using-intellisense)

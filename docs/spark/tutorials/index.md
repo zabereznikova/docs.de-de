@@ -3,10 +3,10 @@ title: Tutorials für .NET für Apache Spark
 description: Erkunden Sie die Tutorials für .NET für Apache Spark, um zu erfahren, wie Sie Apache Spark in Ihre .NET-Anwendungen integrieren können.
 ms.date: 05/17/2019
 ms.openlocfilehash: fde70dfbe5d8c09c4af63ecae5608ff0f3bb2b9b
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "72583497"
 ---
 # <a name="net-for-apache-spark-tutorials"></a>Tutorials für .NET für Apache Spark
