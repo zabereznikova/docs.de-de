@@ -1,120 +1,120 @@
 ---
-title: CBC-Entschlüsselungs Anfälligkeit
-description: Erfahren Sie, wie Sie zeitliche Sicherheitsrisiken mit der symmetrischen Entschlüsselung des Cipher-Block-Chaining (CBC)-Modus mithilfe von Padding erkennen und beheben.
+title: CBC-Entschlüsselungsschwachen
+description: Erfahren Sie, wie Sie timing-Schwachstellen mit der symmetrischen Entschlüsselung im Cipher-Block-Chaining (CBC-Modus) mithilfe von Padding erkennen und verringern.
 ms.date: 06/12/2018
 author: blowdart
-ms.openlocfilehash: 4616ef9015b47ff232a17f058c7a0f1449f42e81
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: 47520ea4c9c7d0ef4d79378c93c6ce1f2ba7dd6d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78159961"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79186097"
 ---
 # <a name="timing-vulnerabilities-with-cbc-mode-symmetric-decryption-using-padding"></a>Verwenden der Auffüllung für die Zeitsteuerung bei Sicherheitsrisiken mit symmetrischer Entschlüsselung im CBC-Modus
 
-Microsoft ist der Meinung, dass es nicht mehr sicher ist, dass Daten entschlüsselt werden, die mit dem CBC-Modus (Cipher Block-Chaining) der symmetrischen Verschlüsselung verschlüsselt sind, wenn eine überprüfbare Auffüll Funktion angewendet wurde, ohne zuvor die Integrität des Chiffre Texts sicherzustellen, außer sehr spezifisch. Umständen. Dieses Urteil basiert auf der zurzeit bekannten kryptografieforschung.
+Microsoft ist der Ansicht, dass es nicht mehr sicher ist, Daten zu entschlüsseln, die mit dem CBC-Modus (Cipher-Block-Chaining) verschlüsselt sind, wenn überprüfbare Auffüllungen angewendet wurden, ohne zuvor die Integrität des Verschlüsselungstextes zu gewährleisten, mit Ausnahme von sehr spezifischen Umständen. Dieses Urteil basiert auf derzeit bekannten kryptografischen Forschungen.
 
 ## <a name="introduction"></a>Einführung
 
-Bei einem Auffüll-Oracle-Angriff handelt es sich um eine Art von Angriffen gegen verschlüsselte Daten, die es dem Angreifer ermöglichen, den Inhalt der Daten zu entschlüsseln, ohne den Schlüssel zu kennen.
+Ein Auffüllungs-Orakelangriff ist eine Art von Angriff auf verschlüsselte Daten, die es dem Angreifer ermöglicht, den Inhalt der Daten zu entschlüsseln, ohne den Schlüssel zu kennen.
 
-Ein Oracle verweist auf ein "Tell", das einem Angreifer Informationen darüber gibt, ob die ausgeführte Aktion korrekt ist oder nicht. Stellen Sie sich vor, Sie spielen ein Board oder Kartenspiel mit einem untergeordneten Wenn das Gesicht mit einem großen Lächeln hervorgeht, weil Sie meint, dass Sie eine gute Bewegung machen möchten, ist dies ein Oracle. Als Gegner können Sie mit diesem Oracle die nächste Verschiebung entsprechend planen.
+Ein Orakel bezieht sich auf ein "Tell", das einem Angreifer Informationen darüber gibt, ob die ausgeführte Aktion richtig ist oder nicht. Stellen Sie sich vor, Sie spielen ein Brett- oder Kartenspiel mit einem Kind. Wenn ihr Gesicht mit einem großen Lächeln aufleuchtet, weil sie denken, dass sie im Begriff sind, einen guten Zug zu machen, ist das ein Orakel. Sie als Gegner können dieses Orakel verwenden, um Ihren nächsten Zug entsprechend zu planen.
 
-Padding ist ein spezifischer kryptografiebegriff. Einige Chiffren, bei denen es sich um die Algorithmen handelt, die zum Verschlüsseln der Daten verwendet werden, arbeiten an Datenblöcken, in denen jeder Block eine festgelegte Größe hat. Wenn die zu verschlüsselnden Daten nicht die richtige Größe zum Ausfüllen der Blöcke sind, werden die Daten bis zu Ihrem Zeitpunkt aufgefüllt. Viele Auffüll Formen erfordern, dass die Auffüll Zeichen immer vorhanden sind, auch wenn die ursprüngliche Eingabe von der richtigen Größe war. Dadurch kann die Auffüll Zeichen bei der Entschlüsselung immer sicher entfernt werden.
+Padding ist ein spezifischer kryptografischer Begriff. Einige Chiffren, d. h. die Algorithmen, die zum Verschlüsseln Ihrer Daten verwendet werden, arbeiten an Datenblöcken, bei denen jeder Block eine feste Größe hat. Wenn die Zuschlüsseln der Daten nicht die richtige Größe zum Ausfüllen der Blöcke haben, werden die Daten aufgefüllt, bis dies der Grund ist. Viele Formen der Polsterung erfordern, dass Die polsterung immer vorhanden ist, auch wenn die ursprüngliche Eingabe die richtige Größe hatte. Dies ermöglicht es, die Polsterung immer sicher bei der Entschlüsselung entfernt werden.
 
-Wenn die beiden Dinge zusammengefasst werden, gibt eine Software Implementierung mit einem Auffüllung-Oracle an, ob entschlüsselte Daten einen gültigen Abstand haben. Das Oracle könnte etwas so einfach sein wie das Zurückgeben eines Werts, der besagt, dass es sich um einen "ungültigen Auffüll Vorgang" handelt, oder etwas komplizierter ist, wenn ein gültiger Block nicht in einem ungültigen Block verarbeitet werden soll
+Zusammengenommen zeigt eine Softwareimplementierung mit einem Auffüllungsorakel, ob entschlüsselte Daten über eine gültige Auffüllung verfügen. Das Orakel könnte etwas so Einfaches sein, wie die Rückgabe eines Werts, der "Ungültige Auffüllung" sagt, oder etwas Komplizierteres, wie eine messbar andere Zeit zu nehmen, um einen gültigen Block zu verarbeiten, im Gegensatz zu einem ungültigen Block.
 
-Block basierte Chiffren verfügen über eine andere Eigenschaft, die als-Modus bezeichnet wird und die Beziehung der Daten im ersten Block zu den Daten im zweiten Block bestimmt usw. Einer der am häufigsten verwendeten Modi ist CBC. CBC führt einen anfänglichen zufälligen Block ein, der als Initialisierungs Vektor (IV) bezeichnet wird, und kombiniert den vorherigen Block mit dem Ergebnis der statischen Verschlüsselung, um ihn so zu gestalten, dass die Verschlüsselung derselben Nachricht mit demselben Schlüssel nicht immer die gleiche verschlüsselte Ausgabe erzeugt.
+Blockbasierte Verschlüsselungen haben eine andere Eigenschaft, den so genannten Modus, der die Beziehung der Daten im ersten Block zu den Daten im zweiten Block bestimmt usw. Einer der am häufigsten verwendeten Modi ist CBC. CBC führt einen anfänglichen zuzufälligen Block ein, der als Initialisierungsvektor (IV) bekannt ist, und kombiniert den vorherigen Block mit dem Ergebnis statischer Verschlüsselung, um ihn so zu machen, dass die Verschlüsselung derselben Nachricht mit demselben Schlüssel nicht immer die gleiche verschlüsselte Ausgabe erzeugt.
 
-Ein Angreifer kann in Kombination mit der Struktur von CBC-Daten ein Auffüll Zeichen verwenden, um leicht geänderte Nachrichten an den Code zu senden, der das Oracle verfügbar macht, und das Senden von Daten so lange, bis das Oracle Ihnen mitteilt, dass die Daten korrekt sind. Aus dieser Antwort kann der Angreifer das Nachrichten Byte nach Byte entschlüsseln.
+Ein Angreifer kann ein Auffüllungsorakel in Kombination mit der Struktur von CBC-Daten verwenden, um leicht geänderte Nachrichten an den Code zu senden, der das Orakel verfügbar macht, und weiterhin Daten senden, bis das Orakel ihnen mitteilt, dass die Daten korrekt sind. Aus dieser Antwort kann der Angreifer das Nachrichtenbyte byte entschlüsseln.
 
-Moderne Computernetzwerke sind so hochwertig, dass ein Angreifer sehr kleine (weniger als 0,1 ms) Unterschiede in der Ausführungszeit auf Remote Systemen erkennen kann. Anwendungen, die davon ausgehen, dass eine erfolgreiche Entschlüsselung nur durchgeführt werden kann, wenn die Daten nicht manipuliert wurden, sind möglicherweise anfällig für Angriffe von Tools, die für die Unterschiede bei erfolgreicher und nicht erfolgreicher Entschlüsselung konzipiert sind. Diese zeitliche Unterschiede können in einigen Sprachen oder Bibliotheken signifikanter sein als andere, aber es ist mittlerweile der Meinung, dass dies eine praktische Bedrohung für alle Sprachen und Bibliotheken ist, wenn die Antwort auf den Fehler der Anwendung berücksichtigt wird.
+Moderne Computernetzwerke sind von so hoher Qualität, dass ein Angreifer sehr kleine (weniger als 0,1 ms) Unterschiede in der Ausführungszeit auf Remote-Systemen erkennen kann.Anwendungen, die davon ausgehen, dass eine erfolgreiche Entschlüsselung nur erfolgen kann, wenn die Daten nicht manipuliert wurden, können anfällig für Angriffe von Tools sein, die entworfen wurden, um Unterschiede bei der erfolgreichen und erfolglosen Entschlüsselung zu beobachten. Obwohl dieser zeitliche Unterschied in einigen Sprachen oder Bibliotheken erheblicher sein kann als in anderen, wird nun angenommen, dass dies eine praktische Bedrohung für alle Sprachen und Bibliotheken ist, wenn die Reaktion der Anwendung auf Fehler berücksichtigt wird.
 
-Dieser Angriff basiert auf der Möglichkeit, die verschlüsselten Daten zu ändern und das Ergebnis mit dem Oracle zu testen. Die einzige Möglichkeit, den Angriff vollständig zu mindern, besteht darin, Änderungen an den verschlüsselten Daten zu erkennen und die Ausführung von Aktionen daran abzulehnen. Die Standardmethode hierfür ist, eine Signatur für die Daten zu erstellen und diese Signatur zu validieren, bevor Vorgänge ausgeführt werden. Die Signatur muss überprüfbar sein, Sie kann nicht vom Angreifer erstellt werden. andernfalls ändern Sie die verschlüsselten Daten und berechnen dann basierend auf den geänderten Daten eine neue Signatur. Ein allgemeiner Typ der entsprechenden Signatur wird als Schlüssel für die Authentifizierung per Hashwert (Hash Message Authentication Code, HMAC) bezeichnet. Ein HMAC unterscheidet sich von einer Prüfsumme darin, dass er einen geheimen Schlüssel annimmt, der nur für die Person bekannt ist, die den HMAC erstellt, und für die Person, die Sie überprüft. Ohne den Besitz des Schlüssels kann kein korrekter HMAC erstellt werden. Wenn Sie Ihre Daten empfangen, nehmen Sie die verschlüsselten Daten unabhängig, indem Sie den HMAC unabhängig von dem geheimen Schlüssel verwenden, den Sie und die Absender Freigabe verwenden, und vergleichen Sie dann den HMAC, den Sie mit dem berechneten Server gesendet haben. Dieser Vergleich muss konstant sein, da Sie andernfalls ein weiteres erkennbares Oracle-Flag hinzugefügt haben, das eine andere Art von Angriff zulässt.
+Dieser Angriff basiert auf der Fähigkeit, die verschlüsselten Daten zu ändern und das Ergebnis mit dem Orakel zu testen. Die einzige Möglichkeit, den Angriff vollständig zu mildern, besteht darin, Änderungen an den verschlüsselten Daten zu erkennen und keine Aktionen darauf auszuführen. Die Standardmethode hierzu besteht darin, eine Signatur für die Daten zu erstellen und diese Signatur zu überprüfen, bevor Vorgänge ausgeführt werden. Die Signatur muss überprüfbar sein, sie kann nicht vom Angreifer erstellt werden, da sie andernfalls die verschlüsselten Daten ändern und dann eine neue Signatur basierend auf den geänderten Daten berechnen würde. Ein häufiger Typ geeigneter Signatur wird als Keyed-Hash-Nachrichtenauthentifizierungscode (Keyed-Hash Message Authentication Code, HMAC) bezeichnet. Ein HMAC unterscheidet sich von einer Prüfsumme dadurch, dass er einen geheimen Schlüssel benötigt, der nur der Person bekannt ist, die den HMAC herstellt, und der Person, die ihn validiert. Ohne den Besitz des Schlüssels können Sie keinen korrekten HMAC produzieren. Wenn Sie Ihre Daten erhalten, nehmen Sie die verschlüsselten Daten, berechnen sie unabhängig voneinander den HMAC mit dem geheimen Schlüssel, den Sie und den Absender gemeinsam verwenden, und vergleichen dann den hMAC, den sie gesendet haben, mit dem von Ihnen berechneten. Dieser Vergleich muss konstante Zeit sein, da Sie sonst ein anderes nachweisbares Orakel hinzugefügt haben, das eine andere Art von Angriff ermöglicht.
 
-Zusammenfassend müssen Sie zur sicheren Verwendung von aufgefüllten CBC-Blockchiffren mit einem HMAC (oder einer anderen Daten Integritäts Überprüfung) kombiniert werden, die Sie mithilfe eines konstanten Zeit Vergleichs validieren, bevor Sie versuchen, die Daten zu entschlüsseln. Da alle geänderten Nachrichten die gleiche Zeit benötigen, um eine Antwort zu erhalten, wird der Angriff verhindert.
+Zusammenfassend müssen Sie diese mit einem HMAC (oder einer anderen Datenintegritätsprüfung) kombinieren, den Sie mit einem konstanten Zeitvergleich überprüfen, bevor Sie versuchen, die Daten zu entschlüsseln, um gepolsterte CBC-Blockchiffren sicher zu verwenden. Da alle geänderten Nachrichten die gleiche Zeit in Anspruch nehmen, um eine Antwort zu erzeugen, wird der Angriff verhindert.
 
-## <a name="who-is-vulnerable"></a>Wer ist anfällig
+## <a name="who-is-vulnerable"></a>Wer ist verwundbar?
 
-Dieses Sicherheitsrisiko gilt für verwaltete und native Anwendungen, die ihre eigene Verschlüsselung und Entschlüsselung durchführen. Dies schließt z. b. Folgendes ein:
+Diese Sicherheitsanfälligkeit gilt sowohl für verwaltete als auch für systemeigene Anwendungen, die ihre eigene Verschlüsselung und Entschlüsselung durchführen. Dazu gehören z. B.:
 
 - Eine Anwendung, die ein Cookie für die spätere Entschlüsselung auf dem Server verschlüsselt.
-- Eine Datenbankanwendung, die es Benutzern ermöglicht, Daten in eine Tabelle einzufügen, deren Spalten später entschlüsselt werden.
-- Eine Datenübertragungs Anwendung, die mithilfe eines gemeinsam genutzten Schlüssels zum Schutz der Daten während der Übertragung auf Verschlüsselung basiert.
+- Eine Datenbankanwendung, die Benutzern die Möglichkeit bietet, Daten in eine Tabelle einzufügen, deren Spalten später entschlüsselt werden.
+- Eine Datenübertragungsanwendung, die auf Verschlüsselung mit einem freigegebenen Schlüssel basiert, um die Daten während der Übertragung zu schützen.
 - Eine Anwendung, die Nachrichten "innerhalb" des TLS-Tunnels verschlüsselt und entschlüsselt.
 
-Beachten Sie, dass die Verwendung von TLS allein in diesen Szenarien möglicherweise nicht geschützt ist.
+Beachten Sie, dass die Verwendung von TLS allein Sie in diesen Szenarien möglicherweise nicht schützt.
 
 Eine anfällige Anwendung:
 
-- Entschlüsselt Daten mit dem CBC-Chiffre Modus mit einem überprüfbaren Auffüllung-Modus, z. b. PKCS # 7 oder ANSI X. 923.
-- Führt die Entschlüsselung aus, ohne dass eine Überprüfung der Datenintegrität durchgeführt wurde (über eine Mac-oder eine asymmetrische digitale Signatur).
+- Entschlüsselt Daten im CBC-Verschlüsselungsmodus mit einem überprüfbaren Auffüllungsmodus, z. B. PKCS-7 oder ANSI X.923.
+- Führt die Entschlüsselung durch, ohne eine Datenintegritätsprüfung durchgeführt zu haben (über einen MAC oder eine asymmetrische digitale Signatur).
 
-Dies gilt auch für Anwendungen, die auf Abstraktionen oberhalb dieser primitiven basieren, wie z. b. die "Cryptographic Message Syntax (PKCS # 7/CMS) EnvelopedData"-Struktur.
+Dies gilt auch für Anwendungen, die auf Abstraktionen über diesen Primitiven basieren, z. B. die EnvelopedData-Struktur für Kryptografische Nachrichtensyntax (PKCS-7/CMS).
 
-## <a name="related-areas-of-concern"></a>Relevante Bereiche
+## <a name="related-areas-of-concern"></a>Verwandte Bereiche, die Anlass zur Sorge geben
 
-Research hat Microsoft dabei geführt, sich über CBC-Nachrichten, die mit ISO 10126-Entsprechung aufgefüllt werden, genauer zu beschäftigen, wenn die Nachricht über eine bekannte oder vorhersagbare footerstruktur verfügt. Dies ist beispielsweise der Inhalt, der unter den Regeln der W3C-XML-Verschlüsselungs Syntax und-Verarbeitungs Empfehlung (xmlenc, verschlüsseltedxml) vorbereitet wurde. Obwohl die W3C-Anleitung zum Signieren der Nachricht als geeignet eingestuft wurde, sollte Microsoft nun immer "verschlüsseln-dann-signieren" empfehlen.
+Untersuchungen haben Microsoft dazu veranlasst, sich weiter sorgen über CBC-Nachrichten zu sein, die mit ISO 10126-äquivalenter Auffüllung gepolstert sind, wenn die Nachricht eine bekannte oder vorhersehbare Fußzeilenstruktur aufweist. Beispielsweise Inhalte, die gemäß den Regeln der W3C XML Encryption Syntax and Processing Recommendation (xmlenc, EncryptedXml) erstellt wurden. Während die W3C-Anleitung zum Signieren der Nachricht dann als angemessen angesehen wurde, empfiehlt Microsoft nun, immer verschlüsselungs-dann-signieren zu tun.
 
-Anwendungsentwickler sollten stets bedenken, dass die Anwendbarkeit eines asymmetrischen Signatur Schlüssels überprüft werden muss, da es keine inhärente Vertrauensstellung zwischen einem asymmetrischen Schlüssel und einer willkürlichen Nachricht gibt.
+Anwendungsentwickler sollten immer darauf achten, die Anwendbarkeit eines asymmetrischen Signaturschlüssels zu überprüfen, da keine inhärente Vertrauensstellung zwischen einem asymmetrischen Schlüssel und einer beliebigen Nachricht besteht.
 
 ## <a name="details"></a>Details
 
-In der Vergangenheit gab es einen Konsens, dass es wichtig ist, wichtige Daten zu verschlüsseln und zu authentifizieren, indem Sie beispielsweise HMAC-oder RSA-Signaturen verwenden. Es gab jedoch weniger klare Hinweise zum Sequenzieren der Verschlüsselungs-und Authentifizierungs Vorgänge. Aufgrund der in diesem Artikel beschriebenen Sicherheits Anfälligkeit besteht die Anleitung von Microsoft darin, immer das Paradigma "verschlüsseln, dann signieren" zu verwenden. Das heißt, Sie verschlüsseln zuerst Daten mit einem symmetrischen Schlüssel und berechnen dann eine Mac-oder asymmetrische Signatur über den Chiffre Text (verschlüsselte Daten). Führen Sie beim Entschlüsseln von Daten den umgekehrten Vorgang aus. Bestätigen Sie zunächst den Mac oder die Signatur des Chiffre Texts, und entschlüsseln Sie ihn anschließend.
+In der Vergangenheit gab es Konsens, dass es wichtig ist, wichtige Daten zu verschlüsseln und zu authentifizieren, indem Mittel wie HMAC- oder RSA-Signaturen verwendet werden. Es gab jedoch weniger klare Anleitungen, wie die Verschlüsselungs- und Authentifizierungsvorgänge sequenziert werden. Aufgrund der in diesem Artikel beschriebenen Sicherheitsanfälligkeit ist microsoftes Anleitung nun immer das Paradigma "verschlüsseln-dann-zeichen" zu verwenden. Das heißt, zuerst Daten mit einem symmetrischen Schlüssel verschlüsseln, dann einen MAC oder eine asymmetrische Signatur über den Chiffretext (verschlüsselte Daten) berechnen. Führen Sie beim Entschlüsseln von Daten das Gegenteil aus. Bestätigen Sie zunächst den MAC oder die Signatur des Chiffretexts, und entschlüsseln Sie ihn dann.
 
-Eine Klasse von Sicherheitsrisiken, die als "Auffüllen von Oracle-Angriffen" bezeichnet werden, ist seit mehr als 10 Jahren bekannt. Diese Sicherheitsrisiken ermöglichen einem Angreifer das Entschlüsseln von Daten, die von symmetrischen Block Algorithmen (z. b. AES und 3DES) verschlüsselt werden, wobei nicht mehr als 4096 Versuche pro Datenblock verwendet werden. Diese Sicherheitslücken nutzen die Tatsache, dass Blockchiffren am Ende mit überprüfbaren Auffüll Daten verwendet werden. Es wurde festgestellt, dass der Angreifer die Daten entschlüsseln kann, wenn ein Angreifer Chiffre Text manipulieren und feststellen kann, ob die Manipulation zu einem Fehler im Format des Auffüll Zeichens geführt hat.
+Eine Klasse von Schwachstellen, die als "Padding-Orakel-Angriffe" bekannt sind, gibt es seit über 10 Jahren. Diese Sicherheitsanfälligkeiten ermöglichen es einem Angreifer, Daten zu entschlüsseln, die durch symmetrische Blockalgorithmen wie AES und 3DES verschlüsselt wurden, und verwenden nicht mehr als 4096 Versuche pro Datenblock. Diese Sicherheitsanfälligkeiten nutzen die Tatsache, dass Blockchiffren am häufigsten mit überprüfbaren Auffüllungsdaten am Ende verwendet werden. Es wurde festgestellt, dass ein Angreifer die Daten entschlüsseln kann, wenn ein Angreifer mit Demischertext manipuliert und herausfinden kann, ob die Manipulation einen Fehler im Format des Auffüllens verursacht hat.
 
-Zunächst waren praktische Angriffe auf Dienste basiert, die je nach Gültigkeit des Auffüll Zeichens andere Fehlercodes zurückgeben, z. b. das ASP.net-Sicherheitsrisiko [MS10-070](/security-updates/SecurityBulletins/2010/ms10-070). Microsoft ist nun jedoch der Meinung, dass es praktisch ist, ähnliche Angriffe durchzuführen, indem nur die Unterschiede in der zeitlichen Steuerung zwischen der Verarbeitung gültiger und Ungültiger Auffüll Vorgänge
+Anfänglich basierten praktische Angriffe auf Diensten, die unterschiedliche Fehlercodes zurückgeben würden, je nach, ob die Auffüllung gültig war, wie z. B. die ASP.NET Sicherheitsanfälligkeit [MS10-070](/security-updates/SecurityBulletins/2010/ms10-070). Microsoft ist jedoch nun der Ansicht, dass es praktisch ist, ähnliche Angriffe durchzuführen, indem nur die zeitlichen Unterschiede zwischen gültiger und ungültiger Auffüllung verwendet werden.
 
-Vorausgesetzt, dass das Verschlüsselungsschema eine Signatur verwendet und die Signatur Überprüfung mit einer festgelegten Laufzeit für eine bestimmte Daten Länge (unabhängig vom Inhalt) erfolgt, kann die Datenintegrität überprüft werden, ohne dass Informationen über einen [seitigen Kanal](https://en.wikipedia.org/wiki/Side-channel_attack)an einen Angreifer ausgegeben werden. Da bei der Integritäts Überprüfung alle manipulierten Nachrichten abgelehnt werden, wird das Auffüllen von Oracle-Bedrohungen verringert.
+Sofern das Verschlüsselungsschema eine Signatur verwendet und die Signaturüberprüfung mit einer festen Laufzeit für eine bestimmte Datenlänge (unabhängig vom Inhalt) durchgeführt wird, kann die Datenintegrität überprüft werden, ohne dass informationen über einen [Seitenkanal](https://en.wikipedia.org/wiki/Side-channel_attack)an einen Angreifer abgegeben werden. Da die Integritätsprüfung alle manipulierten Nachrichten ablehnt, wird die Bedrohung durch das Auffüllen von Orakelen verringert.
 
-## <a name="guidance"></a>Empfehlungen
+## <a name="guidance"></a>Anleitungen
 
-Vor allem empfiehlt Microsoft, dass alle Daten, die Vertraulichkeit aufweisen, über Transport Layer Security (TLS), den Nachfolger an Secure Sockets Layer (SSL) übertragen werden.
+Zuallererst empfiehlt Microsoft, dass alle Daten, die vertraulich sind, über Transport Layer Security (TLS), den Nachfolger von Secure Sockets Layer (SSL), übertragen werden müssen.
 
-Analysieren Sie dann Ihre Anwendung wie folgt:
+Analysieren Sie als Nächstes Ihre Anwendung, um:
 
-- Verstehen Sie genau, welche Verschlüsselung Sie durchführen und welche Verschlüsselung von den verwendeten Plattformen und APIs bereitgestellt wird.
-- Stellen Sie sicher, dass jede Verwendung auf jeder Ebene eines symmetrischen [Blockchiffre Algorithmus](https://en.wikipedia.org/wiki/Block_cipher#Notable_block_ciphers)(z. b. AES und 3DES) im CBC-Modus die Verwendung einer geheimen Daten Integritäts Überprüfung (eine asymmetrische Signatur, ein HMAC) oder den Verschlüsselungs Modus in einen [authentifizierten Verschlüsselungs](https://en.wikipedia.org/wiki/Authenticated_encryption) Modus (z. b. GCM oder CCM) einschließt.
+- Verstehen Sie genau, welche Verschlüsselung Sie durchführen und welche Verschlüsselung von den von Ihnen verwendenden Plattformen und APIs bereitgestellt wird.
+- Stellen Sie sicher, dass jede Verwendung auf jeder Ebene eines symmetrischen [Blockverschlüsselungsalgorithmus](https://en.wikipedia.org/wiki/Block_cipher#Notable_block_ciphers), z. B. AES und 3DES, im CBC-Modus die Verwendung einer Überprüfung der Integrität geheimer Schlüssel (eine asymmetrische Signatur, ein HMAC oder das Ändern des Verschlüsselungsmodus in einen [authentifizierten Verschlüsselungsmodus](https://en.wikipedia.org/wiki/Authenticated_encryption) (AE) wie GCM oder CCM enthält.
 
-Basierend auf der aktuellen Forschung ist es in der Regel der Meinung, dass die Authentifizierung des Chiffre Texts (Encryption-then-Sign) die beste Option ist, wenn die Authentifizierungs-und Verschlüsselungs Schritte unabhängig für nicht-AE-Verschlüsselungs Modi durchgeführt werden. Allerdings gibt es keine richtige Lösung für die Kryptografie, und diese Generalisierung ist nicht so gut wie eine gezielte Empfehlung von einem professionellen Kryptographen.
+Basierend auf der aktuellen Forschung wird allgemein angenommen, dass, wenn die Authentifizierungs- und Verschlüsselungsschritte unabhängig für Nicht-AE-Verschlüsselungsmodi ausgeführt werden, die Authentifizierung des Chiffretextes (Verschlüsselung des Zeichens) die beste allgemeine Option ist. Allerdings gibt es keine einheitliche richtige Antwort auf Kryptographie und diese Verallgemeinerung ist nicht so gut wie gerichtete Ratschläge von einem professionellen Kryptographen.
 
-Anwendungen, die Ihr Messaging Format nicht ändern können, aber nicht authentifizierte CBC-Entschlüsselung ausführen, werden empfohlen, um Lösungen wie die folgenden zu integrieren:
+Anwendungen, die ihr Messagingformat nicht ändern können, aber nicht authentifizierte CBC-Entschlüsselung durchführen, sollten versuchen, Abschwächungen wie:
 
-- Entschlüsseln, ohne dass der Entschlüsselungs Mechanismus das Auffüllen überprüfen oder entfernen kann:
-  - Alle Auffüll Zeichen, die angewendet wurden, müssen entfernt oder ignoriert werden, Sie verschieben die Belastung in Ihre Anwendung.
-  - Der Vorteil besteht darin, dass die Auffüll-und Entfernungs Überprüfungen in andere Anwendungsdaten-Überprüfungs Logik integriert werden können. Wenn die Auffüll-und Datenüberprüfung in konstanter Zeit ausgeführt werden kann, wird die Bedrohung reduziert.
-  - Da die Interpretation des Paddings die übergebene Nachrichten Länge ändert, werden möglicherweise weiterhin Zeit Steuerungsinformationen von diesem Ansatz ausgegeben.
-- Ändern Sie den Modus für die Entschlüsselungs Auffüll Modus in ISO10126:
-  - Der ISO10126-Entschlüsselungs Abstand ist sowohl mit dem PKCS7-Auffüll Auffüll Zeichen als auch mit der ANSIX923-Verschlüsselung kompatibel.
-  - Wenn Sie den Modus ändern, wird das Auffüllen des Oracle-Wissens auf 1 Byte statt auf den gesamten Block reduziert. Wenn der Inhalt jedoch über eine bekannte Fußzeile verfügt, z. b. ein abschließendes XML-Element, können verwandte Angriffe weiterhin den Rest der Nachricht angreifen.
-  - Dies verhindert auch eine Klartext-Wiederherstellung in Situationen, in denen der Angreifer denselben Klartext umwandeln kann, um mehrmals mit einem anderen Nachrichten Offset verschlüsselt zu werden.
-- Gate die Auswertung eines Entschlüsselungs Aufrufs, um das zeitliche Signal zu dämpfen:
-  - Die Berechnung der Haltezeit muss mindestens den maximalen Zeitraum überschreiten, den der Entschlüsselungsvorgang für ein beliebiges Daten Segment benötigt, das Auffüll Vorgänge enthält.
-  - Zeit Berechnungen sollten gemäß der Anleitung zum Abrufen von [Zeitstempeln mit hoher Auflösung](/windows/desktop/sysinfo/acquiring-high-resolution-time-stamps)erfolgen, nicht mithilfe <xref:System.Environment.TickCount?displayProperty=nameWithType> (bei Rollover/Überlauf) oder durch Subtraktion von zwei Systemzeit Stempeln (unterliegen NTP-Anpassungs Fehlern).
-  - Zeit Berechnungen müssen den Entschlüsselungsvorgang einschließen, einschließlich aller potenziellen Ausnahmen in verwalteten Anwendungen oder C++ Anwendungen, die nicht nur am Ende aufgefüllt werden.
-  - Wenn erfolgreich oder Fehler ermittelt wurde, muss das Zeit Steuerungs Gate einen Fehler zurückgeben, wenn es abläuft.
-- Für Dienste, die eine nicht authentifizierte Entschlüsselung ausführen, sollte eine Überwachung vorhanden sein, um zu erkennen, dass eine Flut von "ungültigen" Nachrichten durchlaufen wurde.
-  - Beachten Sie, dass dieses Signal sowohl falsch positive Ergebnisse (Recht beschädigte Daten) als auch falsch negative negative Werte enthält (die Verteilung des Angriffs über einen ausreichend langen Zeitraum, um die Erkennung zu umgehen).
+- Entschlüsseln, ohne dass der decryptor die Auffüllung überprüfen oder entfernen kann:
+  - Alle aufgebrachten Auffüllungen müssen noch entfernt oder ignoriert werden, Sie verschieben die Last in Ihre Anwendung.
+  - Der Vorteil besteht darin, dass die Überprüfung und Entfernung von Auffüllungen in andere Anwendungsdatenüberprüfungslogik integriert werden kann. Wenn die Überprüfung und Datenüberprüfung der Auffüllung in konstanter Zeit durchgeführt werden kann, wird die Bedrohung verringert.
+  - Da die Interpretation der Auffüllung die wahrgenommene Nachrichtenlänge ändert, kann es immer noch Zeitinformationen geben, die von diesem Ansatz emittiert werden.
+- Ändern Sie den Entschlüsselungsauffüllungsmodus in ISO10126:
+  - ISO10126 Entschlüsselungsauffüllung ist kompatibel mit PKCS7-Verschlüsselungsauffüllung und ANSIX923-Verschlüsselungsauffüllung.
+  - Durch das Ändern des Modus wird das Auffüllungs-Orakelwissen auf 1 Byte anstelle des gesamten Blocks reduziert. Wenn der Inhalt jedoch über eine bekannte Fußzeile verfügt, z. B. ein schließendes XML-Element, können verwandte Angriffe den Rest der Nachricht weiterhin angreifen.
+  - Dies verhindert auch nicht die Wiederherstellung von Klartexten in Situationen, in denen der Angreifer den gleichen Klartext zwingen kann, mehrmals mit einem anderen Nachrichtenoffset verschlüsselt zu werden.
+- Gate die Auswertung eines Entschlüsselungsaufrufs, um das Timing-Signal zu dämpfen:
+  - Die Berechnung der Haltezeit muss mindestens die maximale Zeitspanne betragen, die der Entschlüsselungsvorgang für jedes Datensegment in Anspruch nehmen würde, das aufgetärgemäß ist.
+  - Zeitberechnungen sollten gemäß den Anleitungen unter [Erfassen von hochauflösenden Zeitstempeln](/windows/desktop/sysinfo/acquiring-high-resolution-time-stamps)durchgeführt werden, nicht durch Verwendung <xref:System.Environment.TickCount?displayProperty=nameWithType> (vorbehaltlich Rollover/Überlauf) oder Subtrahieren von zwei Systemzeitstempeln (vorbehaltlich NTP-Anpassungsfehlern).
+  - Zeitberechnungen müssen den Entschlüsselungsvorgang einschließlich aller potenziellen Ausnahmen in verwalteten oder C++-Anwendungen einschließen und nicht nur am Ende aufgepolstert werden.
+  - Wenn Erfolg oder Misserfolg noch feststeht, muss das Timing-Gate einen Fehler zurückgeben, wenn es abläuft.
+- Dienste, die eine nicht authentifizierte Entschlüsselung durchführen, sollten über eine Überwachung verfügen, um festzustellen, dass eine Flut von "ungültigen" Nachrichten durchgekommen ist.
+  - Denken Sie daran, dass dieses Signal sowohl falsche Positivmeldungen (rechtmäßig beschädigte Daten) als auch falsche Negative (Verbreitung des Angriffs über einen ausreichend langen Zeitpunkt, um der Erkennung zu entgehen) enthält.
 
-## <a name="finding-vulnerable-code---native-applications"></a>Auffinden von systemeigenen, anfälligen Code Anwendungen
+## <a name="finding-vulnerable-code---native-applications"></a>Suchen von anfälligem Code – systemeigene Anwendungen
 
-Für Programme, die mit der Windows Cryptography: Next Generation (CNG)-Bibliothek erstellt werden:
+Für Programme, die für die Windows Cryptography: Next Generation (CNG)-Bibliothek erstellt wurden:
 
-- Der Entschlüsselungs Rückruf ist [bcryptentschlüsseln](/windows/desktop/api/bcrypt/nf-bcrypt-bcryptdecrypt)und gibt das `BCRYPT_BLOCK_PADDING`-Flag an.
-- Das Schlüssel Handle wurde initialisiert, indem [BCryptSetProperty](/windows/desktop/api/bcrypt/nf-bcrypt-bcryptsetproperty) aufgerufen wurde und [BCRYPT_CHAINING_MODE](/windows/desktop/SecCNG/cng-property-identifiers#BCRYPT_CHAINING_MODE) auf `BCRYPT_CHAIN_MODE_CBC`festgelegt ist.
-  - Da `BCRYPT_CHAIN_MODE_CBC` der Standardwert ist, hat der betroffene Code möglicherweise keinen Wert für `BCRYPT_CHAINING_MODE`zugewiesen.
+- Der Entschlüsselungsaufruf ist [an BCryptDecrypt](/windows/desktop/api/bcrypt/nf-bcrypt-bcryptdecrypt), die Angabe des `BCRYPT_BLOCK_PADDING` Flags.
+- Das Schlüsselhandle wurde initialisiert, indem [BCryptSetProperty](/windows/desktop/api/bcrypt/nf-bcrypt-bcryptsetproperty) mit [BCRYPT_CHAINING_MODE](/windows/desktop/SecCNG/cng-property-identifiers#BCRYPT_CHAINING_MODE) auf festgelegt `BCRYPT_CHAIN_MODE_CBC`wurde.
+  - Da `BCRYPT_CHAIN_MODE_CBC` es sich um den Standardcode handelt, hat der betroffene Code möglicherweise keinen Wert für `BCRYPT_CHAINING_MODE`zugewiesen.
 
-Für Programme, die mit der älteren Windows-kryptografieapi erstellt werden:
+Für Programme, die für die ältere Windows Cryptographic API erstellt wurden:
 
-- Der Entschlüsselungs Rückruf ist die Verwendung von [cryptentschlüsseln](/windows/desktop/api/wincrypt/nf-wincrypt-cryptdecrypt) mit `Final=TRUE`.
-- Das Schlüssel Handle wurde initialisiert, indem [cryptsetkeyparam](/windows/desktop/api/wincrypt/nf-wincrypt-cryptsetkeyparam) mit [KP_MODE](/windows/desktop/api/wincrypt/nf-wincrypt-cryptgetkeyparam) auf `CRYPT_MODE_CBC`festgelegt wurde.
-  - Da `CRYPT_MODE_CBC` der Standardwert ist, hat der betroffene Code möglicherweise keinen Wert für `KP_MODE`zugewiesen.
+- Der Entschlüsselungsaufruf ist `Final=TRUE` [CryptDecrypt](/windows/desktop/api/wincrypt/nf-wincrypt-cryptdecrypt) mit .
+- Das Schlüsselhandle wurde initialisiert, indem [CryptSetKeyParam](/windows/desktop/api/wincrypt/nf-wincrypt-cryptsetkeyparam) aufgerufen wurde, wobei [KP_MODE](/windows/desktop/api/wincrypt/nf-wincrypt-cryptgetkeyparam) auf festgelegt `CRYPT_MODE_CBC`ist.
+  - Da `CRYPT_MODE_CBC` es sich um den Standardcode handelt, hat der betroffene Code möglicherweise keinen Wert für `KP_MODE`zugewiesen.
 
-## <a name="finding-vulnerable-code---managed-applications"></a>Suchen von durch anfälligen Code verwalteten Anwendungen
+## <a name="finding-vulnerable-code---managed-applications"></a>Suchen von anfälligem Code – verwaltete Anwendungen
 
-- Der Entschlüsselungs Rückruf erfolgt an die <xref:System.Security.Cryptography.SymmetricAlgorithm.CreateDecryptor>-Methode oder die <xref:System.Security.Cryptography.SymmetricAlgorithm.CreateDecryptor(System.Byte[],System.Byte[])>-Methode auf <xref:System.Security.Cryptography.SymmetricAlgorithm?displayProperty=nameWithType>.
-  - Dies umfasst die folgenden abgeleiteten Typen in .net, kann jedoch auch Typen von Drittanbietern einschließen:
+- Der Entschlüsselungsaufruf <xref:System.Security.Cryptography.SymmetricAlgorithm.CreateDecryptor> ist <xref:System.Security.Cryptography.SymmetricAlgorithm.CreateDecryptor(System.Byte[],System.Byte[])> an <xref:System.Security.Cryptography.SymmetricAlgorithm?displayProperty=nameWithType>die oder Methoden auf .
+  - Dies umfasst die folgenden abgeleiteten Typen innerhalb von .NET, kann aber auch Typen von Drittanbietern enthalten:
     - <xref:System.Security.Cryptography.Aes>
     - <xref:System.Security.Cryptography.AesCng>
     - <xref:System.Security.Cryptography.AesCryptoServiceProvider>
@@ -128,24 +128,24 @@ Für Programme, die mit der älteren Windows-kryptografieapi erstellt werden:
     - <xref:System.Security.Cryptography.TripleDES>
     - <xref:System.Security.Cryptography.TripleDESCng>
     - <xref:System.Security.Cryptography.TripleDESCryptoServiceProvider>
-- Die <xref:System.Security.Cryptography.SymmetricAlgorithm.Padding?displayProperty=nameWithType>-Eigenschaft wurde auf <xref:System.Security.Cryptography.PaddingMode.PKCS7?displayProperty=nameWithType>, <xref:System.Security.Cryptography.PaddingMode.ANSIX923?displayProperty=nameWithType>oder <xref:System.Security.Cryptography.PaddingMode.ISO10126?displayProperty=nameWithType>festgelegt.
-  - Da <xref:System.Security.Cryptography.PaddingMode.PKCS7?displayProperty=nameWithType> der Standardwert ist, hat der betroffene Code möglicherweise nie die <xref:System.Security.Cryptography.SymmetricAlgorithm.Padding?displayProperty=nameWithType>-Eigenschaft zugewiesen.
-- Die <xref:System.Security.Cryptography.SymmetricAlgorithm.Mode?displayProperty=nameWithType>-Eigenschaft wurde auf festgelegt <xref:System.Security.Cryptography.CipherMode.CBC?displayProperty=nameWithType>
-  - Da <xref:System.Security.Cryptography.CipherMode.CBC?displayProperty=nameWithType> der Standardwert ist, hat der betroffene Code möglicherweise nie die <xref:System.Security.Cryptography.SymmetricAlgorithm.Mode?displayProperty=nameWithType>-Eigenschaft zugewiesen.
+- Die <xref:System.Security.Cryptography.SymmetricAlgorithm.Padding?displayProperty=nameWithType> Eigenschaft wurde <xref:System.Security.Cryptography.PaddingMode.PKCS7?displayProperty=nameWithType> <xref:System.Security.Cryptography.PaddingMode.ANSIX923?displayProperty=nameWithType>auf <xref:System.Security.Cryptography.PaddingMode.ISO10126?displayProperty=nameWithType>, oder festgelegt.
+  - Da <xref:System.Security.Cryptography.PaddingMode.PKCS7?displayProperty=nameWithType> die Standardversion vorliegt, hat <xref:System.Security.Cryptography.SymmetricAlgorithm.Padding?displayProperty=nameWithType> der betroffene Code die Eigenschaft möglicherweise nie zugewiesen.
+- Die <xref:System.Security.Cryptography.SymmetricAlgorithm.Mode?displayProperty=nameWithType> Eigenschaft wurde auf<xref:System.Security.Cryptography.CipherMode.CBC?displayProperty=nameWithType>
+  - Da <xref:System.Security.Cryptography.CipherMode.CBC?displayProperty=nameWithType> die Standardversion vorliegt, hat <xref:System.Security.Cryptography.SymmetricAlgorithm.Mode?displayProperty=nameWithType> der betroffene Code die Eigenschaft möglicherweise nie zugewiesen.
 
-## <a name="finding-vulnerable-code---cryptographic-message-syntax"></a>Auffinden von anfälligen Code-kryptografische Nachrichten Syntax
+## <a name="finding-vulnerable-code---cryptographic-message-syntax"></a>Suchen von anfälligem Code - Kryptografie-Nachrichtensyntax
 
-Eine nicht authentifizierte CMS EnvelopedData-Nachricht, deren verschlüsselter Inhalt den CBC-Modus von AES (2.16.840.1.101.3.4.1.2, 2.16.840.1.101.3.4.1.22, 2.16.840.1.101.3.4.1.42), des (1.3.14.3.2.7), 3DES (1.2.840.113549.3.7) oder RC2 (1.2.840.113549.3.2) verwendet, ist anfällig und Nachrichten, die beliebige andere Blockverschlüsselungsalgorithmen im CBC-Modus verwenden.
+Eine nicht authentifizierte CMS EnvelopedData-Nachricht, deren verschlüsselter Inhalt den CBC-Modus von AES verwendet (2.16.840.1.101.3.4.1.2, 2.16.840.1.101.3.4.1.22, 2.16.840.1.101.3.4.1.42), DES (1.3.14.3.2.7), 3DES (1.2.840.113549.3.7) oder RC2 (1.2.840.113549.3.2) sowie Nachrichten, die andere Blockchiffrealgorithmen im CBC-Modus verwenden.
 
-Obwohl streamchiffren nicht anfällig für diese besondere Schwachstelle sind, empfiehlt Microsoft, die Daten immer über die Überprüfung des contentverschlüsseltionalgorithmuswerts zu authentifizieren.
+Während Streamchiffren für diese besondere Sicherheitsanfälligkeit nicht anfällig sind, empfiehlt Microsoft, die Daten immer über die Überprüfung des ContentEncryptionAlgorithm-Werts zu authentifizieren.
 
-Bei verwalteten Anwendungen kann ein CMS EnvelopedData-BLOB als beliebiger Wert erkannt werden, der an <xref:System.Security.Cryptography.Pkcs.EnvelopedCms.Decode(System.Byte[])?displayProperty=fullName>übermittelt wird.
+Bei verwalteten Anwendungen kann ein CMS EnvelopedData-Blob als <xref:System.Security.Cryptography.Pkcs.EnvelopedCms.Decode(System.Byte[])?displayProperty=fullName>jeder Wert erkannt werden, der an übergeben wird.
 
-Für native Anwendungen kann ein CMS EnvelopedData-BLOB als beliebiger Wert erkannt werden, der einem CMS-Handle über [cryptmsgupdate](/windows/desktop/api/wincrypt/nf-wincrypt-cryptmsgupdate) bereitgestellt wird, dessen resultierende [CMSG_TYPE_PARAM](/windows/desktop/api/wincrypt/nf-wincrypt-cryptmsggetparam) `CMSG_ENVELOPED` und/oder der CMS-handle später eine `CMSG_CTRL_DECRYPT`-Anweisung über [cryptmsgcontrol](/windows/desktop/api/wincrypt/nf-wincrypt-cryptmsgcontrol)sendet.
+Bei systemeigenen Anwendungen kann ein CMS EnvelopedData-Blob als beliebiger Wert erkannt werden, `CMSG_ENVELOPED` der einem CMS-Handle über `CMSG_CTRL_DECRYPT` [CryptMsgUpdate](/windows/desktop/api/wincrypt/nf-wincrypt-cryptmsgupdate) bereitgestellt wird, dessen resultierende [CMSG_TYPE_PARAM](/windows/desktop/api/wincrypt/nf-wincrypt-cryptmsggetparam) ist und/oder das CMS-Handle später eine Anweisung über [CryptMsgControl](/windows/desktop/api/wincrypt/nf-wincrypt-cryptmsgcontrol)gesendet wird.
 
-## <a name="vulnerable-code-example---managed"></a>Beispiel für anfälligen Code: verwaltet
+## <a name="vulnerable-code-example---managed"></a>Beispiel für anfälligen Code - verwaltet
 
-Diese Methode liest ein Cookie und entschlüsselt es. es ist keine Daten Integritätsprüfung sichtbar. Daher kann der Inhalt eines Cookies, das von dieser Methode gelesen wird, vom Benutzer, der es empfangen hat, oder von einem Angreifer, der den verschlüsselten Cookie-Wert erhalten hat, angegriffen werden.
+Diese Methode liest ein Cookie und entschlüsselt es, und es ist nicht sichtbar. Daher kann der Inhalt eines Cookies, das von dieser Methode gelesen wird, von dem Benutzer, der es empfangen hat, oder von einem Angreifer, der den verschlüsselten Cookie-Wert erhalten hat, angegriffen werden.
 
 ```csharp
 private byte[] DecryptCookie(string cookieName)
@@ -170,17 +170,17 @@ private byte[] DecryptCookie(string cookieName)
 }
 ```
 
-## <a name="example-code-following-recommended-practices---managed"></a>Beispielcode im Anschluss an Empfohlene Vorgehensweisen: verwaltet
+## <a name="example-code-following-recommended-practices---managed"></a>Beispielcode nach empfohlenen Vorgehensweisen - verwaltet
 
-Der folgende Beispielcode verwendet ein nicht standardmäßiges Nachrichtenformat
+Der folgende Beispielcode verwendet ein nicht standardmäßiges Nachrichtenformat von
 
 `cipher_algorithm_id || hmac_algorithm_id || hmac_tag || iv || ciphertext`
 
-Dabei sind die `cipher_algorithm_id`-und `hmac_algorithm_id` Algorithmusbezeichner Anwendungs lokale (nicht standardmäßige) Darstellungen dieser Algorithmen. Diese Bezeichner sind in anderen Teilen des vorhandenen Messaging Protokolls möglicherweise sinnvoll, anstatt als bare, verketteten Bytestream.
+wobei `cipher_algorithm_id` die `hmac_algorithm_id` und-Algorithmus-Bezeichner anwendungslokal (nicht standardmäßige) Darstellungen dieser Algorithmen sind. Diese Bezeichner können in anderen Teilen Ihres vorhandenen Messagingprotokolls sinnvoll sein, anstatt als bloßer verketteter Bytestream.
 
-In diesem Beispiel wird auch ein einzelner Hauptschlüssel verwendet, um einen Verschlüsselungsschlüssel und einen HMAC-Schlüssel abzuleiten. Dies dient als praktische Möglichkeit, eine einzeln verschlüsselte Anwendung in eine Dual-Key-Anwendung umzuwandeln und die beiden Schlüssel als unterschiedliche Werte beizubehalten. Außerdem wird sichergestellt, dass der HMAC-Schlüssel und der Verschlüsselungsschlüssel nicht aus der Synchronisierung kommen.
+In diesem Beispiel wird auch ein einzelner Hauptschlüssel verwendet, um sowohl einen Verschlüsselungsschlüssel als auch einen HMAC-Schlüssel abzuleiten. Dies dient sowohl als Bequemlichkeit, um eine Anwendung mit einem einzelnen Schlüssel in eine Anwendung mit zwei Schlüsseln zu verwandeln, als auch als Ermutigung, die beiden Schlüssel als unterschiedliche Werte zu behalten. Außerdem wird sichergestellt, dass der HMAC-Schlüssel und der Verschlüsselungsschlüssel nicht aus der Synchronisierung herauskommen.
 
-In diesem Beispiel wird eine <xref:System.IO.Stream> für die Verschlüsselung oder Entschlüsselung nicht akzeptiert. Mit dem aktuellen Datenformat wird die Verschlüsselung mit einem Durchlauf erschwert, da der `hmac_tag` Wert vor dem Chiffre Text liegt. Dieses Format wurde jedoch ausgewählt, da es alle Elemente fester Größe am Anfang beibehält, damit der Parser einfacher bleibt. Bei diesem Datenformat ist die One-Pass-Entschlüsselung möglich, obwohl ein Implementierer darauf hingewiesen wird, gethashandreset aufzurufen und das Ergebnis vor dem Aufruf von TransformFinalBlock zu überprüfen. Wenn Streaming-Verschlüsselung wichtig ist, ist möglicherweise ein anderer AE-Modus erforderlich.
+Dieses Beispiel akzeptiert keine <xref:System.IO.Stream> für die Verschlüsselung oder Entschlüsselung. Das aktuelle Datenformat erschwert die Verschlüsselung von Einem Durchlauf, da der `hmac_tag` Wert dem Verschlüsselungstext vorangeht. Dieses Format wurde jedoch ausgewählt, da es alle Elemente fester Größe am Anfang hält, um den Parser einfacher zu halten. Mit diesem Datenformat ist eine Ein-Pass-Entschlüsselung möglich, obwohl ein Implementierer darauf hingewiesen wird, GetHashAndReset aufzurufen und das Ergebnis vor dem Aufruf von TransformFinalBlock zu überprüfen. Wenn Streaming-Verschlüsselung wichtig ist, ist möglicherweise ein anderer AE-Modus erforderlich.
 
 ```csharp
 // ==++==

@@ -1,96 +1,96 @@
 ---
 title: Verbindungszeichenfolgen
 ms.date: 12/13/2019
-description: Die unterstützten Schlüsselwörter und Werte von Verbindungs Zeichenfolgen.
+description: Die unterstützten Schlüsselwörter und Werte von Verbindungszeichenfolgen.
 ms.openlocfilehash: bb54d152bac62a86c2a49192cf678a745159164e
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75450273"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79401196"
 ---
 # <a name="connection-strings"></a>Verbindungszeichenfolgen
 
-Eine Verbindungs Zeichenfolge wird verwendet, um anzugeben, wie eine Verbindung mit der Datenbank hergestellt wird. Verbindungs Zeichenfolgen in Microsoft. Data. sqlite Folgen der standardmäßigen [ADO.NET-Syntax](../../../framework/data/adonet/connection-strings.md) als eine durch Semikolons getrennte Liste von Schlüsselwörtern und Werten.
+Eine Verbindungszeichenfolge wird verwendet, um anzugeben, wie eine Verbindung mit der Datenbank hergestellt werden soll. Verbindungszeichenfolgen in Microsoft.Data.Sqlite folgen der [Standard-ADO.NET Syntax](../../../framework/data/adonet/connection-strings.md) als semikolonngetrennte Liste von Schlüsselwörtern und Werten.
 
-## <a name="keywords"></a>Stichwörter
+## <a name="keywords"></a>Keywords
 
-Die folgenden Schlüsselwörter für Verbindungs Zeichenfolgen können mit "Microsoft. Data. sqlite" verwendet werden:
+Die folgenden Verbindungszeichenfolgenschlüsselwörter können mit Microsoft.Data.Sqlite verwendet werden:
 
 ### <a name="data-source"></a>Datenquelle
 
-Der Pfad zur Datenbankdatei. *DataSource* (ohne Leerzeichen) und *Dateiname* sind Aliase dieses Schlüssel Worts.
+Der Pfad zur Datenbankdatei. *DataSource* (ohne Leerzeichen) und *Filename* sind Aliase dieses Schlüsselworts.
 
-SQLite behandelt Pfade relativ zum aktuellen Arbeitsverzeichnis. Absolute Pfade können ebenfalls angegeben werden.
+SQLite behandelt Pfade relativ zum aktuellen Arbeitsverzeichnis. Absolute Pfade können auch angegeben werden.
 
-Wenn der Wert **leer**ist, erstellt SQLite eine temporäre Datenbank auf dem Datenträger, die gelöscht wird, wenn die Verbindung geschlossen wird.
+Wenn **leer**, erstellt SQLite eine temporäre Datenträgerdatenbank, die beim Schließen der Verbindung gelöscht wird.
 
-Wenn `:memory:`, wird ein in-Memory Database verwendet. Weitere Informationen finden Sie unter [in-Memory-Datenbanken](in-memory-databases.md).
+Wenn `:memory:`, wird eine In-Memory-Datenbank verwendet. Weitere Informationen finden Sie [unter In-Memory-Datenbanken](in-memory-databases.md).
 
-Pfade, die mit der `|DataDirectory|` Ersetzungs Zeichenfolge beginnen, werden wie relative Pfade behandelt. Wenn festgelegt, werden Pfade relativ zum Eigenschafts Wert der DataDirectory-Anwendungsdomäne erstellt.
+Pfade, die `|DataDirectory|` mit der Ersetzungszeichenfolge beginnen, werden wie relative Pfade behandelt. Wenn diese Einstellung festgelegt ist, werden Pfade relativ zum Eigenschaftswert der DataDirectory-Anwendungsdomäne erstellt.
 
-Dieses Schlüsselwort unterstützt auch [URI-Dateinamen](https://www.sqlite.org/uri.html).
+Dieses Schlüsselwort unterstützt auch [URI Filenames](https://www.sqlite.org/uri.html).
 
-### <a name="mode"></a>Modus
+### <a name="mode"></a>Mode
 
-Der Verbindungs Modus.
+Der Verbindungsmodus.
 
-| {2&gt;Wert&lt;2}           | Beschreibung                                                                                        |
+| value           | Beschreibung                                                                                        |
 | --------------- | -------------------------------------------------------------------------------------------------- |
-| "Read-tecreate" | Öffnet die Datenbank zum Lesen und schreiben und erstellt diese, wenn Sie nicht vorhanden ist. Dies ist der Standardwert. |
-| ReadWrite       | Öffnet die Datenbank zum Lesen und schreiben.                                                        |
+| ReadWriteCreate | Öffnet die Datenbank zum Lesen und Schreiben und erstellt sie, wenn sie nicht vorhanden ist. Dies ist die Standardoption. |
+| ReadWrite       | Öffnet die Datenbank zum Lesen und Schreiben.                                                        |
 | ReadOnly        | Öffnet die Datenbank im schreibgeschützten Modus.                                                              |
-| Arbeitsspeicher          | Öffnet einen in-Memory Database.                                                                       |
+| Arbeitsspeicher          | Öffnet eine In-Memory-Datenbank.                                                                       |
 
-### <a name="cache"></a>cache
+### <a name="cache"></a>Cache
 
-Der von der Verbindung verwendete cachingmodus.
+Der caching-Modus, der von der Verbindung verwendet wird.
 
-| {2&gt;Wert&lt;2}   | Beschreibung                                                                                    |
+| value   | Beschreibung                                                                                    |
 | ------- | ---------------------------------------------------------------------------------------------- |
-| Default | Verwendet den Standardmodus der zugrunde liegenden SQLite-Bibliothek. Dies ist der Standardwert.                   |
-| Private | Jede Verbindung verwendet einen privaten Cache.                                                          |
-| Freigegeben  | Verbindungen nutzen einen Cache gemeinsam. Dieser Modus kann das Verhalten der Transaktion und der Tabellensperrung ändern. |
+| Standard | Verwendet den Standardmodus der zugrunde liegenden SQLite-Bibliothek. Dies ist die Standardoption.                   |
+| Privat | Jede Verbindung verwendet einen privaten Cache.                                                          |
+| Shared  | Verbindungen teilen sich einen Cache. Dieser Modus kann das Verhalten von Transaktionen und Tabellensperren ändern. |
 
 ### <a name="password"></a>Kennwort
 
-Der Verschlüsselungsschlüssel. Wenn angegeben, wird `PRAGMA key` unmittelbar nach dem Öffnen der Verbindung gesendet.
+Der Verschlüsselungsschlüssel. Wenn angegeben, `PRAGMA key` wird sofort nach dem Öffnen der Verbindung gesendet.
 
 > [!WARNING]
-> Das Kennwort hat keine Auswirkung, wenn die Verschlüsselung von der systemeigenen SQLite-Bibliothek nicht unterstützt
+> Das Kennwort hat keine Auswirkungen, wenn die Verschlüsselung von der nativen SQLite-Bibliothek nicht unterstützt wird.
 
 ### <a name="foreign-keys"></a>Fremdschlüssel
 
-Ein Wert, der angibt, ob Foreign Key-Einschränkungen aktiviert werden sollen.
+Ein Wert, der angibt, ob Fremdschlüsseleinschränkungen aktiviert werden sollen.
 
-| {2&gt;Wert&lt;2}   | Beschreibung
+| value   | Beschreibung
 | ------- | --- |
-| True    | Sendet `PRAGMA foreign_keys = 1` sofort nach dem Öffnen der Verbindung.
-| Falsch   | Sendet `PRAGMA foreign_keys = 0` sofort nach dem Öffnen der Verbindung.
-| (leer) | Sendet keine `PRAGMA foreign_keys`. Dies ist der Standardwert. |
+| True    | Sendet `PRAGMA foreign_keys = 1` unmittelbar nach dem Öffnen der Verbindung.
+| False   | Sendet `PRAGMA foreign_keys = 0` unmittelbar nach dem Öffnen der Verbindung.
+| (leer) | Sendet nicht `PRAGMA foreign_keys`. Dies ist die Standardoption. |
 
-Es ist nicht erforderlich, Fremdschlüssel zu aktivieren, wenn, wie in e_sqlite3, SQLITE_DEFAULT_FOREIGN_KEYS verwendet wurde, um die native SQLite-Bibliothek zu kompilieren.
+Es ist nicht erforderlich, Fremdschlüssel zu aktivieren, wenn, wie in e_sqlite3, SQLITE_DEFAULT_FOREIGN_KEYS zum Kompilieren der nativen SQLite-Bibliothek verwendet wurde.
 
 ### <a name="recursive-triggers"></a>Rekursive Trigger
 
 Ein Wert, der angibt, ob rekursive Trigger aktiviert werden sollen.
 
-| {2&gt;Wert&lt;2} | Beschreibung                                                                 |
+| value | Beschreibung                                                                 |
 | ----- | --------------------------------------------------------------------------- |
-| True  | Sendet `PRAGMA recursive_triggers` sofort nach dem Öffnen der Verbindung. |
-| Falsch | Sendet keine `PRAGMA recursive_triggers`. Dies ist der Standardwert.              |
+| True  | Sendet `PRAGMA recursive_triggers` unmittelbar nach dem Öffnen der Verbindung. |
+| False | Sendet nicht `PRAGMA recursive_triggers`. Dies ist die Standardoption.              |
 
-## <a name="connection-string-builder"></a>Verbindungs Zeichen folgen Generator
+## <a name="connection-string-builder"></a>Verbindungszeichenfolgen-Generator
 
-Sie können <xref:Microsoft.Data.Sqlite.SqliteConnectionStringBuilder> als stark typisierte Methode zum Erstellen von Verbindungs Zeichenfolgen verwenden. Sie kann auch verwendet werden, um einschleusungs Angriffe für Verbindungs Zeichenfolgen zu
+Sie können <xref:Microsoft.Data.Sqlite.SqliteConnectionStringBuilder> als stark typisierte Möglichkeit zum Erstellen von Verbindungszeichenfolgen verwenden. Es kann auch verwendet werden, um VerbindungszeichenfolgeNinjektionsangriffe zu verhindern.
 
 [!code-csharp[](../../../../samples/snippets/standard/data/sqlite/EncryptionSample/Program.cs?name=snippet_ConnectionStringBuilder)]
 
 ## <a name="examples"></a>Beispiele
 
-### <a name="basic"></a>Standard
+### <a name="basic"></a>Basic
 
-Eine einfache Verbindungs Zeichenfolge mit einem freigegebenen Cache für verbesserte Parallelität.
+Eine grundlegende Verbindungszeichenfolge mit einem freigegebenen Cache für eine verbesserte Parallelität.
 
 ```ConnectionString
 Data Source=Application.db;Cache=Shared
@@ -106,30 +106,30 @@ Data Source=Encrypted.db;Password=MyEncryptionKey
 
 ### <a name="read-only"></a>Schreibgeschützt
 
-Eine schreibgeschützte Datenbank, die nicht von der APP geändert werden kann.
+Eine schreibgeschützte Datenbank, die von der App nicht geändert werden kann.
 
 ```ConnectionString
 Data Source=Reference.db;Mode=ReadOnly
 ```
 
-### <a name="in-memory"></a>Im Arbeitsspeicher
+### <a name="in-memory"></a>In-Memory
 
-Eine private, in-Memory Database.
+Eine private, in-Memory-Datenbank.
 
 ```ConnectionString
 Data Source=:memory:
 ```
 
-### <a name="sharable-in-memory"></a>Sharable in-Memory
+### <a name="sharable-in-memory"></a>Sharable in-memory
 
-Ein Sharable, in-Memory Database durch den Namen *Sharable*identifiziert.
+Eine sharable, in-memory-Datenbank, die mit dem Namen *Sharable*identifiziert wird.
 
 ```ConnectionString
 Data Source=Sharable;Mode=Memory;Cache=Shared
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-* [Verbindungs Zeichenfolgen in ADO.net](../../../framework/data/adonet/connection-strings.md)
+* [Verbindungszeichenfolgen in ADO.NET](../../../framework/data/adonet/connection-strings.md)
 * [In-Memory-Datenbanken](in-memory-databases.md)
 * [Transaktionen](transactions.md)

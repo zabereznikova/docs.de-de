@@ -12,17 +12,17 @@ helpviewer_keywords:
 - security [.NET Framework], about security
 ms.assetid: 3cfced4f-ea02-4e66-ae98-d69286363e98
 ms.openlocfilehash: b7bcb7e56ca14d129eadcaeac19452d4a443713d
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75705971"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79401280"
 ---
 # <a name="key-security-concepts"></a>Schlüsselbegriffe der Sicherheit
 Microsoft .NET Framework bietet rollenbasierte Sicherheit, um Sicherheitsprobleme bei mobilem Code zu beheben und Komponenten die Möglichkeit einzuräumen, die Berechtigungen von Benutzern zu überprüfen.  
   
 ## <a name="type-safety-and-security"></a>Typsicherheit und Sicherheit  
- Typsicherer Code greift nur auf die Speicheradressen zu, für die er über die erforderliche Berechtigung verfügt. (Die Typsicherheit bezieht sich in diesem Zusammenhang speziell auf die Sicherheit des Speicher Typs und sollte in größerem Umfang nicht mit der Typsicherheit verwechselt werden.) Typsicherer Code kann z. b. keine Werte aus den privaten Feldern eines anderen Objekts lesen. Der Zugriff auf Typen ist genau definiert und muss zulässig sein.  
+ Typsicherer Code greift nur auf die Speicheradressen zu, für die er über die erforderliche Berechtigung verfügt. (Für diese Diskussion bezieht sich die Typsicherheit speziell auf die Speichertypsicherheit und sollte nicht in allgemeinerer Hinsicht mit der Typsicherheit verwechselt werden.) Beispielsweise kann typsicherer Code keine Werte aus den privaten Feldern eines anderen Objekts lesen. Der Zugriff auf Typen ist genau definiert und muss zulässig sein.  
   
  Während der JIT-Kompilierung (Just-In-Time) werden die Metadaten und MSIL (Microsoft Intermediate Language) einer Methode, die in systemeigenen Code des Computers JIT-kompiliert werden soll, in einem optionalen Prüfungsvorgang auf ihre Typsicherheit überprüft. Dieser Vorgang wird übersprungen, wenn der Code über die Berechtigung zum Umgehen der Überprüfung verfügt. Weitere Informationen über Überprüfung finden Sie unter [Der verwaltete Ausführungsprozess](../../../docs/standard/managed-execution-process.md).  
   
@@ -30,7 +30,7 @@ Microsoft .NET Framework bietet rollenbasierte Sicherheit, um Sicherheitsproblem
   
  Weitere Informationen finden Sie unter [Code Access Security Basics](../../../docs/framework/misc/code-access-security-basics.md).  
   
-## <a name="principal"></a>Principal  
+## <a name="principal"></a>Prinzipal  
  Ein Prinzipal stellt die Identität und die Rolle eines Benutzers dar und handelt stellvertretend für den Benutzer. Die rollenbasierte Sicherheit in .NET Framework unterstützt drei Arten von Prinzipals:  
   
 - Allgemeine Prinzipals stellen Benutzer und Rollen dar, die unabhängig von Benutzern und Rollen unter Windows vorhanden sind.  
@@ -50,7 +50,7 @@ Microsoft .NET Framework bietet rollenbasierte Sicherheit, um Sicherheitsproblem
  Im folgenden Beispiel muss der aktive Prinzipal ein Administrator sein. Der `name`-Parameter ist `null`, sodass die Anforderung von allen Benutzern übergeben werden kann, die Administratoren sind.  
   
 > [!NOTE]
-> Unter Windows Vista werden die Berechtigungen eines Benutzers über die Benutzerkontensteuerung (User Account Control, UAC) bestimmt. Als Mitglied der integrierten Administratorgruppe sind Ihnen zwei Zugriffstoken für die Laufzeit zugewiesen: ein Standardbenutzertoken und ein Administratorzugriffstoken. Standardmäßig verwenden Sie die Standardbenutzerrolle. Um Code ausführen zu können, der Administratorberechtigungen erfordert, müssen Sie zuerst Ihre Berechtigungen von Standardbenutzer auf Administrator erhöhen. Dazu starten Sie eine Anwendung, indem Sie mit der rechten Maustaste auf das Anwendungssymbol klicken und angeben, dass Sie die Anwendung als Administrator ausführen möchten.  
+> Unter Windows Vista werden die Berechtigungen eines Benutzers über die Benutzerkontensteuerung (User Account Control, UAC) bestimmt. Als Mitglied der integrierten Administratorgruppe sind Ihnen zwei Zugriffstoken für die Laufzeit zugewiesen: ein Standardbenutzertoken und ein Administratorzugriffstoken. Standardmäßig verwenden Sie die Standardbenutzerrolle. Um Code ausführen zu können, der Administratorberechtigungen erfordert, müssen Sie zuerst Ihre Berechtigungen von Standardbenutzer auf Administrator erhöhen. Dazu starten Sie eine Anwendung, indem Sie mit der rechten Maustaste auf das Anwendungssymbol klicken und angeben, dass Sie die Anwendung als Administrator ausführen möchten.   
   
  [!code-cpp[Classic PrincipalPermission Example#1](../../../samples/snippets/cpp/VS_Snippets_CLR_Classic/classic PrincipalPermission Example/CPP/source.cpp#1)]
  [!code-csharp[Classic PrincipalPermission Example#1](../../../samples/snippets/csharp/VS_Snippets_CLR_Classic/classic PrincipalPermission Example/CS/source.cs#1)]
@@ -62,5 +62,5 @@ Microsoft .NET Framework bietet rollenbasierte Sicherheit, um Sicherheitsproblem
  [!code-csharp[System.Security.Principal.WindowsBuiltInRole Example#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Principal.WindowsBuiltInRole Example/CS/source.cs#1)]
  [!code-vb[System.Security.Principal.WindowsBuiltInRole Example#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Principal.WindowsBuiltInRole Example/VB/source.vb#1)]  
   
-## <a name="authorization"></a>Autorisierung  
+## <a name="authorization"></a>Authorization  
  Bei der Autorisierung wird bestimmt, ob das Ausführen einer angeforderten Aktion durch einen Prinzipal zulässig ist. Die Autorisierung findet nach der Authentifizierung statt. Sie bestimmt anhand der Informationen zur Identität und Rollen des Prinzipals, auf welche Ressourcen dieser zugreifen darf. Autorisierung können Sie in .NET Framework mithilfe der rollenbasierten Sicherheit implementieren.

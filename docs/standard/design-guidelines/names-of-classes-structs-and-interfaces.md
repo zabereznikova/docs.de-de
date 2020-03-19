@@ -13,41 +13,41 @@ helpviewer_keywords:
 - generic type parameters
 ms.assetid: 87a4b0da-ed64-43b1-ac43-968576c444ce
 ms.openlocfilehash: 2c528348c0e84037a80df9797c56f03b51c73adc
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76727787"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79401238"
 ---
 # <a name="names-of-classes-structs-and-interfaces"></a>Namen von Klassen, Strukturen und Schnittstellen
-Die folgenden Benennungs Richtlinien gelten für die allgemeine Typbenennung.
+Die folgenden Benennungsrichtlinien gelten für die allgemeine Typbenennung.
 
- mit der Pass-/Schreibweise von ✔️ Klassen und Strukturen mit Nomen oder nominalen Ausdrücken benannt.
+ ✔️ DO-Namensklassen und -Strukturen mit Substantiven oder Nomenphrasen mit PascalCasing.
 
- Dies unterscheidet Typnamen von Methoden, die mit Verb Ausdrücken benannt werden.
+ Dadurch werden Typnamen von Methoden unterschieden, die mit Verbausdrücken benannt werden.
 
- ✔️ Namen Schnittstellen mit Adjektiv Ausdrücken oder gelegentlich mit Nomen oder nominalen Ausdrücken.
+ ✔️ DO-Namensschnittstellen mit Adjektivphrasen oder gelegentlich mit Substantiven oder Substantiven.
 
- Nomen und nominale Ausdrücke sollten in seltenen Fällen verwendet werden, und Sie können darauf hinweisen, dass der Typ eine abstrakte Klasse und keine Schnittstelle sein sollte.
+ Nomen und Nomenphrasen sollten selten verwendet werden, und sie können darauf hinweisen, dass der Typ eine abstrakte Klasse und keine Schnittstelle sein sollte.
 
- ❌ keine Klassennamen als Präfix (z. b. "C") anzugeben.
+ ❌Geben Sie Klassennamen KEIN Präfix (z. B. "C").
 
- ✔️ sollten den Namen abgeleiteter Klassen mit dem Namen der Basisklasse beenden.
+ ✔️ CONSIDER, der den Namen abgeleiteter Klassen mit dem Namen der Basisklasse beendet.
 
- Dies ist sehr lesbar und erläutert die Beziehung eindeutig. Einige Beispiele hierfür sind: `ArgumentOutOfRangeException`, eine Art `Exception`und `SerializableAttribute`, bei der es sich um eine Art `Attribute`handelt. Es ist jedoch wichtig, bei der Anwendung dieser Richtlinie ein vernünftiges Urteil zu verwenden. die `Button`-Klasse ist beispielsweise eine Art `Control` Ereignisses, obwohl `Control` nicht im Namen angezeigt wird.
+ Dies ist sehr lesbar und erklärt die Beziehung deutlich. Einige Beispiele dafür im `ArgumentOutOfRangeException`Code sind: , `Exception`was `SerializableAttribute`eine Art von `Attribute`ist, und , das ist eine Art von . Es ist jedoch wichtig, bei der Anwendung dieser Richtlinie ein vernünftiges Urteilsvermögen zu verwenden; Beispielsweise ist `Button` die Klasse eine `Control` Art `Control` Ereignis, obwohl sie nicht in ihrem Namen angezeigt wird.
 
- ✔️ Geben Sie Schnittstellennamen mit dem Buchstaben I an, um anzugeben, dass der Typ eine Schnittstelle ist.
+ ✔️ DO-Präfixschnittstellennamen mit dem Buchstaben I, um anzugeben, dass der Typ eine Schnittstelle ist.
 
- Beispielsweise sind `IComponent` (Beschreibungs Substantiv), `ICustomAttributeProvider` (nominaler Ausdruck) und `IPersistable` (Adjektiv) geeignete Schnittstellennamen. Vermeiden Sie Abkürzungen wie andere Typnamen.
+ Beispielsweise `IComponent` sind (deskriptives `ICustomAttributeProvider` Nounon), (Nounphrase) und `IPersistable` (Adjektiv) geeignete Schnittstellennamen. Vermeiden Sie wie bei anderen Typnamen Abkürzungen.
 
- Stellen Sie ✔️ sicher, dass sich die Namen nur durch das Präfix "I" für den Schnittstellennamen unterscheiden, wenn Sie ein Klassen –-Schnittstellen Paar definieren, bei dem die Klasse eine Standard Implementierung der Schnittstelle ist.
+ ✔️ stellen Sie sicher, dass sich die Namen nur durch das Präfix "I" im Schnittstellennamen unterscheiden, wenn Sie ein Klassen-Schnittstellenpaar definieren, bei dem die Klasse eine Standardimplementierung der Schnittstelle ist.
 
-## <a name="names-of-generic-type-parameters"></a>Namen von generischen Typparametern
- Generika wurden .NET Framework 2,0 hinzugefügt. Mit der Funktion wurde eine neue Art von Bezeichner namens *Typparameter*eingeführt.
+## <a name="names-of-generic-type-parameters"></a>Namen generischer Typparameter
+ Generics wurden zu .NET Framework 2.0 hinzugefügt. Die Funktion führte eine neue Art von Bezeichner namens *Typparameter*ein.
 
- ✔️ Namen generischer Typparameter mit beschreibenden Namen verwenden, es sei denn, ein einzelner Buchstabe ist vollständig selbsterklärend, und ein beschreibender Name würde keinen Wert hinzufügen.
+ ✔️ DO-Namen generische Typparameter mit beschreibenden Namen, es sei denn, ein Name mit einem Buchstaben ist vollständig selbsterklärend und ein beschreibender Name würde keinen Wert hinzufügen.
 
- ✔️ sollten Sie `T` als Typparameter Namen für Typen mit einem Typparameter mit einem einzelnen Buchstaben verwenden.
+ ✔️ CONSIDER `T` als Typparametername für Typen mit einem Einzelbuchstabentypparameter verwenden.
 
 ```csharp
 public int IComparer<T> { ... }
@@ -55,7 +55,7 @@ public delegate bool Predicate<T>(T item);
 public struct Nullable<T> where T:struct { ... }
 ```
 
- ✔️ mit `T`beschreibende Typparameter Namen als Präfix an.
+ ✔️ DO präskriptiven Typparameternamen mit `T`.
 
 ```csharp
 public interface ISessionChannel<TSession> where TSession : ISession {
@@ -63,37 +63,37 @@ public interface ISessionChannel<TSession> where TSession : ISession {
 }
 ```
 
- ✔️ in Erwägung gezogen, dass Einschränkungen für einen Typparameter im Namen des Parameters eingefügt werden.
+ ✔️ CONSIDER, die Einschränkungen angibt, die für einen Typparameter im Namen des Parameters platziert werden.
 
- Beispielsweise kann ein Parameter, der auf `ISession` eingeschränkt ist, `TSession`aufgerufen werden.
+ Beispielsweise kann ein Parameter, der eingeschränkt `ISession` ist, aufgerufen `TSession`werden.
 
-## <a name="names-of-common-types"></a>Namen allgemeiner Typen
- ✔️ Befolgen Sie die in der folgenden Tabelle beschriebenen Richtlinien, wenn Sie Typen benennen, die von abgeleitet sind oder bestimmte .NET Framework Typen implementieren.
+## <a name="names-of-common-types"></a>Namen gängiger Typen
+ ✔️ befolgen Sie die in der folgenden Tabelle beschriebenen Richtlinien, wenn Sie Typen benennen, die von bestimmten .NET Framework-Typen abgeleitet sind oder diese implementieren.
 
-|Basistyp|Abgeleitete/implementierende typrichtlinie|
+|Basistyp|Abgeleitete/Implementierenvon Typleitlinie|
 |---------------|------------------------------------------|
-|`System.Attribute`|Fügen Sie den Namen von benutzerdefinierten Attribut Klassen ✔️ das Suffix "Attribute" hinzu.|
-|`System.Delegate`|✔️ Fügen Sie das Suffix "EventHandler" den Namen von Delegaten hinzu, die in Ereignissen verwendet werden.<br /><br /> ✔️ fügen das Suffix "Callback" Namen von Delegaten hinzu, die nicht als Ereignishandler verwendet werden.<br /><br /> ❌ das Suffix "Delegat" nicht zu einem Delegaten hinzufügen.|
-|`System.EventArgs`|Fügen Sie ✔️ das Suffix "EventArgs" hinzu.|
-|`System.Enum`|❌ nicht von dieser Klasse abgeleitet werden. Verwenden Sie stattdessen das von Ihrer Sprache unterstützte Schlüsselwort; Verwenden Sie z C#. b. das `enum`-Schlüsselwort.<br /><br /> ❌ das Suffix "Enum" oder "Flag" nicht hinzufügen.|
-|`System.Exception`|Fügen Sie ✔️ das Suffix "Exception" hinzu.|
-|`IDictionary` <br /> `IDictionary<TKey,TValue>`|Fügen Sie ✔️ das Suffix "Dictionary" hinzu. Beachten Sie, dass `IDictionary` eine bestimmte Art von Sammlung ist, aber diese Richtlinie hat Vorrang vor den folgenden allgemeinen Auflistungs Richtlinien.|
-|`IEnumerable` <br /> `ICollection` <br /> `IList` <br /> `IEnumerable<T>` <br /> `ICollection<T>` <br /> `IList<T>`|Fügen Sie ✔️ das Suffix "Collection" hinzu.|
-|`System.IO.Stream`|Fügen Sie ✔️ das Suffix "Stream" hinzu.|
-|`CodeAccessPermission IPermission`|✔️ Fügen Sie das Suffix "Berechtigung" hinzu.|
+|`System.Attribute`|✔️ das Suffix "Attribut" zu Namen benutzerdefinierter Attributklassen hinzufügen.|
+|`System.Delegate`|✔️ das Suffix "EventHandler" zu den Namen von Delegaten hinzufügen, die in Ereignissen verwendet werden.<br /><br /> ✔️ das Suffix "Callback" zu Namen anderer Delegaten als der als Ereignishandler verwendeten Hinzufügen.<br /><br /> ❌Fügen Sie einem Delegaten NICHT das Suffix "Delegate" hinzu.|
+|`System.EventArgs`|✔️ das Suffix "EventArgs" hinzufügen.|
+|`System.Enum`|❌Nicht von dieser Klasse ableiten; verwenden Sie stattdessen das von Ihrer Sprache unterstützte Schlüsselwort; Verwenden Sie z. B. `enum` das Schlüsselwort in C.<br /><br /> ❌Fügen Sie NICHT das Suffix "Enum" oder "Flag" hinzu.|
+|`System.Exception`|✔️ das Suffix "Ausnahme" hinzufügen.|
+|`IDictionary` <br /> `IDictionary<TKey,TValue>`|✔️ das Suffix "Wörterbuch" hinzufügen. Beachten `IDictionary` Sie, dass es sich um einen bestimmten Auflistungstyp handelt, aber diese Richtlinie hat Vorrang vor der allgemeineren Auflistungsrichtlinie, die folgt.|
+|`IEnumerable` <br /> `ICollection` <br /> `IList` <br /> `IEnumerable<T>` <br /> `ICollection<T>` <br /> `IList<T>`|✔️ das Suffix "Collection" hinzufügen.|
+|`System.IO.Stream`|✔️ das Suffix "Stream" hinzufügen.|
+|`CodeAccessPermission IPermission`|✔️ das Suffix "Berechtigung" hinzufügen.|
 
 ## <a name="naming-enumerations"></a>Benennen von Enumerationen
- Namen von Enumerationstypen (auch als Enumerationen bezeichnet) sollten im Allgemeinen den standardmäßigen typbenennungs Regeln (pascalnaming, usw.) entsprechen. Es gibt jedoch weitere Richtlinien, die speziell für-aufzählen gelten.
+ Namen von Enumerationstypen (auch Enumerationen genannt) sollten im Allgemeinen den Standardregeln für die Typbenennung (PascalCasing usw.) folgen. Es gibt jedoch zusätzliche Richtlinien, die speziell für Enumerungen gelten.
 
- ✔️ einen eindeutigen Typnamen für eine Enumeration verwenden, es sei denn, die Werte sind Bitfelder.
+ ✔️ verwenden einen eindeutigen Typnamen für eine Enumeration, es sei denn, seine Werte sind Bitfelder.
 
- ✔️ einen Plural Typnamen für eine Enumeration mit Bitfeldern als Werte verwenden, die auch als Flags-Enumeration bezeichnet werden.
+ ✔️ DO einen Pluraltypnamen für eine Enumeration mit Bitfeldern als Werte verwenden, die auch als Flags enum bezeichnet werden.
 
- ❌ in Enumeration-Typnamen kein "Enumeration"-Suffix verwenden.
+ ❌Verwenden Sie NICHT ein "Enum"-Suffix in Enumerumtypnamen.
 
- ❌ in Enumeration-Typnamen nicht "Flag"-oder "Flags"-Suffixe verwenden.
+ ❌Verwenden Sie NICHT die Suffixe "Flag" oder "Flags" in Enumerumtypnamen.
 
- ❌ kein Präfix für enumerationswertnamen (z. b. "AD" für ADO-Enumerationen, "RTF" für Rich-Text-Enumerationen usw.) verwenden.
+ ❌Verwenden Sie NICHT ein Präfix für Enumerationswertnamen (z. B. "ad" für ADO-Enumerationen, "rtf" für Rich-Text-Enumerationen usw.).
 
  *Teile © 2005, 2009 Microsoft Corporation. Alle Rechte vorbehalten.*
 
@@ -101,5 +101,5 @@ public interface ISessionChannel<TSession> where TSession : ISession {
 
 ## <a name="see-also"></a>Weitere Informationen
 
-- [Frameworkentwurfsrichtlinien](../../../docs/standard/design-guidelines/index.md)
+- [Framework Design-Richtlinien](../../../docs/standard/design-guidelines/index.md)
 - [Richtlinien für die Benennung](../../../docs/standard/design-guidelines/naming-guidelines.md)

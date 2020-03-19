@@ -13,67 +13,67 @@ helpviewer_keywords:
 - static constructors
 ms.assetid: b4496afe-5fa7-4bb0-85ca-70b0ef21e6fc
 ms.openlocfilehash: 7ab795cd4c6e0ff5e1451c05987848c41bd69577
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76741740"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79401244"
 ---
 # <a name="constructor-design"></a>Konstruktorentwurf
 
 Es gibt zwei Arten von Konstruktoren: Typkonstruktoren und Instanzkonstruktoren.
 
-Typkonstruktoren sind statisch und werden von der CLR ausgeführt, bevor der-Typ verwendet wird. Instanzkonstruktoren werden ausgeführt, wenn eine Instanz eines Typs erstellt wird.
+Typkonstruktoren sind statisch und werden von der CLR ausgeführt, bevor der Typ verwendet wird. Instanzkonstruktoren werden ausgeführt, wenn eine Instanz eines Typs erstellt wird.
 
-Typkonstruktoren können keine Parameter annehmen. Instanzkonstruktoren können dies tun. Instanzkonstruktoren, die keine Parameter annehmen, werden häufig als Parameter lose Konstruktoren bezeichnet.
+Typkonstruktoren können keine Parameter annehmen. Instanzkonstruktoren können dies. Instanzkonstruktoren, die keine Parameter annehmen, werden häufig als parameterlose Konstruktoren bezeichnet.
 
-Konstruktoren sind die natürlichste Methode, Instanzen eines Typs zu erstellen. Die meisten Entwickler suchen und versuchen, einen Konstruktor zu verwenden, bevor Sie alternative Methoden zum Erstellen von Instanzen (z. b. Factorymethoden) berücksichtigen.
+Konstruktoren sind die natürlichste Möglichkeit, Instanzen eines Typs zu erstellen. Die meisten Entwickler suchen und versuchen, einen Konstruktor zu verwenden, bevor sie alternative Möglichkeiten zum Erstellen von Instanzen (z. B. Factorymethoden) in Betracht ziehen.
 
-✔️ sollten Sie eine einfache, idealerweise standardmäßige Konstruktoren bereitstellen.
+✔️ CONSIDER bietet einfache, idealerweise Standardkonstruktoren.
 
-Ein einfacher Konstruktor verfügt über eine sehr geringe Anzahl von Parametern, und alle Parameter sind primitive oder enumeraten. Solche einfachen Konstruktoren erhöhen die Verwendbarkeit des Frameworks.
+Ein einfacher Konstruktor hat eine sehr kleine Anzahl von Parametern, und alle Parameter sind Primitive oder Enumerungen. Solche einfachen Konstruktoren erhöhen die Benutzerfreundlichkeit des Frameworks.
 
-✔️ sollten Sie anstelle eines Konstruktors eine statische Factorymethode verwenden, wenn die Semantik des gewünschten Vorgangs nicht direkt der Erstellung einer neuen Instanz zugeordnet wird oder wenn Sie die Entwurfs Richtlinien für den Konstruktor befolgen.
+✔️ CONSIDER mit einer statischen Factorymethode anstelle eines Konstruktors, wenn die Semantik des gewünschten Vorgangs nicht direkt der Konstruktion einer neuen Instanz zugeordnet wird oder wenn sich die Entwurfsrichtlinien des Konstruktors als unnatürlich anfühlen.
 
-✔️ Konstruktorparameter als Verknüpfungen zum Festlegen von Haupteigenschaften verwenden.
+✔️ verwenden Konstruktorparameter als Verknüpfungen zum Festlegen von Haupteigenschaften.
 
-Es sollte kein Unterschied in der Semantik zwischen der Verwendung des leeren Konstruktors bestehen, gefolgt von einigen Eigenschafts Sätzen und der Verwendung eines Konstruktors mit mehreren Argumenten.
+Es sollte keinen Unterschied in der Semantik zwischen der Verwendung des leeren Konstruktors gefolgt von einigen Eigenschaftssätzen und der Verwendung eines Konstruktors mit mehreren Argumenten geben.
 
-✔️ den gleichen Namen für Konstruktorparameter und eine-Eigenschaft verwenden, wenn die Konstruktorparameter zum einfachen Festlegen der-Eigenschaft verwendet werden.
+✔️ verwenden denselben Namen für Konstruktorparameter und eine Eigenschaft, wenn die Konstruktorparameter verwendet werden, um einfach die Eigenschaft festzulegen.
 
-Der einzige Unterschied zwischen diesen Parametern und den Eigenschaften sollte die Schreibweise sein.
+Der einzige Unterschied zwischen solchen Parametern und den Eigenschaften sollte das Gehäuse sein.
 
-✔️ führen im Konstruktor nur wenig Arbeit aus.
+✔️ minimale Arbeit im Konstruktor.
 
-Konstruktoren sollten nicht viel Arbeitsaufgaben ausführen, außer die Konstruktorparameter zu erfassen. Die Kosten für jede andere Verarbeitung sollten verzögert werden, bis Sie erforderlich ist.
+Konstruktoren sollten nicht viel anderes tun, als die Konstruktorparameter zu erfassen. Die Kosten für jede andere Verarbeitung sollten bis erforderlich verzögert werden.
 
-✔️ lösen ggf. Ausnahmen von Instanzkonstruktoren aus.
+✔️ werden ggf. Ausnahmen von Instanzkonstruktoren ausgelöst.
 
-✔️ den öffentlichen Parameter losen Konstruktor explizit in Klassen deklarieren, wenn ein solcher Konstruktor erforderlich ist.
+✔️ DO explizit den öffentlichen parameterlosen Konstruktor in Klassen deklarieren, wenn ein solcher Konstruktor erforderlich ist.
 
-Wenn Sie nicht explizit Konstruktoren für einen Typ deklarieren, fügen viele Sprachen (z C#. b.) automatisch einen öffentlichen Parameter losen Konstruktor hinzu. (Abstrakte Klassen erhalten einen geschützten Konstruktor.)
+Wenn Sie keine Konstruktoren für einen Typ explizit deklarieren, fügen viele Sprachen (z. B. C') automatisch einen öffentlichen parameterlosen Konstruktor hinzu. (Abstrakte Klassen erhalten einen geschützten Konstruktor.)
 
-Durch das Hinzufügen eines parametrisierten Konstruktors zu einer Klasse wird verhindert, dass der Compiler den Parameter losen Konstruktor hinzufügt. Dies verursacht häufig versehentlich wichtige Änderungen.
+Das Hinzufügen eines parametrisierten Konstruktors zu einer Klasse verhindert, dass der Compiler den parameterlosen Konstruktor hinzufügt. Dies führt häufig zu zufälligen Bruchänderungen.
 
-❌ das explizite Definieren von Parameter losen Konstruktoren für Strukturen vermeiden.
+❌AVOID definiert explizit parameterlose Konstruktoren für Strukturen.
 
-Dadurch wird die Array Erstellung beschleunigt, denn wenn der Parameter lose Konstruktor nicht definiert ist, muss er nicht an jedem Slot im Array ausgeführt werden. Beachten Sie, dass viele Compiler, C#einschließlich, nicht zulassen, dass Strukturen aus diesem Grundparameter lose Konstruktoren aufweisen.
+Dies beschleunigt die Arrayerstellung, da der Parameterlose Konstruktor nicht definiert ist und nicht auf jedem Slot im Array ausgeführt werden muss. Beachten Sie, dass viele Compiler, einschließlich C', aus diesem Grund nicht zulassen, dass Strukturen über parameterlose Konstruktoren verfügen.
 
-❌ vermeiden Sie das Aufrufen von virtuellen Membern für ein Objekt innerhalb seines Konstruktors.
+❌AVOID, die virtuelle Member für ein Objekt innerhalb des Konstruktors aufruft.
 
-Das Aufrufen eines virtuellen Members bewirkt, dass die am meisten abgeleitete außer Kraft Setzung aufgerufen wird, auch wenn der Konstruktor des am weitesten abgeleiteten Typs noch nicht vollständig ausgeführt wurde.
+Wenn ein virtueller Member aufgerufen wird, wird die am häufigsten abgeleitete Außerkraftsetzung aufgerufen, auch wenn der Konstruktor des am häufigsten abgeleiteten Typs noch nicht vollständig ausgeführt wurde.
 
 ## <a name="type-constructor-guidelines"></a>Typkonstruktorrichtlinien
 
-✔️ statische Konstruktoren als privat festlegen.
+✔️ machen statische Konstruktoren privat.
 
-Ein statischer Konstruktor, der auch als Klassenkonstruktor bezeichnet wird, wird verwendet, um einen Typ zu initialisieren. Die CLR ruft den statischen Konstruktor auf, bevor die erste Instanz des Typs erstellt wird oder statische Member dieses Typs aufgerufen werden. Der Benutzer hat keine Kontrolle darüber, wann der statische Konstruktor aufgerufen wird. Wenn ein statischer Konstruktor nicht privat ist, kann er von Code aufgerufen werden, der nicht die CLR ist. Abhängig von den Vorgängen, die im Konstruktor ausgeführt werden, kann dies zu unerwartetem Verhalten führen. Der C# Compiler erzwingt, dass statische Konstruktoren privat sind.
+Ein statischer Konstruktor, der auch als Klassenkonstruktor bezeichnet wird, wird verwendet, um einen Typ zu initialisieren. Die CLR ruft den statischen Konstruktor auf, bevor die erste Instanz des Typs erstellt oder statische Member für diesen Typ aufgerufen werden. Der Benutzer hat keine Kontrolle darüber, wann der statische Konstruktor aufgerufen wird. Wenn ein statischer Konstruktor nicht privat ist, kann er durch einen anderen Code als die CLR aufgerufen werden. Abhängig von den im Konstruktor ausgeführten Vorgängen kann dies zu unerwartetem Verhalten führen. Der C-Compiler erzwingt, dass statische Konstruktoren privat sind.
 
-❌ keine Ausnahmen von statischen Konstruktoren auslösen.
+❌Nicht Ausnahmen von statischen Konstruktoren auslösen.
 
-Wenn von einem Typkonstruktor eine Ausnahme ausgelöst wird, kann der Typ in der aktuellen Anwendungsdomäne nicht verwendet werden.
+Wenn eine Ausnahme von einem Typkonstruktor ausgelöst wird, kann der Typ in der aktuellen Anwendungsdomäne nicht verwendet werden.
 
-✔️ sollten Sie die Initialisierung statischer Felder Inline anstelle von expliziter Verwendung statischer Konstruktoren in Erwägung gezogen, da die Laufzeit die Leistung von Typen optimieren kann, die über keinen explizit definierten statischen Konstruktor verfügen.
+✔️ CONSIDER, statische Felder inline zu initialisieren, anstatt explizit statische Konstruktoren zu verwenden, da die Laufzeit in der Lage ist, die Leistung von Typen zu optimieren, die keinen explizit definierten statischen Konstruktor haben.
 
 *Teile © 2005, 2009 Microsoft Corporation. Alle Rechte vorbehalten.*
 
@@ -82,4 +82,4 @@ Wenn von einem Typkonstruktor eine Ausnahme ausgelöst wird, kann der Typ in der
 ## <a name="see-also"></a>Weitere Informationen
 
 - [Entwurfsrichtlinien für Member](../../../docs/standard/design-guidelines/member.md)
-- [Frameworkentwurfsrichtlinien](../../../docs/standard/design-guidelines/index.md)
+- [Framework Design-Richtlinien](../../../docs/standard/design-guidelines/index.md)

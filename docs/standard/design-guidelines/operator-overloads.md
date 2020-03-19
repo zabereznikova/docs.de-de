@@ -9,42 +9,42 @@ helpviewer_keywords:
 - overloaded operators
 ms.assetid: 37585bf2-4c27-4dee-849a-af70e3338cc1
 ms.openlocfilehash: 0999e94c8d77396b237522e89c51206ce1226718
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76743688"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79401220"
 ---
 # <a name="operator-overloads"></a>Operatorüberladungen
-Mit Operator Überladungen können Frameworktypen so angezeigt werden, als wären Sie integrierte Sprach primitive.
+Überladungen von Operatoren ermöglichen es Frameworktypen, so zu wie integrierte Sprachprimitive zu erscheinen.
 
- Obwohl es in manchen Situationen zulässig und nützlich ist, sollten Operator Überladungen vorsichtig verwendet werden. Es gibt viele Fälle, in denen das Überladen von Operatoren missbraucht wurde, z. b. wenn frameworkdesigner die Verwendung von Operatoren für Vorgänge gestartet haben, die einfache Methoden sein sollten. Die folgenden Richtlinien sollten Sie bei der Entscheidung unterstützen, wann und wie die Operator Überladung verwendet werden soll.
+ Obwohl es in einigen Situationen zulässig und nützlich ist, sollten Operatorüberladungen vorsichtig verwendet werden. Es gibt viele Fälle, in denen die Überladung von Operatoren missbraucht wurde, z. B. wenn Frameworkdesigner begannen, Operatoren für Vorgänge zu verwenden, die einfache Methoden sein sollten. Die folgenden Richtlinien sollten Ihnen bei der Entscheidung helfen, wann und wie Operatorüberlastung verwendet werden soll.
 
- ❌ vermeiden Sie das Definieren von Operator Überladungen, außer in Typen, die als primitive (integrierte) Typen aussehen sollten.
+ ❌AVOID definiert Operatorüberladungen, außer in Typen, die sich wie primitive (integrierte) Typen anfühlen sollten.
 
- ✔️ in Erwägung gezogen, Operator Überladungen in einem Typ zu definieren, der wie ein primitiver Typ aussehen sollte.
+ ✔️ CONSIDER definieren Operatorüberladungen in einem Typ, der sich wie ein primitiver Typ anfühlen sollte.
 
- Beispielsweise ist <xref:System.String?displayProperty=nameWithType> `operator==` und `operator!=` definiert.
+ Zum Beispiel <xref:System.String?displayProperty=nameWithType> `operator==` hat `operator!=` und definiert.
 
- ✔️ definieren Operator Überladungen in Strukturen, die Zahlen darstellen (z. b. <xref:System.Decimal?displayProperty=nameWithType>).
+ ✔️ DO definieren Operatorüberladungen in Strukturen, <xref:System.Decimal?displayProperty=nameWithType>die Zahlen darstellen (z. B. ).
 
- beim Definieren von Operator Überladungen sind ❌ nicht niedlich.
+ ❌Seien Sie NICHT niedlich, wenn Operator-Überlastungen definiert werden.
 
- Die Operator Überladung ist in Fällen nützlich, in denen es sofort offensichtlich ist, was das Ergebnis des Vorgangs sein wird. Beispielsweise ist es sinnvoll, eine <xref:System.DateTime> von einem anderen `DateTime` zu subtrahieren und eine <xref:System.TimeSpan>zu erhalten. Es ist jedoch nicht geeignet, den logischen Union-Operator für die Union zweier Datenbankabfragen zu verwenden oder den Shift-Operator zum Schreiben in einen Stream zu verwenden.
+ Eine Überladung des Bedieners ist in Fällen nützlich, in denen sofort klar ist, was das Ergebnis des Vorgangs sein wird. Es ist z. B. sinnvoll, <xref:System.DateTime> eine `DateTime` von der <xref:System.TimeSpan>anderen subtrahieren zu können und eine zu erhalten. Es ist jedoch nicht sinnvoll, den logischen Union-Operator zu verwenden, um zwei Datenbankabfragen zu vereinigen, oder den Schichtoperator zum Schreiben in einen Stream zu verwenden.
 
- ❌ keine Operator Überladungen bereitstellen, es sei denn, mindestens einer der Operanden ist vom Typ, der die Überladung definiert.
+ ❌Stellen Sie KEINE Operatorüberladungen bereit, es sei denn, mindestens einer der Operanden ist vom Typ, der die Überladung definiert.
 
- ✔️ Überladungs Operatoren auf symmetrische Weise.
+ ✔️ DO-Überlastoperatoren in symmetrischer Weise.
 
- Wenn Sie z. b. die `operator==`überladen, sollten Sie auch die `operator!=`überladen. Wenn Sie die `operator<`überladen, sollten Sie auch die `operator>`überladen usw.
+ Wenn Sie z. B. die `operator==`überladen, `operator!=`sollten Sie auch die überladen. Wenn Sie die `operator<`überladen, sollten Sie `operator>`auch die überladen usw.
 
- ✔️ sollten Sie Methoden mit anzeigen Amen bereitstellen, die den einzelnen überladenen Operatoren entsprechen.
+ ✔️ CONSIDER, methoden mit Anzeigenamen bereitzustellen, die jedem überlasteten Operator entsprechen.
 
- Viele Sprachen unterstützen das Überladen von Operatoren nicht. Aus diesem Grund wird empfohlen, dass Typen, die Operatoren überlasten, eine sekundäre Methode mit einem entsprechenden domänenspezifischen Namen enthalten, der entsprechende Funktionalität bereitstellt.
+ Viele Sprachen unterstützen keine Operatorüberlastung. Aus diesem Grund wird empfohlen, dass Typen, die Überlastoperatoren enthalten, eine sekundäre Methode mit einem entsprechenden domänenspezifischen Namen enthalten, der eine gleichwertige Funktionalität bereitstellt.
 
- Die folgende Tabelle enthält eine Liste der Operatoren und der entsprechenden anzeigen amen der Methode.
+ Die folgende Tabelle enthält eine Liste der Operatoren und die entsprechenden Anzeigemethodennamen.
 
-|C#Operator Symbol|Metadatenname|Anzeigename|
+|Operatorsymbol für die C-Operator|Metadatenname|Anzeigename|
 |-------------------------|-------------------|-------------------|
 |`N/A`|`op_Implicit`|`To<TypeName>/From<TypeName>`|
 |`N/A`|`op_Explicit`|`To<TypeName>/From<TypeName>`|
@@ -85,27 +85,27 @@ Mit Operator Überladungen können Frameworktypen so angezeigt werden, als wäre
 |`+ (unary)`|`op_UnaryPlus`|`Plus`|
 |`~`|`op_OnesComplement`|`OnesComplement`|
 
-### <a name="overloading-operator-"></a>Überladen des Operators = =
- Das Überladen von `operator ==` ist recht kompliziert. Die Semantik des Operators muss mit mehreren anderen Membern kompatibel sein, z. b. <xref:System.Object.Equals%2A?displayProperty=nameWithType>.
+### <a name="overloading-operator-"></a>Überladen des Operators ==
+ Überlastung `operator ==` ist ziemlich kompliziert. Die Semantik des Operators muss mit mehreren anderen <xref:System.Object.Equals%2A?displayProperty=nameWithType>Elementen kompatibel sein, z. B. .
 
 ### <a name="conversion-operators"></a>Konvertierungsoperatoren
- Konvertierungs Operatoren sind unäre Operatoren, die eine Konvertierung von einem Typ in einen anderen ermöglichen. Die Operatoren müssen als statische Member entweder für den Operanden oder den Rückgabetyp definiert werden. Es gibt zwei Typen von Konvertierungs Operatoren: implizit und explizit.
+ Konvertierungsoperatoren sind unäre Operatoren, die die Konvertierung von einem Typ in einen anderen ermöglichen. Die Operatoren müssen als statische Elemente entweder im Operanden oder im Rückgabetyp definiert werden. Es gibt zwei Arten von Konvertierungsoperatoren: implizit und explizit.
 
- ❌ keinen Konvertierungs Operator bereitstellen, wenn eine solche Konvertierung von den Endbenutzern nicht eindeutig erwartet wird.
+ ❌Stellen Sie KEINEN Konvertierungsoperator bereit, wenn eine solche Konvertierung von den Endbenutzern nicht eindeutig erwartet wird.
 
- ❌ definieren keine Konvertierungs Operatoren außerhalb der Domäne eines Typs.
+ ❌Definieren Sie NICHT Konvertierungsoperatoren außerhalb der Domäne eines Typs.
 
- Beispielsweise sind <xref:System.Int32>, <xref:System.Double>und <xref:System.Decimal> alle numerischen Typen, während <xref:System.DateTime> nicht ist. Daher sollte kein Konvertierungs Operator vorhanden sein, um eine `Double(long)` in eine `DateTime`zu konvertieren. Ein Konstruktor wird in einem solchen Fall bevorzugt.
+ Beispiel: <xref:System.Int32>, <xref:System.Double>und <xref:System.Decimal> sind alle numerischen Typen, während <xref:System.DateTime> dies nicht der Fall ist. Daher sollte es keinen Konvertierungsoperator `Double(long)` geben, um eine in eine `DateTime`zu konvertieren. In einem solchen Fall wird ein Konstruktor bevorzugt.
 
- ❌ keinen impliziten Konvertierungs Operator bereitstellen, wenn die Konvertierung potenziell Verlust Haft ist.
+ ❌Stellen Sie NICHT einen impliziten Konvertierungsoperator bereit, wenn die Konvertierung potenziell verlustbehaftet ist.
 
- Beispielsweise sollte keine implizite Konvertierung von `Double` in `Int32` vorhanden sein, da `Double` über einen größeren Bereich als `Int32`verfügt. Ein expliziter Konvertierungs Operator kann auch dann bereitgestellt werden, wenn die Konvertierung potenziell Verlust Haft ist.
+ Beispielsweise sollte es keine implizite `Double` Konvertierung `Int32` `Double` von in geben, da sie einen größeren Bereich als `Int32`hat. Ein expliziter Konvertierungsoperator kann auch dann bereitgestellt werden, wenn die Konvertierung potenziell verlustbehaftet ist.
 
- ❌ keine Ausnahmen von impliziten Umwandlungen auslösen.
+ ❌Nicht Ausnahmen von impliziten Umwandlungen auslösen.
 
- Es ist für Endbenutzer sehr schwierig, herauszufinden, was passiert, da Sie möglicherweise nicht erkennen, dass eine Konvertierung stattfindet.
+ Es ist sehr schwierig für Endbenutzer zu verstehen, was passiert, weil sie möglicherweise nicht wissen, dass eine Konvertierung stattfindet.
 
- ✔️ können <xref:System.InvalidCastException?displayProperty=nameWithType> auslösen, wenn ein Cast Operator eine verlustfreie Konvertierung auslöst und der Vertrag des Operators keine Verlust der Verlust von Verlust zulässt.
+ ✔️ do <xref:System.InvalidCastException?displayProperty=nameWithType> werfen, wenn ein Anruf bei einem Gussoperator zu einer verlustbehafteten Umwandlung führt und der Vertrag des Operators keine verlustbehafteten Umwandlungen zulässt.
 
  *Teile © 2005, 2009 Microsoft Corporation. Alle Rechte vorbehalten.*
 
@@ -114,4 +114,4 @@ Mit Operator Überladungen können Frameworktypen so angezeigt werden, als wäre
 ## <a name="see-also"></a>Weitere Informationen
 
 - [Entwurfsrichtlinien für Member](../../../docs/standard/design-guidelines/member.md)
-- [Frameworkentwurfsrichtlinien](../../../docs/standard/design-guidelines/index.md)
+- [Framework Design-Richtlinien](../../../docs/standard/design-guidelines/index.md)
