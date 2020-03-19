@@ -7,12 +7,12 @@ helpviewer_keywords:
 - await keyword [C#]
 - await [C#]
 ms.assetid: 50725c24-ac76-4ca7-bca1-dd57642ffedb
-ms.openlocfilehash: 6dc058f3850e30d8c424d4372c47b127c7d361b6
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 9f541ae9c26eb12acdcf9a8c59bab98c4772c3b0
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75712740"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79173444"
 ---
 # <a name="await-operator-c-reference"></a>Der Operator „await“ (C#-Referenz)
 
@@ -20,7 +20,7 @@ Der Operator `await` hält die Auswertung der einschließenden [async](../keywor
 
 Im folgenden Beispiel gibt die Methode <xref:System.Net.Http.HttpClient.GetByteArrayAsync%2A?displayProperty=nameWithType> die Instanz `Task<byte[]>` zurück, die einen asynchronen Vorgang darstellt, der ein Bytearray erzeugt, wenn er abgeschlossen wird. Der Operator `await` hält so lange die Methode `DownloadDocsMainPageAsync` an, bis der Vorgang abgeschlossen ist. Wenn `DownloadDocsMainPageAsync` angehalten wird, wird die Steuerung an die Methode `Main` zurückgegeben. Bei dieser handelt es sich um den Aufrufer von `DownloadDocsMainPageAsync`. Die Methode `Main` wird so lange ausgeführt, bis sie das Ergebnis des asynchronen Vorgangs benötigt, der von der Methode `DownloadDocsMainPageAsync` ausgeführt wird. Wenn <xref:System.Net.Http.HttpClient.GetByteArrayAsync%2A> alle Bytes abruft, wird der Rest der Methode `DownloadDocsMainPageAsync` ausgewertet. Danach wird der Rest der Methode `Main` ausgewertet.
 
-[!code-csharp[await example](~/samples/csharp/language-reference/operators/AwaitOperator.cs)]
+[!code-csharp[await example](snippets/AwaitOperator.cs)]
 
 Im vorangehenden Beispiel wird die [asynchrone `Main`-Methode](../../programming-guide/main-and-command-args/index.md) verwendet. Dies ist ab C# 7.1 möglich. Weitere Informationen finden Sie im Abschnitt [Der Operator „await“ in der Methode „Main“](#await-operator-in-the-main-method).
 
@@ -31,7 +31,7 @@ Der Operator `await` kann nur in einer Methode, einem [Lambdaausdruck](../../pro
 
 Der Operand des Operators `await` gehört normalerweise einem der folgenden .NET-Typen an: <xref:System.Threading.Tasks.Task>, <xref:System.Threading.Tasks.Task%601>, <xref:System.Threading.Tasks.ValueTask> oder <xref:System.Threading.Tasks.ValueTask%601>. Allerdings kann es sich bei jedem Awaitable-Ausdruck um den Operanden des Operators `await` handeln. Weitere Informationen finden Sie im Abschnitt [Awaitable-Ausdrücke](~/_csharplang/spec/expressions.md#awaitable-expressions) der [C#-Sprachspezifikation](~/_csharplang/spec/introduction.md).
 
-Ab C# 8.0 können Sie die `await foreach`-Anweisung verwenden, um einen asynchronen Datenstrom zu verarbeiten. Weitere Informationen finden Sie im Abschnitt [Asynchrone Datenströme](../../whats-new/csharp-8.md#asynchronous-streams) im Artikel [Neues in C# 8.0](../../whats-new/csharp-8.md).
+Ab C# 8.0 können Sie die `await foreach`-Anweisung verwenden, um einen asynchronen Datenstrom zu verarbeiten. Weitere Informationen finden Sie im Artikel [`foreach`-Anweisung](../keywords/foreach-in.md) und im Abschnitt [ Asynchrone Datenströme](../../whats-new/csharp-8.md#asynchronous-streams) des Artikels [Neues in C# 8.0](../../whats-new/csharp-8.md).
 
 Der Ausdruck `await t` ist vom Typ `TResult`, wenn der Ausdruck `t` vom Typ <xref:System.Threading.Tasks.Task%601> oder <xref:System.Threading.Tasks.ValueTask%601> ist. Wenn der Ausdruck `t` vom Typ <xref:System.Threading.Tasks.Task> oder <xref:System.Threading.Tasks.ValueTask> ist, ist `await t` vom Typ `void`. In beiden Fällen löst `await t` die Ausnahme erneut aus, wenn `t` eine Ausnahme auslöst. Weitere Informationen zur Bearbeitung von Ausnahmen finden Sie im Abschnitt [Ausnahmen in Async-Methoden](../keywords/try-catch.md#exceptions-in-async-methods) des Artikels [Try-catch-Anweisung](../keywords/try-catch.md).
 

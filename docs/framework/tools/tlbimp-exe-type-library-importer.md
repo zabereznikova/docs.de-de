@@ -10,12 +10,12 @@ helpviewer_keywords:
 - type libraries
 - converting type definitions
 ms.assetid: ec0a8d63-11b3-4acd-b398-da1e37e97382
-ms.openlocfilehash: fcbbc99c06e7c9666d58133bef20b84ef40c98d5
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: d942378888b06049022188c75456f438d4b187e3
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73104331"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79180249"
 ---
 # <a name="tlbimpexe-type-library-importer"></a>Tlbimp.exe (Type Library Importer-Tool)
 Das Type Library Importer-Tool konvertiert die Typdefinitionen einer COM-Typbibliothek in äquivalente Definitionen einer Common Language Runtime-Assembly. Die Ausgabe von "Tlbimp.exe" besteht aus einer binären Datei (einer Assembly), die Laufzeitmetadaten für die in der ursprünglichen Typbibliothek definierten Typen enthält. Diese Datei können Sie mit Tools wie [Ildasm.exe](ildasm-exe-il-disassembler.md) überprüfen.  
@@ -32,11 +32,11 @@ tlbimp tlbFile [options]
   
 ## <a name="parameters"></a>Parameter  
   
-|Argument|BESCHREIBUNG|  
+|Argument|Beschreibung|  
 |--------------|-----------------|  
 |*tlbFile*|Der Name einer beliebigen Datei, die eine COM-Typbibliothek enthält.|  
   
-|Option|BESCHREIBUNG|  
+|Option|Beschreibung|  
 |------------|-----------------|  
 |**/asmversion:** *versionnumber*|Gibt die Versionsnummer der zu erstellenden Assembly an. Geben Sie *versionnumber* im Format *major.minor.build.revision* an.|  
 |**/company:** `companyinformation`|Fügt der Ausgabeassembly Unternehmensinformationen hinzu.|  
@@ -69,24 +69,24 @@ tlbimp tlbFile [options]
 |**/?**|Zeigt Befehlssyntax und Optionen für das Tool an.|  
   
 > [!NOTE]
-> Bei den Befehlszeilenoptionen für "Tlbimp.exe" wird die Groß- und Kleinschreibung nicht beachtet, und die Optionen können in beliebiger Reihenfolge angegeben werden. Geben Sie die Option einfach so weit an, dass eine eindeutige Identifizierung möglich ist. Damit entspricht **/n** z.B. **/nologo** ,und **/ou:** *outfile.dll* entspricht **/out:** *outfile.dll*.  
+> Bei den Befehlszeilenoptionen für "Tlbimp.exe" wird die Groß- und Kleinschreibung nicht beachtet, und die Optionen können in beliebiger Reihenfolge angegeben werden. Geben Sie die Option einfach so weit an, dass eine eindeutige Identifizierung möglich ist. Damit entspricht **/n** z. B. **/nologo** und **/ou:** *outfile.dll* entspricht **/out:** *outfile.dll*.  
   
-## <a name="remarks"></a>Anmerkungen  
+## <a name="remarks"></a>Hinweise  
  "Tlbimp.exe" führt Konvertierungen für eine ganze Typbibliothek auf einmal durch. Typinformationen zu einer Teilmenge der in einer einzelnen Typbibliothek definierten Typen können Sie mithilfe dieses Tools nicht generieren.  
   
  Es ist oft hilfreich oder notwendig, Assemblys [starke Namen](../../standard/assembly/strong-named.md) zuweisen zu können. Daher beinhaltet "Tlbimp.exe" Optionen, um die zur Generierung von Assemblys mit starken Namen notwendigen Informationen bereitzustellen. Sowohl die Option **/keyfile:** als auch die Option **/keycontainer:** signieren Assemblys mit starken Namen. Darum ist es sinnvoll, jeweils nur eine dieser Optionen zur Verfügung zu stellen.  
   
  Sie können mehrere Verweisassemblys angeben, indem Sie die Option **/reference** mehrmals verwenden.
- 
+
  Aufgrund der Art, wie „Tlbimp.exe“ Assemblys generiert, ist es nicht möglich, eine Assembly einer anderen `mscorlib`-Version neu zuzuweisen. Wenn Sie beispielsweise eine Assembly generieren möchten, die .NET Framework 2.0 verwendet, müssen Sie die im .NET Framework 2.0/3.0/3.5 SDK enthaltene „Tlbimp.exe“-Datei verwenden. Bei Verwendung von .NET Framework 4.x müssen Sie die im .NET Framework 4.x SDK enthaltene „Tlbimp.exe“-Datei verwenden.
- 
+
  Beim Importieren einer Typbibliothek aus einem Modul mit mehreren Typbibliotheken kann optional eine Ressourcen-ID an eine Typbibliothekdatei angehängt werden. "Tlbimp.exe" kann diese Datei nur finden, wenn sie sich im aktuellen Verzeichnis befindet oder der vollständige Pfad angegeben wird. Siehe das Beispiel weiter unten in diesem Thema.  
   
 ## <a name="examples"></a>Beispiele  
  Durch folgenden Befehl wird eine Assembly generiert, die den von der Typbibliothek in `myTest.tlb` gefundenen Namen und die Erweiterung ".dll" aufweist.  
   
 ```console  
-tlbimp myTest.tlb   
+tlbimp myTest.tlb
 ```  
   
  Der folgende Befehl generiert eine Assembly mit dem Namen `myTest.dll`.  

@@ -10,10 +10,10 @@ helpviewer_keywords:
 - LINQ to SQL, SQLMetal
 ms.assetid: 819e5a96-7646-4fdb-b14b-fe31221b0614
 ms.openlocfilehash: d5b4c2b59b585b3d3a3584ef9055e70c9d998e85
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "71044079"
 ---
 # <a name="sqlmetalexe-code-generation-tool"></a>SqlMetal.exe (Tool zur Codegenerierung)
@@ -43,18 +43,18 @@ sqlmetal [options] [<input file>]
   
  **Verbindungsoptionen**  
   
-|Option|BESCHREIBUNG|  
+|Option|Beschreibung|  
 |------------|-----------------|  
 |**/server:** *\<name>*|Gibt den Datenbank-Servernamen an.|  
 |**/database:** *\<name>*|Gibt den Datenbankkatalog auf dem Server an.|  
 |**/user:** *\<name>*|Gibt die Benutzer-ID für die Anmeldung an. Standardwert: Verwenden der Windows-Authentifizierung.|  
-|**/password:** *\<kennwort>*|Gibt das Anmeldekennwort an. Standardwert: Verwenden der Windows-Authentifizierung.|  
-|**/conn:** *\<verbindungszeichenfolge>*|Gibt die Verbindungszeichenfolge für Datenbanken an. Kann nicht mit den Optionen **/server**, **/database**, **/user**oder **/password** verwendet werden.<br /><br /> Die Verbindungszeichenfolge darf den Dateinamen nicht enthalten. Fügen Sie stattdessen den Dateinamen in der Befehlszeile als Eingabedatei hinzu. In der folgenden Zeile ist beispielsweise „c:\northwnd.mdf“ als Eingabedatei angegeben: **sqlmetal /code:"c:\northwind.cs" /language:csharp "c:\northwnd.mdf"** .|  
-|**/timeout:** *\<sekunden>*|Gibt den Timeoutwert an, wenn SqlMetal auf die Datenbank zugreift. Standardwert: 0 (d. h. kein Zeitlimit).|  
+|**/password:** *\<password>*|Gibt das Anmeldekennwort an. Standardwert: Verwenden der Windows-Authentifizierung.|  
+|**/conn:** *\<connection string>*|Gibt die Verbindungszeichenfolge für Datenbanken an. Kann nicht mit den Optionen **/server**, **/database**, **/user**oder **/password** verwendet werden.<br /><br /> Die Verbindungszeichenfolge darf den Dateinamen nicht enthalten. Fügen Sie stattdessen den Dateinamen in der Befehlszeile als Eingabedatei hinzu. In der folgenden Zeile ist beispielsweise „c:\northwnd.mdf“ als Eingabedatei angegeben: **sqlmetal /code:"c:\northwind.cs" /language:csharp "c:\northwnd.mdf"** .|  
+|**/timeout:** *\<seconds>*|Gibt den Timeoutwert an, wenn SqlMetal auf die Datenbank zugreift. Standardwert: 0 (d. h. kein Zeitlimit).|  
   
  **Extraktionsoptionen**  
   
-|Option|BESCHREIBUNG|  
+|Option|Beschreibung|  
 |------------|-----------------|  
 |**/views**|Extrahiert Datenbankansichten.|  
 |**/functions**|Extrahiert Datenbankfunktionen.|  
@@ -62,30 +62,30 @@ sqlmetal [options] [<input file>]
   
  **Ausgabeoptionen**  
   
-|Option|BESCHREIBUNG|  
+|Option|Beschreibung|  
 |------------|-----------------|  
-|**/dbml** *[:Dateipfad]*|Sendet die Ausgabe als DBML-Datei. Kann nicht zusammen mit der Option **/map** verwendet werden.|  
-|**/code** *[:Dateipfad]*|Sendet die Ausgabe als Quellcode. Kann nicht zusammen mit der Option **/dbml** verwendet werden.|  
-|**/map** *[:Dateipfad]*|Generiert anstelle von Attributen eine XML-Zuordnungsdatei. Kann nicht zusammen mit der Option **/dbml** verwendet werden.|  
+|**/dbml** *[:file]*|Sendet die Ausgabe als DBML-Datei. Kann nicht zusammen mit der Option **/map** verwendet werden.|  
+|**/code** *[:file]*|Sendet die Ausgabe als Quellcode. Kann nicht zusammen mit der Option **/dbml** verwendet werden.|  
+|**/map** *[:file]*|Generiert anstelle von Attributen eine XML-Zuordnungsdatei. Kann nicht zusammen mit der Option **/dbml** verwendet werden.|  
   
  **Verschiedenes**  
   
-|Option|BESCHREIBUNG|  
+|Option|Beschreibung|  
 |------------|-----------------|  
-|**/language:** *\<sprache>*|Gibt die Quellcodesprache an.<br /><br /> Gültige *\<<sprache>* : vb, csharp.<br /><br /> Standardwert: von der Erweiterung des Namens der Codedatei abgeleitet.|  
+|**/language:** *\<language>*|Gibt die Quellcodesprache an.<br /><br /> Gültige *\<<sprache>* : vb, csharp.<br /><br /> Standardwert: von der Erweiterung des Namens der Codedatei abgeleitet.|  
 |**/namespace:** *\<name>*|Gibt den Namespace des generierten Codes an. Standardwert: kein Namespace.|  
-|**/context:** *\<typ>*|Gibt Namen der Datenkontextklasse an. Standardwert: vom Datenbanknamen abgeleitet.|  
-|**/entitybase:** *\<typ>*|Gibt die Basisklasse der Entitätsklassen im generierten Code an. Standardwert: Entitäten verfügen über keine Basisklasse.|  
+|**/context:** *\<type>*|Gibt Namen der Datenkontextklasse an. Standardwert: vom Datenbanknamen abgeleitet.|  
+|**/entitybase:** *\<type>*|Gibt die Basisklasse der Entitätsklassen im generierten Code an. Standardwert: Entitäten verfügen über keine Basisklasse.|  
 |**/pluralize**|Klassen- und Membernamen werden automatisch in Plural- oder Singularform verwendet.<br /><br /> Diese Option ist nur in der englischen Version (US-Version) verfügbar.|  
 |**/serialization:** *\<option>*|Generiert serialisierbare Klassen.<br /><br /> Gültige *\<option>* : None, Unidirectional. Standardwert: Keine<br /><br /> Weitere Informationen finden Sie unter [Serialization (Serialisierung)](../data/adonet/sql/linq/serialization.md).|  
   
  **Eingabedatei**  
   
-|Option|BESCHREIBUNG|  
+|Option|Beschreibung|  
 |------------|-----------------|  
 |**\<eingabedatei>**|Gibt eine SQL Server Express-Datei (.mdf), eine SQL Server Compact 3.5-Datei (.sdf) oder eine Zwischendatei (.dbml) an.|  
   
-## <a name="remarks"></a>Anmerkungen  
+## <a name="remarks"></a>Hinweise  
  Die SqlMetal-Funktionalität umfasst eigentlich zwei Schritte:  
   
 - Extrahieren der Datenbank-Metadaten in eine DBML-Datei  
@@ -134,6 +134,6 @@ sqlmetal [options] [<input file>]
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Vorgehensweise: (Vorgehensweise: Generieren des Objektmodells in Visual Basic oder C#)](../data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md)
+- [How to: (Vorgehensweise: Generieren des Objektmodells in Visual Basic oder C#)](../data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md)
 - [Codegenerierung in LINQ to SQL](../data/adonet/sql/linq/code-generation-in-linq-to-sql.md)
 - [External Mapping (Externe Zuordnung)](../data/adonet/sql/linq/external-mapping.md)

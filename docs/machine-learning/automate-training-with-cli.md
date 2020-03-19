@@ -2,13 +2,13 @@
 title: Automatisieren des Modelltrainings mit der ML.NET-CLI
 description: Erfahren Sie, wie Sie mit dem ML.NET-CLI-Tool automatisch das beste Modell über die Befehlszeile trainieren können.
 ms.date: 12/17/2019
-ms.custom: how-to
-ms.openlocfilehash: ffcdba28fcb73a02f5d4726075588fe3b7789375
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.custom: how-to, mlnet-tooling
+ms.openlocfilehash: 3344ed15266503d4d5c7cd9db0a0596f58a904fa
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75740122"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79185884"
 ---
 # <a name="automate-model-training-with-the-mlnet-cli"></a>Automatisieren des Modelltrainings mit der ML.NET-CLI
 
@@ -16,14 +16,14 @@ Die ML.NET-CLI automatisiert die Modellgenerierung für .NET-Entwickler.
 
 Um die ML.NET-API selbst zu verwenden (ohne ML.NET AutoML-CLI), müssen Sie einen Trainer (Implementierung eines Machine Learning-Algorithmus für eine bestimmte Aufgabe) und den Satz von Datentransformationen (Featureentwicklung) auswählen, die auf Ihre Daten angewendet werden. Die optimale Pipeline variiert für jedes Dataset, und die Auswahl des optimalen Algorithmus aus allen Optionen erhöht die Komplexität. Darüber hinaus muss für jeden Algorithmus ein Satz an Hyperparametern optimiert werden. Daher kann es manchmal Wochen oder Monate dauern, ein Machine Learning-Modell zu optimieren, um die beste Kombination aus Featureentwicklung, Lernalgorithmen und Hyperparametern zu finden.
 
-Die ML.NET-CLI vereinfacht diesen Prozess mithilfe von automatisiertem Machine Learning (AutoML). 
+Die ML.NET-CLI vereinfacht diesen Prozess mithilfe von automatisiertem Machine Learning (AutoML).
 
 > [!NOTE]
 > Dieses Thema bezieht sich auf die ML.NET-**CLI** und ML.NET **AutoML**, die derzeit als Vorschau verfügbar sind, und das Material kann jederzeit geändert werden.
 
 ## <a name="what-is-the-mlnet-command-line-interface-cli"></a>Was ist die ML.NET-Befehlszeilenschnittstelle (CLI)?
 
-Die ML.NET-CLI ist ein globales dotnet-Tool. Nach der Installation erhalten Sie eine Machine Learning-Aufgabe und ein Trainingsdataset. Es werden ein ML.NET-Modell und der C#-Code generiert, der für die Verwendung des Modells in der Anwendung ausgeführt wird.
+Die ML.NET-CLI ist ein [.NET Core-Tool](../core/tools/global-tools.md). Nach der Installation erhalten Sie eine Machine Learning-Aufgabe und ein Trainingsdataset. Es werden ein ML.NET-Modell und der C#-Code generiert, der für die Verwendung des Modells in der Anwendung ausgeführt wird.
 
 Wie in der folgenden Abbildung dargestellt, ist es einfach, ein qualitativ hochwertiges ML.NET-Modell (serialisierte ZIP-Datei des Modells) plus den Beispiel-C#-Code zu generieren, um dieses Modell auszuführen/zu bewerten. Darüber hinaus wird der C#-Code zum Erstellen/Trainieren dieses Modells generiert, sodass Sie suchen und iterieren können, welcher Algorithmus und welche Einstellungen für dieses generierte „beste Modell“ verwendet wurden.
 
@@ -64,9 +64,9 @@ Das dritte Objekt, der Trainingscode, zeigt Ihnen, welchen ML.NET-API-Code die C
 
 ## <a name="understanding-the-quality-of-the-model"></a>Verstehen der Qualität des Modells
 
-Wenn Sie mit dem CLI-Tool ein "bestes Modell" erstellen, werden Qualitätsmetriken angezeigt (wie Genauigkeit und Bestimmtheitsmaß), die für die von Ihnen angestrebte ML-Aufgabe geeignet sind.
+Wenn Sie mit dem CLI-Tool ein „bestes Modell“ erstellen, werden Qualitätsmetriken angezeigt (wie Genauigkeit und Bestimmtheitsmaß), die für die von Ihnen angestrebte ML-Aufgabe geeignet sind.
 
-Hier fassen wir diese Metriken zusammen, die nach ML-Aufgaben gruppiert sind, damit Sie die Qualität Ihres automatisch generierten „besten Modells“ verstehen können.
+Hier werden diese Metriken zusammengefasst, die nach ML-Aufgaben gruppiert sind, damit Sie die Qualität Ihres automatisch generierten „besten Modells“ verstehen können.
 
 ### <a name="metrics-for-binary-classification-models"></a>Metriken für binäre Klassifizierungsmodelle
 

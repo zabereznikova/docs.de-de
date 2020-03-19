@@ -3,10 +3,10 @@ title: Peernamen und PNRP-IDs
 ms.date: 03/30/2017
 ms.assetid: afa538e8-948f-4a98-aa9f-305134004115
 ms.openlocfilehash: 15b74317507f69d2339a2e5e49b54ae72cda1a7b
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "71047506"
 ---
 # <a name="peer-names-and-pnrp-ids"></a>Peernamen und PNRP-IDs
@@ -20,7 +20,7 @@ Ein Peername steht für einen Endpunkt für die Kommunikation, der ein Computer,
  Gesicherte Peernamen werden nur vom Besitzer registriert und mit einem öffentlichen kryptografischen Schlüssel geschützt. Ein gesicherter Peername ist im Besitz der Peerentität, die über den entsprechenden privaten Schlüssel verfügt. Über die zertifizierte Peeradresse (CPA), die mit dem privaten Schlüssel signiert ist, kann der Besitz nachgewiesen werden. Ein böswilliger Benutzer kann den Besitz eines Peernamen ohne den entsprechenden privaten Schlüssel nicht erstellen.  
   
 ## <a name="pnrp-ids"></a>PNRP-IDs  
- ![PNRP-ID](./media/fdc9e8a0-4a1c-488d-a019-bc3a1973220c.gif "fdc9e8a0-4a1c-488d-a019-bc3a1973220c")  
+ ![PNRP ID](./media/fdc9e8a0-4a1c-488d-a019-bc3a1973220c.gif "fdc9e8a0-4a1c-488d-a019-bc3a1973220c")  
   
  PNRP-IDs bestehen aus den folgenden Teilen:  
   

@@ -3,12 +3,12 @@ title: Behandlung von Problemen bei der Nutzung von .NET Core-Tools
 description: Informieren Sie sich über allgemeine Probleme beim Ausführen von .NET Core-Tools sowie über mögliche Lösungen.
 author: kdollard
 ms.date: 02/14/2020
-ms.openlocfilehash: ab5d1be8f201ea283f8537f18886feab46157127
-ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
+ms.openlocfilehash: ed6243f802c4d3ce56a742916a1a28676e3cd876
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77543273"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79146449"
 ---
 # <a name="troubleshoot-net-core-tool-usage-issues"></a>Behandlung von Problemen bei der Nutzung von .NET Core-Tools
 
@@ -42,16 +42,16 @@ Der Name der ausführbaren Datei bestimmt, wie Sie das Tool aufrufen. Das Format
 
 * Globale Tools
 
-    Globale Tools können im Standardverzeichnis oder an einem spezifischen Speicherort installiert werden. Die Standardverzeichnisse sind:
+  Globale Tools können im Standardverzeichnis oder an einem spezifischen Speicherort installiert werden. Die Standardverzeichnisse sind:
 
-    | Betriebssystem          | Pfad                          |
-    |-------------|-------------------------------|
-    | Linux/macOS | `$HOME/.dotnet/tools`         |
-    | Windows     | `%USERPROFILE%\.dotnet\tools` |
+  | Betriebssystem          | Pfad                          |
+  |-------------|-------------------------------|
+  | Linux/macOS | `$HOME/.dotnet/tools`         |
+  | Windows     | `%USERPROFILE%\.dotnet\tools` |
 
-    Prüfen Sie beim Ausführen eines globalen Tools, ob die Umgebungsvariable `PATH` auf Ihrem Computer den Pfad enthält, unter dem Sie das globale Tool installiert haben, und ob sich die ausführbare Datei in diesem Verzeichnis befindet.
+  Prüfen Sie beim Ausführen eines globalen Tools, ob die Umgebungsvariable `PATH` auf Ihrem Computer den Pfad enthält, unter dem Sie das globale Tool installiert haben, und ob sich die ausführbare Datei in diesem Verzeichnis befindet.
 
-    Die .NET Core-CLI versucht bei der ersten Verwendung, die Standardspeicherorte der Umgebungsvariable „PATH“ hinzuzufügen. Es gibt jedoch einige Szenarios, in denen der Speicherort der Variablen „PATH“ nicht automatisch hinzugefügt werden kann, sodass Sie „PATH“ bearbeiten müssen, um die Variable für folgende Fälle zu konfigurieren:
+  Die .NET Core-CLI versucht bei der ersten Verwendung, den Standardspeicherort der Umgebungsvariable „PATH“ hinzuzufügen. Es gibt jedoch einige Szenarien, in denen der Speicherort möglicherweise nicht automatisch zu „PATH“ hinzugefügt wird:
 
   * Wenn Sie Linux verwenden und das .NET Core SDK mit *TAR.GZ*-Dateien anstelle von „apt-get“ oder „rpm“ installiert haben.
   * Wenn Sie macOS 10.15 „Catalina“ oder höhere Versionen verwenden.
@@ -59,7 +59,7 @@ Der Name der ausführbaren Datei bestimmt, wie Sie das Tool aufrufen. Das Format
   * Wenn Sie das .NET Core 3.0 SDK installiert und die Umgebungsvariable `DOTNET_ADD_GLOBAL_TOOLS_TO_PATH` auf `false` festgelegt haben.
   * Wenn Sie .NET Core 2.2 SDK oder frühere Versionen installiert und die Umgebungsvariable `DOTNET_SKIP_FIRST_TIME_EXPERIENCE` auf `true` festgelegt haben.
 
-  Weitere Informationen finden Sie unter [.NET Core-Tools](global-tools.md).
+  In diesen Szenarien oder wenn Sie die Option `--tool-path` angegeben haben, enthält die Umgebungsvariable `PATH` auf Ihrem Computer nicht automatisch den Pfad, in dem Sie das globale Tool installiert haben. In diesem Fall fügen Sie den Speicherort des Tools (z. B. `$HOME/.dotnet/tools`) an die Umgebungsvariable `PATH` an, indem Sie die Methode verwenden, die Ihre Shell zur Aktualisierung der Umgebungsvariablen zur Verfügung stellt. Weitere Informationen finden Sie unter [.NET Core-Tools](global-tools.md).
 
 * Lokale Tools
 

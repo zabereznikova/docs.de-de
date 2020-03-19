@@ -11,12 +11,12 @@ helpviewer_keywords:
 - Mgmtclassgen.exe
 - early-bound managed classes
 ms.assetid: 02ce6699-49b5-4a0b-b0d5-1003c491232e
-ms.openlocfilehash: 5002d7a180e480b0e1d38f1c1180fe565dc5e1dc
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 5e39670fbb40acb999a243ac86683219f3c89e4f
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73105024"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79180377"
 ---
 # <a name="mgmtclassgenexe-management-strongly-typed-class-generator"></a>Mgmtclassgen.exe (Management Strongly Typed Class Generator)
 Mit dem Management Strongly Typed Class Generator-Tool können Sie schnell eine früh gebundene Klasse für eine angegebene WMI (Windows Management Instrumentation)-Klasse generieren. Die generierte Klasse vereinfacht den Code, den Sie für den Zugriff auf eine Instanz der WMI-Klasse schreiben müssen.  
@@ -24,26 +24,26 @@ Mit dem Management Strongly Typed Class Generator-Tool können Sie schnell eine 
 ## <a name="syntax"></a>Syntax  
   
 ```console  
-mgmtclassgen   
-WMIClass [options]   
+mgmtclassgen
+WMIClass [options]
 ```  
   
-|Argument|BESCHREIBUNG|  
+|Argument|Beschreibung|  
 |--------------|-----------------|  
 |*WMIClass*|Die WMI (Windows Management Instrumentation)-Klasse, für die eine früh gebundene verwaltete Klasse generiert wird.|  
   
-|Option|BESCHREIBUNG|  
+|Option|Beschreibung|  
 |------------|-----------------|  
-|**/l** *sprache*|Gibt die Programmiersprache an, in der die früh gebundene verwaltete Klasse generiert werden soll. Als Sprachargument können Sie **CS** (C#, Standard), **VB** (Visual Basic), **MC** (C++) oder **JS** (JScript) festlegen.|  
-|**/m** *computer*|Gibt den Computer an, auf dem sich die WMI-Klasse befindet und mit dem eine Verbindung hergestellt werden soll. Die Standardeinstellung ist der lokale Computer.|  
-|**/n** *Pfad*|Gibt den Pfad zum WMI-Namespace an, der die WMI-Klasse enthält. Wenn Sie keinen Pfad angeben, generiert das Tool den Code für *WMIClass* im Namespace **Root\cimv2-Standard**.|  
-|**/o** *namespaceklasse*|Gibt den .NET-Namespace an, in dem die verwaltete Codeklasse generiert werden soll. Wenn Sie keinen Klassennamespace angeben, generiert das Tool den Namespace aus dem WMI-Namespace und dem Schemapräfix. Das Schemapräfix ist der Bestandteil des Klassennamens, der dem Unterstrich vorangeht. Für die **Win32_OperatingSystem**-Klasse im **Root\cimv2**-Namespace würde die Klasse beispielsweise in **ROOT.CIMV2.Win32** generiert werden.|  
-|**/p** *dateipfad*|Gibt den Pfad zur Datei an, in der der generierte Code gespeichert werden soll. Wenn Sie keinen Dateipfad angeben, erstellt das Tool die Datei im aktuellen Verzeichnis. Es benennt die Klasse und die Datei, in der diese erstellt wird, anhand des *WMIClass*-Arguments. Die Namen der Klasse und der Datei stimmen mit dem Namen der *WMIClass* überein. Wenn *WMIClass* einen Unterstrich enthält, wird der Teil des Namens nach dem Unterstrich verwendet. Wenn etwa der *WMIClass*-Name das Format **Win32_LogicalDisk** aufweist, werden die generierte Klasse und Datei mit „logicaldisk“ bezeichnet. Wenn bereits eine gleichnamige Datei vorhanden ist, wird diese überschrieben.|  
-|**/pw** *kennwort*|Gibt das Kennwort für die Anmeldung an einem Computer an, der durch die **/m**-Option angegeben ist|  
-|**/u** *benutzername*|Gibt den Benutzernamen für die Anmeldung an einem Computer an, der durch die **/m**-Option angegeben ist|  
+|**/l**  *language*|Gibt die Programmiersprache an, in der die früh gebundene verwaltete Klasse generiert werden soll. Als Sprachargument können Sie **CS** (C#, Standard), **VB** (Visual Basic), **MC** (C++) oder **JS** (JScript) festlegen.|  
+|**/m**  *machine*|Gibt den Computer an, auf dem sich die WMI-Klasse befindet und mit dem eine Verbindung hergestellt werden soll. Die Standardeinstellung ist der lokale Computer.|  
+|**/n**  *path*|Gibt den Pfad zum WMI-Namespace an, der die WMI-Klasse enthält. Wenn Sie keinen Pfad angeben, generiert das Tool den Code für *WMIClass* im Namespace **Root\cimv2-Standard**.|  
+|**/o**  *classnamespace*|Gibt den .NET-Namespace an, in dem die verwaltete Codeklasse generiert werden soll. Wenn Sie keinen Klassennamespace angeben, generiert das Tool den Namespace aus dem WMI-Namespace und dem Schemapräfix. Das Schemapräfix ist der Bestandteil des Klassennamens, der dem Unterstrich vorangeht. Für die **Win32_OperatingSystem**-Klasse im **Root\cimv2**-Namespace würde die Klasse beispielsweise in **ROOT.CIMV2.Win32** generiert werden.|  
+|**/p**  *filepath*|Gibt den Pfad zur Datei an, in der der generierte Code gespeichert werden soll. Wenn Sie keinen Dateipfad angeben, erstellt das Tool die Datei im aktuellen Verzeichnis. Es benennt die Klasse und die Datei, in der diese erstellt wird, anhand des *WMIClass*-Arguments. Die Namen der Klasse und der Datei stimmen mit dem Namen der *WMIClass* überein. Wenn *WMIClass* einen Unterstrich enthält, wird der Teil des Namens nach dem Unterstrich verwendet. Wenn etwa der *WMIClass*-Name das Format **Win32_LogicalDisk** aufweist, werden die generierte Klasse und Datei mit „logicaldisk“ bezeichnet. Wenn bereits eine gleichnamige Datei vorhanden ist, wird diese überschrieben.|  
+|**/pw**  *password*|Gibt das Kennwort für die Anmeldung an einem Computer an, der durch die **/m**-Option angegeben ist|  
+|**/u**  *user name*|Gibt den Benutzernamen für die Anmeldung an einem Computer an, der durch die **/m**-Option angegeben ist|  
 |**/?**|Zeigt Befehlssyntax und Optionen für das Tool an.|  
   
-## <a name="remarks"></a>Anmerkungen  
+## <a name="remarks"></a>Hinweise  
  "Mgmtclassgen.exe" verwendet die <xref:System.Management.ManagementClass.GetStronglyTypedClassCode%2A?displayProperty=nameWithType>-Methode. Sie können daher mit einem beliebigen benutzerdefinierten Codeanbieter Code in anderen verwalteten Sprachen als C#, Visual Basic und JScript generieren.  
   
  Beachten Sie, dass die generierten Klassen an das Schema gebunden sind, für das sie generiert werden. Änderungen am zugrunde liegenden Schema wirken sich auf die Klasse erst nach einer Neugenerierung aus.  
@@ -105,11 +105,11 @@ Imports System
 Imports System.Management  
 Imports ROOT.CIMV2.Win32  
   
-Public Class App     
-   Public Shared Sub Main()        
+Public Class App
+   Public Shared Sub Main()
       ' Enumerate instances of the Win32_process.  
       ' Print the Name property of the instance.  
-      Dim ps As Process     
+      Dim ps As Process
       For Each ps In  Process.GetInstances()  
          Console.WriteLine(ps.Name)  
       Next ps  

@@ -14,12 +14,12 @@ ms.prod:
 - PRODUCT VALUE
 helpviewer_keywords:
 - OFFLINE BOOK INDEX ENTRIES
-ms.openlocfilehash: ed9fd55fd84606d2083e0576581391331769a1e6
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.openlocfilehash: 1ddeeaca4645bd4788f03018643a0bc2682c731a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74089281"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79186907"
 ---
 # <a name="metadata-and-markdown-template"></a>Metadaten und Markdownvorlage
 
@@ -36,7 +36,7 @@ Der vollständige Metadatenblock befindet sich oben (im [unformatierten Markdown
 - Doppelpunkte in einem Wert (z.B. einem Titel) unterbrechen den Metadatenparser. In diesem Fall setzen Sie den Titel in doppelte Anführungszeichen (z.B. `title: "Writing .NET Core console apps: An advanced step-by-step guide"`).
 - **title**: Wird in Suchmaschinenergebnissen angezeigt. Der Titel darf nicht mit dem Titel in Ihrem H1-Header übereinstimmen, und er sollte höchstens 60 Zeichen umfassen.
 - **description**: Bietet eine Zusammenfassung des Artikelinhalts. Diese wird normalerweise auf der Seite mit den Suchergebnissen angezeigt, hat auf den Rang in den Suchergebnissen jedoch keine Auswirkungen. Die Länge sollte 115-145 Zeichen (einschließlich Leerzeichen) betragen.
-- **author** und **ms.author**: Das Feld „author“ sollte den **GitHub-Benutzernamen** des Autors enthalten, nicht dessen Alias.  Das Feld **ms.author** hingegen sollte einen Microsoft-Alias enthalten und die für die Verwaltung des Artikels verantwortliche Person angeben.
+- **author** und **ms.author**: Das Feld „author“ sollte den **GitHub-Benutzernamen** des Autors enthalten, nicht dessen Alias. Das Feld **ms.author** hingegen sollte einen Microsoft-Alias enthalten und die für die Verwaltung des Artikels verantwortliche Person angeben.
 - **ms.topic**: Der Thementyp. Der häufigste Wert ist `conceptual` und wird auf globaler Ebene festgelegt. Andere gängige Werte sind `tutorial`, `overview` und `reference`.
 - **dev_langs** definiert den für das Thema angezeigten Sprachfilter. Eine Liste der unterstützten Werte finden Sie im Abschnitt [Unterstützte Sprachen](#supported-languages). Dieser Wert muss nur festgelegt werden, wenn mehr als eine Programmiersprache im Thema abgedeckt wird. In der Regel verwenden wir in unserem Inhalt nur `csharp`, `vb`, `fsharp` und `cpp` für diesen Wert.
 - **ms.prod**: Die für BI-Zwecke verwendete Produktidentifizierung. Sie werden normalerweise auf globaler Ebene festgelegt und daher für gewöhnlich nicht im Metadatenblock jedes Artikels angezeigt.
@@ -63,8 +63,8 @@ Dateinamen verwenden die folgenden Regeln:
 
 - Es sollten nur Kleinbuchstaben, Zahlen und Bindestriche enthalten sein.
 - Keine Leer- oder Interpunktionszeichen. Verwenden Sie die Bindestriche zum Trennen von Wörtern und Zahlen im Dateinamen.
-- Verwenden Sie genaue Aktionsverben wie „entwickeln“, „kaufen“, „erstellen“ oder „beheben“. Keine auf „-ing“ endenden Worte dürfen verwendet werden.
-- Keine kurzen Worte wie a, and, the, in, or usw. sind erlaubt.
+- Verwenden Sie genaue Aktionsverben wie „entwickeln“, „kaufen“, „erstellen“ oder „beheben“. Keine englischen Wörter mit der Endung „-ing“
+- Keine kurzen Wörter – verwenden Sie nicht „ein/eine/einer“, „und“, „der/die/das“, „in“, „oder“ usw.
 - Muss in Markdown geschrieben werden und die Dateierweiterung .md verwenden.
 - Halten Sie Dateinamen einigermaßen kurz. Sie sind Teil der URL für Ihre Artikel.
 
@@ -254,7 +254,7 @@ Sie können den Code mithilfe folgender Syntax einschließen:
 
 - `<queryoption>` und `<queryoptionvalue>` (*optional*)
   - Zusammen verwendet, um festzulegen, wie der Code aus der Datei abgerufen werden soll:
-    - `#`:  `#L{startlinenumber}-L{endlinenumber}` (Zeilenbereich) *oder* `#{tagname}` (Tagname).
+    - `#`: `#L{startlinenumber}-L{endlinenumber}` (Zeilenbereich) *oder* `#{tagname}` (Tagname).
     Von der Verwendung von Zeilennummern wird abgeraten, da diese sehr anfällig sind. Der Tagname ist die bevorzugte Methode zum Verweisen auf Codeausschnitte.
     - `range`: `?range=1,3-5` Ein Bereich von Zeilen. Dieses Beispiel umfasst die Zeilen 1, 3, 4 und 5.
     - `dedent`: `?dedent=8` Rückt die Zeilen um eine Anzahl von Leerzeichen ein – in diesem Fall 8. Diese Methode kann mit `range` und anderen Abfrageoptionen kombiniert werden, die eine Teilmenge der Zeilen einer Datei auswählen.
@@ -411,7 +411,7 @@ Derzeit können Sie sowohl Channel 9- als auch YouTube-Videos mit der folgenden 
 > [!VIDEO <channel9_video_link>]
 ```
 
-Um die korrekte URL des Videos zu ermitteln, wählen Sie die Registerkarte **Einbetten** unterhalb des Videoframes aus, und kopieren Sie die URL aus dem `<iframe>`-Element. Beispiel:
+Um die korrekte URL des Videos zu ermitteln, wählen Sie die Registerkarte **Einbetten** unterhalb des Videoframes aus, und kopieren Sie die URL aus dem `<iframe>`-Element. Zum Beispiel:
 
 ```markdown
 > [!VIDEO https://channel9.msdn.com/Blogs/dotnet/NET-Core-20-Released/player]
@@ -425,7 +425,7 @@ Um die korrekte URL des Videos zu ermitteln, klicken Sie mit der rechten Maustas
 > [!VIDEO <youtube_video_link>]
 ```
 
-Beispiel:
+Zum Beispiel:
 
 ```markdown
 > [!VIDEO https://www.youtube.com/embed/Q2mMbjw6cLA]

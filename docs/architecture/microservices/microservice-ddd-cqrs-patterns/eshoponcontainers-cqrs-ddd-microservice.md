@@ -1,13 +1,13 @@
 ---
 title: Anwenden von CQRS- und CQS-Ansätzen in einem DDD-Microservice in eShopOnContainers
 description: .NET-Microservicearchitektur für .NET-Containeranwendungen | Übersicht über die Implementierung von CQRS im Microservice für Bestellungen in eShopOnContainers
-ms.date: 10/08/2018
-ms.openlocfilehash: 0380e759595e8a159e89f858a5ced4dacfa4e9b4
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.date: 03/03/2020
+ms.openlocfilehash: 16fe46189a5b43591adebbb764d4acef2f7efbfb
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68674127"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78847153"
 ---
 # <a name="apply-cqrs-and-cqs-approaches-in-a-ddd-microservice-in-eshoponcontainers"></a>Anwenden von CQRS- und CQS-Ansätzen in einem DDD-Microservice in eShopOnContainers
 
@@ -23,7 +23,7 @@ Die in diesem Leitfaden vorgestellten DDD-Muster sollten nicht universell angewe
 
 Ein solches Muster ist das Aggregatmuster, das wir in späteren Abschnitten kennenlernen. Beim Aggregatmuster werden viele Domänenobjekte aufgrund ihrer Beziehung zur Domäne als eine einzelne Einheit behandelt. In Abfragen ist dieses Muster nicht immer vorteilhaft, da es die Komplexität der Abfragelogik verkomplizieren kann. Bei schreibgeschützten Abfragen werden viele Objekte nicht als einzelnes Aggregat behandelt. In diesem Fall erhöht sich nur die Komplexität.
 
-Wie in Abbildung 7-2 dargestellt, empfiehlt dieser Leitfaden, DDD-Muster nur im Transaktions-/Updatebereich Ihres Microservices zu verwenden, d.h. durch Befehle ausgelöst. Abfragen können einem einfacheren Ansatz folgen und sollten im Sinne des CQRS-Ansatzes von Befehlen getrennt werden.
+Wie in Abbildung 7-2 im vorherigen Abschnitt dargestellt, empfiehlt dieser Leitfaden, DDD-Muster nur im Transaktions-/Updatebereich Ihres Microservices zu verwenden, d. h. durch Befehle ausgelöst. Abfragen können einem einfacheren Ansatz folgen und sollten im Sinne des CQRS-Ansatzes von Befehlen getrennt werden.
 
 Bei der Implementierung der Abfrageseite können Sie zwischen vielen Ansätzen wählen, z.B. ein vollständiger ORM wie EF Core, AutoMapper-Projektionen, gespeicherte Prozeduren, Ansichten, materialisierte Sichten oder ein Mikro-ORM.
 

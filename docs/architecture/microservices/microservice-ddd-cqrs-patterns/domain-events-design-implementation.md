@@ -3,10 +3,10 @@ title: Domänenereignisse. Entwurf und Implementierung
 description: .NET-Microservicearchitektur für .NET-Containeranwendungen | Übersicht über Domänenereignisse, ein Schlüsselkonzept zum Herstellen der Kommunikation zwischen Aggregaten
 ms.date: 10/08/2018
 ms.openlocfilehash: 3bba18d4a77b47abee55c16bae8a64ed27ac9aba
-ms.sourcegitcommit: 68a4b28242da50e1d25aab597c632767713a6f81
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/06/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "74884227"
 ---
 # <a name="domain-events-design-and-implementation"></a>Domänenereignisse: Entwurf und Implementierung
@@ -71,7 +71,7 @@ Wenn Sie Domänenereignisse verwenden, können Sie andererseits eine differenzie
 2. Empfangen Sie den Befehl in einem Befehlshandler.
    - Führen Sie eine Transaktion eines Aggregats aus.
    - (Optional) Lösen Sie die Domänenereignisse für Nebenwirkungen aus (z.B. OrderStartedDomainEvent).
-3. Behandeln Sie die Domänenereignisse (im aktuellen Prozess), die eine offene Anzahl von Nebenwirkungen in mehreren Aggregaten oder Anwendungsaktionen ausführen. Beispiel:
+3. Behandeln Sie die Domänenereignisse (im aktuellen Prozess), die eine offene Anzahl von Nebenwirkungen in mehreren Aggregaten oder Anwendungsaktionen ausführen. Zum Beispiel:
    - Überprüfen oder erstellen Sie Käufer und Zahlungsmethode.
    - Erstellen und senden Sie ein zugehöriges Integrationsereignis an den Ereignisbus, um Zustände über Microservices zu übertragen oder externe Aktionen auszulösen, z.B. Senden einer E-Mail an den Käufer.
    - Behandeln Sie andere Nebenwirkungen.

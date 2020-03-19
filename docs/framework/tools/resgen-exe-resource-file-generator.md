@@ -15,12 +15,12 @@ helpviewer_keywords:
 - binary resources files
 - embedding files in runtime binary executable
 ms.assetid: 8ef159de-b660-4bec-9213-c3fbc4d1c6f4
-ms.openlocfilehash: 5fc2bcb03ae6814d69e229ba083c1d5c44ae8ff3
-ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
+ms.openlocfilehash: cf79e7c76fd54c6cb6b235251a57aba33c28552b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74204618"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79180332"
 ---
 # <a name="resgenexe-resource-file-generator"></a>Resgen.exe (Resource File Generator)
 Der Resource File Generator (Resgen.exe) konvertiert Textdateien (TXT- oder RESTEXT-Dateien) und Dateien im XML-basierten Ressourcenformat (RESX-Dateien) in binäre Common Language Runtime-Dateien (RESOURCES-Dateien), die in ausführbare Laufzeit-Binärdateien oder Satellitenassemblys eingebettet werden können. (Weitere Informationen finden Sie unter [Erstellen von Ressourcendateien](../resources/creating-resource-files-for-desktop-apps.md).)  
@@ -60,7 +60,7 @@ resgen /?
 ## <a name="syntax"></a>Syntax  
   
 ```console  
-resgen  [-define:symbol1[,symbol2,...]] [/useSourcePath] filename.extension  | /compile filename.extension... [outputFilename.extension] [/r:assembly] [/str:lang[,namespace[,class[,file]]] [/publicclass]]   
+resgen  [-define:symbol1[,symbol2,...]] [/useSourcePath] filename.extension  | /compile filename.extension... [outputFilename.extension] [/r:assembly] [/str:lang[,namespace[,class[,file]]] [/publicclass]]
 ```  
   
 ```console  
@@ -69,7 +69,7 @@ resgen filename.extension [outputDirectory]
   
 ## <a name="parameters"></a>Parameter  
   
-|Parameter oder Schalter|BESCHREIBUNG|  
+|Parameter oder Schalter|Beschreibung|  
 |-------------------------|-----------------|  
 |`/define:` *symbol1*[, *symbol2*,...]|Ab .NET Framework 4.5 wird bedingte Kompilierung in textbasierten Ressourcendateien (TXT- oder RESTEXT-Dateien) unterstützt. Wenn *symbol* einem Symbol entspricht, das innerhalb eines `#ifdef`-Konstrukts in der Eingabetextdatei enthalten ist, wird die zugehörige Zeichenfolgenressource in die RESOURCES-Datei einbezogen. Wenn die Eingabetextdatei eine `#if !`-Anweisung mit einem Symbol enthält, das nicht durch den `/define`-Schalter definiert ist, wird die zugehörige Zeichenfolgenressource in die RESOURCES-Datei einbezogen.<br /><br /> Bei Verwendung mit Nicht-Textdateien wird `/define` ignoriert. Bei Symbolen wird die Groß-/Kleinschreibung berücksichtigt.<br /><br /> Weitere Informationen zu dieser Option finden Sie weiter unten in diesem Thema unter [Bedingte Kompilierung von Ressourcen](#Conditional).|  
 |`useSourcePath`|Gibt an, dass das aktuelle Verzeichnis der Eingabedatei zum Auflösen relativer Dateipfade verwendet werden soll.|  
@@ -126,14 +126,14 @@ resgen filename.extension [outputDirectory]
   
 - [Generating a Strongly Typed Resource Class (Generieren einer stark typisierten Ressourcenklasse)](resgen-exe-resource-file-generator.md#Strong)  
   
-<a name="Compiling"></a>   
+<a name="Compiling"></a>
 ### <a name="compiling-resources-into-a-binary-file"></a>Kompilieren von Ressourcen in eine Binärdatei  
  Resgen.exe wird am häufigsten zum Kompilieren einer textbasierten Ressourcendatei (TXT- oder RESTEXT-Datei) oder einer XML-basierten Ressourcendatei (RESX-Datei) in eine binäre RESOURCES-Datei verwendet. Die Ausgabedatei kann dann mit einem Sprachcompiler in eine Hauptassembly oder mit dem [Assemblylinker („al.exe“)](al-exe-assembly-linker.md) in eine Satellitenassembly eingebettet werden.  
   
  Die Syntax zum Kompilieren einer Ressourcendatei lautet wie folgt:  
   
 ```console  
-resgen inputFilename [outputFilename]   
+resgen inputFilename [outputFilename]
 ```  
   
  mit folgenden Parametern:  
@@ -149,7 +149,7 @@ resgen inputFilename [outputFilename]
  Durch den folgenden Befehl werden die Name-Wert-Paare der Datei "Resources.txt" gelesen und eine binäre RESOURCES-Datei mit dem Namen "Resources.resources" geschrieben. Da der Name der Ausgabedatei nicht explizit angegeben wird, erhält diese standardmäßig den gleichen Namen wie die Eingabedatei.  
   
 ```console  
-resgen Resources.txt   
+resgen Resources.txt
 ```  
   
  Durch den folgenden Befehl werden die Name-Wert-Paare der Datei "Resources.restext" gelesen und eine binäre Ressourcendatei mit dem Namen "StringResources.resources" geschrieben.  
@@ -164,7 +164,7 @@ resgen Resources.restext StringResources.resources
 resgen Resources.resx Resources.resources  
 ```  
   
-<a name="Convert"></a>   
+<a name="Convert"></a>
 ### <a name="converting-between-resource-file-types"></a>Konvertieren zwischen Ressourcendateitypen  
  Neben dem Kompilieren von text- oder XML-basierten Ressourcendateien in binäre RESOURCES-Dateien kann mit Resgen.exe jeder unterstützte Dateityp in einen anderen unterstützten Dateityp konvertiert werden. Dies ermöglicht das Ausführen folgender Konvertierungen:  
   
@@ -199,7 +199,7 @@ resgen Resources.resx Resources.txt
 resgen Resources.resx Resources.restext  
 ```  
   
-<a name="Multiple"></a>   
+<a name="Multiple"></a>
 ### <a name="compiling-or-converting-multiple-files"></a>Kompilieren oder Konvertieren mehrerer Dateien  
  Sie können den `/compile`-Schalter verwenden, um eine Liste mit Ressourcendateien in einem einzelnen Vorgang von einem Format in ein anderes zu konvertieren. Die Syntax lautet:  
   
@@ -213,7 +213,7 @@ resgen /compile filename.extension [filename.extension...]
 resgen /compile StringResources.txt TableResources.resx ImageResources.resx  
 ```  
   
-<a name="Exporting"></a>   
+<a name="Exporting"></a>
 ### <a name="exporting-resources-to-a-resw-file"></a>Exportieren von Ressourcen in eine RESW-Datei  
  Wenn Sie eine Windows 8.x Store-App entwickeln, sollten Sie Ressourcen aus einer vorhandenen Desktop-App verwenden. Von den beiden Anwendungsarten werden jedoch unterschiedliche Dateiformate unterstützt. Bei Desktop-Anwendungen werden Ressourcen in Textdaten (".txt" oder ".restext") oder RESX-Dateien in binäre RESOURCES-Dateien kompiliert. Bei Windows 8.x Store-Apps werden RESW-Dateien in binäre Indexdateien der Paketressource (PRI-Dateien) kompiliert. Mithilfe von Resgen.exe können Sie diese Schwierigkeit umgehen, indem Sie Ressourcen aus einer ausführbaren Datei oder einer Satellitenassembly extrahieren und diese in RESW-Dateien schreiben, die beim Entwickeln einer Windows 8.x Store-App verwendet werden können.  
   
@@ -240,7 +240,7 @@ resgen filename.extension  [outputDirectory]
 resgen MyApp.exe Win8Resources  
 ```  
   
-<a name="Conditional"></a>   
+<a name="Conditional"></a>
 ### <a name="conditionally-compiling-resources"></a>Bedingte Kompilierung von Ressourcen  
  Ab .NET Framework 4.5 wird von „Resgen.exe“ die bedingte Kompilierung von Zeichenfolgenressourcen in Textdateien („.txt“ und „.restext“) unterstützt. Hierdurch kann eine einzige textbasierte Ressourcendatei in mehreren Buildkonfigurationen verwendet werden.  
   
@@ -250,7 +250,7 @@ resgen MyApp.exe Win8Resources
   
 ```text
 #ifdef PRODUCTION  
-AppTitle=My Software Company Project Manager   
+AppTitle=My Software Company Project Manager
 #endif  
 #ifdef CONSULT  
 AppTitle=My Consulting Company Project Manager  
@@ -269,7 +269,7 @@ resgen /define:CONSULT UIResources.restext
   
  Hierdurch wird eine RESOURCES-Datei mit zwei Zeichenfolgenressourcen erstellt. Der Wert der `AppTitle`-Ressource lautet "My Consulting Company Project Manager".  
   
-<a name="Strong"></a>   
+<a name="Strong"></a>
 ### <a name="generating-a-strongly-typed-resource-class"></a>Generieren einer stark typisierten Ressourcenklasse  
  Von Resgen.exe werden stark typisierte Ressourcen unterstützt, die durch das Erstellen von Klassen mit einer Reihe statischer schreibgeschützter Eigenschaften den Zugriff auf Ressourcen kapseln. Dies stellt eine Alternative zum direkten Aufrufen der Methoden der <xref:System.Resources.ResourceManager>-Klasse zwecks Ressourcenabruf dar. Die Unterstützung von stark typisierten Ressourcen kann in Resgen.exe über die `/str`-Option aktiviert werden, die die Funktionalität der <xref:System.Resources.Tools.StronglyTypedResourceBuilder>-Klasse umschließt. Wenn Sie die `/str`-Option angeben, wird von Resgen.exe eine Klasse mit stark typisierten Eigenschaften ausgegeben, die mit den Ressourcen übereinstimmen, auf die der Eingabeparameter verweist. Diese Klasse ermöglicht den stark typisierten, schreibgeschützten Zugriff auf die in der verarbeiteten Datei verfügbaren Ressourcen.  
   
@@ -324,7 +324,7 @@ resgen inputFilename [outputFilename] /str:language[,namespace,[classname[,filen
  Durch den folgenden Befehl wird beispielsweise eine Ressourcendatei mit dem Namen "StringResources.txt" in "StringResources.resources" kompiliert und eine `StringResources`-Klasse in der Visual Basic-Quellcodedatei "StringResources.vb" generiert, die für den Zugriff auf den Ressourcen-Manager verwendet werden kann.  
   
 ```console  
-resgen StringResources.txt /str:vb,,StringResources   
+resgen StringResources.txt /str:vb,,StringResources
 ```  
   
 ## <a name="see-also"></a>Siehe auch

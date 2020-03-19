@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.date: 10/10/2018
-ms.openlocfilehash: 32784f7d4b9e3a93eb7f81b4829b39c1a06ef949
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: 54ace52fc6a8f4614c1f762b65453979bcb92c7a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76920394"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79397872"
 ---
 # <a name="whats-new-in-net-core-21"></a>Neuigkeiten in .NET Core 2.1
 
@@ -43,7 +43,7 @@ Ein wichtiger Schwerpunkt von .NET Core 2.1 ist die Verbesserung der Buildzeitle
 
 ### <a name="new-cli-commands"></a>Neue CLI-Befehle
 
-Eine Reihe von Tools, die nur auf Projektbasis unter Verwendung von [`DotnetCliToolReference`](../tools/extensibility.md) verfügbar waren, steht jetzt als Teil des .NET Core SDK zur Verfügung. Zu diesen Tools gehören:
+Eine Reihe von Tools, die nur auf Projektbasis unter Verwendung von `DotnetCliToolReference` verfügbar waren, steht jetzt als Teil des .NET Core SDK zur Verfügung. Zu diesen Tools gehören:
 
 - `dotnet watch` bietet eine Dateisystemüberwachung, die vor der Ausführung eines designierten Satzes von Befehlen auf die Änderung einer Datei wartet. Der folgende Befehl erstellt beispielsweise automatisch das aktuelle Projekt neu und generiert eine ausführliche Ausgabe, sobald sich eine Datei darin ändert:
 
@@ -65,7 +65,7 @@ Eine Reihe von Tools, die nur auf Projektbasis unter Verwendung von [`DotnetCliT
 
 ### <a name="global-tools"></a>Globale Tools
 
-.NET Core 2.1 unterstützt *globale Tools* – d.h. benutzerdefinierte Tools, die global über die Befehlszeile verfügbar sind. Das Erweiterbarkeitsmodell in früheren Versionen von benutzerdefinierten .NET Core-Tools ist auf Projektbasis nur mithilfe von [`DotnetCliToolReference`](../tools/extensibility.md#consuming-per-project-tools) verfügbar.
+.NET Core 2.1 unterstützt *globale Tools* – d.h. benutzerdefinierte Tools, die global über die Befehlszeile verfügbar sind. Das Erweiterbarkeitsmodell in früheren Versionen von benutzerdefinierten .NET Core-Tools ist auf Projektbasis nur mithilfe von `DotnetCliToolReference` verfügbar.
 
 Verwenden Sie den [dotnet tool install](../tools/dotnet-tool-install.md)-Befehl, um ein globales Tool zu installieren. Zum Beispiel:
 
@@ -177,17 +177,17 @@ Ohne diese Typen müssen Sie bei der Übergabe solcher Elemente als Teil eines A
 
 Das folgende Beispiel verwendet eine <xref:System.Span%601>- und eine <xref:System.Memory%601>-Instanz, um eine virtuelle Ansicht von 10 Elementen eines Arrays bereitzustellen.
 
-[!code-csharp[Span\<T>](~/samples/core/whats-new/whats-new-in-21/cs/program.cs)]
+[!code-csharp[Span\<T>](~/samples/snippets/core/whats-new/whats-new-in-21/csharp/program.cs)]
 
-[!code-vb[Memory\<T>](~/samples/core/whats-new/whats-new-in-21/vb/program.vb)]
+[!code-vb[Memory\<T>](~/samples/snippets/core/whats-new/whats-new-in-21/vb/program.vb)]
 
 ### <a name="brotli-compression"></a>Brotli-Komprimierung
 
 Ab .NET Core 2.1 werden Brotli-Komprimierung und -Dekomprimierung unterstützt. Brotli ist ein allgemein einsetzbarer verlustfreier Komprimierungsalgorithmus, der in [RFC 7932](https://www.ietf.org/rfc/rfc7932.txt) definiert ist und von den meisten Webbrowsern und den wichtigsten Webservern unterstützt wird. Sie können die streambasierte <xref:System.IO.Compression.BrotliStream?displayProperty=nameWithType>-Klasse oder die leistungsstarken, bereichsbasierten Klassen <xref:System.IO.Compression.BrotliEncoder?displayProperty=nameWithType> und <xref:System.IO.Compression.BrotliDecoder?displayProperty=nameWithType> verwenden. Im folgenden Beispiel wird die Komprimierung mit der <xref:System.IO.Compression.BrotliStream>-Klasse veranschaulicht:
 
-[!code-csharp[Brotli compression](~/samples/core/whats-new/whats-new-in-21/cs/brotli.cs#1)]
+[!code-csharp[Brotli compression](~/samples/snippets/core/whats-new/whats-new-in-21/csharp/brotli.cs#1)]
 
-[!code-vb[Brotli compression](~/samples/core/whats-new/whats-new-in-21/vb/brotli.vb#1)]
+[!code-vb[Brotli compression](~/samples/snippets/core/whats-new/whats-new-in-21/vb/brotli.vb#1)]
 
 Das <xref:System.IO.Compression.BrotliStream>-Verhalten entspricht dem von <xref:System.IO.Compression.DeflateStream> und <xref:System.IO.Compression.GZipStream>. Dies vereinfacht das Konvertieren von Code, der diese APIs nach <xref:System.IO.Compression.BrotliStream> aufruft.
 
@@ -244,6 +244,10 @@ Statt auf <xref:System.Net.Http.SocketsHttpHandler> basierender Socketimplementi
 Unter Windows können Sie auch <xref:System.Net.Http.WinHttpHandler?displayProperty=nameWithType> verwenden, was von einer nativen Implementierung abhängt, oder die <xref:System.Net.Http.SocketsHttpHandler>-Klasse durch Übergabe einer Instanz der Klasse an den <xref:System.Net.Http.HttpClient>-Konstruktor.
 
 Auf Linux und macOS können Sie <xref:System.Net.Http.HttpClient> nur pro Prozess konfigurieren. Unter Linux müssen Sie [libcurl](https://curl.haxx.se/libcurl/) bereitstellen, wenn Sie die alte <xref:System.Net.Http.HttpClient>-Implementierung verwenden möchten. (Wird mit .NET Core 2.0 installiert.)
+
+### <a name="breaking-changes"></a>Breaking Changes
+
+Informationen zu Breaking Changes finden Sie unter [Breaking Changes für die Migration von Version 2.0 zu 2.1](../compatibility/2.0-2.1.md).
 
 ## <a name="see-also"></a>Siehe auch
 

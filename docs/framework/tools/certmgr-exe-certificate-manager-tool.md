@@ -14,10 +14,10 @@ helpviewer_keywords:
 - certificate revocation lists
 ms.assetid: 7e953b43-1374-4bbc-814f-53ca1b6b52bb
 ms.openlocfilehash: 06fe3a78d0b19720d4f83111980b88806312205f
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73129879"
 ---
 # <a name="certmgrexe-certificate-manager-tool"></a>Certmgr.exe (Certificate Manager-Tool)
@@ -44,12 +44,12 @@ Mit dem Certificate Manager-Tool (Certmgr.exe) können Sie Zertifikate, Zertifik
   
 ## <a name="parameters"></a>Parameter  
   
-|Argument|BESCHREIBUNG|  
+|Argument|Beschreibung|  
 |--------------|-----------------|  
 |*sourceStorename*|Der Zertifikatspeicher, der die vorhandenen Zertifikate, die CTLs oder CRLs enthält, die hinzugefügt, gelöscht, gespeichert oder angezeigt werden sollen. Dabei kann es sich um eine Speicherdatei oder einen Systemspeicher handeln.|  
 |*destinationStorename*|Der Ausgabezertifikatsspeicher bzw. die Ausgabedatei.|  
   
-|Option|BESCHREIBUNG|  
+|Option|Beschreibung|  
 |------------|-----------------|  
 |**/add**|Fügt einem Zertifikatsspeicher Zertifikate, CTLs und CRLs hinzu.|  
 |**/all**|Fügt bei der Verwendung mit **/add** alle Einträge hinzu. Löscht bei der Verwendung mit **/del** alle Einträge. Zeigt bei der Verwendung ohne die Option **/add** oder **/del** alle Einträge an. Die Option **/all** kann nicht mit **/put** verwendet werden.|  
@@ -57,7 +57,7 @@ Mit dem Certificate Manager-Tool (Certmgr.exe) können Sie Zertifikate, Zertifik
 |**/CRL**|Fügt bei der Verwendung mit **/add** CRLs hinzu. Löscht CRLs bei der Verwendung mit **/del**. Speichert CRLs bei der Verwendung mit **/put**. Zeigt bei der Verwendung ohne die Optionen **/add**, **/del** und **/put** CRLs an.|  
 |**/CTL**|Fügt bei der Verwendung mit **/add** CTLs hinzu. Löscht CTLs bei der Verwendung mit **/del**. Speichert CTLs bei der Verwendung mit **/put**. Zeigt bei der Verwendung ohne die Option **/add**, **/del** oder **/put** CTLs an.|  
 |**/del**|Löscht Zertifikate, CTLs und CRLs aus einem Zertifikatspeicher.|  
-|**/e** *encodingType*|Gibt den Codierungstyp des Zertifikats an. Die Standardeinstellung ist `X509_ASN_ENCODING`.|  
+|**/e** *encodingType*|Gibt den Codierungstyp des Zertifikats an. Der Standardwert ist `X509_ASN_ENCODING`.|  
 |**/f** *dwFlags*|Gibt das Flag zum Öffnen des Speichers an. Dies ist der an *CertOpenStore* übergebene Parameter **dwFlags**. Der Standardwert ist CERT_SYSTEM_STORE_CURRENT_USER. Diese Option wird nur bei der Verwendung der Option **/y** berücksichtigt.|  
 |**/h**[**elp**]|Zeigt Befehlssyntax und Optionen für das Tool an.|  
 |**/n** *nam*|Gibt den allgemeinen Namen des Zertifikats an, das hinzugefügt, gelöscht oder gespeichert werden soll. Diese Option kann nur für Zertifikate und nicht für CTLs und CRLs verwendet werden.|  
@@ -70,7 +70,7 @@ Mit dem Certificate Manager-Tool (Certmgr.exe) können Sie Zertifikate, Zertifik
 |**/7**|Speichert den Zielspeicher als PKCS #7-Objekt.|  
 |**/?**|Zeigt Befehlssyntax und Optionen für das Tool an.|  
   
-## <a name="remarks"></a>Anmerkungen  
+## <a name="remarks"></a>Hinweise  
  Von "Certmgr.exe" werden die folgenden Basisfunktionen ausgeführt:  
   
 - Zeigt Zertifikate, CTLs und CRLs in der Konsole an.  

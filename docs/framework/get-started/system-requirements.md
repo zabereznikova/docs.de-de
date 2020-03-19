@@ -10,16 +10,16 @@ helpviewer_keywords:
 - operating systems supported
 - hardware requirements
 ms.assetid: 298275e2-da1d-4618-9f74-6a3567832350
-ms.openlocfilehash: f853663bef4dd0de7ac61e706dedf8c6a19b5b51
-ms.sourcegitcommit: 8c99457955fc31785b36b3330c4ab6ce7984a7ba
+ms.openlocfilehash: 6f67d01b4af4a72fb09e5f2aa225e226e268eee2
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/29/2019
-ms.locfileid: "75545011"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79181583"
 ---
 # <a name="net-framework-system-requirements"></a>Systemanforderungen für .NET Framework
 
-Die Tabellen in diesem Thema enthalten die Hardware-, Betriebssystem- und Softwareanforderungen für die folgenden .NET Framework-Versionen:
+Die Tabellen in diesem Artikel enthalten die Hardware-, Betriebssystem- und Softwareanforderungen für die folgenden .NET Framework-Versionen:
 
 - .NET Framework 4.5 und dessen Punktversionen (4.5.1 und 4.5.2).
 - .NET Framework 4.6 und dessen Punktversionen (4.6.1 und 4.6.2).
@@ -28,7 +28,7 @@ Die Tabellen in diesem Thema enthalten die Hardware-, Betriebssystem- und Softwa
 
 Weitere Informationen zu .NET Framework-Versionen vor .NET Framework 4.5 finden Sie unter [.NET Framework-Versionen und-Abhängigkeiten](../migration-guide/versions-and-dependencies.md).
 
-Für Entwicklungsumgebungen, in denen Apps für das .NET Framework entwickelt werden können, gelten separate Anforderungen.
+Für Entwicklungsumgebungen, in denen Apps für .NET Framework entwickelt werden können, gelten separate Anforderungen.
 
 [!INCLUDE[net-framework-4-versions](../../../includes/net-framework-4x-versions.md)]
 
@@ -48,7 +48,7 @@ Informationen zum Support Lifecycle der .NET Framework-Versionen finden Sie unte
 
 ## <a name="installation-requirements"></a>Installationsanforderungen
 
-Für die Installation von .NET Framework sind Administratorrechte erforderlich. Wenn Sie über keine Administratorrechte für den Computer verfügen, auf dem Sie .NET Framework installieren möchten, wenden Sie sich an Ihren Netzwerkadministrator.
+Für die Installation von .NET Framework sind Administratorrechte erforderlich. Wenn Sie über keine Administratorrechte für den Computer verfügen, auf dem Sie .NET Framework installieren möchten, wenden Sie sich an Ihren Netzwerkadministrator.
 
 ## <a name="supported-client-operating-systems"></a>Unterstützte Clientbetriebssysteme
 
@@ -70,7 +70,7 @@ Für die Installation von .NET Framework sind Administratorrechte erforderlich. 
 
  **Hinweise:**
 
-- Auf Windows 7-Systemen erfordert .NET Framework Windows 7 SP1. Wenn Sie mit Windows 7 arbeiten und Service Pack 1 noch nicht installiert haben, müssen Sie dies nachholen, bevor Sie .NET Framework installieren.
+- Auf Windows 7-Systemen erfordert .NET Framework Windows 7 SP1. Wenn Sie mit Windows 7 arbeiten und Service Pack 1 noch nicht installiert haben, müssen Sie dies nachholen, bevor Sie .NET Framework installieren.
 
 - .NET Framework 4.5 wird in der Windows Preinstallation Environment (Windows PE) unterstützt. Windows PE unterstützt nicht alle Funktionen.
 
@@ -78,7 +78,7 @@ Für die Installation von .NET Framework sind Administratorrechte erforderlich. 
 
 - Um bestmögliche Kompatibilität und höchste Sicherheit zu gewährleisten, wird für alle Plattformen empfohlen, ein Upgrade auf das neueste Windows Service Pack durchzuführen und wichtige Updates zu installieren, die auf [Windows Update](https://support.microsoft.com/help/12373/windows-update-faq) verfügbar sind.
 
-- Unter 64-Bit-Betriebssystemen unterstützt das .NET Framework sowohl WOW64 (32-Bit-Verarbeitung auf einem 64-Bit-Computer) als auch systemeigene 64-Bit-Verarbeitung.
+- Unter 64-Bit-Betriebssystemen unterstützt .NET Framework sowohl WOW64 (32-Bit-Verarbeitung auf einem 64-Bit-Computer) als auch native 64-Bit-Verarbeitung.
 
 ## <a name="supported-server-operating-systems"></a>Unterstützte Serverbetriebssysteme
 
@@ -94,19 +94,19 @@ Für die Installation von .NET Framework sind Administratorrechte erforderlich. 
 | Windows Server 2008 R2 SP1|64-Bit | -- | .NET Framework 4<br /><br /> .NET Framework 4.5<br /><br /> .NET Framework 4.5.1<br /><br /> .NET Framework 4.5.2<br /><br /> .NET Framework 4.6<br /><br /> .NET Framework 4.6.1<br /><br /> .NET Framework 4.6.2<br /><br />.NET Framework 4.7<br/><br/>.NET Framework 4.7.1<br/><br/>.NET Framework 4.7.2<br/><br/>.NET Framework 4.8 |
 | Windows Server 2008 SP2|32 Bit und 64 Bit | -- | .NET Framework 4<br /><br /> .NET Framework 4.5<br /><br /> .NET Framework 4.5.1<br /><br /> .NET Framework 4.5.2<br /><br /> .NET Framework 4.6 |
 
- **Hinweise:**
+**Hinweise:**
 
 - Windows Server 2012 enthält .NET Framework 4.5, Sie müssen also keine separate Installation durchführen. Analog dazu umfasst Windows Server 2012 R2 .NET Framework 4.5.1.
 
-- .NET Framework bietet unter Windows Server 2008 R2 SP1 oder höher eingeschränkte Unterstützung für die Server Core-Rolle. Eine Liste der nicht unterstützten APIs finden Sie im Artikel zur [Server Core .NET-Funktionalität](https://docs.microsoft.com/previous-versions//dd745015(v=vs.85)).
+- .NET Framework bietet unter Windows Server 2008 R2 SP1 oder höher eingeschränkte Unterstützung für die Server Core-Rolle. Eine Liste der nicht unterstützten APIs finden Sie im Artikel zur [Server Core .NET-Funktionalität](https://docs.microsoft.com/previous-versions//dd745015(v=vs.85)).
 
-- .NET Framework wird unter Windows Server 2008 R2 für Itanium-basierte Systeme nicht unterstützt.
+- .NET Framework wird unter Windows Server 2008 R2 für Itanium-basierte Systeme nicht unterstützt.
 
-- Unter Windows Server 2008 SP2 wird .NET Framework in der Server Core-Rolle nicht unterstützt.
+- Unter Windows Server 2008 SP2 wird .NET Framework in der Server Core-Rolle nicht unterstützt.
 
 - Um bestmögliche Kompatibilität und höchste Sicherheit zu gewährleisten, wird für alle Plattformen empfohlen, ein Upgrade auf das neueste Windows Service Pack und wichtige Updates durchzuführen, die auf [Windows Update](https://support.microsoft.com/help/12373/windows-update-faq) verfügbar sind. Die Installation des neuesten Windows Service Pack ist möglicherweise unter einigen Betriebssystemen erforderlich.
 
-- Unter 64-Bit-Betriebssystemen unterstützt das .NET Framework sowohl WOW64 (32-Bit-Verarbeitung auf einem 64-Bit-Computer) als auch systemeigene 64-Bit-Verarbeitung.
+- Unter 64-Bit-Betriebssystemen unterstützt .NET Framework sowohl WOW64 (32-Bit-Verarbeitung auf einem 64-Bit-Computer) als auch native 64-Bit-Verarbeitung.
 
 ## <a name="see-also"></a>Siehe auch
 

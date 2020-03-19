@@ -1,13 +1,13 @@
 ---
 title: Systemüberwachung
 description: Entdecken Sie eine Möglichkeit zum Implementieren der Systemüberwachung.
-ms.date: 01/30/2020
-ms.openlocfilehash: a91e51af66049f9774365cd56b90ab792a4dd4fc
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.date: 03/02/2020
+ms.openlocfilehash: d3d2bc72cf29b3d1ac93191e7ff2bd827c9ee68d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77502682"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79401544"
 ---
 # <a name="health-monitoring"></a>Systemüberwachung
 
@@ -19,7 +19,7 @@ Dienste in ihrer allgemeinen Form senden Zustandsberichte. Diese Informationen w
 
 ## <a name="implement-health-checks-in-aspnet-core-services"></a>Implementieren von Integritätsüberprüfungen in ASP.NET Core-Diensten
 
-Beim Entwickeln eines ASP.NET Core-Microservice oder einer -Webanwendung können Sie das integrierte Feature für Integritätsprüfungen verwenden, das mit ASP.NET Core 3.1 veröffentlicht wurde ([Microsoft.Extensions.Diagnostics.HealthChecks](https://www.nuget.org/packages/Microsoft.Extensions.Diagnostics.HealthChecks)). Wie viele andere ASP.NET Core-Features enthalten die Integritätsprüfungen mehrere Dienste und eine Middleware.
+Beim Entwickeln eines ASP.NET Core-Microservice oder einer -Webanwendung können Sie das integrierte Feature für Integritätsprüfungen verwenden, das mit ASP.NET Core 2.2 veröffentlicht wurde ([Microsoft.Extensions.Diagnostics.HealthChecks](https://www.nuget.org/packages/Microsoft.Extensions.Diagnostics.HealthChecks)). Wie viele andere ASP.NET Core-Features enthalten die Integritätsprüfungen mehrere Dienste und eine Middleware.
 
 Dienste und Middleware zur Überprüfung der Integrität sind einfach zu verwenden und stellen Funktionen bereit, mit denen Sie überprüfen können, ob eine beliebige externe Ressource, die für Ihre Anwendung (z. B. eine SQL Server-Datenbank oder eine Remote-API) erforderlich ist, ordnungsgemäß funktioniert. Wenn Sie dieses Feature verwenden, können Sie außerdem die Voraussetzungen für die Integrität der Ressource festlegen. Dies wird nachfolgend näher erläutert.
 
@@ -27,7 +27,9 @@ Damit Sie dieses Feature effektiv nutzen können, müssen Sie zunächst Dienste 
 
 ### <a name="use-the-healthchecks-feature-in-your-back-end-aspnet-microservices"></a>Verwenden des HealthChecks-Features in Ihren Back-End-ASP.NET-Microservices
 
-In diesem Abschnitt erfahren Sie, wie das HealthChecks-Feature (entsprechend der Implementierung in [AspNetCore.Diagnostics.HealthChecks](https://github.com/Xabaril/AspNetCore.Diagnostics.HealthChecks)) in einer Web-API-Beispielanwendung für ASP.NET Core 3.1 verwendet wird. Die Implementierung dieses Features in großen Microservices wie eShopOnContainers wird in einem späteren Abschnitt erläutert. Damit Sie beginnen können, müssen Sie definieren, was die Integritätsstatus für die einzelnen Microservices ausmacht. In der Beispielanwendung funktionieren die Microservices einwandfrei, wenn über HTTP auf die Microservice-API zugegriffen werden kann und die jeweilige SQL Server-Datenbank verfügbar ist.
+In diesem Abschnitt erfahren Sie, wie das HealthChecks-Feature in einer ASP.NET Core 3.1 Web-API-Beispielanwendung implementiert wird, wenn das Paket [Microsoft.Extensions.Diagnostics.HealthChecks](https://www.nuget.org/packages/Microsoft.Extensions.Diagnostics.HealthChecks) verwendet wird. Die Implementierung dieses Features in großen Microservices wie eShopOnContainers wird im nächsten Abschnitt erläutert.
+
+Damit Sie beginnen können, müssen Sie definieren, was die Integritätsstatus für die einzelnen Microservices ausmacht. In der Beispielanwendung wird definiert, dass der Microservice fehlerfrei ist, wenn seine API über HTTP zugänglich und die zugehörige SQL Server-Datenbank ebenfalls verfügbar ist.
 
 In .NET Core 3.1 mit den integrierten APIs können Sie wie folgt die Dienste konfigurieren und eine Integritätsprüfung für den Microservice sowie die abhängige SQL Server-Datenbank hinzufügen:
 
@@ -40,10 +42,11 @@ public void ConfigureServices(IServiceCollection services)
     // Registers required services for health checks
     services.AddHealthChecks()
         // Add a health check for a SQL Server database
-        .AddSqlServer(
-            configuration["ConnectionString"],
-            name: "OrderingDB-check",
-            tags: new string[] { "orderingdb" });
+        .AddCheck(
+            "OrderingDB-check",
+            new SqlConnectionHealthCheck(Configuration["ConnectionString"]),
+            HealthStatus.Unhealthy,
+            new string[] { "orderingdb" });
 }
 ```
 
@@ -114,11 +117,7 @@ public void Configure(IApplicationBuilder app, IHostingEnvironment env)
     app.UseEndpoints(endpoints =>
     {
         //...
-        endpoints.MapHealthChecks("/hc", new HealthCheckOptions()
-        {
-            Predicate = _ => true,
-            ResponseWriter = UIResponseWriter.WriteHealthCheckUIResponse
-        });
+        endpoints.MapHealthChecks("/hc");
         //...
     });
     //…
@@ -129,9 +128,9 @@ Wenn der Endpunkt `<yourmicroservice>/hc` aufgerufen wird, werden alle Integrit�
 
 ### <a name="healthchecks-implementation-in-eshoponcontainers"></a>Implementieren des HealthChecks-Features in eShopOnContainers
 
-Microservices in eShopOnContainers hängen bei der Ausführung ihrer Aufgaben von mehreren Diensten ab. Der `Catalog.API`-Microservice von eShopOnContainers hängt beispielsweise von mehreren Diensten wie Azure Blob Storage, SQL Server und RabbitMQ ab. Daher wurden ihm mit der `AddCheck()`-Methode mehrere Integritätsprüfungen hinzugefügt. Für jeden abhängigen Dienst definiert eine `IHealthCheck`-Implementierung, dass der zugehörige Integritätsstatus hinzugefügt werden muss.
+Microservices in eShopOnContainers hängen bei der Ausführung ihrer Aufgaben von mehreren Diensten ab. Der `Catalog.API`-Microservice von eShopOnContainers hängt beispielsweise von mehreren Diensten wie Azure Blob Storage, SQL Server und RabbitMQ ab. Daher wurden ihm mit der `AddCheck()`-Methode mehrere Integritätsprüfungen hinzugefügt. Für jeden abhängigen Dienst müsste eine benutzerdefinierte `IHealthCheck`-Implementierung hinzugefügt werden, die den jeweiligen Integritätsstatus definiert.
 
-Beim Open-Source-Projekt [AspNetCore.Diagnostics.HealthChecks](https://github.com/Xabaril/AspNetCore.Diagnostics.HealthChecks) wird dieses Problem mit benutzerdefinierten Implementierungen von Integritätsprüfungen für jeden dieser auf .NET Core 3.1 basierenden Unternehmensdiensten gelöst. Jede Integritätsprüfung steht als individuelles NuGet-Paket zur Verfügung, das dem Projekt mühelos hinzugefügt werden kann. In eShopOnContainers werden sie in allen enthaltenen Microservices verwendet.
+Beim Open-Source-Projekt [AspNetCore.Diagnostics.HealthChecks](https://github.com/Xabaril/AspNetCore.Diagnostics.HealthChecks) wird dieses Problem mit benutzerdefinierten Implementierungen von Integritätsprüfungen für jeden dieser auf .NET Core 3.1 basierenden Unternehmensdiensten gelöst. Jede Integritätsprüfung steht als individuelles NuGet-Paket zur Verfügung, das dem Projekt mühelos hinzugefügt werden kann. In eShopOnContainers werden sie in allen enthaltenen Microservices verwendet.
 
 Zum `Catalog.API`-Microservice wurden beispielsweise folgende NuGet-Pakete hinzugefügt:
 

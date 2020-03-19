@@ -7,18 +7,18 @@ helpviewer_keywords:
 - common language runtime, about
 - common language runtime, overview
 ms.assetid: 29848c96-fc36-462d-8072-ba223a40b697
-ms.openlocfilehash: 397a78514dc5878e83708882ceeb4d92160d9a78
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: de9cbdab5d5786b9d59d23ba675fa3f78f807716
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975659"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79181593"
 ---
-# <a name="overview-of-the-net-framework"></a>Übersicht über .NET Framework
+# <a name="overview-of-net-framework"></a>Übersicht über .NET Framework
 
-Beim .NET Framework handelt es sich um eine Technologie, mit der die Entwicklung und Ausführung von App und XML-Webdiensten der nächsten Generation unterstützt wird. .NET Framework wurde im Hinblick auf folgende Zielsetzungen entwickelt:
+.NET Framework ist eine Technologie, die die Erstellung und Ausführung von Windows-Apps und Webdiensten unterstützt. .NET Framework wurde im Hinblick auf folgende Zielsetzungen entwickelt:
 
-- Bereitstellung einer konsistenten, objektorientierten Programmierumgebung, in der Objektcode gespeichert wird. Die Ausführung erfolgt dann entweder lokal oder über Remotezugriff bzw. lokal mit Verteilung über das Internet.
+- Bereitstellung einer konsistenten, objektorientierten Programmierumgebung, in der Objektcode gespeichert wird. Die Ausführung erfolgt dann entweder lokal oder über Remotezugriff bzw. lokal mit Verteilung über das Web.
 
 - Bereitstellung einer Codeausführungsumgebung, mit der Konflikte bei der Softwarebereitstellung und Versionskonflikte auf ein Minimum beschränkt werden.
 
@@ -28,16 +28,16 @@ Beim .NET Framework handelt es sich um eine Technologie, mit der die Entwicklung
 
 - Schaffung einer konsistenten Entwicklungsumgebung für die verschiedensten Typen von Apps, wie beispielsweise Windows- und webbasierte Apps.
 
-- Aufbau der gesamten Kommunikation auf Industriestandards, um die Integration von Code, der auf .NET Framework basiert, in jeden anderen Code zu gewährleisten.
+- Aufbau der gesamten Kommunikation auf Industriestandards, um die Integration von Code, der auf .NET Framework basiert, in jeden anderen Code zu gewährleisten.
 
 > [!NOTE]
 > Eine allgemeine Einführung in .NET Framework für Benutzer und Entwickler erhalten Sie unter [Erste Schritte](index.md).
 
-Das .NET Framework besteht aus der Common Language Runtime (CLR) und der .NET Framework-Klassenbibliothek. .NET Framework setzt auf der Common Language Runtime auf. Stellen Sie sich die Common Language Runtime als Agent vor, der zum Ausführungszeitpunkt Code verwaltet sowie Basisdienste wie Speicherverwaltung, Threadverwaltung und Remoting bereitstellt. Er erzwingt gleichzeitig strikte Typsicherheit und andere Formen der Codegenauigkeit, mit denen Sicherheit und Zuverlässigkeit unterstützt werden. Das Konzept der Codeverwaltung ist ein fundamentales Prinzip der Laufzeitumgebung. Code, der die Laufzeit zum Ziel hat, wird als verwalteter Code bezeichnet, während Code, der nicht auf die Laufzeit abzielt, als nicht verwalteter Code gilt. Die Klassenbibliothek, ist eine umfassende, objektorientierte Auflistung wiederverwendbarer Typen für die Entwicklung vielfältiger Apps, z. B. solcher mit herkömmlicher Befehlszeile oder grafischer Benutzeroberfläche (GUI), bis hin zu Apps, die auf den neuesten Innovationen von ASP.NET, wie beispielsweise Web Forms und XML-Webdiensten, basieren.
+.NET Framework besteht aus der Common Language Runtime (CLR) und der .NET Framework-Klassenbibliothek. .NET Framework setzt auf der Common Language Runtime auf. Stellen Sie sich die Common Language Runtime als Agent vor, der zum Ausführungszeitpunkt Code verwaltet sowie Basisdienste wie Speicherverwaltung, Threadverwaltung und Remoting bereitstellt. Er erzwingt gleichzeitig strikte Typsicherheit und andere Formen der Codegenauigkeit, mit denen Sicherheit und Zuverlässigkeit unterstützt werden. Das Konzept der Codeverwaltung ist ein fundamentales Prinzip der Laufzeitumgebung. Code, der die Laufzeit zum Ziel hat, wird als verwalteter Code bezeichnet, während Code, der nicht auf die Laufzeit abzielt, als nicht verwalteter Code gilt. Die Klassenbibliothek, ist eine umfassende, objektorientierte Auflistung wiederverwendbarer Typen für die Entwicklung vielfältiger Apps, z. B. solcher mit herkömmlicher Befehlszeile oder grafischer Benutzeroberfläche (GUI), bis hin zu Apps, die auf den neuesten Innovationen von ASP.NET, z. B. Web Forms und XML-Webdiensten, basieren.
 
-.NET Framework kann von nicht verwalteten Komponenten gehostet werden, durch die die Common Language Runtime in die Prozesse geladen und die Ausführung verwalteten Codes initiiert wird. So entsteht eine Softwareumgebung, in der sowohl verwaltete als auch nicht verwaltete Features genutzt werden. .NET Framework stellt nicht nur mehrere Laufzeithosts bereit, sondern unterstützt auch die Entwicklung von Laufzeithosts von Drittanbietern.
+.NET Framework kann von nicht verwalteten Komponenten gehostet werden, durch die die Common Language Runtime in die Prozesse geladen und die Ausführung verwalteten Codes initiiert wird. So entsteht eine Softwareumgebung, in der sowohl verwaltete als auch nicht verwaltete Features genutzt werden. .NET Framework stellt nicht nur mehrere Laufzeithosts bereit, sondern unterstützt auch die Entwicklung von Laufzeithosts von Drittanbietern.
 
-So dient beispielsweise ASP.NET als Laufzeithost und stellt eine skalierbare, serverseitige Umgebung für verwalteten Code bereit. ASP.NET arbeitet direkt mit der Common Language Runtime und aktiviert ASP.NET-Apps sowie XML-Webdienste, die weiter unten in diesem Thema behandelt werden.
+So dient beispielsweise ASP.NET als Laufzeithost und stellt eine skalierbare, serverseitige Umgebung für verwalteten Code bereit. ASP.NET arbeitet direkt mit der Common Language Runtime und aktiviert ASP.NET-Apps sowie XML-Webdienste, die weiter unten in diesem Artikel behandelt werden.
 
 Internet Explorer ist ein Beispiel für eine nicht verwaltete App, die die Laufzeit (als MIME-Typerweiterung) hostet. Mit Internet Explorer als Laufzeithost können Sie verwaltete Komponenten oder Steuerelemente für Windows Forms in HTML-Dokumente einbetten. Ein derartiges Hosten der Laufzeit ermöglicht verwalteten mobilen Code, aber mit erheblichen Verbesserungen, wie sie nur verwalteter Code bietet, beispielsweise die Ausführung von halb-vertrauenswürdigem Code sowie isolierter Dateispeicher.
 

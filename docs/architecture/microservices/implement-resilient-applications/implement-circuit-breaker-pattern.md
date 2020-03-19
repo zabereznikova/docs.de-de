@@ -1,13 +1,13 @@
 ---
 title: Implementieren des Trennschaltermusters
 description: Erfahren Sie, wie das Circuit-Breaker-Muster als ergänzendes System zu HTTP-Wiederholungsversuchen implementieren können.
-ms.date: 10/16/2018
-ms.openlocfilehash: 00ca39b4b6fac37ff60adf128c3f4e22c5fc14e2
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.date: 03/03/2020
+ms.openlocfilehash: a79c6fcca1e29f3c30d697cb369060d59a72c121
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73732858"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78847244"
 ---
 # <a name="implement-the-circuit-breaker-pattern"></a>Implementieren des Circuit Breaker-Musters
 
@@ -25,11 +25,11 @@ Deshalb benötigen Sie eine „Sicherung“, damit übermäßige Anforderungen b
 
 Das Circuit Breaker-Muster hat einen anderen Zweck als das Wiederholungsmuster. Das Wiederholungsmuster ermöglicht es einer Anwendung, einen Vorgang erneut auszuführen, wobei davon ausgegangen wird, dass dieser irgendwann erfolgreich ist. Das Circuit Breaker-Muster hindert eine Anwendung daran, einen Vorgang auszuführen, bei dem vermutlich ein Fehler auftreten wird. Eine Anwendung kann diese beiden Muster kombinieren. Die Wiederholungslogik sollte jedoch Ausnahmen behandeln können, die vom Circuit Breaker zurückgegeben werden, und auf Wiederholungsversuche verzichten, wenn der Circuit Breaker anzeigt, dass ein Fehler nicht temporär ist.
 
-## <a name="implement-circuit-breaker-pattern-with-httpclientfactory-and-polly"></a>Implementieren des Circuit Breaker-Musters mit HttpClientFactory und Polly
+## <a name="implement-circuit-breaker-pattern-with-ihttpclientfactory-and-polly"></a>Implementieren eines Circuit Breaker-Musters mit `IHttpClientFactory` und Polly
 
-Ebenso wie für die Implementierung von Wiederholungen wird auch für Circuit Breakers empfohlen, auf bewährte .NET-Bibliotheken wie Polly und die native Integration in HttpClientFactory zurückzugreifen.
+Ebenso wie für die Implementierung von Wiederholungen wird auch für Circuit Breakers empfohlen, auf bewährte .NET-Bibliotheken wie Polly und die native Integration in `IHttpClientFactory` zurückzugreifen.
 
-Eine Circuit Breaker-Richtlinie kann zu Ihrer ausgehenden HttpClientFactory-Middlewarepipeline hinzugefügt werden, indem Sie einfach einen einzelnen inkrementellen Codeabschnitt zu dem Code hinzufügen, der bei der Verwendung von HttpClientFactory bereits vorhanden ist.
+Eine Circuit Breaker-Richtlinie kann zu Ihrer ausgehenden `IHttpClientFactory`-Middlewarepipeline hinzugefügt werden, indem Sie einfach einen einzelnen inkrementellen Codeabschnitt zu dem Code hinzufügen, der bei der Verwendung von `IHttpClientFactory` bereits vorhanden ist.
 
 Der nachfolgende Code für Wiederholungen von HTTP-Aufrufen wird nur insofern geändert, als die Circuit Breaker-Richtlinie der zu verwendenden Richtlinienliste hinzugefügt wird. Dies wird in folgendem inkrementellen Code veranschaulicht, der Teil der ConfigureServices()-Methode ist.
 
@@ -61,7 +61,7 @@ Circuit Breakers sollten auch verwendet werden, um Anforderungen an eine Fallbac
 
 Die erwähnten Features sind nur für Fälle geeignet, in denen das Failover mit .NET Code und nicht automatisch von Azure unter Berücksichtigung von Speicherorttransparenz verwaltet wird.
 
-Bei der Verwendung von HttpClient besteht aus Benutzerperspektive keine Notwendigkeit, neue Elemente hinzuzufügen, da der Code wie in den vorherigen Abschnitten dargestellt identisch mit dem ist, der bei HttpClient mit HttpClientFactory verwendet wird.
+Bei der Verwendung von HttpClient besteht aus Benutzerperspektive keine Notwendigkeit, neue Elemente hinzuzufügen, da der Code wie in den vorherigen Abschnitten dargestellt identisch mit dem ist, der bei `HttpClient` mit `IHttpClientFactory` verwendet wird.
 
 ## <a name="test-http-retries-and-circuit-breakers-in-eshoponcontainers"></a>Testen von HTTP-Wiederholungen und Circuit Breakern in eShopOnContainers
 

@@ -2,12 +2,12 @@
 title: Befehl „dotnet tool list“
 description: Der Befehl „dotnet tool list“ listet die auf Ihrem Computer installierten .NET Core-Tools auf.
 ms.date: 02/14/2020
-ms.openlocfilehash: f231dcfe64a925f75f948d508e7a2d83befd9a00
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: def3c345a775e5a65ec3d37718d207c80ca7ceee
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78156984"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78847871"
 ---
 # <a name="dotnet-tool-list"></a>dotnet tool list
 
@@ -21,8 +21,11 @@ ms.locfileid: "78156984"
 
 ```dotnetcli
 dotnet tool list <-g|--global>
+
 dotnet tool list <--tool-path>
+
 dotnet tool list
+
 dotnet tool list <-h|--help>
 ```
 
@@ -71,3 +74,5 @@ Der Befehl `dotnet tool list` bietet die Möglichkeit, alle globalen, Toolpfad- 
 ## <a name="see-also"></a>Siehe auch
 
 - [.NET Core-Tools](global-tools.md)
+- [Tutorial: Erstellen und Verwenden eines globalen .NET Core-Tools mithilfe der .NET Core-CLI](global-tools-how-to-use.md)
+- [Tutorial: Erstellen und Verwenden eines lokalen .NET Core-Tools mithilfe der .NET Core-CLI](local-tools-how-to-use.md)

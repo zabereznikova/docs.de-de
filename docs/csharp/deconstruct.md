@@ -5,10 +5,10 @@ ms.technology: csharp-fundamentals
 ms.date: 07/18/2016
 ms.assetid: 0b0c4b0f-4a47-4f66-9b8e-f5c63b195960
 ms.openlocfilehash: 23d193faf9702628698fe558f6667aeb130e8916
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "73100666"
 ---
 # <a name="deconstructing-tuples-and-other-types"></a>Dekonstruieren von Tupeln und anderen Typen
@@ -97,7 +97,7 @@ Im folgenden Beispiel wird ein `Person`-Objekt in vier Zeichenfolgen (den Vor- u
 
 ## <a name="deconstructing-a-user-defined-type-with-an-extension-method"></a>Dekonstruieren eines benutzerdefinierten Typs mit einer Erweiterungsmethode
 
-Wenn Sie nicht der Autor einer Klasse, Struktur oder Schnittstelle sind, können Sie die Objekte dieses Typs dennoch dekonstruieren, indem Sie eine oder mehrere `Deconstruct`[extension methods (Erweiterungsmethoden)](programming-guide/classes-and-structs/extension-methods.md) implementieren, um die Werte zurückzugeben, an denen Sie interessiert sind.
+Wenn Sie nicht der Autor einer Klasse, Struktur oder Schnittstelle sind, können Sie die Objekte dieses Typs dennoch dekonstruieren, indem Sie eine oder mehrere `Deconstruct` [extension methods (Erweiterungsmethoden)](programming-guide/classes-and-structs/extension-methods.md) implementieren, um die Werte zurückzugeben, an denen Sie interessiert sind.
 
 Im folgenden Beispiel werden zwei `Deconstruct`-Erweiterungsmethoden für die Klasse <xref:System.Reflection.PropertyInfo?displayProperty=nameWithType> definiert. Die erste gibt einen Satz von Werten zurück, der die Merkmale der Eigenschaft angibt, einschließlich ihres Typs, ob es sich dabei um eine statische oder eine Instanzeigenschaft handelt und ob die Eigenschaft schreibgeschützt oder indiziert ist. Die zweite gibt die Zugriffsebene der Eigenschaft an. Da die Zugriffsebene von Get- und Set-Zugriffsmethoden Unterschiede aufweisen kann, geben boolesche Werte an, ob die Eigenschaft über separate Get- und Set-Zugriffsmethoden verfügt und, wenn dies der Fall ist, ob sie über dieselbe Zugriffsebene verfügen. Wenn es nur eine Zugriffsmethode gibt oder die Get- und Set-Zugriffsmethode über dieselbe Zugriffsebene verfügen, gibt die Variable `access` die Zugriffsebene der Eigenschaft als Ganzes an. Andernfalls wird die Zugriffsebene der Get- und Set-Zugriffsmethoden von den Variablen `getAccess` und `setAccess` angezeigt.
 

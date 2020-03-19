@@ -8,10 +8,10 @@ helpviewer_keywords:
 - registering assemblies
 ms.assetid: e190e342-36ef-4651-a0b4-0e8c2c0281cb
 ms.openlocfilehash: 45b4c6c08d3afb948444a8c97dc32bd41f2615ce
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73104948"
 ---
 # <a name="regasmexe-assembly-registration-tool"></a>Regasm.exe (Assembly Registration-Tool)
@@ -30,11 +30,11 @@ regasm assemblyFile [options]
 
 ## <a name="parameters"></a>Parameter
 
-|Parameter|BESCHREIBUNG|
+|Parameter|Beschreibung|
 |---------------|-----------------|
 |*assemblyFile*|Die in COM zu registrierende Assembly.|
 
-|Option|BESCHREIBUNG|
+|Option|Beschreibung|
 |------------|-----------------|
 |**/codebase**|Es wird ein Codebase-Eintrag in der Registrierung erstellt. Mit dem Codebase-Eintrag wird der Dateipfad für eine Assembly festgelegt, die nicht im globalen Assemblycache installiert ist. Die Option sollte nicht angegeben werden, wenn Sie die zu registrierende Assembly später im globalen Assemblycache installieren. Bei dem mit der **/codebase**-Option festgelegten *assemblyFile*-Argument muss es sich um eine [Assembly mit starkem Namen](../../standard/assembly/strong-named.md) handeln.|
 |**/registered**|Mit dieser Option wird angegeben, dass dieses Tool nur auf bereits registrierte Typbibliotheken verweist.|
@@ -48,9 +48,9 @@ regasm assemblyFile [options]
 |**/?** oder **/help**|Zeigt Befehlssyntax und Optionen für das Tool an.|
 
 > [!NOTE]
-> Bei den Befehlszeilenoptionen für "Regasm.exe" wird die Groß- und Kleinschreibung nicht beachtet. Geben Sie die Option einfach so weit an, dass eine eindeutige Identifizierung möglich ist. Z.B.: **/n** entspricht **/nologo** und **/t:** *outfile.tlb* entspricht **/tlb:** *outfile.tlb*.
+> Bei den Befehlszeilenoptionen für "Regasm.exe" wird die Groß- und Kleinschreibung nicht beachtet. Geben Sie die Option einfach so weit an, dass eine eindeutige Identifizierung möglich ist. Beispiel: **/n** entspricht **/nologo** und **/t:** *outfile.tlb* entspricht **/tlb:** *outfile.tlb*.
 
-## <a name="remarks"></a>Anmerkungen
+## <a name="remarks"></a>Hinweise
 
 Mit der Option **/regfile** können Sie eine REG-Datei mit den Registrierungseinträgen generieren, anstatt die Änderungen direkt in der Registrierung vorzunehmen. Sie können die Registrierung auf einem Computer aktualisieren, indem Sie die REG-Datei mit dem Registrierungs-Editor (Regedit.exe) importieren. Beachten Sie, dass die REG-Datei keine Aktualisierungen der Registrierung enthält, die durch benutzerdefinierte Registrierungsfunktionen vorgenommen werden können.  Beachten Sie außerdem, dass die Option **/regfile** nur Registrierungseinträge für verwaltete Klassen ausgibt.  Diese Option gibt keine Einträge für `TypeLibID`s oder `InterfaceID`s aus.
 

@@ -1,18 +1,18 @@
 ---
-ms.openlocfilehash: dc5f608dc9eb4635e1282a9ca5e15ff1bf7d0e0d
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: 711b51c590be149545fda3130148e2bcaef8be4f
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77449553"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78262130"
 ---
 ### <a name="private-fields-added-to-built-in-struct-types"></a>Private Felder, die integrierten Strukturtypen hinzugefügt werden
 
-In [Verweisassemblys](../../../../docs/standard/assembly/reference-assemblies.md) wurden integrierten Strukturtypen private Felder hinzugefügt. Daher müssen Strukturtypen in C# immer mit dem [new-Operator](../../../../docs/csharp/language-reference/operators/new-operator.md) oder [Standardliteral](../../../../docs/csharp/language-reference/operators/default.md#default-literal) oder durch Initialisieren jedes der privaten Felder instanziiert werden.
+Private Felder wurden zu [bestimmten Strukturtypen](#affected-apis) in [Referenzassemblys](../../../../docs/standard/assembly/reference-assemblies.md) hinzugefügt. Folglich müssen diese Strukturtypen in C# immer unter Verwendung des [neuen Operators](../../../../docs/csharp/language-reference/operators/new-operator.md) oder [Standardliterals](../../../../docs/csharp/language-reference/operators/default.md#default-literal) instanziiert werden.
 
 #### <a name="change-description"></a>Änderungsbeschreibung
 
-In .NET Core 2.0 und früheren Versionen konnten einige integrierte Strukturtypen (z. B. <xref:System.ConsoleKeyInfo>) instanziiert werden, ohne den `new`-Operator oder das [Standardliteral](../../../../docs/csharp/language-reference/operators/default.md#default-literal) in C# zu verwenden. Dies war darauf zurückzuführen, dass die vom C#-Compiler verwendeten [Verweisassemblys](../../../../docs/standard/assembly/reference-assemblies.md) nicht die privaten Felder für die Strukturen enthielten. Alle privaten Felder für .NET-Strukturtypen werden den Verweisassemblys ab .NET Core 2.1 hinzugefügt.
+In .NET Core 2.0 und früheren Versionen konnten einige bereitgestellte Strukturtypen (z. B. <xref:System.ConsoleKeyInfo>) instanziiert werden, ohne den `new`-Operator oder das [Standardliteral](../../../../docs/csharp/language-reference/operators/default.md#default-literal) in C# zu verwenden. Dies war darauf zurückzuführen, dass die vom C#-Compiler verwendeten [Verweisassemblys](../../../../docs/standard/assembly/reference-assemblies.md) nicht die privaten Felder für die Strukturen enthielten. Alle privaten Felder für .NET-Strukturtypen werden den Verweisassemblys ab .NET Core 2.1 hinzugefügt.
 
 Der folgende C# Code wird z. B. in .NET Core 2.0 kompiliert, nicht jedoch in .NET Core 2.1:
 
@@ -49,16 +49,6 @@ ConsoleKeyInfo key = default;    // Struct type.
 
 if (key.ToString() == "y")
     Console.WriteLine("Yes!");
-```
-
-```csharp
-ConsoleKeyInfo[] keys = new ConsoleKeyInfo[5];    // Array of structs.
-
-for (int i = 0; i < keys.Length; i++)
-{
-    // Initialize each array element with the new operator.
-    keys[i] = new ConsoleKeyInfo();
-}
 ```
 
 #### <a name="category"></a>Kategorie

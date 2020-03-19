@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Manifest Generation and Editing tool
 - Mage.exe
 ms.assetid: 77dfe576-2962-407e-af13-82255df725a1
-ms.openlocfilehash: 3752ac7108a9fcd55b61b32b889a717ef7c0faff
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: b04fda81ae51462d9e686585de1477b4c9af4b26
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74714474"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79180391"
 ---
 # <a name="mageexe-manifest-generation-and-editing-tool"></a>Mage.exe (Tool zum Generieren und Bearbeiten von Manifesten)
 
@@ -32,20 +32,20 @@ Mage [commands] [commandOptions]
 
 In der folgenden Tabelle werden die von *Mage.exe* unterstützten Befehle angezeigt. Weitere Informationen zu den Optionen, die diese Befehle unterstützen, finden Sie unter [Befehlsoptionen für "New" und "Update"](#new-and-update-command-options) und ["Sign"-Befehlsoptionen](#sign-command-options).
 
-|Befehl|BESCHREIBUNG|
+|Befehl|Beschreibung|
 |-------------|-----------------|
 |**-cc, ClearApplicationCache**|Löscht den heruntergeladenen Anwendungscache aller Anwendungen, die nur online ausgeführt werden.|
-|**-n, -New** *Dateityp [neue Optionen]*|Erstellt eine neue Datei des angegebenen Typs. Gültige Typen sind:<br /><br /> -   `Deployment`: Erstellt ein neues Bereitstellungsmanifest.<br />-   `Application`: Erstellt ein neues Anwendungsmanifest.<br /><br /> Wenn Sie mit diesem Befehl keine weiteren Parameter angeben, wird eine Datei des entsprechenden Typs mit den zugehörigen Standardtags und Attributwerten erstellt.<br /><br /> Verwenden Sie die Option **-ToFile** (siehe folgende Tabelle), um den Dateinamen und den Pfad der neuen Datei anzugeben.<br /><br /> Verwenden Sie die Option **-FromDirectory** (siehe folgende Tabelle), um ein Anwendungsmanifest mit allen Assemblys für eine dem \<dependency>-Abschnitt des Manifests hinzugefügte Anwendung zu erstellen.|
+|**-n, -New** *fileType [newOptions]*|Erstellt eine neue Datei des angegebenen Typs. Gültige Typen sind:<br /><br /> -   `Deployment`: Erstellt ein neues Bereitstellungsmanifest.<br />-   `Application`: Erstellt ein neues Anwendungsmanifest.<br /><br /> Wenn Sie mit diesem Befehl keine weiteren Parameter angeben, wird eine Datei des entsprechenden Typs mit den zugehörigen Standardtags und Attributwerten erstellt.<br /><br /> Verwenden Sie die Option **-ToFile** (siehe folgende Tabelle), um den Dateinamen und den Pfad der neuen Datei anzugeben.<br /><br /> Verwenden Sie die Option **-FromDirectory** (siehe folgende Tabelle), um ein Anwendungsmanifest mit allen Assemblys für eine dem \<dependency>-Abschnitt des Manifests hinzugefügte Anwendung zu erstellen.|
 |**-u, -Update** *[filePath] [updateOptions]*|Nimmt mindestens eine Änderung an einer Manifestdatei vor. Es ist nicht erforderlich, den Typ der Datei anzugeben, die Sie bearbeiten. "Mage.exe" analysiert die Datei mithilfe von Heuristiken und ermittelt, ob es sich um ein Bereitstellungsmanifest oder ein Anwendungsmanifest handelt.<br /><br /> Wenn Sie eine Datei bereits mit einem Zertifikat signiert haben, entfernt **-Update** den Block mit der Schlüsselsignatur. Der Grund hierfür liegt darin, dass die Schlüsselsignatur einen Hash für die Datei enthält und der Hash durch die Änderung der Datei ungültig wird.<br /><br /> Verwenden Sie die Option **-ToFile** (siehe folgende Tabelle), um einen neuen Dateinamen und Pfad anzugeben, anstatt die vorhandene Datei zu überschreiben.|
 |**-s, -Sign** `[signOptions]`|Verwendet ein Schlüsselpaar oder ein X509-Zertifikat, um eine Datei zu signieren. Signaturen werden als XML-Elemente in die Dateien eingefügt.<br /><br /> Beim Signieren eines Manifests, das einen **-TimestampUri** -Wert angibt, müssen Sie mit dem Internet verbunden sein.|
-|**-Ver-stellen Sie sicher** *[Manifest-Dateiname]*|Überprüft, ob das Manifest ordnungsgemäß signiert ist. Kann nicht mit anderen Befehlen kombiniert werden. <br/><br/>**Verfügbar in NET Framework 4.7 und neueren Versionen.**|
-|**-h, -?, -Help** *[ausführlich]*|Beschreibt alle verfügbaren Befehle und die zugehörigen Optionen. Geben Sie `verbose` an, um ausführliche Hilfe aufzurufen.|
+|**-ver, -Verify** *[manifest-filename]*|Überprüft, ob das Manifest ordnungsgemäß signiert ist. Kann nicht mit anderen Befehlen kombiniert werden. <br/><br/>**Verfügbar in NET Framework 4.7 und neueren Versionen.**|
+|**-h, -?, -Help** *[verbose]*|Beschreibt alle verfügbaren Befehle und die zugehörigen Optionen. Geben Sie `verbose` an, um ausführliche Hilfe aufzurufen.|
 
 ## <a name="new-and-update-command-options"></a>Befehlsoptionen für "New" und "Update"
 
 In der folgenden Tabelle werden die Optionen aufgeführt, die von den Befehlen `-New` und `-Update` unterstützt werden:
 
-|Optionen|Standardwert|Gilt für|BESCHREIBUNG|
+|Optionen|Standardwert|Gilt für|Beschreibung|
 |-------------|-------------------|----------------|-----------------|
 |**-a, -Algorithm**|sha1RSA|Anwendungsmanifeste,<br /><br /> Bereitstellungsmanifeste|Gibt den Algorithmus an, mit dem Abhängigkeitsdigests generiert werden sollen. Der Wert muss "sha256RSA" oder "sha1RSA" lauten.<br /><br /> Verwenden Sie diese Option mit dem Befehl "-Update". Diese Option wird bei der Verwendung des Befehls "-Sign" ignoriert.|
 |**-appc, -AppCodeBase** `manifestReference`||Bereitstellungsmanifeste|Fügt einen URL- oder Dateipfadverweis in die Anwendungsmanifestdatei ein. Dieser Wert muss der vollständige Pfad zum Anwendungsmanifest sein.|
@@ -76,7 +76,7 @@ In der folgenden Tabelle werden die Optionen aufgeführt, die von den Befehlen `
 
 In der folgenden Tabelle werden die Optionen angezeigt, die von dem Befehl `-Sign` unterstützt werden und für alle Dateitypen gelten.
 
-|Optionen|BESCHREIBUNG|
+|Optionen|Beschreibung|
 |-------------|-----------------|
 |**-cf, -CertFile** `filePath`|Gibt den Speicherort eines digitalen Zertifikats zum Signieren eines Manifests an. Diese Option kann in Verbindung mit der Option **-Password** verwendet werden, wenn ein Zertifikat ein Kennwort für Personal Information Exchange (PFX)-Dateien erfordert. Ab .NET Framework 4.7 ist, wenn die Datei keinen privaten Schlüssel enthält, eine Kombination der Optionen **-CryptoProvider** und **-KeyContainer** erforderlich.<br/><br/>Ab .NET Framework 4.6.2 signiert *Mage.exe* Manifeste mit CNG- sowie CAPI-Zertifikaten.|
 |**-ch, -CertHash** `hashSignature`|Der Hash eines im persönlichen Zertifikatspeicher des Clientcomputers gespeicherten digitalen Zertifikats. Dieser entspricht der Eigenschaft "Fingerabdruck" eines digitalen Zertifikats, das in der Zertifikatkonsole von Windows angezeigt wird.<br /><br /> `hashSignature` kann groß oder klein geschrieben werden und als einzelne Zeichenfolge oder so angegeben werden, dass die einzelnen Oktette des Fingerabdrucks durch Leerzeichen getrennt sind und der vollständige Fingerabdruck in Anführungszeichen eingeschlossen ist.|
@@ -85,7 +85,7 @@ In der folgenden Tabelle werden die Optionen angezeigt, die von dem Befehl `-Sig
 |**-pwd, -Password** `passwd`|Das Kennwort, das zum Signieren eines Manifests mit einem digitalen Zertifikat verwendet wird. Muss zusammen mit der Option **-CertFile** verwendet werden.|
 |**-t, -ToFile** `filePath`|Gibt den Ausgabepfad der Datei an, die erstellt oder geändert wurde.|
 
-## <a name="remarks"></a>Anmerkungen
+## <a name="remarks"></a>Hinweise
 
 Bei allen Argumenten für *Mage.exe* wird nicht zwischen Groß- und Kleinschreibung unterschieden. Befehlen und Optionen kann ein Strich (-) oder ein Schrägstrich (/) als Präfix vorangestellt werden.
 

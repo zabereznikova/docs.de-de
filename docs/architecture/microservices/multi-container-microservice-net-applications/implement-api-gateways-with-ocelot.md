@@ -1,13 +1,13 @@
 ---
 title: Implementieren von API-Gateways mit Ocelot
 description: Hier erfahren Sie, wie Sie API-Gateways mit Ocelot implementieren und Ocelot in einer containerbasierten Umgebung verwenden.
-ms.date: 01/30/2020
-ms.openlocfilehash: 0eb834829a418cfa1ccdf13c5fc8849f6855c4ba
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.date: 03/02/2020
+ms.openlocfilehash: 28b9ca22d232baf3545d71b876cecf72fea05c92
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77502413"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78846945"
 ---
 # <a name="implement-api-gateways-with-ocelot"></a>Implementieren von API-Gateways mit Ocelot
 
@@ -140,7 +140,7 @@ Direkte Kommunikation mit dem Microservice, in diesem Beispiel über den externe
 
 Bei Ocelot handelt es sich im Grunde um mehrere Middlewares, die Sie in einer bestimmten Reihenfolge anwenden können.
 
-Ocelot wurde speziell nur für ASP.NET Core entwickelt. Es ist für `netstandard2.0` vorgesehen, sodass es überall verwendet werden kann, wo .NET-Standard 2.0 unterstützt wird, einschließlich der Runtime für .NET Core 2.0 und für .NET Framework 4.6.1 und höher.
+Ocelot wurde speziell nur für ASP.NET Core entwickelt. Die neueste Version des Pakets ist auf `.NETCoreApp 3.1` ausgerichtet und daher nicht für .NET Framework-Anwendungen geeignet.
 
 Installieren Sie Ocelot und die zugehörigen Abhängigkeiten in Ihrem ASP.NET Core-Projekt mit dem [NuGet-Paket für Ocelot](https://www.nuget.org/packages/Ocelot/) über Visual Studio.
 

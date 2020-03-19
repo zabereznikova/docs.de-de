@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - is keyword [C#]
 ms.assetid: bc62316a-d41f-4f90-8300-c6f4f0556e43
-ms.openlocfilehash: 1a1f539e80f8d843f40640fa798cf6122f316a9f
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: e64b690482419963a92764b2c97a42dbb231fbfc
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75715237"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79398304"
 ---
 # <a name="is-c-reference"></a>is (C#-Referenz)
 
@@ -36,7 +36,7 @@ Wenn Sie das Typmuster verwenden, um einen Musterabgleich durchzuführen, prüft
    expr is type varname
 ```
 
-Hier ist *expr* ein Ausdruck, der eine Instanz eines beliebigen Typen ergibt, *Typ* ist der Name des Typen, in den das Ergebnis von *expr* konvertiert werden soll, und *varname* ist das Objekt, in das das Ergebnis von *expr* konvertiert wird, wenn der `is`-Test `true` ist. 
+Hier ist *expr* ein Ausdruck, der eine Instanz eines beliebigen Typen ergibt, *Typ* ist der Name des Typen, in den das Ergebnis von *expr* konvertiert werden soll, und *varname* ist das Objekt, in das das Ergebnis von *expr* konvertiert wird, wenn der `is`-Test `true` ist.
 
 Der Ausdruck `is` ist `true`, wenn *expr* nicht `null` ist und eine der folgenden Aussagen zutrifft:
 
@@ -106,15 +106,21 @@ Das folgende Beispiel zeigt einen Vergleich von `null`-Überprüfungen:
 
 ### <a name="var-pattern"></a>var-Muster
 
-Das `var`-Muster ist ein Catch-All-Muster für jeden Typ bzw. jeden Wert. Der Wert von *expr* wird immer einer lokalen Variablen zugewiesen, deren Typ dem Kompilierzeittyp von *expr* entspricht. Das Ergebnis des `is`-Ausdrucks lautet immer `true`. Die Syntax lautet:
+Eine Musterübereinstimmung mit einem `var`-Muster wird immer erfolgreich ausgeführt. Die Syntax lautet:
 
 ```csharp
    expr is var varname
 ```
 
-In folgendem Beispiel wird das Variablenmuster verwendet, um einen Ausdruck einer Variablen mit dem Namen `obj` zuzuweisen. Dann zeigt es den Wert und den Typ von `obj` an.
+Hier wird der Wert von *expr* immer einer lokalen Variablen mit dem Namen *varname* zugewiesen. *varname* ist eine Variable desselben Typs wie der Kompilierzeittyp *expr*.
+
+Wenn *expr* zu `null` ausgewertet wird, ergibt der `is`-Ausdruck `true` und weist `null` zu *varname* zu. Das var-Muster ist eine der wenigen Verwendungen von `is`, die `true` für einen `null`-Wert erzeugt.
+
+Sie können das `var`-Muster verwenden, um eine temporäre Variable innerhalb eines booleschen Ausdrucks zu erstellen, wie das folgende Beispiel zeigt:
 
 [!code-csharp[is#8](../../../../samples/snippets/csharp/language-reference/keywords/is/is-var-pattern8.cs#8)]
+
+Im vorhergehenden Beispiel wird die temporäre Variable verwendet, um das Ergebnis einer aufwendigen Operation zu speichern. Die Variable kann dann mehrfach verwendet werden.
 
 ## <a name="c-language-specification"></a>C#-Sprachspezifikation
   

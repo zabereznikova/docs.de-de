@@ -2,12 +2,12 @@
 title: Befehl „dotnet tool run“
 description: Mit dem Befehl „dotnet tool run“ wird ein lokales Tool aufgerufen.
 ms.date: 02/14/2020
-ms.openlocfilehash: 76830b8a8088fbf21f14ab0722b9547eabde7ba4
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: a088cd0b7f4bba014234a8189a42a63aa6d88f4e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78156958"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78847845"
 ---
 # <a name="dotnet-tool-run"></a>dotnet tool run
 
@@ -21,6 +21,7 @@ ms.locfileid: "78156958"
 
 ```dotnetcli
 dotnet tool run <COMMAND NAME>
+
 dotnet tool run <-h|--help>
 ```
 
@@ -49,3 +50,4 @@ Der `dotnet tool run`-Befehl durchsucht Manifestdateien des Tools, die sich im G
 ## <a name="see-also"></a>Siehe auch
 
 - [.NET Core-Tools](global-tools.md)
+- [Tutorial: Erstellen und Verwenden eines lokalen .NET Core-Tools mithilfe der .NET Core-CLI](local-tools-how-to-use.md)

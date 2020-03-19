@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Type Library Exporter
 - type libraries [.NET Framework], exporting
 ms.assetid: a487d61b-d166-467b-a7ca-d8b52fbff42d
-ms.openlocfilehash: f421a9865e457a4e8e08644671efb55c731db28b
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 1d2380ff607836b5dc15e7194b90dd3a53d1d2c0
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73104342"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79180269"
 ---
 # <a name="tlbexpexe-type-library-exporter"></a>Tlbexp.exe (Type Library Exporter-Tool)
 Das Type Library Exporter-Tool generiert eine Typbibliothek, die die in einer Assembly der Common Language Runtime definierten Typen beschreibt.  
@@ -30,31 +30,31 @@ tlbexp assemblyName [options]
   
 ## <a name="parameters"></a>Parameter  
   
-|Argument|BESCHREIBUNG|  
+|Argument|Beschreibung|  
 |--------------|-----------------|  
 |*assemblyName*|Die Assembly, für die eine Typbibliothek exportiert werden soll.|  
   
-|Option|BESCHREIBUNG|  
+|Option|Beschreibung|  
 |------------|-----------------|  
-|**/asmpath:** *verzeichnis*|Gibt den Speicherort an, der nach Assemblys durchsucht werden soll. Wenn Sie diese Option verwenden, müssen Sie die Speicherorte, die nach Assemblys durchsucht werden sollen, auf die verwiesen wird, explizit angeben, einschließlich des aktuellen Verzeichnisses.<br /><br /> Wenn Sie die **asmpath**-Option verwenden, sucht das Type Library Exporter-Tool nicht nach einer Assembly im globalen Assemblycache (GAC).|  
+|**/asmpath:** *directory*|Gibt den Speicherort an, der nach Assemblys durchsucht werden soll. Wenn Sie diese Option verwenden, müssen Sie die Speicherorte, die nach Assemblys durchsucht werden sollen, auf die verwiesen wird, explizit angeben, einschließlich des aktuellen Verzeichnisses.<br /><br /> Wenn Sie die **asmpath**-Option verwenden, sucht das Type Library Exporter-Tool nicht nach einer Assembly im globalen Assemblycache (GAC).|  
 |**/help**|Zeigt Befehlssyntax und Optionen für das Tool an.|  
-|**/names:** *dateiname*|Legt die Großschreibung von Namen in einer Typbibliothek fest. Das *filename*-Argument entspricht einer Textdatei. Jede Zeile in der Datei legt die Großschreibung eines in der Typbibliothek enthaltenen Namens fest.|  
+|**/names:** *filename*|Legt die Großschreibung von Namen in einer Typbibliothek fest. Das *filename*-Argument entspricht einer Textdatei. Jede Zeile in der Datei legt die Großschreibung eines in der Typbibliothek enthaltenen Namens fest.|  
 |**/nologo**|Unterdrückt die Anzeige des Startbanners von Microsoft.|  
 |**/oldnames**|Erzwingt, dass "Tlbexp.exe" ergänzte Typnamen exportiert, wenn ein Typnamenkonflikt vorliegt. Beachten Sie, dass dies das Standardverhalten in den Vorgängerversionen von .NET Framework Version 2.0 war.|  
-|**/out:** *datei*|Gibt den Namen der zu generierenden Typbibliotheksdatei an. Wenn Sie diese Option nicht angeben, generiert "Tlbexp.exe" eine Typbibliothek mit dem Namen der Assembly (der tatsächliche Assemblyname, der nicht mit dem Namen der Datei übereinstimmen muss, in der die Assembly enthalten ist) und einer Erweiterung ".tlb".|  
+|**/out:** *file*|Gibt den Namen der zu generierenden Typbibliotheksdatei an. Wenn Sie diese Option nicht angeben, generiert "Tlbexp.exe" eine Typbibliothek mit dem Namen der Assembly (der tatsächliche Assemblyname, der nicht mit dem Namen der Datei übereinstimmen muss, in der die Assembly enthalten ist) und einer Erweiterung ".tlb".|  
 |**/silence:** `warningnumber`|Unterdrückt die Anzeige der angegebenen Warnung. Diese Option kann nicht zusammen mit **/silent** verwendet werden.|  
 |**/silent**|Unterdrückt die Anzeige von Erfolgsmeldungen. Diese Option kann nicht zusammen mit **/silence** verwendet werden.|  
-|**/tlbreference:** *typbibliothekname*|Erzwingt, dass "Tlbexp.exe" Typbibliotheksverweise explizit auflöst, ohne auf die Registrierung zurückzugreifen. Wenn beispielsweise Assembly B auf Assembly A verweist, können Sie diese Option verwenden, um einen expliziten Typbibliotheksverweis anzugeben, statt auf die in der Registrierung angegebene Typbibliothek zurückzugreifen. "Tlbexp.exe" führt eine Versionsüberprüfung durch, um sicherzustellen, dass die Typbibliotheksversion mit der Assemblyversion übereinstimmt. Andernfalls wird ein Fehler generiert.<br /><br /> Beachten Sie, dass die **tlbreference**-Option dennoch auf die Registrierung zurückgreift, wenn das <xref:System.Runtime.InteropServices.ComImportAttribute>-Attribut auf eine Schnittstelle angewendet wird, die anschließend von einem anderen Typ implementiert wird.|  
-|**/tlbrefpath:** *pfad*|Vollqualifizierter Pfad zu einer Typbibliothek, auf die verwiesen wird.|  
+|**/tlbreference:** *typelibraryname*|Erzwingt, dass "Tlbexp.exe" Typbibliotheksverweise explizit auflöst, ohne auf die Registrierung zurückzugreifen. Wenn beispielsweise Assembly B auf Assembly A verweist, können Sie diese Option verwenden, um einen expliziten Typbibliotheksverweis anzugeben, statt auf die in der Registrierung angegebene Typbibliothek zurückzugreifen. "Tlbexp.exe" führt eine Versionsüberprüfung durch, um sicherzustellen, dass die Typbibliotheksversion mit der Assemblyversion übereinstimmt. Andernfalls wird ein Fehler generiert.<br /><br /> Beachten Sie, dass die **tlbreference**-Option dennoch auf die Registrierung zurückgreift, wenn das <xref:System.Runtime.InteropServices.ComImportAttribute>-Attribut auf eine Schnittstelle angewendet wird, die anschließend von einem anderen Typ implementiert wird.|  
+|**/tlbrefpath:** *path*|Vollqualifizierter Pfad zu einer Typbibliothek, auf die verwiesen wird.|  
 |**/win32**|Wenn auf einem 64-Bit-Computer kompiliert wird, gibt diese Option an, dass "Tlbexp.exe" eine 32-Bit-Typbibliothek generiert.|  
 |**/win64**|Wenn auf einem 32-Bit-Computer kompiliert wird, gibt diese Option an, dass „tlbexp.exe“ eine 64-Bit-Typbibliothek generiert.|  
 |**/verbose**|Gibt den ausführlichen Modus an. Es wird eine Liste aller Assemblys angezeigt, auf die verwiesen wird und für die eine Typbibliothek generiert werden muss.|  
 |**/?**|Zeigt Befehlssyntax und Optionen für das Tool an.|  
   
 > [!NOTE]
-> Bei den Befehlszeilenoptionen für "Tlbexp.exe" wird die Groß- und Kleinschreibung nicht beachtet, und die Optionen können in beliebiger Reihenfolge angegeben werden. Geben Sie die Option einfach so weit an, dass eine eindeutige Identifizierung möglich ist. Z.B.: **/n** entspricht **/nologo** und **/o:** *outfile.tlb* entspricht **/out:** *outfile.tlb*.  
+> Bei den Befehlszeilenoptionen für "Tlbexp.exe" wird die Groß- und Kleinschreibung nicht beachtet, und die Optionen können in beliebiger Reihenfolge angegeben werden. Geben Sie die Option einfach so weit an, dass eine eindeutige Identifizierung möglich ist. Beispiel: **/n** entspricht **/nologo** und **/o:** *outfile.tlb* entspricht **/out:** *outfile.tlb*.  
   
-## <a name="remarks"></a>Anmerkungen  
+## <a name="remarks"></a>Hinweise  
  "Tlbexp.exe" generiert eine Typbibliothek, die Definitionen der in der Assembly definierten Typen enthält. Anwendungen wie Visual Basic 6.0 können mithilfe der generierten Typbibliothek Bindungen zu den in der Assembly definierten .NET-Typen erstellen.  
   
 > [!IMPORTANT]
@@ -79,7 +79,7 @@ tlbexp assemblyName [options]
   
  Die folgende Typbibliothek wird generiert:  
   
-```cpp 
+```cpp
 [id(0x60020004)]  
 HRESULT StructUnkSafe([out, retval] SAFEARRAY(IUnknown*)* pRetVal);  
 [id(0x60020005)]  

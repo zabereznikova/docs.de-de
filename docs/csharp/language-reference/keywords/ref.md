@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - parameters [C#], ref
 - ref keyword [C#]
-ms.openlocfilehash: 25c74317ce9033ef10735ee0087f275632b6bd17
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 05f0bd8566851678203a3f064b96bfff7dee18b6
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75715184"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79398130"
 ---
 # <a name="ref-c-reference"></a>ref (C#-Referenz)
 
@@ -41,7 +41,7 @@ Member einer Klasse können keine Signaturen haben, die sich nur durch `ref`, `i
 ```csharp
 class CS0663_Example
 {
-    // Compiler error CS0663: "Cannot define overloaded 
+    // Compiler error CS0663: "Cannot define overloaded
     // methods that differ only on ref and out".
     public void SampleMethod(out int i) { }
     public void SampleMethod(ref int i) { }
@@ -115,9 +115,11 @@ Beachten Sie, dass das `ref`-Schlüsselwort in beiden Beispielen an beiden Stell
 
 Beginnend mit C# 7.3 kann die Iterationsvariable der `foreach`-Anweisung eine lokale ref-Variable oder schreibgeschützte lokale ref-Variable sein. Weitere Informationen finden Sie im Artikel zur [foreach-Anweisung](foreach-in.md).
 
+Ebenfalls beginnend mit C# 7.3 können Sie eine lokale oder schreibgeschützte lokale ref-Variable mit dem [ref-Zuweisungsoperator](../operators/assignment-operator.md#ref-assignment-operator) neu zuweisen.
+
 ## <a name="ref-readonly-locals"></a>Lokale schreibgeschützte ref-Variable
 
-Mit einer lokalen schreibgeschützten ref-Variablen können Sie auf Werte verweisen, die von der Methode oder Eigenschaft zurückgegeben werden, die `ref readonly` in der Signatur enthält und `return ref` verwendet. Eine `ref readonly`-Variable kombiniert die Eigenschaften einer lokalen `ref`-Variablen mit einer `readonly`-Variablen: Sie ist ein Alias für den Speicher, dem sie zugewiesen ist, und kann nicht geändert werden. 
+Mit einer lokalen schreibgeschützten ref-Variablen können Sie auf Werte verweisen, die von der Methode oder Eigenschaft zurückgegeben werden, die `ref readonly` in der Signatur enthält und `return ref` verwendet. Eine `ref readonly`-Variable kombiniert die Eigenschaften einer lokalen `ref`-Variablen mit einer `readonly`-Variablen: Sie ist ein Alias für den Speicher, dem sie zugewiesen ist, und kann nicht geändert werden.
 
 ## <a name="a-ref-returns-and-ref-locals-example"></a>Beispiel für ref-Rückgaben und lokale ref-Variablen
 
@@ -137,7 +139,7 @@ Das Ziel, einen `ref struct`-Typ als im Stapel zugewiesene Variable zu behalten,
 
 - Sie können für `ref struct` kein Boxing durchführen. Sie können einen `ref struct`-Typ nicht einer Variablen vom Typ `object`, `dynamic` oder einem Schnittstellentyp zuweisen.
 - `ref struct`-Typen können keine Schnittstellen implementieren.
-- Sie können `ref struct` nicht als Feldmember einer Klasse oder einer normalen Struktur deklarieren. Dies betrifft auch das Deklarieren einer automatisch implementierten Eigenschaft, die ein vom Compiler generiertes Unterstützungsfeld erstellt. 
+- Sie können `ref struct` nicht als Feldmember einer Klasse oder einer normalen Struktur deklarieren. Dies betrifft auch das Deklarieren einer automatisch implementierten Eigenschaft, die ein vom Compiler generiertes Unterstützungsfeld erstellt.
 - Sie können keine lokalen Variablen deklarieren, bei denen es sich um `ref struct`-Typen in asynchronen Methoden handelt. Sie können sie in synchronen Methoden deklarieren, die <xref:System.Threading.Tasks.Task>, <xref:System.Threading.Tasks.Task%601> oder `Task`-ähnliche Typen zurückgeben.
 - Sie können lokale `ref struct`-Variablen nicht in Iteratoren deklarieren.
 - Sie können `ref struct`-Variablen nicht in Lambda-Ausdrücken oder lokalen Funktionen erfassen.
@@ -155,7 +157,6 @@ Sie können Modifizierer zum Deklarieren einer Struktur als `readonly ref` kombi
 - [Schreiben von sicherem und effizientem Code](../../write-safe-efficient-code.md)
 - [Ref-Rückgabetypen und lokale ref-Variablen](../../programming-guide/classes-and-structs/ref-returns.md)
 - [Bedingter ref-Ausdruck](../operators/conditional-operator.md#conditional-ref-expression)
-- [ref-Zuweisungsoperator](../operators/assignment-operator.md#ref-assignment-operator)
 - [Übergeben von Parametern](../../programming-guide/classes-and-structs/passing-parameters.md)
 - [Methodenparameter](method-parameters.md)
 - [C#-Referenz](../index.md)

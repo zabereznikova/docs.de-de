@@ -14,10 +14,10 @@ helpviewer_keywords:
 - reporting installation progress
 ms.assetid: 3f9d0533-f895-4897-b4ea-528284e0241d
 ms.openlocfilehash: caca946617c681ce6516b7184a9ea506cc67158d
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73105071"
 ---
 # <a name="installutilexe-installer-tool"></a>Installutil.exe (Installer-Tool)
@@ -36,7 +36,7 @@ installutil [/u[ninstall]] [options] assembly [[options] assembly] ...
 
 ## <a name="parameters"></a>Parameter
 
-|Argument|BESCHREIBUNG|
+|Argument|Beschreibung|
 |--------------|-----------------|
 |`assembly`|Der Dateiname der Assembly, in der die Installationsprogrammkomponenten ausgeführt werden sollen. Lassen Sie diesen Parameter aus, wenn Sie den starken Namen der Assembly angeben möchten, indem Sie die `/AssemblyName`-Option verwenden.|
 
@@ -44,10 +44,10 @@ installutil [/u[ninstall]] [options] assembly [[options] assembly] ...
 
 ## <a name="options"></a>Optionen
 
-|Option|BESCHREIBUNG|
+|Option|Beschreibung|
 |------------|-----------------|
-|`/h[elp]`<br /><br /> Oder<br /><br /> `/?`|Zeigt Befehlssyntax und Optionen für das Tool an.|
-|`/help` *assembly*<br /><br /> Oder<br /><br /> `/?` *assembly*|Zeigt zusätzliche Optionen, die von einzelnen Installationsprogrammen innerhalb der angegebenen Assembly erkannt werden, zusammen mit der Befehlssyntax und Optionen für "InstallUtil.exe" an. Mit dieser Option wird dem Hilfetext von "InstallUtil.exe" der von der <xref:System.Configuration.Install.Installer.HelpText%2A?displayProperty=nameWithType>-Eigenschaft aller Installationsprogrammkomponenten zurückgegebene Text hinzugefügt.|
+|`/h[elp]`<br /><br /> - oder -<br /><br /> `/?`|Zeigt Befehlssyntax und Optionen für das Tool an.|
+|`/help` *assembly*<br /><br /> - oder -<br /><br /> `/?` *assembly*|Zeigt zusätzliche Optionen, die von einzelnen Installationsprogrammen innerhalb der angegebenen Assembly erkannt werden, zusammen mit der Befehlssyntax und Optionen für "InstallUtil.exe" an. Mit dieser Option wird dem Hilfetext von "InstallUtil.exe" der von der <xref:System.Configuration.Install.Installer.HelpText%2A?displayProperty=nameWithType>-Eigenschaft aller Installationsprogrammkomponenten zurückgegebene Text hinzugefügt.|
 |`/AssemblyName` "*assemblyName*<br /><br /> ,Version=*major.minor.build.revision*<br /><br /> ,Culture=*locale*<br /><br /> ,PublicKeyToken=*publicKeyToken*"|Gibt den starken Namen einer Assembly an, die im globalen Assemblycache registriert werden muss. Der Assemblyname muss mit der Version, Kultur und dem öffentlichen Schlüsseltoken der Assembly vollständig qualifiziert werden. Der vollqualifizierte Name muss in Anführungszeichen stehen.<br /><br /> "myAssembly, Culture=neutral, PublicKeyToken=0038abc9deabfle5, Version=4.0.0.0" ist beispielsweise ein vollqualifizierter Assemblyname.|
 |`/InstallStateDir=[` *directoryName* `]`|Gibt das Verzeichnis der INSTALLSTATE-Datei an, die die Daten enthält, die verwendet werden, um die Assembly zu deinstallieren. Das Standardverzeichnis ist das Verzeichnis, das die Assembly enthält.|
 |`/LogFile=`[*filename*]|Gibt den Namen der Protokolldatei an, in der der Installationsverlauf aufgezeichnet wird. Wenn die Option `/LogFile` fehlt, wird standardmäßig die Protokolldatei „*assemblyname*.InstallLog“ erstellt. Wenn *filename* nicht angegeben wird, wird keine Protokolldatei generiert.|
@@ -69,7 +69,7 @@ Alle Optionen und Befehlszeilenparameter werden in die Installationsprotokolldat
 > [!IMPORTANT]
 > In einigen Fällen können an das Installationsprogramm übergebene Parameter vertrauliche oder personenbezogene Informationen enthalten, die standardmäßig in eine Nur-Text-Protokolldatei geschrieben werden. Um dieses Verhalten zu verhindern, können Sie die Protokolldatei unterdrücken, indem Sie `/LogFile=` (ohne *filename*-Argument) nach „Installutil.exe“ in der Befehlszeile angeben.
 
-## <a name="remarks"></a>Anmerkungen
+## <a name="remarks"></a>Hinweise
 
 .NET Framework-Anwendungen bestehen aus herkömmlichen Programmdateien und zugeordneten Ressourcen wie Meldungswarteschlangen, Ereignisprotokollen und Leistungsindikatoren, die beim Bereitstellen der Anwendung erstellt werden müssen. Sie können die Installationsprogrammkomponenten einer Assembly verwenden, um diese Ressourcen beim Installieren der Anwendung zu erstellen und beim Deinstallieren der Anwendung zu entfernen. "Installutil.exe" erkennt diese Installationsprogrammkomponenten und führt sie aus.
 

@@ -18,10 +18,10 @@ helpviewer_keywords:
 - Global Assembly Cache tool
 ms.assetid: 4c7be9c8-72ae-481f-a01c-1a4716806e99
 ms.openlocfilehash: 87f3cb799ba4e406906759e1facd19d00c8bdace
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73107500"
 ---
 # <a name="gacutilexe-global-assembly-cache-tool"></a>Gacutil.exe (Global Assembly Cache-Tool)
@@ -40,13 +40,13 @@ gacutil [options] [assemblyName | assemblyPath | assemblyListFile]
 
 ## <a name="parameters"></a>Parameter
 
-|Argument|BESCHREIBUNG|
+|Argument|Beschreibung|
 |--------------|-----------------|
 |*assemblyName*|Der Name einer Assembly. Sie können entweder einen teilweise angegebenen Assemblynamen, z. B. `myAssembly`, oder einen vollständig angegebenen Assemblynamen, z B. `myAssembly, Version=2.0.0.0, Culture=neutral, PublicKeyToken=0038abc9deabfle5`, verwenden.|
 |*assemblyPath*|Der Name einer Datei, die ein Assemblymanifest enthält.|
 |*assemblyListFile*|Der Pfad zu einer ANSI-Textdatei, in der zu installierende oder zu deinstallierende Assemblys aufgeführt sind. Wenn Sie zum Installieren von Assemblys eine Textdatei verwenden möchten, geben Sie den Pfad zu den einzelnen Assemblys in der Datei jeweils in eigenen Zeilen an. Das Tool interpretiert relative Pfade als relativ zum Speicherort von *assemblyListFile*. Wenn Sie zum Deinstallieren von Assemblys eine Textdatei verwenden möchten, geben Sie den vollqualifizierten Namen der einzelnen Assemblys jeweils in eigenen Zeilen in der Datei an. Weitere Informationen hierzu finden Sie in den Beispielen zum Inhalt von *assemblyListFile* weiter unten in diesem Thema.|
 
-|Option|BESCHREIBUNG|
+|Option|Beschreibung|
 |------------|-----------------|
 |**/cdl**|Löscht den Inhalt des Downloadcaches.|
 |**/f**|Geben Sie zum Erzwingen der Neuinstallation einer Assembly diese Option mit der **/i**-Option oder der **/il**-Option an. Wenn im globalen Assemblycache bereits eine Assembly mit demselben Namen vorhanden ist, wird diese vom Tool überschrieben.|
@@ -68,7 +68,7 @@ gacutil [options] [assemblyName | assemblyPath | assemblyListFile]
 |**/ur**  *assemblyName*<br /><br /> *Schema*<br /><br /> *ID*<br /><br /> *Beschreibung*|Deinstalliert einen Verweis auf eine angegebene Assembly aus dem globalen Assemblycache. Um einen Verweis auf eine Assembly zu entfernen, müssen Sie dieselben Parameter *scheme*, *id* und *description* angeben, die beim Installieren der Assembly mit der **/i**-Option und der **/r**-Option (bzw. der **/ir**-Option) angegeben wurden. Eine Beschreibung der gültigen Werte, die für diese Parameter angegeben werden können, finden Sie unter der **/r**-Option.<br /><br /> Die Angabe dieser Option entspricht der kombinierten Angabe der **/u**-Option und der **/r**-Option.|
 |**/?**|Zeigt Befehlssyntax und Optionen für das Tool an.|
 
-## <a name="remarks"></a>Anmerkungen
+## <a name="remarks"></a>Hinweise
 
 > [!NOTE]
 > Sie müssen zum Verwenden von "Gacutil.exe" über Administratorrechte verfügen.

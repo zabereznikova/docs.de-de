@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Sign tool
 - SignTool.exe
 ms.assetid: 0c25ff6c-bff3-422e-b017-146a3ee86cb9
-ms.openlocfilehash: 636aa76a17a887aefe51b7e7858099c541dbb21f
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: 8ce31b1399700906d6d6e2a369dcfc4b61fe9646
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74801836"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79180322"
 ---
 # <a name="signtoolexe-sign-tool"></a>SignTool.exe (Signaturtool)
 Beim Signierungstool handelt es sich um ein Befehlszeilentool, das Dateien digital signiert, Signaturen in Dateien überprüft und Dateien Zeitstempel hinzufügt.  
@@ -27,7 +27,7 @@ signtool [command] [options] [file_name | ...]
   
 ## <a name="parameters"></a>Parameter  
   
-|Argument|BESCHREIBUNG|  
+|Argument|Beschreibung|  
 |--------------|-----------------|  
 |`command`|Einer von vier Befehlen (`catdb`, `sign`, `Timestamp` oder `Verify`), der einen für eine Datei auszuführenden Vorgang angibt. In der folgenden Tabelle finden Sie eine Beschreibung der einzelnen Befehle.|  
 |`options`|Eine Option, die einen Befehl ändert. Neben der globalen `/q`-Option und `/v`-Option wird von jedem Befehl ein eindeutiger Satz von Optionen unterstützt.|  
@@ -35,7 +35,7 @@ signtool [command] [options] [file_name | ...]
   
  Vom Signierungstool werden die folgenden Befehle unterstützt. Jeder Befehl wird mit einem unterschiedlichem Satz von Optionen verwendet, die in den jeweiligen Abschnitten aufgeführt sind.  
   
-|Befehl|BESCHREIBUNG|  
+|Befehl|Beschreibung|  
 |-------------|-----------------|  
 |`catdb`|Fügt einer Katalogdatenbank eine Katalogdatei hinzu oder entfernt sie daraus. Katalogdatenbanken werden für die automatische Suche von Katalogdateien verwendet und mit einer GUID gekennzeichnet. Eine Liste der vom `catdb`-Befehl unterstützten Optionen finden Sie unter [catdb-Befehlsoptionen](signtool-exe.md#catdb).|  
 |`sign`|Signiert Dateien digital. Digitale Signaturen schützen Dateien vor Manipulationen und ermöglichen es Benutzern, den Signaturgeber anhand eines Signaturzertifikats zu überprüfen. Eine Liste der vom `sign`-Befehl unterstützten Optionen finden Sie unter [sign-Befehlsoptionen](signtool-exe.md#sign).|  
@@ -44,77 +44,77 @@ signtool [command] [options] [file_name | ...]
   
  Die folgenden Optionen gelten für alle Signierungstoolbefehle.  
   
-|Globale Option|BESCHREIBUNG|  
+|Globale Option|Beschreibung|  
 |-------------------|-----------------|  
 |**/q**|Bei erfolgreicher Ausführung des Befehls erfolgt keine Ausgabe, bei einen Fehler werden minimale Daten ausgegeben|  
 |**/v**|Zeigt unabhängig von der erfolgreichen Ausführung des Befehls eine ausführliche Ausgabe und Warnmeldungen an.|  
 |**/debug**|Zeigt Debuginformationen an.|  
   
-<a name="catdb"></a>   
+<a name="catdb"></a>
 ## <a name="catdb-command-options"></a>catdb-Befehlsoptionen  
  In der folgenden Tabelle werden die Optionen aufgeführt, die mit dem `catdb`-Befehl verwendet werden können.  
   
-|Catdb-Option|BESCHREIBUNG|  
+|Catdb-Option|Beschreibung|  
 |------------------|-----------------|  
 |`/d`|Gibt an, dass die Standardkatalogdatenbank aktualisiert wird. Wenn weder die `/d`-Option noch die `/g`-Option verwendet wird, führt das Signierungstool ein Update der Systemkomponenten- und Treiberdatenbank aus.|  
 |`/g` *GUID*|Gibt an, dass die durch die *GUID* (Globally Unique Identifier) bezeichnete Katalogdatenbank aktualisiert wird.|  
 |`/r`|Entfernt die angegebenen Kataloge aus der Katalogdatenbank. Wenn diese Option nicht angegeben wird, fügt das Signierungstool der Katalogdatenbank die angegebenen Kataloge hinzu.|  
 |`/u`|Gibt an, dass automatisch ein eindeutiger Name für die hinzugefügten Katalogdateien generiert wird. Ggf. werden die Katalogdateien umbenannt, um Namenskonflikte mit vorhandenen Katalogdateien zu verhindern. Wenn diese Option nicht angegeben wird, werden vorhandene Kataloge vom Signierungstool mit gleichnamigen hinzuzufügenden Katalogen überschrieben.|  
   
-<a name="sign"></a>   
+<a name="sign"></a>
 ## <a name="sign-command-options"></a>sign-Befehlsoptionen  
  In der folgenden Tabelle werden die Optionen aufgeführt, die mit dem `sign`-Befehl verwendet werden können.  
   
-|Sign-Befehlsoption|BESCHREIBUNG|  
+|Sign-Befehlsoption|Beschreibung|  
 |-------------------------|-----------------|  
 |`/a`|Wählt automatisch das beste Signaturzertifikat aus. Das Signierungstool findet alle gültigen Zertifikate, die sämtliche angegebenen Bedingungen erfüllen, und wählt das Zertifikat mit der längsten Gültigkeitsdauer aus. Wenn diese Option nicht vorhanden ist, wird vom Signierungstool nur ein bestehendes gültiges Signaturzertifikat erwartet.|  
-|`/ac` *datei*|Fügt dem Signaturblock ein zusätzliches Zertifikat aus *file* hinzu.|  
+|`/ac`  *file*|Fügt dem Signaturblock ein zusätzliches Zertifikat aus *file* hinzu.|  
 |`/as`|Fügt diese Signatur an. Wenn keine Primärsignatur vorhanden ist, wird diese Signatur stattdessen zur Primärsignatur.|  
-|`/c` *ZertVorlagenname*|Gibt den Zertifikatsvorlagennamen (eine Microsoft-Erweiterung) für das Signaturzertifikat an.|  
-|`/csp` *CSPName*|Gibt den Kryptografiedienstanbieter (CSP) an, der den privaten Schlüsselcontainer enthält.|  
-|`/d` *Beschr*|Gibt eine Beschreibung des signierten Inhalts an.|  
-|`/du` *URL*|Gibt eine URL (Uniform Resource Locator) für die erweiterte Beschreibung des signierten Inhalts an.|  
-|`/f` *SignZertDatei*|Gibt das Signaturzertifikat in einer Datei an. Wenn die Datei im PFX-Format (Personal Information Exchange) vorliegt und mit einem Kennwort gesichert ist, verwenden Sie zur Angabe des Kennworts die `/p`-Option. Wenn die Datei keine privaten Schlüssel aufweist, verwenden Sie die `/csp`-Option und `/kc`-Option, um den CSP-Namen und den Namen des privaten Schlüsselcontainers anzugeben.|  
+|`/c`  *CertTemplateName*|Gibt den Zertifikatsvorlagennamen (eine Microsoft-Erweiterung) für das Signaturzertifikat an.|  
+|`/csp`  *CSPName*|Gibt den Kryptografiedienstanbieter (CSP) an, der den privaten Schlüsselcontainer enthält.|  
+|`/d`  *Desc*|Gibt eine Beschreibung des signierten Inhalts an.|  
+|`/du`  *URL*|Gibt eine URL (Uniform Resource Locator) für die erweiterte Beschreibung des signierten Inhalts an.|  
+|`/f`  *SignCertFile*|Gibt das Signaturzertifikat in einer Datei an. Wenn die Datei im PFX-Format (Personal Information Exchange) vorliegt und mit einem Kennwort gesichert ist, verwenden Sie zur Angabe des Kennworts die `/p`-Option. Wenn die Datei keine privaten Schlüssel aufweist, verwenden Sie die `/csp`-Option und `/kc`-Option, um den CSP-Namen und den Namen des privaten Schlüsselcontainers anzugeben.|  
 |`/fd`|Gibt den Dateihashwertalgorithmus zum Erstellen von Dateisignaturen an. Die Standardeinstellung lautet SHA1.|  
-|`/i` *Ausstellername*|Gibt den Namen des Ausstellers des Signaturzertifikats an. Dieser Wert kann eine Teilzeichenfolge des gesamten Ausstellernamens sein.|  
-|`/kc` *ContainernameprivaterSchlüssel*|Gibt den Namen des privaten Schlüsselcontainers an.|  
-|`/n` *Antragstellername*|Gibt den Namen des Antragstellers des Signaturzertifikats an. Dieser Wert kann eine Teilzeichenfolge des gesamten Antragstellernamens sein.|  
+|`/i`  *IssuerName*|Gibt den Namen des Ausstellers des Signaturzertifikats an. Dieser Wert kann eine Teilzeichenfolge des gesamten Ausstellernamens sein.|  
+|`/kc`  *PrivKeyContainerName*|Gibt den Namen des privaten Schlüsselcontainers an.|  
+|`/n`  *SubjectName*|Gibt den Namen des Antragstellers des Signaturzertifikats an. Dieser Wert kann eine Teilzeichenfolge des gesamten Antragstellernamens sein.|  
 |`/nph`|Wenn unterstützt, werden Seitenhashes für ausführbare Dateien unterdrückt. Die Standardeinstellung wird von der SIGNTOOL_PAGE_HASHES-Umgebungsvariablen und der wintrust.dll-Version bestimmt. Für nicht portable ausführbare Dateien wird diese Option ignoriert.|  
-|`/p` *Kennwort*|Gibt das Kennwort zum Öffnen einer PFX-Datei an. (Verwenden Sie die `/f`-Option, um eine PFX-Datei anzugeben.)|  
+|`/p`  *Password*|Gibt das Kennwort zum Öffnen einer PFX-Datei an. (Verwenden Sie die `/f`-Option, um eine PFX-Datei anzugeben.)|  
 |`/p7` *Pfad*|Gibt an, dass für jede ausgewählte Inhaltsdatei eine PKCS #7-Datei (Public Key Cryptography Standards) erstellt wird. PKCS #7-Dateien erhalten die Bezeichnung „*Pfad*\\*Dateiname*.p7“.|  
-|`/p7ce` *Wert*|Gibt Optionen für den signierten PKCS #7-Inhalt an. Legen Sie *Wert* auf „Embedded“ fest, um den signierten Inhalt in die PKCS #7-Datei einzubetten, oder auf „DetachedSignedData“, um den signierten Datenabschnitt einer getrennten PKCS #7-Datei zu erstellen. Ohne Verwendung der `/p7ce`-Option wird der signierte Inhalt standardmäßig eingebettet.|  
+|`/p7ce` *Value*|Gibt Optionen für den signierten PKCS #7-Inhalt an. Legen Sie *Wert* auf „Embedded“ fest, um den signierten Inhalt in die PKCS #7-Datei einzubetten, oder auf „DetachedSignedData“, um den signierten Datenabschnitt einer getrennten PKCS #7-Datei zu erstellen. Ohne Verwendung der `/p7ce`-Option wird der signierte Inhalt standardmäßig eingebettet.|  
 |`/p7co` *\<OID>*|Gibt den Objektbezeichner (OID) zur Identifizierung des signierten PKCS #7-Inhalts an.|  
 |`/ph`|Wenn unterstützt, werden Seitenhashes für ausführbare Dateien generiert.|  
-|`/r` *StammAntragstellername*|Gibt den Antragstellernamen des Stammzertifikats an, mit dem das Signaturzertifikat verkettet werden muss. Dieser Wert kann eine Teilzeichenfolge des gesamten Antragstellernamens des Stammzertifikats sein.|  
-|`/s` *Speichername*|Gibt den beim Suchen des Zertifikats zu öffnenden Speicher an. Ohne Angabe dieser Option wird der `My`-Speicher geöffnet.|  
-|`/sha1` *Hash*|Gibt den SHA1-Hash des Signaturzertifikats an. In der Regel wird der SHA1-Hash angegeben, wenn die von den verbleibenden Schaltern festgelegten Kriterien von mehreren Zertifikaten erfüllt werden.|  
+|`/r`  *RootSubjectName*|Gibt den Antragstellernamen des Stammzertifikats an, mit dem das Signaturzertifikat verkettet werden muss. Dieser Wert kann eine Teilzeichenfolge des gesamten Antragstellernamens des Stammzertifikats sein.|  
+|`/s`  *StoreName*|Gibt den beim Suchen des Zertifikats zu öffnenden Speicher an. Ohne Angabe dieser Option wird der `My`-Speicher geöffnet.|  
+|`/sha1`  *Hash*|Gibt den SHA1-Hash des Signaturzertifikats an. In der Regel wird der SHA1-Hash angegeben, wenn die von den verbleibenden Schaltern festgelegten Kriterien von mehreren Zertifikaten erfüllt werden.|  
 |`/sm`|Gibt an, dass anstatt eines Benutzerspeichers ein Computerspeicher verwendet wird.|  
-|`/t` *URL*|Gibt die URL des Zeitstempelservers an. Wenn diese Option (oder `/tr`) nicht vorhanden ist, wird der signierten Datei kein Zeitstempel hinzugefügt. Im Fall eines Fehlers beim Hinzufügen des Zeitstempels wird eine Warnung generiert. Diese Option kann nicht mit der `/tr`-Option verwendet werden.|  
-|`/td` *alg*|Wird mit der `/tr`-Option zum Anfordern eines vom RFC 3161-Zeitstempelserver verwendeten Digestalgorithmus genutzt.|  
-|`/tr` *URL*|Gibt die URL des RFC 3161-Zeitstempelservers an. Wenn diese Option (oder `/t`) nicht vorhanden ist, wird der signierten Datei kein Zeitstempel hinzugefügt. Im Fall eines Fehlers beim Hinzufügen des Zeitstempels wird eine Warnung generiert. Diese Option kann nicht mit der `/t`-Option verwendet werden.|  
-|`/u` *Verwendung*|Gibt die verbesserte Schlüsselverwendung (EKU) an, die im Signaturzertifikat vorhanden sein muss. Der Verwendungswert kann durch einen OID oder eine Zeichenfolge angegeben werden. Die Standardverwendung lautet "Codesignatur" (1.3.6.1.5.5.7.3.3).|  
+|`/t`  *URL*|Gibt die URL des Zeitstempelservers an. Wenn diese Option (oder `/tr`) nicht vorhanden ist, wird der signierten Datei kein Zeitstempel hinzugefügt. Im Fall eines Fehlers beim Hinzufügen des Zeitstempels wird eine Warnung generiert. Diese Option kann nicht mit der `/tr`-Option verwendet werden.|  
+|`/td`  *alg*|Wird mit der `/tr`-Option zum Anfordern eines vom RFC 3161-Zeitstempelserver verwendeten Digestalgorithmus genutzt.|  
+|`/tr`  *URL*|Gibt die URL des RFC 3161-Zeitstempelservers an. Wenn diese Option (oder `/t`) nicht vorhanden ist, wird der signierten Datei kein Zeitstempel hinzugefügt. Im Fall eines Fehlers beim Hinzufügen des Zeitstempels wird eine Warnung generiert. Diese Option kann nicht mit der `/t`-Option verwendet werden.|  
+|`/u`  *Usage*|Gibt die verbesserte Schlüsselverwendung (EKU) an, die im Signaturzertifikat vorhanden sein muss. Der Verwendungswert kann durch einen OID oder eine Zeichenfolge angegeben werden. Die Standardverwendung lautet "Codesignatur" (1.3.6.1.5.5.7.3.3).|  
 |`/uw`|Gibt die Verwendung von "Verifizierung von Windows-Systemkomponenten" (1.3.6.1.4.1.311.10.3.6) an.|  
   
  Verwendungsbeispiele finden Sie unter [Using SignTool to Sign a File (Signieren einer Datei mit SignTool)](/windows/desktop/SecCrypto/using-signtool-to-sign-a-file).  
   
-<a name="TimeStamp"></a>   
+<a name="TimeStamp"></a>
 ## <a name="timestamp-command-options"></a>TimeStamp-Befehlsoptionen  
  In der folgenden Tabelle werden die Optionen aufgeführt, die mit dem `TimeStamp`-Befehl verwendet werden können.  
   
-|TimeStamp-Option|BESCHREIBUNG|  
+|TimeStamp-Option|Beschreibung|  
 |----------------------|-----------------|  
 |`/p7`|Fügt PKCS #7-Dateien Zeitstempel hinzu.|  
-|`/t` *URL*|Gibt die URL des Zeitstempelservers an. Vor dem Hinzufügen eines Zeitstempels muss die jeweilige Datei signiert werden. Entweder die `/t`-Option oder die `/tr`-Option ist erforderlich.|  
-|`/td` *alg*|Fordert einen Hashwertalgorithmus an, der vom RFC 3161-Zeitstempelserver verwendet wird. `/td` wird mit der `/tr`-Option verwendet.|  
+|`/t`  *URL*|Gibt die URL des Zeitstempelservers an. Vor dem Hinzufügen eines Zeitstempels muss die jeweilige Datei signiert werden. Entweder die `/t`-Option oder die `/tr`-Option ist erforderlich.|  
+|`/td`  *alg*|Fordert einen Hashwertalgorithmus an, der vom RFC 3161-Zeitstempelserver verwendet wird. `/td` wird mit der `/tr`-Option verwendet.|  
 |`/tp` *index*|Fügt der Signatur bei *Index* einen Zeitstempel hinzu|  
-|`/tr` *URL*|Gibt die URL des RFC 3161-Zeitstempelservers an. Vor dem Hinzufügen eines Zeitstempels muss die jeweilige Datei signiert werden. Entweder die `/tr`-Option oder die `/t`-Option ist erforderlich.|  
+|`/tr`  *URL*|Gibt die URL des RFC 3161-Zeitstempelservers an. Vor dem Hinzufügen eines Zeitstempels muss die jeweilige Datei signiert werden. Entweder die `/tr`-Option oder die `/t`-Option ist erforderlich.|  
   
  Ein Verwendungsbeispiel finden Sie unter [Adding Time Stamps to Previously Signed Files (Hinzufügen von Zeitstempeln zu bereit signierten Dateien)](/windows/desktop/SecCrypto/adding-time-stamps-to-previously-signed-files).  
   
-<a name="Verify"></a>   
+<a name="Verify"></a>
 ## <a name="verify-command-options"></a>"Verify"-Befehlsoptionen  
   
-|"Verify"-Option|BESCHREIBUNG|  
+|"Verify"-Option|Beschreibung|  
 |-------------------|-----------------|  
 |`/a`|Gibt an, dass alle Methoden zum Überprüfen der Datei verwendet werden können. Zuerst werden die Katalogdatenbanken durchsucht, um zu ermitteln, ob die Datei in einem Katalog signiert ist. Wenn die Datei nicht in einem Katalog signiert ist, versucht das Signierungstool, die eingebettete Signatur der Datei zu überprüfen. Diese Option wird zum Überprüfen von Dateien empfohlen, die möglicherweise, jedoch nicht unbedingt in einem Katalog signiert sind. Beispiele für diese Dateien sind Windows-Dateien oder Treiber.|  
 |`/ad`|Sucht den Katalog in der Standardkatalogdatenbank.|  
@@ -123,7 +123,7 @@ signtool [command] [options] [file_name | ...]
 |`/as`|Sucht den Katalog in der Katalogdatenbank der Systemkomponenten (Treiber).|  
 |`/c` *CatFile*|Gibt die Katalogdatei anhand des Namens an.|  
 |`/d`|Gibt an, dass die Beschreibung und Beschreibungs-URL vom Signierungstool gedruckt werden sollen.|  
-|`/ds` *Index*|Überprüft die Signatur an einer angegebenen Position.|  
+|`/ds`  *Index*|Überprüft die Signatur an einer angegebenen Position.|  
 |`/hash` (`SHA1`&#124;`SHA256`)|Gibt einen optionalen Hashalgorithmus zum Suchen einer Datei in einem Katalog an.|  
 |`/kp`|Gibt an, dass die Überprüfung mit der Signierungsrichtlinie für Kernelmodustreiber ausgeführt werden soll.|  
 |`/ms`|Verwendet mehrere Überprüfungssemantiken. Hierbei handelt es sich um das Standardverhalten eines [WinVerifyTrust](/windows/desktop/api/wintrust/nf-wintrust-winverifytrust)-Aufrufs unter Windows 8 und höher.|  
@@ -140,7 +140,7 @@ signtool [command] [options] [file_name | ...]
 ## <a name="return-value"></a>Rückgabewert  
  Beim Beenden wird vom Signierungstool einer der folgenden Exitcodes zurückgegeben.  
   
-|Exitcode|BESCHREIBUNG|  
+|Exitcode|Beschreibung|  
 |---------------|-----------------|  
 |0|Ausführung war erfolgreich.|  
 |1|Ausführung ist fehlgeschlagen.|  

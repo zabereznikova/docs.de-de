@@ -5,12 +5,12 @@ helpviewer_keywords:
 - implicitly-typed local variables [C#]
 - var [C#]
 ms.assetid: b9218fb2-ef5d-4814-8a8e-2bc29b0bbc9b
-ms.openlocfilehash: 692a0f8ad933f3ba4bef50681cb3487fa0a7eea9
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: d39e4c4dd180ba35b7555d61211a34d696b04f50
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714833"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79398430"
 ---
 # <a name="implicitly-typed-local-variables-c-programming-guide"></a>Implizit typisierte lokale Variablen (C#-Programmierhandbuch)
 
@@ -88,7 +88,7 @@ Das `var`-Schlüsselwort erweist sich auch als nützlich, wenn es umständlich i
 
 [!code-csharp[cscsrefQueryKeywords#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsCsrefQueryKeywords/CS/Group.cs#13)]
 
-Durch den Gebrauch von `var` besteht aber zumindest die Möglichkeit, dass Ihr Code für andere Entwickler schwerer zu verstehen ist. Aus diesem Grund wird `var` in der C#-Dokumentation nur dann verwendet, wenn es tatsächlich erforderlich ist.
+Die Verwendung von `var` trägt zur Vereinfachung Ihres Codes bei, aber die Verwendung sollte auf die Fälle beschränkt werden, in denen sie erforderlich ist oder wenn sie Ihren Code leichter lesbar macht. Weitere Informationen zur ordnungsgemäßen Verwendung von `var` finden Sie im Abschnitt [Implizit typisierte lokale Variablen](../inside-a-program/coding-conventions.md#implicitly-typed-local-variables) im Artikel zu „C#-Richtlinien für das Codieren“.
 
 ## <a name="see-also"></a>Siehe auch
 
