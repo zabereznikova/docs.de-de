@@ -13,12 +13,12 @@ helpviewer_keywords:
 - application development [.NET Framework], globalization
 - culture, globalization
 ms.assetid: 4e919934-6b19-42f2-b770-275a4fae87c9
-ms.openlocfilehash: 953d8d3055dff48cd943b748771f20803a4d6573
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: fe03bbdd7d037a9f1fb4985b62b447c6ef9c6535
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73120895"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79174783"
 ---
 # <a name="globalization"></a>Globalisierung
 
@@ -66,7 +66,7 @@ Behandeln Sie Zeichenfolgen möglichst als ganze Zeichenfolgen und nicht als ein
 > [!TIP]
 > Sie können die <xref:System.Globalization.StringInfo>-Klasse verwenden, um mit den Textelementen anstelle der einzelnen Zeichen in einer Zeichenfolge zu arbeiten.
 
-Beim Suchen und Vergleichen von Zeichenfolgen wird häufig der Fehler begangen, die Zeichenfolge als Auflistung von Zeichen zu behandeln, die jeweils durch ein <xref:System.Char>-Objekt dargestellt werden. Tatsächlich wird ein einzelnes Zeichen u. U. durch ein oder mehrere <xref:System.Char>-Objekte gebildet. Solche Zeichen werden am häufigsten in den Zeichenfolgen von Kulturen gefunden, deren Alphabet aus Zeichen außerhalb des lateinischen Unicode-Standardzeichenbereichs (U+0021 bis U+007E) besteht. Im folgenden Beispiel wird versucht, den Index des LATEINISCHEN GROSSBUCHSTABENS A MIT GRAVIS (U+00C0) in einer Zeichenfolge zu suchen. Dieses Zeichen kann jedoch auf zwei verschiedene Arten dargestellt werden: als einzelne Codeeinheit (U+00C0) oder als zusammengesetztes Zeichen (zwei Codeeinheiten: U+0021 und U+007E). In diesem Fall wird das Zeichen in der Zeichenfolgeninstanz von zwei <xref:System.Char>-Objekten, U+0021 und U+007E, dargestellt. Der Beispielcode ruft die <xref:System.String.IndexOf%28System.Char%29?displayProperty=nameWithType>- und die <xref:System.String.IndexOf%28System.String%29?displayProperty=nameWithType>-Überladung auf, um die Position des Zeichens in der Zeichenfolgeninstanz zu suchen. Diese geben jedoch unterschiedliche Ergebnisse zurück. Der erste Methodenaufruf weist ein <xref:System.Char>-Argument auf. Dieser führt einen ordinalen Vergleich durch und findet daher keine Übereinstimmung. Der zweite Aufruf weist ein <xref:System.String>-Argument auf. Dieser führt einen kulturabhängigen Vergleich durch und findet daher eine Übereinstimmung.
+Beim Suchen und Vergleichen von Zeichenfolgen wird häufig der Fehler begangen, die Zeichenfolge als Auflistung von Zeichen zu behandeln, die jeweils durch ein <xref:System.Char>-Objekt dargestellt werden. Tatsächlich wird ein einzelnes Zeichen u. U. durch ein oder mehrere <xref:System.Char>-Objekte gebildet. Solche Zeichen werden am häufigsten in den Zeichenfolgen von Kulturen gefunden, deren Alphabet aus Zeichen außerhalb des lateinischen Unicode-Standardzeichenbereichs (U+0021 bis U+007E) besteht. Im folgenden Beispiel wird versucht, den Index des LATEINISCHEN GROSSBUCHSTABENS A MIT GRAVIS (U+00C0) in einer Zeichenfolge zu suchen. Dieses Zeichen kann jedoch auf zwei verschiedene Arten dargestellt werden: als einzelne Codeeinheit (U+00C0) oder als zusammengesetztes Zeichen (zwei Codeeinheiten: U+0041 und U+0300). In diesem Fall wird das Zeichen in der Zeichenfolgeninstanz von zwei <xref:System.Char>-Objekten dargestellt, U+0041 und U+0300. Der Beispielcode ruft die <xref:System.String.IndexOf%28System.Char%29?displayProperty=nameWithType>- und die <xref:System.String.IndexOf%28System.String%29?displayProperty=nameWithType>-Überladung auf, um die Position des Zeichens in der Zeichenfolgeninstanz zu suchen. Diese geben jedoch unterschiedliche Ergebnisse zurück. Der erste Methodenaufruf weist ein <xref:System.Char>-Argument auf. Dieser führt einen ordinalen Vergleich durch und findet daher keine Übereinstimmung. Der zweite Aufruf weist ein <xref:System.String>-Argument auf. Dieser führt einen kulturabhängigen Vergleich durch und findet daher eine Übereinstimmung.
 
 [!code-csharp[Conceptual.Globalization#18](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.globalization/cs/search1.cs#18)]
 [!code-vb[Conceptual.Globalization#18](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.globalization/vb/search1.vb#18)]
@@ -336,7 +336,7 @@ Treffen Sie generell keine Annahmen über die Werte von bestimmten <xref:System.
 
 - .NET unterstützt Ersatzkulturen. Dadurch ist es möglich, eine neue benutzerdefinierte Kultur zu definieren, die bestehende Standardkulturen ergänzt oder vollständig ersetzt.
 
-- In Windows-Systemen kann der Benutzer kulturspezifische Einstellungen über die App **Region and Language** (Region und Sprache) in der Systemsteuerung anpassen. Wenn Sie ein <xref:System.Globalization.CultureInfo>-Objekt instanziieren, können Sie festlegen, ob es diese Benutzeranpassungen widergespiegelt, indem Sie den <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType>-Konstruktor aufrufen. In der Regel sollten Sie bei Endbenutzer-Apps die Benutzereinstellungen berücksichtigen, sodass der Benutzer die Daten in einem Format angezeigt bekommt, das er erwartet.
+- In Windows-Systemen kann der Benutzer kulturspezifische Einstellungen über die App **Region and Language** (Region und Sprache) in der Systemsteuerung anpassen. Wenn Sie ein <xref:System.Globalization.CultureInfo>-Objekt instanziieren, können Sie festlegen, ob es diese Benutzeranpassungen widergespiegelt, indem Sie den <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType>-Konstruktor aufrufen. In der Regel sollten Sie bei Endbenutzer-Apps die Benutzereinstellungen berücksichtigen, sodass der Benutzer die Daten in einem Format angezeigt bekommt, das dieser erwartet.
 
 ## <a name="see-also"></a>Siehe auch
 

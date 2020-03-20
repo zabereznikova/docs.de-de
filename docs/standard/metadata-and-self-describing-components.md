@@ -16,10 +16,10 @@ helpviewer_keywords:
 - components [.NET Framework], metadata
 ms.assetid: 3dd13c5d-a508-455b-8dce-0a852882a5a7
 ms.openlocfilehash: a4f4c0e1af379d31c5b478472780d5c7de813bf6
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73121931"
 ---
 # <a name="metadata-and-self-describing-components"></a>Metadaten und selbstbeschreibende Komponenten
@@ -153,7 +153,7 @@ IL_000c:  ldloc.1
 IL_000d:  call int32 ConsoleApplication.MyApp::Add(int32,int32) /* 06000003 */
 ```
 
-Der JIT-Compiler liest die MSIL der ganzen Methode, analysiert sie ausführlich und generiert effiziente, systemeigene Anweisungen für diese Methode. Bei `IL_000d` wird ein Metadatentoken für die `Add`-Methode (`/*` `06000003 */`) angetroffen. Die Runtime verwendet dieses Token, um die dritte Zeile der **MethodDef**-Tabelle abzufragen.
+Der JIT-Compiler liest die MSIL der ganzen Methode, analysiert sie ausführlich und generiert effiziente, systemeigene Anweisungen für diese Methode. Bei `IL_000d` wird ein Metadatentoken für die `Add`-Methode (`/*` `06000003 */`) ermittelt. Die Runtime verwendet dieses Token, um die dritte Zeile der **MethodDef**-Tabelle abzufragen.
 
 Folgende Tabelle zeigt einen Teil der **MethodDef**-Tabelle, welche die `Add`-Methode beschreibt und auf die das Metadatentoken verweist. Obwohl es in dieser Assembly auch andere Metadatentabellen gibt, die jeweils ihre eigenen, eindeutigen Werte besitzen, wird hier nur diese Tabelle erläutert.
 
@@ -171,6 +171,6 @@ Mithilfe von Metadaten stehen Common Language Runtime alle Informationen zur V
 
 ## <a name="related-topics"></a>Verwandte Themen
 
-|Titel|BESCHREIBUNG|
+|Titel|Beschreibung|
 |-----------|-----------------|
 |[Attribute](../../docs/standard/attributes/index.md)|Beschreibt, wie Attribute angewendet, benutzerdefinierte Attribute geschrieben und in Attributen gespeicherte Informationen abgerufen werden.|

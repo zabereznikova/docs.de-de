@@ -14,14 +14,15 @@ helpviewer_keywords:
 - uppercase
 - lowercase
 ms.assetid: 6805f81b-e9ad-4387-9f4c-b9bdb21b87c0
-ms.openlocfilehash: 135cfa815c10d1a9dd9056604a4601678da9d5c4
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: 19795cbed27ca979af813b6060163e76fc5b3780
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78159350"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79187212"
 ---
-# <a name="changing-case-in-net"></a>Ändern der Groß-/Kleinschreibung in .NET
+# <a name="change-case-in-net"></a>Ändern der Groß-/Kleinschreibung in .NET
+
 Wenn Sie eine Anwendung schreiben, die Benutzereingaben akzeptiert, können Sie nicht sicher sein, ob die Daten in Groß- oder Kleinschreibung eingegeben werden. Häufig möchten Sie, dass Zeichenfolgen in einheitlicher Schreibung vorliegen, insbesondere, wenn sie in der Benutzeroberfläche angezeigt werden. In der folgenden Tabelle sind drei Methoden zur Änderung der Groß-/Kleinschreibung beschrieben. Die ersten beiden Methoden stellen eine Überladung bereit, die eine Kultur akzeptiert.  
   
 |Methodenname|Verwendung|  
@@ -34,7 +35,8 @@ Wenn Sie eine Anwendung schreiben, die Benutzereingaben akzeptiert, können Sie 
 > Beachten Sie, dass die <xref:System.String.ToUpper%2A?displayProperty=nameWithType>- und die <xref:System.String.ToLower%2A?displayProperty=nameWithType>-Methode nicht dazu verwendet werden sollten, Zeichenfolgen zu konvertieren, um diese zu vergleichen oder auf Gleichheit zu testen. Weitere Informationen finden Sie im Abschnitt [Vergleichen von Zeichenfolgen in gemischter Schreibung](#Comparing).  
   
 <a name="Comparing"></a>
-## <a name="comparing-strings-of-mixed-case"></a>Vergleichen von Zeichenfolgen in gemischter Schreibung  
+## <a name="compare-strings-of-mixed-case"></a>Vergleichen von Zeichenfolgen in gemischter Groß-/Kleinschreibung  
+
  Wenn Sie Zeichenfolgen in gemischter Schreibung vergleichen möchten, um deren Reihenfolge zu ermitteln, rufen Sie eine der Überladungen der <xref:System.String.CompareTo%2A?displayProperty=nameWithType>-Methode mit einem `comparisonType`-Parameter auf, und geben Sie entweder <xref:System.StringComparison.CurrentCultureIgnoreCase?displayProperty=nameWithType> oder <xref:System.StringComparison.InvariantCultureIgnoreCase?displayProperty=nameWithType> oder <xref:System.StringComparison.OrdinalIgnoreCase?displayProperty=nameWithType> als Wert für das `comparisonType`-Argument an. Soll für einen Vergleich eine bestimmte Kultur verwendet werden, die nicht die aktuelle Kultur ist, rufen Sie eine Überladung der <xref:System.String.CompareTo%2A?displayProperty=nameWithType>-Methode mit einem `culture`- und einem `options`-Parameter auf, und geben Sie <xref:System.Globalization.CompareOptions.IgnoreCase?displayProperty=nameWithType> als Wert für das `options`-Argument an.  
   
  Wenn Sie Zeichenfolgen in gemischter Schreibung vergleichen möchten, um zu ermitteln, ob sie gleich sind, rufen Sie eine der Überladungen der <xref:System.String.Equals%2A?displayProperty=nameWithType>-Methode mit einem `comparisonType`-Parameter auf, und geben Sie entweder <xref:System.StringComparison.CurrentCultureIgnoreCase?displayProperty=nameWithType> oder <xref:System.StringComparison.InvariantCultureIgnoreCase?displayProperty=nameWithType> oder <xref:System.StringComparison.OrdinalIgnoreCase?displayProperty=nameWithType> als Wert für das `comparisonType`-Argument an.  

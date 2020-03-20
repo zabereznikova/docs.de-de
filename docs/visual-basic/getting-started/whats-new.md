@@ -8,12 +8,12 @@ helpviewer_keywords:
 - what's new [Visual Basic]
 - Visual Basic, what's new
 ms.assetid: d7e97396-7f42-4873-a81c-4ebcc4b6ca02
-ms.openlocfilehash: 45763504c2d25596b0adfb4b8a0236b332d89e8c
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: 3ab468f6c68429a3a5cb8706152288afae520df3
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802046"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79187140"
 ---
 # <a name="whats-new-for-visual-basic"></a>Neues in Visual Basic
 
@@ -42,7 +42,7 @@ Visual Basic/Visual Studio 2015\
 Informationen zu neuen Features finden Sie unter [Visual Basic 14](#visual-basic-14).
 
 Visual Basic/Visual Studio 2013\
-Technologievorschau von .NET Compiler Platform („Roslyn“)
+Technologievorschau der .NET Compiler Platform (Roslyn)
 
 Visual Basic/Visual Studio 2012\
 Die Schlüsselwörter `Async` und `await`, Iteratoren, Aufruferinformationsattribute
@@ -154,7 +154,7 @@ Wenn Sie den Wert von Tupelelementen von Variablen zuweisen, leitet Visual Basic
 
 **Zusätzliche Compileroptionen**
 
-Der Visual Basic-Befehlszeilencompiler unterstützt nun die zusätzlichen Compileroptionen[**-refout**](../reference/command-line-compiler/refout-compiler-option.md) und [**-refonly**](../reference/command-line-compiler/refonly-compiler-option.md) zur Steuerung der Ausgabe von Verweisassemblys. **-refout** definiert das Ausgabeverzeichnis der Referenzassembly, und **-refonly** legt fest, dass nur eine Referenzassembly bei der Kompilierung ausgegeben wird.
+Der Visual Basic-Befehlszeilencompiler unterstützt nun die zusätzlichen Compileroptionen[ **-refout**](../reference/command-line-compiler/refout-compiler-option.md) und [ **-refonly**](../reference/command-line-compiler/refonly-compiler-option.md) zur Steuerung der Ausgabe von Verweisassemblys. **-refout** definiert das Ausgabeverzeichnis der Referenzassembly, und **-refonly** legt fest, dass nur eine Referenzassembly bei der Kompilierung ausgegeben wird.
 
 ## <a name="visual-basic-2017"></a>Visual Basic 2017
 
@@ -182,11 +182,11 @@ Sie können ein binäres Literal definieren, indem Sie die Präfixe `&B` oder `&
 
 Weitere Informationen finden Sie im Abschnitt „Zuweisung von Literalen“ der Datentypen [Byte](../language-reference/data-types/byte-data-type.md#literal-assignments), [Integer](../language-reference/data-types/integer-data-type.md#literal-assignments), [Long](../language-reference/data-types/long-data-type.md#literal-assignments), [Short](../language-reference/data-types/short-data-type.md#literal-assignments), [SByte](../language-reference/data-types/sbyte-data-type.md#literal-assignments), [UInteger](../language-reference/data-types/uinteger-data-type.md#literal-assignments), [ULong](../language-reference/data-types/ulong-data-type.md#literal-assignments) und [UShort](../language-reference/data-types/ushort-data-type.md#literal-assignments).
 
-[**Support for C# reference return values (Unterstützung für Verweisrückgabewerte von C#)**](../programming-guide/language-features/procedures/ref-return-values.md)
+[**Support for C# reference return values (Unterstützung für Verweisrückgabewerte von C#)** ](../programming-guide/language-features/procedures/ref-return-values.md)
 
 Ab C# 7.0 unterstützt C# Verweisrückgabewerte. Das heißt, wenn die aufrufende Methode einen von einem Verweis zurückgegebenen Wert erhält, kann sie den Wert des Verweises ändern. In Visual Basic können Sie keine Methoden mit Verweisrückgabewerten erstellen. Allerdings können Sie Verweisrückgabewerte verarbeiten und modifizieren.
 
-Die folgende in C# geschriebene `Sentence`-Klasse enthält z.B eine `FindNext`-Methode, die nach dem nächsten Wort in einer Sequenz sucht, die mit einer angegebenen Teilzeichenfolge beginnt. Die Zeichenfolge wird als Verweisrückgabewert zurückgegeben, und eine vom Verweis an die Methode übergebene `Boolean`-Variable gibt an, ob die Suche Erfolg hatte. Das bedeutet, dass der Aufrufer nicht nur den Rückgabewert lesen sondern auch modifizieren kann. Diese Modifizierung wird in der `Sentence`-Klasse widergespiegelt.
+Die folgende in C# geschriebene `Sentence`-Klasse enthält z.B eine `FindNext`-Methode, die nach dem nächsten Wort in einer Sequenz sucht, die mit einer angegebenen Teilzeichenfolge beginnt. Die Zeichenfolge wird als Verweisrückgabewert zurückgegeben, und eine vom Verweis an die Methode übergebene `Boolean`-Variable gibt an, ob die Suche Erfolg hatte. Das bedeutet, dass der Rückgabewert nicht nur vom Aufrufer gelesen sondern auch geändert werden kann. Diese Änderung wird in der `Sentence`-Klasse widergespiegelt.
 
 [!code-csharp[Ref-Return](../../../samples/snippets/visualbasic/getting-started/ref-returns.cs)]
 

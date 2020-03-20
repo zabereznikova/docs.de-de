@@ -4,12 +4,12 @@ description: Erfahren Sie mehr über Verweisassemblys, eine spezielle Art von As
 author: MSDN-WhiteKnight
 ms.date: 09/12/2019
 ms.technology: dotnet-standard
-ms.openlocfilehash: 3b85e51a015cca1e53ee2503c7bfa58c504fc718
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: 938942caf81c54a8aa9207dbe87559438ffb252e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78156464"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79141067"
 ---
 # <a name="reference-assemblies"></a>Verweisassemblys
 
@@ -29,7 +29,7 @@ Verweisassemblys für .NET Framework-Bibliotheken werden mit Zielpaketen verteil
 
 Wenn Sie in Visual Studio über das Dialogfeld **Verweis hinzufügen** Verweise auf .NET-Framework-Assemblys hinzufügen, wählen Sie eine Assembly aus der Liste aus, und Visual Studio ermittelt automatisch Verweisassemblys, die der in Ihrem Projekt ausgewählten Zielframeworkversion entsprechen. Dasselbe gilt für das direkte Hinzufügen von Verweisen im MSBuild-Projekt mit dem Projektelement [Reference](/visualstudio/msbuild/common-msbuild-project-items#reference): Sie müssen nur den Assemblynamen angeben, nicht den vollständigen Dateipfad. Wenn Sie in der Befehlszeile Verweise auf diese Assemblys mit der Compileroption `-reference` ([in C#](../../csharp/language-reference/compiler-options/reference-compiler-option.md) und [in Visual Basic](../../visual-basic/reference/command-line-compiler/reference.md)) oder mit der Methode <xref:Microsoft.CodeAnalysis.Compilation.AddReferences%2A?displayProperty=nameWithType> in der Roslyn-API hinzufügen, müssen Sie manuell Verweisassemblydateien für die richtige Zielplattformversion angeben. .NET Framework-Verweisassemblydateien befinden sich im Verzeichnis *%ProgramFiles (x86)%\\Reference Assemblies\\Microsoft\\Framework\\.NETFramework*. Für .NET Core können Sie erzwingen, dass der Veröffentlichungsvorgang Verweisassemblys für Ihre Zielplattform in das Unterverzeichnis *publish/refs* des Ausgabeverzeichnisses kopiert, indem Sie die `PreserveCompilationContext`-Projekteigenschaft auf `true` festlegen. Anschließend können Sie diese Verweisassemblydateien an den Compiler übergeben. Die Verwendung von `DependencyContext` aus dem Paket [Microsoft.Extensions.DependencyModel](https://www.nuget.org/packages/Microsoft.Extensions.DependencyModel/) kann helfen, ihre Pfade zu ermitteln.
 
-Da sie keine Implementierung enthalten, können Referenzassemblys nicht zur Ausführung geladen werden. Der Versuch, sie zu laden, führt zu einer <xref:System.BadImageFormatException?displayProperty=nameWithType>. Sie können jedoch trotzdem in den reinen Reflektionskontext (mit der <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A?displayProperty=nameWithType>-Methode) geladen werden, wenn Sie ihren Inhalt untersuchen müssen.
+Da sie keine Implementierung enthalten, können Referenzassemblys nicht zur Ausführung geladen werden. Der Versuch, sie zu laden, führt zu <xref:System.BadImageFormatException?displayProperty=nameWithType>. Wenn Sie den Inhalt einer Verweisassembly untersuchen möchten, können Sie diese in den auf Reflexion beschränkten Kontext im .NET Framework (mit der <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A?displayProperty=nameWithType>-Methode) oder in <xref:System.Reflection.MetadataLoadContext> in .NET Core laden.
 
 ## <a name="generating-reference-assemblies"></a>Generieren von Verweisassemblys
 

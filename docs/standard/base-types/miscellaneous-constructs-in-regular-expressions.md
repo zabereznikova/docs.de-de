@@ -11,10 +11,10 @@ helpviewer_keywords:
 - regular expressions, miscellaneous constructs
 ms.assetid: 7d10d11f-680f-4721-b047-fb136316b4cd
 ms.openlocfilehash: a43ce44e11a9231dee2961ee02bac745d9ca71cb
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73141598"
 ---
 # <a name="miscellaneous-constructs-in-regular-expressions"></a>Verschiedene Konstrukte in regulären Ausdrücken
@@ -27,7 +27,7 @@ Reguläre Ausdrücke in .NET umfassen drei verschiedene Sprachkonstrukte. Einer 
   
  Die Optionen, die Sie aktivieren möchten, werden nach dem Fragezeichen aufgeführt, und die Optionen, die Sie deaktivieren möchten, werden nach dem Minuszeichen eingefügt. In der folgenden Tabelle sind die einzelnen Optionen beschrieben. Weitere Informationen zu den einzelnen Optionen finden Sie unter [Optionen für reguläre Ausdrücke](../../../docs/standard/base-types/regular-expression-options.md).  
   
-|Option|BESCHREIBUNG|  
+|Option|Beschreibung|  
 |------------|-----------------|  
 |`i`|Übereinstimmung ohne Berücksichtigung der Groß-/Kleinschreibung.|  
 |`m`|Mehrzeilenmodus.|  
@@ -47,7 +47,7 @@ Reguläre Ausdrücke in .NET umfassen drei verschiedene Sprachkonstrukte. Einer 
   
  Im Beispiel werden zwei reguläre Ausdrücke definiert. Der erste, `\b(D\w+)\s(d\w+)\b`, entspricht zwei aufeinander folgenden Wörtern, die mit dem Großbuchstaben „D“ und dem Kleinbuchstaben „d“ beginnen. Der zweite reguläre Ausdruck, `\b(D\w+)(?ixn) \s (d\w+) \b`, verwendet Inlineoptionen, um dieses Muster entsprechend der folgenden Tabelle zu ändern. Ein Vergleich der Ergebnisse bestätigt den Effekt des `(?ixn)`-Konstrukts.  
   
-|Muster|BESCHREIBUNG|  
+|Muster|Beschreibung|  
 |-------------|-----------------|  
 |`\b`|An einer Wortgrenze beginnen.|  
 |`(D\w+)`|Übereinstimmung mit dem Großbuchstaben „D“, gefolgt von einem oder mehreren Wortzeichen. Dies ist die erste Erfassungsgruppe.|  
@@ -57,11 +57,11 @@ Reguläre Ausdrücke in .NET umfassen drei verschiedene Sprachkonstrukte. Einer 
 |`\b`|Übereinstimmung mit einer Wortgrenze.|  
   
 ## <a name="inline-comment"></a>Inlinekommentar  
- Das Konstrukt `(?#` *comment*`)` ermöglicht das Einfügen eines Inlinekommentars in einen regulären Ausdruck. Die Engine für reguläre Ausdrücke verwendet keinen Teil des Kommentars beim Musterabgleich, obwohl der Kommentar in der von der Methode <xref:System.Text.RegularExpressions.Regex.ToString%2A?displayProperty=nameWithType> zurückgegebenen Zeichenfolge enthalten ist. Der Kommentar endet bei der ersten schließenden Klammer.  
+ Das Konstrukt `(?#` *Kommentar*`)` ermöglicht das Einfügen eines Inlinekommentars in einen regulären Ausdruck. Die Engine für reguläre Ausdrücke verwendet keinen Teil des Kommentars beim Musterabgleich, obwohl der Kommentar in der von der Methode <xref:System.Text.RegularExpressions.Regex.ToString%2A?displayProperty=nameWithType> zurückgegebenen Zeichenfolge enthalten ist. Der Kommentar endet bei der ersten schließenden Klammer.  
   
  Im folgenden Beispiel wird das erste Muster für reguläre Ausdrücke aus dem Beispiel im vorherigen Abschnitt wiederholt. Dem regulären Ausdruck werden zwei Inlinekommentare hinzugefügt, um anzugeben, ob beim Vergleich die Groß-/Kleinschreibung berücksichtigt wird. Das Muster für reguläre Ausdrücke, `\b((?# case-sensitive comparison)D\w+)\s(?ixn)((?#case-insensitive comparison)d\w+)\b`, ist wie folgt definiert.  
   
-|Muster|BESCHREIBUNG|  
+|Muster|Beschreibung|  
 |-------------|-----------------|  
 |`\b`|An einer Wortgrenze beginnen.|  
 |`(?# case-sensitive comparison)`|Ein Kommentar. Dieser wirkt sich nicht auf das Verhalten des Mustervergleichs aus.|  
@@ -82,7 +82,7 @@ Reguläre Ausdrücke in .NET umfassen drei verschiedene Sprachkonstrukte. Einer 
   
  `\{\d+(,-*\d+)*(\:\w{1,4}?)*\}(?x) # Looks for a composite format item.`  
   
-|Muster|BESCHREIBUNG|  
+|Muster|Beschreibung|  
 |-------------|-----------------|  
 |`\{`|Übereinstimmung mit einer öffnenden geschweiften Klammer.|  
 |`\d+`|Entsprechung für mindestens eine Dezimalstelle finden.|  

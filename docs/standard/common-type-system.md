@@ -4,12 +4,12 @@ description: Erfahren Sie, wie das allgemeine Typsystem (CTS) und die Common Lan
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: 3b1f5725-ac94-4f17-8e5f-244442438a4d
-ms.openlocfilehash: d162a736b8f7b56293fc75a445c2a80cce597768
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 8983e456b051ace434fda9f6ed9cf9028c2ec2d7
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64664517"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79187679"
 ---
 # <a name="common-type-system--common-language-specification"></a>Allgemeines Typsystem und Common Language Specification
 
@@ -17,7 +17,7 @@ Diese im Kontext von .NET frei verwendeten Begriffe sind dennoch entscheidend f�
 
 ## <a name="common-type-system"></a>Allgemeines Typsystem
 
-Beachten Sie zunächst, dass eine .NET-Implementierung _sprachunabhängig_ ist. Dies bedeutet nicht nur, dass ein Programmierer Code in jeder Sprache schreiben kann, die in IL kompiliert werden kann. Dies bedeutet auch, dass er in der Lage sein muss, mit Code zu interagieren, der in anderen Sprachen geschrieben ist, die in einer .NET-Implementierung verwendet werden können.
+Beachten Sie zunächst, dass eine .NET-Implementierung _sprachunabhängig_ ist. Das bedeutet nicht nur, dass ein Programmierer Code in jeder Sprache schreiben kann, die in IL kompiliert werden kann. Es bedeutet auch, dass dieser in der Lage sein muss, mit Code zu interagieren, der in anderen Sprachen geschrieben ist, die in einer .NET-Implementierung verwendet werden können.
 
 Damit dies transparent erfolgen kann, ist eine allgemeine Methode zur Beschreibung aller unterstützten Typen erforderlich. Hierzu dient das allgemeine Typsystem (Common Type System, CTS). Es ist für verschiedene Zwecke bestimmt:
 
@@ -28,7 +28,7 @@ Damit dies transparent erfolgen kann, ist eine allgemeine Methode zur Beschreibu
 
 CTS definiert zwei Hauptarten von Typen, die unterstützt werden sollten: Verweis- und Werttypen. Ihre Namen weisen auf ihre Definitionen.
 
-Verweistypenobjekte werden durch einen Verweis auf den tatsächlichen Wert des Objekts dargestellt; ein Verweis entspricht hier einem Zeiger in C/C++. Er verweist einfach auf einen Speicherbereich, in dem sich die Werte der Objekte befinden. Dies hat einen tiefgreifenden Einfluss auf die Art der Verwendung dieser Typen. Wenn Sie einen Verweistyp einer Variablen zuweisen und dann z.B. die Variable einer Methode übergeben, werden Änderungen des Objekts im Hauptobjekt berücksichtigt; es findet kein Kopiervorgang statt.
+Verweistypenobjekte werden durch einen Verweis auf den tatsächlichen Wert des Objekts dargestellt. Ein Verweis entspricht hier einem Zeiger in C/C++. Dieser verweist einfach auf einen Speicherbereich, in dem sich die Werte der Objekte befinden. Dies hat einen tiefgreifenden Einfluss auf die Art der Verwendung dieser Typen. Wenn Sie einen Verweistyp einer Variablen zuweisen und dann z.B. die Variable einer Methode übergeben, werden Änderungen des Objekts im Hauptobjekt berücksichtigt; es findet kein Kopiervorgang statt.
 
 Werttypen sind das Gegenteil, wobei die Objekte durch ihre Werte dargestellt werden. Wenn Sie einer Variablen einen Werttyp zuweisen, kopieren Sie im Grunde einen Wert des Objekts.
 

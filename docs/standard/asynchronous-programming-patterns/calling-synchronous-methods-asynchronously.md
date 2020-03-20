@@ -21,10 +21,10 @@ helpviewer_keywords:
 - status information [.NET Framework], asynchronous operations
 ms.assetid: 41972034-92ed-450a-9664-ab93fcc6f1fb
 ms.openlocfilehash: 06df584f0120fbd4978e18647854a3ee844a2095
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73105131"
 ---
 # <a name="calling-synchronous-methods-asynchronously"></a>Asynchrones Aufrufen von synchronen Methoden
@@ -36,7 +36,7 @@ ms.locfileid: "73105131"
 
 Die `BeginInvoke` -Methode initiiert den asynchronen Aufruf. Diese Methode hat die gleichen Parameter wie die Methode, die Sie asynchron ausführen möchten, inklusive zweier zusätzlicher Parameter, die optional sind. Der erste Parameter ist ein <xref:System.AsyncCallback> -Delegat, der auf eine Methode verweist, die bei Beendigung des asynchronen Aufrufs aufzurufen ist. Der zweite Parameter ist ein benutzerdefiniertes Objekt, das Informationen an die Rückrufmethode übergibt. `BeginInvoke` wird immer sofort zurückgegeben und wartet nicht, bis der asynchrone Aufruf abgeschlossen wurde. `BeginInvoke` gibt ein <xref:System.IAsyncResult>zurück, mit dem der Status des asynchronen Aufrufs überwacht werden kann.
 
-Die Ergebnisse dieses asynchronen Aufrufs werden dann mithilfe der `EndInvoke` -Methode abgerufen. Diese kann jederzeit nach der `BeginInvoke`-Methode aufgerufen werden. Wenn der asynchrone Aufruf nicht abgeschlossen wurde, blockiert `EndInvoke` den aufrufenden Thread, bis er abgeschlossen ist. Zu den Parametern von `EndInvoke` gehören der `out` -Methode und eine `ref` -Parameter (`<Out>` `ByRef` -Methode und eine `ByRef` in Visual Basic) der Methode, die asynchron ausgeführt werden soll, sowie das <xref:System.IAsyncResult> , das von `BeginInvoke`-Methode aufgerufen werden.
+Die Ergebnisse dieses asynchronen Aufrufs werden dann mithilfe der `EndInvoke` -Methode abgerufen. Diese kann jederzeit nach der `BeginInvoke`-Methode aufgerufen werden. Wenn der asynchrone Aufruf nicht abgeschlossen wurde, blockiert `EndInvoke` den aufrufenden Thread, bis er abgeschlossen ist. Zu den Parametern von `EndInvoke` gehören die Parameter `out` und `ref` (`<Out>`, `ByRef` und `ByRef` in Visual Basic) der Methode, die Sie asynchron ausführen möchten, und die <xref:System.IAsyncResult>-Schnittstelle, die von `BeginInvoke` zurückgegeben wird.
 
 > [!NOTE]
 > Das IntelliSense-Feature in Visual Studio zeigt die Parameter von `BeginInvoke` und `EndInvoke` an. Sofern Sie nicht Visual Studio oder ein vergleichbares Tool verwenden, oder wenn Sie C# zusammen mit Visual Studio nutzen, finden Sie unter [Asynchrones Programmiermodell (APM)](../../../docs/standard/asynchronous-programming-patterns/asynchronous-programming-model-apm.md) (Asynchrones Programmiermodell (APM)) eine Beschreibung der für diese Methoden festgelegten Parameter.
@@ -99,7 +99,7 @@ Die in diesem Abschnitt verwendeten Codebeispiele veranschaulichen die vier gebr
 
  Hinweise zum Beispiel:
 
-- Der `threadId`-Parameter von `TestMethod` ist ein `out`-Parameter ([`<Out>` `ByRef` in Visual Basic). Deshalb wird sein Eingabewert niemals von `TestMethod` verwendet. Eine Dummyvariable wird an den `BeginInvoke` -Aufruf übergeben. Wenn der `threadId` -Parameter ein `ref` -Parameter wäre (`ByRef` in Visual Basic), müsste die Variable ein Feld auf Klassenebene darstellen, damit sie sowohl an `BeginInvoke` als auch an `EndInvoke`übergeben werden könnte.
+- Der `threadId`-Parameter von `TestMethod` ist ein `out`-Parameter (`<Out>` `ByRef` in Visual Basic). Deshalb wird sein Eingabewert niemals von `TestMethod` verwendet. Eine Dummyvariable wird an den `BeginInvoke` -Aufruf übergeben. Wenn der `threadId` -Parameter ein `ref` -Parameter wäre (`ByRef` in Visual Basic), müsste die Variable ein Feld auf Klassenebene darstellen, damit sie sowohl an `BeginInvoke` als auch an `EndInvoke`übergeben werden könnte.
 
 - Die an `BeginInvoke` übergebenen Zustandsinformationen bestehen aus einer Formatzeichenfolge, die von der Rückrufmethode zum Formatieren einer Ausgabemeldung verwendet wird. Da sie als <xref:System.Object>-Typ übergeben werden, müssen die Zustandsinformationen vor der Verwendung in den geeigneten Typ umgewandelt werden.
 

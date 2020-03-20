@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Dispose method
 - garbage collection, Dispose method
 ms.assetid: eb4e1af0-3b48-4fbc-ad4e-fc2f64138bf9
-ms.openlocfilehash: a7e03a833886a1486e0dc081d6ef059791a464b5
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: f3d3269ccf56954f963762503d2bc1c53b9e6b83
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78156334"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "78238987"
 ---
 # <a name="implementing-a-dispose-method"></a>Implementieren einer Dispose-Methode
 
@@ -33,7 +33,7 @@ Das Dispose-Muster weist zwei Varianten auf:
   
 Um sicherzustellen, dass Ressourcen immer entsprechend bereinigt werden, sollte eine <xref:System.IDisposable.Dispose%2A>-Methode auch mehrmals aufgerufen werden können, ohne eine Ausnahme auszulösen.  
   
-Das Codebeispiel für die <xref:System.GC.KeepAlive%2A?displayProperty=nameWithType>-Methode veranschaulicht, wie durch agressive Garbage Collection die Ausführung eines Finalizers bewirkt werden kann, während ein Member des freigegebenen Objekts noch ausgeführt wird. Es empfiehlt sich, die <xref:System.GC.KeepAlive%2A>-Methode am Ende einer längeren <xref:System.IDisposable.Dispose%2A>-Methode aufzurufen.  
+Das Codebeispiel für die <xref:System.GC.KeepAlive%2A?displayProperty=nameWithType>-Methode veranschaulicht, wie durch Garbage Collection die Ausführung eines Finalizers bewirkt werden kann, während ein nicht verwalteter Verweis auf das Objekt oder den Member weiterhin verwendet wird. Sie sollten <xref:System.GC.KeepAlive%2A?displayProperty=nameWithType> verwenden, damit das Objekt von Beginn der aktuellen Routine bis zum Zeitpunkt des Aufrufs dieser Methode von der Garbage Collection ausgenommen wird.
   
 <a name="Dispose2"></a>
 ## <a name="dispose-and-disposeboolean"></a>Dispose() und Dispose(Boolean)  

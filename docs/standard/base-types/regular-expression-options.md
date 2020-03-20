@@ -13,10 +13,10 @@ helpviewer_keywords:
 - options parameter
 ms.assetid: c82dc689-7e82-4767-a18d-cd24ce5f05e9
 ms.openlocfilehash: a53d7517485d2a0b02b6f11928f478a7da3f9503
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73972113"
 ---
 # <a name="regular-expression-options"></a>Optionen für reguläre Ausdrücke
@@ -29,7 +29,7 @@ Standardmäßig wird beim Vergleich einer Eingabezeichenfolge mit Literalzeichen
 |<xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase>|`i`|Groß-/Kleinschreibung bei der Suche ignorieren Weitere Informationen finden Sie unter [Übereinstimmung ohne Berücksichtigung der Groß-/Kleinschreibung](#case-insensitive-matching).|
 |<xref:System.Text.RegularExpressions.RegexOptions.Multiline>|`m`|Verwenden Sie den Mehrzeilenmodus, in dem `^` und `$` dem Anfang und dem Ende jeder Zeile (und nicht dem Anfang und dem Ende der Eingabezeichenfolge) entsprechen. Weitere Informationen finden Sie unter [Mehrzeilenmodus](#multiline-mode).|
 |<xref:System.Text.RegularExpressions.RegexOptions.Singleline>|`s`|Verwenden Sie Einzeilenmodus, in dem der Punkt (.) den einzelnen Zeichen entspricht (anstatt allen Zeichen mit Ausnahme von `\n`). Weitere Informationen finden Sie unter [Einzeilenmodus](#single-line-mode).|
-|<xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture>|`n`|Unbenannte Gruppen nicht erfassen Die einzigen gültigen Erfassungen sind explizit benannte oder nummerierte Gruppen in der Form `(?<`*Name*`>` *Teilausdruck*`)`. Weitere Informationen finden Sie unter [Nur explizite Erfassungen](#explicit-captures-only).|
+|<xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture>|`n`|Unbenannte Gruppen nicht erfassen Die einzigen gültigen Erfassungen sind explizit benannte oder nummerierte Gruppen mit dem Format `(?<`*Name*`>` *Teilausdruck*`)`. Weitere Informationen finden Sie unter [Nur explizite Erfassungen](#explicit-captures-only).|
 |<xref:System.Text.RegularExpressions.RegexOptions.Compiled>|Nicht verfügbar|Kompiliert den regulären Ausdruck in eine Assembly. Weitere Informationen hierzu finden Sie unter [Kompilierte reguläre Ausdrücke](#compiled-regular-expressions).|
 |<xref:System.Text.RegularExpressions.RegexOptions.IgnorePatternWhitespace>|`x`|Schließt Leerstellen ohne Escapezeichen vom Muster aus und aktiviert Kommentare nach einem Nummernzeichen (`#`). Weitere Informationen finden Sie im Abschnitt [Ignorieren von Leerzeichen](#ignore-white-space).|
 |<xref:System.Text.RegularExpressions.RegexOptions.RightToLeft>|Nicht verfügbar|Ändert die Suchrichtung. Die Suche wird von rechts nach links und nicht von links nach rechts durchgeführt. Weitere Informationen finden Sie unter [Rechts-nach-Links-Modus](#right-to-left-mode).|
@@ -160,7 +160,7 @@ Im folgenden Beispiel werden die Namen und Ergebnisse von Bowlern extrahiert und
 
 Das Muster für reguläre Ausdrücke `^(\w+)\s(\d+)\r*$` wird entsprechend der folgenden Tabelle definiert:
 
-|Muster|BESCHREIBUNG|
+|Muster|Beschreibung|
 |-------------|-----------------|
 |`^`|Am Anfang der Zeile beginnen.|
 |`(\w+)`|Übereinstimmung mit mindestens einem Wortzeichen. Dies ist die erste Erfassungsgruppe.|
@@ -198,7 +198,7 @@ Gruppierungskonstrukte werden häufig nur verwendet, um Quantifizierer für mehr
 
 sollen nur Sätze mit einem Punkt, Ausrufezeichen oder Fragezeichen am Ende aus einem Dokument extrahiert werden. Nur der resultierende Satz (der durch das <xref:System.Text.RegularExpressions.Match>-Objekt dargestellt wird) ist von Interesse. Die einzelnen Wörter in der Auflistung sind irrelevant.
 
-Erfassungsgruppen, die anschließend nicht verwendet werden, können speicherintensiv sein, da die Engine für reguläre Ausdrücke sowohl das <xref:System.Text.RegularExpressions.GroupCollection>- als auch das <xref:System.Text.RegularExpressions.CaptureCollection>-Auflistungsobjekt auffüllen muss. Als Alternative können Sie entweder die <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture?displayProperty=nameWithType>-Option oder die `n`-Inlineoption verwenden, um anzugeben, dass die einzigen gültigen Erfassungen explizit benannte oder nummerierte Gruppen sind, die durch das Konstrukt `(?<`*name*`>` *subexpression*`)` angegeben werden.
+Erfassungsgruppen, die anschließend nicht verwendet werden, können speicherintensiv sein, da die Engine für reguläre Ausdrücke sowohl das <xref:System.Text.RegularExpressions.GroupCollection>- als auch das <xref:System.Text.RegularExpressions.CaptureCollection>-Auflistungsobjekt auffüllen muss. Alternativ können Sie entweder die <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture?displayProperty=nameWithType>-Option oder die `n`-Inlineoption verwenden, um anzugeben, dass die einzigen gültigen Erfassungen explizit benannte oder nummerierte Gruppen sind, die durch das Konstrukt `(?<`*Name*`>` *Teilausdruck*`)` angegeben werden.
 
 Das folgende Beispiel zeigt Informationen zu den Übereinstimmungen an, die vom Muster eines regulären Ausdrucks `\b\(?((\w+),?\s?)+[\.!?]\)?` zurückgegeben werden, wenn die <xref:System.Text.RegularExpressions.Regex.Match%2A>-Methode mit und ohne die <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture?displayProperty=nameWithType>-Option aufgerufen wird. Wie die Ausgabe des ersten Methodenaufrufs zeigt, füllt die Engine für reguläre Ausdrücke das <xref:System.Text.RegularExpressions.GroupCollection>-Auflistungsobjekt und das <xref:System.Text.RegularExpressions.CaptureCollection>-Auflistungsobjekt vollständig mit Informationen zu erfassten Teilzeichenfolgen auf. Da die zweite Methode mit `options` mit dem Wert <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture?displayProperty=nameWithType> aufgerufen wird, werden keine Informationen zu Gruppen erfasst.
 
@@ -207,7 +207,7 @@ Das folgende Beispiel zeigt Informationen zu den Übereinstimmungen an, die vom 
 
 Das Muster für reguläre Ausdrücke `\b\(?((?>\w+),?\s?)+[\.!?]\)?` ist entsprechend der folgenden Tabelle definiert.
 
-|Muster|BESCHREIBUNG|
+|Muster|Beschreibung|
 |-------------|-----------------|
 |`\b`|Bei einer Wortgrenze beginnen.|
 |`\(?`|Sucht nach einer Übereinstimmung mit null oder einem Vorkommen der öffnenden Klammer ("(").|
@@ -264,7 +264,7 @@ In den folgenden Fällen werden Leerzeichen in regulären Ausdrücken jedoch nic
 
 - Leerzeichen sind innerhalb von in Klammern gesetzten Quantifizierern wie `{`*n*`}`, `{`*n*`,}` und `{`*n*`,`*m*`}` nicht zulässig. Das Muster eines regulären Ausdrucks `\d{1, 3}` findet z. B. keine Übereinstimmung mit Ziffernsequenzen von einer bis zu drei Ziffern, da es ein Leerzeichen enthält.
 
-- Leerzeichen sind in Zeichenfolgen, die Sprachelemente einleiten, nicht zulässig. Beispiel:
+- Leerzeichen sind in Zeichenfolgen, die Sprachelemente einleiten, nicht zulässig. Zum Beispiel:
 
   - Das Sprachelement `(?:`*Teilausdruck*`)` stellt eine nicht erfassende Gruppe dar, und der `(?:`-Teil des Elements darf keine eingebetteten Leerzeichen enthalten. Das Muster `(? :`*subexpression*`)` löst zur Laufzeit eine <xref:System.ArgumentException> aus, da die Engine für reguläre Ausdrücke das Muster nicht analysieren kann und das Muster `( ?:`*subexpression*`)` findet keine Übereinstimmung zu *subexpression*.
 
@@ -305,7 +305,7 @@ Beachten Sie auch, dass die Lookaheadassertion (das `(?=`*Teilausdruck*`)`-Sprac
 
 Das Muster für reguläre Ausdrücke ist wie in der folgenden Tabelle gezeigt definiert.
 
-|Muster|BESCHREIBUNG|
+|Muster|Beschreibung|
 |-------------|-----------------|
 |`(?<=\d{1,2}\s)`|Dem Anfang der Übereinstimmung müssen eine oder zwei von einem Leerzeichen gefolgte Dezimalstellen vorangestellt sein.|
 |`\w+`|Übereinstimmung mit mindestens einem Wortzeichen.|
@@ -338,7 +338,7 @@ Das Verhalten von ECMAScript und kanonischen regulären Ausdrücke unterscheidet
 
   Der reguläre Ausdruck wird entsprechend der Darstellung in der folgenden Tabelle definiert:
 
-  |Muster|BESCHREIBUNG|
+  |Muster|Beschreibung|
   |-------------|-----------------|
   |(a+)|Entspricht einem oder mehreren Vorkommen des Buchstabens "a". Dies ist die zweite Erfassungsgruppe.|
   |(\1)|Entspricht der Teilzeichenfolge, die von der ersten Erfassungsgruppe erfasst wurde. Dies ist die dritte Erfassungsgruppe.|
