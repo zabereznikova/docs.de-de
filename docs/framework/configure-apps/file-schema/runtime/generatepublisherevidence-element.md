@@ -5,45 +5,45 @@ helpviewer_keywords:
 - generatePublisherEvidence element
 - <generatePublisherEvidence> element
 ms.assetid: 7d208f50-e8d5-4a42-bc1a-1cf3590706a8
-ms.openlocfilehash: b04ef53d6e9c3d954b0925ea8634b3d220b36af7
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 24a5ea02992a5bce681b5bab4fb7f75505bd225d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73116576"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79154113"
 ---
-# <a name="generatepublisherevidence-element"></a>\<generatePublisherEvidence > Element
-Gibt an, ob die Laufzeit <xref:System.Security.Policy.Publisher> Beweise für Code Zugriffssicherheit (CAS) erstellt.  
+# <a name="generatepublisherevidence-element"></a>\<generatePublisherEvidence> Element
+Gibt an, ob <xref:System.Security.Policy.Publisher> die Laufzeit Beweise für die Codezugriffssicherheit (Code Access Security, CAS) erstellt.  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp; &nbsp;[ **\<runtime >** ](runtime-element.md) \
-&nbsp;&nbsp;&nbsp;&nbsp; **\<generatePublisherEvidence >**  
+[**\<Konfiguration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<Laufzeit>**](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**\<generatePublisherEvidence>**  
   
 ## <a name="syntax"></a>Syntax  
   
 ```xml  
-<generatePublisherEvidence    
+<generatePublisherEvidence
    enabled="true|false"/>  
 ```  
   
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
-### <a name="attributes"></a>Attribute  
+### <a name="attributes"></a>Attributes  
   
-|Attribut|Beschreibung|  
+|attribute|Beschreibung|  
 |---------------|-----------------|  
-|`enabled`|Erforderliches Attribut.<br /><br /> Gibt an, ob die Laufzeit <xref:System.Security.Policy.Publisher> Beweis erstellt.|  
+|`enabled`|Erforderliches Attribut.<br /><br /> Gibt an, ob <xref:System.Security.Policy.Publisher> die Laufzeit Beweise erstellt.|  
   
 ## <a name="enabled-attribute"></a>Enabled-Attribut  
   
-|Wert|Beschreibung|  
+|value|Beschreibung|  
 |-----------|-----------------|  
 |`false`|Erstellt keine <xref:System.Security.Policy.Publisher> Beweise.|  
-|`true`|Erstellt <xref:System.Security.Policy.Publisher> Beweise. Dies ist die Standardeinstellung.|  
+|`true`|Erstellt <xref:System.Security.Policy.Publisher> Beweise. Dies ist die Standardoption.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
- Keine  
+ Keine.  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   
@@ -52,21 +52,21 @@ Gibt an, ob die Laufzeit <xref:System.Security.Policy.Publisher> Beweise für Co
 |`configuration`|Das Stammelement in jeder von den Common Language Runtime- und .NET Framework-Anwendungen verwendeten Konfigurationsdatei.|  
 |`runtime`|Enthält Informationen über Laufzeitinitialisierungsoptionen.|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
   
 > [!NOTE]
-> In der .NET Framework 4 und höher hat dieses Element keine Auswirkung auf die assemblyladezeiten. Weitere Informationen finden Sie im Abschnitt "Vereinfachung der Sicherheitsrichtlinie" unter " [Sicherheitsänderungen](../../../security/security-changes.md)".  
+> In .NET Framework 4 und höher hat dieses Element keine Auswirkungen auf die Ladezeiten der Assembly. Weitere Informationen finden Sie im Abschnitt "Vereinfachung der Sicherheitsrichtlinien" unter [Sicherheitsänderungen](../../../security/security-changes.md).  
   
- Der Common Language Runtime (CLR) versucht, die Authenticode-Signatur zur Ladezeit zu überprüfen, um <xref:System.Security.Policy.Publisher> Beweise für die Assembly zu erstellen. Die meisten Anwendungen benötigen jedoch standardmäßig keine <xref:System.Security.Policy.Publisher> Beweise. Die Standard-CAS-Richtlinie beruht nicht auf der <xref:System.Security.Policy.PublisherMembershipCondition>. Vermeiden Sie unnötige Startkosten im Zusammenhang mit der Überprüfung der Herausgeber Signatur, es sei denn, Ihre Anwendung wird auf einem Computer mit einer benutzerdefinierten CAS-Richtlinie ausgeführt oder beabsichtigt, Anforderungen für <xref:System.Security.Permissions.PublisherIdentityPermission> in einer teilweise vertrauenswürdigen Umgebung zu erfüllen. (Ansprüche für Identitäts Berechtigungen sind immer erfolgreich in einer vollständig vertrauenswürdigen Umgebung.)  
+ Die Common Language Runtime (CLR) versucht, die Authenticode-Signatur zum Zeitpunkt des Ladens zu überprüfen, um Beweise für die Assembly zu erstellen. <xref:System.Security.Policy.Publisher> Standardmäßig benötigen <xref:System.Security.Policy.Publisher> die meisten Anwendungen jedoch keine Beweise. Die Standard-CAS-Richtlinie <xref:System.Security.Policy.PublisherMembershipCondition>verlässt sich nicht auf die . Sie sollten die unnötigen Startkosten vermeiden, die mit der Überprüfung der Herausgebersignatur verbunden sind, es <xref:System.Security.Permissions.PublisherIdentityPermission> sei denn, Die Anwendung wird auf einem Computer mit benutzerdefinierten CAS-Richtlinien ausgeführt oder beabsichtigt, Anforderungen für eine umgebung mit teilweisem Vertrauen zu erfüllen. (Anforderungen an Identitätsberechtigungen sind in einer Umgebung mit voller Vertrauenswürdigkeit immer erfolgreich.)  
   
 > [!NOTE]
-> Wir empfehlen, dass Dienste das `<generatePublisherEvidence>`-Element verwenden, um die Startleistung zu verbessern.  Mithilfe dieses Elements können auch Verzögerungen vermieden werden, die einen Timeout und den Abbruch des Dienst Starts verursachen können.  
+> Es wird empfohlen, `<generatePublisherEvidence>` dass Dienste das Element verwenden, um die Startleistung zu verbessern.  Die Verwendung dieses Elements kann auch dazu beitragen, Verzögerungen zu vermeiden, die zu einem Timeout und zum Abbruch des Dienststarts führen können.  
   
 ## <a name="configuration-file"></a>Konfigurationsdatei  
- Dieses Element kann nur in der Anwendungs Konfigurationsdatei verwendet werden.  
+ Dieses Element kann nur in der Anwendungskonfigurationsdatei verwendet werden.  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird gezeigt, wie das `<generatePublisherEvidence>`-Element verwendet wird, um die Prüfung der CAS-Herausgeber Richtlinie für eine Anwendung zu deaktivieren  
+ Das folgende Beispiel zeigt, `<generatePublisherEvidence>` wie sie das Element verwenden, um die Überprüfung auf CAS-Herausgeberrichtlinie für eine Anwendung zu deaktivieren.  
   
 ```xml  
 <configuration>  
@@ -76,7 +76,7 @@ Gibt an, ob die Laufzeit <xref:System.Security.Policy.Publisher> Beweise für Co
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Schema für Laufzeiteinstellungen](index.md)
-- [Konfigurationsdateischema](../index.md)
+- [Schema der Konfigurationsdatei](../index.md)

@@ -9,26 +9,26 @@ helpviewer_keywords:
 - container tags, <bindingRedirect> element
 - bindingRedirect element
 ms.assetid: 67784ecd-9663-434e-bd6a-26975e447ac0
-ms.openlocfilehash: 7d51ef5c4107fc6a40a472a660f53bb0ded59683
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: d96585b397f75dcb9fac7e7fce93799cc95e7c6c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252786"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79154295"
 ---
-# <a name="bindingredirect-element"></a>\<bindingRedirect-> Element
+# <a name="bindingredirect-element"></a>\<bindingRedirect> Element
 Leitet eine Assemblyversion in eine andere um.  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<Lauf Zeit >** ](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<assemblyBinding->** ](assemblybinding-element-for-runtime.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<dependentAssembly->** ](dependentassembly-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<bindingRedirect>**  
+[**\<Konfiguration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<Laufzeit>**](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<AssemblyBinding>**](assemblybinding-element-for-runtime.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<dependentAssembly>**](dependentassembly-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<bindingRedirect>**  
   
 ## <a name="syntax"></a>Syntax  
   
 ```xml  
-   <bindingRedirect    
+   <bindingRedirect
 oldVersion="existing assembly version"  
 newVersion="new assembly version"/>  
 ```  
@@ -36,18 +36,18 @@ newVersion="new assembly version"/>
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
-### <a name="attributes"></a>Attribute  
+### <a name="attributes"></a>Attributes  
   
-|Attribut|Beschreibung|  
+|attribute|Beschreibung|  
 |---------------|-----------------|  
-|`oldVersion`|Erforderliches Attribut.<br /><br /> Gibt die Assemblyversion an, die ursprünglich angefordert wurde. Das Format einer Assemblyversionsnummer ist *Hauptversion. neben Version. Build. Revision*. Gültige Werte für jeden Abschnitt dieser Versionsnummer sind 0 bis 65535.<br /><br /> Sie können auch einen Bereich an Versionsnummern angeben, und zwar im folgenden Format:<br /><br /> *n.n.n.n - n.n.n.n*|  
-|`newVersion`|Erforderliches Attribut.<br /><br /> Gibt die Version der Assembly an, die anstelle der ursprünglich angeforderten Version im folgenden Format verwendet werden soll: *n. n. n. n*<br /><br /> Dieser Wert kann eine frühere Version als `oldVersion` angeben.|  
+|`oldVersion`|Erforderliches Attribut.<br /><br /> Gibt die Assemblyversion an, die ursprünglich angefordert wurde. Das Format einer Assemblyversionsnummer ist *major.minor.build.revision*. Gültige Werte für jeden Abschnitt dieser Versionsnummer sind 0 bis 65535.<br /><br /> Sie können auch einen Bereich an Versionsnummern angeben, und zwar im folgenden Format:<br /><br /> *n.n.n.n - n.n.n.n*|  
+|`newVersion`|Erforderliches Attribut.<br /><br /> Gibt die Version der Assembly an, die anstelle der ursprünglich angeforderten Version im Format *n.n.n.n* verwendet werden soll.<br /><br /> Dieser Wert kann eine frühere Version als `oldVersion` angeben.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|None||  
+|Keine||  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   
@@ -58,12 +58,12 @@ newVersion="new assembly version"/>
 |`dependentAssembly`|Kapselt die Bindungsrichtlinie und den Assemblyspeicherort für jede Assembly. Verwenden Sie für jede Assembly ein dependentAssembly-Element.|  
 |`runtime`|Enthält Informationen über die Assemblybindung und die Garbage Collection.|  
   
-## <a name="remarks"></a>Hinweise  
- Wenn Sie eine .NET Framework-Anwendung mit einer Assembly mit starkem Namen erstellen, verwendet die Anwendung zur Laufzeit standardmäßig diese Version der Assembly, selbst wenn eine neue Version verfügbar ist. Sie können die Anwendung jedoch auch so konfigurieren, dass sie mit einer neueren Version der Assembly ausgeführt wird. Ausführliche Informationen dazu, wie die Common Language Runtime diese Dateien verwendet, um zu bestimmen, welche Assemblyversion verwendet werden soll, finden Sie unter so sucht Common Language [Runtime](../../../deployment/how-the-runtime-locates-assemblies.md)  
+## <a name="remarks"></a>Bemerkungen  
+ Wenn Sie eine .NET Framework-Anwendung mit einer Assembly mit starkem Namen erstellen, verwendet die Anwendung zur Laufzeit standardmäßig diese Version der Assembly, selbst wenn eine neue Version verfügbar ist. Sie können die Anwendung jedoch auch so konfigurieren, dass sie mit einer neueren Version der Assembly ausgeführt wird. Weitere Informationen dazu, wie die Laufzeit diese Dateien verwendet, um zu bestimmen, welche Assemblyversion verwendet werden soll, finden Sie unter [So sucht die Laufzeit Assemblys](../../../deployment/how-the-runtime-locates-assemblies.md).  
   
  Sie können mehrere Assemblyversionen umleiten, indem Sie mehrere `bindingRedirect`-Elemente in ein `dependentAssembly`-Element aufnehmen. Sie können auch von einer neueren Version zu einer früheren Version der Assembly umleiten.  
   
- Für die explizite Umleitung einer Assemblybindung in einer Anwendungskonfigurationsdatei ist eine Sicherheitsberechtigung erforderlich. Dies betrifft die Umleitung von .NET Framework-Assemblys und Assemblys von Drittanbietern. Die Berechtigung wird erteilt, indem das <xref:System.Security.Permissions.SecurityPermissionFlag> -Flag <xref:System.Security.Permissions.SecurityPermission>auf festgelegt wird. Weitere Informationen finden Sie unter [Sicherheits Berechtigung für die assemblybindungsumleitung](../../assembly-binding-redirection-security-permission.md).  
+ Für die explizite Umleitung einer Assemblybindung in einer Anwendungskonfigurationsdatei ist eine Sicherheitsberechtigung erforderlich. Dies betrifft die Umleitung von .NET Framework-Assemblys und Assemblys von Drittanbietern. Die Berechtigung wird erteilt, indem das <xref:System.Security.Permissions.SecurityPermissionFlag> Flag auf der <xref:System.Security.Permissions.SecurityPermission>gesetzt wird. Weitere Informationen finden Sie unter [Sicherheitsberechtigung für Assemblybindungsumleitung](../../assembly-binding-redirection-security-permission.md).  
   
 ## <a name="example"></a>Beispiel  
  Das folgende Beispiel veranschaulicht, wie Sie eine Assemblyversion zu einer anderen umleiten.  
@@ -84,8 +84,8 @@ newVersion="new assembly version"/>
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Schema für Laufzeiteinstellungen](index.md)
-- [Konfigurationsdateischema](../index.md)
+- [Schema der Konfigurationsdatei](../index.md)
 - [Umleiten von Assemblyversionen](../../redirect-assembly-versions.md)

@@ -3,22 +3,22 @@ title: <sessionTokenRequirement>
 ms.date: 03/30/2017
 ms.assetid: 496a1735-cbb7-49d5-a6aa-dd5550462073
 author: BrucePerlerMS
-ms.openlocfilehash: 968c48df9e92a1dfbfb6e248b06cf4f97cece8b4
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: ade55a5b26826633faf2e7ef7598a4071d613bbc
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70251817"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79152540"
 ---
 # <a name="sessiontokenrequirement"></a>\<sessionTokenRequirement>
-Stellt die Konfiguration für <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler> die-Klasse oder abgeleitete Klassen bereit.  
+Stellt die <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler> Konfiguration für die Klasse oder abgeleitete Klassen bereit.  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<System. IdentityModel->** ](system-identitymodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<identityconfiguration->** ](identityconfiguration.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<securitytokenhandlers >** ](securitytokenhandlers.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> Hinzufügen**](add.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<sessiontokenrequirements->**  
+[**\<Konfiguration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.identityModel>**](system-identitymodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<identityConfiguration>**](identityconfiguration.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<securityTokenHandlers>**](securitytokenhandlers.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<hinzufügen>**](add.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<sessionTokenRequirement>**  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -38,25 +38,25 @@ Stellt die Konfiguration für <xref:System.IdentityModel.Tokens.SessionSecurityT
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
-### <a name="attributes"></a>Attribute  
+### <a name="attributes"></a>Attributes  
   
-|Attribut|Beschreibung|  
+|attribute|Beschreibung|  
 |---------------|-----------------|  
-|Lebensdauer|Gibt die Lebensdauer von Sitzungs Token an.|  
+|lifetime|Gibt die Lebensdauer von Sitzungstoken an.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
- None  
+ Keine  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<add>](add.md)|Fügt der tokenhandlerauflistung den angegebenen Sicherheitstokenhandler hinzu.|  
+|[\<hinzufügen>](add.md)|Fügt der Tokenhandlerauflistung den angegebenen Sicherheitstokenhandler hinzu.|  
   
 ## <a name="example"></a>Beispiel  
   
 ```xml  
-<add type="System.IdentityModel.Tokens.SessionSecurityTokenHandler, System.IdentityModel">           
+<add type="System.IdentityModel.Tokens.SessionSecurityTokenHandler, System.IdentityModel">
     <sessionTokenRequirement lifetime="10:00" />  
 </add>  
 ```

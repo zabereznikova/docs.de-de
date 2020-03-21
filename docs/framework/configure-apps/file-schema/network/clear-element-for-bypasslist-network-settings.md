@@ -10,21 +10,21 @@ helpviewer_keywords:
 - <bypasslist>, clear element
 - bypasslist, clear element
 ms.assetid: 301584ca-a914-4100-b180-3b288d3b099e
-ms.openlocfilehash: 2ad6b16370f600299439d2e810dfefa1b5fa3c06
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.openlocfilehash: c25477c2c99be66b34b07e1f7e50115bfa8d14e9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74087531"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79154932"
 ---
-# <a name="clear-element-for-bypasslist-network-settings"></a>\<>-Element für bypasslist (Netzwerkeinstellungen) löschen.
-Löscht die Proxy Umgehungs Liste.  
+# <a name="clear-element-for-bypasslist-network-settings"></a>\<Clear> Element für Bypasslist (Netzwerkeinstellungen)
+Löscht die Proxy-Umgehungsliste.  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<System. net >** ](system-net-element-network-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<defaultProxy >** ](defaultproxy-element-network-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<BypassList >** ](bypasslist-element-network-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<**Löschen >**
+[**\<Konfiguration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.net>**](system-net-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<defaultProxy>**](defaultproxy-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<Bypasslist>**](bypasslist-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<klare>**
 
 ## <a name="syntax"></a>Syntax  
   
@@ -35,26 +35,26 @@ Löscht die Proxy Umgehungs Liste.
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
-### <a name="attributes"></a>Attribute  
- Keine  
+### <a name="attributes"></a>Attributes  
+ Keine.  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
- Keine  
+ Keine.  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   
 |**Element**|**Beschreibung**|  
 |-----------------|---------------------|  
-|[BypassList](bypasslist-element-network-settings.md)|Stellt eine Reihe von regulären Ausdrücken bereit, die Adressen beschreiben, die keinen Proxy verwenden.|  
+|[bypasslist](bypasslist-element-network-settings.md)|Stellt eine Reihe regulärer Ausdrücke bereit, die Adressen beschreiben, die keinen Proxy verwenden.|  
   
-## <a name="remarks"></a>Hinweise  
- Das `clear`-Element löscht alle Einträge aus der Umgehungs Liste.  
+## <a name="remarks"></a>Bemerkungen  
+ Das `clear` Element löscht alle Einträge aus der Umgehungsliste.  
   
 ## <a name="configuration-files"></a>Konfigurationsdateien  
  Dieses Element kann in der Anwendungskonfigurationsdatei oder in der Computerkonfigurationsdatei ("Machine.config") verwendet werden.  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird die Umgehungs Liste gelöscht und dann der Umgehungs Liste zwei Adressen hinzugefügt. Der erste umgeht den Proxy für alle Server in der contoso.com-Domäne. mit dem zweiten wird der Proxy für alle Server umgangen, deren IP-Adresse mit 192,168 beginnt.  
+ Im folgenden Beispiel wird die Umgehungsliste entfernt und dann zwei Adressen zur Umgehungsliste hinzugefügt. Die erste umgeht den Proxy für alle Server in der contoso.com Domäne. Der zweite umgeht den Proxy für alle Server, deren IP-Adresse mit 192.168 beginnt.  
   
 ```xml  
 <configuration>  
@@ -67,10 +67,10 @@ Löscht die Proxy Umgehungs Liste.
       </bypasslist>  
     </defaultProxy>  
   </system.net>  
-</configuration>   
+</configuration>
 ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Net.WebProxy?displayProperty=nameWithType>
-- [Network Settings Schema (Schema für Netzwerkeinstellungen)](index.md)
+- [Netzwerkeinstellungsschema](index.md)

@@ -3,20 +3,20 @@ title: <claimsAuthenticationManager>
 ms.date: 03/30/2017
 ms.assetid: 6d30a450-6d13-4671-81a8-77e0204500c5
 author: BrucePerlerMS
-ms.openlocfilehash: c901daf4d442a206345301795c7a4bdc076329cd
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: a54fc2cea84bb9d08a9725d846fe38efd7b5475a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252089"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79152748"
 ---
 # <a name="claimsauthenticationmanager"></a>\<claimsAuthenticationManager>
-Registriert einen anspruchsauthentifizierungs-Manager für die eingehenden Ansprüche.  
+Registriert einen Anspruchsauthentifizierungs-Manager für die eingehenden Ansprüche.  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<System. IdentityModel->** ](system-identitymodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<identityconfiguration->** ](identityconfiguration.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<ClaimsAuthenticationManager->**  
+[**\<Konfiguration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.identityModel>**](system-identitymodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<identityConfiguration>**](identityconfiguration.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<claimsAuthenticationManager>**  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -33,32 +33,32 @@ Registriert einen anspruchsauthentifizierungs-Manager für die eingehenden Anspr
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
-### <a name="attributes"></a>Attribute  
+### <a name="attributes"></a>Attributes  
   
-|Attribut|Beschreibung|  
+|attribute|Beschreibung|  
 |---------------|-----------------|  
-|Typ|Gibt einen benutzerdefinierten Typ an, der <xref:System.Security.Claims.ClaimsAuthenticationManager> von der-Klasse abgeleitet wird. Weitere Informationen zum Angeben des `type` -Attributs finden Sie unter [Custom Type References].|  
+|type|Gibt einen benutzerdefinierten Typ an, <xref:System.Security.Claims.ClaimsAuthenticationManager> der von der Klasse abstammt. Weitere Informationen zum Angeben `type` des Attributs finden Sie unter [Benutzerdefinierte Typreferenzen].|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
- Wenn kein `type` -Attribut vorhanden ist, oder wenn `type` das-Attribut <xref:System.Security.Claims.ClaimsAuthenticationManager> auf die- `<claimsAuthenticationManager>` Klasse verweist, nimmt das-Element keine untergeordneten Elemente an <xref:System.Security.Claims.ClaimsAuthenticationManager> . von abgeleitete Klassen können jedoch untergeordnete Konfigurationselemente definieren.  
+ Wenn `type` kein Attribut vorhanden ist `type` oder <xref:System.Security.Claims.ClaimsAuthenticationManager> das Attribut `<claimsAuthenticationManager>` auf die Klasse verweist, nimmt das Element keine untergeordneten Elemente an. Von Klassen abgeleitete Klassen <xref:System.Security.Claims.ClaimsAuthenticationManager> können jedoch untergeordnete Konfigurationselemente definieren.  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<identityConfiguration>](identityconfiguration.md)|Gibt Identitäts Einstellungen auf Dienst Ebene an.|  
+|[\<identityConfiguration>](identityconfiguration.md)|Gibt Identitätseinstellungen auf Dienstebene an.|  
   
-## <a name="remarks"></a>Hinweise  
- Das von der <xref:System.Security.Claims.ClaimsAuthenticationManager> -Klasse bereitgestellte Standardverhalten gibt die eingehenden Ansprüche wieder. Wenn kein `type` -Attribut angegeben wird oder wenn `type` das-Attribut <xref:System.Security.Claims.ClaimsAuthenticationManager> die-Klasse `<claimsAuthenticationManager>` angibt, nimmt das-Element keine untergeordneten Elemente an. Sie können das `type` Attribut angeben, um einen von der <xref:System.Security.Claims.ClaimsAuthenticationManager> -Klasse abgeleiteten Typ zu registrieren, um benutzerdefiniertes Verhalten zu implementieren Abgeleitete Klassen können die Konfiguration durch untergeordnete Elemente `<claimsAuthenticationManager>` des-Elements unter <xref:System.Security.Claims.ClaimsAuthenticationManager.LoadCustomConfiguration%2A> stützen, indem Sie die-Methode zum Verarbeiten dieser Elemente überschreiben. Das Schema, das für die untergeordneten Elemente definiert ist, ist der Designer der-Klasse.  
+## <a name="remarks"></a>Bemerkungen  
+ Das Standardverhalten, <xref:System.Security.Claims.ClaimsAuthenticationManager> das über die Klasse bereitgestellt wird, spiegelt die eingehenden Ansprüche wider. Wenn `type` kein Attribut angegeben `type` ist oder <xref:System.Security.Claims.ClaimsAuthenticationManager> wenn das `<claimsAuthenticationManager>` Attribut die Klasse angibt, nimmt das Element keine untergeordneten Elemente an. Sie können `type` das Attribut angeben, um <xref:System.Security.Claims.ClaimsAuthenticationManager> einen von der Klasse abgeleiteten Typ zu registrieren, um benutzerdefiniertes Verhalten zu implementieren. Abgeleitete Klassen können die Konfiguration `<claimsAuthenticationManager>` über untergeordnete <xref:System.Security.Claims.ClaimsAuthenticationManager.LoadCustomConfiguration%2A> Elemente des Elements unterstützen, indem die Methode zum Behandeln dieser Elemente überschreibt wird. Das für die untergeordneten Elemente definierte Schema hängt vom Designer der Klasse ab.  
   
- Das `<claimsAuthenticationManager>` -Element legt <xref:System.IdentityModel.Configuration.IdentityConfiguration.ClaimsAuthenticationManager%2A?displayProperty=nameWithType> die-Eigenschaft fest.  
+ Das `<claimsAuthenticationManager>` Element <xref:System.IdentityModel.Configuration.IdentityConfiguration.ClaimsAuthenticationManager%2A?displayProperty=nameWithType> legt die Eigenschaft fest.  
   
 ## <a name="example"></a>Beispiel  
   
 ```xml  
 <system.identityModel>  
     <identityConfiguration name="MyIdentity">  
-      <claimsAuthenticationManager type="MyNamespace.CustomClaimsAuthenticationManager, MyAssembly"/>          
+      <claimsAuthenticationManager type="MyNamespace.CustomClaimsAuthenticationManager, MyAssembly"/>
     </identityConfiguration>  
 </system.identityModel>  
 ```

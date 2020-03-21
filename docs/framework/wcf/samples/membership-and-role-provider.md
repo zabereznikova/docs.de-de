@@ -2,15 +2,15 @@
 title: Mitgliedschafts- und Rollenanbieter
 ms.date: 03/30/2017
 ms.assetid: 0d11a31c-e75f-4fcf-9cf4-b7f26e056bcd
-ms.openlocfilehash: 7fba608d6d0ed3b7caab62ff16926d7b03516ed1
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 117be783c2d4a72ff9d1c4509566274b1043a43d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73424669"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79144460"
 ---
 # <a name="membership-and-role-provider"></a>Mitgliedschafts- und Rollenanbieter
-Das Beispiel für Mitgliedschafts-und Rollen Anbieter veranschaulicht, wie ein Dienst mithilfe der ASP.net-Mitgliedschafts-und Rollen Anbieter Clients authentifizieren und autorisieren kann.  
+Das Beispiel Mitgliedschaft und Rollenanbieter veranschaulicht, wie ein Dienst die ASP.NET Mitgliedschafts- und Rollenanbieter verwenden kann, um Clients zu authentifizieren und zu autorisieren.  
   
  In diesem Beispiel ist der Client eine Konsolenanwendung (.exe), und der Dienst wird von IIS (Internet Information Services, Internetinformationsdienste) gehostet.  
   
@@ -21,11 +21,11 @@ Das Beispiel für Mitgliedschafts-und Rollen Anbieter veranschaulicht, wie ein D
   
 - Ein Client kann die Authentifizierung mithilfe einer Kombination aus Benutzername und Kennwort durchführen.  
   
-- Der Server kann die Client Anmelde Informationen anhand des ASP.net-Mitgliedschafts Anbieters überprüfen.  
+- Der Server kann die Clientanmeldeinformationen anhand des ASP.NET-Mitgliedschaftsanbieters überprüfen.  
   
 - Der Server kann über das X.509-Zertifikat des Servers authentifiziert werden.  
   
-- Der Server kann den authentifizierten Client mit dem ASP.NET-Rollen Anbieter einer Rolle zuordnen.  
+- Der Server kann den authentifizierten Client einer Rolle zuordnen, indem er den ASP.NET Rollenanbieter verwendet.  
   
 - Der Server kann mit `PrincipalPermissionAttribute` den Zugriff auf bestimmte Methoden steuern, die vom Dienst verfügbar gemacht werden.  
   
@@ -34,7 +34,7 @@ Das Beispiel für Mitgliedschafts-und Rollen Anbieter veranschaulicht, wie ein D
 ```xml  
 <!-- Set the connection string for SQL Server -->  
 <connectionStrings>  
-  <add name="SqlConn"   
+  <add name="SqlConn"
        connectionString="Data Source=localhost;Integrated Security=SSPI;Initial Catalog=aspnetdb;" />  
 </connectionStrings>  
   
@@ -43,9 +43,9 @@ Das Beispiel für Mitgliedschafts-und Rollen Anbieter veranschaulicht, wie ein D
   <membership defaultProvider="SqlMembershipProvider" userIsOnlineTimeWindow="15">  
     <providers>  
       <clear />  
-      <add   
-        name="SqlMembershipProvider"   
-        type="System.Web.Security.SqlMembershipProvider"   
+      <add
+        name="SqlMembershipProvider"
+        type="System.Web.Security.SqlMembershipProvider"
         connectionStringName="SqlConn"  
         applicationName="MembershipAndRoleProviderSample"  
         enablePasswordRetrieval="false"  
@@ -57,19 +57,19 @@ Das Beispiel für Mitgliedschafts-und Rollen Anbieter veranschaulicht, wie ein D
   </membership>  
   
   <!-- Configure the Sql Role Provider -->  
-  <roleManager enabled ="true"   
+  <roleManager enabled ="true"
                defaultProvider ="SqlRoleProvider" >  
     <providers>  
-      <add name ="SqlRoleProvider"   
-           type="System.Web.Security.SqlRoleProvider"   
-           connectionStringName="SqlConn"   
+      <add name ="SqlRoleProvider"
+           type="System.Web.Security.SqlRoleProvider"
+           connectionStringName="SqlConn"
            applicationName="MembershipAndRoleProviderSample"/>  
     </providers>  
   </roleManager>  
 </system.web>  
 ```  
   
- Der Dienst macht einen einzigen Endpunkt für die Kommunikation mit dem Dienst verfügbar. Dieser wird mit der Konfigurationsdatei Web.config definiert. Der Endpunkt besteht aus einer Adresse, einer Bindung und einem Vertrag. Die Bindung wird mit einer Standard-`wsHttpBinding` konfiguriert, die standardmäßig die Windows-Authentifizierung verwendet. In diesem Beispiel wird die Standard-`wsHttpBinding` auf die Verwendung der Benutzernamenauthentifizierung festgelegt. Das Verhalten gibt an, dass das Serverzertifikat für die Dienstauthentifizierung verwendet werden soll. Das Serverzertifikat muss den gleichen Wert für die `SubjectName` enthalten wie das `findValue`-Attribut im [\<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md) Konfigurations Elements. Außerdem gibt das Verhalten an, dass die Authentifizierung von Benutzername/Kennwort-Paaren durch den ASP.net-Mitgliedschafts Anbieter und die Rollen Zuordnung durch den ASP.NET-Rollen Anbieter durch Angabe der für die beiden Anbieter definierten Namen ausgeführt wird.  
+ Der Dienst macht einen einzigen Endpunkt für die Kommunikation mit dem Dienst verfügbar. Dieser wird mit der Konfigurationsdatei Web.config definiert. Der Endpunkt besteht aus einer Adresse, einer Bindung und einem Vertrag. Die Bindung wird mit einer Standard-`wsHttpBinding` konfiguriert, die standardmäßig die Windows-Authentifizierung verwendet. In diesem Beispiel wird die Standard-`wsHttpBinding` auf die Verwendung der Benutzernamenauthentifizierung festgelegt. Das Verhalten gibt an, dass das Serverzertifikat für die Dienstauthentifizierung verwendet werden soll. Das Serverzertifikat muss denselben Wert `SubjectName` für `findValue` das Attribut im [ \<serviceCertificate>](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md) Konfigurationselement enthalten. Darüber hinaus gibt das Verhalten an, dass die Authentifizierung von Benutzernamen-Kennwort-Paaren vom ASP.NET-Mitgliedschaftsanbieter s. und die Rollenzuordnung vom ASP.NET Rollenanbieter durchgeführt wird, indem die für die beiden Anbieter definierten Namen angegeben werden.  
   
 ```xml  
 <system.serviceModel>  
@@ -97,11 +97,11 @@ Das Beispiel für Mitgliedschafts-und Rollen Anbieter veranschaulicht, wie ein D
                               roleProviderName ="SqlRoleProvider" />  
         <serviceCredentials>  
           <!-- Configure user name authentication to use the Membership Provider -->  
-          <userNameAuthentication userNamePasswordValidationMode ="MembershipProvider"   
+          <userNameAuthentication userNamePasswordValidationMode ="MembershipProvider"
                                   membershipProviderName ="SqlMembershipProvider"/>  
           <!-- Configure the service certificate -->  
-          <serviceCertificate storeLocation ="LocalMachine"   
-                              storeName ="My"   
+          <serviceCertificate storeLocation ="LocalMachine"
+                              storeName ="My"
                               x509FindType ="FindBySubjectName"  
                               findValue ="localhost" />  
         </serviceCredentials>  
@@ -118,15 +118,15 @@ Das Beispiel für Mitgliedschafts-und Rollen Anbieter veranschaulicht, wie ein D
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>So können Sie das Beispiel einrichten, erstellen und ausführen  
   
-1. Um das C# oder Visual Basic .NET-Edition der Projekt Mappe zu erstellen, befolgen Sie die Anweisungen unter [Ausführen der Windows Communication Foundation Beispiele](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+1. Befolgen Sie die Anweisungen unter Ausführen der Windows Communication [Foundation-Beispiele](../../../../docs/framework/wcf/samples/running-the-samples.md), um die Edition von .NET oder Visual Basic zu erstellen.  
   
-2. Stellen Sie sicher, dass Sie die [ASP.NET-Anwendungsdienste Datenbank](https://go.microsoft.com/fwlink/?LinkId=94997)konfiguriert haben.  
-  
-    > [!NOTE]
-    > Wenn Sie SQL Server Express Edition ausführen, lautet der Servername .\SQLEXPRESS. Dieser Server sollte bei der Konfiguration der ASP.NET Anwendungsdienste-Datenbank sowie in der Web. config-Verbindungs Zeichenfolge verwendet werden.  
+2. Stellen Sie sicher, dass Sie die [ASP.NET Application Services Database](https://go.microsoft.com/fwlink/?LinkId=94997)konfiguriert haben.  
   
     > [!NOTE]
-    > Das ASP.NET-Arbeitsprozess Konto muss über Berechtigungen für die Datenbank verfügen, die in diesem Schritt erstellt wird. Verwenden Sie hierzu das sqlcmd-Hilfsprogramm oder SQL Server Management Studio.  
+    > Wenn Sie SQL Server Express Edition ausführen, lautet der Servername .\SQLEXPRESS. Dieser Server sollte beim Konfigurieren der ASP.NET Application Services-Datenbank sowie in der Verbindungszeichenfolge Web.config verwendet werden.  
+  
+    > [!NOTE]
+    > Das ASP.NET Arbeitsprozesskonto muss über Berechtigungen für die Datenbank verfügen, die in diesem Schritt erstellt wird. Verwenden Sie hierzu das sqlcmd-Hilfsprogramm oder SQL Server Management Studio.  
   
 3. Um das Beispiel in einer Konfiguration mit einem einzigen Computer oder computerübergreifend auszuführen, befolgen Sie die folgenden Anweisungen.  
   
@@ -134,11 +134,11 @@ Das Beispiel für Mitgliedschafts-und Rollen Anbieter veranschaulicht, wie ein D
   
 1. Stellen Sie sicher, dass der Pfad den Ordner enthält, in dem sich Makecert.exe befindet.  
   
-2. Führen Sie Setup. bat aus dem Beispiel Installationsordner in einer Developer-Eingabeaufforderung für Visual Studio aus, die mit Administratorrechten ausgeführt wird. Hierdurch werden die Dienstzertifikate installiert, die zum Ausführen des Beispiels erforderlich sind.  
+2. Führen Sie Setup.bat aus dem Beispielinstallationsordner in einer Entwicklereingabeaufforderung für Visual Studio aus, die mit Administratorrechten ausgeführt wird. Hierdurch werden die Dienstzertifikate installiert, die zum Ausführen des Beispiels erforderlich sind.  
   
 3. Starten Sie Client.exe aus dem Ordner \client\bin. In der Clientkonsolenanwendung wird Clientaktivität angezeigt.  
   
-4. Wenn der Client und der Dienst nicht kommunizieren können, finden Sie unter [Tipps zur Problembehandlung für WCF-Beispiele](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))Weitere Informationen.  
+4. Wenn Client und Dienst nicht kommunizieren können, finden Sie weitere Informationen unter [Tipps zur Fehlerbehebung für WCF-Beispiele](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
   
 ### <a name="to-run-the-sample-across-computers"></a>So führen Sie das Beispiel computerübergreifend aus  
   
@@ -150,24 +150,24 @@ Das Beispiel für Mitgliedschafts-und Rollen Anbieter veranschaulicht, wie ein D
   
 4. Kopieren Sie die Clientprogrammdateien in das Clientverzeichnis auf dem Clientcomputer. Kopieren Sie die Dateien Setup.bat, Cleanup.bat und ImportServiceCert.bat ebenfalls auf den Client.  
   
-5. Öffnen Sie auf dem-Server eine Developer-Eingabeaufforderung für Visual Studio mit Administratorrechten, und führen Sie `setup.bat service`aus. Beim Ausführen von `setup.bat` mit dem `service`-Argument wird ein Dienst Zertifikat mit dem voll qualifizierten Domänen Namen des Computers erstellt und in die Datei Service. CER exportiert.  
+5. Öffnen Sie auf dem Server eine Developer-Eingabeaufforderung für `setup.bat service`Visual Studio mit Administratorrechten, und führen Sie aus. Wenn `setup.bat` Sie `service` mit dem Argument ausführen, wird ein Dienstzertifikat mit dem vollqualifizierten Domänennamen des Computers erstellt und das Dienstzertifikat in eine Datei mit dem Namen Service.cer exportiert.  
   
-6. Bearbeiten Sie die Datei Web. config so, dass Sie den neuen Zertifikat Namen (im `findValue`-Attribut im [\<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)) anzeigt, der mit dem voll qualifizierten Domänen Namen des Computers identisch ist.  
+6. Bearbeiten Sie Web.config, um den `findValue` neuen Zertifikatnamen (im Attribut im [ \<dienstCertificate>](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)) widerzuspiegeln, der mit dem vollqualifizierten Domänennamen des Computers identisch ist.  
   
 7. Kopieren Sie die Datei Service.cer aus dem Dienstverzeichnis in das Clientverzeichnis auf dem Clientcomputer.  
   
 8. Ändern Sie in der Datei Client.exe.config auf dem Clientcomputer den Wert für die Adresse des Endpunkts, sodass er mit der neuen Adresse Ihres Diensts übereinstimmt.  
   
-9. Öffnen Sie auf dem Client eine Developer-Eingabeaufforderung für Visual Studio mit Administratorrechten, und führen Sie ImportServiceCert. bat aus. Dadurch wird das Dienstzertifikat aus der Datei Service.cer in den Speicher CurrentUser – TrustedPeople importiert.  
+9. Öffnen Sie auf dem Client eine Developer-Eingabeaufforderung für Visual Studio mit Administratorrechten, und führen Sie ImportServiceCert.bat aus. Dadurch wird das Dienstzertifikat aus der Datei Service.cer in den Speicher CurrentUser – TrustedPeople importiert.  
   
-10. Starten Sie auf dem Clientcomputer Client.exe an einer Eingabeaufforderung. Wenn der Client und der Dienst nicht kommunizieren können, finden Sie unter [Tipps zur Problembehandlung für WCF-Beispiele](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))Weitere Informationen.  
+10. Starten Sie auf dem Clientcomputer Client.exe an einer Eingabeaufforderung. Wenn Client und Dienst nicht kommunizieren können, finden Sie weitere Informationen unter [Tipps zur Fehlerbehebung für WCF-Beispiele](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
   
 ### <a name="to-clean-up-after-the-sample"></a>So stellen Sie den Zustand vor Ausführung des Beispiels wieder her  
   
 - Führen Sie Cleanup.bat im Beispielordner aus, nachdem Sie die Ausführung des Beispiels abgeschlossen haben.  
   
 > [!NOTE]
-> Wenn dieses Beispiel computerübergreifend ausgeführt wird, entfernt dieses Skript keine Dienstzertifikate auf einem Client. Wenn Sie Windows Communication Foundation (WCF)-Beispiele ausgeführt haben, die Zertifikate Computer übergreifend verwenden, müssen Sie sicherstellen, dass Sie die Dienst Zertifikate löschen, die im Speicher CurrentUser-treudpeople installiert wurden. Verwenden Sie dazu den folgenden Befehl: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` Beispiel: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.  
+> Wenn dieses Beispiel computerübergreifend ausgeführt wird, entfernt dieses Skript keine Dienstzertifikate auf einem Client. Wenn Sie Windows Communication Foundation (WCF)-Beispiele ausgeführt haben, die Zertifikate auf computernder Basis verwenden, müssen Sie die Dienstzertifikate löschen, die im CurrentUser - TrustedPeople-Speicher installiert wurden. Verwenden Sie dazu den folgenden Befehl: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` Beispiel: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.  
   
 ## <a name="the-setup-batch-file"></a>Die Setupbatchdatei  
  Mit der in diesem Beispiel enthaltenen Batchdatei Setup.bat können Sie den Server mit relevanten Zertifikaten zum Ausführen einer selbst gehosteten Anwendung konfigurieren, die serverzertifikatbasierte Sicherheit erfordert. Diese Batchdatei muss angepasst werden, wenn sie computerübergreifend oder in einem nicht gehosteten Szenario verwendet werden soll.  

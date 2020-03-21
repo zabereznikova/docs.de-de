@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: e91bf8c3-7c26-4732-938e-2e5b04abfc99
 topic_type:
 - apiref
-ms.openlocfilehash: dd83fc6a7f553b54cc2acd5e9a93d8d58747d75a
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: d5eedc34b75d3a0c02969c06454b0f7ec942ed17
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73141713"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79176941"
 ---
 # <a name="strongnameerrorinfo-function"></a>StrongNameErrorInfo-Funktion
 Ruft den letzten Fehlercode ab, der von einer der Funktionen mit starkem Namen ausgelöst wurde.  
@@ -33,20 +33,20 @@ Ruft den letzten Fehlercode ab, der von einer der Funktionen mit starkem Namen a
 ## <a name="syntax"></a>Syntax  
   
 ```cpp  
-HRESULT StrongNameErrorInfo ();   
+HRESULT StrongNameErrorInfo ();
 ```  
   
 ## <a name="return-value"></a>Rückgabewert  
- Der letzte com-Fehlercode, der von einer der Funktionen für starke Namen festgelegt wurde.  
+ Der letzte COM-Fehlercode, der durch eine der Funktionen mit starkem Namen festgelegt wurde.  
   
-## <a name="remarks"></a>Hinweise  
- Die meisten der starken Namens Methoden geben einen einfachen `true` oder `false` Anzeichen für einen erfolgreichen Abschluss zurück. Verwenden Sie die `StrongNameErrorInfo`-Funktion, um ein HRESULT abzurufen, das den letzten Fehler angibt, der von den Funktionen für starke Namen generiert wurde.  
+## <a name="remarks"></a>Bemerkungen  
+ Die meisten der Methoden mit `true` `false` starkem Namen geben einen einfachen oder Hinweis auf einen erfolgreichen Abschluss zurück. Verwenden `StrongNameErrorInfo` Sie die Funktion, um ein HRESULT abzurufen, das den letzten Fehler angibt, der von den Funktionen des starken Namens generiert wurde.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
- **Header:** StrongName. h  
+ **Kopfzeile:** StrongName.h  
   
- **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
+ **Bibliothek:** Als Ressource in MsCorEE.dll enthalten  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  

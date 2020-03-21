@@ -2,12 +2,12 @@
 title: Sitzungen und Warteschlangen
 ms.date: 03/30/2017
 ms.assetid: 47d7c5c2-1e6f-4619-8003-a0ff67dcfbd6
-ms.openlocfilehash: 719212d908b9d5b5207dd5b4e7701ef903de31a0
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 8a342b185c7965e9ee0ff9941a09e00fc392ad4b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74715069"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79144098"
 ---
 # <a name="sessions-and-queues"></a>Sitzungen und Warteschlangen
 Dieses Beispiel veranschaulicht, wie ein Satz zusammengehöriger Nachrichten bei der Kommunikation unter Verwendung von Warteschlangen über den MSMQ-Transport (Message Queuing) gesendet und empfangen wird. In diesem Beispiel wird die `netMsmqBinding`-Bindung verwendet. Der Dienst ist eine selbst gehostete Konsolenanwendung, die es Ihnen ermöglicht, den Dienst beim Empfang von Nachrichten in der Warteschlange zu beobachten.  
@@ -17,11 +17,11 @@ Dieses Beispiel veranschaulicht, wie ein Satz zusammengehöriger Nachrichten bei
   
 > [!IMPORTANT]
 > Die Beispiele sind möglicherweise bereits auf dem Computer installiert. Suchen Sie nach dem folgenden Verzeichnis (Standardverzeichnis), bevor Sie fortfahren.  
->   
+>
 > `<InstallDrive>:\WF_WCF_Samples`  
->   
-> Wenn dieses Verzeichnis nicht vorhanden ist, wechseln Sie zu [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF)-Beispiele für .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) , um alle Windows Communication Foundation (WCF) und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele herunterzuladen. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
->   
+>
+> Wenn dieses Verzeichnis nicht vorhanden ist, wechseln Sie zu [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples for .NET Framework 4,](https://www.microsoft.com/download/details.aspx?id=21459) um alle Windows Communication Foundation (WCF) und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele herunterzuladen. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+>
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\MSMQ\Session`  
   
  In einer Warteschlangenkommunikation kommuniziert der Client über eine Warteschlange mit dem Dienst. Genauer ausgedrückt bedeutet dies, dass der Client Nachrichten an eine Warteschlange sendet. Der Dienst empfängt Nachrichten aus der Warteschlange. Folglich müssen der Dienst und der Client nicht gleichzeitig ausgeführt werden, um über eine Warteschlange zu kommunizieren.  
@@ -55,7 +55,7 @@ public class OrderTakerService : IOrderTaker
 {  
     PurchaseOrder po;  
   
-    [OperationBehavior(TransactionScopeRequired = true,   
+    [OperationBehavior(TransactionScopeRequired = true,
                                  TransactionAutoComplete = false)]  
     public void OpenPurchaseOrder(string customerId)  
     {  
@@ -63,16 +63,16 @@ public class OrderTakerService : IOrderTaker
         po = new PurchaseOrder(customerId);  
     }  
   
-    [OperationBehavior(TransactionScopeRequired = true,   
+    [OperationBehavior(TransactionScopeRequired = true,
                                   TransactionAutoComplete = false)]  
     public void AddProductLineItem(string productId, int quantity)  
     {  
         po.AddProductLineItem(productId, quantity);  
-        Console.WriteLine("Product " + productId + " quantity " +   
+        Console.WriteLine("Product " + productId + " quantity " +
                             quantity + " added to purchase order");  
     }  
   
-    [OperationBehavior(TransactionScopeRequired = true,   
+    [OperationBehavior(TransactionScopeRequired = true,
                                   TransactionAutoComplete = true)]  
     public void EndPurchaseOrder()  
     {  
@@ -109,7 +109,7 @@ public static void Main()
         Console.ReadLine();  
   
         // Close the ServiceHost to shutdown the service.  
-        serviceHost.Close();   
+        serviceHost.Close();
     }  
 }  
 ```
@@ -162,7 +162,7 @@ using (TransactionScope scope = new TransactionScope(TransactionScopeOption.Requ
     client.EndPurchaseOrder();  
   
     //Closing the client gracefully closes the connection and cleans up resources.  
-    client.Close();                  
+    client.Close();
   
     // Complete the transaction.  
     scope.Complete();  
@@ -207,13 +207,13 @@ Purchase Order: 7c86fef0-2306-4c51-80e6-bcabcc1a6e5e
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>So können Sie das Beispiel einrichten, erstellen und ausführen  
   
-1. Stellen Sie sicher, dass Sie das [einmalige Setup Verfahren für die Windows Communication Foundation Beispiele](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)ausgeführt haben.  
+1. Stellen Sie sicher, dass Sie das [einmalige Setupverfahren für die Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)durchgeführt haben.  
   
-2. Befolgen Sie zum C#erstellen C++der-,-oder-Visual Basic .NET-Edition der Projekt Mappe die Anweisungen unter [Erstellen der Windows Communication Foundation Beispiele](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2. Befolgen Sie die Anweisungen unter [Erstellen der Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/building-the-samples.md), um die .NET-Edition von C, C++ oder Visual Basic zu erstellen.  
   
-3. Um das Beispiel in einer Konfiguration mit einem einzigen Computer oder Computer übergreifend auszuführen, befolgen Sie die Anweisungen unter [Ausführen der Windows Communication Foundation Beispiele](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3. Um das Beispiel in einer Konfiguration mit einem oder einer maschinellen Konfiguration auszuführen, befolgen Sie die Anweisungen unter [Ausführen der Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
- Standardmäßig wird mit <xref:System.ServiceModel.NetMsmqBinding> die Transportsicherheit aktiviert. Es gibt zwei relevante Eigenschaften für die MSMQ-Transportsicherheit: <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A> und <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A>`.` standardmäßig ist der Authentifizierungsmodus auf `Windows` festgelegt, und die Schutz Ebene ist auf `Sign`festgelegt. Damit MSMQ die Authentifizierungs- und Signierungsfunktion bereitstellt, muss es Teil einer Domäne sein, und die Active Directory-Integrationsoption für MSMQ muss installiert sein. Wenn Sie dieses Beispiel auf einem Computer ausführen, der diese Kriterien nicht erfüllt, tritt ein Fehler auf.  
+ Standardmäßig wird mit <xref:System.ServiceModel.NetMsmqBinding> die Transportsicherheit aktiviert. Es gibt zwei relevante Eigenschaften für die <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A> <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A> `.` MSMQ-Transportsicherheit, und `Windows` standardmäßig ist der `Sign`Authentifizierungsmodus auf und die Schutzebene auf festgelegt. Damit MSMQ die Authentifizierungs- und Signierungsfunktion bereitstellt, muss es Teil einer Domäne sein, und die Active Directory-Integrationsoption für MSMQ muss installiert sein. Wenn Sie dieses Beispiel auf einem Computer ausführen, der diese Kriterien nicht erfüllt, tritt ein Fehler auf.  
   
 ### <a name="to-run-the-sample-on-a-computer-joined-to-a-workgroup-or-without-active-directory-integration"></a>So führen Sie das Beispiel auf einem Computer aus, der sich in einer Arbeitsgruppe befindet oder über keine Active Directory-Integration verfügt  
   
@@ -237,7 +237,7 @@ Purchase Order: 7c86fef0-2306-4c51-80e6-bcabcc1a6e5e
               binding="netMsmqBinding"  
               bindingConfiguration="Binding1"  
            contract="Microsoft.ServiceModel.Samples.IOrderTaker" />  
-          <!-- The mex endpoint is exposed at-->      
+          <!-- The mex endpoint is exposed at-->
           <!--http://localhost:8000/ServiceModelSamples/service/mex. -->  
           <endpoint address="mex"  
                     binding="mexHttpBinding"  

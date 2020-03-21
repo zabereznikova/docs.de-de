@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4f86ff37-2dab-4e64-819a-76b3bfe828ff
 topic_type:
 - apiref
-ms.openlocfilehash: 718e41e16c07265d8a36b8f6124d99cd3490f7be
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 0b613ebacdff82a29fdbc3f4caa0f2b8bb5d3f6a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74436617"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79176161"
 ---
 # <a name="cornativelinktype-enumeration"></a>CorNativeLinkType-Enumeration
 Stellt Werte bereit, die den im systemeigenen Code verknüpften Typ angeben.  
@@ -27,7 +27,7 @@ Stellt Werte bereit, die den im systemeigenen Code verknüpften Typ angeben.
 ## <a name="syntax"></a>Syntax  
   
 ```cpp  
-typedef enum   
+typedef enum
 {  
     nltNone       = 1,  
     nltAnsi       = 2,  
@@ -38,26 +38,26 @@ typedef enum
 } CorNativeLinkType;  
 ```  
   
-## <a name="members"></a>Member  
+## <a name="members"></a>Members  
   
 |Member|Beschreibung|  
 |------------|-----------------|  
-|`nltNone`|Gibt an, dass keines der Schlüsselwörter angegeben wird.|  
-|`nltAnsi`|Gibt an, dass ein ANSI-Schlüsselwort angegeben wird.|  
-|`nltUnicode`|Gibt an, dass ein Unicode-Schlüsselwort angegeben ist.|  
-|`nltAuto`|Gibt an, dass ein Auto-Schlüsselwort angegeben wird.|  
-|`nltOle`|Gibt an, dass ein OLE-Schlüsselwort angegeben wird.|  
-|`nltMaxValue`|Nicht verwendet.|  
+|`nltNone`|Gibt an, dass keines der Schlüsselwörter angegeben wurde.|  
+|`nltAnsi`|Gibt an, dass ein ANSI-Schlüsselwort angegeben wurde.|  
+|`nltUnicode`|Gibt an, dass ein Unicode-Schlüsselwort angegeben ist|  
+|`nltAuto`|Gibt an, dass ein auto-Schlüsselwort angegeben wurde.|  
+|`nltOle`|Gibt an, dass ein OLE-Schlüsselwort angegeben wurde.|  
+|`nltMaxValue`|Wird nicht verwendet.|  
   
-## <a name="requirements"></a>Voraussetzungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor. h  
+ **Kopfzeile:** Cor.h  
   
- **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
+ **Bibliothek:** Als Ressource in MsCorEE.dll enthalten  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Metadatenenumerationen](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

@@ -15,46 +15,46 @@ helpviewer_keywords:
 ms.assetid: 9dcc8b3d-33ee-4c7c-8d6f-322c57b94a0f
 topic_type:
 - apiref
-ms.openlocfilehash: 99f529a151a42cf4a9ee1f74bd3a76a5b6b1b35f
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 64d76efa8c2f29fda559e5c84217b865540027ba
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74445259"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175823"
 ---
 # <a name="imetadataemitdefinemethodimpl-method"></a>IMetaDataEmit::DefineMethodImpl-Methode
-Erstellt eine Definition für die Implementierung einer Methode, die von einer Schnittstelle geerbt wurde, und gibt ein Token an diese Methoden Implementierungs Definition zurück.  
+Erstellt eine Definition für die Implementierung einer Methode, die von einer Schnittstelle geerbt wurde, und gibt ein Token an diese Methodenimplementierungsdefinition zurück.  
   
 ## <a name="syntax"></a>Syntax  
   
 ```cpp  
-HRESULT DefineMethodImpl (   
-    [in]  mdTypeDef         td,   
-    [in]  mdToken           tkBody,   
+HRESULT DefineMethodImpl (
+    [in]  mdTypeDef         td,
+    [in]  mdToken           tkBody,
     [in]  mdToken           tkDecl  
 );  
 ```  
   
 ## <a name="parameters"></a>Parameter  
  `td`  
- in Das `mdTypedef` Token der implementierenden Klasse.  
+ [in] Das `mdTypedef` Token der implementierenden Klasse.  
   
  `tkBody`  
- in Der `mdMethodDef` oder `mdMemberRef` Token des Code Texts.  
+ [in] Das `mdMethodDef` `mdMemberRef` oder Token des Codetexts.  
   
  `tkDecl`  
- in Die `mdMethodDef` oder `mdMemberRef` Token der Schnittstellen Methode, die implementiert wird.  
+ [in] Das `mdMethodDef` `mdMemberRef` oder-Token der implementierten Schnittstellenmethode.  
   
-## <a name="requirements"></a>Voraussetzungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor. h  
+ **Kopfzeile:** Cor.h  
   
- **Bibliothek:** Wird als Ressource in Mscoree. dll verwendet.  
+ **Bibliothek:** Wird als Ressource in MSCorEE.dll verwendet  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [IMetaDataEmit-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [IMetaDataEmit2-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

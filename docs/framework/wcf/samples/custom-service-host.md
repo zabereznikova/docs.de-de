@@ -2,27 +2,27 @@
 title: Benutzerdefinierter Diensthost
 ms.date: 03/30/2017
 ms.assetid: fe16ff50-7156-4499-9c32-13d8a79dc100
-ms.openlocfilehash: 271233015739024428a7a29815f66278c9d7aa04
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 2aed557d1d045c08aed206660aa7b4b75ffe0e2f
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76789925"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79145071"
 ---
 # <a name="custom-service-host"></a>Benutzerdefinierter Diensthost
 In diesem Beispiel wird veranschaulicht, wie mit einer benutzerdefinierten Ableitung der <xref:System.ServiceModel.ServiceHost>-Klasse das Laufzeitverhalten eines Diensts geändert wird. Dieser Ansatz stellt eine wiederverwendbare Alternative zum Konfigurieren einer großen Anzahl von Diensten auf die übliche Weise war. Außerdem zeigt das Beispiel, wie mithilfe der <xref:System.ServiceModel.Activation.ServiceHostFactory>-Klasse ein benutzerdefinierter ServiceHost in der IIS-(Internet Information Services, Internetinformationsdienste-) oder WAS-(Windows Process Activation Service-)Hostumgebung verwendet wird.  
   
 > [!IMPORTANT]
 > Die Beispiele sind möglicherweise bereits auf dem Computer installiert. Suchen Sie nach dem folgenden Verzeichnis (Standardverzeichnis), bevor Sie fortfahren.  
->   
+>
 > `<InstallDrive>:\WF_WCF_Samples`  
->   
-> Wenn dieses Verzeichnis nicht vorhanden ist, wechseln Sie zu [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF)-Beispiele für .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) , um alle Windows Communication Foundation (WCF) und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele herunterzuladen. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
->   
+>
+> Wenn dieses Verzeichnis nicht vorhanden ist, wechseln Sie zu [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples for .NET Framework 4,](https://www.microsoft.com/download/details.aspx?id=21459) um alle Windows Communication Foundation (WCF) und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele herunterzuladen. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+>
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Hosting\CustomServiceHost`  
   
 ## <a name="about-the-scenario"></a>Informationen über das Szenario
- Um eine unbeabsichtigte Offenlegung von potenziell sensiblen Dienst Metadaten zu verhindern, wird die Metadatenveröffentlichung durch die Standardkonfiguration für Windows Communication Foundation (WCF)-Dienste deaktiviert. Dieses Verhalten ist in der Standardeinstellung sicher, bedeutet aber auch, dass man den zum Aufrufen des Diensts erforderlichen Clientcode nicht mithilfe eines Tools zum Importieren von Metadaten (wie Svcutil.exe) generieren kann. Dies ist nur dann möglich, wenn das Verhalten des Diensts zum Veröffentlichen von Metadaten in der Konfiguration explizit aktiviert ist.  
+ Um die unbeabsichtigte Offenlegung potenziell vertraulicher Dienstmetadaten zu verhindern, deaktiviert die Standardkonfiguration für Windows Communication Foundation (WCF)-Dienste die Metadatenveröffentlichung. Dieses Verhalten ist in der Standardeinstellung sicher, bedeutet aber auch, dass man den zum Aufrufen des Diensts erforderlichen Clientcode nicht mithilfe eines Tools zum Importieren von Metadaten (wie Svcutil.exe) generieren kann. Dies ist nur dann möglich, wenn das Verhalten des Diensts zum Veröffentlichen von Metadaten in der Konfiguration explizit aktiviert ist.  
   
  Wenn die Metadatenveröffentlichung für eine große Anzahl von Diensten aktiviert wird, werden jedem einzelnen Dienst die gleichen Konfigurationselemente hinzugefügt. Dies führt zu einer großen Anzahl von Konfigurationsinformationen, die weitgehend identisch sind. Anstatt jeden Dienst einzeln zu konfigurieren, ist es möglich, imperativen Code zu schreiben, der eine einmalige Veröffentlichung der Metadaten ermöglicht. Anschließend kann dieser Code für mehrere unterschiedliche Dienste verwendet werden. Zu diesem Zweck wird eine neue Klasse erstellt, die von <xref:System.ServiceModel.ServiceHost> abgeleitet wird und die `ApplyConfiguration`()-Methode überschreibt, um das Metadatenveröffentlichungsverhalten imperativ hinzuzufügen.  
   
@@ -40,9 +40,9 @@ class SelfDescribingServiceHost : ServiceHost
     public SelfDescribingServiceHost(Type serviceType, params Uri[] baseAddresses)  
         : base(serviceType, baseAddresses) { }  
   
-    //Overriding ApplyConfiguration() allows us to   
+    //Overriding ApplyConfiguration() allows us to
     //alter the ServiceDescription prior to opening  
-    //the service host.   
+    //the service host.
     protected override void ApplyConfiguration()  
     {  
         //First, we call base.ApplyConfiguration()  
@@ -50,7 +50,7 @@ class SelfDescribingServiceHost : ServiceHost
         //the service we're hosting. After this call,  
         //this.Description describes the service  
         //as it was configured.  
-        base.ApplyConfiguration();       
+        base.ApplyConfiguration();
   
         //(rest of implementation elided for clarity)  
     }  
@@ -68,7 +68,7 @@ if (mexBehavior == null)
 }  
 else  
 {  
-    //Metadata behavior has already been configured,   
+    //Metadata behavior has already been configured,
     //so we do not have any work to do.  
     return;  
 }  
@@ -114,7 +114,7 @@ foreach (Uri baseAddress in this.BaseAddresses)
  Nachdem wir nun die Implementierung des benutzerdefinierten Diensthosts fertig gestellt haben, können wird diese verwenden, um einem beliebigen Dienst Metadatenveröffentlichungsverhalten hinzuzufügen, indem dieser Dienst innerhalb einer Instanz von `SelfDescribingServiceHost` gehostet wird. Im folgenden Code wird gezeigt, wie diese im Selbsthostszenario verwendet wird.  
   
 ```csharp
-SelfDescribingServiceHost host =   
+SelfDescribingServiceHost host =
          new SelfDescribingServiceHost( typeof( Calculator ) );  
 host.Open();  
 ```  
@@ -122,20 +122,20 @@ host.Open();
  Der benutzerdefinierte Host liest die Endpunktkonfiguration des Diensts nach wie vor aus der Konfigurationsdatei der Anwendung, so als wäre die <xref:System.ServiceModel.ServiceHost>-Standardklasse zum Hosten des Diensts verwendet worden. Da jedoch in dem benutzerdefinierten Host die Logik für die Aktivierung der Metadatenveröffentlichung hinzugefügt wurde, muss das Metadatenveröffentlichungsverhalten nicht mehr explizit in der Konfiguration aktiviert werden. Dieser Ansatz bietet vor allem dann Vorteile, wenn Sie eine Anwendung erstellen, die mehrere Dienste enthält, und Sie die Metadatenveröffentlichung auf allen diesen Diensten aktivieren möchten, ohne jedes Mal die gleichen Konfigurationselemente schreiben zu müssen.  
   
 ## <a name="using-a-custom-servicehost-in-iis-or-was"></a>Verwenden eines benutzerdefinierten Diensthosts in IIS oder WAS  
- Die Verwendung eines benutzerdefinierten Diensthosts in einem Selbsthostszenario ist einfach, da ausschließlich Ihr eigener Anwendungscode für die Erstellung und Öffnung der Diensthostinstanz verantwortlich ist. In der IIS-oder was-Hostingumgebung instanziiert die WCF-Infrastruktur jedoch den Host Ihres Diensts dynamisch als Reaktion auf eingehende Nachrichten. Es können in dieser Hostingumgebung auch benutzerdefinierte Diensthosts verwendet werden, für diese ist jedoch zusätzlicher Code in Form einer ServiceHostFactory erforderlich. Im folgenden Code wird eine Ableitung von <xref:System.ServiceModel.Activation.ServiceHostFactory> dargestellt, die Instanzen des benutzerdefinierten `SelfDescribingServiceHost` zurückgibt.  
+ Die Verwendung eines benutzerdefinierten Diensthosts in einem Selbsthostszenario ist einfach, da ausschließlich Ihr eigener Anwendungscode für die Erstellung und Öffnung der Diensthostinstanz verantwortlich ist. In der IIS- oder WAS-Hostingumgebung instanziiert die WCF-Infrastruktur jedoch dynamisch den Host Ihres Dienstes als Reaktion auf eingehende Nachrichten. Es können in dieser Hostingumgebung auch benutzerdefinierte Diensthosts verwendet werden, für diese ist jedoch zusätzlicher Code in Form einer ServiceHostFactory erforderlich. Im folgenden Code wird eine Ableitung von <xref:System.ServiceModel.Activation.ServiceHostFactory> dargestellt, die Instanzen des benutzerdefinierten `SelfDescribingServiceHost` zurückgibt.  
   
 ```csharp
 public class SelfDescribingServiceHostFactory : ServiceHostFactory  
 {  
-    protected override ServiceHost CreateServiceHost(Type serviceType,   
+    protected override ServiceHost CreateServiceHost(Type serviceType,
      Uri[] baseAddresses)  
     {  
         //All the custom factory does is return a new instance  
         //of our custom host class. The bulk of the custom logic should  
-        //live in the custom host (as opposed to the factory)   
+        //live in the custom host (as opposed to the factory)
         //for maximum  
         //reuse value outside of the IIS/WAS hosting environment.  
-        return new SelfDescribingServiceHost(serviceType,     
+        return new SelfDescribingServiceHost(serviceType,
                                              baseAddresses);  
     }  
 }  
@@ -151,29 +151,29 @@ public class SelfDescribingServiceHostFactory : ServiceHostFactory
                language=c# Debug="true" %>
 ```
   
- Hier wurde der `Factory`-Anweisung ein zusätzliches `@ServiceHost`-Attribut hinzugefügt, und der CLR-Typname der benutzerdefinierten Factory wurde als Attributwert übergeben. Wenn IIS oder was eine Nachricht für diesen Dienst empfängt, erstellt die WCF-Hostinginfrastruktur zunächst eine Instanz von ServiceHostFactory und instanziiert dann den Dienst Host selbst durch Aufrufen von `ServiceHostFactory.CreateServiceHost()`.  
+ Hier wurde der `Factory`-Anweisung ein zusätzliches `@ServiceHost`-Attribut hinzugefügt, und der CLR-Typname der benutzerdefinierten Factory wurde als Attributwert übergeben. Wenn IIS oder WAS eine Nachricht für diesen Dienst empfängt, erstellt die WCF-Hostinginfrastruktur zuerst eine Instanz `ServiceHostFactory.CreateServiceHost()`der ServiceHostFactory und instanziiert dann den Diensthost selbst, indem sie aufruft.  
   
 ## <a name="running-the-sample"></a>Ausführen des Beispiels  
  Auch wenn dieses Beispiel einen voll funktionsfähigen Client und Dienstimplementierung bereitstellt, ist das Ziel des Beispiels, die Änderung des Laufzeitverhaltens des Diensts mithilfe eines benutzerdefinierten Hosts zu veranschaulichen. Führen Sie die folgenden Schritte aus:  
   
-### <a name="observe-the-effect-of-the-custom-host"></a>Beobachten der Auswirkung des benutzerdefinierten Hosts
+### <a name="observe-the-effect-of-the-custom-host"></a>Beobachten der Wirkung des benutzerdefinierten Hosts
   
-1. Öffnen Sie die Datei "Web. config" des Diensts, und beachten Sie, dass keine Konfiguration explizit die Metadaten für den Dienst aktiviert.  
+1. Öffnen Sie die Datei Web.config des Dienstes, und beachten Sie, dass keine Konfiguration explizit Metadaten für den Dienst aktiviert.  
   
-2. Öffnen Sie die SVC-Datei des dienstanders, und beobachten Sie, dass die @ServiceHost-Direktive ein Factoryattribut enthält, das den Namen einer benutzerdefinierten ServiceHostFactory angibt  
+2. Öffnen Sie die .svc-Datei des @ServiceHost Dienstes, und beachten Sie, dass seine Direktive ein Factory-Attribut enthält, das den Namen einer benutzerdefinierten ServiceHostFactory angibt.  
   
-### <a name="set-up-build-and-run-the-sample"></a>Einrichten, erstellen und Ausführen des Beispiels
+### <a name="set-up-build-and-run-the-sample"></a>Einrichten, Erstellen und Ausführen des Beispiels
   
-1. Stellen Sie sicher, dass Sie das [einmalige Setup Verfahren für die Windows Communication Foundation Beispiele](one-time-setup-procedure-for-the-wcf-samples.md)ausgeführt haben.
+1. Stellen Sie sicher, dass Sie das [einmalige Setupverfahren für die Windows Communication Foundation-Beispiele](one-time-setup-procedure-for-the-wcf-samples.md)durchgeführt haben.
 
-2. Befolgen Sie die Anweisungen unter Erstellen [der Windows Communication Foundation Beispiele](building-the-samples.md), um die Lösung zu erstellen.
+2. Um die Lösung zu erstellen, befolgen Sie die Anweisungen unter [Erstellen der Windows Communication Foundation-Beispiele](building-the-samples.md).
 
-3. Nachdem die Projekt Mappe erstellt wurde, führen Sie Setup. bat aus, um die Service Model Samples-Anwendung in IIS 7,0 einzurichten. Das Verzeichnis Service Model Samples sollte jetzt als IIS 7,0-Anwendung angezeigt werden.
+3. Nachdem die Lösung erstellt wurde, führen Sie Setup.bat aus, um die ServiceModelSamples-Anwendung in IIS 7.0 einzurichten. Das Verzeichnis ServiceModelSamples sollte nun als IIS 7.0-Anwendung angezeigt werden.
 
-4. Um das Beispiel in einer Konfiguration mit einem einzigen Computer oder Computer übergreifend auszuführen, befolgen Sie die Anweisungen unter [Ausführen der Windows Communication Foundation Beispiele](running-the-samples.md).
+4. Um das Beispiel in einer Konfiguration mit einem oder einer maschinellen Konfiguration auszuführen, befolgen Sie die Anweisungen unter [Ausführen der Windows Communication Foundation-Beispiele](running-the-samples.md).
 
-5. Um die IIS 7,0-Anwendung zu entfernen, führen Sie *Cleanup. bat*aus.
+5. Um die IIS 7.0-Anwendung zu entfernen, führen Sie *Cleanup.bat*aus.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [How to: Host a WCF Service in IIS (Vorgehensweise: Hosten eines WCF-Diensts in IIS)](../feature-details/how-to-host-a-wcf-service-in-iis.md)

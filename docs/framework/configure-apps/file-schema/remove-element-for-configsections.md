@@ -7,20 +7,20 @@ helpviewer_keywords:
 - remove Element
 - <remove> Element
 ms.assetid: ae4d82e0-e8fe-468c-81ab-46d63c4d66a8
-ms.openlocfilehash: 99d67bd621390789993caa4862e5ce379135eb92
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: 6991e3f73ac180fc690ec48e1a0d15f40c915733
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77215389"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79154529"
 ---
-# <a name="remove-element-for-configsections"></a>\<> Element für \<configabschnitts entfernen >
+# <a name="remove-element-for-configsections"></a>\<Entfernen>-Elements für \<configSections>
 
-Entfernt eine vordefinierte Abschnitts-oder Abschnitts Gruppe.
+Entfernt einen vordefinierten Abschnitt oder eine Vorschnittgruppe.
 
-[ **\<configuration>** ](configuration-element.md)\
-&nbsp;&nbsp;[ **\<configabschnitts >** ](configsections-element-for-configuration.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<entfernen >**
+[**\<Konfiguration>**](configuration-element.md)\
+&nbsp;&nbsp;[**\<configSections>**](configsections-element-for-configuration.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**\<entfernen sie>**
 
 ## <a name="syntax"></a>Syntax
 
@@ -30,15 +30,15 @@ Entfernt eine vordefinierte Abschnitts-oder Abschnitts Gruppe.
 
 ## <a name="attribute"></a>attribute
 
-|           | BESCHREIBUNG |
+|           | Beschreibung |
 | --------- | ----------- |
-| **name**  | Erforderliches Attribut.<br><br>Gibt den Namen des Abschnitts oder der Abschnitts Gruppe an, der entfernt werden soll. |
+| **Name**  | Erforderliches Attribut.<br><br>Gibt den Namen des zu entfernenden Abschnitts oder der Zu entfernenden Abschnittsgruppe an. |
 
 ## <a name="parent-element"></a>Übergeordnetes Element
 
-|     | BESCHREIBUNG |
+|     | Beschreibung |
 | --- | ----------- |
-| [ **\<configabschnitts >** Gewisses](configsections-element-for-configuration.md) | Enthält Konfigurations Abschnitts-und Namespace Deklarationen. |
+| [** \<configSections>** Element](configsections-element-for-configuration.md) | Enthält Konfigurationsabschnittund- und Namespacedeklarationen. |
 
 ## <a name="child-elements"></a>Untergeordnete Elemente
 
@@ -46,13 +46,13 @@ Keine
 
 ## <a name="remarks"></a>Bemerkungen
 
-Sie können das **\<remove >** -Element verwenden, um Abschnitts-und Abschnitts Gruppen aus der Anwendung zu entfernen, die auf einer höheren Ebene in der Hierarchie der Konfigurationsdatei definiert wurden.
+Sie können das ** \<>-Element entfernen** verwenden, um Abschnitte und Abschnittsgruppen aus der Anwendung zu entfernen, die auf einer höheren Ebene in der Konfigurationsdateihierarchie definiert wurden.
 
 ## <a name="example"></a>Beispiel
 
-Im folgenden Beispiel wird gezeigt, wie das **\<remove >** -Elements in einer Anwendungs Konfigurationsdatei verwendet wird, um einen Abschnitt zu entfernen, der zuvor in der Computer Konfigurationsdatei definiert wurde.
+Im folgenden Beispiel wird gezeigt, wie Sie das ** \<>-Element** in einer Anwendungskonfigurationsdatei verwenden, um einen zuvor in der Maschinenkonfigurationsdatei definierten Abschnitt zu entfernen.
 
-Der folgende Code der Computer Konfigurationsdatei deklariert den Abschnitt **\<sampleSection->** :
+Der folgende Computerkonfigurationsdateicode deklariert den Abschnitt ** \<sampleSection>: **
 
 ```xml
 <!-- Machine.config file -->
@@ -61,13 +61,13 @@ Der folgende Code der Computer Konfigurationsdatei deklariert den Abschnitt **\<
     <section name="sampleSection"
              type="System.Configuration.SingleTagSectionHandler" />
   </configSections>
-  <sampleSection setting1="Value1" 
-                 setting2="value two" 
+  <sampleSection setting1="Value1"
+                 setting2="value two"
                  setting3="third value" />
 </configuration>
 ```
 
-Der folgende Anwendungs Konfigurationsdatei-Code entfernt den Abschnitt **\<Sample section >** . Nach dem Entfernen kann die Anwendung die Einstellungen nicht mehr in **\<sampleSection->** abrufen.
+Der folgende Anwendungskonfigurationsdateicode entfernt den ** \<Abschnitt "beispielAbschnitt>.** Nach dem Entfernen kann die Anwendung die Einstellungen in ** \<sampleSection>** nicht abrufen.
 
 ```xml
 <!-- Application configuration file -->
@@ -80,8 +80,8 @@ Der folgende Anwendungs Konfigurationsdatei-Code entfernt den Abschnitt **\<Samp
 
 ## <a name="configuration-file"></a>Konfigurationsdatei
 
-Dieses Element kann in der Anwendungs Konfigurationsdatei, in der Computer Konfigurationsdatei (*Machine. config*) und in den *Web. config* -Dateien verwendet werden, die sich nicht auf der Ebene des Anwendungs Verzeichnisses befinden.
+Dieses Element kann in der Anwendungskonfigurationsdatei, der Computerkonfigurationsdatei (*Machine.config*) und *web.config-Dateien* verwendet werden, die sich nicht auf Anwendungsverzeichnisebene befinden.
 
 ## <a name="see-also"></a>Weitere Informationen
 
-- [Konfigurationsdatei Schema für die .NET Framework](index.md)
+- [Konfigurationsdateischema für .NET Framework](index.md)

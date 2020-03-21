@@ -9,19 +9,19 @@ helpviewer_keywords:
 - trace sources
 - <sources> element
 ms.assetid: c727b2e2-423a-4463-a223-013f40ff16a3
-ms.openlocfilehash: a903d009f2056e65414c1792494fbbd20e224413
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.openlocfilehash: 2a76816ee73f516b3c7544877a77531acaa8e09c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74088813"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79153268"
 ---
-# <a name="sources-element"></a>\<Quellen >-Element
-Gibt Ablauf Verfolgungs Quellen an, die Ablauf Verfolgungs Meldungen initiieren.  
+# <a name="sources-element"></a>\<Quellen> Element
+Gibt Ablaufverfolgungsquellen an, die Ablaufverfolgungsnachrichten initiieren.  
 
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<System. Diagnostics >** ](system-diagnostics-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<Quellen >**
+[**\<Konfiguration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.diagnostics>**](system-diagnostics-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**\<Quellen>**
 
 ## <a name="syntax"></a>Syntax  
   
@@ -34,14 +34,14 @@ Gibt Ablauf Verfolgungs Quellen an, die Ablauf Verfolgungs Meldungen initiieren.
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
-### <a name="attributes"></a>Attribute  
- Keine  
+### <a name="attributes"></a>Attributes  
+ Keine.  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<source>](source-element.md)|Erforderliches Element.<br /><br /> Gibt eine Ablaufverfolgungsquelle an, die die Ablaufverfolgungsmeldungen initiiert.|  
+|[\<Quelle>](source-element.md)|Erforderliches Element<br /><br /> Gibt eine Ablaufverfolgungsquelle an, die die Ablaufverfolgungsmeldungen initiiert.|  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   
@@ -50,22 +50,22 @@ Gibt Ablauf Verfolgungs Quellen an, die Ablauf Verfolgungs Meldungen initiieren.
 |`configuration`|Das Stammelement in jeder von den Common Language Runtime- und .NET Framework-Anwendungen verwendeten Konfigurationsdatei.|  
 |`system.diagnostics`|Gibt Ablaufverfolgungslistener an, die Meldungen sammeln, speichern und weiterleiten sowie die Ebene, für die ein Ablaufverfolgungsschalter festgelegt ist.|  
   
-## <a name="remarks"></a>Hinweise  
- Dieses Element kann in der Computer Konfigurationsdatei (Machine. config) und in der Anwendungs Konfigurationsdatei verwendet werden.  
+## <a name="remarks"></a>Bemerkungen  
+ Dieses Element kann in der Maschinenkonfigurationsdatei (Machine.config) und in der Anwendungskonfigurationsdatei verwendet werden.  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird gezeigt, wie das `<sources>`-Element verwendet wird, um die Ablauf Verfolgungs Quelle `mySource` hinzuzufügen und die Ebene für den Quell Switch mit dem Namen `sourceSwitch`festzulegen. Ein Konsolen Ablaufverfolgungslistener wird hinzugefügt, der Ablauf Verfolgungs Informationen in die Konsole  
+ Das folgende Beispiel zeigt, `<sources>` wie sie das `mySource` Element verwenden, um die `sourceSwitch`Ablaufverfolgungsquelle hinzuzufügen und die Ebene für den Quellschalter mit dem Namen festzulegen. Ein Konsolenablaufverfolgungslistener wird hinzugefügt, der Ablaufverfolgungsinformationen in die Konsole schreibt.  
   
 ```xml  
 <configuration>  
    <system.diagnostics>  
       <sources>  
-         <source name="mySource" switchName="sourceSwitch"   
+         <source name="mySource" switchName="sourceSwitch"
             switchType="System.Diagnostics.SourceSwitch"  >  
             <listeners>  
-               <add name="console"   
+               <add name="console"
                   type="System.Diagnostics.ConsoleTraceListener" >  
-                  <filter type="System.Diagnostics.EventTypeFilter"   
+                  <filter type="System.Diagnostics.EventTypeFilter"
                      initializeData="Error" />  
                </add>  
                <remove name="Default" />  
@@ -74,12 +74,12 @@ Gibt Ablauf Verfolgungs Quellen an, die Ablauf Verfolgungs Meldungen initiieren.
       </sources>  
       <switches>  
          <add name="sourceSwitch" value="Warning" />  
-      </switches>    
-   </system.diagnostics>   
+      </switches>
+   </system.diagnostics>
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Diagnostics.TraceListener>
 - <xref:System.Diagnostics.DefaultTraceListener>
@@ -87,5 +87,5 @@ Gibt Ablauf Verfolgungs Quellen an, die Ablauf Verfolgungs Meldungen initiieren.
 - <xref:System.Diagnostics.ConsoleTraceListener>
 - <xref:System.Diagnostics.EventLogTraceListener>
 - <xref:System.Diagnostics.XmlWriterTraceListener>
-- [Trace and Debug Settings Schema (Schema für Ablaufverfolgungs- und Debugeinstellungen)](index.md)
-- [\<source>](source-element.md)
+- [Ablaufverfolgungs- und Debugeinstellungsschema](index.md)
+- [\<Quelle>](source-element.md)

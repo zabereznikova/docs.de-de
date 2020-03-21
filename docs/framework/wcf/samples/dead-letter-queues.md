@@ -2,21 +2,21 @@
 title: Warteschlangen für unzustellbare Meldungen
 ms.date: 03/30/2017
 ms.assetid: ff664f33-ad02-422c-9041-bab6d993f9cc
-ms.openlocfilehash: 5025aa784817d1189f23918eacfef275abf968e1
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: eab1c52f4d0b3d0f82cf561a9478ea8233598e1c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76921435"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79144947"
 ---
 # <a name="dead-letter-queues"></a>Warteschlangen für unzustellbare Meldungen
-Dieses Beispiel veranschaulicht das Behandeln und Verarbeiten von Nachrichten mit Fehlern bei der Zustellung. Es basiert auf dem [transaktiven MSMQ-Bindungs](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md) Beispiel. In diesem Beispiel wird die `netMsmqBinding`-Bindung verwendet. Der Dienst ist eine selbst gehostete Konsolenanwendung, die es Ihnen ermöglicht, den Dienst beim Empfang von Nachrichten in der Warteschlange zu beobachten.
+Dieses Beispiel veranschaulicht das Behandeln und Verarbeiten von Nachrichten mit Fehlern bei der Zustellung. Sie basiert auf dem [Beispiel transacted MSMQ Binding.](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md) In diesem Beispiel wird die `netMsmqBinding`-Bindung verwendet. Der Dienst ist eine selbst gehostete Konsolenanwendung, die es Ihnen ermöglicht, den Dienst beim Empfang von Nachrichten in der Warteschlange zu beobachten.
 
 > [!NOTE]
 > Die Setupprozedur und die Buildanweisungen für dieses Beispiel befinden sich am Ende dieses Themas.
 
 > [!NOTE]
-> Dieses Beispiel veranschaulicht jede Warteschlange für unzustellbare Nachrichten, die nur unter Windows Vista verfügbar ist. Das Beispiel kann so geändert werden, dass die standardmäßigen systemweiten Warteschlangen für MSMQ 3,0 unter Windows Server 2003 und Windows XP verwendet werden.
+> In diesem Beispiel wird jede Warteschlange für unzustellbare Dateien der Anwendung veranschaulicht, die nur unter Windows Vista verfügbar ist. Das Beispiel kann geändert werden, um die standardmäßigen systemweiten Warteschlangen für MSMQ 3.0 unter Windows Server 2003 und Windows XP zu verwenden.
 
  In einer Warteschlangenkommunikation kommuniziert der Client über eine Warteschlange mit dem Dienst. Genauer ausgedrückt bedeutet dies, dass der Client Nachrichten an eine Warteschlange sendet. Der Dienst empfängt Nachrichten aus der Warteschlange. Folglich müssen der Dienst und der Client nicht gleichzeitig ausgeführt werden, um über eine Warteschlange zu kommunizieren.
 
@@ -32,7 +32,7 @@ Dieses Beispiel veranschaulicht das Behandeln und Verarbeiten von Nachrichten mi
 
 - `Custom`: Die in der <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A>-Eigenschaft angegebene benutzerdefinierte Warteschlange für unzustellbare Nachrichten wird verwendet, um unzustellbare Nachrichten zu speichern. Diese Funktion ist nur unter Windows Vista verfügbar. Dieser Wert wird verwendet, wenn die Anwendung ihre eigene Warteschlange für unzustellbare Nachrichten verwenden muss und diese nicht mit anderen Anwendungen auf dem gleichen Computer gemeinsam verwenden kann.
 
-- <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A>-Eigenschaft, um die spezifische Warteschlange für unzustellbare Nachrichten anzugeben. Diese ist nur in Windows Vista verfügbar.
+- <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A>-Eigenschaft, um die spezifische Warteschlange für unzustellbare Nachrichten anzugeben. Dies ist nur in Windows Vista verfügbar.
 
  In diesem Beispiel sendet der Client einen Stapel von Nachrichten aus dem Bereich der Transaktion an den Dienst und legt einen willkürlichen niedrigen Wert für die Gültigkeitsdauer für diese Nachrichten fest (ca. 2 Sekunden). Der Client gibt auch eine benutzerdefinierte Warteschlange für unzustellbare Nachrichten an, in der abgelaufene Nachrichten abgelegt werden.
 
@@ -49,7 +49,7 @@ public interface IOrderProcessor
 }
 ```
 
- Der Dienst Code im Beispiel ist der der [transaktiven MSMQ-Bindung](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md).
+ Der Dienstcode im Beispiel ist der der [Transacted MSMQ Binding](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md).
 
  Die Kommunikation mit dem Dienst findet innerhalb des Bereichs der Transaktion statt. Der Dienst liest die Nachrichten in der Warteschlange, führt den Vorgang aus und zeigt anschließend die Ergebnisse des Vorgangs an. Die Anwendung erstellt auch eine Warteschlange für unzustellbare Nachrichten.
 
@@ -169,9 +169,9 @@ public void SubmitPurchaseOrder(PurchaseOrder po)
 }
 ```
 
- Nachrichten in der Warteschlange für unzustellbare Nachrichten sind Nachrichten, die an den Dienst adressiert sind, der die Nachricht verarbeitet. Wenn der Dienst für unzustellbare Nachrichten Nachrichten aus der Warteschlange liest, findet daher die Windows Communication Foundation (WCF)-Kanal Ebene die nicht Übereinstimmung in Endpunkten und versendet die Nachricht nicht. In diesem Fall ist die Nachricht an den Auftragsverarbeitungsdienst adressiert, wird jedoch vom Dienst für unzustellbare Nachrichten empfangen. Um Nachrichten zu empfangen, die an einen anderen Endpunkt adressiert sind, wird im `ServiceBehavior` ein Adressfilter für alle Adressen angegeben. Dies ist erforderlich, um Nachrichten, die aus der Warteschlange für unzustellbare Nachrichten gelesen werden, erfolgreich zu verarbeiten.
+ Nachrichten in der Warteschlange für unzustellbare Nachrichten sind Nachrichten, die an den Dienst adressiert sind, der die Nachricht verarbeitet. Wenn der Nachrichtendienst für den Nachrichtendienst mit toten Buchstaben Nachrichten aus der Warteschlange liest, findet die Windows Communication Foundation (WCF)-Kanalschicht die Nichtübereinstimmung in Endpunkten und sendet die Nachricht nicht. In diesem Fall ist die Nachricht an den Auftragsverarbeitungsdienst adressiert, wird jedoch vom Dienst für unzustellbare Nachrichten empfangen. Um Nachrichten zu empfangen, die an einen anderen Endpunkt adressiert sind, wird im `ServiceBehavior` ein Adressfilter für alle Adressen angegeben. Dies ist erforderlich, um Nachrichten, die aus der Warteschlange für unzustellbare Nachrichten gelesen werden, erfolgreich zu verarbeiten.
 
- In diesem Beispiel sendet der Nachrichtendienst für unzustellbare Nachrichten die Nachricht erneut, wenn der Grund für den Fehler darin besteht, dass die Nachricht abgelaufen ist. Aus allen anderen Gründen wird der Übermittlungs Fehler angezeigt, wie im folgenden Beispielcode gezeigt:
+ In diesem Beispiel sendet der Nachrichtendienst mit toten Buchstaben die Nachricht erneut, wenn der Grund für den Fehler darin besteht, dass ein Zeitvertreib der Nachricht aufgetreten ist. Aus allen anderen Gründen wird der Lieferfehler angezeigt, wie im folgenden Beispielcode gezeigt:
 
 ```csharp
 // Service class that implements the service contract.
@@ -310,23 +310,23 @@ Processing Purchase Order: 97897eff-f926-4057-a32b-af8fb11b9bf9
 
 ### <a name="to-set-up-build-and-run-the-sample"></a>So können Sie das Beispiel einrichten, erstellen und ausführen
 
-1. Stellen Sie sicher, dass Sie das [einmalige Setup Verfahren für die Windows Communication Foundation Beispiele](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)ausgeführt haben.
+1. Stellen Sie sicher, dass Sie das [einmalige Setupverfahren für die Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)durchgeführt haben.
 
 2. Wenn der Dienst zuerst ausgeführt wird, wird überprüft, ob die Warteschlange vorhanden ist. Ist die Warteschlange nicht vorhanden, wird sie vom Dienst erstellt. Sie können zuerst den Dienst ausführen, um die Warteschlange zu erstellen, oder Sie können sie über den MSMQ-Warteschlangen-Manager erstellen. Führen Sie zum Erstellen einer Warteschlange in Windows 2008 die folgenden Schritte aus:
 
-    1. Öffnen Sie Server-Manager in Visual Studio 2012.
+    1. Öffnen Sie den Server-Manager in Visual Studio 2012.
 
-    2. Erweitern Sie die Registerkarte **Features** .
+    2. Erweitern Sie die Registerkarte **Features.**
 
-    3. Klicken Sie mit der rechten Maustaste auf private Meldungs **Warteschlangen**, und wählen Sie **neu**, **private**
+    3. Klicken Sie mit der rechten Maustaste auf **Private Message Queues**, und wählen Sie **Neue**, **Private Warteschlange**aus.
 
-    4. Aktivieren Sie das Kontrollkästchen **transaktional** .
+    4. Aktivieren Sie das Kontrollkästchen **Transaktional.**
 
-    5. Geben Sie `ServiceModelSamplesTransacted` als Namen für die neue Warteschlange ein.
+    5. Geben `ServiceModelSamplesTransacted` Sie den Namen der neuen Warteschlange ein.
 
 3. Um die C#- oder Visual Basic .NET-Edition der Projektmappe zu erstellen, befolgen Sie die unter [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)aufgeführten Anweisungen.
 
-4. Um das Beispiel in einer Konfiguration mit einem Computer oder Computer übergreifend auszuführen, ändern Sie die Warteschlangen Namen entsprechend, indem Sie localhost durch den vollständigen Namen des Computers ersetzen, und befolgen Sie die Anweisungen unter [Ausführen der Windows Communication Foundation Beispiele](../../../../docs/framework/wcf/samples/running-the-samples.md).
+4. Um das Beispiel in einer Einzel- oder Computerkonfiguration auszuführen, ändern Sie die Warteschlangennamen entsprechend, ersetzen Sie localhost durch den vollständigen Namen des Computers, und befolgen Sie die Anweisungen unter [Ausführen der Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/running-the-samples.md).
 
 ### <a name="to-run-the-sample-on-a-computer-joined-to-a-workgroup"></a>So führen Sie das Beispiel auf einem Computer aus, der zu einer Arbeitsgruppe gehört
 
@@ -349,14 +349,14 @@ Processing Purchase Order: 97897eff-f926-4057-a32b-af8fb11b9bf9
     > [!NOTE]
     > Das Festlegen von `security mode` auf `None` entspricht dem Festlegen von `MsmqAuthenticationMode`, `MsmqProtectionLevel` und der `Message`-Sicherheit auf `None`.
 
-## <a name="comments"></a>Comments
+## <a name="comments"></a>Kommentare
  Standardmäßig wird mit der `netMsmqBinding`-Bindung die Transportsicherheit aktiviert. Der Typ der Transportsicherheit wird durch zwei Eigenschaften festgelegt: `MsmqAuthenticationMode` und `MsmqProtectionLevel`. Standardmäßig wird der Authentifizierungsmodus auf `Windows` festgelegt, und die Schutzebene wird auf `Sign` gesetzt. Damit MSMQ die Authentifizierungs- und Signierungsfunktion bereitstellt, muss es ein Teil einer Domäne sein. Wenn Sie dieses Beispiel auf einem Computer ausführen, der nicht Teil einer Domäne ist, wird folgende Fehlermeldung ausgegeben: "Das interne Message Queuing-Zertifikat für diesen Benutzer ist nicht vorhanden".
 
 > [!IMPORTANT]
 > Die Beispiele sind möglicherweise bereits auf dem Computer installiert. Suchen Sie nach dem folgenden Verzeichnis (Standardverzeichnis), bevor Sie fortfahren.  
->   
+>
 > `<InstallDrive>:\WF_WCF_Samples`  
->   
-> Wenn dieses Verzeichnis nicht vorhanden ist, wechseln Sie zu [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF)-Beispiele für .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) , um alle Windows Communication Foundation (WCF) und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele herunterzuladen. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
->   
+>
+> Wenn dieses Verzeichnis nicht vorhanden ist, wechseln Sie zu [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples for .NET Framework 4,](https://www.microsoft.com/download/details.aspx?id=21459) um alle Windows Communication Foundation (WCF) und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele herunterzuladen. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+>
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\MSMQ\DeadLetter`  

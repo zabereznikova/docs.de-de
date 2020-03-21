@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: fbc96fa9-b5d1-4f97-b099-c89b0e14ce2c
-ms.openlocfilehash: 272b76c0448da9e069fba331c3ae99c1de02ed16
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 2ee5b0937f24fac745f72cf6ef6e4bef9ec97ba8
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70784269"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79150780"
 ---
 # <a name="synchronizing-a-dataset-with-an-xmldatadocument"></a>Synchronisieren eines "DataSet "mit einem "XmlDataDocument"
-In diesem Abschnitt wird ein Schritt bei der Verarbeitung einer Bestellung mit einem <xref:System.Data.DataSet> mit strikter Typbindung beschrieben, das mit einem <xref:System.Xml.XmlDataDocument> synchronisiert wird. In den folgenden Beispielen wird ein **DataSet** mit einem minimierten Schema erstellt, das nur einem Teil des XML-Quelldokuments entspricht. In den Beispielen wird ein **xmldatadocenent** verwendet, um die Genauigkeit des XML-Quelldokuments beizubehalten, sodass das **DataSet** verwendet werden kann, um eine Teilmenge des XML-Dokuments verfügbar zu machen.  
+In diesem Abschnitt wird ein Schritt bei der Verarbeitung einer Bestellung mit einem <xref:System.Data.DataSet> mit strikter Typbindung beschrieben, das mit einem <xref:System.Xml.XmlDataDocument> synchronisiert wird. In den folgenden Beispielen wird ein **DataSet** mit einem minimierten Schema erstellt, das nur einem Teil des Xml-Quelldokuments entspricht. In den Beispielen wird ein **XmlDataDocument** verwendet, um die Genauigkeit des XML-Quelldokuments beizubehalten, sodass das **DataSet** zum Verfügbarmachen einer Teilmenge des XML-Dokuments verwendet werden kann.  
   
  Das folgende XML-Dokument enthält alle Informationen zu einer Bestellung: Kundeninformationen, bestellte Artikel, Versandinformationen usw.  
   
@@ -109,15 +109,15 @@ In diesem Abschnitt wird ein Schritt bei der Verarbeitung einer Bestellung mit e
 </PurchaseOrder>  
 ```  
   
- Ein Schritt bei der Verarbeitung der Bestellinformationen aus dem vorhergehenden XML-Dokument besteht darin, dass die Bestellung über den aktuellen Lagerbestand des Unternehmens ausgeführt wird. Der Mitarbeiter, der die Bestellung über das Lager des Unternehmens bearbeitet, muss nicht den gesamten Inhalt der Bestellung kennen – es genügt, wenn die Produktinformationen für die Bestellung zu sehen sind. Um nur die Produktinformationen aus dem XML-Dokument verfügbar zu machen, erstellen Sie ein stark typisiertes **DataSet** mit einem Schema, das als XSD-Schema (XML Schema Definition Language) geschrieben wurde und den bestellten Produkten und Mengen entspricht. Weitere Informationen zu stark typisierten **DataSet** -Objekten finden Sie unter [typisierte Datasets](typed-datasets.md).  
+ Ein Schritt bei der Verarbeitung der Bestellinformationen aus dem vorhergehenden XML-Dokument besteht darin, dass die Bestellung über den aktuellen Lagerbestand des Unternehmens ausgeführt wird. Der Mitarbeiter, der die Bestellung über das Lager des Unternehmens bearbeitet, muss nicht den gesamten Inhalt der Bestellung kennen – es genügt, wenn die Produktinformationen für die Bestellung zu sehen sind. Um nur die Produktinformationen aus dem XML-Dokument verfügbar zu machen, erstellen Sie ein stark typisiertes **DataSet** mit einem Schema, das als XSD-Schema (XML Schema Definition Language) geschrieben wurde und den bestellten Produkten und Mengen zugeordnet ist. Weitere Informationen zu stark typisierten **DataSet-Objekten** finden Sie unter [Typisierte DataSets](typed-datasets.md).  
   
- Der folgende Code zeigt das Schema, aus dem das **DataSet** mit starker Typisierung für dieses Beispiel generiert wird.  
+ Der folgende Code zeigt das Schema, aus dem das stark typisierte **DataSet** für dieses Beispiel generiert wird.  
   
 ```xml  
 <?xml version="1.0" standalone="yes"?>  
-<xs:schema id="OrderDetail" xmlns=""   
-                            xmlns:xs="http://www.w3.org/2001/XMLSchema"   
-                            xmlns:codegen="urn:schemas-microsoft-com:xml-msprop"   
+<xs:schema id="OrderDetail" xmlns=""
+                            xmlns:xs="http://www.w3.org/2001/XMLSchema"
+                            xmlns:codegen="urn:schemas-microsoft-com:xml-msprop"
                             xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">  
   <xs:element name="OrderDetail" msdata:IsDataSet="true">  
     <xs:complexType>  
@@ -157,11 +157,11 @@ In diesem Abschnitt wird ein Schritt bei der Verarbeitung einer Bestellung mit e
 </xs:schema>  
 ```  
   
- Beachten Sie, dass nur Informationen aus den Elementen **Order Details** und **Products** des ursprünglichen XML-Dokuments im Schema für das **DataSet**enthalten sind. Durch die Synchronisierung des **DataSets** mit einem **xmldatadocreent** wird sichergestellt, dass die Elemente, die nicht im **DataSet** enthalten sind, im XML-Dokument gespeichert werden.  
+ Beachten Sie, dass nur Informationen aus den Elementen **OrderDetails** und **Products** des ursprünglichen XML-Dokuments im Schema für das **DataSet**enthalten sind. Durch das Synchronisieren des **DataSets** mit einem **XmlDataDocument** wird sichergestellt, dass die elemente, die nicht im **DataSet** enthalten sind, im XML-Dokument beibehalten werden.  
   
- Mit dem stark typisierten **DataSet** , das aus dem XML-Schema generiert wurde (mit dem Namespace **Northwind. FillOrder**), kann ein Teil des ursprünglichen XML-Dokuments verfügbar gemacht werden, indem das **DataSet** mit dem geladenen **xmldatadocenent** synchronisiert wird. aus dem XML-Quelldokument. Beachten Sie, dass das aus dem Schema generierte **DataSet** eine Struktur, aber keine Daten enthält. Die Daten werden ausgefüllt, wenn Sie den XML-Code in das **xmldatadocumschlag**laden. Wenn Sie versuchen, ein **XmlDataDocument** zu laden, das mit einem **DataSet** synchronisiert wurde, das bereits Daten enthält, wird eine Ausnahme ausgelöst.  
+ Mit dem stark typisierten **DataSet,** das aus dem XML-Schema generiert wird (mit einem Namespace von **Northwind.FillOrder),** kann ein Teil des ursprünglichen XML-Dokuments verfügbar gemacht werden, indem das **DataSet** mit dem aus dem Xml-Quelldokument geladenen **XmlDataDocument** synchronisiert wird. Beachten Sie, dass das aus dem Schema generierte **DataSet** eine Struktur, aber keine Daten enthält. Die Daten werden ausgefüllt, wenn Sie die XML in **das XmlDataDocument**laden. Wenn Sie versuchen, ein **XmlDataDocument** zu laden, das mit einem **DataSet** synchronisiert wurde, das bereits Daten enthält, wird eine Ausnahme ausgelöst.  
   
- Nachdem das **DataSet** (und das **xmldatadocumschlag**) aktualisiert wurden, kann das **xmldatadocenent** -Element dann das geänderte XML-Dokument mit den vom **DataSet** ignorierten Elementen schreiben, wie unten gezeigt. Im Bestellszenario kann das geänderte Dokument, nachdem die Posten der Bestellung angegeben wurden, an den nächsten Schritt im Bestellprozess übergeben werden; das kann z. B. die Versandabteilung des Unternehmens sein.  
+ Nachdem das **DataSet** (und das **XmlDataDocument**) aktualisiert wurde, kann **das XmlDataDocument** das geänderte XML-Dokument mit den Elementen, die vom **DataSet** ignoriert werden, noch intakt schreiben, wie unten gezeigt. Im Bestellszenario kann das geänderte Dokument, nachdem die Posten der Bestellung angegeben wurden, an den nächsten Schritt im Bestellprozess übergeben werden; das kann z. B. die Versandabteilung des Unternehmens sein.  
   
 ```vb  
 Imports System  
@@ -174,7 +174,7 @@ Public class Sample
   
     Dim orderDS As OrderDetail = New OrderDetail  
   
-    Dim xmlDocument As XmlDataDocument = New XmlDataDocument(orderDS)   
+    Dim xmlDocument As XmlDataDocument = New XmlDataDocument(orderDS)
   
     xmlDocument.Load("Order.xml")  
   
@@ -208,9 +208,9 @@ public class Sample
 {  
   public static void Main()  
   {  
-    OrderDetail orderDS = new OrderDetail();   
+    OrderDetail orderDS = new OrderDetail();
   
-    XmlDataDocument xmlDocument = new XmlDataDocument(orderDS);   
+    XmlDataDocument xmlDocument = new XmlDataDocument(orderDS);
   
     xmlDocument.Load("Order.xml");  
   
@@ -231,7 +231,7 @@ public class Sample
 }  
 ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [DataSet- und XmlDataDocument-Synchronisierung](dataset-and-xmldatadocument-synchronization.md)
 - [Übersicht über ADO.NET](../ado-net-overview.md)

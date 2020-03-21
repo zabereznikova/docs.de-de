@@ -7,19 +7,18 @@ helpviewer_keywords:
 - appSettings Element
 - <appSettings> Element
 ms.assetid: 39694cc4-6b84-45a6-9329-385a0d8b48fe
-ms.openlocfilehash: e1f285aae10a89fa49846534d5b47e15920294ea
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: ea341d562f4b163a3a1771da0f20903b7d64bcdf
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77452278"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79155530"
 ---
-# <a name="appsettings-element-for-configuration"></a>\<appSettings-> Element für \<Configuration >
+# <a name="appsettings-element-for-configuration"></a>\<appSettings>-Element für \<Konfigurations->
 
-Enthält benutzerdefinierte Anwendungseinstellungen. Dies ist ein vordefinierter Konfigurations Abschnitt, der vom .NET Framework bereitgestellt wird.
+Enthält benutzerdefinierte Anwendungseinstellungen. Dies ist ein vordefinierter Konfigurationsabschnitt, der von .NET Framework bereitgestellt wird.
 
-[ **\<configuration>** ](../configuration-element.md)   
-&nbsp;&nbsp; **\<appSettings >**
+Konfiguration &nbsp; &nbsp;>[** \<**](../configuration-element.md) ** \<appEinstellungen>**
 
 ## <a name="syntax"></a>Syntax
 
@@ -29,33 +28,33 @@ Enthält benutzerdefinierte Anwendungseinstellungen. Dies ist ein vordefinierter
 </appSettings>
 ```
 
-## <a name="attribute"></a>Attribut
+## <a name="attribute"></a>attribute
 
 |           | Beschreibung |
 | --------- | ----------- |
-| **file**  | Optionales Attribut.<br><br>Gibt einen relativen Pfad zu einer externen Datei an, die benutzerdefinierte Anwendungs Konfigurationseinstellungen enthält. Die angegebene Datei enthält die gleichen Einstellungen, die im **\<hinzufügen >** , **\<entfernen >** und **\<löschen >** Elemente angegeben sind, und verwendet das gleiche Schlüssel-Wert-Paar-Format wie diese Elemente.<br><br>Der angegebene Pfad ist relativ zur Hauptkonfigurationsdatei. Bei einer Windows Forms Anwendung ist dies der binäre Ordner (z. b. */bin/debug*) und nicht der Speicherort der Anwendungs Konfigurationsdatei. Bei Web Forms Anwendungen ist der Pfad relativ zum Anwendungs Stamm, in dem sich die Datei *Web. config* befindet.<br><br>Die Laufzeit ignoriert das-Attribut, wenn die angegebene Datei nicht gefunden werden kann. |
+| **Datei**  | Optionales Attribut.<br><br>Gibt einen relativen Pfad zu einer externen Datei an, die benutzerdefinierte Anwendungskonfigurationseinstellungen enthält. Die angegebene Datei enthält die gleiche Art von Einstellungen, die in der ** \<Add->** angegeben sind, ** \<>entfernen **und ** \<>** Elemente löschen und das gleiche Schlüssel-Wert-Paarformat wie diese Elemente verwenden.<br><br>Der angegebene Pfad ist relativ zur Hauptkonfigurationsdatei. Bei einer Windows Forms-Anwendung ist dies der Binärordner (z. B. */bin/debug*), nicht der Speicherort der Anwendungskonfigurationsdatei. Bei Web Forms-Anwendungen ist der Pfad relativ zum Anwendungsstamm, in dem sich die *Datei web.config* befindet.<br><br>Die Laufzeit ignoriert das Attribut, wenn die angegebene Datei nicht gefunden werden kann. |
 
 ## <a name="parent-element"></a>Übergeordnetes Element
 
 |     | Beschreibung |
 | --- | ----------- |
-| [ **\<Konfigurations >** Gewisses](../configuration-element.md) | Das Stammelement in jeder von den Common Language Runtime- und .NET Framework-Anwendungen verwendeten Konfigurationsdatei. |
+| [** \<Konfiguration>** Element](../configuration-element.md) | Das Stammelement in jeder von den Common Language Runtime- und .NET Framework-Anwendungen verwendeten Konfigurationsdatei. |
 
 ## <a name="child-elements"></a>Untergeordnete Elemente
 
 |     | Beschreibung |
 | --- | ----------- |
-| [ **\<add>** ](add-element-for-appsettings.md) | Fügt eine benutzerdefinierte Anwendungs Einstellung hinzu. |
-| [ **\<clear>** ](clear-element-for-appsettings.md) | Löscht alle zuvor definierten Anwendungseinstellungen. |
-| [ **\<remove>** ](remove-element-for-appsettings.md) | Entfernt eine zuvor definierte Anwendungs Einstellung. |
+| [**\<hinzufügen>**](add-element-for-appsettings.md) | Fügt eine benutzerdefinierte Anwendungseinstellung hinzu. |
+| [**\<klare>**](clear-element-for-appsettings.md) | Löscht alle zuvor definierten Anwendungseinstellungen. |
+| [**\<entfernen sie>**](remove-element-for-appsettings.md) | Entfernt eine zuvor definierte Anwendungseinstellung. |
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 
-Das **\<appSettings >** -Element speichert benutzerdefinierte Konfigurationsinformationen für die Anwendung, z. b. Daten bankverbindungs Zeichenfolgen, Dateipfade, XML-Webdienst-URLs oder andere benutzerdefinierte Konfigurationsinformationen für eine Anwendung. Der Zugriff auf die Schlüssel-Wert-Paare, die im **\<appSettings >** -Element angegeben sind, erfolgt im Code mithilfe der <xref:System.Configuration.ConfigurationSettings>-Klasse.
+Das ** \<appSettings>-Element** speichert benutzerdefinierte Anwendungskonfigurationsinformationen, z. B. Datenbankverbindungszeichenfolgen, Dateipfade, XML-Webdienst-URLs oder andere benutzerdefinierte Konfigurationsinformationen für eine Anwendung. Auf die in der <xref:System.Configuration.ConfigurationSettings> ** \<appSettings>-Elemente** angegebenen Schlüssel-Wert-Paare wird im Code mithilfe der Klasse zugegriffen.
 
-Sie können das file-Attribut im **\<appSettings->** Element der *Web. config* - **Datei** und der Anwendungs Konfigurationsdatei verwenden. Dieses Attribut gibt eine Konfigurationsdatei an, die zusätzliche Einstellungen bereitstellt oder die im **\<appSettings >** -Element angegebenen Einstellungen überschreibt. Das **File** -Attribut kann in Entwicklungsszenarien der Quell Code Verwaltung verwendet werden, z. b. Wenn ein Benutzer die in einer Anwendungs Konfigurationsdatei angegebenen Projekteinstellungen überschreiben möchte.
+Sie können das **Dateiattribut** im ** \<appSettings>-Element** der *Konfigurationsdateien Web.config* und Application verwenden. Dieses Attribut gibt eine Konfigurationsdatei an, die zusätzliche Einstellungen bereitstellt oder die im ** \<appSettings>-Element** angegebenen Einstellungen überschreibt. Das **Dateiattribut** kann in Entwicklungsszenarien für Quellcodeverwaltungsteams verwendet werden, z. B. wenn ein Benutzer die in einer Anwendungskonfigurationsdatei angegebenen Projekteinstellungen überschreiben möchte.
 
-Konfigurationsdateien, die durch das **File** -Attribut angegeben werden, müssen über einen Stamm Knoten **\<appSettings >** anstelle **\<Konfigurations >** verfügen.
+Konfigurationsdateien, die durch das **Dateiattribut** angegeben werden, müssen über einen Stammknoten von ** \<appSettings>** und nicht über ** \<eine Konfiguration>** verfügen.
 
 ## <a name="example"></a>Beispiel
 
@@ -80,8 +79,8 @@ Das folgende Beispiel zeigt eine Anwendungskonfigurationsdatei, die die Einstell
 
 ## <a name="configuration-file"></a>Konfigurationsdatei
 
-Dieses Element kann in der Anwendungs Konfigurationsdatei, in der Computer Konfigurationsdatei (*Machine. config*) und in den *Web. config* -Dateien verwendet werden, die sich nicht auf der Ebene des Anwendungs Verzeichnisses befinden.
+Dieses Element kann in der Anwendungskonfigurationsdatei, der Computerkonfigurationsdatei (*Machine.config*) und *web.config-Dateien* verwendet werden, die sich nicht auf Anwendungsverzeichnisebene befinden.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Konfigurationsdatei Schema für die .NET Framework](../index.md)
+- [Konfigurationsdateischema für .NET Framework](../index.md)

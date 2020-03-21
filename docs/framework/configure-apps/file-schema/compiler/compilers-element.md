@@ -9,19 +9,19 @@ helpviewer_keywords:
 - <compilers> element
 - compilers element
 ms.assetid: d40fba59-98f9-4783-ae0c-2ebea27ce77b
-ms.openlocfilehash: b09c2a1f67974a67a3f9d58af7cb8cf66a197026
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.openlocfilehash: 09b1efe321c39402c9280eda0e9def9112462470
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74088703"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79155413"
 ---
-# <a name="compilers-element"></a>\<Compiler > Element
-Der Container für Compilerkonfigurationselemente, dieser enthält 0 (null) oder mehr [\<compiler>](compiler-element.md)-Elemente.  
+# <a name="compilers-element"></a>\<Compiler> Element
+Container für Compilerkonfigurationselemente; enthält null oder mehr [ \<Compiler>](compiler-element.md) Elemente enthält.  
 
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<System. CodeDom->** ](system-codedom-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<Compiler >**
+[**\<Konfiguration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.codedom>**](system-codedom-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**\<Compiler>**
 
 ## <a name="syntax"></a>Syntax  
   
@@ -34,29 +34,29 @@ Der Container für Compilerkonfigurationselemente, dieser enthält 0 (null) oder
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
-### <a name="attributes"></a>Attribute  
- Keine  
+### <a name="attributes"></a>Attributes  
+ Keine.  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<compiler> Element](compiler-element.md)|Gibt die Compilerkonfigurationsattribute für einen Sprachanbieter an.|  
+|[\<Compiler> Element](compiler-element.md)|Gibt die Compilerkonfigurationsattribute für einen Sprachanbieter an.|  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<configuration> Element](../configuration-element.md)|Das Stammelement in jeder von den Common Language Runtime- und .NET Framework-Anwendungen verwendeten Konfigurationsdatei.|  
-|[\<System. CodeDom >-Element](system-codedom-element.md)|Gibt die Compilerkonfigurationseinstellungen für verfügbare Sprachanbieter an.|  
+|[\<Konfiguration> Element](../configuration-element.md)|Das Stammelement in jeder von den Common Language Runtime- und .NET Framework-Anwendungen verwendeten Konfigurationsdatei.|  
+|[\<system.codedom> Element](system-codedom-element.md)|Gibt die Compilerkonfigurationseinstellungen für verfügbare Sprachanbieter an.|  
   
-## <a name="remarks"></a>Hinweise  
- Das [\<-Compiler >](compilers-element.md) -Element enthält die Compilerkonfigurationseinstellungen für Sprachanbieter auf einem Computer. Jedes [\<Compiler >](compiler-element.md) -Element gibt die Compilerkonfigurationsattribute für einen bestimmten Sprachanbieter an.  
+## <a name="remarks"></a>Bemerkungen  
+ Die [ \<Compiler>](compilers-element.md) Element die Compilerkonfigurationseinstellungen für Sprachanbieter auf einem Computer enthält. Jeder [ \<Compiler>-Element](compiler-element.md) die Compilerkonfigurationsattribute für einen bestimmten Sprachanbieter angibt.  
   
- In der-.NET Framework werden die anfänglichen Compiler-und Sprachanbieter Einstellungen in der Computer Konfigurationsdatei (Machine. config) definiert. Entwickler und Compileranbieter können Konfigurationseinstellungen für eine neue <xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType>-Implementierung hinzufügen. Verwenden Sie die <xref:System.CodeDom.Compiler.CodeDomProvider.GetAllCompilerInfo%2A?displayProperty=nameWithType>-Methode, um Sprachanbieter und Compilerkonfigurationseinstellungen auf einem Computer programmgesteuert aufzulisten.  
+ .NET Framework definiert die anfänglichen Compiler- und Sprachanbietereinstellungen in der Computerkonfigurationsdatei (Machine.config). Entwickler und Compileranbieter können Konfigurationseinstellungen für eine neue <xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType>-Implementierung hinzufügen. Verwenden Sie die <xref:System.CodeDom.Compiler.CodeDomProvider.GetAllCompilerInfo%2A?displayProperty=nameWithType>-Methode, um Sprachanbieter und Compilerkonfigurationseinstellungen auf einem Computer programmgesteuert aufzulisten.  
   
 ## <a name="configuration-file"></a>Konfigurationsdatei  
- Dieses Element kann in der Computer Konfigurationsdatei und in der Anwendungs Konfigurationsdatei verwendet werden.  
+ Dieses Element kann in der Maschinenkonfigurationsdatei und in der Anwendungskonfigurationsdatei verwendet werden.  
   
 ## <a name="example"></a>Beispiel  
  Das folgende Beispiel veranschaulicht ein typisches Compilerkonfigurationselement.  
@@ -66,21 +66,21 @@ Der Container für Compilerkonfigurationselemente, dieser enthält 0 (null) oder
    <system.codedom>  
      <compilers>  
        <!-- zero or more compiler elements -->  
-       <compiler   
-          language="c#;cs;csharp"   
+       <compiler
+          language="c#;cs;csharp"
           extension=".cs"  
           type="Microsoft.CSharp.CSharpCodeProvider, System, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"  
-          compilerOptions=""    
+          compilerOptions=""
           warningLevel="1" />  
      </compilers>  
    </system.codedom>  
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.CodeDom.Compiler.CompilerInfo>
 - <xref:System.CodeDom.Compiler.CodeDomProvider>
-- [Konfigurationsdateischema](../index.md)
-- [Compiler and Language Provider Settings Schema (Schema für Compiler- und Sprachanbietereinstellungen)](index.md)
-- [\<compiler> Element](compiler-element.md)
+- [Schema der Konfigurationsdatei](../index.md)
+- [Compiler- und Sprachanbietereinstellungen Schema](index.md)
+- [\<Compiler> Element](compiler-element.md)

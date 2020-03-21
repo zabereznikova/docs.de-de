@@ -15,42 +15,42 @@ helpviewer_keywords:
 ms.assetid: 02a02ff7-ae0e-4692-a20e-372405f23052
 topic_type:
 - apiref
-ms.openlocfilehash: a73afaebc2943190eeeee50367ecd31f1fb59df1
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 7389e9233fd946cdb2c810bec01cfbfffc8b707d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74432452"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175602"
 ---
 # <a name="imetadataemitsetparent-method"></a>IMetaDataEmit::SetParent-Methode
-Legt fest, dass der angegebene Member, wie durch einen vorherigen-Befehl von [IMetaDataEmit::D efinemembership Ref](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definememberref-method.md)definiert, ein Member des angegebenen Typs ist, wie durch einen vorherigen-Befehl von [IMetaDataEmit::D efinetypedef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetypedef-method.md)definiert.  
+Legt fest, dass das angegebene Element, wie durch einen vorherigen Aufruf von [IMetaDataEmit::DefineMemberRef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definememberref-method.md)definiert, ein Member des angegebenen Typs ist, wie durch einen vorherigen Aufruf von [IMetaDataEmit::DefineTypeDef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetypedef-method.md)definiert.  
   
 ## <a name="syntax"></a>Syntax  
   
 ```cpp  
-HRESULT SetParent (   
-    [in]  mdMemberRef mr,   
-    [in]  mdToken     tk   
+HRESULT SetParent (
+    [in]  mdMemberRef mr,
+    [in]  mdToken     tk
 );  
 ```  
   
 ## <a name="parameters"></a>Parameter  
  `mr`  
- in Das `mdMemberRef` Token, das ein neues übergeordnetes Element empfangen soll.  
+ [in] Das `mdMemberRef` Token, das ein neues übergeordnetes Element empfangen soll.  
   
  `tk`  
- in Der `mdToken` für das neue übergeordnete Element.  
+ [in] Die `mdToken` für das neue übergeordnete Element.  
   
-## <a name="requirements"></a>Voraussetzungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor. h  
+ **Kopfzeile:** Cor.h  
   
- **Bibliothek:** Wird als Ressource in Mscoree. dll verwendet.  
+ **Bibliothek:** Wird als Ressource in MSCorEE.dll verwendet  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [IMetaDataEmit-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [IMetaDataEmit2-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

@@ -9,38 +9,38 @@ helpviewer_keywords:
 - switches element
 - trace switches, <switches> element
 ms.assetid: 4cf36786-b89a-40e2-a0f1-86bb9b783343
-ms.openlocfilehash: 4aeb3cb0cd75f0fb27e3b359b86da61a77b491c7
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.openlocfilehash: 15cc9680d7a20341eb5d1d1df302c1e034e70e02
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74088807"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79153229"
 ---
-# <a name="switches-element"></a>\<schaltet > Element
+# <a name="switches-element"></a>\<Schalter> Element
 Enthält Ablaufverfolgungsschalter und die Ebene, für die diese festgelegt sind.  
 
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<System. Diagnostics >** ](system-diagnostics-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<Switches >**
+[**\<Konfiguration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.diagnostics>**](system-diagnostics-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**\<Switches>**
 
 ## <a name="syntax"></a>Syntax  
   
 ```xml  
-      <switches>   
+      <switches>
 </switches>  
 ```  
   
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
-### <a name="attributes"></a>Attribute  
- Keine  
+### <a name="attributes"></a>Attributes  
+ Keine.  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<add>](add-element-for-switches.md)|Gibt die Ebene an, für die ein Ablaufverfolgungsschalter festgelegt ist.|  
+|[\<hinzufügen>](add-element-for-switches.md)|Gibt die Ebene an, für die ein Ablaufverfolgungsschalter festgelegt ist.|  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   
@@ -49,11 +49,11 @@ Enthält Ablaufverfolgungsschalter und die Ebene, für die diese festgelegt sind
 |`configuration`|Das Stammelement in jeder von den Common Language Runtime- und .NET Framework-Anwendungen verwendeten Konfigurationsdatei.|  
 |`System.diagnostics`|Gibt Ablaufverfolgungslistener an, die Meldungen sammeln, speichern und weiterleiten sowie die Ebene, für die ein Ablaufverfolgungsschalter festgelegt ist.|  
   
-## <a name="remarks"></a>Hinweise  
- Sie können die Ebene eines Ablauf Verfolgungs Schalters ändern, indem Sie ihn in eine Konfigurationsdatei einfügen. Wenn der Schalter ein <xref:System.Diagnostics.BooleanSwitch>ist, können Sie ihn aktivieren und deaktivieren. Wenn der Schalter ein <xref:System.Diagnostics.TraceSwitch>ist, können Sie ihm verschiedene Ebenen zuweisen, um die Typen der von der Anwendung ausgegebenen Ablauf Verfolgungs-oder Debugmeldungen anzugeben.  
+## <a name="remarks"></a>Bemerkungen  
+ Sie können die Ebene eines Ablaufverfolgungsschalters ändern, indem Sie ihn in eine Konfigurationsdatei einteilen. Wenn es sich <xref:System.Diagnostics.BooleanSwitch>bei dem Schalter um einen handelt, können Sie ihn ein- und ausschalten. Wenn es sich <xref:System.Diagnostics.TraceSwitch>bei dem Switch um einen handelt, können Sie ihm verschiedene Ebenen zuweisen, um die Typen von Ablaufverfolgungs- oder Debugmeldungen anzugeben, die die Anwendung ausgibt.  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird gezeigt, wie Sie die **\<Switch->** -Element verwenden, um den `General` Trace-Schalter auf die <xref:System.Diagnostics.TraceLevel> Ebene festzulegen und den `Data` booleschen Ablauf Verfolgungs Schalter zu aktivieren.  
+ Das folgende Beispiel zeigt, wie Sie den `General` <xref:System.Diagnostics.TraceLevel> ** \<Switch>-Element** verwenden, `Data` um den Ablaufverfolgungsschalter auf die Ebene zu setzen, und den booleschen Ablaufverfolgungsschalter aktivieren.  
   
 ```xml  
 <configuration>  
@@ -66,9 +66,9 @@ Enthält Ablaufverfolgungsschalter und die Ebene, für die diese festgelegt sind
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Diagnostics.Switch>
 - <xref:System.Diagnostics.TraceSwitch>
 - <xref:System.Diagnostics.BooleanSwitch>
-- [Trace and Debug Settings Schema (Schema für Ablaufverfolgungs- und Debugeinstellungen)](index.md)
+- [Ablaufverfolgungs- und Debugeinstellungsschema](index.md)

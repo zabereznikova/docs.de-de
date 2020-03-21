@@ -6,39 +6,39 @@ helpviewer_keywords:
 - caching [.NET Framework], configuration
 - memoryCache element
 ms.assetid: 182a622f-f7cf-472d-9d0b-451d2fd94525
-ms.openlocfilehash: 25467fc751ad772e74ca714e6059bc5134300ed6
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 94c21e0408b7616bf0c8a24267b72bfa7cc3aaa0
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252485"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79153983"
 ---
-# <a name="memorycache-element-cache-settings"></a>\<MemoryCache-> Element (Cache Einstellungen)
+# <a name="memorycache-element-cache-settings"></a>\<memoryCache> Element (Cache-Einstellungen)
 Definiert ein Element, das für die Konfiguration des Cache verwendet wird, der auf der <xref:System.Runtime.Caching.MemoryCache> -Klasse basiert. Die <xref:System.Runtime.Caching.Configuration.MemoryCacheElement> -Klasse definiert ein [memoryCache](memorycache-element-cache-settings.md) -Element, das Sie zum Konfigurieren des Caches verwenden können. Mehrere Instanzen der <xref:System.Runtime.Caching.MemoryCache> -Klasse können in einer einzigen Anwendung verwendet werden. Jedes `memoryCache` -Element in der Konfigurationsdatei kann Einstellungen für eine benannte <xref:System.Runtime.Caching.MemoryCache> -Instanz enthalten.  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<System. Runtime. Caching->** ](system-runtime-caching-element-cache-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<MemoryCache->**  
+[**\<Konfiguration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.runtime.caching>**](system-runtime-caching-element-cache-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**\<memoryCache>**  
   
 ## <a name="syntax"></a>Syntax  
   
 ```xml  
-<memoryCache>   
+<memoryCache>
     <namedCaches>  
         <!-- child elements -->  
-    </namedCaches>   
+    </namedCaches>
 </memoryCache>  
 ```  
   
-## <a name="type"></a>Typ  
+## <a name="type"></a>type  
  <xref:System.Runtime.Caching.MemoryCache> -Klasse.  
   
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
-### <a name="attributes"></a>Attribute  
+### <a name="attributes"></a>Attributes  
   
-|Attribut|Beschreibung|  
+|attribute|Beschreibung|  
 |---------------|-----------------|  
 |`CacheMemoryLimitMegabytes`|Die maximale Arbeitsspeichergröße in Megabyte, auf die eine Instanz eines <xref:System.Runtime.Caching.MemoryCache> -Objekts anwachsen kann. Der Standardwert ist 0, was bedeutet, dass die <xref:System.Runtime.Caching.MemoryCache> -Klasse Autosize-Heuristik als Standard verwendet wird.|  
 |`Name`|Der Name der Cachekonfiguration.|  
@@ -55,10 +55,10 @@ Definiert ein Element, das für die Konfiguration des Cache verwendet wird, der 
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<configuration>](../configuration-element.md)|Gibt das Stamm Element in jeder Konfigurationsdatei an, die von den Common Language Runtime-und .NET Framework Anwendungen verwendet wird.|  
-|[\<system.runtime.caching>](system-runtime-caching-element-cache-settings.md)|Enthält Typen, mit denen Sie die Ausgabe Zwischenspeicherung in Anwendungen implementieren können, die in die .NET Framework integriert sind.|  
+|[\<Konfiguration>](../configuration-element.md)|Gibt das Stammelement in jeder Konfigurationsdatei an, die von der Common Language Runtime und .NET Framework-Anwendungen verwendet wird.|  
+|[\<system.runtime.caching>](system-runtime-caching-element-cache-settings.md)|Enthält Typen, mit denen Sie ausgabezwischenspeichern in Anwendungen implementieren können, die in .NET Framework integriert sind.|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Die <xref:System.Runtime.Caching.MemoryCache> -Klasse ist eine konkrete Implementierung der abstrakten <xref:System.Runtime.Caching.ObjectCache> -Klasse. Instanzen der <xref:System.Runtime.Caching.MemoryCache> -Klasse können mit Konfigurationsinformationen von Anwendungskonfigurationsdateien versorgt werden. Der Abschnitt [memoryCache](memorycache-element-cache-settings.md) -Konfiguration enthält eine `namedCaches` -Konfigurationssammlung.  
   
  Wenn ein speicherbasierendes Cacheobjekt initialisiert wird, versucht es zuerst, einen `namedCaches` -Eintrag zu finden, der dem Namen in dem Parameter entspricht, der an den Speichercache-Konstruktor übergeben wird. Wenn ein `namedCaches` -Eintrag gefunden wird, werden Abruf- und Speicher-Management-Informationen aus der Konfigurationsdatei abgerufen.  
@@ -72,7 +72,7 @@ Definiert ein Element, das für die Konfiguration des Cache verwendet wird, der 
 - <xref:System.Runtime.Caching.MemoryCache.PollingInterval%2A>  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird gezeigt, wie der Name des <xref:System.Runtime.Caching.MemoryCache> -Objekts auf den standardmäßigen Cache Objektnamen festgelegt wird, indem das `name` -Attribut auf "Default" festgelegt wird.  
+ Das folgende Beispiel zeigt, wie <xref:System.Runtime.Caching.MemoryCache> Sie den Namen des Objekts `name` auf den Standard-Cacheobjektnamen festlegen, indem Sie das Attribut auf "Standard" festlegen.  
   
  Das `cacheMemoryLimitMegabytes` - und das `physicalMemoryLimitPercentage` -Attribut werden auf 0 (Null) festgelegt. Werden diese Attribute auf 0 (Null) festgelegt, wird die <xref:System.Runtime.Caching.MemoryCache> -Heuristik zum automatischen Anpassen als Standard verwendet. Die Cacheimplementierung sollte die aktuelle Auslastung des Arbeitsspeichers alle zwei Minuten mit den absoluten und prozentualen Speichergrenzen vergleichen.  
   
@@ -81,8 +81,8 @@ Definiert ein Element, das für die Konfiguration des Cache verwendet wird, der 
   <system.runtime.caching>  
     <memoryCache>  
       <namedCaches>  
-          <add name="Default"   
-               cacheMemoryLimitMegabytes="0"   
+          <add name="Default"
+               cacheMemoryLimitMegabytes="0"
                physicalMemoryLimitPercentage="0"  
                pollingInterval="00:02:00" />  
       </namedCaches>  
@@ -91,8 +91,8 @@ Definiert ein Element, das für die Konfiguration des Cache verwendet wird, der 
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Runtime.Caching.MemoryCache>
-- [\<System. Runtime. Caching >-Element (Cache Einstellungen)](system-runtime-caching-element-cache-settings.md)
-- [\<NamedCaches > Element (Cache Einstellungen)](namedcaches-element-cache-settings.md)
+- [\<system.runtime.caching> Element (Cache-Einstellungen)](system-runtime-caching-element-cache-settings.md)
+- [\<namedCaches> Element (Cache-Einstellungen)](namedcaches-element-cache-settings.md)

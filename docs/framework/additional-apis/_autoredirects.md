@@ -1,5 +1,5 @@
 ---
-title: Feld "HttpWebRequest. _AutoRedirects"
+title: HttpWebRequest._AutoRedirects Feld
 ms.date: 05/01/2017
 topic_type:
 - apiref
@@ -10,16 +10,16 @@ api_location:
 api_type:
 - Assembly
 ms.assetid: bd58e91c-4e35-4866-9d55-75ff58c3ed73
-ms.openlocfilehash: da7acdd890d0bff267fb592e81ceb6553421323f
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: ff4b9b430bdb9ebc82a945012dcb53ed83b1e48f
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77215716"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79156297"
 ---
-# <a name="httpwebrequest_autoredirects-field"></a>HttpWebRequest.\_autoreumleitungen-Feld
+# <a name="httpwebrequest_autoredirects-field"></a>HttpWebRequest. \_AutoDirects-Feld
 
-`HttpWebRequest._AutoRedirects` ist ein <xref:System.Int32>, der die Anzahl der Umleitungen angibt, die für diesen <xref:System.Net.HttpWebRequest>vorgenommen wurden.
+`HttpWebRequest._AutoRedirects`ist <xref:System.Int32> ein, das die Anzahl der Umleitungen für diese <xref:System.Net.HttpWebRequest>widerspiegelt.
 
 ## <a name="syntax"></a>Syntax  
   
@@ -28,14 +28,14 @@ private int _AutoRedirects
 ```
 
 > [!WARNING]
-> Das `HttpWebRequest._AutoRedirects` Feld ist intern und sollte nicht direkt im Code verwendet werden.
-> 
+> Das `HttpWebRequest._AutoRedirects` Feld ist intern und soll nicht direkt in Ihrem Code verwendet werden.
+>
 > Microsoft unterstützt die Verwendung dieses Felds in einer Produktionsanwendung unter keinen Umständen.
 
 ## <a name="requirements"></a>Requirements (Anforderungen)
 
-**Namespace:** <xref:System.Net>
+**Namespace:**<xref:System.Net>
 
-**Assembly:** System (in "System. dll")
+**Montage:** System (in System.dll)
 
-**.NET Framework Versionen:** Verfügbar seit 2,0.
+**.NET Framework-Versionen:** Verfügbar seit 2.0.

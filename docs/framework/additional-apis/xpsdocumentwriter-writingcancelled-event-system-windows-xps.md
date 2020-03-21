@@ -1,5 +1,5 @@
 ---
-title: XpsDocumentWriter. _WritingCancelled-Ereignis (System. Windows. Xps)
+title: XpsDocumentWriter._WritingCancelled-Ereignis (System.Windows.Xps)
 ms.date: 10/17/2017
 api_location:
 - system.printing.dll
@@ -11,16 +11,16 @@ api_type:
 - Assembly
 topic_type:
 - apiref
-ms.openlocfilehash: c05736e68fa094a0bc408ef76bf62d4fa9898f58
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 79f9d3c4163b05719d2296d30b87a35a4c282212
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72525010"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79155608"
 ---
-# <a name="xpsdocumentwriter_writingcancelled-event"></a>XpsDocumentWriter. \_WritingCancelled Ereignis
+# <a name="xpsdocumentwriter_writingcancelled-event"></a>Xpsdocumentwriter.writeasync. \_WritingCancelled-Ereignis
 
-Tritt auf, wenn ein <xref:System.Windows.Xps.XpsDocumentWriter.Write%2A> oder <xref:System.Windows.Xps.XpsDocumentWriter.WriteAsync%2A> Vorgang abgebrochen wird. 
+Tritt ein, wenn ein <xref:System.Windows.Xps.XpsDocumentWriter.Write%2A>-Vorgang oder ein <xref:System.Windows.Xps.XpsDocumentWriter.WriteAsync%2A>-Vorgang abgebrochen wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -28,10 +28,10 @@ Tritt auf, wenn ein <xref:System.Windows.Xps.XpsDocumentWriter.Write%2A> oder <x
 internal event WritingCancelledEventHandler _WritingCancelled
 ```
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
-**Namespace:** <xref:System.Windows.Xps>
+**Namespace:**<xref:System.Windows.Xps>
 
-**Assembly:** System. Printing (in System. Printing. dll)
+**Montage:** System.Printing (in system.printing.dll)
 
-**.NET Framework Versionen:** Verfügbar seit 3,0
+**.NET Framework-Versionen:** Verfügbar seit 3.0

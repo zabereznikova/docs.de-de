@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e380edac-da67-4276-80a5-b64decae4947
-ms.openlocfilehash: ddb53c9224d56803c3528d79c5ccdf5534b9ab03
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: e8d24a3998ca97fdf45e647bc40c1f7d6018ec20
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039816"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79149452"
 ---
 # <a name="optimistic-concurrency"></a>Optimistische Nebenläufigkeit
 In einer Umgebung mit mehreren Benutzern gibt es zwei Modelle für das Update von Daten in einer Datenbank: das Modell der vollständigen Parallelität und das Modell der eingeschränkten Parallelität. Das <xref:System.Data.DataSet>-Objekt unterstützt die Verwendung der vollständigen Parallelität für lange Aktivitäten, wie bei der Datenfernverarbeitung und der Interaktion mit Daten.  
@@ -30,25 +30,25 @@ In einer Umgebung mit mehreren Benutzern gibt es zwei Modelle für das Update vo
   
  Um 13:00 Uhr ruft User1 eine Zeile mit den folgenden Werten aus der Datenbank auf:  
   
- **CustID LastName FirstName**  
+ **CustID     LastName     FirstName**  
   
- 101 Smith Bob  
+ 101          Smith             Bob  
   
 |Spaltenname|Ursprünglicher Wert|Aktueller Wert|Wert in Datenbank|  
 |-----------------|--------------------|-------------------|-----------------------|  
 |CustID|101|101|101|  
 |LastName|Smith|Smith|Smith|  
-|FirstName|Bob|Bob|Bob|  
+|FirstName|Bernd|Bernd|Bernd|  
   
  Um 13:01 Uhr ruft User2 dieselbe Zeile ab.  
   
- Um 1:03 Uhr ändert User2 **FirstName** von "Bob" in "Robert" und aktualisiert die Datenbank.  
+ Um 13:03 Uhr ändert User2 **DenName** von "Bob" in "Robert" und aktualisiert die Datenbank.  
   
 |Spaltenname|Ursprünglicher Wert|Aktueller Wert|Wert in Datenbank|  
 |-----------------|--------------------|-------------------|-----------------------|  
 |CustID|101|101|101|  
 |LastName|Smith|Smith|Smith|  
-|FirstName|Bob|Robert|Bob|  
+|FirstName|Bernd|Robert|Bernd|  
   
  Das Update ist erfolgreich, weil die Werte in der Datenbank zur Zeit des Updates mit den ursprünglichen Werten übereinstimmen, die User2 vorliegen.  
   
@@ -58,20 +58,20 @@ In einer Umgebung mit mehreren Benutzern gibt es zwei Modelle für das Update vo
 |-----------------|--------------------|-------------------|-----------------------|  
 |CustID|101|101|101|  
 |LastName|Smith|Smith|Smith|  
-|FirstName|Bob|James|Robert|  
+|FirstName|Bernd|James|Robert|  
   
  Zu diesem Zeitpunkt stellt User1 eine Verletzung der optimistischen Parallelität fest, weil der Wert in der Datenbank ("Robert") nicht mit dem ursprünglichen Wert übereinstimmt, den User1 erwartet hat ("Bob"). Die Parallelitätsverletzung sagt Ihnen einfach nur, dass das Update fehlgeschlagen ist. Nun muss entschieden werden, ob die von User2 vorgenommenen Änderungen mit den Änderungen von User1 überschrieben oder die Änderungen von User1 verworfen werden sollen.  
   
 ## <a name="testing-for-optimistic-concurrency-violations"></a>Testen auf Verletzung der vollständigen Parallelität  
  Es gibt mehrere Testverfahren, mit denen eine Verletzung der vollständigen Parallelität festgestellt werden kann. Eine Methode besteht im Einfügen einer Timestamp-Spalte in die Tabelle. Datenbanken stellen im Allgemeinen Timestamp-Funktionen zur Verfügung, mit denen der Updatezeitpunkt (Datum und Uhrzeit) des Datensatzes gekennzeichnet werden kann. Bei dieser Methode wird eine Timestamp-Spalte in die Tabellendefinition eingefügt. Bei jedem Update des Datensatzes wird der Timestamp aktualisiert, sodass er den aktuellen Zeitpunkt (Datum und Uhrzeit) angibt. Bei einem Test auf eine Verletzung der vollständigen Parallelität wird die Timestamp-Spalte bei jeder Abfrage des Tabelleninhalts zurückgegeben. Bei einem Updateversuch wird der Timestamp-Wert in der Datenbank mit dem ursprünglichen Timestamp-Wert verglichen, der in der geänderten Zeile enthalten ist. Wenn die Werte identisch sind, wird die Timestamp-Spalte mit der aktuellen Uhrzeit aktualisiert, um das Update zu kennzeichnen. Wenn die Werte nicht identisch sind, wurde die vollständige Parallelität verletzt.  
   
- Beim zweiten Testverfahren, mit dem eine Verletzung der vollständigen Parallelität festgestellt werden kann, wird überprüft, ob alle ursprünglichen Spaltenwerte einer Zeile mit denen in der Datenbank übereinstimmen. Betrachten Sie z. B. folgende Abfrage:  
+ Beim zweiten Testverfahren, mit dem eine Verletzung der vollständigen Parallelität festgestellt werden kann, wird überprüft, ob alle ursprünglichen Spaltenwerte einer Zeile mit denen in der Datenbank übereinstimmen. Angenommen, beispielsweise liegt die folgende Abfrage vor:  
   
 ```sql
 SELECT Col1, Col2, Col3 FROM Table1  
 ```  
   
- Wenn Sie beim Aktualisieren einer Zeile in **Table1**auf eine Verletzung der vollständigen Parallelität testen möchten, geben Sie die folgende Update-Anweisung aus:  
+ Um beim Aktualisieren einer Zeile in **Tabelle1**auf eine optimistische Parallelitätsverletzung zu testen, geben Sie die folgende UPDATE-Anweisung aus:  
   
 ```sql
 UPDATE Table1 Set Col1 = @NewCol1Value,  
@@ -96,14 +96,14 @@ UPDATE Table1 Set Col1 = @NewVal1
  Sie können bei einem Modell der vollständigen Parallelität auch weniger strenge Kriterien anwenden. Wenn Sie z. B. nur die Primärschlüsselspalten in der WHERE-Klausel verwenden, werden die Daten unabhängig davon überschrieben, ob die anderen Spalten seit der letzten Abfrage aktualisiert wurden oder nicht. Zudem besteht die Möglichkeit, eine WHERE-Klausel auf spezifische Spalten anzuwenden, sodass die Daten überschrieben werden, sofern nicht bestimmte Felder seit deren letzten Abfrage aktualisiert wurden.  
   
 ### <a name="the-dataadapterrowupdated-event"></a>Das "DataAdapter.RowUpdated"-Ereignis  
- Das **rowaktualisierte** -Ereignis des <xref:System.Data.Common.DataAdapter> Objekts kann in Verbindung mit den oben beschriebenen Techniken verwendet werden, um die Anwendung von Verletzungen der vollständigen Parallelität zu benachrichtigen. **Rowupdate** erfolgt nach jedem Versuch, eine **geänderte** Zeile aus einem **DataSet**zu aktualisieren. Damit können Sie spezifischen Behandlungscode hinzufügen, einschließlich Verarbeitung bei Ausnahmen, Einfügen von benutzerdefinierten Fehlerinformationen, Hinzufügen einer Wiederholungslogik usw. Das <xref:System.Data.Common.RowUpdatedEventArgs>-Objekt gibt eine **recordsafffiziert** -Eigenschaft zurück, die die Anzahl der Zeilen enthält, die von einem bestimmten Update-Befehl für eine geänderte Zeile in einer Tabelle betroffen sind. Wenn Sie den Update-Befehl so festlegen, dass die vollständige Parallelität getestet wird, gibt die **recordsaffzierte** -Eigenschaft als Ergebnis den Wert 0 zurück, wenn eine Verletzung der vollständigen Parallelität aufgetreten ist, da keine Datensätze aktualisiert wurden. Wenn dies der Fall ist, wird eine Ausnahme ausgelöst. Das Ereignis **rowaktualisierte** ermöglicht es Ihnen, dieses Vorkommen zu behandeln und die Ausnahme zu vermeiden, indem Sie einen entsprechenden **RowUpdatedEventArgs. Status** -Wert festlegen, z. b. **UpdateStatus. SkipCurrentRow**. Weitere Informationen zum **rowaktualisierte** -Ereignis finden Sie unter [Handling DataAdapter-Ereignisse](handling-dataadapter-events.md).  
+ Das **RowUpdated-Ereignis** des <xref:System.Data.Common.DataAdapter> Objekts kann in Verbindung mit den zuvor beschriebenen Techniken verwendet werden, um die Anwendung optimistischer Parallelitätsverletzungen zu melden. **RowUpdated** tritt nach jedem Versuch auf, eine **geänderte** Zeile aus einem **DataSet**zu aktualisieren. Damit können Sie spezifischen Behandlungscode hinzufügen, einschließlich Verarbeitung bei Ausnahmen, Einfügen von benutzerdefinierten Fehlerinformationen, Hinzufügen einer Wiederholungslogik usw. Das <xref:System.Data.Common.RowUpdatedEventArgs> Objekt gibt eine **RecordsAffected-Eigenschaft zurück,** die die Anzahl der Zeilen enthält, die von einem bestimmten Aktualisierungsbefehl für eine geänderte Zeile in einer Tabelle betroffen sind. Wenn Sie den Befehl update so einstellen, dass sie auf optimistische Parallelität testet, gibt die **RecordsAffected-Eigenschaft** daher den Wert 0 zurück, wenn eine optimistische Parallelitätsverletzung aufgetreten ist, da keine Datensätze aktualisiert wurden. Wenn dies der Fall ist, wird eine Ausnahme ausgelöst. Mit **dem RowUpdated-Ereignis** können Sie dieses Vorkommen behandeln und die Ausnahme vermeiden, indem Sie einen geeigneten **RowUpdatedEventArgs.Status-Wert** festlegen, z. B. **UpdateStatus.SkipCurrentRow**. Weitere Informationen zum **RowUpdated-Ereignis** finden Sie [unter Behandeln von DataAdapter-Ereignissen](handling-dataadapter-events.md).  
   
- Optional können Sie **DataAdapter. ContinueUpdateOnError** auf **true**festlegen, bevor Sie **Update**aufrufen, und auf die Fehlerinformationen reagieren, die in der **RowError** -Eigenschaft einer bestimmten Zeile gespeichert sind, wenn das **Update** abgeschlossen ist. Weitere Informationen finden Sie unter [Zeilen Fehlerinformationen](./dataset-datatable-dataview/row-error-information.md).  
+ Optional können Sie **DataAdapter.ContinueUpdateOnError** auf **true**festlegen, bevor Sie **Update**aufrufen, und auf die Fehlerinformationen reagieren, die in der **RowError-Eigenschaft** einer bestimmten Zeile gespeichert sind, wenn die **Aktualisierung** abgeschlossen ist. Weitere Informationen finden Sie unter [Zeilenfehlerinformationen](./dataset-datatable-dataview/row-error-information.md).  
   
 ## <a name="optimistic-concurrency-example"></a>Beispiel für eine vollständige Parallelität  
- Im folgenden finden Sie ein einfaches Beispiel, das den **UpdateCommand** eines **DataAdapter** zum Testen auf vollständige Parallelität festlegt und dann das **rowaktualisierte** -Ereignis verwendet, um auf Verletzungen der vollständigen Parallelität zu testen. Wenn eine Verletzung der vollständigen Parallelität auftritt, legt die Anwendung den **RowError** der Zeile fest, für die das Update ausgegeben wurde, um eine Verletzung der vollständigen Parallelität widerzuspiegeln.  
+ Im Folgenden finden Sie ein einfaches Beispiel, in dem der **UpdateCommand** eines **DataAdapters** auf optimistische Parallelität getestet wird und das **RowUpdated-Ereignis** dann verwendet wird, um optimistische Parallelitätsverletzungen zu testen. Wenn eine optimistische Parallelitätsverletzung auftritt, legt die Anwendung den **RowError** der Zeile fest, für die die Aktualisierung ausgegeben wurde, um eine optimistische Parallelitätsverletzung widerzuspiegeln.  
   
- Beachten Sie, dass die an die WHERE-Klausel des Update-Befehls übergebenen Parameterwerte den **ursprünglichen** Werten ihrer jeweiligen Spalten zugeordnet werden.  
+ Beachten Sie, dass die Parameterwerte, die an die WHERE-Klausel des UPDATE-Befehls übergeben werden, den **ursprünglichen** Werten ihrer jeweiligen Spalten zugeordnet sind.  
   
 ```vb  
 ' Assumes connection is a valid SqlConnection.  
@@ -143,7 +143,7 @@ adapter.Update(dataSet, "Customers")
 Dim dataRow As DataRow  
   
 For Each dataRow In dataSet.Tables("Customers").Rows  
-    If dataRow.HasErrors Then   
+    If dataRow.HasErrors Then
        Console.WriteLine(dataRow (0) & vbCrLf & dataRow.RowError)  
     End If  
 Next  
@@ -198,7 +198,7 @@ foreach (DataRow dataRow in dataSet.Tables["Customers"].Rows)
   
 protected static void OnRowUpdated(object sender, SqlRowUpdatedEventArgs args)  
 {  
-  if (args.RecordsAffected == 0)   
+  if (args.RecordsAffected == 0)
   {  
     args.Row.RowError = "Optimistic Concurrency Violation Encountered";  
     args.Status = UpdateStatus.SkipCurrentRow;  
@@ -206,7 +206,7 @@ protected static void OnRowUpdated(object sender, SqlRowUpdatedEventArgs args)
 }  
 ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Abrufen und Ändern von Daten in ADO.NET](retrieving-and-modifying-data.md)
 - [Updating Data Sources with DataAdapters (Aktualisieren von Datenquellen mit DataAdapters)](updating-data-sources-with-dataadapters.md)

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e72ed5af-b24f-486c-8429-c8fd2208f844
-ms.openlocfilehash: 8667cffb032daf0043915d3bee7127ef9b70756b
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 62a61051e5b9d896f8a89ed3d2745859fc07a7ec
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70794510"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79149257"
 ---
 # <a name="performing-batch-operations-using-dataadapters"></a>Ausführen von Batchvorgängen mit "DataAdapters"
 Durch Batch-Unterstützung in ADO.NET kann ein <xref:System.Data.Common.DataAdapter> die Operationen INSERT, UPDATE und DELETE aus einem <xref:System.Data.DataSet> oder einer <xref:System.Data.DataTable> an einen Server zusammenfassen, anstatt nur jeweils eine Operation senden zu können. Durch das Reduzieren der Anzahl von Roundtrips zum Server kann im Allgemeinen die Leistung beträchtlich gesteigert werden. Batchupdates werden für die .NET-Datenanbieter für SQL Server (<xref:System.Data.SqlClient>) und Oracle (<xref:System.Data.OracleClient>) unterstützt.  
@@ -24,7 +24,7 @@ Durch Batch-Unterstützung in ADO.NET kann ein <xref:System.Data.Common.DataAdap
 ## <a name="using-the-updatebatchsize-property"></a>Verwenden der "UpdateBatchSize"-Eigenschaft  
  Wenn Batchupdates aktiviert sind, sollte der <xref:System.Data.IDbCommand.UpdatedRowSource%2A>-Eigenschaftswert von `UpdateCommand`, `InsertCommand` und `DeleteCommand` des DataAdapter auf <xref:System.Data.UpdateRowSource.None> oder <xref:System.Data.UpdateRowSource.OutputParameters> festgelegt werden. Beim Update eines Batches sind der <xref:System.Data.IDbCommand.UpdatedRowSource%2A>-Wert und der <xref:System.Data.UpdateRowSource.FirstReturnedRecord>-Wert der <xref:System.Data.UpdateRowSource.Both>-Eigenschaft des Befehls ungültig.  
   
- In der folgenden Prozedur wird die Verwendung der `UpdateBatchSize`-Eigenschaft veranschaulicht. Die Prozedur verwendet zwei Argumente: ein <xref:System.Data.DataSet> -Objekt, das Spalten enthält, die die Felder " **ProductCategoryID** " und " **Name** " in der Tabelle " **Production. ProductCategory** " darstellen, und eine ganze Zahl, die die Batch Größe (die Anzahl der Zeilen im Batch). Der Code erstellt ein neues <xref:System.Data.SqlClient.SqlDataAdapter>-Objekt und legt dessen Eigenschaften <xref:System.Data.SqlClient.SqlDataAdapter.UpdateCommand%2A>, <xref:System.Data.SqlClient.SqlDataAdapter.InsertCommand%2A> und <xref:System.Data.SqlClient.SqlDataAdapter.DeleteCommand%2A> fest. Der Code geht davon aus, dass das <xref:System.Data.DataSet>-Objekt geänderte Zeilen aufweist. Er legt einen Wert für die `UpdateBatchSize`-Eigenschaft fest und führt das Update aus.  
+ In der folgenden Prozedur wird die Verwendung der `UpdateBatchSize`-Eigenschaft veranschaulicht. Die Prozedur verwendet zwei <xref:System.Data.DataSet> Argumente, ein Objekt mit Spalten, die die Felder **ProductCategoryID** und **Name** in der Tabelle **Production.ProductCategory** darstellen, und eine ganze Zahl, die die Batchgröße darstellt (die Anzahl der Zeilen im Batch). Der Code erstellt ein neues <xref:System.Data.SqlClient.SqlDataAdapter>-Objekt und legt dessen Eigenschaften <xref:System.Data.SqlClient.SqlDataAdapter.UpdateCommand%2A>, <xref:System.Data.SqlClient.SqlDataAdapter.InsertCommand%2A> und <xref:System.Data.SqlClient.SqlDataAdapter.DeleteCommand%2A> fest. Der Code geht davon aus, dass das <xref:System.Data.DataSet>-Objekt geänderte Zeilen aufweist. Er legt einen Wert für die `UpdateBatchSize`-Eigenschaft fest und führt das Update aus.  
   
 ```vb  
 Public Sub BatchUpdate( _  
@@ -82,7 +82,7 @@ public static void BatchUpdate(DataTable dataTable,Int32 batchSize)
     string connectionString = GetConnectionString();  
   
     // Connect to the AdventureWorks database.  
-    using (SqlConnection connection = new   
+    using (SqlConnection connection = new
       SqlConnection(connectionString))  
     {  
   
@@ -92,19 +92,19 @@ public static void BatchUpdate(DataTable dataTable,Int32 batchSize)
         // Set the UPDATE command and parameters.  
         adapter.UpdateCommand = new SqlCommand(  
             "UPDATE Production.ProductCategory SET "  
-            + "Name=@Name WHERE ProductCategoryID=@ProdCatID;",   
+            + "Name=@Name WHERE ProductCategoryID=@ProdCatID;",
             connection);  
-        adapter.UpdateCommand.Parameters.Add("@Name",   
+        adapter.UpdateCommand.Parameters.Add("@Name",
            SqlDbType.NVarChar, 50, "Name");  
-        adapter.UpdateCommand.Parameters.Add("@ProdCatID",   
+        adapter.UpdateCommand.Parameters.Add("@ProdCatID",
            SqlDbType.Int, 4, "ProductCategoryID");  
          adapter.UpdateCommand.UpdatedRowSource = UpdateRowSource.None;  
   
         // Set the INSERT command and parameter.  
         adapter.InsertCommand = new SqlCommand(  
-            "INSERT INTO Production.ProductCategory (Name) VALUES (@Name);",   
+            "INSERT INTO Production.ProductCategory (Name) VALUES (@Name);",
             connection);  
-        adapter.InsertCommand.Parameters.Add("@Name",   
+        adapter.InsertCommand.Parameters.Add("@Name",
           SqlDbType.NVarChar, 50, "Name");  
         adapter.InsertCommand.UpdatedRowSource = UpdateRowSource.None;  
   
@@ -112,7 +112,7 @@ public static void BatchUpdate(DataTable dataTable,Int32 batchSize)
         adapter.DeleteCommand = new SqlCommand(  
             "DELETE FROM Production.ProductCategory "  
             + "WHERE ProductCategoryID=@ProdCatID;", connection);  
-        adapter.DeleteCommand.Parameters.Add("@ProdCatID",   
+        adapter.DeleteCommand.Parameters.Add("@ProdCatID",
           SqlDbType.Int, 4, "ProductCategoryID");  
         adapter.DeleteCommand.UpdatedRowSource = UpdateRowSource.None;  
   
@@ -126,7 +126,7 @@ public static void BatchUpdate(DataTable dataTable,Int32 batchSize)
 ```  
   
 ## <a name="handling-batch-update-related-events-and-errors"></a>Behandeln von Ereignissen und Fehlern im Zusammenhang mit dem Batchupdate  
- Der **DataAdapter** verfügt über zwei Update bezogene Ereignisse: **Rowupdate** und **rowupdate**. In älteren Versionen von ADO.NET werden diese Ereignisse jeweils einmal für jede verarbeitete Zeile generiert, wenn die Batchverarbeitung deaktiviert wurde. Das **rowupdate** wird vor dem Update generiert, und nach Abschluss des Datenbankupdates wird **rowupdate** generiert.  
+ **Der DataAdapter** hat zwei updatebezogene Ereignisse: **RowUpdating** und **RowUpdated**. In älteren Versionen von ADO.NET werden diese Ereignisse jeweils einmal für jede verarbeitete Zeile generiert, wenn die Batchverarbeitung deaktiviert wurde. **RowUpdating** wird generiert, bevor die Aktualisierung erfolgt, und **RowUpdated** wird generiert, nachdem die Datenbankaktualisierung abgeschlossen wurde.  
   
 ### <a name="event-behavior-changes-with-batch-updates"></a>Änderungen im Ereignisverhalten durch Batchupdates  
  Bei aktivierter Batchverarbeitung werden mehrere Zeilen in einer einzigen Datenbankoperation aktualisiert. Deshalb findet pro Batch nur ein `RowUpdated`-Ereignis statt, wohingegen das `RowUpdating`-Ereignis für jede verarbeitete Zeile auftritt. Bei deaktivierter Batchverarbeitung werden die beiden Ereignisse mit Einzelverschachtelung ausgelöst, wobei für jede Zeile zunächst ein `RowUpdating`-Ereignis und dann ein `RowUpdated`-Ereignis ausgelöst wird. Diese Abfolge der Auslösung von `RowUpdating`-Ereignissen und `RowUpdated`-Ereignissen setzt sich so lange fort, bis alle Zeilen verarbeitet wurden.  
@@ -141,7 +141,7 @@ public static void BatchUpdate(DataTable dataTable,Int32 batchSize)
   
  Der Datenanbieter und der Back-End-Datenbankserver bestimmen, welche SQL-Konstrukte für die Batchausführung unterstützt werden. Wenn eine nicht unterstützte Anweisung ausgeführt werden soll, wird möglicherweise eine Ausnahme ausgelöst.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [DataAdapters und DataReaders](dataadapters-and-datareaders.md)
 - [Updating Data Sources with DataAdapters (Aktualisieren von Datenquellen mit DataAdapters)](updating-data-sources-with-dataadapters.md)

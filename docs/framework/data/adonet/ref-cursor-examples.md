@@ -2,21 +2,21 @@
 title: REF CURSOR-Beispiele
 ms.date: 03/30/2017
 ms.assetid: c257da03-c6c9-4cf8-b591-b7740a962c40
-ms.openlocfilehash: 24830452e6d1ab11605ffa88a925fbc55c80b9bf
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: dc82648ff5a565c9b4d6fa593433ee1e22249d93
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70794707"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79149134"
 ---
 # <a name="ref-cursor-examples"></a>REF CURSOR-Beispiele
 Die REF CURSOR-Beispiele umfassen die folgenden drei Microsoft Visual Basic-Beispiele, mit denen die Verwendung von REF CURSOR veranschaulicht wird.  
   
 |Beispiel|Beschreibung|  
 |------------|-----------------|  
-|[REF CURSOR-Parameter in OracleDataReader](ref-cursor-parameters-in-an-oracledatareader.md)|In diesem Beispiel wird eine gespeicherte PL/SQL-Prozedur ausgeführt, die einen REF CURSOR-Parameter zurückgibt. Der Wert wird als <xref:System.Data.OracleClient.OracleDataReader> gelesen.|  
-|[Abrufen von Daten aus mehreren REF CURSORs mithilfe von OracleDataReader](retrieving-data-from-multiple-ref-cursors.md)|In diesem Beispiel wird eine gespeicherte PL/SQL-Prozedur ausgeführt, die zwei REF CURSOR-Parameter zurückgibt und die Werte mithilfe eines **OracleDataReader**liest.|  
-|[Auffüllen eines DataSets mit einem oder mehreren REF CURSORs](filling-a-dataset-using-one-or-more-ref-cursors.md)|In diesem Beispiel wird eine gespeicherte PL/SQL-Prozedur ausgeführt, die zwei REF CURSOR-Parameter zurückgibt. <xref:System.Data.DataSet> wird mit den zurückgegebenen Zeilen gefüllt.|  
+|[REF CURSOR-Parameter in "OracleDataReader"](ref-cursor-parameters-in-an-oracledatareader.md)|In diesem Beispiel wird eine gespeicherte PL/SQL-Prozedur ausgeführt, die einen REF CURSOR-Parameter zurückgibt. Der Wert wird als <xref:System.Data.OracleClient.OracleDataReader> gelesen.|  
+|[Abrufen von Daten aus mehreren REF CURSORs mithilfe von "OracleDataReader"](retrieving-data-from-multiple-ref-cursors.md)|In diesem Beispiel wird eine gespeicherte PL/SQL-Prozedur ausgeführt, die zwei REF CURSOR-Parameter zurückgibt, und die Werte mit einem **OracleDataReader**gelesen.|  
+|[Auffüllen eines "DataSets" mit einem oder mehreren REF CURSORs](filling-a-dataset-using-one-or-more-ref-cursors.md)|In diesem Beispiel wird eine gespeicherte PL/SQL-Prozedur ausgeführt, die zwei REF CURSOR-Parameter zurückgibt. <xref:System.Data.DataSet> wird mit den zurückgegebenen Zeilen gefüllt.|  
   
  Zur Verwendung dieser Beispiele müssen Sie möglicherweise die Oracle-Tabellen erstellen. Sie müssen außerdem ein PL/SQL-Paket sowie einen PL/SQL-Paketkörper erstellen.  
   
@@ -27,14 +27,14 @@ Die REF CURSOR-Beispiele umfassen die folgenden drei Microsoft Visual Basic-Be
  Für diese Beispiele sind das folgende PL/SQL-Paket und der PL/SQL-Paketkörper auf Ihrem Server erforderlich. Erstellen Sie das folgende Oracle-Paket auf dem Oracle-Server.  
   
 ```sql
-CREATE OR REPLACE PACKAGE CURSPKG AS   
-    TYPE T_CURSOR IS REF CURSOR;   
-    PROCEDURE OPEN_ONE_CURSOR (N_EMPNO IN NUMBER,   
-                               IO_CURSOR IN OUT T_CURSOR);   
-    PROCEDURE OPEN_TWO_CURSORS (EMPCURSOR OUT T_CURSOR,   
+CREATE OR REPLACE PACKAGE CURSPKG AS
+    TYPE T_CURSOR IS REF CURSOR;
+    PROCEDURE OPEN_ONE_CURSOR (N_EMPNO IN NUMBER,
+                               IO_CURSOR IN OUT T_CURSOR);
+    PROCEDURE OPEN_TWO_CURSORS (EMPCURSOR OUT T_CURSOR,
                                 DEPTCURSOR OUT T_CURSOR);  
 END CURSPKG;  
-/   
+/
 ```  
   
  Erstellen Sie den folgenden Oracle-Paketkörper auf dem Oracle-Server.  
@@ -43,43 +43,43 @@ END CURSPKG;
 CREATE OR REPLACE PACKAGE BODY CURSPKG AS  
     PROCEDURE OPEN_ONE_CURSOR (N_EMPNO IN NUMBER,  
                                IO_CURSOR IN OUT T_CURSOR)  
-    IS   
-        V_CURSOR T_CURSOR;   
-    BEGIN   
-        IF N_EMPNO <> 0   
+    IS
+        V_CURSOR T_CURSOR;
+    BEGIN
+        IF N_EMPNO <> 0
         THEN  
-             OPEN V_CURSOR FOR   
-             SELECT EMP.EMPNO, EMP.ENAME, DEPT.DEPTNO, DEPT.DNAME   
-                  FROM EMP, DEPT   
-                  WHERE EMP.DEPTNO = DEPT.DEPTNO   
+             OPEN V_CURSOR FOR
+             SELECT EMP.EMPNO, EMP.ENAME, DEPT.DEPTNO, DEPT.DNAME
+                  FROM EMP, DEPT
+                  WHERE EMP.DEPTNO = DEPT.DEPTNO
                   AND EMP.EMPNO = N_EMPNO;  
   
-        ELSE   
-             OPEN V_CURSOR FOR   
-             SELECT EMP.EMPNO, EMP.ENAME, DEPT.DEPTNO, DEPT.DNAME   
-                  FROM EMP, DEPT   
+        ELSE
+             OPEN V_CURSOR FOR
+             SELECT EMP.EMPNO, EMP.ENAME, DEPT.DEPTNO, DEPT.DNAME
+                  FROM EMP, DEPT
                   WHERE EMP.DEPTNO = DEPT.DEPTNO;  
   
         END IF;  
-        IO_CURSOR := V_CURSOR;   
-    END OPEN_ONE_CURSOR;   
+        IO_CURSOR := V_CURSOR;
+    END OPEN_ONE_CURSOR;
   
     PROCEDURE OPEN_TWO_CURSORS (EMPCURSOR OUT T_CURSOR,  
                                 DEPTCURSOR OUT T_CURSOR)  
-    IS   
-        V_CURSOR1 T_CURSOR;   
-        V_CURSOR2 T_CURSOR;   
-    BEGIN   
+    IS
+        V_CURSOR1 T_CURSOR;
+        V_CURSOR2 T_CURSOR;
+    BEGIN
         OPEN V_CURSOR1 FOR SELECT * FROM EMP;  
         OPEN V_CURSOR2 FOR SELECT * FROM DEPT;  
-        EMPCURSOR  := V_CURSOR1;   
-        DEPTCURSOR := V_CURSOR2;   
-    END OPEN_TWO_CURSORS;   
+        EMPCURSOR  := V_CURSOR1;
+        DEPTCURSOR := V_CURSOR2;
+    END OPEN_TWO_CURSORS;
 END CURSPKG;  
 /  
 ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Oracle-REF CURSORs](oracle-ref-cursors.md)
 - [Übersicht über ADO.NET](ado-net-overview.md)

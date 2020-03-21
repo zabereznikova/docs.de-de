@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 93e099eb-daa1-4f1e-b031-c1e10a996f88
-ms.openlocfilehash: c2b6be79855955887988378b9fcffe1891520d68
-ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
+ms.openlocfilehash: 6fc54bb9e38768e390201ea77243d3df4cd67f10
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/04/2020
-ms.locfileid: "76980261"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79151740"
 ---
 # <a name="code-access-security-and-adonet"></a>Codezugriffssicherheit und ADO.NET
 .NET Framework bietet sowohl rollenbasierte Sicherheit als auch Codezugriffssicherheit (Code Access Security, CAS). Beide werden mit einer von der CLR (Common Language Runtime) bereitgestellten gemeinsamen Infrastruktur implementiert. In der Welt des nicht verwalteten Codes werden die meisten Anwendungen mit den Berechtigungen des Benutzers oder Prinzipals ausgeführt. Daher können Computersysteme beschädigt werden und vertrauliche Daten in die falschen Hände gelangen, wenn ein Benutzer mit erweiterten Rechten schädliche oder fehlerhafte Software ausführt.  
@@ -23,7 +23,7 @@ ms.locfileid: "76980261"
  Die CLR ermöglicht es Code, nur die Vorgänge auszuführen, zu denen er berechtigt ist. Code kann Berechtigungen anfordern, und diese Berechtigungen werden entsprechend der von einem Administrator festgelegten Sicherheitsrichtlinie gewährt.  
   
 > [!NOTE]
-> Code, der in der CLR ausgeführt wird, kann sich nicht selbst Berechtigungen erteilen. So kann Code z. B. weniger Berechtigungen anfordern und gewährt bekommen, als in einer Sicherheitsrichtlinie festgelegt sind, mehr als die darin festgelegten Berechtigungen werden aber auf keinen Fall gewährt. Beim Gewähren von Berechtigungen hat es sich bewährt, zunächst ganz ohne Berechtigungen zu beginnen und immer nur die geringstmöglichen Berechtigungen für die konkrete auszuführende Aufgabe hinzuzufügen. Wenn man stattdessen zu Beginn alle Berechtigungen gewährt und dann nur einzelne Berechtigungen wieder entzieht, entstehen unsichere Anwendungen, die unbeabsichtigte Sicherheitslücken enthalten können, weil mehr Berechtigungen als notwendig gewährt wurden. Weitere Informationen finden Sie unter [Konfigurieren der Sicherheitsrichtlinie](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/7c9c2y1w(v=vs.100)) und der [Verwaltung von Sicherheitsrichtlinien](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/c1k0eed6(v=vs.100)).  
+> Code, der in der CLR ausgeführt wird, kann sich nicht selbst Berechtigungen erteilen. So kann Code z. B. weniger Berechtigungen anfordern und gewährt bekommen, als in einer Sicherheitsrichtlinie festgelegt sind, mehr als die darin festgelegten Berechtigungen werden aber auf keinen Fall gewährt. Beim Gewähren von Berechtigungen hat es sich bewährt, zunächst ganz ohne Berechtigungen zu beginnen und immer nur die geringstmöglichen Berechtigungen für die konkrete auszuführende Aufgabe hinzuzufügen. Wenn man stattdessen zu Beginn alle Berechtigungen gewährt und dann nur einzelne Berechtigungen wieder entzieht, entstehen unsichere Anwendungen, die unbeabsichtigte Sicherheitslücken enthalten können, weil mehr Berechtigungen als notwendig gewährt wurden. Weitere Informationen finden Sie unter [Konfigurieren von Sicherheitsrichtlinien](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/7c9c2y1w(v=vs.100)) und [Sicherheitsrichtlinienverwaltung](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/c1k0eed6(v=vs.100)).  
   
  Es gibt die folgenden drei Arten von Codezugriffsberechtigungen:  
   
@@ -38,19 +38,19 @@ ms.locfileid: "76980261"
 ### <a name="requesting-permissions"></a>Anfordern von Berechtigungen  
  Zweck der Anforderung von Berechtigungen ist es, die Laufzeit darüber zu informieren, welche Berechtigungen Ihre Anwendung zum Ausführen benötigt, und sicherzustellen, dass die Anwendung nur die Berechtigungen erhält, die sie tatsächlich benötigt. Wenn die Anwendung z. B. Daten auf die lokale Festplatte schreiben muss, benötigt sie die <xref:System.Security.Permissions.FileIOPermission>. Wenn diese Berechtigung nicht gewährt wurde, schlagen alle Versuche, auf die Festplatte zu schreiben, fehl. Wenn die Anwendung die `FileIOPermission` anfordert und die Berechtigung nicht gewährt wurde, generiert die Anwendung aber von vornherein die Ausnahme und wird nicht geladen.  
   
- In einem Szenario, in dem die Anwendung nur Daten vom Datenträger lesen muss, können Sie festlegen, dass der Anwendung niemals Schreibberechtigungen gewährt werden. Auf diese Weise kann Ihr Code im Falle eines Fehlers im Programm oder eines bösartigen Angriffs die Daten, mit denen er arbeitet, nicht beschädigen. Weitere Informationen finden Sie unter [anfordern von Berechtigungen](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/yd267cce(v=vs.100)).  
+ In einem Szenario, in dem die Anwendung nur Daten vom Datenträger lesen muss, können Sie festlegen, dass der Anwendung niemals Schreibberechtigungen gewährt werden. Auf diese Weise kann Ihr Code im Falle eines Fehlers im Programm oder eines bösartigen Angriffs die Daten, mit denen er arbeitet, nicht beschädigen. Weitere Informationen finden Sie unter [Anfordern von Berechtigungen](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/yd267cce(v=vs.100)).  
   
 ## <a name="role-based-security-and-cas"></a>Rollenbasierte Sicherheit und CAS  
  Durch Implementieren der rollenbasierten Sicherheit und der Codezugriffssicherheit (CAS) lässt sich die Gesamtsicherheit Ihrer Anwendung verbessern. Als Grundlage für die rollenbasierte Sicherheit kann ein Windows-Konto oder eine benutzerdefinierte Identität verwendet werden, wodurch die Informationen zum Sicherheitsprinzipal für den aktuellen Thread verfügbar werden. Anwendungen müssen darüber hinaus oft anhand der vom Benutzer bereitgestellten Anmeldeinformationen Daten- oder Ressourcenzugriff gewähren. In der Regel überprüfen diese Anwendungen zunächst die Rolle des Benutzers und stellen dann auf Grundlage dieser Rolle den Zugriff auf Ressourcen bereit.  
   
  Die rollenbasierte Sicherheit ermöglicht es einer Komponente, zur Laufzeit aktuelle Benutzer und die ihnen zugeordneten Rollen zu identifizieren. Diese Informationen werden dann mithilfe einer CAS-Richtlinie zugeordnet, um die zur Laufzeit gewährten Berechtigungen zu bestimmen. Für eine bestimmte Anwendungsdomäne kann der Host die Standardrichtlinie der rollenbasierten Sicherheit ändern und einen Standardsicherheitsprinzipal festlegen, der für einen Benutzer und die mit diesem Benutzer verknüpften Rollen steht.  
   
- Die CLR verwendet Berechtigungen zum Implementieren ihres Mechanismus zur Durchsetzung von Beschränkungen für verwalteten Code. Rollenbasierte Sicherheitsberechtigungen bieten die Möglichkeit aufzudecken, ob ein Benutzer (oder der Agent, der im Auftrag des Benutzers agiert) eine bestimmte Identität besitzt oder Member einer bestimmten Rolle ist. Weitere Informationen finden Sie unter [Sicherheits Berechtigungen](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/5ba4k1c5(v=vs.100)).  
+ Die CLR verwendet Berechtigungen zum Implementieren ihres Mechanismus zur Durchsetzung von Beschränkungen für verwalteten Code. Rollenbasierte Sicherheitsberechtigungen bieten die Möglichkeit aufzudecken, ob ein Benutzer (oder der Agent, der im Auftrag des Benutzers agiert) eine bestimmte Identität besitzt oder Member einer bestimmten Rolle ist. Weitere Informationen finden Sie unter [Sicherheitsberechtigungen](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/5ba4k1c5(v=vs.100)).  
   
- Je nach Art der Anwendung, die Sie erstellen, sollten Sie in Erwägung ziehen, rollenbasierte Berechtigungen in der Datenbank zu implementieren. Weitere Informationen zur rollenbasierten Sicherheit in SQL Server finden Sie unter [SQL Server Sicherheit](./sql/sql-server-security.md).  
+ Je nach Art der Anwendung, die Sie erstellen, sollten Sie in Erwägung ziehen, rollenbasierte Berechtigungen in der Datenbank zu implementieren. Weitere Informationen zur rollenbasierten Sicherheit in SQL Server finden Sie unter [SQL Server Security](./sql/sql-server-security.md).  
   
 ## <a name="assemblies"></a>Assemblys  
- Assemblys bilden die Grundlage für die Bereitstellung, die Versionskontrolle, die Wiederverwendung, die Festlegung des Aktivierungsumfangs und die Sicherheitsberechtigungen für eine .NET Framework-Anwendung. Eine Assembly stellt eine Sammlung von Typen und Ressourcen bereit, die zusammenarbeiten und eine logische Funktionalitätseinheit bilden. Für die CLR existiert ein Typ niemals außerhalb des Kontexts einer Assembly. Weitere Informationen zum Erstellen und Bereitstellen von Assemblys finden Sie unter [Programming with](../../../standard/assembly/program.md)Assemblys.  
+ Assemblys bilden die Grundlage für die Bereitstellung, die Versionskontrolle, die Wiederverwendung, die Festlegung des Aktivierungsumfangs und die Sicherheitsberechtigungen für eine .NET Framework-Anwendung. Eine Assembly stellt eine Sammlung von Typen und Ressourcen bereit, die zusammenarbeiten und eine logische Funktionalitätseinheit bilden. Für die CLR existiert ein Typ niemals außerhalb des Kontexts einer Assembly. Weitere Informationen zum Erstellen und Bereitstellen von Assemblys finden Sie unter [Programmieren mit Assemblys](../../../standard/assembly/program.md).  
   
 ### <a name="strong-naming-assemblies"></a>Assemblys mit starkem Namen  
  Ein starker Name (oder eine digitale Signatur) setzt sich aus der Identität der Assembly mit einfachem Textnamen, Versionsnummer und (sofern vorhanden) Kulturinformationen sowie einem öffentlichen Schlüssel und einer digitalen Signatur zusammen. Die digitale Signatur wird mit dem entsprechenden privaten Schlüssel aus einer Assemblydatei generiert. Die Assemblydatei enthält das Assemblymanifest, das wiederum die Namen und Hashes aller Dateien enthält, die die Assembly bilden.  
@@ -71,30 +71,30 @@ ms.locfileid: "76980261"
 |-----------------------------------|-----------------|  
 |`Action`|Ruft eine Sicherheitsaktion ab oder legt diese fest. Wird von <xref:System.Security.Permissions.SecurityAttribute> geerbt.|  
 |`AllowBlankPassword`|Aktiviert oder deaktiviert die Verwendung von leeren Kennwörtern in einer Verbindungszeichenfolge. Gültige Werte sind `true` (zum Aktivieren der Verwendung von leeren Kennwörtern) und `false` (zum Deaktivieren der Verwendung von leeren Kennwörtern). Wird von <xref:System.Data.Common.DBDataPermissionAttribute> geerbt.|  
-|`ConnectionString`|Gibt eine zulässige Verbindungszeichenfolge an. Es können mehrere Verbindungszeichenfolgen angegeben werden. **Hinweis:**  Fügen Sie keine Benutzer-ID oder ein Kennwort in die Verbindungs Zeichenfolge ein. In diesem Release können Einschränken von Verbindungszeichenfolgen nicht mit dem .NET Framework-Konfigurationstool geändert werden. <br /><br /> Wird von <xref:System.Data.Common.DBDataPermissionAttribute> geerbt.|  
-|`KeyRestrictions`|Gibt zulässige oder unzulässige Parameter für Verbindungszeichenfolgen an. Parameter für Verbindungs Zeichenfolgen werden in der Form *\<Parameter Name > =* identifiziert. Es können mehrere durch Semikolon (;) getrennte Parameter angegeben werden. **Hinweis:**  Wenn Sie `KeyRestrictions`nicht angeben, aber `KeyRestrictionBehavior`-Eigenschaft auf `AllowOnly` oder `PreventUsage`festlegen, sind keine zusätzlichen Parameter für die Verbindungs Zeichenfolge zulässig. Wird von <xref:System.Data.Common.DBDataPermissionAttribute> geerbt.|  
-|`KeyRestrictionBehavior`|Legt die Verbindungszeichenfolgenparameter als die einzigen zulässigen zusätzlichen Parameter fest (`AllowOnly`) oder gibt die nicht zulässigen zusätzlichen Parameter an (`PreventUsage`). Standardmäßig ist `AllowOnly` festgelegt. Wird von <xref:System.Data.Common.DBDataPermissionAttribute> geerbt.|  
+|`ConnectionString`|Gibt eine zulässige Verbindungszeichenfolge an. Es können mehrere Verbindungszeichenfolgen angegeben werden. **Hinweis:**  Fügen Sie keine Benutzer-ID oder ein Kennwort in Ihre Verbindungszeichenfolge ein. In diesem Release können Einschränken von Verbindungszeichenfolgen nicht mit dem .NET Framework-Konfigurationstool geändert werden. <br /><br /> Wird von <xref:System.Data.Common.DBDataPermissionAttribute> geerbt.|  
+|`KeyRestrictions`|Gibt zulässige oder unzulässige Parameter für Verbindungszeichenfolgen an. Verbindungszeichenfolgenparameter werden im * \<Formularparameternamen>=* identifiziert. Es können mehrere durch Semikolon (;) getrennte Parameter angegeben werden. **Hinweis:**  Wenn Sie nicht `KeyRestrictions`angeben, `KeyRestrictionBehavior` aber `AllowOnly` die `PreventUsage`Eigenschaft auf oder festlegen, sind keine zusätzlichen Verbindungszeichenfolgenparameter zulässig. Wird von <xref:System.Data.Common.DBDataPermissionAttribute> geerbt.|  
+|`KeyRestrictionBehavior`|Legt die Verbindungszeichenfolgenparameter als die einzigen zulässigen zusätzlichen Parameter fest (`AllowOnly`) oder gibt die nicht zulässigen zusätzlichen Parameter an (`PreventUsage`). `AllowOnly` ist die Standardeinstellung. Wird von <xref:System.Data.Common.DBDataPermissionAttribute> geerbt.|  
 |`TypeID`|Ruft bei Implementierung in einer abgeleiteten Klasse einen eindeutigen Bezeichner für dieses Attribut ab. Wird von <xref:System.Attribute> geerbt.|  
 |`Unrestricted`|Gibt an, ob für die Ressource uneingeschränkte Berechtigungen deklariert wurden. Wird von <xref:System.Security.Permissions.SecurityAttribute> geerbt.|  
   
 #### <a name="connectionstring-syntax"></a>Syntax von "ConnectionString"  
- Das folgende Beispiel zeigt, wie mithilfe des Elements `connectionStrings` einer Konfigurationsdatei nur eine bestimmte Verbindungszeichenfolge für die Verwendung zugelassen werden kann. Weitere Informationen zum Speichern und Abrufen von Verbindungs Zeichenfolgen aus Konfigurationsdateien finden Sie unter [Verbindungs](connection-strings.md) Zeichenfolgen.  
+ Das folgende Beispiel zeigt, wie mithilfe des Elements `connectionStrings` einer Konfigurationsdatei nur eine bestimmte Verbindungszeichenfolge für die Verwendung zugelassen werden kann. Weitere Informationen zum Speichern und Abrufen von Verbindungszeichenfolgen aus Konfigurationsdateien finden Sie unter [Verbindungszeichenfolgen.](connection-strings.md)  
   
 ```xml  
 <connectionStrings>  
-  <add name="DatabaseConnection"   
-    connectionString="Data Source=(local);Initial   
+  <add name="DatabaseConnection"
+    connectionString="Data Source=(local);Initial
     Catalog=Northwind;Integrated Security=true;" />  
 </connectionStrings>  
 ```  
   
 #### <a name="keyrestrictions-syntax"></a>Syntax von "KeyRestrictions"  
- Im folgenden Beispiel wird dieselbe Verbindungs Zeichenfolge aktiviert, die Verwendung der Optionen `Encrypt` und `Packet Size` der Verbindungs Zeichenfolge aktiviert, aber die Verwendung anderer Optionen für Verbindungs Zeichenfolgen wird eingeschränkt.  
+ Im folgenden Beispiel wird dieselbe Verbindungszeichenfolge aktiviert, die Verwendung der `Encrypt` und `Packet Size` der Verbindungszeichenfolgenoptionen aktiviert, die Verwendung anderer Verbindungszeichenfolgenoptionen wird jedoch eingeschränkt.  
   
 ```xml  
 <connectionStrings>  
-  <add name="DatabaseConnection"   
-    connectionString="Data Source=(local);Initial   
+  <add name="DatabaseConnection"
+    connectionString="Data Source=(local);Initial
     Catalog=Northwind;Integrated Security=true;"  
     KeyRestrictions="Encrypt=;Packet Size=;"  
     KeyRestrictionBehavior="AllowOnly" />  
@@ -106,8 +106,8 @@ ms.locfileid: "76980261"
   
 ```xml  
 <connectionStrings>  
-  <add name="DatabaseConnection"   
-    connectionString="Data Source=(local);Initial   
+  <add name="DatabaseConnection"
+    connectionString="Data Source=(local);Initial
     Catalog=Northwind;Integrated Security=true;"  
     KeyRestrictions="User Id=;Password=;Persist Security Info=;"  
     KeyRestrictionBehavior="PreventUsage" />  
@@ -119,27 +119,27 @@ ms.locfileid: "76980261"
   
 ```xml  
 <connectionStrings>  
-  <add name="DatabaseConnection"   
-    connectionString="Data Source=(local);Initial   
+  <add name="DatabaseConnection"
+    connectionString="Data Source=(local);Initial
     Catalog=Northwind;Integrated Security=true;"  
     KeyRestrictions="Initial Catalog;Connection Timeout=;  
-       Encrypt=;Packet Size=;"   
+       Encrypt=;Packet Size=;"
     KeyRestrictionBehavior="AllowOnly" />  
   
-  <add name="DatabaseConnection2"   
-    connectionString="Data Source=SqlServer2;Initial   
+  <add name="DatabaseConnection2"
+    connectionString="Data Source=SqlServer2;Initial
     Catalog=Northwind2;Integrated Security=true;"  
     KeyRestrictions="Initial Catalog;Connection Timeout=;  
-       Encrypt=;Packet Size=;"   
+       Encrypt=;Packet Size=;"
     KeyRestrictionBehavior="AllowOnly" />  
 </connectionStrings>  
 ```  
   
 ### <a name="enabling-partial-trust-with-a-custom-permission-set"></a>Aktivieren einer teilweisen Vertrauenswürdigkeit mit einem benutzerdefinierten Berechtigungssatz  
- Um die Verwendung der <xref:System.Data.SqlClient>-Berechtigungen für eine bestimmte Zone zu aktivieren, muss ein Systemadministrator einen benutzerdefinierten Berechtigungssatz für eine bestimmte Zone erstellen. Standardberechtigungssätze wie `LocalIntranet` können nicht geändert werden. Wenn Sie z. b. <xref:System.Data.SqlClient> Berechtigungen für Code mit einer <xref:System.Security.Policy.Zone> von `LocalIntranet`einschließen möchten, kann ein Systemadministrator den Berechtigungs Satz für `LocalIntranet`kopieren, ihn in "CustomLocalIntranet" umbenennen, die <xref:System.Data.SqlClient> Berechtigungen hinzufügen, den CustomLocalIntranet-Berechtigungs Satz mithilfe von " [Caspol](../../tools/caspol-exe-code-access-security-policy-tool.md)  
+ Um die Verwendung der <xref:System.Data.SqlClient>-Berechtigungen für eine bestimmte Zone zu aktivieren, muss ein Systemadministrator einen benutzerdefinierten Berechtigungssatz für eine bestimmte Zone erstellen. Standardberechtigungssätze wie `LocalIntranet` können nicht geändert werden. Um beispielsweise Berechtigungen <xref:System.Data.SqlClient> für Code mit <xref:System.Security.Policy.Zone> `LocalIntranet`einem von einzuschließen, kann `LocalIntranet`ein Systemadministrator den Berechtigungssatz <xref:System.Data.SqlClient> für kopieren, ihn in "CustomLocalIntranet" umbenennen, die Berechtigungen hinzufügen, den Berechtigungssatz CustomLocalIntranet mithilfe des [Caspol.exe (Code Zugriffssicherheitsrichtlinien-Tools)](../../tools/caspol-exe-code-access-security-policy-tool.md)importieren und den Berechtigungssatz von `LocalIntranet_Zone` auf CustomLocalIntranet festlegen.  
   
 ### <a name="sample-permission-set"></a>Beispielberechtigungssatz  
- Im Folgenden finden Sie einen Beispielberechtigungssatz für den .NET Framework-Datenanbieter für SQL Server in einem teilweise vertrauenswürdigen Szenario. Weitere Informationen zum Erstellen von benutzerdefinierten Berechtigungs Sätzen finden [Sie unter Konfigurieren von Berechtigungs Sätzen mit Caspol. exe](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/4ybs46y6(v=vs.100)).  
+ Im Folgenden finden Sie einen Beispielberechtigungssatz für den .NET Framework-Datenanbieter für SQL Server in einem teilweise vertrauenswürdigen Szenario. Informationen zum Erstellen benutzerdefinierter Berechtigungssätze finden Sie unter [Konfigurieren von Berechtigungssätzen mit Caspol.exe](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/4ybs46y6(v=vs.100)).  
   
 ```xml  
 <PermissionSet class="System.Security.NamedPermissionSet"  
@@ -153,14 +153,14 @@ version="1"
 AllowBlankPassword="False">  
 <add ConnectionString="Data Source=(local);Integrated Security=true;"  
  KeyRestrictions="Initial Catalog=;Connection Timeout=;  
-   Encrypt=;Packet Size=;"   
+   Encrypt=;Packet Size=;"
  KeyRestrictionBehavior="AllowOnly" />  
  </IPermission>  
 </PermissionSet>  
 ```  
   
 ## <a name="verifying-adonet-code-access-using-security-permissions"></a>Überprüfen des ADO.NET-Codezugriffs mit Sicherheitsberechtigungen  
- In teilweise vertrauenswürdigen Szenarien können durch Angabe eines <xref:System.Data.SqlClient.SqlClientPermissionAttribute> für bestimmte Methoden im Code CAS-Berechtigungen verlangt werden. Wenn diese Berechtigung aufgrund einer eingeschränkten Sicherheitsrichtlinie nicht gewährt wird, wird vor dem Ausführen des Codes eine Ausnahme ausgelöst. Weitere Informationen zu Sicherheitsrichtlinien finden Sie unter Bewährte Methoden für die [Verwaltung von Sicherheitsrichtlinien](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/c1k0eed6(v=vs.100)) und [Sicherheitsrichtlinien](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/sa4se9bc(v=vs.100)).  
+ In teilweise vertrauenswürdigen Szenarien können durch Angabe eines <xref:System.Data.SqlClient.SqlClientPermissionAttribute> für bestimmte Methoden im Code CAS-Berechtigungen verlangt werden. Wenn diese Berechtigung aufgrund einer eingeschränkten Sicherheitsrichtlinie nicht gewährt wird, wird vor dem Ausführen des Codes eine Ausnahme ausgelöst. Weitere Informationen zu Sicherheitsrichtlinien finden Sie unter Bewährte Methoden für die Verwaltung von [Sicherheitsrichtlinien](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/c1k0eed6(v=vs.100)) und [Sicherheitsrichtlinien](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/sa4se9bc(v=vs.100)).  
   
 ### <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird das Schreiben von Code gezeigt, durch den eine bestimmte Verbindungszeichenfolge verlangt wird. Der Code simuliert das Verweigern uneingeschränkter Berechtigungen für <xref:System.Data.SqlClient>. Unter Praxisbedingungen würde dies durch eine CAS-Richtlinie implementiert werden.  
@@ -177,7 +177,7 @@ AllowBlankPassword="False">
   
 ```output  
 Failed, as expected: <IPermission class="System.Data.SqlClient.  
-SqlClientPermission, System.Data, Version=2.0.0.0,   
+SqlClientPermission, System.Data, Version=2.0.0.0,
   Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1"  
   AllowBlankPassword="False">  
 <add ConnectionString="Data Source=(local);Initial Catalog=  
@@ -192,11 +192,11 @@ Failed, as expected: Request failed.
 ## <a name="interoperability-with-unmanaged-code"></a>Interoperabilität mit nicht verwaltetem Code  
  Code, der außerhalb der CLR ausgeführt wird, wird als nicht verwalteter Code bezeichnet. Deshalb können Sicherheitsmechanismen, z. B. CAS, auf nicht verwalteten Code nicht angewendet werden. Beispiele für nicht verwalteten Code sind COM-Komponenten, ActiveX-Schnittstellen und Windows API-Funktionen. Damit bei der Ausführung von nicht verwaltetem Code die Gesamtsicherheit der Anwendung nicht gefährdet wird, sind besondere Sicherheitsüberlegungen notwendig. Weitere Informationen finden Sie unter [Interoperation mit nicht verwaltetem Code](../../interop/index.md).  
   
- .NET Framework unterstützt den Zugriff durch COM-Interop, um die Abwärtskompatibilität zu vorhandenen COM-Komponenten sicherzustellen. Sie können COM-Komponenten in eine .NET Framework-Anwendung einbauen, indem Sie die entsprechenden COM-Typen mit den COM-Interop-Tools importieren. Nach dem Import sind die COM-Typen einsatzbereit. COM-Interop ermöglicht es COM-Clients auch, auf verwalteten Code zuzugreifen, indem Assemblymetadaten in eine Typbibliothek exportiert und die verwalteten Komponenten als COM-Komponente registriert werden. Weitere Informationen finden Sie unter [Advanced COM Interoperabilität](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx(v=vs.100)).  
+ .NET Framework unterstützt den Zugriff durch COM-Interop, um die Abwärtskompatibilität zu vorhandenen COM-Komponenten sicherzustellen. Sie können COM-Komponenten in eine .NET Framework-Anwendung einbauen, indem Sie die entsprechenden COM-Typen mit den COM-Interop-Tools importieren. Nach dem Import sind die COM-Typen einsatzbereit. COM-Interop ermöglicht es COM-Clients auch, auf verwalteten Code zuzugreifen, indem Assemblymetadaten in eine Typbibliothek exportiert und die verwalteten Komponenten als COM-Komponente registriert werden. Weitere Informationen finden Sie unter [Erweiterte COM-Interoperabilität](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx(v=vs.100)).  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Sichern von ADO.NET-Anwendungen](securing-ado-net-applications.md)
-- [Sicherheit in nativem und .NET Framework Code](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/1787tk12(v=vs.100))
+- [Sicherheit in systemeigenem Code und .NET Framework-Code](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/1787tk12(v=vs.100))
 - [Rollenbasierte Sicherheit](../../../standard/security/role-based-security.md)
 - [Übersicht über ADO.NET](ado-net-overview.md)

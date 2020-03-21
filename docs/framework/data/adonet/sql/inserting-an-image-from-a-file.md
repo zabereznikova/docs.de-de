@@ -5,20 +5,20 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 35900aa2-5615-4174-8212-ba184c6b82fb
-ms.openlocfilehash: d47f5b7eaf6b5f6a3174982e6b4cf43859c031a5
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 94ec554ca2dc5ed4eb6792b9b42ae6f1b856f51e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70794154"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79148607"
 ---
 # <a name="inserting-an-image-from-a-file"></a>Einfügen eines Bilds aus einer Datei
-Je nach Feldtyp in der Datenquelle können Sie ein Binary Large Object (BLOB) entweder als Binär- oder Zeichendaten in eine Datenbank schreiben. BLOB ist ein generischer Begriff und verweist auf die Datentypen `text`, `ntext` und `image`, die in der Regel Dokumente und Bilder enthalten.  
+Je nach Feldtyp in Ihrer Datenquelle können Sie ein Blob (Binary Large Object) entweder als Binär- oder Zeichendaten in eine Datenbank schreiben. „Blob“ ist ein allgemeiner Begriff, der sich auf die Datentypen `text`, `ntext` und `image` bezieht, die in der Regel Dokumente und Bilder enthalten.  
   
- Um einen BLOB-Wert in die Datenbank zu schreiben, geben Sie die entsprechende INSERT-oder Update-Anweisung aus, und übergeben Sie den BLOB-Wert als Eingabeparameter (siehe [Konfigurieren von Parametern und Parameter Datentypen](../configuring-parameters-and-parameter-data-types.md)). Wenn das BLOB als Text gespeichert ist (z. B. ein SQL Server-Feld vom Typ `text`), können Sie das BLOB als Zeichenfolgenparameter übergeben. Wenn das BLOB im Binärformat gespeichert ist (z. B. ein SQL Server-Feld vom Typ `image`), können Sie ein Array vom Typ `byte` als Binärparameter übergeben.  
+ Um einen BLOB-Wert in Ihre Datenbank zu schreiben, geben Sie die entsprechende INSERT- oder UPDATE-Anweisung aus, und übergeben Sie den BLOB-Wert als Eingabeparameter (siehe [Konfigurieren von Parametern und Parameterdatentypen](../configuring-parameters-and-parameter-data-types.md)). Wenn Ihr Blob in Form von Text gespeichert wird, z. B. als `text`-Feld in SQL Server, können Sie das Blob als Zeichenfolgenparameter übergeben. Wenn das Blob im Binärformat gespeichert wird, z. B. als `image`-Feld in SQL Server, können Sie ein Array vom Typ `byte` als binären Parameter übergeben.  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Codebeispiel werden der Tabelle Employees in der Northwind-Datenbank Mitarbeiterinformationen hinzugefügt. Ein Foto des Mitarbeiters wird aus einer Datei geladen und dem Photo-Feld der Tabelle, einem Bildfeld, hinzugefügt.  
+ Im folgenden Codebeispiel werden Mitarbeiterinformationen zur Tabelle „Employees“ in der Datenbank „Northwind“ hinzugefügt. Ein Foto des Mitarbeiters wird aus einer Datei gelesen und zum Feld „Photo“ in der Tabelle hinzugefügt. Dieses Feld ist ein Bildfeld.  
   
 ```vb  
 Public Shared Sub AddEmployee( _  
@@ -39,7 +39,7 @@ Public Shared Sub AddEmployee( _
     "INSERT INTO Employees (LastName, FirstName, Title, " & _  
     "HireDate, ReportsTo, Photo) " & _  
     "Values(@LastName, @FirstName, @Title, " & _  
-    "@HireDate, @ReportsTo, @Photo)", connection)   
+    "@HireDate, @ReportsTo, @Photo)", connection)
   
   command.Parameters.Add("@LastName",  _  
     SqlDbType.NVarChar, 20).Value = lastName  
@@ -77,12 +77,12 @@ End Function
   
 ```csharp  
 public static void AddEmployee(  
-  string lastName,   
-  string firstName,   
-  string title,   
-  DateTime hireDate,   
-  int reportsTo,   
-  string photoFilePath,   
+  string lastName,
+  string firstName,
+  string title,
+  DateTime hireDate,
+  int reportsTo,
+  string photoFilePath,
   string connectionString)  
 {  
   byte[] photo = GetPhoto(photoFilePath);  
@@ -94,17 +94,17 @@ public static void AddEmployee(
     "INSERT INTO Employees (LastName, FirstName, " +  
     "Title, HireDate, ReportsTo, Photo) " +  
     "Values(@LastName, @FirstName, @Title, " +  
-    "@HireDate, @ReportsTo, @Photo)", connection);   
+    "@HireDate, @ReportsTo, @Photo)", connection);
   
-  command.Parameters.Add("@LastName",    
+  command.Parameters.Add("@LastName",
      SqlDbType.NVarChar, 20).Value = lastName;  
-  command.Parameters.Add("@FirstName",   
+  command.Parameters.Add("@FirstName",
       SqlDbType.NVarChar, 10).Value = firstName;  
-  command.Parameters.Add("@Title",       
+  command.Parameters.Add("@Title",
       SqlDbType.NVarChar, 30).Value = title;  
-  command.Parameters.Add("@HireDate",   
+  command.Parameters.Add("@HireDate",
        SqlDbType.DateTime).Value = hireDate;  
-  command.Parameters.Add("@ReportsTo",   
+  command.Parameters.Add("@ReportsTo",
       SqlDbType.Int).Value = reportsTo;  
   
   command.Parameters.Add("@Photo",  
@@ -130,10 +130,10 @@ public static byte[] GetPhoto(string filePath)
 }  
 ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Verwenden von Befehlen zum Ändern von Daten](../using-commands-to-modify-data.md)
 - [Abrufen von Binärdaten](../retrieving-binary-data.md)
-- [SQL Server Binary and Large-Value Data (Binäre Daten und Daten mit umfangreichen Werten in SQL Server)](sql-server-binary-and-large-value-data.md)
+- [SQL Server-Binär- und Großwertdaten](sql-server-binary-and-large-value-data.md)
 - [SQL Server-Datentypzuordnungen](../sql-server-data-type-mappings.md)
 - [Übersicht über ADO.NET](../ado-net-overview.md)

@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 11515b25-ee49-4b1d-9294-a142147c1ec5
-ms.openlocfilehash: 8438a7b54ca19625687ab96386384cf62ae62d11
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: d01198d158c4e1c64f12e8a0756c3d4e599fce74
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70783801"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79149543"
 ---
 # <a name="handling-dataadapter-events"></a>Behandeln von DataAdapter-Ereignissen
 Der ADO.NET-<xref:System.Data.Common.DataAdapter> macht drei Ereignisse verfügbar, mit denen Sie auf Änderungen der Daten der Datenquelle reagieren können. In der folgenden Tabelle finden Sie eine Beschreibung dieser `DataAdapter`-Ereignisse.  
   
-|event|Beschreibung|  
+|Ereignis|Beschreibung|  
 |-----------|-----------------|  
 |`RowUpdating`|Es wird gerade ein Aktualisierungs-, Einfüge- oder Löschvorgang für eine Zeile eingeleitet (durch Aufrufen einer der `Update`-Methoden).|  
 |`RowUpdated`|Ein Update-, Einfüge- oder Löschvorgang für eine Zeile ist abgeschlossen (durch Aufrufen einer der `Update`-Methoden).|  
@@ -39,7 +39,7 @@ Der ADO.NET-<xref:System.Data.Common.DataAdapter> macht drei Ereignisse verfügb
   
  Sie können auch die `ContinueUpdateOnError`-Eigenschaft verwenden, um Fehler für aktualisierte Zeilen zu behandeln. Wenn für `DataAdapter.ContinueUpdateOnError` der Wert `true` angegeben ist und das Updates einer Zeile eine Ausnahme auslöst, wird der Text der Ausnahme in die `RowError`-Information der entsprechenden Zeile aufgenommen. Die Verarbeitung wird fortgesetzt, ohne dass eine Ausnahme ausgelöst wird. Auf diese Weise können Sie auf Fehler reagieren, wenn `Update` abgeschlossen wurde. Dagegen können Sie beim `RowUpdated`-Ereignis auf den Fehler reagieren, sobald er festgestellt wird.  
   
- Im folgenden Codebeispiel wird dargestellt, wie Ereignishandler hinzugefügt und entfernt werden. Der `RowUpdating`-Ereignishandler schreibt ein Protokoll aller gelöschten Datensätze und versieht die Löschvorgangaufzeichnungen jeweils mit einem Timestamp. Der `RowUpdated` -Ereignishandler fügt Fehlerinformationen `RowError` zur-Eigenschaft der Zeile in der `DataSet`hinzu, unterdrückt die Ausnahme und setzt die Verarbeitung fort (Spiegelung `ContinueUpdateOnError`des Verhaltens von  =  `true`).  
+ Im folgenden Codebeispiel wird dargestellt, wie Ereignishandler hinzugefügt und entfernt werden. Der `RowUpdating`-Ereignishandler schreibt ein Protokoll aller gelöschten Datensätze und versieht die Löschvorgangaufzeichnungen jeweils mit einem Timestamp. Der `RowUpdated` Ereignishandler fügt der `RowError` Eigenschaft der Zeile `DataSet`in der Fehlerinformationen hinzu, unterdrückt die `ContinueUpdateOnError`  =  `true`Ausnahme und setzt die Verarbeitung fort (Spiegelung des Verhaltens von ).  
   
 ```vb  
 ' Assumes that connection is a valid SqlConnection object.  
@@ -107,7 +107,7 @@ protected static void OnRowUpdating(
   {  
     System.IO.TextWriter tw = System.IO.File.AppendText("Deletes.log");  
     tw.WriteLine(  
-      "{0}: Customer {1} Deleted.", DateTime.Now,   
+      "{0}: Customer {1} Deleted.", DateTime.Now,
        args.Row["CustomerID", DataRowVersion.Original]);  
     tw.Close();  
   }  
@@ -178,7 +178,7 @@ protected static void FillError(object sender, FillErrorEventArgs args)
     DataRow myRow = args.DataTable.Rows.Add(new object[]  
        {args.Values[0], args.Values[1], DBNull.Value});  
     //Set the RowError containing the value for the third column.  
-    myRow.RowError =   
+    myRow.RowError =
        "OverflowException Encountered. Value from data source: " +  
        args.Values[2];  
     args.Continue = true;  
@@ -186,7 +186,7 @@ protected static void FillError(object sender, FillErrorEventArgs args)
 }  
 ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [DataAdapters und DataReaders](dataadapters-and-datareaders.md)
 - [Handling DataSet Events (Behandeln von DataSet-Ereignissen)](./dataset-datatable-dataview/handling-dataset-events.md)

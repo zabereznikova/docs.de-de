@@ -2,12 +2,12 @@
 title: Bekannte Typen
 ms.date: 03/30/2017
 ms.assetid: 88d83720-ca38-4b2c-86a6-f149ed1d89ec
-ms.openlocfilehash: 5d772caa262a271db180bf764e0763999fffd7f3
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: b75f540694eaeea90367f1720d5747f71d0a392d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74715704"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79144616"
 ---
 # <a name="known-types"></a>Bekannte Typen
 In diesem Beispiel wird veranschaulicht, wie Informationen über abgeleitete Typen in einem Datenvertrag angegeben werden. Datenverträge ermöglichen es Ihnen, strukturierte Daten an Dienste zu übergeben und von ihnen zu empfangen. In objektorientierten Programmierungen kann anstelle des ursprünglichen Typs ein Typ verwendet werden, der von einem anderen Typ erbt. In dienstorientierten Programmierungen werden Schemas und keine Typen kommuniziert, weshalb die Beziehung zwischen Typen nicht beibehalten wird. Das <xref:System.Runtime.Serialization.KnownTypeAttribute>-Attribut ermöglicht es, Informationen über abgeleitete Typen in den Datenvertrag einzubinden. Wenn dieser Mechanismus nicht verwendet wird, kann ein abgeleiteter Typ nicht gesendet oder empfangen werden, wenn ein Basistyp erwartet wird.  
@@ -71,7 +71,7 @@ public class ComplexNumberWithMagnitude : ComplexNumber
 }  
 ```  
   
- Um die Funktion "bekannte Typen" zu veranschaulichen, wird der Dienst so implementiert, dass er eine `ComplexNumberWithMagnitude` nur für Addition und Subtraktion zurückgibt. (Obwohl der Vertrag `ComplexNumber` angibt, ist dies aufgrund des `KnownTypeAttribute`-Attributs zulässig). Multiplikation und Division geben weiterhin den Basis `ComplexNumber` Typs zurück.  
+ Um das bekannte Typen-Feature zu veranschaulichen, wird der `ComplexNumberWithMagnitude` Dienst so implementiert, dass er nur für Addition und Subtraktion eine zurückgibt. (Obwohl der Vertrag `ComplexNumber` angibt, ist dies aufgrund des `KnownTypeAttribute`-Attributs zulässig). Multiplikation und Division `ComplexNumber` geben weiterhin den Basistyp zurück.  
   
 ```csharp
 public class DataContractCalculatorService : IDataContractCalculator  
@@ -86,7 +86,7 @@ public class DataContractCalculatorService : IDataContractCalculator
     public ComplexNumber Subtract(ComplexNumber n1, ComplexNumber n2)  
     {  
         //Return the derived type.  
-        return new ComplexNumberWithMagnitude(n1.Real - n2.Real,   
+        return new ComplexNumberWithMagnitude(n1.Real - n2.Real,
                                  n1.Imaginary - n2.Imaginary);  
     }  
   
@@ -97,13 +97,13 @@ public class DataContractCalculatorService : IDataContractCalculator
         double imaginary2 = n2.Real * n1.Imaginary;  
         double real2 = n1.Imaginary * n2.Imaginary * -1;  
         //Return the base type.  
-        return new ComplexNumber(real1 + real2, imaginary1 +   
+        return new ComplexNumber(real1 + real2, imaginary1 +
                                                   imaginary2);  
     }  
   
     public ComplexNumber Divide(ComplexNumber n1, ComplexNumber n2)  
     {  
-        ComplexNumber conjugate = new ComplexNumber(n2.Real,   
+        ComplexNumber conjugate = new ComplexNumber(n2.Real,
                                      -1*n2.Imaginary);  
         ComplexNumber numerator = Multiply(n1, conjugate);  
         ComplexNumber denominator = Multiply(n2, conjugate);  
@@ -114,11 +114,11 @@ public class DataContractCalculatorService : IDataContractCalculator
 }  
 ```  
   
- Auf dem Client werden sowohl der Dienstvertrag als auch der Datenvertrag in der Quelldatei generatedClient.cs definiert, die vom Service [Model Metadata Utility Tool (Svcutil. exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) aus den Dienst Metadaten generiert wird. Da das <xref:System.Runtime.Serialization.KnownTypeAttribute>-Attribut im Datenvertrag des Diensts angegeben ist, kann der Client sowohl die `ComplexNumber`-Klasse als auch die `ComplexNumberWithMagnitude`-Klasse empfangen, wenn er diesen Dienst verwendet. Der Client erkennt, ob es eine `ComplexNumberWithMagnitude` abgerufen hat und generiert die entsprechende Ausgabe:  
+ Auf dem Client werden sowohl der Servicevertrag als auch der Datenvertrag in der Quelldatei generatedClient.cs definiert, die vom [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) aus Dienstmetadaten generiert wird. Da das <xref:System.Runtime.Serialization.KnownTypeAttribute>-Attribut im Datenvertrag des Diensts angegeben ist, kann der Client sowohl die `ComplexNumber`-Klasse als auch die `ComplexNumberWithMagnitude`-Klasse empfangen, wenn er diesen Dienst verwendet. Der Client erkennt, ob es eine `ComplexNumberWithMagnitude` abgerufen hat und generiert die entsprechende Ausgabe:  
   
 ```csharp
 // Create a client  
-DataContractCalculatorClient client =   
+DataContractCalculatorClient client =
     new DataContractCalculatorClient();  
   
 // Call the Add service operation.  
@@ -130,7 +130,7 @@ Console.WriteLine("Add({0} + {1}i, {2} + {3}i) = {4} + {5}i",
     result.real, result.imaginary);  
 if (result is ComplexNumberWithMagnitude)  
 {  
-    Console.WriteLine("Magnitude: {0}",   
+    Console.WriteLine("Magnitude: {0}",
         ((ComplexNumberWithMagnitude)result).Magnitude);  
 }  
 else  
@@ -156,17 +156,17 @@ No magnitude was sent from the service
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>So können Sie das Beispiel einrichten, erstellen und ausführen  
   
-1. Stellen Sie sicher, dass Sie das [einmalige Setup Verfahren für die Windows Communication Foundation Beispiele](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)ausgeführt haben.  
+1. Stellen Sie sicher, dass Sie das [einmalige Setupverfahren für die Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)durchgeführt haben.  
   
 2. Um die C#- oder Visual Basic .NET-Edition der Projektmappe zu erstellen, befolgen Sie die unter [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)aufgeführten Anweisungen.  
   
-3. Um das Beispiel in einer Konfiguration mit einem einzigen Computer oder Computer übergreifend auszuführen, befolgen Sie die Anweisungen unter [Ausführen der Windows Communication Foundation Beispiele](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3. Um das Beispiel in einer Konfiguration mit einem oder einer maschinellen Konfiguration auszuführen, befolgen Sie die Anweisungen unter [Ausführen der Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 > [!IMPORTANT]
 > Die Beispiele sind möglicherweise bereits auf dem Computer installiert. Suchen Sie nach dem folgenden Verzeichnis (Standardverzeichnis), bevor Sie fortfahren.  
->   
+>
 > `<InstallDrive>:\WF_WCF_Samples`  
->   
-> Wenn dieses Verzeichnis nicht vorhanden ist, wechseln Sie zu [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF)-Beispiele für .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) , um alle Windows Communication Foundation (WCF) und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele herunterzuladen. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
->   
+>
+> Wenn dieses Verzeichnis nicht vorhanden ist, wechseln Sie zu [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples for .NET Framework 4,](https://www.microsoft.com/download/details.aspx?id=21459) um alle Windows Communication Foundation (WCF) und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele herunterzuladen. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+>
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Data\KnownTypes`  

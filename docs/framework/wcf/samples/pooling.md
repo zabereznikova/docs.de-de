@@ -2,27 +2,27 @@
 title: Pooling
 ms.date: 03/30/2017
 ms.assetid: 688dfb30-b79a-4cad-a687-8302f8a9ad6a
-ms.openlocfilehash: d2962004376cf6f0752067d4e03828cd894efd01
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 46abc2c9c667ea7614581d7fafaa8e174db7f14f
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74716513"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79183405"
 ---
 # <a name="pooling"></a>Pooling
-In diesem Beispiel wird veranschaulicht, wie Windows Communication Foundation (WCF) erweitert wird, um Objekt Pooling zu unterstützen. Das Beispiel veranschaulicht die Erstellung eines Attributs, das syntaktisch und semantisch ähnlich zur `ObjectPoolingAttribute`-Attributfunktionalität von Enterprise Services ist. Durch Objektpooling lässt sich die Leistung einer Anwendung u.&#160;U. drastisch steigern. Es kann jedoch auch einen gegenteiligen Effekt haben, wenn es nicht ordnungsgemäß verwendet wird. Objektpooling hilft dabei, den Mehraufwand zu reduzieren, der durch die Neuerstellung häufig verwendeter Objekte, die eine umfangreiche Initialisierung erfordern, entsteht. Wenn das Aufrufen einer Methode in einem gepoolten Objekt jedoch sehr lange dauert, werden durch das Objektpooling zusätzliche Anforderungen in einer Warteschlange platziert, sobald die maximale Poolgröße erreicht ist. Daher werden u.&#160;U. einige Anforderungen zur Objekterstellung nicht erfüllt, indem eine Timeoutausnahme ausgelöst wird.  
+In diesem Beispiel wird veranschaulicht, wie Windows Communication Foundation (WCF) erweitert wird, um das Objektpooling zu unterstützen. Das Beispiel veranschaulicht die Erstellung eines Attributs, das syntaktisch und semantisch ähnlich zur `ObjectPoolingAttribute`-Attributfunktionalität von Enterprise Services ist. Durch Objektpooling lässt sich die Leistung einer Anwendung u.&#160;U. drastisch steigern. Es kann jedoch auch einen gegenteiligen Effekt haben, wenn es nicht ordnungsgemäß verwendet wird. Objektpooling hilft dabei, den Mehraufwand zu reduzieren, der durch die Neuerstellung häufig verwendeter Objekte, die eine umfangreiche Initialisierung erfordern, entsteht. Wenn das Aufrufen einer Methode in einem gepoolten Objekt jedoch sehr lange dauert, werden durch das Objektpooling zusätzliche Anforderungen in einer Warteschlange platziert, sobald die maximale Poolgröße erreicht ist. Daher werden u.&#160;U. einige Anforderungen zur Objekterstellung nicht erfüllt, indem eine Timeoutausnahme ausgelöst wird.  
   
 > [!NOTE]
 > Die Setupprozedur und die Buildanweisungen für dieses Beispiel befinden sich am Ende dieses Themas.  
   
- Der erste Schritt beim Erstellen einer WCF-Erweiterung besteht darin, den zu verwendenden Erweiterbarkeits Punkt zu entscheiden.  
+ Der erste Schritt beim Erstellen einer WCF-Erweiterung besteht darin, den zu verwendenden Erweiterbarkeitspunkt zu entscheiden.  
   
- In WCF verweist der Begriff *Verteiler* auf eine Laufzeitkomponente, die eingehende Nachrichten in Methodenaufrufe für den Dienst des Benutzers umwandelt und Rückgabewerte von dieser Methode in eine ausgehende Nachricht umwandelt. Ein WCF-Dienst erstellt einen Verteiler für jeden Endpunkt. Ein WCF-Client muss einen Verteiler verwenden, wenn es sich bei dem Vertrag, der diesem Client zugeordnet ist, um einen Duplex Vertrag handelt.  
+ In WCF bezieht sich der Begriff *Dispatcher* auf eine Laufzeitkomponente, die für die Konvertierung eingehender Nachrichten in Methodenaufrufe im Dienst des Benutzers und für das Konvertieren von Rückgabewerten von dieser Methode in eine ausgehende Nachricht verantwortlich ist. Ein WCF-Dienst erstellt einen Dispatcher für jeden Endpunkt. Ein WCF-Client muss einen Dispatcher verwenden, wenn es sich bei dem diesem Client zugeordneten Vertrag um einen Duplexvertrag handelt.  
   
  Der Kanal- und der Endpunktverteiler bieten eine kanal- und vertragsweite Erweiterbarkeit, indem sie verschiedene Eigenschaften, die das Verhalten des Verteilers steuern, verfügbar machen. Die <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.DispatchRuntime%2A>-Eigenschaft ermöglicht es Ihnen außerdem, den Verteilungsprozess zu überprüfen, zu ändern oder anzupassen. In diesem Beispiel wird in erster Linie die <xref:System.ServiceModel.Dispatcher.DispatchRuntime.InstanceProvider%2A>-Eigenschaft behandelt, die auf das Objekt zeigt, das die Instanzen der Dienstklasse bereitstellt.  
   
 ## <a name="the-iinstanceprovider"></a>Der IInstanceProvider  
- In WCF erstellt der Verteiler Instanzen der Dienstklasse mithilfe einer <xref:System.ServiceModel.Dispatcher.DispatchRuntime.InstanceProvider%2A>, die die <xref:System.ServiceModel.Dispatcher.IInstanceProvider>-Schnittstelle implementiert. Diese Schnittstelle verfügt über drei Methoden:  
+ In WCF erstellt der Dispatcher Instanzen <xref:System.ServiceModel.Dispatcher.DispatchRuntime.InstanceProvider%2A>der Dienstklasse <xref:System.ServiceModel.Dispatcher.IInstanceProvider> mithilfe einer , die die Schnittstelle implementiert. Diese Schnittstelle verfügt über drei Methoden:  
   
 - <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%28System.ServiceModel.InstanceContext%2CSystem.ServiceModel.Channels.Message%29>: Wenn eine Nachricht eingeht, ruft der Verteiler die <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%28System.ServiceModel.InstanceContext%2CSystem.ServiceModel.Channels.Message%29>-Methode auf, um eine Instanz der Dienstklasse zum Verarbeiten der Nachricht zu erstellen. Die Häufigkeit der Aufrufe dieser Methode wird von der <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A>-Eigenschaft bestimmt. Wenn die <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A>-Eigenschaft beispielsweise auf <xref:System.ServiceModel.InstanceContextMode.PerCall> festgelegt ist, wird eine neue Instanz der Dienstklasse erstellt, um alle eingehenden Nachrichten zu verarbeiten. Daher wird <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%28System.ServiceModel.InstanceContext%2CSystem.ServiceModel.Channels.Message%29> immer dann aufgerufen, wenn eine Nachricht eingeht.  
   
@@ -55,7 +55,7 @@ object IInstanceProvider.GetInstance(InstanceContext instanceContext, Message me
   
     idleTimer.Stop();  
   
-    return obj;            
+    return obj;
 }  
 ```  
   
@@ -72,15 +72,15 @@ void IInstanceProvider.ReleaseInstance(InstanceContext instanceContext, object i
         WritePoolMessage(  
         ResourceHelper.GetString("MsgObjectPooled"));  
   
-        // When the service goes completely idle (no requests   
+        // When the service goes completely idle (no requests
         // are being processed), the idle timer is started  
         if (activeObjectsCount == 0)  
-            idleTimer.Start();                       
+            idleTimer.Start();
     }  
 }  
 ```  
   
- Die `ReleaseInstance`-Methode bietet eine Funktion zum Bereinigen der Initialisierung. Normalerweise wird im Pool eine Mindestanzahl von Objekten für die Lebensdauer des Pools beibehalten. Es kann jedoch Zeiten mit übermäßiger Auslastung geben, für die im Pool zusätzliche Objekte erstellt werden müssen, um die in der Konfiguration festgelegte Höchstgrenze zu erreichen. Wenn der Pool weniger aktiv ist, stellen diese überzähligen Objekte einen zusätzlichen Aufwand dar. Wenn `activeObjectsCount` daher 0 (null) erreicht, wird ein Leerlauftimer gestartet, der einen Bereinigungszyklus auslöst und ausführt.  
+ Die `ReleaseInstance` Methode bietet eine Funktion zur Initialisierung. Normalerweise wird im Pool eine Mindestanzahl von Objekten für die Lebensdauer des Pools beibehalten. Es kann jedoch Zeiten mit übermäßiger Auslastung geben, für die im Pool zusätzliche Objekte erstellt werden müssen, um die in der Konfiguration festgelegte Höchstgrenze zu erreichen. Wenn der Pool weniger aktiv ist, stellen diese überzähligen Objekte einen zusätzlichen Aufwand dar. Wenn `activeObjectsCount` daher 0 (null) erreicht, wird ein Leerlauftimer gestartet, der einen Bereinigungszyklus auslöst und ausführt.  
   
 ## <a name="adding-the-behavior"></a>Hinzufügen des Verhaltens  
  Verteilerschicht-Erweiterungen werden mithilfe der folgenden Verhaltensweisen verknüpft:  
@@ -114,7 +114,7 @@ void IServiceBehavior.ApplyDispatchBehavior(ServiceDescription description, Serv
 {  
     // Create an instance of the ObjectPoolInstanceProvider.  
     ObjectPoolingInstanceProvider instanceProvider = new  
-           ObjectPoolingInstanceProvider(description.ServiceType,   
+           ObjectPoolingInstanceProvider(description.ServiceType,
                                                     minPoolSize);  
   
     // Forward the call if we created a ServiceThrottlingBehavior.  
@@ -123,29 +123,29 @@ void IServiceBehavior.ApplyDispatchBehavior(ServiceDescription description, Serv
         ((IServiceBehavior)this.throttlingBehavior).ApplyDispatchBehavior(description, serviceHostBase);  
     }  
   
-    // In case there was already a ServiceThrottlingBehavior   
-    // (this.throttlingBehavior==null), it should have initialized   
-    // a single ServiceThrottle on all ChannelDispatchers.    
-    // As we loop through the ChannelDispatchers, we verify that   
+    // In case there was already a ServiceThrottlingBehavior
+    // (this.throttlingBehavior==null), it should have initialized
+    // a single ServiceThrottle on all ChannelDispatchers.
+    // As we loop through the ChannelDispatchers, we verify that
     // and modify the ServiceThrottle to guard MaxPoolSize.  
     ServiceThrottle throttle = null;  
   
-    foreach (ChannelDispatcherBase cdb in   
+    foreach (ChannelDispatcherBase cdb in
             serviceHostBase.ChannelDispatchers)  
     {  
         ChannelDispatcher cd = cdb as ChannelDispatcher;  
         if (cd != null)  
         {  
-            // Make sure there is exactly one throttle used by all   
-            // endpoints. If there were others, we could not enforce   
+            // Make sure there is exactly one throttle used by all
+            // endpoints. If there were others, we could not enforce
             // MaxPoolSize.  
-            if ((this.throttlingBehavior == null) &&   
+            if ((this.throttlingBehavior == null) &&
                         (this.maxPoolSize != Int32.MaxValue))  
             {  
                 throttle ??= cd.ServiceThrottle;
                 if (cd.ServiceThrottle == null)  
                 {  
-                    throw new   
+                    throw new
 InvalidOperationException(ResourceHelper.GetString("ExNullThrottle"));  
                 }  
                 if (throttle != cd.ServiceThrottle)  
@@ -157,15 +157,15 @@ InvalidOperationException(ResourceHelper.GetString("ExNullThrottle"));
              foreach (EndpointDispatcher ed in cd.Endpoints)  
              {  
                  // Assign it to DispatchBehavior in each endpoint.  
-                 ed.DispatchRuntime.InstanceProvider =   
+                 ed.DispatchRuntime.InstanceProvider =
                                       instanceProvider;  
              }  
          }  
      }  
   
-     // Set the MaxConcurrentInstances to limit the number of items   
+     // Set the MaxConcurrentInstances to limit the number of items
      // that will ever be requested from the pool.  
-     if ((throttle != null) && (throttle.MaxConcurrentInstances >   
+     if ((throttle != null) && (throttle.MaxConcurrentInstances >
                                       this.maxPoolSize))  
      {  
          throttle.MaxConcurrentInstances = this.maxPoolSize;  
@@ -175,10 +175,10 @@ InvalidOperationException(ResourceHelper.GetString("ExNullThrottle"));
   
  Neben einer <xref:System.ServiceModel.Description.IServiceBehavior>-Implementierung verfügt die <xref:System.EnterpriseServices.ObjectPoolingAttribute>-Klasse über mehrere Member zum Anpassen des Objektpools mithilfe der Attributargumente. Diese Members umfassen <xref:System.EnterpriseServices.ObjectPoolingAttribute.MaxPoolSize%2A>, <xref:System.EnterpriseServices.ObjectPoolingAttribute.MinPoolSize%2A> und <xref:System.EnterpriseServices.ObjectPoolingAttribute.CreationTimeout%2A> für die Übereinstimmung mit dem von .NET Enterprise Services bereitgestellten Objektpooling-Funktionssatz.  
   
- Das Objektpoolingverhalten kann nun einem WCF-Dienst hinzugefügt werden, indem die Dienst Implementierung mit dem neu erstellten benutzerdefinierten `ObjectPooling`-Attribut kommentiert wird.  
+ Das Objektpoolingverhalten kann nun einem WCF-Dienst hinzugefügt werden, indem die `ObjectPooling` Dienstimplementierung mit dem neu erstellten benutzerdefinierten Attribut mit Anmerkungen versehen wird.  
   
 ```csharp  
-[ObjectPooling(MaxPoolSize=1024, MinPoolSize=10, CreationTimeout=30000)]      
+[ObjectPooling(MaxPoolSize=1024, MinPoolSize=10, CreationTimeout=30000)]
 public class PoolService : IPoolService  
 {  
   // …  
@@ -203,7 +203,7 @@ public class ObjectPooledWorkService : IDoWork
     public void DoWork()  
     {  
         ColorConsole.WriteLine(ConsoleColor.Blue, "ObjectPooledWorkService.GetData() completed.");  
-    }          
+    }
 }  
 ```  
   
@@ -234,20 +234,20 @@ Press <ENTER> to exit.
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>So können Sie das Beispiel einrichten, erstellen und ausführen  
   
-1. Stellen Sie sicher, dass Sie das [einmalige Setup Verfahren für die Windows Communication Foundation Beispiele](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)ausgeführt haben.  
+1. Stellen Sie sicher, dass Sie das [einmalige Setupverfahren für die Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)durchgeführt haben.  
   
-2. Befolgen Sie die Anweisungen unter Erstellen [der Windows Communication Foundation Beispiele](../../../../docs/framework/wcf/samples/building-the-samples.md), um die Lösung zu erstellen.  
+2. Um die Lösung zu erstellen, befolgen Sie die Anweisungen unter [Erstellen der Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3. Um das Beispiel in einer Konfiguration mit einem einzigen Computer oder Computer übergreifend auszuführen, befolgen Sie die Anweisungen unter [Ausführen der Windows Communication Foundation Beispiele](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3. Um das Beispiel in einer Konfiguration mit einem oder einer maschinellen Konfiguration auszuführen, befolgen Sie die Anweisungen unter [Ausführen der Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 > [!NOTE]
 > Wenn Sie zur Neugenerierung der Konfiguration für dieses Beispiel die Datei Svcutil.exe verwenden, müssen Sie den Endpunktnamen in der Clientkonfiguration so ändern, dass er mit dem Clientcode übereinstimmt.  
   
 > [!IMPORTANT]
 > Die Beispiele sind möglicherweise bereits auf dem Computer installiert. Suchen Sie nach dem folgenden Verzeichnis (Standardverzeichnis), bevor Sie fortfahren.  
->   
+>
 > `<InstallDrive>:\WF_WCF_Samples`  
->   
-> Wenn dieses Verzeichnis nicht vorhanden ist, wechseln Sie zu [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF)-Beispiele für .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) , um alle Windows Communication Foundation (WCF) und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele herunterzuladen. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
->   
+>
+> Wenn dieses Verzeichnis nicht vorhanden ist, wechseln Sie zu [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples for .NET Framework 4,](https://www.microsoft.com/download/details.aspx?id=21459) um alle Windows Communication Foundation (WCF) und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele herunterzuladen. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+>
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Instancing\Pooling`  

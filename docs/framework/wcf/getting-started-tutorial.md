@@ -1,74 +1,74 @@
 ---
 title: 'Tutorial: Erste Schritte mit Windows Communication Foundation-Anwendungen'
-description: In diesen Tutorials enthält eine Einführung zum Erstellen von WCF-Anwendungen.
+description: Diese Tutorials bieten eine Einführung zum Erstellen von WCF-Anwendungen.
 ms.date: 01/25/2019
 helpviewer_keywords:
 - WCF [WCF], get started
 - Windows Communication Foundation [WCF], get started
 - get started [WCF]
 ms.assetid: df939177-73cb-4440-bd95-092a421516a1
-ms.openlocfilehash: d4613edefeb8db2c0d1e11e925f8ac41329efb0d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: df73f953372202796cebce9d3e3f28bd617c67ef
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61929542"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79184121"
 ---
 # <a name="tutorial-get-started-with-windows-communication-foundation-applications"></a>Tutorial: Erste Schritte mit Windows Communication Foundation-Anwendungen
-Die folgende Reihe von Tutorials führen Sie auf der Windows Communication Foundation (WCF) Programmierung. Durcharbeiten dieser Tutorials, in der Reihenfolge erhalten Sie einen einleitenden Überblick über die erforderlichen Schritte zum Erstellen von WCF-Anwendungen. Wenn Sie fertig sind, müssen Sie einen ausgeführten WCF-Dienst und ein WCF-Client, der den Dienst aufruft. 
+In der folgenden Reihe von Tutorials werden Sie mit der Programmiererfahrung von Windows Communication Foundation (WCF) vorgestellt. Wenn Sie diese Tutorials in der Reihenfolge durchlaufen, erhalten Sie ein einführendes Verständnis der Schritte, die zum Erstellen von WCF-Anwendungen erforderlich sind. Nach Abschluss des Abschlusses verfügen Sie über einen ausgeführten WCF-Dienst und einen WCF-Client, der den Dienst aufruft.
 
-Dieses Tutorial setzt voraus, dass Sie Visual Studio als Entwicklungsumgebung verwenden. Wenn Sie eine andere Entwicklungsumgebung verwenden, ignorieren Sie die Visual Studio-spezifische Anweisungen. 
+Im Tutorial wird davon ausgegangen, dass Sie Visual Studio als Entwicklungsumgebung verwenden. Wenn Sie eine andere Entwicklungsumgebung verwenden, ignorieren Sie die Visual Studio-spezifischen Anweisungen.
 
-Beispiel WCF-Anwendungen, die Sie herunterladen und ausführen können, finden Sie unter [Windows Communication Foundation-Beispiele](samples/index.md). Eine Einführung in den Beispielen, finden Sie unter [Beispiel für erste Schritte](samples/getting-started-sample.md).
+Beispielen für WCF-Anwendungen, die Sie herunterladen und ausführen können, finden Sie unter [Windows Communication Foundation-Beispiele](samples/index.md). Eine Einführung in die Beispiele finden Sie unter [Erste Schritte .](samples/getting-started-sample.md)
 
-Ausführlichere Informationen zum Erstellen von Diensten und Clients finden Sie unter [einfache WCF-Programmierung](basic-wcf-programming.md).
+Ausführlichere Informationen zum Erstellen von Diensten und Clients finden Sie unter [Grundlegende WCF-Programmierung](basic-wcf-programming.md).
 
-## <a name="wcf-tutorials"></a>WCF-Lernprogramme
+## <a name="wcf-tutorials"></a>WCF-Tutorials
 
-Die ersten drei Tutorials wird beschrieben, wie einen WCF-Dienstvertrag definiert, wie er implementiert und wie zu hosten. Der Dienst, den Sie erstellen, ist innerhalb einer Konsolenanwendung selbst gehostet. Sie können auch Dienste unter Microsoft Internet Information Services (IIS) hosten. Weitere Informationen finden Sie unter [Vorgehensweise: Hosten ein WCF-Diensts in IIS](feature-details/how-to-host-a-wcf-service-in-iis.md). Obwohl Sie Code verwenden, um den Dienst in diesem Tutorial konfigurieren, können Sie auch [Dienste innerhalb einer Konfigurationsdatei konfigurieren](configuring-services-using-configuration-files.md). 
+In den ersten drei Lernprogrammen wird beschrieben, wie ein WCF-Dienstvertrag definiert, wie er implementiert und wie er hosten wird. Der von Ihnen erstellte Dienst wird in einer Konsolenanwendung selbst gehostet. Sie können Dienste auch unter Microsoft Internet Information Services (IIS) hosten. Weitere Informationen finden Sie unter [Gewusst wie: Hosten eines WCF-Dienstes in IIS](feature-details/how-to-host-a-wcf-service-in-iis.md). Obwohl Sie Code zum Konfigurieren des Dienstes im Tutorial verwenden, können Sie auch [Dienste innerhalb einer Konfigurationsdatei konfigurieren.](configuring-services-using-configuration-files.md)
 
-- [Tutorial: Definieren eines Dienstvertrags](how-to-define-a-wcf-service-contract.md)
+- [Tutorial: Definieren eines Servicevertrags](how-to-define-a-wcf-service-contract.md)
 
-    Sie erstellen einen WCF-Vertrags mit einer benutzerdefinierten Benutzeroberfläche. Dieser Vertrag definiert die Funktionalität, die der Dienst verfügbar macht.
+    Sie erstellen einen WCF-Vertrag mit einer benutzerdefinierten Schnittstelle. Dieser Vertrag definiert die Funktionalität, die der Dienst verfügbar macht.
 
-- [Tutorial: Implementieren eines Dienstvertrags](how-to-implement-a-wcf-contract.md)
+- [Tutorial: Implementieren eines Servicevertrags](how-to-implement-a-wcf-contract.md)
 
-    Nachdem Sie einen Vertrag zu definieren, müssen Sie es mit einer Dienstklasse implementieren.
+    Nachdem Sie einen Vertrag definiert haben, müssen Sie ihn mit einer Serviceklasse implementieren.
 
-- [Tutorial: Hosten und Ausführen eines grundlegenden Diensts](how-to-host-and-run-a-basic-wcf-service.md)
+- [Tutorial: Hosten und Ausführen eines Basisdienstes](how-to-host-and-run-a-basic-wcf-service.md)
 
-    Konfigurieren Sie einen Endpunkt für den Dienst, und hosten Sie des Diensts in einer Konsolenanwendung. Für einen Dienst aktiviert wird müssen Sie konfigurieren und hosten Sie es in einer Laufzeitumgebung. Diese Runtime-Umgebung den Dienst erstellt und steuert seinen Kontext sowie seine Lebensdauer.
+    Konfigurieren Sie einen Endpunkt für den Dienst, und hosten Sie den Dienst in einer Konsolenanwendung. Damit ein Dienst aktiv wird, müssen Sie ihn konfigurieren und in einer Laufzeitumgebung hosten. Diese Laufzeitumgebung erstellt den Dienst und steuert seinen Kontext und seine Lebensdauer.
 
-Die nächsten beiden Tutorials beschrieben, wie zum Erstellen und konfigurieren und Verwenden einer Clientanwendung zum Aufrufen des Diensts durch die Vorgänge verfügbar macht. Dienste veröffentlichen Metadaten, die die Informationen definieren, über die eine Clientanwendung mit dem Dienst kommuniziert. Visual Studio automatisiert den Zugriff auf diese Metadaten und wird verwendet, um die Clientanwendung für den Dienst zu erstellen. Wenn Sie nicht Visual Studio verwenden möchten, können Sie mithilfe der [ServiceModel Metadata Utility-Tool (*Svcutil.exe*)](servicemodel-metadata-utility-tool-svcutil-exe.md) stattdessen.
+In den nächsten beiden Lernprogrammen wird beschrieben, wie Sie eine Clientanwendung erstellen, konfigurieren und verwenden, um die Vorgänge aufzurufen, die der Dienst verfügbar macht. Dienste veröffentlichen Metadaten, die die Informationen definieren, über die eine Clientanwendung mit dem Dienst kommuniziert. Visual Studio automatisiert den Zugriff auf diese Metadaten und verwendet sie, um die Clientanwendung für den Dienst zu erstellen. Wenn Sie Visual Studio nicht verwenden möchten, können Sie stattdessen das [ServiceModel Metadata Utility-Tool (*Svcutil.exe*)](servicemodel-metadata-utility-tool-svcutil-exe.md) verwenden.
 
-- [Tutorial: Erstellen Sie einen client](how-to-create-a-wcf-client.md)
+- [Tutorial: Erstellen eines Clients](how-to-create-a-wcf-client.md)
 
-    Abrufen von Metadaten für einen WCF-Clientproxy von einem WCF-Dienst erstellen. Rufen Sie Metadaten mithilfe von Visual Studio zum Hinzufügen eines Dienstverweises aus, oder Sie können das ServiceModel Metadata Utility-Tool verwenden. Sie geben Sie den Endpunkt, den der Client verwendet, um den Dienst zuzugreifen.
+    Abrufen von Metadaten zum Erstellen eines WCF-Clientproxys aus einem WCF-Dienst. Sie rufen Metadaten ab, indem Sie Visual Studio verwenden, um einen Dienstverweis hinzuzufügen, oder Sie können das ServiceModel-Metadatendienstprogramm verwenden. Sie geben den Endpunkt an, den der Client für den Zugriff auf den Dienst verwendet.
 
-- [Tutorial: Verwenden Sie einen client](how-to-use-a-wcf-client.md)
+- [Tutorial: Verwenden eines Clients](how-to-use-a-wcf-client.md)
 
-    Verwenden Sie den WCF-Clientproxy, um Dienstvorgänge aufzurufen.
+    Verwenden Sie den WCF-Clientproxy, um die Dienstvorgänge aufzurufen.
 
-## <a name="reference"></a>Referenz
+## <a name="reference"></a>Verweis
 
 - <xref:System.ServiceModel.ServiceContractAttribute>
 - <xref:System.ServiceModel.OperationContractAttribute>
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Konzeptionelle Übersicht](conceptual-overview.md)
-- [Führen Sie in der Dokumentation](guide-to-the-documentation.md)
+- [Leitfaden zur Dokumentation](guide-to-the-documentation.md)
 - [Was ist Windows Communication Foundation](whats-wcf.md)
-- [Details zur WCF-Funktion](feature-details/index.md)
-- [Grundlegende Programmierung Lebenszyklus](basic-programming-lifecycle.md)
-- [Erstellen von clients](building-clients.md)
+- [WCF-Featuredetails](feature-details/index.md)
+- [Grundlegender Programmierlebenszyklus](basic-programming-lifecycle.md)
+- [Baukunden](building-clients.md)
 - [Grundlegende WCF-Programmierung](basic-wcf-programming.md)
-- [Vorgehensweise: Erstellen eines duplexvertrags](feature-details/how-to-create-a-duplex-contract.md)
-- [Vorgehensweise: Von Access Services mit einem Duplexvertrag](feature-details/how-to-access-services-with-a-duplex-contract.md)
-- [ServiceModel Metadata Utility-Tool (Svcutil.exe)](servicemodel-metadata-utility-tool-svcutil-exe.md)
-- [Vorgehensweise: Verwenden von Svcutil.exe zum Herunterladen von Metadatendokumenten](feature-details/how-to-use-svcutil-exe-to-download-metadata-documents.md)
-- [Vorgehensweise: Veröffentlichen von Metadaten für einen Dienst mithilfe einer Konfigurationsdatei](feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)
-- [Verwenden von Bindungen, um Dienste und Clients konfigurieren](using-bindings-to-configure-services-and-clients.md)
-- [Beispiel für erste Schritte](samples/getting-started-sample.md)
+- [Gewusst wie: Erstellen eines Duplexvertrags](feature-details/how-to-create-a-duplex-contract.md)
+- [Gewusst wie: Zugriff auf Dienste mit Duplexvertrag](feature-details/how-to-access-services-with-a-duplex-contract.md)
+- [ServiceModel-Metadaten-Dienstprogramm (Svcutil.exe)](servicemodel-metadata-utility-tool-svcutil-exe.md)
+- [Gewusst wie: Verwenden von Svcutil.exe zum Herunterladen von Metadatendokumenten](feature-details/how-to-use-svcutil-exe-to-download-metadata-documents.md)
+- [Gewusst wie: Veröffentlichen von Metadaten für einen Dienst mithilfe einer Konfigurationsdatei](feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)
+- [Verwenden von Bindungen zum Konfigurieren von Diensten und Clients](using-bindings-to-configure-services-and-clients.md)
+- [Erste Schritte Beispiel](samples/getting-started-sample.md)
 - [Windows Communication Foundation-Beispiele](samples/index.md)
 - [Selbst gehostete Dienste](samples/self-host.md)

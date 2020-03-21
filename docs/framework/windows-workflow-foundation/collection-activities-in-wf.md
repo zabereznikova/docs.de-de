@@ -2,15 +2,15 @@
 title: Auflistungsaktivitäten in WF
 ms.date: 03/30/2017
 ms.assetid: 2680c3e2-9902-4968-b98d-cab776103dbe
-ms.openlocfilehash: b14d6f8bdebd349467004a8fa950927f848d0f21
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 5935b569bc46a6f38a7158049336f1e57fd8b0e5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69935460"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79143147"
 ---
 # <a name="collection-activities-in-wf"></a>Auflistungsaktivitäten in WF
-Auflistungsaktivitäten werden für die Arbeit mit Auflistungsobjekten in einem Workflow verwendet. [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] verfügt über vom System bereitgestellte Aktivitäten, mit denen Elemente zu einer Auflistung hinzugefügt oder daraus entfernt werden können und mit denen überprüft werden kann, ob ein Element in einer Auflistung vorhanden ist. Außerdem können Auflistungen bereinigt werden. `ExistsInCollection`und `RemoveFromCollection` verfügen über <xref:System.Activities.OutArgument%601> einen vom <xref:System.Boolean>Typ, der das Ergebnis angibt.  
+Auflistungsaktivitäten werden für die Arbeit mit Auflistungsobjekten in einem Workflow verwendet. [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] verfügt über vom System bereitgestellte Aktivitäten, mit denen Elemente zu einer Auflistung hinzugefügt oder daraus entfernt werden können und mit denen überprüft werden kann, ob ein Element in einer Auflistung vorhanden ist. Außerdem können Auflistungen bereinigt werden. `ExistsInCollection`und `RemoveFromCollection` haben <xref:System.Activities.OutArgument%601> einen <xref:System.Boolean>Typ , der das Ergebnis angibt.  
   
 > [!IMPORTANT]
 > Wenn eine Auflistungsaktivität vor dem Festlegen des zugrunde liegenden Auflistungsobjekts ausgeführt wird, wird eine <xref:System.InvalidOperationException> ausgelöst, und die Aktivität ist fehlerhaft.  
@@ -43,7 +43,7 @@ Activity wf = new Sequence
 {  
     Variables = { fruitList, result },  
   
-    Activities =   
+    Activities =
     {  
         new If  
         {  
@@ -243,7 +243,7 @@ Activity wf = new Sequence
 {  
     Variables = { fruitList, result },  
   
-    Activities =   
+    Activities =
     {  
         new If  
         {  
@@ -425,6 +425,6 @@ Activity wf = new Sequence
 </Sequence>  
 ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Erstellen von Workflows, Aktivitäten und Ausdrücken mit imperativem Code](authoring-workflows-activities-and-expressions-using-imperative-code.md)

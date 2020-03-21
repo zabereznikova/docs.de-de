@@ -8,26 +8,26 @@ helpviewer_keywords:
 - <cryptoClasses> element
 - cryptoClasses element
 ms.assetid: 290d5f96-946d-4f02-babb-1d31ec0b8295
-ms.openlocfilehash: 6601417f0b80f623b7698c4b072c35eca44343b7
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: c93fadf51297d59ab499e25de283700364903049
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76732889"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79155245"
 ---
-# <a name="cryptoclasses-element"></a>\<cryptoClasses >-Element
-Enthält eine Liste von Kryptografieklassen, die einem Anzeigenamen im Element [\<nameEntry>](nameentry-element.md) zugeordnet sind.  
+# <a name="cryptoclasses-element"></a>\<cryptoClasses> Element
+Enthält eine Liste von Kryptografieklassen, die [ \<](nameentry-element.md) eine Zuordnung zu einem Anzeigenamen im nameEntry>-Element haben.  
   
-[ **\<configuration>** ](../configuration-element.md)  
-&nbsp;&nbsp;[ **\<mscorlib->** ](mscorlib-element-for-cryptography-settings.md)  
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<cryptographySettings >** ](cryptographysettings-element.md)  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<cryptoNameMapping >** ](cryptonamemapping-element.md)  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<**cryptoClasses >**  
+[**\<Konfiguration>**](../configuration-element.md)  
+&nbsp;&nbsp;[**\<mscorlib>**](mscorlib-element-for-cryptography-settings.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<cryptographySettings>**](cryptographysettings-element.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<cryptoNameMapping>**](cryptonamemapping-element.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<cryptoClasses>**  
   
 ## <a name="syntax"></a>Syntax  
   
 ```xml  
-<cryptoClasses>   
+<cryptoClasses>
 </cryptoClasses>  
 ```  
   
@@ -39,21 +39,21 @@ Enthält eine Liste von Kryptografieklassen, die einem Anzeigenamen im Element [
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
   
-|Element|BESCHREIBUNG|  
+|Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<cryptoClass >](cryptoclass-element.md)|Enthält eine Kryptografieklasse, die einem Anzeigenamen im Element **\<nameEntry>** zugeordnet ist.|  
+|[\<cryptoClass>](cryptoclass-element.md)|Enthält eine Kryptografieklasse, die eine Zuordnung zu einem Anzeigenamen im ** \<nameEntry>-Element** enthält.|  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   
-|Element|BESCHREIBUNG|  
+|Element|Beschreibung|  
 |-------------|-----------------|  
 |`configuration`|Das Stammelement in jeder von den Common Language Runtime- und .NET Framework-Anwendungen verwendeten Konfigurationsdatei.|  
 |`cryptographySettings`|Enthält Kryptografieeinstellungen.|  
 |`cryptoNameMapping`|Enthält die Zuordnung von Klassen zu den Anzeigenamen.|  
-|`mscorlib`|Enthält das `cryptographySettings` Element.|  
+|`mscorlib`|Enthält `cryptographySettings` das Element.|  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird gezeigt, wie das **\<cryptoClass >** -Element verwendet wird, um auf eine Kryptografieklasse zu verweisen und die Laufzeit zu konfigurieren. Anschließend können Sie die Zeichenfolge "RSA" an die <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType>-Methode übergeben und die <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A>-Methode verwenden, um ein `MyCryptoRSAClass`-Objekt zurückzugeben.  
+ Das folgende Beispiel zeigt, wie sie das ** \<cryptoClass>-Element** verwenden, um auf eine Kryptografieklasse zu verweisen und die Laufzeit zu konfigurieren. Sie können dann die Zeichenfolge "RSA" an die <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> Methode übergeben und die <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A> Methode verwenden, um ein `MyCryptoRSAClass` Objekt zurückzugeben.  
   
 ```xml  
 <configuration>  
@@ -79,8 +79,8 @@ Enthält eine Liste von Kryptografieklassen, die einem Anzeigenamen im Element [
 ## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Security.Cryptography>
-- [Konfigurationsdateischema](../index.md)
-- [Cryptography Settings Schema (Schema für Kryptografieeinstellungen)](index.md)
-- [Kryptografische Dienste](../../../../standard/security/cryptographic-services.md)
-- [System. Security. Cryptography. CryptoConfig. kreatefromname](xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A)
+- [Schema der Konfigurationsdatei](../index.md)
+- [Kryptografie-Einstellungen Schema](index.md)
+- [Cryptographic Services](../../../../standard/security/cryptographic-services.md)
+- [System.Security.Cryptography.CryptoConfig.CreateFromName](xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A)
 - [Konfigurieren kryptografischer Klassen](../../configure-cryptography-classes.md)

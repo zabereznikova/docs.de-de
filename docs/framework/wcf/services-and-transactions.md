@@ -4,17 +4,17 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - service contracts [WCF], designing services and transactions
 ms.assetid: 864813ff-2709-4376-912d-f5c8d318c460
-ms.openlocfilehash: 9110198fa64e43c20e1e6ba0dcf158dddeac93a6
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 4c59b83448f5a2c448843c12dae99c442441441f
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72321150"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79143277"
 ---
 # <a name="services-and-transactions"></a>Dienste und Transaktionen
-Windows Communication Foundation (WCF)-Anwendungen können eine Transaktion innerhalb eines Clients initiieren und die Transaktion innerhalb des Dienst Vorgangs koordinieren. Clients können eine Transaktion initiieren und mehrere Dienstvorgänge aufrufen und sicherstellen, dass für die Dienstvorgänge entweder ein Commit oder ein Rollback als einzelne Einheit ausgeführt wurde.  
+Windows Communication Foundation (WCF)-Anwendungen können eine Transaktion innerhalb eines Clients initiieren und die Transaktion innerhalb des Dienstvorgangs koordinieren. Clients können eine Transaktion initiieren und mehrere Dienstvorgänge aufrufen und sicherstellen, dass für die Dienstvorgänge entweder ein Commit oder ein Rollback als einzelne Einheit ausgeführt wurde.  
   
- Sie können das Transaktionsverhalten im Dienstvertrag aktivieren, indem Sie ein <xref:System.ServiceModel.ServiceBehaviorAttribute> festlegen und die <xref:System.ServiceModel.ServiceBehaviorAttribute.TransactionIsolationLevel%2A>-Eigenschaft und die <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionScopeRequired%2A>-Eigenschaft für Dienstvorgänge, die Clienttransaktionen benötigen, festlegen. Der <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionAutoComplete%2A>-Parameter legt fest, ob die Transaktion, in der die Methode ausgeführt wird, automatisch abgeschlossen wird, wenn keine unbehandelten Ausnahmen ausgelöst werden. Weitere Informationen zu diesen Attributen finden Sie unter [Service Model Transaction-Attribute](./feature-details/servicemodel-transaction-attributes.md).  
+ Sie können das Transaktionsverhalten im Dienstvertrag aktivieren, indem Sie ein <xref:System.ServiceModel.ServiceBehaviorAttribute> festlegen und die <xref:System.ServiceModel.ServiceBehaviorAttribute.TransactionIsolationLevel%2A>-Eigenschaft und die <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionScopeRequired%2A>-Eigenschaft für Dienstvorgänge, die Clienttransaktionen benötigen, festlegen. Der <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionAutoComplete%2A>-Parameter legt fest, ob die Transaktion, in der die Methode ausgeführt wird, automatisch abgeschlossen wird, wenn keine unbehandelten Ausnahmen ausgelöst werden. Weitere Informationen zu diesen Attributen finden Sie unter [ServiceModel-Transaktionsattribute](./feature-details/servicemodel-transaction-attributes.md).  
   
  Die Aufgaben (z. B. die Protokollierung von Datenbankupdates), die in den Dienstvorgängen ausgeführt und von einem Ressourcenmanager verwaltet werden, sind Teil der Clienttransaktionen.  
   
@@ -32,7 +32,7 @@ public class CalculatorService: ICalculatorLog
         return n1 + n2;  
     }  
   
-    [OperationBehavior(TransactionScopeRequired = true,   
+    [OperationBehavior(TransactionScopeRequired = true,
                                TransactionAutoComplete = true)]  
     public double Subtract(double n1, double n2)  
     {  
@@ -40,7 +40,7 @@ public class CalculatorService: ICalculatorLog
         return n1 - n2;  
     }  
   
-    [OperationBehavior(TransactionScopeRequired = true,   
+    [OperationBehavior(TransactionScopeRequired = true,
                                        TransactionAutoComplete = true)]  
     public double Multiply(double n1, double n2)  
     {  
@@ -48,7 +48,7 @@ public class CalculatorService: ICalculatorLog
         return n1 * n2;  
     }  
   
-    [OperationBehavior(TransactionScopeRequired = true,   
+    [OperationBehavior(TransactionScopeRequired = true,
                                        TransactionAutoComplete = true)]  
     public double Divide(double n1, double n2)  
     {  
@@ -59,13 +59,13 @@ public class CalculatorService: ICalculatorLog
 }  
 ```  
   
- Sie können Transaktionen und den Transaktions Fluss aktivieren, indem Sie die Client-und Dienst Bindungen so konfigurieren, dass das WS-AtomicTransaction-Protokoll verwendet wird, und das [\<transaktionflow->](../configure-apps/file-schema/wcf/transactionflow.md) Element auf `true` festlegen, wie im folgenden Beispiel gezeigt. konfiguri.  
+ Sie können Transaktionen und Denkfluss aktivieren, indem Sie die Client- und Dienstbindungen so konfigurieren, `true`dass das WS-AtomicTransaction-Protokoll verwendet wird, und das [ \<transactionFlow->-Element](../configure-apps/file-schema/wcf/transactionflow.md) auf festlegen, wie in der folgenden Beispielkonfiguration gezeigt.  
   
 ```xml  
 <client>  
-    <endpoint address="net.tcp://localhost/ServiceModelSamples/service"   
-          binding="netTcpBinding"   
-          bindingConfiguration="netTcpBindingWSAT"   
+    <endpoint address="net.tcp://localhost/ServiceModelSamples/service"
+          binding="netTcpBinding"
+          bindingConfiguration="netTcpBindingWSAT"
           contract="Microsoft.ServiceModel.Samples.ICalculatorLog" />  
 </client>  
   
@@ -88,7 +88,7 @@ using (TransactionScope ts = new TransactionScope(TransactionScopeOption.Require
 }  
 ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Transaktionsunterstützung in System.ServiceModel](./feature-details/transactional-support-in-system-servicemodel.md)
 - [Transaktionsmodelle](./feature-details/transaction-models.md)

@@ -2,18 +2,18 @@
 title: <system.runtime.serialization>
 ms.date: 03/30/2017
 ms.assetid: a8cebf4c-06d2-4667-8f5b-c3e1fc90df6f
-ms.openlocfilehash: b67f51e634d1294830690dad8c8cffb1fc9a6cd2
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.openlocfilehash: c93a1f482882cc8cd9d229d82597efa64ba209bc
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70399464"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79152969"
 ---
 # <a name="systemruntimeserialization"></a>\<system.runtime.serialization>
 Stellt das Stammelement für den <xref:System.Runtime.Serialization>-Namespaceabschnitt dar und enthält Elemente zum Festlegen von <xref:System.Runtime.Serialization.DataContractSerializer>-Optionen.  
 
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp; **\<System. Runtime. Serialization >**  
+[**\<Konfiguration>**](../configuration-element.md)\
+&nbsp;&nbsp;**\<system.runtime.serialization>**  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -37,8 +37,8 @@ Stellt das Stammelement für den <xref:System.Runtime.Serialization>-Namespaceab
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
  In den folgenden Abschnitten werden Attribute, untergeordnete Elemente sowie übergeordnete Elemente beschrieben.  
   
-### <a name="attributes"></a>Attribute  
- Keine  
+### <a name="attributes"></a>Attributes  
+ Keine.  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
   
@@ -50,11 +50,10 @@ Stellt das Stammelement für den <xref:System.Runtime.Serialization>-Namespaceab
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<configuration> Element](../configuration-element.md)|Das Element der obersten Ebene für die Konfiguration.|  
+|[\<Konfiguration> Element](../configuration-element.md)|Das Element der obersten Ebene für die Konfiguration.|  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Runtime.Serialization>
 - [Verwenden von Datenverträgen](../../../wcf/feature-details/using-data-contracts.md)
 - [Bekannte Typen in Datenverträgen](../../../wcf/feature-details/data-contract-known-types.md)
- 

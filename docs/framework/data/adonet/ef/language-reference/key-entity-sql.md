@@ -2,12 +2,12 @@
 title: KEY (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: cbaa97a8-c89c-4460-8c74-00474695789f
-ms.openlocfilehash: 14c0b5d273b26c71c9c63e8bbbcef863ac95a5f3
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 894a9d41aa3a14ad66b537433aa315823a299f95
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72319699"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79150168"
 ---
 # <a name="key-entity-sql"></a>KEY (Entity SQL)
 Extrahiert den Schlüssel eines Verweises oder eines Entitätsausdrucks.  
@@ -18,13 +18,13 @@ Extrahiert den Schlüssel eines Verweises oder eines Entitätsausdrucks.
 KEY(createref_expression)  
 ```  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Ein Entitätsschlüssel enthält in korrekter Reihenfolge die Schlüsselwerte der angegebenen Entität oder des Entitätsverweises. Da viele Entitätenmengen auf demselben Typ basieren können, kann derselbe Schlüssel in jeder Entitätenmenge vorhanden sein. Um einen eindeutigen Verweis abzurufen, verwenden Sie `REF`. Der Rückgabetyp des KEY-Operators ist ein Zeilentyp, der ein Feld für jeden Schlüssel der Entität in der gleichen Reihenfolge beinhaltet.  
   
  Im folgenden Beispiel wird dem KEY-Operator ein Verweis auf die BadOrder-Entität übergeben, und er gibt den Schlüsselteil dieses Verweises zurück. In diesem Fall einen Datensatztyp mit genau einem Feld, das der `Id` -Eigenschaft entspricht.  
   
 ```sql  
-select Key( CreateRef(LOB.BadOrders, row(o.Id)) )   
+select Key( CreateRef(LOB.BadOrders, row(o.Id)) )
 from LOB.Orders as o  
 ```  
   
@@ -37,7 +37,7 @@ from LOB.Orders as o
   
  [!code-sql[DP EntityServices Concepts#KEY](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#key)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Entity SQL-Referenz](entity-sql-reference.md)
 - [CREATEREF](createref-entity-sql.md)

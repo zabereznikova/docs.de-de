@@ -2,34 +2,34 @@
 title: Anbietermanifestspezifikation
 ms.date: 03/30/2017
 ms.assetid: bb450b47-8951-4f99-9350-26f05a4d4e46
-ms.openlocfilehash: a9dca140588be26035b235109c48049ce01e9ce1
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 28bae8a6e249aa1fdab3c67759c8f8575cbdaa10
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73973886"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79149725"
 ---
 # <a name="provider-manifest-specification"></a>Anbietermanifestspezifikation
 In diesem Abschnitt wird erläutert, wie ein Datenspeicheranbieter die Typen und Funktionen im Datenspeicher unterstützen kann.  
   
  Entitätsdienste werden unabhängig von einem bestimmten Datenspeicheranbieter ausgeführt. Datenanbieter können jedoch explizit definieren, wie Modelle, Zuordnungen und Abfragen mit einem zugrunde liegenden Datenspeicher interagieren. Ohne eine Abstraktionsebene zielen Entitätsdienste lediglich auf einen bestimmten Datenspeicher oder einen Datenanbieter ab.  
   
- Vom Anbieter unterstützte Typen werden direkt oder indirekt von der zugrunde liegende Datenbank unterstützt. Bei diesen Typen handelt es sich nicht unbedingt um die genauen Speichertypen, sondern um die Typen, die der Anbieter zur Unterstützung der Entity Framework verwendet. Anbieter-/Speichertypen werden mit den EDM (Entity Data Model)-Begriffen beschrieben.  
+ Vom Anbieter unterstützte Typen werden direkt oder indirekt von der zugrunde liegende Datenbank unterstützt. Diese Typen sind nicht unbedingt die genauen Speichertypen, sondern die Typen, die der Anbieter zur Unterstützung des Entity Framework verwendet. Anbieter-/Speichertypen werden mit den EDM (Entity Data Model)-Begriffen beschrieben.  
   
  Die Parameter und Rückgabetypen für die vom Datenspeicher unterstützten Funktionen werden in EDM-Begriffen angegeben.  
   
-## <a name="requirements"></a>Anforderungen  
- Der Entity Framework und der Datenspeicher müssen in der Lage sein, Daten in bekannten Typen ohne Datenverlust oder-abschneiden zu übergeben.  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+ Das Entity Framework und der Datenspeicher müssen in der Lage sein, Daten in bekannten Typen ohne Datenverlust oder -abstriche hin- und herzuleiten.  
   
  Das Anbietermanifest muss zur Entwurfszeit von Tools geladen werden können, ohne eine Verbindung mit dem Datenspeicher öffnen zu müssen.  
   
- Beim Entity Framework wird die Groß-/Kleinschreibung beachtet, der zugrunde liegende Datenspeicher ist jedoch möglicherweise nicht. Wenn EDM-Artefakte (z. b. Bezeichner und Typnamen) definiert und im Manifest verwendet werden, müssen Sie die Entity Framework Berücksichtigung der Groß-/Kleinschreibung verwenden. Wenn das Anbietermanifest Datenspeicherelemente enthält, bei denen die Groß-/Kleinschreibung beachtet werden muss, muss diese im Anbietermanifest beibehalten werden.  
+ Im Entity Framework wird die Groß-/Kleinschreibung beachtet, der zugrunde liegende Datenspeicher jedoch möglicherweise nicht. Wenn EDM-Artefakte (z. B. Bezeichner und Typnamen) definiert und im Manifest verwendet werden, müssen sie die Groß-/Kleinschreibung von Entity Framework verwenden. Wenn das Anbietermanifest Datenspeicherelemente enthält, bei denen die Groß-/Kleinschreibung beachtet werden muss, muss diese im Anbietermanifest beibehalten werden.  
   
- Für den Entity Framework ist ein Anbieter Manifest für alle Datenanbieter erforderlich. Wenn Sie versuchen, einen Anbieter zu verwenden, der nicht über ein Anbieter Manifest mit dem Entity Framework verfügt, wird eine Fehlermeldung angezeigt.  
+ Das Entity Framework erfordert ein Anbietermanifest für alle Datenanbieter. Wenn Sie versuchen, einen Anbieter zu verwenden, der kein Anbietermanifest mit Entity Framework enthält, wird eine Fehlermeldung angezeigt.  
   
- In der folgenden Tabelle werden die Arten von Ausnahmen beschrieben, die von der Entity Framework ausgelöst werden, wenn Ausnahmen durch die Anbieter Interaktion auftreten:  
+ In der folgenden Tabelle werden die Arten von Ausnahmen beschrieben, die Entity Framework auslösen würde, wenn Ausnahmen durch Anbieterinteraktion auftreten:  
   
-|Problem|-Ausnahme|  
+|Problem|Ausnahme|  
 |-----------|---------------|  
 |Der Anbieter unterstützt GetProviderManifest in DbProviderServices nicht.|ProviderIncompatibleException|  
 |Fehlendes Anbietermanifest: Beim Versuch, das Anbietermanifest abzurufen, gibt der Anbieter `null` zurück.|ProviderIncompatibleException|  
@@ -39,7 +39,7 @@ In diesem Abschnitt wird erläutert, wie ein Datenspeicheranbieter die Typen und
  Ein Anbieter sollte die folgenden Szenarien unterstützen:  
   
 ### <a name="writing-a-provider-with-symmetric-type-mapping"></a>Schreiben eines Anbieters mit symmetrischer Typzuordnung  
- Sie können einen Anbieter für den Entity Framework schreiben, wobei jeder Speichertyp unabhängig von der Zuordnungs Richtung einem einzelnen EDM-Typ zugeordnet wird. Bei Anbietertypen mit einer sehr einfachen Zuordnung, die EDM-Typen entsprechen, können Sie eine symmetrische Lösung verwenden, da das Typsystem einfach ist oder den EDM-Typen entspricht.  
+ Sie können einen Anbieter für das Entity Framework schreiben, bei dem jeder Speichertyp einem einzelnen EDM-Typ zugeordnet ist, unabhängig von der Zuordnungsrichtung. Bei Anbietertypen mit einer sehr einfachen Zuordnung, die EDM-Typen entsprechen, können Sie eine symmetrische Lösung verwenden, da das Typsystem einfach ist oder den EDM-Typen entspricht.  
   
  Sie können die Einfachheit der Domäne nutzen und ein statisches deklaratives Anbietermanifest erstellen.  
   
@@ -50,7 +50,7 @@ In diesem Abschnitt wird erläutert, wie ein Datenspeicheranbieter die Typen und
 - Eine Liste der vom Anbieter unterstützen Funktionen, wobei die Parameter und Rückgabetypen mit EDM-Begriffen ausgedrückt werden.  
   
 ### <a name="writing-a-provider-with-asymmetric-type-mapping"></a>Schreiben eines Anbieters mit asymmetrischer Typzuordnung  
- Wenn Sie einen Datenspeicher Anbieter für den Entity Framework schreiben, unterscheidet sich die EDM-zu-Anbieter-Typzuordnung für einige Typen möglicherweise von der Zuordnung des Anbieters zu EDM-Typen. So wird beispielsweise "unbounded EDM PrimitiveTypeKind.String" möglicherweise "nvarchar (4000)" für den Anbieter zugeordnet, während "nvarchar (4000)" dem Typ "EDM PrimitiveTypeKind.String(MaxLength=4000)" zugeordnet wird.  
+ Beim Schreiben eines Datenspeicheranbieters für das Entity Framework unterscheidet sich die EDM-zu-Anbieter-Typzuordnung für einige Typen möglicherweise von der Zuordnung zwischen Anbieter-zu-EDM-Typ. So wird beispielsweise "unbounded EDM PrimitiveTypeKind.String" möglicherweise "nvarchar (4000)" für den Anbieter zugeordnet, während "nvarchar (4000)" dem Typ "EDM PrimitiveTypeKind.String(MaxLength=4000)" zugeordnet wird.  
   
  Sie schreiben eine XML-Datei mit zwei Abschnitten:  
   
@@ -83,7 +83,7 @@ In diesem Abschnitt wird erläutert, wie ein Datenspeicheranbieter die Typen und
  Das Anbietermanifest wird vom Speichermetadaten-Ladeprogramm (StoreItemCollection) entweder über eine Datenspeicherverbindung oder mit einem Anbietermanifesttoken geladen.  
   
 #### <a name="using-a-data-store-connection"></a>Verwenden einer Datenspeicherverbindung  
- Wenn die Datenspeicher Verbindung verfügbar ist, wird <xref:System.Data.Common.DbProviderServices.GetProviderManifestToken%2A?displayProperty=nameWithType> aufgerufen, um das an die <xref:System.Data.Common.DbProviderServices.GetProviderManifest%2A>-Methode übergebenen Token zurückzugeben, das <xref:System.Data.Common.DbProviderManifest>zurückgibt. Diese Methode delegiert an die Implementierung von `GetDbProviderManifestToken`des Anbieters.  
+ Wenn die Datenspeicherverbindung verfügbar <xref:System.Data.Common.DbProviderServices.GetProviderManifestToken%2A?displayProperty=nameWithType> ist, rufen Sie das <xref:System.Data.Common.DbProviderServices.GetProviderManifest%2A> Token zurück, das an die Methode übergeben wird, die zurückgegeben <xref:System.Data.Common.DbProviderManifest>wird. Diese Methode delegiert an `GetDbProviderManifestToken`die Implementierung von .  
   
 ```csharp
 public string GetProviderManifestToken(DbConnection connection);  
@@ -91,7 +91,7 @@ public DbProviderManifest GetProviderManifest(string manifestToken);
 ```  
   
 #### <a name="using-a-provider-manifest-token"></a>Verwenden eines Anbietermanifesttokens  
- Für das Offlineszenario wird das Token der SSDL-Darstellung ausgewählt. Die SSDL ermöglicht Ihnen das Angeben eines ProviderManifestToken (Weitere Informationen finden Sie unter [Schema-Element (SSDL)](/ef/ef6/modeling/designer/advanced/edmx/ssdl-spec#schema-element-ssdl) ). Wenn beispielsweise eine Verbindung nicht geöffnet werden kann, verfügt SSDL über ein Anbietermanifesttoken, das Informationen über das Manifest angibt.  
+ Für das Offlineszenario wird das Token der SSDL-Darstellung ausgewählt. Mit der SSDL können Sie ein ProviderManifestToken angeben (weitere Informationen finden Sie unter [Schemaelement (SchemaElement, SSDL).](/ef/ef6/modeling/designer/advanced/edmx/ssdl-spec#schema-element-ssdl) Wenn beispielsweise eine Verbindung nicht geöffnet werden kann, verfügt SSDL über ein Anbietermanifesttoken, das Informationen über das Manifest angibt.  
   
 ```csharp
 public DbProviderManifest GetProviderManifest(string manifestToken);  
@@ -210,7 +210,7 @@ public DbProviderManifest GetProviderManifest(string manifestToken);
       <xs:enumeration value="Decimal"/>  
       <xs:enumeration value="DateTime"/>  
       <xs:enumeration value="Time"/>  
-      <xs:enumeration value="DateTimeOffset"/>          
+      <xs:enumeration value="DateTimeOffset"/>
       <xs:enumeration value="Double"/>  
       <xs:enumeration value="Guid"/>  
       <xs:enumeration value="Single"/>  
@@ -250,35 +250,35 @@ public DbProviderManifest GetProviderManifest(string manifestToken);
   
 |Attributname|Datentyp|Erforderlich|Standardwert|Beschreibung|  
 |--------------------|---------------|--------------|-------------------|-----------------|  
-|-Name|Zeichenfolge|Ja|n/v|Anbieterspezifischer Datentypname|  
-|PrimitiveTypeKind|PrimitiveTypeKind|Ja|n/v|EDM-Typenname|  
+|Name|String|Ja|–|Anbieterspezifischer Datentypname|  
+|PrimitiveTypeKind|PrimitiveTypeKind|Ja|–|EDM-Typenname|  
   
 ###### <a name="function-node"></a>Funktionsknoten  
  Jede Funktion definiert eine einzelne, über den Anbieter verfügbare Funktion.  
   
 |Attributname|Datentyp|Erforderlich|Standardwert|Beschreibung|  
 |--------------------|---------------|--------------|-------------------|-----------------|  
-|-Name|Zeichenfolge|Ja|n/v|Bezeichner/Name der Funktion|  
-|ReturnType|Zeichenfolge|Nein|Void|Der EDM-Rückgabetyp der Funktion|  
-|Aggregat|Boolesch|Nein|False|"True", wenn es sich bei der Funktion um eine Aggregatfunktion handelt.|  
-|BuiltIn|Boolesch|Nein|True|"True", wenn die Funktion in den Datenspeicher integriert ist.|  
-|StoreFunctionName|Zeichenfolge|Nein|\<Name >|Funktionsname im Datenspeicher.  Ermöglicht eine Umleitungsebene für Funktionsnamen.|  
-|NiladicFunction|Boolesch|Nein|False|"True", wenn die Funktion keine Parameter erfordert und ohne Parameter aufgerufen wird.|  
-|ParameterType<br /><br /> Semantik|ParameterSemantics|Nein|AllowImplicit<br /><br /> Umwandeln|Hiermit kann ausgewählt werden, wie die Abfragepipeline mit Parametertypersetzung umgehen soll:<br /><br /> -Exactmatchonly<br />-"-Zuordnung"<br />-"-Zugebemplicitconversion"|  
+|Name|String|Ja|–|Bezeichner/Name der Funktion|  
+|ReturnType|String|Nein |Void|Der EDM-Rückgabetyp der Funktion|  
+|Aggregat|Boolean|Nein |False|"True", wenn es sich bei der Funktion um eine Aggregatfunktion handelt.|  
+|BuiltIn|Boolean|Nein |True|"True", wenn die Funktion in den Datenspeicher integriert ist.|  
+|StoreFunctionName|String|Nein |\<Name>|Funktionsname im Datenspeicher.  Ermöglicht eine Umleitungsebene für Funktionsnamen.|  
+|NiladicFunction|Boolean|Nein |False|"True", wenn die Funktion keine Parameter erfordert und ohne Parameter aufgerufen wird.|  
+|ParameterType<br /><br /> Semantik|ParameterSemantics|Nein |AllowImplicit<br /><br /> Konvertierung|Hiermit kann ausgewählt werden, wie die Abfragepipeline mit Parametertypersetzung umgehen soll:<br /><br /> - ExactMatchOnly<br />- AllowImplicitPromotion<br />- AllowImplicitConversion|  
   
- **Parameter Knoten**  
+ **Parameterknoten**  
   
  Jede Funktion verfügt über eine Auflistung von einem oder mehreren Parameterknoten.  
   
 |Attributname|Datentyp|Erforderlich|Standardwert|Beschreibung|  
 |--------------------|---------------|--------------|-------------------|-----------------|  
-|-Name|Zeichenfolge|Ja|n/v|Bezeichner/Name des Parameters.|  
-|Geben Sie Folgendes ein:|Zeichenfolge|Ja|n/v|Der EDM-Typ des Parameters.|  
-|Modus|Parameter<br /><br /> Richtung|Ja|n/v|Richtung des Parameters:<br /><br /> -in<br />-Out<br />-INOUT|  
+|Name|String|Ja|–|Bezeichner/Name des Parameters.|  
+|type|String|Ja|–|Der EDM-Typ des Parameters.|  
+|Mode|Parameter<br /><br /> Direction|Ja|–|Richtung des Parameters:<br /><br /> - in<br />- raus<br />- inout|  
   
 ##### <a name="namespace-attribute"></a>Namespace-Attribut  
  Jeder Datenspeicheranbieter muss einen Namespace oder eine Gruppe von Namespaces für die im Manifest definierten Informationen definieren. Dieser Namespace kann in Entity SQL-Abfragen verwendet werden, um Namen von Funktionen und Typen aufzulösen. Zum Beispiel: SqlServer. Dieser Namespace muss sich vom kanonischen Namespace "EDM" unterscheiden, der von den Entitätsdiensten für Standardfunktionen definiert wird, die von Entity SQL-Abfragen unterstützt werden sollen.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Schreiben eines Entity Framework-Datenanbieters](writing-an-ef-data-provider.md)

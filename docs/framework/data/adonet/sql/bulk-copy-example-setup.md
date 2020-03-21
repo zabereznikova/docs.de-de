@@ -2,30 +2,30 @@
 title: Einrichtung der Massenkopierbeispiele
 ms.date: 03/30/2017
 ms.assetid: d4dde6ac-b8b6-4593-965a-635c8fb2dadb
-ms.openlocfilehash: 28fa5cde1dcbaf9f38450116a56fc11d904edc1c
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 80350d112da03c00e422432ce271ca5ea3ac58ab
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73040255"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79148841"
 ---
 # <a name="bulk-copy-example-setup"></a>Einrichtung der Massenkopierbeispiele
-Mit der <xref:System.Data.SqlClient.SqlBulkCopy>-Klasse können Daten nur in SQL Server-Tabellen geschrieben werden. In den in diesem Thema gezeigten Codebeispielen wird die SQL Server-Beispieldatenbank **AdventureWorks**verwendet. Um Änderungen an den vorhandenen Tabellen zu vermeiden, schreiben die Codebeispiele in Tabellen, die zunächst erstellt werden müssen.  
+Die <xref:System.Data.SqlClient.SqlBulkCopy>-Klasse kann nur zum Schreiben von Daten in SQL Server-Tabellen verwendet werden. Die in diesem Thema gezeigten Codebeispiele verwenden die SQL Server-Beispieldatenbank **AdventureWorks**. Um eine Änderung der vorhandenen Codebeispiele zu vermeiden, schreiben die Codebeispiele Daten in Tabellen, die zuvor von Ihnen erstellt werden.  
   
- Die **BulkCopyDemoMatchingColumns** -Tabelle und die **BulkCopyDemoDifferentColumns** -Tabelle basieren beide auf der **AdventureWorks** **Production. Products** -Tabelle. In Codebeispielen, in denen diese Tabellen verwendet werden, werden Daten aus der **Production. Products** -Tabelle einer dieser Beispiel Tabellen hinzugefügt. Die **BulkCopyDemoDifferentColumns** -Tabelle wird verwendet, wenn das Beispiel veranschaulicht, wie Spalten aus den Quelldaten der Ziel Tabelle zugeordnet werden. **Bulkcopytomomatchingcolumns** wird für die meisten anderen Beispiele verwendet.  
+ Die Tabellen **BulkCopyDemoMatchingColumns** und **BulkCopyDemoDifferentColumns** basieren beide auf der Tabelle **AdventureWorks** **Production.Products**. In Codebeispielen, die diese Tabellen verwenden, werden Daten aus der Tabelle **Production.Products** einer dieser Beispieltabellen hinzugefügt. Die Tabelle **BulkCopyDemoDifferentColumns** wird verwendet, um im Beispiel zu veranschaulichen, wie Spalten aus den Quelldaten der Zieltabelle zugeordnet werden; für die meisten anderen Beispiele wird **BulkCopyDemoMatchingColumns** verwendet.  
   
- In einigen Codebeispielen wird veranschaulicht, wie mit einer <xref:System.Data.SqlClient.SqlBulkCopy>-Klasse in mehrere Tabellen geschrieben werden kann. Für diese Beispiele werden die **BulkCopyDemoOrderHeader** -Tabelle und die **BulkCopyDemoOrderDetail** -Tabelle als Ziel Tabellen verwendet. Diese Tabellen basieren auf der **Sales. SalesOrderHeader** -Tabelle und der **Sales. SalesOrderDetail** -Tabelle in **AdventureWorks**.  
+ Einige der Codebeispiele zeigen, wie eine Klasse <xref:System.Data.SqlClient.SqlBulkCopy> zum Schreiben in mehrere Tabellen verwendet werden kann. Für diese Beispiele werden die Tabellen **BulkCopyDemoOrderHeader** und **BulkCopyDemoOrderDetail** als Zieltabellen verwendet. Diese Tabellen basieren auf den Tabellen **Sales.SalesOrderHeader** und **Sales.SalesOrderDetail** in **AdventureWorks**.  
   
 > [!NOTE]
-> Die **SqlBulkCopy** -Codebeispiele werden bereitgestellt, um die Syntax nur für die Verwendung von **SqlBulkCopy** zu veranschaulichen. Wenn sich die Quell- und die Zieltabelle in derselben SQL Server-Instanz befinden, lassen sich die Daten einfacher und schneller mit einer Transact-SQL-`INSERT … SELECT`-Anweisung kopieren.  
+> Die **SqlBulkCopy**-Codebeispiele dienen ausschließlich der Veranschaulichung der für **SqlBulkCopy** verwendeten Syntax. Wenn sich die Quell- und Zieltabellen in der gleichen SQL Server-Instanz befinden, ist die Verwendung einer Transact-SQL-Anweisung `INSERT … SELECT` zum Kopieren der Daten einfacher und schneller.  
   
 ## <a name="table-setup"></a>Einrichten der Tabellen  
- Zum Erstellen der Tabellen, die für das ordnungsgemäße Ausführen der Codebeispiele erforderlich sind, müssen Sie die folgenden Transact-SQL-Anweisungen in einer SQL Server-Datenbank ausführen:  
+ Zum Erstellen der Tabellen, die für die ordnungsgemäße Ausführung der Codebeispiele erforderlich sind, müssen Sie die folgenden Transact-SQL-Anweisungen in einer SQL Server-Datenbank ausführen.  
   
 ```sql
 USE AdventureWorks  
   
-IF EXISTS (SELECT * FROM dbo.sysobjects   
+IF EXISTS (SELECT * FROM dbo.sysobjects
  WHERE id = object_id(N'[dbo].[BulkCopyDemoMatchingColumns]')  
  AND OBJECTPROPERTY(id, N'IsUserTable') = 1)  
     DROP TABLE [dbo].[BulkCopyDemoMatchingColumns]  
@@ -38,7 +38,7 @@ CREATE TABLE [dbo].[BulkCopyDemoMatchingColumns]([ProductID] [int] IDENTITY(1,1)
     [ProductID] ASC  
 ) ON [PRIMARY]) ON [PRIMARY]  
   
-IF EXISTS (SELECT * FROM dbo.sysobjects   
+IF EXISTS (SELECT * FROM dbo.sysobjects
  WHERE id = object_id(N'[dbo].[BulkCopyDemoDifferentColumns]')  
  AND OBJECTPROPERTY(id, N'IsUserTable') = 1)  
     DROP TABLE [dbo].[BulkCopyDemoDifferentColumns]  
@@ -51,7 +51,7 @@ CREATE TABLE [dbo].[BulkCopyDemoDifferentColumns]([ProdID] [int] IDENTITY(1,1) N
     [ProdID] ASC  
 ) ON [PRIMARY]) ON [PRIMARY]  
   
-IF EXISTS (SELECT * FROM dbo.sysobjects   
+IF EXISTS (SELECT * FROM dbo.sysobjects
  WHERE id = object_id(N'[dbo].[BulkCopyDemoOrderHeader]')  
  AND OBJECTPROPERTY(id, N'IsUserTable') = 1)  
     DROP TABLE [dbo].[BulkCopyDemoOrderHeader]  
@@ -64,7 +64,7 @@ CREATE TABLE [dbo].[BulkCopyDemoOrderHeader]([SalesOrderID] [int] IDENTITY(1,1) 
     [SalesOrderID] ASC  
 ) ON [PRIMARY]) ON [PRIMARY]  
   
-IF EXISTS (SELECT * FROM dbo.sysobjects   
+IF EXISTS (SELECT * FROM dbo.sysobjects
  WHERE id = object_id(N'[dbo].[BulkCopyDemoOrderDetail]')  
  AND OBJECTPROPERTY(id, N'IsUserTable') = 1)  
     DROP TABLE [dbo].[BulkCopyDemoOrderDetail]  
@@ -81,7 +81,7 @@ CREATE TABLE [dbo].[BulkCopyDemoOrderDetail]([SalesOrderID] [int] NOT NULL,
 ) ON [PRIMARY]) ON [PRIMARY]  
 ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Massenkopiervorgänge in SQL Server](bulk-copy-operations-in-sql-server.md)
 - [Übersicht über ADO.NET](../ado-net-overview.md)

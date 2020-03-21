@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6ef78d3c-1c69-4141-b687-dcb065b7a74d
 topic_type:
 - apiref
-ms.openlocfilehash: d03c22c455f0e44ce32d4593d9eee50ceef94a22
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 812b70a594b5aa933f52d36f32d96d712267ecf4
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74443947"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177960"
 ---
 # <a name="cor_native_link-structure"></a>COR_NATIVE_LINK-Struktur
 Enthält Informationen, die zum Verknüpfen von nativem Code verwendet werden.  
@@ -27,7 +27,7 @@ Enthält Informationen, die zum Verknüpfen von nativem Code verwendet werden.
 ## <a name="syntax"></a>Syntax  
   
 ```cpp  
-typedef struct   
+typedef struct
 {  
     BYTE        m_linkType;  
     BYTE        m_flags;  
@@ -35,24 +35,24 @@ typedef struct
 } COR_NATIVE_LINK;  
 ```  
   
-## <a name="members"></a>Member  
+## <a name="members"></a>Members  
   
 |Member|Beschreibung|  
 |------------|-----------------|  
-|`m_linkType`|Der Typ, der in nativem Code verknüpft werden soll. Dieser Wert ist einer der [CorNativeLinkType](../../../../docs/framework/unmanaged-api/metadata/cornativelinktype-enumeration.md) -Werte.|  
-|`m_flags`|Flags, die vom Linker beim Verknüpfen von System eigenem Code verwendet werden. Dieser Wert ist einer der [CorNativeLinkFlags](../../../../docs/framework/unmanaged-api/metadata/cornativelinkflags-enumeration.md) -Werte.|  
-|`m_entryPoint`|Das mitgliedfassungs-Metadatentoken, das den Einstiegspunkt darstellt. Das Format ist `lib:entrypoint`.|  
+|`m_linkType`|Der Typ, der in systemeigenem Code verknüpft werden soll. Dieser Wert ist einer der [CorNativeLinkType-Werte.](../../../../docs/framework/unmanaged-api/metadata/cornativelinktype-enumeration.md)|  
+|`m_flags`|Flags, die vom Linker beim Verknüpfen von systemeigenem Code verwendet werden. Dieser Wert ist einer der [CorNativeLinkFlags-Werte.](../../../../docs/framework/unmanaged-api/metadata/cornativelinkflags-enumeration.md)|  
+|`m_entryPoint`|Das MemberRef-Metadatentoken, das den Einstiegspunkt darstellt. Das Format ist `lib:entrypoint`.|  
   
-## <a name="requirements"></a>Voraussetzungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor. h  
+ **Kopfzeile:** Cor.h  
   
- **Bibliothek:** Wird als Ressource in Mscoree. dll verwendet.  
+ **Bibliothek:** Wird als Ressource in MsCorEE.dll verwendet  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Metadatenstrukturen](../../../../docs/framework/unmanaged-api/metadata/metadata-structures.md)
 - [CorNativeLinkType-Enumeration](../../../../docs/framework/unmanaged-api/metadata/cornativelinktype-enumeration.md)

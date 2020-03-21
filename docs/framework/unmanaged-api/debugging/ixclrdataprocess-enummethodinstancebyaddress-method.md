@@ -1,5 +1,5 @@
 ---
-title: IXCLRDataProcess::EnumMethodInstanceByAddress Method
+title: IXCLRDataProcess::EnumMethodInstanceByAddress-Methode
 ms.date: 01/16/2019
 api.name:
 - IXCLRDataProcess::EnumMethodInstanceByAddress Method
@@ -15,16 +15,16 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 89b89a0cb056a0515bf0859069455a73f62aae4a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: afc5fc377dd45d5e8d4d2d7b3385ca0524df69e1
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67769615"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79176655"
 ---
-# <a name="ixclrdataprocessenummethodinstancebyaddress-method"></a>IXCLRDataProcess::EnumMethodInstanceByAddress Method
+# <a name="ixclrdataprocessenummethodinstancebyaddress-method"></a>IXCLRDataProcess::EnumMethodInstanceByAddress-Methode
 
-Listet die Methodeninstanzen dieses Prozesses, der einen Adressoffset ab.
+Zählt die Methodeninstanzen dieses Prozesses auf, beginnend mit einem Adressoffset.
 
 [!INCLUDE[debugging-api-recommended-note](../../../../includes/debugging-api-recommended-note.md)]
 
@@ -40,23 +40,21 @@ HRESULT EnumMethodInstanceByAddress(
 ## <a name="parameters"></a>Parameter
 
 `handle`\
-[in] Ein Handle für das Auflisten der Methodeninstanzen.
+[in] Ein Handle zum Aufzählen der Methodeninstanzen.
 
 `mod`\
-[out] Die aufgelisteten Methodeninstanz.
+[out] Die aufgezählte Methodeninstanz.
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 
-Die angegebene Methode ist Teil der `IXCLRDataProcess` Schnittstelle, und mit dem 28. Steckplatz der virtuellen Methodentabelle entspricht.
+Die bereitgestellte Methode `IXCLRDataProcess` ist Teil der Schnittstelle und entspricht dem 28. Slot der virtuellen Methodentabelle.
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
-**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).   
-**Header:** Keiner   
-**Bibliothek:** Keiner   
-**.NET Framework-Versionen:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]   
- 
-## <a name="see-also"></a>Siehe auch
+**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).
+**Kopfzeile:** Keine **Bibliothek:** Keine **.NET Framework-Versionen:**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]
+
+## <a name="see-also"></a>Weitere Informationen
 
 - [CLRDataSourceType-Enumeration](clrdatasourcetype-enumeration.md)
 - [Debuggen](index.md)

@@ -2,15 +2,15 @@
 title: Adressierung
 ms.date: 03/30/2017
 ms.assetid: d438e6f2-d0f3-43aa-b259-b51b5bda2e64
-ms.openlocfilehash: 2a737552ef5ea2a8e4544f9ec2c2f84b4b994a75
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 4403ac2bf8e0e5193006f6ec19b24a9bcb00bf35
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74715877"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79183975"
 ---
 # <a name="addressing"></a>Adressierung
-Im Beispiel für die Adressierung werden verschiedene Aspekte und Features von Endpunktadressen veranschaulicht. Das Beispiel basiert auf den ersten [Schritten.](../../../../docs/framework/wcf/samples/getting-started-sample.md) In diesem Beispiel ist der Dienst selbst gehostet. Sowohl der Dienst als auch der Client sind Konsolenanwendungen. Der Dienst definiert mehrere Endpunkte mithilfe einer Kombination aus relativen und absoluten Endpunktadressen.  
+Im Beispiel für die Adressierung werden verschiedene Aspekte und Features von Endpunktadressen veranschaulicht. Das Beispiel basiert auf der [Ersten Schritte](../../../../docs/framework/wcf/samples/getting-started-sample.md). In diesem Beispiel ist der Dienst selbst gehostet. Sowohl der Dienst als auch der Client sind Konsolenanwendungen. Der Dienst definiert mehrere Endpunkte mithilfe einer Kombination aus relativen und absoluten Endpunktadressen.  
   
 > [!NOTE]
 > Die Setupprozedur und die Buildanweisungen für dieses Beispiel befinden sich am Ende dieses Themas.  
@@ -40,7 +40,7 @@ Im Beispiel für die Adressierung werden verschiedene Aspekte und Features von E
           contract="Microsoft.ServiceModel.Samples.ICalculator" />  
 ```  
   
- In diesem Fall ist die relative Adresse leer (""); folglich entspricht die Endpunktadresse der Basisadresse. Die tatsächliche Endpunkt Adresse ist `http://localhost:8000/servicemodelsamples/service`.
+ In diesem Fall ist die relative Adresse leer (""); folglich entspricht die Endpunktadresse der Basisadresse. Die tatsächliche Endpunktadresse ist `http://localhost:8000/servicemodelsamples/service`.
   
  Die zweite Endpunktdefinition gibt ebenfalls eine relative Adresse an, wie in der folgenden Beispielkonfiguration dargestellt.  
   
@@ -53,7 +53,7 @@ Im Beispiel für die Adressierung werden verschiedene Aspekte und Features von E
           contract="Microsoft.ServiceModel.Samples.ICalculator" />  
 ```  
   
- Die relative Adresse "test" ist an die Basisadresse angefügt. Die tatsächliche Endpunkt Adresse ist `http://localhost:8000/servicemodelsamples/service/test`.
+ Die relative Adresse "test" ist an die Basisadresse angefügt. Die tatsächliche Endpunktadresse ist `http://localhost:8000/servicemodelsamples/service/test`.
   
  Die dritte Endpunktdefinition gibt eine absolute Adresse an, wie in der folgenden Beispielkonfiguration dargestellt.  
   
@@ -63,9 +63,9 @@ Im Beispiel für die Adressierung werden verschiedene Aspekte und Features von E
           contract="Microsoft.ServiceModel.Samples.ICalculator" />  
 ```  
   
- Die Basisadresse spielt bei der Adresse keine Rolle. Die tatsächliche Endpunkt Adresse ist `http://localhost:8001/hello/servicemodelsamples`.
+ Die Basisadresse spielt bei der Adresse keine Rolle. Die tatsächliche Endpunktadresse ist `http://localhost:8001/hello/servicemodelsamples`.
   
- Die vierte Endpunktadresse gibt eine absolute Adresse und einen anderen Transport an, nämlich TCP. Die Basisadresse spielt bei der Adresse keine Rolle. Die tatsächliche Endpunkt Adresse ist `net.tcp://localhost:9000/servicemodelsamples/service`.
+ Die vierte Endpunktadresse gibt eine absolute Adresse und einen anderen Transport an, nämlich TCP. Die Basisadresse spielt bei der Adresse keine Rolle. Die tatsächliche Endpunktadresse ist `net.tcp://localhost:9000/servicemodelsamples/service`.
   
 ```xml  
 <!-- The absolute address specified, different transport: -->  
@@ -118,20 +118,20 @@ Press <ENTER> to terminate client.
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>So können Sie das Beispiel einrichten, erstellen und ausführen  
   
-1. Stellen Sie sicher, dass Sie das [einmalige Setup Verfahren für die Windows Communication Foundation Beispiele](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)ausgeführt haben.  
+1. Stellen Sie sicher, dass Sie das [einmalige Setupverfahren für die Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)durchgeführt haben.  
   
 2. Um die C#- oder Visual Basic .NET-Edition der Projektmappe zu erstellen, befolgen Sie die unter [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)aufgeführten Anweisungen.  
   
-3. Um das Beispiel in einer Konfiguration mit einem einzigen Computer oder Computer übergreifend auszuführen, befolgen Sie die Anweisungen unter [Ausführen der Windows Communication Foundation Beispiele](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3. Um das Beispiel in einer Konfiguration mit einem oder einer maschinellen Konfiguration auszuführen, befolgen Sie die Anweisungen unter [Ausführen der Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
     > [!NOTE]
     > Wenn Sie zur Neugenerierung der Konfiguration für dieses Beispiel die Datei Svcutil.exe verwenden, müssen Sie den Endpunktnamen in der Clientkonfiguration so ändern, dass er mit dem Clientcode übereinstimmt.  
   
 > [!IMPORTANT]
 > Die Beispiele sind möglicherweise bereits auf dem Computer installiert. Suchen Sie nach dem folgenden Verzeichnis (Standardverzeichnis), bevor Sie fortfahren.  
->   
+>
 > `<InstallDrive>:\WF_WCF_Samples`  
->   
-> Wenn dieses Verzeichnis nicht vorhanden ist, wechseln Sie zu [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF)-Beispiele für .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) , um alle Windows Communication Foundation (WCF) und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele herunterzuladen. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
->   
+>
+> Wenn dieses Verzeichnis nicht vorhanden ist, wechseln Sie zu [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples for .NET Framework 4,](https://www.microsoft.com/download/details.aspx?id=21459) um alle Windows Communication Foundation (WCF) und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele herunterzuladen. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+>
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Addressing`  
