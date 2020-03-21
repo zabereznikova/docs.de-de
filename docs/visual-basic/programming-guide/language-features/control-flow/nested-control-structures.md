@@ -10,20 +10,20 @@ helpviewer_keywords:
 - structures [Visual Basic], nested control
 - nested control statements [Visual Basic]
 ms.assetid: cf60b061-65d9-44a8-81f2-b0bdccd23a05
-ms.openlocfilehash: 5818b13661fb4415c6f531b741b8a963a80bd2b8
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: b696c79cd3cada4416b3f4b6cdf96f00b89a5a0a
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74348149"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78266923"
 ---
 # <a name="nested-control-structures-visual-basic"></a>Geschachtelte Steuerungsstrukturen (Visual Basic)
-Sie können Steuerungs Anweisungen in andere Steuerungs Anweisungen einfügen, z. b. einen `If...Then...Else`-Block in einer `For...Next`-Schleife. Eine in einer anderen Steuerelement Anweisung *positionierte*Steuerelement Anweisung wird als geschachtelt bezeichnet.  
+Sie können Steueranweisungen in anderen Steueranweisungen `If...Then...Else` platzieren, `For...Next` z. B. in einem Block innerhalb einer Schleife. Eine Steueranweisung, die in einer anderen Steuerelementanweisung platziert wird, soll *geschachtelt*sein.  
   
-## <a name="nesting-levels"></a>Schachtelungs Ebenen  
- Steuerungsstrukturen in Visual Basic können beliebig viele Ebenen aufweisen. Es ist üblich, dass Sie die lesbaren Strukturen besser lesbar machen, indem Sie den Text der einzelnen einrücken. Der integrierte Entwicklungsumgebung (IDE)-Editor führt dies automatisch aus.  
+## <a name="nesting-levels"></a>Nesting-Ebenen  
+ Steuerelementstrukturen in Visual Basic können auf bedienen können, die Sie möchten. Es ist üblich, verschachtelte Strukturen lesbarer zu machen, indem sie den Körper jedes einzelnen einablehnen. Der IDE-Editor (Integrated Development Environment) tut dies automatisch.  
   
- Im folgenden Beispiel fügt die Prozedur `sumRows` die positiven Elemente der einzelnen Zeilen der Matrix hinzu.  
+ Im folgenden Beispiel addiert die Prozedur `sumRows` die positiven Elemente jeder Zeile der Matrix.  
   
 ```vb
 Public Sub sumRows(ByVal a(,) As Double, ByRef r() As Double)  
@@ -39,15 +39,15 @@ Public Sub sumRows(ByVal a(,) As Double, ByRef r() As Double)
 End Sub  
 ```  
   
- Im vorherigen Beispiel schließt die erste `Next`-Anweisung die innere `For` Schleife, und die letzte `Next`-Anweisung schließt die äußere `For` Schleife.  
+ Im vorherigen Beispiel schließt `Next` die erste `For` Anweisung die `Next` innere Schleife und `For` die letzte Anweisung die äußere Schleife.  
   
- Entsprechend werden die `End If` Anweisungen `If` in den Anweisungen für die nächste vorherige `If` automatisch auf die nächste vorherige-Anweisung angewendet. Nested `Do`-Schleifen funktionieren in ähnlicher Weise, wobei die innerste `Loop`-Anweisung mit der innersten `Do`-Anweisung übereinstimmt.  
+ Ebenso gelten die `If` `End If` Anweisungen in geschachtelten Anweisungen `If` automatisch für die nächste vorherige Anweisung. Verschachtelte `Do` Schleifen funktionieren auf ähnliche Weise, `Loop` wobei die `Do` innerste Anweisung der innersten Anweisung entspricht.  
   
 > [!NOTE]
-> Wenn Sie für viele Steuerungsstrukturen auf ein Schlüsselwort klicken, werden alle Schlüsselwörter in der Struktur hervorgehoben. Wenn Sie beispielsweise in einer `If...Then...Else` Konstruktion auf `If` klicken, werden alle Instanzen von `If`, `Then`, `ElseIf`, `Else`und `End If` in der Konstruktion hervorgehoben. Um zum nächsten oder vorherigen hervorgehobenen Schlüsselwort zu wechseln, drücken Sie STRG + UMSCHALT + nach-unten oder STRG + UMSCHALT + nach-oben-Taste.  
+> Wenn Sie bei vielen Steuerelementstrukturen auf ein Schlüsselwort klicken, werden alle Schlüsselwörter in der Struktur hervorgehoben. Wenn Sie beispielsweise `If` auf `If...Then...Else` eine Konstruktion klicken, werden `Else`alle `End If` Instanzen von `If`, `Then`, `ElseIf`, und in der Konstruktion hervorgehoben. Um zum nächsten oder vorherigen hervorgehobenen Schlüsselwort zu wechseln, drücken Sie STRG+UMSCHALT+DOWN ARROW oder STRG+UMSCHALT+UP ARROW.  
   
-## <a name="nesting-different-kinds-of-control-structures"></a>Schachteln verschiedener Arten von Steuerungsstrukturen  
- Sie können eine Art von Steuerelement Struktur in einer anderen Art Schachteln. Im folgenden Beispiel wird ein `With`-Block innerhalb einer `For Each` Schleife und geschachtelte `If` Blöcke innerhalb des `With`-Blocks verwendet.  
+## <a name="nesting-different-kinds-of-control-structures"></a>Verschachteln verschiedener Arten von Steuerungsstrukturen  
+ Sie können eine Art von Steuerelementstruktur innerhalb einer anderen Art verschachteln. Im folgenden Beispiel `With` wird `For Each` ein Block `If` innerhalb einer `With` Schleife und verschachtelte Blöcke innerhalb des Blocks verwendet.  
   
 ```vb
 For Each ctl As System.Windows.Forms.Control In Me.Controls  
@@ -65,15 +65,15 @@ Next ctl
 ```  
   
 ## <a name="overlapping-control-structures"></a>Überlappende Steuerungsstrukturen  
- Sie können die Steuerelement Strukturen nicht überlappen. Dies bedeutet, dass jede geschachtelte Struktur vollständig in der nächsten innersten Struktur enthalten sein muss. Beispielsweise ist die folgende Anordnung ungültig, da die `For`-Schleife beendet wird, bevor der innere `With`-Block beendet wird.  
+ Sie können Steuerelementstrukturen nicht überlappen. Dies bedeutet, dass jede verschachtelte Struktur vollständig in der nächsten innersten Struktur enthalten sein muss. Die folgende Anordnung ist z. `For` B. ungültig, `With` da die Schleife beendet wird, bevor der innere Block beendet wird.  
   
- ![Das Diagramm zeigt ein Beispiel für eine ungültige Schachtelung.](./media/nested-control-structures/example-invalid-nesting.gif) 
+ ![Diagramm, das ein Beispiel für ungültige Verschachtelung zeigt.](./media/nested-control-structures/example-invalid-nesting.gif)
   
- Der Visual Basic-Compiler erkennt solche überlappenden Steuerungsstrukturen und signalisiert einen Kompilierzeitfehler.  
+ Der Visual Basic-Compiler erkennt solche überlappenden Steuerungsstrukturen und signalisiert einen Kompilierungsfehler.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Ablaufsteuerung](../../../../visual-basic/programming-guide/language-features/control-flow/index.md)
+- [Kontrollfluss](../../../../visual-basic/programming-guide/language-features/control-flow/index.md)
 - [Entscheidungsstrukturen](../../../../visual-basic/programming-guide/language-features/control-flow/decision-structures.md)
 - [Schleifenstruktur](../../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)
 - [Weitere Steuerungsstrukturen](../../../../visual-basic/programming-guide/language-features/control-flow/other-control-structures.md)

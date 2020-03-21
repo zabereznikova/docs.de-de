@@ -1,19 +1,19 @@
 ---
-title: Ereignisse
+title: Events
 ms.date: 07/20/2015
 helpviewer_keywords:
 - events [Visual Basic], about events
 - events [Visual Basic]
 ms.assetid: 8fb0353a-e41b-4e23-b78f-da65db832f70
 ms.openlocfilehash: 666e138a747c480ef9e8b593f8c6233105fcdc93
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74345120"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79401424"
 ---
 # <a name="events-visual-basic"></a>Ereignisse (Visual Basic)
-Obwohl Sie ein Visual Studio-Projekt als eine Reihe von Prozeduren visualisieren können, die in einer Sequenz ausgeführt werden, sind die meisten Programme in der Praxis ereignisgesteuert – das bedeutet, dass der Ausführungs Fluss von externen vorkommen, die als *Ereignisse*bezeichnet werden, bestimmt wird.  
+Während Sie ein Visual Studio-Projekt als eine Reihe von Prozeduren visualisieren können, die in einer Sequenz ausgeführt werden, sind die meisten Programme in Wirklichkeit ereignisgesteuert, d. h., der Ablauf der Ausführung wird durch externe Ereignisse bestimmt, die als *Ereignisse*bezeichnet werden.  
   
  Ein Ereignis ist ein Signal, das eine Anwendung darüber informiert, dass etwas Wichtiges geschehen ist. Wenn ein Benutzer beispielsweise auf ein Steuerelement in einem Formular klickt, löst das Formular ein `Click`-Ereignis aus und ruft eine Prozedur auf, die das Ereignis behandelt. Ereignisse ermöglichen zudem die Kommunikation zwischen separaten Tasks. Beispiel: Die Anwendung führt separat von der Hauptanwendung einen Sortiertask aus. Wenn ein Benutzer den Sortiervorgang abbricht, kann die Anwendung ein Cancel-Ereignis senden, das den Abbruch des Sortiervorgangs veranlasst.  
   
@@ -26,7 +26,7 @@ Obwohl Sie ein Visual Studio-Projekt als eine Reihe von Prozeduren visualisieren
  [!code-vb[VbVbalrEvents#24](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#24)]  
   
 ### <a name="raising-events"></a>Auslösen von Ereignissen  
- Ein Ereignis ist mit einer Nachricht vergleichbar, die bekannt gibt, dass etwas Wichtiges geschehen ist. Das Senden der Nachricht wird als *Auslösen* des Ereignisses bezeichnet. In Visual Basic rufen Sie Ereignisse mit der `RaiseEvent`-Anweisung auf, wie im folgenden Beispiel gezeigt:  
+ Ein Ereignis ist mit einer Nachricht vergleichbar, die bekannt gibt, dass etwas Wichtiges geschehen ist. Das Senden der Nachricht wird als *Auslösen* des Ereignisses bezeichnet. In Visual Basic werden Ereignisse `RaiseEvent` mit der Anweisung wie im folgenden Beispiel angezeigt:  
   
  [!code-vb[VbVbalrEvents#25](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#25)]  
   
@@ -38,7 +38,7 @@ Obwohl Sie ein Visual Studio-Projekt als eine Reihe von Prozeduren visualisieren
 ### <a name="event-handlers"></a>Ereignishandler  
  *Ereignishandler* sind Prozeduren, die aufgerufen werden, wenn ein entsprechendes Ereignis eintritt. Jede gültige Unterroutine mit einer übereinstimmenden Signatur kann als Ereignishandler verwendet werden. Funktionen können jedoch nicht als Ereignishandler verwendet werden, da sie keinen Wert an die Ereignisquelle zurückgeben können.  
   
- Visual Basic verwendet eine Standard Benennungs Konvention für Ereignishandler, die den Namen des Ereignis Absenders, einen Unterstrich und den Namen des Ereignisses kombiniert. Das `Click`-Ereignis einer Schaltfläche mit dem Namen `button1` heißt beispielsweise `Sub button1_Click`.  
+ Visual Basic verwendet eine Standardbenennungskonvention für Ereignishandler, die den Namen des Ereignisabsenders, einen Unterstrich und den Namen des Ereignisses kombiniert. Das `Click`-Ereignis einer Schaltfläche mit dem Namen `button1` heißt beispielsweise `Sub button1_Click`.  
   
 > [!NOTE]
 > Beim Definieren von Ereignishandlern für Ihre Ereignisse empfiehlt sich die Verwendung dieser Benennungskonvention, sie ist jedoch nicht erforderlich. Sie können stattdessen auch jeden gültigen Unterroutinennamen verwenden.  
@@ -55,7 +55,7 @@ Obwohl Sie ein Visual Studio-Projekt als eine Reihe von Prozeduren visualisieren
   
 - Sie können eine `WithEvents`-Variable nicht als Objektvariable verwenden. Dies bedeutet, dass Sie die Variable nicht als `Object` deklarieren können, sondern den Klassennamen angeben müssen, wenn Sie die Variable deklarieren.  
   
-- Da freigegebene Ereignisse nicht an Klassen Instanzen gebunden sind, können Sie `WithEvents` nicht verwenden, um freigegebene Ereignisse deklarativ zu verarbeiten. Ebenso können Sie `WithEvents` oder `Handles` nicht zum Behandeln von Ereignissen aus einer `Structure` verwenden. In beiden Fällen können Sie diese Ereignisse mit der `AddHandler`-Anweisung behandeln.  
+- Da freigegebene Ereignisse nicht an Klasseninstanzen gebunden sind, können Sie freigegebene Ereignisse nicht `WithEvents` deklarativ verarbeiten. Ebenso können Sie `WithEvents` oder `Handles` nicht zum Behandeln von Ereignissen aus einer `Structure` verwenden. In beiden Fällen können Sie diese Ereignisse mit der `AddHandler`-Anweisung behandeln.  
   
 - Sie können keine Arrays aus `WithEvents`-Variablen erstellen.  
   
@@ -63,7 +63,7 @@ Obwohl Sie ein Visual Studio-Projekt als eine Reihe von Prozeduren visualisieren
   
  Die `Handles`-Klausel ist zwar das Standardverfahren zum Verknüpfen eines Ereignisses mit einem Ereignishandler, ist aber auf das Verknüpfen von Ereignissen mit Ereignishandlern zur Kompilierzeit beschränkt.  
   
- In einigen Fällen, wie z. b. bei Ereignissen, die Formularen oder Steuerelementen zugeordnet sind, Visual Basic automatisch einen leeren Ereignishandler aus und ordnet ihn einem Ereignis zu. Wenn Sie z. b. auf eine Befehls Schaltfläche in einem Formular im Entwurfs Modus doppelklicken, erstellt Visual Basic einen leeren Ereignishandler und eine `WithEvents` Variable für die Befehls Schaltfläche, wie im folgenden Code gezeigt:  
+ In einigen Fällen, z. B. mit Ereignissen, die Formularen oder Steuerelementen zugeordnet sind, stubiert Visual Basic automatisch einen leeren Ereignishandler und ordnet ihn einem Ereignis zu. Wenn Sie beispielsweise auf eine Befehlsschaltfläche in einem Formular im Entwurfsmodus doppelklicken, erstellt Visual Basic einen leeren Ereignishandler und eine `WithEvents` Variable für die Befehlsschaltfläche, wie im folgenden Code:  
   
  [!code-vb[VbVbalrEvents#26](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#26)]  
   

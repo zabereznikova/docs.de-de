@@ -1,5 +1,5 @@
 ---
-title: Überladungsauflösung
+title: Overload Resolution
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Visual Basic code, procedures
@@ -10,58 +10,58 @@ helpviewer_keywords:
 - signatures [Visual Basic], procedure
 - overloads [Visual Basic], resolution
 ms.assetid: 766115d1-4352-45fb-859f-6063e0de0ec0
-ms.openlocfilehash: 0e69136b1e3015055cad9852bf04151f57558b88
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 84d52bbbfb34c2e5d67ed6a1810ab3e32fafda22
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74352648"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78266871"
 ---
 # <a name="overload-resolution-visual-basic"></a>Überladungsauflösung (Visual Basic)
-Wenn der Visual Basic-Compiler auf einen aufzurufenden Vorgang einer Prozedur stößt, die in mehreren überladenen Versionen definiert ist, muss der Compiler entscheiden, welche der über Ladungen aufgerufen werden soll. Hierzu führen Sie die folgenden Schritte aus:  
+Wenn der Visual Basic-Compiler einen Aufruf einer Prozedur erlässt, die in mehreren überladenen Versionen definiert ist, muss der Compiler entscheiden, welche der Überladungen aufzurufen sind. Dies geschieht, indem die folgenden Schritte ausgeführt werden:  
   
-1. **Barrierefreiheit.** Es entfernt sämtliche über Ladungen mit einer Zugriffsebene, die verhindert, dass der aufrufende Code ihn aufrufen kann.  
+1. **Zugänglichkeit.** Es eliminiert jede Überlastung mit einer Zugriffsebene, die verhindert, dass der aufrufende Code ihn aufruft.  
   
-2. **Anzahl von Parametern.** Es beseitigt alle über Ladungen, die eine andere Anzahl von Parametern definieren, als im-Befehl angegeben sind.  
+2. **Anzahl der Parameter.** Es eliminiert jede Überlastung, die eine andere Anzahl von Parametern definiert, als im Aufruf angegeben werden.  
   
-3. **Parameter Datentypen.** Der Compiler gibt Instanzmethoden als bevorzugte Erweiterungs Methoden an. Wenn eine Instanzmethode gefunden wird, die nur erweiternde Konvertierungen erfordert, um den Prozedur aufrufungen abzugleichen, werden alle Erweiterungs Methoden gelöscht, und der Compiler fährt mit nur den Instanzen Methoden Kandidaten fort. Wenn eine solche Instanzmethode nicht gefunden wird, wird Sie mit der Instanz-und der Erweiterungsmethode fortgesetzt.  
+3. **Parameterdatentypen.** Der Compiler gibt Instanzmethoden die Voreinstellung gegenüber Erweiterungsmethoden. Wenn eine Instanzmethode gefunden wird, die nur Erweiterungskonvertierungen erfordert, um dem Prozeduraufruf zu entsprechen, werden alle Erweiterungsmethoden gelöscht, und der Compiler fährt nur mit den Instanzmethodenkandidaten fort. Wenn keine solche Instanzmethode gefunden wird, wird sie sowohl mit Instanz- als auch mit Erweiterungsmethoden fortgesetzt.  
   
-     In diesem Schritt entfällt jede Überladung, bei der die Datentypen der aufrufenden Argumente nicht in die in der Überladung definierten Parametertypen konvertiert werden können.  
+     In diesem Schritt wird eine Überlastung eliminiert, für die die Datentypen der aufrufenden Argumente nicht in die in der Überladung definierten Parametertypen konvertiert werden können.  
   
-4. **Einschränkende Konvertierungen.** Alle über Ladungen, die eine einschränkende Konvertierung von den aufrufenden Argument Typen in die definierten Parametertypen erfordern, werden eliminiert. Dies gilt unabhängig davon, ob der Schalter für die Typüberprüfung ([Option Strict-Anweisung](../../../../visual-basic/language-reference/statements/option-strict-statement.md)) `On` oder `Off`ist.  
+4. **Einschränkende Konvertierungen.** Es eliminiert alle Überladungen, die eine eingrenzende Konvertierung von den aufrufenden Argumenttypen in die definierten Parametertypen erfordern. Dies gilt unabhängig davon, ob der Typprüfungsschalter ([Option Strict Statement](../../../../visual-basic/language-reference/statements/option-strict-statement.md)) oder `On` `Off`ist.  
   
-5. **Geringste Erweiterung.** Der Compiler betrachtet die verbleibenden über Ladungen paarweise. Für jedes Paar werden die Datentypen der definierten Parameter verglichen. Wenn die Typen in einer der über Ladungen alle zu den entsprechenden Typen in der anderen erweitert werden, entfernt der Compiler den letzteren. Das heißt, dass die Überladung beibehalten wird, die den geringsten Erweiterungs Aufwand erfordert.  
+5. **Geringste Verbreiterung.** Der Compiler betrachtet die verbleibenden Überladungen paarweise. Für jedes Paar werden die Datentypen der definierten Parameter verglichen. Wenn die Typen in einem der Überladungen alle auf die entsprechenden Typen in der anderen erweitern, eliminiert der Compiler letztere. Das heißt, es behält die Überlastung, die die geringste Erweiterung erfordert.  
   
-6. **Einzelner Kandidat.** Die über Ladungen in Paaren werden fortgesetzt, bis nur eine Überladung verbleibt, und der Aufrufen dieser Überladung wird aufgelöst. Wenn der Compiler die über Ladungen nicht auf einen einzelnen Kandidaten reduzieren kann, wird ein Fehler generiert.  
+6. **Einzelkandidat.** Es wird weiterhin Überladungen in Paaren betrachtet, bis nur noch eine Überladung verbleibt, und der Aufruf dieser Überladung wird aufgelöst. Wenn der Compiler die Überladungen nicht auf einen einzelnen Kandidaten reduzieren kann, wird ein Fehler generiert.  
   
- Die folgende Abbildung zeigt den Prozess, der bestimmt, welche einer Reihe von überladenen Versionen aufgerufen werden.  
+ Die folgende Abbildung zeigt den Prozess, der bestimmt, welche einer Gruppe überladener Versionen aufzurufen ist.  
   
- ![Flussdiagramm für Überladungs Auflösungsprozess](./media/overload-resolution/determine-overloaded-version.gif "Auflösen von überladenen Versionen")    
+ ![Flussdiagramm des Überladungsauflösungsprozesses](./media/overload-resolution/determine-overloaded-version.gif "Auflösen zwischen überlasteten Versionen")
   
- Im folgenden Beispiel wird dieser Überladungs Auflösungsprozess veranschaulicht.  
+ Das folgende Beispiel veranschaulicht diesen Überladungsauflösungsprozess.  
   
  [!code-vb[VbVbcnProcedures#62](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#62)]  
   
  [!code-vb[VbVbcnProcedures#63](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#63)]  
   
- Beim ersten Aufrufen entfernt der Compiler die erste Überladung, da der Typ des ersten Arguments (`Short`) auf den Typ des entsprechenden Parameters (`Byte`) beschränkt wird. Anschließend entfällt die dritte Überladung, da jeder Argumenttyp in der zweiten Überladung (`Short` und `Single`) zum entsprechenden Typ in der dritten Überladung (`Integer` und `Single`) erweitert wird. Die zweite Überladung erfordert weniger Erweiterungen, sodass der Compiler Sie für den-Befehl verwendet.  
+ Beim ersten Aufruf eliminiert der Compiler die erste Überladung, da`Short`der Typ des ersten Arguments`Byte`( ) auf den Typ des entsprechenden Parameters ( ) beschränkt wird. Anschließend wird die dritte Überladung eliminiert, da sich`Short` jeder `Single`Argumenttyp in der zweiten Überladung`Integer` ( `Single`und ) auf den entsprechenden Typ in der dritten Überladung ( und ) erweitert. Die zweite Überladung erfordert weniger Erweiterungen, sodass der Compiler sie für den Aufruf verwendet.  
   
- Im zweiten-Befehl kann der Compiler keine der über Ladungen auf der Basis der Einschränkung ausschließen. Die dritte Überladung wird aus demselben Grund wie beim ersten-Befehl entfernt, da Sie die zweite Überladung mit einer geringeren Erweiterung der Argument Typen aufrufen kann. Der Compiler kann jedoch nicht zwischen der ersten und der zweiten Überladung aufgelöst werden. Jede verfügt über einen definierten Parametertyp, der auf den entsprechenden Typ im anderen erweitert wird (`Byte` `Short`, aber `Single` an `Double`). Der Compiler generiert daher einen Fehler bei der Überladungs Auflösung.  
+ Beim zweiten Aufruf kann der Compiler keine der Überladungen auf der Grundlage der Verengung eliminieren. Die dritte Überladung wird aus dem gleichen Grund wie beim ersten Aufruf eliminiert, da die zweite Überladung mit weniger Erweiterung der Argumenttypen aufrufen kann. Der Compiler kann jedoch nicht zwischen der ersten und zweiten Überladung auflösen. Jeder verfügt über einen definierten Parametertyp, der sich`Byte` `Short`auf `Single` den `Double`entsprechenden Typ im anderen ( nach , aber nach ) erweitert. Der Compiler generiert daher einen Fehler bei der Überladungsauflösung.  
   
 ## <a name="overloaded-optional-and-paramarray-arguments"></a>Überladene optionale und ParamArray-Argumente  
- Wenn zwei über Ladungen einer Prozedur identische Signaturen aufweisen, mit dem Unterschied, dass der letzte Parameter in einem und [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md) in der anderen als [optional](../../../../visual-basic/language-reference/modifiers/optional.md) deklariert wird, löst der Compiler einen Aufrufen dieser Prozedur wie folgt auf:  
+ Wenn zwei Überladungen einer Prozedur identische Signaturen haben, mit der Ausnahme, dass der letzte Parameter in einem als [Optional](../../../../visual-basic/language-reference/modifiers/optional.md) und in der anderen [als ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md) deklariert wird, löst der Compiler einen Aufruf dieser Prozedur wie folgt auf:  
   
-|Wenn der-Befehl das letzte Argument als|Der Compiler löst den Aufrufen der-Überladung auf, die das letzte Argument deklariert, als|  
+|Wenn der Aufruf das letzte Argument als|Der Compiler löst den Aufruf der Überladung auf und deklariert das letzte Argument als|  
 |---|---|  
-|Kein Wert (Argument ausgelassen)|`Optional`|  
+|Kein Wert (Argument weggelassen)|`Optional`|  
 |Ein einzelner Wert|`Optional`|  
-|Mindestens zwei Werte in einer durch Trennzeichen getrennten Liste|`ParamArray`|  
-|Ein Array beliebiger Längen (einschließlich eines leeren Arrays)|`ParamArray`|  
+|Zwei oder mehr Werte in einer durch Kommas getrennten Liste|`ParamArray`|  
+|Ein Array beliebiger Länge (einschließlich eines leeren Arrays)|`ParamArray`|  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Optionale Parameter](./optional-parameters.md)
-- [Parameterarrays](./parameter-arrays.md)
+- [Parameter-Arrays](./parameter-arrays.md)
 - [Prozedurüberladung](./procedure-overloading.md)
 - [Problembehandlung bei Prozeduren](./troubleshooting-procedures.md)
 - [Gewusst wie: Definieren mehrerer Versionen einer Prozedur](./how-to-define-multiple-versions-of-a-procedure.md)
