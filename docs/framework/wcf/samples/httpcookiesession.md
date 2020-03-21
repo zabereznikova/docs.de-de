@@ -2,17 +2,17 @@
 title: HttpCookieSession
 ms.date: 03/30/2017
 ms.assetid: 101cb624-8303-448a-a3af-933247c1e109
-ms.openlocfilehash: 9e47959314ba161ff07a37f3d45088d038557c9e
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 6b7a72fdd814aa9d2e0f125cf4dbdaf63ba753e5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74711601"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79183629"
 ---
 # <a name="httpcookiesession"></a>HttpCookieSession
 In diesem Beispiel wird das Erstellen eines benutzerdefinierten Protokollkanals für die Verwendung von HTTP-Cookies für die Sitzungsverwaltung veranschaulicht. Dieser Kanal ermöglicht die Kommunikation zwischen Windows Communication Foundation (WCF)-Diensten und ASMX-Clients oder zwischen WCF-Clients und ASMX-Diensten.  
   
- Wenn ein Client eine Webmethode in einem Sitzungs basierten ASMX-Webdienst aufruft, bewirkt die ASP.net-Engine Folgendes:  
+ Wenn ein Client eine Webmethode in einem sitzungsbasierten ASMX-Webdienst aufruft, führt das ASP.NET-Modul die folgenden Schritte aus:  
   
 - Generiert eine eindeutige ID (Sitzungs-ID).  
   
@@ -26,11 +26,11 @@ In diesem Beispiel wird das Erstellen eines benutzerdefinierten Protokollkanals 
   
 > [!IMPORTANT]
 > Die Beispiele sind möglicherweise bereits auf dem Computer installiert. Suchen Sie nach dem folgenden Verzeichnis (Standardverzeichnis), bevor Sie fortfahren.  
->   
+>
 > `<InstallDrive>:\WF_WCF_Samples`  
->   
-> Wenn dieses Verzeichnis nicht vorhanden ist, wechseln Sie zu [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF)-Beispiele für .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) , um alle Windows Communication Foundation (WCF) und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele herunterzuladen. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
->   
+>
+> Wenn dieses Verzeichnis nicht vorhanden ist, wechseln Sie zu [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples for .NET Framework 4,](https://www.microsoft.com/download/details.aspx?id=21459) um alle Windows Communication Foundation (WCF) und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele herunterzuladen. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+>
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Channels\HttpCookieSession`  
   
 ## <a name="httpcookiesession-channel-message-exchange-pattern"></a>HttpCookieSession-Nachrichtenaustauschmuster für Kanal  
@@ -66,13 +66,13 @@ In diesem Beispiel wird das Erstellen eines benutzerdefinierten Protokollkanals 
     Dictionary<string, IReplySessionChannel> channelMapping;  
     ```  
   
- Die `HttpCookieReplySessionChannel`-Klasse implementiert <xref:System.ServiceModel.Channels.IReplySessionChannel>. In höheren Ebenen des Kanalstapels wird die <xref:System.ServiceModel.Channels.IReplyChannel.ReceiveRequest%2A>-Methode aufgerufen, um Anforderungen für diese Sitzung zu lesen. Jeder Sitzungskanal verfügt über eine private Meldungswarteschlange, die vom Dienstkanal aufgefüllt wird.  
+ Die `HttpCookieReplySessionChannel` Klasse <xref:System.ServiceModel.Channels.IReplySessionChannel>implementiert . In höheren Ebenen des Kanalstapels wird die <xref:System.ServiceModel.Channels.IReplyChannel.ReceiveRequest%2A>-Methode aufgerufen, um Anforderungen für diese Sitzung zu lesen. Jeder Sitzungskanal verfügt über eine private Meldungswarteschlange, die vom Dienstkanal aufgefüllt wird.  
   
 ```csharp  
 InputQueue<RequestContext> requestQueue;  
 ```  
   
- Wenn die <xref:System.ServiceModel.Channels.IReplyChannel.ReceiveRequest%2A>-Methode aufgerufen wird und sich keine Meldungen in der Meldungswarteschlange befinden, wartet der Kanal für einen angegebenen Zeitraum und beendet sich dann selbst. Dadurch werden die Sitzungskanäle bereinigt, die für nicht-WCF-Clients erstellt wurden.  
+ Wenn die <xref:System.ServiceModel.Channels.IReplyChannel.ReceiveRequest%2A>-Methode aufgerufen wird und sich keine Meldungen in der Meldungswarteschlange befinden, wartet der Kanal für einen angegebenen Zeitraum und beendet sich dann selbst. Dadurch werden die Sitzungskanäle bereinigt, die für Nicht-WCF-Clients erstellt wurden.  
   
  Mit `channelMapping` wird `ReplySessionChannels` nachverfolgt. Außerdem wird der zugrunde liegende `innerChannel` erst geschlossen, wenn alle akzeptierten Kanäle geschlossen wurden. So kann `HttpCookieReplySessionChannel` über die Lebensdauer von `HttpCookieReplySessionChannelListener` hinaus vorhanden sein. Außerdem besteht nicht die Gefahr, dass der Listener durch die Garbage Collection entfernt wird, da die akzeptierten Kanäle über den `OnClosed`-Rückruf einen Verweis auf den Listener beibehalten.  
   
@@ -80,7 +80,7 @@ InputQueue<RequestContext> requestQueue;
  Der entsprechende Clientkanal befindet sich in der `HttpCookieSessionChannelFactory`-Klasse. Bei der Kanalerstellung schließt die Kanalfactory den inneren Anforderungskanal mit einem `HttpCookieRequestSessionChannel` ein. Die `HttpCookieRequestSessionChannel`-Klasse leitet die Aufrufe des zugrunde liegenden Anforderungskanals weiter. Wenn der Client den Proxy schließt, sendet `HttpCookieRequestSessionChannel` eine Meldung an den Dienst, mit der angegeben wird, dass der Kanal geschlossen wird. So kann der Dienstkanalstapel den verwendeten Sitzungskanal ordnungsgemäß beenden.  
   
 ## <a name="binding-and-binding-element"></a>Bindung und Bindungselement  
- Nachdem Sie den Dienst und die Client Kanäle erstellt haben, besteht der nächste Schritt darin, Sie in die WCF-Laufzeit zu integrieren. Kanäle werden über Bindungen und Bindungs Elemente für WCF verfügbar gemacht. Eine Bindung besteht aus einem oder mehreren Bindungselementen. WCF bietet mehrere System definierte Bindungen. beispielsweise BasicHttpBinding oder WSHttpBinding. Die `HttpCookieSessionBindingElement`-Klasse enthält die Implementierung des Bindungselements. Sie überschreibt die Methoden zur Kanallistener- und Kanalfactoryerstellung, um die erforderlichen Instanziierungen des Kanallisteners und der Kanalfactory auszuführen.  
+ Nach dem Erstellen der Dienst- und Clientkanäle besteht der nächste Schritt darin, sie in die WCF-Laufzeit zu integrieren. Kanäle werden WCF durch Bindungen und Bindungselemente zur Unterlage gemacht. Eine Bindung besteht aus einem oder mehreren Bindungselementen. WCF bietet mehrere systemdefinierte Bindungen; z. B. BasicHttpBinding oder WSHttpBinding. Die `HttpCookieSessionBindingElement`-Klasse enthält die Implementierung des Bindungselements. Sie überschreibt die Methoden zur Kanallistener- und Kanalfactoryerstellung, um die erforderlichen Instanziierungen des Kanallisteners und der Kanalfactory auszuführen.  
   
  Im Beispiel werden Richtlinienassertionen für die Dienstbeschreibung verwendet. So können im Beispiel die Kanalanforderungen für andere Clients veröffentlicht werden, die den Dienst verwenden können. Dieses Bindungselement veröffentlicht beispielsweise Richtlinienassertionen, damit potenzielle Clients wissen, dass Sitzungen unterstützt werden. Da im Beispiel die `ExchangeTerminateMessage`-Eigenschaft in der Bindungselementkonfiguration aktiviert wird, werden die erforderlichen Assertionen hinzugefügt, um zu zeigen, dass der Dienst eine zusätzliche Meldungsaustauschaktion zum Beenden der Sitzungskommunikation unterstützt. Clients können diese Aktion dann verwenden. Im folgenden WSDL-Code werden die aus `HttpCookieSessionBindingElement` erstellten Richtlinienassertionen veranschaulicht.  
   
@@ -104,14 +104,14 @@ InputQueue<RequestContext> requestQueue;
  Der Abschnitt `HttpCookieSessionBindingElementSection` ist ein <xref:System.ServiceModel.Configuration.BindingElementExtensionElement>, das die `HttpCookieSessionBindingElement` für das Konfigurationssystem verfügbar macht. Mit wenigen Überschreibungen werden der Konfigurationsabschnittsname, der Typ des Bindungselements und das Erstellen des Bindungselements definiert. Danach kann der Erweiterungsabschnitt wie folgt in einer Konfigurationsdatei registriert werden:  
   
 ```xml  
-<configuration>        
-    <system.serviceModel>        
-      <extensions>          
-        <bindingElementExtensions>            
-          <add name="httpCookieSession"   
+<configuration>
+    <system.serviceModel>
+      <extensions>
+        <bindingElementExtensions>
+          <add name="httpCookieSession"
                type=  
-"Microsoft.ServiceModel.Samples.HttpCookieSessionBindingElementElement,   
-                    HttpCookieSessionExtension, Version=1.0.0.0,   
+"Microsoft.ServiceModel.Samples.HttpCookieSessionBindingElementElement,
+                    HttpCookieSessionExtension, Version=1.0.0.0,
                     Culture=neutral, PublicKeyToken=null"/>  
         </bindingElementExtensions >  
       </extensions>  
@@ -124,13 +124,13 @@ InputQueue<RequestContext> requestQueue;
           <httpTransport allowCookies="true" />  
         </binding>  
       </customBinding>  
-      </bindings>        
-    </system.serviceModel>    
+      </bindings>
+    </system.serviceModel>
 </configuration>  
 ```  
   
 ## <a name="test-code"></a>Testcode  
- Testcode für die Verwendung dieses Beispieltransports ist in den Client- und Dienstverzeichnissen verfügbar. Sie besteht aus zwei Tests – bei einem Test wird eine Bindung verwendet, bei der `allowCookies` auf dem Client auf `true` festgelegt ist. Im zweiten Test wird das explizite Herunterfahren (mit abschließenden Meldungsaustausch) für die Bindung aktiviert.  
+ Testcode für die Verwendung dieses Beispieltransports ist in den Client- und Dienstverzeichnissen verfügbar. Es besteht aus zwei Tests – `allowCookies` ein `true` Test verwendet eine Bindung mit Satz auf auf dem Client. Im zweiten Test wird das explizite Herunterfahren (mit abschließenden Meldungsaustausch) für die Bindung aktiviert.  
   
  Wenn Sie das Beispiel ausführen, sollten Sie folgende Ausgabe erhalten:  
   
@@ -155,14 +155,14 @@ Press <ENTER> to terminate client.
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>So können Sie das Beispiel einrichten, erstellen und ausführen  
   
-1. Installieren Sie ASP.NET 4,0 mit dem folgenden Befehl.  
+1. Installieren Sie ASP.NET 4.0 mit dem folgenden Befehl.  
   
     ```console  
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable  
     ```  
   
-2. Stellen Sie sicher, dass Sie das [einmalige Setup Verfahren für die Windows Communication Foundation Beispiele](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)ausgeführt haben.  
+2. Stellen Sie sicher, dass Sie das [einmalige Setupverfahren für die Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)durchgeführt haben.  
   
-3. Befolgen Sie die Anweisungen unter Erstellen [der Windows Communication Foundation Beispiele](../../../../docs/framework/wcf/samples/building-the-samples.md), um die Lösung zu erstellen.  
+3. Um die Lösung zu erstellen, befolgen Sie die Anweisungen unter [Erstellen der Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-4. Um das Beispiel in einer Konfiguration mit einem einzigen Computer oder Computer übergreifend auszuführen, befolgen Sie die Anweisungen unter [Ausführen der Windows Communication Foundation Beispiele](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+4. Um das Beispiel in einer Konfiguration mit einem oder einer maschinellen Konfiguration auszuführen, befolgen Sie die Anweisungen unter [Ausführen der Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/running-the-samples.md).  

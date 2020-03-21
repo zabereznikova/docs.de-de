@@ -1,5 +1,5 @@
 ---
-title: Binden des DataGrid-Steuer Elements an eine Datenquelle
+title: Binden von DataGrid-Steuerelementen an eine Datenquelle
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -14,26 +14,26 @@ helpviewer_keywords:
 - bound controls [Windows Forms]
 - data-bound controls [Windows Forms], DataGrid
 ms.assetid: 128cdb07-dfd3-4d60-9d6a-902847667c36
-ms.openlocfilehash: 2634a6bd8ace36bcf7a49120162474a8c04b2b83
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 42514c6a0ab9cf912a32b13675a069976632ece5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76746687"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79182246"
 ---
 # <a name="how-to-bind-the-windows-forms-datagrid-control-to-a-data-source"></a>Gewusst wie: Binden des DataGrid-Steuerelements in Windows Forms an eine Datenquelle
 > [!NOTE]
 > Obwohl das <xref:System.Windows.Forms.DataGridView>-Steuerelement das <xref:System.Windows.Forms.DataGrid>-Steuerelement ersetzt und funktionell erweitert, wird das <xref:System.Windows.Forms.DataGrid>-Steuerelement sowohl aus Gründen der Abwärtskompatibilität als auch, falls gewünscht, für die zukünftige Verwendung beibehalten. Weitere Informationen finden Sie unter [Unterschiede zwischen dem DataGridView-Steuerelement und dem DataGrid-Steuerelement in Windows Forms](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).  
   
- Das Windows Forms <xref:System.Windows.Forms.DataGrid>-Steuerelement wurde speziell zum Anzeigen von Informationen aus einer Datenquelle entwickelt. Sie binden das Steuerelement zur Laufzeit, indem Sie die <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A>-Methode aufrufen. Obwohl Sie Daten aus einer Vielzahl von Datenquellen anzeigen können, handelt es sich bei den meisten Quellen um Datasets und Datenansichten.  
+ Das Windows <xref:System.Windows.Forms.DataGrid> Forms-Steuerelement wurde speziell für die Anzeige von Informationen aus einer Datenquelle entwickelt. Sie binden das Steuerelement zur <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> Laufzeit, indem Sie die Methode aufrufen. Obwohl Sie Daten aus einer Vielzahl von Datenquellen anzeigen können, sind die typischsten Quellen Datasets und Datenansichten.  
   
-### <a name="to-data-bind-the-datagrid-control-programmatically"></a>So binden Sie das DataGrid-Steuerelement Programm gesteuert ein  
+### <a name="to-data-bind-the-datagrid-control-programmatically"></a>So binden Sie das DataGrid-Steuerelement programmgesteuert  
   
-1. Schreiben Sie Code, um das DataSet auszufüllen.  
+1. Schreiben Sie Code, um das Dataset zu füllen.  
   
-     Wenn es sich bei der Datenquelle um ein DataSet oder eine Datenansicht handelt, die auf einer Datasettabelle basiert, fügen Sie dem Formular Code hinzu, um das DataSet zu füllen.  
+     Wenn es sich bei der Datenquelle um ein Dataset oder eine Datenansicht handelt, die auf einer Datasettabelle basiert, fügen Sie dem Formular Code hinzu, um das Dataset auszufüllen.  
   
-     Der genaue Code, den Sie verwenden, hängt davon ab, wo das DataSet Daten erhält. Wenn das Dataset direkt aus einer Datenbank aufgefüllt wird, wird in der Regel die `Fill`-Methode eines Daten Adapters aufgerufen, wie im folgenden Beispiel gezeigt, das ein DataSet mit dem Namen `DsCategories1`auffüllt:  
+     Der genaue Code, den Sie verwenden, hängt davon ab, wo das Dataset Daten abgibt. Wenn das Dataset direkt aus einer Datenbank aufgefüllt wird, rufen Sie in der Regel die `Fill` Methode eines `DsCategories1`Datenadapters auf, wie im folgenden Beispiel, das ein Dataset mit dem Namen :  
   
     ```vb  
     sqlDataAdapter1.Fill(DsCategories1)  
@@ -47,7 +47,7 @@ ms.locfileid: "76746687"
     sqlDataAdapter1->Fill(dsCategories1);  
     ```  
   
-     Wenn das DataSet von einem XML-Webdienst ausgefüllt wird, erstellen Sie in der Regel eine Instanz des Diensts im Code und rufen dann eine seiner Methoden auf, um ein DataSet zurückzugeben. Anschließend führen Sie das DataSet aus dem XML-Webdienst in Ihr lokales DataSet zusammen. Im folgenden Beispiel wird gezeigt, wie Sie eine Instanz eines XML-Webdiensts namens `CategoriesService`erstellen, die `GetCategories`-Methode aufrufen und das resultierende DataSet in einem lokalen Dataset mit dem Namen `DsCategories1`zusammenführen können:  
+     Wenn das Dataset aus einem XML-Webdienst gefüllt wird, erstellen Sie in der Regel eine Instanz des Dienstes im Code und rufen dann eine der Methoden auf, um ein Dataset zurückzugeben. Anschließend führen Sie das Dataset aus dem XML-Webdienst in Ihrem lokalen Dataset zusammen. Das folgende Beispiel zeigt, wie Sie eine Instanz `CategoriesService`eines `GetCategories` XML-Webdiensts mit dem Namen `DsCategories1`erstellen können, seine Methode aufrufen und das resultierende Dataset in einem lokalen Dataset namens :  
   
     ```vb  
     Dim ws As New MyProject.localhost.CategoriesService()  
@@ -62,18 +62,18 @@ ms.locfileid: "76746687"
     ```  
   
     ```cpp  
-    MyProject::localhost::CategoriesService^ ws =   
+    MyProject::localhost::CategoriesService^ ws =
        new MyProject::localhost::CategoriesService();  
     ws->Credentials = System::Net::CredentialCache::DefaultCredentials;  
     dsCategories1->Merge(ws->GetCategories());  
     ```  
   
-2. Nennen Sie die <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A>-Methode des <xref:System.Windows.Forms.DataGrid>-Steuer Elements, und übergeben Sie dabei die Datenquelle und einen Datenmember. Wenn Sie einen Datenmember nicht explizit übergeben müssen, übergeben Sie eine leere Zeichenfolge.  
+2. Rufen <xref:System.Windows.Forms.DataGrid> Sie die <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> Methode des Steuerelements auf und übergeben Sie sie an die Datenquelle und ein Datenelement. Wenn Sie einen Datenmember nicht explizit übergeben müssen, übergeben Sie eine leere Zeichenfolge.  
   
     > [!NOTE]
-    > Wenn Sie das Raster zum ersten Mal binden, können Sie die Eigenschaften des Steuer Elements <xref:System.Windows.Forms.DataGrid.DataSource%2A> und <xref:System.Windows.Forms.DataGrid.DataMember%2A> festlegen. Sie können diese Eigenschaften jedoch nicht zurücksetzen, sobald Sie festgelegt wurden. Daher wird empfohlen, immer die <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A>-Methode zu verwenden.  
+    > Wenn Sie das Raster zum ersten Mal binden, können <xref:System.Windows.Forms.DataGrid.DataSource%2A> <xref:System.Windows.Forms.DataGrid.DataMember%2A> Sie die Steuerelemente und Eigenschaften festlegen. Sie können diese Eigenschaften jedoch nicht zurücksetzen, nachdem sie festgelegt wurden. Daher wird empfohlen, dass Sie <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> immer die Methode verwenden.  
   
-     Das folgende Beispiel zeigt, wie Sie Programm gesteuert eine Bindung an die Customers-Tabelle in einem DataSet mit dem Namen "`DsCustomers1`" ausführen können:  
+     Das folgende Beispiel zeigt, wie Sie programmgesteuert an die `DsCustomers1`Customers-Tabelle in einem Dataset namens :  
   
     ```vb  
     DataGrid1.SetDataBinding(DsCustomers1, "Customers")  
@@ -87,7 +87,7 @@ ms.locfileid: "76746687"
     dataGrid1->SetDataBinding(dsCustomers1, "Customers");  
     ```  
   
-     Wenn die Customers-Tabelle die einzige Tabelle im DataSet ist, können Sie das Raster wahlweise wie folgt binden:  
+     Wenn die Customers-Tabelle die einzige Tabelle im Dataset ist, können Sie das Raster alternativ auf diese Weise binden:  
   
     ```vb  
     DataGrid1.SetDataBinding(DsCustomers1, "")  
@@ -101,11 +101,11 @@ ms.locfileid: "76746687"
     dataGrid1->SetDataBinding(dsCustomers1, "");  
     ```  
   
-3. Optionale Fügen Sie dem Raster die entsprechenden Tabellen Stile und Spalten Stile hinzu. Wenn keine Tabellen Stile vorhanden sind, wird die Tabelle angezeigt, jedoch mit minimaler Formatierung und allen sichtbaren Spalten.  
+3. (Optional) Fügen Sie dem Raster die entsprechenden Tabellenstile und Spaltenstile hinzu. Wenn keine Tabellenformatvorlagen vorhanden sind, wird die Tabelle angezeigt, jedoch mit minimaler Formatierung und mit allen spaltensichtbaren.  
   
 ## <a name="see-also"></a>Weitere Informationen
 
 - [Übersicht über das DataGrid-Steuerelement](datagrid-control-overview-windows-forms.md)
 - [Gewusst wie: Hinzufügen von Tabellen und Spalten zum DataGrid-Steuerelement in Windows Forms](how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md)
 - [DataGrid-Steuerelement](datagrid-control-windows-forms.md)
-- [Windows Forms-Datenbindung](../windows-forms-data-binding.md)
+- [Datenbindung in Web Forms](../windows-forms-data-binding.md)

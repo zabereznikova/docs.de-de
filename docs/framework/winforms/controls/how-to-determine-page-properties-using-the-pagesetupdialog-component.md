@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Bestimmen von Seiteneigenschaften mit der PageSetupDialog-Komponente'
+title: 'Gewusst wie: Bestimmen von Seiteneigenschaften mit der PageSetupDialog-Komponente'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - page setup
 - PageSetupDialog component
 ms.assetid: 6dae05bc-c0fd-4357-bb93-841a1631d98f
-ms.openlocfilehash: 306e0dbf7fb819d1214d7d5d93d335b5d2db75e6
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: 8a015c199193dfd9c43bec53cc93cbf9dc201413
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66053619"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79142042"
 ---
-# <a name="how-to-determine-page-properties-using-the-pagesetupdialog-component"></a>Vorgehensweise: Bestimmen von Seiteneigenschaften mit der PageSetupDialog-Komponente
+# <a name="how-to-determine-page-properties-using-the-pagesetupdialog-component"></a>Gewusst wie: Bestimmen von Seiteneigenschaften mit der PageSetupDialog-Komponente
 Mithilfe der [PageSetupDialog](pagesetupdialog-component-windows-forms.md) -Komponente können Benutzer das Layout, die Papiergröße und weitere Optionen für das Seitenlayout festlegen.  
   
  Sie müssen dazu eine Instanz der <xref:System.Drawing.Printing.PrintDocument> -Klasse angeben. Dabei handelt es sich um das Dokument, das gedruckt werden soll. Darüber hinaus benötigen Benutzer einen lokal oder über ein Netzwerk auf dem Computer installierten Drucker, da die <xref:System.Windows.Forms.PageSetupDialog> -Komponente darauf aufbauend die Formatierungsoptionen bestimmt, die dem Benutzer angezeigt werden.  
@@ -30,7 +30,7 @@ Mithilfe der [PageSetupDialog](pagesetupdialog-component-windows-forms.md) -Komp
   
      Im folgenden Beispiel öffnet der <xref:System.Windows.Forms.Button> -Ereignishandler des <xref:System.Windows.Forms.Control.Click> -Steuerelements eine Instanz der <xref:System.Windows.Forms.PageSetupDialog> -Komponente. Ein vorhandenes Dokument wird in der <xref:System.Windows.Forms.PageSetupDialog.Document%2A> -Eigenschaft angegeben, und seine <xref:System.Drawing.Printing.PageSettings.Color%2A?displayProperty=nameWithType> -Eigenschaft wird auf `false`festgelegt.  
   
-     Im Beispiel wird vorausgesetzt, das Formular enthält ein <xref:System.Windows.Forms.Button> -Steuerelement, ein <xref:System.Drawing.Printing.PrintDocument> Komponente, die mit dem Namen `myDocument`, und ein <xref:System.Windows.Forms.PageSetupDialog> Komponente.  
+     Im Beispiel wird davon <xref:System.Windows.Forms.Button> ausgegangen, <xref:System.Drawing.Printing.PrintDocument> dass `myDocument`das <xref:System.Windows.Forms.PageSetupDialog> Formular über ein Steuerelement, eine Komponente mit dem Namen und eine Komponente verfügt.  
   
     ```vb  
     Private Sub Button1_Click(ByVal sender As System.Object, _  
@@ -76,19 +76,19 @@ Mithilfe der [PageSetupDialog](pagesetupdialog-component-windows-forms.md) -Komp
        }  
     ```  
   
-     (Visual C# und visuelle C++) Platzieren Sie den folgenden Code im Konstruktor des Formulars, um den Ereignishandler zu registrieren.  
+     (Visual C- und Visual C++) Platzieren Sie den folgenden Code im Konstruktor des Formulars, um den Ereignishandler zu registrieren.  
   
     ```csharp  
     this.button1.Click += new System.EventHandler(this.button1_Click);  
     ```  
   
     ```cpp  
-    this->button1->Click += gcnew   
+    this->button1->Click += gcnew
        System::EventHandler(this, &Form1::button1_Click);  
     ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Windows.Forms.PageSetupDialog>
-- [Vorgehensweise: Erstellen von Druckaufträgen in Standard-Windows Forms](../advanced/how-to-create-standard-windows-forms-print-jobs.md)
+- [Gewusst wie: Erstellen von standardmäßigen Druckaufträgen in Windows Forms](../advanced/how-to-create-standard-windows-forms-print-jobs.md)
 - [PageSetupDialog-Komponente](pagesetupdialog-component-windows-forms.md)

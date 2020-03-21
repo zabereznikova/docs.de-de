@@ -7,18 +7,18 @@ dev_langs:
 helpviewer_keywords:
 - data contracts [WCF], ordering members
 ms.assetid: 0658a47d-b6e5-4ae0-ba72-ababc3c6ff33
-ms.openlocfilehash: d717673139ba810c1593e5c60e488537426f1f64
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 2a5d7430953bdc31644e92b9207cd2865209cce5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64754408"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79185200"
 ---
 # <a name="data-member-order"></a>Datenmember-Reihenfolge
-Bei einigen Anwendungen ist es hilfreich, die Reihenfolge zu kennen, in der die Daten aus verschiedenen Datenmembern gesendet oder erwartet werden (wie z.&amp;#160;B. die Reihenfolge, in der die Daten im serialisierten XML angezeigt werden). Manchmal kann es auch notwendig sein, diese Reihenfolge zu ändern. In diesem Thema werden die Sortierungsregeln beschrieben.  
+Bei einigen Anwendungen ist es hilfreich, die Reihenfolge zu kennen, in der die Daten aus verschiedenen Datenmembern gesendet oder erwartet werden (wie z.&#160;B. die Reihenfolge, in der die Daten im serialisierten XML angezeigt werden). Manchmal kann es auch notwendig sein, diese Reihenfolge zu ändern. In diesem Thema werden die Sortierungsregeln beschrieben.  
   
 ## <a name="basic-rules"></a>Grundregeln  
- Zu den grundlegenden Regeln für die Sortierung von Daten gehören u.&amp;#160;a.:  
+ Zu den grundlegenden Regeln für die Sortierung von Daten gehören u.&#160;a.:  
   
 - Wenn ein Datenvertragstyp Teil einer Vererbungshierarchie ist, stehen die Datenmember der Basistypen immer am Anfang der Reihenfolge.  
   
@@ -39,13 +39,13 @@ Bei einigen Anwendungen ist es hilfreich, die Reihenfolge zu kennen, in der die 
 ```xml  
 <DerivedType>  
     <!-- Zebra is a base data member, and appears first. -->  
-    <zebra/>   
+    <zebra/>
   
     <!-- Cat has no Order, appears alphabetically first. -->  
     <cat/>  
   
    <!-- Dog has no Order, appears alphabetically last. -->  
-    <dog/>   
+    <dog/>
   
     <!-- Bird is the member with the smallest Order value -->  
     <bird/>  
@@ -58,12 +58,12 @@ Bei einigen Anwendungen ist es hilfreich, die Reihenfolge zu kennen, in der die 
   
     <!-- Antelope is the member with the highest Order value. Note that   
     Order=2 is skipped -->  
-     <antelope/>   
+     <antelope/>
 </DerivedType>  
 ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Runtime.Serialization.DataContractAttribute>
-- [Datenvertragsäquivalenz](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md)
+- [Data Contract Equivalence](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md)
 - [Verwenden von Datenverträgen](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)

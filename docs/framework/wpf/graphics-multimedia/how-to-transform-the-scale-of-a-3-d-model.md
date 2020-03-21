@@ -1,19 +1,19 @@
 ---
-title: 'Vorgehensweise: Transformieren der Skalierung eines 3D-Modells'
+title: 'Gewusst wie: Transformieren der Skalierung eines 3D-Modells'
 ms.date: 03/30/2017
 helpviewer_keywords:
-- scaling [WPF], 3-D objects
-- 3-D objects [WPF], scaling
+- scaling [WPF], 3D objects
+- 3D objects [WPF], scaling
 ms.assetid: f3fdfe33-f7dc-44b0-84a5-e43b89947f35
-ms.openlocfilehash: 6d668de08201d819ce9f8752bedf6c388a6bc718
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: be41a0e10929912c1b54bf7140d743d9453199bf
+ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61769329"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80111984"
 ---
-# <a name="how-to-transform-the-scale-of-a-3-d-model"></a>Vorgehensweise: Transformieren der Skalierung eines 3D-Modells
-Dieses Beispiel zeigt, wie Sie ein 3D-Objekt zu skalieren. Um ein 3D-Objekt skalieren zu können, verwendet eine <xref:System.Windows.Media.Media3D.ScaleTransform3D>. Die <xref:System.Windows.Media.Media3D.ScaleTransform3D.ScaleX%2A>, <xref:System.Windows.Media.Media3D.ScaleTransform3D.ScaleY%2A>, und <xref:System.Windows.Media.Media3D.ScaleTransform3D.ScaleZ%2A> Eigenschaften Größe des Elements geändert, um den Faktor, die Sie angeben. Z. B. eine <xref:System.Windows.Media.Media3D.ScaleTransform3D.ScaleX%2A> Wert von 1,5 wird ein Objekt auf 150 Prozent der ursprünglichen Breite gestreckt. Ein <xref:System.Windows.Media.Media3D.ScaleTransform3D.ScaleY%2A> Wert von 0,5 verringert sich die Höhe eines Objekts, aufgerufen werden, um 50 Prozent. Der folgende Code zeigt die Verwendung einer <xref:System.Windows.Media.Media3D.ScaleTransform3D> als Transformation für einen <xref:System.Windows.Media.Media3D.GeometryModel3D>.  
+# <a name="how-to-transform-the-scale-of-a-3d-model"></a>Gewusst wie: Transformieren der Skalierung eines 3D-Modells
+In diesem Beispiel wird gezeigt, wie ein 3D-Objekt skaliert wird. Um ein 3D-Objekt <xref:System.Windows.Media.Media3D.ScaleTransform3D>zu skalieren, verwenden Sie eine . Die <xref:System.Windows.Media.Media3D.ScaleTransform3D.ScaleX%2A> <xref:System.Windows.Media.Media3D.ScaleTransform3D.ScaleY%2A>, <xref:System.Windows.Media.Media3D.ScaleTransform3D.ScaleZ%2A> und Eigenschaften ändern die Größe des Elements um den angegebenen Faktor. Ein <xref:System.Windows.Media.Media3D.ScaleTransform3D.ScaleX%2A> Wert von 1,5 dehnt z. B. ein Objekt auf 150 Prozent seiner ursprünglichen Breite aus. Bei <xref:System.Windows.Media.Media3D.ScaleTransform3D.ScaleY%2A> einem Wert von 0,5 wird die Höhe eines Objekts um 50 Prozent verkleinert. Der folgende Code <xref:System.Windows.Media.Media3D.ScaleTransform3D> zeigt die Verwendung <xref:System.Windows.Media.Media3D.GeometryModel3D>einer als Transformation für eine .  
   
  [!code-xaml[3DGallery_snip#ScaleTransform3DExampleInline1](~/samples/snippets/csharp/VS_Snippets_Wpf/3DGallery_snip/CS/ScaleTransform3DExample.xaml#scaletransform3dexampleinline1)]  
   
@@ -22,8 +22,8 @@ Dieses Beispiel zeigt, wie Sie ein 3D-Objekt zu skalieren. Um ein 3D-Objekt skal
   
  [!code-xaml[3DGallery_snip#ScaleTransform3DExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/3DGallery_snip/CS/ScaleTransform3DExample.xaml#scaletransform3dexamplewholepage)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Animieren von 3D-Übersetzungen](how-to-animate-3-d-translations.md)
 - [Erstellen einer 3D-Szene](how-to-create-a-3-d-scene.md)
-- [Übersicht über 3D-Grafiken](3-d-graphics-overview.md)
+- [3D-Grafikübersicht](3-d-graphics-overview.md)

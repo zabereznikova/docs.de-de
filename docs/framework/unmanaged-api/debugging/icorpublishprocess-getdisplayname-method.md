@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7c0af9e9-a73f-41aa-a685-b21c439e059d
 topic_type:
 - apiref
-ms.openlocfilehash: 7f2e644340a2ec7fe807830422b927ce811ddcf9
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 77e801b048709949c384f642fc0d0ecb5d7eb512
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76790563"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79178386"
 ---
 # <a name="icorpublishprocessgetdisplayname-method"></a>ICorPublishProcess::GetDisplayName-Methode
 Ruft den vollständigen Pfad der ausführbaren Datei für den Prozess ab, auf den von diesem [ICorPublishProcess](icorpublishprocess-interface.md)verwiesen wird.  
@@ -29,32 +29,32 @@ Ruft den vollständigen Pfad der ausführbaren Datei für den Prozess ab, auf de
   
 ```cpp  
 HRESULT GetDisplayName (  
-    [in]  ULONG32                    cchName,   
+    [in]  ULONG32                    cchName,
     [out] ULONG32                    *pcchName,  
-    [out, size_is(cchName), length_is(*pcchName)]   
+    [out, size_is(cchName), length_is(*pcchName)]
         WCHAR                        *szName  
 );  
 ```  
   
-## <a name="parameters"></a>Parameters  
+## <a name="parameters"></a>Parameter  
  `cchName`  
  [in] Die Größe des `szName`-Arrays.  
   
  `pcchName`  
- vorgenommen Die Anzahl der breit Zeichen, die im `szName` Array zurückgegeben werden.  
+ [out] Die Anzahl der im `szName` Array zurückgegebenen breiten Zeichen.  
   
  `szName`  
- vorgenommen Ein Array zum Speichern des Namens, einschließlich des vollständigen Pfads der ausführbaren Datei. Der Name wird mit Null beendet.  
+ [out] Ein Array zum Speichern des Namens, einschließlich des vollständigen Pfads, der ausführbaren Datei. Der Name ist null-terminated.  
   
-## <a name="requirements"></a>-Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Corpub. idl, Corpub. h  
+ **Kopfzeile:** CorPub.idl, CorPub.h  
   
  **Bibliothek:** CorGuids.lib  
   
- **.NET Framework Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [ICorPublishProcess-Schnittstelle](icorpublishprocess-interface.md)

@@ -2,12 +2,12 @@
 title: Zwischenspeichern von Abfrageplänen (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 90b0c685-5ef2-461b-98b4-c3c0a2b253c7
-ms.openlocfilehash: 020b2b3f08262fc15ace8603c26e2d6c059baafd
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: a0e84f40aed2cff146e4e203cca73a9110de0e2f
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72319405"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79149985"
 ---
 # <a name="query-plan-caching-entity-sql"></a>Zwischenspeichern von Abfrageplänen (Entity SQL)
 Bei jeder Ausführung einer Abfrage sucht die Abfragepipeline in ihrem Abfrageplancache, ob genau diese Abfrage bereits kompiliert und verfügbar ist. Wenn das der Fall ist, wird der zwischengespeicherte Plan erneut verwendet, statt einen neuen Plan zu erstellen. Wird keine Übereinstimmung im Abfrageplancache gefunden, wird die Abfrage kompiliert und zwischengespeichert. Eine Abfrage wird durch ihren [!INCLUDE[esql](../../../../../../includes/esql-md.md)]-Text und ihre Parameterauflistung (Namen und Typen) identifiziert. Bei allen Textvergleichen wird die Groß- und Kleinschreibung berücksichtigt.  
@@ -25,7 +25,7 @@ Bei jeder Ausführung einer Abfrage sucht die Abfragepipeline in ihrem Abfragepl
  ```csharp
  var query = "SELECT sp.SalesYTD FROM AdventureWorksEntities.SalesPerson as sp WHERE sp.EmployeeID = " + employeeTextBox.Text;  
  ```
- 
+
  Wenn Sie dynamisch generierte Abfragen verwenden, erwägen Sie die Deaktivierung der Zwischenspeicherung von Abfrageplänen, um den unnötigen Speicherverbrauch für Cacheeinträge zu vermeiden, die wahrscheinlich nicht wiederverwendet werden.  
   
  Das Zwischenspeichern von Abfrageplänen für statische und parametrisierte Abfragen kann Leistungsvorteile bieten. Das folgende Beispiel enthält eine statische Abfrage:  
@@ -50,6 +50,6 @@ var query = "SELECT sp.SalesYTD FROM AdventureWorksEntities.SalesPerson as sp";
   
 - Änderungen an Text in Kommentaren.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Übersicht über Entity SQL](entity-sql-overview.md)

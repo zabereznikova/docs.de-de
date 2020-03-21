@@ -10,22 +10,22 @@ helpviewer_keywords:
 - application resources, creating files
 - resource files, creating
 ms.assetid: 6c5ad891-66a0-4e7a-adcf-f41863ba6d8d
-ms.openlocfilehash: 92e52fb130adecd6acdbeb8eac8d624d3c291094
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: b679539be1aeb593124eb35a235bcc578decb4c0
+ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73129980"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80111776"
 ---
 # <a name="create-resource-files-for-net-apps"></a>Erstellen von Ressourcendateien für .NET-Apps
 
 Sie können Ressourcen (z. B. Zeichenfolgen, Bilder oder Objektdaten) in Ressourcendateien einschließen, um sie für die Anwendung leicht verfügbar zu machen. .NET Framework bietet fünf Möglichkeiten, Ressourcendateien zu erstellen:
 
-- Erstellen Sie eine Textdatei, die Zeichenfolgenressourcen enthält. Sie können die Textdatei mithilfe des [Resource File Generator (Resgen.exe)](../tools/resgen-exe-resource-file-generator.md) in eine binäre Ressourcendatei (.resources) konvertieren. Anschließend können Sie die binäre Ressourcendatei mit einem Sprachcompiler in eine ausführbare Datei der Anwendung oder eine Anwendungsbibliothek einbetten, oder Sie können sie mithilfe des [Assembly Linker (Al.exe)](../tools/al-exe-assembly-linker.md) in eine Satellitenassembly einbetten. Weitere Informationen finden Sie im Abschnitt [Ressourcen in Textdateien](creating-resource-files-for-desktop-apps.md#TextFiles).
+- Erstellen Sie eine Textdatei, die Zeichenfolgenressourcen enthält. Sie können die Textdatei mithilfe des [Resource File Generator (Resgen.exe)](../tools/resgen-exe-resource-file-generator.md) in eine binäre Ressourcendatei (.resources) konvertieren. Sie können die binäre Ressourcendatei dann mithilfe eines Sprachcompilers in eine ausführbare Anwendungsdatei oder eine Anwendungsbibliothek einbetten oder sie mithilfe von [Assembly Linker (Al.exe)](../tools/al-exe-assembly-linker.md)in eine Satellitenassembly einbetten. Weitere Informationen finden Sie im Abschnitt [Ressourcen in Textdateien](creating-resource-files-for-desktop-apps.md#TextFiles).
 
 - Erstellen Sie eine XML-Ressourcendatei (.resx), die Zeichenfolgen-, Bild- oder Objektdaten enthält. Sie können die RESX-Datei mithilfe des [Resource File Generator (Resgen.exe)](../tools/resgen-exe-resource-file-generator.md) in eine binäre Ressourcendatei (.resources) konvertieren. Anschließend können Sie die binäre Ressourcendatei mit einem Sprachcompiler in eine ausführbare Datei der Anwendung oder eine Anwendungsbibliothek einbetten, oder Sie können sie mithilfe des [Assembly Linker (Al.exe)](../tools/al-exe-assembly-linker.md) in eine Satellitenassembly einbetten. Weitere Informationen finden Sie im Abschnitt [Ressourcen in RESX-Dateien](creating-resource-files-for-desktop-apps.md#ResxFiles).
 
-- Erstellen Sie programmgesteuert mithilfe von Typen im <xref:System.Resources>-Namespace eine XML-Ressourcendatei (.resx). Sie können eine RESX-Datei erstellen, ihre Ressourcen auflisten und bestimmte Ressourcen nach dem Namen abrufen. Weitere Informationen finden Sie im Thema [Programmgesteuertes Arbeiten mit RESX-Dateien](working-with-resx-files-programmatically.md).
+- Erstellen Sie programmgesteuert mithilfe von Typen im <xref:System.Resources>-Namespace eine XML-Ressourcendatei (.resx). Sie können eine RESX-Datei erstellen, ihre Ressourcen auflisten und bestimmte Ressourcen nach dem Namen abrufen. Weitere Informationen finden Sie unter [Programmgesteuertes Arbeiten mit RESX-Dateien](working-with-resx-files-programmatically.md).
 
 - Erstellen Sie programmgesteuert eine binäre Ressourcendatei (.resources). Anschließend können Sie die Datei mit einem Sprachcompiler in eine ausführbare Datei der Anwendung oder eine Anwendungsbibliothek einbetten, oder Sie können sie mithilfe des [Assembly Linker (Al.exe)](../tools/al-exe-assembly-linker.md) in eine Satellitenassembly einbetten. Weitere Informationen finden Sie im Abschnitt [Ressourcen in RESOURCES-Dateien](creating-resource-files-for-desktop-apps.md#ResourcesFiles).
 
@@ -76,7 +76,7 @@ HelpMenuName=Help
 EmptyString=
 ```
 
- Ab NET Framework 4.5 und in allen Versionen von .NET Core unterstützen Textdateien die bedingte Kompilierung mit den Konstrukten `#ifdef`*Symbol*... `#endif` und `#if !`*Symbol*... `#endif`. Sie können dann den `/define`-Schalter mit dem [Resource File Generator (Resgen.exe)](../tools/resgen-exe-resource-file-generator.md) verwenden, um Symbole zu definieren. Jede Ressource erfordert ein eigenes Konstrukt, entweder `#ifdef`*Symbol*... `#endif` oder `#if !`*Symbol*... `#endif`. Wenn Sie eine `#ifdef`-Anweisung verwenden und *Symbol* definiert ist, wird die zugeordnete Ressource in die RESOURCES-Datei einbezogen; andernfalls wird sie nicht eingeschlossen. Wenn Sie eine `#if !`-Anweisung verwenden und *Symbol* nicht definiert ist, wird die zugeordnete Ressource in die RESOURCES-Datei einbezogen; andernfalls wird sie nicht eingeschlossen.
+ Ab .NET Framework 4.5 und in allen Versionen von .NET `#ifdef`Core unterstützen Textdateien die bedingte Kompilierung mit dem *Symbol*... `#endif` und `#if !` *Symbol*... `#endif` Konstrukte. Sie können dann den `/define`-Schalter mit dem [Resource File Generator (Resgen.exe)](../tools/resgen-exe-resource-file-generator.md) verwenden, um Symbole zu definieren. Jede Ressource benötigt `#ifdef`ein eigenes *Symbol*... `#endif` oder `#if !` *Symbol*... `#endif` Konstrukt. Wenn Sie eine `#ifdef`-Anweisung verwenden und *Symbol* definiert ist, wird die zugeordnete Ressource in die RESOURCES-Datei einbezogen; andernfalls wird sie nicht eingeschlossen. Wenn Sie eine `#if !`-Anweisung verwenden und *Symbol* nicht definiert ist, wird die zugeordnete Ressource in die RESOURCES-Datei einbezogen; andernfalls wird sie nicht eingeschlossen.
 
  Kommentare sind in Textdateien optional, und am Anfang einer Zeile wird entweder ein Semikolon (;) vorangestellt oder ein Nummernzeichen (#). Zeilen, die Kommentare enthalten sind, können an beliebiger Stelle in der Datei eingefügt werden. Kommentare sind nicht in einer mit dem [Resource File Generator (Resgen.exe)](../tools/resgen-exe-resource-file-generator.md) erstellten kompilierten RESOURCES-Datei enthalten.
 
@@ -92,13 +92,13 @@ CancelButton=Cancel
 
  Wenn die Textdatei doppelte Vorkommen von *name* enthält, zeigt der [Resource File Generator (Resgen.exe)](../tools/resgen-exe-resource-file-generator.md) eine Warnung an und ignoriert den zweiten Namen.
 
- der *Wert* darf keine neuen Zeilenzeichen enthalten, Sie können jedoch Escapezeichen im C-Stil verwenden, wie z. b. `\n`, um eine neue Zeile darzustellen, und `\t`, um eine Registerkarte darzustellen. Sie können auch einen umgekehrten Schrägstrich einschließen, wenn er mit Escapezeichen versehen ist (z. b. "\\\\"). Darüber hinaus ist eine leere Zeichenfolge zulässig.
+ *Wert* darf keine neuen Zeilenzeichen enthalten, aber Sie können `\n` Escape-Zeichen im `\t` C-Sprachstil verwenden, z. B. um eine neue Zeile darzustellen und eine Registerkarte darzustellen. Sie können auch ein umgekehrtes Schrägstrichzeichen einschließen,\\\\wenn es mit einem Escapezeichen versehen wird (z. B. " "). Darüber hinaus ist eine leere Zeichenfolge zulässig.
 
- Sie sollten Ressourcen im Textdateiformat mit UTF-8-Codierung oder UTF-16-Codierung entweder in Little-Endian oder Big-Endian-Bytereihenfolge speichern. Obwohl der [Resource File Generator (Resgen.exe)](../tools/resgen-exe-resource-file-generator.md) TXT-Dateien in RESOURCES-Dateien konvertiert, behandelt er Dateien standardmäßig als UTF-8. Wenn "Resgen.exe" eine als UTF-16 codierte Datei erkennen soll, müssen Sie am Anfang der Datei eine Unicode-Bytereihenfolgemarkierung (U+FEFF) angeben.
+ Speichern Sie Ressourcen im Textdateiformat, indem Sie die UTF-8-Codierung oder die UTF-16-Codierung in Little-Endian- oder Big-Endian-Bytereihenfolge verwenden. Obwohl der [Resource File Generator (Resgen.exe)](../tools/resgen-exe-resource-file-generator.md) TXT-Dateien in RESOURCES-Dateien konvertiert, behandelt er Dateien standardmäßig als UTF-8. Wenn "Resgen.exe" eine als UTF-16 codierte Datei erkennen soll, müssen Sie am Anfang der Datei eine Unicode-Bytereihenfolgemarkierung (U+FEFF) angeben.
 
  Um eine Ressourcendatei im Textformat in eine .NET-Assembly einzubetten, müssen Sie die Datei mit dem [Resource File Generator (Resgen.exe)](../tools/resgen-exe-resource-file-generator.md) in eine binäre Ressourcendatei (.resources) konvertieren. Sie können die RESOURCES-Datei dann mit einem Sprachcompiler in eine .NET-Assembly oder mit dem [Assembly Linker (Al.exe)](../tools/al-exe-assembly-linker.md) in eine Satellitenassembly einbetten.
 
- Im folgenden Beispiel wird eine Ressourcendatei im Textformat mit dem Namen "GreetingResources.txt" für eine einfache Konsolenanwendung "Hello World" verwendet. Die Textdatei definiert zwei Zeichenfolgen, `prompt` und `greeting`, die den Benutzer zur Eingabe des Namens auffordern und einen Gruß anzeigen.
+ Im folgenden Beispiel wird eine Ressourcendatei im Textformat mit dem Namen "GreetingResources.txt" für eine einfache Konsolenanwendung "Hello World" verwendet. Die Textdatei definiert zwei `prompt` `greeting`Zeichenfolgen und , die den Benutzer auffordern, seinen Namen einzugeben und eine Begrüßung anzuzeigen.
 
 ```text
 # GreetingResources.txt
@@ -186,7 +186,7 @@ Mit der <xref:System.Resources.ResourceWriter?displayProperty=nameWithType>-Klas
 > [!NOTE]
 > Verwenden Sie Ressourcendateien nicht, um Kennwörter, sicherheitsrelevante Informationen oder private Daten zu speichern.
 
- Im folgenden Beispiel wird programmgesteuert eine RESOURCES-Datei mit dem Namen "CarResources.resources" erstellt, mit der sechs Zeichenfolgen, ein Symbol und zwei anwendungsdefinierte Objekte (zwei `Automobile`-Objekte) gespeichert werden. Beachten Sie, dass die im Beispiel definierte und instanziierte `Automobile`-Klasse mit dem <xref:System.SerializableAttribute>-Attribut markiert wird, wodurch die Klasse von der binären Serialisierungsformatierung beibehalten werden kann.
+ Im folgenden Beispiel wird programmgesteuert eine RESOURCES-Datei mit dem Namen "CarResources.resources" erstellt, mit der sechs Zeichenfolgen, ein Symbol und zwei anwendungsdefinierte Objekte (zwei `Automobile`-Objekte) gespeichert werden. Die `Automobile` Klasse, die im Beispiel definiert und instanziiert wird, wird mit dem <xref:System.SerializableAttribute> Attribut markiert, wodurch sie vom binären Serialisierungsformatar beibehalten werden kann.
 
  [!code-csharp[Conceptual.Resources.Resources#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.resources/cs/resources1.cs#1)]
  [!code-vb[Conceptual.Resources.Resources#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.resources/vb/resources1.vb#1)]
@@ -202,8 +202,8 @@ Wenn Sie lokalisierte Ressourcen hinzufügen, geben Sie ihnen den gleichen Stamm
 
 Zur Kompilierzeit werden von Visual Studio zuerst die RESX-Dateien in einem Projekt in binäre Ressourcendateien (.resources) konvertiert und im Verzeichnis *obj* des Projekts in einem Unterverzeichnis gespeichert. Visual Studio bettet alle Ressourcendateien ein, die keine lokalisierten Ressourcen in der vom Projekt generierten Hauptassembly enthalten. Wenn Ressourcendateien lokalisierte Ressourcen enthalten, werden diese von Visual Studio für jede lokalisierte Kultur in separate Satellitenassemblys eingebettet. Anschließend wird jede Satellitenassembly in einem Verzeichnis gespeichert, dessen Name der lokalisierten Kultur entspricht. Lokalisierte englische Ressourcen (USA) werden z. B. in einer Satellitenassembly im Unterverzeichnis "en-US" gespeichert.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Resources>
 - [Ressourcen in Desktop-Apps](index.md)
-- [Packen und Bereitstellen von Ressourcen](packaging-and-deploying-resources-in-desktop-apps.md)
+- [Packaging and Deploying Resources](packaging-and-deploying-resources-in-desktop-apps.md)

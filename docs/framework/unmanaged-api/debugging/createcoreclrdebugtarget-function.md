@@ -16,31 +16,31 @@ helpviewer_keywords:
 ms.assetid: 1cf4ca8e-d9bb-4633-9adf-5e24315bf87a
 topic_type:
 - apiref
-ms.openlocfilehash: a7fed8cb70785f0ccfcadf1e16181db303ac98e0
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 0b210f105495fa3f5595adbcb0805e1d1fb62310
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76789196"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79179220"
 ---
 # <a name="createcoreclrdebugtarget-function"></a>CreateCoreClrDebugTarget-Funktion
-Erstellt eine Verbindung mit einem debuggerproxy, der auf einem Remote Computer ausgeführt wird, und gibt ein [icoreclrdebugtarget](icoreclrdebugtarget-interface.md) -Objekt zurück, das zum Abfragen von laufenden Prozessen und geladenen Laufzeiten auf dem Remote Computer verwendet werden kann.  
+Erstellt eine Verbindung zu einem Debuggerproxy, der auf einem Remotecomputer ausgeführt wird, und gibt ein [ICoreClrDebugTarget-Objekt](icoreclrdebugtarget-interface.md) zurück, das zum Abfragen ausgeführter Prozesse und geladener Laufzeiten auf dem Remotecomputer verwendet werden kann.  
   
 ## <a name="syntax"></a>Syntax  
   
 ```cpp  
 HRESULT CreateCoreClrDebugTarget (  
-       [in]  DWORD    dwAddress,   
+       [in]  DWORD    dwAddress,
        [out] ICoreClrDebugTarget**     ppTarget  
 );  
 ```  
   
-## <a name="parameters"></a>Parameters  
+## <a name="parameters"></a>Parameter  
  `dwAddress`  
  [in] IPv4-Adresse eines Remotezielcomputers.  
   
  `ppTarget`  
- vorgenommen Zeiger auf einen Zeiger auf ein [icoreclrdebugtarget](icoreclrdebugtarget-interface.md) -Objekt, das erstellt wird.  
+ [out] Zeiger auf einen Zeiger auf ein [ICoreClrDebugTarget-Objekt,](icoreclrdebugtarget-interface.md) das erstellt wird.  
   
 ## <a name="return-value"></a>Rückgabewert  
  S_OK  
@@ -52,11 +52,11 @@ HRESULT CreateCoreClrDebugTarget (
  E_FAIL (oder andere E_-Rückgabecodes)  
  Andere Fehler.  
   
-## <a name="requirements"></a>-Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Coreclrremotedebugginginterfaces. h  
+ **Kopfzeile:** CoreClrRemoteDebuggingSchnittstellen.h  
   
- **Bibliothek:** mscordbi_macx86. dll  
+ **Bibliothek:** mscordbi_macx86.dll  
   
- **.NET Framework Versionen:** 3,5 SP1
+ **.NET Framework-Versionen:** 3.5 SP1

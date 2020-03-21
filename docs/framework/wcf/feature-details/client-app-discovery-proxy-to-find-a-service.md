@@ -2,15 +2,15 @@
 title: 'Vorgehensweise: Implementieren einer Clientanwendung, die den Suchproxy zum Suchen nach einem Dienst verwendet'
 ms.date: 03/30/2017
 ms.assetid: 62b41a75-cf40-4c52-a842-a5f1c70e247f
-ms.openlocfilehash: 30db2bfc6191b1703f6d63ec2a925df42ecc93e4
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 33ee5d2c9206b16b1667abd5f6d6c811ff955969
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69963875"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79185382"
 ---
 # <a name="how-to-implement-a-client-application-that-uses-the-discovery-proxy-to-find-a-service"></a>Vorgehensweise: Implementieren einer Clientanwendung, die den Suchproxy zum Suchen nach einem Dienst verwendet
-Dieses Thema ist das dritte von drei Themen, in denen erläutert wird, wie sie einen Suchproxy implementieren. Im vorherigen Thema, [Vorgehensweise: Implementieren Sie einen sichtbaren Dienst, der beim suchproxy](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)registriert ist, haben Sie einen WCF-Dienst implementiert, der sich selbst beim suchproxy registriert. In diesem Thema erstellen Sie einen WCF-Client, der den suchproxy verwendet, um den WCF-Dienst zu suchen.  
+Dieses Thema ist das dritte von drei Themen, in denen erläutert wird, wie sie einen Suchproxy implementieren. Im vorherigen [Thema, How to: Implementieren eines Ermittlungsdienstes, der mit dem Ermittlungsproxy registriert](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)wird, haben Sie einen WCF-Dienst implementiert, der sich selbst beim Ermittlungsproxy registriert. In diesem Thema erstellen Sie einen WCF-Client, der den Ermittlungsproxy verwendet, um den WCF-Dienst zu finden.  
   
 ### <a name="implement-the-client"></a>Implementieren des Clients  
   
@@ -62,7 +62,7 @@ Dieses Thema ist das dritte von drei Themen, in denen erläutert wird, wie sie e
     }  
     ```  
   
-5. Fügen Sie der `Main` -Methode folgenden Code hinzu.  
+5. Fügen Sie der `Main` -Methode den folgenden Code hinzu.  
   
     ```csharp  
     public static void Main()  
@@ -79,7 +79,7 @@ Dieses Thema ist das dritte von drei Themen, in denen erläutert wird, wie sie e
 
         try  
         {  
-            // Search for services that implement ICalculatorService              
+            // Search for services that implement ICalculatorService
             FindResponse findResponse = discoveryClient.Find(new FindCriteria(typeof(ICalculatorService)));  
 
             Console.WriteLine("Found {0} ICalculatorService endpoint(s).", findResponse.Endpoints.Count);  
@@ -101,7 +101,7 @@ Dieses Thema ist das dritte von drei Themen, in denen erläutert wird, wie sie e
     }  
     ```  
   
- Sie haben das Implementieren der Clientanwendung abgeschlossen. Fortfahren mit [der Vorgehensweise: Testen Sie den suchproxy](../../../../docs/framework/wcf/feature-details/how-to-test-the-discovery-proxy.md).  
+ Sie haben das Implementieren der Clientanwendung abgeschlossen. Weiter mit [Gewusst wie: Testen des Ermittlungsproxys](../../../../docs/framework/wcf/feature-details/how-to-test-the-discovery-proxy.md).  
   
 ## <a name="example"></a>Beispiel  
  Dies ist die vollständige Codeauflistung für dieses Thema.  
@@ -226,7 +226,7 @@ namespace Microsoft.Samples.Discovery
   
             try  
             {  
-                // Find ICalculatorService endpoints              
+                // Find ICalculatorService endpoints
                 FindResponse findResponse = discoveryClient.Find(new FindCriteria(typeof(ICalculatorService)));  
   
                 Console.WriteLine("Found {0} ICalculatorService endpoint(s).", findResponse.Endpoints.Count);  
@@ -281,8 +281,8 @@ namespace Microsoft.Samples.Discovery
 }  
 ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Übersicht über die WCF-Suche](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)
-- [Vorgehensweise: Implementieren eines Ermittlungs Proxys](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md)
-- [Vorgehensweise: Implementieren Sie einen sichtbaren Dienst, der sich beim suchproxy registriert.](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)
+- [Vorgehensweise: Implementieren eines Suchproxys](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md)
+- [Vorgehensweise: Implementieren eines ermittelbaren Diensts, der beim Suchproxy registriert ist](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)

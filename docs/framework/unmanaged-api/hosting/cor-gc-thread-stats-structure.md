@@ -14,45 +14,45 @@ helpviewer_keywords:
 ms.assetid: 01f9a59b-7679-4d42-9ced-4a8981625c3d
 topic_type:
 - apiref
-ms.openlocfilehash: 37da471aaa8e9f802a8430d7b3289b375ff1b40a
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 64e0c466edcd8863244e6ed184c18422b5f66875
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73136984"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79178268"
 ---
 # <a name="cor_gc_thread_stats-structure"></a>COR_GC_THREAD_STATS-Struktur
-Enthält Thread bezogene Statistiken für Garbage Collection.  
+Enthält Pro-Thread-Statistiken zur Garbage Collection.  
   
 ## <a name="syntax"></a>Syntax  
   
 ```cpp  
 typedef struct _COR_GC_THREAD_STATS {  
-    ULONGLONG  PerThreadAllocation;   
-    ULONG      Flags;   
+    ULONGLONG  PerThreadAllocation;
+    ULONG      Flags;
 } COR_GC_THREAD_STATS;  
 ```  
   
-## <a name="members"></a>Member  
+## <a name="members"></a>Members  
   
 |Member|Beschreibung|  
 |------------|-----------------|  
-|`PerThreadAllocation`|Die Anzahl von Bytes im Arbeitsspeicher, die auf dem Thread zugeordnet ist, der der aktuellen `COR_GC_THREAD_STATS` Instanz zugeordnet ist. Diese Zahl wird bei jedem Garbage Collection der Generation 0 (null) auf 0 (null) gelöscht.|  
-|`Flags`|Die Anzahl der Bytes, die bei der letzten Garbage Collection auf eine höhere Generation herauf gestuft wurden.|  
+|`PerThreadAllocation`|Die Anzahl der Bytes an Arbeitsspeicher, die `COR_GC_THREAD_STATS` dem Thread zugewiesen sind, der der aktuellen Instanz zugeordnet ist. Diese Zahl wird jedes Mal auf Null gelöscht, wenn eine Garbage Collection von Generation Null stattfindet.|  
+|`Flags`|Die Anzahl der Bytes, die bei der letzten Garbage Collection auf eine höhere Generation heraufgestuft wurden.|  
   
-## <a name="remarks"></a>Hinweise  
- [ICLRTask:: GetMemStats](../../../../docs/framework/unmanaged-api/hosting/iclrtask-getmemstats-method.md) übernimmt einen Output-Parameter vom Typ `COR_GC_THREAD_STATS`.  
+## <a name="remarks"></a>Bemerkungen  
+ [ICLRTask::GetMemStats](../../../../docs/framework/unmanaged-api/hosting/iclrtask-getmemstats-method.md) nimmt einen Ausgabeparameter vom Typ `COR_GC_THREAD_STATS`an.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Gchost. idl  
+ **Kopfzeile:** GCHost.idl  
   
- **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
+ **Bibliothek:** Als Ressource in MSCorEE.dll enthalten  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Hosten von Strukturen](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)
 - [IHostTask-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)

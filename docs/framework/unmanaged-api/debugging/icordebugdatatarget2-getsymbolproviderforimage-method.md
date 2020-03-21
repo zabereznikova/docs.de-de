@@ -2,12 +2,12 @@
 title: ICorDebugDataTarget2::GetSymbolProviderForImage-Methode
 ms.date: 03/30/2017
 ms.assetid: b7c0a2f0-e904-43b3-98e1-d669e8a589e8
-ms.openlocfilehash: bada60295c3a9b3a702aa674e06f8f5cf6ac0a24
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 500d36b414be686071990a6e1b40dd8759d02ae9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76788825"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79178934"
 ---
 # <a name="icordebugdatatarget2getsymbolproviderforimage-method"></a>ICorDebugDataTarget2::GetSymbolProviderForImage-Methode
 Gibt anhand der Basisadresse des Moduls den Symbol-Anbieter für ein Modul aus.  
@@ -16,33 +16,33 @@ Gibt anhand der Basisadresse des Moduls den Symbol-Anbieter für ein Modul aus.
   
 ```cpp  
 HRESULT GetSymbolProviderForImage(  
-    [in] CORDB_ADDRESS imageBaseAddress,   
+    [in] CORDB_ADDRESS imageBaseAddress,
     [out] ICorDebugSymbolProvider **ppSymProvider  
 );  
 ```  
   
-## <a name="parameters"></a>Parameters  
+## <a name="parameters"></a>Parameter  
  `imageBaseAddress`  
- in Ein [CORDB_ADDRESS](../../../../docs/framework/unmanaged-api/common-data-types-unmanaged-api-reference.md) Wert, der die Basisadresse eines Moduls darstellt.  
+ [in] Ein [CORDB_ADDRESS](../../../../docs/framework/unmanaged-api/common-data-types-unmanaged-api-reference.md) Wert, der die Basisadresse eines Moduls darstellt.  
   
  `ppSymProvider`  
- vorgenommen Ein Zeiger auf die Adresse eines [icorentbugsymbolprovider](icordebugsymbolprovider-interface.md) -Objekts.  
+ [out] Ein Zeiger auf die Adresse eines [ICorDebugSymbolProvider-Objekts.](icordebugsymbolprovider-interface.md)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
   
 > [!NOTE]
 > Diese Methode ist nur mit .NET Native verfügbar.  
   
-## <a name="requirements"></a>-Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   
  **Bibliothek:** CorGuids.lib  
   
- **.NET Framework Versionen:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **.NET Framework-Versionen:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [ICorDebugDataTarget2-Schnittstelle](icordebugdatatarget2-interface.md)
-- [Debuggen von Schnittstellen](debugging-interfaces.md)
+- [Debugschnittstellen](debugging-interfaces.md)

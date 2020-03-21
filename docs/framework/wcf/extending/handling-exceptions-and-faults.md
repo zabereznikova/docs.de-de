@@ -2,30 +2,30 @@
 title: Behandeln von Ausnahmen und Fehlern
 ms.date: 03/30/2017
 ms.assetid: a64d01c6-f221-4f58-93e5-da4e87a5682e
-ms.openlocfilehash: 2886463510a2237834529e1ec61c73ec7251e621
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: 7fa045dc6fd6e31eccf29e22ae2e212f59dfaec0
+ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75937722"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80111867"
 ---
 # <a name="handling-exceptions-and-faults"></a>Behandeln von Ausnahmen und Fehlern
 Mit Ausnahmen werden Fehlfunktionen lokal in der Dienst- oder der Clientimplementierung übermittelt. Fehler übermitteln hingegen Fehlfunktionen über die Grenzen eines Dienstes hinaus, z.&#160;B. vom Server zum Client und umgekehrt. Darüber hinaus verwenden Transportkanäle häufig transportspezifische Mechanismen, um Fehlfunktionen auf Transportebene zu übermitteln. Der HTTP-Transport verwendet z.&#160;B. Statuscodes wie 404 zur Übermittlung einer nicht vorhandenen Endpunkt-URL (es gibt keinen Endpunkt, an den der Fehler zurückgegeben werden kann). Dieses Dokument besteht aus drei Abschnitten mit Hinweisen für Autoren benutzerdefinierter Kanäle. Der erste Abschnitt enthält Hinweise dazu, wann und wie Ausnahmen definiert und ausgelöst werden. Der zweite Abschnitt enthält Hinweise zum Auslösen und Behandeln von Fehlern. Im dritten Abschnitt wird das Bereitstellen von Ablaufinformationen erklärt, mit deren Hilfe die Benutzer Ihres benutzerdefinierten Kanals Probleme in laufenden Anwendungen behandeln können.  
   
 ## <a name="exceptions"></a>Ausnahmen  
- Beim Auslösen einer Ausnahme müssen zwei Punkte beachtet werden: Erstens muss es sich dabei um einen Typ handeln, bei dem Benutzern den richtigen Code schreiben können, um auf die Ausnahme angemessen zu reagieren. Zweiten müssen dabei ausreichend Informationen angegeben werden, damit der Benutzer die Fehlerursache, die Auswirkung des Fehlers und dessen Behebung erkennen kann. Die folgenden Abschnitte unterstützen Sie bei Ausnahme Typen und Nachrichten für Windows Communication Foundation (WCF)-Kanälen. Allgemeine Hinweise zu Ausnahmen in .NET finden Sie außerdem in den Entwurfsrichtlinien für Ausnahmen.  
+ Beim Auslösen einer Ausnahme müssen zwei Punkte beachtet werden: Erstens muss es sich dabei um einen Typ handeln, bei dem Benutzern den richtigen Code schreiben können, um auf die Ausnahme angemessen zu reagieren. Zweiten müssen dabei ausreichend Informationen angegeben werden, damit der Benutzer die Fehlerursache, die Auswirkung des Fehlers und dessen Behebung erkennen kann. In den folgenden Abschnitten finden Sie Anleitungen zu Ausnahmetypen und Nachrichten für WCF-Kanäle (Windows Communication Foundation). Allgemeine Hinweise zu Ausnahmen in .NET finden Sie außerdem in den Entwurfsrichtlinien für Ausnahmen.  
   
 ### <a name="exception-types"></a>Ausnahmetypen  
- Bei allen von Kanälen ausgelösten Ausnahmen muss es sich entweder um <xref:System.TimeoutException?displayProperty=nameWithType>, <xref:System.ServiceModel.CommunicationException?displayProperty=nameWithType> oder einen Typ handeln, der von <xref:System.ServiceModel.CommunicationException> abgeleitet wird. (Auch Ausnahmen wie <xref:System.ObjectDisposedException> können ausgelöst werden, jedoch nur um anzugeben, dass der aufrufende Code den Kanal missbräuchlich verwendet hat. Wenn ein Kanal ordnungsgemäß verwendet wird, darf er nur die angegebenen Ausnahmen auslösen.) WCF stellt sieben Ausnahme Typen bereit, die von <xref:System.ServiceModel.CommunicationException> abgeleitet sind und von Kanälen verwendet werden sollen. Es gibt noch weitere von <xref:System.ServiceModel.CommunicationException> abgeleitete Ausnahmen, die der Verwendung durch andere Teile des Systems dienen. Dazu gehören die folgenden Ausnahmetypen:  
+ Bei allen von Kanälen ausgelösten Ausnahmen muss es sich entweder um <xref:System.TimeoutException?displayProperty=nameWithType>, <xref:System.ServiceModel.CommunicationException?displayProperty=nameWithType> oder einen Typ handeln, der von <xref:System.ServiceModel.CommunicationException> abgeleitet wird. (Auch Ausnahmen wie <xref:System.ObjectDisposedException> können ausgelöst werden, jedoch nur um anzugeben, dass der aufrufende Code den Kanal missbräuchlich verwendet hat. Wenn ein Kanal korrekt verwendet wird, darf er nur die angegebenen Ausnahmen auslösen.) WCF bietet sieben Ausnahmetypen, <xref:System.ServiceModel.CommunicationException> die von Kanälen stammen und für die Verwendung ausgelegt sind. Es gibt noch weitere von <xref:System.ServiceModel.CommunicationException> abgeleitete Ausnahmen, die der Verwendung durch andere Teile des Systems dienen. Dazu gehören die folgenden Ausnahmetypen:  
   
 |Ausnahmetyp|Bedeutung|Inhalt der internen Ausnahme|Wiederherstellungsstrategie|  
 |--------------------|-------------|-----------------------------|-----------------------|  
 |<xref:System.ServiceModel.AddressAlreadyInUseException>|Die zur Überwachung angegebene Endpunktadresse wird bereits verwendet.|Gibt, sofern vorhanden, weitere Details zum Transportfehler an, der diese Ausnahme verursacht hat. Beispiel: <xref:System.IO.PipeException>, <xref:System.Net.HttpListenerException> oder <xref:System.Net.Sockets.SocketException>.|Versuchen Sie es mit einer anderen Adresse.|  
-|<xref:System.ServiceModel.AddressAccessDeniedException>|Der Prozess darf nicht auf die zur Überwachung angegebene Endpunktadresse zugreifen.|Gibt, sofern vorhanden, weitere Details zum Transportfehler an, der diese Ausnahme verursacht hat. Beispielsweise <xref:System.IO.PipeException> oder <xref:System.Net.HttpListenerException>.|Versuchen Sie es mit anderen Anmeldeinformationen.|  
-|<xref:System.ServiceModel.CommunicationObjectFaultedException>|Der verwendete <xref:System.ServiceModel.ICommunicationObject> befindet sich im Faulted-Zustand (Weitere Informationen finden Sie Untergrund Legendes zu [Zustandsänderungen](understanding-state-changes.md)). Wenn ein Objekt mit mehreren ausstehenden Aufrufen in den Faulted-Status wechselt, löst nur ein Aufruf eine Ausnahme aus, die sich auf den Fehler bezieht. Die übrigen Aufrufe lösen <xref:System.ServiceModel.CommunicationObjectFaultedException> aus. Diese Ausnahme wird in der Regel ausgelöst, weil eine Anwendung eine Ausnahme übersieht und ein bereits fehlerhaftes Objekt verwenden will, möglicherweise in einem anderen Thread als dem, der die ursprüngliche Ausnahme abfing.|Gibt, sofern vorhanden, Details zur inneren Ausnahme an.|Erstellen Sie ein neues Objekt. Beachten Sie, dass je nachdem, was den Fehler von <xref:System.ServiceModel.ICommunicationObject> ursprünglich verursacht hat, weitere Maßnahmen zur Problembehandlung erforderlich sein können.|  
-|<xref:System.ServiceModel.CommunicationObjectAbortedException>|Der verwendete <xref:System.ServiceModel.ICommunicationObject> wurde abgebrochen (Weitere Informationen finden Sie Untergrund Legendes zu [Zustandsänderungen](understanding-state-changes.md)). Ähnlich wie bei <xref:System.ServiceModel.CommunicationObjectFaultedException> gibt diese Ausnahme an, dass die Anwendung <xref:System.ServiceModel.ICommunicationObject.Abort%2A> für ein Objekt aufgerufen hat, möglicherweise aus einem anderen Thread, und das Objekt deshalb nicht mehr verwendet werden kann.|Gibt, sofern vorhanden, Details zur inneren Ausnahme an.|Erstellen Sie ein neues Objekt. Beachten Sie, dass je nachdem, was den Abbruch von <xref:System.ServiceModel.ICommunicationObject> ursprünglich verursacht hat, weitere Maßnahmen zur Problembehandlung erforderlich sein können.|  
+|<xref:System.ServiceModel.AddressAccessDeniedException>|Der Prozess darf nicht auf die zur Überwachung angegebene Endpunktadresse zugreifen.|Gibt, sofern vorhanden, weitere Details zum Transportfehler an, der diese Ausnahme verursacht hat. Beispiel: <xref:System.IO.PipeException> oder <xref:System.Net.HttpListenerException>.|Versuchen Sie es mit anderen Anmeldeinformationen.|  
+|<xref:System.ServiceModel.CommunicationObjectFaultedException>|Die <xref:System.ServiceModel.ICommunicationObject> verwendete wird befindet sich im Fehlerhaften Zustand (weitere Informationen finden Sie [unter Grundlegendes zu Statusänderungen](understanding-state-changes.md)). Wenn ein Objekt mit mehreren ausstehenden Aufrufen in den Faulted-Status wechselt, löst nur ein Aufruf eine Ausnahme aus, die sich auf den Fehler bezieht. Die übrigen Aufrufe lösen <xref:System.ServiceModel.CommunicationObjectFaultedException> aus. Diese Ausnahme wird in der Regel ausgelöst, weil eine Anwendung eine Ausnahme übersieht und ein bereits fehlerhaftes Objekt verwenden will, möglicherweise in einem anderen Thread als dem, der die ursprüngliche Ausnahme abfing.|Gibt, sofern vorhanden, Details zur inneren Ausnahme an.|Erstellen Sie ein neues Objekt. Beachten Sie, dass je nachdem, was den Fehler von <xref:System.ServiceModel.ICommunicationObject> ursprünglich verursacht hat, weitere Maßnahmen zur Problembehandlung erforderlich sein können.|  
+|<xref:System.ServiceModel.CommunicationObjectAbortedException>|Die <xref:System.ServiceModel.ICommunicationObject> verwendete wurde abgebrochen (weitere Informationen finden Sie [unter Verstehen von Statusänderungen](understanding-state-changes.md)). Ähnlich <xref:System.ServiceModel.CommunicationObjectFaultedException>wie gibt diese Ausnahme <xref:System.ServiceModel.ICommunicationObject.Abort%2A> an, dass die Anwendung das Objekt aufgerufen hat, möglicherweise aus einem anderen Thread, und das Objekt aus diesem Grund nicht mehr verwendet werden kann.|Gibt, sofern vorhanden, Details zur inneren Ausnahme an.|Erstellen Sie ein neues Objekt. Beachten Sie, dass je nachdem, was den Abbruch von <xref:System.ServiceModel.ICommunicationObject> ursprünglich verursacht hat, weitere Maßnahmen zur Problembehandlung erforderlich sein können.|  
 |<xref:System.ServiceModel.EndpointNotFoundException>|Der Remotezielendpunkt führt keine Überwachung aus. Möglicherweise ist ein Teil der Endpunktadresse falsch oder kann nicht ausgelöst werden, oder der Endpunkt ist deaktiviert. Beispiele hierfür sind DNS-Fehler, der Warteschlangen-Manager ist nicht verfügbar oder der Dienst wird nicht ausgeführt.|Die innere Ausnahme stellt Details bereit, in der Regel aus dem zugrunde liegenden Transport.|Versuchen Sie es mit einer anderen Adresse. Stattdessen kann der Absender auch eine Weile warten und es noch einmal versuchen, für den Fall, dass der Dienst ausgefallen war.|  
-|<xref:System.ServiceModel.ProtocolException>|Die Kommunikationsprotokolle, die von der Richtlinie des Endpunkts beschrieben werden, stimmen zwischen den Endpunkten nicht überein. Beispiele: Rahmeninhaltstypenkonflikt oder die maximale Nachrichtengröße wurde überschritten.|Gibt, sofern vorhanden, Informationen zum speziellen Protokollfehler an. Beispielsweise ist <xref:System.ServiceModel.QuotaExceededException> die innere Ausnahme, wenn die Fehlerursache eine Überschreitung von MaxReceivedMessageSize ist.|Wiederherstellung: Stellen sicher, dass die Einstellungen für das Absender- und das Empfängerprotokoll übereinstimmen. Eine Möglichkeit hierfür besteht darin, die Metadaten (Richtlinie) des Dienstendpunkts neu zu importieren und mit der generierten Bindung den Kanal neu zu erstellen.|  
+|<xref:System.ServiceModel.ProtocolException>|Die Kommunikationsprotokolle, wie in der Richtlinie des Endpunkts beschrieben, sind zwischen den Endpunkten nicht übereinstimmen. Beispiele: Rahmeninhaltstypenkonflikt oder die maximale Nachrichtengröße wurde überschritten.|Gibt, sofern vorhanden, Informationen zum speziellen Protokollfehler an. Beispielsweise ist <xref:System.ServiceModel.QuotaExceededException> die innere Ausnahme, wenn die Fehlerursache eine Überschreitung von MaxReceivedMessageSize ist.|Wiederherstellung: Stellen sicher, dass die Einstellungen für das Absender- und das Empfängerprotokoll übereinstimmen. Eine Möglichkeit hierfür besteht darin, die Metadaten (Richtlinie) des Dienstendpunkts erneut zu importieren und die generierte Bindung zum Neuerstellen des Kanals zu verwenden.|  
 |<xref:System.ServiceModel.ServerTooBusyException>|Der Remoteendpunkt führt eine Überwachung aus, ist jedoch noch nicht zur Verarbeitung von Nachrichten bereit.|Sofern vorhanden, gibt die innere Ausnahme die Details des SOAP- oder Tansportfehlers an.|Wiederherstellung: Warten Sie, und wiederholen Sie den Vorgang später.|  
 |<xref:System.TimeoutException>|Der Vorgang konnte innerhalb des angegebenen Timeouts nicht abgeschlossen werden.|Stellt möglicherweise Details über das Timeout bereit.|Warten Sie, und wiederholen Sie den Vorgang später.|  
   
@@ -34,7 +34,7 @@ Mit Ausnahmen werden Fehlfunktionen lokal in der Dienst- oder der Clientimplemen
 ### <a name="exception-messages"></a>Ausnahmemeldungen  
  Ausnahmemeldungen richten sich an den Benutzer, nicht an das Programm. Deshalb sollten sie ausreichend Informationen enthalten, mit denen der Benutzer das Problem verstehen und beheben kann. Eine gute Ausnahmemeldung besteht im Wesentlichen aus den folgenden drei Teilen:  
   
- Was ist passiert. Beschreiben Sie das Problem eindeutig und mit Begriffen, die dem Benutzer vertraut sind. Eine schlechte Ausnahmemeldung wäre z.&#160;B. "Ungültiger Konfigurationsabschnitt". Dabei bleibt der Benutzer im Unklaren, welcher Konfigurationsabschnitt falsch ist und warum er falsch ist. Eine verbesserte Meldung wäre "Ungültiger Konfigurations Abschnitt \<CustomBinding >". Und eine noch bessere Meldung wäre „Der Transport mit der Bezeichnung ,meinTransport‘ kann der Bindung ,meineBindung‘ nicht hinzugefügt werden, da die Bindung bereits einen Transport mit dem Namen ,meinTransport‘ besitzt“. Diese Meldung ist sehr genau und verwendet Begriffe und Namen, die der Benutzer schnell in der Konfigurationsdatei der Anwendung findet. Es fehlen jedoch noch immer einige entscheidende Komponenten.  
+ Was ist passiert. Geben Sie eine klare Beschreibung des Problems mithilfe von Begriffen bereit, die sich auf die Benutzererfahrung beziehen. Eine schlechte Ausnahmemeldung wäre z.&#160;B. "Ungültiger Konfigurationsabschnitt". Dabei bleibt der Benutzer im Unklaren, welcher Konfigurationsabschnitt falsch ist und warum er falsch ist. Eine verbesserte Meldung wäre "Ungültiger Konfigurationsabschnitt \<customBinding>". Und eine noch bessere Meldung wäre „Der Transport mit der Bezeichnung ,meinTransport‘ kann der Bindung ,meineBindung‘ nicht hinzugefügt werden, da die Bindung bereits einen Transport mit dem Namen ,meinTransport‘ besitzt“. Dies ist eine sehr spezifische Meldung mit Begriffen und Namen, die der Benutzer leicht in der Konfigurationsdatei der Anwendung identifizieren kann. Es fehlen jedoch noch immer einige entscheidende Komponenten.  
   
  Die Relevanz des Fehlers. Wenn die Meldung nicht klar angibt, was der Fehler bedeutet, weiß der Benutzer nicht, ob der Fehler schwerwiegend ist oder ignoriert werden kann. Im Allgemeinen sollten Fehlermeldungen mit der Bedeutung oder der Relevanz des Fehlers eingeleitet werden. Um das vorherige Beispiel zu verbessern, könnte die Meldung lauten "ServiceHost konnte aufgrund eines Konfigurationsfehlers nicht geöffnet werden: Der Transport mit der Bezeichnung meinTransport kann der Bindung meineBindung nicht hinzugefügt werden, da die Bindung bereits einen Transport mit dem Namen meinTransport besitzt".  
   
@@ -43,10 +43,10 @@ Mit Ausnahmen werden Fehlfunktionen lokal in der Dienst- oder der Clientimplemen
 ## <a name="communicating-faults"></a>Übermitteln von Fehlern  
  SOAP 1.1 und SOAP 1.2 definieren jeweils eine spezielle Struktur für Fehler. Es gibt einige Unterschiede zwischen den beiden Spezifikationen. Im Allgemeinen werden jedoch die Typen Message und MessageFault zum Erstellen und Behandeln von Fehlern verwendet.  
   
- ![Behandeln von Ausnahmen und Fehlern](./media/wcfc-soap1-1andsoap1-2faultcomparisonc.gif "wcfc_SOAP1-1AndSOAP1-2FaultComparisonc")  
-Fehler in SOAP 1.2 (links) und Fehler in SOAP 1.1 (rechts). In SOAP 1.1 ist nur das Fault-Element namespacequalifiziert.  
+ ![Umgang mit Ausnahmen und Fehlern](./media/wcfc-soap1-1andsoap1-2faultcomparisonc.gif "wcfc_SOAP1-1AndSOAP1-2FaultComparisonc")  
+Fehler in SOAP 1.2 (links) und Fehler in SOAP 1.1 (rechts). In SOAP 1.1 ist nur das Fault-Element namespacequalifiziert.  
   
- SOAP definiert eine Fehlermeldung als Meldung, die nur ein Fehlerelement (ein Element, dessen Name `<env:Fault>`&lt;env:Body&gt; ist) als untergeordnetes Element von`<env:Body>` enthält. Der Inhalt des Fehlerelements unterscheidet sich ein wenig zwischen SOAP 1.1 und SOAP 1.2 (siehe Abbildung 1). Die <xref:System.ServiceModel.Channels.MessageFault?displayProperty=nameWithType>-Klasse normalisiert diese Unterschiede jedoch in ein Objektmodell:  
+ SOAP definiert eine Fehlermeldung als Meldung, die nur ein Fehlerelement (ein Element, dessen Name `<env:Fault>` enthält. Der Inhalt des Fehlerelements unterscheidet sich ein wenig zwischen SOAP 1.1 und SOAP 1.2 (siehe Abbildung 1). Die <xref:System.ServiceModel.Channels.MessageFault?displayProperty=nameWithType>-Klasse normalisiert diese Unterschiede jedoch in ein Objektmodell:  
   
 ```csharp
 public abstract class MessageFault  
@@ -68,11 +68,11 @@ public abstract class MessageFault
 }  
 ```  
   
- Die `Code`-Eigenschaft entspricht `env:Code` (oder `faultCode` in SOAP 1.1) und identifiziert den Typ des Fehlers. SOAP 1.2 definiert fünf zulässige Werte für `faultCode` (z.&#160;B. Sender und Receiver) und definiert ein `Subcode`-Element, das einen beliebigen Subcodewert enthalten kann. (In der [SOAP 1,2-Spezifikation](https://www.w3.org/TR/soap12-part1/#tabsoapfaultcodes) finden Sie eine Liste zulässiger Fehlercodes und ihre Bedeutung.) SOAP 1,1 weist einen etwas anderen Mechanismus auf: er definiert vier `faultCode` Werte (z. b. Client und Server), die entweder durch die Definition völlig neuer Werte oder durch die Verwendung der Punkt Notation erweitert werden können, um spezifischere `faultCodes`zu erstellen, z. b. Client. Authentication.  
+ Die `Code`-Eigenschaft entspricht `env:Code` (oder `faultCode` in SOAP 1.1) und identifiziert den Typ des Fehlers. SOAP 1.2 definiert fünf zulässige Werte für `faultCode` (z.&#160;B. Sender und Receiver) und definiert ein `Subcode`-Element, das einen beliebigen Subcodewert enthalten kann. (Siehe [SOAP 1.2-Spezifikation](https://www.w3.org/TR/soap12-part1/#tabsoapfaultcodes) für die Liste der zulässigen Fehlercodes und deren Bedeutung.) SOAP 1.1 hat einen etwas anderen `faultCode` Mechanismus: Es definiert vier Werte (z. B. Client und Server), die erweitert werden `faultCodes`können, indem entweder völlig neue definiert werden oder indem die Punktnotation verwendet wird, um spezifischere zu erstellen, z. B. Client.Authentication.  
   
  Wenn Sie MessageFault zum Programmieren von Fehlern verwenden, wird FaultCode.Name und FaultCode.Namespace jeweils dem Namen und dem Namespace von `env:Code` in SOAP 1.2 oder `faultCode` in SOAP 1.1 zugeordnet. FaultCode.SubCode wird `env:Subcode` für SOAP 1.2 zugeordnet und ist für SOAP 1.1 NULL.  
   
- Erstellen Sie neue Fehlersubcodes (oder bei SOAP 1.1 neue Fehlercodes), wenn eine programmgesteuerte Unterscheidung eines Fehlers von Interesse ist. Diese Vorgehensweise entspricht dem Erstellen eines neuen Ausnahmetyps. Vermeiden Sie die Verwendung der Punktnotation mit SOAP 1.1-Fehlercodes. (Das [WS-I Basic-Profil](http://www.ws-i.org/Profiles/BasicProfile-1.1-2004-08-24.html#SOAP_Custom_Fault_Codes) verhindert auch die Verwendung der Fehlercode Punkt Notation.)  
+ Erstellen Sie neue Fehlersubcodes (oder bei SOAP 1.1 neue Fehlercodes), wenn eine programmgesteuerte Unterscheidung eines Fehlers von Interesse ist. Diese Vorgehensweise entspricht dem Erstellen eines neuen Ausnahmetyps. Vermeiden Sie die Verwendung der Punktnotation mit SOAP 1.1-Fehlercodes. (Das [WS-I-Basisprofil](http://www.ws-i.org/Profiles/BasicProfile-1.1-2004-08-24.html#SOAP_Custom_Fault_Codes) rät auch von der Verwendung der Fehlercodepunktnotation ab.)  
   
 ```csharp
 public class FaultCode  
@@ -94,7 +94,7 @@ public class FaultCode
 }  
 ```  
   
- Die `Reason`-Eigenschaft entspricht `env:Reason` (oder `faultString` in SOAP 1.1), einer lesbaren Beschreibung der Fehlerbedingung analog zur Meldung einer Ausnahme. In der `FaultReason`-Klasse (und SOAP `env:Reason/faultString`) ist eine Unterstützung mehrerer Übersetzungen für Globalisierungszwecke integriert.  
+ Die `Reason` Eigenschaft entspricht `env:Reason` der `faultString` (oder in SOAP 1.1) lesbaren Beschreibung der Fehlerbedingung analog zur Meldung einer Ausnahme. In der `FaultReason`-Klasse (und SOAP `env:Reason/faultString`) ist eine Unterstützung mehrerer Übersetzungen für Globalisierungszwecke integriert.  
   
 ```csharp
 public class FaultReason  
@@ -103,15 +103,15 @@ public class FaultReason
     public FaultReason(IEnumerable<FaultReasonText> translations);  
     public FaultReason(string text);  
   
-    public SynchronizedReadOnlyCollection<FaultReasonText> Translations   
-    {   
-       get;   
+    public SynchronizedReadOnlyCollection<FaultReasonText> Translations
+    {
+       get;
     }  
   
  }  
 ```  
   
- Der Inhalt der Fehlerdetails wird in MessageFault mithilfe verschiedener Methoden, einschließlich der `GetDetail`\<t > und `GetReaderAtDetailContents`(), verfügbar gemacht. Das Fehlerdetail ist ein nicht transparentes Element zur Aufnahme zusätzlicher Fehlerdetails. Das ist nützlich, wenn Sie dem Fehler willkürlich strukturierte Details hinzufügen möchten.  
+ Die Fehlerdetails werden auf MessageFault mit `GetDetail` \<verschiedenen Methoden `GetReaderAtDetailContents`wie t> und () verfügbar gemacht. Das Fehlerdetail ist ein nicht transparentes Element zur Aufnahme zusätzlicher Fehlerdetails. Das ist nützlich, wenn Sie dem Fehler willkürlich strukturierte Details hinzufügen möchten.  
   
 ### <a name="generating-faults"></a>Generieren von Fehlern  
  In diesem Abschnitt wird das Generieren eines Fehlers als Reaktion auf eine Fehlerbedingung erläutert, die in einem Kanal oder in einer von einem Kanal erstellten Nachrichteneigenschaft festgestellt wird. Ein typisches Beispiel ist die Rückgabe eines Fehlers als Antwort auf eine Anforderungsnachricht, die ungültige Daten enthält.  
@@ -124,18 +124,18 @@ public class FaultConverter
     public static FaultConverter GetDefaultFaultConverter(  
                                    MessageVersion version);  
     protected abstract bool OnTryCreateFaultMessage(  
-                                   Exception exception,   
+                                   Exception exception,
                                    out Message message);  
     public bool TryCreateFaultMessage(  
-                                   Exception exception,   
+                                   Exception exception,
                                    out Message message);  
 }  
 ```  
   
- Jeder Kanal, der benutzerdefinierte Fehler generiert, muss `FaultConverter` implementieren und nach einem Aufruf von `GetProperty<FaultConverter>` zurückgeben. Die benutzerdefinierte `OnTryCreateFaultMessage`-Implementierung muss die Ausnahme in einen Fehler konvertieren oder an den `FaultConverter` des inneren Kanals delegieren. Wenn es sich bei dem Kanal um einen Transport handelt, muss er entweder die Ausnahme oder den Delegaten in den `FaultConverter` des Encoders oder den in WCF bereitgestellten Standard `FaultConverter` konvertieren. Der standardmäßige `FaultConverter` konvertiert Fehler entsprechend der in der WS-Adressierung und SOAP angegebenen Fehlermeldungen. Im Folgenden sehen Sie ein Beispiel für eine `OnTryCreateFaultMessage`-Implementierung.  
+ Jeder Kanal, der benutzerdefinierte Fehler generiert, muss `FaultConverter` implementieren und nach einem Aufruf von `GetProperty<FaultConverter>` zurückgeben. Die `OnTryCreateFaultMessage` benutzerdefinierte Implementierung muss entweder die Ausnahme in einen `FaultConverter`Fehler konvertieren oder in den inneren Kanal delegieren. Wenn es sich bei dem Kanal um einen Transport handelt, `FaultConverter` muss er `FaultConverter` entweder die Ausnahme konvertieren oder in den Encoder oder den standardin wCF delegieren. Der standardmäßige `FaultConverter` konvertiert Fehler entsprechend der in der WS-Adressierung und SOAP angegebenen Fehlermeldungen. Im Folgenden sehen Sie ein Beispiel für eine `OnTryCreateFaultMessage`-Implementierung.  
   
 ```csharp
-public override bool OnTryCreateFaultMessage(Exception exception,   
+public override bool OnTryCreateFaultMessage(Exception exception,
                                              out Message message)  
 {  
     if (exception is ...)  
@@ -145,23 +145,23 @@ public override bool OnTryCreateFaultMessage(Exception exception,
     }  
   
 #if IMPLEMENTING_TRANSPORT_CHANNEL  
-    FaultConverter encoderConverter =   
+    FaultConverter encoderConverter =
                     this.encoder.GetProperty<FaultConverter>();  
-    if ((encoderConverter != null) &&               
+    if ((encoderConverter != null) &&
         (encoderConverter.TryCreateFaultMessage(  
          exception, out message)))  
     {  
         return true;  
     }  
   
-    FaultConverter defaultConverter =   
+    FaultConverter defaultConverter =
                    FaultConverter.GetDefaultFaultConverter(  
                    this.channel.messageVersion);  
     return defaultConverter.TryCreateFaultMessage(  
-                   exception,   
+                   exception,
                    out message);  
 #else  
-    FaultConverter inner =   
+    FaultConverter inner =
                    this.innerChannel.GetProperty<FaultConverter>();  
     if (inner != null)  
     {  
@@ -187,7 +187,7 @@ public override bool OnTryCreateFaultMessage(Exception exception,
   
 3. Fehler, die sich auf eine einzelne Schicht im Stapel beziehen. Hierzu zählen z.&#160;B. Fehler wie WS-RM-Sequenznummernfehler.  
   
- Kategorie 1. Fehler sind im Allgemeinen WS-Adressierungs- und SOAP-Fehler. Die von WCF bereitgestellte Basis `FaultConverter` Klasse konvertiert Fehler entsprechend den von der WS-Adressierung und SOAP angegebenen Fehlermeldungen, sodass Sie die Konvertierung dieser Ausnahmen nicht selbst behandeln müssen.  
+ Kategorie 1. Fehler sind im Allgemeinen WS-Adressierungs- und SOAP-Fehler. Die `FaultConverter` von WCF bereitgestellte Basisklasse konvertiert Fehler, die den von WS-Addressing und SOAP angegebenen Fehlermeldungen entsprechen, sodass Sie die Konvertierung dieser Ausnahmen nicht selbst verarbeiten müssen.  
   
  Kategorie 2. Fehler treten auf, wenn der Nachricht von einer Schicht eine Eigenschaft hinzugefügt wird und diese Eigenschaft Nachrichteninformationen, die diese Schicht betreffen, nicht vollständig behandelt. Fehler werden möglicherweise später erkannt, wenn eine höhere Schicht von der Eigenschaft eine weitere Verarbeitung von Nachrichteninformationen verlangt. Solche Kanäle sollten wie erwähnt `GetProperty` implementieren, um der höheren Schicht, die Rückgabe des richtigen Fehlers zu ermöglichen. TransactionMessageProperty ist hierfür ein Beispiel. Diese Eigenschaft wird der Nachricht hinzugefügt, ohne dass alle Daten im Header vollständig überprüft werden (dadurch wird möglicherweise eine Verbindung mit dem Distributed Transaction Coordinator (DTC) hergestellt).  
   
@@ -196,9 +196,9 @@ public override bool OnTryCreateFaultMessage(Exception exception,
 ### <a name="interpreting-received-faults"></a>Interpretieren empfangener Fehler  
  Dieser Abschnitt enthält Hinweise zum Generieren der richtigen Ausnahme beim Empfang einer Fehlermeldung. Die Entscheidungsstruktur zur Verarbeitung einer Meldung in den einzelnen Schichten eines Stapels lautet wie folgt:  
   
-1. Wenn die Meldung von der Schicht als ungültig angesehen wird, sollte deren Verarbeitung für ungültige Nachrichten erfolgen. Diese Verarbeitung hängt von der jeweiligen Schicht ab, kann jedoch das Verwerfen der Meldung, eine Ablaufverfolgung oder das Auslösen einer Ausnahme beinhalten, die in einen Fehler konvertiert wird. Zu den Beispielen hierfür zählen, dass die Sicherheit eine nicht ordnungsgemäß gesicherte Nachricht erhält oder dass RM eine Nachricht mit einer falschen Sequenznummer empfängt.  
+1. Wenn der Layer die Nachricht für ungültig hält, sollte der Layer die Verarbeitung der "ungültigen Nachricht" durchführen. Diese Verarbeitung hängt von der jeweiligen Schicht ab, kann jedoch das Verwerfen der Meldung, eine Ablaufverfolgung oder das Auslösen einer Ausnahme beinhalten, die in einen Fehler konvertiert wird. Zu den Beispielen hierfür zählen, dass die Sicherheit eine nicht ordnungsgemäß gesicherte Nachricht erhält oder dass RM eine Nachricht mit einer falschen Sequenznummer empfängt.  
   
-2. Andernfalls sollte die Schicht die Fehlerbedingung behandeln, wenn die Meldung eine Fehlermeldung ist, die sich speziell auf die Schicht bezieht und die Meldung außerhalb der Schicht keine Bedeutung hat. Ein Beispiel hierfür ist ein Fehler aufgrund einer abgelehnten RM-Sequenz. Dieser Fehler ist für die Schichten über dem RM-Kanal bedeutungslos und impliziert, dass der RM-Kanal einen Fehler ausgibt und ausstehende Vorgänge eine Ausnahme auslösen.  
+2. Andernfalls sollte die Ebene die Fehlerbedingung behandeln, wenn es sich bei der Meldung um eine Fehlermeldung handelt, die speziell auf die Ebene angewendet wird, und die Nachricht außerhalb der Interaktion des Layers nicht aussagekräftig ist. Ein Beispiel hierfür ist ein Fehler aufgrund einer abgelehnten RM-Sequenz. Dieser Fehler ist für die Schichten über dem RM-Kanal bedeutungslos und impliziert, dass der RM-Kanal einen Fehler ausgibt und ausstehende Vorgänge eine Ausnahme auslösen.  
   
 3. Andernfalls sollte die Meldung von Request() oder Receive() zurückgegeben werden. Dazu gehören Fälle, in denen die Schicht den Fehler erkennt, der Fehler jedoch nur angibt, dass eine Anforderung fehlgeschlagen ist. Dabei impliziert der Fehler nicht, dass der RM-Kanal einen Fehler ausgibt und ausstehende Vorgänge eine Ausnahme auslösen. Um die Verwendbarkeit in einem solchen Fall zu verbessern, sollte die Schicht `GetProperty<FaultConverter>` implementieren und eine von `FaultConverter` abgeleitete Klasse zurückgeben, die den Fehler durch Außerkraftsetzen von `OnTryCreateException` konvertieren kann.  
   
@@ -210,12 +210,12 @@ public class FaultConverter
     public static FaultConverter GetDefaultFaultConverter(  
                                   MessageVersion version);  
     protected abstract bool OnTryCreateException(  
-                                 Message message,   
-                                 MessageFault fault,   
+                                 Message message,
+                                 MessageFault fault,
                                  out Exception exception);  
     public bool TryCreateException(  
-                                 Message message,   
-                                 MessageFault fault,   
+                                 Message message,
+                                 MessageFault fault,
                                  out Exception exception);  
 }  
 ```  
@@ -226,8 +226,8 @@ public class FaultConverter
   
 ```csharp
 public override bool OnTryCreateException(  
-                            Message message,   
-                            MessageFault fault,   
+                            Message message,
+                            MessageFault fault,
                             out Exception exception)  
 {  
     if (message.Action == "...")  
@@ -253,9 +253,9 @@ public override bool OnTryCreateException(
     }  
   
 #if IMPLEMENTING_TRANSPORT_CHANNEL  
-    FaultConverter encoderConverter =   
+    FaultConverter encoderConverter =
               this.encoder.GetProperty<FaultConverter>();  
-    if ((encoderConverter != null) &&   
+    if ((encoderConverter != null) &&
         (encoderConverter.TryCreateException(  
                               message, fault, out exception)))  
     {  
@@ -268,7 +268,7 @@ public override bool OnTryCreateException(
     return defaultConverter.TryCreateException(  
                              message, fault, out exception);  
 #else  
-    FaultConverter inner =   
+    FaultConverter inner =
                     this.innerChannel.GetProperty<FaultConverter>();  
     if (inner != null)  
     {  
@@ -286,7 +286,7 @@ public override bool OnTryCreateException(
  Definieren Sie gegebenenfalls für spezielle Fehlerbedingungen mit besonderen Wiederherstellungszenarien eine abgeleitete Klasse von `ProtocolException`.  
   
 ### <a name="mustunderstand-processing"></a>Verarbeitung von MustUnderstand  
- SOAP definiert einen allgemeinen Fehler, wenn ein erforderlicher Header vom Empfänger nicht interpretiert werden konnte. Dieser Fehler wird `mustUnderstand` genannt. In WCF generieren benutzerdefinierte Kanäle niemals `mustUnderstand` Fehler. Stattdessen überprüft der WCF-Verteiler, der sich am Anfang des WCF-Kommunikations Stapels befindet, ob alle Header, die als MustUnderstand = true gekennzeichnet waren, vom zugrunde liegenden Stapel verstanden wurden. Sind Header dabei, die nicht interpretiert werden konnten, wird an dieser Stelle ein `mustUnderstand`-Fehler generiert. (Der Benutzer kann diese `mustUnderstand`-Verarbeitung deaktivieren und die Anwendung alle Nachrichtenheader empfangen lassen. In diesem Fall ist die Anwendung für die Ausführung `mustUnderstand` Verarbeitung zuständig.) Der generierte Fehler enthält einen notunderstand-Header, der die Namen aller Header mit MustUnderstand = true enthält, die nicht verstanden wurden.  
+ SOAP definiert einen allgemeinen Fehler, wenn ein erforderlicher Header vom Empfänger nicht interpretiert werden konnte. Dieser Fehler wird `mustUnderstand` genannt. In WCF erzeugen `mustUnderstand` benutzerdefinierte Kanäle niemals Fehler. Stattdessen überprüft der WCF-Dispatcher, der sich oben im WCF-Kommunikationsstapel befindet, ob alle Header, die als MustUnderstand=true markiert wurden, vom zugrunde liegenden Stack verstanden wurden. Sind Header dabei, die nicht interpretiert werden konnten, wird an dieser Stelle ein `mustUnderstand`-Fehler generiert. (Der Benutzer kann diese `mustUnderstand`-Verarbeitung deaktivieren und die Anwendung alle Nachrichtenheader empfangen lassen. In diesem Fall ist die `mustUnderstand` Anwendung für die Durchführung der Verarbeitung verantwortlich.) Der generierte Fehler enthält einen NotUnderstood-Header, der die Namen aller Header mit MustUnderstand=true enthält, die nicht verstanden wurden.  
   
  Wenn Ihr Protokollkanal einen benutzerdefinierten Header mit MustUnderstand=true sendet und einen `mustUnderstand`-Fehler empfängt, muss er überprüfen, ob dieser Fehler durch einen von ihm gesendeten Header verursacht wurde. Die `MessageFault`-Klasse besitzt zwei Member, die für diesen Zweck nützlich sind:  
   
@@ -295,14 +295,14 @@ public class MessageFault
 {  
     ...  
     public bool IsMustUnderstandFault { get; }  
-    public static bool WasHeaderNotUnderstood(MessageHeaders headers,   
+    public static bool WasHeaderNotUnderstood(MessageHeaders headers,
         string name, string ns) { }  
     ...  
   
 }  
 ```  
   
- `IsMustUnderstandFault` gibt `true` zurück, wenn der Fehler ein `mustUnderstand`-Fehler ist. `WasHeaderNotUnderstood` gibt `true` zurück, wenn der Header mit dem angegebenen Namen und Namespace im Fehler als NotUnderstood-Header enthalten ist.  Andernfalls wird `false` zurückgegeben.  
+ `IsMustUnderstandFault` gibt `true` zurück, wenn der Fehler ein `mustUnderstand`-Fehler ist. `WasHeaderNotUnderstood` gibt `true` zurück, wenn der Header mit dem angegebenen Namen und Namespace im Fehler als NotUnderstood-Header enthalten ist.  Andernfalls wird `false`zurückgegeben.  
   
  Wenn dieser Kanal einen Header ausgibt, der mit MustUnderstand = true gekennzeichnet ist, sollte diese Schicht auch das Exception Generation API-Muster implementieren. Außerdem sollte sie `mustUnderstand`-Fehler, die durch diesen Fehler verursacht wurden, wie weiter oben beschrieben in eine nützlichere Ausnahme konvertieren.  
   
@@ -311,14 +311,14 @@ public class MessageFault
   
 - <xref:System.Diagnostics.TraceSource?displayProperty=nameWithType> stellt die Quelle der zu schreibenden Anlaufverfolgungsinformationen dar, <xref:System.Diagnostics.TraceListener?displayProperty=nameWithType>, stellt die abstrakte Basisklasse für konkrete Listener dar, die zu verfolgende Informationen von <xref:System.Diagnostics.TraceSource> erhalten und an ein für die Listener spezifisches Ziel ausgeben. Beispielsweise gibt <xref:System.Diagnostics.XmlWriterTraceListener> Ablaufverfolgungsinformationen in eine XML-Datei aus. <xref:System.Diagnostics.TraceSwitch?displayProperty=nameWithType> wird in der Konfiguration angegeben und ermöglicht dem Benutzer der Anwendung die Ausführlichkeit der Ablaufverfolgung zu steuern.  
   
-- Zusätzlich zu den Kernkomponenten können Sie das [Service Trace Viewer-Tool (SvcTraceViewer. exe)](../service-trace-viewer-tool-svctraceviewer-exe.md) verwenden, um WCF-Ablauf Verfolgungen anzuzeigen und zu durchsuchen. Das Tool wurde speziell für von WCF generierte Ablauf Verfolgungs Dateien entwickelt und mithilfe von <xref:System.Diagnostics.XmlWriterTraceListener>geschrieben. Die folgende Abbildung zeigt die verschiedenen Komponenten der Ablaufverfolgung.  
+- Zusätzlich zu den Kernkomponenten können Sie das [Service Trace Viewer Tool (SvcTraceViewer.exe)](../service-trace-viewer-tool-svctraceviewer-exe.md) verwenden, um WCF-Ablaufverfolgungen anzuzeigen und zu durchsuchen. Das Tool wurde speziell für Ablaufverfolgungsdateien entwickelt, die von WCF generiert und mit <xref:System.Diagnostics.XmlWriterTraceListener>geschrieben wurden. Die folgende Abbildung zeigt die verschiedenen Komponenten der Ablaufverfolgung.  
   
- ![Behandeln von Ausnahmen und Fehlern](./media/wcfc-tracinginchannelsc.gif "wcfc_TracingInChannelsc")  
+ ![Umgang mit Ausnahmen und Fehlern](./media/wcfc-tracinginchannelsc.gif "wcfc_TracingInChannelsc")  
   
 ### <a name="tracing-from-a-custom-channel"></a>Ablaufverfolgung durch einen benutzerdefinierten Kanal  
  Als Hilfestellung bei der Diagnose von Problemen, bei denen es nicht möglich ist, der laufenden Anwendung einen Debugger hinzuzufügen, sollten benutzerdefinierte Kanäle Ablaufverfolgungsmeldungen ausgeben. Das schließt zwei komplexe Aufgaben ein: Instanziieren einer <xref:System.Diagnostics.TraceSource> und Aufrufen ihrer Methoden zu Schreiben von Ablaufverfolgungen.  
   
- Bei der Instanziierung einer <xref:System.Diagnostics.TraceSource> dient die von Ihnen angegebene Zeichenfolge als Name dieser Quelle. Mit diesem Namen wird die Ablaufverfolgungsquelle konfiguriert (Aktivieren/Deaktivieren/Festlegen der Ablaufverfolgungsebene). Der Name wird außerdem direkt in der Ausgabe der Ablaufverfolgung angegeben. Benutzerdefinierte Kanäle sollten einen eindeutigen Quellennamen verwenden, damit Leser der Ablaufverfolgungsausgabe erkennen können, woher die Ablaufverfolgungsinformationen stammen. Im Allgemeinen wird als Name der Ablaufverfolgungsquelle der Name der Assembly verwendet, die diese Informationen schreibt. WCF verwendet beispielsweise System. Service Model als Ablauf Verfolgungs Quelle für Informationen, die aus der System. Service Model-Assembly geschrieben wurden.  
+ Bei der Instanziierung einer <xref:System.Diagnostics.TraceSource> dient die von Ihnen angegebene Zeichenfolge als Name dieser Quelle. Mit diesem Namen wird die Ablaufverfolgungsquelle konfiguriert (Aktivieren/Deaktivieren/Festlegen der Ablaufverfolgungsebene). Der Name wird außerdem direkt in der Ausgabe der Ablaufverfolgung angegeben. Benutzerdefinierte Kanäle sollten einen eindeutigen Quellennamen verwenden, damit Leser der Ablaufverfolgungsausgabe erkennen können, woher die Ablaufverfolgungsinformationen stammen. Im Allgemeinen wird als Name der Ablaufverfolgungsquelle der Name der Assembly verwendet, die diese Informationen schreibt. Beispielsweise verwendet WCF System.ServiceModel als Ablaufverfolgungsquelle für Informationen, die aus der System.ServiceModel-Assembly geschrieben wurden.  
   
  Sobald eine Ablaufverfolgungsquelle vorhanden ist, rufen Sie ihre Methoden <xref:System.Diagnostics.TraceSource.TraceData%2A><xref:System.Diagnostics.TraceSource.TraceEvent%2A> oder <xref:System.Diagnostics.TraceSource.TraceInformation%2A> auf, um Ablaufverfolgungseinträge für den Ablaufverfolgungslistener zu schreiben. Für jeden geschriebenen Ablaufverfolgungseintrag müssen Sie den Typ des Ereignisses als einen der in <xref:System.Diagnostics.TraceEventType> definierten Ereignistypen klassifizieren. Diese Klassifikation und die Einstellung der Ablaufverfolgungsebene in der Konfiguration bestimmen, ob der Ablaufverfolgungseintrag an den Listener ausgegeben wird. Wenn z.&#160;B. die Ablaufverfolgungsebene in der Konfiguration auf `Warning` festgelegt wird, können `Warning`- `Error`- und `Critical`-Ablaufverfolgungsereignisse geschrieben werden, Information- und Verbose-Einträge werden jedoch blockiert. Das folgende Beispiel veranschaulicht die Instanziierung einer Ablaufverfolgungsquelle und das Schreiben eines Eintrags auf Information-Ebene:  
   
@@ -334,14 +334,14 @@ udpsource.TraceInformation("UdpInputChannel received a message");
 > Geben Sie unbedingt einen Namen für die Ablaufverfolgungsquellen an, der in Ihren benutzerdefinierten Kanal eindeutig ist, damit Leser der Ablaufverfolgungsausgabe erkennen können, woher die Ausgabe stammt.  
   
 #### <a name="integrating-with-the-trace-viewer"></a>Integration des Ablaufverfolgungs-Viewers  
- Vom Kanal generierte Ablauf Verfolgungen können in einem Format ausgegeben werden, das vom [Service Trace Viewer-Tool (SvcTraceViewer. exe)](../service-trace-viewer-tool-svctraceviewer-exe.md) gelesen werden kann, indem <xref:System.Diagnostics.XmlWriterTraceListener?displayProperty=nameWithType> als Ablaufverfolgungslistener verwendet wird. Allerdings ist das kein Schritt, den Sie als Kanalentwickler vornehmen müssen. Dieser Ablaufverfolgungslistener muss eher vom Benutzer der Anwendung (oder demjenigen, der Anwendungsprobleme behandelt) in der Konfigurationsdatei der Anwendung konfiguriert werden. Beispielsweise werden mit der folgenden Konfiguration Ablaufverfolgungsinformationen von <xref:System.ServiceModel?displayProperty=nameWithType> und von `Microsoft.Samples.Udp` an die Datei `TraceEventsFile.e2e` ausgegeben:  
+ Von Ihrem Kanal generierte Ablaufverfolgungen können in einem Format ausgegeben werden, das vom <xref:System.Diagnostics.XmlWriterTraceListener?displayProperty=nameWithType> Service Trace Viewer Tool [(SvcTraceViewer.exe)](../service-trace-viewer-tool-svctraceviewer-exe.md) als Ablaufverfolgungs-Listener lesbar ist. Allerdings ist das kein Schritt, den Sie als Kanalentwickler vornehmen müssen. Vielmehr ist es der Anwendungsbenutzer (oder die Person, die die Anwendung behebt), die diesen Ablaufverfolgungslistener in der Konfigurationsdatei der Anwendung konfigurieren muss. Beispielsweise werden mit der folgenden Konfiguration Ablaufverfolgungsinformationen von <xref:System.ServiceModel?displayProperty=nameWithType> und von `Microsoft.Samples.Udp` an die Datei `TraceEventsFile.e2e` ausgegeben:  
   
 ```xml  
 <configuration>  
   <system.diagnostics>  
     <sources>  
       <!-- configure System.ServiceModel trace source -->  
-      <source name="System.ServiceModel" switchValue="Verbose"   
+      <source name="System.ServiceModel" switchValue="Verbose"
               propagateActivity="true">  
         <listeners>  
           <add name="e2e" />  
@@ -380,7 +380,7 @@ udpsource.TraceInformation("UdpInputChannel received a message");
     <TimeCreated SystemTime="2006-01-13T22:58:03.0654832Z" />  
     <Source Name="Microsoft.ServiceModel.Samples.Udp" />  
     <Correlation ActivityID="{00000000-0000-0000-0000-000000000000}" />  
-    <Execution  ProcessName="UdpTestConsole"   
+    <Execution  ProcessName="UdpTestConsole"
                 ProcessID="3348" ThreadID="4" />  
     <Channel />  
     <Computer>COMPUTER-LT01</Computer>  
@@ -389,7 +389,7 @@ udpsource.TraceInformation("UdpInputChannel received a message");
   <ApplicationData>  
   <TraceData>  
    <DataItem>  
-   <TraceRecord   
+   <TraceRecord
      Severity="Information"  
      xmlns="…">  
         <TraceIdentifier>some trace id</TraceIdentifier>  
@@ -403,4 +403,4 @@ udpsource.TraceInformation("UdpInputChannel received a message");
 </E2ETraceEvent>  
 ```  
   
- Der WCF Trace Viewer versteht das Schema des zuvor gezeigten `TraceRecord` Elements und extrahiert die Daten aus den untergeordneten Elementen und zeigt Sie in einem tabellarischen Format an. Ihr Kanal sollte beim Verfolgen strukturierter Anwendungsdaten dieses Schema verwenden, damit Benutzer von Svctraceviewer.exe die Daten lesen können.
+ Der WCF-Ablaufverfolgungsbetrachter versteht `TraceRecord` das Schema des zuvor angezeigten Elements, extrahiert die Daten aus seinen untergeordneten Elementen und zeigt sie in einem tabellarischen Format an. Ihr Kanal sollte beim Verfolgen strukturierter Anwendungsdaten dieses Schema verwenden, damit Benutzer von Svctraceviewer.exe die Daten lesen können.

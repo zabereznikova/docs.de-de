@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a92fdf95-492b-49ae-a741-2186e5c1d7c5
 topic_type:
 - apiref
-ms.openlocfilehash: 270360a8950197eca14e02a60554659e5ac7b91c
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: efb3d913e1d8ef0c486d7e5e1d9777ae7d88bc71
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73099078"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79179334"
 ---
 # <a name="cor_heapobject-structure"></a>COR_HEAPOBJECT-Struktur
 Stellt Informationen zu einem Objekt auf dem verwalteten Heap bereit.  
@@ -28,32 +28,32 @@ Stellt Informationen zu einem Objekt auf dem verwalteten Heap bereit.
   
 ```cpp  
 typedef struct _COR_HEAPOBJECT {  
-    CORDB_ADDRESS address;    
-    ULONG64 size;             
-    COR_TYPEID type;          
+    CORDB_ADDRESS address;
+    ULONG64 size;
+    COR_TYPEID type;
 } COR_HEAPOBJECT;  
 ```  
   
-## <a name="members"></a>Member  
+## <a name="members"></a>Members  
   
 |Member|Beschreibung|  
 |------------|-----------------|  
-|`address`|Die Adresse des Objekts im Arbeitsspeicher.|  
-|`size`|Die Gesamtgröße des-Objekts in Bytes.|  
-|`type`|Ein [COR_TYPEID](cor-typeid-structure.md) -Token, das den Typ des Objekts darstellt.|  
+|`address`|Die Adresse des Objekts im Speicher.|  
+|`size`|Die Gesamtgröße des Objekts in Bytes.|  
+|`type`|Ein [COR_TYPEID](cor-typeid-structure.md) Token, das den Typ des Objekts darstellt.|  
   
-## <a name="remarks"></a>Hinweise  
- `COR_HEAPOBJECT` Instanzen können abgerufen werden, indem ein [icordebugheapenum](icordebugheapenum-interface.md) -Schnittstellen Objekt aufgezählt wird, das durch Aufrufen der [ICorDebugProcess5:: enumerateheap](icordebugprocess5-enumerateheap-method.md) -Methode aufgefüllt wird.  
+## <a name="remarks"></a>Bemerkungen  
+ `COR_HEAPOBJECT`Instanzen können abgerufen werden, indem ein [ICorDebugHeapEnum-Schnittstellenobjekt](icordebugheapenum-interface.md) aufgezählt wird, das durch Aufrufen der [ICorDebugProcess5::EnumerateHeap-Methode](icordebugprocess5-enumerateheap-method.md) aufgefüllt wird.  
   
- Eine `COR_HEAPOBJECT`-Instanz stellt Informationen entweder über ein Live Objekt im verwalteten Heap oder über ein Objekt bereit, das nicht von einem Objekt betroffen ist, aber noch nicht vom Garbage Collector erfasst wurde.  
+ Eine `COR_HEAPOBJECT` Instanz stellt Informationen entweder zu einem Liveobjekt auf dem verwalteten Heap oder zu einem Objekt bereit, das nicht von einem Objekt gerootet ist, aber noch nicht vom Garbage Collector gesammelt wurde.  
   
- Um die Leistung zu verbessern, ist das `COR_HEAPOBJECT.address` Feld ein `CORDB_ADDRESS` Wert und nicht der ICorDebugValue-Schnittstellen Wert, der in einem Großteil der Debug-API verwendet wird. Zum Abrufen eines ICorDebugValue-Objekts für eine angegebene Objekt Adresse können Sie den `CORDB_ADDRESS` Wert an die [ICorDebugProcess5:: GetObject](icordebugprocess5-getobject-method.md) -Methode übergeben.  
+ Für eine bessere `COR_HEAPOBJECT.address` Leistung `CORDB_ADDRESS` ist das Feld ein Wert und kein ICorDebugValue-Schnittstellenwert, der in einem Großteil der Debug-API verwendet wird. Um ein ICorDebugValue-Objekt für eine bestimmte Objektadresse zu erhalten, können Sie den `CORDB_ADDRESS` Wert an die [ICorDebugProcess5::GetObject-Methode](icordebugprocess5-getobject-method.md) übergeben.  
   
- Um die Leistung zu verbessern, ist das `COR_HEAPOBJECT.type` Feld ein `COR_TYPEID` Wert und nicht der ICorDebugType-Schnittstellen Wert, der in einem Großteil der Debug-API verwendet wird. Zum Abrufen eines ICorDebugType-Objekts für eine bestimmte Typ-ID können Sie den `COR_TYPEID` Wert an die [ICorDebugProcess5:: gettypeer fortypeid](icordebugprocess5-gettypefortypeid-method.md) -Methode übergeben.  
+ Für eine bessere `COR_HEAPOBJECT.type` Leistung `COR_TYPEID` ist das Feld ein Wert und kein ICorDebugType-Schnittstellenwert, der in einem Großteil der Debug-API verwendet wird. Um ein ICorDebugType-Objekt für eine bestimmte Typ-ID zu erhalten, können Sie den `COR_TYPEID` Wert an die [ICorDebugProcess5::GetTypeForTypeID-Methode](icordebugprocess5-gettypefortypeid-method.md) übergeben.  
   
- Die `COR_HEAPOBJECT`-Struktur enthält eine COM-Schnittstelle mit Verweis Zählung. Wenn Sie eine `COR_HEAPOBJECT` Instanz aus dem Enumerator abrufen, indem Sie die [icordebugheapenum:: Next](icordebugheapenum-next-method.md) -Methode aufrufen, müssen Sie anschließend den Verweis freigeben.  
+ Die `COR_HEAPOBJECT` Struktur enthält eine COM-Schnittstelle mit Referenzzählung. Wenn Sie `COR_HEAPOBJECT` eine Instanz aus dem Enumerator abrufen, indem Sie die [ICorDebugHeapEnum::Next-Methode](icordebugheapenum-next-method.md) aufrufen, müssen Sie den Verweis anschließend freigeben.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
@@ -62,7 +62,7 @@ typedef struct _COR_HEAPOBJECT {
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Debuggen von Strukturen](debugging-structures.md)
 - [Debuggen](index.md)

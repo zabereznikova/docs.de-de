@@ -14,47 +14,47 @@ helpviewer_keywords:
 ms.assetid: 8635ee3a-c84b-4626-876c-416bee54f787
 topic_type:
 - apiref
-ms.openlocfilehash: 1aa59ee559abff8006f0ac63a812e4315aa48154
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: e2fa5d5a998f51e0e90cfde22b40ec12f278307b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76790314"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79178363"
 ---
 # <a name="variablelocationtype-enumeration"></a>VariableLocationType-Enumeration
-Gibt den Typ des systemeigenen Standorts einer Variablen an.  
+Gibt den systemeigenen Positionstyp einer Variablen an.  
   
 ## <a name="syntax"></a>Syntax  
   
 ```cpp  
 typedef enum VariableLocationType  
 {  
-    VLT_REGISTER,               
-    VLT_REGISTER_RELATIVE,      
+    VLT_REGISTER,
+    VLT_REGISTER_RELATIVE,
     VLT_INVALID  
 } VariableLocationType;  
 ```  
   
-## <a name="members"></a>Member  
+## <a name="members"></a>Members  
   
 |Member|Beschreibung|  
 |------------|-----------------|  
 |`VLT_REGISTER`|Die Variable befindet sich in einem Register.|  
-|`VLT_REGISTER_RELATIVE`|Die Variable befindet sich in einer Register-relativen Speicheradresse.|  
-|`VLT_INVALID`|Die Variable wird nicht in einer Register-oder Register-relativen Speicheradresse gespeichert.|  
+|`VLT_REGISTER_RELATIVE`|Die Variable befindet sich an einem registerrelativen Speicherspeicherort.|  
+|`VLT_INVALID`|Die Variable wird nicht in einem Register oder einem registerrelativen Speicherspeicherort gespeichert.|  
   
-## <a name="remarks"></a>Hinweise  
- Ein Member der `VariableLocationType` Enumeration wird von der [icordebugvariablehome:: getlocationtype](icordebugvariablehome-getlocationtype-method.md) -Methode zurückgegeben.  
+## <a name="remarks"></a>Bemerkungen  
+ Ein Member `VariableLocationType` der Enumeration wird von der [ICorDebugVariableHome::GetLocationType-Methode](icordebugvariablehome-getlocationtype-method.md) zurückgegeben.  
   
-## <a name="requirements"></a>-Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   
  **Bibliothek:** CorGuids.lib  
   
- **.NET Framework Versionen:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
+ **.NET Framework-Versionen:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Debuggen von Enumerationen](debugging-enumerations.md)

@@ -11,38 +11,38 @@ helpviewer_keywords:
 - PictureBox control [Windows Forms], picture size and alignment
 - pictures [Windows Forms], controlling placement in PictureBox control [Windows Forms]
 ms.assetid: d0b332a3-fae2-4891-957c-dc3e17743326
-ms.openlocfilehash: 9bb094ce0b7945f23a2e9b8614e56c9492d5f832
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: fea813d7b9fe585e35b729b8b64e3a5f414ef76d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76736036"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79141965"
 ---
 # <a name="how-to-modify-the-size-or-placement-of-a-picture-at-run-time-windows-forms"></a>Gewusst wie: Ändern der Größe oder Platzierung eines Bildes zur Laufzeit (Windows Forms)
-Wenn Sie die Windows Forms <xref:System.Windows.Forms.PictureBox>-Steuerelement in einem Formular verwenden, können Sie die Eigenschaft <xref:System.Windows.Forms.PictureBox.SizeMode%2A> auf Folgendes festlegen:  
+Wenn Sie das <xref:System.Windows.Forms.PictureBox> Windows Forms-Steuerelement in einem <xref:System.Windows.Forms.PictureBox.SizeMode%2A> Formular verwenden, können Sie die Eigenschaft darauf auf:  
   
-- Ausrichten der oberen linken Ecke des Bilds mit der linken oberen Ecke des Steuer Elements  
+- Richten Sie die obere linke Ecke des Bildes mit der oberen linken Ecke des Steuerelements aus.  
   
-- Zentrieren des Bilds innerhalb des Steuer Elements  
+- Zentrieren Sie das Bild innerhalb des Steuerelements  
   
-- Passen Sie die Größe des Steuer Elements an das Bild an, das es anzeigt.  
+- Passen Sie die Größe des Steuerelements an das angezeigte Bild an  
   
-- Bildstrecken, das angezeigt wird, um das Steuerelement anzupassen  
+- Dehnen Sie jedes angezeigte Bild, um es an das Steuerelement anzupassen  
   
- Das Strecken eines Bilds (insbesondere eines im Bitmapformat) kann zu einem Verlust bei der Bildqualität führen. Metadatendateien, die Listen mit Grafik Anweisungen zum Zeichnen von Bildern zur Laufzeit sind, eignen sich besser für die Streckung als Bitmaps.  
+ Das Dehnen eines Bildes (insbesondere eines im Bitmap-Format) kann zu einem Verlust der Bildqualität führen. Metadateien, die Listen von Grafikanweisungen zum Zeichnen von Bildern zur Laufzeit sind, eignen sich besser zum Dehnen als Bitmaps.  
   
 ### <a name="to-set-the-sizemode-property-at-run-time"></a>So legen Sie die SizeMode-Eigenschaft zur Laufzeit fest  
   
-1. Legen Sie <xref:System.Windows.Forms.PictureBox.SizeMode%2A> auf <xref:System.Windows.Forms.PictureBoxSizeMode.Normal> (Standardeinstellung), <xref:System.Windows.Forms.PictureBoxSizeMode.AutoSize>, <xref:System.Windows.Forms.PictureBoxSizeMode.CenterImage>oder <xref:System.Windows.Forms.PictureBoxSizeMode.StretchImage>fest. <xref:System.Windows.Forms.PictureBoxSizeMode.Normal> bedeutet, dass das Bild in der oberen linken Ecke des Steuer Elements platziert wird. Wenn das Bild größer als das Steuerelement ist, werden die unteren und rechten Ränder abgeschnitten. <xref:System.Windows.Forms.PictureBoxSizeMode.CenterImage> bedeutet, dass das Bild im Steuerelement zentriert ist. Wenn das Bild größer als das Steuerelement ist, werden die äußeren Ränder des Bilds abgeschnitten. <xref:System.Windows.Forms.PictureBoxSizeMode.AutoSize> bedeutet, dass die Größe des Steuer Elements an die Größe des Bilds angepasst wird. <xref:System.Windows.Forms.PictureBoxSizeMode.StretchImage> ist die umgekehrte und bedeutet, dass die Größe des Bilds an die Größe des Steuer Elements angepasst wird.  
+1. Wird <xref:System.Windows.Forms.PictureBox.SizeMode%2A> <xref:System.Windows.Forms.PictureBoxSizeMode.Normal> auf (Standardeinstellung), <xref:System.Windows.Forms.PictureBoxSizeMode.AutoSize>, <xref:System.Windows.Forms.PictureBoxSizeMode.CenterImage>oder <xref:System.Windows.Forms.PictureBoxSizeMode.StretchImage>festgelegt. <xref:System.Windows.Forms.PictureBoxSizeMode.Normal>bedeutet, dass das Bild in der oberen linken Ecke des Steuerelements platziert wird; Wenn das Bild größer als das Steuerelement ist, werden die unteren und rechten Ränder abgeschnitten. <xref:System.Windows.Forms.PictureBoxSizeMode.CenterImage>bedeutet, dass das Bild innerhalb des Steuerelements zentriert ist; Wenn das Bild größer als das Steuerelement ist, werden die Außenkanten des Bildes abgeschnitten. <xref:System.Windows.Forms.PictureBoxSizeMode.AutoSize>bedeutet, dass die Größe des Steuerelements an die Größe des Bildes angepasst wird. <xref:System.Windows.Forms.PictureBoxSizeMode.StretchImage>ist die Rückseite und bedeutet, dass die Größe des Bildes an die Größe des Steuerelements angepasst wird.  
   
-     Im folgenden Beispiel ist der Pfad, der für den Speicherort des Bilds festgelegt ist, der Ordner "eigene Dateien". Dies geschieht, da Sie davon ausgehen können, dass die meisten Computer, auf denen das Windows-Betriebssystem ausgeführt wird, dieses Verzeichnis enthalten. Dadurch können auch Benutzer mit minimalen Systemzugriffsebenen die Anwendung sicher ausführen. Im folgenden Beispiel wird davon ausgegangen, dass ein <xref:System.Windows.Forms.PictureBox> Formular bereits hinzugefügt wurde.  
+     Im folgenden Beispiel ist der Pfad, der für den Speicherort des Bildes festgelegt ist, der Ordner Eigene Dokumente. Dies ist der Grund, da Sie davon ausgehen können, dass die meisten Computer, auf denen das Windows-Betriebssystem ausgeführt wird, dieses Verzeichnis enthalten. Dadurch können auch Benutzer mit minimalen Systemzugriffsebenen die Anwendung sicher ausführen. Im folgenden Beispiel wird <xref:System.Windows.Forms.PictureBox> ein Formular mit einem bereits hinzugefügten Steuerelement angenommen.  
   
     ```vb  
     Private Sub StretchPic()  
        ' Stretch the picture to fit the control.  
        PictureBox1.SizeMode = PictureBoxSizeMode.StretchImage  
        ' Load the picture into the control.  
-       ' You should replace the bold image   
+       ' You should replace the bold image
        ' in the sample below with an icon of your own choosing.  
        PictureBox1.Image = Image.FromFile _  
        (System.Environment.GetFolderPath _  
@@ -56,7 +56,7 @@ Wenn Sie die Windows Forms <xref:System.Windows.Forms.PictureBox>-Steuerelement 
        // Stretch the picture to fit the control.  
        PictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;  
        // Load the picture into the control.  
-       // You should replace the bold image   
+       // You should replace the bold image
        // in the sample below with an icon of your own choosing.  
        // Note the escape character used (@) when specifying the path.  
        PictureBox1.Image = Image.FromFile _  
@@ -73,7 +73,7 @@ Wenn Sie die Windows Forms <xref:System.Windows.Forms.PictureBox>-Steuerelement 
           // Stretch the picture to fit the control.  
           pictureBox1->SizeMode = PictureBoxSizeMode::StretchImage;  
           // Load the picture into the control.  
-          // You should replace the bold image   
+          // You should replace the bold image
           // in the sample below with an icon of your own choosing.  
           pictureBox1->Image = Image::FromFile(String::Concat(  
              System::Environment::GetFolderPath(  

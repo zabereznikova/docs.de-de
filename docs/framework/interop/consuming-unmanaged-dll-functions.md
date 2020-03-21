@@ -14,11 +14,11 @@ helpviewer_keywords:
 - DLL functions
 ms.assetid: eca7606e-ebfb-4f47-b8d9-289903fdc045
 ms.openlocfilehash: 7ec1f129dcc19300dd5a4e7c5e627d9e0edf29a1
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73123648"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79400950"
 ---
 # <a name="consuming-unmanaged-dll-functions"></a>Verwenden nicht verwalteter DLL-Funktionen
 Der Plattformaufruf ist ein Dienst, der es verwaltetem Code ermöglicht, nicht verwaltete Funktionen aufzurufen, die in DLLs (Dynamic Link Library) implementiert sind, z.B. die in der Windows-API enthaltenen Funktionen. Es sucht eine exportierte Funktion, ruft diese auf und marshallt ihre Argumente (ganze Zahlen, Zeichenfolgen, Arrays, Strukturen usw.) bei Bedarf über die Grenzen des dialogfähigen Betriebs hinaus.  
@@ -39,18 +39,18 @@ Der Plattformaufruf ist ein Dienst, der es verwaltetem Code ermöglicht, nicht v
   
      [Visual Basic] Verwenden Sie die **Declare**-Anweisung mit den Schlüsselwörtern **Function** und **Lib**. In seltenen Fällen können Sie **DllImportAttribute** mit den Schlüsselwörtern **Shared Function** verwenden. Diese Fälle werden weiter unten in diesem Abschnitt erläutert.  
   
-     [C#] Verwenden Sie **DllImportAttribute**, um die DLL und die Funktion zu identifizieren. Kennzeichnen Sie die Methode mit den Modifizierern **static** und **extern**.  
+     [C'] Verwenden Sie **DllImportAttribute,** um die DLL und Funktion zu identifizieren. Kennzeichnen Sie die Methode mit den Modifizierern **static** und **extern**.  
   
-     [C++] Verwenden Sie **DllImportAttribute**, um die DLL und die Funktion zu identifizieren. Kennzeichnen Sie die Wrappermethode oder Funktion mit **extern "C"** .  
+     [C++] Verwenden Sie **DllImportAttribute**, um die DLL und die Funktion zu identifizieren. Kennzeichnen Sie die Wrappermethode oder Funktion mit **extern "C"**.  
   
 4. [Aufrufen einer DLL-Funktion](calling-a-dll-function.md).  
   
      Rufen Sie die Methode für Ihre verwaltete Klasse wie für jede andere verwaltete Methode auf. [Übergeben von Strukturen](passing-structures.md) und [Implementieren von Rückruffunktionen](callback-functions.md) sind spezielle Fälle.  
   
- Beispiele für die Vorgehensweise beim Erstellen von .NET-basierten Deklarationen, die mit dem Plattformaufruf verwendet werden können, finden Sie unter [Marshaling Data with Platform Invoke (Marshallen von Daten mit Plattformaufruf)](marshaling-data-with-platform-invoke.md).  
+ Beispiele für die Vorgehensweise beim Erstellen von .NET-basierten Deklarationen, die mit dem Plattformaufruf verwendet werden, finden Sie unter [Marshallen von Daten mit Plattformaufruf](marshaling-data-with-platform-invoke.md).  
   
 ## <a name="a-closer-look-at-platform-invoke"></a>Genauere Betrachtung von Plattformaufrufen  
- Plattformaufrufe beruhen auf Metadaten, um exportierte Funktionen zu suchen und ihre Argumente zur Laufzeit zu marshallen. Die folgende Abbildung veranschaulicht diesen Prozess.  
+ Plattformaufrufe beruhen auf Metadaten, um exportierte Funktionen zu suchen und ihre Argumente zur Laufzeit zu marshallen. Die folgende Abbildung veranschaulicht diesen Prozess:  
   
  ![Diagramm eines Plattformaufrufs](./media/consuming-unmanaged-dll-functions/platform-invoke-call.gif)  
   
@@ -69,8 +69,8 @@ Der Plattformaufruf ist ein Dienst, der es verwaltetem Code ermöglicht, nicht v
   
  Der Plattformaufruf löst Ausnahmen aus, die von der nicht verwalteten Funktion für den verwalteten Aufrufer generiert wurden.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Interoperabilität mit nicht verwaltetem Code](index.md)
+- [Interoperation mit nicht verwaltetem Code](index.md)
 - [Beispiele für Plattformaufrufe](platform-invoke-examples.md)
-- [Interop Marshaling (Interop-Marshalling)](interop-marshaling.md)
+- [Interop-Marshalling](interop-marshaling.md)

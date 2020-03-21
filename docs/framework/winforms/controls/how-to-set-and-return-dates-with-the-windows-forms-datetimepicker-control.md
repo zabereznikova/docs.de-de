@@ -10,12 +10,12 @@ helpviewer_keywords:
 - DateTimePicker control [Windows Forms], setting and returning dates
 - examples [Windows Forms], DateTimePicker control
 ms.assetid: a8a48d68-e4b5-426e-9764-51230fc9acd2
-ms.openlocfilehash: 1e0aa58e98748ccde9411f0f4871adbae3a5f14d
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: f958097640316715b38828e72107ab5bdb9389aa
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76747110"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79141912"
 ---
 # <a name="how-to-set-and-return-dates-with-the-windows-forms-datetimepicker-control"></a>Gewusst wie: Festlegen und Zurückgeben von Datumsangaben mit dem DateTimePicker-Steuerelement in Windows Forms
 Die aktuell im <xref:System.Windows.Forms.DateTimePicker>-Steuerelement von Windows Forms ausgewählte Datumsangabe (Datum und Uhrzeit) ist durch die <xref:System.Windows.Forms.DateTimePicker.Value%2A>-Eigenschaft bestimmt. Sie können die <xref:System.Windows.Forms.DateTimePicker.Value%2A>-Eigenschaft festlegen, bevor das Steuerelement angezeigt wird (z. B. zur Entwurfszeit oder im <xref:System.Windows.Forms.Form.Load>-Ereignis des Formulars), um zu bestimmen, welches Datum zunächst im Steuerelement ausgewählt ist. Standardmäßig wird die <xref:System.Windows.Forms.DateTimePicker.Value%2A>-Eigenschaft des Steuerelements auf das aktuelle Datum festgelegt. Wenn Sie die <xref:System.Windows.Forms.DateTimePicker.Value%2A>-Eigenschaft des Steuerelements im Code ändern, wird das Steuerelement auf dem Formular automatisch entsprechend der neuen Einstellung aktualisiert.  
@@ -24,7 +24,7 @@ Die aktuell im <xref:System.Windows.Forms.DateTimePicker>-Steuerelement von Wind
   
 - Für Datumswerte geben die Eigenschaften <xref:System.DateTime.Month%2A>, <xref:System.DateTime.Day%2A> und <xref:System.DateTime.Year%2A> Ganzzahlwerte für diese Zeiteinheiten des ausgewählten Datums zurück. Die <xref:System.DateTime.DayOfWeek%2A>-Eigenschaft gibt einen Wert zurück, der den ausgewählten Wochentag angibt (mögliche Werte sind in der <xref:System.DayOfWeek>-Enumeration aufgelistet).  
   
-- Für Zeitwerte geben die Eigenschaften <xref:System.DateTime.Hour%2A>, <xref:System.DateTime.Minute%2A>, <xref:System.DateTime.Second%2A> und <xref:System.DateTime.Millisecond%2A> Ganzzahlwerte für diese Zeiteinheiten zurück. Informationen zum Konfigurieren des Steuer Elements für die Anzeige von Zeiten finden Sie unter Gewusst [wie: Anzeigen der Zeit mit dem DateTimePicker-Steuer](how-to-display-time-with-the-datetimepicker-control.md)Element.  
+- Für Zeitwerte geben die Eigenschaften <xref:System.DateTime.Hour%2A>, <xref:System.DateTime.Minute%2A>, <xref:System.DateTime.Second%2A> und <xref:System.DateTime.Millisecond%2A> Ganzzahlwerte für diese Zeiteinheiten zurück. Informationen zum Konfigurieren des Steuerelements für die Anzeige von Zeiten finden Sie unter [Gewusst wie: Anzeigezeit mit dem DateTimePicker-Steuerelement](how-to-display-time-with-the-datetimepicker-control.md).  
   
 ### <a name="to-set-the-date-and-time-value-of-the-control"></a>So legen Sie das Datum und die Uhrzeit für das Steuerelement fest  
   
@@ -48,18 +48,18 @@ Die aktuell im <xref:System.Windows.Forms.DateTimePicker>-Steuerelement von Wind
   
     ```vb  
     MessageBox.Show("The selected value is ", DateTimePicker1.Text)  
-    MessageBox.Show("The day of the week is ",   
+    MessageBox.Show("The day of the week is ",
        DateTimePicker1.Value.DayOfWeek.ToString)  
-    MessageBox.Show("Millisecond is: ",   
+    MessageBox.Show("Millisecond is: ",
        DateTimePicker1.Value.Millisecond.ToString)  
     ```  
   
     ```csharp  
-    MessageBox.Show ("The selected value is " +   
+    MessageBox.Show ("The selected value is " +
        dateTimePicker1.Text);  
-    MessageBox.Show ("The day of the week is " +   
+    MessageBox.Show ("The day of the week is " +
        dateTimePicker1.Value.DayOfWeek.ToString());  
-    MessageBox.Show("Millisecond is: " +   
+    MessageBox.Show("Millisecond is: " +
        dateTimePicker1.Value.Millisecond.ToString());  
     ```  
   

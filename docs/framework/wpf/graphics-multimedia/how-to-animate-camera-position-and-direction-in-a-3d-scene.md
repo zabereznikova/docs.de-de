@@ -1,30 +1,30 @@
 ---
-title: 'Vorgehensweise: Animieren der Kameraposition und -richtung in 3D-Szenen'
+title: 'Gewusst wie: Animieren der Kameraposition und -richtung in 3D-Szenen'
 ms.date: 03/30/2017
 helpviewer_keywords:
-- animation [WPF], camera position in 3-D scenes
-- camera direction [WPF], animating in 3-D scenes
-- 3-D scenes [WPF], animating camera position
-- 3-D scenes [WPF], animating camera direction
-- camera position [WPF], animating in 3-D scenes
-- animation [WPF], camera direction in 3-D scenes
+- animation [WPF], camera position in 3D scenes
+- camera direction [WPF], animating in 3D scenes
+- 3D scenes [WPF], animating camera position
+- 3D scenes [WPF], animating camera direction
+- camera position [WPF], animating in 3D scenes
+- animation [WPF], camera direction in 3D scenes
 ms.assetid: 480224b7-a5e5-4165-ba7f-ef760ddff94a
-ms.openlocfilehash: b64263a495ffe845a76317aad8f5b4a14e11b31e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5ce94e154cd5aa29b59260f893ec2b63a08db0fc
+ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61651375"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80112209"
 ---
-# <a name="how-to-animate-camera-position-and-direction-in-a-3d-scene"></a>Vorgehensweise: Animieren der Kameraposition und -richtung in 3D-Szenen
-Das folgende Beispiel zeigt das Animieren der Position der Kamera und die Richtung, die er in einer 3D-Szene verweist zu animieren. Dies erfolgt mithilfe von <xref:System.Windows.Media.Animation.Point3DAnimation> und <xref:System.Windows.Media.Animation.Vector3DAnimation> zum Animieren der <xref:System.Windows.Media.Media3D.ProjectionCamera.Position%2A> und <xref:System.Windows.Media.Media3D.ProjectionCamera.LookDirection%2A> Eigenschaften bzw. die <xref:System.Windows.Media.Media3D.PerspectiveCamera>. Sie können eine Animation wie folgt verwenden, um Perspektive Anzeigen einer Szene als Reaktion auf ein Ereignis zu ändern.  
+# <a name="how-to-animate-camera-position-and-direction-in-a-3d-scene"></a>Gewusst wie: Animieren der Kameraposition und -richtung in 3D-Szenen
+Das folgende Beispiel zeigt, wie Sie die Position einer Kamera animieren und die Richtung animieren, in der sie in einer 3D-Szene zeigt. Dies geschieht, <xref:System.Windows.Media.Animation.Point3DAnimation> <xref:System.Windows.Media.Animation.Vector3DAnimation> indem sie <xref:System.Windows.Media.Media3D.ProjectionCamera.Position%2A> <xref:System.Windows.Media.Media3D.ProjectionCamera.LookDirection%2A> die bzw. <xref:System.Windows.Media.Media3D.PerspectiveCamera>Eigenschaften der verwendet und animiert. Sie können eine Animation wie diese verwenden, um die Ansicht einer Szene als Reaktion auf ein Ereignis zu ändern.  
   
 ## <a name="example"></a>Beispiel  
  [!code-xaml[Animation3DGallery_snip#PointVector3DAnimationExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/Animation3DGallery_snip/CS/PointVector3DAnimationExample.xaml#pointvector3danimationexamplewholepage)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Windows.Media.Animation.Vector3DAnimation>
 - <xref:System.Windows.Media.Animation.Point3DAnimation>
 - [Animieren von Kameraposition und -richtung mithilfe von Keyframes](how-to-animate-camera-position-and-direction-using-key-frames.md)
-- [Übersicht über 3D-Grafiken](3-d-graphics-overview.md)
+- [3D-Grafikübersicht](3-d-graphics-overview.md)

@@ -14,43 +14,43 @@ helpviewer_keywords:
 ms.assetid: 03abde84-930a-49d3-bac3-23abb34a0184
 topic_type:
 - apiref
-ms.openlocfilehash: 4fd31e6b752e13a5c43198760e9a4d62a8f77d10
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 786e53d43ecde0bc3a97fadb77184d25d41430bc
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74448567"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79178350"
 ---
 # <a name="corsymsearchpolicyattributes-enumeration"></a>CorSymSearchPolicyAttributes-Enumeration
-Gibt die Richtlinie an, die bei einer Suche nach einem Symbol Leser verwendet werden soll. Diese Konstanten werden von der [ISymUnmanagedBinder2:: GetReaderForFile2](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder2-getreaderforfile2-method.md) -Methode und der [ISymUnmanagedBinder3:: GetReaderFromCallback](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder3-getreaderfromcallback-method.md) -Methode verwendet.  
+Gibt die Richtlinie an, die bei der Suche nach einem Symbolleser verwendet werden soll. Diese Konstanten werden von den [ISymUnmanagedBinder2::GetReaderForFile2-](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder2-getreaderforfile2-method.md) und [ISymUnmanagedBinder3::GetReaderFromCallback-Methoden](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder3-getreaderfromcallback-method.md) verwendet.  
   
 > [!IMPORTANT]
-> Es ist ein Sicherheitsrisiko, eine Programm Datenbankdatei (PDB-Datei) aus einer nicht vertrauenswürdigen Quelle zu öffnen.  
+> Es ist ein Sicherheitsrisiko, eine PDB-Datei (Program Database) aus einer nicht vertrauenswürdigen Quelle zu öffnen.  
   
 ## <a name="syntax"></a>Syntax  
   
 ```cpp  
 typedef enum CorSymSearchPolicyAttributes  
 {  
-    AllowRegistryAccess      = 0x1,       
+    AllowRegistryAccess      = 0x1,
     AllowSymbolServerAccess  = 0x2,  
-    AllowOriginalPathAccess  = 0x4,     //      
+    AllowOriginalPathAccess  = 0x4,     //
     AllowReferencePathAccess = 0x8  
 } CorSymSearchPolicyAttributes;  
 ```  
   
-## <a name="members"></a>Mitglieder  
+## <a name="members"></a>Members  
   
 |Member|Beschreibung|  
 |------------|-----------------|  
-|`AllowRegistryAccess`|Fragt die Registrierung nach Symbol Suchpfaden ab.|  
-|`AllowSymbolServerAccess`|Greift auf einen Symbol Server zu.|  
+|`AllowRegistryAccess`|Fragt die Registrierung nach Symbolsuchpfaden ab.|  
+|`AllowSymbolServerAccess`|Greift auf einen Symbolserver zu.|  
 |`AllowOriginalPathAccess`|Durchsucht den im Debug-Verzeichnis angegebenen Pfad.|  
-|`AllowReferencePathAccess`|Sucht die PDB an der Stelle, an der die exe-Datei gespeichert ist.|  
+|`AllowReferencePathAccess`|Sucht nach der PDB an der Stelle, an der sich die EXE-Datei befindet.|  
   
-## <a name="requirements"></a>Voraussetzungen  
- **Header:** Corsym. idl, corsym. h  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+ **Kopfzeile:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Diagnosesymbolspeicher-Enumerationen](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-enumerations.md)

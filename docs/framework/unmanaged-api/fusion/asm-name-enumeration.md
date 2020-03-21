@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: c8b65b19-d777-428f-bc0c-0d84c78a37bc
 topic_type:
 - apiref
-ms.openlocfilehash: 355f9da29a435a02d929cc01f28e95c4e04cdfcc
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: fb77fe470829570d5abe291249eb7ef9023e6b14
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73109153"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79178313"
 ---
 # <a name="asm_name-enumeration"></a>ASM_NAME-Enumeration
-Gibt die Version, den Build, die Kultur, die Signatur usw. der Assembly an, deren Eigenschaften von [IAssemblyName](iassemblyname-interface.md) -Methoden abgerufen oder festgelegt werden.  
+Gibt die Version, den Build, die Kultur, die Signatur usw. der Assembly an, deren Eigenschaften von [IAssemblyName-Methoden](iassemblyname-interface.md) abgerufen oder festgelegt werden.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -47,7 +47,7 @@ typedef enum {
     ASM_NAME_NULL_PUBLIC_KEY,  
     ASM_NAME_NULL_PUBLIC_KEY_TOKEN,  
     ASM_NAME_CUSTOM,  
-    ASM_NAME_NULL_CUSTOM,   
+    ASM_NAME_NULL_CUSTOM,
     ASM_NAME_MVID,  
     ASM_NAME_FILE_MAJOR_VERSION,  
     ASM_NAME_FILE_MINOR_VERSION,  
@@ -62,16 +62,16 @@ typedef enum {
 } ASM_NAME;  
 ```  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
- **Header:** Fusion. h  
+ **Kopfzeile:** Fusion.h  
   
- **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
+ **Bibliothek:** Als Ressource in MsCorEE.dll enthalten  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [IAssemblyName-Schnittstelle](iassemblyname-interface.md)
-- [Fusion-Enumerationen](fusion-enumerations.md)
+- [Fusionsenumerationen](fusion-enumerations.md)

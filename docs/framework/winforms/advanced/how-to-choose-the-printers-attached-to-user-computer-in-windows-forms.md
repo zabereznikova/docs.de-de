@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Auswählen der Drucker, die an den Computer eines Benutzers angeschlossen sind'
+title: 'Gewusst wie: Wählen Sie die Drucker aus, die an den Computer eines Benutzers angeschlossen sind'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - printing [Windows Forms], choosing printers
 - printers [Windows Forms], choosing
 ms.assetid: 63c1172b-2931-4ac0-953f-37f629494bbf
-ms.openlocfilehash: 7fc2427468540ac0a1480f6140cbb34c3a0f1ab3
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 2afbccd02ef42a78d5eac1a01841516fca27c92e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76746512"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79182610"
 ---
 # <a name="how-to-choose-the-printers-attached-to-a-users-computer-in-windows-forms"></a>Gewusst wie: Auswählen der einem Benutzercomputer zugewiesenen Drucker in Windows Forms
 Häufig möchten Benutzer einen anderen Drucker als den Standarddrucker zum Drucken auswählen. Sie können es Benutzern ermöglichen, mithilfe der <xref:System.Windows.Forms.PrintDialog> -Komponente einen Drucker unter den Druckern auszuwählen, die derzeit installiert sind. Über die Komponente <xref:System.Windows.Forms.PrintDialog> wird das <xref:System.Windows.Forms.DialogResult> der Komponente <xref:System.Windows.Forms.PrintDialog> aufgezeichnet und für die Auswahl des Druckers verwendet.  
@@ -23,11 +23,11 @@ Häufig möchten Benutzer einen anderen Drucker als den Standarddrucker zum Druc
   
 ### <a name="to-choose-a-printer-and-then-print-a-file"></a>So wählen Sie einen Drucker aus und drucken eine Datei  
   
-1. Wählen Sie den Drucker aus, der mithilfe der <xref:System.Windows.Forms.PrintDialog> Komponente verwendet werden soll.  
+1. Wählen Sie den Drucker <xref:System.Windows.Forms.PrintDialog> aus, der mit der Komponente verwendet werden soll.  
   
-     Im folgenden Codebeispiel werden zwei Ereignisse behandelt. Im ersten, dem <xref:System.Windows.Forms.Control.Click>-Ereignis eines <xref:System.Windows.Forms.Button>-Steuer Elements, wird die <xref:System.Windows.Forms.PrintDialog>-Klasse instanziiert, und der vom Benutzer ausgewählte Drucker wird in der <xref:System.Windows.Forms.DialogResult>-Eigenschaft aufgezeichnet.  
+     Im folgenden Codebeispiel werden zwei Ereignisse behandelt. Im ersten, <xref:System.Windows.Forms.Button> dem Ereignis <xref:System.Windows.Forms.Control.Click> eines <xref:System.Windows.Forms.PrintDialog> Steuerelements, wird die Klasse instanziiert, und <xref:System.Windows.Forms.DialogResult> der vom Benutzer ausgewählte Drucker wird in der Eigenschaft erfasst.  
   
-     Im zweiten Ereignis, dem <xref:System.Drawing.Printing.PrintDocument.PrintPage>-Ereignis der <xref:System.Drawing.Printing.PrintDocument> Komponente, wird ein Beispiel Dokument an den angegebenen Drucker ausgegeben.  
+     Im zweiten Ereignis, <xref:System.Drawing.Printing.PrintDocument.PrintPage> dem <xref:System.Drawing.Printing.PrintDocument> Ereignis der Komponente, wird ein Beispieldokument auf dem angegebenen Drucker gedruckt.  
   
     ```vb  
     Private Sub Button1_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles Button1.Click  
@@ -37,12 +37,12 @@ Häufig möchten Benutzer einen anderen Drucker als den Standarddrucker zum Druc
   
        If (result = DialogResult.OK) Then  
          PrintDocument1.Print()  
-       End If   
+       End If
   
     End Sub  
   
     Private Sub PrintDocument1_PrintPage(ByVal sender As Object, ByVal e As System.Drawing.Printing.PrintPageEventArgs) Handles PrintDocument1.PrintPage  
-       e.Graphics.FillRectangle(Brushes.Red, New Rectangle(500, 500, 500, 500))          
+       e.Graphics.FillRectangle(Brushes.Red, New Rectangle(500, 500, 500, 500))
     End Sub  
     ```  
   
@@ -58,10 +58,10 @@ Häufig möchten Benutzer einen anderen Drucker als den Standarddrucker zum Druc
        }  
     }  
   
-    private void printDocument1_PrintPage(object sender,   
+    private void printDocument1_PrintPage(object sender,
     System.Drawing.Printing.PrintPageEventArgs e)  
     {  
-       e.Graphics.FillRectangle(Brushes.Red,   
+       e.Graphics.FillRectangle(Brushes.Red,
          new Rectangle(500, 500, 500, 500));  
     }  
     ```  
@@ -73,7 +73,7 @@ Häufig möchten Benutzer einen anderen Drucker als den Standarddrucker zum Druc
        {  
           PrintDialog ^ printDialog1 = gcnew PrintDialog();  
           printDialog1->Document = printDocument1;  
-          System::Windows::Forms::DialogResult result =   
+          System::Windows::Forms::DialogResult result =
              printDialog1->ShowDialog();  
           if (result == DialogResult::OK)  
           {  
@@ -89,7 +89,7 @@ Häufig möchten Benutzer einen anderen Drucker als den Standarddrucker zum Druc
        }  
     ```  
   
-     (Visualisierung C# und Visualisierung C++) Fügen Sie den folgenden Code in den Konstruktor des Formulars ein, um den Ereignishandler zu registrieren.  
+     (Visual C- und Visual C++) Platzieren Sie den folgenden Code im Konstruktor des Formulars, um den Ereignishandler zu registrieren.  
   
     ```csharp  
     this.printDocument1.PrintPage += new  
@@ -108,4 +108,4 @@ Häufig möchten Benutzer einen anderen Drucker als den Standarddrucker zum Druc
   
 ## <a name="see-also"></a>Weitere Informationen
 
-- [Druckunterstützung in Windows Forms](windows-forms-print-support.md)
+- [Druckunterstützung in Windows Forms](windows-forms-print-support.md)

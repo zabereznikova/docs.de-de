@@ -10,33 +10,33 @@ helpviewer_keywords:
 - WCF, custom bindings
 - WCF, security
 ms.assetid: 8b847e91-69a3-49e1-9e5f-0c455e50d804
-ms.openlocfilehash: 450a99fc6604ccb3fa796e8a73e1ddc3e3adff9e
-ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
+ms.openlocfilehash: 05bcddabf625e478616cce39f08b0ff8af282716
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75964662"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79184952"
 ---
 # <a name="how-to-enable-message-replay-detection"></a>Vorgehensweise: Aktivieren der Nachrichtenreplay-Erkennung
-Ein Wiederholungsangriff tritt auf, wenn ein Angreifer einen Nachrichtenstream zwischen zwei Parteien kopiert und den Stream für eine oder mehrere Parteien wiedergibt. Wenn der Angriff nicht abgeschwächt wird, verarbeiten die angegriffenen Computer den Strom als zulässige Meldungen, was zu einer Reihe negativer Konsequenzen führt, wie z. B. redundanten Bestellungen eines Artikels.  
+Ein Replay-Angriff tritt auf, wenn ein Angreifer einen Nachrichtenstrom zwischen zwei Parteien kopiert und den Strom für eine oder mehrere Parteien wiedergibt. Wenn der Angriff nicht abgeschwächt wird, verarbeiten die angegriffenen Computer den Strom als zulässige Meldungen, was zu einer Reihe negativer Konsequenzen führt, wie z. B. redundanten Bestellungen eines Artikels.  
   
- Weitere Informationen zur Erkennung von Nachrichten Replay finden Sie unter [Message Replay-Erkennung](https://docs.microsoft.com/previous-versions/msp-n-p/ff649371(v=pandp.10)).  
+ Weitere Informationen zur Erkennung der Nachrichtenwiedergabe finden Sie unter [Nachrichtenwiederholungserkennung](https://docs.microsoft.com/previous-versions/msp-n-p/ff649371(v=pandp.10)).  
   
- Das folgende Verfahren veranschaulicht verschiedene Eigenschaften, die Sie verwenden können, um die Wiedergabe Erkennung mithilfe von Windows Communication Foundation (WCF) zu steuern.  
+ Das folgende Verfahren veranschaulicht verschiedene Eigenschaften, die Sie verwenden können, um die Wiedergabeerkennung mithilfe von Windows Communication Foundation (WCF) zu steuern.  
   
 ### <a name="to-control-replay-detection-on-the-client-using-code"></a>So steuern Sie die Replay-Erkennung für den Client mithilfe von Code  
   
-1. Erstellen Sie ein <xref:System.ServiceModel.Channels.SecurityBindingElement> zur Verwendung in einer <xref:System.ServiceModel.Channels.CustomBinding>. Weitere Informationen finden Sie unter Gewusst [wie: Erstellen einer benutzerdefinierten Bindung mit dem SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md). Im folgenden Beispiel wird eine <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> verwendet, die mithilfe der <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateKerberosBindingElement%2A> der <xref:System.ServiceModel.Channels.SecurityBindingElement>-Klasse erstellt worden ist.  
+1. Erstellen Sie ein <xref:System.ServiceModel.Channels.SecurityBindingElement> zur Verwendung in einer <xref:System.ServiceModel.Channels.CustomBinding>. Weitere Informationen finden Sie unter [Gewusst wie: Erstellen einer benutzerdefinierten Bindung mithilfe des SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md). Im folgenden Beispiel wird eine <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> verwendet, die mithilfe der <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateKerberosBindingElement%2A> der <xref:System.ServiceModel.Channels.SecurityBindingElement>-Klasse erstellt worden ist.  
   
 2. Verwenden Sie die <xref:System.ServiceModel.Channels.SecurityBindingElement.LocalClientSettings%2A>-Eigenschaft, um einen Verweis auf die <xref:System.ServiceModel.Channels.LocalClientSecuritySettings>-Klasse zurückzugeben und die folgenden Eigenschaften nach Bedarf festzulegen:  
   
-    1. `DetectReplay`. Ein Boolean-Wert. Dieser bestimmt, ob der Client Replays vom Server erkennen sollte. Die Standardeinstellung ist `true`.  
+    1. `DetectReplay`. Ein boolescher Wert. Dieser bestimmt, ob der Client Replays vom Server erkennen sollte. Der Standardwert lautet `true`.  
   
-    2. `MaxClockSkew`. Ein <xref:System.TimeSpan>-Wert. Bestimmt die Zeitverschiebung, die der Replay-Mechanismus zwischen dem Client und dem Server tolerieren kann. Das Sicherheitsverfahren untersucht den gesendeten Zeitstempel und bestimmt, ob er zu weit in der Vergangenheit zurückliegend gesendet wurde. Der Standardwert beträgt fünf Minuten.  
+    2. `MaxClockSkew`. Ein <xref:System.TimeSpan>-Wert. Bestimmt die Zeitverschiebung, die der Replay-Mechanismus zwischen dem Client und dem Server tolerieren kann. Das Sicherheitsverfahren untersucht den gesendeten Zeitstempel und bestimmt, ob er zu weit in der Vergangenheit zurückliegend gesendet wurde. Die Standardeinstellung ist 5 Minuten.  
   
     3. `ReplayWindow`. Ein `TimeSpan`-Wert. Dieser bestimmt, wie lange eine Nachricht im Netzwerk bleiben kann, nachdem sie vom Server (durch Vermittler) gesendet worden ist, bevor sie den Client erreicht. Der Client verfolgt die Signaturen der Nachrichten, die innerhalb des letzten `ReplayWindow` gesendet wurden, zur Replay-Erkennung.  
   
-    4. `ReplayCacheSize`. Ein Ganzzahlwert. Der Client speichert die Signaturen der Nachricht in einem Cache. Diese Einstellung gibt an, wie viele Signaturen der Cache speichern kann. Wenn die Zahl der Nachrichten, die innerhalb des letzten Replay-Fensters gesendet wurden, das Cachelimit erreicht, werden neue Nachrichten zurückgewiesen, bis die ältesten zwischengespeicherten Signaturen das Zeitlimit überschreiten. Der Standardwert ist 500000.  
+    4. `ReplayCacheSize`. Ein ganzzahliger Wert. Der Client speichert die Signaturen der Nachricht in einem Cache. Diese Einstellung gibt an, wie viele Signaturen der Cache speichern kann. Wenn die Zahl der Nachrichten, die innerhalb des letzten Replay-Fensters gesendet wurden, das Cachelimit erreicht, werden neue Nachrichten zurückgewiesen, bis die ältesten zwischengespeicherten Signaturen das Zeitlimit überschreiten. Der Standardwert ist 500000.  
   
 ### <a name="to-control-replay-detection-on-the-service-using-code"></a>So steuern Sie die Replay-Erkennung für den Dienst mithilfe von Code  
   
@@ -46,25 +46,25 @@ Ein Wiederholungsangriff tritt auf, wenn ein Angreifer einen Nachrichtenstream z
   
 ### <a name="to-control-replay-detection-in-configuration-for-the-client-or-service"></a>So steuern Sie die Replay-Erkennung in der Konfiguration für den Client oder den Dienst  
   
-1. Erstellen Sie eine [\<CustomBinding->](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md).  
+1. Erstellen Sie eine [ \<benutzerdefinierte>](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md).  
   
 2. Erstellen Sie ein `<security>`-Element.  
   
-3. Erstellen Sie eine [\<LocalClientSettings->](../../../../docs/framework/configure-apps/file-schema/wcf/localclientsettings-element.md) oder [\<LocalServiceSettings->](../../../../docs/framework/configure-apps/file-schema/wcf/localservicesettings-element.md).  
+3. Erstellen Sie ein [ \<localClientSettings>](../../../../docs/framework/configure-apps/file-schema/wcf/localclientsettings-element.md) oder [ \<localServiceSettings>](../../../../docs/framework/configure-apps/file-schema/wcf/localservicesettings-element.md).  
   
-4. Legen Sie die folgenden Attributwerte nach Bedarf fest: `detectReplays`, `maxClockSkew`, `replayWindow` und `replayCacheSize`. Im folgenden Beispiel werden sowohl die Attribute eines `<localServiceSettings>`&lt;localClientSettings&gt;- als auch eines`<localClientSettings>`-Elements festgelegt:  
+4. Legen Sie die folgenden Attributwerte nach Bedarf fest: `detectReplays`, `maxClockSkew`, `replayWindow` und `replayCacheSize`. Im folgenden Beispiel werden sowohl die Attribute eines `<localServiceSettings>`-Elements festgelegt:  
   
     ```xml  
     <customBinding>  
       <binding name="NewBinding0">  
        <textMessageEncoding />  
         <security>  
-         <localClientSettings   
-          replayCacheSize="800000"   
+         <localClientSettings
+          replayCacheSize="800000"
           maxClockSkew="00:03:00"  
           replayWindow="00:03:00" />  
-         <localServiceSettings   
-          replayCacheSize="800000"   
+         <localServiceSettings
+          replayCacheSize="800000"
           maxClockSkew="00:03:00"  
           replayWindow="00:03:00" />  
         <secureConversationBootstrap />  
@@ -102,7 +102,7 @@ Ein Wiederholungsangriff tritt auf, wenn ein Angreifer einen Nachrichtenstream z
   
 - <xref:System.ServiceModel.Channels>  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.ServiceModel.Channels.LocalClientSecuritySettings>
 - <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings>

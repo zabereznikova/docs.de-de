@@ -2,12 +2,12 @@
 title: Erforderliche Argumente und Überladungsgruppen
 ms.date: 03/30/2017
 ms.assetid: 4ca3ed06-b9af-4b85-8b70-88c2186aefa3
-ms.openlocfilehash: 84384e90be0036036477d9b4249832f544e17d08
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 4eb62306f52b8ff890d5a5333c3789bd84ad7f60
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70989311"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79142939"
 ---
 # <a name="required-arguments-and-overload-groups"></a>Erforderliche Argumente und Überladungsgruppen
 Aktivitäten können so konfiguriert werden, dass bestimmte Argumente gebunden werden müssen, wenn die Ausführung der Aktivität gültig sein soll. Das `RequiredArgument`-Attribut wird verwendet, um anzugeben, dass bestimmte Argumente für eine Aktivität erforderlich sind. Mit dem `OverloadGroup`-Attribut werden die Kategorien erforderlicher Argumente zusammen anzuordnen. Mit diesen Attributen können Aktivitätsautoren einfache oder komplexe Konfigurationen für die Aktivitätsvalidierung bereitstellen.  
@@ -61,13 +61,13 @@ public sealed class Add : CodeActivity<int>
   
  Wenn die Aktivität verwendet wird und eines der beiden erforderlichen Argumente nicht gebunden ist, wird der folgende Validierungsfehler zurückgegeben.  
   
- **Der Wert für das erforderliche Aktivitäts Argument "Operand1" wurde nicht angegeben.**  
+ **Für das erforderliche Aktivitätsargument 'Operand1' wurde kein Wert angegeben.**  
 > [!NOTE]
-> Weitere Informationen zum Überprüfen und behandeln von Validierungs Fehlern und-Warnungen finden Sie unter [Aufrufen der Aktivitäts Validierung](invoking-activity-validation.md).  
+> Weitere Informationen zum Überprüfen und Behandeln von Validierungsfehlern und Warnungen finden Sie unter [Aufrufen von Aktivitätsvalidierung](invoking-activity-validation.md).  
   
 ## <a name="using-overload-groups"></a>Verwenden von Überladungsgruppen
 
-Überladungsgruppen bieten eine Methode zum Angeben der Argumentkombinationen, die in einer Aktivität gültig sind. Argumente werden mit <xref:System.Activities.OverloadGroupAttribute> zusammen angeordnet. Jeder Gruppe wird ein Name zugewiesen, der <xref:System.Activities.OverloadGroupAttribute>durch angegeben wird. Die Aktivität ist gültig, wenn nur ein Satz von Argumenten in einer Überladungs Gruppe gebunden ist. Im folgenden Beispiel wird eine `CreateLocation`-Klasse definiert.  
+Überladungsgruppen bieten eine Methode zum Angeben der Argumentkombinationen, die in einer Aktivität gültig sind. Argumente werden mit <xref:System.Activities.OverloadGroupAttribute> zusammen angeordnet. Jeder Gruppe wird ein Name gegeben, der durch die <xref:System.Activities.OverloadGroupAttribute>angegeben wird. Die Aktivität ist gültig, wenn nur ein Satz von Argumenten in einer Überladungsgruppe gebunden ist. Im folgenden Beispiel wird eine `CreateLocation`-Klasse definiert.  
   
 ```csharp  
 class CreateLocation: Activity  
@@ -100,13 +100,13 @@ class CreateLocation: Activity
   
     [RequiredArgument]  
     [OverloadGroup("G3")]  
-    public InArgument<int> Zip { get; set; }                  
+    public InArgument<int> Zip { get; set; }
 }  
 ```  
   
  Ziel dieser Aktivität ist es, einen Standort in den USA anzugeben. Hierzu kann der Benutzer der Aktivität den Standort mithilfe von drei Argumentgruppen angeben. Zum Angeben gültiger Argumentkombinationen wurden drei Überladungsgruppen definiert. `G1` enthält das `Latitude`-Argument und das `Longitude`-Argument. `G2` enthält `Street`, `City` und `State`. `G3` enthält `Street` und `Zip`. `Name` ist ebenfalls ein erforderliches Argument, jedoch nicht Teil einer Überladungsgruppe. Damit diese Aktivität gültig ist, müsste `Name` zusammen mit allen Argumenten aus einer (und nur einer) der Überladungsgruppen gebunden werden.  
   
- Im folgenden Beispiel, das aus dem Beispiel für [Datenbankzugriffs Aktivitäten](./samples/database-access-activities.md) stammt, gibt es zwei Überladungs `ConfigFileSectionName`Gruppen: `ConnectionString` und. Damit diese Aktivität gültig ist, müssen das `ProviderName`-Argument und das `ConnectionString`-Argument gebunden werden oder das `ConfigName`-Argument, jedoch nicht beides.  
+ Im folgenden Beispiel, das aus dem Beispiel [Datenbankzugriffsaktivitäten](./samples/database-access-activities.md) entnommen `ConnectionString` `ConfigFileSectionName`wurde, gibt es zwei Überladungsgruppen: und . Damit diese Aktivität gültig ist, müssen das `ProviderName`-Argument und das `ConnectionString`-Argument gebunden werden oder das `ConfigName`-Argument, jedoch nicht beides.  
   
 ```csharp  
 public class DbUpdate: AsyncCodeActivity  
@@ -138,7 +138,7 @@ public class DbUpdate: AsyncCodeActivity
     public IDictionary<string, Argument> Parameters { get; }  
   
     [DependsOn("Parameters")]  
-    public OutArgument<int> AffectedRecords { get; set; }       
+    public OutArgument<int> AffectedRecords { get; set; }
 }  
 ```  
   

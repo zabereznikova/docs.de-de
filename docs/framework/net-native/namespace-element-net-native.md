@@ -1,22 +1,22 @@
 ---
-title: <Namespace>-Element (.net Native)
+title: <Namespace>Element (.NET Native)
 ms.date: 03/30/2017
 ms.assetid: 57c614e5-18a9-4e87-bfd5-d0fe3396a192
-ms.openlocfilehash: b6d7a45de14d0fb8eb2e27a02c86510f630be9e1
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 06d88a7b0f95c7c1dbe98818b847c92e08a57a19
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73128266"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79180958"
 ---
-# <a name="namespace-element-net-native"></a>\<Namespace > Element (.net Native)
+# <a name="namespace-element-net-native"></a>\<Namespace> Element (.NET Native)
 Wendet die Laufzeitreflektionsrichtlinie auf alle Typen in einem angegebenen Namespace an.  
   
 ## <a name="syntax"></a>Syntax  
   
 ```xml  
-<Namespace Name="namespace_name"   
-           Activate="policy_type"   
+<Namespace Name="namespace_name"
+           Activate="policy_type"
            Browse="policy_type"  
            Dynamic="policy_setting"  
            Serialize="policy_setting"  
@@ -31,9 +31,9 @@ Wendet die Laufzeitreflektionsrichtlinie auf alle Typen in einem angegebenen Nam
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
-### <a name="attributes"></a>Attribute  
+### <a name="attributes"></a>Attributes  
   
-|Attribut|Attributtyp|Beschreibung|  
+|attribute|Attributtyp|Beschreibung|  
 |---------------|--------------------|-----------------|  
 |`Name`|Allgemein|Erforderliches Attribut. Gibt den Namen des Namespace an.|  
 |`Activate`|Spiegelung|Optionales Attribut. Steuert den Laufzeitzugriff auf Konstruktoren, um die Aktivierung von Instanzen zu ermöglichen.|  
@@ -49,13 +49,13 @@ Wendet die Laufzeitreflektionsrichtlinie auf alle Typen in einem angegebenen Nam
   
 ## <a name="name-attribute"></a>Namensattribut  
   
-|Wert|Beschreibung|  
+|value|Beschreibung|  
 |-----------|-----------------|  
-|*namespace_name*|Der Namespacename. Wenn das \<Namespace>-Element ein untergeordnetes Element des [\<Application>](application-element-net-native.md), [\<Library>](library-element-net-native.md)- oder [\<Assembly>](assembly-element-net-native.md)-Elements ist, muss *namespace_name* ein vollqualifizierter Namespacename sein. Wenn das \<Namespace>-Element ein untergeordnetes Element eines anderen \<Namespace>-Elements ist, muss *namespace_name* ein relativer Namespacename sein.|  
+|*namespace_name*|Der Namespacename. Wenn \<das Namespace->-Element ein untergeordnetes Element eines [ \<Application>](application-element-net-native.md), [ \<Library>](library-element-net-native.md)oder [ \<Assembly>-Elements](assembly-element-net-native.md) ist, muss *namespace_name* ein vollqualifizierter Namespacename sein. Wenn das \<Namespace>-Element ein untergeordnetes Element eines anderen \<Namespace>-Elements ist, muss *namespace_name* ein relativer Namespacename sein.|  
   
 ## <a name="all-other-attributes"></a>Alle anderen Attribute  
   
-|Wert|Beschreibung|  
+|value|Beschreibung|  
 |-----------|-----------------|  
 |*policy_setting*|Die Einstellung, die auf diesen Richtlinientyp für alle Typen im Namespace angewendet werden soll. Mögliche Werte sind `All`, `Auto`, `Excluded`, `Public`, `PublicAndInternal`, `Required Public`, `Required PublicAndInternal` und `Required All`. Weitere Informationen finden Sie unter [Richtlinieneinstellungen für die Laufzeitanweisung](runtime-directive-policy-settings.md).|  
   
@@ -64,25 +64,25 @@ Wendet die Laufzeitreflektionsrichtlinie auf alle Typen in einem angegebenen Nam
 |Element|Beschreibung|  
 |-------------|-----------------|  
 |`<Namespace>`|Wendet die Laufzeitreflektionsrichtlinie auf alle Typen in einem übergeordneten Namespace an.|  
-|[\<Type>](type-element-net-native.md)|Wendet die Reflektionsrichtlinie auf einen Typ an.|  
-|[\<TypeInstantiation>](typeinstantiation-element-net-native.md)|Wendet die Reflektionsrichtlinie auf einen konstruierten generischen Typ an.|  
+|[\<Typ>](type-element-net-native.md)|Wendet die Reflektionsrichtlinie auf einen Typ an.|  
+|[\<TypInstanziierung>](typeinstantiation-element-net-native.md)|Wendet die Reflektionsrichtlinie auf einen konstruierten generischen Typ an.|  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<Anwendung>](application-element-net-native.md)|Dient als Container für anwendungsweite Typen und Typmember, deren Metadaten zur Laufzeit für die Reflektion verfügbar sind. Das [\<Application>](application-element-net-native.md)-Element kann 0, ein oder mehrere [\<Assembly>](assembly-element-net-native.md)-Elemente aufweisen.|  
-|[\<Assembly>](assembly-element-net-native.md)|Wendet die Laufzeitreflektionsrichtlinie auf alle Typen in einer angegebenen Assembly an.|  
-|[\<Library>](library-element-net-native.md)|Definiert die Assembly, die Typen und Typmember enthält, deren Metadaten zur Laufzeit für die Reflektion verfügbar sind. Das [\<Library>](library-element-net-native.md)-Element kann 0 oder ein [\<Assembly>](assembly-element-net-native.md)-Element aufweisen.|  
+|[\<Anwendung>](application-element-net-native.md)|Dient als Container für anwendungsweite Typen und Typmember, deren Metadaten zur Laufzeit für die Reflektion verfügbar sind. Das [ \<>-Element](application-element-net-native.md) application kann null, ein oder mehrere [ \<Assembly->](assembly-element-net-native.md) Elemente aufweisen.|  
+|[\<Montage>](assembly-element-net-native.md)|Wendet die Laufzeitreflektionsrichtlinie auf alle Typen in einer angegebenen Assembly an.|  
+|[\<Bibliotheks->](library-element-net-native.md)|Definiert die Assembly, die Typen und Typmember enthält, deren Metadaten zur Laufzeit für die Reflektion verfügbar sind. Das [ \<>-Element der Bibliothek](library-element-net-native.md) kann null oder ein [ \<Assembly->-Element](assembly-element-net-native.md) haben.|  
 |`<Namespace>`|Wendet die Reflektionsrichtlinie auf alle Typen in einem übergeordneten Namespace an.|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Die Attribute `Activate`, `Browse`, `Dynamic` und `Serialize` sind optional. Wenn keine vorhanden sind, dient das `<Namespace>`-Element nur als Container für untergeordnete Elemente. Wenn sie vorhanden sind, wendet das `<Namespace>`-Element eine Laufzeitreflektionsrichtlinie auf alle Typen im angegebenen Namespace an.  
   
- Wenn es sich um ein untergeordnetes Element des [\<Assembly>](assembly-element-net-native.md)-Elements handelt, überschreibt das `<Namespace>`-Element die Laufzeitreflektionsrichtlinie, die vom [\<Assembly>](assembly-element-net-native.md)-Element definiert wird.  
+ Wenn es sich um ein untergeordnetes `<Namespace>` Element des [ \<Assembly->-Elements](assembly-element-net-native.md) handelt, überschreibt das Element die Laufzeitreflexionsrichtlinie, die [ \<vom Assembly->-Element](assembly-element-net-native.md) definiert wird.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Richtlinieneinstellungen für die Laufzeitanweisung](runtime-directive-policy-settings.md)
-- [Runtime Directives (rd.xml) Configuration File Reference (Referenz zur Laufzeitanweisungs-Konfigurationsdatei (rd.xml))](runtime-directives-rd-xml-configuration-file-reference.md)
+- [Laufzeitanweisungs-Konfigurationsdatei (rd.xml) Referenz](runtime-directives-rd-xml-configuration-file-reference.md)
 - [Elemente der Laufzeitanweisung](runtime-directive-elements.md)

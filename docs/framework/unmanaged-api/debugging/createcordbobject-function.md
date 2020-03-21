@@ -16,31 +16,31 @@ helpviewer_keywords:
 ms.assetid: b259821d-4fa7-464d-85cf-304dfffc8089
 topic_type:
 - apiref
-ms.openlocfilehash: 1d190c5b558c7c523be09267e59eab7c5611563a
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 2716adcc8c79c8003202561ea2011c2469a6bc5c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76793854"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79179232"
 ---
 # <a name="createcordbobject-function"></a>CreateCordbObject-Funktion
-Erstellt eine Debugger-Schnittstelle ([ICorDebug](icordebug-interface.md)), die Funktionen zum Instanziieren einer verwalteten Debugsitzung für einen Remote Prozess bereitstellt.  
+Erstellt eine Debuggerschnittstelle ([ICorDebug](icordebug-interface.md)), die Funktionen zum Instanziieren einer verwalteten Debugsitzung für einen Remoteprozess bereitstellt.  
   
 ## <a name="syntax"></a>Syntax  
   
 ```cpp  
 HRESULT CordbCreateObject (  
-       [in]  int         iDebuggerVersion,   
+       [in]  int         iDebuggerVersion,
        [out] IUnknown**  ppCordb  
 );  
 ```  
   
-## <a name="parameters"></a>Parameters  
+## <a name="parameters"></a>Parameter  
  `iDebuggerVersion`  
  [in] Debuggerversion des Zielprozesses. Dieser Parameter muss CorDebugVersion_2_0 für das Remotedebuggen sein.  
   
  `ppCordb`  
- vorgenommen Zeiger auf einen Zeiger auf ein Objekt, das in eine [ICorDebug](icordebug-interface.md) -Schnittstelle umgewandelt und zurückgegeben wird.  
+ [out] Zeiger auf einen Zeiger auf ein Objekt, das in eine [ICorDebug-Schnittstelle](icordebug-interface.md) zurückgeworfen und zurückgegeben wird.  
   
 ## <a name="return-value"></a>Rückgabewert  
  S_OK  
@@ -55,14 +55,14 @@ HRESULT CordbCreateObject (
  E_FAIL (oder andere E_-Rückgabecodes)  
  Andere Fehler.  
   
-## <a name="remarks"></a>Hinweise  
- Die [ICorDebug](icordebug-interface.md) -Schnittstelle, die in `ppCordb` zurückgegeben wird, ist die Debugschnittstelle der obersten Ebene für alle verwalteten Debugdienste.  
+## <a name="remarks"></a>Bemerkungen  
+ Die [ICorDebug-Schnittstelle,](icordebug-interface.md) `ppCordb` die zurückgegeben wird, ist die Debugging-Schnittstelle der obersten Ebene für alle verwalteten Debugdienstdienste.  
   
-## <a name="requirements"></a>-Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Coreclrremotedebugginginterfaces. h  
+ **Kopfzeile:** CoreClrRemoteDebuggingSchnittstellen.h  
   
- **Bibliothek:** mscordbi_macx86. dll  
+ **Bibliothek:** mscordbi_macx86.dll  
   
- **.NET Framework Versionen:** 3,5 SP1
+ **.NET Framework-Versionen:** 3.5 SP1

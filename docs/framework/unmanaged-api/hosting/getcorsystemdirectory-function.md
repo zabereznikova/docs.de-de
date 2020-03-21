@@ -15,52 +15,52 @@ helpviewer_keywords:
 ms.assetid: 3dcd16a7-dafc-4ca8-b5cd-20ffb37db91d
 topic_type:
 - apiref
-ms.openlocfilehash: 63fb505a92683fda21b6e71a6ca891ca35afba1d
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: bdafacfe52d678aacfcd44de1e924bcb88547424
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73136414"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79178203"
 ---
 # <a name="getcorsystemdirectory-function"></a>GetCORSystemDirectory-Funktion
-Gibt das Installationsverzeichnis des Common Language Runtime (CLR) zurück, das in den Prozess geladen wird. Das Installationsverzeichnis ist voll qualifiziert, z. b. "c:\WINDOWS\Microsoft.NET\Framework\v1.0.3705".  
+Gibt das Installationsverzeichnis der Common Language Runtime (CLR) zurück, die in den Prozess geladen wird. Das Installationsverzeichnis ist voll qualifiziert, z. B. "c:'windows'microsoft.net'framework'v1.0.3705'.  
   
- Diese Funktion ist veraltet. Sie wird durch die [iclrruntimumfo:: getruntimedirectory](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-getruntimedirectory-method.md) -Methode abgelöst, die in der .NET Framework 4 bereitgestellt wird.  
+ Diese Funktion ist als veraltet markiert. Sie wird durch die [ICLRRuntimeInfo::GetRuntimeDirectory-Methode](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-getruntimedirectory-method.md) ersetzt, die in .NET Framework 4 bereitgestellt wird.  
   
 ## <a name="syntax"></a>Syntax  
   
 ```cpp  
-HRESULT GetCORSystemDirectory (   
-    [out] LPWSTR  pbuffer,     
-    [in]  DWORD   cchBuffer,   
+HRESULT GetCORSystemDirectory (
+    [out] LPWSTR  pbuffer,
+    [in]  DWORD   cchBuffer,
     [out] DWORD*  dwlength  
-);   
+);
 ```  
   
 ## <a name="parameters"></a>Parameter  
  `pbuffer`  
- vorgenommen Ein Puffer, in dem die Laufzeit eine Zeichenfolge zurückgibt, die den voll qualifizierten Namen des Installationsverzeichnisses für die Laufzeit enthält, die in den Prozess geladen wird. Wenn die Laufzeit noch nicht in den Prozess geladen wurde, gibt die Funktion die entsprechenden Verzeichnisinformationen für die aktuelle Version der Laufzeit zurück, die auf dem Computer installiert ist.  
+ [out] Ein Puffer, in dem die Laufzeit eine Zeichenfolge zurückgibt, die den vollqualifizierten Namen des Installationsverzeichnisses für die Laufzeit enthält, die in den Prozess geladen wird. Wenn die Laufzeit noch nicht in den Prozess geladen wurde, gibt die Funktion die entsprechenden Verzeichnisinformationen für die neueste Version der auf dem Computer installierten Laufzeit zurück.  
   
  `cchBuffer`  
- in Die Größe `pbuffer`in Byte.  
+ [in] Die Größe von in `pbuffer`Bytes von .  
   
  `dwLength`  
- vorgenommen Die Anzahl der Zeichen, die in `pbuffer`zurückgegeben werden.  
+ [out] Die Anzahl der `pbuffer`in zurückgegebenen Zeichen.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
   
 > [!CAUTION]
 > Verwenden Sie diese Funktion nicht in Prozessen, in denen Version 4 der CLR ausgeführt wird. Wenn eine frühere Version der CLR auf dem Computer installiert ist, gibt diese Funktion das Installationsverzeichnis für diese Version zurück.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Mscoree. h  
+ **Kopfzeile:** MSCorEE.h  
   
- **Bibliothek:** Mscoree. dll  
+ **Bibliothek:** MSCorEE.dll  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Veraltete CLR-Hostingfunktionen](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

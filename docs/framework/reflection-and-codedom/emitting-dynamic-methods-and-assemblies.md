@@ -7,12 +7,12 @@ helpviewer_keywords:
 - metadata, emit interfaces
 - reflection emit, overview
 - assemblies [.NET Framework], emitting dynamic assemblies
-ms.openlocfilehash: 578851bed188921324e3c25e533b3466068dee3d
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: fda5a20eb7798086ec10415889454b4a8beba5f3
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74446784"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79180526"
 ---
 # <a name="emitting-dynamic-methods-and-assemblies"></a>Ausgeben von dynamischen Methoden und Assemblys
 
@@ -34,24 +34,20 @@ Die Reflektionsausgabe bietet die folgenden Funktionen:
   
 Neben den verwalteten Typen im <xref:System.Reflection.Emit>-Namespace sind nicht verwaltete Metadatenschnittstellen verfügbar, die in der Referenzdokumentation zu [Metadatenschnittstellen](../unmanaged-api/metadata/metadata-interfaces.md) beschrieben werden. Die verwaltete Reflektionsausgabe bietet eine bessere semantische Fehlerüberprüfung und einen höheren Abstraktionsgrad für Metadaten als die nicht verwalteten Metadatenschnittstellen.  
   
-In der Common Language Infrastructure(CLI)-Dokumentation, insbesondere in den Themen "Partition II: Metadata Definition and Semantics" und "Partition III: CIL Instruction Set" finden Sie weitere hilfreiche Informationen zur Verwendung von Metadaten und MSIL. Die Dokumentation ist online auf der [ECMA-Website](https://www.ecma-international.org/publications/standards/Ecma-335.htm)verfügbar.  
+In der Common Language Infrastructure(CLI)-Dokumentation, insbesondere in den Themen "Partition II: Metadata Definition and Semantics" und "Partition III: CIL Instruction Set" finden Sie weitere hilfreiche Informationen zur Verwendung von Metadaten und MSIL. Die Dokumentation ist online auf der [Ecma-Website](https://www.ecma-international.org/publications/standards/Ecma-335.htm)verfügbar.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt
   
-[Sicherheitsaspekte bei der Reflektionsausgabe](security-issues-in-reflection-emit.md)  
+[Sicherheitsprobleme in der Reflexion emittieren](security-issues-in-reflection-emit.md)  
 Beschreibt Sicherheitsaspekte im Zusammenhang mit dem Erstellen dynamischer Assemblys mithilfe der Reflektionsausgabe.  
 
-[Vorgehensweise: Definieren und Ausführen von dynamischen Methoden](how-to-define-and-execute-dynamic-methods.md)   
-Zeigt, wie eine einfache dynamische Methode sowie eine dynamische Methode, die an eine Instanz einer Klasse gebunden ist, ausgeführt werden.
+[Gewusst wie: Definieren und Ausführen dynamischer Methoden](how-to-define-and-execute-dynamic-methods.md) Zeigt, wie eine einfache dynamische Methode und eine dynamische Methode ausgeführt werden, die an eine Instanz einer Klasse gebunden ist.
 
-[Vorgehensweise: Definieren eines generischen Typs mit Reflektionsausgabe](how-to-define-a-generic-type-with-reflection-emit.md)   
-Zeigt, wie ein einfacher generischer Typ mit zwei Typparametern erstellt wird, wie Klasseneinschränkungen, Schnittstellen und bestimmte Einschränkungen für Typparameter angewandt werden und wie Member erstellt werden, die die Typparameter der Klasse als Parametertypen und Rückgabetypen verwenden.
+[Gewusst wie: Definieren eines generischen Typs mit Reflexionsee](how-to-define-a-generic-type-with-reflection-emit.md) Zeigt, wie sie einen einfachen generischen Typ mit zwei Typparametern erstellen, Klassen-, Schnittstellen- und Sondereinschränkungen auf die Typparameter anwenden und wie Member erstellt werden, die die Typparameter der Klasse als Parametertypen und Rückgabetypen verwenden.
 
-[Vorgehensweise: Definieren einer generischen Methode mit Reflektionsausgabe](how-to-define-a-generic-method-with-reflection-emit.md)   
-Zeigt, wie einfache generische Methoden erstellt, ausgegeben und aufgerufen werden.
+[Gewusst wie: Definieren einer generischen Methode mit Reflexionsee](how-to-define-a-generic-method-with-reflection-emit.md) Zeigt, wie eine einfache generische Methode erstellt, ausgesendet und aufgerufen wird.
 
-[Entladbare Assemblys für die dynamische Typgenerierung](collectible-assemblies.md)   
-Führt in das Thema „entladbare Assemblys“ ein. Dabei handelt es sich um dynamische Assemblys, die entladen werden können, ohne gleichzeitig auch die Anwendungsdomäne zu entladen, in der sie erstellt wurden.
+[Sammelbaugruppen für die dynamische Typgenerierung](collectible-assemblies.md) Führt Sammelassemblys ein, bei denen es sich um dynamische Assemblys handelt, die entladen werden können, ohne die Anwendungsdomäne zu entladen, in der sie erstellt wurden.
   
 ## <a name="reference"></a>Verweis  
 
@@ -69,7 +65,7 @@ Hier werden verwaltete Klassen aufgeführt, die zum Durchsuchen von Metadaten un
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
 
-[Reflektion](reflection.md)  
+[Reflexion](reflection.md)  
 Erläutert das Durchsuchen von Metadaten und verwaltetem Code.  
   
 [Assemblys in .NET](../../standard/assembly/index.md)  

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - UI Automation, control types
 - control types, UI Automation
 ms.assetid: 75159ef8-bd43-4d13-acb7-1f1fe9253160
-ms.openlocfilehash: ec2dd3635f09144985df278be1d53ead675d3080
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 643c89e8f6c5e34aa1fb3c5c7c6c750c72046277
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74442629"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79179932"
 ---
 # <a name="ui-automation-control-types-overview"></a>Übersicht über Steuerelementtypen für Benutzeroberflächenautomatisierung
 > [!NOTE]
@@ -20,7 +20,7 @@ ms.locfileid: "74442629"
   
  Mit einem solchen Bezeichner können Geräte mit Hilfstechnologie leichter bestimmen, welche Steuerelementtypen in der [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] verfügbar sind, und wie mit den Steuerelementen zu interagieren ist.  
   
-<a name="UI_Automation_Control_Type_Requisites"></a>   
+<a name="UI_Automation_Control_Type_Requisites"></a>
 ## <a name="ui-automation-control-type-requisites"></a>Anforderungen für Steuerelementtypen der Benutzeroberflächenautomatisierung  
  [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] -Steuerelementtypen geben eine Reihe von Bedingungen vor, die Anbieter erfüllen müssen. Wenn diese Bedingungen erfüllt sind, kann das Steuerelement den bestimmten Steuerelementtypnamen verwenden. Für jeden Steuerelementtyp gibt es die folgenden Bedingungen:  
   
@@ -32,13 +32,13 @@ ms.locfileid: "74442629"
   
  Wenn ein Steuerelement die Bedingungen für einen bestimmten Steuerelementtyp erfüllt, wird dieser Steuerelementtyp durch den <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.ControlType%2A> -Eigenschaftswert angegeben.  
   
-<a name="Current_UI_Automation_Control_Types"></a>   
+<a name="Current_UI_Automation_Control_Types"></a>
 ## <a name="current-ui-automation-control-types"></a>Aktuelle Steuerelementtypen der Benutzeroberflächenautomatisierung  
  Die folgende Liste enthält die aktuellen [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] -Steuerelementtypen:  
   
 - [Benutzeroberflächenautomatisierungs-Unterstützung für den Schaltflächen-Steuerelementtyp](ui-automation-support-for-the-button-control-type.md)  
   
-- [Benutzeroberflächenautomatisierungs-Unterstützung für den Kalender-Steuerelementtyp](ui-automation-support-for-the-calendar-control-type.md)  
+- [Benutzeroberflächenautomatisierungs-Unterstützung für den Calendar-Steuerelementtyp](ui-automation-support-for-the-calendar-control-type.md)  
   
 - [Benutzeroberflächenautomatisierungs-Unterstützung für den CheckBox-Steuerelementtyp](ui-automation-support-for-the-checkbox-control-type.md)  
   
@@ -48,11 +48,11 @@ ms.locfileid: "74442629"
   
 - [Benutzeroberflächenautomatisierungs-Unterstützung für den DataItem-Steuerelementtyp](ui-automation-support-for-the-dataitem-control-type.md)  
   
-- [Benutzeroberflächenautomatisierungs-Unterstützung für den Dokumentsteuerelementtyp](ui-automation-support-for-the-document-control-type.md)  
+- [Benutzeroberflächenautomatisierungs-Unterstützung für den Document-Steuerelementtyp](ui-automation-support-for-the-document-control-type.md)  
   
-- [Benutzeroberflächenautomatisierungs-Unterstützung für den Bearbeitungssteuerelementtyp](ui-automation-support-for-the-edit-control-type.md)  
+- [Benutzeroberflächenautomatisierungs-Unterstützung für den Edit-Steuerelementtyp](ui-automation-support-for-the-edit-control-type.md)  
   
-- [Benutzeroberflächenautomatisierungs-Unterstützung für den Gruppen-Steuerelementtyp](ui-automation-support-for-the-group-control-type.md)  
+- [Benutzeroberflächenautomatisierungs-Unterstützung für den Group-Steuerelementtyp](ui-automation-support-for-the-group-control-type.md)  
   
 - [Benutzeroberflächenautomatisierungs-Unterstützung für den Header-Steuerelementtyp](ui-automation-support-for-the-header-control-type.md)  
   
@@ -82,25 +82,25 @@ ms.locfileid: "74442629"
   
 - [Benutzeroberflächenautomatisierungs-Unterstützung für den Separator-Steuerelementtyp](ui-automation-support-for-the-separator-control-type.md)  
   
-- [Benutzeroberflächenautomatisierungs-Unterstützung für den Schieberegler-Steuerelementtyp](ui-automation-support-for-the-slider-control-type.md)  
+- [Benutzeroberflächenautomatisierungs-Unterstützung für den Slider-Steuerelementtyp](ui-automation-support-for-the-slider-control-type.md)  
   
-- [Benutzeroberflächenautomatisierungs-Unterstützung für den Drehfeld-Steuerelementtyp](ui-automation-support-for-the-spinner-control-type.md)  
+- [Benutzeroberflächenautomatisierungs-Unterstützung für den Spinner-Steuerelementtyp](ui-automation-support-for-the-spinner-control-type.md)  
   
 - [Benutzeroberflächenautomatisierungs-Unterstützung für den SplitButton-Steuerelementtyp](ui-automation-support-for-the-splitbutton-control-type.md)  
   
 - [Benutzeroberflächenautomatisierungs-Unterstützung für den StatusBar-Steuerelementtyp](ui-automation-support-for-the-statusbar-control-type.md)  
   
-- [Benutzeroberflächenautomatisierungs-Unterstützung für den Registerkarten-Steuerelementtyp](ui-automation-support-for-the-tab-control-type.md)  
+- [Benutzeroberflächenautomatisierungs-Unterstützung für den Tab-Steuerelementtyp](ui-automation-support-for-the-tab-control-type.md)  
   
 - [Benutzeroberflächenautomatisierungs-Unterstützung für den TabItem-Steuerelementtyp](ui-automation-support-for-the-tabitem-control-type.md)  
   
-- [Benutzeroberflächenautomatisierungs-Unterstützung für den Tabellen-Steuerelementtyp](ui-automation-support-for-the-table-control-type.md)  
+- [Benutzeroberflächenautomatisierungs-Unterstützung für den Table-Steuerelementtyp](ui-automation-support-for-the-table-control-type.md)  
   
 - [Benutzeroberflächenautomatisierungs-Unterstützung für den Text-Steuerelementtyp](ui-automation-support-for-the-text-control-type.md)  
   
-- [Benutzeroberflächenautomatisierungs-Unterstützung für den Ziehpunkt-Steuerelementtyp](ui-automation-support-for-the-thumb-control-type.md)  
+- [Benutzeroberflächenautomatisierungs-Unterstützung für den Thumb-Steuerelementtyp](ui-automation-support-for-the-thumb-control-type.md)  
   
-- [Benutzeroberflächenautomatisierungs-Unterstützung für den TitleBar-Steuerelementtyp](ui-automation-support-for-the-titlebar-control-type.md)  
+- [Benutzeroberflächenautomatisierung-Unterstützung für den TitleBar-Steuerelementtyp](ui-automation-support-for-the-titlebar-control-type.md)  
   
 - [Benutzeroberflächenautomatisierungs-Unterstützung für den ToolBar-Steuerelementtyp](ui-automation-support-for-the-toolbar-control-type.md)  
   
@@ -110,8 +110,8 @@ ms.locfileid: "74442629"
   
 - [Benutzeroberflächenautomatisierungs-Unterstützung für den TreeItem-Steuerelementtyp](ui-automation-support-for-the-treeitem-control-type.md)  
   
-- [Benutzeroberflächenautomatisierungs-Unterstützung für den Fenster-Steuerelementtyp](ui-automation-support-for-the-window-control-type.md)  
+- [Benutzeroberflächenautomatisierungs-Unterstützung für den Window-Steuerelementtyp](ui-automation-support-for-the-window-control-type.md)  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Windows.Automation.ControlType>

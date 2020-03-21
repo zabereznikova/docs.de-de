@@ -15,45 +15,45 @@ helpviewer_keywords:
 ms.assetid: c8111502-5a20-447f-9dc2-76e8acd7ed5a
 topic_type:
 - apiref
-ms.openlocfilehash: 540ca78c5548d4fbdd3338671ea02314736f15cd
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 4b48132ee60bcaebb218d8f583de6558372f5055
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76792367"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79178611"
 ---
 # <a name="icordebugprocess5getobject-method"></a>ICorDebugProcess5::GetObject-Methode
-Konvertiert eine Objekt Adresse in ein ICorDebugObjectValue-Objekt.  
+Konvertiert eine Objektadresse in ein "ICorDebugObjectValue"-Objekt.  
   
 ## <a name="syntax"></a>Syntax  
   
 ```cpp  
 HRESULT GetObject(  
-    [in] CORDB_ADDRESS addr,   
+    [in] CORDB_ADDRESS addr,
     [out] ICorDebugObjectValue **ppObject  
 );  
 ```  
   
-## <a name="parameters"></a>Parameters  
+## <a name="parameters"></a>Parameter  
  `addr`  
- in Die Objekt Adresse.  
+ [in] Die Objektadresse.  
   
  `ppObject`  
- vorgenommen Ein Zeiger auf die Adresse eines ICorDebugObjectValue-Objekts.  
+ [out] Ein Zeiger auf die Adresse eines "ICorDebugObjectValue"-Objekts.  
   
-## <a name="remarks"></a>Hinweise  
- Wenn `addr` nicht auf ein gültiges verwaltetes Objekt zeigt, gibt die `GetObject`-Methode `E_FAIL`zurück.  
+## <a name="remarks"></a>Bemerkungen  
+ Wenn `addr` nicht auf ein gültiges `GetObject` verwaltetes `E_FAIL`Objekt verweisen, gibt die Methode zurück.  
   
-## <a name="requirements"></a>-Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   
  **Bibliothek:** CorGuids.lib  
   
- **.NET Framework Versionen:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework-Versionen:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [ICorDebugProcess5-Schnittstelle](icordebugprocess5-interface.md)
-- [Debuggen von Schnittstellen](debugging-interfaces.md)
+- [Debugschnittstellen](debugging-interfaces.md)

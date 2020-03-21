@@ -12,21 +12,21 @@ helpviewer_keywords:
 - check boxes [Windows Forms], using to set options
 - CheckBox control [Windows Forms], using to set options
 ms.assetid: 2ac70498-7e3e-4e07-8901-ccabaeb5fd3e
-ms.openlocfilehash: 84198eab42aa02b1bb37fa16a3c4247a37f58a10
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 00b467836d8e60aeee51a010a6384abf7dd73c56
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76746768"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79141847"
 ---
 # <a name="how-to-set-options-with-windows-forms-checkbox-controls"></a>Gewusst wie: Festlegen von Optionen mit CheckBox-Steuerelementen in Windows Forms
-Ein Windows Forms <xref:System.Windows.Forms.CheckBox>-Steuerelement wird verwendet, um Benutzern die Optionen true/false oder yes/no zu übergeben. Das-Steuerelement zeigt ein Häkchen an, wenn es ausgewählt wird.  
+Ein Windows <xref:System.Windows.Forms.CheckBox> Forms-Steuerelement wird verwendet, um Benutzern True/False- oder Yes/No-Optionen zu geben. Das Steuerelement zeigt ein Häkchen an, wenn es ausgewählt ist.  
   
 ### <a name="to-set-options-with-checkbox-controls"></a>So legen Sie Optionen mit CheckBox-Steuerelementen fest  
   
-1. Überprüfen Sie den Wert der <xref:System.Windows.Forms.CheckBox.Checked%2A>-Eigenschaft, um den Status zu ermitteln, und verwenden Sie diesen Wert, um eine Option festzulegen.  
+1. Untersuchen Sie den <xref:System.Windows.Forms.CheckBox.Checked%2A> Wert der Eigenschaft, um ihren Status zu bestimmen, und verwenden Sie diesen Wert, um eine Option festzulegen.  
   
-     Wenn im folgenden Codebeispiel das <xref:System.Windows.Forms.CheckBox.CheckedChanged>-Ereignis des <xref:System.Windows.Forms.CheckBox>-Steuer Elements ausgelöst wird, wird die <xref:System.Windows.Forms.Control.AllowDrop%2A>-Eigenschaft des Formulars auf `false` festgelegt, wenn das Kontrollkästchen aktiviert ist. Dies ist nützlich für Situationen, in denen die Benutzerinteraktion eingeschränkt werden soll.  
+     Wenn im Codebeispiel unten <xref:System.Windows.Forms.CheckBox> das <xref:System.Windows.Forms.CheckBox.CheckedChanged> Ereignis des Steuerelements ausgelöst <xref:System.Windows.Forms.Control.AllowDrop%2A> wird, `false` wird die Eigenschaft des Formulars auf das Kontrollkästchen festgelegt. Dies ist nützlich für Situationen, in denen Sie die Benutzerinteraktion einschränken möchten.  
   
     ```vb  
     Private Sub CheckBox1_CheckedChanged(ByVal sender As System.Object, _  
@@ -43,7 +43,7 @@ Ein Windows Forms <xref:System.Windows.Forms.CheckBox>-Steuerelement wird verwen
     private void checkBox1_CheckedChanged(object sender, System.EventArgs e)  
     {  
        // Determine the CheckState of the check box.  
-       if (checkBox1.CheckState == CheckState.Checked)   
+       if (checkBox1.CheckState == CheckState.Checked)
        {  
           // If checked, do not allow items to be dragged onto the form.  
           this.AllowDrop = false;  
@@ -57,7 +57,7 @@ Ein Windows Forms <xref:System.Windows.Forms.CheckBox>-Steuerelement wird verwen
           System::EventArgs ^ e)  
        {  
           // Determine the CheckState of the check box.  
-          if (checkBox1->CheckState == CheckState::Checked)   
+          if (checkBox1->CheckState == CheckState::Checked)
           {  
              // If checked, do not allow items to be dragged onto the form.  
              this->AllowDrop = false;  
@@ -70,4 +70,4 @@ Ein Windows Forms <xref:System.Windows.Forms.CheckBox>-Steuerelement wird verwen
 - <xref:System.Windows.Forms.CheckBox>
 - [Übersicht über das CheckBox-Steuerelement](checkbox-control-overview-windows-forms.md)
 - [Gewusst wie: Reagieren auf das Klicken auf Kontrollkästchen in Windows Forms](how-to-respond-to-windows-forms-checkbox-clicks.md)
-- [CheckBox-Steuerelement](checkbox-control-windows-forms.md)
+- [CheckBox-Steuerung](checkbox-control-windows-forms.md)

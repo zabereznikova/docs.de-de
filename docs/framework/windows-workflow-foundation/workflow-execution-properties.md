@@ -2,12 +2,12 @@
 title: Eigenschaften der Workflowausführung
 ms.date: 03/30/2017
 ms.assetid: a50e088e-3a45-4267-bd51-1a3e6c2d246d
-ms.openlocfilehash: 87775ba6efb9ec26ed2445e1f9d0944c379ba04f
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 0f958e7e112bfddc2740c2605d446493f2d49010
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70988590"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79182661"
 ---
 # <a name="workflow-execution-properties"></a>Eigenschaften der Workflowausführung
 Durch TLS (Thread Local Storage, threadlokaler Speicher) behält die CLR einen Ausführungskontext für jeden Thread bei. Dieser Ausführungskontext bestimmt bekannte Threadeigenschaften wie die Threadidentität, die Ambient-Transaktion und den aktuellen Berechtigungssatz zusätzlich zu benutzerdefinierten Threadeigenschaften, z. B. benannte Slots.  
@@ -75,14 +75,14 @@ public sealed class ConsoleColorScope : NativeActivity
 ```csharp  
 Activity wf = new Parallel  
 {  
-    Branches =   
+    Branches =
     {  
         new ConsoleColorScope  
         {  
             Color = ConsoleColor.Blue,  
             Body = new Sequence  
             {  
-                Activities =   
+                Activities =
                 {  
                     new WriteLine  
                     {  
@@ -104,7 +104,7 @@ Activity wf = new Parallel
             Color = ConsoleColor.Red,  
             Body = new Sequence  
             {  
-                Activities =   
+                Activities =
                 {  
                     new WriteLine  
                     {  
@@ -123,7 +123,7 @@ Activity wf = new Parallel
         },  
         new Sequence  
         {  
-            Activities =   
+            Activities =
             {  
                 new WriteLine  
                 {  
@@ -161,7 +161,7 @@ End default text.
   
  Die Eigenschaften der Workflowausführung können von benutzerdefinierten Aktivitätsautoren verwendet werden. Sie stellen außerdem einen Mechanismus zur Handleverwaltung für Aktivitäten bereit, z. B. für die <xref:System.ServiceModel.Activities.CorrelationScope>-Aktivität und <xref:System.Activities.Statements.TransactionScope>-Aktivität.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Activities.IExecutionProperty>
 - <xref:System.Activities.IPropertyRegistrationCallback>

@@ -1,23 +1,23 @@
 ---
-title: Ausdrücke-WF
+title: Ausdrücke - WF
 ms.date: 03/30/2017
 ms.assetid: c42341a9-43a1-462c-bffb-c5de004aa428
-ms.openlocfilehash: 62b278825de6242075e89e3b243b6d6d8ef4d599
-ms.sourcegitcommit: 1e72e2990220b3635cebc39586828af9deb72d8c
+ms.openlocfilehash: 93fe449e8fa6c50f715d842c2ef6a9ecbd31aff2
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71306207"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79182938"
 ---
 # <a name="expressions"></a>Ausdrücke
 
-Ein Windows Workflow Foundation (WF)-Ausdruck ist eine beliebige Aktivität, die ein Ergebnis zurückgibt. Alle Ausdrucksaktivitäten werden indirekt von <xref:System.Activities.Activity%601> abgeleitet, die eine <xref:System.Activities.OutArgument>-Eigenschaft mit dem Namen <xref:System.Activities.Activity%601.Result%2A> als Rückgabewert der Aktivität enthält. Im Lieferumfang von [!INCLUDE[wf1](../../../includes/wf1-md.md)] ist eine Vielzahl von Ausdrucksaktivitäten enthalten, darunter einfache Ausdrucksaktivitäten wie <xref:System.Activities.Expressions.VariableValue%601> und <xref:System.Activities.Expressions.VariableReference%601>, die den Zugriff auf einzelne Workflowvariablen über Operatoraktivitäten ermöglichen, sowie komplexe Aktivitäten wie <xref:Microsoft.VisualBasic.Activities.VisualBasicReference%601> und <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601>, die zum Erzielen des gewünschten Ergebnisses den Zugriff auf die volle Bandbreite der Visual Basic-Programmiersprache ermöglichen. Zusätzliche Ausdrucksaktivitäten können durch Ableitungen von <xref:System.Activities.CodeActivity%601> oder <xref:System.Activities.NativeActivity%601> erstellt werden.
+Ein Windows Workflow Foundation (WF)-Ausdruck ist jede Aktivität, die ein Ergebnis zurückgibt. Alle Ausdrucksaktivitäten werden indirekt von <xref:System.Activities.Activity%601> abgeleitet, die eine <xref:System.Activities.OutArgument>-Eigenschaft mit dem Namen <xref:System.Activities.Activity%601.Result%2A> als Rückgabewert der Aktivität enthält. Im Lieferumfang von [!INCLUDE[wf1](../../../includes/wf1-md.md)] ist eine Vielzahl von Ausdrucksaktivitäten enthalten, darunter einfache Ausdrucksaktivitäten wie <xref:System.Activities.Expressions.VariableValue%601> und <xref:System.Activities.Expressions.VariableReference%601>, die den Zugriff auf einzelne Workflowvariablen über Operatoraktivitäten ermöglichen, sowie komplexe Aktivitäten wie <xref:Microsoft.VisualBasic.Activities.VisualBasicReference%601> und <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601>, die zum Erzielen des gewünschten Ergebnisses den Zugriff auf die volle Bandbreite der Visual Basic-Programmiersprache ermöglichen. Zusätzliche Ausdrucksaktivitäten können durch Ableitungen von <xref:System.Activities.CodeActivity%601> oder <xref:System.Activities.NativeActivity%601> erstellt werden.
 
 ## <a name="using-expressions"></a>Verwenden von Ausdrücken
  Workflow-Designer verwendet <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601> und <xref:Microsoft.VisualBasic.Activities.VisualBasicReference%601> für alle Ausdrücke in Visual Basic-Projekten sowie <xref:Microsoft.CSharp.Activities.CSharpValue%601> und <xref:Microsoft.CSharp.Activities.CSharpReference%601> für Ausdrücke in den C#-Workflowprojekten.
 
 > [!NOTE]
-> Die unter C# Stützung für Ausdrücke in Workflow Projekten wurde in .NET Framework 4,5 eingeführt. Weitere Informationen finden [ C# ](csharp-expressions.md)Sie unter Ausdrücke.
+> In .NET Framework 4.5 wurde die Unterstützung für C-Ausdrücke in Workflowprojekten eingeführt. Weitere Informationen finden Sie unter [C-Ausdrücke](csharp-expressions.md).
 
  Vom Designer erzeugte Workflows werden im XAML-Format gespeichert, bei dem Ausdrücke in eckige Klammern eingeschlossen sind. Dies wird im folgenden Beispiel veranschaulicht.
 
@@ -40,7 +40,7 @@ Ein Windows Workflow Foundation (WF)-Ausdruck ist eine beliebige Aktivität, die
 </Sequence>
 ```
 
- Sie können beim Definieren eines Workflows im Code beliebige Ausdrucksaktivitäten verwenden. Das folgende Beispiel zeigt die Verwendung einer Komposition von Operator Aktivitäten, um drei Zahlen hinzuzufügen:
+ Sie können beim Definieren eines Workflows im Code beliebige Ausdrucksaktivitäten verwenden. Das folgende Beispiel zeigt die Verwendung einer Zusammensetzung von Operatoraktivitäten, um drei Zahlen hinzuzufügen:
 
 ```csharp
 Variable<int> a = new Variable<int>("a", 1);
@@ -69,7 +69,7 @@ Sequence w = new Sequence
 };
 ```
 
- Der gleiche Workflow kann mithilfe C# von Lambda-Ausdrücken kompakter ausgedrückt werden, wie im folgenden Beispiel gezeigt:
+ Derselbe Workflow kann kompakter ausgedrückt werden, indem die im folgenden Beispiel gezeigten Code-Lambda-Ausdrücke verwendet werden:
   
 ```csharp
 Variable<int> a = new Variable<int>("a", 1);
@@ -80,7 +80,7 @@ Variable<int> r = new Variable<int>("r", 0);
 Sequence w = new Sequence
 {
     Variables = { a, b, c, r },
-    Activities = 
+    Activities =
     {
         new Assign {
             To = new OutArgument<int>(r),
@@ -119,7 +119,7 @@ namespace ExpressionsDemo
 }
 ```
 
- Mit dieser neuen Aktivität können Sie den vorherigen Workflow umschreiben, der drei Werte hinzugefügt hat, wie im folgenden Beispiel gezeigt:
+ Mit dieser neuen Aktivität können Sie den vorherigen Workflow neu schreiben, der drei Werte hinzugefügt hat, wie im folgenden Beispiel gezeigt:
 
 ```csharp
 Variable<int> a = new Variable<int>("a", 1);
@@ -146,4 +146,4 @@ Sequence w = new Sequence
 };
 ```
 
- Weitere Informationen zur Verwendung von Ausdrücken im Code finden [Sie unter Erstellen von Workflows, Aktivitäten und Ausdrücken mit imperativem Code](authoring-workflows-activities-and-expressions-using-imperative-code.md).
+ Weitere Informationen zum Verwenden von Ausdrücken im Code finden Sie unter [Erstellen von Workflows, Aktivitäten und Ausdrücken mithilfe von Imperative Code](authoring-workflows-activities-and-expressions-using-imperative-code.md).

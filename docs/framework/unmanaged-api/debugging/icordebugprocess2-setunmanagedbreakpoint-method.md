@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 93829d15-d942-4e2d-b7a4-dfc9d7fb96be
 topic_type:
 - apiref
-ms.openlocfilehash: ffab2762fd86e95c3272ca456039028e0897bc41
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: fb8b8f3e29c141e91587a4d0cdc81cdabccdbc9e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73137182"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79178646"
 ---
 # <a name="icordebugprocess2setunmanagedbreakpoint-method"></a>ICorDebugProcess2::SetUnmanagedBreakpoint-Method
-Legt einen nicht verwalteten Haltepunkt am angegebenen systemeigenen Abbild Offset fest.  
+Legt einen nicht verwalteten Haltepunkt am angegebenen systemeigenen Bildversatz fest.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -31,7 +31,7 @@ Legt einen nicht verwalteten Haltepunkt am angegebenen systemeigenen Abbild Offs
 HRESULT SetUnmanagedBreakpoint (  
     [in]  CORDB_ADDRESS    address,  
     [in]  ULONG32          bufsize,  
-    [out, size_is(bufsize), length_is(*bufLen)]   
+    [out, size_is(bufsize), length_is(*bufLen)]
         BYTE               buffer[],  
     [out] ULONG32          *bufLen  
 );  
@@ -39,21 +39,21 @@ HRESULT SetUnmanagedBreakpoint (
   
 ## <a name="parameters"></a>Parameter  
  `address`  
- in Ein `CORDB_ADDRESS`-Objekt, das den Offset des systemeigenen Bilds angibt.  
+ [in] Ein `CORDB_ADDRESS` Objekt, das den systemeigenen Bildversatz angibt.  
   
  `bufsize`  
- in Die Größe des `buffer` Arrays in Bytes.  
+ [in] Die Größe des `buffer` Arrays in Bytes.  
   
  `buffer`  
- vorgenommen Ein Array, das den Opcode enthält, der durch den Breakpoint ersetzt wird.  
+ [out] Ein Array, das den Opcode enthält, der durch den Haltepunkt ersetzt wird.  
   
  `bufLen`  
- vorgenommen Ein Zeiger auf die Anzahl der Bytes, die im `buffer` Array zurückgegeben werden.  
+ [out] Ein Zeiger auf die Anzahl der `buffer` im Array zurückgegebenen Bytes.  
   
-## <a name="remarks"></a>Hinweise  
- Wenn der Offset des systemeigenen Images innerhalb des Common Language Runtime (CLR) liegt, wird der Breakpoint ignoriert. Dadurch kann die CLR vermeiden, dass ein Out-of-Band-Haltepunkt versendet wird, wenn der Breakpoint vom Debugger festgelegt wird.  
+## <a name="remarks"></a>Bemerkungen  
+ Wenn sich der native Bildversatz innerhalb der Common Language Runtime (CLR) befindet, wird der Haltepunkt ignoriert. Dadurch kann die CLR das Aussenden eines Out-of-Band-Haltepunkts vermeiden, wenn der Haltepunkt vom Debugger festgelegt wird.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  

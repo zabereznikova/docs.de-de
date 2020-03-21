@@ -2,17 +2,17 @@
 title: Variablen und Argumente
 ms.date: 03/30/2017
 ms.assetid: d03dbe34-5b2e-4f21-8b57-693ee49611b8
-ms.openlocfilehash: 251641c924bbf33c176f519f8fc4f9dec59e2eb8
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: f975f46a1858d204d12588f7570b7ea5a365e650
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69962196"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79182685"
 ---
 # <a name="variables-and-arguments"></a>Variablen und Argumente
-In Windows Workflow Foundation (WF) stellen Variablen die Speicherung von Daten dar, und Argumente stellen den Datenfluss in eine und aus einer Aktivität dar. Eine Aktivität verfügt über einen Satz von Argumenten, die die Signatur der Aktivität ausmachen. Darüber hinaus kann eine Aktivität eine Liste von Variablen verwalten. Ein Entwickler kann während des Entwurfs eines Workflows Variablen zu dieser Liste hinzufügen oder daraus löschen. Ein Argument wird mit einem Ausdruck gebunden, der einen Wert zurückgibt.  
+In Windows Workflow Foundation (WF) stellen Variablen die Speicherung von Daten dar, und Argumente stellen den Datenfluss in und aus einer Aktivität dar. Eine Aktivität verfügt über einen Satz von Argumenten, die die Signatur der Aktivität ausmachen. Darüber hinaus kann eine Aktivität eine Liste von Variablen verwalten. Ein Entwickler kann während des Entwurfs eines Workflows Variablen zu dieser Liste hinzufügen oder daraus löschen. Ein Argument wird mit einem Ausdruck gebunden, der einen Wert zurückgibt.  
   
-## <a name="variables"></a>Variablen  
+## <a name="variables"></a>Variables  
  Variablen sind Speicherorte für Daten. Variablen werden als Teil der Definition eines Workflows deklariert. Variablen nehmen zur Laufzeit Werte an, die dann als Teil des Zustands einer Workflowinstanz gespeichert werden. Eine Variablendefinition gibt den Typ der Variable und optional auch ihren Namen an. Im folgenden Code wird gezeigt, wie eine Variable deklariert und ihr mit einer <xref:System.Activities.Statements.Assign%601>-Aktivität ein Wert zugewiesen wird und wie der Wert mithilfe einer <xref:System.Activities.Statements.WriteLine>-Aktivität in der Konsole angezeigt wird.  
   
 ```csharp  
@@ -67,7 +67,7 @@ Variable<string> var = new Variable<string>
   
 2. Wenn <xref:System.Activities.InOutArgument%601.Set%2A> aufgerufen wird, legt die Laufzeit den Wert sofort fest.  
   
-3. Für Argumente kann optional <xref:System.Activities.Argument.EvaluationOrder%2A> angegeben werden. <xref:System.Activities.Argument.EvaluationOrder%2A> ist ein nullbasierter Wert, der die Reihenfolge angibt, in der das Argument ausgewertet wird. Standardmäßig ist die Auswertungsreihenfolge des Arguments nicht angegeben und entspricht dem <xref:System.Activities.Argument.UnspecifiedEvaluationOrder>-Wert. Legen Sie <xref:System.Activities.Argument.EvaluationOrder%2A> auf einen Wert fest, der größer oder gleich null ist, um eine Auswertungsreihenfolge für dieses Argument anzugeben. Windows Workflow Foundation wertet Argumente mit einer angegebenen Auswertungs Reihenfolge in aufsteigender Reihenfolge aus. Beachten Sie, dass Argumente mit einer nicht angegebenen Auswertungsreihenfolge vor Argumenten mit einer angegebenen Auswertungsreihenfolge ausgewertet werden.  
+3. Für Argumente kann optional <xref:System.Activities.Argument.EvaluationOrder%2A> angegeben werden. <xref:System.Activities.Argument.EvaluationOrder%2A> ist ein nullbasierter Wert, der die Reihenfolge angibt, in der das Argument ausgewertet wird. Standardmäßig ist die Auswertungsreihenfolge des Arguments nicht angegeben und entspricht dem <xref:System.Activities.Argument.UnspecifiedEvaluationOrder>-Wert. Legen Sie <xref:System.Activities.Argument.EvaluationOrder%2A> auf einen Wert fest, der größer oder gleich null ist, um eine Auswertungsreihenfolge für dieses Argument anzugeben. Windows Workflow Foundation wertet Argumente mit einer angegebenen Auswertungsreihenfolge in aufsteigender Reihenfolge aus. Beachten Sie, dass Argumente mit einer nicht angegebenen Auswertungsreihenfolge vor Argumenten mit einer angegebenen Auswertungsreihenfolge ausgewertet werden.  
   
  Ein Aktivitätsautor kann einen stark typisierten Mechanismus zur Bereitstellung seiner Argumente verwenden. Dazu werden Eigenschaften von Typ <xref:System.Activities.InArgument%601>, <xref:System.Activities.OutArgument%601> und <xref:System.Activities.InOutArgument%601> deklariert. Auf diese Weise kann ein Aktivitätsautor einen bestimmten Vertrag für die ein- und ausgehenden Daten einer Aktivität einrichten.  
   
@@ -102,7 +102,7 @@ Variable<string> var3 = new Variable<string>();
 Activity wf = new Sequence  
 {  
     Variables = { var1, var2, var3 },  
-    Activities =   
+    Activities =
     {  
         new Assign<string>()  
         {  
@@ -141,4 +141,4 @@ public sealed class Add : CodeActivity<int>
 }  
 ```  
   
- Weitere Informationen zum Arbeiten mit Argumenten, Variablen und Ausdrücken im Code finden [Sie unter Erstellen von Workflows, Aktivitäten und Ausdrücken mit imperativem Code](authoring-workflows-activities-and-expressions-using-imperative-code.md) und [erforderlichen Argumenten und Überladungs Gruppen](required-arguments-and-overload-groups.md).
+ Weitere Informationen zum Arbeiten mit Argumenten, Variablen und Ausdrücken im Code finden Sie unter [Erstellen von Workflows, Aktivitäten und Ausdrücken mithilfe von Imperative Code](authoring-workflows-activities-and-expressions-using-imperative-code.md) und Erforderlichen [Argumenten und Überlastgruppen](required-arguments-and-overload-groups.md).

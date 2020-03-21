@@ -3,21 +3,21 @@ title: <certificateValidator>
 ms.date: 03/30/2017
 ms.assetid: 86161897-c20f-4ad8-9d7f-050c247251bf
 author: BrucePerlerMS
-ms.openlocfilehash: 30f81dd5948a7d366c1116cffd347c85a396f5ae
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 3f3d79d3567c1714a79423b7767ce3f454b9d52d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252124"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79152787"
 ---
-# <a name="certificatevalidator"></a>\<certificateValidator>
-Gibt einen benutzerdefinierten Typ für die Zertifikats Überprüfung an. Dieser Typ wird nur verwendet, wenn `certificateValidationMode` das-Attribut [ \<des certifiinitievalidation->](certificatevalidation.md) -Elements auf "Custom" festgelegt ist.  
+# <a name="certificatevalidator"></a>\<CertificateValidator>
+Gibt einen benutzerdefinierten Typ für die Zertifikatvalidierung an. Dieser Typ wird nur `certificateValidationMode` verwendet, wenn das Attribut des [ \<certificateValidation>-Elements](certificatevalidation.md) auf "Custom" festgelegt ist.  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<System. IdentityModel->** ](system-identitymodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<identityconfiguration->** ](identityconfiguration.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<certifialievalidation->** ](certificatevalidation.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<certifialievalidator->**  
+[**\<Konfiguration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.identityModel>**](system-identitymodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<identityConfiguration>**](identityconfiguration.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<certificateValidation>**](certificatevalidation.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<CertificateValidator>**  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -35,20 +35,20 @@ Gibt einen benutzerdefinierten Typ für die Zertifikats Überprüfung an. Dieser
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
-### <a name="attributes"></a>Attribute  
+### <a name="attributes"></a>Attributes  
   
-|Attribut|Beschreibung|  
+|attribute|Beschreibung|  
 |---------------|-----------------|  
-|Typ|Gibt einen benutzerdefinierten Typ an, der <xref:System.IdentityModel.Selectors.X509CertificateValidator> von der-Klasse abgeleitet wird. Legen Sie `certificateValidationMode` das-Attribut [ \<des certifialievalidation->](certificatevalidation.md) Elements auf "Custom" fest, um diesen Typ zu verwenden. Weitere Informationen zum Angeben des `type` -Attributs finden Sie unter [benutzerdefinierte Typverweise](../windows-workflow-foundation/index.md). Optional.|  
+|type|Gibt einen benutzerdefinierten Typ an, <xref:System.IdentityModel.Selectors.X509CertificateValidator> der von der Klasse abstammt. Legen `certificateValidationMode` Sie das Attribut des [ \<certificateValidation>-Elements](certificatevalidation.md) auf "Custom" fest, um diesen Typ zu verwenden. Weitere Informationen zum Angeben `type` des Attributs finden Sie unter [Benutzerdefinierte Typreferenzen](../windows-workflow-foundation/index.md). Optional.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
- None  
+ Keine  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<certificateValidation>](certificatevalidation.md)|Steuert die Einstellungen, die von tokenhandlern zum Überprüfen von Zertifikaten verwendet werden.|  
+|[\<certificateValidation>](certificatevalidation.md)|Steuert die Einstellungen, die Tokenhandler zum Überprüfen von Zertifikaten verwenden.|  
   
 ## <a name="example"></a>Beispiel  
   
@@ -56,6 +56,6 @@ Gibt einen benutzerdefinierten Typ für die Zertifikats Überprüfung an. Dieser
 <certificateValidation certificateValidationMode="Custom"  
                        revocationMode="Online"  
                        trustedStoreLocation="LocalMachine">  
-    <certificateValidator type="MyNamespace.CustomValidator, MyAssembly" />    
-</certificateValidation>        
+    <certificateValidator type="MyNamespace.CustomValidator, MyAssembly" />
+</certificateValidation>
 ```

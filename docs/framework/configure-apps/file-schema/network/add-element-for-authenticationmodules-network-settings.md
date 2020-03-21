@@ -10,57 +10,57 @@ helpviewer_keywords:
 - <authenticationModules>, add element
 - <add> element, authenticationModules
 ms.assetid: 333c5fb0-a2ab-4db8-8531-a7fe37bb9b5b
-ms.openlocfilehash: 9c011cf1216b98fa20e330e185e4cf2c331b31d4
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.openlocfilehash: 4181a045079bdb455a63ebda722dd6b0daf33c4d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74087949"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79155114"
 ---
-# <a name="add-element-for-authenticationmodules-network-settings"></a>\<Add >-Element für authenticationModules (Netzwerkeinstellungen)
-Fügt der Anwendung ein Authentifizierungs Modul hinzu.  
+# <a name="add-element-for-authenticationmodules-network-settings"></a>\<Hinzufügen> Elements für authentifizierungModule (Netzwerkeinstellungen)
+Fügt der Anwendung ein Authentifizierungsmodul hinzu.  
 
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<System. net >** ](system-net-element-network-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<authenticationModules >** ](authenticationmodules-element-network-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<**Hinzufügen >**
+[**\<Konfiguration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.net>**](system-net-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<authentifizierungModule>**](authenticationmodules-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<hinzufügen>**
 
 ## <a name="syntax"></a>Syntax  
   
 ```xml  
 <add
-  type="type_fullname, assembly_fullname"   
+  type="type_fullname, assembly_fullname"
 />  
 ```  
   
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
-### <a name="attributes"></a>Attribute  
+### <a name="attributes"></a>Attributes  
   
 |**Attribut**|**Beschreibung**|  
 |-------------------|---------------------|  
-|`type`|Der voll qualifizierte Typname (angegeben durch die <xref:System.Type.FullName%2A>-Eigenschaft) und der AssemblyName (angegeben durch die <xref:System.Reflection.Assembly.FullName%2A>-Eigenschaft), getrennt durch ein Komma.|  
+|`type`|Der vollqualifizierte Typname (durch die <xref:System.Type.FullName%2A> Eigenschaft angegeben) und <xref:System.Reflection.Assembly.FullName%2A> der Assemblyname (durch die Eigenschaft angegeben), getrennt durch ein Komma.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
- Keine  
+ Keine.  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   
 |**Element**|**Beschreibung**|  
 |-----------------|---------------------|  
-|[authenticationModules](authenticationmodules-element-network-settings.md)|Gibt Module an, die zum Authentifizieren von Netzwerk Anforderungen verwendet werden.|  
+|[authenticationModules](authenticationmodules-element-network-settings.md)|Gibt Module an, die zum Authentifizieren von Netzwerkanforderungen verwendet werden.|  
   
-## <a name="remarks"></a>Hinweise  
- Das `add`-Element fügt ein Authentifizierungs Modul am Ende der Liste der registrierten Authentifizierungs Module hinzu. Authentifizierungs Module werden in der Reihenfolge aufgerufen, in der Sie der Liste hinzugefügt wurden.  
+## <a name="remarks"></a>Bemerkungen  
+ Das `add` Element fügt am Ende der Liste der registrierten Authentifizierungsmodule ein Authentifizierungsmodul hinzu. Authentifizierungsmodule werden in der Reihenfolge aufgerufen, in der sie der Liste hinzugefügt wurden.  
   
- Der Wert für das `type` Attribut muss ein gültiger Typname und der zugehörige AssemblyName sein, getrennt durch ein Komma.  
+ Der Wert `type` für das Attribut sollte ein gültiger Typname und ein entsprechender Assemblyname sein, der durch ein Komma getrennt ist.  
   
 ## <a name="configuration-files"></a>Konfigurationsdateien  
  Dieses Element kann in der Anwendungskonfigurationsdatei oder in der Computerkonfigurationsdatei ("Machine.config") verwendet werden.  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel werden die Standard Authentifizierungs Module aktiviert. Sie sollten die Werte für Version und PublicKeyToken durch die korrekten Werte für das angegebene Modul ersetzen.  
+ Im folgenden Beispiel werden die Standardauthentifizierungsmodule aktiviert. Sie sollten die Werte für Version und PublicKeyToken durch die richtigen Werte für das angegebene Modul ersetzen.  
   
 ```xml  
 <configuration>  
@@ -81,8 +81,8 @@ Fügt der Anwendung ein Authentifizierungs Modul hinzu.
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Net.IAuthenticationModule>
 - <xref:System.Net.AuthenticationManager>
-- [Network Settings Schema (Schema für Netzwerkeinstellungen)](index.md)
+- [Netzwerkeinstellungsschema](index.md)

@@ -2,17 +2,17 @@
 title: Konfigurationskanalfactory
 ms.date: 03/30/2017
 ms.assetid: 3b749493-bd8a-4ccb-893e-5948901a1486
-ms.openlocfilehash: 1a236f1812d3124e83702a97e1877b7fec10be64
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 0f00ba5e217420fe416100071d380e413c3df118
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74715504"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79183946"
 ---
 # <a name="configuration-channel-factory"></a>Konfigurationskanalfactory
-In diesem Beispiel wird die Verwendung von <xref:System.ServiceModel.Configuration.ConfigurationChannelFactory%601> behandelt. Der <xref:System.ServiceModel.Configuration.ConfigurationChannelFactory%601> ermöglicht die zentrale Verwaltung der WCF-Client Konfiguration. Dies kann auch in Szenarien nützlich sein, in denen die Konfiguration nach der Ladezeit der Anwendungsdomäne ausgewählt oder geändert wird.
+In diesem Beispiel wird die Verwendung von <xref:System.ServiceModel.Configuration.ConfigurationChannelFactory%601> behandelt. Die <xref:System.ServiceModel.Configuration.ConfigurationChannelFactory%601> ermöglicht die zentrale Verwaltung der WCF-Clientkonfiguration. Dies kann auch in Szenarien nützlich sein, in denen die Konfiguration nach der Ladezeit der Anwendungsdomäne ausgewählt oder geändert wird.
 
-## <a name="demonstrates"></a>Veranschaulicht
+## <a name="demonstrates"></a>Zeigt
  <xref:System.ServiceModel.Configuration.ConfigurationChannelFactory%601>
 
 ## <a name="discussion"></a>Diskussion
@@ -35,19 +35,19 @@ ICalculatorChannel client1 = factory1.CreateChannel();
 
 1. Öffnen Sie Visual Studio 2012 mit Administratorrechten.
 
-2. Klicken Sie mit der rechten Maustaste auf die Lösung ConfigurationChannelFactory (2 Projekte), und wählen Sie dann **Eigenschaften**aus.
+2. Klicken Sie mit der rechten Maustaste auf die ConfigurationChannelFactory-Projektmappe (2 Projekte) und wählen Sie dann **Eigenschaften**aus.
 
-3. Wählen Sie unter **Allgemeine Eigenschaften**die Option **Startprojekt**aus, und klicken Sie dann auf **mehrere Start Projekte**.
+3. Wählen Sie unter **Allgemeine Eigenschaften**die Option **Projekt starten**aus, und klicken Sie dann auf **Mehrere Startprojekte**.
 
-4. Verschieben Sie das **Dienst** Projekt an den Anfang der Liste mit der **Aktion "Start"** , und verschieben Sie das **Client** Projekt nach dem **Dienst** Projekt, auch mit der **Aktion "Start"** , damit das **Client** Projekt nach dem **Dienst** Projekt ausgeführt wird.
+4. Verschieben Sie das **Serviceprojekt** mit der **Aktion 'Start'** an den Anfang der Liste, und verschieben Sie dann das **Clientprojekt** nach dem **Serviceprojekt,** ebenfalls mit der **Aktion 'Start',** damit das **Clientprojekt** nach dem **Serviceprojekt** ausgeführt wird.
 
-5. Klicken Sie auf **OK**, und drücken Sie dann F5 (oder STRG + F5), um das Beispiel auszuführen.
+5. Klicken Sie auf **OK**, und drücken Sie dann F5 (oder STRG+F5), um das Beispiel auszuführen.
 
 > [!IMPORTANT]
 > Die Beispiele sind möglicherweise bereits auf dem Computer installiert. Suchen Sie nach dem folgenden Verzeichnis (Standardverzeichnis), bevor Sie fortfahren.  
->   
+>
 > `<InstallDrive>:\WF_WCF_Samples`  
->   
-> Wenn dieses Verzeichnis nicht vorhanden ist, wechseln Sie zu [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF)-Beispiele für .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) , um alle Windows Communication Foundation (WCF) und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele herunterzuladen. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
->   
+>
+> Wenn dieses Verzeichnis nicht vorhanden ist, wechseln Sie zu [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples for .NET Framework 4,](https://www.microsoft.com/download/details.aspx?id=21459) um alle Windows Communication Foundation (WCF) und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele herunterzuladen. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+>
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\ConfigurationChannelFactory`

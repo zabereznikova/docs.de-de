@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1a67fa1b-2419-4cd0-aad4-6f46a0719b4b
 topic_type:
 - apiref
-ms.openlocfilehash: 07331a512dd513a94a7d8c3a8d8b0754d998b94b
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: c071a7ddb7d8d3f0e6487ab85284c45f9a7f0372
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73130998"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79178841"
 ---
 # <a name="icordebugilframeenumeratelocalvariables-method"></a>ICorDebugILFrame::EnumerateLocalVariables-Methode
 Ruft einen Enumerator für die lokalen Variablen in diesem Frame ab.  
@@ -28,19 +28,19 @@ Ruft einen Enumerator für die lokalen Variablen in diesem Frame ab.
 ## <a name="syntax"></a>Syntax  
   
 ```cpp  
-HRESULT EnumerateLocalVariables(   
+HRESULT EnumerateLocalVariables(
     [out] ICorDebugValueEnum    **ppValueEnum  
 );  
 ```  
   
 ## <a name="parameters"></a>Parameter  
  `ppValueEnum`  
- vorgenommen Ein Zeiger auf die Adresse eines ICorDebugValueEnum-Objekts, bei dem es sich um den Enumerator für die lokalen Variablen in diesem Frame handelt.  
+ [out] Ein Zeiger auf die Adresse eines ICorDebugValueEnum-Objekts, das den Enumerator für die lokale Variable im Rahmen darstellt.  
   
-## <a name="remarks"></a>Hinweise  
- `EnumerateLocalVariables` Ruft einen Enumerator ab, der die lokalen Variablen auflisten kann, die in dem von diesem ICorDebugILFrame-Objekt dargestellten Aufrufframe verfügbar sind. Die Liste enthält möglicherweise nicht alle lokalen Variablen in der Funktion "wird ausgeführt", da einige von Ihnen möglicherweise nicht aktiv sind.  
+## <a name="remarks"></a>Bemerkungen  
+ `EnumerateLocalVariables`ruft einen Enumerator ab, der die lokalen Variablen auflisten kann, die im Aufrufframe verfügbar sind, der durch dieses ICorDebugILFrame-Objekt dargestellt wird. Die Liste enthält möglicherweise nicht alle lokalen Variablen in der laufenden Funktion, da einige von ihnen möglicherweise nicht aktiv sind.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  

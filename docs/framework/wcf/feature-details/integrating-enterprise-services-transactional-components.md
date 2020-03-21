@@ -2,16 +2,16 @@
 title: Integrieren von Enterprise Services-Transaktionskomponenten
 ms.date: 03/30/2017
 ms.assetid: 05dab277-b8b2-48cf-b40c-826be128b175
-ms.openlocfilehash: 5914f76639adc3ff569a3bfb8d6eb1db14313e76
-ms.sourcegitcommit: 09b4090b78f52fd09b0e430cd4b26576f1fdf96e
+ms.openlocfilehash: 292573f911459d8a8419e09d81fd1e54dbc6c70b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/17/2020
-ms.locfileid: "76211935"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79184741"
 ---
 # <a name="integrating-enterprise-services-transactional-components"></a>Integrieren von Enterprise Services-Transaktionskomponenten
 
-Windows Communication Foundation (WCF) bietet einen automatischen Mechanismus zum Integrieren in Enterprise Services (siehe [integrieren in com+-Anwendungen](integrating-with-com-plus-applications.md)). Möglicherweise benötigen Sie die Flexibilität zur Entwicklung von Diensten, die von Enterprise Services gehostete Transaktionskomponenten intern verwenden. Da die WCF-Transaktions Funktion auf der <xref:System.Transactions>-Infrastruktur basiert, ist der Prozess zum Integrieren von Enterprise Services in WCF identisch mit dem zum Angeben von Interoperabilität zwischen <xref:System.Transactions> und Enterprise Services, wie unter [Interoperabilität mit Enterprise Services und com+-Transaktionen](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.0/ms229974(v=vs.85))beschrieben.  
+Windows Communication Foundation (WCF) bietet einen automatischen Mechanismus für die Integration mit Enterprise Services (siehe [Integration mit COM+-Anwendungen](integrating-with-com-plus-applications.md)). Möglicherweise benötigen Sie die Flexibilität zur Entwicklung von Diensten, die von Enterprise Services gehostete Transaktionskomponenten intern verwenden. Da die WCF-Transaktionsfunktion auf <xref:System.Transactions> der Infrastruktur basiert, ist der Prozess für die Integration von <xref:System.Transactions> Enterprise Services mit WCF identisch mit dem Prozess für die Angabe der Interoperabilität zwischen und Enterprise Services, wie in [Interoperabilität mit Enterprise Services und COM+-Transaktionen](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.0/ms229974(v=vs.85))beschrieben.  
   
  Um das gewünschte Maß an Interoperabilität zwischen der eingehenden übergebenden Transaktion und der COM+-Kontexttransaktion zu erzielen, muss die Dienstimplementierung eine <xref:System.Transactions.TransactionScope>-Instanz erstellen und den entsprechenden Wert der <xref:System.Transactions.EnterpriseServicesInteropOption>-Enumeration verwenden.  
   
@@ -46,11 +46,11 @@ public class CustomerService : ICustomerServiceContract
                      EnterpriseServicesInteropOption.Full))  
       {  
          // Create an Enterprise Services component  
-         // Call UpdateCustomer method on an Enterprise Services   
-         // component   
+         // Call UpdateCustomer method on an Enterprise Services
+         // component
   
-         // Call UpdateOtherCustomerData method on an Enterprise   
-         // Services component   
+         // Call UpdateOtherCustomerData method on an Enterprise
+         // Services component
          ts.Complete();  
       }  
   
@@ -81,19 +81,19 @@ static void Main()
   
         // Create an Enterprise Services component  
   
-        // Call UpdateCustomer method on an Enterprise Services   
-        // component   
+        // Call UpdateCustomer method on an Enterprise Services
+        // component
   
         ts.Complete();  
     }  
   
-    // Closing the client gracefully closes the connection and   
+    // Closing the client gracefully closes the connection and
     // cleans up resources  
     client.Close();  
 }  
 ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Integrieren von COM+-Anwendungen](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)
+- [Integration in COM+ Anwendungen](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)
 - [Integrieren von COM-Anwendungen](../../../../docs/framework/wcf/feature-details/integrating-with-com-applications.md)

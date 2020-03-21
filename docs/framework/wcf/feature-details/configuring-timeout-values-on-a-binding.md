@@ -2,12 +2,12 @@
 title: Konfigurieren von Timeoutwerten für eine Bindung
 ms.date: 03/30/2017
 ms.assetid: b5c825a2-b48f-444a-8659-61751ff11d34
-ms.openlocfilehash: f323dfff338f8a3ba24caab6df3b3916d3ae0d13
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 968e80bbd4b50d72d089a325f8e3fe498de2eac2
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61779326"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79185286"
 ---
 # <a name="configuring-timeout-values-on-a-binding"></a>Konfigurieren von Timeoutwerten für eine Bindung
 Für WCF-Bindungen stehen eine Reihe von Timeouteinstellungen zur Verfügung. Wenn diese Timeouteinstellungen ordnungsgemäß festgelegt sind, verbessert sich nicht nur die Leistung des Diensts, sondern auch dessen Anwenderfreundlichkeit und Sicherheit. Die folgenden Timeouts sind für WCF-Bindungen verfügbar:  
@@ -27,20 +27,20 @@ Für WCF-Bindungen stehen eine Reihe von Timeouteinstellungen zur Verfügung. We
 public static void Main()
 {
     Uri baseAddress = new Uri("http://localhost/MyServer/MyService");
-    
+
     try
     {
         ServiceHost serviceHost = new ServiceHost(typeof(CalculatorService));
-        
+
         WSHttpBinding binding = new WSHttpBinding();
         binding.OpenTimeout = new TimeSpan(0, 10, 0);
         binding.CloseTimeout = new TimeSpan(0, 10, 0);
         binding.SendTimeout = new TimeSpan(0, 10, 0);
         binding.ReceiveTimeout = new TimeSpan(0, 10, 0);
-        
+
         serviceHost.AddServiceEndpoint("ICalculator", binding, baseAddress);
         serviceHost.Open();
-        
+
         // The service can now be accessed.
         Console.WriteLine("The service is ready.");
         Console.WriteLine("Press <ENTER> to terminate service.");
@@ -61,9 +61,9 @@ public static void Main()
   <system.serviceModel>
     <bindings>
       <wsHttpBinding>
-        <binding openTimeout="00:10:00" 
-                 closeTimeout="00:10:00" 
-                 sendTimeout="00:10:00" 
+        <binding openTimeout="00:10:00"
+                 closeTimeout="00:10:00"
+                 sendTimeout="00:10:00"
                  receiveTimeout="00:10:00">
         </binding>
       </wsHttpBinding>
@@ -79,15 +79,15 @@ public static void Main()
   
 1. SendTimeout: Wird zur Initialisierung von OperationTimeout verwendet. Die Einstellung steuert den gesamten Sendevorgang einer Nachricht, einschließlich des Empfangs einer Antwortnachricht für einen Vorgang des Anforderung-Antwort-Diensts. Dieses Timeout gilt auch beim Senden von Antwortnachrichten von einer Rückrufvertragsmethode.  
   
-2. "Opentimeout" – wird verwendet, wenn Kanäle öffnen, wenn kein expliziter Timeoutwert angegeben ist.  
+2. OpenTimeout – wird beim Öffnen von Kanälen verwendet, wenn kein expliziter Timeoutwert angegeben ist.  
   
-3. CloseTimeout – wird verwendet, wenn Kanäle zu schließen, wenn kein expliziter Timeoutwert angegeben ist.  
+3. CloseTimeout – wird beim Schließen von Kanälen verwendet, wenn kein expliziter Timeoutwert angegeben ist.  
   
-4. ReceiveTimeout: wird nicht verwendet.  
+4. ReceiveTimeout – wird nicht verwendet.  
   
-### <a name="service-side-timeouts"></a>Dienstseitige Timeouts  
+### <a name="service-side-timeouts"></a>Serviceseitige Timeouts  
  Auf der Dienstseite:  
   
-1. SendTimeout "," OpenTimeout "," CloseTimeout sind dieselben wie auf dem Client.  
+1. SendTimeout, OpenTimeout, CloseTimeout sind identisch mit dem Client.  
   
 2. ReceiveTimeout: Wird von der Dienstframeworkebene verwendet, um das Timeout für Sitzungen im Leerlauf zu initialisieren, das steuert, wie lange eine Sitzung bis zum Timeout im Leerlauf sein kann.

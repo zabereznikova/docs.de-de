@@ -15,46 +15,46 @@ helpviewer_keywords:
 ms.assetid: ad37cd10-0339-4d08-9b0e-4b3428bb4dc3
 topic_type:
 - apiref
-ms.openlocfilehash: c8866e98be0dd064138acdf5e0f6fb9c339fb3d2
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 6f7f400c51ded0b98c0c2286cb6f90bbd77e47d7
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76790652"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79178396"
 ---
 # <a name="icorpublishappdomainenumnext-method"></a>ICorPublishAppDomainEnum::Next-Methode
-Ruft die angegebene Anzahl von Anwendungs Domänen ab, die derzeit im Prozess vorhanden sind, beginnend an der aktuellen Position.  
+Ruft die angegebene Anzahl von Anwendungsdomänen ab, die derzeit im Prozess vorhanden sind, beginnend an der aktuellen Position.  
   
 ## <a name="syntax"></a>Syntax  
   
 ```cpp  
 HRESULT Next (  
     [in] ULONG  celt,  
-    [out, size_is(celt), length_is(*pceltFetched)]   
+    [out, size_is(celt), length_is(*pceltFetched)]
         ICorPublishAppDomain **objects,  
     [out] ULONG *pceltFetched  
 );  
 ```  
   
-## <a name="parameters"></a>Parameters  
+## <a name="parameters"></a>Parameter  
  `celt`  
- in Die Anzahl der abzurufenden Elemente.  
+ [in] Die Anzahl der abzuholenden Elemente.  
   
  `objects`  
- vorgenommen Ein Zeiger auf das Array von abgerufenen [ICorPublishAppDomain](icorpublishappdomain-interface.md) -Objekten, von denen jedes eine Anwendungsdomäne darstellt.  
+ [out] Ein Zeiger auf das Array der abgerufenen [ICorPublishAppDomain-Objekte,](icorpublishappdomain-interface.md) von denen jedes eine Anwendungsdomäne darstellt.  
   
  `pceltFetched`  
- vorgenommen Ein Zeiger auf die Anzahl der tatsächlich zurückgegebenen Anwendungs Domänen. Dieser Wert kann NULL sein, wenn `celt` 1 ist.  
+ [out] Zeiger auf die Anzahl der tatsächlich zurückgegebenen Anwendungsdomänen. Dieser Wert kann `celt` null sein, wenn es sich um einen Wert handelt.  
   
-## <a name="requirements"></a>-Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Corpub. idl, Corpub. h  
+ **Kopfzeile:** CorPub.idl, CorPub.h  
   
  **Bibliothek:** CorGuids.lib  
   
- **.NET Framework Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [ICorPublishAppDomainEnum-Schnittstelle](icorpublishappdomainenum-interface.md)

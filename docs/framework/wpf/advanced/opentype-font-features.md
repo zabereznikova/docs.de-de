@@ -9,22 +9,22 @@ helpviewer_keywords:
 - typography [WPF], OpenType font technology
 - OpenType font technology [WPF]
 ms.assetid: 4061a9d1-fe8b-4921-9e17-18ec7d2e3ea2
-ms.openlocfilehash: 65ecfc4269ff894d45c9b4ee15e349b1a7ddbb73
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: 52fe73bccd625c9508b398874fd6b075af2445e0
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2020
-ms.locfileid: "77094513"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79186804"
 ---
 # <a name="opentype-font-features"></a>Features für OpenType-Schriftarten
 
-Dieses Thema enthält eine Übersicht über einige der wichtigsten Features der OpenType-Schriftart Technologie in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  
+Dieses Thema bietet einen Überblick über einige der wichtigsten [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]Funktionen der OpenType-Schriftarttechnologie in .  
   
-<a name="overview"></a>   
+<a name="overview"></a>
 ## <a name="opentype-font-format"></a>OpenType-Schriftartformat  
- Das OpenType-Schriftart Format ist eine Erweiterung des TrueType-® Schriftart Formats und fügt Unterstützung für PostScript-Schriftart Daten hinzu. Das OpenType-Schriftformat wurde von Microsoft und Adobe Corporation gemeinsam entwickelt. OpenType-Schriftarten und die Betriebssystem Dienste, die OpenType-Schriftarten unterstützen, bieten Benutzern eine einfache Möglichkeit zum Installieren und Verwenden von Schriftarten, unabhängig davon, ob die Schriftarten TrueType-und CFF-Gliederungen enthalten.  
+ Das OpenType-Schriftartformat ist eine Erweiterung des TrueType®-Schriftartformats, das PostScript-Schriftartdaten unterstützt. Das OpenType-Schriftartformat wurde gemeinsam von Microsoft und Adobe Corporation entwickelt. OpenType-Schriftarten und die Betriebssystemdienste, die OpenType-Schriftarten unterstützen, bieten Benutzern eine einfache Möglichkeit, Schriftarten zu installieren und zu verwenden, unabhängig davon, ob die Schriftarten TrueType-Umrisse oder CFF-Umrisse (PostScript) enthalten.  
   
- Das OpenType-Schriftformat behandelt die folgenden Entwickler Herausforderungen:  
+ Das OpenType-Schriftartformat behebt die folgenden Entwicklerherausforderungen:  
   
 - Breitere Multiplattform-Unterstützung.  
   
@@ -37,12 +37,12 @@ Dieses Thema enthält eine Übersicht über einige der wichtigsten Features der 
 - Breitere Unterstützung für erweiterte typografische Steuerelement.  
   
 > [!NOTE]
-> Die Windows SDK enthält eine Reihe von OpenType-Beispiel Schriftarten, die Sie mit [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Anwendungen verwenden können. Diese Schriftarten bieten die meisten der Funktionen, wie im folgenden Thema dargestellt. Weitere Informationen finden Sie unter [OpenType-Beispielschriftartenpaket](sample-opentype-font-pack.md).  
+> Das Windows SDK enthält eine Reihe von OpenType-Beispielschriftarten, die Sie mit [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Anwendungen verwenden können. Diese Schriftarten bieten die meisten der Funktionen, wie im folgenden Thema dargestellt. Weitere Informationen finden Sie unter [Beispiel OpenType Font Pack](sample-opentype-font-pack.md).  
   
-Ausführliche Informationen zum OpenType-Schriftformat finden Sie in der [OpenType-Spezifikation](https://docs.microsoft.com/typography/opentype/spec/).  
+Weitere Informationen zum OpenType-Schriftartformat finden Sie in der [OpenType-Spezifikation](https://docs.microsoft.com/typography/opentype/spec/).  
   
 ### <a name="advanced-typographic-extensions"></a>Erweiterte typografische Funktionen  
- Die erweiterten typografischen Tabellen (OpenType-Layouttabellen) erweitern die Funktionalität von Schriftarten mit den Gliederungen von TrueType oder CFF. OpenType-Layoutschriftarten enthalten zusätzliche Informationen, die die Funktionen der Schriftarten für die Unterstützung qualitativ hochwertiger internationaler Typografiefunktionen erweitern. Die meisten OpenType-Schriftarten machen nur eine Teilmenge der verfügbaren OpenType-Features verfügbar. OpenType-Schriftarten bieten die folgenden Funktionen.  
+ Die erweiterten typografischen Tabellen (OpenType Layout-Tabellen) erweitern die Funktionalität von Schriftarten mit TrueType- oder CFF-Umrissen. OpenType Layout-Schriftarten enthalten zusätzliche Informationen, die die Funktionen der Schriftarten erweitern, um hochwertige internationale Typografie zu unterstützen. Die meisten OpenType-Schriftarten machen nur eine Teilmenge der gesamten OpenType-Funktionen verfügbar. OpenType-Schriftarten bieten die folgenden Funktionen.  
   
 - Umfangreiche Zuordnung zwischen Zeichen und Symbolen, die Ligaturen, positionelle Formen, alternative Stile und andere Schriftartersetzungen unterstützen.  
   
@@ -50,22 +50,22 @@ Ausführliche Informationen zum OpenType-Schriftformat finden Sie in der [OpenTy
   
 - Explizite Skript- und Sprachinformationen, die in der Schriftart enthalten sind, damit Textverarbeitungsanwendungen ihr Verhalten entsprechend anpassen können.  
   
- Die OpenType-Layouttabellen werden im Abschnitt ["Schriftart Datei Tabellen"](https://www.microsoft.com/typography/otspec/otff.htm) der OpenType-Spezifikation ausführlicher beschrieben.  
+ Die OpenType-Layouttabellen werden im Abschnitt ["Font File Tables"](https://www.microsoft.com/typography/otspec/otff.htm) der OpenType-Spezifikation ausführlicher beschrieben.  
   
- Im restlichen Teil dieser Übersicht wird die Breite und Flexibilität einiger der visuell interessanten OpenType-Funktionen eingeführt, die von den Eigenschaften des <xref:System.Windows.Documents.Typography> Objekts verfügbar gemacht werden. Weitere Informationen über dieses Objekt finden Sie unter [Typografieklasse](#typography_class).  
+ Der Rest dieser Übersicht stellt die Breite und Flexibilität einiger visuell interessanter OpenType-Features vor, die von den Eigenschaften des <xref:System.Windows.Documents.Typography> Objekts verfügbar gemacht werden. Weitere Informationen über dieses Objekt finden Sie unter [Typografieklasse](#typography_class).  
   
-<a name="variants"></a>   
+<a name="variants"></a>
 ## <a name="variants"></a>Varianten  
  Varianten werden verwendet, um verschiedene typographische Formate zu rendern, z.B. hoch- und tiefgestellte Zeichen.  
   
 ### <a name="superscripts-and-subscripts"></a>Hoch- und tiefgestellte Zeichen  
- Die <xref:System.Windows.Documents.Typography.Variants%2A>-Eigenschaft ermöglicht es Ihnen, hoch gestellt-und Indexwerte für eine OpenType-Schriftart festzulegen.  
+ Mit <xref:System.Windows.Documents.Typography.Variants%2A> der Eigenschaft können Sie hoch- und subscript-Werte für eine OpenType-Schriftart festlegen.  
   
  Der folgende Text zeigt hochgestellte Zeichen für die Schriftart Palatino Linotype.  
   
  ![Text mit hochgestellten OpenType-Zeichen](./media/opentype-font-features/opentype-superscripts.gif "Text mit hochgestellten OpenType-Zeichen")  
   
- Im folgenden Markup Beispiel wird gezeigt, wie Sie mithilfe der Eigenschaften des <xref:System.Windows.Documents.Typography> Objekts hoch für die Schriftart Palatino Linotype definieren.  
+ Das folgende Markupbeispiel zeigt, wie Hochlegende für die Palatino <xref:System.Windows.Documents.Typography> Linotype-Schriftart mithilfe von Eigenschaften des Objekts definiert werden.  
   
  [!code-xaml[OpenTypeFontSamples#12](~/samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#12)]  
   
@@ -73,7 +73,7 @@ Ausführliche Informationen zum OpenType-Schriftformat finden Sie in der [OpenTy
   
  ![Text mit tiefgestellten OpenType-Zeichen](./media/opentype-font-features/opentype-subscripts.gif "Text mit tiefgestellten OpenType-Zeichen")  
   
- Im folgenden Markup Beispiel wird gezeigt, wie Sie unter Verwendung der Eigenschaften des <xref:System.Windows.Documents.Typography> Objekts Indizes für die Schriftart Palatino Linotype definieren.  
+ Das folgende Markupbeispiel zeigt, wie Subskriptionen für die Palatino <xref:System.Windows.Documents.Typography> Linotype-Schriftart mithilfe von Eigenschaften des Objekts definiert werden.  
   
  [!code-xaml[OpenTypeFontSamples#13](~/samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#13)]  
   
@@ -82,19 +82,19 @@ Ausführliche Informationen zum OpenType-Schriftformat finden Sie in der [OpenTy
   
  ![Text mit hoch- und tiefgestellten Zeichen im OpenType-Format](./media/opentype-font-features/opentype-superscripts-subscripts.gif "Text mit hoch- und tiefgestellten OpenType-Zeichen")  
 
- Im folgenden Markup Beispiel wird gezeigt, wie Sie mithilfe der Eigenschaften des <xref:System.Windows.Documents.Typography> Objekts hoch und Index Zeichenfolgen für eine Schriftart definieren.  
+ Das folgende Markupbeispiel zeigt, wie Hochschreibungen und Subskriptionen für <xref:System.Windows.Documents.Typography> eine Schriftart mithilfe von Eigenschaften des Objekts definiert werden.  
   
  [!code-xaml[OpenTypeFontSamples#14](~/samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#14)]  
   
-<a name="capitals"></a>   
+<a name="capitals"></a>
 ## <a name="capitals"></a>Großbuchstaben  
- Großbuchstaben sind ein Satz typografischer Formen, bei dem Text mit Symbolen gerendert wird, die als Großbuchstaben formatiert sind. Wenn Text ausschließlich in Großbuchstaben gerendert wird, kann der Abstand zwischen den Buchstaben als zu gering, die Breite der Buchstaben als zu groß und die Proportionen der Buchstaben als zu unausgewogen erscheinen. OpenType unterstützt eine Reihe von Formatierungs Formaten für Großbuchstaben, einschließlich Small Capitals, Petite Capitals, titult und Capital-Abstände. Mit diesen Formatierungen kann die Darstellung von Großbuchstaben gesteuert werden.  
+ Großbuchstaben sind ein Satz typografischer Formen, bei dem Text mit Symbolen gerendert wird, die als Großbuchstaben formatiert sind. Wenn Text ausschließlich in Großbuchstaben gerendert wird, kann der Abstand zwischen den Buchstaben als zu gering, die Breite der Buchstaben als zu groß und die Proportionen der Buchstaben als zu unausgewogen erscheinen. OpenType unterstützt eine Reihe von Styling-Formaten für Großbuchstaben, einschließlich kleiner Großbuchstaben, zierlicher Großbuchstaben, Titling und Kapitalabstand. Mit diesen Formatierungen kann die Darstellung von Großbuchstaben gesteuert werden.  
   
  Der folgende Text zeigt zuerst die Standardgroßbuchstaben, gefolgt von den Buchstaben in den Formaten „SmallCaps“ und „AllSmallCaps“ für die Schriftart Pescadero. Für alle drei Wörter wird der gleiche Schriftgrad verwendet.  
   
  ![Text mit OpenType-Kapitälchen](./media/opentype-font-features/opentype-capitals.gif "Text mit OpenType-Kapitälchen")  
   
- Im folgenden Markup Beispiel wird gezeigt, wie Sie mit den Eigenschaften des <xref:System.Windows.Documents.Typography> Objekts die Großbuchstaben für die Schriftart Pescadero definieren. Wenn das „SmallCaps“-Format verwendet wird, werden führende Großbuchstaben ignoriert.  
+ Das folgende Markupbeispiel zeigt, wie Großbuchstaben für die Pescadero-Schriftart mithilfe von Eigenschaften des <xref:System.Windows.Documents.Typography> Objekts definiert werden. Wenn das „SmallCaps“-Format verwendet wird, werden führende Großbuchstaben ignoriert.  
   
  [!code-xaml[OpenTypeFontSamples#9](~/samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#9)]  
   
@@ -103,7 +103,7 @@ Ausführliche Informationen zum OpenType-Schriftformat finden Sie in der [OpenTy
   
  ![Text mit OpenType-Initialen](./media/opentype-font-features/opentype-titling-capitals.gif "Text mit OpenType-Initialen")  
   
- Im folgenden Markup Beispiel wird gezeigt, wie Sie mit den Eigenschaften des <xref:System.Windows.Documents.Typography> Objekts die titlinger-Großbuchstaben für die Schriftart Pescadero definieren.  
+ Das folgende Markupbeispiel zeigt, wie Titling-Großbuchstaben für die Pescadero-Schriftart mithilfe von Eigenschaften des <xref:System.Windows.Documents.Typography> Objekts definiert werden.  
   
  [!code-xaml[OpenTypeFontSamples#OpenTypeFontSnippet17](~/samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#opentypefontsnippet17)]  
   
@@ -111,14 +111,14 @@ Ausführliche Informationen zum OpenType-Schriftformat finden Sie in der [OpenTy
  Der Großbuchstabenabstand ist ein Feature, mit dem Sie in einem Textabschnitt, der ausschließlich aus Großbuchstaben besteht, die Laufweite vergrößern können. Großbuchstaben werden i. d. R. so entworfen, dass sie mit Kleinbuchstaben harmonieren. Ein Abstand, der zwischen einem Großbuchstaben und einem Kleinbuchstaben ästhetisch wirkt, kann zwischen Großbuchstaben zu gering erscheinen. Im folgende Text werden normale Großbuchstaben und Großbuchstaben für Titel für die Schriftart Pescadero gezeigt.  
   
  ![Text mit OpenType-Kapitälchenabstand](./media/opentype-font-features/opentype-capital-spacing.gif "Text mit OpenType-Kapitälchenabstand")  
- 
- Im folgenden Markup Beispiel wird gezeigt, wie Sie mithilfe der Eigenschaften des <xref:System.Windows.Documents.Typography> Objekts den Großbuchstaben für die Schriftart Pescadero definieren.  
+
+ Das folgende Markupbeispiel zeigt, wie Sie den Großbuchstabenabstand für die <xref:System.Windows.Documents.Typography> Pescadero-Schriftart mithilfe von Eigenschaften des Objekts definieren.  
   
  [!code-xaml[OpenTypeFontSamples#OpenTypeFontSnippet18](~/samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#opentypefontsnippet18)]  
   
-<a name="ligatures"></a>   
+<a name="ligatures"></a>
 ## <a name="ligatures"></a>Ligaturen  
- Ligaturen sind zwei oder mehr Symbole, die zu einem einzigen Symbol zusammengefügt werden, um einen besser lesbaren oder attraktiveren Text zu erstellen. OpenType-Schriftarten unterstützen vier Arten von Ligaturen:  
+ Ligaturen sind zwei oder mehr Symbole, die zu einem einzigen Symbol zusammengefügt werden, um einen besser lesbaren oder attraktiveren Text zu erstellen. OpenType-Schriftarten unterstützen vier Ligaturentypen:  
   
 - **Standardligaturen**. Zur Verbesserung der Lesbarkeit. Zu den Standardligaturen gehören „fi“, „fl“ und „ff“.  
   
@@ -132,7 +132,7 @@ Ausführliche Informationen zum OpenType-Schriftformat finden Sie in der [OpenTy
   
  ![Text mit OpenType-Standardligaturen](./media/opentype-font-features/opentype-standard-ligatures.gif "Text mit OpenType-Standardligaturen")  
   
- Im folgenden Markup Beispiel wird gezeigt, wie standardmäßige Ligaturen-Symbole für die Schriftart Pericles mithilfe der Eigenschaften des <xref:System.Windows.Documents.Typography> Objekts definiert werden.  
+ Das folgende Markupbeispiel zeigt, wie Sie Standardligatur-Glyphen für die <xref:System.Windows.Documents.Typography> Pericles-Schriftart mithilfe von Eigenschaften des Objekts definieren.  
   
  [!code-xaml[OpenTypeFontSamples#4](~/samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#4)]  
   
@@ -140,25 +140,25 @@ Ausführliche Informationen zum OpenType-Schriftformat finden Sie in der [OpenTy
   
  ![Text mit bedingten OpenType-Ligaturen](./media/opentype-font-features/opentype-discretionary-ligatures.gif "Text mit bedingten OpenType-Ligaturen")  
   
- Im folgenden Markup Beispiel wird gezeigt, wie Sie mithilfe der Eigenschaften des <xref:System.Windows.Documents.Typography> Objekts freigegebene Ligaturen-Symbole für die Schriftart Pericles definieren.  
+ Das folgende Markupbeispiel zeigt, wie diskretionäre Ligatur-Glyphen für die <xref:System.Windows.Documents.Typography> Pericles-Schriftart mithilfe von Eigenschaften des Objekts definiert werden.  
   
  [!code-xaml[OpenTypeFontSamples#5](~/samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#5)]  
   
- Standardmäßig aktivieren OpenType-Schriftarten in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Standard Ligaturen. Wenn Sie beispielsweise die Schriftart Palatino Linotype verwenden, werden die Standardligaturen „fi“, „ff“ und „fl“ als kombiniertes Zeichensymbol angezeigt. Dabei berühren die beiden Zeichen einer Standardligatur einander.  
+ Standardmäßig aktivieren OpenType-Schriftarten in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Standardligaturen. Wenn Sie beispielsweise die Schriftart Palatino Linotype verwenden, werden die Standardligaturen „fi“, „ff“ und „fl“ als kombiniertes Zeichensymbol angezeigt. Dabei berühren die beiden Zeichen einer Standardligatur einander.  
   
- ![Text mit OpenType-Standard Ligaturen mit Palatino Linotype](./media/opentype-font-features/opentype-standard-ligatures-palatino.gif "Text mit OpenType-Standard Ligaturen mit Palatino Linotype")    
-   
+ ![Text mit OpenType-Standardligaturen mit Palatino Linotype](./media/opentype-font-features/opentype-standard-ligatures-palatino.gif "Text mit OpenType-Standardligaturen mit Palatino Linotype")
+
  Allerdings können Sie die Features für Standardligaturen auch deaktivieren, sodass z.B. die Standardligatur „ff“ nicht als kombiniertes Zeichensymbol, sondern als zwei einzelne Symbole angezeigt wird.  
   
  ![Text mit deaktivierten OpenType-Standardligaturen](./media/opentype-font-features/disabled-opentype-standard-ligatures.gif "Text mit deaktivierten OpenType-Standardligaturen")  
-    
- Im folgenden Markup Beispiel wird gezeigt, wie Standard Ligaturen-Symbole für die Schriftart Palatino Linotype mithilfe der Eigenschaften des <xref:System.Windows.Documents.Typography> Objekts deaktiviert werden.  
+
+ Das folgende Markupbeispiel zeigt, wie Sie Standardligatur-Glyphen für die <xref:System.Windows.Documents.Typography> Palatino-Linotype-Schriftart mithilfe von Eigenschaften des Objekts deaktivieren.  
   
  [!code-xaml[OpenTypeFontSamples#6](~/samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#6)]  
   
-<a name="swashes"></a>   
+<a name="swashes"></a>
 ## <a name="swashes"></a>Schwünge  
- Schwungschrift besteht aus dekorativen Symbolen, deren reiche Verzierungen häufig mit Kalligraphie assoziiert werden. Im folgenden Text werden Standard- und Schwungsymbole für die Schriftart Pescadero gezeigt.  
+ Schwungschrift besteht aus dekorativen Symbolen, deren ausgefeilte Verzierung häufig mit Kalligraphie assoziiert wird. Im folgenden Text werden Standard- und Schwungsymbole für die Schriftart Pescadero gezeigt.  
   
  ![Text mit OpenType-Standard- und Ziersymbolen](./media/opentype-font-features/opentype-standard-swash-glyphs.gif "Text mit OpenType-Standard- und Ziersymbolen")  
 
@@ -166,7 +166,7 @@ Ausführliche Informationen zum OpenType-Schriftformat finden Sie in der [OpenTy
   
  ![Text mit OpenType-Zierbuchstaben](./media/opentype-font-features/opentype-swashes.gif "Text mit OpenType-Zierbuchstaben")  
   
- Im folgenden Markup Beispiel wird gezeigt, wie Sie mithilfe der Eigenschaften des <xref:System.Windows.Documents.Typography> Objekts Schwung Schrift für eine Schriftart definieren.  
+ Das folgende Markupbeispiel zeigt, wie Sie Mithilfe von Swashes für eine Schriftart mithilfe von Eigenschaften des <xref:System.Windows.Documents.Typography> Objekts definieren.  
   
  [!code-xaml[OpenTypeFontSamples#7](~/samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#7)]  
   
@@ -175,27 +175,27 @@ Ausführliche Informationen zum OpenType-Schriftformat finden Sie in der [OpenTy
   
  ![Text mit kontextbezogenen OpenType-Zierbuchstaben](./media/opentype-font-features/opentype-contextual-swashes.gif "Text mit kontextbezogenen OpenType-Zierbuchstaben")  
   
- Im folgenden Markup Beispiel wird gezeigt, wie Sie mithilfe der Eigenschaften des <xref:System.Windows.Documents.Typography> Objekts eine kontextabhängige Swash-Eigenschaft für die Schriftart Pescadero definieren.  
+ Das folgende Markupbeispiel zeigt, wie Sie mithilfe von Eigenschaften des <xref:System.Windows.Documents.Typography> Objekts einen kontextbezogenen Swash für die Pescadero-Schriftart definieren.  
   
  [!code-xaml[OpenTypeFontSamples#OpenTypeFontSnippet16](~/samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#opentypefontsnippet16)]  
   
-<a name="alternates"></a>   
+<a name="alternates"></a>
 ## <a name="alternates"></a>Alternative Stile  
- Alternative Stilvarianten sind Symbole, die ein Standardsymbol ersetzen können. OpenType-Schriftarten, wie z. b. die in den folgenden Beispielen verwendete Pericles-Schriftart, können alternative Symbole enthalten, die Sie verwenden können, um einen anderen Text Text zu erstellen. Im folgenden Text werden die Standardsymbole der Schriftart Pericles dargestellt.  
+ Alternative Stilvarianten sind Symbole, die ein Standardsymbol ersetzen können. OpenType-Schriftarten, wie die in den folgenden Beispielen verwendete Pericles-Schriftart, können alternative Glyphen enthalten, mit denen Sie unterschiedliche Darstellungen für Text erstellen können. Im folgenden Text werden die Standardsymbole der Schriftart Pericles dargestellt.  
   
  ![Text mit OpenType-Standardsymbolen](./media/opentype-font-features/opentype-standard-glyphs.gif "Text mit OpenType-Standardsymbolen")  
 
- Die Schriftart "Pericles OpenType" enthält zusätzliche Symbole, die eine stilistische Alternative zum Standardsatz von Symbolen bereitstellen. Im folgenden Text werden Symbole im alternativen Stil gezeigt.  
+ Die Pericles OpenType-Schriftart enthält zusätzliche Glyphen, die stilistische Alternativen zum Standardsatz von Glyphen bieten. Im folgenden Text werden Symbole im alternativen Stil gezeigt.  
   
  ![Text mit alternativen OpenType-Stilsymbolen](./media/opentype-font-features/opentype-stylistic-alternate-glyphs.gif "Text mit alternativen OpenType-Stilsymbolen")  
   
- Im folgenden Markup Beispiel wird gezeigt, wie Sie mit den Eigenschaften des <xref:System.Windows.Documents.Typography> Objekts die alternativen Symbole für die Schriftart Pericles definieren.  
+ Das folgende Markupbeispiel zeigt, wie sie stilistische alternative Glyphen für <xref:System.Windows.Documents.Typography> die Pericles-Schriftart mithilfe von Eigenschaften des Objekts definieren.  
   
  [!code-xaml[OpenTypeFontSamples#2](~/samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#2)]  
   
  Im folgenden Text werden verschiedene Symbole im alternativen Stil in der Schriftart Pericles gezeigt.  
   
- ![Text mit alternativen OpenType-Symbolen für die Schriftart "Pericles"](./media/opentype-font-features/opentype-stylistic-alternate-glyphs-pericles.gif "Text mit alternativen OpenType-Symbolen für die Schriftart Pericles")
+ ![Text mit OpenType-Stilalternativen-Glyphen für die Pericles-Schriftart](./media/opentype-font-features/opentype-stylistic-alternate-glyphs-pericles.gif "Text mit OpenType-Stilalternativen-Glyphen für die Pericles-Schriftart")
 
  Im folgenden Markupbeispiel wird veranschaulicht, wie diese zusätzlichen Stilvarianten von Symbolen definiert werden.  
   
@@ -206,7 +206,7 @@ Ausführliche Informationen zum OpenType-Schriftformat finden Sie in der [OpenTy
   
  ![Text mit willkürlichen kontextbedingten OpenType-Varianten](./media/opentype-font-features/opentype-random-contextual-alternates.gif "Text mit willkürlichen kontextbedingten OpenType-Varianten")  
   
- Im folgenden Markup Beispiel wird gezeigt, wie zufällige kontextabhängige Alternativen für die Schriftart Lindsey mithilfe der Eigenschaften des <xref:System.Windows.Documents.Typography> Objekts definiert werden.  
+ Das folgende Markupbeispiel zeigt, wie sie zufällige kontextbezogene Alternativen <xref:System.Windows.Documents.Typography> für die Lindsey-Schriftart mithilfe von Eigenschaften des Objekts definieren.  
   
  [!code-xaml[OpenTypeFontSamples#OpenTypeFontSnippet20](~/samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/Window1.xaml#opentypefontsnippet20)]  
   
@@ -214,70 +214,70 @@ Ausführliche Informationen zum OpenType-Schriftformat finden Sie in der [OpenTy
  Unter historischen Formen werden der Vergangenheit verbreitete typografische Konventionen verstanden. Im folgenden Text wird „Boston, Massachusetts“ unter Verwendung einer historischen Form der Symbole in der Schriftart Palatino Linotype gezeigt.  
   
  ![Text mit OpenType-Mediävalen](./media/opentype-font-features/opentype-historical-forms.gif "Text mit OpenType-Mediävalen")  
-   
- Im folgenden Markup Beispiel wird gezeigt, wie Sie mithilfe der Eigenschaften des <xref:System.Windows.Documents.Typography> Objekts historische Formen für die Schriftart Palatino Linotype definieren.  
+
+ Das folgende Markupbeispiel zeigt, wie historische Formulare für die Palatino <xref:System.Windows.Documents.Typography> Linotype-Schriftart mithilfe von Eigenschaften des Objekts definiert werden.  
   
  [!code-xaml[OpenTypeFontSamples#8](~/samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#8)]  
   
-<a name="numerical_styles"></a>   
+<a name="numerical_styles"></a>
 ## <a name="numerical-styles"></a>Numerische Formate  
  OpenType-Schriftarten unterstützen eine große Anzahl von Features, die mit numerischen Werten im Text verwendet werden können.  
   
 ### <a name="fractions"></a>Brüche  
- OpenType-Schriftarten unterstützen Stile für Bruchteile, einschließlich Schrägstrich und gestapelter.  
+ OpenType-Schriftarten unterstützen Stile für Brüche, einschließlich geschlitzt und gestapelt.  
   
  Im folgenden Text werden Bruchformate für die Schriftart Palatino Linotype gezeigt.  
   
  ![Text mit OpenType-Brüchen mit schrägem oder waagerechtem Bruchstrich](./media/opentype-font-features/opentype-slashed-stacked-fractions.gif "Text mit OpenType-Brüchen mit schrägem oder waagerechtem Bruchstrich")  
-   
- Im folgenden Markup Beispiel wird gezeigt, wie Sie mit den Eigenschaften des <xref:System.Windows.Documents.Typography> Objekts bruchstile für die Schriftart Palatino Linotype definieren.  
+
+ Das folgende Markupbeispiel zeigt, wie Bruchstile für die Palatino <xref:System.Windows.Documents.Typography> Linotype-Schriftart mithilfe von Eigenschaften des Objekts definiert werden.  
   
  [!code-xaml[OpenTypeFontSamples#10](~/samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#10)]  
   
 ### <a name="old-style-numerals"></a>Mediävalziffern  
- OpenType-Schriftarten unterstützen ein altes Format für das Zahlenformat. Dieses Format dient der Anzeige von Ziffern in nicht mehr üblichen Stilen. Im folgenden Text wird ein Datum aus dem 18. Jahrhundert im Standardformat und mit Mediävalziffern in der Schriftart Palatino Linotype gezeigt.  
+ OpenType-Schriftarten unterstützen ein altes Format der Numeralformate. Dieses Format dient der Anzeige von Ziffern in nicht mehr üblichen Stilen. Im folgenden Text wird ein Datum aus dem 18. Jahrhundert im Standardformat und mit Mediävalziffern in der Schriftart Palatino Linotype gezeigt.  
   
  ![Text mit OpenType-Mediävalziffern](./media/opentype-font-features/opentype-old-style-numerals.gif "Text mit OpenType-Mediävalziffern")  
-    
+
  Im folgenden Text werden in der Schriftart Palatino Linotype zuerst Standardziffern und dann Mediävalziffern gezeigt.  
   
  ![Text mit OpenType-Mediävalziffernsätzen](./media/opentype-font-features/opentype-old-style-numeral-sets.gif "Text mit OpenType-Mediävalziffernsätzen")  
   
- Im folgenden Markup Beispiel wird gezeigt, wie Sie mithilfe der Eigenschaften des <xref:System.Windows.Documents.Typography> Objekts alte Stil Zahlen für die Schriftart Palatino Linotype definieren.  
+ Das folgende Markupbeispiel zeigt, wie alte Stilziffern für die Palatino Linotype-Schriftart mithilfe von Eigenschaften des <xref:System.Windows.Documents.Typography> Objekts definiert werden.  
   
  [!code-xaml[OpenTypeFontSamples#11](~/samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#11)]  
   
 ### <a name="proportional-and-tabular-figures"></a>Proportionale Darstellung und Tabellendarstellung  
- OpenType-Schriftarten unterstützen eine proportionale und tabellarische Abbildung, um die Ausrichtung von breiten bei der Verwendung von Zahlen zu steuern. In der proportionalen Darstellung verfügt jede Ziffer über eine eigene Breite: die „1“ ist schmaler als die „5“. In der Tabellendarstellung werden alle Ziffern mit der gleichen Breite dargestellt und vertikal ausgerichtet. Dies verbessert die Lesbarkeit z.B. bei Finanzinformationen.  
+ OpenType-Schriftarten unterstützen ein proportionales und tabellarisches Abbildungs-Feature, um die Ausrichtung von Breiten bei Verwendung von Ziffern zu steuern. In der proportionalen Darstellung verfügt jede Ziffer über eine eigene Breite: die „1“ ist schmaler als die „5“. In der Tabellendarstellung werden alle Ziffern mit der gleichen Breite dargestellt und vertikal ausgerichtet. Dies verbessert die Lesbarkeit z.B. bei Finanzinformationen.  
   
  Im folgenden Text werden in der ersten Spalte zwei proportionale Zahlen in der Schriftart Miramonte proportional dargestellt. Die Ziffern „5“ und „1“ unterscheiden sich in der Breite. In der zweiten Spalte wurde die Breite der gleichen Zahlen mit dem Feature für die Tabellendarstellung angepasst.  
   
  ![Text mit proportionaler und Tabellendarstellung im OpenType-Format](./media/opentype-font-features/opentype-proportional-tabular-figures.gif "Text mit proportionaler und Tabellendarstellung im OpenType-Format")  
-    
- Im folgenden Markup Beispiel wird gezeigt, wie proportionale und tabellarische Abbildungen für die Miramonte-Schriftart mithilfe der Eigenschaften des <xref:System.Windows.Documents.Typography> Objekts definiert werden.  
+
+ Das folgende Markupbeispiel zeigt, wie proportionale und tabellarische Zahlen für <xref:System.Windows.Documents.Typography> die Miramonte-Schriftart mithilfe von Eigenschaften des Objekts definiert werden.  
   
  [!code-xaml[OpenTypeFontSamples#OpenTypeFontSnippet19](~/samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/Window1.xaml#opentypefontsnippet19)]  
   
 ### <a name="slashed-zero"></a>Null mit Schrägstrich  
- OpenType-Schriftarten unterstützen ein abgekürzte 0-Ziffern Format, um den Unterschied zwischen dem Buchstaben "O" und der Ziffer "0" hervorzuheben. Die Ziffer 0 (null) mit Schrägstrich wird häufig für Kennungen in Finanz- und Geschäftsinformationen verwendet.  
+ OpenType-Schriftarten unterstützen ein gekürztes Null-Zahlenformat, um den Unterschied zwischen dem Buchstaben "O" und der Ziffern "0" hervorzuheben. Die Ziffer 0 (null) mit Schrägstrich wird häufig für Kennungen in Finanz- und Geschäftsinformationen verwendet.  
   
  Im folgenden Text wird ein Beispiel mit einer Bestellnummer in der Schriftart Miramonte gezeigt. In der ersten Zeile werden Standardziffern verwendet. In der zweiten wird die Ziffer 0 (null) mit Schrägstrich verwendet, um die Ziffer 0 (null) optisch besser vom Großbuchstaben „O“ zu unterscheiden.  
   
  ![Text mit OpenType-Ziffern mit null mit Schrägstrich](./media/opentype-font-features/opentype-slashed-zero-numerals.gif "Text mit OpenType-Ziffern mit Null mit Schrägstrich")  
-    
- Im folgenden Markup Beispiel wird gezeigt, wie mit den Eigenschaften des <xref:System.Windows.Documents.Typography> Objekts die 0-Ziffern mit Schrägstrich für die Schriftart Miramonte definiert werden.  
+
+ Das folgende Markupbeispiel zeigt, wie Sie gekürzte Nullziffern für die Miramonte-Schriftart mithilfe von Eigenschaften des <xref:System.Windows.Documents.Typography> Objekts definieren.  
   
  [!code-xaml[OpenTypeFontSamples#OpenTypeFontSnippet15](~/samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#opentypefontsnippet15)]  
   
-<a name="typography_class"></a>   
+<a name="typography_class"></a>
 ## <a name="typography-class"></a>Typografieklasse  
- Das <xref:System.Windows.Documents.Typography>-Objekt macht den Satz von Funktionen verfügbar, den eine OpenType-Schriftart unterstützt. Durch Festlegen der Eigenschaften von <xref:System.Windows.Documents.Typography> in Markup können Sie problemlos Dokumente erstellen, die OpenType-Funktionen nutzen.  
+ Das <xref:System.Windows.Documents.Typography> Objekt macht den Satz von Features verfügbar, den eine OpenType-Schriftart unterstützt. Durch Festlegen der <xref:System.Windows.Documents.Typography> Eigenschaften von in Markup können Sie problemlos Dokumente erstellen, die OpenType-Funktionen nutzen.  
   
  Der folgende Text zeigt zuerst die Standardgroßbuchstaben, gefolgt von den Buchstaben in den Formaten „SmallCaps“ und „AllSmallCaps“ für die Schriftart Pescadero. Für alle drei Wörter wird der gleiche Schriftgrad verwendet.  
   
  ![Text mit OpenType-Kapitälchen](./media/opentype-font-features/opentype-capitals.gif "Text mit OpenType-Kapitälchen")  
-    
- Im folgenden Markup Beispiel wird gezeigt, wie Sie mit den Eigenschaften des <xref:System.Windows.Documents.Typography> Objekts die Großbuchstaben für die Schriftart Pescadero definieren. Wenn das „SmallCaps“-Format verwendet wird, werden führende Großbuchstaben ignoriert.  
+
+ Das folgende Markupbeispiel zeigt, wie Großbuchstaben für die Pescadero-Schriftart mithilfe von Eigenschaften des <xref:System.Windows.Documents.Typography> Objekts definiert werden. Wenn das „SmallCaps“-Format verwendet wird, werden führende Großbuchstaben ignoriert.  
   
  [!code-xaml[OpenTypeFontSamples#9](~/samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#9)]  
   
@@ -287,12 +287,12 @@ Ausführliche Informationen zum OpenType-Schriftformat finden Sie in der [OpenTy
  [!code-vb[TypographyCodeSnippets#TypographyCodeSnippet1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TypographyCodeSnippets/visualbasic/page1.xaml.vb#typographycodesnippet1)]  
   
 ### <a name="typography-class-properties"></a>Typografieklasseneigenschaften  
- In der folgenden Tabelle sind die Eigenschaften, Werte und Standardeinstellungen des <xref:System.Windows.Documents.Typography> Objekts aufgeführt.  
+ In der folgenden Tabelle sind die Eigenschaften, <xref:System.Windows.Documents.Typography> Werte und Standardeinstellungen des Objekts aufgeführt.  
   
 |Eigenschaft|Wert(e)|Standardwert|  
 |--------------|----------------|-------------------|  
 |<xref:System.Windows.Documents.Typography.AnnotationAlternates%2A>|Numerischer Wert – Byte|0|  
-|<xref:System.Windows.Documents.Typography.Capitals%2A>|<xref:System.Windows.FontCapitals.AllPetiteCaps> &#124; <xref:System.Windows.FontCapitals.AllSmallCaps> &#124; <xref:System.Windows.FontCapitals.Normal> &#124; <xref:System.Windows.FontCapitals.PetiteCaps> &#124; <xref:System.Windows.FontCapitals.SmallCaps> &#124; &#124; <xref:System.Windows.FontCapitals.Titling> <xref:System.Windows.FontCapitals.Unicase>|<xref:System.Windows.FontCapitals.Normal?displayProperty=nameWithType>|  
+|<xref:System.Windows.Documents.Typography.Capitals%2A>|<xref:System.Windows.FontCapitals.AllPetiteCaps>&#124; <xref:System.Windows.FontCapitals.AllSmallCaps> <xref:System.Windows.FontCapitals.Normal> &#124; <xref:System.Windows.FontCapitals.PetiteCaps> <xref:System.Windows.FontCapitals.SmallCaps> &#124; <xref:System.Windows.FontCapitals.Titling> &#124; &#124; &#124; &#124; &#124;<xref:System.Windows.FontCapitals.Unicase>|<xref:System.Windows.FontCapitals.Normal?displayProperty=nameWithType>|  
 |<xref:System.Windows.Documents.Typography.CapitalSpacing%2A>|<xref:System.Boolean>|`false`|  
 |<xref:System.Windows.Documents.Typography.CaseSensitiveForms%2A>|<xref:System.Boolean>|`false`|  
 |<xref:System.Windows.Documents.Typography.ContextualAlternates%2A>|<xref:System.Boolean>|`true`|  
@@ -300,8 +300,8 @@ Ausführliche Informationen zum OpenType-Schriftformat finden Sie in der [OpenTy
 |<xref:System.Windows.Documents.Typography.ContextualSwashes%2A>|Numerischer Wert – Byte|0|  
 |<xref:System.Windows.Documents.Typography.DiscretionaryLigatures%2A>|<xref:System.Boolean>|`false`|  
 |<xref:System.Windows.Documents.Typography.EastAsianExpertForms%2A>|<xref:System.Boolean>|`false`|  
-|<xref:System.Windows.Documents.Typography.EastAsianLanguage%2A>|<xref:System.Windows.FontEastAsianLanguage.HojoKanji> &#124; <xref:System.Windows.FontEastAsianLanguage.Jis04> &#124; <xref:System.Windows.FontEastAsianLanguage.Jis78> &#124; <xref:System.Windows.FontEastAsianLanguage.Jis83> &#124; <xref:System.Windows.FontEastAsianLanguage.Jis90> &#124; <xref:System.Windows.FontEastAsianLanguage.NlcKanji> &#124; <xref:System.Windows.FontEastAsianLanguage.Normal> &#124; &#124; <xref:System.Windows.FontEastAsianLanguage.Simplified> <xref:System.Windows.FontEastAsianLanguage.Traditional> &#124; <xref:System.Windows.FontEastAsianLanguage.TraditionalNames>|<xref:System.Windows.FontEastAsianLanguage.Normal?displayProperty=nameWithType>|  
-|<xref:System.Windows.Documents.Typography.EastAsianWidths%2A>|<xref:System.Windows.FontEastAsianWidths.Full> &#124; <xref:System.Windows.FontEastAsianWidths.Half> &#124; <xref:System.Windows.FontEastAsianWidths.Normal> &#124; <xref:System.Windows.FontEastAsianWidths.Proportional> &#124; <xref:System.Windows.FontEastAsianWidths.Quarter> &#124; <xref:System.Windows.FontEastAsianWidths.Third>|<xref:System.Windows.FontEastAsianWidths.Normal?displayProperty=nameWithType>|  
+|<xref:System.Windows.Documents.Typography.EastAsianLanguage%2A>|<xref:System.Windows.FontEastAsianLanguage.HojoKanji>&#124; <xref:System.Windows.FontEastAsianLanguage.Jis04> <xref:System.Windows.FontEastAsianLanguage.Jis78> &#124; <xref:System.Windows.FontEastAsianLanguage.Jis83> <xref:System.Windows.FontEastAsianLanguage.Jis90> &#124; <xref:System.Windows.FontEastAsianLanguage.NlcKanji> <xref:System.Windows.FontEastAsianLanguage.Normal> &#124; <xref:System.Windows.FontEastAsianLanguage.Simplified> <xref:System.Windows.FontEastAsianLanguage.Traditional> &#124; &#124; &#124; &#124; &#124; &#124; &#124; &#124; &#124; &#124;<xref:System.Windows.FontEastAsianLanguage.TraditionalNames>|<xref:System.Windows.FontEastAsianLanguage.Normal?displayProperty=nameWithType>|  
+|<xref:System.Windows.Documents.Typography.EastAsianWidths%2A>|<xref:System.Windows.FontEastAsianWidths.Full>&#124; <xref:System.Windows.FontEastAsianWidths.Half> <xref:System.Windows.FontEastAsianWidths.Normal> &#124; <xref:System.Windows.FontEastAsianWidths.Proportional> <xref:System.Windows.FontEastAsianWidths.Quarter> &#124; &#124; &#124; &#124;<xref:System.Windows.FontEastAsianWidths.Third>|<xref:System.Windows.FontEastAsianWidths.Normal?displayProperty=nameWithType>|  
 |<xref:System.Windows.Documents.Typography.Fraction%2A>|<xref:System.Windows.FontFraction.Normal> &#124; <xref:System.Windows.FontFraction.Slashed> &#124; <xref:System.Windows.FontFraction.Stacked>|<xref:System.Windows.FontFraction.Normal?displayProperty=nameWithType>|  
 |<xref:System.Windows.Documents.Typography.HistoricalForms%2A>|<xref:System.Boolean>|`false`|  
 |<xref:System.Windows.Documents.Typography.HistoricalLigatures%2A>|<xref:System.Boolean>|`false`|  
@@ -333,7 +333,7 @@ Ausführliche Informationen zum OpenType-Schriftformat finden Sie in der [OpenTy
 |<xref:System.Windows.Documents.Typography.StylisticSet18%2A>|<xref:System.Boolean>|`false`|  
 |<xref:System.Windows.Documents.Typography.StylisticSet19%2A>|<xref:System.Boolean>|`false`|  
 |<xref:System.Windows.Documents.Typography.StylisticSet20%2A>|<xref:System.Boolean>|`false`|  
-|<xref:System.Windows.Documents.Typography.Variants%2A>|<xref:System.Windows.FontVariants.Inferior> &#124; <xref:System.Windows.FontVariants.Normal> &#124; <xref:System.Windows.FontVariants.Ordinal> &#124; <xref:System.Windows.FontVariants.Ruby> &#124; <xref:System.Windows.FontVariants.Subscript> &#124; <xref:System.Windows.FontVariants.Superscript>|<xref:System.Windows.FontVariants.Normal?displayProperty=nameWithType>|  
+|<xref:System.Windows.Documents.Typography.Variants%2A>|<xref:System.Windows.FontVariants.Inferior>&#124; <xref:System.Windows.FontVariants.Normal> <xref:System.Windows.FontVariants.Ordinal> &#124; <xref:System.Windows.FontVariants.Ruby> <xref:System.Windows.FontVariants.Subscript> &#124; &#124; &#124; &#124;<xref:System.Windows.FontVariants.Superscript>|<xref:System.Windows.FontVariants.Normal?displayProperty=nameWithType>|  
   
 ## <a name="see-also"></a>Weitere Informationen
 
@@ -341,4 +341,4 @@ Ausführliche Informationen zum OpenType-Schriftformat finden Sie in der [OpenTy
 - [OpenType-Spezifikation](https://docs.microsoft.com/typography/opentype/spec/)
 - [Typografie in WPF](typography-in-wpf.md)
 - [OpenType-Beispielschriftartenpaket](sample-opentype-font-pack.md)
-- [Schriftarten mit Anwendungen verpacken](packaging-fonts-with-applications.md)
+- [Verpacken von Schriftarten mit Anwendungen](packaging-fonts-with-applications.md)

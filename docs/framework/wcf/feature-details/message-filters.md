@@ -4,17 +4,17 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - routing [WCF], message filters
 ms.assetid: cb33ba49-8b1f-4099-8acb-240404a46d9a
-ms.openlocfilehash: b8de58b6935ee59fc8c787dfcf7445afcd0774b9
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: a953dea9224d75907c593d87f06a0b0888f0af2d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69912704"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79184658"
 ---
 # <a name="message-filters"></a>Nachrichtenfilter
 Um das inhaltsbasierte Routing zu implementieren, verwendet der Routingdienst <xref:System.ServiceModel.Dispatcher.MessageFilter>-Implementierungen, die bestimmte Abschnitte einer Nachricht überprüfen, z. B. Adresse, Endpunktname oder eine bestimmte XPath-Anweisung. Wenn keiner der von [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)] bereitgestellten Nachrichtenfilter Ihren Anforderungen entspricht, können Sie einen benutzerdefinierten Filter erstellen, indem Sie eine neue Implementierung der <xref:System.ServiceModel.Dispatcher.MessageFilter>-Basisklasse erstellen.  
   
- Beim Konfigurieren des Routing Dienstanbieter müssen Sie Filterelemente (<xref:System.ServiceModel.Routing.Configuration.FilterElement> -Objekte) definieren, die den Typ von **MessageFilter** und alle unterstützenden Daten beschreiben, die zum Erstellen des Filters erforderlich sind, z. b. bestimmte Zeichen folgen Werte, die in der Nachricht gesucht werden sollen. . Beachten Sie, dass beim Erstellen der Filterelemente nur die einzelnen Nachrichtenfilter definiert werden. Um die Filter zum Auswerten und Weiterleiten von Nachrichten zu verwenden, müssen Sie zusätzlich eine Filtertabelle definieren (<xref:System.ServiceModel.Routing.Configuration.FilterTableEntryCollection>).  
+ Beim Konfigurieren des Routingdienstes müssen Sie<xref:System.ServiceModel.Routing.Configuration.FilterElement> Filterelemente (Objekte) definieren, die den Typ von **MessageFilter** und alle unterstützenden Daten beschreiben, die zum Erstellen des Filters erforderlich sind, z. B. bestimmte Zeichenfolgenwerte, nach denen in der Nachricht gesucht werden soll. Beachten Sie, dass beim Erstellen der Filterelemente nur die einzelnen Nachrichtenfilter definiert werden. Um die Filter zum Auswerten und Weiterleiten von Nachrichten zu verwenden, müssen Sie zusätzlich eine Filtertabelle definieren (<xref:System.ServiceModel.Routing.Configuration.FilterTableEntryCollection>).  
   
  Jeder Eintrag in der Filtertabelle verweist auf ein Filterelement und gibt den Clientendpunkt an, an den eine Nachricht weitergeleitet wird, wenn sich für die Nachricht eine Übereinstimmung mit dem Filter ergibt. Die Filtertabelleneinträge ermöglichen Ihnen auch das Angeben einer Auflistung von Sicherungsendpunkten (<xref:System.ServiceModel.Routing.Configuration.BackupEndpointCollection>). Damit wird eine Liste von Endpunkten definiert, an die die Nachricht im Falle eines Übertragungsfehlers gesendet wird, sofern das Senden an den primären Endpunkt erfolgt. Diese Endpunkte werden in der angegebenen Reihefolge abgearbeitet, bis ein Sendevorgang erfolgreich ist.  
   
@@ -26,29 +26,29 @@ Um das inhaltsbasierte Routing zu implementieren, verwendet der Routingdienst <x
 |Filtertyp|Beschreibung|Bedeutung der Filterdaten|Beispielfilter|  
 |------------------|-----------------|-------------------------|--------------------|  
 |Aktion|Verwendet die <xref:System.ServiceModel.Dispatcher.ActionMessageFilter>-Klasse, um eine Übereinstimmung für Nachrichten zu erzielen, die eine bestimmte Aktion enthalten.|Die Aktion, nach der gefiltert werden soll.|\<filter name="action1" filterType="Action" filterData="http://namespace/contract/operation" />|  
-|EndpointAddress|Verwendet die <xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter> -Klasse mit <xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter.IncludeHostNameInComparison%2A>  == ,umnach richtenabzugleichen,dieeinebestimmteAdresseenthalten.`true`|Die Adresse, nach der gefiltert werden soll (im To-Header).|\<filter name="address1" filterType="EndpointAddress" filterData="http://host/vdir/s.svc/b"  />|  
-|EndpointAddressPrefix|Verwendet die <xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter> -Klasse mit <xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter.IncludeHostNameInComparison%2A>  == ,umnach richtenabzugleichen,dieeinbestimmtesAdressPräfixenthalten.`true`|Die Adresse, nach der unter Verwendung der längsten Präfixübereinstimmung gefiltert werden soll.|\<filter name="prefix1" filterType="EndpointAddressPrefix" filterData="http://host/" />|  
-|und|Verwendet die <xref:System.ServiceModel.Dispatcher.StrictAndMessageFilter>-Klasse, die vor der Rückgabe immer beide Bedingungen auswertet.|"FilterData" wird nicht verwendet. Stattdessen verfügen filter1 und filter2 über die Namen der entsprechenden Nachrichtenfilter (auch in der Tabelle), die zusammengeführtwerden sollen.|\<filter name="and1" filterType="And" filter1="address1" filter2="action1" />|  
+|EndpointAddress|Verwendet <xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter> die Klasse, mit, <xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter.IncludeHostNameInComparison%2A>  ==  `true` um Nachrichten abzugleichen, die eine bestimmte Adresse enthalten.|Die Adresse, nach der gefiltert werden soll (im To-Header).|\<filter name="address1" filterType="EndpointAddress" filterData="http://host/vdir/s.svc/b" />|  
+|EndpointAddressPrefix|Verwendet <xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter> die Klasse, mit, <xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter.IncludeHostNameInComparison%2A>  ==  `true` um Nachrichten abzugleichen, die ein bestimmtes Adresspräfix enthalten.|Die Adresse, nach der unter Verwendung der längsten Präfixübereinstimmung gefiltert werden soll.|\<filter name="prefix1" filterType="EndpointAddressPrefix" filterData="http://host/" />|  
+|And|Verwendet die <xref:System.ServiceModel.Dispatcher.StrictAndMessageFilter>-Klasse, die vor der Rückgabe immer beide Bedingungen auswertet.|filterData wird nicht verwendet; stattdessen haben filter1 und filter2 die Namen der entsprechenden Nachrichtenfilter (auch in der Tabelle), die zusammen **UND**ed werden sollen.|\<filter name="and1" filterType="And" filter1="address1" filter2="action1" />|  
 |Benutzerdefiniert|Ein benutzerdefinierter Typ, der die <xref:System.ServiceModel.Dispatcher.MessageFilter>-Klasse erweitert und über einen Konstruktor verfügt, der eine Zeichenfolge verwendet.|Das customType-Attribut ist der vollqualifizierte Typname der zu erstellenden Klasse. "filterData" ist die Zeichenfolge, die beim Erstellen des Filters an den Konstruktor übergeben werden soll.|\<filter name="custom1" filterType="Custom" customType="CustomAssembly.CustomMsgFilter, CustomAssembly" filterData="Custom Data" />|  
-|EndpointName|Verwendet die <xref:System.ServiceModel.Dispatcher.EndpointNameMessageFilter>-Klasse, um für Nachrichten basierend auf dem Namen des Dienstendpunkts, an dem diese empfangen wurden, eine Übereinstimmung zu erzielen.|Der Name des Dienst Endpunkts, z. b.: "serviceEndpoint1".  Hierbei sollte es sich um einen der Endpunkte handeln, die vom Routingdienst verfügbar gemacht werden.|\<filter name="stock1" filterType="Endpoint" filterData="SvcEndpoint" />|  
+|EndpointName|Verwendet die <xref:System.ServiceModel.Dispatcher.EndpointNameMessageFilter>-Klasse, um für Nachrichten basierend auf dem Namen des Dienstendpunkts, an dem diese empfangen wurden, eine Übereinstimmung zu erzielen.|Der Name des Dienstendpunkts, z. B. "serviceEndpoint1".  Hierbei sollte es sich um einen der Endpunkte handeln, die vom Routingdienst verfügbar gemacht werden.|\<filter name="stock1" filterType="Endpoint" filterData="SvcEndpoint" />|  
 |MatchAll|Verwendet die <xref:System.ServiceModel.Dispatcher.MatchAllMessageFilter>-Klasse. Dieser Filter führt für alle eingehenden Nachrichten zu Übereinstimmungen.|"filterData" wird nicht verwendet. Dieser Filter führt immer zu Übereinstimmungen mit allen Nachrichten.|\<filter name="matchAll1" filterType="MatchAll" />|  
-|XPath|Verwendet die <xref:System.ServiceModel.Dispatcher.XPathMessageFilter>-Klasse, um für bestimmte XPath-Abfragen in der Nachricht Übereinstimmungen zu ermitteln.|Die XPath-Abfrage, die beim Ermitteln von Übereinstimmungen für Nachrichten verwendet wird.|\<filter name="XPath1" filterType="XPath" filterData="//ns:element" />|  
+|XPath|Verwendet die <xref:System.ServiceModel.Dispatcher.XPathMessageFilter>-Klasse, um für bestimmte XPath-Abfragen in der Nachricht Übereinstimmungen zu ermitteln.|Die XPath-Abfrage, die beim Ermitteln von Übereinstimmungen für Nachrichten verwendet wird.|\<filter name="XPath1" filterType="XPath" filterData="/ns:element" />|  
   
  Im folgenden Beispiel werden Filtereinträge definiert, die die Nachrichtenfilter „XPath“, „EndpointName“ und „PrefixEndpointAddress“ verwenden. Dieses Beispiel veranschaulicht außerdem die Verwendung eines benutzerdefinierten Filters für die Einträge RoundRobinFilter1 und RoundRobinFilter2.  
   
 ```xml  
 <filters>  
-     <filter name="XPathFilter" filterType="XPath"   
+     <filter name="XPathFilter" filterType="XPath"
              filterData="/s12:Envelope/s12:Header/custom:RoundingCalculator = 1"/>  
-     <filter name="EndpointNameFilter" filterType="EndpointName"   
+     <filter name="EndpointNameFilter" filterType="EndpointName"
              filterData="calculatorEndpoint"/>  
-     <filter name="PrefixAddressFilter" filterType="PrefixEndpointAddress"   
+     <filter name="PrefixAddressFilter" filterType="PrefixEndpointAddress"
              filterData="http://localhost/routingservice/router/rounding/"/>  
-     <filter name="RoundRobinFilter1" filterType="Custom"   
-             customType="RoutingServiceFilters.RoundRobinMessageFilter,   
+     <filter name="RoundRobinFilter1" filterType="Custom"
+             customType="RoutingServiceFilters.RoundRobinMessageFilter,
              RoutingService" filterData="group1"/>  
-     <filter name="RoundRobinFilter2" filterType="Custom"   
-             customType="RoutingServiceFilters.RoundRobinMessageFilter,   
+     <filter name="RoundRobinFilter2" filterType="Custom"
+             customType="RoutingServiceFilters.RoundRobinMessageFilter,
              RoutingService" filterData="group1"/>  
 </filters>  
 ```  
@@ -71,7 +71,7 @@ Um das inhaltsbasierte Routing zu implementieren, verwendet der Routingdienst <x
 |tempuri|`http://tempuri.org`|  
 |ser|`http://schemas.microsoft.com/2003/10/Serialization`|  
   
- Wenn Sie wissen, dass Sie in den XPath-Abfragen einen bestimmten Namespace verwenden, können Sie diesen der Namespacetabelle zusammen mit einem eindeutigen Namespacepräfix hinzufügen und das Präfix statt des vollständigen Namespaces in XPath-Abfragen verwenden. Im folgenden Beispiel wird das Präfix "Custom" für den-Namespace `"http://my.custom.namespace"`definiert, der dann in der XPath-Abfrage verwendet wird, die in "FilterData" enthalten ist.  
+ Wenn Sie wissen, dass Sie in den XPath-Abfragen einen bestimmten Namespace verwenden, können Sie diesen der Namespacetabelle zusammen mit einem eindeutigen Namespacepräfix hinzufügen und das Präfix statt des vollständigen Namespaces in XPath-Abfragen verwenden. Im folgenden Beispiel wird ein Präfix "custom" `"http://my.custom.namespace"`für den Namespace definiert, das dann in der xPath-Abfrage in filterData verwendet wird.  
   
 ```xml  
 <namespaceTable>  
@@ -98,7 +98,7 @@ Um das inhaltsbasierte Routing zu implementieren, verwendet der Routingdienst <x
            <add filterName="SubtractAction" endpointName="Subtraction" />  
          </filters>  
        </table>  
-     </filterTables>      
+     </filterTables>
 </routing>  
 ```  
   
@@ -115,13 +115,13 @@ Um das inhaltsbasierte Routing zu implementieren, verwendet der Routingdienst <x
 ```xml  
 <filterTables>  
      <filterTable name="filterTable1">  
-          <add filterName="XPathFilter" endpointName="roundingCalcEndpoint"   
+          <add filterName="XPathFilter" endpointName="roundingCalcEndpoint"
                priority="2"/>  
-          <add filterName="EndpointNameFilter" endpointName="regularCalcEndpoint"   
+          <add filterName="EndpointNameFilter" endpointName="regularCalcEndpoint"
                priority="1"/>  
-          <add filterName="PrefixAddressFilter" endpointName="roundingCalcEndpoint"   
+          <add filterName="PrefixAddressFilter" endpointName="roundingCalcEndpoint"
                priority="1"/>  
-          <add filterName="MatchAllMessageFilter" endpointName="defaultCalcEndpoint"   
+          <add filterName="MatchAllMessageFilter" endpointName="defaultCalcEndpoint"
                priority="0"/>  
      </filterTable>  
 </filterTables>  
@@ -133,7 +133,7 @@ Um das inhaltsbasierte Routing zu implementieren, verwendet der Routingdienst <x
 > Nach Möglichkeit sollten Sie anstelle einer Priorität exklusive Filter verwenden, weil die Prioritätsauswertung die Leistung beeinträchtigen kann.  
   
 ### <a name="backup-lists"></a>Sicherungslisten  
- Für jeden Filter in der Filtertabelle kann optional eine Sicherungsliste angegeben werden, bei der es sich um eine benannte Auflistung von Endpunkten handelt (<xref:System.ServiceModel.Routing.Configuration.BackupEndpointCollection>). Diese Auflistung enthält eine sortierte Liste von Endpunkten, an die die Nachricht bei Auftreten einer <xref:System.ServiceModel.CommunicationException> gesendet wird, sofern das Senden an unter <xref:System.ServiceModel.Routing.Configuration.FilterTableEntryElement.EndpointName%2A> angegebenen primären Endpunkt erfolgt. Im folgenden Beispiel wird eine Sicherungsliste mit dem Namen "backupserviceendpoints" definiert, die zwei Endpunkte enthält.  
+ Für jeden Filter in der Filtertabelle kann optional eine Sicherungsliste angegeben werden, bei der es sich um eine benannte Auflistung von Endpunkten handelt (<xref:System.ServiceModel.Routing.Configuration.BackupEndpointCollection>). Diese Auflistung enthält eine sortierte Liste von Endpunkten, an die die Nachricht bei Auftreten einer <xref:System.ServiceModel.CommunicationException> gesendet wird, sofern das Senden an unter <xref:System.ServiceModel.Routing.Configuration.FilterTableEntryElement.EndpointName%2A> angegebenen primären Endpunkt erfolgt. Im folgenden Beispiel wird eine Sicherungsliste mit dem Namen "backupServiceEndpoints" definiert, die zwei Endpunkte enthält.  
   
 ```xml  
 <filterTables>  
@@ -149,4 +149,4 @@ Um das inhaltsbasierte Routing zu implementieren, verwendet der Routingdienst <x
 </backupLists>  
 ```  
   
- Wenn im vorherigen Beispiel ein Fehler beim Senden an den primären Endpunkt "Destination" auftritt, versucht der Routing Dienst, an jeden Endpunkt in der Reihenfolge zu senden, in der Sie aufgelistet sind, sendet zuerst an "backupservicequeue" und sendet anschließend an "requeservicequeue", wenn die Fehler beim Senden an backupservicequeue. Falls für alle Sicherungsendpunkte ein Fehler auftritt, wird ein Fehler zurückgegeben.
+ Wenn im vorherigen Beispiel ein Senden an den primären Endpunkt "Destination" fehlschlägt, versucht der Routingdienst, an jeden Endpunkt in der Sequenz zu senden, die er aufgelistet hat, zuerst an backupServiceQueue und anschließend an alternateServiceQueue zu senden, wenn die an backupServiceQueue senden schlägt fehl. Falls für alle Sicherungsendpunkte ein Fehler auftritt, wird ein Fehler zurückgegeben.

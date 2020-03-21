@@ -2,15 +2,15 @@
 title: Benutzerdefinierter Nachrichtenfilter
 ms.date: 03/30/2017
 ms.assetid: 98dd0af8-fce6-4255-ac32-42eb547eea67
-ms.openlocfilehash: 79edba14eff5403591cf43592415d923dbd321be
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 896407a218073eba53676baa4bcbd125593c80ca
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74716831"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79183886"
 ---
 # <a name="custom-message-filter"></a>Benutzerdefinierter Nachrichtenfilter
-In diesem Beispiel wird veranschaulicht, wie die Nachrichtenfilter ersetzt werden, die Windows Communication Foundation (WCF) verwendet, um Nachrichten an Endpunkte zu senden.  
+In diesem Beispiel wird veranschaulicht, wie die Nachrichtenfilter ersetzt werden, die Windows Communication Foundation (WCF) zum Senden von Nachrichten an Endpunkte verwendet.  
   
 > [!NOTE]
 > Die Setupprozedur und die Buildanweisungen für dieses Beispiel befinden sich am Ende dieses Themas.  
@@ -19,7 +19,7 @@ In diesem Beispiel wird veranschaulicht, wie die Nachrichtenfilter ersetzt werde
   
  Jeder Endpunkt eines Diensts hat einen einzelnen <xref:System.ServiceModel.Dispatcher.EndpointDispatcher>. Der <xref:System.ServiceModel.Dispatcher.EndpointDispatcher> besitzt sowohl einen <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.AddressFilter%2A> als auch einen <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.ContractFilter%2A>. Die Verbindung dieser beiden Filter ist der für diesen Endpunkt verwendete Nachrichtenfilter.  
   
- Standardmäßig stimmt der <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.AddressFilter%2A> für einen Endpunkt mit jeder Nachricht überein, die an eine Adresse gesendet wird, die wiederum mit der <xref:System.ServiceModel.EndpointAddress> des Dienstendpunkts übereinstimmt. Standardmäßig überprüft der <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.ContractFilter%2A> für einen Endpunkt die Aktion der eingehenden Nachricht und gleicht jede Nachricht mit einer Aktion ab, die einer der Aktionen der Vorgänge des dienstend Punkt Vertrags entspricht (nur `IsInitiating`=`true` Aktionen berücksichtigt werden). Demzufolge stimmt der Filter für einen Endpunkt standardmäßig nur überein, wenn sowohl der To-Header der Nachricht die <xref:System.ServiceModel.EndpointAddress> des Endpunkts ist als auch die Aktion der Nachricht mit einer der Aktionen der Endpunktvorgänge übereinstimmt.  
+ Standardmäßig stimmt der <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.AddressFilter%2A> für einen Endpunkt mit jeder Nachricht überein, die an eine Adresse gesendet wird, die wiederum mit der <xref:System.ServiceModel.EndpointAddress> des Dienstendpunkts übereinstimmt. Standardmäßig überprüft <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.ContractFilter%2A> der für einen Endpunkt die Aktion der eingehenden Nachricht und gleicht jede Nachricht mit einer Aktion ab, `IsInitiating` = `true` die einer der Aktionen der Vorgänge des Dienstendpunktvertrags entspricht (nur Aktionen werden berücksichtigt). Demzufolge stimmt der Filter für einen Endpunkt standardmäßig nur überein, wenn sowohl der To-Header der Nachricht die <xref:System.ServiceModel.EndpointAddress> des Endpunkts ist als auch die Aktion der Nachricht mit einer der Aktionen der Endpunktvorgänge übereinstimmt.  
   
  Diese Filter können mit einer Verhaltensweise geändert werden. Im folgenden Beispiel erstellt der Dienst ein <xref:System.ServiceModel.Description.IEndpointBehavior>, das den <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.AddressFilter%2A> und den <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.ContractFilter%2A> auf dem <xref:System.ServiceModel.Dispatcher.EndpointDispatcher> ersetzt:  
   
@@ -63,7 +63,7 @@ else
     <behaviorExtensions>  
         <add name="filteringEndpointBehavior" type="Microsoft.ServiceModel.Samples.FilteringEndpointBehaviorExtension, service" />  
     </behaviorExtensions>  
-</extensions>      
+</extensions>
 ```  
   
  Anschließend erstellt der Dienst `endpointBehavior`-Konfigurationen für jede Variante:  
@@ -84,9 +84,9 @@ else
 ```xml  
 <endpoint address=""  
         bindingConfiguration="ws"  
-        listenUri=""   
+        listenUri=""
         binding="wsHttpBinding"  
-        contract="Microsoft.ServiceModel.Samples.IHello"   
+        contract="Microsoft.ServiceModel.Samples.IHello"
         behaviorConfiguration="endpoint2" />  
 ```  
   
@@ -105,28 +105,28 @@ Hello
 ```xml  
 <endpoint address=""  
           bindingConfiguration="ws"  
-          listenUri=""   
+          listenUri=""
           binding="wsHttpBinding"  
-          contract="Microsoft.ServiceModel.Samples.IHello"   
+          contract="Microsoft.ServiceModel.Samples.IHello"
           behaviorConfiguration="endpoint1" />  
 ```  
   
 > [!IMPORTANT]
 > Die Beispiele sind möglicherweise bereits auf dem Computer installiert. Suchen Sie nach dem folgenden Verzeichnis (Standardverzeichnis), bevor Sie fortfahren.  
->   
+>
 > `<InstallDrive>:\WF_WCF_Samples`  
->   
-> Wenn dieses Verzeichnis nicht vorhanden ist, wechseln Sie zu [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF)-Beispiele für .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) , um alle Windows Communication Foundation (WCF) und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele herunterzuladen. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
->   
+>
+> Wenn dieses Verzeichnis nicht vorhanden ist, wechseln Sie zu [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples for .NET Framework 4,](https://www.microsoft.com/download/details.aspx?id=21459) um alle Windows Communication Foundation (WCF) und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele herunterzuladen. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+>
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\MessageFilter`  
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>So können Sie das Beispiel einrichten, erstellen und ausführen  
   
-1. Befolgen Sie die Anweisungen unter Erstellen [der Windows Communication Foundation Beispiele](../../../../docs/framework/wcf/samples/building-the-samples.md), um die Lösung zu erstellen.  
+1. Um die Lösung zu erstellen, befolgen Sie die Anweisungen unter [Erstellen der Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-2. Um das Beispiel in einer Konfiguration mit einem einzelnen Computer auszuführen, befolgen Sie die Anweisungen unter [Ausführen der Windows Communication Foundation Beispiele](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+2. Um das Beispiel in einer Konfiguration mit einem Computer auszuführen, befolgen Sie die Anweisungen unter [Ausführen der Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
-3. Um das Beispiel in einer Computer übergreifenden Konfiguration auszuführen, befolgen Sie die Anweisungen unter [Ausführen der Windows Communication Foundation Beispiele](../../../../docs/framework/wcf/samples/running-the-samples.md) , und ändern Sie die folgende Zeile in Client.cs.  
+3. Um das Beispiel in einer maschinenübergreifenden Konfiguration auszuführen, befolgen Sie die Anweisungen unter [Ausführen der Windows Communication Foundation-Beispiele,](../../../../docs/framework/wcf/samples/running-the-samples.md) und ändern Sie die folgende Zeile in Client.cs.  
   
     ```csharp
     Uri serviceVia = new Uri("http://localhost/ServiceModelSamples/service.svc");  

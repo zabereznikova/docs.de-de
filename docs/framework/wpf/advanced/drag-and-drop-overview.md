@@ -12,32 +12,32 @@ helpviewer_keywords:
 - drag-and-drop [WPF], events
 - drop targets [WPF], drag-and-drop
 ms.assetid: 1a5b27b0-0ac5-4cdf-86c0-86ac0271fa64
-ms.openlocfilehash: 72dc443e5653b9871c3f67b003bd1af0536d5993
-ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
+ms.openlocfilehash: dd42af77300a7a93bbcbfa4c8f1fc365fc3f5da1
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72291472"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79185988"
 ---
 # <a name="drag-and-drop-overview"></a>Übersicht über Drag & Drop
 Dieses Thema enthält eine Übersicht zur Drag & Drop-Unterstützung in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]-Anwendungen. Drag & Drop bezeichnet im Allgemeinen eine Methode zur Datenübertragung, die die Verwendung einer Maus (oder eines anderen Zeigegeräts) zum Auswählen mindestens eines Objekts, das Ziehen dieses Objekts auf ein gewünschtes Ablageziels auf der [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] und dessen Ablegen beinhaltet.  
 
-<a name="Drag_and_Drop_Support"></a>   
+<a name="Drag_and_Drop_Support"></a>
 ## <a name="drag-and-drop-support-in-wpf"></a>Drag & Drop-Unterstützung in WPF  
  An Drag & Drop-Vorgängen sind normalerweise zwei Seiten beteiligt: eine Ziehquelle, aus dem das gezogene Objekt stammt, und ein Ablageziel, das das abgelegte Objekt empfängt.  Bei der Ziehquelle und dem Ablageziel kann es sich um Benutzeroberflächenelemente in der gleichen Anwendung oder in verschiedenen Anwendungen handeln.  
   
  Die Art und Anzahl der Objekte, die mit Drag & Drop bearbeitet werden können, ist beliebig. Beispielsweise stellen Dateien, Ordner und ausgewählte Inhaltsbereiche gängige Objekte dar, die mithilfe von Drag & Drop-Vorgängen bearbeitet werden.  
   
- Die Aktionen, die im Einzelnen im Rahmen von Drag & Drop-Vorgängen ausgeführt werden, sind anwendungsspezifisch und werden oft durch den Kontext festgelegt.  Wenn Sie z. b. eine Auswahl von Dateien aus einem Ordner in einen anderen Ordner auf demselben Speichergerät ziehen, werden die Dateien standardmäßig verschoben, während Dateien aus einer Universal Naming Convention-Freigabe (UNC) in einen lokalen Ordner kopiert werden.  
+ Die Aktionen, die im Einzelnen im Rahmen von Drag & Drop-Vorgängen ausgeführt werden, sind anwendungsspezifisch und werden oft durch den Kontext festgelegt.  Wenn Sie z. B. eine Auswahl von Dateien von einem Ordner in einen anderen auf demselben Speichergerät ziehen, werden die Dateien standardmäßig verschoben, während das Ziehen von Dateien aus einer UNC-Freigabe (Universal Naming Convention) in einen lokalen Ordner die Dateien standardmäßig kopiert.  
   
- Die von [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zur Verfügung gestellten Drag & Drop-Möglichkeiten sind äußerst flexibel und anpassbar, um eine große Bandbreite von Drag & Drop-Szenarien zu unterstützen.  Drag-and-Drop unterstützt das Bearbeiten von Objekten innerhalb einer einzelnen Anwendung oder zwischen verschiedenen Anwendungen. Das ziehen und Ablegen zwischen [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Anwendungen und anderen Windows-Anwendungen wird ebenfalls vollständig unterstützt.  
+ Die von [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zur Verfügung gestellten Drag & Drop-Möglichkeiten sind äußerst flexibel und anpassbar, um eine große Bandbreite von Drag & Drop-Szenarien zu unterstützen.  Drag-and-Drop unterstützt das Bearbeiten von Objekten innerhalb einer einzelnen Anwendung oder zwischen verschiedenen Anwendungen. Das Ziehen und [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Ablegen zwischen Anwendungen und anderen Windows-Anwendungen wird ebenfalls vollständig unterstützt.  
   
  In [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] können beliebige <xref:System.Windows.UIElement> oder <xref:System.Windows.ContentElement> an Drag &amp; Drop-Vorgängen beteiligt sein. Die für Drag &amp; Drop-Vorgänge erforderlichen Ereignisse und Methoden sind in der <xref:System.Windows.DragDrop>-Klasse definiert. Die Klassen <xref:System.Windows.UIElement> und <xref:System.Windows.ContentElement> enthalten Aliase für die angefügten <xref:System.Windows.DragDrop>-Ereignisse, sodass ein geerbtes <xref:System.Windows.UIElement> oder <xref:System.Windows.ContentElement> in der Liste der Klassenelemente als Basiselement aufgeführt wird. Die an diese Ereignisse angefügten Ereignishandler werden an das zugrundeliegende angefügte <xref:System.Windows.DragDrop>-Ereignis angefügt und empfangen die gleiche Instanz der Ereignisdaten. Weitere Informationen finden Sie beim <xref:System.Windows.UIElement.Drop?displayProperty=nameWithType>-Ereignis.  
   
 > [!IMPORTANT]
 > OLE-Drag & Drop funktioniert in der Zone „Internet“ nicht.  
   
-<a name="Data_Transfer"></a>   
+<a name="Data_Transfer"></a>
 ## <a name="data-transfer"></a>Datenübertragung  
  Drag & Drop bildet einen Teil des allgemeineren Bereichs der Datenübertragung. Zur Datenübertragung gehören Drag & Drop- ebenso wie Kopieren und Einfügen-Vorgänge. Ein Drag & Drop-Vorgang ist analog zu einem Kopieren und Einfügen- oder Ausschneiden und Einfügen-Vorgang, der zum Übertragen von Daten von einem Objekt oder einer Anwendung auf ein anderes bzw. eine andere mithilfe der Zwischenablage des Systems verwendet wird. Für beide Arten von Vorgängen sind diese Voraussetzungen erforderlich:  
   
@@ -54,13 +54,13 @@ Dieses Thema enthält eine Übersicht zur Drag & Drop-Unterstützung in [!INCLUD
  Die Quelle und das Ziel eines Drag & Drop-Vorgangs sind normalerweise Elemente der Benutzeroberfläche; die tatsächlich übertragenen Daten haben aber in der Regel keine visuelle Darstellung. Sie können Code erstellen, der eine visuelle Darstellung der gezogenen Daten bereitstellt, wie es etwa beim Ziehen von Dateien im Windows-Explorer geschieht. Standardmäßig wird dem Benutzer eine Rückmeldung gegeben, indem die Form des Cursors geändert wird, um die Auswirkung darzustellen, die der Drag & Drop-Vorgang auf die Daten hat, etwa ob die Daten verschoben oder kopiert werden.  
   
 ### <a name="drag-and-drop-effects"></a>Auswirkungen von Drag & Drop-Vorgängen  
- Drag & Drop-Vorgänge können verschiedene Auswirkungen auf die übertragenen Daten haben. Beispielsweise können Sie die Daten kopieren oder sie verschieben. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] definiert eine <xref:System.Windows.DragDropEffects> Enumeration, die Sie verwenden können, um die Auswirkung eines Drag & Drop-Vorgangs anzugeben. In der Ziehquelle können Sie die Auswirkungen, die von der Quelle zugelassen werden, in der Methode <xref:System.Windows.DragDrop.DoDragDrop%2A> angeben. Im Ablageziel können Sie die Auswirkung, die von der Quelle beabsichtigt ist, in der Eigenschaft <xref:System.Windows.DragEventArgs.Effects%2A> der Klasse <xref:System.Windows.DragEventArgs> angeben. Wenn das Ablageziel seine beabsichtigte Auswirkung im <xref:System.Windows.DragDrop.DragOver>-Ereignis angibt, werden diese Informationen im <xref:System.Windows.DragDrop.GiveFeedback>-Ereignis an die Zielquelle zurück übermittelt. Die Ziehquelle verwendet diese Informationen, um dem Benutzer mitzuteilen, welche Auswirkung das Ablegen auf dem Ablageziel auf die Daten haben wird. Wenn die Daten abgelegt werden, gibt das Ablageziel die tatsächlichen Auswirkungen im <xref:System.Windows.DragDrop.Drop>-Ereignis an. Diese Informationen werden als Rückgabewert der Methode <xref:System.Windows.DragDrop.DoDragDrop%2A> zurück an die Ziehquelle übergeben. Wenn das Ablageziel eine Auswirkung zurückgibt, die in der Liste der `allowedEffects` der Ziehquelle nicht aufgeführt ist, wird der Drag & Drop-Vorgang abgebrochen, ohne dass eine Übertragung von Daten stattfindet.  
+ Drag & Drop-Vorgänge können verschiedene Auswirkungen auf die übertragenen Daten haben. Beispielsweise können Sie die Daten kopieren oder sie verschieben. In [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ist eine <xref:System.Windows.DragDropEffects>-Enumeration definiert, die Sie verwenden können, um die Auswirkung eines Drag &amp; Drop-Vorgangs anzugeben. In der Ziehquelle können Sie die Auswirkungen, die von der Quelle zugelassen werden, in der Methode <xref:System.Windows.DragDrop.DoDragDrop%2A> angeben. Im Ablageziel können Sie die Auswirkung, die von der Quelle beabsichtigt ist, in der Eigenschaft <xref:System.Windows.DragEventArgs.Effects%2A> der Klasse <xref:System.Windows.DragEventArgs> angeben. Wenn das Ablageziel seine beabsichtigte Auswirkung im <xref:System.Windows.DragDrop.DragOver>-Ereignis angibt, werden diese Informationen im <xref:System.Windows.DragDrop.GiveFeedback>-Ereignis an die Zielquelle zurück übermittelt. Die Ziehquelle verwendet diese Informationen, um dem Benutzer mitzuteilen, welche Auswirkung das Ablegen auf dem Ablageziel auf die Daten haben wird. Wenn die Daten abgelegt werden, gibt das Ablageziel die tatsächlichen Auswirkungen im <xref:System.Windows.DragDrop.Drop>-Ereignis an. Diese Informationen werden als Rückgabewert der Methode <xref:System.Windows.DragDrop.DoDragDrop%2A> zurück an die Ziehquelle übergeben. Wenn das Ablageziel eine Auswirkung zurückgibt, die in der Liste der `allowedEffects` der Ziehquelle nicht aufgeführt ist, wird der Drag & Drop-Vorgang abgebrochen, ohne dass eine Übertragung von Daten stattfindet.  
   
  Es muss beachtet werden, dass in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] die <xref:System.Windows.DragDropEffects>-Werte nur für die Kommunikation zwischen der Ziehquelle und dem Ablageziel über die Auswirkungen des Drag &amp; Drop-Vorgangs verwendet werden. Die tatsächliche Auswirkung des Drag & Drop-Vorgangs hängt von dem entsprechenden Code ab, den Sie für Ihre Anwendung schreiben.  
   
  Beispielsweise kann das Ablageziel angeben, dass die Auswirkung des Ablegens von Daten auf ihm die Verschiebung der Daten ist. Jedoch müssen die Daten zum Verschieben sowohl dem Zielelement hinzugefügt als auch aus dem Quellelement entfernt werden. Das Quellelement kann beispielsweise angeben, dass es das Verschieben der Daten erlaubt. Wenn Sie aber nicht den Code bereitstellen, um die Daten aus dem Quellelement zu entfernen, ergibt sich als Endergebnis, dass die Daten kopiert statt verschoben werden.  
   
-<a name="Drag_and_Drop_Events"></a>   
+<a name="Drag_and_Drop_Events"></a>
 ## <a name="drag-and-drop-events"></a>Drag & Drop-Ereignisse  
  Drag & Drop-Vorgänge unterstützen ein ereignisgesteuertes Modell.  Sowohl die Ziehquelle als auch das Ablageziel verwenden einen Satz von Standardereignissen beim Verarbeiten von Drag & Drop-Vorgängen.  Die standardmäßigen Drag & Drop-Ereignisse sind in den folgenden Tabellen zusammengefasst. Dies sind angefügte Ereignisse der Klasse <xref:System.Windows.DragDrop>. Weitere Informationen zu angefügten Ereignissen finden Sie unter [Übersicht über angefügte Ereignisse](attached-events-overview.md).  
   
@@ -88,7 +88,7 @@ Dieses Thema enthält eine Übersicht zur Drag & Drop-Unterstützung in [!INCLUD
   
  Um Drag & Drop-Ereignisse für Instanzen eines Objekts zu verarbeiten, fügen Sie Handler für die in den vorhergehenden Tabellen aufgelisteten Ereignisse hinzu. Um Drag & Drop-Ereignisse auf der Klassenebene zu verarbeiten, überschreiben Sie die entsprechenden virtuellen On*Event- und On\*PreviewEvent-Methoden. Weitere Informationen finden Sie unter [Klassenbehandlung von Routingereignissen durch Steuerelement-Basisklassen](marking-routed-events-as-handled-and-class-handling.md#Class_Handling_of_Routed_Events).  
   
-<a name="Implementing_Drag_And_Drop"></a>   
+<a name="Implementing_Drag_And_Drop"></a>
 ## <a name="implementing-drag-and-drop"></a>Implementierung von Drag & Drop  
  Ein Benutzerelement kann eine Ziehquelle, ein Ablageziel oder beides darstellen. Zum Implementieren der grundlegenden Drag & Drop-Funktionalität müssen Sie Code zum Einleiten des Drag & Drop-Vorgangs und zu Verarbeiten der abgelegten Daten erstellen. Sie können die Drag & Drop-Erfahrung durch Verarbeitung optionaler Drag & Drop-Ereignisse verbessern.  
   
@@ -120,7 +120,7 @@ Dieses Thema enthält eine Übersicht zur Drag & Drop-Unterstützung in [!INCLUD
   
 - Um die Weise zu ändern, in der der Drag &amp; Drop-Vorgang abgebrochen wird, verarbeiten Sie das <xref:System.Windows.DragDrop.QueryContinueDrag>-Ereignis der Ziehquelle.  
   
-<a name="Drag_And_Drop_Example"></a>   
+<a name="Drag_And_Drop_Example"></a>
 ## <a name="drag-and-drop-example"></a>Drag & Drop-Beispiel  
  In diesem Abschnitt wird die Implementierung von Drag &amp; Drop für ein <xref:System.Windows.Shapes.Ellipse>-Element beschrieben. Die <xref:System.Windows.Shapes.Ellipse> stellt sowohl eine Ziehquelle als auch ein Ablageziel dar. Die übertragenen Daten sind die Zeichenfolgendarstellung der <xref:System.Windows.Shapes.Shape.Fill%2A>-Eigenschaft der Ellipse. Der folgende XAML-Code zeigt das <xref:System.Windows.Shapes.Ellipse>-Element und die mit Drag &amp; Drop zusammenhängenden Ereignisse, die es verarbeitet. Eine ausführliche Anleitung zum Implementieren der Drag & Drop-Funktion finden Sie unter [Exemplarische Vorgehensweise: Aktivieren der Drag & Drop-Funktion auf einem Benutzersteuerelement](walkthrough-enabling-drag-and-drop-on-a-user-control.md).  
   
@@ -146,11 +146,11 @@ Dieses Thema enthält eine Übersicht zur Drag & Drop-Unterstützung in [!INCLUD
   
  Rufen Sie im Innern des <xref:System.Windows.UIElement.MouseMove>-Ereignishandlers die Methode <xref:System.Windows.DragDrop.DoDragDrop%2A> auf, um den Drag &amp; Drop-Vorgang einzuleiten. Die Methode <xref:System.Windows.DragDrop.DoDragDrop%2A> akzeptiert drei Parameter:  
   
-- `dragSource` – ein Verweis auf das Abhängigkeits Objekt, das die Quelle der übertragenen Daten ist. Dies ist in der Regel die Quelle des <xref:System.Windows.UIElement.MouseMove> Ereignisses.  
+- `dragSource` – Ein Verweis auf das Abhängigkeitsobjekt, das die Quelle der übertragenen Daten bildet; dies ist normalerweise die Quelle des <xref:System.Windows.UIElement.MouseMove>-Ereignisses.  
   
-- `data`-ein Objekt, das die übertragenen Daten enthält, die in einem <xref:System.Windows.DataObject>umschließt.  
+- `data` – Ein Objekt, das die übertragenen Daten enthält, umschlossen von einem <xref:System.Windows.DataObject>.  
   
-- `allowedEffects`-einer der <xref:System.Windows.DragDropEffects> Enumerationswerte, der die zulässigen Auswirkungen des Drag & Drop-Vorgangs angibt.  
+- `allowedEffects` – Einer der <xref:System.Windows.DragDropEffects>-Enumerationswerte, der die zulässigen Auswirkungen des Drag &amp; Drop-Vorgangs angibt.  
   
  Im Parameter `data` können beliebige serialisierbare Objekte übergeben werden. Wenn die Daten noch nicht von einem <xref:System.Windows.DataObject> umschlossen sind, werden sie automatisch von einem neuen <xref:System.Windows.DataObject> umschlossen. Zum Übergeben mehrerer Datenelemente müssen Sie das <xref:System.Windows.DataObject> selbst erstellen und es an die <xref:System.Windows.DragDrop.DoDragDrop%2A>-Methode übergeben. Weitere Informationen finden Sie unter [Daten und Datenobjekte](data-and-data-objects.md).  
   
@@ -215,9 +215,9 @@ Dieses Thema enthält eine Übersicht zur Drag & Drop-Unterstützung in [!INCLUD
  [!code-csharp[DragDropSnippets#Drop](~/samples/snippets/csharp/VS_Snippets_Wpf/dragdropsnippets/cs/mainwindow.xaml.cs#drop)]
  [!code-vb[DragDropSnippets#Drop](~/samples/snippets/visualbasic/VS_Snippets_Wpf/dragdropsnippets/vb/mainwindow.xaml.vb#drop)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Windows.Clipboard>
-- [Exemplarische Vorgehensweise: Aktivieren der Drag & Drop-Funktion auf einem Benutzersteuerelement](walkthrough-enabling-drag-and-drop-on-a-user-control.md)
-- [Themen zur Vorgehensweise zu einem Expander](drag-and-drop-how-to-topics.md)
+- [Exemplarische Vorgehensweise: Aktivieren der Drag &amp; Drop-Funktion auf einem Benutzersteuerelement](walkthrough-enabling-drag-and-drop-on-a-user-control.md)
+- [How-to-Themen](drag-and-drop-how-to-topics.md)
 - [Drag & Drop](drag-and-drop.md)

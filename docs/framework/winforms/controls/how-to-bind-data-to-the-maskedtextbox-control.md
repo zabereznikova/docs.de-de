@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Binden von Daten an das MaskedTextBox-Steuerelement'
+title: 'Gewusst wie: Binden von Daten an das MaskedTextBox-Steuerelement'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,29 +10,29 @@ helpviewer_keywords:
 - data binding [Windows Forms], MaskedTextBox control [Windows Forms]
 - MaskedTextBox control [Windows Forms], binding data
 ms.assetid: 34b29f07-e8df-48d4-b08b-53fcca524708
-ms.openlocfilehash: f10a19433c70eb0a1dacf99925f70d6796727da9
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 0cbb239e24b254c37c453486590185e934adf482
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64612405"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79142172"
 ---
-# <a name="how-to-bind-data-to-the-maskedtextbox-control"></a>Vorgehensweise: Binden von Daten an das MaskedTextBox-Steuerelement
-Binden von Daten an eine <xref:System.Windows.Forms.MaskedTextBox> genauso wie jedes andere Windows Forms-Steuerelement zu steuern. Wenn das Format der Daten in der Datenbank nicht das erwartete durch Ihre Maskendefinition Format übereinstimmt, müssen Sie jedoch die Daten neu zu formatieren. Das folgende Verfahren veranschaulicht, wie dieses Vorgangs unter Verwendung der <xref:System.Windows.Forms.Binding.Format> und <xref:System.Windows.Forms.Binding.Parse> Ereignisse der <xref:System.Windows.Forms.Binding> Klasse, um separate Telefonnummer anzeigen und phone Erweiterungsfelder für die Datenbank als einzelnes Feld bearbeitet werden.  
+# <a name="how-to-bind-data-to-the-maskedtextbox-control"></a>Gewusst wie: Binden von Daten an das MaskedTextBox-Steuerelement
+Sie können Daten <xref:System.Windows.Forms.MaskedTextBox> wie an jedes andere Windows Forms-Steuerelement an ein Steuerelement binden. Wenn das Format Ihrer Daten in der Datenbank jedoch nicht mit dem von der Maskendefinition erwarteten Format übereinstimmt, müssen Sie die Daten neu formatieren. Im folgenden Verfahren wird veranschaulicht, <xref:System.Windows.Forms.Binding.Format> <xref:System.Windows.Forms.Binding.Parse> wie Sie <xref:System.Windows.Forms.Binding> dies mithilfe der und der Ereignisse der Klasse tun, um separate Telefonnummern- und Telefonerweiterungsdatenbankfelder als ein einzelnes bearbeitbares Feld anzuzeigen.  
   
- Das folgende Verfahren ist erforderlich, dass Sie Zugriff auf SQL Server-Datenbank mit der Northwind-Beispieldatenbank installiert haben.  
+ Das folgende Verfahren erfordert, dass Sie Zugriff auf eine SQL Server-Datenbank haben, in der die Northwind-Beispieldatenbank installiert ist.  
   
-### <a name="to-bind-data-to-a-maskedtextbox-control"></a>So binden Sie Daten an eine MaskedTextBox-Steuerelement  
+### <a name="to-bind-data-to-a-maskedtextbox-control"></a>So binden Sie Daten an ein MaskedTextBox-Steuerelement  
   
 1. Erstellen Sie ein neues Windows Forms-Projekt.  
   
-2. Ziehen Sie zwei <xref:System.Windows.Forms.TextBox> Steuerelemente auf das Formular aus, nennen Sie diese `FirstName` und `LastName`.  
+2. Ziehen <xref:System.Windows.Forms.TextBox> Sie zwei Steuerelemente auf das Formular. benennen `FirstName` sie `LastName`und .  
   
-3. Ziehen Sie eine <xref:System.Windows.Forms.MaskedTextBox> steuern, auf das Formular, nennen Sie sie `PhoneMask`.  
+3. Ziehen <xref:System.Windows.Forms.MaskedTextBox> Sie ein Steuerelement auf das Formular. nennen `PhoneMask`Sie es .  
   
-4. Legen Sie die <xref:System.Windows.Forms.MaskedTextBox.Mask%2A> Eigenschaft `PhoneMask` zu `(000) 000-0000 x9999`.  
+4. Legen <xref:System.Windows.Forms.MaskedTextBox.Mask%2A> Sie `PhoneMask` die `(000) 000-0000 x9999`Eigenschaft von fest.  
   
-5. Fügen Sie, dass die folgenden Namespaceimporte auf das Formular.  
+5. Fügen Sie dem Formular die folgenden Namespaceimporte hinzu.  
   
     ```csharp  
     using System.Data.SqlClient;  
@@ -42,7 +42,7 @@ Binden von Daten an eine <xref:System.Windows.Forms.MaskedTextBox> genauso wie j
     Imports System.Data.SqlClient  
     ```  
   
-6. Mit der rechten Maustaste in des Formulars, und wählen Sie **Ansichtscode**. Platzieren Sie diesen Code an einer beliebigen Stelle in der Form-Klasse.  
+6. Klicken Sie mit der rechten Maustaste auf das Formular, und wählen Sie **Code anzeigen**. Platzieren Sie diesen Code an einer beliebigen Stelle in der Formularklasse.  
   
     ```csharp  
     Binding currentBinding, phoneBinding;  
@@ -72,8 +72,8 @@ Binden von Daten an eine <xref:System.Windows.Forms.MaskedTextBox> genauso wie j
         dataConnect.Fill(employeesTable, "Employees");  
   
         // Now bind MaskedTextBox to appropriate field. Note that we must create the Binding objects  
-        // before adding them to the control - otherwise, we won't get a Format event on the   
-        // initial load.   
+        // before adding them to the control - otherwise, we won't get a Format event on the
+        // initial load.
         try  
         {  
             currentBinding = new Binding("Text", employeesTable, "Employees.FirstName");  
@@ -120,7 +120,7 @@ Binden von Daten an eine <xref:System.Windows.Forms.MaskedTextBox> genauso wie j
         DataConnect.Fill(EmployeesTable, "Employees")  
   
         ' Now bind MaskedTextBox to appropriate field. Note that we must create the Binding objects  
-        ' before adding them to the control - otherwise, we won't get a Format event on the   
+        ' before adding them to the control - otherwise, we won't get a Format event on the
         ' initial load.  
         Try  
             CurrentBinding = New Binding("Text", EmployeesTable, "Employees.FirstName")  
@@ -136,7 +136,7 @@ Binden von Daten an eine <xref:System.Windows.Forms.MaskedTextBox> genauso wie j
     End Sub  
     ```  
   
-7. Fügen Sie Ereignishandler für die <xref:System.Windows.Forms.Binding.Format> und <xref:System.Windows.Forms.Binding.Parse> Ereignisse zu kombinieren und trennen Sie die `PhoneNumber` und `Extension` Felder aus der Grenze <xref:System.Data.DataSet>.  
+7. Fügen Sie Ereignishandler <xref:System.Windows.Forms.Binding.Format> <xref:System.Windows.Forms.Binding.Parse> für die und `PhoneNumber` hinzu, um die und-Felder `Extension` von der gebundenen <xref:System.Data.DataSet>zu kombinieren und zu trennen.  
   
     ```csharp  
     private void phoneBinding_Format(Object sender, ConvertEventArgs e)  
@@ -144,10 +144,10 @@ Binden von Daten an eine <xref:System.Windows.Forms.MaskedTextBox> genauso wie j
         String ext;  
   
         DataRowView currentRow = (DataRowView)BindingContext[employeesTable, "Employees"].Current;  
-        if (currentRow["Extension"] == null)   
+        if (currentRow["Extension"] == null)
         {  
             ext = "";  
-        } else   
+        } else
         {  
             ext = currentRow["Extension"].ToString();  
         }  
@@ -163,7 +163,7 @@ Binden von Daten an eine <xref:System.Windows.Forms.MaskedTextBox> genauso wie j
         String ext = phoneNumberAndExt.Substring(extIndex).Trim();  
         String phoneNumber = phoneNumberAndExt.Substring(0, extIndex).Trim();  
   
-        //Get the current binding object, and set the new extension manually.   
+        //Get the current binding object, and set the new extension manually.
         DataRowView currentRow = (DataRowView)BindingContext[employeesTable, "Employees"].Current;  
         // Remove the "x" from the extension.  
         currentRow["Extension"] = ext.Substring(1);  
@@ -194,7 +194,7 @@ Binden von Daten an eine <xref:System.Windows.Forms.MaskedTextBox> genauso wie j
         Dim Ext As String = PhoneNumberAndExt.Substring(ExtIndex).Trim()  
         Dim PhoneNumber As String = PhoneNumberAndExt.Substring(0, ExtIndex).Trim()  
   
-        ' Get the current binding object, and set the new extension manually.   
+        ' Get the current binding object, and set the new extension manually.
         Dim CurrentRow As DataRowView = CType(Me.BindingContext(EmployeesTable, "Employees").Current, DataRowView)  
         ' Remove the "x" from the extension.  
         CurrentRow("Extension") = CObj(Ext.Substring(1))  
@@ -204,7 +204,7 @@ Binden von Daten an eine <xref:System.Windows.Forms.MaskedTextBox> genauso wie j
     End Sub  
     ```  
   
-8. Hinzufügen von zwei <xref:System.Windows.Forms.Button> Steuerelemente im Formular. Nennen Sie diese `previousButton` und `nextButton`. Doppelklicken Sie auf jede Schaltfläche zum Hinzufügen einer <xref:System.Windows.Forms.Control.Click> -Ereignishandler, und geben Sie die Ereignishandler, wie im folgenden Codebeispiel gezeigt.  
+8. Fügen <xref:System.Windows.Forms.Button> Sie dem Formular zwei Steuerelemente hinzu. Nennen `previousButton` Sie `nextButton`sie und . Doppelklicken Sie auf jede <xref:System.Windows.Forms.Control.Click> Schaltfläche, um einen Ereignishandler hinzuzufügen, und füllen Sie die Ereignishandler aus, wie im folgenden Codebeispiel gezeigt.  
   
     ```csharp  
     private void previousButton_Click(object sender, EventArgs e)  
@@ -228,10 +228,10 @@ Binden von Daten an eine <xref:System.Windows.Forms.MaskedTextBox> genauso wie j
     End Sub  
     ```  
   
-9. Führen Sie das Beispiel aus. Bearbeiten Sie die Daten, und Verwenden der **zurück** und **Weiter** Schaltflächen, um anzuzeigen, dass die Daten ordnungsgemäß, um beibehalten werden die <xref:System.Data.DataSet>.  
+9. Führen Sie das Beispiel aus. Bearbeiten Sie die Daten, und verwenden Sie die Schaltflächen **"Vorherige"** und **"Weiter",** um zu sehen, dass die Daten ordnungsgemäß auf der <xref:System.Data.DataSet>beibehalten werden.  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Codebeispiel wird diese Ergebnisse aus der vorherigen Schritte für die vollständige codeauflistung.  
+ Das folgende Codebeispiel ist die vollständige Codeauflistung, die sich aus dem Abschluss des vorherigen Verfahrens ergibt.  
   
  [!code-cpp[MaskedTextBoxData#1](~/samples/snippets/cpp/VS_Snippets_Winforms/MaskedTextBoxData/cpp/form1.cpp#1)]
  [!code-csharp[MaskedTextBoxData#1](~/samples/snippets/csharp/VS_Snippets_Winforms/MaskedTextBoxData/CS/form1.cs#1)]
@@ -239,16 +239,16 @@ Binden von Daten an eine <xref:System.Windows.Forms.MaskedTextBox> genauso wie j
   
 ## <a name="compiling-the-code"></a>Kompilieren des Codes  
   
-- Erstellen Sie eine Visualisierung C# oder Visual Basic-Projekt.  
+- Erstellen Sie ein Visual C- oder Visual Basic-Projekt.  
   
-- Hinzufügen der <xref:System.Windows.Forms.TextBox> und <xref:System.Windows.Forms.MaskedTextBox> Steuerelemente im Formular, wie im vorherigen Verfahren beschrieben.  
+- Fügen <xref:System.Windows.Forms.TextBox> Sie <xref:System.Windows.Forms.MaskedTextBox> die und Steuerelemente zum Formular hinzu, wie im vorherigen Verfahren beschrieben.  
   
-- Öffnen Sie die Quellcodedatei für das Formular des Projekts Standard.  
+- Öffnen Sie die Quellcodedatei für das Standardformular des Projekts.  
   
-- Ersetzen Sie den Quellcode in dieser Datei durch den Code, der im vorherigen Abschnitt "Code" aufgeführt.  
+- Ersetzen Sie den Quellcode in dieser Datei durch den Code, der im vorherigen Abschnitt "Code" aufgeführt ist.  
   
 - Kompilieren Sie die Anwendung.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Exemplarische Vorgehensweise: Arbeiten mit dem MaskedTextBox-Steuerelement](walkthrough-working-with-the-maskedtextbox-control.md)

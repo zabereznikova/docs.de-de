@@ -13,14 +13,14 @@ ms.assetid: f88481a8-c746-4a36-9479-374ce5f2e91f
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: c1d9be77550b1255a24120c68f20d25640e0ebdf
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 3ad9aad026a1a6a1266845736d7651db77fd5d5c
+ms.sourcegitcommit: 34dc3c0d0d0a1cc418abff259d9daa8078d00b81
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460630"
+ms.lasthandoff: 03/19/2020
+ms.locfileid: "79546723"
 ---
-# <a name="walkthrough-author-a-composite-control-with-c"></a>Exemplarische Vorgehensweise: Erstellen eines zusammengesetzten Steuer Elements mit C-\#
+# <a name="walkthrough-author-a-composite-control-with-c"></a>Exemplarische Vorgehensweise: Erstellen eines zusammengesetzten Steuerelements mit C\#
 
 Zusammengesetzte Steuerelemente bieten eine Möglichkeit, mit der benutzerdefinierte grafische Schnittstellen erstellt und wiederverwendet werden können. Ein zusammengesetztes Steuerelement ist im wesentlichen eine Komponente mit visueller Darstellung. Daher können zusammengesetzte Steuerelemente aus einem oder mehr Windows Forms-Steuerelementen, Komponenten oder Codeblöcken bestehen. Diese erweitern die Funktionalität durch Validieren von Benutzereingaben, verändern Anzeigeeigenschaften oder führen andere vom Autor gewünschte Aufgaben aus. Zusammengesetzte Steuerelemente können genau wie andere Steuerelemente in Windows Forms platziert werden. Im ersten Teil dieser exemplarischen Vorgehensweise erstellen Sie ein einfaches zusammengesetztes Steuerelement namens `ctlClock`. Im zweiten Teil der exemplarischen Vorgehensweise erweitern Sie die Funktionalität von `ctlClock` durch Vererbung.
 
@@ -30,47 +30,47 @@ Geben Sie beim Erstellen des Projekts den Namen an, um den Stammnamespace, Assem
 
 ### <a name="to-create-the-ctlclocklib-control-library-and-the-ctlclock-control"></a>So erstellen Sie die ctlClockLib-Steuerelementbibliothek und das ctlClock-Steuerelement
 
-1. Erstellen Sie in Visual Studio ein neues **Windows Forms-Steuerelement Bibliothek** -Projekt, und nennen Sie es **ctlClockLib**.
+1. Erstellen Sie in Visual Studio ein neues **Windows Forms Control Library-Projekt,** und nennen Sie es **ctlClockLib**.
 
      Der Projektname `ctlClockLib` wird standardmäßig auch dem Stammnamespace zugewiesen. Der Stammnamespace wird verwendet, um die Namen der Komponenten in der Assembly zu qualifizieren. Wenn z.B. zwei Assemblys Komponenten mit dem Namen `ctlClock` bereitstellen, können Sie Ihre `ctlClock`-Komponente mithilfe von `ctlClockLib.ctlClock.` überprüfen.
 
-2. Klicken Sie in **Projektmappen-Explorer**mit der rechten Maustaste auf **UserControl1.cs**, und klicken Sie dann auf **Umbenennen**. Ändern Sie den Dateinamen in `ctlClock.cs`. Klicken Sie auf die Schaltfläche **Ja**, wenn Sie gefragt werden, ob alle Verweise auf das Codeelement „UserControl1“ umbenannt werden sollen.
+2. Klicken Sie im **Projektmappen-Explorer**mit der rechten Maustaste auf **UserControl1.cs**, und klicken Sie dann auf **Umbenennen**. Ändern Sie den Dateinamen in `ctlClock.cs`. Klicken Sie auf die Schaltfläche **Ja,** wenn Sie gefragt werden, ob Sie alle Verweise auf das Codeelement "UserControl1" umbenennen möchten.
 
     > [!NOTE]
-    > Standardmäßig erbt ein zusammengesetztes Steuerelement von der <xref:System.Windows.Forms.UserControl> Klasse, die vom System bereitgestellt wird. Die <xref:System.Windows.Forms.UserControl>-Klasse stellt die von allen zusammengesetzten Steuerelementen benötigte Funktionalität bereit und implementiert Standardmethoden und-Eigenschaften.
+    > Standardmäßig erbt ein zusammengesetztes Steuerelement <xref:System.Windows.Forms.UserControl> von der vom System bereitgestellten Klasse. Die <xref:System.Windows.Forms.UserControl> Klasse stellt Funktionen bereit, die von allen zusammengesetzten Steuerelementen benötigt werden, und implementiert Standardmethoden und -eigenschaften.
 
 3. Klicken Sie im Menü **Datei** auf **Alles speichern**, um das Projekt zu speichern.
 
-## <a name="add-windows-controls-and-components-to-the-composite-control"></a>Hinzufügen von Windows-Steuerelementen und Komponenten zum zusammengesetzten Steuerelement
+## <a name="add-windows-controls-and-components-to-the-composite-control"></a>Hinzufügen von Windows-Steuerelementen und -Komponenten zum zusammengesetzten Steuerelement
 
 Eine visuelle Schnittstelle ist ein wesentlicher Bestandteil von zusammengesetzten Steuerelementen. Diese visuelle Schnittstelle wird durch das Hinzufügen eines oder mehrerer Windows-Steuerelemente zur Designeroberfläche implementiert. Im folgenden Beispiel integrieren Sie Windows-Steuerelemente in das zusammengesetzte Steuerelement und schreiben Code, um Funktionalität zu implementieren.
 
 ### <a name="to-add-a-label-and-a-timer-to-your-composite-control"></a>So fügen Sie eine Bezeichnung und einen Timer zum zusammengesetzten Steuerelement hinzu
 
-1. Klicken Sie in **Projektmappen-Explorer**mit der rechten Maustaste auf **ctlClock.cs**, und klicken Sie dann auf **Designer anzeigen**.
+1. Klicken Sie im **Projektmappen-Explorer**mit der rechten Maustaste auf **ctlClock.cs**, und klicken Sie dann auf **Designer anzeigen**.
 
-2. Erweitern Sie in der **Toolbox** den Knoten **Allgemeine Steuerelemente**, und doppelklicken Sie dann auf **Bezeichnung**.
+2. Erweitern Sie in der **Toolbox**den Knoten **"Gemeinsame Steuerelemente",** und doppelklicken Sie dann auf **Beschriftung**.
 
-     Ein <xref:System.Windows.Forms.Label>-Steuerelement mit dem Namen `label1` wird dem Steuerelement auf der Designer Oberfläche hinzugefügt.
+     Ein <xref:System.Windows.Forms.Label> Steuerelement `label1` mit dem Namen wird dem Steuerelement auf der Designeroberfläche hinzugefügt.
 
 3. Klicken Sie im Designer auf **label1**. Legen Sie im Eigenschaftenfenster die folgenden Eigenschaften fest.
 
-    |property|Ändern in|
+    |Eigenschaft|Ändern in|
     |--------------|---------------|
     |**Name**|`lblDisplay`|
     |**Text**|`(blank space)`|
-    |**TextAlign**|`MiddleCenter`|
+    |**Textausrichtung**|`MiddleCenter`|
     |**Font.Size**|`14`|
 
 4. Erweitern Sie in der **Toolbox** den Knoten **Komponenten**, und doppelklicken Sie dann auf **Timer**.
 
-     Da eine <xref:System.Windows.Forms.Timer> eine Komponente ist, hat Sie zur Laufzeit keine visuelle Darstellung. Er wird daher nicht bei den Steuerelementen auf der Designeroberfläche angezeigt, sondern im **Komponenten-Designer** (eine Taskleiste am unteren Ende der Designeroberfläche).
+     Da <xref:System.Windows.Forms.Timer> es sich um eine Komponente handelt, hat sie zur Laufzeit keine visuelle Darstellung. Daher wird sie nicht mit den Steuerelementen auf der Designeroberfläche angezeigt, sondern im **Komponenten-Designer** (ein Fach am unteren Rand der Designeroberfläche).
 
-5. Klicken Sie im **Komponenten-Designer**auf **Timer1**, und legen Sie dann die Eigenschaft <xref:System.Windows.Forms.Timer.Interval%2A> auf `1000` und die Eigenschaft <xref:System.Windows.Forms.Timer.Enabled%2A> auf `true`fest.
+5. Klicken Sie im **Komponenten-Designer**auf **timer1**, <xref:System.Windows.Forms.Timer.Enabled%2A> und `true`legen Sie dann die <xref:System.Windows.Forms.Timer.Interval%2A> Eigenschaft `1000` auf und die Eigenschaft auf fest.
 
-     Die <xref:System.Windows.Forms.Timer.Interval%2A>-Eigenschaft steuert die Häufigkeit, mit der die <xref:System.Windows.Forms.Timer> Komponente Ticks. Bei jedem Tick von `timer1` führt sie den Code im Ereignis `timer1_Tick` aus. Das Intervall stellt die Anzahl von Millisekunden zwischen Ticks dar.
+     Die <xref:System.Windows.Forms.Timer.Interval%2A> Eigenschaft steuert die <xref:System.Windows.Forms.Timer> Häufigkeit, mit der die Komponente tickt. Bei jedem Tick von `timer1` führt sie den Code im Ereignis `timer1_Tick` aus. Das Intervall stellt die Anzahl von Millisekunden zwischen Ticks dar.
 
-6. Doppelklicken Sie im **Komponenten-Designer** auf **timer1**, um zum `timer1_Tick`-Ereignis für `ctlClock` zu gelangen.
+6. Doppelklicken Sie im **Komponenten-Designer**auf **timer1,** um zum `timer1_Tick` Ereignis für `ctlClock`zu wechseln.
 
 7. Ändern Sie den Code so, dass er folgendem Codebeispiel ähnelt. Achten Sie darauf, den Zugriffsmodifizierer von `private` in `protected` zu ändern.
 
@@ -92,17 +92,17 @@ Eine visuelle Schnittstelle ist ein wesentlicher Bestandteil von zusammengesetzt
 
 9. Klicken Sie im Menü **Datei** auf **Alles speichern**, um das Projekt zu speichern.
 
-## <a name="add-properties-to-the-composite-control"></a>Hinzufügen von Eigenschaften zum zusammengesetzten Steuerelement
+## <a name="add-properties-to-the-composite-control"></a>Hinzufügen von Eigenschaften zum Zusammengesetzten Steuerelement
 
-Das Clock-Steuerelement kapselt nun ein <xref:System.Windows.Forms.Label>-Steuerelement und eine <xref:System.Windows.Forms.Timer>-Komponente, die jeweils über einen eigenen Satz inhärenter Eigenschaften verfügt. Während nachfolgende Benutzer des Steuerelements nicht auf die einzelnen Eigenschaften dieser Steuerelemente zugreifen können, können Sie benutzerdefinierte Eigenschaften durch Schreiben der geeigneten Codeblöcke erstellen und verfügbar machen. Im folgenden Vorgang fügen Sie Eigenschaften zum Steuerelement hinzu, die dem Benutzer ermöglichen, die Farbe des Hintergrunds und des Texts zu ändern.
+Das Uhrsteuerelement kapselt nun <xref:System.Windows.Forms.Label> ein Steuerelement <xref:System.Windows.Forms.Timer> und eine Komponente mit jeweils eigenen inhärenten Eigenschaften. Während nachfolgende Benutzer des Steuerelements nicht auf die einzelnen Eigenschaften dieser Steuerelemente zugreifen können, können Sie benutzerdefinierte Eigenschaften durch Schreiben der geeigneten Codeblöcke erstellen und verfügbar machen. Im folgenden Vorgang fügen Sie Eigenschaften zum Steuerelement hinzu, die dem Benutzer ermöglichen, die Farbe des Hintergrunds und des Texts zu ändern.
 
 ### <a name="to-add-a-property-to-your-composite-control"></a>So fügen Sie eine Eigenschaft zum zusammengesetzten Steuerelement hinzu
 
-1. Klicken Sie in **Projektmappen-Explorer**mit der rechten Maustaste auf **ctlClock.cs**, und klicken Sie dann auf **Code anzeigen**.
+1. Klicken Sie im **Projektmappen-Explorer**mit der rechten Maustaste auf **ctlClock.cs**, und klicken Sie dann auf **Code anzeigen**.
 
-     Der **Code-Editor** für das Steuerelement wird geöffnet.
+     Der **Code-Editor** für Ihr Steuerelement wird geöffnet.
 
-2. Suchen Sie die `public partial class ctlClock`-Anweisung. Geben Sie unter der öffnenden Klammer (`{)` den folgenden Code ein.
+2. Suchen Sie die Anweisung `public partial class ctlClock`. Geben Sie unter der öffnenden Klammer (`{)` den folgenden Code ein.
 
     ```csharp
     private Color colFColor;
@@ -111,7 +111,7 @@ Das Clock-Steuerelement kapselt nun ein <xref:System.Windows.Forms.Label>-Steuer
 
      Diese Anweisungen erstellen die privaten Variablen, die Sie verwenden, um die Werte für die Eigenschaften zu speichern, die Sie gleich erstellen werden.
 
-3. Geben oder fügen Sie den folgenden Code unter den Variablen Deklarationen aus Schritt 2 ein.
+3. Geben Sie den folgenden Code unter den Variablendeklarationen aus Schritt 2 ein, oder fügen Sie ihn ein.
 
     ```csharp
     // Declares the name and type of the property.
@@ -149,13 +149,13 @@ Das Clock-Steuerelement kapselt nun ein <xref:System.Windows.Forms.Label>-Steuer
 
 4. Klicken Sie im Menü **Datei** auf **Alles speichern**, um das Projekt zu speichern.
 
-## <a name="test-the-control"></a>Testen des Steuer Elements
+## <a name="test-the-control"></a>Testen des Steuerelements
 
 Steuerelemente sind keine eigenständigen Anwendungen. Sie müssen in einem Container gehostet werden. Testen Sie das Laufzeitverhalten Ihres Steuerelements, und überprüfen Sie die Eigenschaften im **UserControl-Testcontainer**. Weitere Informationen finden Sie unter [Vorgehensweise: Testen des Laufzeitverhaltens eines UserControl](how-to-test-the-run-time-behavior-of-a-usercontrol.md).
 
 ### <a name="to-test-your-control"></a>So testen Sie das Steuerelement
 
-1. Drücken Sie **F5** , um das Projekt zu erstellen, und führen Sie das Steuerelement im **UserControl-Test Container**aus.
+1. Drücken Sie **F5,** um das Projekt zu erstellen und das Steuerelement im **UserControl-Testcontainer**auszuführen.
 
 2. Suchen Sie im Eigenschaftenraster des Testcontainers die Eigenschaft `ClockBackColor`, und wählen Sie anschließend die Eigenschaft aus, um die Farbpalette anzuzeigen.
 
@@ -167,7 +167,7 @@ Steuerelemente sind keine eigenständigen Anwendungen. Sie müssen in einem Cont
 
    In diesem Abschnitt und in den vorherigen Abschnitten haben Sie gesehen, wie Komponenten und Windows-Steuerelemente mit Code und Paketen kombiniert werden können, um benutzerdefinierte Funktionalität in Form eines zusammengesetzten Steuerelements zu bieten. Sie haben gelernt, Eigenschaften in Ihrem zusammengesetzten Steuerelement verfügbar zu machen, und das Steuerelement nach Abschluss zu überprüfen. Im nächsten Abschnitt erfahren Sie, wie man ein vererbtes zusammengesetztes Steuerelement mithilfe von `ctlClock` als Basis verwendet.
 
-## <a name="inherit-from-a-composite-control"></a>Von einem zusammengesetzten Steuerelement erben
+## <a name="inherit-from-a-composite-control"></a>Vererben von einem Zusammengesetzten Steuerelement
 
 In den vorherigen Abschnitten haben Sie gelernt, wie man Windows-Steuerelemente, Komponenten und Code in wiederverwendbare zusammengesetzte Steuerelemente kombiniert. Das zusammengesetzte Steuerelement kann jetzt als Basis für die Erstellung anderer Steuerelemente verwendet werden. Der Vorgang, bei dem eine Klasse von einer Basisklasse abgeleitet wird, nennt man *Vererbung*. In diesem Abschnitt erstellen Sie ein zusammengesetztes Steuerelement namens `ctlAlarmClock`. Dieses Steuerelement wird von seinem übergeordneten Steuerelement, `ctlClock`, abgeleitet. Sie erfahren, wie Sie die Funktionalität von `ctlClock` durch Überschreiben der übergeordneten Methoden und Hinzufügen neuer Methoden und Eigenschaften erweitern können.
 
@@ -175,9 +175,9 @@ Der erste Schritt beim Erstellen eines geerbten Steuerelements ist das Ableiten 
 
 ### <a name="to-create-the-inherited-control"></a>So erstellen Sie das geerbte Steuerelement
 
-1. Klicken Sie in **Projektmappen-Explorer**mit der rechten Maustaste auf **ctlClockLib**, zeigen Sie auf **Hinzufügen**, und klicken Sie dann auf **Benutzer Steuer**Element.
+1. Klicken Sie im **Projektmappen-Explorer**mit der rechten Maustaste auf **ctlClockLib**, zeigen Sie auf **Hinzufügen**, und klicken Sie dann auf **Benutzersteuerung**.
 
-     Das Dialogfeld **Neues Element hinzufügen** wird angezeigt.
+     Das Dialogfeld **Neues Element hinzufügen** wird geöffnet.
 
 2. Wählen Sie die Vorlage **Geerbtes Benutzersteuerelement**.
 
@@ -187,20 +187,20 @@ Der erste Schritt beim Erstellen eines geerbten Steuerelements ist das Ableiten 
 
 4. Doppelklicken Sie unter **Komponentenname** auf **ctlClock**.
 
-5. Navigieren Sie in **Projektmappen-Explorer**zu den aktuellen Projekten.
+5. Durchsuchen Sie im **Projektmappen-Explorer**die aktuellen Projekte.
 
     > [!NOTE]
     > Eine Datei namens **ctlAlarmClock.cs** wurde zum aktuellen Projekt hinzugefügt.
 
-### <a name="add-the-alarm-properties"></a>Die Alarm Eigenschaften hinzufügen
+### <a name="add-the-alarm-properties"></a>Hinzufügen der Alarmeigenschaften
 
 Eigenschaften werden auf die gleiche Weise zu einem geerbten Steuerelement hinzugefügt wie zu einem zusammengesetzten Steuerelement. Sie verwenden jetzt die Syntax zum Deklarieren von Eigenschaften, um zwei Eigenschaften zu Ihrem Steuerelement hinzuzufügen: `AlarmTime`, wodurch der Wert des Datums und der Uhrzeit gespeichert wird, zu der der Wecker klingelt, und `AlarmSet`, die anzeigt, ob der Wecker eingestellt wurde.
 
 #### <a name="to-add-properties-to-your-composite-control"></a>So fügen Sie Eigenschaften zum zusammengesetzten Steuerelement hinzu
 
-1. Klicken Sie in **Projektmappen-Explorer**mit der rechten Maustaste auf **ctlAlarmClock**, und klicken Sie dann auf **Code anzeigen**.
+1. Klicken Sie im **Projektmappen-Explorer**mit der rechten Maustaste auf **ctlAlarmClock**, und klicken Sie dann auf **Code anzeigen**.
 
-2. Suchen Sie die `public class`-Anweisung. Beachten Sie, dass das Steuerelement von `ctlClockLib.ctlClock` erbt. Geben Sie unter der öffnenden Klammer (`{)`-Anweisung den folgenden Code ein.
+2. Suchen Sie die Anweisung `public class`. Beachten Sie, dass das Steuerelement von `ctlClockLib.ctlClock` erbt. Geben Sie unter der öffnenden Klammer (`{)`-Anweisung den folgenden Code ein.
 
     ```csharp
     private DateTime dteAlarmTime;
@@ -231,13 +231,13 @@ Eigenschaften werden auf die gleiche Weise zu einem geerbten Steuerelement hinzu
     }
     ```
 
-### <a name="add-to-the-graphical-interface-of-the-control"></a>Zur grafischen Oberfläche des Steuer Elements hinzufügen
+### <a name="add-to-the-graphical-interface-of-the-control"></a>Zur grafischen Benutzeroberfläche des Steuerelements hinzufügen
 
 Das geerbte Steuerelement verfügt über eine visuelle Schnittstelle, die mit dem Steuerelement identisch ist, von dem es erbt. Es verfügt über die gleichen konstituierenden Steuerelemente wie das übergeordnete Steuerelement. Allerdings sind die Eigenschaften der konstituierenden Steuerelemente nicht verfügbar, solange sie nicht explizit verfügbar gemacht werden. Sie können zur grafischen Schnittstelle des geerbten zusammengesetzten Steuerelements auf die gleiche Weise hinzufügen, wie Sie zu jedem anderen zusammengesetzten Steuerelement hinzufügen würden. Um den Vorgang fortzusetzen, zur visuellen Schnittstelle Ihres Weckers hinzuzufügen, fügen Sie ein Label-Steuerelement hinzu, das leuchtet, wenn der Wecker klingelt.
 
 #### <a name="to-add-the-label-control"></a>So fügen Sie das Label-Steuerelement hinzu
 
-1. Klicken Sie in **Projektmappen-Explorer**mit der rechten Maustaste auf **ctlAlarmClock**, und klicken Sie dann auf **Designer anzeigen**.
+1. Klicken Sie im **Projektmappen-Explorer**mit der rechten Maustaste auf **ctlAlarmClock**, und klicken Sie dann auf **Designer anzeigen**.
 
      Der Designer für `ctlAlarmClock` wird im Hauptfenster geöffnet.
 
@@ -249,20 +249,20 @@ Das geerbte Steuerelement verfügt über eine visuelle Schnittstelle, die mit de
     > [!NOTE]
     > Wenn Sie möchten, dass nachfolgende Benutzer des zusammengesetzten Steuerelements Zugriff auf interne Steuerelemente haben, deklarieren Sie sie als `public` oder `protected`. Dadurch können Sie Eigenschaften von Steuerelementen, die in Ihrem zusammengesetzten Steuerelement enthalten sind, festlegen und ändern, indem Sie den entsprechenden Code verwenden.
 
-3. Fügen Sie dem zusammengesetzten Steuerelement ein <xref:System.Windows.Forms.Label>-Steuerelement hinzu.
+3. Fügen <xref:System.Windows.Forms.Label> Sie dem zusammengesetzten Steuerelement ein Steuerelement hinzu.
 
-4. Ziehen Sie das <xref:System.Windows.Forms.Label>-Steuerelement mit der Maus direkt unterhalb des Anzeige Felds. Legen Sie im Eigenschaftenfenster die folgenden Eigenschaften fest.
+4. Ziehen Sie das <xref:System.Windows.Forms.Label> Steuerelement mit der Maus direkt unter das Anzeigefeld. Legen Sie im Eigenschaftenfenster die folgenden Eigenschaften fest.
 
-    |property|Einstellung|
+    |Eigenschaft|Einstellung|
     |--------------|-------------|
     |**Name**|`lblAlarm`|
     |**Text**|**Alarm!**|
-    |**TextAlign**|`MiddleCenter`|
-    |**Visible**|`false`|
+    |**Textausrichtung**|`MiddleCenter`|
+    |**Sichtbar**|`false`|
 
-### <a name="add-the-alarm-functionality"></a>Hinzufügen der Wecker-Funktionalität
+### <a name="add-the-alarm-functionality"></a>Hinzufügen der Alarmfunktionalität
 
-In den vorherigen Schritten haben Sie Eigenschaften und ein Steuerelement hinzugefügt, dass die Wecker-Funktionalität in Ihrem zusammengesetzten Steuerelement aktiviert. In diesem Verfahren fügen Sie Code hinzu, um die aktuelle Zeit mit der Weckzeit zu vergleichen, und bei Gleichheit einen Wecker auszulösen. Durch Überschreiben der Methode `timer1_Tick` von `ctlClock` und Hinzufügen von zusätzlichem Code erweitern Sie die Funktion von `ctlAlarmClock`, während alle geerbten Funktionen von `ctlClock` erhalten bleiben.
+In den vorherigen Schritten haben Sie Eigenschaften und ein Steuerelement hinzugefügt, dass die Wecker-Funktionalität in Ihrem zusammengesetzten Steuerelement aktiviert. In diesem Verfahren fügen Sie Code hinzu, um die aktuelle Zeit mit der Weckzeit zu vergleichen, und bei Gleichheit einen Wecker auszulösen. Durch Überschreiben der Methode `timer1_Tick` von `ctlClock` und Hinzufügen von zusätzlichem Code erweitern Sie die Funktion von `ctlAlarmClock` während alle geerbten Funktionen von `ctlClock` erhalten bleiben.
 
 #### <a name="to-override-the-timer1_tick-method-of-ctlclock"></a>So überschreiben Sie die Methode „Timer1_Tick“ von „ctlClock“
 
@@ -320,13 +320,13 @@ In den vorherigen Schritten haben Sie Eigenschaften und ein Steuerelement hinzug
 
 #### <a name="to-implement-the-shutoff-method"></a>So implementieren Sie die Methode zum Deaktivieren
 
-1. Klicken Sie in **Projektmappen-Explorer**mit der rechten Maustaste auf **ctlAlarmClock.cs**, und klicken Sie dann auf **Designer anzeigen**.
+1. Klicken Sie im **Projektmappen-Explorer**mit der rechten Maustaste auf **ctlAlarmClock.cs**, und klicken Sie dann auf **Designer anzeigen**.
 
      Der Designer wird geöffnet.
 
 2. Fügen Sie eine Schaltfläche zum Steuerelement hinzu. Legen Sie die Eigenschaften der Schaltfläche wie folgt fest.
 
-    |property|Wert|
+    |Eigenschaft|value|
     |--------------|-----------|
     |**Name**|`btnAlarmOff`|
     |**Text**|**Wecker deaktivieren**|
@@ -349,33 +349,33 @@ In den vorherigen Schritten haben Sie Eigenschaften und ein Steuerelement hinzug
 
 5. Klicken Sie im Menü **Datei** auf **Alles speichern**, um das Projekt zu speichern.
 
-### <a name="use-the-inherited-control-on-a-form"></a>Verwenden des geerbten Steuer Elements in einem Formular
+### <a name="use-the-inherited-control-on-a-form"></a>Verwenden des geerbten Steuerelements in einem Formular
 
-Sie können das geerbte Steuerelement auf die gleiche Weise testen wie das Basisklassen-Steuerelement, `ctlClock`: Drücken Sie **F5** , um das Projekt zu erstellen, und führen Sie das Steuerelement im **UserControl-Test Container**aus. Weitere Informationen finden Sie unter [Vorgehensweise: Testen des Laufzeitverhaltens eines UserControl](how-to-test-the-run-time-behavior-of-a-usercontrol.md).
+Sie können Ihr geerbtes Steuerelement auf die gleiche `ctlClock`Weise testen, wie Sie das Steuerelement der Basisklasse getestet haben: Drücken Sie **F5,** um das Projekt zu erstellen und das Steuerelement im **UserControl-Testcontainer**auszuführen. Weitere Informationen finden Sie unter [Vorgehensweise: Testen des Laufzeitverhaltens eines UserControl](how-to-test-the-run-time-behavior-of-a-usercontrol.md).
 
 Sie müssen das Steuerelement auf einem Formular hosten, um es verwenden zu können. Wie standardmäßige zusammengesetzten Steuerelemente kann ein geerbtes zusammengesetztes Steuerelement nicht alleine stehen und muss in einem Formular oder einem anderen Container gehostet werden. Da `ctlAlarmClock` über eine tiefer gehende Funktionalität verfügt, wird zusätzlicher Code für das Testen benötigt. In dieser Vorgehensweise schreiben Sie ein einfaches Programm, um die Funktionalität von `ctlAlarmClock` zu testen. Sie schreiben Code zum Einstellen und Anzeigen der Eigenschaft `AlarmTime` von `ctlAlarmClock` und testen die geerbten Funktionen.
 
 #### <a name="to-build-and-add-your-control-to-a-test-form"></a>So erstellen Sie ein Steuerelement und fügen es zu einem Testformular hinzu
 
-1. Klicken Sie in **Projektmappen-Explorer**mit der rechten Maustaste auf **ctlClockLib**, und klicken Sie dann auf **Erstellen**.
+1. Klicken Sie im **Projektmappen-Explorer**mit der rechten Maustaste auf **ctlClockLib**, und klicken Sie dann auf **Erstellen**.
 
-2. Fügen Sie der Projekt Mappe ein neues **Windows-Anwendungs** Projekt hinzu, und nennen Sie es " **Test**".
+2. Fügen Sie der Projektmappe ein neues **Windows Forms Application-Projekt** hinzu, und nennen Sie es **Test**.
 
-3. Klicken Sie in **Projektmappen-Explorer**mit der rechten Maustaste auf den Knoten **Verweise** für das Testprojekt. Klicken Sie auf **Verweis hinzufügen**, um das Dialogfeld **Verweis hinzufügen** anzuzeigen. Klicken Sie auf die Registerkarte mit der Bezeichnung **Projekte**. Ihr `ctlClockLib`-Projekt wird unter **Projektname** aufgelistet. Doppelklicken Sie auf das Projekt, um den Verweis auf das Testprojekt hinzuzufügen.
+3. Klicken Sie im **Projektmappen-Explorer**mit der rechten Maustaste auf den Knoten **Referenzen** für das Testprojekt. Klicken Sie auf **Verweis hinzufügen**, um das Dialogfeld **Verweis hinzufügen** anzuzeigen. Klicken Sie auf die Registerkarte mit der Bezeichnung **Projekte**. Ihr `ctlClockLib`-Projekt wird unter **Projektname** aufgelistet. Doppelklicken Sie auf das Projekt, um den Verweis auf das Testprojekt hinzuzufügen.
 
-4. Klicken Sie in **Projektmappen-Explorer**mit der rechten Maustaste auf **Test**, und klicken Sie dann auf **Erstellen**.
+4. Klicken Sie im **Projektmappen-Explorer**mit der rechten Maustaste auf **Testen**, und klicken Sie dann auf **Erstellen**.
 
 5. Erweitern Sie in der **Toolbox** den Knoten **ctlClockLib Components**.
 
 6. Doppelklicken Sie auf **ctlAlarmClock**, um eine Kopie von `ctlAlarmClock` zu Ihrem Formular hinzuzufügen.
 
-7. Suchen Sie in der **Toolbox**nach **DateTimePicker** , und doppelklicken Sie darauf, um dem Formular ein <xref:System.Windows.Forms.DateTimePicker>-Steuerelement hinzuzufügen, und fügen Sie dann ein <xref:System.Windows.Forms.Label> Steuerelement hinzu, indem Sie auf **Bezeichnung**doppelklicken.
+7. Suchen und doppelklicken Sie in der **Toolbox**auf <xref:System.Windows.Forms.DateTimePicker> **DateTimePicker,** um dem Formular ein Steuerelement hinzuzufügen, und fügen Sie dann ein <xref:System.Windows.Forms.Label> Steuerelement hinzu, indem Sie auf **Label**doppelklicken.
 
 8. Verwenden Sie die Maus, um das Steuerelement an einem geeigneten Ort auf dem Formular zu positionieren.
 
 9. Legen Sie die Eigenschaften dieser Steuerelemente wie folgt fest.
 
-    |Steuerelement|property|Wert|
+    |Control|Eigenschaft|value|
     |-------------|--------------|-----------|
     |`label1`|**Text**|`(blank space)`|
     ||**Name**|`lblTest`|
@@ -398,13 +398,13 @@ Sie müssen das Steuerelement auf einem Formular hosten, um es verwenden zu kön
     }
     ```
 
-12. Klicken Sie in **Projektmappen-Explorer**mit der rechten Maustaste auf **Test**, und klicken Sie dann auf **als Startprojekt festlegen**.
+12. Klicken Sie im **Projektmappen-Explorer**mit der rechten Maustaste auf **Testen**, und klicken Sie dann auf **Als Startup-Projekt festlegen**.
 
-13. Klicken Sie im Menü **Debuggen** auf **Debuggen starten**.
+13. Klicken Sie im **Menü Debuggen** auf **Debuggen starten**.
 
-     Das Testprogramm wird gestartet. Beachten Sie, dass die aktuelle Uhrzeit im `ctlAlarmClock`-Steuerelement aktualisiert wird und die Startzeit im <xref:System.Windows.Forms.DateTimePicker> Steuerelement angezeigt wird.
+     Das Testprogramm wird gestartet. Beachten Sie, dass die `ctlAlarmClock` aktuelle Uhrzeit im Steuerelement aktualisiert <xref:System.Windows.Forms.DateTimePicker> wird und dass die Startzeit im Steuerelement angezeigt wird.
 
-14. Klicken Sie auf die <xref:System.Windows.Forms.DateTimePicker>, in der die Minuten der Stunde angezeigt werden.
+14. Klicken <xref:System.Windows.Forms.DateTimePicker> Sie auf die Stelle, an der die Minuten der Stunde angezeigt werden.
 
 15. Legen Sie mithilfe der Tastatur einen Wert für die Minuten fest, der eine Minute höher ist als die aktuell von `ctlAlarmClock` angezeigte Zeit.
 
@@ -412,10 +412,10 @@ Sie müssen das Steuerelement auf einem Formular hosten, um es verwenden zu kön
 
 16. Deaktivieren Sie den Wecker, indem Sie auf `btnAlarmOff` klicken. Sie können den Wecker nun zurücksetzen.
 
-In diesem Artikel wurde eine Reihe wichtiger Konzepte behandelt. Sie haben gelernt, ein zusammengesetztes Steuerelement zu erstellen, indem Sie Steuerelemente und Komponenten in einem Container für zusammengesetzte Steuerelemente kombiniert haben. Sie haben gelernt, Eigenschaften zu Ihrem Steuerelement hinzuzufügen und Code für das Implementieren benutzerdefinierter Funktionalität zu schreiben. Im letzten Abschnitt haben Sie gelernt, die Funktionalität eines bestimmten zusammengesetzten Steuerelements durch Vererbung zu erweitern und die Funktionalität von Host-Methoden durch außer Kraft setzen dieser Methoden zu ändern.
+Dieser Artikel behandelt eine Reihe von Schlüsselkonzepten. Sie haben gelernt, ein zusammengesetztes Steuerelement zu erstellen, indem Sie Steuerelemente und Komponenten in einem Container für zusammengesetzte Steuerelemente kombiniert haben. Sie haben gelernt, Eigenschaften zu Ihrem Steuerelement hinzuzufügen und Code für das Implementieren benutzerdefinierter Funktionalität zu schreiben. Im letzten Abschnitt haben Sie gelernt, die Funktionalität eines bestimmten zusammengesetzten Steuerelements durch Vererbung zu erweitern und die Funktionalität von Host-Methoden durch außer Kraft setzen dieser Methoden zu ändern.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Arten von benutzerdefinierten Steuerelementen](varieties-of-custom-controls.md)
-- [Vorgehensweise: Anzeigen eines Steuerelements im Dialogfeld „Toolboxelemente auswählen“](how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)
-- [Exemplarische Vorgehensweise: Vererben von einem Windows Forms-Steuerelement mit Visual C#](walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)
+- [Gewusst wie: Anzeigen eines Steuerelements im Dialogfeld "Toolboxelemente auswählen"](how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)
+- [Exemplarische Vorgehensweise: Vererben von einem Windows Forms Control mit Visual C #](walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)

@@ -2,12 +2,12 @@
 title: Nicht generisches ForEach-Element
 ms.date: 03/30/2017
 ms.assetid: 576cd07a-d58d-4536-b514-77bad60bff38
-ms.openlocfilehash: 93a6b1d815ef6478974ceadf8ad935be2a3bdea5
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 08dbac3974915f823a4f6e39f35927453a7c4b3a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75338658"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79142705"
 ---
 # <a name="non-generic-foreach"></a>Nicht generisches ForEach-Element
 Zur Toolbox von [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] gehört ein Satz von Ablaufsteuerungsaktivitäten, einschließlich <xref:System.Activities.Statements.ForEach%601>, die das Durchlaufen von <xref:System.Collections.Generic.IEnumerable%601>-Auflistungen ermöglicht.  
@@ -17,7 +17,7 @@ Zur Toolbox von [!INCLUDE[netfx_current_long](../../../../includes/netfx-current
  In diesem Beispiel wird gezeigt, wie eine nicht generische <xref:System.Activities.Statements.ForEach%601>-Aktivität und der Designer implementiert werden. Diese Aktivität kann zum Durchlaufen von <xref:System.Collections.ArrayList> verwendet werden.  
   
 ## <a name="foreach-activity"></a>ForEach-Aktivität  
- Die C#/Visual Basic `foreach`-Anweisung zählt die Elemente einer Auflistung auf und führt eine eingebettete Anweisung für jedes Element der Auflistung aus. Die entsprechenden [!INCLUDE[wf1](../../../../includes/wf1-md.md)]-Aktivitäten für `foreach` sind <xref:System.Activities.Statements.ForEach%601> und <xref:System.Activities.Statements.ParallelForEach%601>. Die <xref:System.Activities.Statements.ForEach%601>-Aktivität enthält eine Liste von Werten und einen Text. Zur Laufzeit wird die Liste durchlaufen, und der Text wird für jeden Wert in der Liste ausgeführt.  
+ Die C-/Visual `foreach` Basic-Anweisung zählt die Elemente einer Auflistung auf und führt eine eingebettete Anweisung für jedes Element der Auflistung aus. Die entsprechenden [!INCLUDE[wf1](../../../../includes/wf1-md.md)]-Aktivitäten für `foreach` sind <xref:System.Activities.Statements.ForEach%601> und <xref:System.Activities.Statements.ParallelForEach%601>. Die <xref:System.Activities.Statements.ForEach%601>-Aktivität enthält eine Liste von Werten und einen Text. Zur Laufzeit wird die Liste durchlaufen, und der Text wird für jeden Wert in der Liste ausgeführt.  
   
  In den meisten Fällen sollte die generische Version der Aktivität die bevorzugte Lösung sein, da die meisten Szenarien, in denen sie verwendet wird, damit abgedeckt werden und sie zur Kompilierzeit eine Typüberprüfung bietet. Die nicht generische Version kann zum Durchlaufen von Typen, die die nicht generische <xref:System.Collections.IEnumerable>-Schnittstelle implementieren, verwendet werden.  
   
@@ -34,7 +34,7 @@ public class ForEach : NativeActivity
   
     [DefaultValue(null)]  
     [DependsOn("Values")]  
-    ActivityAction<object> Body { get; set; }   
+    ActivityAction<object> Body { get; set; }
 }  
 ```  
   
@@ -56,8 +56,8 @@ Activity sampleUsage =
     new ForEach  
     {  
        Values = new InArgument<IEnumerable>(c=> names),  
-       Body = new ActivityAction<object>   
-       {                          
+       Body = new ActivityAction<object>
+       {
            Argument = iterationVariable,  
            Handler = new WriteLine  
            {  
@@ -67,12 +67,12 @@ Activity sampleUsage =
    };  
 ```  
   
-|Bedingung|Meldung|Schweregrad|Ausnahmetyp|  
+|Bedingung|`Message`|severity|Ausnahmetyp|  
 |---------------|-------------|--------------|--------------------|  
 |Werte sind `null`|Für das erforderliche Aktivitätsargument "Values1" wurde kein Wert angegeben.|Fehler|<xref:System.InvalidOperationException>|  
   
 ## <a name="foreach-designer"></a>ForEach-Designer  
- Der Aktivitätsdesigner für das Beispiel ist dem Designer im Aussehen ähnlich, der für die integrierte <xref:System.Activities.Statements.ForEach%601>-Aktivität dient. Der Designer wird in der Toolbox in der Kategorie **Beispiele**, **nicht generische Aktivitäten** angezeigt. Der Designer wird in der Toolbox **ForEachWithBodyFactory** genannt, da die-Aktivität ein <xref:System.Activities.Presentation.IActivityTemplateFactory> in der Toolbox verfügbar macht, das die Aktivität mit einem ordnungsgemäß konfigurierten <xref:System.Activities.ActivityAction>erstellt.  
+ Der Aktivitätsdesigner für das Beispiel ist dem Designer im Aussehen ähnlich, der für die integrierte <xref:System.Activities.Statements.ForEach%601>-Aktivität dient. Der Designer wird in der Toolbox in der Kategorie **Samples**, **Non-Generic Activities** angezeigt. Der Designer heißt In der Toolbox Den Namen **ForEachWithBodyFactory,** da die Aktivität eine <xref:System.Activities.Presentation.IActivityTemplateFactory> in <xref:System.Activities.ActivityAction>der Toolbox verfügbar macht, die die Aktivität mit einer ordnungsgemäß konfigurierten erstellt.  
   
 ```csharp  
 public sealed class ForEachWithBodyFactory : IActivityTemplateFactory  
@@ -97,17 +97,17 @@ public sealed class ForEachWithBodyFactory : IActivityTemplateFactory
   
 1. Legen Sie das Projekt Ihrer Wahl als Startprojekt der Projektmappe fest:  
   
-    1. **Codetestclient** zeigt, wie die-Aktivität mithilfe von Code verwendet wird.  
+    1. **CodeTestClient** zeigt, wie die Aktivität mithilfe von Code verwendet wird.  
   
-    2. **Designertestclient** zeigt, wie die-Aktivität innerhalb des Designers verwendet wird.  
+    2. **DesignerTestClient** zeigt, wie die Aktivität im Designer verwendet wird.  
   
 2. Erstellen Sie das Projekt, und führen Sie es aus.  
   
 > [!IMPORTANT]
 > Die Beispiele sind möglicherweise bereits auf dem Computer installiert. Suchen Sie nach dem folgenden Verzeichnis (Standardverzeichnis), bevor Sie fortfahren.  
->   
+>
 > `<InstallDrive>:\WF_WCF_Samples`  
->   
-> Wenn dieses Verzeichnis nicht vorhanden ist, wechseln Sie zu [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF)-Beispiele für .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) , um alle Windows Communication Foundation (WCF) und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele herunterzuladen. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
->   
+>
+> Wenn dieses Verzeichnis nicht vorhanden ist, wechseln Sie zu [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples for .NET Framework 4,](https://www.microsoft.com/download/details.aspx?id=21459) um alle Windows Communication Foundation (WCF) und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele herunterzuladen. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+>
 > `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\NonGenericForEach`

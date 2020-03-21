@@ -13,12 +13,12 @@ helpviewer_keywords:
 - commanding [WPF]
 - CommandManager [WPF]
 ms.assetid: bc208dfe-367d-426a-99de-52b7e7511e81
-ms.openlocfilehash: 192fe629493947ffe4e0aa8ade417b7701ff95b4
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: 3477e6a9eda40edeadaab9cd6d3de2f016250fc8
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72004600"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79186211"
 ---
 # <a name="commanding-overview"></a>Befehlsübersicht
 <a name="introduction"></a> Befehle sind ein Eingabemechanismus in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)], der Eingabeverarbeitung auf einer höheren Ebene als die Geräteeingabe bereitstellt. Beispiele für Befehle sind die in vielen Programmen enthaltenen Vorgänge **Kopieren**, **Ausschneiden** und **Einfügen**.  
@@ -37,7 +37,7 @@ ms.locfileid: "72004600"
   
 - [Erstellen von benutzerdefinierten Befehlen](#creating_commands)  
   
-<a name="commands_at_10000_feet"></a>   
+<a name="commands_at_10000_feet"></a>
 ## <a name="what-are-commands"></a>Was sind Befehle?  
  Befehle haben mehrere Zwecke. Der erste ist die Trennung der Semantik und des von einem Befehl aufgerufenen Objekts von der Logik, die den Befehl ausführt. Dadurch können mehrere und unterschiedliche Quellen dieselbe Befehlslogik aufrufen, und die Befehlslogik kann für verschiedene Ziele angepasst werden. Die Bearbeitungsvorgänge **Kopieren**, **Ausschneiden** und **Einfügen**, die in vielen Programmen vorkommen, können z.B. mithilfe anderer Benutzeraktionen aufgerufen werden, wenn sie mithilfe von Befehlen implementiert werden. In manchen Anwendungen lassen sich ausgewählte Objekte oder Text durch einen Klick auf eine Schaltfläche, durch Auswählen eines Elements in einem Menü oder über eine Tastenkombination wie STRG+X ausschneiden. Mithilfe von Befehlen können Sie jede Art von Benutzeraktion an die gleiche Logik binden.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "72004600"
   
  Die Semantik eines Befehls kann anwendungs- und klassenübergreifend konsistent sein. Die Logik einer Aktion ist aber dem betreffenden Objekt eigen, auf das die Aktion ausgeführt wird. Die Tastenkombination STRG+X ruft zwar den Befehl **Ausschneiden** in Textklassen, Bildklassen und Webbrowsern auf, aber die eigentliche Logik für die Ausführung des Vorgangs **Ausschneiden** wird von der Anwendung definiert, die ihn ausführt. <xref:System.Windows.Input.RoutedCommand> aktiviert Clients, um die Logik zu implementieren. Ein Textobjekt kann den markierten Text ausschneiden und in die Zwischenablage kopieren, während ein Bildobjekt das markierte Bild ausschneiden kann. Wenn eine Anwendung das Ereignis <xref:System.Windows.Input.CommandManager.Executed> verarbeitet, kann sie auf das Ziel des Befehls zugreifen und je nach Zielart geeignete Maßnahmen ergreifen.  
   
-<a name="simple_command"></a>   
+<a name="simple_command"></a>
 ## <a name="simple-command-example-in-wpf"></a>Beispiel eines einfachen Befehls in WPF  
  Die einfachste Möglichkeit, einen Befehl in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zu verwenden, ist die Verwendung eines vordefinierten <xref:System.Windows.Input.RoutedCommand>-Befehls aus einer der Klassen der Befehlsbibliothek. Verwenden Sie ein Steuerelement mit nativer Unterstützung für die Verarbeitung des Befehls und eines mit nativer Unterstützung zum Aufrufen eines Befehls.  Der Befehl <xref:System.Windows.Input.ApplicationCommands.Paste%2A> ist einer der vordefinierten Befehle in der Klasse <xref:System.Windows.Input.ApplicationCommands>.  Das Steuerelement <xref:System.Windows.Controls.TextBox> verfügt über integrierte Logik zum Verarbeiten des Befehls <xref:System.Windows.Input.ApplicationCommands.Paste%2A>.  Und die Klasse <xref:System.Windows.Controls.MenuItem> verfügt über native Unterstützung für das Aufrufen von Befehlen.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "72004600"
  [!code-csharp[CommandingOverviewSnippets#CommandingOverviewCommandTargetCodeBehind](~/samples/snippets/csharp/VS_Snippets_Wpf/CommandingOverviewSnippets/CSharp/Window1.xaml.cs#commandingoverviewcommandtargetcodebehind)]
  [!code-vb[CommandingOverviewSnippets#CommandingOverviewCommandTargetCodeBehind](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CommandingOverviewSnippets/visualbasic/window1.xaml.vb#commandingoverviewcommandtargetcodebehind)]  
   
-<a name="Four_main_Concepts"></a>   
+<a name="Four_main_Concepts"></a>
 ## <a name="four-main-concepts-in-wpf-commanding"></a>Vier Hauptkonzepte für WPF-Befehle  
  Das Modell der weitergeleiteten Befehle in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] kann auf vier Hauptkonzepte heruntergebrochen werden: der Befehl, die Befehlsquelle, das Ziel des Befehls und die Befehlsbindung:  
   
@@ -70,7 +70,7 @@ ms.locfileid: "72004600"
   
  Im vorherigen Beispiel ist <xref:System.Windows.Input.ApplicationCommands.Paste%2A> der Befehl, <xref:System.Windows.Controls.MenuItem> die Befehlsquelle, <xref:System.Windows.Controls.TextBox> das Befehlsziel und die Befehlsbindung wird vom Steuerelement <xref:System.Windows.Controls.TextBox> bereitgestellt.  Beachten Sie, dass <xref:System.Windows.Input.CommandBinding> nicht immer vom Steuerelement angegeben wird, das die Befehlszielklasse darstellt.  <xref:System.Windows.Input.CommandBinding> muss oft vom Anwendungsentwickler erstellt werden, sonst kann es vorkommen, dass <xref:System.Windows.Input.CommandBinding> mit einem Vorgänger des Befehlsziels verbunden ist.  
   
-<a name="Commands"></a>   
+<a name="Commands"></a>
 ### <a name="commands"></a>Befehle  
  Befehle in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] werden durch Implementieren der <xref:System.Windows.Input.ICommand>-Schnittstelle erstellt.  <xref:System.Windows.Input.ICommand> stellt die zwei Methoden <xref:System.Windows.Input.ICommand.Execute%2A> und <xref:System.Windows.Input.ICommand.CanExecute%2A> sowie ein <xref:System.Windows.Input.ICommand.CanExecuteChanged>-Ereignis zur Verfügung. <xref:System.Windows.Input.ICommand.Execute%2A> führt die Aktionen durch, die dem Befehl zugeordnet sind. <xref:System.Windows.Input.ICommand.CanExecute%2A> bestimmt, ob der Befehl auf dem aktuellen Befehlsziel ausgeführt werden kann. <xref:System.Windows.Input.ICommand.CanExecuteChanged> wird ausgelöst, wenn der Befehls-Manager, der die Befehlsvorgänge zentralisiert, eine Änderung in der Befehlsquelle erkennt, die einen durch die Befehlsbindung ausgelösten Befehl, der noch nicht ausgeführt wurde, für ungültig erklären kann.  Die [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Implementierung von <xref:System.Windows.Input.ICommand> ist die Klasse <xref:System.Windows.Input.RoutedCommand> und der Schwerpunkt dieser Übersicht.  
   
@@ -80,7 +80,7 @@ ms.locfileid: "72004600"
   
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] stellt eine Reihe von häufig verwendeten Befehlen bereit, die auf mehrere Klassen verteilt sind: <xref:System.Windows.Input.MediaCommands>, <xref:System.Windows.Input.ApplicationCommands>, <xref:System.Windows.Input.NavigationCommands>, <xref:System.Windows.Input.ComponentCommands> und <xref:System.Windows.Documents.EditingCommands>.  Diese Klassen umfassen nur <xref:System.Windows.Input.RoutedCommand>-Objekte und nicht die Implementierungslogik des Befehls.  Die Implementierungslogik ist die Verantwortung des Objekts, für das der Befehl ausgeführt wird.  
   
-<a name="Command_Sources"></a>   
+<a name="Command_Sources"></a>
 ### <a name="command-sources"></a>Befehlsquellen  
  Eine Befehlsquelle ist das Objekt, das den Befehl aufruft.  <xref:System.Windows.Controls.MenuItem>, <xref:System.Windows.Controls.Button> und <xref:System.Windows.Input.KeyGesture> sind Beispiele für Befehlsquellen.  
   
@@ -90,7 +90,7 @@ ms.locfileid: "72004600"
   
 - <xref:System.Windows.Input.ICommandSource.Command%2A> ist der Befehl, der ausgeführt wird, wenn die Befehlsquelle aufgerufen wird.  
   
-- <xref:System.Windows.Input.ICommandSource.CommandTarget%2A> ist das Objekt, auf dem der Befehl ausgeführt wird.  Beachten Sie, dass die Eigenschaft [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] in <xref:System.Windows.Input.ICommandSource.CommandTarget%2A> nur auf <xref:System.Windows.Input.ICommandSource> anwendbar ist, wenn <xref:System.Windows.Input.ICommand> ein <xref:System.Windows.Input.RoutedCommand> ist.  Wenn <xref:System.Windows.Input.ICommandSource.CommandTarget%2A> auf eine <xref:System.Windows.Input.ICommandSource> festgelegt und der entsprechende Befehl kein <xref:System.Windows.Input.RoutedCommand> ist, wird das Befehlsziel ignoriert. Wenn <xref:System.Windows.Input.ICommandSource.CommandTarget%2A> nicht festgelegt ist, wird das Element mit dem Tastaturfokus das Befehlsziel sein.  
+- <xref:System.Windows.Input.ICommandSource.CommandTarget%2A> ist das Objekt, auf dem der Befehl ausgeführt wird.  Beachten Sie, dass die Eigenschaft <xref:System.Windows.Input.ICommandSource.CommandTarget%2A> in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] nur auf <xref:System.Windows.Input.ICommandSource> anwendbar ist, wenn <xref:System.Windows.Input.ICommand> ein <xref:System.Windows.Input.RoutedCommand> ist.  Wenn <xref:System.Windows.Input.ICommandSource.CommandTarget%2A> auf eine <xref:System.Windows.Input.ICommandSource> festgelegt und der entsprechende Befehl kein <xref:System.Windows.Input.RoutedCommand> ist, wird das Befehlsziel ignoriert. Wenn <xref:System.Windows.Input.ICommandSource.CommandTarget%2A> nicht festgelegt ist, wird das Element mit dem Tastaturfokus das Befehlsziel sein.  
   
 - <xref:System.Windows.Input.ICommandSource.CommandParameter%2A> ist ein benutzerdefinierter Datentyp zum Übergeben von Informationen an die Handler, die den Befehl implementieren.  
   
@@ -103,9 +103,9 @@ ms.locfileid: "72004600"
  [!code-csharp[CommandingOverviewSnippets#CommandingOverviewCmdSource](~/samples/snippets/csharp/VS_Snippets_Wpf/CommandingOverviewSnippets/CSharp/Window1.xaml.cs#commandingoverviewcmdsource)]
  [!code-vb[CommandingOverviewSnippets#CommandingOverviewCmdSource](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CommandingOverviewSnippets/visualbasic/window1.xaml.vb#commandingoverviewcmdsource)]  
   
- In der Regel überwacht eine Befehlsquelle das Ereignis <xref:System.Windows.Input.RoutedCommand.CanExecuteChanged>.  Dieses Ereignis teilt der Befehlsquelle mit, dass sich die Fähigkeit des Befehls zur Ausführung für das aktuelle Befehlsziel möglicherweise geändert hat.  Die Befehlsquelle kann mithilfe der Methode <xref:System.Windows.Input.RoutedCommand> den aktuellen Status von <xref:System.Windows.Input.RoutedCommand.CanExecute%2A> abfragen.  Befehlsquelle sich kann dann selbst deaktivieren, wenn der Befehl nicht ausgeführt werden kann.  Ein Beispiel hierfür ist ein ausgegrautes <xref:System.Windows.Controls.MenuItem>, wenn ein Befehl nicht ausgeführt werden kann.  
+ In der Regel überwacht eine Befehlsquelle das Ereignis <xref:System.Windows.Input.RoutedCommand.CanExecuteChanged>.  Dieses Ereignis teilt der Befehlsquelle mit, dass sich die Fähigkeit des Befehls zur Ausführung für das aktuelle Befehlsziel möglicherweise geändert hat.  Die Befehlsquelle kann mithilfe der Methode <xref:System.Windows.Input.RoutedCommand.CanExecute%2A> den aktuellen Status von <xref:System.Windows.Input.RoutedCommand> abfragen.  Befehlsquelle sich kann dann selbst deaktivieren, wenn der Befehl nicht ausgeführt werden kann.  Ein Beispiel hierfür ist ein ausgegrautes <xref:System.Windows.Controls.MenuItem>, wenn ein Befehl nicht ausgeführt werden kann.  
   
- <xref:System.Windows.Input.InputGesture> kann als Befehlsquelle verwendet werden.  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] und <xref:System.Windows.Input.KeyGesture> sind zwei Arten von Eingabegesten in <xref:System.Windows.Input.MouseGesture>.  Sie können sich <xref:System.Windows.Input.KeyGesture> wie eine Tastenkombination vorstellen, z.B. STRG+C.  <xref:System.Windows.Input.KeyGesture> besteht aus einem <xref:System.Windows.Input.Key> und einer Reihe von <xref:System.Windows.Input.ModifierKeys>.  <xref:System.Windows.Input.MouseGesture> besteht aus einem <xref:System.Windows.Input.MouseAction> und einer optionalen Reihe von <xref:System.Windows.Input.ModifierKeys>.  
+ <xref:System.Windows.Input.InputGesture> kann als Befehlsquelle verwendet werden.  <xref:System.Windows.Input.KeyGesture> und <xref:System.Windows.Input.MouseGesture> sind zwei Arten von Eingabegesten in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  Sie können sich <xref:System.Windows.Input.KeyGesture> wie eine Tastenkombination vorstellen, z.B. STRG+C.  <xref:System.Windows.Input.KeyGesture> besteht aus einem <xref:System.Windows.Input.Key> und einer Reihe von <xref:System.Windows.Input.ModifierKeys>.  <xref:System.Windows.Input.MouseGesture> besteht aus einem <xref:System.Windows.Input.MouseAction> und einer optionalen Reihe von <xref:System.Windows.Input.ModifierKeys>.  
   
  Damit <xref:System.Windows.Input.InputGesture> sich wie eine Befehlsquelle verhält, muss es einem Befehl zugeordnet werden. Hierzu gibt es zwei Möglichkeiten.  Eine Möglichkeit ist die Verwendung von <xref:System.Windows.Input.InputBinding>.  
   
@@ -123,7 +123,7 @@ ms.locfileid: "72004600"
  [!code-csharp[CommandingOverviewSnippets#CommandingOverviewKeyGestureOnCmd](~/samples/snippets/csharp/VS_Snippets_Wpf/CommandingOverviewSnippets/CSharp/Window1.xaml.cs#commandingoverviewkeygestureoncmd)]
  [!code-vb[CommandingOverviewSnippets#CommandingOverviewKeyGestureOnCmd](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CommandingOverviewSnippets/visualbasic/window1.xaml.vb#commandingoverviewkeygestureoncmd)]  
   
-<a name="Command_Binding"></a>   
+<a name="Command_Binding"></a>
 ### <a name="commandbinding"></a>CommandBinding  
  <xref:System.Windows.Input.CommandBinding> ordnet ein Befehl den Ereignishandlern zu, die den Befehl implementieren.  
   
@@ -150,9 +150,9 @@ ms.locfileid: "72004600"
   
  In manchen Situationen wird <xref:System.Windows.Input.CommandBinding> dem Befehlsziel selbst zugeordnet, z.B. bei der Klasse <xref:System.Windows.Controls.TextBox> und den Befehlen <xref:System.Windows.Input.ApplicationCommands.Cut%2A>, <xref:System.Windows.Input.ApplicationCommands.Copy%2A> und <xref:System.Windows.Input.ApplicationCommands.Paste%2A>. In vielen Fällen ist er einfacher, <xref:System.Windows.Input.CommandBinding> dem Vorgänger des Befehlsziels zuzuordnen, z.B. der <xref:System.Windows.Window>-Hauptklasse oder dem Anwendungsobjekt, insbesondere wenn dieselbe <xref:System.Windows.Input.CommandBinding> für mehrere Befehlsziele verwendet werden kann.  Bei Erstellung Ihrer Befehlsinfrastruktur sollten Sie einige Entwurfsentscheidungen in beachten.  
   
-<a name="Commane_Target"></a>   
+<a name="Commane_Target"></a>
 ### <a name="command-target"></a>Befehlsziel  
- Das Befehlsziel ist das Element, für das der Befehl ausgeführt wird.  Bei <xref:System.Windows.Input.RoutedCommand> ist das Befehlsziel das Element, bei dem das Routing von <xref:System.Windows.Input.CommandManager.Executed> und <xref:System.Windows.Input.CommandManager.CanExecute> startet.  Wie bereits erwähnt, ist die Eigenschaft [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] in <xref:System.Windows.Input.ICommandSource.CommandTarget%2A> nur auf <xref:System.Windows.Input.ICommandSource> anwendbar, wenn <xref:System.Windows.Input.ICommand> ein <xref:System.Windows.Input.RoutedCommand> ist.  Wenn <xref:System.Windows.Input.ICommandSource.CommandTarget%2A> auf eine <xref:System.Windows.Input.ICommandSource> festgelegt und der entsprechende Befehl kein <xref:System.Windows.Input.RoutedCommand> ist, wird das Befehlsziel ignoriert.  
+ Das Befehlsziel ist das Element, für das der Befehl ausgeführt wird.  Bei <xref:System.Windows.Input.RoutedCommand> ist das Befehlsziel das Element, bei dem das Routing von <xref:System.Windows.Input.CommandManager.Executed> und <xref:System.Windows.Input.CommandManager.CanExecute> startet.  Wie bereits erwähnt, ist die Eigenschaft <xref:System.Windows.Input.ICommandSource.CommandTarget%2A> in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] nur auf <xref:System.Windows.Input.ICommandSource> anwendbar, wenn <xref:System.Windows.Input.ICommand> ein <xref:System.Windows.Input.RoutedCommand> ist.  Wenn <xref:System.Windows.Input.ICommandSource.CommandTarget%2A> auf eine <xref:System.Windows.Input.ICommandSource> festgelegt und der entsprechende Befehl kein <xref:System.Windows.Input.RoutedCommand> ist, wird das Befehlsziel ignoriert.  
   
  Die Befehlsquelle kann das Befehlsziel explizit festlegen.  Wenn das Befehlsziel nicht definiert ist, wird das Element mit dem Tastaturfokus als Befehlsziel verwendet.  Einer der Vorteile daran, das Elements mit dem Tastaturfokus als Befehlsziel zu verwenden, ist die Tatsache, dass dies dem Anwendungsentwickler erlaubt, dieselbe Befehlsquelle zu verwenden, um einen Befehl für mehrere Ziele aufzurufen, ohne das Befehlsziel nachverfolgen zu müssen.  Wenn <xref:System.Windows.Controls.MenuItem> den Befehl **Paste** in einer Anwendung aufruft, die über ein <xref:System.Windows.Controls.TextBox>- und ein <xref:System.Windows.Controls.PasswordBox>-Steuerelement verfügt, kann das Ziel entweder <xref:System.Windows.Controls.TextBox> oder <xref:System.Windows.Controls.PasswordBox> sein, je nachdem, welches Steuerelement über den Tastaturfokus verfügt.  
   
@@ -163,27 +163,27 @@ ms.locfileid: "72004600"
  [!code-csharp[CommandingOverviewSnippets#CommandingOverviewCommandTargetCodeBehind](~/samples/snippets/csharp/VS_Snippets_Wpf/CommandingOverviewSnippets/CSharp/Window1.xaml.cs#commandingoverviewcommandtargetcodebehind)]
  [!code-vb[CommandingOverviewSnippets#CommandingOverviewCommandTargetCodeBehind](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CommandingOverviewSnippets/visualbasic/window1.xaml.vb#commandingoverviewcommandtargetcodebehind)]  
   
-<a name="Command_Manager"></a>   
+<a name="Command_Manager"></a>
 ### <a name="the-commandmanager"></a>Der CommandManager  
  <xref:System.Windows.Input.CommandManager> stellt eine Reihe von befehlsbezogenen Funktionen bereit.  Er bietet eine Reihe von statischen Methoden zum Hinzufügen und Entfernen der Ereignishandler <xref:System.Windows.Input.CommandManager.PreviewExecuted>, <xref:System.Windows.Input.CommandManager.Executed>, <xref:System.Windows.Input.CommandManager.PreviewCanExecute> und <xref:System.Windows.Input.CommandManager.CanExecute> in und aus einem spezifischen Element.  Er ermöglicht das Registrieren der Objekte <xref:System.Windows.Input.CommandBinding> und <xref:System.Windows.Input.InputBinding> auf einer bestimmten Klasse.  <xref:System.Windows.Input.CommandManager> ermöglicht durch das Ereignis <xref:System.Windows.Input.CommandManager.RequerySuggested> außerdem das Benachrichtigen eines Befehls, wenn er das Ereignis <xref:System.Windows.Input.ICommand.CanExecuteChanged> auslösen soll.  
   
  Die Methode <xref:System.Windows.Input.CommandManager.InvalidateRequerySuggested%2A> zwingt <xref:System.Windows.Input.CommandManager> zum Auslösen des Ereignisses <xref:System.Windows.Input.CommandManager.RequerySuggested>.  Dies ist für Bedingungen nützlich, die einen Befehl nicht deaktivieren oder aktivieren sollen, aber keine Bedingungen sind, die <xref:System.Windows.Input.CommandManager> beachtet.  
   
-<a name="Command_Library"></a>   
+<a name="Command_Library"></a>
 ## <a name="command-library"></a>Befehlsbibliothek  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] stellt eine Reihe von vordefinierten Befehlen bereit.  Die Befehlsbibliothek besteht aus den folgenden Klassen: <xref:System.Windows.Input.ApplicationCommands>, <xref:System.Windows.Input.NavigationCommands>, <xref:System.Windows.Input.MediaCommands>, <xref:System.Windows.Documents.EditingCommands> und <xref:System.Windows.Input.ComponentCommands>.  Diese Klassen stellen Befehle wie die Folgenden bereit: <xref:System.Windows.Input.ApplicationCommands.Cut%2A>, <xref:System.Windows.Input.NavigationCommands.BrowseBack%2A>, <xref:System.Windows.Input.NavigationCommands.BrowseForward%2A>, <xref:System.Windows.Input.MediaCommands.Play%2A>, <xref:System.Windows.Input.MediaCommands.Stop%2A> und <xref:System.Windows.Input.MediaCommands.Pause%2A>.  
   
- Viele dieser Befehle enthalten einen Satz von Standardeingabebindungen.  Wenn Sie z. b. angeben, dass die Anwendung den Kopier Befehl verarbeitet, erhalten Sie automatisch die Tastatur Bindung "STRG + C", und Sie erhalten auch Bindungen für andere Eingabegeräte, z. b. Tablet PC-Stift Gesten und Sprachinformationen.  
+ Viele dieser Befehle enthalten einen Satz von Standardeingabebindungen.  Wenn Sie beispielsweise angeben, dass Ihre Anwendung den Kopierbefehl verarbeitet, erhalten Sie automatisch die Tastaturbindung "STRG+C" Sie erhalten auch Bindungen für andere Eingabegeräte, z. B. Tablet PC-Stiftgesten und Sprachinformationen.  
   
- Wenn Sie in den verschiedenen Bibliotheken mit [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] auf Befehle verweisen, können Sie normalerweise den Klassennamen der Bibliotheksklasse weglassen, die die statische Befehlseigenschaft verfügbar macht. In der Regel sind die Befehlsnamen als Zeichenfolgen eindeutig, und die besitzenden Typen sind vorhanden, um eine logische Gruppierung der Befehle bereitzustellen. Zur Mehrdeutigkeitsvermeidung sind sie nicht erforderlich. Sie können z.B. `Command="Cut"` anstelle des ausführlicheren `Command="ApplicationCommands.Cut"` angeben. Dies ist ein benutzerfreundlicher Mechanismus, der in den [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]-Prozessor für Befehle integriertet ist (genauer gesagt, es ist das Verhalten des Typkonverters <xref:System.Windows.Input.ICommand>, auf den der [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]-Prozessor zur Ladezeit verweist).  
+ Wenn Sie in den verschiedenen Bibliotheken mit [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] auf Befehle verweisen, können Sie normalerweise den Klassennamen der Bibliotheksklasse weglassen, die die statische Befehlseigenschaft verfügbar macht. In der Regel sind die Befehlsnamen als Zeichenfolgen eindeutig, und die besitzenden Typen sind vorhanden, um eine logische Gruppierung der Befehle bereitzustellen. Zur Mehrdeutigkeitsvermeidung sind sie nicht erforderlich. Sie können z.B. `Command="Cut"` anstelle des ausführlicheren `Command="ApplicationCommands.Cut"` angeben. Dies ist ein Komfortmechanismus, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] der im Prozessor für Befehle integriert ist <xref:System.Windows.Input.ICommand>(genauer [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] gesagt, es ist ein Typkonverterverhalten von , auf das der Prozessor zur Ladezeit verweist).  
   
-<a name="creating_commands"></a>   
+<a name="creating_commands"></a>
 ## <a name="creating-custom-commands"></a>Erstellen von benutzerdefinierten Befehlen  
  Wenn die Befehle in den Klassen der Befehlsbibliothek nicht Ihren Bedürfnissen entsprechen, können Sie eigene Befehle erstellen.  Sie können auf zwei Arten und Weisen einen benutzerdefinierten Befehl erstellen.  Die Erste besteht darin, von Grund auf zu beginnen und die Schnittstelle <xref:System.Windows.Input.ICommand> zu implementieren.  Die andere, gängigere Möglichkeit besteht in der Erstellung eines <xref:System.Windows.Input.RoutedCommand> oder <xref:System.Windows.Input.RoutedUICommand>.  
   
  Ein Beispiel für das Erstellen eines benutzerdefinierten <xref:System.Windows.Input.RoutedCommand> finden Sie unter [Create a Custom RoutedCommand Sample (Erstellen eines benutzerdefinierten „RoutedCommand“-Beispiels)](https://github.com/Microsoft/WPF-Samples/tree/master/Input%20and%20Commands/CustomRoutedCommand).  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Windows.Input.RoutedCommand>
 - <xref:System.Windows.Input.CommandBinding>

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 02c596d7-00b0-4e2c-856b-5425158fcefd
 topic_type:
 - apiref
-ms.openlocfilehash: 2c9aa6792885c685195049948a540453b1f5235e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 45d27fca888bdabedf197525c63dbd03af7ba1ee
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73110311"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79179091"
 ---
 # <a name="icordebugappdomaingetname-method"></a>ICorDebugAppDomain::GetName-Methode
 Ruft den Namen der Anwendungsdomäne ab.  
@@ -31,25 +31,25 @@ Ruft den Namen der Anwendungsdomäne ab.
 HRESULT GetName (  
     [in]  ULONG32           cchName,  
     [out] ULONG32           *pcchName,  
-    [out, size_is(cchName), length_is(*pcchName)]   
+    [out, size_is(cchName), length_is(*pcchName)]
          WCHAR              szName[]  
 );  
 ```  
   
 ## <a name="parameters"></a>Parameter  
  `cchName`  
- [in] Die Größe des `szName`-Arrays. Legen Sie diesen Wert auf NULL fest, um diese Methode in den Abfrage Modus zu versetzen.  
+ [in] Die Größe des `szName`-Arrays. Legen Sie diesen Wert auf Null fest, um diese Methode in den Abfragemodus zu versetzen.  
   
  `pcchName`  
- vorgenommen Ein Zeiger auf die Größe des Namens oder die Anzahl der Zeichen, die tatsächlich in `szName`zurückgegeben werden. Im Abfrage Modus kann der Aufrufer mit diesem Wert ermitteln, wie groß ein Puffer ist, der für den Namen zuzuordnen ist.  
+ [out] Ein Zeiger auf die Größe des Namens oder die `szName`Anzahl der tatsächlich in zurückgegebenen Zeichen. Im Abfragemodus lässt diesen Wert den Aufrufer wissen, wie groß ein Puffer für den Namen zuzuweisen ist.  
   
  `szName`  
- vorgenommen Ein Array, in dem der Name der Anwendungsdomäne gespeichert wird.  
+ [out] Ein Array, das den Namen der Anwendungsdomäne speichert.  
   
-## <a name="remarks"></a>Hinweise  
- Ein Debugger ruft die `GetName`-Methode einmal auf, um die Größe eines Puffers zu erhalten, der für den Namen benötigt wird. Der-Debugger ordnet den Puffer zu und ruft dann die-Methode ein zweites Mal auf, um den Puffer zu füllen. Der erste-Befehl, um die Größe des Namens abzurufen, wird als *Abfrage Modus*bezeichnet.  
+## <a name="remarks"></a>Bemerkungen  
+ Ein Debugger `GetName` ruft die Methode einmal auf, um die Größe eines Puffers abzubekommen, der für den Namen benötigt wird. Der Debugger weist den Puffer zu und ruft dann die Methode ein zweites Mal auf, um den Puffer zu füllen. Der erste Aufruf, um die Größe des Namens abzurufen, wird als *Abfragemodus*bezeichnet.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  

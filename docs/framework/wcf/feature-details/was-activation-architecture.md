@@ -2,12 +2,12 @@
 title: WAS-Aktivierungsarchitektur
 ms.date: 03/30/2017
 ms.assetid: 58aeffb0-8f3f-4b40-80c8-15f3f1652fd3
-ms.openlocfilehash: 01c30db1182ece6dd968b69cc4efcaa2d9fabd79
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 67ddcd97ac75ddeb0765c38bb9ce7b5e8f039272
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76737518"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79184251"
 ---
 # <a name="was-activation-architecture"></a>WAS-Aktivierungsarchitektur
 In diesem Thema werden die einzelnen Komponenten des Windows-Prozessaktivierungsdiensts (auch WAS genannt) aufgeführt und erläutert.  
@@ -27,17 +27,17 @@ In diesem Thema werden die einzelnen Komponenten des Windows-Prozessaktivierungs
   
  Wenn WAS eine Arbeitsprozessinstanz aktiviert, werden die erforderlichen Prozessprotokollhandler in den Arbeitsprozess geladen, und mit dem Anwendungs-Manager wird eine Anwendungsdomäne erstellt, in der die Anwendung gehostet wird. Die Anwendungsdomäne lädt sowohl den Anwendungscode als auch die AppDomain-Protokollhandler, die für die von der Anwendung verwendeten Netzwerkprotokolle erforderlich sind.  
   
- ![Screenshot, der die was-Architektur anzeigt.](./media/was-activation-architecture/windows-process-application-service-architecture.gif)  
+ ![Screenshot, der die WAS-Architektur zeigt.](./media/was-activation-architecture/windows-process-application-service-architecture.gif)  
   
 ### <a name="listener-adapters"></a>Listeneradapter  
- Listeneradapter sind einzelne Windows-Dienste, welche für die Netzwerkprotokolle, bei denen sie lauschen, die Netzwerkprotokolllogik zum Empfang von Nachrichten implementieren. In der folgenden Tabelle sind die Listeneradapter für Windows Communication Foundation (WCF)-Protokolle aufgeführt.  
+ Listeneradapter sind einzelne Windows-Dienste, welche für die Netzwerkprotokolle, bei denen sie lauschen, die Netzwerkprotokolllogik zum Empfang von Nachrichten implementieren. In der folgenden Tabelle sind die Listeneradapter für WCF-Protokolle (Windows Communication Foundation) aufgeführt.  
   
 |Dienstname des Listeneradapters|Protocol|Notizen|  
 |-----------------------------------|--------------|-----------|  
-|W3SVC|http|Allgemeine Komponente, die die HTTP-Aktivierung für IIS 7,0 und WCF bereitstellt.|  
+|W3SVC|http|Gemeinsame Komponente, die die HTTP-Aktivierung für IIS 7.0 und WCF bereitstellt.|  
 |NetTcpActivator|net.tcp|Hängt vom NetTcpPortSharing-Dienst ab.|  
 |NetPipeActivator|net.pipe||  
-|NetMsmqActivator|net.msmq|Zur Verwendung mit WCF-basierten Message Queuing Anwendungen.|  
+|NetMsmqActivator|net.msmq|Zur Verwendung mit WCF-basierten Message Queuing-Anwendungen.|  
 |NetMsmqActivator|msmq.formatname|Stellt Abwärtskompatibilität mit vorhandenen Message Queuing-Anwendungen bereit.|  
   
  Listeneradapter für bestimmte Protokolle werden während der Installation in der Datei applicationHost.config registriert. Dies wird im folgenden XML-Beispiel veranschaulicht.  
@@ -46,13 +46,13 @@ In diesem Thema werden die einzelnen Komponenten des Windows-Prozessaktivierungs
 <system.applicationHost>  
     <listenerAdapters>  
         <add name="http" />  
-        <add name="net.tcp"   
+        <add name="net.tcp"
           identity="S-1-5-80-3579033775-2824656752-1522793541-1960352512-462907086" />  
-         <add name="net.pipe"   
+         <add name="net.pipe"
            identity="S-1-5-80-2943419899-937267781-4189664001-1229628381-3982115073" />  
-          <add name="net.msmq"   
+          <add name="net.msmq"
             identity="S-1-5-80-89244771-1762554971-1007993102-348796144-2203111529" />  
-           <add name="msmq.formatname"   
+           <add name="msmq.formatname"
              identity="S-1-5-80-89244771-1762554971-1007993102-348796144-2203111529" />  
     </listenerAdapters>  
 </system.applicationHost>  
@@ -64,13 +64,13 @@ In diesem Thema werden die einzelnen Komponenten des Windows-Prozessaktivierungs
 ```xml  
 <system.web>  
    <protocols>  
-      <add name="net.tcp"   
+      <add name="net.tcp"
         processHandlerType=  
          "System.ServiceModel.WasHosting.TcpProcessProtocolHandler"  
         appDomainHandlerType=  
          "System.ServiceModel.WasHosting.TcpAppDomainProtocolHandler"  
         validate="false" />  
-      <add name="net.pipe"   
+      <add name="net.pipe"
         processHandlerType=  
          "System.ServiceModel.WasHosting.NamedPipeProcessProtocolHandler"  
           appDomainHandlerType=  

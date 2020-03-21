@@ -2,24 +2,24 @@
 title: Reliable Secure Profile
 ms.date: 03/30/2017
 ms.assetid: 921edc41-e91b-40f9-bde9-b6148b633e61
-ms.openlocfilehash: ef4680673f37655603a42f6da8aaf7eceaa01f56
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: 9ddd0d78396bba6712650620e6b46c62f13337e2
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2020
-ms.locfileid: "77094942"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79144213"
 ---
 # <a name="reliable-secure-profile"></a>Reliable Secure Profile
 
-In diesem Beispiel wird veranschaulicht, wie WCF und [zuverlässiges sicheres Profil (Secure Profile, RSP)](http://www.ws-i.org/Profiles/ReliableSecureProfile-1.0.html)verfasst werden. Dieses Beispiel veranschaulicht die Implementierung eines [make-Verbindungs](http://docs.oasis-open.org/ws-rx/wsmc/200702/wsmc-1.0-spec-cs-01.pdf) Kanals, der zusammen mit zuverlässigem Messaging und optional einem sicheren Kanal zum Erstellen einer zuverlässigen sicheren Bindung basierend auf der RSP-Spezifikation zusammengesetzt werden kann.  
+In diesem Beispiel wird veranschaulicht, wie WCF und [Reliable Secure Profile (RSP)](http://www.ws-i.org/Profiles/ReliableSecureProfile-1.0.html)erstellt werden. Dieses Beispiel veranschaulicht die Implementierung eines Make Connection-Kanals, der zusammen mit Reliable Messaging und optional einem sicheren Kanal zusammengesetzt werden kann, um eine reliable Secure Binding basierend auf der RSP-Spezifikation zu erstellen. [Make Connection](http://docs.oasis-open.org/ws-rx/wsmc/200702/wsmc-1.0-spec-cs-01.pdf)  
   
 > [!IMPORTANT]
 > Die Beispiele sind möglicherweise bereits auf dem Computer installiert. Suchen Sie nach dem folgenden Verzeichnis (Standardverzeichnis), bevor Sie fortfahren.  
->   
+>
 > `<InstallDrive>:\WF_WCF_Samples`  
->   
-> Wenn dieses Verzeichnis nicht vorhanden ist, wechseln Sie zu [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF)-Beispiele für .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) , um alle Windows Communication Foundation (WCF) und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele herunterzuladen. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
->   
+>
+> Wenn dieses Verzeichnis nicht vorhanden ist, wechseln Sie zu [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples for .NET Framework 4,](https://www.microsoft.com/download/details.aspx?id=21459) um alle Windows Communication Foundation (WCF) und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele herunterzuladen. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+>
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Channels\ReliableSecureProfile`  
   
 ## <a name="discussion"></a>Diskussion  
@@ -27,11 +27,11 @@ In diesem Beispiel wird veranschaulicht, wie WCF und [zuverlässiges sicheres Pr
   
 ## <a name="to-set-up-build-and-run-the-sample"></a>So können Sie das Beispiel einrichten, erstellen und ausführen  
   
-1. Öffnen Sie die Projekt Mappe **reliablesecureprofile** .  
+1. Öffnen Sie die **ReliableSecureProfile-Lösung.**  
   
-2. Klicken Sie in **Projektmappen-Explorer**mit der rechten Maustaste auf das **Dienst** Projekt, und wählen Sie **Debuggen**und dann **neue Instanz starten** aus. Daraufhin wird der Diensthost gestartet.  
+2. Klicken Sie im **Projektmappen-Explorer**mit der rechten Maustaste auf das **Service-Projekt** , wählen Sie **Debug**, **Neue Instanz** aus dem Kontextmenü starten aus. Daraufhin wird der Diensthost gestartet.  
   
-3. Klicken Sie in **Projektmappen-Explorer**mit der rechten Maustaste auf das **Client** Projekt, wählen Sie **Debuggen**, **neue Instanz starten** aus dem Kontextmenü. Daraufhin wird der Client gestartet.  
+3. Klicken Sie im **Projektmappen-Explorer**mit der rechten Maustaste auf das **Client-Projekt** , wählen Sie **Debug**, **Neue Instanz** aus dem Kontextmenü starten aus. Daraufhin wird der Client gestartet.  
   
 4. Geben Sie eine beliebige Zeichenfolge in die Eingabeaufforderung im Clientkonsolenfenster ein, und drücken Sie die EINGABETASTE. Daraufhin wird die Eingabezeichenfolge an den Dienst gesendet, und dieser berechnet einen Hash der Zeichenfolge.  
   

@@ -8,31 +8,31 @@ helpviewer_keywords:
 - transformations [WPF], about transformations
 - transformations [WPF]
 - graphics [WPF], transformations
-- transform classes [WPF], 2-D
+- transform classes [WPF], 2D
 - scaling objects [WPF]
 - translating objects [WPF]
-- 2-D transform classes
+- 2D transform classes
 - rotating objects [WPF]
 - Transforms [WPF]
 - Transforms [WPF], about Transforms
 ms.assetid: 712b543f-d8b2-4dcf-ba2c-f7921c61c6fd
-ms.openlocfilehash: a0b5268d1c7e319a6144a7d551dca45bdc3e64aa
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 26956b8ae692d6092a1c81643b94d05e297ef130
+ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61925993"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80111906"
 ---
 # <a name="transformations"></a>Transformationen
-Transformationen werden verwendet, um zu drehen, skalieren, übersetzen oder neigen <xref:System.Windows.FrameworkElement> Objekte.  
+Transformationen werden zum Drehen, Skalieren, <xref:System.Windows.FrameworkElement> Übersetzen oder Verzerren von Objekten verwendet.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Übersicht über Transformationen](transforms-overview.md)  
- [Themen zu Vorgehensweisen](transformations-how-to-topics.md)  
+ [How-to-Themen](transformations-how-to-topics.md)  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Windows.Media.Transform>
-- [Grafiken und Multimedia](index.md)
+- [Grafik und Multimedia](index.md)
 - [Übersicht über das WPF-Grafikrendering](wpf-graphics-rendering-overview.md)
 - [Layout](../advanced/layout.md)

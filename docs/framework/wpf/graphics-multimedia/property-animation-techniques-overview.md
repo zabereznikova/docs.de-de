@@ -9,21 +9,21 @@ helpviewer_keywords:
 - animation [WPF], properties [WPF], methods for
 - properties [WPF], methods for animating
 ms.assetid: 74f61413-f8c0-4e75-bf04-951886426c8b
-ms.openlocfilehash: ebee350f69b5c5e4f9d38c452b9c87bf003528ee
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0b4bf6d4963f32ad83f762fce73c805197ff9c9b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62002260"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79181845"
 ---
 # <a name="property-animation-techniques-overview"></a>Übersicht über die Verfahren zur Animation von Eigenschaften
 Dieses Thema beschreibt die unterschiedlichen Ansätze zum Animieren von Eigenschaften: Storyboards, lokale Animationen, Uhren und Pro-Frame-Animationen.  
   
-<a name="prerequisites"></a>   
-## <a name="prerequisites"></a>Vorraussetzungen  
+<a name="prerequisites"></a>
+## <a name="prerequisites"></a>Voraussetzungen  
  Als Voraussetzung für dieses Thema sollten Sie mit den grundlegenden Animationsfunktionen unter [Übersicht über Animationen](animation-overview.md) vertraut sein.  
   
-<a name="summary"></a>   
+<a name="summary"></a>
 ## <a name="different-ways-to-animate"></a>Verschiedene Methoden zum Animieren  
  Da viele unterschiedliche Szenarien zum Animieren von Eigenschaften vorhanden sind, bietet [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] mehrere Ansätze zum Animieren von Eigenschaften.  
   
@@ -31,80 +31,80 @@ Dieses Thema beschreibt die unterschiedlichen Ansätze zum Animieren von Eigensc
   
 |Animationsmethode|Szenarien|Unterstützt XAML|Interaktiv steuerbar|  
 |-------------------------|---------------|-------------------|--------------------------------|  
-|Storyboard-Animation|Pro Instanz, <xref:System.Windows.Style>, <xref:System.Windows.Controls.ControlTemplate>, <xref:System.Windows.DataTemplate>|Ja|Ja|  
-|Lokale Animation|Pro Instanz|Nein|Nein|  
-|Uhranimation|Pro Instanz|Nein|Ja|  
-|Pro-Frame-Animation|Pro Instanz|Nein|Nicht zutreffend|  
+|Storyboard-Animation|Pro Instanz, <xref:System.Windows.Style> <xref:System.Windows.Controls.ControlTemplate>, ,<xref:System.Windows.DataTemplate>|Ja|Ja|  
+|Lokale Animation|Pro Instanz|Nein |Nein |  
+|Uhranimation|Pro Instanz|Nein |Ja|  
+|Pro-Frame-Animation|Pro Instanz|Nein |–|  
   
-<a name="storyboard_animations"></a>   
+<a name="storyboard_animations"></a>
 ## <a name="storyboard-animations"></a>Storyboard-Animationen  
- Verwenden einer <xref:System.Windows.Media.Animation.Storyboard> soll beim Definieren und Anwenden von Animationen in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]interaktiv steuern von Animationen, nach der sie beginnen, erstellen eine komplexe Struktur von Animationen oder Animieren in einem <xref:System.Windows.Style>, <xref:System.Windows.Controls.ControlTemplate> oder <xref:System.Windows.DataTemplate>. Für ein Objekt in einem animiert werden eine <xref:System.Windows.Media.Animation.Storyboard>, muss ein <xref:System.Windows.FrameworkElement> oder <xref:System.Windows.FrameworkContentElement>, oder es muss werden verwendet, um eine <xref:System.Windows.FrameworkElement> oder <xref:System.Windows.FrameworkContentElement>. Weitere Einzelheiten finden Sie unter [Übersicht über Storyboards](storyboards-overview.md).  
+ Verwenden <xref:System.Windows.Media.Animation.Storyboard> Sie eine, wenn Sie Ihre [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]Animationen in definieren und anwenden möchten, die Animationen nach <xref:System.Windows.Style> <xref:System.Windows.Controls.ControlTemplate> dem <xref:System.Windows.DataTemplate>Start interaktiv steuern, eine komplexe Animationsstruktur erstellen oder in einem oder animieren möchten. Damit ein Objekt von <xref:System.Windows.Media.Animation.Storyboard>einem animiert <xref:System.Windows.FrameworkElement> <xref:System.Windows.FrameworkContentElement>werden soll, muss es <xref:System.Windows.FrameworkElement> ein <xref:System.Windows.FrameworkContentElement>oder sein, oder es muss zum Festlegen einer oder verwendet werden. Weitere Einzelheiten finden Sie unter [Übersicht über Storyboards](storyboards-overview.md).  
   
- Ein <xref:System.Windows.Media.Animation.Storyboard> ist ein spezieller Typ des Containers <xref:System.Windows.Media.Animation.Timeline> , die Zielinformationen für die darin enthaltenen Animationen bereitstellt. Animieren mit einem <xref:System.Windows.Media.Animation.Storyboard>, Sie die folgenden drei Schritte ausführen.  
+ A <xref:System.Windows.Media.Animation.Storyboard> ist ein spezieller Containertyp, <xref:System.Windows.Media.Animation.Timeline> der Zielinformationen für die darin enthaltenen Animationen bereitstellt. Um mit <xref:System.Windows.Media.Animation.Storyboard>einem zu animieren, führen Sie die folgenden drei Schritte aus.  
   
 1. Deklarieren Sie eine <xref:System.Windows.Media.Animation.Storyboard> und eine oder mehrere Animationen.  
   
-2. Verwenden der <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A> und <xref:System.Windows.Media.Animation.Storyboard.TargetProperty> angefügte Eigenschaften an das Zielobjekt und Eigenschaft der einzelnen Animationen.  
+2. Verwenden <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A> Sie <xref:System.Windows.Media.Animation.Storyboard.TargetProperty> die und angehängten Eigenschaften, um das Zielobjekt und die Eigenschaft jeder Animation anzugeben.  
   
-3. (Nur Code) Definieren einer <xref:System.Windows.NameScope> für eine <xref:System.Windows.FrameworkElement> oder <xref:System.Windows.FrameworkContentElement>. Registrieren Sie die Namen der Objekte, die mit dem Animieren <xref:System.Windows.FrameworkElement> oder <xref:System.Windows.FrameworkContentElement>.  
+3. (nur Code) Definieren <xref:System.Windows.NameScope> Sie <xref:System.Windows.FrameworkElement> eine <xref:System.Windows.FrameworkContentElement>für a oder . Registrieren Sie die Namen der <xref:System.Windows.FrameworkElement> Objekte, die mit diesem oder <xref:System.Windows.FrameworkContentElement>animiert werden sollen.  
   
-4. Beginnen der <xref:System.Windows.Media.Animation.Storyboard>.  
+4. Beginnen <xref:System.Windows.Media.Animation.Storyboard>Sie die .  
   
- Ab einem <xref:System.Windows.Media.Animation.Storyboard> Animationen auf die Eigenschaften, die sie animieren angewendet, und startet sie. Es gibt zwei Möglichkeiten, um zu beginnen eine <xref:System.Windows.Media.Animation.Storyboard>: können Sie die <xref:System.Windows.Media.Animation.Storyboard.Begin%2A> Methode bereitgestellt wird, durch die <xref:System.Windows.Media.Animation.Storyboard> -Klasse, oder Sie können eine <xref:System.Windows.Media.Animation.BeginStoryboard> Aktion. Die einzige Möglichkeit zur Animation in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] ist die Verwendung einer <xref:System.Windows.Media.Animation.BeginStoryboard> Aktion. Ein <xref:System.Windows.Media.Animation.BeginStoryboard> Aktion kann verwendet werden, eine <xref:System.Windows.EventTrigger>, Eigenschaft <xref:System.Windows.Trigger>, oder ein <xref:System.Windows.DataTrigger>.  
+ Wenn <xref:System.Windows.Media.Animation.Storyboard> Sie eine beginnen, werden Animationen auf die Eigenschaften angewendet, die sie animieren, und sie gestartet. Es gibt zwei Möglichkeiten, <xref:System.Windows.Media.Animation.Storyboard>eine zu <xref:System.Windows.Media.Animation.Storyboard.Begin%2A> beginnen: <xref:System.Windows.Media.Animation.Storyboard> Sie können die von <xref:System.Windows.Media.Animation.BeginStoryboard> der Klasse bereitgestellte Methode verwenden, oder Sie können eine Aktion verwenden. Die einzige Möglichkeit, [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] eine Aktion <xref:System.Windows.Media.Animation.BeginStoryboard> zu verwenden, besteht darin, eine Aktion zu verwenden. Eine <xref:System.Windows.Media.Animation.BeginStoryboard> Aktion kann in <xref:System.Windows.EventTrigger>einer <xref:System.Windows.Trigger>, <xref:System.Windows.DataTrigger>Eigenschaft oder einer verwendet werden.  
   
- Die folgende Tabelle zeigt die unterschiedlichen Stellen, in dem jede <xref:System.Windows.Media.Animation.Storyboard> beginnen Technik wird unterstützt: pro Instanz, Stil, Steuerelementvorlage und Datenvorlage.  
+ Die folgende Tabelle zeigt die <xref:System.Windows.Media.Animation.Storyboard> verschiedenen Orte, an denen jede Anfangstechnik unterstützt wird: pro Instanz, Stil, Steuerelementvorlage und Datenvorlage.  
   
-|Storyboard wird gestartet mit...|Pro Instanz|Stil|Steuerelementvorlage|Datenvorlage|Beispiel|  
+|Storyboard wird gestartet mit...|Pro Instanz|Style|Steuerelementvorlage|Datenvorlage|Beispiel|  
 |--------------------------------|-------------------|-----------|----------------------|-------------------|-------------|  
-|<xref:System.Windows.Media.Animation.BeginStoryboard> und ein <xref:System.Windows.EventTrigger>|Ja|Ja|Ja|Ja|[Animieren einer Eigenschaft unter Verwendung eines Storyboards](how-to-animate-a-property-by-using-a-storyboard.md)|  
-|<xref:System.Windows.Media.Animation.BeginStoryboard> und eine Eigenschaft <xref:System.Windows.Trigger>|Nein|Ja|Ja|Ja|[Auslösen einer Animation, wenn sich eine Eigenschaft ändert](how-to-trigger-an-animation-when-a-property-value-changes.md)|  
-|<xref:System.Windows.Media.Animation.BeginStoryboard> und ein <xref:System.Windows.DataTrigger>|Nein|Ja|Ja|Ja|[Vorgehensweise: Auslösen einer Animation bei Änderung von Daten](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/aa970679(v=vs.90))|  
-|<xref:System.Windows.Media.Animation.Storyboard.Begin%2A>-Methode|Ja|Nein|Nein|Nein|[Animieren einer Eigenschaft unter Verwendung eines Storyboards](how-to-animate-a-property-by-using-a-storyboard.md)|  
+|<xref:System.Windows.Media.Animation.BeginStoryboard>und ein<xref:System.Windows.EventTrigger>|Ja|Ja|Ja|Ja|[Animieren einer Eigenschaft unter Verwendung eines Storyboards](how-to-animate-a-property-by-using-a-storyboard.md)|  
+|<xref:System.Windows.Media.Animation.BeginStoryboard>und eine Immobilie<xref:System.Windows.Trigger>|Nein |Ja|Ja|Ja|[Auslösen einer Animation, wenn sich eine Eigenschaft ändert](how-to-trigger-an-animation-when-a-property-value-changes.md)|  
+|<xref:System.Windows.Media.Animation.BeginStoryboard>und ein<xref:System.Windows.DataTrigger>|Nein |Ja|Ja|Ja|[Vorgehensweise: Auslösen einer Animation bei Änderung eines Eigenschaftswerts](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/aa970679(v=vs.90))|  
+|<xref:System.Windows.Media.Animation.Storyboard.Begin%2A>-Methode|Ja|Nein |Nein |Nein |[Animieren einer Eigenschaft unter Verwendung eines Storyboards](how-to-animate-a-property-by-using-a-storyboard.md)|  
   
- Weitere Informationen zu <xref:System.Windows.Media.Animation.Storyboard> Objekten finden Sie die [Übersicht über Storyboards](storyboards-overview.md).  
+ Weitere Informationen <xref:System.Windows.Media.Animation.Storyboard> zu Objekten finden Sie in der [Storyboards-Übersicht](storyboards-overview.md).  
   
 ## <a name="local-animations"></a>Lokale Animationen  
- Lokale Animationen bieten eine bequeme Möglichkeit, eine Abhängigkeitseigenschaft eines animieren <xref:System.Windows.Media.Animation.Animatable> Objekt. Verwenden Sie lokale Animationen, wenn Sie eine einzelne Animation auf eine Eigenschaft anwenden möchten und Sie die Animation nach dem Start nicht interaktiv steuern müssen. Im Gegensatz zu einem <xref:System.Windows.Media.Animation.Storyboard> Animation, die eine lokale Animation kann eine Animieren eines Objekts, die zugeordnet wird keine <xref:System.Windows.FrameworkElement> oder <xref:System.Windows.FrameworkContentElement>. Müssen Sie auch nicht definieren eine <xref:System.Windows.NameScope> für diese Art von Animation.  
+ Lokale Animationen bieten eine bequeme Möglichkeit, <xref:System.Windows.Media.Animation.Animatable> eine Abhängigkeitseigenschaft eines beliebigen Objekts zu animieren. Verwenden Sie lokale Animationen, wenn Sie eine einzelne Animation auf eine Eigenschaft anwenden möchten und Sie die Animation nach dem Start nicht interaktiv steuern müssen. Im <xref:System.Windows.Media.Animation.Storyboard> Gegensatz zu einer Animation kann eine lokale Animation ein <xref:System.Windows.FrameworkElement> Objekt <xref:System.Windows.FrameworkContentElement>animieren, das nicht mit einer oder einer verknüpft ist. Sie müssen auch keine <xref:System.Windows.NameScope> für diesen Animationstyp definieren.  
   
  Lokale Animationen können nur in Code verwendet und können nicht in Stilen, Steuerelementvorlagen oder Datenvorlagen definiert werden. Eine lokale Animation kann nicht interaktiv gesteuert werden, nachdem sie gestartet wurde.  
   
  Zum Animieren mithilfe einer lokalen Animation führen Sie folgende Schritte aus.  
   
-1. Erstellen Sie eine <xref:System.Windows.Media.Animation.AnimationTimeline> Objekt.  
+1. Erstellen <xref:System.Windows.Media.Animation.AnimationTimeline> Sie ein Objekt.  
   
-2. Verwenden der <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A> Methode des Objekts, das zu animierende zum Anwenden der <xref:System.Windows.Media.Animation.AnimationTimeline> der Eigenschaft, die Sie angeben.  
+2. Verwenden <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A> Sie die Methode des Objekts, <xref:System.Windows.Media.Animation.AnimationTimeline> das Sie animieren möchten, um die auf die angegebene Eigenschaft anzuwenden.  
   
- Das folgende Beispiel zeigt, wie Sie die Breite und Hintergrundfarbe Farbe Animieren einer <xref:System.Windows.Controls.Button>.  
+ Das folgende Beispiel zeigt, wie die Breite <xref:System.Windows.Controls.Button>und Hintergrundfarbe einer animiert wird.  
   
  [!code-cpp[animateproperty#11](~/samples/snippets/cpp/VS_Snippets_Wpf/animateproperty/CPP/LocalAnimationExample.cpp#11)]
  [!code-csharp[animateproperty#11](~/samples/snippets/csharp/VS_Snippets_Wpf/animateproperty/CSharp/LocalAnimationExample.cs#11)]
  [!code-vb[animateproperty#11](~/samples/snippets/visualbasic/VS_Snippets_Wpf/animateproperty/VisualBasic/LocalAnimationExample.vb#11)]  
   
 ## <a name="clock-animations"></a>Uhranimationen  
- Verwendung <xref:System.Windows.Media.MediaPlayer.Clock%2A> Objekte ohne animiert werden soll eine <xref:System.Windows.Media.Animation.Storyboard> und komplexe zeitsteuerungsbäume erstellen oder Animationen nach ihrem start interaktiv steuern möchten. Können Sie uhrobjekten eine Abhängigkeitseigenschaft eines animieren <xref:System.Windows.Media.Animation.Animatable> Objekt.  
+ Verwenden <xref:System.Windows.Media.MediaPlayer.Clock%2A> Sie Objekte, wenn Sie <xref:System.Windows.Media.Animation.Storyboard> animieren möchten, ohne a zu verwenden, und Sie möchten komplexe Zeitpläne erstellen oder Animationen interaktiv steuern, nachdem sie gestartet wurden. Sie können Clock-Objekte verwenden, um <xref:System.Windows.Media.Animation.Animatable> eine Abhängigkeitseigenschaft eines beliebigen Objekts zu animieren.  
   
- Sie können keine <xref:System.Windows.Media.Animation.Clock> Objekte direkt zum Animieren in Stilen, steuern, Vorlagen oder Datenvorlagen. (Das Animations- und Zeitsteuerungssystem verwendet <xref:System.Windows.Media.Animation.Clock> Objekte animieren in Stilen, Steuerelementvorlagen, und Datenvorlagen, aber sie müssen diese erstellen <xref:System.Windows.Media.Animation.Clock> Objekte für Sie aus einer <xref:System.Windows.Media.Animation.Storyboard>. Weitere Informationen über die Beziehung zwischen <xref:System.Windows.Media.Animation.Storyboard> Objekte und <xref:System.Windows.Media.Animation.Clock> Objekten finden Sie die [Animation und zeitliche Steuerung Systemübersicht](animation-and-timing-system-overview.md).)  
+ Sie können <xref:System.Windows.Media.Animation.Clock> Objekte nicht direkt zum Animieren in Stilen, Steuerelementvorlagen oder Datenvorlagen verwenden. (Das Animations- und Timingsystem verwendet <xref:System.Windows.Media.Animation.Clock> tatsächlich Objekte zum Animieren in Stilen, <xref:System.Windows.Media.Animation.Clock> Steuerelementvorlagen und <xref:System.Windows.Media.Animation.Storyboard>Datenvorlagen, muss diese Objekte jedoch aus einer für Sie erstellen. Weitere Informationen zur Beziehung <xref:System.Windows.Media.Animation.Storyboard> zwischen <xref:System.Windows.Media.Animation.Clock> Objekten und Objekten finden Sie unter [Animation und Timing Systemoverview](animation-and-timing-system-overview.md).)  
   
- Anwenden eine einzelnen <xref:System.Windows.Media.Animation.Clock> auf eine Eigenschaft, führen Sie die folgenden Schritte aus.  
+ Um eine <xref:System.Windows.Media.Animation.Clock> einzelne Eigenschaft auf eine Eigenschaft anzuwenden, führen Sie die folgenden Schritte aus.  
   
-1. Erstellen Sie eine <xref:System.Windows.Media.Animation.AnimationTimeline> Objekt.  
+1. Erstellen <xref:System.Windows.Media.Animation.AnimationTimeline> Sie ein Objekt.  
   
-2. Verwenden der <xref:System.Windows.Media.Animation.AnimationTimeline.CreateClock%2A> Methode der <xref:System.Windows.Media.Animation.AnimationTimeline> zum Erstellen einer <xref:System.Windows.Media.Animation.AnimationClock>.  
+2. Verwenden <xref:System.Windows.Media.Animation.AnimationTimeline.CreateClock%2A> Sie die <xref:System.Windows.Media.Animation.AnimationTimeline> Methode <xref:System.Windows.Media.Animation.AnimationClock>der zum Erstellen einer .  
   
-3. Verwenden der <xref:System.Windows.Media.Animation.Animatable.ApplyAnimationClock%2A> Methode des Objekts, das zu animierende zum Anwenden der <xref:System.Windows.Media.Animation.AnimationClock> der Eigenschaft, die Sie angeben.  
+3. Verwenden <xref:System.Windows.Media.Animation.Animatable.ApplyAnimationClock%2A> Sie die Methode des Objekts, <xref:System.Windows.Media.Animation.AnimationClock> das Sie animieren möchten, um die auf die angegebene Eigenschaft anzuwenden.  
   
- Das folgende Beispiel zeigt, wie Sie erstellen eine <xref:System.Windows.Media.Animation.AnimationClock> und auf zwei ähnliche Eigenschaften angewendet.  
+ Das folgende Beispiel zeigt, <xref:System.Windows.Media.Animation.AnimationClock> wie Sie ein erstellen und es auf zwei ähnliche Eigenschaften anwenden.  
   
  [!code-csharp[timingbehaviors_procedural_snip#GraphicsMMCreateAnimationClockWholeClass](~/samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_procedural_snip/CSharp/AnimationClockExample.cs#graphicsmmcreateanimationclockwholeclass)]
  [!code-vb[timingbehaviors_procedural_snip#GraphicsMMCreateAnimationClockWholeClass](~/samples/snippets/visualbasic/VS_Snippets_Wpf/timingbehaviors_procedural_snip/visualbasic/animationclockexample.vb#graphicsmmcreateanimationclockwholeclass)]  
   
  Um eine Zeitsteuerungsstruktur zu erstellen und zum Animieren von Eigenschaften zu verwenden, führen Sie die folgenden Schritte aus.  
   
-1. Verwendung <xref:System.Windows.Media.Animation.ParallelTimeline> und <xref:System.Windows.Media.Animation.AnimationTimeline> Objekte zum Erstellen einer zeitsteuerungsstruktur.  
+1. Verwenden <xref:System.Windows.Media.Animation.ParallelTimeline> <xref:System.Windows.Media.Animation.AnimationTimeline> Sie und Objekte, um die Zeitpläne zu erstellen.  
   
-2. Verwenden der <xref:System.Windows.Media.Animation.TimelineGroup.CreateClock%2A> des Stamms <xref:System.Windows.Media.Animation.ParallelTimeline> zum Erstellen einer <xref:System.Windows.Media.Animation.ClockGroup>.  
+2. Verwenden <xref:System.Windows.Media.Animation.TimelineGroup.CreateClock%2A> Sie die <xref:System.Windows.Media.Animation.ParallelTimeline> des <xref:System.Windows.Media.Animation.ClockGroup>Stamms, um eine zu erstellen.  
   
-3. Durchlaufen der <xref:System.Windows.Media.Animation.ClockGroup.Children%2A> von der <xref:System.Windows.Media.Animation.ClockGroup> und Anwenden von untergeordneten <xref:System.Windows.Media.Animation.Clock> Objekte. Für jede <xref:System.Windows.Media.Animation.AnimationClock> untergeordneten, verwenden die <xref:System.Windows.Media.Animation.Animatable.ApplyAnimationClock%2A> Methode des Objekts, das Sie animieren, die zum anwenden möchten die <xref:System.Windows.Media.Animation.AnimationClock> der Eigenschaft, die Sie angeben  
+3. Iterieren Sie <xref:System.Windows.Media.Animation.ClockGroup.Children%2A> durch <xref:System.Windows.Media.Animation.ClockGroup> die der <xref:System.Windows.Media.Animation.Clock> und wenden Sie ihre untergeordneten Objekte an. Verwenden <xref:System.Windows.Media.Animation.AnimationClock> Sie für <xref:System.Windows.Media.Animation.Animatable.ApplyAnimationClock%2A> jedes untergeordnete Element die Methode des <xref:System.Windows.Media.Animation.AnimationClock> Objekts, das Sie animieren möchten, um die auf die angegebene Eigenschaft anzuwenden.  
   
  Weitere Informationen zu Uhrobjekten finden Sie unter [Übersicht über das Animations- und Zeitsteuerungssystem](animation-and-timing-system-overview.md).  
   
@@ -113,15 +113,15 @@ Dieses Thema beschreibt die unterschiedlichen Ansätze zum Animieren von Eigensc
   
  Pro-Frame-Animationen können nicht innerhalb der Stile, Steuerelementvorlagen oder Datenvorlagen definiert werden.  
   
- Um einen Frame für Frame zu animieren, registrieren Sie sich für die <xref:System.Windows.Media.CompositionTarget.Rendering> -Ereignis des Objekts, das die Objekte enthält, Sie animieren möchten. Diese Ereignishandlermethode wird einmal pro Frame aufgerufen. Immer wenn [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] die beibehaltenen Renderingdaten in der visuellen Struktur für die Kompositionsstruktur marshallt, wird die Ereignishandlermethode aufgerufen.  
+ Um Frame-by-Frame zu animieren, registrieren Sie sich für das <xref:System.Windows.Media.CompositionTarget.Rendering> Ereignis des Objekts, das die Objekte enthält, die Sie animieren möchten. Diese Ereignishandlermethode wird einmal pro Frame aufgerufen. Immer wenn [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] die beibehaltenen Renderingdaten in der visuellen Struktur für die Kompositionsstruktur marshallt, wird die Ereignishandlermethode aufgerufen.  
   
  Führen Sie im Ereignishandler alle für den Animationseffekt erforderlichen Berechnungen durch, und legen Sie die Eigenschaften der Objekte fest, die Sie mit diesen Werten animieren möchten.  
   
- Um die Präsentationszeit für den aktuellen Frame, erhalten die <xref:System.EventArgs> zugeordnete Ereignis umgewandelt werden kann <xref:System.Windows.Media.RenderingEventArgs>, bieten eine <xref:System.Windows.Media.RenderingEventArgs.RenderingTime%2A> -Eigenschaft, die Sie verwenden können, um den aktuellen Frame abzurufen des rendering-Zeit.  
+ Um die Präsentationszeit für den <xref:System.EventArgs> aktuellen Frame zu erhalten, kann der diesem Ereignis zugeordnete als <xref:System.Windows.Media.RenderingEventArgs>, die eine <xref:System.Windows.Media.RenderingEventArgs.RenderingTime%2A> Eigenschaft bereitstellen, die Sie verwenden können, um die Renderzeit des aktuellen Frames abzuerhalten.  
   
- Weitere Informationen finden Sie unter den <xref:System.Windows.Media.CompositionTarget.Rendering> Seite.  
+ Weitere Informationen finden <xref:System.Windows.Media.CompositionTarget.Rendering> Sie auf der Seite.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Übersicht über Animationen](animation-overview.md)
 - [Übersicht über Storyboards](storyboards-overview.md)

@@ -1,16 +1,16 @@
 ---
-title: 'Vorgehensweise: Erstellen eines Dienstendpunkts in einer Konfiguration'
+title: 'Gewusst wie: Erstellen eines Dienstendpunkts in einer Konfiguration'
 ms.date: 06/16/2016
 ms.assetid: f474e25d-2a27-4f31-84c5-395c442b8e70
-ms.openlocfilehash: 63a40576b805952197cec5af2f89a5dc4b5d3545
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9687d9537d6f166a02b79261743050168f677261
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61787646"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79185001"
 ---
-# <a name="how-to-create-a-service-endpoint-in-configuration"></a>Vorgehensweise: Erstellen eines Dienstendpunkts in einer Konfiguration
-Endpunkte ermöglichen Clients den Zugriff auf die Funktionalität, die ein Windows Communication Foundation (WCF)-Dienst bietet. Sie können einen oder mehrere Endpunkte mit einer Kombination relativer und absoluter Endpunktadressen für den Dienst definieren. Wenn Sie keine Dienstendpunkte definieren, stellt die Runtime standardmäßig einige Endpunkte bereit. In diesem Thema wird beschrieben, wie Endpunkte, die sowohl relative als auch absolute Adressen enthalten, mit einer Konfigurationsdatei hinzugefügt werden.  
+# <a name="how-to-create-a-service-endpoint-in-configuration"></a>Gewusst wie: Erstellen eines Dienstendpunkts in einer Konfiguration
+Endpunkte bieten Clients Zugriff auf die Funktionen, die ein Windows Communication Foundation (WCF)-Dienst bietet. Sie können einen oder mehrere Endpunkte mit einer Kombination relativer und absoluter Endpunktadressen für den Dienst definieren. Wenn Sie keine Dienstendpunkte definieren, stellt die Runtime standardmäßig einige Endpunkte bereit. In diesem Thema wird beschrieben, wie Endpunkte, die sowohl relative als auch absolute Adressen enthalten, mit einer Konfigurationsdatei hinzugefügt werden.  
   
 ## <a name="example"></a>Beispiel  
  Die folgende Dienstkonfiguration gibt eine Basisadresse und fünf Endpunkte an.  
@@ -73,7 +73,7 @@ Endpunkte ermöglichen Clients den Zugriff auf die Funktionalität, die ein Wind
  Die Basisadresse wird mit dem `add`-Element unter "Dienst/Host/baseAddresses" angegeben, wie im folgenden Beispiel dargestellt.  
   
 ```xml  
-<service   
+<service
     name="Microsoft.ServiceModel.Samples.CalculatorService">  
   <host>  
     <baseAddresses>  
@@ -83,16 +83,16 @@ Endpunkte ermöglichen Clients den Zugriff auf die Funktionalität, die ein Wind
 ```  
   
 ## <a name="example"></a>Beispiel  
- Die erste Endpunktdefinition, die im folgenden Beispiel gezeigt wird, gibt eine relative Adresse an. Dies bedeutet, dass die Endpunktadresse eine Kombination aus der Basisadresse und der relativen Adresse nach den Regelen der Uniform Resource Identifier (URI)-Zusammensetzung ist. Die relative Adresse ist leer (""), folglich ist die Endpunktadresse gleich der Basisadresse. Die tatsächliche Endpunktadresse lautet `http://localhost:8000/servicemodelsamples/service`.  
+ Die erste Endpunktdefinition, die im folgenden Beispiel gezeigt wird, gibt eine relative Adresse an. Dies bedeutet, dass die Endpunktadresse eine Kombination aus der Basisadresse und der relativen Adresse nach den Regelen der Uniform Resource Identifier (URI)-Zusammensetzung ist. Die relative Adresse ist leer (""), folglich ist die Endpunktadresse gleich der Basisadresse. Die tatsächliche Endpunktadresse ist `http://localhost:8000/servicemodelsamples/service`.  
   
 ```xml  
-<endpoint address=""   
+<endpoint address=""
     binding="wsHttpBinding"  
     contract="Microsoft.ServiceModel.Samples.ICalculator" />  
 ```  
   
 ## <a name="example"></a>Beispiel  
- Die zweite Endpunktdefinition gibt ebenfalls eine relative Adresse an, wie in der folgenden Beispielkonfiguration dargestellt. Die relative Adresse "test" ist an die Basisadresse angefügt. Die tatsächliche Endpunktadresse lautet `http://localhost:8000/servicemodelsamples/service/test`.  
+ Die zweite Endpunktdefinition gibt ebenfalls eine relative Adresse an, wie in der folgenden Beispielkonfiguration dargestellt. Die relative Adresse "test" ist an die Basisadresse angefügt. Die tatsächliche Endpunktadresse ist `http://localhost:8000/servicemodelsamples/service/test`.  
   
 ```xml  
 <endpoint address="/test"  
@@ -101,7 +101,7 @@ Endpunkte ermöglichen Clients den Zugriff auf die Funktionalität, die ein Wind
 ```  
   
 ## <a name="example"></a>Beispiel  
- Die dritte Endpunktdefinition gibt eine absolute Adresse an, wie in der folgenden Beispielkonfiguration dargestellt. Die Basisadresse spielt bei der Adresse keine Rolle. Die tatsächliche Endpunktadresse lautet `http://localhost:8001/hello/servicemodelsamples`.  
+ Die dritte Endpunktdefinition gibt eine absolute Adresse an, wie in der folgenden Beispielkonfiguration dargestellt. Die Basisadresse spielt bei der Adresse keine Rolle. Die tatsächliche Endpunktadresse ist `http://localhost:8001/hello/servicemodelsamples`.  
   
 ```xml  
 <endpoint address="http://localhost:8001/hello/servicemodelsamples"  

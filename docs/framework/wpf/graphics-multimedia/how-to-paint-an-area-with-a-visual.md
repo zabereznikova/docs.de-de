@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Zeichnen eines Bereichs mit einem visuellen Element'
+title: 'Gewusst wie: Zeichnen eines Bereichs mit einem visuellen Element'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,17 +9,17 @@ helpviewer_keywords:
 - visuals [WPF], painting with
 - brushes [WPF], painting with visuals
 ms.assetid: 35f92996-1d03-4542-acc4-3469dcf09492
-ms.openlocfilehash: b5376085dc36549cd2d3d72835ec291454124267
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 793a14f0d395a60bf73ca7dc173b82237a139f35
+ms.sourcegitcommit: 515469828d0f040e01bde01df6b8e4eb43630b06
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61921705"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78849366"
 ---
-# <a name="how-to-paint-an-area-with-a-visual"></a>Vorgehensweise: Zeichnen eines Bereichs mit einem visuellen Element
-Dieses Beispiel zeigt, wie Sie mit der <xref:System.Windows.Media.VisualBrush> -Klasse zum Zeichnen eines Bereichs mit einem <xref:System.Windows.Media.Visual>.  
+# <a name="how-to-paint-an-area-with-a-visual"></a>Gewusst wie: Zeichnen eines Bereichs mit einem visuellen Element
+In diesem Beispiel wird <xref:System.Windows.Media.VisualBrush> gezeigt, wie die <xref:System.Windows.Media.Visual>Klasse zum Zeichnen eines Bereichs mit einer verwendet wird.  
   
- Im folgenden Beispiel werden mehrere Steuerelemente und ein Bereich als Hintergrund eines Rechtecks verwendet.  
+ Im folgenden Beispiel werden mehrere Steuerelemente und ein Bedienfeld als Hintergrund eines Rechtecks verwendet.  
   
 ## <a name="example"></a>Beispiel  
  [!code-xaml[BrushOverviewExamples_snip#GraphicsMMVisualBrushAsRectangleBackgroundExample](~/samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/VisualBrushExample.xaml#graphicsmmvisualbrushasrectanglebackgroundexample)]  
@@ -27,10 +27,10 @@ Dieses Beispiel zeigt, wie Sie mit der <xref:System.Windows.Media.VisualBrush> -
  [!code-csharp[BrushOverviewExamples_procedural_snip#GraphicsMMVisualBrushAsRectangleBackgroundExample1](~/samples/snippets/csharp/VS_Snippets_Wpf/BrushOverviewExamples_procedural_snip/CSharp/VisualBrushExample.cs#graphicsmmvisualbrushasrectanglebackgroundexample1)]
  [!code-vb[BrushOverviewExamples_procedural_snip#GraphicsMMVisualBrushAsRectangleBackgroundExample1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BrushOverviewExamples_procedural_snip/visualbasic/visualbrushexample.vb#graphicsmmvisualbrushasrectanglebackgroundexample1)]  
   
- Weitere Informationen zu <xref:System.Windows.Media.VisualBrush> und weitere Beispiele finden Sie unter den [Zeichnen mit Bildern, Zeichnungen und visuellen Elementen](painting-with-images-drawings-and-visuals.md) Übersicht.  
+ Weitere Informationen <xref:System.Windows.Media.VisualBrush> zu und weitere Beispiele finden Sie in der Übersicht [Malerei mit Bildern, Zeichnungen und Visuals.](painting-with-images-drawings-and-visuals.md)  
   
- Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Windows.Media.VisualBrush> Klasse. Das vollständige Beispiel finden Sie unter den [Beispiel zu VisualBrush](https://go.microsoft.com/fwlink/?LinkID=160049).  
+ Dieses Codebeispiel ist Teil eines größeren <xref:System.Windows.Media.VisualBrush> Beispiels, das für die Klasse bereitgestellt wurde. Das vollständige Beispiel finden Sie im [VisualBrush-Beispiel](https://github.com/Microsoft/WPF-Samples/tree/master/Graphics/VisualBrush).  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Zeichnen mit Bildern, Zeichnungen und visuellen Elementen](painting-with-images-drawings-and-visuals.md)

@@ -16,12 +16,12 @@ helpviewer_keywords:
 - types, generic
 - type parameters
 ms.assetid: f7180fc5-dd41-42d4-8a8e-1b34288e06de
-ms.openlocfilehash: 0a7d38c8177aa8f2c5f45dcc62a0ae6e5aaca2a7
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 4894b5cc64dca431c8d05b638847dd6cb7017bde
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975448"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79180492"
 ---
 # <a name="reflection-and-generic-types"></a>Reflektion und generische Typen
 Aus Sicht der Reflektion besteht der Unterschied zwischen einem generischen und einem normalen Typ darin, dass ein generischer Typ mit einem Typparameterset (bei einer generischen Typdefinition) oder mit Typargumenten (bei einem konstruierten Typ) verknüpft ist. Auf dieselbe Art unterscheidet sich eine generische Methode von einer normalen Methode.  
@@ -50,7 +50,7 @@ Aus Sicht der Reflektion besteht der Unterschied zwischen einem generischen und 
  Generische Typ- und Methodendefinitionen sind Vorlagen, aus denen instanziierbare Typen erstellt werden. Generische Typen in der .NET Framework-Klassenbibliothek wie <xref:System.Collections.Generic.Dictionary%602>sind generische Typdefinitionen.  
   
 ### <a name="is-the-type-or-method-open-or-closed"></a>Ist der Typ bzw. die Methode offen oder geschlossen?  
- Ein generischer Typ oder eine generische Methode ist geschlossen, wenn alle Typparameter, u. a. Typparameter aller einschließenden Typen durch instanziierbare Typen ersetzt wurden. Sie können nur eine Instanz eines generischen Typs erstellen, wenn er geschlossen ist. Die <xref:System.Type.ContainsGenericParameters%2A?displayProperty=nameWithType> -Eigenschaft gibt `true` zurück, wenn ein Typ offen ist. Bei Methoden erfüllt die <xref:System.Reflection.MethodBase.ContainsGenericParameters%2A?displayProperty=nameWithType> -Methode die gleiche Funktion.   
+ Ein generischer Typ oder eine generische Methode ist geschlossen, wenn alle Typparameter, u. a. Typparameter aller einschließenden Typen durch instanziierbare Typen ersetzt wurden. Sie können nur eine Instanz eines generischen Typs erstellen, wenn er geschlossen ist. Die <xref:System.Type.ContainsGenericParameters%2A?displayProperty=nameWithType> -Eigenschaft gibt `true` zurück, wenn ein Typ offen ist. Bei Methoden erfüllt die <xref:System.Reflection.MethodBase.ContainsGenericParameters%2A?displayProperty=nameWithType> -Methode die gleiche Funktion.
 
 ## <a name="generating-closed-generic-types"></a>Generieren geschlossener generischer Typen  
  Wenn Sie bereits über eine generische Typ- oder Methodendefinition verfügen, können Sie mit der <xref:System.Type.MakeGenericType%2A> -Methode einen geschlossenen generischen Typ erstellen oder mit der <xref:System.Reflection.MethodInfo.MakeGenericMethod%2A> -Methode ein <xref:System.Reflection.MethodInfo> -Objekt für eine geschlossene generische Methode erstellen.  
@@ -60,7 +60,7 @@ Aus Sicht der Reflektion besteht der Unterschied zwischen einem generischen und 
   
  Wenn Sie über ein <xref:System.Type> -Objekt verfügen, das ein `Dictionary<int, string>` -Objekt (`Dictionary(Of Integer, String)` in Visual Basic) darstellt und den `Dictionary<string, MyClass>`-Typ erstellen möchten, können Sie mit der <xref:System.Type.GetGenericTypeDefinition%2A> -Methode ein <xref:System.Type> -Objekt abrufen, das `Dictionary<TKey, TValue>` darstellt, und dann mit der <xref:System.Type.MakeGenericType%2A> -Methode ein <xref:System.Type> -Objekt erstellen, das `Dictionary<int, MyClass>`darstellt.  
   
- Ein Beispiel für einen offenen generischen Typ, der kein generischer Typ ist, finden Sie unter „Typparameter oder Typargument“ im weiteren Verlauf dieses Themas.   
+ Ein Beispiel für einen offenen generischen Typ, der kein generischer Typ ist, finden Sie unter „Typparameter oder Typargument“ im weiteren Verlauf dieses Themas.
 
 ## <a name="examining-type-arguments-and-type-parameters"></a>Überprüfen von Typargumenten und Typparametern  
  Verwenden Sie zum Abrufen eines Arrays von <xref:System.Type.GetGenericArguments%2A?displayProperty=nameWithType> -Objekten, das die Typparameter oder Typargumente eines generischen Typs darstellt, die <xref:System.Type> -Methode und die <xref:System.Reflection.MethodInfo.GetGenericArguments%2A?displayProperty=nameWithType> -Methode, um diesen Vorgang für eine generische Methode auszuführen.  
@@ -114,7 +114,7 @@ generic<typename V, typename W> ref class D : B<int, V> {};
  Zum Bestimmen, ob ein Typparameter kovariant oder kontravariant ist, können Sie  die <xref:System.Reflection.GenericParameterAttributes.VarianceMask?displayProperty=nameWithType> -Maske auf den von der <xref:System.Reflection.GenericParameterAttributes> -Eigenschaft zurückgegebenen <xref:System.Type.GenericParameterAttributes%2A> -Wert anwenden. Wenn das Ergebnis <xref:System.Reflection.GenericParameterAttributes.None?displayProperty=nameWithType>ist, ist der Typparameter invariant. Siehe [Kovarianz und Kontravarianz](../../standard/generics/covariance-and-contravariance.md).  
   
 #### <a name="special-constraints"></a>Besondere Einschränkungen  
- Wenden Sie zum Bestimmen von besonderen Einschränkungen eines Typparameters die <xref:System.Reflection.GenericParameterAttributes.SpecialConstraintMask?displayProperty=nameWithType> -Maske auf den von der <xref:System.Reflection.GenericParameterAttributes> -Eigenschaft zurückgegebenen <xref:System.Type.GenericParameterAttributes%2A> -Wert an. Wenn das Ergebnis <xref:System.Reflection.GenericParameterAttributes.None?displayProperty=nameWithType>ist, gibt es keine besonderen Einschränkungen. Die Einschränkungen eines Typparameters können ein Verweistyp, ein Werttyp, der keine NULL-Werte zulässt, und ein parameterloser Konstruktor sein.    
+ Wenden Sie zum Bestimmen von besonderen Einschränkungen eines Typparameters die <xref:System.Reflection.GenericParameterAttributes.SpecialConstraintMask?displayProperty=nameWithType> -Maske auf den von der <xref:System.Reflection.GenericParameterAttributes> -Eigenschaft zurückgegebenen <xref:System.Type.GenericParameterAttributes%2A> -Wert an. Wenn das Ergebnis <xref:System.Reflection.GenericParameterAttributes.None?displayProperty=nameWithType>ist, gibt es keine besonderen Einschränkungen. Die Einschränkungen eines Typparameters können ein Verweistyp, ein Werttyp, der keine NULL-Werte zulässt, und ein parameterloser Konstruktor sein.
 
 ## <a name="invariants"></a>Invarianten  
  Eine Tabelle der invarianten Bedingungen für allgemeine Begriffe in Reflektion für generische Typen finden Sie unter <xref:System.Type.IsGenericType%2A?displayProperty=nameWithType>. Weitere Begriffe, die im Zusammenhang mit generischen Methoden stehen, finden Sie unter <xref:System.Reflection.MethodBase.IsGenericMethod%2A?displayProperty=nameWithType>.  
@@ -123,7 +123,7 @@ generic<typename V, typename W> ref class D : B<int, V> {};
   
 |Titel|Beschreibung|  
 |-----------|-----------------|  
-|[How to: Examine and Instantiate Generic Types with Reflection (Vorgehensweise: Erkennen und Bearbeiten von generischen Typen)](how-to-examine-and-instantiate-generic-types-with-reflection.md)|Veranschaulicht die Verwendung von Eigenschaften und Methoden der <xref:System.Type>- und <xref:System.Reflection.MethodInfo>-Objekte zum Untersuchen generischer Typen.|  
-|[Generics](../../standard/generics/index.md)|Beschreibt das Genericsfeature und seine Unterstützung in .NET Framework.|  
+|[Gewusst wie: Untersuchen und Instanziieren von generischen Typen mit Reflektion](how-to-examine-and-instantiate-generic-types-with-reflection.md)|Veranschaulicht die Verwendung von Eigenschaften und Methoden der <xref:System.Type>- und <xref:System.Reflection.MethodInfo>-Objekte zum Untersuchen generischer Typen.|  
+|[Generika](../../standard/generics/index.md)|Beschreibt das Genericsfeature und seine Unterstützung in .NET Framework.|  
 |[Gewusst wie: Definieren eines generischen Typs mit Reflektionsausgabe](how-to-define-a-generic-type-with-reflection-emit.md)|Veranschaulicht die Verwendung der Reflektionsausgabe zum Generieren generischer Typen in dynamischen Assemblys.|  
-|[Anzeigen von Typinformationen](viewing-type-information.md)|Beschreibt die <xref:System.Type>-Klasse und stellt Codebeispiele bereit, die zeigen, wie <xref:System.Type> mit verschiedenen Reflektionsklassen verwendet wird, um Informationen zu Konstruktoren, Methoden, Feldern, Eigenschaften und Ereignissen abzurufen.|
+|[Viewing Type Information (Anzeigen von Typinformationen)](viewing-type-information.md)|Beschreibt die <xref:System.Type> -Klasse und stellt Codebeispiele bereit, die zeigen, wie <xref:System.Type> mit verschiedenen Reflektionsklassen verwendet wird, um Informationen zu Konstruktoren, Methoden, Feldern, Eigenschaften und Ereignissen abzurufen.|

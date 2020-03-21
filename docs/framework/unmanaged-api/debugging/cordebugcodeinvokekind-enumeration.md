@@ -10,12 +10,12 @@ api_type:
 ms.assetid: e795e6a2-1008-4a81-af88-d777888e942e
 topic_type:
 - apiref
-ms.openlocfilehash: cc839e9b2a28dc428ae7cc87c9d080c4b7612a9d
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 54332f5b3383f1c1513242a79cbd81eb8aa5c4f2
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73098880"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79179251"
 ---
 # <a name="cordebugcodeinvokekind-enumeration"></a>CorDebugCodeInvokeKind-Aufzählung
 Beschreibt, wie durch eine exportierte Funktion verwalteter Code aufgerufen wird.  
@@ -25,13 +25,13 @@ Beschreibt, wie durch eine exportierte Funktion verwalteter Code aufgerufen wird
 ```cpp  
 typedef enum CorDebugCodeInvokeKind  
 {  
-    CODE_INVOKE_KIND_NONE,       
-    CODE_INVOKE_KIND_RETURN,     
-    CODE_INVOKE_KIND_TAILCALL,   
+    CODE_INVOKE_KIND_NONE,
+    CODE_INVOKE_KIND_RETURN,
+    CODE_INVOKE_KIND_TAILCALL,
 } CorDebugCodeInvokeKind;  
 ```  
   
-## <a name="members"></a>Member  
+## <a name="members"></a>Members  
   
 |Member|Beschreibung|  
 |------------|-----------------|  
@@ -39,13 +39,13 @@ typedef enum CorDebugCodeInvokeKind
 |`CODE_INVOKE_KIND_RETURN`|Mit dieser Methode wird verwalteter Code über eine Rückgabeanweisung aufgerufen. Mit dem Verlassen wird der nächste verwaltete Code aufgerufen.|  
 |`CODE_INVOKE_KIND_TAILCALL`|Mit dieser Methode wird verwalteter Code über einen Endeaufruf aufgerufen. Der verwaltete Code wird durch die Ausführung von Einzelschritten und das Überspringen von Aufrufanweisungen aufgerufen.|  
   
-## <a name="remarks"></a>Hinweise  
- Diese Enumeration wird von der [ICorDebugProcess6:: getexportstepinfo](icordebugprocess6-getexportstepinfo-method.md) -Methode verwendet, um Informationen über das Durchlaufen von verwaltetem Code bereitzustellen.  
+## <a name="remarks"></a>Bemerkungen  
+ Diese Enumeration wird von der [ICorDebugProcess6::GetExportStepInfo-Methode](icordebugprocess6-getexportstepinfo-method.md) verwendet, um Informationen zum Durchlaufen von verwaltetem Code bereitzustellen.  
   
 > [!NOTE]
 > Diese Enumeration ist nur für die Verwendung in .NET Native-Debugszenarien vorgesehen.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
@@ -54,7 +54,7 @@ typedef enum CorDebugCodeInvokeKind
   
  **.NET Framework-Versionen:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Debuggen von Enumerationen](debugging-enumerations.md)
 - [Debuggen](index.md)

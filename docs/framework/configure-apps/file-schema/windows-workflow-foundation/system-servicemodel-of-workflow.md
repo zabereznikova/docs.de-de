@@ -1,20 +1,20 @@
 ---
-title: < System. Service Model-> des Workflows
+title: <system.serviceModel> des Workflows
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 6a8eb2bf-f925-40e1-ba5c-a49b1d3a3ac6
-ms.openlocfilehash: 757a7a132a6e765e257097d251a110297c6a40bf
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.openlocfilehash: 9aa2bf0fdfd6fe4528a3fda4d05b3ba8f23637d3
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70398598"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79151948"
 ---
-# <a name="systemservicemodel-of-workflow"></a>\<System. Service Model-> des Workflows
+# <a name="systemservicemodel-of-workflow"></a>\<system.serviceModell> des Workflows
 Dieser Konfigurationsabschnitt enthält alle Workflowkonfigurationselemente.  
 
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp; **\<Anlage. Service Model->**  
+[**\<Konfiguration>**](../configuration-element.md)\
+&nbsp;&nbsp;**\<System. ServiceModel>**  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -25,12 +25,12 @@ Dieser Konfigurationsabschnitt enthält alle Workflowkonfigurationselemente.
     <behavior name="String">  
       <bufferReceive maxPendingMessagesPerChannel="Integer" />  
       <etwTracking profileName="String" />  
-     <sendMessageChannelCache allowUnsafeCaching="Boolean" >          
+     <sendMessageChannelCache allowUnsafeCaching="Boolean" >
         <channelSettings idleTimeout="TimeSpan" leaseTimeout="TimeSpan" maxItemsInCache="Integer" />  
         <factorySettings idleTimeout="TimeSpan" leaseTimeout="TimeSpan" maxItemsInCache="Integer" />  
      </sendMessageChannelCache>  
-      <sqlWorkflowInstanceStore   
-          connectionStringName="String"   
+      <sqlWorkflowInstanceStore
+          connectionStringName="String"
           hostLockRenewalPeriod="TimeSpan"  
           instanceCompletionAction="DeleteNothing/DeleteAll"  
           instanceEncodingAction="None/GZip"  
@@ -42,12 +42,12 @@ Dieser Konfigurationsabschnitt enthält alle Workflowkonfigurationselemente.
     </behavior>  
     </serviceBehaviors>  
   </behaviors>  
-  <tracking>    
-     <participants>   
-      <add name="String"   
+  <tracking>
+     <participants>
+      <add name="String"
            profileName="String"  
-           type="String" />   
-     </participants>   
+           type="String" />
+     </participants>
     <trackingProfile name="String">  
       <workflow activityDefinitionId="String">  
           <activityScheduledQueries>  
@@ -88,7 +88,7 @@ Dieser Konfigurationsabschnitt enthält alle Workflowkonfigurationselemente.
           </workflowInstanceQuery>  
         </workflowInstanceQueries>  
       </workflow>  
-    </trackingProfile>          
+    </trackingProfile>
    </profiles>  
   </tracking>  
 </system.ServiceModel>  
@@ -97,18 +97,18 @@ Dieser Konfigurationsabschnitt enthält alle Workflowkonfigurationselemente.
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
-### <a name="attributes"></a>Attribute  
- None  
+### <a name="attributes"></a>Attributes  
+ Keine  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<behaviors>](behaviors-of-workflow.md)|In diesem Abschnitt wird die serviceverhaltenauflistung definiert.  Jedes Element der Auflistung definiert von Diensten verarbeitete Verhaltenselemente. Jedes Behavior-Element wird durch das eindeutige **Name** -Attribut identifiziert.|  
-|[\<tracking>](tracking.md)|Stellt einen Konfigurationsabschnitt zum Definieren von Nachverfolgungseinstellungen für einen Workflowdienst dar.<br /><br /> Weitere Informationen zur Workflow Überwachung und deren Konfiguration finden Sie unter [Workflow Überwachung und](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md) -Ablauf Verfolgung und [Konfigurieren der Nachverfolgung für einen Workflow](../../../windows-workflow-foundation/configuring-tracking-for-a-workflow.md).|  
+|[\<Verhalten>](behaviors-of-workflow.md)|In diesem Abschnitt wird die **serviceBehaviors-Auflistung** definiert.  Jedes Element der Auflistung definiert von Diensten verarbeitete Verhaltenselemente. Jedes Verhaltenselement wird durch sein attribut eindeutiges **Name** identifiziert.|  
+|[\<Tracking->](tracking.md)|Stellt einen Konfigurationsabschnitt zum Definieren von Nachverfolgungseinstellungen für einen Workflowdienst dar.<br /><br /> Weitere Informationen zur Workflowverfolgung und deren Konfiguration finden Sie unter [Workflowverfolgung und Ablaufverfolgung](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md) und [Konfigurieren von Tracking für einen Workflow](../../../windows-workflow-foundation/configuring-tracking-for-a-workflow.md).|  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<configuration>](../configuration-element.md)|Das Stammelement für alle Konfigurationselemente in einer Konfigurationsdatei.|
+|[\<Konfiguration>](../configuration-element.md)|Das Stammelement für alle Konfigurationselemente in einer Konfigurationsdatei.|

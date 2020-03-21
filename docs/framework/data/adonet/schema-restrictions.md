@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 73d2980e-e73c-4987-913a-8ddc93d09144
-ms.openlocfilehash: d0250e573dc24bfcad97a2f2606cb2e6c8e520da
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 17c42c5131252993d1f16e4a2f7a6450f0984d11
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70782755"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79149010"
 ---
 # <a name="schema-restrictions"></a>Schemaeinschränkungen
-Der zweite optionale Parameter der **GetSchema** -Methode sind die Einschränkungen, die verwendet werden, um die Menge der zurückgegebenen Schema Informationen einzuschränken, und Sie werden als Zeichen folgen Array an die **GetSchema** -Methode übergeben. Die Position im Array bestimmt die Werte, die zurückgegeben werden können. Dies entspricht der Anzahl der Einschränkungen.  
+Der zweite optionale Parameter der **GetSchema-Methode** sind die Einschränkungen, die verwendet werden, um die Menge der zurückgegebenen Schemainformationen zu begrenzen, und sie werden als Array von Zeichenfolgen an die **GetSchema-Methode** übergeben. Die Position im Array bestimmt die Werte, die zurückgegeben werden können. Dies entspricht der Anzahl der Einschränkungen.  
   
  In der folgenden Tabelle werden beispielsweise die Einschränkungen beschrieben, die von der Schemaauflistung "Tables" mithilfe des .NET Framework-Datenanbieters für SQL Server unterstützt werden. Zusätzliche Einschränkungen für SQL Server-Schemaauflistungen werden am Ende dieses Themas aufgeführt.  
   
@@ -21,11 +21,11 @@ Der zweite optionale Parameter der **GetSchema** -Methode sind die Einschränkun
 |----------------------|--------------------|-------------------------|------------------------|  
 |Katalog|@Catalog|TABLE_CATALOG|1|  
 |Besitzer|@Owner|TABLE_SCHEMA|2|  
-|Tabelle|@Name|TABLE_NAME|3|  
+|Tabelle|@Name|table_name|3|  
 |TableType|@TableType|TABLE_TYPE|4|  
   
 ## <a name="specifying-restriction-values"></a>Angeben der Einschränkungswerte  
- Wenn Sie eine der Einschränkungen der Tables-Schemaauflistung verwenden möchten, erstellen Sie ein Zeichenfolgenarray mit vier Elementen und fügen einen Wert in das Element ein, das mit der Einschränkungsnummer übereinstimmt. Um beispielsweise die von der **GetSchema** -Methode zurückgegebenen Tabellen nur auf die Tabellen im "Sales"-Schema zu beschränken, legen Sie das zweite Element des Arrays auf "Sales" fest, bevor Sie es an die **GetSchema** -Methode übergeben.  
+ Wenn Sie eine der Einschränkungen der Tables-Schemaauflistung verwenden möchten, erstellen Sie ein Zeichenfolgenarray mit vier Elementen und fügen einen Wert in das Element ein, das mit der Einschränkungsnummer übereinstimmt. Um beispielsweise die von der **GetSchema-Methode** zurückgegebenen Tabellen auf nur diese Tabellen im Schema "Sales" zu beschränken, legen Sie das zweite Element des Arrays auf "Sales" fest, bevor Sie es an die **GetSchema-Methode** übergeben.  
   
 > [!NOTE]
 > Die Einschränkungsauflistungen für den `SqlClient` und den `OracleClient` verfügen über eine zusätzliche `ParameterName`-Spalte. Die Spalte für den Einschränkungsstandard ist zwar aus Gründen der Abwärtskompatibilität vorhanden, wird aber derzeit ignoriert. Verwenden Sie Abfragen mit Parametern statt Zeichenfolgenersetzungen, um das Risiko eines SQL-Injection-Angriffs beim Angeben der Einschränkungswerte zu minimieren.  
@@ -33,10 +33,10 @@ Der zweite optionale Parameter der **GetSchema** -Methode sind die Einschränkun
 > [!NOTE]
 > Die Anzahl der Elementen im Array muss kleiner oder gleich der Anzahl der Einschränkungen sein, die für die angegebene Schemaauflistung unterstützt werden, da sonst eine <xref:System.ArgumentException> ausgelöst wird. Es können weniger Elemente als die maximale Anzahl der Einschränkungen vorhanden sein. Es wird davon ausgegangen, dass die fehlenden Einschränkungen NULL (uneingeschränkt) sind.  
   
- Sie können einen .NET Framework verwalteten Anbieter Abfragen, um die Liste der unterstützten Einschränkungen zu ermitteln, indem Sie die **GetSchema** -Methode mit dem Namen der Einschränkungs Schema Auflistung aufrufen. Dies ist "Einschränkungen". Dabei wird eine <xref:System.Data.DataTable> mit einer Liste der Auflistungsnamen, Einschränkungsnamen, Standardeinschränkungswerte und der Anzahl der Einschränkungen zurückgegeben.  
+ Sie können einen verwalteten .NET Framework-Anbieter abfragen, um die Liste der unterstützten Einschränkungen zu ermitteln, indem Sie die **GetSchema-Methode** mit dem Namen der Einschränkungsschemaauflistung aufrufen, die "Einschränkungen" lautet. Dabei wird eine <xref:System.Data.DataTable> mit einer Liste der Auflistungsnamen, Einschränkungsnamen, Standardeinschränkungswerte und der Anzahl der Einschränkungen zurückgegeben.  
   
 ### <a name="example"></a>Beispiel  
- In den folgenden Beispielen wird veranschaulicht, wie <xref:System.Data.SqlClient.SqlConnection.GetSchema%2A> die-Methode der .NET Framework Datenanbieter für die <xref:System.Data.SqlClient.SqlConnection> SQL Server-Klasse verwendet wird, um Schema Informationen zu allen Tabellen abzurufen, die in der **AdventureWorks** -Beispieldatenbank enthalten sind. und um die Informationen einzuschränken, die nur auf die Tabellen im "Sales"-Schema zurückgegeben werden:  
+ In den folgenden Beispielen <xref:System.Data.SqlClient.SqlConnection.GetSchema%2A> wird veranschaulicht, wie die Methode <xref:System.Data.SqlClient.SqlConnection> des .NET Framework-Datenanbieters für die SQL Server-Klasse verwendet wird, um Schemainformationen zu allen Tabellen in der **AdventureWorks-Beispieldatenbank** abzurufen und die zurückgegebenen Informationen auf diese Tabellen im Schema "Sales" zu beschränken:  
   
 ```vb  
 Imports System.Data.SqlClient  
@@ -79,7 +79,7 @@ class Program
 {  
   static void Main()  
   {  
-    string connectionString =   
+    string connectionString =
        "Data Source=(local);Database=AdventureWorks;" +  
        "Integrated Security=true;";  
     using (SqlConnection connection =  
@@ -98,7 +98,7 @@ class Program
         {  
             foreach (System.Data.DataColumn col in table.Columns)  
             {  
-                Console.WriteLine("{0} = {1}",   
+                Console.WriteLine("{0} = {1}",
                   col.ColumnName, row[col]);  
             }  
             Console.WriteLine("============================");  
@@ -137,9 +137,9 @@ class Program
   
 |Einschränkungsname|Parametername|Einschränkungsstandard|Einschränkungsnummer|  
 |----------------------|--------------------|-------------------------|------------------------|  
-|User_Name|@Name|Name|1|  
+|User_Name|@Name|name|1|  
   
-### <a name="databases"></a>Databases  
+### <a name="databases"></a>Datenbanken  
   
 |Einschränkungsname|Parametername|Einschränkungsstandard|Einschränkungsnummer|  
 |----------------------|--------------------|-------------------------|------------------------|  
@@ -151,7 +151,7 @@ class Program
 |----------------------|--------------------|-------------------------|------------------------|  
 |Katalog|@Catalog|TABLE_CATALOG|1|  
 |Besitzer|@Owner|TABLE_SCHEMA|2|  
-|Tabelle|@Name|TABLE_NAME|3|  
+|Tabelle|@Name|table_name|3|  
 |TableType|@TableType|TABLE_TYPE|4|  
   
 ### <a name="columns"></a>Spalten  
@@ -160,8 +160,8 @@ class Program
 |----------------------|--------------------|-------------------------|------------------------|  
 |Katalog|@Catalog|TABLE_CATALOG|1|  
 |Besitzer|@Owner|TABLE_SCHEMA|2|  
-|Tabelle|@Table|TABLE_NAME|3|  
-|Spalte|@Column|COLUMN_NAME|4|  
+|Tabelle|@Table|table_name|3|  
+|Column|@Column|COLUMN_NAME|4|  
   
 ### <a name="structuredtypemembers"></a>StructuredTypeMembers  
   
@@ -169,16 +169,16 @@ class Program
 |----------------------|--------------------|-------------------------|------------------------|  
 |Katalog|@Catalog|TABLE_CATALOG|1|  
 |Besitzer|@Owner|TABLE_SCHEMA|2|  
-|Tabelle|@Table|TABLE_NAME|3|  
-|Spalte|@Column|COLUMN_NAME|4|  
+|Tabelle|@Table|table_name|3|  
+|Column|@Column|COLUMN_NAME|4|  
   
-### <a name="views"></a>Ansichten  
+### <a name="views"></a>Sichten  
   
 |Einschränkungsname|Parametername|Einschränkungsstandard|Einschränkungsnummer|  
 |----------------------|--------------------|-------------------------|------------------------|  
 |Katalog|@Catalog|TABLE_CATALOG|1|  
 |Besitzer|@Owner|TABLE_SCHEMA|2|  
-|Tabelle|@Table|TABLE_NAME|3|  
+|Tabelle|@Table|table_name|3|  
   
 ### <a name="viewcolumns"></a>ViewColumns  
   
@@ -187,7 +187,7 @@ class Program
 |Katalog|@Catalog|VIEW_CATALOG|1|  
 |Besitzer|@Owner|VIEW_SCHEMA|2|  
 |Tabelle|@Table|VIEW_NAME|3|  
-|Spalte|@Column|COLUMN_NAME|4|  
+|Column|@Column|COLUMN_NAME|4|  
   
 ### <a name="procedureparameters"></a>ProcedureParameters  
   
@@ -198,14 +198,14 @@ class Program
 |Name|@Name|SPECIFIC_NAME|3|  
 |Parameter|@Parameter|PARAMETER_NAME|4|  
   
-### <a name="procedures"></a>Verfahren  
+### <a name="procedures"></a>Prozeduren  
   
 |Einschränkungsname|Parametername|Einschränkungsstandard|Einschränkungsnummer|  
 |----------------------|--------------------|-------------------------|------------------------|  
 |Katalog|@Catalog|SPECIFIC_CATALOG|1|  
 |Besitzer|@Owner|SPECIFIC_SCHEMA|2|  
 |Name|@Name|SPECIFIC_NAME|3|  
-|Typ|@Type|ROUTINE_TYPE|4|  
+|type|@Type|ROUTINE_TYPE|4|  
   
 ### <a name="indexcolumns"></a>IndexColumns  
   
@@ -215,7 +215,7 @@ class Program
 |Besitzer|@Owner|user_name()|2|  
 |Tabelle|@Table|o.name|3|  
 |ConstraintName|@ConstraintName|x.name|4|  
-|Spalte|@Column|c.name|5|  
+|Column|@Column|c.name|5|  
   
 ### <a name="indexes"></a>Indizes  
   
@@ -238,7 +238,7 @@ class Program
 |----------------------|--------------------|-------------------------|------------------------|  
 |Katalog|@Catalog|CONSTRAINT_CATALOG|1|  
 |Besitzer|@Owner|CONSTRAINT_SCHEMA|2|  
-|Tabelle|@Table|TABLE_NAME|3|  
+|Tabelle|@Table|table_name|3|  
 |Name|@Name|CONSTRAINT_NAME|4|  
   
 ## <a name="sql-server-2008-schema-restrictions"></a>SQL Server 2008-Schemabeschränkungen  
@@ -250,7 +250,7 @@ class Program
 |----------------------|--------------------|-------------------------|------------------------|  
 |Katalog|@Catalog|TABLE_CATALOG|1|  
 |Besitzer|@Owner|TABLE_SCHEMA|2|  
-|Tabelle|@Table|TABLE_NAME|3|  
+|Tabelle|@Table|table_name|3|  
   
 ### <a name="allcolumns"></a>AllColumns  
   
@@ -258,9 +258,9 @@ class Program
 |----------------------|--------------------|-------------------------|------------------------|  
 |Katalog|@Catalog|TABLE_CATALOG|1|  
 |Besitzer|@Owner|TABLE_SCHEMA|2|  
-|Tabelle|@Table|TABLE_NAME|3|  
-|Spalte|@Column|COLUMN_NAME|4|  
+|Tabelle|@Table|table_name|3|  
+|Column|@Column|COLUMN_NAME|4|  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Übersicht über ADO.NET](ado-net-overview.md)

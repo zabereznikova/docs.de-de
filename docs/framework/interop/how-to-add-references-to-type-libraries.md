@@ -7,12 +7,12 @@ helpviewer_keywords:
 - type libraries
 - COM interop, importing type library
 ms.assetid: f5cfa6ba-cc25-4017-82cd-ba7391859113
-ms.openlocfilehash: b4b78d377cf3ff2b43f7776567583c71c479054c
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 1e82a499b77cc6d1d49eaf13e243201bbdc4c5fe
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73123952"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79181443"
 ---
 # <a name="how-to-add-references-to-type-libraries"></a>Gewusst wie: Hinzufügen von Verweisen zu Typbibliotheken
 Visual Studio generiert eine Interopassembly mit Metadaten, wenn Sie einer Typbibliothek einen Verweis hinzufügen. Wenn eine primäre Interopassembly verfügbar ist, verwendet Visual Studio die bereits vorhandene Assembly, bevor eine neue Interopassembly generiert wird.  
@@ -27,7 +27,7 @@ Visual Studio generiert eine Interopassembly mit Metadaten, wenn Sie einer Typbi
   
 4. Wählen Sie die Typbibliothek aus der Liste aus, oder suchen Sie nach der TLB-Datei.  
   
-5. Klicken Sie auf **OK**.  
+5. Wählen Sie **OK**.  
   
 6. Öffnen Sie im Projektmappen-Explorer das Kontextmenü für den gerade hinzugefügten Verweis, und wählen Sie **Eigenschaften** aus.  
   
@@ -40,12 +40,12 @@ Visual Studio generiert eine Interopassembly mit Metadaten, wenn Sie einer Typbi
   
 1. Generieren Sie, wie in [Vorgehensweise: Generieren von Interop-Assemblys aus Typbibliotheken](how-to-generate-interop-assemblies-from-type-libraries.md) beschrieben, eine Interop-Assembly.  
   
-2. Verwenden Sie die [Compileroption-Link (C# Compileroptionen)](../../csharp/language-reference/compiler-options/link-compiler-option.md) oder [-Link (Visual Basic)](../../visual-basic/reference/command-line-compiler/link.md) mit dem interopassemblynamen, um Typinformationen für COM-Typen in Ihre ausführbaren Dateien einzubetten.  
+2. Verwenden Sie die Compileroption [-link (C-Compileroptionen)](../../csharp/language-reference/compiler-options/link-compiler-option.md) oder [-link (Visual Basic)](../../visual-basic/reference/command-line-compiler/link.md) mit dem Interopassemblynamen, um Typinformationen für COM-Typen in Ihre ausführbaren Dateien einzubetten.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Importieren einer Typbibliothek als Assembly](importing-a-type-library-as-an-assembly.md)
 - [Verfügbarmachen von COM-Komponenten für .NET Framework](exposing-com-components.md)
-- [Exemplarische Vorgehensweise: Einbetten von Typen aus verwalteten Assemblys in Visual Studio](../../standard/assembly/embed-types-visual-studio.md) 
+- [Exemplarische Vorgehensweise: Einbetten von Typen aus verwalteten Assemblys in Visual Studio](../../standard/assembly/embed-types-visual-studio.md)
 - [-link (C#-Compileroptionen)](../../csharp/language-reference/compiler-options/link-compiler-option.md)
-- [-link (Visual Basic)](../../visual-basic/reference/command-line-compiler/link.md)
+- [-Link (Visual Basic)](../../visual-basic/reference/command-line-compiler/link.md)

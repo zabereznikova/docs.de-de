@@ -2,26 +2,26 @@
 title: Initialisierung der Instanziierung
 ms.date: 03/30/2017
 ms.assetid: 154d049f-2140-4696-b494-c7e53f6775ef
-ms.openlocfilehash: ee7d470cb80e913707ae6e92039061efde8fcb7f
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 897bb62df0a23073827aeed18b54bf77e8c6d4bc
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74715800"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79183594"
 ---
 # <a name="instancing-initialization"></a>Initialisierung der Instanziierung
-In diesem Beispiel wird das [Pooling](../../../../docs/framework/wcf/samples/pooling.md) -Beispiel erweitert, indem eine Schnittstelle definiert wird, `IObjectControl`, mit der die Initialisierung eines Objekts durch Aktivieren und deaktivieren angepasst wird. Der Client ruft Methoden auf, die das Objekt an den Pool zurückgeben und das Objekt nicht an den Pool zurückgeben.  
+In diesem Beispiel wird das [Poolingbeispiel](../../../../docs/framework/wcf/samples/pooling.md) erweitert, indem eine Schnittstelle definiert wird, `IObjectControl`die die Initialisierung eines Objekts durch Aktivieren und Deaktivieren anpasst. Der Client ruft Methoden auf, die das Objekt an den Pool zurückgeben und das Objekt nicht an den Pool zurückgeben.  
   
 > [!NOTE]
 > Die Setupprozedur und die Buildanweisungen für dieses Beispiel befinden sich am Ende dieses Themas.  
   
 ## <a name="extensibility-points"></a>Erweiterungspunkte  
- Der erste Schritt beim Erstellen einer Windows Communication Foundation (WCF)-Erweiterung besteht darin, den zu verwendenden Erweiterbarkeits Punkt zu entscheiden. In WCF bezieht sich der Begriff *EndpointDispatcher* auf eine Laufzeitkomponente, die für die Umstellung eingehender Nachrichten in Methodenaufrufe für den Dienst des Benutzers und zum Umstellen von Rückgabe Werten aus dieser Methode in eine ausgehende Nachricht zuständig ist. Ein WCF-Dienst erstellt einen EndpointDispatcher für jeden Endpunkt.  
+ Der erste Schritt beim Erstellen einer Windows Communication Foundation (WCF)-Erweiterung besteht darin, den zu verwendenden Erweiterbarkeitspunkt zu entscheiden. In WCF bezieht sich der Begriff *EndpointDispatcher* auf eine Laufzeitkomponente, die für die Konvertierung eingehender Nachrichten in Methodenaufrufe im Dienst des Benutzers und für das Konvertieren von Rückgabewerten von dieser Methode in eine ausgehende Nachricht verantwortlich ist. Ein WCF-Dienst erstellt einen EndpointDispatcher für jeden Endpunkt.  
   
  Der EndpointDispatcher stellt mithilfe der <xref:System.ServiceModel.Dispatcher.EndpointDispatcher>-Klasse die Erweiterung des Endpunktbereichs bereit (für alle vom Dienst empfangenen oder gesendeten Nachrichten). Mit dieser Klasse können Sie verschiedene Eigenschaften anpassen, die das Verhalten von EndpointDispatcher steuern. In diesem Beispiel wird in erster Linie die <xref:System.ServiceModel.Dispatcher.DispatchRuntime.InstanceProvider%2A>-Eigenschaft behandelt, die auf das Objekt zeigt, das die Instanzen der Dienstklasse bereitstellt.  
   
 ## <a name="iinstanceprovider"></a>IInstanceProvider  
- In WCF erstellt der EndpointDispatcher Instanzen einer Dienstklasse mithilfe eines Instanzanbieters, der die <xref:System.ServiceModel.Dispatcher.IInstanceProvider>-Schnittstelle implementiert. Diese Schnittstelle verfügt über nur zwei Methoden:  
+ In WCF erstellt Der EndpointDispatcher Instanzen einer Dienstklasse mithilfe <xref:System.ServiceModel.Dispatcher.IInstanceProvider> eines Instance-Anbieters, der die Schnittstelle implementiert. Diese Schnittstelle verfügt über nur zwei Methoden:  
   
 - <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%2A>: Wenn eine Nachricht eingeht, ruft der Verteiler die <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%2A>-Methode auf, um eine Instanz der Dienstklasse zum Verarbeiten der Nachricht zu erstellen. Die Häufigkeit der Aufrufe dieser Methode wird von der <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A>-Eigenschaft bestimmt. Wenn die <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A>-Eigenschaft beispielsweise auf <xref:System.ServiceModel.InstanceContextMode.PerCall?displayProperty=nameWithType> festgelegt ist, wird eine neue Instanz der Dienstklasse erstellt, um alle eingehenden Nachrichten zu verarbeiten. Daher wird <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%2A> immer dann aufgerufen, wenn eine Nachricht eingeht.  
   
@@ -33,7 +33,7 @@ In diesem Beispiel wird das [Pooling](../../../../docs/framework/wcf/samples/poo
 ```csharp
 private object GetObjectFromThePool()  
 {  
-    bool didNotTimeout =   
+    bool didNotTimeout =
        availableCount.WaitOne(creationTimeout, true);  
     if(didNotTimeout)  
     {  
@@ -56,7 +56,7 @@ private object GetObjectFromThePool()
                         WritePoolMessage(  
                              ResourceHelper.GetString("MsgNewObject"));  
                        #endif  
-                   }                          
+                   }
             }  
            idleTimer.Stop();  
       }  
@@ -79,7 +79,7 @@ public void ReleaseInstance(InstanceContext instanceContext, object instance)
 {  
     lock (poolLock)  
     {  
-        // Check whether the object can be pooled.   
+        // Check whether the object can be pooled.
         // Call the Deactivate method if possible.  
         if (instance is IObjectControl)  
         {  
@@ -93,7 +93,7 @@ public void ReleaseInstance(InstanceContext instanceContext, object instance)
                 #if(DEBUG)  
                 WritePoolMessage(  
                     ResourceHelper.GetString("MsgObjectPooled"));  
-                #endif                          
+                #endif
             }  
             else  
             {  
@@ -110,14 +110,14 @@ public void ReleaseInstance(InstanceContext instanceContext, object instance)
             #if(DEBUG)  
             WritePoolMessage(  
                 ResourceHelper.GetString("MsgObjectPooled"));  
-            #endif   
+            #endif
         }  
   
         activeObjectsCount--;  
   
         if (activeObjectsCount == 0)  
         {  
-            idleTimer.Start();                       
+            idleTimer.Start();
         }  
     }  
   
@@ -125,12 +125,12 @@ public void ReleaseInstance(InstanceContext instanceContext, object instance)
 }  
 ```  
   
- Die `ReleaseInstance`-Methode bietet eine Bereinigungs Funktion für die *Initialisierung* . Normalerweise wird im Pool eine Mindestanzahl von Objekten für die Lebensdauer des Pools beibehalten. Es kann jedoch Zeiten mit übermäßiger Auslastung geben, für die im Pool zusätzliche Objekte erstellt werden müssen, um die in der Konfiguration festgelegte Höchstgrenze zu erreichen. Wenn der Pool weniger aktiv ist, stellen diese überzähligen Objekte einen zusätzlichen Aufwand dar. Wenn `activeObjectsCount` daher 0 (null) erreicht, wird ein Leerlaufzeitgeber gestartet, der einen Bereinigungszyklus auslöst und ausführt.  
+ Die `ReleaseInstance` Methode bietet eine *Bereinigungsinitialisierungsfunktion.* Normalerweise wird im Pool eine Mindestanzahl von Objekten für die Lebensdauer des Pools beibehalten. Es kann jedoch Zeiten mit übermäßiger Auslastung geben, für die im Pool zusätzliche Objekte erstellt werden müssen, um die in der Konfiguration festgelegte Höchstgrenze zu erreichen. Wenn der Pool weniger aktiv ist, stellen diese überzähligen Objekte einen zusätzlichen Aufwand dar. Wenn `activeObjectsCount` daher 0 (null) erreicht, wird ein Leerlaufzeitgeber gestartet, der einen Bereinigungszyklus auslöst und ausführt.  
   
 ```csharp  
 if (activeObjectsCount == 0)  
 {  
-    idleTimer.Start();   
+    idleTimer.Start();
 }  
 ```  
   
@@ -154,7 +154,7 @@ if (activeObjectsCount == 0)
   
  In diesem Beispiel wird ein benutzerdefiniertes Attribut verwendet. Beim Erstellen von <xref:System.ServiceModel.ServiceHost> werden die in der Typdefinition des Diensts verwendeten Attribute untersucht, und die verfügbaren Verhalten werden der Verhaltensauflistung der Dienstbeschreibung hinzugefügt.  
   
- Die <xref:System.ServiceModel.Description.IServiceBehavior>-Schnittstelle verfügt über drei Methoden: <xref:System.ServiceModel.Description.IServiceBehavior.Validate%2A>`,` <xref:System.ServiceModel.Description.IServiceBehavior.AddBindingParameters%2A>`,` und <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A>. Diese Methoden werden von WCF aufgerufen, wenn die <xref:System.ServiceModel.ServiceHost> initialisiert wird. <xref:System.ServiceModel.Description.IServiceBehavior.Validate%2A?displayProperty=nameWithType> wird zuerst aufgerufen. So kann der Dienst auf Inkonsistenzen untersucht werden. <xref:System.ServiceModel.Description.IServiceBehavior.AddBindingParameters%2A?displayProperty=nameWithType> wird danach aufgerufen. Diese Methode ist nur in sehr komplexen Szenarios erforderlich. <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A?displayProperty=nameWithType> wird zuletzt aufgerufen und ist für das Konfigurieren der Laufzeit zuständig. Die folgenden Parameter werden in <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A?displayProperty=nameWithType> übergeben:  
+ Die <xref:System.ServiceModel.Description.IServiceBehavior> Schnittstelle hat <xref:System.ServiceModel.Description.IServiceBehavior.Validate%2A> `,` <xref:System.ServiceModel.Description.IServiceBehavior.AddBindingParameters%2A> `,` drei <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A>Methoden: und . Diese Methoden werden von WCF aufgerufen, wenn die <xref:System.ServiceModel.ServiceHost> initialisiert wird. <xref:System.ServiceModel.Description.IServiceBehavior.Validate%2A?displayProperty=nameWithType> wird zuerst aufgerufen. So kann der Dienst auf Inkonsistenzen untersucht werden. <xref:System.ServiceModel.Description.IServiceBehavior.AddBindingParameters%2A?displayProperty=nameWithType> wird danach aufgerufen. Diese Methode ist nur in sehr komplexen Szenarios erforderlich. <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A?displayProperty=nameWithType> wird zuletzt aufgerufen und ist für das Konfigurieren der Laufzeit zuständig. Die folgenden Parameter werden in <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A?displayProperty=nameWithType> übergeben:  
   
 - `Description`: Dieser Parameter stellt die Dienstbeschreibung für den gesamten Dienst bereit. Dies kann verwendet werden, um Beschreibungsdaten über die Endpunkte, Verträge, Bindungen und andere Daten zu dem Dienst zu überprüfen.  
   
@@ -171,7 +171,7 @@ public void ApplyDispatchBehavior(ServiceDescription description, ServiceHostBas
         instanceProvider = new ObjectPoolInstanceProvider(description.ServiceType,  
         maxPoolSize, minPoolSize, creationTimeout);  
   
-        // Assign our instance provider to Dispatch behavior in each   
+        // Assign our instance provider to Dispatch behavior in each
         // endpoint.  
         foreach (ChannelDispatcherBase cdb in serviceHostBase.ChannelDispatchers)  
         {  
@@ -185,15 +185,15 @@ public void ApplyDispatchBehavior(ServiceDescription description, ServiceHostBas
              }  
          }  
      }  
-}   
+}
 ```  
   
  Neben einer <xref:System.ServiceModel.Description.IServiceBehavior>-Implementierung verfügt die `ObjectPoolingAttribute`-Klasse über mehrere Member zum Anpassen des Objektpools mithilfe der Attributargumente. Diese Member umfassen `MaxSize`, `MinSize`, `Enabled` und `CreationTimeout` für die Übereinstimmung mit dem von .NET Enterprise Services bereitgestellten Objektpooling-Funktionssatz.  
   
- Das Objektpoolingverhalten kann nun einem WCF-Dienst hinzugefügt werden, indem die Dienst Implementierung mit dem neu erstellten benutzerdefinierten `ObjectPooling`-Attribut kommentiert wird.  
+ Das Objektpoolingverhalten kann nun einem WCF-Dienst hinzugefügt werden, indem die `ObjectPooling` Dienstimplementierung mit dem neu erstellten benutzerdefinierten Attribut mit Anmerkungen versehen wird.  
   
 ```csharp  
-[ObjectPooling(MaxSize=1024, MinSize=10, CreationTimeout=30000]      
+[ObjectPooling(MaxSize=1024, MinSize=10, CreationTimeout=30000]
 public class PoolService : IPoolService  
 {  
   // …  
@@ -205,7 +205,7 @@ public class PoolService : IPoolService
   
  Der Objektpool ruft die `Activate`-Methode unmittelbar vor dem Zurückgeben des Objekts aus dem Pool auf. `Deactivate` wird aufgerufen, wenn das Objekt an den Pool zurückgegeben wird. Die <xref:System.EnterpriseServices.ServicedComponent>-Basisklasse verfügt außerdem über die `boolean`-Eigenschaft mit der Bezeichnung `CanBePooled`, mit der der Pool darüber benachrichtigt werden kann, ob das Objekt weiter gepoolt werden kann.  
   
- Im Beispiel wird eine öffentliche Schnittstelle (`IObjectControl`) deklariert, die über die oben genannten Member verfügt, um diese Funktionalität zu imitieren. Diese Schnittstelle wird dann von Dienstklassen implementiert, die die kontextspezifische Initialisierung bereitstellen sollen. Die <xref:System.ServiceModel.Dispatcher.IInstanceProvider>-Implementierung muss geändert werden, um diese Anforderungen zu erfüllen. Wenn Sie jetzt ein Objekt abrufen, indem Sie die `GetInstance`-Methode aufrufen, müssen Sie überprüfen, ob das Objekt implementiert `IObjectControl.` wenn dies der Fall ist. Sie müssen die `Activate`-Methode entsprechend aufrufen.  
+ Im Beispiel wird eine öffentliche Schnittstelle (`IObjectControl`) deklariert, die über die oben genannten Member verfügt, um diese Funktionalität zu imitieren. Diese Schnittstelle wird dann von Dienstklassen implementiert, die die kontextspezifische Initialisierung bereitstellen sollen. Die <xref:System.ServiceModel.Dispatcher.IInstanceProvider>-Implementierung muss geändert werden, um diese Anforderungen zu erfüllen. Wenn Sie nun jedes Mal ein `GetInstance` Objekt abrufen, indem Sie `IObjectControl.` die Methode aufrufen, müssen `Activate` Sie überprüfen, ob das Objekt implementiert wird Wenn dies der Fall ist, müssen Sie die Methode entsprechend aufrufen.  
   
 ```csharp  
 if (obj is IObjectControl)  
@@ -235,7 +235,7 @@ if (instance is IObjectControl)
 if (pool.Count > minPoolSize)  
 {  
   // Clean the surplus objects.  
-}                      
+}
 else if (pool.Count < minPoolSize)  
 {  
   // Reinitialize the missing objects.  
@@ -250,17 +250,17 @@ else if (pool.Count < minPoolSize)
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>So können Sie das Beispiel einrichten, erstellen und ausführen  
   
-1. Stellen Sie sicher, dass Sie das [einmalige Setup Verfahren für die Windows Communication Foundation Beispiele](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)ausgeführt haben.  
+1. Stellen Sie sicher, dass Sie das [einmalige Setupverfahren für die Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)durchgeführt haben.  
   
-2. Befolgen Sie die Anweisungen unter Erstellen [der Windows Communication Foundation Beispiele](../../../../docs/framework/wcf/samples/building-the-samples.md), um die Lösung zu erstellen.  
+2. Um die Lösung zu erstellen, befolgen Sie die Anweisungen unter [Erstellen der Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3. Um das Beispiel in einer Konfiguration mit einem einzigen Computer oder Computer übergreifend auszuführen, befolgen Sie die Anweisungen unter [Ausführen der Windows Communication Foundation Beispiele](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3. Um das Beispiel in einer Konfiguration mit einem oder einer maschinellen Konfiguration auszuführen, befolgen Sie die Anweisungen unter [Ausführen der Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 > [!IMPORTANT]
 > Die Beispiele sind möglicherweise bereits auf dem Computer installiert. Suchen Sie nach dem folgenden Verzeichnis (Standardverzeichnis), bevor Sie fortfahren.  
->   
+>
 > `<InstallDrive>:\WF_WCF_Samples`  
->   
-> Wenn dieses Verzeichnis nicht vorhanden ist, wechseln Sie zu [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF)-Beispiele für .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) , um alle Windows Communication Foundation (WCF) und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele herunterzuladen. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
->   
+>
+> Wenn dieses Verzeichnis nicht vorhanden ist, wechseln Sie zu [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples for .NET Framework 4,](https://www.microsoft.com/download/details.aspx?id=21459) um alle Windows Communication Foundation (WCF) und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele herunterzuladen. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+>
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Instancing\Initialization`  

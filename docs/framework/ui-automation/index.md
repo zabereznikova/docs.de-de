@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - UI Automation
 ms.assetid: e7ec856e-41ee-47b1-9d57-b75a3dad088c
-ms.openlocfilehash: 7305258570ad853afa88a231592fd4b6cd2dd74e
-ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
+ms.openlocfilehash: 49d2988cbad33497f2214098bcde68f7d5434b5e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/02/2020
-ms.locfileid: "76965866"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79180024"
 ---
 # <a name="microsoft-ui-automation"></a>Microsoft-UI-Automatisierung
 
 > [!NOTE]
-> Diese Dokumentation richtet sich an .NET-Entwickler, die die im <xref:System.Windows.Automation>-Namespace definierten Klassen der Managed UI Automation verwenden möchten. Die neuesten Informationen zur Benutzeroberflächen Automatisierung finden Sie unter [Windows Automation-API: UI-Automatisierung](/windows/win32/winauto/entry-uiauto-win32).
+> Diese Dokumentation richtet sich an .NET-Entwickler, die die <xref:System.Windows.Automation> im Namespace definierten Automatisierungsklassen für verwaltete Benutzeroberflächen verwenden möchten. Aktuelle Informationen zur Benutzeroberflächenautomatisierung finden Sie unter [Windows Automation API: UI Automation](/windows/win32/winauto/entry-uiauto-win32).
 
- Die Microsoft-Benutzeroberflächen Automatisierung ist ein Barrierefreiheits Framework für Microsoft Windows. Es behandelt die Bedürfnisse von Hilfstechnologieprodukten und automatisierten Test-Frameworks durch Bereitstellen von programmgesteuerten Zugriff auf Informationen über die Benutzeroberfläche. Außerdem ermöglicht die Benutzeroberflächen Automatisierung Entwicklern und Anwendungen die Möglichkeit, ihre Produkte zugänglich zu machen.
+ Microsoft UI Automation ist ein Barrierefreiheitsframework für Microsoft Windows. Es erfüllt die Anforderungen von Hilfstechnologieprodukten und automatisierten Testframeworks, indem es programmgesteuerten Zugriff auf Informationen über die Benutzeroberfläche (UI) bietet. Darüber hinaus ermöglicht UI Automation Steuerungs- und Anwendungsentwicklern, ihre Produkte zugänglich zu machen.
 
- In dieser Dokumentation wird die Benutzeroberflächenautomatisierungs-API für verwalteten Code beschrieben. Weitere Informationen zum Programmieren für die Benutzer C++Oberflächen Automatisierung in finden Sie unter [UI-Automatisierung für Win32-Anwendungen](/windows/desktop/winauto/windows-automation-api-portal).
+ In dieser Dokumentation wird die UI Automation API für verwalteten Code beschrieben. Informationen zur Programmierung für die Benutzeroberflächenautomatisierung in C++ finden Sie unter [UI Automation for Win32 Applications](/windows/desktop/winauto/windows-automation-api-portal).
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
 - [Bewährte Methoden für Eingabehilfen](accessibility-best-practices.md)
-- [Grundlagen der Benutzeroberflächenautomatisierung](ui-automation-fundamentals.md)
+- [Grundlagen der UI-Automatisierung](ui-automation-fundamentals.md)
 - [Benutzeroberflächenautomatisierungs-Anbieter für verwalteten Code](ui-automation-providers-for-managed-code.md)
 - [Benutzeroberflächenautomatisierungs-Clients für verwalteten Code](ui-automation-clients-for-managed-code.md)
 - [Steuerelementmuster für Benutzeroberflächenautomatisierung](ui-automation-control-patterns.md)
@@ -34,4 +34,4 @@ ms.locfileid: "76965866"
 
 ## <a name="related-sections"></a>Verwandte Abschnitte
 
-- [Beispiele zur Barrierefreiheit](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility) 
+- [Beispiele zur Barrierefreiheit](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility)

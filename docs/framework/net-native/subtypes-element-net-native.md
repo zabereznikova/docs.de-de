@@ -1,15 +1,15 @@
 ---
-title: <Subtypes>-Element (.net Native)
+title: <Subtypes>Element (.NET Native)
 ms.date: 03/30/2017
 ms.assetid: fb854070-248b-46cf-9dab-c322e2b4d624
-ms.openlocfilehash: 9f090e7d1558d31111345e2c9b8dabb55b7122c1
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: bb719449f3769c5dbbde6d05efdb865c18bb4ab2
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73128106"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79180936"
 ---
-# <a name="subtypes-element-net-native"></a>\<-Untertypen > Element (.net Native)
+# <a name="subtypes-element-net-native"></a>\<Untertypen> Element (.NET Native)
 Wendet eine Laufzeitrichtlinie auf alle vom enthaltenden Typ geerbten Klassen an.  
   
 ## <a name="syntax"></a>Syntax  
@@ -18,7 +18,7 @@ Wendet eine Laufzeitrichtlinie auf alle vom enthaltenden Typ geerbten Klassen an
 <Subtypes Activate="policy_type"  
           Browse="policy_type"  
           Dynamic="policy_type"  
-          Serialize="policy_type"   
+          Serialize="policy_type"
           DataContractSerializer="policy_setting"  
           DataContractJsonSerializer="policy_setting"  
           XmlSerializer="policy_setting"  
@@ -30,9 +30,9 @@ Wendet eine Laufzeitrichtlinie auf alle vom enthaltenden Typ geerbten Klassen an
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
-### <a name="attributes"></a>Attribute  
+### <a name="attributes"></a>Attributes  
   
-|Attribut|Attributtyp|Beschreibung|  
+|attribute|Attributtyp|Beschreibung|  
 |---------------|--------------------|-----------------|  
 |`Activate`|Spiegelung|Optionales Attribut. Steuert den Laufzeitzugriff auf Konstruktoren, um die Aktivierung von Instanzen zu ermöglichen.|  
 |`Browse`|Spiegelung|Optionales Attribut. Steuert das Abfragen von Informationen über Programmelemente, ermöglicht jedoch keinen Laufzeitzugriff.|  
@@ -47,20 +47,20 @@ Wendet eine Laufzeitrichtlinie auf alle vom enthaltenden Typ geerbten Klassen an
   
 ## <a name="all-attributes"></a>Alle Attribute  
   
-|Wert|Beschreibung|  
+|value|Beschreibung|  
 |-----------|-----------------|  
 |*policy_setting*|Die Einstellung, die auf diesen Richtlinientyp angewendet werden soll. Mögliche Werte sind `All`, `Auto`, `Excluded`, `Public`, `PublicAndInternal`, `Required Public`, `Required PublicAndInternal` und `Required All`. Weitere Informationen finden Sie unter [Richtlinieneinstellungen für die Laufzeitanweisung](runtime-directive-policy-settings.md).|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
- Keine  
+ Keine.  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<Type>](type-element-net-native.md)|Wendet die Reflektionsrichtlinie auf einen Typ und alle seine Member an.|  
+|[\<Typ>](type-element-net-native.md)|Wendet die Reflektionsrichtlinie auf einen Typ und alle seine Member an.|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Das `<Subtypes>`-Element wendet die Richtlinie auf alle Untertypen des enthaltenden Typs an. Sie verwenden es, wenn Sie verschiedene Richtlinien auf abgeleitete Typen und deren Basisklassen anwenden möchten.  
   
  Die Reflektions-, Serialisierungs- und Interop-Attribute sind optional, obwohl mindestens eines vorhanden sein sollte.  
@@ -87,9 +87,9 @@ Wendet eine Laufzeitrichtlinie auf alle vom enthaltenden Typ geerbten Klassen an
   
  [!code-csharp[ProjectN_Reflection#5](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn_reflection/cs/subtypes.cs#5)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [\<Typ > Element](type-element-net-native.md)
-- [Runtime Directives (rd.xml) Configuration File Reference (Referenz zur Laufzeitanweisungs-Konfigurationsdatei (rd.xml))](runtime-directives-rd-xml-configuration-file-reference.md)
+- [\<Typ> Element](type-element-net-native.md)
+- [Laufzeitanweisungs-Konfigurationsdatei (rd.xml) Referenz](runtime-directives-rd-xml-configuration-file-reference.md)
 - [Elemente der Laufzeitanweisung](runtime-directive-elements.md)
 - [Richtlinieneinstellungen für die Laufzeitanweisung](runtime-directive-policy-settings.md)

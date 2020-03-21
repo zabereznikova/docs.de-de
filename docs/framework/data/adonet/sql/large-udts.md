@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 420ae24e-762b-4e09-b4c3-2112c470ee49
-ms.openlocfilehash: 012bddc0b4c29a0b50abc3a0df5c3cd34dc4725a
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: f55f6eccf3566a2391204e1ca4349ae5dff01954
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77452395"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79148555"
 ---
 # <a name="large-udts"></a>Große UDTs
 Benutzerdefinierte Typen (UDTs) gestatten Entwicklern, das Skalartypsystem durch das Speichern von CLR-Objekten (Common Language Runtime) in einer SQL Server-Datenbank zu erweitern. UDTs können mehrere Elemente enthalten und Verhalten aufweisen, die sich von den herkömmlichen Aliasdatentypen unterscheiden, die aus einem einzigen SQL Server-Systemdatentyp bestehen.  
@@ -27,14 +27,14 @@ Benutzerdefinierte Typen (UDTs) gestatten Entwicklern, das Skalartypsystem durch
 1. [Benutzerdefinierte CLR-Typen](/sql/relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types)  
   
 ## <a name="retrieving-udt-schemas-using-getschema"></a>Abrufen von UDT-Schemas mit 'GetSchema'  
- Die <xref:System.Data.SqlClient.SqlConnection.GetSchema%2A>-Methode von <xref:System.Data.SqlClient.SqlConnection> gibt Informationen zum Datenbankschema in einer <xref:System.Data.DataTable> zurück. Weitere Informationen finden Sie unter [SQL Server Schema](../sql-server-schema-collections.md)Auflistungen.  
+ Die <xref:System.Data.SqlClient.SqlConnection.GetSchema%2A>-Methode von <xref:System.Data.SqlClient.SqlConnection> gibt in einer <xref:System.Data.DataTable>Informationen zum Datenbankschema zurück. Weitere Informationen finden Sie unter [SQL Server-Schemasammlungen](../sql-server-schema-collections.md).  
   
 ### <a name="getschematable-column-values-for-udts"></a>'GetSchemaTable'-Spaltenwerte für UDTs  
- Die <xref:System.Data.SqlClient.SqlDataReader.GetSchemaTable%2A>-Methode eines <xref:System.Data.SqlClient.SqlDataReader> gibt eine <xref:System.Data.DataTable> mit Beschreibungen der Spaltenmetadaten zurück. In der folgenden Tabelle werden die Unterschiede bezüglich der Spaltenmetadaten für große UDTs zwischen SQL Server 2005 und SQL Server 2008 erläutert.  
+ Die <xref:System.Data.SqlClient.SqlDataReader.GetSchemaTable%2A>-Methode von <xref:System.Data.SqlClient.SqlDataReader> gibt eine <xref:System.Data.DataTable> zurück, die Spaltenmetadaten beschreibt. In der folgenden Tabelle werden die Unterschiede bei SQL Server 2005 und SQL Server 2008 bei den Spaltenmetadaten für große UDTs beschrieben.  
   
-|SqlDataReader-Spalte|SQL Server 2005|SQL Server 2008 und höher|  
+|Spalte SqlDataReader|SQL Server 2005|SQL Server 2008 und höher|  
 |--------------------------|---------------------|-------------------------------|  
-|`ColumnSize`|Variiert|Variiert|  
+|`ColumnSize`|Varies|Varies|  
 |`NumericPrecision`|255|255|  
 |`NumericScale`|255|255|  
 |`DataType`|`Byte[]`|UDT-Instanz|  
@@ -42,12 +42,12 @@ Benutzerdefinierte Typen (UDTs) gestatten Entwicklern, das Skalartypsystem durch
 |`ProviderType`|21 (`SqlDbType.VarBinary`)|29 (`SqlDbType.Udt`)|  
 |`NonVersionedProviderType`|29 (`SqlDbType.Udt`)|29 (`SqlDbType.Udt`)|  
 |`DataTypeName`|`SqlDbType.VarBinary`|Der dreiteilige, als *Database.SchemaName.TypeName* angegebene Name.|  
-|`IsLong`|Variiert|Variiert|  
+|`IsLong`|Varies|Varies|  
   
 ## <a name="sqldatareader-considerations"></a>Überlegungen zu "SqlDataReader"  
- Der <xref:System.Data.SqlClient.SqlDataReader> wurde beginnend in SQL Server 2008 erweitert und unterstützt nun das Abrufen großer UDT-Werte. Die Verarbeitung großer UDT-Werte durch einen <xref:System.Data.SqlClient.SqlDataReader> ist von der verwendeten SQL Server-Version sowie der in der Verbindungszeichenfolge angegebenen `Type System Version` abhängig. Weitere Informationen finden Sie unter <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>.  
+ Der <xref:System.Data.SqlClient.SqlDataReader> wurde beginnend in SQL Server 2008 erweitert und unterstützt nun das Abrufen großer UDT-Werte. Wie große UDT-Werte von <xref:System.Data.SqlClient.SqlDataReader> verarbeitet werden, hängt von der verwendeten SQL Server-Version sowie von der in der Verbindungszeichenfolge angegebenen `Type System Version` ab. Weitere Informationen finden Sie unter <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>.  
   
- Die folgenden <xref:System.Data.SqlClient.SqlDataReader>-Methoden geben anstelle eines UDTs <xref:System.Data.SqlTypes.SqlBinary> zurück, wenn `Type System Version` auf SQL Server 2005 festgelegt ist:  
+ Die folgenden Methoden von <xref:System.Data.SqlClient.SqlDataReader> geben <xref:System.Data.SqlTypes.SqlBinary> anstelle eines UDT zurück, wenn `Type System Version` auf SQL Server 2005 festgelegt ist:  
   
 - <xref:System.Data.SqlClient.SqlDataReader.GetProviderSpecificFieldType%2A>  
   
@@ -59,28 +59,28 @@ Benutzerdefinierte Typen (UDTs) gestatten Entwicklern, das Skalartypsystem durch
   
 - <xref:System.Data.SqlClient.SqlDataReader.GetSqlValues%2A>  
   
- Die folgenden Methoden geben anstelle eines UDTs ein `Byte[]`-Array zurück, wenn `Type System Version` auf SQL Server 2005 festgelegt ist:  
+ Die folgenden Methoden geben eine Array von `Byte[]` anstelle eines UDT zurück, wenn `Type System Version` auf SQL Server 2005 festgelegt ist:  
   
 - <xref:System.Data.SqlClient.SqlDataReader.GetValue%2A>  
   
 - <xref:System.Data.SqlClient.SqlDataReader.GetValues%2A>  
   
- Beachten Sie, dass für die aktuelle Version von ADO.NET keine Konvertierungen vorgenommen werden.  
+ Beachten Sie, dass für die aktuelle Version von ADO.NET keine Konvertierungen erfolgen.  
   
-## <a name="specifying-sqlparameters"></a>Angeben von 'SqlParameters'  
- Die folgenden <xref:System.Data.SqlClient.SqlParameter>-Eigenschaften wurden für die Verwendung mit großen UDTs erweitert.  
+## <a name="specifying-sqlparameters"></a>Angeben von SqlParameters  
+ Die folgenden <xref:System.Data.SqlClient.SqlParameter>-Eigenschaften wurden für das Arbeiten mit großen UDTs erweitert.  
   
 |SqlParameter-Eigenschaft|Beschreibung|  
 |---------------------------|-----------------|  
-|<xref:System.Data.SqlClient.SqlParameter.Value%2A>|Ruft ein Objekt ab, das den Wert des Parameters darstellt, oder legt dieses fest. Der Standardwert ist null. Die Eigenschaft kann `SqlBinary`, `Byte[]` oder ein verwaltetes Objekt sein.|  
-|<xref:System.Data.SqlClient.SqlParameter.SqlValue%2A>|Ruft ein Objekt ab, das den Wert des Parameters darstellt, oder legt dieses fest. Der Standardwert ist null. Die Eigenschaft kann `SqlBinary`, `Byte[]` oder ein verwaltetes Objekt sein.|  
-|<xref:System.Data.SqlClient.SqlParameter.Size%2A>|Ruft die Größe des aufzulösenden Parameterwerts ab oder legt diese Größe fest. Der Standardwert ist 0. Die Eigenschaft kann eine ganze Zahl sein, die für die Größe des Parameterwerts steht. Bei großen UDTs kann es sich um die tatsächliche Größe des UDT handeln, bei unbekannter Größe lautet der Wert -1.|  
+|<xref:System.Data.SqlClient.SqlParameter.Value%2A>|Ruft ein Objekt ab oder legt es fest, das den Wert des Parameters darstellt. Der Standardwert ist NULL. Die Eigenschaft kann `SqlBinary`, `Byte[]` oder ein verwaltetes Objekt sein.|  
+|<xref:System.Data.SqlClient.SqlParameter.SqlValue%2A>|Ruft ein Objekt ab oder legt es fest, das den Wert des Parameters darstellt. Der Standardwert ist NULL. Die Eigenschaft kann `SqlBinary`, `Byte[]` oder ein verwaltetes Objekt sein.|  
+|<xref:System.Data.SqlClient.SqlParameter.Size%2A>|Ruft die Größe des aufzulösenden Parameterwerts ab oder legt sie fest. Der Standardwert ist 0. Die Eigenschaft kann eine ganze Zahl sein, die die Größe des Parameterwerts darstellt. Bei großen UDTs kann es sich um die tatsächliche Größe des UDT handeln, bei unbekannter Größe lautet der Wert -1.|  
   
 ## <a name="retrieving-data-example"></a>Abrufen eines Datenbeispiels  
- Im folgenden Codefragment wird gezeigt, wie Daten großer UDTs abgerufen werden können. Die `connectionString`-Variable setzt eine gültige Verbindung mit einer SQL Server-Datenbank voraus. Die `commandString`-Variable setzt eine gültige SELECT-Anweisung voraus, in der die Primärschlüsselspalte zuerst aufgelistet ist.  
+ Das folgende Codefragment zeigt, wie große UDT-Daten abgerufen werden können. Die Variable `connectionString` setzt eine gültige Verbindung mit einer SQL Server-Datenbank voraus. Die Variable `commandString` setzt eine gültige SELECT-Anweisung mit an erster Stelle aufgeführter Primärschlüsselspalte voraus.  
   
 ```csharp  
-using (SqlConnection connection = new SqlConnection(   
+using (SqlConnection connection = new SqlConnection(
     connectionString, commandString))  
 {  
   connection.Open();  
@@ -131,10 +131,10 @@ Using connection As New SqlConnection( _
 End Using  
 ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Konfigurieren von Parametern und Parameterdatentypen](../configuring-parameters-and-parameter-data-types.md)
 - [Abrufen von Datenbankschemainformationen](../retrieving-database-schema-information.md)
 - [SQL Server-Datentypzuordnungen](../sql-server-data-type-mappings.md)
-- [SQL Server Binary and Large-Value Data (Binäre Daten und Daten mit umfangreichen Werten in SQL Server)](sql-server-binary-and-large-value-data.md)
+- [SQL Server-Binär- und Großwertdaten](sql-server-binary-and-large-value-data.md)
 - [Übersicht über ADO.NET](../ado-net-overview.md)

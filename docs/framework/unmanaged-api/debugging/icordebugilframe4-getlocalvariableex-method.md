@@ -12,12 +12,12 @@ api_type:
 ms.assetid: 0c8676f8-ca0d-4998-b64d-fefac7e38912
 topic_type:
 - apiref
-ms.openlocfilehash: 017c14e9170087f3c3c9de64f50d165fc91aa297
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: ee263e8c49cd6da7278bd2299557336629720d2f
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76782416"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79178776"
 ---
 # <a name="icordebugilframe4getlocalvariableex-method"></a>ICorDebugILFrame4::GetLocalVariableEx-Methode
 [Wird nur in .NET Framework 4.5.2 und neueren Versionen unterstützt]  
@@ -28,36 +28,36 @@ ms.locfileid: "76782416"
   
 ```cpp
 HRESULT GetLocalVariableEx(  
-   [in] ILCodeKind flags,   
-   [in] DWORD dwIndex,   
+   [in] ILCodeKind flags,
+   [in] DWORD dwIndex,
    [out] ICorDebugValue **ppValue  
 );  
 ```  
   
-## <a name="parameters"></a>Parameters  
+## <a name="parameters"></a>Parameter  
  `flags`  
- in Ein [ilcodekind](ilcodekind-enumeration.md) -Enumerationsmember, der angibt, ob eine in der Profiler-ReJIT-Instrumentation hinzugefügte Variable im Frame enthalten ist.  
+ [in] Ein [ILCodeKind](ilcodekind-enumeration.md) ILCodeKind-Enumerationsmember, der angibt, ob eine Variable, die in der Profiler-ReJIT-Instrumentierung hinzugefügt wurde, im Frame enthalten ist.  
   
  `dwIndex`  
  [in] Der Index der lokalen Variable im IL-Stapelrahmen.  
   
  `ppValue`  
- vorgenommen Ein Zeiger auf die Adresse eines icorentbugvalue-Objekts, das den abgerufenen Wert darstellt.  
+ [out] Ein Zeiger auf die Adresse eines "ICorDebugValue"-Objekts, das den abgerufenen Wert darstellt.  
   
-## <a name="remarks"></a>Hinweise  
- Diese Methode ähnelt der [GetLocalVariable](icordebugilframe-getlocalvariable-method.md) -Methode, außer dass Sie optional auf eine Variable zugreift, die in der Profiler-ReJIT-Instrumentation hinzugefügt wurde. Das Aufrufen dieser Methode mit einem `flags` Wert `ILCODE_ORIGINAL_IL` entspricht dem Aufrufen von [GetLocalVariable](icordebugilframe-getlocalvariable-method.md); Wenn die Methode mit zusätzlichen lokalen Variablen instrumentiert wird, kann nicht auf diese Variablen zugegriffen werden. `ILCODE_REJIT_IL` ermöglicht dem Debugger den Zugriff auf die lokalen Variablen, die in der Profiler-ReJIT-Instrumentierung hinzugefügt wurden. Ist die IL nicht instrumentiert, gibt die Methode `E_INVALIDARG` zurück.  
+## <a name="remarks"></a>Bemerkungen  
+ Diese Methode ähnelt der [GetLocalVariable-Methode,](icordebugilframe-getlocalvariable-method.md) mit der Ausnahme, dass sie optional auf eine Variable zugreift, die in der Profiler-ReJIT-Instrumentierung hinzugefügt wurde. Aufrufen dieser Methode `flags` mit `ILCODE_ORIGINAL_IL` einem Wert von entspricht dem Aufrufen von [GetLocalVariable](icordebugilframe-getlocalvariable-method.md); Wenn die Methode mit zusätzlichen lokalen Variablen instrumentiert ist, kann nicht auf diese Variablen zugegriffen werden. `ILCODE_REJIT_IL`ermöglicht dem Debugger den Zugriff auf die lokalen Variablen, die in der Profiler-ReJIT-Instrumentierung hinzugefügt wurden. Ist die IL nicht instrumentiert, gibt die Methode `E_INVALIDARG` zurück.  
   
-## <a name="requirements"></a>-Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   
  **Bibliothek:** CorGuids.lib  
   
- **.NET Framework Versionen:** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
+ **.NET Framework-Versionen:** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [ICorDebugILFrame4-Schnittstelle](icordebugilframe4-interface.md)
-- [Debuggen von Schnittstellen](debugging-interfaces.md)
-- [ReJIT: Anleitung](https://docs.microsoft.com/archive/blogs/davbr/rejit-a-how-to-guide)
+- [Debugschnittstellen](debugging-interfaces.md)
+- [ReJIT: Ein Anleitung](https://docs.microsoft.com/archive/blogs/davbr/rejit-a-how-to-guide)

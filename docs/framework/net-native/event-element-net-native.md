@@ -1,31 +1,31 @@
 ---
-title: <Event>-Element (.net Native)
+title: <Event>Element (.NET Native)
 ms.date: 03/30/2017
 ms.assetid: e53b029c-9d6d-4c0a-9cdc-5cfca8a5ca47
-ms.openlocfilehash: 6966caede63faafa718b760be879f6bc6cbd3ab9
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 60da48d5872d7ce61afcffa7977411bc6e1efc7f
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73128493"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79181038"
 ---
-# <a name="event-element-net-native"></a>\<Ereignis >-Element (.net Native)
+# <a name="event-element-net-native"></a>\<Ereignis> Element (.NET Native)
 Wendet eine Laufzeitreflektionsrichtlinie auf ein Ereignis an.  
   
 ## <a name="syntax"></a>Syntax  
   
 ```xml  
-<Event Name="event_name"   
-       Browse="policy_type"   
+<Event Name="event_name"
+       Browse="policy_type"
        Dynamic="policy_type" />  
 ```  
   
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
-### <a name="attributes"></a>Attribute  
+### <a name="attributes"></a>Attributes  
   
-|Attribut|Attributtyp|Beschreibung|  
+|attribute|Attributtyp|Beschreibung|  
 |---------------|--------------------|-----------------|  
 |`Name`|Allgemein|Erforderliches Attribut. Gibt den Ereignisnamen an.|  
 |`Browse`|Spiegelung|Optionales Attribut. Steuert das Abfragen nach Informationen über das Ereignis oder das Auflisten des Ereignisses, aber ermöglicht keinen dynamischen Zugriff zur Laufzeit.|  
@@ -33,31 +33,31 @@ Wendet eine Laufzeitreflektionsrichtlinie auf ein Ereignis an.
   
 ## <a name="name-attribute"></a>Namensattribut  
   
-|Wert|Beschreibung|  
+|value|Beschreibung|  
 |-----------|-----------------|  
-|*method_name*|Der Name des Ereignisses. Der Typ des Ereignisses wird durch das übergeordnete [\<Type>](type-element-net-native.md)- oder [\<TypeInstantiation>](typeinstantiation-element-net-native.md)-Element definiert.|  
+|*method_name*|Der Ereignisname. Der Typ des Ereignisses wird [ \<](type-element-net-native.md) durch das übergeordnete Type>oder [ \<TypeInstantiation>-Element](typeinstantiation-element-net-native.md) definiert.|  
   
 ## <a name="all-other-attributes"></a>Alle anderen Attribute  
   
-|Wert|Beschreibung|  
+|value|Beschreibung|  
 |-----------|-----------------|  
 |*policy_setting*|Die Einstellung, die auf diesen Richtlinientyp für das Ereignis angewendet werden soll. Mögliche Werte sind `Auto`, `Excluded`, `Included` und `Required`. Weitere Informationen finden Sie unter [Richtlinieneinstellungen für die Laufzeitanweisung](runtime-directive-policy-settings.md).|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
- Keine  
+ Keine.  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<Type>](type-element-net-native.md)|Wendet die Reflektionsrichtlinie auf einen Typ und alle seine Member an.|  
-|[\<TypeInstantiation>](typeinstantiation-element-net-native.md)|Wendet die Reflektionsrichtlinie auf einen konstruierten generischen Typ und alle seine Member an.|  
+|[\<Typ>](type-element-net-native.md)|Wendet die Reflektionsrichtlinie auf einen Typ und alle seine Member an.|  
+|[\<TypInstanziierung>](typeinstantiation-element-net-native.md)|Wendet die Reflektionsrichtlinie auf einen konstruierten generischen Typ und alle seine Member an.|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Wenn die Richtlinie eines Ereignisses nicht explizit definiert ist, erbt es die Laufzeitrichtlinie des übergeordneten Elements.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Runtime Directives (rd.xml) Configuration File Reference (Referenz zur Laufzeitanweisungs-Konfigurationsdatei (rd.xml))](runtime-directives-rd-xml-configuration-file-reference.md)
+- [Laufzeitanweisungs-Konfigurationsdatei (rd.xml) Referenz](runtime-directives-rd-xml-configuration-file-reference.md)
 - [Elemente der Laufzeitanweisung](runtime-directive-elements.md)
 - [Richtlinieneinstellungen für die Laufzeitanweisung](runtime-directive-policy-settings.md)

@@ -1,21 +1,21 @@
 ---
-title: 'Vorgehensweise: Veröffentlichen von Metadaten für einen Dienst mithilfe einer Konfigurationsdatei'
+title: 'Gewusst wie: Veröffentlichen von Metadaten für einen Dienst mithilfe einer Konfigurationsdatei'
 ms.date: 03/30/2017
 ms.assetid: f061443f-92df-4824-b36a-609c4cd14a17
-ms.openlocfilehash: 26894a3951b91879a7b3e6f66731891113394082
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 7ea0a2aa386f747b89f56f21d75a97e4409140a1
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70045297"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79184871"
 ---
-# <a name="how-to-publish-metadata-for-a-service-using-a-configuration-file"></a>Vorgehensweise: Veröffentlichen von Metadaten für einen Dienst mithilfe einer Konfigurationsdatei
-Dies ist eines von zwei Vorgehensweisen, in denen das Veröffentlichen von Metadaten für einen Windows Communication Foundation (WCF)-Dienst veranschaulicht wird. Es gibt zwei Möglichkeiten, wie ein Dienst Metadaten veröffentlichen kann: mit einer Konfigurationsdatei und mit Code. In diesem Thema wird das Veröffentlichen von Metadaten für einen Dienst mithilfe einer Konfigurationsdatei dargestellt.  
+# <a name="how-to-publish-metadata-for-a-service-using-a-configuration-file"></a>Gewusst wie: Veröffentlichen von Metadaten für einen Dienst mithilfe einer Konfigurationsdatei
+Dies ist eines von zwei Anleitungsthemen, die das Veröffentlichen von Metadaten für einen Windows Communication Foundation (WCF)-Dienst veranschaulichen. Es gibt zwei Möglichkeiten, wie ein Dienst Metadaten veröffentlichen kann: mit einer Konfigurationsdatei und mit Code. In diesem Thema wird das Veröffentlichen von Metadaten für einen Dienst mithilfe einer Konfigurationsdatei dargestellt.  
   
 > [!CAUTION]
-> In diesem Thema wird das Veröffentlichen von Metadaten auf unsichere Weise dargestellt. Jeder Client kann Metadaten vom Dienst abrufen. Wenn Sie möchten, dass Ihr Dienst Metadaten auf sichere Weise veröffentlicht, finden Sie weitere Informationen unter [Benutzerdefinierter sicherer Metadatenendpunkt](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md).  
+> In diesem Thema wird das Veröffentlichen von Metadaten auf unsichere Weise dargestellt. Jeder Client kann Metadaten vom Dienst abrufen. Wenn Sie von Ihrem Dienst benötigen, um Metadaten auf sichere Weise zu veröffentlichen, finden Sie weitere Informationen unter [Custom Secure Metadata Endpoint](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md).  
   
- Weitere Informationen zum Veröffentlichen von Metadaten im Code finden [Sie unter Gewusst wie: Veröffentlichen von Metadaten für einen Dienst mithilfe](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md)von Code. Die Veröffentlichung von Metadaten ermöglicht Clients, Metadaten über eine WS-Transfer-GET-Anforderung oder eine HTTP/GET-Anforderung mithilfe einer `?wsdl`-Abfragezeichenfolge abzurufen. Um sicherzustellen, dass der Code funktioniert, erstellen Sie einen einfachen WCF-Dienst. Der Einfachheit halber wird im folgenden Code ein grundlegender, selbst gehosteter Dienst bereitgestellt.  
+ Weitere Informationen zum Veröffentlichen von Metadaten im Code finden Sie unter [Gewusst wie: Veröffentlichen von Metadaten für einen Dienst mithilfe von Code](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md). Die Veröffentlichung von Metadaten ermöglicht Clients, Metadaten über eine WS-Transfer-GET-Anforderung oder eine HTTP/GET-Anforderung mithilfe einer `?wsdl`-Abfragezeichenfolge abzurufen. Um sicherzustellen, dass der Code funktioniert, erstellen Sie einen grundlegenden WCF-Dienst. Der Einfachheit halber wird im folgenden Code ein grundlegender, selbst gehosteter Dienst bereitgestellt.  
   
 ```csharp  
 using System;  
@@ -46,7 +46,7 @@ namespace Metadata.Samples
         static void Main(string[] args)  
         {  
             ServiceHost host = new ServiceHost(typeof(SimpleService),  
-                new Uri("http://localhost:8001/MetadataSample"));   
+                new Uri("http://localhost:8001/MetadataSample"));
             try  
             {  
                 // Open the service host to accept incoming calls  
@@ -156,9 +156,9 @@ namespace Metadata.Samples
   
     - Eine absolute Adresse.  
   
-9. Erstellen Sie die Konsolenanwendung und führen Sie sie aus.  
+9. Erstellen Sie die Konsolenanwendung, und führen Sie sie aus.  
   
-10. Navigieren Sie mit Internet Explorer zur Basisadresse des Dienstanbieter (http://localhost:8001/MetadataSample in diesem Beispiel), und vergewissern Sie sich, dass die Metadatenveröffentlichung aktiviert ist. Wenn dies nicht der Grund ist, wird eine Meldung am oberen Rand der resultierenden Seite angezeigt: "Die Metadatenveröffentlichung für diesen Dienst ist zurzeit deaktiviert."  
+10. Verwenden Sie Internet Explorer, um zurhttp://localhost:8001/MetadataSample Basisadresse des Dienstes (in diesem Beispiel) zu navigieren und sicherzustellen, dass die Metadatenveröffentlichung aktiviert ist. Wenn nicht, wird oben auf der Ergebnisseite folgende Meldung angezeigt: "Das Veröffentlichen von Metadaten für diesen Dienst ist derzeit deaktiviert."  
   
 ### <a name="to-use-default-endpoints"></a>So verwenden Sie Standardendpunkte  
   
@@ -182,7 +182,7 @@ namespace Metadata.Samples
      Da für den Dienst das <xref:System.ServiceModel.Description.ServiceMetadataBehavior> mit `httpGetEnabled` auf `true` festgelegt wurde, ist für den Dienst die Veröffentlichung von Metadaten aktiviert. Und da keine Endpunkte explizit hinzugefügt wurden, fügt die Runtime die Standardendpunkte hinzu. Weitere Informationen über Standardendpunkte, Bindungen und Verhalten finden Sie unter [Simplified Configuration (Vereinfachte Konfiguration)](../../../../docs/framework/wcf/simplified-configuration.md) und [Simplified Configuration for WCF Services (Vereinfachte Konfiguration für WCF-Dienste)](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Codebeispiel wird die Implementierung eines einfachen WCF-Dienstanbieter und der Konfigurationsdatei veranschaulicht, die Metadaten für den Dienst veröffentlicht.  
+ Das folgende Codebeispiel zeigt die Implementierung eines grundlegenden WCF-Dienstes und die Konfigurationsdatei, die Metadaten für den Dienst veröffentlicht.  
   
 ```csharp  
 using System;  
@@ -213,7 +213,7 @@ namespace Metadata.Samples
         static void Main(string[] args)  
         {  
             ServiceHost host = new ServiceHost(typeof(SimpleService),  
-                new Uri("http://localhost:8001/MetadataSample"));   
+                new Uri("http://localhost:8001/MetadataSample"));
             try  
             {  
                 // Open the service host to accept incoming calls  
@@ -253,11 +253,11 @@ namespace Metadata.Samples
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.ServiceModel.Description.ServiceMetadataBehavior>
-- [Vorgehensweise: Hosten eines WCF-Diensts in einer verwalteten Anwendung](../../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md)
+- [Vorgehensweise Hosten eines WCF-Diensts in einer verwalteten Anwendung](../../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md)
 - [Selbst gehostete Dienste](../../../../docs/framework/wcf/samples/self-host.md)
 - [Übersicht über die Metadatenarchitektur](../../../../docs/framework/wcf/feature-details/metadata-architecture-overview.md)
 - [Verwenden von Metadaten](../../../../docs/framework/wcf/feature-details/using-metadata.md)
-- [Vorgehensweise: Veröffentlichen von Metadaten für einen Dienst mithilfe von Code](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md)
+- [Gewusst wie: Veröffentlichen von Metadaten für einen Dienst über den Code](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md)

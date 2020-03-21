@@ -7,30 +7,30 @@ dev_langs:
 helpviewer_keywords:
 - queues [WCF]. grouping messages
 ms.assetid: 63b23b36-261f-4c37-99a2-cc323cd72a1a
-ms.openlocfilehash: 995697e618ff5d56a719efc5d69b97583733d980
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 231310e5c427f507141e3c144cb02b8e848d4fbf
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70892742"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79185160"
 ---
 # <a name="grouping-queued-messages-in-a-session"></a>Gruppieren von Nachrichten in der Warteschlange einer Sitzung
-Windows Communication Foundation (WCF) stellt eine Sitzung bereit, mit der Sie einen Satz verwandter Nachrichten zur Verarbeitung durch eine einzelne empfangende Anwendung gruppieren können. Die Nachrichten in einer Sitzung müssen Teil der gleichen Transaktion sein. Da alle Nachrichten Teil der gleichen Transaktion sind, wird die gesamte Sitzung zurückgesetzt, wenn eine Nachricht nicht verarbeitet werden kann. Sitzungen weisen ähnliche Verhaltensweisen bezüglich Warteschlangen für unzustellbare Nachrichten und Warteschlangen für potenziell schädliche Nachrichten auf. Die Time to Live (TTL)-Eigenschaft einer Bindung in der Warteschlange, die für Sitzungen konfiguriert wurde, wird auf die gesamte Sitzung angewendet. Wenn nur ein Teil der Nachrichten in der Sitzung vor Ablauf der TTL gesendet wird, wird die gesamte Sitzung in der Warteschlange für unzustellbare Nachrichten abgelegt. Analog wird ggf. die gesamte Sitzung in der Warteschlange für potenziell schädliche Nachrichten abgelegt, wenn Nachrichten in einer Sitzung nicht von der Anwendungswarteschlange an eine Anwendung gesendet werden können.  
+Windows Communication Foundation (WCF) bietet eine Sitzung, mit der Sie eine Reihe verwandter Nachrichten für die Verarbeitung durch eine einzelne empfangende Anwendung gruppieren können. Die Nachrichten in einer Sitzung müssen Teil der gleichen Transaktion sein. Da alle Nachrichten Teil der gleichen Transaktion sind, wird die gesamte Sitzung zurückgesetzt, wenn eine Nachricht nicht verarbeitet werden kann. Sitzungen weisen ähnliche Verhaltensweisen bezüglich Warteschlangen für unzustellbare Nachrichten und Warteschlangen für potenziell schädliche Nachrichten auf. Die Time to Live (TTL)-Eigenschaft einer Bindung in der Warteschlange, die für Sitzungen konfiguriert wurde, wird auf die gesamte Sitzung angewendet. Wenn nur ein Teil der Nachrichten in der Sitzung vor Ablauf der TTL gesendet wird, wird die gesamte Sitzung in der Warteschlange für unzustellbare Nachrichten abgelegt. Analog wird ggf. die gesamte Sitzung in der Warteschlange für potenziell schädliche Nachrichten abgelegt, wenn Nachrichten in einer Sitzung nicht von der Anwendungswarteschlange an eine Anwendung gesendet werden können.  
   
 ## <a name="message-grouping-example"></a>Beispiel für das Gruppieren von Nachrichten  
- Ein Beispiel für das Gruppieren von Nachrichten ist die Implementierung einer Anwendung zur Auftrags Verarbeitung als WCF-Dienst. Angenommen, ein Client sendet einen Auftrag an diese Anwendung, die eine Anzahl von Elementen enthält. Der Client ruft für jedes Element den Dienst auf. Dadurch wird jeweils eine separate Nachricht gesendet. Es kann sein, dass Server A das erste Element empfängt und Server B das zweite. Immer, wenn ein Element hinzugefügt wird, muss der Server, der das Element verarbeitet, die entsprechende Reihenfolge ermitteln, und das Element muss hinzugefügt werden. Dieser Vorgang ist nicht sehr effizient. Dieses Problem tritt auch dann auf, wenn alle Anfragen nur von einem Server behandelt werden, da der Server alle Aufträge überwachen muss, die derzeit verarbeitet werden, und das neue Element einem Auftrag zugeordnet werden muss. Durch das Gruppieren aller Anforderungen für einen Auftrag wird die Implementierung einer solchen Anwendung stark vereinfacht. Alle Elemente für einen Auftrag werden von der Clientanwendung in einer Sitzung gesendet, sodass der Auftrag vom Dienst in einer Sitzung verarbeitet werden kann. \  
+ Ein Beispiel, in dem das Gruppieren von Nachrichten hilfreich ist, ist das Implementieren einer Auftragsverarbeitungsanwendung als WCF-Dienst. Angenommen, ein Client sendet einen Auftrag an diese Anwendung, die eine Anzahl von Elementen enthält. Der Client ruft für jedes Element den Dienst auf. Dadurch wird jeweils eine separate Nachricht gesendet. Es kann sein, dass Server A das erste Element empfängt und Server B das zweite. Immer, wenn ein Element hinzugefügt wird, muss der Server, der das Element verarbeitet, die entsprechende Reihenfolge ermitteln, und das Element muss hinzugefügt werden. Dieser Vorgang ist nicht sehr effizient. Dieses Problem tritt auch dann auf, wenn alle Anfragen nur von einem Server behandelt werden, da der Server alle Aufträge überwachen muss, die derzeit verarbeitet werden, und das neue Element einem Auftrag zugeordnet werden muss. Durch das Gruppieren aller Anforderungen für einen Auftrag wird die Implementierung einer solchen Anwendung stark vereinfacht. Alle Elemente für einen Auftrag werden von der Clientanwendung in einer Sitzung gesendet, sodass der Auftrag vom Dienst in einer Sitzung verarbeitet werden kann. \  
   
-## <a name="procedures"></a>Verfahren  
+## <a name="procedures"></a>Prozeduren  
   
 #### <a name="to-set-up-a-service-contract-to-use-sessions"></a>So richten Sie einen Dienstvertrag für Sitzungen ein  
   
-1. Definieren Sie einen Dienstvertrag, der eine Sitzung erfordert. Verwenden Sie hierzu das <xref:System.ServiceModel.ServiceContractAttribute> -Attribut, indem Sie Folgendes angeben:  
+1. Definieren Sie einen Dienstvertrag, der eine Sitzung erfordert. Führen Sie <xref:System.ServiceModel.ServiceContractAttribute> dies mit dem Attribut aus, indem Sie Folgendes angeben:  
   
     ```csharp
     SessionMode=SessionMode.Required  
     ```  
   
-2. Markieren Sie die Vorgänge im Vertrag als unidirektional, da von diesen Methoden nichts zurückgegeben wird. Dies erfolgt mit dem <xref:System.ServiceModel.OperationContractAttribute> -Attribut, indem Folgendes angegeben wird:  
+2. Markieren Sie die Vorgänge im Vertrag als unidirektional, da von diesen Methoden nichts zurückgegeben wird. Dies geschieht <xref:System.ServiceModel.OperationContractAttribute> mit dem Attribut, indem Folgendes angegeben wird:  
   
     ```csharp  
     [OperationContract(IsOneWay = true)]  
@@ -45,7 +45,7 @@ Windows Communication Foundation (WCF) stellt eine Sitzung bereit, mit der Sie e
 4. Jeder Dienstvorgang erfordert eine Transaktion. Verwenden Sie das <xref:System.ServiceModel.OperationBehaviorAttribute>-Attribut für die Angabe. Der Vorgang, mit dem die Transaktion abgeschlossen wird, sollte auch <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionAutoComplete> auf `true` festlegen.  
   
     ```csharp  
-    [OperationBehavior(TransactionScopeRequired = true, TransactionAutoComplete = true)]   
+    [OperationBehavior(TransactionScopeRequired = true, TransactionAutoComplete = true)]
     ```  
   
 5. Konfigurieren Sie einen Endpunkt, der die vom System bereitgestellte `NetMsmqBinding`-Bindung verwendet.  
@@ -62,7 +62,7 @@ Windows Communication Foundation (WCF) stellt eine Sitzung bereit, mit der Sie e
   
 1. Erstellen Sie einen Transaktionsbereich zum Schreiben in die Transaktionswarteschlange.  
   
-2. Erstellen Sie den WCF-Client mit dem [Service Model Metadata Utility Tool (Svcutil. exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) Tool.  
+2. Erstellen Sie den WCF-Client mit dem [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) Tool.  
   
 3. Platzieren Sie den Auftrag.  
   
@@ -71,7 +71,7 @@ Windows Communication Foundation (WCF) stellt eine Sitzung bereit, mit der Sie e
 ## <a name="example"></a>Beispiel  
   
 ### <a name="description"></a>Beschreibung  
- Im folgenden Beispiel wird der Code für den `IProcessOrder`-Dienst sowie für einen Client bereitgestellt, der diesen Dienst verwendet. Es zeigt, wie WCF Warteschlangen Sitzungen verwendet, um das Gruppierungs Verhalten bereitzustellen.  
+ Im folgenden Beispiel wird der Code für den `IProcessOrder`-Dienst sowie für einen Client bereitgestellt, der diesen Dienst verwendet. Es zeigt, wie WCF Sitzungen in der Warteschlange verwendet, um das Gruppierungsverhalten bereitzustellen.  
   
 ### <a name="code-for-the-service"></a>Code für den Dienst  
  [!code-csharp[S_Msmq_Session#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_msmq_session/cs/service.cs#1)]
@@ -81,7 +81,7 @@ Windows Communication Foundation (WCF) stellt eine Sitzung bereit, mit der Sie e
  [!code-csharp[S_Msmq_Session#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_msmq_session/cs/client.cs#3)]
  [!code-vb[S_Msmq_Session#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_msmq_session/vb/client.vb#3)]  
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Sitzungen und Warteschlangen](../../../../docs/framework/wcf/samples/sessions-and-queues.md)
 - [Warteschlangenübersicht](../../../../docs/framework/wcf/feature-details/queues-overview.md)

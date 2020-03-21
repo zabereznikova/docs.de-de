@@ -6,18 +6,18 @@ helpviewer_keywords:
 - platform invoke, attribute fields
 - attribute fields in platform invoke, EntryPoint
 ms.assetid: d1247f08-0965-416a-b978-e0b50652dfe3
-ms.openlocfilehash: a55e460f565c33731c5b0b29ab42b8263d3690e2
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: c5f8f735dd3e8c359f88044a532c29303237acc8
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73125159"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79181309"
 ---
 # <a name="specifying-an-entry-point"></a>Angeben eines Einstiegspunktes
 
 Ein Einstiegspunkt identifiziert die Position einer Funktion in einer DLL. In einem verwalteten Projekt wird diese Funktion vom ursprünglichen Namen oder vom Ordinaleinstiegspunkt einer Zielfunktion über die Grenzen der Interoperation hinaus identifiziert. Außerdem können Sie dem Einstiegspunkt einen anderen Namen zuordnen und damit die Funktion umbenennen.  
   
- Im folgenden finden Sie eine Liste möglicher Gründe für das Umbenennen einer DLL-Funktion:  
+ Im Folgenden finden Sie eine Liste möglicher Gründe für die Umbenennung einer DLL-Funktion:  
   
 - Um keine API-Funktionsnamen zu verwenden, die zwischen Groß- und Kleinschreibung unterscheiden.  
   
@@ -30,7 +30,7 @@ Ein Einstiegspunkt identifiziert die Position einer Funktion in einer DLL. In ei
  In diesem Abschnitt wird das Umbenennen einer DLL-Funktion in verwaltetem Code veranschaulicht.  
   
 ## <a name="renaming-a-function-in-visual-basic"></a>Umbenennen einer Funktion in Visual Basic  
- 
+
 Visual Basic verwendet das **Function**-Schlüsselwort in der **Declare**-Anweisung, um das<xref:System.Runtime.InteropServices.DllImportAttribute.EntryPoint?displayProperty=nameWithType>-Feld festzulegen. Das folgende Beispiel zeigt eine Basisdeklaration.  
   
 ```vb
@@ -90,7 +90,7 @@ extern "C" int MsgBox(
     HWND hWnd, String* lpText, String* lpCaption, unsigned int uType);
 ```
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Runtime.InteropServices.DllImportAttribute>
 - [Erstellen von Prototypen in verwaltetem Code](creating-prototypes-in-managed-code.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6c116592-134b-4ef2-a319-680e92d013aa
 topic_type:
 - apiref
-ms.openlocfilehash: c5199794098e4d83588728eeb165aee5f81fe4c4
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 35e043c56977bf644efe1dd9cee1409f50cc877f
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73088501"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79179016"
 ---
 # <a name="icordebugarrayvaluegetdimensions-method"></a>ICorDebugArrayValue::GetDimensions-Methode
 Ruft die Anzahl der Elemente in jeder Dimension dieses Arrays ab.  
@@ -30,21 +30,21 @@ Ruft die Anzahl der Elemente in jeder Dimension dieses Arrays ab.
 ```cpp  
 HRESULT GetDimensions (  
     [in] ULONG32         cdim,  
-    [out, size_is(cdim), length_is(cdim)]   
+    [out, size_is(cdim), length_is(cdim)]
         ULONG32          dims[]  
 );  
 ```  
   
 ## <a name="parameters"></a>Parameter  
  `cdim`  
- in Die Anzahl der Dimensionen dieses ICorDebugArrayValue-Objekts.  
+ [in] Die Anzahl der Dimensionen dieses ICorDebugArrayValue-Objekts.  
   
- Dieser Wert ist auch die Größe des `dims` Arrays, da seine Größe gleich der Anzahl der Dimensionen des `ICorDebugArrayValue` Objekts ist.  
+ Dieser Wert ist auch `dims` die Größe des Arrays, da seine `ICorDebugArrayValue` Größe der Anzahl der Dimensionen des Objekts entspricht.  
   
  `dims`  
- vorgenommen Ein Array von ganzen Zahlen, von denen jede die Anzahl der Elemente in einer Dimension in diesem `ICorDebugArrayValue` Objekt angibt.  
+ [out] Ein Array ganzer Zahlen, von denen jedes die Anzahl der `ICorDebugArrayValue` Elemente in einer Dimension in diesem Objekt angibt.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  

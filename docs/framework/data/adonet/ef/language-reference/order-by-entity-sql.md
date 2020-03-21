@@ -2,12 +2,12 @@
 title: ORDER BY (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: c0b61572-ecee-41eb-9d7f-74132ec8a26c
-ms.openlocfilehash: 2010ef9d6fe37e65824cac877074453db1b789db
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 1233971b172079aa48227d0ec520068afbdf0952
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72319447"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79150068"
 ---
 # <a name="order-by-entity-sql"></a>ORDER BY (Entity SQL)
 Legt die Sortierreihenfolge für Objekte fest, die von einer SELECT-Anweisung zurückgegeben werden.  
@@ -15,13 +15,13 @@ Legt die Sortierreihenfolge für Objekte fest, die von einer SELECT-Anweisung zu
 ## <a name="syntax"></a>Syntax  
   
 ```sql  
-[ ORDER BY   
+[ ORDER BY
    {  
       order_by_expression [SKIP n] [LIMIT n]  
       [ COLLATE collation_name ]  
       [ ASC | DESC ]  
    }  
-   [ ,…n ]   
+   [ ,…n ]
 ]  
 ```  
   
@@ -33,7 +33,7 @@ Legt die Sortierreihenfolge für Objekte fest, die von einer SELECT-Anweisung zu
  Gibt an, dass die ORDER BY-Operation nach der in `collation_name`angegebenen Sortierreihenfolge ausgeführt werden soll. COLLATE ist nur für Zeichenfolgenausdrücke anwendbar.  
   
  ASC  
- Gibt an, dass die Werte der angegebenen Eigenschaft in aufsteigender Reihenfolge (vom kleinsten zum größten Wert) sortiert werden sollen. Dies ist die Standardeinstellung.  
+ Gibt an, dass die Werte der angegebenen Eigenschaft in aufsteigender Reihenfolge (vom kleinsten zum größten Wert) sortiert werden sollen. Dies ist die Standardoption.  
   
  DESC  
  Gibt an, dass die Werte der angegebenen Eigenschaft in absteigender Reihenfolge (vom größten zum kleinsten Wert) sortiert werden sollen.  
@@ -44,7 +44,7 @@ Legt die Sortierreihenfolge für Objekte fest, die von einer SELECT-Anweisung zu
  SKIP `n`  
  Überspringt die ersten `n` -Elemente.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Die ORDER BY-Klausel wird logisch auf das Ergebnis der SELECT-Klausel angewendet. In der ORDER BY-Klausel kann auf Elemente in der Auswahlliste verwiesen werden, indem deren Aliase verwendet werden. Die ORDER BY-Klausel kann auch auf andere Variablen verweisen, die sich aktuell im Gültigkeitsbereich befinden. Wenn die SELECT-Klausel jedoch mit einem DISTINCT-Modifizierer angegeben wurde, kann von der ORDER BY-Klausel nur auf Aliase der SELECT-Klausel verwiesen werden.  
   
  `SELECT c AS c1 FROM cs AS c ORDER BY c1.e1, c.e2`  
@@ -53,7 +53,7 @@ Legt die Sortierreihenfolge für Objekte fest, die von einer SELECT-Anweisung zu
   
  Wenn Code eine geordnete Menge durchläuft, wird, anders als bei einer Projektion in der obersten Ebene, die Reihenfolge bei der Ausgabe möglicherweise nicht erhalten.  
 
-Im folgenden Beispiel wird die Reihenfolge garantiert beibehalten:
+In der folgenden Stichprobe wird die Reihenfolge garantiert beibehalten:
 
 ```sql  
 SELECT C1.FirstName, C1.LastName  
@@ -61,7 +61,7 @@ SELECT C1.FirstName, C1.LastName
         ORDER BY C1.LastName  
 ```  
 
-In der folgenden Abfrage wird die Reihenfolge der Abfrage ignoriert:  
+In der folgenden Abfrage wird die Reihenfolge der verschachtelten Abfrage ignoriert:  
 
 ```sql  
 SELECT C2.FirstName, C2.LastName  
@@ -87,13 +87,13 @@ ORDER BY ...
   
 - KEY  
   
-- NACH-LINKS  
+- LEFT  
   
 - ORDER  
   
 - OUTER  
   
-- NACH-RECHTS  
+- RIGHT  
   
 - ROW  
   
@@ -102,7 +102,7 @@ ORDER BY ...
 ## <a name="ordering-nested-queries"></a>Reihenfolge geschachtelter Abfragen  
  In Entity Framework kann ein geschachtelter Ausdruck an jeder Stelle in der Abfrage verwendet werden. Die Reihenfolge einer geschachtelten Abfrage wird nicht beibehalten.  
 
-Mit der folgenden Abfrage werden die Ergebnisse nach dem Nachnamen sortiert:  
+Die folgende Abfrage ordnet die Ergebnisse nach dem Nachnamen an:  
 
 ```sql  
 SELECT C1.FirstName, C1.LastName  
@@ -110,7 +110,7 @@ SELECT C1.FirstName, C1.LastName
         ORDER BY C1.LastName  
 ```  
 
-In der folgenden Abfrage wird die Reihenfolge der Abfrage ignoriert:  
+In der folgenden Abfrage wird die Reihenfolge der verschachtelten Abfrage ignoriert:  
 
 ```sql  
 SELECT C2.FirstName, C2.LastName  
@@ -128,10 +128,10 @@ SELECT C2.FirstName, C2.LastName
   
  [!code-sql[DP EntityServices Concepts#ORDERBY](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#orderby)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Abfrageausdrücke](query-expressions-entity-sql.md)
 - [Entity SQL-Referenz](entity-sql-reference.md)
-- [SKIP](skip-entity-sql.md)
-- [LIMIT](limit-entity-sql.md)
-- [TOP](top-entity-sql.md)
+- [Überspringen](skip-entity-sql.md)
+- [Limit](limit-entity-sql.md)
+- [Nach oben](top-entity-sql.md)

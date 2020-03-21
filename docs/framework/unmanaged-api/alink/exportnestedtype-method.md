@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: dec7df60-4d30-47c8-99db-72e0419e5f76
 topic_type:
 - apiref
-ms.openlocfilehash: fded6b95144d4088a2abc8dfcc4ef8eda331c34f
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 9ca2167e66ac3aa5bcc0e92ff357eed18d366c67
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74438421"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79179412"
 ---
 # <a name="exportnestedtype-method"></a>ExportNestedType-Methode
-Gibt die zu exportierenden Typen als exportierbar an. Die [ExportType-Methode](exporttype-method.md) kann auch die in die Liste eingefügten Typen exportieren, diese Methode ist jedoch schneller.  
+Gibt geschachtelte Typen als exportierbar an. Die [ExportType-Methode](exporttype-method.md) kann auch geschachtelte Typen exportieren, aber diese Methode ist schneller.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -36,38 +36,38 @@ HRESULT ExportNestedType(
     LPCWSTR         pszTypename,  
     DWORD           dwFlags,  
     mdExportedType* pType  
-) PURE;   
+) PURE;
 ```  
   
 ## <a name="parameters"></a>Parameter  
  `AssemblyID`  
- Die ID der zu exportierenden Assembly.  
+ ID der Assembly, aus der exportiert werden soll.  
   
  `FileToken`  
- Dateitoken oder Assemblydatei, die den Typ definiert, der exportierbar gemacht werden soll.  
+ Dateitoken oder Assembly der Datei, die den Typ definiert, der exportiert werden soll.  
   
  `TypeToken`  
- Typtoken vom Typ, das als exportierbar erstellt werden soll.  
+ Typtoken des Typs, der exportiert werden soll.  
   
  `ParentType`  
  Token des übergeordneten Typs.  
   
  `pszTypename`  
- Der voll qualifizierte Typname, der exportiert werden soll.  
+ Vollständig qualifizierter Typname zum Exportieren.  
   
  `dwFlags`  
- `ComType` Flags, z. b. `tdPublic` oder `tdNested`. Dieser Wert kann an die [DefineExportedType-Methode](../metadata/imetadataassemblyemit-defineexportedtype-method.md)übermittelt werden.  
+ `ComType`Flags wie `tdPublic` `tdNested`oder . Dieser Wert kann an [defineExportedType-Methode](../metadata/imetadataassemblyemit-defineexportedtype-method.md)übergeben werden.  
   
  `pType`  
- Empfängt das Token für den exportierten Typ.  
+ Empfängt Token für exportierten Typ.  
   
 ## <a name="return-value"></a>Rückgabewert  
  Gibt S_OK zurück, wenn die Methode erfolgreich ist.  
   
-## <a name="requirements"></a>Voraussetzungen  
- Erfordert "Alink. h"  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+ Erfordert alink.h  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [IALink-Schnittstelle](ialink-interface.md)
 - [IALink2-Schnittstelle](ialink2-interface.md)

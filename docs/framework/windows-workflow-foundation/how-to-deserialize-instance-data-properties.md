@@ -2,12 +2,12 @@
 title: 'Vorgehensweise: Deserialisieren von Instanzdateneigenschaften'
 ms.date: 03/30/2017
 ms.assetid: b13a3508-1b97-4359-b336-03d85fa23bc4
-ms.openlocfilehash: e037d5f8d0b221aa0eb8fdc6eceabf6efb2dc387
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 8142671fc1bc154337019e025d8443f0570106b3
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70989636"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79143082"
 ---
 # <a name="how-to-deserialize-instance-data-properties"></a>Vorgehensweise: Deserialisieren von Instanzdateneigenschaften
 Es gibt möglicherweise Situationen, in denen ein Benutzer oder Workflowadministrator den Zustand einer beibehaltenen Workflowinstanz manuell überprüfen möchte. <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> bietet eine Ansicht der Instanzentabelle, die die folgenden vier Spalten verfügbar macht:  
@@ -20,11 +20,11 @@ Es gibt möglicherweise Situationen, in denen ein Benutzer oder Workflowadminist
   
 - WriteOnlyComplexDataProperties  
   
- Primitive Daten Eigenschaften verweisen auf Eigenschaften, deren .NET Framework Typen als "Common" (z. b. "Int32" und "String") betrachtet werden, während komplexe Daten Eigenschaften auf alle anderen Typen verweisen. Eine genaue Enumeration von primitiven Typen finden Sie später in diesem Codebeispiel.  
+ Primitive Dateneigenschaften beziehen sich auf Eigenschaften, deren .NET Framework-Typen als "häufig" betrachtet werden (z. B. Int32 und String), während komplexe Dateneigenschaften auf alle anderen Typen verweisen. Eine genaue Enumeration von primitiven Typen finden Sie später in diesem Codebeispiel.  
   
  Read/Write-Eigenschaften verweisen auf Eigenschaften, die an die Workflowlaufzeit zurückgegeben werden, wenn eine Instanz geladen wird. WriteOnly-Eigenschaften werden in die Datenbank geschrieben und dann nie wieder gelesen.  
   
- Diesem Beispiel stellt Code bereit, mit dem ein Benutzer primitive Dateneigenschaften deserialisieren kann. Bei einem Bytearray, das aus der Spalte "leseschreiteprimitivedataproperties" oder "Write-onlyprimitivedataproperties" gelesen wird, konvertiert dieser Code die Binary Large Object <xref:System.Collections.Generic.Dictionary%602> (BLOB) in eine vom Typ \<XName, Objekt >, wobei jeder Schlüsselwert Pair stellt einen Eigenschaftsnamen und den entsprechenden Wert dar.  
+ Diesem Beispiel stellt Code bereit, mit dem ein Benutzer primitive Dateneigenschaften deserialisieren kann. Bei einem Bytearray, das entweder aus der Spalte ReadWritePrimitiveDataProperties oder WriteOnlyPrimitiveDataProperties gelesen wird, konvertiert dieser Code das binary large object (BLOB) in ein <xref:System.Collections.Generic.Dictionary%602> Byte-Array vom Typ \<XName, Objekt> wobei jedes Schlüsselwertpaar einen Eigenschaftsnamen und den entsprechenden Wert darstellt.  
   
  In diesem Beispiel wird nicht veranschaulicht, wie komplexe Dateneigenschaften deserialisiert werden, da dies derzeit kein unterstützter Vorgang ist.  
   
@@ -104,7 +104,7 @@ namespace PropertyReader
                     // if the instance state is compressed using GZip algorithm  
                     if (isCompressed)  
                     {  
-                        // decompress the data using the GZip   
+                        // decompress the data using the GZip
                         using (GZipStream stream = new GZipStream(memoryStream, CompressionMode.Decompress))  
                         {  
                             // create an XmlReader object and pass it on to the helper method ReadPrimitiveDataProperties  
@@ -117,7 +117,7 @@ namespace PropertyReader
                     }  
                     else  
                     {  
-                        // if the instance data is not compressed   
+                        // if the instance data is not compressed
                         // create an XmlReader object and pass it on to the helper method ReadPrimitiveDataProperties  
                         using (XmlReader reader = XmlDictionaryReader.CreateBinaryReader(memoryStream, XmlDictionaryReaderQuotas.Max))  
                         {  

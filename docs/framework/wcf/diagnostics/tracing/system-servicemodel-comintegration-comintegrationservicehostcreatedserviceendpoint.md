@@ -2,12 +2,12 @@
 title: System.ServiceModel.Channels.MsmqMoveOrDeleteAttemptFailed
 ms.date: 03/30/2017
 ms.assetid: d75d39da-7502-4a6a-91b9-eaa05b8e24d5
-ms.openlocfilehash: d56bbf145c85902d8e5f1fd21f760633121da6da
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f89dd1373d67714046f8cb958582c3a5dea04456
+ms.sourcegitcommit: 515469828d0f040e01bde01df6b8e4eb43630b06
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61939217"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78674791"
 ---
 # <a name="systemservicemodelchannelsmsmqmoveordeleteattemptfailed"></a>System.ServiceModel.Channels.MsmqMoveOrDeleteAttemptFailed
 Nachricht kann nicht verschoben oder gelöscht werden.  
@@ -15,11 +15,11 @@ Nachricht kann nicht verschoben oder gelöscht werden.
 ## <a name="description"></a>Beschreibung  
  Die Ablaufverfolgung gibt an, dass beim Versuch, eine MSMQ-Nachricht zu verschieben, zu löschen oder abzulehnen ein Fehler aufgetreten ist.  
   
- MSMQ-Nachrichten werden von Windows Communication Foundation (WCF) (bei Verwendung mit der NetMsmqBinding oder MsmqIntegrationBinding) verwendet. Diese Ablaufverfolgung bezieht sich auf den ausgewählten Wert, der die `ReceiveErrorHandling` -Eigenschaft von NetMsmqBinding oder MsmqIntegrationBinding.  
+ MSMQ-Nachrichten werden von Windows Communication Foundation (WCF) verwendet (wenn sie entweder mit NetMsmqBinding oder MsmqIntegrationBinding verwendet werden). Diese Ablaufverfolgung bezieht sich auf `ReceiveErrorHandling` den ausgewählten Wert der Eigenschaft auf der NetMsmqBinding oder MsmqIntegrationBinding.  
   
- Diese Ablaufverfolgung weist nicht auf einen Fehler des gesamten Systems hin. Sie gibt jedoch an, dass die ausgewählte Disposition für nicht verarbeitbare Nachrichten für eine Nachricht fehlgeschlagen ist. Finden Sie unter [Behandlung beschädigter Nachrichten](https://go.microsoft.com/fwlink/?LinkID=99546) Weitere Einzelheiten, wann Nachrichten beschädigt werden und wie Sie den Dienst, damit sie richtig verarbeitet konfigurieren.  
+ Diese Ablaufverfolgung weist nicht auf einen Fehler des gesamten Systems hin. Sie gibt jedoch an, dass die ausgewählte Disposition für nicht verarbeitbare Nachrichten für eine Nachricht fehlgeschlagen ist. Weitere Informationen dazu, wann Nachrichten zu Gift werden und wie Sie Ihren Dienst so konfigurieren, dass er entsprechend behandelt wird, finden Sie unter [Gift-Nachrichten-Handhabung](../../feature-details/poison-message-handling.md).  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Ablaufverfolgung](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
 - [Verwenden der Ablaufverfolgung zum Beheben von Anwendungsfehlern](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)

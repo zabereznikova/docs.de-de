@@ -14,67 +14,67 @@ helpviewer_keywords:
 ms.assetid: 5bb12f9a-0612-434b-b4ed-2db636a20bec
 topic_type:
 - apiref
-ms.openlocfilehash: ce0c6307defd93dcf63ac4e9051fc798041475f3
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 6132e94544b30486b70ecfec49c1ddd5e3c0f50b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73127055"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79178117"
 ---
 # <a name="getrequestedruntimeversionforclsid-function"></a>GetRequestedRuntimeVersionForCLSID-Funktion
-Ruft die entsprechenden Common Language Runtime (CLR)-Versionsinformationen für die-Klasse mit dem angegebenen `CLSID`ab.  
+Ruft die entsprechenden CLR-Versionsinformationen (Common Language Runtime) für die Klasse mit der angegebenen `CLSID`ab.  
   
- Diese Funktion wurde im .NET Framework 4 als veraltet markiert.  
+ Diese Funktion ist in .NET Framework 4 veraltet.  
   
 ## <a name="syntax"></a>Syntax  
   
 ```cpp  
 HRESULT GetRequestedRuntimeVersionForCLSID (  
-    [in]  REFCLSID   rclsid,   
-    [out]  LPWSTR     pVersion,   
-    [in]  DWORD      cchBuffer,   
-    [out] DWORD*     dwLength,   
+    [in]  REFCLSID   rclsid,
+    [out]  LPWSTR     pVersion,
+    [in]  DWORD      cchBuffer,
+    [out] DWORD*     dwLength,
     [in]  CLSID_RESOLUTION_FLAGS dwResolutionFlags  
 );  
 ```  
   
 ## <a name="parameters"></a>Parameter  
  `rclsid`  
- in  Der `CLSID` der Komponente.  
+ [in]  Die `CLSID` der Komponente.  
   
  `pVersion`  
- vorgenommen  Ein Puffer, der nach erfolgreichem Abschluss die Zeichenfolge der Versionsnummer enthält.  
+ [out]  Ein Puffer, der die Versionsnummernzeichenfolge nach erfolgreichem Abschluss enthält.  
   
  `cchBuffer`  
- in  Die Größe des `pVersion` Puffers in breit Zeichen.  
+ [in]  Die Größe des `pVersion` Puffers in weiten Zeichen.  
   
  `dwLength`  
- vorgenommen Die Länge des zurückgegebenen Puffers in Bytes.  
+ [out] Die Länge (in Bytes) des zurückgegebenen Puffers.  
   
  `dwResolutionFlags`  
- in  Einer der CLSID_RESOLUTION_FLAGS-Werte. Die folgenden Werte werden unterstützt:  
+ [in]  Einer der CLSID_RESOLUTION_FLAGS Werte. Die folgenden Werte werden unterstützt:  
   
-- CLSID_RESOLUTION_DEFAULT: (0x0) gibt an, dass das standardmäßige Interop-Verhalten verwendet werden soll.  
+- CLSID_RESOLUTION_DEFAULT: (0x0) Gibt an, dass das standardmäßige Interopverhalten verwendet werden soll.  
   
-- CLSID_RESOLUTION_REGISTERED: (0x1) gibt an, dass die Registrierung durchsucht werden soll und dass die Shim-Richtlinie angewendet werden soll.  
+- CLSID_RESOLUTION_REGISTERED: (0x1) Gibt an, dass die Registrierung durchsucht und die Shim-Richtlinie angewendet werden soll.  
   
 ## <a name="return-value"></a>Rückgabewert  
   
 |HRESULT|Beschreibung|  
 |-------------|-----------------|  
 |S_OK|Die Funktion wurde erfolgreich zurückgegeben.|  
-|E_INVALIDARG|Einer der Parameter weist einen ungültigen Typ oder ein ungültiges Format auf.|  
-|ERROR_INSUFFICIENT_BUFFER|Der `pVersion` Puffer ist nicht groß genug, um die gesamte Versions Zeichenfolge zu speichern.|  
-|REGDB_E_CLASSNOTREG|Es ist keine Klasse mit dem angegebenen `CLSID`registriert.|  
-|E_POINTER|`dwLength` ist NULL, oder `cchBuffer` ist groß genug, um die Versions Zeichenfolge zu speichern, `pVersion` ist jedoch NULL.|  
+|E_INVALIDARG|Einer der Parameter hat einen ungültigen Typ oder ein ungültiges Format.|  
+|ERROR_INSUFFICIENT_BUFFER|Der `pVersion` Puffer ist nicht groß genug, um die gesamte Versionszeichenfolge zu enthalten.|  
+|REGDB_E_CLASSNOTREG|Es ist keine Klasse `CLSID`registriert, die für die angegebene klasse registriert ist.|  
+|E_POINTER|`dwLength`ist null `cchBuffer` oder groß genug, um die `pVersion` Versionszeichenfolge zu halten, ist aber null.|  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Mscoree. h  
+ **Kopfzeile:** MSCorEE.h  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Veraltete CLR-Hostingfunktionen](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

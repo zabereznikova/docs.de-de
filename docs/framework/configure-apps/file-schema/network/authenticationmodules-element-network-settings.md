@@ -8,40 +8,40 @@ helpviewer_keywords:
 - authenticationModules element
 - <authenticationModules> element
 ms.assetid: 10fcfaad-82ef-4692-871a-0aec9dfbe75e
-ms.openlocfilehash: bacaaf92464a355804a9ea8307f6e6f1caac1f05
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.openlocfilehash: b502cc4a0958f074018d4b0ce6b3fb118b811c2f
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74087614"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79154971"
 ---
-# <a name="authenticationmodules-element-network-settings"></a>\<authenticationModules >-Element (Netzwerkeinstellungen)
-Gibt Module an, die zum Authentifizieren von Netzwerk Anforderungen verwendet werden.  
+# <a name="authenticationmodules-element-network-settings"></a>\<authenticationModules>-Element (Netzwerkeinstellungen)
+Gibt Module an, die zum Authentifizieren von Netzwerkanforderungen verwendet werden.  
 
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<System. net >** ](system-net-element-network-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<authenticationModules >**
+[**\<Konfiguration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.net>**](system-net-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**\<authentifizierungModule>**
 
 ## <a name="syntax"></a>Syntax  
   
 ```xml  
-<authenticationModules>   
+<authenticationModules>
 </authenticationModules>  
 ```  
   
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
-### <a name="attributes"></a>Attribute  
- Keine  
+### <a name="attributes"></a>Attributes  
+ Keine.  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
   
 |**Element**|**Beschreibung**|  
 |-----------------|---------------------|  
-|[add](add-element-for-authenticationmodules-network-settings.md)|Fügt der Anwendung ein Authentifizierungs Modul hinzu.|  
-|[clear](clear-element-for-authenticationmodules-network-settings.md)|Löscht alle Authentifizierungs Module aus der Anwendung.|  
-|[remove](remove-element-for-authenticationmodules-network-settings.md)|Entfernt ein Authentifizierungs Modul aus der Anwendung.|  
+|[Hinzufügen](add-element-for-authenticationmodules-network-settings.md)|Fügt der Anwendung ein Authentifizierungsmodul hinzu.|  
+|[Klar](clear-element-for-authenticationmodules-network-settings.md)|Löscht alle Authentifizierungsmodule aus der Anwendung.|  
+|[Entfernen](remove-element-for-authenticationmodules-network-settings.md)|Entfernt ein Authentifizierungsmodul aus der Anwendung.|  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   
@@ -49,14 +49,14 @@ Gibt Module an, die zum Authentifizieren von Netzwerk Anforderungen verwendet we
 |-----------------|---------------------|  
 |[system.net](system-net-element-network-settings.md)|Enthält Einstellungen, die festlegen, wie Verbindungen zwischen .NET Framework und dem Netzwerk hergestellt werden.|  
   
-## <a name="remarks"></a>Hinweise  
- Das `authenticationModule`-Element gibt die Authentifizierungs Module an, die den Authentifizierungsprozess mit einem Server durchführen. Ein Authentifizierungs Modul muss die <xref:System.Net.IAuthenticationModule>-Schnittstelle implementieren.  
+## <a name="remarks"></a>Bemerkungen  
+ Das `authenticationModule` Element gibt die Authentifizierungsmodule an, die den Authentifizierungsprozess mit einem Server durchführen. Ein Authentifizierungsmodul <xref:System.Net.IAuthenticationModule> muss die Schnittstelle implementieren.  
   
 ## <a name="configuration-files"></a>Konfigurationsdateien  
  Dieses Element kann in der Anwendungskonfigurationsdatei oder in der Computerkonfigurationsdatei ("Machine.config") verwendet werden.  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird ein Authentifizierungs Modul aktiviert. Sie sollten die Werte für Version und PublicKeyToken durch die korrekten Werte für das angegebene Modul ersetzen.  
+ Im folgenden Beispiel wird ein Authentifizierungsmodul aktiviert. Sie sollten die Werte für Version und PublicKeyToken durch die richtigen Werte für das angegebene Modul ersetzen.  
   
 ```xml  
 <configuration>  
@@ -69,8 +69,8 @@ Gibt Module an, die zum Authentifizieren von Netzwerk Anforderungen verwendet we
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Net.IAuthenticationModule>
 - <xref:System.Net.AuthenticationManager>
-- [Network Settings Schema (Schema für Netzwerkeinstellungen)](index.md)
+- [Netzwerkeinstellungsschema](index.md)

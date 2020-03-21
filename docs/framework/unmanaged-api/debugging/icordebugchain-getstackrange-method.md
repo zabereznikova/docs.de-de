@@ -15,36 +15,36 @@ helpviewer_keywords:
 ms.assetid: 554284e7-3f6c-4d40-8da5-1c9317fbd484
 topic_type:
 - apiref
-ms.openlocfilehash: d9430c5a1f37a0507b383ea5437f7d7fed706c43
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 64e697323377d664b7b1e36bbf5931a44465cc51
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73123863"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79178954"
 ---
 # <a name="icordebugchaingetstackrange-method"></a>ICorDebugChain::GetStackRange-Methode
-Ruft den Adressbereich des Stapel Segments für diese Kette ab.  
+Ruft den Adressbereich des Stapelsegments für diese Kette ab.  
   
 ## <a name="syntax"></a>Syntax  
   
 ```cpp  
 HRESULT GetStackRange (  
-    [out] CORDB_ADDRESS      *pStart,   
+    [out] CORDB_ADDRESS      *pStart,
     [out] CORDB_ADDRESS      *pEnd  
 );  
 ```  
   
 ## <a name="parameters"></a>Parameter  
  `pStart`  
- vorgenommen Ein Zeiger auf einen `CORDB_ADDRESS`-Wert, der die Startadresse des Stapel Segments ist.  
+ [out] Ein Zeiger auf `CORDB_ADDRESS` einen Wert, der die Startadresse des Stapelsegments ist.  
   
  `pEnd`  
- vorgenommen Ein Zeiger auf einen `CORDB_ADDRESS` Wert, der die Endadresse des Stapel Segments ist.  
+ [out] Ein Zeiger auf `CORDB_ADDRESS` einen Wert, der die Endadresse des Stapelsegments ist.  
   
-## <a name="remarks"></a>Hinweise  
- Der numerische Bereich ist nur für den Vergleich von Stapel Rahmen Positionen sinnvoll. Sie können keine Annahmen darüber treffen, was tatsächlich im Stapel gespeichert ist.  
+## <a name="remarks"></a>Bemerkungen  
+ Der numerische Bereich ist nur für den Vergleich von Stapelrahmenpositionen sinnvoll. Sie können keine Annahmen darüber treffen, was tatsächlich auf dem Stapel gespeichert ist.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  

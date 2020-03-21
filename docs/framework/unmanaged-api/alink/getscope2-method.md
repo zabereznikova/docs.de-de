@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 49435665-6f5a-4acd-9034-8c9244a04a63
 topic_type:
 - apiref
-ms.openlocfilehash: a5b080443be94d5a298cc67591914d87470e6f48
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 40df78cdf99c2e0f53be9664f3f5c6386b6c6f93
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74447187"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79179395"
 ---
 # <a name="getscope2-method"></a>GetScope2-Methode
-Ruft einen Import Bereich ab.  
+Ruft einen Importbereich ab.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -32,7 +32,7 @@ HRESULT GetScope2(
     mdToken FileToken,  
     DWORD dwScope,  
     IMetaDataImport2** ppImportScope  
-) PURE;   
+) PURE;
 ```  
   
 ## <a name="parameters"></a>Parameter  
@@ -40,21 +40,21 @@ HRESULT GetScope2(
  ID der Zielassembly.  
   
  `FileToken`  
- Die ID der Datei, aus der importiert werden soll.  
+ ID der Datei, aus der importiert werden soll.  
   
  `dwScope`  
- NULL basierter Gültigkeitsbereich, der importiert werden soll.  
+ Nullbasierter Bereich zum Importieren.  
   
  `ppImportScope`  
- Empfängt einen Zeiger auf eine [IMetaDataImport2-Schnittstellen](../metadata/imetadataimport2-interface.md) Schnittstelle für den angegeben Bereich.  
+ Empfängt Zeiger auf [IMetaDataImport2-Schnittstelle](../metadata/imetadataimport2-interface.md) für den angegebenen Bereich.  
   
 ## <a name="return-value"></a>Rückgabewert  
  Gibt S_OK zurück, wenn die Methode erfolgreich ist.  
   
-## <a name="requirements"></a>Voraussetzungen  
- Erfordert Alink. h.  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+ Erfordert alink.h.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [IALink2-Schnittstelle](ialink2-interface.md)
 - [IALink-Schnittstelle](ialink-interface.md)

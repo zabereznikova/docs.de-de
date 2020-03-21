@@ -10,27 +10,27 @@ helpviewer_keywords:
 - graphics [WPF], grouping Transform objects
 - TransformGroup [WPF]
 ms.assetid: 98cd1921-12bc-4bf5-8193-529228fb7402
-ms.openlocfilehash: 544d0a26f24e5ad4ed7e2e3cfa25f8e15d1be446
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: 3ef11104b2a4fc775d29d2a388c9a70a69a3f10f
+ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77452830"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80112114"
 ---
 # <a name="how-to-apply-multiple-transforms-to-an-object"></a>Gewusst wie: Anwenden mehrerer Transformationen auf ein Objekt
-In diesem Beispiel wird gezeigt, wie ein <xref:System.Windows.Media.TransformGroup> verwendet wird, um zwei oder mehr <xref:System.Windows.Media.Transform> Objekte in einem einzelnen zusammengesetzten <xref:System.Windows.Media.Transform>zu gruppieren.  
+In diesem Beispiel wird <xref:System.Windows.Media.TransformGroup> gezeigt, wie <xref:System.Windows.Media.Transform> sie zum <xref:System.Windows.Media.Transform>Gruppieren von zwei oder mehr Objekten in einem einzelnen Verbund verwendet werden.  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird ein-<xref:System.Windows.Media.TransformGroup> verwendet, um eine <xref:System.Windows.Media.ScaleTransform> und eine <xref:System.Windows.Media.RotateTransform> auf eine <xref:System.Windows.Controls.Button>anzuwenden.  
+ Im folgenden Beispiel <xref:System.Windows.Media.TransformGroup> wird <xref:System.Windows.Media.ScaleTransform> ein <xref:System.Windows.Media.RotateTransform> zum <xref:System.Windows.Controls.Button>Anwenden von a und a auf eine verwendet.  
   
  [!code-xaml[Transforms_snip#MultipleTransformExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/Transforms_snip/CS/MultipleTransformExample.xaml#multipletransformexamplewholepage)]  
   
  [!code-csharp[Transforms_Procedural_snip#MultipleTransformsCodeExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/Transforms_Procedural_snip/CSharp/MultipleTransformsExample.cs#multipletransformscodeexamplewholepage)]
  [!code-vb[Transforms_Procedural_snip#MultipleTransformsCodeExampleWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/Transforms_Procedural_snip/VisualBasic/MultipleTransformsExample.vb#multipletransformscodeexamplewholepage)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Windows.UIElement.RenderTransform%2A>
 - <xref:System.Windows.Media.TransformGroup>
 - [Übersicht über Transformationen](transforms-overview.md)
-- [Beispiel für 2D-Transformation](https://github.com/Microsoft/WPF-Samples/tree/master/Graphics/2DTransforms)
+- [2D-Transformationsbeispiel](https://github.com/Microsoft/WPF-Samples/tree/master/Graphics/2DTransforms)

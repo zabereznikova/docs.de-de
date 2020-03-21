@@ -11,12 +11,12 @@ helpviewer_keywords:
 - COM interop, HRESULTs
 - COM interop, exceptions
 ms.assetid: 610b364b-2761-429d-9c4a-afbc3e66f1b9
-ms.openlocfilehash: 13dcca5f35750ad3e8bd6ea4f6dd443fe9a8ee94
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: e186228d1dc9a42ddfe92428f7dfad29a5789095
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73123877"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79181397"
 ---
 # <a name="how-to-map-hresults-and-exceptions"></a>Gewusst wie: Zuordnen von HRESULTs und Ausnahmen
 COM-Methoden melden Fehler durch die Rückgabe von HRESULTs; .NET Methoden melden sie durch das Auslösen von Ausnahmen. Die Common Language Runtime verwaltet den Übergang zwischen den beiden. Jede Ausnahmeklasse in .NET Framework wird einem HRESULT zugeordnet.  
@@ -35,7 +35,7 @@ COM-Methoden melden Fehler durch die Rückgabe von HRESULTs; .NET Methoden melde
     Class NoAccessException : public ApplicationException  
     {  
         NoAccessException () {  
-        HResult = E_ACCESSDENIED;   
+        HResult = E_ACCESSDENIED;
     }  
     }  
     CMyClass::MethodThatThrows  
@@ -44,7 +44,7 @@ COM-Methoden melden Fehler durch die Rückgabe von HRESULTs; .NET Methoden melde
     }  
     ```  
   
- Es wird möglicherweise ein Programm (in einer beliebigen Programmiersprache) auftreten, das verwalteten und nicht verwalteten Code gleichzeitig verwendet. Beispielsweise verwendet der benutzerdefinierte Marshaller im folgenden Codebeispiel die Methode **Marshal.ThrowExceptionForHR(Int HResult)** , um eine Ausnahme mit einem bestimmten HRESULT-Wert auszulösen. Die Methode sucht das HRESULT und generiert den entsprechenden Ausnahmetyp. Im folgenden Codefragment generiert HRESULT z.B. **ArgumentException**.  
+ Es wird möglicherweise ein Programm (in einer beliebigen Programmiersprache) auftreten, das verwalteten und nicht verwalteten Code gleichzeitig verwendet. Beispielsweise verwendet der benutzerdefinierte Marshaller im folgenden Codebeispiel die Methode **Marshal.ThrowExceptionForHR(Int HResult)**, um eine Ausnahme mit einem bestimmten HRESULT-Wert auszulösen. Die Methode sucht das HRESULT und generiert den entsprechenden Ausnahmetyp. Im folgenden Codefragment generiert HRESULT z.B. **ArgumentException**.  
   
 ```cpp  
 CMyClass::MethodThatThrows  
@@ -73,7 +73,7 @@ CMyClass::MethodThatThrows
 |**COR_E_DUPLICATEWAITOBJECT**|**DuplicateWaitObjectException**|  
 |**COR_E_ENDOFSTREAM**|**EndOfStreamException**|  
 |**COR_E_TYPELOAD**|**EntryPointNotFoundException**|  
-|**COR_E_EXCEPTION**|**Exception**|  
+|**COR_E_EXCEPTION**|**Ausnahme**|  
 |**COR_E_EXECUTIONENGINE**|**ExecutionEngineException**|  
 |**COR_E_FIELDACCESS**|**FieldAccessException**|  
 |**COR_E_FILENOTFOUND oder ERROR_FILE_NOT_FOUND**|**FileNotFoundException**|  
@@ -93,9 +93,9 @@ CMyClass::MethodThatThrows
 |**COR_E_MISSINGMETHOD**|**MissingMethodException**|  
 |**COR_E_MULTICASTNOTSUPPORTED**|**MulticastNotSupportedException**|  
 |**COR_E_NOTFINITENUMBER**|**NotFiniteNumberException**|  
-|**E_NOTIMPL**|**NotImplementedException**|  
+|**E_notimpl**|**NotImplementedException**|  
 |**COR_E_NOTSUPPORTED**|**NotSupportedException**|  
-|**COR_E_NULLREFERENCE orE_POINTER**|**NullReferenceException**|  
+|**COR_E_NULLREFERENCE oder E_POINTER**|**NullReferenceException**|  
 |**COR_E_OUTOFMEMORY oder**<br /><br /> **E_OUTOFMEMORY**|**OutOfMemoryException**|  
 |**COR_E_OVERFLOW**|**OverflowException**|  
 |**COR_E_PATHTOOLONG oder ERROR_FILENAME_EXCED_RANGE**|**PathTooLongException**|  
@@ -107,7 +107,7 @@ CMyClass::MethodThatThrows
 |**COR_E_SERIALIZATION**|**SerializationException**|  
 |**COR_E_STACKOVERFLOW oder ERROR_STACK_OVERFLOW**|**StackOverflowException**|  
 |**COR_E_SYNCHRONIZATIONLOCK**|**SynchronizationLockException**|  
-|**COR_E_SYSTEM**|**SystemException**|  
+|**COR_E_SYSTEM**|**Systemexception**|  
 |**COR_E_TARGET**|**TargetException**|  
 |**COR_E_TARGETINVOCATION**|**TargetInvocationException**|  
 |**COR_E_TARGETPARAMCOUNT**|**TargetParameterCountException**|  
@@ -130,17 +130,17 @@ CMyClass::MethodThatThrows
   
 |Ausnahmefeld|Informationsquelle von COM|  
 |---------------------|------------------------------------|  
-|**ErrorCode**|Vom Aufruf zurückgegebenes HRESULT.|  
-|**HelpLink**|Wenn **IErrorInfo->HelpContext** ungleich 0 ist, wird die Zeichenfolge durch Verketten von **IErrorInfo->GetHelpFile** und „#“ sowie **IErrorInfo->GetHelpContext** gebildet. Andernfalls wird die Zeichenfolge aus **IErrorInfo->GetHelpFile** zurückgegeben.|  
-|**InnerException**|Immer ein NULL-Verweis (**Nothing** in Visual Basic).|  
-|**Meldung**|Von **IErrorInfo->GetDescription** zurückgegebene Zeichenfolge.|  
-|**Source**|Von **IErrorInfo->GetSource** zurückgegebene Zeichenfolge.|  
-|**StackTrace**|Die Stapelüberwachung.|  
+|**Errorcode**|Vom Aufruf zurückgegebenes HRESULT.|  
+|**Helplink**|Wenn **IErrorInfo->HelpContext** ungleich 0 ist, wird die Zeichenfolge durch Verketten von **IErrorInfo->GetHelpFile** und „#“ sowie **IErrorInfo->GetHelpContext** gebildet. Andernfalls wird die Zeichenfolge aus **IErrorInfo->GetHelpFile** zurückgegeben.|  
+|**InnerException**|Immer ein Nullverweis **(nichts** in Visual Basic).|  
+|**Nachricht**|Von **IErrorInfo->GetDescription** zurückgegebene Zeichenfolge.|  
+|**Quelle**|Von **IErrorInfo->GetSource** zurückgegebene Zeichenfolge.|  
+|**Stacktrace**|Die Stapelüberwachung.|  
 |**TargetSite**|Der Name der Methode, die das fehlerhafte HRESULT zurückgegeben hat.|  
   
  Ausnahmefelder, wie z.B. **Message**, **Source** und **StackTrace** sind für die **StackOverflowException** nicht verfügbar.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Erweiterte COM-Interoperabilität](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx(v=vs.100))
 - [Ausnahmen](../../standard/exceptions/index.md)

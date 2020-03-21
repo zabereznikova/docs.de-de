@@ -2,17 +2,17 @@
 title: Konfigurieren der Serialisierung in einem Workflowdienst
 ms.date: 03/30/2017
 ms.assetid: aa70b290-a2ee-4c3c-90ea-d0a7665096ae
-ms.openlocfilehash: 0e0f03a30aa8e8679cf849aa75948e0bc2314fe5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f894f2e044e35bb278f975ef2385a6b22a8bea49
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61857484"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79185335"
 ---
 # <a name="configuring-serialization-in-a-workflow-service"></a>Konfigurieren der Serialisierung in einem Workflowdienst
-Workflowdienste sind Windows Communication Foundation (WCF)-Dienste, und daher haben die Möglichkeit, entweder die <xref:System.Runtime.Serialization.DataContractSerializer> (Standard) oder die <xref:System.Xml.Serialization.XmlSerializer>. Beim Schreiben von Nicht-Workflowdiensten wird der Typ des zu verwendenden Serialisierungsprogramms im Dienstvertrag oder Vorgangsvertrag angegeben. Beim Erstellen von WCF-Workflowdienste keinen diese Verträge im Code angeben, aber sie werden vielmehr zur Laufzeit generiert, durch vertragsrückschluss. Weitere Informationen zum vertragsrückschluss finden Sie unter [mithilfe von Verträgen im Workflow](../../../../docs/framework/wcf/feature-details/using-contracts-in-workflow.md).  Das Serialisierungsprogramm wird mithilfe der <xref:System.ServiceModel.Activities.Receive.SerializerOption%2A>-Eigenschaft angegeben. Diese kann im Designer festgelegt werden, wie in der folgenden Abbildung dargestellt.  
+Workflowdienste sind Windows Communication Foundation (WCF)-Dienste und <xref:System.Runtime.Serialization.DataContractSerializer> haben daher die <xref:System.Xml.Serialization.XmlSerializer>Möglichkeit, entweder die (Standardeinstellung) oder die zu verwenden. Beim Schreiben von Nicht-Workflowdiensten wird der Typ des zu verwendenden Serialisierungsprogramms im Dienstvertrag oder Vorgangsvertrag angegeben. Beim Erstellen von WCF-Workflowdiensten geben Sie diese Verträge nicht im Code an, sondern werden zur Laufzeit durch Vertragsrückschluss generiert. Weitere Informationen zu Vertragsrückschluss finden Sie unter [Verwenden von Verträgen im Workflow](../../../../docs/framework/wcf/feature-details/using-contracts-in-workflow.md).  Das Serialisierungsprogramm wird mithilfe der <xref:System.ServiceModel.Activities.Receive.SerializerOption%2A>-Eigenschaft angegeben. Diese kann im Designer festgelegt werden, wie in der folgenden Abbildung dargestellt.  
   
- ![Wenn die SerializerOption-Eigenschaft im Eigenschaftenfenster an.](./media/configuring-serialization-in-a-workflow-service/setting-serializer-property.png)  
+ ![Festlegen der SerializerOption-Eigenschaft im Eigenschaftenfenster.](./media/configuring-serialization-in-a-workflow-service/setting-serializer-property.png)  
   
  Das Serialisierungsprogramm kann auch im Code festgelegt werden, wie im folgenden Beispiel gezeigt.  
   
@@ -27,15 +27,15 @@ Receive approveExpense = new Receive
             };  
 ```  
   
-  Bekannte Typen können auch für Workflowdienste angegeben werden. Weitere Informationen zu bekannten Typen finden Sie unter [Data Contract Known Types](data-contract-known-types.md). Bekannte Typen können im Designer oder im Code angegeben werden. Klicken Sie zum Angeben von bekannter Typen in den Designer auf die Schaltfläche mit den Auslassungspunkten neben der KnownTypes-Eigenschaft in der **Fenster "Eigenschaften"** für eine <xref:System.ServiceModel.Activities.Receive> Aktivität, wie in der folgenden Abbildung dargestellt.   
+  Bekannte Typen können auch für Workflowdienste angegeben werden. Weitere Informationen zu bekannten Typen finden Sie unter [Bekannte Typen für Datenvertrags .](data-contract-known-types.md) Bekannte Typen können im Designer oder im Code angegeben werden. Um bekannte Typen im Designer anzugeben, klicken Sie im Eigenschaftenfenster für eine <xref:System.ServiceModel.Activities.Receive> Aktivität, wie in der folgenden Abbildung dargestellt, auf die Schaltfläche Auslassung neben der Eigenschaft KnownTypes im **Eigenschaftenfenster.**
   
- ![Screenshot des Dialogfelds KnownTypes-Eigenschaft.](./media/configuring-serialization-in-a-workflow-service/known-types-properties.png)  
+ ![Screenshot des Dialogfelds der KnownTypes-Eigenschaft.](./media/configuring-serialization-in-a-workflow-service/known-types-properties.png)  
   
- Dadurch werden die Typauflistungs-Editor, mit dem Sie suchen, und geben Sie bekannte Typen angezeigt.  
+ Dadurch wird der Typsammlungs-Editor angezeigt, mit dem Sie nach bekannten Typen suchen und diese angeben können.  
   
- ![Screenshot der Typauflistungs-Editor.](./media/configuring-serialization-in-a-workflow-service/type-collection-editor.gif)  
+ ![Screenshot des Typsammlungs-Editors.](./media/configuring-serialization-in-a-workflow-service/type-collection-editor.gif)  
   
- Klicken Sie auf die **neuen Typ hinzufügen** verknüpfen und mithilfe der Dropdownliste wählen oder suchen Sie für einen Typ der Auflistung bekannter Typen hinzu. Verwenden Sie die <xref:System.ServiceModel.Activities.Receive.KnownTypes%2A>-Eigenschaft, um bekannte Typen im Code anzugeben, wie im folgenden Beispiel gezeigt.  
+ Klicken Sie auf den Link **Neuer Typ hinzufügen,** und verwenden Sie die Dropdownliste, um einen Typ auszuwählen oder zu suchen, der der Sammlung bekannter Typen hinzugefügt werden soll. Verwenden Sie die <xref:System.ServiceModel.Activities.Receive.KnownTypes%2A>-Eigenschaft, um bekannte Typen im Code anzugeben, wie im folgenden Beispiel gezeigt.  
   
 ```csharp
 Receive approveExpense = new Receive  

@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Benutzerdefiniertes Zeichnen eines ToolStrip-Steuerelements'
+title: 'Gewusst wie: Benutzerdefiniertes Zeichnen eines ToolStrip-Steuerelements'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -16,14 +16,14 @@ helpviewer_keywords:
 - custom drawing
 - owner drawing
 ms.assetid: 94e7d7bd-a752-441c-b5b3-7acf98881163
-ms.openlocfilehash: 810a680a1a9d9065e80ed87453a728fe628a953d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: a9f603efdb4b4a5f68154da9c6a8bd05b55b8f46
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69935371"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79182223"
 ---
-# <a name="how-to-custom-draw-a-toolstrip-control"></a>Vorgehensweise: Benutzerdefiniertes Zeichnen eines ToolStrip-Steuerelements
+# <a name="how-to-custom-draw-a-toolstrip-control"></a>Gewusst wie: Benutzerdefiniertes Zeichnen eines ToolStrip-Steuerelements
 Die <xref:System.Windows.Forms.ToolStrip>-Steuerelemente verfügen über die folgenden zugeordneten Renderingklassen (Zeichnungsklassen):  
   
 - <xref:System.Windows.Forms.ToolStripSystemRenderer> stellt das Aussehen und den Stil des Betriebssystems bereit.  
@@ -60,7 +60,7 @@ Die <xref:System.Windows.Forms.ToolStrip>-Steuerelemente verfügen über die fol
         ToolStrip1.Renderer = New ToolStripProfessionalRenderer(t)  
     End Sub  
   
-    Class MyColorTable   
+    Class MyColorTable
     Inherits ProfessionalColorTable  
   
     Public Overrides ReadOnly Property ButtonPressedGradientBegin() As Color  
@@ -133,11 +133,11 @@ Die <xref:System.Windows.Forms.ToolStrip>-Steuerelemente verfügen über die fol
     toolStrip.Renderer = new ToolStripProfessionalRenderer(colorTable);  
     ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Windows.Forms.ToolStripSystemRenderer>
 - <xref:System.Windows.Forms.ToolStripProfessionalRenderer>
 - <xref:System.Windows.Forms.ToolStripRenderer>
 - [Steuerelemente mit integrierter Ownerdrawing-Unterstützung](controls-with-built-in-owner-drawing-support.md)
-- [Vorgehensweise: Erstellen und Festlegen eines benutzerdefinierten Renderers für das ToolStrip-Steuerelement in Windows Forms](create-and-set-a-custom-renderer-for-the-toolstrip-control-in-wf.md)
+- [Gewusst wie: Erstellen und Festlegen eines benutzerdefinierten Renderers für das ToolStrip-Steuerelement in Windows Forms](create-and-set-a-custom-renderer-for-the-toolstrip-control-in-wf.md)
 - [Übersicht über das ToolStrip-Steuerelement](toolstrip-control-overview-windows-forms.md)

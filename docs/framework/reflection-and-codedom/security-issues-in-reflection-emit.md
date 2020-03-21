@@ -11,12 +11,12 @@ helpviewer_keywords:
 - emitting dynamic assemblies,partial trust scenarios
 - dynamic assemblies, security
 ms.assetid: 0f8bf8fa-b993-478f-87ab-1a1a7976d298
-ms.openlocfilehash: f04b40edde0755315f3b4fd4284fc7c804a54313
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 11eb4c9bc4ba1b1fe9051a04d12f893e693fb175
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73130043"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79180459"
 ---
 # <a name="security-issues-in-reflection-emit"></a>Sicherheitsaspekte bei der Reflektionsausgabe
 .NET Framework bietet drei Möglichkeiten zum Ausgeben der Microsoft Intermediate Language (MSIL), die jeweils mit eigenen Sicherheitsproblemen verbunden sind:  
@@ -32,9 +32,9 @@ ms.locfileid: "73130043"
 > [!NOTE]
 > Die Berechtigungen, die für das Reflektieren und Ausgeben von Code erforderlich sind, haben sich mit den Nachfolgeversionen von .NET Framework geändert. Siehe weiter unten in diesem Thema unter [Versionsinformationen](#Version_Information).  
   
-<a name="Dynamic_Assemblies"></a>   
+<a name="Dynamic_Assemblies"></a>
 ## <a name="dynamic-assemblies"></a>Dynamische Assemblys  
- Dynamische Assemblys werden unter Verwendung von Überladungen der <xref:System.AppDomain.DefineDynamicAssembly%2A?displayProperty=nameWithType>-Methode erstellt. Die meisten Überladungen dieser Methode werden in .NET Framework 4 nicht mehr unterstützt, weil computerweite Sicherheitsrichtlinien beseitigt wurden. (Siehe [Sicherheitsänderungen](../security/security-changes.md).) Die verbleibenden über Ladungen können von jedem beliebigen Code unabhängig von der Vertrauens Ebene ausgeführt werden. Diese Überladungen fallen in zwei Gruppen: solche, die eine Liste mit Attributen angeben, die auf die dynamische Assembly angewendet werden sollen, wenn sie erstellt wird, und solche, die dies unterlassen. Wenn Sie das Transparenzmodell für die Assembly beim Erstellen nicht durch Anwendung des <xref:System.Security.SecurityRulesAttribute>-Attributs angeben, wird das Transparenzmodell von der ausgebenden Assembly geerbt.  
+ Dynamische Assemblys werden unter Verwendung von Überladungen der <xref:System.AppDomain.DefineDynamicAssembly%2A?displayProperty=nameWithType>-Methode erstellt. Die meisten Überladungen dieser Methode werden in .NET Framework 4 nicht mehr unterstützt, weil computerweite Sicherheitsrichtlinien beseitigt wurden. (Siehe [Sicherheitsänderungen](../security/security-changes.md).) Die verbleibenden Überladungen können von jedem Code ausgeführt werden, unabhängig von der Vertrauensstufe. Diese Überladungen fallen in zwei Gruppen: solche, die eine Liste mit Attributen angeben, die auf die dynamische Assembly angewendet werden sollen, wenn sie erstellt wird, und solche, die dies unterlassen. Wenn Sie das Transparenzmodell für die Assembly beim Erstellen nicht durch Anwendung des <xref:System.Security.SecurityRulesAttribute>-Attributs angeben, wird das Transparenzmodell von der ausgebenden Assembly geerbt.  
   
 > [!NOTE]
 > Attribute, die Sie mithilfe von <xref:System.Reflection.Emit.AssemblyBuilder.SetCustomAttribute%2A> auf die dynamische Assembly nach deren Erstellung anwenden, werden erst wirksam, nachdem die Assembly auf dem Datenträger gespeichert und wieder in den Arbeitsspeicher geladen wurde.  
@@ -57,7 +57,7 @@ ms.locfileid: "73130043"
   
 - Es werden keine Debugsymbole generiert. (`Internet`- und `LocalIntranet`-Berechtigungssätze enthalten nicht die notwendigen Berechtigungen.)  
   
-<a name="Anonymously_Hosted_Dynamic_Methods"></a>   
+<a name="Anonymously_Hosted_Dynamic_Methods"></a>
 ## <a name="anonymously-hosted-dynamic-methods"></a>Anonym gehostete dynamische Methoden  
  Anonym gehostete dynamische Methoden werden mithilfe der zwei <xref:System.Reflection.Emit.DynamicMethod>-Konstruktoren erstellt, die kein zugeordnetes Modul und keinen zugeordneten Typ angeben, <xref:System.Reflection.Emit.DynamicMethod.%23ctor%28System.String%2CSystem.Type%2CSystem.Type%5B%5D%29> und <xref:System.Reflection.Emit.DynamicMethod.%23ctor%28System.String%2CSystem.Type%2CSystem.Type%5B%5D%2CSystem.Boolean%29>. Diese Konstruktoren fügen die dynamischen Methoden in eine vom System bereitgestellte, vollständig vertrauenswürdige, sicherheitstransparente Assembly ein. Es sind keine Berechtigungen erforderlich, um diese Konstruktoren zu verwenden oder Code für die dynamischen Methoden auszugeben.  
   
@@ -90,7 +90,7 @@ ms.locfileid: "73130043"
 > [!NOTE]
 > Dynamische Methoden unterstützen keine Debugsymbole.  
   
-<a name="Dynamic_Methods_Associated_with_Existing_Assemblies"></a>   
+<a name="Dynamic_Methods_Associated_with_Existing_Assemblies"></a>
 ## <a name="dynamic-methods-associated-with-existing-assemblies"></a>Vorhandenen Assemblys zugeordnete dynamische Methoden  
  Um eine dynamische Methode einem Typ oder Modul in einer vorhandenen Assembly zuzuordnen, verwenden Sie einen der <xref:System.Reflection.Emit.DynamicMethod>-Konstruktoren, die den zugeordneten Typ bzw. das zugeordnete Modul angeben. Die Berechtigungen, die erforderlich sind, um diese Konstruktoren aufzurufen, variieren, da das Zuordnen einer dynamischen Methode zu einem vorhandenen Typ oder Modul der dynamischen Methode den Zugriff auf nicht öffentliche Typen und Member gewährt:  
   
@@ -135,7 +135,7 @@ ms.locfileid: "73130043"
 > [!NOTE]
 > Dynamische Methoden unterstützen keine Debugsymbole.  
   
-<a name="Version_Information"></a>   
+<a name="Version_Information"></a>
 ## <a name="version-information"></a>Versionsinformationen  
  Ab .NET Framework 4 wurde die computerweite Sicherheitsrichtlinie beseitigt, und Sicherheitstransparenz wird zum standardmäßigen Erzwingungsmechanismus. Weitere Informationen finden Sie unter [Sicherheitsänderungen](../security/security-changes.md).  
   
@@ -151,7 +151,7 @@ ms.locfileid: "73130043"
 ### <a name="obtaining-information-on-types-and-members"></a>Abrufen von Informationen zu Typen und Member  
  Ab .NET Framework 2.0 sind keine Berechtigungen erforderlich, um Informationen über nicht öffentliche Typen und Member abzurufen. Reflektion wird verwendet, um Informationen abzurufen, die zum Ausgeben dynamischer Methoden erforderlich sind. Beispielsweise werden <xref:System.Reflection.MethodInfo>-Objekte verwendet, um Methodenaufrufe auszugeben. Frühere Versionen von .NET Framework erfordern <xref:System.Security.Permissions.ReflectionPermission> mit dem <xref:System.Security.Permissions.ReflectionPermissionFlag.TypeInformation?displayProperty=nameWithType>-Flag. Weitere Informationen finden Sie unter [Sicherheitsüberlegungen für die Reflektion](security-considerations-for-reflection.md).  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Sicherheitsüberlegungen für die Reflektion](security-considerations-for-reflection.md)
 - [Ausgeben von dynamischen Methoden und Assemblys](emitting-dynamic-methods-and-assemblies.md)

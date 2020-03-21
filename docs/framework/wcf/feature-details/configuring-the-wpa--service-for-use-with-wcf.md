@@ -2,28 +2,28 @@
 title: Konfigurieren des Windows-Prozessaktivierungsdiensts zur Verwendung mit Windows Communication Foundation
 ms.date: 03/30/2017
 ms.assetid: 1d50712e-53cd-4773-b8bc-a1e1aad66b78
-ms.openlocfilehash: 5533393f759408002b83ba8ff485ba8229e921dd
-ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
+ms.openlocfilehash: 2da2653f3d2bd3d998b0ebbe87ea33760315f7df
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75964630"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79185306"
 ---
 # <a name="configuring-the-windows-process-activation-service-for-use-with-windows-communication-foundation"></a>Konfigurieren des Windows-Prozessaktivierungsdiensts zur Verwendung mit Windows Communication Foundation
-In diesem Thema werden die Schritte beschrieben, die zum Einrichten von Windows Process Activation Service (auch bekannt als was) in Windows Vista erforderlich sind, um Windows Communication Foundation (WCF)-Dienste zu hosten, die nicht über HTTP-Netzwerkprotokolle kommunizieren. In den folgenden Abschnitten werden die für diese Konfiguration erforderlichen Schritte kurz beschrieben:  
+In diesem Thema werden die Schritte beschrieben, die zum Einrichten des Windows-Prozessaktivierungsdienstes (auch als WAS bezeichnet) in Windows Vista erforderlich sind, um Windows Communication Foundation (WCF)-Dienste zu hosten, die nicht über HTTP-Netzwerkprotokolle kommunizieren. In den folgenden Abschnitten werden die für diese Konfiguration erforderlichen Schritte kurz beschrieben:  
   
-- Installieren Sie die erforderlichen WCF-Aktivierungs Komponenten (oder bestätigen Sie die Installation).  
+- Installieren (oder bestätigen Sie die Installation) der erforderlichen WCF-Aktivierungskomponenten.  
   
 - Erstellen Sie eine WAS-Site mit den Netzwerkprotokollbindungen, die Sie verwenden möchten, oder fügen Sie einer vorhandenen Site eine neue Protokollbindung hinzu.  
   
 - Erstellen Sie eine Anwendung, die als Host der Dienste fungieren soll, und bereiten Sie diese Anwendung auf die Verwendung der erforderlichen Netzwerkprotokolle vor.  
   
-- Erstellen Sie einen WCF-Dienst, der einen nicht-HTTP-Endpunkt verfügbar macht.  
+- Erstellen Sie einen WCF-Dienst, der einen Nicht-HTTP-Endpunkt verfügbar macht.  
   
 ## <a name="configuring-a-site-with-non-http-bindings"></a>Konfigurieren einer Site mit Nicht-HTTP-Bindungen  
  Damit eine Nicht-HTTP-Bindung in WAS verwendet werden kann, muss die Sitebindung der WAS-Konfiguration hinzugefügt werden. Die WAS-Konfiguration wird in der Datei applicationHost.config im Verzeichnis %windir%\system32\inetsrv\config gespeichert. Diese Konfigurationsdatei wird sowohl für WAS als auch für IIS&#160;7.0 genutzt.  
   
- Bei der Datei applicationHost.config handelt es sich um eine XML-Textdatei, die mit jedem Standardtexteditor (wie Editor) geöffnet werden kann. Das IIS 7,0-Befehlszeilen-Konfigurationstool (Appcmd. exe) ist jedoch die bevorzugte Methode, um nicht-HTTP-Site Bindungen hinzuzufügen.  
+ Bei der Datei applicationHost.config handelt es sich um eine XML-Textdatei, die mit jedem Standardtexteditor (wie Editor) geöffnet werden kann. Das IIS 7.0-Befehlszeilenkonfigurationstool (appcmd.exe) ist jedoch die bevorzugte Methode zum Hinzufügen von Nicht-HTTP-Standortbindungen.  
   
  Mit dem folgenden Befehl wird mit appcmd.exe eine net.tcp-Sitebindung der Standardwebsite hinzugefügt (der gesamte Befehl wird in eine Zeile eingegeben).  
   
@@ -52,7 +52,7 @@ appcmd.exe set site "Default Web Site" -+bindings.[protocol='net.tcp',bindingInf
 appcmd.exe set app "Default Web Site/appOne" /enabledProtocols:net.tcp  
 ```  
   
- Die Liste der aktivierten Protokolle kann auch im \<ApplicationDefaults > Element der in ApplicationHost. config gespeicherten XML-Konfiguration der Site festgelegt werden.  
+ Die Liste der aktivierten Protokolle \<kann auch in der anwendungDefaults>-Element der XML-Konfiguration der Site festgelegt werden, die in ApplicationHost.config gespeichert ist.  
   
  Der folgende XML-Code aus applicationHost.config veranschaulicht eine Site, die sowohl an HTTP als auch an Nicht-HTTP-Protokolle gebunden ist. Die zusätzliche Konfiguration, die zur Unterstützung von Nicht-HTTP-Protokollen erforderlich ist, wird durch Kommentare hervorgehoben.  
   
@@ -69,14 +69,14 @@ appcmd.exe set app "Default Web Site/appOne" /enabledProtocols:net.tcp
        </bindings>  
     </site>  
     <siteDefaults>  
-        <logFile   
+        <logFile
         customLogPluginClsid="{FF160663-DE82-11CF-BC0A-00AA006111E0}"  
           directory="D:\inetpub\logs\LogFiles" />  
-        <traceFailedRequestsLogging   
+        <traceFailedRequestsLogging
           directory="D:\inetpub\logs\FailedReqLogFiles" />  
     </siteDefaults>  
-    <applicationDefaults   
-      applicationPool="DefaultAppPool"   
+    <applicationDefaults
+      applicationPool="DefaultAppPool"
       //The following line is inserted by the command.  
       enabledProtocols="http, net.tcp" />  
     <virtualDirectoryDefaults allowSubDirConfig="true" />  
@@ -89,14 +89,14 @@ appcmd.exe set app "Default Web Site/appOne" /enabledProtocols:net.tcp
 [InvalidOperationException: The protocol 'net.tcp' does not have an implementation of HostedTransportConfiguration type registered.]   System.ServiceModel.AsyncResult.End(IAsyncResult result) +15778592   System.ServiceModel.Activation.HostedHttpRequestAsyncResult.End(IAsyncResult result) +15698937   System.ServiceModel.Activation.HostedHttpRequestAsyncResult.ExecuteSynchronous(HttpApplication context, Boolean flowContext) +265   System.ServiceModel.Activation.HttpModule.ProcessRequest(Object sender, EventArgs e) +227   System.Web.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute() +80   System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously) +171  
 ```  
   
- Wenn dieser Fehler angezeigt wird, stellen Sie sicher, dass WAS zur Aktivierung von Nicht-HTTP-Protokollen installiert und ordnungsgemäß konfiguriert ist. Weitere Informationen finden Sie unter Gewusst [wie: Installieren und Konfigurieren von WCF-Aktivierungs Komponenten](../../../../docs/framework/wcf/feature-details/how-to-install-and-configure-wcf-activation-components.md).  
+ Wenn dieser Fehler angezeigt wird, stellen Sie sicher, dass WAS zur Aktivierung von Nicht-HTTP-Protokollen installiert und ordnungsgemäß konfiguriert ist. Weitere Informationen finden Sie unter [Gewusst wie: Installieren und Konfigurieren von WCF-Aktivierungskomponenten](../../../../docs/framework/wcf/feature-details/how-to-install-and-configure-wcf-activation-components.md).  
   
 ## <a name="building-a-wcf-service-that-uses-was-for-non-http-activation"></a>Erstellen eines WCF-Diensts, der WAS zur Aktivierung von Nicht-HTTP-Protokollen verwendet  
- Nachdem Sie die Schritte zum Installieren und Konfigurieren von was (siehe Gewusst [wie: Installieren und Konfigurieren von WCF-Aktivierungs Komponenten](../../../../docs/framework/wcf/feature-details/how-to-install-and-configure-wcf-activation-components.md)) ausgeführt haben, ähnelt das Konfigurieren eines Dienstanbieter für die Aktivierung von was dem Konfigurieren eines Dienstanbieter, der in IIS gehostet wird.  
+ Nachdem Sie die Schritte zum Installieren und Konfigurieren von WAS ausgeführt haben (siehe [Gewusst wie: Installieren und Konfigurieren von WCF-Aktivierungskomponenten](../../../../docs/framework/wcf/feature-details/how-to-install-and-configure-wcf-activation-components.md)), ähnelt die Konfiguration eines Dienstes, der in IIS gehostet wird, mit der Verwendung von WAS für die Aktivierung.  
   
- Ausführliche Anweisungen zum Aufbau eines was-aktivierten WCF-Diensts finden Sie unter Gewusst [wie: Hosten eines WCF-Diensts in was](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md).  
+ Ausführliche Anweisungen zum Erstellen eines WAS-aktivierten WCF-Dienstes finden Sie unter [Gewusst wie: Hosten eines WCF-Dienstes in WAS](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md).  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Hosting in Windows Process Activation Service (Hosten im Windows-Prozessaktivierungsdienst)](../../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md)
 - [Windows Server AppFabric-Hostingfunktionen](https://docs.microsoft.com/previous-versions/appfabric/ee677189(v=azure.10))

@@ -2,12 +2,12 @@
 title: 'Vorgehensweise: Dynamisches Update'
 ms.date: 03/30/2017
 ms.assetid: 9b8f6e0d-edab-4a7e-86e3-8c66bebc64bb
-ms.openlocfilehash: 95d99afd09daf4d9bf3937a71d7773332ff1bc14
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: aaeb4d9d42c289cf34a6aee9212fc2d74b8f8c01
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834722"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79184966"
 ---
 # <a name="how-to-dynamic-update"></a>Vorgehensweise: Dynamisches Update
 In diesem Thema werden die grundlegenden Schritte beschrieben, die erforderlich sind, um die Routingkonfiguration zu erstellen und dynamisch zu aktualisieren. In diesem Beispiel wird die ursprüngliche Routingkonfiguration aus der Konfigurationsdatei abgerufen, die alle Nachrichten an den regularCalc-Rechnerdienst weiterleitet. Die Konfiguration wird anschließend jedoch programmgesteuert aktualisiert, um den Zielendpunkt in den roundingCalc-Dienst zu ändern.  
@@ -64,7 +64,7 @@ In diesem Thema werden die grundlegenden Schritte beschrieben, die erforderlich 
     </filterTables>  
     ```  
   
-3. Um eingehende Nachrichten anhand der in der Filtertabelle enthaltenen Filter auszuwerten, müssen Sie den Dienstendpunkten die Filtertabelle mithilfe des Routingverhaltens zuordnen. Im folgenden Beispiel wird die Zuordnung von "filterTable1" zum Dienst Endpunkt veranschaulicht.  
+3. Um eingehende Nachrichten anhand der in der Filtertabelle enthaltenen Filter auszuwerten, müssen Sie den Dienstendpunkten die Filtertabelle mithilfe des Routingverhaltens zuordnen. Im folgenden Beispiel wird veranschaulicht, wie "filterTable1" dem Dienstendpunkt zugeordnet wird.  
   
     ```xml  
     <behaviors>  
@@ -102,7 +102,7 @@ In diesem Thema werden die grundlegenden Schritte beschrieben, die erforderlich 
         using (ServiceHost serviceHost =  
             new ServiceHost(typeof(RoutingService)))  
         {  
-            // Open the ServiceHost to create listeners           
+            // Open the ServiceHost to create listeners
             // and start listening for messages.  
             Console.WriteLine("The Routing Service configured, opening....");  
             serviceHost.Open();  
@@ -164,7 +164,7 @@ In diesem Thema werden die grundlegenden Schritte beschrieben, die erforderlich 
   
 ## <a name="example"></a>Beispiel  
 
-Im folgenden finden Sie eine komplette Liste der Konsolenanwendung, die in diesem Beispiel verwendet wird:
+Im Folgenden finden Sie eine vollständige Auflistung der Konsolenanwendung, die in diesem Beispiel verwendet wird:
   
 ```csharp
 //-----------------------------------------------------------------  
@@ -185,12 +185,12 @@ namespace Microsoft.Samples.AdvancedFilters
     {  
         // Host the service within this EXE console application.  
         public static void Main()  
-        {             
+        {
             // Create a ServiceHost for the CalculatorService type.  
             using (ServiceHost serviceHost =  
                 new ServiceHost(typeof(RoutingService)))  
             {  
-                // Open the ServiceHost to create listeners           
+                // Open the ServiceHost to create listeners
                 // and start listening for messages.  
                 Console.WriteLine("The Routing Service configured, opening....");  
                 serviceHost.Open();  
@@ -242,8 +242,8 @@ namespace Microsoft.Samples.AdvancedFilters
 ```  
   
 ## <a name="example"></a>Beispiel  
- 
-Im folgenden finden Sie eine komplette Liste der Konfigurationsdatei, die in diesem Beispiel verwendet wird:
+
+Im Folgenden finden Sie eine vollständige Auflistung der Konfigurationsdatei, die in diesem Beispiel verwendet wird:
   
 ```xml  
 <?xml version="1.0" encoding="utf-8" ?>  
@@ -298,6 +298,6 @@ Im folgenden finden Sie eine komplette Liste der Konfigurationsdatei, die in die
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Routingdienste](../samples/routing-services.md)

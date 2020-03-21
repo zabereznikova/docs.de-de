@@ -2,12 +2,12 @@
 title: Aktivitätsstrukturüberprüfung
 ms.date: 03/30/2017
 ms.assetid: 100d00e4-8c1d-4233-8fbb-dd443a01155d
-ms.openlocfilehash: 014795b79b3536b387096e4de64266e26649da21
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 692f36d993c3f9c27839122b388a24d0698a2b59
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61774120"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79183042"
 ---
 # <a name="activity-tree-inspection"></a>Aktivitätsstrukturüberprüfung
 Die Aktivitätsstrukturüberprüfung wird von Workflowanwendungsautoren verwendet, um die von der Anwendung gehosteten Workflows zu überprüfen. <xref:System.Activities.WorkflowInspectionServices> ermöglicht die Suche nach bestimmten untergeordneten Aktivitäten in Workflows, die Auflistung einzelner Aktivitäten und ihrer Eigenschaften sowie die Zwischenspeicherung von Laufzeitmetadaten der Aktivitäten zu einem bestimmten Zeitpunkt. Dieses Thema bietet eine Übersicht über <xref:System.Activities.WorkflowInspectionServices> und die Verwendung zur Überprüfung einer Aktivitätsstruktur.  
@@ -23,28 +23,27 @@ Die Aktivitätsstrukturüberprüfung wird von Workflowanwendungsautoren verwende
   
  Mit diesem Beispielcode wird die folgende Ausgabe erzeugt.  
   
- **Listenelement 1**  
-**Auflisten von Element 2**   
-**Auflisten von Element 3**   
-**Auflisten von Element 4**   
-**Listenelement 5**   
-**Elemente, die zur Auflistung hinzugefügt werden.**   
-**Sequenz**   
- **Literal < Liste\<Zeichenfolge >>**  
+ **List Item 1**  
+**Listenelement 2**
+**Listenelement 3**
+**Listenelement 4**
+**Listenelement 5**
+**Artikel, die der Sammlung hinzugefügt wurden.** 
+ **Sequenzliterale** **\<<-Listenzeichenfolge>>**  
  **While**  
- **AddToCollection\<String>**  
- **VariableValue < ICollection\<Zeichenfolge >>**  
- **LambdaValue\<String>**  
- **LocationReferenceValue<List\<String>>**  
- **LambdaValue\<Boolean>**  
- **LocationReferenceValue<List\<String>>**  
+ **AddToCollection-Zeichenfolge>\<**  
+ **VariableValue<\<ICollection String>>**  
+ **LambdaValue-Zeichenfolge>\<**  
+ **LocationReferenceValue<->>\<**  
+ **LambdaValue\<boolesche>**  
+ **LocationReferenceValue<->>\<**  
  **ForEach\<String>**  
- **VariableValue < IEnumerable\<Zeichenfolge >>**  
+ **VariableValue<IEnumerable\<String>>**  
  **WriteLine**  
- **DelegateArgumentValue\<String>**  
- **Sequence**  
+ **DelegateArgumentValue-Zeichenfolge>\<**  
+ **Sequenz**  
  **WriteLine**  
- **Literal\<Zeichenfolge >** zum Abrufen einer bestimmten Aktivität anstelle Auflisten aller Aktivitäten <xref:System.Activities.WorkflowInspectionServices.Resolve%2A> verwendet wird. Sowohl mit <xref:System.Activities.WorkflowInspectionServices.Resolve%2A> als auch mit <xref:System.Activities.WorkflowInspectionServices.GetActivities%2A> wird die Zwischenspeicherung von Metadaten ausgeführt, wenn `WorkflowInspectionServices.CacheMetadata` zuvor nicht aufgerufen wurde. Wenn <xref:System.Activities.WorkflowInspectionServices.CacheMetadata%2A> aufgerufen wurde, basiert <xref:System.Activities.WorkflowInspectionServices.GetActivities%2A> auf den vorhandenen Metadaten. Falls also seit dem letzten Aufruf von <xref:System.Activities.WorkflowInspectionServices.CacheMetadata%2A> Strukturänderungen vorgenommen wurden, kann <xref:System.Activities.WorkflowInspectionServices.GetActivities%2A> zu unerwarteten Ergebnissen führen. Wenn Sie Änderungen an den Workflow nach dem Aufruf vorgenommen wurden <xref:System.Activities.WorkflowInspectionServices.GetActivities%2A>, Metadaten kann zwischengespeichert werden, erneut durch Aufrufen der <xref:System.Activities.Validation.ActivityValidationServices> <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A> Methode. Das Zwischenspeichern von Metadaten wird im nächsten Abschnitt erläutert.  
+ **Literal\<String>** Um eine bestimmte Aktivität abzurufen, anstatt <xref:System.Activities.WorkflowInspectionServices.Resolve%2A> alle Aktivitäten aufzuzählen, wird verwendet. Sowohl mit <xref:System.Activities.WorkflowInspectionServices.Resolve%2A> als auch mit <xref:System.Activities.WorkflowInspectionServices.GetActivities%2A> wird die Zwischenspeicherung von Metadaten ausgeführt, wenn `WorkflowInspectionServices.CacheMetadata` zuvor nicht aufgerufen wurde. Wenn <xref:System.Activities.WorkflowInspectionServices.CacheMetadata%2A> aufgerufen wurde, basiert <xref:System.Activities.WorkflowInspectionServices.GetActivities%2A> auf den vorhandenen Metadaten. Falls also seit dem letzten Aufruf von <xref:System.Activities.WorkflowInspectionServices.CacheMetadata%2A> Strukturänderungen vorgenommen wurden, kann <xref:System.Activities.WorkflowInspectionServices.GetActivities%2A> zu unerwarteten Ergebnissen führen. Wenn nach dem Aufruf <xref:System.Activities.WorkflowInspectionServices.GetActivities%2A>Änderungen am Workflow vorgenommen wurden, können <xref:System.Activities.Validation.ActivityValidationServices> <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A> Metadaten durch Aufrufen der Methode erneut zwischengespeichert werden. Das Zwischenspeichern von Metadaten wird im nächsten Abschnitt erläutert.  
   
 ### <a name="caching-metadata"></a>Zwischenspeichern von Metadaten  
  Durch die Zwischenspeicherung der Metadaten für eine Aktivität wird eine Beschreibung der Argumente, Variablen, untergeordneten Aktivitäten und Aktivitätsdelegaten der Aktivität erstellt und validiert. Metadaten werden standardmäßig von der Laufzeit zwischengespeichert, wenn eine Aktivität zur Ausführung vorbereitet wird. Wenn ein Workflowhostautor die Metadaten für eine Aktivität oder eine Aktivitätsstruktur vorher zwischenspeichern möchte, um beispielsweise den gesamten Aufwand im Voraus zu erfassen, kann <xref:System.Activities.WorkflowInspectionServices.CacheMetadata%2A> verwendet werden, um die Metadaten zu dem gewünschten Zeitpunkt zwischenzuspeichern.

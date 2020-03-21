@@ -1,25 +1,25 @@
 ---
-title: Verbindungs Pooling für SQL Server
+title: SQL Server-Verbindungspooling
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 7e51d44e-7c4e-4040-9332-f0190fe36f07
-ms.openlocfilehash: 3bf0ce98b9b16b8d698a814f3bf2c4f442f3bf06
-ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
+ms.openlocfilehash: 149511bd4e84baabf11eca014257127b587830df
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/04/2020
-ms.locfileid: "76980040"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79148997"
 ---
 # <a name="sql-server-connection-pooling-adonet"></a>SQL Server-Verbindungspooling (ADO.NET)
 Beim Herstellen einer Verbindung mit einem Datenbankserver müssen normalerweise mehrere zeitaufwändige Schritte ausgeführt werden. Es muss u. a. ein physischer Channel (z. B. ein Socket oder eine benannte Pipe) erstellt, der anfängliche Handshake durchgeführt, die Informationen der Verbindungszeichenfolge analysiert, die Verbindung vom Server authentifiziert und Überprüfungen zum Eintragen in die aktuelle Transaktion ausgeführt werden.  
   
- In der Praxis verwenden die meisten Anwendungen nur eine oder einige unterschiedliche Konfigurationen für Verbindungen. Dies bedeutet, dass beim Ausführen von Anwendungen viele identische Verbindungen wiederholt geöffnet und geschlossen werden. Um die Kosten für das Öffnen von Verbindungen zu minimieren, verwendet ADO.net eine Optimierungstechnik namens *Verbindungspooling*.  
+ In der Praxis verwenden die meisten Anwendungen nur eine oder einige unterschiedliche Konfigurationen für Verbindungen. Dies bedeutet, dass beim Ausführen von Anwendungen viele identische Verbindungen wiederholt geöffnet und geschlossen werden. Um die Kosten für das Öffnen von Verbindungen zu minimieren, verwendet ADO.NET eine Optimierungstechnik namens *Verbindungspooling*.  
   
- Beim Verbindungspooling wird die Häufigkeit reduziert, mit der neue Verbindungen hergestellt werden müssen. Der *Pool Funktion* behält den Besitz der physischen Verbindung bei. Er verwaltet Verbindungen, indem er eine Reihe aktiver Verbindungen für jede angegebene Verbindungskonfiguration beibehält. Sobald ein Benutzer `Open` für eine Verbindung aufruft, sucht der Pooler nach einer verfügbaren Verbindung im Pool. Wenn eine Verbindung in einem Pool verfügbar ist, gibt der Pooler die Verbindung an den Aufrufer zurück, anstatt eine neue Verbindung herzustellen. Wenn die Anwendung `Close` für eine Verbindung aufruft, wird diese vom Pooler an die aktiven Verbindungen im Pool zurückgegeben, anstatt diese zu beenden. Nachdem die Verbindung an den Pool zurückgegeben wurde, kann sie für den nächsten `Open`-Aufruf erneut verwendet werden.  
+ Beim Verbindungspooling wird die Häufigkeit reduziert, mit der neue Verbindungen hergestellt werden müssen. Der *Pooler* behält den Besitz der physischen Verbindung bei. Er verwaltet Verbindungen, indem er eine Reihe aktiver Verbindungen für jede angegebene Verbindungskonfiguration beibehält. Sobald ein Benutzer `Open` für eine Verbindung aufruft, sucht der Pooler nach einer verfügbaren Verbindung im Pool. Wenn eine Verbindung in einem Pool verfügbar ist, gibt der Pooler die Verbindung an den Aufrufer zurück, anstatt eine neue Verbindung herzustellen. Wenn die Anwendung `Close` für eine Verbindung aufruft, wird diese vom Pooler an die aktiven Verbindungen im Pool zurückgegeben, anstatt diese zu beenden. Nachdem die Verbindung an den Pool zurückgegeben wurde, kann sie für den nächsten `Open`-Aufruf erneut verwendet werden.  
   
- Es können nur Verbindungen mit derselben Konfiguration zu einem Pool zusammengefasst werden. ADO.net behält mehrere Pools gleichzeitig bei, einen für jede Konfiguration. Verbindungen werden durch Verbindungszeichenfolgen sowie bei Verwendung der integrierten Sicherheit durch Windows-Identitäten in Pools unterteilt. Verbindungen werden auch auf der Basis ihrer Eintragung in eine Transaktion zu einem Pool zusammengefasst. Bei Verwendung von <xref:System.Data.SqlClient.SqlConnection.ChangePassword%2A> wirkt sich die <xref:System.Data.SqlClient.SqlCredential>-Instanz auf den Verbindungspool aus. Verschiedene Instanzen von <xref:System.Data.SqlClient.SqlCredential> verwenden verschiedene Verbindungspools, auch wenn die Benutzer-ID und das Kennwort übereinstimmen.  
+ Es können nur Verbindungen mit derselben Konfiguration zu einem Pool zusammengefasst werden. ADO.NET behält mehrere Pools gleichzeitig, einen für jede Konfiguration. Verbindungen werden durch Verbindungszeichenfolgen sowie bei Verwendung der integrierten Sicherheit durch Windows-Identitäten in Pools unterteilt. Verbindungen werden auch auf der Basis ihrer Eintragung in eine Transaktion zu einem Pool zusammengefasst. Bei Verwendung von <xref:System.Data.SqlClient.SqlConnection.ChangePassword%2A> wirkt sich die <xref:System.Data.SqlClient.SqlCredential>-Instanz auf den Verbindungspool aus. Verschiedene Instanzen von <xref:System.Data.SqlClient.SqlCredential> verwenden verschiedene Verbindungspools, auch wenn die Benutzer-ID und das Kennwort übereinstimmen.  
   
  Durch Verbindungspooling kann die Leistung und Skalierbarkeit einer Anwendung wesentlich erhöht werden. Standardmäßig ist das Verbindungspooling in ADO.NET aktiviert. Verbindungen werden beim Öffnen und Schließen in der Anwendung vom Pooler optimiert, außer wenn dies explizit deaktiviert wurde. Sie können auch mehrere Modifizierer für Verbindungszeichenfolgen angeben, um das Verhalten des Verbindungspoolings zu steuern. Weitere Informationen hierzu finden Sie weiter unten im Abschnitt "Steuern des Verbindungspoolings mit Schlüsselwörtern für Verbindungszeichenfolgen".  
   
@@ -35,21 +35,21 @@ Beim Herstellen einer Verbindung mit einem Datenbankserver müssen normalerweise
 using (SqlConnection connection = new SqlConnection(  
   "Integrated Security=SSPI;Initial Catalog=Northwind"))  
     {  
-        connection.Open();        
+        connection.Open();
         // Pool A is created.  
     }  
   
 using (SqlConnection connection = new SqlConnection(  
   "Integrated Security=SSPI;Initial Catalog=pubs"))  
     {  
-        connection.Open();        
+        connection.Open();
         // Pool B is created because the connection strings differ.  
     }  
   
 using (SqlConnection connection = new SqlConnection(  
   "Integrated Security=SSPI;Initial Catalog=Northwind"))  
     {  
-        connection.Open();        
+        connection.Open();
         // The connection string matches pool A.  
     }  
 ```  
@@ -67,12 +67,12 @@ using (SqlConnection connection = new SqlConnection(
  Die Verbindungspoolfunktion erfüllt diese Verbindungsanforderungen, indem Verbindungen erneut zugewiesen werden, sobald sie wieder für den Pool freigegeben werden. Wenn die maximale Poolgröße erreicht ist und keine verwendbare Verbindung verfügbar ist, wird die Anforderung in die Warteschlange gestellt. Der Pooler versucht anschließend, alle Verbindungen wieder anzufordern, bis das Timeout erreicht ist (der Standardwert beträgt 15 Sekunden). Wenn der Pooler die Anforderung nicht erfüllt, bevor das Zeitlimit für die Verbindung überschritten ist, wird eine Ausnahme ausgelöst.  
   
 > [!CAUTION]
-> Es ist unbedingt zu empfehlen, die Verbindung nach Verwendung stets zu schließen, damit sie in den Pool zurückgegeben wird. Hierzu können Sie entweder die Methoden `Close` oder `Dispose` des `Connection`-Objekts oder alle Verbindungen innerhalb einer `using`-Anweisung in C#oder eine `Using`-Anweisung in Visual Basic öffnen. Verbindungen, die nicht explizit geschlossen werden, werden möglicherweise dem Pool nicht hinzugefügt bzw. nicht an den Pool zurückgegeben. Weitere Informationen finden Sie unter [using-Anweisung](../../../csharp/language-reference/keywords/using-statement.md) oder Vorgehens [Weise: Verwerfen einer System Ressource](../../../visual-basic/programming-guide/language-features/control-flow/how-to-dispose-of-a-system-resource.md) für Visual Basic.  
+> Es ist unbedingt zu empfehlen, die Verbindung nach Verwendung stets zu schließen, damit sie in den Pool zurückgegeben wird. Sie können dies `Close` entweder `Dispose` mit `Connection` den or-Methoden des Objekts oder durch Öffnen aller Verbindungen innerhalb einer `using` Anweisung in C- oder einer `Using` Anweisung in Visual Basic tun. Verbindungen, die nicht explizit geschlossen werden, werden möglicherweise dem Pool nicht hinzugefügt bzw. nicht an den Pool zurückgegeben. Weitere Informationen finden Sie unter Verwenden von [Anweisung](../../../csharp/language-reference/keywords/using-statement.md) oder [How to: Dispose of a System Resource](../../../visual-basic/programming-guide/language-features/control-flow/how-to-dispose-of-a-system-resource.md) for Visual Basic.  
   
 > [!NOTE]
 > Rufen Sie nicht `Close` oder `Dispose` für eine `Connection`, einen `DataReader` oder ein anderes verwaltetes Objekt in der `Finalize`-Methode der Klasse auf. Geben Sie in einer Finalize-Methode nur nicht verwaltete Ressourcen frei, die der Klasse direkt gehören. Wenn die Klasse keine nicht verwalteten Ressourcen besitzt, definieren Sie in der Klasse keine `Finalize`-Methode. Weitere Informationen finden Sie unter [Garbage Collection](../../../standard/garbage-collection/index.md).  
   
-Weitere Informationen zu den Ereignissen, die mit dem Öffnen und Schließen von Verbindungen verknüpft sind, finden Sie unter [Audit Login Event Class](/sql/relational-databases/event-classes/audit-login-event-class) und [Audit Logout Event Class](/sql/relational-databases/event-classes/audit-logout-event-class) in der SQL Server-Dokumentation.  
+Weitere Informationen zu den Ereignissen im Zusammenhang mit dem Öffnen und Schließen von Verbindungen finden Sie unter [Überwachungsanmeldungsereignisklasse](/sql/relational-databases/event-classes/audit-login-event-class) und [Überwachungsprotokollereignisklasse](/sql/relational-databases/event-classes/audit-logout-event-class) in der SQL Server-Dokumentation.  
   
 ## <a name="removing-connections"></a>Entfernen von Verbindungen  
  Die Verbindungspoolfunktion entfernt eine Verbindung aus dem Pool, nachdem sie für eine Zeitspanne von etwa 4–8 Minuten nicht verwendet wurde oder wenn festgestellt wird, dass die Verbindung mit dem Server unterbrochen wurde. Beachten Sie, dass eine unterbrochene Verbindung nur nach einem Versuch, mit dem Server zu kommunizieren, festgestellt werden kann. Wenn eine Verbindung gefunden wird, die nicht mehr mit dem Server verbunden ist, wird sie als ungültig markiert. Ungültige Verbindungen werden erst aus dem Verbindungspool entfernt, nachdem sie geschlossen oder freigegeben wurden.  
@@ -80,9 +80,9 @@ Weitere Informationen zu den Ereignissen, die mit dem Öffnen und Schließen von
  Wenn eine Verbindung mit einem nicht mehr vorhandenen Server besteht, kann diese Verbindung aus dem Pool genommen werden, ohne dass die Verbindungspoolfunktion die unterbrochene Verbindung gefunden und als ungültig markiert hat. Dies liegt daran, dass durch den Mehraufwand beim Überprüfen, ob eine Verbindung noch gültig ist, die Vorteile eines Poolers umgangen werden, da eine weitere Schleife zum Server auftritt. In diesem Fall wird bei der ersten Verwendung der Verbindung festgestellt, dass die Verbindung unterbrochen wurde, und es wird eine Ausnahme ausgelöst.  
   
 ## <a name="clearing-the-pool"></a>Löschen des Pools  
- ADO.NET 2,0 hat zwei neue Methoden eingeführt, um den Pool zu löschen: <xref:System.Data.SqlClient.SqlConnection.ClearAllPools%2A> und <xref:System.Data.SqlClient.SqlConnection.ClearPool%2A>. `ClearAllPools` löscht die Verbindungspools für einen angegebenen Anbieter, und `ClearPool` löscht den Verbindungspool, der einer bestimmten Verbindung zugeordnet ist. Wenn Verbindungen während des Aufrufs verwendet werden, werden diese entsprechend markiert. Sie werden nach dem Beenden verworfen und nicht an den Pool zurückgegeben.  
+ ADO.NET 2.0 führte zwei neue Methoden <xref:System.Data.SqlClient.SqlConnection.ClearAllPools%2A> <xref:System.Data.SqlClient.SqlConnection.ClearPool%2A>ein, um den Pool zu löschen: und . `ClearAllPools` löscht die Verbindungspools für einen angegebenen Anbieter, und `ClearPool` löscht den Verbindungspool, der einer bestimmten Verbindung zugeordnet ist. Wenn Verbindungen während des Aufrufs verwendet werden, werden diese entsprechend markiert. Sie werden nach dem Beenden verworfen und nicht an den Pool zurückgegeben.  
   
-## <a name="transaction-support"></a>Unterstützung von Transaktionen  
+## <a name="transaction-support"></a>Transaktionsunterstützung.  
  Verbindungen werden aus dem Pool entnommen und basierend auf dem Transaktionskontext zugewiesen. Sofern `Enlist=false` in der Verbindungszeichenfolge angegeben ist, wird durch den Verbindungspool gewährleistet, dass die Verbindung im <xref:System.Transactions.Transaction.Current%2A>-Kontext eingetragen wird. Wenn eine Verbindung geschlossen und mit einer eingetragenen `System.Transactions`-Transaktion an den Pool zurückgegeben wird, wird sie so reserviert, dass bei der nächsten Anforderung für diesen Verbindungspool mit der gleichen `System.Transactions`-Transaktion die gleiche Verbindung zurückgegeben wird, soweit diese verfügbar ist. Wenn eine solche Anforderung ausgegeben wird und keine Verbindungen in einem Pool verfügbar sind, wird eine Verbindung vom nicht transaktiven Teil des Pools erstellt und eingetragen. Wenn in keinem Bereich des Pools Verbindungen verfügbar sind, wird eine neue Verbindung erstellt und eingetragen.  
   
  Wenn eine Verbindung geschlossen wird, wird sie an den Pool und an den entsprechenden Teilbereich auf der Grundlage des Transaktionskontexts zurückgegeben. Sie können die Verbindung daher trennen, ohne einen Fehler zu generieren, auch wenn eine verteilte Transaktion noch aussteht. So haben Sie die Möglichkeit, die verteilte Transaktion zu einem späteren Zeitpunkt durchzuführen oder abzubrechen.  
@@ -124,14 +124,14 @@ using (SqlConnection connection = new SqlConnection(
 ```  
   
 ## <a name="application-roles-and-connection-pooling"></a>Anwendungsrollen und Verbindungspooling  
- Nachdem eine Anwendungsrolle von SQL Server durch Aufrufen der im System gespeicherten Prozedur `sp_setapprole` aktiviert wurde, kann der Sicherheitskontext dieser Verbindung nicht zurückgesetzt werden. Wenn jedoch das Verbindungspooling aktiviert ist, wird die Verbindung an den Verbindungspool zurückgegeben. Bei der erneuten Verwendung der an den Pool zurückgegebenen Verbindung wird dann ein Fehler ausgelöst. Weitere Informationen finden Sie im Knowledge Base-Artikel "[SQL-Anwendungs Rollen Fehler mit OLE DB Ressourcen Pooling](https://support.microsoft.com/default.aspx?scid=KB;EN-US;Q229564)".  
+ Nachdem eine Anwendungsrolle von SQL Server durch Aufrufen der im System gespeicherten Prozedur `sp_setapprole` aktiviert wurde, kann der Sicherheitskontext dieser Verbindung nicht zurückgesetzt werden. Wenn jedoch das Verbindungspooling aktiviert ist, wird die Verbindung an den Verbindungspool zurückgegeben. Bei der erneuten Verwendung der an den Pool zurückgegebenen Verbindung wird dann ein Fehler ausgelöst. Weitere Informationen finden Sie im Knowledge Base-Artikel["SQL-Anwendungsrollenfehler beim OLE DB-Ressourcenpooling".](https://support.microsoft.com/default.aspx?scid=KB;EN-US;Q229564)  
   
 ### <a name="application-role-alternatives"></a>Alternativen zu Anwendungsrollen  
- Es wird empfohlen, die Sicherheitsmechanismen zu nutzen, die anstelle der Anwendungsrollen verwendet werden können. Weitere Informationen finden Sie unter [Erstellen von Anwendungs Rollen in SQL Server](./sql/creating-application-roles-in-sql-server.md).  
+ Es wird empfohlen, die Sicherheitsmechanismen zu nutzen, die anstelle der Anwendungsrollen verwendet werden können. Weitere Informationen finden Sie unter [Erstellen von Anwendungsrollen in SQL Server](./sql/creating-application-roles-in-sql-server.md).  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Verbindungspooling](connection-pooling.md)
 - [SQL Server und ADO.NET](./sql/index.md)
-- [Performance Counters](performance-counters.md)
+- [Leistungsindikatoren](performance-counters.md)
 - [Übersicht über ADO.NET](ado-net-overview.md)

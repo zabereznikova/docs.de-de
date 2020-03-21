@@ -2,12 +2,12 @@
 title: ICorDebugSymbolProvider::GetAssemblyImageBytes-Methode
 ms.date: 03/30/2017
 ms.assetid: 3db215aa-e180-4f70-8d23-6d5a0ffbc8e5
-ms.openlocfilehash: b7a8f942d493b7b775a31dce5ab4d351a77cfe5f
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 6361b12802876ef480acbe1cc13f32b77ba0be49
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76791675"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79178491"
 ---
 # <a name="icordebugsymbolprovidergetassemblyimagebytes-method"></a>ICorDebugSymbolProvider::GetAssemblyImageBytes-Methode
 Liest Daten aus einer zusammengeführten Assembly, wenn eine relative virtuelle Adresse (RVA) in der zusammengeführten Assembly angegeben ist.  
@@ -16,13 +16,13 @@ Liest Daten aus einer zusammengeführten Assembly, wenn eine relative virtuelle 
   
 ```cpp  
 HRESULT GetAssemblyImageBytes(  
-   [in] CORDB_ADDRESS rva,   
-   [in] ULONG32 length,   
+   [in] CORDB_ADDRESS rva,
+   [in] ULONG32 length,
    [out] ICorDebugMemoryBuffer** ppMemoryBuffer  
 );  
 ```  
   
-## <a name="parameters"></a>Parameters  
+## <a name="parameters"></a>Parameter  
  `rva`  
  [in] Eine relative virtuelle Adresse (RVA) in einer zusammengeführten Assembly.  
   
@@ -30,23 +30,23 @@ HRESULT GetAssemblyImageBytes(
  Die Anzahl der Bytes, die aus der zusammengeführten Assembly gelesen. werden sollen.  
   
  `ppMemoryBuffer`  
- Ein Zeiger auf die Adresse eines [icordebugmemorybuffer](icordebugmemorybuffer-interface.md) -Objekts, das Informationen über den Arbeitsspeicher Puffer mit zusammengeführten Assemblymetadaten enthält.  
+ Ein Zeiger auf die Adresse eines [ICorDebugMemoryBuffer-Objekts,](icordebugmemorybuffer-interface.md) das Informationen über den Speicherpuffer mit zusammengeführten Assemblymetadaten enthält.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
   
 > [!NOTE]
 > Diese Methode ist nur mit .NET Native verfügbar.  
   
-## <a name="requirements"></a>-Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   
  **Bibliothek:** CorGuids.lib  
   
- **.NET Framework Versionen:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **.NET Framework-Versionen:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [ICorDebugSymbolProvider-Schnittstelle](icordebugsymbolprovider-interface.md)
-- [Debuggen von Schnittstellen](debugging-interfaces.md)
+- [Debugschnittstellen](debugging-interfaces.md)

@@ -2,18 +2,18 @@
 title: Übertragung
 ms.date: 03/30/2017
 ms.assetid: dfcfa36c-d3bb-44b4-aa15-1c922c6f73e6
-ms.openlocfilehash: c3f9420ac798bf2722f825d14ca64653127432b4
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e0ebfff97cd33e7a588a1ab92399a97a0fbec039
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64662884"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79185707"
 ---
 # <a name="transfer"></a>Übertragung
-Dieses Thema beschreibt die Übertragung in Windows Communication Foundation (WCF) aktivitätsablaufverfolgungs-Modell.  
+In diesem Thema wird die Übertragung im WCF-Aktivitätsablaufverfolgungsmodell (Windows Communication Foundation) beschrieben.  
   
 ## <a name="transfer-definition"></a>Übertragungsdefinition  
- Übertragungen zwischen Aktivitäten stellen einen kausalen Zusammenhang zwischen Ereignissen in den zugehörigen Aktivitäten innerhalb von Endpunkten dar. Zwei Aktivitäten stehen mit Übertragungen in Beziehung, wenn eine Ablaufsteuerung zwischen den Aktivitäten besteht, z. B. ein Methodenaufruf, der Aktivitätsgrenzen überschreitet. In WCF Wenn Bytes für den Dienst eingehende sind wird der lauschaktivität an die Byteempfang-Aktivität übertragen, in das Nachrichtenobjekt erstellt wird. Eine Liste der End-to-End-ablaufverfolgungsszenarien und deren entsprechende Aktivität und den ablaufverfolgungsentwurf, finden Sie unter [End-To-End-Ablaufverfolgungsszenarien](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md).  
+ Übertragungen zwischen Aktivitäten stellen einen kausalen Zusammenhang zwischen Ereignissen in den zugehörigen Aktivitäten innerhalb von Endpunkten dar. Zwei Aktivitäten stehen mit Übertragungen in Beziehung, wenn eine Ablaufsteuerung zwischen den Aktivitäten besteht, z. B. ein Methodenaufruf, der Aktivitätsgrenzen überschreitet. Wenn in WCF Bytes im Dienst eingehen, wird die Aktivität "Hören bei" an die Aktivität Bytes empfangen übertragen, in der das Nachrichtenobjekt erstellt wird. Eine Liste der End-to-End-Ablaufverfolgungsszenarien sowie des jeweiligen Aktivitäts- und Ablaufverfolgungsentwurfs finden Sie unter [End-to-End-Ablaufverfolgungsszenarien](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md).  
   
  Um Übertragungsablaufverfolgungen auszugeben, verwenden Sie die `ActivityTracing`-Einstellung auf der Ablaufverfolgungsquelle, wie im folgenden Konfigurationscode gezeigt.  
   
@@ -26,7 +26,7 @@ Dieses Thema beschreibt die Übertragung in Windows Communication Foundation (WC
   
  Eine Übertragungsablaufverfolgung wird von Aktivität M an Aktivität N ausgegeben, wenn ein Steuerungsfluss zwischen M und N besteht. Beispielsweise führt N aufgrund eines Methodenaufrufs über die Aktivitätsgrenzen hinweg Arbeit für M aus. N ist möglicherweise bereits vorhanden oder wurde erstellt. N wird von M erzeugt, wenn N eine neue Aktivität ist, die Arbeit für M ausführt.  
   
- Nach der Übertragung von M zu N erfolgt möglicherweise keine Rückübertragung von N zu M. Dies liegt daran, dass M Arbeit in N erstellen kann und nicht nachverfolgt, wann N die Arbeit abgeschlossen hat. In der Tat kann M beendet werden, bevor N seine Aufgabe ausgeführt hat. Dies geschieht in der "Open ServiceHost"-Aktivität (M), die listeneraktivitäten (N), und klicken Sie dann beendet. Eine Rückübertragung von N zu M bedeutet, dass N die zu M gehörende Arbeit abgeschlossen hat.  
+ Nach der Übertragung von M zu N erfolgt möglicherweise keine Rückübertragung von N zu M. Dies liegt daran, dass M Arbeit in N erstellen kann und nicht nachverfolgt, wann N die Arbeit abgeschlossen hat. In der Tat kann M beendet werden, bevor N seine Aufgabe ausgeführt hat. Dies geschieht in der Aktivität "Open ServiceHost" (M), die Listener-Aktivitäten (N) erzeugt und dann beendet wird. Eine Rückübertragung von N zu M bedeutet, dass N die zu M gehörende Arbeit abgeschlossen hat.  
   
  N kann mit der Durchführung anderer zu M gehörender Verarbeitungen fortfahren, beispielsweise eine bestehende Authentifikatoraktivität (N), die weiterhin Anmeldeanforderungen (M) von unterschiedlichen Anmeldeaktivitäten erhält.  
   
@@ -67,7 +67,7 @@ TraceSource ts = new TraceSource("myTS");
 // 1. remember existing ("ambient") activity for clean up  
 Guid oldGuid = Trace.CorrelationManager.ActivityId;  
 // this will be our new activity  
-Guid newGuid = Guid.NewGuid();   
+Guid newGuid = Guid.NewGuid();
 
 // 2. call transfer, indicating that we are switching to the new AID  
 ts.TraceTransfer(667, "Transferring.", newGuid);  
@@ -87,7 +87,7 @@ ts.TraceEvent(TraceEventType.Information, 667, "Hello from activity " + i);
 // Perform Work  
 // some work.  
 // Return  
-ts.TraceEvent(TraceEventType.Information, 667, "Work complete on activity " + i);   
+ts.TraceEvent(TraceEventType.Information, 667, "Work complete on activity " + i);
 
 // 6. Emit the transfer returning to the original activity  
 ts.TraceTransfer(667, "Transferring Back.", oldGuid);  
@@ -96,13 +96,13 @@ ts.TraceTransfer(667, "Transferring Back.", oldGuid);
 ts.TraceEvent(TraceEventType.Stop, 667, "Boundary: Activity " + i);  
 
 // 8. Change the tls variable to the original AID  
-Trace.CorrelationManager.ActivityId = oldGuid;    
+Trace.CorrelationManager.ActivityId = oldGuid;
 
 // 9. Resume the old activity  
 ts.TraceEvent(TraceEventType.Resume, 667, "Resume: Activity " + i-1);  
 ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Konfigurieren der Ablaufverfolgung](../../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)
 - [Using Service Trace Viewer for Viewing Correlated Traces and Troubleshooting (Verwenden von Service Trace Viewer zum Anzeigen korrelierender Ablaufverfolgungen und der Problembehandlung)](../../../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)

@@ -2,12 +2,12 @@
 title: Deklarative Einschränkungen
 ms.date: 03/30/2017
 ms.assetid: 67001ed1-7f4d-4ada-ae57-a31176901a53
-ms.openlocfilehash: e3ced8f6f88d698273ace5c8b74fe90b94fa9720
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 321021e3d73daecae07268f33807c992414a7b4c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61945820"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79182964"
 ---
 # <a name="declarative-constraints"></a>Deklarative Einschränkungen
 Deklarative Einschränkungen stellen eine leistungsstarke Validierungsmethode für eine Aktivität und ihre Beziehungen zu anderen Aktivitäten bereit. Einschränkungen werden während des Erstellungsprozesses für eine Aktivität konfiguriert. Der Workflowhost kann jedoch zusätzliche Einschränkungen angeben. Dieses Thema bietet eine Übersicht darüber, wie mit deklarativen Einschränkungen Aktivitätsvalidierung bereitgestellt werden kann.  
@@ -16,7 +16,7 @@ Deklarative Einschränkungen stellen eine leistungsstarke Validierungsmethode f�
  Eine Einschränkung ist eine Aktivität, die Validierungslogik enthält. Die Einschränkungsaktivität kann in Code oder in XAML erstellt werden. Nachdem eine Einschränkungsaktivität erstellt wurde, wird sie von Aktivitätsautoren der <xref:System.Activities.Activity.Constraints%2A>-Eigenschaft hinzugefügt, die validiert werden soll, oder die Autoren verwenden die Einschränkung, um zusätzliche Validierung mithilfe der <xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A>-Eigenschaft einer <xref:System.Activities.Validation.ValidationSettings>-Instanz bereitzustellen. Die Validierungslogik kann aus einfachen Validierungen wie der Validierung der Metadaten einer Aktivität bestehen, sie kann jedoch auch eine Validierung ausführen, die die Beziehung der betreffenden Aktivität zum übergeordneten Element, den untergeordneten Elementen und den gleichgeordneten Aktivitäten berücksichtigt. Einschränkungen werden mit der <xref:System.Activities.Validation.Constraint%601>-Aktivität erstellt. Es werden mehrere zusätzliche Validierungsaktivitäten bereitgestellt, um die Erstellung von Validierungsfehlern und -warnungen zu unterstützen und Informationen zu verwandten Aktivitäten im Workflow zur Verfügung zu stellen.  
   
 ### <a name="assertvalidation-and-addvalidationerror"></a>AssertValidation und AddValidationError  
- Die <xref:System.Activities.Validation.AssertValidation>-Aktivität wertet den Ausdruck aus, auf den von der <xref:System.Activities.Validation.AssertValidation.Assertion%2A>-Eigenschaft verwiesen wird. Wenn der ausgewertete Ausdruck `false` ergibt, wird <xref:System.Activities.Validation.ValidationResults> ein Validierungsfehler oder eine Warnung hinzugefügt. Die <xref:System.Activities.Validation.AssertValidation.Message%2A>-Eigenschaft beschreibt den Validierungsfehler, und die <xref:System.Activities.Validation.AssertValidation.IsWarning%2A>-Eigenschaft gibt an, ob es sich dabei um einen Fehler oder eine Warnung handelt. Der Standardwert für <xref:System.Activities.Validation.AssertValidation.IsWarning%2A> lautet `false`.  
+ Die <xref:System.Activities.Validation.AssertValidation>-Aktivität wertet den Ausdruck aus, auf den von der <xref:System.Activities.Validation.AssertValidation.Assertion%2A>-Eigenschaft verwiesen wird. Wenn der ausgewertete Ausdruck `false` ergibt, wird <xref:System.Activities.Validation.ValidationResults> ein Validierungsfehler oder eine Warnung hinzugefügt. Die <xref:System.Activities.Validation.AssertValidation.Message%2A>-Eigenschaft beschreibt den Validierungsfehler, und die <xref:System.Activities.Validation.AssertValidation.IsWarning%2A>-Eigenschaft gibt an, ob es sich dabei um einen Fehler oder eine Warnung handelt. Der Standardwert für <xref:System.Activities.Validation.AssertValidation.IsWarning%2A> ist `false`.  
   
  Im folgenden Beispiel wird eine Einschränkung deklariert, die eine Validierungswarnung zurückgibt, wenn der <xref:System.Activities.Activity.DisplayName%2A> der validierten Aktivität zwei Zeichen oder weniger umfasst. Der generische Typparameter, der für das <xref:System.Activities.Validation.Constraint%601>-Objekt verwendet wird, gibt den Typ der Aktivität an, die von der Einschränkung validiert wird. Diese Einschränkung verwendet das <xref:System.Activities.Activity>-Objekt als generischen Typ. Mit ihr können alle Aktivitätstypen validiert werden.  
   
@@ -71,58 +71,58 @@ public sealed class CreateState : CodeActivity
     public CreateState()  
     {  
         base.Constraints.Add(CheckParent());  
-        this.Cities = new List<Activity>();              
+        this.Cities = new List<Activity>();
     }  
   
     public List<Activity> Cities { get; set; }  
   
-    public string Name { get; set; }    
+    public string Name { get; set; }
   
     static Constraint CheckParent()  
     {  
         DelegateInArgument<CreateState> element = new DelegateInArgument<CreateState>();  
-        DelegateInArgument<ValidationContext> context = new DelegateInArgument<ValidationContext>();                          
+        DelegateInArgument<ValidationContext> context = new DelegateInArgument<ValidationContext>();
         Variable<bool> result = new Variable<bool>();  
         DelegateInArgument<Activity> parent = new DelegateInArgument<Activity>();  
   
         return new Constraint<CreateState>  
-        {                                     
+        {
             Body = new ActivityAction<CreateState,ValidationContext>  
-            {                      
+            {
                 Argument1 = element,  
                 Argument2 = context,  
                 Handler = new Sequence  
                 {  
                     Variables =  
                     {  
-                        result   
+                        result
                     },  
                     Activities =  
                     {  
                         new ForEach<Activity>  
-                        {                                  
+                        {
                             Values = new GetParentChain  
                             {  
-                                ValidationContext = context                                      
+                                ValidationContext = context
                             },  
                             Body = new ActivityAction<Activity>  
-                            {     
-                                Argument = parent,   
+                            {
+                                Argument = parent,
                                 Handler = new If()  
-                                {                                            
-                                    Condition = new InArgument<bool>((env) => object.Equals(parent.Get(env).GetType(),typeof(CreateCountry))),                                          
+                                {
+                                    Condition = new InArgument<bool>((env) => object.Equals(parent.Get(env).GetType(),typeof(CreateCountry))),
                                     Then = new Assign<bool>  
                                     {  
                                         Value = true,  
                                         To = result  
                                     }  
                                 }  
-                            }                                  
+                            }
                         },  
                         new AssertValidation  
                         {  
                             Assertion = new InArgument<bool>(result),  
-                            Message = new InArgument<string> ("CreateState has to be inside a CreateCountry activity"),                                                                  
+                            Message = new InArgument<string> ("CreateState has to be inside a CreateCountry activity"),
                         }  
                     }  
                 }  
@@ -151,7 +151,7 @@ ValidationSettings settings = new ValidationSettings()
   
     AdditionalConstraints =  
     {  
-        {typeof(Activity), new List<Constraint> {ActivityDisplayNameIsNotSetWarning()}},       
+        {typeof(Activity), new List<Constraint> {ActivityDisplayNameIsNotSetWarning()}},
     }  
 };  
   

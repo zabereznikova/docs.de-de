@@ -1,5 +1,5 @@
 ---
-title: Sicherheits transparenter Code, Ebene 1
+title: Sicherheitstransparenter Code, Ebene 1
 ms.date: 03/30/2017
 helpviewer_keywords:
 - transparent
@@ -9,30 +9,30 @@ helpviewer_keywords:
 - security-transparent code
 - security [.NET Framework], security-transparent code
 ms.assetid: 5fd8f46d-3961-46a7-84af-2eb1f48e75cf
-ms.openlocfilehash: 8f232a7724ad831818627cbfc2845ea808a3fcfd
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: 980c684bced685a61ad82ff5713ccff2b974028f
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77215810"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79181130"
 ---
-# <a name="security-transparent-code-level-1"></a>Sicherheits transparenter Code, Ebene 1
+# <a name="security-transparent-code-level-1"></a>Sicherheitstransparenter Code, Ebene 1
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
   
- Transparenz ermöglicht Entwicklern, sicherere .NET Framework-Bibliotheken zu schreiben, die Funktionalität für teilweise vertrauenswürdigen Code verfügbar machen. Transparenz der Ebene 1 wurde in .NET Framework, Version 2.0, eingeführt und wurde hauptsächlich bei Microsoft verwendet. Ab .NET Framework 4 können Sie [Transparenz der Ebene 2](security-transparent-code-level-2.md)verwenden. Transparenz der Ebene 1 wurde jedoch beibehalten, sodass Sie Legacy Code identifizieren können, der mit den früheren Sicherheitsregeln ausgeführt werden muss.  
+ Transparenz ermöglicht Entwicklern, sicherere .NET Framework-Bibliotheken zu schreiben, die Funktionalität für teilweise vertrauenswürdigen Code verfügbar machen. Transparenz der Ebene 1 wurde in .NET Framework, Version 2.0, eingeführt und wurde hauptsächlich bei Microsoft verwendet. Ab .NET Framework 4 können Sie [Transparenz der Ebene 2](security-transparent-code-level-2.md)verwenden. Allerdings wurde Transparenz der Ebene 1 beibehalten, damit Legacycode identifiziert werden kann, der mit den früheren Sicherheitsregeln ausgeführt werden muss.  
   
 > [!IMPORTANT]
-> Geben Sie Transparenz der Ebene 1 nur aus Kompatibilitätsgründen an, d. h., geben Sie Ebene 1 nur für Code an, der mit .NET Framework 3.5 oder niedriger entwickelt wurde und für den <xref:System.Security.AllowPartiallyTrustedCallersAttribute> verwendet bzw. für den das Transparenzmodell nicht verwendet wird. Verwenden Sie Transparenz der Ebene 1 z. B. für .NET Framework 2.0-Assemblys, die Aufrufe von teilweise vertrauenswürdigen Aufrufern (APTCA) ermöglichen. Verwenden Sie für Code, der für die .NET Framework 4 entwickelt wurde, immer Transparenz der Ebene 2.  
+> Geben Sie Transparenz der Ebene 1 nur aus Kompatibilitätsgründen an, d. h., geben Sie Ebene 1 nur für Code an, der mit .NET Framework 3.5 oder niedriger entwickelt wurde und für den <xref:System.Security.AllowPartiallyTrustedCallersAttribute> verwendet bzw. für den das Transparenzmodell nicht verwendet wird. Verwenden Sie Transparenz der Ebene 1 z. B. für .NET Framework 2.0-Assemblys, die Aufrufe von teilweise vertrauenswürdigen Aufrufern (APTCA) ermöglichen. Verwenden Sie für Code, der für .NET Framework 4 entwickelt wurde, immer die Transparenz der Ebene 2.  
   
  Dieses Thema enthält folgende Abschnitte:  
   
-- [Das Transparenz Modell der Ebene 1](#the_level_1_transparency_model)  
+- [Das Transparenzmodell der Ebene 1](#the_level_1_transparency_model)  
   
-- [Transparenz Attribute](#transparency_attributes)  
+- [Transparenzattribute](#transparency_attributes)  
   
-- [Beispiele für Sicherheits Transparenz](#security_transparency_examples)  
+- [Beispiele für Sicherheitstransparenz](#security_transparency_examples)  
   
-<a name="the_level_1_transparency_model"></a>   
+<a name="the_level_1_transparency_model"></a>
 ## <a name="the-level-1-transparency-model"></a>Das Transparenzmodell der Ebene 1  
  Wenn Sie Transparenz der Ebene 1 verwenden, nutzen Sie ein Sicherheitsmodell, das Code in sicherheitstransparente, sicherheitsgeschützte und sicherheitskritische Methoden unterteilt.  
   
@@ -55,15 +55,15 @@ ms.locfileid: "77215810"
   
  Für die Abwärtskompatibilität mit früheren Versionen von .NET Framework gelten alle Member, die nicht durch Transparenzattribute gekennzeichnet sind, als sicherheitsgeschützt. Alle Typen, die nicht mit einer Anmerkung versehen sind, werden als transparent betrachtet. Es gibt keine statischen Analyseregeln für die Überprüfung der Transparenz. Daher müssen Sie Transparenzfehler gegebenenfalls zur Laufzeit debuggen.  
   
-<a name="transparency_attributes"></a>   
+<a name="transparency_attributes"></a>
 ## <a name="transparency-attributes"></a>Transparenzattribute  
  Die folgende Tabelle beschreibt die drei Attribute, die Sie verwenden, um den Code mit Anmerkungen für die Transparenz zu versehen.  
   
-|attribute|BESCHREIBUNG|  
+|attribute|Beschreibung|  
 |---------------|-----------------|  
 |<xref:System.Security.SecurityTransparentAttribute>|Nur auf Assemblyebene zulässig. Identifiziert alle Typen und Member in der Assembly als sicherheitstransparent. Die Assembly kann keinen sicherheitskritischen Code enthalten.|  
-|<xref:System.Security.SecurityCriticalAttribute>|Bei Verwendung auf Assemblyebene ohne die <xref:System.Security.SecurityCriticalAttribute.Scope%2A>-Eigenschaft wird der gesamte Code in der Assembly standardmäßig als sicherheitstransparent identifiziert, aber es wird angegeben, dass die Assembly sicherheitskritischen Code enthalten kann.<br /><br /> Bei Verwendung auf Klassenebene wird die Klasse oder Methode als sicherheitskritisch identifiziert, jedoch nicht die Member der Klasse. Um alle Member als sicherheitskritisch festzulegen, setzen Sie die <xref:System.Security.SecurityCriticalAttribute.Scope%2A>-Eigenschaft auf <xref:System.Security.SecurityCriticalScope.Everything>.<br /><br /> Bei Verwendung auf Memberebene wird das Attribut nur auf diesen Member angewendet.<br /><br /> Die als sicherheitskritisch identifizierten Klassen oder Member können Berechtigungen heraufstufen. **Wichtig:**  In Transparenz der Ebene 1 werden sicherheitskritische Typen und Member als Sicherheits geschützt behandelt, wenn Sie von außerhalb der Assembly aufgerufen werden. Sie sollten sicherheitskritische Typen und Member mit einem Linkaufruf schützen, um eine nicht autorisierte Heraufstufung der Berechtigungen zu schützen.|  
-|<xref:System.Security.SecuritySafeCriticalAttribute>|Identifiziert sicherheitskritischen Code, auf den von sicherheitstransparentem Code in der Assembly zugegriffen werden kann. Andernfalls kann sicherheitstransparenter Code nicht auf private oder interne sicherheitskritische Member in derselben Assembly zugreifen. Wenn dies möglich wäre, würde sicherheitskritischer Code beeinflusst, und unerwartete Heraufstufungen von Berechtigungen wären möglich. Sicherheitsgeschützter Code sollte einer strengen Sicherheitsüberprüfung unterzogen werden. **Hinweis:**  Sicherheits geschützte Typen und Member müssen die Berechtigungen von Aufrufern validieren, um zu bestimmen, ob der Aufrufer über Berechtigungen für den Zugriff auf geschützte Ressourcen verfügt.|  
+|<xref:System.Security.SecurityCriticalAttribute>|Bei Verwendung auf Assemblyebene ohne die <xref:System.Security.SecurityCriticalAttribute.Scope%2A>-Eigenschaft wird der gesamte Code in der Assembly standardmäßig als sicherheitstransparent identifiziert, aber es wird angegeben, dass die Assembly sicherheitskritischen Code enthalten kann.<br /><br /> Bei Verwendung auf Klassenebene wird die Klasse oder Methode als sicherheitskritisch identifiziert, jedoch nicht die Member der Klasse. Um alle Member als sicherheitskritisch festzulegen, setzen Sie die <xref:System.Security.SecurityCriticalAttribute.Scope%2A>-Eigenschaft auf <xref:System.Security.SecurityCriticalScope.Everything>.<br /><br /> Bei Verwendung auf Memberebene wird das Attribut nur auf diesen Member angewendet.<br /><br /> Die als sicherheitskritisch identifizierten Klassen oder Member können Berechtigungen heraufstufen. **Wichtig:**  In der Transparenz der Ebene 1 werden sicherheitskritische Typen und Member als sicherheitskritisch behandelt, wenn sie von außerhalb der Assembly aufgerufen werden. Sie sollten sicherheitskritische Typen und Member mit einem Linkaufruf schützen, um eine nicht autorisierte Heraufstufung der Berechtigungen zu schützen.|  
+|<xref:System.Security.SecuritySafeCriticalAttribute>|Identifiziert sicherheitskritischen Code, auf den von sicherheitstransparentem Code in der Assembly zugegriffen werden kann. Andernfalls kann sicherheitstransparenter Code nicht auf private oder interne sicherheitskritische Member in derselben Assembly zugreifen. Wenn dies möglich wäre, würde sicherheitskritischer Code beeinflusst, und unerwartete Heraufstufungen von Berechtigungen wären möglich. Sicherheitsgeschützter Code sollte einer strengen Sicherheitsüberprüfung unterzogen werden. **Hinweis:**  Sicherheitssichere Typen und Member müssen die Berechtigungen von Aufrufern überprüfen, um festzustellen, ob der Aufrufer über die Berechtigung zum Zugriff auf geschützte Ressourcen verfügt.|  
   
  Das <xref:System.Security.SecuritySafeCriticalAttribute>-Attribut ermöglicht sicherheitstransparentem Code den Zugriff auf sicherheitskritische Member in derselben Assembly. Der sicherheitstransparente und der sicherheitskritische Code in Ihrer Assembly ist gewissermaßen in zwei Assemblys unterteilt. Der sicherheitstransparente Code kann die privaten oder internen Member des sicherheitskritischen Codes nicht sehen. Darüber hinaus wird der sicherheitskritische Code im Allgemeinen hinsichtlich des Zugriffs auf seine öffentliche Schnittstelle überwacht. Auf einen privaten oder internen Status sollte außerhalb der Assembly nicht zugegriffen werden können. Diese Status sollten isoliert bleiben. Das <xref:System.Security.SecuritySafeCriticalAttribute>-Attribut hält die Isolation des Status zwischen sicherheitstransparentem und sicherheitskritischem Code aufrecht, aber bietet die Möglichkeit, die Isolation bei Bedarf zu überschreiben. Sicherheitstransparenter Code kann nicht auf privaten oder internen sicherheitskritischen Code zugreifen, es sei denn, die entsprechenden Member wurden mit <xref:System.Security.SecuritySafeCriticalAttribute> markiert. Vor dem Anwenden des <xref:System.Security.SecuritySafeCriticalAttribute> überwachen Sie den Member, als ob er öffentlich verfügbar wäre.  
   
@@ -75,10 +75,10 @@ ms.locfileid: "77215810"
 |Kein Attribut in einer teilweise vertrauenswürdigen Assembly|Alle Typen und Member sind transparent.|  
 |Kein Attribut in einer voll vertrauenswürdigen Assembly (im globalen Assemblycache oder als voll vertrauenswürdig in der `AppDomain` identifiziert)|Alle Typen sind transparent, und alle Member sind sicherheitskritisch und sicherheitsgeschützt.|  
 |`SecurityTransparent`|Alle Typen und Member sind transparent.|  
-|`SecurityCritical(SecurityCriticalScope.Everything)`|Alle Typen und Member sind sicherheitskritisch.|  
+|`SecurityCritical(SecurityCriticalScope.Everything)`| Alle Typen und Member sind sicherheitskritisch.|  
 |`SecurityCritical`|Der gesamte Code ist standardmäßig transparent. Einzelne Typen und Member können jedoch andere Attribute haben.|  
   
-<a name="security_transparency_examples"></a>   
+<a name="security_transparency_examples"></a>
 ## <a name="security-transparency-examples"></a>Beispiele für Sicherheitstransparenz  
  Verwenden Sie die folgende Assemblyanmerkung für die Verwendung die .NET Framework 2.0-Transparenzregeln (Transparenz der Ebene 1):  
   
@@ -130,5 +130,5 @@ public class B
   
 ## <a name="see-also"></a>Weitere Informationen
 
-- [Sicherheits transparenter Code, Ebene 2](security-transparent-code-level-2.md)
+- [Sicherheitstransparenter Code, Ebene 2](security-transparent-code-level-2.md)
 - [Sicherheitsänderungen](../security/security-changes.md)

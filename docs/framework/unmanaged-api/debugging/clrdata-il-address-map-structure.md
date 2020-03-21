@@ -15,16 +15,16 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 3f6928832d822422177ebd7def142422953468a0
-ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
+ms.openlocfilehash: e680a7a0dc3209d1988f6c84be0864572a74b3a4
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71274290"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79179374"
 ---
 # <a name="clrdata_il_address_map-structure"></a>CLRDATA_IL_ADDRESS_MAP-Struktur
 
-Definiert eine Il-to-Address-Zuordnung.
+Definiert eine IL-zu-Adresszuordnung.
 
 [!INCLUDE[debugging-api-recommended-note](../../../../includes/debugging-api-recommended-note.md)]
 
@@ -40,7 +40,7 @@ typedef struct
 } CLRDATA_IL_ADDRESS_MAP;
 ```
 
-## <a name="members"></a>Member
+## <a name="members"></a>Members
 
 | Member         | Beschreibung                                            |
 | -------------- | ------------------------------------------------------ |
@@ -49,19 +49,18 @@ typedef struct
 | `endAddress`   | Die Endadresse des Bereichs.                          |
 | `type`         | Der Typ der Daten. Dieser Wert wird derzeit nicht verwendet. |
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 
-Diese Struktur befindet sich innerhalb der Laufzeit und wird nicht durch Header oder Bibliotheksdateien verfügbar gemacht. Um es zu verwenden, definieren Sie die Struktur wie oben angegeben `CLRDATA_ADDRESS` , wobei eine 64-Bit-Ganzzahl ohne Vorzeichen ist.
+Diese Struktur befindet sich innerhalb der Laufzeit und wird nicht durch Header oder Bibliotheksdateien verfügbar gemacht. Um sie zu verwenden, definieren Sie `CLRDATA_ADDRESS` die oben angegebene Struktur, wobei es sich um eine 64-Bit-Ganzzahl ohne Vorzeichen handelt.
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
-**Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
-**Header:** Keine  
-**Fern** Keine   
-**.NET Framework-Versionen:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
+**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
+**Kopfzeile:** nichts  
+**Bibliothek:** Keine **.NET Framework-Versionen:**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Clrdatasourcetype-Enumeration](clrdatasourcetype-enumeration.md)
+- [CLRDataSourceType-Enumeration](clrdatasourcetype-enumeration.md)
 - [Debuggen](index.md)
 - [Debuggen von Strukturen](debugging-structures.md)

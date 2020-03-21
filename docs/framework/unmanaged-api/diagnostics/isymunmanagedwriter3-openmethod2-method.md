@@ -15,20 +15,20 @@ helpviewer_keywords:
 ms.assetid: 025e358c-448f-4423-a2f2-57acf437c8a5
 topic_type:
 - apiref
-ms.openlocfilehash: 3a628aec0823c5db07d31d33813a020606906163
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 0c112819ef3bc4f9a7146ee80f55202ff89d689a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74438121"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79178315"
 ---
 # <a name="isymunmanagedwriter3openmethod2-method"></a>ISymUnmanagedWriter3::OpenMethod2-Methode
-Öffnet eine-Methode und stellt den tatsächlichen Abschnitts Offset im Bild bereit.  
+Öffnet eine Methode und stellt den realen Schnittversatz im Bild bereit.  
   
 ## <a name="syntax"></a>Syntax  
   
 ```cpp  
-HRESULT OpenMethod2(   
+HRESULT OpenMethod2(
     [in] mdMethodDef method,  
     [in] ULONG32 isect,  
     [in] ULONG32 offset);  
@@ -36,21 +36,21 @@ HRESULT OpenMethod2(
   
 ## <a name="parameters"></a>Parameter  
  `method`  
- in Das Metadatentoken für die Methode, die geöffnet werden soll.  
+ [in] Das Metadatentoken für die zu öffnende Methode.  
   
  `isect`  
- in Der Abschnitts Offset im Bild.  
+ [in] Der Abschnittsversatz im Bild.  
   
  `offset`  
- in Der Offset im Bild.  
+ [in] Der Offset im Bild.  
   
 ## <a name="return-value"></a>Rückgabewert  
- S_OK, wenn die Methode erfolgreich ist. andernfalls E_FAIL oder ein anderer Fehlercode.  
+ S_OK, ob die Methode erfolgreich ist. andernfalls E_FAIL oder einem anderen Fehlercode.  
   
-## <a name="requirements"></a>Voraussetzungen  
- **Header:** Corsym. idl, corsym. h  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+ **Kopfzeile:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [ISymUnmanagedWriter3-Schnittstelle](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter3-interface.md)
 - [OpenMethod-Methode](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-openmethod-method.md)

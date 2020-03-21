@@ -1,15 +1,15 @@
 ---
-title: 'Vorgehensweise: Dienstversionsverwaltung'
+title: 'Vorgehensweise: Dienstversionskontrolle'
 ms.date: 03/30/2017
 ms.assetid: 4287b6b3-b207-41cf-aebe-3b1d4363b098
-ms.openlocfilehash: 5ce9e7fc896f1ebc46dd25777fc629532339cbe2
-ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.openlocfilehash: 3cd52e1f52a93e408ebed846894cc5686652cc91
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69988709"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79184841"
 ---
-# <a name="how-to-service-versioning"></a>Vorgehensweise: Dienstversionsverwaltung
+# <a name="how-to-service-versioning"></a>Vorgehensweise: Dienstversionskontrolle
 In diesem Thema werden die grundlegenden Schritte beschrieben, die erforderlich sind, um eine Routingkonfiguration zu erstellen, die Nachrichten an verschiedene Versionen des gleichen Diensts weiterleitet. In diesem Beispiel werden Nachrichten an zwei verschiedene Versionen eines Rechnerdiensts weitergeleitet: `roundingCalc` (v1) und `regularCalc` (v2). Beide Implementierungen unterstützen die gleichen Vorgänge. Der ältere Dienst, `roundingCalc`, rundet vor der Rückgabe jedoch alle Berechnungen auf den nächsten ganzzahligen Wert. Eine Clientanwendung muss angeben können, ob der neuere `regularCalc`-Dienst verwendet werden soll.  
   
 > [!WARNING]
@@ -23,7 +23,7 @@ In diesem Thema werden die grundlegenden Schritte beschrieben, die erforderlich 
   
 - Multiplizieren  
   
-- Teilen  
+- Dividieren  
   
  Da beide Dienstimplementierungen die gleichen Vorgänge behandeln und bis auf die zurückgegebenen Daten im Wesentlichen identisch sind, sind die Basisdaten von Nachrichten, die aus Clientanwendungen gesendet werden, nicht eindeutig genug, um die Weiterleitung der Anforderung einwandfrei bestimmen zu können. Aktionsfilter können z. B. nicht verwendet werden, weil die Standardaktionen für beide Dienste gleich sind.  
   
@@ -69,7 +69,7 @@ messageHeadersElement.Add(MessageHeader.CreateHeader("CalcVer", "http://my.custo
         </client>  
     ```  
   
-2. Definieren Sie die Filter, die verwendet werden, um Nachrichten an die Zielendpunkte weiterzuleiten.  In diesem Beispiel wird der XPath-Filter verwendet, um den Wert des benutzerdefinierten Headers "calcver" zu erkennen, um zu bestimmen, an welche Version die Nachricht weitergeleitet werden soll. Ein XPath-Filter wird auch verwendet, um Nachrichten zu erkennen, die den Header "calcver" nicht enthalten. Im folgenden Beispiel werden die erforderlichen Filter und die Namespacetabelle definiert.  
+2. Definieren Sie die Filter, die verwendet werden, um Nachrichten an die Zielendpunkte weiterzuleiten.  In diesem Beispiel wird der XPath-Filter verwendet, um den Wert des benutzerdefinierten Headers "CalcVer" zu ermitteln, um zu bestimmen, an welche Version die Nachricht weitergeleitet werden soll. Ein XPath-Filter wird auch verwendet, um Nachrichten zu erkennen, die nicht den "CalcVer"-Header enthalten. Im folgenden Beispiel werden die erforderlichen Filter und die Namespacetabelle definiert.  
   
     ```xml  
     <!-- use the namespace table element to define a prefix for our custom namespace-->  
@@ -94,9 +94,9 @@ messageHeadersElement.Add(MessageHeader.CreateHeader("CalcVer", "http://my.custo
     ```  
   
     > [!NOTE]
-    > Das Namespace Präfix "S12" ist standardmäßig in der Namespace Tabelle definiert und stellt den `http://www.w3.org/2003/05/soap-envelope`Namespace dar.
+    > Das Namespacepräfix s12 ist standardmäßig in der Namespacetabelle `http://www.w3.org/2003/05/soap-envelope`definiert und stellt den Namespace dar.
   
-3. Definieren Sie die Filtertabelle, in der jedem Filter ein Clientendpunkt zugeordnet wird. Wenn die Nachricht den Header "calcver" mit dem Wert "1" enthält, wird Sie an den RegularCalc-Dienst gesendet. Enthält der Header den Wert 2, wird sie an den roundingCalc-Dienst gesendet. Falls kein Header vorhanden ist, wird die Nachricht an regularCalc weitergeleitet.  
+3. Definieren Sie die Filtertabelle, in der jedem Filter ein Clientendpunkt zugeordnet wird. Wenn die Nachricht den "CalcVer"-Header mit dem Wert 1 enthält, wird sie an den regularCalc-Dienst gesendet. Enthält der Header den Wert 2, wird sie an den roundingCalc-Dienst gesendet. Falls kein Header vorhanden ist, wird die Nachricht an regularCalc weitergeleitet.  
   
      Der folgende Code definiert die Filtertabelle und fügt die zuvor definierten Filter hinzu.  
   
@@ -117,7 +117,7 @@ messageHeadersElement.Add(MessageHeader.CreateHeader("CalcVer", "http://my.custo
     </filterTables>  
     ```  
   
-4. Um eingehende Nachrichten anhand der in der Filtertabelle enthaltenen Filter auszuwerten, müssen Sie den Dienstendpunkten die Filtertabelle mithilfe des Routingverhaltens zuordnen. Das folgende Beispiel veranschaulicht `filterTable1` die Zuordnung zu den Dienst Endpunkten:  
+4. Um eingehende Nachrichten anhand der in der Filtertabelle enthaltenen Filter auszuwerten, müssen Sie den Dienstendpunkten die Filtertabelle mithilfe des Routingverhaltens zuordnen. Das folgende Beispiel veranschaulicht `filterTable1` die Zuordnung zu den Dienstendpunkten:  
   
     ```xml  
     <behaviors>  
@@ -269,7 +269,7 @@ namespace Microsoft.Samples.AdvancedFilters
                     //if they wanted to create the header, go ahead and add it to the outgoing message  
                     if (header != null && (header=="1" || header=="2"))  
                     {  
-                        //create a new header "RoundingCalculator", no specific namespace, and set the value to   
+                        //create a new header "RoundingCalculator", no specific namespace, and set the value to
                         //the value of header.  
                         //the Routing Service will look for this header in order to determine if the message  
                         //should be routed to the RoundingCalculator  
@@ -324,6 +324,6 @@ namespace Microsoft.Samples.AdvancedFilters
 }  
 ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Routingdienste](../../../../docs/framework/wcf/samples/routing-services.md)

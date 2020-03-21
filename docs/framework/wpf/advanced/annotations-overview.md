@@ -9,50 +9,50 @@ helpviewer_keywords:
 - documents [WPF], annotations
 - sticky notes [WPF]
 ms.assetid: 716bf474-29bd-4c74-84a4-8e0744bdad62
-ms.openlocfilehash: b82c7e7300ebc295ca06d565c2fb5f6f2b28e92c
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: 433fee08d44720640d3f9d1bf2511a6a267eb58e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75636509"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79145461"
 ---
 # <a name="annotations-overview"></a>Übersicht über Anmerkungen
 Das Schreiben von Notizen oder Kommentare auf Papierdokumenten ist solch eine verbreitete Aktivität, dass wir sie als selbstverständlich erachten. Diese Notizen oder Kommentare sind „Anmerkungen“, die wir einem Dokument hinzufügen, um Informationen zu kennzeichnen oder um interessante Elemente für einen späteren Zeitpunkt zu markieren. Obwohl das Schreiben von Notizen auf gedruckte Dokumente einfach und üblich ist, ist die Möglichkeit, persönliche Kommentare auf elektronischen Dokumenten hinzuzufügen, in der Regel nur sehr eingeschränkt, falls diese Möglichkeit überhaupt verfügbar ist.  
   
- In diesem Thema werden verschiedene häufige Typen von Anmerkungen, insbesondere kurz Notizen und Highlights, behandelt. Außerdem wird veranschaulicht, wie das Microsoft Anmerkungen Framework diese Arten von Anmerkungen in Anwendungen über die Windows Presentation Foundation (WPF) vereinfacht. ) Dokument Anzeige Steuerelemente.  WPF-Dokument Anzeige Steuerelemente, die Anmerkungen unterstützen, enthalten <xref:System.Windows.Controls.FlowDocumentReader> und <xref:System.Windows.Controls.FlowDocumentScrollViewer>sowie von <xref:System.Windows.Controls.Primitives.DocumentViewerBase> abgeleitete Steuerelemente wie <xref:System.Windows.Controls.DocumentViewer> und <xref:System.Windows.Controls.FlowDocumentPageViewer>.  
+ In diesem Thema werden verschiedene häufige Arten von Anmerkungen, insbesondere Haftnotizen und Hervorhebungen, behandelt und veranschaulicht, wie Microsoft Annotations Framework diese Arten von Anmerkungen in Anwendungen über die Windows Presentation Foundation (WPF) erleichtert. ) Dokumentanzeigesteuerelemente.  WPF-Dokumentanzeigesteuerelemente, die <xref:System.Windows.Controls.FlowDocumentReader> Anmerkungen unterstützen, enthalten <xref:System.Windows.Controls.FlowDocumentScrollViewer> <xref:System.Windows.Controls.Primitives.DocumentViewerBase> und <xref:System.Windows.Controls.DocumentViewer> sowie <xref:System.Windows.Controls.FlowDocumentPageViewer>Steuerelemente, die von z. B. und abgeleitet sind.  
 
-<a name="caf1_type_stickynotes"></a>   
+<a name="caf1_type_stickynotes"></a>
 ## <a name="sticky-notes"></a>Kurznotizen  
- Eine normale Kurznotiz enthält Informationen, die auf ein kleines Stück farbiges Papier geschrieben werden, das dann auf ein Dokument „geklebt“ wird. Digitale kurz Notizen bieten ähnliche Funktionen für elektronische Dokumente, aber mit der zusätzlichen Flexibilität, viele andere Inhaltstypen wie typisierten Text, handschriftliche Notizen (z. b. Tablet PC "Hand Eingaben") oder Weblinks einzubeziehen.  
+ Eine normale Kurznotiz enthält Informationen, die auf ein kleines Stück farbiges Papier geschrieben werden, das dann auf ein Dokument „geklebt“ wird. Digitale Haftnotizen bieten ähnliche Funktionen für elektronische Dokumente, aber mit der zusätzlichen Flexibilität, viele andere Arten von Inhalten wie typisierten Text, handschriftliche Notizen (z. B. "Tintenstriche" für Tablet PC) oder Weblinks einzubeziehen.  
   
  Die folgende Abbildung zeigt einige Beispiele von Hervorhebungen, Kurznotizen und Freihandnotizanmerkungen.  
   
- ![Anmerkungen zu Hervorhebungen, Text und frei Hand Notizen.](./media/caf-stickynote.jpg "CAF_StickyNote")  
+ ![Textmarker-, Text- und Freihandnotizanmerkungen](./media/caf-stickynote.jpg "CAF_StickyNote")  
   
  Das folgende Beispiel zeigt die Methode, die Sie zum Aktivieren der Unterstützung von Kommentaren in der Anwendung verwenden können.  
   
  [!code-csharp[DocViewerAnnotationsXml#DocViewXmlStartAnnotations](~/samples/snippets/csharp/VS_Snippets_Wpf/DocViewerAnnotationsXml/CSharp/Window1.xaml.cs#docviewxmlstartannotations)]
  [!code-vb[DocViewerAnnotationsXml#DocViewXmlStartAnnotations](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DocViewerAnnotationsXml/visualbasic/window1.xaml.vb#docviewxmlstartannotations)]  
   
-<a name="caf1_type_callouts"></a>   
-## <a name="highlights"></a>Markierungen  
- Personen, die kreative Methoden verwenden, können Aufmerksamkeit auf Elemente ziehen, wenn Sie ein Papierdokument beschreiben, z.B. Wörter in einem Satz unterstreichen, markieren, einkreisen oder Markierungen oder Notationen am Rand hinzufügen.  Hervorhebungs Anmerkungen im Microsoft Anmerkungen Framework bieten ein ähnliches Feature zum Markieren von Informationen, die in WPF-Dokument Anzeige Steuerelementen angezeigt werden.  
+<a name="caf1_type_callouts"></a>
+## <a name="highlights"></a>Highlights  
+ Personen, die kreative Methoden verwenden, können Aufmerksamkeit auf Elemente ziehen, wenn Sie ein Papierdokument beschreiben, z.B. Wörter in einem Satz unterstreichen, markieren, einkreisen oder Markierungen oder Notationen am Rand hinzufügen.  Hervorhebungsanmerkungen in Microsoft Annotations Framework bieten eine ähnliche Funktion zum Markieren von Informationen, die in WPF-Dokumentanzeigesteuerelementen angezeigt werden.  
   
  In der folgenden Abbildung ist ein Beispiel einer markierten Anmerkung dargestellt:  
   
  ![Anmerkung hervorheben](./media/caf-callouts.png "CAF_Callouts")  
   
- Benutzer erstellen in der Regel Anmerkungen, indem Sie zuerst Text oder ein interessantes Element auswählen und dann mit der rechten Maustaste klicken, um ein <xref:System.Windows.Controls.ContextMenu> von Anmerkung-Optionen anzuzeigen.  Das folgende Beispiel zeigt die [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], die Sie verwenden können, um eine <xref:System.Windows.Controls.ContextMenu> mit Routing Befehlen zu deklarieren, auf die Benutzer zugreifen können, um Anmerkungen zu erstellen und zu verwalten.  
+ Benutzer erstellen in der Regel Anmerkungen, indem sie zuerst Text oder ein <xref:System.Windows.Controls.ContextMenu> Element von Interesse auswählen und dann mit der rechten Maustaste klicken, um eine der Anmerkungsoptionen anzuzeigen.  Das folgende Beispiel [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] zeigt die, <xref:System.Windows.Controls.ContextMenu> mit denen Sie eine mit gerouteten Befehlen deklarieren können, auf die Benutzer zugreifen können, um Anmerkungen zu erstellen und zu verwalten.  
   
  [!code-xaml[DocViewerAnnotationsXps#CreateDeleteAnnotations](~/samples/snippets/csharp/VS_Snippets_Wpf/DocViewerAnnotationsXps/CSharp/Window1.xaml#createdeleteannotations)]  
   
-<a name="caf1_framework_data_anchoring"></a>   
+<a name="caf1_framework_data_anchoring"></a>
 ## <a name="data-anchoring"></a>Verankerung von Daten  
- Das Anmerkungen-Framework bindet Anmerkungen an die Daten, die der Benutzer auswählt, nicht nur an eine Position in der Anzeige Ansicht. Deshalb bleibt die Anmerkung bei der Datenauswahl, an die sie gebunden ist, wenn der Benutzer das Anzeigefenster nach oben oder unten verschiebt oder die Größe ändert, wenn sich die Dokumentansicht ändert. Die folgende Abbildung zeigt z.B. eine Anmerkung, die der Benutzer für einen Textausschnitt erstellt hat. Wenn sich die Dokumentansicht ändert (durch Bildlauf, Größenänderung, Skalierung usw.), wird die hervorgehobene Anmerkung mit den ausgewählten Daten verschoben.  
+ Das Anmerkungsframework bindet Anmerkungen an die Daten, die der Benutzer auswählt, und nicht nur an eine Position in der Anzeigeansicht. Deshalb bleibt die Anmerkung bei der Datenauswahl, an die sie gebunden ist, wenn der Benutzer das Anzeigefenster nach oben oder unten verschiebt oder die Größe ändert, wenn sich die Dokumentansicht ändert. Die folgende Abbildung zeigt z.B. eine Anmerkung, die der Benutzer für einen Textausschnitt erstellt hat. Wenn sich die Dokumentansicht ändert (durch Bildlauf, Größenänderung, Skalierung usw.), wird die hervorgehobene Anmerkung mit den ausgewählten Daten verschoben.  
   
- ![Verankern von Annotation von Daten](./media/caf-dataanchoring.png "CAF_DataAnchoring")  
+ ![Anmerkungsdaten-Verankerung](./media/caf-dataanchoring.png "CAF_DataAnchoring")  
   
-<a name="matching_annotations_with_annotated_objects"></a>   
+<a name="matching_annotations_with_annotated_objects"></a>
 ## <a name="matching-annotations-with-annotated-objects"></a>Abgleichen von Anmerkung mit Objekten mit Anmerkungen  
  Sie können Anmerkungen den entsprechenden kommentierten Objekten zuordnen. Betrachten Sie beispielsweise eine einfache Dokumentleseranwendung, die über einen Kommentarbereich verfügt. Der Kommentarbereich ist möglicherweise ein Listenfeld, das den Text aus einer Liste von Anmerkungen anzeigt, die mit einem Dokument verankert sind. Wenn der Benutzer ein Element im Listenfeld auswählt, zeigt die Anwendung den Abschnitt im Dokument, mit dem das entsprechende Anmerkungsobjekt verankert ist.  
   
@@ -61,9 +61,9 @@ Das Schreiben von Notizen oder Kommentare auf Papierdokumenten ist solch eine ve
  [!code-csharp[FlowDocumentAnnotatedViewer#Handler](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowDocumentAnnotatedViewer/CSharp/Window1.xaml.cs#handler)]
  [!code-vb[FlowDocumentAnnotatedViewer#Handler](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FlowDocumentAnnotatedViewer/visualbasic/window1.xaml.vb#handler)]  
   
- Ein weiteres Beispielszenario umfasst Anwendungen, die den Austausch von Anmerkungen und kurz Notizen zwischen Dokument Lesern per e-Mail ermöglichen. Diese Funktion ermöglicht diesen Programmen, den Leser zu der Seite zu navigieren, die die Anmerkung enthält, die gerade ausgetauscht wird.  
+ Ein weiteres Beispielszenario umfasst Anwendungen, die den Austausch von Anmerkungen und Haftnotizen zwischen Dokumentlesern per E-Mail ermöglichen. Diese Funktion ermöglicht diesen Programmen, den Leser zu der Seite zu navigieren, die die Anmerkung enthält, die gerade ausgetauscht wird.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Windows.Controls.Primitives.DocumentViewerBase>
 - <xref:System.Windows.Controls.DocumentViewer>

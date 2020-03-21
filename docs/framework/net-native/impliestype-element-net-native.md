@@ -1,15 +1,15 @@
 ---
-title: <ImpliesType>-Element (.net Native)
+title: <ImpliesType>Element (.NET Native)
 ms.date: 03/30/2017
 ms.assetid: 3abd2071-0f28-40ba-b9a0-d52bd94cd2f6
-ms.openlocfilehash: 2f0ce1a1587e190627212cba07db298c12f4b30e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 57f4208233cd5e8544b4f1c254e3b0e0eaacd508
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73128389"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79181016"
 ---
-# <a name="impliestype-element-net-native"></a>\<impliestype-> Element (.net Native)
+# <a name="impliestype-element-net-native"></a>\<ImpliesType> Element (.NET Native)
 Wendet eine Richtlinie auf einen Typ an, wenn diese Richtlinie auf den enthaltenden Typ oder die enthaltende Methode angewendet wurde.  
   
 ## <a name="syntax"></a>Syntax  
@@ -19,7 +19,7 @@ Wendet eine Richtlinie auf einen Typ an, wenn diese Richtlinie auf den enthalten
              Activate="policy_type"  
              Browse="policy_type"  
              Dynamic="policy_type"  
-             Serialize="policy_type"   
+             Serialize="policy_type"
              DataContractSerializer="policy_setting"  
              DataContractJsonSerializer="policy_setting"  
              XmlSerializer="policy_setting"  
@@ -31,11 +31,11 @@ Wendet eine Richtlinie auf einen Typ an, wenn diese Richtlinie auf den enthalten
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
-### <a name="attributes"></a>Attribute  
+### <a name="attributes"></a>Attributes  
   
-|Attribut|Attributtyp|Beschreibung|  
+|attribute|Attributtyp|Beschreibung|  
 |---------------|--------------------|-----------------|  
-|`Name`|Allgemein|Erforderliches Attribut. Gibt den Typnamen an.|  
+|`Name`|Allgemein|Erforderliches Attribut. Gibt den Namen des Typs an|  
 |`Activate`|Spiegelung|Optionales Attribut. Steuert den Laufzeitzugriff auf Konstruktoren, um die Aktivierung von Instanzen zu ermöglichen.|  
 |`Browse`|Spiegelung|Optionales Attribut. Steuert das Abfragen von Informationen über Programmelemente, ermöglicht jedoch keinen Laufzeitzugriff.|  
 |`Dynamic`|Spiegelung|Optionales Attribut. Steuert den Laufzeitzugriff auf alle Typmember, einschließlich Konstruktoren, Methoden, Felder, Eigenschaften und Ereignisse, um die dynamische Programmierung zu ermöglichen.|  
@@ -49,28 +49,28 @@ Wendet eine Richtlinie auf einen Typ an, wenn diese Richtlinie auf den enthalten
   
 ## <a name="name-attribute"></a>Namensattribut  
   
-|Wert|Beschreibung|  
+|value|Beschreibung|  
 |-----------|-----------------|  
-|*type_name*|Der Typname. Wenn sich der von diesem `<ImpliesType>`-Element dargestellte Typ im selben Namespace wie das enthaltende `<Type>`-Element befindet, kann *type_name* den Namen des Typs ohne den Namespace umfassen. Andernfalls muss *type_name* den vollqualifizierten Typnamen enthalten.|  
+|*Type_name*|Der Typname. Wenn sich der von diesem `<ImpliesType>`-Element dargestellte Typ im selben Namespace wie das enthaltende `<Type>`-Element befindet, kann *type_name* den Namen des Typs ohne den Namespace umfassen. Andernfalls muss *type_name* den vollqualifizierten Typnamen enthalten.|  
   
 ## <a name="all-other-attributes"></a>Alle anderen Attribute  
   
-|Wert|Beschreibung|  
+|value|Beschreibung|  
 |-----------|-----------------|  
 |*policy_setting*|Die Einstellung, die auf diesen Richtlinientyp angewendet werden soll. Mögliche Werte sind `All`, `Auto`, `Excluded`, `Public`, `PublicAndInternal`, `Required Public`, `Required PublicAndInternal` und `Required All`. Weitere Informationen finden Sie unter [Richtlinieneinstellungen für die Laufzeitanweisung](runtime-directive-policy-settings.md).|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
- Keine  
+ Keine.  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<Type>](type-element-net-native.md)|Wendet die Reflektionsrichtlinie auf einen Typ und alle seine Member an.|  
-|[\<TypeInstantiation>](typeinstantiation-element-net-native.md)|Wendet die Reflektionsrichtlinie auf einen konstruierten generischen Typ und alle seine Member an.|  
-|[\<Method>](method-element-net-native.md)|Wendet die Reflektionsrichtlinie auf eine Methode an.|  
+|[\<Typ>](type-element-net-native.md)|Wendet die Reflektionsrichtlinie auf einen Typ und alle seine Member an.|  
+|[\<TypInstanziierung>](typeinstantiation-element-net-native.md)|Wendet die Reflektionsrichtlinie auf einen konstruierten generischen Typ und alle seine Member an.|  
+|[\<Methode>](method-element-net-native.md)|Wendet die Reflektionsrichtlinie auf eine Methode an.|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Das `<ImpliesType>`-Element dient in erster Linie der Verwendung durch Bibliotheken. Es wird in folgendem Szenario eingesetzt:  
   
 - Wenn eine Routine einen Typ reflektieren muss, muss sie unbedingt einen zweiten Typ reflektieren.  
@@ -89,7 +89,7 @@ Wendet eine Richtlinie auf einen Typ an, wenn diese Richtlinie auf den enthalten
   
  Diese Anweisung hat nur dann Auswirkungen, wenn eine Instanziierung von `Explicit` über eine definierte `Dynamic`-Richtlinieneinstellung verfügt. Wenn das z. B. für `Explicit<Int32>` der Fall ist, wird `Implicit<Int32>` mit den öffentlichen Membern instanziiert, und ihre Metadaten werden für die dynamische Programmierung verfügbar gemacht.  
   
- Folgendes ist ein praktisches Beispiel, das für mindestens ein Serialisierungsprogramm gilt. Die Anweisungen erkennen den Bedarf, dass die Reflektion von etwas, das als `IList<`*something*`>` typisiert ist, auch die Reflektion des entsprechenden `List<`*something*`>`-Typs umfasst, ohne dass anwendungsbasierte Anmerkungen erforderlich sind.  
+ Folgendes ist ein praktisches Beispiel, das für mindestens ein Serialisierungsprogramm gilt. Die Direktiven erfassen die Anforderung, `IList<`dass das Nachdenken über `List<`etwas, das als *etwas* `>` eingegeben wird, auch beinhaltet, über den entsprechenden Typ *etwas* `>` nachzudenken, ohne dass eine Anwendungsanmerkung erforderlich ist.  
   
 ```xml  
 <Type Name="System.Collections.Generic.IList{T}">  
@@ -97,7 +97,7 @@ Wendet eine Richtlinie auf einen Typ an, wenn diese Richtlinie auf den enthalten
 </Type>  
 ```  
   
- Das `<ImpliesType>`-Element kann auch innerhalb eines `<Method>`-Element angezeigt werden, da in einigen Fällen das Instanziieren einer generischen Methode die Reflektion einer Typinstanziierung impliziert. Stellen Sie sich z. b. eine generische Methode `IEnumerable<T> MakeEnumerable<T>(string spelling, T defaultValue)` vor, auf die eine bestimmte Bibliothek zusammen mit den zugehörigen <xref:System.Collections.Generic.List%601> und <xref:System.Array> Typen dynamisch zugreift. Dies kann folgendermaßen ausgedrückt werden:  
+ Das `<ImpliesType>`-Element kann auch innerhalb eines `<Method>`-Element angezeigt werden, da in einigen Fällen das Instanziieren einer generischen Methode die Reflektion einer Typinstanziierung impliziert. Stellen Sie sich zum Beispiel eine generische Methode `IEnumerable<T> MakeEnumerable<T>(string spelling, T defaultValue)` vor, auf die eine angegebene Bibliothek zusammen mit den zugehörigen <xref:System.Collections.Generic.List%601>- und <xref:System.Array>-Typen dynamisch zugreift. Dies kann folgendermaßen ausgedrückt werden:  
   
 ```xml  
 <Type Name="MyType">  
@@ -108,8 +108,8 @@ Wendet eine Richtlinie auf einen Typ an, wenn diese Richtlinie auf den enthalten
 </Type>  
 ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Runtime Directives (rd.xml) Configuration File Reference (Referenz zur Laufzeitanweisungs-Konfigurationsdatei (rd.xml))](runtime-directives-rd-xml-configuration-file-reference.md)
+- [Laufzeitanweisungs-Konfigurationsdatei (rd.xml) Referenz](runtime-directives-rd-xml-configuration-file-reference.md)
 - [Elemente der Laufzeitanweisung](runtime-directive-elements.md)
 - [Richtlinieneinstellungen für die Laufzeitanweisung](runtime-directive-policy-settings.md)

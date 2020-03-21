@@ -6,12 +6,12 @@ helpviewer_keywords:
 - UI Automation, Window control pattern
 - Window control pattern
 ms.assetid: a28cb286-296e-4a62-b4cb-55ad636ebccc
-ms.openlocfilehash: d8afaa13bd4eca9f9fcd4c8ed26c09c62ad74931
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: dd677ca9f610d463acc7c69f99767bd7b8781589
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74447034"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79180035"
 ---
 # <a name="implementing-the-ui-automation-window-control-pattern"></a>Implementieren des Window-Steuerelementmusters der Benutzeroberflächenautomatisierung
 > [!NOTE]
@@ -19,9 +19,9 @@ ms.locfileid: "74447034"
   
  Dieses Thema enthält Richtlinien und Konventionen für das Implementieren von <xref:System.Windows.Automation.Provider.IWindowProvider>, einschließlich Informationen über <xref:System.Windows.Automation.WindowPattern> -Eigenschaften, -Methoden und -Ereignisse. Links zu zusätzlichen Referenzen sind am Ende dieses Themas aufgelistet.  
   
- Das <xref:System.Windows.Automation.WindowPattern>-Steuerelement Muster wird zur Unterstützung von Steuerelementen verwendet, die grundlegende fensterbasierte Funktionen in einer herkömmlichen grafischen Benutzeroberfläche (GUI) bereitstellen. Beispiele für Steuerelemente, die dieses Steuerelement Muster implementieren müssen, sind u. a. Anwendungsfenster der obersten Ebene, untergeordnete MDI-Fenster (Multiple Document Interface), in der Größe umsetzbare Steuerelemente für geteilte Bereiche, Modale Dialoge und  
+ Das <xref:System.Windows.Automation.WindowPattern> Steuerelementmuster wird verwendet, um Steuerelemente zu unterstützen, die grundlegende fensterbasierte Funktionen innerhalb einer herkömmlichen grafischen Benutzeroberfläche (GUI) bereitstellen. Beispiele für Steuerelemente, die dieses Steuerelementmuster implementieren müssen, sind Anwendungsfenster der obersten Ebene, untergeordnete Fenster für die Schnittstelle mehrerer Dokumente (MDI), Steuerelemente für den geteilten Bereich, Modaldialoge und Sprechblasenhilfefenster.  
   
-<a name="Implementation_Guidelines_and_Conventions"></a>   
+<a name="Implementation_Guidelines_and_Conventions"></a>
 ## <a name="implementation-guidelines-and-conventions"></a>Implementierungsrichtlinien und -konventionen  
  Beachten Sie beim Implementieren des Window-Steuerelementmusters die folgenden Richtlinien und Konventionen:  
   
@@ -35,38 +35,38 @@ ms.locfileid: "74447034"
   
 - Der Vollbildmodus wird von IWindowProvider nicht unterstützt, da er featurespezifisch für eine Anwendung und kein typisches Fensterverhalten ist.  
   
-<a name="Required_Members_for_IWindowProvider"></a>   
+<a name="Required_Members_for_IWindowProvider"></a>
 ## <a name="required-members-for-iwindowprovider"></a>Erforderliche Member für IWindowProvider  
  Die folgenden Eigenschaften, Methoden und Ereignisse sind für die IWindowProvider-Schnittstelle erforderlich.  
   
-|Erforderliche Member|Memberart|Hinweise|  
+|Erforderlicher Member|Memberart|Notizen|  
 |---------------------|-----------------|-----------|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.InteractionState%2A>|Die Eigenschaften-|Keiner|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.IsModal%2A>|Die Eigenschaften-|Keiner|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.IsTopmost%2A>|Die Eigenschaften-|Keiner|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.Maximizable%2A>|Die Eigenschaften-|Keiner|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.Minimizable%2A>|Die Eigenschaften-|Keiner|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.VisualState%2A>|Die Eigenschaften-|Keiner|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.Close%2A>|Methode|Keiner|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.SetVisualState%2A>|Methode|Keiner|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.WaitForInputIdle%2A>|Methode|Keiner|  
-|<xref:System.Windows.Automation.WindowPattern.WindowClosedEvent>|Ereignis|Keiner|  
-|<xref:System.Windows.Automation.WindowPattern.WindowOpenedEvent>|Ereignis|Keiner|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.InteractionState%2A>|Eigenschaft|Keine|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.IsModal%2A>|Eigenschaft|Keine|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.IsTopmost%2A>|Eigenschaft|Keine|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.Maximizable%2A>|Eigenschaft|Keine|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.Minimizable%2A>|Eigenschaft|Keine|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.VisualState%2A>|Eigenschaft|Keine|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.Close%2A>|Methode|Keine|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.SetVisualState%2A>|Methode|Keine|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.WaitForInputIdle%2A>|Methode|Keine|  
+|<xref:System.Windows.Automation.WindowPattern.WindowClosedEvent>|Ereignis|Keine|  
+|<xref:System.Windows.Automation.WindowPattern.WindowOpenedEvent>|Ereignis|Keine|  
 |<xref:System.Windows.Automation.WindowInteractionState>|Ereignis|<xref:System.Windows.Automation.WindowInteractionState.ReadyForUserInteraction>|  
   
-<a name="Exceptions"></a>   
+<a name="Exceptions"></a>
 ## <a name="exceptions"></a>Ausnahmen  
  Anbieter müssen die folgenden Ausnahmen auslösen.  
   
 |Ausnahmetyp|Bedingung|  
 |--------------------|---------------|  
-|<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.Provider.IWindowProvider.SetVisualState%2A><br /><br /> : Wenn ein Steuerelement ein angefordertes Verhalten nicht unterstützt.|  
-|<xref:System.ArgumentOutOfRangeException>|<xref:System.Windows.Automation.Provider.IWindowProvider.WaitForInputIdle%2A><br /><br /> -Wenn der-Parameter keine gültige Zahl ist.|  
+|<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.Provider.IWindowProvider.SetVisualState%2A><br /><br /> - Wenn ein Steuerelement ein angefordertes Verhalten nicht unterstützt.|  
+|<xref:System.ArgumentOutOfRangeException>|<xref:System.Windows.Automation.Provider.IWindowProvider.WaitForInputIdle%2A><br /><br /> - Wenn der Parameter keine gültige Zahl ist.|  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Übersicht über Steuerelementmuster für Benutzeroberflächenautomatisierung](ui-automation-control-patterns-overview.md)
 - [Unterstützung von Steuerelementmustern in einem Benutzeroberflächenautomatisierungs-Anbieter](support-control-patterns-in-a-ui-automation-provider.md)
-- [UI Automation Control Patterns for Clients](ui-automation-control-patterns-for-clients.md)
-- [Übersicht über die Benutzeroberflächenautomatisierungs-Struktur](ui-automation-tree-overview.md)
+- [Steuerelementmuster für Benutzeroberflächenautomatisierung für Clients](ui-automation-control-patterns-for-clients.md)
+- [UI Automation Tree Overview](ui-automation-tree-overview.md)
 - [Verwenden der Zwischenspeicherung in der Benutzeroberflächenautomatisierung](use-caching-in-ui-automation.md)

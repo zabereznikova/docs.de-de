@@ -2,15 +2,15 @@
 title: 'Vorgehensweise: Erstellen eines Diensts, der beliebige Daten mithilfe des WCF-Web-HTTP-Programmiermodells zurückgibt'
 ms.date: 03/30/2017
 ms.assetid: 0283955a-b4ae-458d-ad9e-6fbb6f529e3d
-ms.openlocfilehash: 41d9f0e53401bcd6b57b04a38e76af5ddb9fb4cc
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: c85ab6725876a2d523a18c817ce3fd89f0d2285a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73976104"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79184485"
 ---
 # <a name="how-to-create-a-service-that-returns-arbitrary-data-using-the-wcf-web-http-programming-model"></a>Vorgehensweise: Erstellen eines Diensts, der beliebige Daten mithilfe des WCF-Web-HTTP-Programmiermodells zurückgibt
-Unter bestimmten Voraussetzungen benötigen Entwickler umfassende Steuerungsmöglichkeiten für die Rückgabe der Daten durch einen Dienstvorgang. Dies ist der Fall, wenn ein Dienst Vorgang Daten in einem Format zurückgeben muss, das nicht von WCF unterstützt wird. In diesem Thema wird die Verwendung des WCF-Web-http-Programmiermodells zum Erstellen eines solchen Diensts erläutert. Dieser Dienst besitzt einen Vorgang, durch den ein Stream zurückgegeben wird.  
+Unter bestimmten Voraussetzungen benötigen Entwickler umfassende Steuerungsmöglichkeiten für die Rückgabe der Daten durch einen Dienstvorgang. Dies ist der Fall, wenn ein Dienstvorgang Daten in einem Format zurückgeben muss, das von WCF nicht unterstützt wird. In diesem Thema wird die Verwendung des WCF WEB HTTP-Programmiermodells zum Erstellen eines solchen Dienstes erläutert. Dieser Dienst besitzt einen Vorgang, durch den ein Stream zurückgegeben wird.  
   
 ### <a name="to-implement-the-service-contract"></a>So implementieren Sie den Dienstvertrag  
   
@@ -25,7 +25,7 @@ Unter bestimmten Voraussetzungen benötigen Entwickler umfassende Steuerungsmög
         }  
     ```  
   
-     Da die Methode eine <xref:System.IO.Stream>zurückgibt, geht WCF davon aus, dass der Vorgang die gesamte Kontrolle über die Bytes hat, die vom Dienst Vorgang zurückgegeben werden, und wendet keine Formatierung auf die zurückgegebenen Daten an.  
+     Da die Methode <xref:System.IO.Stream>eine zurückgibt, geht WCF davon aus, dass der Vorgang die vollständige Kontrolle über die Bytes hat, die vom Dienstvorgang zurückgegeben werden, und wendet keine Formatierung auf die zurückgegebenen Daten an.  
   
 2. Implementieren Sie den Dienstvertrag. Der Vertrag besitzt lediglich einen Vorgang (`GetImage`). Diese Methode generiert eine Bitmap und speichert diese anschließend im JPG-Format in einem <xref:System.IO.MemoryStream>. Der Vorgang gibt diesen Stream anschließend an den Aufrufer zurück.  
   
@@ -64,7 +64,7 @@ Unter bestimmten Voraussetzungen benötigen Entwickler umfassende Steuerungsmög
     {  
         static void Main(string[] args)  
         {  
-        }   
+        }
     }  
     ```  
   
@@ -175,6 +175,6 @@ namespace RawImageService
   
 - Verweisen Sie beim Kompilieren des Beispielcodes auf "System.ServiceModel.dll" und "System.ServiceModel.Web.dll".  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [WCF-Web-HTTP-Programmiermodell](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)

@@ -2,12 +2,12 @@
 title: Benutzerdefinierte Filter
 ms.date: 03/30/2017
 ms.assetid: 97cf247d-be0a-4057-bba9-3be5c45029d5
-ms.openlocfilehash: ade387524c9ca6c8ef337ccf6a5b3453b7df976b
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: ae020173544372c3ce097c8ac57e53f3fde37514
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69945380"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79185212"
 ---
 # <a name="custom-filters"></a>Benutzerdefinierte Filter
 Mit benutzerdefinierten Filtern können Sie eine Übereinstimmungslogik definieren, was mit den vom System bereitgestellten Nachrichtenfiltern nicht möglich ist. Sie können z. B. einen benutzerdefinierten Filter erstellen, der einen Hashwert für ein bestimmtes Nachrichtenelement erstellt und dann untersucht, um zu ermitteln, ob der Filter "true" oder "false" zurückgeben soll.  
@@ -39,7 +39,7 @@ public class MyMessageFilter: MessageFilter
 ```  
   
 > [!NOTE]
-> In einer tatsächlichen Implementierung enthält die Übereinstimmungs Methode (n) eine Logik, die die Meldung untersucht, um zu bestimmen, ob dieser Nachrichtenfilter **true** oder **false**zurückgeben soll.  
+> In einer tatsächlichen Implementierung enthält die Match-Methode(n) Logik, die die Nachricht untersucht, um zu bestimmen, ob dieser Nachrichtenfilter **true** oder **false**zurückgeben soll.  
   
 ### <a name="performance"></a>Leistung  
  Wenn ein benutzerdefinierter Filter implementiert wird, ist es wichtig, die maximale Zeitspanne zu berücksichtigen, die für den Abschluss der Auswertung einer Meldung durch den Filter erforderlich ist. Da eine Meldung möglicherweise mit mehreren Filtern ausgewertet wird, bevor eine Übereinstimmung gefunden wird, ist es wichtig sicherzustellen, dass die Clientanforderung kein Timeout zurückgibt, bevor alle Filter ausgewertet werden können. Daher sollte ein benutzerdefinierter Filter nur den erforderlichen Code für die Auswertung des Inhalts oder die Attribute einer Meldung enthalten, damit bestimmt werden kann, ob es eine Entsprechung für die Filterkriterien findet.  
@@ -55,7 +55,7 @@ public class MyMessageFilter: MessageFilter
  Vor der Verwendung eines benutzerdefinierten Filters in einer Produktionsumgebung sollten Sie Leistungstests ausführen, um die durchschnittliche erforderliche Zeit zur Auswertung einer Meldung zu bestimmen. In Kombination mit der durchschnittlichen Verarbeitungszeit der anderen in der Filtertabelle verwendeten Filter können Sie so genau den maximalen Timeoutwert bestimmen, der von der Clientanwendung angegeben werden sollte.  
   
 ## <a name="usage"></a>Verwendung  
- Um den benutzerdefinierten Filter mit dem Routing Dienst zu verwenden, müssen Sie ihn der Filter Tabelle hinzufügen, indem Sie einen neuen Filter Eintrag vom Typ "Custom" (Benutzer definiert), den voll qualifizierten Typnamen des Nachrichten Filters und den Namen der Assembly angeben.  Wie bei anderen MessageFilters auch, können Sie unter "filterData" eine Zeichenfolge angeben, die an den Konstruktor des benutzerdefinierten Filters übergeben wird.  
+ Um Ihren benutzerdefinierten Filter mit dem Routingdienst verwenden zu können, müssen Sie ihn der Filtertabelle hinzufügen, indem Sie einen neuen Filtereintrag vom Typ "Benutzerdefiniert", den vollqualifizierten Typnamen des Nachrichtenfilters und den Namen der Assembly angeben.  Wie bei anderen MessageFilters auch, können Sie unter "filterData" eine Zeichenfolge angeben, die an den Konstruktor des benutzerdefinierten Filters übergeben wird.  
   
  In den folgenden Beispielen wird veranschaulicht, wie Sie einen benutzerdefinierten Filter mit dem Routingdienst verwenden:  
   
@@ -63,8 +63,8 @@ public class MyMessageFilter: MessageFilter
 <!--ROUTING SECTION -->  
 <routing>  
   <filters>  
-    <filter name="CustomFilter1" filterType="Custom"   
-            customType="CustomAssembly.MyMessageFilter,   
+    <filter name="CustomFilter1" filterType="Custom"
+            customType="CustomAssembly.MyMessageFilter,
             CustomAssembly" filterData="custom data" />  
   </filters>  
   <filterTables>  

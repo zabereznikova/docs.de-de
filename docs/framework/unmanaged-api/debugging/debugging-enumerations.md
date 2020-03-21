@@ -1,27 +1,27 @@
 ---
-title: Debuggen von Enumerationen
+title: Debugenumerationen
 ms.date: 03/30/2017
 helpviewer_keywords:
 - debugging enumerations [.NET Framework]
 - unmanaged enumerations [.NET Framework], debugging
 - enumerations [.NET Framework debugging]
 ms.assetid: 3af9f584-f1b4-4154-aeaa-8fce7c9f8b50
-ms.openlocfilehash: a83b1aa0b2cc068ed2f73dca04083b1085d45201
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: c37b6ff42b428184d301d63b6dbbd9d80a72bf3f
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76789163"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79179145"
 ---
-# <a name="debugging-enumerations"></a>Debuggen von Enumerationen
+# <a name="debugging-enumerations"></a>Debugenumerationen
 In diesem Abschnitt werden die nicht verwalteten Enumerationen beschrieben, die die Debug-API verwendet.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [CLR_DEBUGGING_PROCESS_FLAGS-Enumeration](clr-debugging-process-flags-enumeration.md)  
- Stellt Werte bereit, die von der [ICLRDebugging:: OpenVirtualProcess](iclrdebugging-openvirtualprocess-method.md) -Methode verwendet werden.  
+ Stellt Werte bereit, die von der [ICLRDebugging::OpenVirtualProcess-Methode](iclrdebugging-openvirtualprocess-method.md) verwendet werden.  
   
  [CLRDataEnumMemoryFlags-Enumeration](clrdataenummemoryflags-enumeration.md)  
- Gibt an, welche Speicherbereiche ein Aufrufe der [ICLRDataEnumMemoryRegions:: EnumMemoryRegions](iclrdataenummemoryregions-enummemoryregions-method.md) -Methode einschließen sollte.  
+ Gibt an, welche Speicherbereiche ein Aufruf der [ICLRDataEnumMemoryRegions::EnumMemoryRegions-Methode](iclrdataenummemoryregions-enummemoryregions-method.md) enthalten soll.  
   
  [COR_PUB_ENUMPROCESS-Enumeration](cor-pub-enumprocess-enumeration.md)  
  Identifiziert den aufzulistenden Prozesstyp.  
@@ -39,16 +39,16 @@ In diesem Abschnitt werden die nicht verwalteten Enumerationen beschrieben, die 
  Beschreibt, warum durch eine exportierte Funktion verwalteter Code aufgerufen wird.  
   
  CorDebugCreateProcessFlags  
- Bietet zusätzliche Debugoptionen, die in einem Aufrufen der [ICorDebug:: deateprocess](icordebug-createprocess-method.md) -Methode verwendet werden können.  
+ Stellt zusätzliche Debugoptionen bereit, die bei einem Aufruf der [ICorDebug::CreateProcess-Methode](icordebug-createprocess-method.md) verwendet werden können.  
   
  [CorDebugDebugEventKind-Aufzählung](cordebugdebugeventkind-enumeration.md)  
- Gibt den Typ des Ereignisses an, dessen Informationen von der [decodeevent](icordebugprocess6-decodeevent-method.md) -Methode decodiert werden.  
+ Gibt den Ereignistyp an, dessen Informationen von der [DecodeEvent-Methode](icordebugprocess6-decodeevent-method.md) decodiert werden.  
   
- [CorDebugDecodeEventFlagsWindows-Enumeration](cordebugdecodeeventflagswindows-enumeration.md)  
+ [CorDebugDecodeEventFlagsWindows-Aufzählung](cordebugdecodeeventflagswindows-enumeration.md)  
  Weitere Informationen zu Debug-Ereignissen auf der Windows-Plattform.  
   
  CorDebugExceptionCallbackType  
- Gibt den Typ des Rückrufs an, der von einem [ICorDebugManagedCallback2:: Exception](icordebugmanagedcallback2-exception-method.md) -Ereignis stammt.  
+ Gibt den Typ des Rückrufs an, der von einem [ICorDebugManagedCallback2::Exception-Ereignis](icordebugmanagedcallback2-exception-method.md) erstellt wird.  
   
  [CorDebugExceptionFlags-Enumeration](cordebugexceptionflags-enumeration.md)  
  Stellt zusätzliche Informationen über eine Ausnahme bereit.  
@@ -81,7 +81,7 @@ In diesem Abschnitt werden die nicht verwalteten Enumerationen beschrieben, die 
  Enthält Werte, die das Verhalten des verwalteten JIT-Compilers (Just-In-Time) beeinflussen.  
   
  [CorDebugJITCompilerFlagsDeprecated-Enumeration](cordebugjitcompilerflagsdeprecated-enumeration.md)  
- Veraltet. Verwenden Sie stattdessen den `CORDEBUG_JIT_DEFAULT` Member der [Cordebug-Compilerflags](cordebugjitcompilerflags-enumeration.md) -Enumeration.  
+ Veraltet. Verwenden `CORDEBUG_JIT_DEFAULT` Sie stattdessen den Member der [CorDebugJITCompilerFlags-Enumeration.](cordebugjitcompilerflags-enumeration.md)  
   
  CorDebugMappingResult  
  Stellt Details darüber bereit, wie der Wert des Anweisungszeigers (IP) abgerufen wurde.  
@@ -93,7 +93,7 @@ In diesem Abschnitt werden die nicht verwalteten Enumerationen beschrieben, die 
  Stellt einen Wert bereit, der bestimmt, ob ein Debugger systemeigene Abbilder (NGen) aus dem Cache für systemeigene Abbilder lädt.  
   
  [CorDebugPlatform-Enumeration](cordebugplatform-enumeration.md)  
- Stellt Ziel Platt Form Werte bereit, die von der [ICorDebugDataTarget:: GetPlatform](icordebugdatatarget-getplatform-method.md) -Methode verwendet werden.  
+ Stellt Zielplattformwerte bereit, die von der [ICorDebugDataTarget::GetPlatform-Methode](icordebugdatatarget-getplatform-method.md) verwendet werden.  
   
  [CorDebugRecordFormat-Enumeration](cordebugrecordformat-enumeration.md)  
  Beschreibt das Format der Daten in einem Byte-Array, das Informationen über ein systemeigenes Ausnahme-Debug-Ereignis enthält.  
@@ -104,7 +104,7 @@ In diesem Abschnitt werden die nicht verwalteten Enumerationen beschrieben, die 
  [CorDebugSetContextFlag-Enumeration](cordebugsetcontextflag-enumeration.md)  
  Gibt an, ob der Kontext aus dem aktiven Frame (oder Endframe) auf dem Stapel stammt oder durch das Entladen aus einem anderen Frame berechnet wurde.  
   
- [CorDebugStateChange-Enumeration](cordebugstatechange-enumeration.md)  
+ [CorDebugStateChange-Aufzählung](cordebugstatechange-enumeration.md)  
  Beschreibt die Menge der zwischengespeicherten Daten, die auf der Grundlage von Änderungen am Prozess verworfen werden müssen.  
   
  CorDebugStepReason  
@@ -132,17 +132,17 @@ In diesem Abschnitt werden die nicht verwalteten Enumerationen beschrieben, die 
  Gibt den Vorgang an, der für einen Debug-/Ablaufverfolgungsschalter ausgeführt wurde.  
   
  [VariableLocationType-Enumeration](variablelocationtype-enumeration.md)  
- Gibt den Typ des systemeigenen Standorts einer Variablen an.  
+ Gibt den systemeigenen Positionstyp einer Variablen an.  
   
  [WriteableMetadataUpdateMode-Enumeration](writeablemetadataupdatemode-enumeration.md)  
- Stellt Werte bereit, die angeben, ob speicherinterne Aktualisierungen von Metadaten für einen Debugger sichtbar sind. 
+ Stellt Werte bereit, die angeben, ob speicherinterne Aktualisierungen von Metadaten für einen Debugger sichtbar sind.
 
- [Clrdatasourcetype-Enumeration](clrdatasourcetype-enumeration.md) Stellt Werte bereit, die von der CLRDATA_IL_ADDRESS_MAP Struktur verwendet werden.
+ [ClrDataSourceType-Enumeration](clrdatasourcetype-enumeration.md) Stellt Werte bereit, die von der CLRDATA_IL_ADDRESS_MAP-Struktur verwendet werden.
 
 ## <a name="related-sections"></a>Verwandte Abschnitte  
  [Debuggen von Co-Klassen](debugging-coclasses.md)  
   
- [Debuggen von Schnittstellen](debugging-interfaces.md)  
+ [Debugschnittstellen](debugging-interfaces.md)  
   
  [Debuggen von globalen statischen Funktionen](debugging-global-static-functions.md)  
   

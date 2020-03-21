@@ -2,12 +2,12 @@
 title: 'Vorgehensweise: Verwenden von Filtern'
 ms.date: 03/30/2017
 ms.assetid: f2c7255f-c376-460e-aa20-14071f1666e5
-ms.openlocfilehash: 6c357f2f410362d56fc931529a9fe731df0a477e
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: f99c2af623dacac3ebe46422815a7f42e2a4df2c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69968768"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79184818"
 ---
 # <a name="how-to-use-filters"></a>Vorgehensweise: Verwenden von Filtern
 In diesem Thema werden die grundlegenden Schritte beschrieben, die erforderlich sind, um eine Routingkonfiguration mit mehreren Filtern zu erstellen. In diesem Beispiel werden Nachrichten an zwei Implementierungen eines Rechnerdiensts weitergeleitet: regularCalc und roundingCalc. Beide Implementierungen unterstützen die gleichen Vorgänge. Ein Dienst rundet vor der Rückgabe jedoch alle Berechnungen auf den nächsten ganzzahligen Wert. Eine Clientanwendung muss angeben können, ob die Rundungsversion des Diensts verwendet werden soll. Falls kein bevorzugter Dienst angegeben wird, wird für die Nachricht ein Lastenausgleich zwischen beiden Diensten durchgeführt. Beide Dienste machen die folgenden Vorgänge verfügbar:  
@@ -18,7 +18,7 @@ In diesem Thema werden die grundlegenden Schritte beschrieben, die erforderlich 
   
 - Multiplizieren  
   
-- Teilen  
+- Dividieren  
   
  Da beide Dienste die gleichen Vorgänge implementieren, können Sie den Aktionsfilter nicht verwenden, weil die in der Nachricht angegebene Aktion nicht eindeutig ist. Stattdessen müssen Sie weitere Schritte unternehmen, um sicherzustellen, dass die Nachrichten an die entsprechenden Endpunkte weitergeleitet werden.  
   
@@ -29,7 +29,7 @@ In diesem Thema werden die grundlegenden Schritte beschrieben, die erforderlich 
      Für dieses Beispiel gilt, dass mit dem folgenden Code ein benutzerdefinierter Header hinzugefügt wird, wenn die Clientanwendung eine Verarbeitung der Nachricht mit dem Rundungsrechner erfordert:  
   
     ```csharp  
-    messageHeadersElement.Add(MessageHeader.CreateHeader("RoundingCalculator",   
+    messageHeadersElement.Add(MessageHeader.CreateHeader("RoundingCalculator",
                                    "http://my.custom.namespace/", "rounding"));  
     ```  
   
@@ -71,7 +71,7 @@ In diesem Thema werden die grundlegenden Schritte beschrieben, die erforderlich 
     </services>  
     ```  
   
-     Mit dieser Konfiguration macht der Routingdienst drei separate Endpunkte verfügbar. Je nach den ausgewählten Optionen für die Laufzeit sendet die Clientanwendung Nachrichten an eine dieser Adressen. Nachrichten, die an einem der "virtuellen" Dienst Endpunkte ("Rundung/Rechner" oder "regulärer/Rechner") ankommen, werden an die entsprechende Rechner Implementierung weitergeleitet. Falls die Clientanwendung die Anforderung nicht an einen bestimmten Endpunkt sendet, wird die Nachricht an den allgemeinen Endpunkt adressiert. Unabhängig vom ausgewählten Endpunkt kann sich die Clientanwendung auch für die Einbeziehung des benutzerdefinierten Headers entscheiden, um anzugeben, dass die Nachricht an die Implementierung des Rundungsrechners weitergeleitet werden soll.  
+     Mit dieser Konfiguration macht der Routingdienst drei separate Endpunkte verfügbar. Je nach den ausgewählten Optionen für die Laufzeit sendet die Clientanwendung Nachrichten an eine dieser Adressen. Nachrichten, die an einem der "virtuellen" Serviceendpunkte ("Rundung/Rechner" oder "Regular/Rechner") eingehen, werden an die entsprechende Rechnerimplementierung weitergeleitet. Falls die Clientanwendung die Anforderung nicht an einen bestimmten Endpunkt sendet, wird die Nachricht an den allgemeinen Endpunkt adressiert. Unabhängig vom ausgewählten Endpunkt kann sich die Clientanwendung auch für die Einbeziehung des benutzerdefinierten Headers entscheiden, um anzugeben, dass die Nachricht an die Implementierung des Rundungsrechners weitergeleitet werden soll.  
   
 2. Im folgenden Beispiel werden die Endpunkte des Clients (Zielendpunkte) definiert, an die der Routingdienst Nachrichten weiterleitet.  
   
@@ -91,9 +91,9 @@ In diesem Thema werden die grundlegenden Schritte beschrieben, die erforderlich 
   
      Mit diesen Endpunkten wird in der Filtertabelle der Zielendpunkt angegeben, an den die Nachricht gesendet wird, wenn sich dafür eine Übereinstimmung mit einem bestimmten Filter ergibt.  
   
-### <a name="define-filters"></a>Definieren von Filtern  
+### <a name="define-filters"></a>Filter definieren  
   
-1. Um Nachrichten basierend auf dem benutzerdefinierten Header "RoundingCalculator" weiterzuleiten, den die Client Anwendung der Nachricht hinzufügt, definieren Sie einen Filter, der eine XPath-Abfrage verwendet, um zu überprüfen, ob dieser Header vorhanden ist. Da dieser Header mit einem benutzerdefinierten Namespace definiert wird, fügen Sie auch einen Namespace Eintrag hinzu, der das benutzerdefinierte Namespace Präfix "Custom" definiert, das in der XPath-Abfrage verwendet wird. Im folgenden Beispiel werden der erforderliche Routingabschnitt, die Namespacetabelle und der XPath-Filter definiert.  
+1. Um Nachrichten basierend auf dem benutzerdefinierten Header "RoundingCalculator" weiterzuleiten, den die Clientanwendung der Nachricht hinzufügt, definieren Sie einen Filter, der eine XPath-Abfrage verwendet, um das Vorhandensein dieses Headers zu überprüfen. Da dieser Header mithilfe eines benutzerdefinierten Namespace definiert wird, fügen Sie auch einen Namespaceeintrag hinzu, der ein benutzerdefiniertes Namespacepräfix von "custom" definiert, das in der XPath-Abfrage verwendet wird. Im folgenden Beispiel werden der erforderliche Routingabschnitt, die Namespacetabelle und der XPath-Filter definiert.  
   
     ```xml  
     <routing>  
@@ -104,7 +104,7 @@ In diesem Thema werden die grundlegenden Schritte beschrieben, die erforderlich 
           <filters>  
             <!--define the different message filters-->  
             <!--define an xpath message filter to look for the custom header coming from the client-->  
-            <filter name="XPathFilter" filterType="XPath"   
+            <filter name="XPathFilter" filterType="XPath"
                     filterData="/s12:Envelope/s12:Header/custom:RoundingCalculator = 'rounding'"/>  
           </filters>  
     </routing>  
@@ -113,18 +113,18 @@ In diesem Thema werden die grundlegenden Schritte beschrieben, die erforderlich 
      Dieser **MessageFilter** sucht in der Nachricht nach einem RoundingCalculator-Header, der den Wert "Rundung" enthält. Dieser Header wird vom Client festgelegt, um anzugeben, dass die Nachricht an den roundingCalc-Dienst weitergeleitet werden soll.  
   
     > [!NOTE]
-    > Das Namespace Präfix "S12" ist standardmäßig in der Namespace Tabelle definiert und stellt den `http://www.w3.org/2003/05/soap-envelope`Namespace dar.
+    > Das Namespacepräfix s12 ist standardmäßig in der Namespacetabelle `http://www.w3.org/2003/05/soap-envelope`definiert und stellt den Namespace dar.
   
-2. Sie müssen auch Filter definieren, die nach Nachrichten suchen, die an den beiden virtuellen Endpunkten empfangen werden. Der erste virtuelle Endpunkt ist der "Regular/Calculator"-Endpunkt. Der Client kann Anforderungen an diesen Endpunkt senden, um anzugeben, dass die Nachricht an den regularCalc-Dienst weitergeleitet werden soll. In der folgenden Konfiguration wird ein Filter definiert, der anhand von <xref:System.ServiceModel.Dispatcher.EndpointNameMessageFilter> bestimmt, ob die Nachricht an einem Endpunkt empfangen wurde, dessen Name unter filterData angegeben ist.  
+2. Sie müssen auch Filter definieren, die nach Nachrichten suchen, die an den beiden virtuellen Endpunkten empfangen werden. Der erste virtuelle Endpunkt ist der "regular/calculator"-Endpunkt. Der Client kann Anforderungen an diesen Endpunkt senden, um anzugeben, dass die Nachricht an den regularCalc-Dienst weitergeleitet werden soll. In der folgenden Konfiguration wird ein Filter definiert, der anhand von <xref:System.ServiceModel.Dispatcher.EndpointNameMessageFilter> bestimmt, ob die Nachricht an einem Endpunkt empfangen wurde, dessen Name unter filterData angegeben ist.  
   
     ```xml  
     <!--define an endpoint name filter looking for messages that show up on the virtual regular calculator endpoint-->  
     <filter name="EndpointNameFilter" filterType="EndpointName" filterData="calculatorEndpoint"/>  
     ```  
   
-     Wenn eine Nachricht vom Dienst Endpunkt mit dem Namen "CalculatorEndpoint" empfangen wird, wird dieser Filter `true`zu ausgewertet.  
+     Wenn eine Nachricht vom Dienstendpunkt mit dem Namen "calculatorEndpoint" empfangen wird, wird dieser Filter zu `true`ausgewertet.  
   
-3. Definieren Sie als Nächstes einen Filter, der nach Nachrichten sucht, die an die Adresse von roundingEndpoint gesendet werden. Der Client kann Anforderungen an diesen Endpunkt senden, um anzugeben, dass die Nachricht an den roundingCalc-Dienst weitergeleitet werden soll. In der folgenden Konfiguration wird ein Filter definiert, <xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter> der verwendet, um zu bestimmen, ob die Nachricht am Endpunkt "Rundungs/Rechner" angekommen ist.  
+3. Definieren Sie als Nächstes einen Filter, der nach Nachrichten sucht, die an die Adresse von roundingEndpoint gesendet werden. Der Client kann Anforderungen an diesen Endpunkt senden, um anzugeben, dass die Nachricht an den roundingCalc-Dienst weitergeleitet werden soll. Die folgende Konfiguration definiert einen <xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter> Filter, der die verwendet, um zu bestimmen, ob die Nachricht am Endpunkt "Rundung/Rechner" angekommen ist.  
   
     ```xml  
     <!--define a filter looking for messages that show up with the address prefix.  The corresponds to the rounding calc virtual endpoint-->  
@@ -132,17 +132,17 @@ In diesem Thema werden die grundlegenden Schritte beschrieben, die erforderlich 
             filterData="http://localhost/routingservice/router/rounding/"/>  
     ```  
   
-     Wenn eine Nachricht an einer Adresse empfangen wird, die mit `http://localhost/routingservice/router/rounding/` beginnt, wird dieser Filter als **true**ausgewertet. Da die von dieser Konfiguration `http://localhost/routingservice/router` verwendete Basisadresse und die für "RoundingEndpoint" angegebene Adresse "Rundung/Rechner" ist, ist `http://localhost/routingservice/router/rounding/calculator`die vollständige Adresse, die für die Kommunikation mit diesem Endpunkt verwendet wird, das mit diesem Filter übereinstimmt.  
+     Wenn eine Nachricht an eine Adresse `http://localhost/routingservice/router/rounding/` empfangen wird, die mit der Adresse beginnt, wird dieser Filter als **true**ausgewertet. Da die von dieser Konfiguration `http://localhost/routingservice/router` verwendete Basisadresse lautet und die für den RoundingEndpoint angegebene Adresse "Rundung/Rechner" ist, lautet `http://localhost/routingservice/router/rounding/calculator`die vollständige Adresse, die für die Kommunikation mit diesem Endpunkt verwendet wird, , die diesem Filter entspricht.  
   
     > [!NOTE]
     > Bei der Ermittlung einer Übereinstimmung wertet der PrefixEndpointAddress-Filter den Hostnamen nicht aus, weil auf einen einzelnen Host mit einer Vielzahl von Hostnamen verwiesen werden kann, die alle zulässige Möglichkeiten zum Verweisen auf den Host aus der Clientanwendung darstellen können. Es kann z. B. sein, dass alle unten aufgeführten Adressen auf den gleichen Host verweisen:  
-    >   
+    >
     > - localhost  
     > - 127.0.0.1  
     > - `www.contoso.com`  
     > - ContosoWeb01  
   
-4. Der abschließende Filter muss das Routing von Nachrichten unterstützen, die ohne den benutzerdefinierten Header am allgemeinen Endpunkt ankommen. Für dieses Szenario sollten die Nachrichten zwischen dem regularCalc-Dienst und dem roundingCalc-Dienste wechseln. Zur Unterstützung der "Roundrobin"-Weiterleitung dieser Nachrichten verwenden Sie einen benutzerdefinierten Filter, der zulässt, dass eine Filter Instanz jeder verarbeiteten Nachricht entspricht.  Im folgenden Code werden zwei Instanzen von RoundRobinMessageFilter definiert, die gruppiert werden und auf diese Weise angeben, dass dazwischen gewechselt werden soll.  
+4. Der abschließende Filter muss das Routing von Nachrichten unterstützen, die ohne den benutzerdefinierten Header am allgemeinen Endpunkt ankommen. Für dieses Szenario sollten die Nachrichten zwischen dem regularCalc-Dienst und dem roundingCalc-Dienste wechseln. Um das "Round Robin"-Routing dieser Nachrichten zu unterstützen, verwenden Sie einen benutzerdefinierten Filter, der es einer Filterinstanz ermöglicht, für jede verarbeitete Nachricht zu entsprechen.  Im folgenden Code werden zwei Instanzen von RoundRobinMessageFilter definiert, die gruppiert werden und auf diese Weise angeben, dass dazwischen gewechselt werden soll.  
   
     ```xml  
     <!-- Set up the custom message filters.  In this example,   
@@ -156,7 +156,7 @@ In diesem Thema werden die grundlegenden Schritte beschrieben, die erforderlich 
                     filterData="group1"/>  
     ```  
   
-     Während der Laufzeit wechselt der Filtertyp zwischen allen definierten Filterinstanzen dieses Typs, die als Gruppe in einer Auflistung konfiguriert sind. Dies bewirkt, dass `true` `RoundRobinFilter1` Nachrichten, die von diesem benutzerdefinierten Filter verarbeitet `RoundRobinFilter2`werden, zwischen und zurückgegeben werden.  
+     Während der Laufzeit wechselt der Filtertyp zwischen allen definierten Filterinstanzen dieses Typs, die als Gruppe in einer Auflistung konfiguriert sind. Dies bewirkt, dass Nachrichten, `true` die `RoundRobinFilter1` `RoundRobinFilter2`von diesem benutzerdefinierten Filter verarbeitet werden, zwischen der Rückgabe für und wechseln.  
   
 ### <a name="define-filter-tables"></a>Definieren von Filtertabellen  
   
@@ -165,7 +165,7 @@ In diesem Thema werden die grundlegenden Schritte beschrieben, die erforderlich 
     > [!NOTE]
     > Mit der Angabe einer Filterpriorität können Sie zwar die Reihenfolge steuern, in der Filter verarbeitet werden, aber dies kann sich auch negativ auf die Leistung des Routingdiensts auswirken. Erstellen Sie die Filterlogik nach Möglichkeit so, dass die Verwendung von Filterprioritäten nicht erforderlich ist.  
   
-     Im folgenden wird die Filter Tabelle definiert, und der zuvor definierte "XpathFilter" wird der Tabelle mit der Priorität "2" hinzugefügt. Dieser Eintrag gibt auch an, dass `XPathFilter` die Nachricht an die `roundingCalcEndpoint`weitergeleitet wird, wenn die der Nachricht entspricht.  
+     Im Folgenden wird die Filtertabelle definiert und der zuvor definierte "XPathFilter" zur Tabelle mit der Priorität 2 hinzugefügt. Dieser Eintrag gibt auch `XPathFilter` an, dass die Nachricht an die `roundingCalcEndpoint`weitergeleitet wird, wenn die der Nachricht entspricht.  
   
     ```xml  
     <routing>  
@@ -325,6 +325,6 @@ In diesem Thema werden die grundlegenden Schritte beschrieben, die erforderlich 
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Routingdienste](../../../../docs/framework/wcf/samples/routing-services.md)

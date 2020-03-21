@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e60f542f-6271-495b-a9e4-48553481c2a3
-ms.openlocfilehash: 0291b6684092ec15fc672c39c909caf7781194e3
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: bedeb4e9c510a3feeedc038e9c4cef6c4721e345
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70783258"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79149244"
 ---
 # <a name="performing-catalog-operations"></a>Ausführen von Katalogoperationen
-Zum Ausführen eines Befehls zum Ändern einer Datenbank oder eines Katalogs, wie z. b. der CREATE TABLE oder der CREATE PROCEDURE-Anweisung, erstellen Sie ein **Command** -Objekt mit den entsprechenden SQL-Anweisungen und einem **Verbindungs** Objekt. Führen Sie den Befehl mit der **ExecuteNonQuery** -Methode des **Command** -Objekts aus.  
+Um einen Befehl zum Ändern einer Datenbank oder eines Katalogs auszuführen, z. B. die CREATE TABLE- oder CREATE PROCEDURE-Anweisung, erstellen Sie ein **Command-Objekt** mit den entsprechenden SQL-Anweisungen und einem **Connection-Objekt.** Führen Sie den Befehl mit der **ExecuteNonQuery-Methode** des **Command-Objekts** aus.  
   
  Im folgenden Codebeispiel wird eine gespeicherte Prozedur in einer Microsoft SQL Server-Datenbank erstellt.  
   
@@ -33,11 +33,11 @@ command.ExecuteNonQuery()
   
 ```csharp  
 // Assumes connection is a valid SqlConnection.  
-string queryString = "CREATE PROCEDURE InsertCategory  " +   
+string queryString = "CREATE PROCEDURE InsertCategory  " +
     "@CategoryName nchar(15), " +  
     "@Identity int OUT " +  
-    "AS " +   
-    "INSERT INTO Categories (CategoryName) VALUES(@CategoryName) " +   
+    "AS " +
+    "INSERT INTO Categories (CategoryName) VALUES(@CategoryName) " +
     "SET @Identity = @@Identity " +  
     "RETURN @@ROWCOUNT";  
   
@@ -45,7 +45,7 @@ SqlCommand command = new SqlCommand(queryString, connection);
 command.ExecuteNonQuery();  
 ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Verwenden von Befehlen zum Ändern von Daten](using-commands-to-modify-data.md)
 - [Befehle und Parameter](commands-and-parameters.md)

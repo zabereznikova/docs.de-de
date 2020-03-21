@@ -2,12 +2,12 @@
 title: '! (NOT) (Entity SQL)'
 ms.date: 03/30/2017
 ms.assetid: a1447a34-df06-4393-93c3-0612ebd41abc
-ms.openlocfilehash: 7755219c5238f78e59332c508643fe2ae1f5096f
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 0b69d4cb64adc1f9232631d50ec42af0d1ba47e3
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72319516"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79150128"
 ---
 # <a name="-not-entity-sql"></a>! (NOT) (Entity SQL)
 Negiert einen `Boolean` -Ausdruck.  
@@ -18,13 +18,13 @@ Negiert einen `Boolean` -Ausdruck.
 NOT boolean_expression  
 -- or  
 ! boolean_expression  
-``` 
+```
   
 ## <a name="arguments"></a>Argumente  
  `boolean_expression`  
  Jeder gültige Ausdruck, der einen booleschen Wert zurückgibt.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Das Ausrufezeichen (!) hat dieselbe Bedeutung wie der NOT-Operator.  
   
 ## <a name="example"></a>Beispiel  
@@ -36,6 +36,6 @@ NOT boolean_expression
   
  [!code-sql[DP EntityServices Concepts#NOT](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#not)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Entity SQL-Referenz](entity-sql-reference.md)

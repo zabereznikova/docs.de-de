@@ -2,21 +2,21 @@
 title: Zusammenstellen verschachtelter Entity SQL-Abfragen
 ms.date: 03/30/2017
 ms.assetid: 685d4cd3-2c1f-419f-bb46-c9d97a351eeb
-ms.openlocfilehash: cd41c36853f50597a32d511d455148d649d9eb64
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: 6b2fc9a32fc30d205b9c33257bf98781cfa07499
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72395557"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79150388"
 ---
 # <a name="composing-nested-entity-sql-queries"></a>Zusammenstellen verschachtelter Entity SQL-Abfragen
-[!INCLUDE[esql](../../../../../../includes/esql-md.md)] ist eine umfangreiche funktionale Sprache. Der Baustein von [!INCLUDE[esql](../../../../../../includes/esql-md.md)] ist ein Ausdruck. Im Gegensatz zu herkömmlichem SQL ist [!INCLUDE[esql](../../../../../../includes/esql-md.md)] nicht auf ein tabellarisches Resultset beschränkt: [!INCLUDE[esql](../../../../../../includes/esql-md.md)] unterstützt das Verfassen komplexer Ausdrücke, die Literale, Parameter oder erbt Ausdrücke enthalten können. Ein Wert im Ausdruck kann parametrisiert oder aus einem anderen Ausdruck zusammengesetzt werden.  
+[!INCLUDE[esql](../../../../../../includes/esql-md.md)] ist eine umfangreiche funktionale Sprache. Der Baustein [!INCLUDE[esql](../../../../../../includes/esql-md.md)] von ist ein Ausdruck. Im Gegensatz [!INCLUDE[esql](../../../../../../includes/esql-md.md)] zu herkömmlichem SQL ist es [!INCLUDE[esql](../../../../../../includes/esql-md.md)] nicht auf ein tabellarisches Resultset beschränkt: unterstützt das Komponieren komplexer Ausdrücke, die Literale, Parameter oder geschachtelte Ausdrücke enthalten können. Ein Wert im Ausdruck kann parametrisiert sein oder aus einem anderen Ausdruck bestehen.  
   
 ## <a name="nested-expressions"></a>Geschachtelte Ausdrücke  
  Ein geschachtelter Ausdruck kann an jeder Stelle verwendet werden, an der der Wert des Rückgabetyps zulässig ist. Beispiel:  
   
 ```sql  
--- Returns a hierarchical collection of three elements at top-level.   
+-- Returns a hierarchical collection of three elements at top-level.
 -- x must be passed in the parameter collection.  
 ROW(@x, {@x}, {@x, 4, 5}, {@x, 7, 8, 9})  
   
@@ -30,8 +30,8 @@ ROW(@x, {@x}, {@x, 4, 5}, {@x, 7, 8, 9})
 ```sql  
 -- Returns a collection of rows where each row contains an Address entity.  
 -- and a collection of references to its corresponding SalesOrderHeader entities.  
-SELECT address, (SELECT DEREF(soh)   
-                    FROM NAVIGATE(address, AdventureWorksModel.FK_SalesOrderHeader_Address_BillToAddressID) AS soh)   
+SELECT address, (SELECT DEREF(soh)
+                    FROM NAVIGATE(address, AdventureWorksModel.FK_SalesOrderHeader_Address_BillToAddressID) AS soh)
                     AS salesOrderHeader FROM AdventureWorksEntities.Address AS address  
 ```  
   
@@ -46,10 +46,10 @@ UNION ALL
 FROM … );  
 ```  
   
- Im folgenden Beispiel wird veranschaulicht, wie Ausdrücke ordnungsgemäß geschachtelt werden [!INCLUDE[esql](../../../../../../includes/esql-md.md)]: Gewusst [wie: Sortieren der Union von zwei Abfragen](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896299(v=vs.100)).  
+ Im folgenden Beispiel wird veranschaulicht, [!INCLUDE[esql](../../../../../../includes/esql-md.md)]wie Ausdrücke ordnungsgemäß verschachtelt werden: [Gewusst wie: Bestellen der Union mit zwei Abfragen](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896299(v=vs.100)).  
   
 ## <a name="nested-queries-in-projection"></a>Geschachtelte Abfragen in Projektion  
- Geschachtelte Abfragen in der Projektklausel könnten auf dem Server in Abfragen des kartesischen Produkts übersetzt werden. Bei einigen Back-End-Servern, einschließlich SQL Server, kann dies dazu führen, dass die tempdb-Tabelle sehr groß wird, was sich negativ auf die Server Leistung auswirken kann.  
+ Geschachtelte Abfragen in der Projektklausel könnten auf dem Server in Abfragen des kartesischen Produkts übersetzt werden. Bei einigen Back-End-Servern, einschließlich SQL Server, kann dies dazu führen, dass die TempDB-Tabelle sehr groß wird, was sich negativ auf die Serverleistung auswirken kann.  
   
  Das folgende Beispiel zeigt eine Abfrage dieser Art:  
   
@@ -75,6 +75,6 @@ SELECT C2.FirstName, C2.LastName
         ORDER BY C1.LastName) as C2  
 ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Übersicht über Entity SQL](entity-sql-overview.md)

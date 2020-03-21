@@ -1,19 +1,19 @@
 ---
-title: 'Vorgehensweise: Konfigurieren eines Windows Communication Foundation Dienstanbieter für die Verwendung der Port Freigabe'
+title: 'Vorgehensweise: Konfigurieren eines Windows Communication Foundation-Dienstes zum Durchführen der Anschlussfreigabe'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 6400bc71-a858-4ac2-8d5a-caa72d3b5482
-ms.openlocfilehash: e92ce3468bd43456ac3f838cfc44ea7c6624502b
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: cd8d76137ac195e452a7d66fb6ddbeda405a922f
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69912223"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79185091"
 ---
-# <a name="how-to-configure-a-windows-communication-foundation-service-to-use-port-sharing"></a>Vorgehensweise: Konfigurieren eines Windows Communication Foundation Dienstanbieter für die Verwendung der Port Freigabe
-Die einfachste Möglichkeit zur Verwendung von net. TCP://-Port Freigabe in Ihrer Windows Communication Foundation (WCF)-Anwendung besteht darin, einen <xref:System.ServiceModel.NetTcpBinding>Dienst mit dem verfügbar zu machen.  
+# <a name="how-to-configure-a-windows-communication-foundation-service-to-use-port-sharing"></a>Vorgehensweise: Konfigurieren eines Windows Communication Foundation-Dienstes zum Durchführen der Anschlussfreigabe
+Die einfachste Möglichkeit, die Portfreigabe von net.tcp://in Ihrer Windows Communication Foundation <xref:System.ServiceModel.NetTcpBinding>(WCF)-Anwendung zu verwenden, besteht darin, einen Dienst mithilfe der verfügbar zu machen.  
   
  Diese Bindung verfügt über eine <xref:System.ServiceModel.NetTcpBinding.PortSharingEnabled%2A>-Eigenschaft, die festlegt, ob die net.tcp://-Anschlussfreigabe für den mit dieser Bindung zu konfigurierenden Dienst aktiviert ist.  
   
@@ -21,7 +21,7 @@ Die einfachste Möglichkeit zur Verwendung von net. TCP://-Port Freigabe in Ihre
   
 ### <a name="to-enable-nettcp-port-sharing-on-a-nettcpbinding-in-code"></a>So aktivieren Sie die net.tcp://-Anschlussfreigabe für eine NetTcpBinding im Code  
   
-1. Erstellen Sie einen Dienst, um einen Vertrag `IMyService` namens zu implementieren `MyService`, und rufen Sie ihn auf.  
+1. Erstellen Sie einen Dienst, `IMyService` um `MyService`einen Vertrag namens zu implementieren und ihn aufzurufen .  
   
      [!code-csharp[c_ConfigurePortSharing#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_configureportsharing/cs/source.cs#1)]
      [!code-vb[c_ConfigurePortSharing#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_configureportsharing/vb/source.vb#1)]  
@@ -46,7 +46,7 @@ Die einfachste Möglichkeit zur Verwendung von net. TCP://-Port Freigabe in Ihre
 ```xml  
 <system.serviceModel>  
   <bindings>  
-    <netTcpBinding name="portSharingBinding"   
+    <netTcpBinding name="portSharingBinding"
                    portSharingEnabled="true" />  
   </bindings>  
   <services>  
@@ -60,7 +60,7 @@ Die einfachste Möglichkeit zur Verwendung von net. TCP://-Port Freigabe in Ihre
 </system.serviceModel>  
 ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Net.TCP-Portfreigabe](../../../../docs/framework/wcf/feature-details/net-tcp-port-sharing.md)
-- [Vorgehensweise: Aktivieren Sie den Net. TCP-Port Freigabe Dienst.](../../../../docs/framework/wcf/feature-details/how-to-enable-the-net-tcp-port-sharing-service.md)
+- [Vorgehensweise: Aktivieren des Net.TCP-Portfreigabediensts](../../../../docs/framework/wcf/feature-details/how-to-enable-the-net-tcp-port-sharing-service.md)

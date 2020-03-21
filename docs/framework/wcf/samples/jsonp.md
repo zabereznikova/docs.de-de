@@ -2,17 +2,17 @@
 title: JSONP
 ms.date: 03/30/2017
 ms.assetid: c13b4d7b-dac7-4ffd-9f84-765c903511e1
-ms.openlocfilehash: 82fa0bb09ebdf3ca2325872c2b884f4940de17ed
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 6b5b42285539c2334bccaa04e1ba179d2cf0046c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74715724"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79183575"
 ---
 # <a name="jsonp"></a>JSONP
-In diesem Beispiel wird erläutert, wie JSON mit Padding (JSONP) in WCF REST-Diensten unterstützt wird. JSONP ist eine Konvention, die zum Aufrufen domänenübergreifender Skripts durch das Generieren von Skripttags im aktuellen Dokument verwendet wird. Das Ergebnis wird in einer festgelegten Rückruffunktion zurückgegeben. JSONP basiert auf der Idee, dass Tags wie `<script src="http://..." >` Skripts aus beliebigen Domänen auswerten können und dass das durch diese Tags abgerufene Skript innerhalb eines Bereichs ausgewertet wird, in dem andere Funktionen möglicherweise bereits definiert sind.
+In diesem Beispiel wird erläutert, wie JSON mit Padding (JSONP) in WCF REST-Diensten unterstützt wird. JSONP ist eine Konvention, die zum Aufrufen domänenübergreifender Skripts durch das Generieren von Skripttags im aktuellen Dokument verwendet wird. Das Ergebnis wird in einer festgelegten Rückruffunktion zurückgegeben. JSONP basiert auf der Idee, `<script src="http://..." >` dass Tags wie Skripts aus einer beliebigen Domäne ausgewertet werden können und das Skript, das von diesen Tags abgerufen wird, in einem Bereich ausgewertet wird, in dem andere Funktionen möglicherweise bereits definiert sind.
 
-## <a name="demonstrates"></a>Veranschaulicht
+## <a name="demonstrates"></a>Zeigt
  Domänenübergreifende Skripterstellung mit JSONP
 
 ## <a name="discussion"></a>Diskussion
@@ -24,7 +24,7 @@ proxy.set_enableJsonp(true);
 proxy.GetCustomer(onSuccess, onFail, null);
 ```
 
- Die Webseite kann den WCF REST-Dienst aufrufen, da der Dienst den <xref:System.ServiceModel.Description.WebScriptEndpoint> verwendet, wobei `crossDomainScriptAccessEnabled` auf `true` festgelegt wurde. Beide Konfigurationen werden in der Datei "Web. config" unter dem \<System. Service Model >-Element durchgeführt.
+ Die Webseite kann den WCF REST-Dienst aufrufen, da der Dienst den <xref:System.ServiceModel.Description.WebScriptEndpoint> verwendet, wobei `crossDomainScriptAccessEnabled` auf `true` festgelegt wurde. Beide Konfigurationen werden in der Datei Web.config unter dem \<System.serviceModel->-Element ausgeführt.
 
 ```xml
 <system.serviceModel>
@@ -37,7 +37,7 @@ proxy.GetCustomer(onSuccess, onFail, null);
 </system.serviceModel>
 ```
 
- ScriptManager verwaltet die Interaktion mit dem Dienst und macht damit die Komplexität, die mit einer manuellen Implementierung des JSONP-Zugriffs verbunden ist, überflüssig. Wenn `crossDomainScriptAccessEnabled` auf `true` festgelegt ist und das Antwortformat für einen Vorgang JSON ist, überprüft die WCF-Infrastruktur den URI der Anforderung nach einem Rückruf Abfrage-Zeichen folgen Parameter und umschließt die JSON-Antwort mit dem Wert des Parameters der Rückruf Abfrage Zeichenfolge. Im Beispiel ruft die Webseite den WCF REST-Dienst mit dem folgenden URI auf.
+ ScriptManager verwaltet die Interaktion mit dem Dienst und macht damit die Komplexität, die mit einer manuellen Implementierung des JSONP-Zugriffs verbunden ist, überflüssig. Wenn `crossDomainScriptAccessEnabled` auf `true` festgelegt ist und das Antwortformat für einen Vorgang JSON ist, überprüft die WCF-Infrastruktur den URI der Anforderung für einen Callback-Abfragezeichenfolgenparameter und umschließt die JSON-Antwort mit dem Wert des Callback-Abfragezeichenfolgeparameters. Im Beispiel ruft die Webseite den WCF REST-Dienst mit dem folgenden URI auf.
 
 ```http
 http://localhost:33695/CustomerService/GetCustomer?callback=Sys._json0
@@ -51,21 +51,21 @@ Sys._json0({"__type":"Customer:#Microsoft.Samples.Jsonp","Address":"1 Example Wa
 
  Diese JSONP-Antwort enthält die als JSON formatierten Kundendaten, für die mit dem von der Webseite angeforderten Rückruffunktionsnamen ein Wrapping ausgeführt wurde. ScriptManager führt diesen Rückruf mithilfe eines Skripttags aus, um die domänenübergreifende Anforderung zu ermöglichen und danach das Ergebnis an den onSuccess-Handler zu übergeben, der an die GetCustomer-Operation des ASP.NET AJAX-Proxys übergeben wurde.
 
- Das Beispiel besteht aus zwei ASP.NET-Webanwendungen: eine enthält nur einen WCF-Dienst, und eine andere enthält die ASPX-Webseite, die den Dienst aufruft. Wenn Sie die Lösung ausführen, hostet Visual Studio 2012 die beiden Websites auf verschiedenen Ports, wodurch eine Umgebung erstellt wird, in der sich der Dienst und der Client in verschiedenen Domänen befinden.
+ Das Beispiel besteht aus zwei ASP.NET Webanwendungen: eine enthält nur einen WCF-Dienst, und eine andere enthält die ASPX-Webseite, die den Dienst aufruft. Beim Ausführen der Lösung hostt Visual Studio 2012 die beiden Websites auf verschiedenen Ports, wodurch eine Umgebung erstellt wird, in der der Dienst und der Client in verschiedenen Domänen leben.
 
 > [!IMPORTANT]
 > Die Beispiele sind möglicherweise bereits auf dem Computer installiert. Suchen Sie nach dem folgenden Verzeichnis (Standardverzeichnis), bevor Sie fortfahren.  
->   
+>
 > `<InstallDrive>:\WF_WCF_Samples`  
->   
-> Wenn dieses Verzeichnis nicht vorhanden ist, wechseln Sie zu [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF)-Beispiele für .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) , um alle Windows Communication Foundation (WCF) und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele herunterzuladen. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
->   
+>
+> Wenn dieses Verzeichnis nicht vorhanden ist, wechseln Sie zu [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples for .NET Framework 4,](https://www.microsoft.com/download/details.aspx?id=21459) um alle Windows Communication Foundation (WCF) und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele herunterzuladen. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+>
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\AJAX\JSONP`  
   
-#### <a name="to-run-the-sample"></a>So führen Sie das Beispiel aus  
+#### <a name="to-run-the-sample"></a>Ausführen des Beispiels  
   
 1. Öffnen Sie die Projektmappe für das JSONP-Beispiel.  
   
-2. Drücken Sie F5, um `http://localhost:26648/JSONPClientPage.aspx` im Browser zu starten.  
+2. Drücken Sie F5, um im Browser zu starten. `http://localhost:26648/JSONPClientPage.aspx`  
   
-3. Beachten Sie, dass nach dem Laden der Seite die Texteingaben für "Name" und "Address" mit Werten aufgefüllt werden.  Diese Werte wurden von einem-Befehl an den WCF-Dienst bereitgestellt, nachdem der Browser das Rendern der Seite abgeschlossen hat.
+3. Beachten Sie, dass nach dem Laden der Seite die Texteingaben für "Name" und "Adresse" nach Werten aufgefüllt werden.  Diese Werte wurden von einem Aufruf an den WCF-Dienst bereitgestellt, nachdem der Browser das Rendern der Seite beendet hat.

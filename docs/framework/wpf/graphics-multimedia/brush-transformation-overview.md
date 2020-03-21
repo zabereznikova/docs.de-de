@@ -9,49 +9,49 @@ helpviewer_keywords:
 - properties [WPF], transformation
 - transformation properties of brushes [WPF]
 ms.assetid: 8b9bfc09-12fd-4cd5-b445-99949f27bc39
-ms.openlocfilehash: 1d3a56014e0975f3616b7f90021b4290ced5daab
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: deac1be2fd19703055b76af8173111b4453f0d6b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77453129"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79186526"
 ---
 # <a name="brush-transformation-overview"></a>Übersicht über Pinseltransformationen
-Die Brush-Klasse stellt zwei Transformations Eigenschaften bereit: <xref:System.Windows.Media.Brush.Transform%2A> und <xref:System.Windows.Media.Brush.RelativeTransform%2A>. Diese Eigenschaften ermöglichen Ihnen den Inhalt eines Pinsels zu drehen, zu skalieren, zu neigen und zu übersetzen. Dieses Thema beschreibt die  Unterschiede zwischen diesen beiden Eigenschaften sowie Beispiele für deren Verwendung.  
+Die Brush-Klasse bietet <xref:System.Windows.Media.Brush.Transform%2A> zwei <xref:System.Windows.Media.Brush.RelativeTransform%2A>Transformationseigenschaften: und . Diese Eigenschaften ermöglichen Ihnen den Inhalt eines Pinsels zu drehen, zu skalieren, zu neigen und zu übersetzen. Dieses Thema beschreibt die  Unterschiede zwischen diesen beiden Eigenschaften sowie Beispiele für deren Verwendung.  
   
-<a name="prerequisites"></a>   
-## <a name="prerequisites"></a>Erforderliche Komponenten  
- Um dieses Thema zu verstehen, sollten Sie die Features des Pinsels kennen, den Sie transformieren. <xref:System.Windows.Media.LinearGradientBrush> und <xref:System.Windows.Media.RadialGradientBrush>finden Sie unter [Übersicht über das Zeichnen mit voll Tonfarben und Farbverläufen](painting-with-solid-colors-and-gradients-overview.md). Informationen zu <xref:System.Windows.Media.ImageBrush>, <xref:System.Windows.Media.DrawingBrush>oder <xref:System.Windows.Media.VisualBrush>finden Sie unterzeichnen [mit Bildern, Zeichnungen und visuellen](painting-with-images-drawings-and-visuals.md)Elementen. Sie sollten auch mit den 2D- Transformationen, die unter  [Übersicht über Transformationen](transforms-overview.md) beschrieben werden, vertraut sein.  
+<a name="prerequisites"></a>
+## <a name="prerequisites"></a>Voraussetzungen  
+ Um dieses Thema zu verstehen, sollten Sie die Features des Pinsels kennen, den Sie transformieren. Für <xref:System.Windows.Media.LinearGradientBrush> <xref:System.Windows.Media.RadialGradientBrush>und , siehe [die Übersicht über Malerei mit Vollfarben und Farbverläufen](painting-with-solid-colors-and-gradients-overview.md). Für <xref:System.Windows.Media.ImageBrush> <xref:System.Windows.Media.DrawingBrush>, <xref:System.Windows.Media.VisualBrush>oder , siehe [Malen mit Bildern, Zeichnungen und Visuals](painting-with-images-drawings-and-visuals.md). Sie sollten auch mit den 2D- Transformationen, die unter  [Übersicht über Transformationen](transforms-overview.md) beschrieben werden, vertraut sein.  
   
-<a name="transformversusrelativetransform"></a>   
+<a name="transformversusrelativetransform"></a>
 ## <a name="differences-between-the-transform-and-relativetransform-properties"></a>Unterschiede zwischen den Eigenschaften Transform und RelativeTransform  
- Wenn Sie eine Transformation auf die <xref:System.Windows.Media.Brush.Transform%2A>-Eigenschaft eines Pinsels anwenden, müssen Sie die Größe des gezeichneten Bereichs kennen, wenn Sie den Pinsel Inhalt über seinen Mittelpunkt transformieren möchten. Angenommen, der gezeichnete Bereich ist 200 geräteunabhängige Pixel breit und 150 hoch.  Wenn Sie eine <xref:System.Windows.Media.RotateTransform> verwendet haben, um die Ausgabe des Pinsels um 45 Grad um den Mittelpunkt zu drehen, würden Sie dem <xref:System.Windows.Media.RotateTransform> einen <xref:System.Windows.Media.RotateTransform.CenterX%2A> 100 und einen <xref:System.Windows.Media.RotateTransform.CenterY%2A> 75 geben.  
+ Wenn Sie eine Transformation auf <xref:System.Windows.Media.Brush.Transform%2A> die Eigenschaft eines Pinsels anwenden, müssen Sie die Größe des gezeichneten Bereichs kennen, wenn Sie den Pinselinhalt um seine Mitte transformieren möchten. Angenommen, der gezeichnete Bereich ist 200 geräteunabhängige Pixel breit und 150 hoch.  Wenn Sie <xref:System.Windows.Media.RotateTransform> eine verwendet haben, um die Ausgabe des Pinsels um <xref:System.Windows.Media.RotateTransform> <xref:System.Windows.Media.RotateTransform.CenterX%2A> 45 Grad um <xref:System.Windows.Media.RotateTransform.CenterY%2A> seine Mitte zu drehen, geben Sie die a von 100 und eine von 75.  
   
- Wenn Sie eine Transformation auf die <xref:System.Windows.Media.Brush.RelativeTransform%2A>-Eigenschaft eines Pinsels anwenden, wird diese Transformation auf den Pinsel angewendet, bevor die Ausgabe dem gezeichneten Bereich zugeordnet wird. Die folgende Liste beschreibt die Reihenfolge, in welcher der Inhalt eines Pinsels verarbeitet und transformiert wird.  
+ Wenn Sie eine Transformation auf <xref:System.Windows.Media.Brush.RelativeTransform%2A> die Eigenschaft eines Pinsels anwenden, wird diese Transformation auf den Pinsel angewendet, bevor seine Ausgabe dem gezeichneten Bereich zugeordnet wird. Die folgende Liste beschreibt die Reihenfolge, in welcher der Inhalt eines Pinsels verarbeitet und transformiert wird.  
   
-1. Verarbeiten Sie den Inhalt des Pinsels. Bei einem <xref:System.Windows.Media.GradientBrush>bedeutet dies, dass der Farbverlaufs Bereich bestimmt wird. Bei einer <xref:System.Windows.Media.TileBrush>wird die <xref:System.Windows.Media.TileBrush.Viewbox%2A> der <xref:System.Windows.Media.TileBrush.Viewport%2A>zugeordnet. Dies ergibt die Ausgabe des Pinsels.  
+1. Verarbeiten Sie den Inhalt des Pinsels. Für <xref:System.Windows.Media.GradientBrush>eine bedeutet dies, dass die Farbverlaufsfläche bestimmt wird. Für <xref:System.Windows.Media.TileBrush>eine <xref:System.Windows.Media.TileBrush.Viewbox%2A> wird die der <xref:System.Windows.Media.TileBrush.Viewport%2A>zugeordnet. Dies ergibt die Ausgabe des Pinsels.  
   
 2. Projizieren Sie die Ausgabe des Pinsels auf das 1 x 1-Transformationsrechteck.  
   
-3. Wenden Sie den <xref:System.Windows.Media.Brush.RelativeTransform%2A>des Pinsels an, wenn dieser über einen verfügt.  
+3. Wenden Sie den <xref:System.Windows.Media.Brush.RelativeTransform%2A>Pinsel an, wenn er einen hat.  
   
 4. Projizieren Sie die transformierte Ausgabe auf den zu zeichnenden Bereich.  
   
-5. Wenden Sie den <xref:System.Windows.Media.Transform>des Pinsels an, wenn dieser über einen verfügt.  
+5. Wenden Sie den <xref:System.Windows.Media.Transform>Pinsel an, wenn er einen hat.  
   
- Da die <xref:System.Windows.Media.Brush.RelativeTransform%2A> angewendet wird, während die Ausgabe des Pinsels einem 1 x 1-Rechteck zugeordnet ist, scheinen die Werte für Transform Center und Offset relativ zu sein. Wenn Sie z. b. eine <xref:System.Windows.Media.RotateTransform> verwendet haben, um die Ausgabe des Pinsels um 45 Grad um den Mittelpunkt zu drehen, würden Sie dem <xref:System.Windows.Media.RotateTransform> einen <xref:System.Windows.Media.RotateTransform.CenterX%2A> 0,5 und einen <xref:System.Windows.Media.RotateTransform.CenterY%2A> 0,5 geben.  
+ Da <xref:System.Windows.Media.Brush.RelativeTransform%2A> die angewendet wird, während die Ausgabe des Pinsels einem Rechteck von 1 x 1 zugeordnet wird, scheinen die Transformationsmittelpunkt- und Versatzwerte relativ zu sein. Wenn Sie z. <xref:System.Windows.Media.RotateTransform> B. eine verwendet haben, um die Ausgabe des Pinsels <xref:System.Windows.Media.RotateTransform.CenterX%2A> um 45 <xref:System.Windows.Media.RotateTransform.CenterY%2A> Grad um seine Mitte zu drehen, geben Sie die <xref:System.Windows.Media.RotateTransform> a von 0,5 und eine von 0,5 an.  
   
- Die folgende Abbildung zeigt die Ausgabe mehrerer Pinsel, die mit den Eigenschaften <xref:System.Windows.Media.Brush.RelativeTransform%2A> und <xref:System.Windows.Media.Brush.Transform%2A> um 45 Grad gedreht wurden.  
+ Die folgende Abbildung zeigt die Ausgabe mehrerer Pinsel, die mit <xref:System.Windows.Media.Brush.RelativeTransform%2A> den <xref:System.Windows.Media.Brush.Transform%2A> und Eigenschaften um 45 Grad gedreht wurden.  
   
- ![RelativeTransform-und Transform-Eigenschaften](./media/graphicsmm-brushrelativetransform-transform-small.png "graphicsmm_brushrelativetransform_transform_small")  
+ ![RelativeTransform- und Transformieren-Eigenschaften](./media/graphicsmm-brushrelativetransform-transform-small.png "graphicsmm_brushrelativetransform_transform_small")  
   
-<a name="relativetransformandtilebrush"></a>   
+<a name="relativetransformandtilebrush"></a>
 ## <a name="using-relativetransform-with-a-tilebrush"></a>Verwenden von RelativeTransform mit einem TileBrush-Objekt  
- Da Kachel Pinsel komplexer als andere Pinsel sind, kann das Anwenden einer <xref:System.Windows.Media.Brush.RelativeTransform%2A> auf eine unerwartete Ergebnisse verursachen. Ziehen Sie z.B. die folgende Abbildung heran.  
+ Da Kachelpinsel komplexer sind als andere Pinsel, kann das Anwenden eines <xref:System.Windows.Media.Brush.RelativeTransform%2A> Pinsels auf einen Pinsel zu unerwarteten Ergebnissen führen. Ziehen Sie z.B. die folgende Abbildung heran.  
   
- ![Das Quell Image](./media/graphicsmm-reltransform-1-original-image.jpg "graphicsmm_reltransform_1_original_image")  
+ ![Das Quellbild](./media/graphicsmm-reltransform-1-original-image.jpg "graphicsmm_reltransform_1_original_image")  
   
- Im folgenden Beispiel wird ein-<xref:System.Windows.Media.ImageBrush> verwendet, um einen rechteckigen Bereich mit dem vorangehenden Bild zu zeichnen. Er wendet eine <xref:System.Windows.Media.RotateTransform> auf die <xref:System.Windows.Media.Brush.RelativeTransform%2A>-Eigenschaft des <xref:System.Windows.Media.ImageBrush> Objekts an und legt seine <xref:System.Windows.Media.TileBrush.Stretch%2A>-Eigenschaft auf <xref:System.Windows.Media.Stretch.UniformToFill>fest. dabei sollte das Seitenverhältnis des Bilds beibehalten werden, wenn es gestreckt wird, um das Rechteck vollständig auszufüllen.  
+ Im folgenden Beispiel <xref:System.Windows.Media.ImageBrush> wird ein verwendet, um einen rechteckigen Bereich mit dem vorhergehenden Bild zu zeichnen. Sie wendet <xref:System.Windows.Media.RotateTransform> eine <xref:System.Windows.Media.ImageBrush> auf <xref:System.Windows.Media.Brush.RelativeTransform%2A> die Eigenschaft des <xref:System.Windows.Media.TileBrush.Stretch%2A> Objekts an und legt seine Eigenschaft auf fest, <xref:System.Windows.Media.Stretch.UniformToFill>die das Seitenverhältnis des Bildes beibehalten soll, wenn es gestreckt wird, um das Rechteck vollständig auszufüllen.  
   
  [!code-xaml[BrushOverviewExamples_snip#GraphicsMMRelativeTransformExample2Inline](~/samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/RelativeTransformIllustration.xaml#graphicsmmrelativetransformexample2inline)]  
   
@@ -59,45 +59,45 @@ Die Brush-Klasse stellt zwei Transformations Eigenschaften bereit: <xref:System.
   
  ![Die transformierte Ausgabe](./media/graphicsmm-reltransform-6-output.png "graphicsmm_reltransform_6_output")  
   
- Beachten Sie, dass das Bild verzerrt ist, obwohl der <xref:System.Windows.Media.TileBrush.Stretch%2A> des Pinsels auf <xref:System.Windows.Media.Stretch.UniformToFill>festgelegt wurde. Das liegt daran, dass die relative Transformation angewendet wird, nachdem die <xref:System.Windows.Media.TileBrush.Viewbox%2A> des Pinsels der <xref:System.Windows.Media.TileBrush.Viewport%2A>zugeordnet ist. In der folgenden Liste werden die einzelnen Schritte des Prozesses beschrieben:  
+ Beachten Sie, dass das Bild verzerrt <xref:System.Windows.Media.TileBrush.Stretch%2A> ist, <xref:System.Windows.Media.Stretch.UniformToFill>obwohl der Pinsel auf festgelegt wurde. Das liegt daran, dass die relative Transformation <xref:System.Windows.Media.TileBrush.Viewbox%2A> angewendet wird, <xref:System.Windows.Media.TileBrush.Viewport%2A>nachdem der Pinsel seiner zugeordnet wurde. In der folgenden Liste werden die einzelnen Schritte des Prozesses beschrieben:  
   
-1. Projizieren Sie den Inhalt des Pinsels (<xref:System.Windows.Media.TileBrush.Viewbox%2A>) mithilfe der <xref:System.Windows.Media.TileBrush.Stretch%2A> Einstellung des Pinsels auf seine Basis Kachel (<xref:System.Windows.Media.TileBrush.Viewport%2A>).  
+1. Projizieren Sie den<xref:System.Windows.Media.TileBrush.Viewbox%2A>Inhalt des Pinsels<xref:System.Windows.Media.TileBrush.Viewport%2A>( ) mithilfe <xref:System.Windows.Media.TileBrush.Stretch%2A> der Einstellung des Pinsels auf die Basiskachel ( ).  
   
-     ![Die Viewbox auf den Viewport anpassen](./media/graphicsmm-reltransform-2-viewbox-to-viewport.png "graphicsmm_reltransform_2_viewbox_to_viewport")  
+     ![Dehnen Sie die Viewbox, um den Viewport einzupassen](./media/graphicsmm-reltransform-2-viewbox-to-viewport.png "graphicsmm_reltransform_2_viewbox_to_viewport")  
   
 2. Projizieren Sie die Basiskachel auf das 1 x 1-Transformationsrechteck.  
   
-     ![Zuordnen des Viewports zum Transformations Rechteck](./media/graphicsmm-reltransform-3-output-to-transform.png "graphicsmm_reltransform_3_output_to_transform")  
+     ![Ordnen Sie den Viewport dem Transformationsrechteck zu](./media/graphicsmm-reltransform-3-output-to-transform.png "graphicsmm_reltransform_3_output_to_transform")  
   
-3. Wenden Sie die <xref:System.Windows.Media.RotateTransform>an.  
+3. Wenden <xref:System.Windows.Media.RotateTransform>Sie die an.  
   
-     ![Relative Transformation anwenden](./media/graphicsmm-reltransform-4-transform-rotate.png "graphicsmm_reltransform_4_transform_rotate")  
+     ![Wenden Sie die relative Transformation an](./media/graphicsmm-reltransform-4-transform-rotate.png "graphicsmm_reltransform_4_transform_rotate")  
   
 4. Projizieren Sie die transformierte Basiskachel auf den zu zeichnenden Bereich.  
   
-     ![Projizieren Sie den transformierten Pinsel auf den Ausgabebereich.](./media/graphicsmm-reltransform-5-transform-to-output.png "graphicsmm_reltransform_5_transform_to_output")  
+     ![Projizieren Sie den transformierten Pinsel auf den Ausgabebereich](./media/graphicsmm-reltransform-5-transform-to-output.png "graphicsmm_reltransform_5_transform_to_output")  
   
-<a name="rotateexample"></a>   
+<a name="rotateexample"></a>
 ## <a name="example-rotate-an-imagebrush-45-degrees"></a>Beispiel: Drehen eines ImageBrush um 45 Grad  
- Im folgenden Beispiel wird eine <xref:System.Windows.Media.RotateTransform> auf die <xref:System.Windows.Media.Brush.RelativeTransform%2A>-Eigenschaft eines <xref:System.Windows.Media.ImageBrush>angewendet. Die Eigenschaften <xref:System.Windows.Media.RotateTransform.CenterX%2A> und <xref:System.Windows.Media.RotateTransform.CenterY%2A> des <xref:System.Windows.Media.RotateTransform> Objekts sind auf 0,5 und die relativen Koordinaten des Mittelpunkts des Inhalts festgelegt. Als Folge, wird der Inhalt des Pinsels wird um seinen Mittelpunkt gedreht.  
+ Im folgenden Beispiel <xref:System.Windows.Media.RotateTransform> wird <xref:System.Windows.Media.Brush.RelativeTransform%2A> eine <xref:System.Windows.Media.ImageBrush>auf die Eigenschaft einer angewendet. Die <xref:System.Windows.Media.RotateTransform> Eigenschaften <xref:System.Windows.Media.RotateTransform.CenterX%2A> des <xref:System.Windows.Media.RotateTransform.CenterY%2A> Objekts und der Eigenschaften sind beide auf 0,5, die relativen Koordinaten des Mittelpunkts des Inhalts, festgelegt. Als Folge, wird der Inhalt des Pinsels wird um seinen Mittelpunkt gedreht.  
   
  [!code-csharp[BrushesIntroduction_snip#ImageBrushRelativeTransformExample](~/samples/snippets/csharp/VS_Snippets_Wpf/BrushesIntroduction_snip/CSharp/BrushTransformExample.cs#imagebrushrelativetransformexample)]
  [!code-vb[BrushesIntroduction_snip#ImageBrushRelativeTransformExample](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BrushesIntroduction_snip/visualbasic/brushtransformexample.vb#imagebrushrelativetransformexample)]
  [!code-xaml[BrushesIntroduction_snip#ImageBrushRelativeTransformExample](~/samples/snippets/xaml/VS_Snippets_Wpf/BrushesIntroduction_snip/XAML/BrushTransformExample.xaml#imagebrushrelativetransformexample)]  
   
- Im nächsten Beispiel wird außerdem eine <xref:System.Windows.Media.RotateTransform> auf eine <xref:System.Windows.Media.ImageBrush>angewendet, aber die <xref:System.Windows.Media.Brush.Transform%2A>-Eigenschaft anstelle der <xref:System.Windows.Media.Brush.RelativeTransform%2A>-Eigenschaft verwendet. Um den Pinsel um seinen Mittelpunkt zu drehen, müssen die <xref:System.Windows.Media.RotateTransform.CenterX%2A> und <xref:System.Windows.Media.RotateTransform.CenterY%2A> des <xref:System.Windows.Media.RotateTransform> Objekts auf absolute Koordinaten festgelegt werden. Da das vom Pinsel gezeichnete Rechteck 175 mal 90 Pixel beträgt, liegt sein Mittelpunkt bei (87,5, 45).  
+ The next example also applies a <xref:System.Windows.Media.RotateTransform> to an <xref:System.Windows.Media.ImageBrush>, but uses the <xref:System.Windows.Media.Brush.Transform%2A> property instead of the <xref:System.Windows.Media.Brush.RelativeTransform%2A> property. Um den Pinsel um seine <xref:System.Windows.Media.RotateTransform> Mitte <xref:System.Windows.Media.RotateTransform.CenterX%2A> zu <xref:System.Windows.Media.RotateTransform.CenterY%2A> drehen, wird das Objekt auf absolute Koordinaten gesetzt. Da das vom Pinsel gezeichnete Rechteck 175 mal 90 Pixel beträgt, liegt sein Mittelpunkt bei (87,5, 45).  
   
  [!code-csharp[BrushesIntroduction_snip#ImageBrushTransformExample](~/samples/snippets/csharp/VS_Snippets_Wpf/BrushesIntroduction_snip/CSharp/BrushTransformExample.cs#imagebrushtransformexample)]
  [!code-vb[BrushesIntroduction_snip#ImageBrushTransformExample](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BrushesIntroduction_snip/visualbasic/brushtransformexample.vb#imagebrushtransformexample)]
  [!code-xaml[BrushesIntroduction_snip#ImageBrushTransformExample](~/samples/snippets/xaml/VS_Snippets_Wpf/BrushesIntroduction_snip/XAML/BrushTransformExample.xaml#imagebrushtransformexample)]  
   
- In der folgenden Abbildung ist der Pinsel ohne Transformation dargestellt, wobei die Transformation auf die <xref:System.Windows.Media.Brush.RelativeTransform%2A>-Eigenschaft angewendet wird und die Transformation auf die <xref:System.Windows.Media.Brush.Transform%2A>-Eigenschaft angewendet wird.  
+ Die folgende Abbildung zeigt den Pinsel ohne Transformation, <xref:System.Windows.Media.Brush.RelativeTransform%2A> wobei die Transformation auf <xref:System.Windows.Media.Brush.Transform%2A> die Eigenschaft angewendet wird und die Transformation auf die Eigenschaft angewendet wird.  
   
- ![RelativeTransform-und Transform-Einstellungen für den Pinsel](./media/wcpsdk-graphicsmm-transformandrelativetransform.png "wcpsdk_graphicsmm_transformandrelativetransform")  
+ ![RelativeTransform- und Transform-Pinseleinstellungen](./media/wcpsdk-graphicsmm-transformandrelativetransform.png "wcpsdk_graphicsmm_transformandrelativetransform")  
   
  Dieses Beispiel ist Teil eines umfangreicheren Beispiels. Das vollständige Beispiel finden Sie unter der [Beispiel für Pinsel](https://github.com/Microsoft/WPF-Samples/tree/master/Graphics/Brushes). Weitere Informationen zu Pinseln, finden Sie unter der [Übersicht über WPF-Pinsel](wpf-brushes-overview.md).  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Windows.Media.Brush.Transform%2A>
 - <xref:System.Windows.Media.Brush.RelativeTransform%2A>

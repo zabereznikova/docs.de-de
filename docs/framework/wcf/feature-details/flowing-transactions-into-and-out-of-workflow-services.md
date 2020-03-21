@@ -2,18 +2,18 @@
 title: Transaktionsfluss in Workflowdienste und aus Workflowdiensten
 ms.date: 03/30/2017
 ms.assetid: 03ced70e-b540-4dd9-86c8-87f7bd61f609
-ms.openlocfilehash: ea14bc651258684fd31940aa6b88f9731348dcd1
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: fe03047dd931d25ec94bbc5e00c479d1b42397bc
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73978283"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79185281"
 ---
 # <a name="flowing-transactions-into-and-out-of-workflow-services"></a>Transaktionsfluss in Workflowdienste und aus Workflowdiensten
 Workflowdienste und Clients können an Transaktionen teilnehmen.  Damit ein Dienstvorgang Teil einer Ambient-Transaktion wird, fügen Sie eine <xref:System.ServiceModel.Activities.Receive>-Aktivität in eine <xref:System.ServiceModel.Activities.TransactedReceiveScope>-Aktivität ein. Alle Aufrufe, die von einer <xref:System.ServiceModel.Activities.Send>-Aktivität oder einer <xref:System.ServiceModel.Activities.SendReply>-Aktivität in <xref:System.ServiceModel.Activities.TransactedReceiveScope> durchgeführt werden, werden auch in der Ambient-Transaktion durchgeführt. Eine Workflowclientanwendung kann mit der <xref:System.Activities.Statements.TransactionScope>-Aktivität eine Ambient-Transaktion erstellen und Dienstvorgänge mithilfe der Ambient-Transaktion aufrufen. In diesem Thema wird die Erstellung eines Workflowdiensts und Workflowclients, die an Transaktionen teilnehmen, erläutert.  
   
 > [!WARNING]
-> Wenn eine Workflow Dienst Instanz innerhalb einer Transaktion geladen wird und der Workflow eine <xref:System.Activities.Statements.Persist> Aktivität enthält, wird die Workflow Instanz bis zum Timeout der Transaktion blockiert.  
+> Wenn eine Workflowdienstinstanz innerhalb einer Transaktion geladen <xref:System.Activities.Statements.Persist> wird und der Workflow eine Aktivität enthält, wird die Workflowinstanz blockiert, bis die Transaktion ein Zeitvertreib vorliegt.  
   
 > [!IMPORTANT]
 > Es wird empfohlen, bei Verwendung von <xref:System.ServiceModel.Activities.TransactedReceiveScope> alle empfangenen Nachrichten im Workflow in <xref:System.ServiceModel.Activities.TransactedReceiveScope>-Aktivitäten zu platzieren.  
@@ -72,11 +72,11 @@ Workflowdienste und Clients können an Transaktionen teilnehmen.  Damit ein Dien
     }  
     ```  
   
-     Diese native Aktivität, in der Informationen zur Ambient-Transaktion angezeigt werden, wird in den in diesem Thema verwendeten Dienst- und Clientworkflows eingesetzt. Erstellen Sie die Projekt Mappe, um diese Aktivität im **allgemeinen** Abschnitt der **Toolbox**verfügbar zu machen.  
+     Diese native Aktivität, in der Informationen zur Ambient-Transaktion angezeigt werden, wird in den in diesem Thema verwendeten Dienst- und Clientworkflows eingesetzt. Erstellen Sie die Lösung, um diese Aktivität im Abschnitt **"Allgemein"** der **Toolbox**verfügbar zu machen.  
   
 ### <a name="implement-the-workflow-service"></a>Implementieren des Workflowdiensts  
   
-1. Fügen Sie dem `Common` Projekt einen neuen WCF-Workflow Dienst namens "`WorkflowService`" hinzu. Klicken Sie dazu mit der rechten Maustaste auf das Projekt `Common`, wählen Sie **Hinzufügen**, **Neues Element**aus, wählen Sie unter **installierte Vorlagen** die Option **Workflow** , und wählen Sie **WCF-Workflow Dienst**aus.  
+1. Fügen Sie einen neuen WCF-Workflowdienst hinzu, der zum `WorkflowService` `Common` Projekt aufgerufen wird. Klicken Sie hiermit `Common` mit der rechten Maustaste auf das Projekt, wählen Sie **Hinzufügen**, **Neues Element ...**, Wählen Sie **Workflow** unter **Installierte Vorlagen** aus, und wählen Sie **WCF Workflow Service**aus.  
   
      ![Hinzufügen eines Workflowdiensts](./media/flowing-transactions-into-and-out-of-workflow-services/add-workflow-service.jpg)  
   
@@ -84,56 +84,56 @@ Workflowdienste und Clients können an Transaktionen teilnehmen.  Damit ein Dien
   
 3. Ziehen Sie eine <xref:System.Activities.Statements.WriteLine>-Aktivität in die `Sequential Service`-Aktivität. Legen Sie die Texteigenschaft auf `"Workflow Service starting ..."` fest, wie im folgenden Beispiel gezeigt.  
   
-     ! [Hinzufügen einer "Write teline"-Aktivität zur Aktivität "sequenzieller Dienst" (./Media/Flowing-Transactions-into-and-out-of-Workflow-Services/Add-WriteLine-Sequential-Service.jpg)  
+     ! [Hinzufügen einer WriteLine-Aktivität zur Sequential Service-Aktivität(./media/flowing-transactions-into-and-out-of-workflow-services/add-writeline-sequential-service.jpg)  
   
-4. Verschieben Sie eine <xref:System.ServiceModel.Activities.TransactedReceiveScope>-Aktivität per Drag &amp; Drop an die Stelle nach der <xref:System.Activities.Statements.WriteLine>-Aktivität. Die <xref:System.ServiceModel.Activities.TransactedReceiveScope> Aktivität befindet sich im Abschnitt **Messaging** der **Toolbox**. Die <xref:System.ServiceModel.Activities.TransactedReceiveScope> Aktivität besteht aus zwei Abschnitten: **Anforderung** und **Text**. Der **Anforderungs** Abschnitt enthält die <xref:System.ServiceModel.Activities.Receive> Aktivität. Der **Text** Abschnitt enthält die Aktivitäten, die innerhalb einer Transaktion ausgeführt werden sollen, nachdem eine Nachricht empfangen wurde.  
+4. Verschieben Sie eine <xref:System.ServiceModel.Activities.TransactedReceiveScope>-Aktivität per Drag &amp; Drop an die Stelle nach der <xref:System.Activities.Statements.WriteLine>-Aktivität. Die <xref:System.ServiceModel.Activities.TransactedReceiveScope> Aktivität finden Sie im **Abschnitt Messaging** der **Toolbox**. Die <xref:System.ServiceModel.Activities.TransactedReceiveScope> Aktivität besteht aus zwei Abschnitten **Request** und **Body**. Der **Request** Abschnitt Anforderung <xref:System.ServiceModel.Activities.Receive> enthält die Aktivität. Der Abschnitt **Text** enthält die Aktivitäten, die innerhalb einer Transaktion ausgeführt werden sollen, nachdem eine Nachricht empfangen wurde.  
   
      ![Hinzufügen einer TransactedReceiveScope-Aktivität](./media/flowing-transactions-into-and-out-of-workflow-services/transactedreceivescope-activity.jpg)  
   
-5. Wählen Sie <xref:System.ServiceModel.Activities.TransactedReceiveScope> Aktivität aus, und klicken Sie auf die Schaltfläche **Variablen** . Fügen Sie die folgenden Variablen hinzu:  
+5. Wählen <xref:System.ServiceModel.Activities.TransactedReceiveScope> Sie die Aktivität aus, und klicken Sie auf die Schaltfläche **Variablen.** Fügen Sie die folgenden Variablen hinzu:  
   
-     ![Hinzufügen von Variablen zu transactedreceivescope](./media/flowing-transactions-into-and-out-of-workflow-services/add-transactedreceivescope-variables.jpg)  
+     ![Hinzufügen von Variablen zum TransactedReceiveScope](./media/flowing-transactions-into-and-out-of-workflow-services/add-transactedreceivescope-variables.jpg)  
   
     > [!NOTE]
     > Sie können die standardmäßig vorhandene Datenvariable löschen. Sie können auch die vorhandene Handlevariable verwenden.  
   
-6. Ziehen Sie eine <xref:System.ServiceModel.Activities.Receive>-Aktivität per Drag & Drop im **Anforderungs** Abschnitt der Aktivität <xref:System.ServiceModel.Activities.TransactedReceiveScope>. Legen Sie die folgenden Eigenschaften fest:  
+6. Ziehen Sie <xref:System.ServiceModel.Activities.Receive> eine Aktivität im Abschnitt <xref:System.ServiceModel.Activities.TransactedReceiveScope> **Anforderung** der Aktivität, und legen Sie sie ab. Legen Sie die folgenden Eigenschaften fest:  
   
-    |property|Wert|  
+    |Eigenschaft|value|  
     |--------------|-----------|  
     |CanCreateInstance|Wahr (aktivieren Sie das Kontrollkästchen)|  
-    |OperationName|StartSample|  
+    |Vorgangsname|StartSample|  
     |ServiceContractName|ITransactionSample|  
   
      Der Workflow müsste wie folgt aussehen:  
   
      ![Hinzufügen einer Receive-Aktivität](./media/flowing-transactions-into-and-out-of-workflow-services/add-receive-activity.jpg)  
   
-7. Klicken Sie in der <xref:System.ServiceModel.Activities.Receive> Aktivität auf den Link **definieren...** , und legen Sie die folgenden Einstellungen fest:  
+7. Klicken Sie in der <xref:System.ServiceModel.Activities.Receive> Aktivität auf den Link **Definieren...** und nehmen Sie die folgenden Einstellungen vor:  
   
-     ![Festlegen von Meldungs Einstellungen für die Receive-Aktivität](./media/flowing-transactions-into-and-out-of-workflow-services/receive-message-settings.jpg)  
+     ![Festlegen von Nachrichteneinstellungen für die Empfangsaktivität](./media/flowing-transactions-into-and-out-of-workflow-services/receive-message-settings.jpg)  
   
 8. Ziehen Sie eine <xref:System.Activities.Statements.Sequence>-Aktivität per Drag &amp; Drop in den Textabschnitt vom <xref:System.ServiceModel.Activities.TransactedReceiveScope>. Verschieben Sie innerhalb der <xref:System.Activities.Statements.Sequence>-Aktivität zwei <xref:System.Activities.Statements.WriteLine>-Aktivitäten per Drag &amp; Drop, und legen Sie die <xref:System.Activities.Statements.WriteLine.Text%2A>-Eigenschaften wie in der folgenden Tabelle gezeigt fest.  
   
-    |Aktivität|Wert|  
+    |Aktivität|value|  
     |--------------|-----------|  
-    |1\. WriteLine|"Dienst: empfangen abgeschlossen"|  
-    |2\. WriteLine|"Service: Received = " + requestMessage|  
+    |1. WriteLine|"Service: Empfangen abgeschlossen"|  
+    |2. WriteLine|"Service: Received = " + requestMessage|  
   
      Der Workflow müsste jetzt wie folgt aussehen:  
   
-     ![Sequenz nach dem Hinzufügen von Write-in-Aktivitäten](./media/flowing-transactions-into-and-out-of-workflow-services/after-adding-writelines.jpg)  
+     ![Sequenz nach dem Hinzufügen von WriteLine-Aktivitäten](./media/flowing-transactions-into-and-out-of-workflow-services/after-adding-writelines.jpg)  
   
-9. Ziehen Sie die `PrintTransactionInfo` Aktivität nach der zweiten <xref:System.Activities.Statements.WriteLine> Aktivität im **Text** in der <xref:System.ServiceModel.Activities.TransactedReceiveScope> Aktivität, und legen Sie Sie dort ab.  
+9. Ziehen Sie `PrintTransactionInfo` die Aktivität <xref:System.Activities.Statements.WriteLine> nach der zweiten <xref:System.ServiceModel.Activities.TransactedReceiveScope> Aktivität im **Körper** in der Aktivität.  
   
-     ![Nach dem Hinzufügen von printtransaktioninfo Sequenzieren](./media/flowing-transactions-into-and-out-of-workflow-services/after-adding-printtransactioninfo.jpg )  
+     ![Sequenz nach dem Hinzufügen von PrintTransactionInfo](./media/flowing-transactions-into-and-out-of-workflow-services/after-adding-printtransactioninfo.jpg )  
   
 10. Ziehen Sie eine <xref:System.Activities.Statements.Assign>-Aktivität per Drag &amp; Drop an die Stelle nach der `PrintTransactionInfo`-Aktivität, und legen Sie die Eigenschaften entsprechend der folgenden Tabelle fest.  
   
-    |property|Wert|  
+    |Eigenschaft|value|  
     |--------------|-----------|  
-    |Beschreibung|replyMessage|  
-    |Wert|"Service: Sending reply."|  
+    |To|replyMessage|  
+    |value|"Service: Sending reply."|  
   
 11. Ziehen Sie eine <xref:System.Activities.Statements.WriteLine>-Aktivität per Drag &amp; Drop an die Stelle nach der <xref:System.Activities.Statements.Assign>-Aktivität, und legen Sie die <xref:System.Activities.Statements.WriteLine.Text%2A>-Eigenschaft auf „Service: Begin reply“ fest.  
   
@@ -141,11 +141,11 @@ Workflowdienste und Clients können an Transaktionen teilnehmen.  Damit ein Dien
   
      ![Nach dem Hinzufügen von Assign und WriteLine](./media/flowing-transactions-into-and-out-of-workflow-services/after-adding-sbr-writeline.jpg)  
   
-12. Klicken Sie mit der rechten Maustaste auf die <xref:System.ServiceModel.Activities.Receive> Aktivität, und wählen Sie **SendReply erstellen** aus, und fügen Sie Sie nach dem letzten <xref:System.Activities.Statements.WriteLine> Klicken Sie in der `SendReplyToReceive` Aktivität auf den Link **definieren...** , und legen Sie die folgenden Einstellungen fest.  
+12. Klicken Sie <xref:System.ServiceModel.Activities.Receive> mit der rechten Maustaste auf <xref:System.Activities.Statements.WriteLine> die Aktivität, und wählen Sie **SendReply erstellen** aus, und fügen Sie sie nach der letzten Aktivität ein. Klicken Sie in der `SendReplyToReceive` Aktivität auf den Link **Definieren...,** und nehmen Sie die folgenden Einstellungen vor.  
   
      ![Einstellungen der Antwortmeldung](./media/flowing-transactions-into-and-out-of-workflow-services/reply-message-settings.jpg)  
   
-13. Ziehen Sie nach der `SendReplyToReceive` <xref:System.Activities.Statements.WriteLine.Text%2A>-Aktivität eine <xref:System.Activities.Statements.WriteLine> Aktivität, und legen Sie Sie auf "Service: Reply sent" fest.  
+13. Ziehen Sie <xref:System.Activities.Statements.WriteLine> eine Aktivität `SendReplyToReceive` nach der Aktivität <xref:System.Activities.Statements.WriteLine.Text%2A> und legen Sie sie ab, und legen Sie ihre Eigenschaft auf "Service: Antwort gesendet" fest.  
   
 14. Verschieben Sie eine <xref:System.Activities.Statements.WriteLine>-Aktivität per Drag &amp; Drop an das Ende des Workflows, und legen Sie die Eigenschaft <xref:System.Activities.Statements.WriteLine.Text%2A> auf "Service: Workflow ends, press ENTER to exit" fest.  
   
@@ -155,7 +155,7 @@ Workflowdienste und Clients können an Transaktionen teilnehmen.  Damit ein Dien
   
 ### <a name="implement-the-workflow-client"></a>Implementieren des Workflowclients  
   
-1. Fügen Sie eine neue WCF-Workflowanwendung mit dem Namen `WorkflowClient` zum `Common`-Projekt hinzu. Klicken Sie dazu mit der rechten Maustaste auf das Projekt `Common`, wählen Sie **Hinzufügen**, **Neues Element...** , wählen Sie unter **installierte Vorlagen** die Option **Workflow** und dann **Aktivität**aus.  
+1. Fügen Sie eine neue WCF-Workflowanwendung mit dem Namen `WorkflowClient` zum `Common`-Projekt hinzu. Klicken Sie hiermit `Common` mit der rechten Maustaste auf das Projekt, wählen Sie **Hinzufügen**, **Neues Element ...**, Wählen Sie **Workflow** unter **Installierte Vorlagen** aus, und wählen Sie **Aktivität**aus.  
   
      ![Aktivitätsprojekt hinzufügen](./media/flowing-transactions-into-and-out-of-workflow-services/add-activity-project.jpg)  
   
@@ -173,27 +173,27 @@ Workflowdienste und Clients können an Transaktionen teilnehmen.  Damit ein Dien
   
 6. Verschieben Sie eine `PrintTransactionInfo`-Aktivität per Drag &amp; Drop innerhalb der <xref:System.Activities.Statements.Sequence>-Aktivität.  
   
-7. Ziehen Sie eine <xref:System.Activities.Statements.WriteLine> Aktivität nach der `PrintTransactionInfo`-Aktivität, und legen Sie deren <xref:System.Activities.Statements.WriteLine.Text%2A>-Eigenschaft auf "Client: Start Send" fest. Der Workflow müsste jetzt wie folgt aussehen:  
+7. Ziehen Sie <xref:System.Activities.Statements.WriteLine> eine Aktivität `PrintTransactionInfo` nach der <xref:System.Activities.Statements.WriteLine.Text%2A> Aktivität und legen Sie ihre Eigenschaft auf "Client: Beginning Send" fest. Der Workflow müsste jetzt wie folgt aussehen:  
   
-     ![Client wird hinzugefügt: Sendeaktivitäten werden gestartet.](./media/flowing-transactions-into-and-out-of-workflow-services/client-add-cbs-writeline.jpg)  
+     ![Hinzufügen von Client: Beginnen von Sendeaktivitäten](./media/flowing-transactions-into-and-out-of-workflow-services/client-add-cbs-writeline.jpg)  
   
 8. Ziehen Sie eine <xref:System.ServiceModel.Activities.Send>-Aktivität per Drag &amp; Drop an die Stelle nach der <xref:System.Activities.Statements.Assign>-Aktivität, und legen Sie die folgenden Eigenschaften fest:  
   
-    |property|Wert|  
+    |Eigenschaft|value|  
     |--------------|-----------|  
     |EndpointConfigurationName|workflowServiceEndpoint|  
-    |OperationName|StartSample|  
+    |Vorgangsname|StartSample|  
     |ServiceContractName|ITransactionSample|  
   
      Der Workflow müsste jetzt wie folgt aussehen:  
   
      ![Festlegen der Send-Aktivitätseigenschaften](./media/flowing-transactions-into-and-out-of-workflow-services/client-send-activity-settings.jpg)  
   
-9. Klicken Sie auf den Link **definieren...** , und legen Sie die folgenden Einstellungen fest:  
+9. Klicken Sie auf den Link **Definieren...** und nehmen Sie die folgenden Einstellungen vor:  
   
      ![Meldungseinstellungen für die Send-Aktivität](./media/flowing-transactions-into-and-out-of-workflow-services/send-message-settings.jpg)  
   
-10. Klicken Sie mit der rechten Maustaste auf die <xref:System.ServiceModel.Activities.Send> Aktivität, und wählen Sie **receivereply erstellen** Die <xref:System.ServiceModel.Activities.ReceiveReply>-Aktivität wird automatisch nach der <xref:System.ServiceModel.Activities.Send>-Aktivität platziert.  
+10. Klicken Sie <xref:System.ServiceModel.Activities.Send> mit der rechten Maustaste auf die Aktivität, und wählen Sie **ReceiveReply erstellen**. Die <xref:System.ServiceModel.Activities.ReceiveReply>-Aktivität wird automatisch nach der <xref:System.ServiceModel.Activities.Send>-Aktivität platziert.  
   
 11. Klicken Sie in der ReceiveReplyForSend-Aktivität auf den Link Definieren..., und legen Sie die folgenden Einstellungen fest:  
   
@@ -207,7 +207,7 @@ Workflowdienste und Clients können an Transaktionen teilnehmen.  Damit ein Dien
   
 15. Verschieben Sie eine <xref:System.Activities.Statements.WriteLine>-Aktivität per Drag &amp; Drop an das Ende des Workflows, und legen Sie die <xref:System.Activities.Statements.WriteLine.Text%2A>-Eigenschaft auf "Client workflow ends" fest. Der abgeschlossene Clientworkflow sollte wie das folgende Diagramm aussehen.  
   
-     ![Der abgeschlossene Client Workflow](./media/flowing-transactions-into-and-out-of-workflow-services/client-complete-workflow.jpg)  
+     ![Der abgeschlossene Client-Workflow](./media/flowing-transactions-into-and-out-of-workflow-services/client-complete-workflow.jpg)  
   
 16. Erstellen Sie die Projektmappe.  
   
@@ -228,7 +228,7 @@ Workflowdienste und Clients können an Transaktionen teilnehmen.  Damit ein Dien
           {  
               Console.WriteLine("Building the server.");  
               using (WorkflowServiceHost host = new WorkflowServiceHost(new DeclarativeServiceWorkflow(), new Uri("net.tcp://localhost:8000/TransactedReceiveService/Declarative")))  
-              {                
+              {
                   //Start the server  
                   host.Open();  
                   Console.WriteLine("Service started.");  
@@ -237,7 +237,7 @@ Workflowdienste und Clients können an Transaktionen teilnehmen.  Damit ein Dien
                   Console.ReadLine();  
                   //Shutdown  
                   host.Close();  
-              };         
+              };
           }  
     ```  
   
@@ -281,7 +281,7 @@ Workflowdienste und Clients können an Transaktionen teilnehmen.  Damit ein Dien
             Console.WriteLine("Press ENTER once service is started.");  
             Console.ReadLine();  
   
-            //Start the client              
+            //Start the client
             Console.WriteLine("Starting the client.");  
             client.Run();  
             syncEvent.WaitOne();  
@@ -311,7 +311,7 @@ Workflowdienste und Clients können an Transaktionen teilnehmen.  Damit ein Dien
     }  
     ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Workflowdienste](../../../../docs/framework/wcf/feature-details/workflow-services.md)
-- [Übersicht über Windows Communication Foundation-Transaktionen](../../../../docs/framework/wcf/feature-details/transactions-overview.md)
+- [Workflow-Services](../../../../docs/framework/wcf/feature-details/workflow-services.md)
+- [Übersicht über Windows-Kommunikationfoundation-Transaktionen](../../../../docs/framework/wcf/feature-details/transactions-overview.md)

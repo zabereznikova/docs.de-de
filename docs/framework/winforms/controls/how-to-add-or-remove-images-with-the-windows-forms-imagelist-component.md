@@ -1,5 +1,5 @@
 ---
-title: Hinzufügen oder Entfernen von Bildern mit der ImageList-Komponente
+title: Hinzufügen oder Entfernen von Bildern mit ImageList-Komponente
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,24 +13,24 @@ helpviewer_keywords:
 - images [Windows Forms], adding to ImageList component
 - images [Windows Forms], displaying with controls
 ms.assetid: c5eacc56-f769-4e2e-bfb7-f756620913db
-ms.openlocfilehash: f531003377395bf219775e5ddb48ceb0822ff0ea
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: e045be7ea9407bc379b0c22282fcd2184ff5db51
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76741500"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79182298"
 ---
 # <a name="how-to-add-or-remove-images-with-the-windows-forms-imagelist-component"></a>Gewusst wie: Hinzufügen oder Entfernen von Bildern mit der ImageList-Komponente in Windows Forms
-Die Windows Forms <xref:System.Windows.Forms.ImageList> Komponente wird in der Regel mit Bildern aufgefüllt, bevor Sie einem-Steuerelement zugeordnet wird. Sie können jedoch Bilder hinzufügen und entfernen, nachdem Sie die Bildliste mit einem-Steuerelement verknüpft haben.  
+Die Windows <xref:System.Windows.Forms.ImageList> Forms-Komponente wird in der Regel mit Bildern aufgefüllt, bevor sie einem Steuerelement zugeordnet wird. Sie können jedoch Bilder hinzufügen und entfernen, nachdem Sie die Bildliste einem Steuerelement zugeordnet haben.  
   
 > [!NOTE]
-> Wenn Sie Bilder entfernen, vergewissern Sie sich, dass die <xref:System.Windows.Forms.ButtonBase.ImageIndex%2A>-Eigenschaft aller zugeordneten Steuerelemente weiterhin gültig ist.  
+> Wenn Sie Bilder entfernen, <xref:System.Windows.Forms.ButtonBase.ImageIndex%2A> stellen Sie sicher, dass die Eigenschaft aller zugeordneten Steuerelemente weiterhin gültig ist.  
   
-### <a name="to-add-images-programmatically"></a>So fügen Sie Bilder Programm gesteuert hinzu  
+### <a name="to-add-images-programmatically"></a>So fügen Sie Bilder programmgesteuert hinzu  
   
-- Verwenden Sie die <xref:System.Windows.Forms.ImageList.ImageCollection.Add%2A>-Methode der <xref:System.Windows.Forms.ImageList.Images%2A>-Eigenschaft der Bildliste.  
+- Verwenden <xref:System.Windows.Forms.ImageList.ImageCollection.Add%2A> Sie die Methode der <xref:System.Windows.Forms.ImageList.Images%2A> Eigenschaft der Bildliste.  
   
-     Im folgenden Codebeispiel ist der Pfad, der für den Speicherort des Bilds festgelegt wurde, der Ordner " **eigene** Dateien". Dieser Speicherort wird verwendet, da Sie davon ausgehen können, dass die meisten Computer, auf denen das Windows-Betriebssystem ausgeführt wird, diesen Ordner enthalten. Wenn Sie diesen Speicherort auswählen, können Benutzer mit minimalen System Zugriffsebenen die Anwendung sicherer ausführen. Für das folgende Codebeispiel ist es erforderlich, dass Sie über ein Formular mit einem <xref:System.Windows.Forms.ImageList>-Steuerelement verfügen.  
+     Im folgenden Codebeispiel ist der Pfad, der für den Speicherort des Bildes festgelegt ist, der Ordner **Eigene Dokumente.** Dieser Speicherort wird verwendet, da Sie davon ausgehen können, dass die meisten Computer, auf denen das Windows-Betriebssystem ausgeführt wird, diesen Ordner enthalten. Wenn Sie diesen Speicherort auswählen, können Benutzer mit minimalen Systemzugriffsebenen die Anwendung sicherer ausführen. Im folgenden Codebeispiel ist erforderlich, <xref:System.Windows.Forms.ImageList> dass Sie ein Formular mit einem Steuerelement bereits hinzugefügt haben.  
   
     ```vb  
     Public Sub LoadImage()  
@@ -46,9 +46,9 @@ Die Windows Forms <xref:System.Windows.Forms.ImageList> Komponente wird in der R
     ```csharp  
     public void addImage()  
     {  
-    // Be sure that you use an appropriate escape sequence (such as the   
+    // Be sure that you use an appropriate escape sequence (such as the
     // @) when specifying the location of the file.  
-       System.Drawing.Image myImage =   
+       System.Drawing.Image myImage =
          Image.FromFile  
        (System.Environment.GetFolderPath  
        (System.Environment.SpecialFolder.Personal)  
@@ -61,11 +61,11 @@ Die Windows Forms <xref:System.Windows.Forms.ImageList> Komponente wird in der R
     public:  
        void addImage()  
        {  
-       // Replace the bold image in the following sample   
+       // Replace the bold image in the following sample
        // with your own icon.  
-       // Be sure that you use an appropriate escape sequence (such as   
+       // Be sure that you use an appropriate escape sequence (such as
        // \\) when specifying the location of the file.  
-          System::Drawing::Image ^ myImage =   
+          System::Drawing::Image ^ myImage =
              Image::FromFile(String::Concat(  
              System::Environment::GetFolderPath(  
              System::Environment::SpecialFolder::Personal),  
@@ -74,11 +74,11 @@ Die Windows Forms <xref:System.Windows.Forms.ImageList> Komponente wird in der R
        }  
     ```  
   
-### <a name="to-add-images-with-a-key-value"></a>Zum Hinzufügen von Bildern mit einem Schlüsselwert.  
+### <a name="to-add-images-with-a-key-value"></a>So fügen Sie Bilder mit einem Schlüsselwert hinzu.  
   
-- Verwenden Sie eine der <xref:System.Windows.Forms.ImageList.ImageCollection.Add%2A> Methoden der <xref:System.Windows.Forms.ImageList.Images%2A> Eigenschaft der Bildliste, die einen Schlüsselwert annimmt.  
+- Verwenden Sie <xref:System.Windows.Forms.ImageList.ImageCollection.Add%2A> eine der Methoden der <xref:System.Windows.Forms.ImageList.Images%2A> Eigenschaft der Bildliste, die einen Schlüsselwert annimmt.  
   
-     Im folgenden Codebeispiel ist der Pfad, der für den Speicherort des Bilds festgelegt wurde, der Ordner " **eigene** Dateien". Dieser Speicherort wird verwendet, da Sie davon ausgehen können, dass die meisten Computer, auf denen das Windows-Betriebssystem ausgeführt wird, diesen Ordner enthalten. Wenn Sie diesen Speicherort auswählen, können Benutzer mit minimalen System Zugriffsebenen die Anwendung sicherer ausführen. Für das folgende Codebeispiel ist es erforderlich, dass Sie über ein Formular mit einem <xref:System.Windows.Forms.ImageList>-Steuerelement verfügen.  
+     Im folgenden Codebeispiel ist der Pfad, der für den Speicherort des Bildes festgelegt ist, der Ordner **Eigene Dokumente.** Dieser Speicherort wird verwendet, da Sie davon ausgehen können, dass die meisten Computer, auf denen das Windows-Betriebssystem ausgeführt wird, diesen Ordner enthalten. Wenn Sie diesen Speicherort auswählen, können Benutzer mit minimalen Systemzugriffsebenen die Anwendung sicherer ausführen. Im folgenden Codebeispiel ist erforderlich, <xref:System.Windows.Forms.ImageList> dass Sie ein Formular mit einem Steuerelement bereits hinzugefügt haben.  
   
     ```vb  
     Public Sub LoadImage()  
@@ -94,9 +94,9 @@ Die Windows Forms <xref:System.Windows.Forms.ImageList> Komponente wird in der R
 ```csharp  
 public void addImage()  
 {  
-// Be sure that you use an appropriate escape sequence (such as the   
+// Be sure that you use an appropriate escape sequence (such as the
 // @) when specifying the location of the file.  
-   System.Drawing.Image myImage =   
+   System.Drawing.Image myImage =
      Image.FromFile  
    (System.Environment.GetFolderPath  
    (System.Environment.SpecialFolder.Personal)  
@@ -105,13 +105,13 @@ public void addImage()
 }  
 ```  
   
-### <a name="to-remove-all-images-programmatically"></a>So entfernen Sie alle Bilder Programm gesteuert  
+### <a name="to-remove-all-images-programmatically"></a>So entfernen Sie alle Bilder programmgesteuert  
   
-- Verwenden der <xref:System.Windows.Forms.ImageList.ImageCollection.Remove%2A>-Methode zum Entfernen eines einzelnen Bilds  
+- Verwenden <xref:System.Windows.Forms.ImageList.ImageCollection.Remove%2A> Der Methode zum Entfernen eines einzelnen Bildes  
   
      ,-oder-  
   
-     Verwenden Sie die <xref:System.Windows.Forms.ImageList.ImageCollection.Clear%2A>-Methode, um alle Bilder in der Bildliste zu löschen.  
+     Verwenden <xref:System.Windows.Forms.ImageList.ImageCollection.Clear%2A> Sie die Methode, um alle Bilder in der Bildliste zu löschen.  
   
     ```vb  
     ' Removes the first image in the image list  
@@ -127,9 +127,9 @@ imageList1.Images.Remove(myImage);
 imageList1.Images.Clear();  
 ```  
   
-### <a name="to-remove-images-by-key"></a>So entfernen Sie Images nach Schlüssel  
+### <a name="to-remove-images-by-key"></a>So entfernen Sie Bilder per Schlüssel  
   
-- Verwenden Sie die <xref:System.Windows.Forms.ImageList.ImageCollection.RemoveByKey%2A>-Methode, um ein einzelnes Bild anhand des Schlüssels zu entfernen.  
+- Verwenden <xref:System.Windows.Forms.ImageList.ImageCollection.RemoveByKey%2A> Sie die Methode, um ein einzelnes Bild durch den Schlüssel zu entfernen.  
   
     ```vb  
     ' Removes the image named "myPhoto" from the list.  

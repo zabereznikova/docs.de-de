@@ -9,20 +9,20 @@ helpviewer_keywords:
 - <qualifyAssembly> element
 - qualifyAssembly element
 ms.assetid: ad6442f6-1a9d-43b6-b733-04ac1b7f9b82
-ms.openlocfilehash: 17cfe9fc39d65f146beef5d02c701f5e3e2fbbe1
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 74e83900c68ab4b3fe01beb3f97657b0140d78ad
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73115782"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79153918"
 ---
-# <a name="qualifyassembly-element"></a>\<qualifyAssembly > Element
+# <a name="qualifyassembly-element"></a>\<qualifyAssembly> Element
 Gibt den vollständigen Namen der Assembly an, die dynamisch geladen werden soll, wenn Sie ein Teilname verwendet wird.  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp; &nbsp;[ **\<runtime >** ](runtime-element.md) \
-&nbsp; &nbsp; &nbsp; &nbsp;[ **\<assemblyBinding**](assemblybinding-element-for-runtime.md) > \
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<qualifyAssembly >**  
+[**\<Konfiguration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<Laufzeit>**](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<AssemblyBinding>**](assemblybinding-element-for-runtime.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<qualifyAssembly>**  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -35,15 +35,15 @@ Gibt den vollständigen Namen der Assembly an, die dynamisch geladen werden soll
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
-### <a name="attributes"></a>Attribute  
+### <a name="attributes"></a>Attributes  
   
-|Attribut|Beschreibung|  
+|attribute|Beschreibung|  
 |---------------|-----------------|  
-|`partialName`|Erforderliches Attribut.<br /><br /> Gibt den partiellen Namen der Assembly an, wie Sie im Code angezeigt wird.|  
-|`fullName`|Erforderliches Attribut.<br /><br /> Gibt den vollständigen Namen der Assembly an, wie Sie im globalen Assemblycache angezeigt wird.|  
+|`partialName`|Erforderliches Attribut.<br /><br /> Gibt den Teilnamen der Assembly an, wie er im Code angezeigt wird.|  
+|`fullName`|Erforderliches Attribut.<br /><br /> Gibt den vollständigen Namen der Assembly an, wie er im globalen Assemblycache angezeigt wird.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
- Keine  
+ Keine.  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   
@@ -53,19 +53,19 @@ Gibt den vollständigen Namen der Assembly an, die dynamisch geladen werden soll
 |`configuration`|Das Stammelement in jeder von den Common Language Runtime- und .NET Framework-Anwendungen verwendeten Konfigurationsdatei.|  
 |`runtime`|Enthält Informationen über die Assemblybindung und die Garbage Collection.|  
   
-## <a name="remarks"></a>Hinweise  
- Wenn Sie die <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>-Methode mit partiellen Assemblynamen aufrufen, werden die Common Language Runtime nur im Anwendungs Basisverzeichnis nach der Assembly gesucht. Verwenden Sie das **\<qualifyAssembly->** Element in der Anwendungs Konfigurationsdatei, um die vollständigen Assemblyinformationen (Name, Version, öffentliches Schlüssel Token und Kultur) bereitzustellen, und bewirken Sie, dass die Common Language Runtime in der globalen Assemblycache.  
+## <a name="remarks"></a>Bemerkungen  
+ Wenn <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> Sie die Methode mithilfe partieller Assemblynamen aufrufen, wird die Common Language Runtime nur im Anwendungsbasisverzeichnis nach der Assembly suchen. Verwenden Sie das ** \<qualifyAssembly>-Element** in der Anwendungskonfigurationsdatei, um die vollständigen Assemblyinformationen (Name, Version, öffentliches Schlüsseltoken und Kultur) bereitzustellen und die Common Language-Laufzeit im globalen Assemblycache nach der Assembly zu suchen.  
   
- Das **FullName** -Attribut muss die vier Felder der Assemblyidentität enthalten: Name, Version, öffentliches Schlüssel Token und Kultur. Das **partialName** -Attribut muss teilweise auf eine Assembly verweisen. Sie müssen mindestens den Textnamen der Assembly angeben (der häufigste Fall), Sie können jedoch auch Version, öffentliches Schlüssel Token oder Kultur (oder eine beliebige Kombination der vier, aber nicht alle vier) einschließen. Der **partialName** muss mit dem in Ihrem-Befehl angegebenen Namen identisch sein. Beispielsweise können Sie `"math"` nicht als **partialName** -Attribut in der Konfigurationsdatei angeben und `Assembly.Load("math, Version=3.3.3.3")` im Code aufzurufen.  
+ Das **fullName-Attribut** muss die vier Felder der Assemblyidentität enthalten: Name, Version, öffentliches Schlüsseltoken und Kultur. Das **partialName-Attribut** muss teilweise auf eine Assembly verweisen. Sie müssen mindestens den Textnamen der Assembly angeben (der häufigste Fall), aber Sie können auch Version, öffentliches Schlüsseltoken oder Kultur (oder eine beliebige Kombination der vier, aber nicht alle vier) einschließen. Der **partialName** muss mit dem in Ihrem Aufruf angegebenen Namen übereinstimmen. Sie können z. `"math"` B. nicht als **partielles Name-Attribut** in Ihrer Konfigurationsdatei und als Aufruf `Assembly.Load("math, Version=3.3.3.3")` im Code angeben.  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird der `Assembly.Load("math")` des Aufrufes logisch in `Assembly.Load("math,version=1.0.0.0,publicKeyToken=a1690a5ea44bab32,culture=neutral")`umgewandelt.  
+ Im folgenden Beispiel wird `Assembly.Load("math")` der `Assembly.Load("math,version=1.0.0.0,publicKeyToken=a1690a5ea44bab32,culture=neutral")`Aufruf logisch in .  
   
 ```xml  
 <configuration>  
    <runtime>  
       <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">  
-         <qualifyAssembly partialName="math"   
+         <qualifyAssembly partialName="math"
                          fullName=  
 "math,version=1.0.0.0,publicKeyToken=a1690a5ea44bab32,culture=neutral"/>  
       </assemblyBinding>  
@@ -73,8 +73,8 @@ Gibt den vollständigen Namen der Assembly an, die dynamisch geladen werden soll
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Schema für Laufzeiteinstellungen](index.md)
-- [So sucht Common Language Runtime nach Assemblys](../../../deployment/how-the-runtime-locates-assemblies.md)
-- [Teilassemblyverweise](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/0a7zy9z5(v=vs.100))
+- [So sucht die Laufzeit Assemblys](../../../deployment/how-the-runtime-locates-assemblies.md)
+- [Partielle Assemblyverweise](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/0a7zy9z5(v=vs.100))

@@ -2,17 +2,17 @@
 title: Ablaufverfolgungstyp – Zusammenfassung
 ms.date: 03/30/2017
 ms.assetid: e639410b-d1d1-479c-b78e-a4701d4e4085
-ms.openlocfilehash: 8f54f71ef63338708a29fac5557c7c7e8f257f58
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 8ed6dceb19caa52f928f285064c60337e3f15a87
+ms.sourcegitcommit: 515469828d0f040e01bde01df6b8e4eb43630b06
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70856013"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78674837"
 ---
 # <a name="trace-type-summary"></a>Ablaufverfolgungstyp – Zusammenfassung
-[Quell Ebenen](https://go.microsoft.com/fwlink/?LinkID=94943) definieren verschiedene Ablauf Verfolgungs Ebenen: "Kritisch", "Fehler", "Warnung", "Information" und "ausführlich" `ActivityTracing` sowie eine Beschreibung des Flags, das die Ausgabe von Ablauf Verfolgungs Grenzen und Aktivitäts Übertragungs Ereignissen umschaltet.  
+[Quellebenen](xref:System.Diagnostics.SourceLevels) definieren verschiedene Ablaufverfolgungsebenen: Critical, Error, Warning, Information und Verbose, sowie eine Beschreibung des `ActivityTracing` Flags, das die Ausgabe von Ablaufverfolgungsbegrenzungs- und Aktivitätsübertragungsereignissen umschaltet.  
   
- Sie können [TraceEventType](https://go.microsoft.com/fwlink/?LinkId=95169) auch für die Ablauf Verfolgungs Typen überprüfen, die von <xref:System.Diagnostics>ausgegeben werden können.  
+ Sie können <xref:System.Diagnostics.TraceEventType> auch die Arten von Ablaufverfolgungen <xref:System.Diagnostics>überprüfen, die von emittiert werden können.  
   
  In der folgenden Tabelle werden die Wichtigsten aufgelistet.  
   
@@ -20,11 +20,11 @@ ms.locfileid: "70856013"
 |----------------|-----------------|  
 |Kritisch|Schwer wiegender Fehler oder Anwendungsabsturz.|  
 |Fehler|Behebbarer Fehler.|  
-|Warnung|Informationsnachricht.|  
+|Warnung|Informationsmeldung.|  
 |Information|Kein kritisches Problem.|  
 |Ausführlich|Debuggen der Ablaufverfolgung.|  
-|Beginn|Starten einer logischen Verarbeitungseinheit.|  
-|Suspend (Anhalten)|Anhalten einer logischen Verarbeitungseinheit.|  
+|Start|Starten einer logischen Verarbeitungseinheit.|  
+|Angehalten|Anhalten einer logischen Verarbeitungseinheit.|  
 |Fortfahren|Fortsetzen einer logischen Verarbeitungseinheit.|  
 |Beenden|Beenden einer logischen Verarbeitungseinheit.|  
 |Übertragung|Ändern der Korrelationsidentität.|  

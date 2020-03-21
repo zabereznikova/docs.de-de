@@ -1,50 +1,50 @@
 ---
-title: 'Vorgehensweise: Neigen eines Elements'
+title: 'Gewusst wie: Neigen eines Elements'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - skewing elements [WPF]
 - graphics [WPF], skewing elements
 - classes [WPF], SkewTransform
 ms.assetid: 56b65f2f-dc6e-4238-923f-ca44ec53c52f
-ms.openlocfilehash: cf770a284238826852e788e27f3b3f329ed0269f
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 10b00044c1c518641281e2e72cdb5a68474b5170
+ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67664082"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80112023"
 ---
-# <a name="how-to-skew-an-element"></a>Vorgehensweise: Neigen eines Elements
-Dieses Beispiel zeigt, wie Sie mit einem <xref:System.Windows.Media.SkewTransform> auf ein Element zu neigen. Eine Neigung ist eine Transformation, die den Koordinatenraum auf ungleichmäßige Art ausdehnt. Eine typische Verwendung einer <xref:System.Windows.Media.SkewTransform> ist das Simulieren von 3D-Objekten Tiefe in 2-D-Objekten.  
+# <a name="how-to-skew-an-element"></a>Gewusst wie: Neigen eines Elements
+In diesem Beispiel wird <xref:System.Windows.Media.SkewTransform> gezeigt, wie ein verwendet wird, um ein Element zu verzerren. Eine Neigung ist eine Transformation, die den Koordinatenraum auf ungleichmäßige Art ausdehnt. Eine typische Verwendung <xref:System.Windows.Media.SkewTransform> von a ist die Simulation von 3D-Tiefe in 2D-Objekten.  
   
- Verwenden der <xref:System.Windows.Media.SkewTransform.CenterX%2A> und <xref:System.Windows.Media.SkewTransform.CenterY%2A> Eigenschaften an der Mitte des zeigen die <xref:System.Windows.Media.SkewTransform>.  
+ Verwenden <xref:System.Windows.Media.SkewTransform.CenterX%2A> Sie <xref:System.Windows.Media.SkewTransform.CenterY%2A> die und Eigenschaften, <xref:System.Windows.Media.SkewTransform>um den Mittelpunkt der anzugeben.  
   
- Verwenden der <xref:System.Windows.Media.SkewTransform.AngleX%2A> und <xref:System.Windows.Media.SkewTransform.AngleY%2A> Eigenschaften, um den Neigungswinkels der x-Achse und y-Achse anzugeben und um das aktuelle Koordinatensystem entlang dieser Achsen zu neigen.  
+ Verwenden <xref:System.Windows.Media.SkewTransform.AngleX%2A> Sie <xref:System.Windows.Media.SkewTransform.AngleY%2A> die und Eigenschaften, um den Neigungswinkel der x-Achse und der y-Achse anzugeben und das aktuelle Koordinatensystem entlang dieser Achsen zu verzerren.  
   
- Um die Auswirkungen einer Neigungstransformation vorherzusagen, zu berücksichtigen, die <xref:System.Windows.Media.SkewTransform.AngleX%2A> Werte der x-Achse relativ zum ursprünglichen Koordinatensystem neigt. Aus diesem Grund für eine <xref:System.Windows.Media.SkewTransform.AngleX%2A> von 30 die y-Achse dreht 30° durch den Ursprung und neigt die Werte in X-um 30° vom Ursprung. Ebenso ein <xref:System.Windows.Media.SkewTransform.AngleY%2A> neigt Sie 30 die y-Werte der Form um 30° vom Ursprung. Beachten Sie, dass dieser Vorgang nicht dieselbe Wirkung erzielt, wie das Übersetzen (Bewegen) des Koordinatensystems um 30° in der X- oder Y-Achse.  
+ Um den Effekt einer Schiefentransformation <xref:System.Windows.Media.SkewTransform.AngleX%2A> vorherzusagen, sollten Sie berücksichtigen, dass x-Achsenwerte relativ zum ursprünglichen Koordinatensystem verzerrt werden. Daher dreht <xref:System.Windows.Media.SkewTransform.AngleX%2A> sich bei einer von 30 die y-Achse um 30 Grad durch den Ursprung und verzerrt die Werte in x- um 30 Grad von diesem Ursprung. Ebenso verzerrt <xref:System.Windows.Media.SkewTransform.AngleY%2A> ein von 30 die y-Werte der Form um 30 Grad vom Ursprung. Beachten Sie, dass dieser Vorgang nicht dieselbe Wirkung erzielt, wie das Übersetzen (Bewegen) des Koordinatensystems um 30° in der X- oder Y-Achse.  
   
- Im folgenden Beispiel wird eine horizontale Neigung von 45° auf ein <xref:System.Windows.Shapes.Rectangle> aus einem Mittelpunkt (0,0).  
+ Im folgenden Beispiel wird eine horizontale Neigung <xref:System.Windows.Shapes.Rectangle> von 45 Grad auf eine von einem Mittelpunkt von (0,0) angewendet.  
   
 ## <a name="example"></a>Beispiel  
  [!code-xaml[transformsSample#41](~/samples/snippets/csharp/VS_Snippets_Wpf/transformsSample/CS/SkewTransformExample.xaml#41)]  
   
- Im folgenden Beispiel wird eine horizontale Neigung von 45° auf ein <xref:System.Windows.Shapes.Rectangle> aus einem Mittelpunkt (25,25).  
+ Im folgenden Beispiel wird eine horizontale Neigung <xref:System.Windows.Shapes.Rectangle> von 45 Grad auf eine von einem Mittelpunkt (25,25) angewendet.  
   
  [!code-xaml[transformsSample#42](~/samples/snippets/csharp/VS_Snippets_Wpf/transformsSample/CS/SkewTransformExample.xaml#42)]  
   
- Im folgenden Beispiel wird eine vertikale Neigung von 45° auf ein <xref:System.Windows.Shapes.Rectangle> aus einem Mittelpunkt (25,25).  
+ Im folgenden Beispiel wird eine vertikale Neigung <xref:System.Windows.Shapes.Rectangle> von 45 Grad auf eine von einem Mittelpunkt (25,25) angewendet.  
   
  [!code-xaml[transformsSample#43](~/samples/snippets/csharp/VS_Snippets_Wpf/transformsSample/CS/SkewTransformExample.xaml#43)]  
   
  Die folgenden Abbildungen zeigen die verschiedenen Neigungen, die in diesem Beispiel verwendet werden.  
   
- ![SkewTransform-Beispiele](./media/img-wcpsdk-graphicsmm-skewtransformexample.gif "Img_wcpsdk_graphicsmm_skewtransformexample")  
+ ![SkewTransform-Beispiele](./media/img-wcpsdk-graphicsmm-skewtransformexample.gif "img_wcpsdk_graphicsmm_skewtransformexample")  
 Die drei SkewTransform-Beispiele veranschaulicht  
   
- Das vollständige Beispiel finden Sie im [Beispiel einer 2D-Transformation](https://go.microsoft.com/fwlink/?LinkID=158252).  
+ Das vollständige Beispiel finden Sie unter [2D-Transformationsbeispiel](https://github.com/Microsoft/WPF-Samples/tree/master/Graphics/2DTransforms).  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Windows.Media.Transform>
 - <xref:System.Windows.Media.SkewTransform>
 - [Übersicht über Transformationen](transforms-overview.md)
-- [Themen zu Vorgehensweisen](transformations-how-to-topics.md)
+- [How-to-Themen](transformations-how-to-topics.md)

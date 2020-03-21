@@ -2,12 +2,12 @@
 title: Übersicht über die WCF-Suche
 ms.date: 03/30/2017
 ms.assetid: 84fad0e4-23b1-45b5-a2d4-c9cdf90bbb22
-ms.openlocfilehash: 46092c3bce87d426f4d465367e99a9ebb6dc37fa
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 449d54e0dd1948885a7298fb4da46067de3eb9d9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76737492"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79184212"
 ---
 # <a name="wcf-discovery-overview"></a>Übersicht über die WCF-Suche
 Die Such-APIs stellen ein einheitliches Programmiermodell zur dynamischen Veröffentlichung von und zum Suchen nach Webdiensten bereit, wobei das WS-Suchprotokoll verwendet wird. Diese APIs ermöglichen es Diensten, sich selbst zu veröffentlichen, und Client das Suchen nach veröffentlichten Diensten. Nachdem ein Dienst erkennbar gemacht wurde, kann der Dienst Ankündigungsmeldungen senden sowie eine Überwachung auf Suchanforderungen durchführen und darauf antworten. Erkennbare Dienste können Hello-Nachrichten senden, um ihre Ankunft in einem Netzwerk anzukündigen, und Bye-Nachrichten, um das Verlassen eines Netzwerks anzukündigen. Um nach einem Dienst zu suchen, senden Clients eine `Probe`-Anforderung, die bestimmte Kriterien wie den Dienstvertragstyp, Schlüsselwörter und den Bereich des Netzwerks enthält. Dienste empfangen die `Probe`-Anforderung und bestimmen, ob diese den Kriterien entspricht. Wenn sich für einen Dienst eine Übereinstimmung ergibt, antwortet dieser mit dem Rücksenden einer `ProbeMatch`-Nachricht an den Client, in der die Informationen für die Kontaktaufnahme mit dem Dienst enthalten sind. Clients können auch `Resolve`-Anforderungen senden, mit deren Hilfe sie nach Diensten suchen können, die ggf. ihre Endpunktadresse geändert haben. Dienste, die Übereinstimmungen ergeben, antworten auf `Resolve`-Anforderungen, indem sie eine `ResolveMatch`-Nachricht zurück an den Client senden.  
@@ -91,7 +91,7 @@ using (ServiceHost serviceHost = new ServiceHost(typeof(CalculatorService), base
 }
 ```  
   
-## <a name="service-discovery"></a>Dienstermittlung  
+## <a name="service-discovery"></a>Dienstsuche  
  Eine Clientanwendung kann die <xref:System.ServiceModel.Discovery.DiscoveryClient>-Klasse verwenden, um nach Diensten zu suchen. Der Entwickler erstellt eine Instanz der <xref:System.ServiceModel.Discovery.DiscoveryClient>-Klasse, die einen Suchendpunkt übergibt. Der Suchendpunkt gibt an, wohin `Probe`- oder `Resolve`-Nachrichten gesendet werden sollen. Der Client ruft dann die <xref:System.ServiceModel.Discovery.DiscoveryClient.Find%2A>-Methode auf, die die Suchkriterien innerhalb einer <xref:System.ServiceModel.Discovery.FindCriteria>-Instanz angibt. Wenn übereinstimmende Dienste gefunden werden, gibt <xref:System.ServiceModel.Discovery.DiscoveryClient.Find%2A> eine Auflistung von <xref:System.ServiceModel.Discovery.EndpointDiscoveryMetadata> zurück. Der folgende Code zeigt, wie sie die `Find`-Methode aufrufen und dann eine Verbindung zu einem ermittelten Dienst herstellen.  
   
 ```csharp  
@@ -101,7 +101,7 @@ class Client
   
     static void Main()
     {  
-        if (FindService()) 
+        if (FindService())
         {
             InvokeService();
         }
@@ -111,10 +111,10 @@ class Client
     static bool FindService()  
     {  
         Console.WriteLine("\nFinding Calculator Service ..");  
-        DiscoveryClient discoveryClient =   
+        DiscoveryClient discoveryClient =
             new DiscoveryClient(new UdpDiscoveryEndpoint());  
   
-        Collection<EndpointDiscoveryMetadata> calculatorServices =   
+        Collection<EndpointDiscoveryMetadata> calculatorServices =
             (Collection<EndpointDiscoveryMetadata>)discoveryClient.Find(new FindCriteria(typeof(ICalculator))).Endpoints;  
   
         discoveryClient.Close();  
@@ -144,7 +144,7 @@ class Client
 ```  
   
 ## <a name="discovery-and-message-level-security"></a>Sicherheit der Such- und Nachrichtenebene  
- Beim Verwenden der Nachrichtenebenensicherheit müssen Sie auf dem Dienstsuchendpunkt ein <xref:System.ServiceModel.EndpointIdentity>-Objekt und auf dem Clientsuchendpunkt ein passendes <xref:System.ServiceModel.EndpointIdentity>-Objekt angeben. Weitere Informationen zur Sicherheit auf Nachrichten Ebene finden Sie unter [Nachrichten Sicherheit](../../../../docs/framework/wcf/feature-details/message-security-in-wcf.md).  
+ Beim Verwenden der Nachrichtenebenensicherheit müssen Sie auf dem Dienstsuchendpunkt ein <xref:System.ServiceModel.EndpointIdentity>-Objekt und auf dem Clientsuchendpunkt ein passendes <xref:System.ServiceModel.EndpointIdentity>-Objekt angeben. Weitere Informationen zur Sicherheit auf Nachrichtenebene finden Sie unter [Nachrichtensicherheit](../../../../docs/framework/wcf/feature-details/message-security-in-wcf.md).  
   
 ## <a name="discovery-and-web-hosted-services"></a>Suche und im Internet gehostete Dienste  
  Damit WCF-Dienste erkennbar sind, müssen sie derzeit ausgeführt werden. Unter IIS oder WAS gehostete WCF-Dienste werden erst ausgeführt, wenn IIS/WAS eine Meldung für den Dienst empfängt. Daher sind sie nicht standardmäßig erkennbar.  Es gibt zwei Möglichkeiten, im Internet gehostete Dienste als erkennbar festzulegen:  
@@ -153,9 +153,9 @@ class Client
   
 2. Verwenden eines Suchproxys zur Kommunikation im Namen des Diensts  
   
- Windows Server AppFabric verfügt über eine Autostart-Funktion, mit der ein Dienst gestartet werden kann, bevor Meldungen empfangen werden. Wenn die Autostart-Funktion festgelegt ist, kann ein von IIS/WAS gehosteter Dienst als erkennbar konfiguriert werden. Weitere Informationen zur automatischen Start Funktion finden Sie unter [Windows Server AppFabric Autostart Feature](https://docs.microsoft.com/previous-versions/appfabric/ee677260(v=azure.10)). Wenn Sie die Autostart-Funktion aktivieren, müssen Sie den Dienst für die Suche konfigurieren. Weitere Informationen finden Sie unter Gewusst [wie: Programm gesteuertes hinzufügen der Auffindbarkeit zu einem WCF-Dienst und Client](../../../../docs/framework/wcf/feature-details/how-to-programmatically-add-discoverability-to-a-wcf-service-and-client.md)[Konfigurieren der Ermittlung in einer Konfigurationsdatei](../../../../docs/framework/wcf/feature-details/configuring-discovery-in-a-configuration-file.md).  
+ Windows Server AppFabric verfügt über eine Autostart-Funktion, mit der ein Dienst gestartet werden kann, bevor Meldungen empfangen werden. Wenn die Autostart-Funktion festgelegt ist, kann ein von IIS/WAS gehosteter Dienst als erkennbar konfiguriert werden. Weitere Informationen zur Funktion zum automatischen Start finden Sie unter [Windows Server AppFabric Auto-Start Feature](https://docs.microsoft.com/previous-versions/appfabric/ee677260(v=azure.10)). Wenn Sie die Autostart-Funktion aktivieren, müssen Sie den Dienst für die Suche konfigurieren. Weitere Informationen finden Sie unter [Gewusst wie: Programmgesteuertes Hinzufügen von Erkennungsmöglichkeiten zu einem WCF-Dienst und](../../../../docs/framework/wcf/feature-details/how-to-programmatically-add-discoverability-to-a-wcf-service-and-client.md)[Clientkonfigurationsermittlung in einer Konfigurationsdatei](../../../../docs/framework/wcf/feature-details/configuring-discovery-in-a-configuration-file.md).  
   
- Ein Suchproxy kann verwendet werden, um im Namen des WCF-Diensts zu kommunizieren, wenn der Dienst nicht ausgeführt wird. Der Proxy kann Überprüfungs- oder Auflösungsmeldungen abhören und dem Client antworten. Anschließend kann der Client Meldungen direkt an den Dienst senden. Wenn der Client eine Meldung an den Dienst sendet, wird dieser instanziiert, um auf die Meldung zu antworten. Weitere Informationen zum Implementieren eines Ermittlungs Proxys finden Sie unter [Implementieren eines Ermittlungs Proxys](../../../../docs/framework/wcf/feature-details/implementing-a-discovery-proxy.md).  
+ Ein Suchproxy kann verwendet werden, um im Namen des WCF-Diensts zu kommunizieren, wenn der Dienst nicht ausgeführt wird. Der Proxy kann Überprüfungs- oder Auflösungsmeldungen abhören und dem Client antworten. Anschließend kann der Client Meldungen direkt an den Dienst senden. Wenn der Client eine Meldung an den Dienst sendet, wird dieser instanziiert, um auf die Meldung zu antworten. Weitere Informationen zum Implementieren eines Ermittlungsproxys finden Sie unter [Implementieren eines Ermittlungsproxys](../../../../docs/framework/wcf/feature-details/implementing-a-discovery-proxy.md).  
   
 > [!NOTE]
-> Damit die WCF-Ermittlung ordnungsgemäß funktioniert, sollten alle NICs (Netzwerkschnittstellen Controller) nur eine IP-Adresse aufweisen.
+> Damit WCF Discovery ordnungsgemäß funktioniert, sollten alle Netzwerkschnittstellencontroller nur über eine IP-Adresse verfügen.

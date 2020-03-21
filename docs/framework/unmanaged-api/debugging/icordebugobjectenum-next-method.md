@@ -15,22 +15,22 @@ helpviewer_keywords:
 ms.assetid: 10093e3d-26b6-4ad7-8ef3-bbf66243fc02
 topic_type:
 - apiref
-ms.openlocfilehash: adcfbf1207ad7895ab55f7e5cf9581905cb826bf
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: e9b32980a5606629676549905d3c9956633f25b0
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73096107"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79178703"
 ---
 # <a name="icordebugobjectenumnext-method"></a>ICorDebugObjectEnum::Next-Methode
-Ruft die relativen virtuellen Adressen (RVAs) der angegebenen Anzahl von Objekten aus der-Enumeration ab, beginnend bei der aktuellen Position.  
+Ruft die relativen virtuellen Adressen (RVAs) der angegebenen Anzahl von Objekten aus der Enumeration ab der aktuellen Position ab.  
   
 ## <a name="syntax"></a>Syntax  
   
 ```cpp  
 HRESULT Next (  
     [in] ULONG celt,  
-    [out, size_is(celt), length_is(*pceltFetched)]    
+    [out, size_is(celt), length_is(*pceltFetched)]
         CORDB_ADDRESS objects[],  
     [out] ULONG *pceltFetched  
 );  
@@ -41,12 +41,12 @@ HRESULT Next (
  [in] Die Anzahl der abzurufenden Objekte.  
   
  `objects`  
- vorgenommen Ein Array von Zeigern, von denen jedes auf ein CORDB_ADDRESS-Objekt verweist.  
+ [out] Ein Array von Zeigern, die jeweils auf ein CORDB_ADDRESS Objekt zeigen.  
   
  `pceltFetched`  
- vorgenommen Ein Zeiger auf die Anzahl der tatsächlich zurückgegebenen Objekte. Dieser Wert kann NULL sein, wenn `celt` ein Wert ist.  
+ [out] Zeiger auf die Anzahl der tatsächlich zurückgegebenen Objekte. Dieser Wert kann `celt` null sein, wenn es sich um einen Wert handelt.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
@@ -55,4 +55,4 @@ HRESULT Next (
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen

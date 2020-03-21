@@ -1,5 +1,5 @@
 ---
-title: XpsDocumentWriter. raise__WritingCompleted-Methode (System. Windows. Xps)
+title: XpsDocumentWriter.raise__WritingCompleted-Methode (System.Windows.Xps)
 TOCTitle: raise__WritingCompleted Method
 ms.date: 12/12/2007
 api_location:
@@ -10,21 +10,21 @@ api_type:
 - Assembly
 topic_type:
 - apiref
-ms.openlocfilehash: 642c7188b135427bc7fe32260802f47517d93350
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 5d4c11b20624b543ee5c366f5da15afb573fb22d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72525058"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79155673"
 ---
-# <a name="xpsdocumentwriterraise__writingcompleted-method"></a>XpsDocumentWriter. Raise \_ \_WritingCompleted-Methode
+# <a name="xpsdocumentwriterraise__writingcompleted-method"></a>XpsDocumentWriter.raise\_\_WritingCompleted-Methode
 
 Löst das <xref:System.Windows.Xps.XpsDocumentWriter.WritingCompleted>-Ereignis aus.
 
 ## <a name="syntax"></a>Syntax
 
 ```csharp
-public void raise__WritingCompleted (object value0, 
+public void raise__WritingCompleted (object value0,
   System.Windows.Documents.Serialization.WritingCompletedEventArgs value1);
 ```
 
@@ -36,10 +36,10 @@ public void raise__WritingCompleted (object value0,
 - `value1`  <xref:System.Windows.Documents.Serialization.WritingCompletedEventArgs>  
   Die Ereignisdaten.
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
-**Namespace:** <xref:System.Windows.Xps>
+**Namespace:**<xref:System.Windows.Xps>
 
-**Assembly:** System. Printing (in System. Printing. dll)
+**Montage:** System.Printing (in system.printing.dll)
 
-**.NET Framework Versionen:** 3,0
+**.NET Framework-Versionen:** 3.0

@@ -15,41 +15,41 @@ helpviewer_keywords:
 - easing functions [WPF], customizing
 - animations [WPF], applying
 ms.assetid: 075b9c2b-82c4-43fa-b3cd-de0b6236eb38
-ms.openlocfilehash: 72118711dfd40ad8c665157e09f01c60085db903
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: a25bde5098af853c3906a174a189fc35f33f0525
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69965730"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79186501"
 ---
 # <a name="easing-functions"></a>Beschleunigungsfunktionen
 Mit Beschleunigungsfunktionen können Sie benutzerdefinierte mathematische Formeln auf Animationen anwenden. Beispielsweise sollte Ihr Objekt realistisch springen oder sich so verhalten, als ob es sich auf einer Feder befinden würde. Sie können Keyframe- oder sogar From/To/By-Animationen verwenden, um sich diesen Effekten anzunähern, aber es würde eine erhebliche Menge an Arbeit bedeuten, und die Animation wäre weniger genau als die Verwendung einer mathematischen Formel.  
   
- Wenn Sie eine eigene benutzerdefinierte Beschleunigungs Funktion erstellen, indem <xref:System.Windows.Media.Animation.EasingFunctionBase>Sie von erben, können Sie eine von mehreren Beschleunigungsfunktionen verwenden, die von der Laufzeit bereitgestellt werden, um allgemeine Effekte zu erstellen.  
+ Neben dem Erstellen Einer eigenen benutzerdefinierten <xref:System.Windows.Media.Animation.EasingFunctionBase>Beschleunigungsfunktion durch Vererben von können Sie eine von mehreren Beschleunigungsfunktionen verwenden, die von der Laufzeit bereitgestellt werden, um allgemeine Effekte zu erstellen.  
   
-- <xref:System.Windows.Media.Animation.BackEase>: Zieht die Bewegung einer Animation etwas zurück, bevor die Animation im aufgeführten Pfad begonnen wird.  
+- <xref:System.Windows.Media.Animation.BackEase>: Zieht die Bewegung einer Animation leicht zurück, bevor sie im angegebenen Pfad zu animieren beginnt.  
   
-- <xref:System.Windows.Media.Animation.BounceEase>: Erstellt einen Sprung-Effekt.  
+- <xref:System.Windows.Media.Animation.BounceEase>: Erzeugt einen hüpfenden Effekt.  
   
-- <xref:System.Windows.Media.Animation.CircleEase>: Erstellt eine Animation, die mit einer zirkulären Funktion beschleunigt und/oder verlangsamt.  
+- <xref:System.Windows.Media.Animation.CircleEase>: Erstellt eine Animation, die mit einer kreisförmigen Funktion beschleunigt und/oder verlangsamt.  
   
 - <xref:System.Windows.Media.Animation.CubicEase>: Erstellt eine Animation, die mit der Formel *f*(*t*) = *t*<sup>3</sup>beschleunigt und/oder verlangsamt.  
   
-- <xref:System.Windows.Media.Animation.ElasticEase>: Erstellt eine Animation, die einer springenden Bewegung ähnelt, bis Sie in den Ruhezustand versetzt wird.  
+- <xref:System.Windows.Media.Animation.ElasticEase>: Erstellt eine Animation, die einer Feder ähnelt, die hin und her oszilliert, bis sie zur Ruhe kommt.  
   
-- <xref:System.Windows.Media.Animation.ExponentialEase>: Erstellt eine Animation, die mit einer Exponentialformel beschleunigt und/oder verlangsamt.  
+- <xref:System.Windows.Media.Animation.ExponentialEase>: Erstellt eine Animation, die mit einer exponentiellen Formel beschleunigt und/oder verlangsamt.  
   
-- <xref:System.Windows.Media.Animation.PowerEase>: Erstellt eine Animation, die mit der Formel *f*(*t*) = *t*<sup>p</sup> beschleunigt und/oder verlangsamt, wobei p gleich der <xref:System.Windows.Media.Animation.PowerEase.Power%2A> -Eigenschaft ist.  
+- <xref:System.Windows.Media.Animation.PowerEase>: Erstellt eine Animation, die mit der Formel *f*(*t*) = *t* <xref:System.Windows.Media.Animation.PowerEase.Power%2A> <sup>p</sup> beschleunigt und/oder verlangsamt, wobei p gleich der Eigenschaft ist.  
   
 - <xref:System.Windows.Media.Animation.QuadraticEase>: Erstellt eine Animation, die mit der Formel *f*(*t*) = *t*<sup>2</sup>beschleunigt und/oder verlangsamt.  
   
 - <xref:System.Windows.Media.Animation.QuarticEase>: Erstellt eine Animation, die mit der Formel *f*(*t*) = *t*<sup>4</sup>beschleunigt und/oder verlangsamt.  
   
-- <xref:System.Windows.Media.Animation.QuinticEase>: Erstellen Sie eine Animation, die mit der Formel *f*(*t*) = *t*<sup>5</sup>beschleunigt und/oder verlangsamt.  
+- <xref:System.Windows.Media.Animation.QuinticEase>: Erstellen Sie eine Animation, die beschleunigt und/oder verlangsamt mit der Formel *f*(*t*) = *t*<sup>5</sup>.  
   
-- <xref:System.Windows.Media.Animation.SineEase>: Erstellt eine Animation, die mit einer Sinus Formel beschleunigt und/oder verlangsamt.  
+- <xref:System.Windows.Media.Animation.SineEase>: Erstellt eine Animation, die mit einer Sinusformel beschleunigt und/oder verlangsamt.  
   
- Um eine Beschleunigungs Funktion auf eine Animation anzuwenden, verwenden Sie `EasingFunction` die-Eigenschaft der Animation, um die Beschleunigungs Funktion anzugeben, die auf die Animation angewendet werden soll. Im folgenden Beispiel wird eine <xref:System.Windows.Media.Animation.BounceEase> Beschleunigungs Funktion auf einen <xref:System.Windows.Media.Animation.DoubleAnimation> angewendet, um einen Sprung Effekt zu erstellen.  
+ Um eine Beschleunigungsfunktion auf eine `EasingFunction` Animation anzuwenden, verwenden Sie die Eigenschaft der Animation, die die Beschleunigungsfunktion angibt, die auf die Animation angewendet werden soll. Im folgenden Beispiel <xref:System.Windows.Media.Animation.BounceEase> wird eine <xref:System.Windows.Media.Animation.DoubleAnimation> Beschleunigungsfunktion auf eine angewendet, um einen hüpfenden Effekt zu erzeugen.  
   
  [!code-xaml[BounceEase_snippet#BounceEase](~/samples/snippets/csharp/VS_Snippets_Wpf/bounceease_snippet/CS/window1.xaml#bounceease)]  
   
@@ -57,64 +57,64 @@ Mit Beschleunigungsfunktionen können Sie benutzerdefinierte mathematische Forme
   
  [!code-xaml[EasingFunctionDoubleKeyFrame_snippet#EasingFunctionDoubleKeyFrame](~/samples/snippets/csharp/VS_Snippets_Wpf/easingfunctiondoublekeyframe_snippet/CS/window1.xaml#easingfunctiondoublekeyframe)]  
   
- Sie können die <xref:System.Windows.Media.Animation.EasingFunctionBase.EasingMode%2A> -Eigenschaft verwenden, um zu ändern, wie sich die Beschleunigungs Funktion verhält, d. h., wie die Animation interpoliert. Hierfür gibt es drei mögliche Werte <xref:System.Windows.Media.Animation.EasingFunctionBase.EasingMode%2A>:  
+ Sie können <xref:System.Windows.Media.Animation.EasingFunctionBase.EasingMode%2A> die Eigenschaft verwenden, um das Verhalten der Beschleunigungsfunktion zu ändern, d. h. die Interpolation der Animation. Es gibt drei mögliche Werte, die Sie geben können für: <xref:System.Windows.Media.Animation.EasingFunctionBase.EasingMode%2A>  
   
-- <xref:System.Windows.Media.Animation.EasingMode.EaseIn>: Die interpolung folgt der mathematischen Formel, die der Beschleunigungs Funktion zugeordnet ist.  
+- <xref:System.Windows.Media.Animation.EasingMode.EaseIn>: Die Interpolation folgt der mathematischen Formel, die mit der Beschleunigungsfunktion verbunden ist.  
   
-- <xref:System.Windows.Media.Animation.EasingMode.EaseOut>: Die interpolung folgt 100% Interpolationen abzüglich der Ausgabe der Formel, die der Beschleunigungs Funktion zugeordnet ist.  
+- <xref:System.Windows.Media.Animation.EasingMode.EaseOut>: Interpolation folgt 100% Interpolation abzüglich der Ausgabe der Formel, die mit der Lockerungsfunktion verbunden ist.  
   
-- <xref:System.Windows.Media.Animation.EasingMode.EaseInOut>: Die Interpolation <xref:System.Windows.Media.Animation.EasingMode.EaseIn> verwendet für die erste Hälfte der Animation und <xref:System.Windows.Media.Animation.EasingMode.EaseOut> für die zweite Hälfte.  
+- <xref:System.Windows.Media.Animation.EasingMode.EaseInOut>: Interpolation <xref:System.Windows.Media.Animation.EasingMode.EaseIn> verwendet für die erste <xref:System.Windows.Media.Animation.EasingMode.EaseOut> Hälfte der Animation und für die zweite Hälfte.  
   
- Die folgenden Diagramme veranschaulichen die unterschiedlichen Werte <xref:System.Windows.Media.Animation.EasingFunctionBase.EasingMode%2A> von, wobei *f*(*x*) den Animations Fortschritt darstellt und *t* die Zeit darstellt.  
+ Die folgenden Diagramme veranschaulichen <xref:System.Windows.Media.Animation.EasingFunctionBase.EasingMode%2A> die verschiedenen Werte, wobei *f*(*x*) den Animationsfortschritt und *t* die Zeit darstellt.  
   
  <xref:System.Windows.Media.Animation.BackEase>  
   
- ![BackEase EasingMode-Diagramme.](./media/backease-graph.png "BackEase_Graph")  
+ ![BackEase-EasingMode-Diagramme](./media/backease-graph.png "BackEase_Graph")  
   
  <xref:System.Windows.Media.Animation.BounceEase>  
   
- ![BounceEase EasingMode-Diagramme.](./media/bounceease-graph.png "BounceEase_Graph")  
+ ![BounceEase-EasingMode-Diagramme](./media/bounceease-graph.png "BounceEase_Graph")  
   
  <xref:System.Windows.Media.Animation.CircleEase>  
   
- ![CircleEase EasingMode-Diagramme.](./media/circleease-graph.png "CircleEase_Graph")  
+ ![CircleEase-EasingMode-Diagramme](./media/circleease-graph.png "CircleEase_Graph")  
   
  <xref:System.Windows.Media.Animation.CubicEase>  
   
- ![CubicEase EasingMode-Diagramme.](./media/cubicease-graph.png "CubicEase_Graph")  
+ ![CubicEase-EasingMode-Diagramme](./media/cubicease-graph.png "CubicEase_Graph")  
   
  <xref:System.Windows.Media.Animation.ElasticEase>  
   
- ![ElasticEase mit Diagrammen von anderen Easingmodes.](./media/elasticease-graph.png "ElasticEase_Graph")  
+ ![ElasticEase mit Diagrammen von anderen EasingModes](./media/elasticease-graph.png "ElasticEase_Graph")  
   
  <xref:System.Windows.Media.Animation.ExponentialEase>  
   
- ![ExponentialEase mit Diagrammen von anderen Easingmodes.](./media/exponentialease-graph.png "ExponentialEase_Graph")  
+ ![ExponentialEase-Diagramme von anderen EasingModes](./media/exponentialease-graph.png "ExponentialEase_Graph")  
   
  <xref:System.Windows.Media.Animation.PowerEase>  
   
- ![QuarticEase mit Diagrammen von anderen Easingmodes.](./media/quarticease-graph.png "QuarticEase_Graph")  
+ ![QuarticEase mit Diagrammen von anderen EasingModes.](./media/quarticease-graph.png "QuarticEase_Graph")  
   
  <xref:System.Windows.Media.Animation.QuadraticEase>  
   
- ![QuadraticEase mit Diagrammen von anderen Easingmodes](./media/quadraticease-graph.png "QuadraticEase_Graph")  
+ ![QuadraticEase mit Diagrammen von anderen EasingModes](./media/quadraticease-graph.png "QuadraticEase_Graph")  
   
  <xref:System.Windows.Media.Animation.QuarticEase>  
   
- ![QuarticEase mit Diagrammen von anderen Easingmodes.](./media/quarticease-graph.png "QuarticEase_Graph")  
+ ![QuarticEase mit Diagrammen von anderen EasingModes.](./media/quarticease-graph.png "QuarticEase_Graph")  
   
  <xref:System.Windows.Media.Animation.QuinticEase>  
   
- ![QuinticEase mit Diagrammen von anderen Easingmodes.](./media/quinticease-graph.png "QuinticEase_Graph")  
+ ![QuinticEase mit Diagrammen von anderen EasingModes.](./media/quinticease-graph.png "QuinticEase_Graph")  
   
  <xref:System.Windows.Media.Animation.SineEase>  
   
  ![SineEase für andere EasingMode-Werte](./media/sineease-graph.png "SineEase_Graph")  
   
 > [!NOTE]
-> Sie können verwenden <xref:System.Windows.Media.Animation.PowerEase> , um das gleiche Verhalten wie <xref:System.Windows.Media.Animation.CubicEase>, <xref:System.Windows.Media.Animation.QuadraticEase>, <xref:System.Windows.Media.Animation.QuarticEase>und mit <xref:System.Windows.Media.Animation.QuinticEase> der <xref:System.Windows.Media.Animation.PowerEase.Power%2A> -Eigenschaft zu erstellen. Wenn Sie z. b. zum <xref:System.Windows.Media.Animation.PowerEase> <xref:System.Windows.Media.Animation.CubicEase>Ersetzen von verwenden möchten, geben <xref:System.Windows.Media.Animation.PowerEase.Power%2A> Sie den Wert 3 an.  
+> Sie können <xref:System.Windows.Media.Animation.PowerEase> das gleiche Verhalten <xref:System.Windows.Media.Animation.CubicEase> <xref:System.Windows.Media.Animation.QuadraticEase>wie <xref:System.Windows.Media.Animation.QuarticEase>, <xref:System.Windows.Media.Animation.QuinticEase> , <xref:System.Windows.Media.Animation.PowerEase.Power%2A> und die Eigenschaft verwenden. Wenn Sie z. B. den <xref:System.Windows.Media.Animation.CubicEase>Wert <xref:System.Windows.Media.Animation.PowerEase.Power%2A> 3 ersetzen möchten, <xref:System.Windows.Media.Animation.PowerEase> geben Sie den Wert 3 an.  
   
- Zusätzlich zur Verwendung der Beschleunigungsfunktionen, die in der Laufzeit enthalten sind, können Sie eigene benutzerdefinierte Beschleunigungsfunktionen erstellen, indem Sie von <xref:System.Windows.Media.Animation.EasingFunctionBase>erben. Im folgenden Beispiel wird veranschaulicht, wie eine einfache benutzerdefinierte Beschleunigungsfunktion erstellt wird. Sie können Ihre eigene mathematische Logik zum Verhalten der Beschleunigungs Funktion hinzufügen, indem Sie <xref:System.Windows.Media.Animation.EasingFunctionBase.EaseInCore%2A> die-Methode überschreiben.   
+ Zusätzlich zur Verwendung der in der Laufzeit enthaltenen Beschleunigungsfunktionen können Sie Ihre eigenen <xref:System.Windows.Media.Animation.EasingFunctionBase>benutzerdefinierten Beschleunigungsfunktionen erstellen, indem Sie von erben. Im folgenden Beispiel wird veranschaulicht, wie eine einfache benutzerdefinierte Beschleunigungsfunktion erstellt wird. Sie können eine eigene mathematische Logik hinzufügen, wie sich <xref:System.Windows.Media.Animation.EasingFunctionBase.EaseInCore%2A> die Beschleunigungsfunktion verhält, indem Sie die Methode überschreiben.
   
  [!code-csharp[CustomEasingFunction#CustomEasingFunction](~/samples/snippets/csharp/VS_Snippets_Wpf/customeasingfunction/csharp/customlog10easingfunction.cs#customeasingfunction)]
  [!code-vb[CustomEasingFunction#CustomEasingFunction](~/samples/snippets/visualbasic/VS_Snippets_Wpf/customeasingfunction/visualbasic/customlog10easingfunction.vb#customeasingfunction)]

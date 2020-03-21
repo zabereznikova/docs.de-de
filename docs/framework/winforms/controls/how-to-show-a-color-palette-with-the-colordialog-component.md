@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Anzeigen einer Farbpalette mit der ColorDialog-Komponente'
+title: 'Gewusst wie: Anzeigen einer Farbpalette mit der ColorDialog-Komponente'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -14,25 +14,25 @@ helpviewer_keywords:
 - color palettes [Windows Forms], showing in ColorDialog component
 - colors [Windows Forms], showing palettes
 ms.assetid: ee050f61-dbc8-4436-ba22-51360981ab48
-ms.openlocfilehash: ff29df4ecfc90eabe8e3be0e5a6a126858799c16
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: 0406ef7a32678bd149c0024348a7adf1f0b72926
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66053427"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79141782"
 ---
-# <a name="how-to-show-a-color-palette-with-the-colordialog-component"></a>Vorgehensweise: Anzeigen einer Farbpalette mit der ColorDialog-Komponente
-Die [ColorDialog](colordialog-component-windows-forms.md) Komponente zeigt eine Palette von Farben und gibt eine Eigenschaft, die mit der Farbe, die der Benutzer ausgewählt hat.  
+# <a name="how-to-show-a-color-palette-with-the-colordialog-component"></a>Gewusst wie: Anzeigen einer Farbpalette mit der ColorDialog-Komponente
+Die [ColorDialog-Komponente](colordialog-component-windows-forms.md) zeigt eine Farbpalette an und gibt eine Eigenschaft zurück, die die vom Benutzer ausgewählte Farbe enthält.  
   
-### <a name="to-choose-a-color-using-the-colordialog-component"></a>Wählen Sie eine Farbe, die mit der ColorDialog-Komponente  
+### <a name="to-choose-a-color-using-the-colordialog-component"></a>So wählen Sie eine Farbe mit der ColorDialog-Komponente aus  
   
-1. Anzeigen des Dialogfelds mit der <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> Methode.  
+1. Zeigen Sie das <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> Dialogfeld mit der Methode an.  
   
-2. Verwenden der <xref:System.Windows.Forms.DialogResult> Eigenschaft, um zu bestimmen, wie Sie das Dialogfeld geschlossen wurde.  
+2. Verwenden <xref:System.Windows.Forms.DialogResult> Sie die Eigenschaft, um zu bestimmen, wie das Dialogfeld geschlossen wurde.  
   
-3. Verwenden der <xref:System.Windows.Forms.ColorDialog.Color%2A> Eigenschaft der <xref:System.Windows.Forms.ColorDialog> Komponente, um die ausgewählte Farbe festzulegen.  
+3. Verwenden <xref:System.Windows.Forms.ColorDialog.Color%2A> Sie die <xref:System.Windows.Forms.ColorDialog> Eigenschaft der Komponente, um die ausgewählte Farbe festzulegen.  
   
-     Im folgenden Beispiel wird die <xref:System.Windows.Forms.Button> des Steuerelements <xref:System.Windows.Forms.Control.Click> -Ereignishandler öffnet eine <xref:System.Windows.Forms.ColorDialog> Komponente. Wenn eine Farbe ausgewählt, und der Benutzer klickt **OK**, <xref:System.Windows.Forms.Button> Hintergrundfarbe des Steuerelements auf die ausgewählte Farbe festgelegt ist. Im Beispiel wird vorausgesetzt, das Formular enthält ein <xref:System.Windows.Forms.Button> Steuerelement und ein <xref:System.Windows.Forms.ColorDialog> Komponente.  
+     Im folgenden Beispiel <xref:System.Windows.Forms.Button> öffnet der <xref:System.Windows.Forms.Control.Click> Ereignishandler <xref:System.Windows.Forms.ColorDialog> des Steuerelements eine Komponente. Wenn eine Farbe ausgewählt wird **OK**und der <xref:System.Windows.Forms.Button> Benutzer auf OK klickt, wird die Hintergrundfarbe des Steuerelements auf die ausgewählte Farbe festgelegt. Im Beispiel wird davon <xref:System.Windows.Forms.Button> ausgegangen, <xref:System.Windows.Forms.ColorDialog> dass das Formular über ein Steuerelement und eine Komponente verfügt.  
   
     ```vb  
     Private Sub Button1_Click(ByVal sender As System.Object, _  
@@ -55,7 +55,7 @@ Die [ColorDialog](colordialog-component-windows-forms.md) Komponente zeigt eine 
   
     ```cpp  
     private:  
-       void button1_Click(System::Object ^ sender,   
+       void button1_Click(System::Object ^ sender,
           System::EventArgs ^ e)  
        {  
           if(colorDialog1->ShowDialog() == DialogResult::OK)  
@@ -65,18 +65,18 @@ Die [ColorDialog](colordialog-component-windows-forms.md) Komponente zeigt eine 
        }  
     ```  
   
-     (Visual C#, Visual C++) Platzieren Sie den folgenden Code im Konstruktor des Formulars, um den Ereignishandler zu registrieren.  
+     (Visual C, Visual C++) Platzieren Sie den folgenden Code im Konstruktor des Formulars, um den Ereignishandler zu registrieren.  
   
     ```csharp  
     this.button1.Click += new System.EventHandler(this.button1_Click);  
     ```  
   
     ```cpp  
-    this->button1->Click +=   
+    this->button1->Click +=
        gcnew System::EventHandler(this, &Form1::button1_Click);  
     ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Windows.Forms.ColorDialog>
 - [ColorDialog-Komponente](colordialog-component-windows-forms.md)

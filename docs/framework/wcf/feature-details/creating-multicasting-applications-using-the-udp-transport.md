@@ -2,12 +2,12 @@
 title: Erstellen von Multicastanwendungen mithilfe des UDP-Transports
 ms.date: 03/30/2017
 ms.assetid: 7485154a-6e85-4a67-a9d4-9008e741d4df
-ms.openlocfilehash: b65a277b6e76767d1e3bfdbebbac5051759986e0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6825aaafe87ae362fd9266f7c7a82a36d054a69f
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61857193"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79185254"
 ---
 # <a name="creating-multicasting-applications-using-the-udp-transport"></a>Erstellen von Multicastanwendungen mithilfe des UDP-Transports
 Multicastanwendungen senden kleine Nachrichten gleichzeitig an eine große Anzahl von Empfängern, ohne dass eine Punkt-zu-Punkt-Verbindung eingerichtet werden muss. Bei diesen Anwendungen hat Geschwindigkeit Vorrang vor Zuverlässigkeit. Das heißt, es ist wichtiger, Daten zeitgerecht zu senden, als sicherzustellen, dass eine Nachricht auch tatsächlich empfangen wird. WCF unterstützt jetzt mit der <xref:System.ServiceModel.UdpBinding> das Schreiben von Multicastanwendungen. Dieser Transport ist in Szenarien nützlich, in denen ein Dienst kleine Nachrichten an eine große Anzahl von Clients gleichzeitig senden muss. Eine Börsenticker-Anwendung ist ein Beispiel für einen solchen Dienst.  
@@ -71,7 +71,7 @@ string serviceAddress = "soap.udp://224.0.0.1:40000";
 UdpBinding myBinding = new UdpBinding();
 
 // Channel factory
-ChannelFactory<IStockTicker> factory 
+ChannelFactory<IStockTicker> factory
     = new ChannelFactory<IStockTicker>(myBinding,
                 new EndpointAddress(serviceAddress));
 
@@ -91,7 +91,7 @@ while (true)
  Dieser Code generiert Börseninformationen und verwendet dann den Dienstvertrag IStockTicker, um Multicastnachrichten an Aufrufdienste zu senden, die an der richtigen UDP-Adresse lauschen.  
   
 ### <a name="udp-and-reliable-messaging"></a>UDP und zuverlässiges Messaging  
- Da es sich bei UDP um ein einfaches Protokoll handelt, unterstützt die UDP-Bindung kein zuverlässiges Messaging. Wenn Sie sicherstellen müssen, dass Nachrichten von einem Remoteendpunkt empfangen werden, verwenden Sie einen Transport, der zuverlässiges Messaging unterstützt, z. B. HTTP oder TCP. Weitere Informationen zu reliable messaging finden Sie unter https://go.microsoft.com/fwlink/?LinkId=231830  
+ Da es sich bei UDP um ein einfaches Protokoll handelt, unterstützt die UDP-Bindung kein zuverlässiges Messaging. Wenn Sie sicherstellen müssen, dass Nachrichten von einem Remoteendpunkt empfangen werden, verwenden Sie einen Transport, der zuverlässiges Messaging unterstützt, z. B. HTTP oder TCP. Weitere Informationen zu zuverlässigen Nachrichten informationen finden Sie unterhttps://go.microsoft.com/fwlink/?LinkId=231830  
   
 ### <a name="two-way-multicast-messaging"></a>Bidirektionales Multicastmessaging  
  Während Multicastnachrichten im Allgemeinen unidirektional sind, unterstützt UdpBinding den Austausch von Anforderungs-/Antwortnachrichten. Die mithilfe des UDP-Transports gesendeten Nachrichten enthalten eine Absender- und eine Empfängeradresse. Besondere Sorgfalt erfordert die Absenderadresse, da sie während der Übertragung möglicherweise böswillig geändert wurde.  Die Adresse kann mithilfe des folgenden Codes überprüft werden:  
@@ -112,7 +112,7 @@ else
   
  Der Code überprüft das erste Byte der Absenderadresse, um zu ermitteln, ob sie 0xE0 enthält, was bedeutet, dass es sich um eine Multicastadresse handelt.  
   
-### <a name="security-considerations"></a>Sicherheitsüberlegungen  
+### <a name="security-considerations"></a>Überlegungen zur Sicherheit  
  Beim Lauschen auf Multicastnachrichten wird ein ICMP-Paket an den Router gesendet, um ihn davon in Kenntnis setzen, ob an der Multicastadresse gelauscht wird. Jeder Benutzer im lokalen Subnetz mit entsprechender Berechtigung kann auf diese Pakettypen lauschen und ermitteln, an welcher Multicastadresse und welchem Port gelauscht wird.  
   
  Aus Sicherheitsgründen sollte die IP-Adresse des Absenders nicht verwendet werden. Diese Information kann gespooft sein, sodass eine Anwendung Antworten an den falschen Computer sendet. Eine Möglichkeit, dieses Risiko abzuschwächen, ist das Aktivieren der Sicherheit auf Nachrichtenebene. Auf Netzwerkebene kann auch Internetprotokollsicherheit (Internet Protocol Security, IPSec) und/oder Netzwerkzugriffsschutz (Network Access Protection, NAP) verwendet werden.

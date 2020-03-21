@@ -15,52 +15,52 @@ helpviewer_keywords:
 ms.assetid: fdf91864-48ea-4aa6-b70c-361b7a3184c7
 topic_type:
 - apiref
-ms.openlocfilehash: 737993ac80b26d490915af3e97fd6a9552246aee
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 32e899622b9c649a08e3bca1b6645f70dcbcbb19
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76792121"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79178544"
 ---
 # <a name="icordebugregistersetgetregisters-method"></a>ICorDebugRegisterSet::GetRegisters-Methode
-Ruft den Wert der einzelnen Register (auf dem momentan ausgeführten Code) ab, der durch die Bitmaske angegeben wird.  
+Ruft den Wert jedes Registers ab (auf dem Computer, der derzeit Code ausführt), der von der Bitmaske angegeben wird.  
   
 ## <a name="syntax"></a>Syntax  
   
 ```cpp  
 HRESULT GetRegisters (  
-    [in] ULONG64       mask,   
+    [in] ULONG64       mask,
     [in] ULONG32       regCount,  
     [out, size_is(regCount), length_is(regCount)]  
         CORDB_REGISTER regBuffer[]  
 );  
 ```  
   
-## <a name="parameters"></a>Parameters  
+## <a name="parameters"></a>Parameter  
  `mask`  
- in Eine Bitmaske, die angibt, welche Registerwerte abgerufen werden sollen. Jedes Bit entspricht einem Register. Wenn ein Bit auf 1 festgelegt ist, wird der Wert des Registers abgerufen. Andernfalls wird der Wert des Registers nicht abgerufen.  
+ [in] Eine Bitmaske, die angibt, welche Registerwerte abgerufen werden sollen. Jedes Bit entspricht einem Register. Wenn ein Bit auf einbit festgelegt ist, wird der Wert des Registers abgerufen. Andernfalls wird der Wert des Registers nicht abgerufen.  
   
  `regCount`  
- in Die Anzahl der abzurufenden Registrierungs Werte.  
+ [in] Die Anzahl der registerwerte, die abgerufen werden sollen.  
   
  `regBuffer`  
- vorgenommen Ein Array von `CORDB_REGISTER`-Objekten, von denen jede den Wert eines Register erhält.  
+ [out] Ein Array `CORDB_REGISTER` von Objekten, von denen jedes den Wert eines Registers empfängt.  
   
-## <a name="remarks"></a>Hinweise  
- Die Größe des Arrays sollte gleich der Anzahl von Bits sein, die in der Bitmaske auf eins festgelegt ist. Der `regCount`-Parameter gibt die Anzahl der Elemente im Puffer an, die die Registerwerte erhalten. Wenn der `regCount` Wert für die Anzahl der von der Maske festgelegten Register zu klein ist, werden die höheren nummerierten Register von der Menge abgeschnitten. Wenn der `regCount` Wert zu groß ist, werden die nicht verwendeten `regBuffer` Elemente unverändert geändert.  
+## <a name="remarks"></a>Bemerkungen  
+ Die Größe des Arrays sollte gleich der Anzahl der Bits sein, die in der Bitmaske auf eins festgelegt sind. Der `regCount` Parameter gibt die Anzahl der Elemente im Puffer an, die die Registerwerte empfangen. Wenn `regCount` der Wert für die Anzahl der register, die durch die Maske angegeben werden, zu klein ist, werden die höheren nummerierten Register aus dem Satz abgeschnitten. Wenn `regCount` der Wert zu groß `regBuffer` ist, werden die nicht verwendeten Elemente nicht geändert.  
   
- Wenn die Bitmaske ein nicht verfügbares Register angibt, gibt `GetRegisters` einen unbestimmten Wert für dieses Register zurück.  
+ Wenn die Bitmaske ein Register angibt, das nicht verfügbar ist, `GetRegisters` gibt ein unbestimmter Wert für dieses Register zurück.  
   
-## <a name="requirements"></a>-Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   
  **Bibliothek:** CorGuids.lib  
   
- **.NET Framework Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [ICorDebugRegisterSet-Schnittstelle](icordebugregisterset-interface.md)
 - [ICorDebugRegisterSet2-Schnittstelle](icordebugregisterset2-interface.md)

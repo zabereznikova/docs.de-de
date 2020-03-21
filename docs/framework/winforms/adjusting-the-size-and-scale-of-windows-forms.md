@@ -1,19 +1,19 @@
 ---
-title: Größe und Skalierung anpassen
+title: Anpassen der Größe und Skalierung
 ms.date: 04/07/2017
 helpviewer_keywords:
 - Windows Forms, changing size
 - Windows Forms, adjusting size
 - Windows Forms, changing scale
 ms.assetid: a014d2b3-3273-4521-95e1-00171033bf58
-ms.openlocfilehash: db82e290de93fb24ccd4f3a504fe8fdfba3b2e1b
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: cc77c271e52149c3cc0f42f969030478b72cf8d1
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76739792"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79182650"
 ---
-# <a name="adjusting-the-size-and-scale-of-windows-forms"></a>Anpassen der Größe und der Skalierung von Windows Forms
+# <a name="adjusting-the-size-and-scale-of-windows-forms"></a>Anpassen der Größe und Skalierung von Windows Forms
 Dieses Thema enthält Links zu Informationen über die Größenänderung von Windows Forms.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
@@ -23,8 +23,7 @@ Dieses Thema enthält Links zu Informationen über die Größenänderung von Win
  [Automatische Skalierung in Windows Forms](automatic-scaling-in-windows-forms.md)  
  Erläutert, wie ein Formular mit seinen Steuerelementen mithilfe der automatischen Skalierung auf verschiedenen Computern ordnungsgemäß angezeigt wird.  
   
- [Hohe dpi-Unterstützung in Windows Forms](high-dpi-support-in-windows-forms.md)    
- Erläutert die Windows Forms "Unterstützung für hohe dpi-und dynamische Skalierung. 
+ [Hohe DPI-Unterstützung in Windows Forms](high-dpi-support-in-windows-forms.md) Erläutert die Unterstützung von Windows Forms für hohe DPI- und dynamische Skalierung.
   
 ## <a name="reference"></a>Verweis  
  <xref:System.Drawing.Size>  
@@ -37,5 +36,5 @@ Dieses Thema enthält Links zu Informationen über die Größenänderung von Win
  Beschreibt diese Klasse und enthält Links zu allen Membern.  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
- [Ändern des Erscheinungs Bilds Windows Forms](changing-the-appearance-of-windows-forms.md)  
+ [Ändern der Darstellung von Windows Forms](changing-the-appearance-of-windows-forms.md)  
  Enthält Links zu Themen, in denen andere Möglichkeiten beschrieben werden, wie die Darstellung von Windows Forms geändert werden kann.
