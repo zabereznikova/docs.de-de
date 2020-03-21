@@ -15,42 +15,42 @@ helpviewer_keywords:
 ms.assetid: d5237628-2675-45ed-a39e-65c0731b6a56
 topic_type:
 - apiref
-ms.openlocfilehash: be4fb0b4b49408a97b318e0f54f5a753f3f24ef1
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: d8843b2b5f69696dc206e9b530e3062ff225e89e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74435799"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177583"
 ---
 # <a name="imetadataemitsavetomemory-method"></a>IMetaDataEmit::SaveToMemory-Methode
-Speichert alle Metadaten im aktuellen Gültigkeitsbereich im angegebenen Speicherbereich.  
+Speichert alle Metadaten im aktuellen Bereich im angegebenen Speicherbereich.  
   
 ## <a name="syntax"></a>Syntax  
   
 ```cpp  
-HRESULT SaveToMemory (   
-    [out]  void        *pbData,   
-    [in]   ULONG       cbData   
+HRESULT SaveToMemory (
+    [out]  void        *pbData,
+    [in]   ULONG       cbData
 );  
 ```  
   
 ## <a name="parameters"></a>Parameter  
  `pbData`  
- vorgenommen Die Adresse, an der mit dem Schreiben von Metadaten begonnen werden soll.  
+ [out] Die Adresse, an der mit dem Schreiben von Metadaten begonnen werden soll.  
   
  `cbData`  
- in Die Größe des zugeordneten Arbeitsspeichers in Bytes.  
+ [in] Die Größe des zugewiesenen Speichers in Bytes.  
   
-## <a name="requirements"></a>Voraussetzungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor. h  
+ **Kopfzeile:** Cor.h  
   
- **Bibliothek:** Wird als Ressource in Mscoree. dll verwendet.  
+ **Bibliothek:** Wird als Ressource in MSCorEE.dll verwendet  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [IMetaDataEmit-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [IMetaDataEmit2-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

@@ -15,50 +15,50 @@ helpviewer_keywords:
 ms.assetid: c6bfd574-1da3-4ba7-82f2-46ca5efcbaba
 topic_type:
 - apiref
-ms.openlocfilehash: 4e2a78e2d049e952aa1be0b3a8fd640eb18d0320
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 4c68754bc44fe035fd8e7143c52895928beae395
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74440568"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175589"
 ---
 # <a name="imetadataemitsetpinvokemap-method"></a>IMetaDataEmit::SetPinvokeMap-Methode
-Legt die Features der PInvoke-Signatur einer Methode fest, wie durch einen vorherigen Aufruf von [IMetaDataEmit::D efinepinvokemap](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definepinvokemap-method.md)definiert, oder ändert Sie.  
+Legt Features der PInvoke-Signatur einer Methode fest oder ändert diese, wie durch einen vorherigen Aufruf von [IMetaDataEmit::DefinePinvokeMap](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definepinvokemap-method.md)definiert.  
   
 ## <a name="syntax"></a>Syntax  
   
 ```cpp  
-HRESULT SetPinvokeMap (   
-    [in]  mdToken      tk,   
+HRESULT SetPinvokeMap (
+    [in]  mdToken      tk,
     [in]  DWORD        dwMappingFlags,  
-    [in]  LPCWSTR      szImportName,   
-    [in]  mdModuleRef  mrImportDLL   
+    [in]  LPCWSTR      szImportName,
+    [in]  mdModuleRef  mrImportDLL
 );  
 ```  
   
 ## <a name="parameters"></a>Parameter  
  `tk`  
- in Der `mdToken`, auf den die Mapping-Informationen angewendet werden.  
+ [in] Die `mdToken` Zuordnungsinformationen, auf die angewendet wird.  
   
  `dwMappingFlags`  
- in Flags, die von PInvoke zum Durchführen der Zuordnung verwendet werden. Dies ist eine Bitmaske von `CorPinvokeMap` Werten.  
+ [in] Flags, die von PInvoke für die Zuordnung verwendet werden. Dies ist eine `CorPinvokeMap` Bitmaske von Werten.  
   
  `szImportName`  
- in Der Name des Ziel Exports in der systemeigenen DLL.  
+ [in] Der Name des Zielexports in der systemeigenen DLL.  
   
  `mrImportDLL`  
- in Das `mdModuleRef` Token für die nicht verwaltete Ziel-dll.  
+ [in] Das `mdModuleRef` Token für die nicht verwaltete Ziel-DLL.  
   
-## <a name="requirements"></a>Voraussetzungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor. h  
+ **Kopfzeile:** Cor.h  
   
- **Bibliothek:** Wird als Ressource in Mscoree. dll verwendet.  
+ **Bibliothek:** Wird als Ressource in MSCorEE.dll verwendet  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [IMetaDataEmit-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [IMetaDataEmit2-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

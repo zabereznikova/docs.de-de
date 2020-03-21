@@ -15,54 +15,54 @@ helpviewer_keywords:
 ms.assetid: 47132dda-fa92-4bd1-ae4b-24cd9a60665a
 topic_type:
 - apiref
-ms.openlocfilehash: efc627619d9abf9cfa6010e1c0ca709989b9cad3
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: b921118f7c43edef3c07cbb34cbbd9119d36ce51
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74445462"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177552"
 ---
 # <a name="imetadataemitsetfieldprops-method"></a>IMetaDataEmit::SetFieldProps-Methode
-Legt den Standardwert für das Feld fest, auf das durch das angegebene Feld Token verwiesen wird, oder aktualisiert dieses.  
+Legt den Standardwert für das Feld fest, auf das vom angegebenen Feldtoken verwiesen wird, oder aktualisiert er.  
   
 ## <a name="syntax"></a>Syntax  
   
 ```cpp  
 HRESULT SetFieldProps (  
-    [in]  mdFieldDef  fd,   
-    [in]  DWORD       dwFieldFlags,   
-    [in]  DWORD       dwCPlusTypeFlag,   
-    [in]  void const  *pValue,   
-    [in]  ULONG       cchValue   
+    [in]  mdFieldDef  fd,
+    [in]  DWORD       dwFieldFlags,
+    [in]  DWORD       dwCPlusTypeFlag,
+    [in]  void const  *pValue,
+    [in]  ULONG       cchValue
 );  
 ```  
   
 ## <a name="parameters"></a>Parameter  
  `fd`  
- in Das Token für das Zielfeld.  
+ [in] Das Token für das Zielfeld.  
   
  `dwFieldFlags`  
- in Feld Attribute. Dies ist eine Bitmaske von `CorFieldAttr` Werten.  
+ [in] Feldattribute. Dies ist eine `CorFieldAttr` Bitmaske von Werten.  
   
  `dwCPlusTypeFlag`  
- in Der `ELEMENT_TYPE_` *\** für den konstanten Wert. Dies ist ein `CorElementType` Wert. Wenn keine Konstante definiert ist, legen Sie diesen Wert auf `ELEMENT_TYPE_END`fest.  
+ [in] Die `ELEMENT_TYPE_` *\** für den konstanten Wert. Dies `CorElementType` ist ein Wert. Wenn keine Konstante definiert wird, legen `ELEMENT_TYPE_END`Sie diesen Wert auf fest.  
   
  `pValue`  
- in Der Konstante Wert für das Feld.  
+ [in] Der konstante Wert für das Feld.  
   
  `cchValue`  
- in Die Größe `pValue`in Unicode-Zeichen.  
+ [in] Die Größe von in Unicode-Zeichen von `pValue`.  
   
-## <a name="requirements"></a>Voraussetzungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor. h  
+ **Kopfzeile:** Cor.h  
   
- **Bibliothek:** Wird als Ressource in Mscoree. dll verwendet.  
+ **Bibliothek:** Wird als Ressource in MSCorEE.dll verwendet  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [IMetaDataEmit-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [IMetaDataEmit2-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

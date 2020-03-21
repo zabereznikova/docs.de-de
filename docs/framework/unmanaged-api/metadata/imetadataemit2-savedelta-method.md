@@ -15,42 +15,42 @@ helpviewer_keywords:
 ms.assetid: b95739fe-d2fa-4776-ae0d-31d9707ef799
 topic_type:
 - apiref
-ms.openlocfilehash: afb0c09c09236267be2a999ce5c130feebb52b6f
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 0ebcab7a759b64bfbb254df1c1aa339cde77d054
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74447903"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175563"
 ---
 # <a name="imetadataemit2savedelta-method"></a>IMetaDataEmit2::SaveDelta-Methode
-Speichert Änderungen aus der aktuellen Bearbeitungs-und fortsetzungssitzung in der angegebenen Datei.  
+Speichert Änderungen aus der aktuellen Editier- und Fortsetzungssitzung in der angegebenen Datei.  
   
 ## <a name="syntax"></a>Syntax  
   
 ```cpp  
 HRESULT SaveDelta (  
-    [in] LPCWSTR     szFile,   
+    [in] LPCWSTR     szFile,
     [in] DWORD       dwSaveFlags  
 );  
 ```  
   
 ## <a name="parameters"></a>Parameter  
  `szFile`  
- in Der Dateiname, unter dem die Änderungen gespeichert werden sollen.  
+ [in] Der Dateiname, unter dem Änderungen gespeichert werden sollen.  
   
  `dwSaveFlags`  
- [in]: Reserviert Muss 0 (null) sein.  
+ [in]: Reserviert Muss Null sein.  
   
-## <a name="requirements"></a>Voraussetzungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor. h  
+ **Kopfzeile:** Cor.h  
   
- **Bibliothek:** Wird als Ressource in Mscoree. dll verwendet.  
+ **Bibliothek:** Wird als Ressource in MsCorEE.dll verwendet  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [IMetaDataEmit2-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
 - [IMetaDataEmit-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)

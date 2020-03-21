@@ -5,24 +5,24 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 51096a2e-8b38-4c4d-a523-799bfdb7ec69
-ms.openlocfilehash: a84f74bde8da9ca7e40184b76efe51cea129b66a
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: 70ee6041b14feb298d93ab452e16ee23607b3fcc
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77451849"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79174289"
 ---
 # <a name="manipulating-data"></a>Bearbeiten von Daten
-Vor der Einführung von MARS (Multiple Active Result Set) mussten Entwickler zum Lösen bestimmter Szenarien entweder mehrere Verbindungen oder serverseitige Cursor verwenden. Bei der Verwendung mehrerer Verbindungen in einem Transaktionskontext waren darüber hinaus gebundene Verbindungen (mit **sp_getbindtoken** und **sp_bindsession**) erforderlich. In den folgenden Szenarien wird veranschaulicht, wie eine Verbindung mit aktivierter MARS-Funktion anstelle mehrerer Verbindungen verwendet werden kann.  
+Vor der Einführung von MARS (Multiple Active Result Sets, mehrere aktive Resultsets) mussten Entwickler entweder mehrere Verbindungen oder serverseitige Cursor verwenden, um bestimmte Szenarien aufzulösen. Bei der Verwendung mehrerer Verbindungen in einem Transaktionskontext waren darüber hinaus gebundene Verbindungen (mit **sp_getbindtoken** und **sp_bindsession**) erforderlich. In den folgenden Szenarien wird gezeigt, wie eine MARS-fähige Verbindung anstelle mehrerer Verbindungen verwendet wird.  
   
 ## <a name="using-multiple-commands-with-mars"></a>Verwenden mehrerer Befehle mit MARS  
- In der folgenden Konsolenanwendung wird veranschaulicht, wie bei aktivierter MARS-Funktion zwei <xref:System.Data.SqlClient.SqlDataReader>-Objekte mit zwei <xref:System.Data.SqlClient.SqlCommand>-Objekten und einem einzelnen <xref:System.Data.SqlClient.SqlConnection>-Objekt verwendet werden.  
+ Die folgende Konsolenanwendung veranschaulicht die Verwendung zweier <xref:System.Data.SqlClient.SqlDataReader>-Objekte mit zwei <xref:System.Data.SqlClient.SqlCommand>-Objekten und einem einzelnen <xref:System.Data.SqlClient.SqlConnection>-Objekt bei aktiviertem MARS.  
   
 ### <a name="example"></a>Beispiel  
- Im Beispiel wird eine einzelne Verbindung mit der **AdventureWorks**-Datenbank geöffnet. Mithilfe eines <xref:System.Data.SqlClient.SqlCommand>-Objekts wird ein <xref:System.Data.SqlClient.SqlDataReader> erstellt. Während der Verwendung des Readers wird ein zweiter <xref:System.Data.SqlClient.SqlDataReader> geöffnet, der Daten aus dem ersten <xref:System.Data.SqlClient.SqlDataReader> als Eingabe für die WHERE-Klausel für den zweiten Reader verwendet.  
+ Im Beispiel wird eine einzelne Verbindung mit der **AdventureWorks**-Datenbank geöffnet. Wenn Sie ein <xref:System.Data.SqlClient.SqlCommand>-Objekt verwenden, wird ein <xref:System.Data.SqlClient.SqlDataReader> erstellt. Bei Verwenden des Readers wird ein zweiter <xref:System.Data.SqlClient.SqlDataReader> geöffnet, wobei die Daten aus dem ersten <xref:System.Data.SqlClient.SqlDataReader> als Eingabe in die WHERE-Klausel für den zweiten Reader verwendet werden.  
   
 > [!NOTE]
-> Im folgenden Beispiel wird die in SQL Server enthaltene **AdventureWorks**-Beispieldatenbank verwendet. Bei der im Beispielcode bereitgestellten Verbindungszeichenfolge wird angenommen, dass die Datenbank auf dem lokalen Computer installiert und verfügbar ist. Ändern Sie die Verbindungszeichenfolge entsprechend der Umgebung.  
+> Im folgenden Beispiel wird die in SQL Server enthaltene **AdventureWorks**-Beispieldatenbank verwendet. Bei der im Beispielcode bereitgestellten Verbindungszeichenfolge wird davon ausgegangen, dass die Datenbank auf dem lokalen Computer installiert und verfügbar ist. Ändern Sie die Verbindungszeichenfolge nach Bedarf für Ihre Umgebung.  
   
 ```vb  
 Option Strict On  
@@ -44,7 +44,7 @@ Module Module1
     Dim productCmd As SqlCommand  
     Dim productReader As SqlDataReader  
   
-    Dim vendorSQL As String = & _   
+    Dim vendorSQL As String = & _
       "SELECT VendorId, Name FROM Purchasing.Vendor"  
     Dim productSQL As String = _  
         "SELECT Production.Product.Name FROM Production.Product " & _  
@@ -108,20 +108,20 @@ static void Main()
   
   int vendorID;  
   SqlDataReader productReader = null;  
-  string vendorSQL =   
+  string vendorSQL =
     "SELECT VendorId, Name FROM Purchasing.Vendor";  
-  string productSQL =   
+  string productSQL =
     "SELECT Production.Product.Name FROM Production.Product " +  
     "INNER JOIN Purchasing.ProductVendor " +  
-    "ON Production.Product.ProductID = " +   
+    "ON Production.Product.ProductID = " +
     "Purchasing.ProductVendor.ProductID " +  
     "WHERE Purchasing.ProductVendor.VendorID = @VendorId";  
   
-  using (SqlConnection awConnection =   
+  using (SqlConnection awConnection =
     new SqlConnection(connectionString))  
   {  
     SqlCommand vendorCmd = new SqlCommand(vendorSQL, awConnection);  
-    SqlCommand productCmd =   
+    SqlCommand productCmd =
       new SqlCommand(productSQL, awConnection);  
   
     productCmd.Parameters.Add("@VendorId", SqlDbType.Int);  
@@ -157,20 +157,20 @@ static void Main()
   {  
     // To avoid storing the connection string in your code,  
     // you can retrieve it from a configuration file.  
-    return "Data Source=(local);Integrated Security=SSPI;" +   
+    return "Data Source=(local);Integrated Security=SSPI;" +
       "Initial Catalog=AdventureWorks;MultipleActiveResultSets=True";  
   }  
 }  
 ```  
   
 ## <a name="reading-and-updating-data-with-mars"></a>Lesen und Aktualisieren von Daten mit MARS  
- Mit MARS ist es möglich, eine Verbindung sowohl für Lesevorgänge als auch für DML-Vorgänge (Data Manipulation Language) mit mehr als einem ausstehenden Vorgang zu verwenden. Mit dieser Funktion müssen Anwendungen nicht mehr auf Fehler im Zusammenhang mit ausgelasteten Verbindungen reagieren. Außerdem kann Mars die Verwendung von serverseitigen Cursorn ersetzen, die in der Regel mehr Ressourcen verbrauchen. Da außerdem mehrere Vorgänge über eine einzelne Verbindung ausgeführt werden können, kann ein gemeinsamer Transaktionskontext verwendet werden. Dadurch ist die Verwendung der gespeicherten Systemprozeduren **sp_getbindtoken** und **sp_bindsession** nicht mehr erforderlich.  
+ MARS ermöglicht die Verwendung einer Verbindung sowohl für Lese- als auch für DML-Vorgänge (Data Manipulation Language, Datenbearbeitungssprache) mit mehr als einem ausstehenden Vorgang. Dieses Feature macht eine Anwendung zur Behandlung von Fehlern im Zusammenhang mit der Verbindungsauslastung überflüssig. Darüber hinaus kann MARS die Verwendung von serverseitigen Cursorn ersetzen, die in der Regel mehr Ressourcen verbrauchen. Da außerdem mehrere Vorgänge über eine einzelne Verbindung ausgeführt werden können, kann ein gemeinsamer Transaktionskontext verwendet werden. Dadurch ist die Verwendung der gespeicherten Systemprozeduren **sp_getbindtoken** und **sp_bindsession** nicht mehr erforderlich.  
   
 ### <a name="example"></a>Beispiel  
- In der folgenden Konsolenanwendung wird veranschaulicht, wie bei aktivierter MARS-Funktion zwei <xref:System.Data.SqlClient.SqlDataReader>-Objekte mit drei <xref:System.Data.SqlClient.SqlCommand>-Objekten und einem einzelnen <xref:System.Data.SqlClient.SqlConnection>-Objekt verwendet werden. Mit dem ersten Befehlsobjekt wird eine Liste von Anbietern abgerufen, deren Bonität 5 ist. Das zweite Befehlsobjekt verwendet die von einem <xref:System.Data.SqlClient.SqlDataReader> bereitgestellte Anbieter-ID, um den zweiten <xref:System.Data.SqlClient.SqlDataReader> mit allen Produkten für den bestimmten Anbieter zu laden. Die einzelnen Produktdatensätze werden vom zweiten <xref:System.Data.SqlClient.SqlDataReader> aufgerufen. Es wird eine Berechnung ausgeführt, um den neuen Wert für **OnOrderQty** zu bestimmen. Anschließend wird mithilfe des dritten Befehlsobjekts die **ProductVendor**-Tabelle mit dem neuen Wert aktualisiert. Der gesamte Prozess findet in einer einzigen Transaktion statt, für die am Ende ein Rollback ausgeführt wird.  
+ Die folgende Konsolenanwendung veranschaulicht die Verwendung zweier <xref:System.Data.SqlClient.SqlDataReader>-Objekte mit drei <xref:System.Data.SqlClient.SqlCommand>-Objekten und einem einzelnen <xref:System.Data.SqlClient.SqlConnection>-Objekt bei aktiviertem MARS. Das erste Befehlsobjekt ruft eine Liste von Anbietern ab, deren Bonitätsbewertung 5 ist. Das zweite Befehlsobjekt verwendet die von einem <xref:System.Data.SqlClient.SqlDataReader> bereitgestellte Anbieter-ID, um den zweiten <xref:System.Data.SqlClient.SqlDataReader> mit allen Produkten für den bestimmten Anbieter zu laden. Jeder Produktdatensatz wird vom zweiten <xref:System.Data.SqlClient.SqlDataReader> besucht. Es wird eine Berechnung ausgeführt, um den neuen Wert für **OnOrderQty** zu bestimmen. Anschließend wird mithilfe des dritten Befehlsobjekts die **ProductVendor**-Tabelle mit dem neuen Wert aktualisiert. Der gesamte Prozess findet innerhalb einer einzelnen Transaktion statt, für die am Ende ein Rollback erfolgt.  
   
 > [!NOTE]
-> Im folgenden Beispiel wird die in SQL Server enthaltene **AdventureWorks**-Beispieldatenbank verwendet. Bei der im Beispielcode bereitgestellten Verbindungszeichenfolge wird angenommen, dass die Datenbank auf dem lokalen Computer installiert und verfügbar ist. Ändern Sie die Verbindungszeichenfolge entsprechend der Umgebung.  
+> Im folgenden Beispiel wird die in SQL Server enthaltene **AdventureWorks**-Beispieldatenbank verwendet. Bei der im Beispielcode bereitgestellten Verbindungszeichenfolge wird davon ausgegangen, dass die Datenbank auf dem lokalen Computer installiert und verfügbar ist. Ändern Sie die Verbindungszeichenfolge nach Bedarf für Ihre Umgebung.  
   
 ```vb  
 Option Strict On  
@@ -211,7 +211,7 @@ Module Module1
         "FROM Purchasing.ProductVendor " & _  
         "WHERE VendorID = @VendorID"  
     Dim updateSQL As String = _  
-        "UPDATE Purchasing.ProductVendor " & _   
+        "UPDATE Purchasing.ProductVendor " & _
         "SET OnOrderQty = @OrderQty " & _  
         "WHERE ProductID = @ProductID AND VendorID = @VendorID"  
   
@@ -263,7 +263,7 @@ Module Module1
         End While  
       End Using  
   
-      Console.WriteLine("Total Records Updated: " & _   
+      Console.WriteLine("Total Records Updated: " & _
         CStr(totalRecordsUpdated))  
       updateTx.Rollback()  
       Console.WriteLine("Transaction Rolled Back")  
@@ -315,18 +315,18 @@ static void Main()
   int totalRecordsUpdated = 0;  
   
   string vendorSQL =  
-      "SELECT VendorID, Name FROM Purchasing.Vendor " +   
+      "SELECT VendorID, Name FROM Purchasing.Vendor " +
       "WHERE CreditRating = 5";  
   string prodVendSQL =  
       "SELECT ProductID, MaxOrderQty, MinOrderQty, OnOrderQty " +  
-      "FROM Purchasing.ProductVendor " +   
+      "FROM Purchasing.ProductVendor " +
       "WHERE VendorID = @VendorID";  
   string updateSQL =  
-      "UPDATE Purchasing.ProductVendor " +   
+      "UPDATE Purchasing.ProductVendor " +
       "SET OnOrderQty = @OrderQty " +  
       "WHERE ProductID = @ProductID AND VendorID = @VendorID";  
   
-  using (SqlConnection awConnection =   
+  using (SqlConnection awConnection =
     new SqlConnection(connectionString))  
   {  
     awConnection.Open();  
@@ -382,7 +382,7 @@ static void Main()
         }  
       }  
     }  
-    Console.WriteLine("Total Records Updated: " +   
+    Console.WriteLine("Total Records Updated: " +
       totalRecordsUpdated.ToString());  
     updateTx.Rollback();  
     Console.WriteLine("Transaction Rolled Back");  
@@ -395,14 +395,14 @@ private static string GetConnectionString()
 {  
   // To avoid storing the connection string in your code,  
   // you can retrieve it from a configuration file.  
-  return "Data Source=(local);Integrated Security=SSPI;" +   
-    "Initial Catalog=AdventureWorks;" +   
+  return "Data Source=(local);Integrated Security=SSPI;" +
+    "Initial Catalog=AdventureWorks;" +
     "MultipleActiveResultSets=True";  
   }  
 }  
 ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Mehrere aktive Resultsets (MARS)](multiple-active-result-sets-mars.md)
+- [Mehrere aktive Result Sets (MARS)](multiple-active-result-sets-mars.md)
 - [Übersicht über ADO.NET](../ado-net-overview.md)

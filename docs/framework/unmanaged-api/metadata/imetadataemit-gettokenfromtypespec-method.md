@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7de6447a-a751-49d8-87e2-951cee77b536
 topic_type:
 - apiref
-ms.openlocfilehash: 6e73160fb1927560ad381dbb85d03796296ba9a4
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 8c609d730297881c0ac20dca8569f0e9492638e9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74434290"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175719"
 ---
 # <a name="imetadataemitgettokenfromtypespec-method"></a>IMetaDataEmit::GetTokenFromTypeSpec-Methode
 Ruft ein Metadatentoken für den Typ mit der angegebenen Metadatensignatur ab.  
@@ -28,33 +28,33 @@ Ruft ein Metadatentoken für den Typ mit der angegebenen Metadatensignatur ab.
 ## <a name="syntax"></a>Syntax  
   
 ```cpp  
-HRESULT GetTokenFromTypeSpec (   
-    [in]  PCCOR_SIGNATURE       pvSig,   
-    [in]  ULONG                 cbSig,   
-    [out] mdTypeSpec            *ptypespec   
+HRESULT GetTokenFromTypeSpec (
+    [in]  PCCOR_SIGNATURE       pvSig,
+    [in]  ULONG                 cbSig,
+    [out] mdTypeSpec            *ptypespec
 );  
 ```  
   
 ## <a name="parameters"></a>Parameter  
  `pvSig`  
- in Die Signatur, die definiert wird.  
+ [in] Die Signatur, die definiert wird.  
   
  `cbSig`  
- in Die Anzahl der Bytes in `pvSig`.  
+ [in] Die Anzahl der `pvSig`Bytes in .  
   
  `ptypespec`  
- vorgenommen Das zugewiesene `mdTypeSpec` Token.  
+ [out] Das `mdTypeSpec` token zugewiesen.  
   
-## <a name="requirements"></a>Voraussetzungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor. h  
+ **Kopfzeile:** Cor.h  
   
- **Bibliothek:** Wird als Ressource in Mscoree. dll verwendet.  
+ **Bibliothek:** Wird als Ressource in MSCorEE.dll verwendet  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [IMetaDataEmit-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [IMetaDataEmit2-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

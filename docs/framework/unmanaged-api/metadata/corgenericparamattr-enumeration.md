@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 36c76266-71d8-48dc-bd89-54943fa659c1
 topic_type:
 - apiref
-ms.openlocfilehash: e4abf876681d5b04555c9f030a94b722874e326e
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: bf0008ce9429671f0c156df4256bed0b2aaee184
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74450278"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79176174"
 ---
 # <a name="corgenericparamattr-enumeration"></a>CorGenericParamAttr-Enumeration
-Enthält Werte, die die <xref:System.Type> Parameter für generische Typen beschreiben, wie Sie in Aufrufen von [IMetaDataEmit2::D efinegenericparam](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-definegenericparam-method.md)verwendet werden.  
+Enthält Werte, <xref:System.Type> die die Parameter für generische Typen beschreiben, wie sie in Aufrufen von [IMetaDataEmit2::DefineGenericParam](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-definegenericparam-method.md)verwendet werden.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -30,40 +30,40 @@ Enthält Werte, die die <xref:System.Type> Parameter für generische Typen besch
 typedef enum CorGenericParamAttr {  
   
     gpVarianceMask                     =   0x0003,  
-    gpNonVariant                       =   0x0000,   
+    gpNonVariant                       =   0x0000,
     gpCovariant                        =   0x0001,  
     gpContravariant                    =   0x0002,  
   
     gpSpecialConstraintMask            =   0x001C,  
     gpNoSpecialConstraint              =   0x0000,  
-    gpReferenceTypeConstraint          =   0x0004,   
+    gpReferenceTypeConstraint          =   0x0004,
     gpNotNullableValueTypeConstraint   =   0x0008,  
     gpDefaultConstructorConstraint     =   0x0010  
   
 } CorGenericParamAttr;  
 ```  
   
-## <a name="members"></a>Member  
+## <a name="members"></a>Members  
   
 |Member|Beschreibung|  
 |------------|-----------------|  
-|`gpVarianceMask`|Die Parameter Varianz gilt nur für generische Parameter für Schnittstellen und Delegaten.|  
-|`gpNonVariant`|Gibt an, dass keine Varianz vorhanden ist.|  
-|`gpCovariant`|Gibt Kovarianz an.|  
-|`gpContravariant`|Gibt kontra Varianz an.|  
-|`gpSpecialConstraintMask`|Besondere Einschränkungen können auf beliebige <xref:System.Type> Parameter angewendet werden.|  
-|`gpNoSpecialConstraint`|Gibt an, dass keine Einschränkung für den <xref:System.Type>-Parameter gilt.|  
-|`gpReferenceTypeConstraint`|Gibt an, dass der <xref:System.Type>-Parameter ein Referenztyp sein muss.|  
-|`gpNotNullableValueTypeConstraint`|Gibt an, dass der <xref:System.Type>-Parameter ein Werttyp sein muss, der kein NULL-Wert sein darf.|  
-|`gpDefaultConstructorConstraint`|Gibt an, dass der <xref:System.Type>-Parameter über einen öffentlichen Standardkonstruktor verfügen muss, der keine Parameter annimmt.|  
+|`gpVarianceMask`|Die Parameterabweichung gilt nur für generische Parameter für Schnittstellen und Delegaten.|  
+|`gpNonVariant`|Gibt das Fehlen von Abweichungen an.|  
+|`gpCovariant`|Gibt kovariantanzan.|  
+|`gpContravariant`|Zeigt die Kontravarianz an.|  
+|`gpSpecialConstraintMask`|Für jeden Parameter können <xref:System.Type> spezielle Einschränkungen gelten.|  
+|`gpNoSpecialConstraint`|Gibt an, dass <xref:System.Type> keine Einschränkung auf den Parameter angewendet wird.|  
+|`gpReferenceTypeConstraint`|Gibt an, dass der <xref:System.Type> Parameter ein Referenztyp sein muss.|  
+|`gpNotNullableValueTypeConstraint`|Gibt an, dass der <xref:System.Type> Parameter ein Werttyp sein muss, der kein NULL-Wert sein kann.|  
+|`gpDefaultConstructorConstraint`|Gibt an, dass der <xref:System.Type> Parameter über einen öffentlichen Standardkonstruktor verfügen muss, der keine Parameter annimmt.|  
   
-## <a name="requirements"></a>Voraussetzungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Corhdr. h  
+ **Kopfzeile:** CorHdr.h  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Metadatenenumerationen](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

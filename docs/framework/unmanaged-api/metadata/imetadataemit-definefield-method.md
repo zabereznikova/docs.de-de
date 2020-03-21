@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6b5be4fc-2e86-499c-8b09-833160bca767
 topic_type:
 - apiref
-ms.openlocfilehash: 40f24a4ea628ce92a27ab1bfe97fc87a57dfa4f0
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 8ca5ab70f60de4d783800fb18612a8f04cb9cee1
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74432544"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177713"
 ---
 # <a name="imetadataemitdefinefield-method"></a>IMetaDataEmit::DefineField-Methode
 Erstellt eine Definition für ein Feld mit der angegebenen Metadatensignatur und ruft ein Token für diese Felddefinition ab.  
@@ -28,57 +28,57 @@ Erstellt eine Definition für ein Feld mit der angegebenen Metadatensignatur und
 ## <a name="syntax"></a>Syntax  
   
 ```cpp  
-HRESULT DefineField (   
-    [in]  mdTypeDef   td,   
-    [in]  LPCWSTR     szName,   
-    [in]  DWORD       dwFieldFlags,   
-    [in]  PCCOR_SIGNATURE pvSigBlob,   
-    [in]  ULONG       cbSigBlob,   
-    [in]  DWORD       dwCPlusTypeFlag,   
-    [in]  void const  *pValue,   
-    [in]  ULONG       cchValue,   
-    [out] mdFieldDef  *pmd   
+HRESULT DefineField (
+    [in]  mdTypeDef   td,
+    [in]  LPCWSTR     szName,
+    [in]  DWORD       dwFieldFlags,
+    [in]  PCCOR_SIGNATURE pvSigBlob,
+    [in]  ULONG       cbSigBlob,
+    [in]  DWORD       dwCPlusTypeFlag,
+    [in]  void const  *pValue,
+    [in]  ULONG       cchValue,
+    [out] mdFieldDef  *pmd
 );  
 ```  
   
 ## <a name="parameters"></a>Parameter  
  `td`  
- in Das `mdTypeDef` Token für die einschließende Klasse oder Schnittstelle.  
+ [in] Das `mdTypeDef` Token für die einschließende Klasse oder Schnittstelle.  
   
  `szName`  
- in Der Feldname in Unicode.  
+ [in] Der Feldname in Unicode.  
   
  `dwFieldFlags`  
- in Die Feld Attribute. Dies ist eine Bitmaske von `CorFieldAttr` Werten.  
+ [in] Die Feldattribute. Dies ist eine `CorFieldAttr` Bitmaske von Werten.  
   
  `pvSigBlob`  
- in Die Feld Signatur als BLOB.  
+ [in] Die Feldsignatur als BLOB.  
   
  `cbSigBlob`  
- in Die Anzahl der Bytes in `pvSigBlob`.  
+ [in] Die Anzahl der `pvSigBlob`Bytes in .  
   
  `dwCPlusTypeFlag`  
- in Der `ELEMENT_TYPE_` *\** für den konstanten Wert. Dies ist ein `CorElementType` Wert. Wenn Sie keinen konstanten Wert für das Feld definieren, verwenden Sie `ELEMENT_TYPE_END`.  
+ [in] Die `ELEMENT_TYPE_` *\** für den konstanten Wert. Dies `CorElementType` ist ein Wert. Wenn Sie keinen konstanten Wert `ELEMENT_TYPE_END`für das Feld definieren, verwenden Sie .  
   
  `pValue`  
- in Der Konstante Wert für das Feld.  
+ [in] Der konstante Wert für das Feld.  
   
  `cchValue`  
- in Die Größe in (Unicode)-Zeichen `pValue`.  
+ [in] Die Größe in (Unicode)-Zeichen von `pValue`.  
   
  `pmd`  
- vorgenommen Das zugewiesene `mdFieldDef` Token.  
+ [out] Das `mdFieldDef` token zugewiesen.  
   
-## <a name="requirements"></a>Voraussetzungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor. h  
+ **Kopfzeile:** Cor.h  
   
- **Bibliothek:** Wird als Ressource in Mscoree. dll verwendet.  
+ **Bibliothek:** Wird als Ressource in MSCorEE.dll verwendet  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [IMetaDataEmit-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [IMetaDataEmit2-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

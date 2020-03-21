@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8cc3b0c3-d97d-4f71-9e7d-ef2a92b4959a
 topic_type:
 - apiref
-ms.openlocfilehash: 8e9e08ac903423b2e121f22cc9e43a660ccfac7b
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 218b65b5899692774c434ae136a3976ecb97ea2f
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74450083"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177312"
 ---
 # <a name="imetadataimportenummethods-method"></a>IMetaDataImport::EnumMethods-Methode
 Zählt MethodDef-Token auf, die Methoden des angegebenen Typs darstellen.  
@@ -29,47 +29,47 @@ Zählt MethodDef-Token auf, die Methoden des angegebenen Typs darstellen.
   
 ```cpp  
 HRESULT EnumMethods (  
-   [in, out] HCORENUM   *phEnum,   
-   [in]  mdTypeDef      cl,   
-   [out] mdMethodDef    rMethods[],   
-   [in]  ULONG          cMax,   
+   [in, out] HCORENUM   *phEnum,
+   [in]  mdTypeDef      cl,
+   [out] mdMethodDef    rMethods[],
+   [in]  ULONG          cMax,
    [out] ULONG          *pcTokens  
 );  
 ```  
   
 ## <a name="parameters"></a>Parameter  
  `phEnum`  
- [in, out] Ein Zeiger auf den Enumerator. Dieser Wert muss für den ersten-Rückruf dieser Methode NULL sein.  
+ [in, out] Ein Zeiger auf den Enumerator. Dies muss NULL für den ersten Aufruf dieser Methode sein.  
   
  `cl`  
- in Ein TypeDef-Token, das den Typ mit den aufzuzählenden Methoden darstellt.  
+ [in] Ein TypeDef-Token, das den Typ mit den aufzuzählenden Methoden darstellt.  
   
  `rMethods`  
- vorgenommen Das Array zum Speichern der MethodDef-Token.  
+ [out] Das Array, das die MethodDef-Token speichert.  
   
  `cMax`  
- in Die maximale Größe des MethodDef-`rMethods` Arrays.  
+ [in] Die maximale Größe des `rMethods` MethodDef-Arrays.  
   
  `pcTokens`  
- vorgenommen Die Anzahl der MethodDef-Token, die in `rMethods`zurückgegeben werden.  
+ [out] Die Anzahl der methodDef-Token, die in `rMethods`zurückgegeben werden.  
   
 ## <a name="return-value"></a>Rückgabewert  
   
 |HRESULT|Beschreibung|  
 |-------------|-----------------|  
-|`S_OK`|`EnumMethods` erfolgreich zurückgegeben.|  
-|`S_FALSE`|Es sind keine MethodDef-Token zum Auflisten vorhanden. In diesem Fall `pcTokens` gleich 0 (null) ist.|  
+|`S_OK`|`EnumMethods`erfolgreich zurückgegeben werden.|  
+|`S_FALSE`|Es sind keine MethodDef-Token zum Aufzählen vorhanden. In diesem `pcTokens` Fall ist Null.|  
   
-## <a name="requirements"></a>Voraussetzungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor. h  
+ **Kopfzeile:** Cor.h  
   
- **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
+ **Bibliothek:** Als Ressource in MsCorEE.dll enthalten  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [IMetaDataImport-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [IMetaDataImport2-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

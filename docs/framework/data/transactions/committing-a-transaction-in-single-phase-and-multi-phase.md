@@ -5,21 +5,21 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 694ea153-e4db-41ae-96ac-9ac66dcb69a9
-ms.openlocfilehash: 2abb9c13e9b0cb394546252e0e51e53c8ff9eefb
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 8d6c51249f104d35573507a9477a24d66d770693
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70206000"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79174432"
 ---
 # <a name="committing-a-transaction-in-single-phase-and-multi-phase"></a>Ausführen eines Einphasen- oder Mehrphasencommits für eine Transaktion
-Jede in einer Transaktion verwendete Ressource wird von einem Ressourcen-Manager (RM) verwaltet, dessen Aktionen von einem Transaktions-Manager (TM) koordiniert werden. Im Thema eintragen von [Ressourcen als Teilnehmer in einer Transaktion](enlisting-resources-as-participants-in-a-transaction.md) wird erläutert, wie eine Ressource (oder mehrere Ressourcen) in eine Transaktion eingetragen werden kann. In diesem Thema wird erläutert, wie das Ausführen von Commits für Transaktionen unter eingetragenen Ressourcen koordiniert werden kann.  
+Jede in einer Transaktion verwendete Ressource wird von einem Ressourcen-Manager (RM) verwaltet, dessen Aktionen von einem Transaktions-Manager (TM) koordiniert werden. Im Thema ["Einlisten von Ressourcen als Teilnehmer an einer Transaktion"](enlisting-resources-as-participants-in-a-transaction.md) wird erläutert, wie eine Ressource (oder mehrere Ressourcen) in eine Transaktion eingetragen werden kann. In diesem Thema wird erläutert, wie das Ausführen von Commits für Transaktionen unter eingetragenen Ressourcen koordiniert werden kann.  
   
- Am Ende der Transaktion fordert die Anwendung zur Ausführung eines Commit oder eines Rollback für die Transaktion auf. Der Transaktions-Manager muss Risiken verhindern, wie sie beispielsweise entstehen, wenn einige Ressourcen-Manager für einen Commit und andere für ein Rollback stimmen.  
+ Am Ende der Transaktion fordert die Anwendung die Transaktion auf, entweder einen Commit oder Rollback auszuführen. Der Transaktions-Manager muss Risiken verhindern, wie sie beispielsweise entstehen, wenn einige Ressourcen-Manager für einen Commit und andere für ein Rollback stimmen.  
   
- Wenn die Transaktion mehr als eine Ressource umfasst, müssen Sie ein Zweiphasencommit (2PC) ausführen. Mit dem Zweiphasencommit-Protokoll (Vorbereitungs- und Commitphase) wird sichergestellt, dass am Ende der Transaktion für alle Änderungen an allen Ressourcen entweder ein vollständiges Commit ausgeführt wurde oder sie vollständig zurückgesetzt wurden. Alle Teilnehmer werden dann über das Endergebnis informiert. Eine ausführliche Erläuterung des Zweiphasencommit-Protokolls finden Sie im Buch "*Transaktionsverarbeitung: Konzepte und Techniken (Morgan Kaufmann Series in Datenverwaltung Systems) ISBN: 1558601902*"von Jim Gray.  
+ Wenn die Transaktion mehr als eine Ressource umfasst, müssen Sie ein Zweiphasencommit (2PC) ausführen. Mit dem Zweiphasencommit-Protokoll (Vorbereitungs- und Commitphase) wird sichergestellt, dass am Ende der Transaktion für alle Änderungen an allen Ressourcen entweder ein vollständiges Commit ausgeführt wurde oder sie vollständig zurückgesetzt wurden. Alle Teilnehmer werden dann über das Endergebnis informiert. Für eine ausführliche Diskussion des zweiphasigen Commit-Protokolls lesen Sie bitte das Buch "*Transaction Processing : Concepts and Techniques (Morgan Kaufmann Series in Data Management Systems) ISBN:1558601902*" von Jim Gray.  
   
- Sie können zudem die Leistung der Transaktion optimieren, indem Sie am Einphasencommit-Protokoll teilnehmen. Weitere Informationen finden Sie unter [Optimization using Single Phase Commit and Promotable Single Phase Notification](optimization-spc-and-promotable-spn.md).  
+ Sie können zudem die Leistung der Transaktion optimieren, indem Sie am Einphasencommit-Protokoll teilnehmen. Weitere Informationen finden Sie unter [Optimierung mit Single Phase Commit und Promotable Single Phase Notification](optimization-spc-and-promotable-spn.md).  
   
  Wenn Sie lediglich über das Ergebnis einer Transaktion informiert werden, aber am Abstimmen nicht teilnehmen möchten, können Sie sich für das <xref:System.Transactions.Transaction.TransactionCompleted>-Ereignis anmelden.  
   
@@ -88,8 +88,8 @@ public void Rollback (Enlistment enlistment)
 {  
      // Do any work necessary when rollback notification is received  
   
-     // Declare done on the enlistment    
-     enlistment.Done();    
+     // Declare done on the enlistment
+     enlistment.Done();
 }  
 ```  
   
@@ -107,9 +107,9 @@ public void InDoubt (Enlistment enlistment)
 ```  
   
 ## <a name="single-phase-commit-optimization"></a>Optimierung des Einphasencommit  
- Das Einphasencommit-Protokoll ist zur Laufzeit effizienter, da alle Updates ohne eine explizite Koordination ausgeführt werden. Weitere Informationen zu diesem Protokoll finden Sie unter [Optimization using Single Phase Commit and Promotable Single Phase Notification](optimization-spc-and-promotable-spn.md).  
+ Das Einphasencommit-Protokoll ist zur Laufzeit effizienter, da alle Updates ohne eine explizite Koordination ausgeführt werden. Weitere Informationen zu diesem Protokoll finden Sie unter [Optimierung mit Single Phase Commit und Promotable Single Phase Notification](optimization-spc-and-promotable-spn.md).  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Optimierung mit Einphasencommit und heraufstufbarer Einphasenbenachrichtigung](optimization-spc-and-promotable-spn.md)
 - [Eintragen von Ressourcen als Teilnehmer an einer Transaktion](enlisting-resources-as-participants-in-a-transaction.md)

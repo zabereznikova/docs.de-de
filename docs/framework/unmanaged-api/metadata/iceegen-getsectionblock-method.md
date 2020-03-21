@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 05c78aaf-5bbd-497e-9ae2-55f4fae0c5fb
 topic_type:
 - apiref
-ms.openlocfilehash: 0731053fb37c775d25052a5fd99a479a44ff5862
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: a494b1aaa762549528e92ab93d18929ef73eb8da
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74434878"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79176083"
 ---
 # <a name="iceegengetsectionblock-method"></a>ICeeGen::GetSectionBlock-Methode
-Ruft einen Abschnitts Block der Codebasis ab.  
+Ruft einen Abschnittsblock der Codebasis ab.  
   
  Diese Methode ist veraltet und sollte nicht verwendet werden.  
   
@@ -31,38 +31,38 @@ Ruft einen Abschnitts Block der Codebasis ab.
   
 ```cpp  
 HRESULT GetSectionBlock (  
-    [in]  HCEESECTION    section,     
+    [in]  HCEESECTION    section,
     [in]  ULONG          len,  
     [in]  ULONG          align     = 1,  
     [out] void           **ppBytes = 0  
-);   
+);
 ```  
   
 ## <a name="parameters"></a>Parameter  
  `section`  
- in Der Abschnitt, aus dem ein Block der Codebasis abgerufen wird.  
+ [in] Der Abschnitt, aus dem ein Block der Codebasis abgerufen werden soll.  
   
  `len`  
- in Die Länge des abzurufenden Blocks.  
+ [in] Die Länge des abrufbaren Blocks.  
   
  `align`  
- in Das Byte relativ zum Anfang des Abschnitts, mit dem das erste Byte des Blocks ausgerichtet werden soll. Dies ist die Position des-Blocks innerhalb des-Abschnitts.  
+ [in] Das Byte relativ zum Anfang des Abschnitts, mit dem das erste Byte des Blocks ausgerichtet werden soll. Dies ist die Position des Blocks innerhalb des Abschnitts.  
   
  `ppBytes`  
- vorgenommen Ein Zeiger auf einen Speicherort, der die Adresse des abgerufenen Blocks empfängt.  
+ [out] Ein Zeiger auf eine Position, die die Adresse des abgerufenen Blocks empfängt.  
   
-## <a name="remarks"></a>Hinweise  
- Wenn Sie über besondere Abschnitts Anforderungen verfügen, die nicht von anderen Methoden behandelt werden, wenden Sie `GetSectionBlock` nur an.  
+## <a name="remarks"></a>Bemerkungen  
+ Rufen `GetSectionBlock` Sie nur an, wenn Sie spezielle Abschnittsanforderungen haben, die nicht von anderen Methoden verarbeitet werden.  
   
-## <a name="requirements"></a>Voraussetzungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor. h  
+ **Kopfzeile:** Cor.h  
   
- **Bibliothek:** Wird als Ressource in Mscoree. dll verwendet.  
+ **Bibliothek:** Wird als Ressource in MsCorEE.dll verwendet  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [ICeeGen-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)

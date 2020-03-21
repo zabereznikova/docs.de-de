@@ -15,61 +15,61 @@ helpviewer_keywords:
 ms.assetid: a3007f5e-d75d-4b37-842b-704e9edced5e
 topic_type:
 - apiref
-ms.openlocfilehash: 9837e4e3428a0293c8e689b3f3e081aa07f055b2
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: dded37fdef02963f60883b289462aa6a96693b3d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73192067"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79176304"
 ---
 # <a name="ihostmallocalloc-method"></a>IHostMAlloc::Alloc-Methode
-Fordert an, dass der Host die angegebene Arbeitsspeicher Menge aus dem Heap zuweist.  
+Fordert an, dass der Host die angegebene Speichermenge aus dem Heap zuweist.  
   
 ## <a name="syntax"></a>Syntax  
   
 ```cpp  
 HRESULT Alloc (  
-    [in] SIZE_T  cbSize,   
-    [in] EMemoryCriticalLevel dwCriticalLevel,   
+    [in] SIZE_T  cbSize,
+    [in] EMemoryCriticalLevel dwCriticalLevel,
     [out] void** ppMem  
 );  
 ```  
   
 ## <a name="parameters"></a>Parameter  
  `cbSize`  
- in Die Größe der aktuellen Speicher Belegungs Anforderung in Bytes.  
+ [in] Die Größe der aktuellen Speicherzuweisungsanforderung in Bytes.  
   
  `dwCriticalLevel`  
- in Einer der [EMemoryCriticalLevel](../../../../docs/framework/unmanaged-api/hosting/ememorycriticallevel-enumeration.md) -Werte, der die Auswirkung eines Zuordnungs Fehlers angibt.  
+ [in] Einer der [EMemoryCriticalLevel-Werte,](../../../../docs/framework/unmanaged-api/hosting/ememorycriticallevel-enumeration.md) der die Auswirkungen eines Zuordnungsfehlers angibt.  
   
  `ppMem`  
- vorgenommen Ein Zeiger auf den zugeordneten Arbeitsspeicher oder NULL, wenn die Anforderung nicht abgeschlossen werden konnte.  
+ [out] Ein Zeiger auf den zugewiesenen Speicher oder NULL, wenn die Anforderung nicht abgeschlossen werden konnte.  
   
 ## <a name="return-value"></a>Rückgabewert  
   
 |HRESULT|Beschreibung|  
 |-------------|-----------------|  
-|S_OK|`Alloc` erfolgreich zurückgegeben.|  
-|HOST_E_CLRNOTAVAILABLE|Der Common Language Runtime (CLR) wurde nicht in einen Prozess geladen, oder die CLR befindet sich in einem Zustand, in dem Sie verwalteten Code nicht ausführen oder den-Befehl nicht erfolgreich verarbeiten kann.|  
-|HOST_E_TIMEOUT|Timeout des Aufrufes.|  
-|HOST_E_NOT_OWNER|Der Aufrufer ist nicht Besitzer der Sperre.|  
-|HOST_E_ABANDONED|Ein Ereignis wurde abgebrochen, während ein blockierter Thread oder eine Fiber darauf wartete.|  
-|E_FAIL|Ein unbekannter schwerwiegender Fehler ist aufgetreten. Wenn eine Methode E_FAIL zurückgibt, kann die CLR innerhalb des Prozesses nicht mehr verwendet werden. Nachfolgende Aufrufe von Hostingmethoden geben HOST_E_CLRNOTAVAILABLE zurück.|  
-|E_OUTOFMEMORY|Zum Abschluss der Zuordnungs Anforderung war nicht genügend Arbeitsspeicher verfügbar.|  
+|S_OK|`Alloc`erfolgreich zurückgegeben werden.|  
+|HOST_E_CLRNOTAVAILABLE|Die Common Language Runtime (CLR) wurde nicht in einen Prozess geladen, oder die CLR befindet sich in einem Zustand, in dem sie keinen verwalteten Code ausführen oder den Aufruf erfolgreich verarbeiten kann.|  
+|HOST_E_TIMEOUT|Timeout für den Anruf.|  
+|HOST_E_NOT_OWNER|Der Aufrufer besitzt die Sperre nicht.|  
+|HOST_E_ABANDONED|Ein Ereignis wurde abgebrochen, während ein blockierter Thread oder eine blockierte Faser darauf wartete.|  
+|E_FAIL|Ein unbekannter katastrophaler Fehler ist aufgetreten. Wenn eine Methode E_FAIL zurückgibt, kann die CLR innerhalb des Prozesses nicht mehr verwendet werden. Nachfolgende Aufrufe von Hostingmethoden geben HOST_E_CLRNOTAVAILABLE zurück.|  
+|E_OUTOFMEMORY|Es war nicht genügend Arbeitsspeicher verfügbar, um die Zuweisungsanforderung abzuschließen.|  
   
-## <a name="remarks"></a>Hinweise  
- Die CLR ruft durch Aufrufen der [IHostMemoryManager:: createmzuzugsmethode](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-createmalloc-method.md) einen Schnittstellen Zeiger auf eine `IHostMalloc` Instanz ab.  
+## <a name="remarks"></a>Bemerkungen  
+ Die CLR ruft einen Schnittstellenzeiger auf eine `IHostMalloc` Instanz ab, indem sie die [IHostMemoryManager::CreateMalloc-Methode](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-createmalloc-method.md) aufruft.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Mscoree. h  
+ **Kopfzeile:** MSCorEE.h  
   
- **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
+ **Bibliothek:** Als Ressource in MSCorEE.dll enthalten  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [IHostMemoryManager-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-interface.md)
 - [IHostMalloc-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/ihostmalloc-interface.md)

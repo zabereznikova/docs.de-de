@@ -5,26 +5,24 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 00c12376-cb26-4317-86ad-e6e9c089be57
-ms.openlocfilehash: fabd9b94b8c0a3f0e0db220e84d6c2eca3537c50
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 2bd67a9315eda4161d4b76e1638f5c08f9598a52
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894420"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79174484"
 ---
 # <a name="sql-server-express-user-instances"></a>SQL Server Express-Benutzerinstanzen
-Microsoft SQL Server Express Edition (SQL Server Express) unterstützt die Benutzerinstanzfunktion, die die Verwendung des .NET Framework-Datenanbieters für SQL Server (`SqlClient`) voraussetzt. Eine Benutzerinstanz ist eine separate Instanz der SQL Server Express-Datenbank-Engine, die von einer übergeordneten Instanz generiert wird. Mit Benutzerinstanzen können Benutzer, die auf ihrem lokalen Computer nicht mit Administratorrechten arbeiten, eine Verbindung zu SQL Server Express-Datenbanken herstellen. Jede Instanz wird im Sicherheitskontext des jeweiligen Benutzers ausgeführt, wobei für jeden Benutzer genau eine Instanz erstellt wird.  
+Microsoft SQL Server Express Edition (SQL Server Express) unterstützt die Benutzerinstanzfunktion, die die Verwendung des .NET Framework-Datenanbieters für SQL Server (`SqlClient`) voraussetzt. Eine Benutzerinstanz ist eine separate Instanz der SQL Server Express-Datenbank-Engine, die von einer übergeordneten Instanz generiert wird. Benutzerinstanzen ermöglichen Benutzern, die keine Administratoren auf ihren lokalen Computern sind, eine Verbindung mit SQL Server Express-Datenbanken herzustellen. Jede Instanz wird im Sicherheitskontext des jeweiligen Benutzers auf instanz- und benutzerbezogener Basis ausgeführt.  
   
 ## <a name="user-instance-capabilities"></a>Was können Benutzerinstanzen?  
- Benutzerinstanzen eignen sich für Benutzer, die Windows in einem Konto der untersten Berechtigungsebene (Least-Priviledged User Account, LUA) ausführen, da jeder Benutzer über SQL Server-Systemadministratorberechtigungen (`sysadmin`) für die Instanz verfügt, die auf seinem Computer ausgeführt wird, ohne dass dazu auch Windows mit Administratorrechten ausgeführt werden muss. Software, die in einer Benutzerinstanz mit eingeschränkten Berechtigungen ausgeführt wird, kann keine systemweiten Änderungen vornehmen, da die SQL Server Express-Instanz beim Benutzer über das Windows-Konto ohne Administratorberechtigung und nicht als Dienst ausgeführt wird. Jede Benutzerinstanz ist von ihrer übergeordneten Instanz und von allen anderen Benutzerinstanzen isoliert, die auf demselben Computer ausgeführt werden. Auf einer Benutzerinstanz installierte Datenbanken werden nur im Einzelbenutzermodus geöffnet. Es ist ausgeschlossen, dass mehrere Benutzer eine Verbindung mit einer Datenbank herstellen können, die auf einer Benutzerinstanz ausgeführt wird. Replikation und verteilte Abfragen sind für Benutzerinstanzen ebenfalls deaktiviert.  
-  
- Weitere Informationen dazu finden Sie im Abschnitt zu Benutzerinstanzen in der SQL Server-Onlinedokumentation.  
+ Benutzerinstanzen sind nützlich für Benutzer, die Windows unter einem Benutzerkonto mit den geringsten Berechtigungen (LUA) ausführen. Jeder Benutzer verfügt über`sysadmin`SQL Server-Systemadministratorrechte ( ) über die Instanz, die auf seinem Computer ausgeführt wird, ohne dass er auch als Windows-Administrator ausgeführt werden muss. Software, die auf einer Benutzerinstanz mit eingeschränkten Berechtigungen ausgeführt wird, kann keine systemweiten Änderungen vornehmen, da die Instanz von SQL Server Express unter dem nicht zum Administrator gehörigen Windows-Konto des Benutzers und nicht als Dienst ausgeführt wird. Jede Benutzerinstanz ist von ihrer übergeordneten Instanz sowie von allen anderen Benutzerinstanzen, die auf demselben Computer ausgeführt werden, isoliert. Datenbanken, die in einer Benutzerinstanz ausgeführt werden, werden nur im Einzelbenutzermodus geöffnet. Es ist nicht möglich, dass mehrere Benutzer eine Verbindung mit Datenbanken herstellen, die in einer Benutzerinstanz ausgeführt werden. Replikation und verteilte Abfragen sind für Benutzerinstanzen ebenfalls deaktiviert.
   
 > [!NOTE]
-> Benutzer, die auf ihrem Computer bereits mit Administratorberechtigungen arbeiten, benötigen keine Benutzerinstanzen. Auch in Szenarien mit mehreren Datenbankbenutzern sind Benutzerinstanzen nicht erforderlich.  
+> Für Benutzer, die bereits Administratoren auf ihren eigenen Computern sind, oder für Szenarien mit mehreren Datenbankbenutzern werden keine Benutzerinstanzen benötigt.  
   
 ## <a name="enabling-user-instances"></a>Aktivieren von Benutzerinstanzen  
- Zum Generieren von Benutzerinstanzen muss eine übergeordnete Instanz von SQL Server Express ausgeführt werden. Benutzer Instanzen werden standardmäßig aktiviert, wenn SQL Server Express installiert ist. Sie können von einem Systemadministrator, der die gespeicherte System Prozedur **sp_configure** auf der übergeordneten Instanz ausführt, explizit aktiviert oder deaktiviert werden.  
+ Um Benutzerinstanzen zu generieren, muss eine übergeordnete Instanz von SQL Server Express ausgeführt werden. Benutzerinstanzen werden bei der Installation von SQL Server Express standardmäßig aktiviert. Sie können aber auch von einem Systemadministrator durch Ausführen der gespeicherten Systemprozedur **sp_configure** auf der übergeordneten Instanz explizit aktiviert oder deaktiviert werden.  
   
 ```sql  
 -- Enable user instances.  
@@ -34,22 +32,22 @@ sp_configure 'user instances enabled','1'
 sp_configure 'user instances enabled','0'  
 ```  
   
- Als Netzwerkprotokoll für Benutzerinstanzen kommen lokale Named Pipes zum Einsatz. Benutzerinstanzen können nicht auf einer Remoteinstanz von SQL Server gestartet werden, und SQL Server-Anmeldungen sind ebenfalls nicht zulässig.  
+ Das Netzwerkprotokoll für Benutzerinstanzen muss Named Pipes (lokal) sein. Eine Benutzerinstanz kann nicht in einer Remote-Instanz von SQL Server gestartet werden, und SQL Server-Anmeldungen sind nicht zulässig.  
   
 ## <a name="connecting-to-a-user-instance"></a>Herstellen einer Verbindung mit einer Benutzerinstanz  
- Mit `User Instance` den `AttachDBFilename` Schlüsselwörtern und <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A> kann eine eine <xref:System.Data.SqlClient.SqlConnection> Verbindung mit einer Benutzer Instanz herstellen. Benutzerinstanzen werden auch von den <xref:System.Data.SqlClient.SqlConnectionStringBuilder>-Eigenschaften `UserInstance` und `AttachDBFilename` unterstützt.  
+ Mit den Schlüsselwörtern `User Instance` und `AttachDBFilename`<xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A> kann eine <xref:System.Data.SqlClient.SqlConnection> eine Verbindung mit einer Benutzerinstanz herstellen. Benutzerinstanzen werden auch von den Eigenschaften <xref:System.Data.SqlClient.SqlConnectionStringBuilder>`UserInstance` und `AttachDBFilename` unterstützt.  
   
- Beachten Sie bei der unten genannten Beispielverbindungszeichenfolge Folgendes:  
+ Beachten Sie Folgendes zum nachstehend gezeigten Beispiel einer Verbindungszeichenfolge:  
   
-- Das `Data Source`-Schlüsselwort verweist auf die übergeordnete Instanz von SQL Server Express, die die Benutzerinstanz generiert. Die Standardinstanz ist .\sqlexpress.  
+- Das Schlüsselwort `Data Source` bezieht sich auf die übergeordnete Instanz von SQL Server Express, die die Benutzerinstanz generiert. Die Standardinstanz ist „.\sqlexpress“.  
   
-- Für `Integrated Security` ist `true` festgelegt. Zur Herstellung einer Verbindung mit einer Benutzerinstanz ist die Windows-Authentifizierung erforderlich. SQL Server-Anmeldungen werden nicht unterstützt.  
+- `Integrated Security` ist auf `true` festgelegt. Um sich mit einer Benutzerinstanz zu verbinden, ist die Windows-Authentifizierung erforderlich. SQL Server-Anmeldungen werden nicht unterstützt.  
   
-- Für `User Instance` ist `true` festgelegt, wodurch eine Benutzerinstanz aufgerufen wird. (Der Standardwert ist `false`.)  
+- `User Instance` ist auf `true` festgelegt, wodurch eine Benutzerinstanz aufgerufen wird. (Standardwert: `false`.)  
   
-- Das Schlüsselwort für die `AttachDbFileName`-Verbindungszeichenfolge wird verwendet, um die primäre Datenbankdatei (.mdf) anzufügen. Diese muss den vollständigen Pfadnamen enthalten. `AttachDbFileName` entspricht auch den Schlüsseln "extended properties" und "initial file name" in einer <xref:System.Data.SqlClient.SqlConnection>-Verbindungszeichenfolge.  
+- Das Schlüsselwort `AttachDbFileName` für Verbindungszeichenfolgen wird zum Anfügen der primären Datenbankdatei (.mdf) verwendet, die den vollständigen Pfadnamen enthalten muss. `AttachDbFileName` entspricht außerdem den Schlüsseln „extended properties“ und „initial file name“ in einer <xref:System.Data.SqlClient.SqlConnection>-Verbindungszeichenfolge.  
   
-- Die `|DataDirectory|`-Ersatzzeichenfolge zwischen den vertikalen Strichen (|) verweist auf das Datenverzeichnis der Anwendung, die die Verbindung öffnet, und gibt den relativen Pfad zum Speicherort der MDF- und LDF-Datenbank- und Protokolldateien an. Wenn sich diese Dateien woanders befinden, müssen Sie den vollständigen Pfad zu den Dateien angeben.  
+- Die Ersetzungszeichenfolge `|DataDirectory|` zwischen senkrechten Strichen bezieht sich auf das Datenverzeichnis der Anwendung, die die Verbindung öffnet. Sie stellt einen relativen Pfad dar, der den Speicherort der MDF- und LDF-Datenbank und der Protokolldateien angibt. Wenn Sie diese Dateien an einem anderen Speicherort ablegen möchten, müssen Sie den vollständigen Pfad zu den Dateien angeben.  
   
 ```text
 Data Source=.\\SQLExpress;Integrated Security=true;  
@@ -58,12 +56,12 @@ Initial Catalog=InstanceDB;
 ```  
   
 > [!NOTE]
-> Sie können mit der <xref:System.Data.SqlClient.SqlConnectionStringBuilder><xref:System.Data.SqlClient.SqlConnectionStringBuilder.UserInstance%2A>-Eigenschaft und der <xref:System.Data.SqlClient.SqlConnectionStringBuilder.AttachDBFilename%2A>-Eigenschaft eine Verbindungszeichenfolge zur Laufzeit erstellen.  
+> Sie können auch die Eigenschaften <xref:System.Data.SqlClient.SqlConnectionStringBuilder><xref:System.Data.SqlClient.SqlConnectionStringBuilder.UserInstance%2A> und <xref:System.Data.SqlClient.SqlConnectionStringBuilder.AttachDBFilename%2A> verwenden, um zur Laufzeit eine Verbindungszeichenfolge zu erstellen.  
   
-### <a name="using-the-124datadirectory124-substitution-string"></a>Verwenden der &#124;DataDirectory&#124; -Ersetzungs Zeichenfolge  
- `AttachDbFileName` wurde in ADO.NET 2.0 mit der Einführung der `|DataDirectory|`-Ersatzzeichenfolge (zwischen Pipesymbolen) erweitert. `DataDirectory` wird in Verbindung mit `AttachDbFileName` verwendet, um einen relativen Pfad zu einer Datendatei anzugeben. Damit wird es Entwicklern ermöglicht, Verbindungszeichenfolgen zu erstellen, die auf einem relativen Pfad zur Datenquelle basieren. Es muss kein vollständiger Pfad angegeben werden.  
+### <a name="using-the-124datadirectory124-substitution-string"></a>Verwenden des &#124;DataDirectory&#124; SubstitutionString  
+ `AttachDbFileName` wurde in ADO.NET 2.0 mit der Einführung der `|DataDirectory|`-Ersatzzeichenfolge (zwischen Pipesymbolen) erweitert. `DataDirectory` wird in Verbindung mit `AttachDbFileName` verwendet, um einen relativen Pfad zu einer Datendatei anzugeben. Damit wird Entwicklern ermöglicht, Verbindungszeichenfolgen zu erstellen, die auf einem relativen Pfad zur Datenquelle basieren. Es muss kein vollständiger Pfad angegeben werden.  
   
- Auf welchen physischen Speicherort `DataDirectory` verweist, hängt von der Art der Anwendung ab. In diesem Beispiel befindet sich die anzufügende Datei Northwind.mdf im Ordner \app_data der Anwendung.  
+ Der physische Speicherort, auf den `DataDirectory` zeigt, hängt von der Art der Anwendung ab. In diesem Beispiel befindet sich die anzufügende Datei „Northwind.mdf“ im Ordner „\app_data“ der Anwendung.  
   
 ```text
 Data Source=.\\SQLExpress;Integrated Security=true;  
@@ -72,19 +70,19 @@ AttachDBFilename=|DataDirectory|\app_data\Northwind.mdf;
 Initial Catalog=Northwind;  
 ```  
   
- Bei Verwendung von `DataDirectory` darf sich der resultierende Dateipfad in der Verzeichnisstruktur nicht über dem Verzeichnis befinden, auf das in der Ersatzzeichenfolge verwiesen wird. Wenn z. B. das vollständige Datenverzeichnis in C:\AppDirectory\app_data`DataDirectory` lautet, funktioniert die oben genannte Beispielverbindungszeichenfolge, weil sie sich unterhalb von C:\AppDirectory befindet. Wenn aber versucht wird, das `DataDirectory` als `|DataDirectory|\..\data` anzugeben, wird ein Fehler ausgelöst, weil &lt;legacyBold&gt;\data&lt;/legacyBold&gt; kein Unterverzeichnis von &lt;legacyBold&gt;\AppDirectory&lt;/legacyBold&gt; ist.  
+ Wenn `DataDirectory` verwendet wird, kann der resultierende Dateipfad in der Verzeichnisstruktur nicht höher sein als das Verzeichnis, auf das die Ersetzungszeichenfolge zeigt. Wenn beispielsweise c:\AppDirectory\app_data das vollständig erweiterte `DataDirectory` ist, funktioniert die oben gezeigte Beispielverbindungszeichenfolge, weil sie sich unterhalb von c:\AppDirectory befindet. Wenn aber versucht wird, `DataDirectory` als `|DataDirectory|\..\data` anzugeben, wird ein Fehler ausgelöst, weil „\data“ kein Unterverzeichnis von „\AppDirectory“ ist.  
   
- Wenn die Verbindungszeichenfolge eine nicht ordnungsgemäß formatierte Ersatzzeichenfolge enthält, wird eine <xref:System.ArgumentException> ausgelöst.  
-  
-> [!NOTE]
-> <xref:System.Data.SqlClient> löst die Ersatzzeichenfolgen in vollständige Pfade des Dateisystems auf dem lokalen Computer auf. Deshalb werden Remoteserver-, HTTP- und UNC-Pfadnamen nicht unterstützt. Wenn sich der Server nicht auf dem lokalen Computer befindet und die Verbindung geöffnet wird, wird eine Ausnahme ausgelöst.  
-  
- Wenn die <xref:System.Data.SqlClient.SqlConnection> geöffnet ist, wird sie von der standardmäßigen SQL Server Express-Instanz an eine Instanz umgeleitet, die zur Laufzeit initiiert und unter dem Konto des Aufrufers ausgeführt wird.  
+ Wenn die Verbindungszeichenfolge eine falsch formatierte Ersetzungszeichenfolge hat, wird eine <xref:System.ArgumentException> ausgelöst.  
   
 > [!NOTE]
-> Eventuell ist es notwendig, den Wert für <xref:System.Data.SqlClient.SqlConnection.ConnectionTimeout%2A> hoch zu setzen, da die Benutzerinstanzen u. U. mehr Zeit zum Laden benötigen als reguläre Instanzen.  
+> <xref:System.Data.SqlClient> löst die Ersetzungszeichenfolgen in vollständige Pfade für das Dateisystem des lokalen Computers auf. Daher werden Remoteserver-, HTTP- und UNC-Pfadnamen nicht unterstützt. Beim Öffnen der Verbindung wird eine Ausnahme ausgelöst, wenn sich der Server nicht auf dem lokalen Computer befindet.  
   
- Das folgende Codefragment öffnet eine neue `SqlConnection`, zeigt die Verbindungszeichenfolge im Konsolenfenster an und schließt dann beim Beenden des `using`-Codeblocks die Verbindung.  
+ Beim Öffnen von <xref:System.Data.SqlClient.SqlConnection> erfolgt eine Umleitung von der standardmäßigen SQL Server Express-Instanz zu einer zur Laufzeit gestarteten Instanz, die unter dem Konto des Aufrufers ausgeführt wird.  
+  
+> [!NOTE]
+> Es kann nötig sein, den Wert <xref:System.Data.SqlClient.SqlConnection.ConnectionTimeout%2A> zu erhöhen, da das Laden von Benutzerinstanzen länger als bei normalen Instanzen dauern kann.  
+  
+ Das folgende Codefragment öffnet eine neue `SqlConnection`, zeigt die Verbindungszeichenfolge im Konsolenfenster an und schließt dann die Verbindung beim Verlassen des `using`-Codeblocks.  
   
 ```vb  
 Private Sub OpenSqlConnection()  
@@ -105,54 +103,54 @@ private static void OpenSqlConnection()
     // Retrieve the connection string.  
     string connectionString = GetConnectionString();  
   
-    using (SqlConnection connection =   
+    using (SqlConnection connection =
         new SqlConnection(connectionString))  
     {  
         connection.Open();  
-        Console.WriteLine("ConnectionString: {0}",   
+        Console.WriteLine("ConnectionString: {0}",
              connection.ConnectionString);  
     }  
 }  
 ```  
   
 > [!NOTE]
-> Benutzerinstanzen werden von CLR-Code (Common Language Runtime), der innerhalb von SQL Server ausgeführt wird, nicht unterstützt. Es wird eine <xref:System.InvalidOperationException> ausgelöst, wenn `Open` für eine <xref:System.Data.SqlClient.SqlConnection> aufgerufen wird, deren Verbindungszeichenfolge `User Instance=true` enthält.  
+> Benutzerinstanzen werden im CLR-Code (Common Language Runtime), der innerhalb von SQL Server ausgeführt wird, nicht unterstützt. Eine <xref:System.InvalidOperationException> wird ausgelöst, wenn `Open` für eine <xref:System.Data.SqlClient.SqlConnection> aufgerufen wird, die `User Instance=true` in der Verbindungszeichenfolge enthält.  
   
 ## <a name="lifetime-of-a-user-instance-connection"></a>Lebensdauer einer Verbindung mit einer Benutzerinstanz  
- Im Unterschied zu SQL Server-Versionen, die als Dienst ausgeführt werden, müssen SQL Server Express-Instanzen nicht manuell gestartet und beendet werden. Die Benutzerinstanz wird gestartet, sobald sich ein Benutzer anmeldet und eine Verbindung mit einer Benutzerinstanz herstellt, sofern sie nicht bereits ausgeführt wird. Die `AutoClose`-Option ist bei Benutzerinstanzdatenbanken so eingerichtet, dass die Datenbank nach einer bestimmten Zeit der Inaktivität automatisch geschlossen wird. Der Prozess sqlservr.exe läuft nach dem Schließen der letzten Verbindung mit der Instanz für einen gewissen Zeitraum weiter und muss daher nicht neu gestartet werden, wenn innerhalb dieser Zeit eine andere Verbindung geöffnet wird. Wird innerhalb dieser Zeit keine neue Verbindung geöffnet wird, wird die Benutzerinstanz automatisch geschlossen. Ein Systemadministrator auf der übergeordneten Instanz kann die Dauer des Timeout Zeitraums für eine Benutzer Instanz mithilfe von **sp_configure** festlegen, um die Timeout Option für die **Benutzer Instanz** zu ändern. Der Standardwert ist 60 Minuten.  
+ Im Gegensatz zu SQL Server-Versionen, die als Dienst ausgeführt werden, müssen SQL Server Express-Instanzen nicht manuell gestartet und beendet werden. Jedes Mal, wenn sich ein Benutzer anmeldet und sich mit einer Benutzerinstanz verbindet, wird die Benutzerinstanz gestartet, falls sie nicht bereits ausgeführt wird. Bei Datenbanken von Benutzerinstanzen ist die Option `AutoClose` so festgelegt, dass die Datenbank nach einem Zeitraum der Inaktivität automatisch heruntergefahren wird. Der gestartete Prozess „sqlservr.exe“ wird nach dem Schließen der letzten Verbindung mit der Instanz mit einem Zeitlimit weiter ausgeführt, sodass er nicht neu gestartet werden muss, wenn vor Ablauf des Zeitlimits eine weitere Verbindung geöffnet wird. Die Benutzerinstanz wird automatisch heruntergefahren, wenn vor Ablauf dieses Zeitlimits keine neue Verbindung geöffnet wird. Ein Systemadministrator für die übergeordnete Instanz kann mit **sp_configure** die **user instance timeout**-Option (Timeout für Benutzerinstanz) ändern und so die Dauer des Timeoutzeitraums für die jeweilige Benutzerinstanz festlegen. Der Standardwert ist 60 Sekunden.  
   
 > [!NOTE]
-> Wenn in der Verbindungszeichenfolge `Min Pool Size` mit einem Wert größer als 0 verwendet wird, hält die Verbindungspoolfunktion stets einige geöffnete Verbindungen aufrecht, und die Benutzerinstanz wird nicht automatisch geschlossen.  
+> Wenn `Min Pool Size` in der Verbindungszeichenfolge mit einem Wert größer als 0 verwendet wird, behält die Verbindungspoolfunktion stets einige wenige geöffnete Verbindungen bei, und die Benutzerinstanz wird nicht automatisch heruntergefahren.  
   
 ## <a name="how-user-instances-work"></a>So funktionieren Benutzerinstanzen  
- Wenn eine Benutzer Instanz zum ersten Mal für jeden Benutzer generiert wird, werden die System Datenbanken **Master** und **msdb** aus dem Ordner Vorlagen Daten in einen Pfad im Verzeichnis des lokalen Anwendungsdatenrepository des Benutzers kopiert, um die Benutzer Instanz exklusiv zu verwenden. Dieser Pfad lautet in der Regel `C:\Documents and Settings\<UserName>\Local Settings\Application Data\Microsoft\Microsoft SQL Server Data\SQLEXPRESS`. Wenn eine Benutzer Instanz gestartet wird, werden die **tempdb**-, Protokoll-und Ablauf Verfolgungs Dateien ebenfalls in dieses Verzeichnis geschrieben. Es wird ein Name für die Instanz generiert, der für jeden Benutzer garantiert eindeutig ist.  
+ Wenn eine Benutzerinstanz zum ersten Mal für einen Benutzer generiert wird, werden die Systemdatenbanken **master** und **msdb** zur exklusiven Verwendung durch die Benutzerinstanz aus dem Ordner „Template Data“ in einen Pfad im Verzeichnis des lokalen Anwendungsdatenrepository des Benutzers kopiert. Dieser Pfad ist in der Regel `C:\Documents and Settings\<UserName>\Local Settings\Application Data\Microsoft\Microsoft SQL Server Data\SQLEXPRESS`. Beim Starten einer Benutzerinstanz werden außerdem die **tempdb**-, Protokoll- und Ablaufverfolgungsdateien in dieses Verzeichnis geschrieben. Für die Instanz wird ein Name generiert, der für jeden Benutzer garantiert eindeutig ist.  
   
- Standardmäßig sind alle Member der Gruppe &lt;legacyBold&gt;Windows Builtin\Users&lt;/legacyBold&gt; berechtigt, über die lokale Instanz Verbindungen herzustellen und die SQL Server-Binärdateien zu lesen und auszuführen. Nachdem die Anmeldeinformationen des Benutzers verifiziert wurden, der die Benutzerinstanz hostet, wird dieser Benutzer zum `sysadmin` für diese Instanz. Für Benutzerinstanzen ist nur ein gemeinsam genutzter Speicherbereich (Shared Memory) aktiviert, sodass der Benutzer nur Vorgänge auf seinem lokalen Computer ausführen kann.  
+ Standardmäßig werden allen Mitgliedern der Windows-Gruppe „VORDEFINIERT\Benutzer“ Berechtigungen zum Herstellen einer Verbindung in der lokalen Instanz sowie Lese- und Ausführungsberechtigungen für die SQL Server-Binärdateien gewährt. Sobald die Anmeldeinformationen des aufrufenden Benutzers, der die Benutzerinstanz hostet, überprüft wurden, wird dieser Benutzer zum `sysadmin` in dieser Instanz. Für Benutzerinstanzen ist nur der gemeinsame genutzte Speicherbereich aktiviert, was bedeutet, dass nur Vorgänge auf dem lokalen Rechner möglich sind.  
   
- Die Benutzer müssen sowohl Lese- als auch Schreibberechtigungen für die in der Verbindungszeichenfolge angegebenen MDF- und LDF-Dateien erhalten.  
+ Benutzern müssen sowohl Lese- als auch Schreibberechtigungen für die in der Verbindungszeichenfolge angegebenen MDF- und LDF-Dateien erteilt werden.  
   
 > [!NOTE]
-> Bei der MDF- und der LDF-Datei handelt es sich um die Datenbank- bzw. um die Protokolldatei. Diese beiden Dateien sind ein zusammengehöriger Satz, daher ist bei Sicherungs- und Wiederherstellungsvorgängen Vorsicht geboten. Die Datenbankdatei enthält Informationen zur exakten Version der Protokolldatei, und wenn die Datenbankdatei mit der falschen Protokolldatei gekoppelt wird, kann sie nicht geöffnet werden.  
+> Die MDF- und LDF-Dateien stellen die Datenbank- bzw. Protokolldateien dar. Diese beiden Dateien sind ein zusammengehöriger Satz, weshalb bei Sicherungs- und Wiederherstellungsvorgängen Vorsicht geboten ist. Die Datenbankdatei enthält Informationen über die genaue Version der Protokolldatei. Die Datenbank wird nicht geöffnet, wenn sie mit der falschen Protokolldatei gekoppelt ist.  
   
- Um die Beschädigung von Daten zu vermeiden, werden Datenbanken in der Benutzerinstanz mit exklusivem Zugriff geöffnet. Wenn zwei verschiedene Benutzerinstanzen auf dieselbe Datenbank auf demselben Computer zugreifen, muss der Benutzer der ersten Benutzerinstanz die Datenbank schließen, bevor der Benutzer der zweiten Benutzerinstanz die Datenbank öffnen kann.  
+ Um Datenbeschädigungen zu vermeiden, wird eine Datenbank in der Benutzerinstanz mit exklusivem Zugriff geöffnet. Wenn zwei verschiedene Benutzerinstanzen dieselbe Datenbank auf demselben Computer gemeinsam nutzen, muss der Benutzer der ersten Instanz die Datenbank schließen, bevor sie in einer zweiten Instanz geöffnet werden kann.  
   
 ## <a name="user-instance-scenarios"></a>Benutzerinstanzszenarien  
- Benutzerinstanzen stellen Entwicklern von Datenbankanwendungen einen SQL Server-Datenspeicher zur Verfügung, der nicht voraussetzt, dass die Entwickler auf ihren Entwicklungscomputern mit Administratorberechtigungen arbeiten. Benutzerinstanzen basieren auf dem Access/Jet-Modell, bei dem die Datenbankanwendung einfach eine Verbindung mit einer Datei herstellt und der Benutzer automatisch volle Berechtigungen für alle Datenbankobjekte erhält, ohne dass ein Systemadministrator eingreifen und diese Berechtigungen gewähren muss. Die Verwendung dieses Modells bietet sich für Situationen an, in denen der Benutzer mit einem Konto der untersten Berechtigungsebene (Least-Priviledged User Account, LUA) arbeitet und keine Administratorberechtigungen für den Server oder den lokalen Computer besitzt, dennoch aber Datenbankobjekte und Anwendungen erstellen können muss. Mit Benutzerinstanzen können Benutzer Laufzeitinstanzen erstellen, die im Sicherheitskontext des Benutzers und nicht im Sicherheitskontext eines Systemdienstes mit umfangreicheren Berechtigungen ausgeführt werden.  
+ Benutzerinstanzen bieten Entwicklern von Datenbankanwendungen einen SQL Server-Datenspeicher, der nicht davon abhängt, dass Entwickler über Administratorkonten auf ihren Entwicklungscomputern verfügen. Benutzerinstanzen basieren auf dem Access-/Jet-Modell, bei dem die Datenbankanwendung einfach eine Verbindung mit einer Datei herstellt. Der Benutzer verfügt automatisch über die uneingeschränkten Berechtigungen für alle Datenbankobjekte, ohne dass ein Systemadministrator zum Erteilen von Berechtigungen eingreifen muss. Es ist für Situationen gedacht, in denen der Benutzer ein Benutzerkonto mit den geringsten Rechten nutzt und keine administrativen Rechte auf dem Server oder dem lokalen Rechner hat, jedoch Datenbankobjekte und -anwendungen erstellen muss. Benutzerinstanzen ermöglichen Benutzern, Instanzen zur Laufzeit zu erstellen, die im eigenen Sicherheitskontext und nicht im Sicherheitskontext eines Systemdiensts mit mehr Rechten ausgeführt werden.  
   
 > [!IMPORTANT]
-> Benutzerinstanzen sollten nur in Szenarien eingesetzt werden, in denen alle Anwendungen, die die Instanzen verwenden, vollständig vertrauenswürdig sind.  
+> Benutzerinstanzen dürfen nur in Szenarien zum Einsatz kommen, in denen alle Anwendungen, die sie verwenden, vollständig vertrauenswürdig sind.  
   
- Zu den Benutzerinstanzszenarien gehören folgende Szenarien:  
+ Szenarien für Benutzerinstanzen sind u. a.:  
   
-- alle Einzelbenutzeranwendungen, in denen keine Datenfreigabe erforderlich ist  
+- Einzelbenutzeranwendungen, bei denen das Freigeben von Daten nicht erforderlich ist.  
   
-- ClickOnce-Bereitstellung: Auf Computern, auf denen .NET Framework 2.0 (oder höher) und SQL Server Express bereits installiert sind, kann das im Rahmen einer ClickOnce-Aktion heruntergeladene Installationspaket installiert und von Benutzern ohne Administratorberechtigung verwendet werden. Beachten Sie, dass die Installation von SQL Server Express, sofern diese Teil des Setups ist, von einem Administrator vorgenommen werden muss. Weitere Informationen finden Sie unter [ClickOnce-Bereitstellung für Windows Forms](../../../winforms/clickonce-deployment-for-windows-forms.md).
+- ClickOnce-Bereitstellung. Wenn .NET Framework 2.0 (oder höher) und SQL Server Express bereits auf dem Zielcomputer installiert sind, kann das Installationspaket, das als Ergebnis einer ClickOnce-Aktion heruntergeladen wurde, installiert und von Nicht-Administratorbenutzern verwendet werden. Beachten Sie, dass ein Administrator SQL Server Express installieren muss, wenn dies Teil des Setups ist. Weitere Informationen finden Sie unter [ClickOnce-Bereitstellung für Windows Forms](../../../winforms/clickonce-deployment-for-windows-forms.md).
   
-- dediziertes ASP.NET-Hosting mit Windows-Authentifizierung: Eine einzelne SQL Server Express-Instanz kann in einem Intranet gehostet werden. Die Anwendung stellt die Verbindung über das ASPNET-Windows-Konto und nicht durch einen Identitätswechsel her. Benutzerinstanzen dürfen nicht in Drittanbieterszenarien oder Szenarien mit gemeinsamem Hosting verwendet werden, in denen alle Anwendungen dieselbe Benutzerinstanz nutzen und damit nicht mehr voneinander isoliert sind.  
+- Dediziertes ASP.NET-Hosting mithilfe der Windows-Authentifizierung. Eine einzelne SQL Server Express-Instanz kann in einem Intranet gehostet werden. Die Anwendung stellt die Verbindung über das Windows-Konto ASPNET und nicht per Identitätswechsel her. Benutzerinstanzen dürfen nicht in Szenarien mit Drittanbietern oder freigegebenem Hosting verwendet werden, bei denen alle Anwendungen dieselbe Benutzerinstanz gemeinsam nutzen und nicht mehr voneinander isoliert bleiben.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [SQL Server und ADO.NET](index.md)
 - [Verbindungszeichenfolgen](../connection-strings.md)
-- [Aufbauen der Verbindung zu einer Datenquelle](../connecting-to-a-data-source.md)
+- [Herstellen der Verbindung mit einer Datenquelle](../connecting-to-a-data-source.md)
 - [Übersicht über ADO.NET](../ado-net-overview.md)

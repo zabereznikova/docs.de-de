@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: dbade6c9-9d26-4a79-9fd2-46108edd12d7
 topic_type:
 - apiref
-ms.openlocfilehash: a34648bece3b14d6175168f45916ca04aeeef71d
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: ebaab57b647250823443b48d9e45921036372d5e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73109241"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79176603"
 ---
 # <a name="asm_display_flags-enumeration"></a>ASM_DISPLAY_FLAGS-Enumeration
-Gibt die Version, den Build, die Kultur, die Signatur usw. der Assembly an, deren Anzeige Name von der [IAssemblyName:: GetDisplayName](iassemblyname-getdisplayname-method.md) -Methode abgerufen wird.  
+Gibt die Version, den Build, die Kultur, die Signatur usw. der Assembly an, deren Anzeigename von der [IAssemblyName::GetDisplayName-Methode](iassemblyname-getdisplayname-method.md) abgerufen wird.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -39,29 +39,29 @@ typedef enum {
     ASM_DISPLAYF_RETARGET                = 0x80,  
     ASM_DISPLAYF_CONFIG_MASK             = 0x100,  
     ASM_DISPLAYF_MVID                    = 0x200,  
-    ASM_DISPLAYF_FULL                    =   
-                      ASM_DISPLAYF_VERSION           |   
-                      ASM_DISPLAYF_CULTURE           |   
-                      ASM_DISPLAYF_PUBLIC_KEY_TOKEN  |   
-                      ASM_DISPLAYF_RETARGET          |   
+    ASM_DISPLAYF_FULL                    =
+                      ASM_DISPLAYF_VERSION           |
+                      ASM_DISPLAYF_CULTURE           |
+                      ASM_DISPLAYF_PUBLIC_KEY_TOKEN  |
+                      ASM_DISPLAYF_RETARGET          |
                       ASM_DISPLAYF_PROCESSORARCHITECTURE  
   
 } ASM_DISPLAY_FLAGS;  
 ```  
   
-## <a name="remarks"></a>Hinweise  
- `ASM_DISPLAYF_FULL` reflektiert alle Änderungen, die an der Version des [IAssemblyName](iassemblyname-interface.md) -Objekts vorgenommen wurden. Gehen Sie nicht davon aus, dass der zurückgegebene Wert unveränderlich ist.  
+## <a name="remarks"></a>Bemerkungen  
+ `ASM_DISPLAYF_FULL`spiegelt alle Änderungen wider, die an der Version des [IAssemblyName-Objekts](iassemblyname-interface.md) vorgenommen wurden. Gehen Sie nicht davon aus, dass der zurückgegebene Wert unveränderlich ist.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
- **Header:** Fusion. h  
+ **Kopfzeile:** Fusion.h  
   
- **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
+ **Bibliothek:** Als Ressource in MsCorEE.dll enthalten  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [IAssemblyName-Schnittstelle](iassemblyname-interface.md)
-- [Fusion-Enumerationen](fusion-enumerations.md)
+- [Fusionsenumerationen](fusion-enumerations.md)

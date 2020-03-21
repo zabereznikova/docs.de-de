@@ -15,26 +15,26 @@ helpviewer_keywords:
 ms.assetid: 799740aa-46ec-4532-95da-6444565b4971
 topic_type:
 - apiref
-ms.openlocfilehash: 9d4b8bb7d5b3da15f665849c8d18c3a10dbe600b
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 2db9d26ef2dec150977c468b16334a7cb4b3d49c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73138308"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79176512"
 ---
 # <a name="corbindtoruntime-function"></a>CorBindToRuntime-Funktion
 Ermöglicht es nicht verwalteten Hosts, die Common Language Runtime (CLR) in einen Prozess zu laden.  
   
- Diese Funktion wurde im .NET Framework 4 als veraltet markiert.  
+ Diese Funktion ist in .NET Framework 4 veraltet.  
   
 ## <a name="syntax"></a>Syntax  
   
 ```cpp  
 HRESULT CorBindToRuntime (  
-    [in]  LPCWSTR     pwszVersion,   
-    [in]  LPCWSTR     pwszBuildFlavor,   
-    [in]  REFCLSID    rclsid,   
-    [in]  REFIID      riid,   
+    [in]  LPCWSTR     pwszVersion,
+    [in]  LPCWSTR     pwszBuildFlavor,
+    [in]  REFCLSID    rclsid,
+    [in]  REFIID      riid,
     [out] LPVOID FAR  *ppv  
 );  
 ```  
@@ -43,19 +43,19 @@ HRESULT CorBindToRuntime (
  `pwszVersion`  
  [in] Eine Zeichenfolge, die die Version der zu ladenden CLR beschreibt.  
   
- Eine Versionsnummer im .NET Framework besteht aus vier Teilen, die durch Zeiträume getrennt sind: *Major. Minor. Build. Revision*. Die als `pwszVersion` übergebene Zeichenfolge muss mit dem Buchstaben "v" beginnen, auf den die ersten drei Teile der Versionsnummer folgen (z. B. "v1.0.1529").  
+ Eine Versionsnummer im .NET Framework besteht aus vier Teilen, die durch Punkte getrennt sind: *major.minor.build.revision*. Die als `pwszVersion` übergebene Zeichenfolge muss mit dem Buchstaben "v" beginnen, auf den die ersten drei Teile der Versionsnummer folgen (z. B. "v1.0.1529").  
   
  Einige Versionen der CLR werden mit einer Richtlinienanweisung installiert, welche die Kompatibilität mit früheren Versionen der CLR angibt. In der Standardeinstellung wertet das Startmodul `pwszVersion` anhand von Richtlinienanweisungen aus und lädt die neueste Version der Common Language Runtime, die mit der angeforderten Version kompatibel ist. Ein Host kann erzwingen, dass das Startmodul die Richtlinienauswertung überspringt und genau die in `pwszVersion` angegebene Version lädt, indem wie unten beschrieben der Wert `STARTUP_LOADER_SAFEMODE` für den `flags`-Parameter übergeben wird.  
   
- Wenn der Aufrufer für `pwszVersion`NULL angibt, wird die aktuelle Version der Laufzeit geladen. Durch die Übergabe von NULL erhält der Host keine Kontrolle darüber, welche Version der Laufzeit geladen wird. Auch wenn dieser Ansatz in einigen Szenarien angemessen sein kann, wird das Angeben einer bestimmten zu ladenden Version durch den Host dringend empfohlen.  
+ Wenn der Aufrufer null `pwszVersion`für angibt, wird die neueste Version der Laufzeit geladen. Das Übergeben von null gibt dem Host keine Kontrolle darüber, welche Version der Laufzeit geladen wird. Auch wenn dieser Ansatz in einigen Szenarien angemessen sein kann, wird das Angeben einer bestimmten zu ladenden Version durch den Host dringend empfohlen.  
   
  `pwszBuildFlavor`  
  [in] Eine Zeichenfolge, die angibt, ob der Serverbuild oder der Arbeitsstationsbuild der CLR geladen werden soll. Gültige Werte sind `svr` und `wks`. Der Serverbuild wurde so optimiert, dass mehrere Prozessoren zur Ausführung der Garbage Collection genutzt werden können. Der Arbeitsstationsbuild wurde für die Ausführung von Clientanwendungen auf einem Computer mit einem einzelnen Prozessor optimiert.  
   
- Wenn `pwszBuildFlavor` auf NULL festgelegt ist, wird der Arbeitsstations Build geladen. Bei der Ausführung auf einem Computer mit einem einzelnen Prozessor wird der Arbeitsstations Build immer geladen, auch wenn `pwszBuildFlavor` auf `svr`festgelegt ist. Wenn `pwszBuildFlavor` jedoch auf `svr` festgelegt ist und gleichzeitige Garbage Collection angegeben ist (siehe Beschreibung des Parameters `flags`), wird der Serverbuild geladen.  
+ Wenn `pwszBuildFlavor` auf null gesetzt ist, wird der Arbeitsstationsbuild geladen. Wenn auf einem Einzelprozessorcomputer ausgeführt wird, wird der `pwszBuildFlavor` Workstation-Build immer geladen, auch wenn auf festgelegt `svr`ist. Wenn `pwszBuildFlavor` jedoch auf `svr` festgelegt und die gleichzeitige Garbage Collection `flags` angegeben ist (siehe Beschreibung des Parameters), wird der Serverbuild geladen.  
   
  `rclsid`  
- in Der `CLSID` der Co-Klasse, die entweder die [ICorRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md) -oder die [ICLRRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md) -Schnittstelle implementiert. Unterstützte Werte sind "CLSID_CorRuntimeHost" oder "CLSID_CLRRuntimeHost".  
+ [in] Die `CLSID` der coclass, die entweder den [ICorRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md) oder die [ICLRRuntimeHost-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md) implementiert. Unterstützte Werte sind "CLSID_CorRuntimeHost" oder "CLSID_CLRRuntimeHost".  
   
  `riid`  
  [in] Die `IID` der angeforderten Schnittstelle aus `rclsid`. Unterstützte Werte sind "IID_ICorRuntimeHost" oder "IID_ICLRRuntimeHost".  
@@ -63,7 +63,7 @@ HRESULT CorBindToRuntime (
  `ppv`  
  [out] Der zurückgegebene Schnittstellenzeiger auf `riid`.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Wenn `pwszVersion` eine Laufzeitversion angibt, die nicht vorhanden ist, gibt `CorBindToRuntimeEx` den HRESULT-Wert CLR_E_SHIM_RUNTIMELOAD zurück.  
   
 ## <a name="execution-context-and-flow-of-windows-identity"></a>Ausführungskontext und Übergabe der Windows-Identität  
@@ -75,25 +75,25 @@ HRESULT CorBindToRuntime (
   
 2. Durch Ändern des Prozessstandardmodus in den Kompatibilitätsmodus für Version 1; hier wird das <xref:System.Security.Principal.WindowsIdentity>-Objekt nicht über asynchrone Punkte übergeben, unabhängig von den <xref:System.Threading.ExecutionContext>-Einstellungen des aktuellen Threads. Wie der Standardmodus geändert wird, hängt davon ab, ob Sie zum Laden der CLR eine verwaltete ausführbare Datei oder eine nicht verwaltete Hostschnittstelle verwenden:  
   
-    1. Bei verwalteten ausführbaren Dateien müssen Sie das `enabled`-Attribut des [\<legacyidentitäts->](../../../../docs/framework/configure-apps/file-schema/runtime/legacyimpersonationpolicy-element.md) -Elements auf `true`festlegen.  
+    1. Für verwaltete ausführbare `enabled` Dateien müssen Sie das Attribut des `true` [ \<legacyImpersonationPolicy>-Elements](../../../../docs/framework/configure-apps/file-schema/runtime/legacyimpersonationpolicy-element.md) auf festlegen.  
   
     2. Legen Sie bei nicht verwalteten Hostschnittstellen das `STARTUP_LEGACY_IMPERSONATION`-Flag im `flags`-Parameter fest, wenn Sie die `CorBindToRuntimeEx`-Funktion aufrufen.  
   
      Der Kompatibilitätsmodus für Version 1 gilt für den gesamten Prozess und alle Anwendungsdomänen im Prozess.  
   
-## <a name="remarks"></a>Hinweise  
- [CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md) und `CorBindToRuntime` führen denselben Vorgang aus, aber mit der `CorBindToRuntimeEx`-Funktion können Sie Flags festlegen, um das Verhalten der CLR anzugeben.  
+## <a name="remarks"></a>Bemerkungen  
+ [CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md) `CorBindToRuntime` und führen Sie den `CorBindToRuntimeEx` gleichen Vorgang aus, aber die Funktion ermöglicht es Ihnen, Flags festzulegen, um das Verhalten der CLR anzugeben.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Mscoree. h  
+ **Kopfzeile:** MSCorEE.h  
   
- **Bibliothek:** Mscoree. dll  
+ **Bibliothek:** MSCorEE.dll  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [CorBindToCurrentRuntime-Funktion](../../../../docs/framework/unmanaged-api/hosting/corbindtocurrentruntime-function.md)
 - [CorBindToRuntimeByCfg-Funktion](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimebycfg-function.md)

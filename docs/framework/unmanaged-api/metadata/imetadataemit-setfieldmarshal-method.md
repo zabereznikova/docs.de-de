@@ -15,46 +15,46 @@ helpviewer_keywords:
 ms.assetid: be232314-7f69-4855-bfab-63361bd22307
 topic_type:
 - apiref
-ms.openlocfilehash: cdbcdb9359d295ad9bed2050ed36499feba74d9e
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 1037cd4210605192870d43d88979b89af6536380
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74442273"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175654"
 ---
 # <a name="imetadataemitsetfieldmarshal-method"></a>IMetaDataEmit::SetFieldMarshal-Methode
-Legt die PInvoke-Marshallinginformationen für das Feld, die Methoden Rückgabe oder den Methoden Parameter fest, auf den vom angegebenen Token verwiesen wird.  
+Legt die PInvoke-Marshallinginformationen für den Feld-, Methodenrückgabe- oder Methodenparameter fest, auf den vom angegebenen Token verwiesen wird.  
   
 ## <a name="syntax"></a>Syntax  
   
 ```cpp  
 HRESULT SetFieldMarshal (  
-    [in]  mdToken          tk,   
-    [in]  PCCOR_SIGNATURE  pvNativeType,   
-    [in]  ULONG            cbNativeType   
+    [in]  mdToken          tk,
+    [in]  PCCOR_SIGNATURE  pvNativeType,
+    [in]  ULONG            cbNativeType
 );  
 ```  
   
 ## <a name="parameters"></a>Parameter  
  `tk`  
- in Das Token für das Ziel Datenelement. Dabei handelt es sich entweder um ein `mdFieldDef`-oder ein `mdParamDef` Token.  
+ [in] Das Token für das Zieldatenelement. Dies ist `mdFieldDef` entweder `mdParamDef` ein oder ein Token.  
   
  `pvNativeType`  
- in Die Signatur für den nicht verwalteten Typ.  
+ [in] Die Signatur für nicht verwalteten Typ.  
   
  `cbNativeType`  
- in Die Anzahl der Bytes in `pvNativeType`.  
+ [in] Die Anzahl der `pvNativeType`Bytes in .  
   
-## <a name="requirements"></a>Voraussetzungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor. h  
+ **Kopfzeile:** Cor.h  
   
- **Bibliothek:** Wird als Ressource in Mscoree. dll verwendet.  
+ **Bibliothek:** Wird als Ressource in MSCorEE.dll verwendet  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [IMetaDataEmit-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [IMetaDataEmit2-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
