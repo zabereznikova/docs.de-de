@@ -1,6 +1,6 @@
 ---
-title: Blessiwbemservices-Funktion (Referenz zur nicht verwalteten API)
-description: Die blessiwbemservices-Funktion gibt an, ob Benutzer Anmelde Informationen den Zugriff auf eine IWbemServices-Klasse zulassen.
+title: BlessIWbemServices-Funktion (Nicht verwaltete API-Referenz)
+description: Die Funktion BlessIWbemServices gibt an, ob Benutzeranmeldeinformationen den Zugriff auf eine IWbemServices-Klasse zulassen.
 ms.date: 11/06/2017
 api_name:
 - BlessIWbemServices
@@ -14,71 +14,71 @@ helpviewer_keywords:
 - BlessIWbemServices function [.NET WMI and performance counters]
 topic_type:
 - Reference
-ms.openlocfilehash: 946d29892052ea69c2a8a3bf11e7be7a1b2d7068
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 4b15af840cc00b3ec261604db4f3625c6b975d3e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73138778"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79176863"
 ---
-# <a name="blessiwbemservices-function"></a><span data-ttu-id="16ba3-103">BlessIWbemServices-Funktion</span><span class="sxs-lookup"><span data-stu-id="16ba3-103">BlessIWbemServices function</span></span>
-<span data-ttu-id="16ba3-104">Gibt an, ob die Benutzer Anmelde Informationen den Zugriff auf die angegebene [IWbemServices](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemservices) -Klasse zulassen.</span><span class="sxs-lookup"><span data-stu-id="16ba3-104">Indicates whether the user credentials permit access to the specified [IWbemServices](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemservices) class.</span></span>   
+# <a name="blessiwbemservices-function"></a><span data-ttu-id="3207e-103">BlessIWbemServices-Funktion</span><span class="sxs-lookup"><span data-stu-id="3207e-103">BlessIWbemServices function</span></span>
+<span data-ttu-id="3207e-104">Gibt an, ob die Benutzeranmeldeinformationen den Zugriff auf die angegebene [IWbemServices-Klasse](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemservices) zulassen.</span><span class="sxs-lookup"><span data-stu-id="3207e-104">Indicates whether the user credentials permit access to the specified [IWbemServices](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemservices) class.</span></span>
   
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
   
-## <a name="syntax"></a><span data-ttu-id="16ba3-105">Syntax</span><span class="sxs-lookup"><span data-stu-id="16ba3-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="3207e-105">Syntax</span><span class="sxs-lookup"><span data-stu-id="3207e-105">Syntax</span></span>  
   
 ```cpp
 HRESULT BlessIWbemServices (
    [in] IWbemServices* pIWbemServices,
-   [in] BSTR strUser, 
-   [in] BSTR strPassword, 
-   [in] BSTR strAuthority, 
-   [in] DWORD impLevel, 
+   [in] BSTR strUser,
+   [in] BSTR strPassword,
+   [in] BSTR strAuthority,
+   [in] DWORD impLevel,
    [in] DWORD authnLevel
 );
 ```  
 
-## <a name="parameters"></a><span data-ttu-id="16ba3-106">Parameter</span><span class="sxs-lookup"><span data-stu-id="16ba3-106">Parameters</span></span>
+## <a name="parameters"></a><span data-ttu-id="3207e-106">Parameter</span><span class="sxs-lookup"><span data-stu-id="3207e-106">Parameters</span></span>
 
 `pIWbemServices`\
-<span data-ttu-id="16ba3-107">in Ein Zeiger auf das [IWbemServices](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemservices) -Objekt, für das Berechtigungen erforderlich sind.</span><span class="sxs-lookup"><span data-stu-id="16ba3-107">[in] A pointer to the [IWbemServices](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemservices) object for which permissions are required.</span></span>
+<span data-ttu-id="3207e-107">[in] Ein Zeiger auf das [IWbemServices-Objekt,](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemservices) für das Berechtigungen erforderlich sind.</span><span class="sxs-lookup"><span data-stu-id="3207e-107">[in] A pointer to the [IWbemServices](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemservices) object for which permissions are required.</span></span>
 
 `strUser`\
-<span data-ttu-id="16ba3-108">in Der Benutzername.</span><span class="sxs-lookup"><span data-stu-id="16ba3-108">[in] The user name.</span></span>
+<span data-ttu-id="3207e-108">[in] Der Benutzername.</span><span class="sxs-lookup"><span data-stu-id="3207e-108">[in] The user name.</span></span>
 
 `strPassword`\
-<span data-ttu-id="16ba3-109">in Das `strUser`zugeordnete Kennwort.</span><span class="sxs-lookup"><span data-stu-id="16ba3-109">[in] The password associated with `strUser`.</span></span>
+<span data-ttu-id="3207e-109">[in] Das Kennwort, `strUser`das mit verknüpft ist.</span><span class="sxs-lookup"><span data-stu-id="3207e-109">[in] The password associated with `strUser`.</span></span>
 
 `strAuthority`\
-<span data-ttu-id="16ba3-110">in Der Domänen Name des Benutzers.</span><span class="sxs-lookup"><span data-stu-id="16ba3-110">[in] The domain name of the user.</span></span> <span data-ttu-id="16ba3-111">Weitere Informationen finden Sie in der [connectserverwmi](connectserverwmi.md) -Funktion.</span><span class="sxs-lookup"><span data-stu-id="16ba3-111">See the [ConnectServerWmi](connectserverwmi.md) function for more information.</span></span>
+<span data-ttu-id="3207e-110">[in] Der Domänenname des Benutzers.</span><span class="sxs-lookup"><span data-stu-id="3207e-110">[in] The domain name of the user.</span></span> <span data-ttu-id="3207e-111">Weitere Informationen finden Sie in der [ConnectServerWmi-Funktion.](connectserverwmi.md)</span><span class="sxs-lookup"><span data-stu-id="3207e-111">See the [ConnectServerWmi](connectserverwmi.md) function for more information.</span></span>
 
 `impLevel`\
-<span data-ttu-id="16ba3-112">in Die Ebene des Identitäts Wechsels.</span><span class="sxs-lookup"><span data-stu-id="16ba3-112">[in] The impersonation level.</span></span>
+<span data-ttu-id="3207e-112">[in] Die Identitätswechselebene.</span><span class="sxs-lookup"><span data-stu-id="3207e-112">[in] The impersonation level.</span></span>
 
 `authnLevel`\
-<span data-ttu-id="16ba3-113">in Die Autorisierungs Ebene.</span><span class="sxs-lookup"><span data-stu-id="16ba3-113">[in] The authorization level.</span></span>
+<span data-ttu-id="3207e-113">[in] Die Berechtigungsstufe.</span><span class="sxs-lookup"><span data-stu-id="3207e-113">[in] The authorization level.</span></span>
 
-## <a name="return-value"></a><span data-ttu-id="16ba3-114">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="16ba3-114">Return value</span></span>
+## <a name="return-value"></a><span data-ttu-id="3207e-114">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="3207e-114">Return value</span></span>
 
-<span data-ttu-id="16ba3-115">Die folgenden Werte, die von dieser Funktion zurückgegeben werden, sind in der Header Datei " *Winerror. h* " definiert, oder Sie können Sie als Konstanten im Code definieren:</span><span class="sxs-lookup"><span data-stu-id="16ba3-115">The following values returned by this function are defined in the *WinError.h* header file, or you can define them as constants in your code:</span></span>
+<span data-ttu-id="3207e-115">Die folgenden Werte, die von dieser Funktion zurückgegeben werden, sind in der *WinError.h-Headerdatei* definiert, oder Sie können sie als Konstanten im Code definieren:</span><span class="sxs-lookup"><span data-stu-id="3207e-115">The following values returned by this function are defined in the *WinError.h* header file, or you can define them as constants in your code:</span></span>
 
-|<span data-ttu-id="16ba3-116">Konstante</span><span class="sxs-lookup"><span data-stu-id="16ba3-116">Constant</span></span>  |<span data-ttu-id="16ba3-117">Wert</span><span class="sxs-lookup"><span data-stu-id="16ba3-117">Value</span></span>  |<span data-ttu-id="16ba3-118">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="16ba3-118">Description</span></span>  |
+|<span data-ttu-id="3207e-116">Dauerhaft</span><span class="sxs-lookup"><span data-stu-id="3207e-116">Constant</span></span>  |<span data-ttu-id="3207e-117">value</span><span class="sxs-lookup"><span data-stu-id="3207e-117">Value</span></span>  |<span data-ttu-id="3207e-118">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="3207e-118">Description</span></span>  |
 |---------|---------|---------|
-| `E_INVALIDARG` | <span data-ttu-id="16ba3-119">0x80070057</span><span class="sxs-lookup"><span data-stu-id="16ba3-119">0x80070057</span></span> | <span data-ttu-id="16ba3-120">Mindestens ein Argument ist ungültig.</span><span class="sxs-lookup"><span data-stu-id="16ba3-120">One or more arguments are invalid.</span></span> |
-| `E_POINTER` | <span data-ttu-id="16ba3-121">0x80004003</span><span class="sxs-lookup"><span data-stu-id="16ba3-121">0x80004003</span></span> | <span data-ttu-id="16ba3-122">`pIWbemServices` ist `null`.</span><span class="sxs-lookup"><span data-stu-id="16ba3-122">`pIWbemServices` is `null`.</span></span> | 
-| `E_FAIL` | <span data-ttu-id="16ba3-123">0x80000008</span><span class="sxs-lookup"><span data-stu-id="16ba3-123">0x80000008</span></span> | <span data-ttu-id="16ba3-124">Ein nicht angegebener Fehler ist aufgetreten.</span><span class="sxs-lookup"><span data-stu-id="16ba3-124">An unspecified error has occurred.</span></span> |
-| `E_OUTOFMEMORY` | <span data-ttu-id="16ba3-125">0x80000002</span><span class="sxs-lookup"><span data-stu-id="16ba3-125">0x80000002</span></span> | <span data-ttu-id="16ba3-126">Es ist nicht genügend Arbeitsspeicher verfügbar, um den Vorgang auszuführen.</span><span class="sxs-lookup"><span data-stu-id="16ba3-126">Insufficient memory is available to perform the operation.</span></span> | 
-| `S_OK` | <span data-ttu-id="16ba3-127">0</span><span class="sxs-lookup"><span data-stu-id="16ba3-127">0</span></span> | <span data-ttu-id="16ba3-128">Der Funktions Aufrufvorgang war erfolgreich.</span><span class="sxs-lookup"><span data-stu-id="16ba3-128">The function call was successful.</span></span> | 
+| `E_INVALIDARG` | <span data-ttu-id="3207e-119">0x80070057</span><span class="sxs-lookup"><span data-stu-id="3207e-119">0x80070057</span></span> | <span data-ttu-id="3207e-120">Mindestens ein Argument ist ungültig.</span><span class="sxs-lookup"><span data-stu-id="3207e-120">One or more arguments are invalid.</span></span> |
+| `E_POINTER` | <span data-ttu-id="3207e-121">0x80004003</span><span class="sxs-lookup"><span data-stu-id="3207e-121">0x80004003</span></span> | <span data-ttu-id="3207e-122">`pIWbemServices` ist `null`</span><span class="sxs-lookup"><span data-stu-id="3207e-122">`pIWbemServices` is `null`.</span></span> |
+| `E_FAIL` | <span data-ttu-id="3207e-123">0x80000008</span><span class="sxs-lookup"><span data-stu-id="3207e-123">0x80000008</span></span> | <span data-ttu-id="3207e-124">Ein unbekannter Fehler ist aufgetreten.</span><span class="sxs-lookup"><span data-stu-id="3207e-124">An unspecified error has occurred.</span></span> |
+| `E_OUTOFMEMORY` | <span data-ttu-id="3207e-125">0x80000002</span><span class="sxs-lookup"><span data-stu-id="3207e-125">0x80000002</span></span> | <span data-ttu-id="3207e-126">Es ist nicht genügend Arbeitsspeicher verfügbar, um den Vorgang auszuführen.</span><span class="sxs-lookup"><span data-stu-id="3207e-126">Insufficient memory is available to perform the operation.</span></span> |
+| `S_OK` | <span data-ttu-id="3207e-127">0</span><span class="sxs-lookup"><span data-stu-id="3207e-127">0</span></span> | <span data-ttu-id="3207e-128">Der Funktionsaufruf war erfolgreich.</span><span class="sxs-lookup"><span data-stu-id="3207e-128">The function call was successful.</span></span> |
 
-## <a name="requirements"></a><span data-ttu-id="16ba3-129">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="16ba3-129">Requirements</span></span>  
+## <a name="requirements"></a><span data-ttu-id="3207e-129">Requirements (Anforderungen)</span><span class="sxs-lookup"><span data-stu-id="3207e-129">Requirements</span></span>  
 
- <span data-ttu-id="16ba3-130">**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="16ba3-130">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
+ <span data-ttu-id="3207e-130">**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="3207e-130">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="16ba3-131">**Header:** WMINet_Utils. idl</span><span class="sxs-lookup"><span data-stu-id="16ba3-131">**Header:** WMINet_Utils.idl</span></span>  
+ <span data-ttu-id="3207e-131">**Kopfzeile:** WMINet_Utils.idl</span><span class="sxs-lookup"><span data-stu-id="3207e-131">**Header:** WMINet_Utils.idl</span></span>  
   
- <span data-ttu-id="16ba3-132">**.NET Framework-Versionen:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="16ba3-132">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>  
+ <span data-ttu-id="3207e-132">**.NET Framework-Versionen:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="3207e-132">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="16ba3-133">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="16ba3-133">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="3207e-133">Weitere Informationen</span><span class="sxs-lookup"><span data-stu-id="3207e-133">See also</span></span>
 
-- [<span data-ttu-id="16ba3-134">WMI und Leistungsindikatoren (Referenz zur nicht verwalteten API)</span><span class="sxs-lookup"><span data-stu-id="16ba3-134">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)
+- [<span data-ttu-id="3207e-134">WMI und Leistungsindikatoren (Referenz zur nicht verwalteten API)</span><span class="sxs-lookup"><span data-stu-id="3207e-134">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)
