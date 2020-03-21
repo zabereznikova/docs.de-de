@@ -2,22 +2,22 @@
 title: Dauer von Aufrufen
 ms.date: 03/30/2017
 ms.assetid: e4973ec3-3c66-4c0b-b5d0-294b62c83f7d
-ms.openlocfilehash: 9d565088d90456ca7d2e56cb06e2267f4423aac7
-ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.openlocfilehash: 26a34cc6101f94a7d664e10f74f78c7dd41dd745
+ms.sourcegitcommit: 515469828d0f040e01bde01df6b8e4eb43630b06
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69987194"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78674947"
 ---
-# <a name="calls-duration"></a><span data-ttu-id="00b06-102">Dauer von Aufrufen</span><span class="sxs-lookup"><span data-stu-id="00b06-102">Calls Duration</span></span>
-<span data-ttu-id="00b06-103">Name des Zählers: Dauer von Aufrufen</span><span class="sxs-lookup"><span data-stu-id="00b06-103">Counter Name: Calls Duration</span></span>  
+# <a name="calls-duration"></a><span data-ttu-id="6d6c1-102">Dauer von Aufrufen</span><span class="sxs-lookup"><span data-stu-id="6d6c1-102">Calls Duration</span></span>
+<span data-ttu-id="6d6c1-103">Zählername: Anrufdauer</span><span class="sxs-lookup"><span data-stu-id="6d6c1-103">Counter Name: Calls Duration</span></span>  
   
-## <a name="description"></a><span data-ttu-id="00b06-104">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="00b06-104">Description</span></span>  
- <span data-ttu-id="00b06-105">Die durchschnittliche Dauer der Aufrufe dieses Vorgangs.</span><span class="sxs-lookup"><span data-stu-id="00b06-105">The average duration of calls to this operation.</span></span> <span data-ttu-id="00b06-106">Die durchschnittliche Dauer wird basierend auf dieser Gleichung berechnet: (N1-N0)/(D1-D0).</span><span class="sxs-lookup"><span data-stu-id="00b06-106">The average duration is calculated based on this equation: (N1-N0)/(D1-D0).</span></span>  
+## <a name="description"></a><span data-ttu-id="6d6c1-104">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="6d6c1-104">Description</span></span>  
+ <span data-ttu-id="6d6c1-105">Die durchschnittliche Dauer der Aufrufe dieses Vorgangs.</span><span class="sxs-lookup"><span data-stu-id="6d6c1-105">The average duration of calls to this operation.</span></span> <span data-ttu-id="6d6c1-106">Die durchschnittliche Dauer wird anhand der folgenden Formel berechnet: (N1-N0)/(D1-D0).</span><span class="sxs-lookup"><span data-stu-id="6d6c1-106">The average duration is calculated based on this equation: (N1-N0)/(D1-D0).</span></span>  
   
 > [!WARNING]
-> <span data-ttu-id="00b06-107">Bei Verwendung in einem asynchronen WCF-Dienst wird der Aufruf Dauer-Leistungswert immer-1 zurückgegeben.</span><span class="sxs-lookup"><span data-stu-id="00b06-107">When used on an asynchronous WCF service the Calls Duration counter will always return -1.</span></span>  
+> <span data-ttu-id="6d6c1-107">Bei Verwendung in einem asynchronen WCF-Dienst gibt der Aufrufedauerzähler immer -1 zurück.</span><span class="sxs-lookup"><span data-stu-id="6d6c1-107">When used on an asynchronous WCF service the Calls Duration counter will always return -1.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="00b06-108">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="00b06-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="6d6c1-108">Weitere Informationen</span><span class="sxs-lookup"><span data-stu-id="6d6c1-108">See also</span></span>
 
-- [<span data-ttu-id="00b06-109">PERF_AVERAGE_TIMER</span><span class="sxs-lookup"><span data-stu-id="00b06-109">PERF_AVERAGE_TIMER</span></span>](https://go.microsoft.com/fwlink/?LinkId=95015)
+- <span data-ttu-id="6d6c1-109">[PERF_AVERAGE_TIMER](https://docs.microsoft.com/previous-versions/windows/embedded/ms938538(v%3dmsdn.10))</span><span class="sxs-lookup"><span data-stu-id="6d6c1-109">[PERF_AVERAGE_TIMER](https://docs.microsoft.com/previous-versions/windows/embedded/ms938538(v%3dmsdn.10))</span></span>

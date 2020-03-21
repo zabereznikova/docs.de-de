@@ -7,18 +7,18 @@ dev_langs:
 helpviewer_keywords:
 - lazy initialization in .NET, how to perform
 ms.assetid: 8cd68620-dcc3-4f20-8835-c728a6820e71
-ms.openlocfilehash: 6efc89e5c22f53d9b2c48e535c783d488df16462
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: d89d19a7a3edb57dcd6c0e37e6688701da8b3713
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73130323"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79180595"
 ---
-# <a name="how-to-perform-lazy-initialization-of-objects"></a><span data-ttu-id="f87ff-102">Gewusst wie: Verzögerte Initialisierung von Objekten</span><span class="sxs-lookup"><span data-stu-id="f87ff-102">How to: Perform Lazy Initialization of Objects</span></span>
-<span data-ttu-id="f87ff-103">Die <xref:System.Lazy%601?displayProperty=nameWithType>-Klasse vereinfacht die verzögerte Initialisierung und Instanziierung von Objekten.</span><span class="sxs-lookup"><span data-stu-id="f87ff-103">The <xref:System.Lazy%601?displayProperty=nameWithType> class simplifies the work of performing lazy initialization and instantiation of objects.</span></span> <span data-ttu-id="f87ff-104">Beim verzögerten Initialisieren von Objekten können Sie die Erstellung vermeiden, wenn diese nie gebraucht werden, oder Sie können die Initialisierung verschieben, bis ein erster Zugriff erfolgt.</span><span class="sxs-lookup"><span data-stu-id="f87ff-104">By initializing objects in a lazy manner, you can avoid having to create them at all if they are never needed, or you can postpone their initialization until they are first accessed.</span></span> <span data-ttu-id="f87ff-105">Weitere Informationen finden Sie unter [Verzögerte Initialisierung](lazy-initialization.md).</span><span class="sxs-lookup"><span data-stu-id="f87ff-105">For more information, see [Lazy Initialization](lazy-initialization.md).</span></span>  
+# <a name="how-to-perform-lazy-initialization-of-objects"></a><span data-ttu-id="06cb4-102">Gewusst wie: Verzögerte Initialisierung von Objekten</span><span class="sxs-lookup"><span data-stu-id="06cb4-102">How to: Perform Lazy Initialization of Objects</span></span>
+<span data-ttu-id="06cb4-103">Die <xref:System.Lazy%601?displayProperty=nameWithType>-Klasse vereinfacht die verzögerte Initialisierung und Instanziierung von Objekten.</span><span class="sxs-lookup"><span data-stu-id="06cb4-103">The <xref:System.Lazy%601?displayProperty=nameWithType> class simplifies the work of performing lazy initialization and instantiation of objects.</span></span> <span data-ttu-id="06cb4-104">Beim verzögerten Initialisieren von Objekten können Sie die Erstellung vermeiden, wenn diese nie gebraucht werden, oder Sie können die Initialisierung verschieben, bis ein erster Zugriff erfolgt.</span><span class="sxs-lookup"><span data-stu-id="06cb4-104">By initializing objects in a lazy manner, you can avoid having to create them at all if they are never needed, or you can postpone their initialization until they are first accessed.</span></span> <span data-ttu-id="06cb4-105">Weitere Informationen finden Sie unter [Verzögerte Initialisierung](lazy-initialization.md).</span><span class="sxs-lookup"><span data-stu-id="06cb4-105">For more information, see [Lazy Initialization](lazy-initialization.md).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="f87ff-106">Beispiel</span><span class="sxs-lookup"><span data-stu-id="f87ff-106">Example</span></span>  
- <span data-ttu-id="f87ff-107">Das folgende Beispiel zeigt, wie ein Wert mit <xref:System.Lazy%601> initialisiert wird.</span><span class="sxs-lookup"><span data-stu-id="f87ff-107">The following example shows how to initialize a value with <xref:System.Lazy%601>.</span></span> <span data-ttu-id="f87ff-108">Gehen wir davon aus, dass die verzögerte Variable abhängig von anderem Code, der die `someCondition`-Variable auf TRUE oder FALSE festlegt, nicht gebraucht wird.</span><span class="sxs-lookup"><span data-stu-id="f87ff-108">Assume that the lazy variable might not be needed, depending on some other code that sets the `someCondition` variable to true or false.</span></span>  
+## <a name="example"></a><span data-ttu-id="06cb4-106">Beispiel</span><span class="sxs-lookup"><span data-stu-id="06cb4-106">Example</span></span>  
+ <span data-ttu-id="06cb4-107">Das folgende Beispiel zeigt, wie ein Wert mit <xref:System.Lazy%601> initialisiert wird.</span><span class="sxs-lookup"><span data-stu-id="06cb4-107">The following example shows how to initialize a value with <xref:System.Lazy%601>.</span></span> <span data-ttu-id="06cb4-108">Gehen wir davon aus, dass die verzögerte Variable abhängig von anderem Code, der die `someCondition`-Variable auf TRUE oder FALSE festlegt, nicht gebraucht wird.</span><span class="sxs-lookup"><span data-stu-id="06cb4-108">Assume that the lazy variable might not be needed, depending on some other code that sets the `someCondition` variable to true or false.</span></span>  
   
 ```vb  
 Dim someCondition As Boolean = False  
@@ -48,7 +48,7 @@ End Sub
 ```  
   
 ```csharp  
-  static bool someCondition = false;    
+  static bool someCondition = false;
   //Initializing a value with a big computation, computed in parallel  
   Lazy<int> _data = new Lazy<int>(delegate  
   {  
@@ -68,13 +68,13 @@ End Sub
   }  
 ```  
   
-## <a name="example"></a><span data-ttu-id="f87ff-109">Beispiel</span><span class="sxs-lookup"><span data-stu-id="f87ff-109">Example</span></span>  
- <span data-ttu-id="f87ff-110">Das folgende Beispiel zeigt, wie Sie die <xref:System.Threading.ThreadLocal%601?displayProperty=nameWithType>-Klasse verwenden, um die Initialisierung eines Typs durchzuführen, der nur für die aktuelle Objektinstanz für den aktuellen Thread sichtbar ist.</span><span class="sxs-lookup"><span data-stu-id="f87ff-110">The following example shows how to use the <xref:System.Threading.ThreadLocal%601?displayProperty=nameWithType> class to initialize a type that is visible only to the current object instance on the current thread.</span></span>  
+## <a name="example"></a><span data-ttu-id="06cb4-109">Beispiel</span><span class="sxs-lookup"><span data-stu-id="06cb4-109">Example</span></span>  
+ <span data-ttu-id="06cb4-110">Das folgende Beispiel zeigt, wie Sie die <xref:System.Threading.ThreadLocal%601?displayProperty=nameWithType>-Klasse verwenden, um die Initialisierung eines Typs durchzuführen, der nur für die aktuelle Objektinstanz für den aktuellen Thread sichtbar ist.</span><span class="sxs-lookup"><span data-stu-id="06cb4-110">The following example shows how to use the <xref:System.Threading.ThreadLocal%601?displayProperty=nameWithType> class to initialize a type that is visible only to the current object instance on the current thread.</span></span>  
   
  [!code-csharp[CDS#13](../../../samples/snippets/csharp/VS_Snippets_Misc/cds/cs/cds2.cs#13)]
  [!code-vb[CDS#13](../../../samples/snippets/visualbasic/VS_Snippets_Misc/cds/vb/lazyhowto.vb#13)]  
   
-## <a name="see-also"></a><span data-ttu-id="f87ff-111">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="f87ff-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="06cb4-111">Weitere Informationen</span><span class="sxs-lookup"><span data-stu-id="06cb4-111">See also</span></span>
 
 - <xref:System.Threading.LazyInitializer?displayProperty=nameWithType>
-- [<span data-ttu-id="f87ff-112">Lazy Initialization (Verzögerte Initialisierung)</span><span class="sxs-lookup"><span data-stu-id="f87ff-112">Lazy Initialization</span></span>](lazy-initialization.md)
+- [<span data-ttu-id="06cb4-112">Verzögerte Initialisierung</span><span class="sxs-lookup"><span data-stu-id="06cb4-112">Lazy Initialization</span></span>](lazy-initialization.md)

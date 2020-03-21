@@ -2,46 +2,46 @@
 title: ICorDebugProcess6::GetCode-Methode
 ms.date: 03/30/2017
 ms.assetid: faa538c2-60c9-4064-b996-1b4c24ebd751
-ms.openlocfilehash: 1588728f486ffb3db583439de05aff34e3dc59f8
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 94882c67752705f9f13b858ae3b386a19dc103a6
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76792269"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79178557"
 ---
-# <a name="icordebugprocess6getcode-method"></a><span data-ttu-id="b0bc4-102">ICorDebugProcess6::GetCode-Methode</span><span class="sxs-lookup"><span data-stu-id="b0bc4-102">ICorDebugProcess6::GetCode Method</span></span>
-<span data-ttu-id="b0bc4-103">Ruft Informationen über den verwalteten Code an einer bestimmten Codeadresse ab.</span><span class="sxs-lookup"><span data-stu-id="b0bc4-103">Gets information about the managed code at a particular code address.</span></span>  
+# <a name="icordebugprocess6getcode-method"></a><span data-ttu-id="16e26-102">ICorDebugProcess6::GetCode-Methode</span><span class="sxs-lookup"><span data-stu-id="16e26-102">ICorDebugProcess6::GetCode Method</span></span>
+<span data-ttu-id="16e26-103">Ruft Informationen über den verwalteten Code an einer bestimmten Codeadresse ab.</span><span class="sxs-lookup"><span data-stu-id="16e26-103">Gets information about the managed code at a particular code address.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="b0bc4-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="b0bc4-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="16e26-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="16e26-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetCode(  
-    [in] CORDB_ADDRESS codeAddress,   
+    [in] CORDB_ADDRESS codeAddress,
     [out] ICorDebugCode **ppCode);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="b0bc4-105">Parameters</span><span class="sxs-lookup"><span data-stu-id="b0bc4-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="16e26-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="16e26-105">Parameters</span></span>  
  `codeAddress`  
- <span data-ttu-id="b0bc4-106">in Ein [CORDB_ADDRESS](../../../../docs/framework/unmanaged-api/common-data-types-unmanaged-api-reference.md) -Wert, der die Startadresse des verwalteten Code Segments angibt.</span><span class="sxs-lookup"><span data-stu-id="b0bc4-106">[in] A [CORDB_ADDRESS](../../../../docs/framework/unmanaged-api/common-data-types-unmanaged-api-reference.md) value that specifies the starting address of the managed code segment.</span></span>  
+ <span data-ttu-id="16e26-106">[in] Ein [CORDB_ADDRESS](../../../../docs/framework/unmanaged-api/common-data-types-unmanaged-api-reference.md) Wert, der die Startadresse des verwalteten Codesegments angibt.</span><span class="sxs-lookup"><span data-stu-id="16e26-106">[in] A [CORDB_ADDRESS](../../../../docs/framework/unmanaged-api/common-data-types-unmanaged-api-reference.md) value that specifies the starting address of the managed code segment.</span></span>  
   
  `ppCode`  
- <span data-ttu-id="b0bc4-107">vorgenommen Ein Zeiger auf die Adresse eines ICorDebugCode-Objekts, das ein Segment von verwaltetem Code darstellt.</span><span class="sxs-lookup"><span data-stu-id="b0bc4-107">[out] A pointer to the address of an "ICorDebugCode" object that represents a segment of managed code.</span></span>  
+ <span data-ttu-id="16e26-107">[out] Ein Zeiger auf die Adresse eines "ICorDebugCode"-Objekts, das ein Segment verwalteten Codes darstellt.</span><span class="sxs-lookup"><span data-stu-id="16e26-107">[out] A pointer to the address of an "ICorDebugCode" object that represents a segment of managed code.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="b0bc4-108">Hinweise</span><span class="sxs-lookup"><span data-stu-id="b0bc4-108">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="16e26-108">Bemerkungen</span><span class="sxs-lookup"><span data-stu-id="16e26-108">Remarks</span></span>  
   
 > [!NOTE]
-> <span data-ttu-id="b0bc4-109">Diese Methode ist nur mit .NET Native verfügbar.</span><span class="sxs-lookup"><span data-stu-id="b0bc4-109">This method is available with .NET Native only.</span></span>  
+> <span data-ttu-id="16e26-109">Diese Methode ist nur mit .NET Native verfügbar.</span><span class="sxs-lookup"><span data-stu-id="16e26-109">This method is available with .NET Native only.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="b0bc4-110">-Anforderungen</span><span class="sxs-lookup"><span data-stu-id="b0bc4-110">Requirements</span></span>  
- <span data-ttu-id="b0bc4-111">**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="b0bc4-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="16e26-110">Requirements (Anforderungen)</span><span class="sxs-lookup"><span data-stu-id="16e26-110">Requirements</span></span>  
+ <span data-ttu-id="16e26-111">**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="16e26-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="b0bc4-112">**Header:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="b0bc4-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="16e26-112">**Header:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="16e26-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="b0bc4-113">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="b0bc4-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="16e26-113">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="16e26-113">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="b0bc4-114">**.NET Framework Versionen:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b0bc4-114">**.NET Framework Versions:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span></span>  
+ <span data-ttu-id="16e26-114">**.NET Framework-Versionen:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span><span class="sxs-lookup"><span data-stu-id="16e26-114">**.NET Framework Versions:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b0bc4-115">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="b0bc4-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="16e26-115">Weitere Informationen</span><span class="sxs-lookup"><span data-stu-id="16e26-115">See also</span></span>
 
-- [<span data-ttu-id="b0bc4-116">ICorDebugProcess6-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="b0bc4-116">ICorDebugProcess6 Interface</span></span>](icordebugprocess6-interface.md)
-- [<span data-ttu-id="b0bc4-117">Debuggen von Schnittstellen</span><span class="sxs-lookup"><span data-stu-id="b0bc4-117">Debugging Interfaces</span></span>](debugging-interfaces.md)
+- [<span data-ttu-id="16e26-116">ICorDebugProcess6-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="16e26-116">ICorDebugProcess6 Interface</span></span>](icordebugprocess6-interface.md)
+- [<span data-ttu-id="16e26-117">Debugschnittstellen</span><span class="sxs-lookup"><span data-stu-id="16e26-117">Debugging Interfaces</span></span>](debugging-interfaces.md)
