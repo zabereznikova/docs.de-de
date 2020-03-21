@@ -15,61 +15,61 @@ helpviewer_keywords:
 ms.assetid: dd11c485-be95-4b97-9cd8-68679a4fb432
 topic_type:
 - apiref
-ms.openlocfilehash: 031996813718a074eebab62ff54a2de52b898c22
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 4f1c3e823b35fcf7d5935eee111e042b2291d216
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74450214"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175758"
 ---
 # <a name="imetadataemitdefinetypedef-method"></a>IMetaDataEmit::DefineTypeDef-Methode
-Erstellt eine Typdefinition für einen Common Language Runtime Typ und ruft ein Metadatentoken für diese Typdefinition ab.  
+Erstellt eine Typdefinition für einen Common Language-Laufzeittyp und ruft ein Metadatentoken für diese Typdefinition ab.  
   
 ## <a name="syntax"></a>Syntax  
   
 ```cpp  
-HRESULT DefineTypeDef (   
-    [in]  LPCWSTR     szTypeDef,   
-    [in]  DWORD       dwTypeDefFlags,   
-    [in]  mdToken     tkExtends,   
-    [in]  mdToken     rtkImplements[],   
+HRESULT DefineTypeDef (
+    [in]  LPCWSTR     szTypeDef,
+    [in]  DWORD       dwTypeDefFlags,
+    [in]  mdToken     tkExtends,
+    [in]  mdToken     rtkImplements[],
     [out] mdTypeDef   *ptd  
 );  
 ```  
   
 ## <a name="parameters"></a>Parameter  
  `szTypeDef`  
- in Der Name des Typs in Unicode.  
+ [in] Der Name des Typs in Unicode.  
   
  `dwTypeDefFlags`  
- [in] `TypeDef` Attribute. Dies ist eine Bitmaske von `CoreTypeAttr` Werten.  
+ [in] `TypeDef` Attribute. Dies ist eine `CoreTypeAttr` Bitmaske von Werten.  
   
  `tkExtends`  
- in Das Token der Basisklasse. Dabei muss es sich entweder um einen `mdTypeDef` oder um ein `mdTypeRef` Token handeln.  
+ [in] Das Token der Basisklasse. Es muss entweder `mdTypeDef` ein `mdTypeRef` oder ein Token sein.  
   
  `rtkImplements`  
- in Ein Array von-Token, das die Schnittstellen angibt, die diese Klasse oder Schnittstelle implementiert.  
+ [in] Ein Array von Token, das die Schnittstellen angibt, die diese Klasse oder Schnittstelle implementiert.  
   
  `ptd`  
- vorgenommen Das zugewiesene `mdTypeDef` Token.  
+ [out] Das `mdTypeDef` token zugewiesen.  
   
-## <a name="remarks"></a>Hinweise  
- Ein Flag in `dwTypeDefFlags` gibt an, ob der erstellte Typ ein allgemeiner Typsystem-Verweistyp (Klasse oder Schnittstelle) oder ein allgemeiner Typsystem-Werttyp ist.  
+## <a name="remarks"></a>Bemerkungen  
+ Ein Flag `dwTypeDefFlags` in gibt an, ob es sich bei dem zu erstellenden Typ um einen allgemeinen Typsystemreferenztyp (Klasse oder Schnittstelle) oder einen allgemeinen Typsystemwerttyp handelt.  
   
- Abhängig von den angegebenen Parametern kann diese Methode als Nebeneffekt auch einen `mdInterfaceImpl` Datensatz für jede Schnittstelle erstellen, die von diesem Typ geerbt oder implementiert wird. Diese Methode gibt jedoch keines dieser `mdInterfaceImpl` Token zurück. Wenn ein Client ein `mdInterfaceImpl` Token später hinzufügen oder ändern möchte, muss er die `IMetaDataImport`-Schnittstelle verwenden, um Sie aufzulisten. Wenn Sie die com-Semantik der `[default]`-Schnittstelle verwenden möchten, sollten Sie die Standardschnittstelle als erstes Element in `rtkImplements`bereitstellen. ein benutzerdefiniertes Attribut, das für die Klasse festgelegt ist, gibt an, dass die Klasse über eine Standardschnittstelle verfügt (bei der es sich immer um das erste `mdInterfaceImpl` Token handelt, das für die Klasse deklariert ist  
+ Abhängig von den angegebenen Parametern kann diese Methode als `mdInterfaceImpl` Nebeneffekt auch einen Datensatz für jede Schnittstelle erstellen, die von diesem Typ geerbt oder implementiert wird. Diese Methode gibt jedoch keines `mdInterfaceImpl` dieser Token zurück. Wenn ein Client später ein `mdInterfaceImpl` Token hinzufügen oder `IMetaDataImport` ändern möchte, muss er die Schnittstelle verwenden, um sie aufzuzählen. Wenn Sie die COM-Semantik `[default]` der Schnittstelle verwenden möchten, sollten Sie `rtkImplements`die Standardschnittstelle als erstes Element in angeben. Ein benutzerdefiniertes Attribut, das für die Klasse festgelegt ist, gibt an, dass die Klasse über eine Standardschnittstelle verfügt (die immer als das erste `mdInterfaceImpl` für die Klasse deklarierte Token angenommen wird).  
   
- Jedes Element des `rtkImplements` Arrays enthält ein `mdTypeDef` oder `mdTypeRef` Token. Das letzte Element im Array muss `mdTokenNil`werden.  
+ Jedes Element `rtkImplements` des Arrays enthält ein `mdTypeDef` oder `mdTypeRef` ein Token. Das letzte Element im `mdTokenNil`Array muss .  
   
-## <a name="requirements"></a>Voraussetzungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor. h  
+ **Kopfzeile:** Cor.h  
   
- **Bibliothek:** Wird als Ressource in Mscoree. dll verwendet.  
+ **Bibliothek:** Wird als Ressource in MSCorEE.dll verwendet  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [IMetaDataEmit-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [IMetaDataEmit2-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

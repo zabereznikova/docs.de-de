@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 25ca7623-5a55-4f09-b44a-36b03d142278
 topic_type:
 - apiref
-ms.openlocfilehash: 82302124828a2dab73b445128d7d847e112edd36
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 15b58e01d4ce99f19f510c760819471b84380b45
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74448218"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177757"
 ---
 # <a name="imetadataassemblyimportgetexportedtypeprops-method"></a>IMetaDataAssemblyImport::GetExportedTypeProps-Methode
 Ruft den Satz von Eigenschaften des exportierten Typs mit der angegebenen Metadatensignatur ab.  
@@ -29,47 +29,47 @@ Ruft den Satz von Eigenschaften des exportierten Typs mit der angegebenen Metada
   
 ```cpp  
 HRESULT GetExportedTypeProps (  
-    [in]  mdExportedType    mdct,   
-    [out] LPWSTR            szName,   
-    [in]  ULONG             cchName,   
-    [out] ULONG             *pchName,   
-    [out] mdToken           *ptkImplementation,   
-    [out] mdTypeDef         *ptkTypeDef,   
+    [in]  mdExportedType    mdct,
+    [out] LPWSTR            szName,
+    [in]  ULONG             cchName,
+    [out] ULONG             *pchName,
+    [out] mdToken           *ptkImplementation,
+    [out] mdTypeDef         *ptkTypeDef,
     [out] DWORD             *pdwExportedTypeFlags  
 );  
 ```  
   
 ## <a name="parameters"></a>Parameter  
  `mdct`  
- in Ein `mdExportedType` Metadatentoken, das den exportierten Typ darstellt.  
+ [in] Ein `mdExportedType` Metadatentoken, das den exportierten Typ darstellt.  
   
  `szName`  
- vorgenommen Der Name des exportierten Typs.  
+ [out] Der Name des exportierten Typs.  
   
  `cchName`  
- in Die Größe `szName`in breit Zeichen.  
+ [in] Die Größe von in `szName`weiten Zeichen von .  
   
  `pchName`  
- vorgenommen Die Anzahl der tatsächlich in `szName` zurückgegebenen breit Zeichen.  
+ [out] Die Anzahl der breiten Zeichen, die tatsächlich in`szName`  
   
  `ptkImplementation`  
- vorgenommen Ein `mdFile`-, `mdAssemblyRef`-oder `mdExportedType` Metadatentoken, das den Zugriff auf die Eigenschaften des exportierten Typs enthält bzw. zulässt.  
+ [out] Ein `mdFile` `mdAssemblyRef`, `mdExportedType` oder Metadatentoken, das die Eigenschaften des exportierten Typs enthält oder zulässt.  
   
  `ptkTypeDef`  
- vorgenommen Ein Zeiger auf ein `mdTypeDef` Token, das einen Typ in der Datei darstellt.  
+ [out] Ein Zeiger auf `mdTypeDef` ein Token, das einen Typ in der Datei darstellt.  
   
  `pdwExportedTypeFlags`  
- vorgenommen Ein Zeiger auf die Flags, die die auf den exportierten Typ angewendeten Metadaten beschreiben. Der Flags-Wert kann ein oder mehrere [CorTypeAttr](../../../../docs/framework/unmanaged-api/metadata/cortypeattr-enumeration.md) -Werte sein.  
+ [out] Ein Zeiger auf die Flags, die die Metadaten beschreiben, die auf den exportierten Typ angewendet werden. Der Flags-Wert kann ein oder mehrere [CorTypeAttr-Werte](../../../../docs/framework/unmanaged-api/metadata/cortypeattr-enumeration.md) sein.  
   
-## <a name="requirements"></a>Voraussetzungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor. h  
+ **Kopfzeile:** Cor.h  
   
- **Bibliothek:** Wird als Ressource in Mscoree. dll verwendet.  
+ **Bibliothek:** Wird als Ressource in MsCorEE.dll verwendet  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [IMetaDataAssemblyImport-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)

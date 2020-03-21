@@ -15,58 +15,58 @@ helpviewer_keywords:
 ms.assetid: a95a3908-9f87-4084-937e-8e01ef03ad63
 topic_type:
 - apiref
-ms.openlocfilehash: 813460aa027b259866b168d426fd28502b5c4465
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 13220dcfdd260688494d5aebc50f94abf8a82215
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74432498"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177505"
 ---
 # <a name="imetadataemitsetparamprops-method"></a>IMetaDataEmit::SetParamProps-Methode
-Legt die Features eines Methoden Parameters fest, der durch einen vorherigen [IMetaDataEmit::D efineparam](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineparam-method.md)definiert wurde, oder ändert Sie.  
+Legt Features eines Methodenparameters fest oder ändert ihn, der durch einen vorherigen Aufruf von [IMetaDataEmit::DefineParam](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineparam-method.md)definiert wurde.  
   
 ## <a name="syntax"></a>Syntax  
   
 ```cpp  
-HRESULT SetParamProps (   
-    [in]  mdParamDef  pd,   
-    [in]  LPCWSTR     szName,   
-    [in]  DWORD       dwParamFlags,   
-    [in]  DWORD       dwCPlusTypeFlag,   
-    [in]  void const  *pValue,   
-    [in]  ULONG       cchValue   
+HRESULT SetParamProps (
+    [in]  mdParamDef  pd,
+    [in]  LPCWSTR     szName,
+    [in]  DWORD       dwParamFlags,
+    [in]  DWORD       dwCPlusTypeFlag,
+    [in]  void const  *pValue,
+    [in]  ULONG       cchValue
 );  
 ```  
   
 ## <a name="parameters"></a>Parameter  
  `pd`  
- in Das Token für den Zielparameter.  
+ [in] Das Token für den Zielparameter.  
   
  `szName`  
- in Der Name des Parameters in Unicode.  
+ [in] Der Name des Parameters in Unicode.  
   
  `dwParamFlags`  
- in Die Flags für den Parameter.  
+ [in] Die Flags für den Parameter.  
   
  `dwCPlusTypeFlag`  
- in Der ELEMENT_TYPE_ * für den konstanten Wert.  
+ [in] Der ELEMENT_TYPE_* für den konstanten Wert.  
   
  `pValue`  
- in Der Konstante Wert für den Parameter.  
+ [in] Der konstante Wert für den Parameter.  
   
  `cchValue`  
- in Die Größe in (Unicode)-Zeichen `pValue`.  
+ [in] Die Größe in (Unicode)-Zeichen von `pValue`.  
   
-## <a name="requirements"></a>Voraussetzungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor. h  
+ **Kopfzeile:** Cor.h  
   
- **Bibliothek:** Wird als Ressource in Mscoree. dll verwendet.  
+ **Bibliothek:** Wird als Ressource in MSCorEE.dll verwendet  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [IMetaDataEmit-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [IMetaDataEmit2-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

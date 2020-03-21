@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ee518bda-3296-482e-a7b7-e9d51dd1a181
 topic_type:
 - apiref
-ms.openlocfilehash: 3ab24ab869e1f2cff9beafe50e6982ba2e7cf0aa
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 34b7cebfa063a3ad077b74a753fd37ba67ff53a5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74436691"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175316"
 ---
 # <a name="imetadataimportgettypespecfromtoken-method"></a>IMetaDataImport::GetTypeSpecFromToken-Methode
 Ruft die binäre Metadatensignatur der Typspezifikation ab, die durch das angegebene Token dargestellt wird.  
@@ -28,36 +28,36 @@ Ruft die binäre Metadatensignatur der Typspezifikation ab, die durch das angege
 ## <a name="syntax"></a>Syntax  
   
 ```cpp  
-HRESULT GetTypeSpecFromToken (   
-   [in]  mdTypeSpec            typespec,   
-   [out] PCCOR_SIGNATURE       *ppvSig,   
+HRESULT GetTypeSpecFromToken (
+   [in]  mdTypeSpec            typespec,
+   [out] PCCOR_SIGNATURE       *ppvSig,
    [out] ULONG                 *pcbSig  
 );  
 ```  
   
 ## <a name="parameters"></a>Parameter  
  `typespec`  
- in Das TypeSpec-Token, das der angeforderten Metadatensignatur zugeordnet ist.  
+ [in] Das TypeSpec-Token, das der angeforderten Metadatensignatur zugeordnet ist.  
   
  `ppvSig`  
- vorgenommen Ein Zeiger auf die binäre Metadatensignatur.  
+ [out] Ein Zeiger auf die binäre Metadatensignatur.  
   
  `pcbSig`  
- vorgenommen Die Größe (in Bytes) der Metadatensignatur.  
+ [out] Die Größe der Metadatensignatur in Bytes.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Ein HRESULT, das den Erfolg oder Misserfolg angibt. Fehler können mit dem fehlgeschlagenen Makro getestet werden.  
+ Ein HRESULT, das auf Erfolg oder Misserfolg hinweist. Fehler können mit dem FAILED-Makro getestet werden.  
   
-## <a name="requirements"></a>Voraussetzungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor. h  
+ **Kopfzeile:** Cor.h  
   
- **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
+ **Bibliothek:** Als Ressource in MsCorEE.dll enthalten  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [IMetaDataImport-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [IMetaDataImport2-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

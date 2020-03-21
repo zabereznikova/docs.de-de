@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 88fb7ef3-bbdf-429c-b678-c9c153456461
 topic_type:
 - apiref
-ms.openlocfilehash: aa5d66d2408010d7a7b52ec68a18f667097795ae
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: a71d8694ec8c5bd35ecd3e98ed32e05bc7b382fc
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74450177"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177617"
 ---
 # <a name="imetadataemitdefineuserstring-method"></a>IMetaDataEmit::DefineUserString-Methode
 Ruft ein Metadatentoken für die angegebene Literalzeichenfolge ab.  
@@ -28,33 +28,33 @@ Ruft ein Metadatentoken für die angegebene Literalzeichenfolge ab.
 ## <a name="syntax"></a>Syntax  
   
 ```cpp  
-HRESULT DefineUserString (   
-    [in]  LPCWSTR     szString,   
-    [in]  ULONG       cchString,   
-    [out] mdString    *pstk   
+HRESULT DefineUserString (
+    [in]  LPCWSTR     szString,
+    [in]  ULONG       cchString,
+    [out] mdString    *pstk
 );  
 ```  
   
 ## <a name="parameters"></a>Parameter  
  `szString`  
- in Die zu Speicher-Benutzer Zeichenfolge.  
+ [in] Die zu speichernde Benutzerzeichenfolge.  
   
  `cchString`  
- in Die Anzahl der breit Zeichen in `szString`.  
+ [in] Die Anzahl der `szString`breiten Zeichen in .  
   
  `pstk`  
- vorgenommen Das zugewiesene Zeichen folgen Token.  
+ [out] Das zugewiesene Zeichenfolgentoken.  
   
-## <a name="requirements"></a>Voraussetzungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor. h  
+ **Kopfzeile:** Cor.h  
   
- **Bibliothek:** Wird als Ressource in Mscoree. dll verwendet.  
+ **Bibliothek:** Wird als Ressource in MSCorEE.dll verwendet  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [IMetaDataEmit-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [IMetaDataEmit2-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5c6b7fb4-cbca-4479-b650-ab9a99732ea0
 topic_type:
 - apiref
-ms.openlocfilehash: 4149db74adfa26df221eed5c590766a023bb105e
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 9aef471c1155070af0e9bcca14975a65bc5dc763
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74448224"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175966"
 ---
 # <a name="imetadataassemblyimportgetassemblyrefprops-method"></a>IMetaDataAssemblyImport::GetAssemblyRefProps-Methode
 Ruft den Satz von Eigenschaften für den Assemblyverweis mit der angegebenen Metadatensignatur ab.  
@@ -29,62 +29,62 @@ Ruft den Satz von Eigenschaften für den Assemblyverweis mit der angegebenen Met
   
 ```cpp  
 HRESULT GetAssemblyRefProps (  
-    [in]  mdAssemblyRef        mdar,   
-    [out] const void          **ppbPublicKeyOrToken,   
-    [out] ULONG                *pcbPublicKeyOrToken,   
-    [out] LPWSTR               szName,   
-    [in]  ULONG                cchName,   
-    [out] ULONG                *pchName,   
-    [out] ASSEMBLYMETADATA     *pMetaData,   
-    [out] const void           **ppbHashValue,   
-    [out] ULONG                *pcbHashValue,   
+    [in]  mdAssemblyRef        mdar,
+    [out] const void          **ppbPublicKeyOrToken,
+    [out] ULONG                *pcbPublicKeyOrToken,
+    [out] LPWSTR               szName,
+    [in]  ULONG                cchName,
+    [out] ULONG                *pchName,
+    [out] ASSEMBLYMETADATA     *pMetaData,
+    [out] const void           **ppbHashValue,
+    [out] ULONG                *pcbHashValue,
     [out] DWORD                *pdwAssemblyRefFlags  
 );  
 ```  
   
 ## <a name="parameters"></a>Parameter  
  `mdar`  
- in Das `mdAssemblyRef` Metadatentoken, das den Assemblyverweis darstellt, für den die Eigenschaften zu erhalten sind.  
+ [in] Das `mdAssemblyRef` Metadatentoken, das den Assemblyverweis darstellt, für den die Eigenschaften abgerufen werden sollen.  
   
  `ppbPublicKeyOrToken`  
- vorgenommen Ein Zeiger auf den öffentlichen Schlüssel oder das Metadatentoken.  
+ [out] Ein Zeiger auf den öffentlichen Schlüssel oder das Metadatentoken.  
   
  `pcbPublicKeyOrToken`  
- vorgenommen Die Anzahl der Bytes im zurückgegebenen öffentlichen Schlüssel oder Token.  
+ [out] Die Anzahl der Bytes im zurückgegebenen öffentlichen Schlüssel oder Token.  
   
  `szName`  
- vorgenommen Der einfache Name der Assembly.  
+ [out] Der einfache Name der Assembly.  
   
  `cchName`  
- in Die Größe `szName`in breiten Zeichen.  
+ [in] Die Größe, in breiten `szName`Zeichen, von .  
   
  `pchName`  
- vorgenommen Ein Zeiger auf die Anzahl der breiten Zeichen, die tatsächlich in `szName`zurückgegeben werden.  
+ [out] Ein Zeiger auf die Anzahl der breiten `szName`Zeichen, die tatsächlich in zurückgegeben wurden.  
   
  `pMetaData`  
- vorgenommen Ein Zeiger auf eine ASSEMBLYMETADATA-Struktur, die die Assemblymetadaten enthält.  
+ [out] Ein Zeiger auf eine ASSEMBLYMETADATA-Struktur, die die Assemblymetadaten enthält.  
   
  `ppbHashValue`  
- vorgenommen Ein Zeiger auf den Hashwert. Dies ist der Hash mit dem SHA-1-Algorithmus der `PublicKey`-Eigenschaft der Assembly, auf die verwiesen wird, es sei denn, das arffulloriginator-Flag der [AssemblyRefFlags](../../../../docs/framework/unmanaged-api/metadata/assemblyrefflags-enumeration.md) -Enumeration wurde festgelegt.  
+ [out] Ein Zeiger auf den Hashwert. Dies ist der Hash mithilfe des SHA-1-Algorithmus der `PublicKey` Eigenschaft der Assembly, auf die verwiesen wird, es sei denn, das arfFullOriginator-Flag der [AssemblyRefFlags-Enumeration](../../../../docs/framework/unmanaged-api/metadata/assemblyrefflags-enumeration.md) wird festgelegt.  
   
  `pcbHashValue`  
- vorgenommen Die Anzahl der breiten Zeichen im zurückgegebenen Hashwert.  
+ [out] Die Anzahl der breiten Zeichen im zurückgegebenen Hashwert.  
   
  `pdwAssemblyRefFlags`  
- vorgenommen Ein Zeiger auf Flags, die die auf eine Assembly angewendeten Metadaten beschreiben. Der Flags-Wert ist eine Kombination aus einem oder mehreren [CorAssemblyFlags](../../../../docs/framework/unmanaged-api/metadata/corassemblyflags-enumeration.md) -Werten.  
+ [out] Ein Zeiger auf Flags, die die Metadaten beschreiben, die auf eine Assembly angewendet werden. Der Flags-Wert ist eine Kombination aus einem oder mehreren [CorAssemblyFlags-Werten.](../../../../docs/framework/unmanaged-api/metadata/corassemblyflags-enumeration.md)  
   
 ## <a name="return-value"></a>Rückgabewert  
- Diese Methode gibt S_OK zurück, wenn Sie erfolgreich ausgeführt wird. Andernfalls wird einer der in der Header Datei "Winerror. h" definierten Fehlercodes zurückgegeben.  
+ Diese Methode gibt S_OK zurück, wenn sie erfolgreich ist. Andernfalls wird einer der in der Winerror.h-Headerdatei definierten Fehlercodes zurückgegeben.  
   
-## <a name="requirements"></a>Voraussetzungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor. h  
+ **Kopfzeile:** Cor.h  
   
- **Bibliothek:** Wird als Ressource in Mscoree. dll verwendet.  
+ **Bibliothek:** Wird als Ressource in MsCorEE.dll verwendet  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [IMetaDataAssemblyImport-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)

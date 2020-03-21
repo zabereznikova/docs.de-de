@@ -14,20 +14,20 @@ helpviewer_keywords:
 ms.assetid: 90368606-506e-40df-be1f-8d595159203f
 topic_type:
 - apiref
-ms.openlocfilehash: 6914437b9b238c1d82cf4cc8a480a15dd8dda7ad
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 8f9761cc8bc881cd694f5d9620e5c4ab5987a2ed
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73126807"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79176395"
 ---
 # <a name="iceefilegen-class"></a>ICeeFileGen-Klasse
-Stellt Funktionen zum Erstellen einer nativen PE-Datei (Portable portable ausführbare Datei) bereit. Die-Schnittstelle wird in der Regel von Compilern verwendet, um Ihre kompilierte ausführbare Ausgabedatei zu generieren  
+Bietet Funktionen zum Erstellen einer nativen portablen ausführbaren Datei (PE). Die Schnittstelle wird in der Regel von Compilern verwendet, um ihre ausführbare Ausgabe dateiierbar zu generieren.  
   
 > [!NOTE]
-> `ICeeFileGen` unterstützt die .NET Framework-Infrastruktur und ist nicht für die direkte Verwendung im Code vorgesehen.  
+> `ICeeFileGen`unterstützt die .NET Framework-Infrastruktur und ist nicht für die direkte Verwendung aus dem Code vorgesehen.  
   
- Diese Schnittstelle ist veraltet und wird in einer zukünftigen Version entfernt.  
+ Diese Schnittstelle wurde veraltet und wird in einer zukünftigen Version entfernt.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -149,7 +149,7 @@ public:
         HCEESECTION section, ULONG num, ULONG size, ULONG offset = 0);  
   
     virtual HRESULT EmitMetaDataEx (HCEEFILE ceeFile,  
-        IMetaDataEmit *emitter);   
+        IMetaDataEmit *emitter);
   
     virtual HRESULT EmitLibraryNameEx (HCEEFILE ceeFile,  
         IMetaDataEmit *emitter);  
@@ -234,13 +234,13 @@ public:
 };  
 ```  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** ICeeFileGen. h  
+ **Kopfzeile:** ICeeFileGen.h  
   
- **.NET Framework Version:** 1,0  
+ **.NET Framework Version:** 1.0  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Hosten von Schnittstellen](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [Hostingschnittstellen](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

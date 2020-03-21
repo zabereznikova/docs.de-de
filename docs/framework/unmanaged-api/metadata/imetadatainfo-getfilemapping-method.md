@@ -15,63 +15,63 @@ helpviewer_keywords:
 ms.assetid: 2868dfec-c992-4606-88bb-a8e0b6b18271
 topic_type:
 - apiref
-ms.openlocfilehash: 0cd2071d4410615a08e774ba30e0e8fe8d1fa7c7
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 0f5bdf97132c05e765cd6fa423a19bb996105d28
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74436177"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175264"
 ---
 # <a name="imetadatainfogetfilemapping-method"></a>IMetaDataInfo::GetFileMapping-Methode
-Ruft den Speicherbereich der zugeordneten Datei und den Typ der Zuordnung ab.  
+Ruft den Speicherbereich der zugeordneten Datei und den Zuordnungstyp ab.  
   
 ## <a name="syntax"></a>Syntax  
   
 ```cpp  
 HRESULT GetFileMapping (  
-    [out] const void           **ppvData,   
-    [out] ULONGLONG            *pcbData,   
+    [out] const void           **ppvData,
+    [out] ULONGLONG            *pcbData,
     [out] DWORD                *pdwMappingType  
 );  
 ```  
   
 ## <a name="parameters"></a>Parameter  
  `ppvData`  
- vorgenommen Ein Zeiger auf den Anfang der zugeordneten Datei.  
+ [out] Ein Zeiger auf den Anfang der zugeordneten Datei.  
   
  `pcbData`  
- vorgenommen Die Größe des zugeordneten Bereichs. Wenn `pdwMappingType` `fmFlat`ist, ist dies die Größe der Datei.  
+ [out] Die Größe des zugeordneten Bereichs. Wenn `pdwMappingType` `fmFlat`dies der Falle ist, ist dies die Größe der Datei.  
   
  `pdwMappingType`  
- vorgenommen Ein [CorFileMapping](../../../../docs/framework/unmanaged-api/metadata/corfilemapping-enumeration.md) -Wert, der den Typ der Zuordnung angibt. Die aktuelle Implementierung des Common Language Runtime (CLR) gibt immer `fmFlat`zurück. Andere Werte sind für die zukünftige Verwendung reserviert. Sie sollten jedoch immer den zurückgegebenen Wert überprüfen, weil andere Werte möglicherweise in zukünftigen Versionen oder Dienst Releases aktiviert werden.  
+ [out] Ein [CorFileMapping-Wert,](../../../../docs/framework/unmanaged-api/metadata/corfilemapping-enumeration.md) der den Zuordnungstyp angibt. Die aktuelle Implementierung der Common Language Runtime `fmFlat`(CLR) gibt immer zurück. Andere Werte sind für die zukünftige Verwendung reserviert. Sie sollten jedoch immer den zurückgegebenen Wert überprüfen, da andere Werte in zukünftigen Versionen oder Dienstversionen aktiviert werden können.  
   
 ## <a name="return-value"></a>Rückgabewert  
   
 |HRESULT|Beschreibung|  
 |-------------|-----------------|  
-|`S_OK`|Alle Ausgaben werden aufgefüllt.|  
-|`E_INVALIDARG`|NULL wurde als Argument Wert übermittelt.|  
-|`COR_E_NOTSUPPORTED`|Die CLR-Implementierung kann keine Informationen über die Speicher Region bereitstellen. Dafür können die folgenden Gründe verantwortlich sein:<br /><br /> -Der Metadatenbereich wurde mit dem `ofWrite`-oder `ofCopyMemory`-Flag geöffnet.<br />-Der Metadatenbereich wurde ohne das `ofReadOnly`-Flag geöffnet.<br />-Die [IMetaDataDispenser:: OpenScopeOnMemory](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscopeonmemory-method.md) -Methode wurde verwendet, um nur den Metadatenteil der Datei zu öffnen.<br />-Die Datei ist keine portable ausführbare Datei (PE). **Hinweis:**  Diese Bedingungen sind von der CLR-Implementierung abhängig und werden wahrscheinlich in zukünftigen Versionen der CLR geschwächt.|  
+|`S_OK`|Alle Ausgänge sind gefüllt.|  
+|`E_INVALIDARG`|NULL wurde als Argumentwert übergeben.|  
+|`COR_E_NOTSUPPORTED`|Die CLR-Implementierung kann keine Informationen über den Speicherbereich bereitstellen. Dies kann aus folgenden Gründen geschehen:<br /><br /> - Der Metadatenbereich wurde `ofWrite` `ofCopyMemory` mit dem oder-Flag geöffnet.<br />- Der Metadatenbereich wurde `ofReadOnly` ohne das Flag geöffnet.<br />- Die [IMetaDataDispenser::OpenScopeOnMemory-Methode](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscopeonmemory-method.md) wurde verwendet, um nur den Metadatenteil der Datei zu öffnen.<br />- Die Datei ist keine portable ausführbare Datei (PE). **Hinweis:**  Diese Bedingungen hängen von der CLR-Implementierung ab und werden wahrscheinlich in zukünftigen Versionen der CLR geschwächt.|  
   
-## <a name="remarks"></a>Hinweise  
- Der Arbeitsspeicher, auf den `ppvData` verweist, ist nur gültig, solange der zugrunde liegende Metadatenbereich geöffnet ist.  
+## <a name="remarks"></a>Bemerkungen  
+ Der Speicher, auf den verweist, `ppvData` ist nur gültig, solange der zugrunde liegende Metadatenbereich geöffnet ist.  
   
- Damit diese Methode funktioniert, müssen Sie, wenn Sie die Metadaten einer Datei auf dem Datenträger durch Aufrufen der [IMetaDataDispenser:: OpenScope](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscope-method.md) -Methode in den Arbeitsspeicher zuordnen, das `ofReadOnly`-Flag angeben, und Sie dürfen das `ofWrite` oder `ofCopyMemory`-Flag nicht angeben.  
+ Damit diese Methode funktioniert, müssen Sie beim Zuordnen der Metadaten einer On-Disk-Datei in den Speicher die [IMetaDataDispenser::OpenScope-Methode](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscope-method.md) angeben, `ofReadOnly` und Sie dürfen das `ofWrite` oder-Flag `ofCopyMemory` nicht angeben.  
   
- Die Auswahl des Datei Mapping-Typs für jeden Bereich ist spezifisch für eine bestimmte Implementierung der CLR. Er kann nicht vom Benutzer festgelegt werden. Die aktuelle Implementierung der CLR gibt immer `fmFlat` in `pdwMappingType`zurück. Dies kann sich jedoch in zukünftigen Versionen der CLR oder in zukünftigen Dienst Releases einer bestimmten Version ändern. Sie sollten den zurückgegebenen Wert immer in `pdwMappingType`überprüfen, da unterschiedliche Typen verschiedene Layouts und Offsets aufweisen werden.  
+ Die Auswahl des Dateizuordnungstyps für jeden Bereich ist spezifisch für eine bestimmte Implementierung der CLR. Sie kann vom Benutzer nicht festgelegt werden. Die aktuelle Implementierung der CLR `pdwMappingType`gibt immer in zurück, `fmFlat` dies kann sich jedoch in zukünftigen Versionen der CLR oder in zukünftigen Service-Releases einer bestimmten Version ändern. Sie sollten den zurückgegebenen `pdwMappingType`Wert immer in überprüfen, da verschiedene Typen unterschiedliche Layouts und Offsets aufweisen.  
   
- Das übergeben von NULL für einen der drei Parameter wird nicht unterstützt. Die Methode gibt `E_INVALIDARG`zurück, und es werden keine Ausgaben aufgefüllt. Wenn Sie den Mapping-Typ oder die Größe des Bereichs ignorieren, kann dies zu einem ungewöhnlichen Programmabbruch führen.  
+ Das Übergeben von NULL für einen der drei Parameter wird nicht unterstützt. Die Methode `E_INVALIDARG`gibt zurück, und keine ausgabe wird gefüllt. Das Ignorieren des Zuordnungstyps oder der Größe der Region kann zu einer ungewöhnlichen Programmbeendigung führen.  
   
-## <a name="requirements"></a>Voraussetzungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor. h  
+ **Kopfzeile:** Cor.h  
   
- **Bibliothek:** Wird als Ressource in Mscoree. dll verwendet.  
+ **Bibliothek:** Wird als Ressource in MsCorEE.dll verwendet  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [IMetaDataInfo-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadatainfo-interface.md)
 - [CorFileMapping-Enumeration](../../../../docs/framework/unmanaged-api/metadata/corfilemapping-enumeration.md)

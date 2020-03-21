@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 694c0fa0-7011-41a9-9dfd-f0e16ea574b5
 topic_type:
 - apiref
-ms.openlocfilehash: 5f83cb96e39b257a1d35786130cd5ed31d071de7
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 51741aa3a6d965c1e9743081628d8ad62e8fb04e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74443869"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79176200"
 ---
 # <a name="corattributetargets-enumeration"></a>CorAttributeTargets-Enumeration
-Gibt die Anwendungselemente an, auf die ein Attribut angewendet werden kann.  
+Gibt die Anwendungselemente an, auf die Attribute angewendet werden können.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -44,53 +44,53 @@ typedef enum CorAttributeTargets
     catDelegate            = 0x1000,  
     catGenericParameter    = 0x4000,  
   
-    catAll                 =   
-        catAssembly | catModule | catClass | catStruct |   
-        catEnum | catConstructor | catMethod | catProperty |   
-        catField | catEvent | catInterface | catParameter |   
+    catAll                 =
+        catAssembly | catModule | catClass | catStruct |
+        catEnum | catConstructor | catMethod | catProperty |
+        catField | catEvent | catInterface | catParameter |
         catDelegate | catGenericParameter,  
   
-    catClassMembers        =   
-        catClass | catStruct | catEnum | catConstructor |   
-        catMethod | catProperty | catField | catEvent |   
+    catClassMembers        =
+        catClass | catStruct | catEnum | catConstructor |
+        catMethod | catProperty | catField | catEvent |
         catDelegate | catInterface  
   
 } CorAttributeTargets;  
 ```  
   
-## <a name="members"></a>Member  
+## <a name="members"></a>Members  
   
 |Member|Beschreibung|  
 |------------|-----------------|  
-|`catAssembly`|Das Attribut kann auf eine Assembly angewendet werden.|  
-|`catModule`|Das Attribut kann auf ein ausführbares ausführbares ausführbares Modul (. dll oder. exe) angewendet werden.|  
-|`catClass`|Das Attribut kann auf eine Klasse angewendet werden.|  
-|`catStruct`|Das Attribut kann auf eine Struktur angewendet werden. Das heißt, ein Werttyp.|  
-|`catEnum`|Das Attribut kann auf eine Enumeration angewendet werden.|  
-|`catConstructor`|Das Attribut kann auf einen Konstruktor angewendet werden.|  
-|`catMethod`|Das Attribut kann auf eine Methode angewendet werden.|  
-|`catProperty`|Das Attribut kann auf eine Eigenschaft angewendet werden.|  
-|`catField`|Das Attribut kann auf ein Feld angewendet werden.|  
-|`catEvent`|Das Attribut kann auf ein Ereignis angewendet werden.|  
-|`catInterface`|Das Attribut kann auf eine Schnittstelle angewendet werden.|  
-|`catParameter`|Das Attribut kann auf einen Parameter angewendet werden.|  
-|`catDelegate`|Das Attribut kann auf einen Delegaten angewendet werden.|  
-|`catGenericParameter`|Das Attribut kann auf einen generischen Parameter angewendet werden.|  
-|`catAll`|Das Attribut kann auf ein beliebiges Anwendungs Element angewendet werden.|  
-|`catClassMembers`|Das Attribut kann auf einen Member einer Klasse angewendet werden.|  
+|`catAssembly`|Auf Assemblys können Attribute angewendet werden.|  
+|`catModule`|Attribute können auf ein portables ausführbares Modul (.dll oder .exe) angewendet werden.|  
+|`catClass`|Auf Klassen können Attribute angewendet werden.|  
+|`catStruct`|Auf Strukturen, d. h. auf Werttypen, können Attribute angewendet werden.|  
+|`catEnum`|Auf Enumerationen können Attribute angewendet werden.|  
+|`catConstructor`|Auf Konstruktoren können Attribute angewendet werden.|  
+|`catMethod`|Auf Methoden können Attribute angewendet werden.|  
+|`catProperty`|Auf Eigenschaften können Attribute angewendet werden.|  
+|`catField`|Auf Felder können Attribute angewendet werden.|  
+|`catEvent`|Auf Ereignisse können Attribute angewendet werden.|  
+|`catInterface`|Auf Schnittstellen können Attribute angewendet werden.|  
+|`catParameter`|Auf Parameter können Attribute angewendet werden.|  
+|`catDelegate`|Auf Delegaten können Attribute angewendet werden.|  
+|`catGenericParameter`|Auf generische Parameter können Attribute angewendet werden.|  
+|`catAll`|Auf jedes Anwendungselement können Attribute angewendet werden.|  
+|`catClassMembers`|Attribute können auf einen Member einer Klasse angewendet werden.|  
   
-## <a name="remarks"></a>Hinweise  
- Die `CorAttributeTargets` Enumerationswerte können mit einer bitweisen OR-Operation kombiniert werden, um die bevorzugte Kombination zu erhalten.  
+## <a name="remarks"></a>Bemerkungen  
+ Die `CorAttributeTargets` Enumerationswerte können mit einem bitweisen ODER-Vorgang kombiniert werden, um die bevorzugte Kombination zu erhalten.  
   
- Der `CorAttributeTargets` der die verwaltete <xref:System.AttributeTargets?displayProperty=nameWithType>-Enumeration entspricht.  
+ Die `CorAttributeTargets` Parallelen <xref:System.AttributeTargets?displayProperty=nameWithType> zur verwalteten Enumeration.  
   
-## <a name="requirements"></a>Voraussetzungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Corhdr. h  
+ **Kopfzeile:** CorHdr.h  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Metadatenenumerationen](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

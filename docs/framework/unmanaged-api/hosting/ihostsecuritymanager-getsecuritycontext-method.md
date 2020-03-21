@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 958970d6-f6a2-4b84-b32a-f555cbaf8f61
 topic_type:
 - apiref
-ms.openlocfilehash: 66aab8081a5cce8c5ba986470bc91eb0604781a5
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 7198698edce48546c4f9a82ace18d5a6e71891ee
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73121504"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79176252"
 ---
 # <a name="ihostsecuritymanagergetsecuritycontext-method"></a>IHostSecurityManager::GetSecurityContext-Methode
 Ruft den angeforderten [IHostSecurityContext](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritycontext-interface.md) vom Host ab.  
@@ -29,42 +29,42 @@ Ruft den angeforderten [IHostSecurityContext](../../../../docs/framework/unmanag
   
 ```cpp
 HRESULT GetSecurityContext (  
-    [in]  EContextType eContextType,   
+    [in]  EContextType eContextType,
     [out] IHostSecurityContext** ppSecurityContext  
 );  
 ```  
   
 ## <a name="parameters"></a>Parameter  
  `eContextType`  
- in Einer der [EContextType](../../../../docs/framework/unmanaged-api/hosting/econtexttype-enumeration.md) -Werte, der angibt, welcher Typ von Sicherheitskontext zurückgegeben werden soll.  
+ [in] Einer der [EContextType-Werte,](../../../../docs/framework/unmanaged-api/hosting/econtexttype-enumeration.md) der angibt, welcher Sicherheitskontext zurückgegeben werden soll.  
   
  `ppSecurityContext`  
- vorgenommen Die Adresse eines Schnittstellen Zeigers auf den `IHostSecurityContext` `eContextType`.  
+ [out] Die Adresse eines Schnittstellenzeigers `IHostSecurityContext` `eContextType`auf den von .  
   
 ## <a name="return-value"></a>Rückgabewert  
   
 |HRESULT|Beschreibung|  
 |-------------|-----------------|  
-|S_OK|`GetSecurityContext` erfolgreich zurückgegeben.|  
-|HOST_E_CLRNOTAVAILABLE|Der Common Language Runtime (CLR) wurde nicht in einen Prozess geladen, oder die CLR befindet sich in einem Zustand, in dem Sie verwalteten Code nicht ausführen oder den-Befehl nicht erfolgreich verarbeiten kann.|  
-|HOST_E_TIMEOUT|Timeout des Aufrufes.|  
-|HOST_E_NOT_OWNER|Der Aufrufer ist nicht Besitzer der Sperre.|  
-|HOST_E_ABANDONED|Ein Ereignis wurde abgebrochen, während ein blockierter Thread oder eine Fiber darauf wartete.|  
-|E_FAIL|Ein unbekannter schwerwiegender Fehler ist aufgetreten. Wenn eine Methode E_FAIL zurückgibt, kann die CLR innerhalb des Prozesses nicht mehr verwendet werden. Nachfolgende Aufrufe von Hostingmethoden geben HOST_E_CLRNOTAVAILABLE zurück.|  
+|S_OK|`GetSecurityContext`erfolgreich zurückgegeben werden.|  
+|HOST_E_CLRNOTAVAILABLE|Die Common Language Runtime (CLR) wurde nicht in einen Prozess geladen, oder die CLR befindet sich in einem Zustand, in dem sie keinen verwalteten Code ausführen oder den Aufruf erfolgreich verarbeiten kann.|  
+|HOST_E_TIMEOUT|Timeout für den Anruf.|  
+|HOST_E_NOT_OWNER|Der Aufrufer besitzt die Sperre nicht.|  
+|HOST_E_ABANDONED|Ein Ereignis wurde abgebrochen, während ein blockierter Thread oder eine blockierte Faser darauf wartete.|  
+|E_FAIL|Ein unbekannter katastrophaler Fehler ist aufgetreten. Wenn eine Methode E_FAIL zurückgibt, kann die CLR innerhalb des Prozesses nicht mehr verwendet werden. Nachfolgende Aufrufe von Hostingmethoden geben HOST_E_CLRNOTAVAILABLE zurück.|  
   
-## <a name="remarks"></a>Hinweise  
- Ein Host kann den gesamten Code Zugriff auf Thread Token sowohl durch den CLR-als auch durch den Benutzercode steuern. Außerdem kann sichergestellt werden, dass die umfassenden Sicherheitskontext Informationen über asynchrone Vorgänge oder Code Punkte mit eingeschränktem Code Zugriff übermittelt werden. `IHostSecurityContext` kapselt diese Sicherheitskontext Informationen, die für die CLR nicht transparent sind. Die CLR erfasst diese Informationen und verschiebt Sie über die Verteilung von Arbeitsthreads im Thread Pool, die Finalizer-Ausführung sowie die Modul-und Klassen Konstruktion.  
+## <a name="remarks"></a>Bemerkungen  
+ Ein Host kann den gesamten Codezugriff auf Threadtoken sowohl über die CLR als auch durch den Benutzercode steuern. Es kann auch sicherstellen, dass vollständige Sicherheitskontextinformationen über asynchrone Vorgänge oder Codepunkte mit eingeschränktem Codezugriff weitergegeben werden. `IHostSecurityContext`Kapselt diese Sicherheitskontextinformationen, die für die CLR undurchsichtig sind. Die CLR erfasst diese Informationen und verschiebt sie über threadpool-Workerelementdispatch, Finalizerausführung und Modul- und Klassenkonstruktion.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Mscoree. h  
+ **Kopfzeile:** MSCorEE.h  
   
- **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
+ **Bibliothek:** Als Ressource in MSCorEE.dll enthalten  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [EContextType-Enumeration](../../../../docs/framework/unmanaged-api/hosting/econtexttype-enumeration.md)
 - [IHostSecurityContext-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritycontext-interface.md)

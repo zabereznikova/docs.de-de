@@ -15,41 +15,41 @@ helpviewer_keywords:
 ms.assetid: c1e744b8-a6fb-4d9c-a971-8babc875d8f0
 topic_type:
 - apiref
-ms.openlocfilehash: f10c55abcc044b5bbdbb940001a25f530a4688e4
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 489fa217744e41ccb5d27d088790131c15e1ee52
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74431222"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177397"
 ---
 # <a name="imetadataerroronerror-method"></a>IMetaDataError::OnError-Methode
-Gibt Benachrichtigungen zu Fehlern, die während der Zusammenführung der Metadaten auftreten.  
+Stellt eine Benachrichtigung über Fehler bereit, die während der Metadatenzusammenführung auftreten.  
   
 ## <a name="syntax"></a>Syntax  
   
 ```cpp  
 HRESULT OnError (  
-    [in] HRESULT   hrError,   
+    [in] HRESULT   hrError,
     [in] mdToken   token  
 );  
 ```  
   
 ## <a name="parameters"></a>Parameter  
  `hrError`  
- in Der HRESULT-Fehlerwert, der an die Aufruf Methode zurückgegeben wurde.  
+ [in] Der HRESULT-Fehlerwert, der an die aufrufende Methode zurückgegeben wurde.  
   
  `token`  
- in Das Metadatentoken des Code Objekts, das zusammengeführt wurde, als der Fehler aufgetreten ist.  
+ [in] Das Metadatentoken des Codeobjekts, das beim Auftreten des Fehlers zusammengeführt wurde.  
   
-## <a name="requirements"></a>Voraussetzungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor. h  
+ **Kopfzeile:** Cor.h  
   
- **Bibliothek:** Wird als Ressource in Mscoree. dll verwendet.  
+ **Bibliothek:** Wird als Ressource in MsCorEE.dll verwendet  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [IMetaDataError-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataerror-interface.md)

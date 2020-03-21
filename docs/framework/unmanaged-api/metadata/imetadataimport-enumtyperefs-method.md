@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b4896b8f-8e97-469c-8089-e72a025661b5
 topic_type:
 - apiref
-ms.openlocfilehash: 778ebf1d4fad0c8703964be88fdc3ff8c033bc28
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: e5d4ddd43b27d733a63c2e0dc5e92ffd2ba94a7f
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74449978"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175433"
 ---
 # <a name="imetadataimportenumtyperefs-method"></a>IMetaDataImport::EnumTypeRefs-Methode
 Zählt TypeRef-Token auf, die im aktuellen Metadatenbereich definiert sind.  
@@ -29,46 +29,46 @@ Zählt TypeRef-Token auf, die im aktuellen Metadatenbereich definiert sind.
   
 ```cpp  
 HRESULT EnumTypeRefs (  
-   [in, out] HCORENUM    *phEnum,   
+   [in, out] HCORENUM    *phEnum,
    [out] mdTypeRef       rTypeRefs[],  
-   [in]  ULONG           cMax,   
+   [in]  ULONG           cMax,
    [out] ULONG           *pcTypeRefs  
 );  
 ```  
   
 ## <a name="parameters"></a>Parameter  
  `phEnum`  
- [in, out] Ein Zeiger auf den Enumerator. Dieser Wert muss für den ersten-Rückruf dieser Methode NULL sein.  
+ [in, out] Ein Zeiger auf den Enumerator. Dies muss NULL für den ersten Aufruf dieser Methode sein.  
   
  `rTypeRefs`  
- vorgenommen Das Array, das zum Speichern der TypeRef-Token verwendet wird.  
+ [out] Das Array, das zum Speichern der TypeRef-Token verwendet wird.  
   
  `cMax`  
  [in] Die maximale Größe des `rTypeRefs`-Arrays.  
   
  `pcTypeRefs`  
- vorgenommen Ein Zeiger auf die Anzahl der TypeRef-Token, die in `rTypeRefs`zurückgegeben werden.  
+ [out] Ein Zeiger auf die Anzahl der TypeRef-Token, die in `rTypeRefs`zurückgegeben werden.  
   
 ## <a name="return-value"></a>Rückgabewert  
   
 |HRESULT|Beschreibung|  
 |-------------|-----------------|  
-|`S_OK`|`EnumTypeRefs` erfolgreich zurückgegeben.|  
-|`S_FALSE`|Es sind keine Token zum Auflisten vorhanden. In diesem Fall `pcTypeRefs` gleich 0 (null) ist.|  
+|`S_OK`|`EnumTypeRefs`erfolgreich zurückgegeben werden.|  
+|`S_FALSE`|Es sind keine Token zum Aufzählen vorhanden. In diesem `pcTypeRefs` Fall ist Null.|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Ein TypeRef-Token stellt einen Verweis auf einen Typ dar.  
   
-## <a name="requirements"></a>Voraussetzungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor. h  
+ **Kopfzeile:** Cor.h  
   
- **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
+ **Bibliothek:** Als Ressource in MsCorEE.dll enthalten  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [IMetaDataImport-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [IMetaDataImport2-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

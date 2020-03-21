@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 29efe5e5-897b-46c2-a35f-e599a273acc8
-ms.openlocfilehash: 19b62c24d00903d1494a755dbeabb460935cdacd
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: f8db79db6c4a66dfe13ec936313c4cf2c3b93be5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70205940"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79174406"
 ---
 # <a name="implementing-an-explicit-transaction-using-committabletransaction"></a>Implementieren einer expliziten Transaktion mit CommittableTransaction
 Die <xref:System.Transactions.CommittableTransaction>-Klasse ermöglicht es Anwendungen, Transaktionen explizit zu verwenden, anstatt die <xref:System.Transactions.TransactionScope>-Klasse implizit zu verwenden. Sie ist für Anwendungen nützlich, die dieselben Transaktionen über mehrere Funktionsaufrufe oder mehrere Threadaufrufe hinweg verwenden wollen. Im Unterschied zur <xref:System.Transactions.TransactionScope>-Klasse muss der Autor der Anwendung die <xref:System.Transactions.CommittableTransaction.Commit%2A>-Methode bzw. die <xref:System.Transactions.Transaction.Rollback%2A>-Methode aufrufen, um einen Commit der Transaktion auszuführen oder um sie abzubrechen.  
@@ -43,7 +43,7 @@ Die <xref:System.Transactions.CommittableTransaction>-Klasse ermöglicht es Anwe
   
  Sie können <xref:System.Transactions.CommittableTransaction.BeginCommit%2A> aufrufen, um den zurückgehaltenen Commit an einen Thread aus dem Threadpool weiterzuleiten. Sie können zudem <xref:System.Transactions.CommittableTransaction.EndCommit%2A> aufrufen, um zu ermitteln, ob ein Commit für die Transaktion ausgeführt wurde. Wenn der Commit aus irgendeinem Grund nicht für die Transaktion ausgeführt wurde, löst <xref:System.Transactions.CommittableTransaction.EndCommit%2A> eine Transaktionsausnahme aus. Wurde der Transaktionscommit zum Zeitpunkt des Aufrufs von <xref:System.Transactions.CommittableTransaction.EndCommit%2A> noch nicht ausgeführt, wird der Aufrufer gesperrt, bis der Commit durchgeführt oder die Transaktion abgebrochen wurde.  
   
- Das einfachste Verfahren, einen asynchronen Commit auszuführen, besteht darin, eine Rückrufmethode einzurichten. Dann erfolgt bei Beendigung des Commit ein Rückruf. Jedoch müssen Sie die <xref:System.Transactions.CommittableTransaction.EndCommit%2A>-Methode für das ursprüngliche <xref:System.Transactions.CommittableTransaction>-Objekt aufrufen, das für den Aufruf verwendet wurde. Um dieses Objekt zu erhalten, können Sie den *iasynkresult* -Parameter der Rückruf Methode herabsetzen, da <xref:System.Transactions.CommittableTransaction> die- <xref:System.IAsyncResult> Klasse die-Klasse implementiert.  
+ Das einfachste Verfahren, einen asynchronen Commit auszuführen, besteht darin, eine Rückrufmethode einzurichten. Dann erfolgt bei Beendigung des Commit ein Rückruf. Jedoch müssen Sie die <xref:System.Transactions.CommittableTransaction.EndCommit%2A>-Methode für das ursprüngliche <xref:System.Transactions.CommittableTransaction>-Objekt aufrufen, das für den Aufruf verwendet wurde. Um dieses Objekt zu erhalten, können Sie den *IAsyncResult-Parameter* der Rückrufmethode herunterschreiben, da die Klasse die <xref:System.Transactions.CommittableTransaction> <xref:System.IAsyncResult> Klasse implementiert.  
   
  Das folgende Beispiel zeigt, wie ein asynchroner Commit ausgeführt werden kann.  
   
@@ -62,14 +62,14 @@ public void DoTransactionalWork()
      }  
      finally  
      {  
-          //Restore the ambient transaction   
+          //Restore the ambient transaction
           Transaction.Current = oldAmbient;  
      }  
 }  
 void OnCommitted(IAsyncResult asyncResult)  
 {  
      CommittableTransaction committableTransaction;  
-     committableTransaction = asyncResult as CommittableTransaction;     
+     committableTransaction = asyncResult as CommittableTransaction;
      Debug.Assert(committableTransaction != null);  
      try  
      {  
@@ -85,7 +85,7 @@ void OnCommitted(IAsyncResult asyncResult)
 }  
 ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Implementieren einer impliziten Transaktion mit einem Transaktionsbereich](implementing-an-implicit-transaction-using-transaction-scope.md)
-- [Transaction Processing (Verarbeiten von Transaktionen)](index.md)
+- [Transaktionsverarbeitung](index.md)

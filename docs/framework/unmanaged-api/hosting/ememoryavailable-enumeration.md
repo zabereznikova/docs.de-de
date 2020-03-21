@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 38e72a06-dbed-473b-a59b-7e0b3ea4f2af
 topic_type:
 - apiref
-ms.openlocfilehash: aec3c5f140df7eab10ea2bfa33634a4d853adcb0
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 0073a532f680d8764ec9e76ea22326a630457043
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73134291"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79176434"
 ---
 # <a name="ememoryavailable-enumeration"></a>EMemoryAvailable-Enumeration
-Enthält Werte, die angeben, wie viel freier physischer Speicher auf dem Computer vorhanden ist. Diese Werte werden logisch den Ereignissen für einen hohen und niedrigen Arbeitsspeicher zugeordnet, der von der `CreateMemoryResourceNotification` Funktion in der Windows-API zurückgegeben wird.  
+Enthält Werte, die die Menge an freiem physischen Speicher auf dem Computer angeben. Diese Werte werden logisch den Ereignissen für hohen `CreateMemoryResourceNotification` und niedrigen Speicher zugeordnet, die von der Funktion in der Windows-API zurückgegeben werden.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -30,30 +30,30 @@ Enthält Werte, die angeben, wie viel freier physischer Speicher auf dem Compute
 typedef enum {  
     eMemoryAvailableLow     = 1,  
     eMemoryAvailableNeutral = 2,  
-    eMemoryAvailableHigh    = 3   
+    eMemoryAvailableHigh    = 3
 } EMemoryAvailable;  
 ```  
   
-## <a name="members"></a>Member  
+## <a name="members"></a>Members  
   
 |Member|Beschreibung|  
 |------------|-----------------|  
-|`eMemoryAvailableHigh`|Es ist viel physischer Arbeitsspeicher verfügbar.|  
-|`eMemoryAvailableLow`|Es ist nur wenig physischer Arbeitsspeicher verfügbar.|  
+|`eMemoryAvailableHigh`|Es ist viel physischer Speicher verfügbar.|  
+|`eMemoryAvailableLow`|Es ist nur sehr wenig physischer Speicher verfügbar.|  
 |`eMemoryAvailableNeutral`|Der verfügbare physische Speicher ist neutral.|  
   
-## <a name="remarks"></a>Hinweise  
- Dieser Wert wird vom Host mithilfe eines Aufrufs der [ICLRMemoryNotificationCallback:: OnMemoryNotification](../../../../docs/framework/unmanaged-api/hosting/iclrmemorynotificationcallback-onmemorynotification-method.md) -Methode an die Common Language Runtime (CLR) übergeben.  
+## <a name="remarks"></a>Bemerkungen  
+ Dieser Wert wird vom Host an die Common Language Runtime (CLR) übergeben, indem ein Aufruf der [ICLRMemoryNotificationCallback::OnMemoryNotification-Methode](../../../../docs/framework/unmanaged-api/hosting/iclrmemorynotificationcallback-onmemorynotification-method.md) verwendet wird.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Mscoree. h  
+ **Kopfzeile:** MSCorEE.h  
   
- **Bibliothek:** Mscoree. dll  
+ **Bibliothek:** MSCorEE.dll  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Hosten von Enumerationen](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)

@@ -1,5 +1,5 @@
 ---
-title: IXCLRDataModule::GetMethodDefinitionByToken-Methode
+title: IXCLRDataModule::GetMethodDefinitionbyToken-Methode
 ms.date: 01/16/2019
 api.name:
 - IXCLRDataModule::GetMethodDefinitionByToken Method
@@ -15,16 +15,16 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 2c0cf56f108396226b7c7399f6da75e5f47d36f3
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 294c5340caf2217f9337d654a11a63a43d46febd
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67744669"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79176668"
 ---
-# <a name="ixclrdatamodulegetmethoddefinitionbytoken-method"></a>IXCLRDataModule::GetMethodDefinitionByToken-Methode
+# <a name="ixclrdatamodulegetmethoddefinitionbytoken-method"></a>IXCLRDataModule::GetMethodDefinitionbyToken-Methode
 
-Ruft die Definition der Methode für einen angegebenen Metadatentoken ab.
+Ruft die Methodendefinition ab, die einem bestimmten Metadatentoken entspricht.
 
 [!INCLUDE[debugging-api-recommended-note](../../../../includes/debugging-api-recommended-note.md)]
 
@@ -43,20 +43,20 @@ HRESULT GetMethodDefinitionByToken(
 [in] Das Methodentoken.
 
 `methodDefinition`\
-[out] Die Definition der Methode.
+[out] Die Methodendefinition.
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 
-Die angegebene Methode ist Teil der `IXCLRDataModule` Schnittstelle, und mit dem 25. Steckplatz der virtuellen Methodentabelle entspricht.
+Die bereitgestellte Methode `IXCLRDataModule` ist Teil der Schnittstelle und entspricht dem 25. Steckplatz der virtuellen Methodentabelle.
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
-**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
-**Header:** Keiner  
-**Bibliothek:** Keiner  
+**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+**Kopfzeile:** nichts  
+**Bibliothek:** nichts  
 **.NET Framework-Versionen:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
- 
-## <a name="see-also"></a>Siehe auch
+
+## <a name="see-also"></a>Weitere Informationen
 
 - [Debuggen](index.md)
-- [IXCLRDataModule-Schnittstelle](ixclrdatamodule-interface.md)
+- [IXCLRDataModule Interface-Schnittstelle](ixclrdatamodule-interface.md)

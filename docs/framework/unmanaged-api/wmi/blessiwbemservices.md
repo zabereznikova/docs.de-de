@@ -1,6 +1,6 @@
 ---
-title: Blessiwbemservices-Funktion (Referenz zur nicht verwalteten API)
-description: Die blessiwbemservices-Funktion gibt an, ob Benutzer Anmelde Informationen den Zugriff auf eine IWbemServices-Klasse zulassen.
+title: BlessIWbemServices-Funktion (Nicht verwaltete API-Referenz)
+description: Die Funktion BlessIWbemServices gibt an, ob Benutzeranmeldeinformationen den Zugriff auf eine IWbemServices-Klasse zulassen.
 ms.date: 11/06/2017
 api_name:
 - BlessIWbemServices
@@ -14,15 +14,15 @@ helpviewer_keywords:
 - BlessIWbemServices function [.NET WMI and performance counters]
 topic_type:
 - Reference
-ms.openlocfilehash: 946d29892052ea69c2a8a3bf11e7be7a1b2d7068
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 4b15af840cc00b3ec261604db4f3625c6b975d3e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73138778"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79176863"
 ---
 # <a name="blessiwbemservices-function"></a>BlessIWbemServices-Funktion
-Gibt an, ob die Benutzer Anmelde Informationen den Zugriff auf die angegebene [IWbemServices](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemservices) -Klasse zulassen.   
+Gibt an, ob die Benutzeranmeldeinformationen den Zugriff auf die angegebene [IWbemServices-Klasse](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemservices) zulassen.
   
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
   
@@ -31,10 +31,10 @@ Gibt an, ob die Benutzer Anmelde Informationen den Zugriff auf die angegebene [I
 ```cpp
 HRESULT BlessIWbemServices (
    [in] IWbemServices* pIWbemServices,
-   [in] BSTR strUser, 
-   [in] BSTR strPassword, 
-   [in] BSTR strAuthority, 
-   [in] DWORD impLevel, 
+   [in] BSTR strUser,
+   [in] BSTR strPassword,
+   [in] BSTR strAuthority,
+   [in] DWORD impLevel,
    [in] DWORD authnLevel
 );
 ```  
@@ -42,43 +42,43 @@ HRESULT BlessIWbemServices (
 ## <a name="parameters"></a>Parameter
 
 `pIWbemServices`\
-in Ein Zeiger auf das [IWbemServices](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemservices) -Objekt, für das Berechtigungen erforderlich sind.
+[in] Ein Zeiger auf das [IWbemServices-Objekt,](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemservices) für das Berechtigungen erforderlich sind.
 
 `strUser`\
-in Der Benutzername.
+[in] Der Benutzername.
 
 `strPassword`\
-in Das `strUser`zugeordnete Kennwort.
+[in] Das Kennwort, `strUser`das mit verknüpft ist.
 
 `strAuthority`\
-in Der Domänen Name des Benutzers. Weitere Informationen finden Sie in der [connectserverwmi](connectserverwmi.md) -Funktion.
+[in] Der Domänenname des Benutzers. Weitere Informationen finden Sie in der [ConnectServerWmi-Funktion.](connectserverwmi.md)
 
 `impLevel`\
-in Die Ebene des Identitäts Wechsels.
+[in] Die Identitätswechselebene.
 
 `authnLevel`\
-in Die Autorisierungs Ebene.
+[in] Die Berechtigungsstufe.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die folgenden Werte, die von dieser Funktion zurückgegeben werden, sind in der Header Datei " *Winerror. h* " definiert, oder Sie können Sie als Konstanten im Code definieren:
+Die folgenden Werte, die von dieser Funktion zurückgegeben werden, sind in der *WinError.h-Headerdatei* definiert, oder Sie können sie als Konstanten im Code definieren:
 
-|Konstante  |Wert  |Beschreibung  |
+|Dauerhaft  |value  |Beschreibung  |
 |---------|---------|---------|
 | `E_INVALIDARG` | 0x80070057 | Mindestens ein Argument ist ungültig. |
-| `E_POINTER` | 0x80004003 | `pIWbemServices` ist `null`. | 
-| `E_FAIL` | 0x80000008 | Ein nicht angegebener Fehler ist aufgetreten. |
-| `E_OUTOFMEMORY` | 0x80000002 | Es ist nicht genügend Arbeitsspeicher verfügbar, um den Vorgang auszuführen. | 
-| `S_OK` | 0 | Der Funktions Aufrufvorgang war erfolgreich. | 
+| `E_POINTER` | 0x80004003 | `pIWbemServices` ist `null` |
+| `E_FAIL` | 0x80000008 | Ein unbekannter Fehler ist aufgetreten. |
+| `E_OUTOFMEMORY` | 0x80000002 | Es ist nicht genügend Arbeitsspeicher verfügbar, um den Vorgang auszuführen. |
+| `S_OK` | 0 | Der Funktionsaufruf war erfolgreich. |
 
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
 
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
- **Header:** WMINet_Utils. idl  
+ **Kopfzeile:** WMINet_Utils.idl  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [WMI und Leistungsindikatoren (Referenz zur nicht verwalteten API)](index.md)

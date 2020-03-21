@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 85667d38-611c-45a9-938d-930ac7a7b681
 topic_type:
 - apiref
-ms.openlocfilehash: 106ffeee521f69a73628b1fb6a611abc733583f9
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 25baa6ffda3d50915cc7898275d6a557c1b3e947
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74431871"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79176031"
 ---
 # <a name="imetadataassemblyemitsetfileprops-method"></a>IMetaDataAssemblyEmit::SetFileProps-Methode
 Ändert die angegebene `File`-Metadatenstruktur.  
@@ -30,7 +30,7 @@ ms.locfileid: "74431871"
 ```cpp  
 HRESULT SetFileProps (  
     [in] mdFile        file,  
-    [in] const void    *pbHashValue,   
+    [in] const void    *pbHashValue,
     [in] ULONG         cbHashValue,  
     [in] DWORD         dwFileFlags  
 );  
@@ -38,29 +38,29 @@ HRESULT SetFileProps (
   
 ## <a name="parameters"></a>Parameter  
  `file`  
- in Das Metadatentoken, das die zu ändernde `File` Metadatenstruktur angibt.  
+ [in] Das Metadatentoken, das `File` die zu ändernde Metadatenstruktur angibt.  
   
  `pbHashValue`  
- in Ein Zeiger auf die Hashdaten, die der Datei zugeordnet sind.  
+ [in] Ein Zeiger auf die Hashdaten, die der Datei zugeordnet sind.  
   
  `cbHashValue`  
- in Die Größe `pbHashValue`in Byte.  
+ [in] Die Größe in `pbHashValue`Bytes von .  
   
  `dwFileFlags`  
- in Eine bitweise Kombination von [CorFileFlags](../../../../docs/framework/unmanaged-api/metadata/corfileflags-enumeration.md) -Werten, die verschiedene Attribute der Datei angeben.  
+ [in] Eine bitweise Kombination von [CorFileFlags-Werten,](../../../../docs/framework/unmanaged-api/metadata/corfileflags-enumeration.md) die verschiedene Attribute der Datei angeben.  
   
-## <a name="remarks"></a>Hinweise  
- Um eine `File` Metadatenstruktur zu erstellen, verwenden Sie die [IMetaDataAssemblyEmit::D efinefile](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definefile-method.md) -Methode.  
+## <a name="remarks"></a>Bemerkungen  
+ Um eine `File` Metadatenstruktur zu erstellen, verwenden Sie die [IMetaDataAssemblyEmit::DefineFile-Methode.](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definefile-method.md)  
   
-## <a name="requirements"></a>Voraussetzungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor. h  
+ **Kopfzeile:** Cor.h  
   
- **Bibliothek:** Wird als Ressource in Mscoree. dll verwendet.  
+ **Bibliothek:** Wird als Ressource in MsCorEE.dll verwendet  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [IMetaDataAssemblyEmit-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)

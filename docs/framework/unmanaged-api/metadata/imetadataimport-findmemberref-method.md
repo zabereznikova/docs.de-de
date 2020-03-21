@@ -15,61 +15,61 @@ helpviewer_keywords:
 ms.assetid: 1ccda329-d752-4d89-abe8-511af3c3f4c9
 topic_type:
 - apiref
-ms.openlocfilehash: 59512cc1c1b280d7fe6deb2f9d721ad53547e356
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: d8b8bfd0e70e75c702f32555c10f433a1ff4ae10
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74437955"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175420"
 ---
 # <a name="imetadataimportfindmemberref-method"></a>IMetaDataImport::FindMemberRef-Methode
-Ruft einen Zeiger auf das Mitgliedschaft Verweis Token für den Element Verweis ab, der durch die angegebene <xref:System.Type> und den angegebenen Namen und die angegebene Metadatensignatur eingeschlossen ist.  
+Ruft einen Zeiger auf das MemberRef-Token für den Memberverweis ab, der von der angegebenen <xref:System.Type> Datei eingeschlossen ist und über den angegebenen Namen und die angegebene Metadatensignatur verfügt.  
   
 ## <a name="syntax"></a>Syntax  
   
 ```cpp  
 HRESULT FindMemberRef (  
    [in]  mdTypeRef          td,  
-   [in]  LPCWSTR            szName,   
-   [in]  PCCOR_SIGNATURE    pvSigBlob,   
-   [in]  ULONG              cbSigBlob,   
+   [in]  LPCWSTR            szName,
+   [in]  PCCOR_SIGNATURE    pvSigBlob,
+   [in]  ULONG              cbSigBlob,
    [out] mdMemberRef        *pmr  
 );  
 ```  
   
 ## <a name="parameters"></a>Parameter  
  `td`  
- in Das TypeRef-Token für die Klasse oder Schnittstelle, die den zu suchenden Element Verweis einschließt. Wenn dieser Wert `mdTokenNil`ist, erfolgt die Suche für eine globale Variable oder einen globalen Funktions Verweis.  
+ [in] Das TypeRef-Token für die Klasse oder Schnittstelle, die den Memberverweis einschließt, nach dem gesucht werden soll. Wenn dieser `mdTokenNil`Wert ist, erfolgt die Suche nach einer globalen Variablen oder einem verweis auf globale Funktionen.  
   
  `szName`  
- in Der Name des Element Verweises, nach dem gesucht werden soll.  
+ [in] Der Name des Memberverweises, nach dem gesucht werden soll.  
   
  `pvSigBlob`  
- in Ein Zeiger auf die binäre Metadatensignatur des Element Verweises.  
+ [in] Ein Zeiger auf die binäre Metadatensignatur des Memberverweises.  
   
  `cbSigBlob`  
- in Die Größe `pvSigBlob`in Byte.  
+ [in] Die Größe in `pvSigBlob`Bytes von .  
   
  `pmr`  
- vorgenommen Ein Zeiger auf das übereinstimmende mitgliedlinienref-Token.  
+ [out] Ein Zeiger auf das übereinstimmende MemberRef-Token.  
   
-## <a name="remarks"></a>Hinweise  
- Sie geben den Member mithilfe der einschließenden Klasse oder Schnittstelle (`td`), dessen Namen (`szName`) und optional dessen Signatur (`pvSigBlob`) an.  
+## <a name="remarks"></a>Bemerkungen  
+ Sie geben den Member mit seiner`td`einschließenden`szName`Klasse oder Schnittstelle (`pvSigBlob`), seinem Namen ( ) und optional seiner Signatur ( ) an.  
   
- Die an `FindMemberRef` über gegebene Signatur muss im aktuellen Gültigkeitsbereich generiert worden sein, da Signaturen an einen bestimmten Bereich gebunden sind. Eine Signatur kann ein Token einbetten, das den einschließenden Klassen-oder Werttyp identifiziert. Das Token ist ein Index in der lokalen Tabelle "Typedef". Sie können keine Lauf Zeit Signatur außerhalb des Kontexts des aktuellen Bereichs erstellen und diese Signatur als Eingabe für `FindMemberRef`verwenden.  
+ Die übergebene `FindMemberRef` Signatur muss im aktuellen Bereich generiert worden sein, da Signaturen an einen bestimmten Bereich gebunden sind. Eine Signatur kann ein Token einbetten, das die einschließende Klasse oder den Werttyp identifiziert. Das Token ist ein Index in der lokalen TypeDef-Tabelle. Sie können keine Laufzeitsignatur außerhalb des Kontexts des aktuellen Bereichs `FindMemberRef`erstellen und diese Signatur als Eingabe für verwenden.  
   
- `FindMemberRef` findet nur Member-Verweise, die direkt in der Klasse oder Schnittstelle definiert wurden. vererbte Element Verweise werden nicht gefunden.  
+ `FindMemberRef`findet nur Memberverweise, die direkt in der Klasse oder Schnittstelle definiert wurden; Es werden keine geerbten Memberverweise gefunden.  
   
-## <a name="requirements"></a>Voraussetzungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor. h  
+ **Kopfzeile:** Cor.h  
   
- **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
+ **Bibliothek:** Als Ressource in MsCorEE.dll enthalten  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [IMetaDataImport-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [IMetaDataImport2-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

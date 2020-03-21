@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: fad01d7a-3178-4c8c-9f0a-4641e3701c9b
 topic_type:
 - apiref
-ms.openlocfilehash: 44f97ef498eb8e64c55fc86b9f290b9e088293f6
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 388f227377ddf73fe1297e1c777bb1c0607c13d2
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74432071"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177880"
 ---
 # <a name="imetadataassemblyemitdefineexportedtype-method"></a>IMetaDataAssemblyEmit::DefineExportedType-Methode
 Erstellt eine `ExportedType`-Struktur, die Metadaten für den angegebenen exportierten Typ enthält, und gibt das zugeordnete Metadatentoken zurück.  
@@ -30,7 +30,7 @@ Erstellt eine `ExportedType`-Struktur, die Metadaten für den angegebenen export
 ```cpp  
 HRESULT DefineExportedType (  
     [in]  LPCWSTR             szName,  
-    [in]  mdToken             tkImplementation,   
+    [in]  mdToken             tkImplementation,
     [in]  mdTypeDef           tkTypeDef,  
     [in]  DWORD               dwExportedTypeFlags,  
     [out] mdExportedType      *pmdct  
@@ -39,40 +39,40 @@ HRESULT DefineExportedType (
   
 ## <a name="parameters"></a>Parameter  
  `szName`  
- in Der Name des zu exportierenden Typs. Bei Version 1,1 des Common Language Runtime muss der Name des exportierten Typs genau mit dem Namen übereinstimmen, der in der `TypeDef` für den Typ angegeben wurde.  
+ [in] Der Name des zu exportierenden Typs. Für Version 1.1 der Common Language Runtime muss der Name des exportierten Typs genau mit dem Namen übereinstimmen, der im für den `TypeDef` Typ angegeben ist.  
   
  `tkImplementation`  
- in Ein Token, das angibt, wo der exportierte Typ implementiert wird. Die gültigen Werte und ihre zugeordneten Bedeutungen lauten:  
+ [in] Ein Token, das angibt, wo der exportierte Typ implementiert ist. Die gültigen Werte und die zugehörigen Bedeutungen sind:  
   
-- `mdFile` der Typ in einer anderen Datei in dieser Assembly implementiert wird.  
+- `mdFile`Der Typ wird in einer anderen Datei innerhalb dieser Assembly implementiert.  
   
-- `mdAssemblyRef` der Typ in einer anderen Assembly implementiert wird.  
+- `mdAssemblyRef`Der Typ wird in einer anderen Assembly implementiert.  
   
-- `mdExportedTYpe` der Typ in einem anderen Typ geschachtelt ist.  
+- `mdExportedTYpe`Der Typ ist in einem anderen Typ geschachtelt.  
   
-- `mdFileNil` sich der Typ in derselben Datei wie das Manifest befindet und kein Typ ist.  
+- `mdFileNil`Der Typ befindet sich in derselben Datei wie das Manifest und ist kein geschachtelter Typ.  
   
  `tkTypeDef`  
- in Ein Token für die Metadaten, das den zu exportierenden Typ angibt. Dieser Wert wird in der `TypeDef` Tabelle in der Datei eingegeben, die den Typ implementiert, und ist nur relevant, wenn sich diese Datei in dieser Assembly befindet.  
+ [in] Ein Token für die Metadaten, das den zu exportierenden Typ angibt. Dieser Wert wird `TypeDef` in die Tabelle in der Datei eingegeben, die den Typ implementiert, und ist nur relevant, wenn sich diese Datei in dieser Assembly befindet.  
   
  `dwExportedTypeFlags`  
- in Eine bitweise Kombination von [CorTypeAttr](../../../../docs/framework/unmanaged-api/metadata/cortypeattr-enumeration.md) -Enumerationswerten, die die Eigenschafts Einstellungen für den exportierten Typ definieren.  
+ [in] Eine bitweise Kombination von CorTypeAttr-Enumerationswerten, die die Eigenschafteneinstellungen für den exportierten Typ definieren. [CorTypeAttr](../../../../docs/framework/unmanaged-api/metadata/cortypeattr-enumeration.md)  
   
  `pmdct`  
- vorgenommen Ein Zeiger auf das zurückgegebene Metadatentoken, das den exportierten Typ angibt.  
+ [out] Ein Zeiger auf das zurückgegebene Metadatentoken, das den exportierten Typ angibt.  
   
-## <a name="remarks"></a>Hinweise  
- Für jeden Typ, der von dieser Assembly verfügbar gemacht wird, muss eine `ExportedType` Metadatenstruktur definiert werden, die in einem anderen Modul implementiert ist als das, das das Manifest enthält.  
+## <a name="remarks"></a>Bemerkungen  
+ Für `ExportedType` jeden Typ, der von dieser Assembly verfügbar gemacht wird und der in einem anderen Modul als dem, das das Manifest enthält, implementiert wird, muss eine Metadatenstruktur definiert werden.  
   
-## <a name="requirements"></a>Voraussetzungen  
- **Plattform:** Siehe [System Anforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+ **Plattform:** Siehe [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor. h  
+ **Kopfzeile:** Cor.h  
   
- **Bibliothek:** Wird als Ressource in Mscoree. dll verwendet.  
+ **Bibliothek:** Wird als Ressource in MsCorEE.dll verwendet  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [IMetaDataAssemblyEmit-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)

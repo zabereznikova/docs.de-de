@@ -5,60 +5,60 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 370c16d5-db7b-43e3-945b-ccaab35b739b
-ms.openlocfilehash: d99cea1641dc61c1cae6d6b1634359211ce788ae
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: 2917a8d9b42d831566855271a2f2110637db586f
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77452304"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79174471"
 ---
 # <a name="table-valued-parameters"></a>Tabellenwertparameter
-Tabellenwertparameter bieten eine einfache Möglichkeit zum Marshallen mehrerer Datenzeilen aus einer Clientanwendung nach SQL Server, ohne dass mehrere Roundtrips oder eine spezielle serverseitige Logik für die Verarbeitung der Daten erforderlich sind. Sie können Tabellenwertparameter verwenden, um Datenzeilen in einer Clientanwendung zu kapseln und die Daten in einem einzigen parametrisierten Befehl an den Server zu senden. Die eingehenden Datenzeilen werden in einer Tabellenvariablen gespeichert, die anschließend mit Transact-SQL verarbeitet werden kann.  
+Tabellenwertparameter bieten eine einfache Möglichkeit zum Marshallen mehrerer Datenzeilen aus einer Clientanwendung nach SQL Server, ohne dass mehrere Roundtrips oder eine spezielle serverseitige Logik für die Verarbeitung der Daten erforderlich sind. Sie können Tabellenwertparameter verwenden, um Datenzeilen in einer Clientanwendung zu kapseln und die Daten in einem einzigen parametrisierten Befehl an den Server zu senden. Die eingehenden Datenzeilen werden in einer Tabellenvariablen gespeichert, die Sie dann mithilfe von Transact-SQL bearbeiten können.  
   
- Für den Zugriff auf Spaltenwerte in Tabellenwertparametern können Standard-SELECT-Anweisungen in Transact-SQL verwendet werden. Tabellenwertparameter sind stark typisiert, und ihre Struktur wird automatisch validiert. Die Größe der Tabellenwertparameter wird nur vom Serverarbeitsspeicher beschränkt.  
+ Für den Zugriff auf Spaltenwerte in Tabellenwertparametern können Standard-SELECT-Anweisungen in Transact-SQL verwendet werden. Tabellenwertparameter sind stark typisiert, und ihre Struktur wird automatisch validiert. Die Größe von Tabellenwertparametern ist lediglich durch den Arbeitsspeicher des Servers beschränkt.  
   
 > [!NOTE]
-> Daten in einem Tabellenwertparameter können nicht zurückgegeben werden. Tabellenwertparameter sind reine Eingabeparameter; das OUTPUT-Schlüsselwort wird nicht unterstützt.  
+> In Tabellenwertparametern können keine Daten zurückgegeben werden. Tabellenwertparameter sind reine Eingabeparameter. Das Schlüsselwort OUTPUT wird nicht unterstützt.  
   
- Weitere Informationen über Tabellenwertparameter finden Sie in den folgenden Ressourcen.  
+ Weitere Informationen zu Tabellenwertparametern finden Sie in den folgenden Ressourcen.  
   
-|Ressource|Beschreibung|  
+|Resource|Beschreibung|  
 |--------------|-----------------|  
-|[Verwenden von Tabellenwertparameter (Datenbank-Engine)](/sql/relational-databases/tables/use-table-valued-parameters-database-engine)|Beschreibt das Erstellen und Verwenden von Tabellenwertparametern.|  
+|[Verwenden von Tabellenwertparameter (Datenbank-Engine)](/sql/relational-databases/tables/use-table-valued-parameters-database-engine)|Beschreibt, wie Sie Tabellenwertparameter erstellen und verwenden.|  
 |[Benutzerdefinierte Tabellentypen](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/bb522526(v=sql.100))|Beschreibt die benutzerdefinierten Tabellentypen, die zum Deklarieren von Tabellenwertparametern verwendet werden.|  
   
 ## <a name="passing-multiple-rows-in-previous-versions-of-sql-server"></a>Übergeben von mehreren Zeilen in älteren Versionen von SQL Server  
- Vor der Einführung von Tabellenwertparametern in SQL Server 2008 bestanden nur eingeschränkte Möglichkeiten zum Übergeben mehrerer Datenzeilen an eine gespeicherte Prozedur oder einen parametrisierten SQL-Befehl. Ein Entwickler konnte aus den folgenden Optionen zum Übergeben mehrerer Zeilen an den Server auswählen:  
+ Vor der Einführung von Tabellenwertparametern in SQL Server 2008 bestanden nur eingeschränkte Möglichkeiten zum Übergeben mehrerer Datenzeilen an eine gespeicherte Prozedur oder einen parametrisierten SQL-Befehl. Entwickler hatten folgende Möglichkeiten, um mehrere Zeilen an den Server zu übergeben:  
   
-- Er hatte die Möglichkeit, eine Reihe einzelner Parameter zu verwenden, um die Werte in mehreren Spalten und Zeilen von Daten darzustellen. Die Datenmenge, die mithilfe dieser Methode übergeben werden kann, ist durch die Anzahl der zulässigen Parameter beschränkt. SQL Server-Prozeduren können höchstens über 2100 Parameter verfügen. Eine Zusammenstellung zur Verarbeitung dieser einzelnen Werte in einer Tabellenvariablen oder einer temporären Tabelle erfordert serverseitige Logik.  
+- Verwenden von mehreren Einzelparametern zur Darstellung der Werte in mehreren Datenspalten und -zeilen. Die Menge der Daten, die mit dieser Methode übergeben werden können, ist aufgrund der maximal zulässigen Anzahl von Parametern beschränkt. SQL Server-Prozeduren können höchstens über 2100 Parameter verfügen. Um diese Einzelwerte zur Verarbeitung in einer Tabellenvariable oder einer temporären Tabelle zusammenzusetzen, ist serverseitige Logik erforderlich.  
   
-- Ein Entwickler hatte weiterhin die Möglichkeit, mehrere Datenwerte in voneinander getrennten Zeichenfolgen oder in XML-Dokumenten zu bündeln und diese Textwerte anschließend an eine Prozedur oder Anweisung zu übergeben. Bei dieser Methode muss die Prozedur oder Anweisung die erforderliche Logik zum Überprüfen der Datenstrukturen sowie zum Entbündeln der Werte beinhalten.  
+- Bündeln mehrerer Datenwerte in Zeichenfolgen mit Trennzeichen oder XML-Dokumenten und Übergeben dieser Textwerte an eine Prozedur oder Anweisung. Bei dieser Vorgehensweise muss die Prozedur oder Anweisung die erforderliche Logik zum Überprüfen der Datenstrukturen und Entbündeln der Werte enthalten.  
   
-- Ein Entwickler konnte weiterhin eine Reihe einzelner SQL-Datenänderungsanweisungen erstellen, die mehrere Zeilen betreffen, wie beispielsweise Anweisungen, die durch den Aufruf der `Update`-Methode eines <xref:System.Data.SqlClient.SqlDataAdapter> erstellt werden. Die Änderungen können dabei einzeln oder in Gruppen gestapelt an den Server gesendet werden. Jede Anweisung wird jedoch auf dem Server einzeln ausgeführt, auch wenn die Anweisungen in Stapeln übermittelt werden.  
+- Erstellen einer Reihe von SQL-Einzelanweisungen für Datenänderungen, die sich auf mehrere Zeilen auswirken (z.B. durch den Aufruf der `Update`-Methode einer <xref:System.Data.SqlClient.SqlDataAdapter>-Klasse). Änderungen können einzeln an den Server übermittelt oder in Gruppen zusammengefasst werden. Auch wenn sie in Batches übermittelt werden, die mehrere Anweisungen enthalten, wird jede Anweisung einzeln auf dem Server ausgeführt.  
   
-- Das `bcp`-Hilfsprogramm und das <xref:System.Data.SqlClient.SqlBulkCopy>-Objekt bieten ebenfalls die Möglichkeit, mehrere Datenzeilen in eine Tabelle zu laden. Obwohl diese Technik sehr effizient ist, bietet sie keine Unterstützung für serverseitige Verarbeitung, wenn die Daten nicht in eine temporäre Tabelle oder Tabellenvariable geladen werden.  
+- Verwenden des `bcp`-Hilfsprogramms oder des <xref:System.Data.SqlClient.SqlBulkCopy>-Objekts, um eine Vielzahl von Datenzeilen in eine Tabelle zu laden. Wenngleich dieses Verfahren sehr effizient ist, wird die serverseitige Verarbeitung nur dann unterstützt, wenn die Daten in eine temporäre Tabelle oder Tabellenvariable geladen werden.  
   
 ## <a name="creating-table-valued-parameter-types"></a>Erstellen von Tabellenwertparameter-Typen  
  Tabellenwertparameter basieren auf stark typisierten Tabellenstrukturen, die mit CREATE TYPE-Anweisungen in Transact-SQL definiert werden. Sie müssen einen Tabellentyp erstellen und die Struktur in SQL Server definieren, bevor Sie Tabellenwertparameter in Ihren Clientanwendungen verwenden können. Weitere Informationen zum Erstellen von Tabellentypen finden Sie unter [Benutzerdefinierte Tabellentypen](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/bb522526(v=sql.100)).  
   
- Die folgende Anweisung erstellt einen Tabellentyp mit dem Namen &lt;legacyBold&gt;CategoryTableType&lt;/legacyBold&gt;, der aus den Spalten &lt;legacyBold&gt;CategoryID&lt;/legacyBold&gt; und &lt;legacyBold&gt;CategoryName&lt;/legacyBold&gt; besteht:  
+ Mit der folgenden Anweisung wird ein Tabellentyp namens „CategoryTableType“ erstellt, der aus den Spalten „CategoryID“ und „CategoryName“ besteht:  
   
 ```sql
 CREATE TYPE dbo.CategoryTableType AS TABLE  
     ( CategoryID int, CategoryName nvarchar(50) )  
 ```  
   
- Nach der Erstellung eines Tabellentyps können Tabellenwertparameter auf Grundlage dieses Typs deklariert werden. Das folgende Transact-SQL-Fragment veranschaulicht, wie ein Tabellenwertparameter in der Definition einer gespeicherten Prozedur deklariert wird. Beachten Sie, dass das READONLY-Schlüsselwort zum Deklarieren eines Tabellenwertparameters erforderlich ist.  
+ Nachdem Sie einen Tabellentyp erstellt haben, können Sie Tabellenwertparameter basierend auf diesem Typ deklarieren. Das folgende Transact-SQL-Fragment veranschaulicht, wie ein Tabellenwertparameter in der Definition einer gespeicherten Prozedur deklariert wird. Beachten Sie, dass das Schlüsselwort READONLY erforderlich ist, um einen Tabellenwertparameter zu deklarieren.  
   
 ```sql
-CREATE PROCEDURE usp_UpdateCategories   
+CREATE PROCEDURE usp_UpdateCategories
     (@tvpNewCategories dbo.CategoryTableType READONLY)  
 ```  
   
 ## <a name="modifying-data-with-table-valued-parameters-transact-sql"></a>Ändern von Daten mit Tabellenwertparametern (Transact-SQL)  
- Tabellenwertparameter können in mengenbasierten Datenänderungen verwendet werden, die mehrere Zeilen mit der Ausführung einer einzelnen Anweisung beeinflussen können. So können Sie z. B. alle Zeilen in einem Tabellenwertparameter auswählen und diese in eine Datenbanktabelle einfügen, oder Sie können eine Updateanweisung erstellen, indem Sie einen Tabellenwertparameter mit der zu aktualisierenden Tabelle verknüpfen.  
+ Um Tabellenwertparameter bei Datenänderungen zu verwenden, die auf Sätzen basieren und sich auf mehrere Zeilen auswirken, kann eine einzelne Anweisung ausgeführt werden. Beispielsweise können Sie alle Zeilen in einem Tabellenwertparameter auswählen und in eine Datenbanktabelle einfügen, oder Sie können eine update-Anweisung erstellen, indem Sie einen Tabellenwertparameter mit der Tabelle verbinden, die Sie aktualisieren möchten.  
   
- Mit der folgenden UPDATE-Anweisung in Transact-SQL wird veranschaulicht, wie ein Tabellenwertparameter durch einen Join mit der Categories-Tabelle verwendet wird. Wenn Sie einen Tabellenwertparameter mit einem JOIN in einer FROM-Klausel verwenden, müssen Sie diesen ebenfalls mit einem Alias versehen. Dies ist im folgenden Beispiel dargestellt, in dem der Tabellenwertparameter mit dem Alias "ec" versehen ist:  
+ Mit der folgenden UPDATE-Anweisung in Transact-SQL wird veranschaulicht, wie ein Tabellenwertparameter durch einen Join mit der Categories-Tabelle verwendet wird. Wenn Sie einen Tabellenwertparameter mit einem JOIN in einer FROM-Klausel verwenden, müssen Sie auch einen Alias angeben, wie in diesem Beispiel gezeigt (der Alias des Tabellenwertparameters lautet „ec“):  
   
 ```sql
 UPDATE dbo.Categories  
@@ -75,20 +75,20 @@ INSERT INTO dbo.Categories (CategoryID, CategoryName)
 ```  
   
 ## <a name="limitations-of-table-valued-parameters"></a>Einschränkungen von Tabellenwertparametern  
- Es gibt mehrere Einschränkungen bei Tabellenwertparametern:  
+ Für Tabellenwertparameter gelten verschiedene Einschränkungen:  
   
 - Tabellenwertparameter können nicht an [benutzerdefinierte CLR-Funktionen](/sql/relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-functions) übergeben werden.  
   
-- Tabellenwertparameter können nur zur Unterstützung von UNIQUE- und PRIMARY KEY-Einschränkungen indiziert werden. SQL Server verwaltet keine Statistiken für Tabellenwertparameter.  
+- Tabellenwertparameter können nur für die Unterstützung der UNIQUE- oder PRIMARY KEY-Einschränkungen indiziert werden. SQL Server verwaltet keine Statistiken für Tabellenwertparameter.  
   
-- Tabellenwertparameter sind in Transact-SQL-Code schreibgeschützt. Die Spaltenwerte in den Zeilen eines Tabellenwertparameters können nicht aktualisiert werden, und Zeilen können nicht eingefügt oder gelöscht werden. Um die Daten zu ändern, die in einem Tabellenwertparameter an eine gespeicherte Prozedur oder eine parametrisierte Anweisung übergeben werden, müssen die Daten in eine temporäre Tabelle oder eine Tabellenvariable eingefügt werden.  
+- Tabellenwertparameter sind in Transact-SQL-Code schreibgeschützt. Sie können die Spaltenwerte in den Zeilen eines Tabellenwertparameters nicht aktualisieren, und Sie können keine Zeilen einfügen oder löschen. Um die Daten zu ändern, die an eine gespeicherte Prozedur oder eine parametrisierte Anweisung in einem Tabellenwertparameter übergeben werden, müssen Sie die Daten in eine temporäre Tabelle oder in eine Tabellenvariable einfügen.  
   
-- Es können keine ALTER TABLE-Anweisungen zum Ändern des Entwurfs von Tabellenwertparametern verwendet werden.  
+- Der Aufbau von Tabellenwertparametern kann nicht mithilfe von ALTER TABLE-Anweisungen geändert werden.  
   
 ## <a name="configuring-a-sqlparameter-example"></a>Konfigurieren eines SqlParameter-Beispiels  
- <xref:System.Data.SqlClient> unterstützt das Auffüllen von Tabellenwertparametern aus <xref:System.Data.DataTable>-, <xref:System.Data.Common.DbDataReader>- und <xref:System.Collections.Generic.IEnumerable%601> \ <xref:Microsoft.SqlServer.Server.SqlDataRecord>-Objekten. Sie müssen mit der <xref:System.Data.SqlClient.SqlParameter.TypeName%2A>-Eigenschaft eines <xref:System.Data.SqlClient.SqlParameter> einen Typnamen für den Tabellenwertparameter angeben. Der `TypeName` muss dem Namen eines kompatiblen Typs entsprechen, der zuvor auf dem Server erstellt wurde. Das folgende Codefragment zeigt, wie <xref:System.Data.SqlClient.SqlParameter> konfiguriert werden kann, um Daten einzufügen:  
- 
-Im folgenden Beispiel enthält die Variable `addedCategories` eine <xref:System.Data.DataTable>. Informationen zum Füllen der Variablen finden Sie in den Beispielen im nächsten Abschnitt [übergeben eines Tabellenwert Parameters an eine gespeicherte Prozedur](#passing).
+ <xref:System.Data.SqlClient> unterstützt das Auffüllen von Tabellenwertparametern aus <xref:System.Data.DataTable>-, <xref:System.Data.Common.DbDataReader>- und <xref:System.Collections.Generic.IEnumerable%601> \ <xref:Microsoft.SqlServer.Server.SqlDataRecord>-Objekten. Sie müssen mit der <xref:System.Data.SqlClient.SqlParameter.TypeName%2A>-Eigenschaft eines <xref:System.Data.SqlClient.SqlParameter> einen Typnamen für den Tabellenwertparameter angeben. `TypeName` muss dem Namen eines kompatiblen Typs entsprechen, der zuvor auf dem Server erstellt wurde. Das folgende Codefragment zeigt, wie <xref:System.Data.SqlClient.SqlParameter> für das Einfügen von Daten konfiguriert wird.  
+
+Im folgenden Beispiel enthält die Variable `addedCategories` eine <xref:System.Data.DataTable>. Weitere Informationen zum Füllen der Variable finden Sie in den Beispielen im nächsten Abschnitt [Übergeben eines Tabellenwertparameters an eine gespeicherte Prozedur](#passing).
 
 ```csharp  
 // Configure the command and parameter.  
@@ -128,8 +128,8 @@ Dim tvpParam As SqlParameter = _
 tvpParam.SqlDbType = SqlDbType.Structured  
 ```  
   
-## <a name="passing"></a>Übergeben eines Tabellenwert Parameters an eine gespeicherte Prozedur  
- In diesem Beispiel wird veranschaulicht, wie Daten eines Tabellenwertparameters an eine gespeicherte Prozedur übergeben werden. Der Code ruft hinzugefügte Zeilen mithilfe der <xref:System.Data.DataTable>-Methode in eine neue <xref:System.Data.DataTable.GetChanges%2A> ab. Anschließend definiert der Code einen <xref:System.Data.SqlClient.SqlCommand>, mit dem die <xref:System.Data.SqlClient.SqlCommand.CommandType%2A>-Eigenschaft auf <xref:System.Data.CommandType.StoredProcedure> festgelegt wird. Der <xref:System.Data.SqlClient.SqlParameter> wird mit der <xref:System.Data.SqlClient.SqlParameterCollection.AddWithValue%2A>-Methode aufgefüllt, und der <xref:System.Data.SqlClient.SqlParameter.SqlDbType%2A> wird auf `Structured` festgelegt. Der <xref:System.Data.SqlClient.SqlCommand> wird dann mithilfe der <xref:System.Data.SqlClient.SqlCommand.ExecuteNonQuery%2A>-Methode ausgeführt.  
+## <a name="passing-a-table-valued-parameter-to-a-stored-procedure"></a><a name="passing"></a>Übergeben eines Tabellenwertparameters an eine gespeicherte Prozedur  
+ In diesem Beispiel wird veranschaulicht, wie Daten aus Tabellenwertparametern an eine gespeicherte Prozedur übergeben werden. Der Code extrahiert hinzugefügte Zeilen mithilfe der <xref:System.Data.DataTable.GetChanges%2A>-Methode in eine neue <xref:System.Data.DataTable>. Im Code wird dann ein <xref:System.Data.SqlClient.SqlCommand> definiert, wobei für die Eigenschaft <xref:System.Data.SqlClient.SqlCommand.CommandType%2A> der Wert <xref:System.Data.CommandType.StoredProcedure> festgelegt wird. Der <xref:System.Data.SqlClient.SqlParameter> wird mit der <xref:System.Data.SqlClient.SqlParameterCollection.AddWithValue%2A>-Methode aufgefüllt und für <xref:System.Data.SqlClient.SqlParameter.SqlDbType%2A> wird `Structured` festgelegt. Anschließend wird der <xref:System.Data.SqlClient.SqlCommand> mit der Methode <xref:System.Data.SqlClient.SqlCommand.ExecuteNonQuery%2A> ausgeführt.  
   
 ```csharp  
 // Assumes connection is an open SqlConnection object.  
@@ -171,10 +171,10 @@ End Using
 ```  
   
 ### <a name="passing-a-table-valued-parameter-to-a-parameterized-sql-statement"></a>Übergeben eines Tabellenwertparameters an eine parametrisierte SQL-Anweisung  
- Im folgenden Beispiel wird veranschaulicht, wie Daten unter Verwendung einer INSERT-Anweisung mit einer SELECT-Unterabfrage, die über einen Tabellenwertparameter als Datenquelle verfügt, in die {1}dbo.Categories{2}-Tabelle eingefügt werden. Beim Übergeben eines Tabellenwertparameters an eine parametrisierte SQL-Anweisung muss ein Typname für den Tabellenwertparameter angegeben werden, indem die neue <xref:System.Data.SqlClient.SqlParameter.TypeName%2A>-Eigenschaft eines <xref:System.Data.SqlClient.SqlParameter> verwendet wird. Dieser `TypeName` muss dem Namen eines kompatiblen Typs entsprechen, der zuvor auf dem Server erstellt wurde. Im Code in diesem Beispiel wird die `TypeName`-Eigenschaft verwendet, um auf die in &lt;legacyBold&gt;dbo.CategoryTableType&lt;/legacyBold&gt; definierte Typstruktur zu verweisen.  
+ Im folgenden Beispiel wird veranschaulicht, wie Daten in die Tabelle „dbo.Categories“ eingefügt werden. Dazu wird eine INSERT-Anweisung mit einer SELECT-Unterabfrage verwendet, die einen Tabellenwertparameter als Datenquelle nutzt. Wenn Sie einen Tabellenwertparameter an eine parametrisierte SQL-Anweisung übergeben, müssen Sie mithilfe der neuen Eigenschaft <xref:System.Data.SqlClient.SqlParameter.TypeName%2A> eines <xref:System.Data.SqlClient.SqlParameter> einen Typnamen für den Tabellenwertparameter angeben. `TypeName` muss dem Namen eines kompatiblen Typs entsprechen, der zuvor auf dem Server erstellt wurde. Der Code in diesem Beispiel verwendet die Eigenschaft `TypeName`, um auf die in „dbo.CategoryTableType“ definierte Typstruktur zu verweisen.  
   
 > [!NOTE]
-> Wenn ein Wert für eine Identitätsspalte in einem Tabellenwertparameter angegeben wird, muss die SET IDENTITY_INSERT-Anweisung für die Sitzung ausgegeben werden.  
+> Wenn Sie einen Wert für eine Identitätsspalte in einem Tabellenwertparameter angeben, muss die SET IDENTITY_INSERT-Anweisung für die Sitzung verwendet werden.  
   
 ```csharp  
 // Assumes connection is an open SqlConnection.  
@@ -184,7 +184,7 @@ using (connection)
   DataTable addedCategories = CategoriesDataTable.GetChanges(DataRowState.Added);  
 
   // Define the INSERT-SELECT statement.  
-  string sqlInsert =   
+  string sqlInsert =
       "INSERT INTO dbo.Categories (CategoryID, CategoryName)"  
       + " SELECT nc.CategoryID, nc.CategoryName"  
       + " FROM @tvpNewCategories AS nc;"  
@@ -227,7 +227,7 @@ End Using
 ```  
   
 ## <a name="streaming-rows-with-a-datareader"></a>Streaming von Zeilen mit einem DataReader  
- Sie können auch jedes von <xref:System.Data.Common.DbDataReader> abgeleitete Objekt verwenden, um Datenzeilen per Streaming in einen Tabellenwertparameter zu übertragen. Im folgenden Codefragment wird veranschaulicht, wie Daten mithilfe eines <xref:System.Data.OracleClient.OracleCommand> und eines <xref:System.Data.OracleClient.OracleDataReader> aus einer Oracle-Datenbank abgerufen werden. Im Code wird dann ein <xref:System.Data.SqlClient.SqlCommand> konfiguriert, um eine gespeicherte Prozedur mit einem einzelnen Eingabeparameter aufzurufen. Die <xref:System.Data.SqlClient.SqlParameter.SqlDbType%2A>-Eigenschaft von <xref:System.Data.SqlClient.SqlParameter> wird auf `Structured` festgelegt. Die <xref:System.Data.SqlClient.SqlParameterCollection.AddWithValue%2A>-Methode übergibt das `OracleDataReader`-Resultset als Tabellenwertparameter an die gespeicherte Prozedur.  
+ Sie können auch jedes von <xref:System.Data.Common.DbDataReader> abgeleitete Objekt verwenden, um Datenzeilen per Streaming in einen Tabellenwertparameter zu übertragen. Das folgende Codefragment zeigt, wie Daten mithilfe von <xref:System.Data.OracleClient.OracleCommand> und <xref:System.Data.OracleClient.OracleDataReader> aus einer Oracle-Datenbank abgerufen werden. Anschließend wird mit dem Code ein <xref:System.Data.SqlClient.SqlCommand> konfiguriert, um eine gespeicherte Prozedur mit einem einzigen Eingabeparameter aufzurufen. Für die Eigenschaft <xref:System.Data.SqlClient.SqlParameter.SqlDbType%2A> des <xref:System.Data.SqlClient.SqlParameter> wird der Wert `Structured` festgelegt. Mithilfe von <xref:System.Data.SqlClient.SqlParameterCollection.AddWithValue%2A> wird das Resultset `OracleDataReader` als Tabellenwertparameter an die gespeicherte Prozedur übergeben.  
   
 ```csharp  
 // Assumes connection is an open SqlConnection.  
@@ -272,10 +272,10 @@ tvpParam.SqlDbType = SqlDbType.Structured
 insertCommand.ExecuteNonQuery()  
 ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Konfigurieren von Parametern und Parameterdatentypen](../configuring-parameters-and-parameter-data-types.md)
 - [Befehle und Parameter](../commands-and-parameters.md)
 - [DataAdapter-Parameter](../dataadapter-parameters.md)
-- [SQL Server Data Operations in ADO.NET (SQL Server-Datenvorgänge in ADO.NET)](sql-server-data-operations.md)
+- [SQL Server-Datenvorgänge in ADO.NET](sql-server-data-operations.md)
 - [Übersicht über ADO.NET](../ado-net-overview.md)

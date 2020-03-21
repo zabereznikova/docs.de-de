@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4e508711-da92-4381-aaf8-6803075cdaa2
 topic_type:
 - apiref
-ms.openlocfilehash: 3854cb4aa3d229c87466c0a35a72447ceb235624
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 2d6e86a7f5a93b900e79907f8ee0762869d7f737
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74449993"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177294"
 ---
 # <a name="imetadataimportenumtypedefs-method"></a>IMetaDataImport::EnumTypeDefs-Methode
 Zählt TypeDef-Token auf, die alle Typen innerhalb des aktuellen Bereichs darstellen.  
@@ -29,46 +29,46 @@ Zählt TypeDef-Token auf, die alle Typen innerhalb des aktuellen Bereichs darste
   
 ```cpp  
 HRESULT EnumTypeDefs (  
-   [out] HCORENUM   *phEnum,   
+   [out] HCORENUM   *phEnum,
    [in]  mdTypeDef  rTypeDefs[],  
-   [in]  ULONG      cMax,   
+   [in]  ULONG      cMax,
    [out] ULONG      *pcTypeDefs  
 );  
 ```  
   
 ## <a name="parameters"></a>Parameter  
  `phEnum`  
- vorgenommen Ein Zeiger auf den neuen Enumerator. Dieser Wert muss für den ersten-Rückruf dieser Methode NULL sein.  
+ [out] Ein Zeiger auf den neuen Enumerator. Dies muss NULL für den ersten Aufruf dieser Methode sein.  
   
  `rTypeDefs`  
- in Das Array, das zum Speichern der TypeDef-Token verwendet wird.  
+ [in] Das Array, das zum Speichern der TypeDef-Token verwendet wird.  
   
  `cMax`  
  [in] Die maximale Größe des `rTypeDefs`-Arrays.  
   
  `pcTypeDefs`  
- vorgenommen Die Anzahl der in `rTypeDefs`zurückgegebenen TypeDef-Token.  
+ [out] Die Anzahl der in zurückgegebenen `rTypeDefs`TypeDef-Token.  
   
 ## <a name="return-value"></a>Rückgabewert  
   
 |HRESULT|Beschreibung|  
 |-------------|-----------------|  
-|`S_OK`|`EnumTypeDefs` erfolgreich zurückgegeben.|  
-|`S_FALSE`|Es sind keine Token zum Auflisten vorhanden. In diesem Fall `pcTypeDefs` gleich 0 (null) ist.|  
+|`S_OK`|`EnumTypeDefs`erfolgreich zurückgegeben werden.|  
+|`S_FALSE`|Es sind keine Token zum Aufzählen vorhanden. In diesem `pcTypeDefs` Fall ist Null.|  
   
-## <a name="remarks"></a>Hinweise  
- Das TypeDef-Token stellt einen Typ dar, z. b. eine Klasse oder eine Schnittstelle, sowie alle Typen, die über einen Erweiterbarkeits Mechanismus hinzugefügt werden.  
+## <a name="remarks"></a>Bemerkungen  
+ Das TypeDef-Token stellt einen Typ wie eine Klasse oder eine Schnittstelle sowie jeden Typ dar, der über einen Erweiterbarkeitsmechanismus hinzugefügt wird.  
   
-## <a name="requirements"></a>Voraussetzungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor. h  
+ **Kopfzeile:** Cor.h  
   
- **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
+ **Bibliothek:** Als Ressource in MsCorEE.dll enthalten  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [IMetaDataImport-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [IMetaDataImport2-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
