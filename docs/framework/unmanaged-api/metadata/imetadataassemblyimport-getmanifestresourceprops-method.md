@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 00be4789-ac63-4397-b2ec-1629a5c5a585
 topic_type:
 - apiref
-ms.openlocfilehash: c1792ed0f15f8cfb62567593c9694453650f0bb9
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: d87d0d46ede65cf44c84edba92fe246174088a4e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74436316"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177659"
 ---
 # <a name="imetadataassemblyimportgetmanifestresourceprops-method"></a>IMetaDataAssemblyImport::GetManifestResourceProps-Methode
 Ruft den Satz von Eigenschaften der Manifestressource mit der angegebenen Metadatensignatur ab.  
@@ -29,47 +29,47 @@ Ruft den Satz von Eigenschaften der Manifestressource mit der angegebenen Metada
   
 ```cpp  
 HRESULT GetManifestResourceProps (  
-    [in]  mdManifestResource   mdmr,   
-    [out] LPWSTR               szName,   
-    [in]  ULONG                cchName,   
-    [out] ULONG                *pchName,   
-    [out] mdToken              *ptkImplementation,   
-    [out] DWORD                *pdwOffset,   
+    [in]  mdManifestResource   mdmr,
+    [out] LPWSTR               szName,
+    [in]  ULONG                cchName,
+    [out] ULONG                *pchName,
+    [out] mdToken              *ptkImplementation,
+    [out] DWORD                *pdwOffset,
     [out] DWORD                *pdwResourceFlags  
 );  
 ```  
   
 ## <a name="parameters"></a>Parameter  
  `mdmr`  
- in Ein `mdManifestResource` Token, das die Ressource darstellt, für die die Eigenschaften zu erhalten sind.  
+ [in] Ein `mdManifestResource` Token, das die Ressource darstellt, für die die Eigenschaften abgerufen werden sollen.  
   
  `szName`  
- vorgenommen Der Name der Ressource.  
+ [out] Der Name der Ressource.  
   
  `cchName`  
- in Die Größe `szName`in breiten Zeichen.  
+ [in] Die Größe, in breiten `szName`Zeichen, von .  
   
  `pchName`  
- vorgenommen Ein Zeiger auf die Anzahl der breiten Zeichen, die tatsächlich in `szName`zurückgegeben werden.  
+ [out] Ein Zeiger auf die Anzahl der breiten `szName`Zeichen, die tatsächlich in zurückgegeben wurden.  
   
  `ptkImplementation`  
- vorgenommen Ein Zeiger auf ein `mdFile` Token oder ein `mdAssemblyRef` Token, das bzw. die bzw. die bzw. die bzw. die die Ressource enthält.  
+ [out] Ein Zeiger auf `mdFile` ein `mdAssemblyRef` Token oder ein Token, das die Datei bzw. Assembly darstellt, die die Ressource enthält.  
   
  `pdwOffset`  
- vorgenommen Ein Zeiger auf einen-Wert, der den Offset bis zum Anfang der Ressource innerhalb der Datei angibt.  
+ [out] Ein Zeiger auf einen Wert, der den Offset zum Anfang der Ressource in der Datei angibt.  
   
  `pdwResourceFlags`  
- vorgenommen Ein Zeiger auf Flags, die die auf eine Ressource angewendeten Metadaten beschreiben. Der Flags-Wert ist eine Kombination aus einem oder mehreren [CorManifestResourceFlags](../../../../docs/framework/unmanaged-api/metadata/cormanifestresourceflags-enumeration.md) -Werten.  
+ [out] Ein Zeiger auf Flags, die die Metadaten beschreiben, die auf eine Ressource angewendet werden. Der Flags-Wert ist eine Kombination aus einem oder mehreren [CorManifestResourceFlags-Werten.](../../../../docs/framework/unmanaged-api/metadata/cormanifestresourceflags-enumeration.md)  
   
-## <a name="requirements"></a>Voraussetzungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor. h  
+ **Kopfzeile:** Cor.h  
   
- **Bibliothek:** Wird als Ressource in Mscoree. dll verwendet.  
+ **Bibliothek:** Wird als Ressource in MsCorEE.dll verwendet  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [IMetaDataAssemblyImport-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)

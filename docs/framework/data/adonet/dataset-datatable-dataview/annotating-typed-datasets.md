@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f82aaa62-321e-4c8a-b51b-9d1114700170
-ms.openlocfilehash: df6da84dfc120e3f6c3cb0e46729ca2cecc9fe3a
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 757a87f92d8dc6049de1844fed892d95dc57c990
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73040401"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79151519"
 ---
 # <a name="annotating-typed-datasets"></a>Hinzufügen von Anmerkungen zu typisierten "DataSets"
-Anmerkungen ermöglichen Ihnen die Namensänderung von Elementen in einem typisierten <xref:System.Data.DataSet>, ohne das zugrunde liegende Schema ändern zu müssen. Wenn Sie die Namen der Elemente im zugrunde liegenden Schema ändern, verweist das typisierte **DataSet** auf Objekte, die in der Datenquelle nicht vorhanden sind, und Sie verlieren einen Verweis auf die Objekte, die in der Datenquelle vorhanden sind.  
+Anmerkungen ermöglichen Ihnen die Namensänderung von Elementen in einem typisierten <xref:System.Data.DataSet>, ohne das zugrunde liegende Schema ändern zu müssen. Das Ändern der Namen der Elemente im zugrunde liegenden Schema würde dazu führen, dass das typisierte **DataSet** auf Objekte verweist, die in der Datenquelle nicht vorhanden sind, und einen Verweis auf die Objekte verliert, die in der Datenquelle vorhanden sind.  
   
- Mit Anmerkungen können Sie die Namen von Objekten in Ihrem typisierten **DataSet** mit aussagekräftigeren Namen anpassen, sodass der Code besser lesbar ist und das typisierte **DataSet** für Clients einfacher zu verwenden ist, während das zugrunde liegende Schema intakt bleibt. Das folgende Schema Element für die **Customers** -Tabelle der **Northwind** -Datenbank würde z. b. den Namen des **DataRow** -Objekts **CustomersRow** und eine <xref:System.Data.DataRowCollection> mit dem Namen **Customers**ergeben.  
+ Mithilfe von Anmerkungen können Sie die Namen von Objekten in Ihrem typisierten **DataSet** mit aussagekräftigeren Namen anpassen, wodurch Code besser lesbar und Das typisierte **DataSet** für Clients einfacher zu verwenden ist, während das zugrunde liegende Schema intakt bleibt. Das folgende Schemaelement für die **Customers-Tabelle** der **Northwind-Datenbank** würde z. B. <xref:System.Data.DataRowCollection> zu einem **DataRow-Objektnamen** von **CustomersRow** und einem benannten **Customers**führen.  
   
 ```xml  
 <xs:element name="Customers">  
@@ -27,7 +27,7 @@ Anmerkungen ermöglichen Ihnen die Namensänderung von Elementen in einem typisi
 </xs:element>  
 ```  
   
- Der **DataRowCollection** -Name von **Kunden** ist im Client Code aussagekräftig, aber der **DataRow** -Name **CustomersRow** ist irreführend, da es sich um ein einzelnes Objekt handelt. In gängigen Szenarien wird das Objekt auch ohne den **Zeilen** Bezeichner referenziert und stattdessen einfach als **Customer** -Objekt bezeichnet. Die Lösung besteht darin, das Schema mit Anmerkungen zu versehen und neue Namen für die Objekte **DataRow** und **DataRowCollection** zu ermitteln. Der folgende Code zeigt das vorhergehende Schema mit Anmerkungen.  
+ Ein **DataRowCollection-Name** von **Customers** ist im Clientcode sinnvoll, aber ein **DataRow-Name** von **CustomersRow** ist irreführend, da es sich um ein einzelnes Objekt handelt. Außerdem wird in allgemeinen Szenarien das Objekt **Row** ohne den Zeilenbezeichner und stattdessen einfach als **Customer-Objekt** bezeichnet. Die Lösung besteht darin, das Schema zu kommentieren und neue Namen für die **DataRow-** und **DataRowCollection-Objekte** zu identifizieren. Der folgende Code zeigt das vorhergehende Schema mit Anmerkungen.  
   
 ```xml  
 <xs:element name="Customers" codegen:typedName="Customer" codegen:typedPlural="Customers">  
@@ -39,7 +39,7 @@ Anmerkungen ermöglichen Ihnen die Namensänderung von Elementen in einem typisi
 </xs:element>  
 ```  
   
- Das Angeben eines **typedName** -Werts von **Customer** führt zu einem **DataRow** -Objektnamen von **Customer**. Wenn Sie einen **typedPlural** -Wert von **Kunden** angeben, wird der **DataRowCollection** -Name von **Kunden**beibehalten.  
+ Die Angabe eines **typisiertenNamenswerts** von **Customer** führt zu einem **DataRow-Objektnamen** von **Customer**. Durch die Angabe eines **typdPlural-Werts** von **Customers** wird der **DataRowCollection-Name** von **Customers**beibehalten.  
   
  In der folgenden Tabelle sind die möglichen Anmerkungen aufgeführt.  
   
@@ -47,47 +47,47 @@ Anmerkungen ermöglichen Ihnen die Namensänderung von Elementen in einem typisi
 |----------------|-----------------|  
 |**typedName**|Name des Objekts.|  
 |**typedPlural**|Name einer Auflistung von Objekten.|  
-|**typedparent**|Name des Objekts, wenn in einer übergeordneten Beziehung darauf verwiesen wird.|  
-|**typedchildren**|Name der Methode zum Zurückgeben von Objekten aus einer untergeordneten Beziehung.|  
-|**NullValue**|Wert, wenn der zugrunde liegende Wert **DBNull**ist. In der folgenden Tabelle finden Sie Informationen zu **NullValue** -Anmerkungen. Der Standardwert ist **_throw**.|  
+|**typedParent**|Name des Objekts, wenn in einer übergeordneten Beziehung darauf verwiesen wird.|  
+|**typedChildren**|Name der Methode zum Zurückgeben von Objekten aus einer untergeordneten Beziehung.|  
+|**nullValue**|Wert, wenn der zugrunde liegende Wert **DBNull**ist. Siehe die folgende **nullValue** Tabelle für nullValue-Anmerkungen. Der Standardwert ist **_throw**.|  
   
- In der folgenden Tabelle sind die Werte aufgeführt, die für die **NullValue** -Anmerkung angegeben werden können.  
+ Die folgende Tabelle zeigt die Werte, die für die **nullValue-Anmerkung** angegeben werden können.  
   
 |nullValue-Wert|Beschreibung|  
 |---------------------|-----------------|  
 |*Ersatzwert*|Gibt einen Wert an, der zurückgegeben werden soll. Der zurückgegebene Wert muss mit dem Elementtyp übereinstimmen. Verwenden Sie z. B. `nullValue="0"`, um 0 für NULL-Ganzzahlfelder zurückzugeben.|  
-|**_throw**|Löst eine Ausnahme aus. Dies ist die Standardeinstellung.|  
+|**_throw**|Löst eine Ausnahme aus. Dies ist die Standardoption.|  
 |**_null**|Gibt einen NULL-Verweis aus oder löst eine Ausnahme aus, wenn ein primitiver Typ festgestellt wird.|  
-|**_empty**|Für Zeichen folgen wird **String. Empty**zurückgegeben, andernfalls wird ein Objekt zurückgegeben, das aus einem leeren Konstruktor erstellt wurde. Wenn ein primitiver Typ festgestellt wird, wird eine Ausnahme ausgelöst.|  
+|**_empty**|Geben Sie für Zeichenfolgen **String.Empty**zurück, andernfalls gibt sie ein Objekt zurück, das von einem leeren Konstruktor erstellt wurde. Wenn ein primitiver Typ festgestellt wird, wird eine Ausnahme ausgelöst.|  
   
- In der folgenden Tabelle werden die Standardwerte für Objekte in einem typisierten **DataSet** und die verfügbaren Anmerkungen angezeigt.  
+ Die folgende Tabelle zeigt Standardwerte für Objekte in einem typisierten **DataSet** und die verfügbaren Anmerkungen.  
   
-|Objekt/Methode/Ereignis|Default|Anmerkung|  
+|Objekt/Methode/Ereignis|Standard|Anmerkung|  
 |---------------------------|-------------|----------------|  
 |**DataTable**|TableNameDataTable|typedPlural|  
-|**Daten** Tabelle Anzuwenden|NewTableNameRow<br /><br /> AddTableNameRow<br /><br /> DeleteTableNameRow|typedName|  
+|**DataTable** Methoden|NewTableNameRow<br /><br /> AddTableNameRow<br /><br /> DeleteTableNameRow|typedName|  
 |**DataRowCollection**|TableName|typedPlural|  
-|**DataRow**|TableNameRow|typedName|  
+|**Datarow**|TableNameRow|typedName|  
 |**DataColumn**|DataTable.ColumnNameColumn<br /><br /> DataRow.ColumnName|typedName|  
-|**Property**|PropertyName|typedName|  
-|Untergeordnetes Element Accessor|GetChildTableNameRows|typedChildren|  
-|Über **geordnetes** Element Accessor|TableNameRow|typedParent|  
-|**DataSet** Fall|TableNameRowChangeEvent<br /><br /> TableNameRowChangeEventHandler|typedName|  
+|**Eigenschaft**|PropertyName|typedName|  
+|**Kind** Accessor|GetChildTableNameRows|typedChildren|  
+|**Eltern** Accessor|TableNameRow|typedParent|  
+|**DataSet** Ereignisse|TableNameRowChangeEvent<br /><br /> TableNameRowChangeEventHandler|typedName|  
   
- Um typisierte **datasetanmerkungen** verwenden zu können, müssen Sie den folgenden **xmlns** -Verweis in das XSD-Schema (XML Schema Definition Language) einschließen. Informationen zum Erstellen einer XSD aus Datenbanktabellen finden Sie unter <xref:System.Data.DataSet.WriteXmlSchema%2A> oder [Arbeiten mit Datasets in Visual Studio](/visualstudio/data-tools/dataset-tools-in-visual-studio).  
+ Um typisierte **DataSet-Anmerkungen** zu verwenden, müssen Sie den folgenden **XMLns-Verweis** in Ihr XSD-Schema (XML Schema Definition Language) aufnehmen. Informationen zum Erstellen eines xsd <xref:System.Data.DataSet.WriteXmlSchema%2A> aus Datenbanktabellen finden Sie unter oder [Arbeiten mit Datasets in Visual Studio](/visualstudio/data-tools/dataset-tools-in-visual-studio).  
   
 ```xml  
 xmlns:codegen="urn:schemas-microsoft-com:xml-msprop"  
 ```  
   
- Das folgende Beispiel zeigt ein Schema mit Anmerkungen, das die **Customers** -Tabelle der **Northwind** -Datenbank mit einer Beziehung zur Tabelle **Orders** verfügbar macht.  
+ Im Folgenden finden Sie ein mit Anmerkungen des Beispiels ananmerkungsiertes Schema, das die **Customers-Tabelle** der **Northwind-Datenbank** mit einer Beziehung zur enthaltenen **Tabelle "Orders"** verfügbar macht.  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
-<xs:schema id="CustomerDataSet"   
+<xs:schema id="CustomerDataSet"
       xmlns:codegen="urn:schemas-microsoft-com:xml-msprop"  
-      xmlns=""   
-      xmlns:xs="http://www.w3.org/2001/XMLSchema"   
+      xmlns=""
+      xmlns:xs="http://www.w3.org/2001/XMLSchema"
       xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">  
   <xs:element name="CustomerDataSet" msdata:IsDataSet="true">  
     <xs:complexType>  
@@ -111,10 +111,10 @@ type="xs:int" minOccurs="0" />
               <xs:element name="CustomerID"  
 codegen:typedName="CustomerID"                  codegen:nullValue="" type="xs:string" minOccurs="0" />  
               <xs:element name="EmployeeID"  
-codegen:typedName="EmployeeID" codegen:nullValue="0"   
+codegen:typedName="EmployeeID" codegen:nullValue="0"
 type="xs:int" minOccurs="0" />  
               <xs:element name="OrderAdapter"  
-codegen:typedName="OrderAdapter" codegen:nullValue="1980-01-01T00:00:00"   
+codegen:typedName="OrderAdapter" codegen:nullValue="1980-01-01T00:00:00"
 type="xs:dateTime" minOccurs="0" />  
             </xs:sequence>  
           </xs:complexType>  
@@ -134,7 +134,7 @@ codegen:typedParent="Customer" codegen:typedChildren="GetOrders">
 </xs:schema>  
 ```  
   
- Im folgenden Codebeispiel wird ein stark typisiertes **DataSet** verwendet, das aus dem Beispiel Schema erstellt wurde. Er verwendet eine <xref:System.Data.SqlClient.SqlDataAdapter>, um die Tabelle **Customers** aufzufüllen, und eine weitere <xref:System.Data.SqlClient.SqlDataAdapter>, um die Tabelle **Orders** aufzufüllen. Das **DataSet** mit starker Typisierung definiert die **DataRelations**.  
+ Im folgenden Codebeispiel wird ein stark typisiertes **DataSet** verwendet, das aus dem Beispielschema erstellt wurde. Es verwendet <xref:System.Data.SqlClient.SqlDataAdapter> eine, um die **Customers-Tabelle** aufzufüllen, und eine andere, <xref:System.Data.SqlClient.SqlDataAdapter> um die Tabelle **"Bestellungen"** aufzufüllen. Das stark typisierte **DataSet** definiert **dataRelations**.  
   
 ```vb  
 ' Assumes a valid SqlConnection object named connection.  
@@ -187,7 +187,7 @@ SqlDataAdapter customerAdapter = new SqlDataAdapter(
     "SELECT CustomerID, CompanyName, Phone FROM Customers",  
     connection);  
 SqlDataAdapter orderAdapter = new SqlDataAdapter(  
-    "SELECT OrderID, CustomerID, EmployeeID, OrderAdapter FROM Orders",   
+    "SELECT OrderID, CustomerID, EmployeeID, OrderAdapter FROM Orders",
     connection);  
   
 // Populate a strongly typed DataSet.  
@@ -198,11 +198,11 @@ orderAdapter.Fill(customers, "Orders");
 connection.Close();  
   
 // Add a strongly typed event.  
-customers.Customers.CustomerChanged += new   
+customers.Customers.CustomerChanged += new
   CustomerDataSet.CustomerChangeEventHandler(OnCustomerChanged);  
   
 // Add a strongly typed DataRow.  
-CustomerDataSet.Customer newCustomer =   
+CustomerDataSet.Customer newCustomer =
     customers.Customers.NewCustomer();  
 newCustomer.CustomerID = "NEW01";  
 newCustomer.CompanyName = "My New Company";  
@@ -222,10 +222,10 @@ protected static void OnCustomerChanged(object sender, CustomerDataSet.CustomerC
     }  
 ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Data.DataColumnCollection>
 - <xref:System.Data.DataSet>
-- [Typed DataSets (Typisierte DataSets)](typed-datasets.md)
-- [DataSets, DataTables und DataViews](index.md)
+- [Typisierte "DataSets"](typed-datasets.md)
+- ["DataSets", "DataTables" und "DataViews"](index.md)
 - [Übersicht über ADO.NET](../ado-net-overview.md)

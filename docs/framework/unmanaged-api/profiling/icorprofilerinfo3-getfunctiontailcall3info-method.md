@@ -15,47 +15,47 @@ helpviewer_keywords:
 ms.assetid: afdb5ac9-5bf5-4b91-b7cb-f81db23d7da3
 topic_type:
 - apiref
-ms.openlocfilehash: add89fe81fccbd5e6f5ad5d27f0ab3ace489963e
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 5346792cb2a1309268cb4ba48625aa559777fbaf
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76868524"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79176993"
 ---
 # <a name="icorprofilerinfo3getfunctiontailcall3info-method"></a>ICorProfilerInfo3::GetFunctionTailcall3Info-Methode
-Stellt den Stapel Rahmen der Funktion bereit, die dem Profiler von der [FunctionTailcall3WithInfo](functiontailcall3withinfo-function.md) -Funktion gemeldet wird. Diese Methode kann nur während des `FunctionTailcall3WithInfo`-Rückrufs aufgerufen werden.  
+Stellt den Stapelrahmen der Funktion bereit, die dem Profiler von der [Funktion FunctionTailcall3WithInfo](functiontailcall3withinfo-function.md) gemeldet wird. Diese Methode kann nur während des `FunctionTailcall3WithInfo`-Rückrufs aufgerufen werden.  
   
 ## <a name="syntax"></a>Syntax  
   
 ```cpp  
-HRESULT GetFunctionTailcall3Info(   
-            [in]  FunctionID functionId,   
+HRESULT GetFunctionTailcall3Info(
+            [in]  FunctionID functionId,
             [in]  COR_PRF_ELT_INFO eltInfo,  
             [out] COR_PRF_FRAME_INFO *pFrameInfo);  
 ```  
   
-## <a name="parameters"></a>Parameters  
+## <a name="parameters"></a>Parameter  
  `functionId`  
- in Der `FunctionID` der Funktion, die zurückgibt.  
+ [in] Die `FunctionID` der Funktion, die zurückgegeben wird.  
   
  `eltInfo`  
- [in] Ein nicht transparentes Handle, das Informationen über einen bestimmten Stapelrahmen entspricht. Der Profiler sollte die gleiche `eltInfo` bereitstellen, die dem Profiler von der `FunctionTailcall3WithInfo`-Funktion übergeben wurde.  
+ [in] Ein nicht transparentes Handle, das Informationen über einen bestimmten Stapelrahmen entspricht. Der Profiler sollte `eltInfo` dasselbe bereitstellen, das dem `FunctionTailcall3WithInfo` Profiler von der Funktion gegeben wurde.  
   
  `pFrameInfo`  
  [out] Ein nicht transparentes Handle, das Genericsinformationen zu einem bestimmten Stapelrahmen entspricht. Dieses Handle ist nur während des `FunctionTailcall3WithInfo`-Rückrufs gültig, in dem der Profiler die `GetFunctionTailcall3Info`-Methode aufgerufen hat.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
   
-## <a name="requirements"></a>-Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  
   
  **Bibliothek:** CorGuids.lib  
   
- **.NET Framework Versionen:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework-Versionen:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [FunctionEnter3WithInfo](functionenter3withinfo-function.md)
 - [FunctionLeave3WithInfo](functionleave3withinfo-function.md)

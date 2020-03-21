@@ -1,6 +1,6 @@
 ---
-title: Verifyclientkey-Funktion (Referenz zur nicht verwalteten API)
-description: Mit der verifyclientkey-Funktion wird sichergestellt, dass der Client Schlüssel über die richtige Sicherheit verfügt.
+title: VerifyClientKey-Funktion (Nicht verwaltete API-Referenz)
+description: Die VerifyClientKey-Funktion stellt sicher, dass der Clientschlüssel über die richtige Sicherheit verfügt.
 ms.date: 11/06/2017
 api_name:
 - VerifyClientKey
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - VerifyClientKey function [.NET WMI and performance counters]
 topic_type:
 - Reference
-ms.openlocfilehash: 0a0680651eb192e2798ede00048599c5130e63f1
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: ebb794240494deb0c831b50e95461ec52017a215
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73107363"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79176707"
 ---
-# <a name="verifyclientkey-function"></a>Verifyclientkey-Funktion
+# <a name="verifyclientkey-function"></a>VerifyClientKey-Funktion
 Stellt sicher, dass der Clientschlüssel die richtige Sicherheit aufweist.  
   
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
@@ -29,22 +29,22 @@ Stellt sicher, dass der Clientschlüssel die richtige Sicherheit aufweist.
 ## <a name="syntax"></a>Syntax  
   
 ```cpp  
-LONG VerifyClientKey(); 
+LONG VerifyClientKey();
 ```  
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Funktion erfolgreich ausgeführt wird, ist der Rückgabewert `ERROR_SUCCESS` (0).
+Wenn die Funktion erfolgreich ist, `ERROR_SUCCESS` ist der Rückgabewert (0).
 
-Wenn die Funktion fehlschlägt, ist der Rückgabewert ein Fehlercode ungleich 0 (null), der in *Winerror. h*definiert ist.
+Wenn die Funktion fehlschlägt, ist der Rückgabewert ein Fehlercode ungleich Null, der in *WinError.h*definiert ist.
 
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
- **Header:** WMINet_Utils. def  
+ **Kopfzeile:** WMINet_Utils.def  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [WMI und Leistungsindikatoren (Referenz zur nicht verwalteten API)](index.md)

@@ -10,16 +10,16 @@ api_location:
 api_type:
 - Assembly
 author: stevewhims
-ms.openlocfilehash: fd0ffb982c22b0a8b6cb5dd677faafb9921bf5d9
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 39a14a3df5059cc47cd4879e4d4ba351cc7b655b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75741019"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79156115"
 ---
 # <a name="coreresponsedata-class"></a>CoreResponseData-Klasse
 
-Die `CoreResponseData`-Klasse stellt die Verarbeitung von HTTP-Headern und den Antworttext dar.
+Die `CoreResponseData` Klasse stellt die Analyse der HTTP-Header und des Antworttexts dar.
 
 ## <a name="syntax"></a>Syntax
   
@@ -28,14 +28,14 @@ internal class CoreResponseData
 ```
 
 > [!WARNING]
-> Diese API ist intern und sollte nicht direkt im Code verwendet werden. Stattdessen sollten Sie einen <xref:System.Diagnostics.DiagnosticSource> zum Anschließen von Netzwerkcode verwenden. Weitere Informationen finden Sie [im Benutzerhandbuch für diagnosticsource](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Diagnostics.DiagnosticSource/src/DiagnosticSourceUsersGuide.md).
-> 
+> Diese API ist intern und soll nicht direkt in Ihrem Code verwendet werden. Stattdessen sollten Sie <xref:System.Diagnostics.DiagnosticSource> einen zum Hook-Netzwerkcode verwenden. Siehe [DiagnosticSource-Benutzerhandbuch](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Diagnostics.DiagnosticSource/src/DiagnosticSourceUsersGuide.md).
+>
 > Microsoft unterstützt die Verwendung dieser Klasse in einer Produktionsanwendung unter keinen Umständen.
 
-## <a name="requirements"></a>-Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
-**Namespace:** <xref:System.Net>
+**Namespace:**<xref:System.Net>
 
-**Assembly:** System (in "System. dll")
+**Montage:** System (in System.dll)
 
-**.NET Framework Versionen:** Verfügbar seit 2,0.
+**.NET Framework-Versionen:** Verfügbar seit 2.0.

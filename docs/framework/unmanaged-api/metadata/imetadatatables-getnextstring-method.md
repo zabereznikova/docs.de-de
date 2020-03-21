@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d9720428-c353-4f07-a7e8-899e106a1b37
 topic_type:
 - apiref
-ms.openlocfilehash: 8d25f178a3c5e160e78e042d5016bb93aabf3e2d
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: a1cd932051a9ed90a29ff5eeaa818a67104192bb
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74443448"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175251"
 ---
 # <a name="imetadatatablesgetnextstring-method"></a>IMetaDataTables::GetNextString-Methode
 Ruft den Index der nächsten Zeichenfolge in der aktuellen Tabellenspalte ab.  
@@ -28,7 +28,7 @@ Ruft den Index der nächsten Zeichenfolge in der aktuellen Tabellenspalte ab.
 ## <a name="syntax"></a>Syntax  
   
 ```cpp  
-HRESULT GetNextString (   
+HRESULT GetNextString (
     [in]  ULONG   ixString,  
     [out] ULONG   *pNext  
 );  
@@ -36,21 +36,21 @@ HRESULT GetNextString (
   
 ## <a name="parameters"></a>Parameter  
  `ixString`  
- in Der Indexwert aus einer Zeichen folgen Tabellenspalte.  
+ [in] Der Indexwert aus einer Zeichenfolgentabellenspalte.  
   
  `pNext`  
- vorgenommen Ein Zeiger auf den Index der nächsten Zeichenfolge in der Spalte.  
+ [out] Ein Zeiger auf den Index der nächsten Zeichenfolge in der Spalte.  
   
-## <a name="requirements"></a>Voraussetzungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor. h  
+ **Kopfzeile:** Cor.h  
   
- **Bibliothek:** Wird als Ressource in Mscoree. dll verwendet.  
+ **Bibliothek:** Wird als Ressource in MsCorEE.dll verwendet  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [IMetaDataTables-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
 - [IMetaDataTables2-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)

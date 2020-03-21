@@ -2,12 +2,12 @@
 title: Konfigurationsabschnitt für Windows Forms
 ms.date: 04/07/2017
 ms.assetid: 6eb142d5-fc98-40e2-9d90-84733f2a27ba
-ms.openlocfilehash: 4a54df0b6301f1aae14d5561c91c6792cb0a1620
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 4de61ae3cb5eb8a3fc226881e2b7f842030dfddf
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73109810"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79151831"
 ---
 # <a name="windows-forms-configuration-section"></a>Konfigurationsabschnitt für Windows Forms
 Konfigurationseinstellungen für Windows Forms ermöglichen einer Windows Forms-App das Speichern und Abrufen von Informationen über benutzerdefinierte Anwendungseinstellungen wie z.B. Unterstützung mehrerer Monitore, Unterstützung für hohe DPI-Werte sowie weitere vorab definierte Konfigurationseinstellungen.
@@ -28,9 +28,9 @@ Windows Forms-Anwendungskonfigurationseinstellungen werden im `System.Windows.Fo
 
 In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.
 
-### <a name="attributes"></a>Attribute
+### <a name="attributes"></a>Attributes
 
-Keine
+Keine.
 
 ### <a name="child-elements"></a>Untergeordnete Elemente
 
@@ -42,15 +42,15 @@ Element  |Beschreibung |
 
 Element  |Beschreibung |
 ---------|---------|
-[\<configuration>](../configuration-element.md) | Das Stammelement in jeder von der Common Language Runtime und Windows Forms-Anwendungen verwendeten Konfigurationsdatei. |
+[\<Konfiguration>](../configuration-element.md) | Das Stammelement in jeder von der Common Language Runtime und Windows Forms-Anwendungen verwendeten Konfigurationsdatei. |
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 
-Ab .NET Framework 4.7 ermöglicht das `<System.Windows.Forms.ApplicationConfigurationSection>`-Element die Konfiguration von Windows Forms-Anwendungen für die Nutzung von Funktionen, die in neueren Versionen von .NET Framework hinzugefügt werden. 
+Ab .NET Framework 4.7 ermöglicht das `<System.Windows.Forms.ApplicationConfigurationSection>`-Element die Konfiguration von Windows Forms-Anwendungen für die Nutzung von Funktionen, die in neueren Versionen von .NET Framework hinzugefügt werden.
 
-Das `<System.Windows.Forms.ApplicationConfigurationSection>`-Element kann ein oder mehrere [`<add>`](windows-forms-add-configuration-element.md)-Elemente enthalten, die jeweils eine bestimmte Konfigurationseinstellung definieren.
+Das `<System.Windows.Forms.ApplicationConfigurationSection>` Element kann ein [`<add>`](windows-forms-add-configuration-element.md) oder mehrere untergeordnete Elemente enthalten, von denen jedes eine bestimmte Konfigurationseinstellung definiert.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Konfigurationsdateischema](../index.md)
+- [Schema der Konfigurationsdatei](../index.md)
 - [High DPI Support in Windows Forms (Unterstützung für hohe DPI-Werte in Windows Forms)](../../../winforms/high-dpi-support-in-windows-forms.md)

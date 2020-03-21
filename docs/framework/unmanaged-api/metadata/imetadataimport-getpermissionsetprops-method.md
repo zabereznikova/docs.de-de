@@ -15,50 +15,50 @@ helpviewer_keywords:
 ms.assetid: 9855f0e4-12c0-4d3d-ab5d-d6bc52d25eae
 topic_type:
 - apiref
-ms.openlocfilehash: a020a0343eecceb4a85ebbddffe323c7f7bdca3d
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 5faf1a6ae89045b2ef17fab789ee6e5bf23eecf2
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74437108"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175342"
 ---
 # <a name="imetadataimportgetpermissionsetprops-method"></a>IMetaDataImport::GetPermissionSetProps-Methode
-Ruft die Metadaten ab, die der durch das angegebene Berechtigungs Token dargestellten <xref:System.Security.PermissionSet?displayProperty=nameWithType> zugeordnet sind.  
+Ruft die Metadaten <xref:System.Security.PermissionSet?displayProperty=nameWithType> ab, die dem dargestellten durch das angegebene Berechtigungstoken zugeordnet sind.  
   
 ## <a name="syntax"></a>Syntax  
   
 ```cpp  
 HRESULT GetPermissionSetProps (  
    [in]  mdPermission      pm,  
-   [out] DWORD             *pdwAction,   
-   [out] void const        **ppvPermission,   
+   [out] DWORD             *pdwAction,
+   [out] void const        **ppvPermission,
    [out] ULONG             *pcbPermission  
 );  
 ```  
   
 ## <a name="parameters"></a>Parameter  
  `pm`  
- in Das Berechtigungs Metadatentoken, das den Berechtigungs Satz darstellt, für den die Metadateneigenschaften zu erhalten sind  
+ [in] Das Berechtigungsmetadatentoken, das den Berechtigungssatz zum Abrufen der Metadateneigenschaften darstellt.  
   
  `pdwAction`  
- vorgenommen Ein Zeiger auf den Berechtigungs Satz.  
+ [out] Ein Zeiger auf den Berechtigungssatz.  
   
  `ppvPermission`  
- vorgenommen Ein Zeiger auf die binäre Metadatensignatur des Berechtigungs Satzes.  
+ [out] Ein Zeiger auf die binäre Metadatensignatur des Berechtigungssatzes.  
   
  `pcbPermission`  
- vorgenommen Die Größe `ppvPermission`in Byte.  
+ [out] Die Größe in `ppvPermission`Bytes von .  
   
-## <a name="requirements"></a>Voraussetzungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor. h  
+ **Kopfzeile:** Cor.h  
   
- **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
+ **Bibliothek:** Als Ressource in MsCorEE.dll enthalten  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Security.PermissionSet>
 - [IMetaDataImport-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)

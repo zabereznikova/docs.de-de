@@ -1,5 +1,5 @@
 ---
-title: Coreresponabdata. m_ResponseHeaders-Feld
+title: CoreResponseData.m_ResponseHeaders-Feld
 ms.date: 01/29/2018
 topic_type:
 - apiref
@@ -10,16 +10,16 @@ api_location:
 api_type:
 - Assembly
 author: stevewhims
-ms.openlocfilehash: df0b592a5f85d4c99dee4ecb60963f4abb560a13
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 723df6dc2de978695608d106e3a01bde286fc4fe
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75741007"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79156102"
 ---
-# <a name="coreresponsedatam_responseheaders-field"></a>Coreresponabdata. m\_Response Headers-Feld
+# <a name="coreresponsedatam_responseheaders-field"></a>CoreResponseData.m\_ResponseHeaders-Feld
 
-`CoreResponseData.m_ResponseHeaders` ist eine <xref:System.Net.WebHeaderCollection> von Headern, die der Serverantwort zugeordnet sind.
+`CoreResponseData.m_ResponseHeaders`ist <xref:System.Net.WebHeaderCollection> ein Header, der der Serverantwort zugeordnet ist.
 
 ## <a name="syntax"></a>Syntax
   
@@ -28,14 +28,14 @@ public WebHeaderCollection m_ResponseHeaders
 ```
 
 > [!WARNING]
-> Diese API ist nicht für die direkte Verwendung im Code vorgesehen. Stattdessen sollten Sie einen <xref:System.Diagnostics.DiagnosticSource> zum Anschließen von Netzwerkcode verwenden. Weitere Informationen finden Sie [im Benutzerhandbuch für diagnosticsource](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Diagnostics.DiagnosticSource/src/DiagnosticSourceUsersGuide.md).
-> 
+> Diese API ist nicht dazu gedacht, direkt in Ihrem Code verwendet zu werden. Stattdessen sollten Sie <xref:System.Diagnostics.DiagnosticSource> einen zum Hook-Netzwerkcode verwenden. Siehe [DiagnosticSource-Benutzerhandbuch](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Diagnostics.DiagnosticSource/src/DiagnosticSourceUsersGuide.md).
+>
 > Microsoft unterstützt die Verwendung dieser Klasse in einer Produktionsanwendung unter keinen Umständen.
 
-## <a name="requirements"></a>-Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
-**Namespace:** <xref:System.Net>
+**Namespace:**<xref:System.Net>
 
-**Assembly:** System (in "System. dll")
+**Montage:** System (in System.dll)
 
-**.NET Framework Versionen:** Verfügbar seit 2,0.
+**.NET Framework-Versionen:** Verfügbar seit 2.0.

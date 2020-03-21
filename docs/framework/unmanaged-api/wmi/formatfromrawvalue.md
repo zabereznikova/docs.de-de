@@ -1,6 +1,6 @@
 ---
-title: Formatfromrawvalue-Funktion (Referenz zur nicht verwalteten API)
-description: Die Funktion "formatfromrawvalue" konvertiert rohleistungs Daten in ein angegebenes Format.
+title: FormatFromRawValue-Funktion (Nicht verwaltete API-Referenz)
+description: Die FormatFromRawValue-Funktion konvertiert Rohleistungsdaten in ein angegebenes Format.
 ms.date: 11/21/2017
 api_name:
 - FormatFromRawValue
@@ -14,15 +14,15 @@ helpviewer_keywords:
 - FormatFromRawValue function [.NET WMI and performance counters]
 topic_type:
 - Reference
-ms.openlocfilehash: 5097cfe43ae785461a1e2af1217bcbd5e8c4b79c
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 0a7c0b8387f0c8e2b6e2ade94f7efeede75bd758
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73120284"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79176837"
 ---
 # <a name="formatfromrawvalue-function"></a>FormatFromRawValue-Funktion
-Konvertiert einen Rohdatenleistungswert in das angegebene Format oder zwei Rohdatenleistungswerte, wenn die Formatkonvertierung zeitabhängig ist. 
+Konvertiert einen Rohdatenleistungswert in das angegebene Format oder zwei Rohdatenleistungswerte, wenn die Formatkonvertierung zeitabhängig ist.
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
 
@@ -30,69 +30,70 @@ Konvertiert einen Rohdatenleistungswert in das angegebene Format oder zwei Rohda
 
 ```cpp
 int FormatFromRawValue (
-   [in] uint                    dwCounterType, 
-   [in] uint                    dwFormat, 
+   [in] uint                    dwCounterType,
+   [in] uint                    dwFormat,
    [in] long*                   pTimeBase,
    [in] PDH_RAW_COUNTER*        pRawValue1,
    [in] PDH_RAW_COUNTER*        pRawValue2,
    [out] PDH_FMT_COUNTERVALUE*  pFmtValue
-); 
+);
 ```
 
 ## <a name="parameters"></a>Parameter
 
 `dwCounterType`\
-in Der zähtertyp. Eine Liste der Leistungs Zählers finden Sie unter [WMI-Leistungsdaten Typen](/windows/desktop/WmiSdk/wmi-performance-counter-types). `dwCounterType` kann ein beliebiger zähtertyp sein, mit Ausnahme von `PERF_LARGE_RAW_FRACTION` und `PERF_LARGE_RAW_BASE`. 
+[in] Der Zählertyp. Eine Liste der Leistungsindikatortypen finden Sie unter [WMI-Leistungszählertypen](/windows/desktop/WmiSdk/wmi-performance-counter-types). `dwCounterType`kann ein beliebiger `PERF_LARGE_RAW_FRACTION` Zählertyp mit Ausnahme von und `PERF_LARGE_RAW_BASE`sein.
 
 `dwFormat`\
-in Das Format, in das die rohleistungs Daten konvertiert werden sollen. Dies kann einer der folgenden Werte sein:
+[in] Das Format, in das die Rohleistungsdaten konvertiert werden sollen. Es kann sich um einen der folgenden Werte handeln:
 
-|Konstante  |Wert  |Beschreibung |
+|Dauerhaft  |value  |Beschreibung |
 |---------|---------|---------|
-| `PDH_FMT_DOUBLE` |0x00000200 | Gibt den berechneten Wert als Gleit Komma Wert mit doppelter Genauigkeit zurück. | 
-| `PDH_FMT_LARGE` | 0x00000400 | Gibt den berechneten Wert als 64-Bit-Ganzzahl zurück. |
-| `PDH_FMT_LONG` | 0x00000100 | Gibt den berechneten Wert als 32-Bit-Ganzzahl zurück. |
+| `PDH_FMT_DOUBLE` |0x00000200 | Geben Sie den berechneten Wert als Gleitkommawert mit doppelter Genauigkeit zurück. |
+| `PDH_FMT_LARGE` | 0x00000400 | Geben Sie den berechneten Wert als 64-Bit-Ganzzahl zurück. |
+| `PDH_FMT_LONG` | 0x00000100 | Geben Sie den berechneten Wert als 32-Bit-Ganzzahl zurück. |
 
-Einer der vorherigen Werte kann mit einem der folgenden Skalierungsflags ORed lauten:
+Einer der vorherigen Werte kann ORed mit einem der folgenden Skalierungsflags sein:
 
-|Konstante  |Wert  |Beschreibung |
+|Dauerhaft  |value  |Beschreibung |
 |---------|---------|---------|
-| `PDH_FMT_NOSCALE` | 0x00001000 | Wenden Sie die Skalierungsfaktoren des Zählers nicht an. |
-| `PDH_FMT_1000` | 0x00002000 | Multiplizieren Sie den endgültigen Wert um 1.000. | 
+| `PDH_FMT_NOSCALE` | 0x00001000 | Wenden Sie die Skalierungsfaktoren des Leistungsindikators nicht an. |
+| `PDH_FMT_1000` | 0x00002000 | Multiplizieren Sie den Endwert mit 1.000. |
 
 `pTimeBase`\
-in Ein Zeiger auf die Zeitbasis, falls dies für die Formatkonvertierung erforderlich ist. Wenn für die Formatkonvertierung keine Zeit Basisinformationen erforderlich sind, wird der Wert dieses Parameters ignoriert.
+[in] Ein Zeiger auf die Zeitbasis, falls erforderlich für die Formatkonvertierung. Wenn zeitbasisviele Informationen für die Formatkonvertierung nicht erforderlich sind, wird der Wert dieses Parameters ignoriert.
 
-`pRawValue1`\ [in] ein Zeiger auf eine [`PDH_RAW_COUNTER`](/windows/win32/api/pdh/ns-pdh-pdh_raw_counter) -Struktur, die einen rohleistungs Wert darstellt.
+`pRawValue1`\
+[in] Ein Zeiger auf [`PDH_RAW_COUNTER`](/windows/win32/api/pdh/ns-pdh-pdh_raw_counter) eine Struktur, die einen rohen Leistungswert darstellt.
 
 `pRawValue2`\
-in Ein Zeiger auf eine [`PDH_RAW_COUNTER`](/windows/win32/api/pdh/ns-pdh-pdh_raw_counter) -Struktur, die einen zweiten rohleistungs Wert darstellt. Wenn ein zweiter rohleistungs Wert nicht erforderlich ist, sollte dieser Parameter `null`werden.
+[in] Ein Zeiger auf [`PDH_RAW_COUNTER`](/windows/win32/api/pdh/ns-pdh-pdh_raw_counter) eine Struktur, die einen zweiten rohen Leistungswert darstellt. Wenn kein zweiter unformatierter Leistungswert `null`erforderlich ist, sollte dieser Parameter .
 
 `pFmtValue`\
-vorgenommen Ein Zeiger auf eine [`PDH_FMT_COUNTERVALUE`](/windows/win32/api/pdh/ns-pdh-pdh_fmt_countervalue) -Struktur, die den formatierten Leistungswert empfängt.
+[out] Ein Zeiger auf [`PDH_FMT_COUNTERVALUE`](/windows/win32/api/pdh/ns-pdh-pdh_fmt_countervalue) eine Struktur, die den formatierten Leistungswert empfängt.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Von dieser Funktion werden die folgenden Werte zurückgegeben:
+Die folgenden Werte werden von dieser Funktion zurückgegeben:
 
-|Konstante  |Wert  |Beschreibung  |
+|Dauerhaft  |value  |Beschreibung  |
 |---------|---------|---------|
-| `ERROR_SUCCESS` | 0 | Der Funktions Aufrufvorgang ist erfolgreich. |
-| `PDH_INVALID_ARGUMENT` | 0xc0000bbd | Ein erforderliches Argument fehlt oder ist falsch. | 
-| `PDH_INVALID_HANDLE` | 0xc0000bbc | Das Handle ist kein gültiges PDH-Objekt. |
+| `ERROR_SUCCESS` | 0 | Der Funktionsaufruf ist erfolgreich. |
+| `PDH_INVALID_ARGUMENT` | 0xC0000BBD | Ein erforderliches Argument fehlt oder ist falsch. |
+| `PDH_INVALID_HANDLE` | 0xC0000BBC | Das Handle ist kein gültiges PDH-Objekt. |
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 
-Diese Funktion umschließt einen Aufrufen der [formatfromrawvalue](https://docs.microsoft.com/previous-versions/ms231047(v=vs.85)) -Funktion.
+Diese Funktion umschließt einen Aufruf der [FormatFromRawValue-Funktion.](https://docs.microsoft.com/previous-versions/ms231047(v=vs.85))
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).
 
- **Bibliothek:** PerfCounter. dll
+ **Bibliothek:** PerfCounter.dll
 
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [WMI und Leistungsindikatoren (Referenz zur nicht verwalteten API)](index.md)

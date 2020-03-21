@@ -15,46 +15,46 @@ helpviewer_keywords:
 ms.assetid: f721c863-9642-4e64-917a-65f9e55c25b9
 topic_type:
 - apiref
-ms.openlocfilehash: fd5e71071de9e6afebc8f1848e0af8835f22c9bf
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 25b7f478ae0bd05b82fa960561fb8534efe2b4db
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74448126"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175667"
 ---
 # <a name="imetadataemitsetcustomattributevalue-method"></a>IMetaDataEmit::SetCustomAttributeValue-Methode
-Legt den Wert eines benutzerdefinierten Attributs fest, das durch einen vorherigen [IMetaDataEmit::D efinecustomattribute](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definecustomattribute-method.md)definiert ist, oder aktualisiert diesen.  
+Legt den Wert eines benutzerdefinierten Attributs fest, das durch einen vorherigen Aufruf von [IMetaDataEmit::DefineCustomAttribute](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definecustomattribute-method.md)definiert wurde.  
   
 ## <a name="syntax"></a>Syntax  
   
 ```cpp  
-HRESULT SetCustomAttributeValue (   
-    [in]  mdCustomAttribute       pcv,   
-    [in]  void const              *pCustomAttribute,    
-    [in]  ULONG                   cbCustomAttribute   
+HRESULT SetCustomAttributeValue (
+    [in]  mdCustomAttribute       pcv,
+    [in]  void const              *pCustomAttribute,
+    [in]  ULONG                   cbCustomAttribute
 );  
 ```  
   
 ## <a name="parameters"></a>Parameter  
  `pcv`  
- in Das Token des benutzerdefinierten Ziel Attributs.  
+ [in] Das Token des benutzerdefinierten Zielattributs.  
   
  `pCustomAttribute`  
- in Ein Zeiger auf das Array, das das benutzerdefinierte Attribut enthält.  
+ [in] Ein Zeiger auf das Array, das das benutzerdefinierte Attribut enthält.  
   
  `cbCustomAttribute`  
- in Die Größe (in Bytes) des benutzerdefinierten Attributs.  
+ [in] Die Größe des benutzerdefinierten Attributs in Bytes.  
   
-## <a name="requirements"></a>Voraussetzungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor. h  
+ **Kopfzeile:** Cor.h  
   
- **Bibliothek:** Wird als Ressource in Mscoree. dll verwendet.  
+ **Bibliothek:** Wird als Ressource in MSCorEE.dll verwendet  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [IMetaDataEmit-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [IMetaDataEmit2-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

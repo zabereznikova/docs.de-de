@@ -1,5 +1,5 @@
 ---
-title: Datamemberlisteditor-Klasse
+title: DataMemberListEditor-Klasse
 ms.date: 03/30/2017
 ms.technology: dotnet-winforms
 api_name:
@@ -11,16 +11,16 @@ api_type:
 ms.assetid: c11d5231-78f2-45a7-9210-3b2d0969370e
 topic_type:
 - apiref
-ms.openlocfilehash: d0f8063dd85537f81a1ae145b4526e10ad90b77e
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: 407bbe87e3d186dc901b18dbfee38e2ff69d356a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77215606"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79155998"
 ---
-# <a name="datamemberlisteditor-class"></a>Datamemberlisteditor-Klasse
+# <a name="datamemberlisteditor-class"></a>DataMemberListEditor-Klasse
 
-Stellt eine Dropdown-Benutzeroberfläche zum Bearbeiten von Eigenschaften Daten gebundener Objekte (Objekte, die `DataSource` Eigenschaft ungleich NULL aufweisen) bereit, indem alle Eigenschaften des `DataSource` Objekts aufgelistet werden, aus denen die Wert Quelle ausgewählt werden soll.  
+Stellt eine Dropdown-Benutzeroberfläche zum Bearbeiten von Eigenschaften von datengebundenen `DataSource` Objekten (Objekten mit `DataSource` einer Eigenschaft ungleich NULL) bereit, indem alle Eigenschaften des Objekts aufgelistet werden, aus denen die Wertquelle ausgewählt werden soll.  
   
 ## <a name="syntax"></a>Syntax
   
@@ -29,17 +29,17 @@ internal class DataMemberListEditor : UITypeEditor
 ```
 
 > [!WARNING]
-> Die `DataMemberListEditor`-Klasse ist intern und sollte nicht direkt im Code verwendet werden.
-> 
+> Die `DataMemberListEditor` Klasse ist intern und soll nicht direkt in Ihrem Code verwendet werden.
+>
 > Microsoft unterstützt die Verwendung dieser Klasse in einer Produktionsanwendung unter keinen Umständen.
   
 ## <a name="requirements"></a>Requirements (Anforderungen)
 
-**Namespace:** <xref:System.Windows.Forms.Design?displayProperty=nameWithType>  
+**Namespace:**<xref:System.Windows.Forms.Design?displayProperty=nameWithType>  
   
-**Assembly:** System. Design (in "System. Design. dll")  
+**Montage:** System.Design (in System.Design.dll)  
   
-**.NET Framework Versionen:** Verfügbar seit 2,0.  
+**.NET Framework-Versionen:** Verfügbar seit 2.0.  
   
 ## <a name="see-also"></a>Weitere Informationen
 

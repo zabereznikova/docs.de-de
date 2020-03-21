@@ -15,42 +15,42 @@ helpviewer_keywords:
 ms.assetid: c1de8400-adfe-4a71-b828-a1d0cc1ea505
 topic_type:
 - apiref
-ms.openlocfilehash: afd60cdf566bea459816ee890d44cc09258de516
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 76f18336808e6832b2ded94349efd7948f23a1ee
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74435947"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175693"
 ---
 # <a name="imetadataemitsave-method"></a>IMetaDataEmit::Save-Methode
-Speichert alle Metadaten im aktuellen Gültigkeitsbereich in der Datei an der angegebenen Adresse.  
+Speichert alle Metadaten im aktuellen Bereich an der angegebenen Adresse in der Datei.  
   
 ## <a name="syntax"></a>Syntax  
   
 ```cpp  
-HRESULT Save (   
-    [in]  LPCWSTR     szFile,   
+HRESULT Save (
+    [in]  LPCWSTR     szFile,
     [in]  DWORD       dwSaveFlags  
 );  
 ```  
   
 ## <a name="parameters"></a>Parameter  
  `wzFile`  
- in Der Name der Datei, in der gespeichert werden soll. Wenn dieser Wert NULL ist, wird die in-Memory-Kopie am letzten verwendeten Speicherort gespeichert.  
+ [in] Der Name der Datei, in der gespeichert werden soll. Wenn dieser Wert null ist, wird die In-Memory-Kopie an der letzten verwendeten Position gespeichert.  
   
  `dwSaveFlags`  
- [in]: Reserviert Muss 0 (null) sein.  
+ [in]: Reserviert Muss Null sein.  
   
-## <a name="requirements"></a>Voraussetzungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor. h  
+ **Kopfzeile:** Cor.h  
   
- **Bibliothek:** Wird als Ressource in Mscoree. dll verwendet.  
+ **Bibliothek:** Wird als Ressource in MSCorEE.dll verwendet  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [IMetaDataEmit-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [IMetaDataEmit2-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

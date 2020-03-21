@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 55c545e5-dcd5-4323-a5b9-3825c2157462
-ms.openlocfilehash: 0926e3c6513a698ae47b9983d0e6ad195394a4df
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 18bb03e17b19243ee1bc6e3f7ebd70afb4d4c60b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70780614"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79174445"
 ---
 # <a name="updating-data-in-a-data-source"></a>Aktualisieren von Daten in einer Datenquelle
-SQL-Anweisungen, mit denen Daten geändert werden (z. B. INSERT, UPDATE oder DELETE), geben keine Zeilen zurück. Ähnlich verhält es sich mit vielen gespeicherten Prozeduren, die zwar eine Aktion durchführen, jedoch keine Zeilen zurückgeben. Zum Ausführen von Befehlen, die keine Zeilen zurückgeben, erstellen Sie ein **Command** -Objekt mit dem entsprechenden SQL-Befehl und einer **Verbindung**, einschließlich aller erforderlichen **Parameter**. Führen Sie den Befehl mit der **ExecuteNonQuery** -Methode des **Command** -Objekts aus.  
+SQL-Anweisungen, mit denen Daten geändert werden (z. B. INSERT, UPDATE oder DELETE), geben keine Zeilen zurück. Ähnlich verhält es sich mit vielen gespeicherten Prozeduren, die zwar eine Aktion durchführen, jedoch keine Zeilen zurückgeben. Um Befehle auszuführen, die keine Zeilen zurückgeben, erstellen Sie ein **Command-Objekt** mit dem entsprechenden SQL-Befehl und einer **Verbindung**, einschließlich aller erforderlichen **Parameter**. Führen Sie den Befehl mit der **ExecuteNonQuery-Methode** des **Command-Objekts** aus.  
   
- Die **ExecuteNonQuery** -Methode gibt eine ganze Zahl zurück, die die Anzahl der von der ausgeführten-Anweisung oder gespeicherten Prozedur betroffenen Zeilen darstellt. Wenn mehrere Anweisungen ausgeführt werden, entspricht der zurückgegebene Wert der Summe der Datensätze, die von allen ausgeführten Anweisungen betroffen sind.  
+ Die **ExecuteNonQuery-Methode** gibt eine ganze Zahl zurück, die die Anzahl der Zeilen darstellt, die von der ausgeführten Anweisung oder gespeicherten Prozedur betroffen sind. Wenn mehrere Anweisungen ausgeführt werden, entspricht der zurückgegebene Wert der Summe der Datensätze, die von allen ausgeführten Anweisungen betroffen sind.  
   
 ## <a name="example"></a>Beispiel  
  Im folgenden Codebeispiel wird eine INSERT-Anweisung ausgeführt, um einen Datensatz mithilfe von **ExecuteNonQuery**in eine Datenbank einzufügen.  
@@ -42,9 +42,9 @@ SqlCommand command = new SqlCommand(queryString, connection);
 Int32 recordsAffected = command.ExecuteNonQuery();  
 ```  
   
- Im folgenden Codebeispiel wird die gespeicherte Prozedur ausgeführt, die vom Beispielcode bei der [Ausführung von Katalog Vorgängen](performing-catalog-operations.md)erstellt wurde. Von der gespeicherten Prozedur werden keine Zeilen zurückgegeben, sodass die **ExecuteNonQuery** -Methode verwendet wird, aber die gespeicherte Prozedur empfängt einen Eingabeparameter und gibt einen Output-Parameter und einen Rückgabewert zurück.  
+ Im folgenden Codebeispiel wird die gespeicherte Prozedur ausgeführt, die vom Beispielcode unter [Ausführen von Katalogvorgängen](performing-catalog-operations.md)erstellt wurde. Die gespeicherte Prozedur gibt keine Zeilen zurück, daher wird die **ExecuteNonQuery-Methode** verwendet, aber die gespeicherte Prozedur empfängt einen Eingabeparameter und gibt einen Ausgabeparameter und einen Rückgabewert zurück.  
   
- Für das <xref:System.Data.OleDb.OleDbCommand> -Objekt muss der **ReturnValue** -Parameter zuerst der **Parameter** Auflistung hinzugefügt werden.  
+ Für <xref:System.Data.OleDb.OleDbCommand> das Objekt muss der **ReturnValue-Parameter** zuerst der **Parameters-Auflistung** hinzugefügt werden.  
   
 ```vb  
 ' Assumes connection is a valid SqlConnection.  
@@ -66,7 +66,7 @@ command.Parameters("@CategoryName").Value = "New Category"
 command.ExecuteNonQuery()  
   
 Dim categoryID As Int32 = CInt(command.Parameters("@Identity").Value)  
-Dim rowCount As Int32 = CInt(command.Parameters("@RowCount").Value)   
+Dim rowCount As Int32 = CInt(command.Parameters("@RowCount").Value)
 ```  
   
 ```csharp  
@@ -91,7 +91,7 @@ Int32 categoryID = (Int32) command.Parameters["@Identity"].Value;
 Int32 rowCount = (Int32) command.Parameters["@RowCount"].Value;  
 ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Verwenden von Befehlen zum Ändern von Daten](using-commands-to-modify-data.md)
 - [Updating Data Sources with DataAdapters (Aktualisieren von Datenquellen mit DataAdapters)](updating-data-sources-with-dataadapters.md)

@@ -1,6 +1,6 @@
 ---
-title: Funktion "Beschreib tepropertyvalue" (Referenz zur nicht verwalteten API)
-description: Die Funktion "schreitepropertyvalue" schreibt Bytes in eine Eigenschaft.
+title: WritePropertyValue-Funktion (Nicht verwaltete API-Referenz)
+description: Die WritePropertyValue-Funktion schreibt Bytes in eine Eigenschaft.
 ms.date: 11/06/2017
 api_name:
 - WritePropertyValue
@@ -14,72 +14,71 @@ helpviewer_keywords:
 - WritePropertyValue function [.NET WMI and performance counters]
 topic_type:
 - Reference
-ms.openlocfilehash: f02fb3877d55e9f47384b281573202712c29c606
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 4a950beef2e9bf8c0230d6a38008d75f89373410
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73107290"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79174835"
 ---
-# <a name="writepropertyvalue-function"></a>Funktion "schreitepropertyvalue"
+# <a name="writepropertyvalue-function"></a>WritePropertyValue-Funktion
 Schreibt eine angegebene Anzahl von Bytes in eine Eigenschaft, die durch ein Eigenschaftenhandle identifiziert wird.
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
-    
+
 ## <a name="syntax"></a>Syntax  
   
 ```cpp  
 HRESULT WritePropertyValue (
-   [in] int                  vFunc, 
-   [in] IWbemObjectAccess*   ptr, 
+   [in] int                  vFunc,
+   [in] IWbemObjectAccess*   ptr,
    [in] long                 lHandle,
    [in] long                 lNumBytes,
    [in] byte*                aData
-); 
+);
 ```  
 
 ## <a name="parameters"></a>Parameter
 
 `vFunc`  
-in Dieser Parameter wird nicht verwendet.
+[in] Dieser Parameter ist nicht verwendet.
 
 `ptr`  
-in Ein Zeiger auf eine [iwbemubjectaccess](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemobjectaccess) -Instanz.
+[in] Ein Zeiger auf eine [IWbemObjectAccess-Instanz.](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemobjectaccess)
 
 `lHandle`  
-in Eine ganze Zahl, die das Handle enthält, das diese Eigenschaft identifiziert. Das Handle kann durch Aufrufen der [getpropertyhandle](getpropertyhandle.md) -Funktion abgerufen werden.   
+[in] Eine ganze Zahl, die das Handle enthält, das diese Eigenschaft identifiziert. Das Handle kann abgerufen werden, indem die [GetPropertyHandle-Funktion](getpropertyhandle.md) aufgerufen wird.
 
 `lNumBytes`  
-in Die Anzahl der Bytes, die in die Eigenschaft geschrieben werden. Weitere Informationen finden Sie im Abschnitt " [Hinweise](#remarks) ".
+[in] Die Anzahl der Bytes, die in die Eigenschaft geschrieben werden. Weitere Informationen finden Sie im Abschnitt ["Bemerkungen".](#remarks)
 
-`pHandle`   
-vorgenommen Ein Zeiger auf das Bytearray, das die Daten enthält.
+`pHandle`[out] Ein Zeiger auf das Bytearray, das die Daten enthält.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die folgenden Werte, die von dieser Funktion zurückgegeben werden, sind in der *wbemcli. h* -Header Datei definiert, oder Sie können Sie als Konstanten im Code definieren:
+Die folgenden Werte, die von dieser Funktion zurückgegeben werden, sind in der *PseCli.h-Headerdatei* definiert, oder Sie können sie als Konstanten im Code definieren:
 
-|Konstante  |Wert  |Beschreibung  |
+|Dauerhaft  |value  |Beschreibung  |
 |---------|---------|---------|
-|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | Ein Parameter ist ungültig. |
-|`WBEM_E_TYPE_MISMATCH` | 0x80041005 beim | Es ist ein Typen Konflikt aufgetreten. |
-|`WBEM_S_NO_ERROR` | 0 | Der Funktions Aufrufvorgang war erfolgreich.  |
+|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | Ein Parameter ist nicht gültig. |
+|`WBEM_E_TYPE_MISMATCH` | 0x80041005 | Es ist ein Typenkonflikt aufgetreten. |
+|`WBEM_S_NO_ERROR` | 0 | Der Funktionsaufruf war erfolgreich.  |
   
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 
-Diese Funktion umschließt einen aufzurufenden Befehl an die [IWbemClassObject:: Write-PropertyValue](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemobjectaccess-writepropertyvalue) -Methode.
+Diese Funktion umschließt einen Aufruf der [IWbemClassObject::WritePropertyValue-Methode.](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemobjectaccess-writepropertyvalue)
 
-Verwenden Sie diese Funktion, um Zeichen folgen und alle anderen nicht-`DWORD` oder nicht`QWORD` Daten festzulegen.
+Verwenden Sie diese Funktion, um`DWORD` Zeichenfolgen`QWORD` und alle anderen Nicht- oder Nicht-Daten festzulegen.
 
-Für nicht-Zeichen folgen-Eigenschaftswerte müssen `lNumBytes` die richtige Datengröße des angegebenen Eigenschaftentyps sein. Bei Zeichen folgen Eigenschafts Werten muss `lNumBytes` die Länge der angegebenen Zeichenfolge in Bytes sein, und die Zeichenfolge selbst muss eine gerade Länge in Bytes aufweisen und mit einem NULL-Terminierungs Zeichen befolgt werden.
+Bei Nicht-Zeichenfolgen-Eigenschaftswerten `lNumBytes` muss die richtige Datengröße des angegebenen Eigenschaftstyps angegeben sein. Für Zeichenfolgeneigenschaftswerte `lNumBytes` muss die Länge der angegebenen Zeichenfolge in Bytes sein, und die Zeichenfolge selbst muss eine gerade Länge in Bytes haben und mit einem Null-Beendigungszeichen gefolgt werden.
 
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
 **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
- **Header:** WMINet_Utils. idl  
+ **Kopfzeile:** WMINet_Utils.idl  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [WMI und Leistungsindikatoren (Referenz zur nicht verwalteten API)](index.md)

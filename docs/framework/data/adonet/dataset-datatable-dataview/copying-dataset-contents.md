@@ -5,23 +5,23 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: cb846617-2b1a-44ff-bd7f-5835f5ea37fa
-ms.openlocfilehash: d8a7762c4ec5d650295ca0626180285723549051
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: de13e07eb5c19b8beffa724fec4a128c418a4fed
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70786514"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79151363"
 ---
 # <a name="copying-dataset-contents"></a>Kopieren von DataSet-Inhalten
-Sie können eine Kopie von <xref:System.Data.DataSet> erstellen, damit Sie mit Daten arbeiten können, ohne dass sich dies auf die ursprünglichen Daten auswirkt, oder mit einer Teilmenge der Daten aus einem **DataSet**arbeiten. Beim Kopieren eines **DataSets**können Sie folgende Aktionen ausführen:  
+Sie können eine Kopie <xref:System.Data.DataSet> eines erstellen, sodass Sie mit Daten arbeiten können, ohne die ursprünglichen Daten zu beeinflussen, oder mit einer Teilmenge der Daten aus einem **DataSet**arbeiten. Beim Kopieren eines **DataSets**können Sie:  
   
-- Erstellen Sie eine exakte Kopie des **DataSets**, einschließlich Schema, Daten, Zeilen Zustandsinformationen und Zeilen Versionen.  
+- Erstellen Sie eine exakte Kopie des **DataSet**, einschließlich des Schemas, der Daten, der Zeilenstatusinformationen und der Zeilenversionen.  
   
-- Erstellen Sie ein **DataSet** , das das Schema eines vorhandenen **DataSets**enthält, aber nur Zeilen, die geändert wurden. Sie können alle geänderten Zeilen oder einen bestimmten **DataRowState**-Wert zurückgeben. Weitere Informationen zu Zeilen Zuständen finden Sie unter [Zeilen Status und Zeilen Versionen](row-states-and-row-versions.md).  
+- Erstellen Sie ein **DataSet,** das das Schema eines vorhandenen **DataSets**enthält, jedoch nur Zeilen, die geändert wurden. Sie können alle geänderten Zeilen zurückgeben oder einen bestimmten **DataRowState**angeben. Weitere Informationen zu Zeilenzuständen finden Sie unter [Zeilenzustände und Zeilenversionen](row-states-and-row-versions.md).  
   
-- Kopieren Sie das Schema oder die relationale Struktur des **DataSets** nur, ohne Zeilen zu kopieren. Zeilen können mit <xref:System.Data.DataTable> in eine vorhandene <xref:System.Data.DataTable.ImportRow%2A> importiert werden.  
+- Kopieren Sie nur das Schema oder die relationale Struktur des **DataSets,** ohne Zeilen zu kopieren. Zeilen können mit <xref:System.Data.DataTable> in eine vorhandene <xref:System.Data.DataTable.ImportRow%2A> importiert werden.  
   
- Verwenden Sie die <xref:System.Data.DataSet.Copy%2A> -Methode des **DataSets**, um eine exakte Kopie des **DataSets** zu erstellen, das sowohl das Schema als auch die Daten enthält. Im folgenden Codebeispiel wird gezeigt, wie eine exakte Kopie des **DataSets**erstellt wird.  
+ Um eine exakte Kopie des **DataSets** zu erstellen, <xref:System.Data.DataSet.Copy%2A> das sowohl Schema als auch Daten enthält, verwenden Sie die Methode des **DataSet**. Das folgende Codebeispiel zeigt, wie Sie eine exakte Kopie des **DataSet**erstellen.  
   
 ```vb  
 Dim copyDataSet As DataSet = customerDataSet.Copy()  
@@ -31,7 +31,7 @@ Dim copyDataSet As DataSet = customerDataSet.Copy()
 DataSet copyDataSet = customerDataSet.Copy();  
 ```  
   
- Verwenden Sie die<xref:System.Data.DataSet.GetChanges%2A> -Methode des **DataSets**, um eine Kopie eines **DataSets** zu erstellen, das Schema und nur die Daten enthält, die **hinzugefügte**, geänderte oder **Gelöschte** Zeilen darstellen. Sie können **GetChanges** auch verwenden, um nur Zeilen mit einem angegebenen Zeilen Status zurückzugeben, indem Sie beim Aufrufen von **GetChanges**einen **DataRowState** -Wert übergeben. Im folgenden Codebeispiel wird gezeigt, wie ein **DataRowState** beim Aufrufen von **GetChanges**übergeben wird.  
+ Verwenden Sie die Methode des **DataSet,** um eine Kopie eines **DataSets** zu <xref:System.Data.DataSet.GetChanges%2A> erstellen, das schemas und nur die Daten enthält, die **Added**, **Modified**oder **Deleted** rows darstellen. Verwenden Sie die Methode des DataSet . Sie können **GetChanges** auch verwenden, um nur Zeilen mit einem angegebenen Zeilenstatus zurückzugeben, indem Sie beim Aufrufen von **GetChanges**einen **DataRowState-Wert** übergeben. Das folgende Codebeispiel zeigt, wie ein **DataRowState** beim Aufrufen von **GetChanges**übergeben wird.  
   
 ```vb  
 ' Copy all changes.  
@@ -48,9 +48,9 @@ DataSet changeDataSet = customerDataSet.GetChanges();
 DataSet addedDataSet= customerDataSet.GetChanges(DataRowState.Added);  
 ```  
   
- Um eine Kopie eines **DataSets** zu erstellen, das nur das Schema enthält, <xref:System.Data.DataSet.Clone%2A> verwenden Sie die-Methode des **DataSets**. Sie können dem geklonten **DataSet** auch vorhandene Zeilen mithilfe der **ImportRow** -Methode der **Daten**Tabelle hinzufügen. **ImportRow** fügt der angegebenen Tabelle Informationen zu Daten, Zeilen Status und Zeilen Version hinzu. Spaltenwerte werden nur hinzugefügt, wenn der Spaltenname übereinstimmt und der Datentyp kompatibel ist.  
+ Um eine Kopie eines **DataSets** zu erstellen, <xref:System.Data.DataSet.Clone%2A> die nur Schema enthält, verwenden Sie die Methode des **DataSet**. Sie können dem geklonten **DataSet** auch vorhandene Zeilen hinzufügen, indem Sie die **ImportRow-Methode** der **DataTable**verwenden. **ImportRow** fügt der angegebenen Tabelle Daten-, Zeilenstatus- und Zeilenversionsinformationen hinzu. Spaltenwerte werden nur hinzugefügt, wenn der Spaltenname übereinstimmt und der Datentyp kompatibel ist.  
   
- Im folgenden Codebeispiel wird ein Klon eines **DataSets** erstellt und dann die Zeilen aus dem ursprünglichen **DataSet** der **Customers** -Tabelle im **DataSet** -Klon für Kunden hinzugefügt, in der die **CountryRegion** -Spalte den Wert "Deutschland ".  
+ Im folgenden Codebeispiel wird ein Klon eines **DataSets** erstellt und dann die Zeilen aus dem ursprünglichen **DataSet** zur **Tabelle Customers** im **DataSet-Klon** für Kunden hinzugefügt, bei denen die **Spalte CountryRegion** den Wert "Deutschland" hat.  
   
 ```vb  
 Dim customerDataSet As New DataSet  
@@ -85,7 +85,7 @@ customerDataSet.Tables["Customers"].Rows.Add("John", "UK");
   
 DataSet germanyCustomers = customerDataSet.Clone();  
   
-DataRow[] copyRows =   
+DataRow[] copyRows =
   customerDataSet.Tables["Customers"].Select("CountryRegion = 'Germany'");  
   
 DataTable customerTable = germanyCustomers.Tables["Customers"];  
@@ -94,9 +94,9 @@ foreach (DataRow copyRow in copyRows)
   customerTable.ImportRow(copyRow);  
 ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Data.DataSet>
 - <xref:System.Data.DataTable>
-- [DataSets, DataTables und DataViews](index.md)
+- ["DataSets", "DataTables" und "DataViews"](index.md)
 - [Übersicht über ADO.NET](../ado-net-overview.md)

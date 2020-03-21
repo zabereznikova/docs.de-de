@@ -5,50 +5,50 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 429c9d09-92ac-46ec-829a-fbff0a9575a2
-ms.openlocfilehash: b6fa4207531e86cbde8657d0c47596f22c886f89
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 5e37a04ff731a99664d636e0d4175f99214c2646
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70791869"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79174510"
 ---
 # <a name="provider-statistics-for-sql-server"></a>Anbieterstatistiken für SQL Server
-Ab .NET Framework Version 2.0 unterstützt der .NET Framework-Datenanbieter für SQL Server Laufzeitstatistiken. Sie müssen die Statistik aktivieren, indem Sie nach dem Erstellen eines gültigen Verbindungsobjekts die <xref:System.Data.SqlClient.SqlConnection.StatisticsEnabled%2A>-Eigenschaft des <xref:System.Data.SqlClient.SqlConnection>-Objekts auf `True` festlegen. Nach dem Aktivieren der Statistik können Sie sie als "Momentaufnahme" betrachten, indem Sie einen <xref:System.Collections.IDictionary>-Verweis über die <xref:System.Data.SqlClient.SqlConnection.RetrieveStatistics%2A>-Methode des <xref:System.Data.SqlClient.SqlConnection>-Objekts abrufen. Blättern Sie durch die Liste wie durch Wörterbucheinträge mit Name-Wert-Paaren. Diese Name-Wert-Paare sind nicht sortiert. Sie können jederzeit die <xref:System.Data.SqlClient.SqlConnection.ResetStatistics%2A>-Methode des <xref:System.Data.SqlClient.SqlConnection>-Objekts aufrufen, um die Zähler zurückzusetzen. Wenn das Erfassen der Statistik nicht aktiviert wurde, wird keine Ausnahme ausgelöst. Wenn <xref:System.Data.SqlClient.SqlConnection.RetrieveStatistics%2A> aufgerufen wird, ohne vorher <xref:System.Data.SqlClient.SqlConnection.StatisticsEnabled%2A> aufzurufen, stellen die abgerufenen Werte die Anfangswerte für die einzelnen Einträge dar. Wenn Sie die Statistik aktivieren, die Anwendung für eine gewisse Zeit ausführen und dann die Statistik wieder deaktivieren, entsprechen die abgerufenen Werte den Werten, die bis zu dem Zeitpunkt erfasst wurden, an dem die Statistik deaktiviert wurde. Alle statistischen Werte werden auf der Basis einzelner Verbindungen erfasst.  
+Ab .NET Framework Version 2.0 unterstützt der .NET Framework-Datenanbieter für SQL Server Laufzeitstatistiken. Sie müssen Statistiken aktivieren, indem Sie die Eigenschaft <xref:System.Data.SqlClient.SqlConnection.StatisticsEnabled%2A> des <xref:System.Data.SqlClient.SqlConnection>-Objekts auf `True` festlegen, nachdem Sie ein gültiges Verbindungsobjekt erstellt haben. Nachdem Statistiken aktiviert wurden, können Sie sie als Momentaufnahme überprüfen, indem Sie einen <xref:System.Collections.IDictionary>-Verweis über die <xref:System.Data.SqlClient.SqlConnection.RetrieveStatistics%2A>-Methode des <xref:System.Data.SqlClient.SqlConnection>-Objekts abrufen. Sie zählen die Liste als eine Reihe von Wörterbucheinträgen in Form von Name-Wert-Paaren durch. Diese Name-Wert-Paare sind nicht geordnet. Sie können jederzeit die <xref:System.Data.SqlClient.SqlConnection.ResetStatistics%2A>-Methode des <xref:System.Data.SqlClient.SqlConnection>-Objekts zum Zurücksetzen der Zähler aufrufen. Wenn die Statistikerfassung nicht aktiviert ist, wird keine Ausnahme generiert. Wenn außerdem <xref:System.Data.SqlClient.SqlConnection.RetrieveStatistics%2A> aufgerufen wird, ohne dass zuvor <xref:System.Data.SqlClient.SqlConnection.StatisticsEnabled%2A> aufgerufen wurde, sind die abgerufenen Werte die Anfangswerte jedes Eintrags. Wenn Sie Statistiken aktivieren, Ihre Anwendung eine Weile ausführen und Statistiken dann deaktivieren, spiegeln die abgerufenen Werte die Werte wider, die bis zu dem Punkt erfasst wurden, an dem Statistiken deaktiviert wurden. Alle erfassten statistischen Werte gelten verbindungsbezogen.  
   
 ## <a name="statistical-values-available"></a>Verfügbare statistische Werte  
- Gegenwärtig sind vom Anbieter Microsoft SQL Server 18 verschiedene Elemente verfügbar. Auf die Anzahl der verfügbaren Elemente kann über die **count** -Eigenschaft des <xref:System.Collections.IDictionary> von <xref:System.Data.SqlClient.SqlConnection.RetrieveStatistics%2A>zurückgegebenen Schnittstellen Verweises zugegriffen werden. Alle Leistungsindikatoren für Anbieter Statistiken verwenden den Common Language Runtime <xref:System.Int64> -Typ (**Long** in C# und Visual Basic), der 64 Bits breit ist. Der maximale Wert des **Int64** -Datentyps gemäß der Definition durch **Int64. MaxValue** -Feld, ist ((2 ^ 63)-1)). Wenn die Werte für die Zähler diesen Maximalwert erreichen, können sie nicht mehr als korrekt bezeichnet werden. Dies bedeutet, dass **Int64. MaxValue**-1 ((2 ^ 63)-2) ist tatsächlich der größte gültige Wert für jede Statistik.  
+ Gegenwärtig bietet der Microsoft SQL Server-Anbieter 18 Elemente. Die Anzahl der verfügbaren Elemente kann über die **Count**-Eigenschaft des <xref:System.Collections.IDictionary>-Schnittstellenverweises abgerufen werden, die von <xref:System.Data.SqlClient.SqlConnection.RetrieveStatistics%2A> zurückgegeben wird. Alle Zähler für Anbieterstatistiken verwenden den <xref:System.Int64>-CLR-Typ (Common Language Runtime) (**long** in C# und Visual Basic), der 64 Bit lang ist. Der maximale Wert des im Feld **int64.MaxValue** definierten **int64**-Datentyps beträgt ((2^63)-1)). Wenn die Werte für die Zähler diesen Maximalwert erreichen, dürfen sie nicht mehr als genau betrachtet werden. Das bedeutet, dass **int64.MaxValue**-1((2^63)-2) tatsächlich der größte gültige Wert für alle Statistiken ist.  
   
 > [!NOTE]
-> Für die zurückgegebene Anbieterstatistik wird ein Wörterbuch verwendet, da sich die Anzahl, die Namen und die Reihenfolge der zurückgegebenen Statistiken zukünftig ändern können. Anwendungen sollten sich nicht darauf verlassen, dass ein bestimmter Wert in einem Wörterbuch gefunden wird, sondern stattdessen überprüfen, ob der Wert vorhanden ist, und entsprechend verzweigen.  
+> Ein Wörterbuch wird für die Rückgabe von Anbieterstatistiken verwendet, da sich Anzahl, Namen und Reihenfolge der zurückgegebenen Statistiken in Zukunft ändern können. Anwendungen dürfen sich nicht darauf verlassen, dass ein bestimmter Wert im Wörterbuch zu finden ist, sondern müssen prüfen, ob der Wert vorhanden ist und entsprechend verzweigen.  
   
  In der folgenden Tabelle werden die aktuell verfügbaren statistischen Werte beschrieben. Beachten Sie, dass die Schlüsselnamen für die einzelnen Werte für regionale Versionen von Microsoft .NET Framework nicht lokalisiert werden.  
   
 |Schlüsselname|Beschreibung|  
 |--------------|-----------------|  
-|`BuffersReceived`|Gibt die Anzahl der TDS-Pakete (Tabular Data Stream) zurück, die vom Anbieter von SQL Server empfangen wurden, seitdem die Anwendung den Anbieter verwendet und die Statistik aktiviert hat.|  
-|`BuffersSent`|Gibt die Anzahl der TDS-Pakete zurück, die vom Anbieter an SQL Server gesendet wurden, seit die Statistik aktiviert wurde. Für umfangreiche Befehle sind möglicherweise mehrere Puffer erforderlich. Wenn z. B. ein großer Befehl an der Server gesendet wurde und 6 Pakete erfordert, wird `ServerRoundtrips` um 1 vergrößert und `BuffersSent` um 6 vergrößert.|  
-|`BytesReceived`|Gibt die Anzahl der Bytes der Daten in TDS-Paketen zurück, die vom Anbieter von SQL Server empfangen wurden, seitdem die Anwendung den Anbieter verwendet und die Statistik aktiviert hat.|  
-|`BytesSent`|Gibt die Anzahl der Bytes der Daten zurück, die in TDS-Paketen an SQL Server gesendet wurden, seitdem die Anwendung den Anbieter verwendet und die Statistik aktiviert hat.|  
-|`ConnectionTime`|Die Zeitspanne (in Millisekunden), die die Verbindung nach dem Aktivieren der Statistik geöffnet war (die Gesamtverbindungszeit, wenn die Statistik vor dem Öffnen der Verbindung aktiviert wurde).|  
-|`CursorOpens`|Gibt zurück, wie oft während der Verbindung ein Cursor geöffnet war, seitdem die Anwendung den Anbieter verwendet und die Statistik aktiviert hat.<br /><br /> Beachten Sie, dass schreibgeschützte Vorwärtsergebnisse, die von SELECT-Anweisungen zurückgegeben wurden, nicht als Cursor betrachtet werden und deshalb diesen Zähler nicht beeinflussen.|  
-|`ExecutionTime`|Gibt die Gesamtzeitspanne (in Millisekunden) zurück, die der Anbieter seit dem Aktivieren der Statistik mit der Verarbeitung verbracht hat, einschließlich der Zeit zum Warten auf Antworten vom Server und zum Ausführen von Code im Anbieter selbst.<br /><br /> Folgende Klassen enthalten Zeiterfassungscode:<br /><br /> SqlConnection<br /><br /> SqlCommand<br /><br /> SqlDataReader<br /><br /> SqlDataAdapter<br /><br /> SqlTransaction<br /><br /> SqlCommandBuilder<br /><br /> Um leistungswichtige Member so klein wie möglich zu halten, erfolgt für die folgenden Member keine Zeiterfassung:<br /><br /> SqlDataReader<br /><br /> this[]-Operator (alle Überladungen)<br /><br /> GetBoolean<br /><br /> GetChar<br /><br /> GetDateTime<br /><br /> GetDecimal<br /><br /> GetDouble<br /><br /> GetFloat<br /><br /> GetGuid<br /><br /> GetInt16<br /><br /> GetInt32<br /><br /> GetInt64<br /><br /> GetName<br /><br /> GetOrdinal<br /><br /> GetSqlBinary<br /><br /> GetSqlBoolean<br /><br /> GetSqlByte<br /><br /> GetSqlDateTime<br /><br /> GetSqlDecimal<br /><br /> GetSqlDouble<br /><br /> GetSqlGuid<br /><br /> GetSqlInt16<br /><br /> GetSqlInt32<br /><br /> GetSqlInt64<br /><br /> GetSqlMoney<br /><br /> GetSqlSingle<br /><br /> GetSqlString<br /><br /> GetString<br /><br /> IsDBNull|  
-|`IduCount`|Gibt die gesamte Anzahl der über die Verbindung ausgeführten INSERT-, DELETE- und UPDATE-Anweisungen zurück, seitdem die Anwendung den Anbieter verwendet und die Statistik aktiviert hat.|  
-|`IduRows`|Gibt die gesamte Anzahl der Zeilen zurück, die von über die Verbindung ausgeführten INSERT-, DELETE- und UPDATE-Anweisungen beeinflusst wurden, seitdem die Anwendung den Anbieter verwendet und die Statistik aktiviert hat.|  
-|`NetworkServerTime`|Gibt die Gesamtzeitspanne (in Millisekunden) zurück, die der Anbieter zum Warten auf Antworten vom Server aufgewendet hat, seit die Anwendung den Anbieter verwendet und die Statistik aktiviert hat.|  
-|`PreparedExecs`|Gibt die Anzahl vorbereiteter Befehle zurück, die über die Verbindung ausgeführt wurden, seitdem die Anwendung den Anbieter verwendet und die Statistik aktiviert hat.|  
-|`Prepares`|Gibt die Anzahl der über die Verbindung vorbereiteten Anweisungen zurück, seitdem die Anwendung den Anbieter verwendet und die Statistik aktiviert hat.|  
-|`SelectCount`|Gibt die Anzahl von SELECT-Anweisungen zurück, die über die Verbindung ausgeführt wurden, seitdem die Anwendung den Anbieter verwendet und die Statistik aktiviert hat. Darin sind FETCH-Anweisungen zum Abrufen von Zeilen von Cursors enthalten, und die Anzahl von SELECT-Anweisungen wird aktualisiert, wenn das Ende eines <xref:System.Data.SqlClient.SqlDataReader> erreicht wird.|  
-|`SelectRows`|Gibt die Anzahl der Zeilen zurück, die ausgewählt wurden, seitdem die Anwendung den Anbieter verwendet und die Statistik aktiviert hat. Dieser Zähler gibt alle Zeilen wieder, die durch SQL-Anweisungen erstellt wurden, darunter auch die, die vom Aufrufer nicht verarbeitet wurden. Das Schließen eines Datenreaders vor dem vollständigen Lesen des Ergebnisses beeinflusst z. B. die Zählung nicht. Dies gilt auch für Zeilen, die über FETCH-Anwendungen von Cursors abgerufen wurden.|  
-|`ServerRoundtrips`|Gibt an, wie oft die Verbindung Befehle zum Server gesendet und eine Antwort erhalten hat, seitdem die Anwendung den Anbieter verwendet und die Statistik aktiviert hat.|  
-|`SumResultSets`|Gibt die Anzahl der verwendeten Resultsets zurück, seitdem die Anwendung den Anbieter verwendet und die Statistik aktiviert hat. Dies umfasst z. B. Resultsets, die zum Client zurückgegeben wurden. Für Cursors wird jede "fetch"- oder "block-fetch"-Operation als unabhängiges Resultset behandelt.|  
-|`Transactions`|Gibt die Anzahl der gestarteten Benutzertransaktionen (einschließlich Rollbacks) zurück, seitdem die Anwendung den Anbieter verwendet und die Statistik aktiviert hat. Wenn eine Verbindung mit aktiviertem Autocommit ausgeführt wird, wird jeder Befehl als Transaktion behandelt.<br /><br /> Dieser Zähler erhöht die Transaktionszählung, sobald eine BEGIN TRAN-Anweisung ausgeführt wird, unabhängig davon, ob die Transaktion später gespeichert oder zurückgesetzt wird.|  
-|`UnpreparedExecs`|Gibt die Anzahl der nicht vorbereiteten Anweisungen zurück, die über die Verbindung ausgeführt wurden, seitdem die Anwendung den Anbieter verwendet und die Statistik aktiviert hat.|  
+|`BuffersReceived`|Gibt die Anzahl der TDS-Pakete (Tabular Data Stream) zurück, die der Anbieter von SQL Server empfangen hat, nachdem die Anwendung die Nutzung des Anbieters gestartet und Statistiken aktiviert hat.|  
+|`BuffersSent`|Gibt die Anzahl der TDS-Pakete zurück, die vom Anbieter nach Aktivieren von Statistiken an SQL Server gesendet wurden. Für große Befehle sind möglicherweise mehrere Puffer erforderlich. Wenn z. B. ein großer Befehl an den Server gesendet wird und er sechs Pakete erfordert, wird `ServerRoundtrips` um 1 und `BuffersSent` um 6 erhöht.|  
+|`BytesReceived`|Gibt die Anzahl der Datenbytes in den TDS-Paketen zurück, die der Anbieter von SQL Server empfangen hat, nachdem die Anwendung mit der Nutzung des Anbieters begonnen und Statistiken aktiviert hat.|  
+|`BytesSent`|Gibt die Anzahl der Datenbytes zurück, die in TDS-Paketen an SQL Server gesendet wurden, nachdem die Anwendung mit der Nutzung des Anbieters begonnen und Statistiken aktiviert hat.|  
+|`ConnectionTime`|Die Zeitspanne (in Millisekunden), für die die Verbindung nach dem Aktivieren der Statistik geöffnet war (die Gesamtverbindungszeit, wenn die Statistik vor dem Öffnen der Verbindung aktiviert wurde).|  
+|`CursorOpens`|Gibt zurück, wie oft ein Cursor über die Verbindung geöffnet wurde, nachdem die Anwendung mit der Nutzung des Anbieters begonnen und Statistiken aktiviert hat.<br /><br /> Beachten Sie, dass schreibgeschützte/vorwärtsgerichtete Ergebnisse, die von SELECT-Anweisungen zurückgegeben werden, nicht als Cursor betrachtet werden und daher diesen Zähler nicht beeinflussen.|  
+|`ExecutionTime`|Gibt die Gesamtzeitspanne (in Millisekunden) zurück, die der Anbieter seit dem Aktivieren der Statistik mit der Verarbeitung verbracht hat, einschließlich der Zeit zum Warten auf Antworten vom Server und zum Ausführen von Code im Anbieter selbst.<br /><br /> Die Klassen, die Zeitsteuerungscode enthalten, lauten:<br /><br /> SqlConnection<br /><br /> SqlCommand<br /><br /> SqlDataReader<br /><br /> SqlDataAdapter<br /><br /> SqlTransaction<br /><br /> SqlCommandBuilder<br /><br /> Um leistungskritische Member so klein wie möglich zu halten, werden die folgenden Member nicht zeitgesteuert:<br /><br /> SqlDataReader<br /><br /> this []-Operator (alle Überladungen)<br /><br /> GetBoolean<br /><br /> GetChar<br /><br /> GetDateTime<br /><br /> GetDecimal<br /><br /> GetDouble<br /><br /> GetFloat<br /><br /> GetGuid<br /><br /> GetInt16<br /><br /> GetInt32<br /><br /> GetInt64<br /><br /> GetName<br /><br /> GetOrdinal<br /><br /> GetSqlBinary<br /><br /> GetSqlBoolean<br /><br /> GetSqlByte<br /><br /> GetSqlDateTime<br /><br /> GetSqlDecimal<br /><br /> GetSqlDouble<br /><br /> GetSqlGuid<br /><br /> GetSqlInt16<br /><br /> GetSqlInt32<br /><br /> GetSqlInt64<br /><br /> GetSqlMoney<br /><br /> GetSqlSingle<br /><br /> GetSqlString<br /><br /> GetString<br /><br /> IsDBNull|  
+|`IduCount`|Gibt die Gesamtanzahl der über die Verbindung ausgeführten INSERT-, DELETE- und UPDATE-Anweisungen zurück, sobald die Anwendung mit der Nutzung des Anbieters begonnen und Statistiken aktiviert hat.|  
+|`IduRows`|Gibt die Gesamtanzahl der Zeilen zurück, die von INSERT-, DELETE- und UPDATE-Anweisungen betroffen sind, die über die Verbindung ausgeführt wurden, sobald die Anwendung mit der Verwendung des Anbieters begonnen und Statistiken aktiviert hat.|  
+|`NetworkServerTime`|Gibt die kumulative Zeitspanne (in Millisekunden) zurück, die der Anbieter zum Warten auf Antworten vom Server verwendet hat, seitdem die Anwendung den Anbieter verwendet und die Statistik aktiviert hat.|  
+|`PreparedExecs`|Gibt die Anzahl vorbereiteter Befehle zurück, die über die Verbindung ausgeführt wurden, sobald die Anwendung mit der Nutzung des Anbieters begonnen und Statistiken aktiviert hat.|  
+|`Prepares`|Gibt die Anzahl der über die Verbindung vorbereiteten Anweisungen zurück, sobald die Anwendung mit der Nutzung des Anbieters begonnen und Statistiken aktiviert hat.|  
+|`SelectCount`|Gibt die Anzahl der über die Verbindung ausgeführten SELECT-Anweisungen zurück, nachdem die Anwendung mit der Nutzung des Anbieters begonnen und Statistiken aktiviert hat. Dazu gehören FETCH-Anweisungen zum Abrufen von Zeilen aus Cursorn. Der Zähler für SELECT-Anweisungen wird aktualisiert, wenn das Ende von <xref:System.Data.SqlClient.SqlDataReader> erreicht ist.|  
+|`SelectRows`|Gibt die Anzahl der ausgewählten Zeilen zurück, nachdem die Anwendung mit der Nutzung des Anbieters begonnen und Statistiken aktiviert hat. Dieser Zähler spiegelt alle von SQL-Anweisungen erstellten Zeilen wider, auch solche, die vom Aufrufer nicht wirklich genutzt wurden. Beispielsweise würde das Schließen eines Datenlesers vor dem Lesen des gesamten Resultsets die Anzahl nicht beeinflussen. Dies schließt die Zeilen ein, die von den Cursorn über FETCH-Anweisungen abgerufen werden.|  
+|`ServerRoundtrips`|Gibt zurück, wie oft die Verbindung Befehle an den Server gesendet und eine Antwort erhalten hat, sobald die Anwendung mit der Nutzung des Anbieters begonnen und Statistiken aktiviert hat.|  
+|`SumResultSets`|Gibt die Anzahl der Resultsets zurück, die verwendet wurden, nachdem die Anwendung mit der Nutzung des Anbieters begonnen und Statistiken aktiviert hat. Dies würde z. B. jedes an den Client zurückgegebene Resultset umfassen. Bei Cursorn wird jeder Abruf oder Blockabruf als unabhängiges Resultset betrachtet.|  
+|`Transactions`|Gibt die Anzahl der Benutzertransaktionen zurück, die gestartet wurden, nachdem die Anwendung mit der Nutzung des Anbieters begonnen und Statistiken, einschließlich Rollbacks, aktiviert hat. Wenn eine Verbindung mit aktiviertem Autocommit ausgeführt wird, gilt jeder Befehl als Transaktion.<br /><br /> Dieser Zähler erhöht den Transaktionszähler, sobald eine BEGIN TRAN-Anweisung ausgeführt wird, unabhängig davon, ob die Transaktion committet oder später rückgängig gemacht wird.|  
+|`UnpreparedExecs`|Gibt die Anzahl der über die Verbindung ausgeführten unvorbereiteten Anweisungen zurück, nachdem die Anwendung mit der Nutzung des Anbieters begonnen und Statistiken aktiviert hat.|  
   
 ### <a name="retrieving-a-value"></a>Abrufen eines Werts  
- Die folgende Konsolenanwendung zeigt, wie die Statistik für eine Verbindung aktiviert, vier einzelne statistischen Werte abgerufen und diese in das Konsolenfenster geschrieben werden.  
+ Die folgende Konsolenanwendung zeigt, wie Statistiken über eine Verbindung aktiviert, vier einzelne Statistikwerte abgerufen und in das Konsolenfenster geschrieben werden können.  
   
 > [!NOTE]
-> Im folgenden Beispiel wird die **AdventureWorks** -Beispieldatenbank verwendet, die in SQL Server enthalten ist. Bei der im Beispielcode bereitgestellten Verbindungszeichenfolge wird angenommen, dass die Datenbank auf dem lokalen Computer installiert und verfügbar ist. Ändern Sie die Verbindungszeichenfolge entsprechend der Umgebung.  
+> Im folgenden Beispiel wird die in SQL Server enthaltene **AdventureWorks**-Beispieldatenbank verwendet. In der im Beispielcode bereitgestellten Verbindungszeichenfolge wird davon ausgegangen, dass die Datenbank auf dem lokalen Computer installiert und verfügbar ist. Ändern Sie die Verbindungszeichenfolge nach Bedarf für Ihre Umgebung.  
   
 ```vb  
 Option Strict On  
@@ -65,7 +65,7 @@ Module Module1
   
     Using awConnection As New SqlConnection(connectionString)  
       ' StatisticsEnabled is False by default.  
-      ' It must be set to True to start the   
+      ' It must be set to True to start the
       ' statistic collection process.  
       awConnection.StatisticsEnabled = True  
   
@@ -136,16 +136,16 @@ namespace CS_Stats_Console_GetValue
     {  
       string connectionString = GetConnectionString();  
   
-      using (SqlConnection awConnection =   
+      using (SqlConnection awConnection =
         new SqlConnection(connectionString))  
       {  
         // StatisticsEnabled is False by default.  
-        // It must be set to True to start the   
+        // It must be set to True to start the
         // statistic collection process.  
         awConnection.StatisticsEnabled = true;  
   
         string productSQL = "SELECT * FROM Production.Product";  
-        SqlDataAdapter productAdapter =   
+        SqlDataAdapter productAdapter =
           new SqlDataAdapter(productSQL, awConnection);  
   
         DataSet awDataSet = new DataSet();  
@@ -193,7 +193,7 @@ namespace CS_Stats_Console_GetValue
     {  
       // To avoid storing the connection string in your code,  
       // you can retrieve it from a configuration file.  
-      return "Data Source=localhost;Integrated Security=SSPI;" +   
+      return "Data Source=localhost;Integrated Security=SSPI;" +
         "Initial Catalog=AdventureWorks";  
     }  
   }  
@@ -201,10 +201,10 @@ namespace CS_Stats_Console_GetValue
 ```  
   
 ### <a name="retrieving-all-values"></a>Abrufen aller Werte  
- Die folgende Konsolenanwendung zeigt, wie die Statistik für eine Verbindung aktiviert, vier einzelne statistischen Werte abgerufen und diese in das Konsolenfenster geschrieben werden.  
+ Die folgende Konsolenanwendung zeigt, wie Statistiken über eine Verbindung aktiviert, alle verfügbaren Statistikwerte mit dem Enumerator abgerufen und in das Konsolenfenster geschrieben werden können.  
   
 > [!NOTE]
-> Im folgenden Beispiel wird die **AdventureWorks** -Beispieldatenbank verwendet, die in SQL Server enthalten ist. Bei der im Beispielcode bereitgestellten Verbindungszeichenfolge wird angenommen, dass die Datenbank auf dem lokalen Computer installiert und verfügbar ist. Ändern Sie die Verbindungszeichenfolge entsprechend der Umgebung.  
+> Im folgenden Beispiel wird die in SQL Server enthaltene **AdventureWorks**-Beispieldatenbank verwendet. In der im Beispielcode bereitgestellten Verbindungszeichenfolge wird davon ausgegangen, dass die Datenbank auf dem lokalen Computer installiert und verfügbar ist. Ändern Sie die Verbindungszeichenfolge nach Bedarf für Ihre Umgebung.  
   
 ```vb  
 Option Strict On  
@@ -220,7 +220,7 @@ Module Module1
   
     Using awConnection As New SqlConnection(connectionString)  
       ' StatisticsEnabled is False by default.  
-      ' It must be set to True to start the   
+      ' It must be set to True to start the
       ' statistic collection process.  
       awConnection.StatisticsEnabled = True  
   
@@ -284,11 +284,11 @@ namespace CS_Stats_Console_GetAll
     {  
       string connectionString = GetConnectionString();  
   
-      using (SqlConnection awConnection =   
+      using (SqlConnection awConnection =
         new SqlConnection(connectionString))  
       {  
         // StatisticsEnabled is False by default.  
-        // It must be set to True to start the   
+        // It must be set to True to start the
         // statistic collection process.  
         awConnection.StatisticsEnabled = true;  
   
@@ -331,14 +331,14 @@ namespace CS_Stats_Console_GetAll
     {  
       // To avoid storing the connection string in your code,  
       // you can retrieve it from a configuration file.  
-      return "Data Source=localhost;Integrated Security=SSPI;" +   
+      return "Data Source=localhost;Integrated Security=SSPI;" +
         "Initial Catalog=AdventureWorks";  
     }  
   }  
 }  
 ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [SQL Server und ADO.NET](index.md)
 - [Übersicht über ADO.NET](../ado-net-overview.md)

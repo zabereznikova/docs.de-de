@@ -8,24 +8,24 @@ helpviewer_keywords:
 - assemblyBinding element
 - container tags, <assemblyBinding> element
 ms.assetid: 964cbb35-ab49-4498-8471-209689e5dada
-ms.openlocfilehash: c688353583f5e452950d63b7d02c48505b6ae999
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 202b063ad3f0f9696cdc12aff434d61fe5a813e6
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73118131"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79154321"
 ---
-# <a name="assemblybinding-element-for-runtime"></a>\<assemblyBinding >-Element für \<Runtime >
+# <a name="assemblybinding-element-for-runtime"></a>\<assemblyBinding> \<Element für Laufzeit>
 Enthält Informationen über die Assemblyversionsumleitung und die Speicherorte von Assemblys.  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp; &nbsp;[ **\<runtime >** ](runtime-element.md) \
-&nbsp;&nbsp;&nbsp;&nbsp; **\<assemblyBinding >**  
+[**\<Konfiguration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<Laufzeit>**](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**\<AssemblyBinding>**  
   
 ## <a name="syntax"></a>Syntax  
   
 ```xml  
-      <assemblyBinding    
+      <assemblyBinding
    xmlns="urn:schemas-microsoft-com:asm.v1" appliesTo="v1.0.3705">  
 </assemblyBinding>  
 ```  
@@ -33,19 +33,19 @@ Enthält Informationen über die Assemblyversionsumleitung und die Speicherorte 
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
-### <a name="attributes"></a>Attribute  
+### <a name="attributes"></a>Attributes  
   
-|Attribut|Beschreibung|  
+|attribute|Beschreibung|  
 |---------------|-----------------|  
 |**xmlns**|Erforderliches Attribut.<br /><br /> Gibt den XML-Namespace an, der für die Assemblybindung erforderlich ist. Verwenden Sie die Zeichenfolge "urn:schemas-microsoft-com:asm.v1" als Wert.|  
-|**AppliesTo**|Gibt die Laufzeitversion an, die für die .NET Framework-Assemblyumleitungen gilt. Dieses optionale Attribut verwendet eine .NET Framework-Versionsnummer, um anzugeben, welche Version verwendet wird. Ohne Angabe eines **appliesTo**-Attributs gilt das **\<assemblyBinding>** -Element für alle Versionen von .NET Framework. Das **appliesTo** -Attribut wurde in .NET Framework Version 1,1; eingeführt. Sie wird von der .NET Framework Version 1,0 ignoriert. Dies bedeutet, dass alle **\<assemblyBinding>** -Elemente bei Verwendung von .NET Framework Version 1.0 angewendet werden, auch wenn das **appliesTo**-Attribut angegeben wurde.|  
+|**Appliesto**|Gibt die Laufzeitversion an, die für die .NET Framework-Assemblyumleitungen gilt. Dieses optionale Attribut verwendet eine .NET Framework-Versionsnummer, um anzugeben, welche Version verwendet wird. Ohne Angabe eines **appliesTo**-Attributs gilt das **\<assemblyBinding>**-Element für alle Versionen von .NET Framework. Das **attribut appliesTo** wurde in .NET Framework Version 1.1 eingeführt. es wird von der .NET Framework Version 1.0 ignoriert. Dies bedeutet, dass alle ** \<AssemblyBinding->-Elemente** angewendet werden, wenn .NET Framework Version 1.0 verwendet wird, auch wenn ein **appliesTo-Attribut** angegeben ist.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<dependentAssembly>](dependentassembly-element.md)|Kapselt die Bindungsrichtlinie und den Assemblyspeicherort für eine Assembly. Verwenden Sie für jede Assembly eine **\<dependentAssembly->** -Tags.|  
-|[\<probing>](probing-element.md)|Gibt Unterverzeichnisse an, die die Common Language Runtime beim Laden von Assemblys durchsucht.|  
+|[\<dependentAssembly>](dependentassembly-element.md)|Kapselt die Bindungsrichtlinie und den Assemblyspeicherort für eine Assembly. Verwenden Sie für jede Assembly ein ** \<abhängiges Assembly->-Tag.**|  
+|[\<Prüfen>](probing-element.md)|Gibt Unterverzeichnisse an, die die Common Language Runtime beim Laden von Assemblys durchsucht.|  
 |[\<publisherPolicy>](publisherpolicy-element.md)|Gibt an, ob die Common Language Runtime die Herausgeberrichtlinie anwendet.|  
 |[\<qualifyAssembly>](qualifyassembly-element.md)|Gibt den vollständigen Namen der Assembly an, die dynamisch geladen werden soll, wenn Sie ein Teilname verwendet wird.|  
   
@@ -77,12 +77,12 @@ Enthält Informationen über die Assemblyversionsumleitung und die Speicherorte 
 </configuration>  
 ```  
   
- Im folgenden Beispiel wird gezeigt, wie das **appliesTo** -Attribut verwendet wird, um die Bindung einer .NET Framework Assembly umzuleiten.  
+ Das folgende Beispiel zeigt, wie das **attribute appliesTo** verwendet wird, um die Bindung einer .NET Framework-Assembly umzuleiten.  
   
 ```xml  
 <runtime>  
    <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1" appliesTo="v1.0.3705">  
-      <dependentAssembly>   
+      <dependentAssembly>
          <assemblyIdentity name="mscorcfg" publicKeyToken="b03f5f7f11d50a3a" culture=""/>  
          <bindingRedirect oldVersion="0.0.0.0-65535.65535.65535.65535" newVersion="1.0.3300.0"/>  
       </dependentAssembly>  
@@ -90,8 +90,8 @@ Enthält Informationen über die Assemblyversionsumleitung und die Speicherorte 
 </runtime>  
 ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Schema für Laufzeiteinstellungen](index.md)
-- [Konfigurationsdateischema](../index.md)
+- [Schema der Konfigurationsdatei](../index.md)
 - [Umleiten von Assemblyversionen](../../redirect-assembly-versions.md)

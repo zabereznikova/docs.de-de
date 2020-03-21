@@ -14,69 +14,69 @@ helpviewer_keywords:
 ms.assetid: 249f9892-b5a9-41e1-b329-28a925904df6
 topic_type:
 - apiref
-ms.openlocfilehash: 2d99c6d8bd2af02456c6a90143b524c337483868
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 60276327617ae24e9bdcebf958613c21d3808429
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76866894"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175186"
 ---
 # <a name="functiontailcall2-function"></a>FunctionTailcall2-Funktion
-Benachrichtigt den Profiler, dass die gerade ausgeführte Funktion gerade einen Endaufruf einer anderen Funktion ausführt und Informationen über den Stapel Rahmen bereitstellt.  
+Benachrichtigt den Profiler, dass die aktuell ausgeführte Funktion einen Tail-Aufruf für eine andere Funktion ausführen wird, und stellt Informationen zum Stapelrahmen bereit.  
   
 ## <a name="syntax"></a>Syntax  
   
 ```cpp
 void __stdcall FunctionTailcall2 (  
-    [in] FunctionID         funcId,   
-    [in] UINT_PTR           clientData,   
+    [in] FunctionID         funcId,
+    [in] UINT_PTR           clientData,
     [in] COR_PRF_FRAME_INFO func  
 );  
 ```  
   
-## <a name="parameters"></a>Parameters
+## <a name="parameters"></a>Parameter
 
 - `funcId`
 
-  \[in] der Bezeichner der aktuell ausgeführten Funktion, die einen Tail-Aufruf durchführen soll.
+  \[in] Der Bezeichner der aktuell ausgeführten Funktion, die im Begriff ist, einen Tail-Aufruf zu machen.
 
 - `clientData`
 
-  \[in] der neu zugeordnete Funktions Bezeichner, den der Profiler zuvor über [FunctionIDMapper](functionidmapper-function.md)angegeben hat, der aktuell ausgeführten Funktion, die einen Tail-Aufruf durchführen soll.
+  \[in] Der neu zugeordnete Funktionsbezeichner, den der Profiler zuvor über [FunctionIDMapper](functionidmapper-function.md)angegeben hat, der aktuell ausgeführten Funktion, die gerade einen Endaufruf ausführen soll.
   
 - `func`
 
-  \[in] ein `COR_PRF_FRAME_INFO` Wert, der auf Informationen über den Stapel Rahmen zeigt.
+  \[in] `COR_PRF_FRAME_INFO` Ein Wert, der auf Informationen über den Stapelrahmen verweist.
 
-  Der Profiler sollte dies als ein undurchsichtiges Handle behandeln, das an die Ausführungs-Engine in der [ICorProfilerInfo2:: GetFunctionInfo2](icorprofilerinfo2-getfunctioninfo2-method.md) -Methode zurückgegeben werden kann.
+  Der Profiler sollte dies als undurchsichtiges Handle behandeln, das an das Ausführungsmodul in der [ICorProfilerInfo2::GetFunctionInfo2-Methode](icorprofilerinfo2-getfunctioninfo2-method.md) zurückübergeben werden kann.
 
-## <a name="remarks"></a>Hinweise  
- Die Zielfunktion des Tail-Aufrufs verwendet den aktuellen Stapel Rahmen und kehrt direkt zum Aufrufer der Funktion zurück, die den Tail-Aufruf durchgeführt hat. Dies bedeutet, dass ein [FunctionLeave2](functionleave2-function.md) -Rückruf nicht für eine Funktion ausgegeben wird, die das Ziel eines Tail-Aufrufs ist.  
+## <a name="remarks"></a>Bemerkungen  
+ Die Zielfunktion des Tail-Aufrufs verwendet den aktuellen Stapelrahmen und kehrt direkt zum Aufrufer der Funktion zurück, die den Tail-Aufruf gemacht hat. Dies bedeutet, dass ein [FunctionLeave2-Rückruf](functionleave2-function.md) nicht für eine Funktion ausgegeben wird, die das Ziel eines Tail-Aufrufs ist.  
   
- Der Wert des `func`-Parameters ist nicht gültig, nachdem die `FunctionTailcall2`-Funktion zurückgegeben wurde, da sich der Wert ändern oder zerstört werden kann.  
+ Der Wert `func` des Parameters ist `FunctionTailcall2` ungültig, nachdem die Funktion zurückgegeben wurde, da sich der Wert ändern oder zerstören kann.  
   
- Die `FunctionTailcall2` Funktion ist ein Rückruf. Sie müssen ihn implementieren. Die-Implementierung muss das `__declspec`(`naked`)-Speicher Klassen Attribut verwenden.  
+ Die `FunctionTailcall2` Funktion ist ein Rückruf; Sie müssen es implementieren. Die Implementierung muss `__declspec``naked`das ( ) Storage-Class-Attribut verwenden.  
   
- Die Ausführungs-Engine speichert vor dem Aufrufen dieser Funktion keine Register.  
+ Das Ausführungsmodul speichert keine Register, bevor diese Funktion aufgerufen wird.  
   
-- Beim Eintrag müssen Sie alle von Ihnen verwendeten Register speichern, einschließlich der in der Gleit Komma Einheit (Gleit Komma Einheit).  
+- Beim Eintrag müssen Sie alle Register speichern, die Sie verwenden, einschließlich der Register in der Gleitkommaeinheit (FPU).  
   
-- Beim Beenden müssen Sie den Stapel wiederherstellen, indem Sie alle Parameter, die vom Aufrufer per Pushvorgang übermittelt wurden, per Ping löschen.  
+- Beim Beenden müssen Sie den Stapel wiederherstellen, indem Sie alle Parameter deaktivieren, die vom Aufrufer gedrückt wurden.  
   
- Die Implementierung von `FunctionTailcall2` sollte nicht blockiert werden, da Sie Garbage Collection verzögert. Die-Implementierung sollte keine Garbage Collection versuchen, weil der Stapel möglicherweise nicht in einem Garbage Collection freundlichen Zustand ist. Wenn versucht wird, eine Garbage Collection auszuführen, wird die Laufzeit blockiert, bis `FunctionTailcall2` zurückgibt.  
+ Die Implementierung `FunctionTailcall2` von sollte nicht blockiert werden, da die Garbage Collection verzögert wird. Die Implementierung sollte keine Garbage Collection versuchen, da sich der Stapel möglicherweise nicht in einem Garbage Collection-freundlichen Zustand befindet. Wenn versucht wird, eine Garbage Collection zu `FunctionTailcall2` sammeln, wird die Laufzeit blockiert, bis sie zurückgegeben wird.  
   
- Außerdem darf die `FunctionTailcall2` Funktion keinen verwalteten Code aufruft oder eine verwaltete Speicher Belegung verursachen.  
+ Außerdem darf `FunctionTailcall2` die Funktion keinen verwalteten Code aufrufen oder in irgendeiner Weise eine verwaltete Speicherzuweisung verursachen.  
   
-## <a name="requirements"></a>-Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Corprof. idl  
+ **Kopfzeile:** CorProf.idl  
   
  **Bibliothek:** CorGuids.lib  
   
- **.NET Framework Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [FunctionEnter2-Funktion](functionenter2-function.md)
 - [FunctionLeave2-Funktion](functionleave2-function.md)

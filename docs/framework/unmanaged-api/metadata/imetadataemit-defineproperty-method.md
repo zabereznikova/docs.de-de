@@ -15,82 +15,82 @@ helpviewer_keywords:
 ms.assetid: 5c4c1dc2-d40d-4173-bbe6-7058fb21c98f
 topic_type:
 - apiref
-ms.openlocfilehash: f11b374ed0ecbfc137c43fb641ae691237604691
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: eb3ecbf39376e7126b5ec93a26badcbf5076d1db
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74431519"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175784"
 ---
 # <a name="imetadataemitdefineproperty-method"></a>IMetaDataEmit::DefineProperty-Methode
-Erstellt eine Eigenschafts Definition für den angegebenen Typ mit dem angegebenen `get` und `set` Methodenaccessoren und ruft ein Token für diese Eigenschafts Definition ab.  
+Erstellt eine Eigenschaftsdefinition für den `get` angegebenen `set` Typ mit den angegebenen und Methodenaccessoren und ruft ein Token für diese Eigenschaftsdefinition ab.  
   
 ## <a name="syntax"></a>Syntax  
   
 ```cpp  
-HRESULT DefineProperty (   
-    [in]  mdTypeDef          td,   
-    [in]  LPCWSTR            szProperty,   
-    [in]  DWORD              dwPropFlags,   
-    [in]  PCCOR_SIGNATURE    pvSig,   
-    [in]  ULONG              cbSig,   
-    [in]  DWORD              dwCPlusTypeFlag,   
-    [in]  void const         *pValue,   
-    [in]  ULONG              cchValue,   
-    [in]  mdMethodDef        mdSetter,   
-    [in]  mdMethodDef        mdGetter,   
-    [in]  mdMethodDef        rmdOtherMethods[],   
-    [out] mdProperty         *pmdProp   
+HRESULT DefineProperty (
+    [in]  mdTypeDef          td,
+    [in]  LPCWSTR            szProperty,
+    [in]  DWORD              dwPropFlags,
+    [in]  PCCOR_SIGNATURE    pvSig,
+    [in]  ULONG              cbSig,
+    [in]  DWORD              dwCPlusTypeFlag,
+    [in]  void const         *pValue,
+    [in]  ULONG              cchValue,
+    [in]  mdMethodDef        mdSetter,
+    [in]  mdMethodDef        mdGetter,
+    [in]  mdMethodDef        rmdOtherMethods[],
+    [out] mdProperty         *pmdProp
 );  
 ```  
   
 ## <a name="parameters"></a>Parameter  
  `td`  
- in Das Token für die Klasse oder Schnittstelle, für die die Eigenschaft definiert wird.  
+ [in] Das Token für die Klasse oder Schnittstelle, für die die Eigenschaft definiert wird.  
   
  `szProperty`  
- in Der Name der Eigenschaft.  
+ [in] Der Name der Eigenschaft.  
   
  `dwPropFlags`  
- in Die Eigenschaftenflags.  
+ [in] Die Eigenschaftsflags.  
   
  `pvSig`  
- in Die Eigenschaften Signatur.  
+ [in] Die Eigenschaftssignatur.  
   
  `cbSig`  
- in Die Anzahl der Bytes in `pvSig`.  
+ [in] Die Anzahl der `pvSig`Bytes in .  
   
  `dwCPlusTypeFlag`  
- in Der Typ des Standardwerts der Eigenschaft.  
+ [in] Der Typ des Standardwerts der Eigenschaft.  
   
  `pValue`  
- in Der Standardwert für die-Eigenschaft.  
+ [in] Der Standardwert für die Eigenschaft.  
   
  `cchValue`  
- in Die Anzahl von (Unicode-) Zeichen in `pValue`.  
+ [in] Die Anzahl der (Unicode)-Zeichen in `pValue`.  
   
  `mdSetter`  
- in Die Methode, die den Eigenschafts Wert festlegt.  
+ [in] Die Methode, die den Eigenschaftswert festlegt.  
   
  `mdGetter`  
- in Die Methode, die den Eigenschafts Wert abruft.  
+ [in] Die Methode, die den Eigenschaftswert abruft.  
   
  `rmdOtherMethods[]`  
- in Ein Array von anderen Methoden, die der-Eigenschaft zugeordnet sind. Beenden Sie das Array mit einem `mdTokenNil`.  
+ [in] Ein Array anderer Methoden, die der Eigenschaft zugeordnet sind. Beenden Sie das `mdTokenNil`Array mit einer .  
   
  `pmdProp`  
- vorgenommen Das zugewiesene `mdProperty` Token.  
+ [out] Das `mdProperty` token zugewiesen.  
   
-## <a name="requirements"></a>Voraussetzungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor. h  
+ **Kopfzeile:** Cor.h  
   
- **Bibliothek:** Wird als Ressource in Mscoree. dll verwendet.  
+ **Bibliothek:** Wird als Ressource in MSCorEE.dll verwendet  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [IMetaDataEmit-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [IMetaDataEmit2-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

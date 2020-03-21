@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c065aadf-c1ca-4981-bde6-597042cb29c4
 topic_type:
 - apiref
-ms.openlocfilehash: 0b7ca6f9878ed2fa2d90ea93e5101f0a66ec2d5e
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: cabd6a47e5d6fc2a4cea87b16d349d9c778b3507
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74440210"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79176057"
 ---
 # <a name="imetadataassemblyemitdefinefile-method"></a>IMetaDataAssemblyEmit::DefineFile-Methode
 Erstellt eine `File`-Metadatenstruktur, die Metadaten für die Assembly enthält, auf die diese Assembly verweist, und gibt das zugeordnete Metadatentoken zurück.  
@@ -29,8 +29,8 @@ Erstellt eine `File`-Metadatenstruktur, die Metadaten für die Assembly enthält
   
 ```cpp  
 HRESULT DefineFile (  
-    [in]  LPCWSTR        szName,   
-    [in]  const void     *pbHashValue,   
+    [in]  LPCWSTR        szName,
+    [in]  const void     *pbHashValue,
     [in]  ULONG          cbHashValue,  
     [in]  DWORD          dwFileFlags,  
     [out] mdFile         *pmdf  
@@ -39,32 +39,32 @@ HRESULT DefineFile (
   
 ## <a name="parameters"></a>Parameter  
  `szName`  
- in Der Name der zu verwendenden Datei.  
+ [in] Der Name der zu verbrauchenden Datei.  
   
  `pbHashValue`  
- in Ein Zeiger auf die Hashdaten, die der Assembly zugeordnet sind.  
+ [in] Ein Zeiger auf die Hashdaten, die der Assembly zugeordnet sind.  
   
  `cbHashValue`  
- in Die Größe `pbHashValue`in Byte.  
+ [in] Die Größe in `pbHashValue`Bytes von .  
   
  `dwFileFlags`  
- in Eine bitweise Kombination von `FileFlags`-Werten, die Eigenschafts Einstellungen angeben.  
+ [in] Eine bitweise `FileFlags` Kombination von Werten, die Eigenschafteneinstellungen angeben.  
   
  `pmdf`  
- vorgenommen Ein Zeiger auf das zurückgegebene `File` Token.  
+ [out] Ein Zeiger auf `File` das zurückgegebene Token.  
   
-## <a name="remarks"></a>Hinweise  
- Für jede Datei, die zum Zeitpunkt der Erstellung dieser Assembly Bestandteil dieser Assembly war, muss eine `File` Metadatenstruktur definiert werden, ausgenommen die Datei, die die Metadaten enthält.  
+## <a name="remarks"></a>Bemerkungen  
+ Für `File` jede Datei, die zum Zeitpunkt der Gründung dieser Assembly Teil dieser Assembly war, muss eine Metadatenstruktur definiert werden, mit Ausnahme der Datei, die die Metadaten enthält.  
   
-## <a name="requirements"></a>Voraussetzungen  
- **Plattform:** Siehe [System Anforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+ **Plattform:** Siehe [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor. h  
+ **Kopfzeile:** Cor.h  
   
- **Bibliothek:** Wird als Ressource in Mscoree. dll verwendet.  
+ **Bibliothek:** Wird als Ressource in MsCorEE.dll verwendet  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [IMetaDataAssemblyEmit-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)

@@ -6,19 +6,19 @@ helpviewer_keywords:
 - caching [.NET Framework], configuration
 - system.runtime.caching element
 ms.assetid: 9b44daee-874a-4bd1-954e-83bf53565590
-ms.openlocfilehash: 70573f92f1799a54116bc91f7a39d157a7ae5b36
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: df4887c8801dcf8af06b3826673a03cbc7dbc9b5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73115509"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79153853"
 ---
-# <a name="systemruntimecaching-element-cache-settings"></a>\<System. Runtime. Caching >-Element (Cache Einstellungen)
+# <a name="systemruntimecaching-element-cache-settings"></a>\<system.runtime.caching> Element (Cache-Einstellungen)
 
 Stellt die Konfiguration für die standardmäßige speicherinterne Implementierung <xref:System.Runtime.Caching.ObjectCache> über den `memoryCache` -Eintrag in der Konfigurationsdatei bereit.  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp; **\<System. Runtime. Caching >**  
+[**\<Konfiguration>**](../configuration-element.md)\
+&nbsp;&nbsp;**\<system.runtime.caching>**  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -32,7 +32,7 @@ Stellt die Konfiguration für die standardmäßige speicherinterne Implementieru
 
 In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
-### <a name="attributes"></a>Attribute
+### <a name="attributes"></a>Attributes
 
 `None`  
 
@@ -46,18 +46,18 @@ In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeor
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<configuration>](../configuration-element.md)|Gibt das Stamm Element in jeder Konfigurationsdatei an, die von den Common Language Runtime-und .NET Framework Anwendungen verwendet wird.|  
+|[\<Konfiguration>](../configuration-element.md)|Gibt das Stammelement in jeder Konfigurationsdatei an, die von der Common Language Runtime und .NET Framework-Anwendungen verwendet wird.|  
   
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 
 Die Klassen in diesem Namespace bieten eine Möglichkeit, Zwischenspeicherfunktionen wie jene in ASP.NET zu verwenden, jedoch ohne eine Abhängigkeit von der `System.Web` -Assembly. Weitere Informationen finden Sie unter [Caching in .NET Framework Applications](../../../performance/caching-in-net-framework-applications.md).  
   
 > [!NOTE]
-> Die Funktionen und Typen der Ausgabe Zwischenspeicherung in den <xref:System.Runtime.Caching>-Namespace sind neu in .NET Framework 4.  
+> Die Ausgabecaching-Funktionalität und <xref:System.Runtime.Caching> -Typen im Namespace sind in .NET Framework 4 neu.  
   
 ## <a name="example"></a>Beispiel
 
-Das folgende Beispiel zeigt die Konfiguration eines Cache, der auf der <xref:System.Runtime.Caching.MemoryCache> -Klasse basiert. Das Beispiel veranschaulicht, wie eine Instanz des `namedCaches` -Eintrags für den Arbeitsspeichercache konfiguriert wird. Der Name des Caches wird auf den Standardnamen des Cache Eintrags festgelegt, indem das `name`-Attribut auf "Default" festgelegt wird.  
+Das folgende Beispiel zeigt die Konfiguration eines Cache, der auf der <xref:System.Runtime.Caching.MemoryCache> -Klasse basiert. Das Beispiel veranschaulicht, wie eine Instanz des `namedCaches` -Eintrags für den Arbeitsspeichercache konfiguriert wird. Der Name des Caches wird auf den Standardcacheeintragsnamen festgelegt, indem das `name` Attribut auf "Standard" festgelegt wird.  
   
 Das `cacheMemoryLimitMegabytes` - und das `physicalMemoryPercentage` -Attribut werden auf 0 (Null) festgelegt. Werden diese Attribute auf 0 (Null) festgelegt, wird die <xref:System.Runtime.Caching.MemoryCache> -Heuristik zum automatischen Anpassen als Standard verwendet. Die Cacheimplementierung sollte die aktuelle Auslastung des Arbeitsspeichers alle zwei Minuten mit den absoluten und prozentualen Speichergrenzen vergleichen.  
   
@@ -66,8 +66,8 @@ Das `cacheMemoryLimitMegabytes` - und das `physicalMemoryPercentage` -Attribut w
   <system.runtime.caching>  
     <memoryCache>  
       <namedCaches>  
-          <add name="Default"   
-               cacheMemoryLimitMegabytes="0"   
+          <add name="Default"
+               cacheMemoryLimitMegabytes="0"
                physicalMemoryLimitPercentage="0"  
                pollingInterval="00:02:00" />  
       </namedCaches>  
@@ -76,6 +76,6 @@ Das `cacheMemoryLimitMegabytes` - und das `physicalMemoryPercentage` -Attribut w
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [\<MemoryCache-> Element (Cache Einstellungen)](memorycache-element-cache-settings.md)
+- [\<memoryCache> Element (Cache-Einstellungen)](memorycache-element-cache-settings.md)

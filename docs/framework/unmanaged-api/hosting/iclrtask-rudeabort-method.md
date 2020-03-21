@@ -15,46 +15,46 @@ helpviewer_keywords:
 ms.assetid: b5785468-fcd7-4cc3-8a5d-8796337b53fc
 topic_type:
 - apiref
-ms.openlocfilehash: 69e3ecfc82985d52bd5b14e9faf2566e395b622b
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: aacf9de36dc39b63ed36b672e31f40704413d608
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73124660"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79176330"
 ---
 # <a name="iclrtaskrudeabort-method"></a>ICLRTask::RudeAbort-Methode
-Weist den Common Language Runtime (CLR) an, die Aufgabe, die von der aktuellen [ICLRTask-Schnittstellen](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) Instanz dargestellt wird, sofort und bedingungslos abzubrechen.  
+Weist die Common Language Runtime (CLR) an, die Aufgabe, die durch die aktuelle [ICLRTask-Schnittstelleninstanz](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) dargestellt wird, sofort und bedingungslos abzubrechen.  
   
 ## <a name="syntax"></a>Syntax  
   
 ```cpp  
-HRESULT RudeAbort ();   
+HRESULT RudeAbort ();
 ```  
   
 ## <a name="return-value"></a>Rückgabewert  
   
 |HRESULT|Beschreibung|  
 |-------------|-----------------|  
-|S_OK|`RudeAbort` erfolgreich zurückgegeben.|  
-|HOST_E_CLRNOTAVAILABLE|Die CLR wurde nicht in einen Prozess geladen, oder die CLR befindet sich in einem Zustand, in dem Sie verwalteten Code nicht ausführen oder den-Befehl nicht erfolgreich verarbeiten kann.|  
-|HOST_E_TIMEOUT|Timeout des Aufrufes.|  
-|HOST_E_NOT_OWNER|Der Aufrufer ist nicht Besitzer der Sperre.|  
-|HOST_E_ABANDONED|Ein Ereignis wurde abgebrochen, während ein blockierter Thread oder eine Fiber darauf wartete.|  
-|E_FAIL|Ein unbekannter schwerwiegender Fehler ist aufgetreten. Wenn eine Methode E_FAIL zurückgibt, kann die CLR innerhalb des Prozesses nicht mehr verwendet werden. Nachfolgende Aufrufe von Hostingmethoden geben HOST_E_CLRNOTAVAILABLE zurück.|  
+|S_OK|`RudeAbort`erfolgreich zurückgegeben werden.|  
+|HOST_E_CLRNOTAVAILABLE|Die CLR wurde nicht in einen Prozess geladen, oder die CLR befindet sich in einem Zustand, in dem sie keinen verwalteten Code ausführen oder den Aufruf erfolgreich verarbeiten kann.|  
+|HOST_E_TIMEOUT|Timeout für den Anruf.|  
+|HOST_E_NOT_OWNER|Der Aufrufer besitzt die Sperre nicht.|  
+|HOST_E_ABANDONED|Ein Ereignis wurde abgebrochen, während ein blockierter Thread oder eine blockierte Faser darauf wartete.|  
+|E_FAIL|Ein unbekannter katastrophaler Fehler ist aufgetreten. Wenn eine Methode E_FAIL zurückgibt, kann die CLR innerhalb des Prozesses nicht mehr verwendet werden. Nachfolgende Aufrufe von Hostingmethoden geben HOST_E_CLRNOTAVAILABLE zurück.|  
   
-## <a name="remarks"></a>Hinweise  
- Ein Host ruft `RudeAbort` auf, um eine Aufgabe sofort abzubrechen. Die Ausführung von Finalizern und Ausnahme Behandlungs Routinen ist nicht garantiert.  
+## <a name="remarks"></a>Bemerkungen  
+ Ein Host `RudeAbort` ruft auf, um eine Aufgabe sofort abzubrechen. Finalizer und Ausnahmebehandlungsroutinen sind nicht garantiert.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Mscoree. h  
+ **Kopfzeile:** MSCorEE.h  
   
- **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
+ **Bibliothek:** Als Ressource in MSCorEE.dll enthalten  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [ICLRTask-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)
 - [ICLRTaskManager-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-interface.md)

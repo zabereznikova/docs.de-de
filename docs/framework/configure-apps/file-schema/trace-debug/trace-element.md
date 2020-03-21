@@ -10,58 +10,58 @@ helpviewer_keywords:
 - trace element
 - trace listener, <trace> element
 ms.assetid: 7931c942-63c1-47c3-a045-9d9de3cacdbf
-ms.openlocfilehash: 02fd794eb7b7b7f46f7f7bc4e43036cb4a4758ed
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 7d8a989219d84e8604e767456c84c0092bc73b22
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71699183"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79153165"
 ---
-# <a name="trace-element"></a>\<Trace >-Element
+# <a name="trace-element"></a>\<Ablaufverfolgung> Element
 Enthält Listener, die Ablaufverfolgungsmeldungen sammeln, speichern und weiterleiten.  
   
-[ **\<configuration>** ](../configuration-element.md)  
-&nbsp;&nbsp;[ **\<System. Diagnostics >** ](system-diagnostics-element.md)  
-&nbsp;&nbsp;&nbsp;&nbsp; **\<Ablauf Verfolgung >**  
+[**\<Konfiguration>**](../configuration-element.md)  
+&nbsp;&nbsp;[**\<system.diagnostics>**](system-diagnostics-element.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;**\<Spur>**  
   
 ## <a name="syntax"></a>Syntax  
   
 ```xml  
-<trace autoflush="true|false"   
+<trace autoflush="true|false"
        indentsize="indent value"  
        useGlobalLock="true| false"/>  
 ```  
   
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
- In den folgenden Abschnitten werden die Attribute, untergeordneten und übergeordneten Elemente beschrieben.  
+ In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
-### <a name="attributes"></a>Attribute  
+### <a name="attributes"></a>Attributes  
   
-|Attribut|Beschreibung|  
+|attribute|Beschreibung|  
 |---------------|-----------------|  
 |`autoflush`|Optionales Attribut.<br /><br /> Gibt an, ob die Ablaufverfolgungslistener den Ausgabepuffer nach jedem Schreibvorgang automatisch leeren.|  
-|`indentsize`|Optionales Attribut.<br /><br /> Gibt die Anzahl der Leerzeichen für den Einzug an.|  
+|`indentsize`|Optionales Attribut.<br /><br /> Gibt die Anzahl der einrückenden Leerzeichen an.|  
 |`useGlobalLock`|Optionales Attribut.<br /><br /> Gibt an, ob die globale Sperre verwendet werden soll.|  
   
-## <a name="autoflush-attribute"></a>AutoFlush-Attribut  
+## <a name="autoflush-attribute"></a>autoflush-Attribut  
   
-|Wert|Beschreibung|  
+|value|Beschreibung|  
 |-----------|-----------------|  
-|`false`|Der Ausgabepuffer wird nicht automatisch geleert. Dies ist die Standardeinstellung.|  
-|`true`|Leert den Ausgabepuffer automatisch.|  
+|`false`|Spült den Ausgabepuffer nicht automatisch. Dies ist die Standardoption.|  
+|`true`|Spült den Ausgabepuffer automatisch.|  
   
-## <a name="usegloballock-attribute"></a>UseGlobalLock-Attribut  
+## <a name="usegloballock-attribute"></a>VerwendenDesGlobalLock-Attribut  
   
-|Wert|Beschreibung|  
+|value|Beschreibung|  
 |-----------|-----------------|  
-|`false`|Verwendet nicht die globale Sperre, wenn der Listener Thread sicher ist. Andernfalls verwendet die globale Sperre.|  
-|`true`|Verwendet die globale Sperre, unabhängig davon, ob der Listener Thread sicher ist. Dies ist die Standardeinstellung.|  
+|`false`|Verwendet die globale Sperre nicht, wenn der Listener threadsicher ist. Andernfalls wird die globale Sperre verwendet.|  
+|`true`|Verwendet die globale Sperre unabhängig davon, ob der Listener threadsicher ist. Dies ist die Standardoption.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<listeners>](listeners-element-for-trace.md)|Gibt einen Listener an, der Nachrichten sammelt, speichert und weiterleitet.|  
+|[\<Hörer>](listeners-element-for-trace.md)|Gibt einen Listener an, der Nachrichten sammelt, speichert und leitet.|  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   
@@ -71,7 +71,7 @@ Enthält Listener, die Ablaufverfolgungsmeldungen sammeln, speichern und weiterl
 |`system.diagnostics`|Gibt Ablaufverfolgungslistener an, die Meldungen sammeln, speichern und weiterleiten sowie die Ebene, für die ein Ablaufverfolgungsschalter festgelegt ist.|  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird gezeigt, wie das `<trace>`-Element verwendet wird, um die Listener`MyListener` der `Listeners` Auflistung hinzuzufügen. `MyListener` erstellt eine Datei mit dem Namen `MyListener.log` und schreibt die Ausgabe in die Datei. Das `useGlobalLock`-Attribut ist auf `false`festgelegt, was bewirkt, dass die globale Sperre nicht verwendet wird, wenn der Ablaufverfolgungslistener Thread sicher ist. Das `autoflush`-Attribut ist auf `true`festgelegt, wodurch der Ablaufverfolgungslistener in die Datei schreibt, unabhängig davon, ob die <xref:System.Diagnostics.Trace.Flush%2A?displayProperty=nameWithType>-Methode aufgerufen wird. Das `indentsize`-Attribut wird auf 0 (null) festgelegt, wodurch der Listener beim Aufrufen der <xref:System.Diagnostics.Trace.Indent%2A?displayProperty=nameWithType>-Methode NULL Leerzeichen eingibt.  
+ Das folgende Beispiel zeigt, `<trace>` wie sie das `MyListener` Element `Listeners` zum Hinzufügen des Listeners zur Auflistung verwenden. `MyListener`erstellt eine Datei `MyListener.log` mit dem Namen und schreibt die Ausgabe in die Datei. Das `useGlobalLock` Attribut ist `false`auf festgelegt, wodurch die globale Sperre nicht verwendet wird, wenn der Ablaufverfolgungslistener threadsicher ist. Das `autoflush` Attribut ist `true`auf festgelegt, wodurch der Ablaufverfolgungslistener <xref:System.Diagnostics.Trace.Flush%2A?displayProperty=nameWithType> unabhängig davon, ob die Methode aufgerufen wird, in die Datei geschrieben wird. Das `indentsize` Attribut wird auf 0 (Null) gesetzt, wodurch der <xref:System.Diagnostics.Trace.Indent%2A?displayProperty=nameWithType> Listener beim Aufruf der Methode Leerzeichen einrücken lässt.  
   
 ```xml  
 <configuration>  
@@ -85,10 +85,10 @@ Enthält Listener, die Ablaufverfolgungsmeldungen sammeln, speichern und weiterl
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Diagnostics.TraceListener>
 - <xref:System.Diagnostics.DefaultTraceListener>
 - <xref:System.Diagnostics.TextWriterTraceListener>
 - <xref:System.Diagnostics.EventLogTraceListener>
-- [Trace and Debug Settings Schema (Schema für Ablaufverfolgungs- und Debugeinstellungen)](index.md)
+- [Ablaufverfolgungs- und Debugeinstellungsschema](index.md)

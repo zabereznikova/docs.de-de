@@ -15,49 +15,49 @@ helpviewer_keywords:
 ms.assetid: 7596220c-f699-4b6c-8ae7-c83220610650
 topic_type:
 - apiref
-ms.openlocfilehash: 06894f238f9fda3111d5484bb1b2add183a5abb2
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 759358822ed865c89f6f55084d1e7f6143506e93
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74448055"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175706"
 ---
 # <a name="imetadataemitmerge-method"></a>IMetaDataEmit::Merge-Methode
-Fügt der Liste der zusammen zuführenden Bereiche den angegebenen importierten Bereich hinzu.  
+Fügt den angegebenen importierten Bereich zur Liste der zusammenzuführenden Bereiche hinzu.  
   
 ## <a name="syntax"></a>Syntax  
   
 ```cpp  
-HRESULT Merge (   
-    [in]  IMetaDataImport  *pImport,   
-    [in]  IMapToken        *pHostMapToken,   
-    [in]  IUnknown         *pHandler   
+HRESULT Merge (
+    [in]  IMetaDataImport  *pImport,
+    [in]  IMapToken        *pHostMapToken,
+    [in]  IUnknown         *pHandler
 );  
 ```  
   
 ## <a name="parameters"></a>Parameter  
  `pImport`  
- in Ein Zeiger auf ein [IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md) -Objekt, das den importierten Bereich identifiziert, der zusammengeführt werden soll.  
+ [in] Ein Zeiger auf ein [IMetaDataImport-Objekt,](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md) das den importierten Bereich identifiziert, der zusammengeführt werden soll.  
   
  `pIMap`  
- in Ein Zeiger auf ein [IMapToken](../../../../docs/framework/unmanaged-api/metadata/imaptoken-interface.md) -Objekt, das die erneute Zuordnung des Tokens angibt.  
+ [in] Ein Zeiger auf ein [IMapToken-Objekt,](../../../../docs/framework/unmanaged-api/metadata/imaptoken-interface.md) das die Neuzuordnung des Tokens angibt.  
   
  `pHandler`  
- in Ein Zeiger auf ein [IUnknown](/cpp/atl/iunknown) -Objekt, das die Fehler angibt.  
+ [in] Ein Zeiger auf ein [IUnknown-Objekt,](/cpp/atl/iunknown) das die Fehler angibt.  
   
-## <a name="remarks"></a>Hinweise  
- Aufrufen von [IMetaDataEmit:: MergeEnd](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-mergeend-method.md) , um die Zusammenführung von Metadaten in einem einzelnen Bereich zu initiieren.  
+## <a name="remarks"></a>Bemerkungen  
+ Rufen Sie [IMetaDataEmit::MergeEnd](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-mergeend-method.md) auf, um die Zusammenführung von Metadaten in einen einzelnen Bereich auszulösen.  
   
-## <a name="requirements"></a>Voraussetzungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor. h  
+ **Kopfzeile:** Cor.h  
   
- **Bibliothek:** Wird als Ressource in Mscoree. dll verwendet.  
+ **Bibliothek:** Wird als Ressource in MSCorEE.dll verwendet  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [IMetaDataEmit-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [IMetaDataEmit2-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

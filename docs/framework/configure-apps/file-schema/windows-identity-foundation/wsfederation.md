@@ -3,20 +3,20 @@ title: <wsFederation>
 ms.date: 03/30/2017
 ms.assetid: c537f770-68bd-4f82-96ad-6424ad91369f
 author: BrucePerlerMS
-ms.openlocfilehash: 0e3e33d5ba8c21738bdea11bd24a025d44919863
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 53f3943524c45a43ddb60553b8ff45f19df66b14
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70251730"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79152462"
 ---
-# <a name="wsfederation"></a>\<wsFederation>
-Stellt die <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> Konfiguration für (wsfam) bereit.  
+# <a name="wsfederation"></a>\<wsFöderation>
+Stellt die <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> Konfiguration für das (WSFAM) bereit.  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<System. IdentityModel. Services->** ](system-identitymodel-services.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<federationconfiguration->** ](federationconfiguration.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<wsfederation->**  
+[**\<Konfiguration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.identityModel.services>**](system-identitymodel-services.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<FederationConfiguration>**](federationconfiguration.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<wsFöderation>**  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -47,59 +47,59 @@ Stellt die <xref:System.IdentityModel.Services.WSFederationAuthenticationModule>
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
-### <a name="attributes"></a>Attribute  
+### <a name="attributes"></a>Attributes  
   
-|Attribut|Beschreibung|  
+|attribute|Beschreibung|  
 |---------------|-----------------|  
-|authenticationType|Ein URI, der den Authentifizierungstyp angibt. Legt den WAUTH-Parameter für die WS-Verbund-Anmeldungs Anforderung fest. Optional. Der Standardwert ist eine leere Zeichenfolge, die angibt, dass der WAUTH-Parameter nicht in der Anforderung enthalten ist.|  
-|vermittelt|Das gewünschte maximale Alter von Authentifizierungsanforderungen (in Minuten). Legt den wfresh-Parameter für die WS-Verbund-Anmeldungs Anforderung fest. Optional. Der Standardwert ist 0. Optional. **Warnung:**  In der nächsten Version von .NET Framework 4,5 ist das `freshness` -Attribut vom Typ `xs:string` , und sein Standardwert `null`ist.|  
-|homeRealm|Der Startbereich des Identitäts Anbieters (IDP), der für die Authentifizierung verwendet werden soll. Legt den whr-Parameter für die WS-Verbund-Anmeldungs Anforderung fest. Optional. Der Standardwert ist eine leere Zeichenfolge, die angibt, dass der whr-Parameter nicht in der Anforderung enthalten ist.|  
-|issuer|Der URI des vorgesehenen Tokenausstellers. Legt die Basis-URL der WS-Verbund-Anmeldungs Anforderungen und Abmelde Anforderungen fest.|  
-|persistentCookiesOnPassiveRedirects|Gibt an, ob persistente Cookies bei der Authentifizierung ausgegeben werden. Optional. Der Standardwert ist "false", Cookies werden nicht ausgegeben.|  
-|passiveRedirectEnabled|Gibt an, ob die wsfam aktiviert ist, um nicht autorisierte Anforderungen automatisch an einen STS umzuleiten. Optional. Der Standardwert ist "true", nicht autorisierte Anforderungen werden automatisch umgeleitet.|  
-|Richtlinie|Eine URL, die den Speicherort der relevanten Richtlinie angibt, die bei Anmelde Anforderungen verwendet werden soll. Der Standardwert ist eine leere Zeichenfolge. Legt den WP-Parameter für die WS-Verbund-Anmeldungs Anforderung fest. Optional. Der Standardwert ist eine leere Zeichenfolge, die angibt, dass der WP-Parameter nicht in der Anforderung enthalten ist.|  
-|realm|Der URI des angeforderten Bereichs. (Ein URI, der die vertrauende Seite (RP) für den Sicherheitstokendienst (Security Token Service, STS) identifiziert.) Legt den Anforderungs Parameter für den wtrealm-WS-Verbund-Anmelde Anforderung fest. Erforderlich.|  
-|reply|Eine URL, die die Adresse identifiziert, an der die Anwendung der vertrauenden Seite Antworten vom Sicherheitstokendienst (Security Token Service, STS) empfangen möchte. Legt den wreply-Parameter für die WS-Verbund-Anmeldungs Anforderung fest. Optional. Der Standardwert ist eine leere Zeichenfolge, die angibt, dass der wreply-Parameter nicht in der Anforderung enthalten ist.|  
-|request|Die tokenausstellungsanforderung. Legt den wreq-Parameter für die WS-Verbund-Anmeldungs Anforderung fest. Optional. Der Standardwert ist eine leere Zeichenfolge, die angibt, dass der wreq-Parameter nicht in der Anforderung enthalten ist. Wenn der wreq-Parameter oder der wreqptr-Parameter in der Anforderung nicht enthalten ist, bedeutet dies, dass der STS weiß, welche Art von Token ausgestellt werden muss|  
-|requestptr|Eine URL, die den Speicherort der tokenausstellungsanforderung angibt. Legt den wreqptr-Parameter der Anforderung fest. Optional. Der Standardwert ist eine leere Zeichenfolge, die angibt, dass der wreqptr-Parameter nicht in der Anforderung enthalten ist. Wenn der wreq-Parameter oder der wreqptr-Parameter in der Anforderung nicht enthalten ist, bedeutet dies, dass der STS weiß, welche Art von Token ausgestellt werden muss|  
-|requireHttps|Gibt an, ob die Kommunikation mit dem Sicherheitstokendienst (STS) das HTTPS-Protokoll verwenden muss. Optional. Der Standardwert ist "true", HTTPS muss verwendet werden.|  
-|Ressource|Ein URI, der die Ressource identifiziert, auf die zugegriffen wird, der vertrauenden Seite (RP) für den Sicherheitstokendienst (STS). Optional. Legt den wres-Parameter für die WS-Verbund-Anmeldungs Anforderung fest. Optional. Der Standardwert ist eine leere Zeichenfolge, die angibt, dass der wres-Parameter nicht in der Anforderung enthalten ist. **Hinweis:** wres ist ein Legacy Parameter. Geben Sie `realm` das-Attribut an, um stattdessen den wtrealm-Parameter zu verwenden.|  
-|signInQueryString|Stellt einen Erweiterbarkeits Punkt bereit, um Anwendungs definierte Abfrage Parameter in der URL der WS-Verbund-Anmeldungs Anforderung anzugeben. Optional. Der Standardwert ist eine leere Zeichenfolge, die angibt, dass keine zusätzlichen Parameter in die Anforderung eingeschlossen werden sollen. Die Parameter werden als Abfrage Zeichenfolgen-Fragmente im folgenden Format angegeben `"param1=value1&param2=value2&param3=value3"` : usw. **Hinweis**:  In einer Konfigurationsdatei muss das Zeichen "&" in der Abfrage Zeichenfolge mit dem zugehörigen Entitäts `&`Verweis angegeben werden.|  
-|signOutQueryString|Stellt einen Erweiterbarkeits Punkt bereit, um Anwendungs definierte Abfrage Parameter in der URL der WS-Verbund-Anmeldungs Anforderung anzugeben. Optional. Der Standardwert ist eine leere Zeichenfolge, die angibt, dass keine zusätzlichen Parameter in die Anforderung eingeschlossen werden sollen. Die Parameter werden als Abfrage Zeichenfolgen-Fragmente im folgenden Format angegeben `"param1=value1&param2=value2&param3=value3"` : usw. **Hinweis**:  In einer Konfigurationsdatei muss das Zeichen "&" in der Abfrage Zeichenfolge mit dem zugehörigen Entitäts `&`Verweis angegeben werden.|  
-|signOutReply|Gibt die URL an, an die der Client vom Sicherheitstokendienst (STS) während der passiven Abmeldung über das WS-Verbund-Protokoll umgeleitet werden soll. Legt den wreply-Parameter für eine WS-Verbund-Abmelde Anforderung fest. Optional. Der Standardwert ist eine leere Zeichenfolge, die angibt, dass keine zusätzlichen Parameter in die Anforderung eingeschlossen werden sollen.|  
+|authenticationType|Ein URI, der den Authentifizierungstyp angibt. Legt den WED-Bund-Anmeldeanforderungs-Wauth-Parameter fest. Optional. Der Standardwert ist eine leere Zeichenfolge, die angibt, dass der wauth-Parameter nicht in der Anforderung enthalten ist.|  
+|Frische|Der gewünschte Höchstalter für Authentifizierungsanforderungen in Minuten. Legt den wfresh-Parameter für eine WS-Verbund-Anmeldungsanforderung fest. Optional. Der Standardwert beträgt 0. Optional. **Warnung:**  In der nächsten Version von .NET `freshness` Framework 4.5 `xs:string` ist das Attribut `null`vom Typ und sein Standardwert wird .|  
+|Homerealm|Der Home-Bereich des Identitätsanbieters (IdP), der für die Authentifizierung verwendet werden soll. Legt den whr-Parameter für eine WS-Verbund-Anmeldungsanforderung fest. Optional. Der Standardwert ist eine leere Zeichenfolge, die angibt, dass der whr-Parameter nicht in der Anforderung enthalten ist.|  
+|Issuer (Aussteller)|Der URI des beabsichtigten Tokenausstellers. Legt die Basis-URL von WS-Federation-Anmeldeanforderungen und Abmeldeanforderungen erforderlich fest.|  
+|persistentCookiesOnPassiveUmleitungen|Gibt an, ob persistente Cookies bei der Authentifizierung ausgegeben werden. Optional. Der Standardwert ist "false", Cookies werden nicht ausgegeben.|  
+|passiveRedirectEnabled|Gibt an, ob das WSFAM aktiviert ist, um nicht autorisierte Anforderungen automatisch an einen STS umzuleiten. Optional. Der Standardwert ist "true", nicht autorisierte Anforderungen werden automatisch umgeleitet.|  
+|policy|Eine URL, die den Speicherort der entsprechenden Richtlinie angibt, die bei Anmeldeanforderungen verwendet werden soll. Der Standardwert ist eine leere Zeichenfolge. Legt den wp-Parameter für eine WS-Verbund-Anmeldungsanforderung fest. Optional. Der Standardwert ist eine leere Zeichenfolge, die angibt, dass der wp-Parameter nicht in der Anforderung enthalten ist.|  
+|realm|Der URI des anfordernden Bereichs. (Ein URI, der die vertrauende Partei (RP) für den Sicherheitstokendienst (SECURITY Token Service, STS) identifiziert.) Legt den Anforderungsparameter wtrealm WS-Federation-Anmeldeanforderung fest. Erforderlich.|  
+|reply|Eine URL, die die Adresse angibt, an der die Applikation der vertrauende Seite (RP) Antworten vom Sicherheitstokendienst (STS) empfangen möchte. Legt den WS-Federation-Anmeldeanforderungs-Wreply-Parameter fest. Optional. Der Standardwert ist eine leere Zeichenfolge, die angibt, dass der wreply-Parameter nicht in der Anforderung enthalten ist.|  
+|request|Die Token-Ausgabeanforderung. Legt den wreq-Parameter für eine WS-Verbund-Anmeldungsanforderung fest. Optional. Der Standardwert ist eine leere Zeichenfolge, die angibt, dass der Wreq-Parameter nicht in der Anforderung enthalten ist. Ohne den Wreq- oder den Wreqptr-Parameter in die Anforderung einzubeziehen, bedeutet dies, dass der STS weiß, welche Art von Token ausgestellt werden soll.|  
+|AnfragePtr|Eine URL, die den Speicherort der Tokenausstellungsanforderungen angibt. Legt den Parameter request wreqptr fest. Optional. Der Standardwert ist eine leere Zeichenfolge, die angibt, dass der Wreqptr-Parameter nicht in der Anforderung enthalten ist. Ohne den Wreq- oder den Wreqptr-Parameter in die Anforderung einzubeziehen, bedeutet dies, dass der STS weiß, welche Art von Token ausgestellt werden soll.|  
+|requireHttps|Gibt an, ob die Kommunikation mit dem Sicherheitstokendienst (SECURITY Token Service, STS) das HTTPS-Protokoll verwenden muss. Optional. Der Standardwert ist "true", HTTPS muss verwendet werden.|  
+|resource|Ein URI, der die Ressource identifiziert, auf die zugegriffen wird, die vertrauende Seite (RP) auf dem Sicherheitstokendienst (STS). Optional. Legt den Parameter WS-Federation Sign-in Request wres fest. Optional. Der Standardwert ist eine leere Zeichenfolge, die angibt, dass der wres-Parameter nicht in der Anforderung enthalten ist. **Hinweis:** wres ist ein Legacy-Parameter. Geben `realm` Sie das Attribut an, das stattdessen den parameter wtrealm verwenden soll.|  
+|signInQueryString|Stellt einen Erweiterbarkeitspunkt bereit, um anwendungsdefinierte Abfrageparameter in der WS-Federation-Anmeldeanforderungs-URL anzugeben. Optional. Der Standardwert ist eine leere Zeichenfolge, die angibt, dass keine zusätzlichen Parameter in die Anforderung eingeschlossen werden sollen. Die Parameter werden als Abfragezeichenfolgenfragment mit `"param1=value1&param2=value2&param3=value3"` dem folgenden Formular angegeben: usw. **Hinweis:**  In einer Konfigurationsdatei muss das Zeichen "&" in der `&`Abfragezeichenfolge mit dem Entitätsverweis angegeben werden.|  
+|signOutQueryString|Stellt einen Erweiterbarkeitspunkt bereit, um anwendungsdefinierte Abfrageparameter in der WS-Federation-Anmeldeanforderungs-URL anzugeben. Optional. Der Standardwert ist eine leere Zeichenfolge, die angibt, dass keine zusätzlichen Parameter in die Anforderung eingeschlossen werden sollen. Die Parameter werden als Abfragezeichenfolgenfragment mit `"param1=value1&param2=value2&param3=value3"` dem folgenden Formular angegeben: usw. **Hinweis:**  In einer Konfigurationsdatei muss das Zeichen "&" in der `&`Abfragezeichenfolge mit dem Entitätsverweis angegeben werden.|  
+|signOutReply|Gibt die URL an, an die der Client während der passiven Abmelden über das WS-Federation-Protokoll vom Sicherheitstokendienst (SECURITY Token Service, STS) umgeleitet werden soll. Legt den wreply-Parameter für eine WS-Federation-Abmeldeanforderung fest. Optional. Der Standardwert ist eine leere Zeichenfolge, die angibt, dass keine zusätzlichen Parameter in die Anforderung eingeschlossen werden sollen.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
- None  
+ Keine  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<federationConfiguration>](federationconfiguration.md)|Enthält die Einstellungen, mit denen <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (wsfam) <xref:System.IdentityModel.Services.SessionAuthenticationModule> und (Sam) konfiguriert werden.|  
+|[\<FederationConfiguration>](federationconfiguration.md)|Enthält die Einstellungen, <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> die das (WSFAM) und das <xref:System.IdentityModel.Services.SessionAuthenticationModule> (SAM) konfigurieren.|  
   
-## <a name="remarks"></a>Hinweise  
- Sie können das `<wsFederation>` -Element verwenden, um die Standardeinstellungen für WS-Verbund Parameter und das Standardverhalten für wsfam zu konfigurieren. `<wsFederation>` Einstellungen<xref:System.IdentityModel.Services.WSFederationAuthenticationModule> für WS-Verbund Parameter, die unter dem-Element definiert sind, legen äquivalente Eigenschaften fest Diese Eigenschaften bleiben für jede Anforderung, die von wsfam ausgegeben wird, unverändert. Die WS-Verbund-Parameter können während der Anforderungs Verarbeitung dynamisch geändert werden, indem Ereignishandler für die von wsfam verfügbar gemachten Ereignisse hinzugefügt werden. beispielsweise das <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.RedirectingToIdentityProvider> -Ereignis. Weitere Informationen finden Sie in der Dokumentation für die <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> -Klasse.  
+## <a name="remarks"></a>Bemerkungen  
+ Sie können `<wsFederation>` das Element verwenden, um die standardmäßigen WS-Federation-Parametereinstellungen und das Standardverhalten für das WSFAM zu konfigurieren. WS-Federation-Parametereinstellungen, `<wsFederation>` die unter dem Element <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> definiert sind, legen äquivalente Eigenschaften fest, die von der Klasse verfügbar gemacht werden. Diese Eigenschaften bleiben für jede anforderung, die vom WSFAM ausgegeben wird, gleich. Sie können die WS-Federation-Parameter während der Anforderungsverarbeitung dynamisch ändern, indem Sie Ereignishandler für die ereignisse hinzufügen, die von WSFAM verfügbar gemacht werden. z. B. das <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.RedirectingToIdentityProvider> Ereignis. Weitere Informationen finden Sie in <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> der Dokumentation für die Klasse.  
   
- Das `<wsFederation>` -Element wird durch die <xref:System.IdentityModel.Services.Configuration.WSFederationElement> -Klasse dargestellt. Das Konfigurationsobjekt selbst wird durch die <xref:System.IdentityModel.Services.Configuration.WsFederationConfiguration> -Klasse dargestellt. Für das <xref:System.IdentityModel.Services.Configuration.WsFederationConfiguration> <xref:System.IdentityModel.Services.Configuration.FederationConfiguration> Objekt, auf das über die <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfiguration%2A?displayProperty=nameWithType> -Eigenschaft zugegriffen wird, wird eine einzelne Instanz festgelegt, und es wird eine Konfiguration für wsfam bereitstellt  
+ Das `<wsFederation>` Element wird <xref:System.IdentityModel.Services.Configuration.WSFederationElement> durch die Klasse dargestellt. Das Konfigurationsobjekt selbst wird <xref:System.IdentityModel.Services.Configuration.WsFederationConfiguration> durch die Klasse dargestellt. Für <xref:System.IdentityModel.Services.Configuration.WsFederationConfiguration> das <xref:System.IdentityModel.Services.Configuration.FederationConfiguration> Objekt, auf das über <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfiguration%2A?displayProperty=nameWithType> die Eigenschaft zugegriffen wird, wird eine einzelne Instanz festgelegt, die eine Konfiguration für das WSFAM bereitstellt.  
   
 ## <a name="example"></a>Beispiel  
- Der folgende XML-Code `<wsFederation>` zeigt ein-Element, das Einstellungen für das wsfam angibt.  
+ Der folgende XML-Code zeigt ein `<wsFederation>` Element, das Einstellungen für das WSFAM angibt.  
   
 > [!WARNING]
-> In diesem Beispiel ist das wsfam nicht erforderlich, um HTTPS zu verwenden. Dies liegt daran, `requireHttps` dass das- `<wsFederation>` Attribut für das `false`-Element festgelegt ist. Diese Einstellung wird für die meisten Produktionsumgebungen nicht empfohlen, da Sie ein Sicherheitsrisiko darstellen kann.  
+> In diesem Beispiel ist das WSFAM nicht erforderlich, um HTTPS zu verwenden. Dies liegt `requireHttps` daran, `<wsFederation>` dass `false`das Attribut für das Element festgelegt ist. Diese Einstellung wird für die meisten Produktionsumgebungen nicht empfohlen, da sie möglicherweise ein Sicherheitsrisiko darstellt.  
   
 ```xml
-<wsFederation passiveRedirectEnabled="true"   
-              issuer="http://localhost:15839/wsFederationSTS/Issue"   
-              realm="http://localhost:50969/"   
-              reply="http://localhost:50969/"   
-              requireHttps="false"   
-              signOutReply="http://localhost:50969/SignedOutPage.html"   
-              signOutQueryString="Param1=value2&Param2=value2"   
+<wsFederation passiveRedirectEnabled="true"
+              issuer="http://localhost:15839/wsFederationSTS/Issue"
+              realm="http://localhost:50969/"
+              reply="http://localhost:50969/"
+              requireHttps="false"
+              signOutReply="http://localhost:50969/SignedOutPage.html"
+              signOutQueryString="Param1=value2&Param2=value2"
               persistentCookiesOnPassiveRedirects="true" />
 ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.IdentityModel.Services.WSFederationAuthenticationModule>
 - <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfiguration%2A?displayProperty=nameWithType>

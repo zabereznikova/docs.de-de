@@ -15,37 +15,37 @@ helpviewer_keywords:
 ms.assetid: 20bdf8ff-2d15-4c64-8950-6888f642d6c0
 topic_type:
 - apiref
-ms.openlocfilehash: f25150d037a2f6fabb700f2c4bf2191e8e402a8e
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 6904271ed90cf733b9221178927bc680d76b58a6
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74446211"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79176577"
 ---
 # <a name="isymunmanagedsourceservermodulegetsourceserverdata-method"></a>ISymUnmanagedSourceServerModule::GetSourceServerData-Methode
-Gibt die Quell Serverdaten für das Modul zurück. Der Aufrufer muss mithilfe `CoTaskMemFree`Ressourcen freigeben.  
+Gibt die Quellserverdaten für das Modul zurück. Der Aufrufer muss Ressourcen `CoTaskMemFree`mithilfe von freimachen.  
   
 ## <a name="syntax"></a>Syntax  
   
 ```cpp  
 HRESULT GetSourceServerData(  
-    [out] ULONG* pDataByteCount,   
+    [out] ULONG* pDataByteCount,
     [out, size_is (, *pDataByteCount)] BYTE** ppData);  
 ```  
   
 ## <a name="parameters"></a>Parameter  
  `pDataByteCount`  
- vorgenommen Ein Zeiger auf einen `ULONG32`, der die Größe der Quell Serverdaten in Bytes empfängt.  
+ [out] Ein Zeiger auf `ULONG32` eine, der die Größe der Quellserverdaten in Bytes empfängt.  
   
  `ppData`  
- vorgenommen Ein Zeiger auf den zurückgegebenen `pDataByteCount` Wert.  
+ [out] Ein Zeiger auf `pDataByteCount` den zurückgegebenen Wert.  
   
 ## <a name="return-value"></a>Rückgabewert  
- S_OK, wenn die Methode erfolgreich ist. andernfalls E_FAIL oder ein anderer Fehlercode.  
+ S_OK, ob die Methode erfolgreich ist. andernfalls E_FAIL oder einem anderen Fehlercode.  
   
-## <a name="requirements"></a>Voraussetzungen  
- **Header:** Corsym. idl, corsym. h  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+ **Kopfzeile:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [ISymUnmanagedSourceServerModule-Schnittstelle](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedsourceservermodule-interface.md)

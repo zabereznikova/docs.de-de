@@ -8,53 +8,53 @@ helpviewer_keywords:
 - specifiedPickupDirectory element
 - <specifiedPickupDirectory> element
 ms.assetid: 0121f49d-bff2-4bc6-af06-f1628dcd61f1
-ms.openlocfilehash: 1acc724bb14c3610f14d06452c30b3d5dac42e13
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.openlocfilehash: 4b0cbaf9a7bfe2a9b1610811f4201253d219a6b2
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74089076"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79154607"
 ---
-# <a name="specifiedpickupdirectory-element-network-settings"></a>\<spezifiedpickupdirectory >-Element (Netzwerkeinstellungen)
+# <a name="specifiedpickupdirectory-element-network-settings"></a>\<specifiedPickupDirectory> Element (Netzwerkeinstellungen)
 Konfiguriert das lokale Verzeichnis für einen SMTP (Simple Mail Transport Protocol)-Server.  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<System. net >** ](system-net-element-network-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<mailSettings >** ](mailsettings-element-network-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<** ](smtp-element-network-settings.md) >\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<spezifiedpickupdirectory >**  
+[**\<Konfiguration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.net>**](system-net-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<mailSettings>**](mailsettings-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<smtp>**](smtp-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<specifiedPickupDirectory>**  
   
 ## <a name="syntax"></a>Syntax  
   
 ```xml  
 <specifiedPickupDirectory  
-  pickupDirectoryLocation="directory"   
+  pickupDirectoryLocation="directory"
 />  
 ```  
   
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
-### <a name="attributes"></a>Attribute  
+### <a name="attributes"></a>Attributes  
   
-|Attribut|Beschreibung|  
+|attribute|Beschreibung|  
 |---------------|-----------------|  
-|`pickupDirectoryLocation`|Das Verzeichnis, in dem Anwendungen e-Mails zur späteren Verarbeitung durch den SMTP-Server speichern.|  
+|`pickupDirectoryLocation`|Das Verzeichnis, in dem Anwendungen E-Mails zur späteren Verarbeitung durch den SMTP-Server speichern.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
- Keine  
+ Keine.  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<SMTP->-Element (Netzwerkeinstellungen)](smtp-element-network-settings.md)|Konfiguriert SMTP (Simple Mail Transport Protocol)-e-Mail-Sende Optionen.|  
+|[\<smtp> Element (Netzwerkeinstellungen)](smtp-element-network-settings.md)|Konfiguriert SMTP-E-Mail-Versandoptionen (Simple Mail Transport Protocol).|  
   
-## <a name="remarks"></a>Hinweise  
- Das `specifiedPickupDirectory`-Attribut legt das Verzeichnis fest, in dem Anwendungen vom SMTP-Server zu verarbeitende e-Mail-Nachrichten speichern.  
+## <a name="remarks"></a>Bemerkungen  
+ Das `specifiedPickupDirectory` Attribut legt das Verzeichnis fest, in dem Anwendungen E-Mail-Nachrichten speichern, die vom SMTP-Server verarbeitet werden sollen.  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird c:\maildrop als e-Mail-Abhol Verzeichnis angegeben.  
+ Im folgenden Beispiel wird c:-Maildrop als E-Mail-Abholverzeichnis angegeben.  
   
 ```xml  
 <configuration>  
@@ -70,9 +70,9 @@ Konfiguriert das lokale Verzeichnis für einen SMTP (Simple Mail Transport Proto
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Net.Mail.SmtpClient?displayProperty=nameWithType>
 - <xref:System.Net.Configuration.SmtpSection?displayProperty=nameWithType>
 - <xref:System.Net.Configuration.SmtpSpecifiedPickupDirectoryElement?displayProperty=nameWithType>
-- [Network Settings Schema (Schema für Netzwerkeinstellungen)](index.md)
+- [Netzwerkeinstellungsschema](index.md)

@@ -15,49 +15,49 @@ helpviewer_keywords:
 ms.assetid: 46264b2c-574d-4dde-aafc-77187a104fdd
 topic_type:
 - apiref
-ms.openlocfilehash: 3e470250fa0e86610fcc9a6d6e2ca03569d62b54
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: edfe5de9c9d7ef9607a2eea5146194bbd4393a92
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74449449"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175992"
 ---
 # <a name="imetadataassemblyimportfindexportedtypebyname-method"></a>IMetaDataAssemblyImport::FindExportedTypeByName-Methode
-Ruft bei Angabe des Namens und des einschließenden Typs einen Zeiger auf einen exportierten Typ ab.  
+Ruft einen Zeiger auf einen exportierten Typ ab, der seinen Namen und den einschließenden Typ angegeben hat.  
   
 ## <a name="syntax"></a>Syntax  
   
 ```cpp  
 HRESULT FindExportedTypeByName (  
-    [in]  LPCWSTR           szName,   
-    [in]  mdToken           mdtExportedType,   
+    [in]  LPCWSTR           szName,
+    [in]  mdToken           mdtExportedType,
     [out] mdExportedType    *ptkExportedType  
 );  
 ```  
   
 ## <a name="parameters"></a>Parameter  
  `szName`  
- in Der Name des exportierten Typs.  
+ [in] Der Name des exportierten Typs.  
   
  `mdtExportedType`  
- in Das Metadatentoken für die einschließende Klasse des exportierten Typs. Dieser Wert ist `mdExportedTypeNil`, wenn der angeforderte exportierte Typ kein Typ ist.  
+ [in] Das Metadatentoken für die einschließende Klasse des exportierten Typs. Dieser Wert `mdExportedTypeNil` ist, wenn der angeforderte exportierte Typ kein geschachtelter Typ ist.  
   
  `ptkExportedType`  
- vorgenommen Ein Zeiger auf das `mdExportedType` Token, das den exportierten Typ darstellt.  
+ [out] Ein Zeiger auf `mdExportedType` das Token, das den exportierten Typ darstellt.  
   
-## <a name="remarks"></a>Hinweise  
- Die `FindExportedTypeByName`-Methode verwendet die Standardregeln, die vom Common Language Runtime zum Auflösen von Verweisen verwendet werden.  
+## <a name="remarks"></a>Bemerkungen  
+ Die `FindExportedTypeByName` Methode verwendet die Standardregeln, die von der Common Language Runtime zum Auflösen von Verweisen verwendet werden.  
   
-## <a name="requirements"></a>Voraussetzungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor. h  
+ **Kopfzeile:** Cor.h  
   
- **Bibliothek:** Wird als Ressource in Mscoree. dll verwendet.  
+ **Bibliothek:** Wird als Ressource in MsCorEE.dll verwendet  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [IMetaDataAssemblyImport-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
-- [So sucht Common Language Runtime nach Assemblys](../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
+- [So sucht die Laufzeit Assemblys](../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
