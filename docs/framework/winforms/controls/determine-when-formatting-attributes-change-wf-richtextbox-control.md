@@ -1,5 +1,5 @@
 ---
-title: Bestimmen, wann Formatierungs Attribute im RichTextBox-Steuerelement geändert werden
+title: Bestimmen, wann sich Formatierungsattribute in RichTextBox Control ändern
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,21 +11,21 @@ helpviewer_keywords:
 - text boxes [Windows Forms], determining font changes
 - SelChange event
 ms.assetid: bdfed015-f77a-41e5-b38f-f8629b2fa166
-ms.openlocfilehash: f9b2a1028f79059ec7d4d6bf3683100455bb5dea
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: a190c3479b58464763e0eefdd32d14e88a1f05e1
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76746036"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79142263"
 ---
-# <a name="how-to-determine-when-formatting-attributes-change-in-the-windows-forms-richtextbox-control"></a><span data-ttu-id="420d0-102">Gewusst wie: Erkennen der Änderung von Formatierungsattributen im RichTextBox-Steuerelement von Windows Forms</span><span class="sxs-lookup"><span data-stu-id="420d0-102">How to: Determine When Formatting Attributes Change in the Windows Forms RichTextBox Control</span></span>
-<span data-ttu-id="420d0-103">Die Windows Forms <xref:System.Windows.Forms.RichTextBox>-Steuerelement wird häufig verwendet, um Text mit Attributen wie z. b. Schriftart Optionen oder Absatzformaten zu formatieren.</span><span class="sxs-lookup"><span data-stu-id="420d0-103">A common use of the Windows Forms <xref:System.Windows.Forms.RichTextBox> control is formatting text with attributes such as font options or paragraph styles.</span></span> <span data-ttu-id="420d0-104">Die Anwendung muss möglicherweise Änderungen an der Textformatierung für den Zweck der Anzeige einer Symbolleiste nachverfolgen, wie in vielen Textverarbeitungsanwendungen.</span><span class="sxs-lookup"><span data-stu-id="420d0-104">Your application may need to keep track of any changes in text formatting for the purpose of displaying a toolbar, as in many word-processing applications.</span></span>  
+# <a name="how-to-determine-when-formatting-attributes-change-in-the-windows-forms-richtextbox-control"></a><span data-ttu-id="171b8-102">Gewusst wie: Erkennen der Änderung von Formatierungsattributen im RichTextBox-Steuerelement von Windows Forms</span><span class="sxs-lookup"><span data-stu-id="171b8-102">How to: Determine When Formatting Attributes Change in the Windows Forms RichTextBox Control</span></span>
+<span data-ttu-id="171b8-103">Eine häufige Verwendung des <xref:System.Windows.Forms.RichTextBox> Windows Forms-Steuerelements ist das Formatieren von Text mit Attributen wie Schriftartoptionen oder Absatzformatvorlagen.</span><span class="sxs-lookup"><span data-stu-id="171b8-103">A common use of the Windows Forms <xref:System.Windows.Forms.RichTextBox> control is formatting text with attributes such as font options or paragraph styles.</span></span> <span data-ttu-id="171b8-104">Ihre Anwendung muss möglicherweise alle Änderungen in der Textformatierung nachverfolgen, um eine Symbolleiste anzuzeigen, wie in vielen Textverarbeitungsanwendungen.</span><span class="sxs-lookup"><span data-stu-id="171b8-104">Your application may need to keep track of any changes in text formatting for the purpose of displaying a toolbar, as in many word-processing applications.</span></span>  
   
-### <a name="to-respond-to-changes-in-formatting-attributes"></a><span data-ttu-id="420d0-105">So reagieren Sie auf Änderungen in Formatierungs Attributen</span><span class="sxs-lookup"><span data-stu-id="420d0-105">To respond to changes in formatting attributes</span></span>  
+### <a name="to-respond-to-changes-in-formatting-attributes"></a><span data-ttu-id="171b8-105">So reagieren Sie auf Änderungen an Formatierungsattributen</span><span class="sxs-lookup"><span data-stu-id="171b8-105">To respond to changes in formatting attributes</span></span>  
   
-1. <span data-ttu-id="420d0-106">Schreiben Sie Code in den <xref:System.Windows.Forms.RichTextBox.SelectionChanged>-Ereignishandler, um abhängig vom Wert des Attributs eine geeignete Aktion auszuführen.</span><span class="sxs-lookup"><span data-stu-id="420d0-106">Write code in the <xref:System.Windows.Forms.RichTextBox.SelectionChanged> event handler to perform an appropriate action depending on the value of the attribute.</span></span> <span data-ttu-id="420d0-107">Im folgenden Beispiel wird die Darstellung einer Symbolleisten Schaltfläche abhängig vom Wert der <xref:System.Windows.Forms.RichTextBox.SelectionBullet%2A>-Eigenschaft geändert.</span><span class="sxs-lookup"><span data-stu-id="420d0-107">The following example changes the appearance of a toolbar button depending on the value of the <xref:System.Windows.Forms.RichTextBox.SelectionBullet%2A> property.</span></span> <span data-ttu-id="420d0-108">Die Symbolleisten-Schaltfläche wird nur aktualisiert, wenn die Einfügemarke im Steuerelement verschoben wird.</span><span class="sxs-lookup"><span data-stu-id="420d0-108">The toolbar button will only be updated when the insertion point is moved in the control.</span></span>  
+1. <span data-ttu-id="171b8-106">Schreiben Sie <xref:System.Windows.Forms.RichTextBox.SelectionChanged> Code in den Ereignishandler, um je nach Wert des Attributs eine entsprechende Aktion auszuführen.</span><span class="sxs-lookup"><span data-stu-id="171b8-106">Write code in the <xref:System.Windows.Forms.RichTextBox.SelectionChanged> event handler to perform an appropriate action depending on the value of the attribute.</span></span> <span data-ttu-id="171b8-107">Im folgenden Beispiel wird die Darstellung einer Symbolleistenschaltfläche <xref:System.Windows.Forms.RichTextBox.SelectionBullet%2A> abhängig vom Wert der Eigenschaft geändert.</span><span class="sxs-lookup"><span data-stu-id="171b8-107">The following example changes the appearance of a toolbar button depending on the value of the <xref:System.Windows.Forms.RichTextBox.SelectionBullet%2A> property.</span></span> <span data-ttu-id="171b8-108">Die Symbolleistenschaltfläche wird nur aktualisiert, wenn die Einfügemarke im Steuerelement verschoben wird.</span><span class="sxs-lookup"><span data-stu-id="171b8-108">The toolbar button will only be updated when the insertion point is moved in the control.</span></span>  
   
-     <span data-ttu-id="420d0-109">Im folgenden Beispiel wird ein Formular mit einem <xref:System.Windows.Forms.RichTextBox>-Steuerelement und ein <xref:System.Windows.Forms.ToolBar>-Steuerelement angenommen, das eine Symbolleisten-Schaltfläche enthält</span><span class="sxs-lookup"><span data-stu-id="420d0-109">The example below assumes a form with a <xref:System.Windows.Forms.RichTextBox> control and a <xref:System.Windows.Forms.ToolBar> control that contains a toolbar button.</span></span> <span data-ttu-id="420d0-110">Weitere Informationen zu Symbolleisten und Symbolleisten-Schaltflächen finden Sie unter Gewusst [wie: Hinzufügen von Schaltflächen zu einem Toolbar-Steuer](how-to-add-buttons-to-a-toolbar-control.md)Element.</span><span class="sxs-lookup"><span data-stu-id="420d0-110">For more information about toolbars and toolbar buttons, see [How to: Add Buttons to a ToolBar Control](how-to-add-buttons-to-a-toolbar-control.md).</span></span>  
+     <span data-ttu-id="171b8-109">Im folgenden Beispiel wird <xref:System.Windows.Forms.RichTextBox> ein Formular <xref:System.Windows.Forms.ToolBar> mit einem Steuerelement und einem Steuerelement mit einer Symbolleistenschaltfläche angenommen.</span><span class="sxs-lookup"><span data-stu-id="171b8-109">The example below assumes a form with a <xref:System.Windows.Forms.RichTextBox> control and a <xref:System.Windows.Forms.ToolBar> control that contains a toolbar button.</span></span> <span data-ttu-id="171b8-110">Weitere Informationen zu Symbolleisten und Symbolleistenschaltflächen finden Sie unter [Gewusst wie: Hinzufügen von Schaltflächen zu einem ToolBar-Steuerelement](how-to-add-buttons-to-a-toolbar-control.md).</span><span class="sxs-lookup"><span data-stu-id="171b8-110">For more information about toolbars and toolbar buttons, see [How to: Add Buttons to a ToolBar Control](how-to-add-buttons-to-a-toolbar-control.md).</span></span>  
   
     ```vb  
     ' The following code assumes the existence of a toolbar control  
@@ -47,12 +47,12 @@ ms.locfileid: "76746036"
     private void richTextBox1_SelectionChanged(object sender,  
     System.EventArgs e)  
     {  
-       if (richTextBox1.SelectionBullet == true)   
+       if (richTextBox1.SelectionBullet == true)
        {  
           // Bullet button on toolbar should appear pressed  
           toolBarButton1.Pushed = true;  
        }  
-       else   
+       else
        {  
           // Bullet button on toolbar should appear unpressed  
           toolBarButton1.Pushed = false;  
@@ -80,9 +80,9 @@ ms.locfileid: "76746036"
        }  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="420d0-111">Weitere Informationen</span><span class="sxs-lookup"><span data-stu-id="420d0-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="171b8-111">Weitere Informationen</span><span class="sxs-lookup"><span data-stu-id="171b8-111">See also</span></span>
 
 - <xref:System.Windows.Forms.RichTextBox.SelectionChanged>
 - <xref:System.Windows.Forms.RichTextBox>
-- [<span data-ttu-id="420d0-112">RichTextBox-Steuerelement</span><span class="sxs-lookup"><span data-stu-id="420d0-112">RichTextBox Control</span></span>](richtextbox-control-windows-forms.md)
-- [<span data-ttu-id="420d0-113">Steuerelemente für Windows Forms</span><span class="sxs-lookup"><span data-stu-id="420d0-113">Controls to Use on Windows Forms</span></span>](controls-to-use-on-windows-forms.md)
+- [<span data-ttu-id="171b8-112">RichTextBox-Steuerelement</span><span class="sxs-lookup"><span data-stu-id="171b8-112">RichTextBox Control</span></span>](richtextbox-control-windows-forms.md)
+- [<span data-ttu-id="171b8-113">Windows Forms-Steuerelemente</span><span class="sxs-lookup"><span data-stu-id="171b8-113">Controls to Use on Windows Forms</span></span>](controls-to-use-on-windows-forms.md)

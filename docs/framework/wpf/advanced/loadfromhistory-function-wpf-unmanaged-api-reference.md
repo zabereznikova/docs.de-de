@@ -1,5 +1,5 @@
 ---
-title: 'Loadfromhistory-Funktion: Referenz zur nicht verwalteten WPF-API'
+title: LoadFromHistory-Funktion - Nicht verwalteter WPF-API-Verweis
 titleSuffix: ''
 ms.date: 03/30/2017
 dev_langs:
@@ -9,45 +9,45 @@ api_name:
 api_location:
 - PresentationHost_v0400.dll
 ms.assetid: d037c062-a911-4949-b251-ccd3e48b1d17
-ms.openlocfilehash: 7807e073d1f09ac6a6213aee6d86d53cc75a3c56
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: be9b8658614e678b4370044a753554859d230fed
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76727931"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79141574"
 ---
-# <a name="loadfromhistory-function-wpf-unmanaged-api-reference"></a><span data-ttu-id="d3445-102">Loadfromhistory-Funktion (Referenz zur nicht verwalteten WPF-API)</span><span class="sxs-lookup"><span data-stu-id="d3445-102">LoadFromHistory Function (WPF Unmanaged API Reference)</span></span>
-<span data-ttu-id="d3445-103">Diese API unterstützt die Windows Presentation Foundation-Infrastruktur (WPF) und ist nicht für die direkte Verwendung im Code vorgesehen.</span><span class="sxs-lookup"><span data-stu-id="d3445-103">This API supports the Windows Presentation Foundation (WPF) infrastructure and is not intended to be used directly from your code.</span></span>  
+# <a name="loadfromhistory-function-wpf-unmanaged-api-reference"></a><span data-ttu-id="801b7-102">LoadFromHistory-Funktion (WPF-Referenz für nicht verwaltete API)</span><span class="sxs-lookup"><span data-stu-id="801b7-102">LoadFromHistory Function (WPF Unmanaged API Reference)</span></span>
+<span data-ttu-id="801b7-103">Diese API unterstützt die Windows Presentation Foundation (WPF)-Infrastruktur und ist nicht für die direkte Verwendung aus ihrem Code vorgesehen.</span><span class="sxs-lookup"><span data-stu-id="801b7-103">This API supports the Windows Presentation Foundation (WPF) infrastructure and is not intended to be used directly from your code.</span></span>  
   
- <span data-ttu-id="d3445-104">Wird von der Windows Presentation Foundation (WPF)-Infrastruktur für die Windows-Verwaltung verwendet.</span><span class="sxs-lookup"><span data-stu-id="d3445-104">Used by the Windows Presentation Foundation (WPF) infrastructure for windows management.</span></span>  
+ <span data-ttu-id="801b7-104">Wird von der Windows Presentation Foundation (WPF)-Infrastruktur für die Windows-Verwaltung verwendet.</span><span class="sxs-lookup"><span data-stu-id="801b7-104">Used by the Windows Presentation Foundation (WPF) infrastructure for windows management.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d3445-105">Syntax</span><span class="sxs-lookup"><span data-stu-id="d3445-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="801b7-105">Syntax</span><span class="sxs-lookup"><span data-stu-id="801b7-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT LoadFromHistory_export(  
-        IStream* pHistoryStream,   
+        IStream* pHistoryStream,
         IBindCtx* pBindCtx  
 )  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="d3445-106">Parameter</span><span class="sxs-lookup"><span data-stu-id="d3445-106">Parameters</span></span>  
- <span data-ttu-id="d3445-107">"phistorystream"</span><span class="sxs-lookup"><span data-stu-id="d3445-107">pHistoryStream</span></span>  
- <span data-ttu-id="d3445-108">Ein Zeiger auf einen Stream von Verlaufs Informationen.</span><span class="sxs-lookup"><span data-stu-id="d3445-108">A pointer to a stream of history information.</span></span>  
+## <a name="parameters"></a><span data-ttu-id="801b7-106">Parameter</span><span class="sxs-lookup"><span data-stu-id="801b7-106">Parameters</span></span>  
+ <span data-ttu-id="801b7-107">pHistoryStream</span><span class="sxs-lookup"><span data-stu-id="801b7-107">pHistoryStream</span></span>  
+ <span data-ttu-id="801b7-108">Ein Zeiger auf einen Strom von Verlaufsinformationen.</span><span class="sxs-lookup"><span data-stu-id="801b7-108">A pointer to a stream of history information.</span></span>  
   
- <span data-ttu-id="d3445-109">pBindCtx</span><span class="sxs-lookup"><span data-stu-id="d3445-109">pBindCtx</span></span>  
- <span data-ttu-id="d3445-110">Ein Zeiger auf einen Bindungs Kontext.</span><span class="sxs-lookup"><span data-stu-id="d3445-110">A pointer to a bind context.</span></span>  
+ <span data-ttu-id="801b7-109">pBindCtx</span><span class="sxs-lookup"><span data-stu-id="801b7-109">pBindCtx</span></span>  
+ <span data-ttu-id="801b7-110">Ein Zeiger auf einen Bindungskontext.</span><span class="sxs-lookup"><span data-stu-id="801b7-110">A pointer to a bind context.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="d3445-111">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="d3445-111">Requirements</span></span>  
- <span data-ttu-id="d3445-112">**Plattformen:** Siehe [.NET Framework System Anforderungen](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="d3445-112">**Platforms:** See [.NET Framework System Requirements](../../get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="801b7-111">Requirements (Anforderungen)</span><span class="sxs-lookup"><span data-stu-id="801b7-111">Requirements</span></span>  
+ <span data-ttu-id="801b7-112">**Plattformen:** Siehe [.NET Framework Systemanforderungen](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="801b7-112">**Platforms:** See [.NET Framework System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="d3445-113">**DLL**</span><span class="sxs-lookup"><span data-stu-id="d3445-113">**DLL:**</span></span>  
+ <span data-ttu-id="801b7-113">**Dll:**</span><span class="sxs-lookup"><span data-stu-id="801b7-113">**DLL:**</span></span>  
   
- <span data-ttu-id="d3445-114">In den .NET Framework 3,0 und 3,5: presentationhostdll. dll</span><span class="sxs-lookup"><span data-stu-id="d3445-114">In the .NET Framework 3.0 and 3.5: PresentationHostDLL.dll</span></span>  
+ <span data-ttu-id="801b7-114">In .NET Framework 3.0 und 3.5: PresentationHostDLL.dll</span><span class="sxs-lookup"><span data-stu-id="801b7-114">In the .NET Framework 3.0 and 3.5: PresentationHostDLL.dll</span></span>  
   
- <span data-ttu-id="d3445-115">In den .NET Framework 4 und höher: PresentationHost_v0400. dll</span><span class="sxs-lookup"><span data-stu-id="d3445-115">In the .NET Framework 4 and later: PresentationHost_v0400.dll</span></span>  
+ <span data-ttu-id="801b7-115">In .NET Framework 4 und höher: PresentationHost_v0400.dll</span><span class="sxs-lookup"><span data-stu-id="801b7-115">In the .NET Framework 4 and later: PresentationHost_v0400.dll</span></span>  
   
- <span data-ttu-id="d3445-116">**.NET Framework Version:** [!INCLUDE[net_current_v30plus](../../../../includes/net-current-v30plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d3445-116">**.NET Framework Version:** [!INCLUDE[net_current_v30plus](../../../../includes/net-current-v30plus-md.md)]</span></span>  
+ <span data-ttu-id="801b7-116">**.NET Framework-Version:**[!INCLUDE[net_current_v30plus](../../../../includes/net-current-v30plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="801b7-116">**.NET Framework Version:** [!INCLUDE[net_current_v30plus](../../../../includes/net-current-v30plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d3445-117">Weitere Informationen</span><span class="sxs-lookup"><span data-stu-id="d3445-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="801b7-117">Weitere Informationen</span><span class="sxs-lookup"><span data-stu-id="801b7-117">See also</span></span>
 
-- [<span data-ttu-id="d3445-118">WPF – Referenz zur nicht verwalteten API</span><span class="sxs-lookup"><span data-stu-id="d3445-118">WPF Unmanaged API Reference</span></span>](wpf-unmanaged-api-reference.md)
+- [<span data-ttu-id="801b7-118">WPF – Referenz zur nicht verwalteten API</span><span class="sxs-lookup"><span data-stu-id="801b7-118">WPF Unmanaged API Reference</span></span>](wpf-unmanaged-api-reference.md)

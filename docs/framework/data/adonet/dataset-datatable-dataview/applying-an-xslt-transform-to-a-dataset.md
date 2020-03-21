@@ -5,18 +5,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 09f2e4ee-1d08-4ba8-8936-83394fee319d
-ms.openlocfilehash: 2641637d176b411108aeb2fa00ef4268584e9cb3
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 3f066f29b99ade6e92a263110fed8079208567b5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834269"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79151493"
 ---
-# <a name="applying-an-xslt-transform-to-a-dataset"></a><span data-ttu-id="341cd-102">Anwenden einer XSLT-Transformation auf ein DataSet</span><span class="sxs-lookup"><span data-stu-id="341cd-102">Applying an XSLT Transform to a DataSet</span></span>
+# <a name="applying-an-xslt-transform-to-a-dataset"></a><span data-ttu-id="19dbf-102">Anwenden einer XSLT-Transformation auf ein DataSet</span><span class="sxs-lookup"><span data-stu-id="19dbf-102">Applying an XSLT Transform to a DataSet</span></span>
 
-<span data-ttu-id="341cd-103">Die **beschreitexml** -Methode des <xref:System.Data.DataSet> ermöglicht das Schreiben des Inhalts eines **DataSets** als XML-Daten.</span><span class="sxs-lookup"><span data-stu-id="341cd-103">The **WriteXml** method of the <xref:System.Data.DataSet> enables you to write the contents of a **DataSet** as XML data.</span></span> <span data-ttu-id="341cd-104">Häufig werden diese XML-Daten anschließend mit XSL-Transformationen (XSLT) in ein anderes Format transformiert.</span><span class="sxs-lookup"><span data-stu-id="341cd-104">A common task is to then transform that XML to another format using XSL transformations (XSLT).</span></span> <span data-ttu-id="341cd-105">Wenn Sie jedoch ein **DataSet** mit einem <xref:System.Xml.XmlDataDocument> synchronisieren, können Sie ein XSLT-Stylesheet auf den Inhalt eines **DataSets** anwenden, ohne zuerst den Inhalt des **DataSets** als XML-Daten mit " **Schreibweise**" schreiben zu müssen.</span><span class="sxs-lookup"><span data-stu-id="341cd-105">However, synchronizing a **DataSet** with an <xref:System.Xml.XmlDataDocument> enables you to apply an XSLT stylesheet to the contents of a **DataSet** without having to first write the contents of the **DataSet** as XML data using **WriteXml**.</span></span>  
+<span data-ttu-id="19dbf-103">Mit der **WriteXml-Methode** der <xref:System.Data.DataSet> können Sie den Inhalt eines **DataSet** als XML-Daten schreiben.</span><span class="sxs-lookup"><span data-stu-id="19dbf-103">The **WriteXml** method of the <xref:System.Data.DataSet> enables you to write the contents of a **DataSet** as XML data.</span></span> <span data-ttu-id="19dbf-104">Häufig werden diese XML-Daten anschließend mit XSL-Transformationen (XSLT) in ein anderes Format transformiert.</span><span class="sxs-lookup"><span data-stu-id="19dbf-104">A common task is to then transform that XML to another format using XSL transformations (XSLT).</span></span> <span data-ttu-id="19dbf-105">Durch das Synchronisieren eines **DataSets** mit <xref:System.Xml.XmlDataDocument> einem können Sie jedoch ein XSLT-Stylesheet auf den Inhalt eines **DataSets** anwenden, ohne den Inhalt des **DataSet** zunächst als XML-Daten mit **WriteXml**schreiben zu müssen.</span><span class="sxs-lookup"><span data-stu-id="19dbf-105">However, synchronizing a **DataSet** with an <xref:System.Xml.XmlDataDocument> enables you to apply an XSLT stylesheet to the contents of a **DataSet** without having to first write the contents of the **DataSet** as XML data using **WriteXml**.</span></span>  
   
- <span data-ttu-id="341cd-106">Im folgenden Beispiel wird ein **DataSet** mit Tabellen und Beziehungen gefüllt, das **DataSet** mit einem **xmldatadocumschlag**synchronisiert und ein Teil des **DataSets** mithilfe eines XSLT-Stylesheets als HTML-Datei geschrieben.</span><span class="sxs-lookup"><span data-stu-id="341cd-106">The following example populates a **DataSet** with tables and relationships, synchronizes the **DataSet** with an **XmlDataDocument**, and writes a portion of the **DataSet** as an HTML file using an XSLT stylesheet.</span></span> <span data-ttu-id="341cd-107">Im folgenden finden Sie den Inhalt des XSLT-Stylesheets:</span><span class="sxs-lookup"><span data-stu-id="341cd-107">The following are the contents of the XSLT stylesheet:</span></span>
+ <span data-ttu-id="19dbf-106">Im folgenden Beispiel wird ein **DataSet** mit Tabellen und Beziehungen aufgewirlegt, das **DataSet** mit einem **XmlDataDocument**synchronisiert und ein Teil des **DataSet** als HTML-Datei mithilfe eines XSLT-Stylesheets schreibt.</span><span class="sxs-lookup"><span data-stu-id="19dbf-106">The following example populates a **DataSet** with tables and relationships, synchronizes the **DataSet** with an **XmlDataDocument**, and writes a portion of the **DataSet** as an HTML file using an XSLT stylesheet.</span></span> <span data-ttu-id="19dbf-107">Im Folgenden finden Sie den Inhalt des XSLT-Stylesheets:</span><span class="sxs-lookup"><span data-stu-id="19dbf-107">The following are the contents of the XSLT stylesheet:</span></span>
   
 ```xml  
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">  
@@ -57,10 +57,10 @@ ms.locfileid: "71834269"
 </xsl:stylesheet>  
 ```  
   
- <span data-ttu-id="341cd-108">Der folgende Code füllt das **DataSet** auf und wendet das XSLT-Stylesheet an.</span><span class="sxs-lookup"><span data-stu-id="341cd-108">The following code fills the **DataSet** and applies the XSLT style sheet.</span></span>  
+ <span data-ttu-id="19dbf-108">Der folgende Code füllt das **DataSet** und wendet das XSLT-Stylesheet an.</span><span class="sxs-lookup"><span data-stu-id="19dbf-108">The following code fills the **DataSet** and applies the XSLT style sheet.</span></span>  
   
 > [!NOTE]
-> <span data-ttu-id="341cd-109">Wenn Sie ein XSLT-Stylesheet auf ein **DataSet** anwenden, das Beziehungen enthält, erzielen Sie eine optimale Leistung, wenn Sie die Eigenschaft " **schsted** " des <xref:System.Data.DataRelation> für jede einzelne schalte Beziehung auf " **true** " festlegen.</span><span class="sxs-lookup"><span data-stu-id="341cd-109">If you are applying an XSLT style sheet to a **DataSet** that contains relations, you achieve best performance if you set the **Nested** property of the <xref:System.Data.DataRelation> to **true** for each nested relation.</span></span> <span data-ttu-id="341cd-110">Dies ermöglicht Ihnen die Verwendung von XSLT-Stylesheets, die bei der Navigation in der Hierarchie und bei der Datentransformation eine Verarbeitung in natürlicher Reihenfolge von oben nach unten implementieren und bei der Navigation in der Datenhierarchie im Gegensatz zu XPath-Positionsachsen (z. B. vorausgehend-nebengeordnete und nachfolgend-nebengeordnete Elemente in Stylesheetausdrücken für Knotentsts) nicht mit Leistungseinbußen verbunden sind.</span><span class="sxs-lookup"><span data-stu-id="341cd-110">This allows you to use XSLT style sheets that implement natural top-down processing to navigate the hierarchy and transform the data, as opposed to using performance-intensive XPath location axes (for example, preceding-sibling and following-sibling in style sheet node test expressions) to navigate it.</span></span> <span data-ttu-id="341cd-111">Weitere Informationen zu geschachtelten Beziehungen finden Sie unter Schachteln von [DataRelations](nesting-datarelations.md)-Elementen.</span><span class="sxs-lookup"><span data-stu-id="341cd-111">For more information on nested relations, see [Nesting DataRelations](nesting-datarelations.md).</span></span>  
+> <span data-ttu-id="19dbf-109">Wenn Sie ein XSLT-Stylesheet auf ein **DataSet** anwenden, das Beziehungen enthält, erzielen <xref:System.Data.DataRelation> Sie die beste Leistung, wenn Sie die **Nested-Eigenschaft** des für jede geschachtelte Beziehung auf **true** festlegen.</span><span class="sxs-lookup"><span data-stu-id="19dbf-109">If you are applying an XSLT style sheet to a **DataSet** that contains relations, you achieve best performance if you set the **Nested** property of the <xref:System.Data.DataRelation> to **true** for each nested relation.</span></span> <span data-ttu-id="19dbf-110">Dies ermöglicht Ihnen die Verwendung von XSLT-Stylesheets, die bei der Navigation in der Hierarchie und bei der Datentransformation eine Verarbeitung in natürlicher Reihenfolge von oben nach unten implementieren und bei der Navigation in der Datenhierarchie im Gegensatz zu XPath-Positionsachsen (z. B. vorausgehend-nebengeordnete und nachfolgend-nebengeordnete Elemente in Stylesheetausdrücken für Knotentsts) nicht mit Leistungseinbußen verbunden sind.</span><span class="sxs-lookup"><span data-stu-id="19dbf-110">This allows you to use XSLT style sheets that implement natural top-down processing to navigate the hierarchy and transform the data, as opposed to using performance-intensive XPath location axes (for example, preceding-sibling and following-sibling in style sheet node test expressions) to navigate it.</span></span> <span data-ttu-id="19dbf-111">Weitere Informationen zu verschachtelten Beziehungen finden Sie unter [Verschachteln von DataRelations](nesting-datarelations.md).</span><span class="sxs-lookup"><span data-stu-id="19dbf-111">For more information on nested relations, see [Nesting DataRelations](nesting-datarelations.md).</span></span>  
   
 ```vb  
 ' Assumes connection is a valid SqlConnection.  
@@ -80,7 +80,7 @@ dataSet.Relations.Add("CustOrders", _
 dataSet.Tables("Customers").Columns("CustomerID"), _  
 dataSet.Tables("Orders").Columns("CustomerID")).Nested = true  
   
-Dim xmlDoc As XmlDataDocument = New XmlDataDocument(dataSet)   
+Dim xmlDoc As XmlDataDocument = New XmlDataDocument(dataSet)
   
 Dim xslTran As XslTransform = New XslTransform  
 xslTran.Load("transform.xsl")  
@@ -112,19 +112,19 @@ custDS.Relations.Add("CustOrders",
   custDS.Tables["Customers"].Columns["CustomerID"],  
                      custDS.Tables["Orders"].Columns["CustomerID"]).Nested = true;  
   
-XmlDataDocument xmlDoc = new XmlDataDocument(custDS);   
+XmlDataDocument xmlDoc = new XmlDataDocument(custDS);
   
 XslTransform xslTran = new XslTransform();  
 xslTran.Load("transform.xsl");  
   
-XmlTextWriter writer = new XmlTextWriter("xslt_output.html",   
+XmlTextWriter writer = new XmlTextWriter("xslt_output.html",
   System.Text.Encoding.UTF8);  
   
 xslTran.Transform(xmlDoc, null, writer);  
 writer.Close();  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="341cd-112">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="341cd-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="19dbf-112">Weitere Informationen</span><span class="sxs-lookup"><span data-stu-id="19dbf-112">See also</span></span>
 
-- [<span data-ttu-id="341cd-113">DataSet- und XmlDataDocument-Synchronisierung</span><span class="sxs-lookup"><span data-stu-id="341cd-113">DataSet and XmlDataDocument Synchronization</span></span>](dataset-and-xmldatadocument-synchronization.md)
-- [<span data-ttu-id="341cd-114">Übersicht über ADO.NET</span><span class="sxs-lookup"><span data-stu-id="341cd-114">ADO.NET Overview</span></span>](../ado-net-overview.md)
+- [<span data-ttu-id="19dbf-113">DataSet- und XmlDataDocument-Synchronisierung</span><span class="sxs-lookup"><span data-stu-id="19dbf-113">DataSet and XmlDataDocument Synchronization</span></span>](dataset-and-xmldatadocument-synchronization.md)
+- [<span data-ttu-id="19dbf-114">Übersicht über ADO.NET</span><span class="sxs-lookup"><span data-stu-id="19dbf-114">ADO.NET Overview</span></span>](../ado-net-overview.md)

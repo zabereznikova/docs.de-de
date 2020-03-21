@@ -15,42 +15,42 @@ helpviewer_keywords:
 ms.assetid: 4d69fb6d-ee35-4318-8224-5eea2bd16818
 topic_type:
 - apiref
-ms.openlocfilehash: 0a1d244a4bf077970d2031c3c3b2bc56a0dd3d79
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: fe0b4b7fef0d05c4acc06dad5bc8a4eaf0722c9c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74426821"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175576"
 ---
-# <a name="imetadataemitsetrva-method"></a><span data-ttu-id="38c39-102">IMetaDataEmit::SetRVA-Methode</span><span class="sxs-lookup"><span data-stu-id="38c39-102">IMetaDataEmit::SetRVA Method</span></span>
-<span data-ttu-id="38c39-103">Legt die relative virtuelle Adresse der angegebenen Methode fest.</span><span class="sxs-lookup"><span data-stu-id="38c39-103">Sets the relative virtual address of the specified method.</span></span>  
+# <a name="imetadataemitsetrva-method"></a><span data-ttu-id="63b26-102">IMetaDataEmit::SetRVA-Methode</span><span class="sxs-lookup"><span data-stu-id="63b26-102">IMetaDataEmit::SetRVA Method</span></span>
+<span data-ttu-id="63b26-103">Legt die relative virtuelle Adresse der angegebenen Methode fest.</span><span class="sxs-lookup"><span data-stu-id="63b26-103">Sets the relative virtual address of the specified method.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="38c39-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="38c39-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="63b26-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="63b26-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT SetRVA (  
-    [in]  mdMethodDef  md,   
-    [in]  ULONG        ulRVA   
+    [in]  mdMethodDef  md,
+    [in]  ULONG        ulRVA
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="38c39-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="38c39-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="63b26-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="63b26-105">Parameters</span></span>  
  `md`  
- <span data-ttu-id="38c39-106">in Das Token für die Ziel Methode oder Methoden Implementierung.</span><span class="sxs-lookup"><span data-stu-id="38c39-106">[in] The token for the target method or method implementation.</span></span>  
+ <span data-ttu-id="63b26-106">[in] Das Token für die Zielmethode oder Methodenimplementierung.</span><span class="sxs-lookup"><span data-stu-id="63b26-106">[in] The token for the target method or method implementation.</span></span>  
   
  `ulRVA`  
- <span data-ttu-id="38c39-107">in Die Adresse des Codes oder des Datenbereichs.</span><span class="sxs-lookup"><span data-stu-id="38c39-107">[in] The address of the code or data area.</span></span>  
+ <span data-ttu-id="63b26-107">[in] Die Adresse des Codes oder Datenbereichs.</span><span class="sxs-lookup"><span data-stu-id="63b26-107">[in] The address of the code or data area.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="38c39-108">Voraussetzungen</span><span class="sxs-lookup"><span data-stu-id="38c39-108">Requirements</span></span>  
- <span data-ttu-id="38c39-109">**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="38c39-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="63b26-108">Requirements (Anforderungen)</span><span class="sxs-lookup"><span data-stu-id="63b26-108">Requirements</span></span>  
+ <span data-ttu-id="63b26-109">**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="63b26-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="38c39-110">**Header:** Cor. h</span><span class="sxs-lookup"><span data-stu-id="38c39-110">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="63b26-110">**Kopfzeile:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="63b26-110">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="38c39-111">**Bibliothek:** Wird als Ressource in Mscoree. dll verwendet.</span><span class="sxs-lookup"><span data-stu-id="38c39-111">**Library:** Used as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="63b26-111">**Bibliothek:** Wird als Ressource in MSCorEE.dll verwendet</span><span class="sxs-lookup"><span data-stu-id="63b26-111">**Library:** Used as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="38c39-112">**.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="38c39-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="63b26-112">**.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="63b26-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="38c39-113">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="38c39-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="63b26-113">Weitere Informationen</span><span class="sxs-lookup"><span data-stu-id="63b26-113">See also</span></span>
 
-- [<span data-ttu-id="38c39-114">IMetaDataEmit-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="38c39-114">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [<span data-ttu-id="38c39-115">IMetaDataEmit2-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="38c39-115">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [<span data-ttu-id="63b26-114">IMetaDataEmit-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="63b26-114">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [<span data-ttu-id="63b26-115">IMetaDataEmit2-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="63b26-115">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
