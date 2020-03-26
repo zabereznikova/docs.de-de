@@ -8,12 +8,12 @@ helpviewer_keywords:
 - graphics rendering tiers [WPF]
 - graphics [WPF], rendering tiers
 ms.assetid: 08dd1606-02a2-4122-9351-c0afd2ec3a70
-ms.openlocfilehash: 5e99a8cbf1a3fcac2b6785128c284911949f7997
-ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
+ms.openlocfilehash: 05847271cf82739a6a0b609771043c02a7ffc0e9
+ms.sourcegitcommit: e48a54ebe62e874500a7043f6ee0b77a744d55b4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80111841"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80291591"
 ---
 # <a name="graphics-rendering-tiers"></a>Renderingebenen für Grafiken
 Eine Renderingebene definiert eine Ebene der Grafikleistung eines Geräts, auf dem eine [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Anwendung ausgeführt wird.  
@@ -45,7 +45,7 @@ Eine Renderingebene definiert eine Ebene der Grafikleistung eines Geräts, auf d
 ### <a name="rendering-tier-0"></a>Renderingebene 0  
  Der Wert 0 der Renderingebene bedeutet, dass keine Beschleunigung der Grafikhardware vorhanden ist, die für die Anwendung auf dem Gerät verfügbar ist. Auf dieser Ebene sollten Sie davon ausgehen, dass alle Grafiken von Software ohne Hardwarebeschleunigung gerendert werden. Die Funktionalität dieser Ebene entspricht einer DirectX-Version, die kleiner als 9.0 ist.  
   
-### <a name="rendering-tier-1-and-rendering-tier-2"></a>Renderingebene 1 und Renderingebene 2  
+### <a name="rendering-tier-1-and-rendering-tier-2"></a>Renderingebene 1 und Renderingebene 2
   
 > [!NOTE]
 > Ab .NET Framework 4 wurde das Rendern von Ebene 1 neu definiert, um nur Grafikhardware einzuschließen, die DirectX 9.0 oder höher unterstützt. Grafikhardware, die DirectX 7 oder 8 unterstützt, ist jetzt als Rendering-Stufe 0 definiert.  
@@ -57,7 +57,7 @@ Eine Renderingebene definiert eine Ebene der Grafikleistung eines Geräts, auf d
 |Funktion|Ebene 1|Ebene 2|  
 |-------------|------------|------------|  
 |DirectX-Version|Muss größer als oder gleich 9.0 sein.|Muss größer als oder gleich 9.0 sein.|  
-|Video-RAM|Muss größer als oder gleich 60 MB sein.|Muss größer als oder gleich 120 MB sein.|  
+|Video-RAM|Muss größer oder gleich 60 MB sein.|Muss größer oder gleich 120 MB sein.|  
 |Pixel-Shader|Die Versionsebene muss größer als oder gleich 2.0 sein.|Die Versionsebene muss größer als oder gleich 2.0 sein.|  
 |Vertex-Shader|Keine Anforderung.|Die Versionsebene muss größer als oder gleich 2.0 sein.|  
 |Multitextur-Einheiten|Keine Anforderung.|Die Anzahl der Einheiten muss größer als oder gleich 4 sein.|  
@@ -72,7 +72,7 @@ Eine Renderingebene definiert eine Ebene der Grafikleistung eines Geräts, auf d
 |3D-MIP-Zuordnung|[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] versucht beim Rendering von 3D-Inhalten MIP-Zuordnung zu verwenden. Die MIP-Zuordnung verbessert die Qualität des Texturrenderings, wenn <xref:System.Windows.Controls.Viewport3D>eine Textur ein kleineres Sichtfeld in einem einnimmt.|  
 |Radiale Farbverläufe|Vermeiden Sie während der <xref:System.Windows.Media.RadialGradientBrush> Unterstützung die Verwendung für große Objekte.|  
 |3D-Beleuchtungsberechnungen|[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] führt die Pro-Vertex-Beleuchtung aus, was bedeutet, dass eine Lichtstärke bei jedem Vertex für jedes auf ein Mesh angewendetes Material berechnet werden muss.|  
-|Rendering von Text|Das Rendering der Subpixel-Schriftart verwendet verfügbare Pixel-Shader in der Grafikhardware.|  
+|Rendering von Text|Das Subpixel-Schriftart-Rendering verwendet verfügbare Pixel-Shader auf der Grafikhardware.|  
   
  Die folgenden Features und Funktionen sind nur für die Renderingebene 2 hardwarebeschleunigt:  
   
@@ -124,10 +124,10 @@ Eine Renderingebene definiert eine Ebene der Grafikleistung eines Geräts, auf d
   
  Wenn Sie das DirectX-Diagnosetool ausführen, enthält das Hauptfenster eine Reihe von Registerkarten, mit denen Sie DirectX-bezogene Informationen anzeigen und diagnostizieren können. Die Registerkarte **System** enthält beispielsweise Systeminformationen zu Ihrem Computer und gibt die Version von DirectX an, die auf Ihrem Computer installiert ist.  
   
- ![Bildschirmabbildung: DirectX-Diagnosetool](./media/directxdiagnostictool-01.png "DirectXDiagnosticTool_01")  
+ ![Screenshot: DirectX Diagnostic Tool](./media/directxdiagnostictool-01.png "DirectXDiagnosticTool_01")  
 Hauptfenster des DirectX-Diagnosetools  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Windows.Media.RenderCapability>
 - <xref:System.Windows.Media.RenderOptions>

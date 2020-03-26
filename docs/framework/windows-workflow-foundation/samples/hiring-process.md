@@ -2,12 +2,12 @@
 title: Einstellungsprozess
 ms.date: 03/30/2017
 ms.assetid: d5fcacbb-c884-4b37-a5d6-02b1b8eec7b4
-ms.openlocfilehash: 258ad41f52957023fd091f1668a9532ead270f39
-ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
+ms.openlocfilehash: ade72422d29d170e9c80f602f151ce765a1a00f7
+ms.sourcegitcommit: e48a54ebe62e874500a7043f6ee0b77a744d55b4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80111880"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80291687"
 ---
 # <a name="hiring-process"></a>Einstellungsprozess
 In diesem Beispiel wird veranschaulicht, wie ein Geschäftsprozess mit Messagingaktivitäten sowie zwei als Workflowdienste gehostete Workflows implementiert werden. Diese Workflows sind Teil der IT-Infrastruktur des fiktionalen Unternehmens Contoso, Inc.  
@@ -97,7 +97,7 @@ In diesem Beispiel wird veranschaulicht, wie ein Geschäftsprozess mit Messaging
   
 |Project|Beschreibung|  
 |-------------|-----------------|  
-|ContosoHR|Enthält Datenverträge, Geschäftsobjekte und Repositoryklassen.|  
+|ContosoHR|Enthält Datenverträge, Geschäftsobjekte und Repository-Klassen.|  
 |HiringRequestService|Enthält die Definition des Workflows zum Stellenausschreibungsverfahren.<br /><br /> Dieses Projekt ist als Konsolenanwendung implementiert, die den Workflow (XAML-Datei) selbst als Dienst hostet.|  
 |ResumeRequestService|Ein Workflowdienst, mit dem die Lebensläufe der Bewerber erfasst werden, bis die Stellenanzeige abläuft oder der Bewerbungsprozess beendet werden muss.<br /><br /> Dieses Projekt wird als deklarativer Workflowdienst (XAMLX) implementiert.|  
 |OrgService|Ein Dienst, mit dem organisatorische Informationen (Employees, Positions, PositionTypes und Departments) verfügbar gemacht werden. Sie können sich diesen Dienst als Organisationsmodul im Rahmen der Unternehmensressourcenplanung (ERP) vorstellen.<br /><br /> Dieses Projekt wird als Konsolenanwendung implementiert, die einen Windows Communication Foundation (WCF)-Dienst verfügbar macht.|  
@@ -122,7 +122,7 @@ In diesem Beispiel wird veranschaulicht, wie ein Geschäftsprozess mit Messaging
 |Parallele Aktivitäten|-   <xref:System.Activities.Statements.ParallelForEach%601>wird verwendet, um sich parallel im Posteingang des CEO und der HR Manager zu registrieren (Warten auf den Genehmigungsschritt von zwei HR-Managern).<br />-   <xref:System.Activities.Statements.Parallel>wird verwendet, um einige Bereinigungsaufgaben in den Schritten Abgeschlossen und Abgelehnt auszuführen|HiringRequestService|  
 |Abbruch des Modells|Im Flussdiagramm wird mit <xref:System.Activities.Statements.CancellationScope> ein Abbruchverhalten erstellt (im vorliegenden Fall werden einige Bereinigungsaufgaben ausgeführt.).|HiringRequestService|  
 |Kundenpersistenzteilnehmer|Mit `HiringRequestPersistenceParticipant` werden Daten aus einer Workflowvariablen in einer Tabelle erfasst, die in der Personaldatenbank von Contoso gespeichert ist.|HiringRequestService|  
-|Workflowdienste|`ResumeRequestService` wird unter Verwendung von Workflowdiensten implementiert. Die Definition des Workflows sowie Informationen zum Dienst sind in ResumeRequestService.xamlx enthalten. Der Dienst ist für die Verwendung von Persistenz und Überwachung konfiguriert.|ResumeRequestService|  
+|Workflowdienste|`ResumeRequestService` wird unter Verwendung von Workflowdiensten implementiert. Workflowdefinition und Dienstinformationen sind in ResumeRequestService.xamlx enthalten. Der Dienst ist für die Verwendung von Persistenz und Überwachung konfiguriert.|ResumeRequestService|  
 |Permanente Zeitgeber|`ResumeRequestService` definiert mit permanenten Zeitgebern den Zeitraum für eine Stellenausschreibung (sobald dieser abgelaufen ist, wird die Stellenausschreibung geschlossen).|ResumeRequestService|  
 |Transaktionen|Mit <xref:System.Activities.Statements.TransactionScope> wird die Konsistenz der Daten während der Ausführung verschiedener Aktivitäten (bei der Erfassung eines neuen Lebenslaufs) sichergestellt.|ResumeRequestService|  
 |Transaktionen|Der benutzerdefinierte Persistenzteilnehmer (`HiringRequestPersistenceParticipant`) und der benutzerdefinierte Überwachungsteilnehmer (`HistoryFileTrackingParticipant`) verwenden die gleiche Transaktion.|HiringRequestService|  

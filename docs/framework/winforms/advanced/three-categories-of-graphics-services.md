@@ -8,12 +8,12 @@ helpviewer_keywords:
 - vector graphics
 - typography
 ms.assetid: 068c0ef3-f6ee-4d58-a7b6-eb2531ead408
-ms.openlocfilehash: b0f2ad8293daf6ad53899a0f8be82985c24ff50d
-ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
+ms.openlocfilehash: fa7391ef0f7170ddb9d9d24aa5a1a03635bf46e0
+ms.sourcegitcommit: e48a54ebe62e874500a7043f6ee0b77a744d55b4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80111204"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80291724"
 ---
 # <a name="three-categories-of-graphics-services"></a>Drei Kategorien von Grafikdiensten
 Die Grafikangebote in Windows Forms lassen sich in die folgenden drei großen Kategorien einteilen:  
@@ -25,7 +25,7 @@ Die Grafikangebote in Windows Forms lassen sich in die folgenden drei großen Ka
 - Typografie  
   
 ## <a name="2d-vector-graphics"></a>2D-Vektorgrafiken  
- Zweidimensionale Vektorgrafiken sind Primitive; wie Linien, Kurven und Abbildungen; die durch Punktesätze auf einem Koordinatensystem angegeben werden. Beispielsweise wird eine gerade Linie durch ihre beiden Endpunkte angegeben, und ein Rechteck wird durch einen Punkt angegeben, der die Position der oberen linken Ecke und ein Zahlenpaar mit seiner Breite und Höhe angibt. Ein einfacher Pfad wird durch ein Array von Punkten angegeben, die durch gerade Linien verbunden sind. Ein Bézier-Spline ist eine ausgeklügelte Kurve, die durch vier Kontrollpunkte angegeben wird.  
+ Zweidimensionale Vektorgrafiken, z. B. Linien, Kurven und Figuren, sind Primitive, die durch Punktesätze in einem Koordinatensystem angegeben werden. Beispielsweise wird eine gerade Linie durch ihre beiden Endpunkte angegeben, und ein Rechteck wird durch einen Punkt angegeben, der die Position der oberen linken Ecke und ein Zahlenpaar mit seiner Breite und Höhe angibt. Ein einfacher Pfad wird durch ein Array von Punkten angegeben, die durch gerade Linien verbunden sind. Ein Bézier-Spline ist eine ausgeklügelte Kurve, die durch vier Kontrollpunkte angegeben wird.  
   
  GDI+ stellt Klassen und Strukturen bereit, die Informationen über die Primitive selbst speichern, Klassen, die Informationen darüber speichern, wie die Primitive gezeichnet werden, und Klassen, die die Zeichnung tatsächlich erstellen. Die <xref:System.Drawing.Rectangle> Struktur speichert z. B. die Position und Größe eines Rechtecks. Die <xref:System.Drawing.Pen> Klasse speichert Informationen über Linienfarbe, Linienbreite und Linienstil. und <xref:System.Drawing.Graphics> die Klasse verfügt über Methoden zum Zeichnen von Linien, Rechtecken, Pfaden und anderen Figuren. Es gibt <xref:System.Drawing.Brush> auch mehrere Klassen, die Informationen darüber speichern, wie geschlossene Figuren und Pfade mit Farben oder Mustern gefüllt werden.  
   
@@ -39,7 +39,7 @@ Die Grafikangebote in Windows Forms lassen sich in die folgenden drei großen Ka
   
  Darüber hinaus bietet Windows Forms die Möglichkeit, Text <xref:System.Windows.Forms.TextRenderer> mit GDI-Funktionen in seiner Klasse zu zeichnen.  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Übersicht über Grafiken](graphics-overview-windows-forms.md)
 - [Verwalteter Code in GDI+](about-gdi-managed-code.md)

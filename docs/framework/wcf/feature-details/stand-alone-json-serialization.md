@@ -2,12 +2,12 @@
 title: Eigenständige JSON-Serialisierung mit DataContractJsonSerializer
 ms.date: 03/30/2017
 ms.assetid: 312bd7b2-1300-4b12-801e-ebe742bd2287
-ms.openlocfilehash: 36945f2d42f22ef3aa4f27bcbe403466f124a279
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 614776a905ec319624f76876762c25bfca15a357
+ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79184411"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80249447"
 ---
 # <a name="stand-alone-json-serialization-using-datacontractjsonserializer"></a>Eigenständige JSON-Serialisierung mit DataContractJsonSerializer
 
@@ -42,7 +42,7 @@ Die folgende Tabelle zeigt die Entsprechungen zwischen .NET-Typen und JSON/JavaS
 |Auflistungen, Wörterbücher und Arrays|Array|Siehe den Abschnitt "Auflistungen, Wörterbücher und Arrays" in diesem Thema.|
 |Komplexe Typen (mit angewendetem <xref:System.Runtime.Serialization.DataContractAttribute> oder <xref:System.SerializableAttribute>)|Komplexer Typ|Datenmember werden Member des komplexen JavaScript-Typs.|
 |Komplexe Typen (die die <xref:System.Runtime.Serialization.ISerializable>-Schnittstelle implementieren)|Komplexer Typ|Entspricht anderen komplexen Typen, jedoch werden einige <xref:System.Runtime.Serialization.ISerializable>-Typen nicht unterstützt. Weitere Informationen finden Sie in den Hinweisen zur ISerializable-Unterstützung im Abschnitt "Weitere Informationen" in diesem Thema.|
-|`Null`-Wert für jeden Typ|Null|Typen, die NULL-Werte zulassen, werden ebenfalls unterstützt und JSON-Typen auf die gleiche Weise zugeordnet wie nicht auf NULL festlegbare Typen.|
+|`Null`-Wert für jeden Typ|Null|Nullable Werttypen werden ebenfalls unterstützt und JSON auf die gleiche Weise zugeordnet wie nicht NULL-Werttypen.|
 
 ### <a name="enumerations-and-json"></a>Enumerationen und JSON
 
@@ -117,7 +117,7 @@ Wenn Sie mit Ihren eigenen Basistyp und abgeleiteten Typen arbeiten, ist normale
 
 Weitere Informationen zur polymorphen Serialisierung und der Einschränkungen, die Sie bei der Verwendung beachten müssen, finden Sie im Abschnitt "Weitere Informationen" weiter unten in diesem Thema.
 
-### <a name="versioning"></a>Versionsverwaltung
+### <a name="versioning"></a>Versionskontrolle
 
 Die Datenvertragsversionsfunktionen werden einschließlich der <xref:System.Runtime.Serialization.IExtensibleDataObject>-Schnittstelle in JSON vollständig unterstützt. Darüber hinaus ist es in den meisten Fällen möglich, einen Typ in ein Format (beispielsweise XML) zu deserialisieren, es dann in ein anderes Format (beispielsweise JSON) zu serialisieren und die Daten in <xref:System.Runtime.Serialization.IExtensibleDataObject> beizubehalten. Weitere Informationen finden Sie unter [Aufwärtskompatible Datenverträge](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md). Denken Sie daran, dass JSON ungeordnet ist und daher alle Reihenfolgeninformationen verloren gehen. .JSON unterstützt auch keine mehrfachen Schlüssel/Wert-Paare mit dem gleichen Schlüsselnamen. Und schließlich sind alle Vorgänge mit <xref:System.Runtime.Serialization.IExtensibleDataObject> grundsätzlich polymorph. Das bedeutet, dass ihr abgeleiteter Typ <xref:System.Object> zugewiesen ist, dem Basistyp aller Typen.
 
@@ -293,6 +293,6 @@ Bei der Serialisierung von Wörterbuchtypen, wird das JSON-Objekt, das die Membe
 
 Das Serialisierungsprogramm codiert Schlüsselnamen in XML, die keine gültigen XML-Namen sind. Beispielsweise hätte ein Datenmember mit dem Namen "123" einen codierten\_Namen wie\_\_" x0031 x0032\_\_x0033 ",\_da "123" ein ungültiger XML-Elementname ist (beginnt mit einer Ziffer). Eine ähnliche Situation tritt möglicherweise bei einigen internationalen Zeichensätzen auf, deren Verwendung ungültige XML-Namen ergibt. Eine Erläuterung dieses Xml-Effekts auf die JSON-Verarbeitung finden Sie unter [Zwischenführen zwischen JSON und XML](../../../../docs/framework/wcf/feature-details/mapping-between-json-and-xml.md).
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Unterstützung für JSON und andere Datenübertragungsformate](../../../../docs/framework/wcf/feature-details/support-for-json-and-other-data-transfer-formats.md)

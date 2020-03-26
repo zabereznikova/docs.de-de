@@ -1,16 +1,16 @@
 ---
-title: 'Gewusst wie: Abrufen des Werts eines Attributs (LINQ to XML)'
+title: 'Vorgehensweise: Abrufen des Werts eines Attributs (LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: 5f4b3790-c83f-4eb3-a889-e3587edf3ca1
-ms.openlocfilehash: 693746c24488029415e68a7c954143a86b7dbb16
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 6593639dcdc234ddda808cfdb5e85ebe1a771b62
+ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74352400"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80248946"
 ---
-# <a name="how-to-retrieve-the-value-of-an-attribute-linq-to-xml-visual-basic"></a>Vorgehensweise: Abrufen des Werts eines Attributs (LINQ to XML) (Visual Basic)
-In diesem Thema wird gezeigt, wie Sie den Wert von Attributen abrufen können. Im Wesentlichen gibt es dafür zwei Möglichkeiten: Sie können ein <xref:System.Xml.Linq.XAttribute> in den gewünschten Typ umwandeln. Die Umwandlung des Inhalts des Elements oder Attributs in den angegebenen Typ erfolgt dann durch den expliziten Konvertierungsoperator. Die andere Möglichkeit besteht darin, die <xref:System.Xml.Linq.XAttribute.Value%2A>-Eigenschaft zu verwenden. In der Regel empfiehlt sich aber die Verwendung des Umwandlungsverfahrens. Wenn Sie das Attribut in einen Typ umwandeln, der NULL-Werte zulässt, ist der Code für das Abrufen des Werts eines Attributs, von dem nicht genau bekannt ist, ob es überhaupt vorhanden ist, einfacher zu schreiben. Beispiele für diese Technik finden Sie unter Gewusst [wie: Abrufen des Werts eines Elements (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-retrieve-the-value-of-an-element-linq-to-xml.md).  
+# <a name="how-to-retrieve-the-value-of-an-attribute-linq-to-xml-visual-basic"></a>Gewusst wie: Abrufen des Werts eines Attributs (LINQ zu XML) (Visual Basic)
+In diesem Thema wird gezeigt, wie Sie den Wert von Attributen abrufen können. Im Wesentlichen gibt es dafür zwei Möglichkeiten: Sie können ein <xref:System.Xml.Linq.XAttribute> in den gewünschten Typ umwandeln. Die Umwandlung des Inhalts des Elements oder Attributs in den angegebenen Typ erfolgt dann durch den expliziten Konvertierungsoperator. Die andere Möglichkeit besteht darin, die <xref:System.Xml.Linq.XAttribute.Value%2A>-Eigenschaft zu verwenden. In der Regel empfiehlt sich aber die Verwendung des Umwandlungsverfahrens. Wenn Sie das Attribut in einen NULL-Werttyp umlegen, ist der Code einfacher zu schreiben, wenn der Wert eines Attributs abgerufen wird, das möglicherweise nicht vorhanden ist. Beispiele für diese Technik finden Sie unter [Gewusst wie: Abrufen des Werts eines Elements (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-retrieve-the-value-of-an-element-linq-to-xml.md).  
   
 ## <a name="example"></a>Beispiel  
  In Visual Basic können Sie zum Abrufen des Werts eines Attributs die integrierte Attributeigenschaft verwenden.  
@@ -46,7 +46,7 @@ Console.WriteLine(root)
 ```  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird gezeigt, wie Sie den Wert eines Attributs für den Fall abrufen können, dass sich das Attribut in einem Namespace befindet. Weitere Informationen finden Sie unter [Übersicht über Namespaces (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md).  
+ Im folgenden Beispiel wird gezeigt, wie Sie den Wert eines Attributs für den Fall abrufen können, dass sich das Attribut in einem Namespace befindet. Weitere Informationen finden Sie unter [Namespaces Overview (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md).  
   
 ```vb  
 Imports <xmlns:aw="http://www.adventure-works.com">  
@@ -60,7 +60,7 @@ Module Module1
 End Module  
 ```  
   
- Dieses Beispiel erzeugt die folgende Ausgabe:  
+ Hierdurch wird folgende Ausgabe generiert:  
   
 ```console  
 abcde  

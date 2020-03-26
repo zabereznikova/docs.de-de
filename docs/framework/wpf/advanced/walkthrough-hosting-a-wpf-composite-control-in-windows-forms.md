@@ -5,12 +5,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting WPF content in Windows Forms [WPF]
 ms.assetid: 0ac41286-4c1b-4b17-9196-d985cb844ce1
-ms.openlocfilehash: 4e98dd41606bff559abb981397acf2582a961cef
-ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
+ms.openlocfilehash: 88efab8adf36989938ba5aa887a28b41eb8820f3
+ms.sourcegitcommit: e48a54ebe62e874500a7043f6ee0b77a744d55b4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80111854"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80291624"
 ---
 # <a name="walkthrough-hosting-a-wpf-composite-control-in-windows-forms"></a>Exemplarische Vorgehensweise: Hosten eines zusammengesetzten WPF-Steuerelements in Windows Forms
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] stellt eine umfangreiche Umgebung zum Erstellen von Anwendungen bereit. Wenn Sie jedoch über umfangreiche Investitionen in Windows Forms-Code verfügen, kann es [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] effektiver sein, Ihre vorhandene Windows Forms-Anwendung mit zu erweitern, anstatt sie von Grund auf neu zu schreiben. Ein häufiges Szenario ist, wenn Sie ein [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] oder mehrere Steuerelemente einbetten möchten, die in Ihre Windows Forms-Anwendung implementiert sind. Weitere Informationen zum Anpassen von WPF-Steuerelementen finden Sie unter [Steuerelementanpassung](../controls/control-customization.md).  
@@ -181,11 +181,11 @@ namespace MyControls
   
 <a name="winforms_host_section"></a>
 ## <a name="implementing-the-windows-forms-host-application"></a>Implementieren der Windows Forms-Hostanwendung  
- Die Windows Forms-Hostanwendung verwendet <xref:System.Windows.Forms.Integration.ElementHost> [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ein Objekt zum Hosten des zusammengesetzten Steuerelements. Die Anwendung behandelt `OnButtonClick` das Ereignis, um die Daten vom zusammengesetzten Steuerelement zu empfangen. Die Anwendung verfügt außerdem über eine Reihe von Optionsfeldern, die Sie verwenden können, um die Darstellung des Steuerelements zu ändern. Die folgende Abbildung zeigt die Anwendung.  
+ Die Windows Forms-Hostanwendung verwendet <xref:System.Windows.Forms.Integration.ElementHost> [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ein Objekt zum Hosten des zusammengesetzten Steuerelements. Die Anwendung behandelt `OnButtonClick` das Ereignis, um die Daten vom zusammengesetzten Steuerelement zu empfangen. Die Anwendung verfügt auch über eine Reihe von Optionsfeldern, mit denen Sie die Darstellung des Steuerelements ändern können. Die folgende Abbildung zeigt die Anwendung.  
 
 Die folgende Abbildung zeigt ein WPF-Verbundsteuerelement, das in einer Windows Forms-Anwendung gehostet wird."  
 
- ![Scteenshot, der ein Windows-Formularhosting-Avalon-Steuerelement anzeigt.](./media/walkthrough-hosting-a-wpf-composite-control-in-windows-forms/windows-form-hosting-avalon-control.png)  
+ ![Screenshot, der ein Windows Form Hosting Avalon-Steuerelement zeigt.](./media/walkthrough-hosting-a-wpf-composite-control-in-windows-forms/windows-form-hosting-avalon-control.png)  
   
 ### <a name="creating-the-project"></a>Erstellen des Projekts  
  Um das Projekt zu starten:  
@@ -231,7 +231,7 @@ Die folgende Abbildung zeigt ein WPF-Verbundsteuerelement, das in einer Windows 
   
 4. Fügen Sie <xref:System.Windows.Forms.GroupBox?displayProperty=nameWithType> dem Formular die folgenden Steuerelemente hinzu.  
   
-    |Name|Text|  
+    |name|Text|  
     |----------|----------|  
     |groupBox1|Hintergrundfarbe|  
     |groupBox2|Vordergrundfarbe|  
@@ -243,7 +243,7 @@ Die folgende Abbildung zeigt ein WPF-Verbundsteuerelement, das in einer Windows 
   
 5. Fügen Sie <xref:System.Windows.Forms.RadioButton?displayProperty=nameWithType> den <xref:System.Windows.Forms.GroupBox?displayProperty=nameWithType> Steuerelementen die folgenden Steuerelemente hinzu.  
   
-    |GroupBox|Name|Text|  
+    |GroupBox|name|Text|  
     |--------------|----------|----------|  
     |groupBox1|radioBackgroundOriginal|Original|  
     |groupBox1|radioBackgroundLightGreen|Hellgrün|  
@@ -264,7 +264,7 @@ Die folgende Abbildung zeigt ein WPF-Verbundsteuerelement, das in einer Windows 
   
 6. Fügen Sie <xref:System.Windows.Forms.Label?displayProperty=nameWithType> die folgenden <xref:System.Windows.Forms.GroupBox?displayProperty=nameWithType>Steuerelemente zum letzten hinzu. Diese Steuerelemente zeigen die [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] vom zusammengesetzten Steuerelement zurückgegebenen Daten an.  
   
-    |GroupBox|Name|Text|  
+    |GroupBox|name|Text|  
     |--------------|----------|----------|  
     |groupBox7|lblName|Name:|  
     |groupBox7|lblAddress|Straße und Hausnummer:|  
@@ -323,7 +323,7 @@ Die folgende Abbildung zeigt ein WPF-Verbundsteuerelement, das in einer Windows 
   
  Erstellen Sie die Anwendung, und führen Sie sie aus. Klicken Sie auf die verschiedenen Optionsfelder, um die Auswirkung auf das zusammengesetzte WPF-Steuerelement zu sehen.  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>

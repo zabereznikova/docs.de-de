@@ -5,18 +5,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f18b288f-b265-4bbe-957f-c6833c0645ef
-ms.openlocfilehash: c64f11c00174981925342f1493ef0b809a57ecb0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c45c6672983866df6c47ec84981cc7bd11637c0c
+ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79148646"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80249076"
 ---
 # <a name="handling-null-values"></a>Behandeln von NULL-Werten
 Ein NULL-Wert wird in einer relationalen Datenbank verwendet, wenn der Wert in einer Spalte unbekannt ist oder fehlt. Ein NULL-Wert ist weder eine leere Zeichenfolge (für Zeichen- oder datetime-Datentypen) noch der Wert 0 (für numerische Datentypen). Die ANSI-Spezifikation SQL-92 besagt, dass ein NULL-Wert für alle Datentypen gleich sein muss, damit alle NULL-Werte einheitlich behandelt werden. Der Namespace <xref:System.Data.SqlTypes> bietet Semantik für NULL-Werte, indem die Schnittstelle <xref:System.Data.SqlTypes.INullable> implementiert wird. Jeder der Datentypen in <xref:System.Data.SqlTypes> hat seine eigene `IsNull`-Eigenschaft und einen `Null`-Wert, der einer Instanz dieses Datentyps zugewiesen werden kann.  
   
 > [!NOTE]
-> Neu in .NET Framework 2.0 ist die Unterstützung für Typen, die NULL-Werte zulassen. Programmierer können damit einen Werttyp so erweitern, dass dieser alle Werte des zugrunde liegenden Typs darstellen kann. Diese CLR-Typen, die NULL-Werte zulassen, stellen eine Instanz der <xref:System.Nullable>-Struktur dar. Diese Fähigkeit ist besonders nützlich, wenn Werttypen geschachtelt oder ungeschachtelt sind, was eine verbesserte Kompatibilität mit Objekttypen ermöglicht. CLR-Typen, die NULL-Werte zulassen, sind nicht für die Speicherung von NULL-Werten in Datenbanken gedacht, da sich ein ANSI-SQL-NULL-Wert nicht so verhält wie ein `null`-Verweis (oder `Nothing` in Visual Basic). Verwenden Sie zum Arbeiten mit ANSI-SQL-NULL-Werten in Datenbanken NULL-Werte des Typs <xref:System.Data.SqlTypes> anstelle von <xref:System.Nullable>. Weitere Informationen zum Arbeiten mit CLR-Nullwerttypen in Visual Basic finden Sie unter [Nullable Value Types](../../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md), und für C-Wertetypen unter [Nullable-Werttypen](../../../../csharp/language-reference/builtin-types/nullable-value-types.md).  
+> Mit .NET Framework Version 2.0 wurde die Unterstützung für nullfähige Werttypen eingeführt, die es Programmierern ermöglichen, einen Werttyp zu erweitern, um alle Werte des zugrunde liegenden Typs darzustellen. Diese CLR-Nullwerttypen stellen eine <xref:System.Nullable> Instanz der Struktur dar. Diese Fähigkeit ist besonders nützlich, wenn Werttypen geschachtelt oder ungeschachtelt sind, was eine verbesserte Kompatibilität mit Objekttypen ermöglicht. CLR-NULLwerttypen sind nicht für die Speicherung von Datenbanknulls vorgesehen, da sich ein `null` ANSI SQL-NULL-Wert nicht wie ein Verweis (oder `Nothing` in Visual Basic) verhält. Verwenden Sie zum Arbeiten mit ANSI-SQL-NULL-Werten in Datenbanken NULL-Werte des Typs <xref:System.Data.SqlTypes> anstelle von <xref:System.Nullable>. Weitere Informationen zum Arbeiten mit CLR-Wert nullablen Typen in Visual Basic finden Sie unter [Nullable Value Types](../../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md), und für C-Wertetypen unter [Nullable Value Types](../../../../csharp/language-reference/builtin-types/nullable-value-types.md).  
   
 ## <a name="nulls-and-three-valued-logic"></a>NULL-Werte und dreiwertige Logik  
  Durch das Zulassen von NULL-Werten in Spaltendefinitionen wird in Ihre Anwendung dreiwertige Logik eingeführt. Ein Vergleich kann anhand einer von drei Bedingungen ausgewertet werden:  
@@ -141,7 +141,7 @@ String.Equals instance method:
   Two empty strings=True
 ```  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [SQL Server-Datentypen und ADO.NET](sql-server-data-types.md)
 - [Übersicht über ADO.NET](../ado-net-overview.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - 3D graphics [WPF]
 - graphics [WPF], 3D
 ms.assetid: 67f31ed4-e36b-4b02-9889-dcce245d7afc
-ms.openlocfilehash: b8a3876030c533dd37eca0b00ebd50bccf309e53
-ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
+ms.openlocfilehash: e4918f7737bbe57a4f29c6c5cff1099f4f21674b
+ms.sourcegitcommit: e48a54ebe62e874500a7043f6ee0b77a744d55b4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80112387"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80291815"
 ---
 # <a name="3d-graphics-overview"></a>3D-Grafikübersicht
 <a name="introduction"></a>Die 3D-Funktionalität in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] ermöglicht Entwicklern das Zeichnen, Transformieren und Animieren von 3D-Grafiken sowohl in Markup- als auch in Prozedurcode. Entwickler können 2D- und 3D-Grafiken kombinieren, um umfangreiche Steuerelemente zu erstellen, komplexe Illustrationen von Daten bereitzustellen oder die Benutzerfreundlichkeit der Benutzeroberfläche einer Anwendung zu verbessern. Die 3D-Unterstützung in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ist nicht so konzipiert, dass sie eine voll funktionsfähige Spielentwicklungsplattform bietet. Dieses Thema bietet einen Überblick über [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] die 3D-Funktionalität im Grafiksystem.  
@@ -71,7 +71,7 @@ Perspektivische und orthografische Projektionen
   
  Die <xref:System.Windows.Media.Media3D.MeshGeometry3D.TextureCoordinates%2A> Eigenschaft gibt eine <xref:System.Windows.Point>Auflistung von s an, die dem Grafiksystem mitteilen, wie die Koordinaten zugeordnet werden, die bestimmen, wie eine Textur zu den Scheitelpunkten des Netzes gezeichnet wird. <xref:System.Windows.Media.Media3D.MeshGeometry3D.TextureCoordinates%2A>werden als Wert zwischen Null und 1 angegeben, einschließlich.  Wie bei <xref:System.Windows.Media.Media3D.MeshGeometry3D.Normals%2A> der Eigenschaft kann das Grafiksystem standardtexturkoordinaten berechnen, sie können jedoch verschiedene Texturkoordinaten festlegen, um die Zuordnung einer Textur zu steuern, die z. B. einen Teil eines wiederholten Musters enthält. Weitere Informationen zu Texturkoordinaten finden Sie in den nachfolgenden Themen oder im Managed Direct3D SDK.  
   
- Im folgenden Beispiel wird veranschaulicht, wie eine Seite des Würfelmodells in prozeduralem Code erstellt wird. Beachten Sie, dass Sie den gesamten Würfel als einzelnes GeometryModel3D zeichnen können. In diesem Beispiel wird die Würfelseite als unterschiedliches Modell gezeichnet, um später separate Texturen auf die einzelnen Seiten anzuwenden.  
+ Im folgenden Beispiel wird veranschaulicht, wie eine Seite des Würfelmodells in prozeduralem Code erstellt wird. Sie können den gesamten Cube als einzelne GeometryModel3D zeichnen. In diesem Beispiel wird die Fläche des Cubes als eigenständiges Modell gezeichnet, um später separate Texturen auf jede Fläche anzuwenden.  
   
  [!code-csharp[3doverview#3DOverview3DN6](~/samples/snippets/csharp/VS_Snippets_Wpf/3DOverview/CSharp/Window1.xaml.cs#3doverview3dn6)]
  [!code-vb[3doverview#3DOverview3DN6](~/samples/snippets/visualbasic/VS_Snippets_Wpf/3DOverview/visualbasic/window1.xaml.vb#3doverview3dn6)]  
@@ -105,7 +105,7 @@ Perspektivische und orthografische Projektionen
   
 <a name="lights"></a>
 ## <a name="illuminating-the-scene"></a>Beleuchten der Szene  
- Lichter in 3D-Grafiken tun, was Lichter in der realen Welt tun: Sie machen Oberflächen sichtbar. Genauer gesagt bestimmen Lichter, welcher Teil einer Szene auch Teil der Projektion ist. Helle Objekte in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] erzeugen eine Vielzahl von Licht- und Schatteneffekten und werden nach dem Verhalten verschiedener realer Lichter modelliert. Sie müssen mindestens ein Licht in Ihre Szene aufnehmen, andernfalls sind keine Modelle sichtbar.  
+ Lichter in 3D-Grafiken tun, was Lichter in der realen Welt tun: Sie machen Oberflächen sichtbar. Genauer gesagt bestimmen Lichter, welcher Teil einer Szene auch Teil der Projektion ist. Helle Objekte in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] erzeugen eine Vielzahl von Licht- und Schatteneffekten und werden nach dem Verhalten verschiedener realer Lichter modelliert. Fügen Sie mindestens ein Licht in Ihre Szene ein, oder es sind keine Modelle sichtbar.  
   
  Die folgenden Leuchten stammen aus <xref:System.Windows.Media.Media3D.Light>der Basisklasse:  
   
@@ -113,7 +113,7 @@ Perspektivische und orthografische Projektionen
   
 - <xref:System.Windows.Media.Media3D.DirectionalLight>: Leuchtet wie eine entfernte Lichtquelle.  Richtungslichter haben <xref:System.Windows.Media.Media3D.DirectionalLight.Direction%2A> eine angegebene Vector3D, aber keine angegebene Position.  
   
-- <xref:System.Windows.Media.Media3D.PointLight>: Leuchtet wie eine nahegelegene Lichtquelle. PointLights verfügen über eine Position und senden Licht von dieser Position aus. Objekte in der Szene werden je nach deren Position und Abstand von der Lichtquelle beleuchtet. <xref:System.Windows.Media.Media3D.PointLightBase>macht eine <xref:System.Windows.Media.Media3D.PointLightBase.Range%2A> Eigenschaft frei, die einen Abstand bestimmt, ab dem Modelle nicht durch das Licht beleuchtet werden. PointLight macht außerdem Lichtabnahmeeigenschaften verfügbar, die bestimmen, wie die Lichtintensität mit der Entfernung abnimmt. Sie können die konstante, lineare oder quadratische Interpolationen für die Lichtabnahme angeben.  
+- <xref:System.Windows.Media.Media3D.PointLight>: Leuchtet wie eine nahegelegene Lichtquelle. PointLights verfügen über eine Position und senden Licht von dieser Position aus. Objekte in der Szene werden je nach deren Position und Abstand von der Lichtquelle beleuchtet. <xref:System.Windows.Media.Media3D.PointLightBase>macht eine <xref:System.Windows.Media.Media3D.PointLightBase.Range%2A> Eigenschaft frei, die einen Abstand bestimmt, ab dem Modelle nicht durch das Licht beleuchtet werden. PointLight setzt auch Dämpfungseigenschaften aus, die bestimmen, wie die Intensität des Lichts über die Entfernung abnimmt. Sie können die konstante, lineare oder quadratische Interpolationen für die Lichtabnahme angeben.  
   
 - <xref:System.Windows.Media.Media3D.SpotLight>: Erbt <xref:System.Windows.Media.Media3D.PointLight>von . Scheinwerfer beleuchten wie PointLight und weisen sowohl eine Position als auch eine Richtung auf. Sie projizieren Licht in einer <xref:System.Windows.Media.Media3D.SpotLight.InnerConeAngle%2A> kegelförmigen Fläche, die durch und <xref:System.Windows.Media.Media3D.SpotLight.OuterConeAngle%2A> Eigenschaften festgelegt wird, in Grad angegeben.  
   
@@ -166,7 +166,7 @@ Perspektivische und orthografische Projektionen
   
  [!code-xaml[hostingwpfusercontrolinwf#1](~/samples/snippets/csharp/VS_Snippets_Wpf/HostingWpfUserControlInWf/CSharp/HostingWpfUserControlInWf/ConeControl.xaml#1)]  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Windows.Controls.Viewport3D>
 - <xref:System.Windows.Media.Media3D.PerspectiveCamera>
@@ -174,6 +174,6 @@ Perspektivische und orthografische Projektionen
 - <xref:System.Windows.Media.Media3D.Material>
 - [3D-Transformationen Übersicht](3-d-transformations-overview.md)
 - [Maximieren der 3D-Leistung von WPF](maximize-wpf-3d-performance.md)
-- [How-to-Themen](3-d-graphics-how-to-topics.md)
+- [Gewusst wie-Themen](3-d-graphics-how-to-topics.md)
 - [Übersicht über Formen und die grundlegenden Funktionen zum Zeichnen in WPF](shapes-and-basic-drawing-in-wpf-overview.md)
 - [Zeichnen mit Bildern, Zeichnungen und visuellen Elementen](painting-with-images-drawings-and-visuals.md)

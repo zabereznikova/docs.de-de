@@ -2,12 +2,12 @@
 title: Protobuf skalare Datentypen - gRPC für WCF-Entwickler
 description: Erfahren Sie mehr über die grundlegenden und bekannten Datentypen, die Protobuf und gRPC in .NET Core unterstützen.
 ms.date: 09/09/2019
-ms.openlocfilehash: a40f51fa32ddb97ba417ec01f31e1f0187f0d544
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ea3b53426ecf6f50f3bae22a537e227b07248508
+ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79148126"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80249434"
 ---
 # <a name="protobuf-scalar-data-types"></a>Skalare Datentypen für Protobuf
 
@@ -125,7 +125,7 @@ Die folgende Tabelle zeigt die vollständige Liste der Wrappertypen mit dem ents
 | `uint?`   | `google.protobuf.UInt32Value` |
 | `ulong?`  | `google.protobuf.UInt64Value` |
 
-Die bekannten `Timestamp` Typen, `Duration` die in .NET als Klassen dargestellt werden, sodass keine nullierbare Version erforderlich ist. Es ist jedoch wichtig, beim Konvertieren in `DateTimeOffset` oder `TimeSpan`auf NULL nach Eigenschaften dieser Typen zu suchen.
+Die bekannten Typen `Timestamp` `Duration` und werden in .NET als Klassen dargestellt. Sie können in C-8 und darüber hinaus nullierbare Verweistypen verwenden. Es ist jedoch wichtig, beim Konvertieren in `DateTimeOffset` oder `TimeSpan`auf NULL nach Eigenschaften dieser Typen zu suchen.
 
 ## <a name="decimals"></a>Dezimalstellen
 

@@ -7,22 +7,22 @@ f1_keywords:
 helpviewer_keywords:
 - BC36629
 ms.assetid: 0a1e2dbc-d9a4-433d-9306-c5540782b81d
-ms.openlocfilehash: 3ab8028062402e33b787a5a8649d93d975918393
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 42bde0b1843e52bbc16118bb056ade791591904e
+ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64665704"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80249499"
 ---
 # <a name="nullable-type-inference-is-not-supported-in-this-context"></a>Der Rückschluss von Typen, die NULL-Werte zulassen, wird in diesem Kontext nicht unterstützt
-Werttypen und Strukturen können auf NULL festlegbare deklariert werden.  
+Werttypen und -strukturen können als null deklariert werden.  
   
 ```vb  
 Dim a? As Integer  
 Dim b As Integer?  
 ```  
   
- Sie können nicht jedoch die NULL-Werte zulassen Deklaration in Kombination mit den Typrückschluss verwenden. In den folgenden Beispielen werden diese Fehler verursachen.  
+ Sie können die nullfähige Deklaration jedoch nicht in Kombination mit dem Typrückschluss verwenden. Die folgenden Beispiele verursachen diesen Fehler.  
   
 ```vb  
 ' Not valid.  
@@ -34,7 +34,7 @@ Dim b As Integer?
   
 ## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
   
-- Verwenden einer `As` -Klausel, um die Variable als auf NULL festlegbar deklariert werden.  
+- Verwenden `As` Sie eine Klausel, um die Variable als NULL-Werttyp zu deklarieren.  
   
 ## <a name="see-also"></a>Siehe auch
 

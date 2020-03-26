@@ -2,29 +2,31 @@
 title: Vertrag zuerst-Tool
 ms.date: 03/30/2017
 ms.assetid: 0a880690-f460-4475-a5f4-9f91ce08fcc6
-ms.openlocfilehash: 7ddc3b2c733c73808d17b6e0f45129cc19d7527c
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: 36e1a3e19f802ca5b74cf50f5bcd57c167e31e33
+ms.sourcegitcommit: e48a54ebe62e874500a7043f6ee0b77a744d55b4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66380372"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80291705"
 ---
 # <a name="contract-first-tool"></a>Vertrag zuerst-Tool
-Dienstverträge müssen häufig aus vorhandenen Diensten erstellt werden. In .NET Framework 4.5 können datenvertragsklassen automatisch aus vorhandenen Diensten, die mit dem Vertrag zuerst-Tool erstellt werden. Zum Verwenden des Vertrag zuerst-Tools muss die XSD (XML Schema Definition)-Datei lokal heruntergeladen werden. Das Tool kann keine Remotedatenverträge per HTTP importieren.
+Dienstverträge müssen häufig aus vorhandenen Diensten erstellt werden. In .NET Framework 4.5 und höher können Datenvertragsklassen automatisch aus vorhandenen Diensten mit dem Contract-First-Tool erstellt werden. Zum Verwenden des Vertrag zuerst-Tools muss die XSD (XML Schema Definition)-Datei lokal heruntergeladen werden. Das Tool kann keine Remotedatenverträge per HTTP importieren.
 
- Der Vertrag zuerst-Tool ist als Buildaufgabe in Visual Studio 2012 integriert. Die von der Buildaufgabe generierten Codedateien werden bei jeder Projekterstellung erzeugt, sodass das Projekt einfach Änderungen im zugrunde liegenden Dienstvertrag übernehmen kann.
+ Das Contract-First-Tool wird als Buildaufgabe in Visual Studio 2012 integriert. Die von der Buildaufgabe generierten Codedateien werden bei jeder Projekterstellung erzeugt, sodass das Projekt einfach Änderungen im zugrunde liegenden Dienstvertrag übernehmen kann.
 
  Folgende Schematypen können vom Vertrag zuerst-Tool importiert werden:
 
 ```xml
 <xsd:complexType>
-<xsd:simpleType>
+ <xsd:simpleType>
+ </xsd:simpleType>
+</xsd:complexType>
 ```
 
  Einfache Typen werden nicht generiert, wenn es sich um primitive Typen, z. B. `Int16` oder `String`, handelt. Komplexe Typen werden nicht generiert, wenn sie vom Typ `Collection` sind. Typen werden ebenfalls nicht generiert, wenn sie Teil eines anderen `xsd:complexType` sind. In allen diesen Fällen werden stattdessen Verweise dieser Typen auf im Projekt vorhandene Typen verwendet.
 
 ## <a name="adding-a-data-contract-to-a-project"></a>Hinzufügen eines Datenvertrags zu einem Projekt
- Bevor das Vertrag zuerst-Tool verwendet werden kann, muss dem Projekt der Dienstvertrag (XSD) hinzugefügt werden. In dieser Übersicht wird zum Veranschaulichen von Vertrag zuerst-Funktionen der folgende Vertrag verwendet. Diese Dienstdefinition ist eine kleine Teilmenge des Dienstvertrags, der von der Such-API von Bing verwendet wird.
+ Bevor das Vertrag zuerst-Tool verwendet werden kann, muss dem Projekt der Dienstvertrag (XSD) hinzugefügt werden. In dieser Übersicht wird zum Veranschaulichen von Vertrag zuerst-Funktionen der folgende Vertrag verwendet. Diese Dienstdefinition ist eine kleine Teilmenge des Dienstvertrags, der von der Bing-Suchapi verwendet wird.
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -56,61 +58,61 @@ Dienstverträge müssen häufig aus vorhandenen Diensten erstellt werden. In .NE
 </xs:schema>
 ```
 
- Um dem Projekt den obigen Dienstvertrag hinzufügen, mit der rechten Maustaste in des Projekts, und wählen Sie **neu hinzufügen...** . Wählen Sie im WCF-Bereich des Dialogfelds Vorlagen die Schemadefinition aus, und benennen Sie die neue Datei mit SampleContract.xsd. Kopieren Sie den obigen Code, und fügen Sie ihn in die Codeansicht der neuen Datei ein.
+ Um den oben genannten Servicevertrag zum Projekt hinzuzufügen, klicken Sie mit der rechten Maustaste auf das Projekt, und wählen Sie **Neu hinzufügen...**. Wählen Sie im WCF-Bereich des Dialogfelds Vorlagen die Schemadefinition aus, und benennen Sie die neue Datei mit SampleContract.xsd. Kopieren Sie den obigen Code, und fügen Sie ihn in die Codeansicht der neuen Datei ein.
 
 ## <a name="configuring-contract-first-options"></a>Konfigurieren von Vertrag zuerst-Optionen
- Vertrag zuerst-Optionen können im Eigenschaftenmenü eines WCF-Projekts konfiguriert werden. Um Vertrag zuerst-Entwicklung zu aktivieren, wählen die **XSD als Typdefinitionssprache aktivieren** Kontrollkästchen in der WCF-Seite des Fenster mit den Projekteigenschaften.
+ Vertragsoptionen können im Eigenschaftenmenü eines WCF-Projekts konfiguriert werden. Um die Erstentwicklung zu aktivieren, aktivieren Sie das Kontrollkästchen **XSD als Typdefinitionssprache aktivieren** auf der WCF-Seite des Projekteigenschaftenfensters.
 
- ![Screenshot der WCF-Optionen zusammen mit Vertrag zuerst-Entwicklung aktiviert.](./media/contract-first-tool/contract-first-options.png)
+ ![Screenshot der WCF-Optionen mit aktivierter Vertrags-First-Entwicklung.](./media/contract-first-tool/contract-first-options.png)
 
  Um erweiterte Eigenschaften zu konfigurieren, klicken Sie auf die Schaltfläche Erweitert.
 
- ![Erweiterte Einstellungen für die Codegenerierung Vertrag (Dialogfeld).](./media/contract-first-tool/advanced-contract-settings.png)
+ ![Dialogfeld erweiterte Vertragscodegenerierungseinstellungen.](./media/contract-first-tool/advanced-contract-settings.png)
 
  Die folgenden erweiterten Einstellungen können für die Codegenerierung aus Verträgen konfiguriert werden. Die Einstellungen können nur für alle Dateien im Projekt konfiguriert werden. Das Konfigurieren der Einstellungen für einzelne Dateien ist derzeit nicht möglich.
 
-- **Serialisierungsmodus**: Diese Einstellung bestimmt, welcher Serialisierer für das Lesen von Vertragsdateien verwendet wird. Wenn **XML-Serialisierungsprogramm** ausgewählt ist, die **Auflistungstypen** und **Typen wiederverwenden** Optionen sind deaktiviert. Diese Optionen gelten nur für die **Data Contract Serializer**.
+- **Serialisierungsmodus**: Diese Einstellung bestimmt, welcher Serialisierungsprogramm zum Lesen von Servicevertragsdateien verwendet wird. Wenn XML Serializer ausgewählt ist, werden die Optionen **Sammlungstypen** und **Wiederverwendungstypen** deaktiviert. **XML Serializer** Diese Optionen gelten nur für den **Data Contract Serializer**.
 
-- **Typen wiederverwenden**: Diese Einstellung gibt an, welche Bibliotheken für die Wiederverwendung von Typen verwendet werden. Diese Einstellung gilt nur, wenn **Serialisierungsmodus** nastaven NA hodnotu **Data Contract Serializer**.
+- **Wiederverwendungstypen**: Diese Einstellung gibt an, welche Bibliotheken für die Wiederverwendung vom Typ verwendet werden. Diese Einstellung gilt nur, wenn der **Serialisierungsmodus** auf **Data Contract Serializer**festgelegt ist.
 
-- **Auflistungstyp**: Diese Einstellung gibt an, der den vollqualifizierten oder assemblyqualifizierten Typ für den Auflistungsdatentyp verwendet werden soll. Diese Einstellung gilt nur, wenn **Serialisierungsmodus** nastaven NA hodnotu **Data Contract Serializer**.
+- **Auflistungstyp**: Diese Einstellung gibt den vollqualifizierten oder Assembly-qualifizierten Typ an, der für den Auflistungsdatentyp verwendet werden soll. Diese Einstellung gilt nur, wenn der **Serialisierungsmodus** auf **Data Contract Serializer**festgelegt ist.
 
-- **Wörterbuchtyp**: Diese Einstellung gibt an, der den vollqualifizierten oder assemblyqualifizierten Typ für den wörterbuchdatentyp verwendet werden soll.
+- **Wörterbuchtyp**: Diese Einstellung gibt den vollqualifizierten oder Assembly-qualifizierten Typ an, der für den Wörterbuchdatentyp verwendet werden soll.
 
-- **EnableDataBinding**: Diese Einstellung gibt an, ob implementiert die <xref:System.ComponentModel.INotifyPropertyChanged> Schnittstelle für alle Datentypen, um die Datenbindung zu implementieren.
+- **EnableDataBinding**: Diese Einstellung gibt <xref:System.ComponentModel.INotifyPropertyChanged> an, ob die Schnittstelle für alle Datentypen implementiert werden soll, um die Datenbindung zu implementieren.
 
-- **ExcludedTypes**: Diese Einstellung gibt an, die Liste der vollqualifizierten oder assemblyqualifizierten Typen aus den Assemblys ausgeschlossen werden sollen. Diese Einstellung gilt nur, wenn **Serialisierungsmodus** nastaven NA hodnotu **Data Contract Serializer**.
+- **ExcludedTypes**:Diese Einstellung gibt die Liste der vollqualifizierten oder Assembly-qualifizierten Typen an, die von den assemblys ausgeschlossen werden sollen. Diese Einstellung gilt nur, wenn der **Serialisierungsmodus** auf **Data Contract Serializer**festgelegt ist.
 
-- **GenerateInternalTypes**: Diese Einstellung gibt an, ob Klassen generiert, die als intern gekennzeichnet sind. Diese Einstellung gilt nur, wenn **Serialisierungsmodus** nastaven NA hodnotu **Data Contract Serializer**.
+- **GenerateInternalTypes**: Diese Einstellung gibt an, ob Klassen generiert werden sollen, die als intern markiert sind. Diese Einstellung gilt nur, wenn der **Serialisierungsmodus** auf **Data Contract Serializer**festgelegt ist.
 
-- **GenerateSerializableTypes**: Diese Einstellung gibt an, ob Klassen generiert die <xref:System.SerializableAttribute> Attribut. Diese Einstellung gilt nur, wenn **Serialisierungsmodus** nastaven NA hodnotu **Data Contract Serializer**.
+- **GenerateSerializableTypes**: Diese Einstellung gibt an, <xref:System.SerializableAttribute> ob Klassen mit dem Attribut generiert werden sollen. Diese Einstellung gilt nur, wenn der **Serialisierungsmodus** auf **Data Contract Serializer**festgelegt ist.
 
-- **ImportXMLTypes**: Diese Einstellung gibt an, ob die Datenvertrags-Serialisierer anzuwendende konfiguriert die <xref:System.SerializableAttribute> -Attribut auf Klassen ohne den <xref:System.Runtime.Serialization.DataContractAttribute> Attribut.  Diese Einstellung gilt nur, wenn **Serialisierungsmodus** nastaven NA hodnotu **Data Contract Serializer**.
+- **ImportXMLTypes**: Diese Einstellung gibt an, ob der <xref:System.SerializableAttribute> Serialisierungsmodul <xref:System.Runtime.Serialization.DataContractAttribute> für Datenverträge so konfiguriert werden soll, dass das Attribut auf Klassen ohne attribut angewendet wird.  Diese Einstellung gilt nur, wenn der **Serialisierungsmodus** auf **Data Contract Serializer**festgelegt ist.
 
-- **SupportFx35TypedDataSets**: Diese Einstellung gibt an, ob zusätzliche Funktionen für typisierte Datasets, die für .NET Framework 3.5 erstellten bereitzustellen. Wenn **Serialisierungsmodus** nastaven NA hodnotu **XML-Serialisierungsprogramm**, <xref:System.Data.Design.TypedDataSetSchemaImporterExtensionFx35> Erweiterung wird an den XML-Schema-Importer hinzugefügt werden, wenn dieser Wert auf "true" festgelegt ist. Wenn **Serialisierungsmodus** nastaven NA hodnotu **Data Contract Serializer**, den Typ <xref:System.DateTimeOffset> aus verweisen ausgeschlossen wird, wenn dieser Wert auf "False" festgelegt ist, damit eine <xref:System.DateTimeOffset> wird immer generiert für ältere Frameworkversionen.
+- **SupportFx35TypedDataSets**: Diese Einstellung gibt an, ob zusätzliche Funktionen für typisierte Datensätze bereitzustellen sind, die für .NET Framework 3.5 erstellt wurden. Wenn **der Serialisierungsmodus** auf XML <xref:System.Data.Design.TypedDataSetSchemaImporterExtensionFx35> **Serializer**festgelegt ist, wird die Erweiterung dem XML-Schemaimporter hinzugefügt, wenn dieser Wert auf True festgelegt ist. Wenn **der Serialisierungsmodus** auf Data Contract <xref:System.DateTimeOffset> **Serializer**festgelegt ist, wird der Typ von <xref:System.DateTimeOffset> den Verweisen ausgeschlossen, wenn dieser Wert auf False festgelegt ist, sodass immer ein für ältere Frameworkversionen generiert wird.
 
 - **InputXsdFiles**: Diese Einstellung gibt die Liste der Eingabedateien an. Jede Datei muss ein gültiges XML-Schema enthalten.
 
 - **Sprache**: Diese Einstellung gibt die Sprache des generierten Vertragscodes an. Die Einstellung muss vom <xref:System.CodeDom.Compiler.CodeDomProvider> erkannt werden können.
 
-- **NamespaceMappings**: Diese Einstellung gibt an, die Zuordnungen zwischen den XSD-Zielnamespaces und CLR-Namespaces. Jede Zuordnung sollte folgendes Format aufweisen:
+- **NamespaceMappings**: Diese Einstellung gibt die Zuordnungen aus den XSD-Zielnamespaces zu CLR-Namespaces an. Jede Zuordnung sollte folgendes Format aufweisen:
 
     ```xml
-    "<Schema Namespace>, <CLR Namespace>"
+    "Schema Namespace, CLR Namespace"
     ```
 
      Die XML-Serialisierung akzeptiert nur eine Zuordnung im folgenden Format:
 
     ```xml
-    "*, <CLR Namespace>"
+    "*, CLR Namespace"
     ```
 
-- **OutputDirectory**: Diese Einstellung gibt das Verzeichnis, in dem die Codedateien generiert wird.
+- **OutputDirectory**: Diese Einstellung gibt das Verzeichnis an, in dem die Codedateien generiert werden.
 
  Die Einstellungen werden verwendet, um Dienstvertragstypen aus Vertragsdateien zu generieren, wenn das Projekt erstellt wird.
 
 ## <a name="using-contract-first-development"></a>Verwenden der Vertrag zuerst-Entwicklung
- Nachdem Sie dem Projekt den Dienstvertrag hinzugefügt, und bestätigen Sie die Buildeinstellungen, erstellen Sie das Projekt durch Drücken von **F6**. Die Typen, die im Dienstvertrag definiert sind, stehen dann für die Verwendung im Projekt bereit.
+ Nachdem Sie dem Projekt den Servicevertrag hinzugefügt und die Buildeinstellungen bestätigt haben, erstellen Sie das Projekt, indem Sie **F6**drücken. Die Typen, die im Dienstvertrag definiert sind, stehen dann für die Verwendung im Projekt bereit.
 
  Um die im Dienstvertrag definierten Typen zu verwenden, fügen Sie unter dem aktuellen Namespace einen Verweis auf `ContractTypes` hinzu:
 
@@ -118,11 +120,11 @@ Dienstverträge müssen häufig aus vorhandenen Diensten erstellt werden. In .NE
 using MyProjectNamespace.ContractTypes;
 ```
 
- Die im Dienstvertrag definierten Typen werden wie unten dargestellt im Projekt aufgelöst werden kann:
+ Die im Servicevertrag definierten Typen können dann im Projekt aufgelöst werden, wie unten gezeigt:
 
- ![SearchRequest-Klasse, die in IntelliSense angezeigt werden, nach dem die ersten paar Buchstaben eingeben.](./media/contract-first-tool/service-contract-types.png)
+ ![SearchRequest-Klasse wird in IntelliSense angezeigt, nachdem die ersten Buchstaben eingegeben wurden.](./media/contract-first-tool/service-contract-types.png)
 
- Die vom Tool generierten Typen werden in der Datei GeneratedXSDTypes.cs erstellt. Die Datei wird erstellt, der \<Projektverzeichnis > /obj/\<Buildkonfiguration > /XSDGeneratedCode/ Verzeichnisses standardmäßig. Das Beispielschema am Anfang dieses Themas wird wie folgt konvertiert:
+ Die vom Tool generierten Typen werden in der Datei GeneratedXSDTypes.cs erstellt. Die Datei wird \<standardmäßig im Projektverzeichnis\<>/obj/ build configuration>/XSDGeneratedCode/ erstellt. Das Beispielschema am Anfang dieses Artikels wird wie folgt konvertiert:
 
 ```csharp
 //------------------------------------------------------------------------------

@@ -15,19 +15,19 @@ helpviewer_keywords:
 - serialization, examples
 - serialization, attributes
 ms.assetid: 47d4c39d-30e1-4c7b-8a2e-301325390647
-ms.openlocfilehash: d4e30984a232b17d1f40e300655c519ec1a6e191
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: e11152dc626b1e3619b9ecbc04d8a237ca9f13d3
+ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78159909"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80248042"
 ---
 # <a name="controlling-xml-serialization-using-attributes"></a>Steuern der XML-Serialisierung mit Attributen
 
 Attribute können verwendet werden, um die XML-Serialisierung eines Objekts zu steuern oder um einen alternativen XML-Stream aus derselben Reihe von Klassen zu erstellen. Weitere Informationen zum Erstellen eines alternativen XML-Streams finden Sie unter [Vorgehensweise: Angeben eines alternativen Elementnamens für einen XML-Stream](how-to-specify-an-alternate-element-name-for-an-xml-stream.md).
 
 > [!NOTE]
-> Wenn der generierte XML-Code Abschnitt 5 World Wide Web Consortium des W3C-Dokuments ( [Simple Object Access Protocol) 1,1](https://www.w3.org/TR/2000/NOTE-SOAP-20000508/)entsprechen muss, verwenden Sie die in Attributen aufgeführten Attribute [, die die Serialisierung von codiertem SOAP Steuern](attributes-that-control-encoded-soap-serialization.md).
+> Wenn die generierte XML-Datei mit Abschnitt 5 des W3C-Dokuments (World Wide Web Consortium) mit dem Titel [Simple Object Access Protocol (SOAP) 1.1](https://www.w3.org/TR/2000/NOTE-SOAP-20000508/)übereinstimmen muss, verwenden Sie die attribute, die unter [Attribute, die codierte SOAP-Serialisierung steuern,](attributes-that-control-encoded-soap-serialization.md)aufgeführt sind.
 
 Standardmäßig wird der Name eines XML-Elements durch den Klassen- oder Membernamen festgelegt. In einer einfachen Klasse namens `Book` wird, wie in folgendem Beispiel gezeigt, durch ein Feld mit der Bezeichnung `ISBN` ein XML-Elementtag \<ISBN> erstellt.
 
@@ -241,7 +241,7 @@ Eine serialisierte Instanz könnte etwa wie folgt aussehen.
 </Group>
 ```
 
-Eine weitere Möglichkeit, die beiden XML-Streams zu unterscheiden, besteht in der Verwendung des Tools für die XML-Schemadefinition zur Generierung der XML-Schemadokumentdateien (XSD) aus dem kompilierten Code. (Weitere Informationen zur Verwendung des Tools finden Sie [im XML Schema Definition-Tool und in der XML-Serialisierung](the-xml-schema-definition-tool-and-xml-serialization.md).) Wenn kein Attribut auf das Feld angewendet wird, beschreibt das Schema das Element wie folgt.
+Eine weitere Möglichkeit, die beiden XML-Streams zu unterscheiden, besteht in der Verwendung des Tools für die XML-Schemadefinition zur Generierung der XML-Schemadokumentdateien (XSD) aus dem kompilierten Code. (Weitere Informationen zur Verwendung des Tools finden Sie unter [Das XML-Schemadefinitionstool und die XML-Serialisierung](the-xml-schema-definition-tool-and-xml-serialization.md).) Wenn kein Attribut auf das Feld angewendet wird, beschreibt das Schema das Element wie folgt.
 
 ```xml
 <xs:element minOccurs="0" maxOccurs ="1" name="Employees" type="ArrayOfEmployee" />
@@ -300,7 +300,7 @@ public class Group {
 Wenn diese Klasse kompiliert wird und ihr Schema mit dem XML Schema Definition-Tool generiert wurde, erhalten Sie als Beschreibung von `Group` den folgenden XML-Stream.
 
 ```xml
-<xs:element name="NewGroupName" type="NewTypeName">
+<xs:element name="NewGroupName" type="NewTypeName" />
 ```
 
 Wenn Sie dagegen eine Instanz der Klasse serialisieren würden, würde das XML-Dokument lediglich `NewGroupName` enthalten.

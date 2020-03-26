@@ -2,12 +2,12 @@
 title: Typen von RPC - gRPC für WCF-Entwickler
 description: Eine Überprüfung der von WCF unterstützten Arten von Remoteprozeduraufrufen und deren Entsprechungen in gRPC
 ms.date: 09/02/2019
-ms.openlocfilehash: b9d4ce7cae693ed7904229483cbccfe3b299b640
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 40c0779dc015904e9dabbb448075e3c5aa5dc49a
+ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79401784"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80111087"
 ---
 # <a name="types-of-rpc"></a>RPC-Typen
 
@@ -23,7 +23,7 @@ Es ist möglich, diese RPC-Typen ziemlich natürlich zu bestehenden gRPC-Konzept
 
 | WCF | gRPC |
 | --- | ---- |
-| Regelmäßige Anfrage/Antwort | Unäroperatoren |
+| Regelmäßige Anfrage/Antwort | Unär |
 | Duplexdienst mit Sitzung über eine Clientrückrufschnittstelle | Server-Streaming |
 | Vollduplex-Service mit Sitzung | Bidirektionales Streaming |
 | Einweg-Operationen | Client-Streaming |

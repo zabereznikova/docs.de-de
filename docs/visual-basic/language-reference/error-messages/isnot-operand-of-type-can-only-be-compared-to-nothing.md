@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - BC32128
 ms.assetid: 1155b23a-ad75-4bab-b9da-73f35c767a36
-ms.openlocfilehash: 06dc6f1532fecefba4e507bd0cc24aadc936d137
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 1660971e2a1a11d7a2d14f222cd149edf4aa4c7b
+ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72524370"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80249512"
 ---
 # <a name="isnot-operand-of-type-typename-can-only-be-compared-to-nothing-because-typename-is-a-nullable-type"></a>Ein IsNot-Operand vom Typ „Typname“ kann nur mit „Nothing“ verglichen werden, da „Typname“ ein Typ ist, der NULL-Werte zulässt
 
-Eine Variable, die als Werte zulässt deklariert wurde, wurde mit einem anderen Ausdruck als `Nothing` mithilfe des `IsNot`-Operators verglichen.
+Eine Variable, die als NULL-Werttyp deklariert wurde, wurde mit einem anderen Ausdruck als `Nothing` der Verwendung des `IsNot` Operators verglichen.
 
 **Fehler-ID:** BC32128
 

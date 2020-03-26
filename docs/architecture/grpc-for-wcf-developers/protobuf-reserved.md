@@ -2,16 +2,16 @@
 title: Protobuf reservierte Felder - gRPC für WCF-Entwickler
 description: Erfahren Sie mehr über reservierte Felder für die versionsübergreifende Kompatibilität.
 ms.date: 09/09/2019
-ms.openlocfilehash: bde658c671e970b7ec841d71d5b4284eb91195f0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f89513c4659a02cbc94e1c659baecb9e750acbdc
+ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79147944"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80111035"
 ---
 # <a name="protobuf-reserved-fields"></a>Reservierte Protobuf-Felder
 
-Die Abwärtskompatibilitätsgarantien in Protocol Buffer (Protobuf) basieren auf Feldnummern, die immer dasselbe Datenelement darstellen. Wenn ein Feld aus einer Nachricht in einer neuen Version des Dienstes entfernt wird, sollte diese Feldnummer niemals wiederverwendet werden. Sie können dies mit `reserved` dem Schlüsselwort verwenden.
+Die Abwärtskompatibilitätsgarantien in Protocol Buffer (Protobuf) basieren auf Feldnummern, die immer dasselbe Datenelement darstellen. Wenn ein Feld aus einer Nachricht in einer neuen Version des Dienstes entfernt wird, sollte diese Feldnummer niemals wiederverwendet werden. Sie können dies `reserved` erzwingen, indem Sie das Schlüsselwort verwenden.
 
 Wenn `displayName` die `marketId` felder aus `Stock` der zuvor definierten Nachricht entfernt wurden, sollten ihre Feldnummern wie im folgenden Beispiel reserviert werden.
 

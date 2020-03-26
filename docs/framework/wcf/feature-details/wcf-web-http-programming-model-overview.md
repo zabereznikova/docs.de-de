@@ -2,12 +2,12 @@
 title: Überblick über WCF-Web-HTTP-Programmiermodelle
 ms.date: 03/30/2017
 ms.assetid: 381fdc3a-6e6c-4890-87fe-91cca6f4b476
-ms.openlocfilehash: fb6ef0fdcefbc6ceec75ce30db3abf5896d85c61
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9f2350b58e3cb33613ebc8e2c3cda1e234bcde25
+ms.sourcegitcommit: e48a54ebe62e874500a7043f6ee0b77a744d55b4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79184189"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80291742"
 ---
 # <a name="wcf-web-http-programming-model-overview"></a>Überblick über WCF-Web-HTTP-Programmiermodelle
 Das Web-HTTP-Programmiermodell (Windows Communication Foundation) bietet die grundlegenden Elemente, die zum Erstellen von WEB-HTTP-Diensten mit WCF erforderlich sind. WCF WEB HTTP-Dienste sind für den Zugriff auf eine breite Palette von Clients, einschließlich Webbrowsern, konzipiert und haben die folgenden eindeutigen Anforderungen:  
@@ -135,7 +135,7 @@ interface ICustomer
   
  Dies bedeutet, dass das WCF WEB HTTP-Programmiermodell jede <xref:System.IO.Stream>Art von Daten verarbeiten kann, Sie jedoch möglicherweise für programmieren.  
   
- .NET Framework 3.5 bietet Unterstützung für JSON-Daten (AJAX) sowie Syndication-Feeds (einschließlich ATOM und RSS). Weitere Informationen zu diesen Features finden Sie unter [WCF Web HTTP Formatting](../../../../docs/framework/wcf/feature-details/wcf-web-http-formatting.md)[WCF Syndication Overview](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md) und [AJAX Integration and JSON Support](../../../../docs/framework/wcf/feature-details/ajax-integration-and-json-support.md).  
+ .NET Framework 3.5 bietet Unterstützung für JSON-Daten (AJAX) sowie Syndication-Feeds (einschließlich ATOM und RSS). Weitere Informationen zu diesen Features finden Sie unter [WCF Web HTTP Formatting](../../../../docs/framework/wcf/feature-details/wcf-web-http-formatting.md), [WCF Syndication Overview](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md)und [AJAX Integration and JSON Support](../../../../docs/framework/wcf/feature-details/ajax-integration-and-json-support.md).  
   
 ## <a name="wcf-web-http-programming-model-and-security"></a>WCF-WEB-HTTP-Programmiermodell und Sicherheit  
 
@@ -144,7 +144,7 @@ Da das WCF WEB HTTP-Programmiermodell die WS-*-Protokolle nicht unterstützt, be
 ## <a name="troubleshooting-the-wcf-web-http-programming-model"></a>Fehlerbehebung im WCF-WEB-HTTP-Programmiermodell  
  Beim Aufrufen der WCF-WEB-HTTP-Dienste mit einer <xref:System.ServiceModel.Channels.ChannelFactoryBase%601> zur Erstellung eines Kanals verwendet das <xref:System.ServiceModel.Description.WebHttpBehavior> den <xref:System.ServiceModel.EndpointAddress>-Satz in der Konfigurationsdatei, selbst wenn eine andere <xref:System.ServiceModel.EndpointAddress> an die <xref:System.ServiceModel.Channels.ChannelFactoryBase%601> weitergegeben wird.  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [WCF Syndication](../../../../docs/framework/wcf/feature-details/wcf-syndication.md)
 - [Objektmodell für WCF-Web-HTTP-Programmierung](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-object-model.md)

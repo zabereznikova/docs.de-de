@@ -1,15 +1,15 @@
 ---
-title: 'Gewusst wie: Abrufen des Werts eines Elements (LINQ to XML)'
+title: 'Vorgehensweise: Abrufen des Werts eines Elements (LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: 76b9b2a5-b3ba-49da-ba74-82100e1bd21c
-ms.openlocfilehash: cc0ddb9c4fc6364d4b10ebac378ab47cc38e508f
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: b1a61091dc59b403c5d967609e8870492c24347f
+ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74352426"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80248933"
 ---
-# <a name="how-to-retrieve-the-value-of-an-element-linq-to-xml-visual-basic"></a>Gewusst wie: Abrufen des Werts eines Elements (LINQ to XML) (Visual Basic)
+# <a name="how-to-retrieve-the-value-of-an-element-linq-to-xml-visual-basic"></a>Gewusst wie: Abrufen des Wertes eines Elements (LINQ zu XML) (Visual Basic)
 In diesem Thema wird gezeigt, wie Sie den Wert von Elementen abrufen können. Im Wesentlichen gibt es dafür zwei Möglichkeiten. Die eine Möglichkeit besteht darin, ein <xref:System.Xml.Linq.XElement> oder ein <xref:System.Xml.Linq.XAttribute> in den gewünschten Typ umzuwandeln. Der explizite Konvertierungsoperator wandelt dann den Inhalt des Elements oder Attributs in den angegebenen Typ um und weist ihn Ihrer Variable zu. Die andere Möglichkeit besteht darin, die <xref:System.Xml.Linq.XElement.Value%2A?displayProperty=nameWithType>-Eigenschaft oder die <xref:System.Xml.Linq.XAttribute.Value%2A?displayProperty=nameWithType>-Eigenschaft zu verwenden.  
   
  Wenn Sie mit Visual Basic arbeiten, empfiehlt es sich, die <xref:System.Xml.Linq.XElement.Value%2A?displayProperty=nameWithType>-Eigenschaft zu verwenden.  
@@ -23,7 +23,7 @@ Console.WriteLine(e)
 Console.WriteLine("Value of e:" & e.Value)  
 ```  
   
- Dieses Beispiel erzeugt die folgende Ausgabe:  
+ Hierdurch wird folgende Ausgabe generiert:  
   
 ```xml  
 <StringElement>abcde</StringElement>  
@@ -39,7 +39,7 @@ Console.WriteLine(e)
 Console.WriteLine("Value of e:" & CInt(e))  
 ```  
   
- Dieses Beispiel erzeugt die folgende Ausgabe:  
+ Hierdurch wird folgende Ausgabe generiert:  
   
 ```xml  
 <Age>44</Age>  
@@ -59,7 +59,7 @@ Console.WriteLine(e)
 Console.WriteLine("Value of e:" & e.Value)  
 ```  
   
- Dieses Beispiel erzeugt die folgende Ausgabe:  
+ Hierdurch wird folgende Ausgabe generiert:  
   
 ```xml  
 <StringElement>abcde</StringElement>  
@@ -67,7 +67,7 @@ Value of e:abcde
 ```  
   
 ## <a name="example"></a>Beispiel  
- Es kann vorkommen, dass Sie versuchen möchten, den Wert eines Elements abzurufen, von dem Sie gar nicht genau wissen, ob es tatsächlich existiert. Wenn Sie in einem solchen Fall das umgewandelte Element einem Typ zuweisen, der NULL-Werte zulässt (entweder ein `string`-Element oder einer der Typen in .NET Framework, der NULL-Werte zulässt), und das Element nicht vorhanden ist, wird die zugewiesene Variable einfach auf `Nothing` gesetzt. Der folgende Code zeigt, dass in den Fällen, in denen nicht klar ist, ob das Element existiert oder nicht, das Arbeiten mit der Umwandlung einfacher ist als die Verwendung der <xref:System.Xml.Linq.XElement.Value%2A>-Eigenschaft.  
+ Es kann vorkommen, dass Sie versuchen möchten, den Wert eines Elements abzurufen, von dem Sie gar nicht genau wissen, ob es tatsächlich existiert. Wenn Sie das gegossene Element in diesem Fall einem `string` NULL-Typ zuweisen (entweder oder einem der NULL-Werttypen im .NET Framework), wenn das Element nicht vorhanden ist, wird die zugewiesene Variable einfach auf `Nothing`festgelegt. Der folgende Code zeigt, dass in den Fällen, in denen nicht klar ist, ob das Element existiert oder nicht, das Arbeiten mit der Umwandlung einfacher ist als die Verwendung der <xref:System.Xml.Linq.XElement.Value%2A>-Eigenschaft.  
   
 ```vb  
 Dim root As XElement = <Root>  
