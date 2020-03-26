@@ -236,7 +236,7 @@
                       href: query-expression-syntax-examples-ordering-linq-to-dataset.md
                     - name: Elementoperatoren
                       href: query-expression-syntax-examples-element-operators.md
-                    - name: Aggregatoperatoren
+                    - name: Aggregierungsoperatoren
                       href: query-expression-syntax-examples-aggregate-operators.md
                     - name: Verknüpfungsoperatoren
                       href: query-expression-syntax-examples-join-operators.md
@@ -255,7 +255,7 @@
                       href: method-based-query-syntax-examples-conversion-operators.md
                     - name: Elementoperatoren
                       href: method-based-query-syntax-examples-element-operators.md
-                    - name: Aggregatoperatoren
+                    - name: Aggregierungsoperatoren
                       href: method-based-query-syntax-examples-aggregate-operators.md
                     - name: Join
                       href: method-based-query-syntax-examples-join-linq-to-dataset.md

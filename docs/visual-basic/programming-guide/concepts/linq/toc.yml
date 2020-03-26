@@ -148,7 +148,7 @@
               href: introduction-to-xml-literals.md
             - name: Klonen oder anfügen?
               href: cloning-vs-attaching.md
-            - name: Analysieren von XML
+            - name: Parsen von XML
               href: parsing-xml.md
               items:
                 - name: 'Vorgehensweise: Analysieren einer Zeichenfolge'

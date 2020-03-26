@@ -59,8 +59,6 @@
           href: xml-language-handling.md
         - name: 'xml:space-Behandlung in XAML'
           href: xml-space-handling.md
-    - name: Aus WPF zu System.Xaml migrierte Typen
-      href: types-migrated-from-wpf-to-system.md
     - name: Grundlagen zu XAML-Knotenstreamstrukturen und -konzepten
       href: understanding-xaml-node-stream-structures-and-concepts.md
     - name: XAMLServices-Klasse und grundlegende XAML-Lese- und -Schreibvorgänge
