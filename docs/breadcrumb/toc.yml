@@ -497,9 +497,6 @@
                 - name: Namespaces
                   tocHref: /dotnet/csharp/programming-guide/namespaces/
                   topicHref: /dotnet/csharp/programming-guide/namespaces/index
-                - name: Auf NULL festlegbare Typen
-                  tocHref: /dotnet/csharp/programming-guide/nullable-types/
-                  topicHref: /dotnet/csharp/programming-guide/nullable-types/index
                 - name: Programmierkonzepte
                   tocHref: /dotnet/csharp/programming-guide/concepts/
                   topicHref: /dotnet/csharp/programming-guide/concepts/index
@@ -695,3 +692,10 @@
         - name: Leitfaden für .NET für Apache Spark
           tocHref: /dotnet/spark/
           topicHref: /dotnet/spark/index
+        - name: Azure
+          tocHref: /dotnet/azure/
+          topicHref: /dotnet/azure/index
+          items:
+            - name: Azure SDK für .NET
+              tocHref: /dotnet/azure/sdk/
+              topicHref: /dotnet/azure/sdk/index

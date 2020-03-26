@@ -1,26 +1,19 @@
-items:
 - name: Threadsichere Auflistungen
   href: index.md
   items:
-  - name: Übersicht über BlockingCollections
-    href: blockingcollection-overview.md
-  - name: Verwendung einer threadsicheren Auflistung
-    href: when-to-use-a-thread-safe-collection.md
-  - name: 'Vorgehensweise: Hinzufügen und Entfernen von einzelnen Elementen zu bzw. aus einer BlockingCollection-Klasse'
-    href: how-to-add-and-take-items.md
-  - name: 'Vorgehensweise: Verwenden von ForEach zum Entfernen von Elementen aus der BlockingCollection-Klasse'
-    href: how-to-use-foreach-to-remove.md
-  - name: 'Vorgehensweise: Hinzufügen und Entfernen von Elementen aus einer ConcurrentDictionary-Klasse'
-    href: how-to-add-and-remove-items.md
-  - name: 'Vorgehensweise: Hinzufügen von Begrenzungs- und Blockierungsfunktionen zu einer Sammlung'
-    href: how-to-add-bounding-and-blocking.md
-  - name: 'Vorgehensweise: Verwenden von Arrays mit BlockingCollections in einer Pipeline'
-    href: how-to-use-arrays-of-blockingcollections.md
-  - name: 'Vorgehensweise: Erstellen eines Objektpools mittels ConcurrentBag'
-    href: how-to-create-an-object-pool.md
-ms.openlocfilehash: 6b17867548e1089eaa58d2c8a262fe4c6438948f
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: de-DE
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58469015"
+    - name: Übersicht über BlockingCollections
+      href: blockingcollection-overview.md
+    - name: Verwendung einer threadsicheren Auflistung
+      href: when-to-use-a-thread-safe-collection.md
+    - name: 'Vorgehensweise: Hinzufügen und Entfernen von einzelnen Elementen zu bzw. aus einer BlockingCollection-Klasse'
+      href: how-to-add-and-take-items.md
+    - name: 'Vorgehensweise: Verwenden von ForEach zum Entfernen von Elementen aus der BlockingCollection-Klasse'
+      href: how-to-use-foreach-to-remove.md
+    - name: 'Vorgehensweise: Hinzufügen und Entfernen von Elementen aus einer ConcurrentDictionary-Klasse'
+      href: how-to-add-and-remove-items.md
+    - name: 'Vorgehensweise: Hinzufügen von Begrenzungs- und Blockierungsfunktionen zu einer Sammlung'
+      href: how-to-add-bounding-and-blocking.md
+    - name: 'Vorgehensweise: Verwenden von Arrays mit BlockingCollections in einer Pipeline'
+      href: how-to-use-arrays-of-blockingcollections.md
+    - name: 'Vorgehensweise: Erstellen eines Objektpools mittels ConcurrentBag'
+      href: how-to-create-an-object-pool.md

@@ -5,16 +5,16 @@ helpviewer_keywords:
 - interfaces [C#]
 - C# language, interfaces
 ms.assetid: 2feda177-ce11-432d-81b4-d50f5f35fd37
-ms.openlocfilehash: f4ee269f41e79562c113a7627816f797b083095e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bb1b812fdbf1d521ed3fd86e23f430bcd04d00f6
+ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79157077"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80249180"
 ---
 # <a name="interfaces-c-programming-guide"></a>Schnittstellen (C#-Programmierhandbuch)
 
-Eine Schnittstelle enthält Definitionen für eine Gruppe von zugehörigen Funktionalitäten, die von einer nicht abstrakten [Klasse](../../language-reference/keywords/class.md) oder einer [Struktur](../../language-reference/builtin-types/struct.md) implementiert werden müssen. Eine Schnittstelle kann `static`-Methoden definieren, die über eine Implementierung verfügen müssen. Eine Schnittstelle kann eine Standardimplementierung für beliebige oder alle deklarierten Instanzmember bereitstellen. Eine Schnittstelle kann keine Instanzdaten wie Felder, automatisch implementierte Eigenschaften oder eigenschaftsähnliche Ereignisse deklarieren.
+Eine Schnittstelle enthält Definitionen für eine Gruppe von zugehörigen Funktionalitäten, die von einer nicht abstrakten [Klasse](../../language-reference/keywords/class.md) oder einer [Struktur](../../language-reference/builtin-types/struct.md) implementiert werden müssen. Eine Schnittstelle kann `static`-Methoden definieren, die über eine Implementierung verfügen müssen. Ab C# 8.0 kann eine Schnittstelle eine Standardimplementierung für Member definieren. Eine Schnittstelle kann keine Instanzdaten wie Felder, automatisch implementierte Eigenschaften oder eigenschaftsähnliche Ereignisse deklarieren.
 
 Durch die Verwendung von Schnittstellen können Sie beispielsweise das Verhalten aus mehreren Quellen in einer Klasse einbeziehen. Diese Funktion ist wichtig in C#, da die Sprache die mehrfache Vererbung von Klassen nicht unterstützt. Zudem müssen Sie eine Schnittstelle verwenden, wenn Sie die Vererbung für Strukturen simulieren möchten, da sie tatsächlich nicht von einer anderen Struktur oder Klasse erben können.
 
@@ -54,7 +54,7 @@ Eine Schnittstelle verfügt über die folgenden Eigenschaften:
 - Eine Schnittstelle kann nicht direkt instanziiert werden. Die zugehörigen Member werden durch die die Schnittstelle implementierende Klasse oder Struktur implementiert.
 - Eine Klasse oder Struktur kann mehrere Schnittstellen implementieren. Eine Klasse kann eine Basisklasse erben und zudem eine oder mehrere Schnittstellen implementieren.
 
-## <a name="BKMK_RelatedSections"></a> Verwandte Abschnitte
+## <a name="related-sections"></a><a name="BKMK_RelatedSections"></a> Verwandte Abschnitte
 
 - [Schnittstelleneigenschaften](../classes-and-structs/interface-properties.md)  
 - [Indexer in Schnittstellen](../indexers/indexers-in-interfaces.md)  

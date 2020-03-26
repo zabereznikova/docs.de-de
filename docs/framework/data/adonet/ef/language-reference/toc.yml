@@ -33,7 +33,7 @@
               href: query-expression-syntax-examples-filtering.md
             - name: 'Beispiele für die Abfrageausdruckssyntax: Sortieren'
               href: query-expression-syntax-examples-ordering.md
-            - name: 'Beispiele für die Abfrageausdruckssyntax: Aggregatoperatoren'
+            - name: 'Beispiele für die Abfrageausdruckssyntax: Aggregierungsoperatoren'
               href: query-expression-syntax-examples-aggregate-operators.md
             - name: 'Beispiele für die Abfrageausdruckssyntax: Partitionierung'
               href: query-expression-syntax-examples-partitioning.md
@@ -173,7 +173,7 @@
               href: less-than-or-equal-to-entity-sql.md
             - name: '!= (ungleich)'
               href: not-equal-to-entity-sql.md
-            - name: sein. (Memberzugriff)
+            - name: . (Memberzugriff)
               href: member-access-entity-sql.md
             - name: '-- (Kommentar)'
               href: comment-entity-sql.md

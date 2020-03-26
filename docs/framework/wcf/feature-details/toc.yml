@@ -706,7 +706,7 @@
               href: data-contract-schema-reference.md
             - name: WSDL und Richtlinie
               href: wsdl-and-policy.md
-            - name: 'Sicherheitsprotokolle, Version&amp;#160;1.0'
+            - name: 'Sicherheitsprotokolle, Version&#160;1.0'
               href: security-protocols-version-1-0.md
             - name: Sicherheitsprotokolle
               href: security-protocols.md

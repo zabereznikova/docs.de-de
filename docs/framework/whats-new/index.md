@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - what's new [.NET Framework]
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
-ms.openlocfilehash: fa7138127379b069b646c4b2488d1973a3ddd628
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d5657f4081577b2a27bc3c2f6880784015c56060
+ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79143316"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80249694"
 ---
 # <a name="whats-new-in-net-framework"></a>Neuerungen in .NET Framework
 
@@ -427,7 +427,7 @@ Sie können SameSite für <xref:System.Web.Security.FormsAuthentication>- und <x
       <forms cookieSameSite="Lax">
          <!-- ...   -->
       </forms>
-   <authentication />
+   </authentication>
    <sessionState cookieSameSite="Lax"></sessionState>
 </system.web>
 ```
@@ -500,7 +500,7 @@ Dies ist der grundlegende Ablauf von Enclave-basiertem Always Encrypted:
 Ab .NET Framework 4.7.2 kann ein Diagnose-Assistent die  <xref:System.Windows.Xps.Packaging.IXpsFixedPageReader.ResourceDictionaries> suchen, die für einen bestimmten Quell-URI erstellt wurden. (Dieses Feature steht für die Verwendung durch Diagnose Assistenten zur Verfügung, nicht für Produktionsanwendungen.) Ein Diagnose-Assistent (z.B. die Visual Studio-Funktion „Bearbeiten und fortfahren“) erlaubt es dem Benutzer, ein ResourceDictionary mit der Absicht zu bearbeiten, dass die Änderungen auf die aktuell ausgeführte Anwendung angewendet werden. Ein Schritt zum Erreichen dieses Ziels besteht im Ermitteln aller ResourceDictionaries, die die ausgeführte Anwendung aus dem Wörterbuch erstellt hat, das aktuell bearbeitet wird. Beispielsweise kann eine Anwendung ein ResourceDictionary deklarieren, dessen Inhalt aus einem bestimmten Quell-URI kopiert wird:
 
 ```xml
-<ResourceDictionary Source="MyRD.xaml">
+<ResourceDictionary Source="MyRD.xaml" />
 ```
 
 Ein Diagnose-Assistent, der das ursprüngliche Markup in *MyRD.xaml*  bearbeitet, kann das neue Feature verwenden, um nach dem Wörterbuch zu suchen. Das Feature wird durch eine neue statische Methode (<xref:System.Windows.Diagnostics.ResourceDictionaryDiagnostics.GetResourceDictionariesForSource%2A?displayProperty=nameWithType>) implementiert. Der Diagnose-Assistent ruft die neue Methode über einen absoluten URI auf, der das ursprüngliche Markup identifiziert, wie der folgende Code veranschaulicht:
@@ -685,7 +685,7 @@ Eine Liste der neuen APIs, die .NET Framework 4.7 hinzugefügt wurden, finden Si
 
 .NET Framework 4.7 verbessert die Serialisierung durch die <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>:
 
-**Verbesserte Funktionalität mit Elliptic Curve Cryptography (ECC)** *
+**Verbesserte Funktionalität mit Elliptic Curve Cryptography (ECC)***
 
 In .NET Framework 4.7 wurden `ImportParameters(ECParameters)`-Methoden den Klassen <xref:System.Security.Cryptography.ECDsa> und <xref:System.Security.Cryptography.ECDiffieHellman> hinzugefügt, damit ein Objekt einen bereits eingerichteten Schlüssel darstellen kann. Eine `ExportParameters(Boolean)`-Methode wurde auch zum Exportieren des Schlüssels unter Verwendung expliziter Kurvenparameter hinzugefügt.
 
@@ -1976,7 +1976,7 @@ In ASP.NET 4.5 und 4.5.1 wurden die Modellbindung für Webformulare, WebSocket-U
 
 - [ASP.NET and Web Tools für Visual Studio 2013 – Anmerkungen zu dieser Version](/aspnet/visual-studio/overview/2013/release-notes)
 
-### <a name="networking-a-namenetworking-"></a>Netzwerk <a name="networking" />
+### <a name="networking"></a>Netzwerk <a name="networking" />
 
 .NET Framework 4.5 stellt eine neue Programmierschnittstelle für HTTP-Anwendungen bereit. Weitere Informationen finden Sie in den neuen Namespaces <xref:System.Net.Http?displayProperty=nameWithType> und <xref:System.Net.Http.Headers?displayProperty=nameWithType>.
 
@@ -2120,7 +2120,7 @@ Weitere Informationen finden Sie unter [Neues in Windows Workflow Foundation](..
 
 Windows 8.x Store-Apps werden für bestimmte Formfaktoren entworfen und nutzen die Leistungsfähigkeit des Windows-Betriebssystems. Eine Teilmenge von .NET Framework 4.5 oder 4.5.1 kann mithilfe von C# oder Visual Basic zum Erstellen von Windows 8.x Store-Apps für Windows verwendet werden. Diese Teilmenge wird .NET for Windows 8.x Store genannt und in einer [Übersicht](https://docs.microsoft.com/previous-versions/windows/apps/br230302(v=vs.140)) erläutert.
 
-### <a name="portable-class-libraries-a-nameportable-"></a>Portable Klassenbibliotheken <a name="portable" />
+### <a name="portable-class-libraries"></a>Portable Klassenbibliotheken <a name="portable" />
 
 Mit dem Projekt „Portable Klassenbibliothek“ in Visual Studio 2012 (und Folgeversionen) können Sie verwaltete Assemblys, die auf mehreren .NET Framework-Plattformen ausgeführt werden können, schreiben und erstellen. Bei Verwenden eines Projekts des Typs „Portable Klassenbibliothek“ wählen Sie die Zielplattformen (wie Windows Phone- und .NET für Windows 8.x Store-Apps) aus. Die verfügbaren Typen und Member im Projekt werden automatisch auf die allgemeinen Typen und Member dieser Plattformen beschränkt. Weitere Informationen finden Sie in der Dokumentation zur [Portablen Klassenbibliothek](../../standard/cross-platform/cross-platform-development-with-the-portable-class-library.md).
 
