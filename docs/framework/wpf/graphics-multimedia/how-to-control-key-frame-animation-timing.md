@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Steuern der Keyframe-Animationszeit'
+title: 'Gewusst wie: Zeitliche Steuerung einer Keyframe-Animation'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,67 +8,67 @@ helpviewer_keywords:
 - key frames [WPF], timing
 - timing key-frame animation
 ms.assetid: b059216f-7d4b-4ca8-a019-bc287ee7bf16
-ms.openlocfilehash: d0ea56b24f8fffeb688d297a675681bce3fdc4e0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8cfd2be0bbc526ed92a5fb1b558a5a41dc9c3113
+ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61911514"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80344733"
 ---
-# <a name="how-to-control-key-frame-animation-timing"></a>Vorgehensweise: Steuern der Keyframe-Animationszeit
+# <a name="how-to-control-key-frame-animation-timing"></a>Gewusst wie: Zeitliche Steuerung einer Keyframe-Animation
 
-Dieses Beispiel zeigt, wie Sie den zeitlichen Ablauf mit Keyframes innerhalb einer Keyframe Animation steuern. Wie andere Animationen, verfügen auch Keyframe-Animationen eine <xref:System.Windows.Media.Animation.Timeline.Duration%2A> Eigenschaft. Zusätzlich zur Angabe der Dauer einer Animation, müssen Sie angeben, welcher Teil dieser Dauer aller zugehörigen Keyframes zugewiesen wird. Um die Zeit zuzuweisen, geben Sie einen <xref:System.Windows.Media.Animation.KeyTime> für jeden Keyframe der Animation.
+In diesem Beispiel wird gezeigt, wie das Timing von Schlüsselbildern in einer Keyframe-Animation gesteuert wird. Wie andere Animationen verfügen Keyframe-Animationen über eine <xref:System.Windows.Media.Animation.Timeline.Duration%2A> Eigenschaft. Zusätzlich zur Angabe der Dauer einer Animation müssen Sie angeben, welcher Teil dieser Dauer jedem seiner Schlüsselbilder zugewiesen ist. Um die Zeit zuzumachen, geben Sie für jeden Schlüsselrahmen in der Animation eine <xref:System.Windows.Media.Animation.KeyTime> an.
 
-Die <xref:System.Windows.Media.Animation.KeyTime> für jedes Keyframes gibt an, wenn ein Keyframe endet (es gibt keinen die Zeitspanne, die Wiedergabedauer eines Keyframes). Können Sie angeben, ein <xref:System.Windows.Media.Animation.KeyTime> als eine <xref:System.TimeSpan> Wert, der als Prozentsatz oder als die <xref:System.Windows.Media.Animation.KeyTime.Uniform%2A> oder <xref:System.Windows.Media.Animation.KeyTime.Paced%2A> besonderen Wert.
+Der <xref:System.Windows.Media.Animation.KeyTime> für jeden Schlüsselrahmen gibt an, wann ein Schlüsselrahmen endet (er gibt nicht an, wie lange ein Schlüsselrahmen abgespielt wird). Sie können <xref:System.Windows.Media.Animation.KeyTime> einen <xref:System.TimeSpan> Wert als Wert, als <xref:System.Windows.Media.Animation.KeyTime.Uniform%2A> Prozentsatz <xref:System.Windows.Media.Animation.KeyTime.Paced%2A> oder als oder als Sonderwert angeben.
 
 ## <a name="example"></a>Beispiel
 
-Im folgenden Beispiel wird eine <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames> um ein Rechteck auf dem Bildschirm zu animieren. Schlüsselzeiten für Keyframes festgelegt werden, mit <xref:System.TimeSpan> Werte.
+Im folgenden Beispiel <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames> wird ein verwendet, um ein Rechteck auf dem Bildschirm zu animieren. Die Schlüsselzeiten der Keyframes <xref:System.TimeSpan> werden mit Werten festgelegt.
 
 [!code-csharp[keyframes_snip#KeyTimesTimeSpanExample](~/samples/snippets/csharp/VS_Snippets_Wpf/keyframes_snip/CSharp/KeyTimesExample.cs#keytimestimespanexample)]
 [!code-vb[keyframes_snip#KeyTimesTimeSpanExample](~/samples/snippets/visualbasic/VS_Snippets_Wpf/keyframes_snip/visualbasic/keytimesexample.vb#keytimestimespanexample)]
 [!code-xaml[keyframes_snip#KeyTimesTimeSpanExample](~/samples/snippets/xaml/VS_Snippets_Wpf/keyframes_snip/XAML/KeyTimesExample.xaml#keytimestimespanexample)]
 
-Die folgende Abbildung zeigt, wenn der Wert jedes Keyframes erreicht wird.
+Die folgende Abbildung zeigt, wann der Wert jedes Schlüsselrahmens erreicht ist.
 
-![Schlüsselwerte werden nach 3, 4 und 10 Sekunden erreicht](./media/graphicsmm-keyframe-keytime1-timespan.png "graphicsmm_keyframe_keytime1_timespan")
+![Schlüsselwerte werden nach 3, 4 und 10 Sekunden erreicht](./media/graphicsmm-keyframe-keytime1-timespan.png "graphicsmm_keyframe_keytime1_timespan")
 
-Das nächste Beispiel zeigt eine Animation, die identisch ist, jedoch mit Prozentwerten Schlüsselzeiten für Keyframes festgelegt werden.
+Das nächste Beispiel zeigt eine Animation, die identisch ist, mit der Ausnahme, dass die Schlüsselzeiten der Schlüsselrahmen mit Prozentwerten festgelegt sind.
 
 [!code-csharp[keyframes_snip#KeyTimesPercentageExample](~/samples/snippets/csharp/VS_Snippets_Wpf/keyframes_snip/CSharp/KeyTimesExample.cs#keytimespercentageexample)]
 [!code-vb[keyframes_snip#KeyTimesPercentageExample](~/samples/snippets/visualbasic/VS_Snippets_Wpf/keyframes_snip/visualbasic/keytimesexample.vb#keytimespercentageexample)]
 [!code-xaml[keyframes_snip#KeyTimesPercentageExample](~/samples/snippets/xaml/VS_Snippets_Wpf/keyframes_snip/XAML/KeyTimesExample.xaml#keytimespercentageexample)]
 
-Die folgende Abbildung zeigt, wenn der Wert jedes Keyframes erreicht wird.
+Die folgende Abbildung zeigt, wann der Wert jedes Schlüsselrahmens erreicht ist.
 
-![Schlüsselwerte werden nach 3, 4 und 10 Sekunden erreicht](./media/graphicsmm-keyframe-keytime2-percentage.png "graphicsmm_keyframe_keytime2_percentage")
+![Schlüsselwerte werden nach 3, 4 und 10 Sekunden erreicht](./media/graphicsmm-keyframe-keytime2-percentage.png "graphicsmm_keyframe_keytime2_percentage")
 
-Im nächsten Beispiel wird <xref:System.Windows.Media.Animation.KeyTime.Uniform%2A> key Time-Werten.
+Im nächsten <xref:System.Windows.Media.Animation.KeyTime.Uniform%2A> Beispiel werden wichtige Zeitwerte verwendet.
 
 [!code-csharp[keyframes_snip#KeyTimesUniformExample](~/samples/snippets/csharp/VS_Snippets_Wpf/keyframes_snip/CSharp/KeyTimesExample.cs#keytimesuniformexample)]
 [!code-vb[keyframes_snip#KeyTimesUniformExample](~/samples/snippets/visualbasic/VS_Snippets_Wpf/keyframes_snip/visualbasic/keytimesexample.vb#keytimesuniformexample)]
 [!code-xaml[keyframes_snip#KeyTimesUniformExample](~/samples/snippets/xaml/VS_Snippets_Wpf/keyframes_snip/XAML/KeyTimesExample.xaml#keytimesuniformexample)]
 
-Die folgende Abbildung zeigt, wenn der Wert jedes Keyframes erreicht wird.
+Die folgende Abbildung zeigt, wann der Wert jedes Schlüsselrahmens erreicht ist.
 
-![Schlüsselwerte werden am 3.3,6.6, 6,6 und 9,9 Sekunden erreicht](./media/graphicsmm-keyframe-keytime3-uniform.png "graphicsmm_keyframe_keytime3_uniform")
+![Schlüsselwerte werden nach 3,3, 6,6 und 9,9 Sekunden erreicht](./media/graphicsmm-keyframe-keytime3-uniform.png "graphicsmm_keyframe_keytime3_uniform")
 
-Im letzten Beispiel wird <xref:System.Windows.Media.Animation.KeyTime.Paced%2A> key Time-Werten.
+Im letzten <xref:System.Windows.Media.Animation.KeyTime.Paced%2A> Beispiel werden wichtige Zeitwerte verwendet.
 
 [!code-csharp[keyframes_snip#KeyTimesPacedExample](~/samples/snippets/csharp/VS_Snippets_Wpf/keyframes_snip/CSharp/KeyTimesExample.cs#keytimespacedexample)]
 [!code-vb[keyframes_snip#KeyTimesPacedExample](~/samples/snippets/visualbasic/VS_Snippets_Wpf/keyframes_snip/visualbasic/keytimesexample.vb#keytimespacedexample)]
 [!code-xaml[keyframes_snip#KeyTimesPacedExample](~/samples/snippets/xaml/VS_Snippets_Wpf/keyframes_snip/XAML/KeyTimesExample.xaml#keytimespacedexample)]
 
-Die folgende Abbildung zeigt, wenn der Wert jedes Keyframes erreicht wird.
+Die folgende Abbildung zeigt, wann der Wert jedes Schlüsselrahmens erreicht ist.
 
-![Schlüsselwerte werden auf 0, 5 und 10 Sekunden erreicht](./media/graphicsmm-keyframe-keytime4-paced.png "graphicsmm_keyframe_keytime4_paced")
+![Schlüsselwerte werden nach 0, 5 und 10 Sekunden erreicht](./media/graphicsmm-keyframe-keytime4-paced.png "graphicsmm_keyframe_keytime4_paced")
 
-Der Einfachheit halber die Codeversionen dieses Beispiels lokale Animationen, storyboards, da nur eine einzelne Animation auf eine einzelne Eigenschaft angewendet wird, aber in den Beispielen können geändert werden, um Storyboards zu verwenden. Ein Beispiel, wie Sie ein Storyboard im Code deklarieren, finden Sie unter [Animieren einer Eigenschaft unter Verwendung eines Storyboards](how-to-animate-a-property-by-using-a-storyboard.md).
+Der Einfachheit halber verwenden die Codeversionen dieses Beispiels lokale Animationen und keine Storyboards, da nur eine einzelne Animation auf eine einzelne Eigenschaft angewendet wird, die Beispiele jedoch geändert werden können, um Storyboards stattdessen zu verwenden. Ein Beispiel zum Deklarieren eines Storyboards im Code finden Sie unter [Animieren einer Eigenschaft mithilfe eines Storyboards](how-to-animate-a-property-by-using-a-storyboard.md).
 
-Das vollständige Beispiel finden Sie unter [Beispiel für eine KeyFrame-Animation](https://go.microsoft.com/fwlink/?LinkID=160012). Weitere Informationen zu den Keyframe-Animationen, finden Sie unter den [Übersicht über Keyframe Animationen](key-frame-animations-overview.md).
+Das vollständige Beispiel finden Sie unter [Beispiel für eine Keyframe-Animation](https://github.com/microsoft/WPF-Samples/tree/master/Animation/KeyFrameAnimation). Weitere Informationen zu Keyframe-Animationen finden Sie in der [Key-Frame-Animationsübersicht](key-frame-animations-overview.md).
 
 ## <a name="see-also"></a>Siehe auch
 
 - [Übersicht über Keyframe-Animationen](key-frame-animations-overview.md)
 - [Übersicht über Animationen](animation-overview.md)
-- [Themen zu Vorgehensweisen](animation-and-timing-how-to-topics.md)
+- [Gewusst wie-Themen](animation-and-timing-how-to-topics.md)

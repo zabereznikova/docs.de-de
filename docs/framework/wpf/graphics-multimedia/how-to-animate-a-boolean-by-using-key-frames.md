@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Animieren eines booleschen Werts mithilfe von Keyframes'
+title: 'Gewusst wie: Animieren eines booleschen Werts mithilfe von Keyframes'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,24 +9,24 @@ helpviewer_keywords:
 - animation [WPF], Booleans with key frames
 - key frames [WPF], animating Booleans with
 ms.assetid: 4b0fac96-6231-4fcf-9775-4dd673ddc785
-ms.openlocfilehash: 59a72916721cccbe66f704253f148828fa8cd418
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 35704996dcf21fe463169dc13572941bcd8fbad1
+ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62020204"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80344943"
 ---
-# <a name="how-to-animate-a-boolean-by-using-key-frames"></a>Vorgehensweise: Animieren eines booleschen Werts mithilfe von Keyframes
-Dieses Beispiel zeigt, wie die boolesche Eigenschaft-Wert, der animiert ein <xref:System.Windows.Controls.Button> Steuerelement mithilfe von Keyframes.  
+# <a name="how-to-animate-a-boolean-by-using-key-frames"></a>Gewusst wie: Animieren eines booleschen Werts mithilfe von Keyframes
+In diesem Beispiel wird gezeigt, wie <xref:System.Windows.Controls.Button> der boolesche Eigenschaftswert eines Steuerelements mithilfe von Schlüsselrahmen animiert wird.  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird die <xref:System.Windows.Media.Animation.BooleanAnimationUsingKeyFrames> -Klasse zum Animieren der <xref:System.Windows.UIElement.IsEnabled%2A> Eigenschaft eine <xref:System.Windows.Controls.Button> Steuerelement. Alle Keyframes in diesem Beispiel verwenden Sie eine Instanz von der <xref:System.Windows.Media.Animation.DiscreteBooleanKeyFrame> Klasse. Diskrete Keyframes wie <xref:System.Windows.Media.Animation.DiscreteBooleanKeyFrame> abrupte Sprünge zwischen Werten, d. h. erstellen, die Verschiebung der Animation ist ruckartig.  
+ Im folgenden Beispiel <xref:System.Windows.Media.Animation.BooleanAnimationUsingKeyFrames> wird die <xref:System.Windows.UIElement.IsEnabled%2A> Klasse <xref:System.Windows.Controls.Button> verwendet, um die Eigenschaft eines Steuerelements zu animieren. Alle Schlüsselrahmen in diesem Beispiel verwenden <xref:System.Windows.Media.Animation.DiscreteBooleanKeyFrame> eine Instanz der Klasse. Diskrete Tastenbilder <xref:System.Windows.Media.Animation.DiscreteBooleanKeyFrame> wie plötzliche Sprünge zwischen Werten erstellen, das heißt, die Bewegung der Animation ist ruckartig.  
   
  [!code-csharp[keyframes_snip#BooleanAnimationUsingKeyFramesWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/keyframes_snip/CSharp/BooleanAnimationUsingKeyFramesExample.cs#booleananimationusingkeyframeswholepage)]
  [!code-vb[keyframes_snip#BooleanAnimationUsingKeyFramesWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/keyframes_snip/visualbasic/booleananimationusingkeyframesexample.vb#booleananimationusingkeyframeswholepage)]
  [!code-xaml[keyframes_snip#BooleanAnimationUsingKeyFramesWholePage](~/samples/snippets/xaml/VS_Snippets_Wpf/keyframes_snip/XAML/BooleanAnimationUsingKeyFramesExample.xaml#booleananimationusingkeyframeswholepage)]  
   
- Das vollständige Beispiel finden Sie unter [Beispiel für eine KeyFrame-Animation](https://go.microsoft.com/fwlink/?LinkID=160012).  
+ Das vollständige Beispiel finden Sie unter [Beispiel für eine Keyframe-Animation](https://github.com/microsoft/WPF-Samples/tree/master/Animation/KeyFrameAnimation).  
   
 ## <a name="see-also"></a>Siehe auch
 
@@ -34,4 +34,4 @@ Dieses Beispiel zeigt, wie die boolesche Eigenschaft-Wert, der animiert ein <xre
 - <xref:System.Windows.UIElement.IsEnabled%2A>
 - <xref:System.Windows.Controls.Button>
 - [Übersicht über Keyframe-Animationen](key-frame-animations-overview.md)
-- [Key-Frame How-to Topics (Themen zur Vorgehensweise zu Keyframes)](key-frame-animation-how-to-topics.md)
+- [Themen zur Vorgehensweise mit Keyframes](key-frame-animation-how-to-topics.md)

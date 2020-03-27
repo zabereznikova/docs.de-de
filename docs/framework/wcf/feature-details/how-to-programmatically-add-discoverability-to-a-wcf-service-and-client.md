@@ -2,15 +2,15 @@
 title: 'Vorgehensweise: Programmgesteuertes Hinzufügen der Ermittelbarkeit zu einem WCF-Dienst und -Client'
 ms.date: 03/30/2017
 ms.assetid: 4f7ae7ab-6fc8-4769-9730-c14d43f7b9b1
-ms.openlocfilehash: dd96bc168413eef99260a5251e74971aa1309ff4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bf89c793cbd72a0a3980e6ec8e42c688dcedec26
+ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79184883"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80344975"
 ---
 # <a name="how-to-programmatically-add-discoverability-to-a-wcf-service-and-client"></a>Vorgehensweise: Programmgesteuertes Hinzufügen der Ermittelbarkeit zu einem WCF-Dienst und -Client
-In diesem Thema wird erläutert, wie Sie einen Windows Communication Foundation (WCF)-Dienst auffindbar machen. Es basiert auf dem [Self-Host-Beispiel.](https://go.microsoft.com/fwlink/?LinkId=145523)  
+In diesem Thema wird erläutert, wie Sie einen Windows Communication Foundation (WCF)-Dienst auffindbar machen. Es basiert auf dem [Self-Host-Beispiel.](https://docs.microsoft.com/dotnet/framework/wcf/samples/self-host)  
   
 ### <a name="to-configure-the-existing-self-host-service-sample-for-discovery"></a>So konfigurieren Sie das vorhandene Beispiel unter "Selbst gehostete Dienste" für die Suche  
   
@@ -124,7 +124,7 @@ In diesem Thema wird erläutert, wie Sie einen Windows Communication Foundation 
   
      Diese Methode verwendet die von `FindCalculatorServiceAddress` zurückgegebene Endpunktadresse zum Aufrufen des Rechnerdiensts.  
   
-11. Erstellen Sie innerhalb der `InvokeCalculatorService`-Methode eine Instanz der `CalculatorServiceClient`-Klasse. Diese Klasse wird durch das [Self-Host-Beispiel](https://go.microsoft.com/fwlink/?LinkId=145523) definiert. Sie wurde mithilfe von "Svcutil.exe" generiert.  
+11. Erstellen Sie innerhalb der `InvokeCalculatorService`-Methode eine Instanz der `CalculatorServiceClient`-Klasse. Diese Klasse wird durch das [Self-Host-Beispiel](https://docs.microsoft.com/dotnet/framework/wcf/samples/self-host) definiert. Sie wurde mithilfe von "Svcutil.exe" generiert.  
   
     ```csharp  
     // Create a client  
@@ -220,7 +220,7 @@ In diesem Thema wird erläutert, wie Sie einen Windows Communication Foundation 
     ```  
   
 ## <a name="example"></a>Beispiel  
- Es folgt eine Auflistung des Codes für dieses Beispiel. Da dieser Code auf dem [Self-Host-Beispiel](https://go.microsoft.com/fwlink/?LinkId=145523) basiert, werden nur die geänderten Dateien aufgelistet. Weitere Informationen zum Self-Host-Beispiel finden Sie unter [Setup-Anweisungen](https://go.microsoft.com/fwlink/?LinkId=145522).  
+ Es folgt eine Auflistung des Codes für dieses Beispiel. Da dieser Code auf dem [Self-Host-Beispiel](https://docs.microsoft.com/dotnet/framework/wcf/samples/self-host) basiert, werden nur die geänderten Dateien aufgelistet. Weitere Informationen zum Self-Host-Beispiel finden Sie unter [Setup-Anweisungen](https://docs.microsoft.com/dotnet/framework/wcf/samples/set-up-instructions).  
   
 ```csharp  
 // Service.cs  
@@ -340,7 +340,7 @@ namespace DiscoveryClientApp
 }  
 ```  
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Übersicht über die WCF-Suche](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)
 - [Objektmodell der WCF-Suche](../../../../docs/framework/wcf/feature-details/wcf-discovery-object-model.md)
