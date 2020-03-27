@@ -12,12 +12,12 @@ helpviewer_keywords:
 - assemblies [.NET Framework]
 - version boundaries
 - type boundaries
-ms.openlocfilehash: f85fef37ac952c91ac73570f26d80d8a46f4eedf
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b61d079a86bdd4a809d44ad128f19a7b358c8384
+ms.sourcegitcommit: b75a45f0cfe012b71b45dd9bf723adf32369d40c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78156504"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80228679"
 ---
 # <a name="assemblies-in-net"></a>Assemblys in .NET
 
@@ -116,3 +116,4 @@ In C# können Sie zwei Versionen derselben Assembly in einer einzigen Anwendung 
 - [How to: Laden und Entladen von Assemblys](load-unload.md)
 - [How to: Verwenden und Debuggen von Assemblyentladbarkeit in .NET Core](unloadability.md)
 - [How to: Bestimmen, ob eine Datei eine Assembly ist](identify.md)
+- [How to: Untersuchen von Assemblyinhalten mithilfe von MetadataLoadContext](inspect-contents-using-metadataloadcontext.md)

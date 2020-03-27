@@ -25,7 +25,7 @@
           href: net-core-net-framework-containers/net-container-os-targets.md
         - name: Offizielle .NET-Docker-Images
           href: net-core-net-framework-containers/official-net-docker-images.md
-    - name: Architekturcontainer und auf Microservice basierende Anwendungen
+    - name: Architekturentwurf von Container- und auf Microservice basierenden Apps
       href: architect-microservice-container-applications/index.md
       items:
         - name: Containerisieren monolithischer Anwendungen
@@ -60,12 +60,12 @@
           href: architect-microservice-container-applications/resilient-high-availability-microservices.md
         - name: Orchestrieren von Microservices und Anwendungen mit mehreren Containern für hohe Skalierbarkeit und Verfügbarkeit
           href: architect-microservice-container-applications/scalable-available-multi-container-microservice-applications.md
-    - name: Entwicklungsprozess für auf Docker-basierende Anwendungen
+    - name: Entwicklungsprozess bei Docker-basierten Apps
       href: docker-application-development-process/index.md
       items:
         - name: Entwicklungsworkflow für Docker-Apps
           href: docker-application-development-process/docker-app-development-workflow.md
-    - name: 'Entwerfen und Entwickeln von .NET-Anwendungen, die auf mehreren Containern und Microservice basieren'
+    - name: Entwerfen und Entwickeln von auf mehreren Containern und Microservice-basierenden .NET-Apps
       href: multi-container-microservice-net-applications/index.md
       items:
         - name: Entwerfen einer an Microservice orientierten Anwendung
@@ -125,7 +125,7 @@
           href: microservice-ddd-cqrs-patterns/microservice-application-layer-web-api-design.md
         - name: Implementieren der Microservice-Anwendungsschicht mithilfe der Web-API
           href: microservice-ddd-cqrs-patterns/microservice-application-layer-implementation-web-api.md
-    - name: Implementieren von widerstandsfähigen Anwendungen
+    - name: Implementieren resilienter Apps
       href: implement-resilient-applications/index.md
       items:
         - name: Behandeln von Teilfehlern
@@ -136,9 +136,7 @@
           href: implement-resilient-applications/implement-retries-exponential-backoff.md
         - name: Implementieren widerstandsfähiger Entity Framework Core-SQL-Verbindungen
           href: implement-resilient-applications/implement-resilient-entity-framework-core-sql-connections.md
-        - name: Untersuchen benutzerdefinierter Wiederholungen von HTTP-Aufrufen mit exponentiellem Backoff
-          href: implement-resilient-applications/explore-custom-http-call-retries-exponential-backoff.md
-        - name: Verwenden von HttpClientFactory zur Implementierung robuster HTTP-Anforderungen
+        - name: Verwenden von IHttpClientFactory zur Implementierung robuster HTTP-Anforderungen
           href: implement-resilient-applications/use-httpclientfactory-to-implement-resilient-http-requests.md
         - name: Implementieren von Wiederholungen von HTTP-Aufrufen mit exponentiellem Backoff mit Polly
           href: implement-resilient-applications/implement-http-call-retries-exponential-backoff-polly.md
@@ -146,7 +144,7 @@
           href: implement-resilient-applications/implement-circuit-breaker-pattern.md
         - name: Systemüberwachung
           href: implement-resilient-applications/monitor-app-health.md
-    - name: Sichern von .NET-Microservices und Webanwendungen
+    - name: Sichere .NET-Microservices und -Webanwendungen
       href: secure-net-microservices-web-applications/index.md
       items:
         - name: Informationen zur Autorisierung in .NET-Microservices und Webanwendungen

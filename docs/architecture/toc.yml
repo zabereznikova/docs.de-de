@@ -1,4 +1,4 @@
-- name: Leitfaden zur .NET-Anwendungsarchitektur
+- name: Architekturleitfaden für .NET-Apps
   href: index.yml
 - name: E-Books
   expanded: true
@@ -11,7 +11,7 @@
       href: modernize-with-azure-containers/
     - name: Lebenszyklus von Docker-Containeranwendungen mit der Microsoft-Plattform und Tools
       href: containerized-lifecycle/
-    - name: '.NET Microservices: Architektur für .NET-Containeranwendungen'
+    - name: '.NET-Microservices: .NET-Microservices-Architektur für .NET-Containeranwendungen'
       href: microservices/
     - name: 'Serverlose Apps: Architektur, Muster und Azure-Implementierung'
       href: serverless/

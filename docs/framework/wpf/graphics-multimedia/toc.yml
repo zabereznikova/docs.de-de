@@ -246,13 +246,13 @@
               href: how-to-apply-a-drawing-to-a-3-d-model.md
             - name: Anwenden von Material auf die Vorder- und Rückseite eines 3D-Objekts
               href: how-to-apply-material-to-the-front-and-back-of-a-3-d-object.md
-            - name: Anwenden von Emissive Material auf ein 3D-Objekt
+            - name: Anwenden von selbstleuchtendem Material auf ein 3D-Objekt
               href: how-to-apply-emissive-material-to-a-3-d-object.md
             - name: Transformieren der Skalierung eines 3D-Modells
               href: how-to-transform-the-scale-of-a-3-d-model.md
             - name: Anwenden mehrerer Transformationen auf ein 3D-Modell
               href: how-to-apply-multiple-transformations-to-a-3-d-model.md
-            - name: Animieren von 3D-Übersetzungen
+            - name: Animieren von 3D-Translationen
               href: how-to-animate-3-d-translations.md
             - name: Animieren einer 3D-Drehung mit Storyboards
               href: how-to-animate-a-3-d-rotation-using-storyboards.md
@@ -264,13 +264,13 @@
               href: how-to-animate-a-3-d-rotation-using-key-frames.md
             - name: Animieren einer 3D-Drehung mit Keyframes (QuaternionAnimationUsingKeyFrames)
               href: animate-a-3-d-rotation-quaternionanimationusingkeyframes.md
-            - name: Animieren der Kameraposition und -richtung in 3D-Szenen
+            - name: Animieren der Kameraposition und –richtung in 3D-Szenen
               href: how-to-animate-camera-position-and-direction-in-a-3d-scene.md
-            - name: Animieren von Kameraposition und -richtung mithilfe von Keyframes
+            - name: Animieren von Kameraposition und –richtung mithilfe von Keyframes
               href: how-to-animate-camera-position-and-direction-using-key-frames.md
             - name: Animieren von Materialeigenschaften in einer 3D-Szene
               href: how-to-animate-material-properties-in-a-3-d-scene.md
-            - name: Treffertest in einem Viewport3D-Objekt
+            - name: Treffertest in Viewport3D
               href: how-to-hit-test-in-a-viewport3d.md
             - name: Testen der Point4D-Strukturen auf Gleichheit und Ungleichheit
               href: how-to-test-point4d-structures-for-equality-and-inequality.md
