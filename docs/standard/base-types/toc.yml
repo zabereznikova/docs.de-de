@@ -116,8 +116,10 @@
                   href: how-to-strip-invalid-characters-from-a-string.md
                 - name: 'Gewusst wie: Überprüfen, ob Zeichenfolgen ein gültiges E-Mail-Format aufweisen'
                   href: how-to-verify-that-strings-are-in-valid-email-format.md
-        - name: Zeichencodierung in .NET
-          href: character-encoding.md
+    - name: Zeichencodierung in .NET
+      href: character-encoding-introduction.md
+    - name: Zeichencodierung in .NET
+      href: character-encoding.md
     - name: Analysieren von Zeichenfolgen
       href: parsing-strings.md
       items:

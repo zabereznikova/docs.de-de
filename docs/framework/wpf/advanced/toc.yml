@@ -481,6 +481,8 @@
     - name: Migration und Interoperabilität
       href: migration-and-interoperability.md
       items:
+        - name: "Migrieren von WPF\_3.X zu WPF\_4.5"
+          href: types-migrated-from-wpf-to-system.md
         - name: Interaktion zwischen WPF und Windows Forms
           href: wpf-and-windows-forms-interoperation.md
           items:
@@ -508,7 +510,7 @@
               href: walkthrough-arranging-windows-forms-controls-in-wpf.md
             - name: 'Exemplarische Vorgehensweise: Datenbindung in Hybridanwendungen'
               href: walkthrough-binding-to-data-in-hybrid-applications.md
-            - name: "Exemplarische Vorgehensweise: Hosten eines zusammengesetzten 3D-WPF-Steuerelements in Windows\_Forms"
+            - name: 'Exemplarische Vorgehensweise: Hosten eines dreidimensionalen zusammengesetzten WPF-Steuerelements in Windows Forms'
               href: walkthrough-hosting-a-3-d-wpf-composite-control-in-windows-forms.md
             - name: "Exemplarische Vorgehensweise: Hosten eines zusammengesetzten WPF-Steuerelements in Windows\_Forms"
               href: walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md

@@ -62,5 +62,7 @@
   href: identify.md
 - name: Laden und Entladen von Assemblys
   href: load-unload.md
-- name: 'Exemplarische Vorgehensweise: Einbetten von Typen aus verwalteten Assemblys in Visual Studio'
+- name: 'Exemplarische Vorgehensweise: Einbetten von Typen verwalteter Assemblys in Visual Studio'
   href: embed-types-visual-studio.md
+- name: Untersuchen von Assemblyinhalten mithilfe von MetadataLoadContext
+  href: inspect-contents-using-metadataloadcontext.md

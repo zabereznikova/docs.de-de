@@ -35,7 +35,9 @@
       href: how-to-guides/ubuntu-instructions.md
     - name: Erstellen einer Anwendung unter Windows
       href: how-to-guides/windows-instructions.md
-- name: Verweis
+    - name: Installieren interaktiver Notebooks für Azure HDInsight
+      href: how-to-guides/hdinsight-notebook-installation.md
+- name: Referenz
   items:
     - name: API-Referenz
       href: 'https://docs.microsoft.com/dotnet/api/?view=spark-dotnet'
@@ -45,5 +47,5 @@
       href: resources/index.md
     - name: GitHub
       href: 'https://github.com/dotnet/spark'
-    - name: Stack Overflow
+    - name: Stapelüberlauf
       href: 'https://stackoverflow.com/questions/tagged/.net-spark'
