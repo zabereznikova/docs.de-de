@@ -2,12 +2,12 @@
 title: C#-Tutorials
 description: Probieren Sie diese C#-Tutorials aus, um die Erstellung eines C#-Programms und die C#-Sprachfeatures zu erlernen.
 ms.date: 10/25/2018
-ms.openlocfilehash: 8adbec3311c7a0e88475734312ecc3621042c3f3
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 57d2471ef8ad06eb821a1d1d88210dfbb8dc732e
+ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75346798"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80345098"
 ---
 # <a name="c-tutorials"></a>C#-Tutorials
 
@@ -56,7 +56,7 @@ Alle einführenden Tutorials, die auf die „Hallo Welt“-Lektion folgen, sind 
 
 ## <a name="general-tutorials"></a>Allgemeine Tutorials
 
-Mit folgenden Tutorials können Sie C#-Programme mit [.NET Core](../../core/index.md) erstellen:
+Mit folgenden Tutorials können Sie C#-Programme mit [.NET Core](../../core/index.yml) erstellen:
 
 * [Konsolenanwendung](console-teleprompter.md): veranschaulicht die Konsolen-E/A, die Struktur einer Konsolenanwendung und die Grundlagen des taskbasierten asynchronen Programmiermodells.
 * [REST-Client](console-webapiclient.md): veranschaulicht Webkommunikation, JSON-Serialisierung und objektorientierte Funktionen in der Sprache C#.

@@ -5,16 +5,16 @@ author: cartermp
 ms.date: 12/27/2019
 ms.technology: dotnet-standard
 ms.assetid: bbfe6465-329d-4982-869d-472e7ef85d93
-ms.openlocfilehash: b7856cbb12ac78830ceace6ad44214ca32444a82
-ms.sourcegitcommit: b75a45f0cfe012b71b45dd9bf723adf32369d40c
+ms.openlocfilehash: f6496ae38827da5d00c8b278011a9c373afe0e76
+ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80228799"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80344088"
 ---
 # <a name="net-guide"></a>Leitfaden für .NET
 
-Der Leitfaden für .NET enthält Informationen zu .NET. Je nachdem, wie vertraut Sie mit .NET sind, können Sie sich unterschiedliche Abschnitte oder auch andere Leitfäden ansehen, z. B. für [.NET Core](../core/index.md) oder [.NET Framework](../framework/index.yml).
+Der Leitfaden für .NET enthält Informationen zu .NET. Je nachdem, wie vertraut Sie mit .NET sind, können Sie sich unterschiedliche Abschnitte oder auch andere Leitfäden ansehen, z. B. für [.NET Core](../core/index.yml) oder [.NET Framework](../framework/index.yml).
 
 ## <a name="new-to-net"></a>Neu bei .NET?
 
