@@ -3,73 +3,73 @@ title: Willkommen bei .NET
 description: Erste Schritte mit der .NET-Technologiefamilie.
 ms.date: 12/03/2019
 ms.custom: updateeachrelease
-ms.openlocfilehash: bfc9b55f06a5830c13df52f992d2630f1f45d8be
-ms.sourcegitcommit: b75a45f0cfe012b71b45dd9bf723adf32369d40c
+ms.openlocfilehash: f5673f91545b98fb706d8f1cc03ef7746f1b19b8
+ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80228798"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80345309"
 ---
-# <a name="welcome-to-net"></a><span data-ttu-id="641b1-103">Willkommen bei .NET</span><span class="sxs-lookup"><span data-stu-id="641b1-103">Welcome to .NET</span></span>
+# <a name="welcome-to-net"></a><span data-ttu-id="c683a-103">Willkommen bei .NET</span><span class="sxs-lookup"><span data-stu-id="c683a-103">Welcome to .NET</span></span>
 
-<span data-ttu-id="641b1-104">Unter [Erste Schritte mit .NET Core](core/get-started.md) erhalten Sie Informationen zum Erstellen von .NET Core-Apps.</span><span class="sxs-lookup"><span data-stu-id="641b1-104">See [Get started with .NET Core](core/get-started.md) to learn how to create .NET Core apps.</span></span>
+<span data-ttu-id="c683a-104">Unter [Erste Schritte mit .NET Core](core/get-started.md) erhalten Sie Informationen zum Erstellen von .NET Core-Apps.</span><span class="sxs-lookup"><span data-stu-id="c683a-104">See [Get started with .NET Core](core/get-started.md) to learn how to create .NET Core apps.</span></span>
 
-<span data-ttu-id="641b1-105">Erstellen Sie viele Arten von Apps mit .NET, z.B. Cloud, IoT und Spiele, anhand kostenloser plattformübergreifender Tools.</span><span class="sxs-lookup"><span data-stu-id="641b1-105">Build many types of apps with .NET, such as cloud, IoT, and games using free cross-platform tools.</span></span> <span data-ttu-id="641b1-106">Ihre Apps können unter iOS, Android, Linux, macOS und Windows ausgeführt werden.</span><span class="sxs-lookup"><span data-stu-id="641b1-106">Your apps can run on Android, iOS, Linux, macOS, and Windows.</span></span> <span data-ttu-id="641b1-107">Stellen Sie Apps auf Servern oder Desktops bereit, und veröffentlichen Sie sie in App Stores für die Bereitstellung auf mobilen Geräten.</span><span class="sxs-lookup"><span data-stu-id="641b1-107">Deploy apps to servers or desktops and publish to app stores for deployment on mobile devices.</span></span> <span data-ttu-id="641b1-108">.NET ist für Schüler, Studenten und Hobbyprogrammierer zugänglich, und alle sind herzlich eingeladen, sich an einer lebhaften internationalen Entwicklercommunity zu beteiligen und direkte Beiträge zu zahlreichen .NET-Technologien zu leisten.</span><span class="sxs-lookup"><span data-stu-id="641b1-108">.NET is accessible to students and hobbyists, and all are welcome to participate in a lively international developer community and make direct contributions to many of the .NET technologies.</span></span>
+<span data-ttu-id="c683a-105">Erstellen Sie viele Arten von Apps mit .NET, z.B. Cloud, IoT und Spiele, anhand kostenloser plattformübergreifender Tools.</span><span class="sxs-lookup"><span data-stu-id="c683a-105">Build many types of apps with .NET, such as cloud, IoT, and games using free cross-platform tools.</span></span> <span data-ttu-id="c683a-106">Ihre Apps können unter iOS, Android, Linux, macOS und Windows ausgeführt werden.</span><span class="sxs-lookup"><span data-stu-id="c683a-106">Your apps can run on Android, iOS, Linux, macOS, and Windows.</span></span> <span data-ttu-id="c683a-107">Stellen Sie Apps auf Servern oder Desktops bereit, und veröffentlichen Sie sie in App Stores für die Bereitstellung auf mobilen Geräten.</span><span class="sxs-lookup"><span data-stu-id="c683a-107">Deploy apps to servers or desktops and publish to app stores for deployment on mobile devices.</span></span> <span data-ttu-id="c683a-108">.NET ist für Schüler, Studenten und Hobbyprogrammierer zugänglich, und alle sind herzlich eingeladen, sich an einer lebhaften internationalen Entwicklercommunity zu beteiligen und direkte Beiträge zu zahlreichen .NET-Technologien zu leisten.</span><span class="sxs-lookup"><span data-stu-id="c683a-108">.NET is accessible to students and hobbyists, and all are welcome to participate in a lively international developer community and make direct contributions to many of the .NET technologies.</span></span>
 
-## <a name="news"></a><span data-ttu-id="641b1-109">Neuigkeiten</span><span class="sxs-lookup"><span data-stu-id="641b1-109">News</span></span>
+## <a name="news"></a><span data-ttu-id="c683a-109">Neuigkeiten</span><span class="sxs-lookup"><span data-stu-id="c683a-109">News</span></span>
 
-<span data-ttu-id="641b1-110">Informationen zu .NET finden Sie auf den folgenden Blogs:</span><span class="sxs-lookup"><span data-stu-id="641b1-110">For news about .NET, check the following blogs:</span></span>
+<span data-ttu-id="c683a-110">Informationen zu .NET finden Sie auf den folgenden Blogs:</span><span class="sxs-lookup"><span data-stu-id="c683a-110">For news about .NET, check the following blogs:</span></span>
 
-- [<span data-ttu-id="641b1-111">.NET Blog</span><span class="sxs-lookup"><span data-stu-id="641b1-111">.NET Blog</span></span>](https://devblogs.microsoft.com/dotnet/)
-- [<span data-ttu-id="641b1-112">ASP.NET-Blog</span><span class="sxs-lookup"><span data-stu-id="641b1-112">ASP.NET Blog</span></span>](https://devblogs.microsoft.com/aspnet/)
-- [<span data-ttu-id="641b1-113">Der Visual Studio-Blog</span><span class="sxs-lookup"><span data-stu-id="641b1-113">The Visual Studio Blog</span></span>](https://devblogs.microsoft.com/visualstudio/)
-- [<span data-ttu-id="641b1-114">Das Visual Basic-Team</span><span class="sxs-lookup"><span data-stu-id="641b1-114">The Visual Basic Team</span></span>](https://devblogs.microsoft.com/vbteam/)
+- [<span data-ttu-id="c683a-111">.NET Blog</span><span class="sxs-lookup"><span data-stu-id="c683a-111">.NET Blog</span></span>](https://devblogs.microsoft.com/dotnet/)
+- [<span data-ttu-id="c683a-112">ASP.NET-Blog</span><span class="sxs-lookup"><span data-stu-id="c683a-112">ASP.NET Blog</span></span>](https://devblogs.microsoft.com/aspnet/)
+- [<span data-ttu-id="c683a-113">Der Visual Studio-Blog</span><span class="sxs-lookup"><span data-stu-id="c683a-113">The Visual Studio Blog</span></span>](https://devblogs.microsoft.com/visualstudio/)
+- [<span data-ttu-id="c683a-114">Das Visual Basic-Team</span><span class="sxs-lookup"><span data-stu-id="c683a-114">The Visual Basic Team</span></span>](https://devblogs.microsoft.com/vbteam/)
 
-<span data-ttu-id="641b1-115">Bleiben Sie auch über die neuesten .NET-Events auf dem Laufenden:</span><span class="sxs-lookup"><span data-stu-id="641b1-115">Also follow the latest .NET events:</span></span>
+<span data-ttu-id="c683a-115">Bleiben Sie auch über die neuesten .NET-Events auf dem Laufenden:</span><span class="sxs-lookup"><span data-stu-id="c683a-115">Also follow the latest .NET events:</span></span>
 
-- [<span data-ttu-id="641b1-116">Microsoft Ignite</span><span class="sxs-lookup"><span data-stu-id="641b1-116">Microsoft Ignite</span></span>](https://www.microsoft.com/ignite)
-- [<span data-ttu-id="641b1-117">Microsoft Build</span><span class="sxs-lookup"><span data-stu-id="641b1-117">Microsoft Build</span></span>](https://www.microsoft.com/build)
-- [<span data-ttu-id="641b1-118">.NET Conf</span><span class="sxs-lookup"><span data-stu-id="641b1-118">.NET Conf</span></span>](https://www.dotnetconf.net/)
+- [<span data-ttu-id="c683a-116">Microsoft Ignite</span><span class="sxs-lookup"><span data-stu-id="c683a-116">Microsoft Ignite</span></span>](https://www.microsoft.com/ignite)
+- [<span data-ttu-id="c683a-117">Microsoft Build</span><span class="sxs-lookup"><span data-stu-id="c683a-117">Microsoft Build</span></span>](https://www.microsoft.com/build)
+- [<span data-ttu-id="c683a-118">.NET Conf</span><span class="sxs-lookup"><span data-stu-id="c683a-118">.NET Conf</span></span>](https://www.dotnetconf.net/)
 
-<span data-ttu-id="641b1-119">Informationen zu den neuesten Features, die den .NET-Implementierungen und den unterstützten Sprachen hinzugefügt wurden, finden Sie in den folgenden Artikeln:</span><span class="sxs-lookup"><span data-stu-id="641b1-119">For information about the latest features added to the .NET implementations and supported languages, see the following articles:</span></span>
+<span data-ttu-id="c683a-119">Informationen zu den neuesten Features, die den .NET-Implementierungen und den unterstützten Sprachen hinzugefügt wurden, finden Sie in den folgenden Artikeln:</span><span class="sxs-lookup"><span data-stu-id="c683a-119">For information about the latest features added to the .NET implementations and supported languages, see the following articles:</span></span>
 
-- [<span data-ttu-id="641b1-120">Neuigkeiten in .NET Core</span><span class="sxs-lookup"><span data-stu-id="641b1-120">What's new in .NET Core</span></span>](core/whats-new/index.md)
-- [<span data-ttu-id="641b1-121">What's new in the .NET Framework (Neuerungen in .NET Framework)</span><span class="sxs-lookup"><span data-stu-id="641b1-121">What's new in the .NET Framework</span></span>](framework/whats-new/index.md)
-- [<span data-ttu-id="641b1-122">Neues in C#</span><span class="sxs-lookup"><span data-stu-id="641b1-122">What's new in C#</span></span>](csharp/whats-new/index.md)
-- [<span data-ttu-id="641b1-123">Neues bei Visual Basic</span><span class="sxs-lookup"><span data-stu-id="641b1-123">What's new for Visual Basic</span></span>](visual-basic/getting-started/whats-new.md)
+- [<span data-ttu-id="c683a-120">Neuigkeiten in .NET Core</span><span class="sxs-lookup"><span data-stu-id="c683a-120">What's new in .NET Core</span></span>](core/whats-new/index.md)
+- [<span data-ttu-id="c683a-121">What's new in the .NET Framework (Neuerungen in .NET Framework)</span><span class="sxs-lookup"><span data-stu-id="c683a-121">What's new in the .NET Framework</span></span>](framework/whats-new/index.md)
+- [<span data-ttu-id="c683a-122">Neues in C#</span><span class="sxs-lookup"><span data-stu-id="c683a-122">What's new in C#</span></span>](csharp/whats-new/index.md)
+- [<span data-ttu-id="c683a-123">Neues bei Visual Basic</span><span class="sxs-lookup"><span data-stu-id="c683a-123">What's new for Visual Basic</span></span>](visual-basic/getting-started/whats-new.md)
 
-## <a name="documentation"></a><span data-ttu-id="641b1-124">Dokumentation</span><span class="sxs-lookup"><span data-stu-id="641b1-124">Documentation</span></span>
+## <a name="documentation"></a><span data-ttu-id="c683a-124">Dokumentation</span><span class="sxs-lookup"><span data-stu-id="c683a-124">Documentation</span></span>
 
-<span data-ttu-id="641b1-125">Diese Dokumentation umfasst die Bandbreite von .NET über Plattformen und Sprachen.</span><span class="sxs-lookup"><span data-stu-id="641b1-125">This documentation covers the breadth of .NET across platforms and languages.</span></span> <span data-ttu-id="641b1-126">Sie können mit .NET und den Sprachen in einem beliebigen Abschnitt beginnen:</span><span class="sxs-lookup"><span data-stu-id="641b1-126">You can get started with .NET and its languages in any of the following sections:</span></span>
+<span data-ttu-id="c683a-125">Diese Dokumentation umfasst die Bandbreite von .NET über Plattformen und Sprachen.</span><span class="sxs-lookup"><span data-stu-id="c683a-125">This documentation covers the breadth of .NET across platforms and languages.</span></span> <span data-ttu-id="c683a-126">Sie können mit .NET und den Sprachen in einem beliebigen Abschnitt beginnen:</span><span class="sxs-lookup"><span data-stu-id="c683a-126">You can get started with .NET and its languages in any of the following sections:</span></span>
 
-- [<span data-ttu-id="641b1-127">.NET Guide (Leitfaden für .NET)</span><span class="sxs-lookup"><span data-stu-id="641b1-127">.NET Guide</span></span>](standard/index.md)
-- [<span data-ttu-id="641b1-128">Leitfaden für .NET Core</span><span class="sxs-lookup"><span data-stu-id="641b1-128">.NET Core Guide</span></span>](core/index.md)
-- [<span data-ttu-id="641b1-129">Leitfaden für .NET Framework</span><span class="sxs-lookup"><span data-stu-id="641b1-129">.NET Framework Guide</span></span>](framework/index.yml)
-- [<span data-ttu-id="641b1-130">Leitfaden für C#</span><span class="sxs-lookup"><span data-stu-id="641b1-130">C# Guide</span></span>](csharp/index.yml)
-- [<span data-ttu-id="641b1-131">F# Guide</span><span class="sxs-lookup"><span data-stu-id="641b1-131">F# Guide</span></span>](fsharp/index.yml)
-- [<span data-ttu-id="641b1-132">Leitfaden für Visual Basic</span><span class="sxs-lookup"><span data-stu-id="641b1-132">Visual Basic Guide</span></span>](visual-basic/index.yml)
-- [<span data-ttu-id="641b1-133">Leitfaden für ML.NET</span><span class="sxs-lookup"><span data-stu-id="641b1-133">ML.NET Guide</span></span>](machine-learning/index.yml)
-- [<span data-ttu-id="641b1-134">.NET für Apache Spark</span><span class="sxs-lookup"><span data-stu-id="641b1-134">.NET for Apache Spark</span></span>](spark/index.yml)
-- [<span data-ttu-id="641b1-135">.NET-Anwendungsarchitektur</span><span class="sxs-lookup"><span data-stu-id="641b1-135">.NET Application Architecture</span></span>](architecture/index.yml)
+- [<span data-ttu-id="c683a-127">.NET Guide (Leitfaden für .NET)</span><span class="sxs-lookup"><span data-stu-id="c683a-127">.NET Guide</span></span>](standard/index.md)
+- [<span data-ttu-id="c683a-128">Leitfaden für .NET Core</span><span class="sxs-lookup"><span data-stu-id="c683a-128">.NET Core Guide</span></span>](core/index.yml)
+- [<span data-ttu-id="c683a-129">Leitfaden für .NET Framework</span><span class="sxs-lookup"><span data-stu-id="c683a-129">.NET Framework Guide</span></span>](framework/index.yml)
+- [<span data-ttu-id="c683a-130">Leitfaden für C#</span><span class="sxs-lookup"><span data-stu-id="c683a-130">C# Guide</span></span>](csharp/index.yml)
+- [<span data-ttu-id="c683a-131">F# Guide</span><span class="sxs-lookup"><span data-stu-id="c683a-131">F# Guide</span></span>](fsharp/index.yml)
+- [<span data-ttu-id="c683a-132">Leitfaden für Visual Basic</span><span class="sxs-lookup"><span data-stu-id="c683a-132">Visual Basic Guide</span></span>](visual-basic/index.yml)
+- [<span data-ttu-id="c683a-133">Leitfaden für ML.NET</span><span class="sxs-lookup"><span data-stu-id="c683a-133">ML.NET Guide</span></span>](machine-learning/index.yml)
+- [<span data-ttu-id="c683a-134">.NET für Apache Spark</span><span class="sxs-lookup"><span data-stu-id="c683a-134">.NET for Apache Spark</span></span>](spark/index.yml)
+- [<span data-ttu-id="c683a-135">.NET-Anwendungsarchitektur</span><span class="sxs-lookup"><span data-stu-id="c683a-135">.NET Application Architecture</span></span>](architecture/index.yml)
 
-<span data-ttu-id="641b1-136">Darüber hinaus können Sie die [.NET-API-Referenz](/dotnet/api) durchsuchen.</span><span class="sxs-lookup"><span data-stu-id="641b1-136">Additionally, you can browse the [.NET API reference](/dotnet/api).</span></span>
+<span data-ttu-id="c683a-136">Darüber hinaus können Sie die [.NET-API-Referenz](/dotnet/api) durchsuchen.</span><span class="sxs-lookup"><span data-stu-id="c683a-136">Additionally, you can browse the [.NET API reference](/dotnet/api).</span></span>
 
-## <a name="videos"></a><span data-ttu-id="641b1-137">Videos</span><span class="sxs-lookup"><span data-stu-id="641b1-137">Videos</span></span>
+## <a name="videos"></a><span data-ttu-id="c683a-137">Videos</span><span class="sxs-lookup"><span data-stu-id="c683a-137">Videos</span></span>
 
-<span data-ttu-id="641b1-138">Sehen Sie sich Videos zu den Themen Web, Mobil, Desktop, C#, maschinelles Lernen, Container/Docker, Datenzugriff und mehr an.</span><span class="sxs-lookup"><span data-stu-id="641b1-138">Explore videos on web, mobile, desktop, C#, machine learning, containers/Docker, data access, and more:</span></span>
+<span data-ttu-id="c683a-138">Sehen Sie sich Videos zu den Themen Web, Mobil, Desktop, C#, maschinelles Lernen, Container/Docker, Datenzugriff und mehr an.</span><span class="sxs-lookup"><span data-stu-id="c683a-138">Explore videos on web, mobile, desktop, C#, machine learning, containers/Docker, data access, and more:</span></span>
 
-[<span data-ttu-id="641b1-139">.NET 101-Videoserie</span><span class="sxs-lookup"><span data-stu-id="641b1-139">.NET 101 video series</span></span>](https://dotnet.microsoft.com/learn/videos)
+[<span data-ttu-id="c683a-139">.NET 101-Videoserie</span><span class="sxs-lookup"><span data-stu-id="c683a-139">.NET 101 video series</span></span>](https://dotnet.microsoft.com/learn/videos)
 
-## <a name="open-source"></a><span data-ttu-id="641b1-140">Quelle öffnen</span><span class="sxs-lookup"><span data-stu-id="641b1-140">Open source</span></span>
+## <a name="open-source"></a><span data-ttu-id="c683a-140">Quelle öffnen</span><span class="sxs-lookup"><span data-stu-id="c683a-140">Open source</span></span>
 
-<span data-ttu-id="641b1-141">Diese Dokumentation ist vollständig [Open Source](https://github.com/dotnet/docs).</span><span class="sxs-lookup"><span data-stu-id="641b1-141">This documentation is completely [open source](https://github.com/dotnet/docs).</span></span> <span data-ttu-id="641b1-142">Sie können selbst einen Beitrag leisten, egal ob Sie Probleme aufdecken oder eine Dokumentation schreiben.</span><span class="sxs-lookup"><span data-stu-id="641b1-142">You can contribute in any way you like, from creating issues to writing documentation.</span></span> <span data-ttu-id="641b1-143">Darüber hinaus ist der Großteil von .NET ebenso Open Source.</span><span class="sxs-lookup"><span data-stu-id="641b1-143">Additionally, much of .NET itself is also open source.</span></span> <span data-ttu-id="641b1-144">Nachfolgend sind die GitHub-Hauptrepositorys für .NET aufgeführt:</span><span class="sxs-lookup"><span data-stu-id="641b1-144">The following list shows the main .NET GitHub repositories:</span></span>
+<span data-ttu-id="c683a-141">Diese Dokumentation ist vollständig [Open Source](https://github.com/dotnet/docs).</span><span class="sxs-lookup"><span data-stu-id="c683a-141">This documentation is completely [open source](https://github.com/dotnet/docs).</span></span> <span data-ttu-id="c683a-142">Sie können selbst einen Beitrag leisten, egal ob Sie Probleme aufdecken oder eine Dokumentation schreiben.</span><span class="sxs-lookup"><span data-stu-id="c683a-142">You can contribute in any way you like, from creating issues to writing documentation.</span></span> <span data-ttu-id="c683a-143">Darüber hinaus ist der Großteil von .NET ebenso Open Source.</span><span class="sxs-lookup"><span data-stu-id="c683a-143">Additionally, much of .NET itself is also open source.</span></span> <span data-ttu-id="c683a-144">Nachfolgend sind die GitHub-Hauptrepositorys für .NET aufgeführt:</span><span class="sxs-lookup"><span data-stu-id="c683a-144">The following list shows the main .NET GitHub repositories:</span></span>
 
-- [<span data-ttu-id="641b1-145">.NET Core Home</span><span class="sxs-lookup"><span data-stu-id="641b1-145">.NET Core Home</span></span>](https://github.com/dotnet/core)
-- [<span data-ttu-id="641b1-146">.NET Core-Runtime</span><span class="sxs-lookup"><span data-stu-id="641b1-146">.NET Core runtime</span></span>](https://github.com/dotnet/runtime)
-- [<span data-ttu-id="641b1-147">.NET Core SDK</span><span class="sxs-lookup"><span data-stu-id="641b1-147">.NET Core SDK</span></span>](https://github.com/dotnet/sdk)
-- [<span data-ttu-id="641b1-148">Roslyn (C# und Visual Basic) Compilerplattform und IDE-Tools</span><span class="sxs-lookup"><span data-stu-id="641b1-148">Roslyn (C# and Visual Basic) Compiler Platform and IDE Tools</span></span>](https://github.com/dotnet/roslyn)
-- [<span data-ttu-id="641b1-149">F#-Compiler und IDE-Tools</span><span class="sxs-lookup"><span data-stu-id="641b1-149">F# Compiler and IDE Tools</span></span>](https://github.com/dotnet/fsharp)
-- [<span data-ttu-id="641b1-150">Windows Forms</span><span class="sxs-lookup"><span data-stu-id="641b1-150">Windows Forms</span></span>](https://github.com/dotnet/winforms)
-- [<span data-ttu-id="641b1-151">WPF</span><span class="sxs-lookup"><span data-stu-id="641b1-151">WPF</span></span>](https://github.com/dotnet/wpf)
+- [<span data-ttu-id="c683a-145">.NET Core Home</span><span class="sxs-lookup"><span data-stu-id="c683a-145">.NET Core Home</span></span>](https://github.com/dotnet/core)
+- [<span data-ttu-id="c683a-146">.NET Core-Runtime</span><span class="sxs-lookup"><span data-stu-id="c683a-146">.NET Core runtime</span></span>](https://github.com/dotnet/runtime)
+- [<span data-ttu-id="c683a-147">.NET Core SDK</span><span class="sxs-lookup"><span data-stu-id="c683a-147">.NET Core SDK</span></span>](https://github.com/dotnet/sdk)
+- [<span data-ttu-id="c683a-148">Roslyn (C# und Visual Basic) Compilerplattform und IDE-Tools</span><span class="sxs-lookup"><span data-stu-id="c683a-148">Roslyn (C# and Visual Basic) Compiler Platform and IDE Tools</span></span>](https://github.com/dotnet/roslyn)
+- [<span data-ttu-id="c683a-149">F#-Compiler und IDE-Tools</span><span class="sxs-lookup"><span data-stu-id="c683a-149">F# Compiler and IDE Tools</span></span>](https://github.com/dotnet/fsharp)
+- [<span data-ttu-id="c683a-150">Windows Forms</span><span class="sxs-lookup"><span data-stu-id="c683a-150">Windows Forms</span></span>](https://github.com/dotnet/winforms)
+- [<span data-ttu-id="c683a-151">WPF</span><span class="sxs-lookup"><span data-stu-id="c683a-151">WPF</span></span>](https://github.com/dotnet/wpf)
 
-<span data-ttu-id="641b1-152">Hier können Sie sich anderen Personen anschließen, die in der [.NET-Community](https://dotnet.microsoft.com/platform/community) bereits aktiv sind, und Neues erfahren oder um Unterstützung bitten.</span><span class="sxs-lookup"><span data-stu-id="641b1-152">You can join other people who are already active in the [.NET community](https://dotnet.microsoft.com/platform/community) to find out what's new or ask for help.</span></span>
+<span data-ttu-id="c683a-152">Hier können Sie sich anderen Personen anschließen, die in der [.NET-Community](https://dotnet.microsoft.com/platform/community) bereits aktiv sind, und Neues erfahren oder um Unterstützung bitten.</span><span class="sxs-lookup"><span data-stu-id="c683a-152">You can join other people who are already active in the [.NET community](https://dotnet.microsoft.com/platform/community) to find out what's new or ask for help.</span></span>
