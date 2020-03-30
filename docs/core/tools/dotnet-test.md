@@ -2,12 +2,12 @@
 title: Befehl „dotnet test“
 description: Der Befehl „dotnet test“ wird zum Ausführen von Unittests in einem bestimmten Projekt verwendet.
 ms.date: 02/27/2020
-ms.openlocfilehash: 6e906ab396a788905c99f50e73390b765b240efc
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: a11814f9fdc6326e681a09d7d2654b968014f318
+ms.sourcegitcommit: 2514f4e3655081dcfe1b22470c0c28500f952c42
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78157010"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79507307"
 ---
 # <a name="dotnet-test"></a>dotnet test
 
@@ -20,11 +20,13 @@ ms.locfileid: "78157010"
 ## <a name="synopsis"></a>Übersicht
 
 ```dotnetcli
-dotnet test [<PROJECT>] [-a|--test-adapter-path] [--blame]
-    [-c|--configuration] [--collect] [-d|--diag] [-f|--framework]
-    [--filter] [-l|--logger] [--no-build] [--no-restore]
-    [-o|--output] [-r|--results-directory] [-s|--settings]
-    [-t|--list-tests] [-v|--verbosity] [-- <RunSettings arguments>]
+dotnet test [<PROJECT> | <SOLUTION>]
+    [-a|--test-adapter-path] [--blame] [-c|--configuration]
+    [--collect] [-d|--diag] [-f|--framework] [--filter]
+    [--interactive] [-l|--logger] [--no-build] [--nologo]
+    [--no-restore] [-o|--output] [-r|--results-directory]
+    [--runtime] [-s|--settings] [-t|--list-tests]
+    [-v|--verbosity] [[--] <RunSettings arguments>]
 
 dotnet test [-h|--help]
 ```
@@ -39,9 +41,9 @@ In Testprojekten wird der Testlauf mittels eines normalen `<PackageReference>`-E
 
 ## <a name="arguments"></a>Argumente
 
-- **`PROJECT`**
+- **`PROJECT | SOLUTION`**
 
-  Der Pfad zum Testprojekt. Wenn er nicht angegeben ist, wird standardmäßig das aktuelle Verzeichnis ausgewählt.
+  Pfad zum Testprojekt oder zur Projektmappe. Wenn er nicht angegeben ist, wird standardmäßig das aktuelle Verzeichnis ausgewählt.
 
 ## <a name="options"></a>Optionen
 
@@ -49,11 +51,11 @@ In Testprojekten wird der Testlauf mittels eines normalen `<PackageReference>`-E
 
   Verwenden Sie die benutzerdefinierten Testadapter aus dem angegebenen Pfad im Testlauf.
 
-- **`-blame`**
+- **`--blame`**
 
   Führt die Tests im blame-Modus aus. Diese Option hilft beim Isolieren von fehlerhaften Tests, die den Absturz des Testhosts verursachen. In dem aktuellen Verzeichnis wird eine Ausgabedatei als *Sequence.xml* erstellt, die die Reihenfolge der ausgeführten Tests vor dem Absturz erfasst.
 
-- **`c|--configuration {Debug|Release}`**
+- **`c|--configuration <CONFIGURATION>`**
 
   Legt die Buildkonfiguration fest. Der Standardwert ist `Debug`, aber die Konfiguration des Projekts könnte diese SDK-Standardeinstellung überschreiben.
 
@@ -77,6 +79,10 @@ In Testprojekten wird der Testlauf mittels eines normalen `<PackageReference>`-E
 
   Druckt eine kurze Hilfe für den Befehl.
 
+- **`--interactive`**
+
+  Ermöglicht dem Befehl, anzuhalten und auf Benutzereingaben oder Aktionen zu warten. Beispielsweise, um die Authentifizierung abzuschließen. Verfügbar seit .NET Core 3.0 SDK.
+
 - **`l|--logger <LoggerUri/FriendlyName>`**
 
   Gibt eine Protokollierung für die Testergebnisse an.
@@ -84,6 +90,10 @@ In Testprojekten wird der Testlauf mittels eines normalen `<PackageReference>`-E
 - **`--no-build`**
 
   Erstellt das Projekt nicht vor der Ausführung. Zudem wird das Flag `--no-restore` implizit festgelegt.
+
+- **`--nologo`**
+
+  Führen Sie Tests aus, ohne das Microsoft TestPlatform-Banner anzuzeigen. Verfügbar seit .NET Core 3.0 SDK.
 
 - **`--no-restore`**
 
@@ -96,6 +106,10 @@ In Testprojekten wird der Testlauf mittels eines normalen `<PackageReference>`-E
 - **`-r|--results-directory <PATH>`**
 
   Das Verzeichnis, in dem die Testergebnisse gespeichert werden. Wenn das Verzeichnis noch nicht vorhanden ist, wird es erstellt.
+
+- **`--runtime <RUNTIME_IDENTIFIER>`**
+
+  Die Zielruntime, für die Tests ausgeführt werden sollen.
 
 - **`-s|--settings <SETTINGS_FILE>`**
 
