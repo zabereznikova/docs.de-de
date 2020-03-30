@@ -2,27 +2,27 @@
 title: 'Bewährte Methoden für native Interoperabilität: .NET'
 description: Erfahren Sie mehr über bewährte Methoden für die Einrichtung von Schnittstellen mit nativen Komponenten in .NET.
 ms.date: 01/18/2019
-ms.openlocfilehash: 9486256b815856c0c283f5fe231be3d35d6e8f00
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: e5d96471e796dca712d25d2d9e2609508180d83f
+ms.sourcegitcommit: a9b8945630426a575ab0a332e568edc807666d1b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76742751"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80391220"
 ---
 # <a name="native-interoperability-best-practices"></a>Bewährte Methoden für native Interoperabilität
 
 .NET bietet verschiedene Möglichkeiten zum Anpassen Ihres Codes für die native Interoperabilität. Dieser Artikel bietet einen Leitfaden, den die .NET-Teams von Microsoft in Bezug auf die native Interoperabilität befolgen.
 
-## <a name="general-guidance"></a>Allgemeine Hinweise
+## <a name="general-guidance"></a>Allgemeine Anleitung
 
 Die Anleitungen in diesem Abschnitt gelten für alle Interoperabilitätsszenarien.
 
-- ✔️ Verwenden Sie die gleiche Benennung und groß-und Kleinschreibung für ihre Methoden und Parameter wie die native Methode, die Sie aufzurufen möchten.
-- ✔️ sollten die gleiche Benennung und groß-und Kleinschreibung für konstante Werte verwenden.
-- ✔️ verwenden .NET-Typen, die dem systemeigenen Typ am nächsten sind. Wenn z.B. der native Typ in C# `uint` ist, verwenden Sie `unsigned int`.
-- ✔️ nur `[In]` und `[Out]` Attribute verwenden, wenn sich das gewünschte Verhalten vom Standardverhalten unterscheidet.
-- ✔️ sollten Sie <xref:System.Buffers.ArrayPool%601?displayProperty=nameWithType> verwenden, um die systemeigenen Array Puffer zu bündeln.
-- ✔️ sollten Sie die P/aufrufen-Deklarationen in einer Klasse mit dem gleichen Namen und der gleichen Groß-/Kleinschreibung wie die systemeigene Bibliothek
+- ✔️ VERWENDEN Sie die gleichen Benennungen und die gleiche Groß- und Kleinschreibung für Ihre Methoden und Parameter wie die native Methode, die Sie aufrufen möchten.
+- ✔️ ERWÄGEN Sie die Verwendung der gleichen Benennungen und der gleichen Groß- und Kleinschreibung für Werte von Konstanten.
+- ✔️ VERWENDEN Sie .NET-Typen, die dem nativen Typ am ähnlichsten sind. Wenn z.B. der native Typ in C# `unsigned int` ist, verwenden Sie `uint`.
+- ✔️ VERWENDEN Sie nur `[In]`- und `[Out]`-Attribute, wenn sich das gewünschte Verhalten vom Standardverhalten unterscheidet.
+- ✔️ ERWÄGEN Sie die Verwendung von <xref:System.Buffers.ArrayPool%601?displayProperty=nameWithType>, um Ihre nativen Arraypuffer in einem Pool zusammenzufassen.
+- ✔️ ERWÄGEN Sie eine Umschließung Ihrer P/Invoke-Deklarationen in einer Klasse mit dem gleichen Namen und der gleichen Groß- und Kleinschreibung wie in Ihrer nativen Bibliothek.
   - Damit können Ihre `[DllImport]`-Attribute das C#-Sprachfeature `nameof` verwenden, um den Namen der nativen Bibliothek zu übergeben, und so sicherstellen, dass der Name der nativen Bibliothek nicht falsch geschrieben wurde.
 
 ## <a name="dllimport-attribute-settings"></a>Attributeinstellungen für „DllImport“
@@ -36,36 +36,36 @@ Die Anleitungen in diesem Abschnitt gelten für alle Interoperabilitätsszenarie
 
 ## <a name="string-parameters"></a>Zeichenfolgenparameter
 
-Wenn der Zeichensatz Unicode ist oder das Argument explizit als `[MarshalAs(UnmanagedType.LPWSTR)]` gekennzeichnet ist _und_ die Zeichenfolge als Wert (nicht `ref` oder `out`) übermittelt wird, wird die Zeichenfolge fixiert und direkt von System eigenem Code (anstatt kopiert) verwendet.
+Wenn „CharSet“ auf „Unicode“ festgelegt oder das Argument explizit als  gekennzeichnet ist `[MarshalAs(UnmanagedType.LPWSTR)]` _und_ die Zeichenfolge per Wert (nicht als `ref` oder `out`) übergeben wird, wird die Zeichenfolge angeheftet und vom nativen Code direkt verwendet (nicht kopiert).
 
 Denken Sie daran, `[DllImport]` als `Charset.Unicode` zu kennzeichnen, es sei denn, Sie möchten explizit, dass Ihre Zeichenfolgen als ANSI verarbeitet werden.
 
-❌ verwenden keine `[Out] string` Parameter. Zeichenfolgenparameter, die per Wert mit dem `[Out]`-Attribut übergeben werden, können die Runtime destabilisieren, wenn die Zeichenfolge internalisiert ist. Weitere Informationen zum Internalisieren von Zeichenfolgen finden Sie in der Dokumentation zu <xref:System.String.Intern%2A?displayProperty=nameWithType>.
+❌Verwenden Sie `[Out] string` KEINE Parameter. Zeichenfolgenparameter, die per Wert mit dem `[Out]`-Attribut übergeben werden, können die Runtime destabilisieren, wenn die Zeichenfolge internalisiert ist. Weitere Informationen zum Internalisieren von Zeichenfolgen finden Sie in der Dokumentation zu <xref:System.String.Intern%2A?displayProperty=nameWithType>.
 
-❌ vermeiden Sie `StringBuilder` Parameter. `StringBuilder`Marshalling erzeugt *immer* eine native Pufferkopie. Dies kann extrem ineffizient sein. Sehen Sie sich das folgende typische Szenario an, in dem eine Windows-API aufgerufen wird, die eine Zeichenfolge akzeptiert:
+❌AVOID-Parameter. `StringBuilder` `StringBuilder`Marshalling erzeugt *immer* eine native Pufferkopie. Dies kann extrem ineffizient sein. Sehen Sie sich das folgende typische Szenario an, in dem eine Windows-API aufgerufen wird, die eine Zeichenfolge akzeptiert:
 
-1. Erstellen Sie einen StringBuilder mit der gewünschten Kapazität (ordnet die verwaltete Kapazität zu) **{1}**
+1. Erstellen eines SB der gewünschten Kapazität (Zuweisung von verwalteter Kapazität)**{1}**
 2. Invoke
-   1. Ordnet einen nativen Puffer zu **{2}**
-   2. Kopiert den Inhalt, wenn `[In]` _(der Standardwert für einen `StringBuilder`-Parameter)_ .
-   3. Kopiert den systemeigenen Puffer in ein neu zugeordneter verwaltetes Array, wenn `[Out]` **{3}** _(auch der Standardwert für `StringBuilder`)_
-3. `ToString()` ordnet ein weiteres verwaltetes Array zu **** **
+   1. Ordnet einen systemeigenen Puffer zu**{2}**
+   2. Kopiert den Inhalt im Fall von `[In]` _(Standard für einen`StringBuilder`-Parameter)_
+   3. Kopiert den nativen Puffer in ein neu zugeordnetes verwaltetes Array im Fall von `[Out]` **{3}** _(ebenfalls Standard für `StringBuilder`)_
+3. `ToString()`ordnet ein weiteres verwaltetes Array zu**{4}**
 
-Damit haben wir *{4}* Zuordnungen, um eine Zeichenfolge aus dem nativen Code abzurufen. Die beste Möglichkeit, um dies zu beschränken, besteht darin, den `StringBuilder` in einem weiteren Aufruf wiederzuverwenden, damit wird aber dennoch nur *1* Zuordnung eingespart. Es ist viel besser, einen Zeichenpuffer aus dem `ArrayPool` zu verwenden und zwischenzuspeichern – damit benötigen Sie in nachfolgenden Aufrufen nur die Zuordnung für `ToString()`.
+Das *{4}* sind Zuweisungen, um eine Zeichenfolge aus systemeigenem Code zu erhalten. Die beste Möglichkeit, um dies zu beschränken, besteht darin, den `StringBuilder` in einem weiteren Aufruf wiederzuverwenden, damit wird aber dennoch nur *1* Zuordnung eingespart. Es ist viel besser, einen Zeichenpuffer aus dem `ArrayPool` zu verwenden und zwischenzuspeichern – damit benötigen Sie in nachfolgenden Aufrufen nur die Zuordnung für `ToString()`.
 
 Ein weiteres Problem bei `StringBuilder` ist, dass immer der Rückgabepuffer bis zum ersten NULL-Zeichen zurückkopiert wird. Wenn die zurückgegebene Zeichenfolge nicht beendet oder mit einem doppelten NULL-Zeichen beendet wird, ist „P/Invoke“ bestenfalls falsch.
 
-Wenn Sietatsächlich`StringBuilder` verwenden, besteht eine weitere Besonderheit darin, dass die Kapazität **kein** verborgenes NULL-Zeichen umfasst, das bei der Interoperabilität immer berücksichtigt wird. Das wird häufig falsch gemacht, da die meisten APIs die Größe des Puffers *einschließlich* des NULL-Zeichens erwarten. Dies kann zu unnötigen bzw. verschwendeten Zuordnungen führen. Darüber hinaus verhindert diese Besonderheit, dass die Runtime das Marshalling von `StringBuilder` optimiert, um die Erstellung von Kopien zu minimieren.
+Wenn Sie `StringBuilder`*tatsächlich* verwenden, besteht eine weitere Besonderheit darin, dass die Kapazität **kein** verborgenes NULL-Zeichen umfasst, das bei der Interoperabilität immer berücksichtigt wird. Das wird häufig falsch gemacht, da die meisten APIs die Größe des Puffers *einschließlich* des NULL-Zeichens erwarten. Dies kann zu unnötigen bzw. verschwendeten Zuordnungen führen. Darüber hinaus verhindert diese Besonderheit, dass die Runtime das Marshalling von `StringBuilder` optimiert, um die Erstellung von Kopien zu minimieren.
 
-✔️ sollten Sie `char[]`s aus einer `ArrayPool`verwenden.
+✔️ ERWÄGEN Sie die Verwendung von `char[]`s aus einem `ArrayPool`.
 
 Weitere Informationen zum Marshalling von Zeichenfolgen finden Sie unter [Standardmäßiges Marshalling für Zeichenfolgen](../../framework/interop/default-marshaling-for-strings.md) und [Anpassen des Zeichenfolgenmarshallings](customize-parameter-marshaling.md#customizing-string-parameters).
 
-> __Windows-spezifisch__ Bei `[Out]` Zeichen folgen verwendet die CLR standardmäßig `CoTaskMemFree`, um Zeichen folgen oder `SysStringFree` für Zeichen folgen freizugeben, die als `UnmanagedType.BSTR`gekennzeichnet sind.
-> **Für die meisten APIs mit einem Ausgabe Zeichen folgen Puffer:** Die Anzahl der Übergabe Zeichen muss NULL enthalten. Wenn der zurückgegebene Wert kleiner ist als die Zeichenanzahl, ist der Aufruf erfolgreich und der Wert ist die Anzahl der Zeichen *ohne* das nachgestellte NULL-Zeichen. Andernfalls ist die Anzahl die erforderliche Größe des Puffers *einschließlich* des NULL-Zeichens.
+> __Windows-spezifisch__ Bei `[Out]` Zeichenfolgen verwendet `CoTaskMemFree` die CLR standardmäßig `SysStringFree` Die Freigabe von `UnmanagedType.BSTR`Zeichenfolgen oder für Zeichenfolgen, die als markiert sind.
+> **Für die meisten APIs mit einem Ausgabezeichenfolgenpuffer:** Die übergebene Zeichenanzahl muss die NULL enthalten. Wenn der zurückgegebene Wert kleiner ist als die Zeichenanzahl, ist der Aufruf erfolgreich und der Wert ist die Anzahl der Zeichen *ohne* das nachgestellte NULL-Zeichen. Andernfalls ist die Anzahl die erforderliche Größe des Puffers *einschließlich* des NULL-Zeichens.
 >
-> - Pass 5, get 4: die Zeichenfolge ist 4 Zeichen lang und weist einen nachfolgenden NULL-Wert auf.
-> - Durchlauf 5, Get 6: die Zeichenfolge ist 5 Zeichen lang, benötigt einen 6-Zeichen Puffer, um den NULL-Wert zu speichern.
+> - Pass in 5, get 4: Die Zeichenfolge ist 4 Zeichen lang mit einem nachfolgenden Null.
+> - Pass in 5, get 6: Die Zeichenfolge ist 5 Zeichen lang, benötigen einen 6-Zeichen-Puffer, um die Null zu halten.
 > [Windows-Datentypen für Zeichenfolgen](/windows/desktop/Intl/windows-data-types-for-strings)
 
 ## <a name="boolean-parameters-and-fields"></a>Boolesche Parameter und Felder
@@ -80,13 +80,13 @@ GUIDs können direkt in Signaturen verwendet werden. Viele Windows-APIs akzeptie
 |------|-------------|
 | `KNOWNFOLDERID` | `REFKNOWNFOLDERID` |
 
-❌ `[MarshalAs(UnmanagedType.LPStruct)]` nur für `ref` GUID-Parameter verwenden.
+❌Verwenden Sie `[MarshalAs(UnmanagedType.LPStruct)]` NICHT für `ref` andere als GUID-Parameter.
 
 ## <a name="blittable-types"></a>Für Blitting geeignete Typen
 
 Für Blitting geeignete Typen sind Typen, die in verwaltetem und nativem Code die gleiche Darstellung auf Bitebene aufweisen. Als solche müssen sie nicht in ein anderes Format konvertiert werden, um ein Marshalling in den und aus dem nativen Code zu ermöglichen. Da dies die Leistung verbessert, sind diese Typen zu bevorzugen.
 
-**Für Blitting geeignete Typen**:
+**Blitbare Typen:**
 
 - `byte`, `sbyte`, `short`, `ushort`, `int`, `uint`, `long`, `ulong`, `single`, `double`
 - Nicht geschachtelte eindimensionale Arrays aus für Blitting geeigneten Typen (z.B. `int[]`)
@@ -94,17 +94,17 @@ Für Blitting geeignete Typen sind Typen, die in verwaltetem und nativem Code di
   - Ein festes Layout erfordert `[StructLayout(LayoutKind.Sequential)]` oder `[StructLayout(LayoutKind.Explicit)]`
   - Strukturen sind standardmäßig `LayoutKind.Sequential`, Klassen sind `LayoutKind.Auto`
 
-**NICHT für Blitting geeignet**:
+**NICHT für Blitting geeignet:**
 
 - `bool`
 
-**MANCHMAL für Blitting geeignet**:
+**MANCHMAL für Blitting geeignet:**
 
 - `char`, `string`
 
 Wenn für Blitting geeignete Typen per Verweis übergeben werden, werden sie einfach vom Marshaller angeheftet, anstatt in einem temporären Puffer kopiert zu werden. (Klassen werden von Natur aus per Verweis übergeben, Strukturen werden per Verweis übergeben, wenn sie mit `ref` oder `out` verwendet werden.)
 
-`char` ist in einem eindimensionalen Array **oder** bei Verwendung in einem Typen für Blitting geeignet, der explizit mit `[StructLayout]` mit `CharSet = CharSet.Unicode` gekennzeichnet ist.
+`char`ist in einem eindimensionalen Array blittable **oder** wenn es Teil eines Typs ist, der ihn enthält, der explizit mit `[StructLayout]` gekennzeichnet `CharSet = CharSet.Unicode`ist.
 
 ```csharp
 [StructLayout(LayoutKind.Sequential, CharSet = CharSet.Unicode)]
@@ -114,24 +114,24 @@ public struct UnicodeCharStruct
 }
 ```
 
-`string` ist für Blitting geeignet, wenn es nicht in einem anderen Typen enthalten ist und als Argument übergeben wird, das mit `[MarshalAs(UnmanagedType.LPWStr)]` gekennzeichnet ist oder in dem `[DllImport]` für `CharSet = CharSet.Unicode` festgelegt ist.
+`string` ist für Blitting geeignet, wenn es nicht in einem anderen Typen enthalten ist und als Argument übergeben wird, das mit `[MarshalAs(UnmanagedType.LPWStr)]` gekennzeichnet ist oder in dem `CharSet = CharSet.Unicode` für `[DllImport]` festgelegt ist.
 
 Sie können feststellen, ob ein Typ für Blitting geeignet ist, indem Sie versuchen, ein angeheftetes `GCHandle` zu erstellen. Wenn der Typ keine Zeichenfolge ist oder nicht als für Blitting geeignet betrachtet wird, löst `GCHandle.Alloc` eine `ArgumentException` aus.
 
-✔️ machen ihre Strukturen nach Möglichkeit blitfähig.
+✔️ LEGEN Sie Ihre Strukturen nach Möglichkeit als für Blitting geeignet fest.
 
 Weitere Informationen finden Sie unter
 
 - [Blitfähige und nicht blitfähige Typen](../../framework/interop/blittable-and-non-blittable-types.md)
-- [Marshalling von Typen](type-marshaling.md)
+- [Typ Marshalling](type-marshaling.md)
 
 ## <a name="keeping-managed-objects-alive"></a>Beibehalten von verwalteten Objekten
 
 `GC.KeepAlive()` stellt sicher, dass ein Objekt im Gültigkeitsbereich bleibt, bis die KeepAlive-Methode erreicht wird.
 
-[`HandleRef`](xref:System.Runtime.InteropServices.HandleRef) ermöglicht es dem Marshaller, ein Objekt während der Dauer eines P/Invoke beizubehalten. Es kann statt `IntPtr` in Methodensignaturen verwendet werden. `SafeHandle` ersetzt diese Klasse und sollte stattdessen verwendet werden.
+[`HandleRef`](xref:System.Runtime.InteropServices.HandleRef)ermöglicht es dem Marshaller, ein Objekt für die Dauer eines P/Invoke am Leben zu erhalten. Es kann statt `IntPtr` in Methodensignaturen verwendet werden. `SafeHandle` ersetzt diese Klasse und sollte stattdessen verwendet werden.
 
-[`GCHandle`](xref:System.Runtime.InteropServices.GCHandle) ermöglicht das Anheften eines verwalteten Objekts und Abrufen des nativen Zeigers auf das Objekt. Das grundlegende Muster sieht folgendermaßen aus:
+[`GCHandle`](xref:System.Runtime.InteropServices.GCHandle)ermöglicht das Anheften eines verwalteten Objekts und das Abrufen des systemeigenen Zeigers darauf. Das grundlegende Muster sieht folgendermaßen aus:
 
 ```csharp
 GCHandle handle = GCHandle.Alloc(obj, GCHandleType.Pinned);
@@ -213,9 +213,15 @@ Für Blitting geeignete Strukturen sind wesentlich leistungsfähiger, da sie gan
 
 Zeiger auf Strukturen in Definitionen müssen entweder von `ref` übergeben werden oder `unsafe` und `*` verwenden.
 
-✔️ die verwaltete Struktur so weit wie möglich mit der Form und den Namen übereinstimmen, die in der offiziellen Dokumentation oder im Header der Plattform verwendet werden.
+✔️ PASSEN Sie die verwaltete Struktur so eng wie möglich an die Form und die Namen an, die in der offiziellen Dokumentation zu Plattform oder im Header verwendet werden.
 
-✔️ die `sizeof()` anstelle C# von `Marshal.SizeOf<MyStruct>()` für blitfähige Strukturen verwenden, um die Leistung zu verbessern.
+✔️ VERWENDEN Sie `sizeof()` aus C# anstelle von `Marshal.SizeOf<MyStruct>()` für Strukturen, die für Blitting geeignet sind, um die Leistung zu verbessern.
+
+❌AVOID `System.Delegate` mit `System.MulticastDelegate` oder Felder zur Darstellung von Funktionszeigerfeldern in Strukturen.
+
+Da <xref:System.Delegate?displayProperty=fullName> <xref:System.MulticastDelegate?displayProperty=fullName> und keine erforderliche Signatur erforderlich ist, garantieren sie nicht, dass der übergebene Delegat mit der Signatur übereinstimmt, die der systemeigene Code erwartet. Darüber hinaus kann das Marshallen einer Struktur, die `System.Delegate` `System.MulticastDelegate` eine oder ihre systemeigene Darstellung enthält, in .NET Framework und .NET Core zu einem verwalteten Objekt die Laufzeit destabilisieren, wenn der Wert des Felds in der systemeigenen Darstellung kein Funktionszeiger ist, der einen verwalteten Delegaten umschließt. In .NET 5- und höher-Versionen wird das Marshallen eines `System.Delegate` Oderfelds `System.MulticastDelegate` von einer systemeigenen Darstellung zu einem verwalteten Objekt nicht unterstützt. Verwenden Sie einen bestimmten `System.Delegate` `System.MulticastDelegate`Delegattyp anstelle von oder .
+
+### <a name="fixed-buffers"></a>Feste Puffer
 
 Für ein Array wie `INT_PTR Reserved1[2]` muss ein Marshalling in zwei `IntPtr`-Felder durchgeführt werden: `Reserved1a` und `Reserved1b`. Wenn das native Array ein primitiver Typ ist, können wir das Schlüsselwort `fixed` verwenden, um es etwas übersichtlicher zu schreiben. `SYSTEM_PROCESS_INFORMATION` sieht im nativen Header beispielsweise so aus:
 
