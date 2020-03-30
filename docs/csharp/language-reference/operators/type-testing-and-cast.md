@@ -18,12 +18,12 @@ helpviewer_keywords:
 - cast expression [C#]
 - () operator [C#]
 - typeof operator [C#]
-ms.openlocfilehash: 037ddc8eeda418b2e4858ab98be6cd362ca0e1e2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2dc215a91c55be15e8eee488f0030f41e3492af5
+ms.sourcegitcommit: 2514f4e3655081dcfe1b22470c0c28500f952c42
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79398172"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79507086"
 ---
 # <a name="type-testing-and-cast-operators-c-reference"></a>Typtest- und Umwandlungsoperatoren (C#-Referenz)
 
@@ -113,7 +113,7 @@ Informationen zu expliziten Konvertierungen finden Sie im Abschnitt [Explizite K
 
 ### <a name="other-usages-of-"></a>Andere Verwendungen von „()“
 
-Sie verwenden Klammern auch zum [Aufrufen einer Methode oder eines Delegaten](member-access-operators.md#invocation-operator-).
+Sie verwenden Klammern auch zum [Aufrufen einer Methode oder eines Delegaten](member-access-operators.md#invocation-expression-).
 
 Mit Klammern können Sie auch die Reihenfolge anpassen, in der Vorgänge in einem Ausdruck ausgewertet werden sollen. Weitere Informationen finden Sie unter [C#-Operatoren](index.md).
 

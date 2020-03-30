@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: a8146db1fb54d63d4716b879ce793f7d817cef59
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 64e854b06895ca54a9ab9870b85868788a731c00
+ms.sourcegitcommit: 34dc3c0d0d0a1cc418abff259d9daa8078d00b81
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75937282"
+ms.lasthandoff: 03/19/2020
+ms.locfileid: "79549594"
 ---
 ### <a name="shared-framework-assemblies-removed-from-microsoftaspnetcoreapp"></a>Freigegebenes Framework: Assemblys aus Microsoft.AspNetCore.App entfernt
 
@@ -36,7 +36,7 @@ Für einen Verweis auf `Microsoft.AspNetCore.App` ist kein `<PackageReference>`-
 
 Weitere Informationen finden Sie unter [dotnet/aspnetcore#3612](https://github.com/dotnet/aspnetcore/issues/3612).
 
-Entity Framework Core wird als NuGet-Pakete bereitgestellt. Diese Änderung stellt eine Anpassung an das Auslieferungsmodell aller anderen Datenzugriffsbibliotheken in .NET dar. Es bietet Entity Framework Core die einfachste Möglichkeit, weiterhin Innovationen mit Unterstützung der verschiedenen .NET-Plattformen zu schaffen. Das Verschieben von Entity Framework Core aus dem freigegebenen Framework hat keine Auswirkung auf seinen Status als eine von Microsoft entwickelte, unterstützte und gewartete Bibliothek. Die [.NET Core-Supportrichtlinie](https://www.microsoft.com/net/platform/support-policy) gilt auch weiterhin.
+Entity Framework Core wird als NuGet-Pakete bereitgestellt. Diese Änderung stellt eine Anpassung an das Auslieferungsmodell aller anderen Datenzugriffsbibliotheken in .NET dar. Es bietet Entity Framework Core die einfachste Möglichkeit, weiterhin Innovationen mit Unterstützung der verschiedenen .NET-Plattformen zu schaffen. Das Verschieben von Entity Framework Core aus dem freigegebenen Framework hat keine Auswirkung auf seinen Status als eine von Microsoft entwickelte, unterstützte und gewartete Bibliothek. Die [.NET Core-Supportrichtlinie](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) gilt auch weiterhin.
 
 Json.NET und Entity Framework Core funktionieren auch In Zukunft mit ASP.NET Core. Sie sind jedoch nicht mehr im freigegebenen Framework enthalten.
 

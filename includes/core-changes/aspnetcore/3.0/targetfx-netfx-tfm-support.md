@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: b60f74947a537c602c7bd1a89587b76bd847c82a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ec6724ab378dd614c55a024ede18d997d27be3a3
+ms.sourcegitcommit: 34dc3c0d0d0a1cc418abff259d9daa8078d00b81
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75937290"
+ms.lasthandoff: 03/19/2020
+ms.locfileid: "79549599"
 ---
 ### <a name="target-framework-net-framework-support-dropped"></a>Zielframework: .NET Framework-Unterstützung aufgehoben
 
@@ -14,7 +14,7 @@ Ab ASP.NET Core 3.0 ist .NET Framework kein unterstütztes Zielframework mehr.
 
 .NET Framework 4.8 ist die letzte Hauptversion von .NET Framework. Neue ASP.NET Core-Apps sollten mit .NET Core erstellt werden. Ab dem Release .NET Core 3.0 können Sie sich ASP.NET Core 3.0 als Teil von .NET Core vorstellen.
 
-Kunden, die ASP.NET Core mit .NET Framework verwenden, erhalten mit dem [LTS-Release 2.1](https://www.microsoft.com/net/download/dotnet-core/2.1) weiterhin vollständige Unterstützung. Support und Wartung für 2.1 werden mindestens bis zum 21. August 2021 fortgesetzt. Dieses Datum liegt gemäß der [.NET-Supportrichtlinie](https://www.microsoft.com/net/platform/support-policy) drei Jahre nach der Bekanntgabe des LTS-Release. Die Unterstützung für ASP.NET Core 2.1-Pakete **auf Grundlage von .NET Framework** wird unbegrenzt verlängert (ähnlich der [Dienstrichtlinie für andere paketbasierte ASP.NET-Frameworks](https://dotnet.microsoft.com/platform/support/policy/aspnet)).
+Kunden, die ASP.NET Core mit .NET Framework verwenden, erhalten mit dem [LTS-Release 2.1](https://dotnet.microsoft.com/download/dotnet-core/2.1) weiterhin vollständige Unterstützung. Support und Wartung für 2.1 werden mindestens bis zum 21. August 2021 fortgesetzt. Dieses Datum liegt gemäß der [.NET-Supportrichtlinie](https://dotnet.microsoft.com/platform/support-policy) drei Jahre nach der Bekanntgabe des LTS-Release. Die Unterstützung für ASP.NET Core 2.1-Pakete **auf Grundlage von .NET Framework** wird unbegrenzt verlängert (ähnlich der [Dienstrichtlinie für andere paketbasierte ASP.NET-Frameworks](https://dotnet.microsoft.com/platform/support/policy/aspnet)).
 
 Weitere Informationen zum Portieren von .NET Framework zu .NET Core finden Sie unter [Portieren zu .NET Core](~/docs/core/porting/index.md).
 

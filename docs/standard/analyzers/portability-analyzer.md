@@ -4,12 +4,12 @@ description: Erfahren Sie, wie Sie mit dem Tool .NET Portability Analyzer bewert
 ms.date: 09/13/2019
 ms.technology: dotnet-standard
 ms.assetid: 0375250f-5704-4993-a6d5-e21c499cea1e
-ms.openlocfilehash: e0a5c791926b36fe5a35c5446471c3dcdb75cd7b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 397d9f08a0dd28f80d653ac5044d6acfa2418727
+ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "72774391"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80344308"
 ---
 # <a name="the-net-portability-analyzer"></a>.NET Portability Analyzer
 
@@ -19,7 +19,7 @@ Sobald Sie Ihr Projekt für Ihre neue Zielplattform (z.B. .NET Core) konvertiert
 
 ## <a name="common-targets"></a>Allgemeine Ziele
 
-- [.NET Core](../../core/index.md): Besitzt einen modularen Aufbau, verwendet die parallele Ausführung und ist auf plattformübergreifende Szenarios ausgerichtet. Die parallele Ausführung ermöglicht Ihnen die Übernahme neuer Versionen von .NET Core, ohne andere Apps zu beeinträchtigen. Wenn Sie Ihre Anwendung auf Plattformen portieren möchten, die .NET Core unterstützen, wird dieses Ziel empfohlen.
+- [.NET Core](../../core/index.yml): Besitzt einen modularen Aufbau, verwendet die parallele Ausführung und ist auf plattformübergreifende Szenarios ausgerichtet. Die parallele Ausführung ermöglicht Ihnen die Übernahme neuer Versionen von .NET Core, ohne andere Apps zu beeinträchtigen. Wenn Sie Ihre Anwendung auf Plattformen portieren möchten, die .NET Core unterstützen, wird dieses Ziel empfohlen.
 - .[NET Standard](../../standard/net-standard.md): Enthält die in allen .NET-Implementierungen verfügbaren .NET Standard-APIs. Wenn Sie möchten, dass Ihre Bibliothek auf allen Plattformen ausgeführt werden kann, die .NET unterstützen, wird dieses Ziel empfohlen.
 - [ASP.NET Core](/aspnet/core): Ein modernes Webframework, das auf .NET Core basiert. Wenn Sie Ihre Webanwendung zur Unterstützung von mehreren Plattformen nach .NET Core portieren möchten, wird dieses Ziel empfohlen.
 - .NET Core-Plattform + [Plattformerweiterungen](../../core/porting/windows-compat-pack.md): Enthält die .NET Core-APIs sowie den Windows Compatibility Pack, der zahlreiche in .NET Framework verfügbare Technologien bereitstellt. Dieses Ziel wird zum Portieren der Anwendung von .NET Framework nach .NET Core unter Windows empfohlen.
