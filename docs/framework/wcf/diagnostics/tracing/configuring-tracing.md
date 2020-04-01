@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - tracing [WCF]
 ms.assetid: 82922010-e8b3-40eb-98c4-10fc05c6d65d
-ms.openlocfilehash: d8b216bf5497cf2a1faa2fa24ba1d8b3102f6f10
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: aca3b5c54bff9c2b4c5380c04dd0da162215b088
+ms.sourcegitcommit: 79b0dd8bfc63f33a02137121dd23475887ecefda
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79185738"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80523311"
 ---
 # <a name="configuring-tracing"></a>Konfigurieren der Ablaufverfolgung
 In diesem Thema wird Folgendes beschrieben: das Aktivieren der Ablaufverfolgung, das Konfigurieren von Ablaufverfolgungsquellen zum Ausgeben von Ablaufverfolgungen, das Festlegen von Ablaufverfolgungsebenen, das Festlegen der Aktivitätsablaufverfolgung und -weitergabe zur Unterstützung der End-to-End-Ablaufverfolgungskorrelation sowie das Festlegen von Ablaufverfolgungslistenern für den Zugriff auf Ablaufverfolgungen.  
@@ -38,7 +38,7 @@ In diesem Thema wird Folgendes beschrieben: das Aktivieren der Ablaufverfolgung,
 <configuration>  
    <system.diagnostics>  
       <sources>  
-            <source name="System.ServiceModel"
+         <source name="System.ServiceModel"
                     switchValue="Information, ActivityTracing"  
                     propagateActivity="true">  
             <listeners>  
@@ -152,7 +152,7 @@ In diesem Thema wird Folgendes beschrieben: das Aktivieren der Ablaufverfolgung,
   
 |Ablaufverfolgungsebene|Art der verfolgten Ereignisse|Inhalt der verfolgten Ereignisse|Verfolgte Ereignisse|Zielgruppe|  
 |-----------------|----------------------------------|-----------------------------------|--------------------|-----------------|  
-|Aus|–|–|Keine Ablaufverfolgungen werden ausgegeben.|–|  
+|Aus|–|–|Keine Ablaufverfolgungen werden ausgegeben.|Nicht zutreffend|  
 |Kritisch|"Negative" Ereignisse: Ereignisse, die auf eine unerwartete Verarbeitung oder eine Fehlerbedingung hinweisen.||Nicht behandelte Ausnahmen (einschließlich der folgenden) werden protokolliert:<br /><br /> - OutOfMemoryException<br />- ThreadAbortException (die CLR ruft jeden ThreadAbortExceptionHandler auf)<br />- StackOverflowException (kann nicht abgefangen werden)<br />- ConfigurationErrorsException<br />- SEHException<br />- Anwendungsstartfehler<br />- Failfast-Ereignisse<br />- System hängt<br />- Giftnachrichten: Nachrichtenspuren, die dazu führen, dass die Anwendung fehlschlägt.|Administratoren<br /><br /> Anwendungsentwickler|  
 |Fehler|"Negative" Ereignisse: Ereignisse, die auf eine unerwartete Verarbeitung oder eine Fehlerbedingung hinweisen.|Eine unerwartete Verarbeitung ist aufgetreten. Die Anwendung konnte die Aufgabe nicht wie erwartet ausführen. Die Anwendung wird jedoch weiter ordnungsgemäß ausgeführt.|Alle Ausnahmen werden protokolliert.|Administratoren<br /><br /> Anwendungsentwickler|  
 |Warnung|"Negative" Ereignisse: Ereignisse, die auf eine unerwartete Verarbeitung oder eine Fehlerbedingung hinweisen.|Ein mögliches Problem ist aufgetreten oder tritt möglicherweise auf, die Anwendung funktioniert jedoch noch ordnungsgemäß. Allerdings ist nicht sicher, dass sie weiterhin ordnungsgemäß ausgeführt wird.|- Die Anwendung empfängt mehr Anforderungen, als die Drosselungseinstellungen zulassen.<br />- Die empfangende Warteschlange befindet sich in der Nähe ihrer maximal konfigurierten Kapazität.<br />- Timeout wurde überschritten.<br />- Anmeldeinformationen werden abgelehnt.|Administratoren<br /><br /> Anwendungsentwickler|  
@@ -180,9 +180,9 @@ In diesem Thema wird Folgendes beschrieben: das Aktivieren der Ablaufverfolgung,
   
  Das `propagateActivity`-Attribut kann nicht bei benutzerdefinierten Ablaufverfolgungsquellen verwendet werden. Stellen Sie bei der Aktivitäts-ID-Weitergabe in Benutzercode sicher, dass Sie `ActivityTracing` von ServiceModel nicht festlegen, während das `propagateActivity`-Attribute von ServiceModel noch auf `true` festgelegt ist.  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Ablaufverfolgung](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [Verwaltung und Diagnose](../../../../../docs/framework/wcf/diagnostics/index.md)
-- [Gewusst wie: Erstellen und Initialisieren von Ablaufverfolgungslistenern](../../../debug-trace-profile/how-to-create-and-initialize-trace-listeners.md)
+- [Administration und Diagnose](../../../../../docs/framework/wcf/diagnostics/index.md)
+- [Vorgehensweise: Erstellen und Initialisieren von Ablaufverfolgungslistenern](../../../debug-trace-profile/how-to-create-and-initialize-trace-listeners.md)
 - [Erstellen eines benutzerdefinierten TraceListener](https://docs.microsoft.com/archive/msdn-magazine/2006/april/clr-inside-out-extending-system-diagnostics)
