@@ -110,13 +110,13 @@ Repositorys können nützlich sein, sind jedoch nicht so wichtig für Ihren dom�
 
 ### <a name="repository-pattern"></a>Repositorymuster
 
-- **Edward Hieatt und Rob Mee. Repository pattern. (Repositorymuster)** \ \
+- **Edward Hieatt und Rob Mee. Repository pattern. (Repositorymuster)** \
   <https://martinfowler.com/eaaCatalog/repository.html>
 
 - **Repositorymuster** \
   <https://docs.microsoft.com/previous-versions/msp-n-p/ff649690(v=pandp.10)>
 
-- **Eric Evans. Domain-Driven Design: Tackling Complexity in the Heart of Software. (Domänengesteuertes Design (DDD): Umgang mit Komplexität im Kern einer Software.)** \ (Buch; erörtert das Repositorymuster)\
+- **Eric Evans. Domain-Driven Design: Tackling Complexity in the Heart of Software. (Domänengesteuertes Design (DDD): Umgang mit Komplexität im Kern einer Software.)** (Buch; erörtert das Repositorymuster)\
   <https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/>
 
 ### <a name="unit-of-work-pattern"></a>Arbeitseinheitsmuster
