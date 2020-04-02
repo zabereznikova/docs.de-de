@@ -1,9 +1,0 @@
-- name: Attribute
-  href: index.md
-  items:
-    - name: Anwenden von Attributen
-      href: applying-attributes.md
-    - name: Verfassen von benutzerdefinierten Attributen
-      href: writing-custom-attributes.md
-    - name: Abrufen von Informationen aus Attributen
-      href: retrieving-information-stored-in-attributes.md
