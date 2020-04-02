@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Angeben eines alternativen Elementnamens für einen XML-Stream'
+title: 'Vorgehensweise: Angeben eines alternativen Elementnamens für einen XML-Stream'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - classes, overriding
 - overriding classes
 ms.assetid: 5cc1c0b0-f94b-4525-9a41-88a582cd6668
-ms.openlocfilehash: 6aaff20e2955fc9f121b3e60b14c0bbcf7515660
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: 2dc1110b858f639624e05382a67ddccf3ea1b047
+ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78159857"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80588467"
 ---
-# <a name="how-to-specify-an-alternate-element-name-for-an-xml-stream"></a>Gewusst wie: Angeben eines alternativen Elementnamens für einen XML-Stream
+# <a name="how-to-specify-an-alternate-element-name-for-an-xml-stream"></a>Vorgehensweise: Angeben eines alternativen Elementnamens für einen XML-Stream
   
 Mit <xref:System.Xml.Serialization.XmlSerializer> können Sie mehr als einen XML-Stream mit der gleichen Gruppe von Klassen generieren. Dies ist beispielsweise dann sinnvoll, wenn zwei verschiedene XML-Webdienste die gleichen grundlegenden Informationen benötigen, die sich nur in wenigen Details unterscheiden. Stellen Sie sich beispielsweise vor, zwei XML-Webdienste, die Buchbestellungen verarbeiten, erfordern die Angabe von ISBN-Nummern. Ein Dienst verwendet das Tag \<ISBN>, während der zweite das Tag \<BookID> verwendet. Sie verfügen über eine Klasse mit dem Namen von `Book`, die ein Feld namens `ISBN` enthält. In der Standardeinstellung wird beim Serialisieren einer Instanz der `Book`-Klasse der Membername (ISBN) als Name des XML-Elements verwendet. Für den ersten XML-Webdienst entspricht dies dem erwarteten Verhalten. Wenn der XML-Stream jedoch an den zweiten XML-Webdienst gesendet werden soll, muss die Serialisierung überschrieben werden, damit der Elementname des Tags `BookID` lautet.  
   
@@ -44,7 +44,7 @@ Mit <xref:System.Xml.Serialization.XmlSerializer> können Sie mehr als einen XML
 ## <a name="example"></a>Beispiel  
   
 ```vb  
-Public Class SerializeOverride()  
+Public Function SerializeOverride()  
     ' Creates an XmlElementAttribute with the alternate name.  
     Dim myElementAttribute As XmlElementAttribute = _  
     New XmlElementAttribute()  
@@ -64,7 +64,7 @@ End Class
 ```  
   
 ```csharp  
-public class SerializeOverride()  
+public void SerializeOverride()  
 {  
     // Creates an XmlElementAttribute with the alternate name.  
     XmlElementAttribute myElementAttribute = new XmlElementAttribute();  

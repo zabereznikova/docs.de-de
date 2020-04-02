@@ -14,22 +14,22 @@ helpviewer_keywords:
 - dependency properties [WPF]
 - resources [WPF], references to
 ms.assetid: d119d00c-3afb-48d6-87a0-c4da4f83dee5
-ms.openlocfilehash: 9bf0b168633bbf9f56694e79cf81f8051f9b8ac0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1df75814c45a6f1c245d43e2390b8a6ce692a779
+ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79186384"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80587806"
 ---
 # <a name="dependency-properties-overview"></a>Übersicht über Abhängigkeitseigenschaften
 
-Windows Presentation Foundation (WPF) bietet eine Reihe von Diensten, die zum Erweitern der Funktionalität einer [Eigenschaft](../../../standard/base-types/common-type-system.md#Properties) eines Typs verwendet werden können. Zusammen werden diese Dienste normalerweise als WPF-Eigenschaftensystem bezeichnet. Eine Eigenschaft, die von der WPF-Eigenschaft unterstützt wird, wird als Abhängigkeitseigenschaft bezeichnet. In dieser Übersicht wird das WPF-Eigenschaftensystem und die Funktionen einer Abhängigkeitseigenschaft beschrieben. Dies schließt die Verwendung vorhandener Abhängigkeitseigenschaften in XAML und Code ein. In dieser Übersicht werden auch spezielle Aspekte von Abhängigkeitseigenschaften wie die Metadaten von Abhängigkeitseigenschaften sowie die Erstellung einer eigenen Abhängigkeitseigenschaft in einer benutzerdefinierten Klasse eingeführt.
+Windows Presentation Foundation (WPF) bietet eine Reihe von Diensten, die zum Erweitern der Funktionalität einer [Eigenschaft](../../../standard/base-types/common-type-system.md#properties) eines Typs verwendet werden können. Zusammen werden diese Dienste normalerweise als WPF-Eigenschaftensystem bezeichnet. Eine Eigenschaft, die von der WPF-Eigenschaft unterstützt wird, wird als Abhängigkeitseigenschaft bezeichnet. In dieser Übersicht wird das WPF-Eigenschaftensystem und die Funktionen einer Abhängigkeitseigenschaft beschrieben. Dies schließt die Verwendung vorhandener Abhängigkeitseigenschaften in XAML und Code ein. In dieser Übersicht werden auch spezielle Aspekte von Abhängigkeitseigenschaften wie die Metadaten von Abhängigkeitseigenschaften sowie die Erstellung einer eigenen Abhängigkeitseigenschaft in einer benutzerdefinierten Klasse eingeführt.
 
 ## <a name="prerequisites"></a>Voraussetzungen
 In diesem Thema wird vorausgesetzt, dass Sie über einige grundlegende Kenntnisse zum Typsystem von .NET und die objektorientierte Programmierung verfügen. Um den Beispielen in diesem Thema zu folgen, sollten Sie zudem XAML verstehen und wissen, wie WPF-Anwendungen geschrieben werden. Weitere Informationen finden Sie unter [Exemplarische Vorgehensweise: Meine erste WPF-Desktopanwendung](../getting-started/walkthrough-my-first-wpf-desktop-application.md).  
   
 ## <a name="dependency-properties-and-clr-properties"></a>Abhängigkeitseigenschaften und CLR-Eigenschaften
- Eigenschaften werden in der Regel als .NET-[Standardeigenschaften](../../../standard/base-types/common-type-system.md#Properties) verfügbar gemacht. Grundsätzlich können Sie direkt mit diesen Eigenschaften direkt interagieren, ohne zu wissen, dass sie als Abhängigkeitseigenschaft implementiert werden. Sie sollten aber mit einigen oder allen Funktionen des WPF-Eigenschaftensystems vertraut sein, damit Sie sie nutzen können.
+ Eigenschaften werden in der Regel als .NET-[Standardeigenschaften](../../../standard/base-types/common-type-system.md#properties) verfügbar gemacht. Grundsätzlich können Sie direkt mit diesen Eigenschaften direkt interagieren, ohne zu wissen, dass sie als Abhängigkeitseigenschaft implementiert werden. Sie sollten aber mit einigen oder allen Funktionen des WPF-Eigenschaftensystems vertraut sein, damit Sie sie nutzen können.
 
 Abhängigkeitseigenschaften dienen der Berechnung des Werts einer Eigenschaft anhand des Werts von anderen Eingaben. Zu diese anderen Eingaben gehören Systemeigenschaften wie Designs und die Benutzervoreinstellung, Feststellungsmechanismen für Just-In-Time-Eigenschaft wie die Datenbindung und Animationen/Storyboards, mehrfach verwendbare Vorlagen, z.B. Ressourcen und Stile, oder Werte, die über übergeordnete und untergeordnete Beziehungen mit anderen Elementen in der Elementstruktur bekannt sind. Darüber hinaus kann eine Abhängigkeitseigenschaft implementiert werden, um ein selbstständige Überprüfung, Standardwerte, Rückrufe, die Änderungen an anderen Eigenschaften überwachen, sowie ein System bereitzustellen, das Eigenschaftswerte auf Grundlage potenzieller Laufzeitinformationen erzwingen kann. Abgeleitete Klassen können auch einige spezifische Merkmale einer vorhandenen Eigenschaft durch Überschreiben von Metadaten für Abhängigkeitseigenschaften ändern, anstatt die tatsächliche Implementierung der vorhandenen Eigenschaften zu überschreiben oder neue Eigenschaften zu erstellen.
 
@@ -196,7 +196,7 @@ In der Regel sollen Stile nicht immer gelten und sogar einen lokal festgelegten 
 
 - Abhängigkeitseigenschaften sollten im Allgemeinen als öffentliches Eigentum gelten, das zugänglich oder zumindest für alle Aufrufer mit Zugriff auf eine Instanz erkennbar sein. Weitere Informationen finden Sie unter [Sicherheit von Abhängigkeitseigenschaften](dependency-property-security.md).
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Benutzerdefinierte Abhängigkeitseigenschaften](custom-dependency-properties.md)
 - [Schreibgeschützte Abhängigkeitseigenschaften](read-only-dependency-properties.md)

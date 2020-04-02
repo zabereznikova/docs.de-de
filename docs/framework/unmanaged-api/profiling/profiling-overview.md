@@ -1,5 +1,5 @@
 ---
-title: Profiling Overview (Übersicht über die Profilerstellung)
+title: Übersicht über die Profilerstellung
 ms.date: 03/30/2017
 helpviewer_keywords:
 - managed code, profiling API support
@@ -27,14 +27,14 @@ helpviewer_keywords:
 - security, profiling API considerations
 - stack depth [.NET Framework profiling]
 ms.assetid: 864c2344-71dc-46f9-96b2-ed59fb6427a8
-ms.openlocfilehash: aa8bff374e9698d4b7e032428ec1bdc66901e05d
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 3836b562d969726a6587d702d3edf45abb147d10
+ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76860914"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80588505"
 ---
-# <a name="profiling-overview"></a>Profiling Overview (Übersicht über die Profilerstellung)
+# <a name="profiling-overview"></a>Übersicht über die Profilerstellung
 
 Ein Profiler ist ein Tool, das die Ausführung einer anderen Anwendung überwacht. Ein Common Language Runtime (CLR)-Profiler ist eine Dynamic Link Library (DLL), die aus Funktionen besteht, die mithilfe der Profilerstellungs-API Meldungen von der CLR empfangen und an diese senden. Die Profiler-DLL wird zur Laufzeit von der CLR geladen.
 
@@ -46,26 +46,26 @@ Die JIT-Kompilierung zur Laufzeit bietet hervorragende Möglichkeiten zur Profil
 
 ## <a name="the-profiling-api"></a>Die Profilerstellungs-API
 
-In der Regel wird die Profilerstellungs-API verwendet, um einen *Codeprofiler*zu schreiben. dabei handelt es sich um ein Programm, das die Ausführung einer verwalteten Anwendung überwacht.
+In der Regel wird die Profilerstellungs-API zum Schreiben eines *Codeprofilers*verwendet, bei dem es sich um ein Programm handelt, das die Ausführung einer verwalteten Anwendung überwacht.
 
-Die Profilerstellungs-API wird von einer Profiler-DLL verwendet, die in den gleichen Prozess geladen wird wie die Anwendung, für die ein Profil erstellt wird. Die Profiler-DLL implementiert eine Rückruf Schnittstelle ([ICorProfilerCallback](icorprofilercallback-interface.md) in den .NET Framework Version 1,0 und 1,1, [ICorProfilerCallback2](icorprofilercallback2-interface.md) in Version 2,0 und höher). Die CLR ruft die Methoden in dieser Schnittstelle auf, um den Profiler über Ereignisse im profilierten Prozess zu benachrichtigen. Der Profiler kann mithilfe der Methoden in der [ICorProfilerInfo](icorprofilerinfo-interface.md) -Schnittstelle und der [ICorProfilerInfo2](icorprofilerinfo2-interface.md) -Schnittstelle einen Rückruf für die Laufzeit durchgeführt werden, um Informationen über den Status der profilierten Anwendung zu erhalten.
+Die Profilerstellungs-API wird von einer Profiler-DLL verwendet, die in den gleichen Prozess geladen wird wie die Anwendung, für die ein Profil erstellt wird. Die Profiler-DLL implementiert eine Rückrufschnittstelle ([ICorProfilerCallback](icorprofilercallback-interface.md) in der .NET Framework Version 1.0 und 1.1, [ICorProfilerCallback2](icorprofilercallback2-interface.md) in Version 2.0 und höher). Die CLR ruft die Methoden in dieser Schnittstelle auf, um den Profiler über Ereignisse im profilierten Prozess zu benachrichtigen. Der Profiler kann mithilfe der Methoden in den Schnittstellen [ICorProfilerInfo](icorprofilerinfo-interface.md) und [ICorProfilerInfo2](icorprofilerinfo2-interface.md) in die Laufzeit zurückrufen, um Informationen über den Status der profilierten Anwendung zu erhalten.
 
 > [!NOTE]
 > Lediglich der zur Datenerfassung verwendete Teil der Profilerlösung sollte im gleichen Prozess ausgeführt werden wie die Anwendung, für die ein Profil erstellt wird. Alle Benutzeroberflächen- und Datenanalysevorgänge sollten in einem separaten Prozess ausgeführt werden.
 
 Die folgende Abbildung zeigt, wie die Profiler-DLL mit der Anwendung, für die ein Profil erstellt wird, und der CLR interagiert.
 
-![Screenshot, der die Profil Erstellungs Architektur anzeigt](./media/profiling-overview/profiling-architecture.png)
+![Screenshot, der die Profilerstellungsarchitektur zeigt.](./media/profiling-overview/profiling-architecture.png)
 
 ### <a name="the-notification-interfaces"></a>Die Benachrichtigungsschnittstellen
 
-[ICorProfilerCallback](icorprofilercallback-interface.md) und [ICorProfilerCallback2](icorprofilercallback2-interface.md) können als Benachrichtigungs Schnittstellen angesehen werden. Diese Schnittstellen bestehen aus Methoden wie [ClassLoadStarted](icorprofilercallback-classloadstarted-method.md), [ClassLoadStarted](icorprofilercallback-classloadfinished-method.md)und [JITCompilationStarted](icorprofilercallback-jitcompilationstarted-method.md). Jedes Mal, wenn die CLR eine Klasse lädt oder entlädt, eine Funktion kompiliert usw., ruft sie die entsprechende Methode in der `ICorProfilerCallback`-Schnittstelle oder in der `ICorProfilerCallback2`-Schnittstelle des Profilers auf.
+[ICorProfilerCallback](icorprofilercallback-interface.md) und [ICorProfilerCallback2](icorprofilercallback2-interface.md) können als Benachrichtigungsschnittstellen betrachtet werden. Diese Schnittstellen bestehen aus Methoden wie [ClassLoadStarted](icorprofilercallback-classloadstarted-method.md), [ClassLoadFinished](icorprofilercallback-classloadfinished-method.md)und [JITCompilationStarted](icorprofilercallback-jitcompilationstarted-method.md). Jedes Mal, wenn die CLR eine Klasse lädt oder entlädt, eine Funktion kompiliert usw., ruft sie die entsprechende Methode in der `ICorProfilerCallback`-Schnittstelle oder in der `ICorProfilerCallback2`-Schnittstelle des Profilers auf.
 
-Ein Profiler könnte z. b. die Code Leistung über zwei Benachrichtigungsfunktionen Messen: [FunctionEnter2](functionenter2-function.md) und [FunctionLeave2](functionleave2-function.md). Dazu versieht er lediglich jede Benachrichtigung mit einem Zeitstempel, sammelt Ergebnisse und gibt eine Liste aus, aus der ersichtlich ist, welche Funktionen während der Anwendungsausführung die meiste CPU- oder Realzeit in Anspruch genommen haben.
+Ein Profiler kann beispielsweise die Codeleistung über zwei Benachrichtigungsfunktionen messen: [FunctionEnter2](functionenter2-function.md) und [FunctionLeave2](functionleave2-function.md). Dazu versieht er lediglich jede Benachrichtigung mit einem Zeitstempel, sammelt Ergebnisse und gibt eine Liste aus, aus der ersichtlich ist, welche Funktionen während der Anwendungsausführung die meiste CPU- oder Realzeit in Anspruch genommen haben.
 
 ### <a name="the-information-retrieval-interfaces"></a>Die Datenabrufschnittstellen
 
-Die anderen Haupt Schnittstellen, die an der Profilerstellung beteiligt sind, sind [ICorProfilerInfo](icorprofilerinfo-interface.md) und [ICorProfilerInfo2](icorprofilerinfo2-interface.md). Der Profiler ruft diese Schnittstellen nach Bedarf auf, um weitere Daten für seine Analysen abzurufen. Wenn die CLR z. b. die [FunctionEnter2](functionenter2-function.md) -Funktion aufruft, stellt Sie einen Funktions Bezeichner bereit. Der Profiler kann weitere Informationen zu dieser Funktion abrufen, indem die [ICorProfilerInfo2:: GetFunctionInfo2](icorprofilerinfo2-getfunctioninfo2-method.md) -Methode aufgerufen wird, um die übergeordnete Klasse der Funktion, Ihren Namen usw. zu ermitteln.
+Die anderen Hauptschnittstellen, die an der Profilerstellung beteiligt sind, sind [ICorProfilerInfo](icorprofilerinfo-interface.md) und [ICorProfilerInfo2](icorprofilerinfo2-interface.md). Der Profiler ruft diese Schnittstellen nach Bedarf auf, um weitere Daten für seine Analysen abzurufen. Wenn die CLR beispielsweise die [Funktion FunctionEnter2](functionenter2-function.md) aufruft, wird ein Funktionsbezeichner verwendet. Der Profiler kann weitere Informationen zu dieser Funktion abrufen, indem er die [ICorProfilerInfo2::GetFunctionInfo2-Methode](icorprofilerinfo2-getfunctioninfo2-method.md) aufruft, um die übergeordnete Klasse der Funktion, ihren Namen usw. zu ermitteln.
 
 ## <a name="supported-features"></a>Unterstützte Funktionen
 
@@ -105,7 +105,7 @@ Die Profilerstellungs-API kann von jeder (nicht verwalteten) COM-kompatiblen Spr
 
 Die API ist im Hinblick auf die Prozessor- und Speicherauslastung effizient. Durch die Profilerstellung werden an der Anwendung mit Profil keine Änderungen durchgeführt, die so signifikant sind, dass es zu falschen Ergebnissen kommt.
 
-Die Profilerstellungs-API ist sowohl für Samplingprofiler als auch für andere Profiler nützlich. Ein *Samplingprofiler* überprüft das Profil zu regulären Takt Einheiten, z. A. 5 Millisekunden voneinander entfernt. Ein *nicht-Sampling-Profiler* wird über ein Ereignis synchron mit dem Thread informiert, der das Ereignis auslöst.
+Die Profilerstellungs-API ist sowohl für Samplingprofiler als auch für andere Profiler nützlich. Ein *Sampling-Profiler* inspiziert das Profil bei regulären Takten, z. B. im Abstand von 5 Millisekunden. Ein *Nicht-Sampling-Profiler* wird über ein Ereignis informiert, das synchron mit dem Thread ist, der das Ereignis verursacht.
 
 ### <a name="unsupported-functionality"></a>Nicht unterstützte Funktionalität
 
@@ -123,13 +123,11 @@ Die Profilerstellungs-API unterstützt die folgenden Funktionen nicht:
 
   - Der CLR-Codeprofiler muss mindestens eine Rückrufschnittstelle bei der Laufzeit des lokalen Computers registrieren, auf dem die Anwendung mit Profil ausgeführt wird. Hierdurch wird die Möglichkeit eingeschränkt, einen Remotecodeprofiler zu erstellen.
 
-- Profilerstellung in Produktionsumgebungen, die eine hohe Verfügbarkeit erfordern. Die Profilerstellungs-API wurde erstellt, um die Diagnose bei der Entwicklung zu unterstützen. Sie wurde nicht den strengen Tests unterzogen, die für die Unterstützung einer Produktionsumgebung erforderlich sind.
-
 ## <a name="notification-threads"></a>Benachrichtigungsthreads
 
-In den meisten Fällen führt der Thread, der ein Ereignis generiert, auch Benachrichtigungen aus. Solche Benachrichtigungen (z. b. [FunctionEnter](functionenter-function.md) und [FunctionLeave](functionleave-function.md)) müssen nicht den expliziten `ThreadID`bereitstellen. Zudem kann der Profiler basierend auf der `ThreadID` des jeweiligen Threads entscheiden, seine Analyseblöcke im lokalen Threadspeicher zu speichern und zu aktualisieren, anstatt die Analyseblöcke im globalen Speicher zu indizieren.
+In den meisten Fällen führt der Thread, der ein Ereignis generiert, auch Benachrichtigungen aus. Solche Benachrichtigungen (z. B. [FunctionEnter](functionenter-function.md) und [FunctionLeave](functionleave-function.md) `ThreadID`) müssen nicht die explizite bereitstellen. Zudem kann der Profiler basierend auf der `ThreadID` des jeweiligen Threads entscheiden, seine Analyseblöcke im lokalen Threadspeicher zu speichern und zu aktualisieren, anstatt die Analyseblöcke im globalen Speicher zu indizieren.
 
-Beachten Sie, dass diese Rückrufe nicht serialisiert werden. Benutzer müssen ihren Code schützen, indem sie threadsichere Datenstrukturen erstellen und den Profilercode ggf. sperren, um zu verhindern, dass mehrere Threads parallel darauf zugreifen. Deshalb kann es in bestimmten Fällen passieren, dass Sie eine ungewöhnliche Sequenz von Rückrufen erhalten. Nehmen Sie z. B. an, dass eine verwaltete Anwendung zwei Threads erzeugt, die identischen Code ausführen. In diesem Fall ist es möglich, ein [ICorProfilerCallback:: JITCompilationStarted](icorprofilercallback-jitcompilationstarted-method.md) -Ereignis für eine Funktion von einem Thread und einen `FunctionEnter` Rückruf vom anderen Thread zu empfangen, bevor der [ICorProfilerCallback:: JITCompilationStarted](icorprofilercallback-jitcompilationfinished-method.md) -Rückruf empfangen wird. In diesem Fall erhält der Benutzer einen `FunctionEnter`-Rückruf für eine Funktion, für die möglicherweise noch keine vollständige JIT-Kompilierung (Just-In-Time) erfolgt ist.
+Beachten Sie, dass diese Rückrufe nicht serialisiert werden. Benutzer müssen ihren Code schützen, indem sie threadsichere Datenstrukturen erstellen und den Profilercode ggf. sperren, um zu verhindern, dass mehrere Threads parallel darauf zugreifen. Deshalb kann es in bestimmten Fällen passieren, dass Sie eine ungewöhnliche Sequenz von Rückrufen erhalten. Nehmen Sie z. B. an, dass eine verwaltete Anwendung zwei Threads erzeugt, die identischen Code ausführen. In diesem Fall ist es möglich, ein [ICorProfilerCallback::JITCompilationStarted-Ereignis](icorprofilercallback-jitcompilationstarted-method.md) für `FunctionEnter` eine Funktion von einem Thread und einen Rückruf vom anderen Thread zu empfangen, bevor der [ICorProfilerCallback::JITCompilationFinished-Rückruf](icorprofilercallback-jitcompilationfinished-method.md) empfangen wird. In diesem Fall erhält der Benutzer einen `FunctionEnter`-Rückruf für eine Funktion, für die möglicherweise noch keine vollständige JIT-Kompilierung (Just-In-Time) erfolgt ist.
 
 ## <a name="security"></a>Sicherheit
 
@@ -145,9 +143,9 @@ Bei näherer Betrachtung der Profilerstellungs-API kann der Eindruck entstehen, 
 
 Obwohl dies aus der Entwurfsperspektive möglich ist, unterstützt die Profilerstellungs-API keine verwalteten Komponenten. Ein CLR-Profiler darf keinerlei verwaltete Komponenten enthalten. Versuche, verwalteten und nicht verwalteten Code in einem CLR-Profiler zu kombinieren, können Regelverletzungen, Programmausfälle oder Deadlocks verursachen. Die verwalteten Komponenten des Profilers verweisen Ereignisse zurück an ihre nicht verwalteten Komponenten, die in der Folge erneut die verwalteten Komponenten aufrufen. Dies führt zu zirkulären Verweisen.
 
-Der einzige Ort, an dem ein CLR-Profiler verwalteten Code sicher aufrufen kann, ist innerhalb des Texts einer Methode im MSIL-Code (Microsoft Intermediate Language). Die empfohlene Vorgehensweise zum Ändern des MSIL-Texts besteht darin, die Methoden der JIT-Neukompilierung in der [ICorProfilerCallback4](icorprofilercallback4-interface.md) -Schnittstelle zu verwenden.
+Der einzige Ort, an dem ein CLR-Profiler verwalteten Code sicher aufrufen kann, ist innerhalb des Texts einer Methode im MSIL-Code (Microsoft Intermediate Language). Die empfohlene Vorgehensweise zum Ändern des MSIL-Texts besteht darin, die JIT-Neukompilierungsmethoden in der [ICorProfilerCallback4-Schnittstelle](icorprofilercallback4-interface.md) zu verwenden.
 
-Es können auch die älteren Instrumentationsmethoden zum Ändern von MSIL verwendet werden. Bevor die Just-in-time (JIT)-Kompilierung einer Funktion abgeschlossen ist, kann der Profiler verwaltete Aufrufe in den MSIL-Text einer Methode einfügen und ihn dann JIT-Kompilieren (siehe die [ICorProfilerInfo:: GetILFunctionBody](icorprofilerinfo-getilfunctionbody-method.md) -Methode). Diese Technik lässt sich erfolgreich für die selektive Instrumentierung von verwaltetem Code oder für die Erfassung von Statistik- und Leistungsdaten für JIT verwenden.
+Es können auch die älteren Instrumentationsmethoden zum Ändern von MSIL verwendet werden. Bevor die Just-in-Time-Kompilierung (JIT) einer Funktion abgeschlossen ist, kann der Profiler verwaltete Aufrufe in den MSIL-Text einer Methode einfügen und dann von JIT kompilieren (siehe [ICorProfilerInfo::GetILFunctionBody-Methode).](icorprofilerinfo-getilfunctionbody-method.md) Diese Technik lässt sich erfolgreich für die selektive Instrumentierung von verwaltetem Code oder für die Erfassung von Statistik- und Leistungsdaten für JIT verwenden.
 
 Alternativ dazu kann ein Codeprofiler native Hooks in den MSIL-Text jeder verwalteten Funktion einfügen, die nicht verwalteten Code aufruft. Diese Technik kann für Instrumentation und Abdeckung verwendet werden. So kann beispielsweise ein Codeprofiler Instrumentierungshooks nach jedem MSIL-Block einfügen, um sicherzustellen, dass der Block ausgeführt wurde. Bei der Modifikation des MSIL-Texts einer Methode muss sehr sorgfältig vorgegangen werden, und eine Vielzahl von Faktoren muss berücksichtigt werden.
 
@@ -161,11 +159,11 @@ Die Profilerstellungs-API der Common Language Runtime (CLR) bietet minimale Unte
 
 In .NET Framework, Version 1.0 und 1.1, sind diese Methoden über den prozessinternen Teil der Debug-API der CLR verfügbar. Sie sind in der Datei "CorDebug.idl" definiert.
 
-In den .NET Framework 2,0 und höher können Sie die [ICorProfilerInfo2::D ostacksnapshot](icorprofilerinfo2-dostacksnapshot-method.md) -Methode für diese Funktionalität verwenden.
+In .NET Framework 2.0 und höher können Sie die [ICorProfilerInfo2::DoStackSnapshot-Methode](icorprofilerinfo2-dostacksnapshot-method.md) für diese Funktionalität verwenden.
 
 ## <a name="using-com"></a>Verwenden von COM
 
-Obwohl die Profilerstellungsschnittstellen als COM-Schnittstellen definiert sind, initialisiert die Common Language Runtime (CLR) COM tatsächlich nicht zur Verwendung dieser Schnittstellen. Der Grund hierfür ist, dass Sie das Thread Modell nicht mithilfe der [CoInitialize](/windows/desktop/api/objbase/nf-objbase-coinitialize) -Funktion festlegen müssen, bevor die verwaltete Anwendung die Möglichkeit hatte, das gewünschte Threading Modell anzugeben. Ähnlich sollte auch der Profiler selbst `CoInitialize`, nicht aufrufen, da sonst ein Threadingmodell ausgewählt werden könnte, das mit der Anwendung, für die ein Profil erstellt wird, nicht kompatibel ist und es daher zu einem Anwendungsfehler kommen kann.
+Obwohl die Profilerstellungsschnittstellen als COM-Schnittstellen definiert sind, initialisiert die Common Language Runtime (CLR) COM tatsächlich nicht zur Verwendung dieser Schnittstellen. Der Grund ist, dass das Threadingmodell nicht mithilfe der [CoInitialize-Funktion](/windows/desktop/api/objbase/nf-objbase-coinitialize) festgelegt werden muss, bevor die verwaltete Anwendung die Möglichkeit hatte, das gewünschte Threadingmodell anzugeben. Ähnlich sollte auch der Profiler selbst `CoInitialize`, nicht aufrufen, da sonst ein Threadingmodell ausgewählt werden könnte, das mit der Anwendung, für die ein Profil erstellt wird, nicht kompatibel ist und es daher zu einem Anwendungsfehler kommen kann.
 
 ## <a name="call-stacks"></a>Aufruflisten
 
@@ -175,11 +173,11 @@ Die Profilerstellungs-API bietet zwei Methoden zum Abrufen von Aufruflisten: ein
 
 Unter einer Stapelmomentaufnahme versteht man die Überwachung eines Threadstapels zu einem bestimmten Zeitpunkt. Die Profilerstellungs-API unterstützt die Überwachung von verwalteten Funktionen im Stapel, überlässt jedoch die Überwachung nicht verwalteter Funktionen dem Stackwalker des Profilers.
 
-Weitere Informationen zum Programmieren des Profilers zum Durchlaufen verwalteter Stapel finden Sie in der [ICorProfilerInfo2::D ostacksnapshot](icorprofilerinfo2-dostacksnapshot-method.md) -Methode in dieser Dokumentation und [im Abschnitt "Profiler Stack Walking" in der .NET Framework 2,0: Basics und darüber hinaus](https://docs.microsoft.com/previous-versions/dotnet/articles/bb264782(v=msdn.10)).
+Weitere Informationen zum Programmieren des Profilers zum Gehen verwalteter Stacks finden Sie in der [ICorProfilerInfo2::DoStackSnapshot-Methode](icorprofilerinfo2-dostacksnapshot-method.md) in diesem Dokumentationssatz und [unter Profiler Stack Walking in .NET Framework 2.0: Grundlagen und Beyond](https://docs.microsoft.com/previous-versions/dotnet/articles/bb264782(v=msdn.10)).
 
 ### <a name="shadow-stack"></a>Schattenstapel
 
-Die allzu häufige Verwendung der Momentaufnahmemethode kann schnell zu Leistungseinbußen führen. Wenn Sie Stapel Überwachungen häufig erstellen möchten, sollte der Profiler stattdessen einen Schatten Stapel erstellen, indem er die Ausnahme Rückrufe [FunctionEnter2](functionenter2-function.md), [FunctionLeave2](functionleave2-function.md), [FunctionTailcall2](functiontailcall2-function.md)und [ICorProfilerCallback2](icorprofilercallback2-interface.md) verwendet. Der Schattenstapel ist immer aktuell und kann schnell in den Speicher kopiert werden, wenn eine Stapelmomentaufnahme benötigt wird.
+Die allzu häufige Verwendung der Momentaufnahmemethode kann schnell zu Leistungseinbußen führen. Wenn Sie Stapelablaufverfolgungen häufig erstellen möchten, sollte Ihr Profiler stattdessen einen Schattenstapel mithilfe der [Ausnahmerückrufe FunctionEnter2](functionenter2-function.md), [FunctionLeave2](functionleave2-function.md), [FunctionTailcall2](functiontailcall2-function.md)und [ICorProfilerCallback2](icorprofilercallback2-interface.md) erstellen. Der Schattenstapel ist immer aktuell und kann schnell in den Speicher kopiert werden, wenn eine Stapelmomentaufnahme benötigt wird.
 
 Mit einem Schattenstapel können Funktionsargumente, Rückgabewerte und Informationen über generische Instanziierungen abgerufen werden. Diese Informationen sind nur über den Schattenstapel verfügbar und können abgerufen werden, wenn die Steuerung an eine Funktion übergeben wird. Sobald die Funktion ausgeführt wird, sind diese Informationen u. U. jedoch nicht mehr verfügbar.
 
@@ -189,7 +187,7 @@ Profilerrückrufe können ausgegeben werden, wenn der Stapel stark eingeschränk
 
 ## <a name="related-topics"></a>Verwandte Themen
 
-|Title|Beschreibung|
+|Titel|BESCHREIBUNG|
 |-----------|-----------------|
 |[Einrichten einer Profilerstellungsumgebung](setting-up-a-profiling-environment.md)|Erklärt, wie ein Profiler initialisiert, Ereignisbenachrichtigungen festgelegt und ein Profil für einen Windows-Dienst erstellt werden.|
 |[Profilerstellungsschnittstellen](profiling-interfaces.md)|Beschreibt die nicht verwalteten Schnittstellen, die die Profilerstellungs-API verwendet.|
