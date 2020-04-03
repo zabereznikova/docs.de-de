@@ -11,12 +11,12 @@ metadata:
   displayType: two-column
   interactive: csharp
   ms.custom: mvc
-  ms.openlocfilehash: 365cf0b2ef36dd0be624d022e3dea5e16a9eb58c
-  ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+  ms.openlocfilehash: 6e3742991820a8805b3c9b57767079940899d8fc
+  ms.sourcegitcommit: 2514f4e3655081dcfe1b22470c0c28500f952c42
   ms.translationtype: HT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 03/14/2020
-  ms.locfileid: "73969409"
+  ms.lasthandoff: 03/18/2020
+  ms.locfileid: "79507008"
 items:
 - durationInMinutes: 1
   content: >
@@ -250,7 +250,7 @@ items:
     ```
 
 
-    Die <xref:System.String.Contains%2A>-Methode gibt einen Wert vom Typ **boolean** zurück, der angibt, ob die Zeichenfolge, nach der Sie gesucht haben, gefunden wurde. Ein **boolean**-Datentyp speichert entweder den Wert `true` oder `false`. In einer späteren Lektion erfahren Sie mehr über **boolean**-Werte.
+    Die <xref:System.String.Contains%2A>-Methode gibt einen Wert vom Typ **boolean** zurück, der angibt, ob die Zeichenfolge, nach der Sie gesucht haben, gefunden wurde. Ein **boolean**-Datentyp speichert entweder den Wert `true` oder `false`. Bei einer Anzeige als Textausgabe werden sie groß geschrieben: `True` bzw. `False`. In einer späteren Lektion erfahren Sie mehr über **boolean**-Werte.
 
 
     ***Übung***
@@ -270,7 +270,7 @@ items:
     > [!NOTE]
 
     > Dieses Onlinecodierungstutorial befindet sich im Vorschaumodus. Wenn Probleme auftreten, melden Sie diese [im dotnet/try-Repository](https://github.com/dotnet/try/issues).
-- title: Herausforderung erfüllen
+- title: Übung abgeschlossen
   durationInMinutes: 3
   content: >
     Sieht ihr Code ungefähr wie der Folgende aus?
