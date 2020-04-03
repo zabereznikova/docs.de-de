@@ -1,15 +1,15 @@
 ---
 title: Modifizierer für in-Parameter – C#-Verweis
-ms.date: 03/26/2019
+ms.date: 03/19/2020
 helpviewer_keywords:
 - parameters [C#], in
 - in parameters [C#]
-ms.openlocfilehash: cbde7a571fb71ed7577077c77a5c61db553ec859
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 20956f9e25b6830a8876824a4c9dad1dbc4c4f3e
+ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79173613"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80249369"
 ---
 # <a name="in-parameter-modifier-c-reference"></a>Modifizierer für in-Parameter (C#-Verweis)
 
@@ -56,7 +56,7 @@ Die Angabe von `in` für Argumente an der Aufrufstelle ist üblicherweise option
 
 Erstens wird der Compiler durch die Angabe von `in` an der Aufrufstelle dazu gezwungen, die Methode mit dem übereinstimmenden `in`-Parameter auszuwählen. Wenn dies nicht der Fall ist und sich zwei Methoden nur durch die Angabe von `in` unterscheiden, wird die Methode überladen, für die Argumente als Wert übergeben werden.
 
-Zweitens wird durch `in` festgelegt, dass ein Argument als Verweis übergeben wird. Das mit `in` verwendete Argument muss einen Speicherort darstellen, auf den direkt verwiesen werden kann. Es gelten dieselben Regeln wie für `out`- und `ref`-Argumente: Sie können keine Konstanten, normale Eigenschaften oder andere Ausdrücke, die Werte erzeugen, verwenden. Wird `in` an der Aufrufstelle weggelassen, wird der Compiler darüber informiert, dass die Erstellung einer temporären Variable und deren Übergabe als schreibgeschützter Verweis an die Methode zulässig ist. Der Compiler erstellt in diesem Fall eine temporäre Variable, um mehrere Einschränkungen im Zusammenhang mit `in`-Argumenten zu umgehen:
+Zweitens wird durch `in` festgelegt, dass ein Argument als Verweis übergeben wird. Das mit `in` verwendete Argument muss einen Speicherort darstellen, auf den direkt verwiesen werden kann. Es gelten die gleichen allgemeinen Regeln für `out`- und `ref`-Argumente: Sie können keine Konstanten, normale Eigenschaften oder andere Ausdrücke, die Werte erzeugen, verwenden. Wird `in` an der Aufrufstelle weggelassen, wird der Compiler darüber informiert, dass die Erstellung einer temporären Variable und deren Übergabe als schreibgeschützter Verweis an die Methode zulässig ist. Der Compiler erstellt in diesem Fall eine temporäre Variable, um mehrere Einschränkungen im Zusammenhang mit `in`-Argumenten zu umgehen:
 
 - Eine temporäre Variable ermöglicht als Konstanten zur Kompilierzeit `in`-Parameter.
 - Eine temporäre Variable ermöglicht Eigenschaften oder andere Ausdrücke für `in`-Parameter.
@@ -115,12 +115,14 @@ Nur beim letzten Methodenaufruf wird das Argument als Verweis übergeben.
 Sie können keines der Schlüsselwörter `in`, `ref` und `out` für die folgenden Methodentypen verwenden:  
   
 - Asynchrone Methoden, die Sie mit dem [async](async.md)-Modifizierer definieren.  
-- Iterator-Methoden, die eine [yield return](yield.md)- oder `yield break`-Anweisung enthalten.  
+- Iterator-Methoden, die eine [yield return](yield.md)- oder `yield break`-Anweisung enthalten.
+- Das erste Argument einer Erweiterungsmethode kann nur dann einen `in`-Modifizierer verwenden, wenn dieses Argument eine Struktur ist.
+- Das erste Argument einer Erweiterungsmethode, wenn es sich bei diesem Argument um einen generischen Typ handelt (selbst dann, wenn dieser Typ auf eine Struktur beschränkt ist).
 
 ## <a name="c-language-specification"></a>C#-Programmiersprachenspezifikation  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [C#-Referenz](../index.md)
 - [C#-Programmierhandbuch](../../programming-guide/index.md)

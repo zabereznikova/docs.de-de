@@ -4,12 +4,12 @@ description: Durch Verbesserungen, die kürzlich an C# vorgenommen wurden, könn
 ms.date: 10/23/2018
 ms.technology: csharp-advanced-concepts
 ms.custom: mvc
-ms.openlocfilehash: d4a7916b80e15c7f00fa0a7da213ed0593e0959d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 365320fef5a2f9cd123086c1baed9a786ede9f05
+ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78239975"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80345081"
 ---
 # <a name="write-safe-and-efficient-c-code"></a>Schreiben von sicherem und effizientem C#-Code
 
@@ -17,11 +17,11 @@ Dank neuer C#-Features können Sie nun überprüfbaren sicheren Code schreiben, 
 
 In vielen Codebeispielen in diesem Artikel werden die neuen Features von C# 7.2 verwendet. Um diese nutzen zu können, müssen Sie Ihr Projekt für die Verwendung von C# 7.2 oder höher konfigurieren. Weitere Informationen zum Festlegen der Sprachversion finden Sie unter [Konfigurieren der Sprachversion](language-reference/configure-language-version.md).
 
-In diesem Artikel stehen Vorgehensweisen für die effiziente Ressourcenverwaltung im Vordergrund. Ein Vorteil bei der Nutzung von Werttypen besteht darin, dass häufig eine Heapspeicherbelegung vermieden wird. Der Nachteil ist, dass sie als Wert kopiert werden. Dies macht es schwieriger, Algorithmen zu optimieren, die mit großen Datenmengen arbeiten. Neue Sprachfeatures in C# 7.2 stellen Mechanismen bereit, die Verweise auf Werttypen nutzen und sicheren sowie effizienten Code ermöglichen. Wenn Sie diese Features geschickt einsetzen, können Sie sowohl Speicherbelegungen als auch Kopiervorgänge minimieren. In diesem Artikel werden diese neuen Features untersucht.
+In diesem Artikel stehen Vorgehensweisen für die effiziente Ressourcenverwaltung im Vordergrund. Ein Vorteil bei der Nutzung von Werttypen besteht darin, dass häufig eine Heapspeicherbelegung vermieden wird. Der Nachteil ist, dass sie als Wert kopiert werden. Dieser Kompromiss macht es schwieriger, Algorithmen zu optimieren, die mit großen Datenmengen arbeiten. Neue Sprachfeatures in C# 7.2 stellen Mechanismen bereit, die Verweise auf Werttypen nutzen und sicheren sowie effizienten Code ermöglichen. Wenn Sie diese Features geschickt einsetzen, können Sie sowohl Speicherbelegungen als auch Kopiervorgänge minimieren. In diesem Artikel werden diese neuen Features untersucht.
 
 Folgende Empfehlungen zur Ressourcenverwaltung werden behandelt:
 
-- Deklarieren Sie einen [`readonly struct`](language-reference/keywords/readonly.md#readonly-struct-example)-Typ, um einen Typ als **unveränderlich** festzulegen. Dadurch muss der Compiler weniger Kopien erstellen, wenn [`in`](language-reference/keywords/in-parameter-modifier.md)-Parameter verwendet werden.
+- Deklarieren Sie ein [`readonly struct`](language-reference/builtin-types/struct.md#readonly-struct), um auszudrücken, dass ein Typ **unveränderlich** ist. Auf diese Weise kann der Compiler bei Verwendung von [`in`](language-reference/keywords/in-parameter-modifier.md)-Parametern defensive Kopien speichern.
 - Wenn ein Typ nicht so festgelegt werden kann, dass er nicht veränderbar ist, deklarieren Sie `struct`-Member als `readonly`, um anzuzeigen, dass der Member den Zustand nicht ändert.
 - Verwenden Sie einen [`ref readonly`](language-reference/keywords/ref.md#reference-return-values)-Verweisrückgabewert, wenn der Rückgabewert ein `struct`-Typ und größer als <xref:System.IntPtr.Size?displayProperty=nameWithType> ist und die Speicherlebensdauer die der Methode überschreitet, die den Wert zurückgibt.
 - Übergeben Sie aus Leistungsgründen einen `readonly struct`-Typ als `in`-Parameter, wenn die Größe des Typs <xref:System.IntPtr.Size?displayProperty=nameWithType> überschreitet.
@@ -72,7 +72,7 @@ Sie sollten sich immer dann an diese Empfehlung halten, wenn die Entwurfsabsicht
 
 ## <a name="declare-readonly-members-when-a-struct-cant-be-immutable"></a>Deklarieren von schreibgeschützten Member, wenn eine Struktur nicht so festgelegt werden kann, dass sie nicht veränderbar ist
 
-Wenn ein Strukturtyp in C# 8.0 und höher veränderbar ist, sollten Sie Member, die nicht verändert werden können, mit `readonly` deklarieren. Im Folgenden finden Sie beispielsweise eine veränderbare Variation der 3D-Punktstruktur:
+Wenn ein Strukturtyp in C# 8.0 und höher veränderbar ist, sollten Sie Member, die nicht verändert werden können, mit `readonly` deklarieren. Erwägen Sie eine andere Anwendung, die eine Struktur für einen Punkt im dreidimensionalen Raum erfordert, aber Veränderlichkeit unterstützt. Die folgende Version einer solchen Struktur fügt den `readonly`-Modifizierer nur den Membern hinzu, die die Struktur nicht ändern. Folgen Sie diesem Beispiel, wenn Ihr Entwurf Änderungen an der Struktur durch einige Member unterstützen muss, Sie aber dennoch die Vorteile der Erzwingung eines Schreibschutzes für andere Member nutzen möchten:
 
 ```csharp
 public struct Point3D
@@ -214,13 +214,13 @@ Durch dieses Verhalten können `in`-Parameter leichter über einen gewissen Zeit
 
 Der Parameter `in` kann auch mit Verweistypen oder numerischen Werten verwendet werden. Allerdings sind die Vorteile in beiden Fällen – wenn überhaupt – nur minimal.
 
-## <a name="never-use-mutable-structs-as-in-in-argument"></a>Vermeiden von veränderlichen Strukturen als `in`-Argumente
+## <a name="avoid-mutable-structs-as-an-in-argument"></a>Vermeiden von veränderlichen Strukturen als `in`-Argument
 
 In den bisher beschriebenen Strategien wurde erläutert, wie sich Kopien durch die Rückgabe von Verweisen und die Übergabe von Werten als Verweis vermeiden lassen. Diese Vorgehensweisen sind ideal für Argumenttypen, die mit `readonly struct` deklariert werden. Wenn dies nicht der Fall ist, muss der Compiler in vielen Situationen **defensive Kopien** erstellen, um den Schreibschutz von Argumenten zu erzwingen. Betrachten Sie das folgende Beispiel, in dem im dreidimensionalen Raum der Abstand eines Punkts vom Ursprung berechnet wird:
 
 [!code-csharp[InArgument](../../samples/snippets/csharp/safe-efficient-code/ref-readonly-struct/Program.cs#InArgument "Specifying an in argument")]
 
-Die `Point3D`-Struktur ist *keine* schreibgeschützte Struktur. Im Methodenkörper werden sechs Aufrufe zum Zugriff auf die Eigenschaften ausgeführt. Diese Zugriffe erscheinen möglicherweise auf den ersten Blick sicher. Die `get`-Zugriffsmethode sollte schließlich nicht den Zustand eines Objekts ändern. Dies wird jedoch von keiner Programmiersprachregel erzwungen. Es handelt sich nur um eine Konvention. Jeder Typ könnte eine `get`-Zugriffsmethode implementieren, die den internen Zustand ändert. Ohne eine Garantie der Programmiersprache muss der Compiler eine temporäre Kopie des Arguments erstellen, bevor er einen Member aufruft. Der temporäre Speicher wird auf dem Stapel erstellt, die Werte des Arguments werden in den temporären Speicher kopiert, und der Wert wird bei jedem Memberzugriff als `this`-Argument in den Stapel kopiert. In vielen Situationen beeinträchtigen die Kopien die Leistung so, dass die Übergabe als Wert schneller als die Übergabe als schreibgeschützter Verweis ist, wenn der Argumenttyp nicht `readonly struct` ist.
+Die `Point3D`-Struktur ist *keine* schreibgeschützte Struktur. Im Methodenkörper werden sechs Aufrufe zum Zugriff auf die Eigenschaften ausgeführt. Diese Zugriffe erscheinen möglicherweise auf den ersten Blick sicher. Die `get`-Zugriffsmethode sollte schließlich nicht den Zustand eines Objekts ändern. Dies wird jedoch von keiner Programmiersprachregel erzwungen. Es handelt sich nur um eine Konvention. Jeder Typ könnte eine `get`-Zugriffsmethode implementieren, die den internen Zustand ändert. Ohne eine Garantie der Programmiersprache muss der Compiler eine temporäre Kopie des Arguments erstellen, bevor er einen Member aufruft, der nicht mit dem `readonly`-Modifizierer gekennzeichnet ist. Der temporäre Speicher wird auf dem Stapel erstellt, die Werte des Arguments werden in den temporären Speicher kopiert, und der Wert wird bei jedem Memberzugriff als `this`-Argument in den Stapel kopiert. In vielen Situationen beeinträchtigen die Kopien die Leistung so, dass die Übergabe als Wert schneller ist als die Übergabe als schreibgeschützter Verweis, wenn der Argumenttyp nicht `readonly struct` lautet und die Methode Member aufruft, die nicht als `readonly` markiert sind. Wenn Sie alle Methoden als `readonly` markieren, die keine Änderung am Strukturstatus durchführen, kann der Compiler sicher bestimmen, dass der Strukturzustand nicht geändert wird und eine defensive Kopie nicht erforderlich ist.
 
 Wenn stattdessen zur Abstandsberechnung die unveränderliche Struktur `ReadonlyPoint3D` verwendet wird, werden temporäre Objekte nicht benötigt:
 

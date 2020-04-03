@@ -1,27 +1,32 @@
 ---
-title: 'default-Operator: C#-Referenz'
-description: Verwendung des Default-Operators zum Erzeigen des Standardwerts eines Typs
-ms.date: 08/01/2019
+title: Standardwertausdrücke – C#-Referenz
+description: Verwenden Sie Standardwertausdrücke, um den Standardwert eines Typs abzurufen.
+ms.date: 03/13/2020
+f1_keywords:
+- default_CSharpKeyword
+- default
 helpviewer_keywords:
 - default keyword [C#]
-ms.openlocfilehash: 0d37fe952e71e74f014872231a2e58663dea9d18
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2adfd8d24066e9dad50c3c18407d3ade71b4b68e
+ms.sourcegitcommit: 2514f4e3655081dcfe1b22470c0c28500f952c42
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79398184"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79507177"
 ---
-# <a name="default-operator-c-reference"></a>default-Operator (C#-Referenz)
+# <a name="default-value-expressions-c-reference"></a>Standardwertausdrücke (C#-Referenz)
 
-Der `default`-Operator dient zum Erzeugen des [Standardwerts](../builtin-types/default-values.md) eines Typs. Das Argument für den `default`-Operator muss der Name eines Typs oder ein Typparameter sein.
-
-Im folgenden Beispiel wird die Verwendung des `default`-Operators veranschaulicht:
-
-[!code-csharp-interactive[default of T](snippets/DefaultOperator.cs#WithOperand)]
+Ein Standardwertausdruck erzeugt den [Standardwert](../builtin-types/default-values.md) für einen Typ. Es gibt zwei Arten von Standardwertausdrücken: den Aufruf des [default-Operators](#default-operator) und ein [default-Literal](#default-literal).
 
 Außerdem verwenden Sie das Schlüsselwort `default` in einer [`switch`-Anweisung](../keywords/switch.md) als case-Standardbezeichnung.
 
-## <a name="default-literal"></a>Standardliteral
+## <a name="default-operator"></a>default-Operator
+
+Das Argument für den `default`-Operator muss der Name eines Typs oder Typparameters sein, wie das folgende Beispiel zeigt:
+
+[!code-csharp-interactive[default of T](snippets/DefaultOperator.cs#WithOperand)]
+
+## <a name="default-literal"></a>default-Literal
 
 Ab C# 7.1 können Sie das `default`-Literal verwenden, um den Standardwert eines Typs zu erzeugen, wenn der Compiler den Ausdruckstyp ableiten kann. Der `default`-Literalausdruck erzeugt den gleichen Wert wie der `default(T)`-Ausdruck, wobei `T` der abgeleitete Typ ist. Sie können das `default`-Literal in den folgenden Fälle verwenden:
 
@@ -40,7 +45,7 @@ Weitere Informationen finden Sie im Abschnitt [Ausdrücke mit Standardwert](~/_c
 
 Weitere Informationen zum `default`-Literal finden Sie unter [Hinweis zum Featurevorschlag](~/_csharplang/proposals/csharp-7.1/target-typed-default.md).
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [C#-Referenz](../index.md)
 - [C#-Operatoren](index.md)

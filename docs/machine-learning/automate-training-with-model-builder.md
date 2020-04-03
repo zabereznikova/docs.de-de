@@ -1,14 +1,14 @@
 ---
 title: Was ist der Modell-Generator und wie funktioniert er?
 description: Erfahren Sie mehr über die Verwendung des ML.NET-Modell-Generators zum automatischen Trainieren eines Machine Learning-Modells.
-ms.date: 01/07/2020
+ms.date: 03/25/2020
 ms.custom: overview, mlnet-tooling
-ms.openlocfilehash: cff4601843ec9ca7201ea7dbdbfbcfa18f50e46e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9cf66455109908ebd9fc10e62cf4f067609b57d9
+ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79397806"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80344765"
 ---
 # <a name="what-is-model-builder-and-how-does-it-work"></a>Was ist der Modell-Generator und wie funktioniert er?
 
@@ -23,7 +23,7 @@ Für die Verwendung des Modell-Generators sind keine Machine Learning-Kenntnisse
 > [!NOTE]
 > Der Modell-Generator befindet sich derzeit in der Vorschauphase.
 
-## <a name="scenarios"></a>Szenarien
+## <a name="scenario"></a>Szenario
 
 Sie können viele verschiedene Szenarien in den Modell-Generator einbinden, um ein Machine Learning-Modell für Ihre Anwendung zu erstellen.
 
@@ -38,47 +38,41 @@ Ein Szenario ist eine Beschreibung der Art der Vorhersage, die Sie mit Ihren Dat
 
 Im Modell-Generator müssen Sie ein Szenario auswählen. Der Typ des Szenarios hängt davon ab, welchen Typ von Vorhersage Sie treffen möchten.
 
-#### <a name="predict-a-category-when-there-are-only-two-categories"></a>Vorhersagen einer Kategorie (wenn nur zwei Kategorien vorliegen)
+#### <a name="text-classification"></a>Textklassifizierung
 
-Die binäre Klassifizierung wird verwendet, um Daten in zwei Kategorien zu unterteilen (ja/nein; Erfolg/Fehler; wahr/falsch; positiv/negativ).
+Die Klassifizierung dient der Unterteilung von Daten in Kategorien.
 
 ![Diagramm mit Beispielen für die binäre Klassifizierung, einschließlich Betrugserkennung, Risikominderung und Bewerbungsüberprüfung](media/binary-classification-examples.png)
 
-Die Standpunktanalyse kann verwendet werden, um positive oder negative Stimmungen im Kundenfeedback vorherzusagen. Es ist ein Beispiel für die binäre Machine Learning-Klassifizierungsaufgabe.
-
-Wenn Ihr Szenario eine Klassifizierung in zwei Kategorien erfordert, können Sie diese Vorlage mit einem eigenen Dataset verwenden.
-
-#### <a name="predict-a-category-when-there-are-three-or-more-categories"></a>Vorhersagen einer Kategorie (wenn drei oder mehr Kategorien vorliegen)
-
-Die Multiklassenklassifizierung kann für die Kategorisierung von Daten in drei oder mehr Klassen verwendet werden.
-
 ![Beispiele für die Mehrklassenklassifizierung, einschließlich Dokument- und Produktklassifizierung, Supportticketweiterleitung und Kundenproblempriorisierung](media/multiclass-classification-examples.png)
 
-Die Fehlerklassifizierung kann verwendet werden, um Kundenfeedback (z.B. zu GitHub) anhand des Problemtitels und der Beschreibung zu kategorisieren. Es ist ein Beispiel für die Machine Learning-Multiklassen-Klassifizierungsaufgabe.
-
-Sie können die Vorlage für die Fehlerklassifizierung für Ihr Szenario verwenden, wenn Sie Daten in drei oder mehr Kategorien einteilen möchten.
-
-#### <a name="predict-a-number"></a>Vorhersagen einer Zahl
+#### <a name="value-prediction"></a>Wertvorhersage
 
 Die Regression wird verwendet, um Zahlen vorherzusagen.
 
 ![Diagramm mit Regressionsbeispielen wie Preisvorhersagen, Umsatzvorhersagen und Predictive Maintenance](media/regression-examples.png)
 
-Die Preisvorhersage kann verwendet werden, um Hauspreise anhand von Lage, Größe und anderen Merkmalen des Hauses vorherzusagen. Es ist ein Beispiel für die Machine Learning-Regressionsaufgabe.
-
-Sie können die Vorlage für die Preisvorhersage für Ihr Szenario verwenden, wenn Sie einen Zahlenwert mit einem eigenen Dataset vorhersagen möchten.
-
-#### <a name="classify-images-into-categories"></a>Klassifizieren von Bildern in Kategorien
-
-Bei diesem Szenario handelt es sich um einen Sonderfall der Klassifizierung mit mehreren Klassen, bei dem die zu kategorisierenden Eingabedaten aus einem Satz von Bildern bestehen.
+#### <a name="image-classification"></a>Bildklassifizierung
 
 Bildklassifizierung kann verwendet werden, um Bilder unterschiedlicher Kategorien zu identifizieren. Beispiele hierfür sind unterschiedliche Arten von Gelände, Tieren oder Fertigungsfehlern.
 
-Sie können die Bildklassifizierungsvorlage für Ihr Szenario verwenden, wenn Sie über einen Satz von Bildern verfügen und die Bilder in verschiedene Kategorien klassifizieren möchten.
+Sie können das Szenario für die Bildklassifizierung verwenden, wenn Sie über einen Satz von Bildern verfügen und die Bilder in verschiedene Kategorien klassifizieren möchten.
 
-#### <a name="custom-scenario"></a>Benutzerdefiniertes Szenario
+#### <a name="recommendation"></a>Empfehlung
 
-Im benutzerdefinierten Szenario können Sie Ihr Szenario manuell auswählen.
+Mit dem Empfehlungsszenario wird eine Liste vorgeschlagener Elemente für einen bestimmten Benutzer vorhergesagt. Die Vorhersage basiert darauf, wie stark ihre „Gefällt mir“- und „Gefällt nicht“-Angaben denen anderer Benutzer ähneln.
+
+Sie können das Empfehlungsszenario verwenden, wenn Sie über einen Satz mit Benutzern und einen Satz mit „Produkten“ – z. B. Kaufartikel, Filme, Bücher oder TV-Sendungen – sowie über einen Satz mit Benutzerbewertungen dieser Produkte verfügen.
+
+## <a name="environment"></a>Umgebung
+
+Sie können Ihr Machine Learning-Modell lokal auf Ihrem Computer oder in der Cloud in Azure trainieren.
+
+Wenn Sie ein lokales Training durchführen, arbeiten Sie innerhalb der Grenzen Ihrer Computerressourcen (CPU, Arbeitsspeicher und Datenträger). Wenn Sie das Training in der Cloud durchführen, können Sie Ihre Ressourcen in Abstimmung auf die Anforderungen Ihres Szenarios hochskalieren, insbesondere für große Datasets.
+
+Das lokale Training wird für alle Szenarien unterstützt.
+
+Das Azure-Training wird für die Bildklassifizierung unterstützt.
 
 ## <a name="data"></a>Daten
 
@@ -113,14 +107,15 @@ Die Bezeichnung ist der historische Hauspreis für diese Zeile mit den Werten f�
 
 Wenn Sie noch keine eigenen Daten haben, probieren Sie eines dieser Datasets aus:
 
-|Szenario|ML-Aufgabe|Daten|Bezeichnung|Features|
+|Szenario|Beispiel|Daten|Bezeichnung|Features|
 |-|-|-|-|-|
-|Preisvorhersage|Regression|[taxi fare data](https://github.com/dotnet/machinelearning-samples/blob/master/datasets/taxi-fare-train.csv)|Preis|Fahrtzeit, Strecke|
-|Anomalieerkennung|Binäre Klassifizierung|[product sales data](https://github.com/dotnet/machinelearning-samples/blob/master/samples/csharp/getting-started/AnomalyDetection_Sales/SpikeDetection/Data/product-sales.csv)|Produktverkäufe|Monat|
-|Standpunktanalyse|Binäre Klassifizierung|[website comment data](https://raw.githubusercontent.com/dotnet/machinelearning/master/test/data/wikipedia-detox-250-line-data.tsv)|Bezeichnung (0 bei negativer Stimmung, 1, wenn positiv)|Kommentar, Jahr|
-|Betrugserkennung|Binäre Klassifizierung|[credit card data](https://github.com/dotnet/machinelearning-samples/blob/master/samples/csharp/getting-started/BinaryClassification_CreditCardFraudDetection/CreditCardFraudDetection.Trainer/assets/input/creditcardfraud-dataset.zip)|Klasse (1, wenn betrügerisch, andernfalls 0)|Betrag, V1-V28 (anonymisierte Features)|
-|Textklassifizierung|Multiklassenklassifizierung|[GitHub issue data](https://github.com/dotnet/machinelearning-samples/blob/master/samples/csharp/end-to-end-apps/MulticlassClassification-GitHubLabeler/GitHubLabeler/Data/corefx-issues-train.tsv)|Bereich|Titel, Beschreibung|
-|Bildklassifizierung|Multiklassenklassifizierung|[Blumenbilder](http://download.tensorflow.org/example_images/flower_photos.tgz)|Der Typ Blume: Gänseblümchen, Löwenzahn, Rosen, Sonnenblumen, Tulpen|Die Bilddaten selbst|
+|Klassifizierung|Vorhersage von Umsatzanomalien|[product sales data](https://github.com/dotnet/machinelearning-samples/blob/master/samples/csharp/getting-started/AnomalyDetection_Sales/SpikeDetection/Data/product-sales.csv)|Produktverkäufe|Monat|
+||Stimmungsvorhersage für Websitekommentare|[website comment data](https://raw.githubusercontent.com/dotnet/machinelearning/master/test/data/wikipedia-detox-250-line-data.tsv)|Bezeichnung (0 bei negativer Stimmung, 1, wenn positiv)|Kommentar, Jahr|
+||Vorhersage betrügerischer Kreditkartentransaktionen|[credit card data](https://github.com/dotnet/machinelearning-samples/blob/master/samples/csharp/getting-started/BinaryClassification_CreditCardFraudDetection/CreditCardFraudDetection.Trainer/assets/input/creditcardfraud-dataset.zip)|Klasse (1, wenn betrügerisch, andernfalls 0)|Betrag, V1-V28 (anonymisierte Features)|
+||Vorhersage des Issuetyps in einem GitHub-Repository|[GitHub issue data](https://github.com/dotnet/machinelearning-samples/blob/master/samples/csharp/end-to-end-apps/MulticlassClassification-GitHubLabeler/GitHubLabeler/Data/corefx-issues-train.tsv)|Bereich|Titel, Beschreibung|
+|Wertvorhersage|Vorhersage des Preises für eine Taxifahrt|[taxi fare data](https://github.com/dotnet/machinelearning-samples/blob/master/datasets/taxi-fare-train.csv)|Preis|Fahrtzeit, Strecke|
+|Bildklassifizierung|Vorhersage der Kategorie eines Bilds|[flower images](http://download.tensorflow.org/example_images/flower_photos.tgz)|Der Typ Blume: Gänseblümchen, Löwenzahn, Rosen, Sonnenblumen, Tulpen|Die Bilddaten selbst|
+|Empfehlung|Vorhersage von Filmen, die einer Person gefallen|[movie ratings](http://files.grouplens.org/datasets/movielens/ml-latest-small.zip)|Benutzer, Filme|Altersfreigabe|
 
 ## <a name="train"></a>Training
 
@@ -153,7 +148,7 @@ Diese Zahlen sind nur eine Richtlinie. Die genaue Trainingsdauer ist abhängig v
 - Anzahl der Merkmale (Spalten), die als Eingabe für das Modell verwendet werden
 - Typ der Spalten
 - ML-Aufgabe
-- CPU-, Datenträger- und Arbeitsspeicherleistung des für das Training verwendeten Computers
+- CPU-, Datenträger- und Arbeitsspeicherleistung des zum Training verwendeten Computers
 
 ## <a name="evaluate"></a>Auswerten
 
@@ -165,13 +160,13 @@ Der Modell-Generator unterteilt die Trainingsdaten in einen Trainingssatz und ei
 
 Ein Szenario wird einer Machine Learning-Aufgabe zugeordnet. Jede ML-Aufgabe verfügt über einen eigenen Satz von Auswertungsmetriken.
 
-#### <a name="regression-for-example-price-prediction"></a>Regression (z. B. Preisvorhersage)
+#### <a name="value-prediction"></a>Wertvorhersage
 
-Die Standardmetrik für Regressionsprobleme ist RSquared. Der Wert von RSquared liegt zwischen 0 und 1. 1 ist der bestmögliche Wert, d. h. je näher der Wert von RSquared bei 1 liegt, desto besser ist die Leistung Ihres Modells.
+Die Standardmetrik für Wertvorhersageprobleme ist RSquared. Der Wert von RSquared liegt zwischen 0 und 1. 1 ist der bestmögliche Wert, d. h. je näher der Wert von RSquared bei 1 liegt, desto besser ist die Leistung Ihres Modells.
 
-Andere erfasste Metriken wie „absolute-loss“, „squared-loss“ und „RMS-loss“ sind zusätzliche Metriken, die verwendet werden können, um die Leistung Ihres Modells zu verstehen und es mit anderen Regressionsmodellen zu vergleichen.
+Andere erfasste Metriken wie „absolute-loss“, „squared-loss“ und „RMS-loss“ sind zusätzliche Metriken, die verwendet werden können, um die Leistung Ihres Modells zu verstehen und es mit anderen Wertvorhersagemodellen zu vergleichen.
 
-#### <a name="binary-classification-for-example-sentiment-analysis"></a>Binäre Klassifizierung (beispielsweise Standpunktanalyse)
+#### <a name="classification-2-categories"></a>Klassifizierung (2 Kategorien)
 
 Die Standardmetrik für binäre Klassifizierungsprobleme ist „accuracy“ (Genauigkeit). Sie definiert den Anteil an genauen Vorhersagen, die Ihr Modell anhand des Testdatasets trifft. Je näher der Wert bei 100 % oder 1,0 liegt, desto besser ist das Modell.
 
@@ -179,7 +174,7 @@ Andere gemeldete Metriken wie AUC (Area under the curve, Fläche unter der Kurve
 
 Zusätzliche Metriken wie die F1-Bewertung können verwendet werden, um das Gleichgewicht zwischen Genauigkeit und Rückruf zu steuern.
 
-#### <a name="multi-class-classification-for-example-issue-classification-image-classification"></a>Mehrklassige Klassifizierung (beispielsweise Problemklassifizierung, Bildklassifizierung)
+#### <a name="classification-3-categories"></a>Klassifizierung (3 Kategorien und mehr)
 
 Die Standardmetrik für mehrklassige Klassifizierung ist „Micro Accuracy“. Je näher „Mico Accuracy“ bei 100 % oder 1,0 liegt, desto besser ist das Modell.
 
@@ -196,7 +191,7 @@ Weitere Informationen finden Sie unter [Metriken für die Modellevaluierung](res
 
 Wenn Ihr Modellleistungswert nicht so gut ist, wie Sie es sich wünschen, haben Sie die folgenden Möglichkeit:
 
-- Längeres Trainieren. Mit mehr Zeit kann die automatisierte Machine Learning-Engine mehrere Algorithmen und Einstellungen auszuprobieren.
+- Längeres Trainieren. Je mehr Zeit einer automatisierten Machine Learning-Engine zum Trainieren zur Verfügung steht, desto mehr Algorithmen und Einstellungen kann sie ausprobieren.
 
 - Weitere Daten hinzufügen. Manchmal reicht die Datenmenge nicht aus, um ein hochwertiges Machine Learning-Modell zu trainieren.
 

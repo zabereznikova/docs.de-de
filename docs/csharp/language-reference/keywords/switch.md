@@ -12,14 +12,16 @@ helpviewer_keywords:
 - case statement [C#]
 - default keyword [C#]
 ms.assetid: 44bae8b8-8841-4d85-826b-8a94277daecb
-ms.openlocfilehash: e5580e81b9175cd95491fdba724bacbffa692a5e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 49b3836f17e91ae8de10d68e97fd662aae80d1ff
+ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75345394"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80249317"
 ---
 # <a name="switch-c-reference"></a>switch (C#-Referenz)
+
+In diesem Artikel wird die `switch`-Anweisung vorgestellt. Informationen zum `switch`-Ausdruck (eingeführt in C# 8.0) finden Sie im Artikel zu [`switch`-Ausdrücken](../operators/switch-expression.md) im Abschnitt [Ausdrücke und Operatoren](../operators/index.md).
 
 `switch` ist eine Auswahlanweisung, die einen einzelnen *switch-Abschnitt* zum Ausführen aus einer Liste von Kandidaten auswählt, die auf einem Mustertreffer mit dem *Vergleichsausdruck* basiert.
 
@@ -106,7 +108,7 @@ Der `default`-Case gibt den auszuführenden switch-Abschnitt an, wenn der Vergle
 
 Der `default`-Case kann in beliebiger Reihenfolge in der `switch`-Anweisung auftauchen. Unabhängig von der Reihenfolge im Quellcode wird er immer zuletzt ausgewertet, nachdem alle `case`-Bezeichnungen ausgewertet wurden.
 
-## <a name="a-namepattern--pattern-matching-with-the-switch-statement"></a><a name="pattern" /> Musterabgleich mit der `switch`-Anweisung
+## <a name="pattern-matching-with-the-switch-statement"></a><a name="pattern" /> Musterabgleich mit der `switch`-Anweisung
 
 Jede `case`-Anweisung definiert ein Muster, das, wenn es mit dem Vergleichsausdruck übereinstimmt, dafür sorgt, dass seine enthaltenden switch-Abschnitte ausgeführt werden. Alle Versionen von C# unterstützen Konstantenmuster. Die übrigen Muster werden ab C# 7.0 unterstützt.
 
@@ -183,7 +185,7 @@ Ohne Musterabgleich könnte dieser Code wie folgt geschrieben werden. Die Verwen
 
 [!code-csharp[type-pattern2#1](~/samples/snippets/csharp/language-reference/keywords/switch/type-pattern2.cs#1)]
 
-## <a name="a-namewhen--the-case-statement-and-the-when-clause"></a><a name="when" /> Die `case`-Anweisung und die `when`-Klausel
+## <a name="the-case-statement-and-the-when-clause"></a><a name="when" /> Die `case`-Anweisung und die `when`-Klausel
 
 Da sich case-Anweisungen ab C# 7.0 nicht gegenseitig ausschließen müssen, können Sie eine `when`-Klausel hinzufügen, um eine zusätzliche Bedingung anzugeben, die erfüllt werden muss, damit die case-Anweisung als TRUE ausgewertet wird. Die `when`-Klausel kann ein beliebiger Ausdruck sein, der einen booleschen Wert zurückgibt.
 

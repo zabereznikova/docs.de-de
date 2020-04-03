@@ -1,5 +1,6 @@
 ---
 title: Installieren des .NET Framework Developer Packs oder des Redistributable-Pakets
+description: Entwickler können das .NET Framework Developer Pack und das Zielpaket herunterladen und installieren. Sie können das .NET Framework Redistributable-Paket in Ihre Apps einschließen.
 ms.custom: updateeachrelease
 ms.date: 01/17/2020
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - installing .NET Framework
 - installation [.NET Framework]
 ms.assetid: daf9d9d5-84ac-4bd9-a864-27665ffd0f5c
-ms.openlocfilehash: 66643021ce4939505af24cf3a72ab194662a15f7
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0a099c5fb0492cd6cb9fd02e2c2ee1af63e7166e
+ms.sourcegitcommit: 2514f4e3655081dcfe1b22470c0c28500f952c42
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79398604"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79506995"
 ---
 # <a name="install-the-net-framework-for-developers"></a>Installieren von.NET Framework für Entwickler
 
@@ -26,7 +27,7 @@ Dieser Artikel enthält Links zur Installation aller .NET Framework-Versionen vo
 
 [!INCLUDE[net-framework-4-versions](../../../includes/net-framework-4x-versions.md)]
 
-Weitere Informationen zu Versionen von .NET Framework und darüber, wie Sie die auf einem Computer installierten Versionen ermitteln, finden Sie unter [Versionen und Abhängigkeiten](../migration-guide/versions-and-dependencies.md) und [Gewusst wie: Bestimmen der installierten .NET Framework-Versionen](../migration-guide/how-to-determine-which-versions-are-installed.md).
+Weitere Informationen zu .NET Framework-Versionen und zum Feststellen, welche Versionen auf einem Computer installiert sind, finden Sie unter [Versions and Dependencies (Versionen und Abhängigkeiten)](../migration-guide/versions-and-dependencies.md) sowie unter [Vorgehensweise: Bestimmen der installierten .NET Framework-Versionen](../migration-guide/how-to-determine-which-versions-are-installed.md).
 
 > [!NOTE]
 > Weitere Informationen zu .NET Framework 3.5 finden Sie unter [Installieren von .NET Framework 3.5 auf Windows 10, Windows 8.1 und Windows 8](dotnet-35-windows-10.md).
@@ -35,8 +36,8 @@ Verwenden Sie die folgende Tabelle für Quicklinks, oder lesen Sie weiter, um Ge
 
 | .NET Framework-Version | Installer (Developer Pack und Runtime) | Plattformunterstützung |
 | ---------------------- | -------------------------------------- | ---------------- |
-|**4.8**   | [.NET Framework 4.8](https://dotnet.microsoft.com/download/dotnet-framework/net48)    | **Enthalten in:**<br/><br/>Windows 10-Update von Mai 2019<br/>[Visual Studio 2019 (Update 16.3)](https://my.visualstudio.com/Downloads?q=visual%20studio%202017)<br/><br/> **Installation möglich unter:**<br/><br/>Windows 10-Update vom Oktober 2018<br/>Windows 10-Update vom April 2018<br/>Windows 10 Fall Creators Update<br/>Windows 10 Creators Update <br /> Windows 10 Anniversary Update<br /> Windows 8.1 und früher<br /> Windows Server 2019<br/>Windows Server, Version 1809<br/>Windows Server, Version 1803<br /><br/> (eine vollständige Liste finden Sie unter [Systemanforderungen](../get-started/system-requirements.md))||
-|**4.7.2** | [.NET Framework 4.7.2](https://dotnet.microsoft.com/download/dotnet-framework/net472) | **Enthalten in:** <br/><br/>Windows 10-Update vom Oktober 2018<br/>Windows 10-Update vom April 2018<br/>Windows Server 2019<br/>Windows Server, Version 1809<br/>Windows Server, Version 1803<br/>[Visual Studio 2017 (Update 15.8)](https://my.visualstudio.com/Downloads?q=visual%20studio%202017)<br/><br/> **Installation möglich unter:**<br/> <br/>Windows 10 Fall Creators Update<br/>Windows 10 Creators Update <br /> Windows 10 Anniversary Update<br /> Windows 8.1 und früher<br /> Windows Server Version 1709 und früher<br /><br/> (eine vollständige Liste finden Sie unter [Systemanforderungen](../get-started/system-requirements.md))||
+|**4.8**   | [.NET Framework 4.8](https://dotnet.microsoft.com/download/dotnet-framework/net48)    | **Enthalten in:**<br/><br/>Windows 10-Update von Mai 2019<br/>[Visual Studio 2019 (Update 16.3)](https://my.visualstudio.com/Downloads?q=visual%20studio%202017)<br/><br/> **Installation möglich unter:**<br/><br/>Windows 10-Update von Oktober 2018<br/>Windows 10-Update vom April 2018<br/>Windows 10 Fall Creators Update<br/>Windows 10 Creators Update <br /> Windows 10 Anniversary Update<br /> Windows 8.1 und früher<br /> Windows Server 2019<br/>Windows Server, Version 1809<br/>Windows Server, Version 1803<br /><br/> (eine vollständige Liste finden Sie unter [Systemanforderungen](../get-started/system-requirements.md))||
+|**4.7.2** | [.NET Framework 4.7.2](https://dotnet.microsoft.com/download/dotnet-framework/net472) | **Enthalten in:** <br/><br/>Windows 10-Update von Oktober 2018<br/>Windows 10-Update vom April 2018<br/>Windows Server 2019<br/>Windows Server, Version 1809<br/>Windows Server, Version 1803<br/>[Visual Studio 2017 (Update 15.8)](https://my.visualstudio.com/Downloads?q=visual%20studio%202017)<br/><br/> **Installation möglich unter:**<br/> <br/>Windows 10 Fall Creators Update<br/>Windows 10 Creators Update <br /> Windows 10 Anniversary Update<br /> Windows 8.1 und früher<br /> Windows Server Version 1709 und früher<br /><br/> (eine vollständige Liste finden Sie unter [Systemanforderungen](../get-started/system-requirements.md))||
 |**4.7.1** | [.NET Framework 4.7.1](https://dotnet.microsoft.com/download/dotnet-framework/net471) | **Enthalten in:** <br/><br/>Windows 10 Fall Creators Update<br/>Windows Server, Version 1709<br/>[Visual Studio 2017 (Update 15.5)](https://my.visualstudio.com/Downloads?q=visual%20studio%202017)<br/><br/> **Installation möglich unter:**<br/><br/> Windows 10 Creators Update <br /> Windows 10 Anniversary Update<br /> Windows 8.1 und früher<br /> Windows Server 2016 und früher<br /> (eine vollständige Liste finden Sie unter [Systemanforderungen](../get-started/system-requirements.md))||
 |**4.7**   | [.NET Framework 4.7](https://dotnet.microsoft.com/download/dotnet-framework/net47)    | **Enthalten in:** <br/><br/>Windows 10 Creators Update<br/>[Visual Studio 2017 (Update 15.3)](https://my.visualstudio.com/Downloads?q=visual%20studio%202017)<br/><br/> **Installation möglich unter:**<br /><br/> Windows 10 Anniversary Update<br /> Windows 8.1 und früher<br /> Windows Server 2016 und früher<br /> (eine vollständige Liste finden Sie unter [Systemanforderungen](../get-started/system-requirements.md))||
 |**4.6.2** | [.NET Framework 4.6.2](https://dotnet.microsoft.com/download/dotnet-framework/net462) | **Enthalten in:** <br/><br/>Windows 10 Anniversary Update<br /><br /> **Installation möglich unter:**<br /><br/> Windows 10-Update von November <br/> Windows 10 <br /> Windows 8.1 und früher<br /> Windows Server 2012 SP2 und früher<br /> (eine vollständige Liste finden Sie unter [Systemanforderungen](../get-started/system-requirements.md))|
@@ -182,7 +183,7 @@ In der folgenden Tabelle sind die unterstützten Sprachen aufgeführt.
 | Italienisch               | it      |
 | Japanisch              | ja      |
 | Koreanisch                | ko      |
-| Norwegisch             | nein      |
+| Norwegisch             | Nein      |
 | Polnisch                | pl      |
 | Portugiesisch (Brasilien)   | pt-BR   |
 | Portugiesisch (Portugal) | pt-PT   |
@@ -207,7 +208,7 @@ In der folgenden Tabelle sind die unterstützten Sprachen aufgeführt.
 
 - Auf der [Reference Source-Seite zum .NET Framework](https://referencesource.microsoft.com/) können Sie sich den .NET Framework-Quellcode ansehen. Die Verweisquelle ist auch auf [GitHub](https://github.com/Microsoft/referencesource) verfügbar. Sie können die [Referenz herunterladen](https://referencesource.microsoft.com/download.html), um diese offline anzuzeigen und den Quellcode (inklusive Patches und Updates) beim Debuggen schrittweise zu durchlaufen. Weitere Informationen finden Sie im Blogeintrag [A new look for .NET Reference Source](https://devblogs.microsoft.com/dotnet/a-new-look-for-net-reference-source/).
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Bereitstellungshandbuch für Entwickler](../deployment/deployment-guide-for-developers.md)
 - [Bereitstellungshandbuch für Administratoren](../deployment/guide-for-administrators.md)

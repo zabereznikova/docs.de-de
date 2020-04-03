@@ -7,12 +7,12 @@ helpviewer_keywords:
 - common language runtime, about
 - common language runtime, overview
 ms.assetid: 29848c96-fc36-462d-8072-ba223a40b697
-ms.openlocfilehash: de9cbdab5d5786b9d59d23ba675fa3f78f807716
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ace42738118cde4bcda4b78607d7bdb045d3501e
+ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79181593"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80248920"
 ---
 # <a name="overview-of-net-framework"></a>Übersicht über .NET Framework
 
@@ -71,7 +71,7 @@ Die .NET Framework-Klassenbibliothek ist eine Auflistung wiederverwendbarer Typ
 
 So wird beispielsweise durch die Auflistungsklassen in .NET Framework ein Schnittstellensatz zur Entwicklung eigener Auflistungsklassen implementiert. Ihre Auflistungsklassen fügen sich nahtlos in die .NET Framework-Klassen ein.
 
-Wie von einer objektorientierten Klassenbibliothek zu erwarten, lassen sich mit den .NET Framework-Typen viele gängige Programmieraufgaben erledigen, darunter auch Zeichenfolgenverwaltung, Datenerfassung, Datenbankkonnektivität und Dateizugriff. Neben diesen Typen für normale Aufgaben beinhaltet die Klassenbibliothek auch Typen, die verschiedene spezielle Entwicklungsszenarien unterstützen. Verwenden Sie NET Framework beispielsweise zur Entwicklung der folgenden Typen von Apps und Diensten:
+Wie von einer objektorientierten Klassenbibliothek zu erwarten, lassen sich mit den .NET Framework-Typen viele gängige Programmieraufgaben erledigen, darunter Zeichenfolgenverwaltung, Datenerfassung, Datenbankkonnektivität und Dateizugriff. Neben diesen Typen für normale Aufgaben beinhaltet die Klassenbibliothek auch Typen, die verschiedene spezielle Entwicklungsszenarien unterstützen. Sie können NET Framework beispielsweise zur Entwicklung der folgenden Typen von Apps und Diensten verwenden:
 
 - Konsolen-Apps Siehe [Erstellen von Konsolenanwendungen](../../standard/building-console-apps.md).
 
@@ -93,7 +93,7 @@ Die Klassen für Windows Forms bestehen aus einem umfangreichen Satz wiederverwe
 
 - [Systemanforderungen](system-requirements.md)
 - [Installationshandbuch](../install/index.md)
-- [Entwicklungshandbuch](../development-guide.md)
+- [Entwicklungshandbuch für .NET Framework](../development-guide.md)
 - [Extras](../tools/index.md)
 - [Beispiele und Tutorials](../../samples-and-tutorials/index.md)
 - [.NET API-Browser](../../../api/index.md)

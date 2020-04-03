@@ -2,15 +2,16 @@
 title: Auswählen eines Nachrichtenencoders
 ms.date: 03/30/2017
 ms.assetid: 2204d82d-d962-4922-a79e-c9a231604f19
-ms.openlocfilehash: a306896af7a73d43956638981908c12d86126a9f
-ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
+ms.openlocfilehash: d93d7039d034262cd47edd437d5d7d8d63890f02
+ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80345255"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80635774"
 ---
-# <a name="choosing-a-message-encoder"></a>Auswählen eines Nachrichtenencoders
-In diesem Thema werden Kriterien für die Auswahl der Nachrichtenencoder erläutert, die in Windows Communication Foundation (WCF) enthalten sind: Binärdatei, Text und MTOM (Message Transmission Optimization Mechanism).  
+# <a name="choose-a-message-encoder"></a>Wählen Sie einen Message Encoder
+
+In diesem Artikel werden die Kriterien für die Auswahl der Nachrichtenencoder erläutert, die in Windows Communication Foundation (WCF) enthalten sind: Binär-, Text- und Nachrichtenübertragungsoptimierungsmechanismus (MTOM).  
   
  In WCF geben Sie an, wie Daten über ein Netzwerk zwischen Endpunkten mithilfe einer *Bindung*übertragen werden sollen, die aus einer Abfolge von *Bindungselementen*besteht. Ein Nachrichtenencoder wird von einem Nachrichtencodierungs-Bindungselement im Bindungsstapel dargestellt. Eine Bindung enthält optionale Protokollbindungselemente, wie ein Sicherheitsbindungselement oder ein zuverlässiges Nachrichtenbindungselement, ein erforderliches Nachrichtencodierungs-Bindungselement und ein erforderliches Transportbindungselement.  
   
@@ -30,15 +31,15 @@ In diesem Thema werden Kriterien für die Auswahl der Nachrichtenencoder erläut
 ## <a name="how-to-choose-a-message-encoder"></a>So wählen Sie einen Nachrichtenencoder aus  
  In der folgenden Tabelle werden allgemeine Faktoren beschrieben, die bei der Auswahl eines Nachrichtenencoders berücksichtigt werden. Priorisieren Sie die Faktoren, die für Ihre Anwendung wichtig sind, und wählen Sie dann die Nachrichtenencoder aus, die mit diesen Faktoren am besten funktionieren. Berücksichtigen Sie alle weiteren, in dieser Tabelle nicht aufgelisteten Faktoren sowie alle benutzerdefinierten Encoder, die eventuell für Ihre Anwendung erforderlich sind.  
   
-|Faktor|Beschreibung|Encoder, die diesen Faktor unterstützen|  
+|Faktor|BESCHREIBUNG|Encoder, die diesen Faktor unterstützen|  
 |------------|-----------------|---------------------------------------|  
 |Unterstützte Zeichensätze|<xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>und <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement> unterstützen nur die UTF8- und UTF16-Unicode-Codierungen (*Big-Endian* und *Little-Endian).* Sind andere Codierungen erforderlich (beispielsweise UTF7 oder ASCII), muss ein benutzerdefinierter Encoder verwendet werden. Ein benutzerdefinierter Beispielgeber finden Sie unter [Benutzerdefinierter Nachrichtenencoder](https://docs.microsoft.com/dotnet/framework/wcf/samples/custom-message-encoder-custom-text-encoder).|Text|  
-|Inspektion|Inspektion ist die Fähigkeit, Nachrichten während der Übertragung zu untersuchen. Textcodierungem, entweder mit oder ohne die Verwendung von SOAP, ermöglichen die Inspektion und Analyse von Nachrichten mit vielen Anwendungen, ohne spezielle Tools zu verwenden. Beachten Sie, dass sich die Verwendung der Übertragungssicherheit, entweder auf Nachrichten- oder auf Transportebene, auf die Inspektionsfähigkeit der Nachrichten auswirkt. Vertraulichkeit schützt eine Nachricht davor, untersucht zu werden, und Integrität schützt eine Nachricht davor, geändert zu werden.|Text|  
+|Inspektion|Inspektion ist die Fähigkeit, Nachrichten während der Übertragung zu untersuchen. Textcodierungem, entweder mit oder ohne die Verwendung von SOAP, ermöglichen die Inspektion und Analyse von Nachrichten mit vielen Anwendungen, ohne spezielle Tools zu verwenden. Die Verwendung der Übertragungssicherheit auf Nachrichten- oder Transportebene wirkt sich auf Ihre Fähigkeit aus, Nachrichten zu überprüfen. Vertraulichkeit schützt eine Nachricht davor, untersucht zu werden, und Integrität schützt eine Nachricht davor, geändert zu werden.|Text|  
 |Zuverlässigkeit|Zuverlässigkeit ist die Widerstandsfähigkeit eines Encoders gegen Übertragungsfehler. Zuverlässigkeit kann auch auf Nachrichten-, Transport- oder Anwendungsebene bereitgestellt werden. Alle Standard-WCF-Encoder gehen davon aus, dass eine andere Ebene für Zuverlässigkeit sorgt. Der Encoder hat wenige Möglichkeiten, nach einem Übertragungsfehler eine Wiederherstellung durchzuführen.|Keine|  
 |Einfachheit|Einfachheit stellt die Leichtigkeit dar, mit der Sie Encoder und Decoder für eine Codierungsspezifikation erstellen können. Textcodierungen sind besonders vorteilhaft für die Einfachheit. Die POX-Textcodierung hat den zusätzlichen Vorteil, dass keine Unterstützung der SOAP-Verarbeitung erforderlich ist.|Text (POX)|  
-|Size|Die Codierung bestimmt den Mehraufwand für den Inhalt. Die Größe der codierten Nachrichten bezieht sich direkt auf den maximalen Durchsatz von Dienstvorgängen. Binäre Codierungen sind im Allgemeinen kompakter als Textcodierungen. Wenn die Nachrichtengröße ein Maximum erreicht hat, sollten Sie auch eine Komprimierung des Nachrichteninhalts während der Codierung in Erwägung ziehen. Durch die Komprimierung entstehen jedoch höhere Verarbeitungskosten für den Absender und den Empfänger der Nachricht.|Binary|  
+|Größe|Die Codierung bestimmt den Mehraufwand für den Inhalt. Die Größe der codierten Nachrichten bezieht sich direkt auf den maximalen Durchsatz von Dienstvorgängen. Binäre Codierungen sind im Allgemeinen kompakter als Textcodierungen. Wenn die Nachrichtengröße ein Maximum erreicht hat, sollten Sie auch eine Komprimierung des Nachrichteninhalts während der Codierung in Erwägung ziehen. Durch die Komprimierung entstehen jedoch höhere Verarbeitungskosten für den Absender und den Empfänger der Nachricht.|Binary|  
 |Streaming|Streaming ermöglicht Anwendungen, mit der Verarbeitung einer Nachricht zu beginnen, bevor die ganze Nachricht angekommen ist. Wenn Sie das Streaming effektiv anwenden möchten, ist es erforderlich, dass die wichtigen Daten einer Nachricht am Anfang der Nachricht zur Verfügung stehen, sodass die empfangende Anwendung nicht warten muss, bis die Nachricht ankommt. Außerdem müssen Anwendungen, die eine Übertragung per Stream nutzen, die Daten in der Nachricht inkrementell organisieren, damit der Inhalt keine Weiterleitungsabhängigkeiten aufweist. In vielen Fällen müssen Sie einen Kompromiss schließen zwischen dem Streaminginhalt und der kleinstmöglichen Übertragungsgröße dieses Inhalts.|Keine|  
-|Unterstützung von Drittanbietertools|Unterstützungsbereiche für eine Codierung umfassen Entwicklung und Diagnose. Drittanbieter haben viel investiert in Bibliotheken und Toolkits zur Verarbeitung von Nachrichten, die im POX-Format codiert sind.|Text (POX)|  
+|Tool-Unterstützung von Drittanbietern|Unterstützungsbereiche für eine Codierung umfassen Entwicklung und Diagnose. Drittanbieter haben viel investiert in Bibliotheken und Toolkits zur Verarbeitung von Nachrichten, die im POX-Format codiert sind.|Text (POX)|  
 |Interoperabilität|Dieser Faktor bezieht sich auf die Fähigkeit eines WCF-Encoders, mit Nicht-WCF-Diensten zusammenzuarbeiten.|Text<br /><br /> MTOM (teilweise)|  
   
 Hinweis: Bei Verwendung des Binärencoders hat die IgnoreWhitespace-Einstellung keine Auswirkung, wenn ein XML-Reader erstellt wird.  Angenommen, in einem Dienstvorgang wird Folgendes ausgeführt:  
@@ -80,7 +81,7 @@ Da diese Eigenschaft nur für das binaryMessageEncodingBindingElement verfügbar
 </customBinding>
  ```
 
-Sowohl der Client als auch der Dienst müssen dem Senden und Empfangen komprimierter Nachrichten zustimmen, und daher muss die compressionFormat-Eigenschaft für das binaryMessageEncoding-Element sowohl auf Client als auch auf Dienst konfiguriert werden. Eine ProtocolException wird ausgelöst, wenn der Dienst oder der Client nicht für die Komprimierung konfiguriert wurde, die andere Seite jedoch schon. Das Aktivieren der Komprimierung sollte sorgfältig überlegt werden. Die Komprimierung ist vor allem dann nützlich, wenn die Netzwerkbandbreite beschränkt ist. Wenn die CPU der Engpass ist, mindert die Komprimierung den Durchsatz. Es müssen entsprechende Tests in einer simulierten Umgebung ausgeführt werden, um zu ermitteln, ob dies für die Anwendung Vorteile erbringt.  
+Sowohl der Client als auch der Dienst müssen dem Senden und Empfangen komprimierter Nachrichten zustimmen, und daher muss die compressionFormat-Eigenschaft für das binaryMessageEncoding-Element sowohl auf Client als auch auf Dienst konfiguriert werden. Eine ProtocolException wird ausgelöst, wenn entweder der Dienst oder der Client nicht für die Komprimierung konfiguriert ist, die andere Seite jedoch. Die Aktivierung der Komprimierung sollte sorgfältig geprüft werden. Die Komprimierung ist vor allem dann nützlich, wenn die Netzwerkbandbreite beschränkt ist. Wenn die CPU der Engpass ist, mindert die Komprimierung den Durchsatz. Es müssen entsprechende Tests in einer simulierten Umgebung ausgeführt werden, um zu ermitteln, ob dies für die Anwendung Vorteile erbringt.  
   
 ## <a name="see-also"></a>Siehe auch
 

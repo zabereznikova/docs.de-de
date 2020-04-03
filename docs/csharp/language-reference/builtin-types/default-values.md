@@ -5,18 +5,18 @@ ms.date: 12/18/2019
 helpviewer_keywords:
 - default [C#]
 - parameterless constructor [C#]
-ms.openlocfilehash: 93b6079b9a3bbf6d537094cab9dfb305ace7f6bf
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5e34d291ec15c738f3bc9409df321ede454b6710
+ms.sourcegitcommit: 2514f4e3655081dcfe1b22470c0c28500f952c42
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77625864"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79507255"
 ---
 # <a name="default-values-of-c-types-c-reference"></a>Standardwerte der C#-Typen (C#-Referenz)
 
 In der folgenden Tabelle werden die Standardwerte von C#-Typen gezeigt:
 
-|Geben Sie Folgendes ein:|Standardwert|
+|Typ|Standardwert|
 |---------|------------------|
 |Verweistyp|`null`|
 |Beliebiger [integrierter integraler numerischer Typ](integral-numeric-types.md)|0 (null)|
@@ -27,7 +27,7 @@ In der folgenden Tabelle werden die Standardwerte von C#-Typen gezeigt:
 |[struct](struct.md)|Der Wert, der erzeugt wird, indem alle Werttypfelder auf ihre Standardwerte festgelegt werden und alle Verweistypfelder auf `null`.|
 |Ein [Werttyp, der NULL-Werte zulässt](nullable-value-types.md).|Eine Instanz, für die die <xref:System.Nullable%601.HasValue%2A>-Eigenschaft `false` und die <xref:System.Nullable%601.Value%2A>-Eigenschaft nicht definiert ist. Dieser Standardwert wird auch als *NULL*-Wert eines Nullable-Werttyps bezeichnet.|
 
-Verwenden Sie den [default-Operator](../operators/default.md), um wie im folgenden Beispiel den Standardwert eines Typs zu erzeugen:
+Verwenden Sie den [`default`-Operator](../operators/default.md#default-operator), um wie im folgenden Beispiel den Standardwert eines Typs zu erzeugen:
 
 ```csharp
 int a = default(int);
@@ -52,10 +52,10 @@ Wenn die <xref:System.Type?displayProperty=nameWithType>-Instanz zur Laufzeit ei
 
 Weitere Informationen finden Sie in den folgenden Abschnitten der [C#-Sprachspezifikation](~/_csharplang/spec/introduction.md):
 
-- [Default values (Standardwerte)](~/_csharplang/spec/variables.md#default-values)
+- [Standardwerte](~/_csharplang/spec/variables.md#default-values)
 - [Standardkonstruktoren](~/_csharplang/spec/types.md#default-constructors)
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [C#-Referenz](../index.md)
 - [Konstruktoren](../../programming-guide/classes-and-structs/constructors.md)

@@ -3,16 +3,16 @@ title: Deinstallationstool
 description: Eine Übersicht über das .NET Core-Deinstallationstool, ein Tool mit Anleitungen, das die kontrollierte Bereinigung von .NET Core SDKs und -Runtimes ermöglicht.
 author: sfoslund
 ms.date: 01/06/2020
-ms.openlocfilehash: 4944c983cbd02b456c3a09a1b03bc28ba6e458cc
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 816aef6ab8bc0e51bb8befb14fde60513d4fadfc
+ms.sourcegitcommit: 2514f4e3655081dcfe1b22470c0c28500f952c42
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714553"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79507320"
 ---
 # <a name="net-core-uninstall-tool"></a>.NET Core-Deinstallationstool
 
-Mit dem [.NET Core-Deinstallationstool](https://github.com/dotnet/cli-lab/releases) (`dotnet-core-uninstall`) können Sie .NET Core SDKs und -Runtimes von einem System entfernen. Hierfür stehen Ihnen verschiedene Optionen zur Verfügung, mit denen Sie angeben können, welche Versionen deinstalliert werden sollen.
+Mit dem [.NET Core-Deinstallationstool](https://aka.ms/dotnet-core-uninstall-tool) (`dotnet-core-uninstall`) können Sie .NET Core SDKs und -Runtimes von einem System entfernen. Hierfür stehen Ihnen verschiedene Optionen zur Verfügung, mit denen Sie angeben können, welche Versionen deinstalliert werden sollen.
 
 Das Tool unterstützt Windows und macOS. Linux wird aktuell nicht unterstützt.
 
@@ -27,10 +27,10 @@ Aufgrund dieser Einschränkungen ist das Tool möglicherweise nicht in der Lage,
 
 ## <a name="install-the-tool"></a>Installieren des Tools
 
-Sie können das .NET Core-Deinstallationstool aus dem GitHub-Repository [dotnet/cli-lab](https://github.com/dotnet/cli-lab/releases) herunterladen.
+Sie können das .NET Core-Tool für die Deinstallation [hier](https://aka.ms/dotnet-core-uninstall-tool) herunterladen und den Quellcode im GitHub-Repository [dotnet/cli-lab](https://github.com/dotnet/cli-lab) finden.
 
 > [!NOTE]
-> Für das Tool ist eine Erhöhung der Rechte erforderlich, um .NET Core SDKs und -Runtimes zu deinstallieren. Daher sollte es in einem Verzeichnis mit schreibgeschütztem Zugriff installiert werden, z. B. in *C:\Programme* unter Windows oder in */usr/local/bin* unter macOS. Weitere Informationen finden Sie unter [Erhöhte Zugriffsrechte für dotnet-Befehle](../tools/elevated-access.md). Ausführliche Installationsanweisungen finden Sie auf der Seite [GitHub-Releases](https://github.com/dotnet/cli-lab/releases).
+> Für das Tool ist eine Erhöhung der Rechte erforderlich, um .NET Core SDKs und -Runtimes zu deinstallieren. Daher sollte es in einem Verzeichnis mit schreibgeschütztem Zugriff installiert werden, z. B. in *C:\Programme* unter Windows oder in */usr/local/bin* unter macOS. Weitere Informationen finden Sie unter [Erhöhte Zugriffsrechte für dotnet-Befehle](../tools/elevated-access.md). Weitere Informationen finden Sie unter [Ausführliche Installationsanweisungen](https://aka.ms/dotnet-core-uninstall-tool).
 
 ## <a name="run-the-tool"></a>Ausführen des Tools
 
@@ -45,6 +45,9 @@ Die folgenden Schritte zeigen die empfohlene Vorgehensweise zum Ausführen des D
 
 Der Befehl `dotnet-core-uninstall list` listet die installierten .NET Core SDKs und -Runtimes auf, die mit diesem Tool entfernt werden können. Einige SDKs und Runtimes werden möglicherweise von Visual Studio benötigt, und es wird ein Hinweis angezeigt, warum es nicht empfohlen wird, diese zu deinstallieren.
 
+> [!NOTE]
+> Die Ausgabe des `dotnet-core-uninstall list`-Befehls stimmt in den meisten Fällen nicht mit der Liste der installierten Versionen in der Ausgabe von `dotnet --info` überein. Insbesondere zeigt dieses Tool keine Versionen an, die über ZIP-Dateien installiert oder von Visual Studio verwaltet werden (alle Versionen, die mit Visual Studio 2019 16.3 oder höher installiert wurden). Eine Möglichkeit zur Überprüfung, ob eine Version von Visual Studio verwaltet wird, besteht darin, sie in `Add or Remove Programs` anzuzeigen. Hier werden in Visual Studio verwaltete Versionen in ihren Anzeigenamen als solche gekennzeichnet.
+
 **dotnet-core-uninstall list**
 
 #### <a name="synopsis"></a>Übersicht
@@ -55,7 +58,7 @@ dotnet-core-uninstall list [options]
 
 #### <a name="options"></a>Optionen
 
-## <a name="windowstabwindows"></a>[Windows](#tab/windows)
+## <a name="windows"></a>[Windows](#tab/windows)
 
 * **`--aspnet-runtime`**
 
@@ -85,7 +88,7 @@ dotnet-core-uninstall list [options]
 
   Listet alle x86-.NET Core SDKs und -Runtimes auf, die mit diesem Tool deinstalliert werden können.
 
-## <a name="macostabmacos"></a>[macOS](#tab/macos)
+## <a name="macos"></a>[macOS](#tab/macos)
 
 * **`--runtime`**
 
@@ -148,7 +151,7 @@ dotnet-core-uninstall whatif [options] [<VERSION>...]
 
 #### <a name="options"></a>Optionen
 
-## <a name="windowstabwindows"></a>[Windows](#tab/windows)
+## <a name="windows"></a>[Windows](#tab/windows)
 
 * **`--all`**
 
@@ -212,13 +215,13 @@ dotnet-core-uninstall whatif [options] [<VERSION>...]
 
 * **`--force`** Erzwingt das Entfernen von Versionen, die möglicherweise von Visual Studio verwendet werden.
 
-Hinweise:
+Notizen:
 
 1. Genau ein Element `--sdk`, `--runtime`, `--aspnet-runtime` und `--hosting-bundle` ist erforderlich.
 2. `--all`, `--all-below`, `--all-but`, `--all-but-latest`, `--all-lower-patches`, `--all-previews`, `--all-previews-but-latest`, `--major-minor` und `[<VERSION>...]` sind exklusiv.
 3. Wenn `--x64` oder `--x86` nicht angegeben wird, werden sowohl x64- als auch x86-Versionen entfernt.
 
-## <a name="macostabmacos"></a>[macOS](#tab/macos)
+## <a name="macos"></a>[macOS](#tab/macos)
 
 * **`--all`**
 
@@ -266,7 +269,7 @@ Hinweise:
   
 * **`--force`** Erzwingt das Entfernen von Versionen, die möglicherweise von Visual Studio oder SDKs verwendet werden.
 
-Hinweise:
+Notizen:
 
 1. Genau ein Element `--sdk` und `--runtime` ist erforderlich.
 2. `--all`, `--all-below`, `--all-but`, `--all-but-latest`, `--all-lower-patches`, `--all-previews`, `--all-previews-but-latest`, `--major-minor` und `[<VERSION>...]` sind exklusiv.
@@ -328,7 +331,7 @@ dotnet-core-uninstall remove [options] [<VERSION>...]
 
 #### <a name="options"></a>Optionen
 
-## <a name="windowstabwindows"></a>[Windows](#tab/windows)
+## <a name="windows"></a>[Windows](#tab/windows)
 
 * **`--all`**
 
@@ -394,13 +397,13 @@ dotnet-core-uninstall remove [options] [<VERSION>...]
 
 * **`--force`** Erzwingt das Entfernen von Versionen, die möglicherweise von Visual Studio verwendet werden.
 
-Hinweise:
+Notizen:
 
 1. Genau ein Element `--sdk`, `--runtime`, `--aspnet-runtime` und `--hosting-bundle` ist erforderlich.
 2. `--all`, `--all-below`, `--all-but`, `--all-but-latest`, `--all-lower-patches`, `--all-previews`, `--all-previews-but-latest`, `--major-minor` und `[<VERSION>...]` sind exklusiv.
 3. Wenn `--x64` oder `--x86` nicht angegeben wird, werden sowohl x64- als auch x86-Versionen entfernt.
 
-## <a name="macostabmacos"></a>[macOS](#tab/macos)
+## <a name="macos"></a>[macOS](#tab/macos)
 
 * **`--all`**
 
@@ -450,7 +453,7 @@ Hinweise:
   
 * **`--force`** Erzwingt das Entfernen von Versionen, die möglicherweise von Visual Studio oder SDKs verwendet werden.
 
-Hinweise:
+Notizen:
 
 1. Genau ein Element `--sdk` und `--runtime` ist erforderlich.
 2. `--all`, `--all-below`, `--all-but`, `--all-but-latest`, `--all-lower-patches`, `--all-previews`, `--all-previews-but-latest`, `--major-minor` und `[<VERSION>...]` sind exklusiv.
@@ -511,13 +514,13 @@ In einigen Fällen benötigen Sie `NuGetFallbackFolder` nicht mehr und möchten 
 
 ## <a name="uninstall-the-tool"></a>Deinstallieren des Tools
 
-## <a name="windowstabwindows"></a>[Windows](#tab/windows)
+## <a name="windows"></a>[Windows](#tab/windows)
 
 1. Öffnen Sie **Software**.
 2. Suchen Sie nach `Microsoft .NET Core SDK Uninstall Tool`.
 3. Wählen Sie **Deinstallieren** aus.
 
-## <a name="macostabmacos"></a>[macOS](#tab/macos)
+## <a name="macos"></a>[macOS](#tab/macos)
 
 Löschen Sie die heruntergeladene Datei *dotnet-core-uninstall.tar.gz* aus dem Verzeichnis, in dem sie installiert wurde. Wenn Sie den Inhalt dieser Datei in ein anderes Verzeichnis entzippt haben, stellen Sie sicher, dass Sie auch diesen Inhalt löschen.
 

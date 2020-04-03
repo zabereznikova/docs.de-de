@@ -14,12 +14,12 @@ helpviewer_keywords:
 - dependency properties [WPF]
 - resources [WPF], references to
 ms.assetid: d119d00c-3afb-48d6-87a0-c4da4f83dee5
-ms.openlocfilehash: 1df75814c45a6f1c245d43e2390b8a6ce692a779
-ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
+ms.openlocfilehash: 542e0a84e4c5cfc3750c33fe29cb40d3643e91e3
+ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80587806"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80636031"
 ---
 # <a name="dependency-properties-overview"></a>Übersicht über Abhängigkeitseigenschaften
 
@@ -128,7 +128,7 @@ Die Abhängigkeitseigenschaften (oder die <xref:System.Windows.DependencyObject>
 ### <a name="styles"></a>Stile
 Stile und Vorlagen sind zwei Hauptgründe für die Verwendung von Abhängigkeitseigenschaften. Stile eignen sich besonders für das Festlegen von Eigenschaften, die die [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] der Anwendung definieren. Stile werden in XAML in der Regel als Ressourcen definiert. Stile interagieren mit dem Eigenschaftensystem, weil sie normalerweise sowohl „Setter“ für bestimmte Eigenschaften als auch „Trigger“ enthalten, die einen Eigenschaftswert basierend auf dem Echtzeitwert einer anderen Eigenschaft ändern.
 
-Im folgenden Beispiel wird ein recht einfacher Stil erstellt, der in einem <xref:System.Windows.FrameworkElement.Resources%2A>-Wörterbuch definiert wird (hier nicht gezeigt). Dieser Stil wird direkt auf die <xref:System.Windows.FrameworkElement.Style%2A>-Eigenschaft für eine <xref:System.Windows.Controls.Button> angewendet. Der Setter innerhalb des Stils legt die Eigenschaft <xref:System.Windows.Controls.Control.Background%2A> für eine formatierte <xref:System.Windows.Controls.Button> auf „green“ (grün) fest.
+Im folgenden Beispiel wird ein einfacher Stil <xref:System.Windows.FrameworkElement.Resources%2A> erstellt (der in einem Wörterbuch definiert <xref:System.Windows.FrameworkElement.Style%2A> und <xref:System.Windows.Controls.Button>nicht angezeigt wird), und wendet diesen Stil dann direkt auf die Eigenschaft für eine an. Der Setter innerhalb des Stils legt die Eigenschaft <xref:System.Windows.Controls.Control.Background%2A> für eine formatierte <xref:System.Windows.Controls.Button> auf „green“ (grün) fest.
 
 [!code-xaml[PropertiesOvwSupport#SimpleStyleDef](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page3.xaml#simplestyledef)]
 
@@ -183,18 +183,18 @@ Im Prinzip wird die Eigenschaft für die erste Schaltfläche zweimal festgelegt,
 [!code-xaml[PropertiesOvwSupport#MiniPrecedence](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page3.xaml#miniprecedence)]  
 
 ### <a name="why-does-dependency-property-precedence-exist"></a>Warum haben Abhängigkeitseigenschaften Prioritäten?
-In der Regel sollen Stile nicht immer gelten und sogar einen lokal festgelegten Wert eines einzelnen Elements verdecken (andernfalls wäre es sehr schwierig, Stile oder Elemente überhaupt zu verwenden). Aus diesem Grund operieren die Werte, die von Stilen abstammen, mit einer niedrigeren Priorität als lokal festgelegte Werte. Eine ausführliche Liste der Abhängigkeitseigenschaften und Angaben dazu, woher der effektive Wert einer Abhängigkeitseigenschaft möglicherweise stammt, finden Sie unter [Priorität von Abhängigkeitseigenschaftswerten](dependency-property-value-precedence.md).
+In der Regel möchten Sie nicht, dass Stile immer angewendet werden und sogar einen lokal festgelegten Wert eines einzelnen Elements verdecken (andernfalls wäre es schwierig, Stile oder Elemente im Allgemeinen zu verwenden). Aus diesem Grund operieren die Werte, die von Stilen abstammen, mit einer niedrigeren Priorität als lokal festgelegte Werte. Eine ausführliche Liste der Abhängigkeitseigenschaften und Angaben dazu, woher der effektive Wert einer Abhängigkeitseigenschaft möglicherweise stammt, finden Sie unter [Priorität von Abhängigkeitseigenschaftswerten](dependency-property-value-precedence.md).
 
 > [!NOTE]
 > Es gibt eine Reihe von Eigenschaften, die für WPF-Elemente definiert sind, die keine Abhängigkeitseigenschaften sind. Im Großen und Ganzen wurden Eigenschaften nur als Abhängigkeitseigenschaften implementiert, wenn mindestens eines der Szenarios unterstützt werden musste, das vom Eigenschaftensystem aktiviert wurde: Datenbindungen, Stile, Animationen, die standardmäßige Wertunterstützung, die Vererbung, angefügte Eigenschaften oder Invalidierungen.
 
 ## <a name="learning-more-about-dependency-properties"></a>Wissenswertes zu Abhängigkeitseigenschaften  
 
-- Eine angefügte Eigenschaft ist ein Eigenschaftstyp, die eine spezielle Syntax in XAML unterstützt. Eine angefügte Eigenschaft verfügt häufig nicht über eine 1:1-Entsprechung mit einer CLR-Eigenschaft (Common Language Runtime) und ist nicht notwendigerweise eine Abhängigkeitseigenschaft. Der Hauptzweck einer angefügten Eigenschaft ist es, den untergeordneten Elementen die Berichterstattung von Eigenschaftswerten an ein übergeordnetes Element zu ermöglichen, selbst wenn diese Eigenschaft in nicht den Klassenmemberlisten des übergeordneten und des untergeordneten Elements vorhanden ist. Ein primäres Szenario ist das Aktivieren von untergeordneten Elementen, um das übergeordnete Element darüber zu informieren, wie die untergeordneten Elemente in [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] dargestellt werden sollen. Ein Beispiel finden Sie unter <xref:System.Windows.Controls.DockPanel.Dock%2A> oder <xref:System.Windows.Controls.Canvas.Left%2A>. Weitere Informationen finden Sie unter [Übersicht über angefügte Eigenschaften](attached-properties-overview.md).
+- Eine angefügte Eigenschaft ist ein Eigenschaftstyp, die eine spezielle Syntax in XAML unterstützt. Eine angefügte Eigenschaft verfügt häufig nicht über eine 1:1-Entsprechung mit einer CLR-Eigenschaft (Common Language Runtime) und ist nicht notwendigerweise eine Abhängigkeitseigenschaft. Der typische Zweck einer angefügten Eigenschaft besteht darin, untergeordneten Elementen das Melden von Eigenschaftswerten an ein übergeordnetes Element zu ermöglichen, auch wenn das übergeordnete Element und das untergeordnete Element nicht beide diese Eigenschaft als Teil der Auflistungen von Klassenmembern besitzen. Ein primäres Szenario ist das Aktivieren von untergeordneten Elementen, um das übergeordnete Element darüber zu informieren, wie die untergeordneten Elemente in [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] dargestellt werden sollen. Ein Beispiel finden Sie unter <xref:System.Windows.Controls.DockPanel.Dock%2A> oder <xref:System.Windows.Controls.Canvas.Left%2A>. Weitere Informationen finden Sie unter [Übersicht über angefügte Eigenschaften](attached-properties-overview.md).
 
 - Komponenten- oder Anwendungsentwickler können ihre eigene Abhängigkeitseigenschaft erstellen, um Funktionen wie die Datenbindung oder die Unterstützung von Stilen oder die Invalidierung und die Erzwingung von Werten zu unterstützen. Weitere Informationen finden Sie unter [Benutzerdefinierte Abhängigkeitseigenschaften](custom-dependency-properties.md).
 
-- Abhängigkeitseigenschaften sollten im Allgemeinen als öffentliches Eigentum gelten, das zugänglich oder zumindest für alle Aufrufer mit Zugriff auf eine Instanz erkennbar sein. Weitere Informationen finden Sie unter [Sicherheit von Abhängigkeitseigenschaften](dependency-property-security.md).
+- Betrachten Sie Abhängigkeitseigenschaften als öffentliche Eigenschaften, auf die zugegriffen werden kann oder zumindest von jedem Aufrufer erkannt werden kann, der Zugriff auf eine Instanz hat. Weitere Informationen finden Sie unter [Sicherheit von Abhängigkeitseigenschaften](dependency-property-security.md).
 
 ## <a name="see-also"></a>Siehe auch
 

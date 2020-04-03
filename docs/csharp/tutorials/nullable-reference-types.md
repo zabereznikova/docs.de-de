@@ -4,16 +4,16 @@ description: Dieses erweiterte Tutorial enthält eine Einführung zu Verweistype
 ms.date: 02/19/2019
 ms.technology: csharp-null-safety
 ms.custom: mvc
-ms.openlocfilehash: b00050c1d151b95e330f94eb9393a4031e47d5a8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 54cf9d812999cae837483b48cdedd89d9dc40fc9
+ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78240066"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80249128"
 ---
 # <a name="tutorial-express-your-design-intent-more-clearly-with-nullable-and-non-nullable-reference-types"></a>Tutorial: Besseres Ausdrücken Ihrer Entwurfsabsicht mit Verweistypen, die NULL-Werte zulassen und nicht zulassen
 
-C# 8.0 führt [Nullable-Verweistypen](../nullable-references.md) ein, die Verweistypen auf die gleiche Weise ergänzen, wie Nullable-Werttypen Werttypen ergänzen. Sie deklarieren eine Variable zu einem **Verweistyp, der NULL-Werte zulässt**, indem Sie `?` an den Typen anfügen. Beispielsweise stellt `string?` eine `string` dar, die NULL-Werte zulässt. Mit diesen neuen Typen können Sie Ihre Entwurfsabsicht besser zum Ausdruck bringen: Einige Variablen *müssen immer einen Wert* haben, bei anderen *kann ein Wert fehlen*.
+C# 8.0 führt [Nullable-Verweistypen](../nullable-references.md) ein, die Verweistypen auf die gleiche Weise ergänzen, wie Nullable-Werttypen Werttypen ergänzen. Sie deklarieren eine Variable zu einem **Verweistyp, der NULL-Werte zulässt**, indem Sie `?` an den Typen anfügen. Beispielsweise stellt `string?` eine `string` dar, die NULL-Werte zulässt. Mit diesen neuen Typen können Sie Ihre Entwurfsabsicht besser zum Ausdruck bringen: Einige Variablen *müssen immer einen Wert* haben, bei anderen  *kann ein Wert fehlen*.
 
 In diesem Tutorial lernen Sie, wie die folgenden Aufgaben ausgeführt werden:
 
@@ -38,7 +38,7 @@ Der Code, den Sie für dieses Beispiel schreiben, drückt diese Absicht aus, und
 
 ## <a name="create-the-application-and-enable-nullable-reference-types"></a>Erstellen der Anwendung und Aktivieren der Verweistypen, die NULL-Werte zulassen
 
-Erstellen Sie eine neue Konsolenanwendung in Visual Studio oder über die Befehlszeile mit `dotnet new console`. Nennen Sie die Anwendung `NullableIntroduction`. Nachdem Sie die Anwendung erstellt haben, müssen Sie angeben, dass das gesamte Projekt in einem aktivierten **Nullable-Anmerkungskontext** kompiliert wird. Öffnen Sie die *CSPROJ*-Datei, und fügen Sie dem `Nullable`-Element ein `PropertyGroup`-Element hinzu. Legen Sie den Wert der Eigenschaft auf `enable`fest. Selbst in C# 8.0-Projekten müssen Sie das Feature für **Nullable-Verweistypen** aktivieren. Grund dafür ist, dass bestehende Verweisvariablendeklarationen nach dem Aktivieren des Features zu **Verweistypen werden, die NULL-Werte nicht zulassen**. Diese Entscheidung ist zwar hilfreich, um Probleme zu finden, bei denen bestehender Code möglicherweise keine ordnungsgemäßen NULL-Überprüfungen aufweist, aber möglicherweise spiegelt sie nicht genau Ihre ursprüngliche Entwurfsabsicht wider.
+Erstellen Sie eine neue Konsolenanwendung in Visual Studio oder über die Befehlszeile mit `dotnet new console`. Nennen Sie die Anwendung `NullableIntroduction`. Nachdem Sie die Anwendung erstellt haben, müssen Sie angeben, dass das gesamte Projekt in einem aktivierten **Nullable-Anmerkungskontext** kompiliert wird. Öffnen Sie die *CSPROJ*-Datei, und fügen Sie dem `PropertyGroup`-Element ein `Nullable`-Element hinzu. Legen Sie den Wert der Eigenschaft auf `enable`fest. Selbst in C# 8.0-Projekten müssen Sie das Feature für **Nullable-Verweistypen** aktivieren. Grund dafür ist, dass bestehende Verweisvariablendeklarationen nach dem Aktivieren des Features zu **Verweistypen werden, die NULL-Werte nicht zulassen**. Diese Entscheidung ist zwar hilfreich, um Probleme zu finden, bei denen bestehender Code möglicherweise keine ordnungsgemäßen NULL-Überprüfungen aufweist, aber möglicherweise spiegelt sie nicht genau Ihre ursprüngliche Entwurfsabsicht wider.
 
 ```xml
 <Nullable>enable</Nullable>
@@ -54,7 +54,7 @@ Für diese Umfrageanwendung müssen einige Klassen erstellt werden:
 
 Diese Typen verwenden Verweistypen, die NULL-Werte sowohl zulassen als auch nicht zulassen, um auszudrücken, welche Member erforderlich und welche optional sind. Verweistypen, die NULL-Werte zulassen, kommunizieren diese Entwurfsabsicht eindeutig:
 
-- Die Fragen, die Teil der Umfrage sind, können nie NULL sein: es macht keinen Sinn, eine leere Frage zu stellen.
+- Die Fragen, die Teil der Umfrage sind, können nie NULL sein. Es ist nicht sinnvoll, eine leere Frage zu stellen.
 - Die Befragten können nie NULL sein. Sie werden sicher die Personen nachverfolgen wollen, mit denen Sie Kontakt aufgenommen haben, sogar die Personen, die die Teilnahme abgelehnt haben.
 - Jede Antwort auf eine Frage darf NULL sein. Befragten können es ablehnen, einige oder alle Fragen zu beantworten.
 
@@ -72,7 +72,7 @@ Die von Ihnen erstellte App führt die folgenden Schritte aus:
 1. Kontaktieren der Befragten, bis die Anzahl der abgeschlossen Umfragen den Zielwert erreicht hat.
 1. Erstellen wichtiger Statistiken zu den Antworten.
 
-## <a name="build-the-survey-with-nullable-and-non-nullable-types"></a>Erstellen einer Umfrage mit Typen, die NULL-Werte zulassen und nicht zulassen.
+## <a name="build-the-survey-with-nullable-and-non-nullable-reference-types"></a>Erstellen der Umfrage mit Nullable- und Nicht-Nullable-Verweistypen
 
 Mit dem ersten geschriebenen Code erstellen Sie die Umfrage. Sie schreiben die Klassen, um eine Frage der Umfrage und eine Ausführung zu modellieren. Ihre Umfrage umfasst drei Arten von Fragen, die sich durch das Format der Antwort unterscheiden: Ja/Nein-Antworten, Zahlenantworten und Textantworten. Erstellen Sie eine `public SurveyQuestion`-Klasse:
 
@@ -129,7 +129,7 @@ namespace NullableIntroduction
 }
 ```
 
-Wie bisher müssen Sie das Listenobjekt Wert initialisieren, der keine NULL-Werte zulässt, oder der Compiler gibt eine Warnung aus. Es gibt keine NULL-Überprüfungen in der zweiten Überladung von `AddQuestion`, da sie nicht benötigt werden: Sie haben diese Variable als Wert deklariert, der keine NULL-Werte zulässt. Der Wert kann nicht `null` sein.
+Wie bisher müssen Sie das Listenobjekt Wert initialisieren, der keine NULL-Werte zulässt, oder der Compiler gibt eine Warnung aus. Es gibt keine NULL-Überprüfungen in der zweiten Überladung von `AddQuestion`, da sie nicht benötigt werden: Sie haben diese Variable als Typ deklariert, der keine NULL-Werte zulässt. Der Wert kann nicht `null` sein.
 
 Wechseln Sie in Ihrem Editor zu *Program.cs*, und ersetzen Sie den Inhalt von `Main` durch die folgenden Codezeilen:
 

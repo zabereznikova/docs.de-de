@@ -8,12 +8,12 @@ helpviewer_keywords:
 - async method [C#]
 - async [C#]
 ms.assetid: 16f14f09-b2ce-42c7-a875-e4eca5d50674
-ms.openlocfilehash: 92e94d6fe1c07ab5cd8f29d040401a737a1db78e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 89133339a75c70e3ac86d627065e78d555bff71d
+ms.sourcegitcommit: 2514f4e3655081dcfe1b22470c0c28500f952c42
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79173652"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79507203"
 ---
 # <a name="async-c-reference"></a>async (C#-Referenz)
 
@@ -26,7 +26,7 @@ public async Task<int> ExampleMethodAsync()
 }  
 ```  
 
-Wenn Sie mit der asynchronen Programmierung noch nicht vertraut sind oder nicht wissen, wie eine Async-Methode den [Operator `await`](../operators/await.md) verwendet, um Aufgaben mit potenziell langer Laufzeit auszuführen, ohne den Thread des Aufrufers zu blockieren, können Sie sich die Einführung unter [Asynchrone Programmierung mit „async“ und „await“](../../programming-guide/concepts/async/index.md) durchlesen. Der folgende Code befindet sich in einer asynchronen Methode und ruft die <xref:System.Net.Http.HttpClient.GetStringAsync%2a?displayProperty=nameWithType>-Methode auf:
+Wenn Sie mit der asynchronen Programmierung noch nicht vertraut sind oder nicht wissen, wie eine Async-Methode den [`await`-Operator](../operators/await.md) verwendet, um Aufgaben mit potenziell langer Laufzeit auszuführen, ohne den Thread des Aufrufers zu blockieren, können Sie sich die Einführung unter [Asynchrone Programmierung mit „async“ und „await“](../../programming-guide/concepts/async/index.md) durchlesen. Der folgende Code befindet sich in einer asynchronen Methode und ruft die <xref:System.Net.Http.HttpClient.GetStringAsync%2a?displayProperty=nameWithType>-Methode auf:
   
 ```csharp  
 string contents = await httpClient.GetStringAsync(requestUrl);  
@@ -64,7 +64,7 @@ So führen Sie den Code als Windows Store-App aus:
 [!code-csharp[wpf-async](../../../../samples/snippets/csharp/language-reference/keywords/async/wpf/mainwindow.xaml.cs#1)]
   
 > [!IMPORTANT]
-> Weitere Informationen zu Aufgaben und zum Code, der während des Wartens auf eine Aufgabe ausgeführt wird, finden Sie unter [Asynchrone Programmierung mit Async und Await](../../programming-guide/concepts/async/index.md). Ein vollständiges Beispiel für WPF, das ähnliche Elemente verwendet, finden Sie unter [Exemplarische Vorgehensweise: Zugreifen auf das Web durch Verwenden von Async und Await](../../programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md).  
+> Weitere Informationen zu Aufgaben und zum Code, der während des Wartens auf eine Aufgabe ausgeführt wird, finden Sie unter [Asynchrone Programmierung mit Async und Await](../../programming-guide/concepts/async/index.md). Ein vollständiges WPF-Beispiel, das ähnliche Elemente verwendet, finden Sie unter [Exemplarische Vorgehensweise: Zugreifen auf das Web mit Async und Await](../../programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md).  
   
 ## <a name="return-types"></a>Rückgabetypen  
 Eine asynchrone Methode kann folgende Rückgabetypen haben:
@@ -84,7 +84,7 @@ Ab C# 7.0 wird ein anderer Typ zurückgegeben, üblicherweise ein Werttyp, der �
 
 Weitere Informationen und Beispiele finden Sie unter [Asynchrone Rückgabetypen](../../programming-guide/concepts/async/async-return-types.md).  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Runtime.CompilerServices.AsyncStateMachineAttribute>
 - [await](../operators/await.md)

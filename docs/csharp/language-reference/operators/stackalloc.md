@@ -1,22 +1,22 @@
 ---
-title: 'stackalloc-Operator: C#-Referenz'
-ms.date: 09/20/2019
+title: stackalloc-Ausdruck – C#-Referenz
+ms.date: 03/13/2020
 f1_keywords:
 - stackalloc_CSharpKeyword
 helpviewer_keywords:
-- stackalloc operator [C#]
-ms.openlocfilehash: 9c9767e0c9945a9589d049fa7abba192cb928ad5
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+- stackalloc expression [C#]
+ms.openlocfilehash: 2e99ce8b1e44dfa040c1acac799a3a55b375bd91
+ms.sourcegitcommit: 34dc3c0d0d0a1cc418abff259d9daa8078d00b81
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78846250"
+ms.lasthandoff: 03/19/2020
+ms.locfileid: "79546600"
 ---
-# <a name="stackalloc-operator-c-reference"></a>stackalloc-Operator (C#-Referenz)
+# <a name="stackalloc-expression-c-reference"></a>stackalloc-Ausdruck (C#-Referenz)
 
-Der `stackalloc`-Operator ordnet einen Speicherblock im Stapel zu. Ein während der Ausführung der Methode im Stapel zugeordneter Speicherblock wird automatisch verworfen, wenn diese Methode zurückgegeben wird. Sie können den mit dem `stackalloc`-Operator zugeordneten Speicher nicht explizit freigeben. Ein im Stapel zugeordneter Speicherblock unterliegt nicht der [automatischen Speicherbereinigung](../../../standard/garbage-collection/index.md) und muss nicht mit einer [`fixed`-Anweisungen](../keywords/fixed-statement.md) angeheftet werden.
+Ein `stackalloc`-Ausdruck ordnet einen Speicherblock im Stapel zu. Ein während der Ausführung der Methode im Stapel zugeordneter Speicherblock wird automatisch verworfen, wenn diese Methode zurückgegeben wird. Sie können den mit `stackalloc` zugeordneten Speicher nicht explizit freigeben. Ein im Stapel zugeordneter Speicherblock unterliegt nicht der [automatischen Speicherbereinigung](../../../standard/garbage-collection/index.md) und muss nicht mit einer [`fixed`-Anweisungen](../keywords/fixed-statement.md) angeheftet werden.
 
-Sie können das Ergebnis des `stackalloc`-Operators einer Variablen mit einem der folgenden Typen zuweisen:
+Sie können das Ergebnis eines `stackalloc`-Ausdrucks einer Variablen mit einem der folgenden Typen zuweisen:
 
 - Ab C# 7.2, <xref:System.Span%601?displayProperty=nameWithType> oder <xref:System.ReadOnlySpan%601?displayProperty=nameWithType>, wie im folgenden Beispiel gezeigt:
 
@@ -43,11 +43,23 @@ Sie können das Ergebnis des `stackalloc`-Operators einer Variablen mit einem de
 
   Im Fall von Zeigertypen können Sie einen `stackalloc`-Ausdruck nur in einer lokalen Variablendeklaration zum Initialisieren der Variable verwenden.
 
-Der Inhalt des neu zugeordneten Speichers ist undefiniert. Ab C# 7.3 können Sie mit der Arrayinitialisierungssyntax den Inhalt des neu zugeordneten Speichers definieren. Das folgende Beispiel zeigt verschiedene Möglichkeiten, dies zu erreichen:
+Die Menge des verfügbaren Speichers im Stapel ist begrenzt. Wenn Sie zu viel Speicher im Stapel zuordnen, wird eine <xref:System.StackOverflowException> ausgelöst. Beachten Sie die folgenden Regeln, um dies zu vermeiden:
+
+- Begrenzen Sie die Speichermenge, die Sie mit `stackalloc` zuordnen:
+
+  [!code-csharp[limit stackalloc](snippets/StackallocOperator.cs#LimitStackalloc)]
+
+  Da die Menge des auf im Stapel verfügbaren Speichers von der Umgebung abhängt, in der der Code ausgeführt wird, sollten Sie bei der Festlegung des tatsächlichen Grenzwerts konservativ vorgehen.
+
+- Vermeiden Sie die Verwendung von `stackalloc` in Schleifen. Ordnen Sie den Speicherblock außerhalb einer Schleife zu, und verwenden Sie ihn innerhalb der Schleife wieder.
+
+Der Inhalt des neu zugeordneten Speichers ist undefiniert. Er sollte vor Verwendung initialisiert werden. Beispielsweise können Sie die <xref:System.Span%601.Clear%2A?displayProperty=nameWithType>-Methode verwenden, die alle Elemente auf den Standardwert des Typs `T` festlegt.
+
+Ab C# 7.3 können Sie mit der Arrayinitialisierungssyntax den Inhalt des neu zugeordneten Speichers definieren. Das folgende Beispiel zeigt verschiedene Möglichkeiten, dies zu erreichen:
 
 [!code-csharp[stackalloc initialization](snippets/StackallocOperator.cs#StackallocInit)]
 
-In Ausdruck `stackalloc T[E]` muss `T` ein [nicht verwalteter Typ](../builtin-types/unmanaged-types.md) und `E` ein Ausdruck des Typs [int](../builtin-types/integral-numeric-types.md) sein.
+Im Ausdruck `stackalloc T[E]` muss `T` ein [nicht verwalteter Typ](../builtin-types/unmanaged-types.md) sein und `E` in einen nicht negativen [int](../builtin-types/integral-numeric-types.md)-Wert ausgewertet werden.
 
 ## <a name="security"></a>Sicherheit
 
@@ -57,10 +69,11 @@ Mit der Verwendung von `stackalloc` werden automatisch Funktionen zum Erkennen e
 
 Weitere Informationen finden Sie im Abschnitt [Stapelzuordnung](~/_csharplang/spec/unsafe-code.md#stack-allocation) der [C#-Sprachspezifikation](~/_csharplang/spec/introduction.md) sowie im Vorschlag zum Feature [Zulassen von `stackalloc` in geschachtelten Kontexten](~/_csharplang/proposals/csharp-8.0/nested-stackalloc.md).
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [C#-Referenz](../index.md)
 - [C#-Operatoren](index.md)
 - [Operatoren im Zusammenhang mit Zeigern](pointer-related-operators.md)
 - [Zeigertypen](../../programming-guide/unsafe-code-pointers/pointer-types.md)
 - [Memory- und Span-bezogene Typen](../../../standard/memory-and-spans/index.md)
+- [Empfehlungen und Warnungen für „stackalloc“](https://vcsjones.dev/2020/02/24/stackalloc/)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - namespace [C#]
 - global keyword [C#]
 ms.assetid: 698b5a73-85cf-4e0e-9e8e-6496887f8527
-ms.openlocfilehash: a18e52ea05d49bf2b3a468923f1433f09fff9a8b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 84c418627462f83630fe5072a0b0e2089f6588f6
+ms.sourcegitcommit: 2514f4e3655081dcfe1b22470c0c28500f952c42
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75712675"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79507125"
 ---
 # <a name="-operator-c-reference"></a>Operator „::“ (C#-Referenz)
 
@@ -56,13 +56,13 @@ Verwenden Sie den Namespacealias-Qualifizierer `::`, um auf einen Member eines N
   > [!NOTE]
   > Das Schlüsselwort `global` ist nur dann der globale Namespacealias, wenn es sich um den linken Bezeichner des `::`-Qualifizierers handelt.
 
-Sie können auch den [member access`.`-Operator ](member-access-operators.md#member-access-operator-) verwenden, um auf einen Member eines Namespace mit Alias zuzugreifen. Allerdings wird der `.`-Operator auch verwendet, um auf einen Typmember zuzugreifen. Der Qualifizierer `::` stellt sicher, dass sein linker Bezeichner immer auf einen Namespacealias verweist, selbst wenn ein Typ oder ein Namespace mit demselben Namen vorhanden ist.
+Sie können auch das [`.`-Token](member-access-operators.md#member-access-expression-) verwenden, um auf einen Member eines Namespace mit Alias zuzugreifen. Allerdings wird das `.`-Token auch verwendet, um auf einen Typmember zuzugreifen. Der Qualifizierer `::` stellt sicher, dass sein linker Bezeichner immer auf einen Namespacealias verweist, selbst wenn ein Typ oder ein Namespace mit demselben Namen vorhanden ist.
 
 ## <a name="c-language-specification"></a>C#-Sprachspezifikation
 
 Weitere Informationen finden Sie im Abschnitt [Namespacealias-Qualifizierer](~/_csharplang/spec/namespaces.md#namespace-alias-qualifiers) der [C#-Sprachspezifikation](~/_csharplang/spec/introduction.md).
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [C#-Referenz](../index.md)
 - [C#-Operatoren](index.md)

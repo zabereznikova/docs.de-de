@@ -10,12 +10,12 @@ helpviewer_keywords:
 - compression
 - compress files
 ms.assetid: e9876165-3c60-4c84-a272-513e47acf579
-ms.openlocfilehash: 5aa25e265ed6ffb613e9916414c6f2335a4aaf57
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 10f990401830bc5f77176f4e586f15f7dd75ff14
+ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78159376"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80248016"
 ---
 # <a name="how-to-compress-and-extract-files"></a>Vorgehensweise: Komprimieren und Extrahieren von Dateien
 
@@ -27,15 +27,21 @@ Der <xref:System.IO.Compression>-Namespace enthält die folgenden Typen zum Komp
 - <xref:System.IO.Compression.DeflateStream>
 - <xref:System.IO.Compression.GZipStream>
 
-Anhand der folgenden Beispiele werden einige der Vorgänge erläutert, die Sie mit komprimierten Dateien ausführen können.
+Anhand der folgenden Beispiele werden einige der Vorgänge erläutert, die Sie mit komprimierten Dateien ausführen können. Für diese Beispiele müssen Ihrem Projekt die folgenden NuGet-Pakete hinzugefügt werden:
+
+- [System.IO.Compression](https://www.nuget.org/packages/System.IO.Compression)
+- [System.IO.Compression.ZipFile](https://www.nuget.org/packages/System.IO.Compression.ZipFile)
+
+Wenn Sie .NET Framework verwenden, fügen Sie Ihrem Projekt Verweise auf diese zwei Bibliotheken hinzu:
+
+- `System.IO.Compression`
+- `System.IO.Compression.FileSystem`
 
 ## <a name="example-1-create-and-extract-a-zip-file"></a>Beispiel 1: Erstellen und Extrahieren einer ZIP-Datei
 
 Das folgende Beispiel zeigt, wie Sie mithilfe der <xref:System.IO.Compression.ZipFile>-Klasse eine komprimierte *ZIP*-Datei erstellen und extrahieren können. In dem Beispiel wird der Inhalt eines Ordners in eine neue *ZIP*-Datei komprimiert, die anschließend in einen neuen Ordner extrahiert wird.
 
 Wenn Sie das Beispiel ausführen möchten, erstellen Sie in Ihrem Programmordner einen Ordner für den *Start*, und füllen Sie diesen mit Dateien auf, die gezippt werden sollen.
-
-Wenn der Buildfehler "The name 'ZipFile' does not exist in the current context." (Der Name „ZipFile“ ist im aktuellen Kontext nicht vorhanden.) zurückgegeben wird, fügen Sie dem Projekt einen Verweis auf die `System.IO.Compression.FileSystem`-Assembly hinzu.
 
 [!code-csharp[System.IO.Compression.ZipFile#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.io.compression.zipfile/cs/program1.cs#1)]
 [!code-vb[System.IO.Compression.ZipFile#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.io.compression.zipfile/vb/program1.vb#1)]
@@ -45,10 +51,6 @@ Wenn der Buildfehler "The name 'ZipFile' does not exist in the current context."
 Im nächsten Beispiel wird der Inhalt einer vorhandenen *ZIP*-Datei durchlaufen, und Dateien mit der Erweiterung *.txt* werden extrahiert. Dabei wird die Klasse <xref:System.IO.Compression.ZipArchive> verwendet, um auf die Zip-Datei zuzugreifen, und mithilfe der Klasse <xref:System.IO.Compression.ZipArchiveEntry> werden die einzelnen Einträge untersucht. Die Erweiterungsmethode <xref:System.IO.Compression.ZipFileExtensions.ExtractToFile%2A> für das <xref:System.IO.Compression.ZipArchiveEntry>-Objekt ist in der Klasse <xref:System.IO.Compression.ZipFileExtensions?displayProperty=nameWithType> verfügbar.
 
 Wenn Sie das Beispiel ausführen möchten, platzieren Sie die *ZIP*-Datei mit dem Namen *result.zip* in Ihrem Programmordner. Geben Sie einen Ordnernamen an, in den die Datei extrahiert werden soll, wenn Sie dazu aufgefordert werden.
-
-Wenn der Buildfehler "The name 'ZipFile' does not exist in the current context." (Der Name „ZipFile“ ist im aktuellen Kontext nicht vorhanden.) zurückgegeben wird, fügen Sie dem Projekt einen Verweis auf die `System.IO.Compression.FileSystem`-Assembly hinzu.
-
-Wenn der Fehler "The type 'ZipArchive' is defined in an assembly that is not referenced." (Der Typ „ZipArchive“ ist in einer Assembly definiert, auf die nicht verwiesen wird.) zurückgegeben wird, fügen Sie dem Projekt einen Verweis auf die `System.IO.Compression`-Assembly hinzu.
 
 > [!IMPORTANT]
 > Beim Entzippen von Dateien müssen Sie auf schädliche Dateipfade achten, die aus dem Verzeichnis weisen können, in das Sie extrahieren möchten. Dies wird als Path Traversal-Angriff bezeichnet. Im folgenden Beispiel wird gezeigt, wie Sie eine Überprüfung auf schädliche Dateipfade durchführen und Dateien sicher entzippen können.

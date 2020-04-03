@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Regasm.exe
 - registering assemblies
 ms.assetid: e190e342-36ef-4651-a0b4-0e8c2c0281cb
-ms.openlocfilehash: 45b4c6c08d3afb948444a8c97dc32bd41f2615ce
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0a1658e57f4a236e4bdd29c3ca224275c25ea727
+ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73104948"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80345006"
 ---
 # <a name="regasmexe-assembly-registration-tool"></a>Regasm.exe (Assembly Registration-Tool)
 
@@ -54,7 +54,7 @@ regasm assemblyFile [options]
 
 Mit der Option **/regfile** können Sie eine REG-Datei mit den Registrierungseinträgen generieren, anstatt die Änderungen direkt in der Registrierung vorzunehmen. Sie können die Registrierung auf einem Computer aktualisieren, indem Sie die REG-Datei mit dem Registrierungs-Editor (Regedit.exe) importieren. Beachten Sie, dass die REG-Datei keine Aktualisierungen der Registrierung enthält, die durch benutzerdefinierte Registrierungsfunktionen vorgenommen werden können.  Beachten Sie außerdem, dass die Option **/regfile** nur Registrierungseinträge für verwaltete Klassen ausgibt.  Diese Option gibt keine Einträge für `TypeLibID`s oder `InterfaceID`s aus.
 
-Bei Angabe der Option **/tlb** wird von „regasm.exe“ eine Typbibliothek generiert und registriert, mit der die in der Assembly gefundenen Typen beschrieben werden. Die generierten Typbibliotheken werden von "Regasm.exe" im aktuellen Arbeitsverzeichnis oder in dem für die Ausgabedatei angegebenen Verzeichnis platziert. Beim Generieren einer Typbibliothek für eine Assembly, in der auf andere Assemblys verwiesen wird, werden ggf. mehrere Typbibliotheken gleichzeitig generiert. Sie können die Typbibliothek zum Bereitstellen von Typinformationen für Entwicklungstools wie Visual Studio verwenden. Die Option **/tlb** sollte nicht verwendet werden, wenn die zu registrierende Assembly mit dem Type Library Importer-Tool ([tlbimp.exe](tlbimp-exe-type-library-importer.md)) erstellt wurde. Sie können keine Typbibliothek aus einer Assembly exportieren, die von einer Typbibliothek importiert wurde. Das Verwenden der Option **/tlb** entspricht der Verwendung des Type Library Exporter-Tools ([tlbexp.exe](tlbexp-exe-type-library-exporter.md)) und von „regasm.exe“, wobei „tlbexp.exe“ die erstellte Typbibliothek allerdings nicht registriert.  Wenn Sie die Option **/tlb** zum Registrieren einer Typbibliothek verwenden, können Sie die Optionen **/tlb** und **/unregister** zusammen nutzen, um die Registrierung der Typbibliothek aufzuheben. Durch die gemeinsame Verwendung der beiden Optionen wird die Registrierung der Typbibliothek und der Schnittstelleneinträge aufgehoben, wodurch die Registrierung in beachtlichem Umfang bereinigt werden kann.
+Bei Angabe der Option **/tlb** wird von „regasm.exe“ eine Typbibliothek generiert und registriert, mit der die in der Assembly gefundenen Typen beschrieben werden. Die generierten Typbibliotheken werden von "Regasm.exe" im aktuellen Arbeitsverzeichnis oder in dem für die Ausgabedatei angegebenen Verzeichnis platziert. Beim Generieren einer Typbibliothek für eine Assembly, in der auf andere Assemblys verwiesen wird, werden ggf. mehrere Typbibliotheken gleichzeitig generiert. Sie können die Typbibliothek zum Bereitstellen von Typinformationen für Entwicklungstools wie Visual Studio verwenden. Die Option **/tlb** sollte nicht verwendet werden, wenn die zu registrierende Assembly mit dem Type Library Importer-Tool ([tlbimp.exe](tlbimp-exe-type-library-importer.md)) erstellt wurde. Sie können keine Typbibliothek aus einer Assembly exportieren, die von einer Typbibliothek importiert wurde. Das Verwenden der Option **/tlb** entspricht der Verwendung des Type Library Exporter-Tools ([tlbexp.exe](tlbexp-exe-type-library-exporter.md)) und von „regasm.exe“, wobei „tlbexp.exe“ die erstellte Typbibliothek allerdings nicht registriert.  Wenn Sie die Option **/tlb** zum Registrieren einer Typbibliothek verwenden, können Sie die Optionen **/tlb** zusammen mit der Option **/unregister** nutzen, um die Registrierung der Typbibliothek aufzuheben. Durch die gemeinsame Verwendung der beiden Optionen wird die Registrierung der Typbibliothek und der Schnittstelleneinträge aufgehoben, wodurch die Registrierung in beachtlichem Umfang bereinigt werden kann.
 
 Wenn Sie eine Assembly für die Verwendung mit COM registrieren, werden der Registrierung des lokalen Computers von "Regasm.exe" Einträge hinzugefügt. Genauer gesagt werden versionsabhängige Registrierungsschlüssel erstellt, mit denen die parallele Ausführung mehrerer Versionen derselben Assembly auf einem Computer ermöglicht wird. Bei der erstmaligen Registrierung einer Assembly werden ein Schlüssel auf oberster Ebene für die Assembly und ein eindeutiger Unterschlüssel für die spezielle Version erstellt. Bei jeder Registrierung einer neuen Assemblyversion wird von "Regasm.exe" für die neue Version ein Unterschlüssel erstellt.
 

@@ -3,12 +3,12 @@ title: .NET-Glossar
 description: Informationen zu den Bedeutungen der ausgewählten Begriffe, die in der .NET-Dokumentation verwendet werden.
 ms.date: 01/22/2019
 ms.technology: dotnet-standard
-ms.openlocfilehash: 8da1d858835210590a80a624fb8989fbfe8e0a91
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ed4dceed1a3f39c5c4ce7a278efc37bb38ed0d94
+ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79398748"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80344203"
 ---
 # <a name="net-glossary"></a>.NET-Glossar
 
@@ -26,7 +26,7 @@ Siehe [CoreRT](#corert) und [.NET Native](#net-native).
 
 Die ursprüngliche ASP.NET-Implementierung, die im Lieferumfang von .NET Framework enthalten ist.
 
-Bei ASP.NET handelt es sich manchmal um einen Oberbegriff, der sich auf ASP.NET-Implementierungen, einschließlich ASP.NET Core, bezieht. Die Bedeutung des Begriffs in einer bestimmten Instanz wird durch den Kontext festgelegt. Beziehen Sie sich auf ASP.NET 4.x, wenn Sie klarstellen möchten, dass Sie ASP.NET nicht für beide Implementierungen verwenden.
+Bei ASP.NET handelt es sich manchmal um einen Oberbegriff, der sich auf ASP.NET-Implementierungen, einschließlich ASP.NET Core, bezieht. Die Bedeutung des Begriffs in einer bestimmten Instanz wird durch den Kontext festgelegt. Beziehen Sie sich auf ASP.NET 4.x, wenn Sie klarstellen möchten, dass Sie ASP.NET nicht für beide Implementierungen verwenden.
 
 Siehe [ASP.NET-Dokumentation](/aspnet/#pivot=aspnet).
 
@@ -46,7 +46,7 @@ Eine Assembly kann Typen wie Schnittstellen, Klassen, Strukturen, Enumerationen 
 
 Common Language Runtime
 
-Die genaue Bedeutung hängt vom Kontext ab, normalerweise wird damit jedoch die Runtime des .NET Framework bezeichnet. Die CLR behandelt die Speicherbelegung und -verwaltung. Bei der CLR handelt es sich auch um einen virtuellen Computer, der nicht nur Apps ausführt, sondern auch mithilfe eines [JIT](#jit)-Compilers dynamisch Code generiert und kompiliert. Die aktuelle Microsoft CLR-Implementierung ist nur unter Windows möglich.
+Die genaue Bedeutung hängt vom Kontext ab, normalerweise bezieht sich Common Language Runtime jedoch auf die Runtime von .NET Framework. Die CLR behandelt die Speicherbelegung und -verwaltung. Bei der CLR handelt es sich auch um einen virtuellen Computer, der nicht nur Apps ausführt, sondern auch mithilfe eines [JIT](#jit)-Compilers dynamisch Code generiert und kompiliert. Die aktuelle Microsoft CLR-Implementierung ist nur unter Windows möglich.
 
 ## <a name="coreclr"></a>CoreCLR
 
@@ -64,7 +64,7 @@ Eine Reihe von Bibliotheken, aus denen die Namespaces System.\* (und in beschrä
 
 .NET Core-Runtime
 
-Im Gegensatz zu CLR und CoreCLR handelt es sich bei CoreRT nicht um einen virtuellen Computer. Das bedeutet, dass die Funktionen zum dynamischen Generieren und Ausführen von Code nicht enthalten sind, da kein [JIT](#jit) enthalten ist. Es ist jedoch ein [GC](#gc) enthalten sowie die Möglichkeit zur Identifikation und Reflektion des Laufzeittyps (RTTI). Das Typsystem wurde jedoch so entwickelt, dass keine Metadaten für die Reflektion erforderlich sind. Dadurch wird eine [AOT](#aot)-Toolkette ermöglicht, die die Verknüpfung zu überflüssigen Metadaten aufheben und (was noch wichtiger ist) Code identifizieren kann, der von der App nicht verwendet wird. CoreRT befindet sich in der Entwicklung.
+Im Gegensatz zu CLR und CoreCLR handelt es sich bei CoreRT nicht um einen virtuellen Computer. Das bedeutet, dass die Funktionen zum dynamischen Generieren und Ausführen von Code nicht enthalten sind, da kein [JIT](#jit) enthalten ist. Es ist jedoch ein [GC](#gc) enthalten sowie die Möglichkeit zur Identifikation und Reflektion des Laufzeittyps (RTTI). Das Typsystem wurde jedoch so entwickelt, dass keine Metadaten für die Reflektion erforderlich sind. Dies ermöglicht eine [AOT](#aot)-Toolkette, die die Verknüpfung zu überflüssigen Metadaten aufheben und (was noch wichtiger ist) Code identifizieren kann, der von der App nicht verwendet wird. CoreRT befindet sich in der Entwicklung.
 
 Weitere Informationen finden Sie unter [Einführung in .NET Native und CoreRT](https://github.com/dotnet/corert/blob/master/Documentation/intro-to-corert.md).
 
@@ -114,11 +114,11 @@ Just-In-Time-Compiler
 
 ## <a name="implementation-of-net"></a>Implementierung von .NET
 
-Eine Implementierung von .NET umfasst Folgendes:
+Eine Implementierung von .NET umfasst:
 
 - Mindestens eine Runtime. Beispiele: CLR, CoreCLR, CoreRT.
-- Eine Klassenbibliothek, die eine Version des .NET Standards implementiert und ggf. zusätzliche APIs beinhaltet. Beispiele: .NET Framework-Basisklassenbibliothek, .NET Core-Basisklassenbibliothek.
-- Optional mindestens ein Anwendungsframework. Beispiele: ASP.NET, Windows Forms und WPF sind in .NET Framework enthalten.
+- Eine Klassenbibliothek, die eine .NET Standard-Version implementiert und ggf. zusätzliche APIs beinhaltet. Beispiele: .NET Framework-Basisklassenbibliothek, .NET Core-Basisklassenbibliothek.
+- Optional mindestens ein Anwendungsframework. Beispiele: ASP.NET, Windows Forms und WPF sind im .NET Framework enthalten.
 - Optional Entwicklungstools. Einige Entwicklungstools werden zwischen mehreren Implementierungen freigegeben.
 
 Beispiele für .NET-Implementierungen:
@@ -143,7 +143,7 @@ Siehe [Pakete, Metapakete und Frameworks](../core/packages.md).
 
 Bei Mono handelt es sich um eine [plattformübergreifend](#cross-platform) Open Source-.NET-Implementierung, die in erster Linie verwendet wird, wenn eine kleine Runtime erforderlich ist. Mono ist die Runtime für Xamarin-Anwendungen unter Android, Mac, iOS, tvOS und watchOS und ist hauptsächlich auf Apps mit geringem Ressourcenbedarf ausgelegt.
 
-Außerdem unterstützt Mono alle derzeit veröffentlichten Versionen des .NET Standards.
+Außerdem unterstützt Mono alle derzeit veröffentlichten .NET Standard-Versionen.
 
 In der Vergangenheit hat Mono die größere API des .NET Framework implementiert und einige der beliebtesten Funktionen unter Unix emuliert. Manchmal wird es zum Ausführen von .NET-Anwendungen verwendet, die auf diesen Unix-Funktionen basieren.
 
@@ -153,7 +153,7 @@ Weitere Informationen zu Mono finden Sie in der [Mono-Dokumentation](https://www
 
 ## <a name="net"></a>.NET
 
-Der Oberbegriff für [.NET Standard](#net-standard) und alle [.NET-Implementierungen](#implementation-of-net) und Workloads. Immer groß geschrieben, niemals „.Net“.
+Der Oberbegriff für [.NET Standard](#net-standard) und alle [.NET-Implementierungen](#implementation-of-net) und Workloads. Immer ausschließlich in Großbuchstaben, niemals „.Net“.
 
 Siehe [Leitfaden für .NET](index.md).
 
@@ -161,7 +161,7 @@ Siehe [Leitfaden für .NET](index.md).
 
 Eine plattformübergreifende, leistungsstarke Open Source-Implementierung von .NET. Enthält die Common Language Runtime (CoreCLR), die Core AOT Runtime (CoreRT, in der Entwicklung), die Core-Basisklassenbibliothek und das Core SDK.
 
-Siehe [.NET Core](../core/index.md).
+Siehe [.NET Core](../core/index.yml).
 
 ## <a name="net-core-cli"></a>.NET Core-CLI
 
@@ -175,11 +175,11 @@ Eine Sammlung von Bibliotheken und Tools, mit der Entwickler .NET Core-Anwendung
 
 Siehe [.NET Core SDK – Übersicht](../core/sdk.md).
 
-## <a name="net-framework"></a>.NET Framework
+## <a name="net-framework"></a>.NET Framework
 
 Eine Implementierung von .NET, die nur unter Windows ausgeführt werden kann. Enthält die Common Language Runtime (CLR), die Basisklassenbibliothek und Bibliotheken für Anwendungsframeworks wie ASP.NET, Windows Forms und WPF.
 
-Siehe [Leitfaden für .NET Framework](../framework/index.md).
+Siehe [Leitfaden für .NET Framework](../framework/index.yml).
 
 ## <a name="net-native"></a>.NET systemeigen
 
@@ -205,7 +205,7 @@ Native Imagegenerierung
 
 Sie können sich diese Technologie als einen permanenten JIT-Compiler vorstellen. Normalerweise wird der Code auf dem Computer kompiliert, auf dem er ausgeführt wird. Die Kompilierung findet jedoch normalerweise während der Installation statt.
 
-## <a name="package"></a>Paket
+## <a name="package"></a>package
 
 Ein NuGet-Paket &mdash; oder nur ein Paket &mdash; ist eine *ZIP*-Datei mit mindestens einer Assembly, die denselben Namen trägt und zusätzlichen Metadaten, z.B. der Autorenname.
 
@@ -253,7 +253,7 @@ Die Sammlung von APIs, auf der eine .NET-App oder -Bibliothek basiert.
 
 Eine App oder Bibliothek kann eine Version von .NET Standard (beispielsweise .NET Standard 2.0) anzielen. Dabei handelt es sich um eine Spezifikation für eine standardisierte Reihe von APIs für alle .NET-Implementierungen. Eine App oder Bibliothek kann auch eine Version einer bestimmten .NET-Implementierung anzielen. In diesem Fall erhält diese Zugriff auf die implementierungsspezifischen APIs. Beispielsweise erhält eine App, die Xamarin iOS anzieht, Zugriff auf die von Xamarin bereitgestellten iOS-API-Wrapper.
 
-Für einige Zielplattformen (z.B. .NET Framework) werden die verfügbaren APIs von den Assemblys definiert, die eine .NET-Implementierung auf einem System installiert, zu denen Anwendungsframework-APIs zählen können (z.B. ASP.NET, WinForms). Für paketbasierte Zielframeworks (z.B. .NET Standard und .NET Core) werden die Framework-APIs von den Paketen definiert, die in der App oder der Bibliothek installiert sind. In diesem Fall gibt das Zielframework implizit ein Metapaket an, das auf alle Pakete verweist, aus denen das Framework besteht.
+Für einige Zielplattformen (z.B. .NET Framework) werden die verfügbaren APIs von den Assemblys definiert, die eine .NET-Implementierung auf einem System installiert, zu denen Anwendungsframework-APIs zählen können (z.B. ASP.NET, WinForms). Für paketbasierte Zielframeworks (z. B. .NET Standard und .NET Core) werden die Framework-APIs von den Paketen definiert, die in der App oder der Bibliothek installiert sind. In diesem Fall gibt das Zielframework implizit ein Metapaket an, das auf alle Pakete verweist, aus denen das Framework besteht.
 
 Siehe [Zielframeworks](frameworks.md).
 
@@ -269,12 +269,12 @@ Siehe [Zielframeworks](frameworks.md).
 
 Universelle Windows-Plattform
 
-Eine Implementierung von .NET, mit der moderne Touchscreen-Windows-Anwendungen und Software für das Internet der Dinge (Internet of Things, IoT) erstellen werden. Sie wurde als einheitliche Plattform entwickelt, um das Programmieren für ganz verschiedene Gerätetypen, von PCs, Tablets, Phablets über Smartphones bis hin zur Xbox, zu ermöglichen. Die UWP bietet viele Dienste, z.B. einen zentralen App Store, eine Ausführungsumgebung (AppContainer) und mehrere Windows-APIs, die anstelle von Win32 (WinRT) verwendet werden. Apps können in C++, C#, Visual Basic und JavaScript geschrieben werden. Die .NET-APIs für C# und Visual Basic werden von .NET Core bereitgestellt.
+Eine Implementierung von .NET, mit der moderne Touchscreen-Windows-Anwendungen und Software für das Internet der Dinge (Internet of Things, IoT) erstellen werden. Sie wurde als einheitliche Plattform entwickelt, um das Programmieren für verschiedene Gerätetypen, von PCs, Tablets und Smartphones bis hin zur Xbox, zu ermöglichen. Die UWP bietet viele Dienste, z.B. einen zentralen App Store, eine Ausführungsumgebung (AppContainer) und mehrere Windows-APIs, die anstelle von Win32 (WinRT) verwendet werden. Apps können in C++, C#, Visual Basic und JavaScript geschrieben werden. Die .NET-APIs für C# und Visual Basic werden von .NET Core bereitgestellt.
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [.NET Guide (Leitfaden für .NET)](index.md)
-- [Leitfaden für .NET Framework](../framework/index.md)
-- [.NET Core](../core/index.md)
+- [Leitfaden für .NET Framework](../framework/index.yml)
+- [.NET Core](../core/index.yml)
 - [ASP.NET Overview (Übersicht über ASP.NET)](/aspnet/index#pivot=aspnet)
 - [ASP.NET Core Overview (Übersicht über ASP.NET Core)](/aspnet/index#pivot=core)

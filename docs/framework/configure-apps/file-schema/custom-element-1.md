@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - custom element
 ms.assetid: e62056c6-b351-40eb-afc0-cc13fc44e45e
-ms.openlocfilehash: 0d765a9789ad566428b1fbda6c0863b10b98c363
-ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
+ms.openlocfilehash: a40f35838655f6021af0b2e966335803ec8c16b4
+ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80345074"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80635401"
 ---
 # <a name="custom-element-for-singletagsectionhandler"></a>Benutzerdefiniertes Element für SingleTagSectionHandler
 
@@ -39,7 +39,7 @@ Attribute und Attributwerte sind benutzerdefinierte.
 
 Keine
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Das ** \<sectionName>-Element** ist ein benutzerdefiniertes Element, das [** \<**](section-element.md) [** \<**](configsections-element-for-configuration.md) durch ein>-Tag im configSections->-Element definiert wird. Das Konfigurationssystem <xref:System.Collections.IDictionary> gibt ein <xref:System.Configuration.Configuration.GetSection(System.String)?displayProperty=nameWithType>Objekt zurück, wenn Sie aufrufen.
 
@@ -61,7 +61,7 @@ Im folgenden Beispiel wird ein benutzerdefiniertes Element namens <xref:System.C
 
 ## <a name="configuration-file"></a>Konfigurationsdatei
 
-Dieses Element kann in der Anwendungskonfigurationsdatei, der Computerkonfigurationsdatei (*Machine.config*) und *web.config-Dateien* verwendet werden, die sich nicht auf Anwendungsverzeichnisebene befinden.
+Dieses Element kann in der Anwendungskonfigurationsdatei, der Computerkonfigurationsdatei (*Machine.config*) und *Web.config-Dateien* verwendet werden, die sich nicht auf Anwendungsverzeichnisebene befinden.
 
 ## <a name="see-also"></a>Siehe auch
 

@@ -1,6 +1,6 @@
 ---
 title: Strukturtypen – C#-Referenz
-ms.date: 02/24/2020
+ms.date: 03/26/2020
 f1_keywords:
 - struct_CSharpKeyword
 helpviewer_keywords:
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - struct type [C#]
 - structure type [C#]
 ms.assetid: ff3dd9b7-dc93-4720-8855-ef5558f65c7c
-ms.openlocfilehash: b85d0df086f3ca65ed995594dd374286e1c3ba5c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6a2c97b93a8f6d1d62bd8a96865a4fe6587f55d3
+ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78847728"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80345131"
 ---
 # <a name="structure-types-c-reference"></a>Strukturtypen (C#-Referenz)
 
@@ -24,6 +24,24 @@ Ein *Strukturtyp* (oder *struct type*) ist ein [Werttyp](value-types.md), der Da
 Strukturtypen verfügen über eine *Wertsemantik*. Das heißt, eine Variable eines Strukturtyps enthält eine Instanz des Typs. Standardmäßig werden die Variablenwerte bei der Zuweisung kopiert, dabei handelt es sich um die Übergabe eines Arguments an eine Methode oder die Rückgabe eines Methodenergebnisses. Bei Strukturtypvariablen wird eine Instanz des Typs kopiert. Weitere Informationen finden Sie unter [Werttypen](value-types.md).
 
 In der Regel werden Strukturtypen zum Entwerfen kleiner datenorientierter Typen verwendet, die wenig oder gar kein Verhalten bereitstellen. Beispielsweise verwendet .NET Strukturtypen, um Zahlen (sowohl [Integer](integral-numeric-types.md) als auch [reelle](floating-point-numeric-types.md) Zahlen), [boolesche Werte](bool.md), [Unicode-Zeichen](char.md) und [Zeitinstanzen](xref:System.DateTime) darzustellen. Wenn Sie das Verhalten eines Typs verwenden möchten, sollten Sie eine [Klasse](../keywords/class.md) definieren. Klassentypen verfügen über *Verweissemantik*. Das heißt, eine Variable eines Klassentyps enthält einen Verweis auf eine Instanz des Typs, nicht die Instanz selbst.
+
+Da Strukturtypen eine Wertsemantik nutzen, wird die Definition von *unveränderlichen* Strukturtypen empfohlen.
+
+## <a name="readonly-struct"></a>`readonly`-Struktur
+
+Ab C# 7.2 können Sie mit dem `readonly`-Modifizierer einen Strukturtyp als unveränderlich deklarieren:
+
+[!code-csharp[readonly struct](snippets/StructType.cs#ReadonlyStruct)]
+
+Alle Datenmember einer `readonly`-Struktur müssen als schreibgeschützt gekennzeichnet sein:
+
+- Alle Felddeklarationen müssen den [`readonly`-Modifizierer](../keywords/readonly.md) aufweisen.
+- Alle Eigenschaften – auch automatisch implementierte – müssen schreibgeschützt sein.
+
+Auf diese Weise ist garantiert, dass kein Member einer `readonly`-Struktur den Status der Struktur ändert.
+
+> [!NOTE]
+> In einer `readonly`-Struktur kann ein Datenmember eines änderbaren Verweistyps weiterhin den eigenen Status ändern. Beispielsweise können Sie eine <xref:System.Collections.Generic.List%601>-Instanz nicht ersetzen, aber neue Elemente zur Instanz hinzufügen.
 
 ## <a name="limitations-with-the-design-of-a-structure-type"></a>Einschränkungen beim Entwerfen eines Strukturtyps
 
@@ -43,7 +61,7 @@ Beim Entwerfen eines Strukturtyps verfügen Sie über dieselben Funktionen wie b
 
 In C# müssen Sie eine deklarierte Variable initialisieren, bevor sie verwendet werden kann. Da eine Strukturtypvariable nicht den Wert `null` aufweisen kann (es sei denn, es handelt sich um eine Variable eines [auf NULL festlegbaren Werttyps](nullable-value-types.md)), müssen Sie eine Instanz des entsprechenden Typs instanziieren. Dafür stehen verschiedene Möglichkeiten zur Verfügung.
 
-Normalerweise instanziieren Sie einen Strukturtyp, indem Sie einen entsprechenden Konstruktor mit dem Operator [`new`](../operators/new-operator.md) aufrufen. Jeder Strukturtyp verfügt über mindestens einen Konstruktor. Dabei handelt es sich um einen impliziten parameterlosen Konstruktor, der den [Standardwert](default-values.md) des Typs erzeugt. Sie können auch den [Standardoperator](../operators/default.md) oder das Standardliteral verwenden, um den Standardwert eines Typs zu erzeugen.
+Normalerweise instanziieren Sie einen Strukturtyp, indem Sie einen entsprechenden Konstruktor mit dem Operator [`new`](../operators/new-operator.md) aufrufen. Jeder Strukturtyp verfügt über mindestens einen Konstruktor. Dabei handelt es sich um einen impliziten parameterlosen Konstruktor, der den [Standardwert](default-values.md) des Typs erzeugt. Sie können einen [Standardwertausdruck](../operators/default.md) auch zum Erzeugen des Standardwerts für einen Typ verwenden.
 
 Wenn alle Instanzfelder eines Strukturtyps zugänglich sind, können Sie ihn auch ohne den `new`-Operator instanziieren. In diesem Fall müssen Sie alle Instanzfelder vor der ersten Verwendung der Instanz initialisieren. Das folgende Beispiel zeigt, wie Sie dabei vorgehen müssen:
 
@@ -62,6 +80,8 @@ Für alle Strukturtypen gibt es [Boxing- und Unboxing](../../programming-guide/t
 ## <a name="c-language-specification"></a>C#-Sprachspezifikation
 
 Weitere Informationen finden Sie im Abschnitt [Strukturen](~/_csharplang/spec/structs.md) der [C#-Sprachspezifikation](~/_csharplang/spec/introduction.md).
+
+Weitere Informationen zur `readonly`-Struktur finden Sie unter [Hinweis zum Featurevorschlag](~/_csharplang/proposals/csharp-7.2/readonly-ref.md#readonly-structs).
 
 ## <a name="see-also"></a>Siehe auch
 

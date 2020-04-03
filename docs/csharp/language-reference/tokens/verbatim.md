@@ -8,12 +8,12 @@ helpviewer_keywords:
 - '@ special character [C#]'
 - '@ language element [C#]'
 ms.assetid: 89bc7e53-85f5-478a-866d-1cca003c4e8c
-ms.openlocfilehash: a3446eceb0d3c415e36ea1d2c7d8d6d34f65350d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b37f77273e767a5e5292e7707933892f57811d2a
+ms.sourcegitcommit: e48a54ebe62e874500a7043f6ee0b77a744d55b4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75712415"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80291765"
 ---
 # <a name="-c-reference"></a>@ (C#-Referenz)
 
@@ -23,7 +23,7 @@ Das Sonderzeichen `@` dient als ausführlicher Bezeichner. Er wird wie folgt ver
 
    [!code-csharp[verbatim1](../../../../samples/snippets/csharp/language-reference/keywords/verbatim1.cs#1)]
 
-1. Zum Angeben, dass ein Zeichenfolgenliteral wörtlich interpretiert werden soll. Das Zeichen `@` in dieser Instanz definiert ein *ausführliches Zeichenfolgenliteral*. Einfache Escapesequenzen (z.B. `"\\"` für einen umgekehrten Schrägstrich), Escapesequenzen für Hexadezimalzahlen (z.B. `"\x0041"` für ein groß geschriebenes A) und Escapesequenzen für Unicodezeichen (wie z.B. `"\u0041"` für ein groß geschriebenes A) werden wörtlich interpretiert. Nur eine Escapesequenz für Anführungszeichen (`""`) wird nicht wörtlich interpretiert; es wird ein einfaches Anführungszeichen generiert. Bei einer ausführlichen [interpolierten Zeichenfolge](interpolated.md) werden darüber hinaus Klammern als Escapesequenzen (`{{` und `}}`) nicht wörtlich interpretiert. In diesem Fall werden einfache geschweifte Klammerzeichen erzeugt. Im folgenden Beispiel werden zwei identische Dateipfade definiert – einer durch Verwendung eines regulären Zeichenfolgenliterals und der andere durch ein ausführliches Zeichenfolgenliteral. Dies ist einer der häufigeren Verwendungsarten von ausführlichen Zeichenfolgenliteralen.
+1. Zum Angeben, dass ein Zeichenfolgenliteral wörtlich interpretiert werden soll. Das Zeichen `@` in dieser Instanz definiert ein *ausführliches Zeichenfolgenliteral*. Einfache Escapesequenzen (z.B. `"\\"` für einen umgekehrten Schrägstrich), Escapesequenzen für Hexadezimalzahlen (z.B. `"\x0041"` für ein groß geschriebenes A) und Escapesequenzen für Unicodezeichen (wie z.B. `"\u0041"` für ein groß geschriebenes A) werden wörtlich interpretiert. Nur eine Escapesequenz für Anführungszeichen (`""`) wird nicht wörtlich interpretiert, sie erzeugt ein doppeltes Anführungszeichen. Bei einer ausführlichen [interpolierten Zeichenfolge](interpolated.md) werden darüber hinaus Klammern als Escapesequenzen (`{{` und `}}`) nicht wörtlich interpretiert. In diesem Fall werden einfache geschweifte Klammerzeichen erzeugt. Im folgenden Beispiel werden zwei identische Dateipfade definiert – einer durch Verwendung eines regulären Zeichenfolgenliterals und der andere durch ein ausführliches Zeichenfolgenliteral. Dies ist einer der häufigeren Verwendungsarten von ausführlichen Zeichenfolgenliteralen.
 
    [!code-csharp[verbatim2](../../../../samples/snippets/csharp/language-reference/keywords/verbatim1.cs#2)]
 
@@ -35,8 +35,8 @@ Das Sonderzeichen `@` dient als ausführlicher Bezeichner. Er wird wie folgt ver
 
    [!code-csharp[verbatim4](../../../../samples/snippets/csharp/language-reference/keywords/verbatim2.cs#1)]
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [C#-Referenz](../index.md)
 - [C#-Programmierhandbuch](../../programming-guide/index.md)
-- [C# Special Characters (C#-Sonderzeichen)](./index.md)
+- [C#-Sonderzeichen](./index.md)
