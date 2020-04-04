@@ -3,12 +3,12 @@ title: Willkommen bei .NET
 description: Erste Schritte mit der .NET-Technologiefamilie.
 ms.date: 12/03/2019
 ms.custom: updateeachrelease
-ms.openlocfilehash: f5673f91545b98fb706d8f1cc03ef7746f1b19b8
-ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
+ms.openlocfilehash: ecdbdf13aa64de0f07b09eb73953e64d66755bb0
+ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80345309"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80635966"
 ---
 # <a name="welcome-to-net"></a>Willkommen bei .NET
 
@@ -20,7 +20,7 @@ Erstellen Sie viele Arten von Apps mit .NET, z.B. Cloud, IoT und Spiele, anhand 
 
 Informationen zu .NET finden Sie auf den folgenden Blogs:
 
-- [.NET Blog](https://devblogs.microsoft.com/dotnet/)
+- [.NET-Blog](https://devblogs.microsoft.com/dotnet/)
 - [ASP.NET-Blog](https://devblogs.microsoft.com/aspnet/)
 - [Der Visual Studio-Blog](https://devblogs.microsoft.com/visualstudio/)
 - [Das Visual Basic-Team](https://devblogs.microsoft.com/vbteam/)
@@ -42,11 +42,11 @@ Informationen zu den neuesten Features, die den .NET-Implementierungen und den u
 
 Diese Dokumentation umfasst die Bandbreite von .NET über Plattformen und Sprachen. Sie können mit .NET und den Sprachen in einem beliebigen Abschnitt beginnen:
 
-- [.NET Guide (Leitfaden für .NET)](standard/index.md)
+- [.NET Guide (Leitfaden für .NET)](standard/index.yml)
 - [Leitfaden für .NET Core](core/index.yml)
 - [Leitfaden für .NET Framework](framework/index.yml)
 - [Leitfaden für C#](csharp/index.yml)
-- [F# Guide](fsharp/index.yml)
+- [Leitfaden für F#](fsharp/index.yml)
 - [Leitfaden für Visual Basic](visual-basic/index.yml)
 - [Leitfaden für ML.NET](machine-learning/index.yml)
 - [.NET für Apache Spark](spark/index.yml)
