@@ -290,6 +290,8 @@
       href: deploying/creating-nuget-packages.md
     - name: Rollforward der eigenständigen Runtimebereitstellung
       href: deploying/runtime-patch-selection.md
+    - name: Kürzen eigenständiger Bereitstellungen und ausführbarer Dateien
+      href: deploying/trim-self-contained.md
     - name: Laufzeitpaketspeicher
       href: deploying/runtime-store.md
 - name: Docker
