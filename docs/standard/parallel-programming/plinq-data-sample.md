@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - PLINQ queries, sample data
 ms.assetid: 4fccbb35-eaa5-44e9-a252-a5c3d4bc7604
-ms.openlocfilehash: b13a2608df486f1de42514d4f8eaac49f04d345e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 163aa70df78eecf5ee9f3970919bc514ec72e119
+ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73140013"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80588608"
 ---
 # <a name="plinq-data-sample"></a>PLINQ-Datenbeispiel
 Dieses Beispiel enthält Beispieldaten im CSV-Format zusammen mit Methoden, die sie in Sammlungen von „Customers“, „Products“, „Orders“ und „Order Details“ im Arbeitsspeicher umwandeln. Zum weiteren Experimentieren mit PLINQ können Sie Codebeispiele aus bestimmten anderen Themen in den Code dieses Themas einfügen und ihn von der `Main`-Methode aus aufrufen. Sie können diese Daten auch mit Ihren eigenen PLINQ-Abfragen verwenden.  
@@ -862,4 +862,4 @@ END PRODUCTS
   
 ## <a name="see-also"></a>Weitere Informationen
 
-- [Parallel LINQ (PLINQ) (Paralleles LINQ (PLINQ))](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)
+- [Parallel LINQ (PLINQ) (Paralleles LINQ (PLINQ))](../../../docs/standard/parallel-programming/introduction-to-plinq.md)

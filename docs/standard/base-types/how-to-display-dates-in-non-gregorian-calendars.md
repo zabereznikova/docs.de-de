@@ -11,12 +11,12 @@ helpviewer_keywords:
 - calendars [.NET Framework], displaying dates
 - displaying date and time data
 ms.assetid: ed324eff-4aff-4a76-b6c0-04e6c0d8f5a9
-ms.openlocfilehash: 455996d091f92367667e7077a4524898cd8face6
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8d02b74f63ec5b6260679ae4cea04791681ec238
+ms.sourcegitcommit: 79b0dd8bfc63f33a02137121dd23475887ecefda
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73138751"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80523925"
 ---
 # <a name="how-to-display-dates-in-non-gregorian-calendars"></a>Gewusst wie: Anzeigen von Datumsangaben in nicht gregorianischen Kalendern
 Die Typen <xref:System.DateTime> und <xref:System.DateTimeOffset> verwenden den gregorianischen Kalender als Standardkalender. Das bedeutet, dass ein Aufruf der `ToString`-Methode eines Datums- und Uhrzeitwerts die Zeichenfolgendarstellung dieses Datums und dieser Uhrzeit im gregorianischen Kalender anzeigt, selbst wenn dieses Datum und diese Uhrzeit in einem anderen Kalender erstellt wurden. Dies wird im folgenden Beispiel veranschaulicht. Hierbei werden zwei verschiedene Möglichkeiten verwendet, um einen Datums- und Uhrzeitwert mit dem persischen Kalender zu erstellen. Beim Aufruf der <xref:System.DateTime.ToString%2A>-Methode werden diese Datums- und Uhrzeitwerte aber weiterhin im gregorianischen Kalender angezeigt. Dieses Beispiel zeigt zwei häufig verwendete, aber falsche Verfahren zum Anzeigen des Datums in einem bestimmten Kalender.  
@@ -81,8 +81,4 @@ Die Typen <xref:System.DateTime> und <xref:System.DateTimeOffset> verwenden den 
   
 - `DisplayDate`, eine überladene öffentliche Methode, an die zwei Parameter übergeben werden: erstens entweder ein <xref:System.DateTime>- oder ein <xref:System.DateTimeOffset>-Wert, der in dem durch das `CalendarUtility`-Objekt dargestellten Kalender ausgedrückt werden soll. Zweitens wird die Kultur übergeben, deren Formatierungsregeln verwendet werden sollen. Das Verhalten bei der Rückgabe der Zeichenfolgendarstellung eines Datums richtet sich danach, ob der Zielkalender von der Kultur unterstützt wird, deren Formatierungsregeln verwendet werden sollen.  
   
- Unabhängig von dem Kalender, der in diesem Beispiel zum Erstellen eines <xref:System.DateTime>- oder <xref:System.DateTimeOffset>-Werts verwendet wird, wird dieser Wert üblicherweise als gregorianisches Datum ausgedrückt. Dies liegt daran, dass die Typen <xref:System.DateTime> und <xref:System.DateTimeOffset> keine Kalenderinformationen beibehalten. Intern werden sie als Anzahl von Zeiteinheiten (Ticks) dargestellt, die seit Mitternacht des 1. Januar 0001 verstrichen sind. Die Interpretation dieser Zahl hängt vom Kalender ab. In den meisten Kulturen ist der Gregorianische Kalender der Standardkalender.  
-  
-## <a name="see-also"></a>Weitere Informationen
-
-- [Durchführen von Formatierungsvorgängen](../../../docs/standard/base-types/performing-formatting-operations.md)
+ Unabhängig von dem Kalender, der in diesem Beispiel zum Erstellen eines <xref:System.DateTime>- oder <xref:System.DateTimeOffset>-Werts verwendet wird, wird dieser Wert üblicherweise als gregorianisches Datum ausgedrückt. Dies liegt daran, dass die Typen <xref:System.DateTime> und <xref:System.DateTimeOffset> keine Kalenderinformationen beibehalten. Intern werden sie als Anzahl von Zeiteinheiten (Ticks) dargestellt, die seit Mitternacht des 1. Januar 0001 verstrichen sind. Die Interpretation dieser Zahl hängt vom Kalender ab. In den meisten Kulturen ist der Gregorianische Kalender der Standardkalender.

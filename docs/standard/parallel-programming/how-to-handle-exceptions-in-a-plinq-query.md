@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - PLINQ queries, how to handle exceptions
 ms.assetid: 8d56ff9b-a571-4d31-b41f-80c0b51b70a5
-ms.openlocfilehash: 3645f5dc470ef53710aa7f4c78c60431fb27ecfa
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5ccddfb01d6b173900dfffc465292c7812626ddc
+ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73123093"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80587986"
 ---
 # <a name="how-to-handle-exceptions-in-a-plinq-query"></a>Gewusst wie: Behandeln von Ausnahmen in einer PLINQ-Abfrage
 
@@ -53,4 +53,4 @@ Fangen Sie Ausnahmen nur ab, wenn Sie wissen, wie sie behandelt werden müssen, 
 ## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Linq.ParallelEnumerable>
-- [Parallel LINQ (PLINQ) (Paralleles LINQ (PLINQ))](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)
+- [Parallel LINQ (PLINQ) (Paralleles LINQ (PLINQ))](../../../docs/standard/parallel-programming/introduction-to-plinq.md)

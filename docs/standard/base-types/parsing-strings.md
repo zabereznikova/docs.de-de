@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Parse method
 - parsing strings
 ms.assetid: 5e758b41-db93-456b-8999-99b7304b090d
-ms.openlocfilehash: e4bf14981e538d95aebac3b0f36d38b61747989f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 717022e5d2e292c1624e6155bd7571e4daa997b9
+ms.sourcegitcommit: 79b0dd8bfc63f33a02137121dd23475887ecefda
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73084316"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80523800"
 ---
 # <a name="parsing-strings-in-net"></a>Analysieren von Zeichenfolgen in .NET
 Bei einem Analysevorgang wird eine Zeichenfolge, die einen .NET-Basistyp darstellt, in diesen Basistyp konvertiert. Beispielsweise wird ein Analysevorgang zum Konvertieren einer Zeichenfolge in eine Gleitkommazahl oder einen Wert für Datum und Uhrzeit verwendet. Die beim Ausführen eines Analysevorgangs am häufigsten verwendete Methode ist die `Parse`-Methode. Da die Analyse der umgekehrte Vorgang zur Formatierung (Konvertierung eines Basistyps in seine Zeichenfolgendarstellung) ist, gelten viele derselben Regeln und Konventionen. Ebenso, wie bei der Formatierung ein Objekt verwendet wird, das die <xref:System.IFormatProvider>-Schnittstelle zur Bereitstellung kulturabhängiger Formatierungsinformationen implementiert, wird auch bei der Analyse ein Objekt verwendet, das die <xref:System.IFormatProvider>-Schnittstelle zur Interpretation einer Zeichenfolgendarstellung implementiert. Weitere Informationen finden Sie unter [Formatieren von Typen in .NET](../../../docs/standard/base-types/formatting-types.md).  
@@ -34,7 +34,4 @@ Bei einem Analysevorgang wird eine Zeichenfolge, die einen .NET-Basistyp darstel
  Beschreibt grundlegende Formatierungsbegriffe wie „Formatbezeichner“ und „Formatanbieter“.  
   
  [Typkonvertierung in .NET](../../../docs/standard/base-types/type-conversion.md)  
- Beschreibt, wie Typen konvertiert werden.  
-  
- [Basistypen](../../../docs/standard/base-types/index.md)  
- Beschreibt allgemeine Vorgänge, die für .NET-Basistypen ausgeführt werden können.
+ Beschreibt, wie Typen konvertiert werden.

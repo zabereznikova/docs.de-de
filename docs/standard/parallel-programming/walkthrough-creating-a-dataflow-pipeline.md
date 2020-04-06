@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Task Parallel Library, dataflows
 - TPL dataflow library, creating dataflow pipeline
 ms.assetid: 69308f82-aa22-4ac5-833d-e748533b58e8
-ms.openlocfilehash: 284be7789b6411055a6421fd07cc1b0605f6ea0c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 339365381b1fa2c777cead3c75bfe783f7af800e
+ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73139874"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80588286"
 ---
 # <a name="walkthrough-creating-a-dataflow-pipeline"></a>Exemplarische Vorgehensweise: Erstellen einer Datenflusspipeline
 Obwohl Sie die Methoden <xref:System.Threading.Tasks.Dataflow.DataflowBlock.Receive%2A?displayProperty=nameWithType>, <xref:System.Threading.Tasks.Dataflow.DataflowBlock.ReceiveAsync%2A?displayProperty=nameWithType> und <xref:System.Threading.Tasks.Dataflow.DataflowBlock.TryReceive%2A?displayProperty=nameWithType> verwenden können, um Nachrichten von Quellblöcken zu empfangen, können Sie auch Nachrichtenblöcke verbinden, um eine *Datenflusspipeline* zu bilden. Eine Datenpipeline besteht aus einer Reihe von Komponenten, oder *Datenflussblöcken*, von denen jede eine bestimmte Aufgabe ausführt, die zu einem größeren Ziel beiträgt. Jeder Datenflussblock in einer Datenflusspipeline erledigt eine Aufgabe, wenn er eine Meldung von einem anderen Datenflussblock empfangen hat. Eine Analogie hierzu ist eine Fertigungsstraße eines Fahrzeugherstellers. Jedes Fahrzeug durchläuft die Fertigungsstraße: In einer Station wird das Fahrgestell montiert, in der nächsten wird der Motor eingebaut usw. Da eine Fertigungsstraße ermöglicht, dass mehrere Fahrzeuge gleichzeitig montiert werden, bietet sie einen besseren Durchsatz als eine Einzelmontage eines vollständigen Fahrzeugs.
@@ -104,7 +104,7 @@ Obwohl Sie die Methoden <xref:System.Threading.Tasks.Dataflow.DataflowBlock.Rece
 ## <a name="next-steps"></a>Nächste Schritte  
  In diesem Beispiel wird eine zu verarbeitende URL durch die Datenflusspipeline gesendet. Wenn Sie mehrere Eingabewerte durch eine Pipeline senden, können Sie eine Form von Parallelität in Ihrer Anwendung implementieren, die der Art und Weise ähnelt, wie Teile durch eine Automobilfabrik bewegt werden. Wenn das erste Element der Pipeline sein Ergebnis an das zweite Element gesendet hat, kann es parallel ein weiteres Objekt verarbeiten, während das zweite Element das erste Ergebnis verarbeitet.  
   
- Die Parallelität, die durch ein Verwenden von Datenflusspipelines erreicht wird, wird als *grobmaschige Parallelität* bezeichnet, weil sie in der Regel aus weniger, dafür aber größeren Aufgaben besteht. Sie können auch eine *feinmaschigere Parallelität* von kleineren Aufgaben mit kurzer Ausführungszeit in einer Datenflusspipeline verwenden. In diesem Beispiel wird für das `findReversedWords`-Element der Pipeline [PLINQ](parallel-linq-plinq.md) verwendet, um mehrere Elemente in der Arbeitsliste parallel zu verarbeiten. Die Verwendung von feinmaschiger Parallelität in einer grobmaschigen Pipeline kann den Gesamtdurchsatz verbessern.  
+ Die Parallelität, die durch ein Verwenden von Datenflusspipelines erreicht wird, wird als *grobmaschige Parallelität* bezeichnet, weil sie in der Regel aus weniger, dafür aber größeren Aufgaben besteht. Sie können auch eine *feinmaschigere Parallelität* von kleineren Aufgaben mit kurzer Ausführungszeit in einer Datenflusspipeline verwenden. In diesem Beispiel wird für das `findReversedWords`-Element der Pipeline [PLINQ](introduction-to-plinq.md) verwendet, um mehrere Elemente in der Arbeitsliste parallel zu verarbeiten. Die Verwendung von feinmaschiger Parallelität in einer grobmaschigen Pipeline kann den Gesamtdurchsatz verbessern.  
   
  Sie können auch einen Quelldatenflussblock mit mehreren Zielblöcken verbinden, um ein *Datenflussnetzwerk* zu erstellen. Die überladene Version der <xref:System.Threading.Tasks.Dataflow.DataflowBlock.LinkTo%2A>-Methode übernimmt ein <xref:System.Predicate%601>-Objekt, das definiert, ob der Zielblock jede Nachricht anhand dessen Wert akzeptiert. Die meisten Datenflussblocktypen, die als Quellen fungieren, senden Nachrichten an alle verbundenen Zielblöcke in der Reihenfolge, in der sie verbunden wurden, bis einer der Blöcke die jeweilige Nachricht akzeptiert hat. Durch Verwenden dieser Filtermechanismus können Sie Systeme von verbundenen Datenflussblöcken erstellen, mit denen bestimmte Daten durch einen Pfad und andere Daten durch einen anderen Pfad geleitet werden. Ein Beispiel, in dem Filterung zum Erstellen eines Datenflussnetzwerks verwendet wird, finden Sie unter [Exemplarische Vorgehensweise: Datenfluss in einer Windows Forms-Anwendung verwenden](../../../docs/standard/parallel-programming/walkthrough-using-dataflow-in-a-windows-forms-application.md).  
   

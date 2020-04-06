@@ -6,12 +6,12 @@ ms.author: luquinta
 ms.date: 11/21/2019
 ms.topic: tutorial
 ms.custom: mvc, mlnet-tooling
-ms.openlocfilehash: c027fe57f571c791784b0bdb7ad9503fc49daa1c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 750738f8e3c65363e9996667feeccd1b84391f9f
+ms.sourcegitcommit: 2ff49dcf9ddf107d139b4055534681052febad62
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79187694"
+ms.lasthandoff: 03/31/2020
+ms.locfileid: "80438247"
 ---
 # <a name="tutorial-predict-prices-using-regression-with-model-builder"></a>Tutorial: Vorhersagen von Preisen per Regression mit dem Modell-Generator
 
@@ -177,7 +177,7 @@ In diesem Tutorial haben Sie gelernt, wie die folgenden Aufgaben ausgeführt wer
 
 Weitere Informationen zu den in diesem Tutorial erwähnten Themen finden Sie in den folgenden Ressourcen:
 
-- [Szenarien für den Modellgenerator](../automate-training-with-model-builder.md#scenarios)
+- [Szenarien für den Modellgenerator](../automate-training-with-model-builder.md#scenario)
 - [Regression](../resources/glossary.md#regression)
 - [Metriken für Regression](../resources/metrics.md#evaluation-metrics-for-regression-and-recommendation)
 - [Dataset „NYC TLC Taxi Trip“](https://www1.nyc.gov/site/tlc/about/tlc-trip-record-data.page)

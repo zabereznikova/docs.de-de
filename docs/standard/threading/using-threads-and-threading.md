@@ -6,12 +6,12 @@ helpviewer_keywords:
 - threading [.NET Framework], about threading
 - managed threading
 ms.assetid: 9b5ec2cd-121b-4d49-b075-222cf26f2344
-ms.openlocfilehash: 1d487edff2cdc2e63f81963bfaa1f68a06e5b36e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 14159ff9a6ca39108aec14b0ad46004e95fa3cf2
+ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75936845"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80588429"
 ---
 # <a name="using-threads-and-threading"></a>Verwenden von Threads und Threading
 
@@ -20,7 +20,7 @@ Sie können mit .NET Anwendungen schreiben, die mehrere Vorgänge zur gleichen Z
 Clientanwendungen, die Multithreading verwenden, reagieren besser auf Benutzereingaben, weil die Benutzeroberfläche aktiv bleibt, da prozessorintensive Aufgaben in separaten Threads ausgeführt werden. Multithreading ist auch nützlich, wenn Sie skalierbare Aufgaben erstellen, da Sie Threads bei steigender Arbeitsauslastung hinzufügen können.
 
 > [!NOTE]
-> Wenn Sie mehr Kontrolle über das Verhalten von Threads der Anwendung benötigen, können Sie die Threads selbst verwalten. Ab .NET Framework 4 wird die Multithreadprogrammierung durch die Klassen <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType> und <xref:System.Threading.Tasks.Task?displayProperty=nameWithType>, [Parallel LINQ (PLINQ)](../parallel-programming/parallel-linq-plinq.md), neue parallele Sammlungsklassen im <xref:System.Collections.Concurrent?displayProperty=nameWithType>-Namespace und ein neues Programmiermodell, das auf dem Konzept von Tasks anstatt von Threads basiert, erheblich vereinfacht. Weitere Informationen finden Sie in den Artikeln zur [parallelen Programmierung](../parallel-programming/index.md) und zu [Task Parallel Library (TPL)](../parallel-programming/task-parallel-library-tpl.md).
+> Wenn Sie mehr Kontrolle über das Verhalten von Threads der Anwendung benötigen, können Sie die Threads selbst verwalten. Ab .NET Framework 4 wird die Multithreadprogrammierung durch die Klassen <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType> und <xref:System.Threading.Tasks.Task?displayProperty=nameWithType>, [Parallel LINQ (PLINQ)](../parallel-programming/introduction-to-plinq.md), neue parallele Sammlungsklassen im <xref:System.Collections.Concurrent?displayProperty=nameWithType>-Namespace und ein neues Programmiermodell, das auf dem Konzept von Tasks anstatt von Threads basiert, erheblich vereinfacht. Weitere Informationen finden Sie in den Artikeln zur [parallelen Programmierung](../parallel-programming/index.md) und zu [Task Parallel Library (TPL)](../parallel-programming/task-parallel-library-tpl.md).
 
 ## <a name="how-to-create-and-start-a-new-thread"></a>Vorgehensweise: Erstellen und Starten eines neuen Threads
 

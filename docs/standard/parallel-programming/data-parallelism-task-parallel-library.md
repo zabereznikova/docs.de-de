@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - parallelism, data
 ms.assetid: 3f05f33f-f1da-4b16-81c2-9ceff1bef449
-ms.openlocfilehash: 72696a41cd3b71f47fdcf43e4ece70ebeb7d34d1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f0910ae928e94b487df5a3dfd456ee9d7c0fb7df
+ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73123158"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80587596"
 ---
 # <a name="data-parallelism-task-parallel-library"></a>Datenparallelität (Task Parallel Library)
 *Datenparallelismus* verweist auf Szenarios, in denen der gleiche Vorgang gleichzeitig (d.h. parallel) für Elemente in einer Quellauflistung oder einem Array ausgeführt wird. In parallelen Datenvorgängen wird die Quellauflistung partitioniert, sodass mehrere Threads gleichzeitig auf verschiedene Segmente angewendet werden können.  
@@ -35,7 +35,7 @@ ms.locfileid: "73123158"
   
  Weitere Informationen finden Sie unter [Patterns for Parallel Programming: Understanding and Applying Parallel Patterns with the .NET Framework 4 (Muster für die parallele Programmierung: Verstehen und Anwenden von parallelen Mustern mit .NET Framework 4)](https://www.microsoft.com/download/details.aspx?id=19222).  
   
- Datenparallelismus mit deklarativer oder abfrageähnlicher Syntax wird von PLINQ unterstützt. Weitere Informationen finden Sie unter [Parallel LINQ (PLINQ) Paralleles LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md).  
+ Datenparallelismus mit deklarativer oder abfrageähnlicher Syntax wird von PLINQ unterstützt. Weitere Informationen finden Sie unter [Parallel LINQ (PLINQ) Paralleles LINQ (PLINQ)](../../../docs/standard/parallel-programming/introduction-to-plinq.md).  
   
 ## <a name="related-topics"></a>Verwandte Themen  
   
