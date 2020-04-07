@@ -1,16 +1,16 @@
 ---
-title: Relationale vs. NoSQL-Daten
+title: Vergleich der relationalen und NoSQL-Daten
 description: Erfahren Sie mehr über relationale und NoSQL-Daten in Cloud-nativen Anwendungen
 author: robvet
 ms.date: 01/22/2020
-ms.openlocfilehash: 04693e30ba3848f1e51f1c69a75be5f18ead4cf1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3fb3dcc3a87e278c05f3e15d261245f4d61453d1
+ms.sourcegitcommit: f87ad41b8e62622da126aa928f7640108c4eff98
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79141418"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80805809"
 ---
-# <a name="relational-vs-nosql-data"></a>Relationale vs. NoSQL-Daten
+# <a name="relational-vs-nosql-data"></a>Vergleich der relationalen und NoSQL-Daten
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
@@ -284,5 +284,5 @@ Eine der zeitaufwändigeren Aufgaben ist das Migrieren von Daten von einer Daten
 Der Dienst bietet Empfehlungen, die Sie durch die Änderungen führen, die zum Ausführen einer Migration erforderlich sind, sowohl klein als auch groß.
 
 >[!div class="step-by-step"]
->[VorherigeS](Database-per-microservice.md)
+>[Zurück](database-per-microservice.md)
 >[Weiter](azure-caching.md)

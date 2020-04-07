@@ -3,12 +3,12 @@ title: Service Mesh-Kommunikationsinfrastruktur
 description: Erfahren Sie, wie Service-Mesh-Technologien die Cloud-native Microservice-Kommunikation optimieren
 author: robvet
 ms.date: 03/03/2020
-ms.openlocfilehash: 6b177ef33b804ec35f3acb919539a97683e5a487
-ms.sourcegitcommit: 79b0dd8bfc63f33a02137121dd23475887ecefda
+ms.openlocfilehash: 8bb57e990dbf1baf8c246fe4aacfbb2904a251e6
+ms.sourcegitcommit: f87ad41b8e62622da126aa928f7640108c4eff98
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80523521"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80805750"
 ---
 # <a name="service-mesh-communication-infrastructure"></a>Service Mesh-Kommunikationsinfrastruktur
 
@@ -73,5 +73,5 @@ Als nächstes gehen wir zu verteilten Daten in Cloud-nativen Systemen und den Da
 - [Erstellen von gRPC-Diensten mit .NET-Video](https://channel9.msdn.com/Shows/The-Cloud-Native-Show/Building-Microservices-with-gRPC-and-NET)
 
 >[!div class="step-by-step"]
->[VorherigeS](grpc.md)
->[Weiter](Database-per-microservice.md)
+>[Zurück](grpc.md)
+>[Weiter](database-per-microservice.md)

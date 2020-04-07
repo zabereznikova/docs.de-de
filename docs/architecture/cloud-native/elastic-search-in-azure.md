@@ -2,13 +2,13 @@
 title: Elasticsearch in Cloud-nativen Anwendungen
 description: Erfahren Sie mehr über das Hinzufügen von Elastic Search-Funktionen zu cloudnativen Anwendungen.
 author: robvet
-ms.date: 01/22/2020
-ms.openlocfilehash: 1bce255b6315006b11e0b6ac77040300f67ed984
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.date: 03/02/2020
+ms.openlocfilehash: da6b9402cf266f5a298b05cf837805b2377bc75a
+ms.sourcegitcommit: f87ad41b8e62622da126aa928f7640108c4eff98
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79141288"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80805563"
 ---
 # <a name="elasticsearch-in-a-cloud-native-app"></a>Elasticsearch in einer Cloud-nativen App
 
@@ -44,11 +44,9 @@ In diesem Kapitel wurde ein detaillierter Blick auf Daten in Cloud-nativen Syste
 
 - [Event Sourcing-Muster](https://docs.microsoft.com/azure/architecture/patterns/event-sourcing)
 
-- [RDBMSs vs. NoSQL-Datenbanken: Übersicht](https://maxivak.com/rdbms-vs-nosql-databases/)
-
 - [Warum ist RDBMS Partition Tolerant in CAP Theorem nicht verfügbar und warum ist es verfügbar?](https://stackoverflow.com/questions/36404765/why-isnt-rdbms-partition-tolerant-in-cap-theorem-and-why-is-it-available)
 
-- [Materialisierte Sicht](https://docs.microsoft.com/azure/architecture/patterns/materialized-view)
+- [Materialisierte Ansicht](https://docs.microsoft.com/azure/architecture/patterns/materialized-view)
 
 - [Alles, was Sie wirklich über Open-Source-Datenbanken wissen müssen](https://www.ibm.com/blogs/systems/all-you-really-need-to-know-about-open-source-databases/)
 
@@ -83,5 +81,5 @@ In diesem Kapitel wurde ein detaillierter Blick auf Daten in Cloud-nativen Syste
 - [Einführung in Apache Lucene](https://www.baeldung.com/lucene)
 
 >[!div class="step-by-step"]
->[VorherigeS](azure-caching.md)
+>[Zurück](azure-caching.md)
 >[Weiter](resiliency.md) <!-- Next Chapter -->

@@ -9,46 +9,46 @@ helpviewer_keywords:
 - templates [WPF], ToggleButton
 - parts [WPF], ToggleButton
 ms.assetid: 54f23f30-4bcb-4f09-8ce4-376a13a255a1
-ms.openlocfilehash: a4c449a561017659db7f54fd3cdb8964742650de
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: e055dcbd557f9b90eb2fe99ad15a05b6f229fd28
+ms.sourcegitcommit: f87ad41b8e62622da126aa928f7640108c4eff98
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74283672"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80805914"
 ---
 # <a name="togglebutton-styles-and-templates"></a>ToggleButton-Stile und -Vorlagen
 
-In diesem Thema werden die Stile und Vorlagen für das <xref:System.Windows.Controls.Primitives.ToggleButton>-Steuerelement beschrieben. Sie können die Standard <xref:System.Windows.Controls.ControlTemplate> ändern, um dem Steuerelement eine eindeutige Darstellung zu verschaffen. Weitere Informationen finden Sie unter [Erstellen einer Vorlage für ein-Steuer](../../../desktop-wpf/themes/how-to-create-apply-template.md)Element.
+In diesem Thema werden die <xref:System.Windows.Controls.Primitives.ToggleButton> Stile und Vorlagen für das Steuerelement beschrieben. Sie können die <xref:System.Windows.Controls.ControlTemplate> Standardeinstellung ändern, um dem Steuerelement ein eindeutiges Erscheinungsbild zu verleihen. Weitere Informationen finden Sie unter [Erstellen einer Vorlage für ein Steuerelement](../../../desktop-wpf/themes/how-to-create-apply-template.md).
 
-## <a name="togglebutton-parts"></a>Teile
+## <a name="togglebutton-parts"></a>ToggleButton-Teile
 
-Das <xref:System.Windows.Controls.Primitives.ToggleButton>-Steuerelement verfügt über keine benannten Teile.
+Das <xref:System.Windows.Controls.Primitives.ToggleButton> Steuerelement enthält keine benannten Teile.
 
-## <a name="togglebutton-states"></a>Objektstatus
+## <a name="togglebutton-states"></a>ToggleButton-Zustände
 
-In der folgenden Tabelle werden die visuellen Zustände für das <xref:System.Windows.Controls.Primitives.ToggleButton>-Steuerelement aufgelistet.
+In der folgenden Tabelle sind <xref:System.Windows.Controls.Primitives.ToggleButton> die visuellen Zustände für das Steuerelement aufgeführt.
 
-|VisualState-Name|VisualStateGroup-Name|Beschreibung|
+|VisualState-Name|VisualStateGroup-Name|BESCHREIBUNG|
 |-|-|-|
 |Normal|CommonStates|Der Standardzustand|
 |MouseOver|CommonStates|Der Mauszeiger ist über dem Steuerelement positioniert.|
 |Gedrückt|CommonStates|Das Steuerelement wird gedrückt.|
-|Deaktiviert|CommonStates|Das Steuerelement ist deaktiviert.|
+|Disabled|CommonStates|Das Steuerelement ist deaktiviert.|
 |Mit Fokus|FocusStates|Der Fokus liegt auf dem Steuerelement.|
 |Ohne Fokus|FocusStates|Der Fokus liegt nicht auf dem Steuerelement.|
-|Aktiviert|CheckStates|<xref:System.Windows.Controls.Primitives.ToggleButton.IsChecked%2A> ist `true`.|
-|Benem|CheckStates|<xref:System.Windows.Controls.Primitives.ToggleButton.IsChecked%2A> ist `false`.|
+|Aktiviert|CheckStates|<xref:System.Windows.Controls.Primitives.ToggleButton.IsChecked%2A> ist `true`|
+|Deaktiviert|CheckStates|<xref:System.Windows.Controls.Primitives.ToggleButton.IsChecked%2A> ist `false`|
 |Unbestimmten|CheckStates|<xref:System.Windows.Controls.Primitives.ToggleButton.IsThreeState%2A> ist `true`, und <xref:System.Windows.Controls.Primitives.ToggleButton.IsChecked%2A> ist `null`.|
-|Gültig|ValidationStates|Das-Steuerelement verwendet die <xref:System.Windows.Controls.Validation>-Klasse, und die <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> angefügte-Eigenschaft ist `false`.|
-|InvalidFocused|ValidationStates|Die <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> angefügte Eigenschaft ist `true` hat, dass das Steuerelement den Fokus besitzt.|
-|InvalidUnfocused|ValidationStates|Die <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> angefügte Eigenschaft ist `true`, wenn das Steuerelement keinen Fokus hat.|
+|Gültig|ValidationStates|Das Steuerelement <xref:System.Windows.Controls.Validation> verwendet die <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> Klasse, `false`und die angefügte Eigenschaft ist .|
+|InvalidFocused|ValidationStates|Die <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> angefügte `true` Eigenschaft ist und das Steuerelement hat den Fokus.|
+|InvalidUnfocused|ValidationStates|Die <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> angefügte `true` Eigenschaft ist und das Steuerelement hat keinen Fokus.|
 
 > [!NOTE]
-> Wenn der Unbestimmtheit des visuellen Zustands nicht in der Steuerelement Vorlage vorhanden ist, wird der nicht überprüfte visuelle Zustand als visueller Standardzustand verwendet.
+> Wenn der visuelle Status Unbestimmt in der Steuerelementvorlage nicht vorhanden ist, wird der visuelle Status Ungeprüft als visueller Standardstatus verwendet.
 
-## <a name="togglebutton-controltemplate-example"></a>Beispiel für eine Beispiel-ControlTemplate
+## <a name="togglebutton-controltemplate-example"></a>ToggleButton ControlTemplate Beispiel
 
-Im folgenden Beispiel wird gezeigt, wie ein <xref:System.Windows.Controls.ControlTemplate> für das <xref:System.Windows.Controls.Primitives.ToggleButton>-Steuerelement definiert wird.
+Das folgende Beispiel zeigt, <xref:System.Windows.Controls.ControlTemplate> wie <xref:System.Windows.Controls.Primitives.ToggleButton> sie eine für das Steuerelement definieren.
 
 [!code-xaml[ControlTemplateExamples#ToggleButton](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/combobox.xaml#togglebutton)]
 
@@ -58,7 +58,7 @@ Im vorhergehenden Beispiel wird mindestens eine der folgenden Ressourcen verwend
 
 Das vollständige Beispiel finden Sie unter [Beispiel zum Formatieren mit ControlTemplates](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating).
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Windows.FrameworkElement.Style%2A>
 - <xref:System.Windows.Controls.ControlTemplate>
