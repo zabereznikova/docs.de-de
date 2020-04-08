@@ -44,10 +44,8 @@
         - name: Service Mesh-Kommunikationsinfrastruktur
           href: service-mesh-communication-infrastructure.md
     - name: Verteilte Daten
-      href: null
+      href: database-per-microservice.md
       items:
-        - name: Database-per-Microservice
-          href: database-per-microservice.md
         - name: Vergleich der relationalen und NoSQL-Daten
           href: relational-vs-nosql-data.md
         - name: Zwischenspeichern einer cloudnativen Anwendung
