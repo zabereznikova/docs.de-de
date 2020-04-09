@@ -3,12 +3,12 @@ title: Netzwerkkonfigurationseinstellungen
 description: Erfahren Sie mehr über Laufzeiteinstellungen, die das Netzwerk für .NET Core-Apps konfigurieren.
 ms.date: 11/27/2019
 ms.topic: reference
-ms.openlocfilehash: 622c4afbd36d3d9004edbd9219145fa9e5d326ae
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f5ea47f0444a911dc2347a66817cabf585fd8e70
+ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "74998834"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80635429"
 ---
 # <a name="run-time-configuration-options-for-networking"></a>Laufzeitkonfigurationsoptionen für Netzwerke
 
@@ -19,11 +19,11 @@ ms.locfileid: "74998834"
 - Eingeführt in .NET Core 3.0
 
 | | Einstellungsname | Werte |
-| - | - |
+| - | - | - |
 | **runtimeconfig.json** | `System.Net.Http.SocketsHttpHandler.Http2Support` | `false` – deaktiviert<br/>`true` – aktiviert |
 | **Umgebungsvariable** | `DOTNET_SYSTEM_NET_HTTP_SOCKETSHTTPHANDLER_HTTP2SUPPORT` | `0` – deaktiviert<br/>`1` – aktiviert |
 
-## <a name="sockets-http-handler"></a>Socket-HTTP-Handler
+## <a name="usesocketshttphandler"></a>UseSocketsHttpHandler
 
 - Konfiguriert, ob allgemeine Netzwerk-APIs, wie z. B. <xref:System.Net.Http.HttpClient>, <xref:System.Net.Http.SocketsHttpHandler?displayProperty=nameWithType> oder die Implementierung von <xref:System.Net.Http.HttpClientHandler?displayProperty=nameWithType> verwenden, die auf [libcurl](https://curl.haxx.se/libcurl/) basiert
 - Standard: Verwenden von <xref:System.Net.Http.SocketsHttpHandler?displayProperty=nameWithType> (`true`)
@@ -33,3 +33,6 @@ ms.locfileid: "74998834"
 | - | - | - |
 | **runtimeconfig.json** | `System.Net.Http.UseSocketsHttpHandler` | `true` – aktiviert die Verwendung von <xref:System.Net.Http.SocketsHttpHandler><br/>`false` – aktiviert die Verwendung von <xref:System.Net.Http.HttpClientHandler> |
 | **Umgebungsvariable** | `DOTNET_SYSTEM_NET_HTTP_USESOCKETSHTTPHANDLER` | `1` – aktiviert die Verwendung von <xref:System.Net.Http.SocketsHttpHandler><br/>`0` – aktiviert die Verwendung von <xref:System.Net.Http.HttpClientHandler> |
+
+> [!NOTE]
+> Ab .NET 5 ist die Einstellung `System.Net.Http.UseSocketsHttpHandler` nicht mehr verfügbar.

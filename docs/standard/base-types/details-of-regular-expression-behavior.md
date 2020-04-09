@@ -9,12 +9,12 @@ helpviewer_keywords:
 - regular expressions, behavior
 - .NET Framework regular expressions, behavior
 ms.assetid: 0ee1a6b8-caac-41d2-917f-d35570021b10
-ms.openlocfilehash: 504e315dda4e76f56a88d97149b1515b6743668b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0273d16028315452e35f83086dbc134d6fcb66c6
+ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "77124350"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80635991"
 ---
 # <a name="details-of-regular-expression-behavior"></a>Einzelheiten zum Verhalten regulärer Ausdrücke
 
@@ -71,7 +71,7 @@ Die .NET Framework-Engine für reguläre Ausdrücke ist eine zurückverfolgende 
 
      Weitere Informationen zu positiven Lookaheadassertionen finden Sie unter [Gruppierungskonstrukte](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).
 
-- Negatives Lookahead: `(?!`*Teilausdruck*`)`. Diese Funktion ermöglicht es, nur dann eine Übereinstimmung mit einem Ausdruck zu erhalten, wenn ein Teilausdruck kein Ergebnis liefert. Dies ist beim Bereinigen einer Suche besonders effektiv, da es oftmals einfacher ist, einen Ausdruck für einen auszuschließenden Fall anzugeben als einen Ausdruck für Fälle, die eingeschlossen werden sollen. Beispielsweise ist es schwierig, einen Ausdruck für Wörter zu schreiben, die nicht mit „un“ beginnen. Im folgenden Beispiel erfolgt der Ausschluss mithilfe eines negativen Lookaheads.
+- Negatives Lookahead: `(?!`*Teilausdruck*`)`. Diese Funktion ermöglicht es, nur dann eine Übereinstimmung mit einem Ausdruck zu erhalten, wenn ein Teilausdruck kein Ergebnis liefert. Dies ist beim Bereinigen einer Suche effektiv, da es oftmals einfacher ist, einen Ausdruck für einen auszuschließenden Fall anzugeben als einen Ausdruck für Fälle, die eingeschlossen werden sollen. Beispielsweise ist es schwierig, einen Ausdruck für Wörter zu schreiben, die nicht mit „un“ beginnen. Im folgenden Beispiel erfolgt der Ausschluss mithilfe eines negativen Lookaheads.
 
      [!code-csharp[Conceptual.RegularExpressions.Design#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.design/cs/lookahead2.cs#3)]
      [!code-vb[Conceptual.RegularExpressions.Design#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.design/vb/lookahead2.vb#3)]
@@ -151,7 +151,6 @@ Die .NET Framework-Engine für reguläre Ausdrücke ist eine zurückverfolgende 
 |[Threadsicherheit](../../../docs/standard/base-types/thread-safety-in-regular-expressions.md)|Informationen zur Threadsicherheit bei regulären Ausdrücken und Erläuterungen zur Notwendigkeit eines synchronisierten Zugriffs auf Objekte in regulären Ausdrücken.|
 |[Reguläre Ausdrücke von .NET Framework](../../../docs/standard/base-types/regular-expressions.md)|Übersicht über die programmiersprachenbezogenen Aspekte von regulären Ausdrücken.|
 |[Das Objektmodell für reguläre Ausdrücke](../../../docs/standard/base-types/the-regular-expression-object-model.md)|Informationen und Codebeispiele, die die Verwendung von Klassen für reguläre Ausdrücke veranschaulichen.|
-|[Beispiele für reguläre Ausdrücke](../../../docs/standard/base-types/regular-expression-examples.md)|Codebeispiele, die die Verwendung regulärer Ausdrücke in üblichen Anwendungen veranschaulichen.|
 |[Sprachelemente für reguläre Ausdrücke – Kurzübersicht](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)|Informationen zu Zeichensatz, Operatoren und Konstrukten, mit denen Sie reguläre Ausdrücke definieren können.|
 
 ## <a name="reference"></a>Referenz

@@ -16,14 +16,15 @@ helpviewer_keywords:
 - namespaces [.NET Framework], types
 - types, about types
 ms.assetid: 53c57c96-83e1-4ee3-9543-9ac832671a89
-ms.openlocfilehash: c574719da9b89b468b92b042e1f2b5b10fbe3c0d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f079613f790121c000a312132e7135121ca721a6
+ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79398520"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80635908"
 ---
 # <a name="common-type-system"></a>Allgemeines Typsystem
+
 Das allgemeine Typsystem legt fest, wie Typen in der Common Language Runtime deklariert, verwendet und verwaltet werden. Außerdem ist das System ein wichtiger Bestandteil der Laufzeitunterstützung für die sprachübergreifende Integration. Das allgemeine Typsystem hat die folgenden Funktionen:  
   
 - Aufbau eines Frameworks, das die sprachübergreifende Integration, Typsicherheit sowie eine äußerst leistungsfähige Codeausführung ermöglicht.  
@@ -32,20 +33,10 @@ Das allgemeine Typsystem legt fest, wie Typen in der Common Language Runtime dek
   
 - Definition von Regeln, die von Programmiersprachen eingehalten werden müssen und sicherstellen, dass in verschiedenen Sprachen programmierte Objekte miteinander interagieren können.  
   
-- Bereitstellung einer Bibliothek, die die bei der Anwendungsentwicklung verwendeten primitiven Datentypen enthält (z. B. <xref:System.Boolean>, <xref:System.Byte>, <xref:System.Char>, <xref:System.Int32> und <xref:System.UInt64>).  
+- Bereitstellung einer Bibliothek, die die bei der Anwendungsentwicklung verwendeten primitiven Datentypen enthält (z. B. <xref:System.Boolean>, <xref:System.Byte>, <xref:System.Char>, <xref:System.Int32> und <xref:System.UInt64>).
   
- Dieses Thema enthält folgende Abschnitte:  
-  
-- [Typen in .NET](#types_in_the_net_framework)  
-  
-- [Typdefinitionen](#type_definitions)  
-  
-- [Typmember](#type_members)  
-  
-- [Eigenschaften von Typmembern](#characteristics_of_type_members)  
-  
-<a name="types_in_the_net_framework"></a>
-## <a name="types-in-net"></a>Typen in .NET  
+## <a name="types-in-net"></a>Typen in .NET
+
  Alle Typen in .NET sind entweder Werttypen oder Verweistypen.  
   
  Werttypen sind Datentypen, deren Objekte durch den tatsächlichen Wert des Objekts dargestellt werden. Wenn einer Variablen eine Instanz eines Werttyps zugewiesen wird, wird dieser Variablen eine neue Kopie des Werts übergeben.  
@@ -54,18 +45,18 @@ Das allgemeine Typsystem legt fest, wie Typen in der Common Language Runtime dek
   
  Das allgemeine Typsystem in .NET unterstützt die folgenden fünf Typkategorien:  
   
-- [Klassen](#Classes)  
+- [Klassen](#classes)  
   
-- [Strukturen](#Structures)  
+- [Strukturen](#structures)  
   
-- [Enumerationen](#Enumerations)  
+- [Enumerationen](#enumerations)  
   
-- [Schnittstellen](#Interfaces)  
+- [Schnittstellen](#interfaces)  
   
-- [Delegaten](#Delegates)  
+- [Delegaten](#delegates)  
   
-<a name="Classes"></a>
-### <a name="classes"></a>Klassen  
+### <a name="classes"></a>Klassen
+
  Eine Klasse ist ein Referenztyp, der direkt von einer anderen Klasse abgeleitet werden kann und der implizit von <xref:System.Object?displayProperty=nameWithType> abgeleitet ist. Die Klasse definiert die Vorgänge, die ein Objekt (d. h. eine Instanz der Klasse) ausführen kann (Methoden, Ereignisse oder Eigenschaften), sowie die Daten, die das Objekt enthält (Felder). Obwohl eine Klasse im Allgemeinen sowohl Definition als auch Implementierung enthält (im Gegensatz zu Schnittstellen, die z. B. nur eine Definition ohne Implementierung enthalten), kann sie über einen oder mehrere Member ohne Implementierung verfügen.  
   
  In der folgenden Tabelle werden einige Eigenschaften beschrieben, über die eine Klasse verfügen kann. Jede für Laufzeitunterstützung ausgelegte Sprache bietet eine Möglichkeit, eines oder mehrere Merkmale für eine Klasse oder einen Klassenmember festzulegen. In einzelnen Programmiersprachen, die .NET als Ziel haben, sind jedoch möglicherweise nicht alle dieser Eigenschaften verfügbar.  
@@ -79,14 +70,14 @@ Das allgemeine Typsystem legt fest, wie Typen in der Common Language Runtime dek
 |exported oder not exported|Gibt an, ob eine Klasse außerhalb der Assembly, in der sie definiert wurde, sichtbar ist. Dieses Merkmal gilt nur für Klassen der obersten Ebene und nicht für geschachtelte Klassen.|  
   
 > [!NOTE]
-> Eine Klasse kann auch in einer übergeordneten Klasse oder Struktur geschachtelt werden. Auch geschachtelte Klassen verfügen über Membermerkmale. Weitere Informationen finden Sie unter [Geschachtelte Typen](#NestedTypes).  
+> Eine Klasse kann auch in einer übergeordneten Klasse oder Struktur geschachtelt werden. Auch geschachtelte Klassen verfügen über Membermerkmale. Weitere Informationen finden Sie unter [Geschachtelte Typen](#nested-types).  
   
  Klassenmember, die keine Implementierung haben, sind abstrakte Member. Eine Klasse mit einem oder mehreren abstrakten Membern ist selbst abstrakt, und von dieser Klasse können keine Instanzen erstellt werden. Bei einigen Sprachen, die für die Laufzeit konzipiert sind, können Klassen selbst dann als abstrakt gekennzeichnet werden, wenn sie keine abstrakten Member haben. Sie können eine abstrakte Klasse verwenden, um eine gewisse Basisfunktionalität einzuschließen, die von abgeleiteten Klassen ggf. geerbt bzw. überschrieben werden kann. Nicht abstrakte Klassen werden als konkrete Klassen bezeichnet.  
   
  Eine Klasse kann eine beliebige Anzahl von Schnittstellen implementieren, sie kann jedoch nur von einer Basisklasse neben <xref:System.Object?displayProperty=nameWithType> erben. Hiervon erben alle Klassen implizit. Alle Klassen müssen über mindestens einen Konstruktor verfügen, durch den neue Instanzen der Klasse initialisiert werden. Wenn Sie nicht explizit einen Konstruktor definieren, stellen die meisten Compiler automatisch einen parameterlosen Konstruktor bereit.  
   
-<a name="Structures"></a>
-### <a name="structures"></a>Strukturen  
+### <a name="structures"></a>Strukturen
+
  Eine Struktur ist ein Werttyp, der implizit von <xref:System.ValueType?displayProperty=nameWithType> abgeleitet ist. Dies ist wiederum von <xref:System.Object?displayProperty=nameWithType> abgeleitet. Eine Struktur ist hilfreich beim Darstellen von Werten mit geringen Arbeitsspeicheranforderungen und beim Übergeben von Werten über Parameter als Wert an Methoden mit stark typisierten Parametern. In .NET werden alle primitiven Datentypen (<xref:System.Boolean>, <xref:System.Byte>, <xref:System.Char>, <xref:System.DateTime>, <xref:System.Decimal>, <xref:System.Double>, <xref:System.Int16>, <xref:System.Int32>, <xref:System.Int64>, <xref:System.SByte>, <xref:System.Single>, <xref:System.UInt16>, <xref:System.UInt32> und <xref:System.UInt64>) als Strukturen definiert.  
   
  Wie Klassen definieren Strukturen sowohl Daten (die Felder der Struktur) als auch die Vorgänge, die für diese Daten (die Methoden der Struktur) ausgeführt werden können. Dies bedeutet, dass Sie Methoden für Strukturen aufrufen können, einschließlich der für die <xref:System.Object?displayProperty=nameWithType>-Klasse und die <xref:System.ValueType?displayProperty=nameWithType>-Klasse definierten virtuellen Methoden sowie aller Methoden, die für den Werttyp selbst definiert wurden. Anders ausgedrückt können Strukturen Felder, Eigenschaften und Ereignisse sowie statische und nicht statische Methoden aufweisen. Sie können Instanzen von Strukturen erstellen, diese als Parameter übergeben, als lokale Variablen speichern oder im Feld eines anderen Werttyps oder Verweistyps speichern. Strukturen können auch Schnittstellen implementieren.  
@@ -95,8 +86,8 @@ Das allgemeine Typsystem legt fest, wie Typen in der Common Language Runtime dek
   
  Die Common Language Runtime stellt für jeden Werttyp einen entsprechenden geschachtelten Werttyp bereit, der eine Klasse darstellt, die denselben Zustand und dasselbe Verhalten wie der Werttyp aufweist. Eine Instanz eines Werttyps wird beim Übergeben an eine Methode geschachtelt, die einen Parameter vom Typ <xref:System.Object?displayProperty=nameWithType> annimmt. Sie wird mittels Unboxing konvertiert (d. h. aus einer Instanz einer Klasse zurück in die Instanz eines Werttyps konvertiert), wenn ein Steuerelement aus einem Methodenaufruf zurückgegeben wird, in dem ein Werttyp als Parameter als Verweis angenommen wird. In einigen Sprachen muss eine spezielle Syntax verwendet werden, wenn ein mittels Boxing gepackter Typ erforderlich ist; in anderen Sprachen wird der mittels Boxing gepackte Typ bei Bedarf automatisch verwendet. Die Definition eines Werttyps schließt sowohl den mittels Boxing gepackten als auch den mittels Unboxing entpackten Typ ein.  
   
-<a name="Enumerations"></a>
-### <a name="enumerations"></a>Enumerationen  
+### <a name="enumerations"></a>Enumerationen
+
  Eine Enumeration ist ein Werttyp, der direkt von <xref:System.Enum?displayProperty=nameWithType> erbt und alternative Namen für die Werte eines zugrunde liegenden primitiven Typs bereitstellt. Ein Enumerationstyp verfügt über einen Namen, einen zugrunde liegenden Typ, bei dem es sich um einen der integrierten Ganzzahltypen mit oder ohne Vorzeichen handeln muss (z. B. <xref:System.Byte>, <xref:System.Int32> oder <xref:System.UInt64>), und einen Satz von Feldern. Die Felder sind statische Literalfelder, von denen jedes eine Konstante darstellt. Derselbe Wert kann auch mehreren Feldern zugewiesen werden. In dieser Situation muss einer der Werte als primärer Enumerationswert für die Reflektion und Zeichenfolgenkonvertierung gekennzeichnet werden.  
   
  Sie können einer Enumeration einen Wert des zugrunde liegenden Typs zuweisen und umgekehrt (für die Laufzeit ist keine Typumwandlung erforderlich). Sie können eine Instanz einer Enumeration erstellen und die Methoden von <xref:System.Enum?displayProperty=nameWithType> sowie alle für den zugrunde liegenden Enumerationstyp definierten Methoden aufrufen. In einigen Sprachen ist es jedoch möglicherweise nicht zulässig, dass eine Enumeration als Parameter übergeben wird, wenn eine Instanz des zugrunde liegenden Typs erforderlich ist (oder umgekehrt).  
@@ -120,9 +111,9 @@ Das allgemeine Typsystem legt fest, wie Typen in der Common Language Runtime dek
   
  [!code-csharp[Conceptual.Types.Enum#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.types.enum/cs/example.cs#1)]
  [!code-vb[Conceptual.Types.Enum#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.types.enum/vb/example.vb#1)]  
-  
-<a name="Interfaces"></a>
-### <a name="interfaces"></a>Schnittstellen  
+
+### <a name="interfaces"></a>Schnittstellen
+
  Eine Schnittstelle definiert einen Vertrag, der eine Kann-Beziehung oder eine Hat-ein-Beziehung angibt. Schnittstellen werden häufig zur Implementierung einer Funktionalität verwendet, z. B. Vergleichen und Sortieren (die <xref:System.IComparable>- und <xref:System.IComparable%601>-Schnittstellen), Testen auf Gleichheit (die <xref:System.IEquatable%601>-Schnittstelle) oder Auflistung von Elementen in einer Sammlung (die <xref:System.Collections.IEnumerable>- und <xref:System.Collections.Generic.IEnumerable%601>-Schnittstellen). Schnittstellen können Eigenschaften, Methoden und Ereignisse aufweisen, die alle abstrakte Member sind. Während die Schnittstelle die Member und deren Signaturen definiert, definiert der die Schnittstelle implementierende Typ die Funktionalität der Schnittstellenmember. Dies bedeutet, dass jede Klasse oder Struktur, die eine Schnittstelle implementiert, Definitionen für die in der Schnittstelle deklarierten abstrakten Member bereitstellen muss. Für eine Schnittstelle kann es erforderlich sein, dass eine beliebige implementierende Klasse oder Struktur auch mindestens eine andere Schnittstelle implementiert.  
   
  Für Schnittstellen gelten die folgenden Beschränkungen:  
@@ -136,9 +127,9 @@ Das allgemeine Typsystem legt fest, wie Typen in der Common Language Runtime dek
 - Schnittstellen können nur Instanzmember definieren. Sie können keine statischen Member definieren.  
   
  Jede Sprache muss Regeln zur Verfügung stellen, mit deren Hilfe eine Implementierung der Schnittstelle zugeordnet werden kann, die den Member benötigt. Der Grund ist, dass in mehreren Schnittstellen Member mit identischen Signaturen deklariert werden können, die jedoch möglicherweise über separate Implementierungen verfügen.  
-  
-<a name="Delegates"></a>
-### <a name="delegates"></a>Delegaten  
+
+### <a name="delegates"></a>Delegaten
+
  Delegaten sind Verweistypen, die einen ähnlichen Zweck erfüllen wie Funktionszeiger in C++. Sie werden für Ereignishandler und Rückruffunktionen in .NET verwendet. Im Gegensatz zu Funktionszeigern sind Delegaten sicher, überprüfbar und typsicher. Ein Delegattyp kann jede Instanzmethode oder statische Methode darstellen, die über eine kompatible Signatur verfügt.  
   
  Ein Parameter eines Delegaten ist mit dem entsprechenden Parameter einer Methode kompatibel, wenn der Typ des Delegatenparameters restriktiver ist als der Methodenparameter, da so gewährleistet ist, dass ein an den Delegaten übergebenes Argument problemlos an die Methode weitergeleitet werden kann.  
@@ -163,8 +154,8 @@ Das allgemeine Typsystem legt fest, wie Typen in der Common Language Runtime dek
 > [!NOTE]
 > Es ist in C#, C++ und Visual Basic nicht erforderlich, diese Methoden für Ereignishandlerdelegaten einzusetzen, da in diesen Programmiersprachen Syntax zum Hinzufügen und Entfernen von Ereignishandlern bereitsteht.  
 
-<a name="type_definitions"></a>
-## <a name="type-definitions"></a>Typdefinitionen  
+## <a name="type-definitions"></a>Typdefinitionen
+
  Eine Typdefinition enthält Folgendes:  
   
 - Alle für den Typ definierten Attribute.  
@@ -222,24 +213,24 @@ Das allgemeine Typsystem legt fest, wie Typen in der Common Language Runtime dek
   
  Ein Typ kann eine beliebige Anzahl von Schnittstellen implementieren. Zur Implementierung einer Schnittstelle muss ein Typ alle virtuellen Member der betreffenden Schnittstelle implementieren. Eine virtuelle Methode kann durch einen abgeleiteten Typ implementiert und entweder statisch oder dynamisch aufgerufen werden.  
 
-<a name="type_members"></a>
-## <a name="type-members"></a>Typmember  
+## <a name="type-members"></a>Typmember
+
  Die Laufzeit ermöglicht es Ihnen, Member des Typs zu definieren. Hierbei werden das Verhalten und der Zustand eines Typs angegeben. Typmember umfassen Folgendes:  
   
-- [Felder](#Fields)  
+- [Felder](#fields)  
   
-- [Eigenschaften](#Properties)  
+- [Eigenschaften](#properties)  
   
-- [Methoden](#Methods)  
+- [Methoden](#methods)  
   
-- [Konstruktoren](#Constructors)  
+- [Konstruktoren](#constructors)  
   
-- [Ereignisse](#Events)  
+- [Ereignisse](#events)  
   
-- [Geschachtelte Typen](#NestedTypes)  
-  
-<a name="Fields"></a>
-### <a name="fields"></a>Felder  
+- [Geschachtelte Typen](#nested-types)  
+
+### <a name="fields"></a>Felder
+
  Ein Feld beschreibt und enthält Teile des Typzustands. Felder können jedem von der Laufzeit unterstützten Typ entsprechen. In den meisten Fällen sind Felder `private` oder `protected`, damit auf sie nur innerhalb der Klasse oder aus einer abgeleiteten Klasse zugegriffen werden kann. Wenn der Wert eines Felds außerhalb seines Typs geändert werden kann, wird normalerweise ein Eigenschaftensatzaccessor verwendet. Öffentlich verfügbar gemachte Felder sind normalerweise schreibgeschützt und können zwei Typen aufweisen:  
   
 - Konstanten, deren Wert zur Entwurfszeit zugewiesen wird. Diese sind statische Member einer Klasse, obwohl sie nicht mit dem `static`-Schlüsselwort (`Shared` in Visual Basic) definiert werden.  
@@ -250,42 +241,42 @@ Das allgemeine Typsystem legt fest, wie Typen in der Common Language Runtime dek
   
  [!code-csharp[Conceptual.Types.Members.Fields#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.types.members.fields/cs/example.cs#1)]
  [!code-vb[Conceptual.Types.Members.Fields#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.types.members.fields/vb/example.vb#1)]  
-  
-<a name="Properties"></a>
-### <a name="properties"></a>Eigenschaften  
+
+### <a name="properties"></a>Eigenschaften
+
  Eine Eigenschaft benennt einen Wert oder Zustand des Typs und definiert Methoden zum Abrufen oder Festlegen des Eigenschaftswerts. Eigenschaften können primitive Typen, Auflistungen primitiver Typen, benutzerdefinierte Typen oder Auflistungen benutzerdefinierter Typen sein. Eigenschaften werden häufig verwendet, um die Unabhängigkeit der öffentlichen Schnittstelle eines Typs von seiner tatsächlichen Darstellung zu gewährleisten. So können Eigenschaften Werte reflektieren, die nicht direkt in der Klasse gespeichert sind (z. B., wenn eine Eigenschaft einen berechneten Wert zurückgibt), oder eine Validierung ausführen, bevor privaten Feldern Werte zugewiesen werden. Im folgenden Codebeispiel wird das zweite Schema veranschaulicht.  
   
  [!code-csharp[Conceptual.Types.Members.Properties#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.types.members.properties/cs/example.cs#1)]
  [!code-vb[Conceptual.Types.Members.Properties#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.types.members.properties/vb/example.vb#1)]  
   
  Die Microsoft Intermediate Language (MSIL) schließt nicht nur die Eigenschaft ein, sondern für einen Typ mit einer lesbaren Eigenschaft darüber hinaus eine `get_`*Eigenschaftsname*-Methode und für einen Typ mit einer beschreibbaren Eigenschaft eine `set_`*Eigenschaftsname*-Methode.  
-  
-<a name="Methods"></a>
-### <a name="methods"></a>Methoden  
+
+### <a name="methods"></a>Methoden
+
  Eine Methode beschreibt Vorgänge, die für den Typ verfügbar sind. Eine Methodensignatur gibt die zulässigen Typen aller Parameter sowie des Rückgabewerts der Methode an.  
   
  Obwohl die meisten Methoden die erforderliche Anzahl von Parametern für Methodenaufrufe genau definieren, unterstützen einige Methoden eine variable Anzahl von Parametern. Der letzte deklarierte Parameter dieser Methoden wird mit dem <xref:System.ParamArrayAttribute>-Attribut markiert. Sprachcompiler stellen in der Regel ein Schlüsselwort bereit, z. B. `params` in C# und `ParamArray` in Visual Basic, das die explizite Verwendung von <xref:System.ParamArrayAttribute> unnötig macht.  
-  
-<a name="Constructors"></a>
-### <a name="constructors"></a>Konstruktoren  
+
+### <a name="constructors"></a>Konstruktoren
+
  Ein Konstruktor ist eine spezielle Methodenform, durch die neue Instanzen einer Klasse oder Struktur erstellt werden. Wie jede andere Methode kann ein Konstruktor Parameter einschließen. Konstruktoren verfügen jedoch nicht über einen Rückgabewert (d. h., sie geben `void` zurück).  
   
  Wenn der Quellcode für eine Klasse nicht explizit einen Konstruktor definiert, schließt der Compiler einen parameterlosen Konstruktor ein. Wenn der Quellcode für eine Klasse jedoch nur parametrisierte Konstruktoren definiert, generieren der Visual Basic-Compiler und der C#-Compiler keinen parameterlosen Konstruktor.  
   
  Wenn der Quellcode für eine Struktur Konstruktoren definiert, müssen diese parametrisiert werden. Eine Struktur kann keinen parameterlosen Konstruktor definieren, und Compiler generieren keine parameterlosen Konstruktoren für Strukturen oder andere Werttypen. Alle Werttypen verfügen über einen impliziten parameterlosen Konstruktor. Dieser Konstruktor wird von der Common Language Runtime implementiert und initialisiert alle Felder der Struktur mit ihren Standardwerten.  
-  
-<a name="Events"></a>
-### <a name="events"></a>Ereignisse  
+
+### <a name="events"></a>Ereignisse
+
  Ein Ereignis definiert ein Ereignis, auf das reagiert werden kann, und definiert Methoden, mit denen das Ereignis ausgelöst und abonniert bzw. sein Abonnement aufgehoben werden kann. Häufig werden mithilfe von Ereignissen andere Typen über Zustandsänderungen informiert. Weitere Informationen finden Sie unter [Ereignisse](../../../docs/standard/events/index.md).  
-  
-<a name="NestedTypes"></a>
-### <a name="nested-types"></a>Geschachtelte Typen  
+
+### <a name="nested-types"></a>Geschachtelte Typen
+
  Ein geschachtelter Typ ist ein Typ, der ein Member eines anderen Typs ist. Geschachtelte Typen müssen eng mit dem zugehörigen enthaltenden Typ verknüpft sein und dürfen nicht für allgemeine Zwecke verwendbar sein. Geschachtelte Typen sind sinnvoll, wenn der deklarierende Typ Instanzen des geschachtelten Typs verwendet und erstellt und die Verwendung des geschachtelten Typs nicht in öffentlichen Membern verfügbar gemacht wird.  
   
  Für einige Entwickler sind geschachtelte Typen verwirrend, und sie sollten nur öffentlich sichtbar sein, wenn ein zwingender Grund dafür vorliegt. In einer gut entworfenen Bibliothek sollten Entwickler nur selten geschachtelte Typen zum Instanziieren von Objekten oder Deklarieren von Variablen verwenden müssen.  
 
-<a name="characteristics_of_type_members"></a>
-## <a name="characteristics-of-type-members"></a>Eigenschaften von Typmembern  
+## <a name="characteristics-of-type-members"></a>Eigenschaften von Typmembern
+
  Das allgemeine Typsystem unterstützt Typmember, die eine Vielzahl unterschiedlicher Merkmale haben können. Zur Unterstützung all dieser Merkmale sind jedoch keine speziellen Sprachen erforderlich. In der folgenden Tabelle sind diese Membermerkmale beschrieben.  
   
 |Merkmal|Anwendbar auf|Beschreibung|  
@@ -306,7 +297,7 @@ Das allgemeine Typsystem legt fest, wie Typen in der Common Language Runtime dek
 > [!NOTE]
 > Der Rückgabetyp wird nicht als Teil der Signatur einer Methode betrachtet. Dies bedeutet, dass Methoden nicht überladen werden können, wenn sich nur ihr Rückgabetyp unterscheidet.  
   
-### <a name="inheriting-overriding-and-hiding-members"></a>Vererben, Überschreiben und Verdecken von Membern  
+### <a name="inherit-override-and-hide-members"></a>Erben, Überschreiben und Ausblenden von Membern  
  Ein abgeleiteter Typ erbt alle Member seines Basistyps. Dies bedeutet, dass diese Member für den abgeleiteten Typ definiert und verfügbar sind. Das Verhalten oder die Merkmale geerbter Member können auf zwei Weisen geändert werden:  
   
 - Ein abgeleiteter Typ kann einen geerbten Member verdecken, indem er einen neuen Member mit derselben Signatur definiert. Dies kann z. B. geschehen, um einen Member, der zuvor als public deklariert war, als private zu definieren, oder um ein neues Verhalten für eine geerbte Methode zu definieren, die mit `final` gekennzeichnet ist.  

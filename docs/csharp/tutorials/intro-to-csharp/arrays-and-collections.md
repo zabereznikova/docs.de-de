@@ -3,12 +3,12 @@ title: Arbeiten mit Sammlungen – Tutorial zur Einführung in C#
 description: Machen Sie sich mit C# vertraut, indem Sie die Listenauflistung in diesem Tutorial erkunden.
 ms.date: 10/13/2017
 ms.custom: mvc
-ms.openlocfilehash: 25d20de2eae8ad1f544fa17553c173a6141ae464
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 554a4601157a7d4b873c22a46ee72b6601fc36d7
+ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79156688"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80635651"
 ---
 # <a name="learn-to-manage-data-collections-using-the-generic-list-type"></a>Informationen zum Verwalten von Datensammlungen mithilfe des generischen Listentyps
 
@@ -201,7 +201,7 @@ Fügen Sie Folgendes am Ende Ihrer neuen `Main`-Methode hinzu:
 var fibonacciNumbers = new List<int> {1, 1};
 ```
 
-Damit wird eine Liste von Ganzzahlen erstellt und für die ersten beiden Ganzzahlen der Wert 1 festgelegt. Dies sind die ersten beiden Werte einer *Fibonacci-Sequenz* – einer Sequenz von Zahlen. Jede nächste Fibonacci-Zahl wird ermittelt, indem die Summe der beiden vorherigen Zahlen gebildet wird. Fügen Sie diesen Code hinzu:
+Damit wird eine Liste von Ganzzahlen erstellt und für die ersten beiden Ganzzahlen der Wert 1 festgelegt. Dies sind die ersten beiden Werte einer *Fibonacci-Sequenz* – einer Sequenz von Zahlen. Jede nächste Fibonacci-Zahl wird ermittelt, indem die Summe der beiden vorherigen Zahlen gebildet wird. Fügen Sie den folgenden Code hinzu:
 
 ```csharp
 var previous = fibonacciNumbers[fibonacciNumbers.Count - 1];
@@ -222,7 +222,7 @@ Speichern Sie die Datei, und geben Sie `dotnet run` ein, um die Ergebnisse anzuz
 
 Versuchen Sie, einige dieser Konzepte aus dieser Lektion und früheren Lektionen in einen Zusammenhang zu bringen. Erweitern Sie das, was Sie bisher bezüglich Fibonacci-Zahlen erstellt haben. Schreiben Sie den Code zum Generieren der ersten 20 Zahlen der Sequenz. (Hinweis: Die 20. Fibonacci-Zahl lautet 6765.)
 
-## <a name="complete-challenge"></a>Herausforderung erfüllen
+## <a name="complete-challenge"></a>Übung abgeschlossen
 
 Eine Beispiellösung finden Sie in Form eines [fertiggestellten Beispielcodes auf GitHub](https://github.com/dotnet/samples/tree/master/csharp/list-quickstart/Program.cs#L13-L23).
 
@@ -230,4 +230,4 @@ Mit jeder Iteration der Schleife werden die letzten beiden Ganzzahlen in der Lis
 
 Herzlichen Glückwunsch, Sie haben das Listentutorial abgeschlossen. Sie können mit dem Tutorial [Einführung in Klassen](introduction-to-classes.md) in Ihrer eigenen Entwicklungsumgebung fortfahren.
 
-Weitere Informationen zum Arbeiten mit dem `List`-Typ finden Sie im [Leitfaden für .NET](../../../standard/index.md) im Thema [Sammlungen](../../../standard/collections/index.md). Sie werden auch viele andere Sammlungstypen kennenlernen.
+Weitere Informationen zum Arbeiten mit dem `List`-Typ finden Sie im Artikel [Leitfaden für .NET](../../../standard/index.yml) unter [Sammlungen](../../../standard/collections/index.md). Sie werden auch viele andere Sammlungstypen kennenlernen.

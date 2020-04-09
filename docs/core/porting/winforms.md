@@ -3,13 +3,13 @@ title: Portieren einer Windows Forms-App zu .NET Core
 description: Hier erfahren Sie, wie Sie eine .NET Framework Windows Forms-Anwendung zu .NET Core für Windows portieren.
 author: Thraka
 ms.author: adegeo
-ms.date: 03/01/2019
-ms.openlocfilehash: dbd522851faa0a4fe435199914a034ee230d3455
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.date: 01/24/2020
+ms.openlocfilehash: 80b4bb225d6a6748743d91a4c70e8b09c10cc94b
+ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "76116022"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80635512"
 ---
 # <a name="how-to-port-a-windows-forms-desktop-app-to-net-core"></a>Portieren einer Windows Forms-Desktop-App zu .NET Core 3.0
 
@@ -26,7 +26,7 @@ In diesem Artikel werden verschiedene Namen zum Identifizieren der für die Migr
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
-- [Visual Studio-2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) für alle Designerarbeiten, die Sie durchführen möchten.
+- [Visual Studio 2019 16.5 Preview 1](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=community&ch=pre&rel=16) oder höher für alle Aufgaben, die Sie mit dem Designer durchführen möchten. Es wird empfohlen, ein Update auf die neueste [Vorschauversion von Visual Studio](https://visualstudio.microsoft.com/vs/preview/) durchzuführen.
 
   Installieren Sie die folgenden Visual Studio-Workloads:
   - .NET-Desktopentwicklung
@@ -34,10 +34,11 @@ In diesem Artikel werden verschiedene Namen zum Identifizieren der für die Migr
 
 - Ein funktionierendes Windows Forms-Projekt in einer Projektmappe, die ohne Probleme erstellt und ausgeführt wird.
 - Ein in C# programmiertes Projekt.
-- [.NET Core](https://dotnet.microsoft.com/download/dotnet-core) 3.0 oder höher
 
 > [!NOTE]
-> **Visual Studio 2017** unterstützt .NET Core 3.0-Projekte nicht. **Visual Studio 2019** unterstützt .NET Core 3.0-Projekte, aber noch nicht den Visual Designer für .NET Core 3.0-Windows Forms-Projekte. Um den Visual Designer verwenden zu können, muss eine Projektmappe ein .NET-Windows Forms-Projekt enthalten, das die Forms-Dateien gemeinsam mit dem .NET Core-Projekt verwendet.
+> .NET Core 3.0-Projekte werden nur in **Visual Studio 2019** oder einer höheren Version unterstützt. Ab **Visual Studio 2019 16.5 Preview 1** wird auch der .NET Core-Windows Forms-Designer unterstützt.
+>
+> Um den Designer zu aktivieren, wechseln Sie zu **Extras** > **Optionen** > **Umgebung** > **Vorschaufeatures**, und wählen Sie Option **Use the preview Windows Forms designer for .NET Core apps** (Vorschauversion des Windows Forms-Designers für .NET Core-Apps verwenden) aus.
 
 ### <a name="consider"></a>Consider
 
@@ -58,10 +59,6 @@ Wenn Sie eine .NET Framework Windows Forms-Anwendung portieren, müssen Sie ein 
 01. Aktualisieren Sie die NuGet-Pakete, die von Ihrem Projekt verwendet werden.
 
     Es hat sich bewährt, vor jeder Migration die neuesten Versionen der NuGet-Pakete zu verwenden. Wenn Ihre Anwendung auf NuGet-Pakete verweist, aktualisieren Sie sie auf die neueste Version. Stellen Sie sicher, dass die Anwendung erfolgreich erstellt wird. Wenn nach dem Upgrade Paketfehler auftreten, stufen Sie das Paket auf die neueste Version herab, die Ihren Code nicht beschädigt.
-
-01. Visual Studio 2019 unterstützt noch nicht den Forms-Designer für .NET Core 3.0.
-
-    Derzeit müssen Sie Ihre vorhandene .NET Framework-Windows Forms-Projektdatei beibehalten, wenn Sie den Forms-Designer in Visual Studio verwenden möchten.
 
 ## <a name="create-a-new-sdk-project"></a>Erstellen eines neues SDK-Projekts
 

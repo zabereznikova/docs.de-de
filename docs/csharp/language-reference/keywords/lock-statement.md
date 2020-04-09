@@ -1,19 +1,19 @@
 ---
 title: 'lock-Anweisung: C#-Referenz'
 description: Verwenden Sie die lock-Anweisung von C#, um den Threadzugriff auf eine freigegebene Ressource zu synchronisieren.
-ms.date: 10/01/2018
+ms.date: 04/02/2020
 f1_keywords:
 - lock_CSharpKeyword
 - lock
 helpviewer_keywords:
 - lock keyword [C#]
 ms.assetid: 656da1a4-707e-4ef6-9c6e-6d13b646af42
-ms.openlocfilehash: 467881dd36c97b6b18b7f31d4e4af25152b0d012
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2f2d42ae02a07a5e1b82cefd004f4d03b2a16dff
+ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75713385"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80635378"
 ---
 # <a name="lock-statement-c-reference"></a>lock-Anweisung (C#-Referenz)
 
@@ -48,13 +48,15 @@ Da ein [try...finally](try-finally.md)-Block in diesem Code verwendet wird, wird
 
 Sie können den Operator [await](../operators/await.md) nicht im Text einer `lock`-Anweisung verwenden.
 
-## <a name="remarks"></a>Hinweise
+## <a name="guidelines"></a>Richtlinien
 
 Wenn Sie den Threadzugriff auf eine freigegebene Ressource synchronisieren, sperren Sie eine dedizierte Objektinstanz (z.B. `private readonly object balanceLock = new object();`) oder eine andere Instanz, die wahrscheinlich nicht von anderen Teilen des Codes als lock-Objekt verwendet wird. Vermeiden Sie, die gleiche lock-Objektinstanz für verschiedene freigegebene Ressourcen zu verwenden, da dies zu einem Deadlock oder Sperrkonflikt führen kann. Vermeiden Sie insbesondere die Verwendung der folgenden Objekte als Sperre:
 
 - `this` – kann von den Aufrufern als Sperre verwendet werden.
 - <xref:System.Type>-Instanzen – können vom [typeof](../operators/type-testing-and-cast.md#typeof-operator)-Operator oder der Reflektion abgerufen werden.
 - Zeichenfolgeninstanzen, einschließlich Zeichenfolgenliteralen – können [internalisiert](/dotnet/api/system.string.intern#remarks) sein.
+
+Die Dauer von Sperren sollte so kurz wie möglich sein, um Sperrungskonflikte zu vermindern.
 
 ## <a name="example"></a>Beispiel
 
@@ -66,11 +68,11 @@ Im folgenden Beispiel wird eine `Account`-Klasse definiert, die den Zugriff auf 
 
 Weitere Informationen finden Sie im Abschnitt [Die lock-Anweisung](~/_csharplang/spec/statements.md#the-lock-statement) der [C#-Sprachspezifikation](~/_csharplang/spec/introduction.md).
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
+- [C#-Referenz](../index.md)
+- [C#-Schlüsselwörter](index.md)
 - <xref:System.Threading.Monitor?displayProperty=nameWithType>
 - <xref:System.Threading.SpinLock?displayProperty=nameWithType>
 - <xref:System.Threading.Interlocked?displayProperty=nameWithType>
-- [C#-Referenz](../index.md)
-- [C#-Schlüsselwörter](index.md)
 - [Übersicht über Synchronisierungsprimitiven](../../../standard/threading/overview-of-synchronization-primitives.md)

@@ -3,12 +3,12 @@ title: .NET-Glossar
 description: Informationen zu den Bedeutungen der ausgewählten Begriffe, die in der .NET-Dokumentation verwendet werden.
 ms.date: 01/22/2019
 ms.technology: dotnet-standard
-ms.openlocfilehash: ed4dceed1a3f39c5c4ce7a278efc37bb38ed0d94
-ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
+ms.openlocfilehash: d8f16579ea4dcbc9260aac83e16d3fbd30db519c
+ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80344203"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80635580"
 ---
 # <a name="net-glossary"></a>.NET-Glossar
 
@@ -117,7 +117,7 @@ Just-In-Time-Compiler
 Eine Implementierung von .NET umfasst:
 
 - Mindestens eine Runtime. Beispiele: CLR, CoreCLR, CoreRT.
-- Eine Klassenbibliothek, die eine .NET Standard-Version implementiert und ggf. zusätzliche APIs beinhaltet. Beispiele: .NET Framework-Basisklassenbibliothek, .NET Core-Basisklassenbibliothek.
+- Eine Klassenbibliothek, die eine Version des .NET Standards implementiert und ggf. zusätzliche APIs beinhaltet. Beispiele: .NET Framework-Basisklassenbibliothek, .NET Core-Basisklassenbibliothek.
 - Optional mindestens ein Anwendungsframework. Beispiele: ASP.NET, Windows Forms und WPF sind im .NET Framework enthalten.
 - Optional Entwicklungstools. Einige Entwicklungstools werden zwischen mehreren Implementierungen freigegeben.
 
@@ -143,7 +143,7 @@ Siehe [Pakete, Metapakete und Frameworks](../core/packages.md).
 
 Bei Mono handelt es sich um eine [plattformübergreifend](#cross-platform) Open Source-.NET-Implementierung, die in erster Linie verwendet wird, wenn eine kleine Runtime erforderlich ist. Mono ist die Runtime für Xamarin-Anwendungen unter Android, Mac, iOS, tvOS und watchOS und ist hauptsächlich auf Apps mit geringem Ressourcenbedarf ausgelegt.
 
-Außerdem unterstützt Mono alle derzeit veröffentlichten .NET Standard-Versionen.
+Außerdem unterstützt Mono alle derzeit veröffentlichten Versionen des .NET Standards.
 
 In der Vergangenheit hat Mono die größere API des .NET Framework implementiert und einige der beliebtesten Funktionen unter Unix emuliert. Manchmal wird es zum Ausführen von .NET-Anwendungen verwendet, die auf diesen Unix-Funktionen basieren.
 
@@ -155,7 +155,7 @@ Weitere Informationen zu Mono finden Sie in der [Mono-Dokumentation](https://www
 
 Der Oberbegriff für [.NET Standard](#net-standard) und alle [.NET-Implementierungen](#implementation-of-net) und Workloads. Immer ausschließlich in Großbuchstaben, niemals „.Net“.
 
-Siehe [Leitfaden für .NET](index.md).
+Siehe den [Leitfaden für .NET](index.yml).
 
 ## <a name="net-core"></a>.NET Core
 
@@ -191,7 +191,7 @@ UWP war das erste Anwendungsframework, das von .NET Native unterstützt wurde. N
 
 Siehe [Intro to .NET Native and CoreRT (Einführung in .NET Native und CoreRT)](https://github.com/dotnet/corert/blob/master/Documentation/intro-to-corert.md)
 
-## <a name="net-standard"></a>.NET Standard
+## <a name="net-standard"></a>.NET-Standard
 
 Eine formale Spezifikation der .NET-APIs, die in jeder .NET-Implementierung verfügbar sind.
 
@@ -253,7 +253,7 @@ Die Sammlung von APIs, auf der eine .NET-App oder -Bibliothek basiert.
 
 Eine App oder Bibliothek kann eine Version von .NET Standard (beispielsweise .NET Standard 2.0) anzielen. Dabei handelt es sich um eine Spezifikation für eine standardisierte Reihe von APIs für alle .NET-Implementierungen. Eine App oder Bibliothek kann auch eine Version einer bestimmten .NET-Implementierung anzielen. In diesem Fall erhält diese Zugriff auf die implementierungsspezifischen APIs. Beispielsweise erhält eine App, die Xamarin iOS anzieht, Zugriff auf die von Xamarin bereitgestellten iOS-API-Wrapper.
 
-Für einige Zielplattformen (z.B. .NET Framework) werden die verfügbaren APIs von den Assemblys definiert, die eine .NET-Implementierung auf einem System installiert, zu denen Anwendungsframework-APIs zählen können (z.B. ASP.NET, WinForms). Für paketbasierte Zielframeworks (z. B. .NET Standard und .NET Core) werden die Framework-APIs von den Paketen definiert, die in der App oder der Bibliothek installiert sind. In diesem Fall gibt das Zielframework implizit ein Metapaket an, das auf alle Pakete verweist, aus denen das Framework besteht.
+Für einige Zielplattformen (z.B. .NET Framework) werden die verfügbaren APIs von den Assemblys definiert, die eine .NET-Implementierung auf einem System installiert, zu denen Anwendungsframework-APIs zählen können (z.B. ASP.NET, WinForms). Für paketbasierte Zielframeworks (z.B. .NET Standard und .NET Core) werden die Framework-APIs von den Paketen definiert, die in der App oder der Bibliothek installiert sind. In diesem Fall gibt das Zielframework implizit ein Metapaket an, das auf alle Pakete verweist, aus denen das Framework besteht.
 
 Siehe [Zielframeworks](frameworks.md).
 
@@ -273,7 +273,7 @@ Eine Implementierung von .NET, mit der moderne Touchscreen-Windows-Anwendungen u
 
 ## <a name="see-also"></a>Siehe auch
 
-- [.NET Guide (Leitfaden für .NET)](index.md)
+- [.NET Guide (Leitfaden für .NET)](index.yml)
 - [Leitfaden für .NET Framework](../framework/index.yml)
 - [.NET Core](../core/index.yml)
 - [ASP.NET Overview (Übersicht über ASP.NET)](/aspnet/index#pivot=aspnet)

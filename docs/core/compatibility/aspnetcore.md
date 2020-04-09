@@ -2,15 +2,15 @@
 title: Breaking Changes in ASP.NET Core
 titleSuffix: ''
 description: Listet die Breaking Changes in ASP.NET Core auf.
-ms.date: 01/10/2020
+ms.date: 03/27/2020
 author: scottaddie
 ms.author: scaddie
-ms.openlocfilehash: c54735cd53fb9cb48eb84045791ccc559fe683cd
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 95057425614d7c717154ecfb687db2b9a6ca4a18
+ms.sourcegitcommit: a9b8945630426a575ab0a332e568edc807666d1b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77093174"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80391246"
 ---
 # <a name="aspnet-core-breaking-changes"></a>Breaking Changes in ASP.NET Core
 
@@ -18,7 +18,6 @@ ASP.NET Core stellt die von .NET Core verwendeten Web-App-Entwicklungsfeatures b
 
 Auf dieser Seite sind die folgenden Breaking Changes dokumentiert:
 
-- [HTTP: Browser-SameSite-Änderungen mit Auswirkung auf die Authentifizierung](#http-browser-samesite-changes-impact-authentication)
 - [Veraltete Antifälschungs-, CORS-, Diagnose-, MVC- und Routing-APIs wurden entfernt](#obsolete-antiforgery-cors-diagnostics-mvc-and-routing-apis-removed)
 - [Authentifizierung: Google+ ist veraltet](#authentication-google-deprecated-and-replaced)
 - [Authentifizierung: HttpContext.Authentication-Eigenschaft wurde entfernt](#authentication-httpcontextauthentication-property-removed)
@@ -27,6 +26,7 @@ Auf dieser Seite sind die folgenden Breaking Changes dokumentiert:
 - [Autorisierung: AddAuthorization-Überladung wurde in andere Assembly verschoben](#authorization-addauthorization-overload-moved-to-different-assembly)
 - [Autorisierung: IAllowAnonymous wurde aus AuthorizationFilterContext.Filters entfernt](#authorization-iallowanonymous-removed-from-authorizationfiltercontextfilters)
 - [Autorisierung: Implementierungen von IAuthorizationPolicyProvider erfordern eine neue Methode](#authorization-iauthorizationpolicyprovider-implementations-require-new-method)
+- [Azure: Azure-Integrationspakete mit Präfix „Microsoft“ entfernt](#azure-microsoft-prefixed-azure-integration-packages-removed)
 - [Zwischenspeicherung: CompactOnMemoryPressure-Eigenschaft wurde entfernt](#caching-compactonmemorypressure-property-removed)
 - [Zwischenspeicherung: Microsoft.Extensions.Caching.SqlServer verwendet neues SqlClient-Paket](#caching-microsoftextensionscachingsqlserver-uses-new-sqlclient-package)
 - [Zwischenspeicherung: „pubternal“-Typen wurden in ResponseCaching in „internal“-Typen geändert](#caching-responsecaching-pubternal-types-changed-to-internal)
@@ -36,6 +36,7 @@ Auf dieser Seite sind die folgenden Breaking Changes dokumentiert:
 - [Hosting: HTTPS-Umleitung für IIS-Out-of-Process-Apps aktiviert](#hosting-https-redirection-enabled-for-iis-out-of-process-apps)
 - [Hosting: Typen IHostingEnvironment und IApplicationLifetime wurden ersetzt](#hosting-ihostingenvironment-and-iapplicationlifetime-types-marked-obsolete-and-replaced)
 - [Hosting: ObjectPoolProvider wurde aus WebHostBuilder-Abhängigkeiten entfernt](#hosting-objectpoolprovider-removed-from-webhostbuilder-dependencies)
+- [HTTP: Browser-SameSite-Änderungen mit Auswirkung auf die Authentifizierung](#http-browser-samesite-changes-impact-authentication)
 - [HTTP: Erweiterbarkeit von DefaultHttpContext wurde entfernt](#http-defaulthttpcontext-extensibility-removed)
 - [HTTP: HeaderNames-Felder wurden in „static readonly“ (statisch schreibgeschützt) geändert](#http-headernames-constants-changed-to-static-readonly)
 - [HTTP: Änderungen an der Infrastruktur von Antworttexten](#http-response-body-infrastructure-changes)
@@ -65,10 +66,31 @@ Auf dieser Seite sind die folgenden Breaking Changes dokumentiert:
 - [SignalR: HubConnection-Methoden wurden entfernt](#signalr-hubconnection-resetsendping-and-resettimeout-methods-removed)
 - [SignalR: HubConnectionContext-Konstruktoren wurden geändert](#signalr-hubconnectioncontext-constructors-changed)
 - [SignalR: Name des JavaScript-Clientpakets wurde geändert](#signalr-javascript-client-package-name-changed)
+- [SignalR: MessagePack-Hubprotokoll in MessagePack 2.x-Paket verschoben](#signalr-messagepack-hub-protocol-moved-to-messagepack-2x-package)
 - [SignalR: Veraltete APIs](#signalr-usesignalr-and-useconnections-methods-marked-obsolete)
-- [SPAs: SpaServices und NodeServices wurden als veraltet markiert](#spas-spaservices-and-nodeservices-marked-obsolete)
+- [SignalR: UseSignalR- und UseConnections-Methoden entfernt](#signalr-usesignalr-and-useconnections-methods-removed)
 - [SPAs: Standard für Konsolenprotokollierungsfallback für SpaServices und NodeServices wurde geändert](#spas-spaservices-and-nodeservices-no-longer-fall-back-to-console-logger)
+- [SPAs: SpaServices und NodeServices wurden als veraltet markiert](#spas-spaservices-and-nodeservices-marked-obsolete)
+- [Statische Dateien: CSV-Inhaltstyp in standardkonform geändert](#static-files-csv-content-type-changed-to-standards-compliant)
 - [Zielframework: .NET Framework nicht unterstützt](#target-framework-net-framework-support-dropped)
+
+## <a name="aspnet-core-50"></a>ASP.NET Core 5.0
+
+[!INCLUDE[Azure: Microsoft-prefixed Azure integration packages removed](~/includes/core-changes/aspnetcore/5.0/azure-integration-packages-removed.md)]
+
+***
+
+[!INCLUDE[SignalR: MessagePack Hub Protocol moved to MessagePack 2.x package](~/includes/core-changes/aspnetcore/5.0/signalr-messagepack-package.md)]
+
+***
+
+[!INCLUDE[SignalR: UseSignalR and UseConnections methods removed](~/includes/core-changes/aspnetcore/5.0/signalr-usesignalr-useconnections-removed.md)]
+
+***
+
+[!INCLUDE[Static files: CSV content type changed to standards-compliant](~/includes/core-changes/aspnetcore/5.0/static-files-csv-content-type-changed.md)]
+
+***
 
 ## <a name="aspnet-core-31"></a>ASP.NET Core 3.1
 

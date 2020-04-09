@@ -2,12 +2,12 @@
 title: Docker-Terminologie
 description: .NET Microservicesarchitektur für .NET-Containeranwendungen | Docker-Terminologie
 ms.date: 01/30/2020
-ms.openlocfilehash: 5ffc7e791df8cbc999c6ababf62670bae46e1d5e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: fdcc5ec3603579c36d7339bd3ff651713b8eba88
+ms.sourcegitcommit: 79b0dd8bfc63f33a02137121dd23475887ecefda
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77502838"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80523338"
 ---
 # <a name="docker-terminology"></a>Docker-Terminologie
 
@@ -17,7 +17,9 @@ In diesem Abschnitt werden die Begriffe und Definitionen aufgelistet, mit denen 
 
 **Docker-Datei:** Eine Textdatei, die Anweisungen zum Erstellen eines Docker-Images enthält. Wie bei einem Stapelverarbeitungsskript gibt die erste Zeile zunächst das Basisimage an, dann folgen die Anweisungen zum Installieren von erforderlichen Programmen, Kopieren von Dateien usw., bis Sie zu der benötigten Arbeitsumgebung gelangen.
 
-**Build:** Die Aktion zum Erstellen eines Containerimages auf der Grundlage der Informationen und des Kontexts der Docker-Datei sowie weiteren Dateien im Ordner, in dem das Image erstellt wird. Sie können Images mit dem Docker-Befehl **docker build** erstellen.
+**Build:** Die Aktion zum Erstellen eines Containerimages auf der Grundlage der Informationen und des Kontexts der Docker-Datei sowie weiteren Dateien im Ordner, in dem das Image erstellt wird. Sie können Images mit dem Docker-Befehl erstellen:
+
+> `docker build`
 
 **Container:** Eine Instanz eines Docker-Images. Ein Container stellt die Ausführung einer einzelnen Anwendung, eines Prozesses oder Diensts dar. Er besteht aus den Inhalten eines Docker-Images, einer Ausführungsumgebung und mehreren Standardanweisungen. Beim Skalieren eines Diensts erstellen Sie mehrere Instanzen eines Containers aus dem gleichen Image. Alternativ kann ein Batchauftrag mehrere Container aus dem gleichen Image erstellen und dabei verschiedene Parameter an jede Instanz übergeben.
 

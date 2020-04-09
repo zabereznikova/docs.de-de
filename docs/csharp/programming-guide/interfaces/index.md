@@ -5,12 +5,12 @@ helpviewer_keywords:
 - interfaces [C#]
 - C# language, interfaces
 ms.assetid: 2feda177-ce11-432d-81b4-d50f5f35fd37
-ms.openlocfilehash: bb1b812fdbf1d521ed3fd86e23f430bcd04d00f6
-ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
+ms.openlocfilehash: 5e39279183f7e3745c9373df246d14d69d5ff99b
+ms.sourcegitcommit: f87ad41b8e62622da126aa928f7640108c4eff98
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80249180"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80805899"
 ---
 # <a name="interfaces-c-programming-guide"></a>Schnittstellen (C#-Programmierhandbuch)
 
@@ -26,7 +26,7 @@ Der Name der Schnittstelle muss ein gültiger C#-[Bezeichnername](../inside-a-pr
 
 Jede die <xref:System.IEquatable%601>-Schnittstelle implementierende Klasse oder Struktur muss eine Definition für eine <xref:System.IEquatable%601.Equals%2A>-Methode enthalten, die mit der Signatur übereinstimmt, die durch die Schnittstelle angegeben wird. Daher können Sie auf eine Klasse zählen, die `IEquatable<T>` für die Einbeziehung einer `Equals`-Methode implementiert, mit der eine Instanz der Klasse bestimmen kann, ob es sich zu einer anderen Instanz derselben Klasse identisch verhält.
 
-Die Definition für `IEquatable<T>` stellt keine Implementierung für `Equals` bereit. Eine Klasse oder Struktur kann mehrere Schnittstellen implementieren. Eine Klasse kann jedoch nur von einer einzelnen Klasse erben.
+Die Definition von `IEquatable<T>` stellt keine Implementierung für `Equals` bereit. Eine Klasse oder Struktur kann mehrere Schnittstellen implementieren. Eine Klasse kann jedoch nur von einer einzelnen Klasse erben.
 
 Weitere Informationen zu abstrakten Klassen finden Sie unter [Abstrakte und versiegelte Klassen und Klassenmember](../classes-and-structs/abstract-and-sealed-classes-and-class-members.md).
 

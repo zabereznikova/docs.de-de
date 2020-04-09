@@ -1,17 +1,17 @@
 ---
 title: Delegaten und Lambdas
-description: Erfahren Sie, wie Delegate einen Typ definieren, der eine bestimmte Methodensignatur angibt, die direkt aufgerufen oder erst an eine andere Methode übergeben und dann aufgerufen werden kann.
+description: Erfahren Sie, wie Delegaten, die einen Typ definieren, der eine bestimmte Methodensignatur angibt, direkt aufgerufen oder erst an eine andere Methode übergeben und dann aufgerufen werden können.
 author: richlander
 ms.author: wiwagn
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: fe2e4b4c-6483-4106-a4b4-a33e2e306591
-ms.openlocfilehash: 0abcc73e31eab89c422513acf778bc8bd092e788
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a9ca935814d1a7f77ded5f371ccd496c3859c523
+ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75345551"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80635927"
 ---
 # <a name="delegates-and-lambdas"></a>Delegaten und Lambdas
 
@@ -44,11 +44,11 @@ public class Program
 * Die Zeile `Reverse rev = ReverseString;` zeigt, dass Sie eine Methode einer Variable des entsprechenden Delegattyps zuweisen können.
 * Die Zeile `Console.WriteLine(rev("a string"));` zeigt, wie eine Variable eines Delegattyps benutzt wird, um den Delegaten aufzurufen.
 
-Um den Entwicklungsprozess zu optimieren, enthält .NET eine Reihe von Delegattypen, die Programmierer verwenden können, damit sie keine neuen Typen erstellen müssen. Dies sind `Func<>`, `Action<>` und `Predicate<>`. Sie können an verschiedenen Stellen in den .NET-APIs verwendet werden, ohne dass neue Delegattypen definiert werden müssen. Natürlich gibt es Unterschiede zwischen den drei Typen, wie Sie in ihren Signaturen erkennen können. Hierbei handelt es sich meist um Unterschiede in der Art und Weise der Verwendung dieser Typen:
+Um den Entwicklungsprozess zu optimieren, enthält .NET eine Reihe von Delegattypen, die Programmierer verwenden können, damit sie keine neuen Typen erstellen müssen. Diese Typen lauten `Func<>`, `Action<>` und `Predicate<>`. Sie können verwendet werden, ohne dass neue Delegattypen definiert werden müssen. Es gibt einige Unterschiede zwischen den drei Typen, und diese betreffen ihren jeweiligen Verwendungszweck:
 
-* `Action<>` wird verwendet, wenn eine Aktion mithilfe der Argumente des Delegaten ausgeführt werden muss.
-* `Func<>` wird üblicherweise verwendet, wenn eine Transformation ausgeführt werden muss, Sie also die Argumente des Delegaten in ein anderes Ergebnis transformieren müssen. Projektionen sind ein gutes Beispiel hierfür.
-* `Predicate<>` wird verwendet, wenn Sie ermitteln müssen, ob das Argument die Bedingung des Delegaten erfüllt. Der Typ kann auch als `Func<T, bool>` geschrieben werden.
+* `Action<>` wird verwendet, wenn eine Aktion mithilfe der Argumente des Delegaten ausgeführt werden muss. Die von dem Typ gekapselte Methode gibt keinen Wert zurück.
+* `Func<>` wird üblicherweise verwendet, wenn eine Transformation ausgeführt werden muss, Sie also die Argumente des Delegaten in ein anderes Ergebnis transformieren müssen. Projektionen sind ein gutes Beispiel. Die von dem Typ gekapselte Methode gibt einen angegebenen Wert zurück.
+* `Predicate<>` wird verwendet, wenn Sie ermitteln müssen, ob das Argument die Bedingung des Delegaten erfüllt. Sie können auch die Schreibweise `Func<T, bool>` verwenden. In diesem Fall gibt die Methode einen booleschen Wert zurück.
 
 Wir schreiben jetzt das obige Beispiel neu, indem wir den `Func<>`-Delegaten anstelle eines benutzerdefinierten Typs verwenden. Das Programm wird weiterhin genau gleich ausgeführt.
 
@@ -72,9 +72,9 @@ public class Program
 }
 ```
 
-In diesem einfachen Beispiel erscheint es überflüssig, eine Methode außerhalb der `Main`-Methode zu definieren. Aus diesem Grund wurde in .NET Framework 2.0 das Konzept der **anonymen Delegaten** eingeführt. Damit können Sie „Inlinedelegaten“ erstellen, ohne einen weiteren Typ oder eine zusätzliche Methode angeben zu müssen. Sie fügen einfach die Definition des Delegaten inline dort ein, wo Sie sie benötigen.
+In diesem einfachen Beispiel erscheint es überflüssig, eine Methode außerhalb der `Main`-Methode zu definieren. In .NET Framework 2,0 wurde das Konzept der *anonymen Delegaten* eingeführt, mit denen Sie „Inline“-Delegaten erstellen können, ohne einen zusätzlichen Typ oder eine zusätzliche Methode angeben zu müssen.
 
-Als Beispiel verwenden wir unseren anonymen Delegaten, um eine Liste mit gerade Zahlen herauszufiltern und diese Zahlen in der Konsole auszugeben.
+Im folgenden Beispiel filtert ein anonymer Delegat eine Liste nach geraden Zahlen und gibt sie dann an die Konsole aus.
 
 ```csharp
 using System;
@@ -108,9 +108,7 @@ public class Program
 
 Wie Sie sehen, besteht der Haupttext des Delegaten einfach nur aus einer Reihe von Ausdrücken, wie bei jedem anderen Delegaten auch. Anstatt aber eine separate Definition zu erstellen, haben wir ihn _ad hoc_ in den Aufruf der Methode <xref:System.Collections.Generic.List%601.FindAll%2A?displayProperty=nameWithType> eingeführt.
 
-Selbst bei dieser Vorgehensweise bleibt immer noch zu viel Code übrig, den wir nicht benötigen. Hier kommen **Lambdaausdrücke** ins Spiel.
-
-Lambdaausdrücke (sogenannte Lambdas) wurden zum ersten Mal in C# 3.0 eingeführt und stellen einen der wichtigsten Bausteine von LINQ dar (Language Integrated Query). Sie sind einfach eine praktischere Syntax für die Verwendung von Delegaten. Sie deklarieren eine Signatur und einen Methodentext, besitzen aber keine eigene formale Identität, sofern sie nicht einem Delegaten zugewiesen sind. Im Gegensatz zu Delegaten können sie direkt als linke Seite der Ereignisregistrierung oder in verschiedenen LINQ-Klauseln und -Methoden zugewiesen werden.
+Selbst bei dieser Vorgehensweise bleibt immer noch zu viel Code übrig, den wir nicht benötigen. Hier kommen *Lambdaausdrücke* ins Spiel. Lambdaausdrücke (sogenannte Lambdas) wurden in C# 3.0 eingeführt und stellen einen der wichtigsten Bausteine von LINQ (Language Integrated Query) dar. Sie sind einfach eine praktischere Syntax für die Verwendung von Delegaten. Sie deklarieren eine Signatur und einen Methodentext, besitzen aber keine eigene formale Identität, sofern sie nicht einem Delegaten zugewiesen sind. Im Gegensatz zu Delegaten können sie direkt als linke Seite der Ereignisregistrierung oder in verschiedenen LINQ-Klauseln und -Methoden zugewiesen werden.
 
 Da ein Lambdaausdruck einfach nur eine weitere Möglichkeit ist, einen Delegaten anzugeben, können wir das obige Beispiel neu schreiben und einen Lambdaausdruck anstelle eines anonymen Delegaten verwenden.
 
@@ -139,7 +137,7 @@ public class Program
 }
 ```
 
-Im vorherigen Beispiel wird der Lambdaausdruck `i => i % 2 == 0` verwendet. Das ist einfach eine **sehr** praktische Syntax für die Verwendung von Delegaten. Hinter den Kulissen passiert das Gleiche wie bei anonymen Delegaten.
+Im vorherigen Beispiel wird der Lambdaausdruck `i => i % 2 == 0` verwendet. Wie bereits erläutert, handelt es sich einfach um eine praktischere Syntax für die Verwendung von Delegaten. Die Ausführung des Codes erfolgt auf die gleiche Weise wie für anonyme Delegaten.
 
 Noch einmal: Lambdas sind einfach Delegaten. Das bedeutet, dass sie problemlos als Ereignishandler verwendet werden können, wie im folgenden Codeausschnitt veranschaulicht.
 
