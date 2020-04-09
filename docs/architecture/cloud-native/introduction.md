@@ -3,82 +3,82 @@ title: Einführung in cloudbasierte Anwendungen
 description: Erfahren Sie mehr über Cloud-Native Computing
 author: robvet
 ms.date: 08/26/2019
-ms.openlocfilehash: 1d3679c7f1ab940d7ab3e194c200483b63276883
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: c9ffd34ec3deb04abddbbf85a9e5a6ed2b57c8f9
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73841768"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80989050"
 ---
 # <a name="introduction-to-cloud-native-applications"></a>Einführung in cloudbasierte Anwendungen
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
-An einem anderen Tag, im Büro, an "The Next Big Thing".
+An einem anderen Tag, im Büro, arbeiten an "der nächsten großen Sache".
 
-Ihr Handy klingelt. Es ist Ihr benutzerfreundlicher Mitarbeiter, der Sie zweimal täglich über neue Aufträge aufruft.
+Ihr Handy klingelt. Es ist Ihr freundlicher Personalvermittler - derjenige, der Sie zweimal am Tag über neue Jobs anruft.
 
-Diesmal gibt es jedoch unterschiedliche Möglichkeiten: Start, Kapital und viel Geld.
+Aber dieses Mal ist es anders: Start-up, Eigenkapital und viel Geld.
 
-Durch die Erwähnung der Cloud und der aktuellen Technologie werden Sie über den Edge übertragen.
+Die Erwähnung der Cloud und modernster Technologie bringt Sie über den Haufen.
 
-Sie sind ein paar Wochen schneller, und Sie sind jetzt ein neuer Mitarbeiter in einer Entwurfs Sitzung, die eine wichtige eCommerce-Anwendung entwickelt. Sie werden mit anderen führenden eCommerce-Websites fertig arbeiten.
+Schnell vorwärts ein paar Wochen und Sie sind jetzt ein neuer Mitarbeiter in einer Entwurfssitzung, die eine große eCommerce-Anwendung architektoniert. Sie werden mit anderen führenden eCommerce-Websites abschließen.
 
-Wie wird Sie erstellt?
+Wie werden Sie es bauen?
 
-Wenn Sie die Anweisungen in den letzten 15 Jahren befolgen, werden Sie wahrscheinlich das in Abbildung 1,1 gezeigte System erstellen.
+Wenn Sie den Anweisungen der letzten 15 Jahre folgen, erstellen Sie höchstwahrscheinlich das in Abbildung 1.1 dargestellte System.
 
 ![Traditionelles monolithisches Design](./media/monolithic-design.png)
 
-**(Abbildung 1-1)** . Traditionelles monolithisches Design
+**Abbildung 1-1**. Traditionelles monolithisches Design
 
-Sie erstellen eine große Kernanwendung, die ihre gesamte Domänen Logik enthält. Es umfasst Module wie z. b. Identität, Katalog, Reihenfolge und mehr. Die Core-App kommuniziert mit einer großen relationalen Datenbank. Der Kern macht Funktionen über eine HTML-Schnittstelle verfügbar.
+Sie erstellen eine große Kernanwendung, die ihre gesamte Domänenlogik enthält. Es enthält Module wie Identität, Katalog, Bestellung und mehr. Die Kern-App kommuniziert mit einer großen relationalen Datenbank. Der Kern macht die Funktionalität über eine HTML-Schnittstelle verfügbar.
 
-Herzlichen Glückwunsch!  Sie haben soeben eine monolithische Anwendung erstellt.
+Herzlichen Glückwunsch!  Sie haben gerade eine monolithische Anwendung erstellt.
 
-Nicht alle ist schlecht. Monolithen bieten einige unterschiedliche Vorteile. Sie sind z. b. unkompliziert...
+Nicht alles ist schlecht. Monolithen bieten einige deutliche Vorteile. Zum Beispiel sind sie einfach zu...
 
 - build
-- Test
+- test
 - Bereitstellen
-- Problembehandlung
-- Dezimalstellen
+- Beheben
+- Skalierung
 
-Viele erfolgreiche apps, die heute vorhanden sind, wurden als Monolithen erstellt. Die APP ist ein Treffer und wird weiterentwickelt, Iterationen nach Iterationen werden hinzugefügt, und es werden mehr Funktionen hinzugefügt.
+Viele erfolgreiche Apps, die es heute gibt, wurden als Monolithen erstellt. Die App ist ein Hit und entwickelt sich weiter, Iteration nach Iteration, Hinzufügen von mehr und mehr Funktionalität.
 
-An einem gewissen Punkt können Sie jedoch nicht mit Unbehagen vertraut sein. Sie verlieren die Kontrolle über die Anwendung. Im Laufe der Zeit wird das Gefühl intensiver, und Sie geben schließlich einen Zustand ein, der als " **Angst Cycle**" bezeichnet wird.
+Irgendwann fängt man jedoch an, sich unwohl zu fühlen. Sie verlieren die Kontrolle über die Anwendung. Im Laufe der Zeit wird das Gefühl intensiver und du betrittst schließlich einen Zustand, der als **Angstzyklus**bekannt ist.
 
-- Die APP ist so überwältigend kompliziert geworden, dass Sie von keiner einzelnen Person verstanden wird.
-- Sie befürchten, dass Änderungen vorgenommen werden. jede Änderung hat unbeabsichtigte und kostspielige Nebeneffekte.
-- Neue Features/Korrekturen werden knifflig, zeitaufwändig und aufwendig zu implementieren.
-- Jedes Release so klein wie möglicherweise ist eine vollständige Bereitstellung der gesamten Anwendung erforderlich.
-- Eine instabile Komponente kann das gesamte Systemabstürzen.
+- Die App ist so überwältigend kompliziert geworden, dass es keine einzige Person versteht.
+- Sie fürchten, Änderungen vorzunehmen - jede Änderung hat unbeabsichtigte und kostspielige Nebenwirkungen.
+- Neue Funktionen/Korrekturen werden schwierig, zeitaufwändig und teuer zu implementieren.
+- Jede Version, so klein sie auch sein kann, erfordert eine vollständige Bereitstellung der gesamten Anwendung.
+- Eine instabile Komponente kann das gesamte System zum Absturz bringen.
 - Neue Technologien und Frameworks sind keine Option.
-- Die Implementierung von Agile-Übermittlungs Methoden ist schwierig.
-- Die Architektur Erosions Sätze werden in festgelegt, da sich die Codebasis mit nie enden "Sonderfällen" verschlechtert.
-- Die Berater informieren Sie, dass Sie Sie neu schreiben müssen.
+- Es ist schwierig, agile Bereitstellungsmethoden zu implementieren.
+- Die architektonische Erosion setzt ein, da sich die Codebasis mit endlosen "Sonderfällen" verschlechtert.
+- Die Berater sagen Ihnen, es neu zu schreiben.
 
-Viele Organisationen haben den monolithischen warteweg gelöst, indem Sie einen cloudbasierten Ansatz zum Aufbauen von Systemen eingeführt haben. In Abbildung 1-2 wird das gleiche System gezeigt wie das Anwenden von cloudbasierten Techniken und Verfahren.
+Viele Organisationen haben den monolithischen Angstzyklus angegangen, indem sie einen Cloud-nativen Ansatz für das Erstellen von Systemen gewählt haben. Abbildung 1-2 zeigt dasselbe System, das cloudnative Techniken und Vorgehensweisen verwendet.
 
-![Native Cloud-Design](./media/cloud-native-design.png)
+![Cloud-Natives Design](./media/cloud-native-design.png)
 
-**Abbildung 1–2**. Native Cloud-Design
+**Abbildung 1-2**. Cloud-natives Design
 
-Beachten Sie, wie die Anwendung in einem Satz kleiner isolierter mikrodienste zerlegt wird. Jeder Dienst ist eigenständig und kapselt seinen eigenen Code, Ihre Daten und ihre Abhängigkeiten. Jede wird in einem Software Container bereitgestellt und von einem containerorchestrator verwaltet. Anstelle einer großen relationalen Datenbank besitzt jeder Dienst einen eigenen Datenspeicher, der sich je nach den Datenanforderungen unterscheidet. Beachten Sie, dass einige Dienste von einer relationalen Datenbank, aber von anderen in nosql-Datenbanken abhängen. Der Status eines Dienstanbieter wird in einem verteilten Cache gespeichert. Beachten Sie, dass der gesamte Datenverkehr über einen API-Gatewaydienst weitergeleitet wird, der für das Routing von Datenverkehr an die Back-End-Kerndienste zuständig ist und viele übergreifende Aspekte Am wichtigsten ist, dass die Anwendung die Skalierbarkeits-und resilienzfeatures in modernen cloudplattformen vollständig nutzt.
+Beachten Sie, wie die Anwendung über eine Reihe kleiner isolierter Microservices zerlegt wird. Jeder Dienst ist eigenständig und kapselt seinen eigenen Code, seine eigenen Daten und Abhängigkeiten. Jeder wird in einem Softwarecontainer bereitgestellt und von einem Containerorchestrator verwaltet. Anstelle einer großen relationalen Datenbank besitzt jeder Dienst seinen eigenen Datenspeicher, dessen Typ je nach Datenbedarf variiert. Beachten Sie, wie einige Dienste von einer relationalen Datenbank, andere von NoSQL-Datenbanken abhängen. Ein Dienst speichert seinen Status in einem verteilten Cache. Beachten Sie, wie der gesamte Datenverkehr über einen API Gateway-Dienst führt, der für das Routing des Datenverkehrs zu den zentralen Back-End-Diensten und das Erzwingen vieler bereichsübergreifender Probleme verantwortlich ist. Am wichtigsten ist, dass die Anwendung die Skalierbarkeits- und Ausfallsicherheitinfunktionen in modernen Cloud-Plattformen voll ausnutzt.
 
-### <a name="cloud-native-computing"></a>Cloud-Native Computing
+### <a name="cloud-native-computing"></a>Cloud-natives Computing
 
-Hmm... Wir haben soeben den Begriff "*Cloud Native*" verwendet. Sie haben sich als erstes gedacht: "Was genau bedeutet das?" Ein weiteres Branchen wörterwort, das von Softwareanbietern für die Markteinführung von Softwareanbietern mitentwickelt wird? "
+Hmm... Wir haben nur den Begriff *"Cloud Native"* verwendet. Sie dachten zuerst: "Was genau bedeutet das?" Ein weiteres Branchenschlagwort, das von Softwareanbietern erfunden wurde, um mehr Sachen zu vermarkten?"
 
-Glücklicherweise ist es viel anders, und das Buch wird Ihnen hoffentlich helfen, Sie zu überzeugen.
+Glücklicherweise ist es ganz anders und hoffentlich wird dieses Buch Helfen, Sie zu überzeugen.
 
-Innerhalb kurzer Zeit ist die cloudbasierte Cloud ein Trend Trend in der Softwarebranche. Es ist eine neue Möglichkeit, große, komplexe Systeme zu entwickeln, einen Ansatz, der die modernen Software Entwicklungsverfahren, Technologien und cloudinfrastruktur in vollem Umfang nutzt. Der Ansatz ändert die Art und Weise, wie Sie Systeme entwerfen, implementieren, bereitstellen und operationalisieren.
+Innerhalb kurzer Zeit hat sich Cloud Native zu einem treibenden Trend in der Softwarebranche entwickelt. Es ist eine neue Möglichkeit, über den Aufbau großer, komplexer Systeme nachzudenken, ein Ansatz, der die Vorteile moderner Softwareentwicklungspraktiken, -technologien und Cloud-Infrastrukturen voll ausnutzt. Der Ansatz ändert die Art und Weise, wie Sie Systeme entwerfen, implementieren, bereitstellen und operationalisieren.
 
-Anders als der fortlaufende Hype, der unsere Branche antreibt, ist die native Cloud-Cloud "*for-Real*". Sehen Sie sich die [Cloud Native Computing Foundation](https://www.cncf.io/) (cncf) an, ein Konsortium aus mehr als 300 großen Unternehmen mit einer-Charta, um die cloudbasierte computingtechnologie über Technologie-und cloudstapel hinweg zu schaffen. Als eine der am stärksten einflussreichen Open Source-Gruppen hostet Sie viele der am schnellsten wachsenden Open Source-Projekte in GitHub. Dazu zählen Projekte wie [Kubernetes](https://kubernetes.io/), [Prometheus](https://prometheus.io/), [Helm](https://helm.sh/), [Gesandter](https://www.envoyproxy.io/)und [GrpC](https://grpc.io/).
+Im Gegensatz zu dem anhaltenden Hype, der unsere Branche antreibt, ist Cloud native "*for-real*". Man denke an die [Cloud Native Computing Foundation](https://www.cncf.io/) (CNCF), ein Konsortium von über 300 großen Unternehmen mit einer Charta, um Cloud-natives Computing über Technologie und Cloud-Stacks hinweg allgegenwärtig zu machen. Als eine der einflussreichsten Open-Source-Gruppen beherbergt sie viele der am schnellsten wachsenden Open-Source-Projekte in GitHub. Dazu gehören Projekte wie [Kubernetes](https://kubernetes.io/), [Prometheus](https://prometheus.io/), [Helm](https://helm.sh/), [Envoy](https://www.envoyproxy.io/)und [gRPC](https://grpc.io/).
 
-Cncf fördert ein Ökosystem von Open Source-und Vendor-Neutralität. Nach diesem Lead stellen wir die cloudbasierten Prinzipien, Muster und bewährten Methoden dar, die Technologie agnostisch sind. Gleichzeitig werden die in der Microsoft Azure Cloud verfügbaren Dienste und Infrastrukturen zum Erstellen von cloudbasierten Systemen besprochen.
+Die CNCF fördert ein Ökosystem aus Open-Source- und Anbieterneutralität. Im Anschluss an diesen Lead präsentieren wir Cloud-native Prinzipien, Muster und Best Practices, die technologieunabhängig sind. Gleichzeitig werden die Dienste und die Infrastruktur erläutert, die in der Microsoft Azure-Cloud zum Erstellen cloudnativer Systeme verfügbar sind.
 
-Was genau ist die Cloud Native? Setzen Sie sich zurück, und lassen Sie uns diese neue Welt erkunden.
+Also, was genau ist Cloud Native? Lehnen Sie sich zurück, entspannen Sie sich und lassen Sie sich von uns helfen, diese neue Welt zu erkunden.
 
 >[!div class="step-by-step"]
 >[Zurück](index.md)

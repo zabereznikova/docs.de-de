@@ -9,12 +9,12 @@ helpviewer_keywords:
 - interoperation with unmanaged code, marshaling
 - marshaling behavior
 ms.assetid: c0a9bcdf-3df8-4db3-b1b6-abbdb2af809a
-ms.openlocfilehash: 18282d14540027e4fae4fe152d3867ad8c223c37
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f7df323dacfbee3361fe75d831f1e87df328b194
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79181482"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80989219"
 ---
 # <a name="default-marshaling-behavior"></a>Standardmarshallingverhalten
 Das Interop-Marshalling basiert auf Regeln, die vorgeben, wie sich Daten, die Methodenparametern zugeordnet sind, verhalten, wenn sie zwischen verwaltetem und unverwaltetem Speicher übergeben werden. Mit diesen integrierten Regeln werden Marshalling-Aktivitäten wie Datentyptransformationen gesteuert, es wird gesteuert, ob eine aufrufende Instanz die Daten ändern kann, die an sie übergeben werden, und ob diese Änderungen an den Aufrufer zurückgegeben werden, und unter welchen Umständen der Marshaller Leistungsoptimierungen bereitstellt.  
@@ -172,7 +172,7 @@ internal class DelegateTest {
   
  Ein formatierter Typ ist ein komplexer Typ, der Informationen enthält, mit denen explizit das Layout seiner Member im Speicher gesteuert wird. Informationen zum Memberlayout werden mit dem <xref:System.Runtime.InteropServices.StructLayoutAttribute>-Attribut bereitgestellt. Das Layout kann einen der folgenden <xref:System.Runtime.InteropServices.LayoutKind>-Enumerationswerte aufweisen:  
   
-- **LayoutKind.Automatic**  
+- **LayoutKind.Auto**  
   
      Gibt an, dass die Common Language Runtime die Member dieses Typs aus Gründen der Effizienz frei neu anordnen kann. Wenn ein Werttyp allerdings an nicht verwalteten Code übergeben wird, ist das Layout der Member vorhersehbar. Der Versuch, eine solche Struktur automatisch zu marshallen, bewirkt eine Ausnahme.  
   

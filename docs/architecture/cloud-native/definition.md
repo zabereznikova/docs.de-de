@@ -3,18 +3,18 @@ title: Definition von cloudbasiert
 description: Erfahren Sie mehr über die Grundpfeiler, die das Fundament für Cloud-native Systeme bilden
 author: robvet
 ms.date: 08/20/2019
-ms.openlocfilehash: 27191a67b2964ac2e1636a4d7dc55d5314b78439
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 756a2565bd77fcef19a5f15579987836ff0e75a4
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79401736"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80989089"
 ---
 # <a name="defining-cloud-native"></a>Definieren der Cloud nativ
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
-Stoppen Sie, was Sie tun, und schreiben Sie 10 Ihrer Kollegen. Bitten Sie sie, den Begriff "Cloud Native" zu definieren. Gute Chance, dass Sie acht verschiedene Antworten erhalten. Interessanterweise werden in sechs Monaten, wenn sich Cloud-native Technologien und -Praktiken weiterentwickeln, auch ihre Definition.
+Stoppen Sie, was Sie tun, und schreiben Sie zehn Ihrer Kollegen. Bitten Sie sie, den Begriff "Cloud Native" zu definieren. Gute Chance, dass Sie acht verschiedene Antworten erhalten.
 
 Bei Cloud Native geht es darum, die Art und Weise zu ändern, wie wir über die Entwicklung kritischer Geschäftssysteme nachdenken.
 
@@ -113,7 +113,7 @@ Wie kommunizieren Back-End-Kerndienste miteinander? Werden Sie direkte HTTP-Aufr
 
 Die Kommunikation wird ausführlich behandelt Kapitel 4, *Cloud-Native Communication Patterns*.
 
-*Ausfallsicherheit*
+*Resilienz*
 
 Eine Microservices-Architektur verschiebt Ihr System von der in-Process- zur Netzwerkkommunikation. Was tun Sie in einer verteilten Umgebung, wenn Dienst B nicht auf einen Anruf von Dienst A reagiert? Was geschieht, wenn Dienst C vorübergehend nicht mehr verfügbar ist und andere Dienste, die ihn aufrufen, stacken und die Systemleistung beeinträchtigen?
 
@@ -340,5 +340,5 @@ Sie definieren Ihre Pipeline in Code in einer YAML-Datei zusammen mit dem Rest d
 Der Azure-Pipelinesdienst unterstützt die meisten Git-Anbieter und kann Bereitstellungspipelines für Anwendungen generieren, die auf Linux-, macOS- oder Windows-Plattformen geschrieben wurden. Es enthält Unterstützung für Java, .NET, JavaScript, Python, PHP, Go, XCode und C++.
 
 >[!div class="step-by-step"]
->[VorherigeS](introduction.md)
+>[Zurück](introduction.md)
 >[Weiter](candidate-apps.md)
