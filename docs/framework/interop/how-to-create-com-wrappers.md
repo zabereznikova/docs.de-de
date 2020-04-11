@@ -1,18 +1,18 @@
 ---
-title: 'Gewusst wie: Erstellen von COM-Wrappern'
+title: 'Vorgehensweise: Erstellen von COM-Wrappern'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - COM,wrappers creating
 - COM,wrappers Visual Studio
 ms.assetid: bdf89bea-1623-45ee-a57b-cf7c90395efa
-ms.openlocfilehash: 623df8aa86d25d9a57d3039bee01b0ee39d402a8
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 035d6439ec90426d7b68e05043ea8b6722f81d28
+ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73123942"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81121601"
 ---
-# <a name="how-to-create-com-wrappers"></a>Gewusst wie: Erstellen von COM-Wrappern
+# <a name="how-to-create-com-wrappers"></a>Vorgehensweise: Erstellen von COM-Wrappern
 
 Sie können mit Visual Studio 2005-Features oder den .NET Framework-Tools „Tlbimp.exe“ und „Regasm.exe“ COM-Wrapper (Component Object Model) erstellen. Beide Methoden generieren zwei Typen von COM-Wrappern:
 
@@ -30,7 +30,7 @@ In Visual Studio 2005 können Sie den COM-Wrapper als Verweis zu Ihrem Projekt h
 
 2. Klicken Sie im Menü **Projekt** auf **Alle Dateien anzeigen**.
 
-3. Klicken Sie im Menü **Projekt** auf **Verweis hinzufügen** .
+3. Klicken Sie im Menü **Projekt** auf **Verweis hinzufügen**.
 
 4. Klicken Sie im Dialogfeld „Verweis hinzufügen“ auf die Registerkarte **COM**, wählen Sie die Komponente aus, die Sie verwenden möchten, und klicken Sie auf **OK**.
 
@@ -39,7 +39,7 @@ In Visual Studio 2005 können Sie den COM-Wrapper als Verweis zu Ihrem Projekt h
 Sie können jetzt Code schreiben, um auf das COM-Objekt zuzugreifen. Sie können mit der Objektdeklaration beginnen, zum Beispiel mit einer `Imports`-Anweisung für Visual Basic oder einer `Using`-Anweisung für C#.
 
 > [!NOTE]
-> Wenn Sie Microsoft Office-Komponenten programmieren möchten, installieren Sie zunächst die [primären Interop-Assemblys von Microsoft Office](https://go.microsoft.com/fwlink/?LinkId=50479) (PIAs), die im Microsoft Download Center verfügbar sind. Wählen Sie in Schritt 4 die aktuelle Version der Objektbibliothek aus, die für das gewünschte Office-Produkt zur Verfügung steht, z.B. **Microsoft Word 11.0-Objektbibliothek**.  
+> Wenn Sie Microsoft Office-Komponenten programmieren möchten, installieren Sie zunächst die [Microsoft Office Primary Interop Assemblies Redistributable](https://www.microsoft.com/Download/details.aspx?id=3508).
   
 ### <a name="to-create-a-runtime-callable-wrapper-using-net-framework-tools"></a>Erstellen eines Runtime Callable Wrappers mit .NET Framework-Tools  
   
@@ -74,4 +74,4 @@ Sie können Regasm.exe für eine Assembly in jedem beliebigen Verzeichnis ausfü
 ## <a name="see-also"></a>Siehe auch
 
 - [Runtime Callable Wrapper (RCW)](../../standard/native-interop/runtime-callable-wrapper.md)
-- [COM Callable Wrapper](../../standard/native-interop/com-callable-wrapper.md)
+- [COM Callable Wrapper (CCW)](../../standard/native-interop/com-callable-wrapper.md)
