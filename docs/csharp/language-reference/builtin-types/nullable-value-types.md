@@ -4,19 +4,19 @@ description: Informationen zu Werttypen, die Nullwerte zulassen, in C# und der V
 ms.date: 11/04/2019
 helpviewer_keywords:
 - nullable value types [C#]
-ms.openlocfilehash: a84b3d60269491846b783e5046a84a1d14e258a1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c13ef6a091ec6aebd4608c5ed8d2c03b067c7312
+ms.sourcegitcommit: 2b3b2d684259463ddfc76ad680e5e09fdc1984d2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79398274"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80888071"
 ---
 # <a name="nullable-value-types-c-reference"></a>Nullable-Werttypen (C#-Referenz)
 
 Ein *Werttyp, der NULL zulässt* (wie `T?`) stellt alle Werte des zugrunde liegenden [Werttyps](value-types.md) `T` und einen zusätzlichen [NULL](../keywords/null.md)-Wert dar. Beispielsweise können Sie einer `bool?`-Variablen einen der folgenden drei Werte zuweisen: `true`, `false` oder `null`. Ein zugrunde liegender Werttyp `T` darf selbst kein Nullable-Werttyp sein.
 
 > [!NOTE]
-> C# 8.0 führt das Feature der Nullable-Verweistypen ein. Weitere Informationen finden Sie unter [Nullable-Verweistypen](../../nullable-references.md). Nullable-Werttypen sind ab C# 2 verfügbar.
+> C# 8.0 führt das Feature der Nullable-Verweistypen ein. Weitere Informationen finden Sie unter [Nullable-Verweistypen](nullable-reference-types.md). Nullable-Werttypen sind ab C# 2 verfügbar.
 
 Jeder Nullable-Werttyp ist eine Instanz der generischen Struktur <xref:System.Nullable%601?displayProperty=nameWithType>. Sie können auf einen Nullable-Werttyp mit einem zugrunde liegenden Typ `T` in einer der folgenden austauschbaren Formen verweisen: `Nullable<T>` oder `T?`.
 
@@ -120,7 +120,7 @@ Sie können den Code verwenden, der im folgenden Beispiel dargestellt wird, um z
 [!code-csharp-interactive[whether an instance is of a nullable type](snippets/NullableValueTypes.cs#IsInstanceNullable)]
 
 > [!NOTE]
-> Die in diesem Abschnitt beschriebenen Methoden sind im Fall von [Nullable-Verweistypen](../../nullable-references.md) nicht anwendbar.
+> Die in diesem Abschnitt beschriebenen Methoden sind im Fall von [Nullable-Verweistypen](nullable-reference-types.md) nicht anwendbar.
 
 ## <a name="c-language-specification"></a>C#-Sprachspezifikation
 
@@ -139,4 +139,4 @@ Weitere Informationen finden Sie in den folgenden Abschnitten der [C#-Sprachspez
 - <xref:System.Nullable%601?displayProperty=nameWithType>
 - <xref:System.Nullable?displayProperty=nameWithType>
 - <xref:System.Nullable.GetUnderlyingType%2A?displayProperty=nameWithType>
-- [Nullwerte zulassende Verweistypen](../../nullable-references.md)
+- [Nullwerte zulassende Verweistypen](nullable-reference-types.md)

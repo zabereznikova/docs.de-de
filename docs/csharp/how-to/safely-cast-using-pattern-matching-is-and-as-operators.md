@@ -6,12 +6,12 @@ helpviewer_keywords:
 - cast operators [C#], as and is operators
 - as operator [C#]
 - is operator [C#]
-ms.openlocfilehash: 34c34865a2feece5fe037daeb035292aafd015b9
-ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
+ms.openlocfilehash: 60e69a8ef55484e3b04f1674c35a1c5dadfa3b7c
+ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80249356"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81120997"
 ---
 # <a name="how-to-safely-cast-by-using-pattern-matching-and-the-is-and-as-operators"></a>Vorgehensweise: Sicheres Umwandeln mit Musterabgleich und den Operatoren „is“ und „as“
 
@@ -37,4 +37,4 @@ Wenn Sie testen möchten, ob eine Variable einen bestimmten Typ aufweist, Sie ab
 
 Wie Sie durch Vergleichen dieses Codes mit dem Code für den Musterabgleich sehen können, stellt die Syntax für den Musterabgleich robustere Features bereit, indem der Test und die Zuweisung in einer einzelnen Anweisung kombiniert werden. Verwenden Sie nach Möglichkeit die Syntax für den Musterabgleich.
 
-Sie können diese Beispiele ausprobieren, indem Sie sich den Code in unserem [GitHub-Repository](https://github.com/dotnet/samples/tree/master/snippets/csharp/how-to/safelycast) ansehen. Alternativ dazu können Sie die Beispiele [als ZIP-Datei](https://github.com/dotnet/samples/raw/master/snippets/csharp/how-to/safelycast.zip) herunterladen.
+Sie können diese Beispiele ausprobieren, indem Sie sich den Code in unserem [GitHub-Repository](https://github.com/dotnet/docs/tree/master/samples/snippets/csharp/how-to/safelycast) ansehen. Alternativ dazu können Sie die Beispiele [als ZIP-Datei](../../../samples/snippets/csharp/how-to/safelycast.zip) herunterladen.

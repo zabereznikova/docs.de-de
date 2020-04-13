@@ -11,12 +11,12 @@ helpviewer_keywords:
 - enumeration type [C#]
 - bit flags [C#]
 ms.assetid: bbeb9a0f-e9b3-41ab-b0a6-c41b1a08974c
-ms.openlocfilehash: ab5eb1679f846bf0e25d90a4d0e0a71f0bdb0096
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 15f5e9ccb1396277229ba935381812700f63ece8
+ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78847707"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81121157"
 ---
 # <a name="enumeration-types-c-reference"></a>Enumerationstypen (C#-Referenz)
 
@@ -66,7 +66,7 @@ Ab C# 7.3 können Sie `System.Enum` in einer Basisklasseneinschränkung (die als
 
 ## <a name="conversions"></a>Konvertierungen
 
-Für jeden Enumerationstyp gibt es explizite Konvertierungen zwischen dem Enumerationstyp und dem zugrunde liegenden integralen Typ. Wenn Sie einen Enumerationswert in den zugrunde liegenden Typ [umwandeln](../operators/type-testing-and-cast.md#cast-operator-), ist das Ergebnis der zugeordnete integrale Wert eines Enumerationsmembers.
+Für jeden Enumerationstyp gibt es explizite Konvertierungen zwischen dem Enumerationstyp und dem zugrunde liegenden integralen Typ. Wenn Sie einen Enumerationswert in den zugrunde liegenden Typ [umwandeln](../operators/type-testing-and-cast.md#cast-expression), ist das Ergebnis der zugeordnete integrale Wert eines Enumerationsmembers.
 
 [!code-csharp[enum conversions](snippets/EnumType.cs#Conversions)]
 

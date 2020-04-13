@@ -3,12 +3,12 @@ title: Erhöhte Zugriffsrechte für dotnet-Befehle
 description: Erfahren Sie mehr über die Best Practices für dotnet-Befehle, die erhöhte Zugriffsrechte erfordern.
 author: wli3
 ms.date: 06/26/2019
-ms.openlocfilehash: 4aff9badfa8ad9b83adc4496d4ebd6df29252e36
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f99e0b257772e0a73d4945f1129997d1d3308ed2
+ms.sourcegitcommit: f87ad41b8e62622da126aa928f7640108c4eff98
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78156763"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80805794"
 ---
 # <a name="elevated-access-for-dotnet-commands"></a>Erhöhte Zugriffsrechte für dotnet-Befehle
 
@@ -18,6 +18,7 @@ Die folgenden Befehle können mit erhöhten Rechten ausgeführt werden:
 
 - `dotnet tool`-Befehle wie [dotnet tool install](dotnet-tool-install.md).
 - `dotnet run --no-build`
+- `dotnet-core-uninstall`
 
 Wir empfehlen nicht, andere Befehle mit erhöhten Rechten auszuführen. Insbesondere empfehlen wir keine Erhöhung der Rechte mit Befehlen, die MSBuild verwenden, wie z.B. [dotnet restore](dotnet-restore.md), [dotnet build](dotnet-build.md) und [dotnet run](dotnet-run.md). Das Hauptproblem ist die Berechtigungsverwaltung, wenn ein Benutzer nach der Ausgabe von dotnet-Befehlen zwischen einem Root- und einem eingeschränkten Konto hin und her wechselt. Sie stellen als eingeschränkter Benutzer möglicherweise fest, dass Sie keinen Zugriff auf die von einem Root-Benutzer erstellte Datei haben. Es gibt Möglichkeiten, diese Situation zu lösen, aber sie sind zunächst unnötig.
 

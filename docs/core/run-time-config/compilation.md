@@ -3,12 +3,12 @@ title: Kompilierungskonfigurationseinstellungen
 description: Erfahren Sie mehr über Laufzeiteinstellungen, die die Funktionsweise des JIT-Compilers für .NET Core-Apps konfigurieren.
 ms.date: 11/27/2019
 ms.topic: reference
-ms.openlocfilehash: adf1f01dba7387b89ee56784e33653d6a132c0e3
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ac51aa13254b2f2b1fdd8d1dd9c52559831a1659
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77092888"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80989115"
 ---
 # <a name="run-time-configuration-options-for-compilation"></a>Laufzeitkonfigurationsoptionen für die Kompilierung
 
@@ -19,7 +19,7 @@ ms.locfileid: "77092888"
   - Die zweite Stufe erstellt optimierten Code im Hintergrund („Optimieren von JIT“).
 - In .NET Core 3.0 und höher ist die mehrstufige Kompilierung standardmäßig aktiviert.
 - In .NET Core 2.1 und 2.2 ist die mehrstufige Kompilierung standardmäßig deaktiviert.
-- Weitere Informationen finden Sie im [Leitfaden zur mehrstufigen Kompilierung](https://github.com/dotnet/runtime/blob/master/docs/design/features/tiered-compilation-guide.md).
+- Weitere Informationen finden Sie im [Leitfaden zur mehrstufigen Kompilierung](https://github.com/dotnet/runtime/blob/master/docs/design/features/tiered-compilation.md).
 
 | | Einstellungsname | Werte |
 | - | - | - |
