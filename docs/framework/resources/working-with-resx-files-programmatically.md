@@ -8,26 +8,27 @@ helpviewer_keywords:
 - resource files, .resx files
 - .resx files
 ms.assetid: 168f941a-2b84-43f8-933f-cf4a8548d824
-ms.openlocfilehash: 2bbca5712639e14370d090e95b78bb89eba134e4
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 3b84d77e4ac9b9889d1bc2f08e5ead6b81deecb0
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73129908"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81243036"
 ---
-# <a name="working-with-resx-files-programmatically"></a>Programmgesteuertes Arbeiten mit RESX-Dateien
-Da XML-Ressourcendateien (RESX) aus ordnungsgemäß definiertem XML-Code bestehen müssen, einschließlich eines Headers, der einem bestimmten Schema entsprechen muss, und auf den Daten in Name/Wert-Paaren folgen, werden Sie vermutlich feststellen, dass das manuelle Erstellen dieser Dateien ziemlich fehlerträchtig ist. Alternativ können Sie RESX-Dateien programmgesteuert mithilfe von Typen und Elementen aus der .NET-Klassenbibliothek erstellen. Sie können die .NET-Klassenbibliothek auch zum Abrufen der in RESX-Dateien gespeicherten Ressourcen verwenden. In diesem Thema wird erläutert, wie Sie die Typen und Elemente im <xref:System.Resources> -Namespace für das Arbeiten mit RESX-Dateien verwenden können.
+# <a name="work-with-resx-files-programmatically"></a>Programmgesteuertes Arbeiten mit RESX-Dateien
 
- Beachten Sie, dass dieser Artikel das Arbeiten mit XML-Dateien (RESX) behandelt, die Ressourcen enthalten. Informationen zum Arbeiten mit binären Ressourcendateien, die in Assemblys eingebettet wurden, finden Sie im Thema <xref:System.Resources.ResourceManager> .
+Da XML-Ressourcendateien (RESX) aus ordnungsgemäß definiertem XML-Code bestehen müssen, einschließlich eines Headers, der einem bestimmten Schema entsprechen muss, und auf den Daten in Name/Wert-Paaren folgen, werden Sie vermutlich feststellen, dass das manuelle Erstellen dieser Dateien ziemlich fehlerträchtig ist. Alternativ können Sie RESX-Dateien programmgesteuert mithilfe von Typen und Elementen aus der .NET-Klassenbibliothek erstellen. Sie können die .NET-Klassenbibliothek auch zum Abrufen der in RESX-Dateien gespeicherten Ressourcen verwenden. In diesem Artikel wird erläutert, wie <xref:System.Resources> Sie die Typen und Member im Namespace verwenden können, um mit .resx-Dateien zu arbeiten.
+
+In diesem Artikel wird das Arbeiten mit XML-Dateien (.resx) erläutert, die Ressourcen enthalten. Informationen zum Arbeiten mit binären Ressourcendateien, die <xref:System.Resources.ResourceManager>in Assemblys eingebettet wurden, finden Sie unter .
 
 > [!WARNING]
-> Es gibt nicht programmgesteuerte Verfahren zum Arbeiten mit RESX-Dateien. Wenn Sie einem [Visual Studio](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link)-Projekt eine Ressourcendatei hinzufügen, stellt Visual Studio eine Oberfläche zum Erstellen und Warten einer RESX-Datei bereit und konvertiert die RESX-Datei zum Zeitpunkt der Kompilierung automatisch in eine RESOURCES-Datei. Ferner können Sie RESX-Dateien in einem Texteditor direkt bearbeiten. Um eine Beschädigung der Datei zu vermeiden, müssen Sie allerdings sorgfältig darauf achten, keine der in der Datei gespeicherten binären Informationen zu verändern.
+> Es gibt nicht programmgesteuerte Verfahren zum Arbeiten mit RESX-Dateien. Wenn Sie einem Visual [Studio-Projekt](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) eine Ressourcendatei hinzufügen, stellt Visual Studio eine Schnittstelle zum Erstellen und Verwalten einer .resx-Datei bereit und konvertiert die .resx-Datei automatisch zur Kompilierungszeit in eine .resources-Datei. Ferner können Sie RESX-Dateien in einem Texteditor direkt bearbeiten. Um eine Beschädigung der Datei zu vermeiden, müssen Sie allerdings sorgfältig darauf achten, keine der in der Datei gespeicherten binären Informationen zu verändern.
 
 ## <a name="create-a-resx-file"></a>Erstellen einer RESX-Datei
 
 Sie können die Klasse <xref:System.Resources.ResXResourceWriter?displayProperty=nameWithType> verwenden, um eine RESX-Datei programmgesteuert zu erstellen, indem Sie folgende Schritte ausführen:
 
-1. Instanziieren Sie ein <xref:System.Resources.ResXResourceWriter> -Objekt, indem Sie die <xref:System.Resources.ResXResourceWriter.%23ctor%28System.String%29?displayProperty=nameWithType> -Methode aufrufen und den Namen der RESX-Datei angeben. Der Dateiname muss die Erweiterung „.resx“ enthalten. Wenn Sie das <xref:System.Resources.ResXResourceWriter> -Objekt in einem `using` -Block instanziieren, müssen Sie die Methode <xref:System.Resources.ResXResourceWriter.Close%2A?displayProperty=nameWithType> in Schritt 3 nicht explizit aufrufen.
+1. Instanziieren Sie ein <xref:System.Resources.ResXResourceWriter> -Objekt, indem Sie die <xref:System.Resources.ResXResourceWriter.%23ctor%28System.String%29> -Methode aufrufen und den Namen der RESX-Datei angeben. Der Dateiname muss die Erweiterung „.resx“ enthalten. Wenn Sie das <xref:System.Resources.ResXResourceWriter> -Objekt in einem `using` -Block instanziieren, müssen Sie die Methode <xref:System.Resources.ResXResourceWriter.Close%2A?displayProperty=nameWithType> in Schritt 3 nicht explizit aufrufen.
 
 2. Rufen Sie die <xref:System.Resources.ResXResourceWriter.AddResource%2A?displayProperty=nameWithType> -Methode für jede Ressource auf, die Sie der Datei hinzufügen möchten. Verwenden Sie die Überladungen dieser Methode, um Zeichenfolgen-, Objekt- und binäre Daten (Bytearray) hinzuzufügen. Wenn es sich bei der Ressource um ein Objekt handelt, muss es serialisierbar sein.
 
@@ -38,13 +39,13 @@ Die resultierende RESX-Datei weist den entsprechenden Header und ein `data` -Ken
 > [!WARNING]
 > Verwenden Sie Ressourcendateien nicht, um Kennwörter, sicherheitsrelevante Informationen oder private Daten zu speichern.
 
-Im folgenden Beispiel wird eine RESX-Datei mit dem Namen "CarResources.resx" erstellt, mit der sechs Zeichenfolgen, ein Symbol und zwei anwendungsdefinierte Objekte (zwei `Automobile` -Objekte) gespeichert werden. Beachten Sie, dass die Klasse `Automobile`, die im Beispiel definiert und instanziiert wird, mit dem <xref:System.SerializableAttribute>-Attribut gekennzeichnet ist.
+Im folgenden Beispiel wird eine RESX-Datei mit dem Namen "CarResources.resx" erstellt, mit der sechs Zeichenfolgen, ein Symbol und zwei anwendungsdefinierte Objekte (zwei `Automobile` -Objekte) gespeichert werden. Die `Automobile` Klasse, die im Beispiel definiert und instanziiert wird, wird mit dem <xref:System.SerializableAttribute> Attribut markiert.
 
 [!code-csharp[Conceptual.Resources.ResX#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.resx/cs/create1.cs#1)]
 [!code-vb[Conceptual.Resources.ResX#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.resx/vb/create1.vb#1)]
 
 > [!TIP]
-> Sie können auch [Visual Studio](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) zum Erstellen von RESX-Dateien verwenden. Zum Zeitpunkt der Kompilierung verwendet Visual Studio den [Resource File Generator (Resgen.exe)](../tools/resgen-exe-resource-file-generator.md) , um die RESX-Datei in eine binäre Ressourcendatei (RESOURCES) zu konvertieren, und bettet sie entweder in eine Anwendungsassembly oder in eine Satellitenassembly ein.
+> Sie können [Visual Studio](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) auch verwenden, um .resx-Dateien zu erstellen. Zum Zeitpunkt der Kompilierung verwendet Visual Studio den [Resource File Generator (Resgen.exe)](../tools/resgen-exe-resource-file-generator.md) , um die RESX-Datei in eine binäre Ressourcendatei (RESOURCES) zu konvertieren, und bettet sie entweder in eine Anwendungsassembly oder in eine Satellitenassembly ein.
 
 Eine RESX-Datei kann nicht in eine von der Laufzeitumgebung ausführbare Datei eingebettet oder in eine Satellitenassembly kompiliert werden. Sie müssen die RESX-Datei mithilfe des [Resource File Generator (Resgen.exe)](../tools/resgen-exe-resource-file-generator.md)in eine binäre Ressourcendatei (RESOURCES) konvertieren. Die resultierende RESOURCES-Datei kann dann in eine Anwendungsassembly oder eine Satellitenassembly eingebettet werden. Weitere Informationen finden Sie unter [Creating Resource Files](creating-resource-files-for-desktop-apps.md).
 
@@ -85,6 +86,6 @@ Eine RESX-Datei kann nicht in eine von der Laufzeitumgebung ausführbare Datei e
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Erstellen von Ressourcendateien](creating-resource-files-for-desktop-apps.md)
-- [Resgen.exe (Resource File Generator)](../tools/resgen-exe-resource-file-generator.md)
-- [Al.exe (Assembly Linker-Tool)](../tools/al-exe-assembly-linker.md)
+- [Creating Resource Files](creating-resource-files-for-desktop-apps.md)
+- [Resgen.exe (Ressourcendateigenerator)](../tools/resgen-exe-resource-file-generator.md)
+- [Al.exe (Assembly Linker)](../tools/al-exe-assembly-linker.md)

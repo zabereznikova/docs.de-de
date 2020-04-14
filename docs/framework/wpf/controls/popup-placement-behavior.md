@@ -7,12 +7,12 @@ helpviewer_keywords:
 - placing popups [WPF]
 - positioning popups [WPF]
 ms.assetid: fbf642e9-f670-4efd-a7af-a67468a1c8e1
-ms.openlocfilehash: 063b309ebaf0944787ce40725eed250e59f09dff
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1c377e62ffd334638031baee4d4831ac5a31acf3
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79176759"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81243257"
 ---
 # <a name="popup-placement-behavior"></a>Verhalten beim Platzieren von Popups
 Ein <xref:System.Windows.Controls.Primitives.Popup> Steuerelement zeigt Inhalt in einem separaten Fenster an, das über einer Anwendung schwebt. Sie können die Position <xref:System.Windows.Controls.Primitives.Popup> eines Relativen zu einem Steuerelement, der <xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A> <xref:System.Windows.Controls.Primitives.Popup.Placement%2A>Maus <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A> <xref:System.Windows.Controls.Primitives.Popup.HorizontalOffset%2A>oder <xref:System.Windows.Controls.Primitives.Popup.VerticalOffset%2A> dem Bildschirm mithilfe der Eigenschaften , , , und und anzeigen angeben.  Diese Eigenschaften arbeiten zusammen, um Ihnen Flexibilität <xref:System.Windows.Controls.Primitives.Popup>bei der Angabe der Position der zu geben.  
@@ -203,6 +203,6 @@ Ein <xref:System.Windows.Controls.Primitives.Popup> Steuerelement zeigt Inhalt i
 ### <a name="customizing-popup-placement"></a>Anpassen der Popupplatzierung  
  Sie können den Zielursprung und den Popupausrichtungspunkt anpassen, indem Sie die <xref:System.Windows.Controls.Primitives.Popup.Placement%2A> Eigenschaft auf <xref:System.Windows.Controls.Primitives.PlacementMode.Custom>festlegen. Definieren Sie <xref:System.Windows.Controls.Primitives.CustomPopupPlacementCallback> dann einen Delegaten, der eine Reihe möglicher Platzierungspunkte <xref:System.Windows.Controls.Primitives.Popup>und Primärachsen (in der Reihenfolge der Präferenz) für die zurückgibt. Der Punkt, der den <xref:System.Windows.Controls.Primitives.Popup> größten Teil des zeigt, ist ausgewählt.  Die Position <xref:System.Windows.Controls.Primitives.Popup> des wird automatisch <xref:System.Windows.Controls.Primitives.Popup> angepasst, wenn der am Rand des Bildschirms ausgeblendet wird. Ein Beispiel finden Sie unter [Angeben einer benutzerdefinierten Popupposition](how-to-specify-a-custom-popup-position.md).  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
-- [Beispiel für das Platzieren eines Popups](https://github.com/dotnet/samples/tree/master/snippets/csharp/VS_Snippets_Wpf/PopupPositionSnippet/CS)
+- [Beispiel für das Platzieren eines Popups](https://github.com/dotnet/docs/tree/master/samples/snippets/csharp/VS_Snippets_Wpf/PopupPositionSnippet/CS)

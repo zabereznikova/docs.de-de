@@ -1,5 +1,5 @@
 ---
-title: Schema für Anwendungseinstellungen
+title: Anwendungseinstellungsschema
 ms.date: 03/30/2017
 helpviewer_keywords:
 - schema application settings
@@ -7,52 +7,52 @@ helpviewer_keywords:
 - Windows Forms, application settings schema
 - configuration schema [.NET Framework], application settings
 ms.assetid: 5797fcff-6081-4e8c-bebf-63d9c70cf14b
-ms.openlocfilehash: 89a08434332b0242fe57e9dcaa3b3ebcc5692d06
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 90d471888950347c041b4824b659ce33fda512d7
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69927763"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81242828"
 ---
-# <a name="application-settings-schema"></a>Schema für Anwendungseinstellungen
+# <a name="application-settings-schema"></a>Anwendungseinstellungsschema
 
-Anwendungseinstellungen ermöglichen es einer Windows Forms-oder ASP.NET-Anwendung, anwendungsspezifische und benutzerspezifische Einstellungen zu speichern und abzurufen. In diesem Kontext ist eine *Einstellung* ein beliebiges Informationselement, das spezifisch für die Anwendung oder spezifisch für den aktuellen Benutzer ist – alles von einer Datenbank-Verbindungs Zeichenfolge bis zur bevorzugten Standardfenster Größe des Benutzers.
+Mithilfe von Anwendungseinstellungen können eine Windows Forms- oder ASP.NET-Anwendung anwendungsbezogene und benutzerbezogene Einstellungen speichern und abrufen. In diesem Zusammenhang ist eine *Einstellung* alle Informationen, die spezifisch für die Anwendung oder spezifisch für den aktuellen Benutzer sein können – alles von einer Datenbankverbindungszeichenfolge bis zur bevorzugten Standardfenstergröße des Benutzers.
 
-Standardmäßig verwenden Anwendungseinstellungen in einer Windows Forms Anwendung die <xref:System.Configuration.LocalFileSettingsProvider> -Klasse, die das .NET-Konfigurationssystem zum Speichern von Einstellungen in einer XML-Konfigurationsdatei verwendet. Weitere Informationen zu den von Anwendungseinstellungen verwendeten Dateien finden Sie unter [Architektur der Anwendungseinstellungen](../../winforms/advanced/application-settings-architecture.md).
+Standardmäßig verwenden Anwendungseinstellungen in einer Windows <xref:System.Configuration.LocalFileSettingsProvider> Forms-Anwendung die Klasse, die das .NET-Konfigurationssystem verwendet, um Einstellungen in einer XML-Konfigurationsdatei zu speichern. Weitere Informationen zu den Dateien, die von Anwendungseinstellungen verwendet werden, finden Sie unter [Architektur der Anwendungseinstellungen](../../winforms/advanced/application-settings-architecture.md).
 
-Anwendungseinstellungen definiert die folgenden Elemente als Teil der Konfigurationsdateien, die Sie verwendet.
+Die Anwendungseinstellungen definieren die folgenden Elemente als Teil der konfigurationsdateien, die sie verwendet.
 
 | Element                    | Beschreibung                                                                           |
 | -------------------------- | ------------------------------------------------------------------------------------- |
-| **\<applicationSettings>** | Enthält alle  **\<Einstellungs >** Tags, die für die Anwendung spezifisch sind.                         |
-| **\<userSettings>**        | Enthält alle  **\<Einstellungs >** Tags, die für den aktuellen Benutzer spezifisch sind.                        |
-| **\<setting>**             | Definiert eine Einstellung. Untergeordnetes Element von  **\<applicationSettings >** oder  **\<User Settings >** . |
-| **\<value>**               | Definiert den Wert einer Einstellung. Untergeordnetes Element von  **\<Setting >** .                                   |
+| **\<applicationSettings>** | Enthält ** \<** alle Einstellungen>Tags, die für die Anwendung spezifisch sind.                         |
+| **\<userEinstellungen>**        | Enthält ** \<** alle Einstellungen>Tags, die für den aktuellen Benutzer spezifisch sind.                        |
+| **\<Einstellung>**             | Definiert eine Einstellung. Untergeordnetes Element von ** \<applicationSettings>** oder ** \<userSettings>**. |
+| **\<Wert>**               | Definiert den Wert einer Einstellung. Kind ** \< **der Einstellung>.                                   |
 
-## <a name="applicationsettings-element"></a>\<applicationSettings-> Element
+## <a name="applicationsettings-element"></a>\<applicationSettings>-Element
 
-Dieses Element enthält alle  **\<Einstellungs >** Tags, die für eine Instanz der Anwendung auf einem Client Computer spezifisch sind. Es definiert keine Attribute.
+Dieses Element ** \<** enthält alle Einstellungen>Tags, die für eine Instanz der Anwendung auf einem Clientcomputer spezifisch sind. Es definiert keine Attribute.
 
-## <a name="usersettings-element"></a>\<userSettings-> Element
+## <a name="usersettings-element"></a>\<userSettings>-Element
 
-Dieses Element enthält alle  **\<Einstellungs >** Tags, die für den Benutzer spezifisch sind, der derzeit die Anwendung verwendet. Es definiert keine Attribute.
+Dieses Element ** \<** enthält alle Einstellungen>Tags, die für den Benutzer spezifisch sind, der die Anwendung derzeit verwendet. Es definiert keine Attribute.
 
-## <a name="setting-element"></a>\<festlegen > Elements
+## <a name="setting-element"></a>\<Festlegen> Elements
 
-Dieses Element definiert eine Einstellung. Es verfügt über die folgenden Attribute:
+Dieses Element definiert eine Einstellung. Es hat die folgenden Attribute.
 
-| Attribut        | Beschreibung |
+| Attribut        | BESCHREIBUNG |
 | ---------------- | ----------- |
-| **name**         | Erforderlich. Die eindeutige ID der Einstellung. Einstellungen, die über Visual Studio erstellt wurden, werden `ProjectName.Properties.Settings`mit dem Namen gespeichert. |
-| **serializedAs** | Erforderlich. Das Format, das zum Serialisieren des Werts in Text verwendet werden soll. Gültige Werte sind:<br><br>- `string`. Der Wert wird als Zeichenfolge mit einem <xref:System.ComponentModel.TypeConverter>serialisiert.<br>- `xml`. Der Wert wird mithilfe der XML-Serialisierung serialisiert.<br>- `binary`. Der Wert wird als Text codierte Binärdatei mit binärer Serialisierung serialisiert.<br />- `custom`. Der Einstellungs Anbieter kennt diese Einstellung und serialisiert und deserialisiert Sie. |
+| **name**         | Erforderlich. Die eindeutige ID der Einstellung. Einstellungen, die über Visual Studio `ProjectName.Properties.Settings`erstellt wurden, werden mit dem Namen gespeichert. |
+| **Serializeas** | Erforderlich. Das Format, das zum Serialisieren des Werts in Text verwendet werden soll. Gültige Werte sind:<br><br>- `string`. Der Wert wird als Zeichenfolge <xref:System.ComponentModel.TypeConverter>mit einer serialisiert.<br>- `xml`. Der Wert wird mithilfe der XML-Serialisierung serialisiert.<br>- `binary`. Der Wert wird als textcodierte Binärdatei mithilfe der binären Serialisierung serialisiert.<br />- `custom`. Der Einstellungsanbieter verfügt über inhärente Kenntnisse dieser Einstellung und serialisiert und deserialisiert sie. |
 
-## <a name="value-element"></a>\<Wert >-Element
+## <a name="value-element"></a>\<Wert>-Element
 
 Dieses Element enthält den Wert einer Einstellung.
 
 ## <a name="example"></a>Beispiel
 
-Das folgende Beispiel zeigt eine Anwendungs Einstellungsdatei, die zwei Einstellungen für Anwendungsbereiche und zwei benutzerspezifische Einstellungen definiert:
+Das folgende Beispiel zeigt eine Anwendungseinstellungsdatei, die zwei anwendungsbezogene Und zwei benutzerbezogene Einstellungen definiert:
 
 ```xml
 <?xml version="1.0" encoding="utf-8" ?>

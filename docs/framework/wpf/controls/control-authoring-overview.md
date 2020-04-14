@@ -8,14 +8,14 @@ helpviewer_keywords:
 - controls [WPF], authoring overview
 - authoring overview for controls [WPF]
 ms.assetid: 3d864748-cff0-4e63-9b23-d8e5a635b28f
-ms.openlocfilehash: d5dd2d962c554b860fb6f68110945d56c4ee03ab
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2326520039085beb5f5294e23db67b67f9d7d7da
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79401028"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81243270"
 ---
-# <a name="control-authoring-overview"></a>Übersicht über das Erstellen von Steuerelementen
+# <a name="control-authoring-overview"></a>Übersicht über die Steuerung der Erstellung
 
 Dank der Erweiterbarkeit des [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]-Steuerelementmodells ist das Erstellen neuer Steuerelemente nur selten erforderlich. In bestimmten Fällen lässt sich das Erstellen benutzerdefinierter Steuerelemente dennoch nicht vermeiden. In diesem Thema werden die Funktionen, dank deren Sie auf das Erstellen neuer Steuerelementen in den meisten Fällen verzichten können, sowie verschiedene Modelle zum Erstellen von Steuerelementen in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] behandelt. Außerdem wird in diesem Thema auch das Erstellen eines neuen Steuerelements veranschaulicht.
 
@@ -227,7 +227,7 @@ Falls Ihr Steuerelement in einer anderen Assembly als die Anwendung liegt, müss
 
 #### <a name="defining-resources-at-the-element-level"></a>Definieren von Ressourcen auf der Elementebene
 
-Sie können freigegebene Ressourcen auf der Elementebene definieren, indem Sie ein benutzerdefiniertes Ressourcenverzeichnis erstellen und es mit dem Ressourcenverzeichnis Ihres Steuerelements zusammenführen.  Falls Sie sich für diese Methode entscheiden, können Sie die Ressourcendatei beliebig benennen und sie im Ordner speichern, wo Ihre Steuerelemente liegen. Für Ressourcen auf der Elementebene können ebenso einfache Zeichenfolgen als Schlüssel verwendet werden. Im folgenden Beispiel <xref:System.Windows.Media.LinearGradientBrush> wird eine Ressourcendatei mit dem Namen Dictionary1.xaml erstellt.
+Sie können freigegebene Ressourcen auf Elementebene definieren, indem Sie ein benutzerdefiniertes Ressourcenwörterbuch erstellen und es mit dem Ressourcenwörterbuch des Steuerelements zusammenführen.  Falls Sie sich für diese Methode entscheiden, können Sie die Ressourcendatei beliebig benennen und sie im Ordner speichern, wo Ihre Steuerelemente liegen. Für Ressourcen auf der Elementebene können ebenso einfache Zeichenfolgen als Schlüssel verwendet werden. Im folgenden Beispiel <xref:System.Windows.Media.LinearGradientBrush> wird eine Ressourcendatei mit dem Namen Dictionary1.xaml erstellt.
 
 [!code-xaml[SharedResources#1](~/samples/snippets/csharp/VS_Snippets_Wpf/SharedResources/CS/Dictionary1.xaml#1)]
 
@@ -264,7 +264,7 @@ Designspezifische Ressourcen werden in einem Ressourcenverzeichnis mit dem entsp
 
 Sie müssen nicht für jedes Design eine Ressource definieren. Wenn eine Ressource nicht für ein bestimmtes Design definiert ist, durchsucht das Steuerelement `Classic.xaml` nach der Ressource. Falls die Ressource weder in der Datei, die dem aktuellen Design entspricht, noch in `Classic.xaml` definiert ist, verwendet das Steuerelement die generische Ressource, die sich im Ressourcenverzeichnis mit dem Namen `generic.xaml` befindet.  Die `generic.xaml`-Datei befindet sich im gleichen Ordner mit den designspezifischen Ressourcenverzeichnisdateien. Obwohl `generic.xaml` keinem bestimmten Windows-Design entspricht, ist es dennoch ein Ressourcenverzeichnis auf der Designebene.
 
-Das benutzerdefinierte Steuerelement ["C"](https://github.com/dotnet/samples/tree/master/snippets/csharp/VS_Snippets_Wpf/CustomControlNumericUpDown/CSharp) oder ["Visual Basic](https://github.com/dotnet/samples/tree/master/snippets/visualbasic/VS_Snippets_Wpf/CustomControlNumericUpDown/visualbasic) NumericUpDown" mit Design- `NumericUpDown` und UI-Automatisierungsunterstützung enthält zwei Ressourcenwörterbücher für das Steuerelement: eines in generic.xaml und das andere in Luna.NormalColor.xaml.
+Das benutzerdefinierte Steuerelement ["C"](https://github.com/dotnet/docs/tree/master/samples/snippets/csharp/VS_Snippets_Wpf/CustomControlNumericUpDown/CSharp) oder ["Visual Basic](https://github.com/dotnet/docs/tree/master/samples/snippets/visualbasic/VS_Snippets_Wpf/CustomControlNumericUpDown/visualbasic) NumericUpDown" mit Design- `NumericUpDown` und UI-Automatisierungsunterstützung enthält zwei Ressourcenwörterbücher für das Steuerelement: eines in generic.xaml und das andere in Luna.NormalColor.xaml.
 
 Wenn Sie <xref:System.Windows.Controls.ControlTemplate> eine in einer der themenspezifischen Ressourcenwörterbuchdateien absetzen, müssen Sie einen <xref:System.Windows.DependencyProperty.OverrideMetadata%28System.Type%2CSystem.Windows.PropertyMetadata%29> statischen <xref:System.Windows.FrameworkElement.DefaultStyleKey%2A>Konstruktor für das Steuerelement erstellen und die Methode auf der aufrufen, wie im folgenden Beispiel gezeigt.
 
@@ -290,7 +290,7 @@ Im folgenden Beispiel <xref:System.Windows.ThemeInfoAttribute.GenericDictionaryL
 [!code-csharp[CustomControlNumericUpDown#ThemesSection](~/samples/snippets/csharp/VS_Snippets_Wpf/CustomControlNumericUpDown/CSharp/CustomControlLibrary/Properties/AssemblyInfo.cs#themessection)]
 [!code-vb[CustomControlNumericUpDown#ThemesSection](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CustomControlNumericUpDown/visualbasic/customcontrollibrary/my project/assemblyinfo.vb#themessection)]
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Entwerfen von XAML-Code in Visual Studio](/visualstudio/xaml-tools/designing-xaml-in-visual-studio)
 - [Paket-URI in WPF](../app-development/pack-uris-in-wpf.md)

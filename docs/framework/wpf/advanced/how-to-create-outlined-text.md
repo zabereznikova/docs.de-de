@@ -11,14 +11,15 @@ helpviewer_keywords:
 - linear gradient brush [WPF]
 - typography [WPF], outline effects
 ms.assetid: 4aa3cf6e-1953-4f26-8230-7c1409e5f28d
-ms.openlocfilehash: d0ce46b9895589fd4635b567136204368a6431ad
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 86bfa396a2aa44eb511c014687501d60e170a396
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79186859"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81278924"
 ---
-# <a name="how-to-create-outlined-text"></a>Gewusst wie: Erstellen von Text mit Kontur
+# <a name="how-to-create-outlined-text"></a>Gewusst wie: Erstellen von umrissenem Text
+
 In den meisten Fällen verwenden Sie Text in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Form einer Sammlung diskreter Zeichen oder Glyphen, wenn Sie Textzeichenfolgen zu Textzeichenfolgen hinzufügen. Sie können z. B. einen linearen <xref:System.Windows.Controls.Control.Foreground%2A> Verlaufspinsel <xref:System.Windows.Controls.TextBox> erstellen und ihn auf die Eigenschaft eines Objekts anwenden. Wenn Sie das Textfeld anzeigen oder bearbeiten, wird der lineare Farbverlaufspinsel automatisch auf den aktuellen Zeichensatz in der Textzeichenfolge angewendet.  
   
  ![Angezeigter Text mit einem linearen Farbverlaufspinsel](./media/how-to-create-outlined-text/text-linear-gradient.jpg)
@@ -35,7 +36,7 @@ In den meisten Fällen verwenden Sie Text in [!INCLUDE[TLA#tla_winclient](../../
   
  ![Text mit auf Strich angewendeten Bildpinsel](./media/how-to-create-outlined-text/image-brush-application.jpg)
   
- Es ist auch möglich, das Begrenzungsrahmenrechteck des konvertierten Textes zu ändern oder hervorzuheben. Das folgende Beispiel veranschaulicht eine Möglichkeit zum Erstellen visueller Effekte, indem Sie den Strich und die Hervorhebung von konvertiertem Text ändern.  
+ Es ist auch möglich, das Begrenzungsrahmenrechteck des konvertierten Textes zu ändern oder hervorzuheben. Das folgende Beispiel veranschaulicht eine Möglichkeit, visuelle Effekte zu erstellen, indem Sie den Strich und die Hervorhebung von konvertiertem Text ändern.  
   
  ![Text mit Bildpinsel, der auf Strich und Hervorhebung angewendet wird](./media/how-to-create-outlined-text/image-brush-text-application.jpg)
 
@@ -45,15 +46,15 @@ In den meisten Fällen verwenden Sie Text in [!INCLUDE[TLA#tla_winclient](../../
  [!code-csharp[OutlineTextControlViewer#CreateText](~/samples/snippets/csharp/VS_Snippets_Wpf/OutlineTextControlViewer/CSharp/OutlineTextControl.cs#createtext)]
  [!code-vb[OutlineTextControlViewer#CreateText](~/samples/snippets/visualbasic/VS_Snippets_Wpf/OutlineTextControlViewer/visualbasic/outlinetextcontrol.vb#createtext)]  
   
- Um die abgerufenen <xref:System.Windows.Media.Geometry> Objekte anzuzeigen, müssen <xref:System.Windows.Media.DrawingContext> Sie auf das Objekt zugreifen, das den konvertierten Text anzeigt. In diesen Codebeispielen wird dies durch Erstellen eines benutzerdefinierten Steuerelementobjekts erfolgen, das von einer Klasse abgeleitet wird, die benutzerdefiniertes Rendern unterstützt.  
+ Um die abgerufenen <xref:System.Windows.Media.Geometry> Objekte anzuzeigen, müssen <xref:System.Windows.Media.DrawingContext> Sie auf das Objekt zugreifen, das den konvertierten Text anzeigt. In diesen Codebeispielen wird dieser Zugriff durch Erstellen eines benutzerdefinierten Steuerelementobjekts erreicht, das von einer Klasse abgeleitet wird, die benutzerdefiniertes Rendern unterstützt.  
   
  Um <xref:System.Windows.Media.Geometry> Objekte im benutzerdefinierten Steuerelement anzuzeigen, <xref:System.Windows.UIElement.OnRender%2A> geben Sie eine Außerkraftsetzung für die Methode an. Die überschriebene Methode <xref:System.Windows.Media.DrawingContext.DrawGeometry%2A> sollte die <xref:System.Windows.Media.Geometry> Methode zum Zeichnen der Objekte verwenden.  
   
  [!code-csharp[OutlineTextControlViewer#OnRender](~/samples/snippets/csharp/VS_Snippets_Wpf/OutlineTextControlViewer/CSharp/OutlineTextControl.cs#onrender)]
  [!code-vb[OutlineTextControlViewer#OnRender](~/samples/snippets/visualbasic/VS_Snippets_Wpf/OutlineTextControlViewer/visualbasic/outlinetextcontrol.vb#onrender)]  
   
-  Informationen zur Quelle des benutzerdefinierten Benutzersteuerelementobjekts finden Sie unter [OutlineTextControl.cs für C-](https://github.com/dotnet/samples/blob/master/snippets/csharp/VS_Snippets_Wpf/OutlineTextControlViewer/CSharp/OutlineTextControl.cs) und [OutlineTextControl.vb für Visual Basic](https://github.com/dotnet/samples/blob/master/snippets/visualbasic/VS_Snippets_Wpf/OutlineTextControlViewer/visualbasic/outlinetextcontrol.vb).
+  Informationen zur Quelle des benutzerdefinierten Benutzersteuerelementobjekts finden Sie unter [OutlineTextControl.cs für C-](https://github.com/dotnet/docs/tree/master/samples/snippets/csharp/VS_Snippets_Wpf/OutlineTextControlViewer/CSharp/OutlineTextControl.cs) und [OutlineTextControl.vb für Visual Basic](https://github.com/dotnet/docs/blob/master/samples/snippets/visualbasic/VS_Snippets_Wpf/OutlineTextControlViewer/visualbasic/outlinetextcontrol.vb).
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Zeichnen von formatiertem Text](drawing-formatted-text.md)

@@ -2,12 +2,12 @@
 title: Sitzungen, Instanziierung und Parallelität
 ms.date: 03/30/2017
 ms.assetid: 50797a3b-7678-44ed-8138-49ac1602f35b
-ms.openlocfilehash: a7466d819e15f3bfe8def2d9407dcf2c6e0c7346
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 19dedddadad2f27acdeeaceb2c186a731fa79c32
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79184442"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81243114"
 ---
 # <a name="sessions-instancing-and-concurrency"></a>Sitzungen, Instanziierung und Parallelität
 Eine *Sitzung* ist die Korrelation (d. h. die Beziehung) aller zwischen zwei Endpunkten gesendeter Nachrichten. *Instanziierung* bezieht sich auf die Steuerung der Lebensdauer von benutzerdefinierten Dienstobjekten und den zugehörigen <xref:System.ServiceModel.InstanceContext> -Objekten. *Parallelität* bezeichnet die Kontrolle der Anzahl von Threads, die gleichzeitig in einem <xref:System.ServiceModel.InstanceContext> ausgeführt werden.  
@@ -63,7 +63,7 @@ public class CalculatorService : ICalculatorInstance
 ### <a name="well-known-singleton-services"></a>Bekannte Singleton-Dienste  
  Gelegentlich ist eine Variante für einzelne Instanzendienstobjekte nützlich: Sie können selbst ein Dienstobjekt und den Diensthost, der dieses Objekt verwendet, erstellen. Hierfür müssen Sie auch die <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A?displayProperty=nameWithType> -Eigenschaft auf <xref:System.ServiceModel.InstanceContextMode.Single> festlegen, damit keine Ausnahme ausgelöst wird, sobald der Diensthost geöffnet wird.  
   
- Verwenden Sie zum Erstellen eines solchen Diensts den <xref:System.ServiceModel.ServiceHost.%23ctor%28System.Object%2CSystem.Uri%5B%5D%29?displayProperty=nameWithType> -Konstruktor. Dieser stellt eine Alternative zur Implementierung eines benutzerdefinierten <xref:System.ServiceModel.Dispatcher.IInstanceContextInitializer?displayProperty=nameWithType> dar, wenn Sie eine bestimmte Objektinstanz für einen Singleton-Dienst bereitstellen möchten. Sie können diese Überladung verwenden, wenn der Dienstimplementierungstyp schwer zu konstruieren ist (z. B. wenn kein parameterloser öffentlicher Konstruktor implementiert wird).  
+ Verwenden Sie zum Erstellen eines solchen Diensts den <xref:System.ServiceModel.ServiceHost.%23ctor%28System.Object%2CSystem.Uri%5B%5D%29> -Konstruktor. Dieser stellt eine Alternative zur Implementierung eines benutzerdefinierten <xref:System.ServiceModel.Dispatcher.IInstanceContextInitializer?displayProperty=nameWithType> dar, wenn Sie eine bestimmte Objektinstanz für einen Singleton-Dienst bereitstellen möchten. Sie können diese Überladung verwenden, wenn der Dienstimplementierungstyp schwer zu konstruieren ist (z. B. wenn kein parameterloser öffentlicher Konstruktor implementiert wird).  
   
  Beachten Sie, dass einige Features, die sich auf das Instancing-Verhalten von Windows Communication Foundation (WCF) beziehen, unterschiedlich funktionieren, wenn diesem Konstruktor ein Objekt bereitgestellt wird. So zeigt zum Beispiel der Aufruf von <xref:System.ServiceModel.InstanceContext.ReleaseServiceInstance%2A?displayProperty=nameWithType> keine Wirkung, wenn eine Singleton-Objektinstanz bereitgestellt wird. Dementsprechend werden auch alle anderen Instanzfreigabemechanismen ignoriert. Der <xref:System.ServiceModel.ServiceHost> verhält sich immer so, als ob die <xref:System.ServiceModel.OperationBehaviorAttribute.ReleaseInstanceMode%2A?displayProperty=nameWithType> -Eigenschaft für alle Vorgänge auf <xref:System.ServiceModel.ReleaseInstanceMode.None?displayProperty=nameWithType> festgelegt ist.  
   
@@ -107,11 +107,11 @@ public class CalculatorService : ICalculatorConcurrency
 |PerSession|- Verhalten mit Sessionful Channel: Eine Sitzung und <xref:System.ServiceModel.InstanceContext> für jeden Kanal.<br />- Verhalten mit sitzungslosem Kanal: Eine Ausnahme wird ausgelöst.|- Verhalten mit Sessionful Channel: Eine Sitzung und <xref:System.ServiceModel.InstanceContext> für jeden Kanal.<br />- Verhalten mit sitzungslosem Kanal: Ein <xref:System.ServiceModel.InstanceContext> für jeden Anruf.|- Verhalten mit sessionful Channel: Eine Ausnahme wird ausgelöst.<br />- Verhalten mit sitzungslosem Kanal: Ein <xref:System.ServiceModel.InstanceContext> für jeden Anruf.|  
 |Single|- Verhalten mit sessionful Channel: <xref:System.ServiceModel.InstanceContext> Eine Sitzung und eine für alle Anrufe.<br />- Verhalten mit sitzungslosem Kanal: Eine Ausnahme wird ausgelöst.|- Verhalten mit sessionful Channel: Eine Sitzung und <xref:System.ServiceModel.InstanceContext> für das erstellte oder benutzerdefinierte Singleton.<br />- Verhalten mit sitzungslosem Kanal: Ein <xref:System.ServiceModel.InstanceContext> für das erstellte oder benutzerdefinierte Singleton.|- Verhalten mit sessionful Channel: Eine Ausnahme wird ausgelöst.<br />- Verhalten mit sitzungslosem Kanal: Ein <xref:System.ServiceModel.InstanceContext> für jeden erstellten Singleton oder für das benutzerdefinierte Singleton.|  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Verwenden von Sitzungen](../../../../docs/framework/wcf/using-sessions.md)
 - [Vorgehensweise: Erstellen eines Diensts, der Sitzungen erfordert](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-that-requires-sessions.md)
-- [Gewusst wie: Steuern der Dienstinstanzierung](../../../../docs/framework/wcf/feature-details/how-to-control-service-instancing.md)
+- [Vorgehensweise: Steuern der Dienstinstanzierung](../../../../docs/framework/wcf/feature-details/how-to-control-service-instancing.md)
 - [Parallelität](../../../../docs/framework/wcf/samples/concurrency.md)
 - [Instanziierung](../../../../docs/framework/wcf/samples/instancing.md)
 - [Sitzung](../../../../docs/framework/wcf/samples/session.md)

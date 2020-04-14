@@ -5,18 +5,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d613a22b-07d7-41a4-bada-1adc653b9b5d
-ms.openlocfilehash: e7273c1e140e52eb37a30b6cabeb9e9a83a6fa2d
-ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
+ms.openlocfilehash: 5649ef4cc05c9c16b1f8f626ba5e2e584b0e52eb
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/11/2020
-ms.locfileid: "81121561"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81278911"
 ---
 # <a name="override-the-identity-of-a-service-for-authentication"></a>Überschreiben der Identität eines Dienstes für die Authentifizierung
 
 In der Regel müssen Sie die Identität für einen Dienst nicht festlegen, da die Auswahl eines Clientanmeldeinformationstyps über den in den Dienstmetadaten angezeigten Identitätstyp entscheidet. Der folgende Konfigurationscode verwendet beispielsweise das `clientCredentialType` [ \<>-Element wsHttpBinding](../../configure-apps/file-schema/wcf/wshttpbinding.md) und legt das Attribut auf Windows fest.  
 
- Das folgende Web Services Description Language (WSDL)-Fragment zeigt die Identität für den zuvor definierten Endpunkt an. In diesem Beispiel wird der Dienst als selbst gehosteter Dienstusername@contoso.comunter einem bestimmten Benutzerkonto ( ) ausgeführt, und daher enthält die Benutzerprinzipalname-Identität (UPN) den Kontonamen. Der UPN wird in einer Windows-Domäne auch als Benutzeranmeldename bezeichnet.  
+ Das folgende Web Services Description Language (WSDL)-Fragment zeigt die Identität für den zuvor definierten Endpunkt an. In diesem Beispiel wird der Dienst als selbst gehosteter Dienstusername@contoso.comunter einem bestimmten Benutzerkonto ( ) ausgeführt, und daher enthält die Benutzerprinzipalname-Identität (UPN) den Kontonamen. Der UPN wird auch als Benutzeranmeldename in einer Windows-Domäne bezeichnet.  
 
  Eine Beispielanwendung, die die Identitätseinstellung veranschaulicht, finden Sie unter [Dienstidentitätsbeispiel](../samples/service-identity-sample.md). Weitere Informationen zur Dienstidentität finden Sie unter [Dienstidentität und Authentifizierung](../feature-details/service-identity-and-authentication.md).  
   
@@ -41,18 +41,18 @@ In der Regel müssen Sie die Identität für einen Dienst nicht festlegen, da di
   
 - Wenn Sie Sicherheit auf Nachrichtenebene verwenden, schlägt die Authentifizierung abhängig vom Authentifizierungsmodus möglicherweise fehl:  
   
-- Wenn Sie den `spnego`-Modus verwenden und das `AllowNtlm`-Attribut auf `false` festgelegt ist, schlägt die Authentifizierung fehl.  
+- Wenn Sie `spnego` den Modus `AllowNtlm` verwenden und `false`das Attribut auf festgelegt ist, schlägt die Authentifizierung fehl.  
   
-- Verwenden Sie den `spnego`-Modus verwenden und ist das `AllowNtlm`-Attribut auf `true` festgelegt, schlägt die Authentifizierung fehl, wenn der UPN leer ist; sie ist jedoch erfolgreich, wenn der SPN leer ist.  
+- Wenn Sie `spnego` den Modus `AllowNtlm` verwenden und `true`das Attribut auf festgelegt ist, schlägt die Authentifizierung fehl, wenn der UPN leer ist, aber erfolgreich ist, wenn der SPN leer ist.  
   
 - Wenn Sie Kerberos direkt (wird auch als "One-Shot" bezeichnet) verwenden, schlägt die Authentifizierung fehl.  
   
-### <a name="using-the-identity-element-in-configuration"></a>Verwenden \<der Identität> Element in der Konfiguration  
- Wenn Sie den Clientanmeldeinformationstyp in der zuvor gezeigten Bindung zu Certificate ändern, enthält die generierte WSDL ein serialisiertes Base64-X.509-Zertifikat als Identitätswert, wie im folgenden Code gezeigt. Dies ist der Standard für alle Clientanmeldeinformationstypen außer Windows.  
+### <a name="use-the-identity-element-in-configuration"></a>Verwenden \<der Identität> Elements in der Konfiguration  
+ Wenn Sie den Clientanmeldeinformationstyp in `Certificate`der zuvor in der Bindung angezeigten Bindung ändern, enthält die generierte WSDL ein Serialisiertes X.509-Zertifikat von Base64 für den Identitätswert, wie im folgenden Code dargestellt. Dies ist der Standard für alle Clientanmeldeinformationstypen außer Windows.  
 
  Sie können den Wert der Standarddienstidentität oder den Typ der `identity` Identität ändern, indem Sie das <>-Element in der Konfiguration verwenden oder die Identität im Code festlegen. Der folgende Konfigurationscode legt eine DNS-Identität (Domain Name System) mit dem Wert `contoso.com` fest.  
 
-### <a name="setting-identity-programmatically"></a>Programmgesteuertes Festlegen der Identität  
+### <a name="set-identity-programmatically"></a>Identität programmgesteuert festlegen  
  Ihr Dienst muss keine explizite Identität angeben, da WCF sie automatisch bestimmt. WCF ermöglicht es Ihnen jedoch, bei Bedarf eine Identität auf einem Endpunkt anzugeben. Mit dem folgenden Code wird ein neuer Dienstendpunkt mit einer bestimmten DNS-Identität hinzugefügt.  
   
  [!code-csharp[C_Identity#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_identity/cs/source.cs#5)]

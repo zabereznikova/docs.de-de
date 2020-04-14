@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Erstellen eines benutzerdefinierten Ansichtsmodus für ein ListView-Objekt'
+title: 'Gewusst wie: Erstellen eines benutzerdefinierten Ansichtsmodus für eine ListView'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,45 +7,46 @@ dev_langs:
 helpviewer_keywords:
 - ListView controls [WPF], creating custom View mode
 ms.assetid: 71077349-eeb9-4344-ab29-b5df96df3314
-ms.openlocfilehash: de11250a2e7529fba3b262e42b6714262738fa90
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3b9ca17bddcecb1895205fca76f0a489ecf25c4f
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61910909"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81243218"
 ---
-# <a name="how-to-create-a-custom-view-mode-for-a-listview"></a>Vorgehensweise: Erstellen eines benutzerdefinierten Ansichtsmodus für ein ListView-Objekt
-In diesem Beispiel wird gezeigt, wie eine benutzerdefinierte <xref:System.Windows.Controls.ListView.View%2A> Modus für eine <xref:System.Windows.Controls.ListView> Steuerelement.  
+# <a name="how-to-create-a-custom-view-mode-for-a-listview"></a>Gewusst wie: Erstellen eines benutzerdefinierten Ansichtsmodus für eine ListView
+
+In diesem Beispiel wird <xref:System.Windows.Controls.ListView.View%2A> gezeigt, <xref:System.Windows.Controls.ListView> wie Sie einen benutzerdefinierten Modus für ein Steuerelement erstellen.  
   
 ## <a name="example"></a>Beispiel  
- Verwenden Sie die <xref:System.Windows.Controls.ViewBase> Klasse bei der Erstellung einer benutzerdefinierten Ansicht für die <xref:System.Windows.Controls.ListView> Steuerelement. Das folgende Beispiel zeigt einen Anzeigemodus aus, die aufgerufen wird `PlainView`, ergibt sich aus der <xref:System.Windows.Controls.ViewBase> Klasse.  
+ Sie müssen <xref:System.Windows.Controls.ViewBase> die Klasse verwenden, wenn <xref:System.Windows.Controls.ListView> Sie eine benutzerdefinierte Ansicht für das Steuerelement erstellen. Das folgende Beispiel zeigt `PlainView` einen Ansichtsmodus <xref:System.Windows.Controls.ViewBase> namens , der von der Klasse abgeleitet ist.  
   
  [!code-csharp[ListViewCustomView#PlainView](~/samples/snippets/csharp/VS_Snippets_Wpf/ListViewCustomView/CSharp/PlainView.cs#plainview)]
  [!code-vb[ListViewCustomView#PlainView](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ListViewCustomView/visualbasic/plainview.vb#plainview)]  
   
- Verwenden Sie zum Anwenden eines Stils für die benutzerdefinierte Ansicht der <xref:System.Windows.Style> Klasse. Das folgende Beispiel definiert eine <xref:System.Windows.Style> für die `PlainView` sichtmodus befinden. Im vorherigen Beispiel dieses Format festgelegt ist, als Wert für die <xref:System.Windows.Controls.ViewBase.DefaultStyleKey%2A> für definierte Eigenschaft `PlainView`.  
+ Um eine Formatvorlage auf die <xref:System.Windows.Style> benutzerdefinierte Ansicht anzuwenden, verwenden Sie die Klasse. Im folgenden Beispiel <xref:System.Windows.Style> wird `PlainView` ein für den Ansichtsmodus definiert. Im vorherigen Beispiel wird dieser Stil als <xref:System.Windows.Controls.ViewBase.DefaultStyleKey%2A> Wert der Eigenschaft `PlainView`festgelegt, die für definiert ist.  
   
  [!code-xaml[ListViewCustomView#PlainViewStyle](~/samples/snippets/csharp/VS_Snippets_Wpf/ListViewCustomView/CSharp/Themes/Generic.xaml#plainviewstyle)]  
   
- Um das Layout der Daten in einen benutzerdefinierten Ansichtsmodus zu definieren, definieren eine <xref:System.Windows.DataTemplate> Objekt. Das folgende Beispiel definiert eine <xref:System.Windows.DataTemplate> , die verwendet werden kann, zum Anzeigen von Daten in die `PlainView` sichtmodus befinden.  
+ Um das Layout von Daten in einem <xref:System.Windows.DataTemplate> benutzerdefinierten Ansichtsmodus zu definieren, definieren Sie ein Objekt. Im folgenden Beispiel <xref:System.Windows.DataTemplate> wird ein definiert, das `PlainView` zum Anzeigen von Daten im Ansichtsmodus verwendet werden kann.  
   
  [!code-xaml[ListViewCustomView#PlainViewDataTemplate](~/samples/snippets/csharp/VS_Snippets_Wpf/ListViewCustomView/CSharp/Window1.xaml#plainviewdatatemplate)]  
   
- Das folgende Beispiel zeigt, wie Sie definieren eine <xref:System.Windows.ResourceKey> für die `PlainView` Anzeigemodus, verwendet der <xref:System.Windows.DataTemplate> , die im vorherigen Beispiel definiert ist.  
+ Das folgende Beispiel zeigt, <xref:System.Windows.ResourceKey> wie `PlainView` sie eine <xref:System.Windows.DataTemplate> für den Ansichtsmodus definieren, der die im vorherigen Beispiel definierte verwendet.  
   
  [!code-xaml[ListViewCustomView#PlainViewtileView](~/samples/snippets/csharp/VS_Snippets_Wpf/ListViewCustomView/CSharp/Window1.xaml#plainviewtileview)]  
   
- Ein <xref:System.Windows.Controls.ListView> -Steuerelement kann eine benutzerdefinierte Ansicht verwenden, setzen Sie die <xref:System.Windows.Controls.ListView.View%2A> Eigenschaft, um den Ressourcenschlüssel. Das folgende Beispiel zeigt, wie angegeben `PlainView` als den Anzeigemodus für eine <xref:System.Windows.Controls.ListView>.  
+ Ein <xref:System.Windows.Controls.ListView> Steuerelement kann eine benutzerdefinierte <xref:System.Windows.Controls.ListView.View%2A> Ansicht verwenden, wenn Sie die Eigenschaft auf den Ressourcenschlüssel festlegen. Das folgende Beispiel zeigt, wie Sie <xref:System.Windows.Controls.ListView>den Ansichtsmodus für eine angeben. `PlainView`  
   
  [!code-csharp[ListViewCustomView#ListViewtileViewmode](~/samples/snippets/csharp/VS_Snippets_Wpf/ListViewCustomView/CSharp/Window1.xaml.cs#listviewtileviewmode)]
  [!code-vb[ListViewCustomView#ListViewtileViewmode](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ListViewCustomView/visualbasic/window1.xaml.vb#listviewtileviewmode)]  
   
- Das vollständige Beispiel finden Sie unter [ListView mit mehreren Ansichten (C#)](https://github.com/dotnet/samples/tree/master/snippets/csharp/VS_Snippets_Wpf/ListViewCustomView/CSharp) oder [ListView mit mehreren Views(Visual Basic)](https://github.com/dotnet/samples/tree/master/snippets/visualbasic/VS_Snippets_Wpf/ListViewCustomView/visualbasic).  
+ Das vollständige Beispiel finden Sie unter [ListView mit mehreren Ansichten (C)](https://github.com/dotnet/docs/tree/master/samples/snippets/csharp/VS_Snippets_Wpf/ListViewCustomView/CSharp) oder [ListView mit mehreren Ansichten (Visual Basic)](https://github.com/dotnet/docs/tree/master/samples/snippets/visualbasic/VS_Snippets_Wpf/ListViewCustomView/visualbasic).  
   
 ## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Windows.Controls.ListView>
 - <xref:System.Windows.Controls.GridView>
-- [Themen zu Vorgehensweisen](listview-how-to-topics.md)
+- [Themen zur Vorgehensweise](listview-how-to-topics.md)
 - [Übersicht über ListView](listview-overview.md)
 - [Übersicht über GridView](gridview-overview.md)
