@@ -2,12 +2,12 @@
 title: Modernisieren vorhandener .NET-Anwendungen mit Azure Cloud und Windows-Containern (2. Auflage)
 description: Erfahren Sie in diesem E-Book, wie vorhandene Anwendungen in Azure Cloud und Container übertragen, verschoben und modernisiert werden können.
 ms.date: 04/28/2018
-ms.openlocfilehash: 9439de84dd46ac3153d951378764d10184c33a52
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 95a5870254481a4c6c9eed82b5be5e1eb10be346
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "77628392"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80987945"
 ---
 # <a name="modernize-existing-net-applications-with-azure-cloud-and-windows-containers-2nd-edition"></a>Modernisieren vorhandener .NET-Anwendungen mit Azure Cloud und Windows-Containern (2. Auflage)
 
@@ -98,7 +98,7 @@ Tabelle 1-1 beschreibt die wichtigsten Vorteile und Gründe für die Wahl der ei
 | **Vorteile**|
 | <li>Keine Neustrukturierung, kein neuer Code <li> Geringster Aufwand für eine schnelle Migration. <li> Kleinster gemeinsamen Nenner, der in Azure unterstützt wird. <li> Grundlegende Verfügbarkeitsgarantien. <li> Nach dem Wechsel in die Cloud ist es einfacher, noch mehr zu modernisieren. | <li> Keine Neustrukturierung <li> Minimale Code-/Konfigurationsänderungen <li> Verbesserte Bereitstellung und DevOps-Agilität beim Release aufgrund von Containern. <li> Höhere Dichte und niedrigere Bereitstellungskosten. <li> Portabilität von Apps und Abhängigkeiten. <li> Flexibilität der Hostziele: Paas-Ansätze oder IaaS | <li> Architektur für die Cloud: Sie profitieren von den besten Vorteilen der Cloud, es ist aber neuer Code erforderlich. <li> Cloudnative Microservicesansätze. <li> Moderne unternehmenskritische Anwendungen, cloudrobust, hyperskalierbar <li> Vollständig verwaltete Dienste. <li> Optimiert für die Skalierung. <li> Optimiert für autonome Agilität durch Subsysteme. <li> Basiert auf Bereitstellung und DevOps. |
 | **Herausforderungen** |
-| <li> Geringerer Cloudwert, abgesehen von der Verschiebung der Betriebskosten oder der Schließung von Datencentern. <li> Sehr wenig wird verwaltet: Kein Patchen von Betriebssystemen oder Middleware, ggf. werden Infrastrukturlösungen wie Terraform, Spinnaker oder Puppet verwendet. | <li> Containerisierung ist ein zusätzlicher erforderlicher Schritt in der Lernkurve für Entwickler und den IT-Betrieb. <li> DevOps und CI/CD-Pipelines sind bei diesem Ansatz in der Regel „ein Muss“. Wenn sie zurzeit nicht in der Kultur der Organisation vorhanden sind, stellt dies möglicherweise eine weitere Herausforderung dar.| <li> Erfordert eine Neustrukturierung für cloudnative Apps und Microservicearchitekturen und erfordert in der Regel erhebliches Refactoring von Code oder ein Neuschreiben bei der Modernisierung (erhöhter Zeit- und Budgetbedarf)|
+| <li> Geringerer Cloudwert, abgesehen von der Verschiebung der Betriebskosten oder der Schließung von Datencentern. <li> Sehr wenig wird verwaltet: Kein Patchen von Betriebssystemen oder Middleware, ggf. werden Infrastrukturlösungen wie Terraform, Spinnaker oder Puppet verwendet. | <li> Containerisierung ist ein zusätzlicher erforderlicher Schritt in der Lernkurve für Entwickler und den IT-Betrieb. <li> DevOps und CI/CD-Pipelines sind bei diesem Ansatz in der Regel ein Muss. Wenn sie zurzeit nicht in der Kultur der Organisation vorhanden sind, stellt dies möglicherweise eine weitere Herausforderung dar.| <li> Erfordert eine Neustrukturierung für cloudnative Apps und Microservicearchitekturen und erfordert in der Regel erhebliches Refactoring von Code oder ein Neuschreiben bei der Modernisierung (erhöhter Zeit- und Budgetbedarf)|
 > **Tabelle 1-1.** Vorteile und Herausforderungen von Modernisierungspfaden für vorhandene .NET-Anwendungen und -Dienste
 
 ### <a name="key-technologies-and-architectures-by-maturity-level"></a>Schlüsseltechnologien und -architekturen nach Reifegrad
