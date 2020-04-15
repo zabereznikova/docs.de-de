@@ -1,12 +1,12 @@
 ---
 title: Attribute (C#)
 ms.date: 04/26/2018
-ms.openlocfilehash: 2a07035ea97bb0ff1a8f4793fe8a30d3a42c34a7
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 62424163303417746a67707d9ef34185954db316
+ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79397641"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81389539"
 ---
 # <a name="attributes-c"></a>Attribute (C#)
 
@@ -23,7 +23,7 @@ Attribute verfügen über die folgenden Eigenschaften:
 
 Attribute können in nahezu jeder Deklaration platziert werden, auch wenn ein bestimmtes Attribut die Typen der Deklarationen einschränkt, für die es gültig ist. In C# geben Sie ein Attribut durch Angabe des Namens des Attributs an, eingeschlossen in eckigen Klammern ([]), oberhalb der Deklaration der Entität, auf die es angewendet wird.
 
-In diesem Beispiel wird das <xref:System.SerializableAttribute>-Attribut benutzt, um ein spezifisches Merkmal auf eine Klasse anzuwenden:
+In diesem Beispiel wird das Attribut <xref:System.SerializableAttribute> benutzt, um ein spezifisches Merkmal auf eine Klasse anzuwenden:
 
 [!code-csharp[Using the serializable attribute](~/samples/snippets/csharp/attributes/AttributesOverview.cs#1)]
 
@@ -67,7 +67,7 @@ Verwenden Sie die folgende Syntax, um ein Attributziel explizit zu kennzeichnen:
 
 Die Liste der möglichen `target`-Werte wird in der folgenden Tabelle gezeigt:
 
-|Zielwert|Anwendungsbereich|
+|Zielwert|Betrifft|
 |------------------|----------------|
 |`assembly`|Gesamte Assembly|
 |`module`|Aktuelle Assemblymodul|
@@ -95,7 +95,7 @@ Im folgenden Beispiel wird gezeigt, wie Attribute auf Methoden, Methodenparamete
 [!code-csharp[Applying attributes to different code elements](../../../../../samples/snippets/csharp/attributes/AttributesOverview.cs#6)]
 
 > [!NOTE]
-> Unabhängig von den Zielen, auf denen `ValidatedContract` definiert wird, um gültig zu sein, muss das Ziel `return` angegeben werden, selbst wenn `ValidatedContract` nur für die Rückgabewerte definiert wurde. Das heißt, der Compiler verwendet keine `AttributeUsage`-Informationen zum Auflösen von mehrdeutigen Attributzielen. Weitere Informationen finden Sie unter [AttributeUsage (C#)](attributeusage.md).
+> Unabhängig von den Zielen, auf denen `ValidatedContract` definiert wird, um gültig zu sein, muss das Ziel `return` angegeben werden, selbst wenn `ValidatedContract` nur für die Rückgabewerte definiert wurde. Das heißt, der Compiler verwendet keine `AttributeUsage`-Informationen zum Auflösen von mehrdeutigen Attributzielen. Weitere Informationen finden Sie unter [AttributeUsage (C#)](../../../language-reference/attributes/general.md).
 
 ## <a name="common-uses-for-attributes"></a>Häufige Verwendungsmöglichkeiten für Attribute
 
@@ -118,12 +118,12 @@ Die folgende Liste enthält einige häufige Verwendungsmöglichkeiten von Attrib
 Weitere Informationen finden Sie unter:
 
 - [Erstellen benutzerdefinierter Attribute (C#)](creating-custom-attributes.md)  
-- [Zugriff auf Attribute mit Reflektion (C#)](accessing-attributes-by-using-reflection.md)  
+- [Accessing Attributes by Using Reflection (C#) (Zugriff auf Attribute mit Reflektion (C#))](accessing-attributes-by-using-reflection.md)  
 - [Erstellen einer Union in C/C++ mit Attributen (C#)](how-to-create-a-c-cpp-union-by-using-attributes.md)  
 - [Allgemeine Attribute (C#)](common-attributes.md)  
-- [Aufruferinformationen (C#)](../caller-information.md)  
+- [Aufruferinformationen (C#)](../../../language-reference/attributes/caller-information.md)  
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [C#-Programmierhandbuch](../../index.md)
 - [Reflektion (C#)](../reflection.md)
