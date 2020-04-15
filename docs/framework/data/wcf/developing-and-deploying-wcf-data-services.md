@@ -7,12 +7,12 @@ helpviewer_keywords:
 - deploying [WCF Data Services
 - developing applications [WCF Data Services]
 ms.assetid: 6557c0e3-5aea-4f6e-bc14-77ad317a168b
-ms.openlocfilehash: 61527e51ea4d28cfe4589f6bed32b3c505443c22
-ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
+ms.openlocfilehash: 4591175da5078a194bfe69884701e5432a0c38a3
+ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/11/2020
-ms.locfileid: "81121171"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81389728"
 ---
 # <a name="develop-and-deploy-wcf-data-services"></a>Entwickeln und Bereitstellen von WCF-Datendiensten
 
@@ -42,7 +42,7 @@ Wenn Sie einen WCF-Datendienst als ASP.NET Anwendung oder ASP.NET Website mithil
 
 1. **Lokaler IIS-Server**
 
-     Wenn Sie einen Datendienst erstellen, der eine ASP.NET Anwendung oder ASP.NET Website ist, die auf Internetinformationsdiensten (Internet Information Services, IIS) ausgeführt wird, wird empfohlen, dass Sie den Datendienst mithilfe von IIS auf dem lokalen Computer entwickeln und testen. Die Ausführung des Datendiensts unter IIS erleichtert die Ablaufverfolgung von HTTP-Anforderungen während des Debuggens. Zudem können Sie so vorab die Rechte bestimmen, die IIS für den Zugriff auf Dateien, Datenbanken und andere für den Datendienst erforderliche Ressourcen erfordert. Um den Datendienst auf IIS auszuführen, müssen Sie sicherstellen, dass sowohl IIS als auch Windows Communication Foundation (WCF) ordnungsgemäß installiert und konfiguriert sind und Zugriff auf IIS-Konten im Dateisystem und in Datenbanken gewähren. Weitere Informationen finden Sie unter [How to: Develop a WCF Data Service Running on IIS](how-to-develop-a-wcf-data-service-running-on-iis.md).
+     Wenn Sie einen Datendienst erstellen, der eine ASP.NET Anwendung oder ASP.NET Website ist, die auf Internetinformationsdiensten (Internet Information Services, IIS) ausgeführt wird, wird empfohlen, dass Sie den Datendienst mithilfe von IIS auf dem lokalen Computer entwickeln und testen. Die Ausführung des Datendiensts unter IIS erleichtert die Ablaufverfolgung von HTTP-Anforderungen während des Debuggens. Zudem können Sie so vorab die Rechte bestimmen, die IIS für den Zugriff auf Dateien, Datenbanken und andere für den Datendienst erforderliche Ressourcen erfordert. Stellen Sie zum Ausführen des Datendienstes auf IIS sicher, dass sowohl IIS als auch Windows Communication Foundation (WCF) ordnungsgemäß installiert und konfiguriert sind, und gewähren Sie Zugriff auf IIS-Konten im Dateisystem und in datenbanken. Weitere Informationen finden Sie unter [How to: Develop a WCF Data Service Running on IIS](how-to-develop-a-wcf-data-service-running-on-iis.md).
 
     > [!NOTE]
     > Sie müssen Visual Studio mit Administratorrechten ausführen, damit die Entwicklungsumgebung den lokalen IIS-Server konfigurieren kann.
@@ -61,7 +61,7 @@ Wenn Sie einen WCF-Datendienst als ASP.NET Anwendung oder ASP.NET Website mithil
 
     - Die zusätzlichen Funktionen von IIS sind auf diesem Server nicht verfügbar (z. B. die Authentifizierung).
 
-    - Dieser Server kann keine geblockten HTTP-Streams verarbeiten, die vom WCF Data Services-Client standardmäßig gesendet werden, wenn er auf große Binärdaten vom Datendienst zugreift. Weitere Informationen finden Sie unter [Streaming Provider](streaming-provider-wcf-data-services.md).
+    - Dieser Server kann keine geblockten HTTP-Streams verarbeiten, die standardmäßig vom WCF Data Services-Client gesendet werden, wenn er auf große Binärdaten vom Datendienst zugreift. Weitere Informationen finden Sie unter [Streaming Provider](streaming-provider-wcf-data-services.md).
 
     - Dieser Server hat Probleme bei`.`der Verarbeitung des Zeitraums ( ) in einer URL, obwohl dieses Zeichen von WCF Data Services in Schlüsselwerten unterstützt wird.
 
@@ -74,11 +74,11 @@ Wenn Sie einen WCF-Datendienst als ASP.NET Anwendung oder ASP.NET Website mithil
 
 ### <a name="development-tips"></a>Tipps für die Entwicklung
 
-Beachten Sie beim Entwickeln eines Datendiensts die folgenden Hinweise:
+Berücksichtigen Sie beim Entwickeln eines Datendienstes Folgendes:
 
-- Bestimmen Sie die Sicherheitsanforderungen des Datendiensts, wenn Sie vorhaben, Benutzer zu authentifizieren oder den Zugriff für bestimmte Benutzer einzuschränken. Weitere Informationen finden Sie unter [Securing WCF Data Services](securing-wcf-data-services.md).
+- Wenn Sie beabsichtigen, Benutzer zu authentifizieren oder den Zugriff für bestimmte Benutzer einzuschränken, legen Sie die Sicherheitsanforderungen Ihres Datendienstes fest. Weitere Informationen finden Sie unter [Securing WCF Data Services](securing-wcf-data-services.md).
 
-- Ein HTTP-Überprüfungsprogramm kann beim Debuggen eines Datendiensts hilfreich sein, da es Ihnen die Möglichkeit bietet, den Inhalt von Anforderungs- und Antwortnachrichten zu überprüfen. Zum Überprüfen von HTTP-Anforderungen an den Datendienst und HTTP-Antworten vom Datendienst kann eine beliebige Netzwerkpaketanalyse verwendet werden, die die Anzeige von Rohpaketen unterstützt.
+- Ein HTTP-Inspektionsprogramm kann beim Debuggen eines Datendienstes hilfreich sein, indem Es Ihnen ermöglicht, den Inhalt von Anforderungs- und Antwortnachrichten zu überprüfen. Zum Überprüfen von HTTP-Anforderungen an den Datendienst und HTTP-Antworten vom Datendienst kann eine beliebige Netzwerkpaketanalyse verwendet werden, die die Anzeige von Rohpaketen unterstützt.
 
 - Beim Debuggen eines Datendienstes möchten Sie möglicherweise mehr Informationen über einen Fehler vom Datendienst abrufen als während des regulären Betriebs. Sie können zusätzliche Fehlerinformationen vom Datendienst abrufen, indem Sie die <xref:System.Data.Services.DataServiceConfiguration.UseVerboseErrors%2A> -Eigenschaft in der <xref:System.Data.Services.DataServiceConfiguration> auf `true` festlegen und die <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A> -Eigenschaft des <xref:System.ServiceModel.Description.ServiceDebugBehavior> -Attributs der Datendienstklasse auf `true`festlegen. Weitere Informationen finden Sie im Beitrag [Debugging WCF Data Services](https://docs.microsoft.com/archive/blogs/phaniraj/debugging-wcf-data-services). Sie können die Ablaufverfolgung in WCF auch aktivieren, um Ausnahmen anzuzeigen, die im HTTP-Messaging-Layer ausgelöst wurden. Weitere Informationen finden Sie unter [Configuring Tracing](../../wcf/diagnostics/tracing/configuring-tracing.md).
 
@@ -119,13 +119,13 @@ Ein WCF Data Service bietet Flexibilität bei der Auswahl des Prozesses, von dem
 
 ### <a name="deployment-considerations"></a>Überlegungen zur Bereitstellung
 
-Beachten Sie beim Bereitstellen eines Datendiensts die folgenden Hinweise:
+Berücksichtigen Sie bei der Bereitstellung eines Datendienstes Folgendes:
 
 - Wenn Sie einen Datendienst bereitstellen, der den Entity Framework-Anbieter für den Zugriff auf eine SQL Server-Datenbank verwendet, müssen Sie möglicherweise auch Datenstrukturen, Daten oder beides mit der Datendienstbereitstellung weitergeben. Visual Studio kann automatisch Skripts (.sql-Dateien) erstellen, um dies in der Zieldatenbank zu tun, und diese Skripts können in das Webbereitstellungspaket einer ASP.NET Anwendung aufgenommen werden. Weitere Informationen finden Sie unter [Gewusst wie: Bereitstellen einer Datenbank mit einem Webanwendungsprojekt](https://docs.microsoft.com/previous-versions/dd465343(v=vs.100)). Bei einer ASP.NET Website können Sie dies mithilfe des **Datenbankveröffentlichungs-Assistenten** in Visual Studio tun. Weitere Informationen finden Sie unter [Veröffentlichen einer SQL-Datenbank](https://docs.microsoft.com/previous-versions/aspnet/bb907585(v=vs.100)).
 
 - Da WCF Data Services eine grundlegende WCF-Implementierung enthält, können Sie Windows Server AppFabric verwenden, um einen Datendienst zu überwachen, der auf IIS bereitgestellt wird und unter Windows Server ausgeführt wird. Weitere Informationen zur Verwendung von Windows Server AppFabric zum Überwachen eines Datendienstes finden Sie im Beitrag Nachverfolgung von [WCF-Datendiensten mit Windows Server AppFabric](https://docs.microsoft.com/archive/blogs/rjacobs/tracking-wcf-data-services-with-windows-server-appfabric).
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Hosten des Datendiensts](hosting-the-data-service-wcf-data-services.md)
 - [Sichern von WCF Data Services](securing-wcf-data-services.md)

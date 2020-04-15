@@ -2,16 +2,19 @@
 title: XML Schema Definition-Tool (Xsd.exe)
 ms.date: 03/30/2017
 ms.assetid: a6e6e65c-347f-4494-9457-653bf29baac2
-ms.openlocfilehash: cd017eb1866fff2ce8fd7a858b184351ef13e815
-ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
+ms.openlocfilehash: 6ec99e77db4215184547ea2bbbe0d1ff8ad3c286
+ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80588346"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81389770"
 ---
 # <a name="xml-schema-definition-tool-xsdexe"></a>XML Schema Definition-Tool (Xsd.exe)
 
 Das XML Schema Definition-Tool (Xsd.exe) generiert XML-Schema- oder Common Language Runtime-Klassen aus XDR-, XML- und XSD-Dateien oder aus Klassen in einer Laufzeitassembly.
+
+Das XML-Schemadefinitionstool (Xsd.exe) befindet sich in der Regel im folgenden Pfad:
+_C:\\Programmdateien\\(x86) Microsoft\\\\SDKs\\\\Windows -Version, bin NETFX , Version, Tools\\_
 
 ## <a name="syntax"></a>Syntax
 
@@ -126,7 +129,7 @@ xsd /p:GenerateSchemaFromType.xml ConsoleApplication1.exe
 
 Die folgenden Optionen für das `<generateSchemas>`-Element schließen sich gegenseitig aus.
 
-|Element|BESCHREIBUNG|
+|Element|Beschreibung|
 |-------------|-----------------|
 |\<Assembly>|Gibt eine Assembly an, auf deren Grundlage das Schema generiert werden soll.|
 |\<type>|Gibt einen in einer Assembly enthaltenen Typ an, für den ein Schema generiert werden soll.|
@@ -145,7 +148,7 @@ Um eine Codedatei zu generieren, verwenden Sie das `<generateClasses>`-Element. 
 
  Sie können u.&#160;a. folgende Optionen für das `<generateClasses>`-Element festlegen:
 
-|Element|BESCHREIBUNG|
+|Element|Beschreibung|
 |-------------|-----------------|
 |\<Element>|Gibt ein Element in der XSD-Datei an, für das Code generiert werden soll.|
 |\<schemaImporterExtensions>|Gibt einen von der <xref:System.Xml.Serialization.Advanced.SchemaImporterExtension>-Klasse abgeleiteten Typ an.|
@@ -156,7 +159,7 @@ In der folgenden Tabelle sind die Attribute aufgeführt, die zusätzlich mit dem
 |attribute|BESCHREIBUNG|
 |---------------|-----------------|
 |language|Gibt die zu verwendende Programmiersprache an. Wählen Sie unter `CS` (C#, dem Standard), `VB` (Visual Basic), `JS` (JScript) oder `VJS` (Visual J#) aus. Sie können auch einen vollqualifizierten Namen für eine Klasse angeben, die <xref:System.CodeDom.Compiler.CodeDomProvider> implementiert.|
-|Namespace|Gibt den Namespace für den generierten Code an. Der Namespace muss CLR-Standards entsprechen (darf beispielsweise keine Leerzeichen oder umgekehrten Schrägstriche enthalten).|
+|namespace|Gibt den Namespace für den generierten Code an. Der Namespace muss CLR-Standards entsprechen (darf beispielsweise keine Leerzeichen oder umgekehrten Schrägstriche enthalten).|
 |Optionen|Einer der folgenden Werte: `none`, `properties` (generiert Eigenschaften anstelle von öffentlichen Feldern), `order` oder `enableDataBinding` (siehe Schalter `/order` und `/enableDataBinding` im vorherigen Abschnitt zu Optionen für XSD-Dateien).|
 
  Sie können auch steuern, wie `DataSet`-Code generiert wird, indem Sie das `<generateDataSet>`-Element verwenden. Der folgende XML-Code gibt `DataSet` an, dass <xref:System.Data.DataTable> der generierte Code Strukturen (z. B. die Klasse) verwendet, um Visual Basic-Code für ein angegebenes Element zu erstellen. Die generierten DataSet-Strukturen unterstützen LINQ-Abfragen.
@@ -170,7 +173,7 @@ In der folgenden Tabelle sind die Attribute aufgeführt, die zusätzlich mit dem
 
 Sie können u.&#160;a. folgende Optionen für das `<generateDataSet>`-Element festlegen:
 
-|Element|BESCHREIBUNG|
+|Element|Beschreibung|
 |-------------|-----------------|
 |\<Schema>|Gibt eine XML-Schemadatei an, für die Code generiert werden soll. Mehrere XML-Schemadateien können mit mehreren \<schema>-Elementen angegeben werden.|
 
@@ -180,7 +183,7 @@ Sie können u.&#160;a. folgende Optionen für das `<generateDataSet>`-Element fe
 |---------------|-----------------|
 |enableLinqDataSet|Gibt an, dass das generierte DataSet mit LINQ to DataSet abgefragt werden kann. Der Standardwert ist „FALSE“.|
 |language|Gibt die zu verwendende Programmiersprache an. Wählen Sie unter `CS` (C#, dem Standard), `VB` (Visual Basic), `JS` (JScript) oder `VJS` (Visual J#) aus. Sie können auch einen vollqualifizierten Namen für eine Klasse angeben, die <xref:System.CodeDom.Compiler.CodeDomProvider> implementiert.|
-|Namespace|Gibt den Namespace für den generierten Code an. Der Namespace muss CLR-Standards entsprechen (darf beispielsweise keine Leerzeichen oder umgekehrten Schrägstriche enthalten).|
+|namespace|Gibt den Namespace für den generierten Code an. Der Namespace muss CLR-Standards entsprechen (darf beispielsweise keine Leerzeichen oder umgekehrten Schrägstriche enthalten).|
 
  Einige Attribute können für das `<xsd>`-Element auf oberster Ebene festgelegt werden. Diese Optionen können mit einem beliebigen untergeordneten Element verwendet werden (`<generateSchemas>` oder ). Im folgenden XML-Code wird Code für ein Element mit dem Namen "IDItems" im Ausgabeverzeichnis mit dem Namen "MyOutputDirectory" generiert.
 
@@ -229,7 +232,7 @@ xsd myAssembly.dll
 
 - <xref:System.Data.DataSet>
 - <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType>
-- [Tools](../../../docs/framework/tools/index.md)
+- [Extras](../../../docs/framework/tools/index.md)
 - [Eingabeaufforderungen](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
 - [Übersicht über LINQ to DataSet](../../../docs/framework/data/adonet/linq-to-dataset-overview.md)
 - [Abfragen von typisierten DataSets](../../../docs/framework/data/adonet/querying-typed-datasets.md)

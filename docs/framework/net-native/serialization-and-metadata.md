@@ -2,12 +2,12 @@
 title: Serialisierung und Metadaten
 ms.date: 03/30/2017
 ms.assetid: 619ecf1c-1ca5-4d66-8934-62fe7aad78c6
-ms.openlocfilehash: 7c6fe241fbf92f52abfa0eb66c37bff4d227b4e5
-ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
+ms.openlocfilehash: cc9adf0e6627ef3190e74fea5d4f0f3afd581811
+ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "81241918"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81389221"
 ---
 # <a name="serialization-and-metadata"></a>Serialisierung und Metadaten
 
@@ -15,7 +15,7 @@ Wenn Ihre Anwendung Objekte serialisiert und deserialisiert, müssen Sie möglic
   
 - Reflektionsbasierte Drittanbieter-Serialisierungsprogramme. Diese erfordern Änderungen an der Laufzeitdirektivendatei und werden im nächsten Abschnitt erläutert.  
   
-- Nicht-reflektionsbasierte Serialisierungsprogramme aus der. NET Framework-Klassenbibliothek. Diese erfordern möglicherweise Änderungen an der Laufzeitanweisungsdatei und werden im Abschnitt [Microsoft-Serialisierungsprogramme](#Microsoft) erläutert.  
+- Nicht reflektionsbasierte Serialisierungsdateien, die in der .NET Framework-Klassenbibliothek gefunden wurden. Diese erfordern möglicherweise Änderungen an der Laufzeitanweisungsdatei und werden im Abschnitt [Microsoft-Serialisierungsprogramme](#Microsoft) erläutert.  
   
 <a name="ThirdParty"></a>
 ## <a name="third-party-serializers"></a>Drittanbieter-Serialisierungsprogramme
@@ -59,15 +59,15 @@ Wenn Ihre Anwendung Objekte serialisiert und deserialisiert, müssen Sie möglic
   
  [!code-csharp[ProjectN#7](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/serialize1.cs#7)]  
   
- Sie müssen der Laufzeitanweisungsdatei Einträge wie folgenden für jeden Typ hinzufügen:  
+Fügen Sie der Laufzeitdirektivendatei Einträge wie die folgenden für jeden Typ hinzu:  
   
 ```xml  
 <Type Name="t" Browse="Required Public" />  
 ```  
   
- Informationen zur im Beispiel verwendeten Syntax [ \<](type-element-net-native.md)finden Sie unter Typ> Element .  
+Informationen zur im Beispiel verwendeten Syntax [ \<](type-element-net-native.md)finden Sie unter Typ> Element .  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Laufzeitanweisungs-Konfigurationsdatei (rd.xml) Referenz](runtime-directives-rd-xml-configuration-file-reference.md)
 - [Elemente der Laufzeitanweisung](runtime-directive-elements.md)

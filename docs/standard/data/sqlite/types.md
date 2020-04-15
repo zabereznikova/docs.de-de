@@ -1,63 +1,64 @@
 ---
 title: Datentypen
 ms.date: 12/13/2019
-description: Beschreibt die unterstützten Datentypen und einige der damit Zusammenhang geltenden Einschränkungen.
-ms.openlocfilehash: ae70cb91a5a6d9cfed45a5a47dda25a70362871e
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+description: Beschreibt die unterstützten Datentypen und einige der Einschränkungen, die sie umgibt.
+ms.openlocfilehash: a11ff382f80cd979506d6195c299c8234c3eb8ea
+ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75450417"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81389040"
 ---
 # <a name="data-types"></a>Datentypen
 
-SQLite verfügt nur über vier primitive Datentypen: Integer, Real, Text und BLOB. APIs, die Daten Bankwerte als `object` zurückgeben, werden nur einen dieser vier Typen zurückgeben. Zusätzliche .NET-Typen werden von Microsoft. Data. sqlite unterstützt, aber die Werte werden letztendlich zwischen diesen Typen und einem der vier primitiven Typen umgewandelt.
+SQLite verfügt nur über vier primitive Datentypen: INTEGER, REAL, TEXT und BLOB. APIs, die Datenbankwerte `object` als einen zurückgeben, geben immer nur einen dieser vier Typen zurück. Zusätzliche .NET-Typen werden von Microsoft.Data.Sqlite unterstützt, aber Werte werden letztendlich zwischen diesen Typen und einem der vier primitiven Typen genötigt.
 
-| .NET           | SQLite  | Hinweise                                                       |
+| .NET           | SQLite  | Bemerkungen                                                       |
 | -------------- | ------- | ------------------------------------------------------------- |
 | Boolean        | INTEGER | `0` oder `1`                                                    |
 | Byte           | INTEGER |                                                               |
 | Byte[]         | BLOB    |                                                               |
 | Char           | TEXT    | UTF-8                                                         |
-| DateTime       | TEXT    | yyyy-mm-dd hh: mm: SS. FFFFFFF                                   |
-| DateTimeOffset | TEXT    | yyyy-mm-dd hh: mm: SS. Fffffffzzz                                |
-| Decimal        | TEXT    | `0.0###########################`-Format. "Real" wäre "Lossy". |
-| Double         | REAL    |                                                               |
-| GUID           | TEXT    | 00000000-0000-0000-0000-000000000000                          |
+| Datetime       | TEXT    | yyyy-MM-dd HH:mm:ss. FFFFFFF                                   |
+| DateTimeOffset | TEXT    | yyyy-MM-dd HH:mm:ss. FFFFFzzz                                |
+| Decimal        | TEXT    | `0.0###########################`Format. REAL wäre verlustbehaftet. |
+| Double         | real    |                                                               |
+| Guid           | TEXT    | 00000000-0000-0000-0000-000000000000                          |
 | Int16          | INTEGER |                                                               |
 | Int32          | INTEGER |                                                               |
 | Int64          | INTEGER |                                                               |
 | SByte          | INTEGER |                                                               |
-| Einmaliges         | REAL    |                                                               |
-| Zeichenfolge         | TEXT    | UTF-8                                                         |
-| TimeSpan       | TEXT    | d. hh: mm: SS. fffffff                                            |
+| Single         | real    |                                                               |
+| String         | TEXT    | UTF-8                                                         |
+| TimeSpan       | TEXT    | d.hh:mm:ss.fffffff                                            |
 | UInt16         | INTEGER |                                                               |
-| UInt64         | INTEGER | Überlauf bei großen Werten                                         |
+| UInt32         | INTEGER |                                                               |
+| UInt64         | INTEGER | Große Werte überlaufen                                         |
 
 ## <a name="alternative-types"></a>Alternative Typen
 
-Einige .NET-Typen können aus alternativen SQLite-Typen gelesen werden. Parameter können auch so konfiguriert werden, dass diese alternativen Typen verwendet werden. Weitere Informationen finden Sie unter [Parameter](parameters.md#alternative-types).
+Einige .NET-Typen können aus alternativen SQLite-Typen gelesen werden. Parameter können auch für die Verwendung dieser alternativen Typen konfiguriert werden. Weitere Informationen finden Sie unter [Parameter](parameters.md#alternative-types).
 
-| .NET           | SQLite  | Hinweise          |
+| .NET           | SQLite  | Bemerkungen          |
 | -------------- | ------- | ---------------- |
 | Char           | INTEGER | UTF-16           |
-| DateTime       | REAL    | Wert des Julianischen Tags |
-| DateTimeOffset | REAL    | Wert des Julianischen Tags |
-| GUID           | BLOB    |                  |
-| TimeSpan       | REAL    | In Tagen          |
+| Datetime       | real    | Julianer Tageswert |
+| DateTimeOffset | real    | Julianer Tageswert |
+| Guid           | BLOB    |                  |
+| TimeSpan       | real    | In Tagen          |
 
-Beispielsweise liest die folgende Abfrage einen TimeSpan-Wert aus einer realen Spalte im Resultset.
+Die folgende Abfrage liest z. B. einen TimeSpan-Wert aus einer REAL-Spalte im Resultset.
 
 [!code-csharp[](../../../../samples/snippets/standard/data/sqlite/DateAndTimeSample/Program.cs?name=snippet_AlternativeType)]
 
 ## <a name="column-types"></a>Spaltentypen
 
-SQLite verwendet ein dynamisches Typsystem, bei dem der Typ eines Werts dem Wert selbst und nicht der Spalte zugeordnet ist, in der er gespeichert ist. Sie können den gewünschten Spaltentypen Namen verwenden. Microsoft. Data. sqlite wendet keine zusätzliche Semantik auf diese Namen an.
+SQLite verwendet ein dynamisches Typsystem, bei dem der Typ eines Werts dem Wert selbst zugeordnet ist und nicht der Spalte, in der er gespeichert ist. Es steht Ihnen frei, den gewünschten Spaltentypnamen zu verwenden. Microsoft.Data.Sqlite wendet keine zusätzliche Semantik auf diese Namen an.
 
-Der Spaltentyp Name wirkt sich auf die [typaffinität](https://www.sqlite.org/datatype3.html#type_affinity)aus. Ein gängiges Problem besteht darin, dass durch die Verwendung eines Spalten Typs der Zeichenfolge versucht wird, Werte in Integer oder Real zu konvertieren, was zu unerwarteten Ergebnissen führen kann. Es wird empfohlen, nur die vier primitiven SQLite-Typnamen zu verwenden: Integer, Real, Text und BLOB.
+Der Spaltentypname wirkt sich auf die [Typaffinität](https://www.sqlite.org/datatype3.html#type_affinity)aus. Eine häufige gotcha ist, dass die Verwendung eines Spaltentyps von STRING versucht, Werte in INTEGER oder REAL zu konvertieren, was zu unerwarteten Ergebnissen führen kann. Es wird empfohlen, nur die vier primitiven SQLite-Typnamen zu verwenden: INTEGER, REAL, TEXT und BLOB.
 
-SQLite ermöglicht Ihnen das Angeben von typfacetten, wie z. b. Länge, Genauigkeit und Dezimalstellen, die jedoch nicht von der Datenbank-Engine erzwungen werden. Ihre APP ist dafür verantwortlich, diese zu erzwingen.
+Mit SQLite können Sie Typfacetten wie Länge, Genauigkeit und Skalierung angeben, die jedoch nicht vom Datenbankmodul erzwungen werden. Ihre App ist für deren Durchsetzung verantwortlich.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Datatypes in SQLite](https://www.sqlite.org/datatype3.html)
+- [Datentypen in SQLite](https://www.sqlite.org/datatype3.html)

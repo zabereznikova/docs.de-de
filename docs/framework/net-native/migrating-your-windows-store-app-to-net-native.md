@@ -2,12 +2,12 @@
 title: Migrieren der Windows Store-App auf .NET Native
 ms.date: 03/30/2017
 ms.assetid: 4153aa18-6f56-4a0a-865b-d3da743a1d05
-ms.openlocfilehash: 36f9ac4647b349ff379869f3415a5fb9e55228e3
-ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
+ms.openlocfilehash: 987669fc51eeaf7e3bdef3e91a2f1ce23164a055
+ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "81241944"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81389704"
 ---
 # <a name="migrate-your-windows-store-app-to-net-native"></a>Migrieren Ihrer Windows Store-App zu .NET Native
 
@@ -85,7 +85,7 @@ In .NET Native:
 
 - <xref:System.Reflection.RuntimeReflectionExtensions.GetRuntimeProperties%2A?displayProperty=nameWithType> und <xref:System.Reflection.RuntimeReflectionExtensions.GetRuntimeEvents%2A?displayProperty=nameWithType> enthalten ausgeblendete Member in Basisklassen und können daher ohne explizite Überschreibungen überschrieben werden. Dies gilt auch für andere [RuntimeReflectionExtensions.GetRuntime*](xref:System.Reflection.RuntimeReflectionExtensions) -Methoden.
 
-- <xref:System.Type.MakeArrayType%2A?displayProperty=nameWithType> und <xref:System.Type.MakeByRefType%2A?displayProperty=nameWithType> schlagen nicht fehl, wenn Sie versuchen, bestimmte Kombinationen (z. B. ein Array mit ByRefs) zu erstellen.
+- <xref:System.Type.MakeArrayType%2A?displayProperty=nameWithType>und <xref:System.Type.MakeByRefType%2A?displayProperty=nameWithType> schlagen Sie nicht fehl, wenn Sie versuchen, bestimmte `byref` Kombinationen zu erstellen (z. B. ein Array von Objekten).
 
 - Sie können mithilfe der Reflektion keine Member mit Zeigerparametern aufrufen.
 
@@ -117,7 +117,7 @@ In den folgenden Abschnitten werden nicht unterstützte Szenarios und APIs für 
 
 - Wenn Sie die <xref:System.ValueType.Equals%2A?displayProperty=nameWithType> - und <xref:System.ValueType.GetHashCode%2A?displayProperty=nameWithType> -Methoden für einen Werttyp außer Kraft setzen, rufen Sie nicht die Implementierungen der Basisklasse auf. In .NET für Windows Store-Apps sind diese Methoden auf Reflektion angewiesen. Zur Kompilierungszeit generiert .NET Native eine Implementierung, die nicht auf Laufzeitreflexion angewiesen ist. Dies bedeutet, dass, wenn Sie diese beiden Methoden nicht überschreiben, sie wie erwartet funktionieren, da .NET Native die Implementierung zur Kompilierungszeit generiert. Allerdings wird durch das Außerkraftsetzen dieser Methoden und das Aufrufen der Basisklassenimplementierung eine Ausnahme ausgelöst.
 
-- Werttypen, die größer als 1 MB sind, werden nicht unterstützt.
+- Werttypen, die größer als 1 Megabyte sind, werden nicht unterstützt.
 
 - Werttypen können in .NET Native keinen parameterlosen Konstruktor haben. (C- und Visual Basic verbieten parameterlose Konstruktoren für Werttypen. Allerdings können diese in IL erstellt werden.)
 
@@ -225,7 +225,7 @@ In .NET Native:
 - <xref:System.Runtime.InteropServices.UnmanagedType.SafeArray?displayProperty=nameWithType>
 - <xref:System.Runtime.InteropServices.VarEnum?displayProperty=nameWithType>
 
- <xref:System.Runtime.InteropServices.UnmanagedType.Struct?displayProperty=nameWithType> wird unterstützt, löst aber in einigen Szenarien eine Ausnahme aus, zum Beispiel bei der Verwendung mit [IDispatch](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/nn-oaidl-idispatch) oder ByRef-Varianten.
+ <xref:System.Runtime.InteropServices.UnmanagedType.Struct?displayProperty=nameWithType>wird unterstützt, löst jedoch in einigen Szenarien eine Ausnahme aus, `byref` z. B. wenn sie mit [IDispatch](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/nn-oaidl-idispatch) oder Varianten verwendet wird.
 
  Zu den veralteten APIs für [die IDispatch-Unterstützung](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/nn-oaidl-idispatch) gehören:
 
@@ -324,7 +324,7 @@ Weitere nicht unterstützte Interop-Funktionen sind:
 
 - Implementieren der <xref:System.Runtime.InteropServices.ICustomQueryInterface?displayProperty=nameWithType> -Schnittstelle für einen verwalteten Typ
 
-- Implementieren der [IDispatch](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/nn-oaidl-idispatch) -Schnittstelle für einen verwalteten Typ über das <xref:System.Runtime.InteropServices.ComDefaultInterfaceAttribute?displayProperty=nameWithType> -Attribut Beachten Sie jedoch, dass Sie keine COM-Objekte durch `IDispatch`aufrufen können und das verwaltete Objekt `IDispatch`nicht implementieren kann.
+- Implementieren der [IDispatch](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/nn-oaidl-idispatch) -Schnittstelle für einen verwalteten Typ über das <xref:System.Runtime.InteropServices.ComDefaultInterfaceAttribute?displayProperty=nameWithType> -Attribut Com-Objekte können jedoch nicht `IDispatch`über aufrufen, und das `IDispatch`verwaltete Objekt kann nicht implementieren.
 
 Das Verwenden von Reflektion zum Aufrufen einer Plattformaufrufmethode wird nicht unterstützt. Sie können diese Einschränkung umgehen, indem Sie den Methodenaufruf in eine andere Methode einschließen und den Wrapper stattdessen mithilfe von Reflektion aufrufen.
 
@@ -332,7 +332,7 @@ Das Verwenden von Reflektion zum Aufrufen einer Plattformaufrufmethode wird nich
 
 ### <a name="other-differences-from-net-apis-for-windows-store-apps"></a>Andere Unterschiede zu .NET-APIs für Windows Store-Apps
 
-In diesem Abschnitt werden die verbleibenden APIs aufgeführt, die in .NET Native nicht unterstützt werden. Die größte Gruppe von nicht unterstützten APIs sind APIs von Windows Communication Foundation (WCF).
+In diesem Abschnitt werden die verbleibenden APIs aufgeführt, die in .NET Native nicht unterstützt werden. Der größte Satz der nicht unterstützten APIs sind die Windows Communication Foundation (WCF)-APIs.
 
 **DataAnnotations (System.ComponentModel.DataAnnotations)**
 
@@ -396,7 +396,7 @@ Die `System.Net.Http.RtcRequestFactory` Klasse wird in .NET Native nicht unterst
 
 **Windows Communication Foundation (WCF) (System.ServiceModel.\*)**
 
-Die Typen in den [Namespaces System.ServiceModel.*](xref:System.ServiceModel) werden in .NET Native nicht unterstützt. Dies umfasst die folgenden Typen:
+Die Typen in den [Namespaces System.ServiceModel.*](xref:System.ServiceModel) werden in .NET Native nicht unterstützt. Dazu gehören die folgenden Typen:
 
 - <xref:System.ServiceModel.ActionNotSupportedException?displayProperty=nameWithType>
 - <xref:System.ServiceModel.BasicHttpBinding?displayProperty=nameWithType>
@@ -661,7 +661,7 @@ Verwenden Sie die x86-Buildtools, die standardmäßig von Visual Studio verwende
 
 Das Aktivieren von .NET Native in einer Komponententestbibliothek für ein Windows Store-Apps-Projekt wird nicht unterstützt und führt dazu, dass das Projekt nicht erstellt werden kann.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Erste Schritte](getting-started-with-net-native.md)
 - [Laufzeitanweisungs-Konfigurationsdatei (rd.xml) Referenz](runtime-directives-rd-xml-configuration-file-reference.md)
