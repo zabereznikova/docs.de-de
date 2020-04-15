@@ -74,6 +74,8 @@
           href: ../../../../_csharplang/proposals/csharp-8.0/ranges.md
         - name: Musterbasierte Verwendung und using-Deklarationen
           href: ../../../../_csharplang/proposals/csharp-8.0/using.md
+        - name: Statische lokale Funktionen
+          href: ../../../../_csharplang/proposals/csharp-8.0/static-local-functions.md
         - name: NULL-Sammelzuweisung
           href: ../../../../_csharplang/proposals/csharp-8.0/null-coalescing-assignment.md
         - name: Schreibgeschützte Instanzmember
