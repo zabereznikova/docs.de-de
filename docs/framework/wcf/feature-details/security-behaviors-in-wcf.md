@@ -2,12 +2,12 @@
 title: Sicherheitsverhalten in WCF
 ms.date: 03/30/2017
 ms.assetid: 513232c0-39fd-4409-bda6-5ebd5e0ea7b0
-ms.openlocfilehash: f56bbd66aa61b8db9d6e720fb3a67ddbbf5e267e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9f96abac0f5f32279c5579dd01c3dd7f2dc1786c
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79184535"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81464048"
 ---
 # <a name="security-behaviors-in-wcf"></a>Sicherheitsverhalten in WCF
 In Windows Communication Foundation (WCF) ändern Verhaltensweisen das Laufzeitverhalten auf Dienstebene oder auf Endpunktebene. (Weitere Informationen zu Verhaltensweisen im Allgemeinen finden Sie unter [Angeben des Dienstlaufzeitverhaltens](../../../../docs/framework/wcf/specifying-service-run-time-behavior.md).) *Sicherheitsverhalten* ermöglichen die Kontrolle über Anmeldeinformationen, Authentifizierungs-, Autorisierungs- und Überwachungsprotokolle. Sie können Verhalten entweder mittels Programmierung oder mittels Konfiguration verwenden. In diesem Thema wird die Konfiguration der folgenden, auf Sicherheitsfunktionen bezogenen Verhalten erläutert:  
@@ -112,6 +112,7 @@ In Windows Communication Foundation (WCF) ändern Verhaltensweisen das Laufzeitv
    </clientCredentials>  
   </behavior>  
  </endpointBehaviors>  
+</behaviors>  
 ```  
   
 #### <a name="clientcertificate-element"></a>\<clientCertificate> Element  
@@ -135,6 +136,9 @@ In Windows Communication Foundation (WCF) ändern Verhaltensweisen das Laufzeitv
       <issuerChannelBehaviors>  
          <add issuerAddress="http://www.contoso.com"  
                behaviorConfiguration="clientBehavior1" />
+      </issuerChannelBehaviors>  
+   </issuedToken>  
+</clientCredentials>
 ```  
   
 #### <a name="servicecertificate-element"></a>\<serviceCertificate> Element  
@@ -191,15 +195,15 @@ In Windows Communication Foundation (WCF) ändern Verhaltensweisen das Laufzeitv
  Verwenden Sie die [ \<>von serviceSecurityAudit,](../../../../docs/framework/configure-apps/file-schema/wcf/servicesecurityaudit.md) um anzugeben, in welches Protokoll geschrieben wurde und welche Ereignistypen protokolliert werden sollen. Weitere Informationen finden Sie unter [Überwachung](../../../../docs/framework/wcf/feature-details/auditing-security-events.md).  
   
 ```xml  
-<system.serviceModel>  
-<serviceBehaviors>  
+<behaviors>
+ <serviceBehaviors>  
   <behavior name="NewBehavior">  
     <serviceSecurityAudit auditLogLocation="Application"
              suppressAuditFailure="true"  
              serviceAuthorizationAuditLevel="Success"
              messageAuthenticationAuditLevel="Success" />  
-    </behavior>  
-  </serviceBehaviors>  
+  </behavior>  
+ </serviceBehaviors>  
 </behaviors>  
 ```  
   

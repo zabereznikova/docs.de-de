@@ -2,12 +2,12 @@
 title: Umfangreiche Daten und Streaming
 ms.date: 03/30/2017
 ms.assetid: ab2851f5-966b-4549-80ab-c94c5c0502d2
-ms.openlocfilehash: 91e53f66fb0f2f94a315c318eb0b203d78427bae
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4b6275a27fb1e09ecac1f8f00f56068a80a214ef
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79184679"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81464077"
 ---
 # <a name="large-data-and-streaming"></a>Umfangreiche Daten und Streaming
 
@@ -66,7 +66,7 @@ Windows Communication Foundation (WCF) ist eine XML-basierte Kommunikationsinfra
   
  Jede der Standardbindungen schließt einen vorkonfigurierten Encoder ein. Dabei verwenden standardmäßig die Bindungen mit dem Präfix Net* den binären Encoder (indem die <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>-Klasse eingeschlossen wird), und die Klassen <xref:System.ServiceModel.BasicHttpBinding> und <xref:System.ServiceModel.WSHttpBinding> verwenden den Textnachrichtenencoder (anhand der <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>-Klasse).  
   
-|Bindungselement des Encoders|Beschreibung|  
+|Bindungselement des Encoders|BESCHREIBUNG|  
 |-----------------------------|-----------------|  
 |<xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>|Der Textnachrichtencoder ist der Standardencoder für alle HTTP-basierten Bindungen. Er empfiehlt sich für alle benutzerdefinierten Bindungen, bei denen besonders auf Interoperabilität Wert gelegt wird. Dieser Encoder liest und schreibt auf SOAP 1.1/SOAP 1.2 basierende Standardtextnachrichten ohne spezielle Behandlung von binären Daten. Wenn <xref:System.ServiceModel.Channels.MessageVersion?displayProperty=nameWithType> die Eigenschaft einer Nachricht <xref:System.ServiceModel.Channels.MessageVersion.None?displayProperty=nameWithType>auf festgelegt ist, wird der SOAP-Umschlag-Wrapper in der Ausgabe weggelassen, und nur der Nachrichtentextinhalt wird serialisiert.|  
 |<xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>|Der MTOM-Nachrichtenencoder ist ein Textencoder, der eine spezielle Behandlung binärer Daten implementiert und nicht standardmäßig in den Standardbindungen verwendet wird, da es sich um ein extrem fallabhängiges Hilfsprogramm für Optimierungen handelt. Wenn die Nachricht binäre Daten enthält, die einen Schwellenwert überschreiten, nach dem die MTOM-Codierung vorteilhafter ist, werden die Daten in einen MIME-Teil externalisiert, der auf den Nachrichtenumschlag folgt. Siehe "Aktivieren von MTOM" weiten unten in diesem Abschnitt.|  
@@ -88,7 +88,7 @@ Windows Communication Foundation (WCF) ist eine XML-basierte Kommunikationsinfra
       </wsHttpBinding>  
     </bindings>  
      …  
-<system.serviceModel>  
+</system.serviceModel>  
 ```  
   
  Wie bereits erwähnt, hängt die Entscheidung für die MTOM-Codierung vom zu sendenden Datenvolumen ab. Da MTOM auf der Bindungsebene aktiviert wird, wirkt sich diese Codierung auf alle Vorgänge eines bestimmten Endpunkts aus.  
@@ -178,7 +178,7 @@ class MyData
       </basicHttpBinding>  
     </bindings>  
      …  
-<system.serviceModel>  
+</system.serviceModel>  
 ```  
   
  Wenn Sie eine Bindung im Code instanziieren, müssen Sie die jeweilige `TransferMode`-Eigenschaft der Bindung (oder das Transportbindungselement, wenn Sie eine benutzerdefinierte Bindung erstellen) auf einen der oben erwähnten Werte festlegen.  

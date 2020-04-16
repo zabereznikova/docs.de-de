@@ -2,12 +2,12 @@
 title: Konfigurieren der Suche in einer Konfigurationsdatei
 ms.date: 03/30/2017
 ms.assetid: b9884c11-8011-4763-bc2c-c526b80175d0
-ms.openlocfilehash: b2e604f6168e4adff36bfb0c22861124743b358d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 934b04b51b9954cf943f57f33250951048e5671b
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79185331"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81464204"
 ---
 # <a name="configuring-discovery-in-a-configuration-file"></a>Konfigurieren der Suche in einer Konfigurationsdatei
 Es gibt vier Hauptgruppen von Konfigurationseinstellungen, die bei der Suche verwendet wurden. In diesem Thema werden die Gruppen beschrieben und jeweils Beispiele für deren Konfiguration angegeben. Nach jedem Abschnitt folgt ein Link zu einer ausführlicheren Dokumentation der einzelnen Bereiche.  
@@ -26,6 +26,7 @@ Es gibt vier Hauptgruppen von Konfigurationseinstellungen, die bei der Suche ver
           </serviceDiscovery>  
         </behavior>  
       </serviceBehaviors>  
+</behaviors>  
 ```  
   
  Nachdem Sie das Verhalten angegeben haben, verweisen Sie auf ein <`service`>-Element, wie im folgenden Beispiel gezeigt.  
@@ -41,7 +42,8 @@ Es gibt vier Hauptgruppen von Konfigurationseinstellungen, die bei der Suche ver
          <!-- Discovery Endpoints -->  
          <endpoint kind="udpDiscoveryEndpoint" />  
         </service>  
-    </service>  
+    </services>  
+</system.serviceModel>  
 ```  
   
  Damit ein Dienst erkennbar ist, müssen Sie auch einen Suchendpunkt hinzufügen. Im Beispiel oben wird ein <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>-Standardendpunkt hinzugefügt.  
@@ -62,6 +64,7 @@ Es gibt vier Hauptgruppen von Konfigurationseinstellungen, die bei der Suche ver
    <service name="AnnouncementListener">  
       <endpoint kind="udpAnnouncementEndpoint" />  
    </service>  
+</services>
 ```  
   
  Das <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior>-Verhalten wird verwendet, um die Suche nach einem bestimmten Endpunkt zu aktivieren oder zu deaktivieren.  Im folgenden Beispiel wird ein Dienst mit zwei Anwendungsendpunkten konfiguriert, wobei die Suche für einen Endpunkt aktiviert und für den anderen deaktiviert ist. Für jeden Endpunkt wird ein <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior>-Verhalten hinzugefügt.  
@@ -87,7 +90,7 @@ Es gibt vier Hauptgruppen von Konfigurationseinstellungen, die bei der Suche ver
         <endpoint kind="udpDiscoveryEndpoint" />  
       </service>  
    </services>  
-    <behaviors>  
+   <behaviors>  
       <serviceBehaviors>  
         <behavior name="helloWorldServiceBehavior">  
           <serviceDiscovery />  
@@ -102,6 +105,7 @@ Es gibt vier Hauptgruppen von Konfigurationseinstellungen, die bei der Suche ver
         </behavior>  
      </endpointBehaviors>  
    </behaviors>  
+</system.serviceModel>  
 ```  
   
  Sie können das <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior>-Verhalten auch verwenden, um den vom Dienst zurückgegebenen Endpunktmetadaten benutzerdefinierte Metadaten hinzuzufügen. Das folgende Beispiel zeigt die erforderliche Vorgehensweise.  
@@ -163,7 +167,9 @@ Es gibt vier Hauptgruppen von Konfigurationseinstellungen, die bei der Suche ver
           </discoveryClient>  
           <textMessageEncoding messageVersion="Soap11"/>  
           <httpTransport />  
-        </binding>  
+      </binding>
+   </customBinding>
+</bindings>  
 ```  
   
  Auf diese benutzerdefinierte Bindungskonfiguration muss von einem Clientendpunkt aus verwiesen werden:  
@@ -174,7 +180,7 @@ Es gibt vier Hauptgruppen von Konfigurationseinstellungen, die bei der Suche ver
                 binding="customBinding"  
                 bindingConfiguration="discoBindingConfiguration"  
                 contract="IHelloWorldService" />  
-    </client>  
+</client>  
 ```  
   
  Weitere Informationen zu Suchenvonkriterien finden Sie unter [Ermittlungssuche und FindCriteria](../../../../docs/framework/wcf/feature-details/discovery-find-and-findcriteria.md). Weitere Informationen zu Ermittlungs- und Bindungselementen finden Sie unter [WCF Discovery Overview](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)  
@@ -223,7 +229,8 @@ Es gibt vier Hauptgruppen von Konfigurationseinstellungen, die bei der Suche ver
             maxReceivedMessageSize="8192"  
             maxBufferPoolSize="262144"/>  
         </standardEndpoint>  
-      </udpDiscoveryEndpoint>  
+      </udpDiscoveryEndpoint>
+</standardEndpoints>
 ```  
   
  Nachdem Sie die Standardendpunktkonfiguration hinzugefügt haben, verweisen `endpoint` Sie auf die Konfiguration im <>-Element für jeden Endpunkt, wie im folgenden Beispiel gezeigt.  

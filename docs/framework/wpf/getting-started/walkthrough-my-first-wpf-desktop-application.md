@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: b96bed40-8946-4285-8fe4-88045ab854ed
 ms.topic: tutorial
 ms.custom: mvc,vs-dotnet
-ms.openlocfilehash: 65b6fe31e86380162e90820c2cf118a9d1b96b4a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: facb9ebebd9ce1904886a946277185ac2c2e4bc4
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79186583"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81463926"
 ---
 # <a name="tutorial-create-your-first-wpf-application-in-visual-studio-2019"></a>Tutorial: Erstellen Der ersten WPF-Anwendung in Visual Studio 2019
 
@@ -293,11 +293,11 @@ In diesem Abschnitt aktualisieren Sie die Benutzeroberfläche der Homepage mit e
 
 1. Fügen *`ExpenseItHome.xaml`* Sie in eine <xref:System.Windows.Controls.Grid.ColumnDefinitions%2A> weitere <xref:System.Windows.Controls.ColumnDefinition.Width%2A> Spalte hinzu, die mit einem festen Von 230 Pixel n:
 
-    [!code-xaml[ExpenseIt#11](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt9/ExpenseItHome.xaml?highlight=52-55)]
+    [!code-xaml[ExpenseIt#11](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt9/ExpenseItHome.xaml?highlight=2#NewColumn)]
 
 2. Fügen Sie dem <xref:System.Windows.Controls.Grid.RowDefinitions%2A>eine weitere Zeile für insgesamt vier Zeilen hinzu:
 
-    [!code-xaml[ExpenseIt#11b](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt9/ExpenseItHome.xaml?highlight=57-62)]
+    [!code-xaml[ExpenseIt#11b](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt9/ExpenseItHome.xaml?highlight=2#NewRows)]
 
 3. Verschieben Sie die Steuerelemente in <xref:System.Windows.Controls.Grid.Column%2A?displayProperty=nameWithType> die zweite Spalte, indem Sie die Eigenschaft in jedem der drei Steuerelemente (Border, ListBox und Button) auf 1 festlegen.
 
@@ -471,8 +471,8 @@ Die folgende Abbildung zeigt `ExpenseIt` beide Seiten der Anwendung mit Steuerel
 > [!NOTE]
 > Dieses Beispiel veranschaulicht ein bestimmtes Feature von WPF und befolgt nicht alle bewährten Methoden für Dinge wie Sicherheit, Lokalisierung und Zugänglichkeit. Eine umfassende Abdeckung von WPF und den Best Practices für die .NET-App-Entwicklung finden Sie in den folgenden Themen:
 >
-> - [Zugänglichkeit](../../ui-automation/accessibility-best-practices.md)
-> - [Sicherheit](../security-wpf.md)
+> - [Zugriff](../../ui-automation/accessibility-best-practices.md)
+> - [Security](../security-wpf.md)
 > - [Übersicht über WPF-Globalisierung und -Lokalisierung](../advanced/wpf-globalization-and-localization-overview.md)
 > - [WPF-Leistung](../advanced/optimizing-wpf-application-performance.md)
 
@@ -488,9 +488,9 @@ In dieser exemplarischen Vorgehensweise haben Sie eine Reihe von Techniken zum E
 Weitere Informationen zum Erstellen von Anwendungen finden Sie in den folgenden Themen:
 
 - [Anwendungsentwicklung](../app-development/index.md)
-- [Kontrollen](../controls/index.md)
+- [Steuerelemente](../controls/index.md)
 - [Übersicht über Datenbindung](../../../desktop-wpf/data/data-binding-overview.md)
-- [Grafiken und Multimedia](../graphics-multimedia/index.md)
+- [Grafik und Multimedia](../graphics-multimedia/index.md)
 - [Dokumente in WPF](../advanced/documents-in-wpf.md)
 
 ## <a name="see-also"></a>Weitere Informationen

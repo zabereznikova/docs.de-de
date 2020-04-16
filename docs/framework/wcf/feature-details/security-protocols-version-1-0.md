@@ -2,12 +2,12 @@
 title: Sicherheitsprotokolle, Version&#160;1.0
 ms.date: 03/30/2017
 ms.assetid: ee3402d2-1076-410b-a3cb-fae0372bd7af
-ms.openlocfilehash: 2014e1f6f8fefa89ed44bd820c3712617ff51470
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0b86d870350d8728134cd2b42bbeb232183535bc
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79184523"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81463804"
 ---
 # <a name="security-protocols-version-10"></a>Sicherheitsprotokolle, Version&#160;1.0
 Die Webdienste-Sicherheitsprotokolle bieten Webdiensten Sicherheitsmechanismen, die alle vorhandenen Nachrichtensicherheitsanforderungen eines Unternehmens abdecken. In diesem Abschnitt werden die Details der Windows Communication Foundation <xref:System.ServiceModel.Channels.SecurityBindingElement>(WCF) Version 1.0 (in der implementiert) für die folgenden Sicherheitsprotokolle für Webdienste beschrieben.  
@@ -62,7 +62,7 @@ Die Webdienste-Sicherheitsprotokolle bieten Webdiensten Sicherheitsmechanismen, 
   
  WCF nutzt WS-SecureConversation, um Unterstützung für sichere Sitzungen zum Schutz des Austauschs von mehreren Nachrichten zwischen Anwendungen bereitzustellen.  Weitere Informationen zur Implementierung finden Sie unten unter "Sichere Sitzungen".  
   
- Zusätzlich zu den Authentifizierungsmodi bietet WCF Einstellungen zur Steuerung gemeinsamer Schutzmechanismen, die für die meisten nachrichtensicherheitsbasierten Authentifizierungsmodi gelten, z. B. Signaturreihenfolge im Vergleich zu Verschlüsselungsvorgängen, Algorithmussammlungen, Schlüsselableitung und Unterschriftsbestätigung.  
+ Zusätzlich zu den Authentifizierungsmodi bietet WCF Einstellungen zur Steuerung allgemeiner Schutzmechanismen, die für die meisten nachrichtensicherheitsbasierten Authentifizierungsmodi gelten, z. B. Signaturreihenfolge im Vergleich zu Verschlüsselungsvorgängen, Algorithmussammlungen, Schlüsselableitung und Signaturbestätigung.  
   
  Die folgenden XML-Präfixe und -Namespaces werden in diesem Dokument verwendet.  
   
@@ -250,7 +250,7 @@ sp:IncludeToken='http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeTok
   <wsu:Timestamp u:Id="_0">  
   ...  
   </wsu:Timestamp>  
-  <wsse:UsernameToken ... >  
+  <wsse:UsernameToken>  
   ...  
   </wsse:UsernameToken>  
 </wsse:Security>  
@@ -437,7 +437,7 @@ Namespace='http://www.w3.org/2005/08/addressing' />
   <wsu:Timestamp>  
   ...  
   </wsu:Timestamp>  
-  <saml:Assertion ...>  
+  <saml:Assertion>  
   ...  
   </saml:Assertion>  
   <ds:Signature>  
@@ -1856,7 +1856,7 @@ Tokenschutz: False
         <wsp:Policy>  
           <sp:ProtectionToken>  
             <wsp:Policy>  
-              <mssp:SslContextToken sp:IncludeToken='http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeToken/AlwaysToRecipient' />  
+              <mssp:SslContextToken sp:IncludeToken='http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeToken/AlwaysToRecipient'>  
                 <wsp:Policy>  
                   <sp:RequireDerivedKeys />
                 </wsp:Policy>  

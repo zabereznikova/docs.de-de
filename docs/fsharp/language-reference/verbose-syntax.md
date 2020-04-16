@@ -1,37 +1,37 @@
 ---
 title: Ausführliche Syntax
-description: Informieren Sie sich über den Unterschied zwischen ausführlicher und schlanker F# Syntax in der Programmiersprache.
+description: Lernen Sie den Unterschied zwischen ausführlicher und leichter Syntax in der Programmiersprache F-Programmiersprache.
 ms.date: 05/16/2016
-ms.openlocfilehash: 575585b201acc1366980cfc5cf523c4117259084
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 722807695c56beb0d681b95a78ed8cb8c1df3ddf
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73421183"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81463908"
 ---
 # <a name="verbose-syntax"></a>Ausführliche Syntax
 
-Es gibt zwei Arten von Syntax für viele Konstrukte in der F# Sprache: Ausführliche *Syntax* und *Lightweight-Syntax*. Die ausführliche Syntax wird nicht wie üblich verwendet, hat jedoch den Vorteil, dass der Einzug weniger sensibel ist. Die Lightweight-Syntax ist kürzer und verwendet Einzüge, um den Anfang und das Ende der Konstrukte anstelle von zusätzlichen Schlüsselwörtern wie `begin`, `end`, `in`usw. zu signalisieren. Die Standard Syntax ist die Lightweight-Syntax. In diesem Thema wird die Syntax F# für Konstrukte beschrieben, wenn die Lightweight-Syntax nicht aktiviert ist. Die ausführliche Syntax ist immer aktiviert. auch wenn Sie die Lightweight-Syntax aktivieren, können Sie für einige Konstrukte weiterhin ausführliche Syntax verwenden. Sie können die Lightweight-Syntax deaktivieren, indem Sie die `#light "off"`-Anweisung verwenden.
+Für viele Konstrukte in der Sprache F- stehen zwei Syntaxformen zur Verfügung: *ausführliche Syntax* und *Lightweight-Syntax*. Die ausführliche Syntax wird nicht so häufig verwendet, hat aber den Vorteil, dass sie weniger empfindlich auf Einzug reagiert. Die lightweight Syntax ist kürzer und verwendet Einzug, um den Anfang und das `begin` `end`Ende `in`von Konstrukten zu signalisieren, anstatt zusätzliche Schlüsselwörter wie , , , usw. Die Standardsyntax ist die lightweight Syntax. In diesem Thema wird die Syntax für F-Konstrukte beschrieben, wenn die lightweight Syntax nicht aktiviert ist. Die ausführliche Syntax ist immer aktiviert, sodass Sie selbst dann, wenn Sie eine einfache Syntax aktivieren, für einige Konstrukte weiterhin ausführliche Syntax verwenden können. Sie können die Lightweight-Syntax mithilfe der `#light "off"` Direktive deaktivieren.
 
 ## <a name="table-of-constructs"></a>Tabelle der Konstrukte
 
-Die folgende Tabelle zeigt die ausführliche und ausführliche Syntax für F# Sprachkonstrukte in Kontexten, in denen es einen Unterschied zwischen den beiden Formularen gibt. In dieser Tabelle schließen eckige Klammern (&lt;&gt;) vom Benutzer bereitgestellte Syntax Elemente ein. Ausführlichere Informationen zur Syntax, die in diesen Konstrukten verwendet wird, finden Sie in der Dokumentation zu den einzelnen sprach Konstrukten.
+Die folgende Tabelle zeigt die einfache und ausführliche Syntax für F-Sprachkonstrukte in Kontexten, in denen ein Unterschied zwischen den beiden Formularen besteht. In dieser Tabelle schließen&lt;&gt;spitze Klammern ( ) vom Benutzer bereitgestellte Syntaxelemente ein. Ausführlichere Informationen zur Syntax, die in diesen Konstrukten verwendet wird, finden Sie in der Dokumentation für jedes Sprachkonstrukt.
 
 <table>
 <tr>
 <th>Sprachkonstrukt</th>
-<th>Lightweight-Syntax</th>
-<th>Ausführliche Syntax</th>
+<th>Leichte Syntax</th>
+<th>Verbose Syntax</th>
 </tr>
 <tr>
 <td>
-Verbund Ausdrücke
+Zusammengesetzte Ausdrücke
 </td>
 <td>
 
 ```xml
-<expression1>
-<expression2>
+<expression1 />
+<expression2 />
 ```
 
 </td><td>
@@ -44,7 +44,7 @@ Verbund Ausdrücke
 </tr>
 <tr><td>
 
-Zuordnungs `let` Bindungen
+verschachtelte `let` Bindungen
 
 </td><td>
 
@@ -164,7 +164,7 @@ in
 
 </td>
 </tr>
-<tr><td>record
+<tr><td>Datensatz (record)
 </td><td>
 
 ```fsharp
@@ -189,7 +189,7 @@ type <record-name> =
 
 </td>
 </tr>
-<tr><td>Klasse
+<tr><td>class
 </td><td>
 
 ```fsharp
@@ -208,7 +208,7 @@ type <class-name>(<params>) =
 
 </td>
 </tr>
-<tr><td>Struktur</td><td>
+<tr><td>structure</td><td>
 
 ```fsharp
 [<StructAttribute>]
@@ -227,7 +227,7 @@ type <structure-name> =
 
 </td>
 </tr>
-<tr><td>Unterscheidungs-Union</td><td>
+<tr><td>diskriminierte Gewerkschaft</td><td>
 
 ```fsharp
 type <union-name> =
@@ -269,7 +269,7 @@ type <interface-name> =
 
 </td>
 </tr>
-<tr><td>Objekt Ausdruck</td><td>
+<tr><td>Objektausdruck</td><td>
 
 ```fsharp
 { new <type-name>
@@ -350,8 +350,8 @@ module <module-name> =
 </tr>
 </table>
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [F#-Sprachreferenz](index.md)
+- [Sprachreferenz](index.md)
 - [Compileranweisungen](compiler-directives.md)
 - [Richtlinien für das Formatieren von Code](../style-guide/formatting.md)

@@ -5,18 +5,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 00959326-aa9d-44d0-af61-54933d4adc7f
-ms.openlocfilehash: f30b2c587d7f9b21c1f19fa1c3943621fc2607cd
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6796ca0b16e65a07735aec075d63b0cdfe38d080
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79184342"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81464019"
 ---
 # <a name="transport-security-overview"></a>Übersicht über die Transportsicherheit
 Transportsicherheitsmechanismen in Windows Communication Foundation (WCF) hängen von der Verwendetenbindung und dem Transport ab. Wenn Sie z. B. die <xref:System.ServiceModel.WSHttpBinding>-Klasse verwenden, lautet der Transportmechanismus HTTP, und der primäre Mechanismus zum Sichern des Transports ist Secure Sockets Layer (SSL) über HTTP, allgemein als HTTPS bezeichnet. In diesem Thema werden die wichtigsten Transportsicherheitsmechanismen behandelt, die in den vom WCF-System bereitgestellten Bindungen verwendet werden.  
   
 > [!NOTE]
-> Wenn SSL-Sicherheit mit .NET Framework 3.5 und höher verwendet, verwendet ein WCF-Client sowohl die Zwischenzertifikate in seinem Zertifikatspeicher als auch die Zwischenzertifikate, die während der SSL-Aushandlung empfangen wurden, um die Zertifikatkettenüberprüfung für den Dienst durchzuführen. Zertifikat. Bei .NET Framework 3.0 werden nur die im lokalen Zertifikatspeicher installierten Zwischenzertifikate verwendet.  
+> Wenn SSL-Sicherheit mit .NET Framework 3.5 und höher verwendet, verwendet ein WCF-Client sowohl die Zwischenzertifikate in seinem Zertifikatspeicher als auch die Zwischenzertifikate, die während der SSL-Aushandlung empfangen wurden, um die Zertifikatkettenüberprüfung für das Zertifikat des Diensts durchzuführen. Bei .NET Framework 3.0 werden nur die im lokalen Zertifikatspeicher installierten Zwischenzertifikate verwendet.  
   
 > [!WARNING]
 > Wenn die Transportsicherheit verwendet wird, kann die <xref:System.Threading.Thread.CurrentPrincipal%2A?displayProperty=nameWithType>-Eigenschaft überschrieben werden. Um dies zu <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.PrincipalPermissionMode%2A?displayProperty=nameWithType> verhindern, setzen Sie die auf <xref:System.ServiceModel.Description.PrincipalPermissionMode.None?displayProperty=nameWithType>. <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior> ist ein Dienstverhalten, das für die Dienstbeschreibung festgelegt werden kann.  
@@ -46,7 +46,7 @@ Transportsicherheitsmechanismen in Windows Communication Foundation (WCF) hänge
   
  In den folgenden Abschnitten werden andere Client-Anmeldeinformationstypen erläutert.  
   
-#### <a name="basic"></a>Basic  
+#### <a name="basic"></a>Standard  
  Dies entspricht der Authentifizierungsmethode Standard in IIS. Wenn Sie diesen Modus verwenden, muss der IIS-Server mit Windows-Benutzerkonten und den entsprechenden NTFS-Dateisystemberechtigungen konfiguriert sein. Weitere Informationen zu IIS 6.0 finden Sie unter [Aktivieren der Standardauthentifizierung und Konfigurieren des Realmnamens](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc785293(v=ws.10)). Weitere Informationen zu IIS 7.0 finden Sie unter Konfigurieren der [Standardauthentifizierung (IIS 7)](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc772009(v=ws.10)).  
   
 #### <a name="certificate"></a>Zertifikat  
@@ -101,7 +101,7 @@ Transportsicherheitsmechanismen in Windows Communication Foundation (WCF) hänge
    <clientCredentials>  
      <clientCertificate findValue= "101010101010101010101010101010000000000"
       storeLocation="LocalMachine" storeName="My"
-      X509FindType="FindByThumbPrint"/>  
+      X509FindType="FindByThumbPrint">  
      </clientCertificate>  
    </clientCredentials>  
  </behavior>  
