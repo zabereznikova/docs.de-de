@@ -4,12 +4,12 @@ ms.date: 08/02/2017
 helpviewer_keywords:
 - Main method [C#], return values
 ms.assetid: c2f5a1d8-1676-4bea-bc7e-44a97e72d5bc
-ms.openlocfilehash: 3d97ab2b3f53179cb184f2ad3944ea29ff5566a2
-ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
+ms.openlocfilehash: 7061b6c1988da9f6dfac115ee555a914531df863
+ms.sourcegitcommit: f87ad41b8e62622da126aa928f7640108c4eff98
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80345128"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80805927"
 ---
 # <a name="main-return-values-c-programming-guide"></a>Main()-Rückgabewerte (C#-Programmierhandbuch)
 
@@ -21,11 +21,11 @@ Zudem kann `int` zurückgegeben werden:
 
  [!code-csharp[csProgGuideMain#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class3.cs#13)]
 
-Wenn der Rückgabewert von `Main` nicht verwendet wird, ermöglicht die Rückgabe von `void` einen etwas einfacheren Code. Die Rückgabe einer Ganzzahl ermöglicht es dem Programm jedoch, Statusinformationen an andere Programme oder Skripts zu übermitteln, die die ausführbare Datei aufrufen. Der Rückgabewert von `Main` wird als Exitcode für den Prozess behandelt. Wenn `void` aus `Main` zurückgegeben wird, ist der Exitcode implizit `0`. Im folgenden Beispiel wird gezeigt, wie auf den Rückgabewert von `Main` zugegriffen werden kann.
+Wenn der Rückgabewert von `Main` nicht verwendet wird, ermöglicht die Rückgabe von `void` einen etwas einfacheren Code. Die Rückgabe einer Ganzzahl ermöglicht es dem Programm jedoch, Statusinformationen an andere Programme oder Skripts zu übermitteln, die die ausführbare Datei aufrufen. Der Rückgabewert von `Main` wird als Exitcode für den Prozess behandelt. Wenn `void` von `Main` zurückgegeben wird, entspricht der Exitcode implizit `0`. Im folgenden Beispiel wird gezeigt, wie auf den Rückgabewert von `Main` zugegriffen werden kann.
 
 ## <a name="example"></a>Beispiel
 
-Dieses Beispiel verwendet [.NET Core](../../../core/index.yml) -Befehlszeilentools. Wenn Sie mit den .NET Core-Befehlszeilentools nicht vertraut sind, finden Sie weitere Informationen darüber in diesem [Artikel zu den ersten Schritten](../../../core/tutorials/cli-create-console-app.md).
+In diesem Beispiel werden Befehlszeilentools von [.NET Core](../../../core/index.yml) verwendet. Wenn Sie noch nicht mit den Befehlszeilentools von .NET Core vertraut sind, finden Sie weitere Informationen in diesem [Artikel zu den ersten Schritten](../../../core/tutorials/cli-create-console-app.md).
 
 Ändern Sie die Methode `Main` in *program.cs* folgendermaßen:
 
@@ -37,7 +37,7 @@ Sie können die Anwendung mithilfe des [dotnet CLI](../../../core/tools/dotnet.m
 
 Als nächstes erstellen Sie ein PowerShell-Skript, das die Anwendung ausführt und die Ergebnisse anzeigt. Fügen Sie folgenden Code in eine Textdatei ein und speichern Sie diese als `test.ps1` in dem Ordner, der das Projekt enthält. Führen Sie das PowerShell-Skript aus, indem Sie `test.ps1` in die PowerShell-Eingabeaufforderung eingeben.
 
-Da der Code null zurückgibt, wird die Batchdatei als erfolgreich gemeldet. Wenn Sie jedoch „MainReturnValTest.cs“ ändern, damit sie einen Wert ungleich null zurückgibt, und anschließend das Programm erneut kompilieren, wird eine nachfolgende Ausführung des PowerShell-Skripts einen Fehler melden.
+Da der Code null zurückgibt, wird die Batchdatei als erfolgreich gemeldet. Wenn Sie jedoch die Datei „MainReturnValTest.cs“ ändern, damit sie einen Wert ungleich null (0) zurückgibt, und das Programm anschließend neu kompilieren, wird eine nachfolgende Ausführung des PowerShell-Skripts einen Fehler melden.
 
 ```dotnetcli
 dotnet run
@@ -53,7 +53,7 @@ if ($LastExitCode -eq 0) {
 Write-Host "Return value = " $LastExitCode
 ```
 
-## <a name="sample-output"></a>Beispielausgabe
+## <a name="sample-output"></a>Beispielausgabe:
 
 ```txt
 Execution succeeded
@@ -95,7 +95,7 @@ Wenn der Einstiegspunkt der Anwendung `Task` oder `Task<int>` zurückgibt, gener
 > [!NOTE]
 >Wäre im Beispiel der Modifizierer `async` auf die Methode `Main` angewendet worden, hätte der Compiler denselben Code generiert.
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [C#-Programmierhandbuch](../index.md)
 - [C#-Referenz](../index.md)

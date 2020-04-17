@@ -2,12 +2,12 @@
 title: Auswählen von Azure Compute-Plattformen für containerbasierte Anwendungen
 description: Modernisieren vorhandener .NET-Anwendungen mit Azure Cloud und Windows-Containern | Auswählen von Azure Compute-Plattformen für containerbasierte Anwendungen
 ms.date: 02/18/2020
-ms.openlocfilehash: 52e7cf1c5dd3a5850564bdb33ac7a4ac4904f432
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4bc72fb5a5be30d47cffe73d53a82b3237a959a6
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77503884"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80987815"
 ---
 # <a name="choosing-azure-compute-platforms-for-container-based-applications"></a>Auswählen von Azure Compute-Plattformen für containerbasierte Anwendungen
 

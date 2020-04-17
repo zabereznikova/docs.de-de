@@ -1,18 +1,18 @@
 ---
 title: ref-Schlüsselwort – C#-Referenz
-ms.date: 03/26/2019
+ms.date: 03/19/2020
 f1_keywords:
 - ref_CSharpKeyword
 - ref
 helpviewer_keywords:
 - parameters [C#], ref
 - ref keyword [C#]
-ms.openlocfilehash: 05f0bd8566851678203a3f064b96bfff7dee18b6
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d54d932ca96f1966ecc05a532a2468b7e16fac46
+ms.sourcegitcommit: f87ad41b8e62622da126aa928f7640108c4eff98
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79398130"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80805847"
 ---
 # <a name="ref-c-reference"></a>ref (C#-Referenz)
 
@@ -25,7 +25,7 @@ Das `ref`-Schlüsselwort gibt einen Wert an, der als Verweis übergeben wird. Es
 
 ## <a name="passing-an-argument-by-reference"></a>Übergeben eines Arguments als Verweis
 
-In der Parameterliste einer Methode gibt das `ref`-Schlüsselwort an, dass ein Argument als Verweis und nicht als Wert übergeben wird. Das `ref`-Schlüsselwort stellt den formalen Parameter als Alias für das Argument dar, das eine Variable sein muss. Anders ausgedrückt, jede Operation mit dem Parameter wird mit dem Argument durchgeführt. Wenn der Aufrufer z.B. einen lokalen Variablenausdruck oder einen Arrayelement-Zugriffsausdruck übergibt und die aufgerufene Methode das Objekt ersetzt, auf das der ref-Parameter verweist, dann verweist die lokale Variable des Aufrufers oder das Arrayelement jetzt auf das neue Objekt, wenn die Methode zurückgibt.
+In der Parameterliste einer Methode gibt das `ref`-Schlüsselwort an, dass ein Argument als Verweis und nicht als Wert übergeben wird. Das `ref`-Schlüsselwort stellt den formalen Parameter als Alias für das Argument dar, das eine Variable sein muss. Anders ausgedrückt, jede Operation mit dem Parameter wird mit dem Argument durchgeführt. Wenn der Aufrufer z. B. einen lokalen Variablenausdruck oder einen Arrayelement-Zugriffsausdruck übergibt und die aufgerufene Methode das Objekt ersetzt, auf das der ref-Parameter verweist, dann verweist die lokale Variable des Aufrufers oder das Arrayelement bei Rückgabe der Methode jetzt auf das neue Objekt.
 
 > [!NOTE]
 > Verwechseln Sie nicht das Konzept der Übergabe durch einen Verweis mit dem Konzept der Verweistypen. Die beiden Konzepte sind nicht identisch. Ein Methodenparameter kann durch `ref` geändert werden, unabhängig davon, ob es sich um einen Werttyp oder ein Verweistyp handelt. Es gibt keine Boxing-Konvertierung eines Werttyps, wenn er durch einen Verweis übergeben wird.  
@@ -59,7 +59,13 @@ Allerdings können Methoden überladen werden, wenn eine Methode einen `ref`-, `
  Sie können keines der Schlüsselwörter `ref`, `in` und `out` für die folgenden Methodentypen verwenden:  
   
 - Asynchrone Methoden, die Sie mit dem [async](async.md)-Modifizierer definieren.  
-- Iterator-Methoden, die eine [yield return](yield.md)- oder `yield break`-Anweisung enthalten.  
+- Iterator-Methoden, die eine [yield return](yield.md)- oder `yield break`-Anweisung enthalten.
+
+Für [Erweiterungsmethoden](../../programming-guide/classes-and-structs/extension-methods.md) gelten die folgenden Einschränkungen:
+
+- Das `out`-Schlüsselwort kann nicht für das erste Argument einer Erweiterungsmethode verwendet werden.
+- Das `ref`-Schlüsselwort kann nicht für das erste Argument einer Erweiterungsmethode verwendet werden, wenn es sich bei dem Argument nicht um eine Struktur handelt oder ein generischer Typ nicht auf eine Struktur beschränkt ist.
+- Das `in`-Schlüsselwort kann nur verwendet werden, wenn das erste Argument eine Struktur ist. Das `in`-Schlüsselwort kann nicht für einen generischen Typ verwendet werden – selbst bei einer Beschränkung auf eine Struktur.
 
 ## <a name="passing-an-argument-by-reference-an-example"></a>Übergeben eines Arguments per Verweis: Beispiel
 
@@ -111,7 +117,7 @@ Auch auf Werte können Sie per Verweis zugreifen. In einigen Fällen erhöht die
 ref VeryLargeStruct reflocal = ref veryLargeStruct;
 ```
 
-Beachten Sie, dass das `ref`-Schlüsselwort in beiden Beispielen an beiden Stellen verwendet werden muss. Andernfalls generiert der Compiler den Fehler CS8172 "Cannot initialize a by-reference variable with a value." (Eine by-reference-Variable kann nicht mit einem Wert initialisiert werden).
+Das Schlüsselwort `ref` muss in beiden Beispielen an beiden Stellen verwendet werden. Andernfalls generiert der Compiler den Fehler CS8172 „Eine by-reference-Variable kann nicht mit einem Wert initialisiert werden“.
 
 Beginnend mit C# 7.3 kann die Iterationsvariable der `foreach`-Anweisung eine lokale ref-Variable oder schreibgeschützte lokale ref-Variable sein. Weitere Informationen finden Sie im Artikel zur [foreach-Anweisung](foreach-in.md).
 

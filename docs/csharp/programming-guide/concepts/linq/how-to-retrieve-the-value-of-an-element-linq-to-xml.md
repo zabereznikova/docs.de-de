@@ -2,20 +2,25 @@
 title: 'Vorgehensweise: Abrufen des Werts eines Elements (LINQ to XML) (C#)'
 ms.date: 07/20/2015
 ms.assetid: 4228c007-07c9-4cf2-a45b-e7074c109581
-ms.openlocfilehash: 17a7dac464e1ec40db357194000f5745cdf2f3a8
-ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
+ms.openlocfilehash: c4bb78e937fe0de08242923cdd7cd638abf571c7
+ms.sourcegitcommit: f87ad41b8e62622da126aa928f7640108c4eff98
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80249206"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80805834"
 ---
 # <a name="how-to-retrieve-the-value-of-an-element-linq-to-xml-c"></a>Vorgehensweise: Abrufen des Werts eines Elements (LINQ to XML) (C#)
-In diesem Thema wird gezeigt, wie Sie den Wert von Elementen abrufen können. Im Wesentlichen gibt es dafür zwei Möglichkeiten. Die eine Möglichkeit besteht darin, ein <xref:System.Xml.Linq.XElement> oder ein <xref:System.Xml.Linq.XAttribute> in den gewünschten Typ umzuwandeln. Der explizite Konvertierungsoperator wandelt dann den Inhalt des Elements oder Attributs in den angegebenen Typ um und weist ihn Ihrer Variable zu. Die andere Möglichkeit besteht darin, die <xref:System.Xml.Linq.XElement.Value%2A?displayProperty=nameWithType>-Eigenschaft oder die <xref:System.Xml.Linq.XAttribute.Value%2A?displayProperty=nameWithType>-Eigenschaft zu verwenden.  
+
+In diesem Artikel wird das Abrufen der Werte von Elementen veranschaulicht. Es gibt zwei Hauptmethoden zum Abrufen der Werte:
+
+- Wandeln Sie <xref:System.Xml.Linq.XElement> oder <xref:System.Xml.Linq.XAttribute> in den gewünschten Typ um. Der explizite Konvertierungsoperator wandelt dann den Inhalt des Elements oder Attributs in den angegebenen Typ um und weist ihn Ihrer Variable zu.
+
+- Verwenden Sie die Eigenschaft <xref:System.Xml.Linq.XElement.Value%2A?displayProperty=nameWithType> oder <xref:System.Xml.Linq.XAttribute.Value%2A?displayProperty=nameWithType>. Sie können den Wert mithilfe dieser Eigenschaften auch festlegen.
+
+Bei C# empfiehlt sich im Allgemeinen die Umwandlung. Wenn Sie das Element oder Attribut in einen Nullable-Werttyp umwandeln, ist es einfacher, den Code zum Abrufen des Werts eines vorhandenen oder möglicherweise nicht vorhandenen Elements (oder Attributs) zu schreiben. Im [letzten Beispiel](#element-might-not-exist-example) dieses Artikels wird veranschaulicht, dass die Umwandlung in Fällen einfacher ist, in denen das Element möglicherweise nicht vorhanden ist. Während Sie bei der Verwendung der <xref:System.Xml.Linq.XElement.Value%2A?displayProperty=nameWithType>-Eigenschaft den Inhalt des Elements sehen können, ist dies beim Umwandeln nicht möglich.  
   
- Bei Verwendung von C# ist die Umwandlung aber in der Regel der bessere Ansatz. Wenn Sie das Element oder Attribut in einen Nullable-Werttyp umwandeln, ist es einfacher, den Code zum Abrufen des Werts eines vorhandenen oder möglicherweise nicht vorhandenen Elements (oder Attributs) zu schreiben. Dies wird im letzten Beispiel in diesem Thema gezeigt. Während Sie bei der Verwendung der <xref:System.Xml.Linq.XElement.Value%2A?displayProperty=nameWithType>-Eigenschaft den Inhalt des Elements sehen können, ist dies beim Umwandeln nicht möglich.  
-  
-## <a name="example"></a>Beispiel  
- Zum Abrufen des Werts eines Elements wandeln Sie einfach nur das <xref:System.Xml.Linq.XElement>-Objekt in den gewünschten Typ um. Das folgende Beispiel zeigt, wie Sie ein Element in eine Zeichenfolge umwandeln können:  
+## <a name="string-cast-example"></a>Beispiel zur Umwandlung einer Zeichenfolge  
+ Zum Abrufen des Werts eines Elements wandeln Sie das <xref:System.Xml.Linq.XElement>-Objekt in den gewünschten Typ um. Sie können ein Element wie folgt in eine Zeichenfolge umwandeln:  
   
 ```csharp  
 XElement e = new XElement("StringElement", "abcde");  
@@ -30,7 +35,7 @@ Console.WriteLine("Value of e:" + (string)e);
 Value of e:abcde  
 ```  
   
-## <a name="example"></a>Beispiel  
+## <a name="integer-cast-example"></a>Beispiel zur Umwandlung eines Integers  
  Sie können Elemente auch in andere Typen als Zeichenfolgen umwandeln. Wenn Sie z. B. ein Element haben, das eine ganze Zahl enthält, können Sie das Element, wie im folgenden Code gezeigt, in den Typ `int` umwandeln:  
   
 ```csharp  
@@ -50,7 +55,7 @@ Value of e:44
   
  [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] stellt dieselben Typumwandlungsoperatoren für <xref:System.Xml.Linq.XAttribute>-Objekte bereit.  
   
-## <a name="example"></a>Beispiel  
+## <a name="value-property-example"></a>Beispiel zum Wert einer Eigenschaft  
  Zum Abrufen des Inhalts eines Elements können Sie die <xref:System.Xml.Linq.XElement.Value%2A>-Eigenschaft verwenden:  
   
 ```csharp  
@@ -66,8 +71,8 @@ Console.WriteLine("Value of e:" + e.Value);
 Value of e:abcde  
 ```  
   
-## <a name="example"></a>Beispiel  
- Es kann vorkommen, dass Sie versuchen möchten, den Wert eines Elements abzurufen, von dem Sie gar nicht genau wissen, ob es tatsächlich existiert. Wenn Sie in einem solchen Fall das umgewandelte Element einem Nullable-Verweistyp oder -Werttyp zuweisen und das Element nicht vorhanden ist, wird die zugewiesene Variable einfach auf `null` festgelegt. Der folgende Code zeigt, dass in den Fällen, in denen nicht klar ist, ob das Element existiert oder nicht, das Arbeiten mit der Umwandlung einfacher ist als die Verwendung der <xref:System.Xml.Linq.XElement.Value%2A>-Eigenschaft.  
+## <a name="element-might-not-exist-example"></a>Beispiel zu möglicherweise nicht vorhandenen Elementen
+ Es kann vorkommen, dass Sie versuchen möchten, den Wert eines Elements abzurufen, von dem Sie gar nicht genau wissen, ob es tatsächlich existiert. Wenn Sie in einem solchen Fall das umgewandelte Element einem Nullable-Verweistyp oder -Werttyp zuweisen und das Element nicht vorhanden ist, wird die zugewiesene Variable auf `null` festgelegt. Der folgende Code zeigt, dass in den Fällen, in denen nicht klar ist, ob das Element existiert oder nicht, das Arbeiten mit der Umwandlung einfacher ist als die Verwendung der <xref:System.Xml.Linq.XElement.Value%2A>-Eigenschaft.  
   
 ```csharp  
 XElement root = new XElement("Root",  

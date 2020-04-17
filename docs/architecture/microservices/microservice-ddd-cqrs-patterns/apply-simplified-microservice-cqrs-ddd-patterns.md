@@ -2,16 +2,16 @@
 title: Anwenden vereinfachter CQRS- und DDD-Muster in einem Microservice
 description: .NET-Microservicearchitektur für .NET-Containeranwendungen | Übersicht über die allgemeine Beziehung zwischen CQRS- und DDD-Mustern
 ms.date: 10/08/2018
-ms.openlocfilehash: f42b553fd30fdffdc6e325b11740fe9162aab7c8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e4e36bafff39f5f30d6371ed7c113322a85c3362
+ms.sourcegitcommit: f87ad41b8e62622da126aa928f7640108c4eff98
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "71834304"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80805591"
 ---
 # <a name="apply-simplified-cqrs-and-ddd-patterns-in-a-microservice"></a>Anwenden vereinfachter CQRS- und DDD-Muster in einem Microservice
 
-CQRS ist ein Architekturkonzept, in dem die Modelle zum Lesen und Schreiben von Daten getrennt sind. Der verwandte Begriff [Command Query Separation (CQS)](https://martinfowler.com/bliki/CommandQuerySeparation.html) wurde ursprünglich von Bertrand Meyer in seinem Buch *Objektorientierte Softwareentwicklung* geprägt. Die Grundidee ist, dass die Systemvorgänge in zwei vollständig getrennte Kategorien aufgeteilt werden:
+CQRS ist ein Architekturkonzept, in dem die Modelle zum Lesen und Schreiben von Daten getrennt sind. Der verwandte Begriff [Command Query Separation (CQS)](https://martinfowler.com/bliki/CommandQuerySeparation.html) wurde ursprünglich von Bertrand Meyer in seinem Buch *Objektorientierte Softwareentwicklung* geprägt. Die Grundidee besteht darin, dass die Systemvorgänge in zwei vollständig getrennte Kategorien aufgeteilt werden:
 
 - Abfragen: Sie geben ein Ergebnis zurück und ändern nicht den Zustand des Systems. Außerdem haben sie keine Nebenwirkungen.
 
@@ -19,7 +19,7 @@ CQRS ist ein Architekturkonzept, in dem die Modelle zum Lesen und Schreiben von 
 
 CQS ist ein einfaches Konzept, in dem die Methoden innerhalb desselben Objekts entweder Abfragen oder Befehle sein können. Jede Methode gibt entweder einen Zustand zurück oder ändert ihn, jedoch nicht beides. Selbst ein einzelnes Repositorymusterobjekt kann mit CQS kompatibel sein. CQS ist das grundlegende Prinzip von CQRS.
 
-[Command and Query Responsibility Segregation (CQRS)](https://martinfowler.com/bliki/CQRS.html) wurde von Greg Young eingeführt und von Udi Dahan und anderen bekannt gemacht. Es basiert auf dem CQS-Prinzip, ist aber detaillierter. Dieses Konzept basiert auf Befehlen und Ereignissen sowie optional auf asynchronen Nachrichten. Oftmals bezieht sich CQRS auf erweiterte Szenarios, in denen z.B. für Lesevorgänge (Abfragen) und für Schreibvorgänge (Updates) unterschiedliche physische Datenbanken eingesetzt werden. Außerdem kann in einem komplexeren CQRS-System [Event Sourcing (ES)](https://martinfowler.com/eaaDev/EventSourcing.html) für Ihre Updatedatenbank implementiert werden, sodass statt der aktuellen Zustandsdaten nur Ereignisse im Domänenmodell gespeichert werden. In diesem Leitfaden wird jedoch ein anderer Ansatz verfolgt. Wir verwenden den einfachsten CQRS-Ansatz, bei dem nur Abfragen von Befehlen getrennt werden.
+[Command and Query Responsibility Segregation (CQRS)](https://martinfowler.com/bliki/CQRS.html) wurde von Greg Young eingeführt und von Udi Dahan und anderen bekannt gemacht. Es basiert auf dem CQS-Prinzip, ist aber detaillierter. Dieses Konzept basiert auf Befehlen und Ereignissen sowie optional auf asynchronen Nachrichten. Oftmals bezieht sich CQRS auf erweiterte Szenarios, in denen z.B. für Lesevorgänge (Abfragen) und für Schreibvorgänge (Updates) unterschiedliche physische Datenbanken eingesetzt werden. Außerdem kann in einem komplexeren CQRS-System [Event Sourcing (ES)](https://martinfowler.com/eaaDev/EventSourcing.html) für Ihre Updatedatenbank implementiert werden, sodass statt der aktuellen Zustandsdaten nur Ereignisse im Domänenmodell gespeichert werden. Allerdings wird dieser Ansatz nicht in diesem Leitfaden verwendet. In diesem Leitfaden wird der einfachste CQRS-Ansatz verwendet, bei dem lediglich die Abfragen von den Befehlen getrennt werden.
 
 Die Trennung wird in CQRS erzielt, indem Abfragevorgänge auf einer Ebene und Befehle auf einer anderen gruppiert werden. Jede Ebene weist ein eigenes Datenmodell auf, das nicht unbedingt einer anderen Datenbank entspricht. Außerdem werden die Ebenen mithilfe eigener Kombinationen von Mustern und Technologien erstellt. Beide Ebenen können sich sogar innerhalb derselben Ebene oder desselben Microservices befinden, so wie in dem Beispiel (Microservice für Bestellungen) in diesem Handbuch. Alternativ können sie auch in verschiedenen Microservices oder Prozessen implementiert werden, sodass sie getrennt und ohne Auswirkungen aufeinander optimiert und horizontal hochskaliert werden können.
 
