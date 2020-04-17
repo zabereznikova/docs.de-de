@@ -3,12 +3,12 @@ title: Abrufen der SQL Server-Beispieldatenbanken für ADO.NET Codebeispiele
 description: Laden Sie die SQL Server-Beispieldatenbanken herunter, die in den Codebeispielen in der ADO.NET-Dokumentation sowie sql Server- und Verwaltungstools verwendet werden.
 ms.date: 01/11/2019
 ms.assetid: ef9d69a1-9461-43fe-94bb-7c836754bcb5
-ms.openlocfilehash: 19d659cbe8f39d27b71dc59c738355f12fce92a0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3449f502834f449f5023bd52457d45ffaf9b0fa1
+ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79148386"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81607983"
 ---
 # <a name="get-the-sample-databases-for-adonet-code-samples"></a>Abrufen der Beispieldatenbanken für ADO.NET Codebeispiele
 
@@ -37,7 +37,7 @@ Die Northwind-Beispieldatenbank für Microsoft Access ist im Microsoft Download 
 
 1. Geben Sie im neuen Fenster im Textfeld **Dateiname** einen Dateinamen für Ihre Kopie der Northwind-Datenbank an.
 
-1. Wählen Sie **Erstellen** aus. Access lädt die Northwind-Datenbank herunter und bereitet die Datei vor.
+1. Klicken Sie auf **Erstellen**. Access lädt die Northwind-Datenbank herunter und bereitet die Datei vor.
 
 1. Wenn dieser Vorgang abgeschlossen ist, wird die Datenbank mit einem Begrüßungsbildschirm geöffnet.
 
@@ -54,7 +54,7 @@ Wenn Sie eine heruntergeladene Datenbank anzeigen oder ändern möchten, können
 
 [Herunterladen von SQL Server Management Studio (SSMS)](/sql/ssms/download-sql-server-management-studio-ssms)
 
-Sie können Datenbanken auch in der integrierten Visual Studio-Entwicklungsumgebung (IDE) anzeigen und verwalten. Stellen Sie in [Visual Studio](https://www.visualstudio.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017)eine Verbindung mit der Datenbank über den **SQL Server-Objekt-Explorer**her, oder erstellen Sie eine Datenverbindung zur Datenbank im **Server-Explorer**. Öffnen Sie diese Explorer-Bereiche im Menü **Ansicht.**
+Sie können Datenbanken auch in der integrierten Visual Studio-Entwicklungsumgebung (IDE) anzeigen und verwalten. Stellen Sie in [Visual Studio](https://www.visualstudio.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2019)eine Verbindung mit der Datenbank über den **SQL Server-Objekt-Explorer**her, oder erstellen Sie eine Datenverbindung zur Datenbank im **Server-Explorer**. Öffnen Sie diese Explorer-Bereiche im Menü **Ansicht.**
 
 ## <a name="get-sql-server-express"></a><a name="get_sql"></a>SQL Server Express abrufen
 
@@ -62,8 +62,8 @@ SQL Server Express ist eine kostenlose Einstiegsedition von SQL Server, die Sie 
   
 [SQL Server Express Edition](https://www.microsoft.com/sql-server/sql-server-editions-express)
 
-Wenn Sie [Visual Studio](https://www.visualstudio.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017)verwenden, ist SQL Server Express LocalDB in der kostenlosen Community-Edition von Visual Studio sowie in den Professional- und höheren Editionen enthalten.  
+Wenn Sie [Visual Studio](https://www.visualstudio.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2019)verwenden, ist SQL Server Express LocalDB in der kostenlosen Community-Edition von Visual Studio sowie in den Professional- und höheren Editionen enthalten.  
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Erste Schritte](getting-started.md)

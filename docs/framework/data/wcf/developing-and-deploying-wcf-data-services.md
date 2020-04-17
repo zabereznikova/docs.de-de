@@ -7,12 +7,12 @@ helpviewer_keywords:
 - deploying [WCF Data Services
 - developing applications [WCF Data Services]
 ms.assetid: 6557c0e3-5aea-4f6e-bc14-77ad317a168b
-ms.openlocfilehash: 4591175da5078a194bfe69884701e5432a0c38a3
-ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
+ms.openlocfilehash: 5c473f818ea874392011065dc3d07101d2ef3bf5
+ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/15/2020
-ms.locfileid: "81389728"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81607957"
 ---
 # <a name="develop-and-deploy-wcf-data-services"></a>Entwickeln und Bereitstellen von WCF-Datendiensten
 
@@ -42,7 +42,7 @@ Wenn Sie einen WCF-Datendienst als ASP.NET Anwendung oder ASP.NET Website mithil
 
 1. **Lokaler IIS-Server**
 
-     Wenn Sie einen Datendienst erstellen, der eine ASP.NET Anwendung oder ASP.NET Website ist, die auf Internetinformationsdiensten (Internet Information Services, IIS) ausgeführt wird, wird empfohlen, dass Sie den Datendienst mithilfe von IIS auf dem lokalen Computer entwickeln und testen. Die Ausführung des Datendiensts unter IIS erleichtert die Ablaufverfolgung von HTTP-Anforderungen während des Debuggens. Zudem können Sie so vorab die Rechte bestimmen, die IIS für den Zugriff auf Dateien, Datenbanken und andere für den Datendienst erforderliche Ressourcen erfordert. Stellen Sie zum Ausführen des Datendienstes auf IIS sicher, dass sowohl IIS als auch Windows Communication Foundation (WCF) ordnungsgemäß installiert und konfiguriert sind, und gewähren Sie Zugriff auf IIS-Konten im Dateisystem und in datenbanken. Weitere Informationen finden Sie unter [How to: Develop a WCF Data Service Running on IIS](how-to-develop-a-wcf-data-service-running-on-iis.md).
+     Wenn Sie einen Datendienst erstellen, der eine ASP.NET Anwendung oder ASP.NET Website ist, die auf Internetinformationsdiensten (Internet Information Services, IIS) ausgeführt wird, wird empfohlen, dass Sie den Datendienst mithilfe von IIS auf dem lokalen Computer entwickeln und testen. Die Ausführung des Datendiensts unter IIS erleichtert die Ablaufverfolgung von HTTP-Anforderungen während des Debuggens. Auf diese Weise können Sie auch die erforderlichen Rechte festlegen, die IIS für den Zugriff auf Dateien, Datenbanken und andere Ressourcen benötigt, die für den Datendienst erforderlich sind. Stellen Sie zum Ausführen des Datendienstes auf IIS sicher, dass sowohl IIS als auch Windows Communication Foundation (WCF) ordnungsgemäß installiert und konfiguriert sind, und gewähren Sie Zugriff auf IIS-Konten im Dateisystem und in datenbanken. Weitere Informationen finden Sie unter [How to: Develop a WCF Data Service Running on IIS](how-to-develop-a-wcf-data-service-running-on-iis.md).
 
     > [!NOTE]
     > Sie müssen Visual Studio mit Administratorrechten ausführen, damit die Entwicklungsumgebung den lokalen IIS-Server konfigurieren kann.
@@ -68,9 +68,9 @@ Wenn Sie einen WCF-Datendienst als ASP.NET Anwendung oder ASP.NET Website mithil
     > [!TIP]
     > Obwohl Sie Visual Studio Development Server verwenden können, um Ihre Datendienste während der Entwicklung zu testen, sollten Sie sie nach der Bereitstellung auf einem Webserver, auf dem IIS ausgeführt wird, erneut testen.
 
-3. **Microsoft Azure-Entwicklungsumgebung**
+3. **Azure-Entwicklungsumgebung**
 
-     Windows Azure Tools für Visual Studio enthält einen integrierten Satz von Tools zum Entwickeln von Windows Azure-Diensten in Visual Studio. Mit diesen Tools können Sie einen Datendienst entwickeln, der unter Windows Azure bereitgestellt werden kann, und den Datendienst vor der Bereitstellung auf dem lokalen Computer testen. Verwenden Sie diese Tools, wenn Sie Visual Studio verwenden, um einen Datendienst zu entwickeln, der auf der Windows Azure-Plattform ausgeführt wird. Informationen zum Installieren der Tools finden Sie unter [Azure-Tools für Visual Studio 2015](../../../azure/sdk/vs2015-install.md). Weitere Informationen zum Entwickeln eines Datendienstes, der unter Windows Azure ausgeführt wird, finden Sie im Beitrag [Bereitstellen eines OData-Dienstes in Windows Azure](https://docs.microsoft.com/archive/blogs/astoriateam/deploying-an-odata-service-in-windows-azure).
+     Windows Azure Tools für Visual Studio enthält einen integrierten Satz von Tools zum Entwickeln von Azure-Diensten in Visual Studio. Mit diesen Tools können Sie einen Datendienst entwickeln, der in Azure bereitgestellt werden kann, und Sie können den Datendienst vor der Bereitstellung auf dem lokalen Computer testen. Verwenden Sie diese Tools, wenn Sie Visual Studio verwenden, um einen Datendienst zu entwickeln, der auf der Azure-Plattform ausgeführt wird. Informationen zum Installieren der Tools finden Sie unter [Azure-Tools für Visual Studio 2015](../../../azure/sdk/vs2015-install.md). Weitere Informationen zum Entwickeln eines Datendienstes, der in Azure ausgeführt wird, finden Sie unter [Bereitstellen eines OData-Dienstes in Azure](https://docs.microsoft.com/archive/blogs/astoriateam/deploying-an-odata-service-in-windows-azure).
 
 ### <a name="development-tips"></a>Tipps für die Entwicklung
 
@@ -92,7 +92,7 @@ Ein WCF Data Service bietet Flexibilität bei der Auswahl des Prozesses, von dem
 
 - **IIS-gehosteter Webserver**
 
-    Wenn ein Datendienst als ASP.NET Projekt entwickelt wird, kann er mithilfe der standardASP.NET Bereitstellungsprozesse auf einem IIS-Webserver bereitgestellt werden.  Visual Studio stellt die folgenden Bereitstellungstechnologien für ASP.NET bereit, abhängig von der Art des ASP.NET Projekts, das den Datendienst hostet, den Sie bereitstellen.
+    Wenn ein Datendienst als ASP.NET Projekt entwickelt wird, kann er mithilfe der standardASP.NET Bereitstellungsprozesse auf einem IIS-Webserver bereitgestellt werden. Visual Studio stellt die folgenden Bereitstellungstechnologien für ASP.NET bereit, abhängig von der Art des ASP.NET Projekts, das den Datendienst hostet, den Sie bereitstellen.
 
   - **Bereitstellungstechnologien für ASP.NET-Webanwendungen**
 
@@ -113,9 +113,9 @@ Ein WCF Data Service bietet Flexibilität bei der Auswahl des Prozesses, von dem
     > [!TIP]
     > Bevor Sie versuchen, den Datendienst unter IIS bereitzustellen, muss die Bereitstellung auf einem Webserver mit IIS getestet werden. Weitere Informationen finden Sie unter [How to: Develop a WCF Data Service Running on IIS](how-to-develop-a-wcf-data-service-running-on-iis.md).
 
-- **Microsoft Azure**
+- **Azure**
 
-     Sie können einen Datendienst in Windows Azure mithilfe von Windows Azure Tools für Visual Studio bereitstellen. Sie können die Windows Azure Tools für Visual Studio aus dem [Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkID=201848)herunterladen. Weitere Informationen zum Bereitstellen eines Datendienstes in Windows Azure finden Sie im Beitrag [Bereitstellen eines OData-Dienstes in Windows Azure](https://docs.microsoft.com/archive/blogs/astoriateam/deploying-an-odata-service-in-windows-azure).
+     Sie können einen Datendienst in Azure mithilfe von [Azure Tools for Visual Studio](../../../azure/sdk/vs2015-install.md)bereitstellen. Weitere Informationen zum Bereitstellen eines Datendienstes in Azure finden Sie unter [Bereitstellen eines OData-Dienstes in Azure](https://docs.microsoft.com/archive/blogs/astoriateam/deploying-an-odata-service-in-windows-azure).
 
 ### <a name="deployment-considerations"></a>Überlegungen zur Bereitstellung
 
@@ -125,7 +125,7 @@ Berücksichtigen Sie bei der Bereitstellung eines Datendienstes Folgendes:
 
 - Da WCF Data Services eine grundlegende WCF-Implementierung enthält, können Sie Windows Server AppFabric verwenden, um einen Datendienst zu überwachen, der auf IIS bereitgestellt wird und unter Windows Server ausgeführt wird. Weitere Informationen zur Verwendung von Windows Server AppFabric zum Überwachen eines Datendienstes finden Sie im Beitrag Nachverfolgung von [WCF-Datendiensten mit Windows Server AppFabric](https://docs.microsoft.com/archive/blogs/rjacobs/tracking-wcf-data-services-with-windows-server-appfabric).
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Hosten des Datendiensts](hosting-the-data-service-wcf-data-services.md)
 - [Sichern von WCF Data Services](securing-wcf-data-services.md)

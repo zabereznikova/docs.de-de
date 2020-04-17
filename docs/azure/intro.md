@@ -2,12 +2,12 @@
 title: Erste Schritte mit Azure und .NET
 description: Lernen Sie die erforderlichen Grundlagen von Azure und .NET kennen.
 ms.date: 03/15/2020
-ms.openlocfilehash: 69c005ff1cfbd7ecddb4666bc23c8bc5cb813519
-ms.sourcegitcommit: 34dc3c0d0d0a1cc418abff259d9daa8078d00b81
+ms.openlocfilehash: 64defed4433647c2a0dcce91493d9ec77d21b541
+ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/19/2020
-ms.locfileid: "81433205"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81607882"
 ---
 # <a name="introduction-to-azure-and-net"></a>Einführung in Azure und .NET
 
@@ -47,9 +47,9 @@ Allgemein gilt: Je mehr Ihre Anwendung FaaS- und PaaS-Modelle begünstigt, desto
 * [Azure Virtual Machines](https://docs.microsoft.com/azure/virtual-machines/): Wenn App Service Ihren Anforderungen für das Hosten einer vorhandenen Anwendung aufgrund von bestimmten Abhängigkeiten nicht entspricht, ist Virtual Machines für den Anfang am besten geeignet. Informationen zu den ersten Schritten mit Virtual Machines und ASP.NET oder WCF finden Sie unter [Deploy an ASP.NET app to an Azure virtual machine](https://tutorials.visualstudio.com/aspnet-vm/intro) (Bereitstellen einer ASP.NET-App auf einem virtuellen Azure-Computer).
 
 > [!TIP]
-> Eine vollständige Liste der Azure-Dienste finden Sie unter [Übersicht über Azure-Computeoptionen](https://docs.microsoft.com/azure/architecture/guide/technology-choices/compute-overview#azure-compute-options). Weitere Informationen zur Auswahl eines Diensts finden Sie unter [Entscheidungsstruktur für Azure-Computedienste](https://docs.microsoft.com/azure/architecture/guide/technology-choices/compute-decision-tree).
+> Weitere Informationen zum Auswählen eines Diensts finden Sie [unter Auswählen eines Azure-Computedienstes für Ihre Anwendung](https://docs.microsoft.com/azure/architecture/guide/technology-choices/compute-decision-tree).
 
-## <a name="choosing-a-data-storage-service"></a>Auswählen eines Datenspeicherdiensts
+## <a name="choose-a-data-storage-service"></a>Auswählen eines Datenspeicherdienstes
 
 Azure bietet je nach Ihren Anforderungen verschiedene Dienste zum Speichern von Daten. Die am häufigsten verwendeten Datendienste für .NET-Entwickler sind:
 
@@ -62,7 +62,7 @@ Azure bietet je nach Ihren Anforderungen verschiedene Dienste zum Speichern von 
 > [!TIP]
 > Informationen finden Sie unter [Auswählen des richtigen Datenspeichers](https://docs.microsoft.com/azure/architecture/guide/technology-choices/data-store-overview).
 
-## <a name="connecting-to-azure-services"></a>Herstellen einer Verbindung mit Azure-Diensten
+## <a name="connect-to-azure-services"></a>Herstellen einer Verbindung mit Azure-Diensten
 
 Wenn Sie Visual Studio verwenden, können Sie Ihren Projekten Unterstützung für bestimmte Azure-Dienste hinzufügen. Über das Dialogfeld **Verbundene Dienste** in Visual Studio können Ihren Projekten ganz einfach alle erforderlichen Verweise, Verbindungscode und Konfigurationseinstellungen hinzugefügt werden. Einige häufig verwendete Azure-Dienste werden standardmäßig unterstützt, etwa [Storage](/azure/vs-azure-tools-connected-services-storage), [Azure Active Directory](/azure/active-directory/develop/vs-active-directory-add-connected-service)-Authentifizierung, [Azure Key Vault](/azure/key-vault/vs-key-vault-add-connected-service) und [Cognitive Services](/azure/cognitive-services/) (beispielsweise [Maschinelles Sehen](/azure/cognitive-services/computer-vision/vs-computer-vision-connected-service)). Weitere Dienste, einschließlich Dienste von Drittanbietern, sind als Erweiterungen im [Visual Studio Marketplace](https://marketplace.visualstudio.com/search?term=connected%20service&target=VS&category=Tools&vsVersion=&subCategory=All&sortBy=Relevance) verfügbar.
 

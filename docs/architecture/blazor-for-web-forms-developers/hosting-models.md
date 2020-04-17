@@ -1,92 +1,92 @@
 ---
-title: Blazor-App-Hostingmodelle
-description: Erfahren Sie mehr über die verschiedenen Möglichkeiten zum Hosten einer blazor-APP, einschließlich des Browsers in Webassembly oder auf dem Server.
+title: Blazor App Hosting-Modelle
+description: Erfahren Sie mehr über die verschiedenen Möglichkeiten zum Hosten einer Blazor-App, z. B. im Browser auf WebAssembly oder auf dem Server.
 author: danroth27
 ms.author: daroth
 ms.date: 09/11/2019
-ms.openlocfilehash: 5bf55fa686691acc25508d3d9a6dfaf8aca321ca
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 77a022b01efba01038790c9601ea03f315a28fdf
+ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73841948"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81607931"
 ---
-# <a name="blazor-app-hosting-models"></a>Blazor-App-Hostingmodelle
+# <a name="blazor-app-hosting-models"></a>Blazor App Hosting-Modelle
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
-Blazor-Apps können genauso wie ASP.net Web Forms-apps in IIS gehostet werden. Blazor-Apps können auch auf eine der folgenden Arten gehostet werden:
+Blazor-Apps können in IIS wie ASP.NET Web Forms-Apps gehostet werden. Blazor-Apps können auch auf eine der folgenden Arten gehostet werden:
 
-- Client seitig im Browser in Webassembly.
-- Server seitig in einer ASP.net Core-app.
+- Client-Seite im Browser in WebAssembly.
+- Serverseitig in einer ASP.NET Core-App.
 
-## <a name="blazor-webassembly-apps"></a>Blazor Webassembly-apps
+## <a name="blazor-webassembly-apps"></a>Blazor WebAssembly-Apps
 
-Blazor Webassembly-apps werden direkt im Browser auf einer webassemblybasierten .NET-Laufzeit ausgeführt. Blazor-webassemblyanwendungen funktionieren auf ähnliche Weise wie Front-End-JavaScript-Frameworks wie Angular oder reagieren. Anstatt jedoch JavaScript zu schreiben, schreiben C#Sie. Die .NET-Laufzeit wird zusammen mit der APP-Assembly und allen erforderlichen Abhängigkeiten mit der App heruntergeladen. Es sind keine Browser-Plug-ins oder Erweiterungen erforderlich.
+Blazor WebAssembly-Apps werden direkt im Browser auf einer WebAssembly-basierten .NET-Laufzeit ausgeführt. Blazor WebAssembly-Apps funktionieren ähnlich wie Front-End-JavaScript-Frameworks wie Angular oder React. Anstatt jedoch JavaScript zu schreiben, schreiben Sie C. Die .NET-Laufzeit wird zusammen mit der App-Assembly und allen erforderlichen Abhängigkeiten zusammen mit der App heruntergeladen. Es sind keine Browser-Plugins oder Erweiterungen erforderlich.
 
-Die heruntergeladenen Assemblys sind normale .NET-Assemblys, wie Sie in jeder anderen .net-App verwenden würden. Da die Common Language Runtime .NET Standard unterstützt, können Sie vorhandene .NET Standard Bibliotheken mit ihrer blazor Webassembly-App verwenden. Diese Assemblys werden jedoch weiterhin im Browser-Sicherheits Sandbox ausgeführt. Einige Funktionen lösen möglicherweise eine <xref:System.PlatformNotSupportedException>aus, z. b. den Zugriff auf das Dateisystem oder das Öffnen beliebiger Netzwerkverbindungen.
+Die heruntergeladenen Assemblys sind normale .NET-Assemblys, wie Sie es in jeder anderen .NET-App verwenden würden. Da die Laufzeit .NET Standard unterstützt, können Sie vorhandene .NET Standard-Bibliotheken mit Ihrer Blazor WebAssembly-App verwenden. Diese Assemblys werden jedoch weiterhin in der Sicherheitssandbox des Browsers ausgeführt. Einige Funktionen können <xref:System.PlatformNotSupportedException>eine auslösen, z. B. den Versuch, auf das Dateisystem zuzugreifen oder beliebige Netzwerkverbindungen zu öffnen.
 
-Wenn die App geladen wird, wird die .NET-Laufzeit gestartet, und es wird auf die APP-Assembly verwiesen. Die APP-Start Logik wird ausgeführt, und die Stamm Komponenten werden gerendert. Blazor berechnet die Aktualisierungen der Benutzeroberfläche basierend auf der gerenderten Ausgabe der Komponenten. Anschließend werden die DOM-Updates angewendet.
+Wenn die App geladen wird, wird die .NET-Laufzeit gestartet und auf die App-Assembly gerichtet. Die App-Startlogik wird ausgeführt, und die Stammkomponenten werden gerendert. Blazor berechnet die UI-Aktualisierungen basierend auf der gerenderten Ausgabe der Komponenten. Die DOM-Aktualisierungen werden dann angewendet.
 
 ![Blazor WebAssembly](media/hosting-models/blazor-webassembly.png)
 
-Blazor Webassembly-apps werden nur auf Clientseite ausgeführt. Solche Apps können für statische Site Hosting-Lösungen wie GitHub-Seiten oder das Hosting von Azure Static-Websites bereitgestellt werden. .Net ist auf dem Server nicht erforderlich. Die Tiefe Verknüpfung mit den Teilen der APP erfordert in der Regel eine Routing Lösung auf dem Server. Die Routing Lösung leitet Anforderungen an den Stamm der App um. Diese Umleitung kann beispielsweise mithilfe von URL-Rewrite-Regeln in IIS verarbeitet werden.
+Blazor WebAssembly-Apps laufen rein clientseitig. Solche Apps können auf statischen Websitehosting-Lösungen wie GitHub Pages oder Azure Static Website Hosting bereitgestellt werden. .NET ist auf dem Server überhaupt nicht erforderlich. Eine tiefe Verknüpfung mit Teilen der App erfordert in der Regel eine Routinglösung auf dem Server. Die Routinglösung leitet Anforderungen an den Stamm der App um. Diese Umleitung kann z. B. mithilfe von URL-Umschreibungsregeln in IIS behandelt werden.
 
-Um alle Vorteile von blazor und der vollständigen .net-Webentwicklung zu erhalten, hosten Sie Ihre blazor Webassembly-App mit ASP.net Core. Wenn Sie .net sowohl auf dem Client als auch auf dem Server verwenden, können Sie Code problemlos freigeben und die App mithilfe eines konsistenten Satzes von Sprachen, Frameworks und Tools erstellen. Blazor bietet praktische Vorlagen zum Einrichten einer Projekt Mappe, die sowohl eine blazor Webassembly-App als auch ein ASP.net Core Host Projekt enthält. Wenn die Lösung erstellt wird, werden die erstellten statischen Dateien aus der blazor-APP von der ASP.net Core-App gehostet, wobei das Fall Back Routing bereits eingerichtet ist.
+Um alle Vorteile von Blazor und Full-Stack .NET Web-Entwicklung zu erhalten, hosten Sie Ihre Blazor WebAssembly App mit ASP.NET Core. Durch die Verwendung von .NET auf client und auf dem Server können Sie Code einfach freigeben und Ihre App mithilfe einer konsistenten Reihe von Sprachen, Frameworks und Tools erstellen. Blazor bietet praktische Vorlagen zum Einrichten einer Lösung, die sowohl eine Blazor WebAssembly-App als auch ein ASP.NET Core-Hostprojekt enthält. Wenn die Lösung erstellt wird, werden die erstellten statischen Dateien aus der Blazor-App von der ASP.NET Core-App gehostet, wobei das Fallback-Routing bereits eingerichtet ist.
 
-## <a name="blazor-server-apps"></a>Blazor-Server-apps
+## <a name="blazor-server-apps"></a>Blazor Server-Apps
 
-Erinnern Sie sich aus der Beschreibung der [blazor-Architektur](architecture-comparison.md#blazor) , dass blazor-Komponenten Ihre Ausgabe in eine zwischen Abstraktion Rendering`RenderTree`Rendering Das blazor-Framework vergleicht dann, was gerendert wurde, was zuvor gerendert wurde. Die Unterschiede werden auf das DOM angewendet. Blazor-Komponenten sind von der Anwendung ihrer gerenderten Ausgabe entkoppelt. Folglich müssen die Komponenten selbst nicht in demselben Prozess ausgeführt werden wie der Prozess, der die Benutzeroberfläche aktualisiert. Tatsächlich müssen Sie nicht einmal auf dem gleichen Computer ausgeführt werden.
+Erinnern Sie sich an die [Blazor-Architekturdiskussion,](architecture-comparison.md#blazor) dass Blazor-Komponenten ihre Ausgabe zu einer Zwischenabstraktion namens " `RenderTree`rendern. Das Blazor-Framework vergleicht dann das Gerendertwerden mit dem, was zuvor gerendert wurde. Die Unterschiede werden auf das DOM angewendet. Blazor-Komponenten sind von der Anwendung der gerenderten Ausgabe entkoppelt. Folglich müssen die Komponenten selbst nicht im gleichen Prozess wie der Prozess zur Aktualisierung der Benutzeroberfläche ausgeführt werden. Tatsächlich müssen sie nicht einmal auf demselben Computer laufen.
 
-In blazor-Server-apps werden die Komponenten auf dem Server und nicht auf der Clientseite im Browser ausgeführt. Benutzeroberflächen Ereignisse, die im Browser auftreten, werden über eine Echtzeitverbindung an den Server gesendet. Die Ereignisse werden an die richtigen Komponenten Instanzen weitergeleitet. Die Komponenten werden gerbt, und der berechnete UI-diff wird serialisiert und an den Browser gesendet, in dem Sie auf das DOM angewendet wird.
+In Blazor Server-Apps werden die Komponenten auf dem Server statt auf der Clientseite im Browser ausgeführt. UI-Ereignisse, die im Browser auftreten, werden über eine Echtzeitverbindung an den Server gesendet. Die Ereignisse werden an die richtigen Komponenteninstanzen gesendet. Die Komponenten werden gerendert, und der berechnete UI-Diff wird serialisiert und an den Browser gesendet, in dem er auf das DOM angewendet wird.
 
 ![Blazor Server](media/hosting-models/blazor-server.png)
 
-Das blazor-Server Hostingmodell ist möglicherweise vertraut, wenn Sie ASP.NET AJAX und das <xref:System.Web.UI.UpdatePanel>-Steuerelement verwendet haben. Das `UpdatePanel` Steuerelement übernimmt das Anwenden partieller Seiten Aktualisierungen als Reaktion auf Triggerereignisse auf der Seite. Wenn Sie ausgelöst wird, fordert die `UpdatePanel` eine partielle Aktualisierung an und wendet Sie dann an, ohne die Seite aktualisieren zu müssen. Der Status der Benutzeroberfläche wird mit `ViewState`verwaltet. Blazor-Server-apps unterscheiden sich geringfügig insofern, als die APP eine aktive Verbindung mit dem Client erfordert. Außerdem wird der gesamte Status der Benutzeroberfläche auf dem Server beibehalten. Abgesehen von diesen Unterschieden sind die beiden Modelle konzeptionell ähnlich.
+Das Blazor Server-Hostingmodell klingt möglicherweise vertraut, wenn <xref:System.Web.UI.UpdatePanel> Sie ASP.NET AJAX und das Steuerelement verwendet haben. Das `UpdatePanel` Steuerelement behandelt das Anwenden partieller Seitenaktualisierungen als Reaktion auf Triggerereignisse auf der Seite. Wenn diese `UpdatePanel` Option ausgelöst wird, fordert die eine teilweise Aktualisierung an und wendet sie dann an, ohne die Seite aktualisieren zu müssen. Der Status der Benutzeroberfläche `ViewState`wird mithilfe von verwaltet. Blazor Server-Apps unterscheiden sich dadurch, dass die App eine aktive Verbindung mit dem Client erfordert. Darüber hinaus wird der gesamte UI-Status auf dem Server beibehalten. Abgesehen von diesen Unterschieden sind sich die beiden Modelle konzeptionell ähnlich.
 
-## <a name="how-to-choose-the-right-blazor-hosting-model"></a>Auswählen des richtigen blazor-Hostingmodells
+## <a name="how-to-choose-the-right-blazor-hosting-model"></a>Wie wählt man das richtige Blazor-Hosting-Modell
 
-Wie in der Dokumentation des [blazor-Hostingmodells](https://docs.microsoft.com/aspnet/core/blazor/hosting-models#server-side)beschrieben, haben die verschiedenen blazor-Hostingmodelle unterschiedliche Kompromisse.
+Wie in den [Blazor Hosting-Modell-Dokumenten](/aspnet/core/blazor/hosting-models)beschrieben, haben die verschiedenen Blazor-Hosting-Modelle unterschiedliche Kompromisse.
 
-Das Webassembly-Hostingmodell von blazor bietet die folgenden Vorteile:
+Das Blazor WebAssembly-Hostingmodell hat die folgenden Vorteile:
 
-- Es gibt keine serverseitige .net-Abhängigkeit. Die APP funktioniert nach dem Herunterladen auf den Client vollständig.
-- Client Ressourcen und-Funktionen sind vollständig ausgelastet.
-- Die Arbeit wird vom Server an den Client verlagert.
-- Ein ASP.net Core Webserver ist nicht erforderlich, um die APP zu hosten. Server lose Bereitstellungs Szenarien sind möglich (z. b. das Bereitstellen der APP aus einem CDN).
+- Es gibt keine .NET serverseitige Abhängigkeit. Die App funktioniert voll funktionsfähig, nachdem sie auf den Client heruntergeladen wurde.
+- Clientressourcen und -funktionen werden vollständig genutzt.
+- Die Arbeit wird vom Server auf den Client ausgelagert.
+- Ein ASP.NET Core-Webserver ist zum Hosten der App nicht erforderlich. Serverlose Bereitstellungsszenarien sind möglich (z. B. die Bereitstellung der App über ein CDN).
 
-Die folgenden Nachteile des blazor-webassemblyhostingmodells lauten:
+Die Nachteile des Blazor WebAssembly-Hostingmodells sind:
 
-- Browser Funktionen schränken die APP ein.
-- Kompatible Client Hardware und Software (z. b. webassemblyunterstützung) ist erforderlich.
-- Die Download Größe ist größer, und die Auslastung von apps dauert länger.
-- Die Unterstützung von .NET-Laufzeit und-Tools ist weniger ausgereift. Beispielsweise gibt es Einschränkungen in [.NET Standard](../../standard/net-standard.md) Unterstützung und Debuggen.
+- Browserfunktionen schränken die App ein.
+- Leistungsfähige Clienthardware und -software (z. B. WebAssembly-Unterstützung) ist erforderlich.
+- Die Downloadgröße ist größer, und das Laden von Apps dauert länger.
+- .NET Laufzeit- und Tooling-Unterstützung ist weniger ausgereift. Beispielsweise gibt es Einschränkungen in [der .NET Standard-Unterstützung](../../standard/net-standard.md) und beim Debuggen.
 
-Umgekehrt bietet das Hostinganbieter des blazor-Servers die folgenden Vorteile:
+Umgekehrt bietet das Blazor Server-Hostingmodell die folgenden Vorteile:
 
-- Die Download Größe ist wesentlich kleiner als eine Client seitige APP, und die APP lädt viel schneller.
-- Die App nutzt vollständige Vorteile der Serverfunktionen, einschließlich der Verwendung von .net Core-kompatiblen APIs.
-- .Net Core auf dem Server wird verwendet, um die APP auszuführen, sodass vorhandene .NET-Tools, wie z. b. das Debuggen, erwartungsgemäß funktionieren.
-- Thin Clients werden unterstützt. Serverseitige apps arbeiten z. b. mit Browsern, die Webassembly nicht unterstützen, und auf Geräten mit Ressourcen Beschränkung.
-- Die .net-C# /Codebasis der APP, einschließlich des Komponenten Codes der APP, wird nicht für Clients bereitgestellt.
+- Die Downloadgröße ist viel kleiner als eine clientseitige App, und die App wird viel schneller geladen.
+- Die App nutzt die Serverfunktionen voll aus, einschließlich der Verwendung aller .NET Core-kompatiblen APIs.
+- .NET Core auf dem Server wird zum Ausführen der App verwendet, sodass vorhandene .NET-Tools, z. B. Debuggen, wie erwartet funktionieren.
+- Thin Clients werden unterstützt. Beispielsweise funktionieren serverseitige Apps mit Browsern, die WebAssembly nicht unterstützen, und auf geräten mit eingeschränkten Ressourcen.
+- Die .NET/C-Codebasis der App, einschließlich des Komponentencodes der App, wird nicht für Clients bereitgestellt.
 
-Folgende Nachteile gelten für das serverhostingmodell des blazor-Servers:
+Die Nachteile des Blazor Server-Hostingmodells sind:
 
-- Höhere UI-Latenz. Jede Benutzerinteraktion umfasst einen Netzwerkhop.
-- Es gibt keine Offline Unterstützung. Wenn die Client Verbindung fehlschlägt, funktioniert die APP nicht mehr.
-- Skalierbarkeit ist eine Herausforderung für apps mit vielen Benutzern. Der Server muss mehrere Clientverbindungen verwalten und den Client Status verarbeiten.
-- Ein ASP.net Core Server ist erforderlich, um der APP zu dienen. Server lose Bereitstellungs Szenarien sind nicht möglich. Beispielsweise können Sie die APP nicht über ein CDN bereitstellen.
+- Höhere UI-Latenz. Jede Benutzerinteraktion beinhaltet einen Netzwerk-Hop.
+- Es gibt keine Offline-Unterstützung. Wenn die Clientverbindung fehlschlägt, funktioniert die App nicht mehr.
+- Skalierbarkeit ist eine Herausforderung für Apps mit vielen Benutzern. Der Server muss mehrere Clientverbindungen verwalten und den Clientstatus verarbeiten.
+- Für die App ist ein ASP.NET Core-Server erforderlich. Serverlose Bereitstellungsszenarien sind nicht möglich. Sie können die App z. B. nicht über ein CDN bedienen.
 
-Die vorherige Liste von vor-und Nachteile ist möglicherweise einschüchternd, aber Ihr Hostingmodell kann später geändert werden. Unabhängig vom ausgewählten blazor-Hostingmodell ist das Komponentenmodell *identisch*. Im Prinzip können dieselben Komponenten mit einem der beiden Hostingmodelle verwendet werden. Ihr app-Code ändert sich nicht. Es empfiehlt sich jedoch, Abstraktionen einzuführen, damit Ihre Komponentenmodell agnostisch bleiben. Die Abstraktionen ermöglichen es Ihrer APP, ein anderes Hostingmodell leichter zu übernehmen.
+Die vorangehende Liste der Kompromisse kann einschüchternd sein, aber Ihr Hosting-Modell kann später geändert werden. Unabhängig vom ausgewählten Blazor-Hostingmodell ist das Komponentenmodell *identisch.* Grundsätzlich können dieselben Komponenten mit beiden Hosting-Modell verwendet werden. Ihr App-Code ändert sich nicht. Es ist jedoch eine gute Praxis, Abstraktionen einzuführen, damit Ihre Komponenten modellunabhängig bleiben. Die Abstraktionen ermöglichen es Ihrer App, ein anderes Hostingmodell einfacher zu übernehmen.
 
-## <a name="deploy-your-app"></a>Bereitstellen der App
+## <a name="deploy-your-app"></a>Bereitstellen Ihrer App
 
-ASP.net Web Forms-apps werden in der Regel auf einem Windows Server-Computer oder-Cluster auf IIS gehostet. Blazor-Apps können auch folgende Aktionen ausführen:
+ASP.NET Web Forms-Apps werden in der Regel auf IIS auf einem Windows Server-Computer oder -Cluster gehostet. Blazor-Apps können auch:
 
-- In IIS gehostet werden, entweder als statische Dateien oder als ASP.net Core-app.
-- Nutzen Sie ASP.net Core Flexibilität, um auf verschiedenen Plattformen und Server Infrastrukturen gehostet zu werden. Beispielsweise können Sie eine blazor-App mit [nginx](/aspnet/core/host-and-deploy/linux-nginx) oder [Apache](/aspnet/core/host-and-deploy/linux-apache) unter Linux hosten. Weitere Informationen zum Veröffentlichen und Bereitstellen von blazor-apps finden Sie in der Dokumentation zur blazor [-Hosting-und-Bereitstellung](/aspnet/core/host-and-deploy/blazor/) .
+- Werden Sie auf IIS gehostet, entweder als statische Dateien oder als ASP.NET Core-App.
+- Nutzen Sie ASP.NET Die Flexibilität von Core, auf verschiedenen Plattformen und Serverinfrastrukturen gehostet zu werden. Sie können beispielsweise eine Blazor App mit [Nginx](/aspnet/core/host-and-deploy/linux-nginx) oder [Apache](/aspnet/core/host-and-deploy/linux-apache) unter Linux hosten. Weitere Informationen zum Veröffentlichen und Bereitstellen von Blazor-Apps finden Sie in der Dokumentation zum [Blazor-Hosting und zur Bereitstellung.](/aspnet/core/host-and-deploy/blazor/)
 
-Im nächsten Abschnitt sehen wir uns an, wie die Projekte für blazor Webassembly-und blazor-Server-Apps eingerichtet werden.
+Im nächsten Abschnitt sehen wir uns die Einrichtung der Projekte für Blazor WebAssembly- und Blazor Server-Apps an.
 
 >[!div class="step-by-step"]
 >[Zurück](architecture-comparison.md)

@@ -3,12 +3,12 @@ title: Authentifizieren bei den Azure-Bibliotheken für .NET
 description: Authentifizieren bei den Azure-Bibliotheken für .NET
 ms.date: 08/22/2018
 ms.custom: azure-sdk-dotnet
-ms.openlocfilehash: e562b60da0a2d34f716e80d3d5d0d0b5e55b0cdb
-ms.sourcegitcommit: 34dc3c0d0d0a1cc418abff259d9daa8078d00b81
+ms.openlocfilehash: f6af813cd1423be8784b769b272756b2c8258392
+ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/19/2020
-ms.locfileid: "81433145"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81607870"
 ---
 # <a name="authenticate-with-the-azure-libraries-for-net"></a>Authentifizieren bei den Azure-Bibliotheken für .NET
 
@@ -45,7 +45,7 @@ var account = CloudStorageAccount.Parse(storageConnectionString);
 // Do things with the account here...
 ```
 
-Dienstverbindungszeichenfolgen werden in anderen Azure-Diensten wie [CosmosDB](/azure/documentdb/documentdb-dotnet-application#a-nametoc395637769astep-5-wiring-up-azure-cosmos-db), [Azure Cache für Redis](/azure/azure-cache-for-redis/cache-dotnet-how-to-use-azure-redis-cache)und [Service Bus](/azure/service-bus-messaging/service-bus-dotnet-get-started-with-queues) verwendet, und Sie können diese Zeichenfolgen über das Azure-Portal, die CLI oder PowerShell abrufen. Sie können auch die Azure-Verwaltungsbibliotheken für .NET zum Abfragen von Ressourcen verwenden, um Verbindungszeichenfolgen in Ihrem Code zu erstellen.
+Dienstverbindungszeichenfolgen werden in anderen Azure-Diensten wie [CosmosDB](https://docs.microsoft.com/azure/cosmos-db/), [Azure Cache für Redis](https://docs.microsoft.com/azure/azure-cache-for-redis/cache-dotnet-how-to-use-azure-redis-cache)und [Service Bus](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-dotnet-get-started-with-queues)verwendet. Sie können diese Zeichenfolgen über das Azure-Portal, die CLI oder PowerShell abrufen. Sie können auch die Azure-Verwaltungsbibliotheken für .NET zum Abfragen von Ressourcen verwenden, um Verbindungszeichenfolgen in Ihrem Code zu erstellen.
 
 Dieser Codeausschnitt verwendet beispielsweise die Verwaltungsbibliotheken, um eine Verbindungszeichenfolge für ein Speicherkonto zu erstellen:
 
