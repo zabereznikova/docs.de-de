@@ -1,5 +1,5 @@
 ---
-title: 'Typtest- und Umwandlungsoperatoren: C#-Referenz'
+title: 'C#-Referenz: Typtestoperatoren und Cast-Ausdrücke'
 description: Erfahren Sie mehr über C#-Operatoren, mit denen Sie den Typ eines Ausdrucksergebnisses überprüfen und bei Bedarf in einen anderen Typ konvertieren können.
 ms.date: 06/21/2019
 author: pkulikov
@@ -18,20 +18,20 @@ helpviewer_keywords:
 - cast expression [C#]
 - () operator [C#]
 - typeof operator [C#]
-ms.openlocfilehash: 2dc215a91c55be15e8eee488f0030f41e3492af5
-ms.sourcegitcommit: 2514f4e3655081dcfe1b22470c0c28500f952c42
+ms.openlocfilehash: 5a4f1d4c0c2ddd0d3967e15090d8f8c1ac42f83e
+ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79507086"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81121421"
 ---
-# <a name="type-testing-and-cast-operators-c-reference"></a>Typtest- und Umwandlungsoperatoren (C#-Referenz)
+# <a name="type-testing-operators-and-cast-expression-c-reference"></a>Typtestoperatoren und Cast-Ausdrücke (C#-Referenz)
 
-Sie können die folgenden Operatoren zur Überprüfung oder Konvertierung von Typen verwenden:
+Sie können die folgenden Operatoren und Ausdrücke zur Überprüfung oder Konvertierung von Typen verwenden:
 
 - [is-Operator](#is-operator): Prüft, ob der Laufzeittyp eines Ausdrucks mit einem angegebenen Typ kompatibel ist.
 - [as-Operator](#as-operator): Konvertiert einen Ausdruck explizit in einen angegebenen Typ, wenn der Laufzeittyp mit diesem Typ kompatibel ist.
-- [cast-Operator ()](#cast-operator-): Führt eine explizite Konvertierung durch.
+- [Cast-Ausdruck](#cast-expression): Führt eine explizite Konvertierung durch
 - [typeof-Operator](#typeof-operator): Ruft die <xref:System.Type?displayProperty=nameWithType>-Instanz für einen Typ ab.
 
 ## <a name="is-operator"></a>is-Operator
@@ -76,7 +76,7 @@ Weitere Informationen zum Typmuster und weiteren unterstützten Mustern finden S
 
 ## <a name="as-operator"></a>as-Operator
 
-Der `as`-Operator konvertiert das Ergebnis eines Ausdrucks explizit in einen angegebenen Verweis- oder Nullable-Typ. Wenn die Konvertierung nicht möglich ist, gibt der `as`-Operator `null` zurück. Im Gegensatz zum [cast-Operator ()](#cast-operator-) löst der `as`-Operator nie eine Ausnahme aus.
+Der `as`-Operator konvertiert das Ergebnis eines Ausdrucks explizit in einen angegebenen Verweis- oder Nullable-Typ. Wenn die Konvertierung nicht möglich ist, gibt der `as`-Operator `null` zurück. Im Gegensatz zum [Cast-Ausdruck](#cast-expression) löst der `as`-Operator nie eine Ausnahme aus.
 
 Sehen Sie sich diesen Ausdruck an:
 
@@ -92,7 +92,7 @@ E is T ? (T)(E) : (T)null
 
 außer dass `E` nur einmal überprüft wird.
 
-Der `as`-Operator berücksichtigt nur Verweis-, Nullable-, Boxing- und Unboxingkonvertierungen. Sie können den `as`-Operator nicht verwenden, um eine benutzerdefinierte Konvertierung auszuführen. Verwenden Sie zu diesem Zweck den [cast-Operator ()](#cast-operator-).
+Der `as`-Operator berücksichtigt nur Verweis-, Nullable-, Boxing- und Unboxingkonvertierungen. Sie können den `as`-Operator nicht verwenden, um eine benutzerdefinierte Konvertierung auszuführen. Verwenden Sie hierzu einen [Cast-Ausdruck](#cast-expression).
 
 Im folgenden Beispiel wird die Verwendung des `as`-Operators veranschaulicht:
 
@@ -101,7 +101,7 @@ Im folgenden Beispiel wird die Verwendung des `as`-Operators veranschaulicht:
 > [!NOTE]
 > Wie das vorherige Beispiel zeigt, müssen Sie das Ergebnis des `as`-Ausdrucks mit `null` vergleichen, um zu überprüfen, ob die Konvertierung erfolgreich war. Ab C# 7.0 können Sie den [is-Operator](#type-testing-with-pattern-matching) verwenden, um sowohl die erfolgreiche Durchführung der Konvertierung zu überprüfen als auch bei Erfolg das Ergebnis einer neuen Variable zuzuweisen.
 
-## <a name="cast-operator-"></a>Umwandlungsoperator ()
+## <a name="cast-expression"></a>Cast-Ausdruck
 
 Ein cast-Ausdruck der Form `(T)E` führt eine explizite Konvertierung des Ergebnisses des Ausdrucks `E` in den Typ `T` durch. Wenn keine explizite Konvertierung von Typ `E` in Typ `T` möglich ist, tritt ein Fehler während der Kompilierung auf. Möglicherweise ist eine explizite Konvertierung zur Laufzeit nicht erfolgreich, und ein cast-Ausdruck löst eine Ausnahme aus.
 
@@ -127,7 +127,7 @@ Sie können den `typeof`-Operator auch mit ungebundenen generischen Typen verwen
 
 [!code-csharp-interactive[typeof unbound generic](snippets/TypeTestingAndConversionOperators.cs#TypeOfUnboundGeneric)]
 
-Ein Ausdruck kann kein Argument des `typeof`-Operators sein. Verwenden Sie die <xref:System.Type?displayProperty=nameWithType>-Methode, um die <xref:System.Object.GetType%2A?displayProperty=nameWithType>-Instanz für den Laufzeittyp eines Ausdrucksergebnisses abzurufen.
+Ein Ausdruck kann kein Argument des `typeof`-Operators sein. Verwenden Sie die <xref:System.Object.GetType%2A?displayProperty=nameWithType>-Methode, um die <xref:System.Type?displayProperty=nameWithType>-Instanz für den Laufzeittyp eines Ausdrucksergebnisses abzurufen.
 
 ### <a name="type-testing-with-the-typeof-operator"></a>Typüberprüfung mit dem `typeof`-Operator
 
@@ -150,7 +150,7 @@ Weitere Informationen finden Sie in den folgenden Abschnitten der [C#-Sprachspez
 - [cast-Ausdrücke](~/_csharplang/spec/expressions.md#cast-expressions)
 - [Der typeof-Operator](~/_csharplang/spec/expressions.md#the-typeof-operator)
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [C#-Referenz](../index.md)
 - [C#-Operatoren](index.md)

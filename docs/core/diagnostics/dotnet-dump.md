@@ -2,12 +2,12 @@
 title: dotnet-dump – .NET Core
 description: Installieren und Verwenden des Befehlszeilentools dotnet-dump.
 ms.date: 10/14/2019
-ms.openlocfilehash: 3c0e28d4efc96ae53ec7dfae243725ab400e6b8f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c78ddb6447021f61f2452c075733b7d33e051ca0
+ms.sourcegitcommit: 2b3b2d684259463ddfc76ad680e5e09fdc1984d2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "76737668"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80888201"
 ---
 # <a name="dump-collection-and-analysis-utility-dotnet-dump"></a>Hilfsprogramm zum Sammeln und Analysieren von Speicherabbildern (`dotnet-dump`)
 
@@ -38,7 +38,7 @@ Mit dem globalen Tool `dotnet-dump` können Sie Windows- und Linux-Speicherabbil
 
 - **`--version`**
 
-  Zeigt die Version des Hilfsprogramms dotnet-counters an.
+  Mit dieser Option wird die Version des Hilfsprogramms „dotnet-dump“ angezeigt.
 
 - **`-h|--help`**
 

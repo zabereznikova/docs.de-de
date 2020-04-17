@@ -2,12 +2,12 @@
 title: Behandeln von Teilfehlern
 description: Erfahren Sie, wie Teilfehler ordnungsgemäß behandelt werden. Ein Microservice ist möglicherweise nicht voll funktionsfähig, kann aber möglicherweise noch weitere nützliche Aufgaben ausführen.
 ms.date: 10/16/2018
-ms.openlocfilehash: f00e5349df74b543deb6ac941c751cb130b3837c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0300719360e1a2500db0af8454c91fdfe2e5b09b
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "73732962"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80988869"
 ---
 # <a name="handle-partial-failure"></a>Behandeln von Teilfehlern
 
@@ -19,7 +19,7 @@ Nehmen Sie sich ein Beispiel an der Seite „Auftragsdetails“ der Beispielanwe
 
 **Abbildung 8-1**. Teilfehler treten wegen Abhängigkeiten auf, die die Verfügbarkeit von Dienstthreads beeinflussen
 
-In einer großen, auf Microservices basierten Anwendung können Teilfehler vor allem verstärkt werden, wenn der Großteil der internen Interaktionen von Microservices auf synchronen HTTP-Aufrufen basiert (dies gilt als Antimuster). Stellen Sie sich ein System vor, das täglich Millionen von eingehenden Aufrufen empfängt. Wenn Ihr System schlecht entworfen ist und auf langen Ketten von synchronen HTTP-Aufrufen basiert, können diese eingehenden Aufrufe in vielen weiteren Millionen von ausgehenden Aufrufen (z.B. ein Verhältnis von 1:4) an dutzende interne Microservices als synchrone Abhängigkeiten resultieren. Diese Situation wird in Abbildung 8-2 veranschaulicht, insbesondere in Abhängigkeit \#3, die eine Kette beginnt, indem sie Abhängigkeit #4 aufruft, die #5 aufruft.
+In einer großen, auf Microservices basierten Anwendung können Teilfehler vor allem verstärkt werden, wenn der Großteil der internen Interaktionen von Microservices auf synchronen HTTP-Aufrufen basiert (dies gilt als Antimuster). Stellen Sie sich ein System vor, das täglich Millionen von eingehenden Aufrufen empfängt. Wenn Ihr System schlecht entworfen ist und auf langen Ketten von synchronen HTTP-Aufrufen basiert, können diese eingehenden Aufrufe in vielen weiteren Millionen von ausgehenden Aufrufen (z. B. ein Verhältnis von 1:4) an dutzende interne Microservices als synchrone Abhängigkeiten resultieren. Diese Situation wird in Abbildung 8-2 veranschaulicht, insbesondere in Abhängigkeit \#3, die eine Kette beginnt, indem sie Abhängigkeit #4 aufruft, die #5 aufruft.
 
 ![Diagramm, das mehrere verteilte Abhängigkeiten zeigt.](./media/handle-partial-failure/multiple-distributed-dependencies.png)
 
@@ -33,7 +33,7 @@ Wenn Sie keine Techniken für die Fehlertoleranz entwerfen oder implementieren, 
 
 **Abbildung 8-3**. Teilfehler, der durch Microservices mit langen Ketten von synchronen HTTP-Aufrufen verstärkt wurde
 
-Zur Minimierung dieses Problems wird im Abschnitt [Asynchrone Integration von Microservices erzwingt die Autonomie eines Microservice](../architect-microservice-container-applications/communication-in-microservice-architecture.md#asynchronous-microservice-integration-enforces-microservices-autonomy) dieses Handbuchs empfohlen, die asynchrone Kommunikation in allen internen Microservices zu verwenden.
+Zur Minimierung dieses Problems wird im Abschnitt [Asynchrone Integration von Microservices erzwingt die Autonomie eines Microservice](../architect-microservice-container-applications/communication-in-microservice-architecture.md#asynchronous-microservice-integration-enforces-microservices-autonomy) dieses Leitfadens empfohlen, die asynchrone Kommunikation zwischen den internen Microservices zu verwenden.
 
 Darüber hinaus ist es wichtig, dass Sie Ihre Microservices und Clientanwendungen dafür entwerfen, Teilfehler zu behandeln – d.h. robuste Microservices und Clientanwendungen zu erstellen.
 

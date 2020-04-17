@@ -2,16 +2,16 @@
 title: Entwerfen der Persistenzebene der Infrastruktur
 description: .NET-Microservicearchitektur für .NET-Containeranwendungen | Übersicht über das Repositorymuster im Entwurf der Infrastrukturpersistenzebene
 ms.date: 10/08/2018
-ms.openlocfilehash: e10c8c1569089d5c8274df655ad7a12f2ebb7c22
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1b2665e81ade60affa84563121c04bca08537f07
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78846808"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80988478"
 ---
 # <a name="design-the-infrastructure-persistence-layer"></a>Entwerfen der Persistenzebene der Infrastruktur
 
-Komponenten der Datenpersistenz bieten Zugriff auf die Daten, die innerhalb der Grenzen eines Microservices gehostet werden (d.h. in der Datenbank eines Microservices). Sie enthalten die tatsächliche Implementierung von Komponenten wie Repositorys und [Arbeitseinheits](https://martinfowler.com/eaaCatalog/unitOfWork.html)-Klassen wie benutzerdefinierte Entity Framework-<xref:Microsoft.EntityFrameworkCore.DbContext>-Objekte. EF-DbContext implementiert sowohl das Repository- als auch das Arbeitseinheitsmuster.
+Die Komponenten der Datenpersistenz bieten Zugriff auf die Daten, die innerhalb der Grenzen eines Microservices gehostet werden (d. h. in der Datenbank eines Microservices). Sie enthalten die tatsächliche Implementierung von Komponenten wie Repositorys und [Arbeitseinheits](https://martinfowler.com/eaaCatalog/unitOfWork.html)-Klassen wie benutzerdefinierte Entity Framework-<xref:Microsoft.EntityFrameworkCore.DbContext>-Objekte. EF-DbContext implementiert sowohl das Repository- als auch das Arbeitseinheitsmuster.
 
 ## <a name="the-repository-pattern"></a>Das Repositorymuster
 
@@ -23,7 +23,7 @@ Das Repositorymuster stellt eine Methode mit umfassender Dokumentation für die 
 
 ### <a name="define-one-repository-per-aggregate"></a>Definieren eines Repositorys pro Aggregat
 
-Sie sollten für jedes Aggregat bzw. für jeden Aggregatstamm eine Repositoryklasse erstellen. In einem auf domänengesteuerten Entwurfsmustern (DDD) basierenden Microservice sollten Sie für das Update der Datenbank als einzigen Kanal die Repositorys verwenden. Grund dafür ist, dass sie in einer 1:1-Beziehung zum Aggregatstamm stehen, wodurch die Invarianten und die Transaktionskonsistenz des Aggregats gesteuert werden. Die Datenbank kann auch über andere Kanäle abgefragt werden (nach einem CQRS-Ansatz), da sich der Status der Datenbank bei Abfragen nicht ändert. Der Transaktionsbereich (d.h. die Updates) muss jedoch immer von den Repositorys und den Aggregatstämmen gesteuert werden.
+Sie sollten für jedes Aggregat bzw. für jeden Aggregatstamm eine Repositoryklasse erstellen. In einem auf domänengesteuerten Entwurfsmustern (DDD) basierenden Microservice sollten Sie für das Update der Datenbank als einzigen Kanal die Repositorys verwenden. Der Grund dafür ist, dass sie in einer 1:1-Beziehung zum Aggregatstamm stehen, wodurch die Invarianten und die Transaktionskonsistenz des Aggregats gesteuert werden. Die Datenbank kann auch über andere Kanäle abgefragt werden (nach einem CQRS-Ansatz), da sich der Status der Datenbank bei Abfragen nicht ändert. Der Transaktionsbereich (d.h. die Updates) muss jedoch immer von den Repositorys und den Aggregatstämmen gesteuert werden.
 
 Im Wesentlichen können Sie in einem Repository den Arbeitsspeicher mit Daten auffüllen, die aus der Datenbank in Form von Domänenentitäten stammen. Sobald sich die Entitäten im Arbeitsspeicher befinden, können sie geändert und über Transaktionen wieder in der Datenbank gespeichert werden.
 
@@ -102,9 +102,9 @@ Benutzerdefinierte Repositorys sind aus den oben genannten Gründen hilfreich, u
 
 Jimmy Bogard hat beispielsweise Folgendes geäußert, als er direktes Feedback zu diesem Leitfaden gegeben hat:
 
-> Dies wird wahrscheinlich mein ausführlichstes Feedback. Ich bin wirklich kein Fan von Repositorys, hauptsächlich deshalb, weil sie die wichtigen Details des zugrunde liegenden Persistenzmechanismus ausblenden. Deswegen vertraue ich auch bei Befehlen auf MediatR. Ich kann die volle Leistung der Persistenzebene nutzen und das gesamte Domänenverhalten per Push in meine Aggregatstämme übertragen. Normalerweise möchte ich keine Pseudorepositorys haben. Ich muss diese Integrationstests weiterhin am Original durchführen können. Dass wir uns nach CQRS gerichtet haben, bedeutet, dass wir keine Repositorys mehr benötigt haben.
+> Dies wird wahrscheinlich mein wichtigstes Feedback. Ich bin wirklich kein Fan von Repositorys. Das liegt hauptsächlich daran, dass sie die wichtigen Details des zugrunde liegenden Persistenzmechanismus verstecken. Deswegen vertraue ich auch bei Befehlen auf MediatR. Ich kann die volle Leistung der Persistenzebene nutzen und das gesamte Domänenverhalten per Push in meine Aggregatstämme übertragen. Normalerweise möchte ich keine Repositorys simulieren. Ich muss diese Integrationstests weiterhin am Original durchführen können. Durch die Einführung von CQRS sind Repositorys nicht mehr zwingend erforderlich.
 
-Repositorys können nützlich sein, sind jedoch nicht so wichtig für Ihren domänengesteuerten Entwurf wie Aggregatsmuster und umfassende Domänenmodelle. Daher können Sie selbst entscheiden, ob Sie das Repositorymuster verwenden möchten oder nicht. Verwenden Sie das Repositorymuster allerdings, wenn Sie EF Core nutzen – auch wenn das Repository in diesem Fall den gesamten Microservice oder begrenzten Kontext abdeckt.
+Repositorys können nützlich sein, sind jedoch nicht so wichtig für Ihren domänengesteuerten Entwurf wie Aggregatsmuster und umfassende Domänenmodelle. Daher können Sie selbst entscheiden, ob Sie das Repositorymuster verwenden möchten oder nicht. Dennoch verwenden Sie das Repositorymuster immer, wenn Sie EF Core verwenden, obwohl das Repository in diesem Fall den gesamten Microservice oder die Kontextgrenze abdeckt.
 
 ## <a name="additional-resources"></a>Zusätzliche Ressourcen
 

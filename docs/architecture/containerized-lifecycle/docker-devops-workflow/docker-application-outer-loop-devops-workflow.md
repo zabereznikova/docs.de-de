@@ -2,12 +2,12 @@
 title: Schritte im Outer-Loop-DevOps-Workflow für eine Docker-Anwendung
 description: Lernen Sie die Schritte für die „äußere Schleife“ des DevOps-Workflows
 ms.date: 02/15/2019
-ms.openlocfilehash: 735f92c00cd6279649ec3b0c35cfb00543f21a8c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: fdda1b6a2deb08ed97867583fcc8048d4dba880c
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75936783"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80988972"
 ---
 # <a name="steps-in-the-outer-loop-devops-workflow-for-a-docker-application"></a>Schritte im Outer-Loop-DevOps-Workflow für eine Docker-Anwendung
 
@@ -184,7 +184,7 @@ Unter CD-Gesichtspunkten und insbesondere im Hinblick auf Azure DevOps Services 
 
 **Abbildung 5-9**. Bereitstellen von verteilten Anwendungen im Containerdienst
 
-Beim Bereitstellen auf bestimmten Clustern oder Orchestratoren würden Sie traditionell von spezifischen Bereitstellungsskripts und für jeden Orchestrator spezifischen Mechanismen ausgehen (d.h. die Bereitstellungsmechanismen von Kubernetes und Service Fabric unterscheiden sich), statt das einfachere und komfortable `docker-compose`-Tool zu verwenden, das auf der `docker-compose.yml`-Definitionsdatei basiert. Aufgrund der Azure DevOps Services Docker Deploy-Aufgabe, die in Abbildung 5–10 dargestellt ist, können Sie jetzt auch auf den unterstützten Orchestratoren bereitstellen, indem Sie einfach Ihre vertraute `docker-compose.yml`-Datei verwenden, da das Tool die erforderliche „Übersetzung“ (von Ihrer `docker-compose.yml`-Datei in das für den Orchestrator erforderliche Format) für Sie vornimmt.
+Beim Bereitstellen auf bestimmten Clustern oder Orchestratoren würden Sie traditionell von spezifischen Bereitstellungsskripts und für jeden Orchestrator spezifischen Mechanismen ausgehen (d.h. die Bereitstellungsmechanismen von Kubernetes und Service Fabric unterscheiden sich), statt das einfachere und komfortable `docker-compose`-Tool zu verwenden, das auf der `docker-compose.yml`-Definitionsdatei basiert. Aufgrund der Docker-Bereitstellungsaufgabe von Azure DevOps Services, die in Abbildung 5–10 dargestellt ist, können Sie jetzt auch auf den unterstützten Orchestratoren bereitstellen, indem Sie einfach Ihre vertraute `docker-compose.yml`-Datei verwenden, da das Tool die erforderliche „Übersetzung“ für Sie vornimmt (von Ihrer `docker-compose.yml`-Datei in das für den Orchestrator erforderliche Format).
 
 ![Screenshot, der die Aufgabe „In Kubernetes bereitstellen“ zeigt.](./media/docker-application-outer-loop-devops-workflow/add-deploy-to-kubernetes-task.png)
 

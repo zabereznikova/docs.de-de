@@ -2,12 +2,12 @@
 title: Strategien zum Beheben von Teilfehlern
 description: Lernen Sie verschiedene Strategien zum ordnungsgemäßen Behandeln von Teilfehlern kennen.
 ms.date: 10/16/2018
-ms.openlocfilehash: e96fe99ab44b924460e01abaad30aa3e2432117a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: abf87df5afed02b4d794a1307a0ed943cafb4db3
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "68674507"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80988803"
 ---
 # <a name="strategies-to-handle-partial-failure"></a>Strategien zum Behandeln von Teilfehlern
 
@@ -19,7 +19,7 @@ Zu den Strategien für den Umgang mit Teilfehlern zählen die folgenden:
 
 **Netzwerktimeouts umgehen:** Clients sollten so konzipiert werden, dass sie nicht auf unbestimmte Zeit blockiert sind und Timeouts beim Warten auf einer Antwort verwenden. Durch Timeouts wird sichergestellt, dass Ressourcen nie unbegrenzt gebunden sind.
 
-**Trennschalter implementieren:** Bei diesem Ansatz verfolgt der Prozess die Anzahl der fehlerhaften Anforderungen. Wenn die Fehlerrate einen konfigurierten Grenzwert überschreitet, wird der Trennschalter geschlossen, und weitere Versuche lösen sofort einen Fehler aus. (Wenn sehr viele Anforderungen fehlschlagen, kann das daran liegen, dass der Dienst nicht verfügbar ist und dass das Senden von Anforderungen zwecklos ist.) Nach Ablauf der Timeoutphase versucht der Client erneut, eine Anforderung zu senden, und wenn diese erfolgreich ist, wird der Trennschalter wieder geöffnet.
+**Trennschalter implementieren:** Bei diesem Ansatz verfolgt der Prozess die Anzahl der fehlerhaften Anforderungen. Wenn die Fehlerrate einen konfigurierten Grenzwert überschreitet, wird ein Sicherungsmuster ausgelöst, sodass weitere Versuche sofort fehlschlagen. (Wenn sehr viele Anforderungen fehlschlagen, kann das daran liegen, dass der Dienst nicht verfügbar ist und dass das Senden von Anforderungen zwecklos ist.) Nach Ablauf der Timeoutphase versucht der Client erneut, eine Anforderung zu senden, und wenn diese erfolgreich ist, wird der Trennschalter wieder geöffnet.
 
 **Fallbacks bereitstellen:** Bei diesem Ansatz führt der Clientprozess Fallbacklogik aus, wenn eine Anforderung fehlschlägt: Es werden z.B. zwischengespeicherte Daten oder ein Standardwert zurückgegeben. Dieser Ansatz eignet sich für Abfragen und ist bei Updates oder Befehlen komplexer.
 

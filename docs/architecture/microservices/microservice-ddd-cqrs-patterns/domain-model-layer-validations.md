@@ -2,12 +2,12 @@
 title: Entwerfen von Validierungen auf der Domänenmodellebene
 description: .NET-Microservicesarchitektur für .NET-Containeranwendungen | Wichtige Konzepte für Validierungen von Domänenmodellen
 ms.date: 10/08/2018
-ms.openlocfilehash: 98ccc5df84c9f6f402ecbee83b077c806d6a76fc
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d2efc5f3b3267c4573409952791c6e883a01aae2
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75899669"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80988504"
 ---
 # <a name="design-validations-in-the-domain-model-layer"></a>Entwerfen von Validierungen auf der Domänenmodellebene
 
@@ -55,11 +55,11 @@ Ein ähnlicher Ansatz kann im Entitätskonstruktor verwendet werden, wodurch ein
 
 Datenanmerkungen können ähnlich wie die Required- oder MaxLength-Attribute zum Konfigurieren von EF Core-Datenbankfeld-Eigenschaften verwendet werden, wie im Abschnitt [Tabellenzuordnung](infrastructure-persistence-layer-implemenation-entity-framework-core.md#table-mapping) detailliert erläutert. Allerdings [können sie nicht mehr für die Entitätsvalidierung EF Core verwendet werden](https://github.com/dotnet/efcore/issues/3680) (Gleiches gilt für die <xref:System.ComponentModel.DataAnnotations.IValidatableObject.Validate%2A?displayProperty=nameWithType>-Methode), wie dies seit EF 4.x in .NET Framework der Fall war.
 
-Datenanmerkungen und die <xref:System.ComponentModel.DataAnnotations.IValidatableObject>-Schnittstelle können weiterhin für die Modellvalidierung während der Modellbindung verwendet werden – wie gewohnt vor dem Aufruf der Controlleraktionen. Bei diesem Modell handelt sich aber um ein ViewModel- bzw. DTO-Konzept, das im MVC oder der API und nicht im Domänenmodell umgesetzt werden muss.
+Datenanmerkungen und die <xref:System.ComponentModel.DataAnnotations.IValidatableObject>-Schnittstelle können weiterhin für die Modellvalidierung während der Modellbindung verwendet werden, bevor die Controlleraktionen aufgerufen werden. Dies ist jedoch für ein ViewModel- oder DTO-Modell vorgesehen. Dabei handelt es sich um einen MVC- oder API-Aspekt, der nicht im Domänenmodell behandelt wird.
 
-Nachdem die Unterschiede in den Konzepten nun klar sind, können Sie Datenanmerkungen und `IValidatableObject` in der Entitätsklasse weiterhin für die Validierung verwenden, wenn Ihre Aktionen einen Objektparameter der Entitätsklasse empfangen. Dies wird aber nicht empfohlen. In diesem Fall erfolgt die Validierung bei der Modellbindung, vor dem Aufrufen der Aktion, und Sie können das Ergebnis in der ModelState.IsValid-Eigenschaft des Controllers überprüfen. Aber auch hier gilt: Die Validierung erfolgt im Controller, nicht vor dem Persistieren des Entitätsobjekts im DbContext, wie es seit EF 4.x der Fall war.
+Nachdem die Unterschiede in den Konzepten nun klar sind, können Sie Datenanmerkungen und `IValidatableObject` in der Entitätsklasse weiterhin für die Validierung verwenden, wenn Ihre Aktionen einen Objektparameter der Entitätsklasse empfangen. Dies wird aber nicht empfohlen. In diesem Fall erfolgt die Validierung bei der Modellbindung, vor dem Aufrufen der Aktion, und Sie können das Ergebnis in der ModelState.IsValid-Eigenschaft des Controllers überprüfen. Aber auch hier gilt: Die Validierung erfolgt im Controller, d. h., nicht bevor das Entitätsobjekt in DbContext gespeichert wird, wie es seit EF 4.x der Fall ist.
 
-Sie können weiterhin in der Entitätsklasse eine benutzerdefinierte Validierung mithilfe von Datenanmerkungen und der `IValidatableObject.Validate`-Methode implementieren, indem Sie die SaveChanges-Methode von DbContext überschreiben.
+Sie können die benutzerdefinierte Validierung weiterhin mithilfe von Datenanmerkungen und der `IValidatableObject.Validate`-Methode in die Entitätsklasse implementieren, indem Sie die SaveChanges-Methode von DbContext überschreiben.
 
 Eine Beispielimplementierung für die Validierung von `IValidatableObject`-Elementen finden Sie in [diesem Kommentar auf GitHub](https://github.com/dotnet/efcore/issues/3680#issuecomment-155502539). Dieses Beispiel führt keine attributbasierten Validierungen durch. Diese lassen sich jedoch durch Reflexion in der gleichen Überschreibung implementieren.
 

@@ -2,12 +2,12 @@
 title: Implementieren des Trennschaltermusters
 description: Erfahren Sie, wie das Circuit-Breaker-Muster als ergänzendes System zu HTTP-Wiederholungsversuchen implementieren können.
 ms.date: 03/03/2020
-ms.openlocfilehash: a79c6fcca1e29f3c30d697cb369060d59a72c121
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bebe0b4a622db928175f78f8d3e303d3d7adf170
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78847244"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80988884"
 ---
 # <a name="implement-the-circuit-breaker-pattern"></a>Implementieren des Circuit Breaker-Musters
 
@@ -96,7 +96,7 @@ Mit dem URI `http://localhost:5103/failing` können Sie anschließend wie in Abb
 
 ![Screenshot der Überprüfung des Status einer fehlschlagenden Middlewaresimulation.](./media/implement-circuit-breaker-pattern/failing-middleware-simulation.png)
 
-**Abbildung 8-5.** Überprüfung des „Fehlerstatus“ der ASP.NET-Middleware (hier deaktiviert)
+**Abbildung 8-5.** Überprüfung des Status der „fehlschlagenden“ ASP.NET-Middleware (hier deaktiviert)
 
 Der Warenkorbmicroservice antwortet bei Aufruf immer mit dem Statuscode 500.
 
@@ -132,7 +132,7 @@ public class CartController : Controller
 }
 ```
 
-Die durch den Code ausgelösten Schritte werden im Folgenden kurz zusammengefasst. Die Wiederholungsrichtlinie versucht mehrmals, HTTP-Anforderungen zu stellen, was zu HTTP-Fehlern führt. Wenn die maximale Anzahl der Wiederholungen erreicht wird, die für die Circuit Breaker-Richtlinie festgelegt wurde (in diesem Fall 5), löst die Anwendung die Ausnahme „BrokenCircuitException“ aus. Das Ergebnis ist eine Benutzerbenachrichtigung (siehe Abbildung 8-6).
+Zusammenfassung: Die Wiederholungsrichtlinie versucht mehrmals, HTTP-Anforderungen zu stellen, was zu HTTP-Fehlern führt. Wenn die maximale Anzahl der Wiederholungen erreicht wird, die für die Circuit Breaker-Richtlinie festgelegt wurde (in diesem Fall 5), löst die Anwendung die Ausnahme „BrokenCircuitException“ aus. Das Ergebnis ist eine Benutzerbenachrichtigung (siehe Abbildung 8-6).
 
 ![Screenshot der MVC-Web-App mit einem Fehler wegen nicht funktionierendem Warenkorbdienst.](./media/implement-circuit-breaker-pattern/basket-service-inoperative.png)
 

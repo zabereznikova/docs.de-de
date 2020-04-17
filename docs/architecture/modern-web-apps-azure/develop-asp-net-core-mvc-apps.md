@@ -4,12 +4,12 @@ description: Entwerfen moderner Webanwendungen mit ASP.NET Core und Azure | Entw
 author: ardalis
 ms.author: wiwagn
 ms.date: 12/04/2019
-ms.openlocfilehash: a18b4dfc60c7d3971136f73f333b7225735710b3
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3de70af23206b0ae0525541b3d2cb480dc5bb882
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77503943"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80987906"
 ---
 # <a name="develop-aspnet-core-mvc-apps"></a>Entwickeln von ASP.NET Core MVC-Apps
 
@@ -28,11 +28,11 @@ Wenn Sie eine neue ASP.NET Core-App erstellen, sollten Sie sich zuvor genau übe
 
 Razor Pages werden standardmäßig für neue Webanwendungen in Visual Studio verwendet. Mithilfe von Razor Pages können Sie seitenbasierte Anwendungsfeatures (wie Nicht-Single-Page-Formulare) einfacher erstellen. Wenn Controller und Ansichten verwendet werden, enthalten Anwendungen häufig sehr große Controller, die mit mehreren Abhängigkeiten und Ansichtsmodellen arbeiten und viele unterschiedliche Ansichten zurückgeben. Dadurch wird die Anwendung komplexer, und häufig sind Controller vorhanden, die das Single Responsibility Principle (Prinzip der eindeutigen Verantwortlichkeit) oder das Offen-Geschlossen-Prinzip nicht befolgen. Dieses Problem wird durch Razor Pages behoben, indem die serverseitige Logik für eine bestimmte lokale Seite in einer Webanwendung mit entsprechendem Razor-Markup gekapselt wird. Eine Razor Page ohne serverseitige Logik kann aus einer Razor-Datei bestehen (z.B. „Index.cshtml“). Den meisten nicht trivialen Razor Pages ist jedoch eine Seitenmodellklasse zugeordnet, die üblicherweise genauso wie die Razor-Datei benannt wird, aber die Erweiterung „.cs“ aufweist (z.B. „Index.cshtml.cs“).
 
-Das Seitenmodell einer Razor Page kombiniert die Zuständigkeit eines MVC und eines Ansichtsmodells. Anforderungen werden nicht mit Controlleraktionsmethoden verarbeitet, sondern Seitenmodellhandler wie OnGet() werden ausgeführt, um die zugehörige Seite standardmäßig zu rendern. Durch Razor Pages wird das Erstellen einzelner Seiten in einer ASP.NET Core-App vereinfacht, während alle Architekturfeatures von ASP.NET Core MVC genutzt werden können. Diese sind für neue seitenbasierte Funktionen gut geeignet.
+Das Seitenmodell einer Razor Page kombiniert die Zuständigkeit eines MVC-Controllers und eines Ansichtsmodells. Anforderungen werden nicht mit Controlleraktionsmethoden verarbeitet, sondern Seitenmodellhandler wie OnGet() werden ausgeführt, um die zugehörige Seite standardmäßig zu rendern. Durch Razor Pages wird das Erstellen einzelner Seiten in einer ASP.NET Core-App vereinfacht, während alle Architekturfeatures von ASP.NET Core MVC genutzt werden können. Diese sind für neue seitenbasierte Funktionen gut geeignet.
 
 ### <a name="when-to-use-mvc"></a>Wann sollten Sie MVC verwenden?
 
-Wenn Sie Web-APIs erstellen, ist das MVC-Muster besser als Razor Pages geeignet. Wenn Ihr Projekt nur Web-API-Endpunkte verfügbar macht, sollten Sie idealerweise mit der Web-API-Projektvorlage beginnen. Andernfalls ist es auch ganz einfach, Controller und zugehörige API-Endpunkte zu einer beliebigen ASP.NET Core-App hinzuzufügen. Verwenden Sie den ansichtsbasierten MVC-Ansatz, wenn Sie eine vorhandene Anwendung mit geringem Aufwand von ASP.NET Core MVC 5 oder früher zu ASP.NET Core MVC migrieren möchten. Nach der Migration können Sie überprüfen, ob Razor Pages für neue Feature oder als gesamte Migration sinnvoll eingesetzt werden können.
+Wenn Sie Web-APIs erstellen, ist das MVC-Muster besser als Razor Pages geeignet. Wenn Ihr Projekt nur Web-API-Endpunkte verfügbar macht, sollten Sie idealerweise mit der Web-API-Projektvorlage beginnen. Andernfalls ist es auch ganz einfach, Controller und zugehörige API-Endpunkte zu einer beliebigen ASP.NET Core-App hinzuzufügen. Verwenden Sie den ansichtsbasierten MVC-Ansatz, wenn Sie eine vorhandene Anwendung mit geringem Aufwand von ASP.NET Core MVC 5 oder früher zu ASP.NET Core MVC migrieren möchten. Nach der Migration können Sie überprüfen, ob Razor Pages für neue Feature oder als gesamte Migration sinnvoll eingesetzt werden kann.
 
 Die Leistung Ihrer Web-App hängt nur geringfügig davon ab, ob Sie Razor Pages oder MVC-Ansichten verwenden, außerdem werden bei beiden Methoden Features wie Abhängigkeitsinjektion, Filter, Modellbindung, Validierung usw. unterstützt.
 
@@ -76,7 +76,7 @@ public class ProductsController : Controller
 }
 ```
 
-Für Razor Pages wird kein Attributrouting verwendet. Sie können in der `@page`-Anweisung einer Razor Page jedoch zusätzliche Informationen zu Routingvorlagen angeben:
+Razor Pages nutzt kein Attributrouting. Sie können in der `@page`-Anweisung einer Razor Page jedoch zusätzliche Informationen zu Routingvorlagen angeben:
 
 ```csharp
 @page "{id:int}"

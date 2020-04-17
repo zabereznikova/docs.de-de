@@ -2,12 +2,12 @@
 title: Entwerfen eines DDD-orientierten Microservices
 description: .NET-Microservicearchitektur für .NET-Containeranwendungen | Übersicht über das Design DDD-orientierter Microservices für Bestellungen und die entsprechenden Anwendungsschichten
 ms.date: 10/08/2018
-ms.openlocfilehash: c5ac55978ca979a3ae055d9b0cd2d3c6b3187b4e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 583e103c8bd9d828731a658ea2fd2aa0758e7a12
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79401532"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80988738"
 ---
 # <a name="design-a-ddd-oriented-microservice"></a>Erstellen eines DDD-orientierten Microservices
 
@@ -71,7 +71,7 @@ Wir fahren nun mit der Anwendungsebene fort und können erneut aus dem Buch [Dom
 
 **Anwendungsebene**: Definiert die Aufträge, die von der Software ausgeführt werden sollen, und leitet die ausdrucksstarken Domänenobjekte zur Behebung von Problemen weiter. Die Aufgaben, für die diese Ebene verantwortlich ist, sind für das Geschäft von Bedeutung bzw. für die Interaktion mit den Anwendungsebenen anderer Systeme erforderlich. Diese Ebene wird dünn gehalten. Sie enthält keine Geschäftsregeln oder Wissen, sondern koordiniert nur Aufgaben und delegiert Arbeit an Kollaborationen von Domänenobjekten auf der darunterliegenden Ebene. Sie enthält keinen Zustand, der die Geschäftslage widerspiegelt, kann aber einen Zustand aufweisen, der dem Benutzer oder dem Programm den Fortschritt einer Aufgabe anzeigt.
 
-Die Anwendungsebene eines Microservices in .NET wird häufig als ASP.NET Core-Web-API-Projekt codiert. Das Projekt implementiert die Interaktion des Microservices, den Remotenetzwerkzugriff und die externen Web-APIs, die über die Benutzeroberfläche oder Client-Apps verwendet werden. Es enthält Abfragen, wenn ein CQRS-Ansatz verwendet wird, vom Microservice akzeptierte Befehle und sogar die ereignisgesteuerte Kommunikation zwischen Microservices (Integrationsereignisse). Die ASP.NET Core-Web-API, die die Anwendungsebene darstellt, darf keine Geschäftsregeln oder Domänenwissen enthalten (insbesondere Domänenregeln für Transaktionen oder Updates). Diese sollten der Bibliothek der Domänenmodellklassen zugeordnet sein. Die Anwendungsebene darf nur Aufgaben koordinieren und keinen Domänenstatus enthalten oder definieren (Domänenmodell). Sie delegiert die Ausführung von Geschäftsregeln für die Domänenmodellklassen (Aggregatstämme und Domänenentitäten), wodurch die Daten schließlich innerhalb dieser Domänenentitäten aktualisiert werden.
+Die Anwendungsschicht eines Microservices in .NET wird häufig als ASP.NET Core-Web-API-Projekt codiert. Das Projekt implementiert die Interaktion des Microservices, den Remotenetzwerkzugriff und die externen Web-APIs, die über die Benutzeroberfläche oder Client-Apps verwendet werden. Es enthält Abfragen, wenn ein CQRS-Ansatz verwendet wird, vom Microservice akzeptierte Befehle und sogar die ereignisgesteuerte Kommunikation zwischen Microservices (Integrationsereignisse). Die ASP.NET Core-Web-API, die die Anwendungsebene darstellt, darf keine Geschäftsregeln oder Domänenwissen enthalten (insbesondere Domänenregeln für Transaktionen oder Updates). Diese sollten der Bibliothek der Domänenmodellklassen zugeordnet sein. Die Anwendungsebene darf nur Aufgaben koordinieren und keinen Domänenstatus enthalten oder definieren (Domänenmodell). Sie delegiert die Ausführung von Geschäftsregeln für die Domänenmodellklassen (Aggregatstämme und Domänenentitäten), wodurch die Daten schließlich innerhalb dieser Domänenentitäten aktualisiert werden.
 
 In der Anwendungslogik werden im Wesentlichen alle Fälle implementiert, die von einem bestimmten Front-End abhängen, zum Beispiel die mit einem Web-API-Dienst verbundene Implementierung.
 

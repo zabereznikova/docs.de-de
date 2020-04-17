@@ -2,12 +2,12 @@
 title: Implementieren eines Microservicedomänenmodells mit .NET Core
 description: .NET-Microservicearchitektur für .NET-Containeranwendungen | Übersicht über die Implementierungsdetails eines DDD-orientierten Domänenmodells
 ms.date: 10/08/2018
-ms.openlocfilehash: bff9cbda08e519038056268151a1721427f0ac01
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 24f700b371d998cf99cbcf260a5278d797cb39d4
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "73972046"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80988426"
 ---
 # <a name="implement-a-microservice-domain-model-with-net-core"></a>Implementieren eines Microservicedomänenmodells mit .NET Core
 
@@ -23,7 +23,7 @@ Ansicht im Projektmappen-Explorer: Projekt Ordering.Domain mit dem Ordner „Agg
 
 **Abbildung 7-10**. Domänenmodellstruktur für den Microservice für Bestellungen in eShopOnContainers
 
-Außerdem umfasst die Ebene des Domänenmodells Repositoryverträge (Schnittstellen), die die Infrastrukturanforderungen Ihres Domänemodells ausmachen. Anders gesagt: Diese Schnittstellen drücken aus, welche Repositorys und Methoden die Infrastrukturebene implementieren muss. Es ist wichtig, dass die Implementierung der Repositorys außerhalb der Domänemodellebene in der Bibliothek auf Infrastruktureben platziert wird, damit die Domänenmodellebene nicht durch die APIs oder Klassen der Infrastrukturtechnologien wie Entity Framework verunreinigt wird.
+Außerdem umfasst die Ebene des Domänenmodells Repositoryverträge (Schnittstellen), die die Infrastrukturanforderungen Ihres Domänemodells ausmachen. Anders gesagt: Diese Schnittstellen drücken aus, welche Repositorys und Methoden die Infrastrukturebene implementieren muss. Es ist wichtig, dass die Implementierung der Repositorys außerhalb der Domänenmodellebene in der Bibliothek auf Infrastrukturebene platziert wird, damit die Domänenmodellebene nicht durch die APIs oder Klassen von Infrastrukturtechnologien wie Entity Framework „verunreinigt“ wird.
 
 Außerdem wird ein [SeedWork](https://martinfowler.com/bliki/Seedwork.html)-Ordner angezeigt, der benutzerbasierte Basisklassen enthält, die Sie als Grundlage für Ihre Domänenentitäten und Wertobjekte verwenden können, sodass redundanter Code in den Objektklassen der einzelnen Domänen vermieden wird.
 
@@ -101,7 +101,7 @@ Außerdem wird die Klasse durch eine Schnittstelle namens „IAggregateRoot“ e
 
 Markierugsschnittstellen werden gelegentlich zwar als Antimuster bezeichnet, jedoch sind sie hilfreich, um eine Klasse zu markieren – insbesondere, wenn sich diese Schnittstelle weiterentwickelt. Der Marker kann zwar auch Attribute verwenden, jedoch geht es schneller, die Basisklasse (Entität) neben der IAggregate-Schnittstelle zu überprüfen, anstatt einen Attributmarker für Aggregate oberhalb der Klasse zu positionieren. Sie können hier nach Belieben entscheiden.
 
-Wenn ein Aggregatstamm vorhanden ist, bedeutet dies, dass der meiste Code, der im Zusammenhang mit der Konsistenz und den Geschäftsregeln der Entitäten des Aggregats steht, als Methoden in der Aggregatstammklasse „Order“ implementiert werden soll (z.B. AddOrderItem beim Hinzufügen eines OrderItem-Objekts zum Aggregat). Sie sollten OrderItems-Objekte nicht unabhängig oder direkt erstellen oder aktualisieren. Stattdessen sollte die AggregateRoot-Klasse die Kontrolle und Konsistenz jedes Aktualisierungsvorgangs gegenüber der untergeordneten Entitäten behalten.
+Wenn ein Aggregatstamm vorhanden ist, bedeutet dies, dass der meiste Code, der im Zusammenhang mit der Konsistenz und den Geschäftsregeln der Entitäten des Aggregats steht, als Methoden in der Aggregatstammklasse „Order“ implementiert werden soll (z. B. AddOrderItem beim Hinzufügen eines OrderItem-Objekts zum Aggregat). Sie sollten OrderItems-Objekte nicht unabhängig oder direkt erstellen oder aktualisieren. Stattdessen sollte die AggregateRoot-Klasse die Kontrolle und Konsistenz jedes Aktualisierungsvorgangs gegenüber der untergeordneten Entitäten behalten.
 
 ## <a name="encapsulate-data-in-the-domain-entities"></a>Kapseln von Daten in Domänenentitäten
 
@@ -132,14 +132,14 @@ Wenn Entitäten über öffentliche Setter in einer Entitätseigenschaft verfüge
 
 Außerdem soll es sich bei Auflistungen innerhalb der Entität (wie die der Bestellelemente) um schreibgeschützte Eigenschaften handeln (also um die nachfolgend erläuterte AsReadOnly-Methode). Sie sollten die Entität nur innerhalb der Methoden der Aggregatstammklasse oder der Methoden der untergeordneten Klasse aktualisieren können.
 
-Wie Sie in dem Aggregatstamm „Order“ sehen können, sollten alle Setters den Status „privat“ haben oder zumindest extern schreibgeschützt sein, sodass jeder Vorgang für die Daten der Entität oder der untergeordneten Entitäten über Methoden in den Entitätsklassen ausgeführt werden muss. Dadurch bleibt die Konsistenz auf kontrollierte und objektorientierte Weise erhalten, und es wird kein Transaktionsskriptcode verwendet.
+Wie Sie im Aggregatstamm „Order“ sehen können, sollten alle Setter den Status „privat“ aufweisen oder zumindest extern schreibgeschützt sein, sodass jeder Vorgang für die Daten der Entität oder der untergeordneten Entitäten über Methoden in der Entitätsklasse ausgeführt werden muss. Dadurch bleibt die Konsistenz auf kontrollierte und objektorientierte Weise erhalten, und es wird kein Transaktionsskriptcode verwendet.
 
 Im folgenden Codeausschnitt sehen Sie, wie Sie am besten den Task codieren, über den das OrderItem-Objekt dem Aggregat „Order“ hinzugefügt wird.
 
 ```csharp
 // RIGHT ACCORDING TO DDD--CODE AT THE APPLICATION LAYER OR COMMAND HANDLERS
 // The code in command handlers or WebAPI controllers, related only to application stuff
-// There is NO code here related to OrderItem object’s business logic
+// There is NO code here related to OrderItem object's business logic
 myOrder.AddOrderItem(productId, productName, pictureUrl, unitPrice, discount, units);
 
 // The code related to OrderItem params validations or domain rules should
@@ -166,7 +166,7 @@ Wenn Sie EF Core 1.0 oder höher verwenden, müssen Sie im Zusammenhang mit DbCo
 
 Mit dem Feature in EF Core 1.1 oder höher, über das Sie Feldern Spalten zuordnen, müssen Sie nicht unbedingt Eigenschaften verwenden. Stattdessen reicht es aus, wenn Sie den Feldern nur Spalten aus einer Tabelle zuordnen. Dies ist ein häufiger auftretender Anwendungsfall, da es sich dabei um private Felder für einen internen Zustand handelt, auf den außerhalb der Entität nicht zugegriffen werden muss.
 
-Beispielsweise enthält das nachfolgende OrderAggregate-Codebeispiel mehrere private Felder wie das `_paymentMethodId`-Feld, denen keine Eigenschaften für den Setter oder Getter zugeordnet sind. Dieses Feld könnte außerdem innerhalb der Geschäftslogik der Bestellung berechnet und über die Methoden der Bestellung verwendet werden. Es muss allerdings in der Datenbank beibehalten werden. In EF Core gibt es (ab Version 1.1) die Möglichkeit, ein Feld zuzuordnen, wenn keine passende Eigenschaft der Spalte in der Datenbank zugeordnet wird. Dies wird ebenfalls in diesem Handbuch im Abschnitt [Infrastrukturebene](ddd-oriented-microservice.md#the-infrastructure-layer) erläutert.
+Beispielsweise enthält das nachfolgende OrderAggregate-Codebeispiel mehrere private Felder wie das `_paymentMethodId`-Feld, denen keine Eigenschaften für den Setter oder Getter zugeordnet sind. Dieses Feld könnte außerdem innerhalb der Geschäftslogik der Bestellung berechnet und über die Methoden der Bestellung verwendet werden. Es muss allerdings auch in der Datenbank beibehalten werden. In EF Core gibt es (ab Version 1.1) die Möglichkeit, ein Feld zuzuordnen, wenn keine passende Eigenschaft der Spalte in der Datenbank zugeordnet wird. Dies wird ebenfalls in diesem Handbuch im Abschnitt [Infrastrukturebene](ddd-oriented-microservice.md#the-infrastructure-layer) erläutert.
 
 ### <a name="additional-resources"></a>Zusätzliche Ressourcen
 

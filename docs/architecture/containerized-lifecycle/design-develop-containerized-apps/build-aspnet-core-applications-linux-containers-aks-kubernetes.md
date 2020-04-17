@@ -2,12 +2,12 @@
 title: Erstellen von ASP.NET Core 2.2-Anwendungen, die als Linux-Container in AKS-/Kubernetes-Clustern bereitgestellt werden
 description: Lebenszyklus von Docker-Containeranwendungen mit der Microsoft-Plattform und Tools
 ms.date: 02/25/2019
-ms.openlocfilehash: ab64a0423ceceb8285c159af276d6d97e12379d8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 83d4d0a60db4bdc112bb35bfbf61c0396646ad31
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "70848758"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80989024"
 ---
 # <a name="build-aspnet-core-22-applications-deployed-as-linux-containers-into-an-akskubernetes-orchestrator"></a>Erstellen von ASP.NET Core 2.2-Anwendungen, die als Linux-Container in einem AKS-/Kubernetes-Orchestrator bereitgestellt werden
 
@@ -51,7 +51,7 @@ Sie können Docker-Unterstützung beim Erstellen des Projekts oder später hinzu
 
 **Abbildung 4–38**. Hinzufügen von Docker-Unterstützung zu einem vorhandenen Projekt
 
-Um das Hinzufügen von Docker-Unterstützung abzuschließen, können Sie Windows oder Linux auswählen. Wählen Sie in diesem Fall **Linux** aus, da AKS keine Windows-Container unterstützt (Stand Ende 2018).
+Um das Hinzufügen von Docker-Unterstützung abzuschließen, können Sie Windows oder Linux auswählen. Wählen Sie in diesem Fall **Linux** aus, da AKS keine Windows-Container unterstützt (Stand: Ende 2018).
 
 ![Optionsdialogfeld für die Auswahl des Betriebssystems für Dockerfile.](media/select-linux-docker-support.png)
 
@@ -59,7 +59,7 @@ Um das Hinzufügen von Docker-Unterstützung abzuschließen, können Sie Windows
 
 Mit diesen einfachen Schritten haben Sie festgelegt, dass Ihre ASP.NET Core 2.2-Anwendung in einem Linux-Container ausgeführt wird.
 
-Wie Sie sehen können, ist die Integration von Visual Studio 2017 und Docker völlig auf die Produktivität des Entwicklers ausgelegt.
+Wie Sie sehen können, ist die Integration von Visual Studio 2017 und Docker völlig auf die Produktivität des Entwicklers ausgelegt.
 
 Jetzt können Sie Ihre Anwendung mit der Taste **F5** oder der Schaltfläche **Wiedergabe** ausführen.
 
@@ -75,7 +75,7 @@ docker images
 
 ## <a name="register-the-solution-in-the-azure-container-registry"></a>Registrieren der Projektmappe in der Azure Container Registry
 
-Laden Sie das Image in eine beliebige Docker-Registrierung hoch, wie etwa [Azure Container Registry (ACR)](https://azure.microsoft.com/services/container-registry/) oder Docker Hub, damit die Images aus dieser Registrierung auf dem AKS-Cluster bereitgestellt werden können. In diesem Fall laden wir das Image in die Azure Container Registry hoch.
+Laden Sie das Image in eine beliebige Docker-Registrierung hoch, wie etwa [Azure Container Registry (ACR)](https://azure.microsoft.com/services/container-registry/) oder Docker Hub, damit die Images aus dieser Registrierung auf dem AKS-Cluster bereitgestellt werden können. In diesem Fall wird das Image in Azure Container Registry hochgeladen.
 
 ### <a name="create-the-image-in-release-mode"></a>Erstellen des Images im Releasemodus
 

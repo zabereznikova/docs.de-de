@@ -2,12 +2,12 @@
 title: SeedWork (wiederverwendbare Basisklassen und Schnittstellen für Ihr Domänenmodell)
 description: .NET-Microservicearchitektur für .NET-Containeranwendungen | Verwenden des SeedWork-Konzepts als Ausgangspunkt zum Implementieren eines DDD-orientierten Domänenmodells
 ms.date: 10/08/2018
-ms.openlocfilehash: ab0aadc28dbd1175c75b04dadca29b7b0947f29b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 545be2723ba468a5fd65f81978799328234ca113
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "76116566"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80988309"
 ---
 # <a name="seedwork-reusable-base-classes-and-interfaces-for-your-domain-model"></a>SeedWork (wiederverwendbare Basisklassen und Schnittstellen für Ihr Domänenmodell)
 
@@ -19,7 +19,7 @@ In Abbildung 7-12 werden die Klassen gezeigt, die im Microservice für Bestellun
 Der ausführliche Inhalt des Ordners „SeedWork“, der Basisklassen und -schnittstellen enthält: Entity.cs, Enumeration.cs, IAggregateRoot.cs, IRepository.cs, IUnitOfWork.cs und ValueObject.cs.
 :::image-end:::
 
-**Abbildung 7-12**. Beispiel für die „Seedwork“-Basisklassen und -Schnittstellen eines Domänenmodells
+**Abbildung 7-12**. Beispiel für die „SeedWork“-Basisklassen und -Schnittstellen eines Domänenmodells
 
 Viele Entwickler verwenden diese Vorgänge zum Kopieren und Einfügen (und kein formales Framework) projektübergreifend wieder. SeedWork-Ordner können in jeder Ebene oder Bibliothek vorkommen. Wenn die Anzahl der Klassen und Schnittstellen jedoch zu groß wird, sollten Sie eine einzelne Klassenbibliothek erstellen.
 

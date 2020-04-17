@@ -3,18 +3,18 @@ title: Informationen zur Autorisierung in .NET-Microservices und Webanwendungen
 description: 'Sicherheit in .NET-Microservices und Webanwendungen: Verschaffen Sie sich einen Überblick über die wichtigsten Autorisierungsoptionen in ASP.NET Core-Anwendungen – rollen- und richtlinienbasiert.'
 author: mjrousos
 ms.date: 01/30/2020
-ms.openlocfilehash: f6b69faceac9a9b4819212cc04f89080f3ddad56
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 27936a33ea2bb46cedb9d10ee47a2117e1843e14
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77501768"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80988205"
 ---
 # <a name="about-authorization-in-net-microservices-and-web-applications"></a>Informationen zur Autorisierung in .NET-Microservices und Webanwendungen
 
 Nach der Authentifizierung müssen ASP.NET Core-Web-APIs den Zugriff autorisieren. Dieser Prozess ermöglicht einem Dienst die Zurverfügungstellung von APIs für einige authentifizierte Benutzer, jedoch nicht alle. Die [Autorisierung](/aspnet/core/security/authorization/introduction) kann basierend auf Benutzerrollen oder basierend auf einer benutzerdefinierten Richtlinie erfolgen, welche die Überprüfung von Ansprüchen oder anderen Heuristiken umfassen kann.
 
-Die Einschränkung des Zugriffs auf eine ASP.NET Core-MVC-Route ist so einfach wie die Anwendung eines Authorize-Attributs auf die Aktionsmethode (oder auf die Controllerklasse, wenn für sämtliche Controlleraktionen eine Autorisierung erforderlich ist). Siehe hierzu das folgende Beispiel:
+Die Einschränkung des Zugriffs auf eine ASP.NET Core-MVC-Route ist so einfach wie die Anwendung eines Authorize-Attributs auf die Aktionsmethode (oder auf die Controllerklasse, wenn für sämtliche Controlleraktionen eine Autorisierung erforderlich ist). Dies wird im folgenden Beispiel veranschaulicht:
 
 ```csharp
 public class AccountController : Controller
@@ -94,7 +94,7 @@ services.AddAuthorization(options =>
 });
 ```
 
-Wie im Beispiel dargestellt wird, können Richtlinien unterschiedliche Arten von Anforderungen zugeordnet werden. Nach der Registrierung der Richtlinien können diese auf eine Aktion oder einen Controller angewendet werden, indem der Name der jeweiligen Richtlinie als Argument „Policy“ des Attributs „Authorize“ (z.B. `[Authorize(Policy="EmployeesOnly")]`) übergeben wird. Richtlinien können mehrere Anforderungen enthalten, nicht nur eine (wie in diesen Beispielen zu sehen ist).
+Wie im Beispiel dargestellt wird, können Richtlinien unterschiedliche Arten von Anforderungen zugeordnet werden. Nach der Registrierung der Richtlinien können diese auf eine Aktion oder einen Controller angewendet werden, indem der Name der jeweiligen Richtlinie als Argument „Policy“ des Attributs „Authorize“ (z. B. `[Authorize(Policy="EmployeesOnly")]`) übergeben wird. Richtlinien können mehrere Anforderungen aufweisen, nicht nur eine (wie in diesen Beispielen zu sehen ist).
 
 Im vorherigen Beispiel stellt der Aufruf von „AddPolicy“ nur eine alternative Möglichkeit für die Autorisierung nach Rollen dar. Wenn `[Authorize(Policy="AdministratorsOnly")]` auf eine API angewendet wird, können nur Benutzer mit der Rolle „Administrator“ darauf zugreifen.
 

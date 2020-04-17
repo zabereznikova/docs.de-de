@@ -2,18 +2,18 @@
 title: Bereitstellen vorhandener .NET-Apps als Windows-Container
 description: Modernisieren vorhandener .NET-Anwendungen mit Azure Cloud und Windows-Containern | Bereitstellen vorhandener .NET-Apps als Windows-Container
 ms.date: 04/29/2018
-ms.openlocfilehash: 28568ca363bfc8100f78b100f8a7f0242c4f04c9
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c99c2e756320fc886203efcbf98a81e571d907e5
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "73089562"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80987971"
 ---
 # <a name="deploy-existing-net-apps-as-windows-containers"></a>Bereitstellen vorhandener .NET-Apps als Windows-Container
 
 Bereitstellungen, die auf Windows-Containern basieren, lassen sich auf cloudoptimierte Anwendungen und cloudnative Anwendungen anwenden.
 
-In dieser Anleitung und besonders in den folgenden Abschnitten konzentrieren wir uns jedoch hauptsächlich auf die Verwendung von Windows-Containern für *Cloud-Optimized*-Anwendungen (cloudoptimiert), bei denen Sie Ihre Anwendung nicht neu entwerfen müssen.
+In dieser Anleitung und besonders in den folgenden Abschnitten wird hauptsächlich die Verwendung von Windows-Containern für *cloudoptimierte* Anwendungen behandelt, bei denen Sie Ihre Anwendung nicht neu entwerfen müssen.
 
 ## <a name="what-are-containers-linux-or-windows"></a>Was sind Container? (Linux oder Windows)
 
@@ -135,8 +135,8 @@ Ob ein Container unter Windows mit oder ohne Hyper-V-Isolation ausgeführt wird,
 
 ## <a name="the-container-ecosystem-in-azure"></a>Das Containerökosystem in Azure
 
-In den vorherigen Abschnitten wurde erläutert, was die Vorteile von Docker-Containern sind sowie die Details zu den spezifischen Containerimages für .NET-Anwendungen. All diese allgemeinen Informationen sind von grundlegender Bedeutung, um eine Anwendung zu entwickeln oder zu containerisieren.
-Wenn Sie jedoch an die Produktionsbereitstellungsumgebung oder sogar an Qualitätssicherungs- und Entwicklungs-/Testumgebungen denken, bietet Microsoft Azure eine offene und breite Vielfalt von Optionen – ein vollständiges Containerökosystem in der Cloud (siehe im folgenden Diagramm). Abhängig von den spezifischen Anforderungen Ihrer jeweiligen Anwendung sollten Sie das eine oder andere Azure-Produkt auswählen.
+In den vorherigen Abschnitten wurde erläutert, welche Vorteile Docker-Container bieten, und die Details spezifischer Containerimages für .NET-Anwendungen wurden behandelt. All diese allgemeinen Informationen sind von grundlegender Bedeutung, um eine Anwendung zu entwickeln oder zu containerisieren.
+Wenn Sie jedoch an die Produktionsbereitstellungsumgebung oder sogar an Qualitätssicherungs- und Entwicklungs-/Testumgebungen denken, bietet Microsoft Azure eine offene und breite Vielfalt von Optionen – ein vollständiges Containerökosystem in der Cloud (siehe im folgenden Diagramm). Die Auswahl von Azure-Produkten sollte auf den Anforderungen der spezifischen Anwendung basieren.
 
 ![Diagramm des Containerökosystems in Azure.](./media/deploy-existing-net-apps-as-windows-containers/azure-container-ecosystem.png)
 

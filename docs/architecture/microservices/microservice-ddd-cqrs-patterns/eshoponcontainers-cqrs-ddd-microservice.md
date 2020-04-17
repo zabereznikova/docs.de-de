@@ -2,12 +2,12 @@
 title: Anwenden von CQRS- und CQS-Ansätzen in einem DDD-Microservice in eShopOnContainers
 description: .NET-Microservicearchitektur für .NET-Containeranwendungen | Übersicht über die Implementierung von CQRS im Microservice für Bestellungen in eShopOnContainers
 ms.date: 03/03/2020
-ms.openlocfilehash: 16fe46189a5b43591adebbb764d4acef2f7efbfb
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: eda0ee374b41a81811e92e2829b10dc8515e0ccd
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78847153"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80988491"
 ---
 # <a name="apply-cqrs-and-cqs-approaches-in-a-ddd-microservice-in-eshoponcontainers"></a>Anwenden von CQRS- und CQS-Ansätzen in einem DDD-Microservice in eShopOnContainers
 
@@ -15,7 +15,7 @@ Die Struktur des Microservices für Bestellungen in der Referenzanwendung „eSh
 
 Das Wesentliche dieser Muster und der wichtige Punkt bestehen hier darin, dass Abfragen idempotent sind: unabhängig davon, wie oft Sie Abfragen an ein System richten, ändert sich der Status des entsprechenden Systems nicht. Das heißt, Abfragen haben keine Nebeneffekte.
 
-Darum könnten Sie auch ein anderes „reads“-Datenmodell als das transaktionslogische „writes“-Domänenmodell verwenden, obwohl die Microservices für Bestellungen dieselbe Datenbank verwenden. Daher ist es ein vereinfachter CQRS-Ansatz.
+Darum könnten Sie auch ein anderes „reads“-Datenmodell als das transaktionale, logische „writes“-Domänenmodell verwenden, obwohl die Microservices für Bestellungen dieselbe Datenbank verwenden. Daher ist es ein vereinfachter CQRS-Ansatz.
 
 Befehle, die Transaktionen und Datenupdates auslösen, ändern wiederum den Zustand im System. Mit Befehlen müssen Sie im Zusammenhang mit Komplexität und sich kontinuierlich ändernden Geschäftsregeln sorgfältig umgehen. An dieser Stelle können Sie DDD-Techniken anwenden, um das System besser zu modellieren.
 
@@ -25,7 +25,7 @@ Ein solches Muster ist das Aggregatmuster, das wir in späteren Abschnitten kenn
 
 Wie in Abbildung 7-2 im vorherigen Abschnitt dargestellt, empfiehlt dieser Leitfaden, DDD-Muster nur im Transaktions-/Updatebereich Ihres Microservices zu verwenden, d. h. durch Befehle ausgelöst. Abfragen können einem einfacheren Ansatz folgen und sollten im Sinne des CQRS-Ansatzes von Befehlen getrennt werden.
 
-Bei der Implementierung der Abfrageseite können Sie zwischen vielen Ansätzen wählen, z.B. ein vollständiger ORM wie EF Core, AutoMapper-Projektionen, gespeicherte Prozeduren, Ansichten, materialisierte Sichten oder ein Mikro-ORM.
+Bei der Implementierung der Abfrageseite können Sie zwischen vielen verschiedenen Ansätzen auswählen, z. B. eine vollständige ORM wie EF Core, AutoMapper-Projektionen, gespeicherte Prozeduren, Ansichten, materialisierte Sichten oder eine Mikro-ORM.
 
 In diesem Leitfaden und in eShopOnContainers (insbesondere beim Microservice für Bestellungen) implementieren wir direkte Abfragen mit dem Mikro-ORM [Dapper](https://github.com/StackExchange/dapper-dot-net). So können Sie jede Abfrage auf SQL-Anweisungen basierend implementieren, um aufgrund des schlanken Frameworks mit äußerst wenig Mehraufwand eine optimale Leistung zu erzielen.
 

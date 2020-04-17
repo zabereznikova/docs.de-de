@@ -2,12 +2,12 @@
 title: Entwerfen eines Domänenmodells für Microservices
 description: .NET-Microservicearchitektur für .NET-Containeranwendungen | Übersicht über die Grundkonzepte beim Entwerfen eines DDD-orientierten Domänenmodells
 ms.date: 01/30/2020
-ms.openlocfilehash: 628fb5c76362ec8f48367b3d69d16ea6ebd24f09
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 64860d75dca645904e973a4b8927a716a1603394
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77502323"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80988413"
 ---
 # <a name="design-a-microservice-domain-model"></a>Entwerfen eines Microservicedomänenmodells
 
@@ -23,11 +23,11 @@ Entitäten stellen Domänenobjekte dar. Sie werden nicht nur durch die darin ent
 
 Die gleiche Identität (d.h. der gleiche `Id`-Wert, wenn auch nicht unbedingt die gleiche Domänenentität) kann für mehrere begrenzte Kontexte oder Microservices modelliert werden. Dies impliziert jedoch nicht, dass die gleiche Entität mit den gleichen Attributen und der gleichen Logik in mehreren Kontextgrenzen implementiert würde. Stattdessen begrenzen die Entitäten in den einzelnen Kontextgrenzen ihre Attribute und Verhaltensweisen auf die in der Domäne der Kontextgrenze erforderlichen Attribute und Verhaltensweisen.
 
-Die Entität „Buyer“ (Käufer) enthält z.B. möglicherweise die meisten Attribute für eine Person, die in der Benutzerentität im Microservice „Profile“ (Profil) oder „Identity“ (Identität) definiert sind, die Identität inbegriffen. Die Entität „Buyer“ (Käufer) im Microservice „Ordering“ (Bestellung) enthält jedoch möglicherweise weniger Attribute, da sich nur bestimmte Käuferdaten auf den Bestellprozess beziehen. Der Kontext der einzelnen Microservices oder Kontextgrenzen hat Auswirkungen auf das zugehörige Domänenmodell.
+Die Entität „Buyer“ (Käufer) enthält z. B. möglicherweise die meisten Attribute für eine Person, die in der Benutzerentität im Microservice „Profile“ (Profil) oder „Identity“ (Identität), einschließlich der Identität, definiert sind. Die Entität „Buyer“ (Käufer) im Microservice „Ordering“ (Bestellung) enthält jedoch möglicherweise weniger Attribute, da sich nur bestimmte Käuferdaten auf den Bestellprozess beziehen. Der Kontext der einzelnen Microservices oder Kontextgrenzen hat Auswirkungen auf das zugehörige Domänenmodell.
 
 *Domänenentitäten müssen neben Datenattributen auch Verhaltensweisen implementieren.*
 
-Eine Domänenentität in DDD muss die Domänenlogik oder das Verhalten implementieren, die bzw. das sich auf die Entitätsdaten bezieht (das Objekt, auf das im Arbeitsspeicher zugegriffen wird). Als Teil einer Bestellentitätsklasse müssen beispielsweise eine Geschäftslogik und Vorgänge als Methoden für Aufgaben wie das Hinzufügen eines Bestellartikels, einer Datenvalidierung und einer Gesamtberechnung implementiert werden. Diese Regeln werden nicht anwendungsebenenübergreifend verteilt, sondern sind Gegenstand der Entitätsmethoden, die sich auch mit den Invarianten befassen.
+Eine Domänenentität in DDD muss die Domänenlogik oder das Verhalten implementieren, die bzw. das sich auf die Entitätsdaten bezieht (das Objekt, auf das im Arbeitsspeicher zugegriffen wird). Als Teil einer Bestellentitätsklasse müssen beispielsweise eine Geschäftslogik und Vorgänge als Methoden für Aufgaben wie das Hinzufügen eines Bestellartikels, einer Datenvalidierung und einer Gesamtberechnung implementiert werden. Diese Regeln werden nicht auf der Anwendungsschicht verteilt, sondern sind Gegenstand der Entitätsmethoden, die sich auch mit den Invarianten befassen.
 
 In Abbildung 7-8 wird eine Domänenentität dargestellt, die nicht nur Datenattribute, sondern auch Vorgänge oder Methoden mit verwandter Domänenlogik implementiert.
 
@@ -70,7 +70,7 @@ Eric Evans hat festgestellt, dass viele Objekte keine konzeptionelle Identität 
 
 Für eine Entität ist eine Identität erforderlich. Viele Objekte in einem System weisen jedoch keine Identität auf, wie z.B. das Wertobjektmuster. Ein Wertobjekt ist ein Objekt ohne konzeptionelle Identität, das einen Domänenaspekt beschreibt. Sie instanziieren diese Objekte, um Entwurfselemente darzustellen, die Sie nur vorübergehend betreffen. Für Sie ist wichtig, *was* die Objekte sind, nicht *wer* sie sind. Zu Beispielen zählen Zahlen und Zeichenfolgen, aber auch Konzepte auf höherer Ebene wie Attributgruppen.
 
-Eine Entität in einem Microservice ist in einem anderen Microservice möglicherweise keine Entität, da die Kontextgrenze im zweiten Fall unter Umständen eine andere Bedeutung hat. Eine Adresse in einer E-Commerce-Anwendung hat z.B. möglicherweise gar keine Identität, da sie lediglich eine Gruppe von Attributen aus dem Kundenprofil einer Person oder eines Unternehmens darstellt. In diesem Fall sollte die Adresse als Wertobjekt klassifiziert werden. In einer Anwendung für ein Stromversorgungsunternehmen könnte die Kundenadresse jedoch wichtig für die Geschäftsdomäne sein. Daher muss die Adresse über eine Identität verfügen, damit das Abrechnungssystem direkt mit der Adresse verknüpft werden kann. In diesem Fall sollte eine Adresse als Domänenentität klassifiziert werden.
+Eine Entität in einem Microservice ist in einem anderen Microservice möglicherweise keine Entität, da die Kontextgrenze im zweiten Fall unter Umständen eine andere Bedeutung hat. Eine Adresse in einer E-Commerce-Anwendung hat z. B. möglicherweise gar keine Identität, da sie lediglich eine Gruppe von Attributen aus dem Kundenprofil einer Person oder eines Unternehmens darstellt. In diesem Fall sollte die Adresse als Wertobjekt klassifiziert werden. In einer Anwendung für ein Stromversorgungsunternehmen könnte die Kundenadresse jedoch wichtig für die Geschäftsdomäne sein. Daher muss die Adresse über eine Identität verfügen, damit das Abrechnungssystem direkt mit der Adresse verknüpft werden kann. In diesem Fall sollte eine Adresse als Domänenentität klassifiziert werden.
 
 Eine Person mit Namen und Nachnamen ist in der Regel eine Entität, da eine Person eine Identität hat, selbst wenn der Name und Nachname mit anderen Werten übereinstimmen, z.B. wenn sich diese Namen auch auf eine andere Person beziehen.
 
@@ -104,7 +104,7 @@ Das Identifizieren von Aggregaten kann sich als schwierig erweisen. Ein Aggregat
 
 Ein Aggregat umfasst mindestens eine Entität: den Aggregatstamm, der auch als Stammentität oder primäre Entität bezeichnet wird. Darüber hinaus kann es über mehrere untergeordnete Entitäten und Wertobjekte verfügen, wobei alle Entitäten und Objekte zusammenarbeiten, um erforderliche Verhaltensweisen und Transaktionen zu implementieren.
 
-Der Zweck eines Aggregatstamms besteht darin, die Konsistenz des Aggregats sicherzustellen. Es sollte der einzige Einstiegspunkt für Updates des Aggregats über Methoden oder Vorgänge in der Aggregatstammklasse sein. Änderungen an Entitäten innerhalb des Aggregats sollten nur über den Aggregatstamm vorgenommen werden. Bei der Konsistenzüberwachung des Aggregats werden alle Invarianten und Konsistenzregeln berücksichtigt, die Sie in Ihrem Aggregat einhalten müssen. Wenn Sie eine untergeordnete Entität oder ein Wertobjekt unabhängig ändern, kann der Aggregatstamm nicht sicherstellen, dass das Aggregat einen gültigen Status aufweist. Dies wäre vergleichbar mit einem Tisch mit losem Tischbein. Der Hauptzweck des Aggregatstamms ist das Wahren der Konsistenz.
+Der Zweck eines Aggregatstamms besteht darin, die Konsistenz des Aggregats sicherzustellen. Es sollte der einzige Einstiegspunkt für Updates des Aggregats über Methoden oder Vorgänge in der Aggregatstammklasse sein. Änderungen an Entitäten innerhalb des Aggregats sollten nur über den Aggregatstamm vorgenommen werden. Bei der Konsistenzwächterklausel des Aggregats werden alle Invarianten und Konsistenzregeln berücksichtigt, die Sie in Ihrem Aggregat einhalten müssen. Wenn Sie eine untergeordnete Entität oder ein Wertobjekt unabhängig ändern, kann der Aggregatstamm nicht sicherstellen, dass das Aggregat einen gültigen Status aufweist. Dies wäre vergleichbar mit einem Tisch mit losem Tischbein. Der Hauptzweck des Aggregatstamms ist das Wahren der Konsistenz.
 
 In Abbildung 7-9 sehen Sie Beispielaggregate wie das Aggregat „Buyer“, das eine einzelne Entität enthält (den Aggregatstamm „Buyer“(Käufer)). Das Aggregat „Order“ enthält mehrere Entitäten und ein Wertobjekt.
 

@@ -8,28 +8,28 @@ helpviewer_keywords:
 - numeric conversions [C#], explicit
 - conversions [C#], implicit numeric
 - conversions [C#], explicit numeric
-ms.openlocfilehash: 5380e8480c39d1940df13b2ecb50a0f394367388
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b7d53e508e4d585c746a3cc61824cdace7707deb
+ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79398286"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81121448"
 ---
 # <a name="built-in-numeric-conversions-c-reference"></a>Integrierte numerische Konvertierungen (C#-Referenz)
 
-C# bietet eine Reihe von [integralen numerischen Typen](integral-numeric-types.md) und [numerischen Gleitkommatypen](floating-point-numeric-types.md). Es gibt eine Konvertierung zwischen zwei beliebigen numerischen Typen, entweder implizit oder explizit. Sie müssen den [cast-Operator ()`()`](../operators/type-testing-and-cast.md#cast-operator-) verwenden, um eine explizite Konvertierung aufzurufen.
+C# bietet eine Reihe von [integralen numerischen Typen](integral-numeric-types.md) und [numerischen Gleitkommatypen](floating-point-numeric-types.md). Es gibt eine Konvertierung zwischen zwei beliebigen numerischen Typen, entweder implizit oder explizit. Sie müssen einen [Cast-Ausdruck](../operators/type-testing-and-cast.md#cast-expression) verwenden, um eine explizite Konvertierung durchzuführen.
 
 ## <a name="implicit-numeric-conversions"></a>Implizite numerische Konvertierungen
 
 Folgende Tabelle veranschaulicht vordefinierte implizite Konvertierungen zwischen integrierten numerischen Typen:
 
-|Von|An|
+|Von|Beschreibung|
 |----------|--------|
 |[sbyte](integral-numeric-types.md)|`short`, `int`, `long`, `float`, `double` oder `decimal`|
 |[byte](integral-numeric-types.md)|`short`, `ushort`, `int`, `uint`, `long`, `ulong`, `float`, `double` oder `decimal`|
 |[short](integral-numeric-types.md)|`int`, `long`, `float`, `double` oder `decimal`|
 |[ushort](integral-numeric-types.md)|`int`, `uint`, `long`, `ulong`, `float`, `double` oder `decimal`|
-|[int](integral-numeric-types.md)|`long`, `float`, `double`oder `decimal`|
+|[int](integral-numeric-types.md)|`long`, `float`, `double` oder `decimal`|
 |[uint](integral-numeric-types.md)|`long`, `ulong`, `float`, `double` oder `decimal`|
 |[long](integral-numeric-types.md)|`float`, `double`oder `decimal`|
 |[ulong](integral-numeric-types.md)|`float`, `double`oder `decimal`|
@@ -59,9 +59,9 @@ Beachten Sie außerdem:
 
 Folgende Tabelle veranschaulicht vordefinierte explizite Konvertierungen zwischen integrierten numerischen Typen, für die es keine [implizite Konvertierung](#implicit-numeric-conversions) gibt:
 
-|Von|An|
+|Von|Beschreibung|
 |----------|--------|
-|[sbyte](integral-numeric-types.md)|`byte`, `ushort`, `uint`oder `ulong`|
+|[sbyte](integral-numeric-types.md)|`byte`, `ushort`, `uint` oder `ulong`|
 |[byte](integral-numeric-types.md)|`sbyte`|
 |[short](integral-numeric-types.md)|`sbyte`, `byte`, `ushort`, `uint` oder `ulong`|
 |[ushort](integral-numeric-types.md)|`sbyte`, `byte`oder `short`|
@@ -107,7 +107,7 @@ Weitere Informationen finden Sie in den folgenden Abschnitten der [C#-Sprachspez
 - [Implizite numerische Konvertierungen](~/_csharplang/spec/conversions.md#implicit-numeric-conversions)
 - [Explizite numerische Konvertierungen](~/_csharplang/spec/conversions.md#explicit-numeric-conversions)
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [C#-Referenz](../index.md)
 - [Umwandlung und Typkonvertierungen](../../programming-guide/types/casting-and-type-conversions.md)

@@ -2,12 +2,12 @@
 title: Implementieren von Wertobjekten
 description: .NET-Microservicesarchitektur für .NET-Containeranwendungen | Einführung in die Details und Optionen zum Implementieren von Wertobjekten mithilfe neuer Features von Entity Framework
 ms.date: 01/30/2020
-ms.openlocfilehash: 919b23f7c1a0cd0aec8c4417f3af98469a0743dd
-ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
+ms.openlocfilehash: 4a8a92a8dabcf09654ecd0e5dea2a7df25d7abf7
+ms.sourcegitcommit: f87ad41b8e62622da126aa928f7640108c4eff98
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80249421"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80805739"
 ---
 # <a name="implement-value-objects"></a>Implementieren von Wertobjekten
 
@@ -133,7 +133,7 @@ Sie können sehen, wie diese Implementierung des Wertobjekts „Address“ über
 
 In einer Klasse über kein von Entity Framework (EF) verwendbares ID-Feld zu verfügen, war bis EF Core 2.0 nicht möglich. Dies ist für das Implementieren besserer Wertobjekte ohne ID ausgesprochen hilfreich. Außerdem entspricht dies der Erklärung des nächsten Abschnitts.
 
-Es ließe sich die Ansicht vertreten, dass Wertobjekte – da sie unveränderlich sind – schreibgeschützte Eigenschaften aufweisen sollten, und dies stimmt tatsächlich. Allerdings werden Wertobjekte in der Regel zum Durchlaufen von Warteschlangen serialisiert und deserialisiert. Wenn sie schreibgeschützt sind, kann das Deserialisierungsprogramm keine Werte zuweisen. Deshalb werden sie privat gelassen, damit sie in gewisser Weise schreibgeschützt sind, aber dennoch verwendet werden können.
+Es ließe sich die Ansicht vertreten, dass Wertobjekte – da sie unveränderlich sind – schreibgeschützte Eigenschaften aufweisen sollten, und dies stimmt tatsächlich. Allerdings werden Wertobjekte in der Regel zum Durchlaufen von Warteschlangen serialisiert und deserialisiert. Wenn sie schreibgeschützt sind, kann das Deserialisierungsprogramm keine Werte zuweisen. Daher wird die Eigenschaft `private set` beibehalten, wodurch sie zu eine Maß schreibgeschützt sind, dass sie dennoch verwendet werden können.
 
 ## <a name="how-to-persist-value-objects-in-the-database-with-ef-core-20-and-later"></a>Beibehalten von Wertobjekten in der Datenbank mit EF Core 2.0 und höher
 
@@ -166,13 +166,13 @@ Ab EF Core 2.0 gibt es neue und bessere Möglichkeiten, Wertobjekte permanent zu
 
 Auch wenn das kanonische Wertobjektmuster im domänengesteuerten Design und der nicht eigenständige Entitätstyp in EF Core Nachteile haben, so stellen diese derzeit die beste Möglichkeit dar, Wertobjekte mit EF Core 2.0 und höher permanent zu speichern. Einschränkungen werden am Ende dieses Abschnitts erläutert.
 
-Das Feature für nicht eigenständige Typen wurde schon mit Version 2.0 von EF Core hinzugefügt.
+Das eigene Entitätstypenfeature wurde schon mit Version 2.0 von EF Core hinzugefügt.
 
-Über einen nicht eigenständigen Entitätstyp können Sie Typen zuordnen, für die keine Identität im Domänenmodell explizit definiert ist und die als Eigenschaften verwendet werden, also z. B. als ein Wertobjekt in einer Entität. Ein nicht eigenständiger Entitätstyp teilt sich denselben CLR-Typ mit einem anderen Entitätstyp (d. h., es handelt sich lediglich um eine reguläre Klasse). Die Entität, die die definierende Navigation enthält, ist die besitzende Entität. Beim Abfragen des Besitzers werden standardmäßig eigene Typen eingeschlossen.
+Über einen eigenen Entitätstyp können Sie Typen zuordnen, für die keine Identität im Domänenmodell explizit definiert ist und die als Eigenschaften verwendet werden, also z.B. als ein Wertobjekt in einer Entität. Ein nicht eigenständiger Entitätstyp teilt sich denselben CLR-Typ mit einem anderen Entitätstyp (d. h., es handelt sich lediglich um eine reguläre Klasse). Die Entität, die die definierende Navigation enthält, ist die besitzende Entität. Beim Abfragen des Besitzers werden standardmäßig eigene Typen eingeschlossen.
 
-Bei alleiniger Betrachtung des Domänenmodell sieht es so aus, als ob ein nicht eigenständiger Typ keine Identität aufweist. Hinter den Kulissen weist ein nicht eigenständiger Typ jedoch eine Identität auf, allerdings ist die Eigenschaft zur Besitzernavigation Teil dieser Identität.
+Bei alleiniger Betrachtung des Domänenmodell sieht es so aus, als ob ein nicht eigenständiger Typ keine Identität aufweist. Die Identität des eigenen Typs befindet sich allerdings im Hintergrund, und die Eigenschaft zur Besitzernavigation ist Teil dieser Identität.
 
-Die Identität von Instanzen von nicht eigenständigen Typen ist nicht ausschließlich auf diese beschränkt. Sie besteht aus drei Hauptkomponenten:
+Die Identität von Instanzen von eigenen Typen ist nicht ausschließlich auf diese beschränkt. Sie besteht aus drei Hauptkomponenten:
 
 - Der Identität des Besitzers
 
@@ -180,13 +180,13 @@ Die Identität von Instanzen von nicht eigenständigen Typen ist nicht ausschlie
 
 - Im Fall von Sammlungen nicht eigenständiger Entitätstypen eine unabhängige Komponente (unterstützt ab EF Core 2.2).
 
-Beispielsweise wird im Domänenmodell für die Bestellung in eShopOnContainers das Wertobjekt „Address“ als Teil der Entität „Order“ als nicht eigenständiger Entitätstyp in die besitzende Entität (also der Entität „Order“) implementiert. Bei „Address“ handelt es sich um einen Typ ohne Identitätseigenschaft, der im Domänenmodell definiert ist. Dieser Typ wird als Eigenschaft des Typs „Order“ verwendet, um die Lieferadresse für eine bestimmte Bestellung anzugeben.
+Beispielsweise wird im Domänenmodell für die Bestellung in eShopOnContainers das Wertobjekt „Address“ als Teil der Entität „Order“ als eigener Entitätstyp in die besitzende Entität (also der Entität „Order“) implementiert. Bei „Address“ handelt es sich um einen Typ ohne Identitätseigenschaft, der im Domänenmodell definiert ist. Dieser Typ wird als Eigenschaft des Typs „Order“ verwendet, um die Lieferadresse für eine bestimmte Bestellung anzugeben.
 
-Gemäß den Konventionen wird ein Schattenprimärschlüssel für den nicht eigenständigen Typ erstellt und mithilfe der Tabellenaufteilung derselben Tabelle wie der Besitzer zugeordnet. Dies ermöglicht die Verwendung von eigenen Typen, ähnlich wie bei den in EF 6 im herkömmlichen .NET Framework verwendeten komplexen Typen.
+Gemäß den Konventionen wird ein Schattenprimärschlüssel für den eigenen Typ erstellt und mithilfe der Tabellenaufteilung derselben Tabelle wie der Besitzer zugeordnet. Dies ermöglicht die Verwendung von eigenen Typen, ähnlich wie bei den in EF 6 im herkömmlichen .NET Framework verwendeten komplexen Typen.
 
-Sie sollten wissen, dass nicht eigenständige Typen standardmäßig nie von EF Core ermittelt werden. D. h., Sie müssen sie explizit deklarieren.
+Sie sollten wissen, dass eigene Typen standardmäßig nie von EF Core ermittelt werden. D.h., Sie müssen sie explizit deklarieren.
 
-In eShopOnContainers in der Datei „OrderingContext.cs“ in der Methode „OnModelCreating()“ gibt es mehrere Infrastrukturkonfigurationen, die angewendet werden. Eine dieser Konfigurationen steht in Beziehung zur Entität „Order“.
+In der Datei „OrderingContext.cs“ innerhalb der `OnModelCreating()`-Methode des eShopOnContainers-Beispiels werden mehrere Infrastrukturkonfigurationen angewendet. Eine dieser Konfigurationen steht in Beziehung zur Entität „Order“.
 
 ```csharp
 // Part of the OrderingContext.cs class at the Ordering.Infrastructure project
@@ -224,9 +224,9 @@ public void Configure(EntityTypeBuilder<Order> orderConfiguration)
 }
 ```
 
-Im obigen Code gibt die `orderConfiguration.OwnsOne(o => o.Address)`-Methode an, dass es sich bei der `Address`-Eigenschaft um eine nicht eigenständige Entität vom Typ `Order` handelt.
+Im obigen Code gibt die `orderConfiguration.OwnsOne(o => o.Address)`-Methode an, dass es sich bei der `Address`-Eigenschaft um eine eigene Entität vom Typ `Order` handelt.
 
-Standardmäßig benennen die EF Core-Konventionen die Datenbankspalten für die Eigenschaften des nicht eigenständigen Entitätstyps mit `EntityProperty_OwnedEntityProperty`. Aus diesem Grund werden die internen Eigenschaften von `Address` in der Tabelle `Orders` mit den Namen `Address_Street` oder `Address_City` (usw. für `State`,`Country` und `ZipCode`) angezeigt.
+Standardmäßig benennen die EF Core-Konventionen die Datenbankspalten für die Eigenschaften des eigenen Entitätstyps mit `EntityProperty_OwnedEntityProperty`. Aus diesem Grund werden die internen Eigenschaften von `Address` in der Tabelle `Orders` mit den Namen `Address_Street` und `Address_City` (usw. für `State`, `Country` und `ZipCode`) angezeigt.
 
 Sie können die Fluentmethode `Property().HasColumnName()` anfügen, um diese Spalten umzubenennen. Wenn `Address` eine öffentliche Eigenschaft ist, sehen die Zuordnungen in etwa wie folgt aus:
 
@@ -267,21 +267,21 @@ public class Address
 }
 ```
 
-### <a name="additional-details-on-owned-entity-types"></a>Zusätzliche Details zu nicht eigenständigen Entitätstypen
+### <a name="additional-details-on-owned-entity-types"></a>Zusätzliche Details zu eigenen Entitätstypen
 
-- Nicht eigenständige Typen werden definiert, wenn Sie eine Navigationseigenschaft für einen Typ mit der OwnsOne-Fluent-API konfigurieren.
+- Eigene Typen werden definiert, wenn Sie eine Navigationseigenschaft für einen Typ mit der OwnsOne-Fluent-API konfigurieren.
 
 - Die Definition eines eigenen Typs im Metadatenmodell ist eine Zusammensetzung aus den folgenden Bestandteilen: Besitzertyp, Navigationseigenschaft und CLR-Typ des eigenen Typs.
 
-- Die Identität (der Schlüssel) einer nicht eigenständigen Typinstanz in diesem Beispiel ist eine Zusammensetzung aus der Identität des Besitzertyps und der Definition des nicht eigenständigen Typs.
+- Die Identität (der Schlüssel) einer eigenen Typinstanz in diesem Beispiel ist eine Zusammensetzung aus der Identität des Besitzertyps und der Definition des eigenen Typs.
 
 #### <a name="owned-entities-capabilities"></a>Funktionen nicht eigenständiger Entitätstypen
 
-- Eigene Typen können auf andere Entitäten verweisen, die entweder nicht eigenständige (geschachtelte nicht eigenständige Typen) oder eigenständig (reguläre Navigationseigenschaften zum Verweis auf andere Entitäten) sind.
+- Eigene Typen können auf andere Entitäten verweisen, die entweder eigen (geschachtelte eigene Typen) oder nicht eigen (reguläre Navigationseigenschaften zum Verweis auf andere Entitäten) sind.
 
-- Sie können über separate Navigationseigenschaften denselben CLR-Typ als andere nicht eigenständige Typen in derselben Besitzerentität zuordnen.
+- Sie können über separate Navigationseigenschaften denselben CLR-Typ als andere eigene Typen in derselben Besitzerentität zuordnen.
 
-- Die Tabellenaufteilung wird standardmäßig eingerichtet. Sie können diese Funktion aber auch deaktivieren, indem Sie den nicht eigenständigen Typ mit ToTable einer anderen Tabelle zuordnen.
+- Die Tabellenaufteilung wird standardmäßig eingerichtet. Sie können diese Funktion aber auch deaktivieren, indem Sie den eigenen Typ mit ToTable einer anderen Tabelle zuordnen.
 
 - Für nicht eigenständige Entitätstypen erfolgt automatisch Eager Loading (vorzeitiges Laden). Es besteht also keine Notwendigkeit, `.Include()` in der Abfrage aufzurufen.
 
@@ -297,7 +297,7 @@ public class Address
 
 - Optionale (d. h. Nullwerte zulassende) nicht eigenständige Entitätstypen, die (über Tabellenaufteilung) dem Besitzer in derselben Tabelle zugeordnet sind, werden nicht unterstützt. Der Grund hierfür ist, dass die Zuordnung für jede Eigenschaft durchgeführt wird, weshalb es keinen separaten Sentinel für den komplexen NULL-Wert gibt.
 
-- Die Vererbungszuordnung für nicht eigenständige Typen wird nicht unterstützt, aber Sie sollten zwei Blatttypen derselben Schnittstellenvererbungshierarchie als unterschiedliche nicht eigenständige Typen zuordnen können. EF Core hat keine Probleme mit der Verarbeitung, weil diese Typen Teil derselben Hierarchie sind.
+- Die Vererbungszuordnung für eigene Typen wird nicht unterstützt, aber Sie sollten zwei Blatttypen derselben Schnittstellenvererbungshierarchie als unterschiedliche eigene Typen zuordnen können. EF Core hat keine Probleme mit der Verarbeitung, weil diese Typen Teil derselben Hierarchie sind.
 
 #### <a name="main-differences-with-ef6s-complex-types"></a>Wichtige Unterschiede zwischen den komplexen Typen für EF 6
 

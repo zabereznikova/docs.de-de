@@ -2,12 +2,12 @@
 title: Verwenden von NoSQL-Datenbanken als Persistenzinfrastruktur
 description: Übersicht über die Verwendung von NoSql-Datenbanken im Allgemeinen und Azure Cosmos DB im Speziellen als Option zum Implementieren von Persistenz.
 ms.date: 01/30/2020
-ms.openlocfilehash: 7da4141d9aadc4aaa265ac97d328bc4b7569a0cb
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9c51e48d82aa0cf0234275f09df43f7a654f0ca8
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77502397"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80988439"
 ---
 # <a name="use-nosql-databases-as-a-persistence-infrastructure"></a>Verwenden von NoSQL-Datenbanken als Persistenzinfrastruktur
 
@@ -64,7 +64,7 @@ Bei der Verwendung eines C\#-Modells zur Implementierung des Aggregats, das von 
 // C# EXAMPLE OF AN ORDER AGGREGATE BEING PERSISTED WITH AZURE COSMOS DB API
 // *** Domain Model Code ***
 // Aggregate: Create an Order object with its child entities and/or value objects.
-// Then, use AggregateRoot’s methods to add the nested objects so invariants and
+// Then, use AggregateRoot's methods to add the nested objects so invariants and
 // logic is consistent across the nested properties (value objects and entities).
 
 Order orderAggregate = new Order
@@ -144,7 +144,7 @@ Wie die folgende Abbildung zeigt, unterstützt eShopOnContainers unter Verwendun
 
 **Abbildung 7-21**. eShopOnContainers mit MongoDB-Containern für die Entwicklungsumgebung oder Azure Cosmos DB für die Produktion
 
-Azure Cosmos DB für die Produktion würde in der Azure-Cloud als PaaS und als skalierbarer Dienst ausgeführt werden.
+Die Azure Cosmos DB-Instanz für die Produktion würde als skalierbarer PaaS-Dienst in der Azure-Cloud ausgeführt werden.
 
 Ihre benutzerdefinierten .NET Core-Container können auf einem lokalen Docker-Entwicklungshost ausgeführt werden (das heißt, Docker für Windows wird auf einem Computer mit Windows 10 verwendet) oder in einer Produktionsumgebung wie Kubernetes in Azure AKS oder Azure Service Fabric bereitgestellt werden. In dieser zweiten Umgebung würden Sie nur die benutzerdefinierten .NET Core-Container, jedoch nicht die MongoDB-Container bereitstellen, da Sie Azure Cosmos DB in der Cloud für die Verwaltung der Daten in der Produktion verwenden würden.
 
@@ -154,13 +154,13 @@ Informationen zum weiteren Vergleich zwischen der einfachen Verwendung von Mongo
 
 ### <a name="analyze-your-approach-for-production-applications-mongodb-api-vs-cosmos-db-api"></a>Analysieren Ihres Ansatzes für Produktionsanwendungen: Vergleich zwischen der MongoDB-API und der Cosmos DB-API
 
-In eShopOnContainers wird die MongoDB-API verwendet, da die Priorität im Wesentlichen darauf liegt, über eine konsistente Entwicklungs-/Testumgebung zu verfügen, in der eine NoSQL-Datenbank verwendet wird, die auch in Azure Cosmos DB eingesetzt werden könnte.
+In eShopOnContainers wird die MongoDB-API verwendet, da die Priorität im Wesentlichen darauf liegt, über eine konsistente Dev/Test-Umgebung zu verfügen, in der eine NoSQL-Datenbank verwendet wird, die auch in Azure Cosmos DB eingesetzt werden könnte.
 
 Wenn Sie die Verwendung der MongoDB-API für den Zugriff auf Azure Cosmos DB in Azure für Produktionsanwendungen planen, sollten Sie jedoch die Unterschiede in den Funktionen und der Leistung bei der Verwendung der MongoDB-API für den Zugriff auf Azure Cosmos DB-Datenbanken verglichen mit der Verwendung der nativen Azure Cosmos DB-API analysieren. Wenn die Funktionen und die Leistung vergleichbar sind, können Sie die MongoDB-API verwenden und davon profitieren, dass zwei NoSQL-Datenbank-Engines gleichzeitig unterstützt werden.
 
 Alternativ könnten Sie auch MongoDB-Cluster mit dem [MongoDB-Azure-Dienst](https://www.mongodb.com/scale/mongodb-azure-service) als Produktionsdatenbank in der Azure-Cloud verwenden. Dies ist jedoch kein von Microsoft bereitgestellter PaaS-Dienst. In diesem Fall hostet Azure lediglich diese Lösung aus MongoDB.
 
-Im Wesentlichen ist dies nur ein Haftungsausschluss, in dem darauf hingewiesen wird, dass Sie die Verwendung der MongoDB-API nicht immer der Verwendung von Azure Cosmos DB vorziehen sollten. In eShopOnContainers wurde dies durchgeführt, weil es sich dabei um eine praktische Wahl für Linux-Container handelt. Grundlage der Entscheidung sollten die spezifischen Anforderungen und Tests sein, die Sie für Ihre Produktionsanwendung durchführen müssen.
+Im Wesentlichen ist dies nur ein Hinweis darauf, dass Sie die MongoDB-API nicht immer für Azure Cosmos DB verwenden sollten. Diese Vorgehensweise wurde lediglich für das eShopOnContainers-Beispiel verwendet, da sie sich für Linux-Container als praktisch erwiesen hat. Grundlage der Entscheidung sollten die spezifischen Anforderungen und Tests sein, die Sie für Ihre Produktionsanwendung durchführen müssen.
 
 ### <a name="the-code-use-mongodb-api-in-net-core-applications"></a>Der Code: Verwenden der MongoDB-API in .NET Core-Anwendungen
 
@@ -174,7 +174,7 @@ In den folgenden Abschnitten wird der Code untersucht.
 
 #### <a name="a-model-used-by-mongodb-api"></a>Ein von der MongoDB-API verwendetes Modell
 
-Zunächst müssen Sie ein Modell definieren, das die Daten enthält, die aus der Datenbank den Speicherplatz Ihrer Anwendung belegen. Im Folgenden sehen Sie ein Beispiel für das Modell, das in eShopOnContainers für „Locations“ verwendet wird.
+Zunächst müssen Sie ein Modell definieren, das die Daten enthalten soll, die aus der Datenbank in den Speicherplatz Ihrer Anwendung übertragen werden. Im Folgenden sehen Sie ein Beispiel für das Modell, das in eShopOnContainers für „Locations“ verwendet wird.
 
 ```csharp
 using MongoDB.Bson;
@@ -266,7 +266,7 @@ public async Task<Locations> GetAsync(int locationId)
 
 #### <a name="use-an-env-var-in-the-docker-composeoverrideyml-file-for-the-mongodb-connection-string"></a>Verwenden einer Umgebungsvariable in der Datei „docker-compose.override.yml“ für die MongoDB-Verbindungszeichenfolge
 
-Bei der Erstellung eines MongoClient-Objekts ist ein grundlegender Parameter erforderlich, genau genommen der Parameter `ConnectionString`, der auf die korrekte Datenbank verweist. Bei eShopOnContainers kann die Verbindungszeichenfolge auf einen lokalen MongoDB-Docker-Container oder auf eine „Produktionsdatenbank“ in Azure Cosmos DB verweisen.  Diese Verbindungszeichenfolge ergibt sich aus den Umgebungsvariablen, die in den Dateien `docker-compose.override.yml` definiert sind. Diese werden bei der Bereitstellung mit „docker-compose“ oder Visual Studio verwendet, wie im folgenden YML-Code zu sehen ist.
+Bei der Erstellung eines MongoClient-Objekts ist ein grundlegender Parameter erforderlich, genau genommen der Parameter `ConnectionString`, der auf die korrekte Datenbank verweist. Bei eShopOnContainers kann die Verbindungszeichenfolge auf einen lokalen MongoDB-Docker-Container oder eine „Produktionsdatenbank“ von Azure Cosmos DB verweisen.  Diese Verbindungszeichenfolge ergibt sich aus den Umgebungsvariablen, die in den Dateien `docker-compose.override.yml` definiert sind. Diese werden bei der Bereitstellung mit „docker-compose“ oder Visual Studio verwendet, wie im folgenden YML-Code zu sehen ist.
 
 ```yml
 # docker-compose.override.yml

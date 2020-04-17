@@ -2,12 +2,12 @@
 title: Definieren Ihrer Anwendung mit mehreren Containern mit docker-compose.yml
 description: Festlegen der Zusammensetzung von Microservices für eine Anwendung mit mehreren Containern mit „docker-compose.yml“
 ms.date: 01/30/2020
-ms.openlocfilehash: 9143801fbbffbdc5b795a232b3333edf71f05c7c
-ms.sourcegitcommit: 79b0dd8bfc63f33a02137121dd23475887ecefda
+ms.openlocfilehash: 029fad8bb912457872dd5817a2f76aed57dc53c6
+ms.sourcegitcommit: 2b3b2d684259463ddfc76ad680e5e09fdc1984d2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80523648"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80888227"
 ---
 # <a name="defining-your-multi-container-application-with-docker-composeyml"></a>Definieren Ihrer Anwendung mit mehreren Containern mit docker-compose.yml
 
@@ -115,11 +115,11 @@ Der Containermicroservice „catalog.api“ hat mit Fokus auf einen einzelnen Co
 
 Dieser Containerdienst verfügt über die folgende grundlegende Konfiguration:
 
-- Er basiert auf dem benutzerdefinierten Image **eshop/catalog-api**. Der Einfachheit halber gibt es keine „build: key“-Einstellung in der Datei. Das bedeutet, dass das Image zuvor erstellt worden (mit „docker build“) oder aus einer beliebigen Docker-Registrierung heruntergeladen worden sein muss (mit dem Befehl „docker pull“).
+- Er basiert auf dem benutzerdefinierten Image **eshop/catalog-api**. Der Einfachheit halber gibt es keine „build: key“-Einstellung in der Datei. Das bedeutet, dass das Image zuvor erstellt worden (mit „docker build“) oder aus einer beliebigen Docker-Registrierung heruntergeladen worden sein muss (mit dem Befehl „docker pull“).
 
 - Er definiert die Umgebungsvariable mit der Bezeichnung „ConnectionString“ mit der Verbindungszeichenfolge, die von Entity Framework für den Zugriff auf die SQL Server-Instanz, die das Katalogdatenmodell enthält, verwendet werden soll. In diesem Fall enthält der gleicher SQL Server-Container mehrere Datenbanken. Aus diesem Grund benötigen Sie weniger Arbeitsspeicher in Ihrem Entwicklungscomputer für Docker. Allerdings können Sie auch einen SQL Server-Container für jede Microservicedatenbank bereitstellen.
 
-- Der SQL Server-Name lautet **sqldata**. Dies ist derselbe Name, der für den Container verwendet wird, der die SQL Server-Instanz für Linux ausführt. Das ist wirklich praktisch, denn die Möglichkeit, diese Namensauflösung (intern für den Docker-Host) zu verwenden, löst die Netzwerkadresse auf. Sie müssen die interne IP-Adresse für die Container also nicht kennen, auf die Sie von anderen Container aus zugreifen.
+- Der SQL Server-Name lautet **sqldata**. Dies ist derselbe Name, der für den Container verwendet wird, der die SQL Server-Instanz für Linux ausführt. Das ist praktisch, denn die Möglichkeit, diese Namensauflösung (intern für den Docker-Host) zu verwenden, löst die Netzwerkadresse auf. Sie müssen die interne IP-Adresse für die Container also nicht kennen, auf die Sie von anderen Container aus zugreifen.
 
 Da die Verbindungszeichenfolge von einer Umgebungsvariable definiert ist, können Sie die Variable über einen anderen Mechanismus und zu einer anderen Zeit festlegen. Sie können beispielsweise eine andere Verbindungszeichenfolge festlegen, wenn Sie eine Bereitstellung zur Produktion in den finalen Hosts durchführen, oder von Ihren CI/CD-Pipelines in Azure DevOps Services bzw. von Ihrem bevorzugten DevOps-System aus.
 
@@ -143,7 +143,7 @@ Aus diesem Grund können Sie durch die Verwendung des „docker-compose“-Befeh
 
 Wenn Sie Anwendungen entwickeln, ist es wichtig, dass Sie eine Anwendung in einer isolierten Entwicklungsumgebung ausführen können. Sie können diese Umgebung mithilfe des CLI-Befehls „docker-compose“ oder in Visual Studio erstellen. Visual Studio verwendet „docker-compose“ im Hintergrund.
 
-Die docker-compose.yml-Datei ermöglicht Ihnen, alle Dienstabhängigkeiten Ihrer Anwendung (andere Dienste, Caches, Datenbanken, Warteschlangen usw.) zu konfigurieren und zu dokumentieren. Mithilfe des CLI-Befehls „docker-compose“ können Sie mindestens einen Container für jede Abhängigkeit mit einem einzelnen Befehl („docker-compose up“) erstellen oder starten.
+Die Datei „docker-compose.yml“ ermöglicht Ihnen, alle Dienstabhängigkeiten Ihrer Anwendung (andere Dienste, Caches, Datenbanken, Warteschlangen usw.) zu konfigurieren und zu dokumentieren. Mithilfe des CLI-Befehls „docker-compose“ können Sie mindestens einen Container für jede Abhängigkeit mit einem einzelnen Befehl („docker-compose up“) erstellen oder starten.
 
 Die docker-compose.yml-Dateien sind Konfigurationsdateien, die von der Docker-Engine interpretiert werden, sie dienen aber auch als praktische Dokumentationsdateien über den Aufbau Ihrer Anwendung mit mehreren Container.
 
@@ -177,7 +177,7 @@ Sie können eine einzelne docker-compose-Datei verwenden. Dies wird in den vorhe
 
 Standardmäßig liest Compose zwei Dateien: eine docker-compose.yml- und eine optionale docker-compose.override.yml-Datei. Wenn Sie Visual Studio verwenden und die Docker-Unterstützung aktivieren, erstellt Visual Studio wie in Abbildung 6-11 dargestellt eine zusätzliche „docker-compose.vs.debug.g.yml“-Datei zum Debuggen der Anwendung. Sie können sich diese Datei im Ordner obj\\Docker\\ im Projektmappenhauptordner ansehen.
 
-![Screenshot der Dateien in einem Docker Compose-Projekt.](./media/multi-container-applications-docker-compose/docker-compose-file-visual-studio.png)
+![Dateien in einem Docker Compose-Projekt](./media/multi-container-applications-docker-compose/docker-compose-file-visual-studio.png)
 
 **Abbildung 6-11**. docker-compose-Dateien in Visual Studio 2019
 
@@ -201,7 +201,7 @@ Ein typischer Anwendungsfall ist, wenn Sie mehrere Compose-Dateien definieren, d
 
 **Abbildung 6-12**. Mehrere docker-compose-Dateien, die Werte in der docker-compose.yml-Basisdatei überschreiben
 
-Sie können mehrere docker.compose*.yml-Dateien kombinieren, wenn verschiedene Umgebungen abgedeckt werden müssen. Sie beginnen mit der docker-compose.yml-Basisdatei. Diese Basisdatei muss die Basis- oder statischen Konfigurationseinstellungen enthalten, die sich nicht in Abhängigkeit von der Umgebung ändern. Beispielsweise verfügt eShopOnContainers über die folgende docker-compose.yml-Datei (zur Vereinfachung mit weniger Diensten) als Basisdatei.
+Sie können mehrere docker.compose*.yml-Dateien kombinieren, wenn verschiedene Umgebungen abgedeckt werden müssen. Sie beginnen mit der docker-compose.yml-Basisdatei. Diese Basisdatei enthält die Basis- oder statischen Konfigurationseinstellungen, die sich nicht aufgrund der Umgebung ändern. Beispielsweise enthält die App „eShopOnContainers“ über die folgende Datei „docker-compose.yml“ (zur Vereinfachung mit weniger Diensten) als Basisdatei.
 
 ```yml
 #docker-compose.yml (Base)
@@ -448,22 +448,22 @@ ENTRYPOINT ["dotnet", "run"]
 
 Eine Dockerfile-Datei wie diese funktioniert. Sie können jedoch im Wesentlichen Ihre Images optimieren, besonders bei Ihren Produktionsimages funktioniert das gut.
 
-Sie starten im Container- und im Microservicesmodell ständig Container. Es wird kein inaktiver Container neu gestartet, wenn ein Container ganz normal verwendet wird, da der Container verwerfbar ist. Orchestratoren (z.B. Kubernetes und Azure Service Fabric) erstellen nur neue Instanzen von Images. Das bedeutet, dass Sie eine Optimierung durch Vorkompilierung der Anwendung vornehmen müssten, wenn diese erstellt wird, damit der Instanziierungsprozess schneller wird. Wenn der Container gestartet wird, sollte er für die Ausführung bereit sein. Wie in vielen Blogbeiträgen über .NET Core und Docker gezeigt wird, sollte keine Wiederherstellung und Kompilierung mithilfe der Befehle `dotnet restore` und `dotnet build` aus der Dotnet-CLI zur Laufzeit durchgeführt werden.
+Sie starten im Container- und im Microservicesmodell ständig Container. Es wird kein inaktiver Container neu gestartet, wenn ein Container ganz normal verwendet wird, da der Container verwerfbar ist. Orchestratoren (z.B. Kubernetes und Azure Service Fabric) erstellen nur neue Instanzen von Images. Das bedeutet, dass Sie eine Optimierung durch Vorkompilierung der Anwendung vornehmen müssten, wenn diese erstellt wird, damit der Instanziierungsprozess schneller wird. Wenn der Container gestartet wird, sollte er für die Ausführung bereit sein. Führen Sie keine Wiederherstellung oder Kompilierung zur Laufzeit mit den CLI-Befehlen `dotnet restore` und `dotnet build` aus, wie es in einigen Blogbeiträgen zu .NET Core und Docker getan wird.
 
 Das .NET-Team hat sich große Mühe gegeben, damit .NET Core und ASP.NET Core ein containeroptimiertes Framework ist. .NET Core ist nicht nur ein einfaches Framework mit geringem Speicherbedarf, sondern das Team hat sich auch auf optimierte Docker-Images für drei Hauptszenarios konzentriert und diese ab Version 2.1 in der Docker-Hub-Registrierung unter *dotnet/core* veröffentlicht:
 
-1. **Entwicklung:** Die schnelle Iteration hat Vorrang. Das Debuggen von Änderungen und die Größe sind zweitrangig.
+1. **Entwicklung:** Die schnelle Iteration und das Debuggen von Änderungen hat Vorrang. Die Größe ist zweitrangig.
 
-2. **Build:** Das Kompilieren der Anwendung hat Vorrang. Außerdem sind Binärdateien und andere Abhängigkeiten enthalten, um die Binärdateien zu optimieren.
+2. **Build:** Das Kompilieren der Anwendung hat Vorrang. Außerdem enthält das Image Binärdateien und andere Abhängigkeiten, um die Binärdateien zu optimieren.
 
-3. **Produktion:** Das schnelle Bereitstellen und Starten von Containern hat Vorrang. Die Images sind deshalb auf Binärdateien und den Inhalt beschränkt, der zum Ausführen der Anwendung erforderlich ist.
+3. **Produktion:** Das schnelle Bereitstellen und Starten von Containern hat Vorrang. Die Images sind deshalb auf Binärdateien und Inhalte beschränkt, die zum Ausführen der Anwendung erforderlich sind.
 
-Zu diesem Zweck stellt das .NET-Team vier grundlegende Varianten unter [dotnet/core](https://hub.docker.com/_/microsoft-dotnet-core/) (im Docker-Hub) bereit:
+Das .NET-Team stellt vier grundlegende Varianten unter [dotnet/core](https://hub.docker.com/_/microsoft-dotnet-core/) (in Docker Hub) bereit:
 
 1. **sdk:** für Entwicklungs- und Buildszenarien
 1. **aspnet**: für ASP.NET-Produktionsszenarien
 1. **runtime**: für .NET-Produktionsszenarien
-1. **runtime-deps:** für Produktionsszenarien von [eigenständigen Anwendungen](../../../core/deploying/index.md#publish-self-contained)
+1. **runtime-deps:** für Produktionsszenarios mit [eigenständigen Anwendungen](../../../core/deploying/index.md#publish-self-contained)
 
 Für einen schnelleren Start setzen Runtimeimages auch automatisch aspnetcore\_urls auf Port 80 und verwenden Ngen, um einen nativen Imagecache von Assemblys zu erstellen.
 

@@ -2,12 +2,12 @@
 title: Umstände, unter denen eine Bereitstellung von Windows-Containern in Azure Container Service (d. h. Kubernetes) erfolgen sollte
 description: Modernisieren vorhandener .NET-Anwendungen mit Azure Cloud und Windows-Containern | Umstände, unter denen eine Bereitstellung von Windows-Containern in Azure Container Service (d. h. Kubernetes) erfolgen sollte
 ms.date: 04/30/2018
-ms.openlocfilehash: 903082deba635dd0dfc22d0186fbc589f8d05b92
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3ff51a70d4e158b831155ab4992ec32f5d98cedb
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "69577943"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80987763"
 ---
 # <a name="when-to-deploy-windows-containers-to-azure-container-service-that-is-kubernetes"></a>Umstände, unter denen eine Bereitstellung von Windows-Containern in Azure Container Service (d. h. Kubernetes) erfolgen sollte
 
@@ -19,7 +19,7 @@ Alle diese Orchestratoren sind reife Umgebungen, wenn Sie Linux Docker-Container
 
 In Kubernetes ist die Unterstützung für Container beispielsweise nativ (wesentlicher Bestandteil, „Bürger erster Klasse“), weshalb die Verwendung von Windows-Containern auf Kubernetes auch effektiv ist (als Preview in ACS ab Anfang 2018).
 
-Wichtiger Hinweis: Die weiterentwickelte und „stärker PaaS“-Version von ACS (Azure Container Service) für Kubernetes ist AKS (Azure Kubernetes Service). Windows-Container werden jedoch mit Stand 2. Quartal 2018 immer noch nicht unterstützt. Dies soll sich jedoch bald ändern.
+Wichtiger Hinweis: Die weiterentwickelte Version von ACS (Azure Container Service) für Kubernetes, die dem PaaS-Prinzip eher entspricht, ist AKS (Azure Kubernetes Service). Windows-Container werden jedoch immer noch nicht unterstützt (Stand: 2. Quartal 2018). Dies soll sich jedoch bald ändern.
 
 >[!div class="step-by-step"]
 >[Zurück](when-to-deploy-windows-containers-to-azure-container-instances-ACI.md)

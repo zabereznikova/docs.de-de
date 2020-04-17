@@ -2,12 +2,12 @@
 title: Exemplarische Vorgehensweisen und technische erste Schritte (Übersicht)
 description: Modernisieren vorhandener .NET-Anwendungen mit Azure Cloud und Windows-Containern | Exemplarische Vorgehensweisen und technische erste Schritte (Übersicht)
 ms.date: 04/28/2018
-ms.openlocfilehash: 190b33c4307b09bab0543d481e66ac9328074a0d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: cff418d9b6e931a3082d8a2f8b818e7275139578
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "69660881"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80987868"
 ---
 # <a name="walkthroughs-and-technical-get-started-overview"></a>Exemplarische Vorgehensweisen und technische erste Schritte (Übersicht)
 
@@ -62,7 +62,7 @@ Die nächste Abbildung zeigt die ersten App-Screenshots.
 
 ![ASP.NET MVC- und ASP.NET Web Forms-Anwendungen (vorhandene/Legacy-Technologien)](./media/image5-2.png)
 
-Abhängigkeiten in ASP.NET 4. x oder früheren Versionen (entweder für MVC oder für Web Forms) bedeuten, dass diese Anwendungen nur unter .NET Core ausgeführt werden können, wenn der Code vollständig mit ASP.NET Core MVC umgeschrieben wird.
+Abhängigkeiten in ASP.NET 4.x oder früheren Versionen (entweder für MVC oder für Web Forms) bedeuten, dass diese Anwendungen nur unter .NET Core ausgeführt werden können, wenn der Code vollständig mit ASP.NET Core MVC umgeschrieben wird.
 
 ### <a name="scenario-2-wcf-service-and-winforms-client-app-3-tier-app"></a>Szenario 2: WCF-Dienst und WinForms-Client-App (3-schichtige App)
 
@@ -79,7 +79,7 @@ Die Vorteile dieser exemplarischen Vorgehensweise sind einfach: Sie machen sich 
 Erkunden Sie diesen Inhalt ausführlicher im GitHub-Wiki:
 
 - [Tour durch die Baseline-Legacy-Apps von ASP.NET MVC und Web Forms](https://github.com/dotnet-architecture/eShopModernizing/wiki/01.-Tour-on-the-ASP.NET-MVC-and-WebForms-apps-implementation-code)
-- [Tour durch die Baseline-Legacy-Apps von WCF-Dienst- und WinForms (3-schichtig)](https://github.com/dotnet-architecture/eShopModernizing/wiki/21.-Tour-on-the-WCF-service-and-WinForms-apps)
+- [Tour durch die Baseline-Legacy-Apps des WCF-Diensts und von WinForms (3-schichtig)](https://github.com/dotnet-architecture/eShopModernizing/wiki/21.-Tour-on-the-WCF-service-and-WinForms-apps)
 
 ## <a name="walkthrough-2-containerize-your-existing-net-applications-with-windows-containers"></a>Exemplarische Vorgehensweise 2: Containerisieren Ihrer vorhandenen .NET-Anwendungen mit Windows-Containern
 

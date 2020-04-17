@@ -2,12 +2,12 @@
 title: Implementieren der Microservice-Anwendungsschicht mithilfe der Web-API
 description: Übersicht über die Abhängigkeitsinjektion und Vermittlermuster und ihre Implementierung in der Web-API Anwendungsschicht.
 ms.date: 01/30/2020
-ms.openlocfilehash: a88f3bfd11ea06df085ca82ed7265cb37006fc31
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 76562d87b09a18e4a4ecb7625a2e823bc1ccff78
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77502445"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80988465"
 ---
 # <a name="implement-the-microservice-application-layer-using-the-web-api"></a>Implementieren der Microserviceanwendungsschicht mithilfe der Web-API
 
@@ -175,7 +175,7 @@ Der Instanzbereichstyp bestimmt, wie eine Instanz von Anforderungen für den gle
 
 ## <a name="implement-the-command-and-command-handler-patterns"></a>Implementieren von Befehls- und Befehlshandlermustern
 
-Im Beispiel DI-über-Konstruktor im vorherigen Abschnitt hat der IoC-Container Repositorys über einen Konstruktor in einer Klasse eingefügt. Aber wo genau wurden diese eingefügt? In einer einfachen Web-API (z.B. Katalogmicroservice in eShopOnContainers) fügen Sie sie auf der Ebene des MVC-Controllers als Teil der Anforderungspipeline von ASP.NET Core in einen Controllerkonstruktor ein. Allerdings erfolgt die Einfügung von Abhängigkeiten im anfänglichen Code in diesem Abschnitt ([CreateOrderCommandHandler](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.API/Application/Commands/CreateOrderCommandHandler.cs)-Klasse aus dem Ordering.API-Dienst in eShopOnContainers) über den Konstruktor eines bestimmten Befehlshandlers. Lassen Sie uns erklären, was ein Befehlshandler ist und weshalb Sie ihn verwenden sollten.
+Im Beispiel DI-über-Konstruktor im vorherigen Abschnitt hat der IoC-Container Repositorys über einen Konstruktor in einer Klasse eingefügt. Aber wo genau wurden diese eingefügt? In einer einfachen Web-API (z. B. im Katalogmicroservice in eShopOnContainers) fügen Sie sie auf der Ebene des MVC-Controllers als Teil der Anforderungspipeline von ASP.NET Core in einen Controllerkonstruktor ein. Allerdings erfolgt die Einfügung von Abhängigkeiten im anfänglichen Code in diesem Abschnitt ([CreateOrderCommandHandler](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.API/Application/Commands/CreateOrderCommandHandler.cs)-Klasse aus dem Ordering.API-Dienst in eShopOnContainers) über den Konstruktor eines bestimmten Befehlshandlers. Lassen Sie uns erklären, was ein Befehlshandler ist und weshalb Sie ihn verwenden sollten.
 
 Das Befehlsmuster bezieht sich systemintern auf das CQRS-Muster, das weiter oben in dieser Anleitung erläutert wurde. CQRS verfügt über zwei Seiten. Der erste Bereich sind Abfragen unter Verwendung vereinfachter Abfragen mit der [Dapper](https://github.com/StackExchange/dapper-dot-net)-micro-ORM, der zuvor erläutert wurde. Der zweite Bereich sind Befehle, die der Ausgangspunkt für Transaktionen sind, und der Eingabekanal außerhalb des Diensts.
 
@@ -199,7 +199,7 @@ Ein wichtiges Merkmal eines Befehls ist, dass er nur einmal von einem einzelnen 
 
 Darüber hinaus ist es wichtig, dass ein Befehl für den Fall, dass er nicht idempotent ist, nur einmal verarbeitet werden kann. Ein Befehl ist idempotent, wenn er mehrere Male ausgeführt werden kann, ohne das Ergebnis entweder aufgrund der Art des Befehls oder aufgrund der Art und Weise, wie das System den Befehl behandelt, zu ändern.
 
-Es wird empfohlen, Befehle und Updates, sofern dies nach den Geschäftsregeln und Invarianten Ihrer Domäne sinnvoll erscheint, idempotent zu machen. Um das gleiche Beispiel zu verwenden: Wenn der gleiche CreateOrder-Befehl aus einem beliebigen Grund (Wiederholungslogik, Hacker usw.) Ihr System mehrmals erreicht, sollten Sie in der Lage sein, ihn zu identifizieren und sicherzustellen, dass nicht mehrere Bestellungen erstellt werden. Zu diesem Zweck müssen Sie ein Art von Identität in den Vorgängen anfügen und feststellen, ob der Befehl oder das Update bereits verarbeitet wurde.
+Es wird empfohlen, Befehle und Updates, sofern dies nach den Geschäftsregeln und Invarianten Ihrer Domäne sinnvoll erscheint, idempotent zu implementieren. Um das gleiche Beispiel zu verwenden: Wenn der gleiche CreateOrder-Befehl aus einem beliebigen Grund (Wiederholungslogik, Hacker usw.) Ihr System mehrmals erreicht, sollten Sie in der Lage sein, ihn zu identifizieren und sicherzustellen, dass nicht mehrere Bestellungen erstellt werden. Zu diesem Zweck müssen Sie ein Art von Identität in den Vorgängen anfügen und feststellen, ob der Befehl oder das Update bereits verarbeitet wurde.
 
 Sie senden einen Befehl an einen einzelnen Empfänger, d.h. Sie veröffentlichen einen Befehl nicht. Die Veröffentlichung wendet sich an Ereignisse, die einen Fakt anführen, z.B. dass etwas passiert ist und dass dies für Ereignisempfänger interessant sein kann. Im Fall von Ereignissen spielt es für den Verleger keine Rolle, welche Empfänger das Ereignis erhalten oder wie sie es verwenden. Mit Domänen- oder Integrationsereignissen verhält es sich jedoch anders, wie bereits in vorherigen Abschnitten vorgestellt.
 
@@ -291,7 +291,7 @@ Beachten Sie, dass zum Durchlaufen des Serialisierungs-/Deserialisierungsprozess
 
 Die Befehlsklasse zum Erstellen einer Bestellung beispielsweise ist möglicherweise im Hinblick auf Daten der Bestellung ähnlich, die Sie erstellen möchten, aber Sie benötigen wahrscheinlich nicht die gleichen Attribute. Beispielsweise enthält `CreateOrderCommand` keine Bestell-ID, da die Bestellung noch nicht erstellt wurde.
 
-Viele Befehlsklassen können einfach sein und nur wenige Felder über einen Zustand erfordern, der geändert werden muss. Das wäre der Fall, wenn Sie nur den Status einer Bestellung aus „In Bearbeitung“ in „Bezahlt“ oder „Geliefert“ ändern, indem Sie einen Befehl wie den Folgenden verwenden:
+Viele Befehlsklassen können einfach sein und nur wenige Felder über einen Zustand erfordern, der geändert werden muss. Das wäre der Fall, wenn Sie nur den Status einer Bestellung von „In Bearbeitung“ in „Bezahlt“ oder „Geliefert“ ändern, indem Sie einen Befehl wie den Folgenden verwenden:
 
 ```csharp
 [DataContract]
@@ -449,7 +449,7 @@ Eine andere Möglichkeit ist die Verwendung asynchroner Nachrichten basierend au
 
 Die Befehlspipeline kann auch über eine hochverfügbare Nachrichtenwarteschlange verarbeitet werden, um die Befehle an den entsprechenden Handler zu übergeben. Wenn Nachrichtenwarteschlangen verwendet werden, um die Befehle zu akzeptieren, kann die Pipeline des Befehls noch komplexer werden, da Sie sie wahrscheinlich in zwei über die externe Warteschlange verbundene Prozesse aufteilen müssen. Die Verwendung ist jedoch sinnvoll, wenn Sie Skalierbarkeit und Leistung basierend auf asynchronem Messaging verbessern müssen. Beachten Sie, dass im Fall von Abbildung 7-26 der Controller nur die Befehlsnachricht in die Warteschlange sendet und zurückgibt. Die Befehlshandler verarbeiten die Nachrichten in ihrem eigenen Tempo. Dies ist ein großer Vorteil von Warteschlangen: Die Nachrichtenwarteschlange kann als Puffer fungieren, wenn Hyperskalierbarkeit erforderlich ist, z.B. für Lager oder jedes andere Szenario mit einem hohen eingehenden Datenaufkommen.
 
-Da die Nachrichtenwarteschlangen asynchron sind, müssen Sie herausfinden, wie mit der Clientanwendung über den Erfolg oder Misserfolg des Prozesses des Befehls kommuniziert werden soll. Im Allgemeinen sollten Sie nie „Fire and Forget“-Befehle verwenden. Jede Geschäftsanwendung muss wissen, ob ein Befehl erfolgreich verarbeitet oder zumindest überprüft und akzeptiert wurde.
+Da die Nachrichtenwarteschlangen asynchron sind, müssen Sie herausfinden, wie die Clientanwendung über den Erfolg oder Misserfolg des Befehlsprozesses informiert werden soll. Im Allgemeinen sollten Sie nie „Fire and Forget“-Befehle verwenden. Jede Geschäftsanwendung muss wissen, ob ein Befehl erfolgreich verarbeitet oder zumindest überprüft und akzeptiert wurde.
 
 Die Komplexität Ihres Systems wird erhöht, da nach dem Validieren einer Befehlsnachricht, die an eine asynchrone Warteschlange übermittelt wurde, auf den Client reagiert werden kann, während ein prozessinterner Befehl das Ergebnis des Befehls nach der Ausführung der Transaktion zurückgibt. Bei Verwendung von Warteschlangen, müssen Sie möglicherweise das Ergebnis des Befehlsprozesses über andere Vorgangsergebnismeldungen zurückgeben, wofür zusätzliche Komponenten und eine benutzerdefinierte Kommunikation in Ihrem System benötigt werden.
 
@@ -457,13 +457,13 @@ Darüber hinaus sind asynchrone Befehle unidirektionale Befehle, die jedoch in v
 
 > \[Burtsev Alexey\] Ich finde häufig Code, in dem grundlos asynchrone Befehlsbehandlung oder unidirektionales Befehlsmessaging verwendet wird (es handelt sich nicht um einen langen Vorgang, es wird kein externer asynchroner Code ausgeführt, es handelt sich noch nicht einmal um anwendungsübergreifende Grenzen für die Verwendung des Nachrichtenbusses). Wozu diese unnötige Komplexität? Und ich habe bisher noch kein CQRS-Codebeispiel mit blockierendem Befehlshandler gesehen, obwohl dieser in den meisten Fällen gut geeignet ist.
 >
-> \[Greg Young\] \[...\] ein asynchroner Befehl ist nicht vorhanden. Es handelt sich eigentlich um ein anderes Ereignis. Wenn ich das annehmen muss, was man mir sendet, und ein Ereignis auslösen muss, wenn ich nicht zustimme, sagt man \[d.h. der Befehl\] mir nicht mehr, dass ich etwas tun muss. Man informiert mich vielmehr darüber, dass etwas getan wurde. Auf den ersten Blick scheint es sich um einen geringfügigen Unterschied zu handeln, aber er hat viele Auswirkungen.
+> \[Greg Young\] \[...\] ein asynchroner Befehl ist nicht vorhanden. Es handelt sich eigentlich um ein anderes Ereignis. Wenn ich das akzeptieren, was Sie mir senden, und ein Ereignis auslösen muss, wenn ich nicht zustimme, weisen Sie mich nicht dazu an etwas zu tun, \[d. h., es handelt sich um keinen Befehl\]. Man informiert mich vielmehr darüber, dass etwas getan wurde. Auf den ersten Blick scheint es sich um einen geringfügigen Unterschied zu handeln, aber er hat viele Auswirkungen.
 
 Asynchrone Befehle erhöhen die Komplexität eines Systems entscheidend, da es keine einfache Möglichkeit gibt, Fehler anzuzeigen. Daher werden asynchrone Befehle nur dann empfohlen, wenn Skalierungsanforderungen erforderlich sind, oder aber in besonderen Fällen für die Kommunikation von internen Microservices über Messaging. In diesen Fällen müssen Sie ein eigenes Reporting- und Wiederherstellungssystem für Fehler entwickeln.
 
 Bei der ursprünglichen Version von eShopOnContainers haben wir uns für die Verwendung der synchronen Befehlsverarbeitung entschlossen, ausgehend von HTTP-Anforderungen und gesteuert von Vermittlermustern. Auf diese Weise kann der Erfolg oder Misserfolg des Prozesses wie in der [CreateOrderCommandHandler](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.API/Application/Commands/CreateOrderCommandHandler.cs)-Implementierung zurückgegeben werden.
 
-In jedem Fall sollte diese Entscheidung auf der Grundlage der geschäftlichen Anforderung Ihrer Anwendung oder des Microservices getroffen werden.
+In jedem Fall sollte diese Entscheidung auf der Grundlage der geschäftlichen Anforderung Ihrer Anwendung oder Ihres Microservices getroffen werden.
 
 ## <a name="implement-the-command-process-pipeline-with-a-mediator-pattern-mediatr"></a>Implementieren der Befehlsprozesspipeline mit einem Vermittlermuster (MediatR)
 
@@ -475,9 +475,9 @@ Mithilfe des Vermittlermusters können Sie die Kopplung reduzieren und mit den a
 
 Ein weiterer guter Grund für die Verwendung des Musters wurde von Jimmy Bogard erläutert, als er die vorliegende Anleitung überprüfte:
 
-> An dieser Stelle sollten auch Tests erwähnt werden. Sie bieten einen interessanten und konsistenten Einblick in das Verhalten des Systems. Eingabe der Anforderung , Ausgabe der Antwort. Der Aspekt war für uns eine wichtige Voraussetzung für die Entwicklung von Tests mit durchgängigem Verhalten.
+> An dieser Stelle sollten auch Tests erwähnt werden. Sie bieten einen interessanten und konsistenten Einblick in das Verhalten des Systems. Eingabe der Anforderung , Ausgabe der Antwort. Dieser Aspekt war eine wichtige Voraussetzung für die Entwicklung von Tests mit durchgängigem Verhalten.
 
-Betrachten wir zunächst einen WebAPI-Beispielcontroller, auf dem Sie normalerweise das Vermittlerobjekt verwenden. Wenn Sie das Vermittlerobjekt nicht verwenden würden, müssten Sie alle Abhängigkeiten für diesen Controller einfügen, etwa ein Protokollierungsobjekt usw. Das Ergebnis ist ein ziemlich komplizierter Konstruktor. Wenn Sie jedoch das Vermittlerobjekt verwenden, kann der Konstruktor des Controllers wesentlich einfacher sein, mit einigen wenigen Abhängigkeiten anstelle von vielen Abhängigkeiten, z.B. eine pro querschnittlichen Vorgang, was im folgenden Beispiel veranschaulicht wird:
+Zunächst wird ein WebAPI-Beispielcontroller behandelt, auf dem Sie normalerweise das Vermittlerobjekt verwenden. Wenn Sie das Vermittlerobjekt nicht verwenden würden, müssten Sie alle Abhängigkeiten für diesen Controller einfügen, etwa ein Protokollierungsobjekt usw. Das Ergebnis ist ein ziemlich komplizierter Konstruktor. Wenn Sie jedoch das Vermittlerobjekt verwenden, kann der Konstruktor des Controllers wesentlich einfacher sein, mit einigen wenigen Abhängigkeiten anstelle von vielen Abhängigkeiten, z.B. eine pro querschnittlichen Vorgang, was im folgenden Beispiel veranschaulicht wird:
 
 ```csharp
 public class MyMicroserviceController : Controller
@@ -546,7 +546,7 @@ public class IdentifiedCommand<T, R> : IRequest<R>
 }
 ```
 
-Anschließend prüft der CommandHandler für den IdentifiedCommand namens [IdentifiedCommandHandler.cs](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.API/Application/Commands/IdentifiedCommandHandler.cs) grundsätzlich, ob die als Teil der Nachricht ankommende ID bereits in einer Tabelle vorhanden ist. Wenn sie bereits vorhanden ist, wird der Befehl nicht erneut verarbeitet und verhält sich wie ein idempotenter Befehl. Der Infrastrukturcode wird durch den unten stehenden Methodenaufruf `_requestManager.ExistAsync` ausgeführt.
+Anschließend prüft der CommandHandler für den IdentifiedCommand namens [IdentifiedCommandHandler.cs](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.API/Application/Commands/IdentifiedCommandHandler.cs) grundsätzlich, ob die als Teil der Nachricht ankommende ID bereits in einer Tabelle vorhanden ist. Wenn sie bereits vorhanden ist, wird der Befehl nicht noch einmal verarbeitet und verhält sich wie ein idempotenter Befehl. Der Infrastrukturcode wird durch den unten stehenden Methodenaufruf `_requestManager.ExistAsync` ausgeführt.
 
 ```csharp
 // IdentifiedCommandHandler.cs
@@ -590,7 +590,7 @@ public class IdentifiedCommandHandler<T, R> :
 }
 ```
 
-Der IdentifiedCommand verhält sich wie der Umschlag eines Geschäftsbefehls. Wenn der Geschäftsbefehl verarbeitet werden muss, da er keine wiederholte ID ist, wird der innere Geschäftsbefehl erneut an den Vermittler übermittelt – wie im letzten Teil des oben stehenden Codes bei Ausführung von `_mediator.Send(message.Command)` über [IdentifiedCommandHandler.cs](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.API/Application/Commands/IdentifiedCommandHandler.cs).
+Der IdentifiedCommand-Befehl verhält sich wie der Umschlag eines Geschäftsbefehls. Wenn der Geschäftsbefehl verarbeitet werden muss, da er keine wiederholte ID ist, wird der innere Geschäftsbefehl wie im letzten Teil des oben stehenden Codes bei Ausführung von `_mediator.Send(message.Command)` über [IdentifiedCommandHandler.cs](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.API/Application/Commands/IdentifiedCommandHandler.cs) erneut an den Vermittler übermittelt.
 
 Dabei wird der Geschäftsbefehlshandler verlinkt und ausgeführt. In diesem Fall handelt es sich um den [CreateOrderCommandHandler](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.API/Application/Commands/CreateOrderCommandHandler.cs), der – wie im folgenden Code gezeigt – Transaktionen für die Bestellungsdatenbank ausführt.
 
@@ -643,7 +643,7 @@ public class CreateOrderCommandHandler
 
 Damit MediatR Ihre Befehlshandlerklassen erkennt, müssen Sie die Vermittlerklassen und die Befehlshandlerklassen in Ihrem IoC-Container registrieren. MediatR verwendet standardmäßig Autofac als IoC-Container, aber Sie können auch den integrierten ASP.NET Core-IoC-Container oder einen anderen von MediatR unterstützten Container verwenden.
 
-Der folgende Code zeigt, wie die Typen und Befehle des Vermittlers registriert werden, wenn Autofac-Module verwendet werden.
+Im folgenden Code wird veranschaulicht, wie die Typen und Befehle des Vermittlers registriert werden, wenn Autofac-Module verwendet werden.
 
 ```csharp
 public class MediatorModule : Autofac.Module
@@ -664,7 +664,7 @@ public class MediatorModule : Autofac.Module
 }
 ```
 
-Dies ist sozusagen der Zauberstab von MediatR.
+Dies ist quasi der Kern von MediatR.
 
 Jeder Befehlshandler implementiert die generische `IAsyncRequestHandler<T>`-Schnittstelle. Beim Registrieren der Assemblys registriert der Code mit `RegisteredAssemblyTypes` alle als `IAsyncRequestHandler` markierten Typen, während die `CommandHandlers` dank der in der `CommandHandler`-Klasse angegebenen Beziehung ihren `Commands` zugeordnet werden:
 
@@ -758,7 +758,7 @@ public class ValidatorBehavior<TRequest, TResponse>
 }
 ```
 
-Das Verhalten hier löst eine Ausnahme aus, wenn die Prüfung fehlschlägt. Allerdings können Sie auch ein Ergebnisobjekt zurückgeben, das das Befehlsergebnis enthält, wenn es erfolgreich war, oder die Prüfungsnachrichten, wenn es nicht erfolgreich war. Dies würde es wahrscheinlich einfacher machen, dem Benutzer die Prüfungsergebnisse anzuzeigen.
+Das Verhalten hier löst eine Ausnahme aus, wenn die Validierung fehlschlägt. Allerdings können Sie auch ein Ergebnisobjekt zurückgeben, das das Befehlsergebnis enthält, wenn der Befehl erfolgreich ausgeführt wurde, oder die Validierungsnachrichten, wenn er nicht erfolgreich ausgeführt wurde. Dies würde es wahrscheinlich einfacher machen, dem Benutzer die Prüfungsergebnisse anzuzeigen.
 
 Anschließend wurde auf der Grundlage der [FluentValidation](https://github.com/JeremySkinner/FluentValidation)-Bibliothek eine Validierung für die mit CreateOrderCommand übergebenen Daten erstellt, was im folgenden Code veranschaulicht wird:
 

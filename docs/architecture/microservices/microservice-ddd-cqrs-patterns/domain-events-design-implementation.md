@@ -2,12 +2,12 @@
 title: Domänenereignisse. Entwurf und Implementierung
 description: .NET-Microservicearchitektur für .NET-Containeranwendungen | Übersicht über Domänenereignisse, ein Schlüsselkonzept zum Herstellen der Kommunikation zwischen Aggregaten
 ms.date: 10/08/2018
-ms.openlocfilehash: 3bba18d4a77b47abee55c16bae8a64ed27ac9aba
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e03abba66945a6434f6a81eaa9f50d53998f346c
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "74884227"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80988715"
 ---
 # <a name="domain-events-design-and-implementation"></a>Domänenereignisse: Entwurf und Implementierung
 
@@ -61,7 +61,7 @@ Die Handhabung der Domänenereignisse ist für eine Anwendung relevant. Die Dom�
 
 Domänenereignisse können auch verwendet werden, um eine beliebige Anzahl von Anwendungsaktionen auszulösen. Sie müssen, was noch wichtiger ist, offen sein, um diese Anzahl in der Zukunft entkoppelt zu erhöhen. Wenn beispielsweise die Bestellung gestartet wird, kann es sinnvoll sein, ein Domänenereignis zu veröffentlichen, um diese Informationen an andere Aggregate weiterzuleiten oder sogar Anwendungsaktionen wie Benachrichtigungen auszulösen.
 
-Von zentraler Bedeutung ist hier die offene Anzahl auszuführender Aktionen, wenn ein Domänenereignis auftritt. Letztendlich werden die Aktionen und Regeln in der Domäne und der Anwendung erweitert. Die Komplexität oder die Anzahl von Nebenwirkungsaktionen eines Ereignisses erhöhen sich. Wenn Ihr Code jedoch stark gekoppelt wurde (d.h. bestimmte Objekte werden mit `new` erstellt), müssen Sie jedes Mal den ausgeführten und getesteten Code ändern, wenn Sie eine neue Aktion hinzufügen.
+Von zentraler Bedeutung ist hier die offene Anzahl auszuführender Aktionen, wenn ein Domänenereignis auftritt. Letztendlich werden die Aktionen und Regeln in der Domäne und der Anwendung erweitert. Die Komplexität oder die Anzahl von Nebenwirkungsaktionen eines Ereignisses erhöhen sich. Wenn Ihr Code jedoch stark gekoppelt wurde (d. h. bestimmte Objekte werden mit `new` erstellt), müssen Sie jedes Mal den ausgeführten und getesteten Code ändern, wenn Sie eine neue Aktion hinzufügen.
 
 Diese Änderung könnte zu neuen Fehlern führen. Außerdem widerspricht dieser Ansatz dem [Offen/Geschlossen-Prinzip](https://en.wikipedia.org/wiki/Open/closed_principle) von [SOLID](https://en.wikipedia.org/wiki/SOLID). Darüber hinaus wächst dann auch die ursprüngliche Klasse ständig, die die Vorgänge orchestriert, was dem [Prinzip der einzigen Verantwortung](https://en.wikipedia.org/wiki/Single_responsibility_principle) widerspricht.
 
@@ -69,7 +69,7 @@ Wenn Sie Domänenereignisse verwenden, können Sie andererseits eine differenzie
 
 1. Senden Sie einen Befehl (z.B. CreateOrder).
 2. Empfangen Sie den Befehl in einem Befehlshandler.
-   - Führen Sie eine Transaktion eines Aggregats aus.
+   - Führen Sie eine Transaktion eines einzelnen Aggregats aus.
    - (Optional) Lösen Sie die Domänenereignisse für Nebenwirkungen aus (z.B. OrderStartedDomainEvent).
 3. Behandeln Sie die Domänenereignisse (im aktuellen Prozess), die eine offene Anzahl von Nebenwirkungen in mehreren Aggregaten oder Anwendungsaktionen ausführen. Zum Beispiel:
    - Überprüfen oder erstellen Sie Käufer und Zahlungsmethode.
@@ -82,7 +82,7 @@ Wie Abbildung 7-15 zeigt, können Sie ausgehend vom selben Domänenereignis mehr
 
 **Abbildung 7-15**. Behandlung mehrerer Aktionen pro Domäne
 
-Es kann mehrere Handler für das gleiche Domänenereignis in der Anwendungsschicht geben. Ein Handler kann die Konsistenz zwischen Aggregaten auflösen, und ein anderer Handler kann ein Integrationsereignis veröffentlichen, damit andere Microservices es verwenden können. Die Ereignishandler befinden sich in der Regel in der Anwendungsschicht, da Sie für das Microserviceverhalten Infrastrukturobjekte, wie z.B. Repositorys oder eine Anwendungs-API, verwenden. In dieser Hinsicht ähneln Ereignishandler Befehlshandlern, und beide sind Teil der Anwendungsschicht. Der wichtige Unterschied besteht darin, dass ein Befehl nur einmal verarbeitet werden soll. Ein Domänenereignis wird möglicherweise nur null (0) oder *n*-mal verarbeitet, da es von mehreren Empfängern oder Ereignishandlern mit einem anderen Zweck für jeden Handler empfangen werden kann.
+Es kann mehrere Handler für das gleiche Domänenereignis in der Anwendungsschicht geben. Ein Handler kann die Konsistenz zwischen Aggregaten auflösen, und ein anderer Handler kann ein Integrationsereignis veröffentlichen, damit andere Microservices es verwenden können. Die Ereignishandler befinden sich in der Regel in der Anwendungsschicht, da Sie Infrastrukturobjekte, z. B. Repositorys oder eine Anwendungs-API, für das Microserviceverhalten verwenden. In dieser Hinsicht ähneln Ereignishandler Befehlshandlern, und beide sind Teil der Anwendungsschicht. Der wichtige Unterschied besteht darin, dass ein Befehl nur einmal verarbeitet werden soll. Ein Domänenereignis wird möglicherweise nur null (0) oder *n*-mal verarbeitet, da es von mehreren Empfängern oder Ereignishandlern mit einem anderen Zweck für jeden Handler empfangen werden kann.
 
 Wenn Sie eine offene Anzahl von Handlern pro Domänenereignis verwenden, können Sie beliebig viele Domänenregeln hinzufügen, ohne dass der aktuelle Code beeinträchtigt wird. Das Implementieren der folgenden Geschäftsregel kann sich beispielsweise ebenso einfach gestalten wie das Hinzufügen von einigen Ereignishandlern oder auch nur einem Ereignishandler:
 
@@ -124,7 +124,7 @@ Im Hinblick auf die ubiquitäre Sprache der Domäne muss der Klassenname des Ere
 
 Wie bereits erwähnt, ist ein wichtiges Merkmal von Ereignissen, dass es nicht geändert werden soll, da es etwas ist, das in der Vergangenheit aufgetreten ist. Daher muss es eine unveränderliche Klasse sein. Im obigen Code sehen Sie, dass die Eigenschaften schreibgeschützt sind. Es gibt keine Möglichkeit, das Objekt zu aktualisieren. Sie können die entsprechenden Werte nur beim Erstellen festlegen.
 
-Wichtig: Wenn Domänenereignisse asynchron verarbeitet werden mit einer Warteschlange, die eine Serialisierung und Deserialisierung der Ereignisobjekte erfordert, müssen die Eigenschaften auf „privat“ statt „schreibgeschützt“ festgelegt werden, damit der Deserialisierer die Werte beim Entfernen aus der Warteschlange zuweisen kann. Das ist kein Problem im Microservice für Bestellungen, da das Domänenereignis „Veröffentlichen/Abonnieren“ synchron über MediatR implementiert wird.
+Wichtig: Wenn Domänenereignisse asynchron mit einer Warteschlange verarbeitet werden, die eine Serialisierung und Deserialisierung der Ereignisobjekte erfordert, müssen die Eigenschaften auf „privat“ statt „schreibgeschützt“ festgelegt werden, damit der Deserialisierer die Werte beim Entfernen aus der Warteschlange zuweisen kann. Das ist kein Problem im Microservice für Bestellungen, da das Domänenereignis „Veröffentlichen/Abonnieren“ synchron über MediatR implementiert wird.
 
 ### <a name="raise-domain-events"></a>Auslösen von Domänenereignissen
 

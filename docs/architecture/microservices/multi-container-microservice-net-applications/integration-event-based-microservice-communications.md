@@ -2,12 +2,12 @@
 title: Implementieren ereignisbasierter Kommunikation zwischen Microservices (Integrationsereignisse)
 description: .NET-Microservicearchitektur für .NET-Containeranwendungen | Übersicht über Integrationsereignisse zum Implementieren ereignisbasierter Kommunikation zwischen Microservices
 ms.date: 10/02/2018
-ms.openlocfilehash: 6d4e324a05def91935a82df41c971a75cb75c3f8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8a1d4950247d63e5684c85c029efccf8269e7435
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75712402"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80988322"
 ---
 # <a name="implementing-event-based-communication-between-microservices-integration-events"></a>Implementieren ereignisbasierter Kommunikation zwischen Microservices (Integrationsereignisse)
 
@@ -29,7 +29,7 @@ Für die Implementierung von nur einem Ereignisbus-Proof-of-Concepts für die En
 
 Wenn Sie allgemeine Abstraktionen und umfangreichere Features wie [Sagas](https://docs.particular.net/nservicebus/sagas/) für Prozesse mit langer Ausführungsdauer benötigen, die eine verteilte Entwicklung erleichtern, lohnt es sich, andere kommerzielle und Open-Source-Service Busse wie NServiceBus, MassTransit und Brighter zu testen. In diesem Fall sind die zu verwendenden Abstraktionen und die zu verwendende API diejenigen, die von diesen allgemeinen Service Bussen bereitgestellt werden, und nicht Ihre eigenen Abstraktionen (wie die [unter eShopOnContainers bereitgestellten einfachen Ereignisbusabstraktionen](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/BuildingBlocks/EventBus/EventBus/Abstractions/IEventBus.cs)). Zu diesem Zweck können Sie die [geforkten eShopOnContainers mithilfe von NServiceBus](https://go.particular.net/eShopOnContainers) (zusätzliches abgeleitetes Beispiel, durch Particular Software implementiert) untersuchen.
 
-Natürlich können Sie zusätzlich zu Technologien auf unterer Ebene wie RabbitMQ und Docker immer auch eigene Service Bus-Features erstellen. Jedoch wird der Aufwand für die „Neuerfindung des Rades“ wohl zu groß sein für eine benutzerdefinierte Unternehmensanwendung.
+Natürlich können Sie auch Ihre eigenen Service Bus-Features auf Grundlage spezifischer Technologien wie RabbitMQ und Docker erstellen. Der hierzu erforderliche Mehraufwand ist für benutzerdefinierte Unternehmensanwendungen wahrscheinlich zu kostspielig.
 
 Als Erinnerung: Die im eShopOnContainers-Beispiel vorgestellten Beispielereignisbus-Abstraktionen und -Implementierungen sind nur als Proof of Concept zu verwenden. Wenn Sie sich für eine asynchrone und ereignisgesteuerte Kommunikation entschieden haben, wählen Sie (wie in diesem Abschnitt erläutert) das Servicebusprodukt aus, das Ihren Anforderungen an die Produktion am besten entspricht.
 
@@ -76,7 +76,7 @@ Beim [Observer-Muster](https://en.wikipedia.org/wiki/Observer_pattern) versorgt 
 
 ### <a name="publishsubscribe-pubsub-pattern"></a>Muster „Veröffentlichen/Abonnieren“
 
-Das [Muster „Veröffentlichen/Abonnieren“](https://docs.microsoft.com/previous-versions/msp-n-p/ff649664(v=pandp.10)) dient demselben Zweck wie das Beobachtermuster: andere Dienste sollen über bestimmte Ereignisse informiert werden. Es gibt jedoch einen wichtigen Unterschied zwischen dem Observer-Muster und dem Pub/Sub-Muster. Beim Observer-Muster erfolgt die Übertragung direkt vom Observable an die Observer, d.h. sie „kennen“ einander. Beim Pub/Sub-Muster gibt es jedoch eine dritte Komponente, den Broker oder Nachrichtenbroker bzw. Ereignisbus, den sowohl der Herausgeber als auch der Abonnent kennt. Wenn Sie also das Pub/Sub-Muster verwenden, sind Herausgeber und Abonnenten dank dem erwähnten Ereignisbus oder Nachrichtenbroker präzise entkoppelt.
+Das [Muster „Veröffentlichen/Abonnieren“](https://docs.microsoft.com/previous-versions/msp-n-p/ff649664(v=pandp.10)) dient demselben Zweck wie das Beobachtermuster: andere Dienste sollen über bestimmte Ereignisse informiert werden. Es gibt jedoch einen wichtigen Unterschied zwischen dem Observer-Muster und dem Pub/Sub-Muster. Beim Beobachtermuster erfolgt die Übertragung direkt vom Beobachtbaren an die Beobachter, d. h. sie „kennen“ sich. Beim Pub/Sub-Muster gibt es jedoch eine dritte Komponente, den Broker oder Nachrichtenbroker bzw. Ereignisbus, den sowohl der Herausgeber als auch der Abonnent kennt. Wenn Sie also das Pub/Sub-Muster verwenden, sind Herausgeber und Abonnenten dank dem erwähnten Ereignisbus oder Nachrichtenbroker präzise entkoppelt.
 
 ### <a name="the-middleman-or-event-bus"></a>Der Vermittler oder Ereignisbus
 
@@ -100,7 +100,7 @@ Es wird empfohlen, den Ereignisbus über eine Schnittstelle zu definieren, damit
 
 ### <a name="defining-an-event-bus-interface"></a>Definieren einer Ereignisbusschnittstelle
 
-Beginnen wir zum Zwecke der Untersuchung mit Implementierungscode für die Ereignisbusschnittstelle und möglichen Implementierungen. Die Schnittstelle sollte wie die folgende Schnittstelle allgemein und einfach gehalten sein.
+Zunächst werden Implementierungscode für die Ereignisbusschnittstelle und mögliche Implementierungen zu Untersuchungszwecken veranschaulicht. Die Schnittstelle sollte wie die folgende Schnittstelle allgemein und einfach gehalten sein.
 
 ```csharp
 public interface IEventBus

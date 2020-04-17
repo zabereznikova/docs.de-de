@@ -2,12 +2,12 @@
 title: Resilienz und Hochverfügbarkeit bei Microservices
 description: Microservices müssen so entworfen werden, dass sie vorübergehende Netzwerk- und Abhängigkeitsfehler aushalten. Zudem müssen sie resilient sein, um Hochverfügbarkeit zu gewährleisten.
 ms.date: 09/20/2018
-ms.openlocfilehash: 1c0f75a8c68d1f84ba24c550e854edc5372cf7f6
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 28f8b124cd59b2c3d621267cb437872af42c9ea8
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "73094216"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80988920"
 ---
 # <a name="resiliency-and-high-availability-in-microservices"></a>Resilienz und Hochverfügbarkeit bei Microservices
 
@@ -31,8 +31,8 @@ Im Abschnitt [Implementieren von Integritätsprüfungen in ASP.NET Core-Diensten
 
 Sie haben auch die Möglichkeit, eine ausgezeichnete Open Source-Bibliothek namens „Beat Pulse“ zu verwenden. Diese ist auf [GitHub](https://github.com/Xabaril/BeatPulse) und als [NuGet-Paket](https://www.nuget.org/packages/BeatPulse/) verfügbar. Diese Bibliothek führt ebenfalls Integritätsprüfungen durch. Jedoch gibt es einen kleinen Unterschied: sie führt zwei unterschiedliche Arten von Überprüfungen durch:
 
-- **Livetest**: Es wird überprüft, ob der Microservice aktiv ist, also ob er Anforderungen akzeptieren und auf diese reagieren kann.
-- **Bereitschaft**: Es wird überprüft, ob die Abhängigkeiten des Microservices (Datenbank, Warteschlangendienste usw.) selbst bereit sind, damit der Microservice das tun kann, was er soll.
+- **Livetest**: Es wird überprüft, ob der Microservice aktiv ist, d. h., ob er Anforderungen akzeptieren und auf diese reagieren kann.
+- **Bereitschaft**: Es wird überprüft, ob die Abhängigkeiten des Microservices (Datenbank, Warteschlangendienste usw.) selbst bereit sind, damit der Microservice seine Aufgaben ausführen kann.
 
 ### <a name="using-diagnostics-and-logs-event-streams"></a>Verwenden von Diagnose- und Protokollereignisdatenströmen
 

@@ -2,12 +2,12 @@
 title: Implementieren der Infrastrukturpersistenzebene mit Entity Framework Core
 description: .NET-Microservices-Architektur für .NET-Containeranwendungen | Übersicht über Implementierungsdetails für die Infrastrukturpersistenzebene mit Entity Framework Core
 ms.date: 01/30/2020
-ms.openlocfilehash: 2d28d9246be3e102625ed5bb67ee1ccede03c942
-ms.sourcegitcommit: 79b0dd8bfc63f33a02137121dd23475887ecefda
+ms.openlocfilehash: 7ab3be0d6a5affda478f7ec8f6c356571e304759
+ms.sourcegitcommit: f87ad41b8e62622da126aa928f7640108c4eff98
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80523325"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80805492"
 ---
 # <a name="implement-the-infrastructure-persistence-layer-with-entity-framework-core"></a>Implementieren der Infrastrukturpersistenzebene mit Entity Framework Core
 
@@ -78,7 +78,7 @@ public class Order : Entity
 }
 ```
 
-Beachten Sie, dass auf die Eigenschaft `OrderItems` mit `IReadOnlyCollection<OrderItem>` nur schreibgeschützt zugegriffen werden kann. Dieser Typ ist schreibgeschützt, damit er vor regelmäßigen externen Aktualisierungen geschützt ist.
+Der schreibgeschützte Zugriff auf die Eigenschaft `OrderItems` kann nur über `IReadOnlyCollection<OrderItem>` erfolgen. Dieser Typ ist schreibgeschützt, damit er vor regelmäßigen externen Aktualisierungen geschützt ist.
 
 EF Core bietet eine Möglichkeit, das Domänenmodell der physischen Datenbank zuzuordnen, ohne das Domänenmodell zu „verunreinigen“. Dabei handelt es sich um reinen .NET-POCO-Code, da die Zuordnungsaktion in der Persistenzebene implementiert wird. Bei dieser Zuordnungsaktion müssen Sie die Zuordnung zwischen den Feldern und der Datenbank konfigurieren. Im folgenden Beispiel der `OnModelCreating`-Methode von `OrderingContext` und der `OrderEntityTypeConfiguration`Klasse weist der Aufruf von `SetPropertyAccessMode` EF Core an, über ein Feld auf die Eigenschaft `OrderItems` zuzugreifen.
 
@@ -88,7 +88,7 @@ protected override void OnModelCreating(ModelBuilder modelBuilder)
 {
    // ...
    modelBuilder.ApplyConfiguration(new OrderEntityTypeConfiguration());
-   // Other entities’ configuration ...
+   // Other entities' configuration ...
 }
 
 // At OrderEntityTypeConfiguration.cs from eShopOnContainers
@@ -110,7 +110,7 @@ class OrderEntityTypeConfiguration : IEntityTypeConfiguration<Order>
 }
 ```
 
-Bei Verwendung von Feldern anstelle von Eigenschaften wird die `OrderItem`-Entität so beibehalten, als weise sie eine `List<OrderItem>`-Eigenschaft auf. Sie hat jedoch einen einzelnen Accessor, die `AddOrderItem`-Methode zum Hinzufügen neuer Elemente zur Bestellung. Daher sind das Verhalten und die Daten miteinander verknüpft und innerhalb eines Anwendungscodes, der das Domänenmodell verwendet, konsistent.
+Bei Verwendung von Feldern anstelle von Eigenschaften wird die `OrderItem`-Entität so beibehalten, als würde sie eine `List<OrderItem>`-Eigenschaft enthalten. Sie hat jedoch einen einzelnen Accessor, die `AddOrderItem`-Methode zum Hinzufügen neuer Elemente zur Bestellung. Daher sind das Verhalten und die Daten miteinander verknüpft und innerhalb eines Anwendungscodes, der das Domänenmodell verwendet, konsistent.
 
 ## <a name="implement-custom-repositories-with-entity-framework-core"></a>Implementieren von benutzerdefinierten Repositorys mit Entity Framework Core
 
@@ -154,7 +154,7 @@ namespace Microsoft.eShopOnContainers.Services.Ordering.Infrastructure.Repositor
 }
 ```
 
-Beachten Sie, dass die IBuyerRepository-Schnittstelle von der Domänenmodellebene als Vertrag übernommen wird. Die Repository-Implementierung erfolgt jedoch auf der Persistenz- und Infrastrukturebene.
+Die `IBuyerRepository`-Schnittstelle wird von der Domänenmodellebene als Vertrag übernommen. Die Repository-Implementierung erfolgt jedoch auf der Persistenz- und Infrastrukturebene.
 
 Der EF-DbContext stammt mittels Abhängigkeitseinfügung aus dem Konstruktor. Aufgrund seiner Standardlebensdauer (`ServiceLifetime.Scoped`) im IoC-Container (die auch explizit mit `services.AddDbContext<>` festgelegt werden kann) wird er von mehreren Repositorys innerhalb desselben HTTP-Anforderungsbereichs verwendet.
 
@@ -168,11 +168,11 @@ Allerdings werden die tatsächlichen Abfragemethoden für das Abrufen von Daten,
 
 ### <a name="using-a-custom-repository-versus-using-ef-dbcontext-directly"></a>Verwenden eines benutzerdefinierten Repositorys im Vergleich zu einer direkten Verwendung von EF-DbContext
 
-Die DbContext-Klasse von Entity Framework basiert auf den Mustern Arbeitseinheit und Repository und kann direkt aus Ihrem Code verwendet werden, beispielsweise aus einem ASP.NET Core MVC-Controller. So können Sie einen möglichst einfachen Code erstellen, wie im Microservice CRUD-Katalog in eShopOnContainers. In Fällen, in denen Sie einen möglichst einfachen Code wünschen, sollten Sie – wie viele andere Entwickler auch – direkt die DbContext-Klasse verwenden.
+Die DbContext-Klasse von Entity Framework basiert auf den Mustern „Arbeitseinheit“ und „Repository“ und kann direkt über Ihren Code verwendet werden, beispielsweise über einen ASP.NET Core MVC-Controller. Die Muster „Arbeitseinheit“ und „Repository“ führen zu sehr einfachem Code wie im CRUD-Katalogmicroservice in eShopOnContainers. In Fällen, in denen Sie einen möglichst einfachen Code wünschen, sollten Sie – wie viele andere Entwickler auch – direkt die DbContext-Klasse verwenden.
 
-Das Implementieren benutzerdefinierter Repositorys bietet jedoch mehrere Vorteile, wenn komplexere Microservices oder Anwendungen umgesetzt werden. Die Muster Arbeitseinheit und Repository sollen die Infrastrukturpersistenzebene kapseln, damit sie von den Anwendungs- und Domänenmodellebenen entkoppelt wird. Die Implementierung dieser Muster kann eine Verwendung von Modell-Repositorys ermöglichen, die den Zugriff auf die Datenbank simulieren.
+Das Implementieren benutzerdefinierter Repositorys bietet jedoch mehrere Vorteile, wenn komplexere Microservices oder Anwendungen umgesetzt werden. Die Muster „Arbeitseinheit“ und „Repository“ sollen die Infrastrukturpersistenzebene kapseln, damit sie von den Anwendungs- und Domänenmodellschichten entkoppelt wird. Die Implementierung dieser Muster kann eine Verwendung von Modell-Repositorys ermöglichen, die den Zugriff auf die Datenbank simulieren.
 
-Abbildung 7-18 zeigt die Unterschiede zwischen einer Vorgehensweise ohne Repositorys (d.h. direkte Verwendung von EF-DbContext) im Vergleich zu einer Verwendung von Repositorys, die das Modellieren dieser Repositorys erleichtert.
+Abbildung 7-18 zeigt die Unterschiede zwischen einer Vorgehensweise ohne Repositorys (d. h. die direkte Verwendung von EF DbContext) im Vergleich zu einer Verwendung von Repositorys, die das Simulieren dieser Repositorys erleichtert.
 
 ![Diagramm, das die Komponenten und den Datenfluss in den beiden Repositorys zeigt.](./media/infrastructure-persistence-layer-implemenation-entity-framework-core/custom-repo-versus-db-context.png)
 
@@ -228,7 +228,7 @@ builder.RegisterType<OrderRepository>()
     .InstancePerLifetimeScope();
 ```
 
-Beachten Sie, dass eine Verwendung der Singleton-Lebensdauer für das Repository zu ernsthaften Parallelitätsproblemen führen könnte, wenn Ihr DbContext auf eine bereichsbezogene (InstancePerLifetimeScope) Lebensdauer festgelegt ist (die Standardlebensdauer für einen DbContext).
+Eine Verwendung der Singleton-Lebensdauer für das Repository kann zu ernsthaften Parallelitätsproblemen führen, wenn DbContext auf eine bereichsbezogene (InstancePerLifetimeScope) Lebensdauer festgelegt ist (die Standardlebensdauer für DbContext).
 
 ### <a name="additional-resources"></a>Zusätzliche Ressourcen
 
@@ -243,7 +243,7 @@ Beachten Sie, dass eine Verwendung der Singleton-Lebensdauer für das Repository
 
 ## <a name="table-mapping"></a>Tabellenzuordnung
 
-Bei der Tabellenzuordnung werden die Tabellendaten identifiziert, die aus der Datenbank abgerufen und in dieser gespeichert werden sollen. Sie haben bereits gesehen, wie Domänenentitäten (z.B. eine Produkt- oder Bestellungsdomäne) verwendet werden können, um ein zugehöriges Datenbankschema zu generieren. Bei der Entwicklung von EF spielte das Konzept der *Konventionen* eine wichtige Rolle. Konventionen behandeln Fragen wie „Wie wird der Name der Tabelle lauten?“ oder „Welche Eigenschaft hat der Primärschlüssel?“. Konventionen basieren üblicherweise auf konventionellen Namen. Beim Primärschlüssel handelt es sich z.B. in der Regel um eine auf ID endende Eigenschaft.
+Bei der Tabellenzuordnung werden die Tabellendaten identifiziert, die aus der Datenbank abgerufen und in dieser gespeichert werden sollen. Sie haben bereits gesehen, wie Domänenentitäten (z.B. eine Produkt- oder Bestellungsdomäne) verwendet werden können, um ein zugehöriges Datenbankschema zu generieren. Bei der Entwicklung von EF spielte das Konzept der *Konventionen* eine wichtige Rolle. Konventionen liefern Antworten auf Fragen wie „Wie wird der Name der Tabelle lauten?“ oder „Welche Eigenschaft hat der Primärschlüssel?“. Konventionen basieren in der Regel auf herkömmlichen Namen. Beispielsweise ist es üblich, dass es sich bei dem Primärschlüssel um eine Eigenschaft handelt, die auf `Id` endet.
 
 Gemäß der Konvention ist jede Entität so eingerichtet, dass sie einer Tabelle mit dem gleichen Namen wie die `DbSet<TEntity>`-Eigenschaft zugeordnet ist, die die Entität für den abgeleiteten Kontext verfügbar macht. Wenn kein `DbSet<TEntity>`-Wert für die betreffende Entität bereitgestellt wird, wird der Klassenname verwendet.
 
@@ -265,7 +265,7 @@ protected override void OnModelCreating(ModelBuilder modelBuilder)
 {
    // ...
    modelBuilder.ApplyConfiguration(new OrderEntityTypeConfiguration());
-   // Other entities’ configuration ...
+   // Other entities' configuration ...
 }
 
 // At OrderEntityTypeConfiguration.cs from eShopOnContainers
@@ -422,7 +422,7 @@ public abstract class BaseSpecification<T> : ISpecification<T>
 }
 ```
 
-Die folgende Spezifikation lädt eine einzelne Warenkorb-Entität entweder anhand der ID des Warenkorbs oder der ID des Käufers, zu dem der Warenkorb gehört. Sie wird die Artikelauflistung des Warenkorbs [vorzeitig laden](https://docs.microsoft.com/ef/core/querying/related-data).
+Die folgende Spezifikation lädt eine einzelne Warenkorbentität entweder anhand der ID des Warenkorbs oder der ID des Käufers, zu dem der Warenkorb gehört. Sie lädt die `Items`-Sammlung des Warenkorbs [vorzeitig](/ef/core/querying/related-data).
 
 ```csharp
 // SAMPLE QUERY SPECIFICATION IMPLEMENTATION
@@ -470,7 +470,7 @@ public IEnumerable<T> List(ISpecification<T> spec)
 
 Zusätzlich zum Kapseln der Filterlogik kann die Spezifikation die Form der zurückzugebenden Daten angeben, einschließlich der aufzufüllenden Eigenschaften.
 
-Obwohl davon abgeraten wird, `IQueryable`-Objekte aus einem Repository abzurufen, ist es in Ordnung, sie innerhalb des Repositorys zum Erstellen eines Resultsets zu verwenden. Sie können die Befolgung dieses Ansatzes oben bei der List-Methode sehen, die zwischengeschaltete `IQueryable`-Ausdrücke verwendet, um die Liste der in der Abfrage enthaltenen Elemente zu erstellen, bevor die Abfrage mit den Kriterien der Spezifikation in der letzten Zeile ausgeführt wird.
+Obwohl davon abgeraten wird, `IQueryable`-Objekte aus einem Repository zurückzugeben, ist es kein Problem, sie innerhalb des Repositorys zum Erstellen eines Resultsets zu verwenden. Sie können die Befolgung dieses Ansatzes oben bei der List-Methode sehen, die zwischengeschaltete `IQueryable`-Ausdrücke verwendet, um die Liste der in der Abfrage enthaltenen Elemente zu erstellen, bevor die Abfrage mit den Kriterien der Spezifikation in der letzten Zeile ausgeführt wird.
 
 ### <a name="additional-resources"></a>Zusätzliche Ressourcen
 
