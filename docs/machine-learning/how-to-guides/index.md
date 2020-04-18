@@ -2,12 +2,12 @@
 title: ML.NET-Schrittanleitungen
 description: Erfahren Sie, wie Sie bestimmte Aufgaben ausführen können, die Sie bei der Erstellung von benutzerdefinierten KI-Lösungen und Machine Learning und deren Integration in Ihre .NET-Anwendungen unterstützen.
 ms.date: 03/01/2019
-ms.openlocfilehash: 4ce2de77c35062aa19449e3ba6bb3d5abd003d60
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 25c5cb6247c202e3ef51d0ed25b3b213fdca7a56
+ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75715667"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81607531"
 ---
 # <a name="net-machine-learning-how-to-guides"></a>Schrittanleitungen für .NET Machine Learning
 
@@ -19,7 +19,7 @@ Der Abschnitt mit Schrittanleitungen im Leitfaden für ML.NET finden Sie schnell
 
 ### <a name="prepare-the-data"></a>Vorbereiten der Daten
 
-* [Vorverarbeiten von Trainingsdaten mit Normalisierungsfunktionen zur Nutzung in der Datenverarbeitung](normalizers-preprocess-data-ml-net.md)
+* [Vorverarbeiten von Trainingsdaten mit Normalisierungsfunktionen zur Nutzung in der Datenverarbeitung](prepare-data-ml-net.md)
 
 ## <a name="train-the-model"></a>Trainieren des Modells
 
