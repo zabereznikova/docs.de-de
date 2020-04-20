@@ -2,12 +2,12 @@
 title: Befehl „dotnet test“
 description: Der Befehl „dotnet test“ wird zum Ausführen von Unittests in einem bestimmten Projekt verwendet.
 ms.date: 02/27/2020
-ms.openlocfilehash: a11814f9fdc6326e681a09d7d2654b968014f318
-ms.sourcegitcommit: 2514f4e3655081dcfe1b22470c0c28500f952c42
+ms.openlocfilehash: f9df03cda01bdaf649394a58e96903e764193338
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79507307"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81463375"
 ---
 # <a name="dotnet-test"></a>dotnet test
 
@@ -21,14 +21,18 @@ ms.locfileid: "79507307"
 
 ```dotnetcli
 dotnet test [<PROJECT> | <SOLUTION>]
-    [-a|--test-adapter-path] [--blame] [-c|--configuration]
-    [--collect] [-d|--diag] [-f|--framework] [--filter]
-    [--interactive] [-l|--logger] [--no-build] [--nologo]
-    [--no-restore] [-o|--output] [-r|--results-directory]
-    [--runtime] [-s|--settings] [-t|--list-tests]
-    [-v|--verbosity] [[--] <RunSettings arguments>]
+    [-a|--test-adapter-path <PATH_TO_ADAPTER>] [--blame]
+    [-c|--configuration <CONFIGURATION>]
+    [--collect <DATA_COLLECTOR_FRIENDLY_NAME>]
+    [-d|--diag <PATH_TO_DIAGNOSTICS_FILE>] [-f|--framework <FRAMEWORK>]
+    [--filter <EXPRESSION>] [--interactive]
+    [-l|--logger <LOGGER_URI/FRIENDLY_NAME>] [--no-build]
+    [--nologo] [--no-restore] [-o|--output <OUTPUT_DIRECTORY>]
+    [-r|--results-directory <PATH>] [--runtime <RUNTIME_IDENTIFIER>]
+    [-s|--settings <SETTINGS_FILE>] [-t|--list-tests]
+    [-v|--verbosity <LEVEL>] [[--] <RunSettings arguments>]
 
-dotnet test [-h|--help]
+dotnet test -h|--help
 ```
 
 ## <a name="description"></a>Beschreibung
@@ -83,9 +87,9 @@ In Testprojekten wird der Testlauf mittels eines normalen `<PackageReference>`-E
 
   Ermöglicht dem Befehl, anzuhalten und auf Benutzereingaben oder Aktionen zu warten. Beispielsweise, um die Authentifizierung abzuschließen. Verfügbar seit .NET Core 3.0 SDK.
 
-- **`l|--logger <LoggerUri/FriendlyName>`**
+- **`l|--logger <LOGGER_URI/FRIENDLY_NAME>`**
 
-  Gibt eine Protokollierung für die Testergebnisse an.
+  Gibt eine Protokollierung für die Testergebnisse an. Im Gegensatz zu MSBuild akzeptiert der Befehl „dotnet test“ keine Abkürzungen: verwenden Sie `-l "console;verbosity=detailed"` anstelle von `-l "console;v=d"`.
 
 - **`--no-build`**
 
@@ -121,7 +125,7 @@ In Testprojekten wird der Testlauf mittels eines normalen `<PackageReference>`-E
 
 - **`-v|--verbosity <LEVEL>`**
 
-  Legt den Ausführlichkeitsgrad für den Befehl fest. Zulässige Werte sind `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` und `diag[nostic]`.
+  Legt den Ausführlichkeitsgrad für den Befehl fest. Zulässige Werte sind `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` und `diag[nostic]`. Der Standardwert ist `minimal`. Weitere Informationen finden Sie unter <xref:Microsoft.Build.Framework.LoggerVerbosity>.
 
 - `RunSettings`-Argumente
 
@@ -145,10 +149,16 @@ In Testprojekten wird der Testlauf mittels eines normalen `<PackageReference>`-E
   dotnet test ~/projects/test1/test1.csproj
   ```
 
-- Führen Sie die Tests im aktuellen Verzeichnis aus, und generieren Sie eine Testergebnisdatei im TRX-Format:
+- Mit dem folgenden Befehl führen Sie die Tests im aktuellen Verzeichnis aus und generieren eine Testergebnisdatei im TRX-Format:
 
   ```dotnetcli
   dotnet test --logger trx
+  ```
+
+- Mit dem folgenden Befehl führen Sie die Tests im aktuellen Verzeichnis aus und erstellen ein ausführliches Protokoll in der Konsole:
+
+  ```dotnetcli
+  dotnet test --logger "console;verbosity=detailed"
   ```
 
 ## <a name="filter-option-details"></a>Details zu Filteroptionen
@@ -192,3 +202,4 @@ Weitere Informationen und Beispiele zur Verwendung von selektiven Komponententes
 
 - [Frameworks und Ziele](../../standard/frameworks.md)
 - [.NET Core Runtime-ID (RID)-Katalog](../rid-catalog.md)
+- [Übergeben von runsettings-Argumenten über die Befehlszeile](https://github.com/Microsoft/vstest-docs/blob/master/docs/RunSettingsArguments.md)

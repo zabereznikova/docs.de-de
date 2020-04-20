@@ -13,12 +13,12 @@ helpviewer_keywords:
 - application development [.NET Framework], globalization
 - culture, globalization
 ms.assetid: 4e919934-6b19-42f2-b770-275a4fae87c9
-ms.openlocfilehash: fe03bbdd7d037a9f1fb4985b62b447c6ef9c6535
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c08f4309d7673d7e7fb1c6bd84307e4323411d9e
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79174783"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81242685"
 ---
 # <a name="globalization"></a>Globalisierung
 
@@ -336,7 +336,7 @@ Treffen Sie generell keine Annahmen über die Werte von bestimmten <xref:System.
 
 - .NET unterstützt Ersatzkulturen. Dadurch ist es möglich, eine neue benutzerdefinierte Kultur zu definieren, die bestehende Standardkulturen ergänzt oder vollständig ersetzt.
 
-- In Windows-Systemen kann der Benutzer kulturspezifische Einstellungen über die App **Region and Language** (Region und Sprache) in der Systemsteuerung anpassen. Wenn Sie ein <xref:System.Globalization.CultureInfo>-Objekt instanziieren, können Sie festlegen, ob es diese Benutzeranpassungen widergespiegelt, indem Sie den <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType>-Konstruktor aufrufen. In der Regel sollten Sie bei Endbenutzer-Apps die Benutzereinstellungen berücksichtigen, sodass der Benutzer die Daten in einem Format angezeigt bekommt, das dieser erwartet.
+- In Windows-Systemen kann der Benutzer kulturspezifische Einstellungen über die App **Region and Language** (Region und Sprache) in der Systemsteuerung anpassen. Wenn Sie ein <xref:System.Globalization.CultureInfo>-Objekt instanziieren, können Sie festlegen, ob es diese Benutzeranpassungen widergespiegelt, indem Sie den <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29>-Konstruktor aufrufen. In der Regel sollten Sie bei Endbenutzer-Apps die Benutzereinstellungen berücksichtigen, sodass der Benutzer die Daten in einem Format angezeigt bekommt, das dieser erwartet.
 
 ## <a name="see-also"></a>Siehe auch
 

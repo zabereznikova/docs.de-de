@@ -2,12 +2,12 @@
 title: Befehl „dotnet nuget disable source“
 description: Mit dem Befehl „dotnet nuget enable source“ wird eine vorhandene Quelle in Ihren NuGet-Konfigurationsdateien deaktiviert.
 ms.date: 03/20/2020
-ms.openlocfilehash: 5aa16c842bcddeead180fdeec3d9dcdda33f7ed9
-ms.sourcegitcommit: 07123a475af89b6da5bb6cc51ea40ab1e8a488f0
+ms.openlocfilehash: 54acb40b1944eaff347107e8f3439578ec8e0f3c
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80148477"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81463567"
 ---
 # <a name="dotnet-nuget-disable-source"></a>dotnet nuget disable source
 
@@ -20,8 +20,9 @@ ms.locfileid: "80148477"
 ## <a name="synopsis"></a>Übersicht
 
 ```dotnetcli
-dotnet nuget disable source <NAME> [--configfile]
-dotnet nuget disable source [-h|--help]
+dotnet nuget disable source <NAME> [--configfile <FILE>]
+
+dotnet nuget disable source -h|--help
 ```
 
 ## <a name="description"></a>Beschreibung
@@ -36,7 +37,7 @@ Mit dem Befehl `dotnet nuget disable source` wird eine vorhandene Quelle in Ihre
 
 ## <a name="options"></a>Optionen
 
-- **`--configfile`**
+- **`--configfile <FILE>`**
 
   Die NuGet-Konfigurationsdatei. Sofern angegeben, werden nur die Einstellungen aus dieser Datei verwendet. Falls nicht angegeben, wird die Hierarchie der Konfigurationsdateien aus dem aktuellen Verzeichnis verwendet. Weitere Informationen finden Sie unter [Gängige NuGet-Konfigurationen](https://docs.microsoft.com/nuget/consume-packages/configuring-nuget-behavior).
 

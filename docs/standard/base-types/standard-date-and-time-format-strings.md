@@ -14,12 +14,12 @@ helpviewer_keywords:
 - formatting [.NET Framework], time
 - date and time strings
 ms.assetid: bb79761a-ca08-44ee-b142-b06b3e2fc22b
-ms.openlocfilehash: 5a3ba2838458d6e6833035186dfd69b34c780317
-ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
+ms.openlocfilehash: 5db29046bfe67c530fe3a613c126c3841e6402e1
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80248133"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81242750"
 ---
 # <a name="standard-date-and-time-format-strings"></a>Standardformatzeichenfolgen für Datum und Uhrzeit
 
@@ -440,7 +440,7 @@ Im folgenden Beispiel wird der y-Formatbezeichner verwendet, um einen Datums- un
 
 Die Einstellungen der **Regions- und Sprachoptionen** in der Systemsteuerung beeinflussen die durch einen Formatierungsvorgang erstellte Ergebniszeichenfolge. Mithilfe dieser Einstellungen wird das <xref:System.Globalization.DateTimeFormatInfo>-Objekt initialisiert, das der aktuellen Threadkultur zugeordnet ist. Sie stellt Werte zur Steuerung der Formatierung bereit. Auf Computern mit anderen Einstellungen werden andere Ergebniszeichenfolgen generiert.
 
-Wenn der <xref:System.Globalization.CultureInfo.%23ctor%28System.String%29?displayProperty=nameWithType> -Constructor verwendet wird, um ein neues <xref:System.Globalization.CultureInfo> -Objekt zu instanziieren, das dieselbe Kultur repräsentiert wie die aktuelle Systemkultur, werden darüber hinaus alle Anpassungen, die über die Einstellung **Regions- und Sprachoptionen** in der Systemsteuerung eingerichtet werden, auf das neue <xref:System.Globalization.CultureInfo> -Objekt angewendet. Sie können den <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType> -Konstruktor verwenden, um ein <xref:System.Globalization.CultureInfo> -Objekt zu erstellen, das die Anpassungen eines Systems nicht wiedergibt.
+Wenn der <xref:System.Globalization.CultureInfo.%23ctor%28System.String%29> -Constructor verwendet wird, um ein neues <xref:System.Globalization.CultureInfo> -Objekt zu instanziieren, das dieselbe Kultur repräsentiert wie die aktuelle Systemkultur, werden darüber hinaus alle Anpassungen, die über die Einstellung **Regions- und Sprachoptionen** in der Systemsteuerung eingerichtet werden, auf das neue <xref:System.Globalization.CultureInfo> -Objekt angewendet. Sie können den <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29> -Konstruktor verwenden, um ein <xref:System.Globalization.CultureInfo> -Objekt zu erstellen, das die Anpassungen eines Systems nicht wiedergibt.
 
 ### <a name="datetimeformatinfo-properties"></a>DateTimeFormatInfo-Eigenschaften
 

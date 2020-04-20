@@ -12,12 +12,12 @@ helpviewer_keywords:
 - inline option constructs
 - options parameter
 ms.assetid: c82dc689-7e82-4767-a18d-cd24ce5f05e9
-ms.openlocfilehash: a53d7517485d2a0b02b6f11928f478a7da3f9503
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bf352d6494a823d4f7b24eb2876d9bffa5877b2b
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73972113"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81242776"
 ---
 # <a name="regular-expression-options"></a>Optionen für reguläre Ausdrücke
 
@@ -40,7 +40,7 @@ Standardmäßig wird beim Vergleich einer Eingabezeichenfolge mit Literalzeichen
 
 Sie können Optionen für reguläre Ausdrücke mit einer von drei Methoden angeben:
 
-- Im `options`-Parameter eines <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType>-Klassenkonstruktors oder einer statischen (`Shared` in Visual Basic) Mustervergleichsmethode, z. B. <xref:System.Text.RegularExpressions.Regex.%23ctor%28System.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType> oder <xref:System.Text.RegularExpressions.Regex.Match%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType>. Der `options`-Parameter ist eine bitweise OR-Kombination von aufgezählten <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType>-Werten.
+- Im `options`-Parameter eines <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType>-Klassenkonstruktors oder einer statischen (`Shared` in Visual Basic) Mustervergleichsmethode, z. B. <xref:System.Text.RegularExpressions.Regex.%23ctor%28System.String%2CSystem.Text.RegularExpressions.RegexOptions%29> oder <xref:System.Text.RegularExpressions.Regex.Match%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType>. Der `options`-Parameter ist eine bitweise OR-Kombination von aufgezählten <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType>-Werten.
 
   Wenn Optionen mit dem `options`-Parameter eines Klassenkonstruktors an eine <xref:System.Text.RegularExpressions.Regex>-Instanz übergeben werden, werden die Optionen der <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType>-Eigenschaft zugewiesen. Die <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType>-Eigenschaft gibt jedoch nicht die Inlineoptionen des eigentlichen Musters des regulären Ausdrucks wieder.
 

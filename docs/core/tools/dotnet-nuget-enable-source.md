@@ -2,12 +2,12 @@
 title: Befehl „dotnet nuget enable source“
 description: Mit dem Befehl „dotnet nuget enable source“ wird eine vorhandene Quelle in Ihren NuGet-Konfigurationsdateien aktiviert.
 ms.date: 03/20/2020
-ms.openlocfilehash: 1f18e7db6a6c8631bb432676dd97dabfad5b0ab8
-ms.sourcegitcommit: 07123a475af89b6da5bb6cc51ea40ab1e8a488f0
+ms.openlocfilehash: 38fb5917361bd7952fef9c31ed897fb81f005155
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80148483"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81463561"
 ---
 # <a name="dotnet-nuget-enable-source"></a>dotnet nuget enable source
 
@@ -20,8 +20,9 @@ ms.locfileid: "80148483"
 ## <a name="synopsis"></a>Übersicht
 
 ```dotnetcli
-dotnet nuget enable source <NAME> [--configfile]
-dotnet nuget enable source [-h|--help]
+dotnet nuget enable source <NAME> [--configfile <FILE>]
+
+dotnet nuget enable source -h|--help
 ```
 
 ## <a name="description"></a>Beschreibung
@@ -36,7 +37,7 @@ Mit dem Befehl `dotnet nuget enable source` wird eine vorhandene Quelle in Ihren
 
 ## <a name="options"></a>Optionen
 
-- **`--configfile`**
+- **`--configfile <FILE>`**
 
   Die NuGet-Konfigurationsdatei. Sofern angegeben, werden nur die Einstellungen aus dieser Datei verwendet. Falls nicht angegeben, wird die Hierarchie der Konfigurationsdateien aus dem aktuellen Verzeichnis verwendet. Weitere Informationen finden Sie unter [Gängige NuGet-Konfigurationen](https://docs.microsoft.com/nuget/consume-packages/configuring-nuget-behavior).
 

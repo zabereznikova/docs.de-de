@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Help, Visual Basic Web sites
 - Visual Basic, videos
 ms.assetid: 9bfb42e9-327f-439b-935e-8884f6aca80c
-ms.openlocfilehash: 9e55910573b3aa3aecf9082f1b77659a45f883a1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 560ef4f99ca451c3b48f23988519313eed26dcb3
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73196979"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81243205"
 ---
 # <a name="additional-resources"></a>Zusätzliche Ressourcen
 
@@ -32,7 +32,7 @@ Die folgenden Websites bieten Tipps und Hinweise und helfen Ihnen möglicherweis
 
 |URL|Beschreibung|
 |----------|----------------|
-|[Visual Basic– Dokumentationsbeispiele](https://github.com/dotnet/samples/tree/master/snippets/visualbasic)|Enthält die Beispiele, die in der Visual Basic- und .NET-Dokumentation verwendet werden.|
+|[Visual Basic– Dokumentationsbeispiele](https://github.com/dotnet/docs/tree/master/samples/snippets/visualbasic)|Enthält die Beispiele, die in der Visual Basic- und .NET-Dokumentation verwendet werden.|
 
 ### <a name="forums"></a>Foren
 

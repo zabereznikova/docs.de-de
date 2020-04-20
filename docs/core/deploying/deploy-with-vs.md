@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet
-ms.openlocfilehash: 11a322278ce3ff38964fe2fa389e0b4a58897ec4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f2299ac807c845dab482306cc4c710560bb7f1e7
+ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77449022"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81607861"
 ---
 # <a name="deploy-net-core-apps-with-visual-studio"></a>Bereitstellen von .NET Core-Apps mit Visual Studio
 
@@ -75,9 +75,9 @@ Die Bereitstellung einer Framework-abhängigen Bereitstellung mit mindestens ein
 
 1. Wenn `Newtonsoft.Json` bereits auf Ihrem System installiert ist, fügen Sie es Ihrem Projekt hinzu, indem Sie Ihr Projekt im rechten Bereich der Registerkarte **Pakete für Projektmappe verwalten** auswählen.
 
-Eine frameworkabhängige Bereitstellung mit Drittanbieterabhängigkeiten ist nur so portierbar wie ihre Drittanbieterabhängigkeiten. Falls eine Drittanbieter-Bibliothek nur macOS unterstützen sollte, so wird die Anwendung nicht auf Windows-Systeme übertragbar sein. Dies kann geschehen, wenn die Drittanbieter-Abhängigkeit selbst vom nativen Code abhängt. Ein gutes Beispiel dafür ist der [Kestrel-Server](https://docs.microsoft.com/aspnet/core/fundamentals/servers/kestrel), der eine native Abhängigkeit unter [libuv](https://github.com/libuv/libuv) erfordert. Wenn bei dieser Art von Drittanbieter-Abhängigkeit eine FDD für eine Anwendung erstellt wird, enthält die veröffentlichte Ausgabe einen Ordner für jede [Runtime-ID (RID)](../rid-catalog.md), die die native Abhängigkeit unterstützt (und im NuGet-Paket vorhanden ist).
+Eine frameworkabhängige Bereitstellung mit Drittanbieterabhängigkeiten ist nur so portierbar wie ihre Drittanbieterabhängigkeiten. Falls eine Drittanbieter-Bibliothek nur macOS unterstützen sollte, so wird die Anwendung nicht auf Windows-Systeme übertragbar sein. Dies kann geschehen, wenn die Drittanbieter-Abhängigkeit selbst vom nativen Code abhängt. Ein gutes Beispiel dafür ist der [Kestrel-Server](/aspnet/core/fundamentals/servers/kestrel), der eine native Abhängigkeit unter [libuv](https://github.com/libuv/libuv) erfordert. Wenn bei dieser Art von Drittanbieter-Abhängigkeit eine FDD für eine Anwendung erstellt wird, enthält die veröffentlichte Ausgabe einen Ordner für jede [Runtime-ID (RID)](../rid-catalog.md), die die native Abhängigkeit unterstützt (und im NuGet-Paket vorhanden ist).
 
-## <a name="simpleSelf"></a> Eigenständige Bereitstellung mit Drittanbieterabhängigkeiten
+## <a name="self-contained-deployment-without-third-party-dependencies"></a><a name="simpleSelf"></a> Eigenständige Bereitstellung mit Drittanbieterabhängigkeiten
 
 Das Bereitstellen einer eigenständigen Bereitstellung ohne Abhängigkeiten von Drittanbietern umfasst das Erstellen des Projekts, das Ändern der *CSPROJ*-Datei sowie das Erstellen, Testen und Veröffentlichen der Anwendung. Ein einfaches, in C# geschriebenes Beispiel veranschaulicht den Prozess. Zunächst erstellen, codieren und testen Sie Ihr Projekt wie eine Framework-abhängige Bereitstellung:
 

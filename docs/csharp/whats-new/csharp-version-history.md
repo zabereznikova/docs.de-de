@@ -2,13 +2,13 @@
 title: 'Die Geschichte von C#: Leitfaden für C#'
 description: Wie sah die Sprache in ihren ersten Versionen aus und wie hat sie sich seitdem verändert?
 author: erikdietrich
-ms.date: 09/20/2017
-ms.openlocfilehash: 9114395a5c6cfd8df5da18024921c35828947e0b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.date: 04/08/2020
+ms.openlocfilehash: f321b9c742fed6fb1efaf8fbb1914c203dd6391b
+ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79398334"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81389110"
 ---
 # <a name="the-history-of-c"></a>Die Geschichte von C\#
 
@@ -120,7 +120,7 @@ Die dynamische Bindung kann zu Fehlern führen, bietet aber gleichzeitig eine ho
 In der C#-Version 5.0, die mit Visual Studio 2012 veröffentlicht wurde, lag der Fokus auf ganz bestimmten Sprachaspekten. Nahezu die gesamte Arbeit für diese Version war einem weiteren bahnbrechenden Sprachkonzept gewidmet: den Modellen `async` und `await` für die asynchrone Programmierung.  Hier ist die Liste der wichtigsten Features:
 
 - [Asynchrone Member](../async.md)
-- [Attribute „CallerInfo“](../programming-guide/concepts/caller-information.md)
+- [Attribute „CallerInfo“](../language-reference/attributes/caller-information.md)
 
 ### <a name="see-also"></a>Siehe auch
 
@@ -154,7 +154,7 @@ Neben dieser Version wurde noch etwas anderes gemacht, auch wenn es sich nicht u
 
 ## <a name="c-version-70"></a>C# Version 7.0
 
-Die neueste Hauptversion ist C# 7.0 und wurde mit Visual Studio 2017 veröffentlicht. Diese Version bietet einige evolutionäre und tolle Aspekte im Stil von C# 6.0, aber ohne den Compiler als Dienst. Hier sind einige der neuen Features:
+Die C#-Version 7.0 wurde mit Visual Studio 2017 veröffentlicht. Diese Version bietet einige evolutionäre und tolle Aspekte im Stil von C# 6.0, aber ohne den Compiler als Dienst. Hier sind einige der neuen Features:
 
 - [Out-Variablen](./csharp-7.md#out-variables)
 - [Tupel und Dekonstruktionen](./csharp-7.md#tuples)
@@ -172,5 +172,86 @@ Weitere Features umfassten:
 Alle diese Features bieten tolle neue Möglichkeiten für Entwickler und erlauben es, einen noch saubereren Code als je zuvor zu schreiben. Ein Highlight ist das Verdichten der Variablendeklaration zur Verwendung mit dem `out`-Schlüsselwort und indem die Rückgabe mehrerer Werte über Tupel erlaubt wird.
 
 C# kommt auf einem immer breiteren Feld zum Einsatz. .NET Core zielt nun auf alle Betriebssysteme ab und konzentriert sich stark auf die Cloud und auf Portabilität.  Diese neuen Funktionen nehmen zusätzlich zum Entwickeln neuer Features sicherlich viel Arbeit und Zeit in Anspruch.
+
+## <a name="c-version-71"></a>C#-Version 7.1
+
+Die *Punktreleases* von C# wurden mit C# 7.1 eingeführt. Mit dieser Version wurde das Konfigurationselement zur [Auswahl der Sprachversion](../language-reference/configure-language-version.md), drei neue Sprachfeatures und neues Compilerverhalten hinzugefügt.
+
+Die neuen Sprachfeatures in diesem Release umfassen:
+
+- [`async` `Main`-Methode](./csharp-7-1.md#async-main)
+  - Der Einstiegspunkt für eine Anwendung kann über den Modifizierer `async` verfügen.
+- [`default`Literale Ausdrücke](./csharp-7-1.md#default-literal-expressions)
+  - Sie können literale Standardausdrücke in Standardwertausdrücken verwenden, wenn der Zieltyp abgeleitet werden kann.
+- [Abgeleitete Tupelelementnamen](./csharp-7-1.md#inferred-tuple-element-names)
+  - Die Namen von Tupelelementen können in den meisten Fällen von der Initialisierung eines Tupels abgeleitet werden.
+- [Musterabgleich für generische Typparameter](./csharp-7-1.md#pattern-matching-on-generic-type-parameters)
+  - Sie können Musterabgleichsausdrücke für Variablen verwenden, deren Typ ein generischer Typparameter ist.
+
+Außerdem verfügt der Compiler über die zwei Optionen `-refout` und `-refonly`, mit denen die [Generierung der Referenzassembly](./csharp-7-1.md#reference-assembly-generation) gesteuert wird.
+
+## <a name="c-version-72"></a>C#-Version 7.2
+
+Mit C# 7.2 wurden einige kleine Sprachfeatures hinzugefügt:
+
+- [Techniken zum Schreiben von sicherem, effizientem Code](./csharp-7-2.md#safe-efficient-code-enhancements)
+  - Eine Kombination aus Verbesserungen der Syntax, die das Arbeiten mit Werttypen mithilfe von Verweissemantik ermöglichen.
+- [Nicht schließende benannte Argumente](./csharp-7-2.md#non-trailing-named-arguments)
+  - Positionelle Argumente können auf benannte Argumente folgen.
+- [Führende Unterstriche in numerischen Literalen](./csharp-7-2.md#leading-underscores-in-numeric-literals)
+  - Numerische Literale dürfen jetzt führende Unterstriche vor aufgeführten Stellen aufweisen.
+- [`private protected`-Zugriffsmodifizierer](./csharp-7-2.md#private-protected-access-modifier)
+  - Der `private protected`-Zugriffsmodifizierer ermöglicht den Zugriff für abgeleitete Klassen innerhalb der gleichen Assembly.
+- [Bedingte`ref` Ausdrücke](./csharp-7-2.md#conditional-ref-expressions)
+  - Das Ergebnis eines bedingten Ausdrucks (`?:`) kann jetzt ein Verweis sein.
+
+## <a name="c-version-73"></a>C#-Version 7.3
+
+Es gibt zwei Hauptdesigns in der C# 7.3-Version. Ein Design bietet Features, die ermöglichen, dass sicherer Code so leistungsfähig ist wie unsicherer Code. Das zweite Design bietet inkrementelle Verbesserungen vorhandener Funktionen. Darüber hinaus wurden in diesem Release neue Compileroptionen hinzugefügt.
+
+Die folgenden neuen Features unterstützen das Design der besseren Leistung für sicheren Code:
+
+- [Sie können ohne Anpinnen auf fixierte Felder zugreifen.](csharp-7-3.md#indexing-fixed-fields-does-not-require-pinning)
+- [Sie können lokale `ref`-Variablen neu zuweisen.](csharp-7-3.md#ref-local-variables-may-be-reassigned)
+- [Sie können Initialisierer für `stackalloc`-Arrays verwenden.](csharp-7-3.md#stackalloc-arrays-support-initializers)
+- [Sie können `fixed`-Anweisungen mit jedem Typ verwenden, der ein Muster unterstützt.](csharp-7-3.md#more-types-support-the-fixed-statement)
+- [Sie können zusätzliche generische Einschränkungen verwenden.](csharp-7-3.md#enhanced-generic-constraints)
+
+Die folgenden Verbesserungen wurden an vorhandenen Features vorgenommen:
+
+- [Sie können `==` und `!=` mit Tupeltypen testen.](csharp-7-3.md#tuples-support--and-)
+- [Sie können Ausdrucksvariablen an mehreren Standorten verwenden.](csharp-7-3.md#extend-expression-variables-in-initializers)
+- [Sie können Attribute dem Unterstützungsfeld automatisch implementierter Eigenschaften anfügen.](csharp-7-3.md#attach-attributes-to-the-backing-fields-for-auto-implemented-properties)
+- [Die Auflösung der Methode, wenn Argumente um `in` unterscheiden, wurde verbessert.](csharp-7-3.md#in-method-overload-resolution-tiebreaker)
+- [Die Auflösung von Überladungen weist jetzt weniger mehrdeutige Fälle auf.](csharp-7-3.md#improved-overload-candidates)
+
+Die neuen Compileroptionen lauten:
+
+- [`-publicsign` zum Ermöglichen des Signierens von Assemblys durch Open-Source-Software.](csharp-7-3.md#public-or-open-source-signing)
+- [`-pathmap` zum Bereitstellen einer Zuordnung für Quellverzeichnisse.](csharp-7-3.md#pathmap)
+
+## <a name="c-version-80"></a>C#-Version 8.0
+
+C# 8.0 ist das erste Hauptrelease von C#, das speziell auf .NET Core ausgerichtet ist. Einige Features nutzen neue CLR-Funktionen, während andere Bibliothekstypen nutzen, die nur in .NET Core hinzugefügt wurden. C# 8.0 fügt der Sprache C# die folgenden Features und Verbesserungen hinzu:
+
+- [Readonly-Member](./csharp-8.md#readonly-members)
+- [Standardschnittstellenmethoden](./csharp-8.md#default-interface-methods)
+- [Verbesserungen am Musterabgleich](./csharp-8.md#more-patterns-in-more-places):
+  - [switch-Ausdrücke](./csharp-8.md#switch-expressions)
+  - [Eigenschaftsmuster](./csharp-8.md#property-patterns)
+  - [Tupelmuster](./csharp-8.md#tuple-patterns)
+  - [Positionsmuster](./csharp-8.md#positional-patterns)
+- [using-Deklarationen](./csharp-8.md#using-declarations)
+- [Statische lokale Funktionen](./csharp-8.md#static-local-functions)
+- [Verwerfbare Referenzstrukturen](./csharp-8.md#disposable-ref-structs)
+- [Nullwerte zulassende Verweistypen](../language-reference/builtin-types/nullable-reference-types.md)
+- [Asynchrone Streams](./csharp-8.md#asynchronous-streams)
+- [Indizes und Bereiche](./csharp-8.md#indices-and-ranges)
+- [NULL-Coalescing-Zuweisung](./csharp-8.md#null-coalescing-assignment)
+- [Nicht verwaltete konstruierte Typen](./csharp-8.md#unmanaged-constructed-types)
+- [Stackalloc in geschachtelten Ausdrücken](./csharp-8.md#stackalloc-in-nested-expressions)
+- [Erweiterung von interpolierten ausführlichen Zeichenfolgen](./csharp-8.md#enhancement-of-interpolated-verbatim-strings)
+
+Standardschnittstellenmember erfordern Verbesserungen in der CLR (Common Language Runtime). Diese Features wurden in der CLR für .NET Core 3.0 hinzugefügt. Bereiche, Indizes und asynchrone Datenströme erfordern neue Typen in den .NET Core 3.0-Bibliotheken. Nullable-Verweistypen, die im Compiler implementiert sind, sind weitaus nützlicher, wenn Bibliotheken mit Anmerkungen versehen sind, um semantische Informationen zum NULL-Status von Argumenten und Rückgabewerten anzugeben. Diese Anmerkungen werden in den .NET Core-Bibliotheken hinzugefügt.
 
 _Dieser Artikel wurde_ [_ursprünglich auf dem NDepend-Blog veröffentlicht_](https://blog.ndepend.com/c-versions-look-language-history/) _und uns freundlicherweise von Erik Dietrich und Patrick Smacchia zur Verfügung gestellt._

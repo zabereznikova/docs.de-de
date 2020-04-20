@@ -16,12 +16,12 @@ helpviewer_keywords:
 - formatting numbers [.NET Framework]
 - format specifiers, custom numeric format strings
 ms.assetid: 6f74fd32-6c6b-48ed-8241-3c2b86dea5f4
-ms.openlocfilehash: 1eb9c3c189d7bba3a12fdcd0c3d600a66bf819ca
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5961cce4601a89b34708b7090207edfed63b5b08
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75348306"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81242984"
 ---
 # <a name="custom-numeric-format-strings"></a>Benutzerdefinierte Zahlenformatzeichenfolgen
 
@@ -265,7 +265,7 @@ Wenn der Wert eines <xref:System.Single> -Gleitkommatyps oder eines <xref:System
 
 Die Einstellungen der **Regions- und Sprachoptionen** in der Systemsteuerung beeinflussen die durch einen Formatierungsvorgang erstellte Ergebniszeichenfolge. Mithilfe dieser Einstellungen wird das <xref:System.Globalization.NumberFormatInfo> -Objekt initialisiert, das der aktuellen Threadkultur zugeordnet ist. Diese wiederum stellt die Werte zur Steuerung der Formatierung bereit. Auf Computern mit anderen Einstellungen werden andere Ergebniszeichenfolgen generiert.
 
-Wenn Sie den <xref:System.Globalization.CultureInfo.%23ctor%28System.String%29?displayProperty=nameWithType>-Konstruktor verwenden, um ein neues <xref:System.Globalization.CultureInfo>-Objekt zu instanziieren, das dieselbe Kultur repräsentiert wie die aktuelle Systemkultur, werden darüber hinaus alle Anpassungen, die über die Einstellung **Regions- und Sprachoptionen** in der Systemsteuerung eingerichtet werden, auf das neue <xref:System.Globalization.CultureInfo>-Objekt angewendet. Sie können den <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType> -Konstruktor verwenden, um ein <xref:System.Globalization.CultureInfo> -Objekt zu erstellen, das die Anpassungen eines Systems nicht wiedergibt.
+Wenn Sie den <xref:System.Globalization.CultureInfo.%23ctor%28System.String%29>-Konstruktor verwenden, um ein neues <xref:System.Globalization.CultureInfo>-Objekt zu instanziieren, das dieselbe Kultur repräsentiert wie die aktuelle Systemkultur, werden darüber hinaus alle Anpassungen, die über die Einstellung **Regions- und Sprachoptionen** in der Systemsteuerung eingerichtet werden, auf das neue <xref:System.Globalization.CultureInfo>-Objekt angewendet. Sie können den <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29> -Konstruktor verwenden, um ein <xref:System.Globalization.CultureInfo> -Objekt zu erstellen, das die Anpassungen eines Systems nicht wiedergibt.
 
 ### <a name="rounding-and-fixed-point-format-strings"></a>Rundung bei Formatzeichenfolgen mit Festkomma
 

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - encoding, choosing
 - encoding, fallback strategy
 ms.assetid: bf6d9823-4c2d-48af-b280-919c5af66ae9
-ms.openlocfilehash: 063cac1de6634125d7dabad9d627bceff877e567
-ms.sourcegitcommit: 34dc3c0d0d0a1cc418abff259d9daa8078d00b81
+ms.openlocfilehash: 1a294a577d10b3e621871b168344f2b0610693dd
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/19/2020
-ms.locfileid: "79546736"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81242737"
 ---
 # <a name="how-to-use-character-encoding-classes-in-net"></a>Verwendung von Zeichencodierungsklassen in .NET
 
@@ -37,7 +37,7 @@ Alle Zeichencodierungsklassen in .NET erben von der abstrakten <xref:System.Text
 
 - Rufen Sie den Klassenkonstruktor der Codierung auf. Objekte für ASCII-, UTF-7-, UTF-8-, UTF-16- und UTF-32-Codierungen können auf diese Weise instanziiert werden. Standardmäßig verwendet jedes Objekt den Ersatzfallback zur Behandlung von Zeichenfolgen, die nicht codiert werden können, und von Bytes, die nicht decodiert werden können. Sie können aber angeben, dass stattdessen eine Ausnahme ausgelöst werden soll. Weitere Informationen finden Sie in [Replacement Fallback](../../../docs/standard/base-types/character-encoding.md#Replacement) und [Exception Fallback](../../../docs/standard/base-types/character-encoding.md#Exception).
 
-- Rufen Sie den <xref:System.Text.Encoding.%23ctor%28System.Int32%29?displayProperty=nameWithType> -Konstruktor auf, und übergeben Sie eine ganze Zahl, die die Codierung darstellt. Standardcodierungsobjekte verwenden den Ersatzfallback, und Codepage- und DBCS (Doppelbyte-Zeichensatz)-Codierungsobjekte verwenden den Fallback mit ähnlichen Zeichen zur Behandlung von Zeichenfolgen, die nicht codiert werden können, und von Bytes, die nicht decodiert werden können. Weitere Informationen finden Sie in [Best-Fit Fallback](../../../docs/standard/base-types/character-encoding.md#BestFit).
+- Rufen Sie den <xref:System.Text.Encoding.%23ctor%28System.Int32%29> -Konstruktor auf, und übergeben Sie eine ganze Zahl, die die Codierung darstellt. Standardcodierungsobjekte verwenden den Ersatzfallback, und Codepage- und DBCS (Doppelbyte-Zeichensatz)-Codierungsobjekte verwenden den Fallback mit ähnlichen Zeichen zur Behandlung von Zeichenfolgen, die nicht codiert werden können, und von Bytes, die nicht decodiert werden können. Weitere Informationen finden Sie in [Best-Fit Fallback](../../../docs/standard/base-types/character-encoding.md#BestFit).
 
 - Rufen Sie die <xref:System.Text.Encoding.GetEncoding%2A?displayProperty=nameWithType>-Methode auf, die jede in .NET verfügbare Standard-, Codepage- oder DBCS-Codierung zurückgibt. Mithilfe von Überladungen können Sie sowohl für den Encoder als auch den Decoder ein Fallbackobjekt angeben.
 

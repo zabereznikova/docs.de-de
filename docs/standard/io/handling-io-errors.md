@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 51eb0e758f1ae8fb41c842ef9b32a9f8928af9ac
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c592039b3b12eedcfceda45c2f54403a8e04b5d5
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73120741"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81242672"
 ---
 # <a name="handling-io-errors-in-net"></a>Behandeln von E/A-Fehlern in .NET
 
@@ -39,7 +39,7 @@ Da das Dateisystem eine Betriebssystemressource ist, umschließen E/A-Methoden s
 
 Beispielsweise wird im Windows-Betriebssystem ein Methodenaufruf, der den Fehlercode `ERROR_FILE_NOT_FOUND` (oder 0x02) zurückgibt, einer <xref:System.IO.FileNotFoundException> zugeordnet, und der Fehlercode `ERROR_PATH_NOT_FOUND` (oder 0x03) wird einer <xref:System.IO.DirectoryNotFoundException> zugeordnet.
 
-Die genauen Umstände, unter denen das Betriebssystem bestimmte Fehlercodes zurückgibt, sind aber häufig undokumentiert oder schlecht dokumentiert. Daher können unerwartete Ausnahmen auftreten. Wenn Sie beispielsweise mit einem Verzeichnis anstelle einer Datei arbeiten, könnten Sie annehmen, dass die Angabe eines falschen Verzeichnispfads für den <xref:System.IO.DirectoryInfo.%23ctor%2A?displayProperty=nameWithType>-Konstruktor eine <xref:System.IO.DirectoryNotFoundException> auslöst. Es kann aber ebenso gut eine <xref:System.IO.FileNotFoundException> auslösen.
+Die genauen Umstände, unter denen das Betriebssystem bestimmte Fehlercodes zurückgibt, sind aber häufig undokumentiert oder schlecht dokumentiert. Daher können unerwartete Ausnahmen auftreten. Wenn Sie beispielsweise mit einem Verzeichnis anstelle einer Datei arbeiten, könnten Sie annehmen, dass die Angabe eines falschen Verzeichnispfads für den <xref:System.IO.DirectoryInfo.%23ctor%2A>-Konstruktor eine <xref:System.IO.DirectoryNotFoundException> auslöst. Es kann aber ebenso gut eine <xref:System.IO.FileNotFoundException> auslösen.
 
 ## <a name="exception-handling-in-io-operations"></a>Ausnahmebehandlung in E/A-Vorgängen
 

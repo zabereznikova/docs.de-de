@@ -14,12 +14,12 @@ helpviewer_keywords:
 - formatting [.NET Framework], time
 - date and time strings
 ms.assetid: 98b374e3-0cc2-4c78-ab44-efb671d71984
-ms.openlocfilehash: b33366922677b26f8fe99454206cacd5bb124f32
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 32b3c9de708d22ba4150c5f01ef79d74d5824e27
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78159272"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81242997"
 ---
 # <a name="custom-date-and-time-format-strings"></a>Custom date and time format strings (Benutzerdefinierte Formatzeichenfolgen für Datum und Uhrzeit)
 
@@ -97,7 +97,7 @@ Die folgende Tabelle beschreibt die benutzerdefinierten Formatbezeichner für Da
 
 In den folgenden Abschnitten finden Sie weitere Informationen zu den einzelnen benutzerdefinierten Formatbezeichnern für Datum- und Uhrzeit. Sofern nicht anders angegeben, erzeugen die einzelnen Bezeichner eine identische Zeichenfolgendarstellung, unabhängig davon, ob sie mit einem <xref:System.DateTime>-Wert oder einem <xref:System.DateTimeOffset>-Wert verwendet wird.
 
-## <a name="dSpecifier"></a> Der benutzerdefinierte Formatbezeichner „d“
+## <a name="the-d-custom-format-specifier"></a><a name="dSpecifier"></a> Der benutzerdefinierte Formatbezeichner „d“
 
 Der benutzerdefinierte Formatbezeichner "d" stellt den Tag des Monats als Zahl zwischen 1 und 31 dar. Einstellige Tage werden ohne führende Null formatiert.
 
@@ -110,7 +110,7 @@ Das folgende Beispiel schließt den benutzerdefinierten Formatbezeichner "d" in 
 
 [Zurück zur Tabelle](#table)
 
-## <a name="ddSpecifier"></a> Der benutzerdefinierte Formatbezeichner „dd“
+## <a name="the-dd-custom-format-specifier"></a><a name="ddSpecifier"></a> Der benutzerdefinierte Formatbezeichner „dd“
 
 Die benutzerdefinierte Formatzeichenfolge "dd" stellt den Tag des Monats als Zahl zwischen 01 und 31 dar. Einstellige Tage werden mit einer führenden Null formatiert.
 
@@ -121,7 +121,7 @@ Das folgende Beispiel schließt den benutzerdefinierten Formatbezeichner "dd" in
 
 [Zurück zur Tabelle](#table)
 
-## <a name="dddSpecifier"></a> Der benutzerdefinierte Formatbezeichner „ddd“
+## <a name="the-ddd-custom-format-specifier"></a><a name="dddSpecifier"></a> Der benutzerdefinierte Formatbezeichner „ddd“
 
 Der benutzerdefinierte Formatbezeichner "ddd" stellt den abgekürzten Namen des Tags der Woche dar. Der lokalisierte abgekürzte Name des Tags der Woche wird von der <xref:System.Globalization.DateTimeFormatInfo.AbbreviatedDayNames%2A?displayProperty=nameWithType>-Eigenschaft der aktuellen oder der angegebenen Kultur abgerufen.
 
@@ -132,7 +132,7 @@ Das folgende Beispiel schließt den benutzerdefinierten Formatbezeichner "ddd" i
 
 [Zurück zur Tabelle](#table)
 
-## <a name="ddddSpecifier"></a> Der benutzerdefinierte Formatbezeichner „dddd“
+## <a name="the-dddd-custom-format-specifier"></a><a name="ddddSpecifier"></a> Der benutzerdefinierte Formatbezeichner „dddd“
 
 Der benutzerdefinierte Formatbezeichner "dddd" (plus einer beliebigen Anzahl zusätzlicher d-Bezeichner) stellt den vollständigen Namen des Tags der Woche dar. Der lokalisierte Name des Tags der Woche wird von der <xref:System.Globalization.DateTimeFormatInfo.DayNames%2A?displayProperty=nameWithType>-Eigenschaft der aktuellen oder der angegebenen Kultur abgerufen.
 
@@ -143,7 +143,7 @@ Das folgende Beispiel schließt den benutzerdefinierten Formatbezeichner "dddd" 
 
 [Zurück zur Tabelle](#table)
 
-## <a name="fSpecifier"></a> Der benutzerdefinierte Formatbezeichner „f“
+## <a name="the-f-custom-format-specifier"></a><a name="fSpecifier"></a> Der benutzerdefinierte Formatbezeichner „f“
 
 Der benutzerdefinierte Formatbezeichner "f" stellt die signifikanteste Ziffer des Sekundenbruchteils dar, d. h. die Zehntelsekunden in einem Datums- und Uhrzeitwert.
 
@@ -158,7 +158,7 @@ Das folgende Beispiel schließt den benutzerdefinierten Formatbezeichner "f" in 
 
 [Zurück zur Tabelle](#table)
 
-## <a name="ffSpecifier"></a> Der benutzerdefinierte Formatbezeichner „ff“
+## <a name="the-ff-custom-format-specifier"></a><a name="ffSpecifier"></a> Der benutzerdefinierte Formatbezeichner „ff“
 
 Der benutzerdefinierte Formatbezeichner "ff" stellt die zwei signifikantesten Ziffern des Sekundenbruchteils dar, d. h. die Hundertstelsekunden in einem Datums- und Uhrzeitwert.
 
@@ -169,7 +169,7 @@ Das folgende Beispiel schließt den benutzerdefinierten Formatbezeichner "ff" in
 
 [Zurück zur Tabelle](#table)
 
-## <a name="fffSpecifier"></a> Der benutzerdefinierte Formatbezeichner „fff“
+## <a name="the-fff-custom-format-specifier"></a><a name="fffSpecifier"></a> Der benutzerdefinierte Formatbezeichner „fff“
 
 Der benutzerdefinierte Formatbezeichner "fff" stellt die drei signifikantesten Ziffern des Sekundenbruchteils dar, d. h. die Millisekunden in einem Datums- und Uhrzeitwert.
 
@@ -180,7 +180,7 @@ Das folgende Beispiel schließt den benutzerdefinierten Formatbezeichner "fff" i
 
 [Zurück zur Tabelle](#table)
 
-## <a name="ffffSpecifier"></a> Der benutzerdefinierte Formatbezeichner „ffff“
+## <a name="the-ffff-custom-format-specifier"></a><a name="ffffSpecifier"></a> Der benutzerdefinierte Formatbezeichner „ffff“
 
 Der benutzerdefinierte Formatbezeichner "ffff" stellt die vier signifikantesten Ziffern des Sekundenbruchteils dar, d. h. die Zehntausendstelsekunden in einem Datums- und Uhrzeitwert.
 
@@ -188,7 +188,7 @@ Auch wenn es möglich ist, die Zehntausendstelsekundenkomponente eines Uhrzeitwe
 
 [Zurück zur Tabelle](#table)
 
-## <a name="fffffSpecifier"></a> Der benutzerdefinierte Formatbezeichner „fffff“
+## <a name="the-fffff-custom-format-specifier"></a><a name="fffffSpecifier"></a> Der benutzerdefinierte Formatbezeichner „fffff“
 
 Der benutzerdefinierte Formatbezeichner "fffff" stellt die fünf signifikantesten Ziffern des Sekundenbruchteils dar, d. h. die Hunderttausendstelsekunden in einem Datums- und Uhrzeitwert.
 
@@ -196,7 +196,7 @@ Auch wenn es möglich ist, die Hunderttausendstelsekundenkomponente eines Uhrzei
 
 [Zurück zur Tabelle](#table)
 
-## <a name="ffffffSpecifier"></a> Der benutzerdefinierte Formatbezeichner „ffffff“
+## <a name="the-ffffff-custom-format-specifier"></a><a name="ffffffSpecifier"></a> Der benutzerdefinierte Formatbezeichner „ffffff“
 
 Der benutzerdefinierte Formatbezeichner "ffffff" stellt die sechs signifikantesten Ziffern des Sekundenbruchteils dar, d. h. die Millionstelsekunden in einem Datums- und Uhrzeitwert.
 
@@ -204,7 +204,7 @@ Auch wenn es möglich ist, die Millionstelsekundenkomponente eines Uhrzeitwerts 
 
 [Zurück zur Tabelle](#table)
 
-## <a name="fffffffSpecifier"></a> Der benutzerdefinierte Formatbezeichner „fffffff“
+## <a name="the-fffffff-custom-format-specifier"></a><a name="fffffffSpecifier"></a> Der benutzerdefinierte Formatbezeichner „fffffff“
 
 Der benutzerdefinierte Formatbezeichner "fffffff" stellt die sieben signifikantesten Ziffern des Sekundenbruchteils dar, d. h. die Zehnmillionstelsekunden in einem Datums- und Uhrzeitwert.
 
@@ -212,7 +212,7 @@ Auch wenn es möglich ist, die Zehnmillionstelsekundenkomponente eines Uhrzeitwe
 
 [Zurück zur Tabelle](#table)
 
-## <a name="F_Specifier"></a> Der benutzerdefinierte Formatbezeichner „F“
+## <a name="the-f-custom-format-specifier"></a><a name="F_Specifier"></a> Der benutzerdefinierte Formatbezeichner „F“
 
 Der benutzerdefinierte Formatbezeichner "F" stellt die signifikanteste Ziffer des Sekundenbruchteils dar, d. h. die Zehntelsekunden in einem Datums- und Uhrzeitwert. Es wird nichts angezeigt, wenn die Ziffer 0 (null) ist.
 
@@ -227,7 +227,7 @@ Das folgende Beispiel schließt den benutzerdefinierten Formatbezeichner "F" in 
 
 [Zurück zur Tabelle](#table)
 
-## <a name="FF_Specifier"></a> Der benutzerdefinierte Formatbezeichner „FF“
+## <a name="the-ff-custom-format-specifier"></a><a name="FF_Specifier"></a> Der benutzerdefinierte Formatbezeichner „FF“
 
 Der benutzerdefinierte Formatbezeichner "FF" stellt die zwei signifikantesten Ziffern des Sekundenbruchteils dar, d. h. die Hundertstelsekunden in einem Datums- und Uhrzeitwert. Nachfolgende Nullen (0) oder Ziffern, die aus zwei Nullen bestehen, werden jedoch nicht angezeigt.
 
@@ -238,7 +238,7 @@ Das folgende Beispiel schließt den benutzerdefinierten Formatbezeichner "FF" in
 
 [Zurück zur Tabelle](#table)
 
-## <a name="FFF_Specifier"></a> Der benutzerdefinierte Formatbezeichner „FFF“
+## <a name="the-fff-custom-format-specifier"></a><a name="FFF_Specifier"></a> Der benutzerdefinierte Formatbezeichner „FFF“
 
 Der benutzerdefinierte Formatbezeichner "FFF" stellt die drei signifikantesten Ziffern des Sekundenbruchteils dar, d. h. die Millisekunden in einem Datums- und Uhrzeitwert. Nachfolgende Nullen (0) oder Ziffern, die aus drei Nullen bestehen, werden jedoch nicht angezeigt.
 
@@ -249,7 +249,7 @@ Das folgende Beispiel schließt den benutzerdefinierten Formatbezeichner "FFF" i
 
 [Zurück zur Tabelle](#table)
 
-## <a name="FFFF_Specifier"></a> Der benutzerdefinierte Formatbezeichner „FFFF“
+## <a name="the-ffff-custom-format-specifier"></a><a name="FFFF_Specifier"></a> Der benutzerdefinierte Formatbezeichner „FFFF“
 
 Der benutzerdefinierte Formatbezeichner "FFFF" stellt die vier signifikantesten Ziffern des Sekundenbruchteils dar, d. h. die Zehntausendstelsekunden in einem Datums- und Uhrzeitwert. Nachfolgende Nullen (0) oder Ziffern, die aus vier Nullen bestehen, werden jedoch nicht angezeigt.
 
@@ -257,7 +257,7 @@ Auch wenn es möglich ist, die Zehntausendstelsekundenkomponente eines Uhrzeitwe
 
 [Zurück zur Tabelle](#table)
 
-## <a name="FFFFF_Specifier"></a> Der benutzerdefinierte Formatbezeichner „FFFFF“
+## <a name="the-fffff-custom-format-specifier"></a><a name="FFFFF_Specifier"></a> Der benutzerdefinierte Formatbezeichner „FFFFF“
 
 Der benutzerdefinierte Formatbezeichner "FFFFF" stellt die fünf signifikantesten Ziffern des Sekundenbruchteils dar, d. h. die Hunderttausendstelsekunden in einem Datums- und Uhrzeitwert. Nachfolgende Nullen (0) oder Ziffern, die aus fünf Nullen bestehen, werden jedoch nicht angezeigt.
 
@@ -265,7 +265,7 @@ Auch wenn es möglich ist, die Hunderttausendstelsekundenkomponente eines Uhrzei
 
 [Zurück zur Tabelle](#table)
 
-## <a name="FFFFFF_Specifier"></a> Der benutzerdefinierte Formatbezeichner „FFFFFF“
+## <a name="the-ffffff-custom-format-specifier"></a><a name="FFFFFF_Specifier"></a> Der benutzerdefinierte Formatbezeichner „FFFFFF“
 
 Der benutzerdefinierte Formatbezeichner "FFFFFF" stellt die sechs signifikantesten Ziffern des Sekundenbruchteils dar, d. h. die Millionstelsekunden in einem Datums- und Uhrzeitwert. Nachfolgende Nullen (0) oder Ziffern, die aus sechs Nullen bestehen, werden jedoch nicht angezeigt.
 
@@ -273,7 +273,7 @@ Auch wenn es möglich ist, die Millionstelsekundenkomponente eines Uhrzeitwerts 
 
 [Zurück zur Tabelle](#table)
 
-## <a name="FFFFFFF_Specifier"></a> Der benutzerdefinierte Formatbezeichner „FFFFFFF“
+## <a name="the-fffffff-custom-format-specifier"></a><a name="FFFFFFF_Specifier"></a> Der benutzerdefinierte Formatbezeichner „FFFFFFF“
 
 Der benutzerdefinierte Formatbezeichner "FFFFFFF" stellt die sieben signifikantesten Ziffern des Sekundenbruchteils dar, d. h. die Zehnmillionstelsekunden in einem Datums- und Uhrzeitwert. Nachfolgende Nullen (0) oder Ziffern, die aus sieben Nullen bestehen, werden jedoch nicht angezeigt.
 
@@ -281,7 +281,7 @@ Auch wenn es möglich ist, die Zehnmillionstelsekundenkomponente eines Uhrzeitwe
 
 [Zurück zur Tabelle](#table)
 
-## <a name="gSpecifier"></a> Der benutzerdefinierte Formatbezeichner „g“ oder „gg“
+## <a name="the-g-or-gg-custom-format-specifier"></a><a name="gSpecifier"></a> Der benutzerdefinierte Formatbezeichner „g“ oder „gg“
 
 Die benutzerdefinierten Formatbezeichner "g" oder "gg (plus einer beliebigen Anzahl zusätzlicher g-Bezeichner)" stellen die Periode oder den Zeitraum dar, z. B. A.D. Dieser Bezeichner wird durch die Formatierung ignoriert, wenn dem zu formatierenden Datum keine Zeichenfolge für die Periode oder den Zeitraum zugeordnet ist.
 
@@ -294,7 +294,7 @@ Das folgende Beispiel schließt den benutzerdefinierten Formatbezeichner "g" in 
 
 [Zurück zur Tabelle](#table)
 
-## <a name="hSpecifier"></a> Der benutzerdefinierte Formatbezeichner „h“
+## <a name="the-h-custom-format-specifier"></a><a name="hSpecifier"></a> Der benutzerdefinierte Formatbezeichner „h“
 
 Der benutzerdefinierte Formatbezeichner "h" stellt die Stunde als Zahl von 1 bis 12 dar. Die Stunde wird dabei im 12-Stunden-Format dargestellt, bei dem die ganzen Stunden ab Mitternacht oder 12 Uhr mittags gezählt werden. Eine Stunde nach Mitternacht lässt nicht von derselben Stunde nach 12 Uhr mittags unterscheiden. Die Stunde wird nicht gerundet. Einstellige Stunden werden ohne führende Null formatiert. Beispielsweise zeigt dieser benutzerdefinierte Formatbezeichner um 5:43 Uhr morgens oder nachmittags "5" an.
 
@@ -307,7 +307,7 @@ Das folgende Beispiel schließt den benutzerdefinierten Formatbezeichner "h" in 
 
 [Zurück zur Tabelle](#table)
 
-## <a name="hhSpecifier"></a> Der benutzerdefinierte Formatbezeichner „hh“
+## <a name="the-hh-custom-format-specifier"></a><a name="hhSpecifier"></a> Der benutzerdefinierte Formatbezeichner „hh“
 
 Der benutzerdefinierte Formatbezeichner "hh" (plus einer beliebigen Anzahl zusätzlicher h-Bezeichner) stellt die Stunde als Zahl von 01 bis 12 dar. Die Stunde wird dabei im 12-Stunden-Format dargestellt, bei dem die ganzen Stunden ab Mitternacht oder 12 Uhr mittags gezählt werden. Eine Stunde nach Mitternacht lässt nicht von derselben Stunde nach 12 Uhr mittags unterscheiden. Die Stunde wird nicht gerundet. Einstellige Stunden werden mit einer führenden Null formatiert. Beispielsweise zeigt dieser Formatbezeichner um 5:43 Uhr morgens oder nachmittags "05" an.
 
@@ -318,7 +318,7 @@ Das folgende Beispiel schließt den benutzerdefinierten Formatbezeichner "hh" in
 
 [Zurück zur Tabelle](#table)
 
-## <a name="H_Specifier"></a> Der benutzerdefinierte Formatbezeichner „H“
+## <a name="the-h-custom-format-specifier"></a><a name="H_Specifier"></a> Der benutzerdefinierte Formatbezeichner „H“
 
 Der benutzerdefinierte Formatbezeichner "H" stellt die Stunde als Zahl von 0 bis 23 dar. Die Stunde wird dabei im nullbasierten 24-Stunden-Format dargestellt, bei dem die Stunden ab Mitternacht gezählt werden. Einstellige Stunden werden ohne führende Null formatiert.
 
@@ -331,7 +331,7 @@ Das folgende Beispiel schließt den benutzerdefinierten Formatbezeichner "H" in 
 
 [Zurück zur Tabelle](#table)
 
-## <a name="HH_Specifier"></a> Der benutzerdefinierte Formatbezeichner „HH“
+## <a name="the-hh-custom-format-specifier"></a><a name="HH_Specifier"></a> Der benutzerdefinierte Formatbezeichner „HH“
 
 Der benutzerdefinierte Formatbezeichner "HH" (plus einer beliebigen Anzahl zusätzlicher H-Bezeichner) stellt die Stunde als Zahl von 00 bis 23 dar. Die Stunde wird dabei im nullbasierten 24-Stunden-Format dargestellt, bei dem die Stunden ab Mitternacht gezählt werden. Einstellige Stunden werden mit einer führenden Null formatiert.
 
@@ -342,7 +342,7 @@ Das folgende Beispiel schließt den benutzerdefinierten Formatbezeichner "HH" in
 
 [Zurück zur Tabelle](#table)
 
-## <a name="KSpecifier"></a> Der benutzerdefinierte Formatbezeichner „K“
+## <a name="the-k-custom-format-specifier"></a><a name="KSpecifier"></a> Der benutzerdefinierte Formatbezeichner „K“
 
 Der benutzerdefinierte Formatbezeichner "K" stellt die Zeitzoneninformationen eines Datums- und Uhrzeitwerts dar. Bei Verendung dieses Formatbezeichners mit <xref:System.DateTime>-Werten wird die Ergebniszeichenfolge durch den Wert der <xref:System.DateTime.Kind%2A?displayProperty=nameWithType>-Eigenschaft definiert:
 
@@ -363,7 +363,7 @@ Das folgende Beispiel zeigt die Zeichenfolge, die sich ergibt, wenn der benutzer
 
 [Zurück zur Tabelle](#table)
 
-## <a name="mSpecifier"></a> Der benutzerdefinierte Formatbezeichner „m“
+## <a name="the-m-custom-format-specifier"></a><a name="mSpecifier"></a> Der benutzerdefinierte Formatbezeichner „m“
 
 Der benutzerdefinierte Formatbezeichner "m" stellt die Minute als Zahl von 0 bis 59 dar. Die Minute stellt ganze Minuten dar, die seit der letzten Stunde vergangen sind. Einstellige Minuten werden ohne führende Null formatiert.
 
@@ -376,7 +376,7 @@ Das folgende Beispiel schließt den benutzerdefinierten Formatbezeichner "m" in 
 
 [Zurück zur Tabelle](#table)
 
-## <a name="mmSpecifier"></a> Der benutzerdefinierte Formatbezeichner „mm“
+## <a name="the-mm-custom-format-specifier"></a><a name="mmSpecifier"></a> Der benutzerdefinierte Formatbezeichner „mm“
 
 Der benutzerdefinierte Formatbezeichner "mm" (plus einer beliebigem Anzahl zusätzlicher m-Bezeichner) stellt die Minute als Zahl von 00 bis 59 dar. Die Minute stellt ganze Minuten dar, die seit der letzten Stunde vergangen sind. Einstellige Minuten werden mit einer führenden Null formatiert.
 
@@ -387,7 +387,7 @@ Das folgende Beispiel schließt den benutzerdefinierten Formatbezeichner "mm" in
 
 [Zurück zur Tabelle](#table)
 
-## <a name="M_Specifier"></a> Der benutzerdefinierte Formatbezeichner „M“
+## <a name="the-m-custom-format-specifier"></a><a name="M_Specifier"></a> Der benutzerdefinierte Formatbezeichner „M“
 
 Der benutzerdefinierte Formatbezeichner "M" stellt den Monat als Zahl von 1 bis 12 dar (oder von 1 bis 13 für Kalender mit 13 Monaten). Einstellige Monate werden ohne führende Null formatiert.
 
@@ -400,7 +400,7 @@ Das folgende Beispiel schließt den benutzerdefinierten Formatbezeichner "M" in 
 
 [Zurück zur Tabelle](#table)
 
-## <a name="MM_Specifier"></a> Der benutzerdefinierte Formatbezeichner „MM“
+## <a name="the-mm-custom-format-specifier"></a><a name="MM_Specifier"></a> Der benutzerdefinierte Formatbezeichner „MM“
 
 Der benutzerdefinierte Formatbezeichner "MM" stellt den Monat als Zahl von 01 bis 12 dar (oder von 1 bis 13 für Kalender mit 13 Monaten). Einstellige Monate werden mit einer führenden Null formatiert.
 
@@ -411,7 +411,7 @@ Das folgende Beispiel schließt den benutzerdefinierten Formatbezeichner "MM" in
 
 [Zurück zur Tabelle](#table)
 
-## <a name="MMM_Specifier"></a> Der benutzerdefinierte Formatbezeichner „MMM“
+## <a name="the-mmm-custom-format-specifier"></a><a name="MMM_Specifier"></a> Der benutzerdefinierte Formatbezeichner „MMM“
 
 Der benutzerdefinierte Formatbezeichner "MMM" stellt den abgekürzten Namen des Monats dar. Der lokalisierte abgekürzte Name des Monats wird von der <xref:System.Globalization.DateTimeFormatInfo.AbbreviatedMonthNames%2A?displayProperty=nameWithType>-Eigenschaft der aktuellen oder der angegebenen Kultur abgerufen.
 
@@ -422,7 +422,7 @@ Das folgende Beispiel schließt den benutzerdefinierten Formatbezeichner "MMM" i
 
 [Zurück zur Tabelle](#table)
 
-## <a name="MMMM_Specifier"></a> Der benutzerdefinierte Formatbezeichner „MMMM“
+## <a name="the-mmmm-custom-format-specifier"></a><a name="MMMM_Specifier"></a> Der benutzerdefinierte Formatbezeichner „MMMM“
 
 Der benutzerdefinierte Formatbezeichner "MMMM" stellt den vollständigen Namen des Monats dar. Der lokalisierte Name des Monats wird von der <xref:System.Globalization.DateTimeFormatInfo.MonthNames%2A?displayProperty=nameWithType>-Eigenschaft der aktuellen oder der angegebenen Kultur abgerufen.
 
@@ -433,7 +433,7 @@ Das folgende Beispiel schließt den benutzerdefinierten Formatbezeichner "MMMM" 
 
 [Zurück zur Tabelle](#table)
 
-## <a name="sSpecifier"></a> Der benutzerdefinierte Formatbezeichner „s“
+## <a name="the-s-custom-format-specifier"></a><a name="sSpecifier"></a> Der benutzerdefinierte Formatbezeichner „s“
 
 Der benutzerdefinierte Formatbezeichner "s" stellt die Sekunden als Zahl von 0 bis 59 dar. Das Ergebnis stellt ganze Sekunden dar, die seit der letzten Minute vergangen sind. Einstellige Sekunden werden ohne führende Null formatiert.
 
@@ -446,7 +446,7 @@ Das folgende Beispiel schließt den benutzerdefinierten Formatbezeichner "s" in 
 
 [Zurück zur Tabelle](#table)
 
-## <a name="ssSpecifier"></a> Der benutzerdefinierte Formatbezeichner „ss“
+## <a name="the-ss-custom-format-specifier"></a><a name="ssSpecifier"></a> Der benutzerdefinierte Formatbezeichner „ss“
 
 Der benutzerdefinierte Formatbezeichner "ss" (plus einer beliebigem Anzahl zusätzlicher s-Bezeichner) stellt die Minute als Zahl von 00 bis 59 dar. Das Ergebnis stellt ganze Sekunden dar, die seit der letzten Minute vergangen sind. Einstellige Sekunden werden mit einer führenden Null formatiert.
 
@@ -457,7 +457,7 @@ Das folgende Beispiel schließt den benutzerdefinierten Formatbezeichner "ss" in
 
 [Zurück zur Tabelle](#table)
 
-## <a name="tSpecifier"></a> Der benutzerdefinierte Formatbezeichner „t“
+## <a name="the-t-custom-format-specifier"></a><a name="tSpecifier"></a> Der benutzerdefinierte Formatbezeichner „t“
 
 Der benutzerdefinierte Formatbezeichner "t" stellt das erste Zeichen des AM/PM-Kennzeichners dar. Der entsprechende lokalisierte Kennzeichner wird aus der <xref:System.Globalization.DateTimeFormatInfo.AMDesignator%2A?displayProperty=nameWithType>-Eigenschaft oder <xref:System.Globalization.DateTimeFormatInfo.PMDesignator%2A?displayProperty=nameWithType>-Eigenschaft der aktuellen Kultur oder der angegebenen Kultur abgerufen. Der AM-Kennzeichner wird für alle Zeitangaben von 0:00:00 (Mitternacht) bis 11:59:59.999 verwendet. Der PM-Kennzeichner wird für alle Zeitangaben von 12:00:00 (Mittag) bis 23:59:59.999 verwendet.
 
@@ -470,7 +470,7 @@ Das folgende Beispiel schließt den benutzerdefinierten Formatbezeichner "t" in 
 
 [Zurück zur Tabelle](#table)
 
-## <a name="ttSpecifier"></a> Der benutzerdefinierte Formatbezeichner „tt“
+## <a name="the-tt-custom-format-specifier"></a><a name="ttSpecifier"></a> Der benutzerdefinierte Formatbezeichner „tt“
 
 Der benutzerdefinierte Formatbezeichner "tt" (plus einer beliebigen Anzahl zusätzlicher t-Bezeichner) stellt den vollständigen AM/PM-Kennzeichner dar. Der entsprechende lokalisierte Kennzeichner wird aus der <xref:System.Globalization.DateTimeFormatInfo.AMDesignator%2A?displayProperty=nameWithType>-Eigenschaft oder <xref:System.Globalization.DateTimeFormatInfo.PMDesignator%2A?displayProperty=nameWithType>-Eigenschaft der aktuellen Kultur oder der angegebenen Kultur abgerufen. Der AM-Kennzeichner wird für alle Zeitangaben von 0:00:00 (Mitternacht) bis 11:59:59.999 verwendet. Der PM-Kennzeichner wird für alle Zeitangaben von 12:00:00 (Mittag) bis 23:59:59.999 verwendet.
 
@@ -483,7 +483,7 @@ Das folgende Beispiel schließt den benutzerdefinierten Formatbezeichner "tt" in
 
 [Zurück zur Tabelle](#table)
 
-## <a name="ySpecifier"></a> Der benutzerdefinierte Formatbezeichner „y“
+## <a name="the-y-custom-format-specifier"></a><a name="ySpecifier"></a> Der benutzerdefinierte Formatbezeichner „y“
 
 Der benutzerdefinierte Formatbezeichner "y" stellt das Jahr als einstellige oder zweistellige Zahl dar. Falls das Jahr mehr als zwei Ziffern umfasst, werden im Ergebnis nur die beiden niedrigwertigen Ziffern angezeigt. Wenn die erste Ziffer eines zweistelligen Jahrs eine Null ist (z. B. 2008), wird die Zahl ohne führende Null formatiert.
 
@@ -496,7 +496,7 @@ Das folgende Beispiel schließt den benutzerdefinierten Formatbezeichner "y" in 
 
 [Zurück zur Tabelle](#table)
 
-## <a name="yySpecifier"></a> Der benutzerdefinierte Formatbezeichner „yy“
+## <a name="the-yy-custom-format-specifier"></a><a name="yySpecifier"></a> Der benutzerdefinierte Formatbezeichner „yy“
 
 Der benutzerdefinierte Formatbezeichner "yy" stellt das Jahr als zweistellige Zahl dar. Falls das Jahr mehr als zwei Ziffern umfasst, werden im Ergebnis nur die beiden niedrigwertigen Ziffern angezeigt. Umfasst das Jahr weniger als zwei signifikante Ziffern, wird die Zahl mit führenden Nullen auf eine zweistellige Jahresangabe aufgefüllt.
 
@@ -512,7 +512,7 @@ Das folgende Beispiel schließt den benutzerdefinierten Formatbezeichner "yy" in
 
 [Zurück zur Tabelle](#table)
 
-## <a name="yyySpecifier"></a> Der benutzerdefinierte Formatbezeichner „yyy“
+## <a name="the-yyy-custom-format-specifier"></a><a name="yyySpecifier"></a> Der benutzerdefinierte Formatbezeichner „yyy“
 
 Der benutzerdefinierte Formatbezeichner "yyy" stellt das Jahr mit mindestens drei Ziffern dar. Falls das Jahr mehr als drei signifikante Ziffern umfasst, werden diese in die Ergebniszeichenfolge aufgenommen. Umfasst das Jahr weniger als drei Ziffern, wird die Zahl mit führenden Nullen auf eine dreistellige Jahresangabe aufgefüllt.
 
@@ -526,7 +526,7 @@ Das folgende Beispiel schließt den benutzerdefinierten Formatbezeichner "yyy" i
 
 [Zurück zur Tabelle](#table)
 
-## <a name="yyyySpecifier"></a> Der benutzerdefinierte Formatbezeichner „yyyy“
+## <a name="the-yyyy-custom-format-specifier"></a><a name="yyyySpecifier"></a> Der benutzerdefinierte Formatbezeichner „yyyy“
 
 Der benutzerdefinierte Formatbezeichner "yyyy" stellt das Jahr mit mindestens vier Ziffern dar. Falls das Jahr mehr als vier signifikante Ziffern umfasst, werden diese in die Ergebniszeichenfolge eingeschlossen. Umfasst das Jahr weniger als vier Ziffern, wird die Zahl mit führenden Nullen auf eine vierstellige Jahresangabe aufgefüllt.
 
@@ -540,7 +540,7 @@ Das folgende Beispiel schließt den benutzerdefinierten Formatbezeichner "yyyy" 
 
 [Zurück zur Tabelle](#table)
 
-## <a name="yyyyySpecifier"></a> Der benutzerdefinierte Formatbezeichner „yyyyy“
+## <a name="the-yyyyy-custom-format-specifier"></a><a name="yyyyySpecifier"></a> Der benutzerdefinierte Formatbezeichner „yyyyy“
 
 Der benutzerdefinierte Formatbezeichner "yyyyy" (plus einer beliebigen Anzahl zusätzlicher y-Bezeichner) stellt das Jahr mit mindestens fünf Ziffern dar. Falls das Jahr mehr als fünf signifikante Ziffern umfasst, werden diese in die Ergebniszeichenfolge eingeschlossen. Umfasst das Jahr weniger als fünf Ziffern, wird die Zahl mit führenden Nullen auf eine fünfstellige Jahresangabe aufgefüllt.
 
@@ -553,7 +553,7 @@ Das folgende Beispiel schließt den benutzerdefinierten Formatbezeichner "yyyyy"
 
 [Zurück zur Tabelle](#table)
 
-## <a name="zSpecifier"></a> Der benutzerdefinierte Formatbezeichner „z“
+## <a name="the-z-custom-format-specifier"></a><a name="zSpecifier"></a> Der benutzerdefinierte Formatbezeichner „z“
 
 Mit <xref:System.DateTime>-Werten stellt der benutzerdefinierte Formatbezeichner "z" den signierten Offset der Zeitzone des lokalen Betriebssystems von der koordinierten Weltzeit (Coordinated Universal Time, UTC) dar, gemessen in Stunden. Reflektiert nicht den Wert der <xref:System.DateTime.Kind%2A?displayProperty=nameWithType>-Eigenschaft einer Instanz. Aus diesem Grund wird der z-Formatbezeichner nicht zur Verwendung mit <xref:System.DateTime>-Werten empfohlen.
 
@@ -570,7 +570,7 @@ Das folgende Beispiel schließt den benutzerdefinierten Formatbezeichner "z" in 
 
 [Zurück zur Tabelle](#table)
 
-## <a name="zzSpecifier"></a> Der benutzerdefinierte Formatbezeichner „zz“
+## <a name="the-zz-custom-format-specifier"></a><a name="zzSpecifier"></a> Der benutzerdefinierte Formatbezeichner „zz“
 
 Mit <xref:System.DateTime>-Werten stellt der benutzerdefinierte Formatbezeichner "zz" den signierten Offset der Zeitzone des lokalen Betriebssystems von der koordinierten Weltzeit (Coordinated Universal Time, UTC) dar, gemessen in Stunden. Reflektiert nicht den Wert der <xref:System.DateTime.Kind%2A?displayProperty=nameWithType>-Eigenschaft einer Instanz. Aus diesem Grund wird der zz-Formatbezeichner nicht zur Verwendung mit <xref:System.DateTime>-Werten empfohlen.
 
@@ -585,7 +585,7 @@ Das folgende Beispiel schließt den benutzerdefinierten Formatbezeichner "zz" in
 
 [Zurück zur Tabelle](#table)
 
-## <a name="zzzSpecifier"></a> Der benutzerdefinierte Formatbezeichner „zzz“
+## <a name="the-zzz-custom-format-specifier"></a><a name="zzzSpecifier"></a> Der benutzerdefinierte Formatbezeichner „zzz“
 
 Mit <xref:System.DateTime>-Werten stellt der benutzerdefinierte Formatbezeichner "zzz" den signierten Offset der Zeitzone des lokalen Betriebssystems von der koordinierten Weltzeit (Coordinated Universal Time, UTC) dar, gemessen in Stunden und Minuten. Reflektiert nicht den Wert der <xref:System.DateTime.Kind%2A?displayProperty=nameWithType>-Eigenschaft einer Instanz. Aus diesem Grund wird der zzz-Formatbezeichner nicht zur Verwendung mit <xref:System.DateTime>-Werten empfohlen.
 
@@ -600,7 +600,7 @@ Das folgende Beispiel schließt den benutzerdefinierten Formatbezeichner "zzz" i
 
 [Zurück zur Tabelle](#table)
 
-## <a name="timeSeparator"></a> Der benutzerdefinierte Formatbezeichner „:“
+## <a name="the--custom-format-specifier"></a><a name="timeSeparator"></a> Der benutzerdefinierte Formatbezeichner „:“
 Der benutzerdefinierte Formatbezeichner ":" stellt das Trennzeichen für Zeitangaben dar, mit dem zwischen Stunden und Minuten unterschieden werden kann. Das entsprechende lokalisierte Trennzeichen für Zeitangaben wird aus der <xref:System.Globalization.DateTimeFormatInfo.TimeSeparator%2A?displayProperty=nameWithType>-Eigenschaft der aktuellen Kultur oder der angegebenen Kultur abgerufen.
 
 > [!NOTE]
@@ -610,7 +610,7 @@ Wenn der Formatbezeichner „/“ allein verwendet wird, d.h. ohne andere benutz
 
 [Zurück zur Tabelle](#table)
 
-## <a name="dateSeparator"></a> Der benutzerdefinierte Formatbezeichner „/“
+## <a name="the--custom-format-specifier"></a><a name="dateSeparator"></a> Der benutzerdefinierte Formatbezeichner „/“
 
 Der benutzerdefinierte Formatbezeichner "/" stellt das Datumstrennzeichen dar, mit dem zwischen Jahren, Monaten und Tagen unterschieden wird. Das entsprechende lokalisierte Trennzeichen für Datumsangaben wird aus der <xref:System.Globalization.DateTimeFormatInfo.DateSeparator%2A?displayProperty=nameWithType>-Eigenschaft der aktuellen Kultur oder der angegebenen Kultur abgerufen.
 
@@ -621,7 +621,7 @@ Wenn der Formatbezeichner „/“ allein verwendet wird, d.h. ohne andere benutz
 
 [Zurück zur Tabelle](#table)
 
-## <a name="Literals"></a> Zeichenliterale
+## <a name="character-literals"></a><a name="Literals"></a> Zeichenliterale
 
 Die folgenden Zeichen in einer benutzerdefinierten Formatzeichenfolge für Datum und Uhrzeit sind reserviert und werden immer als Formatierungszeichen bzw. im Fall von ", ', / und \\ als Sonderzeichen interpretiert.
 
@@ -655,7 +655,7 @@ Das folgende Beispiel enthält die Literalzeichen „pst“ (für Pacific Standa
 
 ## <a name="notes"></a>Hinweise
 
-### <a name="UsingSingleSpecifiers"></a> Verwenden von einzelnen benutzerdefinierten Formatbezeichnern
+### <a name="using-single-custom-format-specifiers"></a><a name="UsingSingleSpecifiers"></a> Verwenden von einzelnen benutzerdefinierten Formatbezeichnern
 
 Eine benutzerdefinierte Formatzeichenfolge für Datum und Uhrzeit besteht aus zwei oder mehr Zeichen. Formatierungsmethoden für Datum und Uhrzeit interpretieren einzelne Zeichenfolgen als Standardformatzeichenfolgen für Datum und Uhrzeit. Wenn ein Zeichen nicht als gültiger Formatbezeichner erkannt wird, wird eine <xref:System.FormatException> ausgelöst. Wenn die Formatzeichenfolge beispielsweise nur aus dem h-Bezeichner besteht, wird sie als Standardformatzeichenfolge für Datum und Uhrzeit interpretiert. In diesem speziellen Fall wird jedoch eine Ausnahme ausgelöst, weil kein „h“-Standardformatbezeichner für Datum und Uhrzeit vorhanden ist.
 
@@ -666,7 +666,7 @@ Beispielsweise wird `%h"` als benutzerdefinierte Formatzeichenfolge für Datum u
 [!code-csharp-interactive[Formatting.DateAndTime.Custom#16](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/literal1.cs#16)]
 [!code-vb[Formatting.DateAndTime.Custom#16](~/samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/literal1.vb#16)]
 
-### <a name="escape"></a> Verwenden des Escapezeichens
+### <a name="using-the-escape-character"></a><a name="escape"></a> Verwenden des Escapezeichens
 
 Die Zeichen "d", "f", "F", "g", "h", "H", "K", "m", "M", "s", "t", "y", "z", ":" oder "/" in einer Formatzeichenfolge werden als benutzerdefinierte Formatbezeichner und nicht als Literalzeichen interpretiert. Um zu verhindern, dass ein Zeichen als Formatbezeichner interpretiert wird, können Sie dem Zeichen einen umgekehrten Schrägstrich (\\) als Escapezeichen voranstellen. Das Escapezeichen gibt an, dass das folgende Zeichen ein Zeichenliteral ist, das unverändert in der Ergebniszeichenfolge enthalten sein soll.
 
@@ -684,7 +684,7 @@ Im folgenden Beispiel wird das Escapezeichen verwendet, um zu verhindern, dass d
 
 Die Einstellungen der **Regions- und Sprachoptionen** in der Systemsteuerung beeinflussen die durch einen Formatierungsvorgang erstellte Ergebniszeichenfolge, die viele der benutzerdefinierten Formatbezeichner für Datum und Uhrzeit enthält. Mithilfe dieser Einstellungen wird das <xref:System.Globalization.DateTimeFormatInfo>-Objekt initialisiert, das der aktuellen Threadkultur zugeordnet ist. Sie stellt Werte zur Steuerung der Formatierung bereit. Auf Computern mit anderen Einstellungen werden andere Ergebniszeichenfolgen generiert.
 
-Wenn Sie den <xref:System.Globalization.CultureInfo.%23ctor%28System.String%29?displayProperty=nameWithType>-Konstruktor verwenden, um ein neues <xref:System.Globalization.CultureInfo>-Objekt zu instanziieren, das dieselbe Kultur repräsentiert wie die aktuelle Systemkultur, werden darüber hinaus alle Anpassungen, die über die Einstellung **Regions- und Sprachoptionen** in der Systemsteuerung eingerichtet werden, auf das neue <xref:System.Globalization.CultureInfo>-Objekt angewendet. Sie können den <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType>-Konstruktor verwenden, um ein <xref:System.Globalization.CultureInfo>-Objekt zu erstellen, das die Anpassungen eines Systems nicht wiedergibt.
+Wenn Sie den <xref:System.Globalization.CultureInfo.%23ctor%28System.String%29>-Konstruktor verwenden, um ein neues <xref:System.Globalization.CultureInfo>-Objekt zu instanziieren, das dieselbe Kultur repräsentiert wie die aktuelle Systemkultur, werden darüber hinaus alle Anpassungen, die über die Einstellung **Regions- und Sprachoptionen** in der Systemsteuerung eingerichtet werden, auf das neue <xref:System.Globalization.CultureInfo>-Objekt angewendet. Sie können den <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29>-Konstruktor verwenden, um ein <xref:System.Globalization.CultureInfo>-Objekt zu erstellen, das die Anpassungen eines Systems nicht wiedergibt.
 
 ### <a name="datetimeformatinfo-properties"></a>DateTimeFormatInfo-Eigenschaften
 

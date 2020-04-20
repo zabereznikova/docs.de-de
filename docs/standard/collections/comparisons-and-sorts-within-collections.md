@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Equals method
 - collections [.NET Framework], comparisons
 ms.assetid: 5e4d3b45-97f0-423c-a65f-c492ed40e73b
-ms.openlocfilehash: 3360652f22ed39ccfd99f9863052fe584b78562f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b1c6be08dad37afe9e6627b15d93453aa23f6408
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78159259"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81242698"
 ---
 # <a name="comparisons-and-sorts-within-collections"></a>Vergleiche und Sortierungen innerhalb von Auflistungen
 Die <xref:System.Collections> -Klassen führen bei nahezu allen Vorgängen zur Verwaltung von Auflistungen Vergleiche durch, sei es bei der Suche nach zu entfernenden Elementen oder bei der Rückgabe eines Schlüssel-Wert-Paars.  
@@ -32,7 +32,7 @@ Die <xref:System.Collections> -Klassen führen bei nahezu allen Vorgängen zur V
   
 - Wenn der Typ T <xref:System.IEquatable%601> nicht implementiert, wird <xref:System.Object.Equals%2A?displayProperty=nameWithType> verwendet.  
   
- Darüber hinaus akzeptieren einige Konstruktorüberladungen für Wörterbuchauflistungen eine <xref:System.Collections.Generic.IEqualityComparer%601> -Implementierung, die zum Vergleichen von Schlüsseln auf Gleichheit verwendet wird. Ein Beispiel dafür finden Sie unter <xref:System.Collections.Generic.Dictionary%602.%23ctor%2A?displayProperty=nameWithType> -Konstruktor.  
+ Darüber hinaus akzeptieren einige Konstruktorüberladungen für Wörterbuchauflistungen eine <xref:System.Collections.Generic.IEqualityComparer%601> -Implementierung, die zum Vergleichen von Schlüsseln auf Gleichheit verwendet wird. Ein Beispiel dafür finden Sie unter <xref:System.Collections.Generic.Dictionary%602.%23ctor%2A> -Konstruktor.  
   
 <a name="BKMK_Determiningsortorder"></a>
 ## <a name="determining-sort-order"></a>Festlegen der Sortierreihenfolge  

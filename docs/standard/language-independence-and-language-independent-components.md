@@ -13,12 +13,12 @@ helpviewer_keywords:
 - runtime, language interoperability
 - common language runtime, language interoperability
 ms.assetid: 4f0b77d0-4844-464f-af73-6e06bedeafc6
-ms.openlocfilehash: 689ca9f7278dcf91b12bc62b5255a968388bb9f8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 725884d8ab6d6d9009ad1cdd7bc185889cd5e485
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79398784"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81243062"
 ---
 # <a name="language-independence-and-language-independent-components"></a>Sprachenunabhängigkeit und sprachunabhängige Komponenten
 
@@ -527,7 +527,7 @@ Im folgenden Beispiel wird eine von `DescriptionAttribute` abgeleitete <xref:Sys
 
 ## <a name="the-clscompliantattribute-attribute"></a>Das CLSCompliantAttribute-Attribut
 
-Das <xref:System.CLSCompliantAttribute>-Attribut wird verwendet, um anzugeben, ob ein Programmelement mit der Common Language Specification kompatibel ist. Der <xref:System.CLSCompliantAttribute.%23ctor%28System.Boolean%29?displayProperty=nameWithType>-Konstruktor enthält einen einzelnen erforderlichen Parameter, `isCompliant`, der angibt, ob das Programmelement CLS-kompatibel ist.
+Das <xref:System.CLSCompliantAttribute>-Attribut wird verwendet, um anzugeben, ob ein Programmelement mit der Common Language Specification kompatibel ist. Der <xref:System.CLSCompliantAttribute.%23ctor%28System.Boolean%29>-Konstruktor enthält einen einzelnen erforderlichen Parameter, `isCompliant`, der angibt, ob das Programmelement CLS-kompatibel ist.
 
 Zur Kompilierzeit erkennt der Compiler nicht kompatible Elemente, von denen angenommen wird, dass sie CLS-kompatibel sind, und gibt eine Warnung aus. Der Compiler gibt keine Warnungen für die Typen oder Member aus, die explizit als nicht kompatibel deklariert werden.
 

@@ -3,14 +3,14 @@ title: Wahl zwischen .NET Core und .NET Framework für Server-Apps
 description: Ein Leitfaden zur Auswahl der NET-Implementierung für die Erstellung einer Server-App in .NET.
 author: cartermp
 ms.date: 06/19/2018
-ms.openlocfilehash: 393d6d89fb299e87edf55cf50991537e8afe9753
-ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
+ms.openlocfilehash: 885a7fb3419eafa5d88ef621cf6ad04a8d48bb59
+ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80344152"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81607492"
 ---
-# <a name="choosing-between-net-core-and-net-framework-for-server-apps"></a>Wahl zwischen .NET Core und .NET Framework für Server-Apps
+# <a name="choose-between-net-core-and-net-framework-for-server-apps"></a>Wahl zwischen .NET Core und .NET Framework für Server-Apps
 
 Bei der Erstellung von serverseitigen Anwendungen mit .NET werden zwei Implementierungen unterstützt: .NET Framework und .NET Core. Beide nutzen viele gemeinsame Komponenten, und bei beiden stimmt ein Teil des Codes überein. Allerdings gibt es auch grundlegende Unterschiede. Daher richtet sich Ihre Entscheidung danach, was Sie erreichen möchten.  Dieser Artikel stellt Anleitungen dazu bereit, welche Variante in welchen Fällen verwendet werden sollte.
 
@@ -103,7 +103,7 @@ Einige Plattformen von Microsoft oder Drittanbietern unterstützen .NET Core nic
 ## <a name="see-also"></a>Siehe auch
 
 - [Wählen zwischen ASP.NET und ASP.NET Core](/aspnet/core/choose-aspnet-framework)
-- [ASP.NET Core, das .NET Framework anzielt](/aspnet/core#aspnet-core-targeting-net-framework)
+- [ASP.NET Core, das .NET Framework anzielt](/aspnet/core/introduction-to-aspnet-core#aspnet-core-targeting-net-framework)
 - [Zielframeworks](frameworks.md)
 - [Leitfaden für .NET Core](../core/index.yml)
 - [Portieren von .NET Framework zu .NET Core](../core/porting/index.md)
