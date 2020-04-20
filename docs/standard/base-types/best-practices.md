@@ -10,12 +10,12 @@ helpviewer_keywords:
 - .NET Framework regular expressions, best practices
 - regular expressions, best practices
 ms.assetid: 618e5afb-3a97-440d-831a-70e4c526a51c
-ms.openlocfilehash: 9b09f5a2505888c6154a58a3512c94c51f89295b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ff04b4950f48f2ba06f60b65cc3a46f1295711f3
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "77124421"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81243153"
 ---
 # <a name="best-practices-for-regular-expressions-in-net"></a>Empfohlene Vorgehensweisen für die Verwendung von regulären Ausdrücken in .NET
 
@@ -219,7 +219,7 @@ Wenn Ihre regulären Ausdrücke Eingaben verarbeiten, die annähernd mit dem Mus
 
 Das Timeoutintervall des regulären Ausdrucks definiert den Zeitraum bis zum Timeout, für den die Engine für reguläre Ausdrücke nach einer einzelnen Übereinstimmung sucht. Das standardmäßige Timeoutintervall ist <xref:System.Text.RegularExpressions.Regex.InfiniteMatchTimeout?displayProperty=nameWithType>. Dies bedeutet, dass für den reguläre Ausdruck kein Timeout erfolgt. Sie können diesen Wert folgendermaßen überschreiben und ein Timeoutintervall definieren:
 
-- Stellen Sie beim Instanziieren eines <xref:System.Text.RegularExpressions.Regex>-Objekts einen Timeoutwert bereit, indem Sie den <xref:System.Text.RegularExpressions.Regex.%23ctor%28System.String%2CSystem.Text.RegularExpressions.RegexOptions%2CSystem.TimeSpan%29?displayProperty=nameWithType>-Konstruktor aufrufen.
+- Stellen Sie beim Instanziieren eines <xref:System.Text.RegularExpressions.Regex>-Objekts einen Timeoutwert bereit, indem Sie den <xref:System.Text.RegularExpressions.Regex.%23ctor%28System.String%2CSystem.Text.RegularExpressions.RegexOptions%2CSystem.TimeSpan%29>-Konstruktor aufrufen.
 
 - Rufen Sie eine statische Methode für einen Musterabgleich auf, wie z. B. <xref:System.Text.RegularExpressions.Regex.Match%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%2CSystem.TimeSpan%29?displayProperty=nameWithType> oder <xref:System.Text.RegularExpressions.Regex.Replace%28System.String%2CSystem.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%2CSystem.TimeSpan%29?displayProperty=nameWithType>, die einen `matchTimeout`-Parameter einschließt.
 
