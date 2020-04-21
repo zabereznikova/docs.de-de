@@ -2,19 +2,19 @@
 title: Richtlinien für das Formatieren von F#-Code
 description: Erfahren Sie mehr über Richtlinien zum Formatieren von F-Code.
 ms.date: 11/04/2019
-ms.openlocfilehash: 2086b515b8ec9b69a44e2e65ca06fb320670dff2
-ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
+ms.openlocfilehash: b8be70dd29a04e71614308164e541b99a1724305
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81278937"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81739558"
 ---
 # <a name="f-code-formatting-guidelines"></a>Richtlinien für das Formatieren von F#-Code
 
 Dieser Artikel enthält Richtlinien zum Formatieren des Codes, sodass der F-Code:
 
-* Allgemein als lesbarer angesehen
-* Entspricht den Konventionen, die von Formatierungstools in Visual Studio und anderen Editoren angewendet werden
+* Lesbarer
+* In Übereinstimmung mit konventionen, die von Formatierungstools in Visual Studio und anderen Editoren angewendet werden
 * Ähnlich wie bei anderen Online-Code
 
 Diese Richtlinien basieren auf [einem umfassenden Leitfaden zu den Richtlinien](https://github.com/dungpa/fantomas/blob/master/docs/FormattingConventions.md) von [Anh-Dung Phan](https://github.com/dungpa).
@@ -25,9 +25,9 @@ Standardmäßig wird ein erheblicher Leerraum verwendet. Die folgenden Richtlini
 
 ### <a name="using-spaces"></a>Verwenden von Räumen
 
-Wenn einEinzug erforderlich ist, müssen Sie Leerzeichen und keine Registerkarten verwenden. Mindestens ein Leerzeichen ist erforderlich. Ihre Organisation kann Codierungsstandards erstellen, um die Anzahl der Leerzeichen anzugeben, die für den Einzug verwendet werden sollen. zwei, drei oder vier Einrückungsräume auf jeder Ebene, auf der der Einzug stattfindet, sind typisch.
+Wenn einEinzug erforderlich ist, müssen Sie Leerzeichen und keine Registerkarten verwenden. Mindestens ein Leerzeichen ist erforderlich. Ihre Organisation kann Codierungsstandards erstellen, um die Anzahl der Leerzeichen anzugeben, die für den Einzug verwendet werden sollen. Zwei, drei oder vier Einrückungsräume auf jeder Ebene, auf der der Einzug stattfindet, sind typisch.
 
-**Wir empfehlen 4 Leerzeichen pro Einzug.**
+**Wir empfehlen vier Leerzeichen pro Einzug.**
 
 Das heißt, die Einrückung von Programmen ist eine subjektive Angelegenheit. Variationen sind in Ordnung, aber die erste Regel, der Sie folgen sollten, ist *die Konsistenz der Einrückung*. Wählen Sie einen allgemein akzeptierten Einzugsstil und verwenden Sie ihn systematisch in der gesamten Codebasis.
 
@@ -43,7 +43,7 @@ Verwenden Sie immer Leerraum um binäre arithmetische Ausdrücke:
 let subtractThenAdd x = x - 1 + 3
 ```
 
-Unäre `-` Operatoren sollten immer den Wert haben, den sie negieren, sofort folgen:
+Unäre `-` Operatoren sollten immer sofort von dem Wert gefolgt werden, den sie negieren:
 
 ```fsharp
 // OK
@@ -100,7 +100,7 @@ let myFun (a: decimal) b c = a + b + c
 let myFunBad (a:decimal)(b)c = a + b + c
 ```
 
-### <a name="place-parameters-on-a-new-line-for-very-long-member-definitions"></a>Platzieren von Parametern in einer neuen Zeile für sehr lange Elementdefinitionen
+### <a name="place-parameters-on-a-new-line-for-long-member-definitions"></a>Platzieren von Parametern in einer neuen Zeile für lange Elementdefinitionen
 
 Wenn Sie über eine sehr lange Elementdefinition verfügen, platzieren Sie die Parameter in neuen Zeilen, und ziehen Sie sie in einen Bereich ein.
 
@@ -287,7 +287,7 @@ Namespaces, Ausnahmen, Ereignisse und`.dll` Projektnamen sollten auch PascalCase
 
 In der Vergangenheit haben einige F-Bibliotheken Unterstriche in Namen verwendet. Dies wird jedoch nicht mehr allgemein akzeptiert, auch weil es mit .NET-Namenskonventionen kollidiert. Das heißt, einige F-Programmierer verwenden unterstrichen stark, teilweise aus historischen Gründen, und Toleranz und Respekt ist wichtig. Beachten Sie jedoch, dass der Stil von anderen, die eine Wahl haben, ob sie ihn verwenden möchten, oft nicht gemocht wird.
 
-Einige Ausnahmen umfassen die Zusammenarbeit mit systemeigenen Komponenten, bei denen Unterstriche sehr häufig auftreten.
+Eine Ausnahme bildet die Zusammenarbeit mit systemeigenen Komponenten, bei denen Unterstriche üblich sind.
 
 ### <a name="use-standard-f-operators"></a>Verwenden von Standard-Operatoren für Die Verwendung von F-Operatoren
 
@@ -325,7 +325,7 @@ Verwenden Sie für alle anderen Typen das Präfixformular.
 
 ## <a name="formatting-tuples"></a>Formatieren von Tupeln
 
-Eine Tupelinstanziierung sollte in Klammern sein, und auf die begrenzenden Kommas innerhalb `(1, 2)` `(x, y, z)`sollte ein einzelnes Leerzeichen folgen, z. B.: .
+Eine Tupelinstanziierung sollte in Klammern sein, und auf die darin abschnittnden begrenzenden `(1, 2)` `(x, y, z)`Kommas sollte ein einzelnes Leerzeichen folgen, z. B.: .
 
 Es ist allgemein akzeptiert, Klammern in Muster-Matching von Tupeln wegzulassen:
 
@@ -354,7 +354,7 @@ Zusammenfassend ist, dass die Parenthesized Tupelinstanziationen bevorzugt werde
 
 ## <a name="formatting-discriminated-union-declarations"></a>Formatieren diskriminierter Gewerkschaftserklärungen
 
-Einzug `|` in Typdefinition durch 4 Leerzeichen:
+Einzug `|` in Typdefinition durch vier Leerzeichen:
 
 ```fsharp
 // OK
@@ -393,7 +393,7 @@ let tree1 =
 
 ## <a name="formatting-record-declarations"></a>Formatieren von Datensatzdeklarationen
 
-Einzug `{` in Typdefinition um 4 Leerzeichen und Starten der Feldliste in derselben Zeile:
+Einrücken `{` in Typdefinition durch vier Leerzeichen und starten Sie die Feldliste in derselben Zeile:
 
 ```fsharp
 // OK
@@ -508,7 +508,7 @@ let rainbow2 =
         Lackeys = ["Zippy"; "George"; "Bungle"] }
 ```
 
-Wie bei der Datensatzanleitung können Sie separate Zeilen für die geschweiften Klammern und einEinzug eines Bereichs nach rechts mit dem Ausdruck widmen. Beachten Sie, dass Sie in einigen speziellen Fällen, z. B. das Umschließen eines Werts mit einem optionalen Wert ohne Klammern, möglicherweise eine geschweifte Klammer in einer Zeile beibehalten müssen:
+Wie bei der Datensatzanleitung können Sie separate Zeilen für die geschweiften Klammern und einEinzug eines Bereichs nach rechts mit dem Ausdruck widmen. In einigen speziellen Fällen, z. B. beim Umschließen eines Werts mit einem optionalen Wert ohne Klammern, müssen Sie möglicherweise eine geschweifte Klammer in einer Zeile beibehalten:
 
 ```fsharp
 type S = { F1: int; F2: string }
@@ -691,7 +691,7 @@ lambdaList
     | Var v -> 1)
 ```
 
-Musterabgleich in `let` Funktionen, die von 4 Leerzeichen definiert sind oder `let rec` nach dem Start von `let`eingerückt werden sollen, auch wenn `function` das Schlüsselwort verwendet wird:
+Musterabgleich in `let` Funktionen, die von vier Leerzeichen definiert sind oder `let rec` nach dem Start von `let`eingerückt werden sollen, auch wenn `function` das Schlüsselwort verwendet wird:
 
 ```fsharp
 let rec sizeLambda acc = function
@@ -824,7 +824,7 @@ module A2 =
 
 ### <a name="formatting-object-expressions-and-interfaces"></a>Formatieren von Objektausdrücken und -schnittstellen
 
-Objektausdrücke und -schnittstellen sollten auf die `member` gleiche Weise ausgerichtet werden, wenn sie nach 4 Leerzeichen eingerückt werden.
+Objektausdrücke und -schnittstellen sollten auf die `member` gleiche Weise ausgerichtet werden, wenn sie nach vier Leerzeichen eingerückt werden.
 
 ```fsharp
 let comparer =

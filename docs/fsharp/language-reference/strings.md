@@ -1,24 +1,24 @@
 ---
 title: Zeichenfolgen
-description: Erfahren Sie, wie der F#-Typ "String" unveränderlichen Text als Sequenz von Unicode-Zeichen darstellt.
+description: Erfahren Sie, wie der Typ "String" von F unveränderlichen Text als folge von Unicode-Zeichen darstellt.
 ms.date: 07/05/2019
-ms.openlocfilehash: 002de464d09a49b6161608db6e46c619369f5ceb
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: 242a2cefa1cce8995090dddd1d1fd7181e0f5e0c
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77452817"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81739573"
 ---
 # <a name="strings"></a>Zeichenfolgen
 
 > [!NOTE]
 > Mit dem API-Referenz-Link in diesem Artikel gelangen Sie auf MSDN.  Die docs.microsoft.com-API-Referenz ist nicht abgeschlossen.
 
-Der `string` Typ stellt unveränderlichen Text als Sequenz von Unicode-Zeichen dar. `string` ist ein Alias für `System.String` in .NET Framework.
+Der `string` Typ stellt unveränderlichen Text als eine Folge von Unicode-Zeichen dar. `string` ist ein Alias für `System.String` in .NET Framework.
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 
-Zeichen folgen Literale werden durch das Anführungszeichen (") getrennt. Der umgekehrte Schrägstrich (\\) wird verwendet, um bestimmte Sonderzeichen zu codieren. Der umgekehrte Schrägstrich und das nächste Zeichen werden als *Escapesequenz*bezeichnet. In F# Zeichenfolgenliteralen unterstützte Escapesequenzen werden in der folgenden Tabelle gezeigt.
+Zeichenfolgenliterale werden durch das Anführungszeichen (") begrenzt. Das umgekehrte Schrägstrichzeichen ( \\ ) wird verwendet, um bestimmte Sonderzeichen zu kodieren. Der umgekehrte Schrägstrich und das nächste Zeichen zusammen werden als *Escapesequenz*bezeichnet. Escape-Sequenzen, die in den Zeichenfolgenliteralen von F-Zeichenfolgen unterstützt werden, werden in der folgenden Tabelle angezeigt.
 
 |Zeichen|Escapesequenz|
 |---------|---------------|
@@ -32,24 +32,24 @@ Zeichen folgen Literale werden durch das Anführungszeichen (") getrennt. Der um
 |Umgekehrter Schrägstrich|`\\`|
 |Anführungszeichen|`\"`|
 |Apostroph|`\'`|
-|Unicode-Zeichen|`\DDD` (wobei `D` eine Dezimal Ziffer angibt; Bereich von 000-255, z. b. `\231` = "ç")|
-|Unicode-Zeichen|`\xHH` (wobei `H` eine hexadezimale Ziffer angibt; Bereich von 00-FF, z. b. `\xE7` = "ç")|
-|Unicode-Zeichen|`\uHHHH` (UTF-16) (wobei `H` eine hexadezimale Ziffer angibt; Bereich von 0000-FFFF;  beispielsweise `\u00E7` = "ç")|
-|Unicode-Zeichen|`\U00HHHHHH` (UTF-32) (wobei `H` eine hexadezimale Ziffer angibt; Bereich von 000000-10FFFF;  beispielsweise `\U0001F47D` = "👽")|
+|Unicode-Zeichen|`\DDD`(wo `D` eine Dezimalstelle angegeben ist; Bereich von 000 `\231` - 255; z. B. = "A")|
+|Unicode-Zeichen|`\xHH`(wo `H` eine hexadezimale Ziffer angegeben ist; Bereich `\xE7` von 00 - FF; z. B. = "-")|
+|Unicode-Zeichen|`\uHHHH`(UTF-16) (wo `H` eine hexadezimale Ziffer angegeben ist; Bereich von 0000 - FFFF;  z. `\u00E7` B. = "A")|
+|Unicode-Zeichen|`\U00HHHHHH`(UTF-32) (wo `H` eine hexadezimale Ziffer angegeben ist; Bereich von 000000 - 10FFFF;  z. `\U0001F47D` B.👽= " ")|
 
 > [!IMPORTANT]
-> Die `\DDD` Escapesequenz ist eine Dezimal Schreibweise, keine oktale Notation wie in den meisten anderen Sprachen. Daher sind Ziffern `8` und `9` gültig, und eine Sequenz von `\032` stellt ein Leerzeichen (U + 0020) dar, während derselbe Codepunkt in der Oktalnotation `\040`würde.
+> Die `\DDD` Escape-Sequenz ist dezimale Notation, nicht oktale Notation wie in den meisten anderen Sprachen. Daher sind `8` Ziffern `9` und gültig, und `\032` eine Sequenz von stellt ein Leerzeichen (U+0020) `\040`dar, während derselbe Codepunkt in oktaler Notation wäre .
 
 > [!NOTE]
-> Die Beschränkung auf einen Bereich von 0-255 (0xFF), der `\DDD`-und `\x` Escapesequenzen ist effektiv der [ISO-8859-1-](https://en.wikipedia.org/wiki/ISO/IEC_8859-1#Code_page_layout) Zeichensatz, da dieser mit den ersten 256 Unicode-Code Punkten übereinstimmt.
+> Da die `\DDD` Sequenzen und `\x` Escapesequenzen auf einen Bereich von 0 - 255 (0xFF) beschränkt sind, sind sie effektiv der [ISO-8859-1-Zeichensatz,](https://en.wikipedia.org/wiki/ISO/IEC_8859-1#Code_page_layout) da dieser den ersten 256 Unicode-Codepunkten entspricht.
 
-## <a name="verbatim-strings"></a>Wörtliche Zeichen folgen
+## <a name="verbatim-strings"></a>Verbatim Strings
 
-Wenn das @-Symbol vorangestellt ist, ist das Literale eine wörtliche Zeichenfolge. Dies bedeutet, dass alle Escapesequenzen ignoriert werden, mit dem Unterschied, dass zwei Anführungszeichen als ein Anführungszeichen interpretiert werden.
+Wenn dem Symbol " vorangestellt wird, ist das Literal eine wörtliche Zeichenfolge. Dies bedeutet, dass alle Escapesequenzen ignoriert werden, mit der Ausnahme, dass zwei Anführungszeichen als ein Anführungszeichen interpretiert werden.
 
-## <a name="triple-quoted-strings"></a>Zeichen folgen mit drei Zeichen
+## <a name="triple-quoted-strings"></a>Dreifach zitierte Strings
 
-Außerdem kann eine Zeichenfolge durch dreifache Anführungszeichen eingeschlossen werden. In diesem Fall werden alle Escapesequenzen ignoriert, einschließlich doppelter Anführungszeichen. Zum Angeben einer Zeichenfolge, die eine eingebettete Zeichenfolge in Anführungszeichen enthält, können Sie entweder eine wörtliche Zeichenfolge oder eine Zeichenfolge mit drei Anführungszeichen verwenden. Wenn Sie eine wörtliche Zeichenfolge verwenden, müssen Sie zwei Anführungszeichen angeben, um ein einzelnes Anführungszeichen anzugeben. Wenn Sie eine Zeichenfolge mit drei Anführungszeichen verwenden, können Sie die einfachen Anführungszeichen verwenden, ohne Sie als Ende der Zeichenfolge zu analysieren. Diese Technik kann nützlich sein, wenn Sie mit XML oder anderen Strukturen arbeiten, die eingebettete Anführungszeichen enthalten.
+Darüber hinaus kann eine Zeichenfolge durch dreifache Anführungszeichen eingeschlossen werden. In diesem Fall werden alle Escapesequenzen ignoriert, einschließlich doppelter Anführungszeichenzeichen. Um eine Zeichenfolge anzugeben, die eine eingebettete Zeichenfolge in Anführungszeichen enthält, können Sie entweder eine wörtliche Zeichenfolge oder eine Zeichenfolge mit dreifachem Anführungszeichen verwenden. Wenn Sie eine wörtliche Zeichenfolge verwenden, müssen Sie zwei Anführungszeichen angeben, um ein einfaches Anführungszeichen anzuzeigen. Wenn Sie eine Zeichenfolge mit dreifachem Anführungszeichen verwenden, können Sie die Zeichen mit einem anführungszeichen verwenden, ohne dass sie als Ende der Zeichenfolge analysiert werden. Diese Technik kann nützlich sein, wenn Sie mit XML oder anderen Strukturen arbeiten, die eingebettete Anführungszeichen enthalten.
 
 ```fsharp
 // Using a verbatim string
@@ -59,19 +59,19 @@ let xmlFragment1 = @"<book author=""Milton, John"" title=""Paradise Lost"">"
 let xmlFragment2 = """<book author="Milton, John" title="Paradise Lost">"""
 ```
 
-Im Code werden Zeichen folgen, die Zeilenumbrüche aufweisen, akzeptiert, und die Zeilenumbrüche werden buchstäblich als Zeilenumbruch interpretiert, es sei denn, ein umgekehrter Schrägstrich ist das letzte Zeichen vor dem Zeilenumbruch. Führende Leerzeichen in der nächsten Zeile werden ignoriert, wenn der umgekehrte Schrägstrich verwendet wird. Der folgende Code erzeugt eine Zeichenfolge `str1`, die einen Wert `"abc\ndef"` und eine Zeichenfolge `str2` mit einem Wert `"abcdef"`aufweist.
+Im Code werden Zeichenfolgen mit Zeilenumbrüchen akzeptiert, und die Zeilenumbrüche werden wörtlich als Zeilenumbrüche interpretiert, es sei denn, ein umgekehrter Schrägstrich ist das letzte Zeichen vor dem Zeilenumbruch. Führender Leerraum in der nächsten Zeile wird ignoriert, wenn das umgekehrte Schrägstrichzeichen verwendet wird. Der folgende Code `str1` erzeugt eine `"abc\ndef"` Zeichenfolge `str2` mit Wert `"abcdef"`und eine Zeichenfolge mit Wert .
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1001.fs)]
 
-## <a name="string-indexing-and-slicing"></a>Indizierung und Slicing von Zeichen folgen
+## <a name="string-indexing-and-slicing"></a>String-Indizierung und Slicing
 
-Sie können in einer Zeichenfolge auf einzelne Zeichen zugreifen, indem Sie wie folgt eine Array ähnliche Syntax verwenden.
+Sie können wie folgt auf einzelne Zeichen in einer Zeichenfolge zugreifen, indem Sie die Array-ähnliche Syntax verwenden.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1002.fs)]
 
 Die Ausgabe lautet `b`.
 
-Sie können auch Teil Zeichenfolgen extrahieren, indem Sie die Array Slice-Syntax verwenden, wie im folgenden Code dargestellt.
+Sie können auch Teilzeichenfolgen extrahieren, indem Sie die Array-Slice-Syntax verwenden, wie im folgenden Code gezeigt.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1003.fs)]
 
@@ -82,30 +82,28 @@ abc
 def
 ```
 
-Sie können ASCII-Zeichen folgen nach Arrays nicht signierter Bytes darstellen, `byte[]`eingeben. Sie fügen das Suffix `B` einem Zeichenfolgenliteralzeichen hinzu, um anzugeben, dass es sich um eine ASCII- ASCII-Zeichenfolgenliterale, die mit Byte Arrays verwendet werden, unterstützen die gleichen Escapesequenzen wie Unicode-Zeichen folgen, mit Ausnahme der
+Sie können ASCII-Zeichenfolgen nach Arrays `byte[]`von nicht signierten Bytes darstellen, geben Sie ein. Sie fügen das `B` Suffix zu einem Zeichenfolgenliteral hinzu, um anzugeben, dass es sich um eine ASCII-Zeichenfolge handelt. ASCII-Zeichenfolgenliterale, die mit Bytearrays verwendet werden, unterstützen dieselben Escapesequenzen wie Unicode-Zeichenfolgen, mit Ausnahme der Unicode-Escapesequenzen.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1004.fs)]
 
-## <a name="string-operators"></a>Zeichen folgen Operatoren
+## <a name="string-operators"></a>String-Operatoren
 
-Es gibt zwei Möglichkeiten, Zeichen folgen zu verketten: mithilfe des-`+` Operators oder mithilfe des `^`-Operators. Der `+`-Operator behält die Kompatibilität mit den Funktionen der .NET Framework Zeichen folgen Behandlung bei.
-
-Das folgende Beispiel veranschaulicht die Verkettung von Zeichen folgen.
+Der `+` Operator kann zum Verketten von Zeichenfolgen verwendet werden, wobei die Kompatibilität mit den .NET Framework-Zeichenfolgenbehandlungsfeatures beibehalten wird. Das folgende Beispiel veranschaulicht die Zeichenfolgenverkettung.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1006.fs)]
 
 ## <a name="string-class"></a>String-Klasse
 
-Da der String-Typ F# in tatsächlich ein .NET Framework `System.String`-Typ ist, sind alle `System.String` Member verfügbar. Dies schließt den `+`-Operator ein, der zum Verketten von Zeichen folgen, der `Length`-Eigenschaft und der `Chars`-Eigenschaft verwendet wird, die die Zeichenfolge als Array von Unicode-Zeichen zurückgibt. Weitere Informationen zu Zeichen folgen finden Sie unter `System.String`.
+Da es sich bei dem Zeichenfolgentyp `System.String` in F' tatsächlich um einen .NET Framework-Typ handelt, sind alle `System.String` Member verfügbar. Dazu gehören `+` der Operator, der zum Verketten `Length` von Zeichenfolgen verwendet wird, die Eigenschaft und die `Chars` Eigenschaft, die die Zeichenfolge als Array von Unicode-Zeichen zurückgibt. Weitere Informationen zu Zeichenfolgen finden Sie unter `System.String`.
 
-Mithilfe der `Chars`-Eigenschaft von `System.String`können Sie auf die einzelnen Zeichen in einer Zeichenfolge zugreifen, indem Sie einen Index angeben, wie im folgenden Code dargestellt.
+Mithilfe der `Chars` Eigenschaft `System.String`von können Sie auf die einzelnen Zeichen in einer Zeichenfolge zugreifen, indem Sie einen Index angeben, wie im folgenden Code gezeigt.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1005.fs)]
 
-## <a name="string-module"></a>Zeichen folgen Modul
+## <a name="string-module"></a>String-Modul
 
-Zusätzliche Funktionen für die Zeichen folgen Behandlung sind im `String`-Modul im `FSharp.Core`-Namespace enthalten. Weitere Informationen finden Sie unter [Core. String-Modul](https://msdn.microsoft.com/visualfsharpdocs/conceptual/core.string-module-%5bfsharp%5d).
+Zusätzliche Funktionen für die Zeichenfolgenbehandlung sind im `String` Modul im `FSharp.Core` Namespace enthalten. Weitere Informationen finden Sie unter [Core.String-Modul](https://msdn.microsoft.com/visualfsharpdocs/conceptual/core.string-module-%5bfsharp%5d).
 
 ## <a name="see-also"></a>Siehe auch
 
-- [F#-Sprachreferenz](index.md)
+- [Sprachreferenz](index.md)

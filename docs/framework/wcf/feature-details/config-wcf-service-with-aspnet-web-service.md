@@ -5,18 +5,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 48e1cd90-de80-4d6c-846e-631878955762
-ms.openlocfilehash: 22713aba4f86fe493ba3d16ef09c2a71b6d55fe0
-ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
+ms.openlocfilehash: ddd7e8c95701532010b54e5136a33d37d139f6a4
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/15/2020
-ms.locfileid: "81389785"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81739231"
 ---
 # <a name="how-to-configure-wcf-service-to-interoperate-with-aspnet-web-service-clients"></a>Vorgehensweise: Konfigurieren eines WCF-Diensts für die Zusammenarbeit mit ASP.NET-Webdienstclients
 
 Um einen WCF-Dienstendpunkt (Windows Communication Foundation) so zu konfigurieren, <xref:System.ServiceModel.BasicHttpBinding?displayProperty=nameWithType> dass er mit ASP.NET Webdienstclients interoperabel ist, verwenden Sie den Typ als Bindungstyp für Ihren Dienstendpunkt.  
   
- Sie können für die Bindung auch Unterstützung für HTTPS und Clientauthentifizierung auf Transportebene aktivieren. ASP.NET Webdienstclients unterstützen keine MTOM-Nachrichtencodierung, daher sollte die <xref:System.ServiceModel.BasicHttpBinding.MessageEncoding%2A?displayProperty=nameWithType> Eigenschaft als <xref:System.ServiceModel.WSMessageEncoding.Text?displayProperty=nameWithType>Standardwert belassen werden, d. h. . ASP.NET-Webdienstclients unterstützen WS-Sicherheit nicht; deshalb sollte  <xref:System.ServiceModel.BasicHttpBinding.Security%2A?displayProperty=nameWithType> auf <xref:System.ServiceModel.BasicHttpSecurityMode.Transport> festgelegt werden.  
+ Sie können für die Bindung auch Unterstützung für HTTPS und Clientauthentifizierung auf Transportebene aktivieren. ASP.NET Webdienstclients unterstützen keine MTOM-Nachrichtencodierung, daher sollte die <xref:System.ServiceModel.BasicHttpBinding.MessageEncoding%2A?displayProperty=nameWithType> Eigenschaft als <xref:System.ServiceModel.WSMessageEncoding.Text?displayProperty=nameWithType>Standardwert belassen werden, d. h. . ASP.NET Web Dienstclients unterstützen WS-Security <xref:System.ServiceModel.BasicHttpBinding.Security%2A?displayProperty=nameWithType> nicht, daher <xref:System.ServiceModel.BasicHttpSecurityMode.Transport>sollte die auf festgelegt werden.  
   
  Um die Metadaten für einen WCF-Dienst für ASP.NET Webdienstproxygenerierungstools (d. h. [Web Services Description Language Tool (Wsdl.exe),](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/7h3ystb6(v%3dvs.100))Web Services Discovery Tool [(Disco.exe)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cy2a3ybs(v=vs.100))und das **Feature Webreferenz** hinzufügen in Visual Studio) verfügbar zu machen, sollten Sie einen HTTP/GET-Metadatenendpunkt verfügbar machen.  
   
@@ -47,12 +47,12 @@ Um einen WCF-Dienstendpunkt (Windows Communication Foundation) so zu konfigurier
  [!code-vb[C_HowTo-WCFServiceAndASMXClient#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto-wcfserviceandasmxclient/vb/program.vb#0)]
  [!code-xml[C_HowTo-WCFServiceAndASMXClient#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto-wcfserviceandasmxclient/common/app.config#1)]
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Vorgehensweise: Erstellen eines Dienstendpunkts im Code](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-code.md)
 - [Vorgehensweise: Veröffentlichen von Metadaten für einen Dienst über den Code](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md)
 - [Vorgehensweise: Angeben einer Dienstbindung in einer Konfiguration](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md)
 - [Vorgehensweise: Erstellen eines Dienstendpunkts in einer Konfiguration](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md)
 - [Vorgehensweise: Veröffentlichen von Metadaten für einen Dienst mithilfe einer Konfigurationsdatei](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)
-- [Transportsicherheit](../../../../docs/framework/wcf/feature-details/transport-security.md)
+- [Verkehrssicherheit](../../../../docs/framework/wcf/feature-details/transport-security.md)
 - [Verwenden von Metadaten](../../../../docs/framework/wcf/feature-details/using-metadata.md)

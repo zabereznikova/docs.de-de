@@ -3,18 +3,18 @@ title: Erste Schritte mit Azure File Storage mit F#
 description: Speichern Sie Dateidaten mit Azure File Storage in der Cloud, und stellen Sie Ihre Clouddateifreigabe über eine virtuelle Azure-Maschine (VM) oder eine lokale Anwendung mit Windows bereit.
 author: sylvanc
 ms.date: 09/20/2016
-ms.openlocfilehash: 2088442e05ba36b388a3324942ebbf8c7eb263dd
-ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
+ms.openlocfilehash: 1b38ee53f2f73f7b7f4ee12f712f487cb726d41e
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81607466"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81739591"
 ---
 # <a name="get-started-with-azure-file-storage-using-f"></a>Erste Schritte mit Azure File Storage mit F\#
 
 Azure File Storage ist ein Dienst, der Dateifreigaben in der Cloud mithilfe des Standardmäßigen [SMB-Protokolls (Server Message Block)](https://msdn.microsoft.com/library/windows/desktop/aa365233.aspx)anbietet. Sowohl SMB 2.1 als auch SMB 3.0 werden unterstützt. Mit Azure File Storage können Sie Legacyanwendungen, für die Dateifreigaben benötigt werden, schnell und ohne teures Umschreiben zu Azure migrieren. Anwendungen, die auf virtuellen Azure-Maschinen, in Clouddiensten oder auf lokalen Clients ausgeführt werden, können eine Dateifreigabe genauso in der Cloud bereitstellen, wie eine Desktopanwendung eine normale SMB-Freigabe bereitstellt. Die File Storage-Freigaben können dann von beliebig vielen Anwendungskomponenten gleichzeitig eingebunden und genutzt werden.
 
-Eine konzeptionelle Übersicht über die Dateispeicherung finden Sie [im .NET-Handbuch für die Dateispeicherung](https://docs.microsoft.com/azure/storage/storage-dotnet-how-to-use-files).
+Eine konzeptionelle Übersicht über den Dateispeicher finden Sie [im .NET-Handbuch für dateispeicher](https://docs.microsoft.com/azure/storage/storage-dotnet-how-to-use-files).
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
@@ -127,13 +127,13 @@ Auf gleiche Weise können Sie ein BLOB in eine Datei kopieren. Wenn das Quellobj
 
 Azure Storage Analytics unterstützt Metriken für den Dateispeicher. Mit Metrikdaten können Sie Anforderungen verfolgen und Probleme diagnostizieren.
 
-Sie können Metriken für den Dateispeicher aus dem [Azure Portal](https://portal.azure.com)aktivieren, oder Sie können dies wie folgt tun:
+Sie können Metriken für den Dateispeicher über das [Azure-Portal](https://portal.azure.com)aktivieren, oder Sie können dies wie folgt tun:
 
 [!code-fsharp[FileStorage](~/samples/snippets/fsharp/azure/file-storage.fsx#L126-L140)]
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Weitere Informationen zum Azure-Dateispeicher erhalten Sie über diese Links.
+Weitere Informationen zum Azure File Storage finden Sie unter diesen Links.
 
 ### <a name="conceptual-articles-and-videos"></a>Konzeptionelle Artikel und Videos
 
@@ -146,7 +146,7 @@ Weitere Informationen zum Azure-Dateispeicher erhalten Sie über diese Links.
 - [Verwenden von AzCopy mit Microsoft Azure Storage](https://docs.microsoft.com/azure/storage/storage-use-azcopy)
 - [Erstellen, Herunterladen und Auflisten von Blobs mit der Azure-Befehlszeilenschnittstelle](https://docs.microsoft.com/azure/storage/blobs/storage-quickstart-blobs-cli#create-and-manage-file-shares)
 
-### <a name="reference"></a>Verweis
+### <a name="reference"></a>Referenz
 
 - [Referenz zur Storage-Clientbibliothek für .NET](https://msdn.microsoft.com/library/azure/mt347887.aspx)
 - [Referenz zur REST-API des Dateidiensts](/rest/api/storageservices/fileservices/File-Service-REST-API)

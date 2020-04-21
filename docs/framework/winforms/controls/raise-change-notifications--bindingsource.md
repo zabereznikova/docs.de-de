@@ -13,15 +13,15 @@ helpviewer_keywords:
 - INotifyPropertyChanged interface [Windows Forms], using with BindingSource
 - BindingSource component [Windows Forms], examples
 ms.assetid: 7fa2cf51-c09f-4375-adf0-e36c5617f099
-ms.openlocfilehash: 07248ec0b8ac4f2356d9c9915b6a904dfad30cb2
-ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
+ms.openlocfilehash: 2fe4458aa43144a9c29ed67fd7bee99a37fe1434
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/15/2020
-ms.locfileid: "81388983"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81739685"
 ---
 # <a name="how-to-raise-change-notifications-using-a-bindingsource-and-the-inotifypropertychanged-interface"></a>Vorgehensweise: Auslösen von Änderungsbenachrichtigungen mithilfe von BindingSource und der INotifyPropertyChanged-Schnittstelle
-Die <xref:System.Windows.Forms.BindingSource>-Komponente erkennt automatisch Änderungen in einer Datenquelle, wenn der in der Datenquelle enthaltene Typ die <xref:System.ComponentModel.INotifyPropertyChanged>-Schnittstelle implementiert und <xref:System.ComponentModel.INotifyPropertyChanged.PropertyChanged>-Ereignisse auslöst, sobald ein Eigenschaftswert geändert wird. Dies ist nützlich, da an die <xref:System.Windows.Forms.BindingSource> gebundene Steuerelemente automatisch aktualisiert werden, wenn sich die Datenquellenwerte ändern.  
+Die <xref:System.Windows.Forms.BindingSource> Komponente erkennt automatisch Änderungen in einer Datenquelle, wenn der <xref:System.ComponentModel.INotifyPropertyChanged> in <xref:System.ComponentModel.INotifyPropertyChanged.PropertyChanged> der Datenquelle enthaltene Typ Ereignisse implementiert und auslöst, wenn ein Eigenschaftswert geändert wird. Diese Änderungserkennung ist nützlich, <xref:System.Windows.Forms.BindingSource> da Steuerelemente, die an die automatische Aktualisierung gebunden sind, wenn sich die Datenquellenwerte ändern.  
   
 > [!NOTE]
 > Wenn die Datenquelle <xref:System.ComponentModel.INotifyPropertyChanged> implementiert, sollten Sie beim Durchführen asynchroner Operationen keine Änderungen an der Datenquelle in einem Hintergrundthread vornehmen. Lesen Sie die Daten stattdessen in einem Hintergrundthread, und führen Sie sie in einer Liste auf dem UI-Thread zusammen.  
@@ -37,9 +37,9 @@ Die <xref:System.Windows.Forms.BindingSource>-Komponente erkennt automatisch Än
 ## <a name="compiling-the-code"></a>Kompilieren des Codes  
  Für dieses Beispiel benötigen Sie Folgendes:  
   
-- Verweise auf die Assemblys "System", "System.Data", "System.Drawing" und "System.Windows.Forms".  
+- Verweise auf die Assemblys System,Data, System.Drawing und System.Windows.Forms.  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - <xref:System.ComponentModel.INotifyPropertyChanged>
 - [BindingSource-Komponente](bindingsource-component.md)

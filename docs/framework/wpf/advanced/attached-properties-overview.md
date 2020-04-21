@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - attached properties [WPF Designer]
 ms.assetid: 75928354-dc01-47e8-a018-8409aec1f32d
-ms.openlocfilehash: 5086401f4616074d364c1d387b751116120d5969
-ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
+ms.openlocfilehash: b207db459776c9f8fa7ea247d01071eeb8c995cf
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/15/2020
-ms.locfileid: "81388998"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81739297"
 ---
 # <a name="attached-properties-overview"></a>Übersicht über angefügte Eigenschaften
 
@@ -20,11 +20,11 @@ Eine angefügte Eigenschaft ist ein von XAML definiertes Konzept. Eine angefügt
 
 ## <a name="prerequisites"></a>Voraussetzungen<a name="prerequisites"></a>
 
-In diesem Thema wird davon ausgegangen, dass Sie Abhängigkeitseigenschaften aus Sicht eines Consumers vorhandener Abhängigkeitseigenschaften von [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]-Klassen verstehen und die [Übersicht über Abhängigkeitseigenschaften](dependency-properties-overview.md) gelesen haben. Um den Beispielen in diesem Thema zu folgen, sollten Sie auch XAML verstehen und wissen, wie WPF-Anwendungen geschrieben werden.
+In diesem Artikel wird davon ausgegangen, dass Sie Abhängigkeitseigenschaften aus der Perspektive eines Consumers vorhandener Abhängigkeitseigenschaften für [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Klassen verstehen und die [Abhängigkeitseigenschaftenübersicht](dependency-properties-overview.md)gelesen haben. Um den Beispielen in diesem Artikel zu folgen, sollten Sie auch XAML verstehen und wissen, wie Man WPF-Anwendungen schreibt.
 
 ## <a name="why-use-attached-properties"></a>Warum angefügte Eigenschaften verwenden<a name="attached_properties_usage"></a>
 
-Ein Zweck einer angefügten Eigenschaft ist die Berechtigung für verschiedene untergeordnete Elemente, eindeutige Werte für eine Eigenschaft anzugeben, die eigentlich in einem übergeordneten Element definiert ist. Eine bestimmte Anwendung dieses Szenario: Untergeordnete Elemente informieren übergeordnete Element, wie diese im [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] angezeigt werden sollen. Ein Beispiel <xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType> ist die Eigenschaft. Die <xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType> Eigenschaft wird als angefügte Eigenschaft erstellt, da sie für <xref:System.Windows.Controls.DockPanel>Elemente festgelegt <xref:System.Windows.Controls.DockPanel> werden soll, die in einem enthalten sind, und nicht für sich selbst. Die <xref:System.Windows.Controls.DockPanel> Klasse definiert <xref:System.Windows.DependencyProperty> das <xref:System.Windows.Controls.DockPanel.DockProperty>statische Feld mit <xref:System.Windows.Controls.DockPanel.GetDock%2A> <xref:System.Windows.Controls.DockPanel.SetDock%2A> dem Namen , und stellt dann die und Methoden als öffentliche Accessoren für die angefügte Eigenschaft bereit.
+Ein Zweck einer angefügten Eigenschaft besteht darin, verschiedenen untergeordneten Elementen das Angeben eindeutiger Werte für eine Eigenschaft zu ermöglichen, die in einem übergeordneten Element definiert ist. Eine bestimmte Anwendung dieses Szenario: Untergeordnete Elemente informieren übergeordnete Element, wie diese im [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] angezeigt werden sollen. Ein Beispiel <xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType> ist die Eigenschaft. Die <xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType> Eigenschaft wird als angefügte Eigenschaft erstellt, da sie so <xref:System.Windows.Controls.DockPanel> konzipiert ist, dass sie für Elemente festgelegt wird, die in einer und nicht auf <xref:System.Windows.Controls.DockPanel> sich selbst enthalten sind. Die <xref:System.Windows.Controls.DockPanel> Klasse definiert <xref:System.Windows.DependencyProperty> das <xref:System.Windows.Controls.DockPanel.DockProperty>statische Feld mit <xref:System.Windows.Controls.DockPanel.GetDock%2A> <xref:System.Windows.Controls.DockPanel.SetDock%2A> dem Namen , und stellt dann die und Methoden als öffentliche Accessoren für die angefügte Eigenschaft bereit.
 
 ## <a name="attached-properties-in-xaml"></a>Angefügte Eigenschaften in XAML<a name="attached_properties_xaml"></a>
 
@@ -34,13 +34,13 @@ Im Folgenden finden Sie ein <xref:System.Windows.Controls.DockPanel.Dock%2A?disp
 
 [!code-xaml[PropertiesOvwSupport#APBasicUsage](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page4.xaml#apbasicusage)]
 
-Beachten Sie, dass die Verwendung einer statischen Eigenschaft ähnelt. Sie verweisen immer <xref:System.Windows.Controls.DockPanel> auf den Typ, der die angehängte Eigenschaft besitzt und registriert, anstatt auf eine Instanz zu verweisen, die durch den Namen angegeben ist.
+Die Verwendung ähnelt einer statischen Eigenschaft. Sie verweisen immer <xref:System.Windows.Controls.DockPanel> auf den Typ, der die angehängte Eigenschaft besitzt und registriert, anstatt auf eine Instanz zu verweisen, die durch den Namen angegeben ist.
 
-Da eine angefügte Eigenschaft in XAML ein Attribut ist, das Sie im Markup festlegen, besitzt außerdem nur der Mengenvorgang Relevanz. Sie können eine Eigenschaft in XAML nicht direkt abrufen, obwohl einige indirekte Mechanismen zum Vergleichen von Werten vorhanden sind, wie z.B. Trigger in Formaten (weitere Informationen finden Sie unter [Erstellen von Formaten und Vorlagen](../controls/styling-and-templating.md)).
+Da eine angefügte Eigenschaft in XAML ein Attribut ist, das Sie im Markup festlegen, besitzt außerdem nur der Mengenvorgang Relevanz. Sie können eine Eigenschaft in XAML nicht direkt abrufen, obwohl einige indirekte Mechanismen zum Vergleichen von Werten vorhanden sind, wie z.B. Trigger in Formaten (weitere Informationen finden Sie unter [Erstellen von Formaten und Vorlagen](../../../desktop-wpf/fundamentals/styles-templates-overview.md)).
 
 ### <a name="attached-property-implementation-in-wpf"></a>Implementierung von angefügten Eigenschaften in WPF
 
-In [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]werden die meisten angefügten Eigenschaften, die für WPF-Typen vorhanden sind, die mit der UI-Präsentation verknüpft sind, als Abhängigkeitseigenschaften implementiert. Angefügte Eigenschaften sind ein XAML-Konzept, während Abhängigkeitseigenschaften ein WPF-Konzept sind. Da von WPF angefügte Eigenschaften Abhängigkeitseigenschaften sind, unterstützen sie Abhängigkeitseigenschaftskonzepte wie Eigenschaftenmetadaten und Standardwerte aus diesen Eigenschaftenmetadaten.
+In [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]werden die meisten UI-bezogenen angefügten Eigenschaften für WPF-Typen als Abhängigkeitseigenschaften implementiert. Angefügte Eigenschaften sind ein XAML-Konzept, während Abhängigkeitseigenschaften ein WPF-Konzept sind. Da von WPF angefügte Eigenschaften Abhängigkeitseigenschaften sind, unterstützen sie Abhängigkeitseigenschaftskonzepte wie Eigenschaftenmetadaten und Standardwerte aus diesen Eigenschaftenmetadaten.
 
 ## <a name="how-attached-properties-are-used-by-the-owning-type"></a>Wie angefügte Eigenschaften vom Besitzendentyp verwendet werden<a name="howused"></a>
 
@@ -91,7 +91,7 @@ Wie bereits erwähnt, sollten Sie als eine angefügte Eigenschaft registrieren, 
 
 Wenn Ihre Klasse die angefügte Eigenschaft strikt für die Verwendung für andere <xref:System.Windows.DependencyObject>Typen definiert, muss die Klasse nicht von ableiten. Sie müssen jedoch ableiten, <xref:System.Windows.DependencyObject> wenn Sie dem gesamten WPF-Modell folgen, dass Ihre angefügte Eigenschaft auch eine Abhängigkeitseigenschaft ist.
 
-Definieren Sie Ihre angefügte Eigenschaft als `public static readonly` Abhängigkeitseigenschaft, indem Sie ein Feld vom Typ <xref:System.Windows.DependencyProperty>deklarieren. Sie definieren dieses Feld mithilfe des <xref:System.Windows.DependencyProperty.RegisterAttached%2A> Rückgabewerts der Methode. Der Feldname muss mit dem angehängten `Property`Eigenschaftsnamen übereinstimmen, der an die Zeichenfolge angehängt wird, um dem festgelegten WPF-Muster zu folgen, bei dem die identifizierenden Felder im Vergleich zu den Eigenschaften, die sie darstellen, benannt werden. Der angefügte Eigenschaftsanbieter muss auch statische **Get_PropertyName_** und **Set_PropertyName_** Methoden als Accessoren für die angefügte Eigenschaft bereitstellen. Andernfalls kann das Eigenschaftensystem Ihre angefügte Eigenschaft nicht verwenden.
+Definieren Sie Ihre angefügte Eigenschaft als `public static readonly` Abhängigkeitseigenschaft, indem Sie ein Feld vom Typ <xref:System.Windows.DependencyProperty>deklarieren. Sie definieren dieses Feld mithilfe des <xref:System.Windows.DependencyProperty.RegisterAttached%2A> Rückgabewerts der Methode. Der Feldname muss mit dem angehängten `Property`Eigenschaftsnamen übereinstimmen, der an die Zeichenfolge angehängt wird, um dem festgelegten WPF-Muster zu folgen, bei dem die identifizierenden Felder im Vergleich zu den Eigenschaften, die sie darstellen, benannt werden. Der angefügte Eigenschaftsanbieter muss auch statische **Get_PropertyName_** und **Set_PropertyName_** Methoden als Accessoren für die angefügte Eigenschaft bereitstellen. Andernfalls kann das Eigenschaftensystem ihre angefügte Eigenschaft nicht verwenden.
 
 > [!NOTE]
 > Wenn Sie den get-Accessor der angefügten Eigenschaft weglassen, funktioniert die Datenbindung für die Eigenschaft in Entwurfstools wie Visual Studio und Blend für Visual Studio nicht.
@@ -141,7 +141,7 @@ WPF definiert mehrere .NET-Attribute, die Informationen über angefügte Eigensc
 
 - Sie können auch eine Eigenschaft als angefügte Eigenschaft und als Abhängigkeitseigenschaft registrieren, dann jedoch trotzdem „Wrapper“-Implementierungen offenlegen. In diesem Fall kann die Eigenschaft entweder auf das Element festgelegt werden, oder auf ein beliebiges Element über die angefügte XAML-Eigenschaftssyntax. Ein Beispiel für eine Eigenschaft mit einem geeigneten Szenario <xref:System.Windows.FrameworkElement.FlowDirection%2A?displayProperty=nameWithType>für Standard- und angefügte Verwendungen ist .
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Windows.DependencyProperty>
 - [Übersicht über Abhängigkeitseigenschaften](dependency-properties-overview.md)
