@@ -7,12 +7,12 @@ helpviewer_keywords:
 - tools [.NET Framework]
 - running .NET Framework tools
 ms.assetid: a2ca532d-91f7-426a-9303-417c2ee1247c
-ms.openlocfilehash: 4503e2cff18f4aa901d20c76cfe4076a7fed3600
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 60a9cb241f289cacc7437174f112114e843aca47
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75715764"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81645565"
 ---
 # <a name="net-framework-tools"></a>.NET Framework-Tools
 
@@ -36,7 +36,7 @@ Generiert eine Datei mit einem Assemblymanifest aus Modulen oder Ressourcendatei
 Konvertiert Typdefinitionen in einer COM-Typbibliothek für ein ActiveX-Steuerelement in ein Windows Forms-Steuerelement.
 
 - [Caspol.exe (Richtlinientool für die Codezugriffssicherheit)](caspol-exe-code-access-security-policy-tool.md)  
-Das Sicherheitsrichtlinientool für den Codezugriff ermöglicht es Ihnen, Sicherheitsrichtlinien auf der Ebene von Computer-, Benutzer- sowie Unternehmensrichtlinien anzuzeigen und zu konfigurieren. In .NET Framework 4 und höheren Versionen wirkt sich dieses Tool nur dann auf Richtlinien für die Codezugriffssicherheit (Code Access Security CAS) aus, wenn das [\<legacyCasPolicy>-Element](../configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md) auf `true` festgelegt ist. Weitere Informationen finden Sie unter [Sicherheitsänderungen](../security/security-changes.md).
+Das Sicherheitsrichtlinientool für den Codezugriff ermöglicht es Ihnen, Sicherheitsrichtlinien auf der Ebene von Computer-, Benutzer- sowie Unternehmensrichtlinien anzuzeigen und zu konfigurieren. In .NET Framework 4 und höheren Versionen wirkt sich dieses Tool nur dann auf Richtlinien für die Codezugriffssicherheit (Code Access Security CAS) aus, wenn das [\<legacyCasPolicy>-Element](../configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md) auf `true` festgelegt ist. Weitere Informationen finden Sie unter [Sicherheitsänderungen](https://docs.microsoft.com/previous-versions/dotnet/framework/security/security-changes).
 
 - [Cert2spc.exe (Software Publisher Certificate Test-Tool)](cert2spc-exe-software-publisher-certificate-test-tool.md)  
 Erstellt ein SPC (Software Publisher's Certificate, Softwareherausgeberzertifikat) aus einem oder mehreren X.509-Zertifikaten. Dieses Tool wird ausschließlich zu Testzwecken verwendet.

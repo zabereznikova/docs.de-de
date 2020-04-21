@@ -1,12 +1,12 @@
 ---
 title: Attribute (C#)
 ms.date: 04/26/2018
-ms.openlocfilehash: 62424163303417746a67707d9ef34185954db316
-ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
+ms.openlocfilehash: 0379bb76cf18ff836bd14aafb9cb97c30aee8ec7
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/15/2020
-ms.locfileid: "81389539"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81645487"
 ---
 # <a name="attributes-c"></a>Attribute (C#)
 
@@ -81,7 +81,7 @@ Die Liste der möglichen `target`-Werte wird in der folgenden Tabelle gezeigt:
 
 Geben Sie den `field`-Zielwert an, um ein Attribut auf das für eine [automatisch implementierte Eigenschaft](../../../properties.md) erstellte Unterstützungsfeld anzuwenden.
 
-Im folgenden Beispiel wird veranschaulicht, wie Attribute auf Assemblys und Module angewendet werden. Weitere Informationen finden Sie unter [Allgemeine Attribute (C#)](common-attributes.md).
+Im folgenden Beispiel wird veranschaulicht, wie Attribute auf Assemblys und Module angewendet werden. Weitere Informationen finden Sie unter [Allgemeine Attribute (C#)](../../../language-reference/attributes/global.md).
 
 ```csharp
 using System;
@@ -120,7 +120,7 @@ Weitere Informationen finden Sie unter:
 - [Erstellen benutzerdefinierter Attribute (C#)](creating-custom-attributes.md)  
 - [Accessing Attributes by Using Reflection (C#) (Zugriff auf Attribute mit Reflektion (C#))](accessing-attributes-by-using-reflection.md)  
 - [Erstellen einer Union in C/C++ mit Attributen (C#)](how-to-create-a-c-cpp-union-by-using-attributes.md)  
-- [Allgemeine Attribute (C#)](common-attributes.md)  
+- [Allgemeine Attribute (C#)](../../../language-reference/attributes/global.md)  
 - [Aufruferinformationen (C#)](../../../language-reference/attributes/caller-information.md)  
 
 ## <a name="see-also"></a>Siehe auch
