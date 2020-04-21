@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - base elements [WPF]
 ms.assetid: 2c997092-72c6-4767-bc84-74267f4eee72
-ms.openlocfilehash: 7d52d951d4fa4df83bbcca6b4cb479e18e532d2a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f6519675ebf3624152e1077e7582f04e38b1dce9
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79141627"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81644036"
 ---
 # <a name="base-elements-overview"></a>Übersicht über Basiselemente
 Ein hoher Prozentsatz [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] der Klassen in wird von vier Klassen abgeleitet, die in der SDK-Dokumentation häufig als Basiselementklassen bezeichnet werden. Diese Klassen <xref:System.Windows.UIElement> <xref:System.Windows.FrameworkElement>sind <xref:System.Windows.ContentElement>, <xref:System.Windows.FrameworkContentElement>, und . Die <xref:System.Windows.DependencyObject> Klasse ist auch verwandt, da sie <xref:System.Windows.UIElement> eine gemeinsame Basisklasse von<xref:System.Windows.ContentElement>  
@@ -47,7 +47,7 @@ Ein hoher Prozentsatz [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharp
   
 - Unterstützung für Formatierung und Storyboards. Weitere Informationen finden <xref:System.Windows.Style> Sie unter und [Storyboards Übersicht](../graphics-multimedia/storyboards-overview.md).  
   
-- Unterstützung für die Datenbindung. Weitere Informationen finden Sie unter [Datenbindungsübersicht](../data/data-binding-overview.md).  
+- Unterstützung für die Datenbindung. Weitere Informationen finden Sie unter [Datenbindungsübersicht](../../../desktop-wpf/data/data-binding-overview.md).  
   
 - Unterstützung für dynamische Ressourcenverweise. Weitere Informationen finden Sie unter [XAML-Ressourcen](../../../desktop-wpf/fundamentals/xaml-resources-define.md).  
   
@@ -67,7 +67,7 @@ Ein hoher Prozentsatz [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharp
   
 - Unterstützung für Formatierung und Storyboards. Weitere Informationen finden <xref:System.Windows.Style> Sie unter [Und Animationsübersicht](../graphics-multimedia/animation-overview.md).  
   
-- Unterstützung für die Datenbindung. Weitere Informationen finden Sie unter [Datenbindungsübersicht](../data/data-binding-overview.md).  
+- Unterstützung für die Datenbindung. Weitere Informationen finden Sie unter [Datenbindungsübersicht](../../../desktop-wpf/data/data-binding-overview.md).  
   
 - Unterstützung für dynamische Ressourcenverweise. Weitere Informationen finden Sie unter [XAML-Ressourcen](../../../desktop-wpf/fundamentals/xaml-resources-define.md).  
   
@@ -96,7 +96,7 @@ Ein hoher Prozentsatz [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharp
 ### <a name="control"></a>Control  
  <xref:System.Windows.Controls.Control>ist die beabsichtigte Basisklasse für den Objekttyp, der je nach Technologie als Steuerelement oder Komponente bezeichnet wird. Im allgemeinen sind [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Steuerelementklassen Klassen, die entweder direkt ein UI-Steuerelement darstellen oder in der Zusammenstellung der Steuerelemente eng beteiligt sind. Die primäre <xref:System.Windows.Controls.Control> Funktionalität, die aktiviert wird, ist die Steuerung der Templatierung.  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Windows.Controls.Control>
 - [Übersicht über Abhängigkeitseigenschaften](dependency-properties-overview.md)
