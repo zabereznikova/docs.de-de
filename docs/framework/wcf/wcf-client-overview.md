@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - clients [WCF], architecture
 ms.assetid: f60d9bc5-8ade-4471-8ecf-5a07a936c82d
-ms.openlocfilehash: c12579062b04cfb46e14d5c3d734a7c155f8d654
-ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
+ms.openlocfilehash: b314b61584e45ac5e80a248e639bdac427ba4a57
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81278885"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "82021727"
 ---
 # <a name="wcf-client-overview"></a>WCF-Clientübersicht
 
@@ -42,7 +42,7 @@ In den folgenden Abschnitten finden Sie eine Erläuterung dieser Schritte und ku
 - Aufrufen von Diensten mithilfe von Clientkanälen.  
   
 ## <a name="obtain-the-service-contract-bindings-and-addresses"></a>Abrufen von Dienstvertrag, Bindungen und Adressen  
- In WCF modellieren Dienste und Clients Verträge mithilfe verwalteter Attribute, Schnittstellen und Methoden. Soll eine Verbindung zu einem Dienst in einer Clientanwendung hergestellt werden, muss der Informationstyp für den Dienstvertrag abgerufen werden. In der Regel verwenden Sie das [ServiceModel Metadata Utility Tool (Svcutil.exe),](servicemodel-metadata-utility-tool-svcutil-exe.md)das Metadaten aus dem Dienst herunterlädt, in eine verwaltete Quellcodedatei in der Sprache Ihrer Wahl konvertiert und eine Clientanwendungskonfigurationsdatei erstellt, mit der Sie Ihr WCF-Clientobjekt konfigurieren können. Wenn Sie z. B. ein WCF-Clientobjekt `MyCalculatorService`erstellen, um eine aufzurufen, und `http://computerName/MyCalculatorService/Service.svc?wsdl`Sie wissen, dass die Metadaten für diesen Dienst unter `ClientCode.vb` veröffentlicht werden, wird im folgenden Codebeispiel gezeigt, wie Sie Svcutil.exe verwenden, um eine Datei zu erhalten, die den Dienstvertrag in verwaltetem Code enthält.  
+ In WCF modellieren Dienste und Clients Verträge mithilfe verwalteter Attribute, Schnittstellen und Methoden. Soll eine Verbindung zu einem Dienst in einer Clientanwendung hergestellt werden, muss der Informationstyp für den Dienstvertrag abgerufen werden. In der Regel erhalten Sie Mithilfe des [ServiceModel Metadata Utility Tool (Svcutil.exe)](servicemodel-metadata-utility-tool-svcutil-exe.md)Typinformationen für den Servicevertrag. Das Dienstprogramm lädt Metadaten aus dem Dienst herunter, konvertiert sie in eine verwaltete Quellcodedatei in der Sprache Ihrer Wahl und erstellt eine Clientanwendungskonfigurationsdatei, mit der Sie Ihr WCF-Clientobjekt konfigurieren können. Wenn Sie z. B. ein WCF-Clientobjekt `MyCalculatorService`erstellen, um eine aufzurufen, und `http://computerName/MyCalculatorService/Service.svc?wsdl`Sie wissen, dass die Metadaten für diesen Dienst unter `ClientCode.vb` veröffentlicht werden, wird im folgenden Codebeispiel gezeigt, wie Sie Svcutil.exe verwenden, um eine Datei zu erhalten, die den Dienstvertrag in verwaltetem Code enthält.  
   
 ```console  
 svcutil /language:vb /out:ClientCode.vb /config:app.config http://computerName/MyCalculatorService/Service.svc?wsdl  
@@ -172,7 +172,7 @@ End Interface
 ## <a name="calling-services-using-wcf-client-channels"></a>Aufrufen von Diensten mithilfe der WCF-Clientkanäle.  
  WCF-Clienttypen <xref:System.ServiceModel.ClientBase%601>erweitern , die <xref:System.ServiceModel.IClientChannel?displayProperty=nameWithType> selbst von der Schnittstelle ableiten, um das zugrunde liegende Kanalsystem verfügbar zu machen. Sie können Dienste aufrufen, indem Sie den Zieldienstvertrag mit der <xref:System.ServiceModel.ChannelFactory%601?displayProperty=nameWithType>-Klasse verwenden. Weitere Informationen finden Sie unter [WCF Client Architecture](./feature-details/client-architecture.md).  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType>
 - <xref:System.ServiceModel.ChannelFactory%601?displayProperty=nameWithType>

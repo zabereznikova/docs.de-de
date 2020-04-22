@@ -4,12 +4,12 @@ description: Beschreibt die Unterschiede zwischen der .NET Framework-Implementie
 author: thraka
 ms.date: 09/21/2019
 ms.author: adegeo
-ms.openlocfilehash: 4386654aad205e3c9f2cbd986d7b812e261e737f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 341e576f17c522fbcbb9c417176e9d4a13ab1b18
+ms.sourcegitcommit: 348bb052d5cef109a61a3d5253faa5d7167d55ac
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "81433133"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82021842"
 ---
 # <a name="differences-in-wpf"></a>Unterschiede in WPF
 
@@ -40,7 +40,7 @@ Wenn Ihr `<PackageReference>`Projekt verwendet, werden Pakete nicht lokal in ein
 
 Code Access Security (CAS) wird von .NET Core oder WPF für .NET Core nicht unterstützt. Alle CAS-bezogenen Funktionen werden unter der Annahme von Full-Trust behandelt. WPF für .NET Core entfernt CAS-bezogenen Code. Die öffentliche API-Oberfläche dieser Typen ist weiterhin vorhanden, um sicherzustellen, dass Aufrufe dieser Typen erfolgreich ausgeführt werden.
 
-Öffentlich definierte CAS-bezogene Typen wurden aus den WPF-Assemblys in die CoreFX-Assemblys verschoben. Für die WPF-Assemblys ist die Typweiterleitung auf die neue Position der verschobenen Typen festgelegt.
+Öffentlich definierte CAS-bezogene Typen wurden aus den WPF-Assemblys in die Core .NET-Bibliotheksassemblys verschoben. Für die WPF-Assemblys ist die Typweiterleitung auf die neue Position der verschobenen Typen festgelegt.
 
 | Quellassembly | Zielassembly | type                |
 | --------------- | --------------- | ------------------- |

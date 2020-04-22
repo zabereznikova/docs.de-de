@@ -2,12 +2,12 @@
 title: Async-Programmierung
 description: Erfahren Sie, wie F- eine saubere Unterstützung für Asynchronität auf der Grundlage eines Programmiermodells auf Sprachebene bietet, das von zentralen funktionalen Programmierkonzepten abgeleitet ist.
 ms.date: 12/17/2018
-ms.openlocfilehash: 9b2e3057c126d84474c21fde653da5bbee32938a
-ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
+ms.openlocfilehash: 0a7d400c9778e30d6b25798239f12b7b2b0e3d82
+ms.sourcegitcommit: 348bb052d5cef109a61a3d5253faa5d7167d55ac
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81608035"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82021520"
 ---
 # <a name="async-programming-in-f"></a>Asynchrone Programmierung in F\#
 
@@ -16,7 +16,7 @@ Die asynchrone Programmierung ist ein Mechanismus, der für moderne Anwendungen 
 - Präsentieren eines Serverprozesses, der eine erhebliche Anzahl gleichzeitig eingehender Anforderungen verarbeiten kann, während gleichzeitig die systembesetzten Systemressourcen minimiert werden, während die Anforderungsverarbeitung auf Eingaben von Systemen oder Diensten außerhalb dieses Prozesses wartet
 - Verwalten einer reaktionsfähigen Benutzeroberfläche oder eines Hauptthreads bei gleichzeitigfortschreitender Hintergrundarbeit
 
-Obwohl Hintergrundarbeit häufig die Verwendung mehrerer Threads umfasst, ist es wichtig, die Konzepte von Asynchronität und Multithreading separat zu betrachten. Tatsächlich handelt es sich um getrennte Anliegen, und das eine impliziert nicht das andere. Was in diesem Artikel folgt, beschreibt dies ausführlicher.
+Obwohl Hintergrundarbeit häufig die Verwendung mehrerer Threads umfasst, ist es wichtig, die Konzepte von Asynchronität und Multithreading separat zu betrachten. Tatsächlich handelt es sich um getrennte Anliegen, und das eine impliziert nicht das andere. In diesem Artikel werden die einzelnen Konzepte ausführlicher beschrieben.
 
 ## <a name="asynchrony-defined"></a>Asynchronität definiert
 
@@ -26,7 +26,7 @@ Der vorherige Punkt - dass asynchrony unabhängig von der Verwendung mehrerer Th
 - Parallelität; wenn mehrere Berechnungen oder mehrere Teile einer einzelnen Berechnung genau zur gleichen Zeit ausgeführt werden.
 - Asynchronität; wenn eine oder mehrere Berechnungen getrennt vom Hauptprogrammfluss ausgeführt werden können.
 
-Alle drei sind orthogonale Konzepte, können aber leicht vermischt werden, vor allem, wenn sie zusammen verwendet werden. Sie müssen z. B. mehrere asynchrone Berechnungen parallel ausführen. Dies bedeutet nicht, dass Parallelität oder Asynchronität einander implizieren.
+Alle drei sind orthogonale Konzepte, können aber leicht vermischt werden, vor allem, wenn sie zusammen verwendet werden. Sie müssen z. B. mehrere asynchrone Berechnungen parallel ausführen. Diese Beziehung bedeutet nicht, dass Parallelität oder Asynchronität einander implizieren.
 
 Betrachtet man die Etymologie des Wortes "asynchron", so sind zwei Teile beteiligt:
 
@@ -35,7 +35,7 @@ Betrachtet man die Etymologie des Wortes "asynchron", so sind zwei Teile beteili
 
 Wenn Sie diese beiden Begriffe zusammensetzen, werden Sie sehen, dass "asynchron" "nicht zur gleichen Zeit" bedeutet. Das ist alles! Es gibt keine Implikation von Parallelität oder Parallelität in dieser Definition. Das gilt auch in der Praxis.
 
-In der Praxis sind asynchrone Berechnungen in F- geplant, die unabhängig vom Hauptprogrammfluss ausgeführt werden. Dies impliziert weder Parallelität oder Parallelität noch impliziert es, dass eine Berechnung immer im Hintergrund stattfindet. In der Tat können asynchrone Berechnungen sogar synchron ausgeführt werden, abhängig von der Art der Berechnung und der Umgebung, in der die Berechnung ausgeführt wird.
+In der Praxis sind asynchrone Berechnungen in F- geplant, die unabhängig vom Hauptprogrammfluss ausgeführt werden. Diese unabhängige Ausführung impliziert weder Parallelität oder Parallelität noch impliziert sie, dass eine Berechnung immer im Hintergrund stattfindet. In der Tat können asynchrone Berechnungen sogar synchron ausgeführt werden, abhängig von der Art der Berechnung und der Umgebung, in der die Berechnung ausgeführt wird.
 
 Die wichtigste Einnahme, die Sie haben sollten, ist, dass asynchrone Berechnungen unabhängig vom Hauptprogrammfluss sind. Obwohl es nur wenige Garantien darüber gibt, wann oder wie eine asynchrone Berechnung ausgeführt wird, gibt es einige Ansätze zum Orchestrieren und Planen. Im weiteren Verlauf dieses Artikels werden die Kernkonzepte für die Asynchronität von F- und -Aussen erläutert und die In-F-Typen, Funktionen und Ausdrücke verwendet werden.
 
@@ -106,7 +106,7 @@ Wie Sie sehen `main` können, hat die Funktion einige weitere Anrufe getätigt. 
 1. Verwandeln Sie die Befehlszeilenargumente in `Async<unit>` Berechnungen mit `Array.map`.
 2. Erstellen `Async<'T[]>` Sie eine, die `printTotalFileBytes` die Berechnungen parallel plant und ausführt, wenn sie ausgeführt wird.
 3. Erstellen `Async<unit>` Sie eine, die die parallele Berechnung ausführt, und ignorieren Sie deren Ergebnis.
-4. Führen Sie die `Async.RunSynchronously` letzte Berechnung explizit mit aus, und blockieren Sie sie, bis sie abgeschlossen ist.
+4. Führen Sie die `Async.RunSynchronously` letzte Berechnung explizit mit aus und blockieren Sie sie, bis sie abgeschlossen ist.
 
 Wenn dieses Programm `printTotalFileBytes` ausgeführt wird, wird parallel für jedes Befehlszeilenargument ausgeführt. Da asynchrone Berechnungen unabhängig vom Programmfluss ausgeführt werden, gibt es keine Reihenfolge, in der sie ihre Informationen drucken und die Ausführung beenden. Die Berechnungen werden parallel geplant, aber ihre Ausführungsreihenfolge ist nicht garantiert.
 
@@ -167,7 +167,7 @@ Führt eine asynchrone Berechnung aus, die sofort im aktuellen Betriebssystemthr
 Signatur:
 
 ```fsharp
-computation: Async<unit> - cancellationToken: ?CancellationToken -> unit
+computation: Async<unit> * cancellationToken: ?CancellationToken -> unit
 ```
 
 Verwendung
@@ -185,7 +185,7 @@ Führt eine Berechnung im Threadpool aus. Gibt <xref:System.Threading.Tasks.Task
 Signatur:
 
 ```fsharp
-computation: Async<'T> - taskCreationOptions: ?TaskCreationOptions - cancellationToken: ?CancellationToken -> Task<'T>
+computation: Async<'T> * taskCreationOptions: ?TaskCreationOptions * cancellationToken: ?CancellationToken -> Task<'T>
 ```
 
 Verwendung
@@ -203,7 +203,7 @@ Plant eine Sequenz asynchroner Berechnungen, die parallel ausgeführt werden sol
 Signatur:
 
 ```fsharp
-computations: seq<Async<'T>> - ?maxDegreesOfParallelism: int -> Async<'T[]>
+computations: seq<Async<'T>> * ?maxDegreesOfParallelism: int -> Async<'T[]>
 ```
 
 Verwendung:
@@ -214,7 +214,7 @@ Verwendung:
 Worauf Sie achten sollten:
 
 - Sie können nur auf das resultierende Array von Werten zugreifen, wenn alle Berechnungen abgeschlossen sind.
-- Berechnungen werden ausgeführt, sobald sie am Ende geplant werden. Dies bedeutet, dass Sie sich nicht auf ihre Reihenfolge ihrer Ausführung verlassen können.
+- Berechnungen werden immer dann ausgeführt, wenn sie geplant werden. Dieses Verhalten bedeutet, dass Sie sich nicht auf ihre Reihenfolge ihrer Ausführung verlassen können.
 
 ### <a name="asyncsequential"></a>Async.Sequential
 
@@ -242,7 +242,7 @@ Gibt eine asynchrone Berechnung zurück, <xref:System.Threading.Tasks.Task%601> 
 Signatur:
 
 ```fsharp
-task: Task<'T>  -> Async<'T>
+task: Task<'T> -> Async<'T>
 ```
 
 Verwendung
@@ -251,7 +251,7 @@ Verwendung
 
 Worauf Sie achten sollten:
 
-- Ausnahmen werden gemäß <xref:System.AggregateException> der Konvention der Parallelbibliothek der Aufgabe eingeschlossen, und dies unterscheidet sich von der Art und Weise, in der Im Allgemeinen Ausnahmen von F' async angezeigt werden.
+- Ausnahmen werden nach <xref:System.AggregateException> der Konvention der Parallelbibliothek der Aufgabe eingeschlossen, und dieses Verhalten unterscheidet sich von der Art und Weise, wie F'async im Allgemeinen Ausnahmen anzeigt.
 
 ### <a name="asynccatch"></a>Async.Catch
 
@@ -287,7 +287,7 @@ Verwendung
 
 Worauf Sie achten sollten:
 
-- Wenn Sie dies verwenden müssen, weil Sie eine andere Funktion verwenden `Async.Start` möchten, die erforderlich ist, `Async<unit>`sollten Sie überlegen, ob das Verwerfen des Ergebnisses in Ordnung ist. Das Verwerfen von Ergebnissen, nur um eine Typsignatur anzupassen, sollte in der Regel nicht durchgeführt werden.
+- Wenn Sie `Async.Ignore` verwenden müssen, `Async.Start` weil Sie verwenden `Async<unit>`möchten, oder eine andere Funktion, die erfordert, überlegen Sie, ob das Verwerfen des Ergebnisses in Ordnung ist. Vermeiden Sie das Verwerfen von Ergebnissen, nur um eine Typsignatur anzupassen.
 
 ### <a name="asyncrunsynchronously"></a>Async.RunSynchron
 
@@ -296,7 +296,7 @@ Führt eine asynchrone Berechnung aus und wartet auf das Ergebnis für den aufru
 Signatur:
 
 ```fsharp
-computation: Async<'T> - timeout: ?int - cancellationToken: ?CancellationToken -> 'T
+computation: Async<'T> * timeout: ?int * cancellationToken: ?CancellationToken -> 'T
 ```
 
 Verwendung:
@@ -310,12 +310,12 @@ Worauf Sie achten sollten:
 
 ### <a name="asyncstart"></a>Async.Start
 
-Startet eine asynchrone Berechnung im `unit`Threadpool, die zurückgibt. Wartet nicht auf sein Ergebnis. Geschachtelte Berechnungen, `Async.Start` die mit gestartet werden, werden völlig unabhängig von der übergeordneten Berechnung gestartet, die sie aufgerufen hat. Ihre Lebensdauer ist nicht an eine Berechnung der Eltern gebunden. Wenn die übergeordnete Berechnung abgebrochen wird, werden keine untergeordneten Berechnungen abgebrochen.
+Startet eine asynchrone Berechnung im `unit`Threadpool, die zurückgibt. Wartet nicht auf sein Ergebnis. Geschachtelte Berechnungen, `Async.Start` die mit gestartet werden, werden unabhängig von der übergeordneten Berechnung gestartet, die sie aufgerufen hat. Ihre Lebensdauer ist nicht an eine Berechnung der Eltern gebunden. Wenn die übergeordnete Berechnung abgebrochen wird, werden keine untergeordneten Berechnungen abgebrochen.
 
 Signatur:
 
 ```fsharp
-computation: Async<unit> - cancellationToken: ?CancellationToken -> unit
+computation: Async<unit> * cancellationToken: ?CancellationToken -> unit
 ```
 
 Nur verwenden, wenn:
@@ -328,7 +328,7 @@ Nur verwenden, wenn:
 Worauf Sie achten sollten:
 
 - Ausnahmen, die durch Berechnungen `Async.Start` ausgelöst werden, die mit gestartet werden, werden nicht an den Aufrufer weitergegeben. Die Aufrufliste wird vollständig aufgelöst.
-- Jede effektvolle Arbeit (z. B. Aufruf `printfn`) wird nicht dazu führen, `Async.Start` dass der Effekt auf den Hauptthread der Ausführung eines Programms eintritt.
+- Jede Arbeit (z. B. Aufrufen `printfn`), die mit `Async.Start` gestartet wird, führt nicht dazu, dass der Effekt auf den Hauptthread der Ausführung eines Programms eintritt.
 
 ## <a name="interoperate-with-net"></a>Arbeiten mit .NET
 
@@ -382,7 +382,7 @@ Eine Berechnung kann z. B. je nach Art der Arbeit tatsächlich auf dem Thread de
 
 Obwohl f- einige Möglichkeiten zum Starten einer asynchronen Berechnung für den aktuellen Thread (oder explizit nicht für den aktuellen Thread) bietet, ist Asynchronität im Allgemeinen nicht mit einer bestimmten Threadingstrategie verknüpft.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Das asynchrone Programmiermodell von F-](https://www.microsoft.com/research/publication/the-f-asynchronous-programming-model)
 - [Jet.comes F-Async-Handbuch](https://medium.com/jettech/f-async-guide-eb3c8a2d180a)
