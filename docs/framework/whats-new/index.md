@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - what's new [.NET Framework]
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
-ms.openlocfilehash: d5657f4081577b2a27bc3c2f6880784015c56060
-ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
+ms.openlocfilehash: f56ba7d68be107e697d3f732767f0a5f11c1a622
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80249694"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81644226"
 ---
 # <a name="whats-new-in-net-framework"></a>Neuerungen in .NET Framework
 
@@ -685,7 +685,7 @@ Eine Liste der neuen APIs, die .NET Framework 4.7 hinzugefügt wurden, finden Si
 
 .NET Framework 4.7 verbessert die Serialisierung durch die <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>:
 
-**Verbesserte Funktionalität mit Elliptic Curve Cryptography (ECC)***
+**Verbesserte Funktionalität mit Elliptic Curve Cryptography (ECC)** *
 
 In .NET Framework 4.7 wurden `ImportParameters(ECParameters)`-Methoden den Klassen <xref:System.Security.Cryptography.ECDsa> und <xref:System.Security.Cryptography.ECDiffieHellman> hinzugefügt, damit ein Objekt einen bereits eingerichteten Schlüssel darstellen kann. Eine `ExportParameters(Boolean)`-Methode wurde auch zum Exportieren des Schlüssels unter Verwendung expliziter Kurvenparameter hinzugefügt.
 
@@ -695,7 +695,7 @@ Auf GitHub finden Sie ein [Beispiel der kryptografischen Verbesserungen in .NET 
 
 **Bessere Unterstützung für Steuerzeichen durch DataContractJsonSerializer**
 
-In .NET Framework 4.7 erfolgt die Serialisierung von Steuerzeichen durch <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> entsprechend dem Standard ECMAScript 6. Dieses Verhalten wird standardmäßig für Anwendungen aktiviert, die auf .NET Framework 4.7 ausgerichtet sind, und ist ein optionales Feature für Anwendungen, die unter .NET Framework 4.7 ausgeführt werden, jedoch auf eine frühere Version von .NET Framework ausgerichtet sind. Weitere Informationen finden Sie unter [Änderungen der Neuzuweisungen in .NET Framework 4.7](../migration-guide/retargeting-changes-in-the-net-framework-4-7.md).
+In .NET Framework 4.7 serialisiert die Klasse <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> Steuerzeichen entsprechend dem ECMAScript 6-Standard. Dieses Verhalten wird standardmäßig für Anwendungen aktiviert, die auf .NET Framework 4.7 ausgerichtet sind, und es ist ein optionales Feature für Anwendungen, die unter .NET Framework 4.7 ausgeführt werden, aber auf eine frühere Version des .NET Framework ausgerichtet sind. Weitere Informationen finden Sie im Abschnitt [Anwendungskompatibilität](../migration-guide/application-compatibility.md).
 
 <a name="net47" />
 
@@ -768,11 +768,11 @@ In .NET Framework 4.7 gibt es für WPF die folgenden Verbesserungen:
 
 **Unterstützung für Touch-/Tablettstiftstapel basierend auf Windows-WM_POINTER-Nachrichten**
 
-Sie haben nun die Möglichkeit, einen auf [-Windows-Nachrichten](https://docs.microsoft.com/previous-versions/windows/desktop/InputMsg/messages) basierenden Touch-/Tablettstiftstapel anstelle der Windows Ink Services Plattform (WISP) zu verwenden. Dies ist ein optionales Feature in .NET Framework. Weitere Informationen finden Sie unter [Änderungen der Neuzuweisungen in .NET Framework 4.7](../migration-guide/retargeting-changes-in-the-net-framework-4-7.md).
+Sie haben nun die Möglichkeit, einen auf [-Windows-Nachrichten](https://docs.microsoft.com/previous-versions/windows/desktop/InputMsg/messages) basierenden Touch-/Tablettstiftstapel anstelle der Windows Ink Services Plattform (WISP) zu verwenden. Dies ist ein optionales Feature im .NET Framework. Weitere Informationen finden Sie im Abschnitt [Anwendungskompatibilität](../migration-guide/application-compatibility.md).
 
 **Neue Implementierung für Druck-APIs von WPF**
 
-Die Druck-APIs von WPF in der <xref:System.Printing.PrintQueue?displayProperty=nameWithType>-Klasse rufen die Windows-API [PrintDocumentPackage](/windows/desktop/printdocs/tailored-app-printing-api) anstelle der veralteten [XPS-Druck-API](/windows/desktop/printdocs/xps-printing) auf. Die Auswirkung dieser Änderung auf die Anwendungskompatibilität finden Sie unter [Änderungen der Neuzuweisungen in .NET Framework 4.7](../migration-guide/retargeting-changes-in-the-net-framework-4-7.md).
+Die Druck-APIs von WPF in der <xref:System.Printing.PrintQueue?displayProperty=nameWithType>-Klasse rufen die Windows-API [PrintDocumentPackage](/windows/desktop/printdocs/tailored-app-printing-api) anstelle der veralteten [XPS-Druck-API](/windows/desktop/printdocs/xps-printing) auf. Informationen zu den Auswirkungen dieser Änderung auf die Anwendungskompatibilität finden Sie im Abschnitt [Anwendungskompatibilität](../migration-guide/application-compatibility.md).
 
 <a name="v462" />
 

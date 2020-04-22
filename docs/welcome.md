@@ -3,12 +3,12 @@ title: Willkommen bei .NET
 description: Erste Schritte mit der .NET-Technologiefamilie.
 ms.date: 12/03/2019
 ms.custom: updateeachrelease
-ms.openlocfilehash: ecdbdf13aa64de0f07b09eb73953e64d66755bb0
-ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
+ms.openlocfilehash: 64b9b0402631d34adc7ebd3bf8f7bc13416026b0
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/03/2020
-ms.locfileid: "80635966"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81646291"
 ---
 # <a name="welcome-to-net"></a>Willkommen bei .NET
 
@@ -33,7 +33,7 @@ Bleiben Sie auch über die neuesten .NET-Events auf dem Laufenden:
 
 Informationen zu den neuesten Features, die den .NET-Implementierungen und den unterstützten Sprachen hinzugefügt wurden, finden Sie in den folgenden Artikeln:
 
-- [Neuigkeiten in .NET Core](core/whats-new/index.md)
+- [Neuerungen in .NET Core 3.1](core/whats-new/dotnet-core-3-1.md)
 - [What's new in the .NET Framework (Neuerungen in .NET Framework)](framework/whats-new/index.md)
 - [Neues in C#](csharp/whats-new/index.md)
 - [Neues bei Visual Basic](visual-basic/getting-started/whats-new.md)
