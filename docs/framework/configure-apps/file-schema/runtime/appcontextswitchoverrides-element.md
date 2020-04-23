@@ -8,12 +8,12 @@ helpviewer_keywords:
 - configuration switches
 - configuration
 ms.assetid: 4ce07f47-7ddb-4d91-b067-501bd8b88752
-ms.openlocfilehash: 95ae438e9fb52cc584d18a981bffb66147eb4a77
-ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
+ms.openlocfilehash: 8d5cd73bb9393533cb669581420e24297cb5ff71
+ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "81242815"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82102930"
 ---
 # <a name="appcontextswitchoverrides-element"></a>\<AppContextSwitchOverrides>-Element
 
@@ -34,7 +34,7 @@ Definiert mindestens eine Option, die von der <xref:System.AppContext>-Klasse f�
 
 ### <a name="attributes"></a>Attribute
 
-|Attribut|BESCHREIBUNG|
+|attribute|BESCHREIBUNG|
 |---------------|-----------------|
 |`value`|Erforderliches Attribut.<br /><br /> Definiert einen oder mehrere Wechselnamen und die zugehörigen booleschen Werte.|
 
@@ -45,7 +45,7 @@ Definiert mindestens eine Option, die von der <xref:System.AppContext>-Klasse f�
 |"name=Wert"|Ein vordefinierter Schaltername zusammen`true` `false`mit seinem Wert ( oder ). Mehrere Schaltername/Wertpaare werden durch Semikolons (";") getrennt. Eine Liste vordefinierter Switchnamen, die von .NET Framework unterstützt werden, finden Sie im Abschnitt "Hinweise".|
 
 ### <a name="child-elements"></a>Untergeordnete Elemente
- Keine
+ Keine.
 
 ### <a name="parent-elements"></a>Übergeordnete Elemente
 
@@ -59,7 +59,7 @@ Definiert mindestens eine Option, die von der <xref:System.AppContext>-Klasse f�
 
  Das `value` Attribut `<AppContextSwitchOverrides>` des Elements besteht aus einer einzelnen Zeichenfolge, die aus einem oder mehreren durch Semikolons getrennten Namens-Wert-Paaren besteht.  Jeder Name identifiziert einen Kompatibilitätsschalter, und der`true` entsprechende `false`Wert ist ein boolescher ( oder ) Wert, der angibt, ob der Schalter gesetzt ist. Standardmäßig ist `false`der Schalter , und Bibliotheken stellen die neue Funktionalität bereit. Sie stellen nur die vorherige Funktionalität bereit, wenn der `true`Schalter gesetzt ist (d. h., sein Wert ist ). Dadurch können Bibliotheken neues Verhalten für eine vorhandene API bereitstellen und gleichzeitig Aufrufern, die vom vorherigen Verhalten abhängig sind, ermöglichen, sich von der neuen Funktionalität abzumelden.
 
- .NET Framework unterstützt die folgenden Switches:
+.NET Framework unterstützt die folgenden Switches:
 
 |Switch-Name|BESCHREIBUNG|Eingeführt|
 |-----------------|-----------------|----------------|
@@ -141,7 +141,7 @@ Definiert mindestens eine Option, die von der <xref:System.AppContext>-Klasse f�
 
  Bibliotheksentwickler können auch benutzerdefinierte Switches definieren, damit Aufrufer die geänderten Funktionen, die in späteren Versionen ihrer Bibliotheken eingeführt wurden, deaktivieren können. Weitere Informationen finden Sie in den Ausführungen zur <xref:System.AppContext>-Klasse.
 
-## <a name="switches-in-aspnet-applications"></a>Switches in ASP.NET Anwendungen
+## <a name="switches-in-aspnet-apps"></a>Switches in ASP.NET Apps
 
 Sie können eine ASP.NET-Anwendung so konfigurieren, dass Kompatibilitätseinstellungen verwendet werden, indem Sie dem [ \<](../appsettings/index.md) Abschnitt appSettings>Abschnitt der Datei web.config ein [ \<Element ">hinzufügen"](../appsettings/add-element-for-appsettings.md) hinzufügen.
 
@@ -177,8 +177,9 @@ Im folgenden Beispiel `<add>` wird das Element `<appSettings>` verwendet, um dem
 </configuration>
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
+- [Abschwächen neuer Verhaltensweisen in .NET Framework 4.6 und höher](../../../migration-guide/mitigations.md)
 - <xref:System.AppContext?displayProperty=nameWithType>
 - [\<Laufzeit> Element](runtime-element.md)
 - [\<Konfiguration> Element](../configuration-element.md)

@@ -5,20 +5,20 @@ helpviewer_keywords:
 - GCCpuGroup element
 - <GCCpuGroup> element
 ms.assetid: c1fc7d6c-7220-475c-a312-5b8b201f66e0
-ms.openlocfilehash: ae9c96c9d49cf3f6be94da3f77b91423cab12e0b
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: f1cbe5a7109d6e4aae2e92710920a1c6b3a40d00
+ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74430484"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82102891"
 ---
-# <a name="gccpugroup-element"></a>\<gccpugroup >-Element
+# <a name="gccpugroup-element"></a>\<GCCpuGroup> Element
 
 Gibt an, ob von der Garbage Collection mehrere CPU-Gruppen unterstützt werden.
 
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<Lauf Zeit >** ](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<gccpugroup >**
+[**\<Konfiguration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<Laufzeit>**](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**\<GCCpuGroup>**
 
 ## <a name="syntax"></a>Syntax
 
@@ -29,24 +29,24 @@ Gibt an, ob von der Garbage Collection mehrere CPU-Gruppen unterstützt werden.
 
 ## <a name="attributes-and-elements"></a>Attribute und Elemente
 
-In den folgenden Abschnitten werden die Attribute, untergeordneten und übergeordneten Elemente beschrieben.
+In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.
 
 ### <a name="attributes"></a>Attribute
 
-|Attribut|Beschreibung|
+|attribute|BESCHREIBUNG|
 |---------------|-----------------|
 |`enabled`|Erforderliches Attribut.<br /><br /> Gibt an, ob von der Garbage Collection mehrere CPU-Gruppen unterstützt werden.|
 
 ## <a name="enabled-attribute"></a>Enabled-Attribut
 
-|Wert|Beschreibung|
+|Wert|BESCHREIBUNG|
 |-----------|-----------------|
-|`false`|Garbage Collection unterstützt mehrere CPU-Gruppen nicht. Dies ist die Standardeinstellung.|
+|`false`|Garbage Collection unterstützt mehrere CPU-Gruppen nicht. Dies ist die Standardoption.|
 |`true`|Bei Aktivierung auf dem Server werden mehrere CPU-Gruppen von Garbage Collection unterstützt.|
 
 ### <a name="child-elements"></a>Untergeordnete Elemente
 
-None.
+Keine.
 
 ### <a name="parent-elements"></a>Übergeordnete Elemente
 
@@ -55,12 +55,12 @@ None.
 |`configuration`|Das Stammelement in jeder von den Common Language Runtime- und .NET Framework-Anwendungen verwendeten Konfigurationsdatei.|
 |`runtime`|Enthält Informationen über die Assemblybindung und die Garbage Collection.|
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 
-Wenn ein Computer über mehrere CPU-Gruppen verfügt und Server Garbage Collection aktiviert ist (siehe das [\<gcserver >](gcserver-element.md) -Element), erweitert das Aktivieren dieses Elements Garbage Collection auf alle CPU-Gruppen und übernimmt beim Erstellen und Ausgleichen von Heaps alle Kerne.
+Wenn ein Computer über mehrere CPU-Gruppen verfügt und die Garbage Collection des Servers aktiviert ist (siehe [ \<gcServer](gcserver-element.md)>-Element), erweitert dieses Element die Garbage Collection auf alle CPU-Gruppen und berücksichtigt alle Kerne beim Erstellen und Ausgleichen von Heaps.
 
 > [!NOTE]
-> Dieses Element gilt nur für Garbage Collection-Threads. Damit die Laufzeit Benutzerthreads über alle CPU-Gruppen hinweg verteilen kann, müssen Sie auch das [\<Thread_UseAllCpuGroups >](thread-useallcpugroups-element.md) -Element aktivieren.
+> Dieses Element gilt nur für Garbage Collection-Threads. Damit die Laufzeit Benutzerthreads auf alle CPU-Gruppen verteilen [ \<](thread-useallcpugroups-element.md) kann, müssen Sie auch die Thread_UseAllCpuGroups>-Element aktivieren.
 
 ## <a name="example"></a>Beispiel
 
@@ -75,9 +75,9 @@ Im folgenden Beispiel wird das Aktivieren der Garbage Collection für mehrere CP
 </configuration>
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Schema für Laufzeiteinstellungen](index.md)
+- [Laufzeiteinstellungsschema](index.md)
 - [Konfigurationsdateischema](../index.md)
-- [So deaktivieren Sie die parallele Garbage Collection](gcconcurrent-element.md#to-disable-background-garbage-collection)
-- [Garbage Collection für die Arbeitsstation und Garbage Collection auf dem Server](../../../../standard/garbage-collection/fundamentals.md#workstation-and-server-garbage-collection)
+- [Deaktivieren der gleichzeitigen Garbage Collection](gcconcurrent-element.md#to-disable-background-garbage-collection)
+- [Garbage Collection für die Arbeitsstation und Garbage Collection auf dem Server](../../../../standard/garbage-collection/workstation-server-gc.md)

@@ -2,12 +2,12 @@
 title: Richtlinien für das Formatieren von F#-Code
 description: Erfahren Sie mehr über Richtlinien zum Formatieren von F-Code.
 ms.date: 11/04/2019
-ms.openlocfilehash: b8be70dd29a04e71614308164e541b99a1724305
-ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
+ms.openlocfilehash: dd48380a90ee92b2c1edaaabc116fa1cd8010390
+ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81739558"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82102488"
 ---
 # <a name="f-code-formatting-guidelines"></a>Richtlinien für das Formatieren von F#-Code
 
@@ -178,7 +178,7 @@ Inlinekommentare sollten den ersten Buchstaben großschreiben.
 let f x = x + 1 // Increment by one.
 ```
 
-## <a name="naming-conventions"></a>Namenskonventionen
+## <a name="naming-conventions"></a>Benennungskonventionen
 
 ### <a name="use-camelcase-for-class-bound-expression-bound-and-pattern-bound-values-and-functions"></a>Verwenden von camelCase für klassengebundene, ausdrucks- und mustergebundene Werte und Funktionen
 
@@ -579,10 +579,10 @@ Wenn Arrays und Listen programmgesteuert `->` generiert `do ... yield` werden, b
 
 ```fsharp
 // Preferred
-let squares = [ for x in 1..10 -> x*x ]
+let squares = [ for x in 1..10 -> x * x ]
 
 // Not preferred
-let squares' = [ for x in 1..10 do yield x*x ]
+let squares' = [ for x in 1..10 do yield x * x ]
 ```
 
 In Situationen, `yield` in denen Daten bedingt generiert werden können oder aufeinander folgende Ausdrücke ausgewertet werden müssen, sind ältere Versionen der Sprache "F" erforderlich. Bevorzugen Sie das `yield` Weglassen dieser Schlüsselwörter, es sei denn, Sie müssen mit einer älteren Version der F-Sprache kompilieren:
@@ -816,10 +816,10 @@ let function1 a b = a - b * b
 ```fsharp
 // A1 and A2 are local modules.
 module A1 =
-    let function1 a b = a*a + b*b
+    let function1 a b = a * a + b * b
 
 module A2 =
-    let function2 a b = a*a - b*b
+    let function2 a b = a * a - b * b
 ```
 
 ### <a name="formatting-object-expressions-and-interfaces"></a>Formatieren von Objektausdrücken und -schnittstellen
@@ -878,7 +878,7 @@ type MyRecord =
 
 ### <a name="formatting-attributes-on-parameters"></a>Formatieren von Attributen für Parameter
 
-Attribute können auch Orte auf Parametern sein. Platzieren Sie in diesem Fall dann dieselbe Zeile wie der Parameter und vor dem Namen:
+Attribute können auch auf Parametern platziert werden. Platzieren Sie in diesem Fall dann dieselbe Zeile wie der Parameter und vor dem Namen:
 
 ```fsharp
 // Defines a class that takes an optional value as input defaulting to false.

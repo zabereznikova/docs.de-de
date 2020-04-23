@@ -9,12 +9,12 @@ helpviewer_keywords:
 - gcConcurrent element
 - <gcConcurrent> element
 ms.assetid: 503f55ba-26ed-45ac-a2ea-caf994da04cd
-ms.openlocfilehash: 5957337aa960a0d5f445249b410dbfaddb7b08e9
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 249518ae7477d284d50f9010757db83b7752c657
+ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79400980"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82102917"
 ---
 # <a name="gcconcurrent-element"></a>\<gcConcurrent>-Element
 
@@ -35,15 +35,15 @@ Gibt an, ob die Common Language Runtime die Garbage Collection auf einem separat
 
 In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.
 
-### <a name="attributes"></a>Attributes
+### <a name="attributes"></a>Attribute
 
-|attribute|Beschreibung|
+|attribute|BESCHREIBUNG|
 |---------------|-----------------|
 |`enabled`|Erforderliches Attribut.<br /><br />Gibt an, ob die Runtime die Garbage Collection gleichzeitig ausführt.|
 
 #### <a name="enabled-attribute"></a>aktiviertes Attribut
 
-|value|Beschreibung|
+|Wert|BESCHREIBUNG|
 |-----------|-----------------|
 |`false`|Führt die Garbage Collection nicht gleichzeitig aus.|
 |`true`|Die Garbage Collection wird gleichzeitig ausgeführt. Dies ist die Standardoption.|
@@ -82,7 +82,7 @@ Die folgende Konfigurationsdatei deaktiviert die Garbage Collection im Hintergru
 
 Wenn die Computerkonfigurationsdatei eine **gcConcurrentSetting-Einstellung** enthält, wird der Standardwert für alle .NET Framework-Anwendungen definiert. Die Einstellung in der Computerkonfigurationsdatei setzt die Einstellung in der Anwendungskonfigurationsdatei außer Kraft.
 
-Weitere Informationen zur gleichzeitigen Garbage Collection und zur Garbage Collection im Hintergrund finden Sie im Artikel ["Concurrent Garbage Collection](../../../../standard/garbage-collection/fundamentals.md#concurrent-garbage-collection)", ["Hintergrundarbeitsstation"-](../../../../standard/garbage-collection/fundamentals.md#background-workstation-garbage-collection)und ["Hintergrundserver-Garbage](../../../../standard/garbage-collection/fundamentals.md#background-server-garbage-collection) Collection"-Abschnitte im Artikel [Grundlagen der Garbage Collection.](../../../../standard/garbage-collection/fundamentals.md)
+Weitere Informationen zur gleichzeitigen Garbage Collection und zur Hintergrundgarbageauflistung finden Sie unter [Hintergrund-Garbage Collection](../../../../standard/garbage-collection/background-gc.md).
 
 ## <a name="example"></a>Beispiel
 
@@ -98,6 +98,6 @@ Im folgenden Beispiel wird die Garbage Collection im Hintergrund aktiviert:
 
 ## <a name="see-also"></a>Weitere Informationen
 
-- [Schema für Laufzeiteinstellungen](index.md)
-- [Schema der Konfigurationsdatei](../index.md)
+- [Laufzeiteinstellungsschema](index.md)
+- [Konfigurationsdateischema](../index.md)
 - [Grundlagen der Garbage Collection](../../../../standard/garbage-collection/fundamentals.md)
