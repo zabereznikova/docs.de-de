@@ -2,12 +2,12 @@
 title: Einführung in die Microsoft-Plattform und -Tools für Container-Apps
 description: Lernen Sie die Microsoft-Lösungen für die Unterstützung des Lebenszyklus von Docker-Anwendungen kennen.
 ms.date: 02/15/2019
-ms.openlocfilehash: 9c8c0f5688bf226351abfc7bf52d4ace05f8c6d8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8cb7870035003e956ee57684a2a2528732849379
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73738090"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81738445"
 ---
 # <a name="introduction-to-the-microsoft-platform-andtools-for-containerized-apps"></a>Einführung in die Microsoft-Plattform und -Tools für Container-Apps
 
@@ -39,13 +39,13 @@ Die Microsoft-Plattform und die Tools für containerisierte Docker-Anwendungen, 
 
 - **DevOps für Docker-Apps**: Entwickler, die Docker-Anwendungen erstellen, können [Azure DevOps Services](https://azure.microsoft.com/services/devops/) oder andere Drittanbieterprodukte wie Jenkins verwenden, um eine umfassende automatisierte ALM-Verwaltung (Application Lifecycle Management) einzurichten.
 
-  Mit Azure DevOps Services können Entwickler containerzentrierte DevOps für einen schnellen, iterativen Prozess erstellen, der die Quellcodeverwaltung von jedem beliebigen Ort aus (Azure DevOps Services-Git, GitHub, beliebiges Git-Remoterepository oder Subversion), Continuous Integration (CI), interne Komponententests, containerübergreifende/Dienstintegrationstests, Continuous Delivery (CD) und Release-Management (RM) ermöglicht. Entwickler können auch ihre Docker-Anwendungsreleases in Azure Kubernetes Service (AKS) automatisieren: von der Entwicklung bis hin zu Staging und Produktionsumgebungen.
+  Mit Azure DevOps Services können Entwickler containerzentrierte DevOps für einen schnellen, iterativen Prozess erstellen, der die Quellcodeverwaltung von jedem beliebigen Ort aus (Azure DevOps Services-Git, GitHub, beliebiges Git-Remoterepository oder Subversion), Continuous Integration (CI), interne Komponententests, containerübergreifende/Dienstintegrationstests, Continuous Delivery (CD) und Release-Management (RM) ermöglicht. Entwickler können auch ihre Docker-Anwendungsreleases in Azure Kubernetes Service (AKS) automatisieren: von der Entwicklung bis hin zu Staging- und Produktionsumgebungen.
 
 - **Verwaltung und Überwachung** Die IT kann Produktionsanwendungen und -dienste in verschiedener Weise überwachen und mehrere Perspektiven auf einer konsolidierten Benutzeroberfläche integrieren.
 
   - **Azure-Portal** Wenn Sie Open Source-Orchestratoren verwenden, helfen Ihnen Azure Kubernetes Service (AKS), Service Fabric und andere Orchestratoren beim Einrichten und Verwalten ihrer Docker-Umgebungen. Wenn Sie Azure Service Fabric verwenden, ermöglicht Ihnen das Tool Service Fabric Explorer die Visualisierung und Konfiguration Ihres Clusters.
 
-  - **Docker-Tools** : Sie können Ihre Containeranwendungen mit vertrauten Tools verwalten. Es besteht keine Notwendigkeit, Ihre vorhandenen Docker-Verwaltungsverfahren zu ändern, um Containerworkloads in die Cloud zu verschieben. Nutzen Sie die Ihnen bereits vertrauten Anwendungsverwaltungstools, und verbinden Sie sich über die API-Standardendpunkte mit dem Orchestrator Ihrer Wahl. Sie können auch andere Tools von Drittanbietern verwenden, um Ihre Docker-Anwendungen zu verwalten, z.B. Docker Datacenter oder sogar CLI-Tools von Docker.
+  - **Docker-Tools** : Sie können Ihre Containeranwendungen mit vertrauten Tools verwalten. Es besteht keine Notwendigkeit, Ihre vorhandenen Docker-Verwaltungsverfahren zu ändern, um Containerworkloads in die Cloud zu verschieben. Nutzen Sie die Ihnen bereits vertrauten Anwendungsverwaltungstools, und verbinden Sie sich über die API-Standardendpunkte mit dem Orchestrator Ihrer Wahl. Sie können auch andere Tools von Drittanbietern verwenden, um Ihre Docker-Anwendungen zu verwalten, z. B. Docker Datacenter oder sogar CLI-Tools von Docker.
 
     Selbst wenn Sie mit Linux-Befehlen vertraut sind, können Sie Ihre Containeranwendungen mithilfe von Microsoft Windows und PowerShell mit einer Eingabeaufforderung des Linux-Subsystems und den Produktclients (Docker, Kubernetes…) verwenden, die in dieser Linux-Subsystemfunktionalität ausgeführt werden. Sie erfahren mehr über die Verwendung dieser Tools unter dem Linux-Subsystem mithilfe Ihres bevorzugten Microsoft Windows-Betriebssystems im weiteren Verlauf dieses Handbuchs.
 
