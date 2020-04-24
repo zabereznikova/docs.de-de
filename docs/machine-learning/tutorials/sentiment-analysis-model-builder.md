@@ -6,16 +6,16 @@ author: luisquintanilla
 ms.author: luquinta
 ms.topic: tutorial
 ms.custom: mvc,mlnet-tooling
-ms.openlocfilehash: 98c9f28ca4ce6365ed4cf4ff1566a33dbe8f35ca
-ms.sourcegitcommit: 2ff49dcf9ddf107d139b4055534681052febad62
+ms.openlocfilehash: 7761240055c90ae9c713b1c460e9e83316d256f9
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/31/2020
-ms.locfileid: "80438226"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81278950"
 ---
 # <a name="tutorial-analyze-sentiment-of-website-comments-in-a-web-application-using-mlnet-model-builder"></a>Tutorial: Analysieren der Stimmung von Websitekommentaren in einer Webanwendung mit dem Modell-Generator von ML.NET
 
-Erfahren Sie, wie Sie die Stimmung in Kommentaren in Echtzeit in einer Webanwendung analysiert wird.
+Erfahren Sie, wie Sie in einer Webanwendung die Stimmung von Kommentaren in Echtzeit analysieren.
 
 Dieses Tutorial zeigt Ihnen, wie Sie eine ASP.NET Core Razor Pages-Anwendung erstellen, die die Stimmung in Websitekommentaren in Echtzeit klassifiziert.
 
@@ -103,9 +103,9 @@ Die Zeit, die für das Trainieren des Modells benötigt wird, ist proportional z
 
 ## <a name="evaluate-the-model"></a>Evaluieren des Modells
 
-Das Ergebnis des Schritts „Trainieren“ ist ein Modell mit der besten Leistung. Der Schritt „Evaluieren“ des Modellgeneratortools, der Ausgabebereich, enthält den Algorithmus, der vom leistungsfähigsten Modell im Eintrag **Bestes Modell** verwendet wird, sowie Metriken in **Beste Modellgenauigkeit**. Außerdem finden Sie hier eine Übersichtstabelle mit den fünf besten Modellen und deren Metriken.
+Das Ergebnis des Trainingsschritts ist das Modell, das die beste Leistung zeigt. Im Bewertungsschritt des Modellgeneratortools enthält der Ausgabebereich den Algorithmus, der vom Modell mit der besten Leistung im Eintrag **Bestes Modell** verwendet wird, sowie Metriken in **Beste Modellgenauigkeit**. Außerdem wird eine Übersichtstabelle mit den fünf besten Modellen und deren Metriken angezeigt.
 
-Wenn Sie mit Ihren Genauigkeitsmetriken nicht zufrieden sind, gibt es einige einfache Möglichkeiten, die Modellgenauigkeit zu verbessern. Dazu müssen Sie die Zeit für das Training des Modells erhöhen oder mehr Daten verwenden. Wählen Sie andernfalls den Link **Code** aus, um zum letzten Schritt im Modell-Generator-Tool zu gelangen.
+Wenn Sie mit Ihren Genauigkeitsmetriken nicht zufrieden sind, gibt es einige einfache Möglichkeiten, die Modellgenauigkeit zu verbessern, indem Sie beispielsweise die Zeit für das Training des Modells erhöhen oder mehr Daten verwenden. Wählen Sie andernfalls den Link **Code** aus, um zum letzten Schritt im Modell-Generator-Tool zu gelangen.
 
 ## <a name="add-the-code-to-make-predictions"></a>Hinzufügen des Codes für Vorhersagen
 
@@ -124,7 +124,7 @@ Das Ergebnis des Trainings sind zwei Projekte.
 
 ### <a name="configure-the-predictionengine-pool"></a>Konfigurieren des PredictionEngine-Pools
 
-Um eine einzelne Vorhersage zu treffen, müssen Sie eine [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) erstellen. [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) ist nicht threadsicher. Außerdem müssen Sie eine Instanz davon überall dort erstellen, wo diese in Ihrer Anwendung erforderlich ist. Wenn die Anwendung wächst, kann dieser Prozess ggf. nicht mehr verwaltet werden. Für verbesserte Leistung und Threadsicherheit verwenden Sie eine Kombination aus Abhängigkeitsinjektion (Dependency Injection, DI) und dem `PredictionEnginePool`-Dienst, der einen [`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601) von [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602)-Objekten für die Verwendung in Ihrer gesamten Anwendung erstellt.
+Um eine einzelne Vorhersage zu treffen, müssen Sie eine <xref:Microsoft.ML.PredictionEngine%602> erstellen. <xref:Microsoft.ML.PredictionEngine%602> ist nicht threadsicher. Außerdem müssen Sie eine Instanz der Engine überall dort erstellen, wo dies in Ihrer Anwendung erforderlich ist. Wenn die Anwendung wächst, kann dieser Prozess ggf. nicht mehr verwaltet werden. Um eine bessere Leistung und Threadsicherheit zu erzielen, verwenden Sie eine Kombination aus Abhängigkeitsinjektion (Dependency Injection, DI) und dem `PredictionEnginePool`-Dienst, der einen <xref:Microsoft.Extensions.ObjectPool.ObjectPool%601> aus <xref:Microsoft.ML.PredictionEngine%602>-Objekten für die Verwendung in Ihrer gesamten Anwendung erstellt.
 
 1. Installieren Sie das NuGet-Paket *Microsoft.Extensions.ML*:
 
@@ -277,7 +277,7 @@ Die von `OnGetAnalyzeSentiment` zurückgegebenen Ergebnisse werden dynamisch auf
 
 ## <a name="run-the-application"></a>Ausführen der Anwendung
 
-Nachdem Sie Ihre Anwendung eingerichtet haben, führen Sie die Anwendung aus, die in Ihrem Browser gestartet werden sollte.
+Nachdem Sie Ihre Anwendung eingerichtet haben, führen Sie diese aus. Sie sollte in Ihrem Browser gestartet werden.
 
 Wenn die Anwendung gestartet wird, geben Sie *Model Builder ist cool!* in den Textbereich ein. Die vorhergesagte Stimmung sollte *Not Toxic* sein.
 

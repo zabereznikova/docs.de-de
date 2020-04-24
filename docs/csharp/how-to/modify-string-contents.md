@@ -3,12 +3,12 @@ title: 'Vorgehensweise: Ändern von Zeichenfolgeninhalten – C#-Leitfaden'
 ms.date: 02/26/2018
 helpviewer_keywords:
 - strings [C#], modifying
-ms.openlocfilehash: 260e4022c514db0cee3c1459b9d746a1c8e2addd
-ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
+ms.openlocfilehash: 8e9bbe76c689d3c3f9f238ca9dd95cc7fcf98b18
+ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/11/2020
-ms.locfileid: "81121125"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81389514"
 ---
 # <a name="how-to-modify-string-contents-in-c"></a>Vorgehensweise: Ändern von Zeichenfolgeninhalten in C\#
 
@@ -16,7 +16,7 @@ In diesem Artikel werden verschiedene Methoden zum Erzeugen einer `string` durch
 
 [!INCLUDE[interactive-note](~/includes/csharp-interactive-note.md)]
 
-In diesem Artikel werden mehrere Methoden aufgezeigt. Sie können vorhandenen Text ersetzen. Sie können nach Mustern suchen und übereinstimmenden Text durch anderen Text ersetzen. Sie können Zeichenfolgen als Zeichensequenzen behandeln. Sie können zudem Hilfsmethoden verwenden, die Leerräume entfernen. Sie sollten sich für die Methoden entscheiden, die am besten zu Ihrem Szenario passen.
+In diesem Artikel werden mehrere Methoden aufgezeigt. Sie können vorhandenen Text ersetzen. Sie können nach Mustern suchen und übereinstimmenden Text durch anderen Text ersetzen. Sie können Zeichenfolgen als Zeichensequenzen behandeln. Sie können zudem Hilfsmethoden verwenden, die Leerräume entfernen. Verwenden Sie diejenigen Methoden, die am besten zu Ihrem Szenario passen.
 
 ## <a name="replace-text"></a>Ersetzen von Text
 
@@ -58,7 +58,7 @@ Die Methode <xref:System.Text.StringBuilder.ToString%2A?displayProperty=nameWith
 
 Sie können ein Zeichenarray aus einer Zeichenfolge erzeugen, den Inhalt des Arrays modifizieren und dann eine neue Zeichenfolge aus dem modifizierten Inhalt des Arrays erstellen.
 
-In folgendem Beispiel wird gezeigt, wie Sie mehrere Zeichen in einer Zeichenfolge ersetzen. Zunächst wird die Methode <xref:System.String.ToCharArray?displayProperty=nameWithName> verwendet, um ein Zeichenarray zu erstellen. Die Methode <xref:System.String.IndexOf%2A> wird verwendet, um den Startindex des Worts „fox“ zu finden. Die folgenden drei Zeichen werden durch ein anderes Wort ersetzt. Zum Schluss wird eine neue Zeichenfolge aus dem aktualisierten Zeichenarray erstellt.
+In folgendem Beispiel wird gezeigt, wie Sie mehrere Zeichen in einer Zeichenfolge ersetzen. Zunächst wird die Methode <xref:System.String.ToCharArray?displayProperty=nameWithType> verwendet, um ein Zeichenarray zu erstellen. Die Methode <xref:System.String.IndexOf%2A> wird verwendet, um den Startindex des Worts „fox“ zu finden. Die folgenden drei Zeichen werden durch ein anderes Wort ersetzt. Zum Schluss wird eine neue Zeichenfolge aus dem aktualisierten Zeichenarray erstellt.
 
 [!code-csharp-interactive[replace creates a new string](../../../samples/snippets/csharp/how-to/strings/ModifyStrings.cs#6)]
 
@@ -72,7 +72,7 @@ Sie können eine Zeichenfolge in einem festen Block mit unsicherem Code ändern.
 
 Sie können diese Beispiele ausprobieren, indem Sie sich den Code in unserem [GitHub-Repository](https://github.com/dotnet/docs/tree/master/samples/snippets/csharp/how-to/strings) ansehen. Alternativ dazu können Sie die Beispiele [als ZIP-Datei](../../../samples/snippets/csharp/how-to/strings.zip) herunterladen.
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Reguläre Ausdrücke von .NET Framework](../../standard/base-types/regular-expressions.md)
 - [Sprachelemente für reguläre Ausdrücke – Kurzübersicht](../../standard/base-types/regular-expression-language-quick-reference.md)

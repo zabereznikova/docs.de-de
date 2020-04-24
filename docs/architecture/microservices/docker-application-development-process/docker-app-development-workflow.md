@@ -2,12 +2,12 @@
 title: Entwicklungsworkflow für Docker-Apps
 description: Erläuterungen zu den Workflowdetails für die Entwicklung von auf Docker basierenden Anwendungen. Beginnen Sie mit den Grundlagen. Gehen Sie dann ausführlicher auf das Optimieren von Dockerfiles ein. Arbeiten Sie zum Schluss mit dem vereinfachten Workflow, der bei der Verwendung mit Visual Studio verfügbar ist.
 ms.date: 01/30/2020
-ms.openlocfilehash: c58ea2436027968143777a19286a1a0a72107717
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2f380c840e186c345f9222aa6b0cf1097a74874e
+ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79401508"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81389201"
 ---
 # <a name="development-workflow-for-docker-apps"></a>Entwicklungsworkflow für Docker-Apps
 
@@ -286,7 +286,7 @@ Die Datei, die sich daraus ergibt, sieht wie folgt aus:
  7  COPY . .
  8  RUN dotnet restore /ignoreprojectextensions:.dcproj
  9  WORKDIR /src/src/Services/Catalog/Catalog.API
-10  RUN dotnet publish Catalog.API.csproj -c Release -0 /app
+10  RUN dotnet publish Catalog.API.csproj -c Release -o /app
 11
 12  FROM base AS final
 13  WORKDIR /app
@@ -479,7 +479,7 @@ Nachdem der Befehl „docker-compose up“ ausgeführt wurde, werden wie in Abbi
 
 #### <a name="using-visual-studio"></a>Verwenden von Visual Studio
 
-Das Ausführen einer Anwendung mit mehreren Containern mit Visual Studio 2019 ist denkbar einfach. Drücken Sie einfach **STRG+F5** oder nur **F5**, um den Debugvorgang zu starten und wie üblich dabei das **docker-compose**-Projekt als Startprojekt festlegen.  Visual Studio kümmert sich um die gesamte erforderliche Einrichtung, sodass Sie wie gewohnt Haltepunkte erstellen und debuggen können, was schlussendlich zu unabhängigen Prozessen wird, die auf Remoteservern ausgeführt werden, wobei der Debugger bereits angefügt ist. Einfach so.
+Das Ausführen einer Anwendung mit mehreren Containern mit Visual Studio 2019 ist denkbar einfach. Drücken Sie einfach **STRG+F5** oder nur **F5**, um den Debugvorgang zu starten und wie üblich dabei das **docker-compose**-Projekt als Startprojekt festlegen.  Visual Studio kümmert sich um die gesamte erforderliche Einrichtung, sodass Sie wie gewohnt Breakpoints erstellen und Ihren Code debuggen können. So entstehen unabhängige Prozesse, die auf Remoteservern ausgeführt werden, wobei der Debugger bereits angefügt ist.
 
 Wie bereits erwähnt, wird jedes Mal, wenn Sie Unterstützung für die Docker-Projektmappe einem Projekt in einer Projektmappe hinzufügen, das Projekt in der globalen docker-compose.yml-Datei (Projektmappenebene) konfiguriert wird, wodurch Sie die gesamte Projektmappe auf einmal ausführen oder debuggen können. Visual Studio startet einen Container für jede Projektmappe, für die die Docker-Projektmappenunterstützung aktiviert ist, und führt alle internen Schritte aus (dotnet publish, docker build usw.).
 

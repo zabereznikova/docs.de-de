@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 21271167-fe7f-46ba-a81f-a6812ea649d4
 author: jkoritzinsky
 ms.author: jekoritz
-ms.openlocfilehash: 98d303c99693a8aadb23da509a700772db69c0e0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 17d85b9e9734fae0bb69f94da8c08669216ab0ae
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79146657"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81242867"
 ---
 # <a name="exposing-net-core-components-to-com"></a>Verfügbarmachen von .NET Core-Komponenten in COM
 
@@ -92,5 +92,7 @@ Ein voll funktionsfähiges [Beispiel für COM-Server](https://github.com/dotnet/
 ## <a name="additional-notes"></a>Zusätzliche Hinweise
 
 Anders als im .NET Framework wird in .NET Core die Erstellung einer COM-Typbibliothek (TLB) aus einer .NET Core-Assembly nicht unterstützt. Die Anweisung besagt, dass Sie manuell eine IDL-Datei oder einen C++ Header für die nativen Deklarationen Ihrer Schnittstellen schreiben müssen.
+
+[Eigenständige Bereitstellungen](../deploying/index.md#publish-self-contained) von COM-Komponenten werden nicht unterstützt. Nur [laufzeitabhängige Bereitstellungen](../deploying/index.md#publish-runtime-dependent) von COM-Komponenten werden unterstützt.
 
 Zusätzlich gelten für das Laden von .NET Framework und .NET Core in denselben Prozess Diagnoseeinschränkungen. Die erste Einschränkung ist das Debuggen von verwalteten Komponenten, da es nicht möglich ist, .NET Framework und .NET Core gleichzeitig zu debuggen. Zusätzlich teilen die beiden Runtimeinstanzen keine verwalteten Assemblys. Das bedeutet, dass es nicht möglich ist, die tatsächlichen .NET-Typen über zwei Runtimes freizugeben. Stattdessen unterliegen alle Interaktionen den verfügbar gemachten Verträgen zur COM-Schnittstelle.

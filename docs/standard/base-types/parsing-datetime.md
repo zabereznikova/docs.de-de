@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Konvertieren von Zeichenfolgen in DateTime-Objekte'
+title: Konvertieren von Zeichenfolgen in DateTime-Objekte
 description: Lernen Sie Techniken zum Analysieren von Zeichenfolgen kennen, die Datums- und Uhrzeitwerte repräsentieren, um ein DateTime-Objekt aus der Datums- und Uhrzeitzeichenfolge zu erstellen.
 ms.date: 02/15/2018
 ms.technology: dotnet-standard
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - base types, parsing strings
 - DateTime object
 - time strings
-ms.openlocfilehash: 9555304e570226b2ed3b040735cf099b5a018f93
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4b3f0bdb3ade784f929718a3350ed3dec0c572f1
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78156542"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81242646"
 ---
-# <a name="parsing-date-and-time-strings-in-net"></a>Analysieren von Zeichenfolgen für Datum und Uhrzeit in .NET
+# <a name="parse-date-and-time-strings-in-net"></a>Analysieren von Zeichenfolgen für Datum und Uhrzeit in .NET
 
 Das Analysieren von Zeichenfolgen für die Konvertierung in <xref:System.DateTime>-Objekte erfordert spezifische Informationen dazu, wie die Datums- und Uhrzeitangaben als Text dargestellt werden. Verschiedene Kulturen verwenden unterschiedliche Reihenfolgen für Tag, Monat und Jahr. Einige Uhrzeiten werden im 24-Stunden-Format dargestellt, andere verwenden Zusätze wie „AM“ und „PM“. Einige Anwendungen erfordern nur das Datum. Für andere ist ausschließlich die Uhrzeit erforderlich. Für wieder andere Anwendungen muss sowohl das Datum als auch die Uhrzeit angegeben werden. Die Methoden zum Konvertieren von Zeichenfolgen in <xref:System.DateTime>-Objekte ermöglichen es Ihnen, detaillierte Informationen zu den erwarteten Formaten und den Datums- und Uhrzeitelementen anzugeben, die für Ihre Anwendung benötigt werden. Es gibt drei Unteraufgaben zum ordnungsgemäßen Konvertieren von Text in ein <xref:System.DateTime>-Objekt:
 
@@ -56,7 +56,7 @@ Das folgende Codebeispiel veranschaulicht die Verwendung der <xref:System.DateTi
 > Alle C#-Beispiele in diesem Artikel werden in Ihrem Browser ausgeführt. Klicken Sie auf die Schaltfläche **Ausführen**, um die Ausgabe anzuzeigen. Sie können auch Bearbeitungen vornehmen, um ein wenig zu experimentieren.
 
 > [!NOTE]
-> Diese Beispiele sind im GitHub-docs-Repository sowohl für [C#](https://github.com/dotnet/samples/tree/master/snippets/csharp/how-to/conversions) als auch für [Visual Basic](https://github.com/dotnet/samples/tree/master/snippets/visualbasic/how-to/conversions) verfügbar. Alternativ können Sie das Projekt als ZIP-Datei für [C#](https://github.com/dotnet/samples/raw/master/snippets/csharp/how-to/conversions.zip) oder [Visual Basic](https://github.com/dotnet/samples/raw/master/snippets/visualbasic/how-to/conversions.zip) herunterladen.
+> Diese Beispiele sind im GitHub-docs-Repository sowohl für [C#](https://github.com/dotnet/docs/tree/master/samples/snippets/csharp/how-to/conversions) als auch für [Visual Basic](https://github.com/dotnet/docs/tree/master/samples/snippets/visualbasic/how-to/conversions) verfügbar. Alternativ können Sie das Projekt als ZIP-Datei für [C#](https://github.com/dotnet/docs/blob/master/samples/snippets/csharp/how-to/conversions.zip) oder [Visual Basic](https://github.com/dotnet/docs/blob/master/samples/snippets/visualbasic/how-to/conversions.zip) herunterladen.
 
 [!code-csharp-interactive[Parsing.DateAndTime#1](../../../samples/snippets/csharp/how-to/conversions/StringToDateTime.cs#1)]
 [!code-vb[Parsing.DateAndTime#1](../../../samples/snippets/visualbasic/how-to/conversions/Program.vb#1)]
@@ -84,9 +84,9 @@ Im folgenden Codebeispiel wird die <xref:System.DateTime.ParseExact%2A?displayPr
 
 Jede Überladung der Methode <xref:System.DateTime.Parse%2A> und <xref:System.DateTime.ParseExact%2A> umfasst auch einen <xref:System.IFormatProvider>-Parameter, der kulturspezifische Informationen zur Formatierung der Zeichenfolge enthält. In der Regel handelt es sich bei diesem <xref:System.IFormatProvider>-Objekt um ein <xref:System.Globalization.CultureInfo>-Objekt, das eine Standardkultur oder ein von der Eigenschaft <xref:System.Globalization.DateTimeFormatInfo> zurückgegebenes <xref:System.Globalization.CultureInfo.DateTimeFormat%2A?displayProperty=nameWithType>-Objekt darstellt.  <xref:System.DateTime.ParseExact%2A> verwendet außerdem ein zusätzliches Zeichenfolgen- oder Zeichenfolgenarrayargument, mit dem mindestens ein benutzerdefiniertes Datums- und Uhrzeitformat definiert wird.  
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
-- [Analysieren von Zeichenfolgen](parsing-strings.md)
+- [Analysieren von Zeichenfolgen in .NET](parsing-strings.md)
 - [Formatierung von Typen](formatting-types.md)
 - [Typkonvertierung in .NET](type-conversion.md)
 - [Standard-Formatzeichenfolgen für Datum und Uhrzeit](standard-date-and-time-format-strings.md)

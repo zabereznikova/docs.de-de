@@ -1,18 +1,18 @@
 ---
 title: readonly-Schlüsselwort – C#-Referenz
-ms.date: 03/26/2020
+ms.date: 04/14/2020
 f1_keywords:
 - readonly_CSharpKeyword
 - readonly
 helpviewer_keywords:
 - readonly keyword [C#]
 ms.assetid: 2f8081f6-0de2-4903-898d-99696c48d2f4
-ms.openlocfilehash: 344d5e54fcd500e283c52fa7953c6366823f13f0
-ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
+ms.openlocfilehash: 03b0aa63eda3e7a9d8745baaa33479fd5e85b01b
+ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80345151"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81389060"
 ---
 # <a name="readonly-c-reference"></a>readonly (C#-Referenz)
 
@@ -29,7 +29,7 @@ Das Schlüsselwort `readonly` ist ein Modifizierer, der in vier Kontexten verwen
   > Ein extern sichtbarer Typ, der ein extern sichtbares schreibgeschütztes Feld enthält, bei dem es sich um einen änderbaren Verweistyp handelt, kann ein Sicherheitsrisiko darstellen und die folgende Warnung auslösen: [CA2104](/visualstudio/code-quality/ca2104): „Schreibgeschützte änderbare Verweistypen nicht deklarieren.“
 
 - In einer `readonly struct`-Typdefinition weist `readonly` darauf hin, dass der Strukturtyp unveränderlich ist. Weitere Informationen finden Sie im Abschnitt zur [`readonly`-Struktur](../builtin-types/struct.md#readonly-struct) des Artikels [Strukturtypen](../builtin-types/struct.md).
-- In einer [`readonly`-Memberdefinition](#readonly-member-examples) gibt `readonly` an, dass ein Member von `struct` den internen Zustand der Struktur nicht verändert.
+- In einer Instanzmemberdeklaration innerhalb eines Strukturtyps gibt `readonly` an, dass ein Instanzmember den Zustand einer Struktur nicht ändert. Weitere Informationen finden Sie im Abschnitt [`readonly`-Instanzmember](../builtin-types/struct.md#readonly-instance-members) des Artikels [Strukturtypen](../builtin-types/struct.md).
 - In einer [`ref readonly`-Methodenrückgabe](#ref-readonly-return-example) gibt der `readonly`-Modifizierer an, dass die Methode eine Referenz zurückgibt, und Schreibvorgänge für diese Referenz nicht zulässig sind.
 
 Die `readonly struct`- und `ref readonly`-Kontexte wurden in C# 7.2 hinzugefügt. `readonly`-Strukturmember wurden in C# 8.0 hinzugefügt.
@@ -72,56 +72,11 @@ erhalten Sie die Compilerfehlermeldung:
 
 **Einem schreibgeschützten Feld kann nichts zugewiesen werden (außer in einem Konstruktor oder Variableninitialisierer)**
 
-## <a name="readonly-member-examples"></a>Beispiele für readonly-Member
-
-Gegebenenfalls möchten Sie eine Struktur erstellen, die Veränderungen unterstützt. In diesen Fällen wird der interne Zustand der Struktur durch einige der Instanzmember wahrscheinlich nicht verändert. Dann können Sie diese Instanzmember mit dem `readonly`-Modifizierer deklarieren. Mithilfe des Compilers können Sie die Umsetzung Ihrer Absicht erzwingen. Wenn dieses Member den Zustand direkt ändert oder auf ein Member zugreift, das nicht ebenfalls mit dem `readonly`-Modifizierer deklariert ist, führt dies zu einem Kompilierzeitfehler. Der `readonly`-Modifizierer ist für `struct`-Member gültig, nicht für `class`- oder `interface`-Memberdeklarationen.
-
-Es ergeben sich zwei Vorteile, wenn Sie den `readonly`-Modifizierer auf anwendbare `struct`-Methoden anwenden. Der wichtigste Vorteil ist, dass der Compiler Ihre Absicht durchsetzt. Den Zustand verändernder Code ist in einer `readonly`-Methode nicht gültig. Auch der `readonly`-Modifizierer kann vom Compiler eingesetzt werden, um Leistungsoptimierungen zu ermöglichen. Wenn große `struct`-Typen durch den `in`-Verweis übergeben werden, muss der Compiler eine defensive Kopie erzeugen, falls der Zustand der Struktur geändert wird. Wenn nur auf `readonly`-Member zugegriffen wird, darf der Compiler die defensive Kopie nicht erstellen.
-
-Der `readonly`-Modifizierer ist für die meisten Member einer `struct`-Methode gültig, einschließlich Methoden, die die in <xref:System.Object?displayProperty=nameWithType> deklarierte Methoden außer Kraft setzen. Es gibt einige Einschränkungen:
-
-- Sie können keine statischen `readonly`-Methoden oder -Eigenschaften deklarieren.
-- Sie können keine `readonly`-Konstruktoren deklarieren.
-
-Sie können den `readonly`-Modifizierer zu einer Eigenschafts- oder Indexerdeklaration hinzufügen:
-
-```csharp
-readonly public int Counter
-{
-  get { return 0; }
-  set {} // not useful, but legal
-}
-```
-
-Außerdem können Sie den `readonly`-Modifizierer zu einzelnen `get`- oder `set`-Accessoren einer Eigenschaft oder eines Indexers hinzufügen:
-
-```csharp
-public int Counter
-{
-  readonly get { return _counter; }
-  set { _counter = value; }
-}
-int _counter;
-```
-
-Sie dürfen den `readonly`-Modifizierer nicht sowohl zu einer Eigenschaft als auch zu einem Accessor bzw. mehreren Accessoren derselben Eigenschaft hinzufügen. Für Indexer gilt die gleiche Einschränkung.
-
-Der Compiler wendet den `readonly`-Modifizierer implizit auf automatisch implementierte Eigenschaften an, bei denen der vom Compiler implementierte Code den Zustand nicht ändert. Dies entspricht den folgenden Deklarationen:
-
-```csharp
-public readonly int Index { get; }
-// Or:
-public int Number { readonly get; }
-public string Message { readonly get; set; }
-```
-
-An diesen Stellen können Sie den `readonly`-Modifizierer hinzufügen, aber er hat keinen sinnvollen Effekt. Sie dürfen den `readonly`-Modifizierer nicht zu einem Setter für eine automatisch implementierte Eigenschaft oder zu einer automatisch implementierten Eigenschaft für Lese-/Schreibzugriff hinzufügen.
-
 ## <a name="ref-readonly-return-example"></a>Rückgabebeispiel für ref readonly
 
 Der `readonly`-Modifizierer für `ref return` gibt an, dass der zurückgegebene Verweis nicht geändert werden kann. Das folgende Beispiel gibt einen Verweis auf den Ursprung zurück. Dabei wird über den `readonly`-Modifizierer angegeben, dass die aufrufenden Funktionen den Ursprung nicht ändern können:
 
-[!code-csharp[readonly struct example](~/samples/snippets/csharp/keywords/ReadonlyKeywordExamples.cs#ReadonlyReturn)]
+[!code-csharp[readonly return example](~/samples/snippets/csharp/keywords/ReadonlyKeywordExamples.cs#ReadonlyReturn)]
 
 Der zurückgegebene Typ muss nicht `readonly struct` aufweisen. Jeder Typ, der von `ref` zurückgegeben werden kann, kann auch von `ref readonly` zurückgegeben werden.
 
