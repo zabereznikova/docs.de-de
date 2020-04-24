@@ -26,14 +26,14 @@ Dieser Abschnitt enthält Themen, in denen das `My.Settings`-Objekt und die Aufg
 
  Die folgende Tabelle enthält Beispiele zum Zugriff auf Anwendungsformate.  
   
-|An|Weitere Informationen finden Sie unter|  
+|Beschreibung|Siehe|  
 |--------|---------|  
-|Aktualisieren des Werts einer Benutzereinstellung|[Vorgehensweise: Ändern von Benutzereinstellungen in Visual Basic](../../../../visual-basic/developing-apps/programming/app-settings/how-to-change-user-settings.md)|  
-|Anzeigen der Anwendung und der Benutzereinstellungen in einem Eigenschaftenraster|[Vorgehensweise: Erstellen von Eigenschaftenrastern für Benutzereinstellungen in Visual Basic](../../../../visual-basic/developing-apps/programming/app-settings/how-to-create-property-grids-for-user-settings.md)|  
-|Speichern von aktualisierten Benutzereinstellungswerten|[Vorgehensweise: Beibehalten von Benutzereinstellungen in Visual Basic](../../../../visual-basic/developing-apps/programming/app-settings/how-to-persist-user-settings.md)|  
-|Bestimmen der Werte von Benutzereinstellungen|[Vorgehensweise: Lesen von Anwendungseinstellungen in Visual Basic](../../../../visual-basic/developing-apps/programming/app-settings/how-to-read-application-settings.md)|  
+|Aktualisieren des Werts einer Benutzereinstellung|[How to: Ändern von Benutzereinstellungen in Visual Basic](../../../../visual-basic/developing-apps/programming/app-settings/how-to-change-user-settings.md)|  
+|Anzeigen der Anwendung und der Benutzereinstellungen in einem Eigenschaftenraster|[How to: Erstellen von Eigenschaftenrastern für Benutzereinstellungen in Visual Basic](../../../../visual-basic/developing-apps/programming/app-settings/how-to-create-property-grids-for-user-settings.md)|  
+|Speichern von aktualisierten Benutzereinstellungswerten|[How to: Beibehalten von Benutzereinstellungen in Visual Basic](../../../../visual-basic/developing-apps/programming/app-settings/how-to-persist-user-settings.md)|  
+|Bestimmen der Werte von Benutzereinstellungen|[How to: Lesen von Anwendungseinstellungen in Visual Basic](../../../../visual-basic/developing-apps/programming/app-settings/how-to-read-application-settings.md)|  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Verwalten von Anwendungseinstellungen (.NET)](/visualstudio/ide/managing-application-settings-dotnet)
 - [My.Settings-Objekt](../../../../visual-basic/language-reference/objects/my-settings-object.md)

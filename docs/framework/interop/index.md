@@ -32,27 +32,27 @@ Beschreibt, wie COM-Komponenten aus .NET Framework-Anwendungen verwendet werden
 Beschreibt, wie .NET Framework-Komponenten aus COM-Anwendungen verwendet werden
 
 [Verwenden nicht verwalteter DLL-Funktionen](consuming-unmanaged-dll-functions.md)  
-Beschreibt das Aufrufen von nicht verwalteten DLL-Funktionen mithilfe von Plattformaufruf.
+Beschreibt das Aufrufen von nicht verwalteten DLL-Funktionen mithilfe von Plattformaufruf
 
 [Interop Marshaling (Interop-Marshalling)](interop-marshaling.md)  
 Beschreibt das Marshalling für COM-Interop sowie Plattformaufruf
 
-[Gewusst wie: Zuordnen von HRESULTs und Ausnahmen](how-to-map-hresults-and-exceptions.md)  
+[How to: Zuordnen von HRESULT-Werten und Ausnahmen](how-to-map-hresults-and-exceptions.md)  
 Beschreibt die Zuordnung zwischen Ausnahmen und HRESULTs
 
 [Typäquivalenz und eingebettete Interop-Typen](type-equivalence-and-embedded-interop-types.md)  
 Beschreibt, wie die Typinformation für COM-Typen in Assemblys eingebettet wird und wie die Common Language Runtime die Äquivalenz von eingebetteten COM-Typen bestimmt
 
-[Gewusst wie: Generieren primärer Interop-Assemblys mit "Tlbimp.exe"](how-to-generate-primary-interop-assemblies-using-tlbimp-exe.md)  
+[How to: Generieren primärer Interopassemblys mit „Tlbimp.exe“](how-to-generate-primary-interop-assemblies-using-tlbimp-exe.md)  
 Beschreibt, wie primäre Interop-Assemblys mit *Tlbimp.exe* (Type Library Importer-Tool) erstellt werden
 
-[Vorgehensweise: Registrieren primärer Interop-Assemblys](how-to-register-primary-interop-assemblies.md)  
+[How to: Registrieren primärer Interopassemblys](how-to-register-primary-interop-assemblies.md)  
 Beschreibt, wie die primären Interop-Assemblys registriert werden, bevor Sie in Ihren Projekten auf diese verweisen können
 
 [COM-Interop ohne Registrierung](registration-free-com-interop.md)  
 Beschreibt, wie COM-Interop Komponenten aktivieren kann, ohne die Windows-Registrierung zu verwenden
 
-[How to: Configure .NET Framework-Based COM Components for Registration-Free Activation (Vorgehensweise: Konfigurieren von .NET Framework-basierten COM-Komponenten für die registrierungsfreie Aktivierung)](configure-net-framework-based-com-components-for-reg.md)  
+[How to: Konfigurieren von .NET Framework-basierten COM-Komponenten für die Aktivierung ohne Registrierung](configure-net-framework-based-com-components-for-reg.md)  
 Beschreibt, wie ein Anwendungsmanifest erstellt wird und wie ein Komponentenmanifest erstellt und eingebettet wird
 
 ## <a name="related-sections"></a>Verwandte Abschnitte

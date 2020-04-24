@@ -28,7 +28,7 @@ Sie können Visual Basic zum Verarbeiten von Laufwerken, Ordnern und Dateien mit
  [Grundlagen zu Datei-E/A-Vorgängen und dem Dateisystem in .NET Framework (Visual Basic)](../../../../visual-basic/developing-apps/programming/drives-directories-files/basics-of-net-framework-file-io-and-the-file-system.md)  
  Bietet einen Überblick über die Datei-A/A-Konzepte in .NET Framework, einschließlich Streams, isolierter Speicher, Dateiereignissen, Dateiattributen und Dateizugriff.  
   
- [Exemplarische Vorgehensweise: Bearbeiten von Dateien mit .NET Framework-Methoden](../../../../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-by-using-net-framework-methods.md)  
+ [Exemplarische Vorgehensweise: Bearbeiten von Dateien mit .NET Framework-Methoden (Visual Basic)](../../../../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-by-using-net-framework-methods.md)  
  Veranschaulicht, wie .NET Framework zum Bearbeiten von Dateien und Ordnern verwendet wird.  
   
  [Exemplarische Vorgehensweise: Bearbeiten von Dateien und Verzeichnissen in Visual Basic](../../../../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-and-directories.md)  

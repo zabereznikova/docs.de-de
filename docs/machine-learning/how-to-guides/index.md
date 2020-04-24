@@ -2,12 +2,12 @@
 title: ML.NET-Schrittanleitungen
 description: Erfahren Sie, wie Sie bestimmte Aufgaben ausführen können, die Sie bei der Erstellung von benutzerdefinierten KI-Lösungen und Machine Learning und deren Integration in Ihre .NET-Anwendungen unterstützen.
 ms.date: 03/01/2019
-ms.openlocfilehash: 25c5cb6247c202e3ef51d0ed25b3b213fdca7a56
-ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
+ms.openlocfilehash: e83db6f1f754357b7e204485ea545feef9ad4a95
+ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81607531"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82102449"
 ---
 # <a name="net-machine-learning-how-to-guides"></a>Schrittanleitungen für .NET Machine Learning
 
@@ -27,15 +27,9 @@ Der Abschnitt mit Schrittanleitungen im Leitfaden für ML.NET finden Sie schnell
 
 * [Trainieren eines Regressionsmodells zur Vorhersage eines Werts mit ML.NET](train-machine-learning-model-ml-net.md)
 
-### <a name="evaluate-the-model-quality"></a>Bewerten der Modellqualität
-
-* [Berechnen von Metriken zum Auswerten der Modellqualität](verify-model-quality-ml-net.md)
-
 ### <a name="model-explainability"></a>Modellerklärung
 
 * [Bestimmen der Wichtigkeit von Modellfeatures mit Permutation Feature Importance (PFI)](explain-machine-learning-model-permutation-feature-importance-ml-net.md)
-
-* [Einsatz von verallgemeinerten additiven Modellen und shape-Funktionen zur Modellerklärung](use-gams-for-model-explainability.md)
 
 ## <a name="run"></a>Run
 

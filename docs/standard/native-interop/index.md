@@ -24,7 +24,7 @@ Die obige Liste deckt nicht alle möglichen Situationen und Szenarios ab, in den
 > [!NOTE]
 > Die meisten Beispiele in diesem Abschnitt werden für alle drei unterstützten Plattformen für .NET Core (Windows, Linux und macOS) aufgeführt. Bei einigen kurzen und anschaulichen Beispielen wird allerdings nur ein Beispiel gezeigt, das Windows-Dateinamen und -Erweiterungen (d.h. „DLL“ für Bibliotheken) verwendet. Dies wurde nur der Einfachheit halber so gehandhabt und bedeutet nicht, dass diese Funktionen unter Linux oder macOS nicht verfügbar sind.
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Plattformaufruf (P/Invoke)](pinvoke.md)
 - [Marshalling von Typen](type-marshaling.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - application domains, programming
 - programming application domains
 ms.assetid: 96d3b8e3-bef8-4da0-9a81-9841e23a94e9
-ms.openlocfilehash: 2c849d27c70971d17bf4359ee7ae1081ee976a5f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3f66eacaf30f8001cdbf3a486e5ce1c878712e2f
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73119815"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81644271"
 ---
 # <a name="programming-with-application-domains-and-assemblies"></a>Programmieren mit Anwendungsdomänen und Assemblys
 
@@ -28,7 +28,7 @@ Enthält Links zu allen Gewusst-wie-Themen in der Begriffsdokumentation zum Prog
 [Verwenden von Anwendungsdomänen](use.md)  
 Stellt Beispiele zum Erstellen, Konfigurieren und Verwenden von Anwendungsdomänen bereit.  
   
-[Programmieren mit Assemblys](../../standard/assembly/program.md)  
+[Programmieren mit Assemblys](../../standard/assembly/index.md)  
 Beschreibt das Erstellen, Signieren und Festlegen von Attributen für Assemblys.  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  

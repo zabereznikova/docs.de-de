@@ -37,7 +37,7 @@ Diese Bibliothek implementiert die allgemeinen ADO.NET-Abstraktionen für Verbin
 
 [!code-csharp[](../../../../samples/snippets/standard/data/sqlite/HelloWorldSample/Program.cs?name=snippet_HelloWorld)]
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 * [Verbindungszeichenfolgen](connection-strings.md)
 * [API-Referenz](/dotnet/api/?view=msdata-sqlite-3.0)

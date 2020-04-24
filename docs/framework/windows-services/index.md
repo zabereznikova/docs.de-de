@@ -31,7 +31,7 @@ ms.locfileid: "71053541"
 
 Stellt eine Übersicht von Windows-Dienstanwendungen bereit, wie die Lebensdauer eines Dienst und wie Dienstanwendungen sich von anderen häufigen Projekttypen unterscheiden
 
-[Exemplarische Vorgehensweise: Erstellen einer Windows-Dienstanwendung im Komponenten-Designer](walkthrough-creating-a-windows-service-application-in-the-component-designer.md)
+[Exemplarische Vorgehensweise: Erstellen einer Windows-Dienstanwendung](walkthrough-creating-a-windows-service-application-in-the-component-designer.md)
 
 Stellt ein Beispiel zur Erstellung eines Diensts in Visual Basic und Visual C# bereit
 
@@ -39,7 +39,7 @@ Stellt ein Beispiel zur Erstellung eines Diensts in Visual Basic und Visual C# b
 
 Erläutert die Sprachelemente, die in der Dienstprogrammierung verwendet werden
 
-[Vorgehensweise: Erstellen von Windows-Diensten](how-to-create-windows-services.md)
+[How to: Erstellen von Windows-Diensten](how-to-create-windows-services.md)
 
 Beschreibt den Vorgang des Erstellens und Konfigurierens von Windows-Diensten über die Windows-Dienstprojektvorlage
 

@@ -39,7 +39,7 @@ Dieser Abschnitt beschreibt Programmieraufgaben, über die Sie möglicherweise w
  [Verarbeiten von Laufwerken, Verzeichnissen und Dateien](drives-directories-files/index.md)  
  Enthält die Dokumentation für den Zugriff auf das Dateisystem mit dem `My.Computer.FileSystem`-Objekt.  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Funktionen von Visual Basic](../../../visual-basic/programming-guide/language-features/index.md)
 - [Programmierkonzepte](../../../visual-basic/programming-guide/concepts/index.md)
