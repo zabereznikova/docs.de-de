@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - programming [WF], workflow security
 ms.assetid: d712a566-f435-44c0-b8c0-49298e84b114
-ms.openlocfilehash: 36d03a2fca8f143b98338050fc9da4490960bda9
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 2a9b26f8da7616480f69a6c4580b8d351833c9ee
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837518"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81646318"
 ---
 # <a name="workflow-security"></a>Workflowsicherheit
-Windows Workflow Foundation (WF) ist in verschiedene Technologien integriert, z. b. Microsoft SQL Server und Windows Communication Foundation (WCF). Die Interaktion mit diesen Technologien kann zu Sicherheitsproblemen für den Workflow führen, falls diese nicht ordnungsgemäß durchgeführt wird.
+Windows Workflow Foundation (WF) ist in verschiedene Technologien integriert, z. B. Microsoft SQL Server und Windows Communication Foundation (WCF). Die Interaktion mit diesen Technologien kann zu Sicherheitsproblemen für den Workflow führen, falls diese nicht ordnungsgemäß durchgeführt wird.
 
 ## <a name="persistence-security-concerns"></a>Sicherheitsaspekte der Persistenz
 
@@ -38,14 +38,14 @@ Windows Workflow Foundation (WF) ist in verschiedene Technologien integriert, z.
 
 ## <a name="considerations-for-workflowservicehost"></a>Überlegungen zu WorkflowServiceHost
 
-- Windows Communication Foundation (WCF)-Endpunkte, die in Workflows verwendet werden, sollten gesichert werden. Weitere Informationen finden Sie unter [Übersicht über die WCF-Sicherheit](../wcf/feature-details/security-overview.md).
+- Windows Communication Foundation (WCF)-Endpunkte, die in Workflows verwendet werden, sollten gesichert werden. Weitere Informationen finden Sie unter [WCF-Sicherheitsübersicht](../wcf/feature-details/security-overview.md).
 
-- Sie können die Autorisierung auf Hostebene mit <xref:System.ServiceModel.ServiceAuthorizationManager> implementieren. Weitere Informationen finden [Sie unter Gewusst wie: Erstellen eines benutzerdefinierten Autorisierungs-Managers für einen Dienst](../wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md) .
+- Sie können die Autorisierung auf Hostebene mit <xref:System.ServiceModel.ServiceAuthorizationManager> implementieren. Weitere Informationen finden Sie [unter Gewusst wie: Erstellen eines benutzerdefinierten Autorisierungs-Managers für einen Dienst.](../wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md)
 
 - Der ServiceSecurityContext für die eingehende Nachricht ist über den Zugriff auf OperationContext auch im Workflow verfügbar.
 
 ## <a name="wf-security-pack-ctp"></a>WF-Sicherheitspaket CTP
- Das Microsoft WF-Sicherheitspaket CTP 1 ist die erste CTP-Version (Community Technology Preview) einer Reihe von Aktivitäten und deren Implementierung auf der Grundlage von [Windows Workflow Foundation](index.md) in [.NET Framework 4](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/w0x726c2(v=vs.100)) (WF 4) und der [Windows Identity Foundation (WIF)](../security/index.md).  Das Microsoft WF-Sicherheitspaket CTP 1 enthält beide Aktivitäten und deren Designer, die veranschaulichen, wie einfach verschiedene sicherheitsrelevante Szenarien mithilfe von Workflows aktiviert werden können, darunter:
+ Die Microsoft WF Security Pack Community Technology Preview (CTP) 1 ist eine Reihe von Aktivitäten und deren Implementierung basierend auf [Windows Workflow Foundation](index.md) in [.NET Framework 4](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/w0x726c2(v=vs.100)) (WF 4) und Windows Identity Foundation [(WIF)](https://docs.microsoft.com/previous-versions/dotnet/framework/security/index). Das Microsoft WF-Sicherheitspaket CTP 1 enthält beide Aktivitäten und deren Designer, die veranschaulichen, wie einfach verschiedene sicherheitsrelevante Szenarien mithilfe von Workflows aktiviert werden können, darunter:
 
 1. Wechseln zu einer Clientidentität im Workflow
 
@@ -55,4 +55,4 @@ Windows Workflow Foundation (WF) ist in verschiedene Technologien integriert, z.
 
 4. Übertragen eines Clientsicherheitstokens an einen Back-End-Dienst (anspruchsbasierte Delegierung) mithilfe von WS-Trust ActAs
 
-Weitere Informationen und das Herunterladen des WF Security Pack CTP finden Sie unter: [WF Security Pack CTP](https://archive.codeplex.com/?p=wf)
+Weitere Informationen und zum Herunterladen des WF Security Pack CTP finden Sie unter: [WF Security Pack CTP](https://archive.codeplex.com/?p=wf)

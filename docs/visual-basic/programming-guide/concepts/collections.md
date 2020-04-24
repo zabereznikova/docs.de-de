@@ -2,12 +2,12 @@
 title: Auflistungen
 ms.date: 07/20/2015
 ms.assetid: 5f7749f3-aaf2-4319-b63c-bfa72e1e2b7a
-ms.openlocfilehash: ba16d04e781bcf69356b1f603d92e104816a0860
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 232b9ec7b5975092e73daf0a7384fa816f55f72f
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79401412"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81646346"
 ---
 # <a name="collections-visual-basic"></a>Auflistungen (Visual Basic)
 
@@ -536,7 +536,7 @@ End Class
 
 <a name="BKMK_Iterators"></a>
 
-## <a name="iterators"></a>Iteratoren
+## <a name="iterators"></a>Iterators
 
 Ein *Iterator* wird verwendet, um eine benutzerdefinierte Iteration durch eine Auflistung auszuführen. Ein Iterator kann eine Methode oder ein `get`-Accessor sein. Ein Iterator [Yield](../../../visual-basic/language-reference/statements/yield-statement.md) verwendet eine Yield-Anweisung, um jedes Element der Auflistung nacheinander zurückzugeben.
 
@@ -568,14 +568,14 @@ As IEnumerable(Of Integer)
 End Function
 ```
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Sammlunginitialisierer](../../../visual-basic/programming-guide/language-features/collection-initializers/index.md)
 - [Programmierkonzepte (Visual Basic)](../../../visual-basic/programming-guide/concepts/index.md)
-- [Option Strict-Anweisung](../../../visual-basic/language-reference/statements/option-strict-statement.md)
+- [Option Strict Statement](../../../visual-basic/language-reference/statements/option-strict-statement.md)
 - [LINQ to Objects (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)
-- [Parallel LINQ (PLINQ) (Paralleles LINQ (PLINQ))](../../../standard/parallel-programming/parallel-linq-plinq.md)
+- [Parallel LINQ (PLINQ) (Paralleles LINQ (PLINQ))](../../../standard/parallel-programming/introduction-to-plinq.md)
 - [Sammlungen und Datenstrukturen](../../../standard/collections/index.md)
 - [Auswählen einer Auflistungsklasse](../../../standard/collections/selecting-a-collection-class.md)
 - [Vergleiche und Sortierungen innerhalb von Auflistungen](../../../standard/collections/comparisons-and-sorts-within-collections.md)
-- [Verwendung generischer Sammlungen](../../../standard/collections/when-to-use-generic-collections.md)
+- [Verwenden von generischen Auflistungen](../../../standard/collections/when-to-use-generic-collections.md)

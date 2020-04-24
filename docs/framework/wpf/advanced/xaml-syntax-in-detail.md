@@ -29,12 +29,12 @@ helpviewer_keywords:
 - attribute syntax [XAML]
 - XAML [WPF], property element syntax
 ms.assetid: 67cce290-ca26-4c41-a797-b68aabc45479
-ms.openlocfilehash: dbff4bed59c8d1e861555676578b52528e2aebbe
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5f8bb862ce443fd7397036b10f69cda65a6960bc
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79186187"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81646144"
 ---
 # <a name="xaml-syntax-in-detail"></a>Ausführliche Erläuterung der XAML-Syntax
 In diesem Thema werden die Begriffe definiert, die zum Beschreiben der Elemente der XAML-Syntax verwendet werden. Diese Begriffe werden häufig in der restlichen Dokumentation verwendet, sowohl für die WPF-Dokumentation als auch für die anderen Frameworks, die XAML verwenden, oder für die grundlegenden XAML-Konzepte, die durch die XAML-Sprachunterstützung auf System.Xaml-Ebene aktiviert werden. In diesem Thema wird die grundlegende Terminologie erläutert, die im Thema [XAML-Übersicht (WPF)](../../../desktop-wpf/fundamentals/xaml.md)vorgestellt wurde.  
@@ -130,7 +130,7 @@ In diesem Thema werden die Begriffe definiert, die zum Beschreiben der Elemente 
   
  Sie können auch jedes Ereignis von jedem Objekt benennen, auf das über den Standardnamespace zugegriffen werden kann, indem Sie einen *typeName*verwenden. *Ereignis* teilweise qualifizierter Name; Diese Syntax unterstützt das Anfügen von Handlern für routingd-Ereignisse, bei denen der Handler das Routing von Ereignissen aus untergeordneten Elementen behandeln soll, das übergeordnete Element jedoch nicht auch dieses Ereignis in der Members-Tabelle enthält. Diese Syntax ähnelt einer angefügten Ereignissyntax, aber das Ereignis hier ist kein echtes angefügtes Ereignis. Stattdessen verweisen Sie auf ein Ereignis mit einem qualifizierten Namen. Weitere Informationen finden Sie unter Übersicht über [geroutete Ereignisse](routed-events-overview.md).  
   
- In einigen Szenarien werden Eigenschaftsnamen manchmal als Wert eines Attributs und nicht als Attributname angegeben. Dieser Eigenschaftsname kann auch Qualifizierer enthalten, z. B. die Eigenschaft, die im Formular *ownerType*angegeben ist. *dependencyPropertyName*. Dieses Szenario ist beim Schreiben von Stilen oder Vorlagen in XAML üblich. Die Verarbeitungsregeln für Eigenschaftsnamen, die als Attributwert bereitgestellt werden, unterscheiden sich und werden durch den Typ der festzulegenden Eigenschaft oder durch das Verhalten bestimmter WPF-Subsysteme gesteuert. Weitere Informationen finden Sie unter [Styling und Templating](../controls/styling-and-templating.md).  
+ In einigen Szenarien werden Eigenschaftsnamen manchmal als Wert eines Attributs und nicht als Attributname angegeben. Dieser Eigenschaftsname kann auch Qualifizierer enthalten, z. B. die Eigenschaft, die im Formular *ownerType*angegeben ist. *dependencyPropertyName*. Dieses Szenario ist beim Schreiben von Stilen oder Vorlagen in XAML üblich. Die Verarbeitungsregeln für Eigenschaftsnamen, die als Attributwert bereitgestellt werden, unterscheiden sich und werden durch den Typ der festzulegenden Eigenschaft oder durch das Verhalten bestimmter WPF-Subsysteme gesteuert. Weitere Informationen finden Sie unter [Styling und Templating](../../../desktop-wpf/fundamentals/styles-templates-overview.md).  
   
  Eine weitere Verwendung für Eigenschaftsnamen ist, wenn ein Attributwert eine Eigenschaftseigenschaftsbeziehung beschreibt. Diese Funktion wird für die Datenbindung und für Storyboardziele verwendet und durch die <xref:System.Windows.PropertyPath> Klasse und ihren Typkonverter aktiviert. Eine ausführlichere Beschreibung der Suchsemantik finden Sie unter [PropertyPath XAML Syntax](propertypath-xaml-syntax.md).  
   
@@ -173,7 +173,7 @@ In diesem Thema werden die Begriffe definiert, die zum Beschreiben der Elemente 
   
  In den .NET-Referenzseiten für Auflistungstypen wird diese Syntax mit der absichtlichen Auslassung des Objektelements für eine Auflistung gelegentlich in den XAML-Syntaxabschnitten als implizite Auflistungssyntax vermerkt.  
   
- Mit Ausnahme des Root-Elements ist jedes Objektelement in einer XAML-Datei, das als untergeordnetes Element eines anderen Elements verschachtelt ist, wirklich ein Element, das ein oder beide der folgenden Fälle ist: ein Member einer impliziten Auflistungseigenschaft des übergeordneten Elements , oder ein Element, das den Wert der XAML-Inhaltseigenschaft für das übergeordnete Element angibt (XAML-Inhaltseigenschaften werden in einem kommenden Abschnitt erläutert). Mit anderen Worten, die Beziehung zwischen übergeordneten Elementen und untergeordneten Elementen in einer Markupseite ist wirklich ein einzelnes Objekt im Stamm, und jedes Objektelement unter dem Stamm ist entweder eine einzelne Instanz, die einen Eigenschaftswert des übergeordneten Elements bereitstellt, oder eines der Elemente in einem Auflistung, die auch ein Auflistungstyp-Eigenschaftswert des übergeordneten Objekts ist. Dieses Single-Root-Konzept ist mit XML üblich und wird häufig im Verhalten von <xref:System.Windows.Markup.XamlReader.Load%2A>APIs verstärkt, die XAML laden, z. B. .  
+ Mit Ausnahme des root-Elements ist jedes Objektelement in einer XAML-Datei, das als untergeordnetes Element eines anderen Elements verschachtelt ist, wirklich ein Element, das einer oder beide der folgenden Fälle ist: ein Member einer impliziten Auflistungseigenschaft des übergeordneten Elements oder ein Element, das den Wert der XAML-Inhaltseigenschaft für das übergeordnete Element angibt (XAML-Inhaltseigenschaften werden in einem kommenden Abschnitt erläutert). Mit anderen Worten, die Beziehung zwischen übergeordneten Elementen und untergeordneten Elementen in einer Markupseite ist wirklich ein einzelnes Objekt im Stamm, und jedes Objektelement unter dem Stamm ist entweder eine einzelne Instanz, die einen Eigenschaftswert des übergeordneten Elements bereitstellt, oder eines der Elemente innerhalb einer Auflistung, das auch ein Auflistungstyp-Eigenschaftswert des übergeordneten Elements ist. Dieses Single-Root-Konzept ist mit XML üblich und wird häufig im Verhalten von <xref:System.Windows.Markup.XamlReader.Load%2A>APIs verstärkt, die XAML laden, z. B. .  
   
  Das folgende Beispiel ist eine Syntax mit<xref:System.Windows.Media.GradientStopCollection>dem Objektelement für eine Auflistung ( ) explizit angegeben.  
   
@@ -227,7 +227,7 @@ In diesem Thema werden die Begriffe definiert, die zum Beschreiben der Elemente 
   
 <a name="content_properties_and_collection_syntax_combined"></a>
 ## <a name="content-properties-and-collection-syntax-combined"></a>Inhaltseigenschaften und Auflistungssyntax in Kombination  
- Um mehr als ein einzelnes Objektelement als Inhalt zu akzeptieren, muss der Typ der content-Eigenschaft speziell ein Auflistungstyp sein. Ähnlich wie die Eigenschaftenelementsyntax für Auflistungstypen muss ein XAML-Prozessor Typen identifizieren, die Auflistungstypen sind. Wenn ein Element über eine XAML-Inhaltseigenschaft verfügt und der Typ der XAML-Inhaltseigenschaft eine Auflistung ist, muss der implizite Auflistungstyp im Markup nicht als Objektelement angegeben werden, und die XAML-Inhaltseigenschaft muss nicht als Eigenschaft angegeben werden. Element. Daher kann dem scheinbaren Inhaltsmodell im Markup jetzt mehr als ein untergeordnetes Element als Inhalt zugewiesen werden. Im Folgenden finden Sie <xref:System.Windows.Controls.Panel> die Inhaltssyntax für eine abgeleitete Klasse. Alle <xref:System.Windows.Controls.Panel> abgeleiteten Klassen richten die XAML-Inhaltseigenschaft als ein <xref:System.Windows.Controls.Panel.Children%2A>, der einen Wert vom Typ <xref:System.Windows.Controls.UIElementCollection>erfordert.  
+ Um mehr als ein einzelnes Objektelement als Inhalt zu akzeptieren, muss der Typ der content-Eigenschaft speziell ein Auflistungstyp sein. Ähnlich wie die Eigenschaftenelementsyntax für Auflistungstypen muss ein XAML-Prozessor Typen identifizieren, die Auflistungstypen sind. Wenn ein Element über eine XAML-Inhaltseigenschaft verfügt und der Typ der XAML-Inhaltseigenschaft eine Auflistung ist, muss der implizite Auflistungstyp im Markup nicht als Objektelement angegeben werden, und die XAML-Inhaltseigenschaft muss nicht als Eigenschaftselement angegeben werden. Daher kann dem scheinbaren Inhaltsmodell im Markup jetzt mehr als ein untergeordnetes Element als Inhalt zugewiesen werden. Im Folgenden finden Sie <xref:System.Windows.Controls.Panel> die Inhaltssyntax für eine abgeleitete Klasse. Alle <xref:System.Windows.Controls.Panel> abgeleiteten Klassen richten die XAML-Inhaltseigenschaft als ein <xref:System.Windows.Controls.Panel.Children%2A>, der einen Wert vom Typ <xref:System.Windows.Controls.UIElementCollection>erfordert.  
   
  [!code-xaml[XAMLOvwSupport#SyntaxContent](~/samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page5.xaml#syntaxcontent)]  
   
@@ -313,10 +313,10 @@ In diesem Thema werden die Begriffe definiert, die zum Beschreiben der Elemente 
   
  Aber genau wie *typeName*. *memberName-Formular* für Attribute, *baseTypeName*. *memberName* ist ein schlechter Stil im Markup, und Sie sollten ihn vermeiden.  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Übersicht über XAML (WPF)](../../../desktop-wpf/fundamentals/xaml.md)
-- [Sprachfunktionen des XAML-Namespace (x:)](../../../desktop-wpf/xaml-services/namespace-language-features.md)
+- [XAML-Namespace (x:) Sprachfunktionen](../../../desktop-wpf/xaml-services/namespace-language-features.md)
 - [WPF-XAML-Erweiterungen](wpf-xaml-extensions.md)
 - [Übersicht über Abhängigkeitseigenschaften](dependency-properties-overview.md)
 - [TypeConverter und XAML](typeconverters-and-xaml.md)

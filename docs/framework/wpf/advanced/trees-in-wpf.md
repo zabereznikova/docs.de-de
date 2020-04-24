@@ -6,12 +6,12 @@ helpviewer_keywords:
 - element tree [WPF]
 - visual tree [WPF]
 ms.assetid: e83f25e5-d66b-4fc7-92d2-50130c9a6649
-ms.openlocfilehash: 696772da1ebee405493f2ff0e1481daf93d08ec7
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: aed4350f1a7084b7894a70ac9d6d00cf25b39e34
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79187021"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81646197"
 ---
 # <a name="trees-in-wpf"></a>Strukturen in WPF
 In vielen Technologien werden Elemente und Komponenten in einer Baumstruktur organisiert, in denen Entwickler die Objektknoten direkt in der Struktur bearbeiten, um das Rendering oder das Verhalten einer Anwendung zu beeinflussen. Außerdem verwendet [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] mehrere Baumstrukturmetaphern, um Beziehungen zwischen Programmelementen festzulegen. Da die WPF-Entwickler meist eine Anwendung im Code erstellen können oder Teile der Anwendung in XAML festlegen, obwohl sie konzeptionell über die Baumstrukturobjektmetapher denken, rufen sie trotzdem eine bestimmte API auf oder verwenden bestimmte Markups, um dies zu tun, anstatt einige allgemeine API-Strukturobjektmanipulationen vorzunehmen, wie Sie sie möglicherweise im XML-DOM verwenden. WPF macht zwei Hilfsklassen verfügbar, die <xref:System.Windows.LogicalTreeHelper> eine <xref:System.Windows.Media.VisualTreeHelper>Baummetapheransicht bereitstellen, und . Die Begriffe „visuelle Struktur“ und „logische Struktur“ werden auch in der WPF-Dokumentation verwendet, da diese Strukturen für das Verstehen des Verhaltens bestimmter WPF-Schlüsselfunktionen hilfreich sind. In diesem Thema wird definiert, was die visuelle Und die logische Struktur darstellen, <xref:System.Windows.LogicalTreeHelper> erläutert, wie sich solche Bäume auf ein allgemeines Objektbaumkonzept beziehen, und führt ein und <xref:System.Windows.Media.VisualTreeHelper>s.  
@@ -37,7 +37,7 @@ In vielen Technologien werden Elemente und Komponenten in einer Baumstruktur org
   
  Die logische Struktur ist jedoch nicht das gesamte Objektdiagramm, das zur Laufzeit für die Anwendungsbenutzeroberfläche vorhanden ist, selbst wenn die impliziten XAML-Syntaxelemente berücksichtigt werden. Der Hauptgrund dafür sind Visuals und Vorlagen. Betrachten Sie z. B. die <xref:System.Windows.Controls.Button>. Die logische Struktur <xref:System.Windows.Controls.Button> meldet das `Content`Objekt und auch seine Zeichenfolge . Es gibt jedoch noch mehr zu dieser Schaltfläche in der Laufzeit-Objektstruktur. Insbesondere wird die Schaltfläche nur auf dem Bildschirm <xref:System.Windows.Controls.Button> angezeigt, wie sie es tut, weil eine bestimmte Steuerelementvorlage angewendet wurde. Die visuellen Elemente, die aus einer angewendeten <xref:System.Windows.Controls.Border> Vorlage stammen (z. B. die Vorlagen definiert von Dunkelgrau um die visuelle Schaltfläche), werden nicht in der logischen Struktur gemeldet, selbst wenn Sie sich die logische Struktur während der Laufzeit ansehen (z. B. das Behandeln eines Eingabeereignisses von der sichtbaren Benutzeroberfläche und das anschließende Lesen der logischen Struktur). Sie müssten stattdessen die visuelle Struktur untersuchen, um die visuellen Vorlagen zu suchen.  
   
- Weitere Informationen dazu, wie die [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]-Syntax das erstellte Objektdiagramm sowie die implizite Syntax in XAML zuordnet, finden Sie unter [Ausführliche Erläuterung der XAML-Syntax](xaml-syntax-in-detail.md) oder [Übersicht über XAML (WPF)](xaml-overview-wpf.md).  
+ Weitere Informationen dazu, wie die [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]-Syntax das erstellte Objektdiagramm sowie die implizite Syntax in XAML zuordnet, finden Sie unter [Ausführliche Erläuterung der XAML-Syntax](xaml-syntax-in-detail.md) oder [Übersicht über XAML (WPF)](../../../desktop-wpf/fundamentals/xaml.md).  
   
 <a name="tree_property_inheritance_event_routing"></a>
 ### <a name="the-purpose-of-the-logical-tree"></a>Der Zweck der logischen Struktur  
@@ -84,7 +84,7 @@ In vielen Technologien werden Elemente und Komponenten in einer Baumstruktur org
   
  Die Ressourcensuche kann jedoch auch über die unmittelbare logische Struktur hinaus erweitert werden. Bei Anwendungsmarkups kann die Ressourcensuche auf Anwendungsebene von Ressourcenwörterbüchern weitergeführt werden, und anschließend bei der Designunterstützung und den Systemwerten fortgesetzt werden, die als statische Eigenschaften oder Schlüssel referenziert werden. Designs selbst können auch auf Systemwerte außerhalb der logischen Struktur des Designs verweisen, wenn die Ressourcenverweise dynamisch sind. Weitere Informationen zu Ressourcenwörterbüchern und der Suchlogik, finden Sie unter [XAML-Ressourcen](../../../desktop-wpf/fundamentals/xaml-resources-define.md).  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Übersicht über die Eingabe](input-overview.md)
 - [Übersicht über das WPF-Grafikrendering](../graphics-multimedia/wpf-graphics-rendering-overview.md)

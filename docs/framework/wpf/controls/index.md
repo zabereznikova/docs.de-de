@@ -1,5 +1,5 @@
 ---
-title: Kontrollen
+title: Steuerelemente
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,14 +7,14 @@ dev_langs:
 helpviewer_keywords:
 - controls [WPF], about WPF controls
 ms.assetid: 3f255a8a-35a8-4712-9065-472ff7d75599
-ms.openlocfilehash: 2ec8c0a99f4e2431aed0d8c24168b7329de669f8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2aab0fc8adaf17a8e9820a6269a740ef09540cda
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79187532"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81646487"
 ---
-# <a name="controls"></a>Kontrollen
+# <a name="controls"></a>Steuerelemente
 <a name="introduction"></a>
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]mit vielen der allgemeinen UI-Komponenten ausgeliefert, die in <xref:System.Windows.Controls.Button>fast <xref:System.Windows.Controls.Label> <xref:System.Windows.Controls.TextBox>jeder <xref:System.Windows.Controls.Menu>Windows-Anwendung verwendet werden, z. B. , , , und <xref:System.Windows.Controls.ListBox>. In der Vergangenheit wurden diese Objekte als Steuerelemente bezeichnet. Während [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] das SDK weiterhin den Begriff "Steuerelement" verwendet, um jede Klasse, die ein sichtbares Objekt in einer Anwendung darstellt, <xref:System.Windows.Controls.Control> lose zu meinen, ist es wichtig zu beachten, dass eine Klasse nicht von der Klasse erben muss, um eine sichtbare Präsenz zu haben. Klassen, die von <xref:System.Windows.Controls.Control> der Klasse <xref:System.Windows.Controls.ControlTemplate>erben, enthalten eine , die es dem Consumer eines Steuerelements ermöglicht, das Erscheinungsbild des Steuerelements radikal zu ändern, ohne eine neue Unterklasse erstellen zu müssen.  In diesem Thema wird erläutert, wie Steuerelemente <xref:System.Windows.Controls.Control> (sowohl Steuerelemente, die von [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]der Klasse erben, als auch solche, die nicht erben) häufig in verwendet werden.  
 
@@ -54,7 +54,7 @@ ms.locfileid: "79187532"
   
  [!code-xaml[ControlsOverview#5](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlsOverview/CSharp/AppInCode.xaml#5)]  
   
- Sie können einen Stil auch nur auf bestimmte Steuerelemente eines bestimmten Typs anwenden, `Style` indem Sie dem Stil einen Schlüssel zuweisen und diesen Schlüssel in der Eigenschaft des Steuerelements angeben.  Weitere Informationen zu Stilen finden Sie unter [Styling und Templating](styling-and-templating.md).  
+ Sie können einen Stil auch nur auf bestimmte Steuerelemente eines bestimmten Typs anwenden, `Style` indem Sie dem Stil einen Schlüssel zuweisen und diesen Schlüssel in der Eigenschaft des Steuerelements angeben.  Weitere Informationen zu Stilen finden Sie unter [Styling und Templating](../../../desktop-wpf/fundamentals/styles-templates-overview.md).  
   
 ### <a name="creating-a-controltemplate"></a>Erstellen eines ControlTemplate-Objekts  
  A <xref:System.Windows.Style> ermöglicht es Ihnen, Eigenschaften für mehrere Steuerelemente gleichzeitig festzulegen, aber <xref:System.Windows.Controls.Control> manchmal möchten Sie möglicherweise <xref:System.Windows.Style>die Darstellung eines über das hinaus, was Sie tun können, anpassen, indem Sie eine erstellen. Klassen, die von <xref:System.Windows.Controls.Control> der Klasse <xref:System.Windows.Controls.ControlTemplate>erben, haben eine , <xref:System.Windows.Controls.Control>die die Struktur und das Erscheinungsbild einer definiert. Die <xref:System.Windows.Controls.Control.Template%2A> Eigenschaft <xref:System.Windows.Controls.Control> eines ist öffentlich, sodass Sie ein <xref:System.Windows.Controls.Control> a <xref:System.Windows.Controls.ControlTemplate> geben können, das sich von der Standardeinstellung unterscheidet. Sie können häufig <xref:System.Windows.Controls.ControlTemplate> ein <xref:System.Windows.Controls.Control> neues für eine angeben, anstatt von einem <xref:System.Windows.Controls.Control>Steuerelement zu erben, um die Darstellung einer anzupassen.  
@@ -97,9 +97,9 @@ ms.locfileid: "79187532"
 
  Weitere Informationen zu diesen Basisklassen finden Sie unter [WPF Content Model](wpf-content-model.md).  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
-- [Erstellen von Formaten und Vorlagen](styling-and-templating.md)
+- [Erstellen von Formaten und Vorlagen](../../../desktop-wpf/fundamentals/styles-templates-overview.md)
 - [Kategorien von Steuerelementen](controls-by-category.md)
 - [Steuerelementbibliothek](control-library.md)
 - [Übersicht über Datenvorlagen](../data/data-templating-overview.md)

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - dependency properties [WPF]
 - resources [WPF], references to
 ms.assetid: d119d00c-3afb-48d6-87a0-c4da4f83dee5
-ms.openlocfilehash: 542e0a84e4c5cfc3750c33fe29cb40d3643e91e3
-ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
+ms.openlocfilehash: c73a61b8c251b12d5b3dac67535632322779a6af
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/03/2020
-ms.locfileid: "80636031"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81644055"
 ---
 # <a name="dependency-properties-overview"></a>Übersicht über Abhängigkeitseigenschaften
 
@@ -123,7 +123,7 @@ Das folgende Beispiel legt mithilfe einer in XAML deklarierten Bindung die Eigen
 > [!NOTE]
 > Bindungen werden als ein lokaler Wert behandelt. Wenn Sie also einen anderen lokalen Wert festgelegt haben, beseitigen Sie die Bindung. Weitere Informationen finden Sie unter [Priorität von Abhängigkeitseigenschaftswerten](dependency-property-value-precedence.md).
 
-Die Abhängigkeitseigenschaften (oder die <xref:System.Windows.DependencyObject>-Klasse) unterstützen <xref:System.ComponentModel.INotifyPropertyChanged> nicht nativ zu Zwecken der Erstellung von Benachrichtigungen von Änderungen im Wert <xref:System.Windows.DependencyObject> für die Quelleigenschaft für Datenbindungsvorgänge. Weitere Informationen zum Erstellen von Eigenschaften für die Datenbindung, die Änderungen an einem Datenbindungsziel melden können, finden Sie unter [Übersicht über die Datenbindung](../data/data-binding-overview.md).
+Die Abhängigkeitseigenschaften (oder die <xref:System.Windows.DependencyObject>-Klasse) unterstützen <xref:System.ComponentModel.INotifyPropertyChanged> nicht nativ zu Zwecken der Erstellung von Benachrichtigungen von Änderungen im Wert <xref:System.Windows.DependencyObject> für die Quelleigenschaft für Datenbindungsvorgänge. Weitere Informationen zum Erstellen von Eigenschaften für die Datenbindung, die Änderungen an einem Datenbindungsziel melden können, finden Sie unter [Übersicht über die Datenbindung](../../../desktop-wpf/data/data-binding-overview.md).
 
 ### <a name="styles"></a>Stile
 Stile und Vorlagen sind zwei Hauptgründe für die Verwendung von Abhängigkeitseigenschaften. Stile eignen sich besonders für das Festlegen von Eigenschaften, die die [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] der Anwendung definieren. Stile werden in XAML in der Regel als Ressourcen definiert. Stile interagieren mit dem Eigenschaftensystem, weil sie normalerweise sowohl „Setter“ für bestimmte Eigenschaften als auch „Trigger“ enthalten, die einen Eigenschaftswert basierend auf dem Echtzeitwert einer anderen Eigenschaft ändern.
@@ -134,7 +134,7 @@ Im folgenden Beispiel wird ein einfacher Stil <xref:System.Windows.FrameworkElem
 
 [!code-xaml[PropertiesOvwSupport#SimpleStyle](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page3.xaml#simplestyle)]
 
-Weitere Informationen finden Sie unter [Erstellen von Formaten und Vorlagen](../controls/styling-and-templating.md).
+Weitere Informationen finden Sie unter [Erstellen von Formaten und Vorlagen](../../../desktop-wpf/fundamentals/styles-templates-overview.md).
 
 ### <a name="animations"></a>Animations
 Abhängigkeitseigenschaften können animiert werden. Wenn eine Animation angewendet wurde und ausgeführt wird, verfügt der animierte Wert über eine höhere Priorität als alle anderen Werte (z.B. ein lokaler Wert), über die die Eigenschaft sonst verfügt.

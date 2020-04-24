@@ -8,12 +8,12 @@ helpviewer_keywords:
 - controls [WPF], authoring overview
 - authoring overview for controls [WPF]
 ms.assetid: 3d864748-cff0-4e63-9b23-d8e5a635b28f
-ms.openlocfilehash: 2326520039085beb5f5294e23db67b67f9d7d7da
-ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
+ms.openlocfilehash: a6ab5463cc28aa590454ae1304714d3d12ee7c6b
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "81243270"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81646135"
 ---
 # <a name="control-authoring-overview"></a>Übersicht über die Steuerung der Erstellung
 
@@ -38,7 +38,7 @@ In der Vergangenheit waren Sie bei der Anpassung eines vorhandenen Steuerelement
 
 - **Trigger.** Mit <xref:System.Windows.Trigger> A können Sie die Darstellung und das Verhalten eines Steuerelements dynamisch ändern, ohne ein neues Steuerelement zu erstellen. Angenommen, Sie haben <xref:System.Windows.Controls.ListBox> mehrere Steuerelemente in der Anwendung <xref:System.Windows.Controls.ListBox> und möchten, dass die Elemente in jedem Element fett und rot sein sollen, wenn sie ausgewählt werden. Ihr erster Instinkt besteht möglicherweise darin, eine <xref:System.Windows.Controls.ListBox> Klasse zu <xref:System.Windows.Controls.Primitives.Selector.OnSelectionChanged%2A> erstellen, die von der Methode erbt und sie überschreibt, um <xref:System.Windows.Controls.ListBoxItem> die Darstellung des ausgewählten Elements zu ändern, aber ein besserer Ansatz besteht darin, einem Stil von a einen Trigger hinzuzufügen, der die Darstellung des ausgewählten Elements ändert. Mit Triggern können Sie Eigenschaftswerte bearbeiten oder basierend auf den Eigenschaftswerten Aktionen ausführen. An <xref:System.Windows.EventTrigger> ermöglicht es Ihnen, Aktionen auszuführen, wenn ein Ereignis eintritt.
 
-Weitere Informationen zu Stilen, Vorlagen und Triggern finden Sie unter [Erstellen von Formaten und Vorlagen](styling-and-templating.md).
+Weitere Informationen zu Stilen, Vorlagen und Triggern finden Sie unter [Erstellen von Formaten und Vorlagen](../../../desktop-wpf/fundamentals/styles-templates-overview.md).
 
 Im Allgemeinen gilt: wenn das benötigte Steuerelement die Funktionalität eines vorhandenen Steuerelements nachmacht, aber anders aussehen soll, lohnt es sich zuerst zu überlegen, ob Sie mit einem der in diesem Abschnitt beschriebenen Verfahren die vorhandene Darstellung des Steuerelements ändern können.
 

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 93e099eb-daa1-4f1e-b031-c1e10a996f88
-ms.openlocfilehash: 6fc54bb9e38768e390201ea77243d3df4cd67f10
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7b0f269bd4dce8ddaaaa72c3760a4d7a0e3eb8b9
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79151740"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81646015"
 ---
 # <a name="code-access-security-and-adonet"></a>Codezugriffssicherheit und ADO.NET
 .NET Framework bietet sowohl rollenbasierte Sicherheit als auch Codezugriffssicherheit (Code Access Security, CAS). Beide werden mit einer von der CLR (Common Language Runtime) bereitgestellten gemeinsamen Infrastruktur implementiert. In der Welt des nicht verwalteten Codes werden die meisten Anwendungen mit den Berechtigungen des Benutzers oder Prinzipals ausgeführt. Daher können Computersysteme beschädigt werden und vertrauliche Daten in die falschen Hände gelangen, wenn ein Benutzer mit erweiterten Rechten schädliche oder fehlerhafte Software ausführt.  
@@ -50,7 +50,7 @@ ms.locfileid: "79151740"
  Je nach Art der Anwendung, die Sie erstellen, sollten Sie in Erwägung ziehen, rollenbasierte Berechtigungen in der Datenbank zu implementieren. Weitere Informationen zur rollenbasierten Sicherheit in SQL Server finden Sie unter [SQL Server Security](./sql/sql-server-security.md).  
   
 ## <a name="assemblies"></a>Assemblys  
- Assemblys bilden die Grundlage für die Bereitstellung, die Versionskontrolle, die Wiederverwendung, die Festlegung des Aktivierungsumfangs und die Sicherheitsberechtigungen für eine .NET Framework-Anwendung. Eine Assembly stellt eine Sammlung von Typen und Ressourcen bereit, die zusammenarbeiten und eine logische Funktionalitätseinheit bilden. Für die CLR existiert ein Typ niemals außerhalb des Kontexts einer Assembly. Weitere Informationen zum Erstellen und Bereitstellen von Assemblys finden Sie unter [Programmieren mit Assemblys](../../../standard/assembly/program.md).  
+ Assemblys bilden die Grundlage für die Bereitstellung, die Versionskontrolle, die Wiederverwendung, die Festlegung des Aktivierungsumfangs und die Sicherheitsberechtigungen für eine .NET Framework-Anwendung. Eine Assembly stellt eine Sammlung von Typen und Ressourcen bereit, die zusammenarbeiten und eine logische Funktionalitätseinheit bilden. Für die CLR existiert ein Typ niemals außerhalb des Kontexts einer Assembly. Weitere Informationen zum Erstellen und Bereitstellen von Assemblys finden Sie unter [Programmieren mit Assemblys](../../../standard/assembly/index.md).  
   
 ### <a name="strong-naming-assemblies"></a>Assemblys mit starkem Namen  
  Ein starker Name (oder eine digitale Signatur) setzt sich aus der Identität der Assembly mit einfachem Textnamen, Versionsnummer und (sofern vorhanden) Kulturinformationen sowie einem öffentlichen Schlüssel und einer digitalen Signatur zusammen. Die digitale Signatur wird mit dem entsprechenden privaten Schlüssel aus einer Assemblydatei generiert. Die Assemblydatei enthält das Assemblymanifest, das wiederum die Namen und Hashes aller Dateien enthält, die die Assembly bilden.  
@@ -194,7 +194,7 @@ Failed, as expected: Request failed.
   
  .NET Framework unterstützt den Zugriff durch COM-Interop, um die Abwärtskompatibilität zu vorhandenen COM-Komponenten sicherzustellen. Sie können COM-Komponenten in eine .NET Framework-Anwendung einbauen, indem Sie die entsprechenden COM-Typen mit den COM-Interop-Tools importieren. Nach dem Import sind die COM-Typen einsatzbereit. COM-Interop ermöglicht es COM-Clients auch, auf verwalteten Code zuzugreifen, indem Assemblymetadaten in eine Typbibliothek exportiert und die verwalteten Komponenten als COM-Komponente registriert werden. Weitere Informationen finden Sie unter [Erweiterte COM-Interoperabilität](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx(v=vs.100)).  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Sichern von ADO.NET-Anwendungen](securing-ado-net-applications.md)
 - [Sicherheit in systemeigenem Code und .NET Framework-Code](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/1787tk12(v=vs.100))

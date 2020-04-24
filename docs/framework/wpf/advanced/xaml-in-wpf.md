@@ -7,20 +7,20 @@ helpviewer_keywords:
 - XAML [WPF]
 - Extensible Application Markup Language [WPF]
 ms.assetid: 5d858575-a83b-42df-ad3f-047ed2d6e3c8
-ms.openlocfilehash: 7b4811290d58b946bd9f115cb15d5eb0fda03b1d
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 00525e8bd085126e15de9c80bdd5fc0106d565d6
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76741880"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81646166"
 ---
 # <a name="xaml-in-wpf"></a>XAML in WPF
 
-[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] ist eine Markup Sprache für die deklarative Anwendungsprogrammierung. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] implementiert eine XAML-Prozessor Implementierung und bietet Unterstützung für XAML-Sprache. Die [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Typen werden so implementiert, dass Sie die für eine XAML-Darstellung erforderliche Typunterstützung bereitstellen können. Im Allgemeinen können Sie den Großteil ihrer [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Anwendungs Benutzeroberfläche in XAML-Markup erstellen.  
+[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]ist eine Markupsprache für deklarative Anwendungsprogrammierung. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]implementiert eine XAML-Prozessorimplementierung und bietet XAML-Sprachunterstützung. Die [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Typen sind so implementiert, dass sie die erforderliche Typsicherung für eine XAML-Darstellung bereitstellen können. Im Allgemeinen können Sie den [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Großteil der Anwendungsbenutzeroberfläche in XAML-Markup erstellen.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
 
-[Übersicht über XAML (WPF)](xaml-overview-wpf.md)  
+[Übersicht über XAML (WPF)](../../../desktop-wpf/fundamentals/xaml.md)  
 [Ausführliche Erläuterung der XAML-Syntax](xaml-syntax-in-detail.md)  
 [Code-Behind und XAML in WPF](code-behind-and-xaml-in-wpf.md)  
 [XAML- und benutzerdefinierte Klassen für WPF](xaml-and-custom-classes-for-wpf.md)  
@@ -28,12 +28,12 @@ ms.locfileid: "76741880"
 [XAML-Namespaces und Namespacezuordnung für WPF-XAML](xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md)  
 [WPF-XAML-Namescopes](wpf-xaml-namescopes.md)  
 [Inlinestile und -vorlagen](inline-styles-and-templates.md)  
-[Leerraum Verarbeitung in XAML](../../../desktop-wpf/xaml-services/white-space-processing.md)  
+[WhiteSpace-Verarbeitung in XAML](../../../desktop-wpf/xaml-services/white-space-processing.md)  
 [TypeConverter und XAML](typeconverters-and-xaml.md)  
 [XML-Zeichenentitäten und XAML](../../../desktop-wpf/xaml-services/xml-character-entities.md)  
-[Sprachfunktionen des XAML-Namespace (x:)](../../../desktop-wpf/xaml-services/namespace-language-features.md)  
+[XAML-Namespace (x:) Sprachfunktionen](../../../desktop-wpf/xaml-services/namespace-language-features.md)  
 [WPF-XAML-Erweiterungen](wpf-xaml-extensions.md)  
-[Markupkompatibilität (mc:) – Sprachfeatures](markup-compatibility-mc-language-features.md)  
+[Markupkompatibilität (mc:) Sprachfunktionen](markup-compatibility-mc-language-features.md)  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
 
@@ -42,7 +42,7 @@ ms.locfileid: "76741880"
 [Elementstruktur und Serialisierung](element-tree-and-serialization.md)  
 [Eigenschaften](properties-wpf.md)  
 [Ereignisse](events-wpf.md)  
-[Input](input-wpf.md) (Eingabe)  
+[Eingabe](input-wpf.md)  
 [Ressourcen](resources-wpf.md)  
 [Erstellen von Formaten und Vorlagen](../../../desktop-wpf/fundamentals/styles-templates-overview.md)  
-[Threadmodell](threading-model.md)
+[Threading-Modell](threading-model.md)

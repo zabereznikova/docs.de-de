@@ -8,21 +8,21 @@ helpviewer_keywords:
 - Windows Presentation Foundation [WPF], data
 - data [WPF]
 ms.assetid: dea454e2-abd8-4c53-ba37-d3ed53187d64
-ms.openlocfilehash: aa8f872e807eccb81d0f1ca2c838485bb254c7c0
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: a1ea8e10225eb9a4dcd4f20a23820c3757445fbf
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460287"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81646448"
 ---
 # <a name="data"></a>Daten
-Die [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]-Datenbindung bietet für Anwendungen eine einfache und konsistente Möglichkeit, Daten darzustellen und mit ihnen zu interagieren. Elemente können an Daten aus einer Vielzahl von Datenquellen in Form von Common Language Runtime (CLR)-Objekten und XML gebunden werden. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] bietet außerdem einen Mechanismus für die Übertragung von Daten durch Drag & Drop-Vorgänge.  
+Die [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]-Datenbindung bietet für Anwendungen eine einfache und konsistente Möglichkeit, Daten darzustellen und mit ihnen zu interagieren. Elemente können in Form von CLR-Objekten (Common Language Runtime) und XML an Daten aus einer Vielzahl von Datenquellen gebunden werden. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] bietet außerdem einen Mechanismus für die Übertragung von Daten durch Drag & Drop-Vorgänge.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Datenbindung](data-binding-wpf.md)  
+ [Datenbindung](../../../desktop-wpf/data/data-binding-overview.md)  
  [Drag & Drop](../advanced/drag-and-drop.md)  
   
-## <a name="reference"></a>Referenz  
+## <a name="reference"></a>Verweis  
  <xref:System.Windows.Data>  
   
  <xref:System.Windows.Data.Binding>  

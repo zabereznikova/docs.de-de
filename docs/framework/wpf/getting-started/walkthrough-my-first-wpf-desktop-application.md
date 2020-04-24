@@ -11,18 +11,18 @@ helpviewer_keywords:
 ms.assetid: b96bed40-8946-4285-8fe4-88045ab854ed
 ms.topic: tutorial
 ms.custom: mvc,vs-dotnet
-ms.openlocfilehash: facb9ebebd9ce1904886a946277185ac2c2e4bc4
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.openlocfilehash: 9381873faa8cca1accf95d823f5183a218d28813
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81463926"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81646418"
 ---
 # <a name="tutorial-create-your-first-wpf-application-in-visual-studio-2019"></a>Tutorial: Erstellen Der ersten WPF-Anwendung in Visual Studio 2019
 
 In diesem Artikel erfahren Sie, wie Sie eine Windows Presentation Foundation (WPF)-Desktopanwendung entwickeln, die die Elemente enthält, die den meisten WPF-Anwendungen gemeinsam sind: XAML-Markup (Extensible Application Markup Language), CodeBehind, Anwendungsdefinitionen, Steuerelemente, Layout, Datenbindung und Stile. Zum Entwickeln der Anwendung verwenden Sie Visual Studio.
 
-In diesem Tutorial lernen Sie Folgendes:
+In diesem Tutorial lernen Sie, wie die folgenden Aufgaben ausgeführt werden:
 > [!div class="checklist"]
 >
 > - Erstellen Sie ein WPF-Projekt.
@@ -358,7 +358,7 @@ Die folgende Abbildung zeigt die UI-Elemente, die *ExpenseReportPage.xaml*hinzug
 
 ## <a name="style-controls"></a>Stilsteuerelemente
 
-Das Erscheinungsbild verschiedener Elemente ist häufig für alle Elemente desselben Typs in einer Benutzeroberfläche gleich. Die Benutzeroberfläche verwendet [Stile,](../controls/styling-and-templating.md) um Darstellungen über mehrere Elemente hinweg wiederverwendbar zu machen. Die Wiederverwendbarkeit von Stilen trägt zur Vereinfachung der XAML-Erstellung und -Verwaltung bei. Dieser Abschnitt ersetzt die Attribute pro Element, die in den vorherigen Schritten mit Stilen definiert wurden.
+Das Erscheinungsbild verschiedener Elemente ist häufig für alle Elemente desselben Typs in einer Benutzeroberfläche gleich. Die Benutzeroberfläche verwendet [Stile,](../../../desktop-wpf/fundamentals/styles-templates-overview.md) um Darstellungen über mehrere Elemente hinweg wiederverwendbar zu machen. Die Wiederverwendbarkeit von Stilen trägt zur Vereinfachung der XAML-Erstellung und -Verwaltung bei. Dieser Abschnitt ersetzt die Attribute pro Element, die in den vorherigen Schritten mit Stilen definiert wurden.
 
 1. Öffnen Sie *Application.xaml* oder *App.xaml*.
 
@@ -481,7 +481,7 @@ Die folgende Abbildung zeigt `ExpenseIt` beide Seiten der Anwendung mit Steuerel
 In dieser exemplarischen Vorgehensweise haben Sie eine Reihe von Techniken zum Erstellen einer Benutzeroberfläche mit Windows Presentation Foundation (WPF) gelernt. Sie sollten nun über ein grundlegendes Verständnis der Bausteine einer datengebundenen .NET-App verfügen. Weitere Informationen über die WPF-Architektur und -Programmiermodelle finden Sie in den folgenden Themen:
 
 - [WPF-Architektur](../advanced/wpf-architecture.md)
-- [XAML-Übersicht (WPF)](../advanced/xaml-overview-wpf.md)
+- [XAML-Übersicht (WPF)](../../../desktop-wpf/fundamentals/xaml.md)
 - [Überblick über Abhängigkeitseigenschaften](../advanced/dependency-properties-overview.md)
 - [Layout](../advanced/layout.md)
 
@@ -493,7 +493,7 @@ Weitere Informationen zum Erstellen von Anwendungen finden Sie in den folgenden 
 - [Grafik und Multimedia](../graphics-multimedia/index.md)
 - [Dokumente in WPF](../advanced/documents-in-wpf.md)
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Panel-Übersicht](../controls/panels-overview.md)
 - [Übersicht über die Datenbearbeitbarkeit](../data/data-templating-overview.md)

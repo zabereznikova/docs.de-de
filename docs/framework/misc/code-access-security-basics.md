@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - security [.NET Framework], code access security
 ms.assetid: 4eaa6535-d9fe-41a1-91d8-b437cfc16921
-ms.openlocfilehash: 08d708e8f98bd2fe06757df3033a512e2fe1f3c2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 352fa41cb9d3136f853b068d0101a6dcab5dfd7c
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79400992"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81645772"
 ---
 # <a name="code-access-security-basics"></a>Grundlagen der Codezugriffssicherheit
 
@@ -53,7 +53,7 @@ Codezugriffssicherheit verhindert nicht, dass Sie möglicherweise fehlerhaften C
 Die deklarative Sicherheitssyntax verwendet [Attribute,](../../standard/attributes/index.md) um Sicherheitsinformationen in den [Metadaten](../../standard/metadata-and-self-describing-components.md) des Codes zu platzieren. Attribute können auf Assembly-, Klassen- oder Memberebene platziert werden, um den Typ der Anforderung, Forderung oder Überschreibung zu kennzeichnen, die Sie verwenden möchten. Anforderungen werden in Anwendungen für die Common Language Runtime verwendet, um das Runtime-Sicherheitssystem über die Berechtigungen zu informieren, die Ihre Anwendung benötigt bzw. nicht wünscht. Forderungen und Überschreibungen werden in Bibliotheken verwendet, um Ressourcen vor Aufrufern zu schützen oder Standardsicherheitsverhalten zu überschreiben.
 
 > [!NOTE]
-> In .NET Framework 4 wurden wichtige Änderungen am .NET Framework-Sicherheitsmodell und der Terminologie vorgenommen. Weitere Informationen zu diesen Änderungen finden Sie unter [Sicherheitsänderungen](../security/security-changes.md).
+> In .NET Framework 4 wurden wichtige Änderungen am .NET Framework-Sicherheitsmodell und der Terminologie vorgenommen. Weitere Informationen zu diesen Änderungen finden Sie unter [Sicherheitsänderungen](https://docs.microsoft.com/previous-versions/dotnet/framework/security/security-changes).
 
 Damit Sie Aufrufe für deklarative Sicherheit verwenden können, müssen Sie die Zustandsdaten des Berechtigungsobjekts so initialisieren, dass sie der bestimmten Form von Berechtigung entsprechen, die Sie benötigen. Jede integrierte Berechtigung hat ein Attribut, das als eine <xref:System.Security.Permissions.SecurityAction>-Enumeration übergeben wird, um den Typ des Sicherheitsvorgangs zu beschreiben, den Sie ausführen möchten. Berechtigungen akzeptieren auch ihre eigenen Parameter, die ihnen exklusiv zugewiesen sind.
 
@@ -156,7 +156,7 @@ Darüber hinaus kann Code, der die Berechtigung zum Zugriff auf nicht verwaltete
 
 Soll Ihre Anwendung einen Vorgang ausführen, der Zugriff auf nicht verwalteten Code erfordert, sollte dieser Zugriff über eine vertrauenswürdige verwaltete Klasse erfolgen, die die benötigten Funktionalität umschließt (sofern eine solche Klasse vorhanden ist). Sie sollten nicht selbst eine Wrapperklasse erstellen, wenn es eine solche bereits in einer sicheren Klassenbibliothek gibt. Die Wrapperklasse, der ein hohes Maß an Vertrauenswürdigkeit gewährt werden muss, damit Sie den Aufruf von nicht verwaltetem Code vornehmen darf, ist dafür verantwortlich, von ihren Aufrufern zu fordern, dass sie die entsprechenden Berechtigungen haben. Wenn Sie die Wrapperklasse verwenden, muss der Code nur die Berechtigungen anfordern und erhalten, die von der Wrapperklasse gefordert werden.
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Security.PermissionSet>
 - <xref:System.Security.Permissions.FileIOPermission>
