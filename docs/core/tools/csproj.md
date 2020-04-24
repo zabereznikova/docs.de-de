@@ -2,12 +2,12 @@
 title: Erweiterungen des CSPROJ-Formats für .NET Core
 description: Erfahren Sie mehr über die Unterschiede zwischen vorhandenen CSPROJ-Dateien und CSPROJ-Dateien von .NET Core
 ms.date: 04/08/2019
-ms.openlocfilehash: 9d9e212c9531828a8c2dd51fdd7488c17be41ba2
-ms.sourcegitcommit: 07123a475af89b6da5bb6cc51ea40ab1e8a488f0
+ms.openlocfilehash: fadc6de43f522129970e48bc72914cf187fe3f82
+ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80134064"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81607705"
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>Erweiterungen des CSPROJ-Formats für .NET Core
 
@@ -145,7 +145,7 @@ Ein `<PackageReference>`-Element gibt eine [NuGet-Abhängigkeit im Projekt an](/
 
 #### <a name="version"></a>Version
 
-Das erforderliche Attribut `Version` gibt die Version des wiederherzustellenden Pakets an. Das Attribut berücksichtigt die Regeln für das [NuGet-Versionsschema](/nuget/reference/package-versioning#version-ranges-and-wildcards). Das Standardverhalten ist eine Mindestversion einschließlich der Übereinstimmung. Wenn Sie z. B. `Version="1.2.3"` angeben, entspricht dies der NuGet-Notation `[1.2.3, )` und bedeutet, dass das aufgelöste Paket Version 1.2.3 oder höher aufweist (sofern verfügbar).
+Das erforderliche Attribut `Version` gibt die Version des wiederherzustellenden Pakets an. Das Attribut berücksichtigt die Regeln für den [NuGet-Versionsbereich](/nuget/concepts/package-versioning#version-ranges). Das Standardverhalten ist eine Mindestversion einschließlich der Übereinstimmung. Wenn Sie z. B. `Version="1.2.3"` angeben, entspricht dies der NuGet-Notation `[1.2.3, )` und bedeutet, dass das aufgelöste Paket Version 1.2.3 oder höher aufweist (sofern verfügbar).
 
 #### <a name="includeassets-excludeassets-and-privateassets"></a>IncludeAssets, ExcludeAssets und PrivateAssets
 

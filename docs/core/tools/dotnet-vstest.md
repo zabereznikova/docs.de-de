@@ -2,12 +2,12 @@
 title: Befehl „dotnet vstest“
 description: Der dotnet vstest-Befehl erstellt ein Projekt und alle seine Abhängigkeiten.
 ms.date: 02/27/2020
-ms.openlocfilehash: 88e5b6a8966d78d0746f9ea5ccbccab142a2e0f6
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e8fa94cf12ca2fe5fb99c6e3c1dcdb52185798c0
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78156932"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81463285"
 ---
 # <a name="dotnet-vstest"></a>dotnet vstest
 
@@ -20,11 +20,15 @@ ms.locfileid: "78156932"
 ## <a name="synopsis"></a>Übersicht
 
 ```dotnetcli
-dotnet vstest [<TEST_FILE_NAMES>] [--Settings] [--Tests]
-    [--TestAdapterPath] [--Platform] [--Framework] [--Parallel]
-    [--TestCaseFilter] [--logger] [-lt|--ListTests]
-    [--ParentProcessId] [--Port] [--Diag] [--Blame]
-    [--InIsolation] [[--] <args>...]] [-?|--Help]
+dotnet vstest [<TEST_FILE_NAMES>] [--Blame] [--Diag <PATH_TO_LOG_FILE>]
+    [--Framework <FRAMEWORK>] [--InIsolation] [-lt|--ListTests <FILE_NAME>]
+    [--logger <LOGGER_URI/FRIENDLY_NAME>] [--Parallel]
+    [--ParentProcessId <PROCESS_ID>] [--Platform] <PLATFORM_TYPE>
+    [--Port <PORT>] [--ResultsDirectory<PATH>] [--Settings <SETTINGS_FILE>]
+    [--TestAdapterPath <PATH>] [--TestCaseFilter <EXPRESSION>]
+    [--Tests <TEST_NAMES>] [[--] <args>...]]
+
+dotnet vstest -?|--Help
 ```
 
 ## <a name="description"></a>Beschreibung
@@ -39,39 +43,27 @@ Der `dotnet-vstest`-Befehl führt die `VSTest.Console`-Befehlszeilenanwendung au
 
 ## <a name="options"></a>Optionen
 
-- **`--Settings <Settings File>`**
+- **`--Blame`**
 
-  Einstellungen, die beim Ausführen von Tests verwendet werden.
+  Führt die Tests im blame-Modus aus. Diese Option hilft beim Isolieren der fehlerhaften Tests, die den Absturz des Testhosts verursachen. In dem aktuellen Verzeichnis wird eine Ausgabedatei als *Sequence.xml* erstellt, die die Reihenfolge der ausgeführten Tests vor dem Absturz erfasst.
 
-- **`--Tests <Test Names>`**
+- **`--Diag <PATH_TO_LOG_FILE>`**
 
-  Führt Tests aus, die mit den eingegebenen Werten übereinstimmen. Trennt mehrere Werte per Komma voneinander ab.
+  Aktiviert die ausführlichen Protokolle für die Testplattform. Protokolle werden in die angegebene Datei geschrieben.
 
-- **`--TestAdapterPath`**
-
-  Verwendet benutzerdefinierte Testadapter aus einem angegebenen Pfad (falls vorhanden) im Testlauf.
-
-- **`--Platform <Platform type>`**
-
-  Verwendete Zielplattformarchitektur für die Testausführung. Gültige Werte sind `x86`, `x64` und `ARM`.
-
-- **`--Framework <Framework Version>`**
+- **`--Framework <FRAMEWORK>`**
 
   .NET Framework-Zielversion, in der der Test ausgeführt wird. `.NETFramework,Version=v4.6` und `.NETCoreApp,Version=v1.0` sind Beispiele für gültige Werte. Andere unterstützte Werte sind `Framework40`, `Framework45`, `FrameworkCore10` und `FrameworkUap10`.
 
-- **`--Parallel`**
+- **`--InIsolation`**
 
-  Mit dieser Option können Sie Tests parallel ausführen. Standardmäßig stehen alle verfügbaren Kerne auf dem Computer zur Nutzung zur Verfügung. Geben Sie eine explizite Anzahl von Kernen an, indem Sie die `MaxCpuCount`-Eigenschaft unter dem `RunConfiguration`-Knoten in der Datei *runsettings* festlegen.
+  Führt die Tests in einem isolierten Prozess aus. Dadurch ist die Wahrscheinlichkeit, dass der *vstest.console.exe*-Prozess bei Testfehlern beendet wird, weniger hoch, die Tests werden jedoch möglicherweise langsamer ausgeführt.
 
-- **`--TestCaseFilter <Expression>`**
+- **`-lt|--ListTests <FILE_NAME>`**
 
-  Führt Tests aus, die mit dem angegebenen Ausdruck übereinstimmen. `<Expression>` hat das Format `<property>Operator<value>[|&<Expression>]`, wobei der Operator `=`, `!=`, oder `~` ist. Operator `~` verfügt über „contains“-Semantik und gilt für Zeichenfolgeneigenschaften wie `DisplayName`. Klammern `()` werden zum Gruppieren untergeordneter Ausdrücke verwendet.
+  Listet alle gefundenen Tests aus dem angegebenen Testcontainer auf.
 
-- **`-?|--Help`**
-
-  Druckt eine kurze Hilfe für den Befehl.
-
-- **`--logger <Logger Uri/FriendlyName>`**
+- **`--logger <LOGGER_URI/FRIENDLY_NAME>`**
 
   Geben Sie eine Protokollierung für die Testergebnisse an.
 
@@ -93,29 +85,45 @@ Der `dotnet-vstest`-Befehl führt die `VSTest.Console`-Befehlszeilenanwendung au
     /logger:trx [;LogFileName=<Defaults to unique file name>]
     ```
 
-- **`-lt|--ListTests <File Name>`**
+- **`--Parallel`**
 
-  Listet alle gefundenen Tests aus dem angegebenen Testcontainer auf.
+  Mit dieser Option können Sie Tests parallel ausführen. Standardmäßig stehen alle verfügbaren Kerne auf dem Computer zur Nutzung zur Verfügung. Geben Sie eine explizite Anzahl von Kernen an, indem Sie die `MaxCpuCount`-Eigenschaft unter dem `RunConfiguration`-Knoten in der Datei *runsettings* festlegen.
 
-- **`--ParentProcessId <ParentProcessId>`**
+- **`--ParentProcessId <PROCESS_ID>`**
 
   Prozess-ID des übergeordneten Prozesses, der für den Start des aktuellen Prozesses verantwortlich ist.
 
-- **`--Port <Port>`**
+- **`--Platform <PLATFORM_TYPE>`**
+
+  Verwendete Zielplattformarchitektur für die Testausführung. Gültige Werte sind `x86`, `x64` und `ARM`.
+
+- **`--Port <PORT>`**
 
   Gibt den Port für die Socketverbindung an und empfängt die Ereignismeldungen.
 
-- **`--Diag <Path to log file>`**
+- **`--ResultsDirectory:<PATH>`**
 
-  Aktiviert die ausführlichen Protokolle für die Testplattform. Protokolle werden in die angegebene Datei geschrieben.
+  Das Verzeichnis mit den Testergebnissen wird am angegebenen Pfad erstellt, falls es noch nicht vorhanden ist.
 
-- **`--Blame`**
+- **`--Settings <SETTINGS_FILE>`**
 
-  Führt die Tests im blame-Modus aus. Diese Option hilft beim Isolieren der fehlerhaften Tests, die den Absturz des Testhosts verursachen. In dem aktuellen Verzeichnis wird eine Ausgabedatei als *Sequence.xml* erstellt, die die Reihenfolge der ausgeführten Tests vor dem Absturz erfasst.
+  Einstellungen, die beim Ausführen von Tests verwendet werden.
 
-- **`--InIsolation`**
+- **`--TestAdapterPath <PATH>`**
 
-  Führt die Tests in einem isolierten Prozess aus. Dadurch ist die Wahrscheinlichkeit, dass der *vstest.console.exe*-Prozess bei Testfehlern beendet wird, weniger hoch, die Tests werden jedoch möglicherweise langsamer ausgeführt.
+  Verwendet benutzerdefinierte Testadapter aus einem angegebenen Pfad (falls vorhanden) im Testlauf.
+
+- **`--TestCaseFilter <EXPRESSION>`**
+
+  Führt Tests aus, die mit dem angegebenen Ausdruck übereinstimmen. `<EXPRESSION>` hat das Format `<property>Operator<value>[|&<EXPRESSION>]`, wobei der Operator `=`, `!=`, oder `~` ist. Operator `~` verfügt über „contains“-Semantik und gilt für Zeichenfolgeneigenschaften wie `DisplayName`. Klammern `()` werden zum Gruppieren untergeordneter Ausdrücke verwendet. Weitere Informationen finden Sie unter [TestCase-Filter](https://github.com/Microsoft/vstest-docs/blob/master/docs/filter.md).
+
+- **`--Tests <TEST_NAMES>`**
+
+  Führt Tests aus, die mit den eingegebenen Werten übereinstimmen. Trennt mehrere Werte per Komma voneinander ab.
+
+- **`-?|--Help`**
+
+  Druckt eine kurze Hilfe für den Befehl.
 
 - **`@<file>`**
 
@@ -156,3 +164,7 @@ Führt `TestMethod1`- und `TestMethod2`-Tests aus:
 ```dotnetcli
 dotnet vstest /Tests:TestMethod1,TestMethod2
 ```
+
+## <a name="see-also"></a>Siehe auch
+
+- [Befehlszeilenoptionen für VSTest.Console.exe](/visualstudio/test/vstest-console-options)

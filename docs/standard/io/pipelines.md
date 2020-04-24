@@ -9,12 +9,12 @@ helpviewer_keywords:
 - I/O [.NET], Pipelines
 author: rick-anderson
 ms.author: riande
-ms.openlocfilehash: b18b2bf31787fa58e614cd4f057fba9037fe8ad8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8822e731ae805e83d4072c5bd78dff3fcf9a31a1
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "77627551"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81462523"
 ---
 # <a name="systemiopipelines-in-net"></a>System.IO.Pipelines in .NET
 
@@ -172,7 +172,7 @@ Es ist häufig effizient, das `Pipe`-Objekt wiederzuverwenden. Zum Zurücksetzen
 * Das erste Argument bestimmt, wie viel Arbeitsspeicher verbraucht wurde.
 * Das zweite Argument bestimmt, in welchem Umfang der Puffer untersucht wurde.
 
-Das Markieren von Daten als verarbeitet bedeutet, dass die Pipe den Arbeitsspeicher an den zugrunde liegenden Pufferpool zurückgeben kann. Durch das Markieren von Daten als untersucht wird gesteuert, welche Aktion der nächste Aufruf von `PipeReader.ReadAsync` ausführt. Wenn alle Daten als untersucht markiert sind, bedeutet dies, dass der nächste Aufruf von `PipeReader.ReadAsync` erst dann eine Rückgabe liefert, wenn weitere Daten in die Pipe geschrieben werden. Jeder andere Wert führt dazu, dass der nächste Aufruf von `PipeReader.ReadAsync` sofort die untersuchten *und* die nicht untersuchten Daten zurückgibt. Es handelt sich jedoch um bereits verarbeitete Daten.
+Das Markieren von Daten als verarbeitet bedeutet, dass die Pipe den Arbeitsspeicher an den zugrunde liegenden Pufferpool zurückgeben kann. Durch das Markieren von Daten als untersucht wird gesteuert, welche Aktion der nächste Aufruf von `PipeReader.ReadAsync` ausführt. Wenn alle Daten als untersucht markiert sind, bedeutet dies, dass der nächste Aufruf von `PipeReader.ReadAsync` erst dann eine Rückgabe liefert, wenn weitere Daten in die Pipe geschrieben werden. Jeder andere Wert führt dazu, dass der nächste Aufruf von `PipeReader.ReadAsync` sofort die untersuchten *und* die nicht untersuchten Daten zurückgibt. Es handelt sich jedoch nicht um bereits verarbeitete Daten.
 
 ### <a name="read-streaming-data-scenarios"></a>Szenarien für das Lesen von Streamingdaten
 

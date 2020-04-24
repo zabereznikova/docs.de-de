@@ -5,12 +5,12 @@ ms.date: 02/13/2020
 ms.technology: dotnet-standard
 ms.custom: updateeachrelease
 ms.assetid: c044882c-af15-45f2-96d1-534557a5ee9b
-ms.openlocfilehash: e6e573056132c25b912ff1eb76b9b055f6e47cfe
-ms.sourcegitcommit: 2ff49dcf9ddf107d139b4055534681052febad62
+ms.openlocfilehash: 34074b420547cff802f1835656540be7b8eb58b4
+ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/31/2020
-ms.locfileid: "80438216"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81607479"
 ---
 # <a name="net-standard"></a>.NET-Standard
 
@@ -112,7 +112,7 @@ Weitere Informationen finden Sie unter [Der .NET Framework-Kompatibilitätsmodus
 
 ## <a name="net-standard-libraries-and-visual-studio"></a>.NET Standard-Bibliotheken und Visual Studio
 
-Vergewissern Sie sich, dass unter Windows [Visual Studio 2017 Version 15.3](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) oder höher bzw. unter macOS [Visual Studio für Mac Version 7.1](https://visualstudio.microsoft.com/vs/mac/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) oder höher installiert ist, damit Sie .NET Standard-Bibliotheken in Visual Studio erstellen können.
+Vergewissern Sie sich, dass unter Windows [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) oder Visual Studio 2017 Version 15.3 oder höher bzw. unter macOS [Visual Studio für Mac Version 7.1](https://visualstudio.microsoft.com/vs/mac/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) oder höher installiert ist, damit Sie .NET Standard-Bibliotheken in Visual Studio erstellen können.
 
 Wenn Sie nur .NET Standard 2.0-Bibliotheken in Ihren Projekten verarbeiten müssen, können Sie auch Visual Studio 2015 verwenden. Allerdings muss dabei der NuGet-Client 3.6 oder höher installiert sein. Sie können den NuGet-Client für Visual Studio 2015 auf der Seite [NuGet-Downloads](https://www.nuget.org/downloads) herunterladen.
 

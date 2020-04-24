@@ -4,12 +4,12 @@ description: ML.NET ermöglicht es Ihnen, .NET-Anwendungen in Online- oder Offli
 ms.date: 11/5/2019
 ms.topic: overview
 ms.custom: mvc
-ms.openlocfilehash: 169250adf81992ad0025e78eb9c8f151107bcf40
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0929005e02ad9b43636213735f8c7232aa6d4f42
+ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79185855"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81607770"
 ---
 # <a name="what-is-mlnet-and-how-does-it-work"></a>Was ist ML.NET, und wie funktioniert es?
 
@@ -28,7 +28,7 @@ Beispiele für den Typ von Vorhersagen, die Sie mit ML.NET treffen können:
 |Klassifizierung/Kategorisierung|Automatisches Unterteilen von Kundenfeedback in positive und negative Kategorien|
 |Regression/Vorhersagen kontinuierlicher Werte|Vorhersagen des Hauspreises basierend auf Größe und Standort|
 |Anomalieerkennung|Erkennen von betrügerischen Banktransaktionen |
-|Empfehlungen|Empfehlung von Produkten anhand bisheriger Anschaffungen, die Onlinekunden gefallen könnten|
+|Empfehlungen|Empfehlen von Produkten, die Onlinekäufern basierend auf ihren vorherigen Käufen wahrscheinlich gerne erwerben würden|
 |Zeitreihen/sequenzielle Daten|Wettervorhersagen/Produktumsatz-Vorhersagen|
 |Bildklassifizierung|Kategorisieren von Pathologien in medizinischen Bildern|
 
@@ -230,7 +230,7 @@ Sie können Eingabedaten in einem Massenvorgang in Vorhersagen umwandeln oder je
     var price = predEngine.Predict(size);
 ```
 
-Die `CreatePredictionEngine()`-Methode nimmt eine Eingabe- und eine Ausgabeklasse entgegen. Die Feldnamen und/oder Codeattribute bestimmen die Namen der Datenspalten, die beim Trainieren des Modells und der Vorhersage verwendet werden. Weitere Informationen finden Sie unter [Treffen von Vorhersagen mit einem trainierten Modell](./how-to-guides/single-predict-model-ml-net.md).
+Die `CreatePredictionEngine()`-Methode nimmt eine Eingabe- und eine Ausgabeklasse entgegen. Die Feldnamen und/oder Codeattribute bestimmen die Namen der Datenspalten, die beim Trainieren des Modells und der Vorhersage verwendet werden. Weitere Informationen finden Sie unter [Treffen von Vorhersagen mit einem trainierten Modell](how-to-guides/machine-learning-model-predictions-ml-net.md).
 
 ### <a name="data-models-and-schema"></a>Datenmodelle und Schema
 

@@ -6,12 +6,12 @@ ms.topic: tutorial
 ms.custom: mvc
 ms.author: luquinta
 author: luisquintanilla
-ms.openlocfilehash: 026421d7b1b2a0e39118ae712780ca7fc8f6e444
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bceb32f4ea22ade6d3b49b3a99d7ec48a7ba168d
+ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "76921253"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81607401"
 ---
 # <a name="tutorial-forecast-bike-rental-service-demand-with-time-series-analysis-and-mlnet"></a>Tutorial: Prognose des Bedarfs eines Fahrradverleihs mit Zeitreihenanalyse und ML.NET
 
@@ -29,7 +29,7 @@ In diesem Tutorial lernen Sie, wie die folgenden Aufgaben ausgeführt werden:
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
-- [Visual Studio 2017 Version 15.6 oder höher](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) mit installierter Workload „Plattformübergreifende .NET Core-Entwicklung“.
+- [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) oder höher oder Visual Studio 2017 Version 15.6 oder höher mit installierter Workload „Plattformübergreifende .NET Core-Entwicklung“.
 
 ## <a name="time-series-forecasting-sample-overview"></a>Übersicht über das Beispiel zur Zeitreihenvorhersage
 
@@ -60,7 +60,7 @@ Der in diesem Tutorial verwendete Algorithmus ist [singuläre Spektralanalyse (S
 1. Laden Sie die [Datenbankdatei *DailyDemand.mdf*](https://github.com/dotnet/machinelearning-samples/raw/master/samples/csharp/getting-started/Forecasting_BikeSharingDemand/BikeDemandForecasting/Data/DailyDemand.mdf) herunter, und speichern Sie sie im Verzeichnis *Data*.
 
 > [!NOTE]
-> Die in diesem Tutorial verwendeten Daten stammen aus dem [UCI Bike Sharing-Dataset](https://archive.ics.uci.edu/ml/datasets/bike+sharing+dataset). Fanaee-T, Hadi und Gama, Joao, „Event labeling combining ensemble detectors and background knowledge“, Progress in Artificial Intelligence (2013): S. 1-15, Springer Berlin Heidelberg, [Weblink](https://link.springer.com/article/10.1007%2Fs13748-013-0040-3).
+> Die in diesem Tutorial verwendeten Daten stammen aus dem [UCI Bike Sharing-Dataset](http://archive.ics.uci.edu/ml/datasets/bike+sharing+dataset). Fanaee-T, Hadi und Gama, Joao, „Event labeling combining ensemble detectors and background knowledge“, Progress in Artificial Intelligence (2013): S. 1-15, Springer Berlin Heidelberg, [Weblink](https://link.springer.com/article/10.1007%2Fs13748-013-0040-3).
 
 Das ursprüngliche Dataset enthält mehrere Spalten, die der Saisonalität und dem Wetter entsprechen. Aus Gründen der Kürze und weil der in diesem Tutorial verwendete Algorithmus nur die Werte einer einzigen numerischen Spalte benötigt, wurde das ursprüngliche Dataset so zusammengefasst, dass es nur die folgenden Spalten enthält:
 

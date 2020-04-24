@@ -4,12 +4,12 @@ description: Entwerfen moderner Webanwendungen mit ASP.NET Core und Azure | Entw
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 7a641c1b6665af6e9e78ef182174b360041d74aa
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 640cfebea3c70314be4a597bc07b0dc6854f5848
+ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77450041"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81607892"
 ---
 # <a name="development-process-for-azure"></a>Entwicklungsprozess für Azure
 
@@ -22,7 +22,7 @@ ms.locfileid: "77450041"
 
 ## <a name="development-environment-for-aspnet-core-apps"></a>Entwicklungsumgebung für ASP.NET Core-Apps
 
-### <a name="development-tools-choices-ide-or-editor"></a>Auswahlmöglichkeiten für das Entwicklungstool: IDE oder Editor
+### <a name="development-tools-choices-ide-or-editor"></a>Auswahlmöglichkeiten für Entwicklungstools: IDE oder Editor
 
 Egal, ob Sie eine vollständige und leistungsstarke integrierte Entwicklungsumgebung (IDE) oder einen einfachen und flexiblen Editor bevorzugen: Microsoft bietet Ihnen Tools, die Sie zum Entwickeln von ASP.NET Core-Anwendungen verwenden können.
 
@@ -58,13 +58,13 @@ Erstellen Sie einen Azure App Service, in dem Sie Ihre Anwendung bereitstellen. 
 
 Der CI-Buildprozess führt einen automatisierten Buildvorgang aus, wenn neuer Code an das Quellcodeverwaltungs-Repository des Projekts committet wird. Dadurch erhalten Sie sofortiges Feedback, dass der Code erstellt wird (und im Idealfall die automatisierten Tests besteht) und bereitgestellt werden kann. Dieser CI-Build erstellt ein Web Deploy-Paketartefakt und veröffentlicht dieses für die Nutzung durch Ihren CD-Prozess.
 
-[Definieren des CI-Buildprozesses](https://docs.microsoft.com/azure/devops/build-release/apps/aspnet/build-aspnet-core#ci)
+[Definieren des CI-Buildprozesses](https://docs.microsoft.com/azure/devops/pipelines/ecosystems/dotnet-core)
 
 Achten Sie darauf, dass die Continuous Integration aktiviert ist, damit das System den Buildvorgang der Warteschlange hinzufügt, wenn jemand in Ihrem Team neuen Code committet. Testen Sie den Build und stellen Sie sicher, dass er ein Web Deploy-Paket als eines seiner Artefakte erstellt.
 
 Wenn ein Build erfolgreich ist, werden die Ergebnisse Ihres CI-Builds durch Ihren CD-Prozess für Ihre Azure-Webanwendung bereitgestellt. Erstellen und konfigurieren Sie ein *Release*, das Sie dann für Ihren Azure App Service bereitstellen, um dies zu konfigurieren.
 
-[Definieren des CD-Releaseprozesses](https://docs.microsoft.com/azure/devops/build-release/apps/aspnet/build-aspnet-core#cd)
+[Bereitstellen einer Azure-Web-App](https://docs.microsoft.com/azure/devops/pipelines/targets/webapp)
 
 Sobald Ihre CI- und CD-Pipeline konfiguriert ist, können Sie Ihre Webanwendung aktualisieren und dann an die Quellcodeverwaltung committen, um diese bereitzustellen.
 
@@ -84,7 +84,7 @@ Die Entwicklung Ihrer ASP.NET Core-Anwendung für die Bereitstellung in Azure un
 
 Wenn Sie bereit dazu sind, Ihren Code mit Ihrem Team zu teilen, sollten Sie Ihre Änderungen vom lokalen Quellrepository an das freigegebene Quellrepository des Teams übergeben. Wenn Sie an einem benutzerdefinierten Branch gearbeitet haben, erfordert dieser Schritt in der Regel das Zusammenführen Ihres Codes in einen freigegebenen Branch (möglicherweise über einen [Pull Request](https://docs.microsoft.com/azure/devops/git/pull-requests)).
 
-#### <a name="step-3-build-server-continuous-integration-build-test-package"></a>Schritt 3. Buildserver: Continuous Integration – Erstellen, Testen, Packen
+#### <a name="step-3-build-server-continuous-integration-build-test-package"></a>Schritt 3 Buildserver: Continuous Integration – Erstellen, Testen, Packen
 
 Ein neuer Buildvorgang wird auf dem Buildserver ausgelöst, wenn ein neuer Commit an das freigegebene Repository für Anwendungscode ausgeführt wird. Als Teil des CI-Prozesses sollte dieser Buildvorgang die Anwendung vollständig kompilieren und automatisierte Tests ausführen, um sicherzustellen, dass alles wie erwartet funktioniert. Das Endergebnis des CI-Prozesses sollte eine gepackte Version der Webanwendung sein, die bereit für die Bereitstellung ist.
 
@@ -92,7 +92,7 @@ Ein neuer Buildvorgang wird auf dem Buildserver ausgelöst, wenn ein neuer Commi
 
 Wenn ein Buildvorgang erfolgreich war, übernimmt der CD-Prozess die erstellten Buildartefakte. Ein Web Deploy-Paket wird einbezogen. Der Buildserver stellt dieses Paket für Azure App Service bereit und ersetzt dabei alle vorhandenen Dienste durch die neu erstellten. In der Regel ist dieser Schritt auf eine Stagingumgebung ausgerichtet. Manche Anwendungen führen durch einen CD-Prozess jedoch direkt eine Bereitstellung für die Produktion durch.
 
-#### <a name="step-5-azure-app-service-web-app"></a>Schritt 5: Azure App Service-Web-App
+#### <a name="step-5-azure-app-service-web-app"></a>Schritt 5. Azure App Service-Web-App
 
 Sobald sie bereitgestellt ist, wird die ASP.NET Core-App im Kontext einer Azure App Service-Web-App ausgeführt. Diese Web-App kann überwacht und mithilfe des Azure-Portals weiter konfiguriert werden.
 
