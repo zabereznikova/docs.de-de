@@ -1,5 +1,5 @@
 - name: 'Verarbeiten von Laufwerken, Verzeichnissen und Dateien'
-  href: processing.md
+  href: index.md
   items:
     - name: Dateizugriff mit Visual Basic
       href: file-access.md

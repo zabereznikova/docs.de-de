@@ -393,7 +393,7 @@
       href: styles-and-templates.md
       items:
         - name: Erstellen von Formaten und Vorlagen
-          href: styling-and-templating.md
+          href: ../../../desktop-wpf/fundamentals/styles-templates-overview.md
         - name: Anpassen eines vorhandenen Steuerelements mit einer ControlTemplate-Klasse
           href: ../../../desktop-wpf/themes/how-to-create-apply-template.md
         - name: 'Vorgehensweise: Suchen von Elementen, die mit einer ControlTemplate generiert wurden'
