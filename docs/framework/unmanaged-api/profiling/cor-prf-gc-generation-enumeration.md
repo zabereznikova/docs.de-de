@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d6ece160-26ad-4d39-abd7-05acd6f78c48
 topic_type:
 - apiref
-ms.openlocfilehash: 4eff8472e353c4e5fd2505b281cc9efc89f013fc
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 0eb1f57e3505f9ce5bb8b831d30c3891e51097c3
+ms.sourcegitcommit: c2c1269a81ffdcfc8675bcd9a8505b1a11ffb271
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76867210"
+ms.lasthandoff: 04/25/2020
+ms.locfileid: "82158566"
 ---
 # <a name="cor_prf_gc_generation-enumeration"></a>COR_PRF_GC_GENERATION-Enumeration
 Identifiziert eine Garbage Collection-Generierung.  
@@ -31,11 +31,12 @@ typedef enum {
     COR_PRF_GC_GEN_0 = 0,  
     COR_PRF_GC_GEN_1 = 1,  
     COR_PRF_GC_GEN_2 = 2,  
-    COR_PRF_GC_LARGE_OBJECT_HEAP = 3  
+    COR_PRF_GC_LARGE_OBJECT_HEAP = 3,
+    COR_PRF_GC_PINNED_OBJECT_HEAP= 4
 } COR_PRF_GC_GENERATION;  
 ```  
   
-## <a name="members"></a>Member  
+## <a name="members"></a>Members  
   
 |Member|Beschreibung|  
 |------------|-----------------|  
@@ -43,22 +44,25 @@ typedef enum {
 |`COR_PRF_GC_GEN_1`|Das Objekt wird als Generation 1 gespeichert.|  
 |`COR_PRF_GC_GEN_2`|Das-Objekt wird als Generation 2 gespeichert.|  
 |`COR_PRF_GC_LARGE_OBJECT_HEAP`|Das Objekt wird im Heap für große Objekte gespeichert.|  
+|`COR_PRF_GC_PINNED_OBJECT_HEAP`|Das Objekt wird im Heap des fixierten Objekts gespeichert.|  
   
-## <a name="remarks"></a>Hinweise  
- Der Garbage Collector verbessert die Leistung der Speicherverwaltung, indem Objekte basierend auf dem Alter in Generationen aufgeteilt werden. Der Garbage Collector verwendet derzeit drei Generationen mit den Nummerierungen 0, 1 und 2 sowie ein spezielles Heap Segment, das für große Objekte verwendet wird. Objekte, deren Größe größer ist als ein bestimmter Wert, werden im Heap für große Objekte gespeichert. Andere zugeordnete Objekte beginnen zu Generation 0. Alle Objekte, die nach Garbage Collection in Generation 0 vorhanden sind, werden auf Generation 1 herauf gestuft. Objekte, die nach dem Garbage Collection vorhanden sind, treten in Generation 1 in Generation 2 ein.  
+## <a name="remarks"></a>Bemerkungen  
+ Der Garbage Collector verbessert die Leistung der Speicherverwaltung, indem Objekte basierend auf dem Alter in Generationen aufgeteilt werden. Der Garbage Collector verwendet derzeit drei Generationen, nummerierte 0, 1 und 2, und zwei spezielle Heap Segmente, eine für große Objekte und eine für fixierte Objekte.
+  
+ Objekte, deren Größe größer ist als ein Schwellenwert, werden im Heap für große Objekte gespeichert. Fixierte Objekte können dem fixierten Objekt Heap zugeordnet werden, um die Leistungseinbußen bei der Zuordnung auf die normalen Heaps zu vermeiden. Andere zugeordnete Objekte beginnen zu Generation 0. Alle Objekte, die nach Garbage Collection in Generation 0 vorhanden sind, werden auf Generation 1 herauf gestuft. Objekte, die nach dem Garbage Collection vorhanden sind, treten in Generation 1 in Generation 2 ein.  
   
  Die Verwendung von Generations bedeutet, dass die Garbage Collector nur mit einer Teilmenge der zugeordneten Objekte gleichzeitig funktionieren muss.  
   
- Die `COR_PRF_GC_GENERATION`-Enumeration wird von der [COR_PRF_GC_GENERATION_RANGE](cor-prf-gc-generation-range-structure.md) -Struktur verwendet.  
+ Die `COR_PRF_GC_GENERATION` -Enumeration wird von der [COR_PRF_GC_GENERATION_RANGE](cor-prf-gc-generation-range-structure.md) -Struktur verwendet.  
   
-## <a name="requirements"></a>-Anforderungen  
+## <a name="requirements"></a>Anforderungen  
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  
   
  **Bibliothek:** CorGuids.lib  
   
- **.NET Framework Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
 
