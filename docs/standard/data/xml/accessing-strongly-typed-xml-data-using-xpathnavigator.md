@@ -8,7 +8,7 @@ dev_langs:
 ms.assetid: 898e0f52-8a7c-4d1f-afcd-6ffb28b050b4
 ms.openlocfilehash: e6ec30e3c7c2318b199122cd63c7f56584707a98
 ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 02/28/2020
 ms.locfileid: "78158050"
@@ -27,7 +27,7 @@ Als Instanz des XPath 2.0-Datenmodells kann die <xref:System.Xml.XPath.XPathNavi
   
 - Schemasprachenspezifischer Typname: In den meisten Fällen werden die CLR-Typen, die als Nebeneffekt beim Übernehmen eines externen Schemas festgelegt werden, zum Bereitstellen des Zugriffs auf den Wert eines Knotens verwendet. In manchen Situationen ist es jedoch empfehlenswert, den Typ zu überprüfen, der einem bestimmten auf ein XML-Dokument angewendeten Schema zugeordnet ist. Zum Beispiel möchten Sie möglicherweise ein XML-Dokument durchsuchen und dabei alle Elemente extrahieren, die Inhalt vom Typ "PurchaseOrder" gemäß eines zugewiesenen Schemas aufweisen. Diese Typinformationen können nur durch Schemavalidierung festgelegt werden. Auf diese Informationen wird über die <xref:System.Xml.XPath.XPathNavigator.XmlType%2A>-Eigenschaft und die <xref:System.Xml.XPath.XPathNavigator.SchemaInfo%2A>-Eigenschaft der <xref:System.Xml.XPath.XPathNavigator>-Klasse zugegriffen. Weitere Informationen finden Sie im Abschnitt „Das Post-Schema-Validation-Infoset (PSVI)“ weiter unten.  
   
-- Schemasprachenspezifische Typreflektion: In anderen Fällen möchten Sie möglicherweise nähere Informationen zum schemaspezifischen Typ abrufen, der auf ein XML-Dokument angewendet wird. Zum Beispiel möchten Sie eventuell beim Lesen einer XML-Datei die `maxOccurs`-Attribute aller gültigen Knoten im XML-Dokument extrahieren, um eine benutzerdefinierte Berechnung durchzuführen. Da diese Informationen nur durch Schemavalidierung festgelegt wird, wird darauf über die <xref:System.Xml.XPath.XPathNavigator.SchemaInfo%2A>-Eigenschaft der <xref:System.Xml.XPath.XPathNavigator>-Klasse zugegriffen. Weitere Informationen finden Sie im Abschnitt „Das Post-Schema-Validation-Infoset (PSVI)“ weiter unten.  
+- Schemasprachenspezifische Typreflektion: In anderen Fällen sollten Sie nähere Informationen zum schemaspezifischen Typ abrufen, der auf ein XML-Dokument angewendet wird. Zum Beispiel möchten Sie eventuell beim Lesen einer XML-Datei die `maxOccurs`-Attribute aller gültigen Knoten im XML-Dokument extrahieren, um eine benutzerdefinierte Berechnung durchzuführen. Da diese Informationen nur durch Schemavalidierung festgelegt wird, wird darauf über die <xref:System.Xml.XPath.XPathNavigator.SchemaInfo%2A>-Eigenschaft der <xref:System.Xml.XPath.XPathNavigator>-Klasse zugegriffen. Weitere Informationen finden Sie im Abschnitt „Das Post-Schema-Validation-Infoset (PSVI)“ weiter unten.  
   
 ## <a name="xpathnavigator-typed-accessors"></a>Mit "XPathNavigator" typisierte Accessoren  
  Die folgenden Tabelle enthält die verschiedenen Eigenschaften und Methoden der <xref:System.Xml.XPath.XPathNavigator>-Klasse, mit denen auf die Typinformationen eines Knotens zugegriffen werden kann.  
@@ -54,7 +54,7 @@ Als Instanz des XPath 2.0-Datenmodells kann die <xref:System.Xml.XPath.XPathNavi
   
 2. Standardinformationen: Angaben dazu, ob der Wert des Elements oder des Attributs über im Schema angegebene Standardwerte abgerufen wurde. Diese werden von der <xref:System.Xml.Schema.IXmlSchemaInfo.IsDefault%2A>-Eigenschaft der <xref:System.Xml.XPath.XPathNavigator.SchemaInfo%2A>-Eigenschaft der <xref:System.Xml.XPath.XPathNavigator>-Klasse verfügbar gemacht.  
   
-3. Anmerkungen zum Typ: Verweise auf Schemakomponenten, die möglicherweise Typdefinitionen oder Element- und Attributdeklarationen sind. Die <xref:System.Xml.XPath.XPathNavigator.XmlType%2A>-Eigenschaft von <xref:System.Xml.XPath.XPathNavigator> enthält die bestimmten Typinformationen des Knotens, sofern dieser gültig ist. Wenn die Gültigkeit eines Knotens unbekannt ist, das heißt, er wurde überprüft und anschließend bearbeitet. dann wird die <xref:System.Xml.XPath.XPathNavigator.XmlType%2A>-Eigenschaft auf `null` festgelegt, wobei die Typinformationen jedoch weiterhin in den verschiedenen Eigenschaften der <xref:System.Xml.XPath.XPathNavigator.SchemaInfo%2A>-Eigenschaft der <xref:System.Xml.XPath.XPathNavigator>-Klasse verfügbar sind.  
+3. Typanmerkungen: Verweise auf Schemakomponenten, die möglicherweise Typdefinitionen oder Element- und Attributdeklarationen sind. Die <xref:System.Xml.XPath.XPathNavigator.XmlType%2A>-Eigenschaft von <xref:System.Xml.XPath.XPathNavigator> enthält die bestimmten Typinformationen des Knotens, sofern dieser gültig ist. Wenn die Gültigkeit eines Knotens unbekannt ist, das heißt, er wurde überprüft und anschließend bearbeitet. dann wird die <xref:System.Xml.XPath.XPathNavigator.XmlType%2A>-Eigenschaft auf `null` festgelegt, wobei die Typinformationen jedoch weiterhin in den verschiedenen Eigenschaften der <xref:System.Xml.XPath.XPathNavigator.SchemaInfo%2A>-Eigenschaft der <xref:System.Xml.XPath.XPathNavigator>-Klasse verfügbar sind.  
   
  Im folgenden Beispiel wird das Verwenden der Informationen im Post-Schema-Validation-Infoset veranschaulicht, die von <xref:System.Xml.XPath.XPathNavigator> verfügbar gemacht wurden.  
   

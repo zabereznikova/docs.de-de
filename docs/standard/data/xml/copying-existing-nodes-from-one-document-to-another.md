@@ -5,7 +5,7 @@ ms.technology: dotnet-standard
 ms.assetid: 3caa78c1-3448-4b7b-b83c-228ee857635e
 ms.openlocfilehash: 4ee3f8d280b8bf0f2de067e7529d777e62bff406
 ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/07/2020
 ms.locfileid: "75711024"
@@ -26,7 +26,7 @@ Die **ImportNode**-Methode ist das Verfahren, mit dem Sie einen Knoten oder eine
 |XmlComment|Kopiert den Knoten einschließlich der zugehörigen Daten.|Kopiert den Knoten einschließlich der zugehörigen Daten.|  
 |XmlDocumentFragment|Die untergeordneten Elemente des Quellknotens werden rekursiv importiert. Die daraus resultierenden Knoten werden neu assembliert und bilden die entsprechende Teilstruktur.|Ein leeres **XmlDocumentFragment** wird erstellt.|  
 |XmlDocumentType|Kopiert den Knoten einschließlich der zugehörigen Daten.*|Kopiert den Knoten einschließlich der zugehörigen Daten.*|  
-|XmlElement|Die untergeordneten Elemente des Quellelements werden rekursiv importiert. Die daraus resultierenden Knoten werden neu assembliert und bilden die entsprechende Teilstruktur. **Hinweis:** Standardattribute werden nicht kopiert. Wenn das Dokument, in das importiert wird, Standardattribute für diesen Elementnamen definiert, werden diese zugewiesen.|Die angegebenen Attributknoten des Quellelements werden importiert, und die generierten **XmlAttribute**-Knoten werden an das neue Element angehängt. Die untergeordneten Knoten werden nicht kopiert. **Hinweis:** Standardattribute werden nicht kopiert. Wenn das Dokument, in das importiert wird, Standardattribute für diesen Elementnamen definiert, werden diese zugewiesen.|  
+|XmlElement|Die untergeordneten Elemente des Quellelements werden rekursiv importiert. Die daraus resultierenden Knoten werden neu assembliert und bilden die entsprechende Teilstruktur. **Hinweis**:  Standardattribute werden nicht kopiert. Wenn das Dokument, in das importiert wird, Standardattribute für diesen Elementnamen definiert, werden diese zugewiesen.|Die angegebenen Attributknoten des Quellelements werden importiert, und die generierten **XmlAttribute**-Knoten werden an das neue Element angehängt. Die untergeordneten Knoten werden nicht kopiert. **Hinweis**:  Standardattribute werden nicht kopiert. Wenn das Dokument, in das importiert wird, Standardattribute für diesen Elementnamen definiert, werden diese zugewiesen.|  
 |XmlEntityReference|Da im Quell- und Zieldokument die Entitäten unterschiedlich definiert sein können, kopiert diese Methode nur den **XmlEntityReference**-Knoten. Der Ersetzungstext ist davon nicht betroffen. Wenn die Entität des Zieldokuments definiert ist, wird deren Wert zugewiesen.|Da im Quell- und Zieldokument die Entitäten unterschiedlich definiert sein können, kopiert diese Methode nur den **XmlEntityReference**-Knoten. Der Ersetzungstext ist davon nicht betroffen. Wenn die Entität des Zieldokuments definiert ist, wird deren Wert zugewiesen.|  
 |XmlProcessingInstruction|Kopiert den Ziel- und Datenwert des importierten Knotens.|Kopiert den Ziel- und Datenwert des importierten Knotens.|  
 |XmlText|Kopiert den Knoten einschließlich der zugehörigen Daten.|Kopiert den Knoten einschließlich der zugehörigen Daten.|  

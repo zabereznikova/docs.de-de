@@ -10,7 +10,7 @@ helpviewer_keywords:
 ms.assetid: 7e542583-1e31-4e10-b523-8cf2f29cb4a4
 ms.openlocfilehash: 0b448379fba965060fdf3bf067e65374f40d1fc2
 ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 02/28/2020
 ms.locfileid: "78156009"
@@ -41,7 +41,7 @@ Die folgende Abbildung veranschaulicht, wie über den RCW auf COM-Objekte zugegr
   
  Der RCW beansprucht die in der folgenden Tabelle aufgelisteten Schnittstellen, die durch das umschlossene Objekt verfügbar gemacht werden.  
   
-|Schnittstelle|Beschreibung|  
+|Interface|Beschreibung|  
 |---------------|-----------------|  
 |**IDispatch**|Regelt späte Bindung an COM-Objekte durch Reflektion.|  
 |**IErrorInfo**|Stellt eine Textbeschreibung des Fehlers und der Fehlerquelle, eine Hilfedatei, den Hilfekontext und die GUID der Schnittstelle bereit, die den Fehler definiert hat (bei .NET-Klassen immer **GUID_NULL**).|  
@@ -50,7 +50,7 @@ Die folgende Abbildung veranschaulicht, wie über den RCW auf COM-Objekte zugegr
   
  Der RCW beansprucht optional die in der folgenden Tabelle aufgelisteten Schnittstellen, die durch das umschlossene Objekt verfügbar gemacht werden.  
   
-|Schnittstelle|Beschreibung|  
+|Interface|Beschreibung|  
 |---------------|-----------------|  
 |**IConnectionPoint** und **IConnectionPointContainer**|Der RCW konvertiert Objekte, die Ereignisformate für Verbindungspunkte gegenüber delegatbasierten Ereignissen verfügbar machen.|  
 |**IDispatchEx** (nur .NET Framework) |Wenn die Klasse **IDispatchEx** implementiert, implementiert der RCW **IExpando**. Die **IDispatchEx**-Schnittstelle ist eine Erweiterung der **IDispatch**-Schnittstelle. Im Gegensatz zu **IDispatch** ermöglicht sie das Aufzählen, Hinzufügen, Löschen und Aufrufen von Membern unter Berücksichtigung von Groß-/Kleinschreibung.|  

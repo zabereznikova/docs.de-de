@@ -8,7 +8,7 @@ dev_langs:
 ms.assetid: ce2df341-a1a4-4e97-8e1b-cd45b8e3e71e
 ms.openlocfilehash: dd3292620cafc4e5d2494b3b5e18e04691910dc4
 ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/07/2020
 ms.locfileid: "75711193"
@@ -131,7 +131,7 @@ Die Informationen in einer Attributauflistung können nach Namen oder Indexnumme
 
 Da es sich bei der **XmlAttributeCollection**-Klasse um eine Auflistung handelt, die nach Namen oder Index durchlaufen werden kann, wird in diesem Beispiel die Auswahl des ersten Attributs aus der Auflistung mit einem nullbasierten (0) Index dargestellt, wobei die Datei **baseuri.xml** als Eingabe verwendet wird.
 
-### <a name="input"></a>Input
+### <a name="input"></a>Eingabe
 
 ```xml
 <!-- XML fragment -->

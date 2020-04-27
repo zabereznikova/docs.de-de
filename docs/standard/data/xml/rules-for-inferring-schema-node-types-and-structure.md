@@ -5,7 +5,7 @@ ms.technology: dotnet-standard
 ms.assetid: d74ce896-717d-4871-8fd9-b070e2f53cb0
 ms.openlocfilehash: 6d66384dea7018bcc3b2dd8fde96f4fa2653f8e8
 ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/07/2020
 ms.locfileid: "75710244"
@@ -136,11 +136,11 @@ In diesem Thema wird beschrieben, wie der Schemarückschlussprozess die in einem
 |Knotentyp|Übersetzung|  
 |---------------|-----------------|  
 |Verarbeitungsanweisung|Ignoriert.|  
-|Anmerkungen|Ignoriert.|  
+|Kommentar|Ignoriert.|  
 |Entitätsverweis|Die <xref:System.Xml.Schema.XmlSchemaInference>-Klasse behandelt keine Entitätsverweise. Wenn ein XML-Dokument Entitätsverweise enthält, müssen Sie einen Reader verwenden, der die Entitäten erweitert. Sie können beispielsweise eine <xref:System.Xml.XmlTextReader>-Klasse mit der <xref:System.Xml.XmlTextReader.EntityHandling%2A>-Eigenschaft übergeben, die auf den <xref:System.Xml.EntityHandling.ExpandEntities>-Member als Parameter festgelegt ist. Wenn Entitätsverweise auftreten und der Reader Entitäten nicht erweitert, wird eine Ausnahme ausgelöst.|  
 |CDATA|Alle `<![CDATA[ … ]]`-Abschnitte in einem XML-Dokument werden als `xs:string` hergeleitet.|  
 |Dokumenttyp|Ignoriert.|  
-|-Namespaces|Ignoriert.|  
+|Namespaces|Ignoriert.|  
   
  Weitere Informationen zum Schemarückschlussprozess finden Sie unter [Herleiten von Schemata aus XML-Dokumenten](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md).  
   

@@ -5,7 +5,7 @@ ms.technology: dotnet-standard
 ms.assetid: 484929b0-fefb-4629-87ee-ebdde70ff1f8
 ms.openlocfilehash: e3ff86cc80887d14fdffe50f256409cb70ff2d88
 ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/07/2020
 ms.locfileid: "75710374"
@@ -22,10 +22,10 @@ Im W3C-Dokument „XSL Transformations (XSLT) Version 1.0“ gibt es bestimmte 
   
 - Die Abschnittsverweise finden Sie in den W3C-Dokumenten [XSL Transformations (XSLT) Version 1.0](https://www.w3.org/TR/xslt) und [XSL Transformations (XSLT) Version 1.0 Specification Errata](https://www.w3.org/1999/11/REC-xslt-19991116-errata/).  
   
-|XSLT-Bedingung|Abschnitt|XslCompiledTransform-Verhaltensweise|  
+|XSLT-Bedingung|Bereich|XslCompiledTransform-Verhaltensweise|  
 |--------------------|-------------|-----------------------------------|  
 |Ein Textknoten entspricht sowohl `xsl:strip-space` als auch `xsl:preserve-space`.|3.4|Wiederherstellen|  
-|Ein Quellknoten entspricht mehreren Vorlagenregeln.|5,5|Wiederherstellen|  
+|Ein Quellknoten entspricht mehreren Vorlagenregeln.|5.5|Wiederherstellen|  
 |Ein Namespace-URI (Uniform Resource Identifier) ist als Alias für mehrere Namespace-URIs deklariert, die alle die gleiche Importpriorität haben.|7.1.1|Wiederherstellen|  
 |Das aus einem Attributwert erstellte `name`-Attribut im `xsl:attribute` und im `xsl:element` ist kein QName.|7.1.2, 7.1.3|Fehler*|  
 |Zwei Attributgruppen mit derselben Importpriorität und demselben erweiterten Namen haben ein gemeinsames Attribut, und es gibt keine andere Attributgruppe, die das gemeinsame Attribut mit demselben Namen und einer höheren Priorität enthält.|7.1.4|Wiederherstellen|  

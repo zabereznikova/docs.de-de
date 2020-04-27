@@ -9,7 +9,7 @@ dev_langs:
 ms.assetid: 7f1bc7f4-401b-459f-9078-f099cc711fde
 ms.openlocfilehash: 016032b2b37ced5592edc18934ed183c475f5598
 ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/07/2020
 ms.locfileid: "75710478"
@@ -21,7 +21,7 @@ In der [W3C-Empfehlung (World Wide Web Consortium) zum XML Schema](https://www.w
   
  Das SOM ist das Objektmodell, das das Pre-Schema-Validation-Infoset und das Post-Schema-Compilation-Infoset darstellt. Es besteht aus den Klassen im <xref:System.Xml.Schema?displayProperty=nameWithType>-Namespace. Alle Lese- und Schreibeigenschaften der Klassen im <xref:System.Xml.Schema>-Namespace gehören zum Pre-Schema-Validation-Infoset, während alle schreibgeschützten Eigenschaften der Klassen im <xref:System.Xml.Schema>-Namespace zum Post-Schema-Compilation-Infoset gehören. Die Ausnahme zu dieser Regel bilden die folgenden Eigenschaften, die sowohl Eigenschaften des Pre-Schema-Validation-Infosets als auch des Post-Schema-Compilation-Infosets sind.  
   
-|Klasse|Die Eigenschaften-|  
+|Klasse|Eigenschaft|  
 |-----------|--------------|  
 |<xref:System.Xml.Schema.XmlSchemaObject>|<xref:System.Xml.Schema.XmlSchemaObject.Parent%2A>|  
 |<xref:System.Xml.Schema.XmlSchema>|<xref:System.Xml.Schema.XmlSchema.AttributeFormDefault%2A>, <xref:System.Xml.Schema.XmlSchema.BlockDefault%2A>, <xref:System.Xml.Schema.XmlSchema.ElementFormDefault%2A>, <xref:System.Xml.Schema.XmlSchema.FinalDefault%2A>, <xref:System.Xml.Schema.XmlSchema.TargetNamespace%2A>|  

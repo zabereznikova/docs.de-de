@@ -5,7 +5,7 @@ ms.technology: dotnet-standard
 ms.assetid: 71d03b78-6898-4ce7-b0fc-1282573f31f7
 ms.openlocfilehash: 83b8c09323e73a9b3ba7dea8d272d7d41d03add1
 ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/07/2020
 ms.locfileid: "75710088"
@@ -13,16 +13,16 @@ ms.locfileid: "75710088"
 # <a name="types-of-xml-nodes"></a>XML-Knotentypen
 Wenn ein XML-Dokument als Knotenstruktur in den Speicher eingelesen wird, werden die Knotentypen für die Knoten beim Erstellen festgelegt. Das XML-DOM (Document Object Model, Dokumentobjektmodell) umfasst mehrere Knotentypen, die vom W3C (World Wide Web Consortium) festgelegt wurden und in Abschnitt 1.1.1, "The DOM Structure Model", aufgeführt sind. In der folgenden Tabelle sind die Knotentypen sowie das jedem Knotentyp zugewiesene Objekt und eine kurze Beschreibung enthalten.  
   
-|DOM-Knotentyp|Objekt|Beschreibung|  
+|DOM-Knotentyp|Object|Beschreibung|  
 |-------------------|------------|-----------------|  
-|Dokumentieren|<xref:System.Xml.XmlDocument>|Der Container für alle Knoten in der Struktur. Er wird auch als Dokumentstamm bezeichnet und ist nicht immer mit dem Stammelement identisch.|  
+|Dokument|<xref:System.Xml.XmlDocument>|Der Container für alle Knoten in der Struktur. Er wird auch als Dokumentstamm bezeichnet und ist nicht immer mit dem Stammelement identisch.|  
 |DocumentFragment|<xref:System.Xml.XmlDocumentFragment>|Eine temporäre Sammlung, die einen oder mehrere Knoten ohne Struktur enthält.|  
 |DocumentType|<xref:System.Xml.XmlDocumentType>|Stellt den `<!DOCTYPE…>`-Knoten dar.|  
 |EntityReference|<xref:System.Xml.XmlEntityReference>|Stellt den Text des nicht erweiterten Entitätsverweises dar.|  
 |Element|<xref:System.Xml.XmlElement>|Stellt einen Elementknoten dar.|  
 |Attr|<xref:System.Xml.XmlAttribute>|Ist ein Attribut eines Elements.|  
 |ProcessingInstruction|<xref:System.Xml.XmlProcessingInstruction>|Ist ein Verarbeitungsanweisungsknoten.|  
-|Anmerkungen|<xref:System.Xml.XmlComment>|Ein Kommentarknoten.|  
+|Kommentar|<xref:System.Xml.XmlComment>|Ein Kommentarknoten.|  
 |Text|<xref:System.Xml.XmlText>|Zu einem Element oder Attribut gehöriger Text.|  
 |CDATASection|<xref:System.Xml.XmlCDataSection>|Stellt CDATA dar.|  
 |Entität|<xref:System.Xml.XmlEntity>|Stellt die `<!ENTITY…>`-Deklarationen in einem XML-Dokument dar, entweder aus einer internen DTD-Untergruppe (Document Type Definition, Dokumenttypdefinition) oder aus externen DTDs und Parameterentitäten.|  

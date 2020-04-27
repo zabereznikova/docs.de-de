@@ -8,7 +8,7 @@ dev_langs:
 ms.assetid: 55c4b175-3170-4071-9d60-dd5a42f79b54
 ms.openlocfilehash: 55347de81c65b7390584415dd29044f4ca4ba02a
 ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/07/2020
 ms.locfileid: "75709815"
@@ -25,7 +25,7 @@ Beschreibt das <xref:System.Xml.Schema.XmlSchemaSet>, bei dem es sich um einen C
   
  Es folgt ein Vergleich zwischen der <xref:System.Xml.Schema.XmlSchemaCollection>-Klasse und der <xref:System.Xml.Schema.XmlSchemaSet>-Klasse.  
   
-|XmlSchemaCollection.|XmlSchemaSet|  
+|XmlSchemaCollection|XmlSchemaSet|  
 |-------------------------|------------------|  
 |Unterstützt Microsoft XDR-Schemata und XML-Schemata des W3C.|Unterstützt nur XML-Schemata des W3C.|  
 |Die Schemata werden beim Aufrufen der <xref:System.Xml.Schema.XmlSchemaCollection.Add%2A>-Methode kompiliert.|Die Schemata werden beim Aufrufen der <xref:System.Xml.Schema.XmlSchemaSet.Add%2A>-Methode nicht kompiliert. Dadurch wird die Leistungsfähigkeit während der Erstellung der Schemabibliothek erhöht.|  

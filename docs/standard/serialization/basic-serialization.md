@@ -9,7 +9,7 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: ce86f7897c5c117c4fd6f1eabc4c8b802103261c
 ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 03/25/2020
 ms.locfileid: "80248029"
@@ -60,7 +60,7 @@ Console.WriteLine("str: {0}", obj.str);
   
 Die oben verwendete <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>-Klasse ist sehr effizient und erzeugt einen kompakten Bytestream. Alle Objekte, die mit diesem Formatierungsprogramm serialisiert wurden, können mit diesem auch deserialisiert werden. Dadurch ist es das optimale Tool zur Serialisierung von Objekten, die im .NET&#160;Framework deserialisiert werden. Beachten Sie unbedingt, dass beim Deserialisieren von Objekten keine Konstruktoren aufgerufen werden. Diese Einschränkung wird der Deserialisierung auferlegt, um die Leistung zu verbessern. Dies verstößt jedoch gegen einige der üblichen Verträge, die die Runtime mit dem Objektentwickler schließt, und Entwickler müssen sich über die Auswirkungen im Klaren sein, die die Markierung eines Objekts als serialisierbar hat.  
   
-Wenn Portabilität gefordert ist, verwenden Sie stattdessen die <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>-Klasse. Ersetzen Sie einfach im oben dargestellten Code die **BinaryFormatter**-Klasse durch die **SoapFormatter,**-Klasse, und rufen Sie wie zuvor**Serialisieren** und **Deserialisieren** auf. Dieses Formatierungsprogramm erzeugt die folgende Ausgabe für das oben dargestellte Beispiel.  
+Wenn Portabilität gefordert ist, verwenden Sie stattdessen die <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>-Klasse. Ersetzen Sie einfach im oben dargestellten Code die **BinaryFormatter**-Klasse durch die **SoapFormatter,** -Klasse, und rufen Sie wie zuvor**Serialisieren** und **Deserialisieren** auf. Dieses Formatierungsprogramm erzeugt die folgende Ausgabe für das oben dargestellte Beispiel.  
   
 ```xml  
 <SOAP-ENV:Envelope  

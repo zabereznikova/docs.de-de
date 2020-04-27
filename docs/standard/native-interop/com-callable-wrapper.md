@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: d04be3b5-27b9-4f5b-8469-a44149fabf78
 ms.openlocfilehash: 6f2f4055a95dbcea8d7872b5c5fa3ccede8c2c8c
 ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 03/14/2020
 ms.locfileid: "79401172"
@@ -47,20 +47,20 @@ Zur Unterstützung dieses nahtlosen Ansatzes erstellt der CCW traditionelle COM-
 
 Neben der Offenlegung von Schnittstellen, die explizit mit einer Klasse in der verwalteten Umgebung implementiert wird, stellt die .NET-Runtime für das Objekt Implementierungen der COM-Schnittstellen bereit, die in der folgenden Tabelle aufgeführt sind. Eine .NET-Klasse kann das Standardverhalten überschreiben, indem sie eigene Implementierungen dieser Schnittstellen bereitstellt. Zur Laufzeit stehen jedoch immer die Implementierungen der **IUnknown**- und **IDispatch**-Schnittstellen bereit.
 
-|Schnittstelle|Beschreibung|
+|Interface|Beschreibung|
 |---------------|-----------------|
-|**Idispatch**|Stellt einen Mechanismus für die späte Bindung an den Typ bereit.|
+|**IDispatch**|Stellt einen Mechanismus für die späte Bindung an den Typ bereit.|
 |**IErrorInfo**|Stellt eine Textbeschreibung des Fehlers und der Fehlerquelle, eine Hilfedatei, den Hilfekontext und die GUID der Schnittstelle bereit, die den Fehler definiert hat (bei .NET-Klassen immer **GUID_NULL**).|
-|**Iprovideclassinfo**|Ermöglicht es COM-Clients, auf die **ITypeInfo**-Schnittstelle zuzugreifen, die von einer verwalteten Klasse implementiert wurde. Gibt `COR_E_NOTSUPPORTED` in .NET Core für die Typen zurück, die nicht von COM importiert wurden. |
+|**IProvideClassInfo**|Ermöglicht es COM-Clients, auf die **ITypeInfo**-Schnittstelle zuzugreifen, die von einer verwalteten Klasse implementiert wurde. Gibt `COR_E_NOTSUPPORTED` in .NET Core für die Typen zurück, die nicht von COM importiert wurden. |
 |**ISupportErrorInfo**|Ermöglicht es einem COM-Client festzustellen, ob das verwaltete Objekt die **IErrorInfo**-Schnittstelle unterstützt. Falls ja, ist der Client in der Lage einen Zeiger auf das letzte Ausnahmeobjekt abzurufen. Alle verwalteten Typen unterstützen die **IErrorInfo**-Schnittstelle.|
 |**ITypeInfo** (nur .NET Framework)|Stellt Typinformationen für eine Klasse bereit, die exakt den von Tlbexp.exe erstellten Typinformationen entsprechen.|
 |**IUnknown**|Stellt die Standardimplementierung der **IUnknown**-Schnittstelle bereit, über die der COM-Client die Lebensdauer des CCWs verwalten und die Typkonvertierung erzwingt.|
 
  Eine verwaltete Klasse kann zudem die COM-Schnittstellen bereitstellen, die in der folgenden Tabelle beschrieben werden.
 
-|Schnittstelle|Beschreibung|
+|Interface|Beschreibung|
 |---------------|-----------------|
-|Die\_Klassenschnittstelle (*classname*)|Schnittstelle, die von der Laufzeit offengelegt wird und nicht explizit definiert wird; legt alle öffentlichen Schnittstellen, Methoden, Eigenschaften und Felder offen, die für ein verwaltetes Objekt explizit offengelegt werden.|
+|Die Klassenschnittstelle (\_*Klassenname*)|Schnittstelle, die von der Laufzeit offengelegt wird und nicht explizit definiert wird; legt alle öffentlichen Schnittstellen, Methoden, Eigenschaften und Felder offen, die für ein verwaltetes Objekt explizit offengelegt werden.|
 |**IConnectionPoint** und **IConnectionPointContainer**|Schnittstelle für Objekte, die delegatbasierende Ereignisse bedienen (eine Schnittstelle für die Registrierung von Ereignisabonnenten).|
 |**IDispatchEx** (nur .NET Framework)|Schnittstelle, die von der Laufzeit bereitgestellt wird, wenn die Klasse **IExpando** implementiert. Die **IDispatchEx**-Schnittstelle ist eine Erweiterung der **IDispatch**-Schnittstelle. Im Gegensatz zu **IDispatch** ermöglicht sie das Aufzählen, Hinzufügen, Löschen und Aufrufen von Membern unter Berücksichtigung von Groß-/Kleinschreibung.|
 |**IEnumVARIANT**|Schnittstelle für Klassen von Typ „Auflistung“, die die Objekte in der Auflistung enumeriert, wenn die Klasse **IEnumerable** implementiert.|
@@ -192,7 +192,7 @@ Wenn Ihre Anwendung früh gebundene Aufrufe von COM-Ereignisschnittstellenmethod
 <EmbedInteropTypes>True</EmbedInteropTypes>
 ```
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Runtime.InteropServices.ClassInterfaceAttribute>
 - [COM-Wrapper](com-wrappers.md)

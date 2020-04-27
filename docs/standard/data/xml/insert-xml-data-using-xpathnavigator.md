@@ -9,7 +9,7 @@ dev_langs:
 ms.assetid: 2ed8c28b-b88d-4be7-9c87-92df01f0821f
 ms.openlocfilehash: 68c003467d837fe79d5e275968e47fa5dc3490cc
 ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/07/2020
 ms.locfileid: "75710725"
@@ -254,7 +254,7 @@ navigator.SetTypedValue(DateTime.Now);
   
  In der folgenden Tabelle werden die Methoden der <xref:System.Xml.XmlWriter>-Klasse beschrieben, die nicht von der <xref:System.Xml.XPath.XPathNavigator>-Klasse unterstützt werden.  
   
-|-Methode|Beschreibung|  
+|Methode|Beschreibung|  
 |------------|-----------------|  
 |<xref:System.Xml.XmlWriter.WriteEntityRef%2A>|Löst eine <xref:System.NotSupportedException>-Ausnahme aus.|  
 |<xref:System.Xml.XmlWriter.WriteDocType%2A>|Wird auf der Stammebene ignoriert und löst beim Aufrufen auf einer anderen Ebene im XML-Dokument eine <xref:System.NotSupportedException>-Ausnahme aus.|  

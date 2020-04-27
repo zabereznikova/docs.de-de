@@ -5,7 +5,7 @@ ms.technology: dotnet-standard
 ms.assetid: 91ce8cba-386c-411e-bb38-0891a0393c0a
 ms.openlocfilehash: 504057bd5e10498d39b2bce908742fc20b112c52
 ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/07/2020
 ms.locfileid: "75710504"
@@ -20,11 +20,11 @@ In diesem Thema finden Sie Informationen zu den verfügbaren XSLT-Ausgabeoptione
   
 |Attributname|Verhalten|  
 |--------------------|--------------|  
-|method|Unterstützt.|  
-|-Version|Ignoriert. Diese Version ist immer 1.0 für XML und 4.0 für HTML.|  
+|Methode|Unterstützt.|  
+|Version|Ignoriert. Diese Version ist immer 1.0 für XML und 4.0 für HTML.|  
 |encoding|Wird bei Ausgabe in einen <xref:System.IO.TextWriter> ignoriert. Stattdessen wird die <xref:System.IO.TextWriter.Encoding%2A?displayProperty=nameWithType>-Eigenschaft verwendet.|  
 |omit-xml-declaration|Unterstützt.|  
-|standalone|Unterstützt.|  
+|Eigenständig|Unterstützt.|  
 |doctype-public|Unterstützt.|  
 |doctype-system|Unterstützt.|  
 |cdata-section-elements|Unterstützt.|  

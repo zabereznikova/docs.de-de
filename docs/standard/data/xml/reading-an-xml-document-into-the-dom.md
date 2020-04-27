@@ -8,7 +8,7 @@ dev_langs:
 ms.assetid: a4fb291f-5630-49ba-a49a-5b66c3b71e49
 ms.openlocfilehash: 2e61a9ed1a1ccaa2f9f1543efa1d33c3fcf00061
 ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/30/2019
 ms.locfileid: "73130833"
@@ -20,7 +20,7 @@ XML-Daten werden aus verschiedenen Formaten in den Speicher eingelesen. Dies kan
   
  Die unterschiedlichen <xref:System.Xml.XmlDocument.Load%2A>-Methoden beeinflussen, welche Knoten beim Laden des XML-DOM ( Document Object Model) erstellt werden. In der folgenden Tabelle werden die Unterschiede zwischen einigen <xref:System.Xml.XmlDocument.Load%2A>-Methoden sowie die zugehörigen Themen aufgelistet.  
   
-|Betreff|Topic|  
+|Betreff|Thema|  
 |-------------|-----------|  
 |Erstellen von Leerraumknoten|Das zum Laden des DOM verwendete Objekt beeinflusst die Leerraum- und die signifikanten Leerraumknoten, die im DOM erzeugt werden. Weitere Informationen finden Sie unter [Behandlung von Leerräumen und signifikanten Leerräumen beim Laden des DOM](../../../../docs/standard/data/xml/white-space-and-significant-white-space-handling-when-loading-the-dom.md).|  
 |Laden von XML, beginnend an einem bestimmten Knoten, oder Laden des gesamten XML-Dokuments|Mithilfe der <xref:System.Xml.XmlDocument.Load%2A?displayProperty=nameWithType>-Methode können Daten aus einem bestimmten Knoten in das DOM geladen werden. Weitere Informationen finden Sie unter [Laden von Daten aus einem Reader](../../../../docs/standard/data/xml/load-data-from-a-reader.md).|  

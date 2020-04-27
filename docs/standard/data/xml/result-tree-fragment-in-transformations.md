@@ -5,7 +5,7 @@ ms.technology: dotnet-standard
 ms.assetid: df363480-ba02-4233-9ddf-8434e421c4f1
 ms.openlocfilehash: e454c1194e8c280042857f106e22d0d0509417e3
 ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 02/28/2020
 ms.locfileid: "78156360"
@@ -33,11 +33,11 @@ Beim `parameter`-Element kann der Wert dem `Qname` (qualifizierter Name) auf ver
 
 Dem `variable`-Element kann der Wert ebenfalls auf verschiedene Weise zugewiesen werden. Die Zuordnung kann erfolgen, indem der Inhalt aus dem XPath-Ausdruck im `select`-Attribut zurückgegeben wird, oder indem der Inhalt des Vorlagenkörpers zugewiesen wird.
 
-Wenn bei einem `parameter`-Element und einem `variable`-Element der Wert durch den XPath-Ausdruck zugeordnet wird, wird einer der vier XPath-Grundtypen zurückgegeben: Boolean (boolescher Wert), string (Zeichenfolge), number (Zahl) oder node set (Knotengruppe). Wenn der Wert aus einem Vorlagenkörper mit Inhalt stammt, wird kein XPath-Datentyp zurückgegeben, sondern ein Ergebnisstrukturfragment.
+Wenn bei einem `parameter`-Element und einem `variable`-Element der Wert durch den XPath-Ausdruck zugeordnet wird, wird einer der vier XPath-Grundtypen zurückgegeben: Boolesch, Zeichenfolge, Zahl oder Knotengruppe. Wenn der Wert aus einem Vorlagenkörper mit Inhalt stammt, wird kein XPath-Datentyp zurückgegeben, sondern ein Ergebnisstrukturfragment.
 
 Nur wenn eine Variable nicht an einen der vier XPath-Grunddatentypen, sondern an ein Ergebnisstrukturfragment gebunden ist, gibt eine XPath-Abfrage einen Typ zurück, der nicht zu den vier XPath-Objekttypen gehört. Das Verhalten von Ergebnisstrukturfragmenten wird in der [W3C-Spezifikation](https://www.w3.org/TR/xslt-10/), [Abschnitt 11.1, „Result Tree Fragments“](https://www.w3.org/TR/xslt-10/#section-Result-Tree-Fragments), bis [Abschnitt 11.6, „Passing Parameters to Templates“](https://www.w3.org/TR/xslt-10/#section-Passing-Parameters-to-Templates), erörtert. Darüber hinaus werden in [Abschnitt 1, „Introduction“](https://www.w3.org/TR/xslt-10/#section-Introduction) Möglichkeiten erläutert, wie Vorlagen auch Elemente aus dem XSLT-Namespace enthalten können, die Ergebnisstrukturfragmente zurückgeben oder erstellen.
 
-Ein Ergebnisstrukturfragment verhält sich im Grunde wie eine Knotengruppe mit lediglich einem einzelnen Stammknoten. Die übrigen zurückgegebenen Knoten sind jedoch untergeordnete Knoten. Zur programmgesteuerten Anzeige der untergeordneten Knoten kopieren Sie das Ergebnisstrukturfragment mithilfe des `<xsl:copy-of>`-Elements in die Ergebnisstruktur. Beim Ausführen des {1}copy-of{2}-Vorgangs werden auch alle untergeordneten Knoten der Reihe nach in die Ergebnisstruktur kopiert. Erst wenn `copy` oder `copy-of` verwendet wird, ist ein Ergebnisstrukturfragment Teil der Ergebnisstruktur oder der Transformationsausgabe.
+Ein Ergebnisstrukturfragment verhält sich im Grunde wie eine Knotengruppe mit lediglich einem einzelnen Stammknoten. Die übrigen zurückgegebenen Knoten sind jedoch untergeordnete Knoten. Zur programmgesteuerten Anzeige der untergeordneten Knoten kopieren Sie das Ergebnisstrukturfragment mithilfe des `<xsl:copy-of>`-Elements in die Ergebnisstruktur. Beim Ausführen des copy-of-Vorgangs werden auch alle untergeordneten Knoten der Reihe nach in die Ergebnisstruktur kopiert. Erst wenn `copy` oder `copy-of` verwendet wird, ist ein Ergebnisstrukturfragment Teil der Ergebnisstruktur oder der Transformationsausgabe.
 
 Zum Durchlaufen der zurückgegebenen Knoten eines Ergebnisstrukturfragments wird ein <xref:System.Xml.XPath.XPathNavigator> verwendet. Im folgenden Codebeispiel wird dargestellt, wie ein Ergebnisstrukturfragment in einem Stylesheet erstellt wird. Dabei wird die Funktion mit einem Parameter `fragment` aufgerufen, der XML enthält.
 
@@ -111,13 +111,13 @@ Im nächsten Beispiel wird eine Variable im RTF-Format (Rich Text Format) und da
 
 In der folgenden Ausgabe wird das Ergebnis der XML-Transformation mit diesem Stylesheet dargestellt.
 
-## <a name="output"></a>Ausgabe
+## <a name="output"></a>Output
 
 ```xml
 <first_book xmlns:user="urn:books">Book1</first_book>
 ```
 
-Wie oben angegeben, können Sie mit der `node-set`-Funktion ein Ergebnisstrukturfragment in eine Knotengruppe konvertieren. Der resultierende Knoten enthält immer einen einzelnen Knoten, der den Stammknoten der Struktur darstellt. Wenn Sie ein Ergebnisstrukturfragment in eine Knotengruppe konvertieren, können Sie es überall verwenden, wo reguläre Knotengruppen verwendet werden, z. B. in einer `select`for-each{2}-Anweisung oder im Wert eines {3}-Attributs. Im folgenden Beispiel wird die Umwandlung eines Fragments in eine Knotengruppe und die anschließende Verwendung als Knotengruppe dargestellt:
+Wie oben angegeben, können Sie mit der `node-set`-Funktion ein Ergebnisstrukturfragment in eine Knotengruppe konvertieren. Der resultierende Knoten enthält immer einen einzelnen Knoten, der den Stammknoten der Struktur darstellt. Wenn Sie ein Ergebnisstrukturfragment in eine Knotengruppe konvertieren, können Sie es überall verwenden, wo reguläre Knotengruppen verwendet werden, z. B. in einer for-each`select`-Anweisung oder im Wert eines -Attributs. Im folgenden Beispiel wird die Umwandlung eines Fragments in eine Knotengruppe und die anschließende Verwendung als Knotengruppe dargestellt:
 
 `<xsl:for-each select="msxsl:node-set($node-fragment)">`
 
@@ -145,7 +145,7 @@ Im folgenden Beispiel handelt es sich bei `$var` um eine Variable, die im Styles
 </xsl:stylesheet>
 ```
 
-Im nächsten Beispiel wird eine RTF-Variable und damit ein Ergebnisstrukturfragmenttyp dargestellt, der in eine Knotengruppe konvertiert und anschließend als {1}XPathNodeIterator{2} an eine Skriptfunktion übergeben wird.
+Im nächsten Beispiel wird eine RTF-Variable und damit ein Ergebnisstrukturfragmenttyp dargestellt, der in eine Knotengruppe konvertiert und anschließend als XPathNodeIterator an eine Skriptfunktion übergeben wird.
 
 ```xml
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"

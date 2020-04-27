@@ -5,7 +5,7 @@ ms.technology: dotnet-standard
 ms.assetid: 26b071f3-1261-47ef-8690-0717f5cd93c1
 ms.openlocfilehash: 40ab0f746ef82ccd195fc6b873f5c8edb255f868
 ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/07/2020
 ms.locfileid: "75709867"
@@ -32,7 +32,7 @@ In diesem Thema werden einige Implementierungsdetails beschrieben, die Sie beach
   
  Die <xref:System.TimeSpan>-Klasse unterstützt diese partielle Ordnung nicht. Für ein Jahr und einen Monat wird eine bestimmte Anzahl von Tagen (365 bzw. 30) festgelegt.  
   
- Weitere Informationen zum `xs:duration`-Typ finden Sie auf der W3C-Website [XML-Schema – Teil 2: Datentypempfehlungen](https://www.w3.org/TR/xmlschema-2/) (in englischer Sprache).
+ Weitere Informationen über den `xs:duration`-Typ finden Sie in der W3C-Spezifikation [XML-Schema Teil 2: Empfehlungen zu Datentypen](https://www.w3.org/TR/xmlschema-2/).
   
 ### <a name="xstime-gregorian-date-types-and-systemdatetime"></a>"xs:time", Typen für das gregorianische Datum und "System.DateTime"  
  Wenn einem `xs:time`-Wert ein <xref:System.DateTime>-Objekt zugeordnet wird, wird das <xref:System.DateTime.MinValue>-Feld zur Initialisierung der Datumseigenschaften des <xref:System.DateTime>-Objekts (z. B. <xref:System.DateTime.Year%2A>, <xref:System.DateTime.Month%2A> oder <xref:System.DateTime.Day%2A>) mit dem kleinsten möglichen <xref:System.DateTime>-Wert verwendet.  

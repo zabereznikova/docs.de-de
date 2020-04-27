@@ -9,7 +9,7 @@ dev_langs:
 ms.assetid: fa09c8e5-c2b9-49d2-bb0d-40330cd13e4d
 ms.openlocfilehash: d7d9f8e0d4ec2f343b50e68e942bf94e93576f25
 ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/07/2020
 ms.locfileid: "75710946"
@@ -32,11 +32,11 @@ Im ersten Codebeispiel wird dem `PhoneNumber`-Element des Kundenschemas ein neue
 
 2. Ruft das kompilierte <xref:System.Xml.Schema.XmlSchema>-Objekt aus <xref:System.Xml.Schema.XmlSchemaSet> ab, indem die <xref:System.Xml.Schema.XmlSchemaSet.Schemas%2A>-Eigenschaft durchlaufen wird. Da das Schema kompiliert ist, kann auf die Eigenschaften im PSCI zugegriffen werden.
 
-3. Erstellt mithilfe der `PhoneNumber`-Klasse das <xref:System.Xml.Schema.XmlSchemaElement>-Element und mithilfe der `xs:string`-Klasse und der <xref:System.Xml.Schema.XmlSchemaSimpleType>-Klasse die Einschränkung des einfachen <xref:System.Xml.Schema.XmlSchemaSimpleTypeRestriction>-Typs. Fügt außerdem der <xref:System.Xml.Schema.XmlSchemaSimpleTypeRestriction.Facets%2A>-Eigenschaft der Einschränkung ein <xref:System.Xml.Schema.XmlSchemaSimpleType.Content%2A>pattern-Facet hinzu, und fügt der <xref:System.Xml.Schema.XmlSchemaElement.SchemaType%2A>-Eigenschaft des einfachen Typs die Einschränkung sowie dem `PhoneNumber` des -Elements den einfachen Typ hinzu.
+3. Erstellt mithilfe der `PhoneNumber`-Klasse das <xref:System.Xml.Schema.XmlSchemaElement>-Element und mithilfe der `xs:string`-Klasse und der <xref:System.Xml.Schema.XmlSchemaSimpleType>-Klasse die Einschränkung des einfachen <xref:System.Xml.Schema.XmlSchemaSimpleTypeRestriction>-Typs. Fügt außerdem der <xref:System.Xml.Schema.XmlSchemaSimpleTypeRestriction.Facets%2A>-Eigenschaft der Einschränkung ein pattern<xref:System.Xml.Schema.XmlSchemaSimpleType.Content%2A>-Facet hinzu, und fügt der <xref:System.Xml.Schema.XmlSchemaElement.SchemaType%2A>-Eigenschaft des einfachen Typs die Einschränkung sowie dem `PhoneNumber` des -Elements den einfachen Typ hinzu.
 
 4. Durchläuft jedes <xref:System.Xml.Schema.XmlSchemaElement> in der <xref:System.Xml.Schema.XmlSchemaObjectTable.Values%2A>-Auflistung der <xref:System.Xml.Schema.XmlSchema.Elements%2A?displayProperty=nameWithType>-Auflistung nach der Kompilierung des Schemas.
 
-5. Ruft mithilfe der <xref:System.Xml.Schema.XmlSchemaElement.QualifiedName%2A>-Klasse den komplexen Typ des `"Customer"`-Elements ab und mithilfe der `Customer`-Klasse den <xref:System.Xml.Schema.XmlSchemaComplexType>sequence-Partikel des komplexen Typs, wenn der <xref:System.Xml.Schema.XmlSchemaSequence> des Elements ist.
+5. Ruft mithilfe der <xref:System.Xml.Schema.XmlSchemaElement.QualifiedName%2A>-Klasse den komplexen Typ des `"Customer"`-Elements ab und mithilfe der `Customer`-Klasse den sequence<xref:System.Xml.Schema.XmlSchemaComplexType>-Partikel des komplexen Typs, wenn der <xref:System.Xml.Schema.XmlSchemaSequence> des Elements  ist.
 
 6. Fügt der Sequenz mit dem vorhandenen `PhoneNumber`-Element und dem vorhandenen `FirstName`-Element mithilfe der `LastName`-Auflistung vor der Kompilierung des Schemas das neue <xref:System.Xml.Schema.XmlSchemaSequence.Items%2A>-Element hinzu.
 
@@ -99,7 +99,7 @@ Im Codebeispiel wird das Kundenschema in den folgenden Schritten bearbeitet.
 >
 > Im ersten Codebeispiel wird das Schema mithilfe der <xref:System.Xml.Schema.XmlSchema.Elements%2A?displayProperty=nameWithType>-Auflistung nach der Kompilierung des Schemas durchlaufen. In diesem Beispiel wird das Schema mithilfe der <xref:System.Xml.Schema.XmlSchema.Items%2A?displayProperty=nameWithType>-Auflistung vor der Kompilierung des Schemas durchlaufen. Während beide Auflistungen den Zugriff auf die globalen Elemente im Schema bereitstellen, ist das Durchlaufen der <xref:System.Xml.Schema.XmlSchema.Items%2A>-Auflistung zeitaufwendiger, da alle globalen Elemente im Schema durchlaufen werden müssen und das Schema keine PSCI-Eigenschaften aufweist. Die PSCI-Auflistungen (<xref:System.Xml.Schema.XmlSchema.Elements%2A?displayProperty=nameWithType>, <xref:System.Xml.Schema.XmlSchema.Attributes%2A?displayProperty=nameWithType>, <xref:System.Xml.Schema.XmlSchema.SchemaTypes%2A?displayProperty=nameWithType> usw.) bieten direkten Zugriff auf die globalen Elemente, Attribute und Typen mit den PSCI-Eigenschaften.
 
-1. Ruft mithilfe der <xref:System.Xml.Schema.XmlSchemaObject>-Klasse den komplexen Typ des <xref:System.Xml.Schema.XmlSchemaElement.QualifiedName%2A>-Elements ab sowie mithilfe der `"Customer"`-Klasse den `Customer`sequence-Partikel des komplexen Typs, wenn das <xref:System.Xml.Schema.XmlSchemaComplexType> ein Element ist, dessen <xref:System.Xml.Schema.XmlSchemaSequence> gleich ist.
+1. Ruft mithilfe der <xref:System.Xml.Schema.XmlSchemaObject>-Klasse den komplexen Typ des <xref:System.Xml.Schema.XmlSchemaElement.QualifiedName%2A>-Elements ab sowie mithilfe der `"Customer"`-Klasse den sequence`Customer`-Partikel des komplexen Typs, wenn das <xref:System.Xml.Schema.XmlSchemaComplexType> ein Element ist, dessen <xref:System.Xml.Schema.XmlSchemaSequence> gleich  ist.
 
 2. Durchläuft alle <xref:System.Xml.Schema.XmlSchemaParticle> in der <xref:System.Xml.Schema.XmlSchemaSequence.Items%2A?displayProperty=nameWithType>-Auflistung vor der Kompilierung des Schemas.
 

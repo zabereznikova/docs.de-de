@@ -3,13 +3,13 @@ title: 'Azure Event Grid: Serverlose Apps'
 description: Azure Event Grid ist eine serverlose Lösung für die zuverlässige Bereitstellung und Weiterleitung von Ereignissen in großem Maßstab mit einem ereignisbasierten Zahlungsmodell.
 author: JEREMYLIKNESS
 ms.author: jeliknes
-ms.date: 06/26/2018
-ms.openlocfilehash: 3c577139c12567e762aabd58c9dc29457fa37aa1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.date: 04/06/2020
+ms.openlocfilehash: 408e1b9cd1b1e5316c7c6a17bb1b0c76a38f9e11
+ms.sourcegitcommit: 8b02d42f93adda304246a47f49f6449fc74a3af4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "72522719"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82135710"
 ---
 # <a name="event-grid"></a>Event Grid
 
@@ -132,14 +132,12 @@ In diesem Kapitel haben Sie die serverlose Azure-Plattform kennengelernt, die au
 - [Azure Logic Apps](https://docs.microsoft.com/azure/logic-apps)
 - [Azure Service Bus](https://docs.microsoft.com/azure/service-bus-messaging)
 - [Azure Table Storage](https://docs.microsoft.com/azure/cosmos-db/table-storage-overview)
-- [Functions 1.x und 2.x im Vergleich](https://docs.microsoft.com/azure/azure-functions/functions-versions)
 - [Herstellen einer Verbindung mit lokalen Datenquellen mit dem lokalen Azure-Datengateway](https://docs.microsoft.com/azure/analysis-services/analysis-services-gateway)
 - [Erstellen Ihrer ersten Funktion im Azure-Portal](https://docs.microsoft.com/azure/azure-functions/functions-create-first-azure-function)
 - [Create your first function using the Azure CLI (Erstellen Ihrer ersten Funktion mit der Azure-Befehlszeilenschnittstelle)](https://docs.microsoft.com/azure/azure-functions/functions-create-first-azure-function-azure-cli)
 - [Erstellen Ihrer ersten Funktion mit Visual Studio](https://docs.microsoft.com/azure/azure-functions/functions-create-your-first-function-visual-studio)
 - [Von Functions unterstützte Sprachen](https://docs.microsoft.com/azure/azure-functions/supported-languages)
 - [Überwachen von Azure Functions](https://docs.microsoft.com/azure/azure-functions/functions-monitoring)
-- [Arbeiten mit Azure Functions-Proxys](https://docs.microsoft.com/azure/azure-functions/functions-proxies)
 
 >[!div class="step-by-step"]
 >[Zurück](logic-apps.md)

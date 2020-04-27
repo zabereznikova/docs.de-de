@@ -5,7 +5,7 @@ ms.technology: dotnet-standard
 ms.assetid: 6c2b9789-b61a-49f9-b33f-db01a945edf2
 ms.openlocfilehash: f48990286405baee347becef87d0511cd42e9e77
 ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/07/2020
 ms.locfileid: "75710998"
@@ -41,10 +41,10 @@ Das <xref:System.Xml.XmlDocument> verfügt über eine create-Methode für alle K
   
  Nach dem Erstellen von neuen Knoten stehen verschiedene Methoden zum Einfügen der Knoten in die Struktur zur Verfügung. In der Tabelle sind die Methoden und eine Beschreibung der Position des neuen Knotens im XML-DOM (Dokumentobjektmodell) aufgelistet.  
   
-|-Methode|Knotenposition|  
+|Methode|Knotenposition|  
 |------------|--------------------|  
 |<xref:System.Xml.XmlNode.InsertBefore%2A>|Vor dem Referenzknoten eingefügt. So fügen Sie beispielsweise den neuen Knoten an Position 5 ein:<br /><br /> `Dim refChild As XmlNode = node.ChildNodes(4) 'The reference is zero-based.node.InsertBefore(newChild, refChild);`<br /><br /> `XmlNode refChild = node.ChildNodes[4]; //The reference is zero-based. node.InsertBefore(newChild, refChild);`<br /><br /> Weitere Informationen finden Sie unter der Methode <xref:System.Xml.XmlNode.InsertBefore%2A>.|  
-|<xref:System.Xml.XmlNode.InsertAfter%2A>|Nach dem Referenzknoten eingefügt. Beispiel:<br /><br /> `node.InsertAfter(newChild, refChild)`<br /><br /> `node.InsertAfter(newChild, refChild);`<br /><br /> Weitere Informationen finden Sie unter der Methode <xref:System.Xml.XmlNode.InsertAfter%2A>.|  
+|<xref:System.Xml.XmlNode.InsertAfter%2A>|Nach dem Referenzknoten eingefügt. Zum Beispiel:<br /><br /> `node.InsertAfter(newChild, refChild)`<br /><br /> `node.InsertAfter(newChild, refChild);`<br /><br /> Weitere Informationen finden Sie unter der Methode <xref:System.Xml.XmlNode.InsertAfter%2A>.|  
 |<xref:System.Xml.XmlNode.AppendChild%2A>|Fügt den Knoten am Ende der Liste der untergeordneten Knoten für den angegebenen Knoten an. Wenn der Knoten, der hinzugefügt wird, ein <xref:System.Xml.XmlDocumentFragment> ist, wird der gesamte Inhalt des Dokumentfragments in die Liste der untergeordneten Elemente dieses Knotens verschoben. Weitere Informationen finden Sie unter der Methode <xref:System.Xml.XmlNode.AppendChild%2A>.|  
 |<xref:System.Xml.XmlNode.PrependChild%2A>|Fügt den Knoten am Anfang der Liste der untergeordneten Knoten für den angegebenen Knoten an. Wenn der Knoten, der hinzugefügt wird, ein <xref:System.Xml.XmlDocumentFragment> ist, wird der gesamte Inhalt des Dokumentfragments in die Liste der untergeordneten Elemente dieses Knotens verschoben. Weitere Informationen finden Sie unter der Methode <xref:System.Xml.XmlNode.PrependChild%2A>.|  
 |<xref:System.Xml.XmlAttributeCollection.Append%2A>|Fügt am Ende der einem Element zugeordneten Attributauflistung einen <xref:System.Xml.XmlAttribute>-Knoten an. Weitere Informationen finden Sie unter der Methode <xref:System.Xml.XmlAttributeCollection.Append%2A>.|  

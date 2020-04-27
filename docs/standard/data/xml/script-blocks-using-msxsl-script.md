@@ -8,7 +8,7 @@ dev_langs:
 ms.assetid: fde6f43f-c594-486f-abcb-2211197fae20
 ms.openlocfilehash: a63452df16e452a90eff3977ac8726cc0a5ac439
 ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/07/2020
 ms.locfileid: "75710192"
@@ -89,7 +89,7 @@ Die <xref:System.Xml.Xsl.XslCompiledTransform>-Klasse unterstützt eingebettete 
   
  Das `name`-Attribut enthält den Namen der Assembly, und das `href`-Attribut enthält den Pfad der Assembly. Der Assemblyname kann ein vollständiger Name sein, z. B. "System.Data, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089", oder ein Kurzname wie "System.Web".  
   
-#### <a name="namespaces"></a>-Namespaces  
+#### <a name="namespaces"></a>Namespaces  
  In der Standardeinstellung sind die folgenden Namespaces enthalten:  
   
 - System  
@@ -131,7 +131,7 @@ Die <xref:System.Xml.Xsl.XslCompiledTransform>-Klasse unterstützt eingebettete 
 #### <a name="calcxsl"></a>calc.xsl  
  [!code-xml[XSLT_Script#3](../../../../samples/snippets/xml/VS_Snippets_Data/XSLT_Script/XML/calc.xsl#3)]  
   
-### <a name="output"></a>Ausgabe  
+### <a name="output"></a>Output  
   
 ```xml  
 <circles xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:user="urn:my-scripts">  

@@ -11,7 +11,7 @@ helpviewer_keywords:
 ms.assetid: e56c485b-6b67-4345-8e66-fd21835a6092
 ms.openlocfilehash: d647a8cd73fa714e86454687a25501259f894f6d
 ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/30/2019
 ms.locfileid: "73120714"
@@ -37,4 +37,4 @@ COM unterscheidet sich vom .NET Runtime-Objektmodell in mehreren wichtigen Punkt
 - [Runtime Callable Wrapper (RCW)](runtime-callable-wrapper.md)
 - [COM Callable Wrapper](com-callable-wrapper.md)
 - [Anpassen von Standardwrappern in .NET Framework](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/h7hx9abd(v=vs.100))
-- [Gewusst wie: Anpassen von Runtime Callable Wrappern in .NET Framework](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/56kh4hy7(v=vs.100))
+- [How to: Anpassen von Runtime Callable Wrappers in .NET Framework](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/56kh4hy7(v=vs.100))

@@ -8,7 +8,7 @@ dev_langs:
 ms.assetid: fe60aaa0-ae43-4b1c-9be1-426af66ba757
 ms.openlocfilehash: cc412042e69a43bbecec9dbe68618e2d307ca793
 ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/07/2020
 ms.locfileid: "75709698"
@@ -24,7 +24,7 @@ XSLT-Parameter werden der <xref:System.Xml.Xsl.XsltArgumentList> mithilfe der <x
   
 3. Übergeben Sie das <xref:System.Xml.Xsl.XsltArgumentList>-Objekt an die <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A>-Methode.  
   
-## <a name="parameter-types"></a>Parameter Types  
+## <a name="parameter-types"></a>Parametertypen  
  Das Parameterobjekt sollte einem W3C-Typ entsprechen. In der folgenden Tabelle sind die jeweiligen W3C-Typen mit den entsprechenden Microsoft .NET-Klassen (Typen) aufgelistet. Weiterhin wird angegeben, ob es sich bei dem W3C-Typ um einen XPath-Typ oder einen XSLT-Typ handelt.  
   
 |W3C-Typ|Entsprechende .NET-Klasse (Typ)|XPath-Typ oder XSLT-Typ|  
@@ -48,7 +48,7 @@ XSLT-Parameter werden der <xref:System.Xml.Xsl.XsltArgumentList> mithilfe der <x
  [!code-csharp[XSLT_Param#1](../../../../samples/snippets/csharp/VS_Snippets_Data/XSLT_Param/CS/xsltparam.cs#1)]
  [!code-vb[XSLT_Param#1](../../../../samples/snippets/visualbasic/VS_Snippets_Data/XSLT_Param/VB/xsltparam.vb#1)]  
   
-### <a name="input"></a>Input  
+### <a name="input"></a>Eingabe  
   
 ##### <a name="orderxml"></a>order.xml  
  [!code-xml[XSLT_Param#2](../../../../samples/snippets/xml/VS_Snippets_Data/XSLT_Param/XML/order.xml#2)]  
@@ -56,7 +56,7 @@ XSLT-Parameter werden der <xref:System.Xml.Xsl.XsltArgumentList> mithilfe der <x
 ##### <a name="discountxsl"></a>discount.xsl  
  [!code-xml[XSLT_Param#3](../../../../samples/snippets/xml/VS_Snippets_Data/XSLT_Param/XML/discount.xsl#3)]  
   
-### <a name="output"></a>Ausgabe  
+### <a name="output"></a>Output  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  

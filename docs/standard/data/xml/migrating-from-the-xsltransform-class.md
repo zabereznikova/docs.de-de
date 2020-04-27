@@ -8,7 +8,7 @@ dev_langs:
 ms.assetid: 9404d758-679f-4ffb-995d-3d07d817659e
 ms.openlocfilehash: 8383d8cb3e5819c46a0716c59323e492bb9add8e
 ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/14/2020
 ms.locfileid: "75937991"
@@ -21,12 +21,12 @@ In den folgenden Abschnitten werden einige der Hauptunterschiede zwischen der <x
 
 ## <a name="performance"></a>Leistung
 
-Die <xref:System.Xml.Xsl.XslCompiledTransform>-Klasse weist eine Reihe von Leistungsverbesserungen auf. Der neue XSLT-Prozessor kompiliert das XSLT-Stylesheet in ein allgemeines Zwischenformat, ähnlich wie dies von der CLR (Common Language Runtime) für andere Programmiersprachen erfolgt. Nachdem ein Stylesheet kompiliert wurde, kann es zwischengespeichert und erneut verwendet werden.
+Die <xref:System.Xml.Xsl.XslCompiledTransform>-Klasse weist eine Reihe von Leistungsverbesserungen auf. Der neue XSLT-Prozessor kompiliert das XSLT-Stylesheet in ein allgemeines Zwischenformat, ähnlich wie dies von der CLR (Common Language Runtime) für andere Programmiersprachen erfolgt. Sobald das Stylesheet kompiliert ist, kann es zwischengespeichert und wiederverwendet werden.
 
 Die <xref:System.Xml.Xsl.XslCompiledTransform>-Klasse enthält zudem weitere Optimierungen, wodurch sie viel schneller als die <xref:System.Xml.Xsl.XslTransform>-Klasse ist.
 
 > [!NOTE]
-> Obwohl die Gesamtleistung der <xref:System.Xml.Xsl.XslCompiledTransform>-Klasse besser ist als die der <xref:System.Xml.Xsl.XslTransform>-Klasse, ist die Leistung der <xref:System.Xml.Xsl.XslCompiledTransform.Load%2A>-Methode der <xref:System.Xml.Xsl.XslCompiledTransform>-Klasse möglicherweise langsamer als die <xref:System.Xml.Xsl.XslTransform.Load%2A>-Methode der <xref:System.Xml.Xsl.XslTransform>-Klasse, wenn sie zum ersten Mal für eine Transformation aufgerufen wird. Dies liegt daran, dass die XSLT-Datei zunächst kompiliert werden muss, bevor sie geladen wird. Weitere Informationen finden Sie im folgenden Blogbeitrag: [XslCompiledTransform Slower than XslTransform?](https://docs.microsoft.com/archive/blogs/antosha/xslcompiledtransform-slower-than-xsltransform) (XslCompiledTransform langsamer als XslTransform)
+> Obwohl die Gesamtleistung der <xref:System.Xml.Xsl.XslCompiledTransform>-Klasse besser ist als die der <xref:System.Xml.Xsl.XslTransform>-Klasse, ist die Leistung der <xref:System.Xml.Xsl.XslCompiledTransform.Load%2A>-Methode der <xref:System.Xml.Xsl.XslCompiledTransform>-Klasse möglicherweise langsamer als die <xref:System.Xml.Xsl.XslTransform.Load%2A>-Methode der <xref:System.Xml.Xsl.XslTransform>-Klasse, wenn sie zum ersten Mal für eine Transformation aufgerufen wird. Dies liegt daran, dass die XSLT-Datei zunächst kompiliert werden muss, bevor sie geladen wird. Weitere Informationen finden Sie im folgenden Blogbeitrag: [XslCompiledTransform Slower than XslTransform? (Ist XslCompiledTransform langsamer als XslTransform?)](https://docs.microsoft.com/archive/blogs/antosha/xslcompiledtransform-slower-than-xsltransform)
 
 ## <a name="security"></a>Sicherheit
 
@@ -37,7 +37,7 @@ Die <xref:System.Xml.Xsl.XslCompiledTransform>-Klasse deaktiviert standardmäßi
 
 Weitere Informationen finden Sie unter [XSLT-Sicherheitsaspekte](../../../../docs/standard/data/xml/xslt-security-considerations.md).
 
-## <a name="new-features"></a>Neue Features
+## <a name="new-features"></a>Neue Funktionen
 
 ### <a name="temporary-files"></a>Temporäre Dateien
 
@@ -121,9 +121,9 @@ Die <xref:System.Xml.Xsl.XslCompiledTransform>-Klasse wurde um die Unterstützun
 
 - msxsl:version: Diese Funktion wird in <xref:System.Xml.Xsl.XslCompiledTransform> unterstützt.
 
-- XPath-Erweiterungsfunktionen: die [ms:string-compare-Funktion](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms256114(v=vs.100)), [ms:utc-Funktion](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms256474(v=vs.100)), [ms:namespace-uri-Funktion](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms256231(v=vs.100)), [ms:local-name-Funktion](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms256055(v=vs.100)), [ms:number-Funktion](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms256155(v=vs.100)), [ms:format-date-Funktion](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms256099(v=vs.100)) und [ms:format-time Funktion](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms256467(v=vs.100)) werden jetzt unterstützt.
+- XPath-Erweiterungsfunktionen: Die [ms:string-compare-Funktion](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms256114(v=vs.100)), [ms:utc-Funktion](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms256474(v=vs.100)), [ms:namespace-uri-Funktion](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms256231(v=vs.100)), [ms:local-name-Funktion](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms256055(v=vs.100)), [ms:number-Funktion](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms256155(v=vs.100)), [ms:format-date-Funktion](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms256099(v=vs.100)) und [ms:format-time Funktion](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms256467(v=vs.100)) werden jetzt unterstützt.
 
-- Schemabezogene XPath-Erweiterungsfunktionen: Diese Funktionen werden von <xref:System.Xml.Xsl.XslCompiledTransform> nicht als native Funktionen unterstützt. Sie können aber als Erweiterungsfunktionen implementiert werden.
+- Schemabezogene XPath-Erweiterungsfunktionen: Diese Funktionen werden nicht systemintern von <xref:System.Xml.Xsl.XslCompiledTransform> unterstützt. Sie können aber als Erweiterungsfunktionen implementiert werden.
 
 ## <a name="see-also"></a>Siehe auch
 

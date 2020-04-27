@@ -5,7 +5,7 @@ ms.technology: dotnet-standard
 ms.assetid: d2758ea1-03f6-47bd-88d2-0fb7ccdb2fab
 ms.openlocfilehash: b37cb0f4bf9a85053d70d549ae005c7d50a50bc0
 ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/07/2020
 ms.locfileid: "75710803"
@@ -19,10 +19,10 @@ Freigegebene Verhaltensweisen sind die in der [World Wide Web Consortium (W3C) X
 
 Daher enthält die folgende Tabelle alle freigegebenen Verhaltensweisen, die vom W3C zugelassen sind und für die .NET Framework-Implementierung der <xref:System.Xml.Xsl.XslTransform>-Klasse implementiert sind – sowie jeweils den Abschnitt der W3C-Empfehlung zu XSLT 1.0, in der das entsprechende Problem behandelt wird.
 
-|Problem|Verhalten|Abschnitt|
+|Problem|Verhalten|Bereich|
 |-------------|--------------|-------------|
 |Ein Textknoten entspricht sowohl `xsl:strip-space` als auch `xsl:preserve-space`.|Wiederherstellen|3.4|
-|Ein Quellknoten entspricht mehreren Vorlagenregeln.|Wiederherstellen|5,5|
+|Ein Quellknoten entspricht mehreren Vorlagenregeln.|Wiederherstellen|5.5|
 |Ein Namespace-URI (Uniform Resource Identifier) ist als Alias für mehrere Namespace-URIs deklariert, die alle die gleiche Importpriorität haben.|Wiederherstellen|7.1.1|
 |Das Namensattribut in `xsl:attribute` und `xsl:element`, das aus einer Attributwertvorlage generiert wurde, ist kein gültiger qualifizierter Name (QName).|Ausgelöste Ausnahme|7.1.2 und 7.1.3|
 |Hinzufügen eines Attributs zu einem Element, nachdem dem Elementknoten untergeordnete Knoten hinzugefügt wurden.|Wiederherstellen|7.1.3|
@@ -54,7 +54,7 @@ Bestimmte Verhaltensweisen sind einzigartig für die Implementierung der <xref:S
 
 ## <a name="xslsort"></a>xsl:sort
 
-In Bezug auf die Verwendung einer Transformation für eine Sortierung werden in der W3C-Empfehlung zu XSLT 1.0 einige Beobachtungen beschrieben. Es handelt sich dabei um folgende Zonen:
+In Bezug auf die Verwendung einer Transformation für eine Sortierung werden in der W3C-Empfehlung zu XSLT 1.0 einige Beobachtungen beschrieben. Dies sind:
 
 - Zwei XSLT-Prozessoren können konforme Prozessoren sein, aber dennoch eine unterschiedliche Sortierung durchführen.
 
@@ -66,8 +66,8 @@ In der folgenden Tabelle wird das Sortierverhalten dargestellt, das für die ein
 
 |Datentyp|Sortierverhalten|
 |---------------|----------------------|
-|Text|Daten werden mithilfe der String.Compare-Methode der Common Language Runtime (CLR) und des betreffenden Gebietsschemas sortiert. Wenn der Datentyp <xref:System.Xml.Xsl.XslTransform> Text ist, ist das Sortierverhalten in der -Klasse mit dem Verhalten des Zeichenfolgenvergleichs der CLR identisch.|
-|Number|Numerische Werte werden als Zahlen der XML Path Language (XPath) behandelt und gemäß der Richtlinien unter [XML Path Language (XPath) Version 1.0 Recommendation, Abschnitt 3.5](https://www.w3.org/TR/1999/REC-xpath-19991116/#numbers) von W3C sortiert.|
+|Text|Daten werden mithilfe der String.Compare-Methode der Common Language Runtime (CLR) und des betreffenden Gebietsschemas sortiert. Wenn der Datentyp Text<xref:System.Xml.Xsl.XslTransform> ist, ist das Sortierverhalten in der -Klasse mit dem Verhalten des Zeichenfolgenvergleichs der CLR identisch.|
+|Anzahl|Numerische Werte werden als Zahlen der XML Path Language (XPath) behandelt und gemäß der Richtlinien unter [XML Path Language (XPath) Version 1.0 Recommendation, Abschnitt 3.5](https://www.w3.org/TR/1999/REC-xpath-19991116/#numbers) von W3C sortiert.|
 
 ## <a name="optional-features-supported"></a>Unterstützte optionale Funktionen
 
@@ -75,7 +75,7 @@ In der folgenden Tabelle sind die Funktionen aufgeführt, die ein XSLT-Prozessor
 
 |Feature|Referenzdokumentation|Hinweise|
 |-------------|------------------------|-----------|
-|Das `disable-output-escaping`-Attribut für das `<xsl:text...>`-Tag und das `<xsl:value-of...>`-Tag.|W3C-Empfehlung zu XSLT 1.0,<br /><br /> Abschnitt 16.4|Das `disable-output-escaping`-Attribut wird ignoriert, wenn das `xsl:text`-Element oder das `xsl:value-of`-Element in einem `xsl:comment`-Element, einem `xsl:processing-instruction`-Element oder einem `xsl:attribute`-Element verwendet wird.<br /><br /> Ergebnisstrukturfragmente, die Text enthalten, und deren Textausgabe nicht geschützt wurde, werden nicht unterstützt.<br /><br /> Das <xref:System.Xml.XmlReader> disable-output-escaping-Attribut wird bei der Transformation in ein <xref:System.Xml.XmlWriter>-Objekt oder ein -Objekt ignoriert.|
+|Das `disable-output-escaping`-Attribut für das `<xsl:text...>`-Tag und das `<xsl:value-of...>`-Tag.|W3C-Empfehlung zu XSLT 1.0,<br /><br /> Abschnitt 16.4|Das `disable-output-escaping`-Attribut wird ignoriert, wenn das `xsl:text`-Element oder das `xsl:value-of`-Element in einem `xsl:comment`-Element, einem `xsl:processing-instruction`-Element oder einem `xsl:attribute`-Element verwendet wird.<br /><br /> Ergebnisstrukturfragmente, die Text enthalten, und deren Textausgabe nicht geschützt wurde, werden nicht unterstützt.<br /><br /> Das disable-output-escaping<xref:System.Xml.XmlReader>-Attribut wird bei der Transformation in ein <xref:System.Xml.XmlWriter>-Objekt oder ein -Objekt ignoriert.|
 
 ## <a name="see-also"></a>Siehe auch
 

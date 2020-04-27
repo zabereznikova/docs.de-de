@@ -5,7 +5,7 @@ ms.technology: dotnet-standard
 ms.assetid: 761773e0-db72-4986-b9f5-a522213d8397
 ms.openlocfilehash: 4a53ba4fe16a3653b1be380da49e6b75cb347a28
 ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/07/2020
 ms.locfileid: "75710673"
@@ -27,9 +27,9 @@ Es gibt viele Möglichkeiten, die Knoten und den Inhalt eines Dokuments zu ände
   
 |Knotentyp|Geänderte Daten|  
 |---------------|------------------|  
-|Attribute|Der Wert des Attributs.|  
+|Attribut|Der Wert des Attributs.|  
 |CDATASection|Der Inhalt von CDATASection.|  
-|Anmerkungen|Der Inhalt des Kommentars.|  
+|Kommentar|Der Inhalt des Kommentars.|  
 |ProcessingInstruction|Der Inhalt mit Ausnahme des Ziels.|  
 |Text|Der Inhalt des Texts.|  
 |XmlDeclaration|Der Inhalt der Deklaration, ausgenommen das `<?xml`-Markup und das `?>`-Markup.|  

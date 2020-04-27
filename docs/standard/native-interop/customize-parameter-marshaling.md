@@ -4,7 +4,7 @@ description: Erfahren Sie, wie Sie anpassen können, wie .NET Ihre Parameter in 
 ms.date: 01/18/2019
 ms.openlocfilehash: ff646ad942cf051ce90cd75b24c8562e536182d9
 ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 03/14/2020
 ms.locfileid: "79401160"
@@ -21,7 +21,7 @@ Wenn das standardmäßige Verhalten der .NET-Runtime beim Parametermarshalling n
 
 Jedes dieser Formate übergibt eine null-terminierte Zeichenkette an den nativen Code. Sie unterscheiden sich hinsichtlich der Codierung der nativen Zeichenfolge.
 
-| Wert vom Typ `System.Runtime.InteropServices.UnmanagedType` | Codieren |
+| `System.Runtime.InteropServices.UnmanagedType`-Wert | Codierung |
 |------------------------------------------------------|----------|
 | LPStr | ANSI |
 | LPUTF8Str | UTF-8 |

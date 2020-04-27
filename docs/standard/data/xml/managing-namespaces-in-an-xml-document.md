@@ -5,7 +5,7 @@ ms.technology: dotnet-standard
 ms.assetid: 682643fc-b848-4e42-8c0d-50deeaeb5f2a
 ms.openlocfilehash: 7b219788895ab2f89fa285c2e1b7de62639bfcf9
 ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 02/28/2020
 ms.locfileid: "78160039"
@@ -65,17 +65,17 @@ XML-Namespaces ordnen benutzerdefinierten und vordefinierten URIs in einem XML-D
   
  Im Folgenden finden Sie einige der Verwaltungs- und Suchaufgaben, die Sie mit der <xref:System.Xml.XmlNamespaceManager>-Klasse ausführen können. Weitere Informationen und Beispiele finden Sie, indem Sie den Links zur Referenzseite der einzelnen Methoden oder Eigenschaften folgen.  
   
-|An|Verwendung|  
+|Beschreibung|Verwendung|  
 |--------|---------|  
-|Hinzufügen eines Namespaces|<xref:System.Xml.XmlNamespaceManager.AddNamespace%2A> -Methode|  
-|Entfernen eines Namespaces|<xref:System.Xml.XmlNamespaceManager.RemoveNamespace%2A> -Methode|  
-|Suchen des URIs für den Standardnamespace|<xref:System.Xml.XmlNamespaceManager.DefaultNamespace%2A>-Eigenschaft|  
-|Suchen des URIs für ein Namespacepräfix|<xref:System.Xml.XmlNamespaceManager.LookupNamespace%2A> -Methode|  
-|Suchen des Präfixes für einen Namespace-URI|<xref:System.Xml.XmlNamespaceManager.LookupPrefix%2A> -Methode|  
-|Abrufen einer Namespaceliste im aktuellen Knoten|<xref:System.Xml.XmlNamespaceManager.GetNamespacesInScope%2A> -Methode|  
+|Hinzufügen eines Namespaces|<xref:System.Xml.XmlNamespaceManager.AddNamespace%2A>-Methode|  
+|Entfernen eines Namespaces|<xref:System.Xml.XmlNamespaceManager.RemoveNamespace%2A>-Methode|  
+|Suchen des URIs für den Standardnamespace|<xref:System.Xml.XmlNamespaceManager.DefaultNamespace%2A> -Eigenschaft|  
+|Suchen des URIs für ein Namespacepräfix|<xref:System.Xml.XmlNamespaceManager.LookupNamespace%2A>-Methode|  
+|Suchen des Präfixes für einen Namespace-URI|<xref:System.Xml.XmlNamespaceManager.LookupPrefix%2A>-Methode|  
+|Abrufen einer Namespaceliste im aktuellen Knoten|<xref:System.Xml.XmlNamespaceManager.GetNamespacesInScope%2A>-Methode|  
 |Festlegen des Gültigkeitsbereichs für einen Namespace|Die Methoden <xref:System.Xml.XmlNamespaceManager.PushScope%2A> und <xref:System.Xml.XmlNamespaceManager.PopScope%2A>|  
-|Überprüfen, ob im aktuellen Gültigkeitsbereich ein Präfix definiert ist|<xref:System.Xml.XmlNamespaceManager.HasNamespace%2A> -Methode|  
-|Abrufen der Namenstabelle, die für die Suche nach Präfixen und URIs verwendet wird|<xref:System.Xml.XmlNamespaceManager.NameTable%2A>-Eigenschaft|  
+|Überprüfen, ob im aktuellen Gültigkeitsbereich ein Präfix definiert ist|<xref:System.Xml.XmlNamespaceManager.HasNamespace%2A>-Methode|  
+|Abrufen der Namenstabelle, die für die Suche nach Präfixen und URIs verwendet wird|<xref:System.Xml.XmlNamespaceManager.NameTable%2A> -Eigenschaft|  
   
 ## <a name="see-also"></a>Siehe auch
 

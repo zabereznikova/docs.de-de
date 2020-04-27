@@ -8,7 +8,7 @@ helpviewer_keywords:
 ms.assetid: 5fc32ec9-a149-4648-994c-a8d0cccd0a65
 ms.openlocfilehash: a818fd46bd93682f0bede1d22b8cbc2ca6467a40
 ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/07/2020
 ms.locfileid: "75716741"
@@ -52,7 +52,7 @@ oder
   
 |So legen Sie „-doc“ in der integrierten Visual Studio-Entwicklungsumgebung fest|  
 |---|  
-|1. Wählen Sie ein Projekt aus, das in **Projektmappen-Explorer**ausgewählt ist. Klicken Sie im Menü **Projekt** auf **Eigenschaften**. <br />2. Klicken Sie auf die Registerkarte **Kompilieren** .<br />3. Legen Sie den Wert im Feld **XML-Dokumentations Datei generieren** fest.|  
+|1.  Ein Projekt auswählen in **Projektmappen-Explorer**. Klicken Sie im Menü **Projekt** auf **Eigenschaften**. <br />2.  Klicken Sie auf die Registerkarte **Kompilieren**.<br />3.  Legen Sie den Wert im Feld **XML-Dokumentationsdatei generieren** fest.|  
   
 ## <a name="example"></a>Beispiel  
  Ein Beispiel finden Sie unter [Dokumentieren von Code mit XML](../../../visual-basic/programming-guide/program-structure/documenting-your-code-with-xml.md).  

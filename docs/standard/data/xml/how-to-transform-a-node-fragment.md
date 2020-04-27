@@ -8,7 +8,7 @@ dev_langs:
 ms.assetid: 73a6c582-b9d7-4fa7-9a05-6d931e1f3de8
 ms.openlocfilehash: 56e9ef6031a5736acfa066ed6c068f954bd5af8d
 ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/07/2020
 ms.locfileid: "75710816"
@@ -34,7 +34,7 @@ Wenn Sie in einem <xref:System.Xml.XmlDocument>-Objekt oder einem <xref:System.X
  [!code-csharp[XSLT_NodeFrag#1](../../../../samples/snippets/csharp/VS_Snippets_Data/XSLT_NodeFrag/CS/xslt_frag.cs#1)]
  [!code-vb[XSLT_NodeFrag#1](../../../../samples/snippets/visualbasic/VS_Snippets_Data/XSLT_NodeFrag/VB/xslt_frag.vb#1)]  
   
-### <a name="input"></a>Input  
+### <a name="input"></a>Eingabe  
   
 ##### <a name="booksxml"></a>books.xml  
  [!code-xml[XML_Core_Files#1](../../../../samples/snippets/xml/VS_Snippets_Data/XML_Core_Files/XML/books.xml#1)]  
@@ -42,7 +42,7 @@ Wenn Sie in einem <xref:System.Xml.XmlDocument>-Objekt oder einem <xref:System.X
 ##### <a name="singlexsl"></a>single.xsl  
  [!code-xml[XSLT_NodeFrag#2](../../../../samples/snippets/xml/VS_Snippets_Data/XSLT_NodeFrag/XML/single.xsl#2)]  
   
-### <a name="output"></a>Ausgabe  
+### <a name="output"></a>Output  
  Der Buchtitel lautet "Ein sehr vertrauenswürdiger Herr".  
   
 ## <a name="see-also"></a>Siehe auch

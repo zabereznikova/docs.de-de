@@ -5,7 +5,7 @@ ms.technology: dotnet-standard
 ms.assetid: 059d6b9d-63f7-4011-9ba8-8406f0bbae7d
 ms.openlocfilehash: f45c5c9dccd2c1e8bdd67000a8b2f22425822ac9
 ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/07/2020
 ms.locfileid: "75710465"
@@ -23,7 +23,7 @@ LINQ to XML ist das neue Modell in .NET Framework 3.5 zum Verarbeiten von XML-D
 
 - <xref:System.Xml.Linq>
 - <xref:System.Linq>
-- [LINQ to XML im Vergleich zu DomC#()](../../../csharp/programming-guide/concepts/linq/linq-to-xml-vs-dom.md)
-- [LINQ to XML im Vergleich zu Dom (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-vs-dom.md)
-- [LINQ to XML im Vergleich zu anderen XML-C#Technologien ()](../../../csharp/programming-guide/concepts/linq/linq-to-xml-vs-other-xml-technologies.md)
+- [LINQ to XML im Vergleich zu DOM (C#)](../../../csharp/programming-guide/concepts/linq/linq-to-xml-vs-dom.md)
+- [LINQ to XML im Vergleich zu DOM (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-vs-dom.md)
+- [LINQ to XML im Vergleich zu anderen XML-Technologien (C#)](../../../csharp/programming-guide/concepts/linq/linq-to-xml-vs-other-xml-technologies.md)
 - [LINQ to XML im Vergleich zu anderen XML-Technologien (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-vs-other-xml-technologies.md)

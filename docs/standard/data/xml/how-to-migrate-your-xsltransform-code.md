@@ -1,5 +1,5 @@
 ---
-title: "Vorgehensweise: Migrieren des 'XslTransform'-Codes"
+title: 'Vorgehensweise: Migrieren des XslTransform-Codes'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: 910beb2f-cfb3-4e8e-9936-f7e0c5f4064a
 ms.openlocfilehash: 2bc5cbc1b0857a82d3b0a11f05a4eb5756724546
 ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/07/2020
 ms.locfileid: "75710842"
 ---
-# <a name="how-to-migrate-your-xsltransform-code"></a>Vorgehensweise: Migrieren des 'XslTransform'-Codes
+# <a name="how-to-migrate-your-xsltransform-code"></a>Vorgehensweise: Migrieren des XslTransform-Codes
 Die neuen XSLT-Klassen entsprechen weitgehend den bereits vorhandenen Klassen. Die <xref:System.Xml.Xsl.XslCompiledTransform>-Klasse ersetzt die <xref:System.Xml.Xsl.XslTransform>-Klasse. Stylesheets werden mithilfe der <xref:System.Xml.Xsl.XslCompiledTransform.Load%2A>-Methode kompiliert. Transformationen erfolgen mithilfe der <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A>-Methode. In den folgenden Verfahren werden allgemeine XSLT-Aufgaben veranschaulicht, und der Code wird anhand der <xref:System.Xml.Xsl.XslTransform>-Klasse und der <xref:System.Xml.Xsl.XslCompiledTransform>-Klasse verglichen.  
   
 ### <a name="to-transform-a-file-and-output-to-a-uri"></a>So transformieren Sie eine Datei und geben sie an einen URI aus  

@@ -8,7 +8,7 @@ dev_langs:
 ms.assetid: ad0b5717-3d32-41ad-a4d7-072c3e492b82
 ms.openlocfilehash: 994153ba93848ebb120f23bdf6a979462a65142d
 ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 02/28/2020
 ms.locfileid: "78159480"
@@ -52,7 +52,7 @@ vreader.Schemas.Add(xsc);
   
  Das `targetNamespace`-Attribut wird normalerweise verwendet, wenn in der `namespaceURI`-Methode die <xref:System.Xml.Schema.XmlSchemaCollection.Add%2A>-Eigenschaft für die <xref:System.Xml.Schema.XmlSchemaCollection> hinzugefügt wird. Sie können einen NULL-Verweis angeben, bevor Sie der <xref:System.Xml.Schema.XmlSchemaCollection> das Schema hinzufügen. Für Schemata ohne Namespace muss eine leere Zeichenfolge ("") verwendet werden. In der <xref:System.Xml.Schema.XmlSchemaCollection> kann nur ein Schema ohne Namespace enthalten sein.  
   
- Im folgenden Beispiel wird der <xref:System.Xml.Schema.XmlSchemaCollection> ein XML-Schema ({2}HeadCount.xsd{3}) hinzugefügt, und {4}HeadCount.xml{5} wird validiert.  
+ Im folgenden Beispiel wird der <xref:System.Xml.Schema.XmlSchemaCollection> ein XML-Schema (HeadCount.xsd) hinzugefügt, und HeadCount.xml wird validiert.  
   
 ```vb  
 Imports System  
@@ -123,7 +123,7 @@ namespace ValidationSample
 }  
 ```  
   
- Im folgenden Beispiel wird der Inhalt der zu validierenden Eingabedatei {1}HeadCount.xml{2} dargestellt.  
+ Im folgenden Beispiel wird der Inhalt der zu validierenden Eingabedatei HeadCount.xml dargestellt.  
   
 ```xml  
 <!--Load HeadCount.xsd in SchemaCollection for Validation-->  
@@ -133,7 +133,7 @@ namespace ValidationSample
 </hc:HeadCount>  
 ```  
   
- Im folgenden Beispiel wird der Inhalt der XML-Schemadatei {1}HeadCount.xsd{2} dargestellt, die zur Validierung herangezogen wird.  
+ Im folgenden Beispiel wird der Inhalt der XML-Schemadatei HeadCount.xsd dargestellt, die zur Validierung herangezogen wird.  
   
 ```xml  
 <xs:schema xmlns="xsdHeadCount" targetNamespace="xsdHeadCount" xmlns:xs="http://www.w3.org/2001/XMLSchema">  
@@ -147,7 +147,7 @@ namespace ValidationSample
 </xs:schema>  
 ```  
   
- Im folgenden Codebeispiel wird ein <xref:System.Xml.XmlValidatingReader> erstellt, der einen <xref:System.Xml.XmlTextReader> erfordert. Die Eingabedatei {1}sample4.xml{2} wird anhand des XML-Schemas {3}sample4.xsd{4} validiert.  
+ Im folgenden Codebeispiel wird ein <xref:System.Xml.XmlValidatingReader> erstellt, der einen <xref:System.Xml.XmlTextReader> erfordert. Die Eingabedatei sample4.xml wird anhand des XML-Schemas sample4.xsd validiert.  
   
 ```vb  
 Dim tr As New XmlTextReader("sample4.xml")  
@@ -171,7 +171,7 @@ while(vr.Read()) {
     }  
 ```  
   
- Im folgenden Beispiel wird der Inhalt der zu validierenden Eingabedatei {1}sample4.xml{2} dargestellt.  
+ Im folgenden Beispiel wird der Inhalt der zu validierenden Eingabedatei sample4.xml dargestellt.  
   
 ```xml  
 <datatypes xmlns="datatypesTest">  
@@ -181,7 +181,7 @@ while(vr.Read()) {
 </datatypes>  
 ```  
   
- Im folgenden Beispiel wird der Inhalt der XML-Schemadatei {1}sample4.xsd{2} dargestellt, die zur Validierung herangezogen wird.  
+ Im folgenden Beispiel wird der Inhalt der XML-Schemadatei sample4.xsd dargestellt, die zur Validierung herangezogen wird.  
   
 ```xml  
 <xs:schema

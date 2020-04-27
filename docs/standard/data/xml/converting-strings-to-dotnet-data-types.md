@@ -8,7 +8,7 @@ dev_langs:
 ms.assetid: 65455ef3-9120-412c-819b-d0f59f88ac09
 ms.openlocfilehash: e54990785cafd6061c6d53c13af6476a4b46e20e
 ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 02/28/2020
 ms.locfileid: "78160351"
@@ -33,7 +33,7 @@ Wenn Sie eine Zeichenfolge in einen .NET Framework-Datentyp konvertieren möchte
 > [!NOTE]
 > Wenn einer der in der Tabelle aufgeführten .NET Framework-Typen mit der **ToString**-Methode in eine Zeichenfolge umgewandelt wird, ist die zurückgegebene Zeichenfolge nicht der Basistyp, sondern der dem XML-Schema (XSD) entsprechende Zeichenfolgentyp.  
   
- Der **DateTime**-Werttyp und der **Timespan**-Werttyp unterscheiden sich voneinander in dem Punkt, dass **DateTime** einen Zeitpunkt darstellt, während **TimeSpan** einen Zeitraum angibt. Das **DateTime**- und das **Timespan**-Format werden in der Spezifikation für XSD-Datentypen (XML-Schema) festgelegt. Beispiel:  
+ Der **DateTime**-Werttyp und der **Timespan**-Werttyp unterscheiden sich voneinander in dem Punkt, dass **DateTime** einen Zeitpunkt darstellt, während **TimeSpan** einen Zeitraum angibt. Das **DateTime**- und das **Timespan**-Format werden in der Spezifikation für XSD-Datentypen (XML-Schema) festgelegt. Zum Beispiel:  
   
 ```vb  
 Dim writer As New XmlTextWriter("myfile.xml", Nothing)  
@@ -49,7 +49,7 @@ writer.WriteElementString("Date", XmlConvert.ToString(date));
   
  **Ausgabe**  
   
- `<Date>2001-08-04T00:00:00</Date>`.  
+ `<Date>2001-08-04T00:00:00</Date>`  
   
  Der folgende Code konvertiert eine ganze Zahl in eine Zeichenfolge:  
   
