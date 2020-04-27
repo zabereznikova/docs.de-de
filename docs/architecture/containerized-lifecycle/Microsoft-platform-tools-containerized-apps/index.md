@@ -2,12 +2,12 @@
 title: Einführung in die Microsoft-Plattform und -Tools für Container-Apps
 description: Lernen Sie die Microsoft-Lösungen für die Unterstützung des Lebenszyklus von Docker-Anwendungen kennen.
 ms.date: 02/15/2019
-ms.openlocfilehash: 8cb7870035003e956ee57684a2a2528732849379
-ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
+ms.openlocfilehash: 84f4136c6b6c284dd5ecb3fc174ac825857a567e
+ms.sourcegitcommit: c2c1269a81ffdcfc8675bcd9a8505b1a11ffb271
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81738445"
+ms.lasthandoff: 04/25/2020
+ms.locfileid: "82158501"
 ---
 # <a name="introduction-to-the-microsoft-platform-andtools-for-containerized-apps"></a>Einführung in die Microsoft-Plattform und -Tools für Container-Apps
 
@@ -16,7 +16,7 @@ ms.locfileid: "81738445"
 Abbildung 3-1 zeigt die Hauptpfeiler im Lebenszyklus von Docker-Apps, die nach der Art der von mehreren Teams geleisteten Arbeit klassifiziert sind (App-Entwicklung, DevOps-Infrastrukturprozesse und IT-Verwaltung und -Betrieb). Normalerweise sind im Unternehmen die Profile der „Rollen“, die für jeden Bereich zuständig sind, unterschiedlich. Genau wie ihre Fähigkeiten.
 
 :::image type="complex" source="./media/index/microsoft-tools-contanerized-docker-app.png" alt-text="Diagramm, das die Microsoft-Tools zeigt, die zum Verwalten von Docker-Apps erforderlich sind.":::
-Microsoft-Tools. Für die Entwicklungs-/Entwurfsworkload: Docker-Engine für Windows, VS und VS Code, .NET Core, Azure Kubernetes Service. Für die Build-/Test-/Auslieferungsworkoad: Azure DevOps, Team Foundation Server, Docker CLI, Azure Kubernetes Service. Für die Ausführungs-/Überwachungs-/Verwaltungsworkload: Azure Monitor, Azure Portal, Azure Kubernetes Services, Service Fabric, andere Orchestratoren.
+Microsoft-Tools. Für die Entwicklungs-/Entwurfsworkload: Docker-Engine für Windows, Visual Studio, Visual Studio Code, .NET Core und Azure Kubernetes Service Für die Build-/Test-/Auslieferungsworkoad: Azure DevOps, Team Foundation Server, Docker CLI, Azure Kubernetes Service. Für die Ausführungs-/Überwachungs-/Verwaltungsworkload: Azure Monitor, Azure-Portal, Azure Kubernetes Services, Service Fabric und andere Orchestratoren
 :::image-end:::
 
 **Abbildung 3-1.** Hauptpfeiler im Lebenszyklus von Docker-Containeranwendungen mit der Microsoft-Plattform und -Tools

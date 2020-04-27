@@ -3,19 +3,21 @@ title: 'Serverlose Apps: Architektur, Muster und Azure-Implementierung'
 description: Leitfaden für die serverlose Architektur Erfahren Sie, wann, warum und wie eine serverlose Architektur (im Gegensatz zu Infrastructure-as-a-Service [IaaS] oder Platform as a Service [PaaS]) für Ihre Unternehmensanwendungen implementiert werden kann.
 author: JEREMYLIKNESS
 ms.author: jeliknes
-ms.date: 06/26/2018
-ms.openlocfilehash: 9dea7dbccb5c9e125f792e6a7287a7dd2fad26f1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.date: 04/22/2020
+ms.openlocfilehash: 16e658a99feda6537189a45b53da514e67766999
+ms.sourcegitcommit: 8b02d42f93adda304246a47f49f6449fc74a3af4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73093537"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82135689"
 ---
 # <a name="serverless-apps-architecture-patterns-and-azure-implementation"></a>Serverlose Apps: Architektur, Muster und Azure-Implementierung
 
-![Screenshot: Covers des E-Books „Serverless Apps“ (Serverlose Apps)](./media/index/serverless-apps-cover.jpg)
+![Screenshot: Covers des E-Books „Serverless Apps“ (Serverlose Apps)](./media/index/serverless-apps-cover-v3.png)
 
-> DOWNLOAD verfügbar unter: <https://aka.ms/serverless-ebook>
+**EDITION v3.0** – für Azure Functions v3 aktualisiert
+
+> DOWNLOAD verfügbar unter: <https://aka.ms/serverlessbookpdf>
 
 VERÖFFENTLICHT VON
 
@@ -27,7 +29,7 @@ One Microsoft Way
 
 Redmond, Washington 98052-6399
 
-Copyright © 2018 by Microsoft Corporation
+Copyright &copy; 2018–2020 Microsoft Corporation
 
 Alle Rechte vorbehalten. Die Inhalte dieses Buchs dürfen in keiner Form und für keinen Zweck ohne die schriftliche Genehmigung des Herausgebers reproduziert oder übertragen werden.
 
@@ -43,7 +45,7 @@ Alle anderen Marken und Logos sind Eigentum der jeweiligen Besitzer.
 
 Autor:
 
-> **[Jeremy Likness](https://twitter.com/jeremylikness)** , Senior Cloud Advocate, Microsoft Corp.
+> **[Jeremy Likness](https://twitter.com/jeremylikness)** , Senior .NET Data Program Manager, Microsoft Corp.
 
 Mitwirkender:
 
@@ -97,7 +99,7 @@ Für IaaS ist noch immer ein hoher Aufwand erforderlich, da der Betrieb noch imm
 - Das Betriebssystem auf dem neuesten Stand halten
 - Die Überwachung der Anwendung
 
-Im nächsten Schritt wurde der Aufwand durch Bereitstellung von Platform-as-a-Service (PaaS) reduziert. Mit PaaS kann der Cloudanbieter Betriebssysteme, Sicherheitspatches und sogar die erforderlichen Pakete bereistellen, um eine bestimmte Plattform zu unterstützen. Statt der Erstellung einer VM und dem anschließenden Konfigurieren von .NET Framework und der Verwendung der Internetinformationsdienste (IIS) wählen Entwickler ganz einfach ein „Plattformziel“ aus, z.B. „Webanwendung“ oder „API-Endpunkt“, und stellen den Code direkt bereit. Die Fragen zur Infrastruktur sind nun weniger geworden:
+Im nächsten Schritt wurde der Aufwand durch Bereitstellung von Platform-as-a-Service (PaaS) reduziert. Mit PaaS kann der Cloudanbieter Betriebssysteme, Sicherheitspatches und sogar die erforderlichen Pakete bereistellen, um eine bestimmte Plattform zu unterstützen. Statt der Erstellung einer VM und dem anschließenden Konfigurieren von .NET und der Verwendung der Internetinformationsdienste (IIS) wählen Entwickler ganz einfach ein „Plattformziel“ aus, z.B. „Webanwendung“ oder „API-Endpunkt“, und stellen den Code direkt bereit. Die Fragen zur Infrastruktur sind nun weniger geworden:
 
 - Wie groß müssen die Dienste sein?
 - Wie können die Dienste horizontal hochskaliert werden (bzw. wie können mehr Server oder Knoten hinzugefügt werden)?

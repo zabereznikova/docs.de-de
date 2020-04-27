@@ -221,6 +221,8 @@
                   href: migration-guide/retargeting/4.5.1-4.7.1.md
                 - name: 4.5.1 zu 4.7.2
                   href: migration-guide/retargeting/4.5.1-4.7.2.md
+                - name: 4.5.1 zu 4.8
+                  href: migration-guide/retargeting/4.5.1-4.8.md
                 - name: 4.5.2 zu 4.6
                   href: migration-guide/retargeting/4.5.2-4.6.md
                 - name: 4.5.2 zu 4.6.1
@@ -277,6 +279,44 @@
                   href: migration-guide/retargeting/4.7.1-4.8.md
                 - name: 4.7.2 zu 4.8
                   href: migration-guide/retargeting/4.7.2-4.8.md
+        - name: Verhaltensentschärfung
+          items:
+            - name: Übersicht
+              href: migration-guide/mitigations.md
+            - name: Benutzerdefinierte IMessageFilter.PreFilterMessage-Implementierungen
+              href: migration-guide/mitigation-custom-imessagefilter-prefiltermessage-implementations.md
+            - name: App-Domänen-übergreifende Objektdeserialisierung
+              href: migration-guide/mitigation-deserialization-of-objects-across-app-domains.md
+            - name: Der neue 64-Bit-JIT-Compiler
+              href: migration-guide/mitigation-new-64-bit-jit-compiler.md
+            - name: Überprüfen von Pfaden auf Doppelpunkte
+              href: migration-guide/mitigation-path-colon-checks.md
+            - name: Pfadnormalisierung
+              href: migration-guide/mitigation-path-normalization.md
+            - name: PNG-Frames in Symbolobjekten
+              href: migration-guide/mitigation-png-frames-in-icon-objects.md
+            - name: Zeigerbasierte Touch- und Stiftunterstützung
+              href: migration-guide/mitigation-pointer-based-touch-and-stylus-support.md
+            - name: Poolsperrfrist
+              href: migration-guide/mitigation-pool-blocking-period.md
+            - name: Produktversionsverwaltung
+              href: migration-guide/mitigation-product-versioning.md
+            - name: Serialisierung von Steuerzeichen
+              href: migration-guide/mitigation-serialization-control-characters.md
+            - name: TLS-Protokolle
+              href: migration-guide/mitigation-tls-protocols.md
+            - name: WCF-Dienste und Zertifikatauthentifizierung
+              href: migration-guide/mitigation-wcf-services-and-certificate-authentication.md
+            - name: WPF-Layout
+              href: migration-guide/mitigation-wpf-layout.md
+            - name: Rendern von WPF-Fenstern
+              href: migration-guide/mitigation-wpf-window-rendering.md
+            - name: X509CertificateClaimSet.FindClaims-Methode
+              href: migration-guide/mitigation-x509certificateclaimset-findclaims-method.md
+            - name: XML-Schemavalidierung
+              href: migration-guide/mitigation-xml-schema-validation.md
+            - name: Pfadtrennzeichen für ZipArchiveEntry.FullName
+              href: migration-guide/mitigation-ziparchiveentry-fullname-path-separator.md
         - name: Versionskompatibilität
           href: migration-guide/version-compatibility.md
     - name: .NET Framework-Versionen
