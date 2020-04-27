@@ -2,12 +2,12 @@
 title: 'Nullable-Verweistypen: C#-Referenz'
 description: Informationen zu Nullable-Verweistypen in C# und deren Verwendung
 ms.date: 04/06/2020
-ms.openlocfilehash: cbc7397ac76b43b79a4168f4c61fe2c631b4a46b
-ms.sourcegitcommit: 2b3b2d684259463ddfc76ad680e5e09fdc1984d2
+ms.openlocfilehash: cb61b162b06faa51faabbcdd91e55618cdeaca73
+ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80888287"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82102696"
 ---
 # <a name="nullable-reference-types-c-reference"></a>Nullable-Verweistypen (C#-Referenz)
 
@@ -61,11 +61,11 @@ Im folgenden Codeausschnitt sehen Sie, an welcher Stelle der Compiler bei Verwen
 
 :::code language="csharp" source="snippets/NullableReferenceTypes.cs" id="SnippetLocalWarnings":::
 
-In den vorangehenden Beispielen wird die statische Analyse des Compilers veranschaulicht, mit der der NULL-Status von Verweisvariablen bestimmt wird. Der Compiler wendet Sprachregeln auf NULL-Prüfungen und -Zuweisungen an, um die Analyse mit Informationen zu versorgen.  Der Compiler kann keine Annahmen zur Semantik von Methoden oder Eigenschaften treffen. Wenn Sie Methoden aufzurufen, die NULL-Prüfungen durchführen, kann der Compiler nicht wissen, welche Methoden den NULL-Status einer Variablen beeinflussen. Es gibt einige Attribute, die Sie Ihren APIs hinzufügen können, um den Compiler über die Semantik von Argumenten und Rückgabewerten in Kenntnis zu setzen. Diese Attribute wurden auf viele gängige APIs in den .NET Core-Bibliotheken angewendet. Beispielsweise wurde <xref:System.String.IsNullOrEmpty%2A> aktualisiert, und der Compiler interpretiert diese Methode ordnungsgemäß als NULL-Prüfung. Weitere Informationen zu den Attributen, die für die statische Analyse des NULL-Status gelten, finden Sie im Artikel zu [Nullable-Attributen](../../nullable-attributes.md).
+In den vorangehenden Beispielen wird die statische Analyse des Compilers veranschaulicht, mit der der NULL-Status von Verweisvariablen bestimmt wird. Der Compiler wendet Sprachregeln auf NULL-Prüfungen und -Zuweisungen an, um die Analyse mit Informationen zu versorgen.  Der Compiler kann keine Annahmen zur Semantik von Methoden oder Eigenschaften treffen. Wenn Sie Methoden aufzurufen, die NULL-Prüfungen durchführen, kann der Compiler nicht wissen, welche Methoden den NULL-Status einer Variablen beeinflussen. Es gibt einige Attribute, die Sie Ihren APIs hinzufügen können, um den Compiler über die Semantik von Argumenten und Rückgabewerten in Kenntnis zu setzen. Diese Attribute wurden auf viele gängige APIs in den .NET Core-Bibliotheken angewendet. Beispielsweise wurde <xref:System.String.IsNullOrEmpty%2A> aktualisiert, und der Compiler interpretiert diese Methode ordnungsgemäß als NULL-Prüfung. Weitere Informationen zu den Attributen, die für die statische Analyse des NULL-Status gelten, finden Sie im Artikel zu [Nullable-Attributen](../attributes/nullable-analysis.md).
 
 ## <a name="setting-the-nullable-context"></a>Festlegen des NULL-kompatiblen Kontexts
 
-Es gibt zwei Möglichkeiten, den NULL-kompatiblen Kontext festzulegen. Auf Projektebene können Sie die Projekteinstellung `<Nullable>enable</Nullable>` hinzufügen. In einer einzelnen C#-Quelldatei können Sie das `#nullable enable`-Pragma hinzufügen, um den NULL-kompatiblen Kontext zu aktivieren. Weitere Informationen finden Sie im Artikel zum [Festlegen einer NULL-kompatiblen Strategie](../../nullable-attributes.md).
+Es gibt zwei Möglichkeiten, den NULL-kompatiblen Kontext festzulegen. Auf Projektebene können Sie die Projekteinstellung `<Nullable>enable</Nullable>` hinzufügen. In einer einzelnen C#-Quelldatei können Sie das `#nullable enable`-Pragma hinzufügen, um den NULL-kompatiblen Kontext zu aktivieren. Weitere Informationen finden Sie im Artikel zum [Festlegen einer NULL-kompatiblen Strategie](../../nullable-migration-strategies.md).
 
 ## <a name="c-language-specification"></a>C#-Sprachspezifikation
 

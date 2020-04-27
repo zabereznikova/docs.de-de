@@ -2,12 +2,12 @@
 title: Verwaltung der C#-Sprachversion – Leitfaden für C#
 description: Erfahren Sie mehr darüber, wie und aus welchen Gründen die C#-Sprachversion basierend auf Ihrem Projekt bestimmt wird. Erfahren Sie, wie Sie den Standardwert manuell überschreiben.
 ms.date: 02/21/2020
-ms.openlocfilehash: ef7275aad7638f52ecbfca1dfbdb962ae242fb48
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 850c4a860878593d80aaa3b7b38efaff9e003f43
+ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79398232"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82102657"
 ---
 # <a name="c-language-versioning"></a>Verwaltung der C#-Sprachversion
 
@@ -20,7 +20,7 @@ C# 8.0 (und höher) wird nur in .NET Core 3.x und neueren Versionen unterstüt
 - Die Implementierung von Standardschnittstellenmembern erfordert neue Features in der .NET Core 3.0-CLR.
 - Für asynchrone Datenströme sind die neuen Typen <xref:System.IAsyncDisposable?displayProperty=nameWithType>, <xref:System.Collections.Generic.IAsyncEnumerable%601?displayProperty=nameWithType> und <xref:System.Collections.Generic.IAsyncEnumerator%601?displayProperty=nameWithType> erforderlich.
 - Indizes und Bereiche sind die neuen Typen <xref:System.Index?displayProperty=nameWithType> und <xref:System.Range?displayProperty=nameWithType> erforderlich.
-- Verweistypen, die NULL-Werte zulassen, nutzen mehrere [Attribute](../nullable-attributes.md), um bessere Warnungen bereitzustellen. Diese Attribute wurden in .NET Core 3.0 hinzugefügt. Andere Zielframeworks wurden nicht mit diesen Attributen versehen. Das bedeutet, dass Warnungen, die NULL-Werte zulassen, mögliche Probleme nicht exakt widerspiegeln.
+- Verweistypen, die NULL-Werte zulassen, nutzen mehrere [Attribute](attributes/nullable-analysis.md), um bessere Warnungen bereitzustellen. Diese Attribute wurden in .NET Core 3.0 hinzugefügt. Andere Zielframeworks wurden nicht mit diesen Attributen versehen. Das bedeutet, dass Warnungen, die NULL-Werte zulassen, mögliche Probleme nicht exakt widerspiegeln.
 
 ## <a name="defaults"></a>der Arbeitszeittabelle
 

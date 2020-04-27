@@ -3,12 +3,12 @@ title: C#-Programmstruktur – Überblick über C#
 description: Lernen Sie die grundlegenden Bausteine eines C#-Programms kennen.
 ms.date: 02/25/2020
 ms.assetid: 984f0314-507f-47a0-af56-9011243f5e65
-ms.openlocfilehash: c09c11a4dd957b29b2adb7aaa8d68a50f30620b6
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c0a4dcaed7b53a7da7008d6000b3bec2ffe3ee7b
+ms.sourcegitcommit: 839777281a281684a7e2906dccb3acd7f6a32023
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79156830"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82141014"
 ---
 # <a name="program-structure"></a>Programmstruktur
 
@@ -16,7 +16,7 @@ Die organisatorischen Schlüsselkonzepte in C# sind: ***Programme***, ***Namespa
 
 Sie können ein Bibliotheksprojekt namens *acme* mithilfe des `dotnet new`-Befehls erstellen:
 
-```console
+```dotnetcli
 dotnet new classlib -o acme
 ```
 
@@ -26,7 +26,7 @@ In diesem Projekt wird eine Klasse namens `Stack` in einem Namespace namens `Acm
 
 Der vollqualifizierte Name dieser Klasse ist `Acme.Collections.Stack`. Die Klasse enthält mehrere Member: ein Feld mit dem Namen `top`, zwei Methoden mit dem Namen `Push` und `Pop` sowie eine geschachtelte Klasse mit dem Namen `Entry`. Die `Entry`-Klasse enthält weitere drei Member: ein Feld mit dem Namen `next`, ein Feld mit dem Namen `data` und einen Konstruktor. Der folgende Befehl kompiliert
 
-```console
+```dotnetcli
 dotnet build
 ```
 
@@ -48,7 +48,7 @@ Die *CSPROJ*-Datei für das Projekt des obigen Programms muss einen Verweisknote
 
 Nachdem dieser hinzugefügt wurde, erstellt `dotnet build` eine ausführbare Assembly namens `example.exe`, die die Ausgabe erzeugt, wenn sie ausgeführt wird:
 
-```console
+```dotnetcli
 100
 10
 1

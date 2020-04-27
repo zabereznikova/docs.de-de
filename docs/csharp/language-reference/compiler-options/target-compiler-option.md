@@ -9,12 +9,12 @@ helpviewer_keywords:
 - assemblies [C#], compiling
 - -target compiler options [C#]
 ms.assetid: a18bbd8e-bbf7-49e7-992c-717d0eb1f76f
-ms.openlocfilehash: af7bd917f57c8752a2026fbb98aa8b22adc98db7
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ea5481810e629d911c4d5aba62e60c98d0783f34
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "74204520"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81644358"
 ---
 # <a name="-target-c-compiler-options"></a>-target (C#-Compileroptionen)
 Die Compileroption **-target** kann in einem von vier Formaten angegeben werden:  
@@ -37,7 +37,7 @@ Die Compileroption **-target** kann in einem von vier Formaten angegeben werden:
  [/target:winmdobj](./target-winmdobj-compiler-option.md)  
  So erstellen Sie eine WINMDOBJ-Zwischendatei.  
   
- Wenn Sie **-target:module** nicht angegeben haben, verursacht **-target**, dass ein .NET Framework-Assemblymanifest in einer Ausgabedatei platziert wird. Weitere Informationen finden Sie unter [Assemblys in .NET](../../../standard/assembly/index.md) und [Häufig verwendete Attribute](../../programming-guide/concepts/attributes/common-attributes.md).  
+ Wenn Sie **-target:module** nicht angegeben haben, verursacht **-target**, dass ein .NET Framework-Assemblymanifest in einer Ausgabedatei platziert wird. Weitere Informationen finden Sie unter [Assemblys in .NET](../../../standard/assembly/index.md) und [Häufig verwendete Attribute](../attributes/global.md).  
   
  Das Assemblymanifest wird in der ersten EXE-Ausgabedatei in der Kompilierung oder in der ersten DLL platziert, falls es keine EXE-Ausgabedatei gibt. In der folgenden Befehlszeile wird das Manifest z.B. in `1.exe` platziert:  
   
