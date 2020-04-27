@@ -10,7 +10,7 @@ helpviewer_keywords:
 ms.assetid: 9baea3ce-27b3-4b4f-af98-9ad0f9467e6f
 ms.openlocfilehash: 49f2d871a42db484e20f0bfc35634a0e8b959c2e
 ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/30/2019
 ms.locfileid: "73123547"
@@ -27,7 +27,7 @@ In der folgenden Tabelle werden die Marshallingoptionen für den String-Datentyp
 
 |Enumerationstyp|Beschreibung des nicht verwalteten Formats|
 |----------------------|-------------------------------------|
-|`UnmanagedType.BStr` (Standardwert)|`BSTR` im COM-Format mit vorangestellter Länge und Unicode-Zeichen.|
+|`UnmanagedType.BStr` (Standard)|`BSTR` im COM-Format mit vorangestellter Länge und Unicode-Zeichen.|
 |`UnmanagedType.LPStr`|Ein Zeiger auf ein mit NULL endendes Array von ANSI-Zeichen.|
 |`UnmanagedType.LPWStr`|Ein Zeiger auf ein mit Null endendes Array von Unicode-Zeichen.|
 
@@ -287,7 +287,7 @@ End Class
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Standardmäßiges Marshallingverhalten](default-marshaling-behavior.md)
+- [Default Marshaling Behavior (Standardmäßiges Marshallingverhalten)](default-marshaling-behavior.md)
 - [Marshallen von Zeichenfolgen](marshaling-strings.md)
 - [Blitfähige und nicht blitfähige Typen](blittable-and-non-blittable-types.md)
 - [Direktionale Attribute](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/77e6taeh(v=vs.100))

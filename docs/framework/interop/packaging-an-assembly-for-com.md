@@ -18,7 +18,7 @@ helpviewer_keywords:
 ms.assetid: 39dc55aa-f2a1-4093-87bb-f1c0edb6e761
 ms.openlocfilehash: 6866da283cc7cdd180aada252007d67bd72cd862
 ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/30/2019
 ms.locfileid: "73124096"
@@ -59,7 +59,7 @@ COM-Entwickler profitieren von den folgenden Informationen zu den verwalteten Ty
 
   Unabhängig vom Mechanismus, den Sie auswählen, sind nur öffentliche Typen in der von Ihnen bereitgestellten Assembly in der generierten Typbibliothek enthalten.
 
-Weitere Informationen finden Sie unter [Vorgehensweise: Einbetten von Typbibliotheken als Win32-Ressourcen in .NET-basierten Anwendungen](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ww9a897z(v=vs.100)).
+Anweisungen hierzu finden Sie unter [Vorgehensweise: Einbetten von Typbibliotheken als Win32-Ressourcen in .NET-Anwendungen](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ww9a897z(v=vs.100)).
 
 <a name="cpconpackagingassemblyforcomanchor1"></a>
 
@@ -97,4 +97,4 @@ Das [.NET Services Installation-Tool (Regsvcs.exe)](../tools/regsvcs-exe-net-ser
 - [Überlegungen zur Assemblysicherheit](../../standard/assembly/security-considerations.md)
 - [Tlbexp.exe (Type Library Exporter-Tool)](../tools/tlbexp-exe-type-library-exporter.md)
 - [Registrieren von Assemblys bei COM](registering-assemblies-with-com.md)
-- [Vorgehensweise: Einbetten von Typbibliotheken als Win32-Ressourcen in Anwendungen](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ww9a897z(v=vs.100))
+- [How to: Einbetten von Typbibliotheken als Win32-Ressourcen in .NET-Anwendungen](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ww9a897z(v=vs.100))

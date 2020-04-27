@@ -28,7 +28,7 @@ helpviewer_keywords:
 ms.assetid: 6c864c8e-6dd3-4a65-ace0-36879d9a9c42
 ms.openlocfilehash: a8d3bf7363cb887834a1c251aead05c75e2e3fe8
 ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/30/2019
 ms.locfileid: "73130223"
@@ -89,7 +89,7 @@ Der <xref:System.CodeDom.Compiler>-Namespace stellt Schnittstellen zum Generiere
  [!code-vb[CodeDomExample#23](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDomExample/VB/source3.vb#23)]  
   
 ## <a name="languages-with-initial-support"></a>Sprachen mit erweiterter Unterstützung  
- .NET Framework bietet Codecompiler für Codegeneratoren für die folgenden Sprachen: C#, Visual Basic, C++ und JScript. Die CodeDOM-Unterstützung kann auf andere Sprachen durch Implementierung sprachspezifischer Codegeneratoren und Codecompiler erweitert werden.  
+ Das .NET Framework bietet Codecompiler für Codegeneratoren für die folgenden Sprachen: C#, Visual Basic, C++ und JScript. Die CodeDOM-Unterstützung kann auf andere Sprachen durch Implementierung sprachspezifischer Codegeneratoren und Codecompiler erweitert werden.  
   
 ## <a name="see-also"></a>Siehe auch
 

@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Anzeigen der Inhalte des globalen Assemblycaches'
+title: 'Vorgehensweise: Anzeigen der Inhalte des globalen Assemblycaches'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - assemblies [.NET Framework], global assembly cache
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: c5f786a0-969b-4f14-9f02-e77c3384d9af
 ms.openlocfilehash: b5d8b31e7eb23789878da620f3a4517056a1ee3e
 ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/30/2019
 ms.locfileid: "73119836"
 ---
-# <a name="how-to-view-the-contents-of-the-global-assembly-cache"></a>Gewusst wie: Anzeigen der Inhalte des globalen Assemblycaches
+# <a name="how-to-view-the-contents-of-the-global-assembly-cache"></a>Vorgehensweise: Anzeigen der Inhalte des globalen Assemblycaches
 
 Verwenden Sie das [Global Assembly Cache-Tool (Gacutil.exe)](../tools/gacutil-exe-gac-tool.md), um den Inhalt des globalen Assemblycaches (GAC) anzuzeigen.
 

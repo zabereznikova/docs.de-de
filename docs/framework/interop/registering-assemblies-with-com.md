@@ -9,7 +9,7 @@ helpviewer_keywords:
 ms.assetid: 87925795-a3ae-4833-b138-125413478551
 ms.openlocfilehash: 9ff24a5705058d4e303b3b64b454ced8548053a4
 ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/30/2019
 ms.locfileid: "73113808"
@@ -44,6 +44,6 @@ Sie können ein Befehlszeilentool namens [Assembly Registration Tool (Regasm.exe
 ## <a name="see-also"></a>Siehe auch
 
 - [Verfügbarmachen von .NET Framework-Komponenten in COM](exposing-dotnet-components-to-com.md)
-- [Gewusst wie: Verweisen auf .NET-Typen in COM](how-to-reference-net-types-from-com.md)
+- [How to: Verweisen auf .NET-Typen in COM](how-to-reference-net-types-from-com.md)
 - [Aufrufen eines .NET-Objekts](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/8hw8h46b(v=vs.100))
 - [Deploying an Application for COM Access (Bereitstellen einer Anwendung für COM-Zugriff)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/c2850st8(v=vs.100))

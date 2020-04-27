@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Laden von Assemblys in eine Anwendungsdomäne'
+title: 'Vorgehensweise: Laden von Assemblys in eine Anwendungsdomäne'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,17 +11,17 @@ helpviewer_keywords:
 ms.assetid: 1432aa2d-bd83-4346-bf3b-a1b7920e2aa9
 ms.openlocfilehash: c560e2c5858de67442ccbcd18c8f92b142cc178d
 ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/30/2019
 ms.locfileid: "73119892"
 ---
-# <a name="how-to-load-assemblies-into-an-application-domain"></a>Gewusst wie: Laden von Assemblys in eine Anwendungsdomäne
-Es gibt mehrere Möglichkeiten, eine Assembly in eine Anwendungsdomäne zu laden. Es wird empfohlen, die `static` <xref:System.Reflection.Assembly.Load%2A>-Methode (`Shared` in Visual Basic) der Klasse <xref:System.Reflection.Assembly?displayProperty=nameWithType> zu verwenden. Es gibt noch weitere Möglichkeiten, Assemblys zu laden:  
+# <a name="how-to-load-assemblies-into-an-application-domain"></a>Vorgehensweise: Laden von Assemblys in eine Anwendungsdomäne
+Es gibt mehrere Möglichkeiten, eine Assembly in eine Anwendungsdomäne zu laden. Es wird empfohlen, die `static`<xref:System.Reflection.Assembly.Load%2A>-Methode (`Shared` in Visual Basic) der Klasse <xref:System.Reflection.Assembly?displayProperty=nameWithType> zu verwenden. Es gibt noch weitere Möglichkeiten, Assemblys zu laden:  
   
 - Die <xref:System.Reflection.Assembly.LoadFrom%2A>-Methode der Klasse <xref:System.Reflection.Assembly> lädt eine Assembly, sofern deren Speicherort angegeben wird. Beim Laden von Assemblys mit dieser Methode wird ein anderer Load-Kontext verwendet.  
   
-- Die Methoden <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A> und <xref:System.Reflection.Assembly.ReflectionOnlyLoadFrom%2A> laden eine Assembly in den ReflectionOnly-Kontext. In diesen Kontext geladene Assemblys können untersucht, aber nicht ausgeführt werden. So können Assemblys untersucht werden, die andere Zielplattformen aufweisen. Weitere Informationen finden Sie unter [Gewusst wie: Laden von Assemblys in den reflexionsbezogenen Kontext](../reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md).  
+- Die Methoden <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A> und <xref:System.Reflection.Assembly.ReflectionOnlyLoadFrom%2A> laden eine Assembly in den ReflectionOnly-Kontext. In diesen Kontext geladene Assemblys können untersucht, aber nicht ausgeführt werden. So können Assemblys untersucht werden, die andere Zielplattformen aufweisen. Weitere Informationen finden Sie unter [How to: Laden von Assemblys in den reflexionsbezogenen Kontext](../reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md).  
   
 > [!NOTE]
 > Der ReflectionOnly-Kontext ist neu in .NET Framework Version 2.0.  
@@ -48,7 +48,7 @@ Es gibt mehrere Möglichkeiten, eine Assembly in eine Anwendungsdomäne zu laden
 
 - <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A>
 - [Programming with Application Domains (Programmieren mit Anwendungsdomänen)](application-domains.md#programming-with-application-domains)
-- [Reflektion](../reflection-and-codedom/reflection.md)
+- [Reflexion](../reflection-and-codedom/reflection.md)
 - [Verwenden von Anwendungsdomänen](use.md)
-- [Gewusst wie: Laden von Assemblys in den reflexionsbezogenen Kontext](../reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md)
+- [How to: Load Assemblies into the Reflection-Only Context](../reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md) (Gewusst wie: Laden von Assemblys in den auf Reflektion beschränkten Kontext)
 - [Anwendungsdomänen und Assemblys](application-domains.md#application-domains-and-assemblies)

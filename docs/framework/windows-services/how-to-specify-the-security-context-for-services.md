@@ -13,7 +13,7 @@ ms.assetid: 02187c7b-dbf2-45f2-96c2-e11010225a22
 author: ghogen
 ms.openlocfilehash: dd2a9c4485e151d4cb1c9d5ae3a95a69fcc416d4
 ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 09/17/2019
 ms.locfileid: "71053585"
@@ -42,10 +42,10 @@ Standardmäßig werden Dienste in einem anderen Sicherheitskontext ausgeführt a
     > [!NOTE]
     > Die Klasse `ProjectInstaller` enthält für jede Dienstanwendung mindestens zwei Installationskomponenten: eine Komponente, welche die Prozesse für sämtliche Dienste im Projekt installiert, und einen Installer für jeden in der App enthaltenen Dienst. Wählen Sie in dieser Instanz <xref:System.ServiceProcess.ServiceProcessInstaller> aus.  
   
-3. Legen Sie im Fenster **Eigenschaften** <xref:System.ServiceProcess.ServiceProcessInstaller.Account%2A> auf den entsprechenden Wert fest.  
+3. Legen Sie im Fenster **Eigenschaften**<xref:System.ServiceProcess.ServiceProcessInstaller.Account%2A> auf den entsprechenden Wert fest.  
   
 ## <a name="see-also"></a>Siehe auch
 
 - [Einführung in Windows-Dienstanwendungen](introduction-to-windows-service-applications.md)
-- [Vorgehensweise: Hinzufügen von Installern zur Dienstanwendung](how-to-add-installers-to-your-service-application.md)
-- [Vorgehensweise: Erstellen von Windows-Diensten](how-to-create-windows-services.md)
+- [How to: Hinzufügen von Installern zur Dienstanwendung](how-to-add-installers-to-your-service-application.md)
+- [How to: Erstellen von Windows-Diensten](how-to-create-windows-services.md)

@@ -8,7 +8,7 @@ ms.assetid: 9ea77955-2d96-4c3d-913c-14db7604cdad
 author: ghogen
 ms.openlocfilehash: 75fd3aba88bdffbe536ad5dab14996913d0a9d22
 ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 09/17/2019
 ms.locfileid: "71053572"
@@ -61,7 +61,7 @@ Die <xref:System.ServiceProcess.ServiceInstaller.StartType%2A>-Eigenschaft für 
 
     - Klicken Sie in Windows XP und 2000 Professional auf dem Desktop des Computers mit der rechten Maustaste auf **Arbeitsplatz**, und klicken Sie anschließend auf **Verwalten**. Erweitern Sie im nun angezeigten Dialogfeld den Knoten **Dienste und Anwendungen**.
 
-      \- oder –
+      \- oder -
 
     - Klicken Sie in Windows Server 2003 und Windows 2000 Server auf **Start**, und zeigen Sie auf **Programme**. Klicken Sie auf **Verwaltung** und anschließend auf **Dienste**.
 
@@ -81,5 +81,5 @@ Die <xref:System.ServiceProcess.ServiceInstaller.StartType%2A>-Eigenschaft für 
 ## <a name="see-also"></a>Siehe auch
 
 - [Einführung in Windows-Dienstanwendungen](introduction-to-windows-service-applications.md)
-- [Vorgehensweise: Erstellen von Windows-Diensten](how-to-create-windows-services.md)
-- [Vorgehensweise: Hinzufügen von Installern zur Dienstanwendung](how-to-add-installers-to-your-service-application.md)
+- [How to: Erstellen von Windows-Diensten](how-to-create-windows-services.md)
+- [How to: Hinzufügen von Installern zur Dienstanwendung](how-to-add-installers-to-your-service-application.md)

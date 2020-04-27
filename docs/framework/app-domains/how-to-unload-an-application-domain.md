@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Entladen einer Anwendungsdomäne'
+title: 'Vorgehensweise: Entladen einer Anwendungsdomäne'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: f356116d-e415-4f7c-a332-6e6a60227192
 ms.openlocfilehash: 4d5f98229c3a9da69a350ae325cd42e8deb6b7bc
 ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/30/2019
 ms.locfileid: "73119844"
 ---
-# <a name="how-to-unload-an-application-domain"></a>Gewusst wie: Entladen einer Anwendungsdomäne
+# <a name="how-to-unload-an-application-domain"></a>Vorgehensweise: Entladen einer Anwendungsdomäne
 Wenn Sie die Nutzung einer Anwendungsdomäne beenden möchten, entladen Sie sie mithilfe der <xref:System.AppDomain.Unload%2A?displayProperty=nameWithType>-Methode. Durch die **Unload**-Methode wird die angegebene Anwendungsdomäne ordnungsgemäß geschlossen. Während des Entladevorgangs können keine neuen Threads auf die Anwendungsdomäne zugreifen. Alle anwendungsdomänenspezifischen Strukturen werden freigegeben.  
   
  In die Anwendungsdomäne geladene Assemblys werden entfernt und sind nicht weiter verfügbar. Wenn eine in der Anwendungsdomäne enthaltene Assembly domänenneutral ist, verbleiben deren Daten im Speicher, bis der gesamte Prozess beendet wird. Das Beenden des gesamten Prozesses ist die einzige Möglichkeit, eine domänenneutrale Assembly zu entladen. Mitunter kann es vorkommen, dass das Entladen einer Anwendungsdomäne nicht erfolgreich ist und zu einer <xref:System.CannotUnloadAppDomainException> führt.  
@@ -32,5 +32,5 @@ Wenn Sie die Nutzung einer Anwendungsdomäne beenden möchten, entladen Sie sie 
 ## <a name="see-also"></a>Siehe auch
 
 - [Programming with Application Domains (Programmieren mit Anwendungsdomänen)](application-domains.md#programming-with-application-domains)
-- [Gewusst wie: Erstellen einer Anwendungsdomäne](how-to-create-an-application-domain.md)
+- [How to: Erstellen einer Anwendungsdomäne](how-to-create-an-application-domain.md)
 - [Verwenden von Anwendungsdomänen](use.md)

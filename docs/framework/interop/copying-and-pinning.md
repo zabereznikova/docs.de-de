@@ -9,7 +9,7 @@ helpviewer_keywords:
 ms.assetid: 0059f576-e460-4e70-b257-668870e420b8
 ms.openlocfilehash: f6db7d37293015911c1285d39e19bf7542a7ac59
 ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/30/2019
 ms.locfileid: "73123640"
@@ -31,7 +31,7 @@ Beim Fixieren werden die Daten vorübergehend an ihrem aktuellen Speicherort ges
 Formatierte [blitfähige](blittable-and-non-blittable-types.md) Klassen verfügen über ein festes Layout (formatiert) und eine allgemeine Darstellung der Daten im verwalteten und im nicht verwalteten Speicher. Wenn diese Typen gemarshallt werden müssen, wird ein Zeiger auf das Objekt im Heap direkt an den Aufgerufenen übergeben. Der Aufgerufene kann den Inhalt des Speicherorts ändern, auf den der Zeiger verweist.
 
 > [!NOTE]
-> Der aufgerufene kann den Speicherinhalt ändern, wenn der Parameter als out-oder in-out-Parameter gekennzeichnet ist. Im Gegensatz dazu sollte der aufgerufene den Inhalt nicht ändern, wenn der-Parameter auf Marshal as in festgelegt ist. Dies ist der Standardwert für formatierte blitfähige Typen. Das Ändern von Eingabeobjekten kann zu Problemen führen, wenn die gleiche Klasse in eine Typbibliothek exportiert und auch für apartmentübergreifende Aufrufe verwendet wird.
+> Der Aufgerufene kann den Speicherinhalt ändern, wenn der Parameter als Ausgabe- oder Ein-/Ausgabeparameter markiert ist. Im Gegensatz dazu sollte der Aufgerufene den Inhalt nicht ändern, wenn der Parameter zum Marshallen als Eingabeparameter festgelegt ist. Dies ist die Standardeinstellung für formatierte blitfähige Typen. Das Ändern von Eingabeobjekten kann zu Problemen führen, wenn die gleiche Klasse in eine Typbibliothek exportiert und auch für apartmentübergreifende Aufrufe verwendet wird.
 
 ## <a name="formatted-non-blittable-classes"></a>Formatierte nicht blitfähige Klassen
 
@@ -80,6 +80,6 @@ Wenn ein <xref:System.Text.StringBuilder?displayProperty=nameWithType> als Wert 
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Standardmäßiges Marshallingverhalten](default-marshaling-behavior.md)
+- [Default Marshaling Behavior (Standardmäßiges Marshallingverhalten)](default-marshaling-behavior.md)
 - [Direktionale Attribute](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/77e6taeh(v=vs.100))
 - [Interop Marshaling (Interop-Marshalling)](interop-marshaling.md)

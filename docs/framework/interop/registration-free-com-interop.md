@@ -12,7 +12,7 @@ helpviewer_keywords:
 ms.assetid: 90f308b9-82dc-414a-bce1-77e0155e56bd
 ms.openlocfilehash: f73bb2ac9e1b942c08f83507589b534d7e67748d
 ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/30/2019
 ms.locfileid: "73124965"
@@ -54,4 +54,4 @@ COM-Interop ohne Registrierung aktiviert eine Komponente, ohne die Windows-Regis
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Gewusst wie: Konfigurieren von .NET Framework-basierten COM-Komponenten für die registrierungsfreie Aktivierung](configure-net-framework-based-com-components-for-reg.md)
+- [How to: Konfigurieren von .NET Framework-basierten COM-Komponenten für die Aktivierung ohne Registrierung](configure-net-framework-based-com-components-for-reg.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Definieren eines generischen Typs mit Reflektionsausgabe'
+title: 'Vorgehensweise: Definieren eines generischen Typs mit Reflektionsausgabe'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: 07d5f01a-7b5b-40ea-9b15-f21561098fe4
 ms.openlocfilehash: b553fd2235c73cf879474dc4f44f958dddcb649c
 ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/30/2019
 ms.locfileid: "73130154"
 ---
-# <a name="how-to-define-a-generic-type-with-reflection-emit"></a>Gewusst wie: Definieren eines generischen Typs mit Reflektionsausgabe
+# <a name="how-to-define-a-generic-type-with-reflection-emit"></a>Vorgehensweise: Definieren eines generischen Typs mit Reflektionsausgabe
 In diesem Thema wird gezeigt, wie ein einfacher generischer Typ mit zwei Typparametern erstellt wird, wie Klasseneinschränkungen, Schnittstelleneinschränkungen und bestimmte Einschränkungen für Typparameter angewandt werden und wie Member erstellt werden, die die Typparameter der Klasse als Parametertypen und Rückgabetypen verwenden.  
   
 > [!IMPORTANT]
-> Eine Methode ist nicht generisch, weil sie zu einem generischen Typ gehört und die Typparameter dieses Typs verwendet. Eine Methode ist nur dann generisch, wenn sie über eine eigene Typparameterliste verfügt. Die meisten Methoden für generische Typen sind nicht generisch, so auch in diesem Beispiel. Ein Beispiel zur Ausgabe einer generischen Methode finden Sie unter [Vorgehensweise: Definieren einer generischen Methode mit Reflektionsausgabe](how-to-define-a-generic-method-with-reflection-emit.md).  
+> Eine Methode ist nicht generisch, weil sie zu einem generischen Typ gehört und die Typparameter dieses Typs verwendet. Eine Methode ist nur dann generisch, wenn sie über eine eigene Typparameterliste verfügt. Die meisten Methoden für generische Typen sind nicht generisch, so auch in diesem Beispiel. Ein Beispiel für die Ausgabe einer generischen Methode finden Sie unter [Vorgehensweise: Definieren einer generischen Methode mit Reflektionsausgabe](how-to-define-a-generic-method-with-reflection-emit.md).  
   
 ### <a name="to-define-a-generic-type"></a>So definieren Sie einen generischen Typ  
   
@@ -69,7 +69,7 @@ In diesem Thema wird gezeigt, wie ein einfacher generischer Typ mit zwei Typpara
      [!code-csharp[EmitGenericType#21](../../../samples/snippets/csharp/VS_Snippets_CLR/EmitGenericType/CS/source.cs#21)]
      [!code-vb[EmitGenericType#21](../../../samples/snippets/visualbasic/VS_Snippets_CLR/EmitGenericType/VB/source.vb#21)]  
   
-8. Definieren Sie eine Methode, die die Typparameter des generischen Typs verwendet. Beachten Sie, dass solche Methoden nicht generisch sind, es sei denn, sie weisen ihre eigenen Typparameterlisten auf. Der folgende Code definiert eine `static`-Methode (`Shared` in Visual Basic), die ein Array von `TFirst` akzeptiert und eine `List<TFirst>` (`List(Of TFirst)` in Visual Basic) zurückgibt, die alle Elemente des Arrays enthält. Um diese Methode zu definieren ist es erforderlich, den Typ `List<TFirst>` zu definieren, indem Sie <xref:System.Type.MakeGenericType%2A> auf der generischen Typdefinition `List<T>` aufrufen. (Das `T` wird ausgelassen, wenn Sie den `typeof` Operator (`GetType` in Visual Basic) verwenden, um die generische Typdefinition zu erhalten.) Der Parametertyp wird mithilfe der <xref:System.Type.MakeArrayType%2A>-Methode erstellt.  
+8. Definieren Sie eine Methode, die die Typparameter des generischen Typs verwendet. Beachten Sie, dass solche Methoden nicht generisch sind, es sei denn, sie weisen ihre eigenen Typparameterlisten auf. Der folgende Code definiert eine `static`-Methode (`Shared` in Visual Basic), die ein Array von `TFirst` akzeptiert und eine `List<TFirst>` (`List(Of TFirst)` in Visual Basic) zurückgibt, die alle Elemente des Arrays enthält. Um diese Methode zu definieren ist es erforderlich, den Typ `List<TFirst>` zu definieren, indem Sie <xref:System.Type.MakeGenericType%2A> auf der generischen Typdefinition `List<T>` aufrufen. (Die `T` wird ausgelassen, wenn Sie den `typeof`-Operator (`GetType` in Visual Basic) verwenden, um die generische Typdefinition zu erhalten.) Der Parametertyp wird mithilfe der <xref:System.Type.MakeArrayType%2A>-Methode erstellt.  
   
      [!code-cpp[EmitGenericType#22](../../../samples/snippets/cpp/VS_Snippets_CLR/EmitGenericType/CPP/source.cpp#22)]
      [!code-csharp[EmitGenericType#22](../../../samples/snippets/csharp/VS_Snippets_CLR/EmitGenericType/CS/source.cs#22)]
@@ -79,7 +79,7 @@ In diesem Thema wird gezeigt, wie ein einfacher generischer Typ mit zwei Typpara
   
      Die <xref:System.Type.GetConstructor%2A>-Methode wird auf einer <xref:System.Reflection.Emit.GenericTypeParameterBuilder> nicht unterstützt, also ist es nicht möglich, den Konstruktor von `List<TFirst>` direkt zu erhalten. Zunächst ist es erforderlich, den Konstruktor der generischen Typdefinition `List<T>` abzurufen und dann eine Methode aufzurufen, die ihn in den entsprechenden Konstruktor von `List<TFirst>` konvertiert.  
   
-     Der Konstruktor, der für dieses Codebeispiel verwendet wird, nimmt eine `IEnumerable<T>`. Beachten Sie, dass dies jedoch nicht die generische Typdefinition der generischen Schnittstelle <xref:System.Collections.Generic.IEnumerable%601> ist. Der Typparameter `T` von `List<T>` muss stattdessen mit dem Typparameter `T` von `IEnumerable<T>` ersetzt werden. (Das klingt zunächst etwas kompliziert, da beide Typen über die Typparameter mit dem Namen `T` verfügen. Aus diesem Grund werden in diesem Codebeispiel die Namen `TFirst` und `TSecond`verwendet.) Wenn Sie den Typ des Konstruktorarguments abrufen möchten, beginnen Sie mit der generischen Typdefinition `IEnumerable<T>` und <xref:System.Type.MakeGenericType%2A> mit dem ersten generischen Typparameter von `List<T>`. Die Liste des Konstruktorarguments muss als Array übergeben werden, wobei in diesem Fall nur ein Argument vorhanden ist.  
+     Der Konstruktor, der für dieses Codebeispiel verwendet wird, nimmt eine `IEnumerable<T>`. Beachten Sie, dass dies jedoch nicht die generische Typdefinition der generischen Schnittstelle <xref:System.Collections.Generic.IEnumerable%601> ist. Der Typparameter `T` von `List<T>` muss stattdessen mit dem Typparameter `T` von `IEnumerable<T>` ersetzt werden. (Das klingt zunächst etwas kompliziert, da beide Typen über die Typparameter mit dem Namen `T` verfügen. Darum verwendet dieses Codebeispiel die Namen `TFirst` und `TSecond`.) Um den Typ des Konstruktorarguments zu erhalten, beginnen Sie mit der generischen Typdefinition `IEnumerable<T>`, und rufen Sie <xref:System.Type.MakeGenericType%2A> mit dem ersten generischen Typparameter von `List<T>` ab. Die Liste des Konstruktorarguments muss als Array übergeben werden, wobei in diesem Fall nur ein Argument vorhanden ist.  
   
     > [!NOTE]
     > Die generische Typdefinition wird als `IEnumerable<>` ausgedrückt, wenn Sie den `typeof`-Operator in C# verwenden. Alternativ als `IEnumerable(Of )`, wenn Sie den `GetType`-Operator in Visual Basic verwenden.  
@@ -96,7 +96,7 @@ In diesem Thema wird gezeigt, wie ein einfacher generischer Typ mit zwei Typpara
      [!code-csharp[EmitGenericType#8](../../../samples/snippets/csharp/VS_Snippets_CLR/EmitGenericType/CS/source.cs#8)]
      [!code-vb[EmitGenericType#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/EmitGenericType/VB/source.vb#8)]  
   
-11. Rufen Sie die Methode auf. `ExampleMethod` ist nicht generisch, jedoch ist der zugehörige Typ generisch. Um also eine <xref:System.Reflection.MethodInfo> zu erhalten, die aufgerufen werden kann, ist es erforderlich, einen erstellten Typ aus der Typdefinition von `Sample` zu erstellen. Der konstruierte Typ verwendet die `Example`-Klasse, die die Einschränkungen für `TFirst` erfüllt, da es sich hierbei um einen Verweistyp handelt und dieser über einen parameterlosen Standardkonstruktor verfügt, sowie die `ExampleDerived`-Klasse, die die Einschränkungen für `TSecond` erfüllt. (Den Code für `ExampleDerived` finden Sie im Beispielcode Abschnitt.) Diese beiden Typen werden an <xref:System.Type.MakeGenericType%2A> übermittelt, um den konstruierten Typ zu erstellen. Die <xref:System.Reflection.MethodInfo> wird dann mithilfe der <xref:System.Type.GetMethod%2A>-Methode abgerufen.  
+11. Rufen Sie die Methode auf. `ExampleMethod` ist nicht generisch, jedoch ist der zugehörige Typ generisch. Um also eine <xref:System.Reflection.MethodInfo> zu erhalten, die aufgerufen werden kann, ist es erforderlich, einen erstellten Typ aus der Typdefinition von `Sample` zu erstellen. Der konstruierte Typ verwendet die `Example`-Klasse, die die Einschränkungen für `TFirst` erfüllt, da es sich hierbei um einen Verweistyp handelt und dieser über einen parameterlosen Standardkonstruktor verfügt, sowie die `ExampleDerived`-Klasse, die die Einschränkungen für `TSecond` erfüllt. (Den Code für `ExampleDerived` finden Sie im Beispielcodeabschnitt.) Diese beiden Typen werden an <xref:System.Type.MakeGenericType%2A> übergeben, um den konstruierten Typ zu erstellen. Die <xref:System.Reflection.MethodInfo> wird dann mithilfe der <xref:System.Type.GetMethod%2A>-Methode abgerufen.  
   
      [!code-cpp[EmitGenericType#9](../../../samples/snippets/cpp/VS_Snippets_CLR/EmitGenericType/CPP/source.cpp#9)]
      [!code-csharp[EmitGenericType#9](../../../samples/snippets/csharp/VS_Snippets_CLR/EmitGenericType/CS/source.cs#9)]

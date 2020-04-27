@@ -12,7 +12,7 @@ helpviewer_keywords:
 ms.assetid: a8347eb1-295f-46b9-8a78-63331f9ecc50
 ms.openlocfilehash: 0db1cd8d75b45f6d718168793c873e5867028269
 ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/30/2019
 ms.locfileid: "73125179"
@@ -43,7 +43,7 @@ Das <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayPrope
   
      Wenn das <xref:System.Runtime.InteropServices.DllImportAttribute.ExactSpelling?displayProperty=nameWithType>-Feld `true` entspricht, wie es standardmäßig in Visual Basic der Fall ist, sucht der Plattformaufruf nur nach dem von Ihnen angegebenen Namen. Wenn Sie z.B. **MessageBox** angeben, sucht der Plattformaufruf nach **MessageBox** und schlägt fehl, wenn er die exakte Schreibweise nicht finden kann.  
   
-     Wenn das Feld `ExactSpelling` `false` ist, wie es standardmäßig in C++ und C# der Fall ist, sucht der Plattformaufruf zunächst nach dem unbeschädigten Alias (**MessageBox**) und dann nach dem beschädigten Namen (**MessageBoxA**), wenn der unbeschädigten Alias nicht gefunden wird. Beachten Sie, dass die Namensübereinstimmung des ANSI-Verhaltens sich von der Namensübereinstimmung des Unicode-Verhaltens unterscheidet.  
+     Wenn das Feld `ExactSpelling``false` ist, wie es standardmäßig in C++ und C# der Fall ist, sucht der Plattformaufruf zunächst nach dem unbeschädigten Alias (**MessageBox**) und dann nach dem beschädigten Namen (**MessageBoxA**), wenn der unbeschädigten Alias nicht gefunden wird. Beachten Sie, dass die Namensübereinstimmung des ANSI-Verhaltens sich von der Namensübereinstimmung des Unicode-Verhaltens unterscheidet.  
   
  <xref:System.Runtime.InteropServices.CharSet.Unicode>  
   
@@ -55,7 +55,7 @@ Das <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayPrope
   
      Wenn das `ExactSpelling`-Feld `true` entspricht, wie es standardmäßig in Visual Basic der Fall ist, sucht der Plattformaufruf nur nach dem von Ihnen angegebenen Namen. Wenn Sie z.B. **MessageBox** angeben, sucht der Plattformaufruf nach **MessageBox** und schlägt fehl, wenn er die exakte Schreibweise nicht finden kann.  
   
-     Wenn das Feld `ExactSpelling` `false` ist, wie es standardmäßig in C++ und C# der Fall ist, sucht der Plattformaufruf zunächst nach dem beschädigten Namen (**MessageBoxW**) und dann nach dem unbeschädigten Alias (**MessageBox**), wenn der beschädigte Alias nicht gefunden wird. Beachten Sie, dass das Verhalten der Namensübereinstimmung von Unicode sich vom Verhalten der Namensübereinstimmung von ANSI unterscheidet.  
+     Wenn das Feld `ExactSpelling``false` ist, wie es standardmäßig in C++ und C# der Fall ist, sucht der Plattformaufruf zunächst nach dem beschädigten Namen (**MessageBoxW**) und dann nach dem unbeschädigten Alias (**MessageBox**), wenn der beschädigte Alias nicht gefunden wird. Beachten Sie, dass das Verhalten der Namensübereinstimmung von Unicode sich vom Verhalten der Namensübereinstimmung von ANSI unterscheidet.  
   
  <xref:System.Runtime.InteropServices.CharSet.Auto>  
   
@@ -147,6 +147,6 @@ extern "C" int MessageBox(
 ## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Runtime.InteropServices.DllImportAttribute>
-- [Erstellen von Prototypen in verwaltetem Code](creating-prototypes-in-managed-code.md)
+- [Creating Prototypes in Managed Code (Erstellen von Prototypen in verwaltetem Code)](creating-prototypes-in-managed-code.md)
 - [Beispiele für Plattformaufrufe](platform-invoke-examples.md)
 - [Marshallen von Daten mit Plattformaufruf](marshaling-data-with-platform-invoke.md)

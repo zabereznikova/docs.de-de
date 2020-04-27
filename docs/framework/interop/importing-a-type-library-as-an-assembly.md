@@ -17,7 +17,7 @@ helpviewer_keywords:
 ms.assetid: d1898229-cd40-426e-a275-f3eb65fbc79f
 ms.openlocfilehash: e1a21175bcabc72b86a328d4f73ecec37140c304
 ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/30/2019
 ms.locfileid: "73107586"
@@ -28,9 +28,9 @@ Definitionen von COM-Typen befinden sich in der Regel in einer Typbibliothek. Im
 
 Es gibt zwei Möglichkeiten, um diese Typinformationen für Ihre Anwendung verfügbar zu machen:
 
-- Verwenden von Interop-Assemblys zur reinen Entwurfszeit: ab dem .NET Framework 4 können Sie den Compiler anweisen, Typinformationen aus der Interop-Assembly in die ausführbare Datei einzubetten. Der Compiler bettet nur die Typinformationen ein, die Ihre Anwendung verwendet. Sie müssen die Interop-Assembly nicht mit Ihrer Anwendung bereitstellen. Dies ist das empfohlene Verfahren.
+- Mithilfe der Interopassemblys, die nur zur Entwurfszeit verwendet werden: Ab .NET Framework 4 können Sie den Compiler anweisen, die Typinformationen aus der Interopassembly in die ausführbare Datei einzubetten. Der Compiler bettet nur die Typinformationen ein, die Ihre Anwendung verwendet. Sie müssen die Interop-Assembly nicht mit Ihrer Anwendung bereitstellen. Dies ist das empfohlene Verfahren.
 
-- Durch die Bereitstellung von Interop-Assemblys können Sie einen Standardverweis auf eine Interop-Assembly erstellen. In diesem Fall muss die Interop-Assembly mit Ihrer Anwendung bereitgestellt werden. Wenn Sie dieses Verfahren ohne eine private COM-Komponente verwenden, verweisen Sie immer auf die primäre Interop-Assembly (PIA), die vom Autor der COM-Komponente veröffentlicht wurde, die Sie in Ihren verwalteten Code einbetten möchten. Weitere Informationen zur Erstellung und Verwendung von primären Interopassemblys finden Sie unter [Primäre Interopassemblys](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aax7sdch(v=vs.100)).
+- Bereitstellen von Interopassemblys: So können Sie einen Standardverweis auf eine Interopassembly erstellen. In diesem Fall muss die Interop-Assembly mit Ihrer Anwendung bereitgestellt werden. Wenn Sie dieses Verfahren ohne eine private COM-Komponente verwenden, verweisen Sie immer auf die primäre Interop-Assembly (PIA), die vom Autor der COM-Komponente veröffentlicht wurde, die Sie in Ihren verwalteten Code einbetten möchten. Weitere Informationen zum Erstellen und Verwenden von primären Interop-Assemblys finden Sie unter [Primäre Interop-Assemblys](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aax7sdch(v=vs.100)).
 
 Wenn Sie Interop-Assemblys nur zur Entwurfszeit verwenden, können Sie Typinformationen aus der primären Interop-Assembly einbetten, die vom Autor der COM-Komponente veröffentlicht wurden. Sie müssen jedoch die primäre Interop-Assembly nicht mit Ihrer Anwendung bereitstellen.
 
@@ -44,11 +44,11 @@ Nachdem Sie die Typbibliothek gesucht haben, die die Implementierung des Ziel-CO
 
 - Visual Studio
 
-  Visual Studio konvertiert COM-Typen automatisch in einer Typbibliothek in Metadaten in einer Assembly. Anweisungen finden Sie unter Gewusst [wie: Hinzufügen von verweisen zu Typbibliotheken](how-to-add-references-to-type-libraries.md).
+  Visual Studio konvertiert COM-Typen automatisch in einer Typbibliothek in Metadaten in einer Assembly. Anweisungen hierzu finden Sie unter [Vorgehensweise: Add References to Type Libraries (Vorgehensweise: Hinzufügen von Verweisen zu Typbibliotheken)](how-to-add-references-to-type-libraries.md).
 
 - [Tlbimp.exe (Type Library Importer-Tool)](../tools/tlbimp-exe-type-library-importer.md)
 
-  Das Type Library Importer-Tool stellt Befehlszeilenoptionen zum Anpassen von Metadaten in der resultierenden Interop-Datei zur Verfügung, importiert Typen aus einer vorhandenen Typbibliothek und generiert eine Interop-Assembly und einen Namespace. Weitere Informationen finden Sie unter [How to: Generate Interop Assemblies from Type Libraries (Vorgehensweise: Generieren von Interop-Assemblys aus Typbibliotheken)](how-to-generate-interop-assemblies-from-type-libraries.md).
+  Das Type Library Importer-Tool stellt Befehlszeilenoptionen zum Anpassen von Metadaten in der resultierenden Interop-Datei zur Verfügung, importiert Typen aus einer vorhandenen Typbibliothek und generiert eine Interop-Assembly und einen Namespace. Anweisungen hierzu finden Sie unter [Vorgehensweise: Generieren von Interopassemblys aus Typbibliotheken](how-to-generate-interop-assemblies-from-type-libraries.md).
 
 - <xref:System.Runtime.InteropServices.TypeLibConverter?displayProperty=nameWithType>-Klasse
 
@@ -80,5 +80,5 @@ Nachdem Sie die Typbibliothek gesucht haben, die die Implementierung des Ziel-CO
 - [Verwenden von COM-Typen in verwaltetem Code](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/3y76b69k(v=vs.100))
 - [Kompilieren eines Interop-Projekts](compiling-an-interop-project.md)
 - [Bereitstellen einer Interop-Anwendung](deploying-an-interop-application.md)
-- [Gewusst wie: Hinzufügen von Verweisen zu Typbibliotheken](how-to-add-references-to-type-libraries.md)
-- [Gewusst wie: Generieren von Interop-Assemblys aus Typbibliotheken](how-to-generate-interop-assemblies-from-type-libraries.md)
+- [How to: Hinzufügen von Verweisen zu Typbibliotheken](how-to-add-references-to-type-libraries.md)
+- [How to: Generieren von Interopassemblys aus Typbibliotheken](how-to-generate-interop-assemblies-from-type-libraries.md)

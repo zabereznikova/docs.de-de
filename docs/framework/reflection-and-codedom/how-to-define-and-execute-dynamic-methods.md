@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Definieren und Ausführen von dynamischen Methoden'
+title: 'Vorgehensweise: Definieren und Ausführen von dynamischen Methoden'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 07d08a99-62c5-4254-bce2-2a75e55a18ab
 ms.openlocfilehash: 7da9d0bea755b90f73077fcd56558ed66a80e2eb
 ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/30/2019
 ms.locfileid: "73130152"
 ---
-# <a name="how-to-define-and-execute-dynamic-methods"></a>Gewusst wie: Definieren und Ausführen von dynamischen Methoden
+# <a name="how-to-define-and-execute-dynamic-methods"></a>Vorgehensweise: Definieren und Ausführen von dynamischen Methoden
 Die folgenden Verfahren zeigen, wie eine einfache dynamische Methode sowie eine dynamische Methode, die an eine Instanz einer Klasse gebunden ist, definiert und ausgeführt werden. Weitere Informationen zu dynamischen Methoden finden Sie in der <xref:System.Reflection.Emit.DynamicMethod>-Klasse und unter [Szenarios für die Reflektionsausgabe mit dynamischen Methoden](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/sfk2s47t(v=vs.100)).  
   
 ### <a name="to-define-and-execute-a-dynamic-method"></a>So definieren und Sie eine dynamische Methode und führen diese aus  

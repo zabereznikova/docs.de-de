@@ -11,7 +11,7 @@ ms.assetid: 3abbb2ec-78d2-41e6-b9f9-6662d4e2cdc7
 author: ghogen
 ms.openlocfilehash: 5637d569ad5261bff6865af4ab2ed8b7631d2d38
 ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 09/17/2019
 ms.locfileid: "71053563"
@@ -73,7 +73,7 @@ Wenn Sie nicht die Projektvorlage Windows-Dienst verwenden möchten, können Sie
 ## <a name="see-also"></a>Siehe auch
 
 - [Einführung in Windows-Dienstanwendungen](introduction-to-windows-service-applications.md)
-- [Vorgehensweise: Erstellen von Windows-Diensten](how-to-create-windows-services.md)
-- [Vorgehensweise: Hinzufügen von Installern zur Dienstanwendung](how-to-add-installers-to-your-service-application.md)
-- [Vorgehensweise: Protokollinformationen über Dienste](how-to-log-information-about-services.md)
+- [How to: Erstellen von Windows-Diensten](how-to-create-windows-services.md)
+- [How to: Hinzufügen von Installern zur Dienstanwendung](how-to-add-installers-to-your-service-application.md)
+- [How to: Protokollinformationen über Dienste](how-to-log-information-about-services.md)
 - [Exemplarische Vorgehensweise: Erstellen einer Windows-Dienstanwendung](walkthrough-creating-a-windows-service-application-in-the-component-designer.md)

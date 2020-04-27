@@ -12,7 +12,7 @@ helpviewer_keywords:
 ms.assetid: 1d8e3398-00d8-47d5-a084-214f9859d3d7
 ms.openlocfilehash: a5651e9dc8cf40e737dd523ec5d29e876a9c0765
 ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/30/2019
 ms.locfileid: "73130304"
@@ -21,7 +21,7 @@ ms.locfileid: "73130304"
 Nachdem Attribute Programmierelementen zugeordnet worden sind, kann Reflektion benutzt werden, um deren Existenz und Werte abzufragen. In der .NET Framework Version 1.0 und 1.1 werden benutzerdefinierte Attribute im Ausführungskontext untersucht. Die .NET Framework Version 2.0 stellt einen neuen Ladekontext bereit, den reflektionsbezogener Ladekontext, der zum Untersuchen von Code benutzt werden kann, der nicht für die Ausführung geladen werden kann.  
   
 ## <a name="the-reflection-only-context"></a>Der reflektionsbezogene Ladekontext  
- Code, der in den reflektionsbezogenen Ladekontext geladen wird, kann nicht ausgeführt werden. Das bedeutet, dass Instanzen von benutzerdefinierten Attributen nicht erstellt werden können, da dies die Ausführung deren Konstruktoren erfordern würde. Um benutzerdefinierte Attribute im reflektionsbezogenen Kontext zu laden, verwenden Sie die <xref:System.Reflection.CustomAttributeData>-Klasse. Sie können Instanzen dieser Klasse abrufen, indem Sie die geeignete Überladung der statistischen <xref:System.Reflection.CustomAttributeData.GetCustomAttributes%2A?displayProperty=nameWithType>-Methode verwenden. Weitere Informationen finden Sie unter [Gewusst wie: Laden von Assemblys in den reflexionsbezogenen Kontext](how-to-load-assemblies-into-the-reflection-only-context.md).  
+ Code, der in den reflektionsbezogenen Ladekontext geladen wird, kann nicht ausgeführt werden. Das bedeutet, dass Instanzen von benutzerdefinierten Attributen nicht erstellt werden können, da dies die Ausführung deren Konstruktoren erfordern würde. Um benutzerdefinierte Attribute im reflektionsbezogenen Kontext zu laden, verwenden Sie die <xref:System.Reflection.CustomAttributeData>-Klasse. Sie können Instanzen dieser Klasse abrufen, indem Sie die geeignete Überladung der statistischen <xref:System.Reflection.CustomAttributeData.GetCustomAttributes%2A?displayProperty=nameWithType>-Methode verwenden. Weitere Informationen finden Sie unter [How to: Laden von Assemblys in den reflexionsbezogenen Kontext](how-to-load-assemblies-into-the-reflection-only-context.md).  
   
 ## <a name="the-execution-context"></a>Der Ausführungskontext  
  Die wichtigsten Reflektionsmethoden zum Abfragen von Attributen im Ausführungskontext sind <xref:System.Reflection.MemberInfo.GetCustomAttributes%2A?displayProperty=nameWithType> und <xref:System.Attribute.GetCustomAttributes%2A?displayProperty=nameWithType>.  
@@ -75,4 +75,4 @@ public class LocalizationExtenderProvider
 - <xref:System.Reflection.MemberInfo.GetCustomAttributes%2A?displayProperty=nameWithType>
 - <xref:System.Attribute.GetCustomAttributes%2A?displayProperty=nameWithType>
 - [Anzeigen von Typinformationen](viewing-type-information.md)
-- [Sicherheitsüberlegungen für die Reflektion](security-considerations-for-reflection.md)
+- [Security Considerations for Reflection (Sicherheitsüberlegungen für die Reflektion)](security-considerations-for-reflection.md)

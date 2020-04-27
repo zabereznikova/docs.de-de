@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Laden von Assemblys in den reflektionsbezogenen Kontext'
+title: 'Vorgehensweise: Laden von Assemblys in den auf Reflektion beschränkten Kontext'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9818b660-52f5-423d-a9af-e75163aa7068
 ms.openlocfilehash: cac6b3b3adf070ad6070e5c5941653f20dedd907
 ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/30/2019
 ms.locfileid: "73130102"
 ---
-# <a name="how-to-load-assemblies-into-the-reflection-only-context"></a>Gewusst wie: Laden von Assemblys in den reflektionsbezogenen Kontext
+# <a name="how-to-load-assemblies-into-the-reflection-only-context"></a>Vorgehensweise: Laden von Assemblys in den auf Reflektion beschränkten Kontext
 
 Mit dem ReflectionOnly-Load-Kontext können Sie Assemblys untersuchen, die für andere Plattformen oder andere Versionen von .NET Framework kompiliert wurden. In diesen Kontext geladener Code kann nur untersucht werden. Er kann nicht ausgeführt werden. Dies bedeutet, dass keine Objekte erstellt werden können, weil Konstruktoren nicht ausgeführt werden können. Da der Code nicht ausgeführt werden kann, werden Abhängigkeiten nicht automatische geladen. Wenn Sie diese untersuchen möchten, müssen Sie sie selbst laden.
 

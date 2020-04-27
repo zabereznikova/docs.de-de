@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Empfangen von Ausnahmebenachrichtigungen (erste Chance)'
+title: 'Vorgehensweise: Empfangen von Ausnahmebenachrichtigungen (erste Chance)'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 66f002b8-a97d-4a6e-a503-2cec01689113
 ms.openlocfilehash: da60dfca424f7c10e810b5e083ff7fa63a688218
 ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/30/2019
 ms.locfileid: "73119865"
 ---
-# <a name="how-to-receive-first-chance-exception-notifications"></a>Gewusst wie: Empfangen von Ausnahmebenachrichtigungen (erste Chance)
+# <a name="how-to-receive-first-chance-exception-notifications"></a>Vorgehensweise: Empfangen von Ausnahmebenachrichtigungen (erste Chance)
 Mit dem <xref:System.AppDomain.FirstChanceException>-Ereignis der <xref:System.AppDomain>-Klasse erhalten Sie eine Benachrichtigung bezüglich einer ausgelösten Ausnahme, bevor die CLR mit der Suche nach Ausnahmehandlern beginnt.
 
  Das Ereignis wird auf Ebene der Anwendungsdomäne ausgelöst. Ein Ausführungsthread kann verschiedene Anwendungsdomänen durchlaufen. Es ist also möglich, dass ein Ausnahmefehler aus einer Anwendungsdomäne in einer anderen behandelt wird. Die Benachrichtigung findet in jeder Anwendungsdomäne statt, die einen Handler für das Ereignis hinzugefügt hat, bis eine Anwendungsdomäne die Ausnahme behandelt.

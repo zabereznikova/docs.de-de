@@ -13,7 +13,7 @@ ms.assetid: 8b698e9a-b88e-4f44-ae45-e0c5ea0ae5a8
 author: ghogen
 ms.openlocfilehash: 99e2376c50f0b47cc21002b2926818707188805e
 ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 09/17/2019
 ms.locfileid: "71053653"
@@ -63,6 +63,6 @@ Visual Studio liefert Installationskomponenten, mit denen Ihren Dienstanwendunge
 ## <a name="see-also"></a>Siehe auch
 
 - [Einführung in Windows-Dienstanwendungen](introduction-to-windows-service-applications.md)
-- [Vorgehensweise: Installieren und Deinstallieren von Diensten](how-to-install-and-uninstall-services.md)
-- [Vorgehensweise: Starten von Diensten](how-to-start-services.md)
-- [Vorgehensweise: Angeben des Sicherheitskontexts für Dienste](how-to-specify-the-security-context-for-services.md)
+- [How to: Installieren und Deinstallieren von Diensten](how-to-install-and-uninstall-services.md)
+- [How to: Starten von Diensten](how-to-start-services.md)
+- [How to: Angeben des Sicherheitskontexts für Dienste](how-to-specify-the-security-context-for-services.md)

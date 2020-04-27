@@ -9,7 +9,7 @@ helpviewer_keywords:
 ms.assetid: 78892eba-2a58-4165-b4b1-0250ee2f41dc
 ms.openlocfilehash: ee9d2d94d62f262ef61edc66ce915e1227532d67
 ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/30/2019
 ms.locfileid: "73126395"
@@ -55,4 +55,4 @@ Wenn ein Typ nicht über das <xref:System.Runtime.InteropServices.TypeIdentifier
 
 - <xref:System.Type.IsEquivalentTo%2A>
 - [Verwenden von COM-Typen in verwaltetem Code](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/3y76b69k(v=vs.100))
-- [Importieren einer Typbibliothek als Assembly](importing-a-type-library-as-an-assembly.md)
+- [Importing a Type Library as an Assembly (Importieren einer Typbibliothek als Assembly)](importing-a-type-library-as-an-assembly.md)

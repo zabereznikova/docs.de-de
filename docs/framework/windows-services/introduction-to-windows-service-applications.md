@@ -24,7 +24,7 @@ ms.assetid: 1b1b5e67-3ff3-40c0-8154-322cfd6ef0ae
 author: ghogen
 ms.openlocfilehash: 8ff1adaa025dc11417c3dcfdaf42ea203828be57
 ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 09/17/2019
 ms.locfileid: "71053522"
@@ -84,9 +84,9 @@ Mit Microsoft Windows-Diensten, früher als NT-Dienste bekannt, wird das Erstell
 
 - [Windows-Dienstanwendungen](index.md)
 - [Programmierarchitektur für Dienstanwendungen](service-application-programming-architecture.md)
-- [Vorgehensweise: Erstellen von Windows-Diensten](how-to-create-windows-services.md)
-- [Vorgehensweise: Installieren und Deinstallieren von Diensten](how-to-install-and-uninstall-services.md)
-- [Vorgehensweise: Starten von Diensten](how-to-start-services.md)
-- [Vorgehensweise: Debuggen von Windows-Dienstanwendungen](how-to-debug-windows-service-applications.md)
+- [How to: Erstellen von Windows-Diensten](how-to-create-windows-services.md)
+- [How to: Installieren und Deinstallieren von Diensten](how-to-install-and-uninstall-services.md)
+- [How to: Starten von Diensten](how-to-start-services.md)
+- [How to: Debuggen von Windows-Dienstanwendungen](how-to-debug-windows-service-applications.md)
 - [Exemplarische Vorgehensweise: Erstellen einer Windows-Dienstanwendung](walkthrough-creating-a-windows-service-application-in-the-component-designer.md)
-- [Vorgehensweise: Hinzufügen von Installern zur Dienstanwendung](how-to-add-installers-to-your-service-application.md)
+- [How to: Hinzufügen von Installern zur Dienstanwendung](how-to-add-installers-to-your-service-application.md)

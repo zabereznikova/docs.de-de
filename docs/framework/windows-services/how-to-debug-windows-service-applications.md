@@ -11,7 +11,7 @@ ms.assetid: 63ab0800-0f05-4f1e-88e6-94c73fd920a2
 author: ghogen
 ms.openlocfilehash: 860f2ae22eb6510dc1f1a454ae3e51ccb366078b
 ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 09/17/2019
 ms.locfileid: "71053622"
@@ -116,6 +116,6 @@ Ein Dienst muss im Kontext des Dienststeuerelement-Managers und nicht innerhalb 
 ## <a name="see-also"></a>Siehe auch
 
 - [Einführung in Windows-Dienstanwendungen](introduction-to-windows-service-applications.md)
-- [Vorgehensweise: Installieren und Deinstallieren von Diensten](how-to-install-and-uninstall-services.md)
-- [Vorgehensweise: Starten von Diensten](how-to-start-services.md)
+- [How to: Installieren und Deinstallieren von Diensten](how-to-install-and-uninstall-services.md)
+- [How to: Starten von Diensten](how-to-start-services.md)
 - [Debugging a Service (Debuggen eines Diensts)](/windows/desktop/Services/debugging-a-service)

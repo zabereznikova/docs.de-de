@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Definieren einer generischen Methode mit Reflektionsausgabe'
+title: 'Vorgehensweise: Definieren einer generischen Methode mit Reflektionsausgabe'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 93892fa4-90b3-4ec4-b147-4bec9880de2b
 ms.openlocfilehash: d16f6728b01583fe3ffb8d892522f3892444c537
 ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/30/2019
 ms.locfileid: "73130173"
 ---
-# <a name="how-to-define-a-generic-method-with-reflection-emit"></a>Gewusst wie: Definieren einer generischen Methode mit Reflektionsausgabe
+# <a name="how-to-define-a-generic-method-with-reflection-emit"></a>Vorgehensweise: Definieren einer generischen Methode mit Reflektionsausgabe
 
 Im ersten Verfahren wird veranschaulicht, wie eine einfache generische Methode mit zwei Typparametern erstellt wird und wie auf die Typparameter Klasseneinschränkungen, Schnittstelleneinschränkungen und besonderen Einschränkungen angewendet werden.
 
@@ -25,7 +25,7 @@ Im zweiten Verfahren wird veranschaulicht, wie der Methodentext ausgegeben wird 
 Im dritten Verfahren wird das Aufrufen der generischen Methode veranschaulicht.
 
 > [!IMPORTANT]
-> Eine Methode ist nicht generisch, weil sie zu einem generischen Typ gehört und die Typparameter dieses Typs verwendet. Eine Methode ist nur dann generisch, wenn sie über eine eigene Typparameterliste verfügt. Eine generische Methode kann zu einem nicht generischen Typ gehören, wie im vorliegenden Beispiel. Ein Beispiel für eine nicht generische Methode für einen generischen Typ finden Sie unter [How to: Define a Generic Type with Reflection Emit (Vorgehensweise: Definieren eines generischen Typs mit Reflektionsausgabe)](how-to-define-a-generic-type-with-reflection-emit.md).
+> Eine Methode ist nicht generisch, weil sie zu einem generischen Typ gehört und die Typparameter dieses Typs verwendet. Eine Methode ist nur dann generisch, wenn sie über eine eigene Typparameterliste verfügt. Eine generische Methode kann zu einem nicht generischen Typ gehören, wie im vorliegenden Beispiel. Ein Beispiel für eine nicht generische Methode für einen generischen Typ finden Sie unter [Vorgehensweise: Definieren eines generischen Typs mit Reflektionsausgabe](how-to-define-a-generic-type-with-reflection-emit.md).
 
 ### <a name="to-define-a-generic-method"></a>So definieren Sie eine generische Methode
 
@@ -117,7 +117,7 @@ Im dritten Verfahren wird das Aufrufen der generischen Methode veranschaulicht.
 
 6. Geben Sie Code für die Schleife aus. Zunächst wird der Anfang der Schleife markiert, indem <xref:System.Reflection.Emit.ILGenerator.MarkLabel%2A> mit der `loopAgain`-Bezeichnung aufgerufen wird. Verzweigungsanweisungen, die die Bezeichnung verwenden, verzweigen jetzt zu diesem Punkt im Code. Anschließend wird das in `TOutput` umgewandelte `ICollection(Of TInput)`-Objekt auf dem Stapel abgelegt. Es wird zwar nicht sofort benötigt, muss jedoch zum Aufrufen der `Add`-Methode vorhanden sein. Nun werden das Eingabearray auf dem Stapel und die `index`-Variable mit dem aktuellen Index im Array abgelegt. Der <xref:System.Reflection.Emit.OpCodes.Ldelem>-Opcode nimmt den Index und das Array vom Stapel auf und legt das indizierte Arrayelement auf dem Stapel ab. Der Stapel ist jetzt für das Aufrufen der <xref:System.Collections.Generic.ICollection%601.Add%2A?displayProperty=nameWithType>-Methode bereit, die die Auflistung und das neue Element vom Stapel aufnimmt und das Element zur Auflistung hinzufügt.
 
-    Der folgende Code in der Schleife erhöht den Index und überprüft, ob die Schleife beendet ist: Der Index und eine 32-Bit-Ganzzahl 1 werden auf dem Stapel abgelegt und addiert, wobei die Summe auf dem Stapel verbleibt. Die Summe wird in `index` gespeichert. <xref:System.Reflection.Emit.ILGenerator.MarkLabel%2A> wird aufgerufen, um diesen Punkt als Einstiegspunkt für die Schleife festzulegen. Der Index wird erneut geladen. Das Eingabearray wird auf dem Stapel abgelegt und <xref:System.Reflection.Emit.OpCodes.Ldlen> wird ausgegeben, um seine Länge abzurufen. Nun befinden sich der Index und die Länge auf dem Stapel, und <xref:System.Reflection.Emit.OpCodes.Clt> wird ausgegeben, um sie zu vergleichen. Wenn der Index kleiner als die Länge ist, verzweigt <xref:System.Reflection.Emit.OpCodes.Brtrue_S> zurück zum Anfang der Schleife.
+    Der Rest des Codes in der Schleife erhöht schrittweise den Index und Tests, um festzustellen, ob die Schleife beendet ist: Der Index und das 32-Bit-Integer 1 werden auf dem Stapel abgelegt und hinzugefügt, wobei die Summe auf dem Stapel bleibt; die Summe wird in `index` gespeichert. <xref:System.Reflection.Emit.ILGenerator.MarkLabel%2A> wird aufgerufen, um diesen Punkt als Einstiegspunkt für die Schleife festzulegen. Der Index wird erneut geladen. Das Eingabearray wird auf dem Stapel abgelegt und <xref:System.Reflection.Emit.OpCodes.Ldlen> wird ausgegeben, um seine Länge abzurufen. Nun befinden sich der Index und die Länge auf dem Stapel, und <xref:System.Reflection.Emit.OpCodes.Clt> wird ausgegeben, um sie zu vergleichen. Wenn der Index kleiner als die Länge ist, verzweigt <xref:System.Reflection.Emit.OpCodes.Brtrue_S> zurück zum Anfang der Schleife.
 
     [!code-csharp[GenericMethodHowTo#13](../../../samples/snippets/csharp/VS_Snippets_CLR/GenericMethodHowTo/CS/source.cs#13)]
     [!code-vb[GenericMethodHowTo#13](../../../samples/snippets/visualbasic/VS_Snippets_CLR/GenericMethodHowTo/VB/source.vb#13)]
@@ -167,4 +167,4 @@ Das Codebeispiel enthält Quellcode, der der ausgegebenen Methode entspricht. Di
 ## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Reflection.Emit.MethodBuilder>
-- [Gewusst wie: Definieren eines generischen Typs mit Reflektionsausgabe](how-to-define-a-generic-type-with-reflection-emit.md)
+- [How to: Definieren eines generischen Typs mit Reflektionsausgabe](how-to-define-a-generic-type-with-reflection-emit.md)

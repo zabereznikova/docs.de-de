@@ -8,7 +8,7 @@ ms.assetid: 0f5e2cbb-d95d-477c-b2b5-4b990e6b86ff
 author: ghogen
 ms.openlocfilehash: 514675b3c3ce1f6701dff571361df672fb520c6a
 ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 09/17/2019
 ms.locfileid: "71053657"
@@ -70,10 +70,10 @@ Wenn Sie einen Dienst erstellen möchten, können Sie die Visual Studio-Projektv
 ## <a name="see-also"></a>Siehe auch
 
 - [Einführung in Windows-Dienstanwendungen](introduction-to-windows-service-applications.md)
-- [Vorgehensweise: Programmgesteuertes Schreiben von Diensten](how-to-write-services-programmatically.md)
-- [Vorgehensweise: Hinzufügen von Installern zur Dienstanwendung](how-to-add-installers-to-your-service-application.md)
-- [Vorgehensweise: Protokollinformationen über Dienste](how-to-log-information-about-services.md)
-- [Vorgehensweise: Starten von Diensten](how-to-start-services.md)
-- [Vorgehensweise: Angeben des Sicherheitskontexts für Dienste](how-to-specify-the-security-context-for-services.md)
-- [Vorgehensweise: Installieren und Deinstallieren von Diensten](how-to-install-and-uninstall-services.md)
+- [How to: Programmgesteuertes Schreiben von Diensten](how-to-write-services-programmatically.md)
+- [How to: Hinzufügen von Installern zur Dienstanwendung](how-to-add-installers-to-your-service-application.md)
+- [How to: Protokollinformationen über Dienste](how-to-log-information-about-services.md)
+- [How to: Starten von Diensten](how-to-start-services.md)
+- [How to: Angeben des Sicherheitskontexts für Dienste](how-to-specify-the-security-context-for-services.md)
+- [How to: Installieren und Deinstallieren von Diensten](how-to-install-and-uninstall-services.md)
 - [Exemplarische Vorgehensweise: Erstellen einer Windows-Dienstanwendung](walkthrough-creating-a-windows-service-application-in-the-component-designer.md)

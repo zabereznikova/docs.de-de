@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Erstellen einer Klasse mit CodeDOM'
+title: 'Vorgehensweise: Erstellen einer Klasse mit CodeDOM'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0ceb70fe-36e1-49bb-922b-e9f615c20a14
 ms.openlocfilehash: ff7c9d1593c8e75f9bcaeda6577c7cb941719749
 ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/30/2019
 ms.locfileid: "73130192"
 ---
-# <a name="how-to-create-a-class-using-codedom"></a>Gewusst wie: Erstellen einer Klasse mit CodeDOM
+# <a name="how-to-create-a-class-using-codedom"></a>Vorgehensweise: Erstellen einer Klasse mit CodeDOM
 Die folgenden Verfahren stellen dar, wie ein CodeDOM-Diagramm erstellt und kompiliert, das eine Klasse erstellt, die zwei Felder, drei Eigenschaften, eine Methode, einen Konstruktor und einen Einstiegspunkt enthält.  
   
 1. Erstellen Sie eine Konsolenanwendung, die den CodeDOM-Code zum Generieren des Quellcodes für eine Klasse verwendet.  

@@ -11,7 +11,7 @@ ms.assetid: e24d8a3d-edc6-485c-b6e0-5672d91fb607
 author: ghogen
 ms.openlocfilehash: e5ff40d8413acf64e7a8a129a7b268f58780d591
 ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 09/17/2019
 ms.locfileid: "71053482"
@@ -35,7 +35,7 @@ Erstellen Sie zunächst das Projekt, und legen Sie die Werte fest, die für die 
    >
    > Wählen Sie im Dialogfeld **Neues Projekt** im unteren linken Bereich **Visual Studio-Installer öffnen** aus. Wählen Sie die Workload **.NET-Desktopentwicklung** aus, und klicken Sie anschließend auf **Ändern**.
 
-3. Geben Sie als **Name** *MyNewService* ein, und klicken Sie dann auf **OK**.
+3. Geben Sie als **Name***MyNewService* ein, und klicken Sie dann auf **OK**.
 
    Die Registerkarte **Design** wird angezeigt (**Service1.cs [Design]** oder **Service1.vb [Design]** ).
 
@@ -296,7 +296,7 @@ Sie können auch die Statuseinstellungen SERVICE_START_PENDING und SERVICE_STOP_
 
 6. (Optional) Wenn <xref:System.ServiceProcess.ServiceBase.OnStop%2A> eine Methode mit langer Laufzeit ist, wiederholen Sie diese Prozedur in der Methode `OnStop`. Implementieren Sie den Status SERVICE_STOP_PENDING und geben Sie den SERVICE_STOPPED-Status zurück, bevor die `OnStop`-Methode endet.
 
-   Beispiel:
+   Zum Beispiel:
 
     ```csharp
     // Update the service state to Stop Pending.
@@ -548,5 +548,5 @@ Nach der Erstellung des Diensts haben Sie nun folgende Möglichkeiten:
 
 - [Windows-Dienstanwendungen](index.md)
 - [Einführung in Windows-Dienstanwendungen](introduction-to-windows-service-applications.md)
-- [Vorgehensweise: Debuggen von Windows-Dienstanwendungen](how-to-debug-windows-service-applications.md)
+- [How to: Debuggen von Windows-Dienstanwendungen](how-to-debug-windows-service-applications.md)
 - [Dienste (Windows)](/windows/desktop/Services/services)

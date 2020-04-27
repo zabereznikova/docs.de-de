@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Untersuchen und Instanziieren von generischen Typen mit Reflektion'
+title: 'Vorgehensweise: Untersuchen und Instanziieren von generischen Typen mit Reflektion'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: f93b03b0-1778-43fc-bc6d-35983d210e74
 ms.openlocfilehash: 62e4e066740d0422f8f7045b043a5725278c209c
 ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/30/2019
 ms.locfileid: "73130134"
 ---
-# <a name="how-to-examine-and-instantiate-generic-types-with-reflection"></a>Gewusst wie: Untersuchen und Instanziieren von generischen Typen mit Reflektion
+# <a name="how-to-examine-and-instantiate-generic-types-with-reflection"></a>Vorgehensweise: Untersuchen und Instanziieren von generischen Typen mit Reflektion
 Informationen zu generischen Typen können Sie genauso abrufen wie Informationen zu anderen Typen: indem Sie sich ein <xref:System.Type>-Objekt anschauen, das den generischen Typ darstellt. Der größte Unterschied besteht dabei darin, dass eine generischer Type eine Liste von <xref:System.Type>-Objekten hat, die dessen generischen Typparameter darstellen. Die erste Prozedur in diesem Abschnitt beschäftigt sich mit generischen Typen.  
   
  Sie können ein <xref:System.Type>-Objekt erstellen, dass einen konstruierten Typ darstellt, indem Sie Typargumente an die Typparameter einer generischen Typdefinition binden. Dies wird in der zweiten Prozedur veranschaulicht.  
