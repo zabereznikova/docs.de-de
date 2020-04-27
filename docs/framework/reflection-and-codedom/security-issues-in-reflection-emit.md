@@ -11,12 +11,12 @@ helpviewer_keywords:
 - emitting dynamic assemblies,partial trust scenarios
 - dynamic assemblies, security
 ms.assetid: 0f8bf8fa-b993-478f-87ab-1a1a7976d298
-ms.openlocfilehash: 11eb4c9bc4ba1b1fe9051a04d12f893e693fb175
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
-ms.translationtype: MT
+ms.openlocfilehash: d1b6994f7ee9efa9f6472deffb2f3d869606e182
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79180459"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81644200"
 ---
 # <a name="security-issues-in-reflection-emit"></a>Sicherheitsaspekte bei der Reflektionsausgabe
 .NET Framework bietet drei Möglichkeiten zum Ausgeben der Microsoft Intermediate Language (MSIL), die jeweils mit eigenen Sicherheitsproblemen verbunden sind:  
@@ -34,7 +34,7 @@ ms.locfileid: "79180459"
   
 <a name="Dynamic_Assemblies"></a>
 ## <a name="dynamic-assemblies"></a>Dynamische Assemblys  
- Dynamische Assemblys werden unter Verwendung von Überladungen der <xref:System.AppDomain.DefineDynamicAssembly%2A?displayProperty=nameWithType>-Methode erstellt. Die meisten Überladungen dieser Methode werden in .NET Framework 4 nicht mehr unterstützt, weil computerweite Sicherheitsrichtlinien beseitigt wurden. (Siehe [Sicherheitsänderungen](../security/security-changes.md).) Die verbleibenden Überladungen können von jedem Code ausgeführt werden, unabhängig von der Vertrauensstufe. Diese Überladungen fallen in zwei Gruppen: solche, die eine Liste mit Attributen angeben, die auf die dynamische Assembly angewendet werden sollen, wenn sie erstellt wird, und solche, die dies unterlassen. Wenn Sie das Transparenzmodell für die Assembly beim Erstellen nicht durch Anwendung des <xref:System.Security.SecurityRulesAttribute>-Attributs angeben, wird das Transparenzmodell von der ausgebenden Assembly geerbt.  
+ Dynamische Assemblys werden unter Verwendung von Überladungen der <xref:System.AppDomain.DefineDynamicAssembly%2A?displayProperty=nameWithType>-Methode erstellt. Die meisten Überladungen dieser Methode werden in .NET Framework 4 nicht mehr unterstützt, weil computerweite Sicherheitsrichtlinien beseitigt wurden. (Weitere Informationen finden Sie unter [Sicherheitsänderungen](https://docs.microsoft.com/previous-versions/dotnet/framework/security/security-changes).) Die verbleibenden Überladungen können von jedem Code, unabhängig von der Vertrauensebene, ausgeführt werden. Diese Überladungen fallen in zwei Gruppen: solche, die eine Liste mit Attributen angeben, die auf die dynamische Assembly angewendet werden sollen, wenn sie erstellt wird, und solche, die dies unterlassen. Wenn Sie das Transparenzmodell für die Assembly beim Erstellen nicht durch Anwendung des <xref:System.Security.SecurityRulesAttribute>-Attributs angeben, wird das Transparenzmodell von der ausgebenden Assembly geerbt.  
   
 > [!NOTE]
 > Attribute, die Sie mithilfe von <xref:System.Reflection.Emit.AssemblyBuilder.SetCustomAttribute%2A> auf die dynamische Assembly nach deren Erstellung anwenden, werden erst wirksam, nachdem die Assembly auf dem Datenträger gespeichert und wieder in den Arbeitsspeicher geladen wurde.  
@@ -66,7 +66,7 @@ ms.locfileid: "79180459"
 > [!NOTE]
 > Konzeptionell werden Anforderungen während der Erstellung der Methode gestellt. Das heißt, dass bei jeder Ausgabe einer MSIL-Anweisung Anforderungen gestellt werden könnten. In der aktuellen Implementierung werden alle Forderungen gestellt, wenn die <xref:System.Reflection.Emit.DynamicMethod.CreateDelegate%2A?displayProperty=nameWithType>-Methode aufgerufen wird oder wenn der JIT-Compiler (Just-in-Time) aufgerufen wird, falls die Methode ohne Aufruf von <xref:System.Reflection.Emit.DynamicMethod.CreateDelegate%2A> aufgerufen wird.  
   
- Wenn die Anwendungsdomäne dies zulässt, können anonym gehostete dynamische Methoden JIT-Sichtbarkeitsprüfungen gemäß der folgenden Einschränkung überspringen: Die nicht öffentliche Typen und Member, auf die von einer anonym gehosteten dynamischen Methode zugegriffen wird, muss sich in Assemblys befinden, deren Berechtigungssätze mit dem Berechtigungssatz der ausgebenden Aufrufliste übereinstimmen oder eine Teilmenge davon darstellen. Diese eingeschränkte Fähigkeit zum Überspringen von JIT-Sichtbarkeitsprüfungen wird aktiviert, wenn die Anwendungsdomäne mit dem <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType>-Flag <xref:System.Security.Permissions.ReflectionPermission> erteilt.  
+ Wenn die Anwendungsdomäne es zulässt, können anonym gehostete dynamische Methoden JIT-Sichtbarkeitsprüfungen gemäß der folgenden Einschränkung überspringen: Die nicht öffentlichen Typen und Member, auf die durch eine anonym gehostete dynamische Methode zugegriffen wird, müssen sich in Assemblys befinden, deren Berechtigungssätze entweder mit den Berechtigungssätzen der ausgebenden Aufrufliste übereinstimmen oder Teilmengen davon sind. Diese eingeschränkte Fähigkeit zum Überspringen von JIT-Sichtbarkeitsprüfungen wird aktiviert, wenn die Anwendungsdomäne mit dem <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType>-Flag <xref:System.Security.Permissions.ReflectionPermission> erteilt.  
   
 - Wenn Ihre Methode nur öffentliche Typen und Member verwendet, sind während der Erstellung keine Berechtigungen erforderlich.  
   
@@ -137,7 +137,7 @@ ms.locfileid: "79180459"
   
 <a name="Version_Information"></a>
 ## <a name="version-information"></a>Versionsinformationen  
- Ab .NET Framework 4 wurde die computerweite Sicherheitsrichtlinie beseitigt, und Sicherheitstransparenz wird zum standardmäßigen Erzwingungsmechanismus. Weitere Informationen finden Sie unter [Sicherheitsänderungen](../security/security-changes.md).  
+ Ab .NET Framework 4 wurde die computerweite Sicherheitsrichtlinie beseitigt, und Sicherheitstransparenz wird zum standardmäßigen Erzwingungsmechanismus. Weitere Informationen finden Sie unter [Sicherheitsänderungen](https://docs.microsoft.com/previous-versions/dotnet/framework/security/security-changes).  
   
  Ab .NET Framework 2.0 Service Pack 1 ist <xref:System.Security.Permissions.ReflectionPermission> mit dem <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit?displayProperty=nameWithType>-Flag beim Ausgeben von dynamischen Assemblys und dynamischen Methoden nicht mehr erforderlich. In allen früheren Versionen von .NET Framework ist dieses Flag erforderlich.  
   
@@ -151,7 +151,7 @@ ms.locfileid: "79180459"
 ### <a name="obtaining-information-on-types-and-members"></a>Abrufen von Informationen zu Typen und Member  
  Ab .NET Framework 2.0 sind keine Berechtigungen erforderlich, um Informationen über nicht öffentliche Typen und Member abzurufen. Reflektion wird verwendet, um Informationen abzurufen, die zum Ausgeben dynamischer Methoden erforderlich sind. Beispielsweise werden <xref:System.Reflection.MethodInfo>-Objekte verwendet, um Methodenaufrufe auszugeben. Frühere Versionen von .NET Framework erfordern <xref:System.Security.Permissions.ReflectionPermission> mit dem <xref:System.Security.Permissions.ReflectionPermissionFlag.TypeInformation?displayProperty=nameWithType>-Flag. Weitere Informationen finden Sie unter [Sicherheitsüberlegungen für die Reflektion](security-considerations-for-reflection.md).  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
-- [Sicherheitsüberlegungen für die Reflektion](security-considerations-for-reflection.md)
+- [Security Considerations for Reflection (Sicherheitsüberlegungen für die Reflektion)](security-considerations-for-reflection.md)
 - [Ausgeben von dynamischen Methoden und Assemblys](emitting-dynamic-methods-and-assemblies.md)

@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: 113a8bbf-6875-4a72-a49d-ca2d92e19cc8
 ms.openlocfilehash: a5c9f4248e060d231941269f39cadbc7147ce27f
 ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 03/14/2020
 ms.locfileid: "79400908"
@@ -130,7 +130,7 @@ Betriebssysteme und Laufzeitumgebungen sorgen i. d. R. für eine gewisse Isoli
 COMPLUS_LoaderOptimization = 1  
 ```  
   
-### <a name="remarks"></a>Bemerkungen
+### <a name="remarks"></a>Hinweise
 
  Eine typische Anwendung lädt mehrere Assemblys in eine Anwendungsdomäne, bevor der Code, den sie enthalten, ausgeführt werden kann.  
   
@@ -156,7 +156,7 @@ Type = REG_MULTI_SZ
 Value (to append) = COMPLUS_LoaderOptimization=1  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - <xref:System.AppDomain?displayProperty=nameWithType>
 - <xref:System.MarshalByRefObject?displayProperty=nameWithType>

@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 5612ebce67946e22aaeeba861115ce4f8967e1f5
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1580c8c8b7bdad91656f494537230293dbaaf93b
+ms.sourcegitcommit: 348bb052d5cef109a61a3d5253faa5d7167d55ac
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75344453"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82021551"
 ---
 ### <a name="apis-that-report-version-now-report-product-and-not-file-version"></a>APIs, die Versionsinformationen melden, melden nun die Produktversion und nicht die Dateiversion
 
@@ -24,11 +24,11 @@ In der folgenden Abbildung sind die unterschiedlichen Versionsinformationen für
 
 #### <a name="recommended-action"></a>Empfohlene Aktion
 
-Keine. Durch diese Änderung soll die Version einfacher und intuitiver zu erkennen sein.
+Keine Durch diese Änderung soll die Version einfacher und intuitiver zu erkennen sein.
 
 #### <a name="category"></a>Kategorie
 
-CoreFx
+Core .NET-Bibliotheken
 
 #### <a name="affected-apis"></a>Betroffene APIs
 

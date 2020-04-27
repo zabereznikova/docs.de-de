@@ -5,7 +5,7 @@ ms.date: 10/19/2017
 ms.custom: azure-sdk-dotnet
 ms.openlocfilehash: a29709d56f2debe04d49ee4eafdc27acd4ca480f
 ms.sourcegitcommit: 34dc3c0d0d0a1cc418abff259d9daa8078d00b81
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 03/19/2020
 ms.locfileid: "81433151"
@@ -28,7 +28,7 @@ Die schnellste und einfachste Methode zum Installieren der Elemente **Azure SDK 
 
 ## <a name="verifying-the-installation"></a>Überprüfen der Installation
 
-1. Klicken Sie in Visual Studio 2015 im Menü **Extras** auf **Erweiterungen und Updates...**.
+1. Klicken Sie in Visual Studio 2015 im Menü **Extras** auf **Erweiterungen und Updates...** .
 
 2. Die angezeigte Liste enthält mehrere Azure-Tools, z.B. **Microsoft Azure App Service-Tools**, **Microsoft Azure Storage - verbundener Dienst** und **Service Fabric-Tools**.
 

@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: 15926806-f0b7-487e-93a6-4e9367ec689f
 ms.openlocfilehash: 358d1ce662d56b8c31124f4b3264ec25a0f94586
 ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 03/12/2020
 ms.locfileid: "79181322"
@@ -29,8 +29,8 @@ In den folgenden Beispielen erfahren Sie, wie Sie durch die Übergabe einer einf
   
  Weitere Beispiele finden Sie unter [Marshaling Data with Platform Invoke (Marshallen von Daten mithilfe des Plattformaufrufs)](marshaling-data-with-platform-invoke.md).  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Runtime.InteropServices.DllImportAttribute>
-- [Erstellen von Prototypen in verwaltetem Code](creating-prototypes-in-managed-code.md)
-- [Angeben eines Zeichensatzes](specifying-a-character-set.md)
+- [Creating Prototypes in Managed Code (Erstellen von Prototypen in verwaltetem Code)](creating-prototypes-in-managed-code.md)
+- [Specifying a Character Set (Angeben eines Zeichensatzes)](specifying-a-character-set.md)

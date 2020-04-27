@@ -2,18 +2,18 @@
 title: Befehl „dotnet add package“
 description: Der Paketbefehl „dotnet add“ bietet eine praktische Option zum Hinzufügen von NuGet-Paketverweisen zu einem Projekt.
 ms.date: 02/14/2020
-ms.openlocfilehash: 24a25cdab2aab30d52f8407adfda437f47437290
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.openlocfilehash: 1d57aed59ccd45417c88f9b6a2f9dd768fda9b58
+ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81463756"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82102852"
 ---
 # <a name="dotnet-add-package"></a>dotnet add package
 
 **Dieser Artikel gilt für:** ✔️ .NET Core 2.x SDK und neuere Versionen
 
-## <a name="name"></a>Name
+## <a name="name"></a>name
 
 `dotnet add package`: Fügt einen Paketverweis zu einer Projektdatei hinzu.
 
@@ -31,8 +31,6 @@ dotnet add package -h|--help
 ## <a name="description"></a>Beschreibung
 
 Der `dotnet add package`-Befehl bietet eine praktische Option zum Hinzufügen von Paketverweisen zu einer Projektdatei. Nach dem Ausführen des Befehls wird die Kompatibilität überprüft, um sicherzustellen, dass das Paket mit den Frameworks im Projekt kompatibel ist. Wenn die Überprüfung erfolgreich ist, wird ein `<PackageReference>`-Element zur Projektdatei hinzugefügt, und [dotnet restore](dotnet-restore.md) wird ausgeführt.
-
-[!INCLUDE[DotNet Restore Note](../../../includes/dotnet-restore-note.md)]
 
 Beispielsweise wird durch Hinzufügen von `Newtonsoft.Json` zu *ToDo.csproj* eine Ausgabe ähnlich der folgenden erzeugt:
 
@@ -54,6 +52,10 @@ Die *ToDo.csproj*-Datei enthält nun ein [`<PackageReference>`](/nuget/consume-p
 ```xml
 <PackageReference Include="Newtonsoft.Json" Version="12.0.1" />
 ```
+
+### <a name="implicit-restore"></a>Implizite Wiederherstellung
+
+[!INCLUDE[DotNet Restore Note](../../../includes/dotnet-restore-note.md)]
 
 ## <a name="arguments"></a>Argumente
 
@@ -115,7 +117,7 @@ Die *ToDo.csproj*-Datei enthält nun ein [`<PackageReference>`](/nuget/consume-p
   dotnet add package Microsoft.AspNetCore.StaticFiles -s https://dotnet.myget.org/F/dotnet-core/api/v3/index.json
   ```
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Verwalten von globalen Pakete-, Cache- und temporären Ordnern in NuGet](https://docs.microsoft.com/nuget/consume-packages/managing-the-global-packages-and-cache-folders)
 - [NuGet-Paketversionsverwaltung](https://docs.microsoft.com/nuget/reference/package-versioning)

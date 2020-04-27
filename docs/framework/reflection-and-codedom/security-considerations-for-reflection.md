@@ -10,12 +10,12 @@ helpviewer_keywords:
 - reflection,partial trust
 - link demands
 ms.assetid: 42d9dc2a-8fcc-4ff3-b002-4ff260ef3dc5
-ms.openlocfilehash: 1d5289ce15c213024af576c99fe039f5d6c1a247
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
-ms.translationtype: MT
+ms.openlocfilehash: 1bdaf3abd39797274236ace4cb2967d2e7d199b2
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73130070"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81644187"
 ---
 # <a name="security-considerations-for-reflection"></a>Sicherheitsüberlegungen für die Reflektion
 
@@ -57,9 +57,9 @@ Ein Member ist sicherheitskritisch, wenn er das <xref:System.Security.SecurityCr
 
 Diese Regeln gelten immer, ganz gleich, ob auf einen sicherheitskritischen Member direkt aus kompiliertem Code oder über Reflektion zugegriffen wird.
 
-Anwendungscode, der über die Befehlszeile ausgeführt wird, wird mit voller Vertrauenswürdigkeit ausgeführt. Solange Code nicht als transparent gekennzeichnet ist, kann er über Reflektion auf sicherheitskritische Member zugreifen. Wird derselbe Code mit teilweiser Vertrauenswürdigkeit ausgeführt (z. B. in einer Sandkastenanwendungsdomäne), bestimmt die Vertrauensebene der Assembly, ob sie auf sicherheitskritischen Code zugreifen kann: Wenn die Assembly einen starken Namen hat und im globalen Assemblycache installiert ist, ist sie eine vertrauenswürdige Assembly und kann sicherheitskritische Member aufrufen. Ist die Assembly nicht vertrauenswürdig ist, wird sie transparent, obwohl sie nicht als transparent gekennzeichnet wurde, und sie kann nicht auf sicherheitskritische Member zugreifen.
+Anwendungscode, der über die Befehlszeile ausgeführt wird, wird mit voller Vertrauenswürdigkeit ausgeführt. Solange Code nicht als transparent gekennzeichnet ist, kann er über Reflektion auf sicherheitskritische Member zugreifen. Wenn der gleiche Code mit teilweiser Vertrauenswürdigkeit ausgeführt wird (z. B. in einer Sandkastenanwendungsdomäne), bestimmt die Vertrauensebene der Assembly, ob der Zugriff auf sicherheitskritischen Code gewährt wird: Wenn die Assembly über einen starken Namen verfügt und im globalen Assemblycache installiert ist, ist sie eine vertrauenswürdige Assembly und sie kann sicherheitskritische Member aufrufen. Ist die Assembly nicht vertrauenswürdig ist, wird sie transparent, obwohl sie nicht als transparent gekennzeichnet wurde, und sie kann nicht auf sicherheitskritische Member zugreifen.
 
-Weitere Informationen zum Sicherheitsmodell in .NET Framework 4 finden Sie unter [Änderungen der Sicherheit in .NET Framework](../security/security-changes.md).
+Weitere Informationen zum Sicherheitsmodell in .NET Framework 4 finden Sie unter [Änderungen der Sicherheit in .NET Framework](https://docs.microsoft.com/previous-versions/dotnet/framework/security/security-changes).
 
 ## <a name="reflection-and-transparency"></a>Reflektion und Transparenz
 
@@ -86,7 +86,7 @@ Um über Reflektion Methoden aufzurufen, auf die nach den Zugriffsregeln der Com
   > [!NOTE]
   > Standardmäßig verweigert die Sicherheitsrichtlinie diese Berechtigung für Code, der aus dem Internet stammt. Diese Berechtigung sollte niemals für Code gewährt werden, der aus dem Internet stammt.
 
-- Damit Code einen beliebigen nicht öffentlichen Member aufrufen kann, sofern der Berechtigungssatz der Assembly, die den aufgerufenen Member enthält, mit dem Berechtigungssatz des aufrufenden Codes identisch oder eine Untermenge dieses Berechtigungssatzes ist: Dem Code muss <xref:System.Security.Permissions.ReflectionPermission> mit dem <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType>-Flag gewährt werden.
+- Damit Code beliebige nicht öffentliche Member aufrufen kann, sofern der Berechtigungssatz der Assembly, die den aufgerufenen Member enthält, mit dem Berechtigungssatz des aufrufenden Codes identisch oder eine Teilmenge dieses Berechtigungssatzes ist: Dem Code muss <xref:System.Security.Permissions.ReflectionPermission> mit dem <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType>-Flag gewährt werden.
 
 Beispiel: Angenommen, Sie gewähren einer Anwendungsdomäne Internetberechtigungen plus <xref:System.Security.Permissions.ReflectionPermission> mit dem <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType>-Flag und führen anschließend eine Internetanwendung mit den beiden Assemblys A und B aus.
 
@@ -115,9 +115,9 @@ Sie sollten keine öffentlichen Member schreiben, an die <xref:System.Reflection
 - <xref:System.Security.Permissions.ReflectionPermissionFlag>
 - <xref:System.Security.Permissions.ReflectionPermission>
 - <xref:System.Security.Permissions.SecurityPermission>
-- [Sicherheitsänderungen](../security/security-changes.md)
+- [Sicherheitsänderungen](https://docs.microsoft.com/previous-versions/dotnet/framework/security/security-changes)
 - [Codezugriffssicherheit](../misc/code-access-security.md)
 - [Sicherheitsaspekte bei der Reflektionsausgabe](security-issues-in-reflection-emit.md)
 - [Anzeigen von Typinformationen](viewing-type-information.md)
 - [Anwenden von Attributen](../../standard/attributes/applying-attributes.md)
-- [Accessing Custom Attributes (Zugreifen auf benutzerdefinierte Attribute)](accessing-custom-attributes.md)
+- [Zugreifen auf benutzerdefinierte Attribute](accessing-custom-attributes.md)

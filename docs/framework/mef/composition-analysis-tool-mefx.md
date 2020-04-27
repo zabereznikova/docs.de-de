@@ -8,7 +8,7 @@ helpviewer_keywords:
 ms.assetid: c48a7f93-83bb-4a06-aea0-d8e7bd1502ad
 ms.openlocfilehash: 7d0acf16ace5aad60b32b7139a58a258fb080ee0
 ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 03/12/2020
 ms.locfileid: "79181300"
@@ -21,7 +21,7 @@ Das Kompositionsanalysetool MEFX ist eine Befehlszeilenanwendung, die Bibliothek
  MEFX steht auf GitHub unter [Managed Extensibility Framework](https://github.com/MicrosoftArchive/mef/releases/tag/4.0) zur Verfügung. Nach dem Herunterladen müssen Sie das Tool nur noch entpacken.  
   
 <a name="basic_syntax"></a>
-## <a name="basic-syntax"></a>Grundlegende Syntax  
+## <a name="basic-syntax"></a>Allgemeine Syntax  
  MEFX kann wie folgt über die Befehlszeile aufgerufen werden:  
   
 ```console

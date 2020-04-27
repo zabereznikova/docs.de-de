@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Installieren einer Assembly im globalen Assemblycache'
+title: 'Vorgehensweise: Installieren einer Assembly im globalen Assemblycache'
 ms.date: 08/20/2019
 helpviewer_keywords:
 - assemblies [.NET Framework], global assembly cache
@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: a7e6f091-d02c-49ba-b736-7295cb0eb743
 ms.openlocfilehash: 64878a795a7c5b790c8991064e32b82505685c0c
 ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 03/12/2020
 ms.locfileid: "79155562"
 ---
-# <a name="how-to-install-an-assembly-into-the-global-assembly-cache"></a>Gewusst wie: Installieren einer Assembly im globalen Assemblycache
+# <a name="how-to-install-an-assembly-into-the-global-assembly-cache"></a>Vorgehensweise: Installieren einer Assembly im globalen Assemblycache
 
 Im globalen Assemblycache (GAC) werden Assemblys gespeichert, die von mehreren Anwendungen gemeinsam verwendet werden. Installieren Sie eine Assembly mit einer der folgenden Komponenten in den [globalen Assemblycache](gac.md):
 
@@ -24,7 +24,7 @@ Im globalen Assemblycache (GAC) werden Assemblys gespeichert, die von mehreren A
 - [Tool für globalen Assemblycache](#global-assembly-cache-tool)
 
 > [!IMPORTANT]
-> Sie können nur Assemblys mit starkem Namen im globalen Assemblycache installieren. Informationen zum Erstellen einer Assembly mit starkem Namen finden Sie unter [Gewusst wie: Signieren einer Assembly mit einem starken Namen](../../standard/assembly/sign-strong-name.md).
+> Sie können nur Assemblys mit starkem Namen im globalen Assemblycache installieren. Informationen zum Erstellen von Assemblys mit starkem Namen finden Sie unter [Vorgehensweise: Signieren einer Assembly mit einem starken Namen](../../standard/assembly/sign-strong-name.md).
 
 ## <a name="windows-installer"></a>Windows Installer
 
@@ -43,9 +43,9 @@ Die Syntax zur Verwendung der *gacutil.exe* zum Installieren einer Assembly im G
 gacutil -i <assembly name>
 ```
 
-In diesem Befehl ist * \<assemblyname>* der Name der Assembly, die im globalen Assemblycache installiert werden soll.
+In diesem Befehl bezeichnet *\<Assemblyname>* den Namen der Assembly, die im globalen Assemblycache installiert werden soll.
 
-Wenn *gacutil.exe* nicht in Ihrem Systempfad ist, verwenden Sie die [Eingabeaufforderung entwicklerfür * \<VS-Version>* ](../tools/developer-command-prompt-for-vs.md).
+Wenn *gacutil.exe* sich nicht in Ihrem Systempfad befindet, verwenden Sie die [Developer-Eingabeaufforderung für VS *\<Version>* ](../tools/developer-command-prompt-for-vs.md).
 
 Im folgenden Beispiel wird eine Assembly mit dem Dateinamen *hello.dll* im globalen Assemblycache installiert.
 
@@ -56,9 +56,9 @@ gacutil -i hello.dll
 > [!NOTE]
 > In früheren Versionen von .NET Framework ermöglichte die Windows Shell-Erweiterung *Shfusion.dll* das Installieren von Assemblys durch Verschieben in den Datei-Explorer. Die *Shfusion.dll* ist seit .NET Framework 4 veraltet.
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Arbeiten mit Assemblys und dem globalen Assemblycache](working-with-assemblies-and-the-gac.md)
-- [Gewusst wie: Entfernen einer Assembly aus dem globalen Assemblycache](how-to-remove-an-assembly-from-the-gac.md)
-- [Gacutil.exe (Global Assembly Cache-Tool)](../tools/gacutil-exe-gac-tool.md)
-- [Gewusst wie: Signieren einer Assembly mit einem starken Namen](../../standard/assembly/sign-strong-name.md)
+- [How to: Entfernen einer Assembly aus dem globalen Assemblycache](how-to-remove-an-assembly-from-the-gac.md)
+- [Gacutil.exe (Tool für globalen Assemblycache)](../tools/gacutil-exe-gac-tool.md)
+- [How to: Signieren einer Assembly mit einem starken Namen](../../standard/assembly/sign-strong-name.md)

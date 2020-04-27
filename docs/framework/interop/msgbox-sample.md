@@ -11,7 +11,7 @@ helpviewer_keywords:
 ms.assetid: 9e0edff6-cc0d-4d5c-a445-aecf283d9c3a
 ms.openlocfilehash: b970a5a193f82ca141c030491febce5ef352eb70
 ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 03/12/2020
 ms.locfileid: "79181344"
@@ -42,9 +42,9 @@ Dieses Beispiel demonstriert, wie Zeichenfolgentypen durch einen Wert als In-Par
  [!code-csharp[Conceptual.Interop.Marshaling#6](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.interop.marshaling/cs/msgbox.cs#6)]
  [!code-vb[Conceptual.Interop.Marshaling#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.interop.marshaling/vb/msgbox.vb#6)]  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Marshallen von Zeichenfolgen](marshaling-strings.md)
 - [Standardmäßiges Marshalling für Zeichenfolgen](default-marshaling-for-strings.md)
-- [Erstellen von Prototypen in verwaltetem Code](creating-prototypes-in-managed-code.md)
-- [Angeben eines Zeichensatzes](specifying-a-character-set.md)
+- [Creating Prototypes in Managed Code (Erstellen von Prototypen in verwaltetem Code)](creating-prototypes-in-managed-code.md)
+- [Specifying a Character Set (Angeben eines Zeichensatzes)](specifying-a-character-set.md)

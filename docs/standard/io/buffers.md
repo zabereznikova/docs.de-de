@@ -7,12 +7,12 @@ helpviewer_keywords:
 - I/O [.NET], buffers
 author: rick-anderson
 ms.author: riande
-ms.openlocfilehash: f939164cd56b2fb2feeeb171236b0e1171327e19
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d113def0182dc6a5bcea6c18b2d0e4b475946e31
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78160117"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81739624"
 ---
 # <a name="work-with-buffers-in-net"></a>Arbeiten mit Puffern in .NET
 
@@ -191,5 +191,5 @@ Das folgende Beispiel analysiert eine 4 Byte lange Big-Endian-Ganzzahl ab dem S
 ### <a name="sequencereadert-common-problems"></a>Häufige SequenceReader\<T\>-Probleme
 
 - Da `SequenceReader<T>` eine änderbare Struktur ist, sollte das Element immer durch [Verweis](../../csharp/language-reference/keywords/ref.md) übergeben werden.
-- `SequenceReader<T>` ist eine [ref-Struktur](../../csharp/language-reference/keywords/ref.md#ref-struct-types) und kann daher nur in synchronen Methoden verwendet und nicht in Feldern gespeichert werden. Weitere Informationen finden Sie unter [Schreiben von sicherem und effizientem C#-Code](../../csharp/write-safe-efficient-code.md).
+- `SequenceReader<T>` ist eine [ref-Struktur](../../csharp/language-reference/builtin-types/struct.md#ref-struct) und kann daher nur in synchronen Methoden verwendet und nicht in Feldern gespeichert werden. Weitere Informationen finden Sie unter [Schreiben von sicherem und effizientem C#-Code](../../csharp/write-safe-efficient-code.md).
 - `SequenceReader<T>` ist für die Verwendung als Vorwärtslesefunktion optimiert. `Rewind` ist für Sicherungen mit geringem Umfang vorgesehen, die nicht über andere `Read`-, `Peek`- oder `IsNext`-APIs verarbeitet werden können.

@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Verknüpfen mit einem Delegaten anhand von Reflektion'
+title: 'Vorgehensweise: Verknüpfen mit einem Delegaten mit Reflektion'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 076ee62d-a964-449e-a447-c31b33518b81
 ms.openlocfilehash: d748d9f8bdd0b4d831880548d4aceb1c77a0b0c4
 ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 03/12/2020
 ms.locfileid: "79180505"
 ---
-# <a name="how-to-hook-up-a-delegate-using-reflection"></a>Gewusst wie: Verknüpfen mit einem Delegaten anhand von Reflektion
+# <a name="how-to-hook-up-a-delegate-using-reflection"></a>Vorgehensweise: Verknüpfen mit einem Delegaten mit Reflektion
 Wenn Sie Assemblys mithilfe von Reflektion laden und ausführen, können Sie Ereignisse nicht mit Sprachfunktionen wie dem Operator `+=` von C# oder der [AddHandler-Anweisung](../../visual-basic/language-reference/statements/addhandler-statement.md) von Visual Basic verknüpfen. In den folgenden Verfahrensweisen wird veranschaulicht, wie eine vorhandene Methode mit einem Ereignis verknüpft wird, indem alle erforderlichen Typen über Reflektion abgerufen werden, und wie eine dynamische Methode mithilfe von Reflektionsausgabe erstellt und mit einem Ereignis verknüpft wird.  
   
 > [!NOTE]
@@ -78,7 +78,7 @@ Wenn Sie Assemblys mithilfe von Reflektion laden und ausführen, können Sie Ere
      [!code-csharp[HookUpDelegate#9](../../../samples/snippets/csharp/VS_Snippets_CLR/HookUpDelegate/cs/source.cs#9)]
      [!code-vb[HookUpDelegate#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HookUpDelegate/vb/source.vb#9)]  
   
-2. Generieren Sie einen Methodentext. Diese Methode lädt eine Zeichenfolge, ruft die Überladung der <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType>-Methode auf, die eine Zeichenfolge akzeptiert, nimmt den Rückgabewert vom Stapel auf (da der Handler keinen Rückgabetyp aufweist) und wird dann beendet. Weiter Informationen zum Ausgeben von dynamischen Methoden finden Sie unter [How to: Define and Execute Dynamic Methods (Vorgehensweise: Definieren und Ausführen von dynamischen Methoden)](how-to-define-and-execute-dynamic-methods.md).  
+2. Generieren Sie einen Methodentext. Diese Methode lädt eine Zeichenfolge, ruft die Überladung der <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=nameWithType>-Methode auf, die eine Zeichenfolge akzeptiert, nimmt den Rückgabewert vom Stapel auf (da der Handler keinen Rückgabetyp aufweist) und wird dann beendet. Weitere Informationen zum Ausgeben dynamischer Methoden finden Sie unter [Vorgehensweise: Definieren und Ausführen von dynamischen Methoden](how-to-define-and-execute-dynamic-methods.md).  
   
      [!code-cpp[HookUpDelegate#10](../../../samples/snippets/cpp/VS_Snippets_CLR/HookUpDelegate/cpp/source.cpp#10)]
      [!code-csharp[HookUpDelegate#10](../../../samples/snippets/csharp/VS_Snippets_CLR/HookUpDelegate/cs/source.cs#10)]
@@ -103,11 +103,11 @@ Wenn Sie Assemblys mithilfe von Reflektion laden und ausführen, können Sie Ere
  [!code-csharp[HookUpDelegate#1](../../../samples/snippets/csharp/VS_Snippets_CLR/HookUpDelegate/cs/source.cs#1)]
  [!code-vb[HookUpDelegate#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HookUpDelegate/vb/source.vb#1)]  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>
 - <xref:System.Reflection.Emit.DynamicMethod>
 - <xref:System.Activator.CreateInstance%2A>
 - <xref:System.Delegate.CreateDelegate%2A>
-- [Gewusst wie: Definieren und Ausführen von dynamischen Methoden](how-to-define-and-execute-dynamic-methods.md)
+- [How to: Definieren und Ausführen von dynamischen Methoden](how-to-define-and-execute-dynamic-methods.md)
 - [Reflexion](reflection.md)

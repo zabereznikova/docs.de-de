@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.date: 10/10/2018
-ms.openlocfilehash: 54ace52fc6a8f4614c1f762b65453979bcb92c7a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 78d9a6490c0479d9c21e01d0bcba41294d674a5c
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79397872"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81644386"
 ---
 # <a name="whats-new-in-net-core-21"></a>Neuigkeiten in .NET Core 2.1
 
@@ -251,6 +251,6 @@ Informationen zu Breaking Changes finden Sie unter [Breaking Changes für die Mi
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Neuigkeiten in .NET Core](index.md)
+- [Neuerungen in .NET Core 3.1](dotnet-core-3-1.md)
 - [Neue Features in EF Core 2.1](/ef/core/what-is-new/ef-core-2.1)
 - [Neuerungen in ASP.NET Core 2.1](/aspnet/core/aspnetcore-2.1)

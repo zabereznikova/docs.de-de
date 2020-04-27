@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Erstellen einer XML-Dokumentationsdatei mit CodeDOM'
+title: 'Vorgehensweise: Erstellen einer XML-Dokumentationsdatei mit CodeDOM'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: e3b80484-36b9-41dd-9d21-a2f9a36381dc
 ms.openlocfilehash: a0ccb469a43c3a21a76eaf24fa7ce7b490dd5c4a
 ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 03/12/2020
 ms.locfileid: "79180523"
 ---
-# <a name="how-to-create-an-xml-documentation-file-using-codedom"></a>Gewusst wie: Erstellen einer XML-Dokumentationsdatei mit CodeDOM
+# <a name="how-to-create-an-xml-documentation-file-using-codedom"></a>Vorgehensweise: Erstellen einer XML-Dokumentationsdatei mit CodeDOM
 CodeDOM kann zum Erstellen von Code verwendet werden, der eine XML-Dokumentation erstellt. Der Vorgang bringt die Erstellung des CodeDOM-Diagramms mit sich, das die XML-Dokumentationskommentare enthält, das Generieren des Codes und Kompilieren des generierten Codes mit der Compileroption, die die Ausgabe der XML-Dokumentation erstellt.  
   
 ### <a name="to-create-a-codedom-graph-that-contains-xml-documentation-comments"></a>SO erstellen Sie ein CodeDOM-Diagramm, das XML-Dokumentationskommentare enthält  
@@ -77,8 +77,8 @@ CodeDOM kann zum Erstellen von Code verwendet werden, der eine XML-Dokumentation
   
 - Dieses Codebeispiel benötigt die festgelegte `FullTrust`-Berechtigung, damit es erfolgreich ausgeführt werden kann.  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Dokumentieren von Code mit XML](../../visual-basic/programming-guide/program-structure/documenting-your-code-with-xml.md)
-- [Kommentare zur XML-Dokumentation](../../csharp/programming-guide/xmldoc/index.md)
+- [XML-Dokumentationskommentare](../../csharp/programming-guide/xmldoc/index.md)
 - [XML-Dokumentation](/cpp/ide/xml-documentation-visual-cpp)
