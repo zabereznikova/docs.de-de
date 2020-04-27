@@ -6,12 +6,12 @@ metadata:
   description: 'Vermittlung von C#-Programmierkenntnissen: für angehende Entwickler, Entwickler, die neu in C# sind, und erfahrene C#-/.NET-Entwickler'
   ms.topic: landing-page
   ms.date: 11/19/2019
-  ms.openlocfilehash: 2bec49d0832a7d00d0fea247166a9ec073f37e11
-  ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+  ms.openlocfilehash: a0de519e518cac70bac831cf689042e104cd1389
+  ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
   ms.translationtype: HT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 03/15/2020
-  ms.locfileid: "75339159"
+  ms.lasthandoff: 04/23/2020
+  ms.locfileid: "82102722"
 landingContent:
 - title: Erlernen des Programmierens in C#
   linkLists:
@@ -33,7 +33,7 @@ landingContent:
       url: https://aka.ms/dotnet3-csharp
   - linkListType: download
     links:
-    - text: .NET Core SDK herunterladen
+    - text: Herunterladen des .NET Core SDK
       url: https://dotnet.microsoft.com/download
 - title: C#-Grundlagen
   linkLists:
@@ -77,8 +77,8 @@ landingContent:
       url: nullable-references.md
   - linkListType: concept
     links:
-    - text: APIs mit Anmerkungen für NULL-Zulässigkeit versehen
-      url: nullable-attributes.md
+    - text: Auswählen einer Nullable-Migrationsstrategie
+      url: nullable-migration-strategies.md
   - linkListType: tutorial
     links:
     - text: Nutzen und Generieren asynchroner Datenströme
