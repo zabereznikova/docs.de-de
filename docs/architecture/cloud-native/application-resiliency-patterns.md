@@ -2,12 +2,12 @@
 title: Anwendungsresilienzmuster
 description: Architektur von Cloud Native .net-apps für Azure | Anwendungsresilienzmuster
 ms.date: 06/30/2019
-ms.openlocfilehash: 13811efaa88e0bd2824add1c8712b78b18d46375
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 6805603f349578655b2535c7346af368c5ce1841
+ms.sourcegitcommit: 5988e9a29cedb8757320817deda3c08c6f44a6aa
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73841888"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82199689"
 ---
 # <a name="application-resiliency-patterns"></a>Anwendungsresilienzmuster
 
@@ -56,7 +56,7 @@ Es ist wichtig, den Backoff-Zeitraum zu erhöhen, bevor Sie den Aufruf wiederhol
 
 Das Wiederholungsmuster kann dabei helfen, eine Anforderung zu retten, die bei einem partiellen Ausfall entkoppelt ist, aber es gibt Situationen, in denen Fehler durch unerwartete Ereignisse verursacht werden können, die längere Zeiträume benötigen. Zu unterscheiden sind unterschiedliche Schweregrade, die von einem Teilverlust der Konnektivität bis hin zum vollständigen Ausfall des Diensts reichen können. In diesen Fällen ist es sinnlos, dass eine Anwendung fortlaufend einen Vorgang wiederholt, der wahrscheinlich nicht erfolgreich ist.
 
-Um etwas Schlimmeres zu machen, können Sie durch das Ausführen von kontinuierlichen Wiederholungs Vorgängen in einem nicht reagierenden Dienst in ein selbst erständiges Denial-of-Service-Szenario gelangen, in dem Sie den Dienst mit kontinuierlichen aufrufen überfluten, wie z. b. Arbeitsspeicher, Threads und Datenbank Verbindungen, die einen Fehler in nicht verknüpften Teilen des Systems verursachen, die dieselben Ressourcen verwenden.
+Um etwas Schlimmeres zu machen, können Sie durch das Ausführen von kontinuierlichen Wiederholungs Vorgängen auf einem nicht reagierenden Dienst in ein selbst erständiges Denial-of-Service-Szenario gelangen, in dem Sie den Dienst mit fortwährenden aufrufen überfluten, die Ressourcen wie Arbeitsspeicher, Threads und Datenbankverbindungen verbrauchen und Fehler in nicht verknüpften Teilen des Systems verursachen, die dieselben Ressourcen
 
 In diesen Fällen wäre es vorzuziehen, dass der Vorgang sofort fehlschlägt, und nur versuchen, den Dienst aufzurufen, wenn er wahrscheinlich erfolgreich ist.
 
