@@ -3,12 +3,12 @@ title: Vergleich der relationalen und NoSQL-Daten
 description: Weitere Informationen zu relationalen und nosql-Daten in Cloud-native Anwendungen
 author: robvet
 ms.date: 01/22/2020
-ms.openlocfilehash: c074be0c973156c1757b97ffc727711d5dd072af
-ms.sourcegitcommit: 5988e9a29cedb8757320817deda3c08c6f44a6aa
+ms.openlocfilehash: a2561b0abfc1975badfafeeb4fa2f2c6429814be
+ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82199981"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82507363"
 ---
 # <a name="relational-vs-nosql-data"></a>Vergleich der relationalen und NoSQL-Daten
 
@@ -226,7 +226,7 @@ Azure Cosmos DB bietet fünf wohl definierte [Konsistenz Modelle](https://docs.m
 
 **Abbildung 5-16**: Cosmos DB Konsistenz Ebenen-Beschreibung
 
-In dem Artikel, [der die 9-Ball-Cosmos DB Konsistenz Ebenen erläutert](https://blog.jeremylikness.com/blog/2018-03-23_getting-behind-the-9ball-cosmosdb-consistency-levels/), bietet Microsoft Cloud Developer Advocate Jeremy-Ähnlichkeit eine ausgezeichnete Erläuterung der fünf Modelle.
+In dem Artikel, [der die 9-Ball-Cosmos DB Konsistenz Ebenen erläutert](https://blog.jeremylikness.com/blog/2018-03-23_getting-behind-the-9ball-cosmosdb-consistency-levels/), bietet Microsoft Program Manager Jeremy Likness eine ausgezeichnete Erläuterung der fünf Modelle.
 
 ### <a name="partitioning"></a>Partitionierung
 

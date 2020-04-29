@@ -1,46 +1,46 @@
 ---
-title: Erstellen wiederverwendbarer UI-Komponenten mit Blazor
-description: Erfahren Sie, wie Sie wiederverwendbare UI-Komponenten mit Blazor erstellen und mit ASP.NET Web Forms-Steuerelementen vergleichen.
+title: Erstellen wiederverwendbarer Benutzeroberflächen Komponenten mit blazor
+description: Erfahren Sie, wie Sie wiederverwendbare UI-Komponenten mit blazor erstellen und wie Sie mit ASP.net-Web Forms Steuerelementen vergleichen.
 author: danroth27
 ms.author: daroth
 ms.date: 09/18/2019
-ms.openlocfilehash: 228f7aec4c7b87cb6d4127b55745f7a5ed90aaf9
-ms.sourcegitcommit: b75a45f0cfe012b71b45dd9bf723adf32369d40c
+ms.openlocfilehash: 79fb2338a981389c3750e884ce6606351c84738a
+ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80228629"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82506765"
 ---
-# <a name="build-reusable-ui-components-with-blazor"></a>Erstellen wiederverwendbarer UI-Komponenten mit Blazor
+# <a name="build-reusable-ui-components-with-blazor"></a>Erstellen wiederverwendbarer Benutzeroberflächen Komponenten mit blazor
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
-Eines der schönsten Dinge an ASP.NET Web Forms ist, wie es die Verkapselung von wiederverwendbaren Teilen von Benutzeroberflächencode in wiederverwendbare UI-Steuerelemente ermöglicht. Benutzerdefinierte Benutzersteuerelemente können in Markup mithilfe von *.ascx-Dateien* definiert werden. Sie können auch ausgeklügelte Serversteuerelemente in Code mit vollständiger Designerunterstützung erstellen.
+Eine der schönen Aspekte von ASP.net Web Forms ist, wie Sie wiederverwendbare Elemente von Benutzeroberflächen Code in wiederverwendbare UI-Steuerelemente einkapseln kann. Benutzerdefinierte Benutzer Steuerelemente können mithilfe von *ASCX* -Dateien im Markup definiert werden. Mit vollständiger Designer Unterstützung können Sie auch aufwändige Server Steuerelemente im Code erstellen.
 
-Blazor unterstützt auch die UI-Kapselung durch *Komponenten*. Eine Komponente:
+Blazor unterstützt auch die Benutzeroberflächen Kapselung durch- *Komponenten*. Eine Komponente:
 
-- Ein eigenständiger Teil der Benutzeroberfläche.
-- Behält seinen eigenen Status und seine Renderinglogik bei.
-- Kann UI-Ereignishandler definieren, an Eingabedaten binden und seinen eigenen Lebenszyklus verwalten.
-- Wird in der Regel in einer *.razor-Datei* mit Razor-Syntax definiert.
+- Bei handelt es sich um einen eigenständigen Block von Benutzeroberflächen.
+- Behält seine eigene Zustands-und Renderinglogik bei.
+- Kann Benutzeroberflächen-Ereignishandler definieren, an Eingabedaten binden und ihren eigenen Lebenszyklus verwalten.
+- Wird in der Regel in einer *Razor* -Datei mit Razor-Syntax definiert.
 
 ## <a name="an-introduction-to-razor"></a>Eine Einführung in Razor
 
-Razor ist eine leichtgewichtige Markup-Tempor-Sprache, die auf HTML und C- basiert. Mit Razor können Sie nahtlos zwischen Markup und C-Code wechseln, um die Renderlogik Ihrer Komponente zu definieren. Wenn die *.razor-Datei* kompiliert wird, wird die Renderinglogik strukturiert in einer .NET-Klasse erfasst. Der Name der kompilierten Klasse wird dem *.razor-Dateinamen* entnommen. Der Namespace wird aus dem Standardnamespace für das Projekt und den Ordnerpfad `@namespace` entnommen, oder Sie können den Namespace mithilfe der Direktive explizit angeben (mehr zu Razor-Direktiven unten).
+Razor ist eine einfache Markup Vorlagen Sprache, die auf HTML und c# basiert. Mit Razor können Sie nahtlos zwischen Markup und c#-Code wechseln, um die Komponenten Rendering-Logik zu definieren. Wenn die *Razor* -Datei kompiliert wird, wird die Renderinglogik auf strukturierte Weise in einer .NET-Klasse aufgezeichnet. Der Name der kompilierten Klasse stammt aus dem Namen der *Razor* -Datei. Der Namespace wird aus dem Standard Namespace für das Projekt und den Ordner Pfad entnommen, oder Sie können den Namespace mithilfe der `@namespace` -Anweisung explizit angeben (Weitere Informationen zu Razor-Direktiven finden Sie unten).
 
-Die Renderinglogik einer Komponente wird mit normalem HTML-Markup erstellt, wobei die dynamische Logik mit c' hinzugefügt wird. Das `@` Zeichen wird für den Übergang zu C- verwendet. Razor ist in der Regel intelligent, wenn Sie wieder zu HTML gewechselt haben. Die folgende Komponente rendert `<p>` z. B. ein Tag mit der aktuellen Uhrzeit:
+Die Renderinglogik einer Komponente wird mithilfe von normalem HTML-Markup mit dynamischer Logik erstellt, die mit c# hinzugefügt wurde. Das `@` Zeichen wird für den Übergang zu c# verwendet. Razor ist in der Regel intelligent, wenn Sie zu HTML zurück gewechselt haben. Die folgende Komponente rendert z. b `<p>` . ein Tag mit der aktuellen Uhrzeit:
 
 ```razor
 <p>@DateTime.Now</p>
 ```
 
-Um explizit den Anfang und die Endung eines C-Ausdrucks anzugeben, verwenden Sie Klammern:
+Um den Anfang und das Beenden eines c#-Ausdrucks explizit anzugeben, verwenden Sie Klammern:
 
 ```razor
 <p>@(DateTime.Now)</p>
 ```
 
-Razor erleichtert auch die Verwendung des Steuerungsflusses von C- in Ihrer Renderinglogik. Sie können z. B. einige HTML-Codes bedingt wie folgt rendern:
+Razor erleichtert auch die Verwendung der c#-Ablauf Steuerung in ihrer Renderinglogik. Beispielsweise können Sie einige HTML-Code wie folgt bedingt darstellen:
 
 ```razor
 @if (value % 2 == 0)
@@ -49,7 +49,7 @@ Razor erleichtert auch die Verwendung des Steuerungsflusses von C- in Ihrer Rend
 }
 ```
 
-Sie können auch eine Liste von Elementen `foreach` generieren, die eine normale C-Schleife wie folgt verwenden:
+Sie können auch eine Liste von Elementen generieren, indem Sie eine normale `foreach` c#-Schleife wie die folgende verwenden:
 
 ```razor
 <ul>
@@ -60,7 +60,7 @@ Sie können auch eine Liste von Elementen `foreach` generieren, die eine normale
 </ul>
 ```
 
-Razor-Direktiven, wie Direktiven in ASP.NET Web Forms, steuern viele Aspekte, wie eine Razor-Komponente kompiliert wird. Beispiele hierfür sind die Komponenten:
+Razor-Direktiven, wie Direktiven in ASP.net-Web Forms, Steuern viele Aspekte der Kompilierung einer Razor-Komponente. Beispiele hierfür sind:
 
 - Namespace
 - Basisklasse
@@ -69,56 +69,56 @@ Razor-Direktiven, wie Direktiven in ASP.NET Web Forms, steuern viele Aspekte, wi
 - Importierte Namespaces
 - Routen
 
-Razor-Direktiven `@` beginnen mit dem Zeichen und werden in der Regel am Anfang einer neuen Zeile am Anfang der Datei verwendet. Die `@namespace` Direktive definiert z. B. den Namespace der Komponente:
+Razor-Direktiven beginnen `@` mit dem Zeichen und werden in der Regel am Anfang einer neuen Zeile am Anfang der Datei verwendet. Die `@namespace` -Direktive definiert z. b. den-Namespace der Komponente:
 
 ```razor
 @namespace MyComponentNamespace
 ```
 
-In der folgenden Tabelle werden die verschiedenen Razor-Direktiven zusammengefasst, die in Blazor verwendet werden, sowie deren ASP.NET Web Forms-Äquivalente, sofern vorhanden.
+In der folgenden Tabelle werden die verschiedenen Razor-Direktiven, die in blazor verwendet werden, und deren Web Forms ASP.NET-Entsprechungen zusammengefasst, sofern vorhanden
 
-|Direktive    |BESCHREIBUNG|Beispiel|Web Forms-Äquivalent|
+|Direktive    |BESCHREIBUNG|Beispiel|Web Forms Äquivalent|
 |-------------|-----------|-------|--------------------|
-|`@attribute` |Fügt der Komponente ein Attribut auf Klassenebene hinzu|`@attribute [Authorize]`|Keine|
-|`@code`      |Fügt der Komponente Klassenmember hinzu|`@code { ... }`|`<script runat="server">...</script>`|
-|`@implements`|Implementiert die angegebene Schnittstelle|`@implements IDisposable`|Verwenden des CodeBehinds|
+|`@attribute` |Fügt der Komponente ein Attribut auf Klassenebene hinzu.|`@attribute [Authorize]`|Keine|
+|`@code`      |Fügt der Komponente Klassenmember hinzu.|`@code { ... }`|`<script runat="server">...</script>`|
+|`@implements`|Implementiert die angegebene Schnittstelle.|`@implements IDisposable`|Verwenden des CodeBehinds|
 |`@inherits`  |Erbt von der angegebenen Basisklasse|`@inherits MyComponentBase`|`<%@ Control Inherits="MyUserControlBase" %>`|
-|`@inject`    |Injiziert einen Dienst in die Komponente|`@inject IJSRuntime JS`|Keine|
-|`@layout`    |Gibt eine Layoutkomponente für die Komponente an|`@layout MainLayout`|`<%@ Page MasterPageFile="~/Site.Master" %>`|
-|`@namespace` |Legt den Namespace für die Komponente fest|`@namespace MyNamespace`|Keine|
-|`@page`      |Gibt die Route für die Komponente an|`@page "/product/{id}"`|`<%@ Page %>`|
+|`@inject`    |Fügt einen Dienst in die Komponente ein.|`@inject IJSRuntime JS`|Keine|
+|`@layout`    |Gibt eine Layoutkomponente für die Komponente an.|`@layout MainLayout`|`<%@ Page MasterPageFile="~/Site.Master" %>`|
+|`@namespace` |Legt den Namespace für die Komponente fest.|`@namespace MyNamespace`|Keine|
+|`@page`      |Gibt die Route für die Komponente an.|`@page "/product/{id}"`|`<%@ Page %>`|
 |`@typeparam` |Gibt einen generischen Typparameter für die Komponente an.|`@typeparam TItem`|Verwenden des CodeBehinds|
-|`@using`     |Gibt einen Namespace an, der in den Bereich eingebracht werden soll.|`@using MyComponentNamespace`|Hinzufügen von Namespace in *web.config*|
+|`@using`     |Gibt einen Namespace an, der in den Gültigkeitsbereich|`@using MyComponentNamespace`|Namespace in der Datei " *Web. config* " hinzufügen|
 
-Razor-Komponenten verwenden außerdem umfangreiche *Direktivenattribute* für Elemente, um verschiedene Aspekte der Kompilierung von Komponenten zu steuern (Ereignisbehandlung, Datenbindung, Komponenten- & Elementreferenzen usw.). Direktive-Attribute folgen alle einer allgemeinen generischen Syntax, bei der die Werte in Klammern optional sind:
+Razor-Komponenten machen außerdem eine umfassende Verwendung von *direktivenattributen* für Elemente, um verschiedene Aspekte der Kompilierung von Komponenten zu steuern (Ereignis Behandlung, Datenbindung, Verweise auf Komponenten & Elemente usw.). Direktivenattribute folgen allen allgemeinen generischen Syntax, bei der die Werte in Klammern optional sind:
 
 ```razor
 @directive(-suffix(:name))(="value")
 ```
 
-In der folgenden Tabelle werden die verschiedenen Attribute für Razor-Direktiven zusammengefasst, die in Blazor verwendet werden.
+In der folgenden Tabelle werden die verschiedenen Attribute der in blazor verwendeten Razor-Direktiven zusammengefasst.
 
-|Attribut    |BESCHREIBUNG|Beispiel|
+|attribute    |BESCHREIBUNG|Beispiel|
 |-------------|-----------|-------|
-|`@attributes`|Rendert ein Wörterbuch mit Attributen|`<input @attributes="ExtraAttributes" />`|
-|`@bind`      |Erstellt eine zweiseitige Datenbindung    |`<input @bind="username" @bind:event="oninput" />`|
-|`@on{event}` |Fügt einen Ereignishandler für das angegebene Ereignis hinzu|`<button @onclick="IncrementCount">Click me!</button>`|
-|`@key`       |Gibt einen Schlüssel an, der vom Diffingalgorithmus zum Beibehalten von Elementen in einer Auflistung verwendet werden soll.|`<DetailsEditor @key="person" Details="person.Details" />`|
-|`@ref`       |Erfasst einen Verweis auf die Komponente oder das HTML-Element|`<MyDialog @ref="myDialog" />`|
+|`@attributes`|Rendert ein Wörterbuch von Attributen.|`<input @attributes="ExtraAttributes" />`|
+|`@bind`      |Erstellt eine bidirektionale Datenbindung.    |`<input @bind="username" @bind:event="oninput" />`|
+|`@on{event}` |Fügt einen Ereignishandler für das angegebene Ereignis hinzu.|`<button @onclick="IncrementCount">Click me!</button>`|
+|`@key`       |Gibt einen Schlüssel an, der vom diffingalgorithmus zum Beibehalten von Elementen in einer Auflistung verwendet werden soll.|`<DetailsEditor @key="person" Details="person.Details" />`|
+|`@ref`       |Zeichnet einen Verweis auf die Komponente oder das HTML-Element auf.|`<MyDialog @ref="myDialog" />`|
 
-Die verschiedenen Direktivenattribute,`@onclick`die `@bind` `@ref`von Blazor ( , , usw.) verwendet werden, werden in den folgenden Abschnitten und späteren Kapiteln behandelt.
+Die verschiedenen von blazor (`@onclick`, `@bind`, `@ref`usw.) verwendeten Direktivenattribute werden in den Abschnitten unten und in späteren Kapiteln behandelt.
 
-Viele der Syntaxen, die in *.aspx-* und *.ascx-Dateien* verwendet werden, weisen parallele Syntaxen in Razor auf. Im Folgenden finden Sie einen einfachen Vergleich der Syntaxen für ASP.NET Web Forms und Razor.
+Viele der Syntaxen, die in *aspx* -und *ASCX* -Dateien verwendet werden, haben eine parallele Syntax in Razor. Im folgenden finden Sie einen einfachen Vergleich der Syntaxen für ASP.net Web Forms und Razor.
 
 |Funktion                      |Web Forms           |Syntax               |Razor         |Syntax |
 |-----------------------------|--------------------|---------------------|--------------|-------|
 |Anweisungen                   |`<%@ [directive] %>`|`<%@ Page %>`        |`@[directive]`|`@page`|
 |Codeblöcke                  |`<% %>`             |`<% int x = 123; %>` |`@{ }`        |`@{ int x = 123; }`|
-|Ausdrücke<br>(HTML-kodiert)|`<%: %>`            |`<%:DateTime.Now %>` |Implizite:`@`<br>explizit:`@()`|`@DateTime.Now`<br>`@(DateTime.Now)`|
+|Ausdrücke<br>(HTML-codiert)|`<%: %>`            |`<%:DateTime.Now %>` |Verzerrungen`@`<br>Explizite`@()`|`@DateTime.Now`<br>`@(DateTime.Now)`|
 |Kommentare                     |`<%-- --%>`         |`<%-- Commented --%>`|`@* *@`       |`@* Commented *@`|
 |Datenbindung                 |`<%# %>`            |`<%# Bind("Name") %>`|`@bind`       |`<input @bind="username" />`|
 
-Um der Razor-Komponentenklasse Member `@code` hinzuzufügen, verwenden Sie die Direktive. Diese Technik ähnelt der `<script runat="server">...</script>` Verwendung eines Blocks in einem ASP.NET Web Forms-Benutzersteuerelement oder einer Seite.
+Verwenden Sie die `@code` -Direktive, um der Razor-Komponenten Klasse Elemente hinzuzufügen. Dieses Verfahren ähnelt der Verwendung eines `<script runat="server">...</script>` Blocks in einem ASP.net-Web Forms Benutzer Steuerelement oder einer Seite.
 
 ```razor
 @code {
@@ -131,24 +131,24 @@ Um der Razor-Komponentenklasse Member `@code` hinzuzufügen, verwenden Sie die D
 }
 ```
 
-Da Razor auf C-Code basiert, muss es aus einem C-Projekt kompiliert werden (*.csproj*). Sie können *.razor-Dateien* nicht aus einem Visual Basic-Projekt kompilieren (*.vbproj*). Sie können weiterhin auf Visual Basic-Projekte aus Ihrem Blazor-Projekt verweisen. Auch das Gegenteil ist der Fall.
+Da Razor auf c# basiert, muss es in einem c#-Projekt (*. csproj*) kompiliert werden. *Razor* -Dateien können nicht aus einem Visual Basic Projekt (*vbproj*) kompiliert werden. Sie können weiterhin auf Visual Basic Projekte aus Ihrem blazor-Projekt verweisen. Das Gegenteil gilt auch für.
 
-Eine vollständige Razor-Syntaxreferenz finden Sie unter [Razor-Syntaxreferenz für ASP.NET Core](/aspnet/core/mvc/views/razor).
+Eine vollständige Razor-Syntax Referenz finden Sie unter [Razor-Syntax Referenz für ASP.net Core](/aspnet/core/mvc/views/razor).
 
 ## <a name="use-components"></a>Verwenden von Komponenten
 
-Neben normalem HTML können Komponenten auch andere Komponenten als Teil ihrer Renderinglogik verwenden. Die Syntax für die Verwendung einer Komponente in Razor ähnelt der Verwendung eines Benutzersteuerelements in einer ASP.NET Web Forms-App. Komponenten werden mithilfe eines Element-Tags angegeben, das mit dem Typnamen der Komponente übereinstimmt. Sie können z. `Counter` B. eine Komponente wie die folgende hinzufügen:
+Abgesehen von normalem HTML können Komponenten auch andere Komponenten als Teil ihrer Renderinglogik verwenden. Die Syntax für die Verwendung einer Komponente in Razor ähnelt der Verwendung eines Benutzer Steuer Elements in einer ASP.net-Web Forms-app. Komponenten werden mithilfe eines Elementtags angegeben, das mit dem Typnamen der Komponente übereinstimmt. Beispielsweise können Sie eine `Counter` -Komponente wie die folgende hinzufügen:
 
 ```razor
 <Counter />
 ```
 
-Im Gegensatz zu ASP.NET Web Forms, Komponenten in Blazor:
+Im Gegensatz zu ASP.net-Web Forms Komponenten in blazor:
 
-- Verwenden Sie kein Elementpräfix (z. B. `asp:`).
-- Erfordern Sie keine Registrierung auf der Seite oder in der *web.config*.
+- Verwenden Sie kein Element Präfix (z. `asp:`b.).
+- Sie müssen nicht auf der Seite oder in der Datei " *Web. config*" registriert werden.
 
-Denken Sie an Razor-Komponenten wie .NET-Typen, denn genau das sind sie. Wenn auf die Baugruppe verwiesen wird, auf die die Komponente verweist, steht die Komponente zur Verwendung zur Verfügung. Um den Namespace der Komponente in `@using` den Anwendungsbereich zu bringen, wenden Sie die Direktive an:
+Stellen Sie sich die Razor-Komponenten wie .NET-Typen vor, denn das ist genau das, was Sie sind. Wenn auf die Assembly verwiesen wird, die die Komponente enthält, kann die Komponente verwendet werden. Um den Namespace der Komponente in den Gültigkeitsbereich zu `@using` bringen, wenden Sie die-Anweisung an
 
 ```razor
 @using MyComponentLib
@@ -156,9 +156,9 @@ Denken Sie an Razor-Komponenten wie .NET-Typen, denn genau das sind sie. Wenn au
 <Counter />
 ```
 
-Wie in den standardmäßigen Blazor-Projekten gesehen, ist es üblich, Direktiven in eine `@using` *_Imports.razor-Datei* zu setzen, so dass sie in alle *.razor-Dateien* im selben Verzeichnis und in untergeordneten Verzeichnissen importiert werden.
+Wie in den standardmäßigen blazor-Projekten gezeigt, werden Direktiven `@using` häufig in eine *_Imports. Razor* -Datei eingefügt, sodass Sie in alle *Razor* -Dateien im gleichen Verzeichnis und in untergeordneten Verzeichnissen importiert werden.
 
-Wenn sich der Namespace für eine Komponente nicht im Gültigkeitsbereich befindet, können Sie eine Komponente mit ihrem vollständigen Typnamen angeben, wie Sie dies in C':
+Wenn sich der Namespace für eine Komponente nicht im Gültigkeitsbereich befindet, können Sie eine Komponente mit dem vollständigen Typnamen wie in c# angeben:
 
 ```razor
 <MyComponentLib.Counter />
@@ -166,9 +166,9 @@ Wenn sich der Namespace für eine Komponente nicht im Gültigkeitsbereich befind
 
 ## <a name="component-parameters"></a>Komponentenparameter
 
-In ASP.NET Web Forms können Sie Parameter und Daten mithilfe öffentlicher Eigenschaften an Steuerelemente weiterfließen lassen. Diese Eigenschaften können in Markup mithilfe von Attributen oder direkt im Code festgelegt werden. Blazor-Komponenten funktionieren auf ähnliche Weise, obwohl die Komponenteneigenschaften ebenfalls mit dem `[Parameter]` Attribut gekennzeichnet werden müssen, das als Komponentenparameter betrachtet werden soll.
+In ASP.net Web Forms können Sie mithilfe öffentlicher Eigenschaften Parameter und Daten an Steuerelemente weitergeleitet. Diese Eigenschaften können in Markup mithilfe von Attributen festgelegt oder direkt im Code festgelegt werden. Blazor-Komponenten funktionieren in ähnlicher Weise, obwohl die Komponenteneigenschaften auch mit dem `[Parameter]` -Attribut gekennzeichnet werden müssen, um als Komponenten Parameter angesehen zu werden.
 
-Die `Counter` folgende Komponente definiert einen `IncrementAmount` Komponentenparameter namens, der verwendet `Counter` werden kann, um den Betrag anzugeben, der bei jedem Klicken auf die Schaltfläche erhöht werden soll.
+Die folgende `Counter` Komponente definiert einen Komponenten Parameter mit `IncrementAmount` dem Namen, der verwendet werden kann, um den `Counter` Betrag anzugeben, der bei jedem Klicken auf die Schaltfläche erhöht werden soll.
 
 ```razor
 <h1>Counter</h1>
@@ -190,7 +190,7 @@ Die `Counter` folgende Komponente definiert einen `IncrementAmount` Komponentenp
 }
 ```
 
-Um einen Komponentenparameter in Blazor anzugeben, verwenden Sie ein Attribut wie in ASP.NET Web Forms:
+Um einen Komponenten Parameter in blazor anzugeben, verwenden Sie ein Attribut wie in ASP.net Web Forms:
 
 ```razor
 <Counter IncrementAmount="10" />
@@ -198,9 +198,9 @@ Um einen Komponentenparameter in Blazor anzugeben, verwenden Sie ein Attribut wi
 
 ## <a name="event-handlers"></a>Ereignishandler
 
-Sowohl ASP.NET Web Forms als auch Blazor bieten ein ereignisbasiertes Programmiermodell für die Behandlung von UI-Ereignissen. Beispiele für solche Ereignisse sind Schaltflächenklicks und Texteingabe. In ASP.NET Web Forms verwenden Sie HTML-Serversteuerelemente, um UI-Ereignisse zu verarbeiten, die vom DOM verfügbar gemacht werden, oder Sie können Ereignisse verarbeiten, die von Webserversteuerelementen verfügbar gemacht werden. Die Ereignisse werden auf dem Server über Formular-Post-Back-Anforderungen angezeigt. Betrachten Sie die folgende Web Forms Schaltfläche klicken Beispiel:
+Sowohl ASP.net Web Forms als auch blazor stellen ein Ereignis basiertes Programmiermodell für die Behandlung von Benutzeroberflächen Ereignissen bereit. Beispiele für derartige Ereignisse sind Schaltflächen Klicks und Texteingaben. In ASP.net Web Forms verwenden Sie HTML-Server Steuerelemente zur Handhabung von Benutzeroberflächen Ereignissen, die vom DOM verfügbar gemacht werden, oder Sie können Ereignisse behandeln, die von Webserver Steuerelementen verfügbar gemacht werden. Die Ereignisse werden auf dem Server über Formular-POST Back Anforderungen angezeigt. Beachten Sie die folgenden Web Forms Schaltflächen-Click-Beispiel:
 
-*Counter.ascx*
+*Counter. ascx*
 
 ```aspx-csharp
 <asp:Button ID="ClickMeButton" runat="server" Text="Click me!" OnClick="ClickMeButton_Click" />
@@ -218,7 +218,7 @@ public partial class Counter : System.Web.UI.UserControl
 }
 ```
 
-In Blazor können Sie Handler für DOM-UI-Ereignisse direkt `@on{event}`mithilfe von Direktivenattributen des Formulars registrieren. Der `{event}` Platzhalter stellt den Namen des Ereignisses dar. Sie können z. B. auf Schaltflächenklicks wie folgt hören:
+In blazor können Sie Handler für DOM UI-Ereignisse direkt mithilfe von direktivenattributen im Formular `@on{event}`registrieren. Der `{event}` Platzhalter stellt den Namen des Ereignisses dar. Beispielsweise können Sie auf Schaltflächen Klicks wie folgt lauschen:
 
 ```razor
 <button @onclick="OnClick">Click me!</button>
@@ -231,7 +231,7 @@ In Blazor können Sie Handler für DOM-UI-Ereignisse direkt `@on{event}`mithilfe
 }
 ```
 
-Ereignishandler können ein optionales, ereignisspezifisches Argument akzeptieren, um weitere Informationen zum Ereignis bereitzustellen. Mausereignisse können z. `MouseEventArgs` B. ein Argument annehmen, es ist jedoch nicht erforderlich.
+Ereignishandler können ein optionales, Ereignis spezifisches Argument akzeptieren, um weitere Informationen zum Ereignis bereitzustellen. Mausereignisse können z. b. ein `MouseEventArgs` -Argument annehmen, aber es ist nicht erforderlich.
 
 ```razor
 <button @onclick="OnClick">Click me!</button>
@@ -244,7 +244,7 @@ Ereignishandler können ein optionales, ereignisspezifisches Argument akzeptiere
 }
 ```
 
-Anstatt auf eine Methodengruppe für einen Ereignishandler zu verweisen, können Sie einen Lambda-Ausdruck verwenden. Mit einem Lambda-Ausdruck können Sie andere Werte im Gültigkeitsbereich schließen.
+Anstatt auf eine Methoden Gruppe für einen Ereignishandler zu verweisen, können Sie einen Lambda-Ausdruck verwenden. Ein Lambda-Ausdruck ermöglicht es Ihnen, andere Werte im Gültigkeitsbereich zu schließen.
 
 ```razor
 @foreach (var buttonLabel in buttonLabels)
@@ -253,7 +253,7 @@ Anstatt auf eine Methodengruppe für einen Ereignishandler zu verweisen, können
 }
 ```
 
-Ereignishandler können synchron oder asynchron ausgeführt werden. Der folgende `OnClick` Ereignishandler wird z. B. asynchron ausgeführt:
+Ereignishandler können synchron oder asynchron ausgeführt werden. Der folgende `OnClick` Ereignishandler wird z. b. asynchron ausgeführt:
 
 ```razor
 <button @onclick="OnClick">Click me!</button>
@@ -266,7 +266,7 @@ Ereignishandler können synchron oder asynchron ausgeführt werden. Der folgende
 }
 ```
 
-Nachdem ein Ereignis behandelt wurde, wird die Komponente gerendert, um alle Komponentenstatusänderungen zu berücksichtigen. Bei asynchronen Ereignishandlern wird die Komponente unmittelbar nach Abschluss der Handlerausführung gerendert. Die Komponente wird *nach* Abschluss der `Task` Asynchronität wieder gerendert. Dieser asynchrone Ausführungsmodus bietet die Möglichkeit, eine `Task` geeignete Benutzeroberfläche zu rendern, während die asynchrone noch ausgeführt wird.
+Nachdem ein Ereignis behandelt wurde, wird die Komponente gerendert, um alle Änderungen des Komponenten Zustands zu berücksichtigen. Bei asynchronen Ereignis Handlern wird die Komponente unmittelbar nach Abschluss der handlerausführung gerendert. Die Komponente wird *wieder* gerendert, nachdem der `Task` asynchrone Vorgang abgeschlossen wurde. Dieser asynchrone Ausführungs Modus bietet die Möglichkeit, eine geeignete Benutzeroberfläche zu rendereinigen, `Task` während der asynchrone Vorgang noch ausgeführt wird.
 
 ```razor
 <button @onclick="ShowMessage">Get message</button>
@@ -296,7 +296,7 @@ Nachdem ein Ereignis behandelt wurde, wird die Komponente gerendert, um alle Kom
 }
 ```
 
-Komponenten können auch ihre eigenen Ereignisse definieren, `EventCallback<TValue>`indem sie einen Komponentenparameter vom Typ definieren. Ereignisrückrufe unterstützen alle Variationen von DOM UI-Ereignishandlern: optionale Argumente, synchron ezielle oder asynchrone, Methodengruppen oder Lambda-Ausdrücke.
+Komponenten können auch eigene Ereignisse definieren, indem Sie einen Komponenten Parameter vom Typ `EventCallback<TValue>`definieren. Ereignis Rückrufe unterstützen alle Variationen von Dom UI-Ereignis Handlern: optionale Argumente, synchrone oder asynchrone Methoden, Methoden Gruppen oder Lambda-Ausdrücke.
 
 ```razor
 <button class="btn btn-primary" @onclick="OnClick">Click me!</button>
@@ -309,9 +309,9 @@ Komponenten können auch ihre eigenen Ereignisse definieren, `EventCallback<TVal
 
 ## <a name="data-binding"></a>Datenbindung
 
-Blazor bietet einen einfachen Mechanismus zum Binden von Daten aus einer UI-Komponente an den Zustand der Komponente. Dieser Ansatz unterscheidet sich von den Features in ASP.NET Web Forms zum Binden von Daten aus Datenquellen an UI-Steuerelemente. Im Abschnitt [Umgang mit Daten](data.md) werden die Handhabung von Daten aus verschiedenen Datenquellen behandelt.
+Blazor stellt einen einfachen Mechanismus bereit, mit dem Daten aus einer Benutzeroberflächen Komponente an den Status der Komponente gebunden werden können. Diese Vorgehensweise unterscheidet sich von den Features in ASP.net Web Forms für das Binden von Daten aus Datenquellen an UI-Steuerelemente. Im Abschnitt [Umgang mit Daten](data.md) wird die Behandlung von Daten aus verschiedenen Datenquellen behandelt.
 
-Um eine bidirektionade Datenbindung von einer UI-Komponente in `@bind` den Zustand der Komponente zu erstellen, verwenden Sie das Direktive-Attribut. Im folgenden Beispiel ist der Wert des Kontrollkästchens an das `isChecked` Feld gebunden.
+Verwenden Sie zum Erstellen einer bidirektionalen Datenbindung von einer Benutzeroberflächen Komponente zum Status der Komponente `@bind` das direktivenattribut. Im folgenden Beispiel ist der Wert des Kontrollkästchens an das `isChecked` -Feld gebunden.
 
 ```razor
 <input type="checkbox" @bind="isChecked" />
@@ -321,13 +321,13 @@ Um eine bidirektionade Datenbindung von einer UI-Komponente in `@bind` den Zusta
 }
 ```
 
-Wenn die Komponente gerendert wird, wird der Wert `isChecked` des Kontrollkästchens auf den Wert des Felds festgelegt. Wenn der Benutzer das Kontrollkästchen umschaltet, wird `onchange` `isChecked` das Ereignis ausgelöst, und das Feld wird auf den neuen Wert festgelegt. Die `@bind` Syntax in diesem Fall entspricht dem folgenden Markup:
+Wenn die Komponente gerendert wird, wird der Wert des Kontrollkästchens auf den `isChecked` Wert des Felds festgelegt. Wenn der Benutzer das Kontrollkästchen schaltet, wird das `onchange` -Ereignis ausgelöst, und `isChecked` das Feld wird auf den neuen Wert festgelegt. Die `@bind` Syntax in diesem Fall entspricht dem folgenden Markup:
 
 ```razor
 <input value="@isChecked" @onchange="(UIChangeEventArgs e) => isChecked = e.Value" />
 ```
 
-Um das für die Bindung verwendete `@bind:event` Ereignis zu ändern, verwenden Sie das Attribut.
+Verwenden Sie das `@bind:event` -Attribut, um das für die Bindung verwendete Ereignis zu ändern.
 
 ```razor
 <input @bind="text" @bind:event="oninput" />
@@ -338,9 +338,9 @@ Um das für die Bindung verwendete `@bind:event` Ereignis zu ändern, verwenden 
 }
 ```
 
-Komponenten können auch die Datenbindung an ihre Parameter unterstützen. Um Daten bindung, definieren Sie einen Ereignisrückrufparameter mit demselben Namen wie der bindbare Parameter. Das Suffix "Geändert" wird dem Namen hinzugefügt.
+Komponenten können auch die Datenbindung an Ihre Parameter unterstützen. Definieren Sie für die Datenbindung einen Ereignis Rückruf Parameter mit dem gleichen Namen wie der bindbare Parameter. Das Suffix "Changed" wird dem Namen hinzugefügt.
 
-*PasswordBox.razor*
+*PasswordBox. Razor*
 
 ```razor
 Password: <input
@@ -367,9 +367,9 @@ Password: <input
 }
 ```
 
-Um eine Datenbindung an ein zugrunde liegendes UI-Element zu verketten, legen `@bind` Sie den Wert fest, und behandeln Sie das Ereignis direkt im UI-Element, anstatt das Attribut zu verwenden.
+Wenn Sie eine Datenbindung an ein zugrunde liegendes UI-Element verketten möchten, legen Sie den Wert fest, und behandeln Sie das `@bind` Ereignis direkt für das UI-Element, statt das-Attribut
 
-Um eine Bindung an einen `@bind-{Parameter}` Komponentenparameter zu verwenden, verwenden Sie ein Attribut, um den Parameter anzugeben, an den Sie binden möchten.
+Verwenden Sie zum Binden an einen Komponenten Parameter ein `@bind-{Parameter}` -Attribut, um den Parameter anzugeben, an den die Bindung erfolgen soll.
 
 ```razor
 <PasswordBox @bind-Password="password" />
@@ -379,11 +379,11 @@ Um eine Bindung an einen `@bind-{Parameter}` Komponentenparameter zu verwenden, 
 }
 ```
 
-## <a name="state-changes"></a>Zustandsänderungen
+## <a name="state-changes"></a>Statusänderungen
 
-Wenn sich der Status der Komponente außerhalb eines normalen UI-Ereignisses oder Ereignisrückrufs geändert hat, muss die Komponente manuell signalisieren, dass sie erneut gerendert werden muss. Um zu signalisieren, dass sich der `StateHasChanged` Status einer Komponente geändert hat, rufen Sie die Methode für die Komponente auf.
+Wenn sich der Zustand der Komponente außerhalb eines normalen UI-Ereignisses oder Ereignis Rückrufs geändert hat, muss die Komponente manuell signalisieren, dass Sie erneut gerendert werden muss. Um zu signalisieren, dass sich der Status einer Komponente geändert hat `StateHasChanged` , müssen Sie die-Methode für die Komponente aufzurufen.
 
-Im folgenden Beispiel zeigt eine Komponente `AppState` eine Nachricht von einem Dienst an, die von anderen Teilen der App aktualisiert werden kann. Die Komponente registriert `StateHasChanged` ihre `AppState.OnChange` Methode bei dem Ereignis, sodass die Komponente gerendert wird, wenn die Nachricht aktualisiert wird.
+Im folgenden Beispiel zeigt eine Komponente eine Nachricht von einem `AppState` Dienst an, der von anderen Teilen der APP aktualisiert werden kann. Die Komponente registriert die `StateHasChanged` -Methode mit `AppState.OnChange` dem-Ereignis, sodass die Komponente immer dann gerendert wird, wenn die Nachricht aktualisiert wird.
 
 ```csharp
 public class AppState
@@ -416,9 +416,9 @@ public class AppState
 }
 ```
 
-## <a name="component-lifecycle"></a>Komponentenlebenszyklus
+## <a name="component-lifecycle"></a>Komponenten Lebenszyklus
 
-Das ASP.NET Web Forms-Framework verfügt über klar definierte Lebenszyklusmethoden für Module, Seiten und Steuerelemente. Das folgende Steuerelement implementiert beispielsweise Ereignishandler `Init`für `Load`die `UnLoad` Ereignisse , und Lifecycle:
+Das ASP.net Web Forms Framework verfügt über klar definierte Lebenszyklus Methoden für Module, Seiten und Steuerelemente. Das folgende Steuerelement implementiert z. b. Ereignishandler für `Init`das `Load`-, `UnLoad` -und-Lebenszyklus Ereignis:
 
 *Counter.ascx.cs*
 
@@ -431,31 +431,31 @@ public partial class Counter : System.Web.UI.UserControl
 }
 ```
 
-Blazor-Komponenten haben auch einen genau definierten Lebenszyklus. Der Lebenszyklus einer Komponente kann verwendet werden, um den Komponentenstatus zu initialisieren und erweitertes Komponentenverhalten zu implementieren.
+Blazor-Komponenten verfügen auch über einen klar definierten Lebenszyklus. Der Lebenszyklus einer Komponente kann verwendet werden, um den Komponenten Status zu initialisieren und erweiterte Komponenten Verhalten zu implementieren.
 
-Alle Komponentenlebenszyklusmethoden von Blazor verfügen sowohl über synchrone als auch über asynchrone Versionen. Das Komponentenrendering ist synchron. Sie können keine asynchrone Logik als Teil des Komponentenrenderings ausführen. Alle asynchronen Logiken müssen `async` als Teil einer Lebenszyklusmethode ausgeführt werden.
+Alle Komponenten Lebenszyklus-Methoden von blazor haben sowohl synchrone als auch asynchrone Versionen. Das Komponenten Rendering ist synchron. Asynchrone Logik kann nicht als Teil des Komponenten Rendering ausgeführt werden. Alle asynchronen Logik muss als Teil einer `async` Lebenszyklus Methode ausgeführt werden.
 
-### <a name="oninitialized"></a>Oninitialized
+### <a name="oninitialized"></a>Oninitialisiert
 
-Die `OnInitialized` `OnInitializedAsync` und Methoden werden verwendet, um die Komponente zu initialisieren. Eine Komponente wird in der Regel initialisiert, nachdem sie zum ersten Mal gerendert wurde. Nachdem eine Komponente initialisiert wurde, kann sie mehrmals gerendert werden, bevor sie schließlich verworfen wird. Die `OnInitialized` Methode ähnelt `Page_Load` dem Ereignis in ASP.NET Web Forms-Seiten und -Steuerelementen.
+Die `OnInitialized` - `OnInitializedAsync` und-Methoden werden verwendet, um die Komponente zu initialisieren. Eine Komponente wird in der Regel initialisiert, nachdem Sie erstmals gerendert wurde. Nachdem eine Komponente initialisiert wurde, kann Sie mehrmals gerendert werden, bevor Sie schließlich verworfen wird. Die `OnInitialized` -Methode ähnelt dem `Page_Load` -Ereignis in ASP.net Web Forms Seiten und Steuerelemente.
 
 ```csharp
 protected override void OnInitialized() { ... }
 protected override async Task OnInitializedAsync() { await ... }
 ```
 
-### <a name="onparametersset"></a>OnParametersSet
+### <a name="onparametersset"></a>Onparametersset
 
-Die `OnParametersSet` `OnParametersSetAsync` und-Methoden werden aufgerufen, wenn eine Komponente Parameter von ihrem übergeordneten Element empfangen hat und der Wert Eigenschaften zugewiesen ist. Diese Methoden werden nach der Komponenteninitialisierung und *bei jeder Gerederung der Komponente*ausgeführt.
+Die `OnParametersSet` - `OnParametersSetAsync` Methode und die-Methode werden aufgerufen, wenn eine Komponente Parameter von ihrem übergeordneten Element erhalten hat und der Wert Eigenschaften zugewiesen werden. Diese Methoden werden nach der Initialisierung der Komponente und *jedes Mal, wenn die Komponente gerendert wird*, ausgeführt.
 
 ```csharp
 protected override void OnParametersSet() { ... }
 protected override async Task OnParametersSetAsync() { await ... }
 ```
 
-### <a name="onafterrender"></a>OnAfterRender
+### <a name="onafterrender"></a>Onafterrendering
 
-Die `OnAfterRender` `OnAfterRenderAsync` und-Methoden werden aufgerufen, nachdem eine Komponente das Rendern abgeschlossen hat. Element- und Komponentenreferenzen werden an dieser Stelle aufgefüllt (mehr zu diesen Konzepten unten). Die Interaktivität mit dem Browser ist an dieser Stelle aktiviert. Interaktionen mit der DOM- und JavaScript-Ausführung können sicher stattfinden.
+Die `OnAfterRender` - `OnAfterRenderAsync` Methode und die-Methode werden aufgerufen, nachdem eine Komponente das Rendering abgeschlossen hat. Element-und Komponenten Verweise werden an diesem Punkt aufgefüllt (Weitere Informationen zu diesen Konzepten finden Sie unten). Die Interaktivität mit dem Browser ist an diesem Punkt aktiviert. Interaktionen mit der Dom-und JavaScript-Ausführung können problemlos erfolgen.
 
 ```csharp
 protected override void OnAfterRender(bool firstRender)
@@ -474,13 +474,13 @@ protected override async Task OnAfterRenderAsync(bool firstRender)
 }
 ```
 
-`OnAfterRender`und `OnAfterRenderAsync` *werden beim Vorrendern auf dem Server nicht aufgerufen.*
+`OnAfterRender`und `OnAfterRenderAsync` werden *nicht aufgerufen, wenn Sie auf dem Server vorab verwendet*werden.
 
-Der `firstRender` Parameter `true` ist das erste Mal, dass die Komponente gerendert wird. Andernfalls ist `false`sein Wert .
+Der `firstRender` -Parameter `true` ist das erste Mal, wenn die Komponente gerendert wird. Andernfalls ist `false`der Wert.
 
 ### <a name="idisposable"></a>IDisposable
 
-Blazor-Komponenten `IDisposable` können implementiert werden, um Ressourcen zu entsorgen, wenn die Komponente aus der Benutzeroberfläche entfernt wird. Eine Razor-Komponente `IDispose` kann `@implements` mithilfe der Direktive implementiert werden:
+Blazor-Komponenten können `IDisposable` implementieren, um Ressourcen freizugeben, wenn die Komponente aus der Benutzeroberfläche entfernt wird. Eine Razor-Komponente kann `IDispose` mithilfe der `@implements` -Direktive implementiert werden:
 
 ```razor
 @using System
@@ -496,11 +496,11 @@ Blazor-Komponenten `IDisposable` können implementiert werden, um Ressourcen zu 
 }
 ```
 
-## <a name="capture-component-references"></a>Capture-Komponentenreferenzen
+## <a name="capture-component-references"></a>Komponenten Verweise erfassen
 
-In ASP.NET Web Forms ist es üblich, eine Steuerelementinstanz direkt im Code zu bearbeiten, indem auf ihre ID verwiesen wird. In Blazor ist es auch möglich, einen Verweis auf eine Komponente zu erfassen und zu manipulieren, obwohl er viel seltener ist.
+In ASP.net Web Forms ist es üblich, eine Steuerelement Instanz direkt im Code zu bearbeiten, indem Sie sich auf Ihre ID bezieht. In blazor ist es auch möglich, einen Verweis auf eine Komponente zu erfassen und zu bearbeiten, obwohl Sie viel weniger häufig ist.
 
-Um einen Komponentenverweis in Blazor `@ref` zu erfassen, verwenden Sie das Direktive-Attribut. Der Wert des Attributs sollte mit dem Namen eines festsetzbaren Felds mit demselben Typ wie die referenzierte Komponente übereinstimmen.
+Um einen Komponenten Verweis in blazor zu erfassen, verwenden `@ref` Sie das direktivenattribut. Der Wert des-Attributs sollte mit dem Namen eines festleg baren Felds mit dem gleichen Typ wie die Komponente übereinstimmen, auf die verwiesen wird.
 
 ```razor
 <MyLoginDialog @ref="loginDialog" ... />
@@ -515,25 +515,25 @@ Um einen Komponentenverweis in Blazor `@ref` zu erfassen, verwenden Sie das Dire
 }
 ```
 
-Wenn die übergeordnete Komponente gerendert wird, wird das Feld mit der untergeordneten Komponenteninstanz aufgefüllt. Anschließend können Sie Methoden auf der Komponenteninstanz aufrufen oder anderweitig bearbeiten.
+Wenn die übergeordnete Komponente gerendert wird, wird das Feld mit der untergeordneten Komponenteninstanz aufgefüllt. Anschließend können Sie Methoden für die Komponenteninstanz auf oder anderweitig bearbeiten.
 
-Das Bearbeiten des Komponentenstatus direkt mithilfe von Komponentenreferenzen wird nicht empfohlen. Dadurch wird verhindert, dass die Komponente automatisch zum richtigen Zeitpunkt gerendert wird.
+Das direkte Bearbeiten des Komponenten Zustands mithilfe von Komponenten verweisen ist nicht empfehlenswert. Dadurch wird verhindert, dass die Komponente automatisch zu den richtigen Zeitpunkten gerendert wird.
 
-## <a name="capture-element-references"></a>Erfassen von Elementreferenzen
+## <a name="capture-element-references"></a>Element Verweise erfassen
 
-Blazor-Komponenten können Verweise auf ein Element erfassen. Im Gegensatz zu HTML-Serversteuerelementen in ASP.NET Web Forms können Sie das DOM nicht direkt mithilfe eines Elementverweises in Blazor bearbeiten. Blazor verarbeitet die meisten DOM-Interaktionen für Sie mit seinem DOM-Diffing-Algorithmus. Erfasste Elementverweise in Blazor sind undurchsichtig. Sie werden jedoch verwendet, um einen bestimmten Elementverweis in einem JavaScript-Interopaufruf zu übergeben. Weitere Informationen zu JavaScript-Interop finden Sie [unter ASP.NET Core Blazor JavaScript interop](/aspnet/core/blazor/javascript-interop).
+Blazor-Komponenten können Verweise auf ein Element erfassen. Im Gegensatz zu HTML-Server Steuerelementen in ASP.net-Web Forms können Sie das DOM nicht direkt mithilfe eines Element Verweises in blazor manipulieren. Blazor verarbeitet die meisten Dom-Interaktionen für Sie mithilfe des DOM-diffingalgorithmus. Erfasste Element Verweise in blazor sind nicht transparent. Sie werden jedoch verwendet, um einen bestimmten Element Verweis in einem JavaScript-Interop-Befehl zu übergeben. Weitere Informationen zum JavaScript-Interop finden Sie unter [ASP.net Core blazor JavaScript-Interop](/aspnet/core/blazor/javascript-interop).
 
 ## <a name="templated-components"></a>Komponenten mit Vorlagen
 
-In ASP.NET Web Forms können Sie *Vorlagensteuerelemente*erstellen. Vorlagensteuerelemente ermöglichen es dem Entwickler, einen Teil des HTML-Codes anzugeben, der zum Rendern eines Containersteuerelements verwendet wird. Die Mechanismen zum Erstellen von Serversteuerelementen mit Vorlagen sind komplex, ermöglichen jedoch leistungsstarke Szenarien zum benutzerdefinierten Rendern von Daten. Beispiele für Vorlagensteuerelemente sind `Repeater` und `DataList`.
+In ASP.net Web Forms können Sie Steuer *Elemente*mit Vorlagen erstellen. Mithilfe von Vorlagen basierten Steuerelementen kann der Entwickler einen Teil des HTML-Code angeben, der zum Rendering eines Container Steuer Elements verwendet wird. Die Mechanismen der Erstellung von Vorlagen basierten Server Steuerelementen sind komplex, aber Sie ermöglichen leistungsstarke Szenarios zum Rendern von Daten auf Benutzer anpassbare Weise. Beispiele für Steuerelemente mit Vorlagen `Repeater` sind `DataList`und.
 
-Blazor-Komponenten können auch vorlagen, indem `RenderFragment` Komponentenparameter vom Typ oder `RenderFragment<T>`definiert werden. A `RenderFragment` stellt einen Teil des Razor-Markups dar, das dann von der Komponente gerendert werden kann. A `RenderFragment<T>` ist ein Teil des Razor-Markups, das einen Parameter annimmt, der angegeben werden kann, wenn das Renderfragment gerendert wird.
+Blazor-Komponenten können auch durch Definieren von Komponenten Parametern vom Typ `RenderFragment` oder `RenderFragment<T>`Vorlagen Weise durch definiert werden. Ein `RenderFragment` stellt einen Block von Razor-Markup dar, der dann von der Komponente gerendert werden kann. Ein `RenderFragment<T>` ist ein Block von Razor-Markup, das einen Parameter annimmt, der beim Rendern des renderfragments angegeben werden kann.
 
-### <a name="child-content"></a>Kinderinhalte
+### <a name="child-content"></a>Untergeordneter Inhalt
 
-Blazor-Komponenten können ihren untergeordneten Inhalt als untergeordneten `RenderFragment` Inhalt erfassen und diesen Inhalt als Teil des Komponentenrenderings rendern. Um untergeordnete nädenlegenden Inhalt `RenderFragment` zu `ChildContent`erfassen, definieren Sie einen Komponentenparameter des Typs, und benennen Sie ihn .
+Blazor-Komponenten können ihren untergeordneten Inhalt als `RenderFragment` einen erfassen und diesen Inhalt als Teil des Komponenten Rendering rendern. Zum Erfassen von untergeordnetem Inhalt definieren Sie einen Komponenten `RenderFragment` Parameter vom Typ `ChildContent`, und benennen Sie ihn.
 
-*ChildContentComponent.razor*
+*Childcontentcomponent. Razor*
 
 ```razor
 <h1>Component with child content</h1>
@@ -546,7 +546,7 @@ Blazor-Komponenten können ihren untergeordneten Inhalt als untergeordneten `Ren
 }
 ```
 
-Eine übergeordnete Komponente kann dann untergeordneten Inhalt mithilfe der normalen Razor-Syntax bereitstellen.
+Eine übergeordnete Komponente kann dann untergeordneten Inhalt mithilfe von normalem Razor-Syntax bereitstellen.
 
 ```razor
 <ChildContentComponent>
@@ -556,9 +556,9 @@ Eine übergeordnete Komponente kann dann untergeordneten Inhalt mithilfe der nor
 
 ### <a name="template-parameters"></a>Vorlagenparameter
 
-Eine Blazor-Komponente mit Vorlagen kann auch `RenderFragment` `RenderFragment<T>`mehrere Komponentenparameter vom Typ oder definieren. Der Parameter `RenderFragment<T>` für a kann angegeben werden, wenn er aufgerufen wird. Um einen generischen Typparameter für `@typeparam` eine Komponente anzugeben, verwenden Sie die Razor-Direktive.
+Eine vorlagenbasierte blazor-Komponente kann auch mehrere Komponenten Parameter vom Typ `RenderFragment` oder `RenderFragment<T>`definieren. Der-Parameter für `RenderFragment<T>` einen kann angegeben werden, wenn er aufgerufen wird. Um einen generischen Typparameter für eine Komponente anzugeben, verwenden `@typeparam` Sie die Razor-Direktive.
 
-*SimpleListView.razor*
+*Simplelistview. Razor*
 
 ```razor
 @typeparam TItem
@@ -584,14 +584,14 @@ Eine Blazor-Komponente mit Vorlagen kann auch `RenderFragment` `RenderFragment<T
 }
 ```
 
-Bei Verwendung einer Vorlagenkomponente können die Vorlagenparameter mithilfe untergeordneter Elemente angegeben werden, die den Namen der Parameter entsprechen. Komponentenargumente vom `RenderFragment<T>` Typ, der als `context`Elemente übergeben wird, haben einen impliziten Parameter mit dem Namen . Sie können den Namen dieses Implement-Parameters mithilfe des `Context` Attributs für das untergeordnete Element ändern. Alle generischen Typparameter können mithilfe eines Attributs angegeben werden, das mit dem Namen des Typparameters übereinstimmt. Der Typparameter wird nach Möglichkeit abgeleitet:
+Wenn Sie eine auf Vorlagen basierende Komponente verwenden, können die Vorlagen Parameter mit untergeordneten Elementen angegeben werden, die den Namen der Parameter entsprechen. Komponenten Argumente vom Typ `RenderFragment<T>` , die als-Elemente übergeben werden, `context`haben einen impliziten Parameter mit dem Namen Sie können den Namen dieses implementierenden Parameters mithilfe des `Context` -Attributs für das untergeordnete-Element ändern. Alle generischen Typparameter können mithilfe eines Attributs angegeben werden, das mit dem Namen des Typparameters übereinstimmt. Der Typparameter wird nach Möglichkeit abgeleitet:
 
 ```razor
 <SimpleListView Items="messages" TItem="string">
     <Heading>
         <h1>My list</h1>
     </Heading>
-    <ItemTemplate Content="message">
+    <ItemTemplate Context="message">
         <p>The message is: @message</p>
     </ItemTemplate>
 </SimpleListView>
@@ -609,9 +609,9 @@ Die Ausgabe dieser Komponente sieht wie folgt aus:
 
 ## <a name="code-behind"></a>CodeBehind
 
-Eine Blazor-Komponente wird in der Regel in einer einzelnen *.razor-Datei* erstellt. Es ist jedoch auch möglich, Code und Markup mithilfe einer CodeBehind-Datei zu trennen. Um eine Komponentendatei zu verwenden, fügen Sie eine C-Datei hinzu, die mit dem Dateinamen der Komponentendatei übereinstimmt, jedoch mit einer *hinzugefügten .cs-Erweiterung* (*Counter.razor.cs*hinzugefügt wurde). Verwenden Sie die C-Datei, um eine Basisklasse für die Komponente zu definieren. Sie können die Basisklasse nach Bekunden benennen, aber es ist üblich, die Klasse wie `Base` die`CounterBase`Komponentenklasse zu benennen, jedoch mit einer zusätzlichen Erweiterung ( ). Die komponentenbasierte Klasse muss ebenfalls `ComponentBase`von stammen. Fügen Sie dann in der `@inherits` Razor-Komponentendatei die Direktive`@inherits CounterBase`hinzu, um die Basisklasse für die Komponente ( anzugeben).
+Eine blazor-Komponente wird in der Regel in einer einzelnen *Razor* -Datei erstellt. Es ist jedoch auch möglich, den Code und das Markup mithilfe einer Code Behind-Datei zu trennen. Um eine Komponenten Datei zu verwenden, fügen Sie eine c#-Datei hinzu, die mit dem Dateinamen der Komponenten Datei übereinstimmt, jedoch mit einer hinzugefügten Erweiterung *. cs* (*counter.Razor.cs*). Verwenden Sie die c#-Datei, um eine Basisklasse für die Komponente zu definieren. Sie können der Basisklasse einen beliebigen Namen benennen, aber es ist üblich, die Klasse mit der Komponenten Klasse zu benennen, aber mit einer `Base` Erweiterung hinzugefügt (`CounterBase`). Die komponentenbasierte Klasse muss auch von `ComponentBase`abgeleitet werden. Fügen Sie dann in der Razor-Komponenten Datei die `@inherits` -Direktive hinzu, um die Basisklasse für`@inherits CounterBase`die Komponente () anzugeben.
 
-*Counter.razor*
+*Counter. Razor*
 
 ```razor
 @inherits CounterBase
@@ -637,12 +637,12 @@ public class CounterBase : ComponentBase
 }
 ```
 
-Die Sichtbarkeit der Komponentenmember in der Basisklasse muss für die Komponentenklasse sichtbar sein `protected` oder `public` sichtbar sein.
+Die Sichtbarkeit der Komponenten Elemente in der Basisklasse muss oder `protected` `public` sein, um für die Komponenten Klasse sichtbar zu sein.
 
 ## <a name="additional-resources"></a>Zusätzliche Ressourcen
 
-Die vorhergehende ist nicht eine erschöpfende Behandlung aller Aspekte von Blazor Komponenten. Weitere Informationen zum [Erstellen und Verwenden ASP.NET Core Razor-Komponenten](/aspnet/core/blazor/components)finden Sie in der Blazor-Dokumentation.
+Das vorherige ist keine umfassende Behandlung aller Aspekte von blazor-Komponenten. Weitere Informationen zum [Erstellen und Verwenden von ASP.net Core Razor-Komponenten](/aspnet/core/blazor/components)finden Sie in der blazor-Dokumentation.
 
 >[!div class="step-by-step"]
->[VorherigeS](app-startup.md)
+>[Zurück](app-startup.md)
 >[Weiter](pages-routing-layouts.md)
