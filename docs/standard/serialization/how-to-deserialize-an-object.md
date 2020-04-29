@@ -1,5 +1,5 @@
 ---
-title: Deserialisieren eines Objekts mit XmlSerializer
+title: 'Gewusst wie: Deserialisieren eines Objekts mithilfe von XMlSerializer'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 287129c8-035a-4fea-b7b3-4790057ca076
 ms.openlocfilehash: c24ba466a208fe5abdbf565169c41c4ee3f47482
 ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 12/31/2019
 ms.locfileid: "75559897"
 ---
-# <a name="how-to-deserialize-an-object-using-xmlserializer"></a>Deserialisieren eines Objekts mit XmlSerializer
+# <a name="how-to-deserialize-an-object-using-xmlserializer"></a>Gewusst wie: Deserialisieren eines Objekts mithilfe von XMlSerializer
 
 Beim Deserialisieren eines Objekts wird durch das Transportformat festgelegt, ob ein Stream- oder ein Dateiobjekt erstellt wird. Nachdem das Transportformat festgelegt wurde, können Sie je nach Bedarf die <xref:System.Xml.Serialization.XmlSerializer.Serialize%2A>-Methode oder <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A>-Methode aufrufen.
 
@@ -23,7 +23,7 @@ Beim Deserialisieren eines Objekts wird durch das Transportformat festgelegt, ob
 
 1. Erstellen Sie ein <xref:System.Xml.Serialization.XmlSerializer>-Objekt unter Verwendung des zu deserialisierenden Objekttyps.
 
-1. Rufen Sie die <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A>-Methode auf, um ein Replikat des Objekts zu erzeugen. Bei der Deserialisierung müssen Sie das zurückgegebene Objekt in den ursprünglichen Typ umwandeln, wie im folgenden Beispiel gezeigt, das das Objekt aus einer Datei deserialisiert (obwohl es auch aus einem Stream deserialisiert werden kann).
+1. Rufen Sie die <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A>-Methode auf, um ein Replikat des Objekts zu erzeugen. Beim Deserialisieren müssen Sie das zurückgegebene Objekt in den ursprünglichen Objekttyp umwandeln. Dies wird im folgenden Beispiel gezeigt, in dem das Objekt aus einer Datei deserialisiert wird (es könnte aber auch aus einem Stream deserialsiert werden).
 
     ```vb
     ' Construct an instance of the XmlSerializer with the type
@@ -49,4 +49,4 @@ Beim Deserialisieren eines Objekts wird durch das Transportformat festgelegt, ob
 ## <a name="see-also"></a>Siehe auch
 
 - [Einführung in die XML-Serialisierung](introducing-xml-serialization.md)
-- [Vorgehensweise: Serialisieren eines Objekts](how-to-serialize-an-object.md)
+- [How to: Serialisieren eines Objekts](how-to-serialize-an-object.md).

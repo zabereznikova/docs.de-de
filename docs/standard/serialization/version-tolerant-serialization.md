@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: bea0ffe3-2708-4a16-ac7d-e586ed6b8e8d
 ms.openlocfilehash: 9886e2f20ef7954b01ea1f46a9eabdb9ea2cc12d
 ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 12/25/2019
 ms.locfileid: "75348434"
@@ -43,7 +43,7 @@ VTS umfasst die folgenden Funktionen:
 
 Zudem ist eine Funktion zum Deklarieren verfügbar, wenn ein neues optionales Feld hinzugefügt wurde. Es handelt sich hierbei um die <xref:System.Runtime.Serialization.OptionalFieldAttribute.VersionAdded%2A>-Eigenschaft des <xref:System.Runtime.Serialization.OptionalFieldAttribute>-Attributs.
 
-Diese Features werden in den folgenden Abschnitten ausführlicher erläutert.
+Diese Funktionen werden in den folgenden Abschnitten ausführlicher erläutert.
 
 ### <a name="tolerance-of-extraneous-or-unexpected-data"></a>Toleranz für externe oder unerwartete Daten
 
@@ -121,7 +121,7 @@ End Class
 
 Serialisierungsrückrufe stellen einen Mechanismus dar, der an vier Punkten im Serialisierungs-/Deserialisierungsprozess Hooks bereitstellt.
 
-|Attribute|Beim Aufruf der verknüpften Methode|Typische Verwendung|
+|Attribut|Beim Aufruf der verknüpften Methode|Typische Verwendung|
 |---------------|------------------------------------------|-----------------|
 |<xref:System.Runtime.Serialization.OnDeserializingAttribute>|Vor der Deserialisierung.\*|Initialisieren von Standardwerten für optionale Felder.|
 |<xref:System.Runtime.Serialization.OnDeserializedAttribute>|Nach der Deserialisierung.|Korrigieren Sie optionale Feldwerte auf der Grundlage des Inhalts anderer Felder.|
@@ -132,7 +132,7 @@ Serialisierungsrückrufe stellen einen Mechanismus dar, der an vier Punkten im S
 
 #### <a name="using-callbacks"></a>Verwenden von Rückrufen
 
-Zur Verwendung von Rückrufen wenden Sie die entsprechenden Attribute auf eine Methode an, die einen <xref:System.Runtime.Serialization.StreamingContext>-Parameter akzeptiert. Mit jedem dieser Attribute kann nur eine Methode pro Klasse markiert werden. Beispiel:
+Zur Verwendung von Rückrufen wenden Sie die entsprechenden Attribute auf eine Methode an, die einen <xref:System.Runtime.Serialization.StreamingContext>-Parameter akzeptiert. Mit jedem dieser Attribute kann nur eine Methode pro Klasse markiert werden. Zum Beispiel:
 
 ```csharp
 [OnDeserializing]
@@ -151,7 +151,7 @@ End Sub
 
 Diese Methoden sind für die Versionsverwaltung vorgesehen. Während der Deserialisierung wird ein optionales Feld möglicherweise nicht korrekt initialisiert, wenn die Daten für das Feld fehlen. Dies kann korrigiert werden, indem zunächst die Methode erstellt wird, die den richtigen Wert zuordnet, und dann entweder das **OnDeserializingAttribute**- oder **OnDeserializedAttribute**-Attribut auf die Methode angewendet wird.
 
-Im folgenden Beispiel wird die Methode im Kontext eines Typs veranschaulicht. Wenn eine frühere Version einer Anwendung eine Instanz der`Address`-Klasse an eine höhere Version der Anwendung sendet, fehlen Daten im `CountryField`-Feld. Nach der Deserialisierung wird das Feld jedoch auf den Standardwert "Japan" festgelegt.
+Im folgenden Beispiel wird die Methode im Kontext eines Typs veranschaulicht. Wenn eine frühere Version einer Anwendung eine Instanz der`Address`-Klasse an eine höhere Version der Anwendung sendet, fehlen Daten im `CountryField`-Feld. Nach der Deserialisierung wird das Feld jedoch auf den Standardwert „Japan“ festgelegt.
 
 ```csharp
 [Serializable]

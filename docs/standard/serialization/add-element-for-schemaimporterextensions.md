@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: c828a558-094b-441e-9065-790b87315fa0
 ms.openlocfilehash: 4f47623aa305ae6e98625acc3d199a76e27d2ea5
 ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 02/28/2020
 ms.locfileid: "78159935"
 ---
-# <a name="add-element-for-schemaimporterextensions"></a>\<> Element für \<SchemaImporterExtensions hinzufügen >
+# <a name="add-element-for-schemaimporterextensions"></a>\<add>-Element für \<schemaImporterExtensions>
 Fügt Typen hinzu, die von <xref:System.Xml.Serialization.XmlSchemaImporter> verwendet werden, um XSD-Typen .NET Framework-Typen zuzuordnen. Weitere Informationen zu Konfigurationsdateien finden Sie unter [Konfigurationsdateienschema](../../../docs/framework/configure-apps/file-schema/index.md).  
   
  \<configuration>  
@@ -37,7 +37,7 @@ Fügt Typen hinzu, die von <xref:System.Xml.Serialization.XmlSchemaImporter> ver
 |**Typ**|Erforderlich. Gibt die Schemaerweiterungsklasse an, die hinzugefügt werden soll. Der Wert des **type**-Attributs muss sich in einer Zeile befinden und schließt den vollständigen Typnamen enthalten. Wenn die Assembly im globalen Assemblycache (GAC) gespeichert ist, muss außerdem die Version, die Kultur und das Token des öffentlichen Schlüssels der signierten Assembly enthalten sein.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
- Keine.  
+ Keine  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   

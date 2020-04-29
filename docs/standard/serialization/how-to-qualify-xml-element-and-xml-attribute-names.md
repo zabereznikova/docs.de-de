@@ -1,5 +1,5 @@
 ---
-title: Qualifizieren von XML-Element-und XML-Attributnamen
+title: 'Gewusst wie: Qualifizieren von XML-Element- und XML-Attributnamen'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 ms.assetid: 44719f90-7e15-42e8-a9e2-282287e2b5bf
 ms.openlocfilehash: db0795dd83cc96aba49dd435c875e98a9a6c18cb
 ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 02/28/2020
 ms.locfileid: "78159870"
 ---
-# <a name="how-to-qualify-xml-element-and-xml-attribute-names"></a>Qualifizieren von XML-Element-und XML-Attributnamen
+# <a name="how-to-qualify-xml-element-and-xml-attribute-names"></a>Gewusst wie: Qualifizieren von XML-Element- und XML-Attributnamen
 
-XML-Namespaces, die in Instanzen der <xref:System.Xml.Serialization.XmlSerializerNamespaces>-Klasse enthalten sind, müssen der W3C-Spezifikation (World Wide Web Consortium) entsprechen, die als [Namespaces in XML](https://www.w3.org/TR/REC-xml-names/)bezeichnet werden.
+In Instanzen der <xref:System.Xml.Serialization.XmlSerializerNamespaces>-Klasse enthaltene XML-Namespaces müssen der Spezifikation [Namespaces in XML](https://www.w3.org/TR/REC-xml-names/) des World Wide Web Consortium (W3C) entsprechen.
 
 XML-Namespaces stellen eine Methode zur Qualifizierung der Namen von XML-Elementen und XML-Attributen in XML-Dokumenten bereit. Ein qualifizierter Name besteht aus einem Präfix und einem lokalen Namen, die durch einen Doppelpunkt voneinander getrennt sind. Das Präfix wird nur als Platzhalter verwendet und ist einem URI zugeordnet, der den Namespace angibt. Die Kombination aus dem global verwalteten URI-Namespace und dem lokalen Namen bildet einen weltweit garantiert eindeutigen Namen.
 
@@ -169,6 +169,6 @@ public class Price
 - [Einführung in die XML-Serialisierung](introducing-xml-serialization.md)
 - [XmlSerializer-Klasse](xref:System.Xml.Serialization.XmlSerializer)
 - [Attribute zur Steuerung der XML-Serialisierung](attributes-that-control-xml-serialization.md)
-- [Vorgehensweise: Angeben eines alternativen Elementnamens für einen XML-Stream](how-to-specify-an-alternate-element-name-for-an-xml-stream.md)
-- [Vorgehensweise: Serialisieren eines Objekts](how-to-serialize-an-object.md)
-- [Vorgehensweise: Deserialisieren eines Objekts](how-to-deserialize-an-object.md)
+- [How to: Angeben eines alternativen Elementnamens für einen XML-Stream](how-to-specify-an-alternate-element-name-for-an-xml-stream.md).
+- [How to: Serialisieren eines Objekts](how-to-serialize-an-object.md).
+- [How to: Deserialisieren eines Objekts](how-to-deserialize-an-object.md).

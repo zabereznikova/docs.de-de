@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Steuern der Serialisierung abgeleiteter Klassen'
+title: 'Vorgehensweise: Steuern der Serialisierung abgeleiteter Klassen'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,12 +7,12 @@ dev_langs:
 ms.assetid: caa92596-9e15-4d91-acbe-56911ef47a84
 ms.openlocfilehash: af19981fd7cfeda3e8e985fa991fd7fdf2476b42
 ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 02/28/2020
 ms.locfileid: "78159922"
 ---
-# <a name="how-to-control-serialization-of-derived-classes"></a>Gewusst wie: Steuern der Serialisierung abgeleiteter Klassen
+# <a name="how-to-control-serialization-of-derived-classes"></a>Vorgehensweise: Steuern der Serialisierung abgeleiteter Klassen
 Neben der Verwendung des **XmlElementAttribute**-Attributs zum Ändern eines XML-Elementnamens lässt sich die Objektserialisierung auch auf andere Weise anpassen. Sie können den XML-Stream ebenfalls anpassen, indem Sie von einer vorhandenen Klasse ableiten und die <xref:System.Xml.Serialization.XmlSerializer>-Instanz anweisen, wie die neue Klasse serialisiert werden soll.  
   
  Beispielsweise können Sie im Fall einer `Book`-Klasse von dieser Klasse ableiten und eine `ExpandedBook`-Klasse erstellen, die über zusätzliche Eigenschaften verfügt. Sie müssen **XmlSerializer** jedoch anweisen, den abgeleiteten Typ beim Serialisieren oder Deserialisieren zu akzeptieren. Erstellen Sie hierzu eine <xref:System.Xml.Serialization.XmlElementAttribute>-Instanz, und legen Sie deren **Typ**-Eigenschaft auf den Typ der abgeleiteten Klasse fest. Fügen Sie **XmlElementAttribute** zu einer <xref:System.Xml.Serialization.XmlAttributes>-Instanz hinzu. Fügen Sie dann **XmlAttributes** zu einer <xref:System.Xml.Serialization.XmlAttributeOverrides>-Instanz hinzu, und geben Sie dabei sowohl den Typ des zu überschreibenden Objekts als auch den Namen des Members an, der die abgeleitete Klasse akzeptiert. Dies wird im folgenden Beispiel gezeigt.  
@@ -239,5 +239,5 @@ public class Run
 - <xref:System.Xml.Serialization.XmlAttributes>
 - <xref:System.Xml.Serialization.XmlAttributeOverrides>
 - [XML- und SOAP-Serialisierung](../../../docs/standard/serialization/xml-and-soap-serialization.md)
-- [Vorgehensweise: Serialisieren eines Objekts](../../../docs/standard/serialization/how-to-serialize-an-object.md)
-- [Vorgehensweise: Angeben eines alternativen Elementnamens für einen XML-Stream](../../../docs/standard/serialization/how-to-specify-an-alternate-element-name-for-an-xml-stream.md)
+- [How to: Serialisieren eines Objekts](../../../docs/standard/serialization/how-to-serialize-an-object.md)
+- [How to: Angeben eines alternativen Elementnamens für einen XML-Stream](../../../docs/standard/serialization/how-to-specify-an-alternate-element-name-for-an-xml-stream.md)

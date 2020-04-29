@@ -9,7 +9,7 @@ helpviewer_keywords:
 ms.assetid: 51f0edc3-993d-4051-b7f2-77753694d3d1
 ms.openlocfilehash: 2bbdced0f984b653a58afba9685683e8c0891271
 ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 04/15/2020
 ms.locfileid: "81389803"
@@ -17,8 +17,8 @@ ms.locfileid: "81389803"
 # <a name="how-to-use-the-xml-schema-definition-tool-to-generate-classes-and-xml-schema-documents"></a>Vorgehensweise: Generieren von Klassen und XML-Schemadokumenten mit dem XML Schema Definition-Tool
 Mit dem XML-Schema Definition-Tool (Xsd.exe) können Sie ein XML-Schema generieren, das eine Klasse beschreibt, oder die Klasse generieren, die durch ein XML-Schema definiert wird. Die folgenden Verfahren zeigen, wie diese Vorgänge ausgeführt werden.
 
-Das XML-Schemadefinitionstool (Xsd.exe) befindet sich in der Regel im folgenden Pfad:
-_C:\\Programmdateien\\(x86) Microsoft\\\\SDKs\\\\Windows -Version, bin NETFX , Version, Tools\\_
+Das XML-Schemadefinitionstool (Xsd.exe) befindet sich in der Regel im folgenden Pfad:\
+_C:\\Programme (x86)\\Microsoft SDKs\\Windows\\{Version}\\bin\\NETFX {Version} Tools\\_
 
 ### <a name="to-generate-classes-that-conform-to-a-specific-schema"></a>So generieren Sie Klassen, die einem bestimmten Schema entsprechen  
   
@@ -30,7 +30,7 @@ _C:\\Programmdateien\\(x86) Microsoft\\\\SDKs\\\\Windows -Version, bin NETFX , V
     xsd mySchema.xsd  
     ```  
   
-     Das Tool kann nur Schemas verarbeiten, die auf die World Wide Web Consortium-XML-Spezifikation vom 16. März 2001 verweisen. Mit anderen Worten, der XML-Schema-Namespace muss "http://www.w3.org/2001/XMLSchema" sein, wie im folgenden Beispiel gezeigt.  
+     Das Tool kann nur Schemas verarbeiten, die auf die World Wide Web Consortium-XML-Spezifikation vom 16. März 2001 verweisen. Das bedeutet, der XML-Schemanamespace muss „http://www.w3.org/2001/XMLSchema“ sein, wie im folgenden Beispiel gezeigt.  
   
     ```xml  
     <?xml version="1.0" encoding="utf-8"?>  
@@ -55,12 +55,12 @@ _C:\\Programmdateien\\(x86) Microsoft\\\\SDKs\\\\Windows -Version, bin NETFX , V
   
      Das Schema (oder die Schemas) wird/werden ausgegeben und mit Namen im Format "schema0.xsd" fortlaufend benannt.  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Data.DataSet>
 - [Das XML Schema Definition-Tool und die XML-Serialisierung](../../../docs/standard/serialization/the-xml-schema-definition-tool-and-xml-serialization.md)
 - [Einführung in die XML-Serialisierung](../../../docs/standard/serialization/introducing-xml-serialization.md)
-- [XML-Schemadefinitionstool (Xsd.exe)](../../../docs/standard/serialization/xml-schema-definition-tool-xsd-exe.md)
+- [XML Schema Definition-Tool (Xsd.exe)](../../../docs/standard/serialization/xml-schema-definition-tool-xsd-exe.md)
 - <xref:System.Xml.Serialization.XmlSerializer>
-- [Vorgehensweise: Serialisieren eines Objekts](../../../docs/standard/serialization/how-to-serialize-an-object.md)
-- [Vorgehensweise: Deserialisieren eines Objekts](../../../docs/standard/serialization/how-to-deserialize-an-object.md)
+- [How to: Serialisieren eines Objekts](../../../docs/standard/serialization/how-to-serialize-an-object.md)
+- [How to: Deserialisieren eines Objekts](../../../docs/standard/serialization/how-to-deserialize-an-object.md)

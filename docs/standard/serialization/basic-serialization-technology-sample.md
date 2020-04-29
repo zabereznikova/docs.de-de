@@ -4,7 +4,7 @@ ms.date: 03/30/2017
 ms.assetid: 9d824e16-08d1-4a36-bc7f-2388c1f75f34
 ms.openlocfilehash: e5dcc9ec7cf6f996c97262b14020552286c530da
 ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 09/27/2019
 ms.locfileid: "71353140"
@@ -72,11 +72,11 @@ In der folgenden Aufzählung werden die in diesem Beispiel verwendeten Klassen u
 
 - Laufzeitserialisierung
 
-  - <xref:System.Runtime.Serialization.IFormatter>, um entweder auf ein <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> oder ein <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>-Objekt zu verweisen.
+  - <xref:System.Runtime.Serialization.IFormatter> Wird verwendet, um auf ein <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>-Objekt oder ein <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>-Objekt zu verweisen.
 
-  - <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> wird verwendet, um eine verknüpfte Liste in einen Stream in einem binären Format zu serialisieren. Die Binärformatierung verwendet ein Format, das nur der <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>-Typ versteht. Die Daten sind jedoch präzise.
+  - <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> Wird verwendet, um eine verknüpfte Liste in einen Stream in einem binären Format zu serialisieren. Die Binärformatierung verwendet ein Format, das nur der <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>-Typ versteht. Die Daten sind jedoch präzise.
 
-  - <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>, das verwendet wird, um eine verknüpfte Liste in einen Stream im SOAP-Format zu serialisieren. SOAP ist ein Standardformat.
+  - <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> Wird verwendet, um eine verknüpfte Liste in einen Stream im SOAP-Format zu serialisieren. SOAP ist ein Standardformat.
 
 - Stream-E/A
 

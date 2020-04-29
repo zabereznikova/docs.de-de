@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: eec46337-9696-435b-a375-dc5effae6992
 ms.openlocfilehash: 17ad1b4b5eae38a4f1dc90e154841b1315dea1b2
 ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74349774"
@@ -74,7 +74,7 @@ private void SerializeDataSet(string filename){
 
 ## <a name="serializing-an-xmlelement-and-xmlnode"></a>Serialisieren von XmlElement und XmlNode
 
-Sie können auch Instanzen einer <xref:System.Xml.XmlElement> oder <xref:System.Xml.XmlNode> Klasse serialisieren, wie im folgenden Codebeispiel gezeigt.
+Sie können auch Instanzen einer <xref:System.Xml.XmlElement>-Klasse oder <xref:System.Xml.XmlNode>-Klasse serialisieren, wie im folgenden Codebeispiel gezeigt.
 
 ```vb
 private Sub SerializeElement(filename As String)
@@ -369,7 +369,7 @@ In diesem Beispiel wird eine Klasse namens `PurchaseOrder` serialisiert und dann
 
 Durch die `CreatePO`-Methode werden das `PurchaseOrder`-Klassenobjekt, das `Address`-Klassenobjekt und das `OrderedItem` Klassenobjekt erstellt und die Werte für die öffentlichen Felder festgelegt. Die Methode erstellt außerdem eine Instanz der <xref:System.Xml.Serialization.XmlSerializer>-Klasse, die zum Serialisierenn und Deserialisieren des `PurchaseOrder`-Objekts verwendet wird. Beachten Sie, dass der Typ der Klasse, die serialisiert wird, durch den Code an den Konstruktor übergeben wird. Zudem wird durch den Code ein `FileStream` erstellt, mit dem der XML-Stream in ein XML-Dokument geschrieben wird.
 
-Die `ReadPo`-Methode ist etwas einfacher. Sie erstellt nur Objekte, die deserialisiert werden sollen, und liest ihre Werte aus. Wie bei der `CreatePo`-Methode müssen Sie zunächst eine <xref:System.Xml.Serialization.XmlSerializer>erstellen und dabei den Typ der Klasse, die deserialisiert werden soll, an den-Konstruktor übergeben. Zum Lesen des XML-Dokuments ist zudem ein <xref:System.IO.FileStream>-Objekt erforderlich. Um die Objekte zu deserialisieren, rufen Sie die <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A>-Methode mit dem <xref:System.IO.FileStream>-Objekt als Argument auf. Das deserialisierte Objekt muss in eine Objektvariable des Typs `PurchaseOrder` umgewandelt werden. Im Code werden dann die Werte der deserialisierten `PurchaseOrder`-Objektvariablen gelesen. Beachten Sie, dass Sie auch die Datei PO.xml lesen können, die zur Darstellung der tatsächlichen XML-Ausgabe erstellt wurde.
+Die `ReadPo`-Methode ist etwas einfacher. Sie erstellt nur Objekte, die deserialisiert werden sollen, und liest ihre Werte aus. Wie bei der `CreatePo`-Methode müssen Sie zunächst eine <xref:System.Xml.Serialization.XmlSerializer>-Instanz erstellen und den Typ der zu deserialisierenden Klasse an den Konstruktor übergeben. Zum Lesen des XML-Dokuments ist zudem ein <xref:System.IO.FileStream>-Objekt erforderlich. Um die Objekte zu deserialisieren, rufen Sie die <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A>-Methode mit dem <xref:System.IO.FileStream>-Objekt als Argument auf. Das deserialisierte Objekt muss in eine Objektvariable des Typs `PurchaseOrder` umgewandelt werden. Im Code werden dann die Werte der deserialisierten `PurchaseOrder`-Objektvariablen gelesen. Beachten Sie, dass Sie auch die Datei PO.xml lesen können, die zur Darstellung der tatsächlichen XML-Ausgabe erstellt wurde.
 
 ```vb
 Imports System.IO
@@ -773,5 +773,5 @@ Die XML-Ausgabe könnte wie folgt aussehen.
 - [Steuern der XML-Serialisierung mit Attributen](controlling-xml-serialization-using-attributes.md)
 - [Attribute zur Steuerung der XML-Serialisierung](attributes-that-control-xml-serialization.md)
 - [XmlSerializer-Klasse](xref:System.Xml.Serialization.XmlSerializer)
-- [Vorgehensweise: Serialisieren eines Objekts](how-to-serialize-an-object.md)
-- [Vorgehensweise: Deserialisieren eines Objekts](how-to-deserialize-an-object.md)
+- [How to: Serialisieren eines Objekts](how-to-serialize-an-object.md).
+- [How to: Deserialisieren eines Objekts](how-to-deserialize-an-object.md).
