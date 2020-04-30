@@ -14,14 +14,14 @@
       href: install/runtime.md
     - name: Unterstütztes Betriebssystem und Abhängigkeiten
       href: install/dependencies.md
+    - name: Verwalten von .NET-Vorlagen
+      href: install/templates.md
     - name: Probleme mit der macOS-Notarisierung
       href: install/macos-notarization-issues.md
     - name: Überprüfung von .NET Core-Versionen
       href: install/how-to-detect-installed-versions.md
     - name: Linux-Paket-Manager
       items:
-        - name: "Ubuntu\_20.04"
-          href: install/linux-package-manager-ubuntu-2004.md
         - name: Ubuntu 19.10
           href: install/linux-package-manager-ubuntu-1910.md
         - name: Ubuntu 19.04

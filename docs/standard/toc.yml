@@ -488,7 +488,11 @@
     - name: Threadsichere Sammlungen
       href: collections/thread-safe/
 - name: Numerische Ausdrücke in .NET
-  href: numerics.md
+  items:
+    - name: Übersicht
+      href: numerics.md
+    - name: SIMD-fähige Typen
+      href: simd.md
 - name: 'Datumsangaben, Uhrzeiten und Zeitzonen'
   href: datetime/
 - name: Ereignisse
