@@ -2,14 +2,14 @@
 title: Sicherheitsvalidierung
 ms.date: 03/30/2017
 ms.assetid: 48dcd496-0c4f-48ce-8b9b-0e25b77ffa58
-ms.openlocfilehash: d635ae72b71df18934acd1016ac3e799d2c4aea1
-ms.sourcegitcommit: 839777281a281684a7e2906dccb3acd7f6a32023
+ms.openlocfilehash: 90d335f32c43ecf575c69cf800ab69bee05f39ee
+ms.sourcegitcommit: 7370aa8203b6036cea1520021b5511d0fd994574
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82140505"
+ms.lasthandoff: 05/02/2020
+ms.locfileid: "82728384"
 ---
-# <a name="security-validation"></a>Sicherheitsvalidierung
+# <a name="security-validation"></a>Sicherheitsüberprüfung
 Dieses Beispiel veranschaulicht die Verwendung eines benutzerdefinierten Verhaltens, mit dem Dienste auf einem Computer überprüft werden, um sicherzustellen, dass sie bestimmte Kriterien erfüllen. In diesem Beispiel werden Dienste vom benutzerdefinierten Verhalten überprüft, indem jeder Endpunkt im Dienst gescannt und dahingehend überprüft wird, ob er sichere Bindungselemente enthält. Dieses Beispiel basiert [auf den ersten](../../../../docs/framework/wcf/samples/getting-started-sample.md)Schritten.  
   
 > [!NOTE]
@@ -78,9 +78,9 @@ public void Validate(ServiceDescription serviceDescription,
 > [!NOTE]
 > Beim Hinzufügen von Verhalten zu allen Diensten wird empfohlen, vorher die Datei Machine.config zu sichern.  
   
- Führen Sie nun den Client aus dem Verzeichnis client\bin dieses Beispiels aus. Es tritt eine Ausnahme mit der folgenden Meldung auf: "der angeforderte Diensthttp://localhost/servicemodelsamples/service.svckonnte nicht aktiviert werden." Dies ist zu erwarten, da das Endpunktvalidierungsverhalten einen Endpunkt als unsicher betrachtet und verhindert, dass der Dienst startet. Außerdem löst das Verhalten eine interne Ausnahme aus, die beschreibt, welcher Endpunkt unsicher ist, und schreibt eine Nachricht für die Ereignisanzeige unter der Quelle "System.ServiceModel 4.0.0.0" und der Kategorie "WebHost". Es ist auch möglich, für den Dienst aus diesem Beispiel die Ablaufverfolgung einzuschalten. Dadurch wird dem Benutzer ermöglicht, die vom Endpunktvalidierungsverhalten ausgelösten Ausnahmen anzuzeigen, indem er die resultierenden Dienstablaufverfolgungen mit dem Service Trace Viewer öffnet.  
+ Führen Sie nun den Client aus dem Verzeichnis client\bin dieses Beispiels aus. Eine Ausnahme wird mit der folgenden Meldung ausgelöst: "der angeforderte Dienst,http://localhost/servicemodelsamples/service.svc' ' konnte nicht aktiviert werden." Dies ist zu erwarten, da das Endpunktvalidierungsverhalten einen Endpunkt als unsicher betrachtet und verhindert, dass der Dienst startet. Außerdem löst das Verhalten eine interne Ausnahme aus, die beschreibt, welcher Endpunkt unsicher ist, und schreibt eine Nachricht für die Ereignisanzeige unter der Quelle "System.ServiceModel 4.0.0.0" und der Kategorie "WebHost". Es ist auch möglich, für den Dienst aus diesem Beispiel die Ablaufverfolgung einzuschalten. Dadurch wird dem Benutzer ermöglicht, die vom Endpunktvalidierungsverhalten ausgelösten Ausnahmen anzuzeigen, indem er die resultierenden Dienstablaufverfolgungen mit dem Service Trace Viewer öffnet.  
   
-#### <a name="to-view-failed-endpoint-validation-exception-messages-in-the-event-viewer"></a>So zeigen Sie Ausnahmemeldungen von fehlgeschlagenen Endpunktvalidierungen in der Ereignisanzeige an  
+### <a name="view-failed-endpoint-validation-exception-messages-in-the-event-viewer"></a>Anzeigen fehlerhafter Endpunkt Validierungs Ausnahme Meldungen im Ereignisanzeige  
   
 1. Klicken Sie **auf das** Startmenü, und wählen Sie **ausführen...** aus.  
   
@@ -90,7 +90,7 @@ public void Validate(ServiceDescription serviceDescription,
   
 4. Doppelklicken Sie auf das kürzlich hinzugefügte Ereignis "System. Service Model 4.0.0.0" unter der Kategorie "Webhost" im **Anwendungs** Fenster, um unsichere Endpunkt Nachrichten anzuzeigen.  
   
-#### <a name="to-set-up-build-and-run-the-sample"></a>So können Sie das Beispiel einrichten, erstellen und ausführen  
+## <a name="set-up-build-and-run-the-sample"></a>Einrichten, erstellen und Ausführen des Beispiels  
   
 1. Stellen Sie sicher, dass Sie das [einmalige Setup Verfahren für die Windows Communication Foundation Beispiele](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)ausgeführt haben.  
   
@@ -107,6 +107,6 @@ public void Validate(ServiceDescription serviceDescription,
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\ServiceValidation`  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [AppFabric-Überwachungsbeispiele](https://docs.microsoft.com/previous-versions/appfabric/ff383407(v=azure.10))

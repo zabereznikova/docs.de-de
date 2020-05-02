@@ -2,12 +2,12 @@
 title: Beispiel für Ermittlungssicherheit
 ms.date: 03/30/2017
 ms.assetid: b8db01f4-b4a1-43fe-8e31-26d4e9304a65
-ms.openlocfilehash: 94de324469d0d649a184dec5847e1a5c4cbba2cc
-ms.sourcegitcommit: 839777281a281684a7e2906dccb3acd7f6a32023
+ms.openlocfilehash: 44022ee756f189347aaec606427ecb3c4c5ffa95
+ms.sourcegitcommit: 7370aa8203b6036cea1520021b5511d0fd994574
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82141158"
+ms.lasthandoff: 05/02/2020
+ms.locfileid: "82728420"
 ---
 # <a name="discovery-security-sample"></a>Beispiel für Ermittlungssicherheit
 
@@ -16,7 +16,7 @@ Die Discovery-Spezifikation erfordert nicht, dass Endpunkte, die am Suchvorgang 
  Der benutzerdefinierte Kanal wird an die oberste Stelle des vorhandenen Kanalstapels für Ermittlungs- und Ankündigungsendpunkte gesetzt. Auf diese Weise wird ein Signaturheader für jede gesendete Meldung übernommen. Die Signatur wird im Hinblick auf empfangene Meldungen überprüft. Wenn die Signatur nicht übereinstimmt oder die Meldungen nicht über eine Signatur verfügen, werden sie verworfen. Im Beispiel werden Zertifikate verwendet, um Meldungen zu signieren und zu überprüfen.  
   
 ## <a name="discussion"></a>Diskussion  
- WCF ist sehr erweiterbar und gibt Benutzern die Möglichkeit, Kanäle wie gewünscht anzupassen. Im Beispiel wird ein sicheres Ermittlungsbindungselement implementiert, mit dem sichere Kanäle erstellt werden. Die sicheren Kanäle wenden Meldungssignaturen an und überprüfen diese. Sie werden an die oberste Stelle des aktuellen Stapels übernommen.  
+ WCF ist erweiterbar und ermöglicht den Benutzern die Möglichkeit, Kanäle wie gewünscht anzupassen. Im Beispiel wird ein sicheres Ermittlungsbindungselement implementiert, mit dem sichere Kanäle erstellt werden. Die sicheren Kanäle wenden Meldungssignaturen an und überprüfen diese. Sie werden an die oberste Stelle des aktuellen Stapels übernommen.  
   
  Mit dem sicheren Bindungselement werden sichere Kanalfactorys und Kanallistener erstellt.  
   
@@ -40,7 +40,7 @@ Die Discovery-Spezifikation erfordert nicht, dass Endpunkte, die am Suchvorgang 
   
  Im Beispiel werden die erweiterten Signaturelemente bestimmt, um die Signatur zu berechnen. Wie in der WS-Discovery-Spezifikation gefordert, wird eine XML-Signatur (`SignedInfo`) mit dem `ds`-Namespacepräfix erstellt. In der Signatur wird auf den Text und auf alle Header in Ermittlungs- und Adressierungsnamespaces verwiesen, damit diese nicht manipuliert werden können. Jedes referenzierte Element wird mit der exklusiven Kanonisierung (http://www.w3.org/2001/10/xml-exc-c14n# ) transformiert, und dann wird ein SHA-1-Digestwert (http://www.w3.org/2000/09/xmldsig#sha1 ) berechnet. Basierend auf allen referenzierten Elementen und deren Digest-Werten wird der Signatur Wert mithilfe des RSA-Algorithmushttp://www.w3.org/2000/09/xmldsig#rsa-sha1 () berechnet.  
   
- Die Meldungen werden mit einem vom Client angegebenen Zertifikat signiert. Bei der Erstellung des Bindungselements müssen Speicherort, Name und Zertifikatantragstellername angegeben werden. Die `KeyId` in der kompakten Signatur stellt den Schlüsselbezeichner des Signaturtokens dar und ist die Schlüsselkennung des Antragstellers (SKI) des Signaturtokens oder, wenn der SKI nicht vorhanden ist, ein SHA-1-Hash des öffentlichen Schlüssels des Signaturtokens.  
+ Die Meldungen werden mit einem vom Client angegebenen Zertifikat signiert. Der Speicherort, der Name und der Name des Zertifikat Antragstellers müssen angegeben werden, wenn das Bindungs Element erstellt wird. Die `KeyId` in der kompakten Signatur stellt den Schlüsselbezeichner des Signaturtokens dar und ist die Schlüsselkennung des Antragstellers (SKI) des Signaturtokens oder, wenn der SKI nicht vorhanden ist, ein SHA-1-Hash des öffentlichen Schlüssels des Signaturtokens.  
   
 ## <a name="secure-channel-listener"></a>Sicherer Kanallistener  
  Der sichere Kanallistener erstellt Eingabe- oder Duplexkanäle, die die kompakte Signatur in empfangenen Meldungen überprüfen. Um die Signatur zu überprüfen, wird die `KeyId` verwendet, die in der an die Meldung angefügten kompakten Signatur angegeben ist, um ein Zertifikat aus dem angegebenen Speicher auszuwählen. Wenn die Meldung über keine Signatur verfügt oder die Signaturüberprüfung nicht erfolgreich ist, werden die Meldungen verworfen. Im Beispiel wird zur Verwendung der sicheren Bindung eine Factory definiert, mit der benutzerdefinierte <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> und <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint> mit dem zusätzlichen sicheren Ermittlungsbindungselement erstellt werden. Diese sicheren Endpunkte können in Discovery-Ankündigungslistenern und erkennbaren Diensten verwendet werden.  

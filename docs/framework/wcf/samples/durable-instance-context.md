@@ -2,12 +2,12 @@
 title: Permanenter Instanzkontext
 ms.date: 03/30/2017
 ms.assetid: 97bc2994-5a2c-47c7-927a-c4cd273153df
-ms.openlocfilehash: 604a617dc03bf06b71fe3019b58b2161216ee3e0
-ms.sourcegitcommit: 839777281a281684a7e2906dccb3acd7f6a32023
+ms.openlocfilehash: d70617fef7ebe0a94e22e858ee403d5d4f1840e3
+ms.sourcegitcommit: 7370aa8203b6036cea1520021b5511d0fd994574
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82141187"
+ms.lasthandoff: 05/02/2020
+ms.locfileid: "82728410"
 ---
 # <a name="durable-instance-context"></a>Permanenter Instanzkontext
 
@@ -18,9 +18,9 @@ In diesem Beispiel wird veranschaulicht, wie die Windows Communication Foundatio
 
 Dieses Beispiel umfasst die Erweiterung der Kanal Schicht und der Dienstmodell Ebene von WCF. Deshalb ist es notwendig, das zugrunde liegenden Konzept zu verstehen, bevor Sie sich mit den Implementierungsdetails beschäftigen.
 
-Permanente Instanzkontexte sind sehr häufig in realen Szenarios anzutreffen. Eine Warenkorb-Anwendung kann beispielsweise unterbrochen und am nächsten Tag fortgesetzt werden. Wenn der Warenkorb am nächsten Tag geöffnet wird, wird der ursprüngliche Kontext wiederhergestellt. Es ist jedoch unbedingt zu beachten, dass die Warenkorb-Anwendung (auf dem Server) nicht die Warenkorb-Instanz beibehält, während die Verbindung zum Server getrennt ist. Sie behält vielmehr ihren Zustand in einem permanenten Speichermedium bei und verwendet diesen Zustand, wenn eine neue Instanz für den wiederhergestellten Kontext erstellt wird. Aus diesem Grund handelt es sich bei der Dienstinstanz, die möglicherweise für denselben Kontext dient, nicht um dieselbe Instanz wie die vorherige Instanz (d. h. sie hat nicht dieselbe Speicheradresse).
+Permanente Instanzkontexte sind sehr häufig in realen Szenarios anzutreffen. Eine Einkaufswagen Anwendung hat beispielsweise die Möglichkeit, den Einkauf an einem anderen Tag in der Mitte anzuhalten und fortzufahren. Wenn der Warenkorb am nächsten Tag geöffnet wird, wird der ursprüngliche Kontext wiederhergestellt. Es ist jedoch unbedingt zu beachten, dass die Warenkorb-Anwendung (auf dem Server) nicht die Warenkorb-Instanz beibehält, während die Verbindung zum Server getrennt ist. Sie behält vielmehr ihren Zustand in einem permanenten Speichermedium bei und verwendet diesen Zustand, wenn eine neue Instanz für den wiederhergestellten Kontext erstellt wird. Aus diesem Grund handelt es sich bei der Dienstinstanz, die möglicherweise für denselben Kontext dient, nicht um dieselbe Instanz wie die vorherige Instanz (d. h. sie hat nicht dieselbe Speicheradresse).
 
-Permanenter Instanzkontext wird durch ein kleines Protokoll ermöglicht, das eine Kontext-ID zwischen dem Client und dem Dienst austauscht. Diese Kontext-ID wird auf dem Client erstellt und zum Dienst übertragen. Wenn die Dienstinstanz erstellt wird, versucht die Dienstlaufzeit den beibehaltenen Zustand zu laden, der dieser Kontext-ID aus einer permanenten Speicherung entspricht (standardmäßig ist es eine SQL Server 2005-Datenbank). Wenn kein Zustand verfügbar ist, liegt die neue Instanz in ihrem Standardzustand vor. Die Dienstimplementierung verwendet ein benutzerdefiniertes Attribut, um Vorgänge zu kennzeichnen, die den Zustand der Dienstimplementierung ändern. Die Laufzeit kann dadurch die Dienstinstanz speichern, nachdem die Vorgänge aufgerufen wurden.
+Permanenter Instanzkontext wird durch ein kleines Protokoll ermöglicht, das eine Kontext-ID zwischen dem Client und dem Dienst austauscht. Diese Kontext-ID wird auf dem Client erstellt und zum Dienst übertragen. Wenn die Dienstinstanz erstellt wird, versucht die Dienstlaufzeit den beibehaltenen Zustand zu laden, der dieser Kontext-ID aus einer permanenten Speicherung entspricht (standardmäßig ist es eine SQL Server 2005-Datenbank). Wenn kein Status verfügbar ist, hat die neue Instanz ihren Standardzustand. Die Dienstimplementierung verwendet ein benutzerdefiniertes Attribut, um Vorgänge zu kennzeichnen, die den Zustand der Dienstimplementierung ändern. Die Laufzeit kann dadurch die Dienstinstanz speichern, nachdem die Vorgänge aufgerufen wurden.
 
 Anhand der vorangegangenen Beschreibung können leicht zwei Schritte bestimmt werden, um das Ziel zu erreichen:
 
@@ -28,11 +28,11 @@ Anhand der vorangegangenen Beschreibung können leicht zwei Schritte bestimmt we
 
 2. Ändern Sie das lokale Verhalten des Diensts, um die benutzerdefinierte Instanziierungslogik zu implementieren.
 
-Da der erste aufgeführte Schritt die gesendete Nachricht betrifft, sollte er als ein benutzerdefinierter Kanal implementiert und mit der Kanalschicht verknüpft werden. Der zweite Schritt beeinflusst nur das lokale Verhalten des Diensts und kann deshalb durch das Erweitern mehrerer Diensterweiterungspunkte implementiert werden. In den nächsten Abschnitten wird jede dieser Erweiterungen erläutert.
+Da sich der erste in der Liste auf die Nachrichten bei der Übertragung auswirkt, sollte er als benutzerdefinierter Kanal implementiert und mit der Kanal Schicht verknüpft werden. Der zweite Schritt beeinflusst nur das lokale Verhalten des Diensts und kann deshalb durch das Erweitern mehrerer Diensterweiterungspunkte implementiert werden. In den nächsten Abschnitten wird jede dieser Erweiterungen erläutert.
 
 ## <a name="durable-instancecontext-channel"></a>Permanenter InstanceContext-Kanal
 
-Als erstes wird eine Kanalschichterweiterung betrachtet. Der erste Schritt beim Schreiben eines benutzerdefinierten Kanals besteht darin, die Kommunikationsstruktur des Kanals festzulegen. Da ein neues Versandprotokoll eingeführt wird, sollte der Kanal mit fast allen anderen Kanälen im Kanalstapel funktionieren. Deshalb sollte es alle Nachrichtenaustauschmuster unterstützen. Die Kernfunktionalität des Kanals ändert sich jedoch nicht, unabhängig von seiner Kommunikationsstruktur. Genauer gesagt sollte der Kanal vom Client die Kontext-ID in die Nachrichten schreiben und vom Dienst sollte er diese Kontext-ID aus den Nachrichten lesen und an die höheren Ebenen weiterleiten. Aus diesem Grund wird eine `DurableInstanceContextChannelBase`-Klasse erstellt, die als die abstrakte Basisklasse für alle Implementierungen von permanenten Instanzkontext-Kanälen handelt. Diese Klasse enthält die allgemeinen Computerverwaltungsfunktionen und zwei geschützte Member, um die Kontextinformationen auf Nachrichten anzuwenden und von ihnen zu lesen.
+Als erstes wird eine Kanalschichterweiterung betrachtet. Der erste Schritt beim Schreiben eines benutzerdefinierten Kanals besteht darin, die Kommunikationsstruktur des Kanals festzulegen. Wenn ein neues Wire-Protokoll eingeführt wird, sollte der Kanal mit fast allen anderen Kanälen im Kanal Stapel funktionieren. Deshalb sollte es alle Nachrichtenaustauschmuster unterstützen. Die Kernfunktionalität des Kanals ändert sich jedoch nicht, unabhängig von seiner Kommunikationsstruktur. Genauer gesagt sollte der Kanal vom Client die Kontext-ID in die Nachrichten schreiben und vom Dienst sollte er diese Kontext-ID aus den Nachrichten lesen und an die höheren Ebenen weiterleiten. Aus diesem Grund wird eine `DurableInstanceContextChannelBase`-Klasse erstellt, die als die abstrakte Basisklasse für alle Implementierungen von permanenten Instanzkontext-Kanälen handelt. Diese Klasse enthält die allgemeinen Computerverwaltungsfunktionen und zwei geschützte Member, um die Kontextinformationen auf Nachrichten anzuwenden und von ihnen zu lesen.
 
 ```csharp
 class DurableInstanceContextChannelBase
@@ -51,7 +51,7 @@ class DurableInstanceContextChannelBase
 
 Diese beiden Methoden nutzen `IContextManager`-Implementierungen, um die Kontext-ID auf Nachrichten zu schreiben und von ihnen zu lesen. (`IContextManager` eine benutzerdefinierte Schnittstelle, die verwendet wird, um den Vertrag für alle Kontext-Manager zu definieren.) Der Kanal kann entweder die Kontext-ID in einem benutzerdefinierten SOAP-Header oder in einem HTTP-Cookie-Header enthalten. Jede Kontextmanagerimplementierung erbt von der `ContextManagerBase`-Klasse, die die allgemeine Funktionalität für alle Kontextmanager enthält. Die `GetContextId`-Methode in dieser Klasse wird verwendet, um die Kontext-ID vom Client zu erzeugen. Wenn eine Kontext-ID ist zum ersten Mal erzeugt wird, wird sie mithilfe dieser Methode in einer Textdatei gespeichert, deren Name von der Remote-Endpunktadresse erstellt wird (in den typischen URI werden ungültige Zeichen im Dateinamen durch @-Zeichen ersetzt).
 
-Wird die Kontext-ID später für denselben Remote-Endpunkt benötigt, überprüft diese Methode, ob eine entsprechende Datei vorhanden ist. Wenn dies der Fall ist, liest sie die Kontext-ID und gibt sie zurück. Andernfalls gibt sie eine neu generierte Kontext-ID zurück und speichert sie in einer Datei. In der Standardkonfiguration werden diese Dateien in einem Verzeichnis namens "ContextStore" abgelegt. Es befindet sich im temporären Verzeichnis des aktuellen Benutzers. Dieser Speicherort ist jedoch mit dem Bindungselement konfigurierbar.
+Wird die Kontext-ID später für denselben Remote-Endpunkt benötigt, überprüft diese Methode, ob eine entsprechende Datei vorhanden ist. Wenn dies der Fall ist, liest sie die Kontext-ID und gibt sie zurück. Andernfalls gibt sie eine neu generierte Kontext-ID zurück und speichert sie in einer Datei. Mit der Standardkonfiguration werden diese Dateien in einem Verzeichnis namens "contextstore" abgelegt, das sich im temporären Verzeichnis des aktuellen Benutzers befindet. Dieser Speicherort ist jedoch mit dem Bindungselement konfigurierbar.
 
 Der für den Transport der Kontext-ID verwendete Mechanismus kann konfiguriert werden. Er kann entweder in den HTTP-Cookieheader oder einen benutzerdefinierten SOAP-Header geschrieben werden. Wenn Sie sich für den benutzerdefinierten SOAP-Header entscheiden, kann dieses Protokoll mit anderen als HTTP-Protokollen (z. B. TCP oder Benannte Pipes) verwendet werden. Es gibt zwei Klassen, nämlich `MessageHeaderContextManager` und `HttpCookieContextManager`, die diese beiden Optionen implementieren.
 
@@ -87,9 +87,9 @@ Die `ApplyContext`-Methode wird von den Sendekanälen aufgerufen. Sie fügt die 
 message.Properties.Add(DurableInstanceContextUtility.ContextIdProperty, contextId);
 ```
 
-Bevor Sie fortfahren, ist es wichtig, die Verwendung der `Properties`-Auflistung in der `Message`-Klasse zu verstehen. In der Regel wird diese `Properties`-Auflistung verwendet, wenn Daten von unteren an die obere Ebenen der Kanalschicht weitergegeben werden. So können die gewünschten Daten den oberen Ebenen konsistent und unabhängig von den Protokolldetails zur Verfügung gestellt werden. Anders ausgedrückt kann die Kanalschicht die Kontext-ID als SOAP-Header oder HTTP-Cookieheader senden und empfangen. Die oberen Ebenen müssen diese Details jedoch nicht kennen, da die Kanalschicht diese Informationen in der `Properties`-Auflistung verfügbar macht.
+Bevor Sie fortfahren, ist es wichtig, die Verwendung der `Properties`-Auflistung in der `Message`-Klasse zu verstehen. In der Regel wird diese `Properties`-Auflistung verwendet, wenn Daten von unteren an die obere Ebenen der Kanalschicht weitergegeben werden. So können die gewünschten Daten den oberen Ebenen konsistent und unabhängig von den Protokolldetails zur Verfügung gestellt werden. Das heißt, die Kanal Ebene kann die Kontext-ID senden und als SOAP-Header oder HTTP-Cookie-Header empfangen. Die oberen Ebenen müssen diese Details jedoch nicht kennen, da die Kanalschicht diese Informationen in der `Properties`-Auflistung verfügbar macht.
 
-Wenn die `DurableInstanceContextChannelBase`-Klasse vorhanden ist, müssen alle zehn erforderlichen Schnittstellen (IOutputChannel, IInputChannel, IOutputSessionChannel, IInputSessionChannel, IRequestChannel, IReplyChannel, IRequestSessionChannel, IReplySessionChannel, IDuplexChannel, IDuplexSessionChannel) implementiert werden. Sie ähneln jedem verfügbaren Nachrichtenaustauschmuster (Datagramm, Simplex, Duplex und deren sitzungsbasierten Varianten). Jede dieser Implementierungen erbt die vorher beschriebene Basisklasse und ruft `ApplyContext` und `ReadContextId` entsprechend auf. So ruft beispielsweise `DurableInstanceContextOutputChannel` – die die IOutputChannel-Schnittstelle implementiert – die `ApplyContext`-Methode von jeder Methode auf, die Nachrichten sendet.
+Wenn die `DurableInstanceContextChannelBase`-Klasse vorhanden ist, müssen alle zehn erforderlichen Schnittstellen (IOutputChannel, IInputChannel, IOutputSessionChannel, IInputSessionChannel, IRequestChannel, IReplyChannel, IRequestSessionChannel, IReplySessionChannel, IDuplexChannel, IDuplexSessionChannel) implementiert werden. Sie ähneln jedem verfügbaren Nachrichtenaustausch Muster (Datagram, Simplex, Duplex und ihren Sitzungs basierten Varianten). Jede dieser Implementierungen erbt die zuvor beschriebene Basisklasse und ruft `ApplyContext` und `ReadContextId` entsprechend auf. So ruft beispielsweise `DurableInstanceContextOutputChannel` – die die IOutputChannel-Schnittstelle implementiert – die `ApplyContext`-Methode von jeder Methode auf, die Nachrichten sendet.
 
 ```csharp
 public void Send(Message message, TimeSpan timeout)
@@ -100,7 +100,7 @@ public void Send(Message message, TimeSpan timeout)
 }
 ```
 
-Die `DurableInstanceContextInputChannel` wiederum – die die `IInputChannel`-Schnittstelle implementiert – ruft die `ReadContextId`-Methode in jeder Methode auf, die Nachrichten empfängt.
+Auf der anderen Seite, `DurableInstanceContextInputChannel` die die `IInputChannel` -Schnittstelle implementiert, ruft `ReadContextId` die-Methode in jeder Methode auf, die die Nachrichten empfängt.
 
 ```csharp
 public Message Receive(TimeSpan timeout)
@@ -136,7 +136,7 @@ public interface IStorageManager
 }
 ```
 
-Die `SqlServerStorageManager`-Klasse enthält die `IStorageManager`-Standardimplementierung. In ihrer `SaveInstance`-Methode wird das entsprechende Objekt mit dem XmlSerializer serialisiert und in einer SQL Server-Datenbank gespeichert.
+Die `SqlServerStorageManager`-Klasse enthält die `IStorageManager`-Standardimplementierung. In der `SaveInstance` -Methode wird das angegebene Objekt mit dem XmlSerializer serialisiert und in der SQL Server-Datenbank gespeichert.
 
 ```csharp
 XmlSerializer serializer = new XmlSerializer(state.GetType());
@@ -171,7 +171,7 @@ using (SqlConnection connection = new SqlConnection(GetConnectionString()))
 }
 ```
 
-In der `GetInstance`-Methode werden die serialisierten Daten für eine angegebene Kontext-ID gelesen, und das daraus erstellte Objekt wird an den Aufrufer zurückgegeben.
+In der `GetInstance` -Methode werden die serialisierten Daten für eine angegebene Kontext-ID gelesen, und das Objekt, das daraus erstellt wird, wird an den Aufrufer zurückgegeben.
 
 ```csharp
 object data;
@@ -282,7 +282,7 @@ public void Initialize(InstanceContext instanceContext, Message message)
 
 Wie bereits beschrieben wird die Kontext-ID von der `Properties`-Auflistung der `Message`-Klasse gelesen und an den Konstruktor der Erweiterungsklasse weitergegeben. Dadurch wird veranschaulicht, wie Informationen zwischen den Schichten konsistent ausgetauscht werden können.
 
-Im nächsten wichtigen Schritt wird der Vorgang zum Erstellen der Dienstinstanz überschrieben. WCF ermöglicht die Implementierung von benutzerdefinierten Instanziierungsverhaltensweisen und das Einbinden dieser Verhaltensweisen in die Laufzeit mithilfe der IInstanceProvider-Schnittstelle. Die neue `InstanceProvider`-Klasse wird implementiert, um diese Aufgabe auszuführen. Im Konstruktor wird der vom Instanzenanbieter erwartete Diensttyp akzeptiert. Später wird dies verwendet, um neue Instanzen zu erstellen. In der `GetInstance`-Implementierung wird eine Instanz eines Speicher-Managers erstellt, die nach einer beibehaltenen Instanz sucht. Wenn sie `null` zurückgibt, wird eine neue Instanz des Diensttyps instanziiert und zum Aufrufer zurückgegeben.
+Im nächsten wichtigen Schritt wird der Vorgang zum Erstellen der Dienstinstanz überschrieben. WCF ermöglicht die Implementierung von benutzerdefinierten Instanziierungsverhaltensweisen und das Einbinden dieser Verhaltensweisen in die Laufzeit mithilfe der IInstanceProvider-Schnittstelle. Die neue `InstanceProvider`-Klasse wird implementiert, um diese Aufgabe auszuführen. Der vom Instanzanbieter erwartete Diensttyp wird im Konstruktor akzeptiert. Später wird dies verwendet, um neue Instanzen zu erstellen. In der `GetInstance` -Implementierung wird eine Instanz eines Speicher-Managers erstellt, die nach einer permanenten Instanz sucht. Wenn zurück `null`gegeben wird, wird eine neue Instanz des Dienst Typs instanziiert und an den Aufrufer zurückgegeben.
 
 ```csharp
 public object GetInstance(InstanceContext instanceContext, Message message)
@@ -302,11 +302,11 @@ public object GetInstance(InstanceContext instanceContext, Message message)
 }
 ```
 
-Im nächsten wichtigen Schritt wird die `InstanceContextExtension`, `InstanceContextInitializer`-Klasse und die `InstanceProvider`-Klasse in die Dienstmodellaufzeit installiert. Es kann ein benutzerdefiniertes Attribut verwendet werden, um die Dienstimplementierungsklassen für die Installation des Verhaltens zu kennzeichnen. `DurableInstanceContextAttribute` enthält die Implementierung für dieses Attribut und implementiert die `IServiceBehavior`-Schnittstelle, um die gesamte Dienstlaufzeit zu erweitern.
+Der nächste wichtige Schritt besteht darin, die `InstanceContextExtension`- `InstanceContextInitializer`,- `InstanceProvider` und-Klassen in der Dienstmodell Laufzeit zu installieren. Es kann ein benutzerdefiniertes Attribut verwendet werden, um die Dienstimplementierungsklassen für die Installation des Verhaltens zu kennzeichnen. `DurableInstanceContextAttribute` enthält die Implementierung für dieses Attribut und implementiert die `IServiceBehavior`-Schnittstelle, um die gesamte Dienstlaufzeit zu erweitern.
 
-Diese Klasse verfügt über eine Eigenschaft, die den Typ des zu verwendenden Speicher-Managers akzeptiert. So ermöglicht es die Implementierung den Benutzern, ihre eigene `IStorageManager`-Implementierung als Parameter dieses Attributs anzugeben.
+Diese Klasse verfügt über eine Eigenschaft, die den Typ des zu verwendenden Speicher-Managers akzeptiert. Auf diese Weise ermöglicht die-Implementierung den Benutzern, ihre eigene `IStorageManager` Implementierung als Parameter dieses Attributs anzugeben.
 
-In der `ApplyDispatchBehavior`-Implementierung wird der `InstanceContextMode` des aktuellen `ServiceBehavior`-Attributs überprüft. Wenn diese Eigenschaft auf "Singleton" festgelegt ist, kann keine permanente Instanziierung aktualisiert werden und `InvalidOperationException` wird ausgelöst, um den Host zu benachrichtigen.
+In der `ApplyDispatchBehavior` -Implementierung wird `InstanceContextMode` der des aktuellen `ServiceBehavior` Attributs überprüft. Wenn diese Eigenschaft auf "Singleton" festgelegt ist, kann keine permanente Instanziierung aktualisiert werden und `InvalidOperationException` wird ausgelöst, um den Host zu benachrichtigen.
 
 ```csharp
 ServiceBehaviorAttribute serviceBehavior =
@@ -351,13 +351,13 @@ Bisher resultiert aus diesem Beispiel ein Kanal, der das benutzerdefinierte Vers
 
 Nun muss nur noch die Dienstinstanz im permanenten Speicher gespeichert werden. Wie zuvor erläutert gibt es bereits die erforderliche Funktionalität, den Zustand in einer `IStorageManager`-Implementierung zu speichern. Wir müssen dies jetzt in die WCF-Laufzeit integrieren. Es ist ein weiteres Attribut erforderlich, dass auf die Methoden in der Dienstimplementierungsklasse angewendet werden kann. Dieses Attribut soll auf die Methoden angewendet werden, die den Zustand der Dienstinstanz ändern.
 
-Die `SaveStateAttribute`-Klasse implementiert diese Funktionalität. Außerdem implementiert `IOperationBehavior` es die-Klasse, um die WCF-Laufzeit für jeden Vorgang zu ändern. Wenn eine Methode mit diesem Attribut markiert ist, ruft die WCF-Laufzeit `ApplyBehavior` die-Methode auf `DispatchOperation` , während die entsprechende erstellt wird. In dieser Methodenimplementierung ist eine Codezeile vorhanden:
+Die `SaveStateAttribute`-Klasse implementiert diese Funktionalität. Außerdem implementiert `IOperationBehavior` es die-Klasse, um die WCF-Laufzeit für jeden Vorgang zu ändern. Wenn eine Methode mit diesem Attribut markiert ist, ruft die WCF-Laufzeit `ApplyBehavior` die-Methode auf `DispatchOperation` , während die entsprechende erstellt wird. Diese Methoden Implementierung enthält eine einzelne Codezeile:
 
 ```csharp
 dispatch.Invoker = new OperationInvoker(dispatch.Invoker);
 ```
 
-Die Anweisung erstellt eine Instanz des `OperationInvoker`-Typs und weist sie zur `Invoker`-Eigenschaft des erstellten `DispatchOperation` zu. Die `OperationInvoker`-Klasse ist ein Wrapper des Standardvorgangaufrufers, der für `DispatchOperation` erstellt wurde. Diese Klasse implementiert die `IOperationInvoker`-Schnittstelle. In der `Invoke`-Methodenimplementierung wird der tatsächliche Methodenaufruf an den internen Vorgangsaufrufer delegiert. Bevor die Ergebnisse jedoch zurückgegeben werden, wird mit dem Speicher-Manager in `InstanceContext` die Dienstinstanz gespeichert.
+Die Anweisung erstellt eine Instanz des `OperationInvoker`-Typs und weist sie zur `Invoker`-Eigenschaft des erstellten `DispatchOperation` zu. Die `OperationInvoker`-Klasse ist ein Wrapper des Standardvorgangaufrufers, der für `DispatchOperation` erstellt wurde. Diese Klasse implementiert die `IOperationInvoker`-Schnittstelle. In der `Invoke` Methoden Implementierung wird der tatsächliche Methodenaufruf an den inneren Vorgangs Aufruf delegiert. Bevor die Ergebnisse jedoch zurückgegeben werden, wird mit dem Speicher-Manager in `InstanceContext` die Dienstinstanz gespeichert.
 
 ```csharp
 object result = innerOperationInvoker.Invoke(instance,
@@ -374,7 +374,7 @@ return result;
 
 ## <a name="using-the-extension"></a>Verwenden der Erweiterung
 
-Die Erweiterungen der channelschicht und der Dienstmodell Ebene sind abgeschlossen und können nun in WCF-Anwendungen verwendet werden. Dienste müssen den Kanal mithilfe einer benutzerdefinierten Bindung zum Kanalstapel hinzufügen und die Dienstimplementierungsklassen dann mit den entsprechenden Attributen kennzeichnen.
+Die Erweiterungen der channelschicht und der Dienstmodell Ebene sind abgeschlossen und können nun in WCF-Anwendungen verwendet werden. Dienste müssen den Kanal mithilfe einer benutzerdefinierten Bindung zum Kanal Stapel hinzufügen und dann die Dienst Implementierungsklassen mit den entsprechenden Attributen markieren.
 
 ```csharp
 [DurableInstanceContext]
@@ -419,7 +419,7 @@ Jetzt kann das Bindungselement wie andere Standardbindungselemente mit einer ben
 </bindings>
 ```
 
-## <a name="conclusion"></a>Schlussbemerkung
+## <a name="conclusion"></a>Zusammenfassung
 
 In diesem Beispiel wurde gezeigt, wie ein benutzerdefinierter Protokollkanal erstellt wird und wie das Dienstverhalten angepasst werden muss, um diesen Protokollkanal zu aktivieren.
 
