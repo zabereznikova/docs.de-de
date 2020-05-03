@@ -7,16 +7,16 @@ helpviewer_keywords:
 - await keyword [C#]
 - await [C#]
 ms.assetid: 50725c24-ac76-4ca7-bca1-dd57642ffedb
-ms.openlocfilehash: 9f541ae9c26eb12acdcf9a8c59bab98c4772c3b0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 83ee51fcbcc5911c688e30542cefb1c56578a578
+ms.sourcegitcommit: 839777281a281684a7e2906dccb3acd7f6a32023
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79173444"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82141028"
 ---
 # <a name="await-operator-c-reference"></a>Der Operator „await“ (C#-Referenz)
 
-Der Operator `await` hält die Auswertung der einschließenden [async](../keywords/async.md)-Methode an, bis der asynchrone Vorgang abgeschlossen ist, der durch seinen Operanden dargestellt wird. Sobald der asynchrone Vorgang abgeschlossen ist, gibt der Operator `await` ggf. das Ergebnis des Vorgangs zurück. Wenn der Operator `await` auf den Operanden angewendet wird, der den bereits abgeschlossenen Vorgang darstellt, wird das Ergebnis des Vorgangs sofort zurückgegeben, ohne dass die einschließende Methode angehalten wird. Der Operator `await` blockiert nicht den Thread, der die Async-Methode auswertet. Wenn der Operator `await` die einschließende asynchrone Methode anhält, wird das Steuerelement an den Aufrufer der Methode zurückgegeben.
+Der Operator `await` hält die Auswertung der einschließenden [async](../keywords/async.md)-Methode an, bis der asynchrone Vorgang abgeschlossen ist, der durch seinen Operanden dargestellt wird. Sobald der asynchrone Vorgang abgeschlossen ist, gibt der Operator `await` ggf. das Ergebnis des Vorgangs zurück. Wenn der Operator `await` auf den Operanden angewendet wird, der einen bereits abgeschlossenen Vorgang darstellt, wird das Ergebnis des Vorgangs sofort zurückgegeben, ohne dass die einschließende Methode angehalten wird. Der Operator `await` blockiert nicht den Thread, der die Async-Methode auswertet. Wenn der Operator `await` die einschließende asynchrone Methode anhält, wird das Steuerelement an den Aufrufer der Methode zurückgegeben.
 
 Im folgenden Beispiel gibt die Methode <xref:System.Net.Http.HttpClient.GetByteArrayAsync%2A?displayProperty=nameWithType> die Instanz `Task<byte[]>` zurück, die einen asynchronen Vorgang darstellt, der ein Bytearray erzeugt, wenn er abgeschlossen wird. Der Operator `await` hält so lange die Methode `DownloadDocsMainPageAsync` an, bis der Vorgang abgeschlossen ist. Wenn `DownloadDocsMainPageAsync` angehalten wird, wird die Steuerung an die Methode `Main` zurückgegeben. Bei dieser handelt es sich um den Aufrufer von `DownloadDocsMainPageAsync`. Die Methode `Main` wird so lange ausgeführt, bis sie das Ergebnis des asynchronen Vorgangs benötigt, der von der Methode `DownloadDocsMainPageAsync` ausgeführt wird. Wenn <xref:System.Net.Http.HttpClient.GetByteArrayAsync%2A> alle Bytes abruft, wird der Rest der Methode `DownloadDocsMainPageAsync` ausgewertet. Danach wird der Rest der Methode `Main` ausgewertet.
 

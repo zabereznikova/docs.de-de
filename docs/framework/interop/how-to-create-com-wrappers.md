@@ -7,7 +7,7 @@ helpviewer_keywords:
 ms.assetid: bdf89bea-1623-45ee-a57b-cf7c90395efa
 ms.openlocfilehash: 035d6439ec90426d7b68e05043ea8b6722f81d28
 ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 04/11/2020
 ms.locfileid: "81121601"
@@ -30,7 +30,7 @@ In Visual Studio 2005 können Sie den COM-Wrapper als Verweis zu Ihrem Projekt h
 
 2. Klicken Sie im Menü **Projekt** auf **Alle Dateien anzeigen**.
 
-3. Klicken Sie im Menü **Projekt** auf **Verweis hinzufügen**.
+3. Klicken Sie im Menü **Projekt** auf **Verweis hinzufügen** .
 
 4. Klicken Sie im Dialogfeld „Verweis hinzufügen“ auf die Registerkarte **COM**, wählen Sie die Komponente aus, die Sie verwenden möchten, und klicken Sie auf **OK**.
 
@@ -39,7 +39,7 @@ In Visual Studio 2005 können Sie den COM-Wrapper als Verweis zu Ihrem Projekt h
 Sie können jetzt Code schreiben, um auf das COM-Objekt zuzugreifen. Sie können mit der Objektdeklaration beginnen, zum Beispiel mit einer `Imports`-Anweisung für Visual Basic oder einer `Using`-Anweisung für C#.
 
 > [!NOTE]
-> Wenn Sie Microsoft Office-Komponenten programmieren möchten, installieren Sie zunächst die [Microsoft Office Primary Interop Assemblies Redistributable](https://www.microsoft.com/Download/details.aspx?id=3508).
+> Wenn Sie Microsoft Office-Komponenten programmieren möchten, installieren Sie zunächst das [Redistributable für primäre Interop-Assemblys von Microsoft Office](https://www.microsoft.com/Download/details.aspx?id=3508).
   
 ### <a name="to-create-a-runtime-callable-wrapper-using-net-framework-tools"></a>Erstellen eines Runtime Callable Wrappers mit .NET Framework-Tools  
   
@@ -74,4 +74,4 @@ Sie können Regasm.exe für eine Assembly in jedem beliebigen Verzeichnis ausfü
 ## <a name="see-also"></a>Siehe auch
 
 - [Runtime Callable Wrapper (RCW)](../../standard/native-interop/runtime-callable-wrapper.md)
-- [COM Callable Wrapper (CCW)](../../standard/native-interop/com-callable-wrapper.md)
+- [COM Callable Wrapper](../../standard/native-interop/com-callable-wrapper.md)

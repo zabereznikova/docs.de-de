@@ -4,12 +4,12 @@ description: Verwenden Sie einen Paket-Manager, um das .NET Core SDK und die -Ru
 author: thraka
 ms.author: adegeo
 ms.date: 03/17/2020
-ms.openlocfilehash: 41ea47a8f473d69df6ca9823623646968e895de7
-ms.sourcegitcommit: 07123a475af89b6da5bb6cc51ea40ab1e8a488f0
+ms.openlocfilehash: d4c39f271ee224a51101231cd5c50bdae58b0a26
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80134251"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81645388"
 ---
 # <a name="fedora-30-package-manager---install-net-core"></a>Fedora 30-Paket-Manager: Installieren von .NET Core
 
@@ -19,12 +19,12 @@ In diesem Artikel wird beschrieben, wie Sie mit einem Paket-Manager .NET Core au
 
 [!INCLUDE [package-manager-intro-sdk-vs-runtime](includes/package-manager-intro-sdk-vs-runtime.md)]
 
-## <a name="register-microsoft-key-and-feed"></a>Registrieren von Microsoft-Schlüsseln und -Feeds
+## <a name="add-microsoft-repository-key-and-feed"></a>Hinzufügen des Microsoft-Repositoryschlüssels und -Feeds
 
 Vor der Installation von .NET müssen Sie folgende Schritte ausführen:
 
-- Registrieren Sie den Microsoft-Schlüssel.
-- Registrieren Sie das Produktrepository.
+- Fügen Sie der Liste der vertrauenswürdigen Schlüssel den Microsoft-Paketsignaturschlüssel hinzu.
+- Fügen Sie das Repository dem Paket-Manager hinzu.
 - Installieren Sie erforderliche Abhängigkeiten.
 
 Dies muss nur einmal pro Computer ausgeführt werden.

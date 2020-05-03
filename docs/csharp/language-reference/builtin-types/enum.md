@@ -11,12 +11,12 @@ helpviewer_keywords:
 - enumeration type [C#]
 - bit flags [C#]
 ms.assetid: bbeb9a0f-e9b3-41ab-b0a6-c41b1a08974c
-ms.openlocfilehash: 15f5e9ccb1396277229ba935381812700f63ece8
-ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
+ms.openlocfilehash: 617c5ec037ad7a47b43cca2c13da4a77aa682997
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/11/2020
-ms.locfileid: "81121157"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81739093"
 ---
 # <a name="enumeration-types-c-reference"></a>Enumerationstypen (C#-Referenz)
 
@@ -85,7 +85,7 @@ Weitere Informationen finden Sie in den folgenden Abschnitten der [C#-Sprachspez
 - [Explizite Enumerationskonvertierungen](~/_csharplang/spec/conversions.md#explicit-enumeration-conversions)
 - [Implizite Enumerationskonvertierungen](~/_csharplang/spec/conversions.md#implicit-enumeration-conversions)
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [C#-Referenz](../index.md)
 - [Enumerationsformatzeichenfolgen](../../../standard/base-types/enumeration-format-strings.md)

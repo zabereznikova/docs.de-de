@@ -2,12 +2,12 @@
 title: Architektur der .NET Core-Befehlszeilentools
 description: Informationen zu .NET Core-Toolschichten und Änderungen der neuesten Versionen.
 ms.date: 03/06/2017
-ms.openlocfilehash: fde1a0acb6af9dd65aa3466b4ea37473b2eab6fb
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e1a9fe59225c17d54f6e7213d2b3c3fa70ee58e0
+ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77092914"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82102878"
 ---
 # <a name="high-level-overview-of-changes-in-the-net-core-tools"></a>Allgemeine Übersicht über Änderungen in .NET Core-Tools
 
@@ -30,7 +30,7 @@ Lassen Sie uns als schnelle Auffrischung mit den Schichten in Preview 2 beginnen
 
 ![Allgemeine Architektur der Preview 2-Tools](media/cli-msbuild-architecture/p2-arch.png)
 
-Die Schichten der Tools in Vorschauversion 2 sind unkompliziert. Die .NET Core-CLI bildet die Basis. Alle weiteren Tools auf höherer Ebene wie beispielsweise Visual Studio oder Visual Studio Code hängen zum Erstellen von Projekten, Wiederherstellen von Abhängigkeiten usw. von der CLI ab. Für einen Wiederherstellungsvorgang in Visual Studio musste z. B. der Befehl `dotnet restore` ([siehe Hinweis](#dotnet-restore-note)) in der CLI aufgerufen werden.
+Die Schichten der Tools in Vorschauversion 2 sind unkompliziert. Die .NET Core-CLI bildet die Basis. Alle weiteren Tools auf höherer Ebene wie beispielsweise Visual Studio oder Visual Studio Code hängen zum Erstellen von Projekten, Wiederherstellen von Abhängigkeiten usw. von der CLI ab. Für einen Wiederherstellungsvorgang in Visual Studio musste z. B. der Befehl `dotnet restore` in der CLI aufgerufen werden.
 
 Durch den Wechsel zum neuen Projektsystem ändert sich die vorherige Abbildung:
 
@@ -41,7 +41,7 @@ Der Hauptunterschied besteht darin, dass die CLI nicht mehr die Fundamentschicht
 > [!NOTE]
 > Ein „Ziel“ ist ein MSBuild-Ausdruck, der einen benannten Vorgang angibt, den MSBuild aufrufen kann. Es ist in der Regel an eine oder mehrere Aufgaben gekoppelt, die dem Ziel entsprechende Logik ausführen. MSBuild unterstützt viele vorgefertigte Ziele, z.B. `Copy` oder `Execute`. Außerdem können Benutzer mithilfe von verwaltetem Code eigene Aufgaben schreiben und Ziele definieren, um diese Aufgaben ausführen. Weitere Informationen finden Sie unter [MSBuild-Aufgaben](/visualstudio/msbuild/msbuild-tasks).
 
-Alle Toolsets nutzen nun die freigegebene SDK-Komponente und ihre Ziele. Das gibt auch für die CLI. Visual Studio 2019 ruft beispielsweise nicht den `dotnet restore`-Befehl ([siehe Hinweis](#dotnet-restore-note)) auf, um Abhängigkeiten für .NET Core-Projekte wiederherzustellen. Stattdessen wird direkt das Ziel „Wiederherstellen“ verwendet. Da es sich MSBuild-Ziele handelt, können Sie MSBuild auch „roh“ verwenden, um sie mit dem Befehl [dotnet msbuild](dotnet-msbuild.md) auszuführen.
+Alle Toolsets nutzen nun die freigegebene SDK-Komponente und ihre Ziele. Das gibt auch für die CLI. Visual Studio 2019 ruft beispielsweise nicht den `dotnet restore`-Befehl auf, um Abhängigkeiten für .NET Core-Projekte wiederherzustellen. Stattdessen wird direkt das Ziel „Wiederherstellen“ verwendet. Da es sich MSBuild-Ziele handelt, können Sie MSBuild auch „roh“ verwenden, um sie mit dem Befehl [dotnet msbuild](dotnet-msbuild.md) auszuführen.
 
 ### <a name="cli-commands"></a>CLI-Befehle
 
@@ -73,5 +73,6 @@ Mit diesem Befehl wird eine Anwendung im Ordner `pub` mithilfe der Konfiguration
 
 Relevante Ausnahmen für diese Regel sind die Befehle `new` und `run`. Sie wurden nicht als MSBuild-Ziele implementiert.
 
-<a name="dotnet-restore-note"></a>
+### <a name="implicit-restore"></a>Implizite Wiederherstellung
+
 [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]

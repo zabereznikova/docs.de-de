@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Entfernen einer Assembly aus dem globalen Assemblycache'
+title: 'Vorgehensweise: Entfernen einer Assembly aus dem globalen Assemblycache'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - assemblies [.NET Framework], global assembly cache
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: acdcc588-b458-436d-876c-726de68244c1
 ms.openlocfilehash: c7d85222f35a61154e3eec70d8c9dad2ca6a32f3
 ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/30/2019
 ms.locfileid: "73119857"
 ---
-# <a name="how-to-remove-an-assembly-from-the-global-assembly-cache"></a>Gewusst wie: Entfernen einer Assembly aus dem globalen Assemblycache
+# <a name="how-to-remove-an-assembly-from-the-global-assembly-cache"></a>Vorgehensweise: Entfernen einer Assembly aus dem globalen Assemblycache
 
 Es gibt zwei Möglichkeiten, eine Assembly aus dem globalen Assemblycache (GAC) zu entfernen:
 
@@ -30,14 +30,14 @@ Es gibt zwei Möglichkeiten, eine Assembly aus dem globalen Assemblycache (GAC) 
 
 Geben Sie an der Eingabeaufforderung folgenden Befehl ein:
 
-**gacutil –u** \<*assemblyname*>
+**gacutil -u** \<*Assemblyname*>
 
 In diesem Befehl ist *Assemblyname* der Name der Assembly, die aus dem globalen Assemblycache entfernt werden soll.
 
 > [!WARNING]
 > Sie sollten "Gacutil.exe" nicht verwenden, um Assemblys auf Produktionssystemen zu entfernen, denn es besteht die Möglichkeit, dass die Assembly für einige Anwendungen weiterhin erforderlich ist. Stattdessen sollten Sie den Windows Installer verwenden, der einen Verweiszähler für jede Assembly verwaltet, die er im GAC installiert.
 
-Im folgenden Beispiel wird eine Assembly mit dem Namen `hello.dll` aus dem globalen Assemblycache entfernt:
+Im folgenden Beispiel wird die Assembly `hello.dll` aus dem globalen Assemblycache entfernt:
 
 ```console
 gacutil -u hello
@@ -53,5 +53,5 @@ Wählen Sie in der **Systemsteuerung** in **Programme und Funktionen** die Anwen
 ## <a name="see-also"></a>Siehe auch
 
 - [Arbeiten mit Assemblys und dem globalen Assemblychache](working-with-assemblies-and-the-gac.md)
-- [Gewusst wie: Installieren einer Assembly in den globalen Assemblycache](install-assembly-into-gac.md)
+- [How to: Installieren einer Assembly im globalen Assemblycache](install-assembly-into-gac.md)
 - [Gacutil.exe (Global Assembly Cache-Tool)](../tools/gacutil-exe-gac-tool.md)

@@ -28,7 +28,7 @@ helpviewer_keywords:
 ms.assetid: b224d7c0-35f8-4e82-a705-dd76795e8d16
 ms.openlocfilehash: d64e3b5201e34541fdafa5724b0c7e8c3f6c0c0d
 ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 04/13/2020
 ms.locfileid: "81243049"
@@ -50,10 +50,10 @@ Dieses Modell hat mehrere Vorzüge:
 
 ## <a name="resource-naming-conventions"></a>Konventionen für Ressourcennamen
 
-Wenn Sie die Ressourcen Ihrer Anwendung verpacken, müssen Sie diese gemäß den Namenskonventionen für Ressourcen benennen, die von der Common Language Runtime (CLR) erwartet werden. Die Runtime identifiziert eine Ressource anhand deren Kulturnamen. Jede Kultur erhält einen eindeutigen Namen, für gewöhnlich eine Kombination aus zwei Kleinbuchstaben, die für eine Kultur und die damit verbundene Sprache steht, und, falls erforderlich, zwei Großbuchstaben, die für eine Subkultur und das damit verbundene Land bzw. die Region stehen. Der Name der Subkultur steht hinter dem Namen der Kultur, getrennt durch einen Bindestrich (-). Dies kann z.B. ja-JP für das in Japan gesprochene Japanisch sein, en-US für das amerikanische Englisch, de-DE für das in Deutschland gesprochene Deutsch oder de-AT für Österreichisch. Siehe die Spalte **Sprach-Tag ** in der [Liste der von Windows unterstützten Sprach- und Regionsnamen](https://docs.microsoft.com/openspecs/windows_protocols/ms-lcid/a9eac961-e77d-41a6-90a5-ce1a8b0cdb9c). Kulturnamen befolgen den von [BCP 47](https://tools.ietf.org/html/bcp47) definierten Standard.
+Wenn Sie die Ressourcen Ihrer Anwendung verpacken, müssen Sie diese gemäß den Namenskonventionen für Ressourcen benennen, die von der Common Language Runtime (CLR) erwartet werden. Die Runtime identifiziert eine Ressource anhand deren Kulturnamen. Jede Kultur erhält einen eindeutigen Namen, für gewöhnlich eine Kombination aus zwei Kleinbuchstaben, die für eine Kultur und die damit verbundene Sprache steht, und, falls erforderlich, zwei Großbuchstaben, die für eine Subkultur und das damit verbundene Land bzw. die Region stehen. Der Name der Subkultur steht hinter dem Namen der Kultur, getrennt durch einen Bindestrich (-). Dies kann z.B. ja-JP für das in Japan gesprochene Japanisch sein, en-US für das amerikanische Englisch, de-DE für das in Deutschland gesprochene Deutsch oder de-AT für Österreichisch. Siehe die Spalte **Sprach-Tag**  in der [Liste der von Windows unterstützten Sprach- und Regionsnamen](https://docs.microsoft.com/openspecs/windows_protocols/ms-lcid/a9eac961-e77d-41a6-90a5-ce1a8b0cdb9c). Kulturnamen befolgen den von [BCP 47](https://tools.ietf.org/html/bcp47) definierten Standard.
 
 > [!NOTE]
-> Es gibt einige Ausnahmen für die Kulturnamen `zh-Hans` mit zwei Buchstaben, z. B. für Chinesisch (vereinfacht).
+> Es gibt einige Ausnahmen für die Kulturnamen mit zwei Buchstaben, z. B. `zh-Hans` für Chinesisch (vereinfacht).
 
 > [!NOTE]
 > Informationen zum Erstellen von Ressourcendateien finden Sie unter [Erstellen von Ressourcendateien](creating-resource-files-for-desktop-apps.md) und [Erstellen von Satellitenassemblys](creating-satellite-assemblies-for-desktop-apps.md).
@@ -71,7 +71,7 @@ Um die Suchleistung zu verbessern, wenden Sie das Attribut <xref:System.Resource
 Der .NET Framework-Ressourcenfallbackprozess besteht aus folgenden Schritten:
 
 > [!TIP]
-> Möglicherweise können Sie das [ \<Konfigurationselement relativeBindForResources>](../configure-apps/file-schema/runtime/relativebindforresources-element.md) verwenden, um den Ressourcenfallbackprozess und den Prozess zu optimieren, durch den die Laufzeit für Ressourcenassemblys untersucht wird. Weitere Informationen finden Sie im Abschnitt [Verbessern des Ressourcenfallbackprozesses](packaging-and-deploying-resources-in-desktop-apps.md#Optimizing).
+> Möglicherweise können Sie auch den Fallbackprozess von Ressourcen und den Suchprozess der Runtime nach Ressourcenassemblys mit dem Konfigurationselement [\<relativeBindForResources>](../configure-apps/file-schema/runtime/relativebindforresources-element.md) verbessern. Weitere Informationen finden Sie im Abschnitt [Verbessern des Ressourcenfallbackprozesses](packaging-and-deploying-resources-in-desktop-apps.md#Optimizing).
 
 1. Zunächst prüft die Runtime den [globalen Assemblycache](../app-domains/gac.md) auf eine Assembly, die der angeforderten Kultur für Ihre Anwendung entspricht.
 
@@ -116,7 +116,7 @@ Unter folgenden Bedingungen können Sie den Prozess optimieren, mit dem die Runt
 
 - Der Anwendungscode behandelt nicht das Ereignis <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType>.
 
-Sie optimieren den Prüfpunkt für Satellitenassemblys, indem Sie `enabled` das `true` [ \<relativeBindForResources->-Element](../configure-apps/file-schema/runtime/relativebindforresources-element.md) einschließen und dessen Attribut in der Anwendungskonfigurationsdatei festlegen, wie im folgenden Beispiel gezeigt.
+Sie können die Überprüfung auf Satellitenassemblys durch das Integrieren des Elements [\<relativeBindForResources>](../configure-apps/file-schema/runtime/relativebindforresources-element.md) optimieren, und indem Sie dessen `enabled`-Attribut in der Anwendungskonfigurationsdatei auf `true` festlegen, wie in folgendem Beispiel veranschaulicht.
 
 ```xml
 <configuration>
@@ -233,5 +233,5 @@ Möglicherweise können Sie aus Zeit- oder Kostengründen keinen Satz an Ressour
 
 - [Ressourcen in Desktop-Apps](index.md)
 - [Globaler Assemblycache](../app-domains/gac.md)
-- [Creating Resource Files](creating-resource-files-for-desktop-apps.md)
+- [Erstellen von Ressourcendateien](creating-resource-files-for-desktop-apps.md)
 - [Erstellen von Satellitenassemblys](creating-satellite-assemblies-for-desktop-apps.md)

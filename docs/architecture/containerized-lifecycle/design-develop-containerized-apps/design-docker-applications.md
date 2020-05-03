@@ -2,12 +2,12 @@
 title: Entwerfen von Docker-Anwendungen
 description: Referenz zu einem tiefgreifenden Leitfaden zur Architektur von Microservices, da dieses Thema in diesem Leitfaden nicht ausführlich behandelt wird.
 ms.date: 02/15/2019
-ms.openlocfilehash: b9539ff4edf405ab890d83be59a248ffa2360c99
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b8a08658ec6c3df3e1aed596a0240223768dd647
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "68674037"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81738465"
 ---
 # <a name="design-docker-applications"></a>Entwerfen von Docker-Anwendungen
 

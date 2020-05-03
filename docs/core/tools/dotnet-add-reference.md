@@ -2,12 +2,12 @@
 title: dotnet add reference-Befehl
 description: Der dotnet add-Verweisbefehl bietet eine praktische Option zum Hinzufügen von Projekt-zu-Projekt-Verweisen.
 ms.date: 02/14/2020
-ms.openlocfilehash: f2bd67d181784c4858b8971d05053d196df7818e
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.openlocfilehash: b261e24ed6a9d5bd489d317d2663b1420b5c34ff
+ms.sourcegitcommit: c2c1269a81ffdcfc8675bcd9a8505b1a11ffb271
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81463734"
+ms.lasthandoff: 04/25/2020
+ms.locfileid: "82158319"
 ---
 # <a name="dotnet-add-reference"></a>dotnet add reference
 
@@ -52,7 +52,7 @@ Der `dotnet add reference`-Befehl bietet eine praktische Option zum Hinzufügen 
 
 - **`-f|--framework <FRAMEWORK>`**
 
-  Fügt Projektverweise nur hinzu, wenn auf ein bestimmtes [Framework](../../standard/frameworks.md) abgezielt wird.
+  Fügt Projektverweise im TFM-Format nur hinzu, wenn auf ein bestimmtes [Framework](../../standard/frameworks.md) abgezielt wird.
 
 - **`-h|--help`**
 
@@ -60,7 +60,7 @@ Der `dotnet add reference`-Befehl bietet eine praktische Option zum Hinzufügen 
 
 - **`--interactive`**
 
-  Ermöglicht dem Befehl, anzuhalten und auf Benutzereingaben oder Aktionen zu warten (z.B. um die Authentifizierung abzuschließen). Verfügbar seit .NET Core 3.0 SDK.
+  Ermöglicht dem Befehl, anzuhalten und auf Benutzereingaben oder Aktionen zu warten (in der Regel, um die Authentifizierung abzuschließen). Verfügbar seit .NET Core 3.0 SDK.
 
 ## <a name="examples"></a>Beispiele
 

@@ -22,7 +22,7 @@ helpviewer_keywords:
 ms.assetid: 0444ddf3-c3f6-44ed-a999-f710d9c3e0cf
 ms.openlocfilehash: c4cab79976acae236de5a8eaad5a42cdba7d04f9
 ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/30/2019
 ms.locfileid: "73130008"
@@ -46,7 +46,7 @@ CodeDOM stellt Typen bereit, die zahlreiche häufig verwendete Quellcodeelemente
  Die folgende exemplarische Vorgehensweise bietet ein Beispiel für das Erstellen eines CodeDOM-Objektdiagramms, das den Code einer einfachen Hello World-Anwendung wiedergibt. Den vollständigen Quellcode für dieses Codebeispiel finden Sie im Thema <xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType>.  
   
 #### <a name="creating-a-compile-unit"></a>Erstellen einer Kompilierungseinheit  
- CodeDOM definiert ein als <xref:System.CodeDom.CodeCompileUnit> bezeichnetes Objekt, das auf ein CodeDOM-Objektdiagramm verweisen kann, das ein Modell des zu kompilierenden Quellcodes darstellt. Eine **CodeCompileUnit** verfügt über Eigenschaften zum Speichern von Verweisen auf Attribute, Namespaces und Assemblys.  
+ CodeDOM definiert ein als <xref:System.CodeDom.CodeCompileUnit> bezeichnetes Objekt, das auf ein CodeDOM-Objektdiagramm verweisen kann, das ein Modell des zu kompilierenden Quellcodes darstellt.  Eine **CodeCompileUnit** verfügt über Eigenschaften zum Speichern von Verweisen auf Attribute, Namespaces und Assemblys.  
   
  Die von der <xref:System.CodeDom.Compiler.CodeDomProvider>-Klasse abgeleiteten CodeDom-Anbieter enthalten Methoden zum Verarbeiten des Objektdiagramms, auf das von einer **CodeCompileUnit** verwiesen wird.  
   
@@ -77,7 +77,7 @@ CodeDOM stellt Typen bereit, die zahlreiche häufig verwendete Quellcodeelemente
  [!code-vb[CodeDomExample#14](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDomExample/VB/source2.vb#14)]  
   
 #### <a name="linking-code-elements-into-the-object-graph"></a>Verknüpfen von Codeelementen mit dem Objektdiagramm  
- Alle Codeelemente eines CodeDOM-Diagramms müssen durch eine Reihe von Verweisen zwischen Elementen, auf die von den Eigenschaften des Stammobjekts des Diagramms direkt verwiesen wird, mit der <xref:System.CodeDom.CodeCompileUnit> verknüpft werden, bei der es sich um das Stammelement der Struktur handelt. Legen Sie ein Objekt auf eine Eigenschaft eines Containerobjekts fest, um einen Verweis vom Containerobjekt zu erstellen.  
+ Alle Codeelemente eines CodeDOM-Diagramms müssen durch eine Reihe von Verweisen zwischen Elementen, auf die von den Eigenschaften des Stammobjekts des Diagramms direkt verwiesen wird, mit der <xref:System.CodeDom.CodeCompileUnit> verknüpft werden, bei der es sich um das Stammelement der Struktur handelt.  Legen Sie ein Objekt auf eine Eigenschaft eines Containerobjekts fest, um einen Verweis vom Containerobjekt zu erstellen.  
   
  Die folgende Anweisung fügt der **Namespaces**-Auflistungseigenschaft der Stamm-**CodeCompileUnit** den `samples`-**CodeNamespace** hinzu.  
   
@@ -86,7 +86,7 @@ CodeDOM stellt Typen bereit, die zahlreiche häufig verwendete Quellcodeelemente
  [!code-vb[CodeDomExample#15](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDomExample/VB/source2.vb#15)]  
   
 #### <a name="defining-a-type"></a>Definieren eines Typs  
- Um mit CodeDOM eine Klasse, Struktur, Schnittstelle oder Enumeration zu deklarieren, erstellen Sie eine neue <xref:System.CodeDom.CodeTypeDeclaration> und weisen ihr einen Namen zu. Das folgende Beispiel veranschaulicht dies. Die **Name**-Eigenschaft wird mithilfe einer Überladung des Konstruktors festgelegt:  
+ Um mit CodeDOM eine Klasse, Struktur, Schnittstelle oder Enumeration zu deklarieren, erstellen Sie eine neue <xref:System.CodeDom.CodeTypeDeclaration> und weisen ihr einen Namen zu.  Das folgende Beispiel veranschaulicht dies. Die **Name**-Eigenschaft wird mithilfe einer Überladung des Konstruktors festgelegt:  
   
  [!code-cpp[CodeDomExample#16](../../../samples/snippets/cpp/VS_Snippets_CLR/CodeDomExample/CPP/source2.cpp#16)]
  [!code-csharp[CodeDomExample#16](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeDomExample/CS/source2.cs#16)]
@@ -118,7 +118,7 @@ CodeDOM stellt Typen bereit, die zahlreiche häufig verwendete Quellcodeelemente
  [!code-csharp[CodeDomExample#19](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeDomExample/CS/source2.cs#19)]
  [!code-vb[CodeDomExample#19](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDomExample/VB/source2.vb#19)]  
   
- Die <xref:System.CodeDom.CodeCompileUnit> mit der Bezeichnung `compileUnit` enthält nun das CodeDOM-Diagramm für ein einfaches Hello World-Programm. Weitere Informationen über das Generieren und Kompilieren von Code aus einem CodeDOM-Diagramm finden Sie unter [Generating Source Code and Compiling a Program from a CodeDOM Graph (Generieren von Quellcode und Kompilieren eines Programms aus einem CodeDOM-Diagramm)](generating-and-compiling-source-code-from-a-codedom-graph.md).  
+ Die <xref:System.CodeDom.CodeCompileUnit> mit der Bezeichnung `compileUnit` enthält nun das CodeDOM-Diagramm für ein einfaches Hello World-Programm.  Weitere Informationen über das Generieren und Kompilieren von Code aus einem CodeDOM-Diagramm finden Sie unter [Generating Source Code and Compiling a Program from a CodeDOM Graph (Generieren von Quellcode und Kompilieren eines Programms aus einem CodeDOM-Diagramm)](generating-and-compiling-source-code-from-a-codedom-graph.md).  
   
 ### <a name="more-information-on-building-a-codedom-graph"></a>Weitere Informationen zum Erstellen eines CodeDOM-Diagramms  
  Von CodeDOM werden viele häufig verwendete Typen von Codeelementen in den Programmiersprachen unterstützt, die die Common Language Runtime unterstützen. CodeDOM zielt nicht darauf ab, für die Darstellung aller denkbaren Programmiersprachenfeatures Elemente bereitzustellen. Code, der nicht einfach mit CodeDOM-Elementen dargestellt werden kann, kann in <xref:System.CodeDom.CodeSnippetExpression>, <xref:System.CodeDom.CodeSnippetStatement>, <xref:System.CodeDom.CodeSnippetTypeMember> oder <xref:System.CodeDom.CodeSnippetCompileUnit> gekapselt werden. Allerdings kann CodeDOM die Codeausschnitte nicht automatisch in andere Sprachen übersetzen.  

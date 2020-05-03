@@ -2,12 +2,12 @@
 title: switch-Ausdruck – C#-Referenz
 description: Erfahren Sie, wie Sie den C#-Ausdruck „switch“ für einen Musterabgleich und die Selbstprüfung von Daten verwenden.
 ms.date: 03/19/2020
-ms.openlocfilehash: 9e609bcea0f92f492b5f9b07840e47f75c1b71e4
-ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
+ms.openlocfilehash: f53cbe873c841271f64496e4e5ff1f11750c7b8a
+ms.sourcegitcommit: 839777281a281684a7e2906dccb3acd7f6a32023
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80249759"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82140670"
 ---
 # <a name="switch-expression-c-reference"></a>switch-Ausdruck (C#-Referenz)
 

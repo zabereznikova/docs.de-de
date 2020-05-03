@@ -1,18 +1,18 @@
 ---
 title: ref-Schlüsselwort – C#-Referenz
-ms.date: 03/19/2020
+ms.date: 04/21/2020
 f1_keywords:
 - ref_CSharpKeyword
 - ref
 helpviewer_keywords:
 - parameters [C#], ref
 - ref keyword [C#]
-ms.openlocfilehash: d54d932ca96f1966ecc05a532a2468b7e16fac46
-ms.sourcegitcommit: f87ad41b8e62622da126aa928f7640108c4eff98
+ms.openlocfilehash: 07e1b49605c83908f7b9af25e0cb2599a97257c5
+ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/07/2020
-ms.locfileid: "80805847"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82102072"
 ---
 # <a name="ref-c-reference"></a>ref (C#-Referenz)
 
@@ -21,7 +21,7 @@ Das `ref`-Schlüsselwort gibt einen Wert an, der als Verweis übergeben wird. Es
 - In einer Methodensignatur und in einem Methodenaufruf, um ein Argument an eine Methode als Verweis zu übergeben. Weitere Informationen finden Sie unter [Übergeben eines Arguments als Verweis](#passing-an-argument-by-reference).
 - In einer Methodensignatur, um einen Wert an den Aufrufer als Verweis zurückzugeben. Weitere Informationen finden Sie unter [Verweisrückgabewerte](#reference-return-values).
 - In einem Memberkörper, um anzugeben, dass ein Verweisrückgabewert, den der Aufrufer ändern möchte, lokal als Verweis gespeichert ist oder dass eine lokale Variable auf einen anderen Wert per Verweis zugreift. Weitere Informationen finden Sie unter [Lokale ref-Variablen](#ref-locals).
-- In einer `struct`-Deklaration, um `ref struct` oder `readonly ref struct` zu deklarieren. Weitere Informationen finden Sie unter [ref-Strukturtypen](#ref-struct-types).
+- In einer `struct`-Deklaration, um `ref struct` oder `readonly ref struct` zu deklarieren. Weitere Informationen finden Sie im Abschnitt zur [`ref`-Struktur](../builtin-types/struct.md#ref-struct) des Artikels [Strukturtypen](../builtin-types/struct.md).
 
 ## <a name="passing-an-argument-by-reference"></a>Übergeben eines Arguments als Verweis
 
@@ -77,7 +77,7 @@ Weitere Informationen zum Übergeben von Verweistypen durch einen Wert und durch
   
 ## <a name="reference-return-values"></a>Verweisrückgabewerte
 
-Verweisrückgabewerte (auch ref-Rückgaben genannt) sind Werte, die von einer Methode an den Aufrufer als Verweis zurückgegeben werden. Das bedeutet, dass der Aufrufer den von einer Methode zurückgegebenen Wert ändern kann. Diese Änderung wird im Zustand des Objekts, das die Methode enthält, wiedergegeben.
+Verweisrückgabewerte (auch ref-Rückgaben genannt) sind Werte, die von einer Methode an den Aufrufer als Verweis zurückgegeben werden. Das bedeutet, dass der Aufrufer den von einer Methode zurückgegebenen Wert ändern kann. Diese Änderung wird im Zustand des Objekts in der aufrufenden Methode wiedergegeben.
 
 Ein Verweisrückgabewert wird definiert durch Verwenden des `ref`-Schlüsselworts:
 
@@ -94,6 +94,10 @@ return ref DecimalArray[0];
 ```
 
 Zum Ändern des Zustands des Objekts durch den Aufrufer muss der Verweisrückgabewert in einer Variable gespeichert werden, die explizit als [lokale ref-Variable](#ref-locals) definiert ist.
+
+Hier ist ein vollständigeres Beispiel für die Verweisrückgabe, das sowohl die Methodensignatur als auch den Methodentext zeigt.
+
+[!code-csharp[FindReturningRef](~/samples/snippets/csharp/new-in-7/MatrixSearch.cs#FindReturningRef "Find returning by reference")]
 
 Die aufgerufene Methode kann den Rückgabewert auch als `ref readonly` deklarieren, um den Wert als Verweis zurückzugeben, und durchsetzen, dass der aufrufende Code den zurückgegebenen Wert nicht ändern kann. Die aufrufende Methode kann das Kopieren des zurückgegebenen Werts vermeiden, indem sie den Wert in einer lokalen [schreibgeschützten ref-Variablen](#ref-readonly-locals) speichert.
 
@@ -136,23 +140,6 @@ Im folgenden Beispiel wird eine `Book`-Klasse mit zwei <xref:System.String>-Feld
 Speichert der Aufrufer den von der `GetBookByTitle`-Methode zurückgegeben Wert als lokale ref-Variable, werden Änderungen, die der Aufrufer am Rückgabewert vornimmt, im `BookCollection`-Objekt wiedergegeben. Dies wird im folgenden Beispiel gezeigt:
 
 [!code-csharp[csrefKeywordsMethodParams#6](~/samples/snippets/csharp/language-reference/keywords/in-ref-out-modifier/RefParameterModifier.cs#5)]
-
-## <a name="ref-struct-types"></a>ref-Strukturtypen
-
-Das Hinzufügen des `ref`-Modifizierers zu einer `struct`-Deklaration definiert, dass Instanzen dieses Typs stapelzugeordnet sein müssen. Das bedeutet, Instanzen dieses Typs können nie im Heap als Member einer anderen Klasse erstellt werden. Der primäre Beweggrund für dieses Feature waren <xref:System.Span%601> und zugehörige Strukturen.
-
-Das Ziel, einen `ref struct`-Typ als im Stapel zugewiesene Variable zu behalten, führt zu verschiedenen Regeln, die der Compiler für alle `ref struct`-Typen erzwingt.
-
-- Sie können für `ref struct` kein Boxing durchführen. Sie können einen `ref struct`-Typ nicht einer Variablen vom Typ `object`, `dynamic` oder einem Schnittstellentyp zuweisen.
-- `ref struct`-Typen können keine Schnittstellen implementieren.
-- Sie können `ref struct` nicht als Feldmember einer Klasse oder einer normalen Struktur deklarieren. Dies betrifft auch das Deklarieren einer automatisch implementierten Eigenschaft, die ein vom Compiler generiertes Unterstützungsfeld erstellt.
-- Sie können keine lokalen Variablen deklarieren, bei denen es sich um `ref struct`-Typen in asynchronen Methoden handelt. Sie können sie in synchronen Methoden deklarieren, die <xref:System.Threading.Tasks.Task>, <xref:System.Threading.Tasks.Task%601> oder `Task`-ähnliche Typen zurückgeben.
-- Sie können lokale `ref struct`-Variablen nicht in Iteratoren deklarieren.
-- Sie können `ref struct`-Variablen nicht in Lambda-Ausdrücken oder lokalen Funktionen erfassen.
-
-Diese Einschränkungen stellen sicher, dass Sie `ref struct` nicht versehentlich in einer Weise verwenden, die zu einer Höherstufung in den verwalteten Heap führt.
-
-Sie können Modifizierer zum Deklarieren einer Struktur als `readonly ref` kombinieren. `readonly ref struct` vereint die Vorteile und Einschränkungen der `ref struct`- und `readonly struct`-Deklarationen.
 
 ## <a name="c-language-specification"></a>C#-Sprachspezifikation
 

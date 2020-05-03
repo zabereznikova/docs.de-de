@@ -6,31 +6,34 @@ helpviewer_keywords:
 - type constraints [C#]
 - type parameters [C#], constraints
 - unbound type parameter [C#]
-ms.openlocfilehash: 76cd00b9c84f128d2a181115293df910d8deb6cb
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0035f7d8aa862b4bd1b09a6f122a89786a6e295b
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79398406"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81738251"
 ---
 # <a name="constraints-on-type-parameters-c-programming-guide"></a>Einschränkungen für Typparameter (C#-Programmierhandbuch)
 
-Einschränkungen informieren den Compiler über die Funktionen, über die ein Typargument verfügen muss. Ohne Einschränkungen könnte das Typargument jedes beliebige Argument sein. Der Compiler kann nur die <xref:System.Object?displayProperty=nameWithType>-Elemente annehmen. Dies ist die übergeordnete Basisklasse für jeden beliebigen .NET-Typ. Weitere Informationen finden Sie unter [Weshalb Einschränkungen?](#why-use-constraints). Wenn Clientcode versucht, Ihre Klasse zu instanziieren, indem er einen Typ verwendet, der durch Ihre Einschränkung nicht erlaubt ist, kommt es zu einem Kompilierzeitfehler. Constraints werden mit dem kontextuellen Schlüsselwort `where` angegeben. In der folgenden Tabelle werden die sieben verschiedenen Einschränkungstypen aufgelistet:
+Einschränkungen informieren den Compiler über die Funktionen, über die ein Typargument verfügen muss. Ohne Einschränkungen könnte das Typargument jedes beliebige Argument sein. Der Compiler kann nur die <xref:System.Object?displayProperty=nameWithType>-Elemente annehmen. Dies ist die übergeordnete Basisklasse für jeden beliebigen .NET-Typ. Weitere Informationen finden Sie unter [Weshalb Einschränkungen?](#why-use-constraints). Wenn Clientcode einen Typ verwendet, der einen Constraint nicht erfüllt, gibt der Compiler einen Fehler aus. Constraints werden mit dem kontextuellen Schlüsselwort `where` angegeben. In der folgenden Tabelle werden die sieben verschiedenen Einschränkungstypen aufgelistet:
 
 |Constraint|Beschreibung|
 |----------------|-----------------|
-|`where T : struct`|Das Typargument muss ein Nicht-Nullable-Werttyp sein. Weitere Informationen zu Nullable-Werttypen finden Sie unter [Nullable-Werttypen](../../language-reference/builtin-types/nullable-value-types.md). Da alle Werttypen einen parameterlosen Konstruktor aufweisen, auf den zugegriffen werden kann, impliziert die `struct`-Einschränkung die `new()`-Einschränkung und kann nicht mit der `new()`-Einschränkung kombiniert werden. Ferner kann auch die `struct`-Einschränkung nicht mit der `unmanaged`-Einschränkung kombiniert werden.|
-|`where T : class`|Das Typargument muss ein Verweistyp sein. Diese Einschränkung gilt auch für jede Klasse, Schnittstelle, jeden Delegaten oder Arraytyp.|
-|`where T : notnull`|Das Typargument muss ein Nicht-Nullable-Typ sein. Das Argument kann ein Nicht-Nullable-Verweistyp in C# 8.0 oder höher oder ein Nicht-Nullable-Werttyp sein. Diese Einschränkung gilt auch für jede Klasse, Schnittstelle, jeden Delegaten oder Arraytyp.|
+|`where T : struct`|Das Typargument muss ein Nicht-Nullable-Werttyp sein. Weitere Informationen zu Nullable-Werttypen finden Sie unter [Nullable-Werttypen](../../language-reference/builtin-types/nullable-value-types.md). Da alle Werttypen einen parameterlosen Konstruktor aufweisen, auf den zugegriffen werden kann, impliziert die `struct`-Einschränkung die `new()`-Einschränkung und kann nicht mit der `new()`-Einschränkung kombiniert werden. Ferner kann der `struct`-Constraint nicht mit dem `unmanaged`-Constraint kombiniert werden.|
+|`where T : class`|Das Typargument muss ein Verweistyp sein. Diese Einschränkung gilt auch für jede Klasse, Schnittstelle, jeden Delegaten oder Arraytyp. In einem Nullable-Kontext in C# 8.0 oder höher muss `T` ein Non-Nullable-Verweistyp sein. |
+|`where T : class?`|Das Typargument muss ein Nullable- oder ein Non-Nullable-Verweistyp sein. Diese Einschränkung gilt auch für jede Klasse, Schnittstelle, jeden Delegaten oder Arraytyp.|
+|`where T : notnull`|Das Typargument muss ein Nicht-Nullable-Typ sein. Das Argument kann ein Non-Nullable-Verweistyp in C# 8.0 oder höher oder ein Non-Nullable-Werttyp sein. |
 |`where T : unmanaged`|Das Typargument muss ein [nicht verwalteter Non-Nullable-Typ](../../language-reference/builtin-types/unmanaged-types.md) sein. Die `unmanaged`-Einschränkung impliziert die `struct`-Einschränkung und kann weder mit der `struct`- noch mit der `new()`-Einschränkung kombiniert werden.|
 |`where T : new()`|Das Typargument muss einen öffentlichen, parameterlosen Konstruktor aufweisen. Beim gemeinsamen Verwenden anderen Constraints muss der `new()`-Constraint zuletzt angegeben werden. Die `new()`-Einschränkung kann nicht mit der `struct`- oder `unmanaged`-Einschränkung kombiniert werden.|
-|`where T :` *\<Basisklassenname>*|Das Typargument muss die angegebene Basisklasse sein oder von dieser abgeleitet werden.|
-|`where T :` *\<Schnittstellenname>*|Das Typargument muss die angegebene Schnittstelle sein oder diese implementieren. Es können mehrere Schnittstelleneinschränkungen angegeben werden. Die einschränkende Schnittstelle kann auch generisch sein.|
-|`where T : U`|Das Typargument, das für T angegeben wurde, muss das für T angegebene Argument sein oder von diesem abgeleitet werden.|
+|`where T :` *\<Basisklassenname>*|Das Typargument muss die angegebene Basisklasse sein oder von dieser abgeleitet werden. In einem Nullable-Kontext in C# 8.0 und höher muss `T` ein Non-Nullable-Verweistyp sein, der von der angegebenen Basisklasse abgeleitet ist. |
+|`where T :` *\<Basisklassenname>?*|Das Typargument muss die angegebene Basisklasse sein oder von dieser abgeleitet werden. In einem Nullable-Kontext in C# 8.0 und höher kann `T` entweder ein Nullable- oder ein Non-Nullable-Typ sein, der von der angegebenen Basisklasse abgeleitet ist. |
+|`where T :` *\<Schnittstellenname>*|Das Typargument muss die angegebene Schnittstelle sein oder diese implementieren. Es können mehrere Schnittstelleneinschränkungen angegeben werden. Die einschränkende Schnittstelle kann auch generisch sein. In einem Nullable-Kontext in C# 8.0 und höher muss `T` ein Non-Nullable-Typ sein, der die angegebenen Schnittstelle implementiert.|
+|`where T :` *\<Schnittstellenname>?*|Das Typargument muss die angegebene Schnittstelle sein oder diese implementieren. Es können mehrere Schnittstelleneinschränkungen angegeben werden. Die einschränkende Schnittstelle kann auch generisch sein. In einem Nullable-Kontext in C# 8.0 kann `T` ein Nullable-Verweistyp, ein Non-Nullable-Verweistyp oder ein Werttyp sein. `T` darf kein Nullable-Werttyp sein.|
+|`where T : U`|Das Typargument, das für `T` angegeben wird, muss das für `U` angegebene Argument sein oder von diesem abgeleitet werden. Wenn in einem Nullable-Kontext `U` ein Non-Nullable-Verweistyp ist, muss `T` ein Non-Nullable-Verweistyp sein. Wenn `U` ein Nullable-Verweistyp ist, kann `T` entweder ein Nullable- oder ein Non-Nullable-Typ sein. |
 
 ## <a name="why-use-constraints"></a>Weshalb Einschränkungen?
 
-Indem Sie den Typparameter einschränken, erhöhen Sie die Zahl an zulässigen Vorgängen und Methodenaufrufen von denjenigen, die vom einschränkenden Typ und allen Typen in dessen Vererbungshierarchie unterstützt werden. Beim Entwerfen generischer Klassen oder Methoden müssen Sie Einschränkungen auf den Typparameter anwenden, wenn Sie Vorgänge mit den generischen Membern durchführen möchten, die über das einfache Zuweisen und Aufrufen von Methoden hinausgehen, die nicht von <xref:System.Object?displayProperty=nameWithType> unterstützt werden. Der Basisklassenconstraint sagt dem Compiler z.B., dass nur Objekte dieses Typs oder Objekte, die von diesem Typ abgeleitet werden, als Typargumente verwendet werden. Sobald der Compiler diese Garantie hat, kann er erlauben, dass Methoden dieses Typs in der generischen Klasse aufgerufen werden können. Im folgenden Codebeispiel wird die Funktionalität veranschaulicht, die der `GenericList<T>`-Klasse durch das Anwenden einer Basisklasseneinschränkung hinzugefügt werden kann (in [Einführung in Generics](../../../standard/generics/index.md)).
+Constraints geben die Funktionen und Erwartungen eines Typparameters an. Das Deklarieren von Constraints bedeutet, dass Sie die Vorgänge und Methodenaufrufe des einschränkenden Typs verwenden können. Wenn Ihre generischen Klassen oder Methoden Vorgänge für generische Member durchführen sollen, die über das einfache Zuweisen und Aufrufen von Methoden hinausgehen, die nicht von <xref:System.Object?displayProperty=nameWithType> unterstützt werden, müssen Sie Constraints auf den Typparameter anwenden. Der Basisklassenconstraint sagt dem Compiler z.B., dass nur Objekte dieses Typs oder Objekte, die von diesem Typ abgeleitet werden, als Typargumente verwendet werden. Sobald der Compiler diese Garantie hat, kann er erlauben, dass Methoden dieses Typs in der generischen Klasse aufgerufen werden können. Im folgenden Codebeispiel wird die Funktionalität veranschaulicht, die der `GenericList<T>`-Klasse durch das Anwenden einer Basisklasseneinschränkung hinzugefügt werden kann (in [Einführung in Generics](../../../standard/generics/index.md)).
 
 [!code-csharp[using the class and struct constraints](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#9)]
 
@@ -76,9 +79,11 @@ Das Verwenden von Typparametern als Einschränkungen für generische Klassen ist
 
 ## <a name="notnull-constraint"></a>NotNull-Einschränkung
 
-Ab C# 8.0 können Sie die `notnull`-Einschränkung verwenden, um anzugeben, dass das Typargument ein Nicht-Nullable-Wert- oder -Verweistyp sein muss. Die `notnull`-Einschränkung kann nur in einem `nullable enable`-Kontext verwendet werden. Der Compiler generiert eine Warnung, wenn Sie die `notnull`-Einschränkung in einem Kontext hinzufügen, in dem nicht bekannt ist, ob NULL-Werte zugelassen sind.
+Ab C# 8.0 können Sie in einem Nullable-Kontext mit dem `notnull`-Constraint angeben, dass das Typargument ein Non-Nullable-Werttyp oder -Verweistyp sein muss. Die `notnull`-Einschränkung kann nur in einem `nullable enable`-Kontext verwendet werden. Der Compiler generiert eine Warnung, wenn Sie die `notnull`-Einschränkung in einem Kontext hinzufügen, in dem nicht bekannt ist, ob NULL-Werte zugelassen sind.
 
 Im Gegensatz zu anderen Einschränkungen generiert der Compiler eine Warnung, wenn ein Typargument die `notnull`-Einschränkung verletzt und dieser Code in einem `nullable enable`-Kontext kompiliert wird. Wenn der Code in einem Kontext kompiliert wird, in dem nicht bekannt ist, ob NULL-Werte zugelassen sind, generiert der Compiler keine Warnungen oder Fehler.
+
+Ab C# 8.0 können Sie den `class`-Constraint verwenden, um anzugeben, dass das Typargument ein Non-Nullable-Wert- oder -Verweistyp sein muss. In einem Nullable-Kontext gibt der Compiler eine Warnung aus, wenn ein Typparameter ein Nullable-Verweistyp ist.
 
 ## <a name="unmanaged-constraint"></a>Nicht verwaltete Einschränkungen
 
@@ -116,7 +121,7 @@ Sie könnten dies wie im folgenden Beispiel gezeigt verwenden, um eine Enumerati
 
 [!code-csharp[using the enum constrained method](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#20)]
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Collections.Generic>
 - [C#-Programmierhandbuch](../index.md)

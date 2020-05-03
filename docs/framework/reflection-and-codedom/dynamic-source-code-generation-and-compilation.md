@@ -12,7 +12,7 @@ helpviewer_keywords:
 ms.assetid: d077a3e8-bd81-4bdf-b6a3-323857ea30fb
 ms.openlocfilehash: 7379bac07de9b78369d3742fa3288f6fea6a573f
 ms.sourcegitcommit: 8c99457955fc31785b36b3330c4ab6ce7984a7ba
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 12/29/2019
 ms.locfileid: "75544983"
@@ -39,11 +39,11 @@ Das .NET Framework enthält Codegeneratoren und Codecompiler für <xref:Microsof
 
   Beschreibt, wie Quellcode generiert und der generierte Code mit einem externen Compiler mithilfe von im `System.CodeDom.Compiler`-Namespace definierten Klassen kompiliert wird.  
   
-- [Vorgehensweise: Erstellen einer XML-Dokumentationsdatei mit CodeDOM](how-to-create-an-xml-documentation-file-using-codedom.md)  
+- [How to: Erstellen einer XML-Dokumentationsdatei mit CodeDOM](how-to-create-an-xml-documentation-file-using-codedom.md)  
 
   Beschreibt, wie CodeDOM zum Generieren von Code mit Kommentaren der XML-Dokumentation verwendet wird und wie der generierte Code kompiliert wird, damit die Ausgabe der XML-Dokumentation erstellt wird.  
   
-- [Vorgehensweise: Erstellen einer Klasse mit CodeDOM](how-to-create-a-class-using-codedom.md)  
+- [How to: Erstellen einer Klasse mit CodeDOM](how-to-create-a-class-using-codedom.md)  
 
   Beschreibt, wie CodeDOM zum Generieren einer Klasse verwendet wird, die Felder, Eigenschaften, eine Methode, einen Konstruktor und einen Einstiegspunkt enthält.  
   
@@ -59,4 +59,4 @@ Das .NET Framework enthält Codegeneratoren und Codecompiler für <xref:Microsof
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
 
-- [CodeDom Quick Reference](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/f1dfsbhc(v=vs.100)) bietet Entwicklern eine schnelle Möglichkeit, die CodeDOM-Elemente zu finden, die Quell Code Elemente darstellen.
+- Die [Kurzreferenz zu CodeDOM](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/f1dfsbhc(v=vs.100)) bietet Entwicklern einen schnellen Weg, die CodeDOM-Elemente zu finden, die Quellcodeelemente darstellen.

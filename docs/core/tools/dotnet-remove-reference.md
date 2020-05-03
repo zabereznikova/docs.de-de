@@ -2,25 +2,26 @@
 title: Befehl „dotnet remove reference“
 description: Der Verweisbefehl „dotnet remove“ bietet eine praktische Option zum Entfernen von Projekt-zu-Projekt-Verweisen.
 ms.date: 02/14/2020
-ms.openlocfilehash: 92d36bbbde64d806abc8f223c5f08e3f3d79ce9d
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.openlocfilehash: a45153376d7d6eb764c1d2c6b473d04a273a2de1
+ms.sourcegitcommit: c2c1269a81ffdcfc8675bcd9a8505b1a11ffb271
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81463443"
+ms.lasthandoff: 04/25/2020
+ms.locfileid: "82158332"
 ---
 # <a name="dotnet-remove-reference"></a>dotnet remove reference
 
 **Dieser Artikel gilt für:** ✔️ .NET Core 2.x SDK und neuere Versionen
 
-## <a name="name"></a>Name
+## <a name="name"></a>name
 
-`dotnet remove reference`: Entfernt Projekt-zu-Projekt-Verweise.
+`dotnet remove reference`: Entfernt Projekt-zu-Projekt-Verweise (P2P).
 
 ## <a name="synopsis"></a>Übersicht
 
 ```dotnetcli
-dotnet remove [<PROJECT>] reference [-f|--framework <FRAMEWORK>] <PROJECT_REFERENCES>
+dotnet remove [<PROJECT>] reference [-f|--framework <FRAMEWORK>]
+     <PROJECT_REFERENCES>
 
 dotnet remove reference -h|--help
 ```
@@ -47,7 +48,7 @@ Zu entfernende Projekt-zu-Projekt-Verweise (P2P). Sie können ein oder mehrere P
 
 - **`-f|--framework <FRAMEWORK>`**
 
-  Entfernt den Verweis nur, wenn auf ein bestimmtes [Framework](../../standard/frameworks.md) abgezielt wird.
+  Entfernt den Verweis im TFM-Format nur dann, wenn auf ein bestimmtes [Framework](../../standard/frameworks.md) abgezielt wird.
 
 ## <a name="examples"></a>Beispiele
 

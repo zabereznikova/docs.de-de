@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Erstellen einer .NET Framework Einzeldateiassembly'
+title: 'Vorgehensweise: Erstellen einer Einzeldateiassembly für das .NET Framework'
 ms.date: 08/20/2019
 helpviewer_keywords:
 - assembly manifest, single-file assemblies
@@ -13,14 +13,14 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a6063221-43a5-4d3e-814c-288a4ec69aec
-ms.openlocfilehash: af1bfb89b01a316a858cbb45bf19a26a16d90016
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
-ms.translationtype: MT
+ms.openlocfilehash: b7cb06da74a21dab6f60f0d4c3ac1748fcbe4526
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73119952"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81644302"
 ---
-# <a name="how-to-build-a-net-framework-single-file-assembly"></a>Gewusst wie: Erstellen einer .NET Framework Einzeldateiassembly
+# <a name="how-to-build-a-net-framework-single-file-assembly"></a>Vorgehensweise: Erstellen einer Einzeldateiassembly für das .NET Framework
 
 Eine Einzeldateiassembly, die den einfachsten Assemblytyp darstellt, enthält eine Typinformation und Implementierung sowie das [Assemblymanifest](../../standard/assembly/manifest.md). Sie können Befehlszeilencompiler oder Visual Studio verwenden, um eine Einzeldateiassembly für das .NET Framework zu erstellen. Standardmäßig erstellt der Compiler eine Assemblydatei mit einer *EXE*-Erweiterung.
 
@@ -70,7 +70,7 @@ vbc -out:myAssembly.exe myCode.vb
 
 Geben Sie über die Eingabeaufforderung den folgenden Befehl ein, um eine Bibliotheksassembly zu erstellen:
 
-\<*Compilerbefehl*>  **/t:library** \<*Modulname*>
+\<*Compilerbefehl*>  **-t:Bibliothek** \<*Modulname*>
 
 In diesem Befehl ist *compilername* der Compilerbefehl für die Sprache, die in Ihrem Codemodul verwendet wird, und *modulname* ist der Name des Codemoduls, um in die Assembly zu kompilieren. Sie können auch andere Compileroptionen verwenden, z.B. die Option **-out:** .
 
@@ -88,5 +88,5 @@ vbc -out:myCodeLibrary.dll -t:library myCode.vb
 
 - [Erstellen von Assemblys](../../standard/assembly/create.md)
 - [Mehrfachdateiassemblys](multifile-assemblies.md)
-- [Gewusst wie: Erstellen einer Mehrfachdateiassembly](build-multifile-assembly.md)
-- [Programmieren mit Assemblys](../../standard/assembly/program.md)
+- [How to: Erstellen einer Mehrfachdateiassembly](build-multifile-assembly.md)
+- [Programmieren mit Assemblys](../../standard/assembly/index.md)

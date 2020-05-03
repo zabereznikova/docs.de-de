@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Generieren primärer Interop-Assemblys mit "Tlbimp.exe"'
+title: 'Vorgehensweise: Generieren primärer Interopassemblys mit „Tlbimp.exe“'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - primary interop assemblies, generating
@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 5419011c-6e57-40f6-8c65-386db8f7a651
 ms.openlocfilehash: e46295b89b042452cb6e303302a8b88d68d58426
 ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/30/2019
 ms.locfileid: "73123908"
 ---
-# <a name="how-to-generate-primary-interop-assemblies-using-tlbimpexe"></a>Gewusst wie: Generieren primärer Interop-Assemblys mit "Tlbimp.exe"
+# <a name="how-to-generate-primary-interop-assemblies-using-tlbimpexe"></a>Vorgehensweise: Generieren primärer Interopassemblys mit „Tlbimp.exe“
 
 Es gibt zwei Möglichkeiten, eine primäre Interop-Assembly zu generieren:
 
@@ -37,7 +37,7 @@ Sie benötigen ein kryptografisches Schlüsselpaar, um eine Assembly mit einem s
 
 1. Geben Sie an der Eingabeaufforderung Folgendes ein:
 
-    **tlbimp** *tlbfile*  **/primary /keyfile:** *filename* **/out:** *assemblyname*
+    **tlbimp** *tlbfile*  **/primary /keyfile:** *Dateiname* **/out:** *Assemblyname*
 
     In diesem Befehl ist *tlbfile* die Datei, die die COM-Typbibliothek enthält, *filename* der Name des Containers oder der Datei, die das Schlüsselpaar enthalten, und *assemblyname* der Name der zu unterzeichnenden Assembly mit einem starken Namen.
 
@@ -69,4 +69,4 @@ tlbimp MyLib.tlb /primary /keyfile:CompanyB.snk /namespace:CompanyB.MyLib /refer
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Gewusst wie: Registrieren primärer Interop-Assemblys](how-to-register-primary-interop-assemblies.md)
+- [How to: Registrieren primärer Interopassemblys](how-to-register-primary-interop-assemblies.md)

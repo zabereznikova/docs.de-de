@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Registrieren primärer Interop-Assemblys'
+title: 'Vorgehensweise: Registrieren primärer Interopassemblys'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - registering primary interop assemblies
@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 4b2fcf8a-429d-43ce-8334-e026040be8bb
 ms.openlocfilehash: c799e4ead2932f1c376a57488df30390ad48b90f
 ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/30/2019
 ms.locfileid: "73107682"
 ---
-# <a name="how-to-register-primary-interop-assemblies"></a>Gewusst wie: Registrieren primärer Interop-Assemblys
+# <a name="how-to-register-primary-interop-assemblies"></a>Vorgehensweise: Registrieren primärer Interopassemblys
 
 Klassen können nur durch COM-Interop gemarshallt werden und werden immer als Schnittstellen gemarshallt. In einigen Fällen wird die zum Marshallen der Klasse verwendete Schnittstelle als Klassenschnittstelle bezeichnet. Informationen zum Überschreiben der Klassenschnittstelle mit einer beliebigen Schnittstelle finden Sie unter [COM Callable Wrapper](../../standard/native-interop/com-callable-wrapper.md).
 
@@ -36,7 +36,7 @@ Verwenden Sie das [Assembly Registration-Tool (Regasm.exe)](../tools/regasm-exe-
 
 1. Geben Sie an der Eingabeaufforderung Folgendes ein:
 
-     **regasm** *assemblyname*
+     **regasm** *Assemblyname*
 
      In diesem Befehl ist *assemblyname* der Dateiname der Assembly, die registriert wird. "Regasm.exe" fügt einen Eintrag für die primäre Interop-Assembly unter dem Registrierungsschlüssel hinzu, unter dem sich auch der Eintrag der ursprünglichen Typbibliothek befindet.
 

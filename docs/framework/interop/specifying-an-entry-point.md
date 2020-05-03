@@ -8,7 +8,7 @@ helpviewer_keywords:
 ms.assetid: d1247f08-0965-416a-b978-e0b50652dfe3
 ms.openlocfilehash: c5f8f735dd3e8c359f88044a532c29303237acc8
 ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 03/12/2020
 ms.locfileid: "79181309"
@@ -17,7 +17,7 @@ ms.locfileid: "79181309"
 
 Ein Einstiegspunkt identifiziert die Position einer Funktion in einer DLL. In einem verwalteten Projekt wird diese Funktion vom ursprünglichen Namen oder vom Ordinaleinstiegspunkt einer Zielfunktion über die Grenzen der Interoperation hinaus identifiziert. Außerdem können Sie dem Einstiegspunkt einen anderen Namen zuordnen und damit die Funktion umbenennen.  
   
- Im Folgenden finden Sie eine Liste möglicher Gründe für die Umbenennung einer DLL-Funktion:  
+ Aus folgenden Gründen kann es sinnvoll sein, eine DLL-Funktion umzubenennen:  
   
 - Um keine API-Funktionsnamen zu verwenden, die zwischen Groß- und Kleinschreibung unterscheiden.  
   
@@ -90,9 +90,9 @@ extern "C" int MsgBox(
     HWND hWnd, String* lpText, String* lpCaption, unsigned int uType);
 ```
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Runtime.InteropServices.DllImportAttribute>
-- [Erstellen von Prototypen in verwaltetem Code](creating-prototypes-in-managed-code.md)
+- [Creating Prototypes in Managed Code (Erstellen von Prototypen in verwaltetem Code)](creating-prototypes-in-managed-code.md)
 - [Beispiele für Plattformaufrufe](platform-invoke-examples.md)
 - [Marshallen von Daten mit Plattformaufruf](marshaling-data-with-platform-invoke.md)

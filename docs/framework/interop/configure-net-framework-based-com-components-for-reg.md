@@ -10,7 +10,7 @@ helpviewer_keywords:
 ms.assetid: 32f8b7c6-3f73-455d-8e13-9846895bd43b
 ms.openlocfilehash: 9e273bd3e4bf2bb6945fe48c850783a54fa9a869
 ms.sourcegitcommit: e48a54ebe62e874500a7043f6ee0b77a744d55b4
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 03/26/2020
 ms.locfileid: "80291755"
@@ -77,7 +77,7 @@ Die Aktivierung ohne Registrierung ist bei .NET Framework-Komponenten nur gering
   
 5. Speichern und benennen Sie die Manifestdatei. Der Name eines Anwendungsmanifests besteht aus dem Namen der ausführbaren Assembly gefolgt von der Erweiterung MANIFEST. Der Dateiname des Anwendungsmanifests für myComApp.exe lautet z. B. myComApp.exe.manifest.  
   
-Sie können ein Anwendungsmanifest im gleichen Verzeichnis wie die COM-Anwendung installieren. Sie können es aber auch der EXE-Datei der Anwendung als eine Ressource hinzufügen. Weitere Informationen finden Sie [unter Überseitige Assemblys](/windows/desktop/SbsCs/about-side-by-side-assemblies-).  
+Sie können ein Anwendungsmanifest im gleichen Verzeichnis wie die COM-Anwendung installieren. Sie können es aber auch der EXE-Datei der Anwendung als eine Ressource hinzufügen. Weitere Informationen finden Sie unter [Grundlegendes zu parallelen Assemblys](/windows/desktop/SbsCs/about-side-by-side-assemblies-).  
   
 ## <a name="create-a-component-manifest"></a>Erstellen eines Komponentenmanifests  
   
@@ -110,12 +110,12 @@ Sie können ein Anwendungsmanifest im gleichen Verzeichnis wie die COM-Anwendung
     |Attribut|Beschreibung|Erforderlich|  
     |---------------|-----------------|--------------|  
     |`clsid`|Der Bezeichner, der die zu aktivierende Klasse kennzeichnet.|Ja|  
-    |`description`|Eine Zeichenfolge, die Benutzer über die Komponente informiert. Der Standardwert ist eine leere Zeichenfolge.|Nein |  
+    |`description`|Eine Zeichenfolge, die Benutzer über die Komponente informiert. Der Standardwert ist eine leere Zeichenfolge.|Nein|  
     |`name`|Eine Zeichenfolge, die die verwaltete Klasse darstellt.|Ja|  
-    |`progid`|Der Bezeichner für die spät gebundene Aktivierung.|Nein |  
-    |`threadingModel`|Das COM-Threadingmodell. Der Standardwert ist "Both".|Nein |  
-    |`runtimeVersion`|Gibt die zu verwendende Common Language Runtime-Version (CLR) an. Wenn Sie dieses Attribut nicht angeben und die CLR nicht bereits geladen ist, wird die Komponente mit der neuesten installierten CLR vor CLR-Version 4 geladen. Wenn Sie v1.0.3705, v1.1.4322 oder v2.0.50727 angeben, wird für die Version automatisch ein Rollforward auf die neueste installierte CLR-Version vor CLR-Version 4 ausgeführt (normalerweise v2.0.50727). Falls eine andere Version der CLR bereits geladen ist und die angegebene Version prozessintern parallel geladen werden kann, wird die angegebene Version geladen. Andernfalls wird die geladene CLR verwendet. Dies kann beim Laden einen Fehler verursachen.|Nein |  
-    |`tlbid`|Der Bezeichner der Typbibliothek mit den Typeninformationen über die Klasse.|Nein |  
+    |`progid`|Der Bezeichner für die spät gebundene Aktivierung.|Nein|  
+    |`threadingModel`|Das COM-Threadingmodell. Der Standardwert ist "Both".|Nein|  
+    |`runtimeVersion`|Gibt die zu verwendende Common Language Runtime-Version (CLR) an. Wenn Sie dieses Attribut nicht angeben und die CLR nicht bereits geladen ist, wird die Komponente mit der neuesten installierten CLR vor CLR-Version 4 geladen. Wenn Sie v1.0.3705, v1.1.4322 oder v2.0.50727 angeben, wird für die Version automatisch ein Rollforward auf die neueste installierte CLR-Version vor CLR-Version 4 ausgeführt (normalerweise v2.0.50727). Falls eine andere Version der CLR bereits geladen ist und die angegebene Version prozessintern parallel geladen werden kann, wird die angegebene Version geladen. Andernfalls wird die geladene CLR verwendet. Dies kann beim Laden einen Fehler verursachen.|Nein|  
+    |`tlbid`|Der Bezeichner der Typbibliothek mit den Typeninformationen über die Klasse.|Nein|  
   
      Bei allen Attributtags muss die Groß- und Kleinschreibung beachtet werden. Sie können CLSIDs, ProgIDs, Threadingmodelle und die Version der Common Language Runtime ermitteln, indem Sie die exportierte Typbibliothek der Assembly mit dem OLE/COM-Objektkatalog (Oleview.exe) anzeigen.  
   
@@ -160,7 +160,7 @@ Sie können ein Anwendungsmanifest im gleichen Verzeichnis wie die COM-Anwendung
   
      In dieser Anweisung ist `myManagedComp.manifest` der Name des einzubettenden Komponentenmanifests. Der Name der Skriptdatei für dieses Beispiel lautet `myresource.rc`.  
   
-2. Kompilieren Sie das Skript mit dem Ressourcencompiler von Microsoft Windows (Rc.exe). Geben Sie an der Eingabeaufforderung den folgenden Befehl ein:  
+2. Kompilieren Sie das Skript mit dem Ressourcencompiler von Microsoft Windows (Rc.exe). Geben Sie an der Eingabeaufforderung folgenden Befehl ein:  
   
      `rc myresource.rc`  
   

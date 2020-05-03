@@ -2,13 +2,13 @@
 title: 'Tutorial: Debuggen eines Arbeitsspeicherverlusts'
 description: Erfahren Sie, wie Sie einen Arbeitsspeicherverlust in .NET Core debuggen.
 ms.topic: tutorial
-ms.date: 12/17/2019
-ms.openlocfilehash: 014945394f87edd02c94f7c3b28043bd07470d8b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.date: 04/20/2020
+ms.openlocfilehash: d47992bab9dab64cf7f88ff679eef407dd891b5a
+ms.sourcegitcommit: 348bb052d5cef109a61a3d5253faa5d7167d55ac
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "76737727"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82021356"
 ---
 # <a name="tutorial-debug-a-memory-leak-in-net-core"></a>Tutorial: Debuggen eines Arbeitsspeicherverlusts in .NET Core
 
@@ -137,7 +137,7 @@ In diesem Tutorial benötigen Sie das [Beispieldebugziel](https://docs.microsoft
 
 ### <a name="analyze-the-core-dump"></a>Analysieren des Speicherabbilds
 
-Nachdem Sie nun ein Speicherabbild generiert haben, verwenden Sie das Tool [dotnet-dump)](dotnet-dump.md), um das Speicherabbild zu analysieren:
+Nachdem Sie nun ein Speicherabbild generiert haben, verwenden Sie das Tool [dotnet-dump](dotnet-dump.md), um das Speicherabbild zu analysieren:
 
 ```dotnetcli
 dotnet-dump analyze core_20190430_185145
@@ -146,7 +146,7 @@ dotnet-dump analyze core_20190430_185145
 Dabei ist `core_20190430_185145` der Name des Speicherabbilds, das Sie analysieren möchten.
 
 > [!NOTE]
-> Wenn eine Fehlermeldung angezeigt wird, die besagt, dass *libdl.so* nicht gefunden wurde, müssen Sie ggf. das Paket *libc6-dev* installieren. Weitere Informationen finden Sie unter [Voraussetzungen für .NET Core unter Linux](../linux-prerequisites.md).
+> Wenn eine Fehlermeldung angezeigt wird, die besagt, dass *libdl.so* nicht gefunden wurde, müssen Sie ggf. das Paket *libc6-dev* installieren. Weitere Informationen finden Sie unter [Voraussetzungen für .NET Core unter Linux](../install/dependencies.md?pivots=os-linux).
 
 Es wird eine Eingabeaufforderung angezeigt, in der Sie SOS-Befehle eingeben können. Im Allgemeinen gilt die erste Untersuchung dem Gesamtstatus des verwalteten Heaps:
 

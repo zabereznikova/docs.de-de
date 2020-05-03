@@ -3,14 +3,14 @@ title: Verzweigungen und Schleifen – Einführung in das C#-Tutorial
 description: In diesem Tutorial über Verzweigungen und Schleifen schreiben Sie C#-Code, um die Sprachsyntax zu erkunden, die bedingte Verzweigungen und Schleifen zum wiederholten Ausführen von Anweisungen unterstützt.
 ms.date: 10/31/2017
 ms.custom: mvc
-ms.openlocfilehash: 44b634e3c2120116ee7fd66770398a6b66c8ed8c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d8c10a7462b7c27c5353aee6d957732a8d161015
+ms.sourcegitcommit: 8b02d42f93adda304246a47f49f6449fc74a3af4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "73739126"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82135944"
 ---
-# <a name="learn-conditional-logic-with-branch-and-loop-statements"></a>Erfahren Sie mehr über die bedingte Logik mit Verzweigungs- und Schleifenanweisungen.
+# <a name="learn-conditional-logic-with-branch-and-loop-statements"></a>Bedingungen für Verzweigungs- und Schleifenanweisungen
 
 In diesem Tutorial erfahren Sie, wie Sie Code schreiben, der Variablen untersucht und basierend auf diesen Variablen den Ausführungspfad ändert. Sie schreiben einen C#-Code und sehen dort die Ergebnisse der Kompilierung und Ausführung Ihres Codes. Dieses Tutorial enthält eine Reihe von Lektionen, in denen Verzweigungs- und Schleifenkonstrukte in C# erkundet werden. In diesen Lektionen lernen Sie die Grundlagen der Programmiersprache C# kennen.
 
@@ -247,6 +247,42 @@ Experimentieren Sie selbst damit. Testen Sie Folgendes:
 - Ändern Sie die Bedingung, um an einem anderen Wert anzuhalten.
 
 Wenn Sie fertig sind, fahren Sie damit fort, mithilfe der erworbenen Kenntnisse selbst Codes zu schreiben.
+
+## <a name="created-nested-loops"></a>Erstellte geschachtelte Schleifen
+
+Eine `while`-, `do`- oder `for`-Schleife kann in einer anderen Schleife geschachtelt werden, um mithilfe der Kombination aus jedem Element in der äußeren Schleife und jedem Element in der inneren Schleife eine Matrix zu erstellen. Durch die Umsetzung dessen können Sie mehrere alphanumerische Paare erstellen, die Zeilen und Spalten darstellen.
+
+Eine `for`-Schleife kann die Zeilen generieren:
+
+```csharp
+for (int row = 1; row < 11; row++)
+{
+    Console.WriteLine($"The row is {row}");
+}
+```
+
+Eine andere Schleife kann die Spalten generieren:
+
+```csharp
+for (char column = 'a'; column < 'k'; column++)
+{
+    Console.WriteLine($"The column is {column}");
+}
+```
+
+Sie können eine Schleife innerhalb der anderen schachteln, um Paare zu bilden:
+
+```csharp
+for (int row = 1; row < 11; row++)
+{
+    for (char column = 'a'; column < 'k'; column++)
+    {
+        Console.WriteLine($"The cell is ({row}, {column})");
+    }
+}
+```
+
+Sie können erkennen, dass sich die äußere Schleife für jede vollständige Ausführung der inneren Schleife einmal erhöht. Kehren Sie die Schachtelung der Zeilen und Spalten um, und erkennen Sie selbst, was sich ändert.
 
 ## <a name="combine-branches-and-loops"></a>Kombinieren von Branches und Schleifen
 

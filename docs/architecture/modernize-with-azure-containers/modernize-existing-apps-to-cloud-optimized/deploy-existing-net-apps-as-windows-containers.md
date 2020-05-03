@@ -2,12 +2,12 @@
 title: Bereitstellen vorhandener .NET-Apps als Windows-Container
 description: Modernisieren vorhandener .NET-Anwendungen mit Azure Cloud und Windows-Containern | Bereitstellen vorhandener .NET-Apps als Windows-Container
 ms.date: 04/29/2018
-ms.openlocfilehash: c99c2e756320fc886203efcbf98a81e571d907e5
-ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
+ms.openlocfilehash: 15e99e2ec0edd072a3d47d5c212ebbbf6705ecef
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "80987971"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81738427"
 ---
 # <a name="deploy-existing-net-apps-as-windows-containers"></a>Bereitstellen vorhandener .NET-Apps als Windows-Container
 
@@ -105,7 +105,7 @@ Für .NET Core (plattformübergreifend für Linux und Windows) sähen die Tags w
 
 ### <a name="multi-arch-images"></a>Images für mehrere Architekturen
 
-Ab Mitte-2017 können Sie auch eine neue Funktion in Docker verwenden, die Images für [mehrere Architekturen](https://github.com/moby/moby/issues/15866) heißt. .NET Core Docker-Images können Tags für mehrere Architekturen verwenden. Die Dockerfile-Dateien müssen nicht mehr das Betriebssystem definieren, auf das Sie abzielen. Die Funktion für mehrere Architekturen ermöglicht die Verwendung eines einzelnen Tags in mehreren Computerkonfigurationen. Beispielsweise können Sie mit der Funktion für mehrere Architekturen ein gemeinsames Tag verwenden: **microsoft/dotnet:2.0.0-runtime**. Wenn Sie dieses Tag aus einer Linux-Containerumgebung abrufen, erhalten Sie das Debian-basierte Image. Wenn Sie dieses Tag aus einer Windows-Containerumgebung abrufen, erhalten Sie das Nano Server-basierte Image.
+Ab Mitte 2017 können Sie auch eine neue Funktion in Docker verwenden, die Images für [mehrere Architekturen](https://github.com/moby/moby/issues/15866) heißt. .NET Core Docker-Images können Tags für mehrere Architekturen verwenden. Die Dockerfile-Dateien müssen nicht mehr das Betriebssystem definieren, auf das Sie abzielen. Die Funktion für mehrere Architekturen ermöglicht die Verwendung eines einzelnen Tags in mehreren Computerkonfigurationen. Beispielsweise können Sie mit der Funktion für mehrere Architekturen ein gemeinsames Tag verwenden: **microsoft/dotnet:2.0.0-runtime**. Wenn Sie dieses Tag aus einer Linux-Containerumgebung abrufen, erhalten Sie das Debian-basierte Image. Wenn Sie dieses Tag aus einer Windows-Containerumgebung abrufen, erhalten Sie das Nano Server-basierte Image.
 
 Da das herkömmliche .NET Framework nur Windows unterstützt, können Sie bei .NET Framework-Images die Funktion für mehrere Architekturen nicht verwenden.
 

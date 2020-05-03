@@ -1,5 +1,5 @@
 ---
-title: 'Exemplarische Vorgehensweise: Ausgeben von Code in Szenarien mit teilweiser Vertrauenswürdigkeit'
+title: 'Exemplarische Vorgehensweise: Ausgeben von Code in Szenarios mit teilweiser Vertrauenswürdigkeit'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c45be261-2a9d-4c4e-9bd6-27f0931b7d25
 ms.openlocfilehash: fd420c9754494b95c55df403edec87743572db03
 ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/30/2019
 ms.locfileid: "73129993"
 ---
-# <a name="walkthrough-emitting-code-in-partial-trust-scenarios"></a>Exemplarische Vorgehensweise: Ausgeben von Code in Szenarien mit teilweiser Vertrauenswürdigkeit
+# <a name="walkthrough-emitting-code-in-partial-trust-scenarios"></a>Exemplarische Vorgehensweise: Ausgeben von Code in Szenarios mit teilweiser Vertrauenswürdigkeit
 
 Die Reflektionsausgabe verwendet für volle oder teilweise Vertrauenswürdigkeit den gleichen API-Satz, für teilweise vertrauenswürdigen Code erfordern einige Funktionen allerdings besondere Berechtigungen. Außerdem verfügt die Reflektionsausgabe über eine Funktion für anonym gehostete dynamische Methoden, die zur Verwendung mit teilweiser Vertrauenswürdigkeit und sicherheitstransparenten Assemblys vorgesehen ist.
 
@@ -33,7 +33,7 @@ In dieser exemplarischen Vorgehensweise werden die folgenden Aufgaben veranschau
 - [Das Einrichten einer einfachen Sandkastenanwendung zum Testen von teilweise vertrauenswürdigem Code](#Setting_up)
 
   > [!IMPORTANT]
-  > Dies ist eine einfache Möglichkeit zum Experimentieren mit teilweise vertrauenswürdigem Code. Wenn Sie Code von nicht vertrauenswürdigen Speicherorten ausführen möchten, können Sie sich darüber unter [How to: Run Partially Trusted Code in a Sandbox (Vorgehensweise: Ausführen von teilweise vertrauenswürdigem Code in einer Sandbox)](../misc/how-to-run-partially-trusted-code-in-a-sandbox.md) informieren.
+  > Dies ist eine einfache Möglichkeit zum Experimentieren mit teilweise vertrauenswürdigem Code. Informationen zum Ausführen von Code, der aus nicht vertrauenswürdigen Speicherorten stammt, finden Sie unter [Vorgehensweise: Ausführen von teilweise vertrauenswürdigem Code in einem Sandkasten](../misc/how-to-run-partially-trusted-code-in-a-sandbox.md).
 
 - [Ausführen von Code in teilweise vertrauenswürdigen Anwendungsdomänen](#Running_code)
 
@@ -69,7 +69,7 @@ Im folgenden Verfahren wird eine Sandbox-Anwendungsdomäne erstellt, die Code mi
 2. Erstellen Sie ein <xref:System.AppDomainSetup>-Objekt, um die Anwendungsdomäne mit einem Anwendungspfad zu initialisieren.
 
     > [!IMPORTANT]
-    > In diesem Codebeispiel wird der Einfachheit halber der aktuelle Ordner verwendet. Um Code auszuführen, der eigentlich aus dem Internet stammt, verwenden Sie einen separaten Ordner für den nicht vertrauenswürdigen Code, wie in [How to: Run Partially Trusted Code in a Sandbox (Vorgehensweise: Ausführen von teilweise vertrauenswürdigem Code in einer Sandbox)](../misc/how-to-run-partially-trusted-code-in-a-sandbox.md) beschrieben.
+    > In diesem Codebeispiel wird der Einfachheit halber der aktuelle Ordner verwendet. Um Code auszuführen, der eigentlich aus dem Internet stammt, verwenden Sie einen separaten Ordner für den nicht vertrauenswürdigen Code, wie in [Vorgehensweise: Ausführen von teilweise vertrauenswürdigem Code in einem Sandkasten](../misc/how-to-run-partially-trusted-code-in-a-sandbox.md) beschrieben.
 
     [!code-csharp[HowToEmitCodeInPartialTrust#3](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/cs/source.cs#3)]
     [!code-vb[HowToEmitCodeInPartialTrust#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/vb/source.vb#3)]
@@ -208,7 +208,7 @@ In diesem Beispiel wird dem Berechtigungssatz <xref:System.Security.Permissions.
 
 - Die erste Überladung der `AccessPrivateMethod`-Methode wird ausgeführt, und JIT-Sichtbarkeitsprüfungen werden übersprungen. Die dynamische Methode wird erfolgreich kompiliert und ausgeführt, da die Assembly, die den Code ausgibt, mit der Assembly identisch ist, die die private Methode enthält. Daher sind die Vertrauensebenen gleich. Wenn die Anwendung, die die `Worker`-Klasse enthält, über mehrere Assemblys verfügen würde, wäre der gleiche Prozess für jede dieser Assemblys erfolgreich, da sie alle die gleiche Vertrauensebene aufweisen würden.
 
-- Die zweite Überladung der `AccessPrivateMethod`-Methode wird ausgeführt, und JIT-Sichtbarkeitsprüfungen werden erneut übersprungen. Dieses Mal schlägt die dynamische Methode beim Kompilieren fehl, da sie versucht, auf die `internal` `FirstChar`-Eigenschaft der <xref:System.String>-Klasse zuzugreifen. Die Assembly, die die <xref:System.String>-Klasse enthält, ist voll vertrauenswürdig. Somit weist sie eine höhere Vertrauensebene auf als die Assembly, die den Code ausgibt.
+- Die zweite Überladung der `AccessPrivateMethod`-Methode wird ausgeführt, und JIT-Sichtbarkeitsprüfungen werden erneut übersprungen. Dieses Mal schlägt die dynamische Methode beim Kompilieren fehl, da sie versucht, auf die `internal``FirstChar`-Eigenschaft der <xref:System.String>-Klasse zuzugreifen. Die Assembly, die die <xref:System.String>-Klasse enthält, ist voll vertrauenswürdig. Somit weist sie eine höhere Vertrauensebene auf als die Assembly, die den Code ausgibt.
 
 Dieser Vergleich zeigt, wie teilweise vertrauenswürdiger Code durch <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> Sichtbarkeitsprüfungen für anderen teilweise vertrauenswürdigen Code überspringen kann, ohne die Sicherheit von vertrauenswürdigem Code zu gefährden.
 
@@ -224,4 +224,4 @@ Dieser Vergleich zeigt, wie teilweise vertrauenswürdiger Code durch <xref:Syste
 ## <a name="see-also"></a>Siehe auch
 
 - [Sicherheitsaspekte bei der Reflektionsausgabe](security-issues-in-reflection-emit.md)
-- [How to: Run Partially Trusted Code in a Sandbox (Vorgehensweise: Ausführen von teilweise vertrauenswürdigem Code in einem Sandkasten)](../misc/how-to-run-partially-trusted-code-in-a-sandbox.md)
+- [How to: Ausführen von teilweise vertrauenswürdigem Code in einem Sandkasten](../misc/how-to-run-partially-trusted-code-in-a-sandbox.md)

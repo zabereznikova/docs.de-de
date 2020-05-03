@@ -10,12 +10,12 @@ helpviewer_keywords:
 - string interpolation [C#]
 - interpolated string [C#]
 author: pkulikov
-ms.openlocfilehash: 97bc606569b83bd14cd3b32495deb8e529747e9c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2b95fa5fe5cecd4825e8c17a33f7795c6c9480c6
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "76980118"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81738377"
 ---
 # <a name="---string-interpolation-c-reference"></a>$ – Zeichenfolgeninterpolation (C#-Referenz)
 
@@ -88,7 +88,7 @@ Wenn Sie noch nicht mit der Zeichenfolgeninterpolation vertraut sind, finden Sie
 
 ## <a name="compilation-of-interpolated-strings"></a>Kompilierung interpolierter Zeichenfolgen
 
-Wenn eine interpolierte Zeichenfolge vom Typ `string` ist, wird sie in der Regel in einen <xref:System.String.Format%2A?displayProperty=nameWithType>-Methodenaufruf transformiert. Der Compiler ersetzt <xref:System.String.Format%2A?displayProperty=nameWithType> möglicherweise mit einem <xref:System.String.Concat%2A?displayProperty=nameWithType>, wenn das analysierte Verhalten mit der Verkettung übereinstimmt.
+Wenn eine interpolierte Zeichenfolge vom Typ `string` ist, wird sie in der Regel in einen <xref:System.String.Format%2A?displayProperty=nameWithType>-Methodenaufruf transformiert. Der Compiler ersetzt <xref:System.String.Concat%2A?displayProperty=nameWithType> möglicherweise mit einem <xref:System.String.Format%2A?displayProperty=nameWithType>, wenn das analysierte Verhalten mit der Verkettung übereinstimmt.
 
 Wenn eine interpolierte Zeichenfolge vom Typ <xref:System.IFormattable> oder <xref:System.FormattableString> ist, generiert der Compiler einen Aufruf der <xref:System.Runtime.CompilerServices.FormattableStringFactory.Create%2A?displayProperty=nameWithType>-Methode.
 
@@ -96,11 +96,11 @@ Wenn eine interpolierte Zeichenfolge vom Typ <xref:System.IFormattable> oder <xr
 
 Weitere Informationen finden Sie im Abschnitt [Interpolierte Zeichenfolgen](~/_csharplang/spec/expressions.md#interpolated-strings) der [C#-Sprachspezifikation](~/_csharplang/spec/introduction.md).
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [C#-Referenz](../index.md)
 - [C#-Sonderzeichen](index.md)
 - [Zeichenfolgen](../../programming-guide/strings/index.md)
-- [Standard-Zahlenformatzeichenfolgen](../../../standard/base-types/standard-numeric-format-strings.md)
+- [Standardmäßige Zahlenformatzeichenfolgen](../../../standard/base-types/standard-numeric-format-strings.md)
 - [Kombinierte Formatierung](../../../standard/base-types/composite-formatting.md)
 - <xref:System.String.Format%2A?displayProperty=nameWithType>

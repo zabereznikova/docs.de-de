@@ -1,6 +1,6 @@
 ---
 title: Stile und Vorlagen
-description: Erfahren Sie mehr über XAML-Ressourcen in Windows Presentation Foundation (WPF) für .NET Core. Verstehen der Typen von XAML-Ressourcen im Zusammenhang mit Stilen und Designs.
+description: Erfahren Sie mehr über XAML-Ressourcen in Windows Presentation Foundation (WPF) für .NET Core. Informieren Sie sich über die Typen von XAML-Ressourcen im Zusammenhang mit Stilen und Designs.
 author: thraka
 ms.author: adegeo
 ms.date: 09/09/2019
@@ -9,62 +9,62 @@ dev_langs:
 - vb
 ms.openlocfilehash: f845e739ec3cae502d1e4fd6631f987c5364a42e
 ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 03/12/2020
 ms.locfileid: "81433097"
 ---
 # <a name="styles-and-templates-in-wpf"></a>Stile und Vorlagen in WPF
 
-Das Styling und die Vorlagenerstellung von Windows Presentation Foundation (WPF) beziehen sich auf eine Reihe von Features, mit denen Entwickler und Designer visuell überzeugende Effekte und ein konsistentes Erscheinungsbild für ihr Produkt erstellen können. Wenn Sie das Erscheinungsbild einer App anpassen, möchten Sie ein starkes Styling- und Vorlagenmodell, das die Wartung und Freigabe des Erscheinungsbilds innerhalb und zwischen Apps ermöglicht. WPF stellt dieses Modell bereit.
+Stile und Vorlagen in Windows Presentation Foundation (WPF) beziehen sich auf eine Reihe von Funktionen, mit denen Entwickler und Designer visuell überzeugende Effekte und ein einheitliches Erscheinungsbild für ihr Produkt erstellen können. Wenn Sie die Darstellung einer App anpassen, benötigen Sie ein leistungsfähiges Stil- und Vorlagenmodell, das die Wartung und Freigabe des Erscheinungsbilds innerhalb der jeweiligen und zwischen Apps ermöglicht. WPF stellt dieses Modell bereit.
 
-Ein weiteres Merkmal des WPF-Stylingmodells ist die Trennung von Präsentation und Logik. Designer können an der Darstellung einer App arbeiten, indem sie nur XAML verwenden, während Entwickler gleichzeitig mit der Programmierlogik arbeiten, indem sie C- oder Visual Basic verwenden.
+Eine weitere Funktion des WPF-Stilmodells ist die Trennung von Darstellung und Programmlogik. Designer können die Darstellung einer App nur mithilfe von XAML bearbeiten, während Entwickler mit C# oder Visual Basic an der Programmierlogik arbeiten.
 
-Diese Übersicht konzentriert sich auf die Styling- und Vorlagenaspekte der App und diskutiert keine Datenbindungskonzepte. Weitere Informationen zur Datenbindung finden Sie unter [Übersicht über die Datenbindung](../data/data-binding-overview.md).
+Diese Übersicht konzentriert sich auf die Aspekte der Stile und Vorlagen der App und geht nicht auf Datenbindungskonzepte ein. Weitere Informationen zur Datenbindung finden Sie unter [Übersicht über die Datenbindung](../data/data-binding-overview.md).
 
-Es ist wichtig, Ressourcen zu verstehen, die die Wiederverwendung von Stilen und Vorlagen ermöglichen. Weitere Informationen zu Ressourcen finden Sie unter [XAML-Ressourcen](xaml-resources-define.md).
+Es ist wichtig, die Ressourcen zu kennen, die die Wiederverwendung von Stilen und Vorlagen ermöglichen. Weitere Informationen zu Ressourcen finden Sie unter [XAML-Ressourcen](xaml-resources-define.md).
 
 [!INCLUDE [desktop guide under construction](../../../includes/desktop-guide-preview-note.md)]
 
 ## <a name="sample"></a>Beispiel
 
-Der in dieser Übersicht bereitgestellte Beispielcode basiert auf einer [einfachen Foto-Browsing-Anwendung,](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating) die in der folgenden Abbildung gezeigt wird.
+Der Beispielcode in dieser Übersicht basiert auf einer [einfachen Anwendung zum Suchen von Fotos](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating), die in der folgenden Abbildung gezeigt wird.
 
 ![Formatierte ListView](./media/styles-and-templates-overview/stylingintro-triggers.png "StylingIntro_triggers")
 
-In diesem einfachen Foto-Beispiel werden Stile und Vorlagen verwendet, um eine visuell ansprechende Benutzeroberfläche zu erstellen. Das Beispiel <xref:System.Windows.Controls.TextBlock> besteht aus <xref:System.Windows.Controls.ListBox> zwei Elementen und einem Steuerelement, das an eine Liste von Bildern gebunden ist.
+In diesem einfachen Foto-Beispiel werden Stile und Vorlagen verwendet, um eine visuell ansprechende Benutzeroberfläche zu erstellen. Das Beispiel verfügt über zwei <xref:System.Windows.Controls.TextBlock>-Elemente und ein <xref:System.Windows.Controls.ListBox>-Steuerelement, das an eine Liste von Bildern gebunden ist.
 
 Das vollständige Beispiel finden Sie unter [Einführung zum Beispiel zu Stilen und Vorlagen](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating).
 
 ## <a name="styles"></a>Stile
 
-Sie können sich <xref:System.Windows.Style> eine als bequeme Möglichkeit vorstellen, eine Reihe von Eigenschaftswerten auf mehrere Elemente anzuwenden. Sie können einen Stil für jedes Element <xref:System.Windows.FrameworkElement> <xref:System.Windows.FrameworkContentElement> verwenden, <xref:System.Windows.Window> das <xref:System.Windows.Controls.Button>von oder von einem oder einem abgeleitet wird.
+<xref:System.Windows.Style> ist eine einfache Möglichkeit, mehrere Eigenschaftswerte auf mehrere Elemente anzuwenden. Stile lassen sich auf alle Elemente anwenden, die von <xref:System.Windows.FrameworkElement> oder <xref:System.Windows.FrameworkContentElement> abgeleitet sind, z. B. <xref:System.Windows.Window> oder <xref:System.Windows.Controls.Button>.
 
-Die häufigste Möglichkeit zum Deklarieren eines `Resources` Stils ist als Ressource im Abschnitt in einer XAML-Datei. Da Stile Ressourcen sind, befolgen sie die gleichen Bereichsregeln, die für alle Ressourcen gelten. Einfach ausgedrückt, wobei Sie einen Stil deklarieren, wirkt sich darauf aus, wo der Stil angewendet werden kann. Wenn Sie beispielsweise den Stil im Stammelement Ihrer App-Definitions-XAML-Datei deklarieren, kann der Stil an beliebiger Stelle in ihrer App verwendet werden.
+Stile werden üblicherweise deklariert, indem sie im Abschnitt `Resources` einer XAML-Datei als Ressource deklariert werden. Da es sich bei Stilen um Ressourcen handelt, unterliegen sie denselben Regeln für Gültigkeitsbereiche, die für alle Ressourcen gelten. Einfach ausgedrückt: Wo Sie einen Stil deklarieren, wirkt sich darauf aus, wo der Stil angewendet werden kann. Wenn Sie den Stil z. B. im Stammelement Ihrer XAML-Datei mit der App-Definition deklarieren, kann der Stil überall in der App verwendet werden.
 
-Der folgende XAML-Code deklariert z. `TextBlock`B. zwei `TextBlock` Formatvorlagen für eine , eine, die automatisch auf alle Elemente angewendet wird, und eine andere, auf die explizit verwiesen werden muss.
+Der folgende XAML-Code deklariert beispielsweise zwei Stile für einen `TextBlock`: einen Stil, der automatisch auf alle `TextBlock`-Elemente angewendet wird, und einen anderen Stil, auf den explizit verwiesen werden muss.
 
 [!code-xaml[SnippetDefaultTextBlockStyleBasedOn](~/samples/snippets/desktop-guide/wpf/styles-and-templates-intro/csharp/Window2.xaml#SnippetDefaultTextBlockStyleBasedOn)]
 
-Hier ist ein Beispiel für die oben deklarierten Stile, die verwendet werden.
+Im Folgenden finden Sie ein Beispiel der oben deklarierten Stile, die verwendet werden.
 
 [!code-xaml[SnippetTextBlocksExplicit](~/samples/snippets/desktop-guide/wpf/styles-and-templates-intro/csharp/Window2.xaml#SnippetTextBlocksExplicit)]
 
-![Formatierte Textblöcke](./media/styles-and-templates-overview/stylingintro-textblocks.png)
+![Formatierte TextBlocks](./media/styles-and-templates-overview/stylingintro-textblocks.png)
 
 Weitere Informationen finden Sie unter [Erstellen eines Stils für ein Steuerelement](styles-templates-create-apply-style.md).
 
 ## <a name="controltemplates"></a>ControlTemplates
 
-In WPF <xref:System.Windows.Controls.ControlTemplate> definiert das eines Steuerelements die Darstellung des Steuerelements. Sie können die Struktur und das Erscheinungsbild <xref:System.Windows.Controls.ControlTemplate> eines Steuerelements ändern, indem Sie ein neues Steuerelement definieren und einem Steuerelement zuweisen. In vielen Fällen bieten Vorlagen ihnen genügend Flexibilität, sodass Sie keine eigenen benutzerdefinierten Steuerelemente schreiben müssen.
+In WPF definiert die <xref:System.Windows.Controls.ControlTemplate> eines Steuerelements die Darstellung des Steuerelements. Sie können die Struktur und die Darstellung eines Steuerelements ändern, indem Sie eine neue <xref:System.Windows.Controls.ControlTemplate> definieren und einem Steuerelement zuweisen. In vielen Fällen erhalten Sie durch Vorlagen ausreichende Flexibilität, um keine eigenen benutzerdefinierten Steuerelemente schreiben zu müssen.
 
-Für jedes Steuerelement ist eine Standardvorlage der [Control.Template-Eigenschaft](xref:System.Windows.Controls.Control.Template) zugewiesen. Die Vorlage verbindet die visuelle Darstellung des Steuerelements mit den Funktionen des Steuerelements. Da Sie eine Vorlage in XAML definieren, können Sie die Darstellung des Steuerelements ändern, ohne Code zu schreiben. Jede Vorlage ist für ein bestimmtes <xref:System.Windows.Controls.Button>Steuerelement, z. B. eine , konzipiert.
+Jedes Steuerelement verfügt über eine Standardvorlage, die der [Control.Template](xref:System.Windows.Controls.Control.Template)-Eigenschaft zugewiesen ist. Die Vorlage verbindet die visuelle Darstellung des Steuerelements mit den Funktionen des Steuerelements. Da Sie eine Vorlage in XAML definieren, können Sie die Darstellung des Steuerelements ändern, ohne Code schreiben zu müssen. Jede Vorlage ist für ein bestimmtes Steuerelement konzipiert (z. B. ein <xref:System.Windows.Controls.Button>-Element).
 
-Üblicherweise deklarieren Sie eine `Resources` Vorlage als Ressource im Abschnitt einer XAML-Datei. Wie bei allen Ressourcen gelten scoping-Regeln.
+Im Allgemeinen deklarieren Sie eine Vorlage im Abschnitt `Resources` einer XAML-Datei als Ressource. Wie bei allen Ressourcen gelten Gültigkeitsbreichsregeln.
 
-Steuerelementvorlagen sind viel mehr beteiligt als ein Stil. Dies liegt daran, dass die Steuerelementvorlage die visuelle Darstellung des gesamten Steuerelements neu schreibt, während ein Stil einfach Eigenschaftenänderungen auf das vorhandene Steuerelement anwendet. Da jedoch die Vorlage eines Steuerelements durch Festlegen der [Control.Template-Eigenschaft](xref:System.Windows.Controls.Control.Template) angewendet wird, können Sie eine Vorlage mithilfe eines Stils definieren oder festlegen.
+Steuerelementvorlagen sind viel komplexer als ein Stil. Dies liegt daran, dass die Steuerelementvorlage die visuelle Darstellung des gesamten Steuerelements erneut schreibt, während ein Stil einfach Eigenschaftsänderungen auf das vorhandene Steuerelement anwendet. Da jedoch die Vorlage eines Steuerelements durch Festlegen der [Control.Template](xref:System.Windows.Controls.Control.Template)-Eigenschaft angewendet wird, können Sie einen Stil verwenden, um eine Vorlage zu definieren oder festzulegen.
 
-Designer ermöglichen es Ihnen im Allgemeinen, eine Kopie einer vorhandenen Vorlage zu erstellen und zu ändern. Wählen Sie beispielsweise im Visual Studio `CheckBox` WPF-Designer ein Steuerelement aus, und klicken Sie dann mit der rechten Maustaste, und wählen Sie **Vorlage** > erstellen**erstellen**. Dieser Befehl generiert einen Stil, der *eine Vorlage definiert.*
+Designer ermöglichen es Ihnen im Allgemeinen, eine Kopie einer vorhandenen Vorlage zu erstellen und zu ändern. Wählen Sie im WPF-Designer von Visual Studio beispielsweise ein `CheckBox`-Steuerelement aus, klicken Sie mit der rechten Maustaste, und wählen Sie dann **Vorlage bearbeiten** > **Kopie erstellen** aus. Mit diesem Befehl wird ein *Stil generiert, der eine Vorlagen definiert*.
 
 ```xaml
 <Style x:Key="CheckBoxStyle1" TargetType="{x:Type CheckBox}">
@@ -97,97 +97,97 @@ Designer ermöglichen es Ihnen im Allgemeinen, eine Kopie einer vorhandenen Vorl
 ... content removed to save space ...
 ```
 
-Das Bearbeiten einer Kopie einer Vorlage ist eine hervorragende Möglichkeit, um zu erfahren, wie Vorlagen funktionieren. Anstatt eine neue leere Vorlage zu erstellen, ist es einfacher, eine Kopie zu bearbeiten und einige Aspekte der visuellen Präsentation zu ändern.
+Das Bearbeiten einer Kopie einer Vorlage ist eine gute Möglichkeit, um zu erfahren, wie Vorlagen funktionieren. Anstatt eine neue leere Vorlage zu erstellen, ist es einfacher, eine Kopie zu bearbeiten und einige Aspekte der visuellen Darstellung zu ändern.
 
-Ein Beispiel finden Sie unter [Erstellen einer Vorlage für ein Steuerelement](../themes/how-to-create-apply-template.md).
+Ein Beispiel dazu finden Sie unter [Erstellen einer Vorlage für ein Steuerelement](../themes/how-to-create-apply-template.md).
 
 ### <a name="templatebinding"></a>TemplateBinding
 
-Möglicherweise haben Sie bemerkt, dass die im vorherigen Abschnitt definierte Vorlagenressource die [TemplateBinding Markup Extension](../../framework/wpf/advanced/templatebinding-markup-extension.md)verwendet. A `TemplateBinding` ist eine optimierte Form einer Bindung für Vorlagenszenarien, analog zu einer Bindung, die mit `{Binding RelativeSource={RelativeSource TemplatedParent}}`erstellt wurde. `TemplateBinding`ist nützlich, um Teile der Vorlage an die Eigenschaften des Steuerelements zu binden. Beispielsweise verfügt jedes Steuerelement <xref:System.Windows.Controls.Control.BorderThickness> über eine Eigenschaft. Verwenden `TemplateBinding` Sie a, um zu verwalten, welches Element in der Vorlage von dieser Steuerelementeinstellung betroffen ist.
+Möglicherweise haben Sie bemerkt, dass die im vorherigen Abschnitt definierte Vorlagenressource die [TemplateBinding-Markuperweiterung](../../framework/wpf/advanced/templatebinding-markup-extension.md) verwendet. Eine `TemplateBinding` ist die optimierte Form einer Bindung für Vorlagenszenarien, die einer mit `{Binding RelativeSource={RelativeSource TemplatedParent}}` erstellten Bindung entspricht. `TemplateBinding` ist nützlich, um Teile der Vorlage an die Eigenschaften des Steuerelements zu binden. Jedes Steuerelement verfügt beispielsweise über eine <xref:System.Windows.Controls.Control.BorderThickness>-Eigenschaft. Verwenden Sie eine `TemplateBinding`, um zu verwalten, welches Element in der Vorlage von dieser Steuerelementeinstellung betroffen ist.
 
 ### <a name="contentcontrol-and-itemscontrol"></a>ContentControl und ItemsControl
 
-Wenn <xref:System.Windows.Controls.ContentPresenter> a in <xref:System.Windows.Controls.ControlTemplate> der <xref:System.Windows.Controls.ContentControl>deklariert <xref:System.Windows.Controls.ContentPresenter> wird, bindet <xref:System.Windows.Controls.ContentControl.ContentTemplate%2A> der <xref:System.Windows.Controls.ContentControl.Content%2A> automatisch an die und-Eigenschaften. Ebenso bindet <xref:System.Windows.Controls.ItemsPresenter> ein, <xref:System.Windows.Controls.ControlTemplate> das <xref:System.Windows.Controls.ItemsControl> sich im eines <xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A> <xref:System.Windows.Controls.ItemsControl.Items%2A> befindet, automatisch an die und Eigenschaften.
+Wenn ein <xref:System.Windows.Controls.ContentPresenter> in der <xref:System.Windows.Controls.ControlTemplate> eines <xref:System.Windows.Controls.ContentControl>-Elements deklariert wird, wird der <xref:System.Windows.Controls.ContentPresenter> automatisch an die <xref:System.Windows.Controls.ContentControl.ContentTemplate%2A>- und <xref:System.Windows.Controls.ContentControl.Content%2A>-Eigenschaften gebunden. Ebenso wird ein <xref:System.Windows.Controls.ItemsPresenter>, der sich in der <xref:System.Windows.Controls.ControlTemplate> eines <xref:System.Windows.Controls.ItemsControl>-Elements befindet, automatisch an die Eigenschaften <xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A> und <xref:System.Windows.Controls.ItemsControl.Items%2A> gebunden.
 
-## <a name="datatemplates"></a>Datatemplates
+## <a name="datatemplates"></a>DataTemplates
 
-In dieser Beispiel-App <xref:System.Windows.Controls.ListBox> gibt es ein Steuerelement, das an eine Liste von Fotos gebunden ist.
+In dieser Beispiel-App gibt es ein <xref:System.Windows.Controls.ListBox>-Steuerelement, das an eine Liste von Fotos gebunden ist.
 
 [!code-xaml[ListBox](~/samples/snippets/desktop-guide/wpf/styles-and-templates-intro/csharp/Window3.xaml#SnippetListBox)]
 
-Dies <xref:System.Windows.Controls.ListBox> sieht derzeit wie folgt aus.
+Diese <xref:System.Windows.Controls.ListBox> sieht zurzeit wie folgt aus.
 
 ![ListBox vor dem Anwenden einer Vorlage](./media/styles-and-templates-overview/stylingintro-listboxbefore.png "StylingIntro_ListBoxBefore")
 
-Die meisten Steuerelemente verfügen über Inhalte, und dieser Inhalt stammt häufig aus Daten, an die Sie binden. In diesem Beispiel sind die Daten die Liste der Fotos. In WPF definieren <xref:System.Windows.DataTemplate> Sie die visuelle Darstellung von Daten. Grundsätzlich bestimmt das, <xref:System.Windows.DataTemplate> was Sie in eine setzen, wie die Daten in der gerenderten App aussehen.
+Die meisten Steuerelemente verfügen über Inhalte, und dieser Inhalt stammt häufig aus Daten, an die Sie binden. In diesem Beispiel sind die Daten die Liste der Fotos. In WPF verwenden Sie eine <xref:System.Windows.DataTemplate>, um die visuelle Darstellung von Daten zu definieren. Ihre Eingabe in <xref:System.Windows.DataTemplate> bestimmt im Grunde genommen, wie die Daten in der gerenderten App aussehen.
 
-In unserer Beispiel-App `Photo` verfügt `Source` jedes benutzerdefinierte Objekt über eine Eigenschaft vom Typ string, die den Dateipfad des Bildes angibt. Derzeit werden die Fotoobjekte als Dateipfade angezeigt.
+In unserer Beispiel-App verfügt jedes benutzerdefinierte `Photo`-Objekt über eine `Source`-Eigenschaft vom Typ „string“ (Zeichenfolge), die den Pfad des Bilds angibt. Derzeit werden die Fotoobjekte als Dateipfade angezeigt.
 
 [!code-csharp[PhotoClass](~/samples/snippets/desktop-guide/wpf/styles-and-templates-intro/csharp/Photo.cs#PhotoClass)]
 [!code-vb[PhotoClass](~/samples/snippets/desktop-guide/wpf/styles-and-templates-intro/vb/Photo.vb#PhotoClass)]
 
-Damit die Fotos als Bilder angezeigt <xref:System.Windows.DataTemplate> werden, erstellen Sie eine als Ressource.
+Damit die Fotos als Bilder angezeigt werden, erstellen Sie eine <xref:System.Windows.DataTemplate>-Klasse als Ressource.
 
 [!code-xaml[DataTemplate](~/samples/snippets/desktop-guide/wpf/styles-and-templates-intro/csharp/Window4.xaml#SnippetDataTemplate)]
 
-Beachten Sie, dass <xref:System.Windows.DataTemplate.DataType%2A> die <xref:System.Windows.Style.TargetType%2A> Eigenschaft <xref:System.Windows.Style>der Eigenschaft des ähnelt. Wenn <xref:System.Windows.DataTemplate> Sie sich im Ressourcenabschnitt befinden, wird, wenn Sie die <xref:System.Windows.DataTemplate.DataType%2A> Eigenschaft für einen Typ angeben und a `x:Key`auslassen, der <xref:System.Windows.DataTemplate> angewendet, wenn dieser Typ angezeigt wird. Sie haben immer die <xref:System.Windows.DataTemplate> Möglichkeit, `x:Key` die mit einem `StaticResource` zuzuweisen <xref:System.Windows.DataTemplate> und dann als <xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A> eine <xref:System.Windows.Controls.ContentControl.ContentTemplate%2A> für Eigenschaften festzulegen, die Typen annehmen, z. B. die Eigenschaft oder die Eigenschaft.
+Beachten Sie, dass die <xref:System.Windows.DataTemplate.DataType%2A>-Eigenschaft mit der <xref:System.Windows.Style.TargetType%2A>-Eigenschaft von <xref:System.Windows.Style> vergleichbar ist. Wenn sich Ihre <xref:System.Windows.DataTemplate> im Abschnitt „Resources“ befindet und Sie die <xref:System.Windows.DataTemplate.DataType%2A>-Eigenschaft für einen Typ angeben und einen `x:Key` auslassen, wird die <xref:System.Windows.DataTemplate> immer dann angewendet, wenn dieser Typ angezeigt wird. Sie haben immer die Möglichkeit, die <xref:System.Windows.DataTemplate> einem `x:Key` zuzuweisen und dann als `StaticResource` für Eigenschaften festzulegen, die <xref:System.Windows.DataTemplate>-Typen annehmen, z. B. die <xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A>-Eigenschaft oder die <xref:System.Windows.Controls.ContentControl.ContentTemplate%2A>-Eigenschaft.
 
-Im Wesentlichen <xref:System.Windows.DataTemplate> definiert das im obigen Beispiel, dass jedes Mal, wenn ein `Photo` Objekt vorhanden ist, es als innerhalb <xref:System.Windows.Controls.Image> einer <xref:System.Windows.Controls.Border>angezeigt werden sollte. <xref:System.Windows.DataTemplate>Damit sieht unsere App nun so aus.
+Im Wesentlichen definiert das <xref:System.Windows.DataTemplate> im Beispiel oben, dass jedes Mal, wenn ein `Photo`-Objekt vorhanden ist, dieses als <xref:System.Windows.Controls.Image> innerhalb eines <xref:System.Windows.Controls.Border>-Elements angezeigt werden soll. Mit dieser <xref:System.Windows.DataTemplate> sieht unsere App nun wie folgt aus.
 
 ![Fotobild](./media/styles-and-templates-overview/stylingintro-photosasimages.png "StylingIntro_PhotosAsImages")
 
-Das Datenvorlagenmodell stellt weitere Funktionen bereit. Wenn Sie z. B. Sammlungsdaten anzeigen, die <xref:System.Windows.Controls.Menu> andere <xref:System.Windows.Controls.TreeView>Sammlungen mit <xref:System.Windows.HierarchicalDataTemplate>einem <xref:System.Windows.Controls.HeaderedItemsControl> Typ wie einem oder einem enthalten, gibt es die . Eine weitere Daten-Templating-Funktion ist die , mit der <xref:System.Windows.Controls.DataTemplateSelector>Sie eine <xref:System.Windows.DataTemplate> basierend auf benutzerdefinierter Logik auswählen können. Weitere Informationen finden Sie unter im Artikel [Übersicht über Datenvorlagen](../../framework/wpf/data/data-templating-overview.md), der eine ausführlichere Erläuterung der verschiedenen Vorlagenfunktionen bereitstellt.
+Das Datenvorlagenmodell stellt weitere Funktionen bereit. Wenn Sie z. B. Sammlungsdaten anzeigen, die andere Sammlungen enthalten, die einen <xref:System.Windows.Controls.HeaderedItemsControl>-Typ wie <xref:System.Windows.Controls.Menu> oder <xref:System.Windows.Controls.TreeView> verwenden, ist die <xref:System.Windows.HierarchicalDataTemplate> vorhanden. Eine weitere Datenvorlagenfunktion ist das <xref:System.Windows.Controls.DataTemplateSelector>-Element, das es Ihnen ermöglicht, basierend auf benutzerdefinierter Progammlogik eine zu verwendende <xref:System.Windows.DataTemplate> auszuwählen. Weitere Informationen finden Sie unter im Artikel [Übersicht über Datenvorlagen](../../framework/wpf/data/data-templating-overview.md), der eine ausführlichere Erläuterung der verschiedenen Vorlagenfunktionen bereitstellt.
 
 ## <a name="triggers"></a>Trigger
 
-Ein Trigger legt Eigenschaften fest oder startet Aktionen, z.B. eine Animation, wenn sich ein Eigenschaftswert ändert oder ein Ereignis ausgelöst wird. <xref:System.Windows.Style>, <xref:System.Windows.Controls.ControlTemplate>und <xref:System.Windows.DataTemplate> alle `Triggers` verfügen über eine Eigenschaft, die eine Reihe von Triggern enthalten kann. Es gibt mehrere Arten von Triggern.
+Ein Trigger legt Eigenschaften fest oder startet Aktionen, z.B. eine Animation, wenn sich ein Eigenschaftswert ändert oder ein Ereignis ausgelöst wird. <xref:System.Windows.Style>, <xref:System.Windows.Controls.ControlTemplate>und <xref:System.Windows.DataTemplate> verfügen alle über eine `Triggers`-Eigenschaft, die eine Reihe von Triggern enthalten kann. Es gibt mehrere Typen von Triggern.
 
 ### <a name="propertytriggers"></a>PropertyTriggers
 
-A, <xref:System.Windows.Trigger> das Eigenschaftswerte festlegt oder Aktionen basierend auf dem Wert einer Eigenschaft startet, wird als Eigenschaftstrigger bezeichnet.
+Ein <xref:System.Windows.Trigger>, der Eigenschaftswerte festlegt oder Aktionen basierend auf einem Eigenschaftswert auslöst, wird als Eigenschaftstrigger bezeichnet.
 
-Um die Verwendung von Eigenschaftstriggern <xref:System.Windows.Controls.ListBoxItem> zu veranschaulichen, können Sie jede einzelne teilweise transparent machen, sofern sie nicht ausgewählt ist. Der folgende Stil <xref:System.Windows.UIElement.Opacity%2A> legt <xref:System.Windows.Controls.ListBoxItem> den `0.5`Wert von a bis fest. Wenn <xref:System.Windows.Controls.ListBoxItem.IsSelected%2A> die `true`Eigenschaft jedoch <xref:System.Windows.UIElement.Opacity%2A> ist, `1.0`wird die auf festgelegt.
+Um die Verwendung von Eigenschaftstriggern zu veranschaulichen, können Sie jede <xref:System.Windows.Controls.ListBoxItem>-Klasse teilweise transparent anzeigen, es sei denn, sie ist aktiviert. Im folgenden Stil wird der <xref:System.Windows.UIElement.Opacity%2A>-Wert eines <xref:System.Windows.Controls.ListBoxItem> auf `0.5`festgelegt. Wenn die <xref:System.Windows.Controls.ListBoxItem.IsSelected%2A>-Eigenschaft `true` ist, wird <xref:System.Windows.UIElement.Opacity%2A> jedoch auf `1.0` festgelegt.
 
 [!code-xaml[PropertyTrigger](~/samples/snippets/desktop-guide/wpf/styles-and-templates-intro/csharp/Window5.xaml#SnippetPropertyTrigger)]
 
-In diesem <xref:System.Windows.Trigger> Beispiel wird ein verwendet, um <xref:System.Windows.Trigger> einen Eigenschaftswert festzulegen, aber beachten Sie, dass die Klasse auch über die und <xref:System.Windows.TriggerBase.EnterActions%2A> <xref:System.Windows.TriggerBase.ExitActions%2A> Eigenschaften verfügt, die einen Trigger zum Ausführen von Aktionen ermöglichen.
+In diesem Beispiel wird ein <xref:System.Windows.Trigger> verwendet, um einen Eigenschaftswert festzulegen, aber beachten Sie, dass die <xref:System.Windows.Trigger>-Klasse auch über die Eigenschaften <xref:System.Windows.TriggerBase.EnterActions%2A> und <xref:System.Windows.TriggerBase.ExitActions%2A> verfügt, die es dem Trigger ermöglichen, Aktionen auszuführen.
 
-Beachten Sie, dass die <xref:System.Windows.FrameworkElement.MaxHeight%2A> `75`Eigenschaft des auf festgelegt <xref:System.Windows.Controls.ListBoxItem> ist. In der folgenden Abbildung ist das dritte Element das ausgewählte Element.
+Beachten Sie, dass die <xref:System.Windows.FrameworkElement.MaxHeight%2A>-Eigenschaft von <xref:System.Windows.Controls.ListBoxItem> auf `75` festgelegt ist. In der folgenden Abbildung ist das dritte Element das ausgewählte Element.
 
 ![Formatierte ListView](./media/styles-and-templates-overview/stylingintro-triggers.png "StylingIntro_triggers")
 
 ### <a name="eventtriggers-and-storyboards"></a>EventTrigger und Storyboards
 
-Ein anderer Typ <xref:System.Windows.EventTrigger>von Triggern ist der , der eine Reihe von Aktionen basierend auf dem Auftreten eines Ereignisses startet. Die <xref:System.Windows.EventTrigger> folgenden Objekte geben z. B. an, <xref:System.Windows.FrameworkElement.MaxHeight%2A> dass die Eigenschaft, `90` wenn `0.2` der Mauszeiger in den <xref:System.Windows.Controls.ListBoxItem>eingibt, mit einem Wert von über einem zweiten Zeitraum animiert wird. Wenn sich die Maus vom Element weg bewegt, gibt die Eigenschaft auf den ursprünglichen Wert über einen Zeitraum von `1` Sekunden an. Beachten Sie, dass es <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A> nicht erforderlich <xref:System.Windows.ContentElement.MouseLeave> ist, einen Wert für die Animation anzugeben. Dies liegt daran, dass die Animation den ursprünglichen Wert nachverfolgen kann.
+Ein weiterer Trigger ist <xref:System.Windows.EventTrigger>, der eine Reihe von Aktionen startet, die auf dem Vorkommen eines Ereignisses basieren. Die folgenden <xref:System.Windows.EventTrigger>-Objekte geben z. B. an, dass die <xref:System.Windows.FrameworkElement.MaxHeight%2A>-Eigenschaft, wenn das <xref:System.Windows.Controls.ListBoxItem>-Element durch den Mauszeiger aktiviert wird, auf einen Wert von `90` über einen zweiten Zeitraum von `0.2` animiert wird. Wenn sich die Maus vom Element weg bewegt, gibt die Eigenschaft auf den ursprünglichen Wert über einen Zeitraum von `1` Sekunden an. Beachten Sie, dass es nicht notwendig ist, einen <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A>-Wert für die <xref:System.Windows.ContentElement.MouseLeave>-Animation anzugeben. Dies liegt daran, dass die Animation den ursprünglichen Wert nachverfolgen kann.
 
 [!code-xaml[StyleEventTriggers](~/samples/snippets/desktop-guide/wpf/styles-and-templates-intro/csharp/Window6.xaml#SnippetStyleEventTriggers)]
 
-Weitere Informationen finden Sie in der [Storyboards-Übersicht](../../framework/wpf/graphics-multimedia/storyboards-overview.md).
+Weitere Informationen finden Sie in der [Übersicht über Storyboards](../../framework/wpf/graphics-multimedia/storyboards-overview.md).
 
 In der folgenden Abbildung zeigt die Maus auf das dritte Element.
 
-![Styling-Beispiel-Screenshot](./media/styles-and-templates-overview/stylingintro-eventtriggers.png "StylingIntro_EventTriggers")
+![Screenshot: Stilbeispiel](./media/styles-and-templates-overview/stylingintro-eventtriggers.png "StylingIntro_EventTriggers")
 
 ### <a name="multitriggers-datatriggers-and-multidatatriggers"></a>MultiTrigger, DataTrigger und MultiDataTrigger
 
-Zusätzlich zu <xref:System.Windows.Trigger> <xref:System.Windows.EventTrigger>und gibt es andere Arten von Triggern. <xref:System.Windows.MultiTrigger>können Sie Eigenschaftswerte basierend auf mehreren Bedingungen festlegen. Sie <xref:System.Windows.DataTrigger> verwenden <xref:System.Windows.MultiDataTrigger> und wenn die Eigenschaft Ihrer Bedingung datengebunden ist.
+Zusätzlich zu <xref:System.Windows.Trigger> und <xref:System.Windows.EventTrigger>gibt es auch andere Typen von Triggern. Mit <xref:System.Windows.MultiTrigger> können Sie Eigenschaftswerte auf Grundlage mehrerer Kriterien festlegen. Sie verwenden <xref:System.Windows.DataTrigger> und <xref:System.Windows.MultiDataTrigger>, wenn die-Eigenschaft Ihrer Bedingung datengebunden ist.
 
 ## <a name="visual-states"></a>Visuelle Zustände
 
-Steuerelemente befinden sich immer in einem bestimmten **Zustand**. Wenn sich die Maus beispielsweise über die Oberfläche eines Steuerelements bewegt, wird `MouseOver`das Steuerelement als in einem gemeinsamen Zustand von betrachtet. Ein Steuerelement ohne einen bestimmten Zustand wird `Normal` als im gemeinsamen Zustand betrachtet. Staaten werden in Gruppen aufgeteilt, und die zuvor `CommonStates`genannten Staaten sind Teil der Staatsgruppe . Die meisten Steuerelemente `CommonStates` haben `FocusStates`zwei Statusgruppen: und . Von jeder Statusgruppe, die auf ein Steuerelement angewendet wird, befindet `CommonStates.MouseOver` `FocusStates.Unfocused`sich ein Steuerelement immer in einem Zustand jeder Gruppe, z. B. und . Ein Steuerelement kann sich jedoch nicht in zwei verschiedenen Zuständen innerhalb derselben Gruppe befinden, z. `CommonStates.Normal` B. und `CommonStates.Disabled`. Hier ist eine Tabelle der Zustände, die die meisten Steuerelemente erkennen und verwenden.
+Steuerelemente befinden sich immer in einem bestimmten **Zustand**. Wenn die Maus z. B. über die Oberfläche eines Steuerelements bewegt wird, wird das Steuerelement als im allgemeinen Zustand `MouseOver` betrachtet. Ein Steuerelement ohne einen bestimmten Zustand wird als im allgemeinen Zustand `Normal` betrachtet. Zustände werden in Gruppen unterteilt, und die zuvor erwähnten Zustände sind Teil der Statusgruppe `CommonStates`. Die meisten Steuerelemente verfügen über zwei Statusgruppen: `CommonStates` und `FocusStates`. Für jede Zustandsgruppe, die auf ein Steuerelement angewendet wird, befindet sich ein Steuerelement immer in einem Zustand jeder Gruppe, z. B. `CommonStates.MouseOver` und `FocusStates.Unfocused`. Ein Steuerelement kann sich jedoch nicht in zwei verschiedenen Zuständen innerhalb derselben Gruppe befinden, etwa in `CommonStates.Normal` und `CommonStates.Disabled`. Im Folgenden finden Sie eine Tabelle mit Zuständen, die die meisten Steuerelemente erkennen und verwenden.
 
-| VisualState-Name | VisualStateGroup-Name | BESCHREIBUNG |
+| VisualState-Name | VisualStateGroup-Name | Beschreibung |
 | ---------------- | --------------------- | ----------- |
 | Normal           | CommonStates          | Der Standardzustand |
 | MouseOver        | CommonStates          | Der Mauszeiger ist über dem Steuerelement positioniert. |
 | Gedrückt          | CommonStates          | Das Steuerelement wird gedrückt. |
-| Disabled         | CommonStates          | Das Steuerelement ist deaktiviert. |
-| Mit Fokus          | FocusStates           | Der Fokus liegt auf dem Steuerelement. |
+| Deaktiviert         | CommonStates          | Das Steuerelement ist deaktiviert. |
+| Focused          | FocusStates           | Der Fokus liegt auf dem Steuerelement. |
 | Ohne Fokus        | FocusStates           | Der Fokus liegt nicht auf dem Steuerelement. |
 
-Durch Definieren <xref:System.Windows.VisualStateManager?displayProperty=fullName> eines im Stammelement einer Steuerelementvorlage können Sie Animationen auslösen, wenn ein Steuerelement in einen bestimmten Zustand wechselt. Der `VisualStateManager` erklärt, welche <xref:System.Windows.VisualStateGroup> <xref:System.Windows.VisualState> Kombinationen von und zu beobachten. Wenn das Steuerelement in einen überwachten `VisaulStateManager` Zustand wechselt, wird die von der definierte Animation gestartet.
+Wenn Sie ein <xref:System.Windows.VisualStateManager?displayProperty=fullName>-Element für das Stammelement einer Steuerelementvorlage definieren, können Sie Animationen auslösen, wenn ein Steuerelement in einen bestimmten Zustand wechselt. Der `VisualStateManager` deklariert, welche Kombinationen von <xref:System.Windows.VisualStateGroup> und <xref:System.Windows.VisualState> überwacht werden. Wenn das Steuerelement einen überwachten Zustand eintritt, wird die von `VisaulStateManager` definierte Animation gestartet.
 
-Der folgende XAML-Code überwacht `CommonStates.MouseOver` z. B. den Status, um die Füllfarbe des Elements mit dem Namen zu `backgroundElement`animieren. Wenn das Steuerelement `CommonStates.Normal` in den Zustand zurückkehrt, `backgroundElement` wird die Füllfarbe des benannten Elements wiederhergestellt.
+Der folgende XAML-Code überwacht z. B. den `CommonStates.MouseOver`-Zustand, um die Füllfarbe des Elements mit dem Namen `backgroundElement` zu animieren. Wenn das Steuerelement in den `CommonStates.Normal`-Zustand zurückkehrt, wird die Füllfarbe des Elements mit dem Namen `backgroundElement` wiederhergestellt.
 
 ```xaml
 <ControlTemplate x:Key="roundbutton" TargetType="Button">
@@ -212,21 +212,21 @@ Der folgende XAML-Code überwacht `CommonStates.MouseOver` z. B. den Status, um 
         ...
 ```
 
-Weitere Informationen zu Storyboards finden Sie unter [Storyboards Übersicht](../../framework/wpf/graphics-multimedia/storyboards-overview.md).
+Weitere Informationen zu Storyboards finden Sie unter [Übersicht über Storyboards](../../framework/wpf/graphics-multimedia/storyboards-overview.md).
 
-## <a name="shared-resources-and-themes"></a>Gemeinsame Ressourcen und Themen
+## <a name="shared-resources-and-themes"></a>Gemeinsam genutzte Ressourcen und Designs
 
-Eine typische WPF-App kann über mehrere UI-Ressourcen verfügen, die in der gesamten App angewendet werden. Zusammen genommen kann dieser Satz von Ressourcen als das Thema für die App betrachtet werden. WPF bietet Unterstützung für das Verpacken von UI-Ressourcen als Design, <xref:System.Windows.ResourceDictionary> indem ein Ressourcenwörterbuch verwendet wird, das als Klasse gekapselt ist.
+Eine typische WPF-Anwendung kann über mehrere Benutzeroberflächenressourcen verfügen, die in der gesamten App angewendet werden. Dieser Satz von Ressourcen wird im Ganzen als das Design der App bezeichnet. WPF bietet Unterstützung beim Packen der Benutzeroberflächenressourcen als Design mithilfe eines Ressourcenverzeichnisse, die als <xref:System.Windows.ResourceDictionary>-Klasse gekapselt ist.
 
-WPF-Designs werden mithilfe des Styling- und Vorlagenmechanismus definiert, den WPF zum Anpassen der Visuellen eines beliebigen Elements verfügbar macht.
+WPF-Designs werden mithilfe des Mechanismus für Stile und Vorlagen definiert, der von WPF zum Anpassen der visuellen Objekte eines Elements bereitgestellt wird.
 
-WPF-Designressourcen werden in eingebetteten Ressourcenwörterbüchern gespeichert. Diese Ressourcenverzeichnisse müssen in einer signierten Assembly eingebettet werden und werden entweder in der gleichen Assembly wie der Code selbst oder in einer parallele Assembly eingebettet. Für PresentationFramework.dll, die Assembly, die WPF-Steuerelemente enthält, befinden sich Designressourcen in einer Reihe von nebeneinander gerichteten Assemblys.
+WPF-Designressourcen werden in eingebetteten Ressourcenverzeichnissen gespeichert. Diese Ressourcenverzeichnisse müssen in einer signierten Assembly eingebettet werden und werden entweder in der gleichen Assembly wie der Code selbst oder in einer parallele Assembly eingebettet. Im Fall von „PresentationFramework.dll“ (der Assembly, die WPF-Steuerelemente enthält) befinden sich Designressourcen in einer Reihe von parallelen Assemblys.
 
-Das Design wird zu dem letzten Ort, an dem bei der Suche nach dem Stil eines Elements gesucht wird. In der Regel beginnt die Suche mit der Elementstruktur, indem sie nach einer geeigneten Ressource sucht, dann in der App-Ressourcensammlung nachschaut und schließlich das System abfragt. Dies gibt App-Entwicklern die Möglichkeit, den Stil für jedes Objekt auf Baum- oder App-Ebene neu zu definieren, bevor sie das Design erreichen.
+Das Design wird zu dem letzten Ort, an dem bei der Suche nach dem Stil eines Elements gesucht wird. In der Regel beginnt die Suche, indem sie die Elementstruktur aufwärts durchläuft und nach einer geeigneten Ressource sucht. Dann wird die Suche in der Ressourcensammlung der App fortgesetzt, und schließlich wird das System abgefragt. Auf diese Weise können App-Entwickler der Stil für alle Objekte auf Struktur- oder Anwendungsebene neu definieren, bevor das Design erreicht wird.
 
-Sie können Ressourcenwörterbücher als einzelne Dateien definieren, mit denen Sie ein Design in mehreren Apps wiederverwenden können. Sie können auch austauschbare Designs erstellen, indem Sie mehrere Ressourcenverzeichnisse definieren, welche dieselben Ressourcentypen bereitstellen, jedoch mit unterschiedlichen Werten. Das Neudefinieren dieser Stile oder anderer Ressourcen auf App-Ebene ist der empfohlene Ansatz zum Enthäuten einer App.
+Sie können Ressourcenverzeichnisse als einzelne Dateien definieren, die es Ihnen ermöglichen, ein Design in mehreren Apps wiederzuverwenden. Sie können auch austauschbare Designs erstellen, indem Sie mehrere Ressourcenverzeichnisse definieren, welche dieselben Ressourcentypen bereitstellen, jedoch mit unterschiedlichen Werten. Das Neudefinieren dieser Stile oder anderer Ressourcen auf Anwendungsebene ist die empfohlene Vorgehensweise für das Skinning von Apps.
 
-Um eine Reihe von Ressourcen, einschließlich Stile und Vorlagen, für alle Apps freizugeben, können Sie eine XAML-Datei erstellen und eine <xref:System.Windows.ResourceDictionary> definieren, die Verweise auf eine `shared.xaml` Datei enthält.
+Um eine Reihe von Ressourcen wie Stile und Vorlagen anwendungsübergreifend freizugeben, können Sie eine XAML-Datei erstellen und ein <xref:System.Windows.ResourceDictionary>-Element definieren, das Verweise auf eine `shared.xaml`-Datei enthält.
 
 ```xaml
 <ResourceDictionary.MergedDictionaries>
@@ -234,14 +234,14 @@ Um eine Reihe von Ressourcen, einschließlich Stile und Vorlagen, für alle Apps
 </ResourceDictionary.MergedDictionaries>
 ```
 
-Es ist die `shared.xaml`Freigabe von , <xref:System.Windows.ResourceDictionary> die selbst eine definiert, die eine Reihe von Stil- und Pinselressourcen enthält, die es den Steuerelementen in einer App ermöglicht, ein konsistentes Aussehen zu haben.
+Es ist die gemeinsame Nutzung von `shared.xaml`, die selbst ein <xref:System.Windows.ResourceDictionary>-Element definiert, die eine Reihe von Stil- und Pinselressourcen enthält, die es den Steuerelementen in einer App ermöglichen, ein einheitliches Aussehen aufzuweisen.
 
-Weitere Informationen finden Sie unter [Zusammengeführte Ressourcenwörterbücher](../../framework/wpf/advanced/merged-resource-dictionaries.md).
+Weitere Informationen finden Sie unter [Gemergte Ressourcenverzeichnisse](../../framework/wpf/advanced/merged-resource-dictionaries.md).
 
-Wenn Sie ein Design für Ihr benutzerdefiniertes Steuerelement erstellen, lesen Sie den Abschnitt **Definieren von Ressourcen auf Themaebene** in der Übersicht zur [Steuerelementerstellung](../../framework/wpf/controls/control-authoring-overview.md#defining-resources-at-the-theme-level).
+Wenn Sie ein Design für Ihr benutzerdefiniertes Steuerelement erstellen, finden Sie im Abschnitt **Definieren von Ressourcen auf Designebene** der [Übersicht über das Erstellen von Steuerelementen](../../framework/wpf/controls/control-authoring-overview.md#defining-resources-at-the-theme-level) weitere Informationen.
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Paket-URI in WPF](../../framework/wpf/app-development/pack-uris-in-wpf.md)
-- [Vorgehensweise: Suchen von Elementen, die mit einer ControlTemplate generiert wurden](../../framework/wpf/controls/how-to-find-controltemplate-generated-elements.md)
-- [Suchen von DataTemplate-generierten Elementen](../../framework/wpf/data/how-to-find-datatemplate-generated-elements.md)
+- [How to: Suchen von Elementen, die mit einer ControlTemplate generiert wurden](../../framework/wpf/controls/how-to-find-controltemplate-generated-elements.md)
+- [Suchen von Elementen, die mit einer DataTemplate generiert wurden](../../framework/wpf/data/how-to-find-datatemplate-generated-elements.md)

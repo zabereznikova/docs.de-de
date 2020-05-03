@@ -6,7 +6,7 @@ helpviewer_keywords:
 - marshaling data, COM interop
 ms.openlocfilehash: ae41713d5349321725599c0c38d7c6fc515c374b
 ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 03/12/2020
 ms.locfileid: "79181370"
@@ -23,9 +23,9 @@ COM-Interop bietet Unterstützung für sowohl die Verwendung von COM-Objekten au
  Die folgenden Abschnitte verweisen auf Themen, in denen die Prozesse zum Anpassen von Interop-Wrappern beschrieben werden, wenn Sie dem Marshaller zusätzliche Typinformationen bereitstellen können (oder müssen).  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
-[Gewusst wie: Erstellen von Wrappern manuell](how-to-create-wrappers-manually.md) Beschreibt, wie ein COM-Wrapper manuell im verwalteten Quellcode erstellt wird.
+[How to: Manuelles Erstellen von Wrappern](how-to-create-wrappers-manually.md): Beschreibt, wie Sie einen COM-Wrapper in verwaltetem Quellcode manuell erstellen.
 
- [Gewusst wie: Migrieren von verwaltetem Code DCOM zu WCF](how-to-migrate-managed-code-dcom-to-wcf.md)  
+ [How to: Migrieren von verwaltetem Code DCOM zu WCF](how-to-migrate-managed-code-dcom-to-wcf.md)  
  Beschreibt, wie Sie verwalteten DCOM-Code zu WCF für die sicherste Lösung migrieren.  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  

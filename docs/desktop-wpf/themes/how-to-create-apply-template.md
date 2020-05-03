@@ -1,6 +1,6 @@
 ---
-title: Erstellen einer Vorlage in WPF - .NET Desktop
-description: Erfahren Sie, wie Sie eine Steuerelementvorlage in Windows Presentation Foundation und .NET Core erstellen und darauf verweisen.
+title: 'Erstellen einer Vorlage in WPF: .NET-Desktop'
+description: In diesem Artikel erfahren Sie, wie Sie eine Vorlage für ein Steuerelement in Windows Presentation Foundation und .NET Core erstellen und darauf verweisen.
 author: thraka
 ms.author: adegeo
 ms.date: 11/15/2019
@@ -30,32 +30,32 @@ helpviewer_keywords:
 - templates [WPF], custom for existing controls
 ms.openlocfilehash: c901864d387b8de976bbfa9a9b3c14a7d5a0b4d8
 ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2019
 ms.locfileid: "81432539"
 ---
 # <a name="create-a-template-for-a-control"></a>Erstellen einer Vorlage für ein Steuerelement
 
-Mit Windows Presentation Foundation (WPF) können Sie die visuelle Struktur und das Verhalten eines vorhandenen Steuerelements mit Einer eigenen wiederverwendbaren Vorlage anpassen. Vorlagen können global auf Ihre Anwendung, Fenster und Seiten oder direkt auf Steuerelemente angewendet werden. Die meisten Szenarien, in denen Sie ein neues Steuerelement erstellen müssen, können stattdessen durch das Erstellen einer neuen Vorlage für ein vorhandenes Steuerelement abgedeckt werden.
+Mit Windows Presentation Foundation (WPF) können Sie die visuelle Struktur und das Verhalten eines vorhandenen Steuerelements mit Ihrer eigenen wiederverwendbaren Vorlage anpassen. Vorlagen können global auf Anwendungen, Fenster und Seiten oder direkt auf Steuerelemente angewendet werden. Die meisten Szenarien, in denen Sie ein neues Steuerelement erstellen müssen, können stattdessen durch Erstellen einer neuen Vorlage für ein vorhandenes Steuerelement abgedeckt werden.
 
 [!INCLUDE [desktop guide under construction](../../../includes/desktop-guide-preview-note.md)]
 
-In diesem Artikel werden Sie das <xref:System.Windows.Controls.ControlTemplate> Erstellen <xref:System.Windows.Controls.Button> eines neuen Steuerelements untersuchen.
+In diesem Artikel erfahren Sie, wie Sie eine neue <xref:System.Windows.Controls.ControlTemplate> für das <xref:System.Windows.Controls.Button>-Steuerelement erstellen.
 
-## <a name="when-to-create-a-controltemplate"></a>Wann sie eine ControlTemplate erstellen
+## <a name="when-to-create-a-controltemplate"></a>Wann sollte eine ControlTemplate erstellt werden?
 
-Steuerelemente verfügen über <xref:System.Windows.Controls.Border.Background%2A>viele <xref:System.Windows.Controls.Control.Foreground%2A>Eigenschaften, z. B. , und <xref:System.Windows.Controls.Control.FontFamily%2A>. Diese Eigenschaften steuern verschiedene Aspekte der Darstellung des Steuerelements, aber die Änderungen, die Sie durch Festlegen dieser Eigenschaften vornehmen können, sind begrenzt. Sie können die <xref:System.Windows.Controls.Control.Foreground%2A> Eigenschaft z. <xref:System.Windows.Controls.Control.FontStyle%2A> B. auf blau <xref:System.Windows.Controls.CheckBox>und auf Kursiv für eine festlegen. Wenn Sie die Darstellung des Steuerelements über das Festlegen der anderen Eigenschaften <xref:System.Windows.Controls.ControlTemplate>des Steuerelements hinaus anpassen möchten, erstellen Sie eine .
+Steuerelemente verfügen über viele Eigenschaften, etwa über <xref:System.Windows.Controls.Border.Background%2A>, <xref:System.Windows.Controls.Control.Foreground%2A> und <xref:System.Windows.Controls.Control.FontFamily%2A>. Diese Eigenschaften steuern verschiedene Aspekte der Darstellung des Steuerelements, aber die Änderungen, die Sie vornehmen können, indem Sie diese Eigenschaften festlegen, sind eingeschränkt. Beispielsweise können Sie die <xref:System.Windows.Controls.Control.Foreground%2A>-Eigenschaft auf „Blue“ festlegen und <xref:System.Windows.Controls.Control.FontStyle%2A> für ein <xref:System.Windows.Controls.CheckBox>-Element auf kursiv. Sie erstellen eine <xref:System.Windows.Controls.ControlTemplate>, wenn Sie die Darstellung des Steuerelements über das hinaus ändern möchten, was durch das Festlegen anderer Steuerelementeigenschaften möglich ist.
 
-In den meisten Benutzeroberflächen hat eine Schaltfläche die gleiche allgemeine Darstellung: ein Rechteck mit etwas Text. Wenn Sie eine abgerundete Schaltfläche erstellen möchten, können Sie ein neues Steuerelement erstellen, das von der Schaltfläche erbt oder die Funktionalität der Schaltfläche neu erstellt. Darüber hinaus würde das neue Benutzersteuerelement die kreisförmige Visualisierung bereitstellen.
+In den meisten Benutzeroberflächen weis eine Schaltfläche dieselbe allgemeine Darstellung auf: ein Rechteck mit Text. Wenn Sie eine abgerundete Schaltfläche erstellen möchten, können Sie ein neues Steuerelement erstellen, das von der Schaltfläche erbt oder die Funktionalität der Schaltfläche neu erstellt. Außerdem würde das neue Benutzersteuerelement das abgerundete visuelle Element bereitstellen.
 
-Sie können das Erstellen neuer Steuerelemente vermeiden, indem Sie das visuelle Layout eines vorhandenen Steuerelements anpassen. Mit einer abgerundeten Schaltfläche <xref:System.Windows.Controls.ControlTemplate> erstellen Sie eine mit dem gewünschten visuellen Layout.
+Sie können vermeiden, neue Steuerelemente zu erstellen, indem Sie das visuelle Layout eines vorhandenen Steuerelements anpassen. Mit einer abgerundeten Schaltfläche erstellen Sie eine <xref:System.Windows.Controls.ControlTemplate> mit dem gewünschten visuellen Layout.
 
-Wenn Sie hingegen ein Steuerelement mit neuen Funktionen, unterschiedlichen Eigenschaften und neuen <xref:System.Windows.Controls.UserControl>Einstellungen benötigen, erstellen Sie eine neue .
+Wenn Sie jedoch ein Steuerelement mit neuen Funktionen, anderen Eigenschaften und neuen Einstellungen benötigen, erstellen Sie ein neues <xref:System.Windows.Controls.UserControl>-Element.
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
-Erstellen Sie eine neue WPF-Anwendung, und legen Sie in *MainWindow.xaml* (oder einem anderen Fenster Ihrer Wahl) die folgenden Eigenschaften im ** \<Window>-Element** fest:
+Erstellen Sie eine neue WPF-Anwendung, und legen Sie in *MainWindow.xaml* (oder in einem anderen Fenster Ihrer Wahl) die folgenden Eigenschaften für das **\<Window>** -Element fest:
 
 |     |     |
 | --- | --- |
@@ -63,27 +63,27 @@ Erstellen Sie eine neue WPF-Anwendung, und legen Sie in *MainWindow.xaml* (oder 
 | **[!OP.NO-LOC(SizeToContent)]** | `WidthAndHeight` |
 | **[!OP.NO-LOC(MinWidth)]**      | `250` |
 
-Legen Sie den Inhalt des ** \<Window>-Elements** auf das folgende XAML fest:
+Legen Sie den Inhalt der **\<Window>** -Elements auf den folgenden XAML-Code fest:
 
 [!code-xaml[Initial](~/samples/snippets/desktop-guide/wpf/styles-templates-create-apply-template/csharp/Window1.xaml#Initial)]
 
-Am Ende sollte die *Datei MainWindow.xaml* wie folgt aussehen:
+Schließlich sollte die Datei *MainWindow.xaml* ähnlich wie im Folgenden aussehen:
 
 [!code-xaml[InitialWhole](~/samples/snippets/desktop-guide/wpf/styles-templates-create-apply-template/csharp/Window1.xaml#InitialWhole)]
 
-Wenn Sie die Anwendung ausführen, sieht sie wie folgt aus:
+Wenn Sie die Anwendung ausführen, sieht dies wie folgt aus:
 
-![WPF-Fenster mit zwei unformatierten Schaltflächen](media/create-apply-template/unstyled-button.png)
+![WPF-Fenster mit zwei Schaltflächen ohne Stilangabe](media/create-apply-template/unstyled-button.png)
 
 ## <a name="create-a-controltemplate"></a>Erstellen einer ControlTemplate
 
-Die häufigste Möglichkeit zum <xref:System.Windows.Controls.ControlTemplate> Deklarieren einer `Resources` ist als Ressource im Abschnitt in einer XAML-Datei. Da Vorlagen Ressourcen sind, befolgen sie dieselben Bereichsregeln, die für alle Ressourcen gelten. Einfach ausgedrückt, wo Sie eine Vorlage deklarieren wirkt, wo die Vorlage angewendet werden kann. Wenn Sie beispielsweise die Vorlage im Stammelement Der XAML-Datei der Anwendungsdefinition deklarieren, kann die Vorlage überall in der Anwendung verwendet werden. Wenn Sie die Vorlage in einem Fenster definieren, können nur die Steuerelemente in diesem Fenster die Vorlage verwenden.
+Eine <xref:System.Windows.Controls.ControlTemplate> wird üblicherweise deklariert, indem sie im Abschnitt `Resources` einer XAML-Datei als Ressource deklariert wird. Da es sich bei Vorlagen um Ressourcen handelt, unterliegen sie denselben Gültigkeitsbereichsregeln, die für alle Ressourcen gelten. Einfach ausgedrückt: Wo Sie eine Vorlage deklarieren, wirkt sich darauf aus, wo die Vorlage angewendet werden kann. Wenn Sie die Vorlage beispielsweise im Stammelement der XAML-Anwendungsdefinitionsdatei deklarieren, kann die Vorlage überall in Ihrer Anwendung verwendet werden. Wenn Sie die Vorlage in einem Fenster definieren, können nur die Steuerelemente in diesem Fenster die Vorlage verwenden.
 
-Fügen Sie zunächst `Window.Resources` ein Element zu Ihrer *MainWindow.xaml-Datei* hinzu:
+Fügen Sie zunächst der Datei *MainWindow.xaml* ein `Window.Resources`-Element hinzu:
 
 [!code-xaml[WindowResStart](~/samples/snippets/desktop-guide/wpf/styles-templates-create-apply-template/csharp/Window2.xaml#WindowResStart)]
 
-Erstellen Sie eine neue ** \<ControlTemplate->** mit den folgenden Eigenschaftensatz:
+Erstellen Sie eine neue **\<ControlTemplate** mit den folgenden Eigenschaften:
 
 |     |     |
 | --- | --- |
@@ -92,23 +92,23 @@ Erstellen Sie eine neue ** \<ControlTemplate->** mit den folgenden Eigenschaften
 
 Diese Steuerelementvorlage ist einfach:
 
-- ein Stammelement für das Steuerelement, ein<xref:System.Windows.Controls.Grid>
-- a, <xref:System.Windows.Shapes.Ellipse> um das abgerundete Erscheinungsbild der Schaltfläche zu zeichnen
-- a <xref:System.Windows.Controls.ContentPresenter> zum Anzeigen des benutzerdefinierten Schaltflächeninhalts
+- ein Stammelement für das-Steuerelement, ein <xref:System.Windows.Controls.Grid>
+- ein <xref:System.Windows.Shapes.Ellipse>-Element, um das abgerundete Aussehen der Schaltfläche zu zeichnen
+- ein <xref:System.Windows.Controls.ContentPresenter>-Element, um den benutzerdefinierten Schaltflächeninhalt anzuzeigen
 
 [!code-xaml[ControlTemplate](~/samples/snippets/desktop-guide/wpf/styles-templates-create-apply-template/csharp/Window3.xaml#ControlTemplate)]
 
 ### <a name="templatebinding"></a>TemplateBinding
 
-Wenn Sie einen <xref:System.Windows.Controls.ControlTemplate>neuen erstellen, können Sie die öffentlichen Eigenschaften weiterhin verwenden, um die Darstellung des Steuerelements zu ändern. Die [TemplateBinding-Markuperweiterung](../../framework/wpf/advanced/templatebinding-markup-extension.md) bindet eine Eigenschaft eines <xref:System.Windows.Controls.ControlTemplate> Elements, das sich im Element befindet, an eine öffentliche Eigenschaft, die durch das Steuerelement definiert wird. Wenn Sie eine [TemplateBinding](../../framework/wpf/advanced/templatebinding-markup-extension.md)verwenden, aktivieren Sie Eigenschaften für das Steuerelement, um als Parameter für die Vorlage zu fungieren. D.h., beim Festlegen einer Steuerelementeigenschaft wird dieser Wert an das Element mit [TemplateBinding](../../framework/wpf/advanced/templatebinding-markup-extension.md) übergeben.
+Beim Erstellen einer neuen <xref:System.Windows.Controls.ControlTemplate> können Sie weiterhin die öffentlichen Eigenschaften verwenden, um die Darstellung der Steuerelemente anzupassen. Die [TemplateBinding](../../framework/wpf/advanced/templatebinding-markup-extension.md)-Markuperweiterung bindet eine Eigenschaft eines in der <xref:System.Windows.Controls.ControlTemplate> enthaltenen Elements an eine vom Steuerelement definierte öffentliche Eigenschaft. Bei Verwendung einer [TemplateBinding](../../framework/wpf/advanced/templatebinding-markup-extension.md) können Steuerelementeigenschaften als Parameter der Vorlage fungieren. D.h., beim Festlegen einer Steuerelementeigenschaft wird dieser Wert an das Element mit [TemplateBinding](../../framework/wpf/advanced/templatebinding-markup-extension.md) übergeben.
 
 ### <a name="ellipse"></a>Ellipse
 
-Beachten **:::no-loc text="Fill":::** Sie, **:::no-loc text="Stroke":::** dass die und die Eigenschaften des ** \<Ellipse->-Elements** an die Eigenschaften des Steuerelements <xref:System.Windows.Controls.Control.Foreground> und <xref:System.Windows.Controls.Control.Background> der Eigenschaften gebunden sind.
+Beachten Sie, dass die Eigenschaften **:::no-loc text="Fill":::** und **:::no-loc text="Stroke":::** des Elements **\<Ellipse>** an die Eigenschaften <xref:System.Windows.Controls.Control.Foreground> und <xref:System.Windows.Controls.Control.Background> des Steuerelements gebunden sind.
 
 ### <a name="contentpresenter"></a>ContentPresenter
 
-Ein [ \<ContentPresenter->-Element](xref:System.Windows.Controls.ContentPresenter) wird ebenfalls zur Vorlage hinzugefügt. Da diese Vorlage für eine Schaltfläche entworfen wurde, sollten <xref:System.Windows.Controls.ContentControl>Sie berücksichtigen, dass die Schaltfläche von erbt. Die Schaltfläche zeigt den Inhalt des Elements an. Sie können alles innerhalb der Schaltfläche festlegen, z. B. Nur-Text oder sogar ein anderes Steuerelement. Beide der folgenden Schaltflächen sind gültig:
+Der Vorlage wird auch ein [\<ContentPresenter>](xref:System.Windows.Controls.ContentPresenter)-Element hinzugefügt. Da diese Vorlage für eine Schaltfläche konzipiert ist, müssen Sie berücksichtigen, dass die Schaltfläche von <xref:System.Windows.Controls.ContentControl> erbt. Die Schaltfläche stellt den Inhalt des Elements dar. Sie können beliebige Elemente innerhalb der Schaltfläche festlegen, z. B. Nur-Text oder sogar ein anderes Steuerelement. Beide folgenden Schaltflächen sind gültig:
 
 ```xaml
 <Button>My Text</Button>
@@ -120,85 +120,85 @@ Ein [ \<ContentPresenter->-Element](xref:System.Windows.Controls.ContentPresente
 </Button>
 ```
 
-In beiden vorherigen Beispielen werden der Text und das Kontrollkästchen als [Button.Content-Eigenschaft](xref:System.Windows.Controls.ContentControl.Content) festgelegt. Was auch immer als Inhalt festgelegt wird, kann über einen ** \<ContentPresenter>** dargestellt werden, was die Vorlage tut.
+In den beiden vorherigen Beispielen werden der Text und das Kontrollkästchen als [Button.Content](xref:System.Windows.Controls.ContentControl.Content)-Eigenschaft festgelegt. Was auch immer als Inhalt festgelegt wird, kann durch einen **\<ContentPresenter>** dargestellt werden, was die Vorlage auch leistet.
 
-Wenn <xref:System.Windows.Controls.ControlTemplate> der auf <xref:System.Windows.Controls.ContentControl> einen Typ angewendet `Button`wird, z. B. ein , <xref:System.Windows.Controls.ContentPresenter> wird in der Elementstruktur gesucht. Wenn `ContentPresenter` der gefunden wird, bindet die Vorlage <xref:System.Windows.Controls.ContentControl.Content> automatisch `ContentPresenter`die Eigenschaft des Steuerelements an die .
+Wenn die <xref:System.Windows.Controls.ControlTemplate> auf einen <xref:System.Windows.Controls.ContentControl>-Typ angewendet wird, z. B. auf ein `Button`-Element, wird nach einem <xref:System.Windows.Controls.ContentPresenter>-Element in der-Elementstruktur gesucht. Wenn der `ContentPresenter` gefunden wird, bindet die Vorlage automatisch die <xref:System.Windows.Controls.ContentControl.Content>-Eigenschaft des Steuerelements an den `ContentPresenter`.
 
 ## <a name="use-the-template"></a>Verwenden der Vorlage
 
-Suchen Sie die Schaltflächen, die am Anfang dieses Artikels deklariert wurden.
+Suchen Sie die Schaltflächen, die zu Beginn dieses Artikels deklariert wurden.
 
 [!code-xaml[Initial](~/samples/snippets/desktop-guide/wpf/styles-templates-create-apply-template/csharp/Window1.xaml#Initial)]
 
-Legen Sie die <xref:System.Windows.Controls.Control.Template> Eigenschaft der `roundbutton` zweiten Schaltfläche auf die Ressource fest:
+Legen Sie die <xref:System.Windows.Controls.Control.Template>-Eigenschaft der zweiten Schaltfläche auf die `roundbutton`-Ressource fest:
 
 [!code-xaml[StyledButton](~/samples/snippets/desktop-guide/wpf/styles-templates-create-apply-template/csharp/Window3.xaml#StyledButton)]
 
-Wenn Sie das Projekt ausführen und sich das Ergebnis ansehen, sehen Sie, dass die Schaltfläche einen abgerundeten Hintergrund hat.
+Wenn Sie das Projekt ausführen und das Ergebnis untersuchen, sehen Sie, dass die Schaltfläche einen abgerundeten Hintergrund aufweist.
 
-![WPF-Fenster mit einer ovalen Vorlagetaste](media/create-apply-template/styled-button.png)
+![WPF-Fenster mit einer ovalen Vorlagenschaltfläche](media/create-apply-template/styled-button.png)
 
-Sie haben vielleicht bemerkt, dass die Schaltfläche kein Kreis ist, sondern verzerrt ist. Aufgrund der Funktionsweise des ** \<Ellipse->-Elements** wird es immer erweitert, um den verfügbaren Platz zu füllen. Machen Sie den Kreis gleichmäßig, **:::no-loc text="width":::** **:::no-loc text="height":::** indem Sie die Schaltfläche und die Eigenschaften auf denselben Wert ändern:
+Vielleicht haben Sie bemerkt, dass die Schaltfläche kein Kreis ist, sondern verzerrt ist. Aufgrund der Art und Weise, wie das **\<Ellipse>** -Element funktioniert, wird sie immer erweitert, um den verfügbaren Platz auszufüllen. Vereinheitlichen Sie den Kreis, indem Sie die Eigenschaften der Schaltfläche **:::no-loc text="width":::** und **:::no-loc text="height":::** in den gleichen Wert ändern:
 
 [!code-xaml[StyledButtonSize](~/samples/snippets/desktop-guide/wpf/styles-templates-create-apply-template/csharp/Window3.xaml#StyledButtonSize)]
 
-![WPF-Fenster mit einer Vorlagen-Rundschaltfläche](media/create-apply-template/styled-uniform-button.png)
+![WPF-Fenster mit einer runden Vorlagenschaltfläche](media/create-apply-template/styled-uniform-button.png)
 
 ## <a name="add-a-trigger"></a>Hinzufügen eines Triggers
 
-Auch wenn eine Schaltfläche mit einer angewendeten Vorlage anders aussieht, verhält sie sich genauso wie jede andere Schaltfläche. Wenn Sie die Taste <xref:System.Windows.Controls.Primitives.ButtonBase.Click> drücken, wird das Ereignis ausgelöst. Sie haben jedoch möglicherweise bemerkt, dass sich die Visuellen der Schaltfläche nicht ändern, wenn Sie die Maus über die Schaltfläche bewegen. Diese visuellen Interaktionen werden alle durch die Vorlage definiert.
+Obwohl eine Schaltfläche mit einer angewendeten Vorlage anders aussieht, verhält sie sich wie jede andere Schaltfläche. Wenn Sie auf die Schaltfläche klicken, wird das <xref:System.Windows.Controls.Primitives.ButtonBase.Click>-Ereignis ausgelöst. Möglicherweise haben Sie jedoch bemerkt, dass die visuellen Elemente der Schaltfläche nicht geändert werden, wenn Sie den Mauszeiger über die Schaltfläche bewegen. Diese visuellen Interaktionen werden alle durch die Vorlage definiert.
 
-Mit den dynamischen Ereignis- und Eigenschaftssystemen, die WPF bereitstellt, können Sie eine bestimmte Eigenschaft für einen Wert ansehen und die Vorlage dann entsprechend umgestalten. In diesem Beispiel sehen Sie sich <xref:System.Windows.UIElement.IsMouseOver> die Eigenschaft der Schaltfläche an. Wenn die Maus über dem Steuerelement ist, stilisieren Sie die ** \<Ellipse->** mit einer neuen Farbe. Dieser Triggertyp wird als *PropertyTrigger*bezeichnet.
+Durch die dynamischen Ereignis- und Eigenschaftensysteme, die von WPF bereitgestellt werden, können Sie eine bestimmte Eigenschaft für einen Wert beobachten und die Vorlage ggf. neu formatieren. In diesem Beispiel beobachten Sie die <xref:System.Windows.UIElement.IsMouseOver>-Eigenschaft der Schaltfläche. Wenn sich der Mauszeiger über dem Steuerelement befindet, formatieren Sie die **\<Ellipse>** mit einer neuen Farbe. Dieser Triggertyp wird als *PropertyTrigger* bezeichnet.
 
-Damit dies funktioniert, müssen Sie dem ** \<Ellipse->** einen Namen hinzufügen, auf den Sie verweisen können. Geben Sie ihm den Namen **backgroundElement**.
+Damit dies funktioniert, müssen Sie **\<Ellipse>** einen Namen hinzufügen, auf den Sie verweisen können. Vergeben Sie den Namen **backgroundElement**.
 
 [!code-xaml[EllipseName](~/samples/snippets/desktop-guide/wpf/styles-templates-create-apply-template/csharp/Window4.xaml#EllipseName)]
 
-Fügen Sie als <xref:System.Windows.Trigger> Nächstes der [ControlTemplate.Triggers-Auflistung](xref:System.Windows.Controls.ControlTemplate.Triggers) eine neue hinzu. Der Trigger beobachtet `IsMouseOver` das Ereignis `true`für den Wert .
+Fügen Sie als nun der [ControlTemplate.Triggers](xref:System.Windows.Controls.ControlTemplate.Triggers)-Sammlung einen neuen <xref:System.Windows.Trigger> hinzu. Der Trigger überwacht das `IsMouseOver`-Ereignis für den Wert `true`.
 
 [!code-xaml[ControlTemplate](~/samples/snippets/desktop-guide/wpf/styles-templates-create-apply-template/csharp/Window4.xaml?name=ControlTemplate&highlight=6-10)]
 
-Fügen Sie als Nächstes eine ** \<Setter->** zum ** \<Trigger->** hinzu, die die **Fill-Eigenschaft** der ** \<Ellipse->** in eine neue Farbe ändert.
+Fügen Sie dem **\<Trigger>** nun einen **\<Setter>** hinzu, der die **Fill**-Eigenschaft von **\<Ellipse>** in eine neue Farbe ändert.
 
 [!code-xaml[MouseOver](~/samples/snippets/desktop-guide/wpf/styles-templates-create-apply-template/csharp/Window5.xaml#MouseOver)]
 
-Führen Sie das Projekt aus. Beachten Sie, dass sich beim Bewegen der Maus über die Schaltfläche die Farbe der ** \<Ellipse->** ändert.
+Führen Sie das Projekt aus. Beachten Sie, dass beim Bewegen der Maus über die Schaltfläche sich die Farbe der **\<Ellipse>** ändert.
 
-![Maus bewegt sich über die WPF-Taste, um die Füllfarbe zu ändern](media/create-apply-template/mouse-move-over-button.gif)
+![Mausbewegung über die WPF-Schaltfläche, um die Füllfarbe zu ändern](media/create-apply-template/mouse-move-over-button.gif)
 
 ## <a name="use-a-visualstate"></a>Verwenden eines VisualState
 
-Visuelle Zustände werden durch ein Steuerelement definiert und ausgelöst. Wenn die Maus beispielsweise über das Steuerelement bewegt `CommonStates.MouseOver` wird, wird der Zustand ausgelöst. Sie können Eigenschaftenänderungen basierend auf dem aktuellen Status des Steuerelements animieren. Im vorherigen Abschnitt wurde `IsMouseOver` ein `true` ** \<PropertyTrigger->** verwendet, um `AliceBlue` den Vordergrund der Schaltfläche in den Zeitpunkt zu ändern, zu dem die Eigenschaft war. Erstellen Sie stattdessen einen visuellen Zustand, der die Änderung dieser Farbe animiert und einen reibungslosen Übergang bietet. Weitere Informationen zu *VisualStates*finden Sie [unter Stile und Vorlagen in WPF](../fundamentals/styles-templates-overview.md#visual-states).
+Visuelle Zustände werden von einem-Steuerelement definiert und ausgelöst. Wenn die Maus z. B. über das Steuerelement bewegt wird, wird der `CommonStates.MouseOver`-Zustand ausgelöst. Sie können Eigenschaftsänderungen auf der Grundlage des aktuellen Zustands des Steuerelements animieren. Im vorherigen Abschnitt wurde ein **\<PropertyTrigger>** verwendet, um den Vordergrund der Schaltfläche in `AliceBlue` zu ändern, wenn die `IsMouseOver`-Eigenschaft `true` war. Erstellen Sie stattdessen einen visuellen Zustand, der die Änderung dieser Farbe animiert und für einen fließenden Übergang sorgt. Weitere Informationen zu *VisualStates* finden Sie unter [Stile und Vorlagen in WPF](../fundamentals/styles-templates-overview.md#visual-states).
 
-Um ** \<propertyTrigger>** in einen animierten visuellen Zustand zu konvertieren, entfernen Sie zuerst das ** \<ControlTemplate.Triggers>-Element** aus Ihrer Vorlage.
+Wenn Sie den **\<PropertyTrigger>** in einen animierten visuellen Zustand konvertieren möchten, entfernen Sie zunächst das **\<ControlTemplate.Triggers>** -Element aus der Vorlage.
 
 [!code-xaml[CleanTemplate](~/samples/snippets/desktop-guide/wpf/styles-templates-create-apply-template/csharp/Window5.xaml#CleanTemplate)]
 
-Fügen Sie anschließend im ** \<Stammverzeichnis "Grid>"** der Steuerelementvorlage das ** \<VisualStateManager.VisualStateGroups->-Element** mit einem ** \<VisualStateGroup->** für `CommonStates`hinzu. Definieren Sie `Normal` zwei `MouseOver`Zustände und .
+Fügen Sie dann im **\<Grid>** -Stamm der Steuerelementvorlage das **\<VisualStateManager.VisualStateGroups>** -Element mit einer **\<VisualStateGroup>** für `CommonStates` hinzu. Definieren Sie zwei Zustände, `Normal` und `MouseOver`.
 
 [!code-xaml[VisualState](~/samples/snippets/desktop-guide/wpf/styles-templates-create-apply-template/csharp/Window6.xaml#VisualState)]
 
-Alle Animationen, die in einem ** \<VisualState->** definiert sind, werden angewendet, wenn dieser Status ausgelöst wird. Erstellen Sie Animationen für jeden Status. Animationen werden in einem ** \<Storyboard->-Element** abgelegt. Weitere Informationen zu Storyboards finden Sie unter [Storyboards Übersicht](../../framework/wpf/graphics-multimedia/storyboards-overview.md).
+Alle in einem **\<VisualState>** definierten Animationen werden angewendet, wenn dieser Zustand ausgelöst wird. Erstellen Sie Animationen für jeden Zustand. Animationen werden in einem **\<Storyboard>** -Element abgelegt. Weitere Informationen zu Storyboards finden Sie unter [Übersicht über Storyboards](../../framework/wpf/graphics-multimedia/storyboards-overview.md).
 
 - Normal
 
-  Dieser Zustand animiert die Ellipsenfüllung und stellt `Background` sie in der Farbe des Steuerelements wieder her.
+  Dieser Zustand animiert die Ellipsenfüllung und stellt sie in der Farbe `Background` des Steuerelements wieder her.
 
   [!code-xaml[NormalState](~/samples/snippets/desktop-guide/wpf/styles-templates-create-apply-template/csharp/Window6.xaml#NormalState)]
 
 - MouseOver
 
-  Dieser Zustand animiert `Background` die Ellipsenfarbe `Yellow`zu einer neuen Farbe: .
+  Dieser Zustand animiert die Farbe `Background` der Ellipse in eine neue Farbe: `Yellow`.
 
   [!code-xaml[MouseOverState](~/samples/snippets/desktop-guide/wpf/styles-templates-create-apply-template/csharp/Window6.xaml#MouseOverState)]
 
-Die ** \<ControlTemplate->** sollten nun wie folgt aussehen.
+Die **\<ControlTemplate>** sollte nun wie folgt aussehen.
 
 [!code-xaml[FinalTemplate](~/samples/snippets/desktop-guide/wpf/styles-templates-create-apply-template/csharp/Window7.xaml#FinalTemplate)]
 
-Führen Sie das Projekt aus. Beachten Sie, dass beim Bewegen der Maus über die Schaltfläche die Farbe der ** \<Ellipse->** animiert wird.
+Führen Sie das Projekt aus. Beachten Sie, dass beim Bewegen der Maus über die Schaltfläche sich die Farbe der **\<Ellipse>** animiert wird.
 
-![Maus bewegt sich über die WPF-Taste, um die Füllfarbe zu ändern](media/create-apply-template/mouse-move-over-button-visualstate.gif)
+![Mausbewegung über die WPF-Schaltfläche, um die Füllfarbe zu ändern](media/create-apply-template/mouse-move-over-button-visualstate.gif)
 
 ## <a name="next-steps"></a>Nächste Schritte
 

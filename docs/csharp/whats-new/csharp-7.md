@@ -3,12 +3,12 @@ title: Neues in C# 7.0 – C#-Leitfaden
 description: Erhalten Sie einen Überblick über die neuen Funktionen in Version 7.0 der C#-Sprache.
 ms.date: 02/20/2019
 ms.assetid: fd41596d-d0c2-4816-b94d-c4d00a5d0243
-ms.openlocfilehash: a6ac5c00ceb2ce8e5e56e2a86a8cde937d5108e2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1291de95b88b3de16fb94fb376fb4153dd4a5862
+ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79398340"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82102670"
 ---
 # <a name="whats-new-in-c-70"></a>Neues in C# 7.0
 
@@ -40,7 +40,7 @@ Dieser Artikel enthält im Folgenden eine Übersicht über die einzelnen Funktio
 1. Installieren Sie das globale [dotnet-try](https://github.com/dotnet/try/blob/master/README.md#setup)-Tool.
 1. Klonen Sie das [dotnet/try-samples](https://github.com/dotnet/try-samples)-Repository.
 1. Legen Sie das aktuelle Verzeichnis auf das Unterverzeichnis *csharp7* für das *try-samples*-Repository fest.
-1. Führen Sie `dotnet try` aus.
+1. Führen Sie aus `dotnet try`.
 
 ## <a name="out-variables"></a>`out`-Variablen
 
@@ -181,7 +181,7 @@ Sie können den Rückgabewert als `ref` deklarieren und diesen Wert wie im folge
 
 Die C#-Sprache verfügt über mehrere Regeln, die Sie vor einer falschen Verwendung der lokalen `ref`-Variablen und Rückgabetypen schützen:
 
-- Sie müssen der Methodensignatur und allen `ref`-Anweisungen einer Methode das `return`-Schlüsselwort hinzufügen.
+- Sie müssen der Methodensignatur und allen `return`-Anweisungen einer Methode das `ref`-Schlüsselwort hinzufügen.
   - Dadurch wird deutlich, dass Rückgaben in der gesamten Methode als Verweis erfolgen.
 - Eine `ref return`-Rückgabe kann einer Wert- oder einer `ref`-Variablen zugewiesen werden.
   - Der Aufrufer steuert, ob der Rückgabewert kopiert werden soll. Durch Auslassen des `ref`-Modifizierers beim Zuweisen des Rückgabewerts gibt der Aufrufer an, dass der Wert kopiert werden und nicht etwa ein Verweis auf den Speicher erfolgen soll.
@@ -211,7 +211,7 @@ Das gleiche Verfahren kann mit `async`-Methoden eingesetzt werden, um sicherzust
 [!code-csharp[TaskExample](~/samples/snippets/csharp/new-in-7/AsyncWork.cs#TaskExample "Task returning method with local function")]
 
 > [!NOTE]
-> Einige der Entwürfe, die von lokalen Funktionen unterstützt werden, könnten auch mithilfe von *Lambdaausdrücken* erreicht werden. Weitere Informationen finden Sie unter [Lokale Funktionen im Vergleich zu Lambdaausdrücken](../local-functions-vs-lambdas.md).
+> Einige der Entwürfe, die von lokalen Funktionen unterstützt werden, können auch mithilfe von *Lambdaausdrücken* erreicht werden. Weitere Informationen finden Sie unter [Lokale Funktionen im Vergleich zu Lambdaausdrücken](../programming-guide/classes-and-structs/local-functions.md#local-functions-vs-lambda-expressions).
 
 ## <a name="more-expression-bodied-members"></a>Mehr Ausdruckskörpermember
 
@@ -222,7 +222,7 @@ In C# 6 wurden [Ausdruckskörpermember](csharp-6.md#expression-bodied-function-m
 > [!NOTE]
 > In diesem Beispiel ist kein Finalizer erforderlich, aber damit soll die Syntax dargestellt werden. Sie sollten in Ihrer Klasse nur einen Finalizer implementieren, wenn es notwendig ist, nicht verwaltete Ressourcen freizugeben. Sie sollten auch die Verwendung der <xref:System.Runtime.InteropServices.SafeHandle>-Klasse in Betracht ziehen, anstatt nicht verwaltete Ressourcen direkt zu verwalten.
 
-Diese neuen Speicherorte für Ausdruckskörpermember sind ein wichtiger Meilenstein für C#: Diese Funktionen wurden von Community-Mitgliedern implementiert, die am Open-Source-Projekt [Roslyn](https://github.com/dotnet/Roslyn) arbeiten.
+Diese neuen Speicherorte für Member mit Ausdruckskörper sind ein wichtiger Meilenstein für die Sprache C#: Diese Features wurden von Community-Mitgliedern implementiert, die am Open Source-Projekt [Roslyn](https://github.com/dotnet/Roslyn) arbeiten.
 
 Das Ändern einer Methode in ein Ausdruckskörpermember ist eine [binärkompatible](version-update-considerations.md#binary-compatible-changes) Änderung.
 

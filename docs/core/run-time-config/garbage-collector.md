@@ -3,12 +3,12 @@ title: Garbage-Collector-Konfigurationseinstellungen
 description: Erfahren Sie mehr über Laufzeiteinstellungen, um zu konfigurieren, wie der Garbage Collector Arbeitsspeicher für .NET Core-Apps verwaltet.
 ms.date: 01/09/2020
 ms.topic: reference
-ms.openlocfilehash: 044083d69601f5092724a46d358b2ee5673d428d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ec575bdd17c8a7c290673b7085074bbba94cedef
+ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "76733516"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82102865"
 ---
 # <a name="run-time-configuration-options-for-garbage-collection"></a>Laufzeitkonfigurationsoptionen für die Garbage Collection
 
@@ -24,7 +24,7 @@ Einstellungen werden auf dieser Seite in Gruppen angeordnet. Die Einstellungen i
 
 ## <a name="flavors-of-garbage-collection"></a>Varianten der Garbage Collection
 
-Die zwei Hauptvarianten der Garbage Collection sind Arbeitsstation-GC und Server-GC. Weitere Informationen zu den Unterschieden zwischen diesen beiden Varianten finden Sie unter [Grundlagen der Garbage Collection](../../standard/garbage-collection/fundamentals.md#workstation-and-server-garbage-collection).
+Die zwei Hauptvarianten der Garbage Collection sind Arbeitsstation-GC und Server-GC. Weitere Informationen zu den Unterschieden zwischen diesen beiden Varianten finden Sie unter [Garbage Collection für die Arbeitsstation und Garbage Collection auf dem Server](../../standard/garbage-collection/workstation-server-gc.md).
 
 Die Untervarianten der Garbage Collection sind Hintergrund-GC und nicht gleichzeitige GC.
 
@@ -72,7 +72,7 @@ Projektdatei:
 
 - Konfiguriert, ob die (gleichzeitige) Hintergrund-GC aktiviert ist
 - Standard: Aktiviert (`true`)
-- Weitere Informationen finden Sie unter [Garbage Collection im Hintergrund](../../standard/garbage-collection/fundamentals.md#background-workstation-garbage-collection) und [Garbage Collection auf dem Server im Hintergrund](../../standard/garbage-collection/fundamentals.md#background-server-garbage-collection).
+- Weitere Informationen finden Sie unter [Hintergrund der Garbage Collection](../../standard/garbage-collection/background-gc.md).
 
 | | Einstellungsname | Werte | Eingeführt in Version |
 | - | - | - | - |
@@ -117,8 +117,8 @@ Weitere Informationen zu einigen dieser Einstellungen finden Sie im Blogeintrag 
 
 - Schränkt die Anzahl von Heaps ein, die vom Garbage Collector erstellt werden
 - Gilt nur für die Garbage Collection des Servers.
-- Wenn die GC-Prozessoraffinität aktiviert ist (Standardeinstellung), ordnet die Einstellung für die Heapanzahl den ersten `n` Prozessoren `n` GC-Heaps/-Threads zu. (Verwenden Sie die Einstellungen „affinitize mask“ (Maske zuordnen) oder „affinitize ranges“ (Bereiche zuordnen), um genau anzugeben, welche Prozessoren zugeordnet werden sollen.)
-- Wenn die GC-Prozessoraffinität deaktiviert ist, wird mit dieser Einstellung die Anzahl der GC-Heaps eingeschränkt.
+- Wenn die [GC-Prozessoraffinität](#systemgcnoaffinitizecomplus_gcnoaffinitize) aktiviert ist (Standardeinstellung), ordnet die Einstellung für die Heapanzahl den ersten `n` Prozessoren `n` GC-Heaps/-Threads zu. (Verwenden Sie die Einstellungen [AffinitizeMask](#systemgcheapaffinitizemaskcomplus_gcheapaffinitizemask) oder [AffinitizeRanges](#systemgcgcheapaffinitizerangescomplus_gcheapaffinitizeranges), um genau anzugeben, welche Prozessoren zugeordnet werden sollen.)
+- Wenn die [GC-Prozessoraffinität](#systemgcnoaffinitizecomplus_gcnoaffinitize) deaktiviert ist, wird mit dieser Einstellung die Anzahl der GC-Heaps eingeschränkt.
 - Weitere Informationen finden Sie unter [Hinweise zu GCHeapCount](../../framework/configure-apps/file-schema/runtime/gcheapcount-element.md#remarks).
 
 | | Einstellungsname | Werte | Eingeführt in Version |
@@ -145,7 +145,7 @@ Beispiel:
 ### <a name="systemgcheapaffinitizemaskcomplus_gcheapaffinitizemask"></a>System.GC.HeapAffinitizeMask/COMPlus_GCHeapAffinitizeMask
 
 - Gibt die genauen Prozessoren an, die Garbage-Collector-Threads verwenden sollen
-- Wenn die Prozessoraffinität deaktiviert ist, indem `System.GC.NoAffinitize` auf `true` festgelegt wurde, wird diese Einstellung ignoriert.
+- Wenn die [GC-Prozessoraffinität](#systemgcnoaffinitizecomplus_gcnoaffinitize) deaktiviert ist, wird diese Einstellung ignoriert.
 - Gilt nur für die Garbage Collection des Servers.
 - Der Wert ist eine Bitmaske, die die für den Prozess verfügbaren Prozessoren definiert. Beispielsweise ist ein Dezimalwert von 1023 (oder ein Hexadezimalwert von 0x3FF oder 3FF bei Verwendung der Umgebungsvariablen) in Binärschreibweise 0011 1111 1111. Dies gibt an, dass die ersten zehn Prozessoren verwendet werden sollen. Geben Sie einen Dezimalwert von 1047552 (oder einen Hexadezimalwert von 0xFFC00 oder FFC00) an, der einem Binärwert von 1111 1111 1100 0000 0000 entspricht, um die nächsten zehn Prozessoren anzugeben, d. h. die Prozessoren 10 bis 19.
 
@@ -170,9 +170,9 @@ Beispiel:
 ### <a name="systemgcgcheapaffinitizerangescomplus_gcheapaffinitizeranges"></a>System.GC.GCHeapAffinitizeRanges/COMPlus_GCHeapAffinitizeRanges
 
 - Gibt die Liste der Prozessoren an, die für Garbage-Collector-Threads verwendet werden sollen
-- Diese Einstellung ist `System.GC.HeapAffinitizeMask` ähnlich, mit der Ausnahme, dass Sie mehr als 64 Prozessoren angeben können.
+- Diese Einstellung ähnelt [System.GC.HeapAffinitizeMask](#systemgcheapaffinitizemaskcomplus_gcheapaffinitizemask), abgesehen davon, dass Sie mehr als 64 Prozessoren angeben können.
 - Stellen Sie für Windows-Betriebssysteme der Prozessornummer oder dem Prozessorbereich die entsprechende [CPU-Gruppe](/windows/win32/procthread/processor-groups) voran, z. B. „0:1-10,0:12,1:50-52,1:70“.
-- Wenn die Prozessoraffinität deaktiviert ist, indem `System.GC.NoAffinitize` auf `true` festgelegt wurde, wird diese Einstellung ignoriert.
+- Wenn die [GC-Prozessoraffinität](#systemgcnoaffinitizecomplus_gcnoaffinitize) deaktiviert ist, wird diese Einstellung ignoriert.
 - Gilt nur für die Garbage Collection des Servers.
 - Weitere Informationen finden Sie unter [Optimieren der CPU-Konfiguration für GC auf Computern mit mehr als 64 CPUs](https://devblogs.microsoft.com/dotnet/making-cpu-configuration-better-for-gc-on-machines-with-64-cpus/) im Blog von Maoni Stephens.
 
@@ -239,6 +239,11 @@ Beispiel:
 ### <a name="systemgcheaphardlimitcomplus_gcheaphardlimit"></a>System.GC.HeapHardLimit/COMPlus_GCHeapHardLimit
 
 - Gibt die maximale Commitgröße in Bytes für den GC-Heap und die GC-Buchhaltung an
+- Diese Einstellung gilt nur für 64-Bit-Computer.
+- Der Standardwert, der nur in bestimmten Fällen gilt, ist der größere Wert von 20 MB oder 75 % der Speichergrenze für den Container. Der Standardwert wird in folgenden Fällen angewendet:
+
+  - Der Prozess wird in einem Container ausgeführt, für den ein Arbeitsspeicherlimit angegeben ist.
+  - [System.GC.HeapHardLimitPercent](#systemgcheaphardlimitpercentcomplus_gcheaphardlimitpercent) ist nicht festgelegt.
 
 | | Einstellungsname | Werte | Eingeführt in Version |
 | - | - | - | - |
@@ -262,7 +267,14 @@ Beispiel:
 
 ### <a name="systemgcheaphardlimitpercentcomplus_gcheaphardlimitpercent"></a>System.GC.HeapHardLimitPercent/COMPlus_GCHeapHardLimitPercent
 
-- Gibt den GC-Heapverbrauch in Prozent des Gesamtspeichers an
+- Gibt den zulässigen GC-Heapverbrauch in Prozent des gesamten physischen Speichers an.
+- Wenn außerdem [System.GC.HeapHardLimit](#systemgcheaphardlimitcomplus_gcheaphardlimit) festgelegt ist, wird diese Einstellung ignoriert.
+- Diese Einstellung gilt nur für 64-Bit-Computer.
+- Wenn der Prozess in einem Container ausgeführt, für den ein Arbeitsspeicherlimit angegeben wurde, wird der Prozentsatz als Prozentsatz dieses Arbeitsspeicherlimits berechnet.
+- Der Standardwert, der nur in bestimmten Fällen angewendet wird, beträgt weniger als 20 MB oder 75 % des Arbeitsspeicherlimits für den Container. Der Standardwert wird in folgenden Fällen angewendet:
+
+  - Der Prozess wird in einem Container ausgeführt, für den ein Arbeitsspeicherlimit angegeben ist.
+  - [System.GC.HeapHardLimit](#systemgcheaphardlimitcomplus_gcheaphardlimit) ist nicht festgelegt.
 
 | | Einstellungsname | Werte | Eingeführt in Version |
 | - | - | - | - |

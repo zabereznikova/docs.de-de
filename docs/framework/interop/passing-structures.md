@@ -9,7 +9,7 @@ helpviewer_keywords:
 ms.assetid: 9b92ac73-32b7-4e1b-862e-6d8d950cf169
 ms.openlocfilehash: 11e329fa8f0c059b6c2f1c8ccb1d6bd0d0f0030a
 ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 03/12/2020
 ms.locfileid: "79181336"
@@ -23,7 +23,7 @@ Bei vielen nicht verwalteten Funktionen wird erwartet, dass Member von Strukture
 |-------------------------|---------------------------------------------------------------------------------|--------------------------------------------------------------------------------------|  
 |`DoWork(MyType x);`<br /><br /> Erfordert 0 Dereferenzierungsebenen.|`DoWork(ByVal x As MyType)` <br /> `DoWork(MyType x)`<br /><br /> Fügt 0 Dereferenzierungsebenen hinzu.|Nicht möglich, da bereits eine Dereferenzierungsebene besteht.|  
 |`DoWork(MyType* x);`<br /><br /> Erfordert eine Dereferenzierungsebene.|`DoWork(ByRef x As MyType)` <br /> `DoWork(ref MyType x)`<br /><br /> Fügt eine Dereferenzierungsebene hinzu.|`DoWork(ByVal x As MyType)` <br /> `DoWork(MyType x)`<br /><br /> Fügt 0 Dereferenzierungsebenen hinzu.|  
-|`DoWork(MyType** x);`<br /><br /> Erfordert zwei Dereferenzierungsebenen.|Nicht möglich, da **ByRef** **ByRef** oder `ref` `ref` nicht verwendet werden können.|`DoWork(ByRef x As MyType)` <br /> `DoWork(ref MyType x)`<br /><br /> Fügt eine Dereferenzierungsebene hinzu.|  
+|`DoWork(MyType** x);`<br /><br /> Erfordert zwei Dereferenzierungsebenen.|Nicht möglich, da **ByRef** **ByRef** oder `ref` `ref` nicht verwendet werden kann.|`DoWork(ByRef x As MyType)` <br /> `DoWork(ref MyType x)`<br /><br /> Fügt eine Dereferenzierungsebene hinzu.|  
   
  Die Tabelle beschreibt die folgenden Richtlinien für Plattformaufrufdeklarationen:  
   
@@ -173,8 +173,8 @@ public class TestPlatformInvoke
 }  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
-- [Aufrufen einer DLL-Funktion](calling-a-dll-function.md)
+- [Calling a DLL Function (Aufrufen einer DLL-Funktion)](calling-a-dll-function.md)
 - <xref:System.Runtime.InteropServices.StructLayoutAttribute>
 - <xref:System.Runtime.InteropServices.FieldOffsetAttribute>

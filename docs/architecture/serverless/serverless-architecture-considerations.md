@@ -3,13 +3,13 @@ title: 'Überlegungen zur serverlosen Architektur: Serverlose Apps'
 description: Verstehen der Herausforderungen der Architektur von serverlosen Anwendungen, von Zustandsverwaltung und persistentem Speicher über Skalierung, Protokollierung, Ablaufverfolgung bis hin zu Diagnose.
 author: JEREMYLIKNESS
 ms.author: jeliknes
-ms.date: 06/26/2018
-ms.openlocfilehash: c856683cf6910be98661e634246cd003b93a6d76
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.date: 04/06/2020
+ms.openlocfilehash: 3c07e1149e6af41a6b9a9317238e5c71015d2c4e
+ms.sourcegitcommit: 8b02d42f93adda304246a47f49f6449fc74a3af4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "72522425"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82135671"
 ---
 # <a name="serverless-architecture-considerations"></a>Überlegungen zur serverlosen Architektur
 
@@ -23,7 +23,7 @@ Es gibt mehrere Lösungen, die einen Zustand bereitstellen, ohne die Vorteile ei
 
 - Verwenden eines temporären Datenspeichers oder verteilten Caches wie Redis
 - Speichern des Zustands in einer Datenbank, z.B. SQL oder CosmosDB
-- Verarbeiten des Zustands durch eine Workflow-Engine wie Durable Functions
+- Verarbeiten des Zustands durch eine Workflow-Engine wie [Durable Functions](https://docs.microsoft.com/azure/azure-functions/durable/durable-functions-overview)
 
 Fazit: Sie sollten die Notwendigkeit einer Zustandsverwaltung in Prozessen beachten, für die Sie eine serverlose Implementierung in Erwägung ziehen.
 
@@ -79,7 +79,7 @@ Weitere Informationen finden Sie unter [Implementieren des Sicherungsmusters](..
 
 ## <a name="versioning-and-greenblue-deployments"></a>Versionsverwaltung und grüne/blaue Bereitstellungen
 
-Ein großer Vorteil von serverlosen Bereitstellungen ist die Möglichkeit, eine bestimmte Funktion zu aktualisieren, ohne die gesamte Anwendung erneut bereitstellen zu müssen. Damit Upgrades erfolgreich sind, muss auf Funktionen Versionsverwaltung angewendet werden, damit Dienste, die sie aufrufen, an die richtige Version des Codes weitergeleitet werden. Eine Strategie für die Bereitstellung neuer Versionen ist ebenfalls wichtig. Eine gängige Methode ist die Verwendung von „grünen/blauen Bereitstellungen“. Die grüne Bereitstellung ist die aktuelle Funktion. Eine neue „blaue“ Version wird in der Produktionsumgebung bereitgestellt und getestet. Wenn die Tests bestanden werden, werden die grünen und blauen Versionen ausgetauscht, sodass die neue Version online geschaltet wird. Wenn Probleme auftreten, können die Versionen zurückgetauscht werden. Die Unterstützung der Versionsverwaltung und der grünen/blauen Bereitstellungen erfordert eine Kombination aus der Erstellung der Funktionen, um Versionsänderungen zu unterstützen, und dem Arbeiten mit der serverlosen Plattform zum Verarbeiten von Bereitstellungen. Ein möglicher Ansatz besteht darin, Proxys zu verwenden, die im Kapitel [Serverlose Azure-Plattform](azure-functions.md#proxies) beschrieben werden.
+Ein großer Vorteil von serverlosen Bereitstellungen ist die Möglichkeit, eine bestimmte Funktion zu aktualisieren, ohne die gesamte Anwendung erneut bereitstellen zu müssen. Damit Upgrades erfolgreich sind, muss auf Funktionen Versionsverwaltung angewendet werden, damit Dienste, die sie aufrufen, an die richtige Version des Codes weitergeleitet werden. Eine Strategie für die Bereitstellung neuer Versionen ist ebenfalls wichtig. Eine gängige Methode ist die Verwendung von „grünen/blauen Bereitstellungen“. Die grüne Bereitstellung ist die aktuelle Funktion. Eine neue „blaue“ Version wird in der Produktionsumgebung bereitgestellt und getestet. Wenn die Tests bestanden werden, werden die grünen und blauen Versionen ausgetauscht, sodass die neue Version online geschaltet wird. Wenn Probleme auftreten, können die Versionen zurückgetauscht werden. Die Unterstützung der Versionsverwaltung und der grünen/blauen Bereitstellungen erfordert eine Kombination aus der Erstellung der Funktionen, um Versionsänderungen zu unterstützen, und dem Arbeiten mit der serverlosen Plattform zum Verarbeiten von Bereitstellungen.
 
 >[!div class="step-by-step"]
 >[Zurück](serverless-architecture.md)

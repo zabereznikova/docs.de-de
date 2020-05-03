@@ -11,7 +11,7 @@ helpviewer_keywords:
 ms.assetid: 6fcf6588-5e25-41af-b4ae-780974f2c3df
 ms.openlocfilehash: 32102910ae674a97e941e1346a1898585f503527
 ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/30/2019
 ms.locfileid: "73123682"
@@ -22,15 +22,15 @@ COM-Interop-Projekte, die auf eine oder mehrere Assemblys mit importierten COM-T
 
  Es gibt zwei Möglichkeiten zur Verweisung auf Interop-Assemblys:
 
-- Eingebettete Interop-Typen: ab .NET Framework 4 und Visual Studio 2010 können Sie den Compiler anweisen, Typinformationen aus einer Interop-Assembly in die ausführbare Datei einzubetten. Dies ist das empfohlene Verfahren.
+- Eingebettete Interoptypen: Ab .NET Framework 4 und Visual Studio 2010 können Sie den Compiler anweisen, die Typinformationen aus einer Interopassembly in die ausführbare Datei einzubetten. Dies ist das empfohlene Verfahren.
 
-- Durch die Bereitstellung von Interop-Assemblys können Sie einen Standardverweis auf eine Interop-Assembly erstellen. In diesem Fall muss die Interop-Assembly mit Ihrer Anwendung bereitgestellt werden.
+- Bereitstellen von Interopassemblys: Sie können einen Standardverweis auf eine Interopassembly erstellen. In diesem Fall muss die Interop-Assembly mit Ihrer Anwendung bereitgestellt werden.
 
  Die Unterschiede zwischen diesen beiden Verfahren werden ausführlich in [Verwenden von COM-Typen in verwaltetem Code](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/3y76b69k(v=vs.100)) erläutert.
 
- Das Einbetten von Interop-Typen mit Visual Studio ist in Exemplarische Vorgehensweise [: Einbetten von Typen aus verwalteten Assemblys in Visual Studio](../../standard/assembly/embed-types-visual-studio.md)
+ Wie Interoptypen mit Visual Studio eingebettet werden, sehen Sie unter [Exemplarische Vorgehensweise: Einbetten von Typen aus verwalteten Assemblys in Visual Studio](../../standard/assembly/embed-types-visual-studio.md).
 
- Verwenden Sie zum Verweisen auf eine Interop-Assembly mit einem Befehlszeilen Compiler und zum Einbetten von Typinformationen in die ausführbaren Dateien den [Link-LinkC# (Compileroptionen)](../../csharp/language-reference/compiler-options/link-compiler-option.md) oder den [-Link (Visual Basic)-](../../visual-basic/reference/command-line-compiler/link.md) Compilerschalter, und geben Sie den Namen der Interop-Assembly an.
+ Verwenden Sie zum Verweisen auf eine Interop-Assembly mit einem Befehlszeilencompiler und Einbetten von Typinformationen in Ihre ausführbaren Dateien die Compilerschalter [-Link (C#-Compileroptionen)](../../csharp/language-reference/compiler-options/link-compiler-option.md) oder [-Link (Visual Basic)](../../visual-basic/reference/command-line-compiler/link.md), und geben Sie den Namen der Interop-Assembly an.
 
 > [!NOTE]
 > Visual C++-Anwendungen können keine Typinformationen einbetten, aber sie können mit Anwendungen oder Add-Ins zusammenarbeiten, die dies können.
@@ -43,4 +43,4 @@ COM-Interop-Projekte, die auf eine oder mehrere Assemblys mit importierten COM-T
 - [Sprachunabhängigkeit und sprachunabhängige Komponenten](../../standard/language-independence-and-language-independent-components.md)
 - [Verwenden von COM-Typen in verwaltetem Code](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/3y76b69k(v=vs.100))
 - [Exemplarische Vorgehensweise: Einbetten von Typen aus verwalteten Assemblys in Visual Studio](../../standard/assembly/embed-types-visual-studio.md)
-- [Importieren einer Typbibliothek als Assembly](importing-a-type-library-as-an-assembly.md)
+- [Importing a Type Library as an Assembly (Importieren einer Typbibliothek als Assembly)](importing-a-type-library-as-an-assembly.md)

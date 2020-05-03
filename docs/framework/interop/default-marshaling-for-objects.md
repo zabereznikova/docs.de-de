@@ -10,7 +10,7 @@ helpviewer_keywords:
 ms.assetid: c2ef0284-b061-4e12-b6d3-6a502b9cc558
 ms.openlocfilehash: e0de715a3ed33eedf212fc3e0e9930c9cbaa0a38
 ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/30/2019
 ms.locfileid: "73123590"
@@ -242,7 +242,7 @@ Die folgende Tabelle zeigt die möglichen Werte für die **TypeCode**-Enumeratio
 |Wird nicht unterstützt.|**VT_CY**|
 |Wird nicht unterstützt.|**VT_VARIANT**|
 
-Der Wert der COM-Variante wird durch Aufruf der **IConvertible.To** *Typ*-Schnittstelle bestimmt, wo **To** *Typ* die Konvertierungsroutine ist, die dem Typ entspricht, der von **IConvertible.GetTypeCode** zurückgegeben wurde. Beispielsweise ist ein Objekt, das **TypeCode.Double** aus **IConvertible.GetTypeCode** zurückgibt, als COM-Variante des Typs **VT_R8** gemarshallt. Sie erhalten den Wert der Variante (gespeichert im **DblVal**-Feld der COM-Variante), indem Sie eine Umwandlung in die **IConvertible**-Schnittstelle durchführen und die <xref:System.IConvertible.ToDouble%2A>-Methode aufrufen.
+Der Wert der COM-Variante wird durch Aufruf der **IConvertible.To** *Type*-Schnittstelle bestimmt, wobei **To** *Type* die Konvertierungsroutine ist, die dem Typ entspricht, der von **IConvertible.GetTypeCode** zurückgegeben wurde. Beispielsweise ist ein Objekt, das **TypeCode.Double** aus **IConvertible.GetTypeCode** zurückgibt, als COM-Variante des Typs **VT_R8** gemarshallt. Sie erhalten den Wert der Variante (gespeichert im **DblVal**-Feld der COM-Variante), indem Sie eine Umwandlung in die **IConvertible**-Schnittstelle durchführen und die <xref:System.IConvertible.ToDouble%2A>-Methode aufrufen.
 
 ## <a name="marshaling-variant-to-object"></a>Marshalling einer Variante an ein Objekt
 
@@ -250,7 +250,7 @@ Beim Marshallen einer Variante an ein Objekt bestimmt der Typ und in einigen Fä
 
 |COM-Varianttyp|Objekttyp|
 |----------------------|-----------------|
-|**VT_EMPTY**|NULL-Objektverweis (**Nothing** (nichts) in Visual&#160;Basic).|
+|**VT_EMPTY**|NULL-Objektverweis (**Nothing** (nichts) in Visual Basic).|
 |**VT_NULL**|<xref:System.DBNull?displayProperty=nameWithType>|
 |**VT_DISPATCH**|**System.__ComObject** oder NULL wenn (pdispVal == NULL)|
 |**VT_UNKNOWN**|**System.__ComObject** oder NULL wenn (punkVal == NULL)|
@@ -293,7 +293,7 @@ Durch einen Wert und durch einen Verweis übergebene Varianten
 
 **Standardverhalten für das Marshalling von Objekten und Varianten durch einen Verweis**
 
-Um Änderungen an den Aufrufer weiterzugeben, müssen die Parameter durch einen Verweis übergeben werden. Beispielsweise können Sie das **Ref**-Schlüsselwort in C# (oder **ByRef** in Visual Basic verwaltetem Code) zum Übergeben von Parametern durch einen Verweis verwenden. In COM werden Verweisparameter mithilfe eines Zeigers, z.B. als **Variante\***  übergeben.
+Um Änderungen an den Aufrufer weiterzugeben, müssen die Parameter durch einen Verweis übergeben werden. Beispielsweise können Sie das **Ref**-Schlüsselwort in C# (oder **ByRef** in Visual Basic verwaltetem Code) zum Übergeben von Parametern durch einen Verweis verwenden. In COM werden Verweisparameter mithilfe eines Zeigers, z.B. als **Variante\*** übergeben.
 
 - Wenn ein Objekt durch einen Verweis an COM übergeben wird, erstellt der Marshaller eine neue Variante und kopiert den Inhalt des Objektverweises in die Variante, bevor der Aufruf ausgeführt wird. Die Variante wird an die nicht verwaltete Funktion übergeben, in der der Benutzer den Inhalt der Variante nach Belieben ändern kann. Die auf der nicht verwalteten Seite der Variante vorgenommenen Änderungen, werden bei Rückgabe aus dem Aufruf nicht auf das ursprüngliche Objekt zurückübertragen. Wenn der Typ der Variante vom Typ der an den Aufruf übergebenen Variante abweicht, werden die Änderungen auf ein Objekt eines anderen Typs zurückübertragen. Das bedeutet, dass sich der Typ des an den Aufruf übergeben Objekts vom Typ des Objekts unterscheiden kann, der aus dem Aufruf zurückgegeben wurde.
 
@@ -312,16 +312,16 @@ In der folgenden Tabelle werden die Regeln zur Weitergabe für Varianten und Obj
 
 |Von|Beschreibung|Zurückübertragene Änderungen|
 |----------|--------|-----------------------------|
-|**Variante**  *v*|**Objekt**  *o*|Nie|
-|**Objekt**  *o*|**Variante**  *v*|Nie|
-|**Variante**   ***\****  *pv*|**Objekt**  *o*|Always|
-|**Ref.object**  *o*|**Variante**   ***\****  *pv*|Always|
-|**Variante**  *v* **(VT_BYREF** *&#124;* **VT_\*)**|**Objekt**  *o*|Nie|
-|**Variante**  *v* **(VT_BYREF** *&#124;* **VT_)**|**Objekt**  *o*|Nur, wenn sich der Typ nicht geändert hat.|
+|**Variant** *v*|**Object** *o*|Nie|
+|**Object** *o*|**Variant** *v*|Nie|
+|**Variant** ***\**** *pv*|**Ref Object** *o*|Always|
+|**Ref object** *o*|**Variant** ***\**** *pv*|Always|
+|**Variant** *v* **(VT_BYREF** *&#124;* **VT_\*)**|**Object** *o*|Nie|
+|**Variant** *v* **(VT_BYREF** *&#124;* **VT_)**|**Ref Object** *o*|Nur, wenn sich der Typ nicht geändert hat.|
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Standardmäßiges Marshallingverhalten](default-marshaling-behavior.md)
+- [Default Marshaling Behavior (Standardmäßiges Marshallingverhalten)](default-marshaling-behavior.md)
 - [Blitfähige und nicht blitfähige Typen](blittable-and-non-blittable-types.md)
 - [Direktionale Attribute](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/77e6taeh(v=vs.100))
 - [Kopieren und Fixieren](copying-and-pinning.md)

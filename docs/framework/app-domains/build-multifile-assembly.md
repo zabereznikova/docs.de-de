@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Erstellen einer Mehrfachdateiassembly'
+title: 'Vorgehensweise: Erstellen einer Mehrfachdateiassembly'
 ms.date: 08/20/2019
 helpviewer_keywords:
 - assemblies [.NET Framework], multifile
@@ -19,12 +19,12 @@ dev_langs:
 ms.assetid: 261c5583-8a76-412d-bda7-9b8ee3b131e5
 ms.openlocfilehash: 0f8c6d57425657e321d80f9edffa20f27bc28770
 ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74429565"
 ---
-# <a name="how-to-build-a-multifile-assembly"></a>Gewusst wie: Erstellen einer Mehrfachdateiassembly
+# <a name="how-to-build-a-multifile-assembly"></a>Vorgehensweise: Erstellen einer Mehrfachdateiassembly
 
 In diesem Artikel wird beschrieben, wie eine Mehrfachdateiassembly erstellt wird, und es wird Code vorgestellt, der jeden Schritt in der Vorgehensweise veranschaulicht.
 
@@ -95,7 +95,7 @@ In diesem Artikel wird beschrieben, wie eine Mehrfachdateiassembly erstellt wird
    vbc /t:module Stringer.vb
    ```
 
-   Durch die Compileroption */t:* in Verbindung mit dem Parameter **module** wird die Datei als Modul kompiliert, nicht als Assembly. Der Compiler erzeugt ein Modul mit dem Namen *Stringer.netmodule*, das anschließend einer Assembly hinzugefügt werden kann.
+   Durch die Compileroption **/t:** in Verbindung mit dem Parameter *module* wird die Datei als Modul kompiliert, nicht als Assembly. Der Compiler erzeugt ein Modul mit dem Namen *Stringer.netmodule*, das anschließend einer Assembly hinzugefügt werden kann.
 
 3. Kompilieren Sie alle weiteren Module unter Verwendung der erforderlichen Compileroptionen, um die anderen Module anzugeben, auf die im Code verwiesen wird. In diesem Schritt kommt die **/addmodule**-Compileroption zum Einsatz.
 
@@ -224,6 +224,6 @@ In diesem Artikel wird beschrieben, wie eine Mehrfachdateiassembly erstellt wird
 ## <a name="see-also"></a>Siehe auch
 
 - [Erstellen von Assemblys](../../standard/assembly/create.md)
-- [Vorgehensweise: Anzeigen des assemblyinhalts](../../standard/assembly/view-contents.md)
+- [How to: Anzeigen des Assemblyinhalts](../../standard/assembly/view-contents.md)
 - [So sucht Common Language Runtime nach Assemblys](../deployment/how-the-runtime-locates-assemblies.md)
 - [Mehrfachdateiassemblys](multifile-assemblies.md)
