@@ -8,7 +8,7 @@ dev_langs:
 ms.assetid: 00833027-1428-4586-83c1-42f5de3323d1
 ms.openlocfilehash: c1383dbb5419eadbfb7c07f288ee46b1ca11cf5c
 ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/07/2020
 ms.locfileid: "75709997"
@@ -20,7 +20,7 @@ Wenn das XDR-Schema (XML-Data Reduced), anhand dessen validiert wird, in der **X
 > [!IMPORTANT]
 > Die <xref:System.Xml.Schema.XmlSchemaCollection>-Klasse ist veraltet und wurde durch die <xref:System.Xml.Schema.XmlSchemaSet>-Klasse ersetzt. Weitere Informationen zur <xref:System.Xml.Schema.XmlSchemaSet>-Klasse finden Sie unter [„XmlSchemaSet“ zur Kompilierung von Schemata](xmlschemaset-for-schema-compilation.md).
 
-Beispiel: Wenn das Stammelement des XML-Dokuments `<bookstore>` lautet und das Schema der **XmlSchemaCollection** hinzugefügt wurde, verweist es auf denselben Namespace, nämlich:
+Beispiel: Wenn das Stammelement des XML-Dokuments `<bookstore xmlns="urn:newbooks-schema">` lautet und das Schema der **XmlSchemaCollection** hinzugefügt wurde, verweist es auf denselben Namespace, nämlich:
 
 ```vb
 xsc.Add("urn:newbooks-schema", "newbooks.xdr")
@@ -30,7 +30,7 @@ xsc.Add("urn:newbooks-schema", "newbooks.xdr")
 xsc.Add("urn:newbooks-schema", "newbooks.xdr");
 ```
 
-Im folgenden Codebeispiel wird ein **XmlValidatingReader** erstellt, der einen **XmlTextReader** annimmt und der **XmlSchemaCollection**ein XDR-Schema (HeadCount. XDR) hinzufügt:
+Im folgenden Codebeispiel wird ein **XmlValidatingReader** erstellt, der einen **XmlTextReader** übernimmt und der **XmlSchemaCollection** das XDR-Schema „HeadCount.xdr“ hinzufügt:
 
 ```vb
 Imports System.IO

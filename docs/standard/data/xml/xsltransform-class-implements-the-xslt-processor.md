@@ -8,7 +8,7 @@ dev_langs:
 ms.assetid: 88373fe2-4a6b-44f9-8a62-8a3e348e3a46
 ms.openlocfilehash: 73a432db9a3fcb6587184e27e6dfe9ba49010e92
 ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/07/2020
 ms.locfileid: "75709607"
@@ -80,7 +80,7 @@ Weitere Informationen über Sicherheitsebenen und Beweis sowie die Auswirkungen 
 
 Informationen über Sicherheitsebenen und Beweis sowie die Auswirkungen auf die `document()`-Funktion finden Sie unter [Auflösen von externen XSLT-Stylesheets und Dokumenten](../../../../docs/standard/data/xml/resolving-external-xslt-style-sheets-and-documents.md).
 
-Ein Stylesheet kann mit einer Reihe von Eingabeparametern ausgestattet werden. Das Stylesheet kann auch Funktionen für Erweiterungsobjekte aufrufen. Sowohl Parameter als auch Erweiterungsobjekte werden dem Stylesheet mithilfe der <xref:System.Xml.Xsl.XsltArgumentList>-Klasse bereitgestellt. Weitere Informationen zu dem <xref:System.Xml.Xsl.XsltArgumentList> finden Sie unter <xref:System.Xml.Xsl.XsltArgumentList>.
+Ein Stylesheet kann mit einer Reihe von Eingabeparametern ausgestattet werden. Das Stylesheet kann auch Funktionen für Erweiterungsobjekte aufrufen. Sowohl Parameter als auch Erweiterungsobjekte werden dem Stylesheet mithilfe der <xref:System.Xml.Xsl.XsltArgumentList>-Klasse bereitgestellt. Weitere Informationen zum <xref:System.Xml.Xsl.XsltArgumentList> finden Sie unter <xref:System.Xml.Xsl.XsltArgumentList>.
 
 ## <a name="recommended-secure-use-of-xsltransform-class"></a>Empfehlungen für die sichere Verwendung der XslTransform-Klasse
 
@@ -178,7 +178,7 @@ Console.WriteLine("Passing " + tmpDoc.OuterXml + " to print_root.xsl");
 xslt.Transform(tmpDoc, null, Console.Out, null);
 ```
 
-Im Beispiel werden die Dateien "Library. xml" und "print_root. xsl" als Eingabe verwendet und Folgendes an der Konsole ausgegeben:
+Im Beispiel werden die Datei „library.xml“ und die Datei „print_root.xsl“ als Eingabe verwendet, und es wird Folgendes auf der Konsole ausgegeben:
 
 ```console
 Passing <book genre="novel" ISBN="1-861001-57-5"><title>Pride And Prejudice</title></book> to print_root.xsl
@@ -216,7 +216,7 @@ In der folgenden Tabelle sind die veralteten Methoden von .NET Framework Version
 |Veraltete Load-Methoden in .NET Framework, Version 1.0|Ersetzungs-Load-Methoden in .NET Framework, Version 1.1|
 |------------------------------------------------------|---------------------------------------------------------|
 |Load(XPathNavigator input);<br /><br /> Load(XPathNavigator input, XmlResolver resolver);|Load(XPathNavigator stylesheet, XmlResolver resolver, Evidence evidence);|
-|Load(IXPathNavigable stylesheet);<br /><br /> Load(IXPathNavigable stylesheet, XmlResolver resolver);|Load(IXPathNavigable stylesheet, XmlResolver resolver, Evidence evidence);|
+|Load(IXPathNavigable stylesheet);<br /><br /> Load(IXPathNavigable stylesheet, XmlResolver resolver);|Load(IXPathNavigable stylesheet, XmlResolver resolver, Evidence evidence); |
 |Load(XmlReader stylesheet);<br /><br /> Load(XmlReader stylesheet, XmlResolver resolver);|Load(XmlReader stylesheet, XmlResolver resolver, Evidence evidence);|
 
 In der folgenden Tabelle werden die veralteten und die neuen Methoden für die <xref:System.Xml.Xsl.XslTransform.Transform%2A>-Methode aufgelistet. Die neuen Methoden akzeptieren ein <xref:System.Xml.XmlResolver>-Objekt.

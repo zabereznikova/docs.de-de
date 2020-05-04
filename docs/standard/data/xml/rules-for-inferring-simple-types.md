@@ -5,7 +5,7 @@ ms.technology: dotnet-standard
 ms.assetid: 394624d6-4da0-430a-8a88-46efe40f14de
 ms.openlocfilehash: 17429e77f7764873e607a8feaa62da1cc6e014a4
 ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/07/2020
 ms.locfileid: "75710231"
@@ -35,11 +35,11 @@ Beschreibt das Herleiten der Datentypen für Attribute und Elemente mit der <xre
 |unsignedLong|Ganze Zahlen im Bereich von 0 bis 18446744073709551615.|  
 |Ganze Zahl|Eine endliche Anzahl von Ziffern, möglichst mit dem Präfix "-".|  
 |decimal|Numerische Werte mit einer Genauigkeit von 0 bis 28 Stellen.|  
-|frei verschieben|Dezimalzahlen, nach denen optional "E" oder "e" folgt, gefolgt von einem Ganzzahlenwert als Exponent. Dezimalwerte können im Bereich von -16777216 bis 16777216 liegen. Exponentenwerte können im Bereich von -149 bis 104 liegen.<br /><br /> Float ermöglicht spezielle Werte, mit denen unendliche und nicht numerische Werte dargestellt werden. Besondere Werte für Float sind 0, -0, INF - INF, NaN.|  
-|Doppelt|Die gleichen Werte wie bei float, allerdings können die Dezimalwerte im Bereich von -9007199254740992 bis 9007199254740992 und die Exponentenwerte zwischen –1075 und 970 liegen.<br /><br /> Double ermöglicht spezielle Werte, mit denen unendliche und nicht numerische Werte dargestellt werden. Besondere Werte für Float sind 0, -0, INF - INF, NaN.|  
+|float|Dezimalzahlen, nach denen optional "E" oder "e" folgt, gefolgt von einem Ganzzahlenwert als Exponent. Dezimalwerte können im Bereich von -16777216 bis 16777216 liegen. Exponentenwerte können im Bereich von -149 bis 104 liegen.<br /><br /> Float ermöglicht spezielle Werte, mit denen unendliche und nicht numerische Werte dargestellt werden. Besondere Werte für Float sind 0, -0, INF, -INF, NaN.|  
+|double|Die gleichen Werte wie bei float, allerdings können die Dezimalwerte im Bereich von -9007199254740992 bis 9007199254740992 und die Exponentenwerte zwischen –1075 und 970 liegen.<br /><br /> Double ermöglicht spezielle Werte, mit denen unendliche und nicht numerische Werte dargestellt werden. Besondere Werte für Float sind 0, -0, INF, -INF, NaN.|  
 |duration|Das W3C-Format für duration.|  
 |dateTime|Das W3C-Format für dateTime.|  
-|time|Das W3C-Format für time.|  
+|Uhrzeit|Das W3C-Format für time.|  
 |date|Die Werte für Jahreszahlen sind auf einen Bereich von 0001 bis 9999 beschränkt.|  
 |gYearMonth|Das gregorianische Monats- und Zeitformat von W3C.|  
 |string|Ein oder mehrere Unicode-Zeichen.|  
@@ -67,7 +67,7 @@ Beschreibt das Herleiten der Datentypen für Attribute und Elemente mit der <xre
 
 Bei den folgenden Attributen handelt es sich um schemadefinierte Attribute, die während der Schemaherleitung ignoriert werden.  
   
-|Attribute|Beschreibung|  
+|Attribut|Beschreibung|  
 |---------------|-----------------|  
 |`xsi:type`|Wenn ein Element mit der Angabe `xsi:type` festgestellt wird, wird `xsi:type` ignoriert.|  
 |`xsi:nil`|Wenn ein Element mit einem `xsi:nil`-Attribut festgestellt wird, weist dessen Elementdeklaration im hergeleiteten Schema den Wert `nillable="true"` auf. Ein Element, dessen `xsi:nil`-Attribut auf `true` festgelegt wurde, darf keine untergeordneten Elemente besitzen.|  

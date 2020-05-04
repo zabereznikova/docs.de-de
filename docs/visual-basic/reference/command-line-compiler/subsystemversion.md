@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 08be22b2-f447-4cd3-8203-120b1b920b54
 ms.openlocfilehash: e8607f8254783b5486b02ccc4c7e4081da506fae
 ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 12/04/2019
 ms.locfileid: "74802148"
 ---
-# <a name="-subsystemversion-visual-basic"></a>-SubSystemVersion (Visual Basic)
+# <a name="-subsystemversion-visual-basic"></a>-subsystemversion (Visual Basic)
 
 Gibt die Mindestversion des Subsystems an, das die erzeugte ausführbare Datei ausführen kann. Dabei bestimmt sie die Version von Windows, auf der die ausführbare Datei ausgeführt werden kann. In den meisten Fällen stellt diese Option sicher, dass die ausführbare Datei bestimmte Sicherheitsfunktionen nutzt, die nicht in älteren Versionen von Windows verfügbar sind.
 
@@ -26,7 +26,7 @@ Gibt die Mindestversion des Subsystems an, das die erzeugte ausführbare Datei a
 -subsystemversion:major.minor
 ```
 
-## <a name="parameters"></a>Parameters
+## <a name="parameters"></a>Parameter
 
 `major.minor`
 
@@ -40,12 +40,12 @@ Die folgende Tabelle enthält allgemeine Subsystemversionen von Windows.
 
 |Windows-Version|Subsystemversion|
 |---------------------|-----------------------|
-|Windows 2000|5.00|
+|Windows 2000|5.00|
 |Windows XP|5.01|
-|Windows Server 2003|5.02|
+|Windows Server 2003|5.02|
 |Windows Vista|6.00|
-|Windows 7|6,01|
-|Windows Server 2008|6,01|
+|Windows 7|6.01|
+|Windows Server 2008|6.01|
 |Windows 8|6.02|
 
 ## <a name="default-values"></a>Standardwerte
@@ -66,7 +66,7 @@ Der Standardwert der Compileroption **-subsystemversion** hängt von den Bedingu
 
 ## <a name="setting-this-option"></a>Festlegen dieser Option
 
-Um die **-SubSystemVersion-** Compileroption in Visual Studio festzulegen, müssen Sie die VBPROJ-Datei öffnen und einen Wert für die `SubsystemVersion`-Eigenschaft in der MSBuild-XML-Datei angeben. Diese Option kann nicht in der Visual Studio-IDE festgelegt werden. Weitere Informationen finden Sie unter „Standardwerte“ weiter oben in diesem Thema oder unter [Häufige MSBuild-Projekteigenschaften](/visualstudio/msbuild/common-msbuild-project-properties).
+Sie müssen die VBPROJ-Datei öffnen und einen Wert für die Eigenschaft `SubsystemVersion` im MSBuild-XML angeben, um die Compileroption **-subsystemversion** in Visual Studio festzulegen. Diese Option kann nicht in der Visual Studio-IDE festgelegt werden. Weitere Informationen finden Sie unter „Standardwerte“ weiter oben in diesem Thema oder unter [Häufige MSBuild-Projekteigenschaften](/visualstudio/msbuild/common-msbuild-project-properties).
 
 ## <a name="see-also"></a>Siehe auch
 

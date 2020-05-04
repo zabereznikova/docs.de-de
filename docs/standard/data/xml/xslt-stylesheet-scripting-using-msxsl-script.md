@@ -8,7 +8,7 @@ dev_langs:
 ms.assetid: 60e2541b-0cea-4b2e-a4fa-85f4c50f1bef
 ms.openlocfilehash: 9bf57e0f74a353fb6512a24214e9479c1d813aab
 ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 02/28/2020
 ms.locfileid: "78160208"
@@ -29,7 +29,7 @@ Die <xref:System.Xml.Xsl.XslTransform>-Klasse unterstützt die Erstellung eingeb
   
  Dabei ist `msxsl` ein an den Namespace `urn:schemas-microsoft-com:xslt` gebundenes Präfix.  
   
- Das `language`-Attribut ist nicht obligatorisch, aber wenn es angegeben ist, muss sein Wert einer der folgenden sein: `C#`, `VB`, `JScript`, `JavaScript`, `VisualBasic`oder `CSharp`. Wenn es nicht angegeben wird, wird die Standardsprache JScript verwendet. Beim `language-name` wird die Groß- und Kleinschreibung nicht unterschieden, daher sind "JavaScript" und "javascript" identisch.  
+ Das `language`-Attribut ist nicht zwingend erforderlich. Wenn es jedoch angegeben wird, muss der Wert einer der folgenden sein: `C#`, `VB`, `JScript`, `JavaScript`, `VisualBasic` oder `CSharp`. Wenn es nicht angegeben wird, wird die Standardsprache JScript verwendet. Beim `language-name` wird die Groß- und Kleinschreibung nicht unterschieden, daher sind "JavaScript" und "javascript" identisch.  
   
  Das `implements-prefix`-Attribut ist erforderlich. Mit diesem Attribut wird ein Namespace deklariert und mit dem Skriptblock verknüpft. Der Wert dieses Attributs ist das Präfix, das den Namespace darstellt. Dieser Namespace kann an einer beliebigen Stelle im Stylesheet definiert werden.  
   
@@ -58,11 +58,11 @@ Die <xref:System.Xml.Xsl.XslTransform>-Klasse unterstützt die Erstellung eingeb
 |System.Xml.XPath|XPath-Klassen (XML Path Language).|  
 |Microsoft.VisualBasic|Klassen für Microsoft Visual Basic-Skripts|  
   
- Wenn eine Funktion deklariert wurde, ist sie in einem Skriptblock enthalten. Stylesheets können mehrere voneinander unabhängige Skriptblöcke enthalten. Sie können daher bei der Ausführung innerhalb eines Skriptblocks nur dann eine Funktion aufrufen, die Sie in einem anderen Skriptblock definiert haben, wenn diese Funktion so deklariert wurde, dass sie den gleichen Namespace und die gleiche Skriptsprache verwendet. Da jeder Skriptblock in einer eigenen Sprache vorliegen kann und der Block gemäß der Grammatikregeln für den betreffenden Sprachparser analysiert wird, müssen Sie die korrekte Syntax für die verwendete Sprache einhalten. Beispiel: Wenn Sie in einem C#-Skriptblock arbeiten, darf in dem Block kein XML-Kommentarknoten `<!-- an XML comment -->` verwendet werden.  
+ Wenn eine Funktion deklariert wurde, ist sie in einem Skriptblock enthalten. Stylesheets können mehrere voneinander unabhängige Skriptblöcke enthalten. 	Sie können daher bei der Ausführung innerhalb eines Skriptblocks nur dann eine Funktion aufrufen, die Sie in einem anderen Skriptblock definiert haben, wenn diese Funktion so deklariert wurde, dass sie den gleichen Namespace und die gleiche Skriptsprache verwendet. Da jeder Skriptblock in einer eigenen Sprache vorliegen kann und der Block gemäß der Grammatikregeln für den betreffenden Sprachparser analysiert wird, müssen Sie die korrekte Syntax für die verwendete Sprache einhalten. Beispiel: Wenn Sie in einem C#-Skriptblock arbeiten, darf in dem Block kein XML-Kommentarknoten `<!-- an XML comment -->` verwendet werden.  
   
  Die bereitgestellten, durch die Skriptfunktionen definierten Argumente und Rückgabewerte müssen zu einem der XPath- oder XSLT-Typen des W3C (World Wide Web Consortium) gehören. In der folgenden Tabelle werden die jeweiligen W3C-Typen mit den entsprechenden .NET Framework-Klassen (Typen) samt der Informationen aufgeführt, ob es sich bei einem W3C-Typ um einen XPath-Typ oder einen XSLT-Typ handelt.  
   
-|Geben Sie Folgendes ein:|Entsprechende .NET Framework-Klasse (Typ)|XPath-Typ oder XSLT-Typ|  
+|Typ|Entsprechende .NET Framework-Klasse (Typ)|XPath-Typ oder XSLT-Typ|  
 |----------|----------------------------------------------|-----------------------------|  
 |Zeichenfolge|System.String|XPath|  
 |Boolesch|System.Boolean|XPath|  
@@ -70,7 +70,7 @@ Die <xref:System.Xml.Xsl.XslTransform>-Klasse unterstützt die Erstellung eingeb
 |Ergebnisstrukturfragment|System.Xml.XPath.XPathNavigator|XSLT|  
 |Knotengruppe|System.Xml.XPath.XPathNodeIterator|XPath|  
   
- Wenn die Skriptfunktion einen der folgenden numerischen Typen verwendet: Int16, UInt16, Int32, UInt32, Int64, UInt64, Single oder Decimal, werden diese Typen in Double umgewandelt, wodurch eine Zuordnung zur XPath-Typnummer des W3C erfolgt. Für alle anderen Typen wird durch einen Aufruf der `ToString`-Methode eine Umwandlung in string erzwungen.  
+ Wenn die Skriptfunktion einen der numerischen Typen „Int16“, „UInt16“, „Int32“, „UInt32“, „Int64“, „UInt64“, „Single“ oder „Decimal“ verwendet, werden diese Typen in „Double“ umgewandelt, wodurch eine Zuordnung zur XPath-Typnummer des W3C erfolgt. Für alle anderen Typen wird durch einen Aufruf der `ToString`-Methode eine Umwandlung in string erzwungen.  
   
  Wenn die Skriptfunktion einen anderen als die oben genannten Typen verwendet oder wenn sie beim Laden des Stylesheets in das <xref:System.Xml.Xsl.XslTransform>-Objekt nicht kompiliert wird, wird eine Ausnahme ausgelöst.  
   
@@ -214,7 +214,7 @@ public class Sample
 </xsl:stylesheet>  
 ```  
   
-## <a name="output"></a>Ausgabe  
+## <a name="output"></a>Output  
   
 ```xml  
 <circles xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:user="urn:my-scripts">  

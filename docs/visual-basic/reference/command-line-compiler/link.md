@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 1885f24a-86f5-486c-a064-9fb7e455ccec
 ms.openlocfilehash: c15f55f3a3c2b4e404767ddf96e258bc1e9771d7
 ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/07/2020
 ms.locfileid: "75716754"
 ---
-# <a name="-link-visual-basic"></a>-Link (Visual Basic)
+# <a name="-link-visual-basic"></a>-link (Visual Basic)
 Bewirkt, dass der Compiler dem Projekt, das Sie aktuell kompilieren, COM-Typinformationen in den angegebenen Assemblys bereitstellt.  
   
 ## <a name="syntax"></a>Syntax  
@@ -37,7 +37,7 @@ oder
   
 |Begriff|Definition|  
 |---|---|  
-|`fileList`|Erforderlich Durch Trennzeichen getrennte Liste von Assemblydateinamen. Wenn der Dateiname ein Leerzeichen enthält, müssen Sie den Namen in Anführungszeichen einschließen.|  
+|`fileList`|Erforderlich. Durch Trennzeichen getrennte Liste von Assemblydateinamen. Wenn der Dateiname ein Leerzeichen enthält, müssen Sie den Namen in Anführungszeichen einschließen.|  
   
 ## <a name="remarks"></a>Hinweise  
  Die Option `-link` ermöglicht es Ihnen, eine Anwendung mit eingebetteten Typinformationen bereitzustellen. Die Anwendung kann dann Typen in einer Runtime-Assembly verwenden, die die eingebetteten Typinformationen implementieren, ohne dass ein Verweis auf die Runtime-Assembly erforderlich ist. Wenn verschiedene Versionen der Runtime-Assembly veröffentlicht werden, kann die Anwendung, die die eingebetteten Typinformationen enthält, mit den verschiedenen Versionen arbeiten, ohne neu kompiliert werden zu müssen. Ein Beispiel finden Sie unter [Exemplarische Vorgehensweise: Einbetten von Typen aus verwalteten Assemblys](../../../standard/assembly/embed-types-visual-studio.md).  
@@ -57,9 +57,9 @@ oder
   
 - Es wird ein Feld, eine Eigenschaft, ein Ereignis oder eine Methode aufgerufen, das/die über einen Rückgabetyp oder Parametertyp von Assembly B verfügt.  
   
- Verwenden Sie [-LIBPATH](libpath.md) , um das Verzeichnis anzugeben, in dem sich ein oder mehrere der Assemblyverweise befinden.  
+ Verwenden Sie [-libpath](libpath.md), um das Verzeichnis anzugeben, in dem sich einer oder mehrere der Assemblyverweise befinden.  
   
- Wie die [-Reference-](reference.md) Compileroption verwendet die `-link`-Compileroption die Antwortdatei "Vbc. rsp", die auf häufig verwendete .NET Framework Assemblys verweist. Verwenden Sie die [-noconfig-](noconfig.md) Compileroption, wenn Sie nicht möchten, dass der Compiler die Datei "Vbc. rsp" verwendet.  
+ Wie die Compileroption [-reference](reference.md) verwendet auch die Compileroption `-link` die Antwortdatei „Vbc.rsp“, die auf häufig verwendete .NET Framework-Assemblys verweist. Verwenden Sie die Compileroption [-noconfig](noconfig.md), wenn Sie nicht möchten, dass der Compiler die Datei „Vbc.rsp“ verwendet.  
   
  Die Kurzform von `-link` ist `-l`.  
   
@@ -83,7 +83,7 @@ oder
  [!code-vb[VbLinkCompiler#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vblinkcompiler/vb/module1.vb#5)]  
   
 ## <a name="example"></a>Beispiel  
- Mit der folgenden Befehlszeile werden Quelldatei `OfficeApp.vb` und Verweisassemblys aus `COMData1.dll` kompiliert und `COMData2.dll`, um `OfficeApp.exe`zu erstellen.  
+ Mit der folgenden Befehlszeile werden die Quelldatei `OfficeApp.vb` und Verweisassemblys aus `COMData1.dll` und `COMData2.dll` kompiliert, um `OfficeApp.exe` zu erstellen.  
   
 ```console  
 vbc -link:COMData1.dll,COMData2.dll -out:OfficeApp.exe OfficeApp.vb  
@@ -92,8 +92,8 @@ vbc -link:COMData1.dll,COMData2.dll -out:OfficeApp.exe OfficeApp.vb
 ## <a name="see-also"></a>Siehe auch
 
 - [Visual Basic-Befehlszeilencompiler](index.md)
-- [Exemplarische Vorgehensweise: Einbetten von Typen aus verwalteten Assemblys](../../../standard/assembly/embed-types-visual-studio.md)
-- [-Verweis (Visual Basic)](reference.md)
+- [Exemplarische Vorgehensweise: Einbetten von Typen aus verwalteten Assemblys in Visual Studio](../../../standard/assembly/embed-types-visual-studio.md)
+- [-reference (Visual Basic)](reference.md)
 - [-noconfig](noconfig.md)
 - [-libpath](libpath.md)
 - [Beispiele für Kompilierungsbefehlszeilen](sample-compilation-command-lines.md)

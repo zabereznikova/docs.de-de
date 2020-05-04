@@ -4,12 +4,12 @@ ms.date: 10/01/2018
 helpviewer_keywords:
 - Memory&lt;T&gt; and Span&lt;T&gt; best practices
 - using Memory&lt;T&gt; and Span&lt;T&gt;
-ms.openlocfilehash: 0a614f628faa98be778c627573e4dddc462c9107
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b89969f212da6ac90d0fb0d1bf388626e136b92e
+ms.sourcegitcommit: c2c1269a81ffdcfc8675bcd9a8505b1a11ffb271
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73121963"
+ms.lasthandoff: 04/25/2020
+ms.locfileid: "82158592"
 ---
 # <a name="memoryt-and-spant-usage-guidelines"></a>Leitfaden zur Verwendung von Memory\<T> und Span\<T>
 
@@ -23,7 +23,7 @@ Da Puffer zwischen APIs ausgetauscht werden können und auf Puffer manchmal übe
 
 - **Besitz**. Der Besitzer einer Pufferinstanz ist für das die Verwaltung der Lebensdauer verantwortlich, einschließlich der Zerstörung des Puffers, wenn er nicht mehr in Gebrauch ist. Alle Puffer haben nur einen einzigen Besitzer. Im Allgemeinen ist der Besitzer die Komponente, die den Puffer erstellt hat, oder die den Puffer von einer Factory erhalten hat. Der Besitz kann auch übertragen werden; **Komponente-A** kann die Kontrolle über den Puffer an **Komponente-B** abgeben, wobei **Komponente-A** den Puffer nicht mehr verwenden darf, und **Komponente-B** wird für die Zerstörung des Puffers verantwortlich, wenn er nicht mehr verwendet wird.
 
-- **Verbrauch**. Der Consumer einer Pufferinstanz darf die Pufferinstanz nutzen, indem er aus ihr liest und eventuell in sie schreibt. Puffer können jeweils einen Consumer haben, es sei denn, es ist ein externer Synchronisationsmechanismus vorgesehen. Beachten Sie, dass der aktive Consumer eines Puffers nicht unbedingt der Besitzer des Puffers ist.
+- **Verbrauch**. Der Consumer einer Pufferinstanz darf die Pufferinstanz nutzen, indem er aus ihr liest und eventuell in sie schreibt. Puffer können jeweils einen Consumer haben, es sei denn, es ist ein externer Synchronisationsmechanismus vorgesehen. Der aktive Consumer eines Puffers ist nicht unbedingt der Besitzer des Puffers.
 
 - **Leasedauer**. Die Leasedauer ist die Zeitspanne, in der eine bestimmte Komponente als Consumer des Puffers zugelassen wird.
 
@@ -110,7 +110,7 @@ Da ein Speicherblock einen Besitzer hat, aber an mehrere Komponenten übergeben 
 
 - Durch die Stapelzuordnung von <xref:System.Span%601> wird zwar die Leistung optimiert und <xref:System.Span%601> zum bevorzugten Typ für den Betrieb auf einem Speicherblock, aber auch <xref:System.Span%601> einigen bedeutenden Einschränkungen unterworfen. Es ist wichtig zu wissen, wann einen <xref:System.Span%601> und wann <xref:System.Memory%601> verwenden sollten.
 
-Nachfolgend finden Sie unsere Empfehlungen für den erfolgreichen Einsatz von <xref:System.Memory%601> und den verwandten Typen. Beachten Sie, dass die Richtlinien, die für <xref:System.Memory%601> und <xref:System.Span%601> gelten, auch für <xref:System.ReadOnlyMemory%601> und <xref:System.ReadOnlySpan%601> gelten, sofern nicht ausdrücklich anders angegeben.
+Nachfolgend finden Sie unsere Empfehlungen für den erfolgreichen Einsatz von <xref:System.Memory%601> und den verwandten Typen. Die Richtlinien, die für <xref:System.Memory%601> und <xref:System.Span%601> gelten, gelten auch für <xref:System.ReadOnlyMemory%601> und <xref:System.ReadOnlySpan%601>, sofern nicht ausdrücklich anders angegeben.
 
 **Regel 1: Für eine synchrone API Span\<T> anstelle von Memory\<T> als Parameter verwenden, wenn möglich.**
 
@@ -336,7 +336,7 @@ public unsafe Task<int> ManagedWrapperAsync(Memory<byte> data)
 private static void MyCompletedCallbackImplementation(IntPtr state, int result)
 {
     GCHandle handle = (GCHandle)state;
-    var actualState = (MyCompletedCallbackState)state;
+    var actualState = (MyCompletedCallbackState)(handle.Target);
     handle.Free();
     actualState.MemoryHandle.Dispose();
 

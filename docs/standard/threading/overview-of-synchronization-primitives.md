@@ -8,12 +8,12 @@ helpviewer_keywords:
 - threading [.NET],synchronizing threads
 - managed threading
 ms.assetid: b782bcb8-da6a-4c6a-805f-2eb46d504309
-ms.openlocfilehash: 43f78c914b7cb01f9b0de4c258d5882548e52790
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7347c9b40f150febc6a163ae3aa3267123ea0e9d
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73106597"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81739375"
 ---
 # <a name="overview-of-synchronization-primitives"></a>Übersicht über Synchronisierungsprimitive
 
@@ -106,7 +106,7 @@ Ein Synchronisierungsereignis kann entweder in einem nicht signalisierten oder s
 Das Verhalten einer signalisierten <xref:System.Threading.EventWaitHandle> hängt von den Zurücksetzmodus ab:
 
 - Eine mit der <xref:System.Threading.EventWaitHandle>-Flag erstellten <xref:System.Threading.EventResetMode.AutoReset?displayProperty=nameWithType> wird nach der Freigabe eines einzelnen wartenden Threads automatisch zurückgesetzt. Es ist wie ein Drehkreuz, das bei jeder Signalisierung nur einen Thread durchlässt. Die <xref:System.Threading.AutoResetEvent?displayProperty=nameWithType>-Klasse, die von <xref:System.Threading.EventWaitHandle> abgeleitet wird, stellt dieses Verhalten dar.
-- Eine mit der <xref:System.Threading.EventWaitHandle>-Flag erstellte <xref:System.Threading.EventResetMode.ManualReset?displayProperty=nameWithType> bleibt so lange ein Signal, bis die <xref:System.Threading.EventWaitHandle.Reset%2A>-Methode aufgerufen wird. Es ist wie ein Tor, das bis zum Signal geschlossen wird und dann offen bleibt, bis es jemand schließt. Die <xref:System.Threading.ManualResetEvent?displayProperty=nameWithType>-Klasse, die von <xref:System.Threading.EventWaitHandle> abgeleitet wird, stellt dieses Verhalten dar. Die <xref:System.Threading.ManualResetEventSlim?displayProperty=nameWithType>-Klasse ist eine einfache Alternative zu <xref:System.Threading.ManualResetEvent>.
+- Eine mit der <xref:System.Threading.EventResetMode.ManualReset?displayProperty=nameWithType>-Flag erstellte <xref:System.Threading.EventWaitHandle.Reset%2A> bleibt so lange ein Signal, bis die <xref:System.Threading.EventWaitHandle>-Methode aufgerufen wird. Es ist wie ein Tor, das bis zum Signal geschlossen wird und dann offen bleibt, bis es jemand schließt. Die <xref:System.Threading.ManualResetEvent?displayProperty=nameWithType>-Klasse, die von <xref:System.Threading.EventWaitHandle> abgeleitet wird, stellt dieses Verhalten dar. Die <xref:System.Threading.ManualResetEventSlim?displayProperty=nameWithType>-Klasse ist eine einfache Alternative zu <xref:System.Threading.ManualResetEvent>.
 
 Unter Windows können Sie <xref:System.Threading.EventWaitHandle> für die prozessübergreifende Synchronisierung verwenden. Erstellen Sie dafür eine <xref:System.Threading.EventWaitHandle>-Instanz, die ein benanntes Systemsynchronisierungsereignis darstellt, indem Sie einen der [EventWaitHandle-Konstruktoren](<xref:System.Threading.EventWaitHandle.%23ctor%2A>) verwenden, die einen Namen oder die <xref:System.Threading.EventWaitHandle.OpenExisting%2A?displayProperty=nameWithType>-Methode angeben.
 
@@ -140,7 +140,7 @@ Die <xref:System.Threading.SpinWait?displayProperty=nameWithType>-Struktur stell
 
 Weitere Informationen finden Sie im Artikel [SpinWait](spinwait.md) und in der Referenz zur <xref:System.Threading.SpinWait>-API.
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Collections.Concurrent?displayProperty=nameWithType>
 - [Threadsichere Sammlungen](../collections/thread-safe/index.md)

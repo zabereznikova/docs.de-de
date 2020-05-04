@@ -11,12 +11,12 @@ helpviewer_keywords:
 - Task-based Asynchronous Pattern, .NET Framework support for
 - .NET Framework, asynchronous design patterns
 ms.assetid: fab6bd41-91bd-44ad-86f9-d8319988aa78
-ms.openlocfilehash: 6218aa1a7b813601e9b718abf862e20a7cbcd313
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e09ed853598dcbb13cc8dc3fe963276e4b5e974d
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73124306"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81739651"
 ---
 # <a name="implementing-the-task-based-asynchronous-pattern"></a>Implementieren des aufgabenbasierten asynchronen Entwurfsmusters
 Sie können das aufgabenbasierte asynchrone Muster (Task-based Asynchronous Pattern, TAP) auf drei Arten implementieren: mit C# und den Visual Basic-Compilern in Visual Studio, manuell oder mit einer Kombination von Compilermethoden und manuellen Methoden. In den folgenden Abschnitten wird jede dieser Methoden ausführlich erörtert. Mit dem TAP-Muster können sowohl rechnergebundene als auch E/A-gebundene asynchrone Vorgänge implementiert werden. Im Abschnitt [Workloads](#workloads) werden die einzelnen Vorgangstypen erläutert.
@@ -24,10 +24,10 @@ Sie können das aufgabenbasierte asynchrone Muster (Task-based Asynchronous Patt
 ## <a name="generating-tap-methods"></a>Generieren von TAP-Methoden
 
 ### <a name="using-the-compilers"></a>Verwenden der Compiler
-Ab .NET Framework 4.5 gilt jede Methode, die mit dem Schlüsselwort `async` (`Async` in Visual Basic) attributiert ist, als asynchrone Methode, und die C#- und Visual Basic-Compiler führen die erforderlichen Transformationen aus, um die Methode mithilfe der TAP-Methode als asynchrone Methode zu implementieren. Eine asynchrone Methode sollte entweder <xref:System.Threading.Tasks.Task?displayProperty=nameWithType>- oder ein <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType>-Objekt zurückgeben. Im letzteren Fall sollte der Text der Funktion einen `TResult`-Typ zurückgeben, und der Compiler stellt sicher, dass dieses Ergebnis durch das resultierende Taskobjekt verfügbar gemacht wird. Entsprechend werden alle Ausnahmen, die im Text der Methode nicht behandelt werden, zur Ausgabeaufgabe gemarshallt und führen dazu, dass die resultierende Aufgabe im Zustand <xref:System.Threading.Tasks.TaskStatus.Faulted?displayProperty=nameWithType> endet. Die Ausnahme ist, wenn eine <xref:System.OperationCanceledException> (oder abgeleitete Typen) nicht behandelt wird. In diesem Fall enden die resultierenden Aufgaben im Zustand <xref:System.Threading.Tasks.TaskStatus.Canceled?displayProperty=nameWithType>.
+Ab .NET Framework 4.5 gilt jede Methode, die mit dem Schlüsselwort `async` (`Async` in Visual Basic) attributiert ist, als asynchrone Methode, und die C#- und Visual Basic-Compiler führen die erforderlichen Transformationen aus, um die Methode mithilfe der TAP-Methode als asynchrone Methode zu implementieren. Eine asynchrone Methode sollte entweder <xref:System.Threading.Tasks.Task?displayProperty=nameWithType>- oder ein <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType>-Objekt zurückgeben. Im letzteren Fall sollte der Text der Funktion einen `TResult`-Typ zurückgeben, und der Compiler stellt sicher, dass dieses Ergebnis durch das resultierende Taskobjekt verfügbar gemacht wird. Entsprechend werden alle Ausnahmen, die im Text der Methode nicht behandelt werden, zur Ausgabeaufgabe gemarshallt und führen dazu, dass die resultierende Aufgabe im Zustand <xref:System.Threading.Tasks.TaskStatus.Faulted?displayProperty=nameWithType> endet. Die Ausnahme dieser Regel ist, wenn eine <xref:System.OperationCanceledException> (oder abgeleitete Typen) nicht behandelt wird. In diesem Fall enden die resultierenden Aufgaben im Zustand <xref:System.Threading.Tasks.TaskStatus.Canceled?displayProperty=nameWithType>.
 
 ### <a name="generating-tap-methods-manually"></a>Manuelles Generieren von TAP-Methoden
-Sie können das TAP-Muster manuell implementieren, um eine bessere Kontrolle über die Implementierung zu haben. Der Compiler nutzt den öffentlichen Oberflächenbereich, der über den <xref:System.Threading.Tasks?displayProperty=nameWithType>-Namespace verfügbar gemacht wird, und unterstützende Typen im <xref:System.Runtime.CompilerServices?displayProperty=nameWithType>-Namespace. Wenn Sie das TAP selbst implementieren möchten, erstellen Sie ein <xref:System.Threading.Tasks.TaskCompletionSource%601>-Objekt, führen Sie den asynchronen Vorgang aus, und wenn er abgeschlossen wurde, rufen Sie die Methode <xref:System.Threading.Tasks.TaskCompletionSource%601.SetResult%2A>, <xref:System.Threading.Tasks.TaskCompletionSource%601.SetException%2A> oder <xref:System.Threading.Tasks.TaskCompletionSource%601.SetCanceled%2A> oder die `Try`-Version einer dieser Methoden auf. Wenn Sie eine TAP-Methode manuell implementieren, müssen Sie sicherstellen, dass die resultierende Aufgabe abgeschlossen wird, wenn der dargestellte asynchrone Vorgang abgeschlossen wird. Beispiel:
+Sie können das TAP-Muster manuell implementieren, um eine bessere Kontrolle über die Implementierung zu haben. Der Compiler nutzt den öffentlichen Oberflächenbereich, der über den <xref:System.Threading.Tasks?displayProperty=nameWithType>-Namespace verfügbar gemacht wird, und unterstützende Typen im <xref:System.Runtime.CompilerServices?displayProperty=nameWithType>-Namespace. Wenn Sie das TAP selbst implementieren möchten, erstellen Sie ein <xref:System.Threading.Tasks.TaskCompletionSource%601>-Objekt, führen Sie den asynchronen Vorgang aus, und wenn er abgeschlossen wurde, rufen Sie die Methode <xref:System.Threading.Tasks.TaskCompletionSource%601.SetResult%2A>, <xref:System.Threading.Tasks.TaskCompletionSource%601.SetException%2A> oder <xref:System.Threading.Tasks.TaskCompletionSource%601.SetCanceled%2A> oder die `Try`-Version einer dieser Methoden auf. Wenn Sie eine TAP-Methode manuell implementieren, müssen Sie sicherstellen, dass die resultierende Aufgabe abgeschlossen wird, wenn der dargestellte asynchrone Vorgang abgeschlossen wird. Zum Beispiel:
 
 [!code-csharp[Conceptual.TAP_Patterns#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.tap_patterns/cs/patterns1.cs#1)]
 [!code-vb[Conceptual.TAP_Patterns#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.tap_patterns/vb/patterns1.vb#1)]
@@ -99,7 +99,7 @@ Asynchrone Methoden sind nicht auf ausschließlich rechnergebundene oder ausschl
 
 Dieses Beispiel zeigt auch, wie ein einzelnes Abbruchstoken nacheinander in mehreren asynchronen Vorgängen verwendet werden kann. Weitere Informationen finden Sie im Abschnitt zur Verwendung von Abbruchtokens unter [Verwenden des aufgabenbasierten asynchronen Musters](../../../docs/standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern.md).
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Aufgabenbasiertes asynchrones Muster (TAP, Task-based Asynchronous Pattern)](../../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md)
 - [Nutzen des aufgabenbasierten asynchronen Musters](../../../docs/standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern.md)

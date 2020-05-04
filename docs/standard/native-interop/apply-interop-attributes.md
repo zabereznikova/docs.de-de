@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: b6014613-641c-4912-9e2f-83a99210a037
 ms.openlocfilehash: ca104c512641774217de5e270dc50b7393fc5725
 ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 02/28/2020
 ms.locfileid: "78159246"
@@ -39,7 +39,7 @@ Der <xref:System.Runtime.InteropServices>-Namespace stellt drei Kategorien von I
 |<xref:System.Runtime.InteropServices.ComUnregisterFunctionAttribute>|Gibt an, dass eine Methode aufgerufen werden soll, wenn die Assembly nicht in COM registriert ist, damit vom Benutzer erstellter Code während des Prozesses ausgeführt werden kann.|  
 |<xref:System.Runtime.InteropServices.ComVisibleAttribute>|Macht Typen für COM unsichtbar, wenn der Attributwert **FALSE** ist. Dieses Attribut kann für eine gesamte Assembly oder einen einzelnen Typ angewendet werden, um die COM-Sichtbarkeit zu steuern. Standardmäßig sind alle verwalteten, öffentlichen Typen angezeigt. Das Attribut ist nicht erforderlich, um sie sichtbar zu machen.|  
 |<xref:System.Runtime.InteropServices.DispIdAttribute>|Gibt die COM-Dispatch-ID (DISPID) einer Methode oder eines Felds an. Dieses Attribut enthält die DISPID für die Methode, das Feld oder die Eigenschaft, die es beschreibt.<br /><br /> Dieses Attribut wird von COM-Interop-Tools angewendet.|
-|<xref:System.Runtime.InteropServices.ComDefaultInterfaceAttribute>|Gibt die Standardschnittstelle für eine in .net implementierte com-Klasse an.<br /><br /> Dieses Attribut wird von COM-Interop-Tools angewendet.|
+|<xref:System.Runtime.InteropServices.ComDefaultInterfaceAttribute>|Gibt die Standardschnittstelle für eine in .NET implementierte COM-Klasse an.<br /><br /> Dieses Attribut wird von COM-Interop-Tools angewendet.|
 |<xref:System.Runtime.InteropServices.FieldOffsetAttribute>|Gibt die physische Position jedes Felds innerhalb einer Klasse an, wenn **StructLayoutAttribute** verwendet und **LayoutKind** auf explizit festgelegt ist.|  
 |<xref:System.Runtime.InteropServices.GuidAttribute>|Gibt den Globally Unique Identifier (GUID) einer Klasse, Schnittstelle oder einer ganzen Typbibliothek an. Das Format der Zeichenfolge, die an das Attribut übergeben wird, muss ein zulässiges Konstruktorargument für den Typ **System.Guid** darstellen.<br /><br /> Dieses Attribut wird von COM-Interop-Tools angewendet.|  
 |<xref:System.Runtime.InteropServices.IDispatchImplAttribute>|Gibt an, welche **IDispatch**-Schnittstellenimplementierung die Common Language Runtime verwendet, wenn sie duale Schnittstellen und Disp-Schnittstellen für COM verfügbar macht.|  

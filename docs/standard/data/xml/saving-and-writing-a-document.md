@@ -8,7 +8,7 @@ dev_langs:
 ms.assetid: 097b0cb1-5743-4c3a-86ef-caf5cbe6750d
 ms.openlocfilehash: 0af160b720b9eddd9e72689c920316bffdc6d21e
 ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/07/2020
 ms.locfileid: "75710218"
@@ -20,7 +20,7 @@ Ein geladenes und dann gespeichertes <xref:System.Xml.XmlDocument> kann in den f
   
 - Der gesamte Leerraum zwischen Attributen wird zu einem einzigen Leerzeichen zusammengefasst.  
   
-- Leerraum zwischen Elementen wird verändert. Signifikanter Leerraum bleibt im Gegensatz zu nicht signifikantem Leerraum erhalten. Wenn das Dokument jedoch gespeichert wird, wird **der <xref:System.Xml.XmlTextWriter> Einzugs** Modus standardmäßig verwendet, um die Ausgabe sauber zu drucken, damit Sie besser lesbar ist.  
+- Leerraum zwischen Elementen wird verändert. Signifikanter Leerraum bleibt im Gegensatz zu nicht signifikantem Leerraum erhalten. Beim Speichern des Dokuments wird allerdings standardmäßig der besseren Lesbarkeit wegen der **Indenting**-Modus von <xref:System.Xml.XmlTextWriter> verwendet.  
   
 - Einfache Anführungszeichen für Attributwerte werden standardmäßig in doppelte Anführungszeichen umgewandelt. Das Anführungszeichen kann mit der <xref:System.Xml.XmlTextReader.QuoteChar%2A>-Eigenschaft des <xref:System.Xml.XmlTextWriter> als einfaches oder doppeltes Anführungszeichen festgelegt werden.  
   
@@ -33,7 +33,7 @@ Ein geladenes und dann gespeichertes <xref:System.Xml.XmlDocument> kann in den f
 ## <a name="writing-an-xmldeclaration"></a>Schreiben einer "XmlDeclaration"  
  Außer der <xref:System.Xml.XmlDocument>-Methode und der <xref:System.Xml.XmlDeclaration>-Methode von <xref:System.Xml.XmlNode.OuterXml%2A> erstellen die Methoden <xref:System.Xml.XmlNode.InnerXml%2A>, <xref:System.Xml.XmlNode.WriteTo%2A> und <xref:System.Xml.XmlDocument> von <xref:System.Xml.XmlDocument.Save%2A> und <xref:System.Xml.XmlDocument.WriteContentTo%2A> eine XML-Deklaration.  
   
- Bei der <xref:System.Xml.XmlDocument>-Eigenschaft und der <xref:System.Xml.XmlNode.OuterXml%2A>-Eigenschaft von <xref:System.Xml.XmlDocument.InnerXml%2A> und den Methoden <xref:System.Xml.XmlDocument.Save%2A>, <xref:System.Xml.XmlDocument.WriteTo%2A> und <xref:System.Xml.XmlDocument.WriteContentTo%2A> wird die in der XML-Deklaration ausgegebene Codierung dem <xref:System.Xml.XmlDeclaration>-Knoten entnommen. Wenn kein <xref:System.Xml.XmlDeclaration> Knoten vorhanden ist, wird <xref:System.Xml.XmlDeclaration> nicht ausgeschrieben. Wenn im <xref:System.Xml.XmlDeclaration> Knoten keine Codierung vorhanden ist, wird die Codierung nicht in die XML-Deklaration geschrieben.  
+ Bei der <xref:System.Xml.XmlDocument>-Eigenschaft und der <xref:System.Xml.XmlNode.OuterXml%2A>-Eigenschaft von <xref:System.Xml.XmlDocument.InnerXml%2A> und den Methoden <xref:System.Xml.XmlDocument.Save%2A>, <xref:System.Xml.XmlDocument.WriteTo%2A> und <xref:System.Xml.XmlDocument.WriteContentTo%2A> wird die in der XML-Deklaration ausgegebene Codierung dem <xref:System.Xml.XmlDeclaration>-Knoten entnommen. Wenn kein <xref:System.Xml.XmlDeclaration>-Knoten vorhanden ist, wird keine <xref:System.Xml.XmlDeclaration> ausgegeben. Wenn der <xref:System.Xml.XmlDeclaration>-Knoten keine Codierung enthält, wird in der XML-Deklaration keine Codierung ausgegeben.  
   
  Die <xref:System.Xml.XmlDocument.Save%2A?displayProperty=nameWithType>-Methode und die <xref:System.Xml.XmlDocument.Save%2A?displayProperty=nameWithType>-Methode schreiben immer eine <xref:System.Xml.XmlDeclaration>. Diese Methoden übernehmen die Codierung des Writers, in den sie schreiben. Der Codierungswert des Writers überschreibt also die Codierung im Dokument und in der <xref:System.Xml.XmlDeclaration>. Bei dem folgenden Codebeispiel wird z. B. keine Codierung innerhalb der XML-Deklaration in die Ausgabedatei `out.xml` geschrieben.  
   
@@ -53,7 +53,7 @@ doc.Save(tw);
   
  Bei der <xref:System.Xml.XmlDocument.Save%2A>-Methode wird die XML-Deklaration mit der <xref:System.Xml.XmlWriter.WriteStartDocument%2A>-Methode der <xref:System.Xml.XmlWriter>-Klasse geschrieben. Ein Überschreiben der <xref:System.Xml.XmlWriter.WriteStartDocument%2A>-Methode ändert daher die Ausgabe des Dokumentanfangs.  
   
- Wenn die <xref:System.Xml.XmlDeclaration.Encoding%2A>-Eigenschaft nicht festgelegt ist, wird für die <xref:System.Xml.XmlDeclaration> Membern von <xref:System.Xml.XmlNode.OuterXml%2A>, <xref:System.Xml.XmlDeclaration.WriteTo%2A>und <xref:System.Xml.XmlNode.InnerXml%2A>keine Codierung geschrieben. Andernfalls ist die in der XML-Deklaration geschriebene Codierung mit der in der <xref:System.Xml.XmlDeclaration.Encoding%2A>-Eigenschaft gefundenen Codierung identisch.  
+ Bei den Membern <xref:System.Xml.XmlDeclaration>, <xref:System.Xml.XmlNode.OuterXml%2A> und <xref:System.Xml.XmlDeclaration.WriteTo%2A> von <xref:System.Xml.XmlNode.InnerXml%2A> wird keine Codierung geschrieben, wenn die <xref:System.Xml.XmlDeclaration.Encoding%2A>-Eigenschaft nicht festgelegt ist. Andernfalls entspricht die in der XML-Deklaration ausgegebenen Codierung der in der <xref:System.Xml.XmlDeclaration.Encoding%2A>-Eigenschaft angegebenen Codierung.  
   
 ## <a name="writing-document-content-using-the-outerxml-property"></a>Schreiben des Dokumentinhalts mit der "OuterXml"-Eigenschaft  
  Die <xref:System.Xml.XmlNode.OuterXml%2A>-Eigenschaft ist eine Erweiterung von Microsoft des XML-DOM-Standards (Document Object Model) des W3C (Word Wide Web Consortium). Die <xref:System.Xml.XmlNode.OuterXml%2A>-Eigenschaft wird zum Abrufen des Markups des ganzen XML-Dokuments oder eines Knotens und seiner untergeordneten Knoten verwendet. <xref:System.Xml.XmlNode.OuterXml%2A> gibt das Markup zurück, das diesen Knoten und alle ihm untergeordneten Knoten darstellt.  

@@ -8,7 +8,7 @@ dev_langs:
 ms.assetid: 911d4460-dd91-4958-85b2-2ca3299f9ec6
 ms.openlocfilehash: 6a0cc110c2b8bcd97b9f5c16a344db5a63046353
 ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/07/2020
 ms.locfileid: "75709802"
@@ -152,7 +152,7 @@ Weitere Informationen zur <xref:System.Xml.Schema.XmlSchemaValidator.AddSchema%2
 
 Die <xref:System.Xml.Schema.XmlSchemaValidator>-Klasse stellt verschiedene Methoden zum Validieren von Elementen, Attributen und Inhalt in einem XML-Infoset anhand von XML-Schemata bereit. In der folgenden Tabelle werden diese Methoden beschrieben.
 
-|-Methode|Beschreibung|
+|Methode|Beschreibung|
 |------------|-----------------|
 |<xref:System.Xml.Schema.XmlSchemaValidator.ValidateElement%2A>|Validiert den Elementnamen im aktuellen Kontext.|
 |<xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute%2A>|Validiert das Attribut im aktuellen Elementkontext oder anhand des <xref:System.Xml.Schema.XmlSchemaAttribute>-Objekts, das als Parameter an die <xref:System.Xml.Schema.XmlSchemaValidator.Initialize%2A>-Methode übergeben wurde.|
@@ -345,7 +345,7 @@ validator.ValidateEndElement(null);
 validator.ValidateEndElement(null);
 ```
 
- Im Beispiel wird der folgende XML-Code als Eingabe angenommen:
+ In diesem Beispiel wird der folgende XML-Code als Eingabe verwendet:
 
 ```xml
 <xs:schema xmlns:xs="http://www.w3c.org/2001/XMLSchema">
@@ -359,7 +359,7 @@ validator.ValidateEndElement(null);
 </xs:schema>
 ```
 
-Im Beispiel wird das folgende XSD-Schema als Eingabe angenommen:
+In diesem Beispiel wird das folgende XSD-Schema als Eingabe verwendet:
 
 ```xml
 <book>
@@ -438,11 +438,11 @@ Die <xref:System.Xml.Schema.XmlSchemaValidator>-Klasse verfügt über einen defi
 
 In der folgenden Tabelle werden die Zustandsübergänge der <xref:System.Xml.Schema.XmlSchemaValidator>-Klasse und die Abfolge und das Vorkommen von Methodenaufrufen erläutert, die in den einzelnen Zuständen auftreten können.
 
-|Phase|Übergang|
+|Zustand|Übergang|
 |-----------|----------------|
 |Überprüfen|<xref:System.Xml.Schema.XmlSchemaValidator.Initialize%2A> (<xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute%2A> &#124; TopLevel*) <xref:System.Xml.Schema.XmlSchemaValidator.EndValidation%2A>|
 |TopLevel|<xref:System.Xml.Schema.XmlSchemaValidator.ValidateWhitespace%2A> &#124; <xref:System.Xml.Schema.XmlSchemaValidator.ValidateText%2A> &#124; Element|
-|Element|<xref:System.Xml.Schema.XmlSchemaValidator.ValidateElement%2A> <xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute%2A>* (<xref:System.Xml.Schema.XmlSchemaValidator.ValidateEndOfAttributes%2A> Inhalt\*)? <xref:System.Xml.Schema.XmlSchemaValidator.ValidateEndElement%2A> &#124;<br /><br /> <xref:System.Xml.Schema.XmlSchemaValidator.ValidateElement%2A> <xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute%2A>\* <xref:System.Xml.Schema.XmlSchemaValidator.SkipToEndElement%2A> &#124;<br /><br /> <xref:System.Xml.Schema.XmlSchemaValidator.ValidateElement%2A> <xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute%2A>\* <xref:System.Xml.Schema.XmlSchemaValidator.ValidateEndOfAttributes%2A> Inhalt\* <xref:System.Xml.Schema.XmlSchemaValidator.SkipToEndElement%2A>&#124;|
+|Element|<xref:System.Xml.Schema.XmlSchemaValidator.ValidateElement%2A> <xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute%2A>* (<xref:System.Xml.Schema.XmlSchemaValidator.ValidateEndOfAttributes%2A> Content\*)? <xref:System.Xml.Schema.XmlSchemaValidator.ValidateEndElement%2A> &#124;<br /><br /> <xref:System.Xml.Schema.XmlSchemaValidator.ValidateElement%2A> <xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute%2A>\* <xref:System.Xml.Schema.XmlSchemaValidator.SkipToEndElement%2A> &#124;<br /><br /> <xref:System.Xml.Schema.XmlSchemaValidator.ValidateElement%2A> <xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute%2A>\* <xref:System.Xml.Schema.XmlSchemaValidator.ValidateEndOfAttributes%2A> Content\* <xref:System.Xml.Schema.XmlSchemaValidator.SkipToEndElement%2A> &#124;|
 |Inhalt|<xref:System.Xml.Schema.XmlSchemaValidator.ValidateWhitespace%2A> &#124; <xref:System.Xml.Schema.XmlSchemaValidator.ValidateText%2A> &#124; Element|
 
 > [!NOTE]
@@ -466,14 +466,14 @@ Die Ergebnisse der Methoden <xref:System.Xml.Schema.XmlSchemaValidator.GetExpect
 
 In der folgenden Tabelle werden die Ergebnisse der Aufrufe dieser Methoden nach dem Aufrufen einer der Methoden der <xref:System.Xml.Schema.XmlSchemaValidator>-Klasse erläutert, mit der Elemente, Attribute und Inhalt in einem XML-Infoset validiert werden.
 
-|-Methode|GetExpectedParticles|GetExpectedAttributes|AddSchema|
+|Methode|GetExpectedParticles|GetExpectedAttributes|AddSchema|
 |------------|--------------------------|---------------------------|---------------|
 |<xref:System.Xml.Schema.XmlSchemaValidator.Initialize%2A>|Wenn die <xref:System.Xml.Schema.XmlSchemaValidator.Initialize%2A>-Standardmethode aufgerufen wird, gibt <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A> ein Array mit allen globalen Elementen zurück.<br /><br /> Wenn die überladene <xref:System.Xml.Schema.XmlSchemaValidator.Initialize%2A>-Methode, die ein <xref:System.Xml.Schema.XmlSchemaObject> als Parameter annimmt, zum Initialisieren der teilweisen Validierung eines Elements aufgerufen wird, gibt <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A> nur das Element zurück, mit dem das <xref:System.Xml.Schema.XmlSchemaValidator>-Objekt initialisiert wurde.|Wenn die <xref:System.Xml.Schema.XmlSchemaValidator.Initialize%2A>-Standardmethode aufgerufen wird, gibt <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedAttributes%2A> ein leeres Array zurück.<br /><br /> Wenn die Überladung der <xref:System.Xml.Schema.XmlSchemaValidator.Initialize%2A>-Methode, die ein <xref:System.Xml.Schema.XmlSchemaObject> als Parameter annimmt, zum Initialisieren der teilweisen Validierung eines Attributs aufgerufen wird, gibt <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedAttributes%2A> nur das Attribut zurück, mit dem das <xref:System.Xml.Schema.XmlSchemaValidator>-Objekt initialisiert wurde.|Fügt dem <xref:System.Xml.Schema.XmlSchemaSet> des <xref:System.Xml.Schema.XmlSchemaValidator>-Objekts das Schema hinzu, wenn es keine Vorverarbeitungsfehler aufweist.|
 |<xref:System.Xml.Schema.XmlSchemaValidator.ValidateElement%2A>|Wenn das Kontextelement gültig ist, gibt <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A> die Abfolge der Elemente zurück, die als untergeordnete Elemente des Kontextelements erwartet werden.<br /><br /> Wenn das Kontextelement ungültig ist, gibt <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A> ein leeres Array zurück.|Wenn das Kontextelement gültig ist und <xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute%2A> bisher nicht aufgerufen wurde, gibt <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedAttributes%2A> eine Liste aller im Kontextelement definierten Attribute zurück.<br /><br /> Wenn einige Attribute bereits validiert wurden, gibt <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedAttributes%2A> eine Liste der noch zu validierenden Attribute zurück.<br /><br /> Wenn das Kontextelement ungültig ist, gibt <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedAttributes%2A> ein leeres Array zurück.|Siehe oben.|
 |<xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute%2A>|Wenn sich das Kontextattribut auf der obersten Ebene befindet, gibt <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A> ein leeres Array zurück.<br /><br /> Andernfalls gibt <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A> die Abfolge der Elemente zurück, die als das erste untergeordnete Element des Kontextelements erwartet werden.|Wenn sich das Kontextattribut auf der obersten Ebene befindet, gibt <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedAttributes%2A> ein leeres Array zurück.<br /><br /> Andernfalls gibt <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedAttributes%2A> die Liste der noch zu validierenden Attribute zurück.|Siehe oben.|
 |<xref:System.Xml.Schema.XmlSchemaValidator.GetUnspecifiedDefaultAttributes%2A>|<xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A> gibt die Abfolge der Elemente zurück, die als das erste untergeordnete Element des Kontextelements erwartet werden.|<xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedAttributes%2A> gibt eine Liste der erforderlichen und optionalen Attribute zurück, die noch für das Kontextelement validiert werden müssen.|Siehe oben.|
 |<xref:System.Xml.Schema.XmlSchemaValidator.ValidateEndOfAttributes%2A>|<xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A> gibt die Abfolge der Elemente zurück, die als das erste untergeordnete Element des Kontextelements erwartet werden.|<xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedAttributes%2A> gibt ein leeres Array zurück.|Siehe oben.|
-|<xref:System.Xml.Schema.XmlSchemaValidator.ValidateText%2A>|Wenn <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A> contentType des Kontextelements Mixed ist, gibt die Abfolge der Elemente zurück, die auf der nächsten Position erwartet werden.<br /><br /> Wenn contentType des Kontextelements TextOnly oder Empty ist, gibt <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A> ein leeres Array zurück.<br /><br /> Wenn contentType des Kontextelements ElementOnly ist, gibt <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A> die Abfolge der Elemente zurück, die auf der nächsten Position erwartet werden. Es ist jedoch bereits ein Validierungsfehler aufgetreten.|<xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedAttributes%2A> gibt die Liste der nicht validierten Attribute des Kontextelements zurück.|Siehe oben.|
+|<xref:System.Xml.Schema.XmlSchemaValidator.ValidateText%2A>|Wenn contentType<xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A> des Kontextelements Mixed ist, gibt  die Abfolge der Elemente zurück, die auf der nächsten Position erwartet werden.<br /><br /> Wenn contentType des Kontextelements TextOnly oder Empty ist, gibt <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A> ein leeres Array zurück.<br /><br /> Wenn contentType des Kontextelements ElementOnly ist, gibt <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A> die Abfolge der Elemente zurück, die auf der nächsten Position erwartet werden. Es ist jedoch bereits ein Validierungsfehler aufgetreten.|<xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedAttributes%2A> gibt die Liste der nicht validierten Attribute des Kontextelements zurück.|Siehe oben.|
 |<xref:System.Xml.Schema.XmlSchemaValidator.ValidateWhitespace%2A>|Wenn sich der Kontextleerraum auf der obersten Ebene befindet, gibt <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A> ein leeres Array zurück.<br /><br /> Andernfalls entspricht das Verhalten der <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A>-Methode dem von <xref:System.Xml.Schema.XmlSchemaValidator.ValidateText%2A>.|Wenn sich der Kontextleerraum auf der obersten Ebene befindet, gibt <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedAttributes%2A> ein leeres Array zurück.<br /><br /> Andernfalls entspricht das Verhalten der <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedAttributes%2A>-Methode dem von <xref:System.Xml.Schema.XmlSchemaValidator.ValidateText%2A>.|Siehe oben.|
 |<xref:System.Xml.Schema.XmlSchemaValidator.ValidateEndElement%2A>|<xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A> gibt die Abfolge der Elemente zurück, die nach dem Kontextelement erwartet werden (möglicherweise nebengeordnete Elemente).|<xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedAttributes%2A> gibt die Liste der nicht validierten Attribute des Kontextelements zurück.<br /><br /> Wenn das Kontextelement kein übergeordnetes Element aufweist, gibt <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedAttributes%2A> eine leere Liste zurück. (Das Kontextelement ist das übergeordnete Element des aktuellen Elements, für das <xref:System.Xml.Schema.XmlSchemaValidator.ValidateEndElement%2A> aufgerufen wurde.)|Siehe oben.|
 |<xref:System.Xml.Schema.XmlSchemaValidator.SkipToEndElement%2A>|Wie in <xref:System.Xml.Schema.XmlSchemaValidator.ValidateEndElement%2A>.|Wie in <xref:System.Xml.Schema.XmlSchemaValidator.ValidateEndElement%2A>.|Siehe oben.|

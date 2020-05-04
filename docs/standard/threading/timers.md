@@ -12,12 +12,12 @@ helpviewer_keywords:
 - timers, about timers
 ms.assetid: 7091500d-be18-499b-a942-95366ce185e5
 author: pkulikov
-ms.openlocfilehash: d7d1fa13b02fe7425fa9b4cb81ba20297a23fe4b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d463eb2a8d598dc5ba9b2fb51a6fc08c563e6fe4
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73128949"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81739489"
 ---
 # <a name="timers"></a>Timer
 
@@ -35,7 +35,7 @@ ms.locfileid: "73128949"
 
 ## <a name="the-systemthreadingtimer-class"></a>Die System.Threading.Timer-Klasse
 
-Mithilfe der <xref:System.Threading.Timer?displayProperty=nameWithType>-Klasse können Sie einen Delegaten kontinuierlich in bestimmten Zeitintervallen aufrufen. Sie können diese Klasse ebenfalls verwenden, um einen einzelnen Aufruf eines Delegaten in einem bestimmten Zeitintervall zu planen. Der Delegat wird in einem <xref:System.Threading.ThreadPool>-Thread ausgeführt.
+Mithilfe der <xref:System.Threading.Timer?displayProperty=nameWithType>-Klasse können Sie einen Delegaten kontinuierlich in bestimmten Zeitintervallen aufrufen. Sie können diese Klasse auch verwenden, um einen einzelnen Aufruf eines Delegaten in einem bestimmten Zeitintervall zu planen. Der Delegat wird in einem <xref:System.Threading.ThreadPool>-Thread ausgeführt.
 
 Wenn Sie ein <xref:System.Threading.Timer?displayProperty=nameWithType>-Objekt erstellen, geben Sie einen <xref:System.Threading.TimerCallback>-Delegaten an, der die Callbackmethode definiert, ein optionales Zustandsobjekt, das an die Callbackmethode übergeben wird, die Verzögerung vor dem ersten Aufruf der Callbackmethode und das Zeitintervall zwischen den Aufrufen der Callbackmethode. Wenn Sie einen anstehenden Timer löschen möchten, rufen Sie die <xref:System.Threading.Timer.Dispose%2A?displayProperty=nameWithType>-Methode auf.
 
@@ -55,7 +55,7 @@ Wenn Sie ein <xref:System.Timers.Timer?displayProperty=nameWithType>-Objekt erst
 
 Weitere Informationen und Beispiele finden Sie unter <xref:System.Timers.Timer?displayProperty=nameWithType>.
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Threading.Timer?displayProperty=nameWithType>
 - <xref:System.Timers.Timer?displayProperty=nameWithType>

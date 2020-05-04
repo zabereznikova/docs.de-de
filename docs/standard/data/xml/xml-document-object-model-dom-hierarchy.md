@@ -5,7 +5,7 @@ ms.technology: dotnet-standard
 ms.assetid: 9d187d4f-c76e-4223-a670-cc290783ce47
 ms.openlocfilehash: 1193d7631816fe9fbf7aa1984d79ef8e61d5da80
 ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/07/2020
 ms.locfileid: "75709971"
@@ -13,7 +13,7 @@ ms.locfileid: "75709971"
 # <a name="xml-document-object-model-dom-hierarchy"></a>Hierarchie im XML-Dokumentobjektmodell (DOM)
 In der folgenden Abbildung wird die Klassenhierarchie für das XML-Document Object Model (DOM – Dokumentobjektmodell) veranschaulicht; dabei ist der W3C-Name (World Wide Web Consortium) an den relevanten Stellen zusammen mit dem Klassennamen angegeben.  
   
- ![XML- &#40;Dokumentobjektmodell&#41; Dom-Hierarchie](../../../../docs/standard/data/xml/media/dom-class-hierarchy.gif "Dom_class_hierarchy")  
+ ![Hierarchie im XML-Dokumentobjektmodell &#40;DOM&#41;](../../../../docs/standard/data/xml/media/dom-class-hierarchy.gif "Dom_class_hierarchy")  
 Hierarchie im XML-Dokumentobjektmodell (DOM)  
   
  Die folgenden Klassen erben nicht vom **XmlNode**:  

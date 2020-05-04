@@ -4,7 +4,7 @@ ms.date: 03/30/2017
 ms.assetid: a6e6e65c-347f-4494-9457-653bf29baac2
 ms.openlocfilehash: 6ec99e77db4215184547ea2bbbe0d1ff8ad3c286
 ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 04/15/2020
 ms.locfileid: "81389770"
@@ -13,12 +13,12 @@ ms.locfileid: "81389770"
 
 Das XML Schema Definition-Tool (Xsd.exe) generiert XML-Schema- oder Common Language Runtime-Klassen aus XDR-, XML- und XSD-Dateien oder aus Klassen in einer Laufzeitassembly.
 
-Das XML-Schemadefinitionstool (Xsd.exe) befindet sich in der Regel im folgenden Pfad:
-_C:\\Programmdateien\\(x86) Microsoft\\\\SDKs\\\\Windows -Version, bin NETFX , Version, Tools\\_
+Das XML-Schemadefinitionstool (Xsd.exe) befindet sich in der Regel im folgenden Pfad:\
+_C:\\Programme (x86)\\Microsoft SDKs\\Windows\\{Version}\\bin\\NETFX {Version} Tools\\_
 
 ## <a name="syntax"></a>Syntax
 
-Führen Sie das Werkzeug über die Befehlszeile aus.
+Führen Sie das Tool über die Befehlszeile aus.
 
 ```console
 xsd file.xdr [-outputdir:directory][/parameters:file.xml]
@@ -31,53 +31,53 @@ xsd {file.dll | file.exe} [-outputdir:directory] [/type:typename [...]][/paramet
 ```
   
 > [!TIP]
-> Damit .NET Framework-Tools ordnungsgemäß funktionieren, `Path` `Include`müssen `Lib` Sie ihre , - und Umgebungsvariablen richtig festlegen. Führen Sie zum Festlegen dieser Umgebungsvariablen die Datei „SDKVars.bat“ aus, die sich im Verzeichnis „\<SDK>\v2.0\Bin“ befindet. SDKVars.bat muss in jeder Befehlsshell ausgeführt werden.
+> Damit .NET Framework-Tools einwandfrei funktionieren, müssen die Umgebungsvariablen `Path`, `Include` und `Lib` korrekt festgelegt sein. Führen Sie zum Festlegen dieser Umgebungsvariablen die Datei „SDKVars.bat“ aus, die sich im Verzeichnis „\<SDK>\v2.0\Bin“ befindet. SDKVars.bat muss in jeder Befehlsshell ausgeführt werden.
 
 ## <a name="argument"></a>Argument
 
-|Argument|BESCHREIBUNG|
+|Argument|Beschreibung|
 |--------------|-----------------|
-|*datei.extension*|Gibt die zu konvertierende Eingabedatei an. Sie müssen die Erweiterung als eine der folgenden Angeben: .xdr, .xml, .xsd, .dll oder .exe.<br /><br /> Wenn Sie eine XDR-Schemadatei angeben (Erweiterung .xdr), konvertiert Xsd.exe das XDR-Schema in ein XSD-Schema. Die Ausgabedatei erhält den Namen des XDR-Schemas mit der Erweiterung .xsd.<br /><br /> Wenn Sie eine XML-Datei angeben (Erweiterung .xml), leitet Xsd.exe ein Schema aus den Daten in der Datei ab und erstellt ein XSD-Schema. Die Ausgabedatei erhält den Namen der XML-Datei mit der Erweiterung .xsd.<br /><br /> Wenn Sie eine XML-Schemadatei angeben (Erweiterung .xsd), generiert Xsd.exe Quellcode für Laufzeitobjekte, die dem XML-Schema entsprechen.<br /><br /> Wenn Sie eine Laufzeitassemblydatei angeben (Erweiterung .exe oder .dll), generiert Xsd.exe Schemas für einen oder mehrere Typen in der Assembly. Geben Sie über die `/type`-Option die Typen an, für die Schemas generiert werden sollen. Die Ausgabeschemas erhalten die Bezeichnungen schema0.xsd, schema1.xsd usw. Xsd.exe erstellt nur dann mehrere Schemas, wenn die angegebenen Typen einen Namespace mit dem benutzerdefinierten `XMLRoot`-Attribut angeben.|
+|*file.extension*|Gibt die zu konvertierende Eingabedatei an. Sie müssen als Erweiterung einen der folgenden Werte angeben: .xdr, .xml, .xsd, .dll oder .exe.<br /><br /> Wenn Sie eine XDR-Schemadatei angeben (Erweiterung .xdr), konvertiert Xsd.exe das XDR-Schema in ein XSD-Schema. Die Ausgabedatei erhält den Namen des XDR-Schemas mit der Erweiterung .xsd.<br /><br /> Wenn Sie eine XML-Datei angeben (Erweiterung .xml), leitet Xsd.exe ein Schema aus den Daten in der Datei ab und erstellt ein XSD-Schema. Die Ausgabedatei erhält den Namen der XML-Datei mit der Erweiterung .xsd.<br /><br /> Wenn Sie eine XML-Schemadatei angeben (Erweiterung .xsd), generiert Xsd.exe Quellcode für Laufzeitobjekte, die dem XML-Schema entsprechen.<br /><br /> Wenn Sie eine Laufzeitassemblydatei angeben (Erweiterung .exe oder .dll), generiert Xsd.exe Schemas für einen oder mehrere Typen in der Assembly. Geben Sie über die `/type`-Option die Typen an, für die Schemas generiert werden sollen. Die Ausgabeschemas erhalten die Bezeichnungen schema0.xsd, schema1.xsd usw. Xsd.exe erstellt nur dann mehrere Schemas, wenn die angegebenen Typen einen Namespace mit dem benutzerdefinierten `XMLRoot`-Attribut angeben.|
 
 ## <a name="general-options"></a>Allgemeine Optionen
 
-|Option|BESCHREIBUNG|
+|Option|Beschreibung|
 |------------|-----------------|
 |**/h\[elp\]**|Zeigt Befehlssyntax und Optionen für das Tool an.|
-|**/o\[\]utputdir :**_Verzeichnis_|Gibt das Verzeichnis für Ausgabedateien an. Dieses Argument kann nur einmal angegeben werden. Der Standardwert ist das aktuelle Verzeichnis.|
+|**/o\[utputdir\]:** _Verzeichnis_|Gibt das Verzeichnis für Ausgabedateien an. Dieses Argument kann nur einmal angegeben werden. Der Standardwert ist das aktuelle Verzeichnis.|
 |**/?**|Zeigt Befehlssyntax und Optionen für das Tool an.|
-|**/p-Arameter\[\]:**_file.xml_|Liest Optionen für verschiedene Operationsmodi aus der angegebenen XML-Datei. Die Kurzform ist `/p:`. Weitere Informationen finden Sie im Abschnitt ["Bemerkungen".](#remarks)|
+|**/p\[arameters\]:** _Datei.xml_|Liest Optionen für verschiedene Operationsmodi aus der angegebenen XML-Datei. Die Kurzform ist `/p:`. Weitere Informationen finden Sie im Abschnitt [Hinweise](#remarks).|
 
 ## <a name="xsd-file-options"></a>XSD-Dateioptionen
  Die beiden folgenden Optionen für XSD-Dateien schließen sich gegenseitig aus.
 
-|Option|BESCHREIBUNG|
+|Option|Beschreibung|
 |------------|-----------------|
 |**/c\[lasses\]**|Generiert Klassen, die dem angegebenen Schema entsprechen. Verwenden Sie zum Lesen von XML-Daten in das Objekt die <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A?displayProperty=nameWithType>-Methode.|
 |**/d\[ataset\]**|Generiert eine von <xref:System.Data.DataSet> abgeleitete Klasse, die dem angegebenen Schema entspricht. Verwenden Sie zum Lesen von XML-Daten in die abgeleitete Klasse die <xref:System.Data.DataSet.ReadXml%2A?displayProperty=nameWithType>-Methode.|
 
  Zusätzlich können Sie folgende Optionen für XSD-Dateien angeben.
 
-|Option|BESCHREIBUNG|
+|Option|Beschreibung|
 |------------|-----------------|
-|**/e\[\]lement :**_Element_|Gibt das Element im Schema an, für das Code generiert werden soll. In der Standardeinstellung werden für alle Elemente Typen erstellt. Sie können dieses Argument mehrmals angeben.|
+|**/e\[lement\]:** _Element_|Gibt das Element im Schema an, für das Code generiert werden soll. In der Standardeinstellung werden für alle Elemente Typen erstellt. Sie können dieses Argument mehrmals angeben.|
 |**/enableDataBinding**|Implementiert die <xref:System.ComponentModel.INotifyPropertyChanged>-Schnittstelle für alle generierten Typen, um die Datenbindung zu ermöglichen. Die Kurzform ist `/edb`.|
-|**/enableLinqDataSet**|(Kurzform: `/eld`.) Gibt an, dass das generierte DataSet mit der Verwendung von LINQ to DataSet abgefragt werden kann. Diese Option wird verwendet, wenn auch die /dataset-Option angegeben wird. Weitere Informationen finden Sie unter [Übersicht über LINQ to DataSet](../../../docs/framework/data/adonet/linq-to-dataset-overview.md) und [Abfragen typisierter DataSets](../../../docs/framework/data/adonet/querying-typed-datasets.md). Allgemeine Informationen zur Verwendung von LINQ finden Sie unter [Language-Integrated Query (LINQ) - C'](../../csharp/programming-guide/concepts/linq/index.md) oder [Language-Integrated Query (LINQ) - Visual Basic](../../visual-basic/programming-guide/concepts/linq/index.md).|
+|**/enableLinqDataSet**|(Kurzform: `/eld`) Gibt an, dass das generierte DataSet mit LINQ to DataSet abgefragt werden kann. Diese Option wird verwendet, wenn auch die /dataset-Option angegeben wird. Weitere Informationen finden Sie unter [Übersicht über LINQ to DataSet](../../../docs/framework/data/adonet/linq-to-dataset-overview.md) und [Abfragen typisierter DataSets](../../../docs/framework/data/adonet/querying-typed-datasets.md). Allgemeine Informationen zur Verwendung von LINQ finden Sie unter [Sprachintegrierte Abfrage (Language-Integrated Query, LINQ) (C#)](../../csharp/programming-guide/concepts/linq/index.md) oder [Language Integrated Query (LINQ) (Visual Basic)](../../visual-basic/programming-guide/concepts/linq/index.md).|
 |**/f\[ields\]**|Generiert Felder anstelle von Eigenschaften. Standardmäßig werden Eigenschaften generiert.|
-|**/l\[\]anguage :**_Sprache_|Gibt die zu verwendende Programmiersprache an. Wählen Sie `CS` (C#, der Standard), `VB` (Visual Basic), `JS` (JScript) oder `VJS` (Visual J#) aus. Sie können auch einen voll qualifizierten Namen für eine Klasse angeben, die <xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType> implementiert.|
-|**/n\[amespace\]:**_Namespace_|Gibt den Laufzeitnamespace für die generierten Typen an. Der Standardnamespace ist `Schemas`.|
+|**/l\[anguage\]:** _Sprache_|Gibt die zu verwendende Programmiersprache an. Wählen Sie `CS` (C#, der Standard), `VB` (Visual Basic), `JS` (JScript) oder `VJS` (Visual J#) aus. Sie können auch einen voll qualifizierten Namen für eine Klasse angeben, die <xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType> implementiert.|
+|**/n\[amespace\]:** _Namespace_|Gibt den Laufzeitnamespace für die generierten Typen an. Der Standardnamespace ist `Schemas`.|
 |**/nologo**|Unterdrückt das Banner.|
-|**/bestellung**|Generiert explizite Reihenfolgebezeichner für alle Abschnittsmember.|
-|**/o\[\]ut :**_verzeichnisName_|Gibt das Ausgabeverzeichnis an, in dem die Dateien gespeichert werden sollen. Der Standardwert ist das aktuelle Verzeichnis.|
-|**/u\[\]ri :**_uri_|Gibt den URI für die Elemente im Schema an, für die Code generiert werden soll. Dieser URI gilt, soweit vorhanden, für alle Elemente, die mit der `/element`-Option angegeben wurden.|
+|**/order**|Generiert explizite Reihenfolgebezeichner für alle Abschnittsmember.|
+|**/o\[ut\]:** _Verzeichnisname_|Gibt das Ausgabeverzeichnis an, in dem die Dateien gespeichert werden sollen. Der Standardwert ist das aktuelle Verzeichnis.|
+|**/u\[ri\]:** _URI_|Gibt den URI für die Elemente im Schema an, für die Code generiert werden soll. Dieser URI gilt, soweit vorhanden, für alle Elemente, die mit der `/element`-Option angegeben wurden.|
 
 ## <a name="dll-and-exe-file-options"></a>DLL- und EXE-Dateioptionen
 
-|Option|BESCHREIBUNG|
+|Option|Beschreibung|
 |------------|-----------------|
-|**/t\[ype\]:**_Typname_|Gibt den Namen des Typs an, für den ein Schema erstellt werden soll. Sie können mehrere Typargumente angeben. Wenn *Typname* keinen Namespace bezeichnet, ordnet „Xsd.exe“ alle Typen in der Assembly dem angegebenen Typ zu. Wenn *Typname* einen Namespace bezeichnet, wird nur der übereinstimmende Typ zugeordnet. Wenn *Typname* auf ein Sternchen (\*) endet, ordnet das Tool alle Typen zu, die mit der Zeichenfolge vor \* beginnen. Wenn Sie die `/type`-Option nicht angeben, generiert Xsd.exe Schemas für alle Typen in der Assembly.|
+|**/t\[ype\]:** _Typname_|Gibt den Namen des Typs an, für den ein Schema erstellt werden soll. Sie können mehrere Typargumente angeben. Wenn *Typname* keinen Namespace bezeichnet, ordnet „Xsd.exe“ alle Typen in der Assembly dem angegebenen Typ zu. Wenn *Typname* einen Namespace bezeichnet, wird nur der übereinstimmende Typ zugeordnet. Wenn *Typname* auf ein Sternchen (\*) endet, ordnet das Tool alle Typen zu, die mit der Zeichenfolge vor \* beginnen. Wenn Sie die `/type`-Option nicht angeben, generiert Xsd.exe Schemas für alle Typen in der Assembly.|
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 In der folgenden Tabelle werden die von Xsd.exe ausgeführten Operationen angezeigt.
 
@@ -87,9 +87,9 @@ In der folgenden Tabelle werden die von Xsd.exe ausgeführten Operationen angeze
 |XML nach XSD|Generiert ein XML-Schema aus einer XML-Datei.|
 |XSD nach DataSet|Generiert <xref:System.Data.DataSet>-Klassen der Common&#160;Language&#160;Runtime aus einer XSD-Schemadatei. Die generierten Klassen stellen ein umfangreiches Objektmodell für reguläre XML-Daten bereit.|
 |XSD nach Klassen|Generiert Laufzeitklassen aus einer XSD-Schemadatei. Die generierten Klassen können in Verbindung mit <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType> zum Lesen und Schreiben von XML-Code verwendet werden, der diesem Schema folgt.|
-|Klassen nach XSD| Generiert ein XML-Schema aus einem oder mehreren Typen in einer Laufzeitassemblydatei. Das generierte Schema definiert das <xref:System.Xml.Serialization.XmlSerializer>XML-Format, das von der verwendet wird.|
+|Klassen nach XSD| Generiert ein XML-Schema aus einem oder mehreren Typen in einer Laufzeitassemblydatei. Das generierte Schema definiert das von der Klasse <xref:System.Xml.Serialization.XmlSerializer> verwendete XML-Format.|
 
- Mit Xsd.exe können Sie ausschließlich XML-Schemas ändern, die der durch das World Wide Web Consortium (W3C) veröffentlichten XSD-Sprache (XML Schema Definition language) entsprechen. Weitere Informationen zum Vorschlag für XML-Schemadefinition <https://w3.org>oder zum XML-Standard finden Sie unter .
+ Mit Xsd.exe können Sie ausschließlich XML-Schemas ändern, die der durch das World Wide Web Consortium (W3C) veröffentlichten XSD-Sprache (XML Schema Definition language) entsprechen. Weitere Informationen zum Vorschlag für die XML-Schemadefinition sowie zum XML-Standard finden Sie unter <https://w3.org>.
 
 ## <a name="setting-options-with-an-xml-file"></a>Festlegen von Optionen mit einer XML-Datei
 
@@ -104,7 +104,7 @@ Mithilfe des `/parameters`-Schalters können Sie eine einzelne XML-Datei angeben
 </xsd>
 ```
 
-Wenn der vorangehende XML-Code in einer Datei mit `/parameters` dem Namen GenerateSchemas.xml enthalten ist, verwenden Sie den Schalter, indem Sie Folgendes an einer Eingabeaufforderung eingeben und **die Eingabetaste**drücken:
+Wenn der obige XML-Code in einer Datei mit dem Namen GenerateSchemas.xml enthalten ist, verwenden Sie den Parameter `/parameters`, indem Sie Folgendes in eine Eingabeaufforderung eingeben und die **EINGABETASTE** drücken:
 
 ```console
  xsd /p:GenerateSchemas.xml
@@ -121,7 +121,7 @@ Wenn Sie jedoch ein Schema für einen einzelnen in der Assembly enthaltenen Typ 
 </xsd>
 ```
 
-Um aber den vorangehenden Code zu verwenden, müssen Sie an der Eingabeaufforderung zusätzlich den Namen der Assembly angeben. Geben Sie folgendes an einer Eingabeaufforderung ein (die Annahme, dass die XML-Datei den Namen GenerateSchemaFromType.xml trägt):
+Um aber den vorangehenden Code zu verwenden, müssen Sie an der Eingabeaufforderung zusätzlich den Namen der Assembly angeben. Geben Sie Folgendes in eine Eingabeaufforderung ein (vorausgesetzt, die XML-Datei hat den Namen GenerateSchemaFromType.xml):
 
 ```console
 xsd /p:GenerateSchemaFromType.xml ConsoleApplication1.exe
@@ -156,13 +156,13 @@ Um eine Codedatei zu generieren, verwenden Sie das `<generateClasses>`-Element. 
 
 In der folgenden Tabelle sind die Attribute aufgeführt, die zusätzlich mit dem `<generateClasses>`-Element verwendet werden können.
 
-|attribute|BESCHREIBUNG|
+|Attribut|Beschreibung|
 |---------------|-----------------|
 |language|Gibt die zu verwendende Programmiersprache an. Wählen Sie unter `CS` (C#, dem Standard), `VB` (Visual Basic), `JS` (JScript) oder `VJS` (Visual J#) aus. Sie können auch einen vollqualifizierten Namen für eine Klasse angeben, die <xref:System.CodeDom.Compiler.CodeDomProvider> implementiert.|
 |namespace|Gibt den Namespace für den generierten Code an. Der Namespace muss CLR-Standards entsprechen (darf beispielsweise keine Leerzeichen oder umgekehrten Schrägstriche enthalten).|
 |Optionen|Einer der folgenden Werte: `none`, `properties` (generiert Eigenschaften anstelle von öffentlichen Feldern), `order` oder `enableDataBinding` (siehe Schalter `/order` und `/enableDataBinding` im vorherigen Abschnitt zu Optionen für XSD-Dateien).|
 
- Sie können auch steuern, wie `DataSet`-Code generiert wird, indem Sie das `<generateDataSet>`-Element verwenden. Der folgende XML-Code gibt `DataSet` an, dass <xref:System.Data.DataTable> der generierte Code Strukturen (z. B. die Klasse) verwendet, um Visual Basic-Code für ein angegebenes Element zu erstellen. Die generierten DataSet-Strukturen unterstützen LINQ-Abfragen.
+ Sie können auch steuern, wie `DataSet`-Code generiert wird, indem Sie das `<generateDataSet>`-Element verwenden. In der folgenden XML-Datei wird festgelegt, dass im generierten Code `DataSet`-Strukturen (z. B. die Klasse <xref:System.Data.DataTable>) verwendet werden, um Visual Basic-Code für ein bestimmtes Element zu erstellen. Die generierten DataSet-Strukturen unterstützen LINQ-Abfragen.
 
  ```xml
  <xsd xmlns='http://microsoft.com/dotnet/tools/xsd/'>
@@ -179,13 +179,13 @@ Sie können u.&#160;a. folgende Optionen für das `<generateDataSet>`-Element fe
 
  In der folgenden Tabelle sind die Attribute aufgeführt, die mit dem `<generateDataSet>`-Element verwendet werden können.
 
-|attribute|BESCHREIBUNG|
+|Attribut|Beschreibung|
 |---------------|-----------------|
-|enableLinqDataSet|Gibt an, dass das generierte DataSet mit LINQ to DataSet abgefragt werden kann. Der Standardwert ist „FALSE“.|
+|enableLinqDataSet|Gibt an, dass das generierte DataSet mit LINQ to DataSet abgefragt werden kann. Der Standardwert ist false.|
 |language|Gibt die zu verwendende Programmiersprache an. Wählen Sie unter `CS` (C#, dem Standard), `VB` (Visual Basic), `JS` (JScript) oder `VJS` (Visual J#) aus. Sie können auch einen vollqualifizierten Namen für eine Klasse angeben, die <xref:System.CodeDom.Compiler.CodeDomProvider> implementiert.|
 |namespace|Gibt den Namespace für den generierten Code an. Der Namespace muss CLR-Standards entsprechen (darf beispielsweise keine Leerzeichen oder umgekehrten Schrägstriche enthalten).|
 
- Einige Attribute können für das `<xsd>`-Element auf oberster Ebene festgelegt werden. Diese Optionen können mit einem beliebigen untergeordneten Element verwendet werden (`<generateSchemas>` oder ). Im folgenden XML-Code wird Code für ein Element mit dem Namen "IDItems" im Ausgabeverzeichnis mit dem Namen "MyOutputDirectory" generiert.
+ Einige Attribute können für das `<xsd>`-Element auf oberster Ebene festgelegt werden. Diese Optionen können mit einem beliebigen untergeordneten Element verwendet werden (`<generateSchemas>`, `<generateClasses>`,`<generateDataSet>` oder ). Im folgenden XML-Code wird Code für ein Element mit dem Namen "IDItems" im Ausgabeverzeichnis mit dem Namen "MyOutputDirectory" generiert.
 
 ```xml
 <xsd xmlns='http://microsoft.com/dotnet/tools/xsd/' output='MyOutputDirectory'>
@@ -197,9 +197,9 @@ Sie können u.&#160;a. folgende Optionen für das `<generateDataSet>`-Element fe
 
 In der folgenden Tabelle sind die Attribute aufgeführt, die zusätzlich mit dem `<xsd>`-Element verwendet werden können.
 
-|attribute|BESCHREIBUNG|
+|Attribut|Beschreibung|
 |---------------|-----------------|
-|output|Der Name eines Verzeichnisses, in dem das generierte Schema oder die generierte Codedatei gespeichert wird.|
+|Ausgabe|Der Name eines Verzeichnisses, in dem das generierte Schema oder die generierte Codedatei gespeichert wird.|
 |nologo|Unterdrückt das Banner. Wird auf `true` oder `false` festgelegt.|
 |help|Zeigt Befehlssyntax und Optionen für das Tool an. Wird auf `true` oder `false` festgelegt.|
 
@@ -236,5 +236,5 @@ xsd myAssembly.dll
 - [Eingabeaufforderungen](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
 - [Übersicht über LINQ to DataSet](../../../docs/framework/data/adonet/linq-to-dataset-overview.md)
 - [Abfragen von typisierten DataSets](../../../docs/framework/data/adonet/querying-typed-datasets.md)
-- [LINQ (Language-Integrated Query)](../../csharp/programming-guide/concepts/linq/index.md)
-- [LINQ (Language-Integrated Query) (Visual Basic)](../../visual-basic/programming-guide/concepts/linq/index.md)
+- [Sprachintegrierte Abfrage (Language-Integrated Query, LINQ) (C#)](../../csharp/programming-guide/concepts/linq/index.md)
+- [Language Integrated Query (LINQ) (Visual Basic)](../../visual-basic/programming-guide/concepts/linq/index.md)

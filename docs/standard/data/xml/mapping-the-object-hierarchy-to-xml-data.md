@@ -8,7 +8,7 @@ dev_langs:
 ms.assetid: 450e350b-6a68-4634-a2a5-33f4dc33baf0
 ms.openlocfilehash: 642a7e5321d0150865f74a66a811914bc9f5d21d
 ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 02/28/2020
 ms.locfileid: "78160026"
@@ -30,7 +30,7 @@ Wenn sich ein XML-Dokument im Speicher befindet, ist seine konzeptionelle Darste
   
  Diese Eingabe wird im Speicher als die folgende Knotenstruktur mit der zugewiesenen Knotentypeigenschaft dargestellt:  
   
- ![Beispiel für eine Knoten Struktur](../../../../docs/standard/data/xml/media/simple-xml.gif "Simple_XML")  
+ ![Beispiel für Knotenstruktur](../../../../docs/standard/data/xml/media/simple-xml.gif "Simple_XML")  
 Darstellung von "book" und "title" in der Knotenstruktur  
   
  Das `book`-Element wird zu einem **XmlElement**-Objekt, ebenso wie das nächste Element, `title`, zu einem **XmlElement**, während der Elementinhalt zu einem **XmlText**-Objekt wird. Die Methoden und Eigenschaften von **XmlElement** unterscheiden sich von denen, die für ein **XmlText**-Objekt verfügbar sind. Folglich ist es wichtig, zu wissen, in welchen Knotentyp das XML-Markup umgesetzt wird, da der Knotentyp bestimmt, welche Aktionen ausgeführt werden können.  
@@ -184,7 +184,7 @@ public class Sample
   
  Wenn Sie die Eingabe und die daraus generierte Ausgabe Zeile für Zeile betrachten, können Sie anhand der folgenden Tabelle untersuchen, welcher Knotentest welche Ausgabezeilen generiert hat. Dadurch lässt sich feststellen, welche XML-Daten in welchen Knotentyp umgesetzt wurden.  
   
-|Eingabe|Ausgabe|Knotentyptest|  
+|Eingabe|Output|Knotentyptest|  
 |-----------|------------|--------------------|  
 |\<?xml version="1.0"?>|\<?xml version='1.0'?>|XmlNodeType.XmlDeclaration|  
 |\<!-- Dies ist ein XML-Beispieldokument -->|\<!-- Dies ist ein XML-Beispieldokument -->|XmlNodeType.Comment|  
@@ -204,7 +204,7 @@ public class Sample
 |def|def|XmlNodeType.Text|  
 |\</Item>|\</Item>|XmlNodeType.EndElement|  
 |\<Item>|\<Item>|XmlNodeType.Element|  
-|Test mit einer char-Entität: &\#65;|Test with a char entity: A|XmlNodeType.Text|  
+|Test mit einer char-Entität: &\#65;|Test mit einer char-Entität: A|XmlNodeType.Text|  
 |\</Item>|\</Item>|XmlNodeType.EndElement|  
 |\<!-- 14 Zeichen in diesem Element.-->|\<--14 Zeichen in diesem Element.-->|XmlNodeType.Comment|  
 |\<Item>|\<Item>|XmlNodeType.Element|  

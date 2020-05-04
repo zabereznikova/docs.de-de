@@ -10,7 +10,7 @@ helpviewer_keywords:
 ms.assetid: f6c09db1-0553-464a-abe3-d4510c61d6ed
 ms.openlocfilehash: d7209e431b84e52e487bccbf73bd633a346efde0
 ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/22/2019
 ms.locfileid: "72775621"
@@ -34,13 +34,13 @@ Ermöglicht die Verwendung von lokalem Typrückschluss in Variablendeklarationen
 > Sie können die `-noconfig` Option nutzen, um die internen Standardwerte des Compilers, anstelle der Werte in vbc.rsp, beizubehalten. Der Compilerstandardwert für diese Option ist `-optioninfer-`.  
   
 ## <a name="remarks"></a>Hinweise  
- Wenn die Quell Code Datei eine [Option Infer-Anweisung](../../../visual-basic/language-reference/statements/option-infer-statement.md)enthält, überschreibt die-Anweisung die `-optioninfer` Befehlszeilen-Compilereinstellung.  
+ Wenn die Quellcodedatei eine [Option Infer-Anweisung](../../../visual-basic/language-reference/statements/option-infer-statement.md) enthält, überschreibt die Anweisung die Einstellung des `-optioninfer`-Befehlszeilencompilers.  
   
-### <a name="to-set--optioninfer-in-the-visual-studio-ide"></a>So legen Sie-optioninfer in der Visual Studio-IDE fest  
+### <a name="to-set--optioninfer-in-the-visual-studio-ide"></a>Festlegen von -optioninfer in der Visual Studio-IDE  
   
-1. Wählen Sie ein Projekt in **Projektmappen-Explorer**aus. Klicken Sie im Menü **Projekt** auf **Eigenschaften**.  
+1. Wählen Sie im **Projektmappen-Explorer** ein Projekt aus. Klicken Sie im Menü **Projekt** auf **Eigenschaften**.  
   
-2. Ändern Sie auf der Registerkarte **Kompilieren** den Wert im Feld **Option ableiten** .  
+2. Ändern Sie auf der Registerkarte **Kompilieren** den Wert im Feld **Option infer**.  
   
 ## <a name="example"></a>Beispiel  
  Der folgende Code kompiliert `test.vb` mit aktiviertem lokalen Typrückschluss.  
