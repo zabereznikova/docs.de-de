@@ -1,13 +1,13 @@
 ---
 title: Neues in C# 8.0 – C#-Leitfaden
 description: Überblick über die neuen Funktionen von C# 8.0.
-ms.date: 09/20/2019
-ms.openlocfilehash: 0013f621268e2a4f1b916b226d83d18c68445ed1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.date: 04/07/2020
+ms.openlocfilehash: c29041972bf7ff608b73ddc9ea3cfcd253905a49
+ms.sourcegitcommit: 5988e9a29cedb8757320817deda3c08c6f44a6aa
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79398328"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82200079"
 ---
 # <a name="whats-new-in-c-80"></a>Neues in C# 8.0
 
@@ -25,6 +25,7 @@ C# 8.0 fügt der Sprache C# die folgenden Features und Verbesserungen hinzu:
 - [Verwerfbare Referenzstrukturen](#disposable-ref-structs)
 - [Nullwerte zulassende Verweistypen](#nullable-reference-types)
 - [Asynchrone Streams](#asynchronous-streams)
+- [Asynchrone verwerfbare Typen](#asynchronous-disposable)
 - [Indizes und Bereiche](#indices-and-ranges)
 - [NULL-Coalescing-Zuweisung](#null-coalescing-assignment)
 - [Nicht verwaltete konstruierte Typen](#unmanaged-constructed-types)
@@ -75,7 +76,7 @@ Der Compiler warnt Sie, wenn er eine Defensivkopie erstellen muss.  Die `Distanc
 public readonly double Distance => Math.Sqrt(X * X + Y * Y);
 ```
 
-Beachten Sie, dass der `readonly`-Modifizierer bei einer schreibgeschützten Eigenschaft erforderlich ist. Der Compiler geht nicht davon aus, dass `get`-Zugriffsmethoden den Zustand nicht ändern. Sie müssen `readonly` explizit deklarieren. Automatisch implementierte Eigenschaften sind eine Ausnahme; der Compiler sieht alle automatisch implementierten Getter als schreibgeschützt an, sodass es hier nicht notwendig ist, den `readonly`-Modifizierer zu den `X`- und `Y`-Eigenschaften hinzuzufügen.
+Beachten Sie, dass der `readonly`-Modifizierer bei einer schreibgeschützten Eigenschaft erforderlich ist. Der Compiler geht nicht davon aus, dass `get`-Zugriffsmethoden den Zustand nicht ändern. Sie müssen `readonly` explizit deklarieren. Automatisch implementierte Eigenschaften sind eine Ausnahme; der Compiler behandelt alle automatisch implementierten Getter als `readonly`, sodass es hier nicht notwendig ist, den `readonly`-Modifizierer zu den `X`- und `Y`-Eigenschaften hinzuzufügen.
 
 Der Compiler erzwingt die Regel, dass `readonly`-Member den Status nicht ändern. Die folgende Methode wird nicht kompiliert, es sei denn, Sie entfernen den `readonly`-Modifizierer:
 
@@ -87,7 +88,9 @@ public readonly void Translate(int xOffset, int yOffset)
 }
 ```
 
-Mit diesem Feature können Sie Ihre Designabsicht angeben, damit der Compiler sie erzwingen und Optimierungen basierend auf dieser Absicht vornehmen kann. Erfahren Sie mehr über schreibgeschützte Member in dem Artikel [`readonly`](../language-reference/keywords/readonly.md#readonly-member-examples).
+Mit diesem Feature können Sie Ihre Designabsicht angeben, damit der Compiler sie erzwingen und Optimierungen basierend auf dieser Absicht vornehmen kann.
+
+Weitere Informationen finden Sie im Abschnitt [`readonly`-Instanzmember](../language-reference/builtin-types/struct.md#readonly-instance-members) des Artikels [Strukturtypen](../language-reference/builtin-types/struct.md).
 
 ## <a name="default-interface-methods"></a>Standardschnittstellenmethoden
 
@@ -393,6 +396,10 @@ await foreach (var number in GenerateSequence())
 
 Sie können asynchrone Streams selbst in unserem Tutorial zum [Erstellen und Verwenden von asynchronen Streams](../tutorials/generate-consume-asynchronous-stream.md) ausprobieren. Standardmäßig werden Streamelemente im erfassten Kontext verarbeitet. Wenn Sie die Erfassung des Kontexts deaktivieren möchten, verwenden Sie die Erweiterungsmethode <xref:System.Threading.Tasks.TaskAsyncEnumerableExtensions.ConfigureAwait%2A?displayProperty=nameWithType>. Weitere Informationen über Synchronisierungskontexte und die Erfassung des aktuellen Kontexts finden Sie im Artikel über das [Verwenden des aufgabenbasierten asynchronen Musters](../../standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern.md).
 
+## <a name="asynchronous-disposable"></a>Asynchrone verwerfbare Typen
+
+Ab C# 8.0 unterstützt die Sprache asynchrone verwerfbare Typen, die die <xref:System.IAsyncDisposable?displayProperty=nameWithType>-Schnittstelle implementieren. Der Operand eines `using`-Ausdrucks kann entweder <xref:System.IDisposable> oder <xref:System.IAsyncDisposable> implementieren. Für `IAsyncDisposable` generiert der Compiler Code für einen `await`-Operator für die von <xref:System.IAsyncDisposable.DisposeAsync%2A?displayProperty=nameWithType> zurückgegebene <xref:System.Threading.Tasks.Task>-Klasse. Weitere Informationen finden Sie unter [`using`-Anweisung](../language-reference/keywords/using-statement.md).
+
 ## <a name="indices-and-ranges"></a>Indizes und Bereiche
 
 Indizes und Bereiche bieten eine prägnante Syntax für den Zugriff auf einzelne Elemente oder Bereiche in einer Sequenz.
@@ -520,7 +527,7 @@ Ab C# 8.0 können Sie, wenn das Ergebnis eines [stackalloc](../language-referen
 
 ```csharp
 Span<int> numbers = stackalloc[] { 1, 2, 3, 4, 5, 6 };
-var ind = numbers.IndexOfAny(stackalloc[] { 2, 4, 6 ,8 });
+var ind = numbers.IndexOfAny(stackalloc[] { 2, 4, 6, 8 });
 Console.WriteLine(ind);  // output: 1
 ```
 
