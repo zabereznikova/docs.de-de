@@ -2,13 +2,13 @@
 title: Entwickeln cloudnativer .NET-Anwendungen für Azure
 description: Leitfaden zum Erstellen cloudnativer Anwendungen, die Container, Microservices und serverlose Features von Azure nutzen.
 author: ardalis
-ms.date: 03/07/2019
-ms.openlocfilehash: cf3be07f0d37aacf4f0252ef2f4d922b7be93eee
-ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
+ms.date: 04/23/2020
+ms.openlocfilehash: 24d5c75fc5d2e5623892e8f83daea52553d13765
+ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "80989063"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82507389"
 ---
 # <a name="architecting-cloud-native-net-applications-for-azure"></a>Entwickeln cloudnativer .NET-Anwendungen für Azure
 
@@ -44,19 +44,25 @@ Alle anderen Marken und Logos sind Eigentum der jeweiligen Besitzer.
 
 Autoren:
 
-> **Steve „ardalis“ Smith** – Softwarearchitekt und Trainer – [Ardalis.com](https://ardalis.com)
+> **Rob Vettor**, Principal Cloud System Architect und IP Architect bei Microsoft – [thinkingincloudnative.com](http://thinkingincloudnative.com/about/)
 >
-> **Rob Vettor** – Principal Cloud System Architect und IP Architect bei Microsoft – [thinkingincloudnative.com](http://thinkingincloudnative.com/about/)
+> **Steve „ardalis“ Smith**, Software Architect und Trainer – [Ardalis.com](https://ardalis.com)
 
 Teilnehmer und Prüfer:
 
 > **Cesar De la Torre**, Principal Program Manager, .NET-Team, Microsoft
 >
 > **Nish Anil**, Senior Program Manager, .NET-Team, Microsoft
+>
+> **Jeremy Likness**, Senior Program Manager, .NET-Team, Microsoft
+>
+> **Cecil Phillip**, Senior Cloud Advocate, Microsoft
+
+Weitere Informationen zu eShopOnContainers
 
 Editoren:
 
-> **Maira Wenzel**, Sr. Content Developer, .NET-Team, Microsoft
+> **Maira Wenzel**, Senior Program Manager, .NET-Team, Microsoft
 
 ## <a name="who-should-use-this-guide"></a>Zielgruppe dieses Leitfadens
 
