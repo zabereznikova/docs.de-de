@@ -4,12 +4,12 @@ description: Verwenden Sie einen Paket-Manager, um das .NET Core SDK und die -Ru
 author: thraka
 ms.author: adegeo
 ms.date: 03/17/2020
-ms.openlocfilehash: aac63ba74a8bfaba63e9d23882c9350a7d3d84f3
-ms.sourcegitcommit: 07123a475af89b6da5bb6cc51ea40ab1e8a488f0
+ms.openlocfilehash: 9e77628d557e52c61ee75d6d6affe21f627ec40a
+ms.sourcegitcommit: d7666f6e49c57a769612602ea7857b927294ce47
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80134099"
+ms.lasthandoff: 04/30/2020
+ms.locfileid: "82595598"
 ---
 # <a name="ubuntu-1910-package-manager---install-net-core"></a>Ubuntu 19.10-Paket-Manager: Installieren von .NET Core
 
@@ -19,12 +19,12 @@ In diesem Artikel wird beschrieben, wie Sie mit einem Paket-Manager .NET Core au
 
 [!INCLUDE [package-manager-intro-sdk-vs-runtime](includes/package-manager-intro-sdk-vs-runtime.md)]
 
-## <a name="register-microsoft-key-and-feed"></a>Registrieren von Microsoft-Schlüsseln und -Feeds
+## <a name="add-microsoft-repository-key-and-feed"></a>Hinzufügen des Microsoft-Repositoryschlüssels und -Feeds
 
 Vor der Installation von .NET müssen Sie folgende Schritte ausführen:
 
-- Registrieren Sie den Microsoft-Schlüssel.
-- Registrieren Sie das Produktrepository.
+- Fügen Sie der Liste der vertrauenswürdigen Schlüssel den Microsoft-Paketsignaturschlüssel hinzu.
+- Fügen Sie das Repository dem Paket-Manager hinzu.
 - Installieren Sie erforderliche Abhängigkeiten.
 
 Dies muss nur einmal pro Computer ausgeführt werden.
@@ -100,7 +100,7 @@ Wenn dies nicht funktioniert, können Sie eine manuelle Installation mit den fol
 
 ```bash
 sudo apt-get install -y gpg
-wget O- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor -o microsoft.asc.gpg
+wget -O - https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor -o microsoft.asc.gpg
 sudo mv microsoft.asc.gpg /etc/apt/trusted.gpg.d/
 wget https://packages.microsoft.com/config/ubuntu/19.10/prod.list
 sudo mv prod.list /etc/apt/sources.list.d/microsoft-prod.list

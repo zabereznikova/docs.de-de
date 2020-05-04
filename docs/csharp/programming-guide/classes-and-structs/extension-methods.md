@@ -6,12 +6,12 @@ helpviewer_keywords:
 - extension methods [C#]
 - methods [C#], extension
 ms.assetid: 175ce3ff-9bbf-4e64-8421-faeb81a0bb51
-ms.openlocfilehash: 0b35ad523fc7f0949cb5243edbdc50cd3e927999
-ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
+ms.openlocfilehash: fc816123134995b753beda0a6f281133d6ddd691
+ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80249219"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82506817"
 ---
 # <a name="extension-methods-c-programming-guide"></a>Erweiterungsmethoden (C#-Programmierhandbuch)
 
@@ -119,7 +119,7 @@ Für eine Klassenbibliothek, die Sie implementiert haben, sollten Sie keine Erwe
 ## <a name="see-also"></a>Siehe auch
 
 - [C#-Programmierhandbuch](../index.md)
-- [Parallel Programming Samples (Beispiele für parallele Programmierung (dazu gehören viele Beispielerweiterungsmethoden))](https://code.msdn.microsoft.com/Samples-for-Parallel-b4b76364)
+- [Parallel Programming Samples (Beispiele für parallele Programmierung (dazu gehören viele Beispielerweiterungsmethoden))](/samples/browse/?products=dotnet-core%2Cdotnet-standard&term=parallel)
 - [Lambda-Ausdrücke](../statements-expressions-operators/lambda-expressions.md)
 - [Übersicht über Standardabfrageoperatoren](../concepts/linq/standard-query-operators-overview.md)
 - [Conversion rules for Instance parameters and their impact (Konvertierungsregeln für Instanzenparameter und ihre Auswirkungen)](https://docs.microsoft.com/archive/blogs/sreekarc/conversion-rules-for-instance-parameters-and-their-impact)

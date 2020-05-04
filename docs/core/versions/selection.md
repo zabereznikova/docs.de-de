@@ -4,12 +4,12 @@ description: In diesem Artikel erfahren Sie, wie .NET Core automatisch Laufzeitv
 author: thraka
 ms.author: adegeo
 ms.date: 03/24/2020
-ms.openlocfilehash: 26aecdf2bf3ebd033e80eec26159eb9fa3cd54dd
-ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
+ms.openlocfilehash: 3c3d9b4ec5a68c88bdd0a45acfb49191f22abda4
+ms.sourcegitcommit: d7666f6e49c57a769612602ea7857b927294ce47
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80345160"
+ms.lasthandoff: 04/30/2020
+ms.locfileid: "82595727"
 ---
 # <a name="select-the-net-core-version-to-use"></a>Auswählen der zu verwendenden .NET Core-Version
 
@@ -118,4 +118,4 @@ Das Element `RuntimeFrameworkVersion` überschreibt die Standardversionsrichtlin
 ## <a name="see-also"></a>Siehe auch
 
 - [Herunterladen und Installieren von .NET Core](../install/index.md)
-- [Entfernen von .NET Core-Runtime und SDK](remove-runtime-sdk-versions.md)
+- [Entfernen von .NET Core-Runtime und SDK](../install/remove-runtime-sdk-versions.md)
