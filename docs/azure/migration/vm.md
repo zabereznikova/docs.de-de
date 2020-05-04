@@ -1,11 +1,11 @@
 ---
-title: Migrieren einer ASP.NET Web-App zu einer Azure-VM
+title: Migrieren einer ASP.NET-Web-App zu einer Azure-VM
 description: Hier erfahren Sie, wie Sie eine ASP.NET-Webanwendung aus einer lokalen Umgebung zu einem virtuellen Azure-Computer migrieren.
 ms.topic: how-to
 ms.date: 11/15/2017
 ms.openlocfilehash: cc9477de92e6105762636ed3a2241949e69ac8ea
 ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 04/15/2020
 ms.locfileid: "81433361"
@@ -16,22 +16,22 @@ In diesem Übersichtsdokument erfahren Sie, wie Sie eine ASP.NET-Webanwendung au
 
 ## <a name="quickstart"></a>Schnellstart
 
-Informationen zum Erstellen eines virtuellen Computers und Veröffentlichen Ihrer App darauf: [Publish to an Azure VM](https://tutorials.visualstudio.com/aspnet-vm/intro) (Veröffentlichen auf einem virtuellen Azure-Computer)
+Informationen zum Erstellen eines virtuellen Computers und Veröffentlichen Ihrer App darauf: [Veröffentlichen auf einem virtuellen Azure-Computer](https://tutorials.visualstudio.com/aspnet-vm/intro)
 
 ## <a name="get-started"></a>Erste Schritte
 
 Die folgenden Tutorials zeigen Schritt für Schritt, wie Sie einen virtuellen Computer erstellen (oder migrieren), Ihre Webanwendung für den virtuellen Computer veröffentlichen und andere Aufgaben durchführen, die ggf. erforderlich sind, damit Ihre Anwendung in Azure unterstützt wird.
 
-- Erstellen Sie einen virtuellen Computer für Ihre ASP.NET Anwendung in Azure mit einer der folgenden Optionen:
+- Erstellen Sie mithilfe einer der folgenden Optionen einen virtuellen Computer für Ihre ASP.NET-Anwendung in Azure:
   - [Erstellen eines neuen virtuellen Computers für ASP.NET-Anwendungen](https://go.microsoft.com/fwlink/?linkid=863237)
-  - [Migrieren einer vorhandenen lokalen virtuellen VMWare-Maschine](https://docs.microsoft.com/azure/migrate/tutorial-migrate-vmware)
-  - [Migrieren einer vorhandenen lokalen virtuellen Hyper-V-Maschine](https://docs.microsoft.com/azure/migrate/tutorial-migrate-hyper-v)
+  - [Migrieren von VMware-VMs zu Azure (ohne Agent)](https://docs.microsoft.com/azure/migrate/tutorial-migrate-vmware)
+  - [Migrieren von virtuellen Hyper-V-Computern zu Azure](https://docs.microsoft.com/azure/migrate/tutorial-migrate-hyper-v)
 - [Veröffentlichen Ihrer App mithilfe von Visual Studio](https://go.microsoft.com/fwlink/?linkid=863240)
 - [Erstellen eines sicheren virtuellen Netzwerks für Ihre virtuellen Computer](https://docs.microsoft.com/azure/virtual-network/virtual-network-get-started-vnet-subnet)
 - [Erstellen einer CI/CD-Pipeline für Ihre Anwendung](https://docs.microsoft.com/vsts/build-release/apps/cd/deploy-webdeploy-iis-deploygroups)
 - [Verwenden einer VM-Skalierungsgruppe für hohe Verfügbarkeit und Skalierbarkeit](https://docs.microsoft.com/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-deploy-app)
 
-## <a name="considerations"></a>Überlegungen
+## <a name="considerations"></a>Weitere Überlegungen
 
 ### <a name="benefits"></a>Vorteile
 
@@ -53,7 +53,7 @@ Virtuelle Azure-Netzwerke ermöglichen Folgendes:
 
 - Erstellen einer von Ihnen kontrollierten Hybridinfrastruktur
 - Verwenden eigener IP-Adressen und DNS-Server
-- Erstellen Sie eine isolierte und hochsichere Umgebung für Ihre Anwendungen
+- Schaffen einer isolierten und hochsicheren Umgebung für Ihre Anwendungen
 - Herstellen einer Verbindung zwischen Ihrem virtuellen Computer und Ihrem lokalen Netzwerk über eine der verfügbaren [Verbindungsoptionen](https://docs.microsoft.com/azure/vpn-gateway/vpn-gateway-about-vpngateways#s2smulti)
 - Integrieren Ihres virtuellen Computers in Ihr lokales Netzwerk mithilfe von [ExpressRoute](https://azure.microsoft.com/services/expressroute/)
 
@@ -70,12 +70,12 @@ Viele Anwendungen verwenden Active Directory für die Authentifizierung und Iden
 Wenn Ihre Anwendung eine lokale Datenbank verwendet, kann sie standardmäßig nicht mit ihr kommunizieren. Sie haben folgende Möglichkeiten:
 
 - Konfigurieren Sie ein Hybridnetzwerk, über das Ihre Anwendung auf die lokal ausgeführte Datenbank zugreifen kann.
-- Migrieren Sie Ihre Datenbank zu Azure. Weitere Informationen finden Sie unter [Migrieren Ihrer SQL Server-Datenbank nach Azure](sql.md).
+- Migrieren Sie Ihre Datenbank zu Azure. Weitere Informationen finden Sie unter [Migrieren einer ASP.NET-Webanwendung zu einem virtuellen Azure-Computer](sql.md).
 
 ### <a name="high-availability-and-scalability"></a>Hochverfügbarkeit und Skalierbarkeit
 
 #### <a name="virtual-machine-scale-sets"></a>Virtual Machine Scale Sets
-Wenn Ihre Anwendung hochverfügbar und skalierbar sein soll, empfiehlt es sich, das VM-Image zu einer Azure-VM-Skalierungsgruppe zu migrieren, um die Verfügbarkeit und Skalierbarkeit der Anwendung zu verbessern. VM-Skalierungssätze bieten die Möglichkeit, eine vorhandene VM zu verwenden, die Sie bereits konfiguriert haben, oder eine Buildpipeline einzurichten, um ein Image mit Ihrer Anwendung zu erstellen.
+Wenn Ihre Anwendung hochverfügbar und skalierbar sein soll, empfiehlt es sich, das VM-Image zu einer Azure-VM-Skalierungsgruppe zu migrieren, um die Verfügbarkeit und Skalierbarkeit der Anwendung zu verbessern. Mit VM-Skalierungsgruppen können Sie einen bereits konfigurierten virtuellen Computer verwenden oder eine Buildpipeline für die Erstellung eines Images mit Ihrer Anwendung einrichten.
 
 Informationen zu den ersten Schritten finden Sie unter [Bereitstellen der App in VM-Skalierungsgruppen](https://docs.microsoft.com/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-deploy-app).
 

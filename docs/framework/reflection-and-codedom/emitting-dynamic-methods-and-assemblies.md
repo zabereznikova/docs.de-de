@@ -9,7 +9,7 @@ helpviewer_keywords:
 - assemblies [.NET Framework], emitting dynamic assemblies
 ms.openlocfilehash: fda5a20eb7798086ec10415889454b4a8beba5f3
 ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 03/12/2020
 ms.locfileid: "79180526"
@@ -34,22 +34,22 @@ Die Reflektionsausgabe bietet die folgenden Funktionen:
   
 Neben den verwalteten Typen im <xref:System.Reflection.Emit>-Namespace sind nicht verwaltete Metadatenschnittstellen verfügbar, die in der Referenzdokumentation zu [Metadatenschnittstellen](../unmanaged-api/metadata/metadata-interfaces.md) beschrieben werden. Die verwaltete Reflektionsausgabe bietet eine bessere semantische Fehlerüberprüfung und einen höheren Abstraktionsgrad für Metadaten als die nicht verwalteten Metadatenschnittstellen.  
   
-In der Common Language Infrastructure(CLI)-Dokumentation, insbesondere in den Themen "Partition II: Metadata Definition and Semantics" und "Partition III: CIL Instruction Set" finden Sie weitere hilfreiche Informationen zur Verwendung von Metadaten und MSIL. Die Dokumentation ist online auf der [Ecma-Website](https://www.ecma-international.org/publications/standards/Ecma-335.htm)verfügbar.  
+In der Common Language Infrastructure(CLI)-Dokumentation, insbesondere in den Themen "Partition II: Metadatendefinition und Semantik) und „Partition III: CIL Instruction Set“ (Partition III: CIL-Anweisungen). Die Dokumentation ist online auf der [Ecma-Website](https://www.ecma-international.org/publications/standards/Ecma-335.htm) verfügbar.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt
   
-[Sicherheitsprobleme in der Reflexion emittieren](security-issues-in-reflection-emit.md)  
+[Sicherheitsaspekte bei der Reflektionsausgabe](security-issues-in-reflection-emit.md)  
 Beschreibt Sicherheitsaspekte im Zusammenhang mit dem Erstellen dynamischer Assemblys mithilfe der Reflektionsausgabe.  
 
-[Gewusst wie: Definieren und Ausführen dynamischer Methoden](how-to-define-and-execute-dynamic-methods.md) Zeigt, wie eine einfache dynamische Methode und eine dynamische Methode ausgeführt werden, die an eine Instanz einer Klasse gebunden ist.
+[How to: Definieren und Ausführen von dynamischen Methoden:](how-to-define-and-execute-dynamic-methods.md) Zeigt, wie eine einfache dynamische Methode sowie eine dynamische Methode, die an eine Instanz einer Klasse gebunden ist, ausgeführt werden
 
-[Gewusst wie: Definieren eines generischen Typs mit Reflexionsee](how-to-define-a-generic-type-with-reflection-emit.md) Zeigt, wie sie einen einfachen generischen Typ mit zwei Typparametern erstellen, Klassen-, Schnittstellen- und Sondereinschränkungen auf die Typparameter anwenden und wie Member erstellt werden, die die Typparameter der Klasse als Parametertypen und Rückgabetypen verwenden.
+[How to: Definieren eines generischen Typs mit Reflexionsausgabe:](how-to-define-a-generic-type-with-reflection-emit.md) Zeigt, wie ein einfacher generischer Typ mit zwei Typparametern erstellt wird, wie Klasseneinschränkungen, Schnittstelleneinschränkungen und bestimmte Einschränkungen für Typparameter angewandt werden und wie Member erstellt werden, die die Typparameter der Klasse als Parameter- und Rückgabetypen verwenden.
 
-[Gewusst wie: Definieren einer generischen Methode mit Reflexionsee](how-to-define-a-generic-method-with-reflection-emit.md) Zeigt, wie eine einfache generische Methode erstellt, ausgesendet und aufgerufen wird.
+[How to: Definieren einer generischen Methode mit Reflexionsausgabe:](how-to-define-a-generic-method-with-reflection-emit.md) Zeigt, wie eine einfache generische Methode erstellt, ausgegeben und aufgerufen wird
 
-[Sammelbaugruppen für die dynamische Typgenerierung](collectible-assemblies.md) Führt Sammelassemblys ein, bei denen es sich um dynamische Assemblys handelt, die entladen werden können, ohne die Anwendungsdomäne zu entladen, in der sie erstellt wurden.
+[Entladbare Assemblys für die dynamische Typgenerierung:](collectible-assemblies.md) Führt entladbare Assemblys ein. Dabei handelt es sich um dynamische Assemblys, die entladen werden können, ohne gleichzeitig auch die Anwendungsdomäne zu entladen, in der sie erstellt wurden.
   
-## <a name="reference"></a>Verweis  
+## <a name="reference"></a>Referenz  
 
 <xref:System.Reflection.Emit.OpCodes>  
 Hier werden die MSIL-Anweisungcodes zum Erstellen von Methodentexten katalogisiert.  

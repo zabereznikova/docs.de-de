@@ -1,14 +1,14 @@
 ---
 title: Ausführen von gruppierten Joins (LINQ in C#)
 description: In diesem Artikel erfahren Sie, wie Sie gruppierte Joins mit LINQ in C# ausführen.
-ms.date: 12/01/2016
+ms.date: 04/22/2020
 ms.assetid: 9667daf9-a5fd-4b43-a5c4-a9c2b744000e
-ms.openlocfilehash: dfb75b55336d8ca486d5f10b187e955d20cd06fd
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 740a861da7dfb9653a874d5baf67eeb2030555b4
+ms.sourcegitcommit: 8b02d42f93adda304246a47f49f6449fc74a3af4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "61689137"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82135749"
 ---
 # <a name="perform-grouped-joins"></a>Ausführen von Gruppenverknüpfungen
 
@@ -18,6 +18,9 @@ Eine Klasse oder relationale Datenbanktabelle namens `Student` kann z.B. zwei Fe
 
 > [!NOTE]
 > Jedes Element der ersten Auflistung erscheint im Ergebnissatz einer Gruppenverknüpfung, unabhängig davon, ob entsprechende Elemente in der zweiten Auflistung gefunden werden. Sollten keine entsprechenden Elemente gefunden werden, ist die Sequenz der entsprechenden Elemente für das Element leer. Die Ergebnisauswahl hat daher Zugriff auf jedes Element der ersten Auflistung. Dies unterscheidet sich von der Ergebnisauswahl in einer Verknüpfung, bei der keine Gruppen verknüpft werden. Diese kann nicht auf Elemente aus der ersten Auflistung zugreifen, die keine Übereinstimmung in der zweiten Auflistung haben.
+
+> [!WARNING]
+> <xref:System.Linq.Enumerable.GroupJoin%2A?displayProperty=nameWithType> hat keine direkte Entsprechung unter den Begriffen herkömmlicher relationaler Datenbanken. Diese Methode implementiert jedoch eine Obermenge innerer Joins und linker äußerer Joins. Beide dieser Vorgänge können im Hinblick auf einen gruppierten Join geschrieben werden. Weitere Informationen finden Sie unter [Verknüpfungsvorgänge (C#)](../programming-guide/concepts/linq/join-operations.md) und unter [Entity Framework Core > GroupJoin](https://docs.microsoft.com/ef/core/querying/complex-query-operators#groupjoin).
 
 Im ersten Beispiel in diesem Artikel wird das Ausführen eines gruppierten Joins gezeigt. Im zweiten Beispiel wird gezeigt, wie eine Gruppenverknüpfung zum Erstellen von XML-Elementen verwendet wird.
 
@@ -33,7 +36,7 @@ Gruppenverknüpfungen lassen sich ideal für das Erstellen von XML mithilfe von 
 
 [!code-csharp[CsLINQProgJoining#6](~/samples/snippets/csharp/concepts/linq/how-to-perform-grouped-joins_2.cs)]
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Linq.Enumerable.Join%2A>
 - <xref:System.Linq.Enumerable.GroupJoin%2A>

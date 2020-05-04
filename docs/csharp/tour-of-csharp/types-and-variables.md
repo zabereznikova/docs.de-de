@@ -1,20 +1,20 @@
 ---
 title: C#-Typen und -Variablen – Überblick über C#
 description: Erfahren Sie mehr über das Definieren von Typen und Deklarieren von Variablen in C#.
-ms.date: 02/25/2020
+ms.date: 04/24/2020
 ms.assetid: f8a8051e-0049-43f1-b594-9c84cc7b1224
-ms.openlocfilehash: b2a5255a243c12543a1cd59b5724b6c826306e04
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6a3bd3dc802f0d080fd96036067f709e62faf426
+ms.sourcegitcommit: 839777281a281684a7e2906dccb3acd7f6a32023
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78159090"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82141009"
 ---
 # <a name="types-and-variables"></a>Typen und Variablen
 
 Es gibt zwei Arten von Typen in C#: *Werttypen* und *Verweistypen*. Variablen von Werttypen enthalten ihre Daten direkt, Variablen von Verweistypen speichern hingegen Verweise auf ihre Daten – letztere werden als Objekte bezeichnet. Mit Verweistypen können zwei Variablen auf das gleiche Objekt verweisen, und so können an einer Variablen durchgeführte Vorgänge das Objekt beeinflussen, auf das die andere Variable verweist. Bei Werttypen besitzen die Variablen jeweils eigene Kopien der Daten. Auf eine Variable angewendete Vorgänge können sich nicht auf die andere Variable auswirken (außer im Fall der Parametervariablen `ref` und `out`).
 
-C#-Werttypen sind weiter unterteilt in *einfache Typen*, *Enumerationstypen*, *Strukturtypen* und *auf NULL festlegbare Werttypen*. C#-Verweistypen sind weiter unterteilt in *Klassentypen*, *Schnittstellentypen*, *Arraytypen* und *Delegattypen*.
+C#-Werttypen sind weiter unterteilt in *einfache Typen*, *Enumerationstypen*, *Strukturtypen* und *Nullable-Werttypen*. C#-Verweistypen sind weiter unterteilt in *Klassentypen*, *Schnittstellentypen*, *Arraytypen* und *Delegattypen*.
 
 Im Folgenden finden Sie eine Übersicht des C#-Typsystems.
 
@@ -32,6 +32,8 @@ Im Folgenden finden Sie eine Übersicht des C#-Typsystems.
     - Benutzerdefinierte Typen der Form `struct S {...}`
   - [Auf NULL festlegbare Werttypen][NullableTypes]
     - Erweiterungen aller anderen Werttypen mit einem `null`-Wert
+  - [Tupelwerttypen][TupleTypes]
+    - Benutzerdefinierte Typen der Form `(T1, T2, ...)`
 - [Verweistypen][ReferenceTypes]
   - [Klassentypen][ClassTypes]
     - Ultimative Basisklasse aller anderen Typen:`object`
@@ -49,6 +51,7 @@ Im Folgenden finden Sie eine Übersicht des C#-Typsystems.
 [EnumTypes]: ../language-reference/builtin-types/enum.md
 [StructTypes]: ../language-reference/builtin-types/struct.md
 [NullableTypes]: ../language-reference/builtin-types/nullable-value-types.md
+[TupleTypes]: ../tuples.md
 [ReferenceTypes]: ../language-reference/keywords/reference-types.md
 [ClassTypes]: ../language-reference/keywords/class.md
 [InterfaceTypes]: ../language-reference/keywords/interface.md
@@ -57,7 +60,7 @@ Im Folgenden finden Sie eine Übersicht des C#-Typsystems.
 
 Weitere Informationen zu numerischen Typen finden Sie unter [Integrale Typen](../language-reference/builtin-types/integral-numeric-types.md) und [Tabelle für Gleitkommatypen](../language-reference/builtin-types/floating-point-numeric-types.md).
 
-Der `bool`-Typ von C# dient zur Darstellung boolescher Werte – Werte, die entweder `true` oder `false` sind.
+Der `bool`-Typ von C# dient zur Darstellung boolescher Werte. Dies sind Werte, die entweder `true` oder `false` sind.
 
 Zur Zeichen- und Zeichenfolgenverarbeitung in C# wird die Unicode-Codierung verwendet. Der `char`-Typ stellt eine UTF-16-Codeeinheit dar und der `string`-Typ eine Folge von UTF-16-Codeeinheiten.
 
@@ -67,7 +70,7 @@ Ein `class`-Typ definiert eine Datenstruktur, die Datenmember (Felder) und Funkt
 
 Ein `struct`-Typ ähnelt einem Klassentyp, da er eine Struktur mit Datenmembern und Funktionsmembern darstellt. Im Gegensatz zu Klassen sind Strukturen Werttypen, die in der Regel keine Heapzuordnung erfordern. Strukturtypen unterstützen keine benutzerdefinierte Vererbung, und alle Strukturtypen erben implizit vom Typ `object`.
 
-Ein `interface`-Typ definiert einen Vertrag als benannter Satz öffentlicher Funktionsmember. Eine `class` oder `struct`, die eine `interface` implementiert, muss Implementierungen der Funktionsmember der Schnittstelle bereitstellen. Eine `interface` kann von mehreren Basisschnittstellen erben, und eine `class` oder `struct` kann mehrere Schnittstellen implementieren.
+Ein `interface`-Typ definiert einen Vertrag als benannter Satz öffentlicher Funktionsmember. Ein `class`- oder `struct`-Typ, der einen `interface`-Typ implementiert, muss Implementierungen der Funktionsmember der Schnittstelle bereitstellen. Eine `interface` kann von mehreren Basisschnittstellen erben, und eine `class` oder `struct` kann mehrere Schnittstellen implementieren.
 
 Ein `delegate`-Typ stellt Verweise auf Methoden mit einer bestimmten Parameterliste und dem Rückgabetyp dar. Delegate ermöglichen die Behandlung von Methoden als Entitäten, die Variablen zugewiesen und als Parameter übergeben werden können. Delegate werden analog zu Funktionstypen von funktionalen Sprachen bereitgestellt. Außerdem ähneln sie konzeptionell Funktionszeigern, die es in einigen anderen Sprachen gibt. Im Gegensatz zu Funktionszeigern sind Delegaten objektorientiert und typsicher.
 
@@ -83,9 +86,9 @@ Das C#-Typsystem ist dahingehend vereinheitlicht, dass ein Wert eines beliebigen
 
 [!code-csharp[Boxing](../../../samples/snippets/csharp/tour/types-and-variables/Program.cs#L1-L10)]
 
-Wenn ein Wert eines Werttyps in den Typ `object` konvertiert wird, wird eine auch „Box“ genannte `object`-Instanz zum Speichern des Werts zugeordnet, und der Wert wird in diese Box kopiert. Wenn umgekehrt ein `object`-Verweis in einen Werttyp umgewandelt wird, wird überprüft, ob das `object`, auf das verwiesen wird, eine Box des korrekten Datentyps ist, und bei erfolgreicher Überprüfung wird der Wert in der Box kopiert.
+Wenn ein Wert eines Werttyps einem `object`-Verweis zugewiesen wird, wird eine „Box“ zugeordnet, die den Wert enthalten soll. Bei dieser Box handelt es sich um eine Instanz eines Verweistyps, und der Wert wird in diese Box kopiert. Wenn umgekehrt ein `object`-Verweis in einen Werttyp umgewandelt wird, wird überprüft, ob der `object`-Typ, auf den verwiesen wird, eine Box des korrekten Werttyps ist. Nach erfolgreicher Überprüfung wird der Wert in der Box zum Werttyp kopiert.
 
-Aus dem einheitlichen C#-Typensystem resultiert, dass Werttypen „bei Nachfrage“ Objekte werden können. Aufgrund der Vereinheitlichung können Bibliotheken für allgemeine Zwecke, die den Typ `object` verwenden, sowohl mit Verweis- als auch Werttypen verwendet werden.
+Aus dem einheitlichen C#-Typensystem resultiert, dass Werttypen „bei Nachfrage“ als `object`-Verweise behandelt werden. Aufgrund der Vereinheitlichung können Bibliotheken für allgemeine Zwecke, die den Typ `object` verwenden, mit allen Typen verwendet werden können, die von `object` abgeleitet werden, wozu sowohl Verweis- als auch Werttypen zählen.
 
 Es gibt mehrere Arten von *Variablen* in C#, einschließlich Feldern, Arrayelementen, lokalen Variablen und Parametern. Variablen stellen Speicherorte dar, und jede Variable hat einen Typ, der bestimmt, welche Werte in der Variablen gespeichert werden können, wie unten gezeigt.
 

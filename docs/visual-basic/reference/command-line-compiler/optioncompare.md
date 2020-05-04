@@ -11,7 +11,7 @@ helpviewer_keywords:
 ms.assetid: 7237b766-b44d-4cc5-9a3c-885348a7d9e4
 ms.openlocfilehash: ac385880f8c13c23dffff67fc2a1ecc5609fd189
 ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/18/2019
 ms.locfileid: "72581420"
@@ -28,31 +28,31 @@ Gibt an, wie Zeichenfolgenvergleiche durchgeführt werden.
 
 ## <a name="remarks"></a>Hinweise
 
-Sie können `-optioncompare` in einer von zwei Formen angeben: `-optioncompare:binary`, um binäre Zeichen folgen Vergleiche zu verwenden, und `-optioncompare:text`, um Textzeichen folgen Vergleiche zu verwenden. Standardmäßig verwendet der Compiler `-optioncompare:binary`.
+Sie können `-optioncompare` in einer von zwei Formen angeben: `-optioncompare:binary`, um binäre Zeichenfolgenvergleiche zu verwenden, und `-optioncompare:text`, um Textzeichenfolgenvergleiche zu nutzen. Standardmäßig verwendet der Compiler `-optioncompare:binary`.
 
-In Microsoft Windows bestimmt die aktuelle Codepage die binäre Sortierreihenfolge. Eine typische binäre Sortierreihenfolge lautet wie folgt:
+Unter Microsoft Windows bestimmt die aktuelle Codepage die binäre Sortierreihenfolge. Eine typische binäre Sortierreihenfolge sieht folgendermaßen aus:
 
 `A < B < E < Z < a < b < e < z < À < Ê < Ø < à < ê < ø`
 
-Textbasierte Zeichen folgen Vergleiche basieren auf einer Text Sortierreihenfolge ohne Beachtung der Groß-/Kleinschreibung, die vom Gebiets Schema des Systems bestimmt wird Eine typische Text Sortierreihenfolge lautet wie folgt:
+Textbasierte Zeichenfolgenvergleiche basieren auf einer Textsortierreihenfolge, für die Groß-/Kleinschreibung nicht berücksichtigt wird und die durch das Gebietsschema Ihres Systems bestimmt wird. Eine typische Textsortierreihenfolge sieht folgendermaßen aus:
 
 `(A = a) < (À = à) < (B=b) < (E=e) < (Ê = ê) < (Z=z) < (Ø = ø)`
 
-### <a name="to-set--optioncompare-in-the-visual-studio-ide"></a>To Set-optioncompare in der Visual Studio-IDE
+### <a name="to-set--optioncompare-in-the-visual-studio-ide"></a>So legen Sie -optioncompare in der integrierten Entwicklungsumgebung in Visual Studio fest
 
 1. Ein Projekt auswählen in **Projektmappen-Explorer**. Klicken Sie im Menü **Projekt** auf **Eigenschaften**.
 
 2. Klicken Sie auf die Registerkarte **Kompilieren**.
 
-3. Ändern Sie den Wert im Feld **Optionen vergleichen** .
+3. Ändern Sie den Wert im Feld **Option Compare** entsprechend.
 
-### <a name="to-set--optioncompare-programmatically"></a>So legen Sie-optioncompare Programm gesteuert fest
+### <a name="to-set--optioncompare-programmatically"></a>So legen Sie -optioncompare programmgesteuert fest
 
-Siehe [Option Compare-Anweisung](../../../visual-basic/language-reference/statements/option-compare-statement.md).
+Informationen hierzu finden Sie unter [Anweisung „Option Compare“](../../../visual-basic/language-reference/statements/option-compare-statement.md).
 
 ## <a name="example"></a>Beispiel
 
-Der folgende Code kompiliert `ProjFile.vb` und verwendet binäre Zeichen folgen Vergleiche.
+Der folgende Code kompiliert `ProjFile.vb` und verwendet binäre Zeichenfolgenvergleiche.
 
 ```console
 vbc -optioncompare:binary projFile.vb

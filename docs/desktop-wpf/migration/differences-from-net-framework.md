@@ -1,59 +1,59 @@
 ---
-title: Unterschiede zwischen .NET Framework und .NET Core
-description: Beschreibt die Unterschiede zwischen der .NET Framework-Implementierung von Windows Presentation Foundation (WPF) und .NET Core WPF. Beim Migrieren Ihrer App sollten Sie diese Inkompatibilitäten berücksichtigen.
+title: Unterschiede zwischen dem .NET Framework und .NET Core
+description: In diesem Artikel werden die Unterschiede zwischen der .NET Framework-Implementierung von Windows Presentation Foundation (WPF) und .NET Core WPF beschrieben. Beim Migrieren einer App sollten Sie diese Inkompatibilitäten berücksichtigen.
 author: thraka
 ms.date: 09/21/2019
 ms.author: adegeo
 ms.openlocfilehash: 341e576f17c522fbcbb9c417176e9d4a13ab1b18
 ms.sourcegitcommit: 348bb052d5cef109a61a3d5253faa5d7167d55ac
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 04/22/2020
 ms.locfileid: "82021842"
 ---
 # <a name="differences-in-wpf"></a>Unterschiede in WPF
 
-In diesem Artikel werden die Unterschiede zwischen Windows Presentation Foundation (WPF) in .NET Core und .NET Framework beschrieben. WPF für .NET Core ist ein [Open-Source-Framework,](https://github.com/dotnet/wpf) das aus dem ursprünglichen WPF für .NET Framework-Quellcode gegabelt wird.
+In diesem Artikel werden die Unterschiede in .NET Core und dem .NET Framework bezüglich Windows Presentation Foundation (WPF) beschrieben. WPF für .NET Core ist ein [Open-Source-Framework](https://github.com/dotnet/wpf), das aus dem Quellcode des ursprünglichen WPF-Systems für das .NET Framework geforkt wurde.
 
-Es gibt einige Features von .NET Framework, die .NET Core nicht unterstützt. Weitere Informationen zu nicht unterstützten Technologien finden Sie unter [.NET Framework-Technologien,](../../core/porting/net-framework-tech-unavailable.md)die unter .NET Core nicht verfügbar sind.
+Einige Features des .NET Framework werden jedoch von .NET Core nicht unterstützt. Weitere Informationen zu nicht unterstützten Technologien finden Sie unter [.NET Framework-Technologien, die auf .NET Core nicht verfügbar sind](../../core/porting/net-framework-tech-unavailable.md).
 
 [!INCLUDE [desktop guide under construction](../../../includes/desktop-guide-preview-note.md)]
 
-## <a name="sdk-style-projects"></a>Projekte im SDK-Stil
+## <a name="sdk-style-projects"></a>Projekte im SDK-Format
 
-.NET Core verwendet Projektdateien im SDK-Stil. Diese Projektdateien unterscheiden sich von den herkömmlichen .NET Framework-Projektdateien, die von Visual Studio verwaltet werden. Um Ihre .NET Framework WPF-Apps in .NET Core zu migrieren, müssen Sie Ihre Projekte konvertieren. Weitere Informationen finden Sie unter [Migrieren von WPF-Apps nach .NET Core 3.0](convert-project-from-net-framework.md).
+.Net Core verwendet Projektdateien im SDK-Stil. Diese Projektdateien unterscheiden sich von herkömmlichen .NET Framework-Projektdateien, die von Visual Studio verwaltet werden. Sie müssen Ihre Projekte konvertieren, wenn Sie Ihre .NET Framework-WPF-Apps zu .NET Core migrieren möchten. Weitere Informationen finden Sie unter [Migrieren von WPF-Apps zu .NET Core](convert-project-from-net-framework.md).
 
 ## <a name="nuget-package-references"></a>NuGet-Paketverweise
 
-Wenn Ihre .NET Framework-App ihre NuGet-Abhängigkeiten in einer *packages.config-Datei* auflistet, migrieren Sie in das [`<PackageReference>`](/nuget/consume-packages/package-references-in-project-files) folgende Format:
+Wenn Ihre .NET Framework-App ihre NuGet-Abhängigkeiten in einer *packages.config*-Datei auflistet, migrieren Sie zum Format [`<PackageReference>`](/nuget/consume-packages/package-references-in-project-files):
 
-1. Öffnen Sie in Visual Studio den Bereich **Projektmappen-Explorer.**
-1. Klicken Sie in Ihrem WPF-Projekt mit der rechten Maustaste auf **packages.config** > **Migrate packages.config to PackageReference**.
+1. Öffnen Sie in Visual Studio den Bereich **Projektmappen-Explorer**.
+1. Klicken Sie in Ihrem WPF-Projekt mit der rechten Maustaste auf **packages.config** >  **"packages.config" zu PackageReference migrieren**.
 
 ![Aktualisieren auf PackageReference](media/differences-from-net-framework/package-reference-migration.png)
 
-Es wird ein Dialogfeld angezeigt, in dem berechnete NuGet-Abhängigkeiten der obersten Ebene angezeigt und gefragt werden, welche anderen NuGet-Pakete auf die oberste Ebene heraufgestuft werden sollen. Wählen Sie **OK** aus, und die Datei *packages.config* wird aus dem Projekt entfernt, und `<PackageReference>` Elemente werden der Projektdatei hinzugefügt.
+Es wird ein Dialogfeld mit berechneten NuGet-Abhängigkeiten auf oberster Ebene angezeigt, und Sie werden gefragt, welche anderen NuGet-Pakete auf die oberste Ebene höher gestuft werden sollen. Klicken Sie auf **OK**. Die *packages.config*-Datei wird daraufhin aus dem Projekt entfernt, und der Projektdatei werden `<PackageReference>`-Elemente hinzugefügt.
 
-Wenn Ihr `<PackageReference>`Projekt verwendet, werden Pakete nicht lokal in einem *Paketordner* gespeichert, sondern global gespeichert. Öffnen Sie die Projektdatei, und entfernen Sie alle `<Analyzer>` Elemente, die auf den Ordner *Pakete* verwiesen haben. Diese Analysatoren werden automatisch in die NuGet-Paketreferenzen aufgenommen.
+Wenn Ihr Projekt `<PackageReference>` verwendet, werden Pakete nicht lokal in einem *Packages*-Ordner gespeichert, sondern global. Öffnen Sie die Projektdatei, und entfernen Sie alle `<Analyzer>`-Elemente, die auf den *Packages*-Ordner verweisen. Diese Analysetools sind automatisch in den NuGet-Paketverweisen enthalten.
 
 ## <a name="code-access-security"></a>Codezugriffssicherheit
 
-Code Access Security (CAS) wird von .NET Core oder WPF für .NET Core nicht unterstützt. Alle CAS-bezogenen Funktionen werden unter der Annahme von Full-Trust behandelt. WPF für .NET Core entfernt CAS-bezogenen Code. Die öffentliche API-Oberfläche dieser Typen ist weiterhin vorhanden, um sicherzustellen, dass Aufrufe dieser Typen erfolgreich ausgeführt werden.
+Die Codezugriffssicherheit (Code Access Security, CAS) wird weder von .NET Core noch von WPF für .NET Core unterstützt. Alle CAS-bezogenen Funktionen gelten als vollständig vertrauenswürdig. In WPF für .NET Core wird CAS-bezogener Code entfernt. Die öffentliche API-Oberfläche dieser Typen ist weiterhin vorhanden. Damit wird sichergestellt, dass die Aufrufe dieser Typen erfolgreich sind.
 
-Öffentlich definierte CAS-bezogene Typen wurden aus den WPF-Assemblys in die Core .NET-Bibliotheksassemblys verschoben. Für die WPF-Assemblys ist die Typweiterleitung auf die neue Position der verschobenen Typen festgelegt.
+Öffentlich definierte CAS-bezogene Typen wurden aus den WPF-Assemblys und in die wichtigsten .NET-Bibliotheksassemblys verschoben. Für die WPF-Assemblys ist die Typweiterleitung an den neuen Speicherort der verschobenen Typen festgelegt.
 
-| Quellassembly | Zielassembly | type                |
+| Quellassembly | Zielassembly | Typ                |
 | --------------- | --------------- | ------------------- |
 | *WindowsBase.dll* | *System.Security.Permissions.dll* | <xref:System.Security.Permissions.MediaPermission> <br /> <xref:System.Security.Permissions.MediaPermissionAttribute> <br /> <xref:System.Security.Permissions.MediaPermissionAudio> <br /> <xref:System.Security.Permissions.MediaPermissionImage> <br /> <xref:System.Security.Permissions.MediaPermissionVideo> <br /> <xref:System.Security.Permissions.WebBrowserPermission> <br /> <xref:System.Security.Permissions.WebBrowserPermissionAttribute> <br /> <xref:System.Security.Permissions.WebBrowserPermissionLevel> |
 | *System.Xaml.dll* | *System.Security.Permissions.dll* | <xref:System.Xaml.Permissions.XamlLoadPermission> |
 | *System.Xaml.dll* | *System.Windows.Extension.dll*    | <xref:System.Xaml.Permissions.XamlAccessLevel><br/> |
 
 > [!NOTE]
-> Um die Portierungsreibung zu minimieren, wurde die Funktionalität zum Speichern und `XamlAccessLevel` Abrufen von Informationen zu den folgenden Eigenschaften im Typ beibehalten.
+> Die Funktionalität für das Speichern und Abrufen von Informationen über die folgenden Eigenschaften wurde im `XamlAccessLevel`-Typ beibehalten, um die Probleme bei der Portierung so gering wie möglich zu halten.
 >
 > - `PrivateAccessToTypeName`
 > - `AssemblyNameString`
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-- [Erfahren Sie, wie Sie eine .NET Framework WPF-App in .NET Core portieren.](convert-project-from-net-framework.md)
+- [Migrieren von WPF-Apps zu .NET Core](convert-project-from-net-framework.md)

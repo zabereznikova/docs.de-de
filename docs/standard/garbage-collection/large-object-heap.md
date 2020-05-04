@@ -1,32 +1,32 @@
 ---
-title: LOH unter Windows – .NET
+title: Der Large-Object-Heap (LOH) unter Windows
 ms.date: 05/02/2018
 helpviewer_keywords:
 - large object heap (LOH)"
 - LOH
 - garbage collection, large object heap
 - GC [.NET ], large object heap
-ms.openlocfilehash: 5125b76dd26ffa4fb363ecf8449f65b490f57b93
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ab9beca58b3d6118bc0f5121b6f5dec71a9f9f36
+ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74283623"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82102267"
 ---
 # <a name="the-large-object-heap-on-windows-systems"></a>Der große Objektheap auf Windows-Systemen
 
-Der .NET Garbage Collector (GC) teilt Objekte in die Kategorie „klein“ oder „groß“ ein. Wenn ein Objekt groß ist, sind einige seiner Attribute wichtiger als bei einem kleinen Objekt. Die Komprimierung, also das Kopieren in den Arbeitsspeicher an einer anderen Stelle des Heaps, kann aufwändig sein. Deshalb platziert der .NET Garbage Collector große Objekte im großen Objektheap (Large Object Heap, LOB). In diesem Artikel wird der große Objektheap näher erläutert. Es wird erläutert, wodurch ein Objekt als großes Objekt angesehen wird, wie diese großen Objekte bereinigt werden und in welcher Weise sich große Objekte auf die Leistung auswirken.
+Der .NET Garbage Collector (GC) teilt Objekte in die Kategorien „klein“ und „groß“ ein. Wenn ein Objekt groß ist, sind einige seiner Attribute wichtiger als bei einem kleinen Objekt. So kann die Komprimierung, also das Kopieren in den Arbeitsspeicher an einer anderen Stelle des Heaps, aufwändig sein. Deshalb platziert der Garbage Collector große Objekte im Large-Object-Heap (LOH). In diesem Artikel wird erläutert, wodurch ein Objekt als großes Objekt angesehen wird, wie große Objekte bereinigt werden und in welcher Weise sich große Objekte auf die Leistung auswirken.
 
 > [!IMPORTANT]
-> In diesem Artikel wird der große Objektheap in .NET Framework und .NET Core auf Windows-Systemen erläutert. Der große Objektheap in .NET-Implementierungen auf anderen Plattformen wird nicht behandelt.
+> In diesem Artikel wird der Large-Object-Heap in .NET Framework und .NET Core erläutert, der nur in Windows-Systemen ausgeführt werden kann. Der große Objektheap in .NET-Implementierungen auf anderen Plattformen wird nicht behandelt.
 
-## <a name="how-an-object-ends-up-on-the-large-object-heap-and-how-gc-handles-them"></a>Wie ein Objekt in den großen Objektheap gelangt und wie der Garbage Collector dieses verarbeitet
+## <a name="how-an-object-ends-up-on-the-loh"></a>Wie gelangt ein Objekt in den Large-Object-Heap?
 
 Ein Objekt wird als großes Objekt betrachtet, wenn es eine Größe von mindestens 85.000 Byte aufweist. Diese Zahl wurde von der Leistungsoptimierung ermittelt. Wenn die Zuordnungsanforderung für ein Objekt über 85.000 Byte beträgt, ordnet die Runtime diese dem großen Objektheap zu.
 
-Im Folgenden werden einige Grundlagen über den .NET Garbage Collector erläutert, um dies besser nachvollziehen zu können.
+Der folgende Abschnitt enthält für ein besseres Verständnis einige Grundlagen über den Garbage Collector.
 
-Der .NET Garbage Collector ein generationsbasierter Collector. Er verfügt über drei Generationen: Generation 0, Generation 1 und Generation 2. Es gibt drei Generationen, da in einer gut eingerichteten App die meisten Objekte in Generation 0 inaktiv werden. In einer Server-App sollten die Zuordnungen für jede Anforderung inaktiv werden, nachdem die Anforderung abgeschlossen wurde. Die noch nicht abgeschlossenen Zuordnungsanforderungen gelangen in Generation 1 und werden dann inaktiv. Im Grunde dient Generation 1 als Puffer zwischen Bereichen mit neuen Objekten und Bereichen mit langlebigen Objekten.
+Der Garbage Collector ist ein generationsbasierter Collector. Er verfügt über drei Generationen: Generation 0, Generation 1 und Generation 2. Es gibt drei Generationen, da in einer gut eingerichteten App die meisten Objekte in Generation 0 inaktiv werden. In einer Server-App sollten die Zuordnungen für jede Anforderung inaktiv werden, nachdem die Anforderung abgeschlossen wurde. Die noch nicht abgeschlossenen Zuordnungsanforderungen gelangen in Generation 1 und werden dann inaktiv. Im Grunde dient Generation 1 als Puffer zwischen Bereichen mit neuen Objekten und Bereichen mit langlebigen Objekten.
 
 Kleine Objekte werden immer in Generation 0 zugeordnet und je nach Lebensdauer entweder in Generation 1 oder 2 heraufgestuft. Große Objekte werden immer in Generation 2 zugeordnet.
 
@@ -80,7 +80,7 @@ Im Allgemeinen wird eine Garbage Collection durchgeführt, wenn eine der folgend
 
   Dies tritt auf, wenn der Garbage Collector eine Benachrichtigung über eine hohe Arbeitsspeicherauslastung vom Betriebssystem erhält. Wenn der Garbage Collector eine Garbage Collection für Generation 2 für produktiv hält, wird diese ausgelöst.
 
-## <a name="loh-performance-implications"></a>Auswirkungen des großen Objektheaps auf die Leistung
+## <a name="loh-performance-implications"></a>Auswirkungen des LOH auf die Leistung
 
 Zuordnungen zum großen Objektheap beeinträchtigen die Leistung folgendermaßen:
 
@@ -122,7 +122,7 @@ Zuordnungen zum großen Objektheap beeinträchtigen die Leistung folgendermaßen
 
 Von diesen drei Faktoren sind die ersten beiden üblicherweise relevanter als der dritte. Deshalb wird empfohlen, dass Sie einen Pool von großen Objekten zuordnen, den Sie wiederverwenden, statt temporäre Objekte zuzuordnen.
 
-## <a name="collecting-performance-data-for-the-loh"></a>Sammeln von Leistungsdaten für den großen Objektheap
+## <a name="collect-performance-data-for-the-loh"></a>Sammeln von Leistungsdaten für den LOH
 
 Bevor Sie Leistungsdaten für einen bestimmten Bereich erfassen, sollten Sie Folgendes durchgeführt haben:
 
@@ -310,6 +310,6 @@ Dieser Befehl unterbricht den Debugger und zeigt die Aufrufliste nur an, wenn [V
 
 In CLR 2.0 wurde ein Feature namens *VM Hoarding* hinzugefügt, das für Szenarios nützlich ist, in denen Segmente (einschließlich des großen und des kleinen Objektheaps) häufig abgerufen und freigegeben werden. Wenn Sie das Feature „VM Hoarding“ definieren möchten, geben Sie ein Startflag namens `STARTUP_HOARD_GC_VM` über die Hosting-API an. Die CLR hebt den Arbeitsspeicher für diese Segmente auf, und setzt diese auf eine Standbyliste, anstatt leere Segmente wieder für das Betriebssystem freizugeben. (Beachten Sie, dass die CLR dies nicht für Segmente durchführen kann, die zu groß sind.) Die CLR verwendet diese Segmente später, um Anforderungen für neue Segmente zu erfüllen. Wenn Ihre App das nächste Mal ein neues Segment benötigt, verwendet die CLR eines von dieser Standbyliste, wenn sie eines finden kann, das groß genug ist.
 
-Das Feature „VM Hoarding“ ist ebenfalls für Anwendungen nützlich, die Segmente beibehalten möchten, die bereits abgerufen wurden. Dazu zählen beispielsweise Server-Apps, die als dominante Apps auf dem System ausgeführt werden, um die Ausnahme „Nicht genügend Arbeitsspeicher.“ zu vermeiden.
+Die Funktion „VM Hoarding“ ist ebenfalls für Anwendungen nützlich, in denen bereits abgerufene Segmente beibehalten werden sollen. Dazu zählen beispielsweise Server-Apps, die als dominante Apps im System ausgeführt werden, um Ausnahmen wegen nicht ausreichendem Arbeitsspeicher zu vermeiden.
 
 Es wird nachdrücklich empfohlen, dass Sie Ihre Anwendung sorgfältig testen, wenn Sie dieses Feature verwenden, und sicherstellen, dass die Speicherauslastung Ihrer Anwendung relativ stabil ist.

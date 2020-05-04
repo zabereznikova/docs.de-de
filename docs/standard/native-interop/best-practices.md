@@ -4,7 +4,7 @@ description: Erfahren Sie mehr über bewährte Methoden für die Einrichtung von
 ms.date: 01/18/2019
 ms.openlocfilehash: e5d96471e796dca712d25d2d9e2609508180d83f
 ms.sourcegitcommit: a9b8945630426a575ab0a332e568edc807666d1b
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 03/30/2020
 ms.locfileid: "80391220"
@@ -36,22 +36,22 @@ Die Anleitungen in diesem Abschnitt gelten für alle Interoperabilitätsszenarie
 
 ## <a name="string-parameters"></a>Zeichenfolgenparameter
 
-Wenn „CharSet“ auf „Unicode“ festgelegt oder das Argument explizit als  gekennzeichnet ist `[MarshalAs(UnmanagedType.LPWSTR)]` _und_ die Zeichenfolge per Wert (nicht als `ref` oder `out`) übergeben wird, wird die Zeichenfolge angeheftet und vom nativen Code direkt verwendet (nicht kopiert).
+Wenn es sich um einen Unicode-Zeichensatz handelt oder das Argument explizit als `[MarshalAs(UnmanagedType.LPWSTR)]` gekennzeichnet ist _und_ die Zeichenfolge per Wert (nicht als `ref` oder `out`) übergeben wird, wird die Zeichenfolge angeheftet und vom nativen Code direkt verwendet (nicht kopiert).
 
 Denken Sie daran, `[DllImport]` als `Charset.Unicode` zu kennzeichnen, es sei denn, Sie möchten explizit, dass Ihre Zeichenfolgen als ANSI verarbeitet werden.
 
-❌Verwenden Sie `[Out] string` KEINE Parameter. Zeichenfolgenparameter, die per Wert mit dem `[Out]`-Attribut übergeben werden, können die Runtime destabilisieren, wenn die Zeichenfolge internalisiert ist. Weitere Informationen zum Internalisieren von Zeichenfolgen finden Sie in der Dokumentation zu <xref:System.String.Intern%2A?displayProperty=nameWithType>.
+❌ VERWENDEN SIE KEINE `[Out] string`-Parameter. Zeichenfolgenparameter, die per Wert mit dem `[Out]`-Attribut übergeben werden, können die Runtime destabilisieren, wenn die Zeichenfolge internalisiert ist. Weitere Informationen zum Internalisieren von Zeichenfolgen finden Sie in der Dokumentation zu <xref:System.String.Intern%2A?displayProperty=nameWithType>.
 
-❌AVOID-Parameter. `StringBuilder` `StringBuilder`Marshalling erzeugt *immer* eine native Pufferkopie. Dies kann extrem ineffizient sein. Sehen Sie sich das folgende typische Szenario an, in dem eine Windows-API aufgerufen wird, die eine Zeichenfolge akzeptiert:
+❌ VERMEIDEN Sie `StringBuilder`-Parameter. `StringBuilder`Marshalling erzeugt *immer* eine native Pufferkopie. Dies kann extrem ineffizient sein. Sehen Sie sich das folgende typische Szenario an, in dem eine Windows-API aufgerufen wird, die eine Zeichenfolge akzeptiert:
 
-1. Erstellen eines SB der gewünschten Kapazität (Zuweisung von verwalteter Kapazität)**{1}**
-2. Invoke
-   1. Ordnet einen systemeigenen Puffer zu**{2}**
-   2. Kopiert den Inhalt im Fall von `[In]` _(Standard für einen`StringBuilder`-Parameter)_
+1. Erstellen Sie einen StringBuilder mit der gewünschten Kapazität (ordnet die verwaltete Kapazität zu) **{1}**
+2. Aufrufen
+   1. Ordnet einen nativen Puffer zu **{2}**
+   2. Kopiert den Inhalt im Fall von `[In]` _(Standard für `StringBuilder`-Parameter)_
    3. Kopiert den nativen Puffer in ein neu zugeordnetes verwaltetes Array im Fall von `[Out]` **{3}** _(ebenfalls Standard für `StringBuilder`)_
-3. `ToString()`ordnet ein weiteres verwaltetes Array zu**{4}**
+3. `ToString()` ordnet ein weiteres verwaltetes Array zu **{4}**
 
-Das *{4}* sind Zuweisungen, um eine Zeichenfolge aus systemeigenem Code zu erhalten. Die beste Möglichkeit, um dies zu beschränken, besteht darin, den `StringBuilder` in einem weiteren Aufruf wiederzuverwenden, damit wird aber dennoch nur *1* Zuordnung eingespart. Es ist viel besser, einen Zeichenpuffer aus dem `ArrayPool` zu verwenden und zwischenzuspeichern – damit benötigen Sie in nachfolgenden Aufrufen nur die Zuordnung für `ToString()`.
+Damit haben wir *{4}* Zuordnungen, um eine Zeichenfolge aus dem nativen Code abzurufen. Die beste Möglichkeit, um dies zu beschränken, besteht darin, den `StringBuilder` in einem weiteren Aufruf wiederzuverwenden, damit wird aber dennoch nur *1* Zuordnung eingespart. Es ist viel besser, einen Zeichenpuffer aus dem `ArrayPool` zu verwenden und zwischenzuspeichern – damit benötigen Sie in nachfolgenden Aufrufen nur die Zuordnung für `ToString()`.
 
 Ein weiteres Problem bei `StringBuilder` ist, dass immer der Rückgabepuffer bis zum ersten NULL-Zeichen zurückkopiert wird. Wenn die zurückgegebene Zeichenfolge nicht beendet oder mit einem doppelten NULL-Zeichen beendet wird, ist „P/Invoke“ bestenfalls falsch.
 
@@ -61,11 +61,11 @@ Wenn Sie `StringBuilder`*tatsächlich* verwenden, besteht eine weitere Besonderh
 
 Weitere Informationen zum Marshalling von Zeichenfolgen finden Sie unter [Standardmäßiges Marshalling für Zeichenfolgen](../../framework/interop/default-marshaling-for-strings.md) und [Anpassen des Zeichenfolgenmarshallings](customize-parameter-marshaling.md#customizing-string-parameters).
 
-> __Windows-spezifisch__ Bei `[Out]` Zeichenfolgen verwendet `CoTaskMemFree` die CLR standardmäßig `SysStringFree` Die Freigabe von `UnmanagedType.BSTR`Zeichenfolgen oder für Zeichenfolgen, die als markiert sind.
-> **Für die meisten APIs mit einem Ausgabezeichenfolgenpuffer:** Die übergebene Zeichenanzahl muss die NULL enthalten. Wenn der zurückgegebene Wert kleiner ist als die Zeichenanzahl, ist der Aufruf erfolgreich und der Wert ist die Anzahl der Zeichen *ohne* das nachgestellte NULL-Zeichen. Andernfalls ist die Anzahl die erforderliche Größe des Puffers *einschließlich* des NULL-Zeichens.
+> __Windows-spezifisch:__ Bei `[Out]`-Zeichenfolgen verwendet die CLR (Common Language Runtime) standardmäßig `CoTaskMemFree`, um Zeichenfolgen freizugeben, oder `SysStringFree` bei Zeichenfolgen, die als `UnmanagedType.BSTR` gekennzeichnet sind.
+> **Bei den meisten APIs mit Puffer für Ausgabezeichenfolgen gilt Folgendes**: Die übergebene Zeichenanzahl muss das NULL-Zeichen enthalten. Wenn der zurückgegebene Wert kleiner ist als die Zeichenanzahl, ist der Aufruf erfolgreich und der Wert ist die Anzahl der Zeichen *ohne* das nachgestellte NULL-Zeichen. Andernfalls ist die Anzahl die erforderliche Größe des Puffers *einschließlich* des NULL-Zeichens.
 >
-> - Pass in 5, get 4: Die Zeichenfolge ist 4 Zeichen lang mit einem nachfolgenden Null.
-> - Pass in 5, get 6: Die Zeichenfolge ist 5 Zeichen lang, benötigen einen 6-Zeichen-Puffer, um die Null zu halten.
+> - 5 übergeben, 4 abrufen: Die Zeichenfolge ist 4 Zeichen lang und umfasst ein nachgestelltes NULL-Zeichen.
+> - 5 übergeben, 6 abrufen: Die Zeichenfolge ist 5 Zeichen lang und erfordert einen Puffer mit 6 Zeichen für das NULL-Zeichen.
 > [Windows-Datentypen für Zeichenfolgen](/windows/desktop/Intl/windows-data-types-for-strings)
 
 ## <a name="boolean-parameters-and-fields"></a>Boolesche Parameter und Felder
@@ -80,13 +80,13 @@ GUIDs können direkt in Signaturen verwendet werden. Viele Windows-APIs akzeptie
 |------|-------------|
 | `KNOWNFOLDERID` | `REFKNOWNFOLDERID` |
 
-❌Verwenden Sie `[MarshalAs(UnmanagedType.LPStruct)]` NICHT für `ref` andere als GUID-Parameter.
+❌ VERWENDEN SIE NICHT `[MarshalAs(UnmanagedType.LPStruct)]` für etwas anderes als für `ref`-GUID-Parameter.
 
 ## <a name="blittable-types"></a>Für Blitting geeignete Typen
 
 Für Blitting geeignete Typen sind Typen, die in verwaltetem und nativem Code die gleiche Darstellung auf Bitebene aufweisen. Als solche müssen sie nicht in ein anderes Format konvertiert werden, um ein Marshalling in den und aus dem nativen Code zu ermöglichen. Da dies die Leistung verbessert, sind diese Typen zu bevorzugen.
 
-**Blitbare Typen:**
+**Für Blitting geeignete Typen**:
 
 - `byte`, `sbyte`, `short`, `ushort`, `int`, `uint`, `long`, `ulong`, `single`, `double`
 - Nicht geschachtelte eindimensionale Arrays aus für Blitting geeigneten Typen (z.B. `int[]`)
@@ -94,17 +94,17 @@ Für Blitting geeignete Typen sind Typen, die in verwaltetem und nativem Code di
   - Ein festes Layout erfordert `[StructLayout(LayoutKind.Sequential)]` oder `[StructLayout(LayoutKind.Explicit)]`
   - Strukturen sind standardmäßig `LayoutKind.Sequential`, Klassen sind `LayoutKind.Auto`
 
-**NICHT für Blitting geeignet:**
+**NICHT für Blitting geeignet**:
 
 - `bool`
 
-**MANCHMAL für Blitting geeignet:**
+**MANCHMAL für Blitting geeignet**:
 
 - `char`, `string`
 
 Wenn für Blitting geeignete Typen per Verweis übergeben werden, werden sie einfach vom Marshaller angeheftet, anstatt in einem temporären Puffer kopiert zu werden. (Klassen werden von Natur aus per Verweis übergeben, Strukturen werden per Verweis übergeben, wenn sie mit `ref` oder `out` verwendet werden.)
 
-`char`ist in einem eindimensionalen Array blittable **oder** wenn es Teil eines Typs ist, der ihn enthält, der explizit mit `[StructLayout]` gekennzeichnet `CharSet = CharSet.Unicode`ist.
+`char` ist in einem eindimensionalen Array **oder** bei Verwendung in einem Typen für Blitting geeignet, der explizit mit `[StructLayout]` mit `CharSet = CharSet.Unicode` gekennzeichnet ist.
 
 ```csharp
 [StructLayout(LayoutKind.Sequential, CharSet = CharSet.Unicode)]
@@ -120,18 +120,18 @@ Sie können feststellen, ob ein Typ für Blitting geeignet ist, indem Sie versuc
 
 ✔️ LEGEN Sie Ihre Strukturen nach Möglichkeit als für Blitting geeignet fest.
 
-Weitere Informationen finden Sie unter
+Weitere Informationen finden Sie unter:
 
 - [Blitfähige und nicht blitfähige Typen](../../framework/interop/blittable-and-non-blittable-types.md)
-- [Typ Marshalling](type-marshaling.md)
+- [Marshalling von Typen](type-marshaling.md)
 
 ## <a name="keeping-managed-objects-alive"></a>Beibehalten von verwalteten Objekten
 
 `GC.KeepAlive()` stellt sicher, dass ein Objekt im Gültigkeitsbereich bleibt, bis die KeepAlive-Methode erreicht wird.
 
-[`HandleRef`](xref:System.Runtime.InteropServices.HandleRef)ermöglicht es dem Marshaller, ein Objekt für die Dauer eines P/Invoke am Leben zu erhalten. Es kann statt `IntPtr` in Methodensignaturen verwendet werden. `SafeHandle` ersetzt diese Klasse und sollte stattdessen verwendet werden.
+[`HandleRef`](xref:System.Runtime.InteropServices.HandleRef) ermöglicht es dem Marshaller, ein Objekt während der Dauer eines P/Invoke beizubehalten. Es kann statt `IntPtr` in Methodensignaturen verwendet werden. `SafeHandle` ersetzt diese Klasse und sollte stattdessen verwendet werden.
 
-[`GCHandle`](xref:System.Runtime.InteropServices.GCHandle)ermöglicht das Anheften eines verwalteten Objekts und das Abrufen des systemeigenen Zeigers darauf. Das grundlegende Muster sieht folgendermaßen aus:
+[`GCHandle`](xref:System.Runtime.InteropServices.GCHandle) ermöglicht das Anheften eines verwalteten Objekts und Abrufen des nativen Zeigers auf das Objekt. Das grundlegende Muster sieht folgendermaßen aus:
 
 ```csharp
 GCHandle handle = GCHandle.Alloc(obj, GCHandleType.Pinned);
@@ -213,15 +213,15 @@ Für Blitting geeignete Strukturen sind wesentlich leistungsfähiger, da sie gan
 
 Zeiger auf Strukturen in Definitionen müssen entweder von `ref` übergeben werden oder `unsafe` und `*` verwenden.
 
-✔️ PASSEN Sie die verwaltete Struktur so eng wie möglich an die Form und die Namen an, die in der offiziellen Dokumentation zu Plattform oder im Header verwendet werden.
+✔️ PASSEN Sie die verwaltete Struktur so eng wie möglich an die Form und die Namen an, die in der offiziellen Dokumentation zur Plattform oder im Header verwendet werden.
 
 ✔️ VERWENDEN Sie `sizeof()` aus C# anstelle von `Marshal.SizeOf<MyStruct>()` für Strukturen, die für Blitting geeignet sind, um die Leistung zu verbessern.
 
-❌AVOID `System.Delegate` mit `System.MulticastDelegate` oder Felder zur Darstellung von Funktionszeigerfeldern in Strukturen.
+❌ VERMEIDEN Sie die Verwendung von `System.Delegate`- oder `System.MulticastDelegate`-Feldern, um Felder für Funktionszeiger in Strukturen darzustellen.
 
-Da <xref:System.Delegate?displayProperty=fullName> <xref:System.MulticastDelegate?displayProperty=fullName> und keine erforderliche Signatur erforderlich ist, garantieren sie nicht, dass der übergebene Delegat mit der Signatur übereinstimmt, die der systemeigene Code erwartet. Darüber hinaus kann das Marshallen einer Struktur, die `System.Delegate` `System.MulticastDelegate` eine oder ihre systemeigene Darstellung enthält, in .NET Framework und .NET Core zu einem verwalteten Objekt die Laufzeit destabilisieren, wenn der Wert des Felds in der systemeigenen Darstellung kein Funktionszeiger ist, der einen verwalteten Delegaten umschließt. In .NET 5- und höher-Versionen wird das Marshallen eines `System.Delegate` Oderfelds `System.MulticastDelegate` von einer systemeigenen Darstellung zu einem verwalteten Objekt nicht unterstützt. Verwenden Sie einen bestimmten `System.Delegate` `System.MulticastDelegate`Delegattyp anstelle von oder .
+Da <xref:System.Delegate?displayProperty=fullName> und <xref:System.MulticastDelegate?displayProperty=fullName> nicht über eine erforderliche Signatur verfügen, garantieren sie nicht, dass der übergebene Delegat der Signatur entspricht, die vom nativen Code erwartet wird. Außerdem kann in .NET Framework und .NET Core das Marshalling einer Struktur, die einen `System.Delegate` oder einen `System.MulticastDelegate` aus ihrer nativen Darstellung in ein verwaltetes Objekt enthält, die Runtime destabilisieren, wenn der Wert des Felds in der nativen Darstellung kein Funktionszeiger ist, der einen verwalteten Delegaten umschließt. In .NET 5 und höheren Versionen wird das Marshalling eines `System.Delegate`- oder `System.MulticastDelegate`-Felds aus einer nativen Darstellung in ein verwaltetes Objekt nicht unterstützt. Verwenden Sie anstelle von `System.Delegate` oder `System.MulticastDelegate` einen bestimmten Delegattyp.
 
-### <a name="fixed-buffers"></a>Feste Puffer
+### <a name="fixed-buffers"></a>Puffer fester Größe
 
 Für ein Array wie `INT_PTR Reserved1[2]` muss ein Marshalling in zwei `IntPtr`-Felder durchgeführt werden: `Reserved1a` und `Reserved1b`. Wenn das native Array ein primitiver Typ ist, können wir das Schlüsselwort `fixed` verwenden, um es etwas übersichtlicher zu schreiben. `SYSTEM_PROCESS_INFORMATION` sieht im nativen Header beispielsweise so aus:
 

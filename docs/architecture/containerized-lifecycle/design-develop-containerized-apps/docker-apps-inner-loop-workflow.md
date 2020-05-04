@@ -2,12 +2,12 @@
 title: Inner-Loop-Entwicklungsworkflow für Docker-Apps
 description: Lernen Sie den Workflow der „inneren Schleife“ bei der Entwicklung von Docker-Anwendungen kennen.
 ms.date: 02/15/2019
-ms.openlocfilehash: 615cfd08f46609c4e100ea3e72b541fe2c1ae62a
-ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
+ms.openlocfilehash: bce047bd5ba75f9ef652a294ff6a15656fc5ac34
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "80989011"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81738405"
 ---
 # <a name="inner-loop-development-workflow-for-docker-apps"></a>Inner-Loop-Entwicklungsworkflow für Docker-Apps
 
@@ -156,7 +156,7 @@ Für jeden benutzerdefinierten Dienst, den Ihre App beinhaltet, müssen Sie ein 
 >
 > Daher muss jeder Entwickler zuerst den gesamten Prozess der inneren Schleife absolvieren, um lokal zu testen und mit der Entwicklung fortzufahren, bis er eine vollständige Funktion oder Änderung an das Quellcodeverwaltungssystem übertragen möchte.
 
-Um ein Image in Ihrer lokalen Umgebung zu erstellen und das DockerFile zu verwenden, können Sie den Docker-Erstellungsbefehl verwenden, wie in Abbildung 4–25 veranschaulicht (Sie können auch `docker-compose up --build` für Anwendungen ausführen, die aus mehreren Containern/Diensten zusammengesetzt sind).
+Wenn Sie ein Image in Ihrer lokalen Umgebung erstellen und das Dockerfile verwenden möchten, können Sie den Befehl „docker build“ verwenden, wie in Abbildung 4-25 veranschaulicht. (Sie können auch `docker-compose up --build` für Anwendungen ausführen, die aus mehreren Containern/Diensten bestehen).
 
 ![Der Screenshot zeigt die Konsolenausgabe des Befehls „docker build“.](./media/docker-apps-inner-loop-workflow/run-docker-build-command.png)
 
@@ -263,7 +263,7 @@ Sie können dies mithilfe von CURL am Terminal testen. In einer Docker-Installat
 
 Visual Studio Code unterstützt das Debuggen von Docker, wenn Sie Node.js und andere Plattformen wie .NET Core-Container verwenden.
 
-Wenn Sie Visual Studio für Windows oder Mac verwenden, können Sie darüber hinaus .NET Core- oder .NET Framework-Container in Docker debuggen, wie im nächsten Abschnitt beschrieben.
+Wenn Sie Visual Studio für Windows oder Mac verwenden, können Sie darüber hinaus .NET Core- oder .NET Framework-Container wie im nächsten Abschnitt beschrieben in Docker debuggen.
 
 > [!TIP]
 > Weitere Informationen zum Debuggen von Node.js-Docker-Containern finden Sie unter <https://blog.docker.com/2016/07/live-debugging-docker/> und <https://docs.microsoft.com/archive/blogs/user_ed/visual-studio-code-new-features-13-big-debugging-updates-rich-object-hover-conditional-breakpoints-node-js-mono-more>.

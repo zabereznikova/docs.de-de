@@ -1,26 +1,26 @@
 ---
-title: BLOB-e/a
+title: Blob-E/A
 ms.date: 12/13/2019
-description: Erfahren Sie, wie Sie das BLOB-e/a-Feature von SQLite verwenden.
+description: Informationen zum Blob-E/A-Feature von SQLite
 ms.openlocfilehash: 0c133deacdc19684eca3a6724fb398dc01fda558
 ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 12/25/2019
 ms.locfileid: "75450303"
 ---
-# <a name="blob-io"></a>BLOB-e/a
+# <a name="blob-io"></a>Blob-E/A
 
-Sie können die Speicherauslastung beim Lesen und Schreiben von großen Objekten verringern, indem Sie die Daten in die und aus der Datenbank streamen. Dies kann besonders nützlich sein, wenn die Daten verarbeitet oder transformiert werden.
+Sie können die Speicherauslastung beim Lesen und Schreiben von Large Objects verringern, indem Sie die Daten in die und aus der Datenbank streamen. Das kann besonders nützlich sein, wenn die Daten analysiert oder transformiert werden.
 
-Beginnen Sie, indem Sie eine Zeile wie gewohnt einfügen. Verwenden Sie die `zeroblob()` SQL-Funktion, um Speicherplatz in der Datenbank zuzuweisen, der das große Objekt enthalten soll. Die `last_insert_rowid()`-Funktion bietet eine bequeme Möglichkeit, die ROWID zu erhalten.
+Fügen Sie zunächst wie gewohnt eine Zeile ein. Verwenden Sie dann die SQL-Funktion `zeroblob()`, um in der Datenbank den Speicherplatz für das Large Object zuzuweisen. Die `last_insert_rowid()`-Funktion ist eine gute Möglichkeit, den ROWID-Wert abzurufen.
 
 [!code-csharp[](../../../../samples/snippets/standard/data/sqlite/StreamingSample/Program.cs?name=snippet_Insert)]
 
-Öffnen Sie nach dem Einfügen der Zeile einen Stream, um das große Objekt mit <xref:Microsoft.Data.Sqlite.SqliteBlob>zu schreiben.
+Öffnen Sie nach dem Einfügen der Zeile einen Stream, um das Large Object mithilfe von <xref:Microsoft.Data.Sqlite.SqliteBlob> zu schreiben.
 
 [!code-csharp[](../../../../samples/snippets/standard/data/sqlite/StreamingSample/Program.cs?name=snippet_Write)]
 
-Um das große Objekt aus der Datenbank zu streamen, müssen Sie neben der Spalte des großen Objekts die ROWID oder eine der zugehörigen Aliase als hier anzeigen auswählen. Wenn Sie die ROWID nicht auswählen, wird das gesamte Objekt in den Arbeitsspeicher geladen. Das von `GetStream()` zurückgegebene Objekt wird `SqliteBlob`, wenn es ordnungsgemäß ausgeführt wird.
+Sie können das Large Object aus der Datenbank streamen, indem Sie wie hier veranschaulicht den ROWID-Wert oder einen der zugehörigen Aliase neben der Spalte des Large Object auswählen. Wenn Sie den ROWID-Wert nicht auswählen, wird das gesamte Objekt in den Arbeitsspeicher geladen. Das von `GetStream()` zurückgegebene Objekt wird ein `SqliteBlob`-Objekt, wenn Sie richtig vorgegangen sind.
 
 [!code-csharp[](../../../../samples/snippets/standard/data/sqlite/StreamingSample/Program.cs?name=snippet_Read)]

@@ -8,14 +8,14 @@ helpviewer_keywords:
 ms.assetid: 115f7a2f-d422-4605-ab36-13a8dd28142a
 ms.openlocfilehash: 70514811a9d236dc485f64fc34297cdb057a1512
 ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/30/2019
 ms.locfileid: "73124277"
 ---
 # <a name="interop-marshaling"></a>Interop-Marshalling
 
-Interop-Marshalling steuert, wie Daten in Methodenargumenten und Rückgabewerten zwischen verwaltetem und nicht verwaltetem Speicher während Aufrufen übergeben werden. Interop-Marshalling ist eine Laufzeitaktivität, die vom Marshallingdienst der Common Language Runtime ausgeführt wird.
+Das Interop-Marshalling steuert, wie Daten in Methodenargumenten und Rückgabewerten zwischen verwaltetem und nicht verwaltetem Speicher während Aufrufen übergeben werden. Interop-Marshalling ist eine Laufzeitaktivität, die vom Marshallingdienst der Common Language Runtime ausgeführt wird.
 
 Die meisten Datentypen verfügen über gemeinsame Darstellungen im verwalteten und nicht verwalteten Speicher. Der Interop-Marshaller behandelt diese Typen für Sie. Andere Typen können im verwalteten Speicher nicht eindeutig oder gar nicht dargestellt sein.
 
@@ -42,7 +42,7 @@ COM verfügt ebenfalls über einen Marshaller, der Daten zwischen COM-Apartments
 
 ### <a name="com-clients-and-managed-servers"></a>COM-Clients und verwaltete Server
 
-Ein exportierter verwalteter Server mit einer vom [Assembly Registration-Tool (Regasm.exe)](../tools/regasm-exe-assembly-registration-tool.md) registrierten Typbibliothek besitzt einen auf `Both` festgelegten `ThreadingModel`-Registrierungseintrag. Dieser Wert gibt an, dass der Server in einem Singlethread-Apartment (STA) oder einem Multithread-Apartment (MTA) aktiviert werden kann. Das Server Objekt wird im selben Apartment wie der Aufrufer erstellt, wie in der folgenden Tabelle gezeigt:
+Ein exportierter verwalteter Server mit einer vom [Assembly Registration-Tool (Regasm.exe)](../tools/regasm-exe-assembly-registration-tool.md) registrierten Typbibliothek besitzt einen auf `Both` festgelegten `ThreadingModel`-Registrierungseintrag. Dieser Wert gibt an, dass der Server in einem Singlethread-Apartment (STA) oder einem Multithread-Apartment (MTA) aktiviert werden kann. Wie in der folgenden Tabelle dargestellt, wird das Serverobjekt im selben Apartment wie sein Aufrufer erstellt.
 
 |COM-Client|.NET-Server|Marshallinganforderungen|
 |----------------|-----------------|-----------------------------|
@@ -66,7 +66,7 @@ Der Autor der Komponente legt die Threadaffinität eines COM-Servers fest. Die f
 |MTA (Standard)|MTA<br /><br /> STA|Interop-Marshalling<br /><br /> Interop- und COM-Marshalling|
 |STA|MTA<br /><br /> STA|Interop- und COM-Marshalling<br /><br /> Interop-Marshalling|
 
-Wenn ein verwalteter Client und ein nicht verwalteter Server im selben Apartment sind, verarbeitet der Interop-Marshallingdienst das gesamte Daten-Marshalling. Wenn Client und Server in unterschiedlichen Apartments initialisiert werden, ist jedoch auch COM-Marshalling erforderlich. Die folgende Abbildung zeigt die Elemente eines Apartment übergreifenden Aufrufes:
+Wenn ein verwalteter Client und ein nicht verwalteter Server im selben Apartment sind, verarbeitet der Interop-Marshallingdienst das gesamte Daten-Marshalling. Wenn Client und Server in unterschiedlichen Apartments initialisiert werden, ist jedoch auch COM-Marshalling erforderlich. Die folgende Abbildung zeigt die Elemente eines apartmentübergreifenden Aufrufs:
 
 ![COM-Marshalling](./media/interop-marshaling/single-process-across-multi-apartment.gif "Apartmentübergreifender Aufruf zwischen einem .NET-Client und einem COM-Objekt")
 
@@ -82,12 +82,12 @@ Anleitungen zum expliziten Auswählen eines Apartmentmodells finden Sie unter [M
 
 ## <a name="marshaling-remote-calls"></a>Marshalling von Remoteaufrufen
 
-Wie bei apartmentübergreifendem Marshalling ist bei jedem Aufruf zwischen verwaltetem und nicht verwaltetem Code COM-Marshalling beteiligt, wenn sich die Objekte in verschiedenen Prozessen befinden. Beispiel:
+Wie bei apartmentübergreifendem Marshalling ist bei jedem Aufruf zwischen verwaltetem und nicht verwaltetem Code COM-Marshalling beteiligt, wenn sich die Objekte in verschiedenen Prozessen befinden. Zum Beispiel:
 
 - Ein COM-Client, der einen verwalteten Server auf einem Remotehost aufruft, verwendet verteiltes COM (DCOM).
 - Ein verwalteter Client, der einen COM-Server auf einem Remotehost aufruft, verwendet DCOM.
 
-Die folgende Abbildung zeigt, wie Interop-Marshalling und COM-Marshalling Kommunikationskanäle über Prozess-und Host Grenzen hinweg bereitstellen:
+Die folgende Abbildung zeigt, wie Interop-Marshalling und COM-Marshalling Kommunikationskanäle über Prozess- und Hostgrenzen hinweg bereitstellen:
 
 ![COM-Marshalling](./media/interop-marshaling/interop-and-com-marshaling.gif "Prozessübergreifendes Marshalling")
 
@@ -109,9 +109,9 @@ Die Anzahl der Prozessgrenzen zwischen Aufrufer und Aufgerufenem ist irrelevant.
 
 ### <a name="managed-remoting"></a>Verwaltetes Remoting
 
-Die Laufzeit bietet auch verwaltetes Remoting, das Sie zum Einrichten eines Kommunikationskanals zwischen verwalteten Objekten über Prozess- und Hostgrenzen hinweg verwenden können. Verwaltete Remoting-Funktionen können eine Firewall zwischen den kommunizierenden Komponenten aufnehmen, wie in der folgenden Abbildung gezeigt:
+Die Laufzeit bietet auch verwaltetes Remoting, das Sie zum Einrichten eines Kommunikationskanals zwischen verwalteten Objekten über Prozess- und Hostgrenzen hinweg verwenden können. Das verwaltete Remoting kann eine Firewall zwischen den kommunizierenden Komponenten unterstützen. Dies wird in der folgenden Abbildung gezeigt.
 
-![SOAP oder TcpChannel](./media/interop-marshaling/interop-remote-soap-or-tcp.gif "Firewallübergreifende Remoteaufrufe mit SOAP oder der TcpChannel-Klasse") Remote Aufrufe über Firewalls mithilfe von SOAP oder der TcpChannel-Klasse
+![SOAP oder TcpChannel](./media/interop-marshaling/interop-remote-soap-or-tcp.gif "Firewallübergreifende Remoteaufrufe mit SOAP oder der TcpChannel-Klasse") Firewallübergreifende Remoteaufrufe mit SOAP oder der TcpChannel-Klasse
 
 Einige nicht verwaltete Aufrufe können durch SOAP geleitet werden, z.B. die Aufrufe zwischen Serviced Components und COM.
 
@@ -119,11 +119,11 @@ Einige nicht verwaltete Aufrufe können durch SOAP geleitet werden, z.B. die Auf
 
 |Titel|Beschreibung|
 |-----------|-----------------|
-|[Standardmäßiges Marshallingverhalten](default-marshaling-behavior.md)|Beschreibt die Regeln, die der Interop-Marshallingdienst für das Marshalling von Daten verwendet.|
+|[Default Marshaling Behavior (Standardmäßiges Marshallingverhalten)](default-marshaling-behavior.md)|Beschreibt die Regeln, die der Interop-Marshallingdienst für das Marshalling von Daten verwendet.|
 |[Marshallen von Daten mit Plattformaufruf](marshaling-data-with-platform-invoke.md)|Beschreibt, wie Sie Methodenparameter deklarieren und Argumente an Funktionen übergeben, die aus nicht verwalteten Bibliotheken exportiert wurden.|
-|[Marshallen von Daten mit COM-Interop](marshaling-data-with-com-interop.md)|Beschreibt, wie Sie COM-Wrapper anpassen, um das Marshallingverhalten zu ändern.|
-|[Gewusst wie: Migrieren von verwaltetem Code DCOM zu WCF](how-to-migrate-managed-code-dcom-to-wcf.md)|Beschreibt, wie Sie von DCOM zu WCF migrieren.|
-|[Gewusst wie: Zuordnen von HRESULTs und Ausnahmen](how-to-map-hresults-and-exceptions.md)|Beschreibt, wie Sie benutzerdefinierte Ausnahmen zu HRESULTs zuordnen, und stellt die vollständige Zuordnung von jedem HRESULT zu seiner vergleichbaren Ausnahmeklasse in .NET Framework bereit.|
+|[Marshaling Data with COM Interop (Marshallen von Daten mit COM-Interop)](marshaling-data-with-com-interop.md)|Beschreibt, wie Sie COM-Wrapper anpassen, um das Marshallingverhalten zu ändern.|
+|[How to: Migrieren von verwaltetem Code DCOM zu WCF](how-to-migrate-managed-code-dcom-to-wcf.md)|Beschreibt, wie Sie von DCOM zu WCF migrieren.|
+|[How to: Zuordnen von HRESULT-Werten und Ausnahmen](how-to-map-hresults-and-exceptions.md)|Beschreibt, wie Sie benutzerdefinierte Ausnahmen zu HRESULTs zuordnen, und stellt die vollständige Zuordnung von jedem HRESULT zu seiner vergleichbaren Ausnahmeklasse in .NET Framework bereit.|
 |[Interoperation mit generischen Typen](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms229590(v=vs.100))|Beschreibt, welche Aktionen bei Verwendung von generischen Typen für COM-Interoperabilität unterstützt werden.|
 |[Interoperabilität mit nicht verwaltetem Code](index.md)|Beschreibt Interoperabilitätsdienste, die von der Common Language Runtime bereitgestellt werden.|
 |[Erweiterte COM-Interoperabilität](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx(v=vs.100))|Stellt Links zu weiteren Informationen über das Einbinden von COM-Komponenten in Ihre .NET Framework-Anwendung bereit.|

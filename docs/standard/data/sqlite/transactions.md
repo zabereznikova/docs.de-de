@@ -1,38 +1,38 @@
 ---
 title: Transaktionen
 ms.date: 12/13/2019
-description: Erfahren Sie, wie Sie Transaktionen verwenden.
+description: Hier erfahren Sie, wie Sie Transaktionen einsetzen.
 ms.openlocfilehash: 4b72a1573a560ffd1bfd0f54d46ab3b135280976
 ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 12/25/2019
 ms.locfileid: "75450381"
 ---
 # <a name="transactions"></a>Transaktionen
 
-Mit Transaktionen können Sie mehrere SQL-Anweisungen in einer einzelnen Arbeitseinheit gruppieren, die als eine atomarische Einheit an die Datenbank übergeben wird. Wenn eine Anweisung in der Transaktion fehlschlägt, können die von den vorherigen Anweisungen vorgenommenen Änderungen rückgängig gemacht werden. Der anfängliche Status der Datenbank, in dem die Transaktion gestartet wurde, wird beibehalten. Die Verwendung einer Transaktion kann auch die Leistung von SQLite verbessern, wenn Sie zahlreiche Änderungen an der Datenbank gleichzeitig durchführen.
+Mit Transaktionen können Sie mehrere SQL-Anweisungen in einer einzelnen Arbeitseinheit gruppieren, die als unteilbare Einheit an die Datenbank übergeben wird. Schlägt eine Anweisung innerhalb der Transaktion fehl, können die durch die vorherigen Anweisungen vorgenommenen Änderungen durch ein Rollback rückgängig gemacht werden. Der Anfangszustand der Datenbank vor Beginn der Transaktion wird beibehalten. Bei der gleichzeitigen Ausführung von zahlreichen Änderungen können Sie durch den Einsatz einer Transaktion auch die Leistung von SQLite verbessern.
 
-## <a name="concurrency"></a>Nebenläufigkeit
+## <a name="concurrency"></a>Parallelität
 
-In SQLite darf jeweils nur eine Transaktion die Änderungen in der Datenbank ausstehend haben. Aus diesem Grund kann bei Aufrufen von <xref:Microsoft.Data.Sqlite.SqliteConnection.BeginTransaction%2A> und den `Execute` Methoden auf <xref:Microsoft.Data.Sqlite.SqliteCommand> ein Timeout auftreten, wenn eine andere Transaktion zu lange dauert.
+In SQLite darf jeweils nur eine Transaktion über ausstehende Änderungen in der Datenbank verfügen. Daher kann bei einem Aufruf der Methoden <xref:Microsoft.Data.Sqlite.SqliteConnection.BeginTransaction%2A> und `Execute` in der <xref:Microsoft.Data.Sqlite.SqliteCommand>-Klasse ein Timeout auftreten, wenn die Ausführung einer anderen Transaktion zu lange dauert.
 
-Weitere Informationen zu sperren, Wiederholungen und Timeouts finden Sie unter [Datenbankfehler](database-errors.md).
+Weitere Informationen zu Sperren, erneuten Versuchen und Timeouts finden Sie unter [Datenbankfehler](database-errors.md).
 
 ## <a name="isolation-levels"></a>Isolationsgrade
 
-Transaktionen sind standardmäßig in SQLite **serialisierbar** . Diese Isolationsstufe gewährleistet, dass alle innerhalb einer Transaktion vorgenommenen Änderungen vollständig isoliert sind. Andere Anweisungen, die außerhalb der Transaktion ausgeführt werden, sind von den Änderungen der Transaktion nicht betroffen.
+Standardmäßig sind Transaktionen in SQLite **serialisierbar**. Mit dieser Isolationsstufe wird sichergestellt, dass alle innerhalb einer Transaktion vorgenommenen Änderungen vollständig isoliert sind. Außerhalb der Transaktion ausgeführte Anweisungen sind von den Änderungen der Transaktion nicht betroffen.
 
-SQLite unterstützt bei Verwendung eines freigegebenen Caches auch **Lesevorgänge ohne** Commit. Diese Ebene ermöglicht Dirty Reads, nicht wiederholbare Lesevorgänge und Phantom Werte:
+Bei Verwendung eines freigegebenen Caches unterstützt SQLite auch die Isolationsstufe **Lesen ohne Commit**. In dieser Stufe sind „Dirty Reads“, nicht wiederholbare Lesevorgänge und Phantomlesevorgänge zulässig:
 
-- Eine *Dirty Read* tritt auf, wenn Änderungen, die in einer Transaktion ausstehen, von einer Abfrage außerhalb der Transaktion zurückgegeben werden, für die Änderungen in der Transaktion wird jedoch ein Rollback ausgeführt. Die Ergebnisse enthalten Daten, die niemals tatsächlich an die Datenbank übertragen wurden.
+- Bei einem *Dirty Read* genannten Lesevorgang werden in einer Transaktion ausstehende Änderungen von einer Abfrage außerhalb der Transaktion zurückgegeben. Für die Änderungen innerhalb der Transaktion wird jedoch ein Rollback ausgeführt. Die Ergebnisse enthalten Daten, für die kein echter Commit in der Datenbank ausgeführt wurde.
 
-- Ein *nicht wiederholbarer Lese* Vorgang tritt auf, wenn eine Transaktion die gleiche Zeile zweimal abfragt. die Ergebnisse unterscheiden sich jedoch, weil Sie von einer anderen Transaktion zwischen den beiden Abfragen geändert wurden.
+- Bei einem *nicht wiederholbaren Lesevorgang* wird eine Zeile zweimal von einer Transaktion abgefragt, jedoch mit unterschiedlichen Ergebnissen, da die Zeile zwischen den beiden Abfragen von einer anderen Transaktion geändert wurde.
 
-- *Phantoms* sind Zeilen, die geändert oder hinzugefügt werden, um die WHERE-Klausel einer Abfrage während einer Transaktion zu erfüllen. Wenn dies zulässig ist, kann dieselbe Abfrage andere Zeilen zurückgeben, wenn Sie zweimal in derselben Transaktion ausgeführt wird.
+- Bei einem *Phantomlesevorgang* sind Zeilen vorhanden, die zur Erfüllung der WHERE-Klausel einer Abfrage während einer Transaktion geändert oder hinzugefügt wurden. Ist ein solcher Vorgang zulässig, kann eine Abfrage unterschiedliche Zeilen zurückgeben, wenn sie zweimal in derselben Transaktion ausgeführt wird.
 
-Microsoft. Data. sqlite behandelt den IsolationLevel, der an <xref:Microsoft.Data.Sqlite.SqliteConnection.BeginTransaction%2A> als minimale Ebene übertragen wird. Die tatsächliche Isolationsstufe wird entweder als Lese-oder serialisierbar herauf gestuft.
+Microsoft.Data.Sqlite behandelt den für „IsolationLevel“ an <xref:Microsoft.Data.Sqlite.SqliteConnection.BeginTransaction%2A> übergegebenen Wert als Mindeststufe. Die tatsächliche Isolationsstufe wird höhergestuft auf „Lesen ohne Commit“ oder „serialisierbar“.
 
-Der folgende Code simuliert eine Dirty Read. Beachten Sie, dass die Verbindungs Zeichenfolge `Cache=Shared`enthalten muss.
+Mit dem folgenden Code wird ein „Dirty Read“ simuliert. Beachten Sie, dass die Verbindungszeichenfolge `Cache=Shared` enthalten muss.
 
 [!code-csharp[](../../../../samples/snippets/standard/data/sqlite/DirtyReadSample/Program.cs?name=snippet_DirtyRead)]

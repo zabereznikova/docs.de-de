@@ -11,12 +11,12 @@ metadata:
   interactive: csharp
   nextTutorialHref: list-collection.yml
   nextTutorialTitle: Die Listensammlung
-  ms.openlocfilehash: ab709b6b30b5a173e2faf08b577e4d7a3d9a9034
-  ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+  ms.openlocfilehash: b0a967ea2e5212887d617e76b4ecb445cfbb8b55
+  ms.sourcegitcommit: 8b02d42f93adda304246a47f49f6449fc74a3af4
   ms.translationtype: HT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 03/14/2020
-  ms.locfileid: "73969431"
+  ms.lasthandoff: 04/24/2020
+  ms.locfileid: "82135931"
 items:
 - durationInMinutes: 1
   content: >
@@ -173,6 +173,9 @@ items:
     > [!NOTE]
 
     > Dieses Onlinecodierungstutorial befindet sich im Vorschaumodus. Wenn Probleme auftreten, melden Sie diese [im dotnet/try-Repository](https://github.com/dotnet/try/issues).
+- title: Erstellte geschachtelte Schleifen
+  durationInMinutes: 10
+  content: "Eine `while`-, `do`- oder `for`-Schleife kann in einer anderen Schleife geschachtelt werden, um mithilfe der Kombination aus jedem Element in der äußeren Schleife und jedem Element in der inneren Schleife eine Matrix zu erstellen. Durch die Umsetzung dessen können Sie mehrere alphanumerische Paare erstellen, die Zeilen und Spalten darstellen.\n\nEine `for`-Schleife kann die Zeilen generieren:\n\n```csharp\nfor (int row = 1; row < 11; row++)\n{\n  Console.WriteLine($\"The row is {row}\");\n}\n```\n\nEine andere Schleife kann die Spalten generieren:\n\n```csharp\nfor (char column = 'a'; column < 'k'; column++)\n{\n  Console.WriteLine($\"The column is {column}\");\n}\n```\n\nSie können eine Schleife innerhalb der anderen schachteln, um Paare zu bilden:\n  \n```csharp\nfor (int row = 1; row < 11; row++)\n{\n  for (char column = 'a'; column < 'k'; column++)\n  {\n    Console.WriteLine($\"The cell is ({row}, {column})\");\n  }\n}\n```\n\nSie können erkennen, dass sich die äußere Schleife für jede vollständige Ausführung der inneren Schleife einmal erhöht. Kehren Sie die Schachtelung der Zeilen und Spalten um, und erkennen Sie selbst, was sich ändert.\n"
 - title: Kombinieren von Branches und Schleifen
   durationInMinutes: 12
   content: >
@@ -192,7 +195,7 @@ items:
     > [!NOTE]
 
     > Dieses Onlinecodierungstutorial befindet sich im Vorschaumodus. Wenn Probleme auftreten, melden Sie diese [im dotnet/try-Repository](https://github.com/dotnet/try/issues).
-- title: Herausforderung erfüllen
+- title: Übung abgeschlossen
   durationInMinutes: 1
   content: >
     Sieht ihr Code ungefähr wie der Folgende aus?

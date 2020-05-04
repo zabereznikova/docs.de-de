@@ -7,56 +7,56 @@ helpviewer_keywords:
 ms.assetid: 17538984-84fe-43c9-82c8-724c9529fe8b
 ms.openlocfilehash: aa47304cf2bded93bdb95ffe7dfa35bb37d9a643
 ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/12/2019
 ms.locfileid: "73976458"
 ---
 # <a name="overview-of-the-visual-basic-application-model"></a>Übersicht über das Visual Basic-Anwendungsmodell
 
-Visual Basic bietet ein klar definiertes Modell zum Steuern des Verhaltens von Windows Forms Anwendungen: das Visual Basic Anwendungsmodell. Dieses Modell enthält Ereignisse für die Handhabung des Starts und herunter Fahrens der Anwendung sowie für Ereignisse zum Abfangen von Ausnahme Fehlern. Es bietet auch Unterstützung für die Entwicklung von Einzelinstanzanwendungen. Das Anwendungsmodell ist erweiterbar, sodass Entwickler, die mehr Kontrolle benötigen, ihre über schreibbaren Methoden anpassen können.  
+Visual Basic bietet mit dem Visual Basic-Anwendungsmodell ein klar definiertes Modell zur Steuerung des Verhaltens von Windows Forms-Anwendungen. Dieses Modell enthält Ereignisse, um den Start und das Herunterfahren der Anwendung zu verarbeiten sowie zum Abfangen von Ausnahmefehlern. Es bietet auch Unterstützung für die Entwicklung von Einzelinstanzanwendungen. Da das Anwendungsmodell zudem erweiterbar ist, können Entwickler, die mehr Kontrolle benötigen, die überschreibbaren Methoden anpassen.  
   
-## <a name="uses-for-the-application-model"></a>Verwendungszwecke für das Anwendungsmodell  
+## <a name="uses-for-the-application-model"></a>Verwendungsmöglichkeiten für das Anwendungsmodell  
 
- Eine typische Anwendung muss Aufgaben ausführen, wenn Sie gestartet und heruntergefahren wird. Beispielsweise kann die Anwendung beim Starten einen Begrüßungsbildschirm anzeigen, Datenbankverbindungen herstellen, einen gespeicherten Zustand laden usw. Wenn die Anwendung heruntergefahren wird, kann Sie Datenbankverbindungen schließen, den aktuellen Zustand speichern usw. Außerdem kann die Anwendung bestimmten Code ausführen, wenn die Anwendung unerwartet heruntergefahren wird, z. b. während einer nicht behandelten Ausnahme.  
+ In der Regel führt eine Anwendung beim Starten und beim Herunterfahren Aufgaben aus. Beispielsweise kann sie beim Starten einen Begrüßungsbildschirm anzeigen, Datenbankverbindungen herstellen oder einen gespeicherten Zustand laden. Beim Herunterfahren kann die Anwendung etwa Datenbankverbindungen schließen, den aktuellen Zustand speichern usw. Außerdem kann die Anwendung einen bestimmten Code ausführen, wenn sie unerwartet heruntergefahren wird, z. B. bei einem Ausnahmefehler.  
   
- Das Visual Basic-Anwendungsmodell erleichtert das Erstellen einer *Einzelinstanzanwendung* . Eine Einzelinstanzanwendung unterscheidet sich von einer normalen Anwendung darin, dass jeweils nur eine Instanz der Anwendung ausgeführt werden kann. Der Versuch, eine andere Instanz einer Einzelinstanzanwendung zu starten, führt dazu, dass die ursprüngliche Instanz benachrichtigt wird – mithilfe des `StartupNextInstance` Ereignisses –, dass ein weiterer Startversuch durchgeführt wurde. Die Benachrichtigung enthält die Befehlszeilenargumente der nachfolgenden Instanz. Die nachfolgende Instanz der Anwendung wird dann geschlossen, bevor eine Initialisierung erfolgen kann.  
+ Mithilfe des Visual Basic-Anwendungsmodells können Sie ganz einfach eine *Einzelinstanzanwendung* erstellen. Eine Einzelinstanzanwendung unterscheidet sich von einer normalen Anwendung dadurch, dass jeweils nur eine Instanz der Anwendung ausgeführt werden kann. Der Versuch, eine weitere Instanz einer Einzelinstanzanwendung zu starten, führt dazu, dass die ursprüngliche Instanz mithilfe des Ereignisses `StartupNextInstance` darüber informiert wird, dass ein weiterer Startversuch durchgeführt wurde. Die Benachrichtigung enthält die Befehlszeilenargumente der nachfolgenden Instanz. Bevor eine Initialisierung erfolgen kann, wird die nachfolgende Instanz der Anwendung geschlossen.  
   
- Eine Einzelinstanzanwendung wird gestartet und überprüft, ob es sich um die erste Instanz oder eine nachfolgende Instanz der Anwendung handelt:  
+ Eine Einzelinstanzanwendung überprüft nach dem Start, ob sie die erste Instanz oder eine nachfolgende Instanz der Anwendung ist:  
   
-- Wenn es sich um die erste Instanz handelt, wird Sie wie üblich gestartet.  
+- Handelt es sich um die erste Instanz, wird die Anwendung wie üblich gestartet.  
   
-- Jeder nachfolgende Versuch zum Starten der Anwendung, während die erste Instanz ausgeführt wird, führt zu einem sehr unterschiedlichen Verhalten. Der nachfolgende Versuch benachrichtigt die erste Instanz über die Befehlszeilenargumente und beendet diese sofort. Die erste Instanz behandelt das `StartupNextInstance` Ereignis, um zu bestimmen, was die Befehlszeilenargumente der nachfolgenden Instanz waren, und wird weiterhin ausgeführt.  
+- Jeder nachfolgende Versuch, die Anwendung während der Ausführung der ersten Instanz zu starten, führt zu einem ganz anderen Verhalten. Die nachfolgende Instanz übergibt die Befehlszeilenargumente an die erste Instanz und wird dann sofort beendet. Die erste Instanz verarbeitet das Ereignis `StartupNextInstance` zur Bestimmung der Befehlszeilenargumente der nachfolgenden Instanz und wird weiter ausgeführt.  
   
-     Dieses Diagramm zeigt, wie eine nachfolgende Instanz die erste Instanz signalisiert:  
+     Im folgenden Diagramm wird die Signalübergabe von der nachfolgenden Instanz an die erste Instanz dargestellt:  
   
-     ![Diagramm, das ein einzelnes instanzanwendungsbild anzeigt.](./media/overview-of-the-visual-basic-application-model/single-instance-application.gif)  
+     ![Diagramm einer Einzelinstanzanwendung](./media/overview-of-the-visual-basic-application-model/single-instance-application.gif)  
   
- Wenn Sie das `StartupNextInstance`-Ereignis behandeln, können Sie steuern, wie sich die Einzelinstanzanwendung verhält. Beispielsweise wird Microsoft Outlook in der Regel als Einzelinstanzanwendung ausgeführt. Wenn Outlook ausgeführt wird und Sie versuchen, Outlook erneut zu starten, wird der Fokus auf die ursprüngliche Instanz verlagert, es wird jedoch keine andere Instanz geöffnet.  
+ Über die Behandlung des Ereignisses `StartupNextInstance` können Sie steuern, wie sich die Einzelinstanzanwendung verhalten soll. Microsoft Outlook wird z. B. in der Regel als Einzelinstanzanwendung ausgeführt. Wenn Sie nun versuchen, Outlook erneut zu starten, obwohl es bereits ausgeführt wird, wechselt der Fokus auf die ursprüngliche Instanz, es wird jedoch keine weitere Instanz geöffnet.  
   
 ## <a name="events-in-the-application-model"></a>Ereignisse im Anwendungsmodell  
 
- Im Anwendungsmodell sind folgende Ereignisse zu finden:  
+ Folgende Ereignisse können im Anwendungsmodell auftreten:  
   
-- **Anwendungsstart**. Die Anwendung löst das <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Startup>-Ereignis aus, wenn es gestartet wird. Durch die Behandlung dieses Ereignisses können Sie Code hinzufügen, der die Anwendung initialisiert, bevor das Hauptformular geladen wird. Das `Startup` Ereignis ermöglicht auch das Abbrechen der Ausführung der Anwendung während dieser Phase des Start Prozesses, falls gewünscht.  
+- **Starten der Anwendung**: Beim Startvorgang löst die Anwendung das Ereignis <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Startup> aus. Bei der Behandlung dieses Ereignisses können Sie Code hinzufügen, durch den die Anwendung vor dem Laden des Hauptformulars initialisiert wird. Über das `Startup`-Ereignis können Sie die Ausführung der Anwendung in dieser Phase des Startvorgangs gegebenenfalls auch abbrechen.  
   
-     Sie können die Anwendung so konfigurieren, dass ein Begrüßungsbildschirm angezeigt wird, während der Startcode der Anwendung ausgeführt wird. Standardmäßig wird der Begrüßungsbildschirm vom Anwendungsmodell unterdrückt, wenn entweder das Befehlszeilenargument `/nosplash` oder `-nosplash` verwendet wird.  
+     Sie können die Anwendung so konfigurieren, dass während der Ausführung des Startcodes ein Begrüßungsbildschirm angezeigt wird. Standardmäßig wird der Begrüßungsbildschirm vom Anwendungsmodell unterdrückt, wenn eines der beiden Befehlszeilenargumente `/nosplash` oder `-nosplash` verwendet wird.  
   
-- **Einzelinstanzanwendungen**. Das <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.StartupNextInstance>-Ereignis wird ausgelöst, wenn eine nachfolgende Instanz einer Einzelinstanzanwendung gestartet wird. Das-Ereignis übergibt die Befehlszeilenargumente der nachfolgenden Instanz.  
+- **Einzelinstanzanwendungen**: Wird eine nachfolgende Instanz einer Einzelinstanzanwendung gestartet, wird das Ereignis <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.StartupNextInstance> ausgelöst. Dieses übergibt die Befehlszeilenargumente der nachfolgenden Instanz.  
   
-- **Nicht behandelte Ausnahmen**. Wenn die Anwendung auf eine nicht behandelte Ausnahme stößt, löst Sie das <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UnhandledException>-Ereignis aus. Der Handler für dieses Ereignis kann die Ausnahme untersuchen und bestimmen, ob die Ausführung fortgesetzt werden soll.  
+- **Ausnahmefehler**: Bei einem Ausnahmefehler wird das Ereignis <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UnhandledException> ausgelöst. Der Handler für dieses Ereignis kann die Ausnahme untersuchen und entscheiden, ob die Ausführung fortgesetzt werden soll.  
   
-     Das `UnhandledException`-Ereignis wird in einigen Fällen nicht ausgelöst. Weitere Informationen finden Sie unter <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UnhandledException>.  
+     Unter bestimmten Umständen wird das Ereignis `UnhandledException` nicht ausgelöst. Weitere Informationen finden Sie unter <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UnhandledException>.  
   
-- **Netzwerkkonnektivitätsänderungen**. Wenn die Netzwerkverfügbarkeit des Computers geändert wird, löst die Anwendung das <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.NetworkAvailabilityChanged>-Ereignis aus.  
+- **Änderungen der Netzwerkkonnektivität**: Bei Änderungen der Verfügbarkeit des Computernetzwerks wird das Ereignis <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.NetworkAvailabilityChanged> ausgelöst.  
   
-     Das `NetworkAvailabilityChanged`-Ereignis wird in einigen Fällen nicht ausgelöst. Weitere Informationen finden Sie unter <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.NetworkAvailabilityChanged>.  
+     Unter bestimmten Umständen wird das Ereignis `NetworkAvailabilityChanged` nicht ausgelöst. Weitere Informationen finden Sie unter <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.NetworkAvailabilityChanged>.  
   
-- Die **Anwendung wurde heruntergefahren**. Die Anwendung stellt das <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Shutdown> Ereignis bereit, um zu signalisieren, wann das Herunterfahren beendet wird. In diesem Ereignishandler können Sie sicherstellen, dass die Vorgänge, die Ihre Anwendung ausführen muss – schließen und speichern, z. b. –, abgeschlossen sind. Sie können Ihre Anwendung so konfigurieren, dass Sie heruntergefahren wird, wenn das Hauptformular geschlossen wird, oder nur Herunterfahren, wenn alle Formulare geschlossen werden.  
+- **Herunterfahren der Anwendung**: Über das Ereignis <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Shutdown> signalisiert die Anwendung, dass sie gleich heruntergefahren wird. In diesem Ereignishandler können Sie festlegen, dass die erforderlichen Vorgänge (wie z. B. Schließen und Speichern) auch abgeschlossen werden. Sie können die Anwendung so konfigurieren, dass sie beim Schließen des Hauptformulars heruntergefahren wird oder erst dann, wenn alle Formulare geschlossen werden.  
   
 ## <a name="availability"></a>Verfügbarkeit  
 
- Standardmäßig ist das Visual Basic Anwendungsmodell für Windows Forms Projekte verfügbar. Wenn Sie die Anwendung so konfigurieren, dass ein anderes Start Objekt verwendet wird, oder wenn Sie den Anwendungscode mit einem benutzerdefinierten `Sub Main`starten, muss dieses Objekt bzw. diese Klasse möglicherweise eine Implementierung der <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase>-Klasse zur Verwendung des Anwendungs Modells bereitstellen. Informationen zum Ändern des Start Objekts finden Sie unter [Seite "Anwendung", Projekt-Designer (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic).  
+ Das Visual Basic-Anwendungsmodell ist standardmäßig für Windows Forms-Projekte verfügbar. Wenn Sie für die Anwendung ein anderes Startobjekt konfigurieren, oder wenn Sie den Anwendungscode mit einer benutzerdefinierten `Sub Main`-Klasse starten, muss das Objekt bzw. die Klasse möglicherweise eine Implementierung der Klasse <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase>bereitstellen, um das Anwendungsmodell verwenden zu können. Informationen zum Ändern des Startobjekts finden Sie unter [Seite „Anwendung“, Projekt-Designer (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic).  
   
 ## <a name="see-also"></a>Siehe auch
 

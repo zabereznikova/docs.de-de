@@ -17,7 +17,7 @@ helpviewer_keywords:
 ms.assetid: 47d4c39d-30e1-4c7b-8a2e-301325390647
 ms.openlocfilehash: e11152dc626b1e3619b9ecbc04d8a237ca9f13d3
 ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 03/25/2020
 ms.locfileid: "80248042"
@@ -27,7 +27,7 @@ ms.locfileid: "80248042"
 Attribute können verwendet werden, um die XML-Serialisierung eines Objekts zu steuern oder um einen alternativen XML-Stream aus derselben Reihe von Klassen zu erstellen. Weitere Informationen zum Erstellen eines alternativen XML-Streams finden Sie unter [Vorgehensweise: Angeben eines alternativen Elementnamens für einen XML-Stream](how-to-specify-an-alternate-element-name-for-an-xml-stream.md).
 
 > [!NOTE]
-> Wenn die generierte XML-Datei mit Abschnitt 5 des W3C-Dokuments (World Wide Web Consortium) mit dem Titel [Simple Object Access Protocol (SOAP) 1.1](https://www.w3.org/TR/2000/NOTE-SOAP-20000508/)übereinstimmen muss, verwenden Sie die attribute, die unter [Attribute, die codierte SOAP-Serialisierung steuern,](attributes-that-control-encoded-soap-serialization.md)aufgeführt sind.
+> Wenn der generierte XML-Stream Abschnitt 5 des vom World Wide Web Consortium (W3C) herausgegebenen Dokument mit dem Titel [Simple Object Access Protocol (SOAP) 1.1](https://www.w3.org/TR/2000/NOTE-SOAP-20000508/) entsprechen soll, verwenden Sie die unter [Attribute zur Steuerung der Serialisierung von codiertem SOAP aufgeführten Attribute](attributes-that-control-encoded-soap-serialization.md).
 
 Standardmäßig wird der Name eines XML-Elements durch den Klassen- oder Membernamen festgelegt. In einer einfachen Klasse namens `Book` wird, wie in folgendem Beispiel gezeigt, durch ein Feld mit der Bezeichnung `ISBN` ein XML-Elementtag \<ISBN> erstellt.
 
@@ -70,7 +70,7 @@ Weitere Informationen zu Attributen finden Sie unter [Attribute](../../../docs/s
 
 ## <a name="controlling-array-serialization"></a>Steuern der Serialisierung von Arrays
 
-Die Attribute <xref:System.Xml.Serialization.XmlArrayAttribute> und <xref:System.Xml.Serialization.XmlArrayItemAttribute> dienen zum Steuern der Serialisierung von Arrays. Mit diesen Attributen können Sie den Elementnamen, den Namespace und den XSD-Schemadatentyp steuern (wie im vom World Wide Web Consortium [www.w3.org] herausgegebenen Dokument mit dem Titel "XML Schema Part 2: Datatypes" definiert). Sie können auch die Typen angeben, die in einem Array enthalten sein können.
+Die Attribute <xref:System.Xml.Serialization.XmlArrayAttribute> und <xref:System.Xml.Serialization.XmlArrayItemAttribute> dienen zum Steuern der Serialisierung von Arrays. Mit diesen Attributen können Sie den Elementnamen, den Namespace und den XSD-Schemadatentyp steuern (wie im vom World Wide Web Consortium [www.w3.org] herausgegebenen Dokument mit folgendem Titel definiert: „XML Schema Part 2: Datatypes“). Sie können auch die Typen angeben, die in einem Array enthalten sein können.
 
 Durch <xref:System.Xml.Serialization.XmlArrayAttribute> werden die Eigenschaften des einschließenden XML-Elements bestimmt, das aus der Serialisierung eines Arrays hervorgeht. So wird beispielsweise durch das Serialisieren des unten aufgeführten Arrays standardmäßig ein XML-Element mit der Bezeichnung `Employees` erzeugt. Das `Employees`-Element enthält eine Reihe von Elementen, die nach dem Arraytyp `Employee` benannt sind.
 
@@ -241,7 +241,7 @@ Eine serialisierte Instanz könnte etwa wie folgt aussehen.
 </Group>
 ```
 
-Eine weitere Möglichkeit, die beiden XML-Streams zu unterscheiden, besteht in der Verwendung des Tools für die XML-Schemadefinition zur Generierung der XML-Schemadokumentdateien (XSD) aus dem kompilierten Code. (Weitere Informationen zur Verwendung des Tools finden Sie unter [Das XML-Schemadefinitionstool und die XML-Serialisierung](the-xml-schema-definition-tool-and-xml-serialization.md).) Wenn kein Attribut auf das Feld angewendet wird, beschreibt das Schema das Element wie folgt.
+Eine weitere Möglichkeit, die beiden XML-Streams zu unterscheiden, besteht in der Verwendung des Tools für die XML-Schemadefinition zur Generierung der XML-Schemadokumentdateien (XSD) aus dem kompilierten Code. (Nähere Informationen zur Verwendung dieses Tools finden Sie unter [Das XML Schema Definition-Tool und die XML-Serialisierung](the-xml-schema-definition-tool-and-xml-serialization.md).) Wenn keine Attribute auf das Feld angewendet werden, wird das Element auf die folgende Weise durch das Schema beschrieben.
 
 ```xml
 <xs:element minOccurs="0" maxOccurs ="1" name="Employees" type="ArrayOfEmployee" />
@@ -321,6 +321,6 @@ Es kann vorkommen, dass eine öffentliche Eigenschaft oder ein öffentliches Fel
 - [Attribute zur Steuerung der Serialisierung von codiertem SOAP](attributes-that-control-encoded-soap-serialization.md)
 - [Einführung in die XML-Serialisierung](introducing-xml-serialization.md)
 - [Beispiele für die XML-Serialisierung](examples-of-xml-serialization.md)
-- [Vorgehensweise: Angeben eines alternativen Elementnamens für einen XML-Stream](how-to-specify-an-alternate-element-name-for-an-xml-stream.md)
-- [Vorgehensweise: Serialisieren eines Objekts](how-to-serialize-an-object.md)
-- [Vorgehensweise: Deserialisieren eines Objekts](how-to-deserialize-an-object.md)
+- [How to: Angeben eines alternativen Elementnamens für einen XML-Stream](how-to-specify-an-alternate-element-name-for-an-xml-stream.md).
+- [How to: Serialisieren eines Objekts](how-to-serialize-an-object.md).
+- [How to: Deserialisieren eines Objekts](how-to-deserialize-an-object.md).

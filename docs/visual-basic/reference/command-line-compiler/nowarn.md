@@ -8,7 +8,7 @@ helpviewer_keywords:
 ms.assetid: 7ebf2106-0652-4fdc-bf60-70fc86465d83
 ms.openlocfilehash: 880fdf4931dadea547d64d0506bd3e978956468e
 ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/07/2019
 ms.locfileid: "72005401"
@@ -26,28 +26,28 @@ Unterdrückt die Compilerfunktion zum Generieren von Warnungen.
   
 |Begriff|Definition|  
 |---|---|  
-|`numberList`|Optional. Eine durch Trennzeichen getrennte Liste der Warnungs-ID-Nummern, die vom Compiler unterdrückt werden sollen. Wenn die Warnungs-IDs nicht angegeben werden, werden alle Warnungen unterdrückt.|  
+|`numberList`|Dies ist optional. Dies ist eine durch Trennzeichen getrennte Liste der Warnungs-ID-Nummern, die vom Compiler unterdrückt werden sollen. Wenn die Warnungs-IDs nicht angegeben werden, werden alle Warnungen unterdrückt.|  
   
 ## <a name="remarks"></a>Hinweise  
- Die Option "`-nowarn`" bewirkt, dass der Compiler keine Warnungen generiert. Um eine einzelne Warnung zu unterdrücken, geben Sie die Warnungs-ID an die `-nowarn`-Option nach dem Doppelpunkt an. Trennen Sie mehrere Warnungs Nummern durch Kommas.  
+ Die Option `-nowarn` bewirkt, dass der Compiler kein Warnungen generiert. Fügen Sie nach der Option `-nowarn` und einem darauf folgenden Doppelpunkt die Warnungs-ID ein, um eine einzelne Warnung zu unterdrücken. Trennen Sie mehrere Warnnummern durch ein Komma.  
   
- Sie müssen nur den numerischen Teil des Warnungs Bezeichners angeben. Wenn Sie z. b. BC42024 unterdrücken möchten, geben Sie die Warnung für nicht verwendete lokale Variablen an, `-nowarn:42024`.  
+ Sie müssen lediglich den numerischen Teil des Warnungsbezeichners angeben. Geben Sie `-nowarn:42024` an, wenn Sie z. B. BC42024 unterdrücken möchten (Warnung für nicht verwendete lokale Variablen).  
   
- Weitere Informationen zu den Warnungs-ID-Nummern finden Sie unter [Konfigurieren von Warnungen in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic).  
+ Weitere Informationen zu Warnungs-IDs finden Sie unter [Konfigurieren von Warnungen in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic).  
   
-|To Set-nowarn in der integrierten Entwicklungsumgebung von Visual Studio|  
+|Festlegen von -nowarn in der integrierten Visual Studio-Entwicklungsumgebung|  
 |---|  
-|1.  Ein Projekt auswählen in **Projektmappen-Explorer**. Klicken Sie im Menü **Projekt** auf **Eigenschaften**. <br />2.  Klicken Sie auf die Registerkarte **Kompilieren**.<br />3.  Aktivieren Sie das Kontrollkästchen **alle Warnungen deaktivieren** , um alle Warnungen zu deaktivieren.<br />     - oder -<br />     Um eine bestimmte Warnung zu deaktivieren, klicken Sie in der Dropdown Liste neben der Warnung auf **keine** .|  
+|1.  Ein Projekt auswählen in **Projektmappen-Explorer**. Klicken Sie im Menü **Projekt** auf **Eigenschaften**. <br />2.  Klicken Sie auf die Registerkarte **Kompilieren**.<br />3.  Aktivieren Sie das Kontrollkästchen **Alle Warnungen deaktivieren**, um alle Warnungen zu deaktivieren.<br />     - oder -<br />     Klicken Sie in der Dropdownliste neben der Warnung auf **Keine**, um eine bestimmte Warnung zu deaktivieren.|  
   
 ## <a name="example"></a>Beispiel  
- Der folgende Code kompiliert `T2.vb` und zeigt keine Warnungen an.  
+ Mit dem folgenden Code wird `T2.vb` kompiliert, und es werden keine Warnungen angezeigt.  
   
 ```console
 vbc -nowarn t2.vb  
 ```  
   
 ## <a name="example"></a>Beispiel  
- Der folgende Code kompiliert `T2.vb` und zeigt keine Warnungen für nicht verwendete lokale Variablen an (42024).  
+ Mit dem folgenden Code wird `T2.vb` kompiliert, und es werden keine Warnungen für nicht verwendete lokale Variablen (42024) angezeigt.  
   
 ```console
 vbc -nowarn:42024 t2.vb  

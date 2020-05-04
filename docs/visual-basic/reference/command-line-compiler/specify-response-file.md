@@ -6,14 +6,14 @@ helpviewer_keywords:
 ms.assetid: a6847eaa-e5f9-4303-9421-45b55484b9ca
 ms.openlocfilehash: c578495bbba0efee79f02da284c7feffb8c12fab
 ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74348550"
 ---
 # <a name="-specify-response-file-visual-basic"></a>@ (Antwortdatei festlegen) (Visual Basic)
 
-Gibt eine Datei an, die Compileroptionen und Quell Code Dateien enthält, die kompiliert werden sollen.
+Mit dieser Option wird eine Datei angegeben, die Compileroptionen und zu kompilierende Quellcodedateien enthält.
 
 ## <a name="syntax"></a>Syntax
 
@@ -24,30 +24,30 @@ Gibt eine Datei an, die Compileroptionen und Quell Code Dateien enthält, die ko
 ## <a name="arguments"></a>Argumente
 
 `response_file`  
-Erforderlich Eine Datei, die Compileroptionen oder Quell Code Dateien auflistet, die kompiliert werden sollen. Schließen Sie den Dateinamen in Anführungszeichen ("") ein, wenn dieser ein Leerzeichen enthält.
+Erforderlich. Hierbei handelt es sich um eine Datei, die Compileroptionen oder zu kompilierende Quellcodedateien auflistet. Wenn der Dateiname ein Leerzeichen enthält, müssen Sie diesen in Anführungszeichen (" ") einschließen.
 
 ## <a name="remarks"></a>Hinweise
 
-Der Compiler verarbeitet die Compileroptionen und Quell Code Dateien, die in einer Antwortdatei angegeben sind, so, als wären Sie in der Befehlszeile angegeben worden.
+Die in einer Antwortdatei angegebenen Compileroptionen und Quellcodedateien werden vom Compiler so verarbeitet, als wären sie in der Befehlszeile angegeben.
 
-Wenn Sie mehr als eine Antwortdatei in einer Kompilierung angeben möchten, geben Sie mehrere Optionen für die Antwortdatei an, wie z. b. die folgenden.
+Wenn Sie mehr als eine Antwortdatei in einer Kompilierung angeben möchten, geben Sie mehrere Antwortdateioptionen an, z. B. die folgenden:
 
 ```console
 @file1.rsp @file2.rsp
 ```
 
-In einer Antwortdatei können mehrere Compileroptionen und Quell Code Dateien in einer Zeile angezeigt werden. Eine einzelne compileroptionsspezifikation muss in einer Zeile angezeigt werden (darf sich nicht über mehrere Zeilen erstrecken). Antwort Dateien können Kommentare enthalten, die mit dem `#` Symbol beginnen.
+In einer Antwortdatei können mehrere Compileroptionen und Quellcodedateien in einer Zeile angegeben werden. Eine einzelne Compileroption muss in einer Zeile angegeben werden (und darf nicht mehrere Zeilen umfassen). Antwortdateien können Kommentare aufweisen, die mit einem `#`-Symbol beginnen.
 
-Sie können die in der Befehlszeile angegebenen Optionen mit den Optionen kombinieren, die in einer oder mehreren Antwort Dateien angegeben sind. Der Compiler verarbeitet die Befehlsoptionen, während Sie gefunden werden. Daher können Befehlszeilenargumente zuvor aufgelistete Optionen in Antwort Dateien überschreiben. Umgekehrt überschreiben Optionen in einer Antwortdatei die zuvor in der Befehlszeile oder in anderen Antwort Dateien aufgeführten Optionen.
+Sie können in der Befehlszeile angegebene Optionen mit Optionen kombinieren, die in einer oder mehreren Antwortdateien angegeben sind. Der Compiler verarbeitet die Befehlsoptionen in der Reihenfolge, in der sie auftreten. Daher können Befehlszeilenargumente zuvor aufgeführte Optionen in Antwortdateien außer Kraft setzen. Umgekehrt setzen Optionen in einer Antwortdatei zuvor in der Befehlszeile oder in anderen Antwortdateien aufgeführte Optionen außer Kraft.
 
-Visual Basic stellt die Datei "Vbc. rsp" bereit, die sich im gleichen Verzeichnis wie die Datei "Vbc. exe" befindet. Die Datei Vbc. rsp ist standardmäßig enthalten, es sei denn, die Option `-noconfig` wird verwendet. Weitere Informationen finden Sie unter [-noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md).
+Visual Basic stellt die Datei „Vbc.rsp“ bereit, die sich im selben Verzeichnis wie die Datei „Vbc.exe“ befindet. Die Datei „Vbc.rsp“ ist standardmäßig enthalten, es sei denn, die Option `-noconfig` wird verwendet. Weitere Informationen finden Sie unter [-noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md).
 
 > [!NOTE]
-> Die `@`-Option ist in der Visual Studio-Entwicklungsumgebung nicht verfügbar. Sie ist nur verfügbar, wenn Sie über die Befehlszeile kompilieren.
+> Die Option `@` steht nicht in der Visual Studio-Entwicklungsumgebung zur Verfügung. Sie ist nur verfügbar, wenn Sie über die Befehlszeile kompilieren.
 
 ## <a name="example"></a>Beispiel
 
-Die folgenden Zeilen stammen aus einer Beispiel Antwortdatei.
+Die folgenden Zeilen stammen aus einer Beispielantwortdatei.
 
 ```console
 # build the first output file
@@ -59,7 +59,7 @@ source2.vb
 
 ## <a name="example"></a>Beispiel
 
-Im folgenden Beispiel wird veranschaulicht, wie die `@`-Option mit der Antwortdatei mit dem Namen `File1.rsp`verwendet wird.
+Im folgenden Beispiel wird die Verwendung der Option `@` mit der Antwortdatei mit dem Namen `File1.rsp` veranschaulicht.
 
 ```console
 vbc @file1.rsp

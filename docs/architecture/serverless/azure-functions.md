@@ -3,13 +3,13 @@ title: 'Azure Functions: Serverlose Apps'
 description: Azure Functions bietet serverlose Funktionen für mehrere Sprachen (C#, JavaScript, Java) und Plattformen, um ereignisgesteuerten Code für die sofortige Skalierung bereitzustellen.
 author: JEREMYLIKNESS
 ms.author: jeliknes
-ms.date: 06/26/2018
-ms.openlocfilehash: 8764e6a33f3fdd53e60fa767d0fb584a9c07de7e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.date: 04/06/2020
+ms.openlocfilehash: 2dee60e3635be94a55ee26a7f04942bc59cb8dec
+ms.sourcegitcommit: 8b02d42f93adda304246a47f49f6449fc74a3af4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79401484"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82135723"
 ---
 # <a name="azure-functions"></a>Überprüfung auf
 
@@ -17,42 +17,31 @@ Azure Functions bietet eine serverlose Computeerfahrung. Eine Funktion wird durc
 
 ![Azure Functions-Logo](./media/azure-functions-logo.png)
 
-Es gibt zwei Versionen des Azure Functions-Frameworks. Die Legacyversion unterstützt die vollständige Version von .NET Framework, und die neue Runtime unterstützt plattformübergreifende .NET Core-Anwendungen. Neben C# werden weitere Sprachen wie JavaScript, F# und Java unterstützt. Funktionen, die im Portal erstellt werden, bieten eine umfangreiche Skriptsyntax. Funktionen, die als eigenständige Projekte erstellt werden, können mit vollständiger Plattformunterstützung bereitgestellt werden.
+Die aktuelle Laufzeitversion 3.0 unterstützt plattformübergreifende .NET Core 3.1-Anwendungen. Neben C# werden weitere Sprachen wie JavaScript, F# und Java unterstützt. Funktionen, die im Portal erstellt werden, bieten eine umfangreiche Skriptsyntax. Funktionen, die als eigenständige Projekte erstellt werden, können mit vollständiger Plattformunterstützung bereitgestellt werden.
 
 Weitere Informationen finden Sie in der [Azure Functions-Dokumentation](https://docs.microsoft.com/azure/azure-functions).
 
-## <a name="functions-v1-vs-v2"></a>Functions v1 im Vergleich zu v2
-
-Es gibt zwei Versionen der Azure Functions-Runtime: 1.x und 2.x. Version 1.x ist allgemein verfügbar (GA). Sie unterstützt die .NET-Entwicklung im Portal oder auf Windows-Computern und verwendet .NET Framework. 1.x unterstützt C#, JavaScript und F# und bietet experimentelle Unterstützung für Python, PHP, TypeScript, Batch, Bash und PowerShell.
-
-[Version 2.x ist jetzt ebenfalls allgemein verfügbar](https://azure.microsoft.com/blog/introducing-azure-functions-2-0/). Sie nutzt .NET Core und unterstützt plattformübergreifende Entwicklung auf Windows-, macOS- und Linux-Computern. 2.x bietet erstklassige Unterstützung für Java, aber noch keine direkte Unterstützung für die experimentellen Sprachen. Version 2.x verwendet ein neues Modell für die Bindungserweiterbarkeit, das Erweiterungen von Drittanbietern für die Plattform, unabhängige Versionsverwaltung von Bindungen und eine optimierte Ausführungsumgebung ermöglicht.
-
-> **In 1.x gibt es ein bekanntes Problem mit [Bindungsumleitungsunterstützung](https://github.com/Azure/azure-functions-host/issues/992).** Das Problem ist spezifisch für die .NET-Entwicklung. Projekte mit Abhängigkeiten von Bibliotheken, die eine andere Version als die Bibliotheken aufweisen, die in der Runtime enthalten sind, sind betroffen. Das Functions-Team hat sich zum Ziel gesetzt, konkrete Fortschritte bei der Lösung des Problems zu erzielen. Das Team wird sich mit Bindungsumleitungen in Version 2.x befassen, bevor die allgemeine Verfügbarkeit bekanntgegeben wird. Die offizielle Teamaussage mit den empfohlenen Korrekturen und Problemumgehungen finden Sie hier: [Assemblyauflösung in Azure Functions](https://github.com/Azure/azure-functions-host/wiki/Assembly-Resolution-in-Azure-Functions).
-
-Weitere Informationen finden Sie unter [Vergleich von 1.x und 2.x](https://docs.microsoft.com/azure/azure-functions/functions-versions).
-
 ## <a name="programming-language-support"></a>Unterstützung für Programmiersprachen
 
-Die folgenden Sprachen werden in Versionen mit allgemeiner Verfügbarkeit (GA), als Vorschau oder als experimentelles Feature unterstützt.
+Die folgenden Sprachen werden alle in der allgemeinen Verfügbarkeit (General Availability, GA) unterstützt.
 
-|Sprache      |1.x         |2.x      |
-|--------------|------------|---------|
-|**C#**        |Allgemein verfügbar          |Vorschau  |
-|**JavaScript**|Allgemein verfügbar          |Vorschau  |
-|**F#**        |Allgemein verfügbar          |         |
-|**Java**      |            |Vorschau  |
-|**Python**    |Experimentell|         |
-|**PHP**       |Experimentell|         |
-|**TypeScript**|Experimentell|         |
-|**Batch**     |Experimentell|         |
-|**Bash**      |Experimentell|         |
-|**PowerShell**|Experimentell|         |
+|Sprache      |Unterstützte Runtimes|
+|--------------|------------------|
+|**C#**        |.NET Core 3.1     |
+|**JavaScript**|Node 10 & 12      |
+|**F#**        |.NET Core 3.1     |
+|**Java**      |Java 8            |
+|**Python**    |Python 3.6, 3.7, & 3.8|
+|**TypeScript**|Node 10 & 12 (über JavaScript)|
+|**PowerShell**|PowerShell Core 6|
 
 Weitere Informationen finden Sie unter [Unterstützte Sprachen](https://docs.microsoft.com/azure/azure-functions/supported-languages).
 
 ## <a name="app-service-plans"></a>App Service-Pläne
 
 Funktionen werden durch einen *App Service-Plan* unterstützt. Der Plan definiert die Ressourcen, die von der Funktions-App verwendet werden. Sie können einer Region Pläne zuweisen, die Größe und Anzahl der zu verwendenden virtuellen Computer bestimmen und einen Tarif auswählen. Für einen echten serverlosen Ansatz können Funktions-Apps den **Verbrauchstarif** verwenden. Der Verbrauchstarif skaliert das Back-End automatisch basierend auf der Auslastung.
+
+Eine weitere Hostingoption für Funktions-Apps ist der [Premium-Plan](https://docs.microsoft.com/azure/azure-functions/functions-premium-plan). Dieser Plan bietet eine „Always On“-Instanz zur Vermeidung von Kaltstarts, unterstützt erweiterte Features wie VNet-Konnektivität und wird auf Premiumhardware ausgeführt.
 
 Weitere Informationen finden Sie unter [App Service-Pläne](https://docs.microsoft.com/azure/app-service/azure-web-sites-web-hosting-plans-in-depth-overview).
 
@@ -126,58 +115,6 @@ public static string Run(Stream myBlob, string name, TraceWriter log)
 Das Beispiel ist eine einfache Funktion, die den Namen der Datei annimmt, die geändert oder in den Blobspeicher hochgeladen wurde, und sie zur späteren Verarbeitung in einer Warteschlange platziert.
 
 Eine vollständige Liste der Trigger und Bindungen finden Sie unter [Konzepte für Azure Functions-Trigger und -Bindungen](https://docs.microsoft.com/azure/azure-functions/functions-triggers-bindings).
-
-## <a name="proxies"></a>Proxys
-
-Proxys bieten Umleitungsfunktionen für Ihre Anwendung. Proxies stellen einen Endpunkt bereit und ordnen diesen Endpunkt einer anderen Ressource zu. Mit Proxys haben Sie die folgenden Möglichkeiten:
-
-- Umleiten einer eingehenden Anforderung an einen anderen Endpunkt.
-- Ändern der eingehenden Anforderung, bevor sie übergeben wird.
-- Ändern oder Bereitstellen einer Antwort.
-
-Proxys werden beispielsweise für die folgenden Szenarien verwendet:
-
-- Vereinfachen, Kürzen oder Ändern der URL.
-- Bereitstellen eines konsistenten API-Präfix für mehrere Back-End-Dienste.
-- Simulieren einer Antwort an einen Endpunkt, der entwickelt wird.
-- Bereitstellen einer statischen Antwort für einen bekannten Endpunkt.
-- Aufrechterhalten der Konsistenz eines API-Endpunkts, während das Back-End verschoben oder migriert wird.
-
-Proxys werden als JSON-Definitionen gespeichert. Im Folgenden ein Beispiel:
-
-```json
-{
-  "$schema": "http://json.schemastore.org/proxies",
-  "proxies": {
-    "Domain Redirect": {
-      "matchCondition": {
-        "route": "/{shortUrl}"
-      },
-      "backendUri": "http://%WEBSITE_HOSTNAME%/api/UrlRedirect/{shortUrl}"
-    },
-    "Root": {
-      "matchCondition": {
-        "route": "/"
-      },
-      "responseOverrides": {
-        "response.statusCode": "301",
-        "response.statusReason": "Moved Permanently",
-        "response.headers.location": "https://docs.microsoft.com/"
-      }
-    }
-  }
-}
-```
-
-Der `Domain Redirect`-Proxy verwendet eine gekürzte Route und ordnet sie der längeren Funktionsressource zu. Die Transformation sieht wie folgt aus:
-
-`https://--shorturl--/123` -> `https://--longurl--.azurewebsites.net/api/UrlRedirect/123`
-
-Der `Root`-Proxy verwendet alles, was an die Stamm-URL (`https://--shorturl--/`) gesendet wird, und leitet es an die Dokumentationswebsite weiter.
-
-Ein Beispiel für die Verwendung von Proxys sehen Sie im Video [Azure: Bring your app to the cloud with serverless Azure Functions](https://channel9.msdn.com/events/Connect/2017/E102) (Migrieren einer App zur Cloud mit serverlosen Azure Functions). In Echtzeit wird eine ASP.NET Core-Anwendung, die auf einem lokalen SQL-Server ausgeführt wird, zur Azure-Cloud migriert. Proxys werden verwendet, um das Refactoring eines traditionellen Web-API-Projekts zur Verwendung von Funktionen zu unterstützen.
-
-Weitere Informationen zu Proxys finden Sie unter [Arbeiten mit Azure Functions-Proxys](https://docs.microsoft.com/azure/azure-functions/functions-proxies).
 
 >[!div class="step-by-step"]
 >[Zurück](azure-serverless-platform.md)

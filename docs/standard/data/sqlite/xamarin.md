@@ -1,19 +1,19 @@
 ---
 title: Xamarin-Einschränkungen
 ms.date: 12/13/2019
-description: Beschreibt einige der Einschränkungen, die bei der Verwendung von xamarin auftreten werden.
+description: In diesem Artikel werden einige Einschränkungen bei der Verwendung von Xamarin beschrieben.
 ms.openlocfilehash: 192f25954726919dc66d706e755e0853404b4d85
 ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 12/25/2019
 ms.locfileid: "75450405"
 ---
 # <a name="xamarin-limitations"></a>Xamarin-Einschränkungen
 
-"Microsoft. Data. sqlite" ist .NET Standard 2,0 und wird für xamarin unterstützt. In der folgenden Tabelle ist aufgeführt, für welche Plattformen das sqlitepclraw-Standardpaket Native SQLite-Binärdateien bereitstellt. Weitere Informationen zur Verwendung eines anderen Pakets oder zum Bereitstellen eigener Binärdateien für SQLite finden Sie unter [benutzerdefinierte SQLite-Versionen](custom-versions.md) .
+Microsoft.Data.Sqlite bezieht sich auf .NET Standard 2.0 und wird unter Xamarin unterstützt. In der folgenden Tabelle sehen Sie, für welche Plattformen das SQLitePCLRaw-Standardpaket native SQLite-Binärdateien bereitstellt. Weitere Informationen zur Verwendung eines anderen Pakets oder zur Bereitstellung eigener nativer SQLite-Binärdateien finden Sie unter [Benutzerdefinierte SQLite-Versionen](custom-versions.md).
 
-| Platform | SQLite-Binärdateien |
+| Plattform | SQLite-Binärdateien |
 | --- | --- |
 | **Xamarin.Android** | — |
 | &nbsp;&nbsp;&nbsp;&nbsp;`arm64-v8a` | ✔ |
@@ -22,7 +22,7 @@ ms.locfileid: "75450405"
 | &nbsp;&nbsp;&nbsp;&nbsp;`x86_64` | ✔ |
 | **Xamarin.iOS** | ✔ |
 | **Xamarin.Mac** | ✔ |
-| **Xamarin. tvos** | ✔ |
+| **Xamarin.TVOS** | ✔ |
 | **UWP** | — |
 | &nbsp;&nbsp;&nbsp;&nbsp;`arm` | ✔ |
 | &nbsp;&nbsp;&nbsp;&nbsp;`arm64` | ✔ |
@@ -31,11 +31,11 @@ ms.locfileid: "75450405"
 
 ## <a name="ios"></a>iOS
 
-Microsoft. Data. sqlite versucht, sqlitepclraw-Bündel automatisch zu initialisieren. Aufgrund von Einschränkungen bei der Ahead-of-Time-Kompilierung (AOT) für xamarin. IOS schlägt der Versuch fehl, und Sie erhalten die folgende Fehlermeldung.
+Microsoft.Data.Sqlite versucht automatisch, SQLitePCLRaw-Pakete zu initialisieren. Aufgrund von Einschränkungen bei der AOT-Kompilierung (Ahead-of-Time) für Xamarin.iOS schlägt der Versuch fehl, und Sie erhalten die folgende Fehlermeldung:
 
-> Sie müssen `SQLitePCL.raw.SetProvider()`abrufen. Wenn Sie ein Paket Paket verwenden, erfolgt dies durch Aufrufen von `SQLitePCL.Batteries.Init()`.
+> Rufen Sie `SQLitePCL.raw.SetProvider()` auf. Wenn Sie ein Bündelpaket verwenden, rufen Sie `SQLitePCL.Batteries.Init()` auf.
 
-Fügen Sie der APP vor der Verwendung von "Microsoft. Data. sqlite" die folgende Codezeile hinzu, um das Paket zu initialisieren.
+Fügen Sie zur Initialisierung des Pakets Ihrer App die folgende Codezeile hinzu, bevor Sie Microsoft.Data.Sqlite verwenden.
 
 ```csharp
 SQLitePCL.Batteries_V2.Init();

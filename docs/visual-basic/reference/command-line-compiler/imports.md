@@ -8,13 +8,13 @@ helpviewer_keywords:
 ms.assetid: 9a93fb53-c080-497b-bf9b-441022dbbc39
 ms.openlocfilehash: 2a1dd19189ff65413255b9bc137e1a7f0227bbe1
 ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/07/2020
 ms.locfileid: "75716647"
 ---
-# <a name="-imports-visual-basic"></a>-Importe (Visual Basic)
-Importiert Namespaces aus einer angegebenen Assembly.  
+# <a name="-imports-visual-basic"></a>-imports (Visual Basic)
+Die Option -imports importiert Namespaces aus einer angegebenen Assembly.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -26,19 +26,19 @@ Importiert Namespaces aus einer angegebenen Assembly.
   
 |Begriff|Definition|  
 |---|---|  
-|`namespaceList`|Erforderlich Durch Trennzeichen getrennte Liste der zu importierenden Namespaces.|  
+|`namespaceList`|Erforderlich. Liste der zu importierenden Namespaces mit Kommas als Trennzeichen|  
   
 ## <a name="remarks"></a>Hinweise  
- Mit der Option `-imports` werden alle Namespaces importiert, die innerhalb des aktuellen Satzes von Quelldateien oder einer beliebigen referenzierten Assembly definiert sind.  
+ Mit der Option `-imports` werden alle Namespaces importiert, die in den aktuellen Quelldateien oder einer beliebigen Assembly, auf die verwiesen wird, definiert sind.  
   
- Die Elemente in einem Namespace, der mit `-imports` angegeben wird, sind für alle Quell Code Dateien in der Kompilierung verfügbar. Verwenden Sie die [Imports-Anweisung (.NET-Namespace und-Typ)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) , um einen Namespace in einer einzelnen Quell Code Datei zu verwenden.  
+ Die Member eines Namespace, der mit `-imports` angegeben wird, sind für alle Quellcodedateien in der Kompilierung verfügbar. Verwenden Sie die [Imports-Anweisung (.NET-Namespace und -Typ)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md), um einen Namespace in einer einzelnen Quellcodedatei zu verwenden.  
   
-|So legen Sie-Importe in der integrierten Entwicklungsumgebung von Visual Studio fest|  
+|So legen Sie -imports in der integrierten Visual Studio-Entwicklungsumgebung fest|  
 |---|  
-|1. Wählen Sie ein Projekt aus, das in **Projektmappen-Explorer**ausgewählt ist. Klicken Sie im Menü **Projekt** auf **Eigenschaften**. <br />2. Klicken Sie auf die Registerkarte **Verweise** .<br />3. Geben Sie den Namespace Namen in das Feld neben der Schaltfläche **Benutzer Import hinzufügen** ein.<br />4. Klicken Sie auf die Schaltfläche **Benutzer Import hinzufügen** .|  
+|1.  Ein Projekt auswählen in **Projektmappen-Explorer**. Klicken Sie im Menü **Projekt** auf **Eigenschaften**. <br />2.  Klicken Sie auf die Registerkarte **Verweise**.<br />3.  Geben Sie den Namespacenamen in das Feld neben der Schaltfläche **Benutzerimport hinzufügen** ein.<br />4.  Klicken Sie auf die Schaltfläche **Benutzerimport hinzufügen**.|  
   
 ## <a name="example"></a>Beispiel  
- Der folgende Code wird kompiliert, wenn `-imports:system.globalization` angegeben wird. Ohne diesen Vorgang erfordert die erfolgreiche Kompilierung, dass eine `Imports System.Globalization`-Anweisung am Anfang der Quell Code Datei enthalten ist, oder dass die Eigenschaft voll qualifiziert als `System.Globalization.CultureInfo.CurrentCulture.Name`ist.
+ Der folgende Code wird kompiliert, wenn `-imports:system.globalization` angegeben wird. Ohne diese Angabe ist für eine erfolgreiche Kompilierung entweder erforderlich, dass eine `Imports System.Globalization`-Anweisung am Anfang der Quellcodedatei enthalten ist oder dass die Eigenschaft als `System.Globalization.CultureInfo.CurrentCulture.Name` vollqualifiziert ist.
 
 ```vb
 Module Example

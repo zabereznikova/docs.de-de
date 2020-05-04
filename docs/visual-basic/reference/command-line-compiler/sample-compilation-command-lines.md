@@ -10,31 +10,31 @@ helpviewer_keywords:
 ms.assetid: 5bfbb487-5f47-4267-969a-39dfb917beeb
 ms.openlocfilehash: 27a20a5a3525353ffbced729b8ac9c98b3e48fc1
 ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350855"
 ---
-# <a name="sample-compilation-command-lines-visual-basic"></a>Beispiel-Kompilierungs Befehlszeilen (Visual Basic)
+# <a name="sample-compilation-command-lines-visual-basic"></a>Beispiele für Kompilierungsbefehlszeilen (Visual Basic)
 
-Als Alternative zum Kompilieren von Visual Basic Programmen in Visual Studio können Sie über die Befehlszeile kompilieren, um ausführbare Dateien (. exe) oder DLL-Dateien (Dynamic Link Library) zu erstellen.
+Alternativ zum Kompilieren von Visual Basic-Programmen in Visual Studio können Sie diese über die Befehlszeile kompilieren, um ausführbare Dateien (.exe) oder DLL-Dateien (.dll) zu erstellen.
 
-Der Visual Basic-Befehlszeilen Compiler unterstützt einen kompletten Satz von Optionen, die Eingabe-und Ausgabedateien, Assemblys sowie Debug-und Präprozessoroptionen steuern. Jede Option ist in zwei austauschbaren Formularen verfügbar: `-option` und `/option`. In dieser Dokumentation wird nur das `-option` Formular angezeigt.
+Der Visual Basic-Befehlszeilencompiler unterstützt sämtliche Optionen, die Eingabe- und Ausgabedateien, Assemblys sowie Debug- und Präprozessoroptionen steuern. Jede Option ist in zwei austauschbaren Formaten verfügbar: `-option` und `/option`. In dieser Dokumentation wird nur das `-option`-Format dargestellt.
 
-In der folgenden Tabelle sind einige Beispiel Befehlszeilen aufgelistet, die Sie für Ihre eigene Verwendung ändern können.
+In der folgenden Tabelle sind einige Beispielbefehlszeilen aufgelistet, die Sie anpassen können.
 
-|Zweck|Verwendung|
+|Beschreibung|Verwendung|
 |--------|---------|
-|Kompilieren Sie File. vb, und erstellen Sie File. exe.|`vbc -reference:Microsoft.VisualBasic.dll File.vb`|
-|Kompilieren Sie File. vb, und erstellen Sie File. dll.|`vbc -target:library File.vb`|
-|Kompilieren Sie File. vb, und erstellen Sie My. exe.|`vbc -out:My.exe File.vb`|
-|Kompilieren Sie File. vb, und erstellen Sie eine Bibliothek und eine Verweisassembly mit dem Namen file. dll.|`vbc -target:library -ref:.\debug\bin\ref\file.dll File.vb`|
-|Kompilieren Sie alle Visual Basic Dateien im aktuellen Verzeichnis mit Optimierungen für und das `DEBUG` Symbol, das file2. exe erstellt.|`vbc -define:DEBUG=1 -optimize -out:File2.exe *.vb`|
-|Kompilieren Sie alle Visual Basic Dateien im aktuellen Verzeichnis, und erstellen Sie eine Debugversion von file2. dll, ohne das Logo oder die Warnungen anzuzeigen.|`vbc -target:library -out:File2.dll -nowarn -nologo -debug *.vb`|
-|Alle Visual Basic Dateien im aktuellen Verzeichnis in ". dll" kompilieren|`vbc -target:library -out:Something.dll *.vb`|
+|Kompiliert „File.vb“ und erstellt „File.exe“|`vbc -reference:Microsoft.VisualBasic.dll File.vb`|
+|Kompiliert „File.vb“ und erstellt „File.dll“|`vbc -target:library File.vb`|
+|Kompiliert „File.vb“ und erstellt „My.exe“|`vbc -out:My.exe File.vb`|
+|Kompiliert „File.vb“ und erstellt eine Bibliothek und eine Verweisassembly namens „File.dll“|`vbc -target:library -ref:.\debug\bin\ref\file.dll File.vb`|
+|Kompiliert alle Visual Basic-Dateien im aktuellen Verzeichnis mit aktivierten Optimierungen dem definierten `DEBUG`-Symbol und erstellt „File2.exe“|`vbc -define:DEBUG=1 -optimize -out:File2.exe *.vb`|
+|Kompiliert alle Visual Basic-Dateien im aktuellen Verzeichnis und erstellt eine Debugversion von „File2.dll“, ohne das Logo oder Warnungen anzuzeigen|`vbc -target:library -out:File2.dll -nowarn -nologo -debug *.vb`|
+|Kompiliert alle C#-Dateien im aktuellen Verzeichnis zu „Something.dll“|`vbc -target:library -out:Something.dll *.vb`|
 
 > [!TIP]
-> Wenn Sie ein Projekt mithilfe der Visual Studio-IDE erstellen, können Sie Informationen zum zugeordneten **vbc** -Befehl mit seinen Compileroptionen im Ausgabefenster anzeigen. Um diese Informationen anzuzeigen, öffnen Sie das [Dialog Feld Optionen, Projekte und Projektmappen, erstellen und ausführen](/visualstudio/ide/reference/options-dialog-box-projects-and-solutions-build-and-run), und legen Sie dann die **Ausführlichkeit der MSBuild-Projektbuildausgabe** auf **Normal** oder eine höhere ausführlichkeits Stufe fest.
+> Wenn Sie ein Projekt mit der Visual Studio-IDE erstellen, können Sie Informationen zum zugeordneten Befehl **vbc** und dessen Compileroptionen im Ausgabefenster anzeigen. Navigieren Sie hierzu zu [Optionen > Projekte und Projektmappen > Kompilieren und ausführen](/visualstudio/ide/reference/options-dialog-box-projects-and-solutions-build-and-run), und legen Sie die **Ausführlichkeit der MSBuild-Projektbuildausgabe** auf **Normal** oder höher fest.
 
 ## <a name="see-also"></a>Siehe auch
 

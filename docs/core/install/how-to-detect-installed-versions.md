@@ -6,12 +6,12 @@ ms.author: adegeo
 ms.date: 12/04/2019
 ms.custom: updateeachrelease
 zone_pivot_groups: operating-systems-set-one
-ms.openlocfilehash: 3efc54cea7e10bc21a472a7fa9d4026e305be79a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3a78acee6cf427085e98f14353fc2c0ac65d3d80
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79397980"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81645337"
 ---
 # <a name="how-to-check-that-net-core-is-already-installed"></a>Überprüfen, ob .NET Core bereits installiert ist
 
@@ -163,6 +163,51 @@ Microsoft.NETCore.App 2.2.7 [/usr/local/share/dotnet/shared/Microsoft.NETCore.Ap
 Microsoft.NETCore.App 3.0.0 [/usr/local/share/dotnet/shared/Microsoft.NETCore.App]
 Microsoft.NETCore.App 3.1.0 [/usr/local/share/dotnet/shared/Microsoft.NETCore.App]
 ```
+
+::: zone-end
+
+## <a name="check-for-install-folders"></a>Überprüfen auf Installationsordner
+
+Es ist möglich, dass .NET Core installiert ist, für Ihr Betriebssystem oder Benutzerprofil jedoch nicht zur `PATH`-Variable hinzugefügt wurde. Das Ausführen der Befehle aus den vorherigen Abschnitten funktioniert möglicherweise nicht. Alternativ können Sie überprüfen, ob die .NET Core-Installationsordner vorhanden sind.
+
+Wenn Sie .NET Core über einen Installer oder ein Skript installieren, wird es in einem Standardordner installiert. Meistens bietet der Installer oder das Skript, den oder das Sie für die Installation von .NET Core verwenden, die Möglichkeit, in einen anderen Ordner zu installieren. Wenn Sie in einen anderen Ordner installieren möchten, passen Sie den Anfang des Ordnerpfads an.
+
+::: zone pivot="os-windows"
+
+- **Ausführbare dotnet-Datei**\
+_C:\\Programme\\dotnet\\dotnet.exe_
+
+- **.NET SDK**\
+_C:\\Programme\\dotnet\\sdk\\{Version}\\_
+
+- **.NET-Laufzeit**\
+_C:\\Programme\\dotnet\\shared\\{Laufzeittyp}\\{Version}\\_
+
+::: zone-end
+
+::: zone pivot="os-linux"
+
+- **Ausführbare dotnet-Datei**\
+_/home/user/share/dotnet/dotnet_
+
+- **.NET SDK**\
+_/home/user/share/dotnet/sdk/{Version}/_
+
+- **.NET-Laufzeit**\
+_/home/user/share/dotnet/shared/{Laufzeittyp}/{Version}/_
+
+::: zone-end
+
+::: zone pivot="os-macos"
+
+- **Ausführbare dotnet-Datei**\
+_/usr/local/share/dotnet/dotnet_
+
+- **.NET SDK**\
+_/usr/local/share/dotnet/sdk/{Version}/_
+
+- **.NET-Laufzeit**\
+_/usr/local/share/dotnet/shared/{Laufzeittyp}/{Version}/_
 
 ::: zone-end
 

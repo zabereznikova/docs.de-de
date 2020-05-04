@@ -6,32 +6,32 @@ helpviewer_keywords:
 ms.assetid: c188b38e-bd9d-4121-9983-41ea6a94d28e
 ms.openlocfilehash: 975b8feb001bcab22185be0a360b0512de099b79
 ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74330271"
 ---
 # <a name="how-my-depends-on-project-type-visual-basic"></a>Merkmale von "My" auf Grundlage des Projekttyps (Visual Basic)
 
-`My` macht nur die Objekte verfügbar, die von einem bestimmten Projekttyp benötigt werden. Das `My.Forms`-Objekt ist beispielsweise in einer Windows Forms Anwendung verfügbar, aber nicht in einer Konsolenanwendung verfügbar. In diesem Thema wird beschrieben, welche `My`-Objekte in unterschiedlichen Projekttypen verfügbar sind.  
+`My` macht nur die für einen bestimmten Projekttyp erforderlichen Objekte verfügbar. Das Objekt `My.Forms` ist beispielsweise in einer Windows Forms-Anwendung verfügbar, jedoch nicht in einer Konsolenanwendung. In diesem Thema erfahren Sie, welche `My`-Objekte für die unterschiedlichen Projekttypen verfügbar sind.  
   
-## <a name="my-in-windows-applications-and-web-sites"></a>Meine in Windows-Anwendungen und Websites  
+## <a name="my-in-windows-applications-and-web-sites"></a>„My“ in Windows-Anwendungen und Websites  
 
- `My` macht nur Objekte verfügbar, die im aktuellen Projekttyp nützlich sind. Objekte, die nicht anwendbar sind, werden unterdrückt. Die folgende Abbildung zeigt z. b. das Objektmodell `My` in einem Windows Forms Projekt.  
+ `My` macht nur Objekte verfügbar, die für den aktuellen Projekttyp nützlich sind. Nicht anwendbare Objekte werden unterdrückt. Die folgende Abbildung zeigt beispielsweise das `My`-Objektmodell in einem Windows Forms-Projekt:  
   
- ![Diagramm, das das Objektmodell in einer Windows Forms Anwendung anzeigt.](./media/how-my-depends-on-project-type/my-object-model-windows-forms.png)  
+ ![Diagramm des My-Objektmodells in einer Windows Forms-Anwendung](./media/how-my-depends-on-project-type/my-object-model-windows-forms.png)  
   
- In einem Website Projekt macht `My` für einen Webentwickler relevante Objekte verfügbar (z. b. die `My.Request`-und `My.Response` Objekte) und unterdrückt dabei nicht relevante Objekte (z. b. das `My.Forms` Objekt). Die folgende Abbildung zeigt das `My` Objektmodell in einem Website Projekt:  
+ In einem Websiteprojekt macht `My` Objekte verfügbar, die für Webentwickler relevant sind (z. B. `My.Request`- und `My.Response`-Objekte), und unterdrückt die anderen (z. B. das `My.Forms`-Objekt). Die folgende Abbildung zeigt das `My`-Objektmodell in einem Websiteprojekt:  
   
- ![Diagramm, das das Objektmodell in einer Webanwendung anzeigt.](./media/how-my-depends-on-project-type/my-object-model-web.png)  
+ ![Diagramm des My-Objektmodells in einer Webanwendung](./media/how-my-depends-on-project-type/my-object-model-web.png)  
   
-## <a name="project-details"></a>Projekt Details  
+## <a name="project-details"></a>Projektdetails  
 
- In der folgenden Tabelle wird gezeigt, welche `My` Objekte standardmäßig für acht Projekttypen aktiviert sind: Windows-Anwendung, Klassenbibliothek, Konsolenanwendung, Windows-Steuerelement Bibliothek, websteuer Element Bibliothek, Windows-Dienst, leer und Website.  
+ In der folgenden Tabelle können Sie ablesen, welche `My`-Objekte für die acht Projekttypen Windows-Anwendung, Klassenbibliothek, Konsolenanwendung, Windows-Steuerelementbibliothek, Websteuerelementbibliothek, Windows-Dienst, Projekttyp „Leer“ und Website standardmäßig aktiviert sind.  
   
- Es gibt drei Versionen des `My.Application` Objekts, zwei Versionen des `My.Computer`-Objekts und zwei Versionen von `My.User`-Objekt. Details zu diesen Versionen werden in den Fußnoten hinter der Tabelle angegeben.  
+ Für das Objekt `My.Application` sind drei Versionen verfügbar, für `My.Computer` zwei Versionen und auch für `My.User` zwei Versionen. Details zu diesen Versionen finden Sie in den Fußnoten im Anschluss an die Tabelle.  
   
-|My-Objekt|Windows-Anwendung|Klassenbibliothek|Konsolenanwendung|Windows-Steuerelement Bibliothek|Websteuer Element Bibliothek|Windows-Dienst|Leer|Website|  
+|My-Objekt|Windows-Anwendung|Klassenbibliothek|Konsolenanwendung|Windows-Steuerelementbibliothek|Websteuerelementbibliothek|Windows-Dienst|Empty|Website|  
 |---|---|---|---|---|---|---|---|---|  
 |`My.Application`|**Ja** <sup>1</sup>|**Ja** <sup>2</sup>|**Ja** <sup>3</sup>|**Ja** <sup>2</sup>|Nein|**Ja** <sup>3</sup>|Nein|Nein|  
 |`My.Computer`|**Ja** <sup>4</sup>|**Ja** <sup>4</sup>|**Ja** <sup>4</sup>|**Ja** <sup>4</sup>|**Ja** <sup>5</sup>|**Ja** <sup>4</sup>|Nein|**Ja** <sup>5</sup>|  
@@ -44,19 +44,19 @@ ms.locfileid: "74330271"
 |`My.User`|**Ja** <sup>6</sup>|**Ja** <sup>6</sup>|**Ja** <sup>6</sup>|**Ja** <sup>6</sup>|**Ja** <sup>7</sup>|**Ja** <sup>6</sup>|Nein|**Ja** <sup>7</sup>|  
 |`My.WebServices`|**Ja**|**Ja**|**Ja**|**Ja**|**Ja**|**Ja**|Nein|Nein|  
   
- <sup>1</sup> Windows Forms Version von `My.Application`. Wird von der Konsolenversion abgeleitet (siehe Hinweis 3); Fügt Unterstützung für die Interaktion mit dem Anwendungsfenster hinzu und stellt das Visual Basic Anwendungsmodell bereit.  
+ <sup>1</sup> Windows Forms-Version von `My.Application`: Wird von der Konsolenversion abgeleitet (siehe Hinweis 3). Fügt Unterstützung für die Interaktion mit dem Anwendungsfenster hinzu und stellt das Visual Basic-Anwendungsmodell bereit.  
   
- <sup>2</sup> Bibliotheksversion von `My.Application`. Stellt die grundlegenden Funktionen bereit, die für eine Anwendung erforderlich sind: stellt Mitglieder zum Schreiben in das Anwendungsprotokoll und zum Zugreifen auf Anwendungsinformationen bereit.  
+ <sup>2</sup> Bibliotheksversion von `My.Application`: Stellt die grundlegenden Funktionen bereit, die für eine Anwendung erforderlich sind, wie das Bereitstellen von Membern zum Schreiben in das Anwendungsprotokoll und für den Zugriff auf Anwendungsinformationen.  
   
- <sup>3</sup> Konsolenversion von `My.Application`. Wird von der Bibliotheksversion abgeleitet (siehe Hinweis 2) und fügt zusätzliche Member für den Zugriff auf die Befehlszeilenargumente der Anwendung und die ClickOnce-Bereitstellungs Informationen hinzu.  
+ <sup>3</sup> Konsolenversion von `My.Application`: Wird von der Bibliotheksversion abgeleitet (siehe Hinweis 2). Fügt zusätzliche Member für den Zugriff auf die Befehlszeilenargumente der Anwendung und Informationen zur ClickOnce-Bereitstellung hinzu.  
   
- <sup>4</sup> Windows-Version `My.Computer`. Wird von der Server Version abgeleitet (siehe Hinweis 5) und ermöglicht den Zugriff auf nützliche Objekte auf einem Client Computer, z. b. Tastatur, Bildschirm und Maus.  
+ <sup>4</sup> Windows-Version von `My.Computer`: Wird von der Serverversion abgeleitet (siehe Hinweis 5). Ermöglicht den Zugriff auf nützliche Objekte auf einem Clientcomputer, wie z. B. Tastatur, Bildschirm und Maus.  
   
- <sup>5</sup> Server Version von `My.Computer`. Enthält grundlegende Informationen über den Computer, z. b. den Namen, den Zugriff auf die Uhr usw.  
+ <sup>5</sup> Serverversion von `My.Computer`: Stellt grundlegende Informationen über den Computer bereit, wie z. B. Name, Zugriff auf die Uhr usw.  
   
- <sup>6</sup> Windows-Version `My.User`. Dieses Objekt ist der aktuellen Identität des Threads zugeordnet.  
+ <sup>6</sup> Windows-Version von `My.User`: Dieses Objekt ist mit der aktuellen Identität des Threads verknüpft.  
   
- <sup>7</sup> Webversion von `My.User`. Dieses Objekt ist der Benutzeridentität der aktuellen HTTP-Anforderung der Anwendung zugeordnet.  
+ <sup>7</sup> Webversion von `My.User`: Dieses Objekt ist mir der Benutzeridentität der aktuellen HTTP-Anforderung der Anwendung verknüpft.  
   
 ## <a name="see-also"></a>Siehe auch
 

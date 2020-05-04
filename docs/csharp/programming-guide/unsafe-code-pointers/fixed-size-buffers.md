@@ -1,16 +1,16 @@
 ---
 title: Puffer fester Größe – C#-Programmierhandbuch
-ms.date: 04/20/2018
+ms.date: 04/23/2020
 helpviewer_keywords:
 - fixed size buffers [C#]
 - unsafe buffers [C#]
 - unsafe code [C#], fixed size buffers
-ms.openlocfilehash: 6770497b23212f1786b4f4a620ed2b650079c44b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5920dd125ded34969d60feb299568b56402056ab
+ms.sourcegitcommit: 839777281a281684a7e2906dccb3acd7f6a32023
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79157025"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82140543"
 ---
 # <a name="fixed-size-buffers-c-programming-guide"></a>Puffer fester Größe (C#-Programmierhandbuch)
 
@@ -38,15 +38,39 @@ Im obigen Beispiel wird der Zugriff auf `fixed`-Felder ohne Anheften dargestellt
 
 Ein anderes häufiges Array mit fester Größe ist das [bool](../../language-reference/builtin-types/bool.md)-Array. Die Elemente in einem `bool`-Array sind immer ein Byte groß. `bool`-Arrays eignen sich nicht zum Erstellen von Bitarrays oder Puffern.
 
-> [!NOTE]
-> Mit Ausnahme von Arbeitsspeicher, der mithilfe von [stackalloc](../../language-reference/operators/stackalloc.md) erstellt wurde, führen der C#-Compiler und die Common Language Runtime (CLR) keine Sicherheitsüberprüfungen für Pufferüberlauf aus. Lassen Sie, wie bei jedem unsicheren Code, Vorsicht walten.
+Puffer fester Größe werden mit der <xref:System.Runtime.CompilerServices.UnsafeValueTypeAttribute?displayProperty=nameWithType>-Klasse kompiliert, die die Common Language Runtime (CLR) anweist, dass ein Typ ein nicht verwaltetes Array enthält, das potenziell überlaufen kann. Dies ähnelt der Erstellung von Speicher mithilfe des [stackalloc](../../language-reference/operators/stackalloc.md)-Ausdrucks, der in der CLR automatisch Funktionen zur Pufferüberlauferkennung aktiviert. Im vorherigen Beispiel wird gezeigt, wie ein Puffer fester Größe in einer `unsafe struct`vorhanden sein kann.
 
-Unsichere Puffer unterscheiden sich folgendermaßen von normalen Arrays:
+```csharp
+internal unsafe struct Buffer
+{
+    public fixed char fixedBuffer[128];
+}
+```
 
-- Sie können nur in einem unsicheren Kontext unsichere Puffer verwenden.
-- Unsichere Puffer sind immer Vektoren oder eindimensionale Arrays.
-- Die Deklaration des Arrays muss eine Anzahl enthalten, z.B. `char id[8]`. Sie können `char id[]` nicht verwenden.
-- Unsichere Puffer können nur Instanzfelder von Strukturen in einem unsicheren Kontext sein.
+Der vom Compiler für `Buffer` generierte C#-Code wird wie folgt attributiert:
+
+```csharp
+internal struct Buffer
+{
+    [StructLayout(LayoutKind.Sequential, Size = 256)]
+    [CompilerGenerated]
+    [UnsafeValueType]
+    public struct <fixedBuffer>e__FixedBuffer
+    {
+        public char FixedElementField;
+    }
+
+    [FixedBuffer(typeof(char), 128)]
+    public <fixedBuffer>e__FixedBuffer fixedBuffer;
+}
+```
+
+Puffer fester Größe unterscheiden sich folgendermaßen von normalen Arrays:
+
+- Können nur in einem [unsicheren](../../language-reference/keywords/unsafe.md) Kontext verwendet werden
+- Können nur Instanzfelder von Strukturen sein
+- Sie sind immer Vektoren oder eindimensionale Arrays.
+- Die Deklaration sollte die Länge enthalten, z. B. `fixed char id[8]`. Sie können `fixed char id[]` nicht verwenden.
 
 ## <a name="see-also"></a>Siehe auch
 

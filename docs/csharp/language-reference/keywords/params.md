@@ -1,5 +1,5 @@
 ---
-title: params-Schlüsselwort – C#-Referenz
+title: params-Schlüsselwort für Parameterarrays – C#-Referenz
 ms.date: 07/20/2015
 f1_keywords:
 - params_CSharpKeyword
@@ -7,23 +7,28 @@ f1_keywords:
 helpviewer_keywords:
 - parameters [C#], params
 - params keyword [C#]
+- parameter array
 ms.assetid: 1690815e-b52b-4967-8380-5780aff08012
-ms.openlocfilehash: f462ccc2421fef3ea111d263ec035a701cf04775
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 77d7fd19ff57f80f401191027e2fae95026e1966
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79173548"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81738845"
 ---
 # <a name="params-c-reference"></a>params (C#-Referenz)
 
-Mithilfe des Schlüsselworts `params` kann ein [Methodenparameter](method-parameters.md) angegeben werden, der eine variable Anzahl von Argumenten akzeptiert.
-
-Sie können eine durch Trennzeichen getrennte Liste der Argumente des in der Parameterdeklaration angegebenen Typs oder ein Array der Argumente des angegebenen Typs senden. Sie können auch auf das Senden von Argumenten verzichten. Wenn Sie keine Argumente senden, ist die Länge der `params`-Liste 0 (null).
+Mithilfe des Schlüsselworts `params` kann ein [Methodenparameter](method-parameters.md) angegeben werden, der eine variable Anzahl von Argumenten akzeptiert. Der Parametertyp muss ein eindimensionales Array sein.
 
 Nach dem `params`-Schlüsselwort sind keine zusätzlichen Parameter in einer Methodendeklaration zugelassen. Gleichzeitig ist nur ein `params`-Schlüsselwort in einer Methodendeklaration zulässig.
 
-Der deklarierte Typ des `params`-Parameters muss wie im folgenden Beispiel gezeigt ein eindimensionales Array sein. Andernfalls tritt der Compilerfehler [CS0225](../../misc/cs0225.md) ein.
+Wenn der deklarierte Typ des `params`-Parameters kein eindimensionales Array ist, tritt der Compilerfehler [CS0225](../../misc/cs0225.md) auf.
+
+Wenn Sie eine Methode mit einem `params`-Parameter aufrufen, können Sie Folgendes übergeben:
+
+- Eine durch Trennzeichen getrennte Liste von Argumenten des Typs der Arrayelemente
+- Ein Array aus Argumenten des angegebenen Typs
+- Keine Argumente. Wenn Sie keine Argumente senden, ist die Länge der `params`-Liste 0 (null).
 
 ## <a name="example"></a>Beispiel
 
@@ -35,7 +40,7 @@ Im folgenden Beispiel werden verschiedene Methoden veranschaulicht, in denen Arg
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [C#-Referenz](../index.md)
 - [C#-Programmierhandbuch](../../programming-guide/index.md)

@@ -6,16 +6,16 @@ helpviewer_keywords:
 ms.assetid: ee6a4156-73f7-4e9b-8e01-c74c4798b65c
 ms.openlocfilehash: 2fefdff9dc27915066e3d92efd8439adffed9fc5
 ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74330299"
 ---
 # <a name="creating-and-using-components-in-visual-basic"></a>Erstellen und Verwenden von Komponenten in Visual Basic
 
-Eine *Komponente* ist eine Klasse, die die Schnittstelle <xref:System.ComponentModel.IComponent?displayProperty=nameWithType> implementiert oder die direkt oder indirekt von einer Klasse ableitet, die <xref:System.ComponentModel.IComponent> implementiert. Eine .NET Framework Komponente ist ein Objekt, das wieder verwendet werden kann, mit anderen Objekten interagieren und die Steuerung externer Ressourcen und Entwurfszeit Unterstützung ermöglicht.  
+Eine *Komponente* ist eine Klasse, die die Schnittstelle <xref:System.ComponentModel.IComponent?displayProperty=nameWithType> implementiert oder die direkt oder indirekt von einer Klasse ableitet, die <xref:System.ComponentModel.IComponent> implementiert. Eine .NET Framework-Komponente ist ein Objekt, das wiederverwendet werden und mit anderen Objekten interagieren kann sowie die Steuerung externer Ressourcen und die Unterstützung während der Entwurfszeit ermöglicht.  
   
- Ein wichtiges Feature der Komponenten ist, dass sie entworfen werden können, was bedeutet, dass eine Klasse, die eine Komponente ist, in der integrierten Entwicklungsumgebung von Visual Studio verwendet werden kann. Eine Komponente kann der Toolbox hinzugefügt, auf einem Formular abgelegt, und auf der Entwurfsoberfläche bearbeitet werden. Beachten Sie, dass die grundlegende Entwurfszeit Unterstützung für Komponenten in den .NET Framework integriert ist. ein Komponenten Entwickler muss keine weiteren Arbeiten ausführen, um die grundlegenden Entwurfszeit Funktionen nutzen zu können.  
+ Ein wichtiges Feature der Komponenten ist, dass sie entworfen werden können, was bedeutet, dass eine Klasse, die eine Komponente ist, in der integrierten Entwicklungsumgebung von Visual Studio verwendet werden kann. Eine Komponente kann der Toolbox hinzugefügt, auf einem Formular abgelegt, und auf der Entwurfsoberfläche bearbeitet werden. Beachten Sie, dass die Basisunterstützung während der Entwurfszeit für Komponenten in das .NET Framework integriert ist. Ein Komponentenentwickler muss keine zusätzlichen Schritte durchführen, um die Basisfunktionalität während der Entwurfszeit zu nutzen.  
   
  Ein *Steuerelement* ist einer Komponente ähnlich, da beide entworfen werden können. Allerdings stellt ein Steuerelement eine Benutzeroberfläche bereit, eine Komponente jedoch nicht. Ein Steuerelement muss von einer der Basissteuerklassen abgeleitet werden: <xref:System.Windows.Forms.Control> oder <xref:System.Web.UI.Control>.  
   
@@ -37,29 +37,29 @@ Eine *Komponente* ist eine Klasse, die die Schnittstelle <xref:System.ComponentM
   
  Die zentralen Komponentenklassen sind:  
   
-- <xref:System.ComponentModel.Component>. Eine Basisimplementierung für die Schnittstelle <xref:System.ComponentModel.IComponent>. Diese Klasse ermöglicht das Freigeben von Objekten zwischen Anwendungen.  
+- <xref:System.ComponentModel.Component> Eine Basisimplementierung für die Schnittstelle <xref:System.ComponentModel.IComponent>. Diese Klasse ermöglicht das Freigeben von Objekten zwischen Anwendungen.  
   
-- <xref:System.ComponentModel.MarshalByValueComponent>. Eine Basisimplementierung für die Schnittstelle <xref:System.ComponentModel.IComponent>.  
+- <xref:System.ComponentModel.MarshalByValueComponent> Eine Basisimplementierung für die Schnittstelle <xref:System.ComponentModel.IComponent>.  
   
-- <xref:System.ComponentModel.Container>. Die Basisimplementierung für die Schnittstelle <xref:System.ComponentModel.IContainer>. Diese Klasse enthält 0 oder mehr Komponenten.  
+- <xref:System.ComponentModel.Container> Die Basisimplementierung für die Schnittstelle <xref:System.ComponentModel.IContainer>. Diese Klasse enthält 0 oder mehr Komponenten.  
   
  Einige der Klassen, die für die Komponentenlizenzierung verwendet werden, sind:  
   
-- <xref:System.ComponentModel.License>. Abstrakte Basisklasse für alle Lizenzen. Eine Lizenz wird einer bestimmten Instanz einer Komponente erteilt.  
+- <xref:System.ComponentModel.License> Abstrakte Basisklasse für alle Lizenzen. Eine Lizenz wird einer bestimmten Instanz einer Komponente erteilt.  
   
-- <xref:System.ComponentModel.LicenseManager>. Stellt Eigenschaften und Methoden zur Verfügung, um eine Lizenz zu einer Komponente hinzuzufügen und einen <xref:System.ComponentModel.LicenseProvider> zu verwalten.  
+- <xref:System.ComponentModel.LicenseManager> Stellt Eigenschaften und Methoden zur Verfügung, um eine Lizenz zu einer Komponente hinzuzufügen und einen <xref:System.ComponentModel.LicenseProvider> zu verwalten.  
   
-- <xref:System.ComponentModel.LicenseProvider>. Die abstrakte Basisklasse für die Implementierung eines Lizenzgebers.  
+- <xref:System.ComponentModel.LicenseProvider> Die abstrakte Basisklasse für die Implementierung eines Lizenzgebers.  
   
-- <xref:System.ComponentModel.LicenseProviderAttribute>. Gibt die Klasse <xref:System.ComponentModel.LicenseProvider> an, die mit einer Klasse verwendet werden sollen.  
+- <xref:System.ComponentModel.LicenseProviderAttribute> Gibt die Klasse <xref:System.ComponentModel.LicenseProvider> an, die mit einer Klasse verwendet werden sollen.  
   
  Klassen, die häufig zum Beschreiben und Beibehalten von Komponenten verwendet werden.  
   
-- <xref:System.ComponentModel.TypeDescriptor>. Stellt Informationen zu den Merkmalen für eine Komponente bereit, z.B. zu Attributen, Eigenschaften und Ereignissen.  
+- <xref:System.ComponentModel.TypeDescriptor> Stellt Informationen zu den Merkmalen für eine Komponente bereit, z.B. zu Attributen, Eigenschaften und Ereignissen.  
   
-- <xref:System.ComponentModel.EventDescriptor>. Enthält Informationen über ein Ereignis.  
+- <xref:System.ComponentModel.EventDescriptor> Enthält Informationen über ein Ereignis.  
   
-- <xref:System.ComponentModel.PropertyDescriptor>. Gibt Informationen über eine Eigenschaft an.  
+- <xref:System.ComponentModel.PropertyDescriptor> Gibt Informationen über eine Eigenschaft an.  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
 
@@ -68,4 +68,4 @@ Eine *Komponente* ist eine Klasse, die die Schnittstelle <xref:System.ComponentM
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Vorgehensweise: Zugriff auf Entwurfszeitunterstützung in Windows Forms](../../framework/winforms/controls/developing-windows-forms-controls-at-design-time.md)
+- [How to: Zugriff auf Unterstützung während der Entwurfszeit in Windows Forms](../../framework/winforms/controls/developing-windows-forms-controls-at-design-time.md)

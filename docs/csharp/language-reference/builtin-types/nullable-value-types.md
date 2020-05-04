@@ -4,12 +4,12 @@ description: Informationen zu Werttypen, die Nullwerte zulassen, in C# und der V
 ms.date: 11/04/2019
 helpviewer_keywords:
 - nullable value types [C#]
-ms.openlocfilehash: c13ef6a091ec6aebd4608c5ed8d2c03b067c7312
-ms.sourcegitcommit: 2b3b2d684259463ddfc76ad680e5e09fdc1984d2
+ms.openlocfilehash: fcd49d7d25b0ad23363db8cb61596004b2e87a8d
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80888071"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81738998"
 ---
 # <a name="nullable-value-types-c-reference"></a>Nullable-Werttypen (C#-Referenz)
 
@@ -46,7 +46,7 @@ Im folgenden Beispiel wird mit der `HasValue`-Eigenschaft überprüft, ob die Va
 
 [!code-csharp-interactive[use HasValue](snippets/NullableValueTypes.cs#HasValue)]
 
-Sie können eine Variable eines Nullable-Typs auch mit `null` anstelle der `HasValue`-Eigenschaft vergleichen, wie im folgenden Beispiel gezeigt wird:
+Sie können eine Variable eines Nullable-Werttyps wie im folgenden Beispiel gezeigt auch mit `null` anstelle der `HasValue`-Eigenschaft vergleichen:
 
 [!code-csharp-interactive[use comparison with null](snippets/NullableValueTypes.cs#CompareWithNull)]
 
@@ -58,7 +58,7 @@ Wenn Sie einen Wert eines Nullable-Werttyps einer Variablen eines Nicht-Nullable
 
 Wenn Sie den [Standardwert](default-values.md) des zugrunde liegenden Werttyps anstelle von `null` verwenden möchten, verwenden Sie die <xref:System.Nullable%601.GetValueOrDefault?displayProperty=nameWithType>-Methode.
 
-Sie können einen Nullable-Werttyp wie im folgenden Beispiel gezeigt auch explizit in einen Nicht-Nullable-Typ umwandeln:
+Sie können einen Nullable-Werttyp wie im folgenden Beispiel gezeigt auch explizit in einen Non-Nullable-Typ umwandeln:
 
 [!code-csharp[explicit cast](snippets/NullableValueTypes.cs#Cast)]
 

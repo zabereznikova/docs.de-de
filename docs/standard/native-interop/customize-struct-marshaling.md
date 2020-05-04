@@ -7,7 +7,7 @@ dev_langs:
 - cpp
 ms.openlocfilehash: 7f8d1ad93633d6feef9c3c6f5d19aad52105968c
 ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 03/14/2020
 ms.locfileid: "79401166"
@@ -20,17 +20,17 @@ Manchmal entsprechen die Standardregeln für das Marshallen nicht genau Ihren An
 
 .NET bietet das <xref:System.Runtime.InteropServices.StructLayoutAttribute?displayProperty=nameWithType>-Attribut und die <xref:System.Runtime.InteropServices.LayoutKind?displayProperty=nameWithType>-Enumeration, damit Sie anpassen können, wie Felder im Arbeitsspeicher abgelegt werden. Die folgende Anleitung hilft Ihnen dabei, gängige Probleme zu vermeiden.
 
-✔️ ERWÄGEN SIE nach Möglichkeit die Verwendung von `LayoutKind.Sequential`.
+✔️ ZIEHEN Sie nach Möglichkeit die Verwendung von `LayoutKind.Sequential` in Betracht.
 
-✔️ VERWENDEN SIE`LayoutKind.Explicit` beim Marshallen nur dann, wenn die native Struktur ebenfalls ein explizites Layout aufweist, beispielsweise eine Union.
+✔️ VERWENDEN Sie beim Marshallen nur dann `LayoutKind.Explicit`, wenn die native Struktur ebenfalls ein explizites Layout aufweist, beispielsweise bei einer Union.
 
-❌AVOID `LayoutKind.Explicit` beim Marshallen von Strukturen auf Nicht-Windows-Plattformen, wenn Sie Laufzeiten vor .NET Core 3.0 zielen müssen. Die .NET Core-Laufzeit vor 3.0 unterstützt nicht das Übergeben expliziter Strukturen nach Wert an systemeigene Funktionen auf Intel- oder AMD 64-Bit-Nicht-Windows-Systemen. Die Runtime unterstützt jedoch auf allen Plattformen die Übergabe expliziter Strukturen per Verweis.
+❌ VERMEIDEN Sie die Verwendung von `LayoutKind.Explicit` beim Marshallen von Strukturen auf Nicht-Windows-Plattformen, wenn Sie Runtimes vor .NET Core 3.0 verwenden müssen. Vor Version 3.0 bietet die .NET Core-Runtime keine Unterstützung für die Übergabe expliziter Strukturen per Wert an native Funktionen auf Intel- oder AMD-64-Bit-Nicht-Windows-Systemen. Die Runtime unterstützt jedoch auf allen Plattformen die Übergabe expliziter Strukturen per Verweis.
 
 ## <a name="customizing-boolean-field-marshaling"></a>Anpassen des Marshallens boolescher Felder
 
 Für nativen Code gibt es viele verschiedene boolesche Darstellungen. Allein unter Windows gibt es drei Möglichkeiten zur Darstellung boolescher Werte. Der Runtime ist die native Definition Ihrer Struktur nicht bekannt, daher kann sie allenfalls raten, wie Ihre booleschen Werte gemarshallt werden sollen. Die .NET-Runtime bietet eine Möglichkeit anzugeben, wie Ihr boolesches Feld gemarshallt werden soll. Die folgenden Beispiele zeigen, wie .NET `bool` in andere native boolesche Typen gemarshallt wird.
 
-Boolesche Werte werden standardmäßig als nativer Win32-Wert [`BOOL`](/windows/desktop/winprog/windows-data-types#BOOL) mit 4 Byte gemarshallt, wie im folgenden Beispiel gezeigt:
+Boolesche Werte werden standardmäßig als nativer Win32-[`BOOL`](/windows/desktop/winprog/windows-data-types#BOOL)-Wert mit 4 Byte gemarshallt, wie im folgenden Beispiel gezeigt:
 
 ```csharp
 public struct WinBool
@@ -317,7 +317,7 @@ struct DefaultString
 
 ## <a name="customizing-decimal-field-marshaling"></a>Anpassen des Marshallens von Dezimalfeldern
 
-Wenn Sie unter Windows arbeiten, können einige APIs [ `CY` `CURRENCY` ](/windows/win32/api/wtypes/ns-wtypes-cy~r1) auftreten, die die systemeigene Datei oder Struktur verwenden. Standardmäßig wird der `decimal` .NET-Typ in [`DECIMAL`](/windows/win32/api/wtypes/ns-wtypes-decimal~r1) die systemeigene Struktur gemarshallt. Sie können jedoch ein <xref:System.Runtime.InteropServices.MarshalAsAttribute> mit dem Wert <xref:System.Runtime.InteropServices.UnmanagedType.Currency?displayProperty=nameWithType> verwenden, um den Marshaller zur Konvertierung eines `decimal`-Werts in einen nativen `CY`-Wert anzuweisen.
+Wenn Sie Windows verwenden, treffen Sie möglicherweise auf einige APIs, die die native [`CY`- oder `CURRENCY`](/windows/win32/api/wtypes/ns-wtypes-cy~r1)-Struktur verwenden. Standardmäßig marshallt der .NET-`decimal`-Typ in die native [`DECIMAL`](/windows/win32/api/wtypes/ns-wtypes-decimal~r1)-Struktur. Sie können jedoch ein <xref:System.Runtime.InteropServices.MarshalAsAttribute> mit dem Wert <xref:System.Runtime.InteropServices.UnmanagedType.Currency?displayProperty=nameWithType> verwenden, um den Marshaller zur Konvertierung eines `decimal`-Werts in einen nativen `CY`-Wert anzuweisen.
 
 ```csharp
 public struct Currency

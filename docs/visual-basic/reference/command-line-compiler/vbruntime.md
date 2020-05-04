@@ -11,7 +11,7 @@ helpviewer_keywords:
 ms.assetid: 1aa0239e-511a-4c29-957d-fd72877b350a
 ms.openlocfilehash: 8c7789c6af7b82ecb40ecd73d09f64aa1da3fd4b
 ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/07/2019
 ms.locfileid: "72005054"
@@ -27,28 +27,28 @@ Gibt an, dass der Compiler ohne einen Verweis auf die Visual Basic Runtime Libra
   
 ## <a name="arguments"></a>Argumente  
  \-  
- Kompilieren Sie ohne einen Verweis auf die Visual Basic Lauf Zeit Bibliothek.  
+ Kompilieren Sie ohne einen Verweis auf die Visual Basic-Runtimebibliothek.  
   
  \+  
- Kompilieren Sie mit einem Verweis auf die standardmäßige Visual Basic Lauf Zeit Bibliothek.  
+ Kompilieren Sie mit einem Verweis auf die Visual Basic-Standardruntimebibliothek.  
   
  \*  
- Kompilieren Sie ohne einen Verweis auf die Visual Basic Lauf Zeit Bibliothek, und Betten Sie die Kernfunktionalität aus der Visual Basic Lauf Zeit Bibliothek in die Assembly ein.  
+ Kompilieren Sie ohne einen Verweis auf die Visual Basic-Runtimebibliothek, und betten Sie die deren Kernfunktionalität in die Assembly ein.  
   
  `path`  
- Kompilieren Sie mit einem Verweis auf die angegebene Bibliothek (dll).  
+ Kompilieren Sie mit einem Verweis auf die angegebene Bibliothek (DLL).  
   
 ## <a name="remarks"></a>Hinweise  
- Mit der `-vbruntime`-Compileroption können Sie angeben, dass der Compiler ohne einen Verweis auf die Visual Basic Lauf Zeit Bibliothek kompilieren soll. Wenn Sie ohne einen Verweis auf die Visual Basic Lauf Zeit Bibliothek kompilieren, werden Fehler oder Warnungen für Code oder Sprachkonstrukte protokolliert, die einen Visual Basic Runtime-Hilfsobjekt generieren. (Eine *Visual Basic Runtime* -Hilfsprogramm ist eine in "Microsoft. VisualBasic. dll" definierte Funktion, die zur Laufzeit aufgerufen wird, um eine bestimmte sprach Semantik auszuführen.)  
+ Mit der `-vbruntime`-Compileroption können Sie festlegen, dass der Compiler ohne einen Verweis auf die Visual Basic-Runtimebibliothek kompilieren soll. Wenn Sie ohne einen Verweis auf die Visual Basic-Runtimebibliothek kompilieren, werden Fehler oder Warnungen für Code- oder Sprachkonstrukte protokolliert, die einen Aufruf eines Visual Basic-Runtimehilfsprogramms bewirken. (Ein *Visual Basic-Runtimehilfsprogramm* ist eine in Microsoft.VisualBasic.dll definierte Funktion, die zur Laufzeit aufgerufen wird, um eine bestimmte Sprachsemantik auszuführen.)  
   
- Die Option "`-vbruntime+`" führt zu dem Verhalten, das auftritt, wenn kein `-vbruntime`-Schalter angegeben wird. Sie können die Option "`-vbruntime+`" verwenden, um vorherige `-vbruntime`-Switches zu überschreiben.  
+ Die Option `-vbruntime+` führt zum selben Verhalten wie bei einem nicht angegebenem `-vbruntime`-Switch. Sie können die Option `-vbruntime+` verwenden, um vorherige `-vbruntime`-Switches zu überschreiben.  
   
- Die meisten Objekte des Typs `My` sind nicht verfügbar, wenn Sie die Optionen `-vbruntime-` oder `-vbruntime:path` verwenden.  
+ Die meisten Objekte des `My`-Typs sind nicht verfügbar, wenn Sie die Optionen `-vbruntime-` oder `-vbruntime:path` verwenden.  
   
-## <a name="embedding-visual-basic-runtime-core-functionality"></a>Einbettungs Visual Basic Lauf Zeit Kernfunktionalität  
- Die Option "`-vbruntime*`" ermöglicht die Kompilierung ohne Verweis auf eine Lauf Zeit Bibliothek. Stattdessen wird die Kernfunktionalität aus der Visual Basic-Lauf Zeit Bibliothek in die Benutzerassembly eingebettet. Sie können diese Option verwenden, wenn die Anwendung auf Plattformen ausgeführt wird, die die Visual Basic Runtime nicht enthalten.  
+## <a name="embedding-visual-basic-runtime-core-functionality"></a>Einbetten der Kernfunktionalität der Visual Basic-Runtimebibliothek  
+ Mit der `-vbruntime*`-Option können Sie ohne einen Verweis auf eine Runtimebibliothek kompilieren. Stattdessen wird die Kernfunktionalität der Visual Basic-Runtimebibliothek in die Benutzerassembly eingebettet. Sie können diese Option verwenden, wenn die Anwendung auf Plattformen ausgeführt wird, die die Visual Basic-Runtimebibliothek nicht enthalten.  
   
- Die folgenden Lauf Zeit Elemente sind eingebettet:  
+ Die folgenden Member der Runtimebibliothek sind eingebettet:  
   
 - <xref:Microsoft.VisualBasic.CompilerServices.Conversions>-Klasse  
   
@@ -78,17 +78,17 @@ Gibt an, dass der Compiler ohne einen Verweis auf die Visual Basic Runtime Libra
   
 - <xref:Microsoft.VisualBasic.Constants.vbVerticalTab>-Konstante  
   
-- Einige Objekte des Typs "`My`"  
+- Objekte des `My`-Typs  
   
- Wenn Sie mithilfe der Option "`-vbruntime*`" kompilieren und Ihr Code auf ein Element in der Visual Basic-Lauf Zeit Bibliothek verweist, das nicht mit der Kernfunktionalität eingebettet ist, gibt der Compiler einen Fehler zurück, der anzeigt, dass der Member nicht verfügbar ist.  
+ Wenn Sie mithilfe der Option `-vbruntime*` kompilieren und Ihr Code auf einen Member aus der Visual Basic-Runtimebibliothek verweist, der nicht mit der Kernfunktionalität eingebettet ist, gibt der Compiler einen Fehler zurück, der angibt, dass der Member nicht verfügbar ist.  
   
 ## <a name="referencing-a-specified-library"></a>Verweisen auf eine angegebene Bibliothek  
- Sie können das Argument "`path`" verwenden, um anstelle der standardmäßigen Visual Basic Lauf Zeit Bibliothek mit einem Verweis auf eine benutzerdefinierte Lauf Zeit Bibliothek zu kompilieren.  
+ Sie können das `path`-Argument verwenden, um anstelle der Visual Basic-Standardruntimebibliothek mit einem Verweis auf eine benutzerdefinierte Runtimebibliothek zu kompilieren.  
   
- Wenn der Wert für das `path`-Argument ein voll qualifizierter Pfad zu einer dll ist, verwendet der Compiler diese Datei als Lauf Zeit Bibliothek. Wenn der Wert für das `path`-Argument kein voll qualifizierter Pfad zu einer dll ist, sucht der Visual Basic Compiler zuerst nach der identifizierten dll im aktuellen Ordner. Anschließend wird in dem Pfad gesucht, den Sie mithilfe der [-sdkpath-](../../../visual-basic/reference/command-line-compiler/sdkpath.md) Compileroption angegeben haben. Wenn die `-sdkpath`-Compileroption nicht verwendet wird, sucht der Compiler nach der identifizierten dll im Ordner .NET Framework (`%systemroot%\Microsoft.NET\Framework\versionNumber`).  
+ Wenn der Wert für das `path`-Argument ein vollqualifizierter Pfad zu einer DLL ist, verwendet der Compiler diese Datei als Runtimebibliothek. Wenn der Wert für das `path`-Argument kein vollqualifizierter Pfad zu einer DLL ist, sucht der Visual Basic-Compiler zuerst nach der identifizierten DLL im aktuellen Ordner. Anschließend wird der Pfad, den Sie angegeben haben, mithilfe der Compileroption [-sdkpath](../../../visual-basic/reference/command-line-compiler/sdkpath.md) gesucht. Wenn die `-sdkpath`-Compileroption nicht verwendet wird, sucht der Compiler nach der identifizierten DLL im .NET Framework-Ordner (`%systemroot%\Microsoft.NET\Framework\versionNumber`).  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird gezeigt, wie die Option "`-vbruntime`" zum Kompilieren mit einem Verweis auf eine benutzerdefinierte Bibliothek verwendet wird.  
+ Im folgenden Beispiel wird gezeigt, wie die `-vbruntime`-Option verwendet wird, um mit einem Verweis auf eine benutzerdefinierte Bibliothek zu kompilieren.  
   
 ```console
 vbc -vbruntime:C:\VBLibraries\CustomVBLibrary.dll  
@@ -96,7 +96,7 @@ vbc -vbruntime:C:\VBLibraries\CustomVBLibrary.dll
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Visual Basic Core – neuer Kompilierungs Modus in Visual Studio 2010 SP1](https://devblogs.microsoft.com/vbteam/vb-core-new-compilation-mode-in-visual-studio-2010-sp1/)
+- [Visual Basic Core: Neuer Kompilierungsmodus in Visual Studio 2010 SP1](https://devblogs.microsoft.com/vbteam/vb-core-new-compilation-mode-in-visual-studio-2010-sp1/)
 - [Visual Basic-Befehlszeilencompiler](../../../visual-basic/reference/command-line-compiler/index.md)
 - [Beispiele für Kompilierungsbefehlszeilen](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
 - [-sdkpath](../../../visual-basic/reference/command-line-compiler/sdkpath.md)

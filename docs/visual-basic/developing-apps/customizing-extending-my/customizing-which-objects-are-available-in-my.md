@@ -7,70 +7,70 @@ helpviewer_keywords:
 ms.assetid: 4e8279c2-ed5b-4681-8903-8a6671874000
 ms.openlocfilehash: 0387aca08e3a31b0a2045369919894d88caf5b76
 ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74330328"
 ---
 # <a name="customizing-which-objects-are-available-in-my-visual-basic"></a>Anpassen der verfügbaren Objekte in "My" (Visual Basic)
 
-In diesem Thema wird beschrieben, wie Sie steuern können, welche `My` Objekte aktiviert werden, indem Sie die `_MYTYPE` bedingte Kompilierungs Konstante Ihres Projekts festlegen. Die integrierte Entwicklungsumgebung (Integrated Development Environment, IDE) von Visual Studio hält die `_MYTYPE` bedingte Kompilierungs Konstante für ein Projekt synchron mit dem Projekttyp.  
+In diesem Thema wird beschrieben, wie Sie steuern können, welche `My`-Objekte aktiviert werden, indem Sie die Konstante für bedingte Kompilierung `_MYTYPE` Ihres Projekts festlegen. Die integrierte Visual Studio-Entwicklungsumgebung (Integrated Development Environment, IDE) sorgt dafür, dass die Konstante für bedingte Kompilierung `_MYTYPE` für ein Projekt zum jeweiligen Projekttyp passt.  
   
-## <a name="predefined-_mytype-values"></a>Vordefinierte \_MyType-Werte  
+## <a name="predefined-_mytype-values"></a>Vordefinierte \_MYTYPE-Werte  
 
-Sie müssen die `/define`-Compileroption verwenden, um die `_MYTYPE` bedingte Kompilierungs Konstante festzulegen. Wenn Sie einen eigenen Wert für die `_MYTYPE` Konstante angeben, müssen Sie den Zeichen folgen Wert in Sequenzen mit umgekehrtem Schrägstrich/Anführungszeichen (\\") einschließen. Beispielsweise können Sie Folgendes verwenden:  
+Sie müssen die Compileroption `/define` verwenden, um die Konstante für bedingte Kompilierung `_MYTYPE` festzulegen. Wenn Sie einen eigenen Wert für die Konstante `_MYTYPE` angeben, müssen Sie den Zeichenfolgenwert in Sequenzen mit umgekehrten Schrägstrichen und Anführungszeichen (\\") einschließen. Sie können z. B. Folgendes angeben:  
   
 ```console  
 /define:_MYTYPE=\"WindowsForms\"  
 ```  
   
- Diese Tabelle zeigt, wie die Konstante für die `_MYTYPE` bedingte Kompilierung für mehrere Projekttypen auf festgelegt ist.  
+ In der folgenden Tabelle sind die für die Konstante für bedingte Kompilierung `_MYTYPE` festgelegten Werte für verschiedene Projekttypen dargestellt.  
   
-|Projekttyp:|\_Wert von "MyType"|  
+|Projekttyp:|\_MYTYPE-Wert|  
 |------------------|--------------------|  
-|Klassenbibliothek|Windows|  
-|Konsolenanwendung|TS|  
-|Web|Kamera|  
-|Websteuer Element Bibliothek|WebControl|  
-|Windows-Anwendung|WindowsForms|  
-|Windows-Anwendung, wenn Sie mit benutzerdefinierten `Sub Main` beginnen|"Windowsformswithcustomsubmain"|  
-|Windows-Steuerelement Bibliothek|Windows|  
-|Windows-Dienst|TS|  
-|Leer|Leer|  
+|Klassenbibliothek|"Windows"|  
+|Konsolenanwendung|"Console"|  
+|Web|"Web"|  
+|Websteuerelementbibliothek|"WebControl"|  
+|Windows-Anwendung|"WindowsForms"|  
+|Windows-Anwendung, wenn sie mit einer benutzerdefinierten `Sub Main`-Methode beginnt|"WindowsFormsWithCustomSubMain"|  
+|Windows-Steuerelementbibliothek|"Windows"|  
+|Windows-Dienst|"Console"|  
+|Empty|"Empty"|  
   
 > [!NOTE]
-> Bei allen Zeichen folgen vergleichen mit bedingter Kompilierung wird die Groß-/Kleinschreibung beachtet, unabhängig davon, wie die `Option Compare` Anweisung festgelegt wird  
+> Die Groß-/Kleinschreibung wird bei allen Zeichenfolgenvergleichen für bedingte Kompilierung beachtet, unabhängig davon, was für die Anweisung `Option Compare` festgelegt ist.  
   
-## <a name="dependent-_my-compilation-constants"></a>Abhängige \_meine Kompilierungs Konstanten  
+## <a name="dependent-_my-compilation-constants"></a>Abhängige \_MY-Kompilierungskonstanten  
 
-Die `_MYTYPE` bedingte Kompilierungs Konstante steuert wiederum die Werte mehrerer anderer `_MY` Kompilierungs Konstanten:  
+Die Konstante für bedingte Kompilierung `_MYTYPE` steuert wiederum die Werte mehrere anderer `_MY`-Kompilierungskonstanten:  
   
-|\_von MyType|\_"myapplicationtype"|\_"mycomputertype"|\_von myForms|\_myusertype|\_MyWebServices|  
+|\_MYTYPE|\_MYAPPLICATIONTYPE|\_MYCOMPUTERTYPE|\_MYFORMS|\_MYUSERTYPE|\_MYWEBSERVICES|  
 |--------------|-------------------------|----------------------|---------------|------------------|---------------------|  
-|TS|TS|Windows|Undefiniert|Windows|TRUE|  
-|Zollunion|Undefiniert|Undefiniert|Undefiniert|Undefiniert|Undefiniert|  
-|Leer|Undefiniert|Undefiniert|Undefiniert|Undefiniert|Undefiniert|  
-|Kamera|Undefiniert|Kamera|FALSE|Kamera|FALSE|  
-|WebControl|Undefiniert|Kamera|FALSE|Kamera|TRUE|  
-|"Windows" oder ""|Windows|Windows|Undefiniert|Windows|TRUE|  
-|WindowsForms|WindowsForms|Windows|TRUE|Windows|TRUE|  
-|"Windowsformswithcustomsubmain"|TS|Windows|TRUE|Windows|TRUE|  
+|"Console"|"Console"|"Windows"|Nicht definiert|"Windows"|true|  
+|"Custom"|Nicht definiert|Nicht definiert|Nicht definiert|Nicht definiert|Nicht definiert|  
+|"Empty"|Nicht definiert|Nicht definiert|Nicht definiert|Nicht definiert|Nicht definiert|  
+|"Web"|Nicht definiert|"Web"|false|"Web"|false|  
+|"WebControl"|Nicht definiert|"Web"|false|"Web"|true|  
+|"Windows" oder ""|"Windows"|"Windows"|Nicht definiert|"Windows"|true|  
+|"WindowsForms"|"WindowsForms"|"Windows"|true|"Windows"|true|  
+|"WindowsFormsWithCustomSubMain"|"Console"|"Windows"|true|"Windows"|true|  
   
- Standardmäßig werden nicht definierte Konstanten für bedingte Kompilierung in `FALSE`aufgelöst. Sie können Werte für die nicht definierten Konstanten angeben, wenn Sie das Projekt kompilieren, um das Standardverhalten zu überschreiben.  
+ Nicht definierte Konstanten für bedingte Kompilierung werden standardmäßig in `FALSE` aufgelöst. Sie können beim Kompilieren Ihres Projekts Werte für die nicht definierten Konstanten festlegen, um das Standardverhalten außer Kraft zu setzen.  
   
 > [!NOTE]
-> Wenn `_MYTYPE` auf "Custom" festgelegt ist, enthält das Projekt den `My`-Namespace, enthält jedoch keine-Objekte. Wenn Sie jedoch `_MYTYPE` auf "Empty" festlegen, wird verhindert, dass der Compiler den `My`-Namespace und seine Objekte hinzufügt.  
+> Wenn für `_MYTYPE` "Custom" festgelegt ist, enthält das Projekt zwar den `My`-Namespace, aber keine Objekte. Das Festlegen von "Empty" für `_MYTYPE` verhindert allerdings, dass der Compiler den `My`-Namespace und dessen Objekte hinzufügt.  
   
- Diese Tabelle beschreibt die Auswirkungen der vordefinierten Werte der `_MY` Kompilierungs Konstanten.  
+ In der folgenden Tabelle werden die Auswirkungen der vordefinierten Werte auf die `_MY`-Kompilierungskonstanten beschrieben.  
   
 |Konstante|Bedeutung|  
 |--------------|-------------|  
-|`_MYAPPLICATIONTYPE`|Aktiviert `My.Application`, wenn die Konstante "Console", "Windows" oder "WindowsForms" ist:<br /><br /> -Die Konsolenversion wird von <xref:Microsoft.VisualBasic.ApplicationServices.ConsoleApplicationBase>abgeleitet. und verfügt über weniger Mitglieder als die "Windows"-Version.<br />-Die "Windows"-Version wird von <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase>abgeleitet und verfügt über weniger Mitglieder als die Version "Windows Forms".<br />-Die Version von "WindowsForms" von `My.Application` wird von <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase>abgeleitet. Wenn die `TARGET` Konstante als "winexe" definiert ist, enthält die-Klasse eine `Sub Main`-Methode.|  
-|`_MYCOMPUTERTYPE`|Aktiviert `My.Computer`, wenn die Konstante "Web" oder "Windows" ist:<br /><br /> -Die "Web"-Version wird von <xref:Microsoft.VisualBasic.Devices.ServerComputer>abgeleitet und verfügt über weniger Mitglieder als die "Windows"-Version.<br />-Die "Windows"-Version von `My.Computer` wird von <xref:Microsoft.VisualBasic.Devices.Computer>abgeleitet.|  
-|`_MYFORMS`|Aktiviert `My.Forms`, wenn die Konstante `TRUE`ist.|  
-|`_MYUSERTYPE`|Aktiviert `My.User`, wenn die Konstante "Web" oder "Windows" ist:<br /><br /> -Die "Web"-Version von `My.User` wird der Benutzeridentität der aktuellen HTTP-Anforderung zugeordnet.<br />-Die "Windows"-Version von `My.User` wird dem aktuellen Prinzipal des Threads zugeordnet.|  
-|`_MYWEBSERVICES`|Aktiviert `My.WebServices`, wenn die Konstante `TRUE`ist.|  
-|`_MYTYPE`|Aktiviert `My.Log`, `My.Request`und `My.Response`, wenn die Konstante "Web" ist.|  
+|`_MYAPPLICATIONTYPE`|Diese Konstante aktiviert `My.Application`, wenn "Console", Windows" oder "WindowsForms" festgelegt ist:<br /><br /> – Die "Console"-Version ist aus <xref:Microsoft.VisualBasic.ApplicationServices.ConsoleApplicationBase> abgeleitet und verfügt über weniger Member als die "Windows"-Version.<br />– Die "Windows"-Version ist aus <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase> abgeleitet und verfügt über weniger Member als die "WindowsForms"-Version.<br />– Die "WindowsForms"-Version von `My.Application` ist aus <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> abgeleitet. Wenn die Konstante `TARGET` als "winexe" definiert ist, beinhaltet die Klasse eine `Sub Main`-Methode.|  
+|`_MYCOMPUTERTYPE`|Diese Konstante aktiviert `My.Computer`, wenn "Web" oder "Windows" festgelegt ist:<br /><br /> – Die "Web"-Version ist aus <xref:Microsoft.VisualBasic.Devices.ServerComputer> abgeleitet und verfügt über weniger Member als die "Windows"-Version.<br />– Die "Windows"-Version von `My.Computer` ist aus <xref:Microsoft.VisualBasic.Devices.Computer> abgeleitet.|  
+|`_MYFORMS`|Diese Konstante aktiviert `My.Forms`, wenn `TRUE` festgelegt ist.|  
+|`_MYUSERTYPE`|Diese Konstante aktiviert `My.User`, wenn "Web" oder "Windows" festgelegt ist:<br /><br /> – Die "Web"-Version von `My.User` ist mit der Benutzeridentität der aktuellen HTTP-Anforderung verknüpft.<br />– Die "Windows"-Version von `My.User` ist mit dem aktuellen Prinzipal des Threads verknüpft.|  
+|`_MYWEBSERVICES`|Diese Konstante aktiviert `My.WebServices`, wenn `TRUE` festgelegt ist.|  
+|`_MYTYPE`|Diese Konstante aktiviert `My.Log`, `My.Request` und `My.Response`, wenn "Web" festgelegt ist.|  
   
 ## <a name="see-also"></a>Siehe auch
 

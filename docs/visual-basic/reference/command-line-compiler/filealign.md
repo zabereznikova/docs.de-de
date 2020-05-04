@@ -11,7 +11,7 @@ helpviewer_keywords:
 ms.assetid: cc61ec3d-ad38-4b28-9659-099d73cad099
 ms.openlocfilehash: fef2652f591e713140c651a9cb0df1ea9e6236c8
 ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/07/2019
 ms.locfileid: "72005596"
@@ -27,17 +27,17 @@ Gibt die Ausrichtung der Abschnitte der Ausgabedatei an.
   
 ## <a name="arguments"></a>Argumente  
  `number`  
- Erforderlich. Ein-Wert, der die Ausrichtung der Abschnitte in der Ausgabedatei angibt. Gültige Werte sind 512, 1024, 2048, 4096 und 8192. Diese Werte sind in Bytes angegeben.  
+ Erforderlich. Ein Wert, der die Ausrichtung der Abschnitte in der Ausgabedatei angibt. Gültige Werte sind 512, 1024, 2048, 4096 und 8192. Diese Werte sind in Bytes angegeben.  
   
 ## <a name="remarks"></a>Hinweise  
- Sie können die Option "`-filealign`" verwenden, um die Ausrichtung von Abschnitten in der Ausgabedatei anzugeben. Abschnitte sind Blöcke des zusammenhängenden Speichers in einer portablen ausführbaren Datei (PE), die entweder Code oder Daten enthält. Mit der Option "`-filealign`" können Sie die Anwendung mit einer nicht standardmäßigen Ausrichtung kompilieren. die meisten Entwickler müssen diese Option nicht verwenden.  
+ Sie können die `-filealign`-Option verwenden, um die Ausrichtung der Abschnitte in Ihrer Ausgabedatei anzugeben. Abschnitte sind Blöcke zusammenhängenden Speichers in einer Portable Executable-Datei (PE), die entweder Code oder Daten enthält. Die `-filealign`-Option ermöglicht es Ihnen, Ihre Anwendung mit einer nicht dem Standardwert entsprechenden Ausrichtung zu kompilieren. Die meisten Entwickler müssen diese Option nicht verwenden.  
   
- Jeder Abschnitt wird an einer Grenze ausgerichtet, die ein Vielfaches des `-filealign`-Werts ist. Es gibt keinen festen Standardwert. Wenn `-filealign` nicht angegeben ist, wählt der Compiler zum Zeitpunkt der Kompilierung einen Standardwert aus.  
+ Jeder Abschnitt wird an einer Grenze ausgerichtet, die einem Vielfachen des `-filealign`-Werts entspricht. Es gibt keinen festen Standardwert. Wenn `-filealign` nicht angegeben wird, wählt der Compiler zur Kompilierzeit einen Standardwert.  
   
- Durch Angeben der Abschnitts Größe können Sie die Größe der Ausgabedatei ändern. Das Ändern der Größe kann möglicherweise für Programme hilfreich sein, die auf kleineren Geräten ausgeführt werden.  
+ Durch Angeben der Abschnittsgröße können Sie die Größe der Ausgabedatei ändern. Das Ändern der Größe kann möglicherweise für Programme hilfreich sein, die auf kleineren Geräten ausgeführt werden.  
   
 > [!NOTE]
-> Die Option "`-filealign`" ist innerhalb der Visual Studio-Entwicklungsumgebung nicht verfügbar. Sie ist nur verfügbar, wenn Sie über die Befehlszeile kompilieren.  
+> Diese Option `-filealign` steht nicht in der Visual Studio-Entwicklungsumgebung zur Verfügung. Sie ist nur verfügbar, wenn Sie über die Befehlszeile kompilieren.  
   
 ## <a name="see-also"></a>Siehe auch
 

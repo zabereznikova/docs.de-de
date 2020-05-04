@@ -2,12 +2,12 @@
 title: Laufzeitpaketspeicher
 description: Erfahren Sie, wie Sie den Laufzeitpaketspeicher für Manifeste nutzen, die von .NET Core verwendet werden.
 ms.date: 08/12/2017
-ms.openlocfilehash: ba3182b682e8a47397ac09ed46afe25190d34e5f
-ms.sourcegitcommit: 07123a475af89b6da5bb6cc51ea40ab1e8a488f0
+ms.openlocfilehash: 4395370c3bb2d97511d549a63813022fb8cac4b7
+ms.sourcegitcommit: c2c1269a81ffdcfc8675bcd9a8505b1a11ffb271
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80134273"
+ms.lasthandoff: 04/25/2020
+ms.locfileid: "82158288"
 ---
 # <a name="runtime-package-store"></a>Laufzeitpaketspeicher
 
@@ -106,6 +106,12 @@ Sie stellen die resultierende veröffentlichte App für eine Umgebung bereit, di
 
 Geben Sie mehrere Zielmanifeste an, wenn Sie eine App veröffentlichen, indem Sie die Option und den Pfad wiederholen (zum Beispiel `--manifest manifest1.xml --manifest manifest2.xml`). Wenn Sie dies tun, wird die App für die Vereinigungsmenge der Pakete zugeschnitten, die in den für den Befehl bereitgestellten Zielmanifestdateien angegeben werden.
 
+Wenn Sie eine Anwendung bereitstellen, die von einem in der Bereitstellung vorhandenen Manifest abhängig ist (die Assembly ist im Ordner *bin* enthalten), wird der Laufzeitpaketspeicher für diese Assembly auf dem Host *nicht verwendet*. Die Assembly im Ordner *bin* wird unabhängig von ihrem Vorhandensein im Laufzeitpaketspeicher auf dem Host verwendet.
+
+Die Version der Abhängigkeit, die im Manifest angegeben ist, muss mit der Version der Abhängigkeit im Laufzeitpaketspeicher übereinstimmen. Wenn ein Versionskonflikt zwischen der Abhängigkeit im Zielmanifest und der Version im Laufzeitpaketspeicher vorliegt, und die App in ihrer Bereitstellung nicht die erforderliche Version des Pakets enthält, führt dies zu einem Fehlstart der App. Die Ausnahme enthält den Namen des Zielmanifests, das die Assembly im Laufzeitpaketspeicher aufgerufen hat. Das hilft Ihnen bei der Behebung des Konflikts.
+
+Wenn die Bereitstellung bei der Veröffentlichung *gekürzt* ist, werden nur die spezifischen Versionen der Manifestpakete, die Sie angeben, aus der veröffentlichten Ausgabe zurückbehalten. Die Pakete der angegebenen Versionen müssen auf dem Host vorhanden sein, damit die App starten kann.
+
 ## <a name="specifying-target-manifests-in-the-project-file"></a>Angeben von Zielmanifesten in der Projektdatei
 
 Eine Alternative zum Angeben von Zielmanifesten mit dem [`dotnet publish`](../tools/dotnet-publish.md)-Befehl ist, diese in der Projektdatei als eine durch Semikolons getrennte Liste von Pfaden unter dem Tag **\<TargetManifestFiles>** anzugeben.
@@ -118,15 +124,15 @@ Eine Alternative zum Angeben von Zielmanifesten mit dem [`dotnet publish`](../to
 
 Geben Sie die Zielmanifeste nur in der Projektdatei an, wenn die Zielumgebung für die App bekannt ist, zum Beispiel bei .NET Core-Projekten. Für Open-Source-Projekte ist dies nicht der Fall. Die Benutzer von Open-Source-Projekten stellen diese üblicherweise für verschiedene Produktionsumgebungen bereit. Diese Produktionsumgebungen verfügen im Allgemeinen über verschiedene vorinstallierte Pakete. Sie können keine Annahmen über die Zielmanifeste in solchen Umgebungen machen, deshalb sollten Sie die Option `--manifest` von [`dotnet publish`](../tools/dotnet-publish.md) verwenden.
 
-## <a name="aspnet-core-implicit-store"></a>Impliziter Speicher für ASP.NET Core
+## <a name="aspnet-core-implicit-store-net-core-20-only"></a>Impliziter Speicher für ASP.NET Core (nur .NET Core 2.0)
 
 Der implizite Speicher für ASP.NET Core gilt nur für ASP.NET Core 2.0. Es wird dringend empfohlen, ASP.NET Core 2.1 und höher für Anwendungen zu verwenden, die den impliziten Speicher **nicht** verwenden. ASP.NET Core 2.1 und höher verwenden das freigegebene Framework.
 
-Das Feature für den Laufzeitpaketspeicher wird implizit von einer ASP.NET Core-App verwendet, wenn die App als [Framework-abhängige Bereitstellung (FDD)](index.md#publish-runtime-dependent) bereitgestellt wird. Die Ziele in [`Microsoft.NET.Sdk.Web`](https://github.com/aspnet/websdk) beinhalten Manifeste, die auf implizite Paketspeicher auf dem Zielsystem verweisen. Darüber hinaus resultiert jede FDD-App, die vom Paket `Microsoft.AspNetCore.All` abhängig ist, in einer veröffentlichten App, die nur die App und ihre Objekte enthält, nicht aber die Pakete, die im Metapaket `Microsoft.AspNetCore.All` aufgelistet sind. Es wird davon ausgegangen, dass diese Pakete auf dem Zielsystem vorhanden sind.
+Bei .NET Core 2.0 wird das Feature für den Laufzeitpaketspeicher implizit von einer ASP.NET Core-App verwendet, wenn die App als [laufzeitabhängige Bereitstellung](index.md#publish-runtime-dependent) verfügbar gemacht wird. Die Ziele in [`Microsoft.NET.Sdk.Web`](https://github.com/aspnet/websdk) beinhalten Manifeste, die auf implizite Paketspeicher auf dem Zielsystem verweisen. Darüber hinaus resultiert jede laufzeitabhängige App, die vom Paket `Microsoft.AspNetCore.All` abhängig ist, in einer veröffentlichten App, die nur die App und ihre Objekte enthält, nicht aber die Pakete, die im Metapaket `Microsoft.AspNetCore.All` aufgelistet sind. Es wird davon ausgegangen, dass diese Pakete auf dem Zielsystem vorhanden sind.
 
 Der Laufzeitpaketspeicher wird bei der Installation des .NET Core SDK auf dem Host installiert. Andere Installationsprogramme stellen möglicherweise den Laufzeitpaketspeicher bereit, einschließlich der Zip-/Tarball-Installationen des .NET Core SDK, `apt-get`, Red Hat Yum, dem .NET Core Windows Server-Hostingpakets und manuellen Installationen des Laufzeitpaketspeichers.
 
-Versichern Sie sich, dass das .NET Core SDK in der Zielumgebung installiert ist, wenn Sie eine App für [Framework-abhängige Bereitstellung (FDD)](index.md#publish-runtime-dependent) bereitstellen. Wenn die App für eine Umgebung bereitgestellt wird, die ASP.NET Core nicht enthält, können Sie den impliziten Speicher deaktivieren, indem Sie **\<PublishWithAspNetCoreTargetManifest>** angeben, das in der Projektdatei wie im folgenden Beispiel auf `false` festgelegt ist:
+Versichern Sie sich, dass das .NET Core SDK in der Zielumgebung installiert ist, wenn Sie eine App mit [laufzeitabhängiger Bereitstellung](index.md#publish-runtime-dependent) verfügbar machen. Wenn die App für eine Umgebung bereitgestellt wird, die ASP.NET Core nicht enthält, können Sie den impliziten Speicher deaktivieren, indem Sie **\<PublishWithAspNetCoreTargetManifest>** angeben, das in der Projektdatei wie im folgenden Beispiel auf `false` festgelegt ist:
 
 ```xml
 <PropertyGroup>
@@ -135,15 +141,9 @@ Versichern Sie sich, dass das .NET Core SDK in der Zielumgebung installiert ist,
 ```
 
 > [!NOTE]
-> Bei Apps für die [eigenständige Bereitstellung (SCD)](index.md#publish-self-contained) wird davon ausgegangen, dass das Zielsystem die erforderlichen Manifestpakete nicht unbedingt enthält. Deshalb kann **\<PublishWithAspNetCoreTargetManifest>** für eine SCD-App nicht auf `true` festgelegt werden.
+> Bei Apps mit [eigenständiger Bereitstellung](index.md#publish-self-contained) wird davon ausgegangen, dass das Zielsystem die erforderlichen Manifestpakete nicht unbedingt enthält. Deshalb kann **\<PublishWithAspNetCoreTargetManifest>** für eine App mit eigenständiger Bereitstellung nicht auf `true` festgelegt werden.
 
-Wenn Sie eine Anwendung bereitstellen, die von einem in der Bereitstellung vorhandenen Manifest abhängig ist (die Assembly ist im Ordner *bin* enthalten), wird der Laufzeitpaketspeicher für diese Assembly auf dem Host *nicht verwendet*. Die Assembly im Ordner *bin* wird unabhängig von ihrem Vorhandensein im Laufzeitpaketspeicher auf dem Host verwendet.
-
-Die Version der Abhängigkeit, die im Manifest angegeben ist, muss mit der Version der Abhängigkeit im Laufzeitpaketspeicher übereinstimmen. Wenn ein Versionskonflikt zwischen der Abhängigkeit im Zielmanifest und der Version im Laufzeitpaketspeicher vorliegt, und die App in ihrer Bereitstellung nicht die erforderliche Version des Pakets enthält, führt dies zu einem Fehlstart der App. Die Ausnahme enthält den Namen des Zielmanifests, das die Assembly im Laufzeitpaketspeicher aufgerufen hat. Das hilft Ihnen bei der Behebung des Konflikts.
-
-Wenn die Bereitstellung bei der Veröffentlichung *gekürzt* ist, werden nur die spezifischen Versionen der Manifestpakete, die Sie angeben, aus der veröffentlichten Ausgabe zurückbehalten. Die Pakete der angegebenen Versionen müssen auf dem Host vorhanden sein, damit die App starten kann.
-
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [dotnet-publish](../tools/dotnet-publish.md)
 - [dotnet-store](../tools/dotnet-store.md)

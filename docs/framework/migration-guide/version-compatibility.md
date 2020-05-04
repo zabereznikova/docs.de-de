@@ -1,5 +1,5 @@
 ---
-title: Kompatibilität von .NET Framework-Versionen
+title: Versionskompatibilität im .NET Framework
 ms.custom: updateeachrelease
 ms.date: 04/02/2019
 helpviewer_keywords:
@@ -7,20 +7,20 @@ helpviewer_keywords:
 - .NET Framework, compatibility with earlier versions
 - .NET Framework versions, compatibility
 ms.assetid: 2f25e522-456a-48c3-8a53-e5f39275649f
-ms.openlocfilehash: e0de18b5a40875d1fec2633c16688111d8f4b9ee
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2e268753bf5941e9d28ee2bdd82ce77016ddf01a
+ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73974952"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82102982"
 ---
-# <a name="version-compatibility-in-the-net-framework"></a>Kompatibilität von .NET Framework-Versionen
+# <a name="version-compatibility"></a>Versionskompatibilität
 
-Abwärtskompatibilität bedeutet, dass eine für eine bestimmte Version einer Plattform entwickelte App in höheren Versionen dieser Plattform ausgeführt werden kann. Bei .NET Framework wird versucht, die Abwärtskompatibilität zu maximieren: Für eine Version von .NET Framework geschriebener Quellcode wird auf höheren Versionen von .NET Framework kompiliert, und Binärdateien, die auf einer Version von .NET Framework ausgeführt werden, verhalten sich auch auf höheren Versionen von .NET Framework gleich.
+Abwärtskompatibilität bedeutet, dass eine für eine bestimmte Version einer Plattform entwickelte App in höheren Versionen dieser Plattform ausgeführt werden kann. Im .NET Framework wird versucht, die Abwärtskompatibilität zu maximieren: Quellcode, der für eine bestimmte Version des .NET Framework geschrieben wurde, kann in höheren Versionen des .NET Framework kompiliert werden. Auch Binärdateien, die in einer bestimmten Version des .NET Framework ausgeführt werden, sollten in höheren Versionen des .NET Framework dasselbe Verhalten aufweisen.
 
-## <a name="Apps"></a>Versionskompatibilität für Apps
+## <a name="version-compatibility-for-apps"></a><a name="Apps"></a>Versionskompatibilität für Apps
 
-Standardmäßig wird eine App in der Version von .NET Framework ausgeführt, für die sie erstellt wurde. Wenn diese Version nicht vorhanden ist und die App-Konfigurationsdatei keine unterstützten Versionen definiert, tritt möglicherweise ein .NET Framework-Initialisierungsfehler auf. In diesem Fall schlägt der Versuch fehl, die App auszuführen.
+Standardmäßig wird eine App in der Version des .NET Framework ausgeführt, für die sie erstellt wurde. Wenn diese Version nicht vorhanden ist und die App-Konfigurationsdatei keine unterstützten Versionen definiert, tritt möglicherweise ein .NET Framework-Initialisierungsfehler auf. In diesem Fall schlägt der Versuch fehl, die App auszuführen.
 
 Fügen Sie der Konfigurationsdatei der App ein oder mehrere [\<supportedRuntime>](../configure-apps/file-schema/startup/supportedruntime-element.md)-Elemente hinzu, um die Versionen zu definieren, in denen die App ausgeführt werden kann. Jedes `<supportedRuntime>`-Element führt eine unterstützte Version der Laufzeit auf. Dabei gibt das erste Element die bevorzugte Version der Laufzeit an und das letzte die am wenigsten bevorzugte Version.
 
@@ -33,7 +33,7 @@ Fügen Sie der Konfigurationsdatei der App ein oder mehrere [\<supportedRuntime>
 </configuration>
 ```
 
-Weitere Informationen finden Sie unter [Gewusst wie: Konfigurieren einer App für die Unterstützung von .NET Framework 4 oder 4.x](../migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md).
+Weitere Informationen finden Sie unter [Vorgehensweise: Konfigurieren einer App zur Unterstützung von .NET Framework 4 oder 4.x](../migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md).
 
 ## <a name="version-compatibility-for-components"></a>Versionskompatibilität für Komponenten
 
@@ -41,7 +41,7 @@ Eine App kann die Version von .NET Framework steuern, in der sie ausgeführt wir
 
 Wegen dieser Einschränkung sind Kompatibilitätsgarantien für Komponenten besonders wichtig. Ab .NET Framework 4 können Sie den Grad der Kompatibilität einer Komponente mit mehreren Versionen angeben. Dazu wenden Sie das <xref:System.Runtime.Versioning.ComponentGuaranteesAttribute?displayProperty=nameWithType>-Attribut auf diese Komponente an. Tools können mithilfe dieses Attributs potenzielle Verletzungen der Kompatibilitätsgarantie in zukünftigen Versionen einer Komponente erkennen.
 
-## <a name="backward-compatibility-and-the-net-framework"></a>Abwärtskompatibilität und .NET Framework
+## <a name="backward-compatibility"></a>Abwärtskompatibilität
 
 .NET Framework 4.5 und höher ist mit Apps abwärtskompatibel, die mit früheren Versionen von .NET Framework erstellt wurden. Das heißt, Apps und Komponenten, die mit früheren Versionen von .NET Framework erstellt wurden, funktionieren ohne weitere Änderung auch in .NET Framework 4.5 und höher. Allerdings werden Apps standardmäßig in der Version der Common Language Runtime ausgeführt, für die sie entwickelt wurden. Daher müssen Sie eine Konfigurationsdatei bereitstellen, damit die App in .NET Framework 4.5 oder höher ausgeführt werden kann. Weitere Informationen finden Sie im Abschnitt [Versionskompatibilität für Apps](#Apps) weiter oben in diesem Artikel.
 
@@ -63,11 +63,11 @@ Wenn Ihre App oder Komponente nicht wie erwartet in .NET Framework 4.5 (einschli
 
 - Wenn Sie auf ein Problem stoßen, das noch nicht dokumentiert ist, öffnen Sie ein Ticket auf der [Website für die .NET-Entwickler-Community](https://developercommunity.visualstudio.com/spaces/61/index.html) oder im [Microsoft/dotnet GitHub-Repository](https://github.com/microsoft/dotnet/issues).
 
-## <a name="compatibility-and-side-by-side-execution"></a>Kompatibilität und parallele Ausführung
+## <a name="side-by-side-execution"></a>Parallele Ausführung
 
-Wenn Sie keine geeignete Problemumgehung für das Problem finden können, beachten Sie, dass .NET Framework 4.5 (oder eine seiner zugehörigen Releases) parallel mit den Versionen 1.1, 2.0 und 3.5 ausgeführt werden kann, und ein direktes Update ist, das Version 4 ersetzt. Sie können für Apps, die auf die Versionen 1.1, 2.0 und 3.5 ausgerichtet sind, die entsprechende Version von .NET Framework auf dem Zielcomputer installieren, um die App in der optimalen Umgebung auszuführen. Weitere Informationen über die parallele Ausführung finden Sie unter [Parallele Ausführung](../deployment/side-by-side-execution.md).
+Wenn Sie keine geeignete Umgehung für das Problem finden können, beachten Sie, dass .NET Framework 4.5 (oder eine der Unterversionen) parallel mit den Versionen 1.1, 2.0 und 3.5 ausgeführt wird und ein direktes Update ist, das Version 4 ersetzt. Sie können für Apps, die auf die Versionen 1.1, 2.0 und 3.5 ausgerichtet sind, die entsprechende Version des .NET Framework auf dem Zielcomputer installieren, um die App in der optimalen Umgebung auszuführen. Weitere Informationen über die parallele Ausführung finden Sie unter [Parallele Ausführung](../deployment/side-by-side-execution.md).
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Neuigkeiten](../whats-new/index.md)
 - [Veraltete Elemente in der Klassenbibliothek](../whats-new/whats-obsolete.md)

@@ -10,19 +10,19 @@ helpviewer_keywords:
 ms.assetid: 168f941a-2b84-43f8-933f-cf4a8548d824
 ms.openlocfilehash: 3b84d77e4ac9b9889d1bc2f08e5ead6b81deecb0
 ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 04/13/2020
 ms.locfileid: "81243036"
 ---
 # <a name="work-with-resx-files-programmatically"></a>Programmgesteuertes Arbeiten mit RESX-Dateien
 
-Da XML-Ressourcendateien (RESX) aus ordnungsgemäß definiertem XML-Code bestehen müssen, einschließlich eines Headers, der einem bestimmten Schema entsprechen muss, und auf den Daten in Name/Wert-Paaren folgen, werden Sie vermutlich feststellen, dass das manuelle Erstellen dieser Dateien ziemlich fehlerträchtig ist. Alternativ können Sie RESX-Dateien programmgesteuert mithilfe von Typen und Elementen aus der .NET-Klassenbibliothek erstellen. Sie können die .NET-Klassenbibliothek auch zum Abrufen der in RESX-Dateien gespeicherten Ressourcen verwenden. In diesem Artikel wird erläutert, wie <xref:System.Resources> Sie die Typen und Member im Namespace verwenden können, um mit .resx-Dateien zu arbeiten.
+Da XML-Ressourcendateien (RESX) aus ordnungsgemäß definiertem XML-Code bestehen müssen, einschließlich eines Headers, der einem bestimmten Schema entsprechen muss, und auf den Daten in Name/Wert-Paaren folgen, werden Sie vermutlich feststellen, dass das manuelle Erstellen dieser Dateien ziemlich fehlerträchtig ist. Alternativ können Sie RESX-Dateien programmgesteuert mithilfe von Typen und Elementen aus der .NET-Klassenbibliothek erstellen. Sie können die .NET-Klassenbibliothek auch zum Abrufen der in RESX-Dateien gespeicherten Ressourcen verwenden. In diesem Artikel wird erläutert, wie Sie die Typen und Member im Namespace <xref:System.Resources> für das Arbeiten mit RESX-Dateien verwenden können.
 
-In diesem Artikel wird das Arbeiten mit XML-Dateien (.resx) erläutert, die Ressourcen enthalten. Informationen zum Arbeiten mit binären Ressourcendateien, die <xref:System.Resources.ResourceManager>in Assemblys eingebettet wurden, finden Sie unter .
+In diesem Artikel wird das Arbeiten mit XML-Dateien (.resx) behandelt, die Ressourcen enthalten. Informationen zum Arbeiten mit binären Ressourcendateien, die in Assemblys eingebettet wurden, finden Sie unter <xref:System.Resources.ResourceManager>.
 
 > [!WARNING]
-> Es gibt nicht programmgesteuerte Verfahren zum Arbeiten mit RESX-Dateien. Wenn Sie einem Visual [Studio-Projekt](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) eine Ressourcendatei hinzufügen, stellt Visual Studio eine Schnittstelle zum Erstellen und Verwalten einer .resx-Datei bereit und konvertiert die .resx-Datei automatisch zur Kompilierungszeit in eine .resources-Datei. Ferner können Sie RESX-Dateien in einem Texteditor direkt bearbeiten. Um eine Beschädigung der Datei zu vermeiden, müssen Sie allerdings sorgfältig darauf achten, keine der in der Datei gespeicherten binären Informationen zu verändern.
+> Es gibt nicht programmgesteuerte Verfahren zum Arbeiten mit RESX-Dateien. Wenn Sie einem [Visual Studio](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link)-Projekt eine Ressourcendatei hinzufügen, stellt Visual Studio eine Oberfläche zum Erstellen und Warten einer RESX-Datei bereit und konvertiert die RESX-Datei zum Zeitpunkt der Kompilierung automatisch in eine RESOURCES-Datei. Ferner können Sie RESX-Dateien in einem Texteditor direkt bearbeiten. Um eine Beschädigung der Datei zu vermeiden, müssen Sie allerdings sorgfältig darauf achten, keine der in der Datei gespeicherten binären Informationen zu verändern.
 
 ## <a name="create-a-resx-file"></a>Erstellen einer RESX-Datei
 
@@ -39,13 +39,13 @@ Die resultierende RESX-Datei weist den entsprechenden Header und ein `data` -Ken
 > [!WARNING]
 > Verwenden Sie Ressourcendateien nicht, um Kennwörter, sicherheitsrelevante Informationen oder private Daten zu speichern.
 
-Im folgenden Beispiel wird eine RESX-Datei mit dem Namen "CarResources.resx" erstellt, mit der sechs Zeichenfolgen, ein Symbol und zwei anwendungsdefinierte Objekte (zwei `Automobile` -Objekte) gespeichert werden. Die `Automobile` Klasse, die im Beispiel definiert und instanziiert wird, wird mit dem <xref:System.SerializableAttribute> Attribut markiert.
+Im folgenden Beispiel wird eine RESX-Datei mit dem Namen "CarResources.resx" erstellt, mit der sechs Zeichenfolgen, ein Symbol und zwei anwendungsdefinierte Objekte (zwei `Automobile` -Objekte) gespeichert werden. Die Klasse `Automobile`, die im Beispiel definiert und instanziiert wird, ist mit dem Attribut <xref:System.SerializableAttribute> markiert.
 
 [!code-csharp[Conceptual.Resources.ResX#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.resx/cs/create1.cs#1)]
 [!code-vb[Conceptual.Resources.ResX#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.resx/vb/create1.vb#1)]
 
 > [!TIP]
-> Sie können [Visual Studio](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) auch verwenden, um .resx-Dateien zu erstellen. Zum Zeitpunkt der Kompilierung verwendet Visual Studio den [Resource File Generator (Resgen.exe)](../tools/resgen-exe-resource-file-generator.md) , um die RESX-Datei in eine binäre Ressourcendatei (RESOURCES) zu konvertieren, und bettet sie entweder in eine Anwendungsassembly oder in eine Satellitenassembly ein.
+> Sie können auch [Visual Studio](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) zum Erstellen von RESX-Dateien verwenden. Zum Zeitpunkt der Kompilierung verwendet Visual Studio den [Resource File Generator (Resgen.exe)](../tools/resgen-exe-resource-file-generator.md) , um die RESX-Datei in eine binäre Ressourcendatei (RESOURCES) zu konvertieren, und bettet sie entweder in eine Anwendungsassembly oder in eine Satellitenassembly ein.
 
 Eine RESX-Datei kann nicht in eine von der Laufzeitumgebung ausführbare Datei eingebettet oder in eine Satellitenassembly kompiliert werden. Sie müssen die RESX-Datei mithilfe des [Resource File Generator (Resgen.exe)](../tools/resgen-exe-resource-file-generator.md)in eine binäre Ressourcendatei (RESOURCES) konvertieren. Die resultierende RESOURCES-Datei kann dann in eine Anwendungsassembly oder eine Satellitenassembly eingebettet werden. Weitere Informationen finden Sie unter [Creating Resource Files](creating-resource-files-for-desktop-apps.md).
 
@@ -74,18 +74,18 @@ Eine RESX-Datei kann nicht in eine von der Laufzeitumgebung ausführbare Datei e
 
  Das Ergebnis ist eine binäre Ressourcendatei, die den gleichen Stammdateinamen wie die RESX-Datei und darüber hinaus eine RESOURCES-Dateierweiterung aufweist. Diese Datei kann dann zum Zeitpunkt der Kompilierung in eine ausführbare Datei oder eine Bibliothek kompiliert werden. Wenn Sie den Visual Basic-Compiler verwenden, verwenden Sie die folgende Syntax, um eine RESOURCES-Datei in die ausführbare Programmdatei einer Anwendung einzubetten:
 
- **vbc** *Dateiname* **.vb /resource:** *.Name_der_Ressourcendatei*
+ **vbc** *Dateiname* **.vb -resource:** *.resourcesDateiname*
 
  Wenn Sie C# verwenden, lautet die Syntax wie folgt:
 
- **csc** *Dateiname* **.cs /resource:** *.Name_der_Ressourcendatei*
+ **csc** *Dateiname* **.cs -resource:** *.resourcesDateiname*
 
  Die RESOURCES-Datei kann mithilfe von [Assembly Linker (AL.exe)](../tools/al-exe-assembly-linker.md)auch in eine Satellitenassembly eingebettet werden. Dafür gilt diese Syntax:
 
- **al** *Name_der_Ressourcendatei* **/out:** *Name_der_Assemblydatei*
+ **al** *resourcesDateiname* **-out:** *assemblyDateiname*
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Creating Resource Files](creating-resource-files-for-desktop-apps.md)
-- [Resgen.exe (Ressourcendateigenerator)](../tools/resgen-exe-resource-file-generator.md)
-- [Al.exe (Assembly Linker)](../tools/al-exe-assembly-linker.md)
+- [Erstellen von Ressourcendateien](creating-resource-files-for-desktop-apps.md)
+- [Resgen.exe (Resource File Generator)](../tools/resgen-exe-resource-file-generator.md)
+- [Al.exe (Assembly Linker-Tool)](../tools/al-exe-assembly-linker.md)
