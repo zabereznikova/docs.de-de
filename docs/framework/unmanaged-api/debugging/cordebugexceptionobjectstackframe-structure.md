@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 542cdd81-5ae7-4361-b0ef-1ae4775df258
 topic_type:
 - apiref
-ms.openlocfilehash: 2845c15d67e287d6efb0cd0a9c940b69de3a1c0c
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 7eccaf984b187e463195bb3804f87bbb2c7ad47b
+ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76789378"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82795923"
 ---
 # <a name="cordebugexceptionobjectstackframe-structure"></a>CorDebugExceptionObjectStackFrame-Struktur
 Stellt Stapelrahmeninformationen von einem Ausnahmeobjekt dar.  
@@ -37,7 +37,7 @@ typedef struct CorDebugExceptionObjectStackFrame {
   
 ## <a name="members"></a>Member  
   
-|Member|Beschreibung|  
+|Member|BESCHREIBUNG|  
 |------------|-----------------|  
 |`pModule`|Ein Zeiger auf das ICorDebug Module-Objekt für den aktuellen Frame.|  
 |`ip`|Der Wert des Anweisungs Zeigers (EIP/RIP) für den aktuellen Frame.|  
@@ -47,16 +47,16 @@ typedef struct CorDebugExceptionObjectStackFrame {
 ## <a name="remarks"></a>Hinweise  
  Der Aufrufer muss den Zeiger auf das icorentbugmodule-Objekt freigeben, wenn er nicht mehr verwendet wird.  
   
-## <a name="requirements"></a>-Anforderungen  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Anforderungen  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   
  **Bibliothek:** CorGuids.lib  
   
- **.NET Framework Versionen:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Debuggen von Strukturen](debugging-structures.md)
 - [Debuggen](index.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - native API reference [.NET Framework]
 - unmanaged API reference [.NET Framework]
 ms.assetid: 9aa000ee-c04c-492c-ae4f-83ecdf4fdbbe
-ms.openlocfilehash: f7dd78b889129998dee31a22f5dd23325613b8ea
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9b8671f2bd278e9e6153476d742f43150a4f6e3e
+ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73092016"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82795611"
 ---
 # <a name="unmanaged-api-reference"></a>Referenz zur nicht verwalteten API
 Dieser Abschnitt enthält Informationen zu nicht verwalteten APIs, die von Anwendungen mit verwaltetem Code verwendet werden können, wie Laufzeithosts, Compiler, Disassembler, Obfuskatoren, Debugger und Profiler.  
@@ -61,4 +61,4 @@ Dieser Abschnitt enthält Informationen zu nicht verwalteten APIs, die von Anwen
  Beschreibt die beiden Hilfsfunktionen und eine Schnittstelle, die vom Typbibliothekexporter (Tlbexp.exe) bei der Konvertierung von Assemblys in Typbibliotheken verwendet werden.  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
- [Entwicklungshandbuch](../../../docs/framework/development-guide.md)  
+ [Entwicklungshandbuch](../development-guide.md)  

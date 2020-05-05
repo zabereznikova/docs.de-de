@@ -35,9 +35,9 @@ Verknüpft den Wert einer Eigenschaft in einer Steuerelementvorlage so, dass er 
 |||  
 |-|-|  
 |`propertyName`|<xref:System.Windows.DependencyProperty.Name%2A?displayProperty=nameWithType> der Eigenschaft, der in der Setter-Syntax festgelegt wird.|  
-|`sourceProperty`|Eine weitere Abhängigkeitseigenschaft für den auf Vorlagen basierenden Typ, die durch ihren <xref:System.Windows.DependencyProperty.Name%2A?displayProperty=nameWithType> angegeben wird.<br /><br /> - oder -<br /><br /> Ein Eigenschaftenname in Punktnotation, der durch einen anderen Typ als den auf Vorlagen basierenden Zieltyp definiert wird. Hierbei handelt es sich eigentlich um einen <xref:System.Windows.PropertyPath>. Siehe [PropertyPath-XAML-Syntax](propertypath-xaml-syntax.md).|  
+|`sourceProperty`|Eine weitere Abhängigkeitseigenschaft für den auf Vorlagen basierenden Typ, die durch ihren <xref:System.Windows.DependencyProperty.Name%2A?displayProperty=nameWithType> angegeben wird.<br /><br /> - oder -<br /><br /> Ein Eigenschaftenname in Punktnotation, der durch einen anderen Typ als den auf Vorlagen basierenden Zieltyp definiert wird. Hierbei handelt es sich eigentlich um einen <xref:System.Windows.PropertyPath>. Siehe [PropertyPath-XAML-Syntax](propertypath-xaml-syntax.md).|  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Eine `TemplateBinding` ist eine optimierte Form einer [Bindung](binding-markup-extension.md) für Vorlagen Szenarien, analog zu einer `Binding` , die mit `{Binding RelativeSource={RelativeSource TemplatedParent}, Mode=OneWay}`erstellt wurde. Eine `TemplateBinding` ist immer eine unidirektionale Bindung, auch wenn die betroffenen Eigenschaften standardmäßig bidirektionale Bindungen sind. Beide betroffenen Eigenschaften müssen Abhängigkeitseigenschaften sein. Verwenden Sie stattdessen `{Binding RelativeSource={RelativeSource TemplatedParent}, Mode=TwoWay, Path=MyDependencyProperty}`die folgende Bindungs Anweisung, um eine bidirektionale Bindung mit einem übergeordneten Element zu erreichen.
   
  [RelativeSource](relativesource-markupextension.md) ist eine andere Markup Erweiterung, die manchmal in Verbindung mit oder anstelle von `TemplateBinding` verwendet wird, um eine relative Eigenschaften Bindung innerhalb einer Vorlage auszuführen.  
@@ -60,7 +60,7 @@ Verknüpft den Wert einer Eigenschaft in einer Steuerelementvorlage so, dass er 
   
  `TemplateBinding` ist eine Markuperweiterung. Markuperweiterungen werden in der Regel implementiert, wenn Attributwerte mit Escapezeichen versehen werden müssen, damit diese nicht als literale Werte oder als Handlernamen betrachtet werden, und diese Anforderung eher global und nicht nur durch den Einsatz von Typkonvertern für bestimmte Typen oder Eigenschaften erfüllt werden soll. Alle Markup Erweiterungen in XAML verwenden die `{` Zeichen `}` und in der Attribut Syntax. dabei handelt es sich um die Konvention, mit der ein XAML-Prozessor erkennt, dass das Attribut von einer Markup Erweiterung verarbeitet werden muss. Weitere Informationen finden Sie unter [Markuperweiterungen und WPF-XAML](markup-extensions-and-wpf-xaml.md).  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Windows.Style>
 - <xref:System.Windows.Controls.ControlTemplate>

@@ -40,7 +40,7 @@ Gibt Eigenschaften einer <xref:System.Windows.Data.RelativeSource> Bindungs Quel
 </Binding>
 ```
 
-- oder -
+Oder
 
 ```xml
 <Binding>
@@ -63,7 +63,7 @@ Gibt Eigenschaften einer <xref:System.Windows.Data.RelativeSource> Bindungs Quel
 |`typeName`|Erforderlich für `FindAncestor`-Modus. Der Name eines Typs, der die <xref:System.Windows.Data.RelativeSource.AncestorType%2A>-Eigenschaft auffüllt.|
 |`intLevel`|Optional für `FindAncestor`-Modus. Eine Vorgängerebene (ausgewertet bezüglich der übergeordneten Richtung in der logischen Struktur).|
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 `{RelativeSource TemplatedParent}`Bindungs Verwendungen sind eine wichtige Technik, die ein größeres Konzept der Trennung der Benutzeroberfläche eines Steuer Elements und der Logik eines Steuer Elements adressiert. Dies ermöglicht die Bindung aus der Vorlagendefinition mit dem vorlagenbasierten übergeordneten Element (der Laufzeitobjektinstanz, in der die Vorlage angewendet wird). In diesem Fall ist die [TemplateBinding-Markup Erweiterung](templatebinding-markup-extension.md) tatsächlich eine Kurzform für den folgenden Bindungs Ausdruck: `{Binding RelativeSource={RelativeSource TemplatedParent}}`. `TemplateBinding`die `{RelativeSource TemplatedParent}` -oder-Verwendungen sind sowohl innerhalb des XAML-Codes, der eine Vorlage definiert, nur relevant. Weitere Informationen finden Sie unter [TemplateBinding-Markup Erweiterung](templatebinding-markup-extension.md).
 
@@ -110,7 +110,7 @@ In der [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient
 
 `RelativeSource` ist eine Markuperweiterung. Markuperweiterungen werden in der Regel implementiert, wenn Attributwerte mit Escapezeichen versehen werden müssen, damit diese nicht als literale Werte oder als Handlernamen betrachtet werden, und diese Anforderung eher global und nicht nur durch den Einsatz von Typkonvertern für bestimmte Typen oder Eigenschaften erfüllt werden soll. Alle Markup Erweiterungen in XAML verwenden die `{` Zeichen `}` und in der Attribut Syntax. dabei handelt es sich um die Konvention, mit der ein XAML-Prozessor erkennt, dass das Attribut von einer Markup Erweiterung verarbeitet werden muss. Weitere Informationen finden Sie unter [Markuperweiterungen und WPF-XAML](markup-extensions-and-wpf-xaml.md).
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Windows.Data.Binding>
 - [Erstellen von Formaten und Vorlagen](../../../desktop-wpf/fundamentals/styles-templates-overview.md)
@@ -118,4 +118,4 @@ In der [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient
 - [Markuperweiterungen und WPF-XAML](markup-extensions-and-wpf-xaml.md)
 - [Übersicht über die Datenbindung](../../../desktop-wpf/data/data-binding-overview.md)
 - [Übersicht über Bindungsdeklarationen](../data/binding-declarations-overview.md)
-- [x:Type-Markuperweiterung](../../../desktop-wpf/xaml-services/xtype-markup-extension.md)
+- [x:typmarkup Erweiterung](../../../desktop-wpf/xaml-services/xtype-markup-extension.md)

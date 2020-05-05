@@ -12,12 +12,12 @@ api_type:
 ms.assetid: 0e350a1b-6997-46d0-bfc5-962a5011ef43
 topic_type:
 - apiref
-ms.openlocfilehash: 197c33511a474eb8291e4361ebb3c21fb3720cae
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: a889d6ba00c4a0eb96a9923a7dbe52f3b93aaba5
+ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76789426"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82795960"
 ---
 # <a name="cordebugehclause-structure"></a>CorDebugEHClause-Struktur
 [Wird nur in .NET Framework 4.5.2 und neueren Versionen unterstützt]  
@@ -40,9 +40,9 @@ typedef struct _CorDebugEHClause {
   
 ## <a name="members"></a>Member  
   
-|Member|Beschreibung|  
+|Member|BESCHREIBUNG|  
 |------------|-----------------|  
-|`Flags`|Ein Bitfeld, das die Ausnahmeinformationen in der EH-Klausel beschreibt. Weitere Informationen finden Sie im Abschnitt "Hinweise".|  
+|`Flags`|Ein Bitfeld, das die Ausnahmeinformationen in der EH-Klausel beschreibt. Weitere Informationen finden Sie im Abschnitt mit Hinweisen.|  
 |`TryOffset`|Der Offset, in Bytes, des `try`-Blocks vom Beginn des Methodentextes.|  
 |`TryLength`|Die Länge, in Bytes, des `try`-Blocks.|  
 |`HandlerOffset`|Der Speicherort des Handlers für diesen `try`-Block.|  
@@ -57,23 +57,23 @@ typedef struct _CorDebugEHClause {
   
  Das `flags`-Feld kann die folgenden Flags enthalten. Beachten Sie, dass diese nicht in CorDebug.idl oder CorDebug.h definiert sind.  
   
-|Flag|{2&gt;Wert&lt;2}|Beschreibung|  
+|Flag|Value|BESCHREIBUNG|  
 |----------|-----------|-----------------|  
 |`COR_ILEXCEPTION_CLAUSE_EXCEPTION`|0x00000000|Eine typisierte Ausnahmeklausel.|  
 |`COR_ILEXCEPTION_CLAUSE_FILTER`|0x00000001|Ein Ausnahmefilter und eine Handlerklausel.|  
 |`COR_ILEXCEPTION_CLAUSE_FINALLY`|0x00000002|Eine `finally`-Klausel.|  
 |`COR_ILEXCEPTION_CLAUSE_FAULT`|0x00000004|Eine fault-Klausel (eine `finally`-Klausel, die nur aufgerufen wird, wenn eine Ausnahme ausgelöst wird).|  
   
-## <a name="requirements"></a>-Anforderungen  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Anforderungen  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   
  **Bibliothek:** CorGuids.lib  
   
- **.NET Framework Versionen:** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [GetEHClauses-Methode](icordebugilcode-getehclauses-method.md)
 - [Debuggen von Strukturen](debugging-structures.md)

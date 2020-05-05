@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: e4412dc2-c338-4cfb-94d8-f682095dd2b1
 topic_type:
 - apiref
-ms.openlocfilehash: 2be827e12db765485ee889d6a4a19a982dad5d54
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 4a65a98ee04c3870dae2f49b3da2a8e72b1ffae4
+ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76778368"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82795831"
 ---
 # <a name="cordebuginternalframetype-enumeration"></a>CorDebugInternalFrameType-Enumeration
 Identifiziert den Stapelrahmentyp. Diese Enumeration wird von der [ICorDebugInternalFrame:: GetFrameType](icordebuginternalframe-getframetype-method.md) -Methode verwendet.  
@@ -45,9 +45,9 @@ typedef enum CorDebugInternalFrameType {
   
 ## <a name="members"></a>Member  
   
-|Member|Beschreibung|  
+|Member|BESCHREIBUNG|  
 |------------|-----------------|  
-|`STUBFRAME_NONE`|Ein NULL-Wert. Die `ICorDebugInternalFrame::GetFrameType`-Methode gibt diesen Wert nie zurück.|  
+|`STUBFRAME_NONE`|Ein NULL-Wert. Die `ICorDebugInternalFrame::GetFrameType` -Methode gibt diesen Wert nie zurück.|  
 |`STUBFRAME_M2U`|Ein verwalteter-zu-nicht verwalteter Stub-Frame.|  
 |`STUBFRAME_U2M`|Ein nicht verwalteter zu verwalteter Stub-Frame.|  
 |`STUBFRAME_APPDOMAIN_TRANSITION`|Ein Übergang zwischen Anwendungs Domänen.|  
@@ -59,15 +59,15 @@ typedef enum CorDebugInternalFrameType {
 |`STUBFRAME_SECURITY`|Ein Frame, der für die Code Zugriffssicherheit verwendet wird.|  
 |`STUBFRAME_JIT_COMPILATION`|Die Laufzeit ist eine JIT-Kompilierung einer Methode.|  
   
-## <a name="requirements"></a>-Anforderungen  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Anforderungen  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   
  **Bibliothek:** CorGuids.lib  
   
- **.NET Framework Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Debuggen von Enumerationen](debugging-enumerations.md)
+- [Debugenumerationen](debugging-enumerations.md)
