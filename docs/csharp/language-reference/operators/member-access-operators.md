@@ -1,7 +1,7 @@
 ---
 title: Operatoren und Ausdrücke für den Memberzugriff – C#-Referenz
 description: Enthält Informationen zu C#-Operatoren, die Sie für den Zugriff auf Typmember verwenden können.
-ms.date: 03/31/2020
+ms.date: 04/17/2020
 author: pkulikov
 f1_keywords:
 - ._CSharpKeyword
@@ -32,12 +32,12 @@ helpviewer_keywords:
 - hat operator [C#]
 - .. operator [C#]
 - range operator [C#]
-ms.openlocfilehash: 90066b1e9c219f66fc0c76423679e81aa3fa6770
-ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
+ms.openlocfilehash: 37a6cb7cd32a9d60607aec51b1994e4717c5349a
+ms.sourcegitcommit: e09dbff13f0b21b569a101f3b3c5efa174aec204
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/11/2020
-ms.locfileid: "81120984"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82624864"
 ---
 # <a name="member-access-operators-and-expressions-c-reference"></a>Operatoren und Ausdrücke für den Memberzugriff (C#-Referenz)
 
@@ -138,6 +138,9 @@ Wenn Sie im vorherigen Beispiel nicht den `??`-Operator verwenden und `numbers` 
 
 Der NULL-bedingte Memberzugriffsoperator `?.` wird auch als Elvis-Operator bezeichnet.
 
+> [!NOTE]
+> In C# 8 beendet der [NULL-tolerante Operator](null-forgiving.md) die Liste mit den vorangehenden NULL-bedingten Vorgängen. Der Ausdruck `x?.y!.z` wird beispielsweise als `(x?.y)!.z` analysiert. Aufgrund dieser Interpretation wird `z` ausgewertet, auch wenn `x` `null` ist, was zu <xref:System.NullReferenceException> führen kann.
+
 ### <a name="thread-safe-delegate-invocation"></a>Threadsicherer Delegataufruf
 
 Verwenden Sie den `?.`-Operator, um zu überprüfen, ob ein Delegat ungleich NULL ist, und ihn auf threadsichere Weise aufzurufen (z.B. wenn Sie [ein Ereignis auslösen](../../../standard/events/how-to-raise-and-consume-events.md)), wie der folgende Code zeigt:
@@ -155,6 +158,8 @@ if (handler != null)
     handler(…);
 }
 ```
+
+Dies ist eine threadsichere Möglichkeit, um sicherzustellen, dass nur ein `handler` ungleich NULL aufgerufen wird. Da Delegatinstanzen unveränderlich sind, kann kein Thread den Wert ändern, auf den von der lokalen `handler`-Variable verwiesen wird. Insbesondere wenn der von einem anderen Thread ausgeführte Code das Abonnement des `PropertyChanged`-Ereignisses aufhebt und `PropertyChanged` zu `null` wird, bevor `handler` aufgerufen wird, bleibt der Wert unverändert, auf den von `handler` verwiesen wird. Der `?.`-Operator wertet seinen linken Operanden nicht mehr als einmal aus, um sicherzustellen, dass er nicht in `null` geändert werden kann, nachdem bestätigt wurde, dass er ungleich NULL ist.
 
 ## <a name="invocation-expression-"></a>Aufrufausdruck „()“
 

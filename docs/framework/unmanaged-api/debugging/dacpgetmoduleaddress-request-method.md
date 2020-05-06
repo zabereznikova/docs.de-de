@@ -1,5 +1,5 @@
 ---
-title: DacpGetModuleAddress::Anforderungsmethode
+title: DacpGetModuleAddress::Request-Methode
 ms.date: 01/16/2019
 api.name:
 - DacpGetModuleAddress::Request Method
@@ -15,16 +15,16 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 4dbe6a2c295e5afae1b6761f0c7b695fdb906428
-ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
+ms.openlocfilehash: 1755526636bed6d78663112e4c2ad5ab7c3f731c
+ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82102906"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82860837"
 ---
-# <a name="dacpgetmoduleaddressrequest-method"></a>DacpGetModuleAddress::Anforderungsmethode
+# <a name="dacpgetmoduleaddressrequest-method"></a>DacpGetModuleAddress::Request-Methode
 
-Führt eine Anforderung aus, um die Struktur aus der angegebenen Laufzeitstruktur aufzufüllen.
+Führt eine Anforderung aus, um die-Struktur aus der angegebenen Laufzeitstruktur aufzufüllen.
 
 [!INCLUDE[debugging-api-recommended-note](../../../../includes/debugging-api-recommended-note.md)]
 
@@ -39,22 +39,22 @@ HRESULT Request(
 ## <a name="parameters"></a>Parameter
 
 `pDataModule`\
-[in] Ein Zeiger auf das Seed-Datenmodul.
+in Ein Zeiger auf das Seed Data-Modul.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Struktur befindet sich innerhalb der Laufzeit und wird nicht durch Header oder Bibliotheksdateien verfügbar gemacht. Um es zu verwenden, ist der einfachste Weg, die Implementierung nachzuahmen:
+Diese Struktur befindet sich innerhalb der Laufzeit und wird nicht durch Header oder Bibliotheksdateien verfügbar gemacht. Um es zu verwenden, ist die einfachste Möglichkeit, die Implementierung zu imitieren:
 
-- Geben Sie den Wert `Request` zurück, `IXCLRDataModule*` der durch Aufrufen der Methode für den Parameter mit den folgenden Parametern erhalten wurde:`((uint32) 0xf0000000, 0, 0, (uint32) sizeof(*this), (uint8*) this)`
+- Gibt den Wert zurück, der durch `Request` Aufrufen der- `IXCLRDataModule*` Methode für den-Parameter mit den folgenden Parametern abgerufen wurde:`((uint32) 0xf0000000, 0, 0, (uint32) sizeof(*this), (uint8*) this)`
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
-**Plattformen:** Siehe [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md)\
-**Kopfzeile:** Keine
-**Bibliothek:** Keine
-**.NET Framework-Versionen:**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]
+**Plattformen:** Siehe [System Anforderungen](../../get-started/system-requirements.md)\
+**Header:** Gar
+**Bibliothek:** Gar
+**.NET Framework Versionen:**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Weitere Informationen:
 
 - [Debuggen](index.md)
-- [DacpGetModuleAddress-Struktur](dacpgetmoduleaddress-structure.md)
+- [Dacpgetmoduleaddress-Struktur](dacpgetmoduleaddress-structure.md)

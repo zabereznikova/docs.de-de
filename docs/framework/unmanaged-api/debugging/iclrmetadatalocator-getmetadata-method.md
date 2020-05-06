@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 704a8893-ac56-43b4-90ea-715f38ccb40e
 topic_type:
 - apiref
-ms.openlocfilehash: 66b3934d000b4f000c368acb1f57c8fc82a5c453
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: ad309290319396ff4e74e30d572effeffe802d1d
+ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76793623"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82859880"
 ---
 # <a name="iclrmetadatalocatorgetmetadata-method"></a>ICLRMetadataLocator::GetMetadata-Methode
 Wird von den Common Language Runtime (CLR)-Datenzugriffs Diensten aufgerufen, um die Metadaten eines Bilds abzurufen.  
@@ -42,7 +42,7 @@ HRESULT GetMetadata(
 );  
 ```  
   
-## <a name="parameters"></a>Parameters  
+## <a name="parameters"></a>Parameter  
  `imagePath`  
  in Eine Zeichenfolge, die den Pfad der Bilddatei angibt.  
   
@@ -59,7 +59,7 @@ HRESULT GetMetadata(
  in Die relative virtuelle Adresse (RVA) der Metadaten. Die Adresse ist relativ zur Basisadresse des Images.  
   
  `flags`  
- in Reserviert für zukünftige Verwendung.  
+ [in] Reserviert für zukünftige Verwendung.  
   
  `bufferSize`  
  in Die Größe des Puffers, in dem die Metadaten platziert werden sollen.  
@@ -73,15 +73,15 @@ HRESULT GetMetadata(
 ## <a name="remarks"></a>Hinweise  
  Diese Methode wird vom Writer der Debuganwendung implementiert.  
   
-## <a name="requirements"></a>-Anforderungen  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Anforderungen  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Clrdata. idl, Clrdata. h  
   
  **Bibliothek:** CorGuids.lib  
   
- **.NET Framework Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 - [ICLRMetadataLocator-Schnittstelle](iclrmetadatalocator-interface.md)

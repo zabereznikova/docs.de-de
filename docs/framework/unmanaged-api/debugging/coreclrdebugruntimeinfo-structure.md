@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: bd01c30f-b7a8-4179-9497-622b6599b1a6
 topic_type:
 - apiref
-ms.openlocfilehash: 92a814d427fcf2e40c7f79e9eb9192e0b7eed4b2
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 2c41e7db32ee8557a6c03217b95fd5b040655c70
+ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73132132"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82860930"
 ---
 # <a name="coreclrdebugruntimeinfo-structure"></a>CoreClrDebugRuntimeInfo-Struktur
 Stellt eine CLR-Instanz (Common Language Runtime) dar, die in einem Prozess auf einem Remotecomputer geladen wird.  
@@ -34,14 +34,14 @@ struct  CoreClrDebugRuntimeInfo {
 };  
 ```  
   
-## <a name="members"></a>Member  
+## <a name="members"></a>Members  
   
-|Member|Beschreibung|  
+|Member|BESCHREIBUNG|  
 |------------|-----------------|  
 |`m_dwInternalID`|Der Prozessbezeichner, der durch den auf dem Zielcomputer ausgeführten Remotedebugproxy zugewiesen wird.|  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Coreclrremotedebugginginterfaces. h  
   

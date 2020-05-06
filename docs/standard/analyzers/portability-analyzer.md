@@ -4,12 +4,12 @@ description: Erfahren Sie, wie Sie mit dem Tool .NET Portability Analyzer bewert
 ms.date: 09/13/2019
 ms.technology: dotnet-standard
 ms.assetid: 0375250f-5704-4993-a6d5-e21c499cea1e
-ms.openlocfilehash: 397d9f08a0dd28f80d653ac5044d6acfa2418727
-ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
+ms.openlocfilehash: 8d019bef5fddac9f7c3d93e416cea061905c82ff
+ms.sourcegitcommit: 7370aa8203b6036cea1520021b5511d0fd994574
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80344308"
+ms.lasthandoff: 05/02/2020
+ms.locfileid: "82728445"
 ---
 # <a name="the-net-portability-analyzer"></a>.NET Portability Analyzer
 
@@ -73,6 +73,6 @@ Im Abschnitt **Details** des Berichts werden die APIs aufgeführt, die in einer 
 
 ![Screenshot der fehlenden Assemblys.](./media/portability-analyzer/api-catalog-missing-assemblies.png)
 
-Ihr Bericht enthält möglicherweise einen Abschnitt mit der Überschrift „Fehlende Assemblys“. In diesem Abschnitt wird Ihnen mitgeteilt, dass die Assemblys in der Liste von Ihren analysierten Assemblys referenziert werden, aber nicht analysiert wurden. Wenn es sich um eine Assembly in Ihrem Besitz handelt, beziehen Sie sie in die Ausführung von API Portability Analyzer ein, sodass Sie dafür die im Portabilitätsbericht angegebene API-Ebene erhalten. Wenn es sich um die Bibliothek eines Drittanbieters handelt, erkundigen Sie sich, ob es eine neuere Version gibt, die Ihre Zielplattform unterstützt. Ist dies der Fall, sollten Sie zur neueren Version wechseln. Letztlich soll diese Liste alle Assemblys von Drittanbietern enthalten, von denen Ihre Anwendung abhängig ist, und diese müssen nachweislich eine Version aufweisen, die Ihre Zielplattform unterstützt.
+Ihr Bericht enthält möglicherweise einen Abschnitt mit der Überschrift „Fehlende Assemblys“. Dieser Abschnitt enthält eine Liste der Assemblys, die von Ihren analysierten Assemblys referenziert werden, aber nicht analysiert wurden. Wenn es sich um eine Assembly in Ihrem Besitz handelt, beziehen Sie sie in die Ausführung von API Portability Analyzer ein, sodass Sie dafür die im Portabilitätsbericht angegebene API-Ebene erhalten. Wenn es sich um eine Bibliothek eines Drittanbieters handelt, überprüfen Sie, ob es eine neuere Version gibt, die Ihre Zielplattform unterstützt, und erwägen Sie eine Umstellung auf die neuere Version. Letztlich soll diese Liste alle Assemblys von Drittanbietern enthalten, von denen Ihre Anwendung abhängig ist, und diese müssen nachweislich eine Version aufweisen, die Ihre Zielplattform unterstützt.
 
 Weitere Informationen zum .NET Portability Analyzer, finden Sie auf der [GitHub-Dokumentation](https://github.com/Microsoft/dotnet-apiport#documentation) und im Channel 9-Video [Eine kurze Betrachtung des .NET Portability Analyzer](https://channel9.msdn.com/Blogs/Seth-Juarez/A-Brief-Look-at-the-NET-Portability-Analyzer).

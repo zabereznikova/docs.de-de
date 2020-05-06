@@ -8,12 +8,12 @@ helpviewer_keywords:
 - debugging API [Silverlight]
 - Silverlight, debugging
 ms.assetid: 35c7a18f-133a-4584-bd25-bb338568b0c6
-ms.openlocfilehash: 85b5a5a630f399d0e036de434365e2e4f8f02dea
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: c83bdcca4fab75b4ae94500ceb785b6000cd802a
+ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76793828"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82860867"
 ---
 # <a name="createdebugginginterfacefromversion-function-for-silverlight"></a>CreateDebuggingInterfaceFromVersion-Funktion für Silverlight
 Akzeptiert eine (CLR)-Versions Zeichenfolge (Common Language Runtime), die von der [Funktion "deateversionstringfrommodule](createversionstringfrommodule-function.md)" zurückgegeben wird, und gibt eine entsprechende Debuggerschnittstelle zurück (in der Regel [ICorDebug](icordebug-interface.md)).  
@@ -27,7 +27,7 @@ HRESULT CreateDebuggingInterfaceFromVersion (
 );  
 ```  
   
-## <a name="parameters"></a>Parameters  
+## <a name="parameters"></a>Parameter  
  `szDebuggeeVersion`  
  in Die Versions Zeichenfolge der CLR im Ziel-zu debuggenden Ziel, die von der [Funktion "Funktion](createversionstringfrommodule-function.md)" von "debuggende Komponente" zurückgegeben wird.  
   
@@ -36,7 +36,7 @@ HRESULT CreateDebuggingInterfaceFromVersion (
   
 ## <a name="return-value"></a>Rückgabewert  
  S_OK  
- `ppCordb` verweist auf ein gültiges Objekt, das die [ICorDebug-Schnittstellen](icordebug-interface.md) Schnittstelle implementiert.  
+ `ppCordb`verweist auf ein gültiges Objekt, das die [ICorDebug-Schnittstellen](icordebug-interface.md) Schnittstelle implementiert.  
   
  E_INVALIDARG  
  Entweder `szDebuggeeVersion` oder `ppCordb` ist null.  
@@ -53,8 +53,8 @@ HRESULT CreateDebuggingInterfaceFromVersion (
 ## <a name="remarks"></a>Hinweise  
  Die zurückgegebene Schnittstelle stellt die Funktionen zum Anfügen an eine CLR in einem Zielprozess und zum Debuggen von verwaltetem Code bereit, der von der CLR ausgeführt wird.  
   
-## <a name="requirements"></a>-Anforderungen  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Anforderungen  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** dbgshim. h  
   

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 62e0630c-8cb7-45d2-b622-5a472abfd8cf
 topic_type:
 - apiref
-ms.openlocfilehash: 41b2e009f8f017a72147232015ea2357ae922ca1
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 16d15101534b88d7da4093dab73b48b5c09a192c
+ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76793651"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82860400"
 ---
 # <a name="iclrdebuggingcanunloadnow-method"></a>ICLRDebugging::CanUnloadNow-Methode
 Bestimmt, ob eine Bibliothek, die von einer [ICLRDebuggingLibraryProvider](iclrdebugginglibraryprovider-interface.md) -Schnittstelle bereitgestellt wurde, noch verwendet wird oder entladen werden kann.  
@@ -31,14 +31,14 @@ Bestimmt, ob eine Bibliothek, die von einer [ICLRDebuggingLibraryProvider](iclrd
 HRESULT CanUnloadNow(HMODULE hModule);  
 ```  
   
-## <a name="parameters"></a>Parameters  
+## <a name="parameters"></a>Parameter  
  `hmodule`  
  in Die Basisadresse eines Moduls im Ziel Prozess.  
   
 ## <a name="return-value"></a>Rückgabewert  
  Diese Methode gibt die folgenden spezifischen HRESULTs sowie HRESULT-Fehler zurück, die Methodenfehler anzeigen.  
   
-|HRESULT|Beschreibung|  
+|HRESULT|BESCHREIBUNG|  
 |-------------|-----------------|  
 |S_OK|Das Modul, auf das von `hmodule` verwiesen wird, kann entladen werden.|  
 |S_FALSE|Das Modul, auf das von `hmodule` verwiesen wird, wird weiterhin verwendet.|  
@@ -47,18 +47,18 @@ HRESULT CanUnloadNow(HMODULE hModule);
 ## <a name="exceptions"></a>Ausnahmen  
   
 ## <a name="remarks"></a>Hinweise  
- Diese Methode überprüft, ob alle Instanzen von `ICorDebug*`-Schnittstellen freigegeben wurden und derzeit kein Thread in einem Aufrufen der [ICLRDebugging:: OpenVirtualProcess](iclrdebugging-openvirtualprocess-method.md) -Methode enthalten ist.  
+ Diese Methode überprüft, ob alle Instanzen von `ICorDebug*` Schnittstellen freigegeben wurden und derzeit kein Thread in einem Aufrufen der [ICLRDebugging:: OpenVirtualProcess](iclrdebugging-openvirtualprocess-method.md) -Methode ist.  
   
-## <a name="requirements"></a>-Anforderungen  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Anforderungen  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   
  **Bibliothek:** CorGuids.lib  
   
- **.NET Framework Versionen:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
-- [Debuggen von Schnittstellen](debugging-interfaces.md)
+- [Debugschnittstellen](debugging-interfaces.md)
 - [Debuggen](index.md)

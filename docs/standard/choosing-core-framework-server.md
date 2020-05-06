@@ -1,18 +1,18 @@
 ---
 title: Wahl zwischen .NET Core und .NET Framework für Server-Apps
-description: Ein Leitfaden zur Auswahl der NET-Implementierung für die Erstellung einer Server-App in .NET.
+description: Ein Leitfaden, der Sie bei der Entscheidung unterstützt, welche Implementierung von .NET bei der Erstellung einer Server-App verwendet werden soll.
 author: cartermp
-ms.date: 06/19/2018
-ms.openlocfilehash: 885a7fb3419eafa5d88ef621cf6ad04a8d48bb59
-ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
+ms.date: 04/28/2020
+ms.openlocfilehash: 30157276bce53ed44dca5b660172e5556dab14f8
+ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81607492"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82507441"
 ---
-# <a name="choose-between-net-core-and-net-framework-for-server-apps"></a>Wahl zwischen .NET Core und .NET Framework für Server-Apps
+# <a name="net-core-vs-net-framework-for-server-apps"></a>.NET Core im Vergleich zur .NET Framework für Server-Apps
 
-Bei der Erstellung von serverseitigen Anwendungen mit .NET werden zwei Implementierungen unterstützt: .NET Framework und .NET Core. Beide nutzen viele gemeinsame Komponenten, und bei beiden stimmt ein Teil des Codes überein. Allerdings gibt es auch grundlegende Unterschiede. Daher richtet sich Ihre Entscheidung danach, was Sie erreichen möchten.  Dieser Artikel stellt Anleitungen dazu bereit, welche Variante in welchen Fällen verwendet werden sollte.
+Bei der Erstellung von serverseitigen Apps werden zwei .NET-Implementierungen unterstützt: .NET Framework und .NET Core. Beide nutzen viele gemeinsame Komponenten, und bei beiden stimmt ein Teil des Codes überein. Allerdings gibt es auch grundlegende Unterschiede. Daher richtet sich Ihre Entscheidung danach, was Sie erreichen möchten. Dieser Artikel stellt Anleitungen dazu bereit, welche Variante in welchen Fällen verwendet werden sollte.
 
 Verwenden Sie in folgenden Fällen .NET Core für Ihre Serveranwendung:
 
@@ -53,15 +53,17 @@ Container werden häufig in Verbindung mit einer Microservicearchitektur verwend
 
 Docker-Container können in Ihrer Linux- oder Windows-Infrastruktur oder in einem Clouddienst wie [Azure Kubernetes Service](https://azure.microsoft.com/services/kubernetes-service/) gehostet werden. Azure Kubernetes Service kann containerbasierte Anwendungen in der Cloud verwalten, orchestrieren und skalieren.
 
-### <a name="a-need-for-high-performance-and-scalable-systems"></a>Bedarf an skalierbaren Hochleistungssystemen
+### <a name="high-performance-and-scalable-systems"></a>Hochleistungssysteme und skalierbare Systeme
 
 Wenn Sie für Ihr System die bestmögliche Leistung und Skalierbarkeit benötigen, sind .NET Core und ASP.NET Core die besten Optionen für Sie. Die leistungsstarke Serverlaufzeit für Windows Server und Linux macht .NET zu einem leistungsfähigen Webframework für [TechEmpower-Benchmarks](https://www.techempower.com/benchmarks/#hw=ph&test=plaintext).
 
 Leistung und Skalierbarkeit sind insbesondere für Microservicearchitekturen relevant, in denen Hunderte von Microservices ausgeführt werden können. Mit ASP.NET Core werden Systeme mit einer deutlich geringeren Zahl an Servern bzw. VMs ausgeführt. Durch die geringere Zahl an Servern bzw. VMs werden Kosten für die Infrastruktur und das Hosten gespart.
 
-### <a name="a-need-for-side-by-side-of-net-versions-per-application-level"></a>Bedarf an parallel ausführbaren .NET-Versionen pro Anwendungsebene
+### <a name="side-by-side-net-versions-per-application-level"></a>Verschiedene parallele .NET-Versionen pro Anwendungsebene
 
-Für das Installieren von Anwendungen mit Abhängigkeiten von verschiedenen .NET-Versionen wird .NET Core empfohlen. .NET Core bietet parallele Installationen verschiedener Versionen der .NET Core-Runtime auf demselben Computer. Diese parallele Installation ermöglicht das Vorhandensein mehrerer Dienste auf demselben Server, wobei jeder seine eigene .NET Core-Version aufweist. Zudem senkt sie Risiken und spart Kosten für Anwendungsupdates und IT-Vorgänge.
+Für das Installieren von Anwendungen mit Abhängigkeiten von verschiedenen .NET-Versionen wird .NET Core empfohlen. .NET Core unterstützt parallele Installationen verschiedener Versionen der .NET Core-Runtime auf demselben Computer. Diese parallele Installation ermöglicht das Vorhandensein mehrerer Dienste auf demselben Server, wobei jeder seine eigene .NET Core-Version aufweist. Zudem senkt sie Risiken und spart Kosten für Anwendungsupdates und IT-Vorgänge.
+
+Eine parallele Installation ist mit .NET Framework nicht möglich. Dabei handelt es sich um eine Windows-Komponente, und es kann jeweils nur eine Version auf einem Computer vorhanden sein. Jede Version von .NET Framework ersetzt die vorherige Version. Wenn Sie eine neue App installieren, die auf eine neuere Version von .NET Framework abzielt, können Sie vorhandene Apps, die auf dem Computer ausgeführt werden, unterbrechen, da die vorherige Version ersetzt wurde.
 
 ## <a name="when-to-choose-net-framework"></a>In welchen Fällen sollte .NET Framework verwendet werden?
 
@@ -71,16 +73,22 @@ Für das Installieren von Anwendungen mit Abhängigkeiten von verschiedenen .NET
 
 In den meisten Fällen müssen Sie Ihre vorhandenen Anwendungen nicht zu .NET Core migrieren. Stattdessen wird die Verwendung von .NET Core empfohlen, wenn Sie eine vorhandene Anwendung erweitern möchten, z.B. durch Schreiben eines neuen Webdiensts in ASP.NET Core.
 
-### <a name="a-need-to-use-third-party-net-libraries-or-nuget-packages-not-available-for-net-core"></a>Notwendigkeit von .NET-Bibliotheken von Drittanbietern oder NuGet-Paketen, die für .NET Core nicht verfügbar sind
+### <a name="aspnet-core-on-net-framework"></a>ASP.NET Core unter .NET Framework
+
+Informationen zur Unterstützung für ASP.NET Core unter .NET Framework finden Sie in der [.NET Core-Unterstützungsrichtlinie](https://dotnet.microsoft.com/platform/support/policy/dotnet-core).
+
+### <a name="third-party-libraries-or-nuget-packages-not-available-for-net-core"></a>Bibliotheken von Drittanbietern oder NuGet-Paketen nicht für .NET Core verfügbar
 
 Aktuell können Sie die schnelle Integration vom .NET Standard in Bibliotheken beobachten. Mit .NET Standard können Sie Code in allen .NET-Implementierungen einschließlich .NET Core freigeben. Mit .NET Standard 2.0 ist das sogar noch einfacher:
 
 - Die API-Oberfläche ist deutlich größer.
-- Der .NET Framework-Kompatibilitätsmodus wurde eingeführt. Mit diesem Kompatibilitätsmodus können .NET Standard- bzw. .NET Core-Projekte auf .NET Framework-Bibliotheken verweisen. Im Blogbeitrag [Announcing .NET Standard 2.0 (Ankündigung: .NET Standard 2.0)](https://devblogs.microsoft.com/dotnet/announcing-net-standard-2-0/) finden Sie weitere Informationen zum Kompatibilitätsmodus.
+- Der .NET Framework-Kompatibilitätsmodus wurde eingeführt.
+
+  Mit diesem Kompatibilitätsmodus können .NET Standard- und .NET Core-Projekte auf .NET Framework-Bibliotheken verweisen. Im Blogbeitrag [Announcing .NET Standard 2.0 (Ankündigung: .NET Standard 2.0)](https://devblogs.microsoft.com/dotnet/announcing-net-standard-2-0/) finden Sie weitere Informationen zum Kompatibilitätsmodus.
 
 Sie müssen nur dann .NET Framework verwenden, wenn die Bibliotheken oder NuGet-Pakete Technologien verwenden, die nicht in .NET Standard bzw. .NET Core verfügbar sind.
 
-### <a name="a-need-to-use-net-technologies-not-available-for-net-core"></a>Notwendigkeit von .NET-Technologien, die für .NET Core nicht verfügbar sind
+### <a name="net-technologies-not-available-for-net-core"></a>.NET-Technologien, die für .NET Core nicht verfügbar sind
 
 Einige .NET Framework-Technologien sind in .NET Core nicht verfügbar. Möglicherweise werden aber einige in zukünftigen .NET Core-Releases verfügbar gemacht. Andere können jedoch für die neuen Anwendungsmuster, auf die .NET Core abzielt, nicht verwendet werden und werden möglicherweise nie verfügbar sein. Die folgende Liste enthält die häufigsten Technologien, die von .NET Core nicht unterstützt werden:
 
@@ -90,15 +98,13 @@ Einige .NET Framework-Technologien sind in .NET Core nicht verfügbar. Mögliche
 
 - Implementierung von WCF-Diensten. Auch wenn WCF-Dienste über eine [WCF-Clientbibliothek](https://github.com/dotnet/wcf) von .NET Core genutzt werden, ist die WCF-Serverimplementierung aktuell nur in .NET Framework verfügbar. Dieses Szenario ist nicht Bestandteil der derzeitigen Pläne für .NET Core, wird jedoch für die Zukunft in Betracht gezogen.
 
-- Workflow-bezogene Dienste: Windows Workflow Foundation (WF), Workflow-Dienste (WCF + WF in einem einzigen Dienst) und WCF Data Services (früher „ADO.NET Data Services“) sind nur in .NET Framework verfügbar.  Eine Integration von WF/WCF+WF/WCF Data Services in .NET Core ist nicht geplant.
+- Workflow-bezogene Dienste: Windows Workflow Foundation (WF), die Workflow-Dienste (WCF + WF in einem einzigen Dienst) und WCF Data Services (früher „ADO.NET Data Services“) sind nur in .NET Framework verfügbar. Eine Integration dieser Technologien in .NET Core ist nicht geplant.
 
 - Sprachenunterstützung: Visual Basic und F# werden aktuell in .NET Core unterstützt, allerdings nicht für alle Projekttypen. Eine Liste der unterstützten Projektvorlagen finden Sie im Abschnitt [Vorlagenoptionen für dotnet new](../core/tools/dotnet-new.md#arguments).
 
-Zusätzlich zum offiziellen Meilensteinplan werden auch andere Frameworks in .NET Core portiert. Eine vollständige Liste finden Sie bei den CoreFX-Problemen, die als [port-to-core](https://github.com/dotnet/corefx/issues?q=is%3Aopen+is%3Aissue+label%3Aport-to-core) (Port auf Core) gekennzeichnet wurden. Diese Liste stellt jedoch nicht die Komponenten dar, die Microsoft auch tatsächlich in .NET Core integrieren wird. Sie spiegelt lediglich die Wünsche der Community wider. Wenn Ihnen eine als `port-to-core` gekennzeichnete Komponente als wichtig erscheint, beteiligen Sie sich an der Diskussion auf GitHub. Wenn Ihrer Ansicht nach noch etwas fehlt, erstellen Sie im [.NET-Repository](https://github.com/dotnet/runtime/issues/new) ein neues Problem.
+### <a name="platform-doesnt-support-net-core"></a>Plattformen, die .NET Core nicht unterstützen
 
-### <a name="a-need-to-use-a-platform-that-doesnt-support-net-core"></a>Notwendigkeit einer Plattform, die .NET Core nicht unterstützt
-
-Einige Plattformen von Microsoft oder Drittanbietern unterstützen .NET Core nicht. Einige Azure-Dienste stellen ein SDK bereit, das noch nicht für die Nutzung in .NET Core verfügbar ist. Dies ist allerdings nur vorübergehend der Fall, weil .NET Core von sämtlichen Azure-Diensten verwendet wird. In der Zwischenzeit können Sie anstelle des Client-SDKs stets die entsprechende REST-API verwenden.
+Einige Plattformen von Microsoft oder Drittanbietern unterstützen .NET Core nicht. Einige Azure-Dienste stellen ein SDK bereit, das noch nicht für die Nutzung in .NET Core verfügbar ist. Dies ist allerdings nur vorübergehend der Fall, weil .NET Core von sämtlichen Azure-Diensten verwendet wird. In der Zwischenzeit können Sie anstelle des Client-SDKs die entsprechende REST-API verwenden.
 
 ## <a name="see-also"></a>Siehe auch
 

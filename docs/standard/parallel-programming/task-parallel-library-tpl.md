@@ -7,12 +7,12 @@ helpviewer_keywords:
 - .NET, parallel programming in
 - Parallel Programming
 ms.assetid: b8f99f43-9104-45fd-9bff-385a20488a23
-ms.openlocfilehash: 6785041730a048fb08677dbd054f727e351185d4
-ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
+ms.openlocfilehash: 74a6fc20e95e11bfdbec617742f304a940f3e769
+ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80588578"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82507558"
 ---
 # <a name="task-parallel-library-tpl"></a>Task Parallel Library (TPL)
 Die Task Parallel Library (TPL) ist ein Satz von öffentlichen Typen und APIs im <xref:System.Threading?displayProperty=nameWithType>- und <xref:System.Threading.Tasks?displayProperty=nameWithType>-Namespace. Der Zweck der TPL ist es, die Produktivität der Entwickler zu erhöhen, indem das Hinzufügen von Parallelität und Nebenläufigkeit zu Anwendungen vereinfacht wird. Die TPL skaliert den Grad der Nebenläufigkeit dynamisch, um alle verfügbaren Prozessoren möglichst effizient zu nutzen. Außerdem behandelt die TPL die Partitionierung der Arbeit, die Planung von Threads im <xref:System.Threading.ThreadPool>, die Abbruchunterstützung, die Zustandsverwaltung und andere Details auf niedriger Ebene. Mithilfe der TPL können Sie die Leistung des Codes optimieren und sich auf die Arbeit konzentrieren, für die das Programm konzipiert wurde.  
@@ -31,6 +31,6 @@ Die Task Parallel Library (TPL) ist ein Satz von öffentlichen Typen und APIs im
 |[Parallel LINQ (PLINQ) (Paralleles LINQ (PLINQ))](../../../docs/standard/parallel-programming/introduction-to-plinq.md)|Beschreibt das Herstellen von Datenparallelität mit LINQ-Abfragen.|  
 |[Parallele Programmierung](../../../docs/standard/parallel-programming/index.md)|Der Knoten auf oberster Ebene für die parallele .NET-Programmierung.|  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
-- [Beispiele für die parallele Programmierung mit .NET Framework](https://code.msdn.microsoft.com/Samples-for-Parallel-b4b76364)
+- [Beispiele für die parallele Programmierung mit .NET Core und .NET Standard](/samples/browse/?products=dotnet-core%2Cdotnet-standard&term=parallel)

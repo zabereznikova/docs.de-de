@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - tasks, with other asynchronous models
 ms.assetid: e7b31170-a156-433f-9f26-b1fc7cd1776f
-ms.openlocfilehash: 27766c10d0624b5eda8256a3211662036a1b16b3
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e71c609b500bc6771c405cfb6f4ac14923cc3939
+ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73139953"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82507545"
 ---
 # <a name="tpl-and-traditional-net-framework-asynchronous-programming"></a>TPL und herkömmliche asynchrone .NET Framework-Programmierung
 .NET Framework stellt die folgenden zwei Standardmuster zum Ausführen von E/A-gebundenen und rechnergebundenen asynchronen Vorgängen bereit:  
@@ -102,7 +102,7 @@ ms.locfileid: "73139953"
  [!code-csharp[FromAsync#10](../../../samples/snippets/csharp/VS_Snippets_Misc/fromasync/cs/snippet10.cs#10)]
  [!code-vb[FromAsync#10](../../../samples/snippets/visualbasic/VS_Snippets_Misc/fromasync/vb/snippet10.vb#10)]  
   
- Ein umfassenderes Beispiel, in dem auch die Ausnahmebehandlung und das Aufrufen der Methode im Clientcode beschrieben werden, finden Sie unter [Gewusst wie: Umschließen von ereignisbasierten APM-Mustern in einer Aufgabe](../../../docs/standard/parallel-programming/how-to-wrap-eap-patterns-in-a-task.md).  
+ Ein umfassenderes Beispiel, in dem auch die Ausnahmebehandlung und das Aufrufen der Methode im Clientcode beschrieben wird, finden Sie unter [Vorgehensweise: Umschließen von EAP-Mustern in einer Aufgabe](../../../docs/standard/parallel-programming/how-to-wrap-eap-patterns-in-a-task.md).  
   
  Beachten Sie, dass alle durch <xref:System.Threading.Tasks.TaskCompletionSource%601> erstellten Aufgaben von dieser TaskCompletionSource gestartet werden. Der Benutzercode sollte daher für diese Aufgaben nicht die Start-Methode aufrufen.  
   
@@ -115,8 +115,8 @@ ms.locfileid: "73139953"
  [!code-vb[FromAsync#09](../../../samples/snippets/visualbasic/VS_Snippets_Misc/fromasync/vb/module1.vb#09)]  
   
 ## <a name="using-the-streamextensions-sample-code"></a>Verwenden des StreamExtensions-Beispielcodes  
- Die Datei „Streamextensions.cs“ unter [Beispiele für die parallele Programmierung mit .NET Framework 4](https://code.msdn.microsoft.com/ParExtSamples) enthält mehrere Referenzimplementierungen, in denen Aufgabenobjekte für asynchrone Datei- und Netzwerk-E/A verwendet werden.  
+ Die Datei *Streamextensions.cs* im Repository [Parallele Erweiterungsextras für .NET Standard](/samples/dotnet/samples/parallel-programming-extensions-extras-cs/) enthält mehrere Referenzimplementierungen, in denen `Task`-Objekte für asynchrone Datei- und Netzwerk-E/A verwendet werden.
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Task Parallel Library (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)

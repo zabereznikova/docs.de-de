@@ -14,32 +14,32 @@ helpviewer_keywords:
 ms.assetid: 67739617-6add-41a9-9de5-a3200c3109ce
 topic_type:
 - apiref
-ms.openlocfilehash: a8d9348572ec0cf67c5facebb2053a7091661724
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 77c2011ce677d1bd2823d47740782f48151b408a
+ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76793599"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82860281"
 ---
 # <a name="iclrdebugginglibraryprovider-interface"></a>ICLRDebuggingLibraryProvider-Schnittstelle
 Schließt die [Methode der ProvideLibrary-Methode](iclrdebugginglibraryprovider-providelibrary-method.md) ein, die eine Bibliotheks Anbieter-Rückruf Schnittstelle abruft, die es ermöglicht, Common Language Runtime versionsspezifische Debugbibliotheken bei Bedarf zu finden und zu laden.  
   
 ## <a name="methods"></a>Methoden  
   
-|-Methode|Beschreibung|  
+|Methode|BESCHREIBUNG|  
 |------------|-----------------|  
 |[ProvideLibrary-Methode](iclrdebugginglibraryprovider-providelibrary-method.md)|Ermöglicht dem Debugger, ein Handle für ein Modul bereitzustellen, das zum Laden einer Debugbibliothek verwendet werden kann.|  
   
-## <a name="requirements"></a>-Anforderungen  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Anforderungen  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   
  **Bibliothek:** CorGuids.lib  
   
- **.NET Framework Versionen:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
-- [Debuggen von Schnittstellen](debugging-interfaces.md)
+- [Debugschnittstellen](debugging-interfaces.md)
 - [Debuggen](index.md)

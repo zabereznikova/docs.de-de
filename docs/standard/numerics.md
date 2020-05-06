@@ -11,12 +11,12 @@ helpviewer_keywords:
 - numerics
 - BigInteger
 ms.assetid: dfebc18e-acde-4510-9fa7-9a0f4aa3bd11
-ms.openlocfilehash: ec5d4c088d3a954a4670891e3bb115c73e6cfdcf
-ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
+ms.openlocfilehash: 3b95a322377e82249a0375af589df74c658fcbf4
+ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "81242763"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82507415"
 ---
 # <a name="numerics-in-net"></a>Numerische Ausdrücke in .NET
 
@@ -92,6 +92,8 @@ Die SIMD-fähigen .NET-Typen umfassen Folgendes:
   > Der <xref:System.Numerics.Vector%601>-Typ ist nicht in .NET Framework enthalten. Sie müssen das NuGet-Paket [System.Numerics.Vectors](https://www.nuget.org/packages/System.Numerics.Vectors) installieren, um Zugriff auf diesen Typ zu erhalten.
   
 Die SIMD-fähigen Typen sind so implementiert, dass sie mit nicht-SIMD-fähiger Hardware oder JIT-Compilern verwendet werden können. Um die Vorteile von SIMD-Anweisungen zu nutzen, müssen Ihre 64-Bit-Apps von der Runtime ausgeführt werden, die den RyuJIT-Compiler verwendet, der in .NET Core und in .NET Framework 4.6 und höher enthalten ist. Sie fügt SIMD-Unterstützung hinzu, wenn 64-Bit-Prozessoren verwendet werden.
+
+Weitere Informationen finden Sie unter [Verwenden von mit SIMD beschleunigter numerischer Typen](simd.md).
 
 ## <a name="see-also"></a>Siehe auch
 

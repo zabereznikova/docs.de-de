@@ -1,5 +1,5 @@
 ---
-title: Dacpgetmoduleaddress-Struktur
+title: DacpGetModuleAddress-Struktur
 ms.date: 01/16/2019
 api.name:
 - DacpGetModuleAddress Structure
@@ -15,14 +15,14 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 1e3a62de3259c012438c64ece26e696682ec96e6
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: e460264e2393858c028ba51aec4a4f2c01649994
+ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76789208"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82860828"
 ---
-# <a name="dacpgetmoduleaddress-structure"></a>Dacpgetmoduleaddress-Struktur
+# <a name="dacpgetmoduleaddress-structure"></a>DacpGetModuleAddress-Struktur
 
 Definiert den Container für eine Modul Adress Anforderung.
 
@@ -37,29 +37,29 @@ struct DacpGetModuleAddress
 };
 ```
 
-## <a name="members"></a>Member
+## <a name="members"></a>Members
 
-| Member      | Beschreibung                |
+| Member      | BESCHREIBUNG                |
 | ----------- | -------------------------- |
 | `ModulePtr` | Der Zeiger auf das Modul. |
 
 ## <a name="methods"></a>Methoden
 
-| -Methode                                                                                               | Beschreibung                                                                    |
+| Methode                                                                                               | BESCHREIBUNG                                                                    |
 | ---------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------ |
 | [Anforderung](dacpgetmoduleaddress-request-method.md) | Führt eine Anforderung aus, um die-Struktur aus der angegebenen Laufzeitstruktur aufzufüllen. |
 
 ## <a name="remarks"></a>Hinweise
 
-Diese Struktur befindet sich innerhalb der Laufzeit und wird nicht durch Header oder Bibliotheksdateien verfügbar gemacht. Um es zu verwenden, definieren Sie die Struktur wie oben angegeben, wobei `CLRDATA_ADDRESS` eine 64-Bit-Ganzzahl ohne Vorzeichen ist.
+Diese Struktur befindet sich innerhalb der Laufzeit und wird nicht durch Header oder Bibliotheksdateien verfügbar gemacht. Um es zu verwenden, definieren Sie die Struktur wie oben angegeben `CLRDATA_ADDRESS` , wobei eine 64-Bit-Ganzzahl ohne Vorzeichen ist.
 
-## <a name="requirements"></a>-Anforderungen
-**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Anforderungen
+**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
 **Header:** Gar  
 **Bibliothek:** Gar  
-**.NET Framework Versionen:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
+**.NET Framework Versionen:**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 - [Debuggen](index.md)
 - [Debuggen von Strukturen](debugging-structures.md)

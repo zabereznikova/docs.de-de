@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 3d2fe9bd-75ef-4364-84a6-da1e1994ac1a
 topic_type:
 - apiref
-ms.openlocfilehash: 609d6e47c951aa104cb23084b65e98827a6851f1
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 60b7d77542a5065fb1e09a98e659cac17fb093e9
+ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76789176"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82860851"
 ---
 # <a name="createversionstringfrommodule-function"></a>CreateVersionStringFromModule-Funktion
 Erstellt eine Versionszeichenfolge aus einem CLR-Pfad (Common Language Runtime) in einem Zielprozess.  
@@ -39,7 +39,7 @@ HRESULT CreateVersionStringFromModule (
 );  
 ```  
   
-## <a name="parameters"></a>Parameters  
+## <a name="parameters"></a>Parameter  
  `pidDebuggee`  
  [in] Bezeichner des Prozesses, in den die Ziel-CLR geladen wird.  
   
@@ -76,8 +76,8 @@ HRESULT CreateVersionStringFromModule (
   
  Diese Funktion sollte zweimal aufgerufen werden. Übergeben Sie beim ersten Aufruf NULL für `pBuffer` und `cchBuffer`. In diesem Fall wird die für `pBuffer` erforderliche Größe des Puffers in `pdwLength` zurückgegeben. Sie können dann die Funktion ein zweites Mal aufrufen und den Puffer in `pBuffer` und dessen Größe in `cchBuffer` übergeben.  
   
-## <a name="requirements"></a>-Anforderungen  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Anforderungen  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** dbgshim. h  
   

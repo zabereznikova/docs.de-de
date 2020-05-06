@@ -2,12 +2,12 @@
 title: Wann sollte .NET Core für Docker-Container verwendet werden?
 description: .NET-Microservicesarchitektur für .NET-Containeranwendungen | Wann sollte .NET Core für Docker-Container verwendet werden?
 ms.date: 01/30/2020
-ms.openlocfilehash: f784512af3f520f96d499ab002eda58071b3c284
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8d25cf58c48aac137ba91300515bdb72a7eb648d
+ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79147374"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82507272"
 ---
 # <a name="when-to-choose-net-core-for-docker-containers"></a>Wann sollte .NET Core für Docker-Container verwendet werden?
 
@@ -27,7 +27,7 @@ Wenn Sie eine Anwendung (Webanwendung oder Dienst) entwickeln möchten, die auf 
 
 [Visual Studio für Mac](https://www.visualstudio.com/vs/visual-studio-mac/) ist eine IDE, eine Weiterentwicklung von Xamarin Studio, die unter macOS ausgeführt wird und die Docker-basierte Anwendungsentwicklung unterstützt. Dies sollte die bevorzugte Wahl für Entwickler sein, die auf Mac-Computern arbeiten und eine leistungsfähige IDE verwenden möchten.
 
-Sie können außerdem [Visual Studio Code](https://code.visualstudio.com/) unter macOS, Linux und Windows verwenden. Visual Studio Code bietet vollständige Unterstützung für .NET Core, einschließlich IntelliSense und Debugging. Mit dem schlanken Editor in Visual Studio Code können Sie Container-Apps auf dem Mac entwickeln und dazu auch die Docker-CLI und die [.NET Core-CLI](../../../core/tools/index.md) nutzen. Sie können außerdem mit den meisten Drittanbieter-Editoren für .NET Core entwickeln, z.B. mit Sublime, Emacs oder vi sowie auch mit den Tools des Open Source-Projekts „Omnisharp“, das darüber hinaus IntelliSense-Unterstützung bereitstellt.
+Sie können außerdem [Visual Studio Code](https://code.visualstudio.com/) unter macOS, Linux und Windows verwenden. Visual Studio Code bietet vollständige Unterstützung für .NET Core, einschließlich IntelliSense und Debugging. Mit dem schlanken Editor in Visual Studio Code können Sie Container-Apps auf dem Computer entwickeln und dazu auch die Docker-CLI und die [.NET Core-CLI](../../../core/tools/index.md) nutzen. Sie können außerdem mit den meisten Drittanbieter-Editoren für .NET Core entwickeln, z.B. mit Sublime, Emacs oder vi sowie auch mit den Tools des Open Source-Projekts „Omnisharp“, das darüber hinaus IntelliSense-Unterstützung bereitstellt.
 
 Zusätzlich zu den IDEs und Editoren können Sie die [.NET Core-CLI](../../../core/tools/index.md) für alle unterstützten Plattformen verwenden.
 

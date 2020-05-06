@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d9f16439-5a36-4474-8ffd-4f0b2c2bb686
 topic_type:
 - apiref
-ms.openlocfilehash: 17d47b6242bb12ff5ca3cfbde3e4ec183b9c19fc
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: d156f103c3812c91da380e722a1c6c95d621df4c
+ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76793864"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82860917"
 ---
 # <a name="corgcreferencetype-enumeration"></a>CorGCReferenceType-Enumeration
 Identifiziert die Quelle eines Objekts, das speicherbereinigt werden soll.  
@@ -46,9 +46,9 @@ typedef enum {
 } CorGCReferenceType  
 ```  
   
-## <a name="members"></a>Member  
+## <a name="members"></a>Members  
   
-|Mitgliedsname|Beschreibung|  
+|Membername|BESCHREIBUNG|  
 |-----------------|-----------------|  
 |`CorHandleStrong`|Ein Handle für einen starken Verweis von der Objekthandletabelle.|  
 |`CorHandleStrongPinning`|Ein Handle für einen fixierten starken Verweis aus der Objekt Handle-Tabelle.|  
@@ -65,21 +65,21 @@ typedef enum {
 |`CorHandleAll`|Gibt alle Verweise aus der Handle-Tabelle zurück. Dieser Wert wird nur von der [ICorDebugProcess5:: enumeratehandles](icordebugprocess5-enumeratehandles-method.md) -Methode verwendet.|  
   
 ## <a name="remarks"></a>Hinweise  
- Die `CorGCReferenceType`-Enumeration wird wie folgt verwendet:  
+ Die `CorGCReferenceType` -Enumeration wird wie folgt verwendet:  
   
-- Als Wert des `type` Felds der [COR_GC_REFERENCE](cor-gc-reference-structure.md) Struktur wird die Quelle eines Verweises oder eines Handles angegeben.  
+- Als Wert des- `type` Felds der [COR_GC_REFERENCE](cor-gc-reference-structure.md) Struktur wird die Quelle eines Verweises oder eines Handles angegeben.  
   
-- Als `types` Argument der [ICorDebugProcess5:: enumeratehandles](icordebugprocess5-enumeratehandles-method.md) -Methode gibt es die Typen von Handles an, die in der-Enumeration enthalten sein sollen.  
+- Als `types` Argument für die [ICorDebugProcess5:: enumeratehandles](icordebugprocess5-enumeratehandles-method.md) -Methode gibt es die Typen von Handles an, die in der-Enumeration enthalten sein sollen.  
   
-## <a name="requirements"></a>-Anforderungen  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Anforderungen  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   
  **Bibliothek:** CorGuids.lib  
   
- **.NET Framework Versionen:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
-- [Debuggen von Enumerationen](debugging-enumerations.md)
+- [Debugenumerationen](debugging-enumerations.md)

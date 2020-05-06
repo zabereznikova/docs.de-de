@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 22d2e339-f174-40b5-a478-0b744501566f
 topic_type:
 - apiref
-ms.openlocfilehash: f2b2bbe8bcecf71f6d3016fb35dfbf5ba1353aea
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: e6cdc924df126e56d2e7c8c9cb8762ee88712fcc
+ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76785641"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82860697"
 ---
 # <a name="iclrdataenummemoryregionsenummemoryregions-method"></a>ICLRDataEnumMemoryRegions::EnumMemoryRegions-Methode
 Listet angegebene Speicherbereiche auf.  
@@ -35,14 +35,14 @@ HRESULT EnumMemoryRegions (
 );  
 ```  
   
-## <a name="parameters"></a>Parameters  
+## <a name="parameters"></a>Parameter  
  `callback`  
  in Ein Zeiger auf eine [ICLRDataEnumMemoryRegionsCallback](iclrdataenummemoryregionscallback-interface.md) -Instanz, die von dieser Methode für jeden aufgezählten Speicherbereich aufgerufen wird, um den Debugger über das Ergebnis zu benachrichtigen.  
   
  Die Enumeration der Speicherbereiche wird auch dann fortgesetzt, wenn der Rückruf auf einen Fehler hinweist.  
   
  `miniDumpFlags`  
- in Nicht verwendet.  
+ [in] Wird nicht verwendet.  
   
  `clrFlags`  
  in Ein Wert der [CLRDataEnumMemoryFlags](clrdataenummemoryflags-enumeration.md) -Enumeration, der die aufzuzählenden Speicherbereiche angibt.  
@@ -50,15 +50,15 @@ HRESULT EnumMemoryRegions (
 ## <a name="remarks"></a>Hinweise  
  Diese Methode verwendet die angegebene [ICLRDataEnumMemoryRegionsCallback](iclrdataenummemoryregionscallback-interface.md) -Instanz, um den Aufrufer über Ergebnisse zu benachrichtigen.  
   
-## <a name="requirements"></a>-Anforderungen  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Anforderungen  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Clrdata. idl, Clrdata. h  
   
  **Bibliothek:** CorGuids.lib  
   
- **.NET Framework Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 - [ICLRDataEnumMemoryRegions-Schnittstelle](iclrdataenummemoryregions-interface.md)

@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f8d50cb3-ec4f-4529-8fe3-bd61fd28e13c
 topic_type:
 - apiref
-ms.openlocfilehash: cdf88ef193df71a638fff43add1a9648d8631731
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 1f33fb98712939d1e687798547b784819f164d63
+ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76789130"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82860726"
 ---
 # <a name="enumerateclrs-function"></a>EnumerateCLRs-Funktion
 Stellt einen Mechanismus für das Auflisten der CLRs in einem Prozess bereit.  
@@ -37,7 +37,7 @@ HRESULT EnumerateCLRs (
 );  
 ```  
   
-## <a name="parameters"></a>Parameters  
+## <a name="parameters"></a>Parameter  
  `debuggeePID`  
  [in] Die Prozess-ID des Prozesses aus dem geladene CLRs aufgezählt werden.  
   
@@ -72,8 +72,8 @@ HRESULT EnumerateCLRs (
   
  Diese Funktion kann mit beiden auf null festgelegten Arrayparametern aufgerufen werden, um die Anzahl der CLRs im Zielprozess zurückzugeben. Aus dieser Anzahl kann ein Aufrufer die Größe des Puffers ableiten, der erstellt wird: `(sizeof(HANDLE) * count) + (sizeof(LPWSTR) * count) + (sizeof(WCHAR*) * count * MAX_PATH)`.  
   
-## <a name="requirements"></a>-Anforderungen  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Anforderungen  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** dbgshim. h  
   
