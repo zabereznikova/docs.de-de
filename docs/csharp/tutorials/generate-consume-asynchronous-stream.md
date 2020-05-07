@@ -1,19 +1,19 @@
 ---
 title: Generieren und Nutzen asynchroner Datenströme
-description: In diesem fortgeschrittenen Tutorial werden Szenarien dargestellt, in denen das Generieren und Nutzen asynchroner Datenströme eine natürlichere Möglichkeit zur Arbeit mit Datensequenzen bietet, die asynchron generiert werden können.
+description: In diesem Tutorial für Fortgeschrittene wird veranschaulicht, wie asynchrone Streams generiert und verwendet werden. Asynchrone Streams erleichtern die Arbeit mit Datensequenzen, die asynchron generiert werden können.
 ms.date: 02/10/2019
 ms.technology: csharp-async
 ms.custom: mvc
-ms.openlocfilehash: de090eb9cc1e8b511956313ab5169ee4d07a492f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 03254e5208a048469f4753d632de7b0d451cde40
+ms.sourcegitcommit: 5988e9a29cedb8757320817deda3c08c6f44a6aa
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79156739"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82200105"
 ---
 # <a name="tutorial-generate-and-consume-async-streams-using-c-80-and-net-core-30"></a>Tutorial: Generieren und Nutzen asynchroner Datenströme mit C# 8.0 und .NET Core 3.0
 
-In C# 8.0 werden **asynchrone Datenströme** eingeführt. Diese modellieren eine Datenstromquelle, wenn die Elemente im Datenstrom asynchron abgerufen oder generiert werden können. Asynchrone Datenströme beruhen auf Schnittstellen, die in .NET Standard 2.1 neu eingeführt und in .NET Core 3.0 implementiert wurden, um ein natürliches Programmiermodell für Datenquellen für asynchrone Datenströme bereitzustellen.
+C# 8.0 führt **asynchrone Streams** ein, die eine Streamingdatenquelle modellieren. In Datenströmen werden Elemente häufig asynchron abgerufen oder generiert. Asynchrone Streams basieren auf neuen Schnittstellen, die in .NET Standard 2.1 eingeführt wurden. Diese Schnittstellen werden in .NET Core 3.0 und höher unterstützt. Sie stellen ein intuitives Programmiermodell für asynchrone Streamingdatenquellen bereit.
 
 In diesem Tutorial lernen Sie, wie die folgenden Aufgaben ausgeführt werden:
 
@@ -21,6 +21,7 @@ In diesem Tutorial lernen Sie, wie die folgenden Aufgaben ausgeführt werden:
 >
 > - Erstellen einer Datenquelle, die eine Sequenz von Datenelementen asynchron generiert
 > - Asynchrones Nutzen dieser Datenquelle
+> - Unterstützung für Abbruchvorgänge und erfasste Kontexte für asynchrone Streams
 > - Erkennen, wenn die neue Schnittstelle und Datenquelle früheren synchronen Datensequenzen vorgezogen werden
 
 ## <a name="prerequisites"></a>Voraussetzungen
@@ -41,13 +42,13 @@ In diesem Tutorial wird vorausgesetzt, dass Sie C# und .NET, einschließlich Vis
 
 ## <a name="run-the-starter-application"></a>Ausführen der Startanwendung
 
-Sie können den Code für die in diesem Tutorial verwendete Startanwendung aus unserem Repository [dotnet/samples](https://github.com/dotnet/samples) im Ordner [csharp/tutorials/AsyncStreams](https://github.com/dotnet/samples/tree/master/csharp/tutorials/AsyncStreams/start) abrufen.
+Sie können den Code für die in diesem Tutorial verwendete Startanwendung aus unserem Repository [dotnet/docs](https://github.com/dotnet/docs) im Ordner [csharp/tutorials/AsyncStreams](https://github.com/dotnet/docs/tree/master/csharp/tutorials/snippets/generate-consume-asynchronous-streams/start) abrufen.
 
 Die Startanwendung ist eine Konsolenanwendung, die die [GitHub GraphQL](https://developer.github.com/v4/)-Schnittstelle zum Abrufen aktueller Issues verwendet, die in das Repository [dotnet/docs](https://github.com/dotnet/docs) geschrieben wurden. Sehen Sie sich zunächst folgenden Code für die `Main`-Methode der Starter-App an:
 
-[!code-csharp[StarterAppMain](~/samples/snippets/csharp/tutorials/AsyncStreams/start/IssuePRreport/IssuePRreport/Program.cs#StarterAppMain)]
+:::code language="csharp" source="snippets/generate-consume-asynchronous-streams/start/Program.cs" id="SnippetStarterAppMain" :::
 
-Sie können entweder eine `GitHubKey`-Umgebungsvariable auf Ihr persönliches Zugriffstoken festlegen, oder Sie können das letzte Argument im Aufruf von `GenEnvVariable` durch Ihr persönliches Zugriffstoken ersetzen. Schließen Sie Ihren Zugriffscode nicht im Quellcode ein, wenn Sie die Quelle zusammen mit anderen nutzen oder in einem Repository mit gemeinsamer Quelle ablegen.
+Sie können entweder eine `GitHubKey`-Umgebungsvariable auf Ihr persönliches Zugriffstoken festlegen, oder Sie können das letzte Argument im Aufruf von `GenEnvVariable` durch Ihr persönliches Zugriffstoken ersetzen. Fügen Sie Ihren Zugriffscode nicht in den Quellcode ein, wenn Sie die Quelle für andere freigeben. Laden Sie Zugriffscodes niemals in ein freigegebenes Quellrepository hoch.
 
 Nach dem Erstellen des GitHub-Clients werden durch den Code in `Main` ein Objekt für Fortschrittsberichte und ein Abbruchtoken erstellt. Nachdem die Objekte erstellt wurden, wird `runPagedQueryAsync` durch `Main` aufgerufen, um die neuesten 250 Issues abzurufen. Nach Abschluss dieser Aufgabe werden die Ergebnisse angezeigt.
 
@@ -57,13 +58,13 @@ Bei Ausführung der Startanwendung können Sie einige wichtige Details zur Ausf�
 
 Die Implementierung zeigt, warum Sie das im vorherigen Abschnitt beschriebene Verhalten beobachten konnten. Untersuchen Sie den Code für `runPagedQueryAsync`:
 
-[!code-csharp[RunPagedQueryStarter](~/samples/snippets/csharp/tutorials/AsyncStreams/start/IssuePRreport/IssuePRreport/Program.cs#RunPagedQuery)]
+:::code language="csharp" source="snippets/generate-consume-asynchronous-streams/start/Program.cs" id="SnippetRunPagedQuery" :::
 
 Konzentrieren wir uns auf den Paginierungsalgorithmus und die asynchrone Struktur des obigen Codes. (Details zur GitHub GraphQL-API finden Sie in der [GitHub GraphQL-Dokumentation](https://developer.github.com/v4/guides/).) Die `runPagedQueryAsync`-Methode listet die Issues vom neuesten zum ältesten auf. Sie fordert 25 Issues pro Seite an und untersucht die `pageInfo`-Struktur der Antwort, um mit der vorherigen Seite fortzufahren. Dies entspricht der GraphQL-Standardpaginierungsunterstützung für mehrseitige Antworten. Die Antwort enthält ein `pageInfo`-Objekt mit einem `hasPreviousPages`-Wert und einem `startCursor`-Wert zum Anfordern der vorherigen Seite. Die Issues befinden sich im `nodes`-Array. Die `runPagedQueryAsync`-Methode fügt diese Knoten einem Array an, das alle Ergebnisse aus allen Seiten enthält.
 
 Nach dem Abrufen und Wiederherstellen einer Seite mit Ergebnissen meldet `runPagedQueryAsync` den Fortschritt und prüft auf Abbruch. Wenn ein Abbruch angefordert wurde, löst `runPagedQueryAsync` eine <xref:System.OperationCanceledException> aus.
 
-Es gibt mehrere Elemente in diesem Code, die verbessert werden können. Vor allem muss `runPagedQueryAsync` Speicherplatz für alle zurückgegebenen Issues zuordnen. In diesem Beispiel wird der Vorgang bei 250 Issues beendet, weil das Abrufen aller offenen Issues wesentlich mehr Arbeitsspeicher zum Speichern aller abgerufenen Issues erfordern würde. Zudem ist der Algorithmus durch die Protokolle zur Unterstützung von Fortschritt und Abbruch beim ersten Lesen schwieriger zu verstehen. Sie müssen die Fortschrittsklasse suchen, um herauszufinden, wo der Fortschritt gemeldet wird. Außerdem müssen Sie die Kommunikation über die <xref:System.Threading.CancellationTokenSource> und das zugehörige <xref:System.Threading.CancellationToken> verfolgen, um nachzuvollziehen, wo der Abbruch angefordert und wo er gewährt wird.
+Es gibt mehrere Elemente in diesem Code, die verbessert werden können. Vor allem muss `runPagedQueryAsync` Speicherplatz für alle zurückgegebenen Issues zuordnen. In diesem Beispiel wird der Vorgang bei 250 Issues beendet, weil das Abrufen aller offenen Issues wesentlich mehr Arbeitsspeicher zum Speichern aller abgerufenen Issues erfordern würde. Der Algorithmus ist durch die Protokolle zur Unterstützung von Fortschrittsberichten und Abbruchvorgängen beim ersten Lesen schwieriger zu verstehen. Es sind mehr Typen und APIs beteiligt. Außerdem müssen Sie die Kommunikation über <xref:System.Threading.CancellationTokenSource> und die zugehörige <xref:System.Threading.CancellationToken>-Struktur verfolgen, um nachzuvollziehen, wo der Abbruch angefordert und wo er gewährt wird.
 
 ## <a name="async-streams-provide-a-better-way"></a>Bessere Möglichkeiten durch asynchrone Datenströme
 
@@ -71,30 +72,9 @@ Mit asynchronen Datenströmen und der zugehörigen Sprachunterstützung lassen s
 
 Diese neuen Sprachfeatures hängen von drei neuen Schnittstellen ab, die dem .NET Standard 2.1 hinzugefügt und in .NET Core 3.0 implementiert wurden:
 
-```csharp
-namespace System.Collections.Generic
-{
-    public interface IAsyncEnumerable<out T>
-    {
-        IAsyncEnumerator<T> GetAsyncEnumerator(CancellationToken cancellationToken = default);
-    }
-
-    public interface IAsyncEnumerator<out T> : IAsyncDisposable
-    {
-        T Current { get; }
-
-        ValueTask<bool> MoveNextAsync();
-    }
-}
-
-namespace System
-{
-    public interface IAsyncDisposable
-    {
-        ValueTask DisposeAsync();
-    }
-}
-```
+- <xref:System.Collections.Generic.IAsyncEnumerable%601?displayProperty=nameWithType>
+- <xref:System.Collections.Generic.IAsyncEnumerator%601?displayProperty=nameWithType>
+- <xref:System.IAsyncDisposable?displayProperty=nameWithType>
 
 Diese drei Schnittstellen sollten den meisten C#-Entwicklern vertraut sein. Sie verhalten sich ähnlich wie ihre synchronen Gegenstücke:
 
@@ -108,33 +88,63 @@ Ein möglicherweise weniger bekannter Typ ist <xref:System.Threading.Tasks.Value
 
 Als Nächstes konvertieren Sie die `runPagedQueryAsync`-Methode, um einen asynchronen Datenstrom zu generieren. Ändern Sie zunächst die Signatur von `runPagedQueryAsync` so, dass ein `IAsyncEnumerable<JToken>` zurückgegeben wird, und entfernen Sie das Abbruchtoken und die Fortschrittsobjekte aus der Parameterliste, wie im folgenden Code gezeigt:
 
-[!code-csharp[FinishedSignature](~/samples/snippets/csharp/tutorials/AsyncStreams/finished/IssuePRreport/IssuePRreport/Program.cs#UpdateSignature)]
+:::code language="csharp" source="snippets/generate-consume-asynchronous-streams/finished/Program.cs" id="SnippetUpdateSignature" :::
 
 Der Startcode verarbeitet die einzelnen Seiten, während sie abgerufen werden, wie im folgenden Code gezeigt:
 
-[!code-csharp[StarterPaging](~/samples/snippets/csharp/tutorials/AsyncStreams/start/IssuePRreport/IssuePRreport/Program.cs#ProcessPage)]
+:::code language="csharp" source="snippets/generate-consume-asynchronous-streams/start/Program.cs" id="SnippetProcessPage" :::
 
 Ersetzen Sie diese drei Zeilen durch den folgenden Code:
 
-[!code-csharp[FinishedPaging](~/samples/snippets/csharp/tutorials/AsyncStreams/finished/IssuePRreport/IssuePRreport/Program.cs#YieldReturnPage)]
+:::code language="csharp" source="snippets/generate-consume-asynchronous-streams/finished/Program.cs" id="SnippetYieldReturnPage" :::
 
 Sie können auch die Deklaration von `finalResults` weiter oben in dieser Methode sowie die `return`-Anweisung entfernen, die der von Ihnen geänderten Schleife folgt.
 
-Sie haben die Änderungen zum Generieren eines asynchronen Datenstroms abgeschlossen. Die endgültige Methode sollte dem folgenden Code entsprechen:
+Sie haben die Änderungen zum Generieren eines asynchronen Datenstroms abgeschlossen. Die fertige Methode sollte in etwa dem folgenden Code entsprechen:
 
-[!code-csharp[FinishedGenerate](~/samples/snippets/csharp/tutorials/AsyncStreams/finished/IssuePRreport/IssuePRreport/Program.cs#GenerateAsyncStream)]
+:::code language="csharp" source="snippets/generate-consume-asynchronous-streams/finished/Program.cs" id="SnippetGenerateAsyncStream" :::
 
 Als Nächstes ändern Sie den Code, der die Sammlung nutzt, um den asynchronen Datenstrom zu verwenden. Suchen Sie in `Main` den folgenden Code, der die Sammlung der Issues verarbeitet:
 
-[!code-csharp[EnumerateOldStyle](~/samples/snippets/csharp/tutorials/AsyncStreams/start/IssuePRreport/IssuePRreport/Program.cs#EnumerateOldStyle)]
+:::code language="csharp" source="snippets/generate-consume-asynchronous-streams/start/Program.cs" id="SnippetEnumerateOldStyle" :::
 
 Ersetzen Sie den Code durch die folgende `await foreach`-Schleife:
 
-[!code-csharp[FinishedEnumerateAsyncStream](~/samples/snippets/csharp/tutorials/AsyncStreams/finished/IssuePRreport/IssuePRreport/Program.cs#EnumerateAsyncStream)]
+:::code language="csharp" source="snippets/generate-consume-asynchronous-streams/finished/Program.cs" id="SnippetEnumerateAsyncStream" :::
+
+Die neue Schnittstelle <xref:System.Collections.Generic.IAsyncEnumerator%601> leitet von <xref:System.IAsyncDisposable> ab. Das bedeutet, dass die vorhergehende Schleife den Stream asynchron löscht, wenn die Schleife beendet wird. Die Schleife ähnelt dem folgenden Code:
+
+```csharp
+int num = 0;
+var enumerator = runPagedQueryAsync(client, PagedIssueQuery, "docs").GetEnumeratorAsync();
+try
+{
+    while (await enumerator.MoveNextAsync())
+    {
+        var issue = enumerator.Current;
+        Console.WriteLine(issue);
+        Console.WriteLine($"Received {++num} issues in total");
+    }
+} finally
+{
+    if (enumerator != null)
+        await enumerator.DisposeAsync();
+}
+```
 
 Standardmäßig werden Streamelemente im erfassten Kontext verarbeitet. Wenn Sie die Erfassung des Kontexts deaktivieren möchten, verwenden Sie die Erweiterungsmethode <xref:System.Threading.Tasks.TaskAsyncEnumerableExtensions.ConfigureAwait%2A?displayProperty=nameWithType>. Weitere Informationen über Synchronisierungskontexte und die Erfassung des aktuellen Kontexts finden Sie im Artikel über das [Verwenden des aufgabenbasierten asynchronen Musters](../../standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern.md).
 
-Sie können den Code für das abgeschlossene Tutorial aus dem Repository [dotnet/samples](https://github.com/dotnet/samples) im Ordner [csharp/tutorials/AsyncStreams](https://github.com/dotnet/samples/tree/master/csharp/tutorials/AsyncStreams/finished) abrufen.
+Asynchrone Streams unterstützen Abbruchvorgänge mithilfe desselben Protokolls wie andere `async`-Methoden. Ändern Sie die Signatur für die asynchrone Iteratormethode folgendermaßen, damit Abbruchvorgänge unterstützt werden:
+
+:::code language="csharp" source="snippets/generate-consume-asynchronous-streams/finished/Program.cs" id="SnippetGenerateWithCancellation" :::
+
+Das <xref:System.Runtime.CompilerServices.EnumeratorCancellationAttribute?dipslayProperty=nameWithType>-Attribut bewirkt, dass der Compiler Code für <xref:System.Collections.Generic.IAsyncEnumerator%601> generiert, der dazu führt, dass das an `GetAsyncEnumerator` übergebene Token für den Text des asynchronen Iterators als dieses Argument sichtbar ist. In `runQueryAsync` können Sie den Status des Tokens überprüfen und sich ggf. weitere Arbeit sparen.
+
+Eine andere Erweiterungsmethode (<xref:System.Threading.Tasks.TaskAsyncEnumerableExtensions.WithCancellation%2A>) wird verwendet, um das Abbruchtoken an den asynchronen Stream zu übergeben. Ändern Sie die Schleife, die die Issues enumeriert, folgendermaßen:
+
+:::code language="csharp" source="snippets/generate-consume-asynchronous-streams/finished/Program.cs" id="SnippetEnumerateWithCancellation" :::
+
+Sie können den Code für das abgeschlossene Tutorial aus dem Repository [dotnet/docs](https://github.com/dotnet/docs) im Ordner [csharp/tutorials/AsyncStreams](https://github.com/dotnet/docs/tree/master/csharp/tutorials/snippets/generate-consume-asynchronous-streams/finished) abrufen.
 
 ## <a name="run-the-finished-application"></a>Ausführen der fertig gestellten Anwendung
 

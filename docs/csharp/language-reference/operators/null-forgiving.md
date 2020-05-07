@@ -6,18 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - null-forgiving operator [C#]
 - '! operator [C#]'
-ms.openlocfilehash: 658043f8d5e149064f6da328657b2ccef9b5da94
-ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
+ms.openlocfilehash: 2a8db2882968dbcbe6a8868ab6fe1c128c94a41f
+ms.sourcegitcommit: e09dbff13f0b21b569a101f3b3c5efa174aec204
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/11/2020
-ms.locfileid: "81121441"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82624877"
 ---
 # <a name="-null-forgiving-operator-c-reference"></a>! NULL-toleranter Operator (C#-Referenz)
 
 Der unäre Postfix-Operator `!` (der NULL-tolerante Operator) ist in C# 8.0 und höher verfügbar. In einem aktivierten [Nullable-Anmerkungskontext](../../nullable-references.md#nullable-annotation-context) verwenden Sie den NULL-toleranten Operator, um zu deklarieren, dass der Ausdruck `x` eines Verweistyps nicht `null` ist: `x!`. Der unäre Präfixoperator `!` ist der [Operator für logische Negation](boolean-logical-operators.md#logical-negation-operator-).
 
 Der NULL-tolerante Operator besitzt zur Laufzeit keine Auswirkungen. Er wirkt sich nur auf die statische Flussanalyse des Compilers aus, indem der NULL-Status des Ausdrucks geändert wird. Zur Laufzeit wird Ausdruck `x!` in das Ergebnis des zugrunde liegenden Ausdrucks `x` ausgewertet.
+
+> [!NOTE]
+> In C# 8 beendet der [NULL-tolerante Operator](member-access-operators.md#null-conditional-operators--and-) die Liste mit den vorangehenden NULL-bedingten Vorgängen. Der Ausdruck `x?.y!.z` wird beispielsweise als `(x?.y)!.z` analysiert. Aufgrund dieser Interpretation wird `z` ausgewertet, auch wenn `x` `null` ist, was zu <xref:System.NullReferenceException> führen kann.
 
 Weitere Informationen zum Feature „Nullable-Verweistypen“ finden Sie unter [Nullable-Verweistypen](../builtin-types/nullable-reference-types.md).
 
@@ -43,7 +46,7 @@ Wenn Sie die `IsValid`-Methode ändern können, können Sie das [NotNullWhen](xr
 
 [!code-csharp[Use an attribute](snippets/NullForgivingOperator.cs#UseAttribute)]
 
-Im vorherigen Beispiel müssen Sie den NULL-toleranten Operator nicht verwenden, da der Compiler über ausreichende Informationen verfügt, um zu ermitteln, dass `p` innerhalb der `if`-Anweisung nicht `null` sein kann. Weitere Informationen zu den Attributen, mit denen Sie zusätzliche Informationen zum NULL-Status einer Variablen bereitstellen können, finden Sie unter [Aktualisieren von APIs mit Attributen zum Definieren von NULL-Erwartungen](../../nullable-attributes.md).
+Im vorherigen Beispiel müssen Sie den NULL-toleranten Operator nicht verwenden, da der Compiler über ausreichende Informationen verfügt, um zu ermitteln, dass `p` innerhalb der `if`-Anweisung nicht `null` sein kann. Weitere Informationen zu den Attributen, mit denen Sie zusätzliche Informationen zum NULL-Status einer Variablen bereitstellen können, finden Sie unter [Aktualisieren von APIs mit Attributen zum Definieren von NULL-Erwartungen](../attributes/nullable-analysis.md).
 
 ## <a name="c-language-specification"></a>C#-Sprachspezifikation
 

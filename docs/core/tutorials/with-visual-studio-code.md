@@ -2,13 +2,13 @@
 title: Erste Schritte mit C# und Visual Studio Code
 description: Erfahren Sie, wie Sie Ihre erste .NET Core-Anwendung in C# mithilfe von Visual Studio Code erstellen und debuggen.
 author: kendrahavens
-ms.date: 12/05/2018
-ms.openlocfilehash: 6722b97cee5ca3672c9dddece6e61f4d13de05a9
-ms.sourcegitcommit: f87ad41b8e62622da126aa928f7640108c4eff98
+ms.date: 04/23/2020
+ms.openlocfilehash: 3dd7c4602fbb27e29bad977f8d3df34b6061bc23
+ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/07/2020
-ms.locfileid: "80805816"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82506889"
 ---
 # <a name="get-started-with-c-and-visual-studio-code"></a>Erste Schritte mit C# und Visual Studio Code
 
@@ -22,39 +22,28 @@ ms.locfileid: "80805816"
 
 ## <a name="hello-world"></a>Hello World
 
-Beginnen wir mit einem einfachen „Hello World“-Programm in .NET Core:
+Beginnen wir mit einem einfachen Hallo-Welt-Programm in .NET Core:
 
 1. Öffnen Sie ein Projekt:
 
     - Öffnen Sie Visual Studio Code.
-    - Klicken Sie im linken Menü auf das Explorer-Symbol, und klicken Sie dann auf **Ordner öffnen**.
-    - Klicken Sie im Hauptmenü auf **Datei** > **Open Folder** (Ordner öffnen), um den Ordner zu öffnen, in dem Sie Ihr C#-Projekt speichern möchten, und klicken Sie auf **Ordner auswählen**. Für dieses Beispiel wird ein Ordner namens *HelloWorld* für das Projekt erstellt.
+    - Klicken Sie im Hauptmenü auf **Datei** > **Ordner öffnen**.
+    - Erstellen Sie einen Ordner mit dem Namen *HelloWorld*, und klicken Sie auf **Ordner auswählen**. Der Name des Ordners wird standardmäßig zum Projektnamen und Namespacenamen. Sie fügen später in diesem Tutorial Code hinzu, der erwartet, dass der Projektnamespace `HelloWorld` ist.
 
-      ![Visual Studio Code, Ordner öffnen](media/with-visual-studio-code/vs-code-open-folder.png)
-
-2. Initialisieren Sie ein C#-Projekt:
+1. Initialisieren Sie ein C#-Projekt:
 
     - Öffnen Sie das Terminal von Visual Studio Code, indem Sie im Hauptmenü auf **Ansicht** > **Terminal** klicken.
     - Geben Sie im Terminalfenster `dotnet new console` ein.
-    - Durch diesen Befehl wird eine Datei *Program.cs* in Ihrem Ordner erstellt, die ein bereits geschriebenes einfaches „Hello World“-Programm enthält. Zusätzlich wird eine C#-Projektdatei namens *HelloWorld.csproj* erstellt.
+
+      Durch diesen Befehl wird eine Datei *Program.cs* in Ihrem Ordner erstellt, die ein bereits geschriebenes einfaches „Hello World“-Programm enthält. Zusätzlich wird eine C#-Projektdatei namens *HelloWorld.csproj* erstellt.
 
       ![Der Befehl „dotnet new“](media/with-visual-studio-code/dotnet-new-command.png)
 
-3. Lösen Sie die Buildobjekte auf:
+1. Führen Sie das „Hello World“-Programm aus:
 
-    - Geben Sie für **.NET Core 1.x** den Befehl `dotnet restore` ein. Durch Ausführen von `dotnet restore` erhalten Sie Zugriff auf die erforderlichen .NET Core-Pakete, die Sie zum Erstellen Ihres Projekts benötigen.
-
-      ![Der Befehl „dotnet restore“](media/with-visual-studio-code/dotnet-restore-command.png)
-
-      [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
-
-4. Führen Sie das „Hello World“-Programm aus:
-
-    - Geben Sie `dotnet run` ein.
+    - Geben Sie im Terminalfenster `dotnet run` ein.
 
       ![Der Befehl „dotnet run“](media/with-visual-studio-code/dotnet-run-command.png)
-
-Um weitere Unterstützung beim Setup zu erhalten, können Sie sich auch ein kurzes Videotutorial zu [Windows](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-using-CSharp-and-NET-Core), [macOS](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-using-CSharp-and-NET-Core-on-MacOS) oder [Linux](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-Csharp-dotnet-Core-Ubuntu) ansehen.
 
 ## <a name="debug"></a>Debug
 
@@ -62,26 +51,26 @@ Um weitere Unterstützung beim Setup zu erhalten, können Sie sich auch ein kurz
 
     ![Öffnen der Datei „Program.cs“](media/with-visual-studio-code/open-program-cs.png)
 
-2. Visual Studio Code fordert Sie dazu auf, die fehlenden Objekte zum Erstellen und Debuggen Ihrer App hinzuzufügen. Wählen Sie **Ja**.
+1. Visual Studio Code fordert Sie auf, die fehlenden Objekte zum Erstellen und Debuggen Ihrer App hinzuzufügen. Wählen Sie **Ja**.
 
     ![Aufforderung bei fehlenden Objekten](media/with-visual-studio-code/missing-assets.png)
 
-3. Um die Debugansicht zu öffnen, klicken Sie im Menü auf der linken Seite auf das Debugsymbol.
+1. Um die Debugansicht zu öffnen, klicken Sie im Menü auf der linken Seite auf das Debugsymbol.
 
     ![Öffnen Sie die Registerkarte „Debuggen“ in Visual Studio Code](media/with-visual-studio-code/open-debug-tab.png)
 
-4. Suchen Sie den grünen Pfeil am oberen Rand des Fensters. Stellen Sie sicher, dass in der Dropdownliste daneben die Option **.NET Core Launch (Console)** (.NET Core-Start (Konsole)) ausgewählt ist.
+1. Suchen Sie den grünen Pfeil am oberen Rand des Fensters. Stellen Sie sicher, dass in der Dropdownliste daneben die Option **.NET Core Launch (Console)** (.NET Core-Start (Konsole)) ausgewählt ist.
 
     ![Auswählen von .NET Core in Visual Studio Code](media/with-visual-studio-code/select-net-core.png)
 
-5. Fügen Sie einen Breakpoint zu Ihrem Projekt hinzu, indem Sie auf den **Rand des Editors** klicken. Dieser befindet sich links neben den Zeilennummern im Editor, neben Zeile 9. Alternativ können Sie den Textcursor im Editor in Zeile 9 bewegen und die Taste <kbd>F9</kbd> drücken.
+1. Fügen Sie einen Breakpoint zu Ihrem Projekt hinzu, indem Sie auf den **Rand des Editors** klicken. Dieser befindet sich links neben den Zeilennummern im Editor, neben Zeile 9. Alternativ können Sie den Textcursor im Editor in Zeile 9 bewegen und die Taste <kbd>F9</kbd> drücken.
 
     ![Festlegen eines Haltepunkts](media/with-visual-studio-code/set-breakpoint-vs-code.png)
 
-6. Drücken Sie <kbd>F5</kbd>, oder klicken Sie auf den grünen Pfeil, um das Debuggen zu starten. Der Debugger hält die Ausführung des Programms an, wenn der Haltepunkt erreicht wird, den Sie im vorherigen Schritt festgelegt haben.
+1. Drücken Sie <kbd>F5</kbd>, oder klicken Sie auf den grünen Pfeil, um das Debuggen zu starten. Der Debugger hält die Ausführung des Programms an, wenn der Haltepunkt erreicht wird, den Sie im vorherigen Schritt festgelegt haben.
     - Während des Debuggens können Sie Ihre lokalen Variablen im oberen linken Bereich oder in der Debugkonsole anzeigen.
 
-7. Wählen Sie im oberen Bereich den blauen Pfeil aus, um das Debuggen fortzusetzen, oder klicken Sie auf das rote Quadrat, um das Debuggen zu beenden.
+1. Wählen Sie im oberen Bereich den blauen Pfeil aus, um das Debuggen fortzusetzen, oder klicken Sie auf das rote Quadrat, um das Debuggen zu beenden.
 
     ![Ausführen und Debuggen in Visual Studio Code](media/with-visual-studio-code/run-debug-vs-code.png)
 
@@ -90,9 +79,9 @@ Um weitere Unterstützung beim Setup zu erhalten, können Sie sich auch ein kurz
 
 ## <a name="add-a-class"></a>Hinzufügen einer Klasse
 
-1. Um eine neue Klasse hinzuzufügen, klicken Sie mit der rechten Maustaste auf den VSCode-Explorer und wählen **Neue Datei** aus. Dadurch wird dem Ordner, den Sie in Visual Studio Code geöffnet haben, eine neue Datei hinzugefügt.
-2. Nennen Sie die Datei *MyClass.cs*. Sie müssen sie mit der `.cs`-Erweiterung speichern, damit sie als Csharp-Datei erkannt wird.
-3. Fügen Sie den folgenden Code zum Erstellen Ihrer ersten Klasse hinzu. Achten Sie darauf, den richtigen Namespace einzubeziehen, damit Sie aus Ihrer Datei *Program.cs* darauf verweisen können:
+1. Klicken Sie im Visual Studio Code-Explorer mit der rechten Maustaste unter *Program.cs*, und klicken Sie dann auf **Neue Datei**, um eine neue Klasse hinzuzufügen. Dadurch wird dem Ordner, den Sie in Visual Studio Code geöffnet haben, eine neue Datei hinzugefügt.
+1. Nennen Sie die Datei *MyClass.cs*. Sie müssen sie mit der `.cs`-Erweiterung speichern, damit sie als Csharp-Datei erkannt wird.
+1. Fügen Sie den folgenden Code hinzu, um Ihre erste Klasse zu erstellen.
 
     ``` csharp
     using System;
@@ -109,7 +98,7 @@ Um weitere Unterstützung beim Setup zu erhalten, können Sie sich auch ein kurz
     }
     ```
 
-4. Rufen Sie die neue Klasse aus Ihrer Main-Methode in *Program.cs* auf, indem Sie den folgenden Code hinzufügen:
+1. Rufen Sie die neue Klasse über die `Main`-Methode auf, indem Sie den Code in *Program.cs* durch folgenden Code ersetzen:
 
     ```csharp
     using System;
@@ -127,13 +116,15 @@ Um weitere Unterstützung beim Setup zu erhalten, können Sie sich auch ein kurz
     }
     ```
 
-5. Speichern Sie die Änderungen, und führen Sie das Programm erneut aus. Die neue Nachricht sollte mit der angefügten Zeichenfolge angezeigt werden.
+1. Speichern Sie die Änderungen.
+
+1. Führen Sie das Programm erneut aus.
 
     ```dotnetcli
     dotnet run
     ```
 
-    Sie erhalten die folgende Ausgabe:
+    Die neue Meldung wird mit der angefügten Zeichenfolge angezeigt.
 
     ```console
     Hello World! Happy coding!

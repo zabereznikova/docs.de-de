@@ -4,18 +4,18 @@ description: Erfahren Sie, wie integrierte C#-Iteratoren verwendet werden und wi
 ms.date: 06/20/2016
 ms.technology: csharp-advanced-concepts
 ms.assetid: 5cf36f45-f91a-4fca-a0b7-87f233e108e9
-ms.openlocfilehash: 1933ecf83e9fa234f9b88c815d8ab527997c97f2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: efa755c2243c18fb51b653abccb2bfc702bbc055
+ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79398724"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82507376"
 ---
 # <a name="iterators"></a>Iterators
 
 Bei fast jedem Programm, das Sie schreiben, muss eine Auflistung durchlaufen werden. Sie schreiben Code, der jedes Element in einer Auflistung überprüft.
 
-Sie erstellen auch Iteratormethoden, die einen Iterator für die Elemente dieser Klasse erzeugen. Diese können für Folgendes verwendet werden:
+Sie erstellen auch Iteratormethoden, die einen Iterator (ein Objekt, das Container und insbesondere Listen durchläuft) für die Elemente dieser Klasse erzeugen. Diese können für Folgendes verwendet werden:
 
 + Ausführen einer Aktion für jedes Element in einer Auflistung
 + Enumerieren einer benutzerdefinierten Auflistung
@@ -28,7 +28,7 @@ Dieses Tutorial besteht aus vielen Schritten. Sie können die Anwendung nach jed
 
 ## <a name="iterating-with-foreach"></a>Durchlaufen mit foreach
 
-Enumerieren einer Auflistung ist einfach: Das `foreach`-Schlüsselwort enumeriert eine Auflistung und führt die eingebettete Anweisung einmal für jedes Element in der Auflistung aus:
+Das Enumerieren einer Auflistung ist einfach: Das `foreach`-Schlüsselwort enumeriert eine Auflistung und führt die eingebettete Anweisung einmal für jedes Element in der Auflistung aus:
 
 ```csharp
 foreach (var item in collection)

@@ -2,12 +2,12 @@
 title: Objektorientiertes Programmieren (C#)
 ms.date: 02/08/2020
 ms.assetid: 89574786-65ef-4335-88bc-fbacd094f183
-ms.openlocfilehash: 01d6f55bf0752f902f351675c4596abbb8ac85c2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2b6be3384f76fa210c2b52c55ecf9bd865df43a6
+ms.sourcegitcommit: 5988e9a29cedb8757320817deda3c08c6f44a6aa
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77627889"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82200092"
 ---
 # <a name="object-oriented-programming-c"></a>Objektorientiertes Programmieren (C#)
 
@@ -147,7 +147,7 @@ Weitere Informationen finden Sie unter [Konstruktoren](../classes-and-structs/co
 
 #### <a name="finalizers"></a>Finalizer
 
-Finalizer werden zur Zerstörung von Klasseninstanzen verwendet. In .NET Framework verwaltet die Garbage Collection die Speicherbelegung automatisch und gibt Arbeitsspeicher für die verwalteten Objekte in der Anwendung frei. Möglicherweise sind jedoch noch Finalizer erforderlich, um alle nicht verwalteten Ressourcen zu bereinigen, die von der Anwendung erstellt werden. Es kann nur einen Finalizer für eine Klasse geben.
+Ein Finalizer wird zur Zerstörung von Klasseninstanzen verwendet. In .NET Framework verwaltet die Garbage Collection die Speicherbelegung automatisch und gibt Arbeitsspeicher für die verwalteten Objekte in der Anwendung frei. Möglicherweise sind jedoch noch Finalizer erforderlich, um alle nicht verwalteten Ressourcen zu bereinigen, die von der Anwendung erstellt werden. Es kann nur einen Finalizer pro Klasse geben.
 
 Weitere Informationen zu Finalizern und der Garbage Collection in .NET Framework finden Sie unter [Garbage Collection](../../../standard/garbage-collection/index.md).
 

@@ -2,12 +2,12 @@
 title: Befehl „dotnet new“
 description: Der dotnet new Befehl erstellt neue .NET Core-Projekte basierend auf der angegebenen Vorlage
 ms.date: 04/10/2020
-ms.openlocfilehash: 1979f98a6005a414acc64c5eaa086a88aca9f033
-ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
+ms.openlocfilehash: 9a68baafa7ac3e6ad2fdc8f1c6e8621d6e15f1ff
+ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82102826"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82506856"
 ---
 # <a name="dotnet-new"></a>dotnet new
 
@@ -46,14 +46,14 @@ Der Befehl ruft die [Vorlagen-Engine](https://github.com/dotnet/templating) zum 
 
   Die Vorlage, die instanziiert werden soll, wenn der Befehl aufgerufen wird. Jede Vorlage verfügt möglicherweise über bestimmte Optionen, die Sie übergeben können. Weitere Informationen finden Sie unter [Vorlagenoptionen](#template-options).
 
-  Sie können `dotnet new --list` ausführen, um eine Liste aller installierten Vorlagen anzuzeigen. Wenn der Wert `TEMPLATE` nicht genau mit dem Text in der Spalte **Vorlagen** oder **Kurzname** in der zurückgegebenen Tabelle übereinstimmt, erfolgt für diese beiden Spalten ein Abgleich von Teilzeichenfolgen.
+  Sie können `dotnet new --list` oder `dotnet new -l` ausführen, um eine Liste aller installierten Vorlagen anzuzeigen. Wenn der Wert `TEMPLATE` nicht genau mit dem Text in der Spalte **Vorlagen** oder **Kurzname** in der zurückgegebenen Tabelle übereinstimmt, erfolgt für diese beiden Spalten ein Abgleich von Teilzeichenfolgen.
 
   Ab .NET Core 3.0 SDK sucht die CLI auf NuGet.org nach Vorlagen, wenn Sie den Befehl `dotnet new` unter den folgenden Bedingungen aufrufen:
 
   - Wenn die CLI beim Aufruf von `dotnet new` keine Übereinstimmung oder Teilübereinstimmung mit einer Vorlage finden kann.
   - Wenn eine neuere Version der Vorlage verfügbar ist. In diesem Fall wird das Projekt oder Artefakt erstellt, wobei die CLI Sie über eine aktualisierte Version der Vorlage warnt.
 
-  Der Befehl enthält eine Standardliste mit Vorlagen. Verwenden Sie `dotnet new -l`, um eine Liste der verfügbaren Vorlagen abzurufen. In der folgenden Tabelle sind die Vorlagen angegeben, die bereits mit dem .NET Core SDK vorinstalliert sind. Die Standardsprache für die Vorlage wird in den Klammern angezeigt. Klicken Sie auf den Kurznamenlink, um die spezifischen Vorlagenoptionen einzusehen.
+  In der folgenden Tabelle sind die Vorlagen angegeben, die bereits mit dem .NET Core SDK vorinstalliert sind. Die Standardsprache für die Vorlage wird in den Klammern angezeigt. Klicken Sie auf den Kurznamenlink, um die spezifischen Vorlagenoptionen einzusehen.
 
 | Vorlagen                                    | Kurzname                      | Sprache     | Tags                                  | Eingeführt |
 |----------------------------------------------|---------------------------------|--------------|---------------------------------------|------------|
@@ -84,19 +84,19 @@ Der Befehl ruft die [Vorlagen-Engine](https://github.com/dotnet/templating) zum 
 | Razor-Klassenbibliothek                          | [razorclasslib](#razorclasslib) | [C#]         | Web/Razor/Library/Razor Class Library | 2.1        |
 | ASP.NET Core-Web-API                         | [webapi](#webapi)               | [C#], F#     | Web/WebAPI                            | 1.0        |
 | ASP.NET Core: gRPC-Dienst                    | [grpc](#web-others)             | [C#]         | Web/gRPC                              | 3.0        |
-| Protokollpufferdatei                         | [proto](#namespace)             |              | Web/gRPC                              | 3.0        |
 | dotnet: GITIGNORE-Datei                        | `gitignore`                     |              | Konfigurationen                                | 3.0        |
 | global.json-Datei                             | [globaljson](#globaljson)       |              | Konfigurationen                                | 2.0        |
 | NuGet-Konfiguration                                 | `nugetconfig`                   |              | Konfigurationen                                | 1.0        |
-| dotnet: Manifestdatei des lokalen Tools              | `tool-manifest`                 |              | Konfigurationen                                | 3.0        |
+| Dotnet: Manifestdatei des lokalen Tools              | `tool-manifest`                 |              | Konfigurationen                                | 3.0        |
 | Web Config                                   | `webconfig`                     |              | Konfigurationen                                | 1.0        |
 | Projektmappendatei                                | `sln`                           |              | Lösung                              | 1.0        |
+| Protokollpufferdatei                         | [proto](#namespace)             |              | Web/gRPC                              | 3.0        |
 
 ## <a name="options"></a>Optionen
 
 - **`--dry-run`**
 
-  Zeigt eine Zusammenfassung der Vorgänge an, die auftreten, nachdem der angegebene Befehl ausgeführt wurde. Verfügbar ab .NET Core 2.2 SDK.
+  Es wird eine Zusammenfassung dazu angezeigt, was passiert, wenn der jeweilige Befehl ausgeführt wird und sich eine Vorlagenerstellung ergibt. Verfügbar ab .NET Core 2.2 SDK.
 
 - **`--force`**
 
@@ -139,7 +139,7 @@ Der Befehl ruft die [Vorlagen-Engine](https://github.com/dotnet/templating) zum 
 
 - **`--type <TYPE>`**
 
-  Filtert Vorlagen auf Grundlage verfügbarer Typen. Folgende Werte sind vordefiniert: `project`, `item` oder `other`.
+  Filtert Vorlagen auf Grundlage verfügbarer Typen. Die Werte `project`, `item` und `other` sind vordefiniert.
 
 - **`-u|--uninstall [PATH|NUGET_ID]`**
 
@@ -507,7 +507,7 @@ Für jede Projektvorlage kann es zusätzliche Optionen geben. Die Core-Vorlagen 
 
 - **`-rrc|--razor-runtime-compilation`**
 
-  Bestimmt, ob das Projekt zur Verwendung der [Razor-Runtimekompilierung](/aspnet/core/mvc/views/view-compilation#runtime-compilation) in Debugbuilds konfiguriert ist. Die Option ist ab .NET Core 3.1 SDK verfügbar.
+  Bestimmt, ob das Projekt zur Verwendung der [Razor-Runtimekompilierung](/aspnet/core/mvc/views/view-compilation#runtime-compilation) in Debugbuilds konfiguriert ist. Die Option ist ab .NET Core SDK 3.1.201 verfügbar.
 
 ***
 

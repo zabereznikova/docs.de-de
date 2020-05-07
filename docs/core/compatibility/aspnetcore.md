@@ -2,15 +2,15 @@
 title: Breaking Changes in ASP.NET Core
 titleSuffix: ''
 description: Listet die Breaking Changes in ASP.NET Core auf.
-ms.date: 03/27/2020
+ms.date: 04/29/2020
 author: scottaddie
 ms.author: scaddie
-ms.openlocfilehash: 95057425614d7c717154ecfb687db2b9a6ca4a18
-ms.sourcegitcommit: a9b8945630426a575ab0a332e568edc807666d1b
+ms.openlocfilehash: 63d39b1aa6e46b6bcbeb5a409efacac01dea4262
+ms.sourcegitcommit: 7370aa8203b6036cea1520021b5511d0fd994574
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80391246"
+ms.lasthandoff: 05/02/2020
+ms.locfileid: "82728336"
 ---
 # <a name="aspnet-core-breaking-changes"></a>Breaking Changes in ASP.NET Core
 
@@ -31,14 +31,17 @@ Auf dieser Seite sind die folgenden Breaking Changes dokumentiert:
 - [Zwischenspeicherung: Microsoft.Extensions.Caching.SqlServer verwendet neues SqlClient-Paket](#caching-microsoftextensionscachingsqlserver-uses-new-sqlclient-package)
 - [Zwischenspeicherung: „pubternal“-Typen wurden in ResponseCaching in „internal“-Typen geändert](#caching-responsecaching-pubternal-types-changed-to-internal)
 - [Datenschutz: DataProtection.AzureStorage verwendet neue Azure Storage-APIs](#data-protection-dataprotectionazurestorage-uses-new-azure-storage-apis)
+- [Erweiterungen: Paketverweisänderungen beeinträchtigen einige NuGet-Pakete](#extensions-package-reference-changes-affecting-some-nuget-packages)
 - [Hosting: AspNetCoreModule v1 wurde aus dem Windows-Hostingpaket entfernt](#hosting-aspnetcoremodule-v1-removed-from-windows-hosting-bundle)
 - [Hosting: Generischer Host schränkt Startup-Konstruktorinjektion ein](#hosting-generic-host-restricts-startup-constructor-injection)
 - [Hosting: HTTPS-Umleitung für IIS-Out-of-Process-Apps aktiviert](#hosting-https-redirection-enabled-for-iis-out-of-process-apps)
 - [Hosting: Typen IHostingEnvironment und IApplicationLifetime wurden ersetzt](#hosting-ihostingenvironment-and-iapplicationlifetime-types-marked-obsolete-and-replaced)
 - [Hosting: ObjectPoolProvider wurde aus WebHostBuilder-Abhängigkeiten entfernt](#hosting-objectpoolprovider-removed-from-webhostbuilder-dependencies)
+- [HTTP: BadHttpRequestException-Typen von Kestrel und IIS werden als veraltet markiert und ersetzt](#http-kestrel-and-iis-badhttprequestexception-types-marked-obsolete-and-replaced)
 - [HTTP: Browser-SameSite-Änderungen mit Auswirkung auf die Authentifizierung](#http-browser-samesite-changes-impact-authentication)
 - [HTTP: Erweiterbarkeit von DefaultHttpContext wurde entfernt](#http-defaulthttpcontext-extensibility-removed)
 - [HTTP: HeaderNames-Felder wurden in „static readonly“ (statisch schreibgeschützt) geändert](#http-headernames-constants-changed-to-static-readonly)
+- [HTTP: HttpClient-Instanzen, die von IHttpClientFactory erstellt wurden, protokollieren Integerstatuscodes](#http-httpclient-instances-created-by-ihttpclientfactory-log-integer-status-codes)
 - [HTTP: Änderungen an der Infrastruktur von Antworttexten](#http-response-body-infrastructure-changes)
 - [HTTP: Einige Standardwerte für Cookie-SameSite wurden geändert](#http-some-cookie-samesite-defaults-changed-to-none)
 - [HTTP: Synchrone E/A-Vorgänge wurden standardmäßig deaktiviert](#http-synchronous-io-disabled-in-all-servers)
@@ -52,6 +55,7 @@ Auf dieser Seite sind die folgenden Breaking Changes dokumentiert:
 - [Kestrel: Anforderungstrailer-Header wurden in neue Sammlung verschoben](#kestrel-request-trailer-headers-moved-to-new-collection)
 - [Kestrel: Transportabstraktionsebene wurde geändert](#kestrel-transport-abstractions-removed-and-made-public)
 - [Lokalisierung: APIs wurden als veraltet markiert](#localization-resourcemanagerwithculturestringlocalizer-and-withculture-marked-obsolete)
+- [Lokalisierung: ResourceManagerWithCultureStringLocalizer-Klasse und WithCulture-Schnittstellenmember entfernt](#localization-resourcemanagerwithculturestringlocalizer-class-and-withculture-interface-member-removed)
 - [Protokollierung: DebugLogger-Klasse wurde als „internal“ deklariert](#logging-debuglogger-class-made-internal)
 - [MVC: Async-Suffix wurde für Controlleraktion entfernt](#mvc-async-suffix-trimmed-from-controller-action-names)
 - [MVC: JsonResult wurde in Microsoft.AspNetCore.Mvc.Core verschoben](#mvc-jsonresult-moved-to-microsoftaspnetcoremvccore)
@@ -67,6 +71,7 @@ Auf dieser Seite sind die folgenden Breaking Changes dokumentiert:
 - [SignalR: HubConnectionContext-Konstruktoren wurden geändert](#signalr-hubconnectioncontext-constructors-changed)
 - [SignalR: Name des JavaScript-Clientpakets wurde geändert](#signalr-javascript-client-package-name-changed)
 - [SignalR: MessagePack-Hubprotokoll in MessagePack 2.x-Paket verschoben](#signalr-messagepack-hub-protocol-moved-to-messagepack-2x-package)
+- [SignalR: Optionstyp für das MessagePack-Hubprotokoll geändert](#signalr-messagepack-hub-protocol-options-type-changed)
 - [SignalR: Veraltete APIs](#signalr-usesignalr-and-useconnections-methods-marked-obsolete)
 - [SignalR: UseSignalR- und UseConnections-Methoden entfernt](#signalr-usesignalr-and-useconnections-methods-removed)
 - [SPAs: Standard für Konsolenprotokollierungsfallback für SpaServices und NodeServices wurde geändert](#spas-spaservices-and-nodeservices-no-longer-fall-back-to-console-logger)
@@ -80,7 +85,27 @@ Auf dieser Seite sind die folgenden Breaking Changes dokumentiert:
 
 ***
 
+[!INCLUDE[Extensions: Package reference changes](~/includes/core-changes/aspnetcore/5.0/extensions-package-reference-changes.md)]
+
+***
+
+[!INCLUDE[HTTP: HttpClient instances created by IHttpClientFactory log integer status codes](~/includes/core-changes/aspnetcore/5.0/http-httpclient-instances-log-integer-status-codes.md)]
+
+***
+
+[!INCLUDE[HTTP: Kestrel and IIS BadHttpRequestException types marked obsolete and replaced](~/includes/core-changes/aspnetcore/5.0/http-badhttprequestexception-obsolete.md)]
+
+***
+
+[!INCLUDE[Localization: ResourceManagerWithCultureStringLocalizer class and WithCulture interface member removed](~/includes/core-changes/aspnetcore/5.0/localization-members-removed.md)]
+
+***
+
 [!INCLUDE[SignalR: MessagePack Hub Protocol moved to MessagePack 2.x package](~/includes/core-changes/aspnetcore/5.0/signalr-messagepack-package.md)]
+
+***
+
+[!INCLUDE[SignalR: MessagePack Hub Protocol options type changed](~/includes/core-changes/aspnetcore/5.0/signalr-messagepack-hub-protocol-options-changed.md)]
 
 ***
 

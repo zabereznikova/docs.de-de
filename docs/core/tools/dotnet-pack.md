@@ -1,13 +1,13 @@
 ---
 title: Befehl „dotnet pack“
 description: Der dotnet pack-Befehl erstellt NuGet-Pakete für ein .NET Core-Projekt.
-ms.date: 02/14/2020
-ms.openlocfilehash: 2df096a088a177b77256b5d717f31e185507b249
-ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
+ms.date: 04/28/2020
+ms.openlocfilehash: 26a8581f55a8dc9e61aa52e62ed94c73eefd3e03
+ms.sourcegitcommit: d7666f6e49c57a769612602ea7857b927294ce47
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82102813"
+ms.lasthandoff: 04/30/2020
+ms.locfileid: "82595753"
 ---
 # <a name="dotnet-pack"></a>dotnet pack
 
@@ -178,8 +178,14 @@ Webprojekte können standardmäßig nicht verpackt werden. Um das Standardverhal
   dotnet pack --runtime win10-x64
   ```
 
-- Packen Sie das Projekt mithilfe einer [NUSPEC-Datei](https://docs.microsoft.com/nuget/reference/msbuild-targets#packing-using-a-nuspec):
+- Packen Sie das Projekt mithilfe einer *NUSPEC-Datei*:
 
   ```dotnetcli
   dotnet pack ~/projects/app1/project.csproj -p:NuspecFile=~/projects/app1/project.nuspec -p:NuspecBasePath=~/projects/app1/nuget
   ```
+
+  Informationen zur Verwendung von `NuspecFile`, `NuspecBasePath` und `NuspecProperties` finden Sie in den folgenden Ressourcen:
+  
+  - [Packen mithilfe einer NUSPEC-Datei](https://docs.microsoft.com/nuget/reference/msbuild-targets#packing-using-a-nuspec)
+  - [Verbesserte Erweiterungspunkte zum Erstellen benutzerdefinierter Pakete](https://docs.microsoft.com/nuget/reference/msbuild-targets#advanced-extension-points-to-create-customized-package)
+  - [Globale Eigenschaften](https://docs.microsoft.com/visualstudio/msbuild/msbuild-properties?view=vs-2019#global-properties)

@@ -3,18 +3,18 @@ title: Befehl „dotnet nuget push“
 description: Der dotnet nuget push-Befehl überträgt ein Paket auf den Server und veröffentlicht es.
 author: karann-msft
 ms.date: 02/14/2020
-ms.openlocfilehash: 96f8d008c8306a0782d5149360a24bb4097a1ec4
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.openlocfilehash: 8b0437d7f4ada2b56af50e30717d131668c21f7e
+ms.sourcegitcommit: 7370aa8203b6036cea1520021b5511d0fd994574
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81463520"
+ms.lasthandoff: 05/02/2020
+ms.locfileid: "82728356"
 ---
 # <a name="dotnet-nuget-push"></a>dotnet nuget push
 
 **Dieser Artikel gilt für:** ✔️ .NET Core 2.x SDK und neuere Versionen
 
-## <a name="name"></a>Name
+## <a name="name"></a>name
 
 `dotnet nuget push` – Überträgt ein Paket auf den Server und veröffentlicht es.
 
@@ -33,6 +33,8 @@ dotnet nuget push -h|--help
 ## <a name="description"></a>Beschreibung
 
 Der `dotnet nuget push`-Befehl überträgt ein Paket auf den Server und veröffentlicht es. Der Pushbefehl verwendet Details zum Server und den Anmeldeinformationen aus der NuGet-Konfigurationsdatei oder der Kette von Konfigurationsdateien des Systems. Weitere Informationen zu Konfigurationsdateien finden Sie unter [Configuring NuGet Behavior](/nuget/consume-packages/configuring-nuget-behavior) (Konfigurieren des Verhaltens von NuGet). Die NuGet-Standardkonfiguration wird abgerufen, indem *%AppData%\NuGet\NuGet.config* (Windows) oder *$HOME/.local/share* (Linux/macOS) geladen wird. Anschließend wird eine beliebige Datei *nuget.config* oder *.nuget\nuget.config* geladen (beginnend mit dem Stamm des Laufwerks und endend im aktuellen Verzeichnis).
+
+Der Befehl pusht ein vorhandenes Paket. Es wird kein Paket erstellt. Verwenden Sie [`dotnet pack`](dotnet-pack.md), um ein Paket zu erstellen.
 
 ## <a name="arguments"></a>Argumente
 
@@ -92,7 +94,7 @@ Der `dotnet nuget push`-Befehl überträgt ein Paket auf den Server und veröffe
 
 ## <a name="examples"></a>Beispiele
 
-- Überträgt *foo.nupkg* an die Standardpushquelle und gibt einen API-Schlüssel an:
+- Pusht *foo.nupkg* an die Standardpushquelle und gibt einen API-Schlüssel an:
 
   ```dotnetcli
   dotnet nuget push foo.nupkg -k 4003d786-cc37-4004-bfdf-c4f3e8ef9b3a
@@ -110,25 +112,25 @@ Der `dotnet nuget push`-Befehl überträgt ein Paket auf den Server und veröffe
   dotnet nuget push foo.nupkg -k 4003d786-cc37-4004-bfdf-c4f3e8ef9b3a -s https://customsource/
   ```
 
-- Überträgt *foo.nupkg* an die standardmäßige Pushquelle:
+- Pusht *foo.nupkg* an die Standardpushquelle:
 
   ```dotnetcli
   dotnet nuget push foo.nupkg
   ```
 
-- Überträgt *foo.symbols.nupkg* an die standardmäßige Symbolquelle:
+- Pusht *foo.symbols.nupkg* an die Standardsymbolquelle:
 
   ```dotnetcli
   dotnet nuget push foo.symbols.nupkg
   ```
 
-- Überträgt *foo.nupkg* an die Standardpushquelle und gibt ein Timeout von 360 Sekunden an:
+- Pusht *foo.nupkg* an die Standardpushquelle und gibt ein Timeout von 360 Sekunden an:
 
   ```dotnetcli
   dotnet nuget push foo.nupkg --timeout 360
   ```
 
-- Überträgt alle *NUPKG*-Dateien im aktuellen Verzeichnis an die standardmäßige Pushquelle:
+- Pusht alle *NUPKG*-Dateien im aktuellen Verzeichnis an die Standardpushquelle:
 
   ```dotnetcli
   dotnet nuget push *.nupkg
@@ -138,8 +140,17 @@ Der `dotnet nuget push`-Befehl überträgt ein Paket auf den Server und veröffe
   > Wenn dieser Befehl nicht funktioniert, kann dies an einem Fehler aus früheren Versionen des SDK liegen (.NET Core 2.1 SDK und frühere Versionen).
   > Führen Sie ein Upgrade für das SDK durch, oder führen Sie stattdessen den folgenden Befehl aus, um diesen Fehler zu beheben: `dotnet nuget push **/*.nupkg`.
 
-- Überträgt alle *.nupkg*-Dateien per Push, auch wenn eine Antwort des Typs „409 (Konflikt)“ von einem HTTP(S)-Server zurückgegeben wird:
+- Pusht alle *NUPKG*-Dateien, auch wenn eine Antwort des Typs „409 (Konflikt)“ von einem HTTP(S)-Server zurückgegeben wird:
 
   ```dotnetcli
   dotnet nuget push *.nupkg --skip-duplicate
   ```
+
+- Pushen Sie alle *NUPKG*-Dateien im aktuellen Verzeichnis an ein lokales Feedverzeichnis:
+
+  ```dotnetcli
+  dotnet nuget push *.nupkg -s c:\mydir
+  ```
+
+  Dieser Befehl speichert Pakete nicht in einer hierarchischen Ordnerstruktur, um die Leistung zu optimieren. Weitere Informationen finden Sie im Artikel zu [lokalen Feeds](//nuget/hosting-packages/local-feeds).
+  

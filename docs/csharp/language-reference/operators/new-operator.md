@@ -4,12 +4,12 @@ ms.date: 06/25/2019
 helpviewer_keywords:
 - new operator keyword [C#]
 ms.assetid: a212b697-a79b-4105-9923-1f7b108036e8
-ms.openlocfilehash: 84131bc503a106961419a27fc4e3e0f2d82306a8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ed18c42cd28412a967c94a65c2a92b0b75097b52
+ms.sourcegitcommit: 5988e9a29cedb8757320817deda3c08c6f44a6aa
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78846232"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82199728"
 ---
 # <a name="new-operator-c-reference"></a>new-Operator (C#-Referenz)
 
@@ -59,7 +59,7 @@ Ein benutzerdefinierter Typ kann den `new`-Operator nicht überladen.
 
 Weitere Informationen finden Sie im Abschnitt [Der new-Operator](~/_csharplang/spec/expressions.md#the-new-operator) der [C#-Sprachspezifikation](~/_csharplang/spec/introduction.md).
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [C#-Referenz](../index.md)
 - [C#-Operatoren](index.md)

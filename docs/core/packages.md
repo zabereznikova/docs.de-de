@@ -2,13 +2,13 @@
 title: '.NET Core: Pakete, Metapakete und Frameworks'
 description: Lernen Sie die Terminologie für Pakete, Metapakete und Frameworks.
 author: richlander
-ms.date: 06/20/2016
-ms.openlocfilehash: 657519edf1c0860ee3222c71ce85723e19029a9d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.date: 04/29/2020
+ms.openlocfilehash: a6575226feb71b96f1fe5070406c118081a8cbf0
+ms.sourcegitcommit: d7666f6e49c57a769612602ea7857b927294ce47
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79397932"
+ms.lasthandoff: 04/30/2020
+ms.locfileid: "82595584"
 ---
 # <a name="packages-metapackages-and-frameworks"></a>Pakete, Metapakete und Frameworks
 
@@ -55,7 +55,7 @@ In der Regel ist es einfacher und stabiler, ein [Metapaket](#metapackages) einzu
 
 Ein Metapaket ist eine NuGet-Paketkonvention zur Beschreibung einer Reihe von Paketen, die zusammen sinnvoll sind. Ein Metapaket stellt diese Reihe von Paketen dar, indem sie zu Abhängigkeiten gemacht werden. Das Metapaket kann optional ein Framework für diese Pakete einrichten, indem ein Framework angeben wird.
 
-Frühere Versionen von .NET Core-Tools („project.json“ und csproj-basierte Tools) geben standardmäßig ein Framework und ein Metapaket an. Derzeit verweist das Zielframework jedoch implizit auf das Metapaket, damit jedes Metapaket mit einem Zielframework verknüpft ist. Zum Beispiel verweist das `netstandard1.6`-Framework auf die NetStandard.Library-Version 1.6.0 des Metapakets. Das `netcoreapp2.1`-Framework verweist in ähnlicher Art und Weise auf das Metapaket der Version 2.1.0 der Microsoft.NETCore.App. Weitere Informationen finden Sie unter [Impliziter Metapaketverweis in .NET Core SDK](https://github.com/dotnet/core/blob/master/release-notes/1.0/sdk/1.0-rc3-implicit-package-refs.md).
+Frühere Versionen von .NET Core-Tools (*project.json* und *\*CSPROJ*-basierte Tools) geben standardmäßig ein Framework und ein Metapaket an. Derzeit verweist das Zielframework jedoch implizit auf das Metapaket, damit jedes Metapaket mit einem Zielframework verknüpft ist. Zum Beispiel verweist das `netstandard1.6`-Framework auf Version 1.6.0 des Metapakets „NETStandard.Library“. Das `netcoreapp2.1`-Framework verweist in ähnlicher Art und Weise auf das Metapaket der Version 2.1.0 der Microsoft.NETCore.App. Weitere Informationen finden Sie unter [Impliziter Metapaketverweis in .NET Core SDK](https://github.com/dotnet/core/blob/master/release-notes/1.0/sdk/1.0-rc3-implicit-package-refs.md).
 
 Durch das Abzielen auf ein Framework und das implizite Verweisen auf ein Metapaket fügen Sie tatsächlich in einer einzigen Geste einen Verweis auf jedes einzelne abhängige Paket hinzu. Alle Bibliotheken in diesen Paketen sind für IntelliSense (oder ähnliches) und für die Veröffentlichung Ihrer Anwendung verfügbar.
 
@@ -106,7 +106,7 @@ Die beiden primären paketbasierten Frameworks, die innerhalb .NET Core verwende
 - `netstandard`
 - `netcoreapp`
 
-### <a name="net-standard"></a>.NET Standard
+### <a name="net-standard"></a>.NET-Standard
 
 Das .NET Standard-Framework ([Zielframeworkmoniker (TFM)](../standard/frameworks.md): `netstandard`) repräsentiert die APIs, die von [.NET Standard](../standard/net-standard.md) definiert werden und darauf basieren. Bibliotheken, die auf mehreren Laufzeiten ausgeführt werden sollen, sollten dieses Framework als Ziel haben. Sie werden auf jeder mit .NET Standard kompatiblen Laufzeit, z. B. .NET Core, .NET Framework und Mono/Xamarin unterstützt. Jede dieser Laufzeiten unterstützt eine Reihe von .NET Standardversionen, je nachdem, welche APIs sie implementieren.
 
@@ -120,7 +120,7 @@ Das `netstandard`-Framework verweist implizit auf die Metapakete [`NETStandard.L
 </Project>
 ```
 
-Allerdings müssen die Verweise des Frameworks und Metapakets in der Projektdatei nicht übereinstimmen, und Sie können das `<NetStandardImplicitPackageVersion>`-Element in Ihrer Projektdatei verwenden, um eine Frameworkversion anzugeben, die niedriger ist als die Version des Metapakets. Zum Beispiel ist die folgende Projektdatei gültig.
+Wenn Sie der Projektdatei das `<NetStandardImplicitPackageVersion>`-Element hinzufügen, das implizit eine Metapaketversion angibt, können Sie eine Frameworkversion angeben, die niedriger als die Metapaketversion ist. Das `<NetStandardImplicitPackageVersion>`-Element ist nur anwendbar, wenn .NET Core und .NET Standard als Ziel verwendet werden. Zum Beispiel ist die folgende Projektdatei gültig.
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
