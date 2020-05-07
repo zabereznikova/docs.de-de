@@ -1,13 +1,13 @@
 ---
 title: Docker-Terminologie
 description: Lernen Sie etwas von der grundlegenden Terminologie kennen, die beim Arbeiten mit Docker alltäglich ist.
-ms.date: 02/15/2019
-ms.openlocfilehash: c352bf7235e8a3dc2d52bbbfe4390863fff9991f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.date: 04/16/2020
+ms.openlocfilehash: 34e50596eca21ec5b5505493414056814455d745
+ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "68673537"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82507324"
 ---
 # <a name="docker-terminology"></a>Docker-Terminologie
 
@@ -17,7 +17,11 @@ In diesem Abschnitt werden die Begriffe und Definitionen aufgelistet, mit denen 
 
 **Docker-Datei:** Eine Textdatei, die Anweisungen zum Erstellen eines Docker-Images enthält. Wie bei einem Stapelverarbeitungsskript gibt die erste Zeile zunächst das Basisimage an, dann folgen die Anweisungen zum Installieren von erforderlichen Programmen, Kopieren von Dateien usw., bis Sie zu der benötigten Arbeitsumgebung gelangen.
 
-**Build:** Die Aktion zum Erstellen eines Containerimages auf der Grundlage der Informationen und des Kontexts der Docker-Datei sowie weiteren Dateien im Ordner, in dem das Image erstellt wird. Sie können Images mit dem Docker-Befehl **`docker build`** erstellen.
+**Build:** Die Aktion zum Erstellen eines Containerimages auf der Grundlage der Informationen und des Kontexts der Docker-Datei sowie weiteren Dateien im Ordner, in dem das Image erstellt wird. Sie können Images mit dem folgenden Docker-Befehl erstellen:
+
+```bash
+docker build
+```
 
 **Container:** Eine Instanz eines Docker-Images. Ein Container stellt die Ausführung einer einzelnen Anwendung, eines Prozesses oder Diensts dar. Er besteht aus den Inhalten eines Docker-Images, einer Ausführungsumgebung und mehreren Standardanweisungen. Beim Skalieren eines Diensts erstellen Sie mehrere Instanzen eines Containers aus dem gleichen Image. Alternativ kann ein Batchauftrag mehrere Container aus dem gleichen Image erstellen und dabei verschiedene Parameter an jede Instanz übergeben.
 
@@ -31,7 +35,7 @@ In diesem Abschnitt werden die Begriffe und Definitionen aufgelistet, mit denen 
 
 **Registrierung:** Ein Dienst, der Zugriff auf Repositorys bereitstellt. Die Standardregistrierung für die meisten öffentlichen Images ist der [Docker-Hub](https://hub.docker.com/) (im Besitz des Docker-Unternehmens). Eine Registrierung enthält in der Regel Repositorys mehrerer Teams. Unternehmen haben häufig private Registrierungen zum Speichern und Verwalten von Images, die sie erstellt haben. Azure Container Registry ist ein weiteres Beispiel.
 
-**Images für mehrere Architekturen:** Die Eignung für mehrere Architekturen ist ein Feature, das die Auswahl des passenden Images erleichtert, je nach der Plattform, auf der Docker ausgeführt wird – wenn ein Dockerfile beispielsweise ein Basisimage **`FROM mcr.microsoft.com/dotnet/core/sdk:2.2`** aus der Registrierung anfordert, erhält es tatsächlich **`2.2-nanoserver-1709`** , **`2.2-nanoserver-1803`** , **`2.2-nanoserver-1809`** oder **`2.2-stretch`** , abhängig vom Betriebssystem und der Version, unter der Docker ausgeführt wird.
+**Images für mehrere Architekturen:** Die Eignung für mehrere Architekturen ist ein Feature, das die Auswahl des passenden Images je nach Plattform erleichtert, auf der Docker ausgeführt wird. Wenn ein Dockerfile beispielsweise ein Basisimage **FROM mcr.microsoft.com/dotnet/core/sdk:3.1** aus der Registrierung anfordert, erhält es tatsächlich **3.1-sdk-nanoserver-1909**, **3.1-sdk-nanoserver-1809** oder **3.1-sdk-buster-slim**, je nach Betriebssystem und Version, mit dem bzw. der Docker ausgeführt wird.
 
 **Docker-Hub:** Eine öffentliche Registrierung zum Hochladen von und Arbeiten mit Images. Docker-Hub bietet Docker-Imagehosts, öffentliche oder private Registrierungen, Buildtrigger, Web-Hooks und Integration mit GitHub und Bitbucket.
 

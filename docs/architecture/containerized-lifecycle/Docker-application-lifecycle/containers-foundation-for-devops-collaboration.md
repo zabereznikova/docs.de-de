@@ -1,13 +1,13 @@
 ---
 title: Container als Grundlage für die Zusammenarbeit mit DevOps
 description: Verstehen der Schlüsselrolle von Containern bei der Optimierung von DevOps.
-ms.date: 02/15/2019
-ms.openlocfilehash: 8258f4331212d92376d64fef318adcdff492f61f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.date: 04/16/2020
+ms.openlocfilehash: 83bebc92a242a5ac2906d9997b7b278f87f0db96
+ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "73094498"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82507342"
 ---
 # <a name="containers-as-the-foundation-for-devops-collaboration"></a>Container als Grundlage für die Zusammenarbeit mit DevOps
 
@@ -23,7 +23,7 @@ In der linken Säule von Abbildung 2–1 erstellen Entwickler Code lokal in Dock
 
 Die DevOps-Säule definiert die Continuous Integration-Erstellungspipelines (CI) unter Verwendung des im Coderepository bereitgestellten Dockerfiles. Das CI-System ruft die Container-Basisimages aus der gewählten Docker-Registrierung ab und erstellt die benutzerdefinierten Docker-Images für die Anwendung. Die Images werden anschließend überprüft und in die Docker-Registrierung übertragen, die für die Bereitstellung in mehreren Umgebungen verwendet wird.
 
-In der rechten Säule verwalten Betriebsteams Anwendungen und Infrastruktur in der Produktion, während sie Umgebung und Anwendungen überwachen, sodass sie dem Entwicklungsteam Feedback und Erkenntnisse über mögliche Verbesserungen der Anwendung geben können. Container-Apps werden normalerweise in der Produktion mithilfe von Containerorchestratoren ausgeführt.
+In der rechten Säule verwalten Betriebsteams Anwendungen und Infrastruktur in der Produktion, während sie Umgebung und Anwendungen überwachen, sodass sie dem Entwicklungsteam Feedback und Erkenntnisse über mögliche Verbesserungen der Anwendung geben können. Container-Apps werden in der Regel mithilfe von Containerorchestratoren wie [Kubernetes](https://kubernetes.io/) in der Produktion ausgeführt, wobei in der Regel [Helm-Diagramme](https://helm.sh/) zum Konfigurieren von Bereitstellungseinheiten anstelle von docker-compose-Dateien verwendet werden.
 
 Die beiden Teams arbeiten mithilfe einer Grundplattform (Docker-Container) zusammen, die eine Separation of Concerns als Vertrag zur Verfügung stellt, während sie die Zusammenarbeit der beiden Teams im Anwendungslebenszyklus erheblich verbessert. Die Entwickler besitzen die Inhalte der Container, ihre Betriebsumgebung und die Abhängigkeiten zwischen Containern, während die Betriebsteams die erstellten Inhalte zusammen mit dem Manifest an sich nehmen und sie in ihrem Orchestrierungssystem ausführen.
 

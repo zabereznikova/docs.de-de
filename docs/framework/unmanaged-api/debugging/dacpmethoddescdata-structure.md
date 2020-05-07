@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: hoyosjs
 ms.author: juhoyosa
-ms.openlocfilehash: cc54664ea8ad61005de3f3fae7407946d1c861b2
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: d623fe862eaf5902fd89d0e512dd07f73a03246f
+ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76793846"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82860821"
 ---
 # <a name="dacpmethoddescdata-structure"></a>DacpMethodDescData-Struktur
 
@@ -52,9 +52,9 @@ struct DacpMethodDescData
 };
 ```
 
-## <a name="members"></a>Member
+## <a name="members"></a>Members
 
-| Member                       | Beschreibung                                                                                     |
+| Member                       | BESCHREIBUNG                                                                                     |
 | ---------------------------- | ----------------------------------------------------------------------------------------------- |
 | `bHasNativeCode`             | Gibt an, ob die Laufzeit nativen Code für die angegebene Instanziierung der Methode verfügbar ist. |
 | `bIsDynamic`                 | Gibt an, ob die Methode mithilfe der Lightweight-Codegenerierung dynamisch generiert wird.           |
@@ -77,14 +77,14 @@ struct DacpMethodDescData
 
 Diese Struktur befindet sich innerhalb der Laufzeit und wird nicht durch Header oder Bibliotheksdateien verfügbar gemacht. Um es zu verwenden, definieren Sie die Struktur wie oben angegeben.
 
-## <a name="requirements"></a>-Anforderungen
-**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Anforderungen
+**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
 **Header:** Gar  
 **Bibliothek:** Gar  
-**.NET Framework Versionen:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
+**.NET Framework Versionen:**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 - [Debuggen](index.md)
 - [Debuggen von Strukturen](debugging-structures.md)
-- [Allgemeine Datentypen](../../../../docs/framework/unmanaged-api/common-data-types-unmanaged-api-reference.md)
+- [Allgemeine Datentypen](../common-data-types-unmanaged-api-reference.md)

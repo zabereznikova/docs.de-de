@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 helpviewer_keywords:
 - tasks, further reading
 ms.assetid: 98aee307-dde6-4cad-bb58-078497b8064f
-ms.openlocfilehash: d424c04f52e08b0fdb72e187bd8999ef16427080
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1c6823808bf457cf23fbef8f7000d38604474a8a
+ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73134214"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82507480"
 ---
 # <a name="for-further-reading-parallel-programming"></a>Weitere Themen (Parallele Programmierung)
 
@@ -22,9 +22,9 @@ Die folgenden Ressourcen enthalten zusätzliche Informationen zur parallelen Pro
 
 - Der Blog [Parallel Programming with .NET (Parallele Programmierung mit .NET)](https://devblogs.microsoft.com/pfxteam/) enthält zahlreiche detaillierte Artikel zur parallelen Programmierung in .NET.
 
-- Die Seite [Samples for Parallel Programming with the .NET Framework (Beispiele zur parallelen Programmierung mit .NET Framework)](https://code.msdn.microsoft.com/ParExtSamples) enthält viele Beispiele, die fortgeschrittene und erweiterte Techniken zur parallelen Programmierung veranschaulichen.
+- Die Seite [Beispiele zur parallelen Programmierung mit .NET Core und .NET Standard](/samples/browse/?products=dotnet-core%2Cdotnet-standard&term=parallel) enthält viele Beispiele, die fortgeschrittene und erweiterte Techniken zur parallelen Programmierung veranschaulichen.
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Parallel Computing (Parallele Computervorgänge) im Developer Center](https://msdn.microsoft.com/vstudio/bb964701)
 - [Parallele Programmierung in Visual C++](/cpp/parallel/parallel-programming-in-visual-cpp)

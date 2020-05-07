@@ -15,16 +15,16 @@ topic_type:
 - apiref
 author: hoyosjs
 ms.author: juhoyosa
-ms.openlocfilehash: c24bdce64eb7e208bf3830940d7beab1ebf92e78
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e10d1792a8dc0b57ddd121ec09854e8e1824cade
+ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79179186"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82860804"
 ---
 # <a name="dacpmoduledata-structure"></a>DacpModuleData-Struktur
 
-Definiert einen Transportpuffer für die Laufzeitinformationen eines Moduls.
+Definiert einen Transport Puffer für die Laufzeitinformationen eines Moduls.
 
 [!INCLUDE[debugging-api-recommended-note](../../../../includes/debugging-api-recommended-note.md)]
 
@@ -42,24 +42,24 @@ struct DacpModuleData
 
 ## <a name="members"></a>Members
 
-| Member    | Beschreibung                                                             |
+| Member    | BESCHREIBUNG                                                             |
 | --------- | ----------------------------------------------------------------------- |
-| `Address` | Adresse des Modulobjekts.                                           |
+| `Address` | Adresse des Modul Objekts.                                           |
 | `File`    | Ein Zeiger auf die portable ausführbare Datei (PE).                       |
-| `ilBase`  | Die Adresse der Basis des geladenen Bildes.                                 |
-| `payLoad` | Ein Nutzlastpuffer für zusätzliche Modulinformationen, die von der Laufzeit verwendet werden. |
+| `ilBase`  | Die Adresse der Basis des geladenen Bilds.                                 |
+| `payLoad` | Ein Nutz Last Puffer für zusätzliche Modul Informationen, die von der Laufzeit verwendet werden. |
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Struktur befindet sich innerhalb der Laufzeit und wird nicht durch Header oder Bibliotheksdateien verfügbar gemacht. Um sie zu verwenden, definieren Sie die oben angegebene Struktur.
+Diese Struktur befindet sich innerhalb der Laufzeit und wird nicht durch Header oder Bibliotheksdateien verfügbar gemacht. Um es zu verwenden, definieren Sie die Struktur wie oben angegeben.
 
-## <a name="requirements"></a>Requirements (Anforderungen)
-**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
-**Kopfzeile:** nichts  
-**Bibliothek:** nichts  
-**.NET Framework-Versionen:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
+## <a name="requirements"></a>Anforderungen
+**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
+**Header:** Gar  
+**Bibliothek:** Gar  
+**.NET Framework Versionen:**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Weitere Informationen:
 
 - [Debuggen](index.md)
 - [Debuggen von Strukturen](debugging-structures.md)

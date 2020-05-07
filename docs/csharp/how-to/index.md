@@ -2,12 +2,12 @@
 title: Artikel zu Vorgehensweisen (C#-Handbuch)
 description: Eine Sammlung von einfachen Tipps und kurzen Codebeispielen
 ms.date: 12/20/2017
-ms.openlocfilehash: e6cb657726b82a1710bbcd596fe48037b5c26352
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 81ef8106add757cf3c83aa7dc130f5474b936461
+ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79397545"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82794701"
 ---
 # <a name="how-to-c"></a>Vorgehensweise (C#)
 
@@ -63,7 +63,7 @@ Möglicherweise müssen Sie ein Objekt in einen anderen Typ konvertieren.
 - [Konvertieren einer Zeichenfolge in den Wert `DateTime`](../../standard/base-types/parsing-datetime.md).
 - [Konvertieren eines Bytearrays in einen ganzzahligen Typ](../programming-guide/types/how-to-convert-a-byte-array-to-an-int.md).
 - [Konvertieren einer Zeichenfolge in eine Zahl](../programming-guide/types/how-to-convert-a-string-to-a-number.md).
-- [Verwenden des Musterabgleichs sowie der Operatoren `as` und `is` zur sicheren Umwandlung in einen anderen Typ](../how-to/safely-cast-using-pattern-matching-is-and-as-operators.md)
+- [Verwenden des Musterabgleichs sowie der Operatoren `as` und `is` zur sicheren Umwandlung in einen anderen Typ](safely-cast-using-pattern-matching-is-and-as-operators.md)
 - [Definieren benutzerdefinierter Typkonvertierungen](../language-reference/operators/user-defined-conversion-operators.md)
 - [Identifizieren, ob ein Typ ein Typ ist, der NULL-Werte zulässt](../language-reference/builtin-types/nullable-value-types.md#how-to-identify-a-nullable-value-type).
 - [Konvertieren zwischen Typen, die NULL zulassen, und Typen, die NULL nicht zulassen](../language-reference/builtin-types/nullable-value-types.md#conversion-from-a-nullable-value-type-to-an-underlying-type).
