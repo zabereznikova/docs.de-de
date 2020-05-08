@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7bd14fb6-8b54-4484-a891-e3c21859c019
 topic_type:
 - apiref
-ms.openlocfilehash: 4b24b3dfe6a931866acd7eba966811071ff39ea5
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 3736627e7f42ad9db6699c31a0a618e993eef770
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76788925"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82893468"
 ---
 # <a name="icordebugcode-interface"></a>ICorDebugCode-Schnittstelle
 
@@ -27,7 +27,7 @@ Stellt ein Segment von Microsoft Intermediate Language (MSIL)-Code oder nativem 
   
 ## <a name="methods"></a>Methoden  
   
-|-Methode|Beschreibung|  
+|Methode|Beschreibung|  
 |------------|-----------------|  
 |[CreateBreakpoint-Methode](icordebugcode-createbreakpoint-method.md)|Erstellt am angegebenen Offset einen Haltepunkt.|  
 |[GetAddress-Methode](icordebugcode-getaddress-method.md)|Ruft die relative virtuelle Adresse (RVA) des Codesegments ab, das diesen `ICorDebugCode` darstellt.|  
@@ -40,21 +40,21 @@ Stellt ein Segment von Microsoft Intermediate Language (MSIL)-Code oder nativem 
 |[IsIL-Methode](icordebugcode-isil-method.md)|Ruft einen Wert ab, der angibt, ob dieser `ICorDebugCode` in MSIL kompiliert wird.|  
   
 ## <a name="remarks"></a>Hinweise  
- `ICorDebugCode` kann entweder MSIL- oder systemeigenen Code darstellen. Ein ICorDebugFunction-Objekt, das MSIL-Code darstellt, kann entweder 0 (null) oder einen `ICorDebugCode` zugeordneten Objekten aufweisen. Einem ICorDebugFunction-Objekt, das systemeigenen Code darstellt, kann eine beliebige Anzahl von `ICorDebugCode`-Objekten zugeordnet sein.  
+ `ICorDebugCode` kann entweder MSIL- oder systemeigenen Code darstellen. Einem ICorDebugFunction-Objekt, das MSIL-Code darstellt, kann entweder NULL oder `ICorDebugCode` ein-Objekt zugeordnet werden. Einem ICorDebugFunction-Objekt, das nativen Code darstellt, kann eine beliebige `ICorDebugCode` Anzahl von Objekten zugeordnet sein.  
   
 > [!NOTE]
 > Diese Schnittstelle kann weder computerübergreifend noch prozessübergreifend remote aufgerufen werden.  
   
-## <a name="requirements"></a>-Anforderungen  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Anforderungen  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   
  **Bibliothek:** CorGuids.lib  
   
- **.NET Framework Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [ICorDebugCode3-Schnittstelle](icordebugcode3-interface.md)
-- [Debuggen von Schnittstellen](debugging-interfaces.md)
+- [Debugschnittstellen](debugging-interfaces.md)
