@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: aa26df07-e0a6-4608-bdef-d4afafec89aa
 topic_type:
 - apiref
-ms.openlocfilehash: 418ebb51df3f2d86011ee2e77022c3ee5c7ac0b0
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: e6e8eb91bbc41faf0dcea010da9aa54995058653
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73088235"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82894977"
 ---
-# <a name="icordebugarrayvaluehasbaseindicies-method"></a><span data-ttu-id="ffbc5-102">ICorDebugArrayValue::HasBaseIndicies-Methode</span><span class="sxs-lookup"><span data-stu-id="ffbc5-102">ICorDebugArrayValue::HasBaseIndicies Method</span></span>
-<span data-ttu-id="ffbc5-103">Ruft einen Wert ab, der angibt, ob Dimensionen dieses Arrays einen Basis Index ungleich 0 (null) aufweisen.</span><span class="sxs-lookup"><span data-stu-id="ffbc5-103">Gets a value that indicates whether any dimensions of this array have a base index of non-zero.</span></span>  
+# <a name="icordebugarrayvaluehasbaseindicies-method"></a><span data-ttu-id="5da7c-102">ICorDebugArrayValue::HasBaseIndicies-Methode</span><span class="sxs-lookup"><span data-stu-id="5da7c-102">ICorDebugArrayValue::HasBaseIndicies Method</span></span>
+<span data-ttu-id="5da7c-103">Ruft einen Wert ab, der angibt, ob Dimensionen dieses Arrays einen Basis Index ungleich 0 (null) aufweisen.</span><span class="sxs-lookup"><span data-stu-id="5da7c-103">Gets a value that indicates whether any dimensions of this array have a base index of non-zero.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ffbc5-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="ffbc5-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="5da7c-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="5da7c-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT HasBaseIndicies (  
@@ -33,15 +33,15 @@ HRESULT HasBaseIndicies (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="ffbc5-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="ffbc5-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="5da7c-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="5da7c-105">Parameters</span></span>  
  `pbHasBaseIndicies`  
- <span data-ttu-id="ffbc5-106">vorgenommen Ein Zeiger auf einen booleschen Wert, der `true` wird, wenn mindestens eine Dimension dieses `ICorDebugArrayValue` Objekts einen Basis Index ungleich 0 (null) aufweist. Andernfalls ist der boolesche Wert `false`.</span><span class="sxs-lookup"><span data-stu-id="ffbc5-106">[out] A pointer to a Boolean value that is `true` if one or more dimensions of this `ICorDebugArrayValue` object have a base index of non-zero; otherwise, the Boolean value is `false`.</span></span>  
+ <span data-ttu-id="5da7c-106">vorgenommen Ein Zeiger auf einen booleschen Wert, der `true` ist, wenn mindestens eine Dimension dieses `ICorDebugArrayValue` Objekts einen Basis Index ungleich 0 (null) aufweist. Andernfalls ist `false`der boolesche Wert.</span><span class="sxs-lookup"><span data-stu-id="5da7c-106">[out] A pointer to a Boolean value that is `true` if one or more dimensions of this `ICorDebugArrayValue` object have a base index of non-zero; otherwise, the Boolean value is `false`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="ffbc5-107">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="ffbc5-107">Requirements</span></span>  
- <span data-ttu-id="ffbc5-108">**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="ffbc5-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="5da7c-107">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="5da7c-107">Requirements</span></span>  
+ <span data-ttu-id="5da7c-108">**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="5da7c-108">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="ffbc5-109">**Header:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="ffbc5-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="5da7c-109">**Header:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="5da7c-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="ffbc5-110">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="ffbc5-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="5da7c-110">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="5da7c-110">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="ffbc5-111">**.NET Framework-Versionen:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ffbc5-111">**.NET Framework Versions:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]</span></span>
+ <span data-ttu-id="5da7c-111">**.NET Framework Versionen:**[!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="5da7c-111">**.NET Framework Versions:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]</span></span>
