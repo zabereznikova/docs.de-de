@@ -14,19 +14,19 @@ helpviewer_keywords:
 ms.assetid: 208e5c2d-3f3f-404e-8b3c-7cccc14ddb16
 topic_type:
 - apiref
-ms.openlocfilehash: be1e1cd0d38ad71de43478af5565bb1ac98a8c0d
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 8be4332da77c3fbf4229a3fbeb9ba835a7a13eee
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76778004"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82894795"
 ---
 # <a name="icordebugblockingobjectenum-interface"></a>ICorDebugBlockingObjectEnum-Schnittstelle
 Stellt einen Enumerator für eine Liste von [Cordebug-blockingobject](cordebugblockingobject-structure.md) -Strukturen bereit. Diese Schnittstelle ist eine Unterklasse von der ICorDebugEnum-Schnittstelle.  
   
 ## <a name="methods"></a>Methoden  
   
-|-Methode|Beschreibung|  
+|Methode|Beschreibung|  
 |------------|-----------------|  
 |[Next-Methode](icordebugblockingobjectenum-next-method.md)|Listet die [Cordebug-blockingobject](cordebugblockingobject-structure.md) -Strukturen auf.|  
   
@@ -36,16 +36,16 @@ Stellt einen Enumerator für eine Liste von [Cordebug-blockingobject](cordebugbl
 > [!NOTE]
 > Diese Schnittstelle kann weder computerübergreifend noch prozessübergreifend remote aufgerufen werden.  
   
-## <a name="requirements"></a>-Anforderungen  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Anforderungen  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   
  **Bibliothek:** CorGuids.lib  
   
- **.NET Framework Versionen:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Debuggen von Schnittstellen](debugging-interfaces.md)
+- [Debugschnittstellen](debugging-interfaces.md)
 - [Debuggen](index.md)

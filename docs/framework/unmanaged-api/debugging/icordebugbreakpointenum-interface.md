@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4c6f4f6e-52cc-402e-881b-7b8526544c90
 topic_type:
 - apiref
-ms.openlocfilehash: 22ae1d24040a8ee5000e0ff2fbeb2b45e08050df
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: e391a02571481d75ce88ae3f3b2b6421705d661c
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76784342"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82894700"
 ---
 # <a name="icordebugbreakpointenum-interface"></a>ICorDebugBreakpointEnum-Schnittstelle
 
@@ -27,24 +27,24 @@ Implementiert ICorDebugEnum-Methoden und listet ICorDebugBreakpoint-Arrays auf.
   
 ## <a name="methods"></a>Methoden  
   
-|-Methode|Beschreibung|  
+|Methode|Beschreibung|  
 |------------|-----------------|  
-|[Next-Methode](icordebugbreakpointenum-next-method.md)|Ruft die angegebene Anzahl von `ICorDebugBreakpoint` Instanzen aus der-Enumeration ab der aktuellen Position ab.|  
+|[Next-Methode](icordebugbreakpointenum-next-method.md)|Ruft die angegebene Anzahl von `ICorDebugBreakpoint` -Instanzen ab der aktuellen Position aus der-Enumeration ab.|  
   
 ## <a name="remarks"></a>Hinweise  
   
 > [!NOTE]
 > Diese Schnittstelle kann weder computerübergreifend noch prozessübergreifend remote aufgerufen werden.  
   
-## <a name="requirements"></a>-Anforderungen  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Anforderungen  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   
  **Bibliothek:** CorGuids.lib  
   
- **.NET Framework Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Debuggen von Schnittstellen](debugging-interfaces.md)
+- [Debugschnittstellen](debugging-interfaces.md)

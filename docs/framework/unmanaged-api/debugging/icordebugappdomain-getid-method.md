@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 32c27576-71fa-42ee-8230-67b92913ea08
 topic_type:
 - apiref
-ms.openlocfilehash: 87c43d6f05dffbf10ca1dd9253abfe893db9adf5
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 63346c679efc083dea9ab0eaa4f983a5308695f8
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73110481"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82895257"
 ---
 # <a name="icordebugappdomaingetid-method"></a>ICorDebugAppDomain::GetId-Methode
 Ruft den eindeutigen Bezeichner der Anwendungsdomäne ab.  
@@ -41,10 +41,10 @@ HRESULT GetID (
  Der Bezeichner für die Anwendungsdomäne ist innerhalb des enthaltenden Prozesses eindeutig.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   
  **Bibliothek:** CorGuids.lib  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

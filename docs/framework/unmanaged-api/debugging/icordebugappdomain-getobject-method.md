@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 78232e6f-ae18-4cfa-a6cd-e79471cf9d76
 topic_type:
 - apiref
-ms.openlocfilehash: f2c881603cfa0e4b3d2dc8d1e996631b51d1e850
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a21f3b36e418bbde5dcb90f25a39dae03fde77c9
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73134712"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82895211"
 ---
 # <a name="icordebugappdomaingetobject-method"></a>ICorDebugAppDomain::GetObject-Methode
 Ruft einen Schnittstellen Zeiger auf die Common Language Runtime (CLR)-Anwendungsdomäne ab.  
@@ -38,16 +38,16 @@ HRESULT GetObject (
  vorgenommen Ein Zeiger auf die Adresse eines ICorDebugValue-Schnittstellen Objekts, das die CLR-Anwendungsdomäne darstellt.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Wenn ein verwaltetes <xref:System.AppDomain?displayProperty=nameWithType> Objekt für diese Anwendungsdomäne nicht erstellt wurde, gibt die Methode `S_FALSE` zurück und platziert `NULL` in `*ppObject`.  
+ Wenn ein <xref:System.AppDomain?displayProperty=nameWithType> verwaltetes Objekt für diese Anwendungsdomäne nicht erstellt wurde, gibt die `S_FALSE` Methode zurück `NULL` und `*ppObject`stellt in dar.  
   
 ## <a name="remarks"></a>Hinweise  
- Jede Anwendungsdomäne in einem Prozess kann über ein verwaltetes <xref:System.AppDomain?displayProperty=nameWithType> Objekt in der Laufzeit verfügen, das Sie darstellt. Diese Funktion Ruft ein icorentbugvalue-Schnittstellen Objekt ab, das diesem verwalteten <xref:System.AppDomain?displayProperty=nameWithType> Objekt entspricht.  
+ Jede Anwendungsdomäne in einem Prozess kann über ein verwaltetes <xref:System.AppDomain?displayProperty=nameWithType> Objekt in der Laufzeit verfügen, das Sie darstellt. Diese Funktion Ruft ein ICorDebug Value-Schnittstellen Objekt ab, das diesem verwalteten <xref:System.AppDomain?displayProperty=nameWithType> Objekt entspricht.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   
  **Bibliothek:** CorGuids.lib  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: dc437751-7093-44e2-bfdc-191d9ce3c192
 topic_type:
 - apiref
-ms.openlocfilehash: 0944f3379c18cba56ab65fe40a5b94a64d8a8991
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: bd1e86b83c43af20604416f158ab9e74f399821b
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76778205"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82894967"
 ---
 # <a name="icordebugarrayvalue-interface"></a>ICorDebugArrayValue-Schnittstelle
 
@@ -27,7 +27,7 @@ Eine Unterklasse von ICorDebugHeapValue, die ein eindimensionales oder mehrdimen
   
 ## <a name="methods"></a>Methoden  
   
-|-Methode|Beschreibung|  
+|Methode|Beschreibung|  
 |------------|-----------------|  
 |[GetBaseIndicies-Methode](icordebugarrayvalue-getbaseindicies-method.md)|Ruft den Basis Index jeder Dimension im Array ab.|  
 |[GetCount-Methode](icordebugarrayvalue-getcount-method.md)|Ruft die Gesamtzahl der Elemente im Array ab.|  
@@ -39,20 +39,20 @@ Eine Unterklasse von ICorDebugHeapValue, die ein eindimensionales oder mehrdimen
 |[HasBaseIndicies-Methode](icordebugarrayvalue-hasbaseindicies-method.md)|Bestimmt, ob das Array über Basis Indizes verfügt.|  
   
 ## <a name="remarks"></a>Hinweise  
- `ICorDebugArrayValue` unterstützt sowohl eindimensionale als auch mehrdimensionale Arrays.  
+ `ICorDebugArrayValue`unterstützt sowohl eindimensionale als auch mehrdimensionale Arrays.  
   
 > [!NOTE]
 > Diese Schnittstelle kann weder computerübergreifend noch prozessübergreifend remote aufgerufen werden.  
   
-## <a name="requirements"></a>-Anforderungen  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Anforderungen  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   
  **Bibliothek:** CorGuids.lib  
   
- **.NET Framework Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Debuggen von Schnittstellen](debugging-interfaces.md)
+- [Debugschnittstellen](debugging-interfaces.md)

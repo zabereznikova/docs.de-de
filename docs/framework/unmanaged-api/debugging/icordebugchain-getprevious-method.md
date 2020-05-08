@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 58eed4c8-d80c-4c6a-a875-967a90dd926c
 topic_type:
 - apiref
-ms.openlocfilehash: c7598a9d93631ca93187886fd8929ba10726dad7
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a57e73495ac22a25a5f13c06d4c75dee7dde41e0
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73124733"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82894632"
 ---
 # <a name="icordebugchaingetprevious-method"></a>ICorDebugChain::GetPrevious-Methode
 Ruft die vorherige Rahmen Kette für den Thread ab.  
@@ -38,10 +38,10 @@ HRESULT GetPrevious (
  vorgenommen Ein Zeiger auf die Adresse eines ICorDebugChain-Objekts, das die vorherige Rahmen Kette für diesen Thread darstellt. Wenn diese Kette die erste Kette ist, `ppChain` ist NULL.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   
  **Bibliothek:** CorGuids.lib  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

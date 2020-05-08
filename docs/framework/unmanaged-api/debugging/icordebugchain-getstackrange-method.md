@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 554284e7-3f6c-4d40-8da5-1c9317fbd484
 topic_type:
 - apiref
-ms.openlocfilehash: 64e697323377d664b7b1e36bbf5931a44465cc51
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 40ecc183c32500ad9e88ceb1bfc0528d717430e8
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79178954"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82894453"
 ---
 # <a name="icordebugchaingetstackrange-method"></a>ICorDebugChain::GetStackRange-Methode
-Ruft den Adressbereich des Stapelsegments für diese Kette ab.  
+Ruft den Adressbereich des Stapel Segments für diese Kette ab.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -36,19 +36,19 @@ HRESULT GetStackRange (
   
 ## <a name="parameters"></a>Parameter  
  `pStart`  
- [out] Ein Zeiger auf `CORDB_ADDRESS` einen Wert, der die Startadresse des Stapelsegments ist.  
+ vorgenommen Ein Zeiger auf einen `CORDB_ADDRESS` -Wert, der die Startadresse des Stapel Segments ist.  
   
  `pEnd`  
- [out] Ein Zeiger auf `CORDB_ADDRESS` einen Wert, der die Endadresse des Stapelsegments ist.  
+ vorgenommen Ein Zeiger auf einen `CORDB_ADDRESS` -Wert, der die Endadresse des Stapel Segments ist.  
   
-## <a name="remarks"></a>Bemerkungen  
- Der numerische Bereich ist nur für den Vergleich von Stapelrahmenpositionen sinnvoll. Sie können keine Annahmen darüber treffen, was tatsächlich auf dem Stapel gespeichert ist.  
+## <a name="remarks"></a>Hinweise  
+ Der numerische Bereich ist nur für den Vergleich von Stapel Rahmen Positionen sinnvoll. Sie können keine Annahmen darüber treffen, was tatsächlich im Stapel gespeichert ist.  
   
-## <a name="requirements"></a>Requirements (Anforderungen)  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Anforderungen  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   
  **Bibliothek:** CorGuids.lib  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

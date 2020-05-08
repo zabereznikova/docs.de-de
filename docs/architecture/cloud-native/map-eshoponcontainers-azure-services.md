@@ -1,13 +1,13 @@
 ---
 title: Zuordnen von eShopOnContainers zu Azure-Diensten
 description: Zuordnung von eshoponcontainers zu Azure-Diensten wie Azure Kubernetes Service, API-Gateway und Azure Service Bus.
-ms.date: 06/30/2019
-ms.openlocfilehash: eb37be94461a5373afe328572a94892dec50432d
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.date: 04/20/2020
+ms.openlocfilehash: 26fce71ba71f7da643b669396ab59affe592649a
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76781217"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82895512"
 ---
 # <a name="mapping-eshoponcontainers-to-azure-services"></a>Zuordnen von eShopOnContainers zu Azure-Diensten
 
@@ -17,8 +17,8 @@ Azure ist zwar nicht erforderlich, aber eignet sich gut für die Unterstützung 
 
 Die Architektur der Anwendung ist in Abbildung 2-5 dargestellt. Auf der linken Seite befinden sich die Client-apps in Mobile, herkömmliche Web-und Single-Page Application (Spa)-Varianten. Auf der rechten Seite befinden sich die serverseitigen Komponenten, die das System bilden, von denen jedes in docker-Containern und Kubernetes-Clustern gehostet werden kann. Die herkömmliche Web-App basiert auf der ASP.net Core MVC-Anwendung, die gelb angezeigt wird. Diese APP und die mobilen und Web-Spa-Anwendungen kommunizieren über ein oder mehrere API-Gateways mit den einzelnen-Webdiensten. Die API-Gateways folgen dem BFF-Muster (Back-Ends für Front-Ends), was bedeutet, dass jedes Gateway einen bestimmten Front-End-Client unterstützen soll. Die einzelnen microservices sind rechts neben den API-Gateways aufgeführt und enthalten sowohl Geschäftslogik als auch eine Art von Beibehaltungs Speicher. In den unterschiedlichen Diensten werden SQL Server Datenbanken, redis Cache-Instanzen und MongoDB/cosmosdb-Speicher verwendet. Ganz rechts befindet sich der Ereignisbus des Systems, der für die Kommunikation zwischen den-Diensten verwendet wird.
 
-![eshoponcontainers-Architektur](./media/eshoponcontainers-architecture.png)
-**Abbildung 2-5**. Die eshoponcontainers-Architektur.
+![eshoponcontainers-](./media/eshoponcontainers-architecture.png)
+Architektur**Abbildung 2-5**. Die eshoponcontainers-Architektur.
 
 Die serverseitigen Komponenten dieser Architektur werden problemlos den Azure-Diensten zugeordnet.
 
@@ -28,7 +28,7 @@ Die Container gehosteten Dienste der Anwendung, von ASP.net Core MVC-apps bis hi
 
 AKS stellt Verwaltungsdienste für einzelne Cluster von Containern bereit. Die Anwendung stellt separate AKS-Cluster für jeden microservice bereit, der im obigen Architektur Diagramm angezeigt wird. Dieser Ansatz ermöglicht es jedem einzelnen Dienst, unabhängig von seinen Ressourcenanforderungen zu skalieren. Jeder-Dienst kann auch unabhängig bereitgestellt werden, und im Idealfall sollten bei solchen bereit Stellungen keine Systemausfall Zeiten entstehen.
 
-## <a name="api-gateway"></a>API-Gateway
+## <a name="api-gateway"></a>API Gateway
 
 Die eshoponcontainers-Anwendung verfügt über mehrere Front-End-Clients und mehrere verschiedene Back-End-Dienste. Zwischen den Client Anwendungen und den von Ihnen unterstützten-Diensten gibt es keine eins-zu-eins-Entsprechung. In solch einem Szenario kann es sehr viel komplexer sein, wenn Sie Client Software schreiben, um die verschiedenen Back-End-Dienste auf sichere Weise zu verbinden. Jeder Client muss dieser Komplexität eigenständig begegnen, was zu einer Duplizierung und vielen Orten führt, an denen bei der Dienst Änderung oder bei der Implementierung neuer Richtlinien Updates durchgeführt werden.
 
@@ -44,7 +44,7 @@ Mithilfe von APIM können Anwendungen verschiedene Dienstgruppen verfügbar mach
 
 Eine weitere Option, wenn Ihre Anwendung AKS verwendet, ist die Bereitstellung des Eingangs Controllers des Azure-Gateways als Pod innerhalb Ihres AKS-Clusters. Dadurch kann Ihr Cluster in ein Azure-Anwendung Gateway integriert werden, sodass das Gateway den Lastenausgleich für den Datenverkehr zu den AKS-Pods ermöglicht. [Erfahren Sie mehr über den Eingangs Controller des Azure-Gateways für AKS](https://github.com/Azure/application-gateway-kubernetes-ingress).
 
-## <a name="data"></a>importieren
+## <a name="data"></a>Daten
 
 Die verschiedenen Back-End-Dienste, die von eshoponcontainers verwendet werden, haben unterschiedliche Speicheranforderungen. Mehrere-Webdienste verwenden SQL Server-Datenbanken. Der Warenkorb-microservice nutzt einen redis-Cache für seine Persistenz. Der-Speicherort-mikroservice erwartet eine MongoDB-API für seine Daten. Azure unterstützt jedes dieser Datenformate.
 
@@ -54,7 +54,7 @@ Die eshoponcontainers-Anwendung speichert den aktuellen Einkaufskorb des Benutze
 
 Der Speicherorte für den Speicherort verwendet eine MongoDB-nosql-Datenbank für seine Persistenz. Während der Entwicklung kann die Datenbank in einem eigenen Container bereitgestellt werden, während der Dienst in der Produktionsumgebung [Azure Cosmos DB-API für MongoDB](https://docs.microsoft.com/azure/cosmos-db/mongodb-introduction)nutzen kann. Einer der Vorteile von Azure Cosmos DB ist die Möglichkeit, mehrere verschiedene Kommunikationsprotokolle zu nutzen, darunter eine SQL-API und gängige nosql-APIs, einschließlich MongoDB, Cassandra, Gremlin und Azure Table Storage. Azure Cosmos DB bietet eine vollständig verwaltete und global verteilte Database as a Service, die skaliert werden kann, um die Anforderungen der Dienste zu erfüllen, die Sie verwenden.
 
-Verteilte Daten in Cloud-native Anwendungen werden in [Kapitel 5](database-per-microservice.md)ausführlicher behandelt.
+Verteilte Daten in Cloud-native Anwendungen werden in [Kapitel 5](distributed-data.md)ausführlicher behandelt.
 
 ## <a name="event-bus"></a>Ereignisbus
 
@@ -63,17 +63,6 @@ Die Anwendung verwendet Ereignisse, um Änderungen zwischen verschiedenen Dienst
 ## <a name="resiliency"></a>Resilienz
 
 Nach der Bereitstellung in der Produktionsumgebung kann die eshoponcontainers-Anwendung mehrere Azure-Dienste nutzen, um die Resilienz zu verbessern. Die Anwendung veröffentlicht Integritätsprüfungen, die in Application Insights integriert werden können, um basierend auf der Verfügbarkeit der APP Berichte und Warnungen bereitzustellen. Azure-Ressourcen stellen auch Diagnoseprotokolle bereit, die verwendet werden können, um Fehler und Leistungsprobleme zu identifizieren und zu beheben. Ressourcen Protokolle bieten detaillierte Informationen dazu, wann und wie unterschiedliche Azure-Ressourcen von der Anwendung verwendet werden. In [Kapitel 6](resiliency.md)erfahren Sie mehr über cloudbasierte resilienzfeatures.
-
-## <a name="references"></a>Verweise
-
-- [Die eshoponcontainers-Architektur](https://github.com/dotnet-architecture/eShopOnContainers/wiki/Architecture)
-- [Orchestrating microservices and multi-container applications for high scalability and availability (Orchestrieren von Microservices und Anwendungen mit mehreren Containern für hohe Skalierbarkeit und Verfügbarkeit)](https://docs.microsoft.com/dotnet/architecture/microservices/architect-microservice-container-applications/scalable-available-multi-container-microservice-applications)
-- [Azure API Management](https://docs.microsoft.com/azure/api-management/api-management-key-concepts)
-- [Übersicht über Azure SQL-Datenbank](https://docs.microsoft.com/azure/sql-database/sql-database-technical-overview)
-- [Azure-Cache für redis](https://azure.microsoft.com/services/cache/)
-- [Azure Cosmos DB-API für MongoDB](https://docs.microsoft.com/azure/cosmos-db/mongodb-introduction)
-- [Azure Service Bus](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-messaging-overview)
-- [Übersicht über Azure Monitor](https://docs.microsoft.com/azure/azure-monitor/overview)
 
 >[!div class="step-by-step"]
 >[Zurück](introduce-eshoponcontainers-reference-app.md)

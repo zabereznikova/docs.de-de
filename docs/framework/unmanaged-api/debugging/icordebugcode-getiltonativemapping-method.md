@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a8ecd8c8-9627-4356-9c6f-bd05e24637c0
 topic_type:
 - apiref
-ms.openlocfilehash: 98709c0ce7469db1d0365d71e10d2d021cd3b3f0
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 3de85626be6ae8e4769ac261f4de1479461417ec
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76777891"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82893530"
 ---
 # <a name="icordebugcodegetiltonativemapping-method"></a>ICorDebugCode::GetILToNativeMapping-Methode
 Ruft ein Array von "COR_DEBUG_IL_TO_NATIVE_MAP"-Instanzen ab, die Zuordnungen von MSIL-Offsets (Microsoft Intermediate Language) zu nativen Offsets darstellen.  
@@ -36,30 +36,30 @@ HRESULT GetILToNativeMapping (
 );  
 ```  
   
-## <a name="parameters"></a>Parameters  
+## <a name="parameters"></a>Parameter  
  `cMap`  
  [in] Die Größe des `map`-Arrays.  
   
  `pcMap`  
- vorgenommen Ein Zeiger auf die tatsächliche Anzahl der Elemente, die im `map` Array zurückgegeben werden.  
+ vorgenommen Ein Zeiger auf die tatsächliche Anzahl der im `map` Array zurückgegebenen Elemente.  
   
  `map`  
- vorgenommen Ein Array von `COR_DEBUG_IL_TO_NATIVE_MAP`-Strukturen, von denen jedes eine Zuordnung von einem MSIL-Offset zu einem systemeigenen Offset darstellt.  
+ vorgenommen Ein Array von `COR_DEBUG_IL_TO_NATIVE_MAP` -Strukturen, von denen jedes eine Zuordnung von einem MSIL-Offset zu einem systemeigenen Offset darstellt.  
   
  Es gibt keine Reihenfolge für das Array von Elementen, die zurückgegeben werden.  
   
 ## <a name="remarks"></a>Hinweise  
- Die `GetILToNativeMapping`-Methode gibt nur dann sinnvolle Ergebnisse zurück, wenn diese "ICorDebugCode"-Instanz systemeigenen Code darstellt, der Just-in-time (JIT) aus MSIL-Code kompiliert hat.  
+ Die `GetILToNativeMapping` -Methode gibt nur dann sinnvolle Ergebnisse zurück, wenn diese "ICorDebugCode"-Instanz systemeigenen Code darstellt, der Just-in-time (JIT) aus MSIL-Code kompiliert hat.  
   
-## <a name="requirements"></a>-Anforderungen  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Anforderungen  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   
  **Bibliothek:** CorGuids.lib  
   
- **.NET Framework Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [ICorDebugCode-Schnittstelle](icordebugcode-interface1.md)

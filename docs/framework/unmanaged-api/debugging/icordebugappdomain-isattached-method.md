@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: af0c67c7-f53e-47c9-b84b-be50bd04903e
 topic_type:
 - apiref
-ms.openlocfilehash: 30e0b0c4ed9bac4abd1dc185031e41c1e3ed014a
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a2f6df7647ffe9f2adff963b6629ed29ece053c0
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73134674"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82895162"
 ---
 # <a name="icordebugappdomainisattached-method"></a>ICorDebugAppDomain::IsAttached-Methode
 Ruft einen Wert ab, der angibt, ob der Debugger an die Anwendungsdomäne angefügt ist.  
@@ -35,16 +35,16 @@ HRESULT IsAttached (
   
 ## <a name="parameters"></a>Parameter  
  `pbAttached`  
- [out] `true`, wenn der Debugger an die Anwendungsdomäne angefügt ist. Andernfalls `false`.  
+ vorgenommen `true` , wenn der Debugger an die Anwendungsdomäne angefügt ist. andernfalls `false`.  
   
 ## <a name="remarks"></a>Hinweise  
  Die ICorDebugController-Methoden können erst verwendet werden, wenn der Debugger an die Anwendungsdomäne angefügt wurde.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   
  **Bibliothek:** CorGuids.lib  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

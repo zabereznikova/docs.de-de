@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0aba6096-5b38-435c-a72a-86d35db4daef
 topic_type:
 - apiref
-ms.openlocfilehash: 5a6e0b009674ff52595aaa0ae4a060f1cdfd1398
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: fb9b5ee329b41a8b842b94d59bd61c8bcf5f0bf5
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73089045"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82895151"
 ---
 # <a name="icordebugappdomain2getfunctionpointertype-method"></a>ICorDebugAppDomain2::GetFunctionPointerType-Methode
 Ruft einen Zeiger auf eine Funktion ab, die über eine angegebene Signatur verfügt.  
@@ -46,10 +46,10 @@ HRESULT GetFunctionPointerType (
  vorgenommen Ein Zeiger auf die Adresse eines `ICorDebugType` Objekts, das den Zeiger auf die Funktion darstellt.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   
  **Bibliothek:** CorGuids.lib  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

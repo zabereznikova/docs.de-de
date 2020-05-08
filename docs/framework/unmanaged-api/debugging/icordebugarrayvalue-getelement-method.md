@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7ac3cba5-c282-402e-b7ef-b46634f5176b
 topic_type:
 - apiref
-ms.openlocfilehash: adcb7b5a27f3b8c63dbbb660a23b5c891f84ac46
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7a52e61f41bd1d7f68523dd16f70010ffbba401e
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79179007"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82895035"
 ---
 # <a name="icordebugarrayvaluegetelement-method"></a>ICorDebugArrayValue::GetElement-Methode
-Ruft den Wert des angegebenen Arrayelements ab.  
+Ruft den Wert des angegebenen Array Elements ab.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -38,23 +38,23 @@ HRESULT GetElement (
   
 ## <a name="parameters"></a>Parameter  
  `cdim`  
- [in] Die Anzahl der `ICorDebugArrayValue` Dimensionen dieses Objekts.  
+ in Die Anzahl der Dimensionen dieses `ICorDebugArrayValue` Objekts.  
   
- Dieser Wert ist auch `indices` die Größe des Arrays, da seine `ICorDebugArrayValue` Größe der Anzahl der Dimensionen des Objekts entspricht.  
+ Dieser Wert ist auch die Größe des `indices` Arrays, da seine Größe gleich der Anzahl der Dimensionen des `ICorDebugArrayValue` Objekts ist.  
   
  `indices`  
- [in] Ein Array von Indexwerten, von denen jeder eine `ICorDebugArrayValue` Position innerhalb einer Dimension des Objekts angibt.  
+ in Ein Array von Indexwerten, von denen jedes eine Position innerhalb einer Dimension des- `ICorDebugArrayValue` Objekts angibt.  
   
- Dieser Wert darf nicht null sein.  
+ Dieser Wert darf nicht NULL sein.  
   
  `ppValue`  
- [out] Ein Zeiger auf die Adresse eines ICorDebugValue-Objekts, das den Wert des angegebenen Elements darstellt.  
+ vorgenommen Ein Zeiger auf die Adresse eines icorentbugvalue-Objekts, das den Wert des angegebenen Elements darstellt.  
   
-## <a name="requirements"></a>Requirements (Anforderungen)  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Anforderungen  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   
  **Bibliothek:** CorGuids.lib  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

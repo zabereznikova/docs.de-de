@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d0b8ab4b-d7d2-4fa0-945f-3d2b87e7e991
 topic_type:
 - apiref
-ms.openlocfilehash: 5a07550d44857526e8ab4ded9f1827ef12e3bba4
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a6d26924773e6ad505975402ec3ace150d02cc3a
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73192134"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82894617"
 ---
 # <a name="icordebugchaingetcaller-method"></a>ICorDebugChain::GetCaller-Methode
 Ruft die Kette ab, die diese Kette aufgerufen hat.  
@@ -37,16 +37,16 @@ HRESULT GetCaller (
  `ppChain`  
  vorgenommen Ein Zeiger auf die Adresse eines ICorDebugChain-Objekts, das die aufrufende Kette darstellt.  
   
- Wenn diese Kette spontan aufgerufen wurde (wie es der Fall wäre, wenn diese Kette oder der Debugger die Aufruf Stapel initialisiert hat), wird `ppChain` NULL sein.  
+ Wenn diese Kette spontan aufgerufen wurde (wie es der Fall wäre, wenn diese Kette oder der Debugger die Aufruf Stapel initialisiert hat `ppChain` ), ist NULL.  
   
 ## <a name="remarks"></a>Hinweise  
  Die aufrufende Kette kann sich in einem anderen Thread befinden, wenn der Aufruf über Threads hinweg gemarshallt wurde.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   
  **Bibliothek:** CorGuids.lib  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

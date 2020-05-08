@@ -2,12 +2,12 @@
 title: Nutzen von Containern und Orchestratoren
 description: Nutzen von Docker-Containern und Kubernetes-orchestratoren in Azure
 ms.date: 04/13/2020
-ms.openlocfilehash: 3d94433250f02a8df2c27ebc89a101e1e8d15030
-ms.sourcegitcommit: 5988e9a29cedb8757320817deda3c08c6f44a6aa
+ms.openlocfilehash: 64c6c0666398d9ccbc87efad18017bf278568fc4
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82199832"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82895550"
 ---
 # <a name="leveraging-containers-and-orchestrators"></a>Nutzen von Containern und Orchestratoren
 
@@ -55,10 +55,29 @@ Container werden durch einfache textbasierte Dateien definiert, die zu Projekt A
 
 Container sind unveränderlich. Nachdem Sie einen Container definiert haben, können Sie ihn genau auf die gleiche Weise neu erstellen und ausführen. Diese Unveränderlichkeit eignet sich für den komponentenbasierten Entwurf. Wenn sich einige Teile einer Anwendung anders entwickeln als andere, sollten Sie die gesamte App erneut bereitstellen, wenn Sie einfach die Änderungen bereitstellen können, die am häufigsten geändert werden? Unterschiedliche Features und übergreifende Aspekte einer App können in separate Einheiten aufgeteilt werden. In Abbildung 3-2 wird gezeigt, wie eine monolithische App Container und-Dienste nutzen kann, indem bestimmte Features oder Funktionen delegiert werden. Die verbleibenden Funktionen in der APP selbst wurden ebenfalls in den Container verschoben.
 
+Container sind unveränderlich. Nachdem Sie einen Container definiert haben, können Sie ihn genau auf die gleiche Weise neu erstellen und ausführen. Diese Unveränderlichkeit eignet sich für den komponentenbasierten Entwurf. Wenn sich einige Teile einer Anwendung anders entwickeln als andere, sollten Sie die gesamte App erneut bereitstellen, wenn Sie einfach die Änderungen bereitstellen können, die am häufigsten geändert werden? Unterschiedliche Features und übergreifende Aspekte einer App können in separate Einheiten aufgeteilt werden. In Abbildung 3-2 wird gezeigt, wie eine monolithische App Container und-Dienste nutzen kann, indem bestimmte Features oder Funktionen delegiert werden. Die verbleibenden Funktionen in der APP selbst wurden ebenfalls in den Container verschoben.
+
 ![Aufteilen einer monolithischen App zur Verwendung von "mikroservices" im Back-End. ](./media/breaking-up-monolith-with-backend-microservices.png)
  **Abbildung 3-2**. Aufteilen einer monolithischen App zur Verwendung von "mikroservices" im Back-End.
 
 Jeder Cloud-Native Dienst wird in einem separaten Container erstellt und bereitgestellt. Jede kann bei Bedarf aktualisiert werden. Einzelne Dienste können auf Knoten gehostet werden, deren Ressourcen für die einzelnen Dienste geeignet sind. Die Umgebung, in der jeder Dienst ausgeführt wird, ist unveränderlich und kann in Entwicklungs-, Test-und Produktionsumgebungen gemeinsam genutzt werden. Die Kopplung zwischen verschiedenen Bereichen der Anwendung erfolgt explizit als Aufrufe oder Nachrichten zwischen Diensten, keine Abhängigkeiten der Kompilierzeit in der monolithischen Umgebung. Sie können auch die Technologie auswählen, die eine bestimmte Funktion am besten Suites, ohne dass Änderungen am Rest der APP erforderlich sind.
+
+Containerisierte Dienste erfordern eine automatisierte Verwaltung. Es ist nicht möglich, eine große Anzahl von einzeln bereitgestellten Containern manuell zu verwalten. Sehen Sie sich beispielsweise die folgenden Aufgaben an:
+
+- Wie werden Container Instanzen in einem Cluster mit vielen Computern bereitgestellt?
+- Wie werden Container nach der Bereitstellung erkannt und miteinander kommunizieren?
+- Wie können Container bei Bedarf horizontal herunter-oder herunterskaliert werden?
+- Wie überwachen Sie die Integrität der einzelnen Container?
+- Wie schützen Sie einen Container vor Hardware-und Softwarefehlern?
+- Wie wird ein Upgrade von Containern für eine Live Anwendung ohne Ausfallzeiten durchführen?
+
+Containerorchestratoren behandeln diese und andere Aspekte und automatisieren diese.
+
+In der Cloud-systemeigenen Ökosystem ist Kubernetes der de-facto-containerorchestrator geworden. Dabei handelt es sich um eine Open-Source-Plattform, die von der Cloud Native Computing Foundation (cncf) verwaltet wird. Kubernetes automatisiert die Bereitstellung, Skalierung und betriebliche Belange von Workloads in Containern in einem Computercluster. Das Installieren und Verwalten von Kubernetes ist jedoch bekanntermaßen komplex.
+
+Ein wesentlich besserer Ansatz ist, Kubernetes als verwalteten Dienst von einem cloudhersteller zu nutzen. Die Azure-Cloud bietet eine vollständig verwaltete Kubernetes-Plattform mit dem Titel [Azure Kubernetes Service (AKS)](https://azure.microsoft.com/services/kubernetes-service/). AKS abstrahiert die Komplexität und den operativen Aufwand bei der Verwaltung von Kubernetes. Sie nutzen Kubernetes als clouddienst. Microsoft übernimmt die Verantwortung für die Verwaltung und Unterstützung der IT. AKS lässt sich auch eng in andere Azure-Dienste und Entwicklungs Tools integrieren.
+
+AKS ist eine Cluster basierte Technologie. Ein Pool mit virtuellen Verbund Computern oder Knoten wird in der Azure-Cloud bereitgestellt. Sie bilden eine hoch verfügbare Umgebung oder einen Cluster. Der Cluster wird als nahtlose, einzelne Entität zu ihrer cloudbasierten Anwendung angezeigt. Im Hintergrund stellt AKS ihre containerisierten Dienste auf diesen Knoten bereit, und zwar nach einer vordefinierten Strategie, die die Last gleichmäßig verteilt.
 
 Containerisierte Dienste erfordern eine automatisierte Verwaltung. Es ist nicht möglich, eine große Anzahl von einzeln bereitgestellten Containern manuell zu verwalten. Sehen Sie sich beispielsweise die folgenden Aufgaben an:
 
@@ -144,7 +163,7 @@ Wenn Sie Ihre Anwendung nach den zwölfstufigen App-Prinzipien nicht erstellen k
 
 ## <a name="development-resources"></a>Entwicklungsressourcen
 
-Dieser Abschnitt enthält eine kurze Liste der Entwicklungsressourcen, die Ihnen den Einstieg in die Verwendung von Containern und orchestratoren für Ihre nächste Anwendung erleichtern können. Wenn Sie nach Anleitungen zum Entwerfen Ihrer cloudbasierten microservices-Architektur-App suchen, lesen Sie den Begleitartikel [.net-microservices: Architektur für .NET-Container Anwendungen](https://aka.ms/microservicesebook).
+Dieser Abschnitt enthält eine kurze Liste der Entwicklungsressourcen, die Ihnen den Einstieg in die Verwendung von Containern und orchestratoren für Ihre nächste Anwendung erleichtern können. Wenn Sie nach Anleitungen zum Entwerfen Ihrer cloudbasierten microservices-Architektur-App suchen, lesen Sie den Begleitartikel [.net-microservices: Architektur für .NET-Container Anwendungen](https://dotnet.microsoft.com/download/thank-you/microservices-architecture-ebook).
 
 ### <a name="local-kubernetes-development"></a>Lokale Kubernetes-Entwicklung
 
@@ -219,15 +238,19 @@ Neben der lokalen Entwicklung bietet [Azure dev Spaces](https://docs.microsoft.c
 
 Außerdem können Sie einer vorhandenen ASP.net Core Anwendung jederzeit docker-Unterstützung hinzufügen. Klicken Sie in der Visual Studio-Projektmappen-Explorer mit der rechten Maustaste auf das Projekt, und fügen Sie**docker-Unterstützung** **hinzu** > , wie in Abbildung 3-8 dargestellt.
 
-![Visual Studio-docker-Unterstützung hinzufügen](./media/visual-studio-add-docker-support.png)
-
-**Abbildung 3-8**. Visual Studio-docker-Unterstützung hinzufügen
+**Abbildung 3-8**. Hinzufügen der Docker-Unterstützung zu Visual Studio
 
 Sie können auch Unterstützung für die Container Orchestrierung hinzufügen, wie in Abbildung 3-8 dargestellt. Standardmäßig verwendet der Orchestrator Kubernetes und Helm. Nachdem Sie den Orchestrator ausgewählt haben, wird `azds.yaml` dem Projektstamm eine Datei hinzugefügt, und `charts` es wird ein Ordner mit den Helm-Diagrammen hinzugefügt, die zum Konfigurieren und Bereitstellen der Anwendung auf Kubernetes verwendet werden. Abbildung 3-9 zeigt die resultierenden Dateien in einem neuen Projekt.
 
-![Visual Studio-Unterstützung für Orchestrator hinzufügen](./media/visual-studio-add-orchestrator-support.png)
+Sie können auch Unterstützung für die Container Orchestrierung hinzufügen, wie in Abbildung 3-8 dargestellt. Standardmäßig verwendet der Orchestrator Kubernetes und Helm. Nachdem Sie den Orchestrator ausgewählt haben, wird `azds.yaml` dem Projektstamm eine Datei hinzugefügt, und `charts` es wird ein Ordner mit den Helm-Diagrammen hinzugefügt, die zum Konfigurieren und Bereitstellen der Anwendung auf Kubernetes verwendet werden. Abbildung 3-9 zeigt die resultierenden Dateien in einem neuen Projekt.
 
-**Abbildung 3-9**. Visual Studio-Unterstützung für Orchestrator hinzufügen
+**Abbildung 3-9**. Hinzufügen der Orchestrierungs Unterstützung zu Visual Studio
+
+### <a name="visual-studio-code-docker-tooling"></a>Docker-Tools Visual Studio Code
+
+Es gibt eine Reihe von Erweiterungen für Visual Studio Code, die die Docker-Entwicklung unterstützen.
+
+Microsoft stellt die [docker für Visual Studio Code Erweiterung](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker)bereit. Diese Erweiterung vereinfacht das Hinzufügen von Container Unterstützung zu Anwendungen. Er erstellt die erforderlichen Dateien, erstellt docker-Images und ermöglicht das Debuggen Ihrer APP in einem Container. Die Erweiterung bietet einen visuellen Explorer, mit dem Sie problemlos Aktionen für Container und Bilder ausführen können, wie z. b. starten, Abbrechen, überprüfen, entfernen und mehr. Die Erweiterung unterstützt auch docker Compose, mit der Sie mehrere laufende Container als eine Einheit verwalten können.
 
 >[!div class="step-by-step"]
 >[Zurück](scale-applications.md)
