@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3d705463-e640-4249-8036-4e8206d03cfe
 topic_type:
 - apiref
-ms.openlocfilehash: 5d01ab0b6b5d489b2181056129e22661a50108a3
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: f6ede42ac90f65f934e285f879bcef62d13b65cb
+ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73084846"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82976095"
 ---
 # <a name="icordebugeval2newparameterizedobject-method"></a>ICorDebugEval2::NewParameterizedObject-Methode
 Instanziiert ein neues parametrisiertes Typobjekt und ruft die Konstruktormethode des Objekts auf.  
@@ -54,13 +54,13 @@ HRESULT NewParameterizedObject (
  in Ein Array von Zeigern, von denen jedes auf ein ICorDebugValue-Objekt verweist, das einen Argument Wert darstellt, der an den Konstruktor übergeben wird.  
   
 ## <a name="remarks"></a>Hinweise  
- Der Konstruktor des Objekts kann <xref:System.Type> Parameter annehmen.  
+ Der Konstruktor des Objekts kann Parameter <xref:System.Type> annehmen.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   
  **Bibliothek:** CorGuids.lib  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

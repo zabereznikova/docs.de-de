@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: cc79a67d-5368-434d-a943-209db90491b9
 topic_type:
 - apiref
-ms.openlocfilehash: 13ac5379992f4e768b09a03d31591143ba9bf627
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 496a6a7e01dec8aa90ba4e849c431ccd499ef53d
+ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76788726"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82976199"
 ---
 # <a name="icordebugevalnewarray-method"></a>ICorDebugEval::NewArray-Methode
 Ordnet ein neues Array vom angegebenen Elementtyp und den angegebenen Dimensionen zu.  
@@ -39,12 +39,12 @@ HRESULT NewArray (
 );  
 ```  
   
-## <a name="parameters"></a>Parameters  
+## <a name="parameters"></a>Parameter  
  `elementType`  
  in Ein Wert der CorElementType-Enumeration, der den Elementtyp des Arrays angibt.  
   
  `pElementClass`  
- [in] Ein Zeiger auf eine ICorDebugClass-Objekt, das die Klasse des Elements angibt. Dieser Wert kann NULL sein, wenn der Elementtyp ein primitiver Typ ist.  
+ in Ein Zeiger auf ein ICorDebugClass-Objekt, das die-Klasse des-Elements angibt. Dieser Wert kann NULL sein, wenn der Elementtyp ein primitiver Typ ist.  
   
  `rank`  
  in Die Anzahl der Dimensionen des Arrays. In der .NET Framework 2,0 muss dieser Wert 1 lauten.  
@@ -58,8 +58,8 @@ HRESULT NewArray (
 ## <a name="remarks"></a>Hinweise  
  Das Array wird immer in der Anwendungsdomäne erstellt, in der der Thread gerade ausgeführt wird.  
   
-## <a name="requirements"></a>-Anforderungen  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Anforderungen  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   

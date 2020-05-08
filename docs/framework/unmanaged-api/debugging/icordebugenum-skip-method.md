@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e925d88a-67a5-4f76-88b8-09cedeed0232
 topic_type:
 - apiref
-ms.openlocfilehash: 5c9049edd6d139bff29d21b65f9c87ec3e6de1a6
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 64d9db09b3e604247ab6a26cdca9eca22adbaace
+ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76782970"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82976303"
 ---
 # <a name="icordebugenumskip-method"></a>ICorDebugEnum::Skip-Methode
 Verschiebt den Cursor in der-Enumeration um die angegebene Anzahl von Elementen vorwärts.  
@@ -33,19 +33,19 @@ HRESULT Skip (
 );  
 ```  
   
-## <a name="parameters"></a>Parameters  
+## <a name="parameters"></a>Parameter  
  `celt`  
  in Die Anzahl der Elemente, um die der Cursor vorwärts verschoben werden soll.  
   
-## <a name="requirements"></a>-Anforderungen  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Anforderungen  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   
  **Bibliothek:** CorGuids.lib  
   
- **.NET Framework Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [ICorDebugEnum-Schnittstelle](icordebugenum-interface1.md)

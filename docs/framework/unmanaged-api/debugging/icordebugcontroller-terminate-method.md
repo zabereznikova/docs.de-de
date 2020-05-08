@@ -15,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: 4275af0c-b5a7-4e4c-97c9-7e41f36b2dd8
 topic_type:
 - apiref
-ms.openlocfilehash: 851a127c117b826c271dd021c41cfdb36045a1ff
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: eade3fd5d946c44ae4a77c571f762709de3cef40
+ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76783752"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82976563"
 ---
 # <a name="icordebugcontrollerterminate-method"></a>ICorDebugController::Terminate-Methode
 Beendet den Prozess mit dem angegebenen Exitcode.  
   
 > [!NOTE]
-> Bei dieser Methode handelt es sich um einen Wrapper für die Win32-`TerminateProcess` Funktion. Folglich verwendet `Terminate` den Exitcode auf die gleiche Weise, wie die Win32-`TerminateProcess` Funktion Sie verwendet.  
+> Bei dieser Methode handelt es sich um einen `TerminateProcess` Wrapper für die Win32-Funktion. Folglich `Terminate` verwendet den Exitcode auf dieselbe Weise wie die Win32 `TerminateProcess` -Funktion.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -36,23 +36,23 @@ HRESULT Terminate (
 );  
 ```  
   
-## <a name="parameters"></a>Parameters  
+## <a name="parameters"></a>Parameter  
  `exitCode`  
  in Ein numerischer Wert, der der Exitcode ist. Die gültigen numerischen Werte werden in Winbase. h definiert.  
   
 ## <a name="remarks"></a>Hinweise  
- Wenn der Prozess beendet wird, wenn `Terminate` aufgerufen wird, sollte der Prozess mit der [ICorDebugController:: Continue](icordebugcontroller-continue-method.md) -Methode fortgesetzt werden, damit der Debugger eine Bestätigung der Beendigung durch den [ICorDebugManagedCallback:: ExitProcess](icordebugmanagedcallback-exitprocess-method.md) -oder [ICorDebugManagedCallback:: ExitAppDomain](icordebugmanagedcallback-exitappdomain-method.md) -Rückruf erhält.  
+ Wenn der Prozess beendet wird, `Terminate` wenn aufgerufen wird, sollte der Prozess mit der [ICorDebugController:: Continue](icordebugcontroller-continue-method.md) -Methode fortgesetzt werden, damit der Debugger eine Bestätigung der Beendigung durch den [ICorDebugManagedCallback:: ExitProcess](icordebugmanagedcallback-exitprocess-method.md) -oder [ICorDebugManagedCallback:: ExitAppDomain](icordebugmanagedcallback-exitappdomain-method.md) -Rückruf erhält.  
   
 > [!NOTE]
-> Diese Methode wird nicht von einer Anwendungsdomäne implementiert. Das heißt, es ist nicht auf <xref:System.AppDomain> Ebene implementiert.  
+> Diese Methode wird nicht von einer Anwendungsdomäne implementiert. Das heißt, es ist nicht auf der <xref:System.AppDomain> Ebene implementiert.  
   
-## <a name="requirements"></a>-Anforderungen  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Anforderungen  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   
  **Bibliothek:** CorGuids.lib  
   
- **.NET Framework Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen

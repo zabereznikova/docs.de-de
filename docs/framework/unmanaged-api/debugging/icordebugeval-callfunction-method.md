@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7f470c5c-e1c0-4d8d-aad8-830f113ae751
 topic_type:
 - apiref
-ms.openlocfilehash: 4ac26ef4449dc02230f26b1247616b4587d217b7
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 1cf0080945ad78565fae3fedb454ceba7825cb4a
+ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73085156"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82976238"
 ---
 # <a name="icordebugevalcallfunction-method"></a>ICorDebugEval::CallFunction-Methode
 
@@ -51,11 +51,11 @@ in Ein Array von Zeigern, von denen jedes auf ein ICorDebug Value-Objekt verweis
 
 ## <a name="remarks"></a>Hinweise
 
-Wenn die Funktion virtuell ist, führt `CallFunction` eine virtuelle Dispatch aus. Wenn sich die Funktion in einer anderen Anwendungsdomäne befindet, tritt ein Übergang auf, solange sich alle Argumente auch in dieser Anwendungsdomäne befinden.
+Wenn die Funktion virtuell ist, `CallFunction` wird eine virtuelle Dispatch durchgeführt. Wenn sich die Funktion in einer anderen Anwendungsdomäne befindet, tritt ein Übergang auf, solange sich alle Argumente auch in dieser Anwendungsdomäne befinden.
 
 ## <a name="requirements"></a>Anforderungen
 
-**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).
+**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).
 
 **Header:** CorDebug.idl, CorDebug.h
 
@@ -63,6 +63,6 @@ Wenn die Funktion virtuell ist, führt `CallFunction` eine virtuelle Dispatch au
 
 **.NET Framework Versionen:** 1,1, 1,0
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [CallParameterizedFunction-Methode](icordebugeval2-callparameterizedfunction-method.md)
