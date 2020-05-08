@@ -2,12 +2,12 @@
 title: Kombinieren von Containern und Server losen Ansätzen für cloudnative Dienste
 description: Kombinieren von Containern und Kubernetes mit Server losen Ansätzen
 ms.date: 04/23/2020
-ms.openlocfilehash: fe9e9fd5d07132971d64bc6433a762fb7bd22048
-ms.sourcegitcommit: 5988e9a29cedb8757320817deda3c08c6f44a6aa
+ms.openlocfilehash: a6ae17543c9075ca84126a4c19f9f51887f7fe9a
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82199663"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82895638"
 ---
 # <a name="combining-containers-and-serverless-approaches"></a>Kombinieren von Containern und serverlosen Ansätzen
 
@@ -35,7 +35,11 @@ Wenn das Projekt erstellt wird, enthält es eine dockerfile-Datei und die Worker
 
 ## <a name="how-to-combine-serverless-and-kubernetes-with-keda"></a>Kombinieren von Server lose und Kubernetes mit Keda
 
-Azure Functions wird automatisch skaliert, um die Nachfrage basierend auf der Ereignisrate zu erfüllen. AKS kann immer verwendet werden, um ihre Funktionen zu hosten und die Kubernetes-basierte, ereignisgesteuerte automatische Skalierung oder Keda zu verwenden. Wenn keine Ereignisse auftreten, kann Keda auf null Instanzen Herunterskalieren. [Erfahren Sie mehr über das Skalieren von Azure Functions mit Keda](https://docs.microsoft.com/azure/azure-functions/functions-kubernetes-keda).
+In diesem Kapitel haben Sie gesehen, dass die Azure Functions-Plattform automatisch horizontal hochskaliert wird, um die Nachfrage zu erfüllen. Beim Bereitstellen von containerisierten Funktionen in AKS verlieren Sie jedoch die integrierte Skalierungs Funktionalität. Zur Rettung kommt [Kubernetes-basiertes ereignisgesteuert (Keda)](https://docs.microsoft.com/azure/azure-functions/functions-kubernetes-keda)vor. Sie ermöglicht eine fein abgestimmte automatische Skalierung `event-driven Kubernetes workloads,` für das Einschließen von containerisierten Funktionen.
+
+Keda bietet eine ereignisgesteuerte Skalierungs Funktion für die Functions-Laufzeit in einem docker-Container. Keda kann auf der Grundlage der Auslastung von 0 (null) Instanzen skaliert `n instances`werden (wenn keine Ereignisse eintreten). Sie ermöglicht die automatische Skalierung durch das verfügbar machen von benutzerdefinierten Metriken für die Kubernetes automatische Skalierungs Funktion (horizontale Pod automatische Skalierungs Funktion). Durch Verwendung von Functions-Container mit KEDA können serverlose Funktionen in jedem Kubernetes-Cluster repliziert werden.
+
+Beachten Sie, dass das Keda-Projekt jetzt von der Cloud Native Computing Foundation (cncf) verwaltet wird.
 
 >[!div class="step-by-step"]
 >[Zurück](leverage-serverless-functions.md)

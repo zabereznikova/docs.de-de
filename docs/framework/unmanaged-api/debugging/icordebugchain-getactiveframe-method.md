@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 36887017-670b-4f21-b406-8fab956f84a3
 topic_type:
 - apiref
-ms.openlocfilehash: 03cb1556ee971124ed4c591f38d9f892fc7df7b0
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 2f67188539d5ad5523c255fbc663e990e1b8245f
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73192144"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82894684"
 ---
 # <a name="icordebugchaingetactiveframe-method"></a>ICorDebugChain::GetActiveFrame-Methode
 Ruft den aktiven Frame (d. h. den aktuellen) Frame in der Kette ab.  
@@ -38,15 +38,15 @@ HRESULT GetActiveFrame (
  vorgenommen Ein Zeiger auf die Adresse eines ICorDebug-Frame-Objekts, das den aktiven Frame (d. h. den aktuellen) Frame in der Kette darstellt.  
   
 ## <a name="remarks"></a>Hinweise  
- Wenn kein verwalteter Stapel Rahmen verfügbar ist, wird `ppFrame` auf NULL festgelegt.  
+ Wenn kein verwalteter Stapel Rahmen verfügbar ist `ppFrame` , wird auf NULL festgelegt.  
   
- Wenn der aktive Frame nicht verfügbar ist, wird der-Vorgang erfolgreich ausgeführt, und `ppFrame` wird NULL sein. Aktive Frames sind für Ketten, die aufgrund von CHAIN_ENTER_UNMANAGED initiiert wurden, und für einige Ketten, die aufgrund von CHAIN_CLASS_INIT initiiert wurden, nicht verfügbar. Weitere Informationen finden Sie in der Cordebug-Enumeration.  
+ Wenn der aktive Frame nicht verfügbar ist, wird der-Vorgang erfolgreich `ppFrame` ausgeführt und ist NULL. Aktive Frames sind nicht für Ketten verfügbar, die aufgrund von CHAIN_ENTER_UNMANAGED initiiert wurden, und für einige Ketten, die aufgrund CHAIN_CLASS_INIT initiiert wurden. Weitere Informationen finden Sie in der Cordebug-Enumeration.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   
  **Bibliothek:** CorGuids.lib  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

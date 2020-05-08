@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c568b737-fdb2-4816-accd-051f5ab760f1
 topic_type:
 - apiref
-ms.openlocfilehash: 217ca0a850926e5f697340cece264c6ed442a9bb
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 9f785eafa8925324e3bd269ca08a3b1367b74c44
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73125644"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82893590"
 ---
 # <a name="icordebugcodegetfunction-method"></a>ICorDebugCode::GetFunction-Methode
 Ruft den "ICorDebugFunction" ab, der diesem "ICorDebugCode" zugeordnet ist.  
@@ -38,13 +38,13 @@ HRESULT GetFunction (
  vorgenommen Ein Zeiger auf die Adresse der Funktion.  
   
 ## <a name="remarks"></a>Hinweise  
- `ICorDebugCode` und `ICorDebugFunction` eine 1:1-Beziehung aufrechterhalten.  
+ `ICorDebugCode`und `ICorDebugFunction` pflegen eine 1:1-Beziehung.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   
  **Bibliothek:** CorGuids.lib  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

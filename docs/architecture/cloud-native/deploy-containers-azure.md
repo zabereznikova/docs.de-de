@@ -2,12 +2,12 @@
 title: Bereitstellen von Containern in Azure
 description: Bereitstellen von Containern in Azure mit Azure Container Registry, Azure Kubernetes Service und Azure dev Spaces.
 ms.date: 04/13/2020
-ms.openlocfilehash: 6238460c6129583c34e6b328c38ed9042f32f3d6
-ms.sourcegitcommit: 5988e9a29cedb8757320817deda3c08c6f44a6aa
+ms.openlocfilehash: 57a4739d39b8ad022d699d54255f56f16d305440
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82199559"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82895600"
 ---
 # <a name="deploying-containers-in-azure"></a>Bereitstellen von Containern in Azure
 
@@ -96,7 +96,7 @@ Diese Informationen sind für den Einstieg ausreichend. Im Rahmen des Erstellung
 - Authentifizierung
 - Netzwerk
 - Überwachung
-- `Tags`
+- Tags
 
 In dieser Schnellstartanleitung wird die Bereitstellung [eines AKS-Clusters mithilfe der Azure-Portal](https://docs.microsoft.com/azure/aks/kubernetes-walkthrough-portal)erläutert.
 
@@ -108,8 +108,8 @@ Entwickler verwenden eine ausgeführte (Entwicklungs-) Instanz in einem AKS-Clus
 
 Um den Wert Azure dev Spaces zu verstehen, lassen Sie mich dieses Zitat von der "Gabe Monroy", "PM"-Führung von Containern bei Microsoft Azure Teilen:
 
-> Stellen Sie sich vor, Sie sind ein neuer Mitarbeiter, der versucht, einen Fehler in einer komplexen mikroservicesanwendung zu beheben, bestehend aus Dutzenden von Komponenten, die jeweils über eigene Konfigurations-und Sicherungsdienste verfügen. Um zu beginnen, müssen Sie Ihre lokale Entwicklungsumgebung so konfigurieren, dass Sie die Produktion imitieren kann, einschließlich der Einrichtung Ihrer IDE, der Erstellung von Toolkette, der Dienst Abhängigkeiten in Containern, einer lokalen Kubernetes-Umgebung, von Mobs zum Sichern von Diensten usw. Mit der gesamten Zeit, die zum Einrichten der Entwicklungsumgebung erforderlich ist, kann die Behebung des ersten Fehlers einige Tage in Anspruch nehmen.
-> Oder Sie können dev Spaces und AKS verwenden.
+> "Stellen Sie sich vor, Sie sind ein neuer Mitarbeiter, der versucht, einen Fehler in einer komplexen mikroservicesanwendung zu beheben, bestehend aus Dutzenden von Komponenten, die jeweils über eigene Konfigurations-und Sicherungsdienste verfügen. Um zu beginnen, müssen Sie Ihre lokale Entwicklungsumgebung so konfigurieren, dass Sie die Produktion imitieren kann, einschließlich der Einrichtung Ihrer IDE, der Erstellung von Toolkette, der Dienst Abhängigkeiten in Containern, einer lokalen Kubernetes-Umgebung, von Mobs zum Sichern von Diensten usw. Mit der gesamten Zeit, die zum Einrichten der Entwicklungsumgebung erforderlich ist, kann die Behebung des ersten Fehlers einige Tage in Anspruch nehmen.
+> Oder Sie können dev Spaces und AKS verwenden. "
 
 Der Prozess zum Arbeiten mit Azure dev Spaces umfasst die folgenden Schritte:
 

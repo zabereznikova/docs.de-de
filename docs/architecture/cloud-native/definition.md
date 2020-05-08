@@ -3,12 +3,12 @@ title: Definition von cloudbasiert
 description: Erfahren Sie mehr über die grundlegenden Säulen, die das Fundament für Native cloudsysteme bereitstellen.
 author: robvet
 ms.date: 08/20/2019
-ms.openlocfilehash: ba11cb1cf0d9d7ef9734ad49aee1df22f285fc4c
-ms.sourcegitcommit: 5988e9a29cedb8757320817deda3c08c6f44a6aa
+ms.openlocfilehash: 33977ff736fc5cbfcf86ed6479e8d0b927b87a63
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82199780"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82895621"
 ---
 # <a name="defining-cloud-native"></a>Definieren von Cloud Native
 
@@ -35,8 +35,8 @@ Im folgenden finden Sie einige Unternehmen, die diese Techniken implementiert ha
 | Company | Erfahrung |
 | :-------- | :-------- |
 | [Netflix](https://www.infoq.com/news/2013/06/netflix/) | Umfasst 600 Dienste in der Produktionsumgebung. Wird hundert Mal pro Tag bereitgestellt. |
-| [Räuber](https://eng.uber.com/micro-deploy/) | In der Produktionsumgebung werden 1000 Dienste und Dienste gespeichert. Stellt wöchentlich mehrere tausend Builds bereit. |
-| [WeChat](https://www.cs.columbia.edu/~ruigu/papers/socc18-final100.pdf) | In der Produktionsumgebung sind 300 Dienste und höher. Führt fast 1.000 Änderungen pro Tag aus. |
+| [Räuber](https://eng.uber.com/micro-deploy/) | Hat in der Produktion 1000 Dienste. Stellt mehrere tausend Male pro Woche bereit. |
+| [WeChat](https://www.cs.columbia.edu/~ruigu/papers/socc18-final100.pdf) | In der Produktionsumgebung sind 300 Dienste und höher. Stellt 1.000 Mal täglich bereit. |
 
 Wie Sie sehen, machen Netflix, uber und WeChat Systeme verfügbar, die aus Hunderten von unabhängigen mikrodiensten bestehen. Dieser Architekturstil ermöglicht es Ihnen, schnell auf Marktbedingungen zu reagieren. Sie können kleine Bereiche einer aktiven, komplexen Anwendung sofort aktualisieren und diese Bereiche bei Bedarf einzeln skalieren.
 
@@ -80,7 +80,7 @@ In der folgenden Tabelle wird die zwölfstufige Methodik hervorgehoben:
 | :-------- | :-------- | :-------- |
 | 1 | Codebasis | Eine einzelne Codebasis für jeden in einem eigenen Repository gespeicherten mikrodienst. Die Nachverfolgung mit der Versionskontrolle kann in mehreren Umgebungen (QA, Staging, Produktion) bereitgestellt werden. |
 | 2 | Abhängigkeiten | Jeder-mikrodienst isoliert und packt seine eigenen Abhängigkeiten und übernimmt Änderungen, ohne dass sich dies auf das gesamte System auswirkt. |
-| 3 | Konfigurationen  | Konfigurationsinformationen werden aus dem-Unternehmens Dienst verschoben und durch ein Konfigurations Verwaltungs Tool außerhalb des Codes extern ausgelagert. Dieselbe Bereitstellung kann über Umgebungen hinweg verteilt werden, auf die die korrekte Konfiguration angewendet wird.  |
+| 3 | Configurations  | Konfigurationsinformationen werden aus dem-Unternehmens Dienst verschoben und durch ein Konfigurations Verwaltungs Tool außerhalb des Codes extern ausgelagert. Dieselbe Bereitstellung kann über Umgebungen hinweg verteilt werden, auf die die korrekte Konfiguration angewendet wird.  |
 | 4 | Sichern von Diensten | Hilfdressourcen (Datenspeicher, Caches, Nachrichten Broker) sollten über eine adressierbare URL verfügbar gemacht werden. Dadurch wird die Ressource von der Anwendung entkoppelt, sodass Sie austauschbar ist.  |
 | 5 | Build, Release, Run | Jede Version muss eine strikte Trennung in den Build-, Release-und Lauf Phasen erzwingen. Jede sollte mit einer eindeutigen ID gekennzeichnet werden und die Möglichkeit des Rollbacks unterstützen. Moderne CI/CD-Systeme helfen dabei, dieses Prinzip zu erfüllen. |
 | 6 | Prozesse | Jeder-mikrodienst sollte in einem eigenen Prozess ausgeführt werden, isoliert von anderen ausgelaufenden Diensten. Externalisieren Sie den erforderlichen Zustand zu einem Sicherungsdienst, z. b. einem verteilten Cache oder einem Datenspeicher. |
@@ -95,7 +95,7 @@ Im Buch [über die zwölfstufige App hinaus](https://content.pivotal.io/blog/be
 
 |    |  Neuer Faktor | Erklärung  |
 | :-------- | :-------- | :-------- |
-| 13 | Erste API | Machen Sie alles als Dienst. Nehmen Sie an, dass Ihr Code von einem Front-End-Client,-Gateway oder einem anderen Dienst verwendet wird. |
+| 13 | API First | Machen Sie alles als Dienst. Nehmen Sie an, dass Ihr Code von einem Front-End-Client,-Gateway oder einem anderen Dienst verwendet wird. |
 | 14 | Telemetrie | Auf einer Arbeitsstation haben Sie umfassende Einblicke in Ihre Anwendung und ihr Verhalten. In der Cloud ist das nicht der einzige. Stellen Sie sicher, dass Ihr Entwurf die Erfassung von Überwachungs-, domänenspezifischen und Integritäts-/Systemdaten umfasst. |
 | 15 | Authentifizierung/Autorisierung  | Implementieren Sie die Identität von Anfang an. Beachten Sie die [RBAC-Features (rollenbasierte Zugriffs Steuerung)](https://docs.microsoft.com/azure/role-based-access-control/overview) , die in öffentlichen Clouds verfügbar sind.  |
 
@@ -167,7 +167,7 @@ An früherer Stelle in diesem Kapitel haben wir eine eCommerce-Anwendung, die al
 
 - Jeder-mikrodienst kann unabhängig voneinander skaliert werden. Anstatt die gesamte Anwendung als einzelne Einheit zu skalieren, Skalieren Sie nur die Dienste hoch, die eine höhere Verarbeitungsleistung oder Netzwerkbandbreite erfordern. Diese differenzierte Skalierungs Methode bietet eine bessere Kontrolle über Ihr System und hilft, die Gesamtkosten zu reduzieren, wenn Sie Teile Ihres Systems skalieren und nicht alles.
 
-Eine hervorragende Referenzanleitung zum Verständnis von microservices sind [.net-microservices: Architektur für .NET-Container Anwendungen](https://docs.microsoft.com/dotnet/standard/microservices-architecture/). Das Buch geht tief in microservices Design und Architektur über. Es ist eine Ergänzung für eine [vollständige microservice-Referenzarchitektur](https://github.com/dotnet-architecture/eShopOnContainers) , die als kostenloser Download von Microsoft zur Verfügung steht.
+Eine hervorragende Referenzanleitung zum Verständnis von microservices sind [.net-microservices: Architektur für .NET-Container Anwendungen](https://dotnet.microsoft.com/download/thank-you/microservices-architecture-ebook). Das Buch geht tief in microservices Design und Architektur über. Es ist eine Ergänzung für eine [vollständige microservice-Referenzarchitektur](https://github.com/dotnet-architecture/eShopOnContainers) , die als kostenloser Download von Microsoft zur Verfügung steht.
 
 ### <a name="developing-microservices"></a>Entwickeln von mikroservices
 

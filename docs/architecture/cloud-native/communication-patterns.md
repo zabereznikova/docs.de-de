@@ -3,12 +3,12 @@ title: Cloudbasierte Kommunikationsmuster
 description: Informieren Sie sich über wichtige Probleme bei der Dienst Kommunikation in Cloud-native Anwendungen
 author: robvet
 ms.date: 08/31/2019
-ms.openlocfilehash: 3bda9baa516b7bd8f893e0f58bbe5e2bfde2b61d
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: b3edc0817fb76ad99a1344b17d600eb747187f86
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "73841144"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82895632"
 ---
 # <a name="cloud-native-communication-patterns"></a>Cloudbasierte Kommunikationsmuster
 
@@ -44,7 +44,7 @@ Obwohl Sie viele Vorteile bieten, sind die-Funktionen nicht kostenlos. Lokale Pr
 
 - Die Nachrichten Verschlüsselung/-Entschlüsselung wird wichtig.
 
-Das Buch [.net microservices: Architektur für .NET-Container Anwendungen](https://docs.microsoft.com/dotnet/standard/microservices-architecture/), die kostenlos von Microsoft zur Verfügung stehen, bietet eine ausführliche Abdeckung der Kommunikationsmuster für microserviceanwendungen. In diesem Kapitel wird eine allgemeine Übersicht über diese Muster sowie die in der Azure-Cloud verfügbaren Implementierungs Optionen bereitgestellt.
+Das Buch [.net microservices: Architektur für .NET-Container Anwendungen](https://dotnet.microsoft.com/download/thank-you/microservices-architecture-ebook), die kostenlos von Microsoft zur Verfügung stehen, bietet eine ausführliche Abdeckung der Kommunikationsmuster für microserviceanwendungen. In diesem Kapitel wird eine allgemeine Übersicht über diese Muster sowie die in der Azure-Cloud verfügbaren Implementierungs Optionen bereitgestellt.
 
 In diesem Kapitel befassen wir uns zunächst mit der Kommunikation zwischen Front-End-Anwendungen und Back-End-Webdiensten. Wir sehen uns nun an, dass die Back-End-mikrodienste miteinander kommunizieren. Wir untersuchen die Kommunikationstechnologie "up" und "GrpC". Zum Schluss betrachten wir neue innovative Kommunikationsmuster mithilfe der Service Mesh-Technologie. Wir sehen uns auch an, wie die Azure-Cloud verschiedene Arten von *sicherungsdiensten* zur Unterstützung der cloudbasierten Kommunikation bereitstellt.
 
