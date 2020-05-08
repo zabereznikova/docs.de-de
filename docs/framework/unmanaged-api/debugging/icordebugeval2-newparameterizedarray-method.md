@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 45efb8ba-c4de-4109-945f-e734d376b43c
 topic_type:
 - apiref
-ms.openlocfilehash: 9476bcc9706e89fd3d7e0abc14031f70a0aa0ad0
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 9d589bfc3093d03d87acb47ade0fc6c972bcd335
+ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73084840"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82976108"
 ---
 # <a name="icordebugeval2newparameterizedarray-method"></a>ICorDebugEval2::NewParameterizedArray-Methode
 Ordnet ein neues Array vom angegebenen Elementtyp und den angegebenen Dimensionen zu.  
@@ -53,10 +53,10 @@ HRESULT NewParameterizedArray(
  Die Elemente des Arrays können Instanzen eines generischen Typs sein. Das Array wird immer in der Anwendungsdomäne erstellt, in der der Thread gerade ausgeführt wird. Im .NET Framework 2,0 muss der Wert von `rank` 1 sein.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   
  **Bibliothek:** CorGuids.lib  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
