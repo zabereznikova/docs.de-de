@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - new modifier keyword [C#]
 ms.assetid: a2e20856-33b9-4620-b535-a60dbce8349b
-ms.openlocfilehash: 6c4fedd469efb79f91780dff26da89b586de2d1c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 529d77b0a66a8a3cedfe7a400af0fb34dd653322
+ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75713341"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82795169"
 ---
 # <a name="new-modifier-c-reference"></a>new-Modifizierer (C#-Referenz)
 
@@ -59,7 +59,7 @@ Weitere Informationen finden Sie im Abschnitt [Der new-Modifizierer](~/_csharpla
 
 ## <a name="see-also"></a>Weitere Informationen
 
-- [C#-Referenz](../../language-reference/index.md)
+- [C#-Referenz](../index.md)
 - [C#-Programmierhandbuch](../../programming-guide/index.md)
 - [C#-Schlüsselwörter](index.md)
 - [Modifizierer](index.md)

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - yield keyword [C#]
 ms.assetid: 1089194f-9e53-46a2-8642-53ccbe9d414d
-ms.openlocfilehash: e3c9e37e7b543eaddae837a85604c4ba91fbc744
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d3fe4cf92ca17457bd541f092f5d146ba6c1c095
+ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75712779"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82794415"
 ---
 # <a name="yield-c-reference"></a>yield (C#-Referenz)
 
@@ -97,7 +97,7 @@ Das folgende Beispiel zeigt einen `get`-Accessor, der ein Iterator ist. Im Beisp
 
 ## <a name="see-also"></a>Siehe auch
 
-- [C#-Referenz](../../language-reference/index.md)
+- [C#-Referenz](../index.md)
 - [C#-Programmierhandbuch](../../programming-guide/index.md)
 - [foreach, in](foreach-in.md)
 - [Iteratoren](../../iterators.md)

@@ -32,12 +32,12 @@ helpviewer_keywords:
 - conditional OR operator [C#]
 - short-circuiting OR operator [C#]
 - '|| operator [C#]'
-ms.openlocfilehash: 930329b922f585ac4763e6a66d3b192ae839f14f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5f85b88236c2e643f97453c64173a3f4f7159a35
+ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79398196"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82795000"
 ---
 # <a name="boolean-logical-operators-c-reference"></a>Logische boolesche Operatoren (C#-Referenz)
 
@@ -57,7 +57,7 @@ Der unäre Präfix-Operator `!` berechnet die logische Negation seines Operanden
 
 Ab C# 8.0 ist der unäre Postfix-Operator `!` der [NULL-tolerante Operator](null-forgiving.md).
 
-## <a name="logical-and-operator-"></a> Logischer AND-Operator &amp;
+## <a name="logical-and-operator-amp"></a><a name="logical-and-operator-"></a> Logischer AND-Operator &amp;
 
 Der `&`-Operator berechnet die logische AND-Operation des Operanden. Das Ergebnis von `x & y` ist `true`, wenn sowohl `x` als auch `y` zu `true` ausgewertet werden. Andernfalls ist das Ergebnis `false`.
 
@@ -93,7 +93,7 @@ Der [bedingte logische OR-Operator](#conditional-logical-or-operator-) `||` bere
 
 Für Operanden der [integralen numerischen Typen](../builtin-types/integral-numeric-types.md) berechnet der Operator `|`[bitweises logisches ODER](bitwise-and-shift-operators.md#logical-or-operator-) für seine Operanden.
 
-## <a name="conditional-logical-and-operator-"></a> Bedingter logischer AND-Operator &amp;&amp;
+## <a name="conditional-logical-and-operator-ampamp"></a><a name="conditional-logical-and-operator-"></a> Bedingter logischer AND-Operator &amp;&amp;
 
 Der bedingte logische AND-Operator `&&`, auch bekannt als der "kurzschließender" logischer AND-Operator bezeichnet, berechnet die logische AND-Operation der Operanden. Das Ergebnis von `x && y` ist `true`, wenn sowohl `x` als auch `y` zu `true` ausgewertet werden. Andernfalls ist das Ergebnis `false`. Wenn `x` als `false` ausgewertet wird, wird `y` nicht ausgewertet.
 
@@ -157,7 +157,8 @@ Die `&`-, `|`- und `^`-Operatoren unterstützen die Verbundzuweisung, wie das fo
 
 [!code-csharp-interactive[compound assignment](snippets/BooleanLogicalOperators.cs#CompoundAssignment)]
 
-Die bedingten logischen Operatoren `&&` und `||` unterstützen nicht die Verbundzuweisung.
+> [!NOTE]
+> Die bedingten logischen Operatoren `&&` und `||` unterstützen nicht die Verbundzuweisung.
 
 ## <a name="operator-precedence"></a>Operatorrangfolge
 

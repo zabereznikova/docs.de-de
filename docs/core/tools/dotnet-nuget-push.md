@@ -3,12 +3,12 @@ title: Befehl „dotnet nuget push“
 description: Der dotnet nuget push-Befehl überträgt ein Paket auf den Server und veröffentlicht es.
 author: karann-msft
 ms.date: 02/14/2020
-ms.openlocfilehash: 8b0437d7f4ada2b56af50e30717d131668c21f7e
-ms.sourcegitcommit: 7370aa8203b6036cea1520021b5511d0fd994574
+ms.openlocfilehash: 1e7831de4c041591b3602e405418f89f1d1d27d1
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/02/2020
-ms.locfileid: "82728356"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82895456"
 ---
 # <a name="dotnet-nuget-push"></a>dotnet nuget push
 
@@ -152,5 +152,4 @@ Der Befehl pusht ein vorhandenes Paket. Es wird kein Paket erstellt. Verwenden S
   dotnet nuget push *.nupkg -s c:\mydir
   ```
 
-  Dieser Befehl speichert Pakete nicht in einer hierarchischen Ordnerstruktur, um die Leistung zu optimieren. Weitere Informationen finden Sie im Artikel zu [lokalen Feeds](//nuget/hosting-packages/local-feeds).
-  
+  Dieser Befehl speichert Pakete nicht in einer hierarchischen Ordnerstruktur, um die Leistung zu optimieren. Weitere Informationen finden Sie im Artikel zu [lokalen Feeds](/nuget/hosting-packages/local-feeds).  

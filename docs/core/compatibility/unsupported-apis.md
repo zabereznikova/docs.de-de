@@ -3,12 +3,12 @@ title: Nicht unterstützte APIs in .NET Core
 titleSuffix: ''
 description: Erfahren Sie, welche APIs aus .NET Framework immer eine Ausnahme in .NET Core auslösen.
 ms.date: 12/23/2019
-ms.openlocfilehash: bd3516d9480ef42b6ea89825ba64867a3ca104e3
-ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
+ms.openlocfilehash: 941e9149c7679afe4a888149108d0a9a28e5e7ab
+ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "81242945"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82794597"
 ---
 # <a name="apis-that-always-throw-exceptions-on-net-core"></a>APIs, die in .NET Core immer Ausnahmen auslösen
 
@@ -324,6 +324,6 @@ In diesem Artikel werden die betroffenen API-Member nach Namespace organisiert.
 
 ## <a name="see-also"></a>Weitere Informationen
 
-- [Breaking Changes für die Migration von .NET Framework 3.0 zu .NET Core](../compatibility/fx-core.md)
+- [Breaking Changes für die Migration von .NET Framework 3.0 zu .NET Core](fx-core.md)
 - [Binäre Serialisierung in .NET Core](../../standard/serialization/binary-serialization.md#net-core)
 - [.NET Portability Analyzer](../../standard/analyzers/portability-analyzer.md)

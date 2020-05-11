@@ -8,12 +8,12 @@ helpviewer_keywords:
 - let keyword [C#]
 - let clause [C#]
 ms.assetid: 13c9c1a4-ce57-48ef-8e1b-4c2a59b99fb4
-ms.openlocfilehash: 3ce2b663e5678de6b53db610b489f85ab1427b9d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a6eee9a23fa28b78343e6479106eaa24ecf4caa6
+ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79173587"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82795364"
 ---
 # <a name="let-clause-c-reference"></a>let-Klausel (C#-Referenz)
 
@@ -31,7 +31,7 @@ Im folgenden Beispiel wird `let` auf zweierlei Weise verwendet:
 
 ## <a name="see-also"></a>Weitere Informationen
 
-- [C#-Referenz](../../language-reference/index.md)
+- [C#-Referenz](../index.md)
 - [Abfrageschlüsselwörter (LINQ)](query-keywords.md)
 - [LINQ in C#](../../linq/index.md)
 - [Language-Integrated Query (LINQ)](../../programming-guide/concepts/linq/index.md)

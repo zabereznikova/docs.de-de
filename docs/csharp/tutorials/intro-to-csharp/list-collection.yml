@@ -9,12 +9,12 @@ metadata:
   level: Beginner
   displayType: two-column
   interactive: csharp
-  ms.openlocfilehash: f7fd68120defbfcda6ac11e14bc749bf4d69c109
-  ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+  ms.openlocfilehash: 03f12cbdd8f9c088a5f279efcadef64c2848fa13
+  ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
   ms.translationtype: HT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 03/14/2020
-  ms.locfileid: "73969390"
+  ms.lasthandoff: 05/06/2020
+  ms.locfileid: "82860959"
 items:
 - durationInMinutes: 1
   content: >
@@ -48,11 +48,6 @@ items:
 
 
     Setzen wir nun unsere Forschungen fort.
-
-
-    > [!NOTE]
-
-    > Dieses Onlinecodierungstutorial befindet sich im Vorschaumodus. Wenn Probleme auftreten, melden Sie diese [im dotnet/try-Repository](https://github.com/dotnet/try/issues).
 - title: Ändern von Listeninhalten
   durationInMinutes: 3
   content: >
@@ -107,11 +102,6 @@ items:
 
 
     Wählen Sie erneut **Ausführen** aus, um die Ergebnisse anzuzeigen. Denken Sie daran, dass die Indizes in C# mit 0 (null) beginnen, sodass der größte gültige Index um eins kleiner ist als die Anzahl der Elemente in der Liste.
-
-
-    > [!NOTE]
-
-    > Dieses Onlinecodierungstutorial befindet sich im Vorschaumodus. Wenn Probleme auftreten, melden Sie diese [im dotnet/try-Repository](https://github.com/dotnet/try/issues).
 - title: Suchen in und Sortieren von Listen
   durationInMinutes: 5
   content: >
@@ -147,11 +137,6 @@ items:
     }
 
     ```
-
-
-    > [!NOTE]
-
-    > Dieses Onlinecodierungstutorial befindet sich im Vorschaumodus. Wenn Probleme auftreten, melden Sie diese [im dotnet/try-Repository](https://github.com/dotnet/try/issues).
 - title: Listen mit anderen Typen
   durationInMinutes: 5
   content: >
@@ -184,21 +169,11 @@ items:
 
 
     Wählen Sie **Ausführen**, um die Ergebnisse anzuzeigen.
-
-
-    > [!NOTE]
-
-    > Dieses Onlinecodierungstutorial befindet sich im Vorschaumodus. Wenn Probleme auftreten, melden Sie diese [im dotnet/try-Repository](https://github.com/dotnet/try/issues).
 - title: Herausforderung
   durationInMinutes: 10
   content: >
     Versuchen Sie, einige dieser Konzepte aus dieser Lektion und früheren Lektionen in einen Zusammenhang zu bringen. Erweitern Sie das, was Sie bisher bezüglich Fibonacci-Zahlen erstellt haben. Versuchen Sie, den Code zum Generieren der ersten 20 Zahlen der Sequenz zu schreiben. (Hinweis: Die 20. Fibonacci-Zahl lautet 6765.)
-
-
-    > [!NOTE]
-
-    > Dieses Onlinecodierungstutorial befindet sich im Vorschaumodus. Wenn Probleme auftreten, melden Sie diese [im dotnet/try-Repository](https://github.com/dotnet/try/issues).
-- title: Herausforderung erfüllen
+- title: Übung abgeschlossen
   durationInMinutes: 3
   content: >
     Sieht ihr Code ungefähr wie der Folgende aus?
@@ -224,11 +199,6 @@ items:
 
 
     Mit jeder Iteration der Schleife werden die letzten beiden Ganzzahlen in der Liste summiert, und dieser Wert wird der Liste hinzugefügt. Die Schleife wird wiederholt, bis der Liste 20 Elemente hinzugefügt worden sind.
-
-
-    > [!NOTE]
-
-    > Dieses Onlinecodierungstutorial befindet sich im Vorschaumodus. Wenn Probleme auftreten, melden Sie diese [im dotnet/try-Repository](https://github.com/dotnet/try/issues).
 - content: >-
     Sie haben das interaktive Listentutorial abgeschlossen. Das ist die finale Einführung in das interaktive C#-Tutorial. Sie können die [.NET-Website](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) besuchen, um das .NET Core SDK herunterzuladen, ein Projekt auf Ihrem Computer zu erstellen und mit dem Programmieren fortzufahren. Über den Abschnitt „Nächste Schritte“ gelangen Sie wieder zu diesen Tutorials.
 

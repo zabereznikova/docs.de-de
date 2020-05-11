@@ -11,12 +11,12 @@ metadata:
   displayType: two-column
   interactive: csharp
   ms.custom: mvc
-  ms.openlocfilehash: 6e3742991820a8805b3c9b57767079940899d8fc
-  ms.sourcegitcommit: 2514f4e3655081dcfe1b22470c0c28500f952c42
+  ms.openlocfilehash: 025b3e0fcaf693be00f1ca396b92617d6faf31aa
+  ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
   ms.translationtype: HT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 03/18/2020
-  ms.locfileid: "79507008"
+  ms.lasthandoff: 05/06/2020
+  ms.locfileid: "82860966"
 items:
 - durationInMinutes: 1
   content: >
@@ -38,11 +38,6 @@ items:
 
 
     Fahren wir fort, und sehen wir uns das einmal genauer an. In der restlichen Lektion wird die Arbeit mit dem `string`-Typ erklärt, der Text in C# darstellt. Wie der `Console`-Typ weist der `string`-Typ bestimmte Methoden auf. Bei den `string`-Methoden geht es um Text.
-
-
-    > [!NOTE]
-
-    > Dieses Onlinecodierungstutorial befindet sich im Vorschaumodus. Wenn Probleme auftreten, melden Sie diese [im dotnet/try-Repository](https://github.com/dotnet/try/issues).
 - title: Deklarieren und Verwenden von Variablen
   durationInMinutes: 3
   content: >
@@ -119,11 +114,6 @@ items:
 
 
     Wählen Sie erneut **Ausführen** aus, um die Ergebnisse anzuzeigen. Anstelle von „Hello {aFriend}“ sollte die Nachricht „Hello Maira“ lauten.
-
-
-    > [!NOTE]
-
-    > Dieses Onlinecodierungstutorial befindet sich im Vorschaumodus. Wenn Probleme auftreten, melden Sie diese [im dotnet/try-Repository](https://github.com/dotnet/try/issues).
 - title: Arbeiten mit Zeichenfolgen
   durationInMinutes: 5
   content: >
@@ -159,11 +149,6 @@ items:
     > [!TIP]
 
     > An dieser Stelle können Sie nun etwas experimentieren. Sie haben erfahren, dass mit `Console.WriteLine()` Text auf den Bildschirm geschrieben wird. Zudem haben Sie erfahren, wie Variablen deklariert und Zeichenfolgen miteinander verkettet werden. Experimentieren Sie im interaktiven Fenster und Das Fenster verfügt über ein Feature mit dem Namen **IntelliSense**, das Vorschläge für Ihre möglichen Aktionen unterbreitet. Geben Sie einen `.` hinter dem `d` in `firstFriend` ein. Sie sehen eine Liste mit Vorschlägen für Eigenschaften und Methoden, die Sie verwenden können.
-
-
-    > [!NOTE]
-
-    > Dieses Onlinecodierungstutorial befindet sich im Vorschaumodus. Wenn Probleme auftreten, melden Sie diese [im dotnet/try-Repository](https://github.com/dotnet/try/issues).
 - title: Weitere Möglichkeiten zur Verwendung von Zeichenfolgen
   durationInMinutes: 5
   content: >
@@ -199,6 +184,9 @@ items:
     ```
 
 
+    Die eckigen Klammern `[` und `]` heben die Funktion der Methoden `Trim`, `TrimStart` und `TrimEnd` visuell hervor. Die Klammern geben an, wo Leerraum beginnt und endet.
+
+
     In diesem Beispiel werden eine Reihe wichtiger Konzepte für die Arbeit mit Zeichenfolgen veranschaulicht. Die Methoden, die Zeichenfolgen bearbeiten, geben neue Zeichenfolgenobjekte zurück, statt die Änderungen zu implementieren. So können Sie erkennen, dass bei jedem Aufruf von einer der `Trim`-Methoden eine neue Zeichenkette zurückgegeben, die ursprüngliche Meldung jedoch nicht geändert wird.
 
 
@@ -228,11 +216,6 @@ items:
     Console.WriteLine(sayHello.ToLower());
 
     ```
-
-
-    > [!NOTE]
-
-    > Dieses Onlinecodierungstutorial befindet sich im Vorschaumodus. Wenn Probleme auftreten, melden Sie diese [im dotnet/try-Repository](https://github.com/dotnet/try/issues).
 - title: Suchzeichenfolgen
   durationInMinutes: 10
   content: >
@@ -265,11 +248,6 @@ items:
 
 
     Sie sollten `true` erhalten, wenn die Eingabe mit „You“ beginnt und mit „hello“ endet, oder FALSE, wenn die Eingabe mit „goodbye“ beginnt oder endet.
-
-
-    > [!NOTE]
-
-    > Dieses Onlinecodierungstutorial befindet sich im Vorschaumodus. Wenn Probleme auftreten, melden Sie diese [im dotnet/try-Repository](https://github.com/dotnet/try/issues).
 - title: Übung abgeschlossen
   durationInMinutes: 3
   content: >
@@ -290,11 +268,6 @@ items:
     Console.WriteLine(songLyrics.EndsWith("goodbye"));
 
     ```
-
-
-    > [!NOTE]
-
-    > Dieses Onlinecodierungstutorial befindet sich im Vorschaumodus. Wenn Probleme auftreten, melden Sie diese [im dotnet/try-Repository](https://github.com/dotnet/try/issues).
 - content: >-
     Sie haben die „Hallo C#“-Einführung in das C#-Tutorial abgeschlossen. Wählen Sie unten den Link **Zahlen in C#** aus, um das nächste interaktive Tutorial zu starten, oder besuchen sie die [.NET-Website](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro), um das .NET Core SDK herunterzuladen, ein Projekt auf Ihrem Computer zu erstellen und weiter zu programmieren. Über den Abschnitt „Nächste Schritte“ gelangen Sie wieder zu diesen Tutorials.
 

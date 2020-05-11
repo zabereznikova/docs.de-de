@@ -2,12 +2,12 @@
 title: Zeichenfolgeninterpolation – C#-Tutorial
 description: Dieses Tutorial erläutert, wie Sie mit dem Zeichenfolgeninterpolations-Feature in C# formatierte Ausdrucksergebnisse in eine größere Zeichenfolge einfügen.
 ms.date: 10/23/2018
-ms.openlocfilehash: 22637895f241585bac4909479f225bf3cb581614
-ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
+ms.openlocfilehash: d1b78670361e8b333499d12b68c0364ad9e40a85
+ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81738280"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82796053"
 ---
 # <a name="use-string-interpolation-to-construct-formatted-strings"></a>Erstellen formatierter Zeichenfolgen mit der Zeichenfolgeninterpolation
 
@@ -165,4 +165,4 @@ Die Ausgabe sieht in etwa folgendermaßen aus:
 
 Sie haben da Tutorial für die Zeichenfolgeninterpolation abgeschlossen.
 
-Weitere Informationen finden Sie im Artikel zur [Zeichenfolgeninterpolation](../../language-reference/tokens/interpolated.md) und dem Tutorial [Zeichenfolgeninterpolation in C#](../../tutorials/string-interpolation.md).
+Weitere Informationen finden Sie im Artikel zur [Zeichenfolgeninterpolation](../../language-reference/tokens/interpolated.md) und dem Tutorial [Zeichenfolgeninterpolation in C#](../string-interpolation.md).

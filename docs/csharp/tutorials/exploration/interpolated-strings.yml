@@ -1,5 +1,5 @@
 ### YamlMime:Tutorial
-title: Erstellen formatierter Zeichenfolgen mit der Zeichenfolgeninterpolation
+title: Verwenden formatierter Zeichenfolgen mit der Zeichenfolgeninterpolation
 metadata:
   title: Zeichenfolgeninterpolation – Interaktives C#-Tutorial
   description: In diesem Tutorial verwenden Sie Ihren Browser, um das Zeichenfolgeninterpolationsfeature in C# interaktiv kennenzulernen. Sie schreiben direkt im Browser einen C#-Code und sehen dort die Ergebnisse der Kompilierung und Ausführung Ihres Codes.
@@ -9,12 +9,12 @@ metadata:
   level: Beginner
   displayType: two-column
   interactive: csharp
-  ms.openlocfilehash: 1b54ea8b3bbb63bdadb8386b0f6311f1f5458b42
-  ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+  ms.openlocfilehash: 7736a2a26b37d8fbfac98328f94ce3c9a25be181
+  ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
   ms.translationtype: HT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 03/14/2020
-  ms.locfileid: "76737537"
+  ms.lasthandoff: 05/06/2020
+  ms.locfileid: "82860999"
 items:
 - durationInMinutes: 2
   content: >
@@ -47,11 +47,6 @@ items:
 
 
     Im Folgenden finden Sie weitere Beispiele für die Zeichenfolgeninterpolation mit einigen anderen Datentypen.
-
-
-    > [!NOTE]
-
-    > Dieses Onlinecodierungstutorial befindet sich im Vorschaumodus. Wenn Probleme auftreten, melden Sie diese [im dotnet/try-Repository](https://github.com/dotnet/try/issues).
 - title: Einschließen verschiedener Datentypen
   durationInMinutes: 5
   content: >
@@ -82,11 +77,6 @@ items:
 
 
     Bei der Ausgabe dieses Beispielcodes ist das Datum zu genau angegeben (der Preis von Auberginen ändert sich nicht sekündlich), und der Wert der Variablen „price“ gibt keine Währungsinformation an. Im nächsten Schritt erfahren Sie, wie Sie diese Probleme beheben, indem Sie das Format der Zeichenfolgendarstellung der Ergebnisse des Ausdrucks steuern.
-
-
-    > [!NOTE]
-
-    > Dieses Onlinecodierungstutorial befindet sich im Vorschaumodus. Wenn Probleme auftreten, melden Sie diese [im dotnet/try-Repository](https://github.com/dotnet/try/issues).
 - title: Steuern der Formatierung von Interpolationsausdrücken
   durationInMinutes: 5
   content: >
@@ -103,18 +93,13 @@ items:
     Sie können eine Formatzeichenfolge angeben, indem Sie dem Interpolationsausdruck einen Doppelpunkt („:“) und die Formatzeichenfolge anfügen. Bei „d“ handelt es sich um eine [Zeichenfolge für das Standardformat für Datum und Uhrzeit](../../../standard/base-types/standard-date-and-time-format-strings.md#the-short-date-d-format-specifier), die das kurze Datumsformat darstellt. Bei „C2“ handelt es sich um eine [Zeichenfolge für das numerische Standardformat](../../../standard/base-types/standard-numeric-format-strings.md#the-currency-c-format-specifier), die eine Zahl als Währungswert mit zwei Ziffern nach dem Dezimaltrennzeichen darstellt.
 
 
-    Einige Typen in den .NET-Bibliotheken unterstützen einen vordefinierten Satz von Formatzeichenfolgen. Darin sind alle numerischen Typen sowie alle Datums- und Uhrzeittypen enthalten. Eine vollständige Liste der Typen, die Formatzeichenfolgen unterstützen, finden Sie im Artikel [Formatieren von Typen in .NET](../../../standard/base-types/formatting-types.md#format-strings-and-net-types) unter [Format Strings and .NET Class Library Types (Formatzeichenfolgen und .NET-Klassenbibliothekstypen)](../../../standard/base-types/formatting-types.md).
+    Einige Typen in den .NET-Bibliotheken unterstützen einen vordefinierten Satz von Formatzeichenfolgen. Darin sind alle numerischen Typen sowie alle Datums- und Uhrzeittypen enthalten. Eine vollständige Liste der Typen, die Formatzeichenfolgen unterstützen, finden Sie im Artikel [Formatieren von Typen in .NET](../../../standard/base-types/formatting-types.md) unter [Format Strings and .NET Class Library Types (Formatzeichenfolgen und .NET-Klassenbibliothekstypen)](../../../standard/base-types/formatting-types.md#format-strings-and-net-types).
 
 
     Versuchen Sie, die Formatzeichenfolgen im Beispiel zu verändern, um zu sehen, welche Auswirkungen sie auf die Formatierung des Datums, der Zeit und des numerischen Werts haben. Ändern Sie „d“ in `{date:d}` in „t“ (um das kurze Uhrzeitformat anzuzeigen) sowie in „y“ (um das Jahr und den Monat anzuzeigen) und in „yyyy“ (um das Jahr als vierstellige Zahl anzuzeigen). Ändern Sie „C2“ in `{price:C2}` in „e“ (für die Exponentialschreibweise) und in „F3“ (für einen numerischen Wert mit drei Ziffern nach dem Dezimaltrennzeichen).
 
 
     Sie können zusätzlich zum Steuern der Formatierung auch die Feldbreite und die Ausrichtung der formatierten Zeichenfolgen steuern, die in der Ergebniszeichenfolge enthalten sind. Im nächsten Schritt erfahren Sie mehr zu diesem Thema.
-
-
-    > [!NOTE]
-
-    > Dieses Onlinecodierungstutorial befindet sich im Vorschaumodus. Wenn Probleme auftreten, melden Sie diese [im dotnet/try-Repository](https://github.com/dotnet/try/issues).
 - title: Steuern der Feldbreite und der Ausrichtung von Interpolationsausdrücken
   durationInMinutes: 6
   content: >
@@ -151,11 +136,6 @@ items:
     Console.WriteLine($"[{DateTime.Now,-20:d}] Hour [{DateTime.Now,-10:HH}] [{1063.342,15:N2}] feet");
 
     ```
-
-
-    > [!NOTE]
-
-    > Dieses Onlinecodierungstutorial befindet sich im Vorschaumodus. Wenn Probleme auftreten, melden Sie diese [im dotnet/try-Repository](https://github.com/dotnet/try/issues).
 - content: >-
     Sie haben das interaktive Tutorial für die Zeichenfolgeninterpolation abgeschlossen. Sie können die [.NET-Website](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) besuchen, um das .NET Core SDK herunterzuladen, ein Projekt auf Ihrem Computer zu erstellen und mit dem Programmieren fortzufahren.
 

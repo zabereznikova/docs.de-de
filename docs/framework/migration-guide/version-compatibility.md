@@ -7,12 +7,12 @@ helpviewer_keywords:
 - .NET Framework, compatibility with earlier versions
 - .NET Framework versions, compatibility
 ms.assetid: 2f25e522-456a-48c3-8a53-e5f39275649f
-ms.openlocfilehash: 2e268753bf5941e9d28ee2bdd82ce77016ddf01a
-ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
+ms.openlocfilehash: c3bc92b89a46fc947b4d7e67644930374eeab2e4
+ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82102982"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82796001"
 ---
 # <a name="version-compatibility"></a>Versionskompatibilität
 
@@ -33,7 +33,7 @@ Fügen Sie der Konfigurationsdatei der App ein oder mehrere [\<supportedRuntime>
 </configuration>
 ```
 
-Weitere Informationen finden Sie unter [Vorgehensweise: Konfigurieren einer App zur Unterstützung von .NET Framework 4 oder 4.x](../migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md).
+Weitere Informationen finden Sie unter [Vorgehensweise: Konfigurieren einer App zur Unterstützung von .NET Framework 4 oder 4.x](how-to-configure-an-app-to-support-net-framework-4-or-4-5.md).
 
 ## <a name="version-compatibility-for-components"></a>Versionskompatibilität für Komponenten
 
@@ -51,7 +51,7 @@ Wenn Ihre App oder Komponente nicht wie erwartet in .NET Framework 4.5 (einschli
 
 - Wenn Ihre App für alle Versionen von .NET Framework ab .NET Framework 4.0 entwickelt wurde, finden Sie unter [Anwendungskompatibilität](application-compatibility.md) Informationen zum Generieren von Listen, die Änderungen zwischen der Version, mit der Ihre App ausgeführt wird, und der Zielversion von .NET Framework aufführt.
 
-- Wenn Sie über eine App für .NET Framework 3.5 verfügen, finden Sie außerdem Informationen unter [Migrationsprobleme in .NET Framework 4](../migration-guide/net-framework-4-migration-issues.md).
+- Wenn Sie über eine App für .NET Framework 3.5 verfügen, finden Sie außerdem Informationen unter [Migrationsprobleme in .NET Framework 4](net-framework-4-migration-issues.md).
 
 - Wenn Sie über eine App für .NET Framework 2.0 verfügen, finden Sie außerdem Informationen unter [Changes in .NET Framework 3.5 SP1 (Änderungen in .NET Framework 3.5 SP1)](https://docs.microsoft.com/previous-versions/dotnet/articles/dd310284(v=msdn.10)).
 
@@ -71,6 +71,6 @@ Wenn Sie keine geeignete Umgehung für das Problem finden können, beachten Sie,
 
 - [Neuigkeiten](../whats-new/index.md)
 - [Veraltete Elemente in der Klassenbibliothek](../whats-new/whats-obsolete.md)
-- [Anwendungskompatibilität](../migration-guide/application-compatibility.md)
+- [Anwendungskompatibilität](application-compatibility.md)
 - [Offizielle .NET Framework-Supportrichtlinie](https://dotnet.microsoft.com/platform/support/policy/dotnet-framework)
-- [Migrationsprobleme in .NET Framework 4](../migration-guide/net-framework-4-migration-issues.md)
+- [Migrationsprobleme in .NET Framework 4](net-framework-4-migration-issues.md)

@@ -7,12 +7,12 @@ dev_langs:
 - vb
 - cpp
 ms.assetid: f3d97d53-614d-4a04-a174-87965b7405f6
-ms.openlocfilehash: 5c2d997d9006a3f1eb971eac20982b9dd5677ebf
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 2d991a7835d22af2c780b020d6884f626908665e
+ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75710751"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82796170"
 ---
 # <a name="inferring-schemas-from-xml-documents"></a>Herleiten von Schemata aus XML-Dokumenten
 In diesem Thema wird beschrieben, wie die <xref:System.Xml.Schema.XmlSchemaInference>-Klasse zum Herleiten eines XSD-Schemas (XML Schema Definition Language) aus der Struktur eines XML-Dokuments verwendet wird.  
@@ -29,7 +29,7 @@ In diesem Thema wird beschrieben, wie die <xref:System.Xml.Schema.XmlSchemaInfer
     <child>One</child>  
     <child>Two</child>  
 </parent>  
-<parent attribute1="A">  
+<parent attribute1="A" />
 ```  
   
  Im obigen Beispiel wird angenommen, dass das Attribut dem Typ `attribute1` angehört, wenn der `6`-Prozess das <xref:System.Xml.Schema.XmlSchemaInference>-Attribut mit dem Wert `xs:unsignedByte` ermittelt. Wenn das zweite `parent`-Element vom <xref:System.Xml.Schema.XmlSchemaInference>-Prozess ermittelt wird, wird die Einschränkung zunehmend aufgehoben, indem der Typ `xs:string` geändert wird, da der Wert des `attribute1`-Attributs jetzt `A` ist. Das `minOccurs`-Attribut für alle im Schema hergeleiteten `child`-Elemente wird in ähnlicher Weise bis zu `minOccurs="0"` gelockert, da das zweite direkt übergeordnete Element nicht über direkt untergeordnete Elemente verfügt.  
