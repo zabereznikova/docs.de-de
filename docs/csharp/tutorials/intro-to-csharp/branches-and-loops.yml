@@ -11,12 +11,12 @@ metadata:
   interactive: csharp
   nextTutorialHref: list-collection.yml
   nextTutorialTitle: Die Listensammlung
-  ms.openlocfilehash: b0a967ea2e5212887d617e76b4ecb445cfbb8b55
-  ms.sourcegitcommit: 8b02d42f93adda304246a47f49f6449fc74a3af4
+  ms.openlocfilehash: a7c855e362e606f82a8b576fbb8db1d632b0f0eb
+  ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
   ms.translationtype: HT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 04/24/2020
-  ms.locfileid: "82135931"
+  ms.lasthandoff: 05/06/2020
+  ms.locfileid: "82860986"
 items:
 - durationInMinutes: 1
   content: >
@@ -65,14 +65,9 @@ items:
 
 
     Dieser Vorgang zum Überprüfen von Bedingungen und Ausführen von Anweisungen basierend auf diesen Bedingungen ist sehr nützlich. Sehen wir uns dies einmal näher an.
-
-
-    > [!NOTE]
-
-    > Dieses Onlinecodierungstutorial befindet sich im Vorschaumodus. Wenn Probleme auftreten, melden Sie diese [im dotnet/try-Repository](https://github.com/dotnet/try/issues).
 - title: Kombinieren von if- und else-Anweisungen
   durationInMinutes: 10
-  content: "\nUm einen anderen Code in den true- und false-Verzweigungen auszuführen, erstellen Sie eine `else`-Verzweigung, die ausgeführt wird, wenn die Bedingung falsch ist. Testen Sie Folgendes:\n\n```csharp\nint a = 5;\nint b = 3;\nif (a + b > 10)\n    Console.WriteLine(\"The answer is greater than 10\");\nelse\n    Console.WriteLine(\"The answer is not greater than 10\");\n```\n\nDie Anweisung, die nach dem Schlüsselwort `else` folgt, wird nur ausgeführt, wenn die zu testende Bedingung `false` lautet. Wenn Sie `if` und `else` mit booleschen Bedingungen kombinieren, erhalten Sie sozusagen das Beste aus beiden Welten.\n\n> [!IMPORTANT]\n> Der Einzug unter den `if`- und `else`-Anweisungen dient zur besseren Lesbarkeit.\n> In der Programmiersprache C# werden Einzüge oder Leerräume nicht berücksichtigt.\n> Die Anweisung nach dem Schlüsselwort `if` bzw. `else` wird basierend auf der Bedingung ausgeführt. Alle Beispiele in diesem Tutorial folgen der gängigen Vorgehensweise, Zeilen basierend auf der Ablaufsteuerung von Anweisungen mit einem Einzug zu versehen.\n\nDa Einzüge nicht relevant sind, müssen Sie mit `{` und `}` angeben, dass Sie mehr als eine Anweisung im Rahmen des bedingt ausgeführten Blocks verwenden möchten. C#-Programmierer verwenden solche geschweifte Klammern in der Regel bei allen `if`- und `else`-Anweisungen. Das folgende Beispiel ist identisch mit dem Inhalt, den Sie soeben erstellt haben. Probieren Sie es aus!\n\n```csharp\nint a = 5;\nint b = 3;\nif (a + b > 10)\n{\n    Console.WriteLine(\"The answer is greater than 10\");\n}\nelse\n{\n    Console.WriteLine(\"The answer is not greater than 10\");\n}\n```\n\n> [!TIP]\n> Im restlichen Tutorial enthalten alle Codebeispiele geschweifte Klammern gemäß den allgemein gültigen Vorgehensweisen.\n\nSie können kompliziertere Bedingungen testen:\n\n```csharp\nint a = 5;\nint b = 3;\nint c = 4;\nif ((a + b + c > 10) && (a == b))\n{\n    Console.WriteLine(\"The answer is greater than 10\");\n    Console.WriteLine(\"And the first number is equal to the second\");\n}\nelse\n{\n    Console.WriteLine(\"The answer is not greater than 10\");\n    Console.WriteLine(\"Or the first number is not equal to the second\");\n}\n```\n\nDie `==`-Symboltests für *Gleichheit*. Die Verwendung von `==` unterscheidet den Test auf Gleichheit von der Zuweisung, die Sie in `a = 5` gesehen haben.\n\nDas Zeichen `&&` steht für „and“. Es bedeutet, dass beide Bedingungen „true“ lauten müssen, damit die Anweisung in der true-Verzweigung ausgeführt wird.  Diese Beispiele zeigen außerdem, dass Sie in jeder bedingten Verzweigung mehrere Anweisungen verwenden können, sofern Sie sie mit `{` und `}` umschließen.\n\nSie können auch `||` für „or“ verwenden:\n\n```csharp\nint a = 5;\nint b = 3;\nint c = 4;\nif ((a + b + c > 10) || (a == b))\n{\n    Console.WriteLine(\"The answer is greater than 10\");\n    Console.WriteLine(\"Or the first number is equal to the second\");\n}\nelse\n{\n    Console.WriteLine(\"The answer is not greater than 10\");\n    Console.WriteLine(\"And the first number is not equal to the second\");\n}\n```\n\nÄndern Sie die Werte von `a`, `b` und `c`, und wechseln Sie zwischen `&&` und `||`, um sie zu untersuchen. So werden Sie besser verstehen, wie die Operatoren `&&` und `||` funktionieren.\n\n> [!NOTE]\n> Dieses Onlinecodierungstutorial befindet sich im Vorschaumodus. Wenn Probleme auftreten, melden Sie diese [im dotnet/try-Repository](https://github.com/dotnet/try/issues).\n"
+  content: "\nUm einen anderen Code in den true- und false-Verzweigungen auszuführen, erstellen Sie eine `else`-Verzweigung, die ausgeführt wird, wenn die Bedingung falsch ist. Testen Sie Folgendes:\n\n```csharp\nint a = 5;\nint b = 3;\nif (a + b > 10)\n    Console.WriteLine(\"The answer is greater than 10\");\nelse\n    Console.WriteLine(\"The answer is not greater than 10\");\n```\n\nDie Anweisung, die nach dem Schlüsselwort `else` folgt, wird nur ausgeführt, wenn die zu testende Bedingung `false` lautet. Wenn Sie `if` und `else` mit booleschen Bedingungen kombinieren, erhalten Sie sozusagen das Beste aus beiden Welten.\n\n> [!IMPORTANT]\n> Der Einzug unter den `if`- und `else`-Anweisungen dient zur besseren Lesbarkeit.\n> In der Programmiersprache C# werden Einzüge oder Leerräume nicht berücksichtigt.\n> Die Anweisung nach dem Schlüsselwort `if` bzw. `else` wird basierend auf der Bedingung ausgeführt. Alle Beispiele in diesem Tutorial folgen der gängigen Vorgehensweise, Zeilen basierend auf der Ablaufsteuerung von Anweisungen mit einem Einzug zu versehen.\n\nDa Einzüge nicht relevant sind, müssen Sie mit `{` und `}` angeben, dass Sie mehr als eine Anweisung im Rahmen des bedingt ausgeführten Blocks verwenden möchten. C#-Programmierer verwenden solche geschweifte Klammern in der Regel bei allen `if`- und `else`-Anweisungen. Das folgende Beispiel ist identisch mit dem Inhalt, den Sie soeben erstellt haben. Probieren Sie es aus!\n\n```csharp\nint a = 5;\nint b = 3;\nif (a + b > 10)\n{\n    Console.WriteLine(\"The answer is greater than 10\");\n}\nelse\n{\n    Console.WriteLine(\"The answer is not greater than 10\");\n}\n```\n\n> [!TIP]\n> Im restlichen Tutorial enthalten alle Codebeispiele geschweifte Klammern gemäß den allgemein gültigen Vorgehensweisen.\n\nSie können kompliziertere Bedingungen testen:\n\n```csharp\nint a = 5;\nint b = 3;\nint c = 4;\nif ((a + b + c > 10) && (a == b))\n{\n    Console.WriteLine(\"The answer is greater than 10\");\n    Console.WriteLine(\"And the first number is equal to the second\");\n}\nelse\n{\n    Console.WriteLine(\"The answer is not greater than 10\");\n    Console.WriteLine(\"Or the first number is not equal to the second\");\n}\n```\n\nDie `==`-Symboltests für *Gleichheit*. Die Verwendung von `==` unterscheidet den Test auf Gleichheit von der Zuweisung, die Sie in `a = 5` gesehen haben.\n\nDas Zeichen `&&` steht für „and“. Es bedeutet, dass beide Bedingungen „true“ lauten müssen, damit die Anweisung in der true-Verzweigung ausgeführt wird.  Diese Beispiele zeigen außerdem, dass Sie in jeder bedingten Verzweigung mehrere Anweisungen verwenden können, sofern Sie sie mit `{` und `}` umschließen.\n\nSie können auch `||` für „or“ verwenden:\n\n```csharp\nint a = 5;\nint b = 3;\nint c = 4;\nif ((a + b + c > 10) || (a == b))\n{\n    Console.WriteLine(\"The answer is greater than 10\");\n    Console.WriteLine(\"Or the first number is equal to the second\");\n}\nelse\n{\n    Console.WriteLine(\"The answer is not greater than 10\");\n    Console.WriteLine(\"And the first number is not equal to the second\");\n}\n```\n\nÄndern Sie die Werte von `a`, `b` und `c`, und wechseln Sie zwischen `&&` und `||`, um sie zu untersuchen. So werden Sie besser verstehen, wie die Operatoren `&&` und `||` funktionieren.\n"
 - title: Wiederholen von Vorgängen durch Schleifen
   durationInMinutes: 6
   content: >
@@ -125,11 +120,6 @@ items:
 
 
     Sehen wir uns nun eine letzte Schleifenanweisung an.
-
-
-    > [!NOTE]
-
-    > Dieses Onlinecodierungstutorial befindet sich im Vorschaumodus. Wenn Probleme auftreten, melden Sie diese [im dotnet/try-Repository](https://github.com/dotnet/try/issues).
 - title: Arbeiten mit der for-Schleife
   durationInMinutes: 5
   content: >
@@ -168,11 +158,6 @@ items:
 
 
     Wenn Sie fertig sind, fahren Sie damit fort, mithilfe der erworbenen Kenntnisse selbst Codes zu schreiben.
-
-
-    > [!NOTE]
-
-    > Dieses Onlinecodierungstutorial befindet sich im Vorschaumodus. Wenn Probleme auftreten, melden Sie diese [im dotnet/try-Repository](https://github.com/dotnet/try/issues).
 - title: Erstellte geschachtelte Schleifen
   durationInMinutes: 10
   content: "Eine `while`-, `do`- oder `for`-Schleife kann in einer anderen Schleife geschachtelt werden, um mithilfe der Kombination aus jedem Element in der äußeren Schleife und jedem Element in der inneren Schleife eine Matrix zu erstellen. Durch die Umsetzung dessen können Sie mehrere alphanumerische Paare erstellen, die Zeilen und Spalten darstellen.\n\nEine `for`-Schleife kann die Zeilen generieren:\n\n```csharp\nfor (int row = 1; row < 11; row++)\n{\n  Console.WriteLine($\"The row is {row}\");\n}\n```\n\nEine andere Schleife kann die Spalten generieren:\n\n```csharp\nfor (char column = 'a'; column < 'k'; column++)\n{\n  Console.WriteLine($\"The column is {column}\");\n}\n```\n\nSie können eine Schleife innerhalb der anderen schachteln, um Paare zu bilden:\n  \n```csharp\nfor (int row = 1; row < 11; row++)\n{\n  for (char column = 'a'; column < 'k'; column++)\n  {\n    Console.WriteLine($\"The cell is ({row}, {column})\");\n  }\n}\n```\n\nSie können erkennen, dass sich die äußere Schleife für jede vollständige Ausführung der inneren Schleife einmal erhöht. Kehren Sie die Schachtelung der Zeilen und Spalten um, und erkennen Sie selbst, was sich ändert.\n"
@@ -190,11 +175,6 @@ items:
 
 
     Probieren Sie es selbst aus. Prüfen Sie dann, wie Sie abgeschnitten haben. Hinweis: Sie sollten 63 als Antwort erhalten.
-
-
-    > [!NOTE]
-
-    > Dieses Onlinecodierungstutorial befindet sich im Vorschaumodus. Wenn Probleme auftreten, melden Sie diese [im dotnet/try-Repository](https://github.com/dotnet/try/issues).
 - title: Übung abgeschlossen
   durationInMinutes: 1
   content: >
@@ -217,11 +197,6 @@ items:
     Console.WriteLine($"The sum is {sum}");
 
     ```
-
-
-    > [!NOTE]
-
-    > Dieses Onlinecodierungstutorial befindet sich im Vorschaumodus. Wenn Probleme auftreten, melden Sie diese [im dotnet/try-Repository](https://github.com/dotnet/try/issues).
 - title: Herzlichen Glückwunsch!
   content: >-
     Sie haben das interaktive Tutorial „Verzweigungen und Schleifen“ abgeschlossen. Wählen Sie unten den Link **Listensammlung** aus, um das nächste interaktive Tutorial zu starten, oder besuchen Sie die [.NET-Website](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro), um das .NET Core SDK herunterzuladen, ein Projekt auf Ihrem Computer zu erstellen und weiter zu programmieren. Über den Abschnitt „Nächste Schritte“ gelangen Sie wieder zu diesen Tutorials.
