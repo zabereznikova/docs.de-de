@@ -11,16 +11,16 @@ metadata:
   nextTutorialTitle: Branches und Schleifen in C#
   displayType: two-column
   interactive: csharp
-  ms.openlocfilehash: 48268c6e839ae4f72aae0e872c837b153325b68b
-  ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+  ms.openlocfilehash: ac4f7318dc25fef9f612649f2c3f57a5142f3ead
+  ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
   ms.translationtype: HT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 03/14/2020
-  ms.locfileid: "77504011"
+  ms.lasthandoff: 05/06/2020
+  ms.locfileid: "82860944"
 items:
 - durationInMinutes: 1
   content: >
-    In diesem interaktiven Tutorial erfahren Sie mehr über numerische Typen in C#, indem Sie mit Ihrem Browser einen C#-Code schreiben und die Ergebnisse der Kompilierung und Ausführung Ihres Codes sehen. Es enthält eine Reihe von Lektionen, in denen Zahlen und arithmetische Operationen in C# untersucht werden. In diesen Lektionen lernen Sie die Grundlagen der Programmiersprache C# kennen.
+    Dieses interaktive Tutorial erläutert die numerischen Typen in C#, wobei Ihr Browser verwendet wird. Sie schreiben C#-Code und sehen die Ergebnisse der Kompilierung und Ausführung Ihres Codes. Es enthält eine Reihe von Lektionen, in denen Zahlen und arithmetische Operationen in C# untersucht werden. In diesen Lektionen lernen Sie die Grundlagen der Programmiersprache C# kennen.
 - title: Erkunden von arithmetischen Operationen mit ganzen Zahlen
   durationInMinutes: 4
   content: >
@@ -40,10 +40,10 @@ items:
     ```
 
 
-    Wenn Sie dies in Ihrer Umgebung ausführen, sollten Sie stattdessen die Anleitungen für die [lokale Version](numbers-in-csharp-local.md) befolgen.
+    Wenn Sie an Ihrer Umgebung arbeiten, sollten Sie stattdessen die Anleitungen für die [lokale Version](numbers-in-csharp-local.md) befolgen.
 
 
-    Sie haben soeben eine der grundlegenden arithmetischen Operationen mit ganzen Zahlen kennengelernt. Der `int`-Typ steht für **integer**, d.h. eine positive oder negative ganze Zahl. Sie verwenden zum Addieren das `+`-Symbol. Zu den anderen häufig verwendeten arithmetischen Operationen für ganze Zahlen zählen Folgende:
+    Sie haben eine der grundlegenden arithmetischen Operationen mit ganzen Zahlen kennengelernt. Der `int`-Typ steht für **integer**, d.h. eine positive oder negative ganze Zahl. Sie verwenden zum Addieren das `+`-Symbol. Zu den anderen häufig verwendeten arithmetischen Operationen für ganze Zahlen zählen Folgende:
 
 
     - `-` zur Subtraktion
@@ -91,7 +91,7 @@ items:
     ```
 
 
-    Wenn Sie möchten, können Sie auch experimentieren, indem Sie mehrere arithmetische Operationen in der gleichen Zeile ausführen.
+    Wenn Sie möchten, können Sie auch experimentieren, indem Sie mehrere arithmetische Operationen in dieselbe Zeile schreiben.
 
 
     > [!TIP]
@@ -99,11 +99,6 @@ items:
     > Bei Ihren ersten Schritten mit C# (oder einer anderen Programmiersprache) kann es zu Fehlern kommen, wenn Sie Codes schreiben. Der **Compiler** findet diese Fehler und meldet diese. Sollte die Ausgabe Fehlermeldungen enthalten, sehen Sie sich den Beispielcode und den Code im interaktiven Fenster an, um festzustellen, was behoben werden muss.
 
     > Durch diese Übung lernen Sie die Struktur eines C#-Codes kennen.
-
-
-    > [!NOTE]
-
-    > Dieses Onlinecodierungstutorial befindet sich im Vorschaumodus. Wenn Probleme auftreten, melden Sie diese [im dotnet/try-Repository](https://github.com/dotnet/try/issues).
 - title: Erkunden der Reihenfolge der Operationen
   durationInMinutes: 7
   content: >
@@ -163,7 +158,7 @@ items:
     Vielleicht haben Sie bereits ein interessantes Verhalten bei den ganzen Zahlen bemerkt. Bei der Division ganzer Zahlen kommt immer ein ganzzahliges Ergebnis heraus, selbst wenn Sie als Ergebnis einen Dezimal- oder Bruchteil erwarten würden.
 
 
-    Wenn Sie dieses Verhalten noch nicht beobachtet haben, testen Sie Folgendes:
+    Wenn Sie dieses Verhalten noch nicht beobachtet haben, testen Sie den folgenden Code:
 
 
     ```csharp
@@ -182,11 +177,6 @@ items:
 
 
     Wählen Sie erneut **Ausführen** aus, um die Ergebnisse anzuzeigen.
-
-
-    > [!NOTE]
-
-    > Dieses Onlinecodierungstutorial befindet sich im Vorschaumodus. Wenn Probleme auftreten, melden Sie diese [im dotnet/try-Repository](https://github.com/dotnet/try/issues).
 - title: Erkunden der Genauigkeit und Grenzwerte ganzer Zahlen
   durationInMinutes: 5
   content: >
@@ -247,98 +237,14 @@ items:
     Die Antwort enthält eine sehr große negative Zahl, da ein Überlauf den größtmöglichen ganzzahligen Wert bis zum kleinstmöglichen Wert umschließt.
 
 
-    Wenn der `int`-Typ nicht Ihren Anforderungen entspricht, so gibt es verschiedene numerische Typen mit anderen Grenzwerten und Genauigkeitsgraden, die Sie verwenden können. Werfen wir im Folgenden einmal einen Blick auf diese.
-
-
-    > [!NOTE]
-
-    > Dieses Onlinecodierungstutorial befindet sich im Vorschaumodus. Wenn Probleme auftreten, melden Sie diese [im dotnet/try-Repository](https://github.com/dotnet/try/issues).
+    Wenn der `int`-Typ nicht Ihren Anforderungen entspricht, so gibt es verschiedene numerische Typen mit anderen Grenzwerten und Genauigkeitsgraden, die Sie verwenden können. Werfen wir im Folgenden einen Blick auf diese Typen von Zahlen.
 - title: Arbeiten mit dem Double-Typ
   durationInMinutes: 5
-  content: >
-    Der numerische Typ `double` stellt eine Gleitkommazahl mit doppelter Genauigkeit dar. Falls Ihnen diese Benennungen nichts sagen, beachten Sie die folgenden Erläuterungen: Eine **Gleitkommazahl** wird verwendet, um sehr große oder sehr kleine Zahlen, die keine ganzen Zahlen sind, darzustellen. **Doppelte Genauigkeit** bedeutet, dass diese Zahlen mit einer höheren Genauigkeit gespeichert werden als mit **einfacher Genauigkeit**. Bei modernen Computern werden häufiger Zahlen mit doppelter Genauigkeit verwendet statt mit einfacher Genauigkeit.
-
-    Sehen wir uns dies einmal genauer an. Testen Sie den folgenden Code im interaktiven Fenster, und sehen Sie sich das Ergebnis an:
-
-
-    ```csharp
-
-    double a = 5;
-
-    double b = 4;
-
-    double c = 2;
-
-    double d = (a + b) / c;
-
-    Console.WriteLine(d);
-
-    ```
-
-
-    Beachten Sie, dass die Antwort die Dezimalzahl des Quotienten enthält. Testen Sie einen etwas komplizierteren Ausdruck mit Werten vom Typ „double“:
-
-
-    ```csharp
-
-    double a = 19;
-
-    double b = 23;
-
-    double c = 8;
-
-    double d = (a + b) / c;
-
-    Console.WriteLine(d);
-
-    ```
-
-
-    Der Bereich eines Werts vom Typ „double“ ist weitaus größer als bei ganzzahligen Werten. Testen Sie den folgenden Code im interaktiven Fenster:
-
-
-    ```csharp
-
-    double max = double.MaxValue;
-
-    double min = double.MinValue;
-
-    Console.WriteLine($"The range of double is {min} to {max}");
-
-    ```
-
-
-    Diese Werte werden in der wissenschaftlichen Schreibweise ausgegeben. Die Zahl links von `E` ist die Mantisse. Die Zahl rechts ist der Exponent als Potenz von 10.
-
-
-    Wie bei Dezimalzahlen in der Mathematik können double-Werte in C# Rundungsfehler aufweisen. Testen Sie den folgenden Code:
-
-
-    ```csharp
-
-    double third = 1.0 / 3.0;
-
-    Console.WriteLine(third);
-
-    ```
-
-
-    Denken Sie daran, dass `0.3` nicht exakt `1/3` entspricht.
-
-
-    ***Übung***
-
-
-    Testen Sie für den `double`-Typ andere Berechnungen mit großen und kleinen Zahlen sowie mit Multiplikation und Division.  Testen Sie kompliziertere Berechnungen.
-
-
-    > [!NOTE]
-
-    > Dieses Onlinecodierungstutorial befindet sich im Vorschaumodus. Wenn Probleme auftreten, melden Sie diese [im dotnet/try-Repository](https://github.com/dotnet/try/issues).
-- title: Arbeiten mit Festkommatypen
+  content: "Der numerische Typ `double` stellt eine Gleitkommazahl mit doppelter Genauigkeit dar. Falls Ihnen diese Benennungen nichts sagen, beachten Sie die folgenden Erläuterungen: Eine **Gleitkommazahl** wird verwendet, um sehr große oder sehr kleine Zahlen, die keine ganzen Zahlen sind, darzustellen. **Doppelte Genauigkeit** ist ein relativer Begriff, der die Anzahl der binären Ziffern beschreibt, die zum Speichern des Werts verwendet werden. Zahlen mit **doppelter Genauigkeit** besitzen die doppelte Anzahl von binären Ziffern wie Zahlen mit **einfacher Genauigkeit**. Bei modernen Computern werden häufiger Zahlen mit doppelter Genauigkeit verwendet statt mit einfacher Genauigkeit. Zahlen mit **einfacher Genauigkeit** werden mit dem Schlüsselwort `float` deklariert.\nSehen wir uns dies einmal genauer an. Testen Sie den folgenden Code im interaktiven Fenster, und sehen Sie sich das Ergebnis an:\n\n```csharp\ndouble a = 5;\ndouble b = 4;\ndouble c = 2;\ndouble d = (a + b) / c;\nConsole.WriteLine(d);\n```\n\nBeachten Sie, dass die Antwort die Dezimalzahl des Quotienten enthält. Testen Sie einen etwas komplizierteren Ausdruck mit Werten vom Typ „double“:\n\n```csharp\ndouble a = 19;\ndouble b = 23;\ndouble c = 8;\ndouble d = (a + b) / c;\nConsole.WriteLine(d);\n```\n\nDer Bereich eines Werts vom Typ „double“ ist weitaus größer als bei ganzzahligen Werten. Testen Sie den folgenden Code im interaktiven Fenster:\n\n```csharp\ndouble max = double.MaxValue;\ndouble min = double.MinValue;\nConsole.WriteLine($\"The range of double is {min} to {max}\");\n```\n\nDiese Werte werden in der wissenschaftlichen Schreibweise ausgegeben. Die Zahl links von `E` ist die Mantisse. Die Zahl rechts ist der Exponent als Potenz von 10.\n\nWie bei Dezimalzahlen in der Mathematik können double-Werte in C# Rundungsfehler aufweisen. Testen Sie den folgenden Code:\n\n```csharp\ndouble third = 1.0 / 3.0;\nConsole.WriteLine(third);\n```\n\nDenken Sie daran, dass `0.3` gleich `3/10` ist und nicht exakt `1/3` entspricht. Auf ähnliche Weise ist `0.33` gleich `33/100`. Das ist näher an `1/3`, aber immer noch nicht exakt. \n\n***Übung***\n\nTesten Sie für den `double`-Typ andere Berechnungen mit großen und kleinen Zahlen sowie mit Multiplikation und Division.  Testen Sie kompliziertere Berechnungen.\n"
+- title: Arbeiten mit Dezimaltypen
   durationInMinutes: 8
   content: >
-    Sie haben die grundlegenden numerischen Typen in C# – „integer“ und „double“ – kennengelernt.  Es gibt einen weiteren Typ, den Sie kennen sollten: den `decimal`-Typ. Der `decimal`-Typ weist einen kleineren Bereich als `double` auf, aber eine höhere Genauigkeit. Die Benennung **Festkomma** bedeutet, dass die Position des Dezimalkommas (hier Dezimalpunkts bzw. Binärpunkts) unveränderlich ist. Sehen wir uns das einmal genauer an:
+    Sie haben die grundlegenden numerischen Typen in C# – „integer“ und „double“ – kennengelernt.  Es gibt einen weiteren Typ, den Sie kennen sollten: den `decimal`-Typ. Der `decimal`-Typ weist einen kleineren Bereich als `double` auf, aber eine höhere Genauigkeit. Sehen wir uns das einmal genauer an:
 
 
     ```csharp
@@ -379,19 +285,25 @@ items:
     Beachten Sie, dass der aus dieser arithmetischen Operation resultierende Wert vom Typ „decimal“ rechts neben dem Dezimalpunkt mehr Ziffern enthält.
 
 
-    ***Übung***
-
-
-    Nachdem Sie nun die verschiedenen numerischen Typen kennengelernt haben, schreiben Sie Code, der den Flächeninhalt eines Kreises mit einem Radius von 2,5 cm berechnet. Denken Sie daran, dass der Flächeninhalt eines Kreises durch das Quadrat des Radius multipliziert mit Pi gebildet wird. Hinweis: .NET bietet eine Konstante für Pi (<xref:System.Math.PI?displayProperty=nameWithType>), die Sie für die Berechnung dieses Werts verwenden können.
+    Mit dem Suffix `M` neben einer Zahl geben Sie an, dass eine Konstante den `decimal`-Typ verwenden soll. Andernfalls nimmt der Compiler den Typ `double` an.
 
 
     > [!NOTE]
 
-    > Dieses Onlinecodierungstutorial befindet sich im Vorschaumodus. Wenn Probleme auftreten, melden Sie diese [im dotnet/try-Repository](https://github.com/dotnet/try/issues).
+    > Der Buchstabe `M` wurde als visuell eindeutigster Buchstabe zur Unterscheidung zwischen den Schlüsselwörtern `double` und `decimal` ausgewählt.
+
+
+    Beachten Sie, dass der aus dieser arithmetischen Operation resultierende Wert vom Typ „decimal“ rechts neben dem Dezimalpunkt mehr Ziffern enthält.
+
+
+    ***Übung***
+
+
+    Nachdem Sie nun die verschiedenen numerischen Typen kennengelernt haben, schreiben Sie Code, der den Flächeninhalt eines Kreises mit einem Radius von 2,5 cm berechnet. Denken Sie daran, dass der Flächeninhalt eines Kreises durch das Quadrat des Radius multipliziert mit Pi gebildet wird. Hinweis: .NET bietet eine Konstante für Pi (<xref:System.Math.PI?displayProperty=nameWithType>), die Sie für die Berechnung dieses Werts verwenden können. <xref:System.Math.PI?displayProperty=nameWithType>, wie alle im `System.Math`-Namespace deklarierten Konstanten, ist ein `double`-Wert. Aus diesem Grund sollten Sie `double` anstelle von `decimal`-Werten für diese Aufgabe verwenden.
 
 
     Sie sollten eine Antwort zwischen 19 und 20 erhalten.
-- title: Herausforderung erfüllen
+- title: Übung abgeschlossen
   durationInMinutes: 1
   content: >
     Sieht ihr Code ungefähr wie der Folgende aus?
@@ -409,16 +321,11 @@ items:
 
 
     Wenn Sie möchten, testen Sie andere Formeln.
-
-
-    > [!NOTE]
-
-    > Dieses Onlinecodierungstutorial befindet sich im Vorschaumodus. Wenn Probleme auftreten, melden Sie diese [im dotnet/try-Repository](https://github.com/dotnet/try/issues).
 - content: >-
     Sie haben das interaktive Tutorial „Zahlen in C#“ abgeschlossen. Wählen Sie unten den Link **Verzweigungen und Schleifen** aus, um das nächste interaktive Tutorial zu starten, oder besuchen sie die [.NET-Website](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro), um das .NET Core SDK herunterzuladen, ein Projekt auf Ihrem Computer zu erstellen und weiter zu programmieren. Über den Abschnitt „Nächste Schritte“ gelangen Sie wieder zu diesen Tutorials.
 
 
-    Weitere Informationen zu Zahlen in C# finden Sie auch unter folgenden Themen:
+    Weitere Informationen zu Zahlen in C# finden Sie auch in folgenden Artikeln:
 
 
     - [Integrale numerische Typen](../../language-reference/builtin-types/integral-numeric-types.md)
