@@ -3,12 +3,12 @@ title: Erste Schritte mit der Syntaxtransformation (Roslyn-APIs)
 description: Eine Einführung in das Durchlaufen, Abfragen und schrittweise Durchlaufen von Syntaxstrukturen.
 ms.date: 06/01/2018
 ms.custom: mvc
-ms.openlocfilehash: 5045dca839daba1070b34720e72cc9c4f7b94828
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 232fe5fcba35f152dbc3f00b2f2c092b5df0dd35
+ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78240609"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82794792"
 ---
 # <a name="get-started-with-syntax-transformation"></a>Erste Schritte mit der Syntaxtransformation
 

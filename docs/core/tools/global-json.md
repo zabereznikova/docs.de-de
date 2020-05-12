@@ -1,14 +1,14 @@
 ---
 title: 'global.json: Übersicht'
 description: In diesem Artikel erfahren Sie, wie Sie mit der global.json-Datei die .NET Core SDK-Version beim Ausführen eines .NET Core-CLI-Befehls festgelegen.
-ms.date: 04/21/2020
+ms.date: 05/01/2020
 ms.custom: updateeachrelease
-ms.openlocfilehash: 5384b59cccb629a5409d26a8df7c81b3999fc95f
-ms.sourcegitcommit: 348bb052d5cef109a61a3d5253faa5d7167d55ac
+ms.openlocfilehash: 15d8e6191394b9ba67b1e5eb5e8ae54ebaf61bef
+ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82021351"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82795507"
 ---
 # <a name="globaljson-overview"></a>global.json: Übersicht
 
@@ -85,6 +85,12 @@ In der folgenden Tabelle werden die verschiedenen möglichen Werte für den Schl
 | `latestMajor` | Verwendet das höchste installierte .NET Core SDK mit einer Hauptversion, die größer als der angegebene Wert ist oder diesem entspricht. <br> Wenn dieser Wert nicht gefunden wird, wird ein Fehler ausgelöst. |
 | `disable`     | Es wird kein Rollforward ausgeführt. Es ist eine exakte Übereinstimmung erforderlich. |
 
+### <a name="msbuild-sdks"></a>msbuild-sdks
+
+Typ: `object`
+
+Ermöglicht Ihnen die Kontrolle der SDK-Version des Projekts an einem einzigen Ort anstatt in jedem Projekt einzeln. Weitere Informationen finden Sie unter [Lösen von Projekt SDKs](/visualstudio/msbuild/how-to-use-project-sdk#how-project-sdks-are-resolved).
+
 ## <a name="examples"></a>Beispiele
 
 Das folgende Beispiel zeigt, wie Sie verhindern können, dass Vorabversionen verwendet werden:
@@ -97,12 +103,12 @@ Das folgende Beispiel zeigt, wie Sie verhindern können, dass Vorabversionen ver
 }
 ```
 
-Im folgenden Beispiel wird gezeigt, wie Sie festlegen können, dass die höchste installierte Version verwendet wird, die höher als die angegebene Version ist oder dieser entspricht:
+Im folgenden Beispiel wird gezeigt, wie Sie festlegen können, dass die höchste installierte Version verwendet wird, die höher als die angegebene Version ist oder dieser entspricht. Der gezeigte JSON-Code lässt keine niedrigere SDK-Version als 2.2.200 zu und lässt 2.2.200 oder jede höhere Version zu, einschließlich 3.0.xxx und 3.1.xxx.
 
 ```json
 {
   "sdk": {
-    "version": "3.1.100",
+    "version": "2.2.200",
     "rollForward": "latestMajor"
   }
 }
@@ -119,23 +125,23 @@ Das folgende Beispiel zeigt, wie Sie festlegen können, welche genaue Version ve
 }
 ```
 
-Das folgende Beispiel zeigt, wie das neueste Featureband und die neueste Patchversion verwendet werden, die von einer bestimmten Haupt- und Nebenversion installiert wurden:
+Das folgende Beispiel zeigt, wie das neueste Featureband und die neueste Patchversion verwendet werden, die von einer bestimmten Haupt- und Nebenversion installiert wurden. Der gezeigte JSON-Code lässt keine niedrigere SDK-Version als 3.1.102 zu und lässt 3.1.102 oder jede höhere 3.1.xxx-Version zu, z. B. 3.1.103 oder 3.1.200.
 
 ```json
 {
   "sdk": {
-    "version": "3.1.000",
+    "version": "3.1.102",
     "rollForward": "latestFeature"
   }
 }
 ```
 
-Im folgenden Beispiel wird gezeigt, wie Sie festlegen können, dass die höchste installierte Patchversion einer bestimmten Version verwendet wird (im Format 3.1.1xx):
+Im folgenden Beispiel wird gezeigt, wie Sie festlegen können, dass die höchste installierte Patchversion einer bestimmten Version verwendet wird. Der gezeigte JSON-Code lässt keine niedrigere SDK-Version als 3.1.102 zu und lässt 3.1.102 oder jede höhere 3.1.1xx-Version zu, z. B. 3.1.103 oder 3.1.199.
 
 ```json
 {
   "sdk": {
-    "version": "3.1.100",
+    "version": "3.1.102",
     "rollForward": "latestPatch"
   }
 }

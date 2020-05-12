@@ -3,12 +3,12 @@ title: Untersuchen von Code mit der Roslyn-Syntaxschnellansicht in Visual Studio
 description: Die Syntaxschnellansicht bietet ein visuelles Tool, um die Modelle zu untersuchen, die das .NET Compiler Platform SDK für Code generiert.
 ms.date: 03/07/2018
 ms.custom: mvc, vs-dotnet
-ms.openlocfilehash: 27e5a1f0b31dd2af2ac779223538b03cdb4db0c5
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c7a34fda909bd044a9e65a8353d5626b533730e3
+ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79156986"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82975926"
 ---
 # <a name="explore-code-with-the-roslyn-syntax-visualizer-in-visual-studio"></a>Untersuchen von Code mit der Roslyn-Syntaxschnellansicht in Visual Studio Code
 
@@ -75,7 +75,7 @@ Versuchen Sie das Gleiche für den **SubBlock**-Knoten, der der `Main()`-Methode
 
 ---
 
-Der Syntaxdiagramm-Viewer verfügt über eine Option zum Anzeigen seines Farbschemas. Sie können auch mit dem Mauszeiger auf einzelne Elemente im Syntaxdiagramm zeigen, um die Eigenschaften des jeweiligen Elements anzuzeigen.
+Der Syntaxdiagramm-Viewer verfügt über eine Option zum Anzeigen einer Legende für sein Farbschema. Sie können auch mit dem Mauszeiger auf einzelne Elemente im Syntaxdiagramm zeigen, um die Eigenschaften des jeweiligen Elements anzuzeigen.
 
 Sie können Syntaxdiagramme für verschiedene Elemente in der Struktur wiederholt anzeigen lassen. Die Diagramme werden immer im gleichen Fenster innerhalb von Visual Studio angezeigt. Sie können dieses Fenster an einem geeigneten Ort innerhalb von Visual Studio andocken, damit Sie zum Anzeigen eines neuen Syntaxdiagramms nicht zwischen Registerkarten hin- und herwechseln müssen. Der untere Bereich, unter dem Fenster des Code-Editors, bietet sich oft an.
 
@@ -89,7 +89,7 @@ Bei einem Setup mit zwei Monitoren kann das Syntaxdiagramm auch auf einen zweite
 
 Die Syntaxschnellansicht ermöglicht die rudimentäre Überprüfung von Symbolen und semantischen Informationen. Geben Sie `double x = 1 + 1;` innerhalb von Main() im C#-Beispiel ein. Wählen Sie dann den Ausdruck `1 + 1` im Code-Editor-Fenster. Die Schnellansicht hebt den **AddExpression**-Knoten in der Schnellansicht hervor. Klicken Sie mit der rechten Maustaste auf **AddExpression**, und klicken Sie dann auf **View Symbol (if any)** (Symbol anzeigen (sofern vorhanden)). Beachten Sie, dass die meisten Menüelemente über den Qualifizierer „if any“ (sofern vorhanden) verfügen. Die Syntaxschnellansicht untersucht Eigenschaften eines Knotens, einschließlich Eigenschaften, die möglicherweise nicht bei allen Knoten vorhanden sind.
 
-Das Eigenschaftenraster in der Schnellansicht wird wie in der folgenden Abbildung aktualisiert: Das Symbol für den Ausdruck ist ein **SynthesizedIntrinsicOperatorSymbol** mit **Art = Methode**.
+Das Eigenschaftenraster in der Schnellansicht wird wie in der folgenden Abbildung gezeigt aktualisiert: Das Symbol für den Ausdruck ist ein **SynthesizedIntrinsicOperatorSymbol** mit **Kind = Method**.
 
 ![Symboleigenschaften](media/syntax-visualizer/symbol-properties.png)
 
