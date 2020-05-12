@@ -2,12 +2,12 @@
 title: Abhängigkeiten und .NET-Bibliotheken
 description: Hier finden Sie Empfehlungen zu Best Practices für die Verwaltung von NuGet-Abhängigkeiten in .NET-Bibliotheken.
 ms.date: 10/02/2018
-ms.openlocfilehash: 6a260b54c45a0cd231059ab3bc6f2707ef7fb20e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 265e92e86d22c778f65476e7f1383d32e4964655
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "76731481"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82895706"
 ---
 # <a name="dependencies"></a>Abhängigkeiten
 
@@ -40,7 +40,7 @@ Ein Paketverweis gibt den Bereich gültiger Pakete an, die zulässig sind. In de
 <PackageReference Include="ExamplePackage" Version="1.0" />
 ```
 
-Die Regeln, die NuGet zum Auflösen von Abhängigkeiten verwendet, sind [komplex](/nuget/consume-packages/dependency-resolution), aber NuGet sucht immer nach der niedrigsten anwendbaren Version. NuGet zieht die niedrigste anwendbare Version der höchsten verfügbaren Version vor, da die niedrigste Version wahrscheinlich die wenigsten Kompatibilitätsprobleme verursachen wird.
+Die Regeln, die NuGet zum Auflösen von Abhängigkeiten verwendet, sind [komplex](/nuget/consume-packages/dependency-resolution), aber NuGet sucht [standardmäßig](/nuget/consume-packages/install-use-packages-visual-studio#install-and-update-options) nach der niedrigsten anwendbaren Version. NuGet zieht die niedrigste anwendbare Version der höchsten verfügbaren Version vor, da die niedrigste Version wahrscheinlich die wenigsten Kompatibilitätsprobleme verursachen wird.
 
 Aufgrund der NuGet-Regel, dass immer die niedrigste anwendbare Version verwendet wird, müssen Sie in Paketverweisen weder eine höchste Version noch einen genauen Bereich angeben, um zu vermeiden, dass die letzte Version abgerufen wird. NuGet versucht bereits, die niedrigste Version mit der höchsten Kompatibilität für Sie zu finden.
 
@@ -58,7 +58,7 @@ Obergrenzen für Versionen verursachen einen Fehler in NuGet, wenn ein Konflikt 
 
 ❌ Verwenden Sie keine NuGet-Paketverweise ohne Mindestversion.
 
-❌ VERMEIDEN Sie NuGet-Paketverweise, die eine exakte Version erfordern.
+❌ Vermeiden Sie NuGet-Paketverweise, die eine exakte Version erfordern.
 
 ❌ Vermeiden Sie NuGet-Paketverweise mit Angabe einer Höchstversion.
 
