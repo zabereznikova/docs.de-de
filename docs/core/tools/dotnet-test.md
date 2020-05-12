@@ -2,12 +2,12 @@
 title: Befehl „dotnet test“
 description: Der Befehl „dotnet test“ wird zum Ausführen von Unittests in einem bestimmten Projekt verwendet.
 ms.date: 04/29/2020
-ms.openlocfilehash: a8218b6596601069b89a60ad018adf89a1f47cf6
-ms.sourcegitcommit: e09dbff13f0b21b569a101f3b3c5efa174aec204
+ms.openlocfilehash: ef71e48daa7c4a6f33961d05a2f3def122087b0e
+ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82624890"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82975432"
 ---
 # <a name="dotnet-test"></a>dotnet test
 
@@ -20,7 +20,7 @@ ms.locfileid: "82624890"
 ## <a name="synopsis"></a>Übersicht
 
 ```dotnetcli
-dotnet test [<PROJECT> | <SOLUTION>]
+dotnet test [<PROJECT> | <SOLUTION> | <DIRECTORY> | <DLL>]
     [-a|--test-adapter-path <PATH_TO_ADAPTER>] [--blame]
     [-c|--configuration <CONFIGURATION>]
     [--collect <DATA_COLLECTOR_FRIENDLY_NAME>]
@@ -37,11 +37,15 @@ dotnet test -h|--help
 
 ## <a name="description"></a>Beschreibung
 
-Der Befehl `dotnet test` wird zum Ausführen von Komponententests in einem bestimmten Projekt verwendet. Mit dem `dotnet test`-Befehl wird die Testlauf-Konsolenanwendung gestartet, die für ein Projekt angegeben wurde. Durch den Testlauf werden Tests ausgeführt, die für ein Komponententestframework (z.B. MSTest, NUnit oder xUnit) definiert wurden, und der Erfolg oder Misserfolg der einzelnen Testausführungen wird gemeldet. Wenn alle Tests erfolgreich sind, gibt der Test Runner 0 (null) als Exitcode zurück. Wenn jedoch ein Test fehlschlägt, wird 1 zurückgegeben. Bei Projekten mit mehreren Zielen werden Tests für jedes Zielframework ausgeführt. Der Testlauf und die Komponententestbibliothek werden als NuGet-Pakete gepackt und als gewöhnliche Abhängigkeiten für das Projekt wiederhergestellt.
+Der Befehl `dotnet test` wird zum Ausführen von Komponententests in einer bestimmten Projektmappe verwendet. Mit dem Befehl `dotnet test` wird die Projektmappe erstellt und für jedes Testprojekt in der Projektmappe eine Testhostanwendung ausgeführt. Der Testhost führt Tests im angegebenen Projekt mithilfe eines Testframeworks aus, z. B. MSTest, NUnit oder xUnit, und meldet den Erfolg oder Fehler jedes Tests. Wenn alle Tests erfolgreich sind, gibt der Test Runner 0 (null) als Exitcode zurück. Wenn jedoch ein Test fehlschlägt, wird 1 zurückgegeben.
+
+Bei Projekten mit mehreren Zielen werden Tests für jedes Zielframework ausgeführt. Der Testhost und das Komponententest-Framework werden als NuGet-Pakete gepackt und als gewöhnliche Abhängigkeiten für das Projekt wiederhergestellt.
 
 In Testprojekten wird der Testlauf mittels eines normalen `<PackageReference>`-Elements angegeben, wie in der folgenden Beispielprojektdatei gezeigt wird:
 
 [!code-xml[XUnit Basic Template](../../../samples/snippets/csharp/xunit-test/xunit-test.csproj)]
+
+Wobei `Microsoft.NET.Test.Sdk` der Testhost und `xunit` das Testframework ist. Und `xunit.runner.visualstudio` ist ein Testadapter, der es dem xUnit-Framework ermöglicht, mit dem Testhost zu arbeiten.
 
 ### <a name="implicit-restore"></a>Implizite Wiederherstellung
 
@@ -49,19 +53,24 @@ In Testprojekten wird der Testlauf mittels eines normalen `<PackageReference>`-E
 
 ## <a name="arguments"></a>Argumente
 
-- **`PROJECT | SOLUTION`**
+- **`PROJECT | SOLUTION | DIRECTORY | DLL`**
 
-  Pfad zum Testprojekt oder zur Projektmappe. Wenn er nicht angegeben ist, wird standardmäßig das aktuelle Verzeichnis ausgewählt.
+  - Der Pfad zum Testprojekt.
+  - Der Pfad zur Projektmappe.
+  - Der Pfad zu einem Verzeichnis, das ein Projekt oder eine Projektmappe enthält.
+  - Der Pfad zur *DLL*-Datei eines Testprojekts.
+
+  Ist dieses Argument nicht angegeben, wird nach einem Projekt oder einer Projektmappe im aktuellen Verzeichnis gesucht.
 
 ## <a name="options"></a>Optionen
 
 - **`-a|--test-adapter-path <PATH_TO_ADAPTER>`**
 
-  Verwenden Sie die benutzerdefinierten Testadapter aus dem angegebenen Pfad im Testlauf.
+  Der Pfad zu einem Verzeichnis, das nach zusätzlichen Testadaptern durchsucht werden soll. Nur *DLL*-Dateien mit dem Suffix `.TestAdapter.dll` werden untersucht. Wenn nichts angegeben ist, wird das Verzeichnis der Test-*DLL* durchsucht.
 
 - **`--blame`**
 
-  Führt die Tests im blame-Modus aus. Diese Option hilft beim Isolieren von fehlerhaften Tests, die den Absturz des Testhosts verursachen. In dem aktuellen Verzeichnis wird eine Ausgabedatei als *Sequence.xml* erstellt, die die Reihenfolge der ausgeführten Tests vor dem Absturz erfasst.
+  Führt die Tests im blame-Modus aus. Diese Option hilft beim Isolieren von fehlerhaften Tests, die den Absturz des Testhosts verursachen. Wenn ei Absturz erkannt wird, wird in `TestResults/<Guid>/<Guid>_Sequence.xml` eine Sequenzdatei erstellt, die die Reihenfolge der Tests erfasst, die vor dem Absturz ausgeführt wurden.
 
 - **`-c|--configuration <CONFIGURATION>`**
 
@@ -73,11 +82,11 @@ In Testprojekten wird der Testlauf mittels eines normalen `<PackageReference>`-E
 
 - **`-d|--diag <PATH_TO_DIAGNOSTICS_FILE>`**
 
-  Aktiviert den Diagnosemodus für die Testplattform und schreibt Diagnosemeldungen in die angegebene Datei.
+  Aktiviert den Diagnosemodus für die Testplattform und schreibt Diagnosemeldungen in die angegebene Datei sowie in benachbarte Dateien. Der Prozess, der die Meldungen protokolliert, bestimmt, welche Dateien erstellt werden, z. B. `*.host_<date>.txt` für das Testhostprotokoll und `*.datacollector_<date>.txt` für das Datensammlerprotokoll.
 
 - **`-f|--framework <FRAMEWORK>`**
 
-  Sucht nach Testbinärdateien für ein bestimmtes [Framework](../../standard/frameworks.md).
+  Erzwingt die Verwendung von `dotnet` oder des .NET Framework-Testhosts für die Testbinärdateien. Mit dieser Option wird nur der zu verwendende Hosttyp bestimmt. Die tatsächliche zu verwendende Frameworkversion wird durch die *runtimeconfig.json* des Testprojekts bestimmt. Wenn nichts angegeben ist, wird das [TargetFramework-Assemblyattribut](/dotnet/api/system.runtime.versioning.targetframeworkattribute) verwendet, um den Hosttyp zu bestimmen. Wenn dieses Attribut von der *DLL* entfernt wird, wird der .NET Framework-Host verwendet.
 
 - **`--filter <EXPRESSION>`**
 
@@ -136,7 +145,7 @@ In Testprojekten wird der Testlauf mittels eines normalen `<PackageReference>`-E
 
 - **`RunSettings`** -Argumente
 
-  Argumente werden als `RunSettings`-Konfigurationen für den Test übergeben. Argumente werden als `[name]=[value]`-Paaren nach „-- “ angegeben (Beachten Sie das Leerzeichen nach --). Ein Leerzeichen wird verwendet, um mehrere `[name]=[value]`-Paare voneinander zu trennen.
+ Inline-`RunSettings` werden als die letzten Argumente auf der Befehlszeile nach „-- “ (beachten Sie das Leerzeichen hinter „--“) übergeben. Inline-`RunSettings` werden als `[name]=[value]`-Paare angegeben. Ein Leerzeichen wird verwendet, um mehrere `[name]=[value]`-Paare voneinander zu trennen.
 
   Ein Beispiel: `dotnet test -- MSTest.DeploymentEnabled=false MSTest.MapInconclusiveToFailed=True`
 
@@ -166,6 +175,12 @@ In Testprojekten wird der Testlauf mittels eines normalen `<PackageReference>`-E
 
   ```dotnetcli
   dotnet test --logger "console;verbosity=detailed"
+  ```
+  
+  - Mit dem folgenden Befehl führen Sie die Tests in dem Projekt im aktuellen Verzeichnis aus und melden Tests, die während des Absturzes des Testhosts in Arbeit waren:
+
+  ```dotnetcli
+  dotnet test --blame
   ```
 
 ## <a name="filter-option-details"></a>Details zu Filteroptionen
