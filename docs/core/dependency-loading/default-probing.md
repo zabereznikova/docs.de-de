@@ -4,12 +4,12 @@ description: Übersicht über die Überprüfungslogik in System.Runtime.Loader.A
 ms.date: 08/09/2019
 author: sdmaclea
 ms.author: stmaclea
-ms.openlocfilehash: 500ee6ee863b1f311970a9e718936f57f7d4efd6
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1e347c716c2d739a1bd03be056b57fdbda6c678f
+ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79398004"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82859512"
 ---
 # <a name="default-probing"></a>Standardüberprüfung
 
@@ -39,6 +39,8 @@ Es gibt zwei Hauptszenarien für das Auffüllen der Eigenschaften, die davon abh
 Außerdem werden die *\*.deps.json*-Dateien auf die gleiche Weise auf referenzierte Frameworks analysiert.
 
 Schließlich kann auch die Umgebungsvariable `ADDITIONAL_DEPS` verwendet werden, um zusätzliche Abhängigkeiten hinzuzufügen.
+
+Die Eigenschaften `APP_PATHS` und `APP_NI_PATHS` werden nicht standardmäßig aufgefüllt und für die meisten Anwendungen weggelassen.
 
 ### <a name="how-do-i-see-the-probing-properties-from-managed-code"></a>Wie kann ich die Überprüfungseigenschaften von verwaltetem Code anzeigen?
 

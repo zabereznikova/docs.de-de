@@ -2,20 +2,23 @@
 title: Befehl „dotnet vstest“
 description: Der dotnet vstest-Befehl erstellt ein Projekt und alle seine Abhängigkeiten.
 ms.date: 02/27/2020
-ms.openlocfilehash: e8fa94cf12ca2fe5fb99c6e3c1dcdb52185798c0
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.openlocfilehash: f7db58f4aab59354b8c69ce0371324c23482dafe
+ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81463285"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82975393"
 ---
 # <a name="dotnet-vstest"></a>dotnet vstest
 
 **Dieser Artikel gilt für:** ✔️ .NET Core 2.1 SDK und neuere Versionen
 
+> [!IMPORTANT]
+> Der Befehl `dotnet vstest` wird von `dotnet test` abgelöst, der nun zum Ausführen von Assemblys verwendet werden kann. Weitere Informationen finden Sie unter [`dotnet test`](dotnet-test.md).
+
 ## <a name="name"></a>name
 
-`dotnet-vstest`: Führt Tests auf Grundlage der angegebenen Dateien aus.
+`dotnet-vstest`: Führt Tests auf Grundlage der angegebenen Assemblys aus.
 
 ## <a name="synopsis"></a>Übersicht
 

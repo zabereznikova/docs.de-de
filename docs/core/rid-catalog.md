@@ -2,12 +2,12 @@
 title: .NET Core Runtime-ID-Katalog (RID)
 description: Erfahren Sie mehr über die Runtime-ID (RID) und wie RIDs in .NET Core verwendet werden.
 ms.date: 02/22/2019
-ms.openlocfilehash: feb19632f16a047ecfb2dcb697a9b837824a1929
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b581f46becc6808ca957ac66c0c22e5e5f973bd1
+ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77451732"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82795559"
 ---
 # <a name="net-core-rid-catalog"></a>.NET Core-RID-Katalog
 
@@ -27,9 +27,9 @@ Eine einzelne RID kann im `<RuntimeIdentifier>`-Element Ihrer Projektdatei festg
 
 RIDs, die konkrete Betriebssysteme darstellen, weisen in der Regel folgendes Muster auf: `[os].[version]-[architecture]-[additional qualifiers]`, wobei:
 
-- `[os]` ist der Moniker des Betriebs-/Plattformsystems. Beispiel: `ubuntu`.
+- `[os]` ist der Moniker des Betriebs-/Plattformsystems. Beispielsweise `ubuntu`.
 
-- `[version]` ist die Version des Betriebssystems in Form einer durch Punkte getrennten (`.`) Versionsnummer. Beispiel: `15.10`.
+- `[version]` ist die Version des Betriebssystems in Form einer durch Punkte getrennten (`.`) Versionsnummer. Beispielsweise `15.10`.
 
   - Die Version sollte **keine** Marketingversion sein, da diese häufig mehrere separate Versionen des Betriebssystems mit unterschiedlichen Plattform-API-Oberflächen darstellt.
 
@@ -117,7 +117,8 @@ Nur allgemeine Werte werden aufgeführt. Prüfen Sie die Datei [runtime.json](ht
 - Portabel (.NET Core 2.0 oder höher)
   - `linux-x64` (Die meisten Desktopdistributionen wie CentOS, Debian, Fedora, Ubuntu und Ableitungen)
   - `linux-musl-x64` (Einfache Distributionen mit [musl](https://wiki.musl-libc.org/projects-using-musl.html) wie Alpine Linux)
-  - `linux-arm` (Linux-Distributionen wie Raspberry Pi, die auf ARM ausgeführt werden)
+  - `linux-arm` (Linux-Distributionen, die auf ARM ausgeführt werden, wie Raspbian auf Raspberry Pi, Modell 2+)
+  - `linux-arm64` (Linux-Distributionen, die auf 64-Bit-ARM ausgeführt werden, wie Ubuntu Server, 64-Bit, auf Raspberry Pi, Modell 3+)
 - Red Hat Enterprise Linux
   - `rhel-x64` (Ersetzt durch `linux-x64` für RHEL ab Version 6)
   - `rhel.6-x64` (.NET Core 2.0 oder höher)
@@ -147,6 +148,6 @@ Relative IDs für macOS verwenden das ältere Branding „OSX“. Nur allgemeine
 
 Weitere Informationen finden Sie unter [.NET Core-Abhängigkeiten und -Anforderungen](install/dependencies.md?pivots=os-macos).
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Runtime-IDs](https://github.com/dotnet/runtime/blob/master/src/libraries/pkg/Microsoft.NETCore.Platforms/readme.md)

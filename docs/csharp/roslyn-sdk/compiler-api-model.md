@@ -3,12 +3,12 @@ title: '.NET Compiler Platform SDK: Konzepte und Objektmodell'
 description: In dieser Übersicht erhalten Sie die nötigen Hintergrundinformationen, damit Sie effektiv mit dem .NET Compiler SDK arbeiten können. Erfahren Sie mehr über API-Ebenen, die wichtigsten beteiligten Typen und das gesamte Objektmodell.
 ms.date: 10/10/2017
 ms.custom: mvc
-ms.openlocfilehash: e563260e21fb8807017db90ff63e30fec0415a48
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 529ce6fbdef22964251c8b22abbd5d8aadab633d
+ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79156960"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82975939"
 ---
 # <a name="understand-the-net-compiler-platform-sdk-model"></a>Verstehen des .NET Compiler Platform SDK-Modells
 
