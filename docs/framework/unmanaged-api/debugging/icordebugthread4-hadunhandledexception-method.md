@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 05558daa-39e2-4c38-aeaf-e2aec4a09468
 topic_type:
 - apiref
-ms.openlocfilehash: f558a4c94afeb69f58605958ddcb91e4be772c39
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 4d954057c519263da49f8aaeeeef6ab9402b6956
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76791352"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83378373"
 ---
-# <a name="icordebugthread4hadunhandledexception-method"></a><span data-ttu-id="503ab-102">ICorDebugThread4::HadUnhandledException-Methode</span><span class="sxs-lookup"><span data-stu-id="503ab-102">ICorDebugThread4::HadUnhandledException Method</span></span>
-<span data-ttu-id="503ab-103">Gibt an, ob für den Thread jemals eine nicht behandelte Ausnahme aufgetreten ist.</span><span class="sxs-lookup"><span data-stu-id="503ab-103">Indicates whether the thread has ever had an unhandled exception.</span></span>  
+# <a name="icordebugthread4hadunhandledexception-method"></a><span data-ttu-id="27848-102">ICorDebugThread4::HadUnhandledException-Methode</span><span class="sxs-lookup"><span data-stu-id="27848-102">ICorDebugThread4::HadUnhandledException Method</span></span>
+<span data-ttu-id="27848-103">Gibt an, ob für den Thread jemals eine nicht behandelte Ausnahme aufgetreten ist.</span><span class="sxs-lookup"><span data-stu-id="27848-103">Indicates whether the thread has ever had an unhandled exception.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="503ab-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="503ab-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="27848-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="27848-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetBlockingObjects (  
@@ -33,32 +33,32 @@ HRESULT GetBlockingObjects (
     );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="503ab-105">Parameters</span><span class="sxs-lookup"><span data-stu-id="503ab-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="27848-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="27848-105">Parameters</span></span>  
  `ppBlockingObjectEnum`  
- <span data-ttu-id="503ab-106">vorgenommen Ein Zeiger auf die Adresse einer geordneten Enumeration von [Cordebug-blockingobject](cordebugblockingobject-structure.md) -Strukturen.</span><span class="sxs-lookup"><span data-stu-id="503ab-106">[out] A pointer to the address of an ordered enumeration of [CorDebugBlockingObject](cordebugblockingobject-structure.md) structures.</span></span>  
+ <span data-ttu-id="27848-106">vorgenommen Ein Zeiger auf die Adresse einer geordneten Enumeration von [Cordebug-blockingobject](cordebugblockingobject-structure.md) -Strukturen.</span><span class="sxs-lookup"><span data-stu-id="27848-106">[out] A pointer to the address of an ordered enumeration of [CorDebugBlockingObject](cordebugblockingobject-structure.md) structures.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="503ab-107">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="503ab-107">Return Value</span></span>  
- <span data-ttu-id="503ab-108">Diese Methode gibt die folgenden spezifischen HRESULTs sowie HRESULT-Fehler zurück, die Methodenfehler anzeigen.</span><span class="sxs-lookup"><span data-stu-id="503ab-108">This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="27848-107">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="27848-107">Return Value</span></span>  
+ <span data-ttu-id="27848-108">Diese Methode gibt die folgenden spezifischen HRESULTs sowie HRESULT-Fehler zurück, die Methodenfehler anzeigen.</span><span class="sxs-lookup"><span data-stu-id="27848-108">This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.</span></span>  
   
-|<span data-ttu-id="503ab-109">HRESULT</span><span class="sxs-lookup"><span data-stu-id="503ab-109">HRESULT</span></span>|<span data-ttu-id="503ab-110">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="503ab-110">Description</span></span>|  
+|<span data-ttu-id="27848-109">HRESULT</span><span class="sxs-lookup"><span data-stu-id="27848-109">HRESULT</span></span>|<span data-ttu-id="27848-110">BESCHREIBUNG</span><span class="sxs-lookup"><span data-stu-id="27848-110">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="503ab-111">S_OK</span><span class="sxs-lookup"><span data-stu-id="503ab-111">S_OK</span></span>|<span data-ttu-id="503ab-112">Der Thread weist seit seiner Erstellung eine nicht behandelte Ausnahme auf.</span><span class="sxs-lookup"><span data-stu-id="503ab-112">The thread has had an unhandled exception since its creation.</span></span>|  
-|<span data-ttu-id="503ab-113">S_FALSE</span><span class="sxs-lookup"><span data-stu-id="503ab-113">S_FALSE</span></span>|<span data-ttu-id="503ab-114">Der Thread weist nie eine nicht behandelte Ausnahme auf.</span><span class="sxs-lookup"><span data-stu-id="503ab-114">The thread has never had an unhandled exception.</span></span>|  
+|<span data-ttu-id="27848-111">S_OK</span><span class="sxs-lookup"><span data-stu-id="27848-111">S_OK</span></span>|<span data-ttu-id="27848-112">Der Thread weist seit seiner Erstellung eine nicht behandelte Ausnahme auf.</span><span class="sxs-lookup"><span data-stu-id="27848-112">The thread has had an unhandled exception since its creation.</span></span>|  
+|<span data-ttu-id="27848-113">S_FALSE</span><span class="sxs-lookup"><span data-stu-id="27848-113">S_FALSE</span></span>|<span data-ttu-id="27848-114">Der Thread weist nie eine nicht behandelte Ausnahme auf.</span><span class="sxs-lookup"><span data-stu-id="27848-114">The thread has never had an unhandled exception.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="503ab-115">Hinweise</span><span class="sxs-lookup"><span data-stu-id="503ab-115">Remarks</span></span>  
- <span data-ttu-id="503ab-116">Diese Methode gibt an, ob für den Thread jemals eine nicht behandelte Ausnahme aufgetreten ist.</span><span class="sxs-lookup"><span data-stu-id="503ab-116">This method indicates whether the thread has ever had an unhandled exception.</span></span> <span data-ttu-id="503ab-117">Zum Zeitpunkt der Auslösung des nicht behandelten Ausnahme Rückrufs oder des nativen JIT-Anfügens wird von dieser Methode garantiert S_OK zurückgegeben.</span><span class="sxs-lookup"><span data-stu-id="503ab-117">By the time the unhandled exception callback is triggered or native JIT-attach is initiated, this method is guaranteed to return S_OK.</span></span> <span data-ttu-id="503ab-118">Es gibt keine Garantie dafür, dass die [ICorDebugThread. geteption TException](icordebugthread-getcurrentexception-method.md) -Methode die nicht behandelte Ausnahme zurückgibt. Dies ist jedoch der Fall, wenn der Prozess noch nicht fortgesetzt wurde, nachdem der Rückruf für nicht behandelte Ausnahmen oder das systemeigene JIT-Anfügen erhalten wurde.</span><span class="sxs-lookup"><span data-stu-id="503ab-118">There is no guarantee that the [ICorDebugThread.GetCurrentException](icordebugthread-getcurrentexception-method.md) method will return the unhandled exception; however, it will if the process has not yet been continued after getting the unhandled exception callback or upon native JIT-attach.</span></span> <span data-ttu-id="503ab-119">Darüber hinaus ist es möglich (auch wenn unwahrscheinlich), dass zum Zeitpunkt der Auslösung des nativen JIT-Anfügens mehr als ein Thread mit einer nicht behandelten Ausnahme vorhanden ist.</span><span class="sxs-lookup"><span data-stu-id="503ab-119">Furthermore, it is possible (although unlikely) to have more than one thread with an unhandled exception at the time native JIT-attach is triggered.</span></span> <span data-ttu-id="503ab-120">In einem solchen Fall gibt es keine Möglichkeit, zu bestimmen, welche Ausnahme das JIT-attach ausgelöst hat.</span><span class="sxs-lookup"><span data-stu-id="503ab-120">In such a case there is no way to determine which exception triggered the JIT-attach.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="27848-115">Hinweise</span><span class="sxs-lookup"><span data-stu-id="27848-115">Remarks</span></span>  
+ <span data-ttu-id="27848-116">Diese Methode gibt an, ob für den Thread jemals eine nicht behandelte Ausnahme aufgetreten ist.</span><span class="sxs-lookup"><span data-stu-id="27848-116">This method indicates whether the thread has ever had an unhandled exception.</span></span> <span data-ttu-id="27848-117">Zum Zeitpunkt der Auslösung des nicht behandelten Ausnahme Rückrufs oder des nativen JIT-Anfügens wird von dieser Methode garantiert S_OK zurückgegeben.</span><span class="sxs-lookup"><span data-stu-id="27848-117">By the time the unhandled exception callback is triggered or native JIT-attach is initiated, this method is guaranteed to return S_OK.</span></span> <span data-ttu-id="27848-118">Es gibt keine Garantie dafür, dass die [ICorDebugThread. geteption TException](icordebugthread-getcurrentexception-method.md) -Methode die nicht behandelte Ausnahme zurückgibt. Dies ist jedoch der Fall, wenn der Prozess noch nicht fortgesetzt wurde, nachdem der Rückruf für nicht behandelte Ausnahmen oder das systemeigene JIT-Anfügen erhalten wurde.</span><span class="sxs-lookup"><span data-stu-id="27848-118">There is no guarantee that the [ICorDebugThread.GetCurrentException](icordebugthread-getcurrentexception-method.md) method will return the unhandled exception; however, it will if the process has not yet been continued after getting the unhandled exception callback or upon native JIT-attach.</span></span> <span data-ttu-id="27848-119">Darüber hinaus ist es möglich (auch wenn unwahrscheinlich), dass zum Zeitpunkt der Auslösung des nativen JIT-Anfügens mehr als ein Thread mit einer nicht behandelten Ausnahme vorhanden ist.</span><span class="sxs-lookup"><span data-stu-id="27848-119">Furthermore, it is possible (although unlikely) to have more than one thread with an unhandled exception at the time native JIT-attach is triggered.</span></span> <span data-ttu-id="27848-120">In einem solchen Fall gibt es keine Möglichkeit, zu bestimmen, welche Ausnahme das JIT-attach ausgelöst hat.</span><span class="sxs-lookup"><span data-stu-id="27848-120">In such a case there is no way to determine which exception triggered the JIT-attach.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="503ab-121">-Anforderungen</span><span class="sxs-lookup"><span data-stu-id="503ab-121">Requirements</span></span>  
- <span data-ttu-id="503ab-122">**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="503ab-122">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="27848-121">Requirements (Anforderungen)</span><span class="sxs-lookup"><span data-stu-id="27848-121">Requirements</span></span>  
+ <span data-ttu-id="27848-122">**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="27848-122">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="503ab-123">**Header:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="503ab-123">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="27848-123">**Header:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="27848-123">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="503ab-124">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="503ab-124">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="27848-124">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="27848-124">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="503ab-125">**.NET Framework Versionen:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="503ab-125">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="27848-125">**.NET Framework Versionen:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="27848-125">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="503ab-126">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="503ab-126">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="27848-126">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="27848-126">See also</span></span>
 
-- [<span data-ttu-id="503ab-127">ICorDebugThread4-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="503ab-127">ICorDebugThread4 Interface</span></span>](icordebugthread4-interface.md)
-- [<span data-ttu-id="503ab-128">Debuggen von Schnittstellen</span><span class="sxs-lookup"><span data-stu-id="503ab-128">Debugging Interfaces</span></span>](debugging-interfaces.md)
-- [<span data-ttu-id="503ab-129">Debuggen</span><span class="sxs-lookup"><span data-stu-id="503ab-129">Debugging</span></span>](index.md)
+- [<span data-ttu-id="27848-127">ICorDebugThread4-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="27848-127">ICorDebugThread4 Interface</span></span>](icordebugthread4-interface.md)
+- [<span data-ttu-id="27848-128">Debugschnittstellen</span><span class="sxs-lookup"><span data-stu-id="27848-128">Debugging Interfaces</span></span>](debugging-interfaces.md)
+- [<span data-ttu-id="27848-129">Debuggen</span><span class="sxs-lookup"><span data-stu-id="27848-129">Debugging</span></span>](index.md)
