@@ -15,38 +15,38 @@ topic_type:
 - apiref
 author: hoyosjs
 ms.author: juhoyosa
-ms.openlocfilehash: 1bdc958f2516bcd7c2eb74312fbf478e6d49535a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fcf725ea98fa4351e72cf592f92968ee2233ecb0
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61948802"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83213581"
 ---
 # <a name="icordebugprocess4-interface"></a>ICorDebugProcess4-Schnittstelle
 
-Bietet Unterstützung für die Out-of ausführungssteuerung Prozess.
+Bietet Unterstützung für die Out-of-Process-Ausführungs Steuerung.
 
 ## <a name="methods"></a>Methoden
 
 | Methode                                                                 | Beschreibung                                                                                             |
 | ---------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
-| [ProcessStateChanged](icordebugprocess4-processstatechanged-method.md) | Benachrichtigt, dass die Out-of Prozess-Debugger, die zu debuggende Komponente Ausführung fortgesetzt wird der ICorDebug-Pipeline. |
+| [ProcessStateChanged](icordebugprocess4-processstatechanged-method.md) | Benachrichtigt die ICorDebug-Pipeline, dass der Out-of-Process-Debugger die Ausführung des Debuggens fortsetzt. |
 
 ## <a name="remarks"></a>Hinweise
 
-Diese Schnittstelle befindet sich in der Common Language Runtime und wird nicht über alle Header oder Bibliotheksdateien verfügbar gemacht werden. Es ist jedoch eine COM-Schnittstelle, die von abgeleitet `IUnknown` mit GUID `E930C679-78AF-4953-8AB7-B0AABF0F9F80` , die über die üblichen Mechanismen der COM-abgerufen werden kann.
+Diese Schnittstelle befindet sich innerhalb der Laufzeit und wird nicht über Header oder Bibliotheksdateien verfügbar gemacht. Dabei handelt es sich jedoch um eine COM-Schnittstelle, die von `IUnknown` mit der GUID abgeleitet ist `E930C679-78AF-4953-8AB7-B0AABF0F9F80` , die über die üblichen com-Mechanismen abgerufen werden kann.
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
-**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).
+**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).
 
-**Header:** Keiner
+**Header:** Gar
 
-**Bibliothek:** Keiner
+**Bibliothek:** Gar
 
-**.NET Framework-Versionen:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v20plus-md.md)]
+**.NET Framework Versionen:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v20plus-md.md)]
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Debuggen von Schnittstellen](debugging-interfaces.md)
+- [Debugschnittstellen](debugging-interfaces.md)
 - [Debuggen](index.md)

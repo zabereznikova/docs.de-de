@@ -1,5 +1,5 @@
 ---
-title: ICorDebugProcess4::ProcessStateChanged-Methode
+title: ICorDebugProcess4::P rocess StateChanged-Methode
 ms.date: 02/07/2019
 api_name:
 - ICorDebugProcess4::ProcessStateChanged
@@ -15,16 +15,16 @@ topic_type:
 - apiref
 author: hoyosjs
 ms.author: juhoyosa
-ms.openlocfilehash: a6f36f5b86b4fa58ce2a4ef4aa23d527f797a5a5
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 910c411d2c63ce2c6cf262e28e08546657dc2a4c
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79178627"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83213568"
 ---
-# <a name="icordebugprocess4processstatechanged-method"></a>ICorDebugProcess4::ProcessStateChanged-Methode
+# <a name="icordebugprocess4processstatechanged-method"></a>ICorDebugProcess4::P rocess StateChanged-Methode
 
-Benachrichtigt die ICorDebug-Pipeline, dass der Fehlerdebugger out of process die Ausführung des Debugees fortsetzt.
+Benachrichtigt die ICorDebug-Pipeline, dass der Out-of-Process-Debugger die Ausführung des Debuggens fortsetzt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -37,23 +37,23 @@ HRESULT ProcessStateChanged(
 ## <a name="parameters"></a>Parameter
 
  `eChange`\
-[in] Ein Member der [CorDebugStateChange-Enumeration,](cordebugstatechange-enumeration.md) der eine Änderung im Ausführungsstatus des Prozesses beschreibt.
+in Ein Member der [cordebugstatechange-Enumeration](cordebugstatechange-enumeration.md) , die eine Änderung des Ausführungs Status des Prozesses beschreibt.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die bereitgestellte Methode `ICorDebugProcess4` ist Teil der Schnittstelle und entspricht dem vierten Steckplatz der virtuellen Methodentabelle.
+Die bereitgestellte Methode ist Teil der `ICorDebugProcess4` -Schnittstelle und entspricht dem vierten Slot der Tabelle der virtuellen Methode.
 
 ## <a name="requirements"></a>Requirements (Anforderungen)
 
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).
 
- **Kopfzeile:** nichts
+ **Header:** Gar
 
- **Bibliothek:** nichts
+ **Bibliothek:** Gar
 
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v20plus-md.md)]
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v20plus-md.md)]
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [ICorDebugProcess4-Schnittstelle](icordebugprocess4-interface.md)
 - [Debugschnittstellen](debugging-interfaces.md)

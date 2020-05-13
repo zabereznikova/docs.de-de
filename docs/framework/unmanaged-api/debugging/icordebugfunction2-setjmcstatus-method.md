@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 22c27b01-2869-4214-b840-5921f7c874fc
 topic_type:
 - apiref
-ms.openlocfilehash: 758364b2d63343e464b727d5a1c1817533a6acea
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 7da12554ba1db9a467aa03c01bfb3b584125b129
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73137783"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83213191"
 ---
 # <a name="icordebugfunction2setjmcstatus-method"></a>ICorDebugFunction2::SetJMCStatus-Methode
 Markiert die durch dieses ICorDebugFunction2 dargestellte Funktion für nur eigenen Code schrittweise.  
@@ -35,7 +35,7 @@ HRESULT SetJMCStatus (
   
 ## <a name="parameters"></a>Parameter  
  `bIsJustMyCode`  
- in Auf `true` festlegen, um die Funktion als Benutzercode zu markieren. Legen Sie andernfalls auf `false`fest.  
+ in Legen Sie auf fest, `true` um die Funktion als Benutzercode zu markieren; andernfalls legen Sie auf fest `false` .  
   
 ## <a name="return-values"></a>Rückgabewerte  
   
@@ -47,11 +47,11 @@ HRESULT SetJMCStatus (
 ## <a name="remarks"></a>Hinweise  
  Ein nur eigenen Code Stepper überspringt Nichtbenutzer Code. Der Benutzercode muss eine Teilmenge des debugfähigen Codes sein.  
   
-## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   
  **Bibliothek:** CorGuids.lib  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

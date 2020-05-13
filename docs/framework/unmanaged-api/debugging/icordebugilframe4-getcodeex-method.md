@@ -12,12 +12,12 @@ api_type:
 ms.assetid: aeda0e42-29ee-4ca8-9f21-ac4641677a62
 topic_type:
 - apiref
-ms.openlocfilehash: ef2e4bc0caddd6b13c8dbe8edb59e0673519421b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 582e28c18f36b253425b1e0a2034cdd262fddd57
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79178783"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83213737"
 ---
 # <a name="icordebugilframe4getcodeex-method"></a>ICorDebugILFrame4::GetCodeEx-Methode
 [Wird nur in .NET Framework 4.5.2 und neueren Versionen unterstützt]  
@@ -35,25 +35,25 @@ HRESULT GetCodeEx(
   
 ## <a name="parameters"></a>Parameter  
  `flags`  
- [in] Ein [ILCodeKind](ilcodekind-enumeration.md) ILCodeKind-Enumerationsmember, der angibt, ob die zwischengeschaltete Sprache (IL), die durch die ReJIT-Anforderung des Profilers definiert wird, im Frame enthalten ist.  
+ in Ein [ilcodekind](ilcodekind-enumeration.md) -Enumerationsmember, der angibt, ob die von der ReJIT-Anforderung des Profilers definierte zwischen Sprache (IL) im Frame enthalten ist.  
   
  `ppCode`  
- [out] Ein Zeiger auf die Adresse eines "ICorDebugCode"-Objekts, das den Code darstellt, den dieser Stapelrahmen ausführt.  
+ vorgenommen Ein Zeiger auf die Adresse eines ICorDebugCode-Objekts, das den Code darstellt, der von diesem Stapel Rahmen ausgeführt wird.  
   
-## <a name="remarks"></a>Bemerkungen  
- Diese Methode ähnelt der [ICorDebugFrame::GetCode-Methode,](icordebugframe-getcode-method.md) mit der Ausnahme, dass sie optional auf Code zugreift, der von der ReJIT-Anforderung des Profilers definiert wird. Aufrufen dieser Methode `flags` mit `ILCODE_ORIGINAL_IL` einem Wert von entspricht dem Aufrufen von [GetCode](icordebugframe-getcode-method.md); Wenn die Methode instrumentiert ist, ist auf ihre IL nicht zugegriffen. `ILCODE_REJIT_IL`ermöglicht dem Debugger den Zugriff auf die IL, die durch die ReJIT-Anforderung des Profilers definiert ist. Wenn die IL nicht `ppCode` instrumentiert ist, ist `S_OK` **null**, und die Methode gibt zurück.  
+## <a name="remarks"></a>Hinweise  
+ Diese Methode ähnelt der [ICorDebugFrame:: GetCode](icordebugframe-getcode-method.md) -Methode, mit der Ausnahme, dass Sie optional auf Code zugreift, der von der ReJIT-Anforderung des Profilers definiert wird. Das Aufrufen dieser Methode mit einem `flags` Wert von `ILCODE_ORIGINAL_IL` entspricht dem Aufrufen von [GetCode](icordebugframe-getcode-method.md); wenn die Methode instrumentiert ist, kann auf Ihre Il nicht zugegriffen werden. `ILCODE_REJIT_IL`ermöglicht dem Debugger den Zugriff auf die von der ReJIT-Anforderung des Profilers definierte Il. Wenn die Il nicht instrumentiert ist, `ppCode` ist **null**, und die Methode gibt zurück `S_OK` .  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   
  **Bibliothek:** CorGuids.lib  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [ICorDebugILFrame4-Schnittstelle](icordebugilframe4-interface.md)
 - [Debugschnittstellen](debugging-interfaces.md)
-- [ReJIT: Ein Anleitung](https://docs.microsoft.com/archive/blogs/davbr/rejit-a-how-to-guide)
+- [ReJIT: Anleitung](https://docs.microsoft.com/archive/blogs/davbr/rejit-a-how-to-guide)

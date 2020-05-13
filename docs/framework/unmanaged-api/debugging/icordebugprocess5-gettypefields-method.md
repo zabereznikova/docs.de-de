@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6a0ad3ee-dacb-47e9-abae-4536bcc4804b
 topic_type:
 - apiref
-ms.openlocfilehash: 29006eba3d3a523fd24a461207ab12222a639782
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a2c7f7b722abac6acf71d3b64276862441695a5f
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79178590"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83212788"
 ---
 # <a name="icordebugprocess5gettypefields-method"></a>ICorDebugProcess5::GetTypeFields-Methode
-Enthält Informationen zu den Feldern, die zu einem Typ gehören.  
+Stellt Informationen zu den Feldern bereit, die zu einem-Typ gehören.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -38,30 +38,30 @@ HRESULT GetTypeFields(
   
 ## <a name="parameters"></a>Parameter  
  `id`  
- [in] Der Bezeichner des Typs, dessen Feldinformationen abgerufen werden.  
+ in Der Bezeichner des Typs, dessen Feldinformationen abgerufen werden.  
   
  `celt`  
- [in] Die Anzahl der [COR_FIELD](cor-field-structure.md) Objekte, deren Feldinformationen abgerufen werden sollen.  
+ in Die Anzahl der [COR_FIELD](cor-field-structure.md) -Objekte, deren Feldinformationen abgerufen werden sollen.  
   
  `fields`  
- [out] Ein Array [COR_FIELD](cor-field-structure.md) von COR_FIELD-Objekten, die Informationen zu den Feldern bereitstellen, die zum Typ gehören.  
+ vorgenommen Ein Array von [COR_FIELD](cor-field-structure.md) -Objekten, die Informationen zu den Feldern bereitstellen, die zum Typ gehören.  
   
  `pceltNeeded`  
- [out] Ein Zeiger auf die [COR_FIELD](cor-field-structure.md) Anzahl der `fields`COR_FIELD In .  
+ vorgenommen Ein Zeiger auf die Anzahl der [COR_FIELD](cor-field-structure.md) -Objekte, die in enthalten sind `fields` .  
   
-## <a name="remarks"></a>Bemerkungen  
- Der `celt` Parameter, der die Anzahl der Felder angibt, deren Feldinformationen die Methode zum Auffüllen `fields`verwendet, sollte dem Wert des `COR_TYPE_LAYOUT::numFields` Felds entsprechen.  
+## <a name="remarks"></a>Hinweise  
+ Der- `celt` Parameter, der die Anzahl der Felder angibt, deren Feldinformationen die Methode zum Auffüllen verwendet `fields` , sollte dem Wert des- `COR_TYPE_LAYOUT::numFields` Felds entsprechen.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   
  **Bibliothek:** CorGuids.lib  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [ICorDebugProcess5-Schnittstelle](icordebugprocess5-interface.md)
 - [Debugschnittstellen](debugging-interfaces.md)

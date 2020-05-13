@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: db499637-7ba9-421e-b8b1-35856995e80b
 topic_type:
 - apiref
-ms.openlocfilehash: b27e7a2cdcbfc3a88a734230118d99c2dd5c700e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 55342c803756aa10c2e7c835d9e1d58b439bb36c
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73129535"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83212541"
 ---
 # <a name="icordebugmodulegetname-method"></a>ICorDebugModule::GetName-Methode
 Ruft den Dateinamen des Moduls ab.  
@@ -46,15 +46,15 @@ HRESULT GetName(
  vorgenommen Ein Array, in dem der zurückgegebene Name gespeichert wird.  
   
 ## <a name="remarks"></a>Hinweise  
- Die `GetName`-Methode gibt ein S_OK HRESULT zurück, wenn der Dateiname des Moduls mit dem Namen auf dem Datenträger übereinstimmt. `GetName` gibt ein S_FALSE HRESULT zurück, wenn der Name erstellt wird, z. b. für ein dynamisches Modul oder ein in-Memory-Modul.  
+ Die `GetName` -Methode gibt eine S_OK HRESULT zurück, wenn der Dateiname des Moduls mit dem Namen auf dem Datenträger übereinstimmt. `GetName`gibt eine S_FALSE HRESULT zurück, wenn der Name erfunden ist, z. b. für ein dynamisches Modul oder ein in-Memory-Modul.  
   
-## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   
  **Bibliothek:** CorGuids.lib  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch

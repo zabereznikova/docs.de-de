@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e11d5a75-61d9-4548-aedf-79c26079bd17
 topic_type:
 - apiref
-ms.openlocfilehash: 5f618f6779f6931785bba18f70fb1ac9baf46753
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 391b848d3b3f66f6af6bf3adbefb6e94d526e748
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73137189"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83213503"
 ---
 # <a name="icordebugprocess2getversion-method"></a>ICorDebugProcess2::GetVersion-Methode
 
@@ -41,14 +41,14 @@ vorgenommen Ein Zeiger auf eine COR_VERSION-Struktur, die die Versionsnummer der
 
 ## <a name="remarks"></a>Hinweise
 
-Die `GetVersion`-Methode gibt einen Fehlercode zurück, wenn keine Laufzeit in den Prozess geladen wurde.
+Die- `GetVersion` Methode gibt einen Fehlercode zurück, wenn keine Laufzeit in den Prozess geladen wurde.
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
-**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).
+**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).
 
 **Header:** CorDebug.idl, CorDebug.h
 
 **Bibliothek:** CorGuids.lib
 
-**.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+**.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

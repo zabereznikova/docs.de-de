@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 93829d15-d942-4e2d-b7a4-dfc9d7fb96be
 topic_type:
 - apiref
-ms.openlocfilehash: fb8b8f3e29c141e91587a4d0cdc81cdabccdbc9e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6b9396d03892f29e3698af90856d0c0023dc628a
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79178646"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83213464"
 ---
 # <a name="icordebugprocess2setunmanagedbreakpoint-method"></a>ICorDebugProcess2::SetUnmanagedBreakpoint-Method
-Legt einen nicht verwalteten Haltepunkt am angegebenen systemeigenen Bildversatz fest.  
+Legt einen nicht verwalteten Haltepunkt am angegebenen systemeigenen Abbild Offset fest.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -39,25 +39,25 @@ HRESULT SetUnmanagedBreakpoint (
   
 ## <a name="parameters"></a>Parameter  
  `address`  
- [in] Ein `CORDB_ADDRESS` Objekt, das den systemeigenen Bildversatz angibt.  
+ in Ein- `CORDB_ADDRESS` Objekt, das den Offset des systemeigenen Bilds angibt.  
   
  `bufsize`  
- [in] Die Größe des `buffer` Arrays in Bytes.  
+ in Die Größe des Arrays in Bytes `buffer` .  
   
  `buffer`  
- [out] Ein Array, das den Opcode enthält, der durch den Haltepunkt ersetzt wird.  
+ vorgenommen Ein Array, das den Opcode enthält, der durch den Breakpoint ersetzt wird.  
   
  `bufLen`  
- [out] Ein Zeiger auf die Anzahl der `buffer` im Array zurückgegebenen Bytes.  
+ vorgenommen Ein Zeiger auf die Anzahl der im Array zurückgegebenen Bytes `buffer` .  
   
-## <a name="remarks"></a>Bemerkungen  
- Wenn sich der native Bildversatz innerhalb der Common Language Runtime (CLR) befindet, wird der Haltepunkt ignoriert. Dadurch kann die CLR das Aussenden eines Out-of-Band-Haltepunkts vermeiden, wenn der Haltepunkt vom Debugger festgelegt wird.  
+## <a name="remarks"></a>Hinweise  
+ Wenn der Offset des systemeigenen Images innerhalb des Common Language Runtime (CLR) liegt, wird der Breakpoint ignoriert. Dadurch kann die CLR vermeiden, dass ein Out-of-Band-Haltepunkt versendet wird, wenn der Breakpoint vom Debugger festgelegt wird.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   
  **Bibliothek:** CorGuids.lib  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

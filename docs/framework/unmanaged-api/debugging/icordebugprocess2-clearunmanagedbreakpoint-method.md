@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 12ed0fff-7f0e-4d7a-bb70-b3376371f36c
 topic_type:
 - apiref
-ms.openlocfilehash: e2aaf902afd71a4a81f7d64ef3fec046aacc91fc
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 2b228383c3b393fe43f60d39e59cca37af36233f
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76792532"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83212489"
 ---
 # <a name="icordebugprocess2clearunmanagedbreakpoint-method"></a>ICorDebugProcess2::ClearUnmanagedBreakpoint-Methode
 Entfernt einen zuvor festgelegten Haltepunkt an der angegebenen Adresse.  
@@ -33,22 +33,22 @@ HRESULT ClearUnmanagedBreakpoint (
 );  
 ```  
   
-## <a name="parameters"></a>Parameters  
+## <a name="parameters"></a>Parameter  
  `address`  
- in Ein `CORDB_ADDRESS` Wert, der die Adresse angibt, an der der Breakpoint festgelegt wurde.  
+ in Ein- `CORDB_ADDRESS` Wert, der die Adresse angibt, an der der Breakpoint festgelegt wurde.  
   
 ## <a name="remarks"></a>Hinweise  
  Der angegebene Haltepunkt hätte zuvor durch einen früheren [ICorDebugProcess2:: SetUnmanagedBreakpoint](icordebugprocess2-setunmanagedbreakpoint-method.md)-Befehl festgelegt.  
   
- Die `ClearUnmanagedBreakpoint`-Methode kann aufgerufen werden, während der Prozess, der debuggt wird, ausgeführt wird.  
+ Die- `ClearUnmanagedBreakpoint` Methode kann aufgerufen werden, während der Prozess, der debuggt wird, ausgeführt wird.  
   
- Die `ClearUnmanagedBreakpoint`-Methode gibt einen Fehlercode zurück, wenn der Debugger im verwalteten Modus angefügt wird oder wenn an der angegebenen Adresse kein Haltepunkt vorhanden ist.  
+ Die- `ClearUnmanagedBreakpoint` Methode gibt einen Fehlercode zurück, wenn der Debugger im reinen Modus angefügt wird oder wenn an der angegebenen Adresse kein Haltepunkt vorhanden ist.  
   
-## <a name="requirements"></a>-Anforderungen  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   
  **Bibliothek:** CorGuids.lib  
   
- **.NET Framework Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

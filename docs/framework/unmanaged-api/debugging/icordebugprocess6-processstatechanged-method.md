@@ -2,12 +2,12 @@
 title: ICorDebugProcess6::ProcessStateChanged-Methode
 ms.date: 03/30/2017
 ms.assetid: fb6d30d9-54f3-462b-8ebf-ce0440791ad5
-ms.openlocfilehash: b6665df550a2d07a3fa84c3f2b6bf07f459cd713
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 6be216741e902b15efc3a3ece95cb4a4229960e3
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76792204"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83212845"
 ---
 # <a name="icordebugprocess6processstatechanged-method"></a>ICorDebugProcess6::ProcessStateChanged-Methode
 Benachrichtigt [ICorDebug](icordebug-interface.md) , dass der Prozess ausgeführt wird.  
@@ -18,7 +18,7 @@ Benachrichtigt [ICorDebug](icordebug-interface.md) , dass der Prozess ausgeführ
 HRESULT ProcessStateChanged(   [in] CorDebugStateChange change);  
 ```  
   
-## <a name="parameters"></a>Parameters  
+## <a name="parameters"></a>Parameter  
  `change`  
  in Ein Member der [processstatechanged](icordebugprocess6-processstatechanged-method.md) -Enumeration.  
   
@@ -28,16 +28,16 @@ HRESULT ProcessStateChanged(   [in] CorDebugStateChange change);
 > [!NOTE]
 > Diese Methode ist nur mit .NET Native verfügbar.  
   
-## <a name="requirements"></a>-Anforderungen  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   
  **Bibliothek:** CorGuids.lib  
   
- **.NET Framework Versionen:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **.NET Framework Versionen:**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
 
 - [ICorDebugProcess6-Schnittstelle](icordebugprocess6-interface.md)
-- [Debuggen von Schnittstellen](debugging-interfaces.md)
+- [Debugschnittstellen](debugging-interfaces.md)

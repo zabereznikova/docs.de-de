@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5c68375d-145d-46ef-a7c8-2dc4257472de
 topic_type:
 - apiref
-ms.openlocfilehash: 402a0e8808b51fd4c09b254114292d4c851b2760
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 4f9818137016dc3e0522ed516c52df2550ffdfca
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73129514"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83212515"
 ---
 # <a name="icordebugmodulegetsize-method"></a>ICorDebugModule::GetSize-Methode
 Ruft die Größe des Moduls in Bytes ab.  
@@ -39,11 +39,11 @@ HRESULT GetSize(
   
  Wenn das Modul aus dem Native Image Generator (Ngen. exe) erstellt wurde, ist die Größe des Moduls 0 (null).  
   
-## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   
  **Bibliothek:** CorGuids.lib  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
