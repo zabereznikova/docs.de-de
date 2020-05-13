@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ec00bc21-117e-4acd-9301-2cfafd5be8d3
 topic_type:
 - apiref
-ms.openlocfilehash: 38fe50f5a6608bb27d7a7818dee4784a7f8113ef
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 711fccd65379bc3e5e178869e7220dd84fd07fbe
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73133609"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83379702"
 ---
 # <a name="icordebugthreadenumeratechains-method"></a>ICorDebugThread::EnumerateChains-Methode
 Ruft einen Schnittstellen Zeiger auf einen ICorDebugChainEnum-Enumerator ab, der alle Stapel Ketten in diesem ICorDebugThread-Objekt enthält.  
@@ -50,11 +50,11 @@ HRESULT EnumerateChains (
   
  Möglicherweise möchte ein Debugger die physischen Aufruf Listen aller Threads in logischen Aufruf Listen neu anordnen. Dies würde dazu führen, dass alle Threads der Threads nach ihren Aufrufer-/Aufgerufener-Beziehungen sortiert und erneut gruppiert werden.  
   
-## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   
  **Bibliothek:** CorGuids.lib  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

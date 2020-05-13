@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: bd9936a6-cc24-4869-8761-0988664464e6
 topic_type:
 - apiref
-ms.openlocfilehash: bab6b7f683b5563cf362366dfb007f83caeee12d
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 4883c208468db0096bed3ff8cf4a8ed50a5d7cc6
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76791937"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83379230"
 ---
 # <a name="icordebugremotetarget-interface"></a>ICorDebugRemoteTarget-Schnittstelle
 Stellt Methoden bereit, die es Entwicklern ermöglichen, Silverlight-basierte Anwendungen in der Umgebung der Common Language Runtime (CLR) zu debuggen.  
@@ -41,15 +41,15 @@ interface ICorDebugRemoteTarget  : IUnknown
   
 ## <a name="methods"></a>Methoden  
   
-|-Methode|Beschreibung|  
+|Methode|Beschreibung|  
 |------------|-----------------|  
 |[ICorDebugRemoteTarget::GetHostName-Methode](icordebugremotetarget-gethostname-method.md)|Gibt den Hostnamen oder die IP-Adresse eines Remotecomputers zurück.|  
   
 ## <a name="remarks"></a>Hinweise  
  Debuggen im gemischten Modus (verwalteter und nativer Code) wird unter Windows 95, Windows 98 und Windows Me sowie auf Nicht-x86-Plattformen (z. B. IA-64 und AMD64) nicht unterstützt.  
   
-## <a name="requirements"></a>-Anforderungen  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Cordebug. idl  
   
@@ -61,4 +61,4 @@ interface ICorDebugRemoteTarget  : IUnknown
 
 - [ICorDebugRemote-Schnittstelle](icordebugremote-interface.md)
 - [ICorDebug-Schnittstelle](icordebug-interface.md)
-- [Debuggen von Schnittstellen](debugging-interfaces.md)
+- [Debugschnittstellen](debugging-interfaces.md)

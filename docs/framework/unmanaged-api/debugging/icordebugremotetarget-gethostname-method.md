@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1c7276f7-7e54-470c-808c-e13745ac07a1
 topic_type:
 - apiref
-ms.openlocfilehash: f177d441da3bd967750781e487d9fed42bc132f5
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 020724c422af7cba0165e6f37d0eacb7742153ec
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76791945"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83379272"
 ---
 # <a name="icordebugremotetargetgethostname-method"></a>ICorDebugRemoteTarget::GetHostName-Methode
 Gibt den vollqualifizierten Domänennamen oder die IPv4-Adresse des Remotedebugging-Zielcomputers zurück. IPV6 wird zurzeit nicht unterstützt.  
@@ -35,12 +35,12 @@ HRESULT GetHostName (
             WCHAR szHostName[]  
 ```  
   
-## <a name="parameters"></a>Parameters  
+## <a name="parameters"></a>Parameter  
  `cchHostName`  
  [in] Die Größe des `szHostName`-Puffers in Zeichen. Wenn dieser Parameter 0 (Null) ist, muss `szHostName` NULL sein.  
   
  `pcchHostName`  
- [out] Die Anzahl der Zeichen einschließlich eines NULL-Terminators im Hostnamen oder in der IP-Adresse. Dieser Parameter kann null sein.  
+ [out] Die Anzahl der Zeichen einschließlich eines NULL-Terminators im Hostnamen oder in der IP-Adresse. Dieser Parameter kann NULL sein.  
   
  `szHostName`  
  [out] Puffer, der den Hostnamen oder die IP-Adresse enthält.  
@@ -53,10 +53,10 @@ HRESULT GetHostName (
  Fehler beim Zurückgeben des Hostnamens oder der IP-Adresse.  
   
 ## <a name="remarks"></a>Hinweise  
- Diese Methode wird vom Debugger-Writer implementiert. Er muss dem Paradigma für mehrere Aufrufe folgen: beim ersten Aufruf übergibt der Aufrufer NULL an `cchHostName` und `szHostName`, und `pcchHostName` gibt die Größe des erforderlichen Puffers zurück. Beim zweiten Aufruf wird die Größe, die zuvor zurückgegeben wurde, an `cchHostName` übergeben, und ein entsprechend skalierten Puffer wird an `szHostName` übergeben.  
+ Diese Methode wird vom Debugger-Writer implementiert. Er muss dem Paradigma für mehrere Aufrufe folgen: beim ersten Aufruf übergibt der Aufrufer NULL an `cchHostName` und und `szHostName` `pcchHostName` gibt die Größe des erforderlichen Puffers zurück. Beim zweiten Aufruf wird die Größe, die zuvor zurückgegeben wurde, an `cchHostName` übergeben, und ein entsprechend skalierten Puffer wird an `szHostName` übergeben.  
   
-## <a name="requirements"></a>-Anforderungen  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Cordebug. idl  
   

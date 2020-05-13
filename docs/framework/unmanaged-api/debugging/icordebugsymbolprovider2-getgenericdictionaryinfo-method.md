@@ -2,12 +2,12 @@
 title: ICorDebugSymbolProvider2::GetGenericDictionaryInfo-Methode
 ms.date: 03/30/2017
 ms.assetid: ba28fe4e-5491-4670-bff7-7fde572d7593
-ms.openlocfilehash: 02ecaf56e845680472f42c04f3978e54e7a69272
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: a6c32b72c5924399aeb13d56ddf9242fe7990f35
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76791510"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83379324"
 ---
 # <a name="icordebugsymbolprovider2getgenericdictionaryinfo-method"></a>ICorDebugSymbolProvider2::GetGenericDictionaryInfo-Methode
 
@@ -21,10 +21,10 @@ HRESULT GetGenericDictionaryInfo(
 );
 ```
 
-## <a name="parameters"></a>Parameters
+## <a name="parameters"></a>Parameter
 
 `ppMemoryBuffer`\
-vorgenommen Ein Zeiger auf die Adresse eines [icorentbugmemorybuffer](icordebugmemorybuffer-interface.md) -Objekts, das die generische Wörterbuch Zuordnung enthält. Weitere Informationen finden Sie im Abschnitt Hinweise.
+vorgenommen Ein Zeiger auf die Adresse eines [icorentbugmemorybuffer](icordebugmemorybuffer-interface.md) -Objekts, das die generische Wörterbuch Zuordnung enthält. Weitere Informationen finden Sie im Abschnitt zu den Hinweisen.
 
 ## <a name="remarks"></a>Hinweise
 
@@ -57,7 +57,7 @@ Der Verzeichnisteil der generischen Wörterbuchzuordnung weist die folgende Stru
 
 ## <a name="the-heap"></a>Der Heap
 
-Die Größe des Heaps kann von einem StreamReader durch Subtrahieren der Länge des Datenstroms von der Verzeichnisgröße + 4 berechnet werden. Anders ausgedrückt:
+Die Größe des Heaps kann von einem StreamReader durch Subtrahieren der Länge des Datenstroms von der Verzeichnisgröße + 4 berechnet werden. Anders gesagt:
 
 ```csharp
 Heap Size = Stream.Length – (Directory Size + 4)
@@ -75,17 +75,17 @@ Das folgende Format wird für jedes Instanziierungsinformationselement auf dem H
 
 Die Berücksichtigung der Länge für jedes Heapelement ermöglicht eine einfache Sortierung des Verzeichnisabschnitts ohne Auswirkungen auf den Heap.
 
-## <a name="requirements"></a>-Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
-**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).
+**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).
 
 **Header:** CorDebug.idl, CorDebug.h
 
 **Bibliothek:** CorGuids.lib
 
-**.NET Framework Versionen:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]
+**.NET Framework Versionen:**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]
 
 ## <a name="see-also"></a>Siehe auch
 
 - [ICorDebugSymbolProvider2-Schnittstelle](icordebugsymbolprovider2-interface.md)
-- [Debuggen von Schnittstellen](debugging-interfaces.md)
+- [Debugschnittstellen](debugging-interfaces.md)

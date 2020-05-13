@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c55e35d9-f9aa-4268-94b5-dce44c61acf2
 topic_type:
 - apiref
-ms.openlocfilehash: 64f6bc9abb8105cdfa942c2aaca71994e8a91765
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: f2850e6c9cbb2250a08ab4a0e34c69e377d3a23d
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76791413"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83375855"
 ---
 # <a name="icordebugthread3createstackwalk-method"></a>ICorDebugThread3::CreateStackWalk-Methode
 Erstellt ein [ICorDebugStackWalk](icordebugstackwalk-interface.md) -Objekt für den Thread, dessen Stapel entladen werden soll.  
@@ -31,33 +31,33 @@ Erstellt ein [ICorDebugStackWalk](icordebugstackwalk-interface.md) -Objekt für 
 HRESULT CreateStackWalk([out] ICorDebugStackWalk **ppStackWalk);  
 ```  
   
-## <a name="parameters"></a>Parameters  
+## <a name="parameters"></a>Parameter  
  `ppStackWalk`  
  vorgenommen Ein Zeiger auf die Adresse des [ICorDebugStackWalk](icordebugstackwalk-interface.md) -Objekts für den Thread, dessen Stapel entladen werden soll.  
   
 ## <a name="return-value"></a>Rückgabewert  
  Diese Methode gibt die folgenden spezifischen HRESULTs sowie HRESULT-Fehler zurück, die Methodenfehler anzeigen.  
   
-|HRESULT|Beschreibung|  
+|HRESULT|BESCHREIBUNG|  
 |-------------|-----------------|  
 |S_OK|Das `ICorDebugStackWalk` Objekt wurde erfolgreich erstellt.|  
-|E_FAIL|Das `ICorDebugStackWalk`-Objekt wurde nicht erstellt.|  
+|E_FAIL|Das `ICorDebugStackWalk` Objekt wurde nicht erstellt.|  
   
 ## <a name="exceptions"></a>Ausnahmen  
   
 ## <a name="remarks"></a>Hinweise  
- Wenn die `CreateStackWalk`-Methode erfolgreich ist, wird der Kontext des zurückgegebenen `ICorDebugStackWalk` Objekts auf den aktuellen Kontext des Threads festgelegt.  
+ Wenn die `CreateStackWalk` Methode erfolgreich ist, wird der Kontext des zurückgegebenen `ICorDebugStackWalk` Objekts auf den aktuellen Kontext des Threads festgelegt.  
   
-## <a name="requirements"></a>-Anforderungen  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   
  **Bibliothek:** CorGuids.lib  
   
- **.NET Framework Versionen:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Debuggen von Schnittstellen](debugging-interfaces.md)
+- [Debugschnittstellen](debugging-interfaces.md)
 - [Debuggen](index.md)

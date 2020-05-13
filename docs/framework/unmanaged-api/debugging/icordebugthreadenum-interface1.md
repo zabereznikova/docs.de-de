@@ -14,36 +14,36 @@ helpviewer_keywords:
 ms.assetid: 796de687-7dd4-4b7b-a10b-8bf22dc7779f
 topic_type:
 - apiref
-ms.openlocfilehash: 6de2cb7c1a1423c5bd38a6f2e5d01c39166ab119
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 82a7689bb1848d89f5dee4482d8dc7685c9c5b5c
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76791321"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83378336"
 ---
 # <a name="icordebugthreadenum-interface"></a>ICorDebugThreadEnum-Schnittstelle
 Implementiert ICorDebugEnum-Methoden und listet ICorDebugThread-Arrays auf.  
   
 ## <a name="methods"></a>Methoden  
   
-|-Methode|Beschreibung|  
+|Methode|Beschreibung|  
 |------------|-----------------|  
-|[Next-Methode](icordebugthreadenum-next-method.md)|Ruft die angegebene Anzahl von `ICorDebugThread` Instanzen aus der-Enumeration ab der aktuellen Position ab.|  
+|[Next-Methode](icordebugthreadenum-next-method.md)|Ruft die angegebene Anzahl von- `ICorDebugThread` Instanzen ab der aktuellen Position aus der-Enumeration ab.|  
   
 ## <a name="remarks"></a>Hinweise  
   
 > [!NOTE]
 > Diese Schnittstelle kann weder computerübergreifend noch prozessübergreifend remote aufgerufen werden.  
   
-## <a name="requirements"></a>-Anforderungen  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   
  **Bibliothek:** CorGuids.lib  
   
- **.NET Framework Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Debuggen von Schnittstellen](debugging-interfaces.md)
+- [Debugschnittstellen](debugging-interfaces.md)

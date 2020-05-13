@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: d6e64534-4d47-4ad0-a340-7590e07e2b4a
 topic_type:
 - apiref
-ms.openlocfilehash: 25ffbf73fbefbb3c584450283c3080dfc11ee598
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: ac42c6254182ea775377a448a54d527b234c97dc
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76791244"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83379923"
 ---
 # <a name="icordebugtypegettype-method"></a>ICorDebugType::GetType-Methode
-Ruft einen korelementtype-Wert ab, der den systemeigenen Typ des von diesem ICorDebugType dargestellten Common Language Runtime (CLR) <xref:System.Type> beschreibt.  
+Ruft einen korelementtype-Wert ab, der den systemeigenen Typ des Common Language Runtime (CLR) beschreibt, der <xref:System.Type> durch diesen ICorDebugType dargestellt wird.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -33,18 +33,18 @@ HRESULT GetType (
 );  
 ```  
   
-## <a name="parameters"></a>Parameters  
+## <a name="parameters"></a>Parameter  
  `ty`  
- vorgenommen Ein Zeiger auf einen Wert der `CorElementType`-Enumeration, die die CLR-<xref:System.Type> angibt, die dieser `ICorDebugType` darstellt.  
+ vorgenommen Ein Zeiger auf einen Wert der- `CorElementType` Enumeration, der die CLR angibt <xref:System.Type> , die dieser `ICorDebugType` darstellt.  
   
 ## <a name="remarks"></a>Hinweise  
- Wenn der Wert `ty` entweder ELEMENT_TYPE_CLASS oder ELEMENT_TYPE_VALUETYPE ist, kann die [ICorDebugType:: GetClass](icordebugtype-getclass-method.md) -Methode aufgerufen werden, um den nicht instanziierten Typ für einen generischen Typ zu erhalten. Andernfalls sollten Sie `ICorDebugType::GetClass`nicht aufzurufen.  
+ Wenn der Wert von `ty` entweder ELEMENT_TYPE_CLASS oder ELEMENT_TYPE_VALUETYPE ist, kann die [ICorDebugType:: GetClass](icordebugtype-getclass-method.md) -Methode aufgerufen werden, um den nicht instanziierten Typ für einen generischen Typ abzurufen. andernfalls dürfen Sie nicht aufrufen `ICorDebugType::GetClass` .  
   
-## <a name="requirements"></a>-Anforderungen  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   
  **Bibliothek:** CorGuids.lib  
   
- **.NET Framework Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

@@ -2,12 +2,12 @@
 title: ICorDebugSymbolProvider::GetInstanceFieldSymbols-Methode
 ms.date: 03/30/2017
 ms.assetid: a29b9233-ee67-4b53-b8bc-c00b281e7edb
-ms.openlocfilehash: 9c55ce4d36681e173047cfb51515a74899c5a9fe
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 9ecc61ed6cac73a519f33e00cbfbfecc20ac2ebe
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76791636"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83379634"
 ---
 # <a name="icordebugsymbolprovidergetinstancefieldsymbols-method"></a>ICorDebugSymbolProvider::GetInstanceFieldSymbols-Methode
 Ruft die Instanzenfeldsymbole ab, die einer TypeSpec-Signatur entsprechen.  
@@ -24,7 +24,7 @@ HRESULT GetInstanceFieldSymbols(
 );  
 ```  
   
-## <a name="parameters"></a>Parameters  
+## <a name="parameters"></a>Parameter  
  `cbSignature`  
  [in] Die Anzahl der Bytes im `typeSig`-Array.  
   
@@ -45,17 +45,17 @@ HRESULT GetInstanceFieldSymbols(
 > [!NOTE]
 > Diese Methode ist nur mit .NET Native verfügbar.  
   
-## <a name="requirements"></a>-Anforderungen  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   
  **Bibliothek:** CorGuids.lib  
   
- **.NET Framework Versionen:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **.NET Framework Versionen:**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
 
 - [GetStaticFieldSymbols-Methode](icordebugsymbolprovider-getstaticfieldsymbols-method.md)
 - [ICorDebugSymbolProvider-Schnittstelle](icordebugsymbolprovider-interface.md)
-- [Debuggen von Schnittstellen](debugging-interfaces.md)
+- [Debugschnittstellen](debugging-interfaces.md)

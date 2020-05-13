@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a7e6c54e-7be9-4e52-bbb4-95f52458e8e4
 topic_type:
 - apiref
-ms.openlocfilehash: 39833b689f28437b4241d9cb15fb4a92b2f9bcc3
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 366b5124cc66a4e9a1c3bd4e77f604f15ba8d8a8
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76791373"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83379672"
 ---
 # <a name="icordebugthread4getblockingobjects-method"></a>ICorDebugThread4::GetBlockingObjects-Methode
 Stellt eine geordnete Enumeration von [CorDebugBlockingObject](cordebugblockingobject-structure.md) -Strukturen bereit, die Thread Blockierungs Informationen bereitstellen.  
@@ -32,7 +32,7 @@ HRESULT GetBlockingObjects (
     [out] ICorDebugBlockingObjectEnum **ppBlockingObjectEnum  
 ```  
   
-## <a name="parameters"></a>Parameters  
+## <a name="parameters"></a>Parameter  
  `ppBlockingObjectEnum`  
  vorgenommen Ein Zeiger auf eine geordnete Enumeration von [corentbugblockingobject](cordebugblockingobject-structure.md) -Strukturen.  
   
@@ -47,17 +47,17 @@ HRESULT GetBlockingObjects (
   
  Wenn ein Thread blockiert wird und der Fehler nicht bestimmt werden kann, gibt die Methode ein HRESULT zurück, das einen Fehler anzeigt. Andernfalls wird S_OK zurückgegeben.  
   
-## <a name="requirements"></a>-Anforderungen  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   
  **Bibliothek:** CorGuids.lib  
   
- **.NET Framework Versionen:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
 
 - [ICorDebugThread4-Schnittstelle](icordebugthread4-interface.md)
-- [Debuggen von Schnittstellen](debugging-interfaces.md)
+- [Debugschnittstellen](debugging-interfaces.md)
 - [Debuggen](index.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f0922545-c2cf-40c8-9ef6-ca033563e682
 topic_type:
 - apiref
-ms.openlocfilehash: 2e49dd95cf5d78c0a0f4fa075126eca19dea2693
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: e8d59d617efa7656a3034d5c5e009a46b6121cdb
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73138714"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83377661"
 ---
 # <a name="icordebugthread2getvolatileosthreadid-method"></a>ICorDebugThread2::GetVolatileOSThreadID-Methode
 Ruft den Thread Bezeichner des Betriebssystems für dieses ICorDebugThread2 ab.  
@@ -37,11 +37,11 @@ HRESULT GetVolatileOSThreadID (
  `pdwTid`  
  vorgenommen Der Thread Bezeichner des Betriebssystems für diesen Thread.  
   
-## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   
  **Bibliothek:** CorGuids.lib  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

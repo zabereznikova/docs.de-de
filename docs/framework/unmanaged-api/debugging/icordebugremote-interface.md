@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 53d073c6-fa02-40d2-82e1-b9452bb6abaa
 topic_type:
 - apiref
-ms.openlocfilehash: 0cc79c0a93fa4f05b8c793a8b7fb0b9b3f031b1a
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: ef11aa48f679592126f736c2877c697f02cb5e62
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76791957"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83379249"
 ---
 # <a name="icordebugremote-interface"></a>ICorDebugRemote-Schnittstelle
 Bietet die Möglichkeit, einen verwalteten Debugger an einen Remotezielprozess anzufügen oder dort zu starten.  
@@ -58,7 +58,7 @@ interface ICorDebugRemote : IUnknown
   
 ## <a name="methods"></a>Methoden  
   
-|-Methode|Beschreibung|  
+|Methode|Beschreibung|  
 |------------|-----------------|  
 |[ICorDebugRemote::CreateProcessEx-Methode](icordebugremote-createprocessex-method.md)|Erstellt einen Prozess auf einem Remote Computer für verwaltetes Debuggen.|  
 |[ICorDebugRemote::DebugActiveProcessEx-Methode](icordebugremote-debugactiveprocessex-method.md)|Startet einen Prozess auf einem Remote Computer unter dem Debugger.|  
@@ -66,8 +66,8 @@ interface ICorDebugRemote : IUnknown
 ## <a name="remarks"></a>Hinweise  
  Diese Funktion wird zurzeit nur für das Debuggen eines Silverlight-basierten Anwendungs Ziels unterstützt, das auf einem Macintosh-Remote Computer ausgeführt wird.  
   
-## <a name="requirements"></a>-Anforderungen  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   
@@ -80,4 +80,4 @@ interface ICorDebugRemote : IUnknown
 - [ICorDebugRemoteTarget-Schnittstelle](icordebugremotetarget-interface.md)
 - [ICorDebug-Schnittstelle](icordebug-interface.md)
 
-- [Debuggen von Schnittstellen](debugging-interfaces.md)
+- [Debugschnittstellen](debugging-interfaces.md)

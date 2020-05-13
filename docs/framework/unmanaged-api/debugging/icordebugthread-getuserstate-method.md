@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ae0cfd73-8ead-4d36-9310-dccaac9db0bd
 topic_type:
 - apiref
-ms.openlocfilehash: f3511ff5ee9b9221037c64a5e17d61f6bf52e5f3
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: d1ff3427feb5dc8395bbb2fda78e3e93e1a1a8f0
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73133421"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83378858"
 ---
 # <a name="icordebugthreadgetuserstate-method"></a>ICorDebugThread::GetUserState-Methode
 Ruft den aktuellen Benutzer Zustand dieses ICorDebugThread ab.  
@@ -40,11 +40,11 @@ HRESULT GetUserState (
 ## <a name="remarks"></a>Hinweise  
  Der Benutzer Zustand des Threads ist der Zustand des Threads, wenn er von dem Programm überprüft wird, das gerade deentschlgt wird. Für einen Thread sind möglicherweise mehrere State-Bits festgelegt.  
   
-## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   
  **Bibliothek:** CorGuids.lib  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

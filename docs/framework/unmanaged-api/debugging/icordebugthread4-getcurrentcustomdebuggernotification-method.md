@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 57e0f2d2-5f0e-4e2d-99ec-3f26632eb693
 topic_type:
 - apiref
-ms.openlocfilehash: a8a377074ca1005ad8089dfd8e2a6a464bb86f60
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 76ad1c0ac421f05cf30f6d3d1f3e65848796a0c7
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76791357"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83378697"
 ---
 # <a name="icordebugthread4getcurrentcustomdebuggernotification-method"></a>ICorDebugThread4::GetCurrentCustomDebuggerNotification-Methode
 
@@ -34,27 +34,27 @@ HRESULT GetCurrentCustomDebuggerNotification(
     );
 ```
 
-## <a name="parameters"></a>Parameters
+## <a name="parameters"></a>Parameter
 
 `ppNotificationObject`\
-vorgenommen Ein Zeiger auf das aktuelle `ICorDebugManagedCallback3::CustomNotification`-Objekt im aktuellen Thread.
+vorgenommen Ein Zeiger auf das aktuelle- `ICorDebugManagedCallback3::CustomNotification` Objekt im aktuellen Thread.
 
 ## <a name="remarks"></a>Hinweise
 
 Der Wert von `ppNotificationObject` ist NULL, wenn die Methode nicht innerhalb eines `ICorDebugManagedCallback3::CustomNotification` Rückrufs aufgerufen wird, oder, wenn kein Aktuelles Benachrichtigungs Objekt vorhanden ist.
 
-## <a name="requirements"></a>-Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
-**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).
+**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).
 
 **Header:** CorDebug.idl, CorDebug.h
 
 **Bibliothek:** CorGuids.lib
 
-**.NET Framework Versionen:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]
+**.NET Framework Versionen:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]
 
 ## <a name="see-also"></a>Siehe auch
 
 - [ICorDebugThread4-Schnittstelle](icordebugthread4-interface.md)
-- [Debuggen von Schnittstellen](debugging-interfaces.md)
+- [Debugschnittstellen](debugging-interfaces.md)
 - [Debuggen](index.md)

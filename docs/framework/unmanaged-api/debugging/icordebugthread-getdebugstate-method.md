@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9be27b0c-1d99-4722-b0d4-40cf6753ce5c
 topic_type:
 - apiref
-ms.openlocfilehash: f054f8f2bd7c322e722a1e17290ba6fbad9e37b0
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 13125f60f596cb8a80d9c42c51a979f632de494b
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73133507"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83379759"
 ---
 # <a name="icordebugthreadgetdebugstate-method"></a>ICorDebugThread::GetDebugState-Methode
 Ruft den aktuellen Debugzustand dieses ICorDebugThread-Objekts ab.  
@@ -38,13 +38,13 @@ HRESULT GetDebugState (
  vorgenommen Ein Zeiger auf eine bitweise Kombination von CorDebugThreadState-Enumerationswerten, die den aktuellen Debugzustand dieses Threads beschreibt.  
   
 ## <a name="remarks"></a>Hinweise  
- Wenn der Prozess derzeit beendet ist, stellt `pState` den Debugzustand dar, der für diesen Thread vorhanden wäre, wenn der Prozess fortgesetzt werden soll, nicht den tatsächlichen aktuellen Zustand dieses Threads.  
+ Wenn der Prozess aktuell beendet ist, `pState` stellt den Debugzustand dar, der für diesen Thread vorhanden wäre, wenn der Prozess fortgesetzt werden soll, und nicht den tatsächlichen aktuellen Zustand dieses Threads.  
   
-## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   
  **Bibliothek:** CorGuids.lib  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

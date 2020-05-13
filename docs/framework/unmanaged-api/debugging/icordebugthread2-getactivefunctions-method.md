@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 27fae01a-ecec-423a-973e-24f8de55826c
 topic_type:
 - apiref
-ms.openlocfilehash: 9b9a301714ea60b4e3220eb75721e56e39bd9659
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: e064a7db131a671adc4d0b6df522f3456e3a31d5
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73139932"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83377153"
 ---
 # <a name="icordebugthread2getactivefunctions-method"></a>ICorDebugThread2::GetActiveFunctions-Methode
 Ruft Informationen über die aktive Funktion in den einzelnen Rahmen dieses Threads ab.  
@@ -41,7 +41,7 @@ HRESULT GetActiveFunctions (
  [in] Die Größe des `pFunctions`-Arrays.  
   
  `pcFunctions`  
- vorgenommen Ein Zeiger auf die Anzahl der-Objekte, die im `pFunctions` Array zurückgegeben werden. Die Anzahl der zurückgegebenen Objekte ist gleich der Anzahl der verwalteten Frames auf dem Stapel.  
+ vorgenommen Ein Zeiger auf die Anzahl der-Objekte, die im-Array zurückgegeben werden `pFunctions` . Die Anzahl der zurückgegebenen Objekte ist gleich der Anzahl der verwalteten Frames auf dem Stapel.  
   
  `pFunctions`  
  [in, out] Ein Array von COR_ACTIVE_FUNCTION-Objekten, von denen jede Informationen über die aktiven Funktionen in den Frames dieses Threads enthält.  
@@ -49,15 +49,15 @@ HRESULT GetActiveFunctions (
  Das erste-Element wird für den blattrahmen verwendet usw. zurück zum Stamm des Stapels.  
   
 ## <a name="remarks"></a>Hinweise  
- Wenn `pFunctions` bei Eingabe NULL ist, gibt `GetActiveFunctions` nur die Anzahl der Funktionen zurück, die sich auf dem Stapel befinden. Das heißt, wenn `pFunctions` bei Eingabe NULL ist, gibt `GetActiveFunctions` nur in `pcFunctions`einen Wert zurück.  
+ Wenn `pFunctions` bei Eingabe NULL ist, `GetActiveFunctions` gibt nur die Anzahl der Funktionen zurück, die sich auf dem Stapel befinden. Das heißt, wenn `pFunctions` bei Eingabe NULL ist, `GetActiveFunctions` gibt nur in einen Wert zurück `pcFunctions` .  
   
- Die `GetActiveFunctions`-Methode ist als Optimierung gedacht, um die gleichen Informationen aus Frames in einer Stapel Überwachung zu erhalten, und schließt nur Frames ein, die ein ICorDebugILFrame-Objekt für Sie in der vollständigen Stapel Überwachung hätten.  
+ Die `GetActiveFunctions` -Methode ist als Optimierung gedacht, um die gleichen Informationen aus Frames in einer Stapel Überwachung zu erhalten, und schließt nur Frames ein, die ein ICorDebugILFrame-Objekt für Sie in der vollständigen Stapel Überwachung hätten.  
   
-## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   
  **Bibliothek:** CorGuids.lib  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

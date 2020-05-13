@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6ba3c6ee-4ba1-4c98-bf1e-8531acd3da09
 topic_type:
 - apiref
-ms.openlocfilehash: d5f2838007504e56ad44614a6778083be046629f
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 841af546cc3586529fe290c69e686438f634b90d
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73140073"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83377782"
 ---
 # <a name="icordebugthread2gettaskid-method"></a>ICorDebugThread2::GetTaskID-Methode
 Ruft den Bezeichner der Aufgabe ab, die auf diesem Thread ausgeführt wird.  
@@ -38,13 +38,13 @@ HRESULT GetTaskID (
  vorgenommen Ein Zeiger auf den Bezeichner der Aufgabe, die auf dem Thread ausgeführt wird, der durch dieses ICorDebugThread2-Objekt dargestellt wird.  
   
 ## <a name="remarks"></a>Hinweise  
- Ein Task kann nur auf dem Thread ausgeführt werden, wenn der Thread einer Verbindung zugeordnet ist. `GetTaskID` gibt in `pTaskId` 0 (null) zurück, wenn der Thread keiner Verbindung zugeordnet ist.  
+ Ein Task kann nur auf dem Thread ausgeführt werden, wenn der Thread einer Verbindung zugeordnet ist. `GetTaskID`gibt 0 (null) zurück, `pTaskId` Wenn der Thread keiner Verbindung zugeordnet ist.  
   
-## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   
  **Bibliothek:** CorGuids.lib  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

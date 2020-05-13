@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 36605067-33d3-4579-9c72-fb0e551ab0f1
 topic_type:
 - apiref
-ms.openlocfilehash: 0c622e0eba27f501446d2b7d9d264ee0834e869c
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: f66ef88646c314502dcb610cec8ce822cab1fca2
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73133620"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83379281"
 ---
 # <a name="icordebugthreadcreateeval-method"></a>ICorDebugThread::CreateEval-Methode
 Erstellt ein ICorDebugEval-Objekt, das die Funktionalität dieses ICorDebugThread sammelt und verfügbar macht.  
@@ -40,11 +40,11 @@ HRESULT CreateEval (
 ## <a name="remarks"></a>Hinweise  
  Das Auswertungs Objekt überträgt eine neue Kette im Thread, bevor die Berechnung durchgeführt wird. Dadurch wird die derzeit auf dem Thread ausgeführte Berechnung unterbrochen, bis die Auswertung abgeschlossen ist.  
   
-## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   
  **Bibliothek:** CorGuids.lib  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

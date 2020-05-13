@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: dbc498a8-ba3f-42f2-bdd9-b623c77a1019
 topic_type:
 - apiref
-ms.openlocfilehash: 54a5fb50a0177fe9886582c112f16ce871ea9df4
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: b7a356d80d63fae65191bbf4fc0a23d7e02004c9
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76792064"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83378232"
 ---
 # <a name="icordebugregisterset2getregisters-method"></a>ICorDebugRegisterSet2::GetRegisters-Methode
 Ruft den Wert der einzelnen Register (für die Plattform, auf der der Code gerade ausgeführt wird) ab, die von der angegebenen Bitmaske angegeben wird.  
@@ -36,9 +36,9 @@ HRESULT GetRegisters (
 );  
 ```  
   
-## <a name="parameters"></a>Parameters  
+## <a name="parameters"></a>Parameter  
  `maskCount`  
- in Die Größe des `mask` Arrays in Bytes.  
+ in Die Größe des Arrays in Bytes `mask` .  
   
  `mask`  
  in Ein Bytearray, das jedem Bit entspricht, das einem Register entspricht. Wenn das Bit 1 ist, wird der zugehörige Registrierungs Wert abgerufen.  
@@ -47,25 +47,25 @@ HRESULT GetRegisters (
  in Die Anzahl der abzurufenden Registrierungs Werte.  
   
  `regBuffer`  
- vorgenommen Ein Array von `CORDB_REGISTER`-Objekten, von denen jede den Wert eines Register empfängt.  
+ vorgenommen Ein Array von- `CORDB_REGISTER` Objekten, von denen jede den Wert eines Register empfängt.  
   
 ## <a name="remarks"></a>Hinweise  
- Die `GetRegisters`-Methode gibt ein Array von Werten aus den Registern zurück, die von der Maske angegeben werden. Das Array enthält keine Werte von Registern, deren Masken Bit nicht festgelegt ist. Folglich muss die Größe des `regBuffer` Arrays gleich der Anzahl von 1 sein. Wenn der Wert von `regCount` für die Anzahl der von der Maske festgelegten Register zu klein ist, werden die Werte der höheren nummerierten Register vom Satz abgeschnitten. Wenn `regCount` zu groß ist, werden die nicht verwendeten `regBuffer` Elemente unverändert geändert.  
+ Die- `GetRegisters` Methode gibt ein Array von Werten aus den Registern zurück, die von der Maske angegeben werden. Das Array enthält keine Werte von Registern, deren Masken Bit nicht festgelegt ist. Folglich muss die Größe des `regBuffer` Arrays mit der Anzahl von 1 in der Maske identisch sein. Wenn der Wert von `regCount` zu klein für die Anzahl der von der Maske festgelegten Register ist, werden die Werte der höher nummerierten Register von der Menge abgeschnitten. Wenn `regCount` zu groß ist, werden die `regBuffer` nicht verwendeten Elemente unverändert geändert.  
   
  Wenn ein nicht verfügbares Register durch die Maske angegeben wird, wird für dieses Register ein unbestimmter Wert zurückgegeben.  
   
- Die `ICorDebugRegisterSet2::GetRegisters`-Methode ist für Plattformen erforderlich, die über mehr als 64 Register verfügen. Beispielsweise hat ia64 128 allgemeine Register und 128 Gleit Komma Register, sodass Sie mehr als 64 Bits in der Bitmaske benötigen.  
+ Die- `ICorDebugRegisterSet2::GetRegisters` Methode ist für Plattformen erforderlich, die über mehr als 64 Register verfügen. Beispielsweise hat ia64 128 allgemeine Register und 128 Gleit Komma Register, sodass Sie mehr als 64 Bits in der Bitmaske benötigen.  
   
- Wenn Sie nicht über mehr als 64 Register verfügen, wie es bei Plattformen wie z. b. x86 der Fall ist, übersetzt die `GetRegisters`-Methode tatsächlich lediglich die Bytes im `mask` Bytearray in eine `ULONG64` und ruft dann die [ICorDebugRegisterSet:: GetRegisters](icordebugregisterset-getregisters-method.md) -Methode auf, die die `ULONG64` Maske annimmt.  
+ Wenn Sie nicht über mehr als 64 Register verfügen, wie es bei Plattformen wie z. b. x86 der Fall ist, `GetRegisters` übersetzt die Methode tatsächlich lediglich die Bytes im `mask` Bytearray in ein `ULONG64` und ruft dann die [ICorDebugRegisterSet:: GetRegisters](icordebugregisterset-getregisters-method.md) -Methode auf, die die `ULONG64` Maske annimmt.  
   
-## <a name="requirements"></a>-Anforderungen  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   
  **Bibliothek:** CorGuids.lib  
   
- **.NET Framework Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
 

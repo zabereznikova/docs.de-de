@@ -2,12 +2,12 @@
 title: ICorDebugSymbolProvider::GetMethodParameterSymbols-Methode
 ms.date: 03/30/2017
 ms.assetid: 58b7c0b9-f6ad-4b49-b92d-0e421cfd0ec6
-ms.openlocfilehash: a940077e50ff251111ca6eedaee49401775644d3
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 051002b547aaa9745ae4efb516211123089c3128
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76791598"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83379599"
 ---
 # <a name="icordebugsymbolprovidergetmethodparametersymbols-method"></a>ICorDebugSymbolProvider::GetMethodParameterSymbols-Methode
 Ruft die Parametersymbole einer Methode ab, wenn die relative virtuelle Adresse (RVA) der Methode angegeben ist.  
@@ -23,7 +23,7 @@ HRESULT GetMethodParameterSymbols(
 );  
 ```  
   
-## <a name="parameters"></a>Parameters  
+## <a name="parameters"></a>Parameter  
  `nativeRVA`  
  [in] Die systemeigene relative virtuelle Adresse der Methode.  
   
@@ -41,17 +41,17 @@ HRESULT GetMethodParameterSymbols(
 > [!NOTE]
 > Diese Methode ist nur mit .NET Native verfügbar.  
   
-## <a name="requirements"></a>-Anforderungen  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   
  **Bibliothek:** CorGuids.lib  
   
- **.NET Framework Versionen:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **.NET Framework Versionen:**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
 
 - [GetMethodLocalSymbols-Methode](icordebugsymbolprovider-getmethodlocalsymbols-method.md)
 - [ICorDebugSymbolProvider-Schnittstelle](icordebugsymbolprovider-interface.md)
-- [Debuggen von Schnittstellen](debugging-interfaces.md)
+- [Debugschnittstellen](debugging-interfaces.md)

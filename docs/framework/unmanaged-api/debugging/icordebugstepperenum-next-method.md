@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d0ea0f30-e8d2-48b0-8477-e1a029ceb4dd
 topic_type:
 - apiref
-ms.openlocfilehash: 11d9c7393827b613d49e23972b4896bfe657a544
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 293d1a9cd93b5ce45105427e7df864ad8bfbe77a
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73138986"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83379194"
 ---
 # <a name="icordebugstepperenumnext-method"></a>ICorDebugStepperEnum::Next-Methode
 Ruft die angegebene Anzahl von icorentbugstepper-Instanzen aus der-Enumeration ab, beginnend bei der aktuellen Position.  
@@ -38,19 +38,19 @@ HRESULT Next(
   
 ## <a name="parameters"></a>Parameter  
  `celt`  
- in Die Anzahl der `ICorDebugStepper` Instanzen, die abgerufen werden sollen.  
+ in Die Anzahl der `ICorDebugStepper` abzurufenden Instanzen.  
   
  `steppers`  
- vorgenommen Ein Array von Zeigern, von denen jedes auf ein `ICorDebugStepper` Objekt zeigt.  
+ vorgenommen Ein Array von Zeigern, von denen jedes auf ein `ICorDebugStepper` Objekt verweist.  
   
  `pceltFetched`  
- vorgenommen Ein Zeiger auf die Anzahl von `ICorDebugStepper` Instanzen, die tatsächlich zurückgegeben wurden. Dieser Wert kann NULL sein, wenn `celt` ein Wert ist.  
+ vorgenommen Ein Zeiger auf die Anzahl der `ICorDebugStepper` tatsächlich zurückgegebenen Instanzen. Dieser Wert kann NULL sein, wenn `celt` ein Wert ist.  
   
-## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   
  **Bibliothek:** CorGuids.lib  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
