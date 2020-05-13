@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 879d2311-0ff1-4616-a8b3-959ea5868b2e
 topic_type:
 - apiref
-ms.openlocfilehash: 39175e338e4fd98dd4af1325138da732ed81c764
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 7bf73266f0269cfcd5371c5155856800036cc066
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73137919"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83209837"
 ---
 # <a name="icordebugframegetfunction-method"></a>ICorDebugFrame::GetFunction-Methode
 Ruft die Funktion ab, die den Code enthält, der diesem Stapel Rahmen zugeordnet ist.  
@@ -38,13 +38,13 @@ HRESULT GetFunction (
  vorgenommen Ein Zeiger auf die Adresse eines ICorDebugFunction-Objekts, das die Funktion darstellt, die den Code enthält, der diesem Stapel Rahmen zugeordnet ist.  
   
 ## <a name="remarks"></a>Hinweise  
- Bei der `GetFunction`-Methode tritt möglicherweise ein Fehler auf, wenn der Frame keiner bestimmten Funktion zugeordnet ist.  
+ Die `GetFunction` Methode schlägt möglicherweise fehl, wenn der Frame keiner bestimmten Funktion zugeordnet ist.  
   
-## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   
  **Bibliothek:** CorGuids.lib  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

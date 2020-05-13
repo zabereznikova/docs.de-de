@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ddf9085c-7161-44bd-9609-cd2732b9009f
 topic_type:
 - apiref
-ms.openlocfilehash: 0809a149a5a5a5e9adea059140d7b4b456337ef3
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: e64e39d10d20f63430ffe9d2c4df8643e286a677
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73125304"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83210032"
 ---
 # <a name="icordebugmodule2resolveassembly-method"></a>ICorDebugModule2::ResolveAssembly-Methode
 
@@ -38,21 +38,21 @@ HRESULT ResolveAssembly (
 ## <a name="parameters"></a>Parameter
 
 `tkAssemblyRef`\
-in Ein `mdToken` Wert, der auf die Assembly verweist.
+in Ein- `mdToken` Wert, der auf die Assembly verweist.
 
 `ppAssembly`\
 vorgenommen Ein Zeiger auf die Adresse eines ICorDebug-Objekts, das die Assembly darstellt.
 
 ## <a name="remarks"></a>Hinweise
 
-Wenn die Assembly nicht bereits geladen ist, wenn `ResolveAssembly` aufgerufen wird, wird ein HRESULT-Wert von CORDBG_E_CANNOT_RESOLVE_ASSEMBLY zurückgegeben.
+Wenn die Assembly nicht bereits geladen ist `ResolveAssembly` , wenn aufgerufen wird, wird ein HRESULT-Wert von CORDBG_E_CANNOT_RESOLVE_ASSEMBLY zurückgegeben.
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
-**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).
+**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).
 
 **Header:** CorDebug.idl, CorDebug.h
 
 **Bibliothek:** CorGuids.lib
 
-**.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+**.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

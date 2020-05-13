@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ab18a509-dff3-4930-b585-bd15e0414176
 topic_type:
 - apiref
-ms.openlocfilehash: 328c10c1895f65b43dc365b1be6b4ec5ef01e720
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 2d0461709accf1a9300c072b62bd58734cb33fb8
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76777348"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83209811"
 ---
 # <a name="icordebugmanagedcallbackexception-method"></a>ICorDebugManagedCallback::Exception-Methode
 Benachrichtigt den Debugger, dass eine Ausnahme von verwaltetem Code ausgelöst wurde.  
@@ -35,27 +35,27 @@ HRESULT Exception (
 );  
 ```  
   
-## <a name="parameters"></a>Parameters  
+## <a name="parameters"></a>Parameter  
  `pAppDomain`  
  in Ein Zeiger auf ein ICorDebugAppDomain-Objekt, das die Anwendungsdomäne darstellt, in der die Ausnahme ausgelöst wurde.  
   
  `pThread`  
- [in] Ein Zeiger auf ein ICorDebugThread-Objekt, das den Thread darstellt, in dem die Ausnahme ausgelöst wurde.  
+ in Ein Zeiger auf ein ICorDebugThread-Objekt, das den Thread darstellt, in dem die Ausnahme ausgelöst wurde.  
   
  `unhandled`  
- in Wenn dieser Wert `false`ist, wurde die Ausnahme noch nicht von der Anwendung verarbeitet. Andernfalls wird die Ausnahme nicht behandelt, und der Prozess wird beendet.  
+ in Wenn dieser Wert ist `false` , wurde die Ausnahme noch nicht von der Anwendung verarbeitet; andernfalls wird die Ausnahme nicht behandelt, und der Prozess wird beendet.  
   
 ## <a name="remarks"></a>Hinweise  
  Die spezifische Ausnahme kann aus dem Thread Objekt abgerufen werden.  
   
-## <a name="requirements"></a>-Anforderungen  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   
  **Bibliothek:** CorGuids.lib  
   
- **.NET Framework Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
 

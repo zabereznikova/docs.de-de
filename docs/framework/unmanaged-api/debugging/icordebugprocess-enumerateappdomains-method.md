@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: d508981f-e2b2-445b-a649-69951c22702d
 topic_type:
 - apiref
-ms.openlocfilehash: 4489238df05edef384b4073ee738a184ff8809ff
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 748a44075f7f73e54bab689bcb8865dee2b14946
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79178675"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83207839"
 ---
 # <a name="icordebugprocessenumerateappdomains-method"></a>ICorDebugProcess::EnumerateAppDomains-Methode
-Zählt alle Anwendungsdomänen in diesem Prozess auf.  
+Listet alle Anwendungs Domänen in diesem Prozess auf.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -34,16 +34,16 @@ HRESULT EnumerateAppDomains(
   
 ## <a name="parameters"></a>Parameter  
  `ppAppDomains`  
- [out] Ein Zeiger auf die Adresse eines [ICorDebugAppDomainEnum,](icordebugappdomainenum-interface.md) das ein Enumerator für die Anwendungsdomänen in diesem Prozess ist.  
+ vorgenommen Ein Zeiger auf die Adresse eines [ICorDebugAppDomainEnum](icordebugappdomainenum-interface.md) , der ein Enumerator für die Anwendungs Domänen in diesem Prozess ist.  
   
-## <a name="remarks"></a>Bemerkungen  
- Diese Methode kann vor dem [ICorDebugManagedCallback::CreateProcess-Rückruf](icordebugmanagedcallback-createprocess-method.md) verwendet werden.  
+## <a name="remarks"></a>Hinweise  
+ Diese Methode kann vor dem [ICorDebugManagedCallback::](icordebugmanagedcallback-createprocess-method.md) -Rückruf verwendet werden.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   
  **Bibliothek:** CorGuids.lib  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

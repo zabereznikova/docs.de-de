@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1a67fa1b-2419-4cd0-aad4-6f46a0719b4b
 topic_type:
 - apiref
-ms.openlocfilehash: c071a7ddb7d8d3f0e6487ab85284c45f9a7f0372
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ad1a91e42f582ce96906da5cbf00ca89acb18499
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79178841"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83210292"
 ---
 # <a name="icordebugilframeenumeratelocalvariables-method"></a>ICorDebugILFrame::EnumerateLocalVariables-Methode
 Ruft einen Enumerator für die lokalen Variablen in diesem Frame ab.  
@@ -37,14 +37,14 @@ HRESULT EnumerateLocalVariables(
  `ppValueEnum`  
  [out] Ein Zeiger auf die Adresse eines ICorDebugValueEnum-Objekts, das den Enumerator für die lokale Variable im Rahmen darstellt.  
   
-## <a name="remarks"></a>Bemerkungen  
- `EnumerateLocalVariables`ruft einen Enumerator ab, der die lokalen Variablen auflisten kann, die im Aufrufframe verfügbar sind, der durch dieses ICorDebugILFrame-Objekt dargestellt wird. Die Liste enthält möglicherweise nicht alle lokalen Variablen in der laufenden Funktion, da einige von ihnen möglicherweise nicht aktiv sind.  
+## <a name="remarks"></a>Hinweise  
+ `EnumerateLocalVariables`Ruft einen Enumerator ab, der die lokalen Variablen auflisten kann, die in dem von diesem ICorDebugILFrame-Objekt dargestellten Aufrufframe verfügbar sind. Die Liste enthält möglicherweise nicht alle lokalen Variablen in der Funktion "wird ausgeführt", da einige von Ihnen möglicherweise nicht aktiv sind.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   
  **Bibliothek:** CorGuids.lib  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

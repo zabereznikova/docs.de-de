@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 18217ba1-1776-4297-a3b9-f77e64b0fead
 topic_type:
 - apiref
-ms.openlocfilehash: f30516a8f59b90de9b4c052d92a8c88575ace3c4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3890cb4236f113bc6efc23bfb606d19a525ec234
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79178825"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83210266"
 ---
 # <a name="icordebugilframegetip-method"></a>ICorDebugILFrame::GetIP-Methode
-Ruft den Wert des Anweisungszeigers und einen bitweisen Kombinationswert ab, der beschreibt, wie der Wert des Anweisungszeigers abgerufen wurde.  
+Ruft den Wert des Anweisungs Zeigers und einen bitweisen Kombinationswert ab, der beschreibt, wie der Wert des Anweisungs Zeigers abgerufen wurde.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -36,21 +36,21 @@ HRESULT GetIP (
   
 ## <a name="parameters"></a>Parameter  
  `pnOffset`  
- [out] Der Wert des Anweisungszeigers.  
+ vorgenommen Der Wert des Anweisungs Zeigers.  
   
  `pMappingResult`  
- [out] Ein Zeiger auf eine bitweise Kombination der CorDebugMappingResult-Enumerationswerte, die beschreiben, wie der Wert des Anweisungszeigers abgerufen wurde.  
+ vorgenommen Ein Zeiger auf eine bitweise Kombination der cordbugmappingresult-Enumerationswerte, die beschreiben, wie der Wert des Anweisungs Zeigers abgerufen wurde.  
   
-## <a name="remarks"></a>Bemerkungen  
- Der Wert des Anweisungszeigers ist der Offset des Stapelrahmens in den MSIL-Code (Microsoft Intermediate Language) der Funktion. Wenn der Stapelrahmen aktiv ist, ist diese Adresse die nächste auszuführende Anweisung. Wenn der Stapelrahmen nicht aktiv ist, ist diese Adresse die nächste Anweisung, die ausgeführt werden muss, wenn der Stapelrahmen erneut aktiviert wird.  
+## <a name="remarks"></a>Hinweise  
+ Der Wert des Anweisungs Zeigers ist der Offset des Stapel Rahmens im MSIL-Code (Microsoft Intermediate Language) der Funktion. Wenn der Stapel Rahmen aktiv ist, ist diese Adresse die nächste Anweisung, die ausgeführt werden soll. Wenn der Stapel Rahmen nicht aktiv ist, handelt es sich bei dieser Adresse um die nächste Anweisung, die ausgeführt werden soll, wenn der Stapel Rahmen erneut aktiviert wird.  
   
- Wenn es sich bei diesem Frame um einen Just-in-Time-Kompilierten Frame (JIT) handelt, wird der Wert des Anweisungszeigers durch Rückwärtszuordnung vom tatsächlichen systemeigenen Anweisungszeiger bestimmt, sodass der Wert nur annähernd sein kann.  
+ Handelt es sich bei diesem Frame um einen JIT-kompilierten Frame (Just-in-Time), wird der Wert des Anweisungs Zeigers durch die Zuordnung rückwärts aus dem eigentlichen systemeigenen Anweisungs Zeiger bestimmt, sodass der Wert nur ungefähre Werte aufweisen kann.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   
  **Bibliothek:** CorGuids.lib  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

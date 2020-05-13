@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 2221fd06-9e27-4113-972e-2530db8c3594
 topic_type:
 - apiref
-ms.openlocfilehash: f5af8e559b4fbfeb60530372185ca10104ade987
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5d0b231b4014e60a9e8778c6b9d6ed7758b2d8c5
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79178850"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83208472"
 ---
 # <a name="icordebugheapenumnext-method"></a>ICorDebugHeapEnum::Next-Methode
-Ruft die angegebene Anzahl von [COR_HEAPOBJECT](cor-heapobject-structure.md) Instanzen ab, die Informationen zu Objekten auf dem verwalteten Heap enthalten.  
+Ruft die angegebene Anzahl von [COR_HEAPOBJECT](cor-heapobject-structure.md) Instanzen ab, die Informationen zu Objekten im verwalteten Heap enthalten.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -39,24 +39,24 @@ HRESULT Next(
  [in] Die Anzahl der abzurufenden Objekte.  
   
  Objekte  
- [out] Ein Array von Zeigern, die jeweils auf ein [COR_HEAPOBJECT](cor-heapobject-structure.md) Objekt verweisen, das Informationen zu einem Objekt auf dem verwalteten Heap bereitstellt.  
+ vorgenommen Ein Array von Zeigern, von denen jedes auf ein [COR_HEAPOBJECT](cor-heapobject-structure.md) Objekt verweist, das Informationen zu einem Objekt auf dem verwalteten Heap bereitstellt.  
   
  pceltFetched  
- [out] Ein Zeiger auf die [COR_HEAPOBJECT](cor-heapobject-structure.md) Anzahl der `objects`COR_HEAPOBJECT Objekte, die tatsächlich in zurückgegeben werden. Dieser Wert kann `null` sein, wenn `celt` 1 ist.  
+ vorgenommen Ein Zeiger auf die Anzahl der [COR_HEAPOBJECT](cor-heapobject-structure.md) -Objekte, die tatsächlich in zurückgegeben werden `objects` . Dieser Wert kann `null` sein, wenn `celt` 1 ist.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Das `COR_HEAPOBJECT.type`-Feld ist der Bezeichner einer geschachtelten COM-Schnittstelle mit Referenzzählung. Diese Referenz muss von dem Aufrufer von `ICorDebugHeapEnum::Next` freigegeben werden.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   
  **Bibliothek:** CorGuids.lib  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [ICorDebugHeapEnum-Schnittstelle](icordebugheapenum-interface.md)
 - [Debugschnittstellen](debugging-interfaces.md)
