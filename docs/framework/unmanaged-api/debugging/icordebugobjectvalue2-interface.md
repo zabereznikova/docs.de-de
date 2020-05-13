@@ -14,37 +14,37 @@ helpviewer_keywords:
 ms.assetid: f93cc2ec-0a12-4499-9bf6-405dc58c9a81
 topic_type:
 - apiref
-ms.openlocfilehash: 566d4323bfd76a2189e1a8280465eb2dcde2a03a
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: a338116f6eae670cad785807ed580039fbd7fb78
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76792678"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83207409"
 ---
-# <a name="icordebugobjectvalue2-interface"></a><span data-ttu-id="34de8-102">ICorDebugObjectValue2-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="34de8-102">ICorDebugObjectValue2 Interface</span></span>
+# <a name="icordebugobjectvalue2-interface"></a><span data-ttu-id="6dfbd-102">ICorDebugObjectValue2-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="6dfbd-102">ICorDebugObjectValue2 Interface</span></span>
 
-<span data-ttu-id="34de8-103">Erweitert die ICorDebugObjectValue-Schnittstelle zur Unterstützung von Vererbung und über schreibungen.</span><span class="sxs-lookup"><span data-stu-id="34de8-103">Extends the "ICorDebugObjectValue" interface to support inheritance and overrides.</span></span>  
+<span data-ttu-id="6dfbd-103">Erweitert die ICorDebugObjectValue-Schnittstelle zur Unterstützung von Vererbung und über schreibungen.</span><span class="sxs-lookup"><span data-stu-id="6dfbd-103">Extends the "ICorDebugObjectValue" interface to support inheritance and overrides.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="34de8-104">Methoden</span><span class="sxs-lookup"><span data-stu-id="34de8-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="6dfbd-104">Methoden</span><span class="sxs-lookup"><span data-stu-id="6dfbd-104">Methods</span></span>  
   
-|<span data-ttu-id="34de8-105">-Methode</span><span class="sxs-lookup"><span data-stu-id="34de8-105">Method</span></span>|<span data-ttu-id="34de8-106">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="34de8-106">Description</span></span>|  
+|<span data-ttu-id="6dfbd-105">Methode</span><span class="sxs-lookup"><span data-stu-id="6dfbd-105">Method</span></span>|<span data-ttu-id="6dfbd-106">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="6dfbd-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="34de8-107">GetVirtualMethodAndType-Methode</span><span class="sxs-lookup"><span data-stu-id="34de8-107">GetVirtualMethodAndType Method</span></span>](icordebugobjectvalue2-getvirtualmethodandtype-method.md)|<span data-ttu-id="34de8-108">`GetVirtualMethodAndType` wurde noch nicht implementiert.</span><span class="sxs-lookup"><span data-stu-id="34de8-108">`GetVirtualMethodAndType` is not yet implemented.</span></span>|  
+|[<span data-ttu-id="6dfbd-107">GetVirtualMethodAndType-Methode</span><span class="sxs-lookup"><span data-stu-id="6dfbd-107">GetVirtualMethodAndType Method</span></span>](icordebugobjectvalue2-getvirtualmethodandtype-method.md)|<span data-ttu-id="6dfbd-108">`GetVirtualMethodAndType`wurde noch nicht implementiert.</span><span class="sxs-lookup"><span data-stu-id="6dfbd-108">`GetVirtualMethodAndType` is not yet implemented.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="34de8-109">Hinweise</span><span class="sxs-lookup"><span data-stu-id="34de8-109">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="6dfbd-109">Hinweise</span><span class="sxs-lookup"><span data-stu-id="6dfbd-109">Remarks</span></span>  
   
 > [!NOTE]
-> <span data-ttu-id="34de8-110">Diese Schnittstelle kann weder computerübergreifend noch prozessübergreifend remote aufgerufen werden.</span><span class="sxs-lookup"><span data-stu-id="34de8-110">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
+> <span data-ttu-id="6dfbd-110">Diese Schnittstelle kann weder computerübergreifend noch prozessübergreifend remote aufgerufen werden.</span><span class="sxs-lookup"><span data-stu-id="6dfbd-110">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="34de8-111">-Anforderungen</span><span class="sxs-lookup"><span data-stu-id="34de8-111">Requirements</span></span>  
- <span data-ttu-id="34de8-112">**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="34de8-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="6dfbd-111">Requirements (Anforderungen)</span><span class="sxs-lookup"><span data-stu-id="6dfbd-111">Requirements</span></span>  
+ <span data-ttu-id="6dfbd-112">**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="6dfbd-112">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="34de8-113">**Header:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="34de8-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="6dfbd-113">**Header:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="6dfbd-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="34de8-114">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="34de8-114">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="6dfbd-114">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="6dfbd-114">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="34de8-115">.Net **Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="34de8-115">**NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="6dfbd-115">.Net **Framework-Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="6dfbd-115">**NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="34de8-116">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="34de8-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="6dfbd-116">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="6dfbd-116">See also</span></span>
 
-- [<span data-ttu-id="34de8-117">Debuggen von Schnittstellen</span><span class="sxs-lookup"><span data-stu-id="34de8-117">Debugging Interfaces</span></span>](debugging-interfaces.md)
+- [<span data-ttu-id="6dfbd-117">Debugschnittstellen</span><span class="sxs-lookup"><span data-stu-id="6dfbd-117">Debugging Interfaces</span></span>](debugging-interfaces.md)
