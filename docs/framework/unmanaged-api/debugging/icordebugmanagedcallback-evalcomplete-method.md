@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: f74ab4eb-cd1b-407c-a66d-8ec0d85647f3
 topic_type:
 - apiref
-ms.openlocfilehash: d29f4095a1d615285f4c4ff30e36b91404036949
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 0431b54997c9889e2b3206392e86e4dcde45ffb3
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76788415"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83212450"
 ---
-# <a name="icordebugmanagedcallbackevalcomplete-method"></a><span data-ttu-id="9f680-102">ICorDebugManagedCallback::EvalComplete-Methode</span><span class="sxs-lookup"><span data-stu-id="9f680-102">ICorDebugManagedCallback::EvalComplete Method</span></span>
-<span data-ttu-id="9f680-103">Benachrichtigt den Debugger, dass eine Auswertung abgeschlossen wurde.</span><span class="sxs-lookup"><span data-stu-id="9f680-103">Notifies the debugger that an evaluation has been completed.</span></span>  
+# <a name="icordebugmanagedcallbackevalcomplete-method"></a><span data-ttu-id="ae938-102">ICorDebugManagedCallback::EvalComplete-Methode</span><span class="sxs-lookup"><span data-stu-id="ae938-102">ICorDebugManagedCallback::EvalComplete Method</span></span>
+<span data-ttu-id="ae938-103">Benachrichtigt den Debugger, dass eine Auswertung abgeschlossen wurde.</span><span class="sxs-lookup"><span data-stu-id="ae938-103">Notifies the debugger that an evaluation has been completed.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="9f680-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="9f680-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ae938-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="ae938-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT EvalComplete (  
@@ -35,25 +35,25 @@ HRESULT EvalComplete (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="9f680-105">Parameters</span><span class="sxs-lookup"><span data-stu-id="9f680-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="ae938-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="ae938-105">Parameters</span></span>  
  `pAppDomain`  
- <span data-ttu-id="9f680-106">in Ein Zeiger auf ein ICorDebugAppDomain-Objekt, das die Anwendungsdomäne darstellt, in der die Auswertung durchgeführt wurde.</span><span class="sxs-lookup"><span data-stu-id="9f680-106">[in] A pointer to an ICorDebugAppDomain object that represents the application domain in which the evaluation was performed.</span></span>  
+ <span data-ttu-id="ae938-106">in Ein Zeiger auf ein ICorDebugAppDomain-Objekt, das die Anwendungsdomäne darstellt, in der die Auswertung durchgeführt wurde.</span><span class="sxs-lookup"><span data-stu-id="ae938-106">[in] A pointer to an ICorDebugAppDomain object that represents the application domain in which the evaluation was performed.</span></span>  
   
  `pThread`  
- <span data-ttu-id="9f680-107">in Ein Zeiger auf ein ICorDebugThread-Objekt, das den Thread darstellt, in dem die Auswertung durchgeführt wurde.</span><span class="sxs-lookup"><span data-stu-id="9f680-107">[in] A pointer to an ICorDebugThread object that represents the thread in which the evaluation was performed.</span></span>  
+ <span data-ttu-id="ae938-107">in Ein Zeiger auf ein ICorDebugThread-Objekt, das den Thread darstellt, in dem die Auswertung durchgeführt wurde.</span><span class="sxs-lookup"><span data-stu-id="ae938-107">[in] A pointer to an ICorDebugThread object that represents the thread in which the evaluation was performed.</span></span>  
   
  `pEval`  
- <span data-ttu-id="9f680-108">in Ein Zeiger auf ein ICorDebugEval-Objekt, das den Code darstellt, der die Auswertung durchgeführt hat.</span><span class="sxs-lookup"><span data-stu-id="9f680-108">[in] A pointer to an ICorDebugEval object that represents the code that performed the evaluation.</span></span>  
+ <span data-ttu-id="ae938-108">in Ein Zeiger auf ein ICorDebugEval-Objekt, das den Code darstellt, der die Auswertung durchgeführt hat.</span><span class="sxs-lookup"><span data-stu-id="ae938-108">[in] A pointer to an ICorDebugEval object that represents the code that performed the evaluation.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="9f680-109">-Anforderungen</span><span class="sxs-lookup"><span data-stu-id="9f680-109">Requirements</span></span>  
- <span data-ttu-id="9f680-110">**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="9f680-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="ae938-109">Requirements (Anforderungen)</span><span class="sxs-lookup"><span data-stu-id="ae938-109">Requirements</span></span>  
+ <span data-ttu-id="ae938-110">**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="ae938-110">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="9f680-111">**Header:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="9f680-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="ae938-111">**Header:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="ae938-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="9f680-112">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="9f680-112">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="ae938-112">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="ae938-112">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="9f680-113">**.NET Framework Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9f680-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="ae938-113">**.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ae938-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="9f680-114">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="9f680-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ae938-114">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="ae938-114">See also</span></span>
 
-- [<span data-ttu-id="9f680-115">ICorDebugManagedCallback-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="9f680-115">ICorDebugManagedCallback Interface</span></span>](icordebugmanagedcallback-interface.md)
+- [<span data-ttu-id="ae938-115">ICorDebugManagedCallback-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="ae938-115">ICorDebugManagedCallback Interface</span></span>](icordebugmanagedcallback-interface.md)
