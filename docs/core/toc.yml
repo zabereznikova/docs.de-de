@@ -401,6 +401,8 @@
       href: versions/selection.md
 - name: Runtime-ID-Katalog (RID)
   href: rid-catalog.md
+- name: Ressourcenmanifestnamen
+  href: resources/manifest-file-names.md
 - name: Abhängigkeitsverwaltung und Ladevorgang
   items:
     - name: Abhängigkeitsverwaltung
