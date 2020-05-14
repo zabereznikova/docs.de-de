@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: e00fd477-4f49-43d3-bd0e-3094824b1136
 topic_type:
 - apiref
-ms.openlocfilehash: 6484832e8e737b9a0d0b3eaf3ede4078729f7a4a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0c1b18f24fd30b5f6d5e85633fc0c25839aba6df
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79178443"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83396406"
 ---
 # <a name="icoreclrdebugtargetenumprocesses-method"></a>ICoreClrDebugTarget::EnumProcesses-Methode
 Listet die Prozesse auf, die auf einem Remotecomputer ausgeführt werden.  
@@ -41,7 +41,7 @@ HRESULT EnumProcesses (
  [out] Die Anzahl der in `ppProcs` zurückgegebenen Prozesse. Dieser Wert kann 0 (null) sein.  
   
  `ppProcs`  
- [out] Ein Array von [CoreClrDebugProcInfo-Strukturen,](coreclrdebugprocinfo-structure.md) die die auf dem Remotecomputer ausgeführten Prozesse darstellen.  
+ vorgenommen Ein Array von [coreclrdebugprocinfo](coreclrdebugprocinfo-structure.md) -Strukturen, die die Prozesse darstellen, die auf dem Remote Computer ausgeführt werden.  
   
 ## <a name="return-value"></a>Rückgabewert  
  S_OK  
@@ -54,17 +54,17 @@ HRESULT EnumProcesses (
  Andere Fehler.  
   
 ## <a name="remarks"></a>Bemerkungen  
- Um den Speicher freizugeben, der von dieser Methode zugewiesen wurde, rufen Sie die [ICoreClrDebugTarget::FreeMemory-Methode](icoreclrdebugtarget-freememory-method.md) auf.  
+ Um den von dieser Methode belegten Arbeitsspeicher freizugeben, müssen Sie die [icoreclrdebugtarget:: FreeMemory](icoreclrdebugtarget-freememory-method.md) -Methode aufrufen.  
   
-## <a name="requirements"></a>Requirements (Anforderungen)  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Anforderungen  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
- **Kopfzeile:** CoreClrRemoteDebuggingSchnittstellen.h  
+ **Header:** Coreclrremotedebugginginterfaces. h  
   
- **Bibliothek:** mscordbi_macx86.dll  
+ **Bibliothek:** mscordbi_macx86. dll  
   
- **.NET Framework-Versionen:** 3.5 SP1  
+ **.NET Framework Versionen:** 3,5 SP1  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [ICoreClrDebugTarget-Schnittstelle](icoreclrdebugtarget-interface.md)

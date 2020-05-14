@@ -1,5 +1,5 @@
 ---
-title: IXCLRDataProcess::EndEnumMethodInstancesByAddress Method
+title: 'Ixclrdataprocess:: dendenummethodinstancesbyaddress-Methode'
 ms.date: 01/16/2019
 api.name:
 - IXCLRDataProcess::EndEnumMethodInstancesByAddress Method
@@ -15,16 +15,16 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 378095aa2b363f4003a5372b4158df27412655e1
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 04ce8f44b0c9f532951666de7bfb9de475c14746
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67757856"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83395261"
 ---
-# <a name="ixclrdataprocessendenummethodinstancesbyaddress-method"></a>IXCLRDataProcess::EndEnumMethodInstancesByAddress Method
+# <a name="ixclrdataprocessendenummethodinstancesbyaddress-method"></a>Ixclrdataprocess:: dendenummethodinstancesbyaddress-Methode
 
-Gibt die vom internen Iteratoren, die verwendet werden, während der Instanzenumeration verwendeten Ressourcen frei.
+Gibt die von internen Iteratoren verwendeten Ressourcen frei, die während der instanzenumeration verwendet werden.
 
 [!INCLUDE[debugging-api-recommended-note](../../../../includes/debugging-api-recommended-note.md)]
 
@@ -39,21 +39,21 @@ HRESULT EndEnumMethodInstancesByAddress(
 ## <a name="parameters"></a>Parameter
 
 `handle`\
-[out] Ein Handle für das Auflisten der Methodeninstanzen.
+vorgenommen Ein Handle zum Auflisten der Methoden Instanzen.
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 
-Die angegebene Methode ist Teil der `IXCLRDataProcess` Schnittstelle, und mit dem 29. Steckplatz der virtuellen Methodentabelle entspricht.
+Die bereitgestellte Methode ist Teil der `IXCLRDataProcess` -Schnittstelle und entspricht dem 30. Slot der Tabelle der virtuellen Methode.
 
 ## <a name="requirements"></a>Anforderungen
 
-**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
-**Header:** Keiner  
-**Bibliothek:** Keiner  
-**.NET Framework-Versionen:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
+**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+**Header:** Gar  
+**Bibliothek:** Gar  
+**.NET Framework Versionen:**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
 ## <a name="see-also"></a>Siehe auch
 
-- [CLRDataSourceType-Enumeration](clrdatasourcetype-enumeration.md)
+- [Clrdatasourcetype-Enumeration](clrdatasourcetype-enumeration.md)
 - [Debuggen](index.md)
 - [IXCLRDataProcess-Schnittstelle](ixclrdataprocess-interface.md)

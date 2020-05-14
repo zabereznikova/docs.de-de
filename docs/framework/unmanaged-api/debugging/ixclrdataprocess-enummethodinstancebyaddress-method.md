@@ -1,5 +1,5 @@
 ---
-title: IXCLRDataProcess::EnumMethodInstanceByAddress-Methode
+title: 'Ixclrdataprocess:: enummethodinstancebyaddress-Methode'
 ms.date: 01/16/2019
 api.name:
 - IXCLRDataProcess::EnumMethodInstanceByAddress Method
@@ -15,16 +15,16 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: afc5fc377dd45d5e8d4d2d7b3385ca0524df69e1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f3800a5980304394dd648111fe23a3bb0890c575
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79176655"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83395111"
 ---
-# <a name="ixclrdataprocessenummethodinstancebyaddress-method"></a>IXCLRDataProcess::EnumMethodInstanceByAddress-Methode
+# <a name="ixclrdataprocessenummethodinstancebyaddress-method"></a>Ixclrdataprocess:: enummethodinstancebyaddress-Methode
 
-Zählt die Methodeninstanzen dieses Prozesses auf, beginnend mit einem Adressoffset.
+Listet die Methoden Instanzen dieses Prozesses auf, beginnend bei einem Adress Offset.
 
 [!INCLUDE[debugging-api-recommended-note](../../../../includes/debugging-api-recommended-note.md)]
 
@@ -40,22 +40,22 @@ HRESULT EnumMethodInstanceByAddress(
 ## <a name="parameters"></a>Parameter
 
 `handle`\
-[in] Ein Handle zum Aufzählen der Methodeninstanzen.
+in Ein Handle zum Auflisten der Methoden Instanzen.
 
 `mod`\
-[out] Die aufgezählte Methodeninstanz.
+vorgenommen Die enumerationsmethodeninstanz.
 
 ## <a name="remarks"></a>Bemerkungen
 
-Die bereitgestellte Methode `IXCLRDataProcess` ist Teil der Schnittstelle und entspricht dem 28. Slot der virtuellen Methodentabelle.
+Die bereitgestellte Methode ist Teil der `IXCLRDataProcess` -Schnittstelle und entspricht dem 29. Slot der Tabelle der virtuellen Methode.
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).
-**Kopfzeile:** Keine **Bibliothek:** Keine **.NET Framework-Versionen:**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]
+**Header:** Keine **Bibliothek:** keine **.NET Framework Versionen:**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
-- [CLRDataSourceType-Enumeration](clrdatasourcetype-enumeration.md)
+- [Clrdatasourcetype-Enumeration](clrdatasourcetype-enumeration.md)
 - [Debuggen](index.md)
 - [IXCLRDataProcess-Schnittstelle](ixclrdataprocess-interface.md)

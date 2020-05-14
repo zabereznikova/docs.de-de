@@ -14,38 +14,38 @@ helpviewer_keywords:
 ms.assetid: 3ff2ad2a-da5a-461b-8627-1a8eba49df9c
 topic_type:
 - apiref
-ms.openlocfilehash: c6f20b0f7927d79ee56b5b6962137d668dc048d1
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: d036ddf353aa3a622ade05e1e2daa7f170d28f63
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76791119"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83396774"
 ---
 # <a name="icordebugvalue2-interface"></a>ICorDebugValue2-Schnittstelle
 Erweitert die ICorDebugValue-Schnittstelle, um die Unterstützung von ICorDebugType-Objekten bereitzustellen.  
   
 ## <a name="methods"></a>Methoden  
   
-|-Methode|Beschreibung|  
+|Methode|Beschreibung|  
 |------------|-----------------|  
-|[GetExactType-Methode](icordebugvalue2-getexacttype-method.md)|Ruft einen Schnittstellen Zeiger auf ein `ICorDebugType` Objekt ab, das die <xref:System.Type> dieses Werts darstellt.|  
+|[GetExactType-Methode](icordebugvalue2-getexacttype-method.md)|Ruft einen Schnittstellen Zeiger auf ein- `ICorDebugType` Objekt ab, das den <xref:System.Type> dieses Werts darstellt.|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
   
 > [!NOTE]
 > Diese Schnittstelle kann weder computerübergreifend noch prozessübergreifend remote aufgerufen werden.  
   
-## <a name="requirements"></a>-Anforderungen  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Anforderungen  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   
  **Bibliothek:** CorGuids.lib  
   
- **.NET Framework Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Debuggen von Schnittstellen](debugging-interfaces.md)
+- [Debugschnittstellen](debugging-interfaces.md)
 
 - [ICorDebugValue3-Schnittstelle](icordebugvalue3-interface.md)

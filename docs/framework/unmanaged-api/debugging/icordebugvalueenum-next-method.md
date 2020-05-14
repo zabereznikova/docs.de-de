@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f5ef94dd-dfee-49d3-a398-b110f8906dd8
 topic_type:
 - apiref
-ms.openlocfilehash: 09394acb07b8595f99d9ecc873eb0985cdd79316
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: db1721fed6414310556ceac493275e069a781ac8
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73134598"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83397144"
 ---
 # <a name="icordebugvalueenumnext-method"></a>ICorDebugValueEnum::Next-Methode
 Ruft die angegebene Anzahl von "ICorDebug Value"-Instanzen aus der-Enumeration ab, beginnend bei der aktuellen Position.  
@@ -38,21 +38,21 @@ HRESULT Next (
   
 ## <a name="parameters"></a>Parameter  
  `celt`  
- in Die Anzahl der `ICorDebugValue` Instanzen, die abgerufen werden sollen.  
+ in Die Anzahl der `ICorDebugValue` abzurufenden Instanzen.  
   
  `values`  
- vorgenommen Ein Array von Zeigern, von denen jedes auf ein `ICorDebugValue` Objekt zeigt.  
+ vorgenommen Ein Array von Zeigern, von denen jedes auf ein `ICorDebugValue` Objekt verweist.  
   
  `pceltFetched`  
- vorgenommen Ein Zeiger auf die Anzahl von `ICorDebugValue` Instanzen, die tatsächlich zurückgegeben wurden. Dieser Wert kann NULL sein, wenn `celt` ein Wert ist.  
+ vorgenommen Ein Zeiger auf die Anzahl der `ICorDebugValue` tatsächlich zurückgegebenen Instanzen. Dieser Wert kann NULL sein, wenn `celt` ein Wert ist.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   
  **Bibliothek:** CorGuids.lib  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch

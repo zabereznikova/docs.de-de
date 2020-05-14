@@ -2,12 +2,12 @@
 title: Einführung in die eshoponcontainers-Referenz-App
 description: Einführung in die systemeigene cloudbasierte Webdienst-Referenz-App für ASP.net Core und Azure.
 ms.date: 06/30/2019
-ms.openlocfilehash: 8d4ad982716a07613ebbef6668afab69d5a8b4f6
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: b97b62268db1d9990f762d9769233ad72551c226
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82895537"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83395402"
 ---
 # <a name="introducing-eshoponcontainers-reference-app"></a>Einführung in die eshoponcontainers-Referenz-App
 
@@ -50,7 +50,7 @@ Die Anwendung verfügt auch über die folgenden nicht funktionalen Anforderungen
 
 Der Zugriff auf die Anwendung eshoponcontainers ist über Web-oder Mobile Clients möglich, die über HTTPS auf die Anwendung zugreifen, die entweder auf die ASP.net Core MVC-Serveranwendung oder ein entsprechendes API-Gateway abzielt. API-Gateways bieten mehrere Vorteile, wie z. b. das Entkoppeln von Back-End-Diensten von einzelnen Front-End-Clients und die Bereitstellung einer Die Anwendung nutzt auch ein verknüpftes Muster, das als Backends-for-Frontend (BFF) bezeichnet wird, das die Erstellung separater API-Gateways für jeden Front-End-Client empfiehlt. Die Referenzarchitektur veranschaulicht das Aufteilen der API-Gateways, je nachdem, ob die Anforderung von einem Web-oder mobilen Client stammt.
 
-Die Funktionalität der Anwendung wird in eine Reihe unterschiedlicher-Dienste aufgeteilt. Dienste sind für die Authentifizierung und Identität, das Auflisten von Elementen aus dem Produktkatalog, das Verwalten der Einkaufskörbe von Benutzern und das Platzieren von Aufträgen zuständig. Jeder dieser separaten Dienste verfügt über einen eigenen persistenten Speicher. Beachten Sie, dass es keinen einzelnen Master Datenspeicher gibt, mit dem alle Dienste interagieren. Stattdessen erfolgt die Koordination und Kommunikation zwischen den Diensten Bedarfs abhängig und durch die Verwendung eines Nachrichtenbus.
+Die Funktionalität der Anwendung wird in eine Reihe unterschiedlicher-Dienste aufgeteilt. Dienste sind für die Authentifizierung und Identität, das Auflisten von Elementen aus dem Produktkatalog, das Verwalten der Einkaufskörbe von Benutzern und das Platzieren von Aufträgen zuständig. Jeder dieser separaten Dienste verfügt über einen eigenen persistenten Speicher. Es gibt keinen einzelnen Master Datenspeicher, mit dem alle Dienste interagieren. Stattdessen erfolgt die Koordination und Kommunikation zwischen den Diensten Bedarfs abhängig und durch die Verwendung eines Nachrichtenbus.
 
 Alle unterschiedlichen-Dienste sind basierend auf Ihren individuellen Anforderungen anders konzipiert. Dies bedeutet, dass sich der technologische Stapel unterscheiden kann, obwohl alle mit .net Core erstellt und für die Cloud entwickelt wurden. Einfachere Dienste bieten einen einfachen CRUD-Zugriff (Create-Read-Update-Delete) auf die zugrunde liegenden Datenspeicher, während erweiterte Dienste Domänen gesteuerte Entwurfs Ansätze und-Muster verwenden, um die Geschäfts Komplexität zu verwalten.
 

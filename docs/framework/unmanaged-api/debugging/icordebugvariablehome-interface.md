@@ -16,30 +16,30 @@ helpviewer_keywords:
 ms.assetid: 76f2bf3b-759f-4eed-bce7-119415b25915
 topic_type:
 - apiref
-ms.openlocfilehash: c347346c9157fea843527c662e26ffcfba22ace4
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: caf6a24207be98be9afb10be2bd027b51405fa3b
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76790953"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83396539"
 ---
 # <a name="icordebugvariablehome-interface"></a>ICorDebugVariableHome-Schnittstelle
 Stellt eine lokale Variable oder ein Argument einer Funktion dar.  
   
 ## <a name="methods"></a>Methoden  
   
-|-Methode|Beschreibung|  
+|Methode|Beschreibung|  
 |------------|-----------------|  
 |[GetArgumentIndex-Methode](icordebugvariablehome-getargumentindex-method.md)|Ruft den Index eines Funktionsarguments ab.|  
-|[GetCode-Methode](icordebugvariablehome-getcode-method.md)|Ruft die ICorDebugCode-Instanz ab, die dieses `ICorDebugVariableHome` Objekt enthält.|  
+|[GetCode-Methode](icordebugvariablehome-getcode-method.md)|Ruft die ICorDebugCode-Instanz ab, die dieses- `ICorDebugVariableHome` Objekt enthält.|  
 |[GetLiveRange-Methode](icordebugvariablehome-getliverange-method.md)|Ruft den systemeigenen Bereich ab, in dem diese Variable Live ist.|  
 |[GetLocationType-Methode](icordebugvariablehome-getlocationtype-method.md)|Ruft den Typ des systemeigenen Speicher Orts der Variablen ab.|  
 |[GetOffset-Methode](icordebugvariablehome-getoffset-method.md)|Ruft den Offset aus dem Basisregister für eine Variable ab.|  
-|[GetRegister-Methode](icordebugvariablehome-getregister-method.md)|Ruft das Register ab, das eine Variable mit dem Speicherorttyp `VLT_REGISTER`enthält, und das Basisregister für eine Variable mit dem Speicherorttyp `VLT_REGISTER_RELATIVE`.|  
+|[GetRegister-Methode](icordebugvariablehome-getregister-method.md)|Ruft das Register ab, das eine Variable mit dem Speicherorttyp `VLT_REGISTER` und dem Basisregister für eine Variable mit dem Speicherorttyp enthält `VLT_REGISTER_RELATIVE` .|  
 |[GetSlotIndex-Methode](icordebugvariablehome-getslotindex-method.md)|Ruft den verwalteten Slot-Index einer lokalen Variablen ab.|  
   
 ## <a name="example"></a>Beispiel  
- Das folgende Code Fragment verwendet das [ICorDebugCode4](icordebugcode4-interface.md) -Objekt mit dem Namen `pCode4`.  
+ Im folgenden Code Fragment wird das [ICorDebugCode4](icordebugcode4-interface.md) -Objekt mit dem Namen verwendet `pCode4` .  
   
 ```cpp  
 ICorDebugCode4 *pCode4 = NULL;  
@@ -80,16 +80,16 @@ for (int i = 0; i < celtFetched; i++)
 }  
 ```  
   
-## <a name="requirements"></a>-Anforderungen  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Anforderungen  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   
  **Bibliothek:** CorGuids.lib  
   
- **.NET Framework Versionen:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Debuggen von Schnittstellen](debugging-interfaces.md)
+- [Debugschnittstellen](debugging-interfaces.md)
 - [ICorDebugVariableHomeEnum-Schnittstelle](icordebugvariablehomeenum-interface.md)

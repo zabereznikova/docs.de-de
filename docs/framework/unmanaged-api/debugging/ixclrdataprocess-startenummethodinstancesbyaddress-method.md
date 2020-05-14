@@ -1,5 +1,5 @@
 ---
-title: IXCLRDataProcess::StartEnumMethodInstancesByAddress Method
+title: 'Ixclrdataprocess:: startenummethodinstancesbyaddress-Methode'
 ms.date: 01/16/2019
 api.name:
 - IXCLRDataProcess::StartEnumMethodInstancesByAddress Method
@@ -15,16 +15,16 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: d7c395e68ad5d8042f9850f25757a5aa445e5c40
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e28fa73300e147ac07a2d325fbf517480bb73797
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67752686"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83394948"
 ---
-# <a name="ixclrdataprocessstartenummethodinstancesbyaddress-method"></a>IXCLRDataProcess::StartEnumMethodInstancesByAddress Method
+# <a name="ixclrdataprocessstartenummethodinstancesbyaddress-method"></a>Ixclrdataprocess:: startenummethodinstancesbyaddress-Methode
 
-Stellt ein Handle zum Auflisten von der Methodeninstanzen von `AppDomain` ab einer angegebenen Adresse.
+Stellt ein Handle zum Auflisten der Methoden Instanzen von bereit, `AppDomain` beginnend bei einer angegebenen Adresse.
 
 [!INCLUDE[debugging-api-recommended-note](../../../../includes/debugging-api-recommended-note.md)]
 
@@ -41,27 +41,27 @@ HRESULT StartEnumMethodInstancesByAddress(
 ## <a name="parameters"></a>Parameter
 
 `address`\
-[in] Die Adresse der ersten Methodeninstanz.
+in Die Adresse der ersten Methoden Instanz.
 
 `appDomain`\
-[in] Die AppDomain der Methodeninstanzen.
+in Die AppDomain der Methoden Instanzen.
 
 `handle`\
-[out] Ein Handle für das Auflisten der Methodeninstanzen.
+vorgenommen Ein Handle zum Auflisten der Methoden Instanzen.
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 
-Die angegebene Methode ist Teil der `IXCLRDataProcess` Schnittstelle, und mit dem 27. Steckplatz der virtuellen Methodentabelle entspricht.
+Die bereitgestellte Methode ist Teil der `IXCLRDataProcess` -Schnittstelle und entspricht dem 28. Slot der virtuellen Methoden Tabelle.
 
 ## <a name="requirements"></a>Anforderungen
 
-**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
-**Header:** Keiner  
-**Bibliothek:** Keiner  
-**.NET Framework-Versionen:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
+**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+**Header:** Gar  
+**Bibliothek:** Gar  
+**.NET Framework Versionen:**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
 ## <a name="see-also"></a>Siehe auch
 
-- [CLRDataSourceType-Enumeration](clrdatasourcetype-enumeration.md)
+- [Clrdatasourcetype-Enumeration](clrdatasourcetype-enumeration.md)
 - [Debuggen](index.md)
 - [IXCLRDataProcess-Schnittstelle](ixclrdataprocess-interface.md)

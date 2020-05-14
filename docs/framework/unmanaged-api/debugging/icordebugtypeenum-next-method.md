@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: d0fdeba3-c195-4ece-8caf-79b1f40025d2
 topic_type:
 - apiref
-ms.openlocfilehash: fc205e347fc39fd486d9b8a3fb256a5d29a980a2
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 83adea3d659eea6d4af9ae364aad18df67e69c03
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73110065"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83396623"
 ---
 # <a name="icordebugtypeenumnext-method"></a>ICorDebugTypeEnum::Next-Methode
-Ruft die Anzahl der "ICorDebugType"-Instanzen ab, die `celt` von der-Enumeration angegeben werden, beginnend bei der aktuellen Position.  
+Ruft die Anzahl der "ICorDebugType"-Instanzen ab `celt` , die von der-Enumeration angegeben werden, beginnend bei der aktuellen Position.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -38,21 +38,21 @@ HRESULT Next (
   
 ## <a name="parameters"></a>Parameter  
  `celt`  
- in Die Anzahl der `ICorDebugType` Instanzen, die abgerufen werden sollen.  
+ in Die Anzahl der `ICorDebugType` abzurufenden Instanzen.  
   
  `values`  
- vorgenommen Ein Array von Zeigern, von denen jedes auf ein `ICorDebugType` Objekt zeigt.  
+ vorgenommen Ein Array von Zeigern, von denen jedes auf ein `ICorDebugType` Objekt verweist.  
   
  `pceltFetched`  
- vorgenommen Ein Zeiger auf die Anzahl von `ICorDebugType` Instanzen, die tatsächlich zurückgegeben wurden. Dieser Wert kann NULL sein, wenn `celt` ein Wert ist.  
+ vorgenommen Ein Zeiger auf die Anzahl der `ICorDebugType` tatsächlich zurückgegebenen Instanzen. Dieser Wert kann NULL sein, wenn `celt` ein Wert ist.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   
  **Bibliothek:** CorGuids.lib  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch

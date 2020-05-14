@@ -1,5 +1,5 @@
 ---
-title: IXCLRDataModule::GetMethodDefinitionbyToken-Methode
+title: 'Ixclrdatamodule:: GetMethodDefinitionByToken-Methode'
 ms.date: 01/16/2019
 api.name:
 - IXCLRDataModule::GetMethodDefinitionByToken Method
@@ -15,16 +15,16 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 294c5340caf2217f9337d654a11a63a43d46febd
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c70920205b27376d453bdd0a13223c6a5569075b
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79176668"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83395293"
 ---
-# <a name="ixclrdatamodulegetmethoddefinitionbytoken-method"></a>IXCLRDataModule::GetMethodDefinitionbyToken-Methode
+# <a name="ixclrdatamodulegetmethoddefinitionbytoken-method"></a>Ixclrdatamodule:: GetMethodDefinitionByToken-Methode
 
-Ruft die Methodendefinition ab, die einem bestimmten Metadatentoken entspricht.
+Ruft die Methoden Definition ab, die einem angegebenen Metadatentoken entspricht.
 
 [!INCLUDE[debugging-api-recommended-note](../../../../includes/debugging-api-recommended-note.md)]
 
@@ -40,23 +40,23 @@ HRESULT GetMethodDefinitionByToken(
 ## <a name="parameters"></a>Parameter
 
 `token`\
-[in] Das Methodentoken.
+in Das Methoden Token.
 
 `methodDefinition`\
-[out] Die Methodendefinition.
+vorgenommen Die Methoden Definition.
 
 ## <a name="remarks"></a>Bemerkungen
 
-Die bereitgestellte Methode `IXCLRDataModule` ist Teil der Schnittstelle und entspricht dem 25. Steckplatz der virtuellen Methodentabelle.
+Die bereitgestellte Methode ist Teil der `IXCLRDataModule` -Schnittstelle und entspricht dem 26. Slot der Tabelle der virtuellen Methode.
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
-**Kopfzeile:** nichts  
-**Bibliothek:** nichts  
-**.NET Framework-Versionen:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
+**Header:** Gar  
+**Bibliothek:** Gar  
+**.NET Framework Versionen:**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Debuggen](index.md)
 - [IXCLRDataModule Interface-Schnittstelle](ixclrdatamodule-interface.md)

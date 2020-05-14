@@ -1,5 +1,5 @@
 ---
-title: ISOSDacInterface::GetMethodDescPtrFromIP-Methode
+title: 'Isosdacinterface:: getmethoddescptrfromip-Methode'
 ms.date: 02/01/2019
 api.name:
 - ISOSDacInterface::GetMethodDescPtrFromIP Method
@@ -15,16 +15,16 @@ topic_type:
 - apiref
 author: hoyosjs
 ms.author: juhoyosa
-ms.openlocfilehash: cd256250021436e611142de11c3625a21aeec814
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 0c8d91c11205e06857b4a6e7edfedcd087270d00
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67764743"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83396927"
 ---
-# <a name="isosdacinterfacegetmethoddescptrfromip-method"></a>ISOSDacInterface::GetMethodDescPtrFromIP-Methode
+# <a name="isosdacinterfacegetmethoddescptrfromip-method"></a>Isosdacinterface:: getmethoddescptrfromip-Methode
 
-Ruft ab, der Zeiger für die MethodDesc entspricht die Methode, die mit dem angegebenen systemeigenen Anweisungsadresse.
+Ruft den Zeiger von MethodDesc entsprechend der Methode ab, die die angegebene Native Anweisungs Adresse enthält.
 
 [!INCLUDE[debugging-api-recommended-note](../../../../includes/debugging-api-recommended-note.md)]
 
@@ -40,21 +40,21 @@ HRESULT GetMethodDescPtrFromIP(
 ## <a name="parameters"></a>Parameter
 
 `ip`\
-[in] Eine Adresse innerhalb der Methode zur Laufzeit.
+in Eine Adresse innerhalb der Methode zur Laufzeit.
 
 `ppMD`\
-[out] Die Adresse der `MethodDesc` für die jeweilige Methode.
+vorgenommen Die Adresse der `MethodDesc` für die jeweilige Methode.
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 
-Die angegebene Methode ist Teil der [ `ISOSDacInterface` Schnittstelle](isosdacinterface-interface.md) und mit dem 21. Steckplatz der virtuellen Methodentabelle entspricht.
+Die bereitgestellte Methode ist Teil der- [ `ISOSDacInterface` Schnittstelle](isosdacinterface-interface.md) und entspricht dem 22. Slot der Tabelle der virtuellen Methode.
 
 ## <a name="requirements"></a>Anforderungen
 
-**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
-**Header:** Keiner  
-**Bibliothek:** Keiner  
-**.NET Framework-Versionen:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
+**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+**Header:** Gar  
+**Bibliothek:** Gar  
+**.NET Framework Versionen:**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
 ## <a name="see-also"></a>Siehe auch
 

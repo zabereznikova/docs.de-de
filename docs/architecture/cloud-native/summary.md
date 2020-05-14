@@ -2,12 +2,12 @@
 title: Zusammenfassung
 description: Hier finden Sie eine Zusammenfassung der wichtigsten Schlussfolgerungen aus dem Leitfaden zum Entwerfen von Cloud-Native .net-apps für Azure.
 ms.date: 04/29/2020
-ms.openlocfilehash: 97f20771aae73ed88d2dadefa7ba89d64eb62fcd
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: 8cad8df1f69e159caf88d3ee119278dff8726385
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82899707"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83395322"
 ---
 # <a name="summary"></a>Zusammenfassung
 
@@ -17,11 +17,11 @@ Zusammenfassend sind die folgenden wichtigen Schlussfolgerungen in diesem Handbu
 
 - Die ** [Cloud Native Computing Foundation](https://www.cncf.io/) (cncf)** ist ein einflussreiches Open-Source-Konsortium von über 300 großen Unternehmen. Er ist dafür verantwortlich, die Übernahme von Cloud-Native Computing über Technologie-und cloudstapel hinweg zu fördern.
 
-- **Cncf-Richtlinien** empfehlen, dass cloudnative Anwendungen sechs wichtige Säulen akzeptieren, wie in Abbildung 12-1 dargestellt:
+- **Cncf-Richtlinien** empfehlen, dass cloudnative Anwendungen sechs wichtige Säulen akzeptieren, wie in Abbildung 11-1 dargestellt:
 
   ![In der Cloud Native grundlegende Säulen](./media/cloud-native-foundational-pillars.png)
 
-  **Abbildung 12-1**. In der Cloud Native grundlegende Säulen
+  **Abbildung 11-1**. In der Cloud Native grundlegende Säulen
 
 - Diese cloudbasierten Säulen umfassen Folgendes:
   - Die Cloud und das zugrunde liegende Dienstmodell
@@ -45,7 +45,7 @@ Zusammenfassend sind die folgenden wichtigen Schlussfolgerungen in diesem Handbu
 
 - **Resilienz** ist die Fähigkeit Ihres Systems, auf Fehler zu reagieren, und bleibt weiterhin funktionsfähig. Cloud-Native Systeme nutzen eine verteilte Architektur, bei der ein Fehler unvermeidlich ist. Anwendungen müssen so erstellt werden, dass Sie elegant auf Fehler reagieren und schnell zu einem voll funktionsfähigen Status zurückkehren.
 
-- **Dienst-Netzen** sind eine konfigurierbare Infrastruktur Schicht mit integrierten Funktionen, um die Dienst Kommunikation und andere übergreifende Herausforderungen zu bewältigen. Sie entkoppeln die übergreifenden Zuständigkeiten von Ihrem Geschäfts Code. Diese Zuständigkeiten wechseln in einen Dienst Proxy. Wird als bezeichnet `Sidecar pattern`, wird der Proxy in einem separaten Prozess bereitgestellt, um die Isolation von Ihrem Geschäfts Code bereitzustellen.
+- **Dienst-Netzen** sind eine konfigurierbare Infrastruktur Schicht mit integrierten Funktionen, um die Dienst Kommunikation und andere übergreifende Herausforderungen zu bewältigen. Sie entkoppeln die übergreifenden Zuständigkeiten von Ihrem Geschäfts Code. Diese Zuständigkeiten wechseln in einen Dienst Proxy. Wird als bezeichnet `Sidecar pattern` , wird der Proxy in einem separaten Prozess bereitgestellt, um die Isolation von Ihrem Geschäfts Code bereitzustellen.
 
 - **Observability** ist ein wichtiger Entwurfs Aspekt bei der Cloud-native Anwendung. Wenn Dienste auf einen Cluster von Knoten verteilt werden, wird die zentralisierte Protokollierung, Überwachung und Warnungen obligatorisch. Azure Monitor ist eine Sammlung von cloudbasierten Tools, die einen Einblick in den Zustand Ihres Systems bieten.
 

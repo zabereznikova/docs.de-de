@@ -1,5 +1,5 @@
 ---
-title: IXCLRDataMethodDefinition::StartEnumInstances-Methode
+title: 'Ixclrdatamethoddefinition:: startenuminstance-Methode'
 ms.date: 01/16/2019
 api.name:
 - IXCLRDataMethodDefinition::StartEnumInstances Method
@@ -15,16 +15,16 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 89473f2a6a3da73ee5d172a3700bdb4d624278ff
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 84e0ad392c5fee8377115427482d80543454fff3
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67756300"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83397208"
 ---
-# <a name="ixclrdatamethoddefinitionstartenuminstances-method"></a>IXCLRDataMethodDefinition::StartEnumInstances-Methode
+# <a name="ixclrdatamethoddefinitionstartenuminstances-method"></a>Ixclrdatamethoddefinition:: startenuminstance-Methode
 
-Stellt ein Handle für die Enumeration der Methodeninstanzen für einen bestimmten `IXCLRDataAppDomain`.
+Stellt ein Handle für die Enumeration von Methoden Instanzen für einen angegebenen bereit `IXCLRDataAppDomain` .
 
 [!INCLUDE[debugging-api-recommended-note](../../../../includes/debugging-api-recommended-note.md)]
 
@@ -40,24 +40,24 @@ HRESULT StartEnumInstances(
 ## <a name="parameters"></a>Parameter
 
 `appDomain`\
-[in] Eine Anwendungsdomäne für die Enumeration.
+in Eine AppDomain für die-Enumeration.
 
 `handle`\
-[out] Ein Handle für das Auflisten der Instanzen.
+vorgenommen Ein Handle zum Auflisten der-Instanzen.
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 
-Die angegebene Methode ist Teil der `IXCLRDataMethodDefinition` Schnittstelle, und im dritten Einschubfach von der Tabelle virtueller Methoden entspricht.
+Die bereitgestellte Methode ist Teil der `IXCLRDataMethodDefinition` -Schnittstelle und entspricht dem 5. Slot der Tabelle der virtuellen Methode.
 
 ## <a name="requirements"></a>Anforderungen
 
-**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
-**Header:** Keiner  
-**Bibliothek:** Keiner  
-**.NET Framework-Versionen:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
+**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+**Header:** Gar  
+**Bibliothek:** Gar  
+**.NET Framework Versionen:**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
 ## <a name="see-also"></a>Siehe auch
 
-- [CLRDataSourceType-Enumeration](clrdatasourcetype-enumeration.md)
+- [Clrdatasourcetype-Enumeration](clrdatasourcetype-enumeration.md)
 - [Debuggen](index.md)
 - [IXCLRDataMethodDefinition-Schnittstelle](ixclrdatamethoddefinition-interface.md)

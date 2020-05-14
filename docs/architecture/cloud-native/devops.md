@@ -1,15 +1,15 @@
 ---
-title: Native Cloud-devops
-description: Architektur von Cloud Native .net-apps für Azure | Native Cloud-devops
-ms.date: 06/30/2019
-ms.openlocfilehash: d152989061964d78c8be97b69df413b975058319
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+title: DevOps
+description: Devops-Überlegungen für Native Cloud-Anwendungen
+ms.date: 05/12/2020
+ms.openlocfilehash: 498ce64c3a387433862142826059b4f7e513ec7b
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75337412"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83395811"
 ---
-# <a name="cloud-native-devops"></a>Native Cloud-devops
+# <a name="devops"></a>DevOps
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
@@ -27,7 +27,9 @@ Die Muster und Vorgehensweisen, die schnellere und zuverlässigere Releases zum 
 
 Devops wurde vor der Verwendung von-Diensten entwickelt, und es ist wahrscheinlich, dass die Verschiebung in Bezug auf kleinere, besser geeignete Dienste ohne devops nicht möglich wäre, um die Freigabe und den Betrieb nicht nur für eine Anwendung zu vereinfachen.
 
-![Abbildung 11-0 Suchtrends zeigen, dass das Wachstum in den-Diensten nicht gestartet wird, bis devops eine ziemlich gute Idee ist.](./media/microservices-vs-devops.png)
+![Abbildung 10-1 Suchtrends zeigen, dass das Wachstum in den-Diensten nicht gestartet wird, bis devops eine ziemlich gute Idee ist.](./media/microservices-vs-devops.png)
+
+**Abbildung 10-1** : devops und-Dienste.
 
 Mithilfe von guten devops-Verfahren ist es möglich, die Vorteile von cloudbasierten Anwendungen zu realisieren, ohne dass Sie unter einem Arbeitsbereich erstickt werden, der die Anwendungen tatsächlich betreibt.
 
@@ -39,11 +41,13 @@ Azure devops verfügt über einen langen Stammbaum. Er kann seine Stämme zurüc
 
 Azure devops ist in fünf Hauptkomponenten unterteilt:
 
-![Abbildung 11-1 die fünf Hauptbereiche von Azure devops](./media/devops-components.png)
+![Abbildung 10-2 die fünf Hauptbereiche von Azure devops](./media/devops-components.png)
+
+**Abbildung 10-2** : Azure devops.
+
+**Azure Repos** -Quell Code Verwaltung, die den ehrwürdigen Team Foundation-Versionskontrolle (tfvc) und den Branchen bevorzugten [git](https://en.wikipedia.org/wiki/Git)unterstützt. Pull Requests bieten eine Möglichkeit, Social Coding zu aktivieren, indem Sie die Diskussion über Änderungen fördern, die Sie vorgenommen haben.
 
 **Azure Boards** : stellt ein Problem und ein Tool zur Nachverfolgung von Arbeitsaufgaben bereit, das den Benutzern die Auswahl der Workflows ermöglicht, die für Sie am besten geeignet sind. Es enthält eine Reihe vorkonfigurierter Vorlagen, einschließlich der für die Unterstützung von Scrum-und Kanban-Entwicklungs Stilen.
-
-**Azure Repos** -Quell Code Verwaltung, die den ehrwürdigen Team Foundation-Versionskontrolle (tfvc) und den Branchen bevorzugten git unterstützt. Pull Requests bieten eine Möglichkeit, Social Coding zu aktivieren, indem Sie die Diskussion über Änderungen fördern, die Sie vorgenommen haben.
 
 **Azure Pipelines** : ein Build-und releaseverwaltungssystem, das eine enge Integration in Azure unterstützt. Builds können auf einer Vielzahl von Plattformen ausgeführt werden, von Windows auf Linux bis hin zu MacOS. Build-Agents können in der Cloud oder lokal bereitgestellt werden.
 
@@ -51,19 +55,29 @@ Azure devops ist in fünf Hauptkomponenten unterteilt:
 
 **Azure Artifacts** : ein artefaktfeed, der es Unternehmen ermöglicht, eigene, interne Versionen von nuget, NPM und anderen zu erstellen. Dies dient dem doppelten Zweck, als Cache von upstreampaketen zu fungieren, wenn ein Fehler bei einem zentralisierten Repository auftritt.
 
-Die Organisationseinheit der obersten Ebene in Azure devops wird als Projekt bezeichnet. Innerhalb jedes Projekts können die verschiedenen Komponenten, z. b. Azure Artifacts, aktiviert und deaktiviert werden. Wenn Benutzer Ihren Quellcode in GitHub verwalten möchten, aber weiterhin Azure Pipelines nutzen möchten, ist dies durchaus möglich. Tatsächlich nutzen viele Open-Source-Projekte die [kostenlosen Builds](https://azure.microsoft.com/blog/announcing-azure-pipelines-with-unlimited-ci-cd-minutes-for-open-source/) , die von Azure devops angeboten werden, während der Quellcode auf GitHub aufbewahrt wird. Einige bedeutende Open Source-Projekte, wie z. b. [Visual Studio Code](https://code.visualstudio.com/), [Yarn](https://yarnpkg.com/en/), [Gulp](https://gulpjs.com/)und [numpy](https://www.numpy.org/) , haben den Übergang vorgenommen.
+Die Organisationseinheit der obersten Ebene in Azure devops wird als Projekt bezeichnet. Innerhalb jedes Projekts können die verschiedenen Komponenten, z. b. Azure Artifacts, aktiviert und deaktiviert werden. Jede dieser Komponenten bietet verschiedene Vorteile für Native Cloud-Anwendungen. Die drei nützlichsten sind Depots, Boards und Pipelines. Wenn Benutzer Ihren Quellcode in einem anderen Repository (z. b. GitHub) verwalten möchten, aber weiterhin Azure Pipelines und andere Komponenten nutzen möchten, ist dies durchaus möglich.
 
-Jede dieser Komponenten bietet einige Vorteile für cloudanwendungen, aber die drei nützlichsten sind die Quell Code Verwaltung, Boards und Pipelines.  
+Glücklicherweise haben Entwicklungsteams viele Optionen, wenn Sie ein Repository auswählen. Eine davon ist GitHub.
+
+## <a name="github-actions"></a>GitHub-Aktionen
+
+GitHub, das in 2009 in basiert, ist ein häufig verbreitetes webbasiertes Repository für das Hosting von Projekten, Dokumentationen und Code. Viele große technische Unternehmen, wie z. b. Apple, Amazon, Google und Mainstream-Unternehmen, verwenden GitHub. GitHub verwendet das Open-Source-System für die verteilte Versionskontrolle namens git als Grundlage. Darüber hinaus fügt Sie einen eigenen Satz von Features hinzu, einschließlich der Mängel Nachverfolgung, Features und Pull Requests, Aufgaben Verwaltung und Wikis für jede Codebasis.
+
+Wenn GitHub weiterentwickelt wird, werden auch die devops-Features hinzugefügt. GitHub hat z. b. eine eigene CI/CD-Pipeline (Continuous Integration/Continuous Delivery) mit dem Namen `GitHub Actions` . GitHub-Aktionen sind ein von der Community gestütztes Workflow Automatisierungstool. Dadurch können devops-Teams in Ihre vorhandenen Tools integrieren, neue Produkte kombinieren und in ihren Softwarelebenszyklus einbinden, einschließlich vorhandener CI/CD-Partner. "
+
+GitHub hat mehr als 40 Millionen Benutzer, sodass es der größte Host des Quellcodes auf der Welt ist. Im Oktober von 2018 hat Microsoft GitHub erworben. Microsoft hat zugesichert, dass GitHub eine [offene Plattform](https://techcrunch.com/2018/06/04/microsoft-promises-to-keep-github-independent-and-open/) bleibt, die jeder Entwickler einbinden und erweitern kann. Er arbeitet weiterhin als unabhängiges Unternehmen. GitHub bietet Pläne für Enterprise-, Team-, Professional-und kostenlose Konten.
 
 ## <a name="source-control"></a>Quellcodeverwaltung
 
 Die Organisation des Codes für eine native Cloud-Anwendung kann eine Herausforderung darstellen. Anstatt einer einzigen riesigen Anwendung bestehen die cloudbasierten Anwendungen tendenziell aus einem Web kleinerer Anwendungen, die miteinander kommunizieren. Wie alle Aspekte beim Computing, ist die beste Code Ordnung eine offene Frage. Es gibt Beispiele für erfolgreiche Anwendungen, die unterschiedliche Arten von Layouts verwenden, aber zwei Varianten scheinen die meiste Beliebtheit zu haben.
 
-Bevor Sie in die eigentliche Quell Code Verwaltung einsteigen, sollten Sie sich wahrscheinlich entscheiden, wie viele Projekte geeignet sind. Innerhalb eines einzelnen Projekts werden mehrere Depots und buildpipelines unterstützt. Boards sind etwas komplizierter, aber es kann auch sein, dass die Aufgaben problemlos mehreren Teams innerhalb eines einzelnen Projekts zugewiesen werden können. Es ist sicherlich möglich, Hunderte, sogar Tausende von Entwicklern, von einem einzelnen Azure devops-Projekt zu unterstützen. Dies ist wahrscheinlich die beste Vorgehensweise, da Sie für alle Entwickler von einem zentralen Ort aus arbeiten und die Verwirrung der Suche nach einer Anwendung verringert, wenn Entwickler nicht sicher sind, in welchem Projekt Sie sich befindet.
+Bevor Sie in die eigentliche Quell Code Verwaltung einsteigen, sollten Sie sich wahrscheinlich entscheiden, wie viele Projekte geeignet sind. Innerhalb eines einzelnen Projekts werden mehrere Depots und buildpipelines unterstützt. Boards sind etwas komplizierter, aber es kann auch sein, dass die Aufgaben problemlos mehreren Teams innerhalb eines einzelnen Projekts zugewiesen werden können. Es ist möglich, Hunderte, sogar Tausende von Entwicklern, von einem einzelnen Azure devops-Projekt zu unterstützen. Dies ist wahrscheinlich die beste Vorgehensweise, da Sie für alle Entwickler von einem zentralen Ort aus arbeiten und die Verwirrung der Suche nach einer Anwendung verringert, wenn Entwickler nicht sicher sind, in welchem Projekt Sie sich befindet.
 
 Das Aufteilen von Code für die im Azure devops-Projekt enthaltenen mikrodienste kann etwas schwieriger sein.
 
-![Abbildung 11-2 Single im Vergleich zu mehreren Depots](./media/single-repository-vs-multiple.png)
+![Abbildung 10-3 Single im Vergleich zu mehreren Depots](./media/single-repository-vs-multiple.png)
+
+**Abbildung 10-3** : eine im Vergleich zu vielen Depots.
 
 ### <a name="repository-per-microservice"></a>Repository pro mikroservice
 
@@ -78,17 +92,17 @@ Auf den ersten Blick scheint dies der logischste Ansatz für das Aufteilen des Q
 
 Eines der wichtigsten Ideen hinter den mikrodiensten besteht darin, dass Dienste von einander getrennt und voneinander getrennt werden müssen. Wenn Sie den Domänen gestützten Entwurf verwenden, um die Grenzen für Dienste zu bestimmen, fungieren die Dienste als Transaktionsgrenzen. Datenbankupdates dürfen nicht mehrere Dienste umfassen. Diese Auflistung verwandter Daten wird als begrenzter Kontext bezeichnet.  Diese Idee wird durch die Isolierung von Daten von einem Datenbanksystem zu einer separaten und autonomen Datenbank von den restlichen Diensten reflektiert. Es ist sehr sinnvoll, diese Idee vollständig zum Quellcode zu bringen.
 
-Dieser Ansatz ist jedoch nicht ohne Probleme. Zu den komplexeren Entwicklungsproblemen unserer Zeit zählt die Verwaltung von Abhängigkeiten. Sehen Sie sich die Anzahl der Dateien an, aus denen sich die durchschnittlichen `node_modules` Verzeichnisse richten. Eine Neuinstallation von etwas wie `create-react-app` wird wahrscheinlich Tausende von Paketen mit sich bringen. Die Frage, wie diese Abhängigkeiten verwaltet werden, ist schwierig.
+Dieser Ansatz ist jedoch nicht ohne Probleme. Zu den komplexeren Entwicklungsproblemen unserer Zeit zählt die Verwaltung von Abhängigkeiten. Beachten Sie die Anzahl der Dateien, die das durchschnittliche `node_modules` Verzeichnis bilden. Eine Neuinstallation von etwas ähnlichen `create-react-app` wird wahrscheinlich Tausende von Paketen mit sich bringen. Die Frage, wie diese Abhängigkeiten verwaltet werden, ist schwierig.
 
-Wenn eine Abhängigkeit aktualisiert wird, muss diese Abhängigkeit von downstreampaketen ebenfalls aktualisiert werden. Leider ist die Entwicklung so, dass das `node_modules`-Verzeichnis immer mehrere Versionen eines einzelnen Pakets verwendet, von denen jedes eine Abhängigkeit von einem anderen Paket ist, das in einem etwas anderen Rhythmus versioniert ist. Welche Version einer Abhängigkeit sollte beim Bereitstellen einer Anwendung verwendet werden? Die Version, die sich derzeit in der Produktionsumgebung befindet? Die Version, die sich zurzeit in der Beta Version befindet, aber wahrscheinlich in der Produktion ist, wenn der Consumer Sie in die Produktion bringt? Schwierige Probleme, die nicht durch die Verwendung von mikroservices gelöst werden.
+Wenn eine Abhängigkeit aktualisiert wird, muss diese Abhängigkeit von downstreampaketen ebenfalls aktualisiert werden. Dies führt leider dazu, dass das `node_modules` Verzeichnis immer mehrere Versionen eines einzelnen Pakets verwendet, von denen jedes eine Abhängigkeit eines anderen Pakets ist, das in einem etwas anderen Rhythmus versioniert ist. Welche Version einer Abhängigkeit sollte beim Bereitstellen einer Anwendung verwendet werden? Die Version, die sich derzeit in der Produktionsumgebung befindet? Die Version, die sich zurzeit in der Beta Version befindet, aber wahrscheinlich in der Produktion ist, wenn der Consumer Sie in die Produktion bringt? Schwierige Probleme, die nicht durch die Verwendung von mikroservices gelöst werden.
 
 Es gibt Bibliotheken, die von einer Vielzahl von Projekten abhängen. Durch die Aufteilung der mikrodienste in jedem Repository können die internen Abhängigkeiten am besten mithilfe des internen Repository Azure Artifacts aufgelöst werden. Builds für Bibliotheken verschieben ihre neuesten Versionen in Azure Artifacts für die interne Nutzung. Das downstreamprojekt muss weiterhin manuell aktualisiert werden, um eine Abhängigkeit von den neu aktualisierten Paketen zu übernehmen.
 
 Ein weiterer Nachteil ist das Verschieben von Code zwischen Diensten. Obwohl es sinnvoll wäre, zu glauben, dass die erste Division einer Anwendung in die mikrodienste 100% richtig ist, ist die Realität, dass wir so gut wie möglich sind, um keine Fehler in der Dienst Division zu machen. Daher muss die Funktionalität und der Code, der Sie steuert, von Dienst zu Dienst: Repository in Repository verschoben werden. Beim springen von einem Repository zu einem anderen verliert der Code den Verlauf. Es gibt viele Fälle, insbesondere im Fall einer Überwachung, bei der die vollständige Versionsgeschichte für einen Code Abschnitt von großer Bedeutung ist.
 
-Der endgültige und möglicherweise wichtigste Nachteil ist die Koordinierung von Änderungen. In einer echten mikroservicesanwendung sollten keine Bereitstellungs Abhängigkeiten zwischen Diensten vorhanden sein. Es sollte möglich sein, die Dienste A, B und C in beliebiger Reihenfolge bereitzustellen, da Sie eine lose Kopplung aufweisen. In der Praxis gibt es jedoch Zeiten, in denen es wünschenswert ist, eine Änderung vorzunehmen, die mehrere Depots gleichzeitig überschreitet. Beispiele hierfür sind das Aktualisieren einer Bibliothek, um eine Sicherheitslücke zu schließen oder ein Kommunikationsprotokoll zu ändern, das von allen Diensten verwendet wird.
+Der letzte und wichtigste Nachteil ist die Koordinierung von Änderungen. In einer echten mikroservicesanwendung sollten keine Bereitstellungs Abhängigkeiten zwischen Diensten vorhanden sein. Es sollte möglich sein, die Dienste A, B und C in beliebiger Reihenfolge bereitzustellen, da Sie eine lose Kopplung aufweisen. In der Praxis gibt es jedoch Zeiten, in denen es wünschenswert ist, eine Änderung vorzunehmen, die mehrere Depots gleichzeitig überschreitet. Beispiele hierfür sind das Aktualisieren einer Bibliothek, um eine Sicherheitslücke zu schließen oder ein Kommunikationsprotokoll zu ändern, das von allen Diensten verwendet wird.
 
-Zum Durchführen einer übergreifenden Änderung muss ein Commit für jedes Repository nacheinander durchgeführt werden. Jede Änderung in jedem Repository muss per Pull angefordert und separat überprüft werden. Dies kann schwierig zu koordinieren und im allgemeinen ärgerlich sein.
+Zum Durchführen einer übergreifenden Änderung muss ein Commit für jedes Repository nacheinander durchgeführt werden. Jede Änderung in jedem Repository muss per Pull angefordert und separat überprüft werden. Dies kann schwierig zu koordinieren sein.
 
 Eine Alternative zur Verwendung vieler Depots besteht darin, den gesamten Quellcode in einem Riesen, allen wissen, einem einzelnen Repository hinzuzufügen.
 
@@ -104,21 +118,23 @@ Ein weiterer Vorteil besteht darin, dass umfangreiche Änderungen, die über Die
 
 Es gibt viele Tools, die eine statische Analyse des Codes durchführen können, um unsichere Programmiermethoden oder die problematische Verwendung von APIs zu erkennen. In einer Welt mit mehreren Repository muss jedes Repository durchlaufen werden, um die darin auftretenden Probleme zu finden. Das einzige Repository ermöglicht das Ausführen der Analyse an einem Ort.
 
-Es gibt auch viele Nachteile des einzelnen Repository-Ansatzes. Eine der beunruhigendsten Aspekte besteht darin, dass ein einzelnes Repository Sicherheitsprobleme auslöst. Wenn der Inhalt eines Repository in einem Repository pro Dienstmodell kompromittiert wird, ist die Menge des verlorenen Codes minimal. Mit einem einzelnen Repository könnte alles, was das Unternehmen besitzt, verloren gehen. In der Vergangenheit gab es viele Beispiele, die die gesamte Spieleentwicklung Unternehmen konnten. Das vorhanden sein mehrerer Depots macht weniger Oberfläche verfügbar, was in den meisten Sicherheitsverfahren ein sehr wünschenswert ist.
+Es gibt auch viele Nachteile des einzelnen Repository-Ansatzes. Eine der beunruhigendsten Aspekte besteht darin, dass ein einzelnes Repository Sicherheitsprobleme auslöst. Wenn der Inhalt eines Repository in einem Repository pro Dienstmodell kompromittiert wird, ist die Menge des verlorenen Codes minimal. Mit einem einzelnen Repository könnte alles, was das Unternehmen besitzt, verloren gehen. In der Vergangenheit gab es viele Beispiele, die die gesamte Spieleentwicklung Unternehmen konnten. Das vorhanden sein mehrerer Depots macht weniger Oberflächen verfügbar. Dies ist in den meisten Sicherheitsverfahren ein wünschenswert.
 
 Die Größe des einzelnen Repository ist wahrscheinlich schnell nicht mehr verwaltbar. Dies stellt einige interessante Auswirkungen auf die Leistung dar. Es kann erforderlich sein, spezielle Tools zu verwenden, wie z. b. das [virtuelle Datei System für git](https://vfsforgit.org/), das ursprünglich entwickelt wurde, um Entwickler im Windows-Team zu verbessern.
 
-Häufig wird das Argument für die Verwendung eines einzelnen Repository auf ein Argument heruntergefahren, das Facebook oder Google diese Methode für die Quell Code Anordnung verwendet. Wenn der Ansatz für diese Unternehmen gut genug ist, dann ist es sicherlich der richtige Ansatz für alle Unternehmen. Die Wahrheit besteht darin, dass nur wenige Unternehmen mit der Skalierung von Facebook oder Google arbeiten. Die Probleme, die bei diesen Skalierungen auftreten, unterscheiden sich von den meisten Entwicklern. Was für die Goose geeignet ist, ist für den Gander möglicherweise nicht gut geeignet.
+Häufig wird das Argument für die Verwendung eines einzelnen Repository auf ein Argument heruntergefahren, das Facebook oder Google diese Methode für die Quell Code Anordnung verwendet. Wenn der Ansatz für diese Unternehmen gut genug ist, dann ist es sicherlich der richtige Ansatz für alle Unternehmen. Die Wahrheit ist, dass nur wenige Unternehmen mit der Skalierung von Facebook oder Google arbeiten. Die Probleme, die bei diesen Skalierungen auftreten, unterscheiden sich von den meisten Entwicklern. Was für die Goose geeignet ist, ist für den Gander möglicherweise nicht gut geeignet.
 
-Am Ende kann eine der beiden Lösungen zum Hosten des Quellcodes für die-Dienste verwendet werden. In den meisten Fällen ist der Verwaltungs-und Engineering-Aufwand, der in einem einzelnen Repository betrieben wird, jedoch nicht für die Vorteile von Vorteilen. Das Aufteilen von Code in mehreren Depots fördert die Trennung von Bereichen und fördert die Autonomie zwischen Entwicklungsteams.  
+Am Ende kann eine der beiden Lösungen zum Hosten des Quellcodes für die-Dienste verwendet werden. In den meisten Fällen ist der Verwaltungsaufwand und der Engineering-Aufwand, der in einem einzigen Repository betrieben wird, jedoch nicht der größte Vorteil. Das Aufteilen von Code in mehreren Depots fördert die Trennung von Bereichen und fördert die Autonomie zwischen Entwicklungsteams.  
 
 ### <a name="standard-directory-structure"></a>Standard Verzeichnisstruktur
 
 Unabhängig von der Diskussion mit einzelnen und mehreren Depots hat jeder Dienst ein eigenes Verzeichnis. Eine der besten Optimierungen, die es Entwicklern ermöglichen, schnell zwischen Projekten zu überarbeiten, besteht darin, eine Standardverzeichnis Struktur zu verwalten.
 
-![Abbildung 11-3 eine Standardverzeichnis Struktur für die e-Mail-und Anmelde Dienste](./media/dir-struct.png)
+![Abbildung 10-4 eine Standardverzeichnis Struktur für die e-Mail-und Anmelde Dienste](./media/dir-struct.png)
 
-Wenn ein neues Projekt erstellt wird, sollte eine Vorlage verwendet werden, die die richtige Struktur einfügt. Diese Vorlage kann auch nützliche Elemente als Skeleton-Infodatei und eine `azure-pipelines.yml`enthalten. In jeder microservice-Architektur führt ein hohes Maß an Varianz zwischen Projekten zu einer schwierigeren Ausführung von Massen Vorgängen für die Dienste.
+**Abbildung 10-4** -Standard Verzeichnisstruktur.
+
+Wenn ein neues Projekt erstellt wird, sollte eine Vorlage verwendet werden, die die richtige Struktur einfügt. Diese Vorlage kann auch nützliche Elemente als Skeleton-Infodatei und ein enthalten `azure-pipelines.yml` . In jeder microservice-Architektur führt ein hohes Maß an Varianz zwischen Projekten zu einer schwierigeren Ausführung von Massen Vorgängen für die Dienste.
 
 Es gibt viele Tools, die Vorlagen für ein gesamtes Verzeichnis bereitstellen können, das mehrere Quell Code Verzeichnisse enthält. [Yeoman](https://yeoman.io/) ist in der JavaScript-Welt beliebt, und GitHub hat vor kurzem [Repository-Vorlagen](https://github.blog/2019-06-06-generate-new-repositories-with-repository-templates/)veröffentlicht, die viele der gleichen Funktionen bereitstellen.
 
@@ -128,33 +144,41 @@ Das Verwalten von Aufgaben in Projekten kann schwierig sein. Im Vorfeld sind unz
 
 Native cloudanwendungen sind tendenziell kleiner als herkömmliche Softwareprodukte, oder Sie sind zumindest in kleinere Dienste unterteilt. Die Nachverfolgung von Problemen oder Tasks im Zusammenhang mit diesen Diensten bleibt ebenso wichtig wie bei allen anderen Softwareprojekten. Niemand möchte den Überblick über ein Arbeits Element verlieren oder einem Kunden erklären, dass das Problem nicht ordnungsgemäß protokolliert wurde. Boards werden auf Projektebene konfiguriert, aber in jedem Projekt können Bereiche definiert werden. Diese ermöglichen das Aufteilen von Problemen über mehrere Komponenten hinweg. Der Vorteil, dass alle Aufgaben für die gesamte Anwendung an einem Ort aufbewahrt werden, besteht darin, dass es einfach ist, Arbeitselemente von einem Team auf ein anderes zu verschieben, da Sie besser verstanden werden.
 
-Azure devops enthält eine Reihe von gängigen vorkonfigurierten Vorlagen. In der grundlegendsten Konfiguration müssen Sie lediglich wissen, was im Rückstand liegt, von welchen Personen Sie arbeiten und was erledigt ist. Es ist wichtig, dass Sie diese Einblicke in den Prozess der Software Erstellung haben, sodass die Arbeit priorisiert und abgeschlossene Aufgaben an den Kunden gesendet werden kann. Natürlich bleiben nur wenige Softwareprojekte so einfach wie `to do`, `doing`und `done`. Es dauert nicht lange, bis die Benutzer mit dem Hinzufügen von Schritten wie `QA` oder `Detailed Specification` zum Prozess beginnen.
+Azure devops enthält eine Reihe von gängigen vorkonfigurierten Vorlagen. In der grundlegendsten Konfiguration müssen Sie lediglich wissen, was im Rückstand liegt, von welchen Personen Sie arbeiten und was erledigt ist. Es ist wichtig, dass Sie diese Einblicke in den Prozess der Software Erstellung haben, sodass die Arbeit priorisiert und abgeschlossene Aufgaben an den Kunden gesendet werden kann. Natürlich bleiben einige Softwareprojekte in einem Prozess so einfach wie `to do` , `doing` und `done` . Es dauert nicht lange, bis Benutzer Schritte wie oder für `QA` `Detailed Specification` den Prozess hinzufügen.
 
 Einer der wichtigsten Bestandteile von Agile-Methoden ist die selbstgeh Aufnahme in regelmäßigen Abständen. Diese Überprüfungen sollen Aufschluss darüber geben, welche Probleme das Team hat und wie Sie verbessert werden können. Häufig bedeutet dies, dass der Fluss von Problemen und Features durch den Entwicklungsprozess geändert wird. Daher ist es ganz problemlos, die Layouts der Boards mit zusätzlichen Stufen zu erweitern.
 
 Die Phasen in den Boards sind nicht das einzige Organisations Tool. Abhängig von der Konfiguration des Boards gibt es eine Hierarchie von Arbeits Elementen. Das differenzierteste Element, das auf einem Board angezeigt werden kann, ist eine Aufgabe. Standardmäßig enthält eine Aufgabe Felder für einen Titel, eine Beschreibung, eine Priorität, eine Schätzung der verbleibenden Arbeit und die Möglichkeit, eine Verknüpfung zu anderen Arbeits Elementen oder Entwicklungs Elementen (branches, Commits, Pull Requests, Builds usw.) zu erstellen. Arbeitselemente können in verschiedene Bereiche der Anwendung und verschiedene Iterationen (Sprints) klassifiziert werden, um die Suche zu vereinfachen.
 
-![Abbildung 11-4 eine Beispiel Aufgabe in Azure devops](./media/task-details.png)
+![Abbildung 10-5 eine Beispiel Aufgabe in Azure devops](./media/task-details.png)
 
-Das Beschreibungsfeld unterstützt die normalen Formate, die Sie erwarten (Fett, kursiv und durchgestrichen), sowie die Möglichkeit zum Einfügen von Bildern. Dies ist ein sehr leistungsfähiges Tool zur Verwendung bei der Angabe von Arbeit oder Fehlern.
+**Abbildung 10-5** : Aufgabe in Azure devops.
+
+Das Beschreibungsfeld unterstützt die normalen Formate, die Sie erwarten (Fett, kursiv und durchgestrichen), sowie die Möglichkeit zum Einfügen von Bildern. Dadurch ist es ein leistungsfähiges Tool, das beim Angeben von Arbeit oder Fehlern verwendet werden kann.
 
 Aufgaben können in Funktionen eingeführt werden, die eine größere Arbeitseinheit definieren. Funktionen können wiederum in [EPICS hoch](https://docs.microsoft.com/azure/devops/boards/backlogs/define-features-epics?view=azure-devops)Gefahren werden. Durch die Klassifizierung von Aufgaben in dieser Hierarchie wird deutlich leichter zu verstehen, wie das Rollout eines großen Features das Rollout ermöglicht.
 
-![Abbildung 11-5 standardmäßig konfigurierte Arbeits Elementtypen in der grundlegenden Prozess Vorlage](./media/board-issue-types.png)
+![Abbildung 10-6 standardmäßig konfigurierte Arbeits Elementtypen in der grundlegenden Prozess Vorlage](./media/board-issue-types.png)
+
+**Abbildung 10-6** : Arbeits Element in Azure devops.
 
 Es gibt unterschiedliche Arten von Ansichten zu den Problemen in Azure Boards. Elemente, die noch nicht geplant sind, werden im Rückstand angezeigt. Von dort aus können Sie einem Sprint zugewiesen werden. Bei einem Sprint handelt es sich um ein Zeitfenster, in dem erwartet wird, dass eine Menge Arbeit abgeschlossen wird. Diese Arbeit kann Tasks, aber auch die Auflösung von Tickets umfassen. Anschließend kann der gesamte Sprint über den Abschnitt Sprint Board verwaltet werden. Diese Ansicht zeigt, wie die Arbeit fortschreitet, und enthält ein Dropdown Diagramm, das eine aktualisierbare Schätzung anzeigt, wenn der Sprint erfolgreich sein wird.
 
-![Abbildung 11-6 ein Board mit definiertem Sprint](./media/sprint-board.png)
+![Abbildung 10-7 ein Board mit definiertem Sprint](./media/sprint-board.png)
+
+**Abbildung 10-7** : Board in Azure devops.
 
 Mittlerweile ist es offensichtlich, dass die Boards in Azure devops eine große Menge an Leistungsfähigkeit aufweisen. Für Entwickler gibt es einfache Sichten, was bearbeitet wird. Für Projektmanager-Ansichten anstehende Arbeit und eine Übersicht über die vorhandene Arbeit. Für Manager gibt es viele Berichte über die Beschaffung und Kapazität. Leider gibt es keine magischen cloudbasierten Anwendungen, die das Nachverfolgen der Arbeit ausschließen. Wenn Sie jedoch die Arbeit nachverfolgen müssen, gibt es einige Orte, an denen die Umgebung besser als in Azure devops ist.
 
 ## <a name="cicd-pipelines"></a>CI/CD-Pipelines
 
-Fast keine Änderung im Lebenszyklus der Softwareentwicklung war so revolutionär wie die Einführung von Continuous Integration (CI) und Continuous Delivery (CD). Das entwickeln und Ausführen automatisierter Tests für den Quellcode eines Projekts, sobald eine Änderung aktiviert ist, fängt Fehler frühzeitig ab. Vor der Einführung von Continuous Integration Builds wäre es nicht ungewöhnlich, Code aus dem Repository zu übertragen und festzustellen, dass er keine Tests bestanden hat oder überhaupt nicht erstellt werden konnte. Dies führte zu einer großen Nachverfolgung der Quelle des Bruchs.
+Fast keine Änderung im Lebenszyklus der Softwareentwicklung war so revolutionär wie die Einführung von Continuous Integration (CI) und Continuous Delivery (CD). Das entwickeln und Ausführen automatisierter Tests für den Quellcode eines Projekts, sobald eine Änderung aktiviert ist, fängt Fehler frühzeitig ab. Vor der Einführung von Continuous Integration Builds wäre es nicht ungewöhnlich, Code aus dem Repository zu übertragen und festzustellen, dass er keine Tests bestanden hat oder überhaupt nicht erstellt werden konnte. Dies führte zu einer Nachverfolgung der Quelle des Bruchs.
 
 Die Lieferung von Software an die Produktionsumgebung erforderte in der Regel eine umfassende Dokumentation und eine Liste von Schritten. Jeder dieser Schritte muss in einem sehr fehleranfälligen Prozess manuell abgeschlossen werden.
 
-![Abbildung 11-7 A Checkliste](./media/checklist.png)
+![Abbildung 10-8 A Checkliste](./media/checklist.png)
+
+**Abbildung 10-8** : Prüfliste.
 
 Die Schwester von Continuous Integration wird Continuous Delivery, in der die neu erstellten Pakete in einer Umgebung bereitgestellt werden. Der manuelle Prozess kann nicht entsprechend der Entwicklungsgeschwindigkeit skaliert werden, sodass die Automatisierung wichtiger wird. Checklisten werden durch Skripts ersetzt, die die gleichen Aufgaben schneller und präziser ausführen können als alle menschlichen.
 
@@ -166,7 +190,7 @@ Die Automatisierung des Erstellungs-und Übermittlungs Prozesses wird durch Nati
 
 Azure devops bietet eine Reihe von Tools, um Continuous Integration und die Bereitstellung einfacher als je zuvor zu gestalten. Diese Tools befinden sich unter Azure Pipelines. Der erste Vorgang ist Azure-Builds, bei dem es sich um ein Tool zum horizontalen Ausführen von YAML-basierten Builddefinitionen handelt. Benutzer können entweder Ihre eigenen Buildcomputer verwenden (hervorragend für den Build, wenn der Build eine sorgfältige Einrichtung erfordert) oder einen Computer aus einem ständig aktualisierten Pool von in Azure gehosteten virtuellen Computern verwenden. Diese gehosteten Build-Agents werden mit einer Vielzahl von Entwicklungs Tools installiert, die nicht nur die .net-Entwicklung, sondern auch alles von der Java-zu-python-bis iPhone-Entwicklung unterliegen.
 
-Devops enthält eine breite Palette von Standard-Builddefinitionen, die für jeden Build angepasst werden können. Die Builddefinitionen werden in einer Datei namens `azure-pipelines.yml` definiert und in das Repository eingecheckt, damit Sie zusammen mit dem Quellcode versioniert werden können. Dies erleichtert es, Änderungen an der Buildpipeline in einer Verzweigung vorzunehmen, da die Änderungen nur in dieser Verzweigung eingecheckt werden können. Ein Beispiel `azure-pipelines.yml` zum Aufbauen einer ASP.NET-Webanwendung im vollständigen Framework finden Sie in Abbildung 11-8.
+Devops enthält eine breite Palette von Standard-Builddefinitionen, die für jeden Build angepasst werden können. Die Builddefinitionen werden in einer Datei mit dem Namen definiert `azure-pipelines.yml` und in das Repository eingecheckt, damit Sie zusammen mit dem Quellcode versioniert werden können. Dies erleichtert es, Änderungen an der Buildpipeline in einer Verzweigung vorzunehmen, da die Änderungen nur in dieser Verzweigung eingecheckt werden können. Ein Beispiel `azure-pipelines.yml` für das Entwickeln einer ASP.NET-Webanwendung im vollständigen Framework ist in Abbildung 10-9 zu sehen.
 
 ```yml
 name: $(rev:r)
@@ -228,7 +252,7 @@ steps:
   condition: succeededOrFailed()
 ```
 
-**Abbildung 11-8** -Beispiel Azure-Pipelines. yml
+**Abbildung 10-9** -Beispiel Azure-Pipelines. yml
 
 Diese Builddefinition verwendet eine Reihe integrierter Aufgaben, die das Erstellen von Builds so einfach gestalten wie das Erstellen eines LEGO-Satzes (einfacher als der Giant Millennium-Falcon). Beispielsweise stellt die nuget-Aufgabe nuget-Pakete wieder her, während die vsbuild-Aufgabe die Visual Studio-Buildtools aufruft, um die tatsächliche Kompilierung auszuführen. Es gibt Hunderte verschiedener Aufgaben in Azure devops, von denen Tausende von der Community verwaltet werden. Es ist wahrscheinlich, dass Sie unabhängig von den Buildaufgaben, die Sie ausführen möchten, bereits eine erstellt haben.
 
@@ -240,7 +264,9 @@ Das Endergebnis eines Builds ist eine Auflistung von Dateien, die als buildartef
 
 Builds übernehmen die Kompilierung der Software in ein abrechenbares Paket, aber die Artefakte müssen nach wie vor in eine Testumgebung übermittelt werden, um Continuous Delivery abzuschließen. Hierfür verwendet Azure devops ein separates Tool namens Releases. Das Releases-Tool verwendet die Bibliothek derselben Aufgaben, die für den Build verfügbar waren, aber ein Konzept von "Stufen" bereitstellt. Eine Stufe ist eine isolierte Umgebung, in der das Paket installiert wird. Beispielsweise kann ein Produkt eine Entwicklungs-, QA-und Produktionsumgebung verwenden. Der Code wird kontinuierlich in der Entwicklungsumgebung bereitgestellt, in der automatisierte Tests ausgeführt werden können. Wenn diese Tests bestanden wurden, werden die Releases für manuelle Tests in die QA-Umgebung verschoben. Schließlich wird der Code in die Produktion übermittelt, wo er für alle sichtbar ist.
 
-![Abbildung 11-9 eine Beispiel-releasepipeline mit Entwicklungs-, QA-und Produktionsphasen](./media/release-pipeline.png)
+![Abbildung 10-10 eine Beispiel-releasepipeline mit Entwicklungs-, QA-und Produktionsphasen](./media/release-pipeline.png)
+
+**Abbildung 10-10** -releasepipeline
 
 Jede Phase im Build kann automatisch durch den Abschluss der vorherigen Phase ausgelöst werden. In vielen Fällen ist dies jedoch nicht wünschenswert. Das Verschieben von Code in die Produktion erfordert möglicherweise eine Genehmigung von einem anderen Das Tool Releases unterstützt dies, indem es in jedem Schritt der releasepipeline genehmigende Personen zulässt. Regeln können so eingerichtet werden, dass eine bestimmte Person oder Gruppe von Personen sich bei einem Release anmelden muss, bevor es in der Produktion erfolgt. Diese Gates ermöglichen manuelle Qualitätsprüfungen sowie die Einhaltung gesetzlicher Bestimmungen, die Steuern, was in die Produktion übergeht.
 
@@ -250,8 +276,8 @@ Es fallen keine Kosten für die Konfiguration vieler buildpipelines an, daher is
 
 ### <a name="versioning-releases"></a>Versionierung von Releases
 
-Ein Nachteil bei der Verwendung der Releases-Funktionalität besteht darin, dass Sie nicht in einem eingecheckten `azure-pipelines.yml` Datei definiert werden kann. Es gibt viele Gründe, aus denen Sie herausfinden können, dass Sie in der Projektvorlage Verzweigungs Definitionen mit freiverzweigungen hinzufügen möchten. Glücklicherweise wird die Arbeit fortlaufend durchgeführt, um einige der Stufen Unterstützung in die Buildkomponente zu verlagern. Dies wird als mehrstufiger Build bezeichnet, und die [erste Version ist jetzt verfügbar](https://devblogs.microsoft.com/devops/whats-new-with-azure-pipelines/)!
+Ein Nachteil bei der Verwendung der Freigabe Funktionen ist, dass Sie nicht in einer eingecheckten Datei definiert werden kann `azure-pipelines.yml` . Es gibt viele Gründe, aus denen Sie herausfinden können, dass Sie in der Projektvorlage Verzweigungs Definitionen mit freiverzweigungen hinzufügen möchten. Glücklicherweise wird die Arbeit fortlaufend durchgeführt, um einige der Stufen Unterstützung in die Buildkomponente zu verlagern. Dies wird als mehrstufiger Build bezeichnet, und die [erste Version ist jetzt verfügbar](https://devblogs.microsoft.com/devops/whats-new-with-azure-pipelines/)!
 
 >[!div class="step-by-step"]
 >[Zurück](azure-security.md)
->[Weiter](infrastructure-as-code.md)
+>[Weiter](feature-flags.md)

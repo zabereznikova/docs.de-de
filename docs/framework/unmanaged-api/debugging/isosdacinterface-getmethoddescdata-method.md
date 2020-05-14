@@ -1,5 +1,5 @@
 ---
-title: ISOSDacInterface::GetMethodDescData-Methode
+title: 'Isosdacinterface:: getmethoddescdata-Methode'
 ms.date: 01/16/2019
 api.name:
 - ISOSDacInterface::GetMethodDescData Method
@@ -15,16 +15,16 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: ea54fdd83b9470db4a08daceaa695e450f5ca1af
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e4c44379d9db0f5e98f3ca66ec0486961ec2df3a
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67764822"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83396947"
 ---
-# <a name="isosdacinterfacegetmethoddescdata-method"></a>ISOSDacInterface::GetMethodDescData-Methode
+# <a name="isosdacinterfacegetmethoddescdata-method"></a>Isosdacinterface:: getmethoddescdata-Methode
 
-Ruft die Daten für den angegebenen MethodDesc-Zeiger.
+Ruft die Daten für den angegebenen methodde-Zeiger ab.
 
 [!INCLUDE[debugging-api-recommended-note](../../../../includes/debugging-api-recommended-note.md)]
 
@@ -44,33 +44,33 @@ HRESULT GetMethodDescData(
 ## <a name="parameters"></a>Parameter
 
 `methodDesc`\
-[in] Die Adresse der MethodDesc.
+in Die Adresse von methoddebug.
 
 `ip`\
-[in] Die IP-Adresse der Methode.
+in Die IP-Adresse der Methode.
 
 `data`\
-[out] Die Daten, die die MethodDesc zugeordnet, wie die internen APIs zurückgegeben wird.
+vorgenommen Die der methoddebug zugeordneten Daten, die von den internen APIs zurückgegeben werden.
 
 `cRevertedRejitVersions`\
-[out] Die Anzahl der wiederhergestellten Rejit-Versionen.
+vorgenommen Die Anzahl der zurückgesetzten ReJIT-Versionen.
 
 `rgRevertedRejitData`\
-[out] Die Daten, die die wiederhergestellten Rejit-Versionen zugeordnet, wie die internen APIs zurückgegeben wird.
+vorgenommen Die Daten, die den wiederhergestellten ReJIT-Versionen zugeordnet sind, die von den internen APIs zurückgegeben werden.
 
 `pcNeededRevertedRejitData`\
-[out] Die Anzahl der Bytes, die zum Speichern der Daten verknüpft, die mit den wiederhergestellten ReJit-Versionen ist erforderlich.
+vorgenommen Die Anzahl der Bytes, die erforderlich sind, um die Daten zu speichern, die den wiederhergestellten ReJIT-Versionen zugeordnet sind.
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 
-Die angegebene Methode ist Teil der `ISOSDacInterface` Schnittstelle und zum 20. Steckplatz der virtuellen Methodentabelle entspricht. Zu deren Verwendung können [ `CLRDATA_ADDRESS` ](../common-data-types-unmanaged-api-reference.md) muss als eine 64-Bit-Ganzzahl ohne Vorzeichen definiert werden.
+Die bereitgestellte Methode ist Teil der `ISOSDacInterface` -Schnittstelle und entspricht dem 21. Slot der Tabelle der virtuellen Methode. Um Sie verwenden zu können, [`CLRDATA_ADDRESS`](../common-data-types-unmanaged-api-reference.md) muss als eine 64-Bit-Ganzzahl ohne Vorzeichen definiert werden.
 
 ## <a name="requirements"></a>Anforderungen
 
-**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
-**Header:** Keiner  
-**Bibliothek:** Keiner  
-**.NET Framework-Versionen:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
+**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+**Header:** Gar  
+**Bibliothek:** Gar  
+**.NET Framework Versionen:**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
 ## <a name="see-also"></a>Siehe auch
 

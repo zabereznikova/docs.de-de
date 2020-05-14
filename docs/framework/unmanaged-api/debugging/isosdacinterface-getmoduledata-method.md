@@ -1,5 +1,5 @@
 ---
-title: ISOSDacInterface::GetModuleData-Methode
+title: 'Isosdacinterface:: getmoduledata-Methode'
 ms.date: 02/01/2019
 api.name:
 - ISOSDacInterface::GetModuleData Method
@@ -15,16 +15,16 @@ topic_type:
 - apiref
 author: hoyosjs
 ms.author: juhoyosa
-ms.openlocfilehash: 97b297def9fba329ff6d9573f7b2e7cc811273f8
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 14e0eb812c84a0042150345d039451adf178caf1
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67764723"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83396921"
 ---
-# <a name="isosdacinterfacegetmoduledata-method"></a>ISOSDacInterface::GetModuleData-Methode
+# <a name="isosdacinterfacegetmoduledata-method"></a>Isosdacinterface:: getmoduledata-Methode
 
-Die Daten, die für das Modul geladen, die an einer bestimmten Adresse abruft.
+Ruft die Daten ab, die dem Modul entsprechen, das an einer bestimmten Adresse geladen wurde.
 
 [!INCLUDE[debugging-api-recommended-note](../../../../includes/debugging-api-recommended-note.md)]
 
@@ -40,21 +40,21 @@ HRESULT GetModuleData(
 ## <a name="parameters"></a>Parameter
 
 `moduleAddr`\
-[in] Die Adresse des Moduls zum Abrufen von Informationen für.
+in Die Adresse des Moduls, für das Informationen abgerufen werden sollen.
 
 `data`\
-[out] Die [DacpModuleData Struktur](dacpmoduledata-structure.md) , die die Informationen des geladenen Moduls enthalten soll.
+vorgenommen Die [dacpmoduledata-Struktur](dacpmoduledata-structure.md) , die die Informationen des geladenen Moduls enthalten soll.
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 
-Die angegebene Methode ist Teil der `ISOSDacInterface` Schnittstelle, und mit dem 13. Steckplatz der virtuellen Methodentabelle entspricht.
+Die bereitgestellte Methode ist Teil der `ISOSDacInterface` -Schnittstelle und entspricht dem 14. Slot der Tabelle der virtuellen Methode.
 
 ## <a name="requirements"></a>Anforderungen
 
-**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
-**Header:** Keiner  
-**Bibliothek:** Keiner  
-**.NET Framework-Versionen:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
+**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+**Header:** Gar  
+**Bibliothek:** Gar  
+**.NET Framework Versionen:**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
 ## <a name="see-also"></a>Siehe auch
 

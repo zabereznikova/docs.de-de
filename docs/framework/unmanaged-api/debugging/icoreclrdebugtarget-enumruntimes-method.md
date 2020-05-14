@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 316df866-442d-40cc-b049-45e8adcb65d1
 topic_type:
 - apiref
-ms.openlocfilehash: 4b55ac1d895bfecbe74be447bd06f4aa22b9d04f
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: fc8269d4cc22ab53569edaa48c27b4a01970dcc7
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76790792"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83397174"
 ---
 # <a name="icoreclrdebugtargetenumruntimes-method"></a>ICoreClrDebugTarget::EnumRuntimes-Methode
 Listet die CLR-Laufzeiten (Common Language Runtime) im angegebenen Prozess auf, der auf einem Remotecomputer ausgeführt wird.  
@@ -37,9 +37,9 @@ HRESULT EnumRuntimes (
     );  
 ```  
   
-## <a name="parameters"></a>Parameters  
+## <a name="parameters"></a>Parameter  
  `dwInternalProcessID`  
- [in] Die interne Prozess-ID des Prozesses, für den Laufzeiten aufgelistet werden sollen. Dies wird aus der entsprechenden [coreclrdebugprocinfo](coreclrdebugprocinfo-structure.md)`m_dwInternalID`.  
+ [in] Die interne Prozess-ID des Prozesses, für den Laufzeiten aufgelistet werden sollen. Dies erfolgt über `m_dwInternalID` die entsprechende [coreclrdebugprocinfo](coreclrdebugprocinfo-structure.md).  
   
  `pcRuntimes`  
  [out] Die Anzahl der in `ppRuntimes` zurückgegebenen Laufzeiten. Dieser Wert kann 0 (null) sein.  
@@ -49,7 +49,7 @@ HRESULT EnumRuntimes (
   
 ## <a name="return-value"></a>Rückgabewert  
  S_OK  
- Erfolgreich.  
+ Erfolg.  
   
  S_FALSE  
  `dwInternalProcessID` entspricht keinem auf dem Computer ausgeführten Prozess; wahrscheinlich wurde der Prozess beendet. `pcRuntimes` und `ppRuntimes` sind null.  
@@ -60,11 +60,11 @@ HRESULT EnumRuntimes (
  E_FAIL (oder andere E_-Rückgabecodes)  
  Andere Fehler.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Um den von dieser Methode belegten Arbeitsspeicher freizugeben, müssen Sie die [icoreclrdebugtarget:: FreeMemory](icoreclrdebugtarget-freememory-method.md) -Methode aufrufen.  
   
-## <a name="requirements"></a>-Anforderungen  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Anforderungen  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Coreclrremotedebugginginterfaces. h  
   
