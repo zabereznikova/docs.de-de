@@ -2,13 +2,13 @@
 title: 'Breaking Changes: .NET Framework zu .NET Core'
 titleSuffix: ''
 description: Listet die Breaking Changes von .NET Framework zu .NET Core auf.
-ms.date: 12/18/2019
-ms.openlocfilehash: f712be14d7debc4b3008f8459e6ee925754b25f0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.date: 05/05/2020
+ms.openlocfilehash: bb18e38fecc0805dfafe6a16c853ae04fd2a2913
+ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77449397"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82859943"
 ---
 # <a name="breaking-changes-for-migration-from-net-framework-to-net-core"></a>Breaking Changes für die Migration von .NET Framework zu .NET Core
 
@@ -17,10 +17,12 @@ Wenn Sie eine App von .NET Framework zu .NET Core migrieren, können sich die in
 > [!NOTE]
 > Dieser Artikel enthält keine vollständige Liste mit Breaking Changes zwischen .NET Framework und .NET Core. Die wichtigsten Breaking Changes werden hier hinzugefügt, sobald wir sie kennen.
 
-## <a name="corefx"></a>CoreFx
+## <a name="core-net-libraries"></a>Core .NET-Bibliotheken
 
 - [Änderung des Standardwerts von UseShellExecute](#change-in-default-value-of-useshellexecute)
 - [UnauthorizedAccessException, ausgelöst von FileSystemInfo.Attributes](#unauthorizedaccessexception-thrown-by-filesysteminfoattributes)
+- [Verarbeiten von Corrupted Process-State Exceptions wird nicht unterstützt](#handling-corrupted-state-exceptions-is-not-supported)
+- [UriBuilder-Eigenschaften werden führenden Zeichen nicht mehr vorangestellt](#uribuilder-properties-no-longer-prepend-leading-characters)
 
 ### <a name="net-core-21"></a>.NET Core 2.1
 
@@ -34,6 +36,14 @@ Wenn Sie eine App von .NET Framework zu .NET Core migrieren, können sich die in
 
 ***
 
+[!INCLUDE [corrupted-state-exceptions](~/includes/core-changes/corefx/1.0/corrupted-state-exceptions.md)]
+
+***
+
+[!INCLUDE [uribuilder-behavior-changes](../../../includes/core-changes/corefx/1.0/uribuilder-behavior-changes.md)]
+
+***
+
 ## <a name="cryptography"></a>Kryptografie
 
 - [Der boolesche Parameter von SignedCms.ComputeSignature wird beachtet](#boolean-parameter-of-signedcmscomputesignature-is-respected)
@@ -41,6 +51,16 @@ Wenn Sie eine App von .NET Framework zu .NET Core migrieren, können sich die in
 ### <a name="net-core-21"></a>.NET Core 2.1
 
 [!INCLUDE [Boolean parameter of SignedCms.ComputeSignature is respected](~/includes/core-changes/cryptography/2.1/compute-signature-silent-parameter.md)]
+
+***
+
+## <a name="networking"></a>Netzwerk
+
+- [WebClient.CancelAsync wird nicht immer sofort abgebrochen](#webclientcancelasync-doesnt-always-cancel-immediately)
+
+### <a name="net-core-20"></a>.NET Core 2.0
+
+[!INCLUDE [behavior-change-webclient-cancelasync](../../../includes/core-changes/networking/2.0/behavior-change-webclient-cancelasync.md)]
 
 ***
 
@@ -128,7 +148,7 @@ Windows Forms-Unterstützung wurde zu .NET Core in Version 3.0 hinzugefügt. Wen
 
 ***
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [APIs, die in .NET Core immer Ausnahmen auslösen](unsupported-apis.md)
 - [.NET Framework-Technologien, die für .NET Core nicht verfügbar sind](../porting/net-framework-tech-unavailable.md)
