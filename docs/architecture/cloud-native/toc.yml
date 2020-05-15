@@ -86,9 +86,11 @@
       items:
         - name: Azure-Sicherheit für cloudbasierte Apps
           href: azure-security.md
-    - name: Cloudbasiertes DevOps
+    - name: DevOps
       href: devops.md
       items:
+        - name: Featureflags
+          href: feature-flags.md
         - name: Infrastructure-as-Code
           href: infrastructure-as-code.md
         - name: Bundles von cloudbasierten Anwendungen
