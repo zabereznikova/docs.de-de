@@ -17,7 +17,7 @@ Sie können Leistungsengpässe vermeiden und die Reaktionsfähigkeit der Anwendu
 
 Dieses Thema enthält eine Übersicht über die Verwendungsmöglichkeiten der asynchronen Programmierung sowie Links zu Supportthemen, die weitere Informationen und Beispiele enthalten.
 
-## <a name="BKMK_WhentoUseAsynchrony"></a> Async verbessert die Reaktionsfähigkeit
+## <a name="async-improves-responsiveness"></a><a name="BKMK_WhentoUseAsynchrony"></a> Async verbessert die Reaktionsfähigkeit
 
 Asynchronie ist wesentlich für potenziell blockierende Aktivitäten, z.B. Webzugriff. Der Zugriff auf eine Webressource ist manchmal langsam oder verzögert. Wenn eine solche Aktivität innerhalb eines synchronen Prozesses blockiert wird, muss die gesamte Anwendung warten. In einem asynchronen Prozess kann die Anwendung mit anderer Arbeit fortfahren, die nicht von der Webressource abhängig ist, bis die potenziell blockierende Aufgabe beendet ist.
 
@@ -36,7 +36,7 @@ Wenn Sie asynchrone Methoden verwenden, reagiert die Anwendung weiterhin auf die
 
 Durch den auf Asynchronie basierenden Ansatz wird eine Entsprechung für die automatische Übertragung an die Liste der Optionen hinzugefügt, die beim Entwerfen von asynchronen Vorgängen zur Auswahl stehen. Sie erhalten also alle Vorteile der herkömmlichen asynchronen Programmierung, der Aufwand des Entwicklers ist jedoch wesentlich geringer.
 
-## <a name="BKMK_HowtoWriteanAsyncMethod"></a> Asynchrone Methoden sind einfacher zu schreiben
+## <a name="async-methods-are-easier-to-write"></a><a name="BKMK_HowtoWriteanAsyncMethod"></a> Asynchrone Methoden sind einfacher zu schreiben
 
 Die Schlüsselwörter [async](../../../language-reference/keywords/async.md) und [await](../../../language-reference/operators/await.md) in C# sind das Kernstück der asynchronen Programmierung. Wenn Sie diese beiden Schlüsselwörter verwenden, können Sie eine asynchrone Methode mithilfe von Ressourcen in .NET Framework, .NET Core oder Windows-Runtime fast genauso einfach erstellen wie eine synchrone Methode. Asynchrone Methoden, die Sie unter Verwendung des Schlüsselworts `async` definieren, werden als *async-Methoden* bezeichnet.
 
@@ -106,7 +106,7 @@ In Asynch-Methoden verwenden Sie die bereitgestellten Schlüsselwörter und Type
 
 Weitere Informationen zur Asynchronität in vorherigen .NET Framework-Versionen finden Sie unter [TPL und herkömmliche asynchrone Programmierung in .NET Framework](../../../../standard/parallel-programming/tpl-and-traditional-async-programming.md).
 
-## <a name="BKMK_WhatHappensUnderstandinganAsyncMethod"></a> Was geschieht in einer asynchronen Methode?
+## <a name="what-happens-in-an-async-method"></a><a name="BKMK_WhatHappensUnderstandinganAsyncMethod"></a> Was geschieht in einer asynchronen Methode?
 
 Bei der asynchronen Programmierung ist es sehr wichtig zu verstehen, wie die Ablaufsteuerung von Methode zu Methode springt. In dem folgenden Diagramm werden Sie durch den Prozess geführt:
 
@@ -142,13 +142,13 @@ Wenn die asynchrone Programmierung für Sie neu ist, nehmen Sie sich einen Momen
 
 Weitere Informationen zur Ablaufsteuerung finden Sie unter [Ablaufsteuerung in asynchronen Programmen (C#)](control-flow-in-async-programs.md).
 
-## <a name="BKMK_APIAsyncMethods"></a> API-Async-Methoden
+## <a name="api-async-methods"></a><a name="BKMK_APIAsyncMethods"></a> API-Async-Methoden
 
 Sie fragen sich möglicherweise, wo Methoden wie `GetStringAsync` zu finden sind, die die asynchrone Programmierung unterstützen. .NET Framework 4.5 oder höher und .NET Core enthalten viele Member, die mit `async` und `await` funktionieren. Sie können sie am Suffix „Async“ erkennen, das an den Membernamen angefügt wird, sowie am Rückgabetyp <xref:System.Threading.Tasks.Task> oder <xref:System.Threading.Tasks.Task%601>. Beispielsweise enthält die `System.IO.Stream`-Klasse Methoden wie <xref:System.IO.Stream.CopyToAsync%2A>, <xref:System.IO.Stream.ReadAsync%2A> und <xref:System.IO.Stream.WriteAsync%2A> sowie die synchronen Methoden <xref:System.IO.Stream.CopyTo%2A>, <xref:System.IO.Stream.Read%2A> und <xref:System.IO.Stream.Write%2A>.
 
 Die Windows-Runtime enthält außerdem viele Methoden, die Sie mit `async` und `await` in Windows-Apps verwenden können. Weitere Informationen finden Sie unter [Threading und asynchrone Programmierung](/windows/uwp/threading-async/) für die UWP-Entwicklung und unter [Asynchrone Programmierung (Windows Store-Apps)](https://docs.microsoft.com/previous-versions/windows/apps/hh464924(v=win.10)) sowie unter [Schnellstart: Aufrufen asynchroner APIs in C# oder Visual Basic](https://docs.microsoft.com/previous-versions/windows/apps/hh452713(v=win.10)), falls Sie frühere Versionen der Windows-Runtime verwenden.
 
-## <a name="BKMK_Threads"></a> Threads
+## <a name="threads"></a><a name="BKMK_Threads"></a> Threads
 
 Async-Methoden sollen nicht blockierende Vorgänge sein. Ein `await`-Ausdruck in einer asynchronen Methode blockiert den aktuellen Thread nicht, während der Task, auf den gewartet wurde, ausgeführt wird. Stattdessen registriert der Ausdruck den Rest der Methode als Fortsetzung und gibt die Steuerung an den Aufrufer der Async-Methode zurück.
 
@@ -156,7 +156,7 @@ Durch die Schlüsselwörter `async` und `await` werden keine zusätzlichen Threa
 
 Der auf Asynchronie basierende Ansatz der asynchronen Programmierung ist vorhandenen Ansätzen in nahezu jedem Fall vorzuziehen. Insbesondere eignet sich dieser Ansatz besser für E/A-gebundene Vorgänge als die <xref:System.ComponentModel.BackgroundWorker>-Klasse, da der Code einfacher und kein Schutz vor Racebedingungen erforderlich ist. In Kombination mit der Methode <xref:System.Threading.Tasks.Task.Run%2A?displayProperty=nameWithType> eignet sich asynchrone Programmierung besser für CPU-gebundene Vorgänge als <xref:System.ComponentModel.BackgroundWorker>, da die asynchrone Programmierung Koordinationsdetails der Ausführung des Codes von der Arbeit trennt, die `Task.Run` an den Threadpool überträgt.
 
-## <a name="BKMK_AsyncandAwait"></a> „async“ und „await“
+## <a name="async-and-await"></a><a name="BKMK_AsyncandAwait"></a> „async“ und „await“
 
 Wenn Sie angeben, dass eine Methode eine asynchrone Methode ist, indem Sie den [async](../../../language-reference/keywords/async.md)-Modifizierer verwenden, aktivieren Sie die folgenden zwei Funktionen.
 
@@ -173,7 +173,7 @@ Eine asynchrone Methode enthält in der Regel mindestens ein Vorkommen eines `aw
 - [async](../../../language-reference/keywords/async.md)
 - [await](../../../language-reference/operators/await.md)
 
-## <a name="BKMK_ReturnTypesandParameters"></a> Rückgabetypen und Parameter
+## <a name="return-types-and-parameters"></a><a name="BKMK_ReturnTypesandParameters"></a> Rückgabetypen und Parameter
 
 Eine async-Methode gibt normalerweise eine <xref:System.Threading.Tasks.Task> oder <xref:System.Threading.Tasks.Task%601> zurück. Innerhalb einer Async-Methode wird ein `await`-Operator auf eine Aufgabe angewendet, die in einem Aufruf an eine andere Async-Methode zurückgegeben wird.
 
@@ -232,13 +232,13 @@ Asynchrone APIs in der Windows-Runtime-Programmierung weisen einen der folgenden
 - <xref:Windows.Foundation.IAsyncActionWithProgress%601>
 - <xref:Windows.Foundation.IAsyncOperationWithProgress%602>
 
-## <a name="BKMK_NamingConvention"></a> Benennungskonvention
+## <a name="naming-convention"></a><a name="BKMK_NamingConvention"></a> Benennungskonvention
 
 Üblicherweise sollten die Namen von Methoden, die in der Regel awaitable-Typen zurückgeben (wie `Task`, `Task<T>`, `ValueTask`, `ValueTask<T>`), auf „Async“ enden. Methoden, die einen asynchronen Vorgang starten, aber keinen awaitable-Typ zurückgeben, sollten nicht auf „Async“ enden, sondern mit „Begin“, „Start“ oder einem ähnlichen Verb beginnen, sodass eindeutig ist, dass diese Methode nicht das Ergebnis des Vorgangs zurückgibt bzw. auslöst.
 
 Sie können die Konvention ignorieren, wenn ein Ereignis, eine Basisklasse oder ein Schnittstellenvertrag einen anderen Namen vorsieht. Beispielsweise sollten Sie allgemeine Ereignishandler wie `Button1_Click` nicht umbenennen.
 
-## <a name="BKMK_RelatedTopics"></a> Verwandte Themen und Beispiele (Visual Studio)
+## <a name="related-topics-and-samples-visual-studio"></a><a name="BKMK_RelatedTopics"></a> Verwandte Themen und Beispiele (Visual Studio)
 
 |Titel|Beschreibung|Beispiel|
 |-----------|-----------------|------------|
@@ -255,7 +255,7 @@ Sie können die Konvention ignorieren, wenn ein Ereignis, eine Basisklasse oder 
 |[Aufgabenbasiertes asynchrones Muster (TAP, Task-based Asynchronous Pattern)](../../../../standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md)|Beschreibt ein neues Muster für Asynchronie in .NET Framework. Das Muster basiert auf den <xref:System.Threading.Tasks.Task>- und <xref:System.Threading.Tasks.Task%601>-Typen.||
 |[Videos zur asynchronen Programmierung auf Channel 9](https://channel9.msdn.com/search?term=async%20&type=All#pubDate=year&ch9Search&lang-en=en)|Stellt Links zu einer Vielzahl von Videos über die asynchrone Programmierung bereit.||
 
-## <a name="BKMK_CompleteExample"></a> Vollständiges Beispiel
+## <a name="complete-example"></a><a name="BKMK_CompleteExample"></a> Vollständiges Beispiel
 
 Beim folgenden Code handelt es sich um die Datei *MainWindow.xaml.cs* aus der WPF-Anwendung, die in diesem Artikel behandelt wird. Sie können das Beispiel unter [Async Sample: Example from "Asynchronous Programming with Async and Await"](https://docs.microsoft.com/samples/dotnet/samples/async-and-await-cs/) (Beispiel aus der asynchronen Programmierung mit „Async“ und „Await“) herunterladen.
 

@@ -92,7 +92,7 @@ Die höheren leeren Bitpositionen werden basierend auf dem Typ des linken Operan
 
 Informationen dazu, wie der rechte Operand des Operators `>>` die Anzahl für die Verschiebung definiert, finden Sie im Abschnitt [Anzahl für die Verschiebung durch Schiebeoperatoren](#shift-count-of-the-shift-operators).
 
-## <a name="logical-and-operator-"></a> Logischer AND-Operator &amp;
+## <a name="logical-and-operator-amp"></a><a name="logical-and-operator-"></a> Logischer AND-Operator &amp;
 
 Mit dem Operator `&` wird „bitweises logisches UND“ für die Operanden berechnet:
 
