@@ -92,7 +92,7 @@ ms.locfileid: "79398070"
 
 <span data-ttu-id="7f281-132">Informationen dazu, wie der rechte Operand des Operators `>>` die Anzahl für die Verschiebung definiert, finden Sie im Abschnitt [Anzahl für die Verschiebung durch Schiebeoperatoren](#shift-count-of-the-shift-operators).</span><span class="sxs-lookup"><span data-stu-id="7f281-132">For information about how the right-hand operand of the `>>` operator defines the shift count, see the [Shift count of the shift operators](#shift-count-of-the-shift-operators) section.</span></span>
 
-## <a name="logical-and-operator-"></a> <span data-ttu-id="7f281-133">Logischer AND-Operator &amp;</span><span class="sxs-lookup"><span data-stu-id="7f281-133">Logical AND operator &amp;</span></span>
+## <a name="logical-and-operator-amp"></a><a name="logical-and-operator-"></a> <span data-ttu-id="7f281-133">Logischer AND-Operator &amp;</span><span class="sxs-lookup"><span data-stu-id="7f281-133">Logical AND operator &amp;</span></span>
 
 <span data-ttu-id="7f281-134">Mit dem Operator `&` wird „bitweises logisches UND“ für die Operanden berechnet:</span><span class="sxs-lookup"><span data-stu-id="7f281-134">The `&` operator computes the bitwise logical AND of its operands:</span></span>
 
