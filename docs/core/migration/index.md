@@ -51,7 +51,7 @@ Dateien, die migriert wurden (*project.json*, *global.json* und *XPROJ*-Dateien)
 > Bei Verwendung von Visual Studio Code ändert der Befehl `dotnet migrate` Visual Studio Code-spezifische Dateien wie z. B. *tasks.json* nicht. Diese Dateien müssen manuell geändert werden.
 > Dies gilt auch, wenn Sie einen anderen Editor oder eine andere Integrierte Entwicklungsumgebung (IDE) als Visual Studio verwenden.
 
-Einen Vergleich der Formate [project.json](../tools/project-json-to-csproj.md) und *csproj* finden Sie unter *Die Zuordnung zwischen project.json und csproj-Eigenschaften*.
+Einen Vergleich der Formate *project.json* und *csproj* finden Sie unter [Die Zuordnung zwischen project.json und csproj-Eigenschaften](../tools/project-json-to-csproj.md).
 
 Wenn Sie folgende Fehlermeldung erhalten:
 

@@ -84,7 +84,7 @@ Nachdem die Prozesse abgeschlossen sind, können Sie eine Instanz des generierte
 
 ## <a name="feedback--questions"></a>Feedback und Fragen
 
-Wenn Sie Fragen haben oder uns Feedback geben möchten, können Sie dies über die [Entwicklercommunity](https://developercommunity.visualstudio.com/) mithilfe des Tools [Problem melden](/visualstudio/ide/how-to-report-a-problem-with-visual-studio) tun.
+Wenn Sie Fragen haben oder uns Feedback geben möchten, können Sie dies über die [Entwicklercommunity](/visualstudio/ide/how-to-report-a-problem-with-visual-studio) mithilfe des Tools [Problem melden](https://developercommunity.visualstudio.com/) tun.
 
 ## <a name="release-notes"></a>Anmerkungen zu diesem Release
 
