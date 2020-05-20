@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4ef83bd2-3d8e-499e-8a12-d9d6fd6ced30
 topic_type:
 - apiref
-ms.openlocfilehash: a0cccc0adfc666cc8e373bc1f89c8f6f97068fde
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 4a23e9aa259f430c0d0579657952fc6aba4c307c
+ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74449312"
+ms.lasthandoff: 05/16/2020
+ms.locfileid: "83441655"
 ---
 # <a name="isymunmanagedbinder3getreaderfromcallback-method"></a>ISymUnmanagedBinder3::GetReaderFromCallback-Methode
-Ermöglicht es dem Benutzer, über einen Rückruf entweder eine `IID_IDiaReadExeAtRVACallback` oder `IID_IDiaReadExeAtOffsetCallback` zu implementieren oder bereitzustellen, um die debugverzeichnisinformationen aus dem Arbeitsspeicher abzurufen.  
+Ermöglicht dem Benutzer das implementieren oder Bereitstellen von per Callback entweder `IID_IDiaReadExeAtRVACallback` oder `IID_IDiaReadExeAtOffsetCallback` , um die debugverzeichnisinformationen aus dem Arbeitsspeicher abzurufen.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -48,20 +48,20 @@ HRESULT GetReaderFromCallback(
  in Ein Zeiger auf den Suchpfad.  
   
  `searchPolicy`  
- in Ein Wert der [corsymsearchpolicyattribute](../../../../docs/framework/unmanaged-api/diagnostics/corsymsearchpolicyattributes-enumeration.md) -Enumeration, der die Richtlinie angibt, die bei einer Suche nach einem Symbol Leser verwendet werden soll.  
+ in Ein Wert der [corsymsearchpolicyattribute](corsymsearchpolicyattributes-enumeration.md) -Enumeration, der die Richtlinie angibt, die bei einer Suche nach einem Symbol Leser verwendet werden soll.  
   
  `callback`  
  in Ein Zeiger auf die Rückruffunktion.  
   
  `pRetVal`  
- vorgenommen Ein Zeiger, der auf die zurückgegebene [ISymUnmanagedReader](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md) -Schnittstelle festgelegt ist.  
+ vorgenommen Ein Zeiger, der auf die zurückgegebene [ISymUnmanagedReader](isymunmanagedreader-interface.md) -Schnittstelle festgelegt ist.  
   
 ## <a name="return-value"></a>Rückgabewert  
  S_OK, wenn die Methode erfolgreich ist. andernfalls E_FAIL oder ein anderer Fehlercode.  
   
-## <a name="requirements"></a>Voraussetzungen  
+## <a name="requirements"></a>Anforderungen  
  **Header:** Corsym. idl  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [ISymUnmanagedBinder3-Schnittstelle](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder3-interface.md)
+- [ISymUnmanagedBinder3-Schnittstelle](isymunmanagedbinder3-interface.md)

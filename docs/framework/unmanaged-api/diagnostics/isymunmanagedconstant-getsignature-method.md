@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3eb41151-a228-43e3-ba8f-e6dd3ceb8542
 topic_type:
 - apiref
-ms.openlocfilehash: 401dfbea0da309db24f3052f462daa66e8bbef4a
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 332d60418c744a9391c7c0afc20248c2239b090c
+ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74449268"
+ms.lasthandoff: 05/16/2020
+ms.locfileid: "83441619"
 ---
 # <a name="isymunmanagedconstantgetsignature-method"></a>ISymUnmanagedConstant::GetSignature-Methode
 Ruft die Signatur der Konstante ab.  
@@ -37,10 +37,10 @@ HRESULT GetSignature(
   
 ## <a name="parameters"></a>Parameter  
  `cSig`  
- in Die Länge des Puffers, auf den der `pcSig`-Parameter verweist.  
+ in Die Länge des Puffers, auf den der- `pcSig` Parameter verweist.  
   
  `pcSig`  
- vorgenommen Ein Zeiger auf einen `ULONG32`, der die Größe des Puffers, der die Signatur enthalten muss, in Zeichen empfängt.  
+ vorgenommen Ein Zeiger auf einen `ULONG32` , der die Größe des Puffers, der die Signatur enthalten muss, in Zeichen empfängt.  
   
  `sig`  
  vorgenommen Der Puffer, in dem die Signatur gespeichert wird.  
@@ -48,11 +48,11 @@ HRESULT GetSignature(
 ## <a name="return-value"></a>Rückgabewert  
  S_OK, wenn die Methode erfolgreich ist. andernfalls E_FAIL oder ein anderer Fehlercode.  
   
-## <a name="requirements"></a>Voraussetzungen  
+## <a name="requirements"></a>Anforderungen  
  **Header:** Corsym. idl, corsym. h  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [ISymUnmanagedConstant-Schnittstelle](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedconstant-interface.md)
-- [GetName-Methode](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedconstant-getname-method.md)
-- [GetValue-Methode](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedconstant-getvalue-method.md)
+- [ISymUnmanagedConstant-Schnittstelle](isymunmanagedconstant-interface.md)
+- [GetName-Methode](isymunmanagedconstant-getname-method.md)
+- [GetValue-Methode](isymunmanagedconstant-getvalue-method.md)

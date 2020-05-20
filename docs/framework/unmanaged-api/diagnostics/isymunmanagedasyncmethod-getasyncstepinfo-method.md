@@ -2,15 +2,15 @@
 title: ISymUnmanagedAsyncMethod::GetAsyncStepInfo-Methode
 ms.date: 03/30/2017
 ms.assetid: 3ef5b4b8-4ac7-4906-849b-f932c5e3db07
-ms.openlocfilehash: 5d3ee0d42773b70c8301260e5b4d6af1c7ceb938
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: e3c0d7b8eeded403ce8391cff00ee18dccc38ed5
+ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73139858"
+ms.lasthandoff: 05/16/2020
+ms.locfileid: "83441889"
 ---
 # <a name="isymunmanagedasyncmethodgetasyncstepinfo-method"></a>ISymUnmanagedAsyncMethod::GetAsyncStepInfo-Methode
-Siehe [defineasyncstepinfo-Methode](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedasyncmethodpropertieswriter-defineasyncstepinfo-method.md).  
+Siehe [defineasyncstepinfo-Methode](isymunmanagedasyncmethodpropertieswriter-defineasyncstepinfo-method.md).  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -20,7 +20,7 @@ HRESULT GetAsyncStepInfo(    [in] ULONG32 cStepInfo,    [out] ULONG32 *pcStepInf
   
 ## <a name="parameters"></a>Parameter  
   
-|Parameter|Beschreibung|  
+|Parameter|BESCHREIBUNG|  
 |---------------|-----------------|  
 |`cStepInfo`||  
 |`pcStepInfo`||  
@@ -29,11 +29,11 @@ HRESULT GetAsyncStepInfo(    [in] ULONG32 cStepInfo,    [out] ULONG32 *pcStepInf
 |`breakpointMethod`||  
   
 ## <a name="return-value"></a>Rückgabewert  
- Gibt `HRESULT`zurück.  
+ Gibt `HRESULT` zurück.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** Corsym. idl, corsym. h  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [ISymUnmanagedAsyncMethod-Schnittstelle](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedasyncmethod-interface.md)
+- [ISymUnmanagedAsyncMethod-Schnittstelle](isymunmanagedasyncmethod-interface.md)

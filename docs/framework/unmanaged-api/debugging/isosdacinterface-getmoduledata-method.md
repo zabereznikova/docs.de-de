@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: hoyosjs
 ms.author: juhoyosa
-ms.openlocfilehash: 14e0eb812c84a0042150345d039451adf178caf1
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: b302100eb6cbfa83896cd358762c496ea01f7509
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83396921"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83420980"
 ---
 # <a name="isosdacinterfacegetmoduledata-method"></a>Isosdacinterface:: getmoduledata-Methode
 
@@ -45,13 +45,13 @@ in Die Adresse des Moduls, für das Informationen abgerufen werden sollen.
 `data`\
 vorgenommen Die [dacpmoduledata-Struktur](dacpmoduledata-structure.md) , die die Informationen des geladenen Moduls enthalten soll.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Die bereitgestellte Methode ist Teil der `ISOSDacInterface` -Schnittstelle und entspricht dem 14. Slot der Tabelle der virtuellen Methode.
 
 ## <a name="requirements"></a>Anforderungen
 
-**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
 **Header:** Gar  
 **Bibliothek:** Gar  
 **.NET Framework Versionen:**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  

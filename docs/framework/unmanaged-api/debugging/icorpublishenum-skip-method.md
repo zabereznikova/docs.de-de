@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1680ec06-4ab0-447e-93ad-cdb8693fde5c
 topic_type:
 - apiref
-ms.openlocfilehash: bd62fb38352022f69c45d2a5921973cfbec1c6e4
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: b68a9ec1e8fee4fdecd2114af28c75c4a236cb3a
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76790589"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83421144"
 ---
 # <a name="icorpublishenumskip-method"></a>ICorPublishEnum::Skip-Methode
 Verschiebt den Cursor in der-Enumeration um die angegebene Anzahl von Elementen vorwärts.  
@@ -33,18 +33,18 @@ HRESULT Skip (
 );  
 ```  
   
-## <a name="parameters"></a>Parameters  
+## <a name="parameters"></a>Parameter  
  `celt`  
  in Die Anzahl der Elemente, um die der Cursor vorwärts verschoben werden soll.  
   
-## <a name="requirements"></a>-Anforderungen  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Anforderungen  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Corpub. idl, Corpub. h  
   
  **Bibliothek:** CorGuids.lib  
   
- **.NET Framework Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
 

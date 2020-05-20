@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: e4c44379d9db0f5e98f3ca66ec0486961ec2df3a
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: 105149d0abf312c33a8498e7428e3a8b23d6ae7d
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83396947"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83421019"
 ---
 # <a name="isosdacinterfacegetmethoddescdata-method"></a>Isosdacinterface:: getmethoddescdata-Methode
 
@@ -61,13 +61,13 @@ vorgenommen Die Daten, die den wiederhergestellten ReJIT-Versionen zugeordnet si
 `pcNeededRevertedRejitData`\
 vorgenommen Die Anzahl der Bytes, die erforderlich sind, um die Daten zu speichern, die den wiederhergestellten ReJIT-Versionen zugeordnet sind.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Die bereitgestellte Methode ist Teil der `ISOSDacInterface` -Schnittstelle und entspricht dem 21. Slot der Tabelle der virtuellen Methode. Um Sie verwenden zu können, [`CLRDATA_ADDRESS`](../common-data-types-unmanaged-api-reference.md) muss als eine 64-Bit-Ganzzahl ohne Vorzeichen definiert werden.
 
 ## <a name="requirements"></a>Anforderungen
 
-**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
 **Header:** Gar  
 **Bibliothek:** Gar  
 **.NET Framework Versionen:**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  

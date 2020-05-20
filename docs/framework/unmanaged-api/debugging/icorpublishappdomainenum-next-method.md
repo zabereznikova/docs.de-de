@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: ad37cd10-0339-4d08-9b0e-4b3428bb4dc3
 topic_type:
 - apiref
-ms.openlocfilehash: 6f7f400c51ded0b98c0c2286cb6f90bbd77e47d7
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c5ac38005410ae6ed9c2f4160e926987791ad604
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79178396"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83421214"
 ---
 # <a name="icorpublishappdomainenumnext-method"></a>ICorPublishAppDomainEnum::Next-Methode
-Ruft die angegebene Anzahl von Anwendungsdomänen ab, die derzeit im Prozess vorhanden sind, beginnend an der aktuellen Position.  
+Ruft die angegebene Anzahl von Anwendungs Domänen ab, die derzeit im Prozess vorhanden sind, beginnend an der aktuellen Position.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -38,23 +38,23 @@ HRESULT Next (
   
 ## <a name="parameters"></a>Parameter  
  `celt`  
- [in] Die Anzahl der abzuholenden Elemente.  
+ in Die Anzahl der abzurufenden Elemente.  
   
  `objects`  
- [out] Ein Zeiger auf das Array der abgerufenen [ICorPublishAppDomain-Objekte,](icorpublishappdomain-interface.md) von denen jedes eine Anwendungsdomäne darstellt.  
+ vorgenommen Ein Zeiger auf das Array von abgerufenen [ICorPublishAppDomain](icorpublishappdomain-interface.md) -Objekten, von denen jedes eine Anwendungsdomäne darstellt.  
   
  `pceltFetched`  
- [out] Zeiger auf die Anzahl der tatsächlich zurückgegebenen Anwendungsdomänen. Dieser Wert kann `celt` null sein, wenn es sich um einen Wert handelt.  
+ vorgenommen Ein Zeiger auf die Anzahl der tatsächlich zurückgegebenen Anwendungs Domänen. Dieser Wert kann NULL sein, wenn `celt` ein Wert ist.  
   
-## <a name="requirements"></a>Requirements (Anforderungen)  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Anforderungen  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
- **Kopfzeile:** CorPub.idl, CorPub.h  
+ **Header:** Corpub. idl, Corpub. h  
   
  **Bibliothek:** CorGuids.lib  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [ICorPublishAppDomainEnum-Schnittstelle](icorpublishappdomainenum-interface.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9c5566ab-4ec7-4b61-9753-839bb90ae78c
 topic_type:
 - apiref
-ms.openlocfilehash: b8e72745eff09c6707afe5a5f20a1ddf38b239ae
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 3ac8bb3a20ce82b734a572832a9cbb75fa2568c4
+ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74448614"
+ms.lasthandoff: 05/16/2020
+ms.locfileid: "83441902"
 ---
 # <a name="isymencunmanagedmethodgetsourceextentindocument-method"></a>ISymENCUnmanagedMethod::GetSourceExtentInDocument-Methode
 Ruft die kleinste anfangs Linie und die größte Endzeile für die Methode in einem bestimmten Dokument ab.  
@@ -39,17 +39,17 @@ HRESULT GetSourceExtentInDocument(
  in Ein Zeiger auf das Dokument.  
   
  `pstartLine`  
- vorgenommen Ein Zeiger auf einen `ULONG32`, der die Start Zeile empfängt.  
+ vorgenommen Ein Zeiger auf einen `ULONG32` , der die Start Zeile empfängt.  
   
  `pendLine`  
- vorgenommen Ein Zeiger auf eine `ULONG32`, die die Endzeile empfängt.  
+ vorgenommen Ein Zeiger auf einen `ULONG32` , der die Endzeile empfängt.  
   
 ## <a name="return-value"></a>Rückgabewert  
  S_OK, wenn die Methode erfolgreich ist. andernfalls E_FAIL oder ein anderer Fehlercode.  
   
-## <a name="requirements"></a>Voraussetzungen  
+## <a name="requirements"></a>Anforderungen  
  **Header:** Corsym. idl, corsym. h  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [ISymENCUnmanagedMethod-Schnittstelle](../../../../docs/framework/unmanaged-api/diagnostics/isymencunmanagedmethod-interface.md)
+- [ISymENCUnmanagedMethod-Schnittstelle](isymencunmanagedmethod-interface.md)

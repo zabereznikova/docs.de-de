@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: dd92dcaf-403c-464d-a254-21594985dddd
 topic_type:
 - apiref
-ms.openlocfilehash: 756ba2e71ca2e3e817a0a8b89165bb807368c1f9
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 97b9fa537fdd9147d6d9eda036013add5393e33c
+ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74449331"
+ms.lasthandoff: 05/16/2020
+ms.locfileid: "83441707"
 ---
 # <a name="isymunmanagedbinder2getreaderforfile2-method"></a>ISymUnmanagedBinder2::GetReaderForFile2-Methode
 Gibt bei Angabe einer Metadatenschnittstelle und eines Datei namens die korrekte [ISymUnmanagedReader](isymunmanagedreader-interface.md) -Schnittstelle zurück, die die dem Modul zugeordneten Debugsymbole liest.  
   
- Diese Methode bietet eine ausführlichere Suche nach der Programm Datenbankdatei (PDB) als die [ISymUnmanagedBinder:: GetReaderForFile](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder-getreaderforfile-method.md) -Methode.  
+ Diese Methode bietet eine ausführlichere Suche nach der Programm Datenbankdatei (PDB) als die [ISymUnmanagedBinder:: GetReaderForFile](isymunmanagedbinder-getreaderforfile-method.md) -Methode.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -49,7 +49,7 @@ HRESULT GetReaderForFile2(
  in Ein Zeiger auf den Suchpfad.  
   
  `searchPolicy`  
- in Ein Wert der [corsymsearchpolicyattribute](../../../../docs/framework/unmanaged-api/diagnostics/corsymsearchpolicyattributes-enumeration.md) -Enumeration, der die Richtlinie angibt, die bei einer Suche nach einem Symbol Leser verwendet werden soll.  
+ in Ein Wert der [corsymsearchpolicyattribute](corsymsearchpolicyattributes-enumeration.md) -Enumeration, der die Richtlinie angibt, die bei einer Suche nach einem Symbol Leser verwendet werden soll.  
   
  `pRetVal`  
  vorgenommen Ein Zeiger, der auf die zurückgegebene [ISymUnmanagedReader](isymunmanagedreader-interface.md) -Schnittstelle festgelegt ist.  
@@ -57,13 +57,13 @@ HRESULT GetReaderForFile2(
 ## <a name="return-value"></a>Rückgabewert  
  S_OK, wenn die Methode erfolgreich ist. andernfalls E_FAIL oder ein anderer Fehlercode.  
   
-## <a name="requirements"></a>Voraussetzungen  
+## <a name="requirements"></a>Anforderungen  
  **Header:** Corsym. idl, corsym. h  
   
 ## <a name="remarks"></a>Hinweise  
- Diese Version der-Methode kann nach der PDB-Datei in anderen Bereichen als rechts neben dem-Modul suchen. Die Such Richtlinie kann durch Kombinieren von [corsymsearchpolicyattribute](../../../../docs/framework/unmanaged-api/diagnostics/corsymsearchpolicyattributes-enumeration.md)gesteuert werden. `AllowReferencePathAccess | AllowSymbolServerAccess` sucht beispielsweise nach der PDB neben der ausführbaren Datei und auf einem Symbol Server, fragt jedoch nicht die Registrierung ab oder verwendet den Pfad in der ausführbaren Datei. Wenn der `searchPath`-Parameter bereitgestellt wird, werden diese Verzeichnisse immer durchsucht.  
+ Diese Version der-Methode kann nach der PDB-Datei in anderen Bereichen als rechts neben dem-Modul suchen. Die Such Richtlinie kann durch Kombinieren von [corsymsearchpolicyattribute](corsymsearchpolicyattributes-enumeration.md)gesteuert werden. Sucht z. b. `AllowReferencePathAccess | AllowSymbolServerAccess` nach der PDB neben der ausführbaren Datei und auf einem Symbol Server, fragt jedoch nicht die Registrierung ab oder verwendet den Pfad in der ausführbaren Datei. Wenn der- `searchPath` Parameter bereitgestellt wird, werden diese Verzeichnisse immer durchsucht.  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [ISymUnmanagedBinder2-Schnittstelle](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder2-interface.md)
-- [GetReaderForFile-Methode](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder-getreaderforfile-method.md)
+- [ISymUnmanagedBinder2-Schnittstelle](isymunmanagedbinder2-interface.md)
+- [GetReaderForFile-Methode](isymunmanagedbinder-getreaderforfile-method.md)

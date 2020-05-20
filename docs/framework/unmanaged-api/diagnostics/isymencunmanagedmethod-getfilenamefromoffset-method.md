@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 00e2e194-12f5-436e-a997-2b9d3e844d4f
 topic_type:
 - apiref
-ms.openlocfilehash: 74002ce9c76eebaa3ea5860b09cd3e7c9a884f8d
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 857410187edf1c712865626a3327dd4c92cc211f
+ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74448658"
+ms.lasthandoff: 05/16/2020
+ms.locfileid: "83441928"
 ---
 # <a name="isymencunmanagedmethodgetfilenamefromoffset-method"></a>ISymENCUnmanagedMethod::GetFileNameFromOffset-Methode
 Ruft den Dateinamen für die Zeile ab, die einem Offset zugeordnet ist.  
@@ -38,13 +38,13 @@ HRESULT GetFileNameFromOffset(
   
 ## <a name="parameters"></a>Parameter  
  `dwOffset`  
- in Eine `ULONG32`, die den Offset enthält.  
+ in Ein-Wert `ULONG32` , der den Offset enthält.  
   
  `cchName`  
- in Ein-`ULONG32`, der die Größe des `szName` Puffers angibt.  
+ in Eine `ULONG32` , die die Größe des `szName` Puffers angibt.  
   
  `pcchName`  
- vorgenommen Ein Zeiger auf einen `ULONG32`, der die Größe des Puffers, der die Dateinamen enthalten muss, in Zeichen empfängt.  
+ vorgenommen Ein Zeiger auf einen `ULONG32` , der die Größe des Puffers, der die Dateinamen enthalten muss, in Zeichen empfängt.  
   
  `szName`  
  vorgenommen Der Puffer, der die Dateinamen enthält.  
@@ -52,9 +52,9 @@ HRESULT GetFileNameFromOffset(
 ## <a name="return-value"></a>Rückgabewert  
  S_OK, wenn die Methode erfolgreich ist. andernfalls E_FAIL oder ein anderer Fehlercode.  
   
-## <a name="requirements"></a>Voraussetzungen  
+## <a name="requirements"></a>Anforderungen  
  **Header:** Corsym. idl, corsym. h  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [ISymENCUnmanagedMethod-Schnittstelle](../../../../docs/framework/unmanaged-api/diagnostics/isymencunmanagedmethod-interface.md)
+- [ISymENCUnmanagedMethod-Schnittstelle](isymencunmanagedmethod-interface.md)

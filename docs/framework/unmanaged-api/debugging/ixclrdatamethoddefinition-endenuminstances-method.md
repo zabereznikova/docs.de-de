@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: febe6766c7a35228820421eee975c777988efd1f
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: 7271c9594a679af205c404f59ff6731821aa0acf
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83396492"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83420993"
 ---
 # <a name="ixclrdatamethoddefinitionendenuminstances-method"></a>Ixclrdatamethoddefinition:: endenuminstance-Methode
 
@@ -41,13 +41,13 @@ HRESULT EndEnumInstances(
 `handle`\
 vorgenommen Ein Handle zum Auflisten der-Instanzen.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Die bereitgestellte Methode ist Teil der `IXCLRDataMethodDefinition` -Schnittstelle und entspricht dem 7. Slot der virtuellen Methoden Tabelle.
 
 ## <a name="requirements"></a>Anforderungen
 
-**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
 **Header:** Gar  
 **Bibliothek:** Gar  
 **.NET Framework Versionen:**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  

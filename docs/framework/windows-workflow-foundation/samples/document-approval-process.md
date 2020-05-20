@@ -1,13 +1,14 @@
 ---
 title: Dokumentgenehmigungsprozess
+description: In diesem Beispiel werden viele Windows Workflow Foundation und Windows Communication Foundation Funktionen in einem Dokument Genehmigungsprozess-Szenario veranschaulicht.
 ms.date: 03/30/2017
 ms.assetid: 9b240937-76a7-45cd-8823-7f82c34d03bd
-ms.openlocfilehash: cee43aff991f9482de7b3172174eb0e786ec1fe6
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 18b4f978e9234daf22395f0d2f6f0889d0edf966
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74710851"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83421409"
 ---
 # <a name="document-approval-process"></a>Dokumentgenehmigungsprozess
 
@@ -18,7 +19,7 @@ Dieses Beispiel veranschaulicht die Verwendung von vielen Windows Workflow Found
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> Wenn dieses Verzeichnis nicht vorhanden ist, wechseln Sie zu [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF)-Beispiele für .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) , um alle Windows Communication Foundation (WCF) und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele herunterzuladen. Dieses Beispiel befindet sich im folgenden Verzeichnis.
+> Wenn dieses Verzeichnis nicht vorhanden ist, wechseln Sie zu [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF)-Beispiele für .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) , um alle Windows Communication Foundation (WCF) und Beispiele herunterzuladen [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Dieses Beispiel befindet sich im folgenden Verzeichnis.
 >
 > `<InstallDrive>:\WF_WCF_Samples\WF\Application\DocumentApprovalProcess`
 
@@ -26,7 +27,7 @@ Dieses Beispiel veranschaulicht die Verwendung von vielen Windows Workflow Found
 
 In der folgenden Abbildung wird der Workflow für den Dokument Genehmigungsprozess veranschaulicht:
 
-![Ein Workflow für den Prozess der Genehmigung von Dokumenten](./media/document-approval-process/document-approval-process.jpg)
+![Workflow für den Prozess zur Genehmigung von Dokumenten](./media/document-approval-process/document-approval-process.jpg)
 
 Aus Sicht des Clients funktioniert der Genehmigungsprozess wie folgt:
 
@@ -90,7 +91,7 @@ Aus Sicht der Genehmigungs-Manager-Anwendung funktioniert der Genehmigungsprozes
 
 2. Drücken Sie STRG+UMSCHALT+B, um die Projektmappe zu erstellen.
 
-3. Um die Lösung auszuführen, starten Sie die Genehmigungs-Manager-Anwendung, indem Sie im **Projektmappen-Explorer** mit der rechten Maustaste auf das Projekt approvalmanager klicken und dann im Kontextmenü auf **Debuggen**->neue Instanz **starten** klicken.
+3. Um die Lösung auszuführen, starten Sie die Genehmigungs-Manager-Anwendung, indem Sie im **Projektmappen-Explorer** mit der rechten Maustaste auf das Projekt approvalmanager klicken und dann im Kontextmenü auf **Debuggen** -> neue Instanz**starten** klicken.
 
     Warten Sie auf die Bestätigung des Managers, dass dieser bereit ist.
 
@@ -140,7 +141,7 @@ Aus Sicht der Genehmigungs-Manager-Anwendung funktioniert der Genehmigungsprozes
 
 6. Wählen Sie im `UserType1`-Client den Einzelgenehmigungstyp im Dropdownmenü aus, und geben Sie einen Dokumentnamen und -inhalt ein. Klicken Sie auf **Genehmigung anfordern**.
 
-7. In den `UserType2`-Clients wird ein Dokument, das auf Genehmigung wartet, angezeigt. Wählen Sie diese Option aus, und klicken Sie auf **genehmigen**. das Dokument wird an den `UserType3` Client weitergegeben.
+7. In den `UserType2`-Clients wird ein Dokument, das auf Genehmigung wartet, angezeigt. Wählen Sie diese Option aus, und drücken Sie **genehmigen**, das Dokument wird an den Client weitergegeben `UserType3` .
 
     Wenn das Dokument vom ersten `UserType2`-Quorum genehmigt wird, wird das Dokument an den `UserType3`-Client übergeben.
 

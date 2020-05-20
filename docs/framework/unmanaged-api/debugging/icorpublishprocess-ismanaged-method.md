@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 06b1f7cc-acdf-47a6-9d53-d9dec2424152
 topic_type:
 - apiref
-ms.openlocfilehash: 68931ba16ea1f8f61176c6d6ed8300e762b61690
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 3eec84624866b2be7068d7875cd650828c283fd2
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76790527"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83421097"
 ---
 # <a name="icorpublishprocessismanaged-method"></a>ICorPublishProcess::IsManaged-Methode
 Ruft einen Wert ab, der angibt, ob der Prozess, auf den von diesem [ICorPublishProcess](icorpublishprocess-interface.md) verwiesen wird, über verwalteten Code verfügt.  
@@ -33,21 +33,21 @@ HRESULT IsManaged (
 );  
 ```  
   
-## <a name="parameters"></a>Parameters  
+## <a name="parameters"></a>Parameter  
  `pbManaged`  
- vorgenommen Ein Zeiger auf einen booleschen Wert, der angibt, ob der Prozess verwalteten Code aufweist. Der Wert ist `true`, wenn der Prozess verwalteten Code hat. Andernfalls `false`.  
+ vorgenommen Ein Zeiger auf einen booleschen Wert, der angibt, ob der Prozess verwalteten Code aufweist. Der Wert ist `true` , wenn der Prozess verwalteten Code aufweist, andernfalls `false` .  
   
 ## <a name="remarks"></a>Hinweise  
- Da die aktuelle Version von `ICorPublishProcess` nur Zugriff auf Prozesse zulässt, die über verwalteten Code verfügen, gibt `IsManaged` immer `true`zurück.  
+ Da die aktuelle Version von `ICorPublishProcess` nur auf Prozesse mit verwaltetem Code zugreifen kann, `IsManaged` gibt immer zurück `true` .  
   
-## <a name="requirements"></a>-Anforderungen  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Anforderungen  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Corpub. idl, Corpub. h  
   
  **Bibliothek:** CorGuids.lib  
   
- **.NET Framework Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
 

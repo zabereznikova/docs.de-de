@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e33265be-c25d-4145-ad02-c3e89d6f26c1
 topic_type:
 - apiref
-ms.openlocfilehash: 69c7e6c465de5b8185a86b3de6e5c29f902a1d1f
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 85f00698f42f120b209cca14f293a58ae4c65f6f
+ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74440868"
+ms.lasthandoff: 05/16/2020
+ms.locfileid: "83442032"
 ---
 # <a name="inotifysink2onsynccallenter-method"></a>INotifySink2::OnSyncCallEnter-Methode
 Wird aufgerufen, wenn ein-Aufruf eingegeben wird.  
@@ -38,7 +38,7 @@ HRESULT OnSyncCallEnter
   
 ## <a name="parameters"></a>Parameter  
  `in_CallID`  
- in ID des aufzurufenden Aufrufes. Siehe [CALL_ID Struktur](../../../../docs/framework/unmanaged-api/diagnostics/call-id-structure.md).  
+ in ID des aufzurufenden Aufrufes. Siehe [CALL_ID Struktur](call-id-structure.md).  
   
  `in_pBuffer`  
  in Der Rückruf Puffer.  
@@ -49,11 +49,11 @@ HRESULT OnSyncCallEnter
 ## <a name="return-value"></a>Rückgabewert  
  S_OK, wenn die Methode erfolgreich ist.  
   
-## <a name="requirements"></a>Voraussetzungen  
+## <a name="requirements"></a>Anforderungen  
  **Header:** ProtocolNotify2. idl  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [INotifySink2-Schnittstelle](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md)
-- [INotifySource2-Schnittstelle](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-interface.md)
-- [INotifyConnection2-Schnittstelle](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-interface.md)
+- [INotifySink2-Schnittstelle](inotifysink2-interface.md)
+- [INotifySource2-Schnittstelle](inotifysource2-interface.md)
+- [INotifyConnection2-Schnittstelle](inotifyconnection2-interface.md)

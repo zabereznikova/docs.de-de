@@ -1,18 +1,19 @@
 ---
 title: Auswahlaktivität
+description: In Workflow Foundation vereinfacht die Pick-Aktivität die Modellierung eines Satzes von Ereignis Triggern, gefolgt von den entsprechenden Handlern.
 ms.date: 03/30/2017
 ms.assetid: b3e49b7f-0285-4720-8c09-11ae18f0d53e
-ms.openlocfilehash: 672de5fd3df5e8dde6c54118503bf2a11353b116
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: eb59dc20919ed2d30a48f920ad154d4b0d99c41f
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79182893"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83421461"
 ---
 # <a name="pick-activity"></a>Auswahlaktivität
-Die <xref:System.Activities.Statements.Pick>-Aktivität vereinfacht die Modellierung einer Gruppe von Ereignistriggern gefolgt von den entsprechenden Handlern.  Eine <xref:System.Activities.Statements.Pick>-Aktivität enthält eine Auflistung von <xref:System.Activities.Statements.PickBranch>-Aktivitäten, wobei jedes <xref:System.Activities.Statements.PickBranch>-Objekt eine Paarung einer <xref:System.Activities.Statements.PickBranch.Trigger%2A>-Aktivität und einer <xref:System.Activities.Statements.PickBranch.Action%2A>-Aktivität darstellt.  Bei der Ausführung werden die Trigger für alle Branches parallel ausgeführt.  Nach Abschluss eines Triggers wird die zugeordnete Aktion ausgeführt, und alle anderen Trigger werden abgebrochen.  Das Verhalten [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] <xref:System.Activities.Statements.Pick> der Aktivität ähnelt der .NET <xref:System.Workflow.Activities.ListenActivity> Framework 3.5-Aktivität.  
+Die <xref:System.Activities.Statements.Pick>-Aktivität vereinfacht die Modellierung einer Gruppe von Ereignistriggern gefolgt von den entsprechenden Handlern.  Eine <xref:System.Activities.Statements.Pick>-Aktivität enthält eine Auflistung von <xref:System.Activities.Statements.PickBranch>-Aktivitäten, wobei jedes <xref:System.Activities.Statements.PickBranch>-Objekt eine Paarung einer <xref:System.Activities.Statements.PickBranch.Trigger%2A>-Aktivität und einer <xref:System.Activities.Statements.PickBranch.Action%2A>-Aktivität darstellt.  Bei der Ausführung werden die Trigger für alle Branches parallel ausgeführt.  Nach Abschluss eines Triggers wird die zugeordnete Aktion ausgeführt, und alle anderen Trigger werden abgebrochen.  Das Verhalten der- [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] <xref:System.Activities.Statements.Pick> Aktivität ähnelt der .NET Framework 3,5- <xref:System.Workflow.Activities.ListenActivity> Aktivität.  
   
- Der folgende Screenshot aus dem SDK-Beispiel [Verwenden der Pick-Aktivität](./samples/using-the-pick-activity.md) zeigt eine Pick-Aktivität mit zwei Branches.  Ein Branch verfügt über einen Trigger mit dem Namen **Read input**, eine benutzerdefinierte Aktivität, die Eingaben aus der Befehlszeile liest. Der zweite Branch verfügt über einen <xref:System.Activities.Statements.Delay>-Aktivitätstrigger. Wenn die **Eingabeaktivität Lesen** <xref:System.Activities.Statements.Delay> Daten empfängt, bevor die Aktivität abgeschlossen ist, <xref:System.Activities.Statements.Delay> wird die Verzögerung abgebrochen, und eine Begrüßung wird an die Konsole geschrieben.  Die Aktivität **Read input** wird jedoch abgebrochen und eine Timeoutmeldung in die Konsole geschrieben, wenn die Aktivität in der zugewiesenen Zeit keine Daten empfängt.  Dies ist ein allgemeines Muster, mit dem einer beliebigen Aktion ein Timeoutverhalten hinzugefügt werden kann.  
+ Der folgende Screenshot aus dem SDK-Beispiel [Verwenden der Pick-Aktivität](./samples/using-the-pick-activity.md) zeigt eine Pick-Aktivität mit zwei Branches.  Ein Branch verfügt über einen Trigger mit dem Namen **Read input**, eine benutzerdefinierte Aktivität, die Eingaben aus der Befehlszeile liest. Der zweite Branch verfügt über einen <xref:System.Activities.Statements.Delay>-Aktivitätstrigger. Wenn die **Read Input** -Aktivität Daten empfängt, bevor die <xref:System.Activities.Statements.Delay> Aktivität abgeschlossen ist, wird die <xref:System.Activities.Statements.Delay> Verzögerung abgebrochen, und es wird eine Begrüßung in die Konsole geschrieben.  Die Aktivität **Read input** wird jedoch abgebrochen und eine Timeoutmeldung in die Konsole geschrieben, wenn die Aktivität in der zugewiesenen Zeit keine Daten empfängt.  Dies ist ein allgemeines Muster, mit dem einer beliebigen Aktion ein Timeoutverhalten hinzugefügt werden kann.  
   
  ![Auswahlaktivität](./media/pick-activity/pick-activity-two-branches.jpg)  
   

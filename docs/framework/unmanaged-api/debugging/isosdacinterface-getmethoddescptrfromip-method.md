@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: hoyosjs
 ms.author: juhoyosa
-ms.openlocfilehash: 0c8d91c11205e06857b4a6e7edfedcd087270d00
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: c3de9e5ffe23a13c126343c6f74f042bf1239609
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83396927"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83421006"
 ---
 # <a name="isosdacinterfacegetmethoddescptrfromip-method"></a>Isosdacinterface:: getmethoddescptrfromip-Methode
 
@@ -45,13 +45,13 @@ in Eine Adresse innerhalb der Methode zur Laufzeit.
 `ppMD`\
 vorgenommen Die Adresse der `MethodDesc` für die jeweilige Methode.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Die bereitgestellte Methode ist Teil der- [ `ISOSDacInterface` Schnittstelle](isosdacinterface-interface.md) und entspricht dem 22. Slot der Tabelle der virtuellen Methode.
 
 ## <a name="requirements"></a>Anforderungen
 
-**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
 **Header:** Gar  
 **Bibliothek:** Gar  
 **.NET Framework Versionen:**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  

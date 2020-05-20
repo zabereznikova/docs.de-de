@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7c0af9e9-a73f-41aa-a685-b21c439e059d
 topic_type:
 - apiref
-ms.openlocfilehash: 77e801b048709949c384f642fc0d0ecb5d7eb512
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: dc76274d3b0acbbe0b03eb141d2b3e6ff9063afb
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79178386"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83421123"
 ---
 # <a name="icorpublishprocessgetdisplayname-method"></a>ICorPublishProcess::GetDisplayName-Methode
 Ruft den vollständigen Pfad der ausführbaren Datei für den Prozess ab, auf den von diesem [ICorPublishProcess](icorpublishprocess-interface.md)verwiesen wird.  
@@ -41,20 +41,20 @@ HRESULT GetDisplayName (
  [in] Die Größe des `szName`-Arrays.  
   
  `pcchName`  
- [out] Die Anzahl der im `szName` Array zurückgegebenen breiten Zeichen.  
+ vorgenommen Die Anzahl der breit Zeichen, die im Array zurückgegeben werden `szName` .  
   
  `szName`  
- [out] Ein Array zum Speichern des Namens, einschließlich des vollständigen Pfads, der ausführbaren Datei. Der Name ist null-terminated.  
+ vorgenommen Ein Array zum Speichern des Namens, einschließlich des vollständigen Pfads der ausführbaren Datei. Der Name wird mit Null beendet.  
   
-## <a name="requirements"></a>Requirements (Anforderungen)  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Anforderungen  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
- **Kopfzeile:** CorPub.idl, CorPub.h  
+ **Header:** Corpub. idl, Corpub. h  
   
  **Bibliothek:** CorGuids.lib  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [ICorPublishProcess-Schnittstelle](icorpublishprocess-interface.md)

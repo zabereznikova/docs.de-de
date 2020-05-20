@@ -1,13 +1,14 @@
 ---
 title: Übersicht über Windows-Workflow
+description: In diesem Artikel werden Workflow Foundation-Workflows beschrieben, bei denen es sich um Modelle handelt, die reale Prozesse beschreiben.
 ms.date: 03/30/2017
 ms.assetid: fc44adbe-1412-49ae-81af-0298be44aae6
-ms.openlocfilehash: ada5ec75d130c9c518c5129db6c12b61c3acbf45
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: ec1a00b37abe2cb842735fb98e1c113a97943758
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802530"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83421474"
 ---
 # <a name="windows-workflow-overview"></a>Übersicht über Windows-Workflow
 Bei einem Workflow handelt es sich um einen Satz von elementaren Einheiten, die als ein Modell gespeichert *werden, das* einen realen Prozess beschreibt. Mit Workflows können die Reihenfolge der Ausführung sowie abhängige Beziehungen zwischen kurz- und langfristiger Arbeit beschrieben werden. Diese Arbeit durchläuft das Modell vom Anfang bis zum Ende, und Aktivitäten werden unter Umständen von Personen oder Systemfunktionen ausgeführt.  
@@ -23,9 +24,9 @@ Bei einem Workflow handelt es sich um einen Satz von elementaren Einheiten, die 
   
  Jede dieser Klassen umschließt die Kernaktivitätslaufzeit, die als <xref:System.Activities.ActivityInstance> dargestellt wird und für die Aktivitätsausführung zuständig ist. Es kann mehrere <xref:System.Activities.ActivityInstance>-Objekte innerhalb einer Anwendungsdomäne geben, die gleichzeitig ausgeführt werden.  
   
- Jede der vorausgehenden drei Hostinteraktionsobjekte wird aus einer Aktivitätsstruktur erstellt, die als Workflowprogramm bezeichnet wird. Mithilfe dieser Typen oder eines benutzerdefinierten Hosts, der <xref:System.Activities.ActivityInstance>umschließt, können Workflows in jedem beliebigen Windows-Prozess ausgeführt werden, einschließlich Konsolen Anwendungen, Formular basierten Anwendungen, Windows-Diensten, ASP.NET-Websites und Windows Communication Foundation (WCF)-Diensten.  
+ Jede der vorausgehenden drei Hostinteraktionsobjekte wird aus einer Aktivitätsstruktur erstellt, die als Workflowprogramm bezeichnet wird. Mithilfe dieser Typen oder eines benutzerdefinierten Hosts, der umschließt <xref:System.Activities.ActivityInstance> , können Workflows in jedem beliebigen Windows-Prozess ausgeführt werden, einschließlich Konsolen Anwendungen, Formular basierten Anwendungen, Windows-Diensten, ASP.NET-Websites und Windows Communication Foundation (WCF)-Diensten.  
   
- ![Workflow Komponenten im Host Prozess](./media/44c79d1d-178b-4487-87ed-3e33015a3842.gif "44c79d1d-178b-4487-87ed-3e33015a3842")  
+ ![Workflowkomponenten im Hostprozess](./media/44c79d1d-178b-4487-87ed-3e33015a3842.gif "44c79d1d-178b-4487-87ed-3e33015a3842")  
 Workflowkomponenten im Hostprozess  
   
 ## <a name="interaction-between-workflow-components"></a>Interaktion zwischen Workflowkomponenten  

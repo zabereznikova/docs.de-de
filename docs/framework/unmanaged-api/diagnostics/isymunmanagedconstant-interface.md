@@ -14,27 +14,27 @@ helpviewer_keywords:
 ms.assetid: e11c9baa-4cf1-4bb4-a95f-b1908893b46c
 topic_type:
 - apiref
-ms.openlocfilehash: ca5afa8c0cf0198dbc8ab65824605f18c22dcdbb
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 58d81fd150684f254333c17374d06f7dd5b95823
+ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74449258"
+ms.lasthandoff: 05/16/2020
+ms.locfileid: "83441413"
 ---
 # <a name="isymunmanagedconstant-interface"></a>ISymUnmanagedConstant-Schnittstelle
 Ermöglicht den Zugriff auf nicht verwaltete Konstanten.  
   
 ## <a name="methods"></a>Methoden  
   
-|Methode|Beschreibung|  
+|Methode|BESCHREIBUNG|  
 |------------|-----------------|  
-|[GetName-Methode](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedconstant-getname-method.md)|Ruft den Namen der Konstante ab.|  
-|[GetSignature-Methode](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedconstant-getsignature-method.md)|Ruft die Signatur der Konstante ab.|  
-|[GetValue-Methode](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedconstant-getvalue-method.md)|Ruft den Wert der Konstante ab.|  
+|[GetName-Methode](isymunmanagedconstant-getname-method.md)|Ruft den Namen der Konstante ab.|  
+|[GetSignature-Methode](isymunmanagedconstant-getsignature-method.md)|Ruft die Signatur der Konstante ab.|  
+|[GetValue-Methode](isymunmanagedconstant-getvalue-method.md)| Ruft den Wert der Konstanten ab.|  
   
-## <a name="requirements"></a>Voraussetzungen  
+## <a name="requirements"></a>Anforderungen  
  **Header:** Corsym. idl, corsym. h  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Diagnosesymbolspeicher-Schnittstellen](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)
+- [Diagnosesymbolspeicher-Schnittstellen](diagnostics-symbol-store-interfaces.md)

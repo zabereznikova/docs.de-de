@@ -14,30 +14,30 @@ helpviewer_keywords:
 ms.assetid: 37527a84-4b03-4f08-8135-94d898599089
 topic_type:
 - apiref
-ms.openlocfilehash: e4a415b21e3980e7603319d7acbb3831462fac9e
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 5a26de2a8f5439b7c81560927c991d449e57b76c
+ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74449296"
+ms.lasthandoff: 05/16/2020
+ms.locfileid: "83441590"
 ---
 # <a name="isymunmanagedbinder3-interface"></a>ISymUnmanagedBinder3-Schnittstelle
-Erweitert die Symbol Binder Schnittstelle. Rufen Sie diese Schnittstelle durch Aufrufen von `QueryInterface` für ein Objekt ab, das die `ISymUnmanagedBinder`-Schnittstelle implementiert.  
+Erweitert die Symbol Binder Schnittstelle. Rufen Sie diese Schnittstelle durch Aufrufen von `QueryInterface` für ein Objekt ab, das die- `ISymUnmanagedBinder` Schnittstelle implementiert  
   
 > [!IMPORTANT]
 > Es ist ein Sicherheitsrisiko, eine Programm Datenbankdatei (PDB-Datei) aus einer nicht vertrauenswürdigen Quelle zu öffnen.  
   
 ## <a name="methods"></a>Methoden  
   
-|Methode|Beschreibung|  
+|Methode|BESCHREIBUNG|  
 |------------|-----------------|  
-|[GetReaderFromCallback-Methode](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder3-getreaderfromcallback-method.md)|Ermöglicht es dem Benutzer, entweder eine `IID_IDiaReadExeAtRVACallback` oder eine `IID_IDiaReadExeAtOffsetCallback` zu implementieren oder bereitzustellen, um die debugverzeichnisinformationen aus dem Arbeitsspeicher abzurufen.|  
+|[GetReaderFromCallback-Methode](isymunmanagedbinder3-getreaderfromcallback-method.md)|Ermöglicht dem Benutzer das implementieren oder Bereitstellen von per Callback entweder `IID_IDiaReadExeAtRVACallback` oder `IID_IDiaReadExeAtOffsetCallback` , um die debugverzeichnisinformationen aus dem Arbeitsspeicher zu erhalten.|  
   
-## <a name="requirements"></a>Voraussetzungen  
+## <a name="requirements"></a>Anforderungen  
  **Header:** Corsym. idl, corsym. h  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Diagnosesymbolspeicher-Schnittstellen](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)
-- [ISymUnmanagedBinder-Schnittstelle](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder-interface.md)
-- [ISymUnmanagedBinder2-Schnittstelle](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder2-interface.md)
+- [Diagnosesymbolspeicher-Schnittstellen](diagnostics-symbol-store-interfaces.md)
+- [ISymUnmanagedBinder-Schnittstelle](isymunmanagedbinder-interface.md)
+- [ISymUnmanagedBinder2-Schnittstelle](isymunmanagedbinder2-interface.md)

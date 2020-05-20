@@ -14,29 +14,29 @@ helpviewer_keywords:
 ms.assetid: faebf594-67d5-4abf-b9c1-547fd3a1ff87
 topic_type:
 - apiref
-ms.openlocfilehash: 47477bb473df8b568844d07bea704df681c9b95d
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 54c8c7f5c3ba6b4afd4ff352a8afb947a92e2d61
+ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74448610"
+ms.lasthandoff: 05/16/2020
+ms.locfileid: "83441876"
 ---
 # <a name="isymencunmanagedmethod-interface"></a>ISymENCUnmanagedMethod-Schnittstelle
 Enthält Informationen für das Feature "Bearbeiten und Fortfahren".  
   
 ## <a name="methods"></a>Methoden  
   
-|Methode|Beschreibung|  
+|Methode|BESCHREIBUNG|  
 |------------|-----------------|  
-|[GetDocumentsForMethod-Methode](../../../../docs/framework/unmanaged-api/diagnostics/isymencunmanagedmethod-getdocumentsformethod-method.md)|Ruft die Dokumente ab, in denen diese Methode Zeilen aufweist.|  
-|[GetDocumentsForMethodCount-Methode](../../../../docs/framework/unmanaged-api/diagnostics/isymencunmanagedmethod-getdocumentsformethodcount-method.md)|Ruft die Anzahl der Dokumente ab, in denen diese Methode Zeilen aufweist.|  
-|[GetFileNameFromOffset-Methode](../../../../docs/framework/unmanaged-api/diagnostics/isymencunmanagedmethod-getfilenamefromoffset-method.md)|Ruft den Dateinamen für die Zeile ab, die einem Offset zugeordnet ist.|  
-|[GetLineFromOffset-Methode](../../../../docs/framework/unmanaged-api/diagnostics/isymencunmanagedmethod-getlinefromoffset-method.md)|Ruft die einem Offset zugeordneten Zeilen Informationen ab.|  
-|[GetSourceExtentInDocument-Methode](../../../../docs/framework/unmanaged-api/diagnostics/isymencunmanagedmethod-getsourceextentindocument-method.md)|Ruft die kleinste anfangs Linie und die größte Endzeile für die Methode in einem bestimmten Dokument ab.|  
+|[GetDocumentsForMethod-Methode](isymencunmanagedmethod-getdocumentsformethod-method.md)|Ruft die Dokumente ab, in denen diese Methode Zeilen aufweist.|  
+|[GetDocumentsForMethodCount-Methode](isymencunmanagedmethod-getdocumentsformethodcount-method.md)|Ruft die Anzahl der Dokumente ab, in denen diese Methode Zeilen aufweist.|  
+|[GetFileNameFromOffset-Methode](isymencunmanagedmethod-getfilenamefromoffset-method.md)|Ruft den Dateinamen für die Zeile ab, die einem Offset zugeordnet ist.|  
+|[GetLineFromOffset-Methode](isymencunmanagedmethod-getlinefromoffset-method.md)|Ruft die einem Offset zugeordneten Zeilen Informationen ab.|  
+|[GetSourceExtentInDocument-Methode](isymencunmanagedmethod-getsourceextentindocument-method.md)|Ruft die kleinste anfangs Linie und die größte Endzeile für die Methode in einem bestimmten Dokument ab.|  
   
-## <a name="requirements"></a>Voraussetzungen  
+## <a name="requirements"></a>Anforderungen  
  **Header:** Corsym. idl, corsym. h  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Diagnosesymbolspeicher-Schnittstellen](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)
+- [Diagnosesymbolspeicher-Schnittstellen](diagnostics-symbol-store-interfaces.md)
