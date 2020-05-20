@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 0bed524e-cc48-4bf0-b9fa-25d665e63ddb
 topic_type:
 - apiref
-ms.openlocfilehash: c7e9d2fe94c33127d8b105333ad6dac9d6cc5af6
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: c6d21f40c260890c9c88dcdfccd7e31161024ba3
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74446372"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614863"
 ---
-# <a name="isymunmanagedscopegetchildren-method"></a><span data-ttu-id="d07ef-102">ISymUnmanagedScope::GetChildren-Methode</span><span class="sxs-lookup"><span data-stu-id="d07ef-102">ISymUnmanagedScope::GetChildren Method</span></span>
-<span data-ttu-id="d07ef-103">Ruft die untergeordneten Elemente dieses Gültigkeits Bereichs ab.</span><span class="sxs-lookup"><span data-stu-id="d07ef-103">Gets the children of this scope.</span></span>  
+# <a name="isymunmanagedscopegetchildren-method"></a><span data-ttu-id="070f8-102">ISymUnmanagedScope::GetChildren-Methode</span><span class="sxs-lookup"><span data-stu-id="070f8-102">ISymUnmanagedScope::GetChildren Method</span></span>
+<span data-ttu-id="070f8-103">Ruft die untergeordneten Elemente dieses Gültigkeits Bereichs ab.</span><span class="sxs-lookup"><span data-stu-id="070f8-103">Gets the children of this scope.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d07ef-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="d07ef-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="070f8-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="070f8-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetChildren(  
@@ -35,23 +35,23 @@ HRESULT GetChildren(
         length_is(*pcChildren)] ISymUnmanagedScope* children[]);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="d07ef-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="d07ef-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="070f8-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="070f8-105">Parameters</span></span>  
  `cChildren`  
- <span data-ttu-id="d07ef-106">in Ein-`ULONG32`, der die Größe des `children` Arrays angibt.</span><span class="sxs-lookup"><span data-stu-id="d07ef-106">[in] A `ULONG32` that indicates the size of the `children` array.</span></span>  
+ <span data-ttu-id="070f8-106">in Ein-Wert `ULONG32` , der die Größe des `children` Arrays angibt.</span><span class="sxs-lookup"><span data-stu-id="070f8-106">[in] A `ULONG32` that indicates the size of the `children` array.</span></span>  
   
  `pcChildren`  
- <span data-ttu-id="d07ef-107">vorgenommen Ein Zeiger auf einen `ULONG32`, der die Größe des Puffers empfängt, der zum enthalten der untergeordneten Elemente erforderlich ist.</span><span class="sxs-lookup"><span data-stu-id="d07ef-107">[out] A pointer to a `ULONG32` that receives the size of the buffer required to contain the children.</span></span>  
+ <span data-ttu-id="070f8-107">vorgenommen Ein Zeiger auf einen `ULONG32` , der die Größe des Puffers empfängt, der zum enthalten der untergeordneten Elemente erforderlich ist.</span><span class="sxs-lookup"><span data-stu-id="070f8-107">[out] A pointer to a `ULONG32` that receives the size of the buffer required to contain the children.</span></span>  
   
  `children`  
- <span data-ttu-id="d07ef-108">vorgenommen Das zurückgegebene Array von untergeordneten Elementen.</span><span class="sxs-lookup"><span data-stu-id="d07ef-108">[out] The returned array of children.</span></span>  
+ <span data-ttu-id="070f8-108">vorgenommen Das zurückgegebene Array von untergeordneten Elementen.</span><span class="sxs-lookup"><span data-stu-id="070f8-108">[out] The returned array of children.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="d07ef-109">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="d07ef-109">Return Value</span></span>  
- <span data-ttu-id="d07ef-110">S_OK, wenn die Methode erfolgreich ist. andernfalls E_FAIL oder ein anderer Fehlercode.</span><span class="sxs-lookup"><span data-stu-id="d07ef-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="070f8-109">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="070f8-109">Return Value</span></span>  
+ <span data-ttu-id="070f8-110">S_OK, wenn die Methode erfolgreich ist. andernfalls E_FAIL oder ein anderer Fehlercode.</span><span class="sxs-lookup"><span data-stu-id="070f8-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="d07ef-111">Voraussetzungen</span><span class="sxs-lookup"><span data-stu-id="d07ef-111">Requirements</span></span>  
- <span data-ttu-id="d07ef-112">**Header:** Corsym. idl, corsym. h</span><span class="sxs-lookup"><span data-stu-id="d07ef-112">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="070f8-111">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="070f8-111">Requirements</span></span>  
+ <span data-ttu-id="070f8-112">**Header:** Corsym. idl, corsym. h</span><span class="sxs-lookup"><span data-stu-id="070f8-112">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d07ef-113">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="d07ef-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="070f8-113">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="070f8-113">See also</span></span>
 
-- [<span data-ttu-id="d07ef-114">ISymUnmanagedScope-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="d07ef-114">ISymUnmanagedScope Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md)
-- [<span data-ttu-id="d07ef-115">GetParent-Methode</span><span class="sxs-lookup"><span data-stu-id="d07ef-115">GetParent Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-getparent-method.md)
+- [<span data-ttu-id="070f8-114">ISymUnmanagedScope-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="070f8-114">ISymUnmanagedScope Interface</span></span>](isymunmanagedscope-interface.md)
+- [<span data-ttu-id="070f8-115">GetParent-Methode</span><span class="sxs-lookup"><span data-stu-id="070f8-115">GetParent Method</span></span>](isymunmanagedscope-getparent-method.md)
