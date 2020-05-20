@@ -2,19 +2,19 @@
 title: Entwickeln cloudnativer .NET-Anwendungen für Azure
 description: Leitfaden zum Erstellen cloudnativer Anwendungen, die Container, Microservices und serverlose Features von Azure nutzen.
 author: ardalis
-ms.date: 04/23/2020
-ms.openlocfilehash: 24d5c75fc5d2e5623892e8f83daea52553d13765
-ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
+ms.date: 05/13/2020
+ms.openlocfilehash: 1607c1bbcc9bbb3c9fe19840a2827aa5ea083728
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82507389"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83613997"
 ---
 # <a name="architecting-cloud-native-net-applications-for-azure"></a>Entwickeln cloudnativer .NET-Anwendungen für Azure
 
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
-
 ![Titelbild](./media/cover.png)
+
+**Edition 1.0**
 
 VERÖFFENTLICHT VON
 
@@ -26,7 +26,7 @@ One Microsoft Way
 
 Redmond, Washington 98052-6399
 
-Copyright &copy; 2019 Microsoft Corporation
+Copyright &copy; 2020 Microsoft Corporation
 
 Alle Rechte vorbehalten. Die Inhalte dieses Buchs dürfen in keiner Form und für keinen Zweck ohne die schriftliche Genehmigung des Herausgebers reproduziert oder übertragen werden.
 
@@ -58,11 +58,13 @@ Teilnehmer und Prüfer:
 >
 > **Cecil Phillip**, Senior Cloud Advocate, Microsoft
 
-Weitere Informationen zu eShopOnContainers
-
 Editoren:
 
 > **Maira Wenzel**, Senior Program Manager, .NET-Team, Microsoft
+
+## <a name="version"></a>Version
+
+Dieser Leitfaden wurde für **.NET Core 3.1** geschrieben und enthält viele weitere Updates zu ähnlichen Technologien (wie Azure und entsprechende Drittanbietertechnologien), die zeitgleich mit .NET Core 3.1 veröffentlicht wurden.
 
 ## <a name="who-should-use-this-guide"></a>Zielgruppe dieses Leitfadens
 
@@ -83,6 +85,10 @@ In diesem Leitfaden wird zunächst der Begriff „Cloudnativ“ definiert und ei
 - DevOps
 
 Dieser Leitfaden ist sowohl im PDF-Format als auch online verfügbar. Sie können dieses Dokument oder Links zur Onlineversion an Ihr Team weiterleiten, um ein allgemeines Verständnis dieser Themen sicherzustellen. Die meisten dieser Themen profitieren von einem einheitlichen Verständnis der zugrunde liegenden Prinzipien und Muster sowie der Nachteile einiger Entscheidungen, die in Relation zu diesen Entscheidungen stehen. Das Ziel dieses Dokuments ist es, Teams und Teamleiter mit den Informationen auszustatten, die sie benötigen, um fundierte Entscheidungen bezüglich der Architektur, der Entwicklung und des Hostings ihrer Anwendungen zu treffen.
+
+## <a name="send-your-feedback"></a>Senden Sie uns Ihr Feedback
+
+Dieses Buch und die dazugehörigen Beispiele werden ständig weiterentwickelt, deshalb freuen wir uns über Ihr Feedback. Wenn Sie Anmerkungen zur Verbesserung dieses Buchs haben, nutzen Sie den Feedbackabschnitt, der unten auf jeder Seite zu finden ist und über den [GitHub-Issues](https://github.com/dotnet/docs/issues) erstellt werden.
 
 >[!div class="step-by-step"]
 >[Nächste](introduction.md)

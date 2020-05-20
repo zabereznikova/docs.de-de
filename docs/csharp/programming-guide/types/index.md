@@ -11,18 +11,18 @@ helpviewer_keywords:
 - C# language, types
 - strong typing [C#]
 ms.assetid: f782d7cc-035e-4500-b1b1-36a9881130ad
-ms.openlocfilehash: 2fec7b5c36173bf4a99b35cc2bf9e3ca26354a11
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1e0141ceafe4c3450b3f798463ddc62ea79f1b36
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79397635"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83615214"
 ---
 # <a name="types-c-programming-guide"></a>Typen (C#-Programmierhandbuch)
 
 ## <a name="types-variables-and-values"></a>Typen, Variablen und Werte
 
-C# ist eine stark typisierte Sprache. Jede Variable und jede Konstante verfügt über einen Typ, genau wie jeder Ausdruck, der zu einem Wert ausgewertet wird. Jede Methodensignatur gibt für jeden Eingabeparameter und den Rückgabewert einen Typ an. In der .NET-Klassenbibliothek werden integrierte numerische Typen und komplexe Typen definiert, die viele logische Konstrukte darstellen, z.B. das Dateisystem, Netzwerkverbindungen, Auflistungen und Arrays von Objekten sowie Datumsangaben. In einem typischen C#-Programm werden Typen aus der Klassenbibliothek sowie benutzerdefinierte Typen verwendet, die die Konzepte für das Problemfeld des Programms modellieren.
+C# ist eine stark typisierte Sprache. Jede Variable und jede Konstante verfügt über einen Typ, genau wie jeder Ausdruck, der zu einem Wert ausgewertet wird. Jede Methodendeklaration gibt den Namen, die Parameteranzahl, den Typ und die Art (Wert, Verweis oder Ausgabe) für jeden Eingabeparameter und Rückgabewert an. In der .NET-Klassenbibliothek werden integrierte numerische Typen und komplexe Typen definiert, die viele logische Konstrukte darstellen, z.B. das Dateisystem, Netzwerkverbindungen, Auflistungen und Arrays von Objekten sowie Datumsangaben. In einem typischen C#-Programm werden Typen aus der Klassenbibliothek sowie benutzerdefinierte Typen verwendet, die die Konzepte für das Problemfeld des Programms modellieren.
 
 Folgende Informationen können in einem Typ gespeichert sein:
 
@@ -53,7 +53,7 @@ Wenn Sie eine Variable oder Konstante in einem Programm deklarieren, müssen Sie
 
 [!code-csharp[csProgGuideTypes#36](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#36)]
 
-Die Methodenparameter- und Rückgabewerttypen werden in der Methodensignatur angegeben. Die folgende Signatur zeigt eine Methode, für die ein [int](../../language-reference/builtin-types/integral-numeric-types.md) als Eingabeargument benötigt wird und die eine Zeichenfolge zurückgibt:
+Die Methodenparameter- und Rückgabewerttypen werden in der Methodendeklaration angegeben. Die folgende Signatur zeigt eine Methode, für die ein [int](../../language-reference/builtin-types/integral-numeric-types.md) als Eingabeargument benötigt wird und die eine Zeichenfolge zurückgibt:
 
 [!code-csharp[csProgGuideTypes#35](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#35)]
 
