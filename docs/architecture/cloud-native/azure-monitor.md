@@ -1,38 +1,36 @@
 ---
 title: Azure Monitor
 description: Die Verwendung von Azure Monitor, um Einblick in Ihr System zu erhalten, wird ausgeführt.
-ms.date: 02/05/2020
-ms.openlocfilehash: 4e5ddba6c1c13dc65662a7748d4ae3a58a6a6f68
-ms.sourcegitcommit: f87ad41b8e62622da126aa928f7640108c4eff98
+ms.date: 05/13/2020
+ms.openlocfilehash: e3ff673c63ecbc380cb8b74ae54065a091882d7b
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/07/2020
-ms.locfileid: "80805632"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614265"
 ---
 # <a name="azure-monitor"></a>Azure Monitor
 
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
+Kein anderer cloudanbieter hat eine Überwachungslösung für cloudanwendungen wie in Azure gefunden. Azure Monitor ist ein Dach Name für eine Sammlung von Tools, die entwickelt wurden, um Einblick in den Zustand Ihres Systems zu erhalten, Einblicke in alle Probleme und die Optimierung Ihrer Anwendung.
 
-Kein anderer Cloudanbieter verfügt über eine so ausgereifte Cloudanwendungsüberwachungslösung wie in Azure. Azure Monitor ist ein Dachname für eine Sammlung von Tools, die einen Einblick in den Status Ihres Systems, Einblicke in Probleme und die Optimierung Ihrer Anwendung bieten.
-
-![Azure Monitor, eine Sammlung von Tools, die Einblicke in die Funktionsweise einer cloudnativen Anwendung bietet. ](./media/azure-monitor.png)
- **Abbildung 7-12**. Azure Monitor, eine Sammlung von Tools, die Einblicke in die Funktionsweise einer cloudnativen Anwendung bietet.
+![Azure Monitor eine Sammlung von Tools, um Einblick in die Funktionsweise einer Cloud-native Anwendung zu erhalten. ](./media/azure-monitor.png)
+ **Abbildung 7-12**. Azure Monitor eine Sammlung von Tools, um Einblick in die Funktionsweise einer Cloud-native Anwendung zu erhalten.
 
 ## <a name="gathering-logs-and-metrics"></a>Sammeln von Protokollen und Metriken
 
-Der erste Schritt in jeder Überwachungslösung besteht darin, so viele Daten wie möglich zu sammeln. Je mehr Daten gesammelt werden können, desto tiefer sind die Erkenntnisse, die gewonnen werden können. Instrumentierungssysteme waren traditionell schwierig. Simple Network Management Protocol (SNMP) war das Gold-Standardprotokoll zum Sammeln von Informationen auf Maschinenebene, aber es erforderte viel Wissen und Konfiguration. Glücklicherweise wurde ein Großteil dieser harten Arbeit eliminiert, da die häufigsten Metriken automatisch von Azure Monitor erfasst werden.
+Der erste Schritt einer Überwachungslösung besteht darin, so viele Daten wie möglich zu erfassen. Die mehr Daten, die gesammelt werden können, desto genauer sind die Erkenntnisse, die abgerufen werden können. Instrumentierungssysteme waren traditionell schwierig. Das Simple Network Management-Protokoll (SNMP) war das Gold-Standardprotokoll für die Erfassung von Informationen auf Computer Ebene, erforderte aber sehr viel Wissen und Konfigurierung. Glücklicherweise wurde ein Großteil dieser harte Arbeit beseitigt, da die häufigsten Metriken automatisch von Azure Monitor gesammelt werden.
 
-Metriken und Ereignisse auf Anwendungsebene können nicht automatisch instrumentiert werden, da sie spezifisch für die bereitgestellte Anwendung sind. Um diese Metriken zu erfassen, stehen [SDKs und APIs zur Verfügung,](https://docs.microsoft.com/azure/azure-monitor/app/api-custom-events-metrics) um solche Informationen direkt zu melden, z. B. wenn sich ein Kunde anmeldet oder eine Bestellung abschließt. Ausnahmen können auch erfasst und über Application Insights wieder an Azure Monitor gemeldet werden. Die SDKs unterstützen die meisten Sprachen in Cloud Native-Anwendungen, einschließlich Go, Python, JavaScript und den .NET-Sprachen.
+Metriken und Ereignisse auf Anwendungsebene können nicht automatisch instrumentiert werden, da Sie für die bereitgestellte Anwendung spezifisch sind. Um diese Metriken zu erfassen, sind [sdken und APIs verfügbar](https://docs.microsoft.com/azure/azure-monitor/app/api-custom-events-metrics) , die diese Informationen direkt melden, z. b. wenn sich ein Kunde anmeldet oder eine Bestellung abschließt. Ausnahmen können auch aufgezeichnet und in Azure Monitor über Application Insights zurückgemeldet werden. Die sdche unterstützen die meisten Sprachen, die in nativen cloudanwendungen enthalten sind, einschließlich go, Python, JavaScript und .NET-Sprachen.
 
-Das ultimative Ziel, Informationen über den Status Ihrer Anwendung zu sammeln, besteht darin, sicherzustellen, dass Ihre Endbenutzer eine gute Erfahrung haben. Gibt es eine bessere Möglichkeit, um zu erkennen, ob Benutzer Probleme haben, als [externe Webtests](https://docs.microsoft.com/azure/azure-monitor/app/monitor-web-app-availability)durchzuführen? Diese Tests können so einfach sein, wie das Pingen Ihrer Website von Standorten auf der ganzen Welt oder so beteiligt, wie Agenten sich an der Website anmelden und Benutzeraktionen simulieren.
+Das Hauptziel der Erfassung von Informationen über den Zustand Ihrer Anwendung besteht darin, sicherzustellen, dass Ihre Endbenutzer eine gute Benutzer Leistung haben. Was ist besser zu erkennen, wenn Benutzer Probleme haben, als [externe Webtests durchzuführen](https://docs.microsoft.com/azure/azure-monitor/app/monitor-web-app-availability)? Diese Tests können so einfach sein wie das Pingen Ihrer Website an den Standorten auf der ganzen Welt oder daran, dass sich Agents bei der Website anmelden und Benutzeraktionen simulieren.
 
 ## <a name="reporting-data"></a>Berichtsdaten
 
-Sobald die Daten gesammelt wurden, können sie bearbeitet, zusammengefasst und in Diagramme geplottet werden, sodass Benutzer sofort sehen können, wenn Probleme auftreten. Diese Diagramme können in Dashboards oder in Workbooks gesammelt werden, einem mehrseitigen Bericht, der eine Geschichte über einen Aspekt des Systems erzählen soll.
+Sobald die Daten erfasst wurden, können Sie in Diagrammen manipuliert, zusammengefasst und gezeichnet werden, sodass Benutzer sofort erkennen können, wann Probleme aufgetreten sind. Diese Diagramme können in Dashboards oder in Arbeitsmappen gesammelt werden, einem mehrseitigen Bericht, der eine Story über einen Aspekt des Systems informieren soll.
 
-Keine moderne Anwendung wäre komplett ohne künstliche Intelligenz oder maschinelles Lernen. Zu diesem Zweck können Daten an die verschiedenen Tools zum erlernen den Benutzern in Azure [übergeben werden,](https://www.youtube.com/watch?v=Cuza-I1g9tw) damit Sie Trends und Informationen extrahieren können, die andernfalls ausgeblendet wären.
+Ohne künstliche Intelligenz oder Maschinelles Lernen wäre keine moderne Anwendung fertiggestellt. Zu diesem Zweck können Daten an die verschiedenen Machine Learning-Tools in Azure über [mittelt werden](https://www.youtube.com/watch?v=Cuza-I1g9tw) , damit Sie Trends und Informationen extrahieren können, die andernfalls ausgeblendet werden.
 
-Application Insights bietet eine leistungsstarke Abfragesprache namens Kusto, die zum Suchen von Datensätzen, Zusammenfassen und sogar Plotdiagrammen verwendet werden kann. Diese Abfrage sucht z. B. alle Datensätze für den Monat November 2007, gruppiert sie nach Status und zeichnet die Top 10 als Kreisdiagramm.
+Application Insights bietet eine leistungsstarke Abfragesprache namens Kusto, mit der Sie Datensätze suchen, zusammenfassen und sogar Diagramme zeichnen können. Diese Abfrage findet beispielsweise alle Datensätze für den Monat November 2007, gruppiert Sie nach Bundesland und zeichnet die ersten 10 als Kreis Diagramm.
 
 ```kusto
 StormEvents
@@ -42,26 +40,26 @@ StormEvents
 | render piechart
 ```
 
-![Das Ergebnis der Application](./media/azure-monitor.png)
-Insights Query**Abbildung 7-13**. Das Ergebnis der Application Insights Query.
+![Das Ergebnis der Application Insights Abfrage ](./media/azure-monitor.png)
+ **Abbildung 7-13**. Das Ergebnis der Application Insights Abfrage.
 
-Es gibt einen [Spielplatz zum Experimentieren mit Kusto-Abfragen,](https://dataexplorer.azure.com/clusters/help/databases/Samples) der ein fantastischer Ort ist, um ein oder zwei Stunden zu verbringen. Das Lesen von [Beispielabfragen](https://docs.microsoft.com/azure/kusto/query/samples) kann auch lehrreich sein.
+Es gibt einen [Spielplatz für das Experimentieren mit Kusto](https://dataexplorer.azure.com/clusters/help/databases/Samples) -Abfragen. Dies ist ein idealer Ort, um eine Stunde oder zwei Stunden zu verbringen. Das Lesen von [Beispielabfragen](https://docs.microsoft.com/azure/kusto/query/samples) kann auch aufschlussreich sein.
 
 ## <a name="dashboards"></a>Dashboards
 
-Es gibt mehrere verschiedene Dashboardtechnologien, die verwendet werden können, um die Informationen aus Azure Monitor anzuzeigen. Vielleicht ist es am einfachsten, Abfragen in Application Insights auszuführen und [die Daten in einem Diagramm](https://docs.microsoft.com/azure/azure-monitor/learn/tutorial-app-dashboards)darzustellen.
+Es gibt mehrere verschiedene dashboardtechnologien, die verwendet werden können, um die Informationen aus Azure Monitor zu verwenden. Möglicherweise ist es am einfachsten, einfach Abfragen in Application Insights auszuführen und [die Daten in einem Diagramm zu zeichnen](https://docs.microsoft.com/azure/azure-monitor/learn/tutorial-app-dashboards).
 
-![Ein Beispiel für Application Insights-Diagramme, die in die Hauptabbildung](./media/azure-monitor.png)
-**7-14**des Azure Dashboards eingebettet sind. Ein Beispiel für Application Insights-Diagramme, die in das Azure-Hauptdashboard eingebettet sind.
+![Ein Beispiel für Application Insights Diagramme, die im Azure-Haupt Dashboard in ](./media/azure-monitor.png)
+ **Abbildung 7-14**eingebettet sind. Ein Beispiel für Application Insights Diagramme, die im Azure-Haupt Dashboard eingebettet sind.
 
-Diese Diagramme können dann mithilfe der Dashboardfunktion in das eigentliche Azure-Portal eingebettet werden. Für Benutzer mit anspruchsvolleren Anforderungen, z. B. in der Lage, einen Drilldown in mehrere Datenebenen zu führen, stehen Azure Monitor-Daten für [Power BI](https://powerbi.microsoft.com/)zur Verfügung. Power BI ist ein branchenführendes Business Intelligence-Tool der Enterprise-Klasse, das Daten aus vielen verschiedenen Datenquellen aggregieren kann.
+Diese Diagramme können dann mithilfe der dashboardfunktion in den Azure-Portal eingebettet werden. Für Benutzer mit anspruchsvolleren Anforderungen, z. b. der Möglichkeit, einen Drilldown in mehrere Daten Ebenen durchführen zu können, stehen Azure Monitor Daten für [Power BI](https://powerbi.microsoft.com/)zur Verfügung. Power BI ist eine branchenführende Enterprise-Klasse Business Intelligence Tool, mit dem Daten aus vielen verschiedenen Datenquellen aggregiert werden können.
 
-![Beispiel Power BI-Dashboard](./media/azure-monitor.png)
-Abbildung**7-15**. Ein Beispiel für das Power BI-Dashboard.
+![Ein Beispiel Power BI ](./media/azure-monitor.png)
+ **dashboardabbildung 7-15**. Ein Beispiel Power BI-Dashboard.
 
-## <a name="alerts"></a>Alerts
+## <a name="alerts"></a>Warnungen
 
-Manchmal ist es nicht ausreichend, Datendashboards zu haben. Wenn niemand wach ist, um die Dashboards zu beobachten, dann kann es noch viele Stunden dauern, bis ein Problem behoben oder sogar erkannt wird. Zu diesem Zweck bietet Azure Monitor auch eine erstklassige [Warnlösung](https://docs.microsoft.com/azure/azure-monitor/platform/alerts-overview). Warnungen können durch eine Vielzahl von Bedingungen ausgelöst werden, einschließlich:
+Manchmal reicht es nicht aus, Daten Dashboards zu haben. Wenn niemand aktiv ist, um die Dashboards zu beobachten, kann es nach wie vor viele Stunden dauern, bis ein Problem behoben oder sogar erkannt wird. Zu diesem Zweck stellt Azure Monitor auch eine Lösung mit der höchsten [Lösung](https://docs.microsoft.com/azure/azure-monitor/platform/alerts-overview)bereit. Warnungen können durch eine Vielzahl von Bedingungen ausgelöst werden, darunter:
 
 - Metrikwerte
 - Protokollsuchabfragen
@@ -69,13 +67,13 @@ Manchmal ist es nicht ausreichend, Datendashboards zu haben. Wenn niemand wach i
 - Integrität der zugrunde liegenden Azure-Plattform
 - Tests für die Verfügbarkeit von Websites
 
-Wenn die Warnungen ausgelöst werden, können sie eine Vielzahl von Aufgaben ausführen. Auf der einfachen Seite können die Benachrichtigungen nur eine E-Mail-Benachrichtigung an eine Mailingliste oder eine SMS an eine Person senden. Mehr beteiligte Warnungen können einen Workflow in einem Tool wie PagerDuty auslösen, das weiß, wer für eine bestimmte Anwendung auf Abruf ist. Warnungen können Aktionen in [Microsoft Flow](https://flow.microsoft.com/) auslösen, die nahezu unbegrenzte Möglichkeiten für Workflows freischalten.
+Wenn die Warnungen ausgelöst werden, können Sie eine Vielzahl von Tasks ausführen. Auf der einfachen Seite können die Warnungen nur eine e-Mail-Benachrichtigung an eine Mailingliste oder eine Textnachricht an eine Person senden. Weitere Beteiligte Warnungen könnten einen Workflow in einem Tool wie z. b. PagerDuty auslöst, das weiß, wer für eine bestimmte Anwendung aufgerufen wird. Warnungen können Aktionen in [Microsoft Flow](https://flow.microsoft.com/) Auslösung von nahezu unbegrenzten Möglichkeiten für Workflows auslöst.
 
-Wenn häufige Ursachen von Warnungen identifiziert werden, können die Warnungen um Details zu den häufigsten Ursachen der Warnungen und den zu ihrer Behebung zu ihrer Behebung erforderlichen Schritten erweitert werden. Hochausgereifte Cloud-native Anwendungsbereitstellungen können sich dafür entscheiden, Selbstheilungsaufgaben zu starten, die Aktionen ausführen, wie z. B. das Entfernen fehlerhafter Knoten aus einer Skalierungsgruppe oder das Auslösen einer Autoscaling-Aktivität. Schließlich kann es nicht mehr notwendig sein, das Bereitschaftspersonal um 2 Uhr morgens aufzuwecken, um ein Problem mit der Live-Site zu lösen, da das System in der Lage sein wird, sich anzupassen, um zu kompensieren oder zumindest mitzuschleppen, bis jemand am nächsten Morgen bei der Arbeit eintrifft.
+Da häufig Warnungen identifiziert werden, können die Warnungen mit Details zu den häufigen Ursache der Warnungen und den Schritten zum Beheben der Warnungen erweitert werden. Hoch ausgereifte, cloudbasierte Anwendungs Bereitstellungen können Selbstreparatur Aufgaben ausführen, die Aktionen ausführen, z. b. das Entfernen fehlerhafter Knoten aus einer Skalierungs Gruppe oder das Auslösen einer Aktivität für die automatische Skalierung. Es ist ggf. nicht mehr erforderlich, die Mitarbeiter auf der zweiten Seite zu reaktivieren, um ein Problem mit der Live Site zu beheben, da sich das System in der Lage ist, sich an den nächsten Morgen zu kompensieren oder zumindest an die Arbeit zu richten.
 
-Azure Monitor nutzt Machine Learning automatisch, um die normalen Betriebsparameter bereitgestellter Anwendungen zu verstehen. Auf diese Weise kann es Dienste erkennen, die außerhalb ihrer normalen Parameter arbeiten. Beispielsweise kann der typische Wochentagsverkehr auf der Website 10.000 Anforderungen pro Minute betragen. Und dann, in einer bestimmten Woche, plötzlich die Anzahl der Anfragen trifft eine sehr ungewöhnliche 20.000 Anfragen pro Minute. [Smart Detection](https://docs.microsoft.com/azure/azure-monitor/app/proactive-diagnostics) bemerkt diese Abweichung von der Norm und löst eine Warnung aus. Gleichzeitig ist die Trendanalyse intelligent genug, um zu vermeiden, dass falsche Positivmeldungen ausgelöst werden, wenn die Verkehrslast erwartet wird.
+Azure Monitor nutzt Machine Learning automatisch, um die normalen Betriebsparameter von bereitgestellten Anwendungen zu verstehen. Dadurch können Dienste erkannt werden, die außerhalb ihrer normalen Parameter ausgeführt werden. Beispielsweise kann der typische wochentagsdatenverkehr auf der Website 10.000 Anforderungen pro Minute betragen. In einer bestimmten Woche trifft die Anzahl der Anforderungen plötzlich auf sehr ungewöhnliche 20.000-Anforderungen pro Minute. Die [intelligente Erkennung](https://docs.microsoft.com/azure/azure-monitor/app/proactive-diagnostics) bemerkt diese Abweichung von der Norm und löst eine Warnung aus. Gleichzeitig ist die Trendanalyse intelligent genug, um zu vermeiden, dass falsch positive Ergebnisse ausgelöst werden, wenn die Auslastung des Datenverkehrs erwartet wird.
 
-## <a name="references"></a>References
+## <a name="references"></a>Referenzen
 
 - [Azure Monitor](https://docs.microsoft.com/azure/azure-monitor/overview)
 

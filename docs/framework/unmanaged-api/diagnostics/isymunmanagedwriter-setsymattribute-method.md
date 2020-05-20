@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 64d9b80e-b883-4539-89c7-03573185a1eb
 topic_type:
 - apiref
-ms.openlocfilehash: 8a4d205586921b377147eeab80754e1a0d9e52b0
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 39b0c065a324f2b3939467901739f995bc9abbad
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74427842"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614759"
 ---
 # <a name="isymunmanagedwritersetsymattribute-method"></a>ISymUnmanagedWriter::SetSymAttribute-Methode
 Definiert ein benutzerdefiniertes Attribut basierend auf seinem Namen. Diese Attribute werden im Symbol Speicher gespeichert, im Gegensatz zu benutzerdefinierten Metadaten-Attributen.  
@@ -40,10 +40,10 @@ HRESULT SetSymAttribute(
  in Das Metadatentoken, für das das Attribut definiert wird.  
   
  `name`  
- in Ein Zeiger auf eine `WCHAR`, die den Attributnamen enthält.  
+ in Ein Zeiger auf einen `WCHAR` , der den Attributnamen enthält.  
   
  `cData`  
- in Ein-`ULONG32`, der die Größe des `data` Arrays angibt.  
+ in Ein-Wert `ULONG32` , der die Größe des `data` Arrays angibt.  
   
  `data`  
  in Der Attribut Wert.  
@@ -51,9 +51,9 @@ HRESULT SetSymAttribute(
 ## <a name="return-value"></a>Rückgabewert  
  S_OK, wenn die Methode erfolgreich ist. andernfalls E_FAIL oder ein anderer Fehlercode.  
   
-## <a name="requirements"></a>Voraussetzungen  
+## <a name="requirements"></a>Anforderungen  
  **Header:** Corsym. idl, corsym. h  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [ISymUnmanagedWriter-Schnittstelle](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
+- [ISymUnmanagedWriter-Schnittstelle](isymunmanagedwriter-interface.md)

@@ -1,17 +1,15 @@
 ---
 title: Sicherheit
 description: Architektur von Cloud Native .net-apps für Azure | Sicherung
-ms.date: 06/30/2019
-ms.openlocfilehash: 848255de70038798417a558543d0b1ea8cff1e37
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.date: 05/13/2020
+ms.openlocfilehash: 9afbc2c960fdd16721e1d3aa7fd01d5c0c1fe2f9
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "73840994"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83613667"
 ---
 # <a name="security"></a>Sicherheit
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 Kein Tag geht an der Stelle, an der die Nachrichten keine Informationen zu einem Unternehmen enthalten, das gehackt wird, oder um die Daten Ihrer Kunden zu verlieren. Selbst Länder sind nicht immun gegen die Probleme, die durch die Behandlung der Sicherheit als Nachfolge Phase entstehen. Seit Jahren haben Unternehmen die Sicherheit von Kundendaten und sogar die gesamten Netzwerke als etwas, das Sie haben, behandelt. Windows-Server wurden nicht gepatcht, alte Versionen von PHP wurden weiterhin ausgeführt, und MongoDB-Datenbanken waren weiterhin weltweit offen.
 

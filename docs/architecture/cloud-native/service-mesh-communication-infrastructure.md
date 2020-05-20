@@ -2,17 +2,15 @@
 title: Service Mesh-Kommunikationsinfrastruktur
 description: Erfahren Sie, wie Service Mesh-Technologien die cloudbasierte mikroservicekommunikation optimieren.
 author: robvet
-ms.date: 03/03/2020
-ms.openlocfilehash: 89bc4d307d725e7e31e020ef156c4c5967dd2a1c
-ms.sourcegitcommit: 5988e9a29cedb8757320817deda3c08c6f44a6aa
+ms.date: 05/13/2020
+ms.openlocfilehash: 1b11024cd029433c756812850e2665b7836a13d3
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82199945"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83613685"
 ---
 # <a name="service-mesh-communication-infrastructure"></a>Service Mesh-Kommunikationsinfrastruktur
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 In diesem Kapitel haben wir die Herausforderungen der Kommunikation mit dem Microsoft-Dienst untersucht. Wir haben gesagt, dass Entwicklungsteams sensibel sein müssen, wie Back-End-Dienste miteinander kommunizieren. Im Idealfall umso besser ist die Kommunikation zwischen Diensten. Die Vermeidung ist jedoch nicht immer möglich, da Back-End-Dienste oft aufeinander aufbauen, um Vorgänge abzuschließen.
 
@@ -52,7 +50,7 @@ Besonderes Augenmerk lag auf verwalteten Azure-Diensten, die bei der Implementie
 
 Wir wechseln als nächstes zu verteilten Daten in cloudbasierten Systemen und den Vorteilen und Herausforderungen, die es bietet.
 
-### <a name="references"></a>References
+### <a name="references"></a>Referenzen
 
 - [.Net-microservices: Architektur für .NET-Container Anwendungen](https://dotnet.microsoft.com/download/thank-you/microservices-architecture-ebook)
 

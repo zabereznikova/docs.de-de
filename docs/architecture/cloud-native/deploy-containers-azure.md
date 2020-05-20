@@ -2,16 +2,14 @@
 title: Bereitstellen von Containern in Azure
 description: Bereitstellen von Containern in Azure mit Azure Container Registry, Azure Kubernetes Service und Azure dev Spaces.
 ms.date: 04/13/2020
-ms.openlocfilehash: 57a4739d39b8ad022d699d54255f56f16d305440
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: ba2854323ee0f1394a3cff0dd3756cb3c7c32d5b
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82895600"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614148"
 ---
 # <a name="deploying-containers-in-azure"></a>Bereitstellen von Containern in Azure
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 Wir haben die Container in diesem Kapitel und in Kapitel 1 erörtert. Wir haben festgestellt, dass Container viele Vorteile für cloudanwendungen bieten, einschließlich Portabilität. In der Azure-Cloud können Sie dieselben containerisierten Dienste in Staging-und Produktionsumgebungen bereitstellen. Azure bietet mehrere Optionen für das Hosting dieser containerisierten Workloads:
 
@@ -25,7 +23,7 @@ Beim containerialisieren eines microservice müssen Sie zuerst einen Build-Conta
 
 Nach der Erstellung werden Container Images in Container Registrierungen gespeichert. Sie ermöglichen Ihnen das Erstellen, speichern und Verwalten von Container Images. Es sind zahlreiche Registrierungen verfügbar (öffentlich und privat). Azure Container Registry (ACR) ist ein vollständig verwalteter Container Registrierungsdienst in der Azure-Cloud. Sie speichert Ihre Images innerhalb des Azure-Netzwerks und verkürzt die Zeit für die Bereitstellung auf Azure-Container Hosts. Sie können diese auch mit denselben Sicherheits-und Identitäts Prozeduren sichern, die Sie auch für andere Azure-Ressourcen verwenden.
 
-Sie erstellen eine Azure Container Registry mithilfe der Tools [Azure-Portal](https://docs.microsoft.com/azure/container-registry/container-registry-get-started-portal), [Azure CLI](https://docs.microsoft.com/azure/container-registry/container-registry-get-started-azure-cli)oder [PowerShell](https://docs.microsoft.com/azure/container-registry/container-registry-get-started-powershell). Das Erstellen einer Registrierung in Azure ist einfach. Hierfür sind ein Azure-Abonnement, eine Ressourcengruppe und ein eindeutiger Name erforderlich. In Abbildung 3-11 werden die grundlegenden Optionen zum Erstellen einer Registrierung gezeigt, die unter `registryname.azurecr.io`gehostet wird.
+Sie erstellen eine Azure Container Registry mithilfe der Tools [Azure-Portal](https://docs.microsoft.com/azure/container-registry/container-registry-get-started-portal), [Azure CLI](https://docs.microsoft.com/azure/container-registry/container-registry-get-started-azure-cli)oder [PowerShell](https://docs.microsoft.com/azure/container-registry/container-registry-get-started-powershell). Das Erstellen einer Registrierung in Azure ist einfach. Hierfür sind ein Azure-Abonnement, eine Ressourcengruppe und ein eindeutiger Name erforderlich. In Abbildung 3-11 werden die grundlegenden Optionen zum Erstellen einer Registrierung gezeigt, die unter gehostet wird `registryname.azurecr.io` .
 
 ![Erstellen einer Containerregistrierung](./media/create-container-registry.png)
 
@@ -59,7 +57,7 @@ Als bewährte Verfahrensweise sollten Entwickler Images nicht manuell in eine Co
 
 ## <a name="acr-tasks"></a>ACR-Aufgaben
 
-[ACR-Aufgaben](https://docs.microsoft.com/azure/container-registry/container-registry-tasks-overview) sind eine Reihe von Funktionen, die im Azure Container Registry verfügbar sind. Es erweitert den [Entwicklungs Durchlauf der inneren Schleife](https://docs.microsoft.com/dotnet/architecture/containerized-lifecycle/design-develop-containerized-apps/docker-apps-inner-loop-workflow) durch das entwickeln und Verwalten von Container Images in der Azure-Cloud. Anstatt einen `docker build` und lokal auf `docker push` dem Entwicklungs Computer aufzurufen, werden diese automatisch von ACR-Aufgaben in der Cloud verarbeitet.
+[ACR-Aufgaben](https://docs.microsoft.com/azure/container-registry/container-registry-tasks-overview) sind eine Reihe von Funktionen, die im Azure Container Registry verfügbar sind. Es erweitert den [Entwicklungs Durchlauf der inneren Schleife](https://docs.microsoft.com/dotnet/architecture/containerized-lifecycle/design-develop-containerized-apps/docker-apps-inner-loop-workflow) durch das entwickeln und Verwalten von Container Images in der Azure-Cloud. Anstatt einen `docker build` und `docker push` lokal auf dem Entwicklungs Computer aufzurufen, werden diese automatisch von ACR-Aufgaben in der Cloud verarbeitet.
 
 Mit dem folgenden Befehl AZ CLI wird ein Container Image erstellt und per Push an ACR übertragen:
 
@@ -124,10 +122,10 @@ Alle diese Schritte können mit dem Azure CLI und den neuen `azds` Befehlszeilen
 az aks use-dev-spaces -g my-aks-resource-group -n MyAKSCluster
 ```
 
-Als nächstes können Sie den `azds prep` Befehl verwenden, um die erforderlichen docker-und Helm-Diagramm Ressourcen für die Ausführung der Anwendung zu generieren. Anschließend führen Sie den Code in AKS mithilfe `azds up`von aus. Wenn Sie diesen Befehl zum ersten Mal ausführen, wird das Helm-Diagramm installiert. Die Container werden gemäß Ihren Anweisungen erstellt und bereitgestellt. Diese Aufgabe kann einige Minuten in Anspruch nehmen, wenn Sie zum ersten Mal ausgeführt wird. Nachdem Sie jedoch Änderungen vorgenommen haben, können Sie mithilfe `azds space select` von eine Verbindung mit Ihrem eigenen untergeordneten Entwicklungsbereich herstellen und dann Ihre Updates in Ihrem isolierten untergeordneten Entwicklungsbereich bereitstellen und Debuggen. Sobald Sie Ihren Entwicklungsbereich eingerichtet haben, können Sie Updates an ihn senden, indem Sie den `azds up` Befehl erneut ausgeben, oder Sie können integrierte Tools in Visual Studio oder Visual Studio Code verwenden. Mit vs Code verwenden Sie die Befehls Palette, um eine Verbindung mit dem Entwicklungsbereich herzustellen. In Abbildung 3-12 wird gezeigt, wie Sie Ihre Webanwendung mithilfe von Azure dev Spaces in Visual Studio starten.
+Als nächstes können Sie den `azds prep` Befehl verwenden, um die erforderlichen docker-und Helm-Diagramm Ressourcen für die Ausführung der Anwendung zu generieren. Anschließend führen Sie den Code in AKS mithilfe von aus `azds up` . Wenn Sie diesen Befehl zum ersten Mal ausführen, wird das Helm-Diagramm installiert. Die Container werden gemäß Ihren Anweisungen erstellt und bereitgestellt. Diese Aufgabe kann einige Minuten in Anspruch nehmen, wenn Sie zum ersten Mal ausgeführt wird. Nachdem Sie jedoch Änderungen vorgenommen haben, können Sie mithilfe von eine Verbindung mit Ihrem eigenen untergeordneten Entwicklungsbereich herstellen und `azds space select` dann Ihre Updates in Ihrem isolierten untergeordneten Entwicklungsbereich bereitstellen und Debuggen. Sobald Sie Ihren Entwicklungsbereich eingerichtet haben, können Sie Updates an ihn senden, indem Sie den Befehl erneut ausgeben, `azds up` oder Sie können integrierte Tools in Visual Studio oder Visual Studio Code verwenden. Mit vs Code verwenden Sie die Befehls Palette, um eine Verbindung mit dem Entwicklungsbereich herzustellen. In Abbildung 3-12 wird gezeigt, wie Sie Ihre Webanwendung mithilfe von Azure dev Spaces in Visual Studio starten.
 
-![Stellen Sie in Visual Studio](./media/azure-dev-spaces-visual-studio-launchsettings.png)
-in**Abbildung 3-12**eine Verbindung mit Azure dev Spaces her. Herstellen einer Verbindung mit Azure dev Spaces in Visual Studio
+![Stellen Sie in Visual Studio in ](./media/azure-dev-spaces-visual-studio-launchsettings.png)
+ **Abbildung 3-12**eine Verbindung mit Azure dev Spaces her. Herstellen einer Verbindung mit Azure dev Spaces in Visual Studio
 
 >[!div class="step-by-step"]
 >[Zurück](combine-containers-serverless-approaches.md)

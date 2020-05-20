@@ -1,17 +1,15 @@
 ---
 title: Infrastructure-as-Code
 description: Einbeziehen von Infrastructure-as-Code (IAC) mit cloudbasierten Anwendungen
-ms.date: 05/12/2020
-ms.openlocfilehash: 309dd8610ab3b72a6c6da5297f109f822520c5ff
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.date: 05/13/2020
+ms.openlocfilehash: cfc9e1f0b2733048d5921de5a0400998c282b1fa
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83395344"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83613953"
 ---
 # <a name="infrastructure-as-code"></a>Infrastructure-as-Code
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 In der Cloud systemeigene Systeme sind zum Erreichen von Geschwindigkeit und Agilität das Erstellen von Funktionen, Containern und modernen System Entwürfen. Sie bieten automatisierte Build-und releasephasen, um konsistenten und qualitativ hochwertigen Code sicherzustellen Aber das ist nur ein Teil der Story. Wie stellen Sie die cloudumgebungen bereit, auf denen diese Systeme ausgeführt werden?
 

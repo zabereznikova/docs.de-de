@@ -2,21 +2,19 @@
 title: Definition von cloudbasiert
 description: Erfahren Sie mehr über die grundlegenden Säulen, die das Fundament für Native cloudsysteme bereitstellen.
 author: robvet
-ms.date: 08/20/2019
-ms.openlocfilehash: 33977ff736fc5cbfcf86ed6479e8d0b927b87a63
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.date: 05/13/2020
+ms.openlocfilehash: e8b07fe7758d90f6ba97b81d0efa9d2fb5058d49
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82895621"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614171"
 ---
 # <a name="defining-cloud-native"></a>Definieren von Cloud Native
 
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
+Nehmen Sie an, was Sie tun, und Text zehn Ihrer Kollegen. Bitten Sie ihn, den Begriff "Cloud Native" zu definieren. Eine gute Chance ist, dass Sie zehn verschiedene Antworten erhalten.
 
-Nehmen Sie an, was Sie tun, und Text zehn Ihrer Kollegen. Bitten Sie ihn, den Begriff "Cloud Native" zu definieren. Gute Wahrscheinlichkeit, dass Sie acht verschiedene Antworten erhalten.
-
-Bei der nativen Cloud geht es um das Ändern der Art und Weise, wie wir wichtige Geschäftssysteme erstellen.
+Bei der nativen Cloud geht es um das Ändern der Art und Weise, wie Sie mit der Erstellung wichtiger Geschäftssysteme
 
 Cloud-Native Systeme sind für schnelle Änderungen, große Skalierbarkeit und Resilienz konzipiert.
 
@@ -72,7 +70,7 @@ Wie würden Sie eine Cloud-Native App entwerfen? Wie sieht Ihre Architektur aus?
 
 Eine weit verbreitete Methode zum Erstellen von cloudbasierten Anwendungen ist die [zwölfstufige Anwendung](https://12factor.net/). Es beschreibt eine Reihe von Prinzipien und Vorgehensweisen, die Entwickler befolgen, um Anwendungen zu erstellen, die für moderne cloudumgebungen optimiert sind. Besondere Aufmerksamkeit ist für die Portabilität in Umgebungen und deklarative Automatisierung.
 
-Wenngleich auf webbasierte Anwendungen anwendbar ist, werden Sie von vielen Praktikern als eine solide Grundlage für die Entwicklung von cloudbasierten apps betrachtet. Systeme, die auf diesen Prinzipien basieren, können schnell bereitstellen und skalieren und Features hinzufügen, um schnell auf Markt Änderungen zu reagieren.
+Wenngleich auf webbasierte Anwendungen anwendbar ist, sehen viele Fachleute als eine solide Grundlage für die Entwicklung von cloudbasierten apps. Systeme, die auf diesen Prinzipien basieren, können schnell bereitstellen und skalieren und Features hinzufügen, um schnell auf Markt Änderungen zu reagieren.
 
 In der folgenden Tabelle wird die zwölfstufige Methodik hervorgehoben:
 
@@ -91,7 +89,7 @@ In der folgenden Tabelle wird die zwölfstufige Methodik hervorgehoben:
 | 11 | Protokollierung | Behandeln Sie von-Webdiensten generierte Protokolle als Ereignisdaten Ströme. Verarbeiten Sie Sie mit einem Ereignisaggregator, und übertragen Sie die Daten an Data Mining/Log-Verwaltungs Tools wie Azure Monitor oder Splunk und schließlich über eine langfristige Archivierung. |
 | 12 | Verwaltungsprozesse | Ausführen von Verwaltungs-und Verwaltungsaufgaben als einmalige Prozesse. Tasks können Datencleanup und Pull Analytics für einen Bericht einschließen. Tools, die diese Aufgaben ausführen, sollten aus der Produktionsumgebung, aber getrennt von der Anwendung aufgerufen werden. |
 
-Im Buch [über die zwölfstufige App hinaus](https://content.pivotal.io/blog/beyond-the-twelve-factor-app)erläutert Autor Kevin Hoffman jeden der ursprünglichen 12 Faktoren (geschrieben in 2011). Außerdem bietet das Buch drei weitere Faktoren, die den heutigen modernen cloudanwendungsentwurf widerspiegeln.
+Im Buch [über die zwölfstufige App hinaus](https://content.pivotal.io/blog/beyond-the-twelve-factor-app)erläutert Autor Kevin Hoffman jeden der ursprünglichen 12 Faktoren (geschrieben in 2011). Außerdem erläutert er drei weitere Faktoren, die den heutigen modernen cloudanwendungsentwurf widerspiegeln.
 
 |    |  Neuer Faktor | Erklärung  |
 | :-------- | :-------- | :-------- |
@@ -105,7 +103,7 @@ Wir verweisen auf viele der 12 +-Faktoren in diesem Kapitel und im Buch.
 
 Neben den Anleitungen der zwölfstufigen Methodik gibt es einige wichtige Entwurfsentscheidungen, die Sie beim Erstellen verteilter Systeme treffen müssen.
 
-*Ssy*
+*Kommunikation*
 
 Wie werden Front-End-Client Anwendungen mit gesicherten End-Kerndiensten kommunizieren? Wird die direkte Kommunikation zugelassen? Oder können Sie die Back-End-Dienste mit einer gatewayfassade abstrahieren, die Flexibilität, Kontrolle und Sicherheit bietet?
 
@@ -125,7 +123,7 @@ In der Entwurfs Umgebung kapselt jeder microservice seine eigenen Daten, wodurch
 
 Verteilte Daten werden in Kapitel 5, in der *Cloud Native Datenmuster*, ausführlich behandelt.
 
-*Identität*
+*Identity*
 
 Wie wird Ihr Dienst ermitteln, wer auf ihn zugreift und welche Berechtigungen er hat?
 
@@ -155,7 +153,7 @@ In Abbildung 1-4 wird der Ansatz einer monolithischen Anwendung mit einem micros
 
 Beachten Sie, wie von den-und-Diensten das "One CodeBase, ONE Application"-Prinzip aus der [zwölfstufigen Anwendung](https://12factor.net/)herauf gestuft wird, das weiter oben im Kapitel erläutert wurde.
 
-> *Faktor \#1 gibt "eine einzelne Codebasis für jeden in einem eigenen Repository gespeicherten mikrodienst an. Mit der Versionskontrolle nachverfolgt, kann es in mehreren Umgebungen bereitgestellt werden. "*
+> *Faktor \# 1 gibt "eine einzelne Codebasis für jeden in einem eigenen Repository gespeicherten mikrodienst an. Mit der Versionskontrolle nachverfolgt, kann es in mehreren Umgebungen bereitgestellt werden. "*
 
 ### <a name="why-microservices"></a>Gründe für die Verwendung von Microservices
 
@@ -197,7 +195,7 @@ Beachten Sie, wie jeder Container seinen eigenen Satz an Abhängigkeiten und Lau
 
 Beachten Sie, wie gut das Container Modell das "Abhängigkeiten"-Prinzip von der [zwölfstufigen Anwendung](https://12factor.net/)einnimmt.
 
-> *Faktor \#2 gibt an, dass "jeder-mikrodienst seine eigenen Abhängigkeiten isoliert und packt, ohne dass das gesamte System beeinträchtigt wird."*
+> *Faktor \# 2 gibt an, dass "jeder-mikrodienst seine eigenen Abhängigkeiten isoliert und packt, ohne dass das gesamte System beeinträchtigt wird."*
 
 Container unterstützen sowohl Linux-als auch Windows-Workloads. Die Azure-Cloud nimmt beides offen. Interessanterweise ist es Linux, nicht Windows Server, das am beliebtesten Betriebssystem in Azure geworden ist.
 
@@ -236,9 +234,9 @@ In der folgenden Tabelle werden allgemeine Orchestrierungs Aufgaben beschrieben.
 
 Beachten Sie, wie orchestratoren die disposability-und Parallelitäts Prinzipien der [12-stufigen Anwendung](https://12factor.net/)akzeptieren, die weiter oben in diesem Kapitel erläutert wurden.
 
-> *Faktor \#9 gibt an, dass Dienst Instanzen verworfen werden sollten. Dadurch werden schnelle Startups bevorzugt, um Skalierbarkeits Chancen und ordnungsgemäße Herunterfahr Vorgänge zu verbessern, um das System in einem ordnungsgemäßen Zustand zu belassen. Docker-Container zusammen mit einem Orchestrator erfüllen diese Anforderung von Natur aus. "*
+> *Faktor \# 9 gibt an, dass Dienst Instanzen verworfen werden sollten. Dadurch werden schnelle Startups bevorzugt, um Skalierbarkeits Chancen und ordnungsgemäße Herunterfahr Vorgänge zu verbessern, um das System in einem ordnungsgemäßen Zustand zu belassen. Docker-Container zusammen mit einem Orchestrator erfüllen diese Anforderung von Natur aus. "*
 
-> *Faktor \#8 gibt an, dass "Dienste für eine große Anzahl von kleinen identischen Prozessen (Kopien) horizontal hochskaliert werden, anstatt eine einzelne große Instanz auf dem leistungsstärksten verfügbaren Computer zentral hochzuskalieren."*
+> *Faktor \# 8 gibt an, dass "Dienste für eine große Anzahl von kleinen identischen Prozessen (Kopien) horizontal hochskaliert werden, anstatt eine einzelne große Instanz auf dem leistungsstärksten verfügbaren Computer zentral hochzuskalieren."*
 
 Obwohl mehrere containerorchestratoren vorhanden sind, ist [Kubernetes](https://kubernetes.io/docs/concepts/overview/what-is-kubernetes/) der de-facto-Standard für die Cloud-Native Welt. Es ist eine Portable, erweiterbare Open-Source-Plattform für die Verwaltung von Workloads in Containern.
 
@@ -258,7 +256,7 @@ Cloud-Native Systeme sind von vielen unterschiedlichen Ressourcen abhängig, z. 
 
 Unterstützungsdienste Stufen das Prinzip der "Status Freiheit" der [zwölfstufigen Anwendung](https://12factor.net/)herauf, das weiter oben in diesem Kapitel erläutert wurde.
 
->*Faktor \#6* gibt an, dass "jeder mikrodienst in einem eigenen Prozess ausgeführt werden soll, isoliert von anderen ausgelaufenden Diensten. Externalisieren Sie den erforderlichen Zustand zu einem Sicherungsdienst, z. b. einem verteilten Cache oder einem Datenspeicher.
+>*Faktor \# 6* gibt an, dass "jeder mikrodienst in einem eigenen Prozess ausgeführt werden soll, isoliert von anderen ausgelaufenden Diensten. Externalisieren Sie den erforderlichen Zustand zu einem Sicherungsdienst, z. b. einem verteilten Cache oder einem Datenspeicher.
 
 Sie können Ihre eigenen Sicherungsdienste hosten, aber dann sind Sie für die Lizenzierung, Bereitstellung und Verwaltung dieser Ressourcen verantwortlich.
 
@@ -268,9 +266,9 @@ Native cloudsysteme bevorzugen verwaltete Unterstützungsdienste von cloudanbiet
 
 Eine bewährte Vorgehensweise besteht darin, einen Sicherungsdienst als *angefügte Ressource*zu behandeln, die dynamisch an einen-Dienst mit Informationen (URL und Anmelde Informationen) gebunden ist, die in einer externen Konfiguration gespeichert sind. Dieser Leitfaden ist in der [zwölfstufigen Anwendung](https://12factor.net/)beschrieben, die weiter oben in diesem Kapitel erläutert wurde.
 
->*Faktor \#4* gibt an, dass Unterstützungsdienste über eine adressierbare URL verfügbar gemacht werden sollen. Dadurch wird die Ressource von der Anwendung entkoppelt, sodass Sie austauschbar sein kann. "
+>*Faktor \# 4* gibt an, dass Unterstützungsdienste über eine adressierbare URL verfügbar gemacht werden sollen. Dadurch wird die Ressource von der Anwendung entkoppelt, sodass Sie austauschbar sein kann. "
 
->*Faktor \#3* gibt an, dass "Konfigurationsinformationen aus dem-Unternehmens Dienst verschoben und durch ein Konfigurations Verwaltungs Tool außerhalb des Codes extern ausgelagert werden."
+>*Faktor \# 3* gibt an, dass "Konfigurationsinformationen aus dem-Unternehmens Dienst verschoben und durch ein Konfigurations Verwaltungs Tool außerhalb des Codes extern ausgelagert werden."
 
 Bei diesem Muster kann ein Unterstützungsdienst ohne Codeänderungen angefügt und getrennt werden. Sie können einen-mikrodienst von QA in eine Stagingumgebung herauf Stufen. Sie aktualisieren die Konfiguration des-Webdiensts so, dass Sie auf die Unterstützungsdienste in der Stagingumgebung verweist, und fügen die Einstellungen über eine Umgebungsvariable in ihren Container
 
@@ -298,7 +296,7 @@ Im Artikel [Was ist Infrastructure as Code, wird](https://docs.microsoft.com/azu
 
 Die zuvor beschriebene [12-stufige Anwendung](https://12factor.net/)erfordert separate Schritte, wenn Sie abgeschlossenen Code in eine laufende Anwendung umwandeln.
 
-> *Faktor \#5* gibt an, dass "jedes Release eine strikte Trennung in den Build-, Release-und Lauf Phasen erzwingen muss. Jede sollte mit einer eindeutigen ID gekennzeichnet werden und die Möglichkeit des Rollbacks unterstützen. "
+> *Faktor \# 5* gibt an, dass "jedes Release eine strikte Trennung in den Build-, Release-und Lauf Phasen erzwingen muss. Jede sollte mit einer eindeutigen ID gekennzeichnet werden und die Möglichkeit des Rollbacks unterstützen. "
 
 Moderne CI/CD-Systeme helfen dabei, dieses Prinzip zu erfüllen. Sie bieten separate Bereitstellungs Schritte und sorgen für konsistenten und qualitativ hochwertigen Code, der Benutzern problemlos zur Verfügung steht.
 

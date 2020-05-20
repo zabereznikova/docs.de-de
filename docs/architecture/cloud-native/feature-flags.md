@@ -1,17 +1,16 @@
 ---
 title: Featureflags
 description: Implementieren von featureflags in Cloud-native Anwendungen mit Azure-app config
-ms.date: 05/03/2020
-ms.openlocfilehash: 72e1bfe777854a74fcac926811caf97e59986146
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+author: robvet
+ms.date: 05/13/2020
+ms.openlocfilehash: 607bd14a415a25b382f550e697542cf749a21772
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83398320"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614070"
 ---
 # <a name="feature-flags"></a>Featureflags
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 In Kapitel 1 haben wir bestätigt, dass Cloud Native sehr viel über Geschwindigkeit und Agilität verfügt. Benutzer erwarten schnelle Reaktionsfähigkeit, innovative Features und keine Ausfallzeiten. `Feature flags`bei handelt es sich um ein modernes Bereitstellungs Verfahren, mit dem sich die Agilität von cloudbasierten Anwendungen erhöhen lässt Sie ermöglichen es Ihnen, neue Features in einer Produktionsumgebung bereitzustellen, aber die Verfügbarkeit einzuschränken. Mit der flicke eines Schalters können Sie ein neues Feature für bestimmte Benutzer aktivieren, ohne die APP neu zu starten oder neuen Code bereitzustellen. Sie trennen die Freigabe neuer Features von ihrer Code Bereitstellung.
 

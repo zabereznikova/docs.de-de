@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: eedf1ef0-9d4a-4847-a201-4e99572dfe5e
 topic_type:
 - apiref
-ms.openlocfilehash: 77dec4332aa65f6125685db607169b3398bcab98
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: b48d131fa99b65d38856d2b635bf59145db9157e
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74446055"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83615240"
 ---
 # <a name="isymunmanagedvariablegetname-method"></a>ISymUnmanagedVariable::GetName-Methode
 Ruft den Namen dieser Variablen ab.  
@@ -37,10 +37,10 @@ HRESULT GetName(
   
 ## <a name="parameters"></a>Parameter  
  `cchName`  
- in Die Länge des Puffers, auf den der `pcchName`-Parameter verweist.  
+ in Die Länge des Puffers, auf den der- `pcchName` Parameter verweist.  
   
  `pcchName`  
- vorgenommen Ein Zeiger auf eine `ULONG32`, die die Größe des Puffers, der den Namen enthalten muss, in Zeichen, einschließlich der NULL-Beendigung, erhält.  
+ vorgenommen Ein Zeiger auf einen `ULONG32` , der die Größe (in Zeichen) des Puffers erhält, der den Namen enthalten muss, einschließlich der NULL-Beendigung.  
   
  `szName`  
  vorgenommen Der Puffer, in dem der Name gespeichert wird.  
@@ -48,9 +48,9 @@ HRESULT GetName(
 ## <a name="return-value"></a>Rückgabewert  
  S_OK, wenn die Methode erfolgreich ist. andernfalls E_FAIL oder ein anderer Fehlercode.  
   
-## <a name="requirements"></a>Voraussetzungen  
+## <a name="requirements"></a>Anforderungen  
  **Header:** Corsym. idl, corsym. h  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [ISymUnmanagedVariable-Schnittstelle](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-interface.md)
+- [ISymUnmanagedVariable-Schnittstelle](isymunmanagedvariable-interface.md)

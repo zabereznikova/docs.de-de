@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 275ef87b-0b53-49f9-af6b-58506335dc06
 topic_type:
 - apiref
-ms.openlocfilehash: 9aace77c4b3549c033433d4c305b07daa1f7a8c1
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 9a490299c24f44b59da682f714f4b696fde3cba5
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74448991"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614512"
 ---
 # <a name="isymunmanagedencupdateupdatemethodlines-method"></a>ISymUnmanagedENCUpdate::UpdateMethodLines-Methode
 Ermöglicht das Aktualisieren der Zeilen Informationen für eine Methode, die nicht erneut kompiliert wurde, deren Zeilen jedoch unabhängig voneinander verschoben wurden. Ein Delta für jede Anweisung ist zulässig.  
@@ -39,17 +39,17 @@ HRESULT UpdateMethodLines(
  in Die Metadaten des Methoden Tokens.  
   
  `pDeltas`  
- in Ein Array von `INT32` Werten, das für jeden Sequenz Punkt in der Methode Delta-Werte angibt.  
+ in Ein Array von- `INT32` Werten, das Delta-Werte für jeden Sequenz Punkt in der-Methode angibt.  
   
  `cDeltas`  
- in Ein-`ULONG`, der die Größe des `pDeltas`-Parameters enthält.  
+ in Ein-Wert, der `ULONG` die Größe des `pDeltas` Parameters enthält.  
   
 ## <a name="return-value"></a>Rückgabewert  
  S_OK, wenn die Methode erfolgreich ist. andernfalls E_FAIL oder ein anderer Fehlercode.  
   
-## <a name="requirements"></a>Voraussetzungen  
+## <a name="requirements"></a>Anforderungen  
  **Header:** Corsym. idl, corsym. h  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [ISymUnmanagedENCUpdate-Schnittstelle](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedencupdate-interface.md)
+- [ISymUnmanagedENCUpdate-Schnittstelle](isymunmanagedencupdate-interface.md)

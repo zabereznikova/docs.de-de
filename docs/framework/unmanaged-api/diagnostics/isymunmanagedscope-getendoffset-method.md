@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1d0b15c9-8059-435f-9fce-346a08b9bd36
 topic_type:
 - apiref
-ms.openlocfilehash: 25a8188e3ab62c095355b72b3e63e767a6768114
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 4d6bd239a15bd196f840007af120cb062499f4c9
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74446354"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614850"
 ---
 # <a name="isymunmanagedscopegetendoffset-method"></a>ISymUnmanagedScope::GetEndOffset-Methode
 Ruft den Endoffset für diesen Bereich ab.  
@@ -34,15 +34,15 @@ HRESULT GetEndOffset(
   
 ## <a name="parameters"></a>Parameter  
  `pRetVal`  
- vorgenommen Ein Zeiger auf eine `ULONG32`, die den Endoffset empfängt.  
+ vorgenommen Ein Zeiger auf einen `ULONG32` , der den Endoffset empfängt.  
   
 ## <a name="return-value"></a>Rückgabewert  
  S_OK, wenn die Methode erfolgreich ist. andernfalls E_FAIL oder ein anderer Fehlercode.  
   
-## <a name="requirements"></a>Voraussetzungen  
+## <a name="requirements"></a>Anforderungen  
  **Header:** Corsym. idl, corsym. h  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [ISymUnmanagedScope-Schnittstelle](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md)
-- [GetStartOffset-Methode](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-getstartoffset-method.md)
+- [ISymUnmanagedScope-Schnittstelle](isymunmanagedscope-interface.md)
+- [GetStartOffset-Methode](isymunmanagedscope-getstartoffset-method.md)

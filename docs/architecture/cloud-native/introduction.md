@@ -2,17 +2,15 @@
 title: Einführung in cloudbasierte Anwendungen
 description: Erfahren Sie mehr über Cloud-Native Computing
 author: robvet
-ms.date: 08/26/2019
-ms.openlocfilehash: e1f7683b6f3722bb91e611f199f2e9ce2bbefc63
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.date: 05/13/2020
+ms.openlocfilehash: 6ec02a1388d6e0f26cdaa1f728f23a22ba52d735
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82895523"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83613940"
 ---
 # <a name="introduction-to-cloud-native-applications"></a>Einführung in cloudbasierte Anwendungen
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 An einem anderen Tag, im Büro, an "The Next Big Thing".
 
@@ -22,7 +20,7 @@ Diesmal gibt es jedoch unterschiedliche Möglichkeiten: Start, Kapital und viel 
 
 Durch die Erwähnung der Cloud und der aktuellen Technologie werden Sie über den Edge übertragen.
 
-Sie sind ein paar Wochen schneller, und Sie sind jetzt ein neuer Mitarbeiter in einer Entwurfs Sitzung, die eine wichtige eCommerce-Anwendung entwickelt. Sie konkurrieren mit anderen führenden eCommerce-Websites.
+Sie sind ein paar Wochen schneller, und Sie sind jetzt ein neuer Mitarbeiter in einer Entwurfs Sitzung, die eine wichtige eCommerce-Anwendung entwickelt. Sie konkurrieren mit den führenden eCommerce-Websites.
 
 Wie wird Sie erstellt?
 
@@ -46,12 +44,12 @@ Nicht alle ist schlecht. Monolithen bieten einige unterschiedliche Vorteile. Sie
 
 Viele erfolgreiche apps, die heute vorhanden sind, wurden als Monolithen erstellt. Die APP ist ein Treffer und wird weiterentwickelt, Iterationen nach Iterationen werden hinzugefügt, und es werden mehr Funktionen hinzugefügt.
 
-An einem gewissen Punkt können Sie jedoch nicht mit Unbehagen vertraut sein. Sie verlieren die Kontrolle über die Anwendung. Im Laufe der Zeit wird das Gefühl intensiver, und Sie geben schließlich einen Zustand ein, der als " **Angst Cycle**" bezeichnet wird.
+An einem gewissen Punkt können Sie jedoch nicht mit Unbehagen vertraut sein. Sie verlieren die Kontrolle über die Anwendung. Im Laufe der Zeit wird das Gefühl intensiver, und Sie geben schließlich einen Zustand ein, der als bezeichnet wird `Fear Cycle` .
 
 - Die APP ist so überwältigend kompliziert geworden, dass Sie von keiner einzelnen Person verstanden wird.
 - Sie befürchten, dass Änderungen vorgenommen werden. jede Änderung hat unbeabsichtigte und kostspielige Nebeneffekte.
 - Neue Features/Korrekturen werden knifflig, zeitaufwändig und aufwendig zu implementieren.
-- Jedes Release so klein wie möglicherweise ist eine vollständige Bereitstellung der gesamten Anwendung erforderlich.
+- Jedes Release ist so klein wie möglich und erfordert eine vollständige Bereitstellung der gesamten Anwendung.
 - Eine instabile Komponente kann das gesamte Systemabstürzen.
 - Neue Technologien und Frameworks sind keine Option.
 - Die Implementierung von Agile-Übermittlungs Methoden ist schwierig.
@@ -64,19 +62,19 @@ Viele Organisationen haben den monolithischen warteweg gelöst, indem Sie einen 
 
 **Abbildung 1-2**. Native Cloud-Design
 
-Beachten Sie, wie die Anwendung in einem Satz kleiner isolierter mikrodienste zerlegt wird. Jeder Dienst ist eigenständig und kapselt seinen eigenen Code, Ihre Daten und ihre Abhängigkeiten. Jede wird in einem Software Container bereitgestellt und von einem containerorchestrator verwaltet. Anstelle einer großen relationalen Datenbank besitzt jeder Dienst einen eigenen Datenspeicher, der sich je nach den Datenanforderungen unterscheidet. Beachten Sie, dass einige Dienste von einer relationalen Datenbank, aber von anderen in nosql-Datenbanken abhängen. Der Status eines Dienstanbieter wird in einem verteilten Cache gespeichert. Beachten Sie, dass der gesamte Datenverkehr über einen API-Gatewaydienst weitergeleitet wird, der für das Routing von Datenverkehr an die Back-End-Kerndienste zuständig ist und viele übergreifende Aspekte Am wichtigsten ist, dass die Anwendung die Skalierbarkeits-und resilienzfeatures in modernen cloudplattformen vollständig nutzt.
+Beachten Sie, wie die Anwendung in einem Satz kleiner isolierter mikrodienste zerlegt wird. Jeder Dienst ist eigenständig und kapselt seinen eigenen Code, Ihre Daten und ihre Abhängigkeiten. Jede wird in einem Software Container bereitgestellt und von einem containerorchestrator verwaltet. Anstelle einer großen relationalen Datenbank besitzt jeder Dienst einen eigenen Datenspeicher, der sich je nach den Datenanforderungen unterscheidet. Beachten Sie, dass einige Dienste von einer relationalen Datenbank, aber von anderen in nosql-Datenbanken abhängen. Der Status eines Dienstanbieter wird in einem verteilten Cache gespeichert. Beachten Sie, dass der gesamte Datenverkehr über einen API-Gatewaydienst weitergeleitet wird, der für das Weiterleiten von Datenverkehr an die Back-End-Kerndienste und das Erzwingen vieler übergreifenden Am wichtigsten ist, dass die Anwendung die Features für Skalierbarkeit, Verfügbarkeit und Resilienz in modernen cloudplattformen vollständig nutzt.
 
 ### <a name="cloud-native-computing"></a>Cloud-Native Computing
 
-Hmm... Wir haben soeben den Begriff "*Cloud Native*" verwendet. Sie haben sich als erstes gedacht: "Was genau bedeutet das?" Ein weiteres Branchen wörterwort, das von Softwareanbietern für die Markteinführung von Softwareanbietern mitentwickelt wird? "
+Hmm... Wir haben soeben den Begriff " _Cloud Native_" verwendet. Der erste Gedanke könnte lauten: "Was genau bedeutet das?" Ein weiteres Branchen wörterwort, das von Softwareanbietern für die Markteinführung von Softwareanbietern mitentwickelt wird? "
 
 Glücklicherweise ist es viel anders, und das Buch wird Ihnen hoffentlich helfen, Sie zu überzeugen.
 
 Innerhalb kurzer Zeit ist die cloudbasierte Cloud ein Trend Trend in der Softwarebranche. Es ist eine neue Möglichkeit, große, komplexe Systeme zu entwickeln, einen Ansatz, der die modernen Software Entwicklungsverfahren, Technologien und cloudinfrastruktur in vollem Umfang nutzt. Der Ansatz ändert die Art und Weise, wie Sie Systeme entwerfen, implementieren, bereitstellen und operationalisieren.
 
-Anders als der fortlaufende Hype, der unsere Branche antreibt, ist die native Cloud-Cloud "*for-Real*". Sehen Sie sich die [Cloud Native Computing Foundation](https://www.cncf.io/) (cncf) an, ein Konsortium aus mehr als 300 großen Unternehmen mit einer-Charta, um die cloudbasierte computingtechnologie über Technologie-und cloudstapel hinweg zu schaffen. Als eine der am stärksten einflussreichen Open Source-Gruppen hostet Sie viele der am schnellsten wachsenden Open Source-Projekte in GitHub. Dazu zählen Projekte wie [Kubernetes](https://kubernetes.io/), [Prometheus](https://prometheus.io/), [Helm](https://helm.sh/), [Gesandter](https://www.envoyproxy.io/)und [GrpC](https://grpc.io/).
+Anders als der fortlaufende Hype, der unsere Branche steuert, ist die native Cloud _-Cloud eine echte_Lösung. Sehen Sie sich die [Cloud Native Computing Foundation](https://www.cncf.io/) (cncf) an, ein Konsortium aus mehr als 300 großen Unternehmen mit einer-Charta, um die cloudbasierte computingtechnologie über Technologie-und cloudstapel hinweg zu schaffen. Als eine der am stärksten einflussreichen Open Source-Gruppen hostet Sie viele der am schnellsten wachsenden Open Source-Projekte in GitHub. Dazu zählen Projekte wie [Kubernetes](https://kubernetes.io/), [Prometheus](https://prometheus.io/), [Helm](https://helm.sh/), [Gesandter](https://www.envoyproxy.io/)und [GrpC](https://grpc.io/).
 
-Cncf fördert ein Ökosystem von Open Source-und Vendor-Neutralität. Nach diesem Lead stellen wir die cloudbasierten Prinzipien, Muster und bewährten Methoden dar, die Technologie agnostisch sind. Gleichzeitig werden die in der Microsoft Azure Cloud verfügbaren Dienste und Infrastrukturen zum Erstellen von cloudbasierten Systemen besprochen.
+Cncf fördert ein Ökosystem von Open Source-und Vendor-Neutralität. Nach diesem Leitfaden werden in diesem Buch die cloudbasierten Prinzipien, Muster und bewährten Methoden vorgestellt, die Technologie agnostisch sind. Gleichzeitig werden die in der Microsoft Azure Cloud verfügbaren Dienste und Infrastrukturen zum Erstellen von cloudbasierten Systemen besprochen.
 
 Was genau ist die Cloud Native? Setzen Sie sich zurück, und lassen Sie uns diese neue Welt erkunden.
 

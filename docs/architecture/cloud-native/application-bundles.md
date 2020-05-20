@@ -1,17 +1,15 @@
 ---
 title: Bundles von cloudbasierten Anwendungen
 description: Architektur von Cloud Native .net-apps für Azure | Native Cloud-Anwendungs Bündel
-ms.date: 05/12/2020
-ms.openlocfilehash: c16a9cba1fe31e025532ba98d644114a319bb9de
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.date: 05/13/2020
+ms.openlocfilehash: fc6ee96078650dccd2ebeb3e65a0a00c4e05ecdb
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83395489"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614343"
 ---
 # <a name="cloud-native-application-bundles"></a>Bundles von cloudbasierten Anwendungen
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 Eine Schlüsseleigenschaft von Cloud-native Anwendungen ist, dass Sie die Funktionen der Cloud nutzen, um die Entwicklung zu beschleunigen. Dieser Entwurf bedeutet häufig, dass eine vollständige Anwendung verschiedene Arten von Technologien verwendet. Anwendungen können in docker-Containern ausgeliefert werden, einige Dienste können Azure Functions verwenden, während andere Teile direkt auf virtuellen Computern ausgeführt werden können, die mit Hardware-GPU-Beschleunigung auf großen Metal-Servern zugeordnet sind. Es sind keine zwei cloudbasierten Anwendungen identisch, weshalb es schwierig ist, einen einzigen Mechanismus für den Versand bereitzustellen.
 

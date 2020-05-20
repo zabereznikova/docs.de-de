@@ -1,17 +1,15 @@
 ---
 title: Azure-Sicherheit für Native Cloud-apps
 description: Architektur von Cloud Native .net-apps für Azure | Azure-Sicherheit für Native Cloud-apps
-ms.date: 06/30/2019
-ms.openlocfilehash: 27ef6c8313f1573ca686e8489a84f64a56116fa4
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.date: 05/13/2020
+ms.openlocfilehash: a39b64477eb9e896c6603e5609ede653bfee1e07
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83394717"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614252"
 ---
 # <a name="azure-security-for-cloud-native-apps"></a>Azure-Sicherheit für Native Cloud-apps
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 Native Cloud-Anwendungen können einfacher und schwieriger zu schützen als herkömmliche Anwendungen. Der Nachteil ist, dass Sie kleinere Anwendungen sichern und mehr Energie aufwenden müssen, um die Sicherheitsinfrastruktur zu erstellen. Die heterogene Natur der Programmiersprachen und Stile in den meisten Dienst Bereitstellungen bedeutet auch, dass Sie die Sicherheits Bulletins von vielen unterschiedlichen Anbietern berücksichtigen müssen.
 
@@ -229,7 +227,7 @@ Diese Verschlüsselungs Stufe ist nicht für die gesamte Zeit ausreichend, Sie s
 
 In jeder Anwendung gibt es eine Reihe von stellen, an denen sich Daten auf dem Datenträger befinden. Der Anwendungscode selbst wird aus einem Speichermechanismus geladen. Die meisten Anwendungen verwenden auch eine Art von Datenbank, z. b. SQL Server, Cosmos DB oder sogar die erstaunlich Preis effiziente Table Storage. Diese Datenbanken verwenden alle stark verschlüsselten Speicher, um sicherzustellen, dass keine anderen Anwendungen als die Anwendungen mit den richtigen Berechtigungen Ihre Daten lesen können. Auch die System Operatoren können keine verschlüsselten Daten lesen. Daher können Kunden sicher sein, dass Ihre geheimen Informationen geheim bleiben.
 
-### <a name="storage"></a>Speicher
+### <a name="storage"></a>Storage
 
 Die Grundlage für einen Großteil von Azure ist die Azure Storage-Engine. Die Datenträger virtueller Computer werden auf Azure Storage bereitgestellt. Azure Kubernetes-Dienste werden auf virtuellen Computern ausgeführt, die auf Azure Storage gehostet werden. Sogar Server lose Technologien, wie Azure Functions-apps und Azure Container Instances, sind nicht auf dem Datenträger verfügbar, der Teil von Azure Storage ist.
 

@@ -2,16 +2,14 @@
 title: Azure Active Directory
 description: Architektur von Cloud Native .net-apps für Azure | Azure Active Directory
 ms.date: 06/30/2019
-ms.openlocfilehash: 207043507a9052c47683383a98cef6417a1a2740
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 03f5ea8e84bc3c4a2a88a63d4b109aabf0c64f36
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "73840730"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614278"
 ---
 # <a name="azure-active-directory"></a>Azure Active Directory
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 Microsoft Azure Active Directory (Azure AD) bietet Identitäts-und Zugriffs Verwaltung als Dienst. Kunden verwenden Sie, um zu konfigurieren und zu warten, wer Benutzer sind, welche Informationen über Sie gespeichert werden, wer auf diese Informationen zugreifen kann, wer Sie verwalten kann und auf welche apps Sie zugreifen können. Aad kann Benutzer für Anwendungen authentifizieren, die für die Verwendung konfiguriert sind, und bietet eine Single Sign-on (SSO). Sie kann eigenständig verwendet oder in Windows AD integriert werden, das lokal ausgeführt wird.
 
@@ -19,7 +17,7 @@ Azure AD für die Cloud erstellt. Es handelt sich tatsächlich um eine cloudbasi
 
 Azure Ad unterstützt Unternehmens Branding-Anmelde Bildschirme, Multi-Factory-Authentifizierung und cloudbasierte Anwendungs Proxys, die verwendet werden, um SSO für Lokal gehostete Anwendungen bereitzustellen. Sie bietet verschiedene Arten von Sicherheitsberichten und Warnungs Funktionen.
 
-## <a name="references"></a>Verweise
+## <a name="references"></a>Referenzen
 
 - [Microsoft Identity Platform](https://docs.microsoft.com/azure/active-directory/develop/)
 

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f909ac48-3d8f-49fb-a369-e3d9959151cd
 topic_type:
 - apiref
-ms.openlocfilehash: 75d477af7395a9b7d3328b2a5787f810733f3749
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 451cfecde7e14fad9d3fed3367112e1fb59796e5
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74448876"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83615143"
 ---
 # <a name="isymunmanagedmethodgetsequencepoints-method"></a>ISymUnmanagedMethod::GetSequencePoints-Methode
 Ruft alle Sequenz Punkte innerhalb dieser Methode ab.  
@@ -41,10 +41,10 @@ HRESULT GetSequencePoints(
   
 ## <a name="parameters"></a>Parameter  
  `cPoints`  
- in Eine `ULONG32`, die die Größe der Arrays `offsets`, `documents`, `lines`, `columns`, `endLines`und `endColumns` empfängt.  
+ in Ein `ULONG32` , der die Größe der `offsets` Arrays, `documents` ,,, und empfängt `lines` `columns` `endLines` `endColumns` .  
   
  `pcPoints`  
- vorgenommen Ein Zeiger auf einen `ULONG32`, der die Länge des Puffers empfängt, der zum enthalten der Sequenz Punkte benötigt wird.  
+ vorgenommen Ein Zeiger auf einen `ULONG32` , der die Länge des Puffers empfängt, der zum enthalten der Sequenz Punkte benötigt wird.  
   
  `offsets`  
  in Ein Array, in dem die MSIL-Offsets (Microsoft Intermediate Language) vom Anfang der Methode für die Sequenz Punkte gespeichert werden sollen.  
@@ -67,9 +67,9 @@ HRESULT GetSequencePoints(
 ## <a name="return-value"></a>Rückgabewert  
  S_OK, wenn die Methode erfolgreich ist. andernfalls E_FAIL oder ein anderer Fehlercode.  
   
-## <a name="requirements"></a>Voraussetzungen  
+## <a name="requirements"></a>Anforderungen  
  **Header:** Corsym. idl, corsym. h  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [ISymUnmanagedMethod-Schnittstelle](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)
+- [ISymUnmanagedMethod-Schnittstelle](isymunmanagedmethod-interface.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7580d546-a709-40c5-ad02-aa70d774fd0b
 topic_type:
 - apiref
-ms.openlocfilehash: 4009f8988c90ed090c0cc3d86164af347055722f
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: e6248aba1c41b2815f2806942d419da869ed94b4
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74446420"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614915"
 ---
 # <a name="isymunmanagedreader2getsymattributepreremap-method"></a>ISymUnmanagedReader2::GetSymAttributePreRemap-Methode
 Ruft ein benutzerdefiniertes Attribut basierend auf seinem Namen ab. Im Gegensatz zu benutzerdefinierten Metadaten-Attributen werden diese Attribute im Symbol Speicher gespeichert.  
@@ -42,13 +42,13 @@ HRESULT GetSymAttributePreRemap(
  in Das Metadatentoken des übergeordneten Elements.  
   
  `name`  
- in Ein Zeiger auf eine `WCHAR`, die den Namen enthält.  
+ in Ein Zeiger auf einen `WCHAR` , der den Namen enthält.  
   
  `cBuffer`  
- in Ein-`ULONG32`, der die Größe des `buffer` Arrays angibt.  
+ in Ein-Wert `ULONG32` , der die Größe des `buffer` Arrays angibt.  
   
  `pcBuffer`  
- vorgenommen Ein Zeiger auf einen `ULONG32`, der die Größe des Puffers empfängt, der zum enthalten der Attribut Bytes erforderlich ist.  
+ vorgenommen Ein Zeiger auf einen `ULONG32` , der die Größe des Puffers empfängt, der zum enthalten der Attribut Bytes erforderlich ist.  
   
  `buffer`  
  vorgenommen Ein Zeiger auf den Puffer, der die Attribut Bytes empfängt.  
@@ -56,9 +56,9 @@ HRESULT GetSymAttributePreRemap(
 ## <a name="return-value"></a>Rückgabewert  
  S_OK, wenn die Methode erfolgreich ist. andernfalls E_FAIL oder ein anderer Fehlercode.  
   
-## <a name="requirements"></a>Voraussetzungen  
+## <a name="requirements"></a>Anforderungen  
  **Header:** Corsym. idl, corsym. h  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [ISymUnmanagedReader2-Schnittstelle](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader2-interface.md)
+- [ISymUnmanagedReader2-Schnittstelle](isymunmanagedreader2-interface.md)

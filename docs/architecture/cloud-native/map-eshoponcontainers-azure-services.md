@@ -1,24 +1,22 @@
 ---
 title: Zuordnen von eShopOnContainers zu Azure-Diensten
 description: Zuordnung von eshoponcontainers zu Azure-Diensten wie Azure Kubernetes Service, API-Gateway und Azure Service Bus.
-ms.date: 04/20/2020
-ms.openlocfilehash: 26fce71ba71f7da643b669396ab59affe592649a
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.date: 05/13/2020
+ms.openlocfilehash: 271707404f7fb51aec59c6f682ddaefd0bac82cc
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82895512"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83613836"
 ---
 # <a name="mapping-eshoponcontainers-to-azure-services"></a>Zuordnen von eShopOnContainers zu Azure-Diensten
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 Azure ist zwar nicht erforderlich, aber eignet sich gut für die Unterstützung von eshoponcontainers, da das Projekt als Native cloudanwendung erstellt wurde. Die Anwendung wird mit .net Core erstellt und kann daher je nach docker-Host unter Linux-oder Windows-Containern ausgeführt werden. Die Anwendung besteht aus mehreren autonomen, jeweils eigenen Daten. Die verschiedenen-mikrodienste veranschaulichen verschiedene Ansätze, von einfachen CRUD-Vorgängen bis hin zu komplexeren DDD-und cqrs-Mustern. Die Kommunikation zwischen den-Clients und-Clients über HTTP und über eine Nachrichten basierte Kommunikation. Die Anwendung unterstützt auch mehrere Plattformen für Clients, da HTTP als Standard Kommunikationsprotokoll übernommen wird und ASP.net Core-und xamarin-apps, die auf Android-, IOS-und Windows-Plattformen ausgeführt werden, umfasst.
 
 Die Architektur der Anwendung ist in Abbildung 2-5 dargestellt. Auf der linken Seite befinden sich die Client-apps in Mobile, herkömmliche Web-und Single-Page Application (Spa)-Varianten. Auf der rechten Seite befinden sich die serverseitigen Komponenten, die das System bilden, von denen jedes in docker-Containern und Kubernetes-Clustern gehostet werden kann. Die herkömmliche Web-App basiert auf der ASP.net Core MVC-Anwendung, die gelb angezeigt wird. Diese APP und die mobilen und Web-Spa-Anwendungen kommunizieren über ein oder mehrere API-Gateways mit den einzelnen-Webdiensten. Die API-Gateways folgen dem BFF-Muster (Back-Ends für Front-Ends), was bedeutet, dass jedes Gateway einen bestimmten Front-End-Client unterstützen soll. Die einzelnen microservices sind rechts neben den API-Gateways aufgeführt und enthalten sowohl Geschäftslogik als auch eine Art von Beibehaltungs Speicher. In den unterschiedlichen Diensten werden SQL Server Datenbanken, redis Cache-Instanzen und MongoDB/cosmosdb-Speicher verwendet. Ganz rechts befindet sich der Ereignisbus des Systems, der für die Kommunikation zwischen den-Diensten verwendet wird.
 
-![eshoponcontainers-](./media/eshoponcontainers-architecture.png)
-Architektur**Abbildung 2-5**. Die eshoponcontainers-Architektur.
+![eshoponcontainers-Architektur ](./media/eshoponcontainers-architecture.png)
+ **Abbildung 2-5**. Die eshoponcontainers-Architektur.
 
 Die serverseitigen Komponenten dieser Architektur werden problemlos den Azure-Diensten zugeordnet.
 

@@ -1,17 +1,15 @@
 ---
 title: Identityserver für Native Cloud-apps
 description: Architektur von Cloud Native .net-apps für Azure | IdentityServer
-ms.date: 06/30/2019
-ms.openlocfilehash: 536a4cbdbdaee47f3a5a0d9f93b2736270d9ea7a
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.date: 05/13/2020
+ms.openlocfilehash: 81cce30568becacda29f65f9506398790af321e0
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83394880"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614031"
 ---
 # <a name="identityserver-for-cloud-native-applications"></a>Identityserver für Native Cloud-Anwendungen
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 Identityserver ist ein Open-Source-Authentifizierungsserver, der die Standards OpenID Connect (oidc) und OAuth 2,0 für ASP.net Core implementiert. Es ist so konzipiert, dass es eine gängige Methode zum Authentifizieren von Anforderungen an alle Ihre Anwendungen bietet, unabhängig davon, ob es sich um Web-, Native, Mobile oder API-Endpunkte handelt. Identityserver kann zum Implementieren von einmaligem Anmelden (Single Sign-on, SSO) für mehrere Anwendungen und Anwendungs Typen verwendet werden. Sie kann verwendet werden, um tatsächliche Benutzer über Anmeldeformulare und ähnliche Benutzeroberflächen sowie die Dienst basierte Authentifizierung zu authentifizieren, die in der Regel die Tokenausstellung,-Überprüfung und-Verlängerung ohne Benutzeroberfläche umfasst. Identityserver ist als anpassbare Lösung konzipiert. Jede Instanz wird in der Regel an eine einzelne Organisation und/oder eine Reihe von Anwendungsanforderungen angepasst.
 

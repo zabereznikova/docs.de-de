@@ -1,17 +1,15 @@
 ---
 title: Zentralisierte Konfiguration
 description: Zentralisieren der Konfiguration für Native Cloud-Anwendungen mit Azure-App-Konfiguration und azurekey Vault.
-ms.date: 04/19/2020
-ms.openlocfilehash: 53bdc03370b04af4d830fe7abbd8aebad81e9650
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.date: 05/13/2020
+ms.openlocfilehash: d389d29dcdb1db5162d95370d181ab5a85d72dc8
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82895656"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614226"
 ---
 # <a name="centralized-configuration"></a>Zentralisierte Konfiguration
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 Anders als bei einer monolithischen APP, in der alles innerhalb einer einzelnen Instanz ausgeführt wird, besteht eine native Cloud-Anwendung aus unabhängigen Diensten, die auf virtuelle Computer, Container und geografische Regionen verteilt sind. Das Verwalten von Konfigurationseinstellungen für Dutzende voneinander abhängiger Dienste kann eine Herausforderung darstellen. Doppelte Kopien von Konfigurationseinstellungen über verschiedene Speicherorte hinweg sind fehleranfällig und schwer zu verwalten. Die zentralisierte Konfiguration ist eine wichtige Voraussetzung für verteilte cloudbasierte Anwendungen.
 
@@ -53,7 +51,7 @@ Der Zugriff auf Key Vault erfordert ordnungsgemäße Aufrufer Authentifizierung 
 
 Die eshoponcontainers-Anwendung enthält lokale Anwendungseinstellungs-Dateien mit jedem-mikrodienst. Diese Dateien werden in die Quell Code Verwaltung eingecheckt, enthalten aber keine Produktionsgeheimnisse wie Verbindungs Zeichenfolgen oder API-Schlüssel. In der Produktionsumgebung können einzelne Einstellungen mit Umgebungsvariablen pro Dienst überschrieben werden. Das Einfügen von Geheimnissen in Umgebungsvariablen ist eine gängige Vorgehensweise bei gehosteten Anwendungen, bietet aber keinen zentralen Konfigurations Speicher. Zur Unterstützung der zentralisierten Verwaltung von Konfigurationseinstellungen enthält jeder-Dienst eine Einstellung zum Umschalten zwischen der Verwendung lokaler Einstellungen oder Azure Key Vault Einstellungen.
 
-## <a name="references"></a>Verweise
+## <a name="references"></a>Referenzen
 
 - [Die eshoponcontainers-Architektur](https://github.com/dotnet-architecture/eShopOnContainers/wiki/Architecture)
 - [Orchestrieren von Microservices und Anwendungen mit mehreren Containern für hohe Skalierbarkeit und Verfügbarkeit](https://docs.microsoft.com/dotnet/architecture/microservices/architect-microservice-container-applications/scalable-available-multi-container-microservice-applications)

@@ -2,17 +2,15 @@
 title: Kommunikation zwischen Dienst und Dienst
 description: Erfahren Sie, wie Back-End-cloudnative-mikrodienste mit anderen Back-End-Webdiensten kommunizieren.
 author: robvet
-ms.date: 09/09/2019
-ms.openlocfilehash: 556617a9e2df5a4d9ff9adb9d19e714ca94930ea
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.date: 05/13/2020
+ms.openlocfilehash: dec06cc28ac177381b882f9e441e19e5c51bd5ad
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82895495"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83613706"
 ---
 # <a name="service-to-service-communication"></a>Kommunikation zwischen Dienst und Dienst
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 Beim Umstieg vom Front-End-Client werden nun die Kommunikation zwischen Back-End-Verbindungen miteinander angegangen.
 
@@ -50,7 +48,7 @@ Das Ausführen einer seltenen Anforderung, die einen einzelnen direkten http-Rü
 
 **Abbildung 4-9.** Verketten von http-Abfragen
 
-Sie können sich das Risiko in dem in der vorherigen Abbildung gezeigten Entwurf sicherlich vorstellen. Was geschieht, wenn \#Schritt 3 fehlschlägt? Oder Schritt \#8 schlägt fehl? Wie werden Sie wieder hergestellt? Was geschieht, \#Wenn Schritt 6 langsam ist, weil der zugrunde liegende Dienst ausgelastet ist? Wie können Sie fortfahren? Selbst wenn alles ordnungsgemäß funktioniert, stellen Sie sich die Latenzzeit dieses Aufrufs vor, also die Summe der Latenz der einzelnen Schritte.
+Sie können sich das Risiko in dem in der vorherigen Abbildung gezeigten Entwurf sicherlich vorstellen. Was geschieht, wenn Schritt \# 3 fehlschlägt? Oder Schritt \# 8 schlägt fehl? Wie werden Sie wieder hergestellt? Was geschieht, wenn Schritt \# 6 langsam ist, weil der zugrunde liegende Dienst ausgelastet ist? Wie können Sie fortfahren? Selbst wenn alles ordnungsgemäß funktioniert, stellen Sie sich die Latenzzeit dieses Aufrufs vor, also die Summe der Latenz der einzelnen Schritte.
 
 Der große Grad an Kopplung in der vorherigen Abbildung deutet darauf hin, dass die Dienste nicht optimal modelliert wurden. Es würde das Team anheften, seinen Entwurf wiederholen zu müssen.
 
@@ -166,7 +164,7 @@ Mit Eventing wechseln wir von der Warteschlangen Technologie zu *Themen*. Ein [T
 
 **Abbildung 4-16**. Themen Architektur
 
-In der vorherigen Abbildung senden Verleger Nachrichten an das Thema. Am Ende empfangen Abonnenten Nachrichten von Abonnements. In der Mitte leitet das Thema Nachrichten basierend auf einem Satz von *Regeln*, die in dunklen blauen Feldern angezeigt werden, an Abonnements weiter. Regeln fungieren als Filter, der bestimmte Nachrichten an ein Abonnement weiterleiten soll. Hier wird ein "| ateorder"-Ereignis an Abonnement \#1 und Abonnement \#3 gesendet, aber nicht an Abonnement \#2. Ein "orderabgeschlossene"-Ereignis wird an Abonnement \#2 und Abonnement \#3 gesendet.
+In der vorherigen Abbildung senden Verleger Nachrichten an das Thema. Am Ende empfangen Abonnenten Nachrichten von Abonnements. In der Mitte leitet das Thema Nachrichten basierend auf einem Satz von *Regeln*, die in dunklen blauen Feldern angezeigt werden, an Abonnements weiter. Regeln fungieren als Filter, der bestimmte Nachrichten an ein Abonnement weiterleiten soll. Hier wird ein "| ateorder"-Ereignis an Abonnement \# 1 und Abonnement 3 gesendet \# , aber nicht an Abonnement \# 2. Ein "orderabgeschlossene"-Ereignis wird an Abonnement \# 2 und Abonnement \# 3 gesendet.
 
 Die Azure-Cloud unterstützt zwei verschiedene Themen Dienste: Azure Service Bus Themen und Azure Event Grid.
 

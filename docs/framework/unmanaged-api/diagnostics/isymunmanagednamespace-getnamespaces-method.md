@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0ea9d9af-8709-4a46-872b-f54d9e840088
 topic_type:
 - apiref
-ms.openlocfilehash: da2906187c02bbc7a35c937663e3fc7db1ebda13
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 48c50ac6be6d525676d85578e5a55a27104c180a
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74433883"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83615097"
 ---
 # <a name="isymunmanagednamespacegetnamespaces-method"></a>ISymUnmanagedNamespace::GetNamespaces-Methode
 Ruft die untergeordneten Elemente dieses Namespace ab.  
@@ -37,10 +37,10 @@ HRESULT GetNamespaces(
   
 ## <a name="parameters"></a>Parameter  
  `cNameSpaces`  
- in Ein-`ULONG32`, der die Größe des `namespaces` Arrays angibt.  
+ in Ein-Wert `ULONG32` , der die Größe des `namespaces` Arrays angibt.  
   
  `pcNameSpaces`  
- vorgenommen Ein Zeiger auf einen `ULONG32`, der die Größe des Puffers, der die Namespaces enthalten muss, in Zeichen empfängt.  
+ vorgenommen Ein Zeiger auf einen `ULONG32` , der die Größe des Puffers, der die Namespaces enthalten muss, in Zeichen empfängt.  
   
  `namespaces`  
  vorgenommen Ein Zeiger auf den Puffer, der die Namespaces enthält.  
@@ -48,9 +48,9 @@ HRESULT GetNamespaces(
 ## <a name="return-value"></a>Rückgabewert  
  S_OK, wenn die Methode erfolgreich ist. andernfalls E_FAIL oder ein anderer Fehlercode.  
   
-## <a name="requirements"></a>Voraussetzungen  
+## <a name="requirements"></a>Anforderungen  
  **Header:** Corsym. idl, corsym. h  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [ISymUnmanagedNamespace-Schnittstelle](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagednamespace-interface.md)
+- [ISymUnmanagedNamespace-Schnittstelle](isymunmanagednamespace-interface.md)

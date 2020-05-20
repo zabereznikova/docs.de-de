@@ -1,17 +1,15 @@
 ---
 title: Protokollierung mit Elastic Stack
 description: Protokollierung mithilfe von Elastic Stack, logstash und kibana
-ms.date: 02/05/2020
-ms.openlocfilehash: 6863c66b63854fe3ecaabe2919beded2926ea64c
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.date: 05/13/2020
+ms.openlocfilehash: e886141fa691b75b882b5d67eae4ceb242e8089f
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77448914"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83613849"
 ---
 # <a name="logging-with-elastic-stack"></a>Protokollierung mit Elastic Stack
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 Es gibt viele gute zentralisierte Protokollierungs Tools, die sich von kostenlosen Open Source-Tools bis hin zu kostspieligen Optionen unterscheiden. In vielen Fällen sind die kostenlosen Tools so gut wie die kostenpflichtigen Angebote. Ein solches Tool ist eine Kombination aus drei Open Source-Komponenten: Elastic Search, logstash und kibana.
 
@@ -30,8 +28,8 @@ KUBE_ENABLE_NODE_LOGGING=true
 
 Dadurch wird elasticsearch auf dem Cluster installiert, und das Ziel ist es, alle Cluster Protokolle an den Cluster zu senden.
 
-![ein Beispiel für ein kibana-Dashboard, das die Ergebnisse einer Abfrage für in Kubernetes erfasste Protokolle anzeigt](./media/kibana-dashboard.png)
-**Abbildung 7-6**. Ein Beispiel für ein kibana-Dashboard, das die Ergebnisse einer Abfrage für Protokolle anzeigt, die von Kubernetes erfasst werden.
+![Ein Beispiel für ein kibana-Dashboard, das die Ergebnisse einer Abfrage für Protokolle anzeigt, die aus Kubernetes ](./media/kibana-dashboard.png)
+ **Abbildung 7-6**erfasst wurden. Ein Beispiel für ein kibana-Dashboard, das die Ergebnisse einer Abfrage für Protokolle anzeigt, die von Kubernetes erfasst werden.
 
 ## <a name="what-are-the-advantages-of-elastic-stack"></a>Was sind die Vorteile von Elastic Stack?
 
@@ -81,7 +79,7 @@ Bei der elastischen Suche handelt es sich um ein leistungsfähiges Suchmodul, da
 
 Protokollmeldungen, die so erstellt wurden, dass Sie Parameter enthalten oder über Parameter verfügen, die durch die logstash-Verarbeitung voneinander getrennt wurden, können direkt abgefragt werden, da elasticsearch diese Informationen beibehält.
 
-Eine Abfrage, die nach den ersten 10 Seiten sucht, die von `jill@example.com`besucht werden, wird in Abbildung 7-9 angezeigt.
+Eine Abfrage, die nach den ersten 10 Seiten sucht, die von besucht `jill@example.com` werden, wird in Abbildung 7-9 angezeigt.
 
 ```
 "query": {
@@ -113,7 +111,7 @@ Eine Option mit weniger Aufwand besteht darin, einen der vielen docker-Container
 
 Eine andere Möglichkeit ist ein [kürzlich kündigter Elk-as-a-Service-Angebot](https://devops.com/logz-io-unveils-azure-open-source-elk-monitoring-solution/).
 
-## <a name="references"></a>Verweise
+## <a name="references"></a>Referenzen
 
 - [Installieren des elastischen Stapels in Azure](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-elasticsearch)
 

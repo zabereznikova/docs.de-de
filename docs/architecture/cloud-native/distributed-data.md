@@ -2,17 +2,15 @@
 title: Verteilte Daten
 description: Vergleichen Sie die Datenspeicherung in monolithischen und cloudbasierten Anwendungen.
 author: robvet
-ms.date: 04/24/2020
-ms.openlocfilehash: 8a9f1478f1a46b2367df9372d4adaa3b4c711782
-ms.sourcegitcommit: 5988e9a29cedb8757320817deda3c08c6f44a6aa
+ms.date: 05/13/2020
+ms.openlocfilehash: 2eff37dcc57ae39daac0ba10d10322be5eb4e321
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82204707"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614135"
 ---
 # <a name="distributed-data"></a>Verteilte Daten
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 Wie wir bereits in diesem Buch gesehen haben, verändert ein cloudbasierter Ansatz die Art und Weise, wie Sie Anwendungen entwerfen, bereitstellen und verwalten. Außerdem wird die Art und Weise geändert, in der Sie Daten verwalten und speichern.
 

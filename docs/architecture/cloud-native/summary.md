@@ -1,13 +1,13 @@
 ---
 title: Zusammenfassung
 description: Hier finden Sie eine Zusammenfassung der wichtigsten Schlussfolgerungen aus dem Leitfaden zum Entwerfen von Cloud-Native .net-apps für Azure.
-ms.date: 04/29/2020
-ms.openlocfilehash: 8cad8df1f69e159caf88d3ee119278dff8726385
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.date: 05/13/2020
+ms.openlocfilehash: b1a195c0c081565c57f5aac2e234411bb904ca08
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83395322"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83613654"
 ---
 # <a name="summary"></a>Zusammenfassung
 

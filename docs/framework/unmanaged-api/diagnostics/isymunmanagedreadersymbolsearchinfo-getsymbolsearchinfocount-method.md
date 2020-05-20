@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4068b6ec-525f-4446-8818-0296178cbd19
 topic_type:
 - apiref
-ms.openlocfilehash: a193c4e9e87616217efc90286032944d05d766c0
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: a81a5afeec8f97864e1772347c6575b9d09cb176
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74446397"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614889"
 ---
 # <a name="isymunmanagedreadersymbolsearchinfogetsymbolsearchinfocount-method"></a>ISymUnmanagedReaderSymbolSearchInfo::GetSymbolSearchInfoCount-Methode
 Ruft die Anzahl der Symbol Suchinformationen ab.  
@@ -34,14 +34,14 @@ HRESULT GetSymbolSearchInfoCount(
   
 ## <a name="parameters"></a>Parameter  
  `pcSearchInfo`  
- ] out] ein Zeiger auf eine `ULONG32`, die die Größe des Puffers empfängt, der zum enthalten der Suchinformationen erforderlich ist.  
+ ] out] ein Zeiger auf einen-Wert `ULONG32` , der die Größe des Puffers empfängt, der zum enthalten der Suchinformationen erforderlich ist.  
   
 ## <a name="return-value"></a>Rückgabewert  
  S_OK, wenn die Methode erfolgreich ist. andernfalls E_FAIL oder ein anderer Fehlercode.  
   
-## <a name="requirements"></a>Voraussetzungen  
+## <a name="requirements"></a>Anforderungen  
  **Header:** Corsym. idl, corsym. h  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [ISymUnmanagedReaderSymbolSearchInfo-Schnittstelle](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreadersymbolsearchinfo-interface.md)
+- [ISymUnmanagedReaderSymbolSearchInfo-Schnittstelle](isymunmanagedreadersymbolsearchinfo-interface.md)

@@ -1,17 +1,15 @@
 ---
 title: Nutzen von serverlosen Funktionen
 description: Nutzen von Server losen und Azure Functions in cloudbasierten Anwendungen
-ms.date: 04/13/2020
-ms.openlocfilehash: 176499e3cd0349cd689b9d13d1c237a6343d13f3
-ms.sourcegitcommit: 5988e9a29cedb8757320817deda3c08c6f44a6aa
+ms.date: 05/13/2020
+ms.openlocfilehash: 53a0fdd29630b2a4368f3aa37ddfc5f93df10a24
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82199741"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83613862"
 ---
 # <a name="leveraging-serverless-functions"></a>Nutzen von serverlosen Funktionen
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 Im Bereich von der Verwaltung physischer Computer bis hin zur Nutzung von cloudfunktionen Leben Server lose Server lose Systeme am äußersten Ende. Ihre einzige Verantwortung ist Ihr Code, und Sie zahlen nur, wenn Ihr Code ausgeführt wird. Azure Functions bietet eine Möglichkeit, Server lose Funktionen in Ihre cloudbasierten Anwendungen zu erstellen.
 
@@ -54,8 +52,8 @@ Server lose Lösungen stellen Bedarfs gesteuert bereit und Skalieren Sie. Wenn e
 
 In Abbildung 3-10 wird ein kalt Start Muster gezeigt. Beachten Sie die zusätzlichen Schritte, die erforderlich sind, wenn die APP kalt ist.
 
-![Kalt und warm Start](./media/cold-start-warm-start.png)
-**Abbildung 3-10**. Kaltstart im Vergleich zum warmen Start.
+![Kalt und warm Start ](./media/cold-start-warm-start.png)
+ **Abbildung 3-10**. Kaltstart im Vergleich zum warmen Start.
 
 Um zu vermeiden, dass Kaltstarts vollständig ausgeführt werden, können Sie von einem [Verbrauchs Plan zu einem dedizierten Plan](https://azure.microsoft.com/blog/understanding-serverless-cold-start/)wechseln. Sie können auch eine oder mehrere [vorerwärmte Instanzen](https://docs.microsoft.com/azure/azure-functions/functions-premium-plan#pre-warmed-instances) mit der Premium-Plan Aktualisierung konfigurieren. Wenn Sie in diesen Fällen eine weitere Instanz hinzufügen müssen, ist Sie bereits einsatzbereit. Diese Optionen können dabei helfen, das Problem mit dem Kaltstart bei Server losem Computing zu verringern.
 

@@ -1,17 +1,15 @@
 ---
 title: Einführung in die eshoponcontainers-Referenz-App
 description: Einführung in die systemeigene cloudbasierte Webdienst-Referenz-App für ASP.net Core und Azure.
-ms.date: 06/30/2019
-ms.openlocfilehash: b97b62268db1d9990f762d9769233ad72551c226
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.date: 05/13/2020
+ms.openlocfilehash: a6f3defabec809eaf1cb143e2b521904248b74f2
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83395402"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83613966"
 ---
 # <a name="introducing-eshoponcontainers-reference-app"></a>Einführung in die eshoponcontainers-Referenz-App
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 In Zusammenarbeit mit führenden Community-Experten hat Microsoft in Zusammenarbeit mit einer voll funktionsfähigen Cloud-Native-Referenz Anwendung (eshoponcontainers) erstellt. Diese Anwendung ist für die Veranschaulichung der Verwendung von .net Core und docker und optional von Azure, Kubernetes und Visual Studio zum Erstellen einer Online Store Front konzipiert.
 

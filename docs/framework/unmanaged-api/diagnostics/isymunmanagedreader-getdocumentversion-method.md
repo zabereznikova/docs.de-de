@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: a51f1f64-e084-44c5-830c-2222da5a6bbf
 topic_type:
 - apiref
-ms.openlocfilehash: 3bc578be680951a1d41c92fb2169c860882b2e31
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: c2cc541b2a78f16d5ca6b19405794faa825a9d72
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74448310"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83615032"
 ---
 # <a name="isymunmanagedreadergetdocumentversion-method"></a>ISymUnmanagedReader::GetDocumentVersion-Methode
-Ruft die angegebene Version des angegebenen Dokuments ab. Die Dokument Version beginnt bei 1 und wird jedes Mal um 1 erhöht, wenn das Dokument mithilfe der [UpdateSymbolStore](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-updatesymbolstore-method.md) -Methode aktualisiert wird. Wenn der `pbCurrent`-Parameter `true`ist, ist dies die neueste Version des Dokuments.  
+Ruft die angegebene Version des angegebenen Dokuments ab. Die Dokument Version beginnt bei 1 und wird jedes Mal um 1 erhöht, wenn das Dokument mithilfe der [UpdateSymbolStore](isymunmanagedreader-updatesymbolstore-method.md) -Methode aktualisiert wird. Wenn der- `pbCurrent` Parameter ist `true` , ist dies die neueste Version des Dokuments.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -42,14 +42,14 @@ HRESULT GetDocumentVersion (
  vorgenommen Ein Zeiger auf eine Variable, die die Version des angegebenen Dokuments empfängt.  
   
  `pbCurrent`  
- vorgenommen Ein Zeiger auf eine Variable, die `true` empfängt, wenn dies die neueste Version des Dokuments ist, oder `false`, wenn Sie nicht die neueste Version ist.  
+ vorgenommen Ein Zeiger auf eine Variable, die empfängt `true` , wenn dies die neueste Version des Dokuments ist, oder, `false` Wenn Sie nicht die neueste Version ist.  
   
 ## <a name="return-value"></a>Rückgabewert  
  S_OK, wenn die Methode erfolgreich ist. andernfalls E_FAIL oder ein anderer Fehlercode.  
   
-## <a name="requirements"></a>Voraussetzungen  
+## <a name="requirements"></a>Anforderungen  
  **Header:** Corsym. idl, corsym. h  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [ISymUnmanagedReader-Schnittstelle](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)
+- [ISymUnmanagedReader-Schnittstelle](isymunmanagedreader-interface.md)

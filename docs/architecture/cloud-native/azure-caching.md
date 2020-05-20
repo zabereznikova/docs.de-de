@@ -1,18 +1,16 @@
 ---
-title: Zwischenspeichern in einer Cloud-native Anwendung
+title: Zwischenspeichern einer cloudnativen Anwendung
 description: Erfahren Sie mehr über das Zwischenspeichern von Strategien in einer Cloud-native Anwendung.
 author: robvet
-ms.date: 01/22/2020
-ms.openlocfilehash: 2da61a01fc53233d1934df813fcba3b91a495c43
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.date: 05/17/2020
+ms.openlocfilehash: a109db59d7b2005ea97922eef07ae4869e4894a7
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76795116"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614291"
 ---
 # <a name="caching-in-a-cloud-native-app"></a>Caching in einer cloudbasierten App
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 Die Vorteile der Zwischenspeicherung sind gut verständlich. Das Verfahren funktioniert durch temporäres kopieren häufig aufgerufene Daten aus einem Back-End-Datenspeicher in einen *schnellen Speicher* , der sich näher an der Anwendung befindet. Caching wird häufig implementiert, wenn...
 
@@ -32,19 +30,19 @@ Beachten Sie auch Caching, um wiederkehrende Berechnungen zu vermeiden. Wenn ein
 
 ## <a name="caching-architecture"></a>Zwischen Speicherungs Architektur
 
-Native Cloud-Anwendungen implementieren in der Regel eine verteilte zwischen Speicherungs Architektur. Der Cache wird als cloudbasierter [Sicherungsdienst](./definition.md#backing-services)(getrennt von den-Diensten) gehostet. In Abbildung 5-20 wird die Architektur dargestellt.
+Native Cloud-Anwendungen implementieren in der Regel eine verteilte zwischen Speicherungs Architektur. Der Cache wird als cloudbasierter [Sicherungsdienst](./definition.md#backing-services)(getrennt von den-Diensten) gehostet. In Abbildung 5-15 wird die Architektur dargestellt.
 
 ![Zwischenspeichern in einer nativen Cloud-App](media/caching-in-a-cloud-native-app.png)
 
-**Abbildung 5-19**: Zwischenspeichern in einer nativen Cloud-App
+**Abbildung 5-15**: Zwischenspeichern in einer nativen Cloud-App
 
 Beachten Sie in der obigen Abbildung, wie der Cache von den-und-Diensten unabhängig ist und von diesen gemeinsam genutzt wird. In diesem Szenario wird der Cache vom [API-Gateway](./front-end-communication.md)aufgerufen. Wie in Kapitel 4 erläutert, fungiert das Gateway als Front-End für alle eingehenden Anforderungen. Der verteilte Cache erhöht die Reaktionsfähigkeit des Systems durch die Rückgabe von zwischengespeicherten Daten nach Möglichkeit. Wenn Sie den Cache von den Diensten trennen, kann der Cache außerdem unabhängig voneinander zentral hoch-oder herunterskaliert werden, um größere Datenverkehrs Anforderungen zu erfüllen.
 
-Die Abbildung zeigt ein gängiges zwischen Speicherungs Muster, das als [Cache Abbild Muster](https://docs.microsoft.com/azure/architecture/patterns/cache-aside)bezeichnet wird. Bei einer eingehenden Anforderung Fragen Sie zuerst den Cache (Schritt \#1) nach einer Antwort ab. Wenn Sie gefunden werden, werden die Daten sofort zurückgegeben. Wenn die Daten im Cache (als [Cache](https://www.techopedia.com/definition/6308/cache-miss)Fehler bezeichnet) nicht vorhanden sind, werden Sie aus einer lokalen Datenbank in einem Downstreamdienst abgerufen (Schritt \#2). Sie wird dann für zukünftige Anforderungen (Schritt \#3) in den Cache geschrieben und an den Aufrufer zurückgegeben. Es muss darauf geachtet werden, dass zwischengespeicherte Daten regelmäßig entfernt werden, damit das System rechtzeitig und konsistent bleibt.
+Die vorherige Abbildung zeigt ein gängiges zwischen Speicherungs Muster, das als [Cache Abbild Muster](https://docs.microsoft.com/azure/architecture/patterns/cache-aside)bezeichnet wird. Bei einer eingehenden Anforderung Fragen Sie zuerst den Cache (Schritt \# 1) nach einer Antwort ab. Wenn Sie gefunden werden, werden die Daten sofort zurückgegeben. Wenn die Daten im Cache (als [Cache](https://www.techopedia.com/definition/6308/cache-miss)Fehler bezeichnet) nicht vorhanden sind, werden Sie aus einer lokalen Datenbank in einem Downstreamdienst abgerufen (Schritt \# 2). Sie wird dann für zukünftige Anforderungen in den Cache geschrieben (Schritt \# 3) und an den Aufrufer zurückgegeben. Es muss darauf geachtet werden, dass zwischengespeicherte Daten regelmäßig entfernt werden, damit das System rechtzeitig und konsistent bleibt.
 
 Wenn ein frei gegebener Cache wächst, kann es sich als vorteilhaft erweisen, seine Daten über mehrere Knoten hinweg zu partitionieren. Dies kann helfen, Konflikte zu minimieren und die Skalierbarkeit zu verbessern. Viele Caching-Dienste unterstützen die Fähigkeit, Knoten dynamisch hinzuzufügen und zu entfernen und Daten über mehrere Partitionen hinweg neu auszugleichen. Diese Vorgehensweise umfasst in der Regel Clustering. Clustering macht eine Auflistung von Verbund Knoten als nahtlosen, einzelnen Cache verfügbar. Intern werden die Daten jedoch auf die Knoten verteilt, die auf eine vordefinierte Verteilungs Strategie folgen, die die Last gleichmäßig ausgleicht.
 
-## <a name="azure-cache-for-redis"></a>Azure-Cache für redis
+## <a name="azure-cache-for-redis"></a>Azure Cache for Redis
 
 [Azure Cache für redis](https://azure.microsoft.com/services/cache/) ist ein sicherer Daten Cache-und Messaging Broker Dienst, der vollständig von Microsoft verwaltet wird. Dieses Angebot wird als Platform-as-a-Service-Angebot (Platform-as-a-Service, PAS) genutzt und bietet einen hohen Durchsatz und geringe Latenz Der Dienst ist für jede Anwendung innerhalb oder außerhalb von Azure zugänglich.
 

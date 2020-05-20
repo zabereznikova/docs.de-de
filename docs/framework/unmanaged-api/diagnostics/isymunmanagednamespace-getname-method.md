@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 657bf91d-005a-4ea4-9298-04d1291c0bc3
 topic_type:
 - apiref
-ms.openlocfilehash: 43f32ac85bebc12d0a9253205aae3f1de0dc9e5b
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 84b2f1226c84713483499c7ff777838058cb0f95
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74433972"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83615110"
 ---
 # <a name="isymunmanagednamespacegetname-method"></a>ISymUnmanagedNamespace::GetName-Methode
 Ruft den Namen dieses Namespace ab.  
@@ -37,10 +37,10 @@ HRESULT GetName(
   
 ## <a name="parameters"></a>Parameter  
  `cchName`  
- in Ein-`ULONG32`, der die Größe des `szName` Puffers angibt.  
+ in Eine `ULONG32` , die die Größe des `szName` Puffers angibt.  
   
  `pcchName`  
- vorgenommen Ein Zeiger auf eine `ULONG32`, die die Größe des Puffers, der den Namespace Namen enthalten muss, einschließlich der NULL-Beendigung, in Zeichen empfängt.  
+ vorgenommen Ein Zeiger auf einen `ULONG32` , der die Größe des Puffers in Zeichen empfängt, der den Namespace Namen enthalten muss, einschließlich der NULL-Beendigung.  
   
  `szName`  
  vorgenommen Ein Zeiger auf einen Puffer, der den Namespace Namen enthält.  
@@ -48,9 +48,9 @@ HRESULT GetName(
 ## <a name="return-value"></a>Rückgabewert  
  S_OK, wenn die Methode erfolgreich ist. andernfalls E_FAIL oder ein anderer Fehlercode.  
   
-## <a name="requirements"></a>Voraussetzungen  
+## <a name="requirements"></a>Anforderungen  
  **Header:** Corsym. idl, corsym. h  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [ISymUnmanagedNamespace-Schnittstelle](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagednamespace-interface.md)
+- [ISymUnmanagedNamespace-Schnittstelle](isymunmanagednamespace-interface.md)

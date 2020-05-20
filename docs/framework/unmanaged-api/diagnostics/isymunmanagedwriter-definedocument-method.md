@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c3bf15b0-3250-4bbe-b9b5-c5d695289b6f
 topic_type:
 - apiref
-ms.openlocfilehash: 02b270677131d0960db67b0ac8db38cba2b5e2df
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: fdcfb0c4f9c21eb516f4196d0c8f682669468219
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74428057"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83615227"
 ---
 # <a name="isymunmanagedwriterdefinedocument-method"></a>ISymUnmanagedWriter::DefineDocument-Methode
 Definiert ein Quelldokument. GUIDs werden für bekannte Sprachen, Anbieter und Dokumenttypen bereitgestellt.  
@@ -38,7 +38,7 @@ HRESULT DefineDocument(
   
 ## <a name="parameters"></a>Parameter  
  `url`  
- in Ein Zeiger auf einen `WCHAR`, der die URL (Uniform Resource Serverlocatorpunkt) definiert, die das Dokument identifiziert.  
+ in Ein Zeiger auf einen `WCHAR` , der die URL (Uniform Resource Serverlocatorpunkt) definiert, die das Dokument identifiziert.  
   
  `language`  
  in Ein Zeiger auf eine GUID, die die Dokument Sprache definiert.  
@@ -50,14 +50,14 @@ HRESULT DefineDocument(
  in Ein Zeiger auf eine GUID, die den Typ des Dokuments definiert.  
   
  `pRetVal`  
- vorgenommen Ein Zeiger auf die zurückgegebene [ISymUnmanagedWriter](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md) -Schnittstelle.  
+ vorgenommen Ein Zeiger auf die zurückgegebene [ISymUnmanagedWriter](isymunmanagedwriter-interface.md) -Schnittstelle.  
   
 ## <a name="return-value"></a>Rückgabewert  
  S_OK, wenn die Methode erfolgreich ist. andernfalls E_FAIL oder ein anderer Fehlercode.  
   
-## <a name="requirements"></a>Voraussetzungen  
+## <a name="requirements"></a>Anforderungen  
  **Header:** Corsym. idl, corsym. h  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [ISymUnmanagedWriter-Schnittstelle](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
+- [ISymUnmanagedWriter-Schnittstelle](isymunmanagedwriter-interface.md)

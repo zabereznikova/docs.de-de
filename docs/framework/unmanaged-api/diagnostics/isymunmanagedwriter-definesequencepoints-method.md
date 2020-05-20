@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 64202baf-be6b-40ba-8162-8cc6c0c9b8e1
 topic_type:
 - apiref
-ms.openlocfilehash: 63ba108bc234e566450bb019afc63acb4e75ad1f
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 8889c412f414f38d1d18d33ec297e82fd052280d
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74427987"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614798"
 ---
 # <a name="isymunmanagedwriterdefinesequencepoints-method"></a>ISymUnmanagedWriter::DefineSequencePoints-Methode
 Definiert eine Gruppe von Sequenzpunkten in der aktuellen Methode. Jede Start-und Start Spalte definiert den Anfang einer Anweisung innerhalb einer Methode. Jede Endzeile und Endspalte definieren das Ende einer Anweisung innerhalb einer Methode. Die Arrays sollten in aufsteigender Reihenfolge der Offsets sortiert werden. Der Offset wird immer vom Anfang der Methode (in Bytes) gemessen.  
@@ -43,7 +43,7 @@ HRESULT DefineSequencePoints(
  in Das Dokument Objekt, für das die Sequenz Punkte definiert werden.  
   
  `spCount`  
- in Eine `ULONG32`, die die Größe der einzelnen `offsets`-, `lines`-, `columns`-, `endLines`-und `endColumns` Puffer angibt.  
+ in Eine `ULONG32` , die die Größe der einzelnen `offsets` `lines` Puffer,,, `columns` und angibt `endLines` `endColumns` .  
   
  `offsets`  
  in Der Offset der Sequenz Punkte, gemessen ab dem Anfang der Methode.  
@@ -63,9 +63,9 @@ HRESULT DefineSequencePoints(
 ## <a name="return-value"></a>Rückgabewert  
  S_OK, wenn die Methode erfolgreich ist. andernfalls E_FAIL oder ein anderer Fehlercode.  
   
-## <a name="requirements"></a>Voraussetzungen  
+## <a name="requirements"></a>Anforderungen  
  **Header:** Corsym. idl, corsym. h  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [ISymUnmanagedWriter-Schnittstelle](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
+- [ISymUnmanagedWriter-Schnittstelle](isymunmanagedwriter-interface.md)

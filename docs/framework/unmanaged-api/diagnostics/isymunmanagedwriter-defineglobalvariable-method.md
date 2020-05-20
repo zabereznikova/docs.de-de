@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 843c904a-8176-4d8f-bd47-b4d4c29f4c5c
 topic_type:
 - apiref
-ms.openlocfilehash: 94d1aa5bba87e8ca11b58bdf89a697e1ccf500b1
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 674089f8a1076342a2479c64e253b7dda53ade87
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74428022"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83615201"
 ---
 # <a name="isymunmanagedwriterdefineglobalvariable-method"></a>ISymUnmanagedWriter::DefineGlobalVariable-Methode
 Definiert eine einzelne globale Variable.  
@@ -41,13 +41,13 @@ HRESULT DefineGlobalVariable(
   
 ## <a name="parameters"></a>Parameter  
  `name`  
- in Ein Zeiger auf eine `WCHAR`, die den Namen der globalen Variablen definiert.  
+ in Ein Zeiger auf einen `WCHAR` , der den Namen der globalen Variablen definiert.  
   
  `attributes`  
  in Die globalen Variablen Attribute.  
   
  `cSig`  
- in Ein-`ULONG32`, der die Größe des `signature` Puffers in Zeichen angibt.  
+ in Eine `ULONG32` , die die Größe des Puffers in Zeichen angibt `signature` .  
   
  `signature`  
  in Die globale Variablen Signatur.  
@@ -67,11 +67,11 @@ HRESULT DefineGlobalVariable(
 ## <a name="return-value"></a>Rückgabewert  
  S_OK, wenn die Methode erfolgreich ist. andernfalls E_FAIL oder ein anderer Fehlercode.  
   
-## <a name="requirements"></a>Voraussetzungen  
+## <a name="requirements"></a>Anforderungen  
  **Header:** Corsym. idl, corsym. h  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [ISymUnmanagedWriter-Schnittstelle](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
-- [DefineLocalVariable-Methode](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-definelocalvariable-method.md)
-- [DefineGlobalVariable2-Methode](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter2-defineglobalvariable2-method.md)
+- [ISymUnmanagedWriter-Schnittstelle](isymunmanagedwriter-interface.md)
+- [DefineLocalVariable-Methode](isymunmanagedwriter-definelocalvariable-method.md)
+- [DefineGlobalVariable2-Methode](isymunmanagedwriter2-defineglobalvariable2-method.md)

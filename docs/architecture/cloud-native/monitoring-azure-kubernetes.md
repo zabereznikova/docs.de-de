@@ -1,17 +1,15 @@
 ---
 title: Überwachen in Azure Kubernetes Services
 description: Überwachen in Azure Kubernetes Services
-ms.date: 02/05/2020
-ms.openlocfilehash: 5c46b9e8599f70d430ad26cf1364343454d30a16
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.date: 05/13/2020
+ms.openlocfilehash: 138acf9d27fb4a676ec422c848097a6bea98fa42
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77450062"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83613823"
 ---
 # <a name="monitoring-in-azure-kubernetes-services"></a>Überwachen in Azure Kubernetes Services
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 Die integrierte Protokollierung in Kubernetes ist primitiv. Es gibt jedoch einige hervorragend Optionen, um die Protokolle aus Kubernetes und an einem Ort zu finden, an dem Sie ordnungsgemäß analysiert werden können. Wenn Sie Ihre AKS-Cluster überwachen müssen, ist das Konfigurieren von Elastic Stack für Kubernetes eine hervorragend Lösung.
 
@@ -19,8 +17,8 @@ Die integrierte Protokollierung in Kubernetes ist primitiv. Es gibt jedoch einig
 
 [Azure Monitor für Container](https://docs.microsoft.com/azure/azure-monitor/insights/container-insights-overview) unterstützt die Nutzung von Protokollen von nicht nur Kubernetes sondern auch von anderen Orchestrierungs Modulen wie DC/OS, docker Swarm und red hat openshift.
 
-![verarbeiten von Protokollen aus verschiedenen Containern](./media/containers-diagram.png)
-**Abbildung 7-10**. Verarbeiten von Protokollen aus verschiedenen Containern
+![Verarbeiten von Protokollen aus verschiedenen Containern in ](./media/containers-diagram.png)
+ **Abbildung 7-10**. Verarbeiten von Protokollen aus verschiedenen Containern
 
 [Prometheus](https://prometheus.io/) ist eine beliebte Open-Source-metriküberwachungglösung. Es ist Teil der Cloud Native Compute Foundation. In der Regel erfordert die Verwendung von Prometheus die Verwaltung eines Prometheus-Servers mit seinem eigenen Geschäft. [Azure Monitor für Container bietet jedoch eine direkte Integration mit Prometheus-metrikendpunkten](https://docs.microsoft.com/azure/azure-monitor/insights/container-insights-prometheus-integration), sodass kein separater Server erforderlich ist.
 
@@ -30,8 +28,8 @@ Die Installation der Protokoll Sammler unterscheidet sich in [Windows](https://d
 
 Unabhängig davon, welcher Orchestrator oder das Betriebssystem den Azure Monitor Daemon ausführen, werden die Protokollinformationen an dieselben Azure Monitor Tools weitergeleitet, mit denen Benutzer vertraut sind. Dies sorgt für eine parallele Umgebung in Umgebungen, in denen verschiedene Protokoll Quellen, z. b. eine hybride Kubernetes/Azure Functions Umgebung, gemischt werden.
 
-![ein Beispiel Dashboard, das Protokollierungs-und metrikinformationen aus einer Reihe von laufenden Containern anzeigt.](./media/containers-dashboard.png)
-**Abbildung 7-11**. Ein Beispiel Dashboard, in dem Protokollierungs-und metrikinformationen aus einer Reihe von laufenden Containern angezeigt werden.
+![Ein Beispiel Dashboard, in dem Protokollierungs-und metrikinformationen aus einer Reihe von laufenden Containern angezeigt werden. ](./media/containers-dashboard.png)
+ **Abbildung 7-11**. Ein Beispiel Dashboard, in dem Protokollierungs-und metrikinformationen aus einer Reihe von laufenden Containern angezeigt werden.
 
 ## <a name="logfinalize"></a>Log. Finalize ()
 

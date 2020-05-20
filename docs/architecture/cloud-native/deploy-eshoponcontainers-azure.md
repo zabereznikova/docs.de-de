@@ -1,17 +1,15 @@
 ---
 title: Bereitstellen von eShopOnContainers in Azure
 description: Bereitstellen der eshoponcontainers-Anwendung mithilfe von Azure Kubernetes Service, Helm und Devspaces.
-ms.date: 04/20/2020
-ms.openlocfilehash: a3eacedac946cb25cf3cced305d7921e29f0d204
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.date: 05/13/2020
+ms.openlocfilehash: 93a2848f095d7593e1e169f4a6c6c1818a76217d
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82895583"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614096"
 ---
 # <a name="deploying-eshoponcontainers-to-azure"></a>Bereitstellen von eShopOnContainers in Azure
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 Die eshoponcontainers-Anwendung kann auf einer Vielzahl von Azure-Plattformen bereitgestellt werden. Die empfohlene Vorgehensweise besteht darin, die Anwendung in Azure Kubernetes Services (AKS) bereitzustellen. Helm, ein Kubernetes-Bereitstellungs Tool, ist zur Verringerung der Bereitstellungs Komplexität verfügbar. Optional können Entwickler Azure dev Spaces für Kubernetes implementieren, um Ihren Entwicklungsprozess zu optimieren.
 
@@ -57,10 +55,10 @@ Beachten Sie, dass in der Vorlage ein dynamischer Satz von Schlüssel-Wert-Paare
 
 Sie finden die eshoponcontainers Helm-Diagramme im Ordner "/k8s/Helm". In Abbildung 2-6 wird dargestellt, wie die verschiedenen Komponenten der Anwendung in einer Ordnerstruktur angeordnet sind, die von Helm zum Definieren und Verwalten von bereit Stellungen verwendet wird.
 
-![eshoponcontainers-](./media/eshoponcontainers-helm-folder.png)
-Architektur**Abbildung 2-6**. Der Ordner "eshoponcontainers Helm".
+![eshoponcontainers-Architektur ](./media/eshoponcontainers-helm-folder.png)
+ **Abbildung 2-6**. Der Ordner "eshoponcontainers Helm".
 
-Jede einzelne Komponente wird mithilfe eines `helm install` -Befehls installiert. der eShop umfasst das Skript "alle bereitstellen", mit dem die Komponenten durchlaufen und mithilfe der jeweiligen Helm-Diagramme installiert werden. Das Ergebnis ist ein wiederholbarer Prozess, der mit der Anwendung in der Quell Code Verwaltung versioniert ist, die jeder Person im Team mit einem einzeiligen Skript Befehl in einem AKS-Cluster bereitstellen kann.
+Jede einzelne Komponente wird mithilfe eines- `helm install` Befehls installiert. der eShop umfasst das Skript "alle bereitstellen", mit dem die Komponenten durchlaufen und mithilfe der jeweiligen Helm-Diagramme installiert werden. Das Ergebnis ist ein wiederholbarer Prozess, der mit der Anwendung in der Quell Code Verwaltung versioniert ist, die jeder Person im Team mit einem einzeiligen Skript Befehl in einem AKS-Cluster bereitstellen kann.
 
 > Beachten Sie, dass in Version 3 von Helm offiziell die Notwendigkeit der Tiller-Serverkomponente entfällt. Weitere Informationen zu dieser Erweiterung finden Sie [hier](https://medium.com/better-programming/why-is-tiller-missing-in-helm-3-2347c446714).
 
@@ -72,13 +70,13 @@ Entwickler verwenden eine ausgeführte (Entwicklungs-) Instanz in einem AKS-Clus
 
 In Abbildung 2-7 können Sie sehen, dass Developer Susie eine aktualisierte Version des Bikes-mikroservice in Ihrem Entwicklungsbereich bereitgestellt hat. Sie kann Ihre Änderungen dann mithilfe einer benutzerdefinierten URL testen, beginnend mit dem Namen Ihres Platzes (Susie.s.dev.MyApp.EUS.azds.IO).
 
-![eshoponcontainers-](./media/azure-devspaces-one.png)
-Architektur**Abbildung 2-7**. Developer Susie stellt eine eigene Version des Bikes-mikroservice bereit und testet Sie.
+![eshoponcontainers-Architektur ](./media/azure-devspaces-one.png)
+ **Abbildung 2-7**. Developer Susie stellt eine eigene Version des Bikes-mikroservice bereit und testet Sie.
 
 Gleichzeitig passt der Entwickler John den "Reservierungen"-mikroservice an und muss seine Änderungen testen. Er stellt seine Änderungen in seinem eigenen Entwicklungsbereich bereit, ohne mit den Änderungen von Susie zu in Konflikt zu stehen, wie in Abbildung 2-8 dargestellt. John testet seine Änderungen dann mit seiner eigenen URL, der der Name seines leer Zeichens vorangestellt ist (John.s.dev.MyApp.EUS.azds.IO).
 
-![eshoponcontainers-](./media/azure-devspaces-two.png)
-Architektur**Abbildung 2-8**. Entwickler John stellt seine eigene Version des Reservierungs-und Test Dienstanbieter bereit und testet diese, ohne mit anderen Entwicklern in Konflikt zu geraten.
+![eshoponcontainers-Architektur ](./media/azure-devspaces-two.png)
+ **Abbildung 2-8**. Entwickler John stellt seine eigene Version des Reservierungs-und Test Dienstanbieter bereit und testet diese, ohne mit anderen Entwicklern in Konflikt zu geraten.
 
 Mithilfe Azure dev Spaces können Teams direkt mit AKS arbeiten, während Sie Ihre Änderungen unabhängig voneinander ändern, bereitstellen und testen. Diese Vorgehensweise verringert den Bedarf an separaten dedizierten gehosteten Umgebungen, da jeder Entwickler effektiv über eine eigene AKS-Umgebung verfügt. Entwickler können mit der Befehlszeilenschnittstelle Azure dev Spaces arbeiten oder Ihre Anwendung starten, um direkt von Visual Studio aus zu Azure dev Spaces. [Erfahren Sie mehr darüber, wie Azure dev Spaces funktioniert und konfiguriert ist.](https://docs.microsoft.com/azure/dev-spaces/how-dev-spaces-works)
 

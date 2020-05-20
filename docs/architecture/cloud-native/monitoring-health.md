@@ -1,17 +1,15 @@
 ---
 title: Überwachung und Integrität
 description: Überwachung und Integrität
-ms.date: 09/23/2019
-ms.openlocfilehash: 6274040318b5442478e9cc291c4f223bdf533110
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.date: 05/13/2020
+ms.openlocfilehash: 28e98bbdb39a68d8961d4f3ab48cde5a07a4762b
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73842020"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83613797"
 ---
 # <a name="monitoring-and-health"></a>Überwachung und Integrität
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 Bei der Verwendung von Webdiensten und cloudbasierten Anwendungen werden gute devops-Verfahren Hand behandelt. Devops ist viele Dinge, aber vielleicht eine der besseren Definitionen von Cloud Advocate und devops Evangelist Donovan Brown:
 

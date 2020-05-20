@@ -1,17 +1,15 @@
 ---
 title: DevOps
 description: Devops-Überlegungen für Native Cloud-Anwendungen
-ms.date: 05/12/2020
-ms.openlocfilehash: 498ce64c3a387433862142826059b4f7e513ec7b
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.date: 05/13/2020
+ms.openlocfilehash: ce814595245d49e409e780cb0f63c436299c2e4e
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83395811"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614115"
 ---
 # <a name="devops"></a>DevOps
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 Das bevorzugte Mantra von Software Beratern besteht darin, die Frage zu beantworten. Dies ist nicht der Fall, weil Software Berater nicht an einer Position beteiligt sind. Das liegt daran, dass es keine echte Antwort auf Fragen in Software gibt. Es gibt keine absolute Rechte und falsche Rechte, sondern vielmehr eine Balance zwischen den Gegensätzen.
 

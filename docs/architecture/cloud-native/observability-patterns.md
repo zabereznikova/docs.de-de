@@ -1,17 +1,15 @@
 ---
 title: Beobachtbarkeitsmuster
 description: Observability-Muster für Native Cloud-Anwendungen
-ms.date: 02/05/2020
-ms.openlocfilehash: a821235835b4553760b19887d500a29ca75e133e
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.date: 05/13/2020
+ms.openlocfilehash: db6a56358923025cbcca9478908474227e5da96d
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77448517"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83613810"
 ---
 # <a name="observability-patterns"></a>Beobachtbarkeitsmuster
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 Ebenso wie Muster entwickelt wurden, um das Layout von Code in Anwendungen zu unterstützen, gibt es auf zuverlässige Weise Muster für Betriebs Anwendungen. Bei der Verwaltung von Anwendungen sind drei nützliche Muster aufgetreten: **Protokollierung**, **Überwachung**und **Warnungen**.
 
@@ -21,20 +19,20 @@ Unabhängig davon, wie sorgfältig wir sind, Verhalten sich Anwendungen fast imm
 
 ### <a name="challenges-when-logging-with-cloud-native-applications"></a>Herausforderungen bei der Protokollierung mit nativen cloudanwendungen
 
-In herkömmlichen Anwendungen werden Protokolldateien in der Regel auf dem lokalen Computer gespeichert. Tatsächlich gibt es auf Unix-ähnlichen Betriebssystemen eine Ordnerstruktur, die für alle Protokolle definiert ist, in der Regel unter `/var/log`.
+In herkömmlichen Anwendungen werden Protokolldateien in der Regel auf dem lokalen Computer gespeichert. Tatsächlich gibt es für UNIX-ähnliche Betriebssysteme eine Ordnerstruktur, die für alle Protokolle definiert ist, in der Regel unter `/var/log` .
 
-![Protokollierung in einer Datei in einer monolithischen app.](./media/single-monolith-logging.png)
-**Abbildung 7-1**. Protokollierung in einer Datei in einer monolithischen app.
+![Protokollierung in einer Datei in einer monolithischen app. ](./media/single-monolith-logging.png)
+ **Abbildung 7-1**. Protokollierung in einer Datei in einer monolithischen app.
 
 Die Nützlichkeit der Protokollierung in einer Flatfile auf einem einzelnen Computer wird in einer cloudumgebung erheblich reduziert. Anwendungen, die Protokolle erstellen, haben möglicherweise keinen Zugriff auf den lokalen Datenträger, oder der lokale Datenträger ist möglicherweise sehr vorübergehend, da Container durch physische Computer gemischt werden. Selbst das einfache hochskalieren monolithischer Anwendungen über mehrere Knoten hinweg kann es schwierig machen, die geeignete dateibasierte Protokolldatei zu finden.
 
-![Protokollierung an Dateien in einer skalierten monolithischen app.](./media/multiple-node-monolith-logging.png)
-**Abbildung 7-2**. Protokollieren von Dateien in einer skalierten monolithischen app.
+![Protokollieren von Dateien in einer skalierten monolithischen app. ](./media/multiple-node-monolith-logging.png)
+ **Abbildung 7-2**. Protokollieren von Dateien in einer skalierten monolithischen app.
 
 Cloud native-Anwendungen, die mit einer microservicearchitektur entwickelt wurden, stellen auch einige Herausforderungen bei dateibasierten Protokollierungen dar. Benutzer Anforderungen können sich nun über mehrere Dienste erstrecken, die auf unterschiedlichen Computern ausgeführt werden und Server lose Funktionen enthalten können, die keinen Zugriff auf ein lokales Dateisystem haben. Es wäre sehr schwierig, die Protokolle von einem Benutzer oder einer Sitzung über diese vielen Dienste und Computer hinweg zu korrelieren.
 
-![Protokollierung an lokale Dateien in einer Webdienst-app.](./media/local-log-file-per-service.png)
-**Abbildung 7-3**. Protokollieren von lokalen Dateien in einer-Webdienst-app.
+![Protokollieren von lokalen Dateien in einer-Webdienst-app. ](./media/local-log-file-per-service.png)
+ **Abbildung 7-3**. Protokollieren von lokalen Dateien in einer-Webdienst-app.
 
 Zum Schluss ist die Anzahl der Benutzer in einigen cloudbasierten Anwendungen hoch. Stellen Sie sich vor, dass jeder Benutzer bei der Anmeldung bei einer Anwendung hundert Zeilen mit Protokollnachrichten generiert. In der Isolation ist das zwar verwaltbar, aber es werden mehr als 100.000 Benutzer multipliziert, und die Menge der Protokolle wird so groß, dass spezialisierte Tools zur Unterstützung der effektiven Verwendung der Protokolle benötigt werden.
 
@@ -43,10 +41,10 @@ Zum Schluss ist die Anzahl der Benutzer in einigen cloudbasierten Anwendungen ho
 Jede Programmiersprache verfügt über Tools, die das Schreiben von Protokollen erlauben, und in der Regel ist der Aufwand für das Schreiben dieser Protokolle gering. Viele der Protokollierungs Bibliotheken ermöglichen das Protokollieren verschiedener Arten von criticalities, die zur Laufzeit optimiert werden können. Die [Bibliothek "serilog](https://serilog.net/) " ist beispielsweise eine beliebte strukturierte Protokollierungs Bibliothek für .net, die die folgenden Protokolliergrade bereitstellt:
 
 * Ausführlich
-* Debuggen
+* Debug
 * Information
 * Warnung
-* Error
+* Fehler
 * FAT
 
 Diese verschiedenen Protokoll Ebenen bieten Granularität bei der Protokollierung. Wenn die Anwendung in der Produktionsumgebung ordnungsgemäß funktioniert, kann Sie so konfiguriert werden, dass nur wichtige Nachrichten protokolliert werden. Wenn sich die Anwendung nicht verhält, kann die Protokollebene erweitert werden, sodass ausführlichere Protokolle gesammelt werden. Dadurch wird die Leistung gegenüber dem einfachen Debuggen ausgeglichen.
@@ -57,8 +55,8 @@ Aufgrund der Herausforderungen im Zusammenhang mit der Verwendung Datei basierte
 
 Es ist auch hilfreich, einige Standardverfahren zu befolgen, wenn Sie die Protokollierung entwickeln, die viele Dienste umfasst. Wenn Sie beispielsweise eine [Korrelations-ID](https://blog.rapid7.com/2016/12/23/the-value-of-correlation-ids/) zu Beginn einer langen Interaktion erstellen und diese dann in jeder Nachricht protokollieren, die mit dieser Interaktion verknüpft ist, ist es einfacher, nach allen zugehörigen Nachrichten zu suchen. Sie müssen nur eine einzelne Nachricht suchen und die Korrelations-ID extrahieren, um alle zugehörigen Nachrichten zu finden. Ein weiteres Beispiel ist die Sicherstellung, dass das Protokoll Format für jeden Dienst identisch ist, und zwar ungeachtet der verwendeten Sprache oder Protokollierungs Bibliothek. Diese Standardisierung erleichtert das Lesen von Protokollen. In Abbildung 7-4 wird veranschaulicht, wie eine microservicesarchitektur die zentralisierte Protokollierung als Teil des Workflows nutzen kann.
 
-![Protokolle aus verschiedenen Quellen werden in einen zentralisierten Protokoll Speicher aufgenommen.](./media/centralized-logging.png)
-**Abbildung 7-4**. Protokolle aus verschiedenen Quellen werden in einen zentralisierten Protokoll Speicher aufgenommen.
+![Protokolle aus verschiedenen Quellen werden in einen zentralisierten Protokoll Speicher aufgenommen. ](./media/centralized-logging.png)
+ **Abbildung 7-4**. Protokolle aus verschiedenen Quellen werden in einen zentralisierten Protokoll Speicher aufgenommen.
 
 ## <a name="challenges-with-detecting-and-responding-to-potential-app-health-issues"></a>Herausforderungen beim erkennen und reagieren auf potenzielle Probleme mit der APP-Integrität
 

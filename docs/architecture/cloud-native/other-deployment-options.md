@@ -1,17 +1,15 @@
 ---
 title: Weitere Optionen für die Container Bereitstellung
 description: Weitere Bereitstellungs Optionen für Container mithilfe von Azure
-ms.date: 04/13/2020
-ms.openlocfilehash: 3cae771b3877215a7fc91afd4f406fdfc9ff2771
-ms.sourcegitcommit: 5988e9a29cedb8757320817deda3c08c6f44a6aa
+ms.date: 05/13/2020
+ms.openlocfilehash: acb022e3d4fd4862c592fa571894e1b8ce17f465
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82200001"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83613758"
 ---
 # <a name="other-container-deployment-options"></a>Weitere Optionen für die Container Bereitstellung
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 Abgesehen von Azure Kubernetes Service (AKS) können Sie Container auch zum Azure App Service für Container und Azure Container Instances bereitstellen.
 
@@ -41,7 +39,7 @@ Nachdem die Bereitstellung abgeschlossen ist, suchen Sie die IP-Adresse des neu 
 
 Azure Container Instances bietet die schnellste Möglichkeit, einfache containerworkloads in Azure auszuführen. Sie müssen keinen App Service, Orchestrator oder virtuellen Computer konfigurieren. Für Szenarien, in denen Sie eine vollständige Container Orchestrierung, Dienst Ermittlung, automatische Skalierung oder koordinierte Upgrades benötigen, empfehlen wir Azure Kubernetes Service (AKS).
 
-## <a name="references"></a>References
+## <a name="references"></a>Referenzen
 
 - [Was ist Kubernetes?](https://blog.newrelic.com/engineering/what-is-kubernetes/)
 - [Installieren von Kubernetes mit minikube](https://kubernetes.io/docs/setup/learning-environment/minikube/)

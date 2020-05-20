@@ -2,17 +2,15 @@
 title: gRPC
 description: Erfahren Sie mehr über GrpC, seine Rolle in Cloud native-Anwendungen und die Unterschiede zwischen der http-Rest-Kommunikation.
 author: robvet
-ms.date: 03/31/2020
-ms.openlocfilehash: 01dd4c934f0b39041ea377691067edf4dbe20378
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.date: 05/13/2020
+ms.openlocfilehash: f34b267d7f5c6b4e593841c80df44d1ccbde95ae
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82895566"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614044"
 ---
 # <a name="grpc"></a>gRPC
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 Bisher haben wir uns in diesem Buch auf die [Rest-basierte](https://docs.microsoft.com/azure/architecture/best-practices/api-design) Kommunikation konzentriert. Wir haben gesehen, dass Rest ein flexibler Architekturstil ist, der CRUD-basierte Vorgänge für Entitäts Ressourcen definiert. Clients interagieren mit Ressourcen über HTTP mit einem Anforderungs-/Antwort-Kommunikationsmodell. Auch wenn Rest weit verbreitet ist, hat eine neuere Kommunikationstechnologie (GrpC) in der Cloud-Native Community enorme Dynamik erzielt.
 
@@ -39,9 +37,9 @@ GrpC ist einfach und leistungsstark. Es kann bis zu 8-mal schneller als die JSON
 
 ## <a name="protocol-buffers"></a>Protokollpuffer
 
-GrpC umfasst eine Open Source-Technologie namens [Protokollpuffer](https://developers.google.com/protocol-buffers/docs/overview). Sie bieten ein sehr effizientes und Platt Form neutrales Serialisierungsformat zum Serialisieren strukturierter Nachrichten, die von Diensten an einander gesendet werden. Mithilfe einer plattformübergreifenden Schnittstellen Definitions Sprache (IDL) definieren Entwickler einen Dienstvertrag für jeden einzelnen mikroservice. Der als textbasierte `.proto` Datei implementierte Vertrag beschreibt die Methoden, Eingaben und Ausgaben für jeden Dienst. Die gleiche Vertrags Datei kann für GrpC-Clients und-Dienste verwendet werden, die auf unterschiedlichen Entwicklungsplattformen erstellt wurden.
+GrpC umfasst eine Open Source-Technologie namens [Protokollpuffer](https://developers.google.com/protocol-buffers/docs/overview). Sie bieten ein sehr effizientes und Platt Form neutrales Serialisierungsformat zum Serialisieren strukturierter Nachrichten, die von Diensten an einander gesendet werden. Mithilfe einer plattformübergreifenden Schnittstellen Definitions Sprache (IDL) definieren Entwickler einen Dienstvertrag für jeden einzelnen mikroservice. Der als textbasierte Datei implementierte Vertrag `.proto` beschreibt die Methoden, Eingaben und Ausgaben für jeden Dienst. Die gleiche Vertrags Datei kann für GrpC-Clients und-Dienste verwendet werden, die auf unterschiedlichen Entwicklungsplattformen erstellt wurden.
 
-Wenn Sie die Datei "proto" verwenden, generiert der `protoc`protobuf-Compiler sowohl Client-als auch Dienst Code für die Zielplattform. Der Code enthält die folgenden Komponenten:
+Wenn Sie die Datei "proto" verwenden, generiert der protobuf-compiler `protoc` sowohl Client-als auch Dienst Code für die Zielplattform. Der Code enthält die folgenden Komponenten:
 
 - Stark typisierte Objekte, die vom Client und Dienst gemeinsam verwendet werden und die Dienst Vorgänge und Datenelemente für eine Nachricht darstellen.
 - Eine stark typisierte Basisklasse mit der erforderlichen Netzwerk Versorgung, die vom Remote-GrpC-Dienst geerbt und erweitert werden kann.

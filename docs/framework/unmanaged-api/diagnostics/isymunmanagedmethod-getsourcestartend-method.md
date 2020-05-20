@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2a420900-01f1-4461-8777-3a34a6dc1426
 topic_type:
 - apiref
-ms.openlocfilehash: 01ab69b73a7bc4929e2ebd49b3847f8d7c4646a2
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 25e797fdf563a01ab727f16e7173eec2552eeb27
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74448862"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614421"
 ---
 # <a name="isymunmanagedmethodgetsourcestartend-method"></a>ISymUnmanagedMethod::GetSourceStartEnd-Methode
 Ruft die Start-und Enddokument Positionen für die Quelle dieser Methode ab. Die erste Array Position ist der Start, und die zweite Array Position ist das Ende.  
@@ -46,14 +46,14 @@ HRESULT GetSourceStartEnd(
  in Die Anfangs-und Endspalten in den entsprechenden Quelldokumenten.  
   
  `pRetVal`  
- [out] `true`, wenn Positionen definiert wurden. Andernfalls `false`.  
+ [out] `true` , wenn Positionen definiert wurden. andernfalls `false` .  
   
 ## <a name="return-value"></a>Rückgabewert  
  S_OK, wenn die Methode erfolgreich ist. andernfalls E_FAIL oder ein anderer Fehlercode.  
   
-## <a name="requirements"></a>Voraussetzungen  
+## <a name="requirements"></a>Anforderungen  
  **Header:** Corsym. idl, corsym. h  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [ISymUnmanagedMethod-Schnittstelle](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)
+- [ISymUnmanagedMethod-Schnittstelle](isymunmanagedmethod-interface.md)
