@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 1680ec06-4ab0-447e-93ad-cdb8693fde5c
 topic_type:
 - apiref
-ms.openlocfilehash: bd62fb38352022f69c45d2a5921973cfbec1c6e4
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: b68a9ec1e8fee4fdecd2114af28c75c4a236cb3a
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76790589"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83421144"
 ---
-# <a name="icorpublishenumskip-method"></a><span data-ttu-id="9df14-102">ICorPublishEnum::Skip-Methode</span><span class="sxs-lookup"><span data-stu-id="9df14-102">ICorPublishEnum::Skip Method</span></span>
-<span data-ttu-id="9df14-103">Verschiebt den Cursor in der-Enumeration um die angegebene Anzahl von Elementen vorwärts.</span><span class="sxs-lookup"><span data-stu-id="9df14-103">Moves the cursor forward in the enumeration by the specified number of items.</span></span>  
+# <a name="icorpublishenumskip-method"></a><span data-ttu-id="9c33d-102">ICorPublishEnum::Skip-Methode</span><span class="sxs-lookup"><span data-stu-id="9c33d-102">ICorPublishEnum::Skip Method</span></span>
+<span data-ttu-id="9c33d-103">Verschiebt den Cursor in der-Enumeration um die angegebene Anzahl von Elementen vorwärts.</span><span class="sxs-lookup"><span data-stu-id="9c33d-103">Moves the cursor forward in the enumeration by the specified number of items.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="9df14-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="9df14-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="9c33d-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="9c33d-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT Skip (  
@@ -33,19 +33,19 @@ HRESULT Skip (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="9df14-105">Parameters</span><span class="sxs-lookup"><span data-stu-id="9df14-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="9c33d-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="9c33d-105">Parameters</span></span>  
  `celt`  
- <span data-ttu-id="9df14-106">in Die Anzahl der Elemente, um die der Cursor vorwärts verschoben werden soll.</span><span class="sxs-lookup"><span data-stu-id="9df14-106">[in] The number of items by which to move the cursor forward.</span></span>  
+ <span data-ttu-id="9c33d-106">in Die Anzahl der Elemente, um die der Cursor vorwärts verschoben werden soll.</span><span class="sxs-lookup"><span data-stu-id="9c33d-106">[in] The number of items by which to move the cursor forward.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="9df14-107">-Anforderungen</span><span class="sxs-lookup"><span data-stu-id="9df14-107">Requirements</span></span>  
- <span data-ttu-id="9df14-108">**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="9df14-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="9c33d-107">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="9c33d-107">Requirements</span></span>  
+ <span data-ttu-id="9c33d-108">**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="9c33d-108">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="9df14-109">**Header:** Corpub. idl, Corpub. h</span><span class="sxs-lookup"><span data-stu-id="9df14-109">**Header:** CorPub.idl, CorPub.h</span></span>  
+ <span data-ttu-id="9c33d-109">**Header:** Corpub. idl, Corpub. h</span><span class="sxs-lookup"><span data-stu-id="9c33d-109">**Header:** CorPub.idl, CorPub.h</span></span>  
   
- <span data-ttu-id="9df14-110">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="9df14-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="9c33d-110">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="9c33d-110">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="9df14-111">**.NET Framework Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9df14-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="9c33d-111">**.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9c33d-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="9df14-112">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="9df14-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="9c33d-112">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="9c33d-112">See also</span></span>
 
-- [<span data-ttu-id="9df14-113">ICorPublishEnum-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="9df14-113">ICorPublishEnum Interface</span></span>](icorpublishenum-interface.md)
+- [<span data-ttu-id="9c33d-113">ICorPublishEnum-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="9c33d-113">ICorPublishEnum Interface</span></span>](icorpublishenum-interface.md)
