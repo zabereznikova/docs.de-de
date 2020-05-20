@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e5d777c5-d450-4c0f-999c-b3953ee22cfb
 topic_type:
 - apiref
-ms.openlocfilehash: 4ac1fc0b3567c49dfb36d2886926bee72d62a8dd
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 91117eae23d38f3bc608f3203ebe53f92516c9c9
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74446068"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83610495"
 ---
 # <a name="isymunmanagedvariablegetendoffset-method"></a>ISymUnmanagedVariable::GetEndOffset-Methode
 Ruft den Endoffset dieser Variablen in ihrem übergeordneten Element ab. Wenn es sich um eine lokale Variable innerhalb eines Bereichs handelt, fällt der Endoffset in die für den Bereich definierten Offsets.  
@@ -34,15 +34,15 @@ HRESULT GetEndOffset(
   
 ## <a name="parameters"></a>Parameter  
  `pRetVal`  
- vorgenommen Ein Zeiger auf eine `ULONG32`, die den Endoffset empfängt.  
+ vorgenommen Ein Zeiger auf einen `ULONG32` , der den Endoffset empfängt.  
   
 ## <a name="return-value"></a>Rückgabewert  
  S_OK, wenn die Methode erfolgreich ist. andernfalls E_FAIL oder ein anderer Fehlercode.  
   
-## <a name="requirements"></a>Voraussetzungen  
+## <a name="requirements"></a>Anforderungen  
  **Header:** Corsym. idl, corsym. h  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [ISymUnmanagedVariable-Schnittstelle](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-interface.md)
-- [GetStartOffset-Methode](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-getstartoffset-method.md)
+- [ISymUnmanagedVariable-Schnittstelle](isymunmanagedvariable-interface.md)
+- [GetStartOffset-Methode](isymunmanagedvariable-getstartoffset-method.md)

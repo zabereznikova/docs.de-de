@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 78c1ba28-a410-4360-805c-23a95408964a
 topic_type:
 - apiref
-ms.openlocfilehash: 2939d9cf3991a9e0b8f93bb301925b1092eca50e
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: a3ec0af33f3f1201ce2f6b62291dfc67696fecab
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74446050"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83610443"
 ---
 # <a name="isymunmanagedvariablegetsignature-method"></a>ISymUnmanagedVariable::GetSignature-Methode
 Ruft die Signatur dieser Variablen ab.  
@@ -37,10 +37,10 @@ HRESULT GetSignature(
   
 ## <a name="parameters"></a>Parameter  
  `cSig`  
- in Die Länge des Puffers, auf den der `sig`-Parameter verweist.  
+ in Die Länge des Puffers, auf den der- `sig` Parameter zeigt.  
   
  `pcSig`  
- vorgenommen Ein Zeiger auf einen `ULONG32`, der die Größe des Puffers, der die Signatur enthalten muss, in Zeichen empfängt.  
+ vorgenommen Ein Zeiger auf einen `ULONG32` , der die Größe des Puffers, der die Signatur enthalten muss, in Zeichen empfängt.  
   
  `sig`  
  vorgenommen Der Puffer, in dem die Signatur gespeichert wird.  
@@ -48,9 +48,9 @@ HRESULT GetSignature(
 ## <a name="return-value"></a>Rückgabewert  
  S_OK, wenn die Methode erfolgreich ist. andernfalls E_FAIL oder ein anderer Fehlercode.  
   
-## <a name="requirements"></a>Voraussetzungen  
+## <a name="requirements"></a>Anforderungen  
  **Header:** Corsym. idl, corsym. h  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [ISymUnmanagedVariable-Schnittstelle](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-interface.md)
+- [ISymUnmanagedVariable-Schnittstelle](isymunmanagedvariable-interface.md)

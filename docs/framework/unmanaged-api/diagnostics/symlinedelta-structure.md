@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9634e995-d46d-4397-ab66-cc5781d11e4e
 topic_type:
 - apiref
-ms.openlocfilehash: a1e83e4b8cb6603029f3b42b1a3b9ba4810c9039
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: fb3b89d25b4c2e23c3980b167db4279246c4d27b
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74438015"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83609299"
 ---
 # <a name="symlinedelta-structure"></a>SYMLINEDELTA-Struktur
 Stellt Informationen für den Symbol Handler über Methoden bereit, die aufgrund von Änderungen verschoben wurden.  
@@ -41,9 +41,9 @@ typedef struct _SYMLINEDELTA
 |`mdMethod`|Das Metadatentoken der Methode.|  
 |`delta`|Die Anzahl der Zeilen, die die Methode verschoben wurde.|  
   
-## <a name="requirements"></a>Voraussetzungen  
+## <a name="requirements"></a>Anforderungen  
  **Header:** Corsym. idl  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Diagnosesymbolspeicher-Strukturen](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-structures.md)
+- [Diagnosesymbolspeicher-Strukturen](diagnostics-symbol-store-structures.md)

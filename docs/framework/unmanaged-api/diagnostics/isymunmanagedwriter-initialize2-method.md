@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 93de56b6-4ae8-4cca-acdc-25a434623509
 topic_type:
 - apiref
-ms.openlocfilehash: 041df959139a0be77f40d6aa5655ff15f93fb26f
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 869d7d36ac24bfeee5b2361dd569945ad77eaf7f
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74427943"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83610066"
 ---
 # <a name="isymunmanagedwriterinitialize2-method"></a>ISymUnmanagedWriter::Initialize2-Methode
 Legt die Metadatenemitter-Schnittstelle fest, der dieser Writer zugeordnet wird, und legt den Namen der Ausgabedatei fest, in die die Debugsymbole geschrieben werden. Mit dieser Methode können Sie auch den endgültigen Speicherort der Programm Datenbankdatei (PDB-Datei) festlegen.  
@@ -41,24 +41,24 @@ HRESULT Initialize2(
  in Ein Zeiger auf die Metadatenemitter-Schnittstelle.  
   
  `tempfilename`  
- in Ein Zeiger auf eine `WCHAR`, die den Namen der Datei enthält, in die die Debugsymbole geschrieben werden. Wenn für einen Writer, der keine Dateinamen verwendet, ein Dateiname angegeben ist, wird dieser Parameter ignoriert.  
+ in Ein Zeiger auf einen-Wert `WCHAR` , der den Namen der Datei enthält, in die die Debugsymbole geschrieben werden. Wenn für einen Writer, der keine Dateinamen verwendet, ein Dateiname angegeben ist, wird dieser Parameter ignoriert.  
   
  `pIStream`  
- in Wenn angegeben, gibt der Symbolwriter die Symbole anstelle der im `filename`-Parameter angegebenen Datei in die angegebene <xref:System.Runtime.InteropServices.ComTypes.IStream> aus. Der Parameter `pIStream` ist optional.  
+ in Wenn angegeben, gibt der Symbolwriter die Symbole <xref:System.Runtime.InteropServices.ComTypes.IStream> anstelle der Datei, die im-Parameter angegeben ist, in den angegebenen aus `filename` . Das `pIStream` ist optional.  
   
  `fFullBuild`  
- [in] `true`, wenn dies eine vollständige Neuerstellung ist. `false` wenn dies eine inkrementelle Kompilierung ist.  
+ [in] `true` , wenn es sich um eine vollständige Neuerstellung handelt. `false`Wenn dies eine inkrementelle Kompilierung ist.  
   
  `finalfilename`  
- in Ein Zeiger auf eine `WCHAR`, die die Pfad Zeichenfolge zum endgültigen Speicherort der PDB-Datei ist.  
+ in Ein Zeiger auf einen `WCHAR` , der die Pfad Zeichenfolge zum endgültigen Speicherort der PDB-Datei ist.  
   
 ## <a name="return-value"></a>Rückgabewert  
  S_OK, wenn die Methode erfolgreich ist. andernfalls E_FAIL oder ein anderer Fehlercode.  
   
-## <a name="requirements"></a>Voraussetzungen  
+## <a name="requirements"></a>Anforderungen  
  **Header:** Corsym. idl, corsym. h  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [ISymUnmanagedWriter-Schnittstelle](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
-- [Initialize-Methode](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-initialize-method.md)
+- [ISymUnmanagedWriter-Schnittstelle](isymunmanagedwriter-interface.md)
+- [Initialize-Methode](isymunmanagedwriter-initialize-method.md)

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 59417acb-4e59-46ad-acfe-d827e6ab6078
 topic_type:
 - apiref
-ms.openlocfilehash: bb796a12868cc3e44394ab493f7838dc48ab4dc5
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 8645878132359b6218cd62b1ff707208de53704b
+ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74448484"
+ms.lasthandoff: 05/16/2020
+ms.locfileid: "83442149"
 ---
 # <a name="ibindingdisplayinitializeforprocess-method"></a>IBindingDisplay::InitializeForProcess-Methode
-Initialisiert das [IBindingDisplay](../../../../docs/framework/unmanaged-api/diagnostics/ibindingdisplay-interface.md) -Objekt.  
+Initialisiert das [IBindingDisplay](ibindingdisplay-interface.md) -Objekt.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -38,17 +38,17 @@ HRESULT InitializeForProcess (
  in Der Prozess Bezeichner.  
   
 ## <a name="remarks"></a>Hinweise  
- Der Debugger ruft zum Erstellungs Zeitpunkt die `InitializeForProcess` Methode auf, um die Bindungs Anzeige zu initialisieren. `InitializeForProcess` muss zur Erstellungszeit aufgerufen werden, bevor eine andere Methode auf `IBindingDisplay` aufgerufen wird.  
+ Der Debugger ruft die- `InitializeForProcess` Methode zum Erstellungs Zeitpunkt auf, um die Bindungs Anzeige zu initialisieren. `InitializeForProcess`muss zur Erstellungszeit aufgerufen werden, bevor eine andere Methode für `IBindingDisplay` aufgerufen wird.  
   
-## <a name="requirements"></a>Voraussetzungen  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Anforderungen  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Bindingdisplay. h  
   
  **Bibliothek:** Bindingdisplay. idl  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [IBindingDisplay-Schnittstelle](../../../../docs/framework/unmanaged-api/diagnostics/ibindingdisplay-interface.md)
+- [IBindingDisplay-Schnittstelle](ibindingdisplay-interface.md)

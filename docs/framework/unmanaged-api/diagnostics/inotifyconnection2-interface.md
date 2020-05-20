@@ -14,28 +14,28 @@ helpviewer_keywords:
 ms.assetid: 9868cfb3-dd51-4812-bca9-171d7829afe9
 topic_type:
 - apiref
-ms.openlocfilehash: 9d116d2ce986dd163ee7abbdd14002da690893ea
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 08daa26f60ca5935fed73494660426d58f398154
+ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74445483"
+ms.lasthandoff: 05/16/2020
+ms.locfileid: "83442084"
 ---
 # <a name="inotifyconnection2-interface"></a>INotifyConnection2-Schnittstelle
 Deklariert Methoden zum Registrieren und Aufheben der Registrierung einer Verbindungs Benachrichtigungs Quelle.  
   
 ## <a name="methods"></a>Methoden  
   
-|Methode|Beschreibung|  
+|Methode|BESCHREIBUNG|  
 |------------|-----------------|  
-|[RegisterNotifySource-Methode](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-registernotifysource-method.md)|Installiert ein angegebenes Benachrichtigungs Quell Objekt.|  
-|[UnregisterNotifySource-Methode](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-unregisternotifysource-method.md)|Entfernt ein angegebenes Benachrichtigungs Quell Objekt aus der Verbindung.|  
+|[RegisterNotifySource-Methode](inotifyconnection2-registernotifysource-method.md)|Installiert ein angegebenes Benachrichtigungs Quell Objekt.|  
+|[UnregisterNotifySource-Methode](inotifyconnection2-unregisternotifysource-method.md)|Entfernt ein angegebenes Benachrichtigungs Quell Objekt aus der Verbindung.|  
   
-## <a name="requirements"></a>Voraussetzungen  
+## <a name="requirements"></a>Anforderungen  
  **Header:** ProtocolNotify2. idl  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [INotifySink2-Schnittstelle](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md)
-- [INotifySource2-Schnittstelle](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-interface.md)
-- [Diagnosesymbolspeicher-Schnittstellen](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)
+- [INotifySink2-Schnittstelle](inotifysink2-interface.md)
+- [INotifySource2-Schnittstelle](inotifysource2-interface.md)
+- [Diagnosesymbolspeicher-Schnittstellen](diagnostics-symbol-store-interfaces.md)

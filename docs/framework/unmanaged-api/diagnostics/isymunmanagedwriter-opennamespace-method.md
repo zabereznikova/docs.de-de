@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 426f4e4f-e60d-4ad1-b546-a10e3c55c283
 topic_type:
 - apiref
-ms.openlocfilehash: acbd49de7362d9c05a609a2d870af100637e10ab
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: ab248c6a624fbed1a6783383566be093c449ff97
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74427907"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83609884"
 ---
 # <a name="isymunmanagedwriteropennamespace-method"></a>ISymUnmanagedWriter::OpenNamespace-Methode
 Öffnet einen neuen Namespace. Diese Methode wird aufgerufen, bevor Methoden oder Variablen definiert werden, die einen Namespace belegen. Namespaces können eingebettet werden.  
@@ -39,10 +39,10 @@ HRESULT OpenNamespace(
 ## <a name="return-value"></a>Rückgabewert  
  S_OK, wenn die Methode erfolgreich ist. andernfalls E_FAIL oder ein anderer Fehlercode.  
   
-## <a name="requirements"></a>Voraussetzungen  
+## <a name="requirements"></a>Anforderungen  
  **Header:** Corsym. idl, corsym. h  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [ISymUnmanagedWriter-Schnittstelle](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
-- [CloseNamespace-Methode](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-closenamespace-method.md)
+- [ISymUnmanagedWriter-Schnittstelle](isymunmanagedwriter-interface.md)
+- [CloseNamespace-Methode](isymunmanagedwriter-closenamespace-method.md)

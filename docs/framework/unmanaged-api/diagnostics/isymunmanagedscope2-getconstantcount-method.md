@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1e1f0be6-c4e8-4d6c-98cd-d5fa9f686e87
 topic_type:
 - apiref
-ms.openlocfilehash: f795147bdcd822db90106c7f2171eb1771b1126f
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 88fc6b7d6076bca42050ca87533062557e6a7b50
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74446251"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83610950"
 ---
 # <a name="isymunmanagedscope2getconstantcount-method"></a>ISymUnmanagedScope2::GetConstantCount-Methode
 Ruft die Anzahl der in diesem Bereich definierten Konstanten ab.  
@@ -34,14 +34,14 @@ HRESULT GetConstantCount(
   
 ## <a name="parameters"></a>Parameter  
  `pRetVal`  
- vorgenommen Ein Zeiger auf einen `ULONG32`, der die Größe des Puffers, der die Konstanten enthalten muss, in Zeichen empfängt.  
+ vorgenommen Ein Zeiger auf einen `ULONG32` , der die Größe des Puffers in Zeichen empfängt, der zum enthalten der Konstanten erforderlich ist.  
   
 ## <a name="return-value"></a>Rückgabewert  
  S_OK, wenn die Methode erfolgreich ist. andernfalls E_FAIL oder ein anderer Fehlercode.  
   
-## <a name="requirements"></a>Voraussetzungen  
+## <a name="requirements"></a>Anforderungen  
  **Header:** Corsym. idl, corsym. h  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [ISymUnmanagedScope2-Schnittstelle](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope2-interface.md)
+- [ISymUnmanagedScope2-Schnittstelle](isymunmanagedscope2-interface.md)
