@@ -10,7 +10,7 @@ ms.locfileid: "67858485"
 
 |   |   |
 |---|---|
-|Details|Aufgrund eines Fehlers in .NET Framework 4.5 können Ereignishandler für <xref:System.Windows.Controls.DataGrid>-Ereignisse, die das Entfernen einer Zeile umfassen, eine <xref:System.NullReferenceException?displayProperty=name> auslösen, die ausgelöst werden soll, wenn auf die <xref:System.Windows.Controls.DataGrid>- oder <xref:System.Windows.Controls.Primitives.Selector.SelectedItem?displayProperty=name>-Eigenschaft von <xref:System.Windows.Controls.Primitives.MultiSelector.SelectedItems?displayProperty=name> zugegriffen wird.|
+|Details|Aufgrund eines Fehlers in .NET Framework 4.5 können Ereignishandler für <xref:System.Windows.Controls.DataGrid>-Ereignisse, die das Entfernen einer Zeile umfassen, eine <xref:System.NullReferenceException?displayProperty=name> auslösen, die ausgelöst werden soll, wenn auf die <xref:System.Windows.Controls.Primitives.Selector.SelectedItem?displayProperty=name>- oder <xref:System.Windows.Controls.Primitives.MultiSelector.SelectedItems?displayProperty=name>-Eigenschaft von <xref:System.Windows.Controls.DataGrid> zugegriffen wird.|
 |Vorschlag|Dieses Problem wurde in .NET Framework 4.6 behoben und kann durch ein Upgrade auf diese Version von .NET Framework vermieden werden.|
 |`Scope`|Nebenversion|
 |Version|4.5|
