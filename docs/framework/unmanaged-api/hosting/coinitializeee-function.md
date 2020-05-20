@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 7e42a928-5068-4ba6-b8c3-806551a01fa8
 topic_type:
 - apiref
-ms.openlocfilehash: 9e90772ae8c3e6be5744fcccc9901123df871831
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 57508a2df3a49c39d25347f2a3038442c37278da
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73131940"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83616761"
 ---
-# <a name="coinitializeee-function"></a><span data-ttu-id="d3910-102">CoInitializeEE-Funktion</span><span class="sxs-lookup"><span data-stu-id="d3910-102">CoInitializeEE Function</span></span>
-<span data-ttu-id="d3910-103">Stellt sicher, dass die Common Language Runtime Ausführungs-Engine in einen Prozess geladen wird.</span><span class="sxs-lookup"><span data-stu-id="d3910-103">Ensures that the common language runtime execution engine is loaded into a process.</span></span> <span data-ttu-id="d3910-104">Diese Funktion ist in der .NET Framework 4 veraltet.</span><span class="sxs-lookup"><span data-stu-id="d3910-104">This function is deprecated in the .NET Framework 4.</span></span> <span data-ttu-id="d3910-105">Verwenden Sie stattdessen die [ICLRRuntimeHost:: Start](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-start-method.md) -Methode.</span><span class="sxs-lookup"><span data-stu-id="d3910-105">Use the [ICLRRuntimeHost::Start](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-start-method.md) method instead.</span></span>  
+# <a name="coinitializeee-function"></a><span data-ttu-id="2db4d-102">CoInitializeEE-Funktion</span><span class="sxs-lookup"><span data-stu-id="2db4d-102">CoInitializeEE Function</span></span>
+<span data-ttu-id="2db4d-103">Stellt sicher, dass die Common Language Runtime Ausführungs-Engine in einen Prozess geladen wird.</span><span class="sxs-lookup"><span data-stu-id="2db4d-103">Ensures that the common language runtime execution engine is loaded into a process.</span></span> <span data-ttu-id="2db4d-104">Diese Funktion ist in der .NET Framework 4 veraltet.</span><span class="sxs-lookup"><span data-stu-id="2db4d-104">This function is deprecated in the .NET Framework 4.</span></span> <span data-ttu-id="2db4d-105">Verwenden Sie stattdessen die [ICLRRuntimeHost:: Start](iclrruntimehost-start-method.md) -Methode.</span><span class="sxs-lookup"><span data-stu-id="2db4d-105">Use the [ICLRRuntimeHost::Start](iclrruntimehost-start-method.md) method instead.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d3910-106">Syntax</span><span class="sxs-lookup"><span data-stu-id="d3910-106">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="2db4d-106">Syntax</span><span class="sxs-lookup"><span data-stu-id="2db4d-106">Syntax</span></span>  
   
 ```cpp  
 HRESULT CoInitializeEE (  
@@ -33,31 +33,31 @@ HRESULT CoInitializeEE (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="d3910-107">Parameter</span><span class="sxs-lookup"><span data-stu-id="d3910-107">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="2db4d-107">Parameter</span><span class="sxs-lookup"><span data-stu-id="2db4d-107">Parameters</span></span>  
  `fFlags`  
- <span data-ttu-id="d3910-108">in Eine der [COINITIEE](../../../../docs/framework/unmanaged-api/metadata/coinitiee-enumeration.md) -Enumerationskonstanten.</span><span class="sxs-lookup"><span data-stu-id="d3910-108">[in] One of the [COINITIEE](../../../../docs/framework/unmanaged-api/metadata/coinitiee-enumeration.md) enumeration constants.</span></span>  
+ <span data-ttu-id="2db4d-108">in Eine der [COINITIEE](../metadata/coinitiee-enumeration.md) -Enumerationskonstanten.</span><span class="sxs-lookup"><span data-stu-id="2db4d-108">[in] One of the [COINITIEE](../metadata/coinitiee-enumeration.md) enumeration constants.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="d3910-109">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="d3910-109">Return Value</span></span>  
- <span data-ttu-id="d3910-110">Diese Methode gibt in WinError. h definierte Standard-COM-Fehlercodes und die Werte in der folgenden Tabelle zurück.</span><span class="sxs-lookup"><span data-stu-id="d3910-110">This method returns standard COM error codes as defined in Winerror.h, and the values in the following table.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="2db4d-109">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="2db4d-109">Return Value</span></span>  
+ <span data-ttu-id="2db4d-110">Diese Methode gibt in WinError. h definierte Standard-COM-Fehlercodes und die Werte in der folgenden Tabelle zurück.</span><span class="sxs-lookup"><span data-stu-id="2db4d-110">This method returns standard COM error codes as defined in Winerror.h, and the values in the following table.</span></span>  
   
-|<span data-ttu-id="d3910-111">Rückgabecode</span><span class="sxs-lookup"><span data-stu-id="d3910-111">Return code</span></span>|<span data-ttu-id="d3910-112">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="d3910-112">Description</span></span>|  
+|<span data-ttu-id="2db4d-111">Rückgabecode</span><span class="sxs-lookup"><span data-stu-id="2db4d-111">Return code</span></span>|<span data-ttu-id="2db4d-112">BESCHREIBUNG</span><span class="sxs-lookup"><span data-stu-id="2db4d-112">Description</span></span>|  
 |-----------------|-----------------|  
-|<span data-ttu-id="d3910-113">S_OK</span><span class="sxs-lookup"><span data-stu-id="d3910-113">S_OK</span></span>|<span data-ttu-id="d3910-114">Die Ausführungs-Engine wurde erfolgreich geladen.</span><span class="sxs-lookup"><span data-stu-id="d3910-114">The execution engine was loaded successfully.</span></span>|  
-|<span data-ttu-id="d3910-115">S_FALSE</span><span class="sxs-lookup"><span data-stu-id="d3910-115">S_FALSE</span></span>|<span data-ttu-id="d3910-116">Die Ausführungs-Engine ist bereits geladen.</span><span class="sxs-lookup"><span data-stu-id="d3910-116">The execution engine is already loaded.</span></span>|  
-|<span data-ttu-id="d3910-117">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="d3910-117">E_FAIL</span></span>|<span data-ttu-id="d3910-118">Die Ausführungs-Engine konnte nicht geladen werden.</span><span class="sxs-lookup"><span data-stu-id="d3910-118">The execution engine could not be loaded.</span></span>|  
+|<span data-ttu-id="2db4d-113">S_OK</span><span class="sxs-lookup"><span data-stu-id="2db4d-113">S_OK</span></span>|<span data-ttu-id="2db4d-114">Die Ausführungs-Engine wurde erfolgreich geladen.</span><span class="sxs-lookup"><span data-stu-id="2db4d-114">The execution engine was loaded successfully.</span></span>|  
+|<span data-ttu-id="2db4d-115">S_FALSE</span><span class="sxs-lookup"><span data-stu-id="2db4d-115">S_FALSE</span></span>|<span data-ttu-id="2db4d-116">Die Ausführungs-Engine ist bereits geladen.</span><span class="sxs-lookup"><span data-stu-id="2db4d-116">The execution engine is already loaded.</span></span>|  
+|<span data-ttu-id="2db4d-117">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="2db4d-117">E_FAIL</span></span>|<span data-ttu-id="2db4d-118">Die Ausführungs-Engine konnte nicht geladen werden.</span><span class="sxs-lookup"><span data-stu-id="2db4d-118">The execution engine could not be loaded.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="d3910-119">Hinweise</span><span class="sxs-lookup"><span data-stu-id="d3910-119">Remarks</span></span>  
- <span data-ttu-id="d3910-120">Diese Methode lädt die Ausführungs-Engine, wenn Sie noch nicht geladen wurde.</span><span class="sxs-lookup"><span data-stu-id="d3910-120">This method loads the execution engine if it has not been previously loaded.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="2db4d-119">Hinweise</span><span class="sxs-lookup"><span data-stu-id="2db4d-119">Remarks</span></span>  
+ <span data-ttu-id="2db4d-120">Diese Methode lädt die Ausführungs-Engine, wenn Sie noch nicht geladen wurde.</span><span class="sxs-lookup"><span data-stu-id="2db4d-120">This method loads the execution engine if it has not been previously loaded.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="d3910-121">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="d3910-121">Requirements</span></span>  
- <span data-ttu-id="d3910-122">**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="d3910-122">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="2db4d-121">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="2db4d-121">Requirements</span></span>  
+ <span data-ttu-id="2db4d-122">**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="2db4d-122">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="d3910-123">**Header:** Cor. h</span><span class="sxs-lookup"><span data-stu-id="d3910-123">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="2db4d-123">**Header:** Cor. h</span><span class="sxs-lookup"><span data-stu-id="2db4d-123">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="d3910-124">**Bibliothek:** Als Ressource in Mscoree. dll enthalten</span><span class="sxs-lookup"><span data-stu-id="d3910-124">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="2db4d-124">**Bibliothek:** Als Ressource in Mscoree. dll enthalten</span><span class="sxs-lookup"><span data-stu-id="2db4d-124">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="d3910-125">**.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d3910-125">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="2db4d-125">**.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="2db4d-125">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d3910-126">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="d3910-126">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="2db4d-126">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="2db4d-126">See also</span></span>
 
-- [<span data-ttu-id="d3910-127">Globale statische Metadatenfunktionen</span><span class="sxs-lookup"><span data-stu-id="d3910-127">Metadata Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)
+- [<span data-ttu-id="2db4d-127">Globale statische Metadatenfunktionen</span><span class="sxs-lookup"><span data-stu-id="2db4d-127">Metadata Global Static Functions</span></span>](../metadata/metadata-global-static-functions.md)
