@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 30b5cf9a-a762-4bd4-be12-d6c1442b78b1
 topic_type:
 - apiref
-ms.openlocfilehash: 1a1bc7609042422de876fe167a9e61655aaf62b4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 070c52258b66dcc352f2beef81b9a0694b8301ce
+ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79176408"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83703286"
 ---
 # <a name="iclrruntimehostexecuteindefaultappdomain-method"></a>ICLRRuntimeHost::ExecuteInDefaultAppDomain-Methode
 Ruft die angegebene Methode des angegebenen Typs in der angegebenen verwalteten Assembly auf.  
@@ -39,49 +39,49 @@ HRESULT ExecuteInDefaultAppDomain (
   
 ## <a name="parameters"></a>Parameter  
  `pwzAssemblyPath`  
- [in] Der Pfad <xref:System.Reflection.Assembly> zu dem, <xref:System.Type> der definiert, dessen Methode aufgerufen werden soll.  
+ in Der Pfad zum <xref:System.Reflection.Assembly> , der das definiert, <xref:System.Type> dessen-Methode aufgerufen werden soll.  
   
  `pwzTypeName`  
- [in] Der Name <xref:System.Type> des, der die aufzurufende Methode definiert.  
+ in Der Name der, die die aufzurufende <xref:System.Type> Methode definiert.  
   
  `pwzMethodName`  
- [in] Der Name der aufgerufenen Methode.  
+ in Der Name der aufzurufenden Methode.  
   
  `pwzArgument`  
- [in] Der Zeichenfolgenparameter, der an die Methode übergeben werden soll.  
+ in Der Zeichen folgen Parameter, der an die Methode übergeben werden soll.  
   
  `pReturnValue`  
- [out] Der ganzzahlige Wert, der von der aufgerufenen Methode zurückgegeben wird.  
+ vorgenommen Der von der aufgerufenen Methode zurückgegebene ganzzahlige Wert.  
   
 ## <a name="return-value"></a>Rückgabewert  
   
-|HRESULT|Beschreibung|  
+|HRESULT|BESCHREIBUNG|  
 |-------------|-----------------|  
-|S_OK|`ExecuteInDefaultAppDomain`erfolgreich zurückgegeben werden.|  
-|HOST_E_CLRNOTAVAILABLE|Die Common Language Runtime (CLR) wurde nicht in einen Prozess geladen, oder die CLR befindet sich in einem Zustand, in dem sie keinen verwalteten Code ausführen oder den Aufruf erfolgreich verarbeiten kann.|  
-|HOST_E_TIMEOUT|Timeout für den Anruf.|  
-|HOST_E_NOT_OWNER|Der Aufrufer besitzt die Sperre nicht.|  
-|HOST_E_ABANDONED|Ein Ereignis wurde abgebrochen, während ein blockierter Thread oder eine blockierte Faser darauf wartete.|  
-|E_FAIL|Ein unbekannter katastrophaler Fehler ist aufgetreten. Wenn eine Methode E_FAIL zurückgibt, kann die CRL innerhalb des Prozesses nicht mehr verwendet werden. Nachfolgende Aufrufe von Hostingmethoden geben HOST_E_CLRNOTAVAILABLE zurück.|  
+|S_OK|`ExecuteInDefaultAppDomain`wurde erfolgreich zurückgegeben.|  
+|HOST_E_CLRNOTAVAILABLE|Der Common Language Runtime (CLR) wurde nicht in einen Prozess geladen, oder die CLR befindet sich in einem Zustand, in dem Sie verwalteten Code nicht ausführen oder den-Befehl nicht erfolgreich verarbeiten kann.|  
+|HOST_E_TIMEOUT|Timeout des Aufrufes.|  
+|HOST_E_NOT_OWNER|Der Aufrufer ist nicht Besitzer der Sperre.|  
+|HOST_E_ABANDONED|Ein Ereignis wurde abgebrochen, während ein blockierter Thread oder eine Fiber darauf wartete.|  
+|E_FAIL|Ein unbekannter schwerwiegender Fehler ist aufgetreten. Wenn eine Methode E_FAIL zurückgibt, kann die CRL innerhalb des Prozesses nicht mehr verwendet werden. Nachfolgende Aufrufe von Hostingmethoden geben HOST_E_CLRNOTAVAILABLE zurück.|  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Die aufgerufene Methode muss die folgende Signatur aufweisen:  
   
 ```cpp  
 static int pwzMethodName (String pwzArgument)  
 ```  
   
- wobei `pwzMethodName` der Name der aufgerufenen `pwzArgument` Methode und der Zeichenfolgenwert als Parameter für diese Methode übergeben wird. Wenn der HRESULT-Wert auf `pReturnValue` S_OK festgelegt ist, wird der ganzzahlige Wert festgelegt, der von der aufgerufenen Methode zurückgegeben wird. Andernfalls `pReturnValue` ist nicht festgelegt.  
+ dabei `pwzMethodName` steht für den Namen der aufgerufenen Methode und `pwzArgument` für den Zeichen folgen Wert, der als Parameter an diese Methode übergeben wird. Wenn der HRESULT-Wert auf S_OK festgelegt ist, `pReturnValue` wird auf den ganzzahligen Wert festgelegt, der von der aufgerufenen Methode zurückgegeben Andernfalls `pReturnValue` ist nicht festgelegt.  
   
-## <a name="requirements"></a>Requirements (Anforderungen)  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Anforderungen  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
- **Kopfzeile:** MSCorEE.h  
+ **Header:** Mscoree. h  
   
- **Bibliothek:** Als Ressource in MSCorEE.dll enthalten  
+ **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
-- [ICLRRuntimeHost-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md)
+- [ICLRRuntimeHost-Schnittstelle](iclrruntimehost-interface.md)
